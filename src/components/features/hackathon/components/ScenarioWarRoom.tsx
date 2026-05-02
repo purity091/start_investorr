@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { Activity, Gauge, ShieldAlert, Target } from 'lucide-react';
 import { ScenarioState, SimulationResult } from '../types';
 
@@ -21,13 +21,13 @@ interface SliderProps {
 }
 
 const SliderField: React.FC<SliderProps> = ({ label, hint, value, min, max, step = 1, suffix = '', onChange }) => (
-  <div className="rounded-2xl border border-white/10 bg-slate-950/30 p-4">
-    <div className="mb-3 flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+  <div className="rounded-2xl border border-slate-100 bg-slate-50/50 p-5 hover:bg-white hover:shadow-sm transition-all">
+    <div className="mb-4 flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
       <div className="min-w-0">
-        <p className="text-sm font-black text-white">{label}</p>
-        <p className="text-xs font-semibold text-slate-500">{hint}</p>
+        <p className="text-sm font-black text-slate-900 leading-none mb-1">{label}</p>
+        <p className="text-[11px] font-bold text-slate-400">{hint}</p>
       </div>
-      <span className="rounded-xl bg-blue-500/20 px-3 py-1 text-xs font-black text-blue-300 sm:text-sm">
+      <span className="rounded-xl bg-indigo-600 px-4 py-1.5 text-xs font-black text-white shadow-lg shadow-indigo-100 sm:text-sm">
         {value}
         {suffix}
       </span>
@@ -39,7 +39,7 @@ const SliderField: React.FC<SliderProps> = ({ label, hint, value, min, max, step
       step={step}
       value={value}
       onChange={(e) => onChange(Number(e.target.value))}
-      className="h-2 w-full cursor-pointer appearance-none rounded-full bg-slate-700 accent-blue-500"
+      className="h-2 w-full cursor-pointer appearance-none rounded-full bg-slate-200 accent-indigo-600"
     />
   </div>
 );
@@ -47,18 +47,18 @@ const SliderField: React.FC<SliderProps> = ({ label, hint, value, min, max, step
 export const ScenarioWarRoom: React.FC<ScenarioWarRoomProps> = ({ scenario, result, unlocked, onChange }) => {
   if (!unlocked) {
     return (
-      <section className="glass-panel rounded-[2.5rem] border border-white/10 p-4 sm:p-8">
-        <p className="text-xs font-black uppercase tracking-widest text-slate-500">Scenario War Room</p>
-        <h3 className="mt-2 text-xl font-black text-white sm:text-2xl">محاكاة القرارات اللحظية</h3>
-        <p className="mt-3 text-sm font-semibold text-slate-400">يتم تفعيل غرفة السيناريو بعد اكتمال يوم الاستخبارات حتى يكون التقييم مبنيا على مدخلات حقيقية.</p>
+      <section className="bg-white border border-slate-200 shadow-sm rounded-[2.5rem] p-6 sm:p-10">
+        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-indigo-500">Scenario War Room</p>
+        <h3 className="mt-2 text-2xl font-black text-slate-900 sm:text-3xl">محاكاة القرارات اللحظية</h3>
+        <p className="mt-4 text-sm font-bold text-slate-400 leading-relaxed">يتم تفعيل غرفة السيناريو بعد اكتمال يوم الاستخبارات حتى يكون التقييم مبنيا على مدخلات حقيقية.</p>
       </section>
     );
   }
 
   const verdictStyles = {
-    stable: 'border-lime-400/30 bg-lime-500/10 text-lime-300',
-    watch: 'border-amber-400/30 bg-amber-500/10 text-amber-300',
-    critical: 'border-red-400/30 bg-red-500/10 text-red-300',
+    stable: 'border-emerald-100 bg-emerald-50 text-emerald-600',
+    watch: 'border-amber-100 bg-amber-50 text-amber-600',
+    critical: 'border-rose-100 bg-rose-50 text-rose-600',
   };
 
   const verdictText = {
@@ -68,13 +68,13 @@ export const ScenarioWarRoom: React.FC<ScenarioWarRoomProps> = ({ scenario, resu
   };
 
   return (
-    <section className="glass-panel rounded-[2.5rem] p-4 sm:p-8">
-      <div className="mb-6 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center sm:gap-4">
+    <section className="bg-white border border-slate-200 shadow-sm rounded-[2.5rem] p-6 sm:p-10">
+      <div className="mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center sm:gap-6">
         <div>
-          <p className="text-xs font-black uppercase tracking-widest text-blue-400">Scenario War Room</p>
-          <h3 className="mt-2 text-xl font-black text-white sm:text-2xl">مختبر القرار الفوري</h3>
+          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-indigo-500">Scenario War Room</p>
+          <h3 className="mt-2 text-2xl font-black text-slate-900 sm:text-3xl">مختبر القرار الفوري</h3>
         </div>
-        <span className={`rounded-2xl border px-3 py-2 text-xs font-black sm:px-4 ${verdictStyles[result.verdict]}`}>{verdictText[result.verdict]}</span>
+        <span className={`rounded-2xl border px-4 py-2.5 text-xs font-black shadow-sm ${verdictStyles[result.verdict]}`}>{verdictText[result.verdict]}</span>
       </div>
 
       <div className="grid gap-4 lg:grid-cols-3">
@@ -83,22 +83,22 @@ export const ScenarioWarRoom: React.FC<ScenarioWarRoomProps> = ({ scenario, resu
         <SliderField label="زمن أول إيراد" hint="عدد الأشهر للوصول لأول تدفق نقدي" value={scenario.timeToRevenue} min={1} max={24} suffix="ش" onChange={(value) => onChange({ timeToRevenue: value })} />
       </div>
 
-      <div className="mt-6 grid gap-3 sm:gap-4 md:grid-cols-2 xl:grid-cols-4">
-        <div className="rounded-2xl border border-white/10 bg-white/[.03] p-4">
-          <p className="mb-2 flex items-center gap-2 text-xs font-black uppercase tracking-wider text-slate-400"><Gauge size={14} /> الاستدامة</p>
-          <p className="text-2xl font-black text-white sm:text-3xl">{result.sustainability}%</p>
+      <div className="mt-8 grid gap-3 sm:gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="rounded-2xl border border-slate-100 bg-slate-50 p-5 hover:bg-white hover:shadow-sm transition-all">
+          <p className="mb-3 flex items-center gap-2 text-[10px] font-black uppercase tracking-wider text-slate-400"><Gauge size={16} className="text-indigo-500" /> الاستدامة</p>
+          <p className="text-2xl font-black text-slate-900 sm:text-3xl leading-none">{result.sustainability}%</p>
         </div>
-        <div className="rounded-2xl border border-white/10 bg-white/[.03] p-4">
-          <p className="mb-2 flex items-center gap-2 text-xs font-black uppercase tracking-wider text-slate-400"><Target size={14} /> فرصة النجاح</p>
-          <p className="text-2xl font-black text-white sm:text-3xl">{result.successChance}%</p>
+        <div className="rounded-2xl border border-slate-100 bg-slate-50 p-5 hover:bg-white hover:shadow-sm transition-all">
+          <p className="mb-3 flex items-center gap-2 text-[10px] font-black uppercase tracking-wider text-slate-400"><Target size={16} className="text-indigo-500" /> فرصة النجاح</p>
+          <p className="text-2xl font-black text-slate-900 sm:text-3xl leading-none">{result.successChance}%</p>
         </div>
-        <div className="rounded-2xl border border-white/10 bg-white/[.03] p-4">
-          <p className="mb-2 flex items-center gap-2 text-xs font-black uppercase tracking-wider text-slate-400"><ShieldAlert size={14} /> ضغط المدرج</p>
-          <p className="text-2xl font-black text-white sm:text-3xl">{result.runwayStress}%</p>
+        <div className="rounded-2xl border border-slate-100 bg-slate-50 p-5 hover:bg-white hover:shadow-sm transition-all">
+          <p className="mb-3 flex items-center gap-2 text-[10px] font-black uppercase tracking-wider text-slate-400"><ShieldAlert size={16} className="text-rose-500" /> ضغط المدرج</p>
+          <p className="text-2xl font-black text-slate-900 sm:text-3xl leading-none">{result.runwayStress}%</p>
         </div>
-        <div className="rounded-2xl border border-white/10 bg-white/[.03] p-4">
-          <p className="mb-2 flex items-center gap-2 text-xs font-black uppercase tracking-wider text-slate-400"><Activity size={14} /> LTV متوقع</p>
-          <p className="text-2xl font-black text-white sm:text-3xl">${result.ltvEstimate}</p>
+        <div className="rounded-2xl border border-slate-100 bg-slate-50 p-5 hover:bg-white hover:shadow-sm transition-all">
+          <p className="mb-3 flex items-center gap-2 text-[10px] font-black uppercase tracking-wider text-slate-400"><Activity size={16} className="text-emerald-500" /> LTV متوقع</p>
+          <p className="text-2xl font-black text-slate-900 sm:text-3xl leading-none">${result.ltvEstimate}</p>
         </div>
       </div>
     </section>

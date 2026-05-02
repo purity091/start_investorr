@@ -61,12 +61,12 @@ function SwotCard({ title, items, icon: Icon, color }: SwotCardProps) {
   const s = colorStyles[color];
 
   return (
-    <div className={`group/swot relative h-full ${s.bg} border ${s.border} rounded-[2rem] p-5 md:p-8 transition-all duration-300 ${s.hover}`}>
-      <div className="flex items-center gap-3 mb-5">
-        <div className={`w-10 h-10 md:w-12 md:h-12 ${s.iconBg} text-white rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg ${s.iconShadow} transition-transform duration-500 group-hover/swot:rotate-6`}>
-          <Icon size={20} className="md:size-6" />
+    <div className={`group/swot relative h-full ${s.bg} border ${s.border} rounded-[1.5rem] p-4 md:p-6 transition-all duration-300 ${s.hover}`}>
+      <div className="flex items-center gap-2.5 mb-4">
+        <div className={`w-8 h-8 md:w-10 md:h-10 ${s.iconBg} text-white rounded-lg md:rounded-xl flex items-center justify-center shadow-md ${s.iconShadow} transition-transform duration-500 group-hover/swot:rotate-6`}>
+          <Icon size={16} className="md:size-5" />
         </div>
-        <h3 className={`text-lg md:text-xl font-black ${s.text}`}>{title}</h3>
+        <h3 className={`text-base md:text-lg font-black ${s.text}`}>{title}</h3>
       </div>
       <ul className="space-y-4">
         {items.map((item, i) => (
@@ -88,44 +88,30 @@ interface SwotSectionProps {
 export function SwotSection({ swot, title }: SwotSectionProps) {
   return (
     <div 
-      className="sd-section-light sd-section-card animate-in fade-in slide-in-from-bottom-8 duration-1000" 
+      className="sd-section-light sd-section-card" 
       data-section="swot-analysis"
       style={{
         position: 'relative',
         background: '#fff',
         borderRadius: 24,
-        border: '1px solid #f1f5f9',
+        border: '1px solid #e2e8f0',
+        padding: '32px',
         overflow: 'hidden',
-        transition: 'box-shadow 0.3s, border-color 0.3s',
-        boxShadow: 'none',
-      }}
-      onMouseEnter={(e) => {
-        const el = e.currentTarget;
-        el.style.boxShadow = '0 20px 60px rgba(0,0,0,0.07)';
-        el.style.borderColor = '#e2e8f0';
-      }}
-      onMouseLeave={(e) => {
-        const el = e.currentTarget;
-        el.style.boxShadow = 'none';
-        el.style.borderColor = '#f1f5f9';
+        transition: 'all 0.3s ease',
       }}
     >
-      <div className="sd-hover-glow" style={{ position: 'absolute', top: -40, left: -40, width: 160, height: 160, borderRadius: '50%', opacity: 0, transition: 'opacity 0.5s', pointerEvents: 'none' }} />
       
-      <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, marginBottom: 20, direction: 'rtl' }}>
-        <div style={{ position: 'relative', flexShrink: 0, width: 4 }}>
-          <div className="sd-bar" style={{ width: 4, height: 44, borderRadius: 4 }} />
-          <div className="sd-bar-glow" style={{ position: 'absolute', inset: 0, borderRadius: 4, filter: 'blur(4px)' }} />
-        </div>
+      <div style={{ display: 'flex', alignItems: 'flex-start', gap: 16, marginBottom: 32, direction: 'rtl' }}>
+        <div style={{ width: 4, height: 32, background: 'var(--acc)', borderRadius: 4, flexShrink: 0, marginTop: 4 }} />
         <div style={{ flex: 1 }}>
-          <h2 className="sd-section-title" style={{ margin: 0, fontWeight: 800, color: '#0f172a', lineHeight: 1.2, letterSpacing: '-0.02em' }}>تحليل SWOT الاستراتيجي</h2>
-          <p style={{ margin: '4px 0 0', fontSize: 10, fontWeight: 800, color: '#334155', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{title}</p>
+          <h2 style={{ margin: 0, fontSize: 24, fontWeight: 900, color: '#0f172a', letterSpacing: '-0.02em' }}>تحليل SWOT الاستراتيجي</h2>
+          <p style={{ margin: '8px 0 0', fontSize: 16, fontWeight: 500, color: '#64748b', lineHeight: 1.6 }}>نظرة تحليلية شاملة للقطاع: {title}</p>
         </div>
       </div>
 
       <div className="sd-section-light-body" style={{ direction: 'rtl' }}>
         <div className="mb-10 text-right">
-          <p className="text-gray-600 leading-relaxed font-bold text-lg">
+          <p style={{ fontSize: 16, fontWeight: 500, color: '#475569', lineHeight: 1.8 }}>
             {swot.description}
           </p>
         </div>
@@ -138,27 +124,25 @@ export function SwotSection({ swot, title }: SwotSectionProps) {
         </div>
 
         <div className="mt-12 relative group overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-amber-400/10 via-yellow-400/10 to-orange-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-[2rem]" />
-          <div className="relative bg-white border border-amber-100 rounded-[2rem] p-1 shadow-lg shadow-amber-500/5 transition-all duration-500">
-            <div className="bg-amber-50/20 backdrop-blur-xl rounded-[1.8rem] p-6 md:p-8 border border-white overflow-hidden relative">
-              <div className="absolute top-0 right-0 w-48 h-48 bg-amber-200/10 rounded-full blur-[60px] -translate-y-1/2 translate-x-1/2 group-hover:bg-amber-200/30 transition-all duration-700" />
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-yellow-200/10 rounded-full blur-[40px] translate-y-1/2 -translate-x-1/2 group-hover:bg-yellow-200/30 transition-all duration-700" />
-
-              <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 text-center md:text-right">
-                <div className="w-14 h-14 bg-gradient-to-tr from-amber-400 to-yellow-300 rounded-2xl flex items-center justify-center shrink-0 shadow-xl shadow-amber-200 rotate-3 group-hover:rotate-12 transition-transform duration-500">
-                  <Lightbulb size={28} className="text-white animate-pulse" />
+          <div className="absolute inset-0 bg-gradient-to-r from-amber-400/5 via-yellow-400/5 to-orange-400/5 rounded-[2rem]" />
+          <div className="relative bg-white border border-amber-100/50 rounded-[2rem] p-1 shadow-sm transition-all duration-500 hover:shadow-xl hover:shadow-amber-900/5">
+            <div className="bg-amber-50/10 backdrop-blur-xl rounded-[1.8rem] p-8 md:p-10 border border-white overflow-hidden relative">
+              
+              <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 text-center md:text-right">
+                <div className="w-16 h-16 bg-gradient-to-tr from-amber-500 to-yellow-400 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-amber-200/50">
+                  <Lightbulb size={32} className="text-white" strokeWidth={1.5} />
                 </div>
                 <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-2 justify-center md:justify-start">
-                    <span className="px-2.5 py-0.5 bg-amber-100 border border-amber-200 rounded-full text-[9px] font-black text-amber-700 uppercase tracking-widest">
-                      SWOT SUMMARY
+                  <div className="flex items-center gap-3 mb-3 justify-center md:justify-start">
+                    <span className="px-3 py-1 bg-amber-100/50 border border-amber-200/50 rounded-full text-[10px] font-black text-amber-800 uppercase tracking-widest">
+                      STRATEGIC INSIGHT
                     </span>
-                    <div className="h-px w-8 bg-amber-200" />
+                    <div className="h-px w-10 bg-amber-200" />
                   </div>
-                  <h4 className="text-xl md:text-2xl font-black text-slate-900 mb-2 leading-tight">
+                  <h4 className="text-2xl font-black text-slate-900 mb-3 leading-tight">
                     الملخص الذكي لتحليل SWOT
                   </h4>
-                  <p className="text-slate-600 text-base font-bold leading-relaxed max-w-2xl">
+                  <p className="text-slate-600 text-lg font-medium leading-relaxed max-w-3xl">
                     {swot.insight}
                   </p>
                 </div>

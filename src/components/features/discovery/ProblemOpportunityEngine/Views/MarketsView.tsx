@@ -77,31 +77,31 @@ export const MarketsView: React.FC<MarketsViewProps> = ({
         initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} 
       >
         {view === 'continents_gateway' && (
-          <div className="space-y-10">
-            <div className="flex flex-wrap justify-center gap-3">
-              {CONTINENTS.map(c => (
-                <button key={c.id} onClick={() => setSelectedContinent(c.id)}
-                  className={`px-6 py-3 rounded-2xl text-xs font-black transition-all border ${selectedContinent === c.id ? 'bg-indigo-600 text-white border-indigo-500 shadow-lg' : 'bg-white text-slate-500 border-slate-100 hover:bg-slate-50'}`}
-                >
-                  {c.name}
-                </button>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-              {CONTINENTS.find(c => c.id === selectedContinent)?.countries.map(cId => {
-                const country = COUNTRIES.find(cc => cc.id === cId);
-                return (
-                  <button key={cId} onClick={() => { setSelectedMarket(cId); setView('market_problems'); }}
-                    className="group bg-white p-5 rounded-2xl border border-slate-100 hover:border-indigo-200 shadow-sm hover:shadow-md transition-all text-center flex flex-col items-center"
-                  >
-                    <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">{country?.flag}</div>
-                    <div className="text-sm font-black text-slate-900 mb-1">{country?.name}</div>
-                    <div className="text-[10px] font-bold text-slate-400">استكشف الفرص</div>
-                  </button>
-                );
-              })}
-            </div>
+          <div className="space-y-16">
+            {CONTINENTS.map(continent => (
+              <div key={continent.id} className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="h-px flex-1 bg-slate-100" />
+                  <h2 className="text-xl font-black text-slate-900 bg-white px-4">{continent.name}</h2>
+                  <div className="h-px flex-1 bg-slate-100" />
+                </div>
+                
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                  {continent.countries.map(cId => {
+                    const country = COUNTRIES.find(cc => cc.id === cId);
+                    return (
+                      <button key={cId} onClick={() => { setSelectedMarket(cId); setView('market_problems'); }}
+                        className="group bg-white p-5 rounded-2xl border border-slate-100 hover:border-indigo-200 shadow-sm hover:shadow-md transition-all text-center flex flex-col items-center"
+                      >
+                        <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">{country?.flag}</div>
+                        <div className="text-sm font-black text-slate-900 mb-1">{country?.name}</div>
+                        <div className="text-[10px] font-bold text-slate-400">استكشف الفرص</div>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
           </div>
         )}
 

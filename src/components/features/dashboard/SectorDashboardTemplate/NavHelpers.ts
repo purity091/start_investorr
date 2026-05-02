@@ -10,11 +10,18 @@ export const buildNav = (
   hasOpportunities: boolean,
   hasSwot: boolean,
 ): string[] => {
-  const items = sections.map((s) => s.title);
-  if (hasSwot && !items.includes('تحليل SWOT')) items.push('تحليل SWOT');
+  const items: string[] = [];
+  
+  if (hasDefinition) items.push('التعريف');
+  if (hasSwot) items.push('تحليل SWOT');
+  if (hasOpportunities) items.push('فرص الاستثمار');
+  
+  sections.forEach((s) => {
+    if (!items.includes(s.title)) items.push(s.title);
+  });
+
   if (hasLeaders && !items.includes('القادة')) items.push('القادة');
-  if (hasDefinition && !items.includes('التعريف')) items.push('التعريف');
-  if (hasOpportunities && !items.includes('فرص الاستثمار')) items.push('فرص الاستثمار');
+  
   return items;
 }
 

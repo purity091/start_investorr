@@ -11,57 +11,53 @@ interface MinimalistCardProps {
 export const MinimalistCard: React.FC<MinimalistCardProps> = ({ problem, onNavigate }) => {
   return (
     <motion.div 
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
-      whileHover={{ y: -8, scale: 1.01 }}
-      className="bg-white rounded-[3rem] border border-slate-100 shadow-[0_15px_50px_-20px_rgba(0,0,0,0.02)] hover:shadow-[0_45px_100px_-30px_rgba(0,0,0,0.08)] transition-all duration-700 flex flex-col group overflow-hidden h-full relative"
+      whileHover={{ y: -5, scale: 1.005 }}
+      className="bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col group overflow-hidden h-full relative"
     >
       {/* Decorative Gradient Glow */}
-      <div className="absolute -top-24 -right-24 w-64 h-64 bg-indigo-50/40 blur-[120px] rounded-full group-hover:bg-indigo-100/40 transition-colors duration-700" />
+      <div className="absolute -top-16 -right-16 w-48 h-48 bg-indigo-50/30 blur-[80px] rounded-full group-hover:bg-indigo-100/30 transition-colors duration-500" />
 
       {/* Top Bar: Strategic Context */}
-      <div className="px-10 pt-10 pb-6 flex items-center justify-between relative z-10">
-        <div className="flex items-center gap-5">
+      <div className="px-6 pt-6 pb-4 flex items-center justify-between relative z-10">
+        <div className="flex items-center gap-3">
            <div className="flex items-center gap-2 group/cat">
-              <Activity size={14} className="text-slate-400 group-hover/cat:text-indigo-500 transition-colors" />
-              <span className="text-[11px] font-black text-slate-400 uppercase tracking-widest leading-none">قطاع {problem.sectorName}</span>
+              <Activity size={12} className="text-slate-400 group-hover/cat:text-indigo-500 transition-colors" />
+              <span className="text-[10px] font-black text-slate-400 uppercase tracking-wider leading-none">{problem.sectorName}</span>
            </div>
         </div>
-        <div className="flex items-center gap-3">
-           <span className="text-[10px] font-bold text-slate-300 uppercase tracking-widest hidden sm:block">الانتشار الجغرافي:</span>
-           <div className="p-1 bg-white border border-slate-50 rounded-full shadow-sm">
+        <div className="flex items-center gap-2">
+           <div className="p-1 bg-white border border-slate-50 rounded-lg shadow-sm">
               <CountryList countryIds={problem.countries} />
            </div>
         </div>
       </div>
 
-      {/* Main Content & Insights Section */}
-      <div className="flex flex-col lg:flex-row gap-12 px-10 pb-8 relative z-10 flex-1">
-        
-        {/* Left: Core Intelligence */}
-        <div className="flex-1 space-y-6">
-          <div className="space-y-4">
-            <h3 className="text-2xl sm:text-3xl font-black text-slate-900 leading-[1.15] group-hover:text-indigo-600 transition-colors duration-500">
-              {problem.title}
-            </h3>
-            <p className="text-[15px] font-medium text-slate-500 leading-relaxed max-w-xl">
-              {problem.desc}
-            </p>
-          </div>
-
-        </div>
-
+      {/* Main Content */}
+      <div className="px-6 pb-6 relative z-10 flex-1 space-y-3">
+        <h3 className="text-lg sm:text-xl font-black text-slate-900 leading-tight group-hover:text-indigo-600 transition-colors duration-300">
+          {problem.title}
+        </h3>
+        <p className="text-[13px] font-medium text-slate-500 leading-relaxed line-clamp-3">
+          {problem.desc}
+        </p>
       </div>
 
       {/* Footer: Action */}
-      <div className="px-10 py-10 mt-auto border-t border-slate-100 bg-slate-50/30 group-hover:bg-white transition-colors duration-500 flex items-center justify-center">
+      <div className="px-6 py-5 mt-auto border-t border-slate-50 bg-slate-50/50 group-hover:bg-white transition-colors duration-300 flex items-center justify-between">
+         <div className="flex items-center gap-3">
+            <div className="text-right">
+               <div className="text-[10px] font-black text-slate-900">{problem.money}</div>
+               <div className="text-[8px] font-bold text-slate-400 uppercase">عائد متوقع</div>
+            </div>
+         </div>
          <button 
            onClick={onNavigate}
-           className="group/btn relative h-12 px-10 bg-slate-900 text-white rounded-2xl flex items-center gap-4 hover:bg-indigo-600 transition-all duration-500 shadow-xl overflow-hidden shrink-0"
+           className="h-9 px-5 bg-slate-900 text-white rounded-xl flex items-center gap-2 hover:bg-indigo-600 transition-all duration-300 shadow-md text-[10px] font-black uppercase tracking-wider"
          >
-           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000" />
-           <span className="text-[12px] font-black uppercase tracking-widest relative z-10">استكشاف الفرصة الكاملة</span>
-           <ArrowLeft size={16} className="relative z-10 group-hover/btn:-translate-x-1 transition-transform" />
+           <span>استكشاف</span>
+           <ArrowLeft size={14} className="rotate-180" />
          </button>
       </div>
     </motion.div>

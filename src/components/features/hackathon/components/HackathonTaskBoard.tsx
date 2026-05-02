@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { MessageSquareWarning, RefreshCw } from 'lucide-react';
 import { SprintDay, HackathonState } from '../types';
 import { HackathonTaskItem } from './HackathonTaskItem';
@@ -22,28 +22,30 @@ export const HackathonTaskBoard: React.FC<HackathonTaskBoardProps> = ({
   canCompleteDossier,
   onReset,
 }) => (
-  <section className="glass-panel rounded-[2.5rem] p-4 sm:p-8 lg:p-10">
-    <div className="mb-8 flex flex-col justify-between gap-4 sm:mb-12 md:flex-row md:items-center md:gap-6">
+  <section className="bg-white border border-slate-200 shadow-sm rounded-[2.5rem] p-6 sm:p-10">
+    <div className="mb-8 flex flex-col justify-between gap-6 sm:mb-12 md:flex-row md:items-center md:gap-8">
       <div>
-        <div className="mb-2 flex items-center gap-3">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-500/20 text-sm font-black text-blue-400">0{currentDay.day}</span>
-          <span className="text-xs font-black uppercase tracking-[0.12em] text-slate-500 sm:text-sm sm:tracking-widest">{currentDay.codename}</span>
+        <div className="mb-3 flex items-center gap-3">
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-600 text-sm font-black text-white shadow-lg shadow-indigo-100">{currentDay.day < 10 ? `0${currentDay.day}` : currentDay.day}</span>
+          <span className="text-xs font-black uppercase tracking-[0.2em] text-slate-400">{currentDay.codename}</span>
         </div>
-        <h2 className="text-2xl font-black leading-tight text-white sm:text-4xl">{currentDay.title}</h2>
+        <h2 className="text-3xl sm:text-5xl font-black leading-tight text-slate-900">{currentDay.title}</h2>
       </div>
 
-      <div className="max-w-full rounded-3xl border border-blue-500/10 bg-blue-500/5 p-4 sm:max-w-sm sm:p-5">
-        <div className="mb-2 flex items-start gap-3">
-          <MessageSquareWarning size={22} className="mt-0.5 shrink-0 text-blue-400 sm:h-8 sm:w-8" />
-          <p className="text-xs font-bold leading-relaxed text-slate-300">
-            <span className="mb-1 block text-[10px] font-black uppercase tracking-[0.08em] text-blue-400 sm:tracking-tighter">AI Mentor Insight</span>
+      <div className="max-w-full rounded-[2rem] border border-indigo-100 bg-indigo-50/50 p-6 sm:max-w-md">
+        <div className="flex items-start gap-4">
+          <div className="w-12 h-12 rounded-2xl bg-white border border-indigo-100 flex items-center justify-center shrink-0 shadow-sm text-indigo-600">
+             <MessageSquareWarning size={24} />
+          </div>
+          <p className="text-sm font-bold leading-relaxed text-slate-700">
+            <span className="mb-1 block text-[10px] font-black uppercase tracking-widest text-indigo-500">AI Mentor Insight</span>
             {mentorMessage}
           </p>
         </div>
       </div>
     </div>
 
-    <div className="space-y-4 sm:space-y-8">
+    <div className="space-y-6 sm:space-y-10">
       {currentDay.tasks.map((task) => (
         <HackathonTaskItem
           key={task.id}
@@ -57,19 +59,19 @@ export const HackathonTaskBoard: React.FC<HackathonTaskBoardProps> = ({
       ))}
     </div>
 
-    <div className="mt-10 flex flex-col gap-4 border-t border-white/5 pt-6 sm:mt-16 sm:flex-row sm:items-center sm:justify-between sm:pt-8">
+    <div className="mt-12 flex flex-col gap-6 border-t border-slate-100 pt-8 sm:mt-20 sm:flex-row sm:items-center sm:justify-between">
       <div className="flex gap-2">
-        {[1, 2, 3].map((s) => (
-          <div key={s} className={`h-3 w-3 rounded-full transition-all duration-500 ${state.currentStage === s ? 'w-8 bg-blue-500' : 'bg-slate-800'}`} />
+        {Array.from({ length: 7 }, (_, i) => i + 1).map((s) => (
+          <div key={s} className={`h-2 rounded-full transition-all duration-500 ${state.currentStage === s ? 'w-8 bg-indigo-600' : 'w-2 bg-slate-200'}`} />
         ))}
       </div>
       <button
         onClick={() => {
           if (confirm('هل أنت متأكد؟ سيتم حذف كل التقدم المنجز.')) onReset();
         }}
-        className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-600 transition-colors hover:text-red-400"
+        className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400 transition-colors hover:text-rose-500"
       >
-        <RefreshCw size={12} />
+        <RefreshCw size={14} />
         Reset Operation
       </button>
     </div>

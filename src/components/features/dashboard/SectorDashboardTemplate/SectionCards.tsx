@@ -29,29 +29,25 @@ export const LightCard: FC<{ section: SectorSection }> = ({ section }) => (
       position: 'relative',
       background: '#fff',
       borderRadius: 24,
-      border: '1px solid #f1f5f9',
+      border: '1px solid #e2e8f0',
+      padding: '32px',
       overflow: 'hidden',
-      transition: 'box-shadow 0.3s, border-color 0.3s',
+      transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
     }}
     onMouseEnter={(e) => {
-      (e.currentTarget as HTMLElement).style.boxShadow = '0 20px 60px rgba(0,0,0,0.07)';
-      (e.currentTarget as HTMLElement).style.borderColor = '#e2e8f0';
+      (e.currentTarget as HTMLElement).style.boxShadow = '0 30px 60px -12px rgba(0,0,0,0.08), 0 18px 36px -18px rgba(0,0,0,0.05)';
+      (e.currentTarget as HTMLElement).style.borderColor = '#cbd5e1';
+      (e.currentTarget as HTMLElement).style.transform = 'translateY(-4px)';
     }}
     onMouseLeave={(e) => {
       (e.currentTarget as HTMLElement).style.boxShadow = 'none';
-      (e.currentTarget as HTMLElement).style.borderColor = '#f1f5f9';
+      (e.currentTarget as HTMLElement).style.borderColor = '#e2e8f0';
+      (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
     }}
   >
-    <div className="sd-hover-glow" style={{ position: 'absolute', top: -40, left: -40, width: 160, height: 160, borderRadius: '50%', opacity: 0, transition: 'opacity 0.5s', pointerEvents: 'none' }} />
-    <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, marginBottom: 20, direction: 'rtl' }}>
-      <div style={{ position: 'relative', flexShrink: 0, width: 4 }}>
-        <div className="sd-bar" style={{ width: 4, height: 44, borderRadius: 4 }} />
-        <div className="sd-bar-glow" style={{ position: 'absolute', inset: 0, borderRadius: 4, filter: 'blur(4px)' }} />
-      </div>
-      <div style={{ flex: 1 }}>
-        <h2 className="sd-section-title" style={{ margin: 0, fontWeight: 800, color: '#0f172a', lineHeight: 1.2, letterSpacing: '-0.02em' }}>{section.title}</h2>
-        {section.subtitle && <p style={{ margin: '4px 0 0', fontSize: 10, fontWeight: 800, color: '#334155', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{section.subtitle}</p>}
-      </div>
+    <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 24, direction: 'rtl' }}>
+      <div style={{ width: 4, height: 32, background: 'var(--acc)', borderRadius: 4 }} />
+      <h2 style={{ margin: 0, fontSize: 24, fontWeight: 900, color: '#0f172a', letterSpacing: '-0.02em' }}>{section.title}</h2>
     </div>
     <div className="sd-section-light-body" style={{ direction: 'rtl' }}>
       {typeof section.content === 'string' ? parseContent(section.content, false) : section.content}
@@ -86,41 +82,58 @@ export const DarkCard: FC<{ section: SectorSection }> = ({ section }) => (
 
 export const KpiCard: FC<{ kpi: SectorKPI }> = ({ kpi }) => (
   <div
-    style={{ background: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 18, padding: '20px 16px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 10, transition: 'background 0.2s', cursor: 'default', minHeight: 110 }}
-    onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.1)'; }}
-    onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.06)'; }}
+    style={{
+      background: '#f8fafc',
+      border: '1px solid #e2e8f0',
+      borderRadius: 16,
+      padding: '20px',
+      display: 'flex',
+      flexDirection: 'column',
+      transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+      cursor: 'default'
+    }}
+    onMouseEnter={(e) => {
+      (e.currentTarget as HTMLElement).style.background = '#ffffff';
+      (e.currentTarget as HTMLElement).style.borderColor = '#cbd5e1';
+      (e.currentTarget as HTMLElement).style.boxShadow = '0 10px 25px -5px rgba(0,0,0,0.05)';
+      (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)';
+    }}
+    onMouseLeave={(e) => {
+      (e.currentTarget as HTMLElement).style.background = '#f8fafc';
+      (e.currentTarget as HTMLElement).style.borderColor = '#e2e8f0';
+      (e.currentTarget as HTMLElement).style.boxShadow = 'none';
+      (e.currentTarget as HTMLElement).style.transform = 'translateY(0)';
+    }}
   >
     {kpi.icon && (
-      <div className="sd-kpi-icon-bg" style={{ borderRadius: 12, padding: 10, display: 'flex' }}>
-        <kpi.icon className="sd-kpi-icon" size={22} />
+      <div style={{ marginBottom: 12, display: 'inline-flex', width: 36, height: 36, alignItems: 'center', justifyContent: 'center', borderRadius: 8, background: '#ffffff', color: '#334155', border: '1px solid #f1f5f9', boxShadow: '0 1px 2px rgba(0,0,0,0.05)' }}>
+        <kpi.icon size={16} strokeWidth={2.5} />
       </div>
     )}
-    <div style={{ display: 'flex', alignItems: 'baseline', gap: 4, justifyContent: 'center' }}>
-      <span style={{ fontSize: 32, fontWeight: 900, color: '#f8fafc', letterSpacing: '-0.04em', lineHeight: 1 }}>{kpi.value}</span>
-      <span className="sd-kpi-unit" style={{ fontSize: 12, fontWeight: 700, textTransform: 'uppercase' }}>{kpi.unit}</span>
-    </div>
-    <p style={{ margin: 0, fontSize: 12, fontWeight: 600, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.06em', lineHeight: 1.35, textAlign: 'center', maxWidth: '100%', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{kpi.label}</p>
+    <div style={{ fontSize: 26, fontWeight: 900, color: '#0f172a', letterSpacing: '-0.02em', lineHeight: 1 }}>{kpi.value}</div>
+    <div style={{ marginTop: 6, fontSize: 13, fontWeight: 700, color: '#334155' }}>{kpi.label}</div>
+    <div style={{ marginTop: 2, fontSize: 11, fontWeight: 700, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.02em' }}>{kpi.unit}</div>
   </div>
 );
 
 export const MarketCard: FC<{ market: SectorMarket }> = ({ market }) => (
   <div
     className="sd-market-card"
-    style={{ background: 'rgba(15,23,42,0.6)', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.05)', borderRadius: 18, display: 'flex', transition: 'background 0.2s', cursor: 'default' }}
-    onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = 'rgba(15,23,42,0.85)'; }}
-    onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = 'rgba(15,23,42,0.6)'; }}
+    style={{ background: 'rgba(15,23,42,0.4)', backdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: 16, padding: '16px 18px', display: 'flex', alignItems: 'flex-start', gap: 14, transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)', cursor: 'default' }}
+    onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = 'rgba(15,23,42,0.6)'; (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)'; (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.12)'; }}
+    onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = 'rgba(15,23,42,0.4)'; (e.currentTarget as HTMLElement).style.transform = 'translateY(0)'; (e.currentTarget as HTMLElement).style.borderColor = 'rgba(255,255,255,0.06)'; }}
   >
     {market.icon && (
-      <div className="sd-market-icon-bg" style={{ borderRadius: 12, padding: 10, display: 'flex', flexShrink: 0 }}>
-        <market.icon className="sd-market-icon" size={22} />
+      <div className="sd-market-icon-bg" style={{ borderRadius: 10, padding: 8, display: 'flex', flexShrink: 0, background: 'rgba(255,255,255,0.05)' }}>
+        <market.icon className="sd-market-icon" size={18} color="#fff" strokeWidth={1.5} />
       </div>
     )}
     <div className="sd-market-card-content" style={{ flex: 1, minWidth: 0 }}>
-      <p style={{ margin: 0, fontSize: 10, fontWeight: 700, color: 'var(--acc-60)', textTransform: 'uppercase', letterSpacing: '0.12em', lineHeight: 1.35 }}>{market.label}</p>
+      <p style={{ margin: '0 0 2px', fontSize: 9, fontWeight: 700, color: 'var(--acc-60)', textTransform: 'uppercase', letterSpacing: '0.1em', lineHeight: 1 }}>{market.label}</p>
       <div style={{ marginTop: 2 }}>
-        <p style={{ margin: 0, fontSize: 18, fontWeight: 900, color: '#f8fafc', lineHeight: 1.2 }}>{market.country}</p>
+        <p style={{ margin: 0, fontSize: 15, fontWeight: 900, color: '#f8fafc', lineHeight: 1.2 }}>{market.country}</p>
         {market.note && (
-          <p style={{ margin: '4px 0 0', fontSize: 11, color: '#64748b', fontWeight: 500, lineHeight: 1.4, maxWidth: '100%', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{market.note}</p>
+          <p style={{ margin: '4px 0 0', fontSize: 10, color: '#94a3b8', fontWeight: 500, lineHeight: 1.5, opacity: 0.8, maxWidth: '100%', overflow: 'hidden', textOverflow: 'ellipsis', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{market.note}</p>
         )}
       </div>
     </div>

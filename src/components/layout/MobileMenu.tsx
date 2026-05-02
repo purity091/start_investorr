@@ -10,6 +10,7 @@ import {
   Utensils, Armchair, Flower2, Hammer, PawPrint, Gamepad2, Briefcase, ShoppingCart,
   Handshake, Hash, PlayCircle, Coffee, Landmark, Map, Sparkles, CloudSun, Cpu, Recycle, LineChart
 } from 'lucide-react';
+import { getTabPath } from '../../utils/routes';
 
 // ─── Data Configuration ───────────────────────────────────────────────────
 
@@ -62,6 +63,7 @@ const MARKET_DISCOVERY_DASHBOARDS = [
 interface NavItemProps {
   icon: React.ElementType;
   label: string;
+  href?: string;
   active?: boolean;
   onClick: () => void;
   badge?: number;
@@ -69,7 +71,7 @@ interface NavItemProps {
   variant?: 'default' | 'ai' | 'danger' | 'active-project';
 }
 
-const NavItem = memo(({ icon: Icon, label, active, onClick, badge, isNew, variant = 'default' }: NavItemProps) => {
+const NavItem = memo(({ icon: Icon, label, href, active, onClick, badge, isNew, variant = 'default' }: NavItemProps) => {
   const variants = {
     default: active ? 'bg-primary-600 text-white shadow-lg shadow-primary-200' : 'text-gray-600 hover:bg-gray-50',
     ai: active ? 'bg-purple-600 text-white shadow-lg shadow-purple-200' : 'text-purple-600 hover:bg-purple-50',
@@ -78,8 +80,12 @@ const NavItem = memo(({ icon: Icon, label, active, onClick, badge, isNew, varian
   };
 
   return (
-    <button
-      onClick={onClick}
+    <a
+      href={href || '#'}
+      onClick={(event) => {
+        event.preventDefault();
+        onClick();
+      }}
       className={`w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-[13px] font-bold transition-all touch-manipulation active:scale-[0.98] ${variants[variant]}`}
     >
       <Icon size={18} strokeWidth={active ? 2.5 : 2} className="flex-shrink-0" />
@@ -90,7 +96,7 @@ const NavItem = memo(({ icon: Icon, label, active, onClick, badge, isNew, varian
       {badge && (
         <span className="bg-red-500 text-white text-[9px] px-1.5 py-0.5 rounded-full font-bold">{badge}</span>
       )}
-    </button>
+    </a>
   );
 });
 
@@ -117,6 +123,7 @@ interface MobileMenuProps {
 }
 
 export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeTab, setActiveTab, isAdminMode }) => {
+  const tabHref = (tab: string) => getTabPath(tab);
 
   if (!isOpen) return null;
 
@@ -154,13 +161,13 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeT
           {isAdminMode ? (
             <>
               <NavGroup title="القلب النابض">
-                <NavItem icon={LayoutDashboard} label="الصفحة الرئيسية" active={activeTab === 'admin-dashboard'} onClick={() => handleNavigate('admin-dashboard')} />
-                <NavItem icon={AreaChart} label="تحليلات المنصة" active={activeTab === 'admin-analytics'} onClick={() => handleNavigate('admin-analytics')} />
+                <NavItem icon={LayoutDashboard} label="الصفحة الرئيسية" href={tabHref('admin-dashboard')} active={activeTab === 'admin-dashboard'} onClick={() => handleNavigate('admin-dashboard')} />
+                <NavItem icon={AreaChart} label="تحليلات المنصة" href={tabHref('admin-analytics')} active={activeTab === 'admin-analytics'} onClick={() => handleNavigate('admin-analytics')} />
               </NavGroup>
               <NavGroup title="إدارة النظام">
-                <NavItem icon={Users} label="قاعدة المستخدمين" active={activeTab === 'users-management'} onClick={() => handleNavigate('users-management')} badge={248} />
-                <NavItem icon={FileText} label="أرشيف الخطط" active={activeTab === 'admin-plans'} onClick={() => handleNavigate('admin-plans')} />
-                <NavItem icon={Shield} label="بروتوكولات الأمان" active={activeTab === 'admin-security'} onClick={() => handleNavigate('admin-security')} />
+                <NavItem icon={Users} label="قاعدة المستخدمين" href={tabHref('users-management')} active={activeTab === 'users-management'} onClick={() => handleNavigate('users-management')} badge={248} />
+                <NavItem icon={FileText} label="أرشيف الخطط" href={tabHref('admin-plans')} active={activeTab === 'admin-plans'} onClick={() => handleNavigate('admin-plans')} />
+                <NavItem icon={Shield} label="بروتوكولات الأمان" href={tabHref('admin-security')} active={activeTab === 'admin-security'} onClick={() => handleNavigate('admin-security')} />
               </NavGroup>
               <NavGroup title="النظام">
                 <NavItem icon={LogOut} label="تسجيل الخروج Safe" variant="danger" onClick={() => handleNavigate('home')} />
@@ -169,18 +176,19 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeT
           ) : (
             <>
               <NavGroup title="القلب النابض">
-                <NavItem icon={Home} label="الصفحة الرئيسية" active={activeTab === 'home'} onClick={() => handleNavigate('home')} />
-                <NavItem icon={Layers} label="مشاريعي" active={activeTab === 'my-plans'} onClick={() => handleNavigate('my-plans')} />
-                <NavItem icon={Rocket} label="خلق فكرة" active={activeTab === 'new-plan'} onClick={() => handleNavigate('new-plan')} />
-                <NavItem icon={LayoutDashboard} label="خارطة المنصة" active={activeTab === 'site-map'} onClick={() => handleNavigate('site-map')} isNew />
+                <NavItem icon={Home} label="الصفحة الرئيسية" href={tabHref('home')} active={activeTab === 'home'} onClick={() => handleNavigate('home')} />
+                <NavItem icon={Layers} label="مشاريعي" href={tabHref('my-plans')} active={activeTab === 'my-plans'} onClick={() => handleNavigate('my-plans')} />
+                <NavItem icon={Rocket} label="خلق فكرة" href={tabHref('new-plan')} active={activeTab === 'new-plan'} onClick={() => handleNavigate('new-plan')} />
+                <NavItem icon={LayoutDashboard} label="خارطة المنصة" href={tabHref('site-map')} active={activeTab === 'site-map'} onClick={() => handleNavigate('site-map')} isNew />
               </NavGroup>
 
               <NavGroup title="مختبر الاستراتيجية">
-                <NavItem icon={Globe} label="رادار اليونيكورن" active={activeTab === 'unicorn-benchmark'} onClick={() => handleNavigate('unicorn-benchmark')} isNew />
+                <NavItem icon={Globe} label="رادار اليونيكورن" href={tabHref('unicorn-benchmark')} active={activeTab === 'unicorn-benchmark'} onClick={() => handleNavigate('unicorn-benchmark')} isNew />
                 
                 <NavItem 
                   icon={Compass} 
                   label="استكشاف السوق" 
+                  href={tabHref('market-discovery')}
                   active={activeTab === 'market-discovery' || MARKET_DISCOVERY_DASHBOARDS.includes(activeTab)} 
                   onClick={() => handleNavigate('market-discovery')} 
                   isNew
@@ -189,6 +197,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeT
                 <NavItem 
                   icon={Activity} 
                   label="المشاكل والفرص" 
+                  href={tabHref('problem-engine')}
                   active={activeTab === 'problem-engine'} 
                   onClick={() => handleNavigate('problem-engine')} 
                   isNew
@@ -197,27 +206,28 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeT
                 <NavItem
                   icon={Zap}
                   label="هاكاثون المستثمر"
+                  href={tabHref('hackathon')}
                   active={activeTab === 'hackathon'}
                   onClick={() => handleNavigate('hackathon')}
                   isNew
                 />
 
 
-                <NavItem icon={Palette} label="استوديو الهوية" active={activeTab === 'brand-identity'} onClick={() => handleNavigate('brand-identity')} />
-                <NavItem icon={ArrowRightLeft} label="مقارنة السيناريوهات" active={activeTab === 'comparison'} onClick={() => handleNavigate('comparison')} />
+                <NavItem icon={Palette} label="استوديو الهوية" href={tabHref('brand-identity')} active={activeTab === 'brand-identity'} onClick={() => handleNavigate('brand-identity')} />
+                <NavItem icon={ArrowRightLeft} label="مقارنة السيناريوهات" href={tabHref('comparison')} active={activeTab === 'comparison'} onClick={() => handleNavigate('comparison')} />
               </NavGroup>
 
               <NavGroup title="مركز العمليات">
-                <NavItem icon={FileText} label="محرر الخطط" active={activeTab === 'editor'} onClick={() => handleNavigate('editor')} variant={activeTab === 'editor' ? 'active-project' : 'default'} />
-                <NavItem icon={Trello} label="المهام والجدولة" active={activeTab === 'tasks'} onClick={() => handleNavigate('tasks')} badge={2} />
-                <NavItem icon={BrainCircuit} label="المحلل الذكي (AI)" active={activeTab === 'smart-analyzer'} onClick={() => handleNavigate('smart-analyzer')} variant="ai" />
-                <NavItem icon={FileCheck} label="قوالب التصدير" active={activeTab === 'export-templates'} onClick={() => handleNavigate('export-templates')} />
+                <NavItem icon={FileText} label="محرر الخطط" href={tabHref('editor')} active={activeTab === 'editor'} onClick={() => handleNavigate('editor')} variant={activeTab === 'editor' ? 'active-project' : 'default'} />
+                <NavItem icon={Trello} label="المهام والجدولة" href={tabHref('tasks')} active={activeTab === 'tasks'} onClick={() => handleNavigate('tasks')} badge={2} />
+                <NavItem icon={BrainCircuit} label="المحلل الذكي (AI)" href={tabHref('smart-analyzer')} active={activeTab === 'smart-analyzer'} onClick={() => handleNavigate('smart-analyzer')} variant="ai" />
+                <NavItem icon={FileCheck} label="قوالب التصدير" href={tabHref('export-templates')} active={activeTab === 'export-templates'} onClick={() => handleNavigate('export-templates')} />
               </NavGroup>
 
               <NavGroup title="الإدارة والضبط">
-                <NavItem icon={Bell} label="التنبيهات" active={activeTab === 'notifications'} onClick={() => handleNavigate('notifications')} badge={3} />
-                <NavItem icon={CreditCard} label="الاشتراكات والأسعار" active={activeTab === 'pricing'} onClick={() => handleNavigate('pricing')} />
-                <NavItem icon={Settings} label="إعدادات المنصة" active={activeTab === 'settings'} onClick={() => handleNavigate('settings')} />
+                <NavItem icon={Bell} label="التنبيهات" href={tabHref('notifications')} active={activeTab === 'notifications'} onClick={() => handleNavigate('notifications')} badge={3} />
+                <NavItem icon={CreditCard} label="الاشتراكات والأسعار" href={tabHref('pricing')} active={activeTab === 'pricing'} onClick={() => handleNavigate('pricing')} />
+                <NavItem icon={Settings} label="إعدادات المنصة" href={tabHref('settings')} active={activeTab === 'settings'} onClick={() => handleNavigate('settings')} />
               </NavGroup>
 
               <div className="mx-2 mt-4 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-4 border border-gray-200/50">

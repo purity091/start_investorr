@@ -174,6 +174,7 @@ import {
   Box
 } from 'lucide-react';
 import { User } from '../../types';
+import { getTabPath } from '../../utils/routes';
 
 // ─── Data Configuration ───────────────────────────────────────────────────
 
@@ -228,6 +229,7 @@ const MARKET_DISCOVERY_DASHBOARDS = [
 interface NavItemProps {
   icon: React.ElementType;
   label: string;
+  href?: string;
   variant?: 'default' | 'danger' | 'ai' | 'active-project';
   active?: boolean;
   onClick?: () => void;
@@ -242,7 +244,7 @@ interface NavItemProps {
  * Memoized NavItem for maximum performance.
  * Prevents re-renders unless props actually change.
  */
-const NavItem = memo(({ icon: Icon, label, variant = 'default', active, onClick, badge, isNew, isCollapsed, isAdminMode, id }: NavItemProps) => {
+const NavItem = memo(({ icon: Icon, label, href, variant = 'default', active, onClick, badge, isNew, isCollapsed, isAdminMode, id }: NavItemProps) => {
   const baseClasses = `w-full flex items-center ${isCollapsed ? 'justify-center p-0 h-10 sm:h-11 w-10 sm:w-11 mx-auto mb-1' : 'gap-2 sm:gap-3 px-3 sm:px-4 py-2 sm:py-2.5'} rounded-[0.9rem] sm:rounded-[1.1rem] text-[12px] sm:text-[13px] font-bold transition-all duration-300 group relative`;
 
   const variants = {
@@ -257,7 +259,16 @@ const NavItem = memo(({ icon: Icon, label, variant = 'default', active, onClick,
   };
 
   return (
-    <button id={id} onClick={onClick} className={`${baseClasses} ${variants[variant]}`} title={isCollapsed ? label : ''}>
+    <a
+      id={id}
+      href={href || '#'}
+      onClick={(event) => {
+        event.preventDefault();
+        onClick?.();
+      }}
+      className={`${baseClasses} ${variants[variant]}`}
+      title={isCollapsed ? label : ''}
+    >
       <div className={`${isCollapsed ? 'p-1.5 sm:p-2' : 'p-1.5 sm:p-2'} rounded-lg sm:rounded-xl transition-all duration-500 ${
         active
           ? 'bg-white/20 text-white'
@@ -294,7 +305,7 @@ const NavItem = memo(({ icon: Icon, label, variant = 'default', active, onClick,
            {badge}
         </div>
       )}
-    </button>
+    </a>
   );
 });
 
@@ -337,6 +348,7 @@ interface SidebarProps {
 export const Sidebar: React.FC<SidebarProps> = ({ user, isOpen = true, isCollapsed = false, onCollapseToggle, activeTab, setActiveTab }) => {
   const adminTabs = ['admin-dashboard', 'users-management', 'admin-plans', 'admin-analytics', 'admin-security'];
   const isAdminMode = adminTabs.includes(activeTab || '');
+  const tabHref = (tab: string) => getTabPath(tab);
 
 
   const sidebarBg = isAdminMode
@@ -393,14 +405,14 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, isOpen = true, isCollaps
           {isAdminMode ? (
             <>
               <NavGroup title="القلب النابض" isCollapsed={isCollapsed} isAdminMode={isAdminMode}>
-                <NavItem icon={LayoutDashboard} label="الصفحة الرئيسية" active={activeTab === 'admin-dashboard'} onClick={() => setActiveTab?.('admin-dashboard')} isCollapsed={isCollapsed} isAdminMode={isAdminMode} />
-                <NavItem icon={AreaChart} label="تحليلات المنصة" active={activeTab === 'admin-analytics'} onClick={() => setActiveTab?.('admin-analytics')} isAdminMode={isAdminMode} isCollapsed={isCollapsed} />
+                <NavItem icon={LayoutDashboard} label="الصفحة الرئيسية" href={tabHref('admin-dashboard')} active={activeTab === 'admin-dashboard'} onClick={() => setActiveTab?.('admin-dashboard')} isCollapsed={isCollapsed} isAdminMode={isAdminMode} />
+                <NavItem icon={AreaChart} label="تحليلات المنصة" href={tabHref('admin-analytics')} active={activeTab === 'admin-analytics'} onClick={() => setActiveTab?.('admin-analytics')} isAdminMode={isAdminMode} isCollapsed={isCollapsed} />
               </NavGroup>
 
               <NavGroup title="إدارة النظام" isCollapsed={isCollapsed} isAdminMode={isAdminMode}>
-                <NavItem icon={Users} label="قاعدة المستخدمين" active={activeTab === 'users-management'} onClick={() => setActiveTab?.('users-management')} isAdminMode={isAdminMode} isCollapsed={isCollapsed} badge={248} />
-                <NavItem icon={FileText} label="أرشيف الخطط" active={activeTab === 'admin-plans'} onClick={() => setActiveTab?.('admin-plans')} isAdminMode={isAdminMode} isCollapsed={isCollapsed} />
-                {!isCollapsed && <NavItem icon={Shield} label="بروتوكولات الأمان" active={activeTab === 'admin-security'} onClick={() => setActiveTab?.('admin-security')} isAdminMode={isAdminMode} isCollapsed={isCollapsed} />}
+                <NavItem icon={Users} label="قاعدة المستخدمين" href={tabHref('users-management')} active={activeTab === 'users-management'} onClick={() => setActiveTab?.('users-management')} isAdminMode={isAdminMode} isCollapsed={isCollapsed} badge={248} />
+                <NavItem icon={FileText} label="أرشيف الخطط" href={tabHref('admin-plans')} active={activeTab === 'admin-plans'} onClick={() => setActiveTab?.('admin-plans')} isAdminMode={isAdminMode} isCollapsed={isCollapsed} />
+                {!isCollapsed && <NavItem icon={Shield} label="بروتوكولات الأمان" href={tabHref('admin-security')} active={activeTab === 'admin-security'} onClick={() => setActiveTab?.('admin-security')} isAdminMode={isAdminMode} isCollapsed={isCollapsed} />}
               </NavGroup>
 
               {!isCollapsed && (
@@ -412,19 +424,20 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, isOpen = true, isCollaps
           ) : (
             <>
               <NavGroup title="القلب النابض" isCollapsed={isCollapsed}>
-                <NavItem id="tour-home" icon={Home} label="الصفحة الرئيسية" active={activeTab === 'home'} onClick={() => setActiveTab?.('home')} isCollapsed={isCollapsed} />
-                <NavItem id="tour-projects" icon={Layers} label="مشاريعي" active={activeTab === 'my-plans'} onClick={() => setActiveTab?.('my-plans')} isCollapsed={isCollapsed} />
-                <NavItem id="tour-new-plan" icon={Rocket} label="خلق فكرة" active={activeTab === 'new-plan'} onClick={() => setActiveTab?.('new-plan')} isCollapsed={isCollapsed} />
+                <NavItem id="tour-home" icon={Home} label="الصفحة الرئيسية" href={tabHref('home')} active={activeTab === 'home'} onClick={() => setActiveTab?.('home')} isCollapsed={isCollapsed} />
+                <NavItem id="tour-projects" icon={Layers} label="مشاريعي" href={tabHref('my-plans')} active={activeTab === 'my-plans'} onClick={() => setActiveTab?.('my-plans')} isCollapsed={isCollapsed} />
+                <NavItem id="tour-new-plan" icon={Rocket} label="خلق فكرة" href={tabHref('new-plan')} active={activeTab === 'new-plan'} onClick={() => setActiveTab?.('new-plan')} isCollapsed={isCollapsed} />
               </NavGroup>
 
               <NavGroup title="مختبر الاستراتيجية" isCollapsed={isCollapsed}>
-                <NavItem id="tour-unicorn" icon={Globe} label="رادار اليونيكورن" active={activeTab === 'unicorn-benchmark'} onClick={() => setActiveTab?.('unicorn-benchmark')} isCollapsed={isCollapsed} isNew />
+                <NavItem id="tour-unicorn" icon={Globe} label="رادار اليونيكورن" href={tabHref('unicorn-benchmark')} active={activeTab === 'unicorn-benchmark'} onClick={() => setActiveTab?.('unicorn-benchmark')} isCollapsed={isCollapsed} isNew />
                 
                 {/* Market Discovery Link */}
                 <NavItem 
                   id="tour-market-discovery" 
                   icon={Compass} 
                   label="استكشاف السوق" 
+                  href={tabHref('market-discovery')}
                   active={isMarketDiscoveryActive} 
                   onClick={() => setActiveTab?.('market-discovery')} 
                   isCollapsed={isCollapsed}
@@ -435,6 +448,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, isOpen = true, isCollaps
                   id="tour-problem-engine" 
                   icon={Activity} 
                   label="المشاكل والفرص" 
+                  href={tabHref('problem-engine')}
                   active={activeTab === 'problem-engine'} 
                   onClick={() => setActiveTab?.('problem-engine')} 
                   isCollapsed={isCollapsed}
@@ -445,29 +459,30 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, isOpen = true, isCollaps
                   id="tour-hackathon"
                   icon={Zap}
                   label="هاكاثون المستثمر"
+                  href={tabHref('hackathon')}
                   active={activeTab === 'hackathon'}
                   onClick={() => setActiveTab?.('hackathon')}
                   isCollapsed={isCollapsed}
                   isNew
                 />
 
-                <NavItem id="tour-brand" icon={Palette} label="استوديو الهوية" active={activeTab === 'brand-identity'} onClick={() => setActiveTab?.('brand-identity')} isCollapsed={isCollapsed} />
-                {!isCollapsed && <NavItem icon={ArrowRightLeft} label="مقارنة السيناريوهات" active={activeTab === 'comparison'} onClick={() => setActiveTab?.('comparison')} isCollapsed={isCollapsed} />}
+                <NavItem id="tour-brand" icon={Palette} label="استوديو الهوية" href={tabHref('brand-identity')} active={activeTab === 'brand-identity'} onClick={() => setActiveTab?.('brand-identity')} isCollapsed={isCollapsed} />
+                {!isCollapsed && <NavItem icon={ArrowRightLeft} label="مقارنة السيناريوهات" href={tabHref('comparison')} active={activeTab === 'comparison'} onClick={() => setActiveTab?.('comparison')} isCollapsed={isCollapsed} />}
               </NavGroup>
 
               {!isCollapsed ? (
                 <>
                   <NavGroup title="مركز العمليات" isCollapsed={isCollapsed}>
-                    <NavItem icon={FileText} id="tour-editor" label="محرر الخطط" active={activeTab === 'editor'} onClick={() => setActiveTab?.('editor')} isCollapsed={isCollapsed} variant={activeTab === 'editor' ? 'active-project' : 'default'} />
-                    <NavItem icon={Trello} id="tour-tasks" label="المهام والجدولة" active={activeTab === 'tasks'} onClick={() => setActiveTab?.('tasks')} isCollapsed={isCollapsed} badge={2} />
-                    <NavItem icon={BrainCircuit} id="tour-analyzer" label="المحلل الذكي (AI)" active={activeTab === 'smart-analyzer'} onClick={() => setActiveTab?.('smart-analyzer')} variant="ai" isCollapsed={isCollapsed} />
-                    <NavItem icon={FileCheck} label="قوالب التصدير" active={activeTab === 'export-templates'} onClick={() => setActiveTab?.('export-templates')} isCollapsed={isCollapsed} />
+                    <NavItem icon={FileText} id="tour-editor" label="محرر الخطط" href={tabHref('editor')} active={activeTab === 'editor'} onClick={() => setActiveTab?.('editor')} isCollapsed={isCollapsed} variant={activeTab === 'editor' ? 'active-project' : 'default'} />
+                    <NavItem icon={Trello} id="tour-tasks" label="المهام والجدولة" href={tabHref('tasks')} active={activeTab === 'tasks'} onClick={() => setActiveTab?.('tasks')} isCollapsed={isCollapsed} badge={2} />
+                    <NavItem icon={BrainCircuit} id="tour-analyzer" label="المحلل الذكي (AI)" href={tabHref('smart-analyzer')} active={activeTab === 'smart-analyzer'} onClick={() => setActiveTab?.('smart-analyzer')} variant="ai" isCollapsed={isCollapsed} />
+                    <NavItem icon={FileCheck} label="قوالب التصدير" href={tabHref('export-templates')} active={activeTab === 'export-templates'} onClick={() => setActiveTab?.('export-templates')} isCollapsed={isCollapsed} />
                   </NavGroup>
 
                   <NavGroup title="الإدارة والضبط" isCollapsed={isCollapsed}>
-                    <NavItem icon={Bell} label="التنبيهات" active={activeTab === 'notifications'} onClick={() => setActiveTab?.('notifications')} isCollapsed={isCollapsed} badge={3} />
-                    <NavItem icon={CreditCard} label="الاشتراكات والأسعار" active={activeTab === 'pricing'} onClick={() => setActiveTab?.('pricing')} isCollapsed={isCollapsed} />
-                    <NavItem icon={Settings} label="إعدادات المنصة" active={activeTab === 'settings'} onClick={() => setActiveTab?.('settings')} isCollapsed={isCollapsed} />
+                    <NavItem icon={Bell} label="التنبيهات" href={tabHref('notifications')} active={activeTab === 'notifications'} onClick={() => setActiveTab?.('notifications')} isCollapsed={isCollapsed} badge={3} />
+                    <NavItem icon={CreditCard} label="الاشتراكات والأسعار" href={tabHref('pricing')} active={activeTab === 'pricing'} onClick={() => setActiveTab?.('pricing')} isCollapsed={isCollapsed} />
+                    <NavItem icon={Settings} label="إعدادات المنصة" href={tabHref('settings')} active={activeTab === 'settings'} onClick={() => setActiveTab?.('settings')} isCollapsed={isCollapsed} />
                   </NavGroup>
 
                   <div className="px-6 py-4 animate-in fade-in duration-500">
@@ -481,8 +496,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, isOpen = true, isCollaps
                 </>
               ) : (
                 <div className="px-2 mt-4 space-y-4">
-                  <NavItem icon={Bell} label="التنبيهات" active={activeTab === 'notifications'} onClick={() => setActiveTab?.('notifications')} isCollapsed={isCollapsed} badge={3} />
-                  <NavItem icon={Settings} label="الإعدادات" active={activeTab === 'settings'} onClick={() => setActiveTab?.('settings')} isCollapsed={isCollapsed} />
+                  <NavItem icon={Bell} label="التنبيهات" href={tabHref('notifications')} active={activeTab === 'notifications'} onClick={() => setActiveTab?.('notifications')} isCollapsed={isCollapsed} badge={3} />
+                  <NavItem icon={Settings} label="الإعدادات" href={tabHref('settings')} active={activeTab === 'settings'} onClick={() => setActiveTab?.('settings')} isCollapsed={isCollapsed} />
                 </div>
               )}
             </>

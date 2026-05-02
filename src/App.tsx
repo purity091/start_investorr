@@ -10,12 +10,16 @@ import SiteTour from './components/views/SiteTour';
 
 import { MOCK_USER, INITIAL_SECTIONS, ADMIN_TABS } from './data/constants';
 import { PlanSection } from './types';
+import { getTabFromPathname, getTabPath } from './utils/routes';
+
+const DEFAULT_TAB = 'home';
 
 const App: React.FC = () => {
-  // Persistence Logic: Initialize from localStorage or default to 'home'
-  const [activeTab, setActiveTab] = useState<string>(() => {
+  const [activeTab, setActiveTabState] = useState<string>(() => {
+    const pathTab = getTabFromPathname(window.location.pathname);
+    if (pathTab) return pathTab;
     const savedTab = localStorage.getItem('khotta_active_tab');
-    return (savedTab as any) || 'home';
+    return (savedTab as any) || DEFAULT_TAB;
   });
 
   const [sections, setSections] = useState<PlanSection[]>(INITIAL_SECTIONS);
@@ -33,10 +37,40 @@ const App: React.FC = () => {
   const notificationRef = useRef<HTMLDivElement>(null);
   const profileRef = useRef<HTMLDivElement>(null);
 
-  // Persistence Effect: Update localStorage whenever activeTab changes
+  const setActiveTab = (tab: string, options?: { replace?: boolean }) => {
+    const nextTab = tab || DEFAULT_TAB;
+    const nextPath = getTabPath(nextTab, window.location.pathname);
+    const currentPath = `${window.location.pathname}${window.location.search}`;
+
+    if (currentPath !== nextPath) {
+      if (options?.replace) {
+        window.history.replaceState({ tab: nextTab }, '', nextPath);
+      } else {
+        window.history.pushState({ tab: nextTab }, '', nextPath);
+      }
+    }
+
+    setActiveTabState(nextTab);
+    window.dispatchEvent(new CustomEvent('khotta:navigate', { detail: { tab: nextTab, path: nextPath } }));
+  };
+
+  useEffect(() => {
+    const handlePopState = () => {
+      const nextTab = getTabFromPathname(window.location.pathname) || DEFAULT_TAB;
+      setActiveTabState(nextTab);
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
   useEffect(() => {
     localStorage.setItem('khotta_active_tab', activeTab);
-    setSubTabLabel(null); // Reset sub-label when tab changes
+    const expectedPath = getTabPath(activeTab, window.location.pathname);
+    if (window.location.pathname !== expectedPath) {
+      window.history.replaceState({ tab: activeTab }, '', expectedPath);
+    }
+    setSubTabLabel(null);
   }, [activeTab]);
 
   useEffect(() => {

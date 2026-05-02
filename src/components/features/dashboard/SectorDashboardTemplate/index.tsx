@@ -67,13 +67,16 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
   );
 
   const [activeNav, setActiveNav] = useState<string>(nav[0] ?? '');
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLDivElement>(null);
   const visibleRef = useRef<Set<string>>(new Set());
 
   // Scroll to top on mount
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTo({ top: 0, behavior: 'instant' });
+    }
   }, []);
 
   // Nav click → smooth scroll
@@ -87,10 +90,18 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
         document.querySelector<HTMLElement>(`[data-section="${sectionId}"]`) ??
         document.getElementById(`${sectionId}-section`);
 
-      if (el) {
+      if (el && scrollContainerRef.current) {
+        const container = scrollContainerRef.current;
         const navH = navRef.current?.offsetHeight ?? 60;
-        const top = el.getBoundingClientRect().top + window.scrollY - navH - 32;
-        window.scrollTo({ top, behavior: 'smooth' });
+        
+        // Calculate position relative to container
+        const elTop = el.getBoundingClientRect().top;
+        const containerTop = container.getBoundingClientRect().top;
+        const currentScroll = container.scrollTop;
+        
+        const targetScroll = elTop - containerTop + currentScroll - navH - 20;
+
+        container.scrollTo({ top: targetScroll, behavior: 'smooth' });
       }
     },
     [navMap],
@@ -136,9 +147,10 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
         }
       },
       {
+        root: scrollContainerRef.current,
         rootMargin: '-120px 0px -40% 0px',
         threshold: [0, 0.2],
-      },
+      }
     );
 
     tracked.forEach((el) => observer.observe(el));
@@ -148,93 +160,85 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
   return (
     <div
       dir="rtl"
+      ref={scrollContainerRef}
       className="sd-mobile-safe"
       style={{
         minHeight: '100vh',
+
         background: '#f8fafc',
         fontFamily: "'Cairo', 'Tajawal', 'IBM Plex Sans Arabic', system-ui, sans-serif",
-        maxWidth: '100vw',
-        overflowX: 'hidden',
+        height: '100vh',
+        overflowY: 'auto',
       }}
     >
-      <header style={{ background: 'linear-gradient(160deg, #0a0f1e 0%, #0f172a 60%, #131f35 100%)', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px)', backgroundSize: '32px 32px', pointerEvents: 'none' }} />
-        <div style={{ position: 'absolute', top: -120, right: -120, width: 500, height: 500, borderRadius: '50%', background: 'var(--acc)', filter: 'blur(160px)', opacity: 0.08, pointerEvents: 'none' }} />
-
-        <div className="sd-container sd-header-section" style={{ position: 'relative', zIndex: 10 }}>
-          <div className="sd-header-grid" style={{ direction: 'rtl' }}>
-            <div className="sd-hero-header-stack" style={{ flex: '1 1 auto' }}>
-              <button 
-                onClick={onBack}
-                className="sd-back-btn"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 14px', background: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '100px', color: '#94a3b8', fontSize: '11px', fontWeight: 700, cursor: 'pointer', transition: 'all 0.2s' }}
-                onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.1)'; e.currentTarget.style.color = '#f8fafc'; }}
-                onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.color = '#94a3b8'; }}
-              >
-                <span>الرجوع إلى {parentCategory}</span>
-                <ChevronDown size={14} style={{ transform: 'rotate(-90deg)' }} />
-              </button>
-
-              <div className="sd-hero-icon-wrapper">
-                <div className="sd-hero-icon-bg" style={{ padding: 10, borderRadius: 16, boxShadow: '0 10px 25px rgba(0,0,0,0.3)', position: 'relative' }}>
-                   <Icon size={24} color="#fff" strokeWidth={1.5} />
-                  <div style={{ position: 'absolute', inset: 0, borderRadius: 16, boxShadow: 'inset 0 0 0 1px rgba(255,255,255,0.2)' }} />
-                </div>
-                <div style={{ height: 28, width: 1, background: 'rgba(255,255,255,0.1)' }} />
+      <header className="sd-light-hero-section">
+        <div className="sd-container">
+          <div className="sd-light-hero-grid">
+            
+            {/* Right Column (Text Content) */}
+            <div className="sd-light-hero-content">
+              <div className="sd-light-badge">
+                دراسة قطاع {parentCategory}
               </div>
-
-              <h1 className="sd-hero-title" style={{ margin: '0 0 12px', fontWeight: 900, color: '#f8fafc', letterSpacing: '-0.02em' }}>{title}</h1>
-              <p className="sd-hero-desc" style={{ margin: 0, color: '#94a3b8', fontWeight: 500 }}>{subtitle}</p>
-
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 28, width: '100%', justifyContent: 'center' }} className="sd-hero-btn-group">
-                <button className="sd-download-btn" style={{ display: 'flex', alignItems: 'center', gap: 10, borderRadius: 12, color: '#fff', fontWeight: 800, border: 'none', cursor: 'pointer', transition: 'all 0.3s', boxShadow: '0 8px 25px rgba(0,0,0,0.2)' }}>
+              <h1 style={{ fontSize: 'clamp(36px, 5vw, 48px)', fontWeight: 900, color: '#020617', margin: 0, lineHeight: 1.2, letterSpacing: '-0.02em' }}>
+                {title}
+              </h1>
+              <p style={{ maxWidth: '100%', fontSize: 16, lineHeight: 1.8, color: '#475569', margin: 0 }}>
+                {subtitle}
+              </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 12 }}>
+                <button className="sd-download-btn" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, borderRadius: 12, background: '#0f172a', padding: '12px 20px', fontSize: 14, fontWeight: 900, color: '#fff', border: 'none', cursor: 'pointer', transition: 'background 0.2s' }}>
+                  تحميل التقرير الكامل
                   <Download size={16} />
-                  <span>{pdfLabel}</span>
+                </button>
+                <button onClick={onBack} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, borderRadius: 12, border: '1px solid #e2e8f0', background: '#fff', padding: '12px 20px', fontSize: 14, fontWeight: 900, color: '#334155', cursor: 'pointer', transition: 'background 0.2s' }}>
+                  الرجوع لاستكشاف القطاعات
                 </button>
               </div>
             </div>
 
-            <div className="sd-kpi-grid">
+            {/* Left Column (KPI Grid) */}
+            <div className="sd-light-kpi-grid">
               {kpis.slice(0, 4).map((kpi, i) => (
                 <KpiCard key={i} kpi={kpi} />
               ))}
             </div>
-          </div>
 
-          <div className="sd-market-grid" style={{ marginTop: 60 }}>
-            {topMarkets.map((market, i) => (
-              <MarketCard key={i} market={market} />
-            ))}
           </div>
         </div>
       </header>
 
-      <nav ref={navRef} style={{ position: 'sticky', top: 0, zIndex: 100, background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(20px)', borderBottom: '1px solid #e2e8f0' }}>
+      <nav ref={navRef} style={{ position: 'sticky', top: 0, zIndex: 100, background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(24px)', borderBottom: '1px solid #f1f5f9' }}>
         <div className="sd-container" style={{ height: 72 }}>
           <div className="sd-nav-container">
             {nav.map((item) => (
-              <button key={item} onClick={() => handleNavClick(item)} className={`sd-nav-btn ${activeNav === item ? 'active' : ''}`} style={{ padding: '10px 24px', borderRadius: '100px', border: '1px solid transparent', background: 'transparent', color: activeNav === item ? '#fff' : '#64748b', fontSize: 14, fontWeight: 700, cursor: 'pointer', transition: 'all 0.3s' }}>{item}</button>
+              <button 
+                key={item} 
+                onClick={() => handleNavClick(item)} 
+                className={`sd-nav-btn ${activeNav === item ? 'active' : ''}`} 
+                style={{ 
+                  padding: '10px 24px', 
+                  borderRadius: '100px', 
+                  border: '1px solid transparent', 
+                  background: activeNav === item ? '#0f172a' : 'transparent', 
+                  color: activeNav === item ? '#fff' : '#475569', 
+                  fontSize: 14, 
+                  fontWeight: 800, 
+                  cursor: 'pointer', 
+                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)' 
+                }}
+              >
+                {item}
+              </button>
             ))}
           </div>
         </div>
       </nav>
-    
 
-      <main ref={mainRef} className="sd-container" style={{ paddingTop: '40px', paddingBottom: '160px', display: 'flex', flexDirection: 'column', gap: 20 }}>
-        {sections.map((section) => (
-          <div key={section.id} data-section={section.id}>
-            {section.variant === 'dark' ? <DarkCard section={section} /> : <LightCard section={section} />}
-          </div>
-        ))}
 
-        {hasSwot && (
-          <SwotSection swot={swot} title={title} />
-        )}
-
-        {hasLeaders && (
-          <LeadersSection leaders={leaders} title={title} />
-        )}
-
+      <main ref={mainRef} className="sd-container" style={{ paddingTop: '40px', paddingBottom: '160px', display: 'flex', flexDirection: 'column', gap: 24 }}>
+        
+        {/* 1. Introduction & Context */}
         <BottomRow
           definition={definition}
           industryInsights={industryInsights}
@@ -242,8 +246,26 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
           title={title}
         />
 
+        {/* 2. Strategic Context (SWOT) */}
+        {hasSwot && (
+          <SwotSection swot={swot} title={title} />
+        )}
+
+        {/* 3. Actionable Value (Opportunities) */}
         {hasOpportunities && (
           <OpportunitiesSection opportunities={businessOpportunities} onBuildPlan={onBuildPlan} />
+        )}
+
+        {/* 4. Detailed Analysis Sections */}
+        {sections.map((section) => (
+          <div key={section.id} data-section={section.id}>
+            {section.variant === 'dark' ? <DarkCard section={section} /> : <LightCard section={section} />}
+          </div>
+        ))}
+
+        {/* 5. Ecosystem & Proof (Leaders) */}
+        {hasLeaders && (
+          <LeadersSection leaders={leaders} title={title} />
         )}
       </main>
     </div>

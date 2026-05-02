@@ -200,6 +200,45 @@ export const OpportunityDetail: React.FC<OpportunityDetailProps> = ({
                 <p className="text-base sm:text-xl font-medium text-slate-500 leading-relaxed max-w-4xl">{selectedProblem.desc}</p>
               </div>
 
+              {/* Market Moat Section: Strategic Motivator */}
+              <div className="pt-12 border-t border-slate-100">
+                <div className="bg-slate-900 rounded-[3rem] p-10 relative overflow-hidden shadow-2xl">
+                  {/* Decorative Background Elements */}
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 blur-[100px] rounded-full" />
+                  <div className="absolute bottom-0 left-0 w-48 h-48 bg-rose-500/5 blur-[80px] rounded-full" />
+                  
+                  <div className="relative flex flex-col lg:flex-row gap-10 items-start">
+                    <div className="lg:w-1/3">
+                      <div className="w-16 h-16 bg-white/10 backdrop-blur-md text-white rounded-2xl flex items-center justify-center mb-6 border border-white/20 shadow-xl">
+                        <AlertCircle size={32} className="text-rose-400" />
+                      </div>
+                      <h4 className="text-2xl sm:text-3xl font-black text-white leading-tight mb-4">لماذا لم تُحل المشكلة حتى الآن؟</h4>
+                      <p className="text-sm font-bold text-slate-400 leading-relaxed">
+                        تحليل استخباري للعوائق التاريخية التي منعت الحلول التقليدية من اختراق هذه الفجوة السوقية.
+                      </p>
+                    </div>
+
+                    <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {(selectedProblem.whyNotSolved || [
+                        'وجود أنظمة قديمة (Legacy) صعبة التحديث.',
+                        'غياب التنسيق بين الأطراف الفاعلة في السوق.',
+                        'الحاجة لتقنيات متقدمة لم تكن متاحة سابقاً.',
+                        'تعقيد اللوائح التنظيمية في النطاقات الجغرافية.'
+                      ]).map((txt, i) => (
+                        <div key={i} className="bg-white/5 backdrop-blur-sm p-6 rounded-[2rem] border border-white/10 hover:bg-white/10 transition-all group">
+                          <div className="flex items-start gap-4">
+                             <div className="w-8 h-8 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 text-xs font-black group-hover:scale-110 transition-transform">
+                                {i + 1}
+                             </div>
+                             <span className="text-sm font-bold text-slate-200 leading-relaxed">{txt}</span>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {/* Solutions Section */}
               <div className="pt-8 border-t border-slate-100">
                  <div className="flex items-center gap-4 mb-8">
@@ -280,24 +319,7 @@ export const OpportunityDetail: React.FC<OpportunityDetailProps> = ({
                  </div>
               </div>
 
-              {/* Market Moat Section */}
-              <div className="bg-indigo-50/50 border border-indigo-100 rounded-[2rem] p-8">
-                 <h4 className="font-black text-indigo-900 mb-4 flex items-center gap-2">
-                    <Target size={18} /> لماذا لم تُحل حتى الآن؟
-                 </h4>
-                 <ul className="space-y-4">
-                    {(selectedProblem.whyNotSolved || [
-                      'وجود أنظمة قديمة (Legacy) صعبة التحديث.',
-                      'غياب التنسيق بين الأطراف الفاعلة في السوق.',
-                      'الحاجة لتقنيات متقدمة لم تكن متاحة سابقاً.'
-                    ]).map((txt, i) => (
-                      <li key={i} className="flex items-start gap-3 text-xs font-bold text-indigo-800/70 leading-relaxed">
-                         <div className="w-1.5 h-1.5 rounded-full bg-indigo-400 mt-1.5 shrink-0" />
-                         <span>{txt}</span>
-                      </li>
-                    ))}
-                 </ul>
-              </div>
+
 
               {/* Recommended Tech Stack */}
               <div className="bg-white border border-slate-200 rounded-[2rem] p-8">

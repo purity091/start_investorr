@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowUp, Wand2 } from 'lucide-react';
+import { getTabFromPathname } from '../../utils/routes';
 
 export const FloatingActions: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('home');
 
   useEffect(() => {
     const updateTab = () => {
-      const savedTab = localStorage.getItem('khotta_active_tab');
-      setActiveTab(savedTab || 'home');
+      setActiveTab(getTabFromPathname(window.location.pathname));
     };
     
     updateTab();
-    const interval = setInterval(updateTab, 500);
-    return () => clearInterval(interval);
+    window.addEventListener('popstate', updateTab);
+    window.addEventListener('khotta:navigate', updateTab as EventListener);
+    return () => {
+      window.removeEventListener('popstate', updateTab);
+      window.removeEventListener('khotta:navigate', updateTab as EventListener);
+    };
   }, []);
 
   const scrollToTop = () => {

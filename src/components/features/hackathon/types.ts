@@ -2,23 +2,29 @@ import React from 'react';
 
 export type TaskId =
   | 'target'
+  | 'market_size'
   | 'audience'
-  | 'swot'
+  | 'solution'
   | 'advantage'
-  | 'gap'
-  | 'mission'
+  | 'competitors'
   | 'arsenal'
+  | 'features'
+  | 'prototype_plan'
   | 'revenue'
   | 'costs'
-  | 'roadmap'
-  | 'team'
-  | 'risk'
+  | 'projections'
   | 'marketing'
-  | 'plan100'
+  | 'metrics'
+  | 'branding'
+  | 'risk'
+  | 'legal'
+  | 'team_governance'
   | 'brief'
+  | 'pitch_deck'
   | 'dossier';
 
 export interface HackathonState {
+  hasStarted: boolean;
   pledged: boolean;
   startTime: number | null;
   currentStage: number;
@@ -28,13 +34,28 @@ export interface HackathonState {
   intensityScore: number;
   lastActivity: number;
   accomplished: boolean;
+  registrationData?: {
+    industries: string[];
+    domains: string[];
+    mobile: string;
+    jobRole: string;
+    country: string;
+  };
   scenario: ScenarioState;
 }
 
 export interface ScenarioState {
-  cac: number;
-  churn: number;
-  timeToRevenue: number;
+  marketingSpend: number;
+  pricingStrategy: 'low' | 'premium' | 'freemium';
+  teamFocus: 'product' | 'growth' | 'ops';
+}
+
+export interface Opportunity {
+  id: string;
+  title: string;
+  desc: string;
+  pain: number;
+  sector: string;
 }
 
 export interface ReadinessBreakdown {
