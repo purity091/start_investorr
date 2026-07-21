@@ -1,20 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Trophy, 
-  Target, 
-  Zap, 
-  Cpu, 
-  TrendingUp, 
-  Rocket, 
-  ShieldCheck, 
+import {
+  Trophy,
+  Target,
+  Zap,
+  Cpu,
+  TrendingUp,
+  Rocket,
+  ShieldCheck,
   FileText,
-  Clock,
   ChevronRight,
   Sparkles,
   Users,
   Globe,
-  Award
+  Award,
+  Check,
+  Code,
+  Activity,
+  Layout,
+  Info,
 } from 'lucide-react';
 
 interface HackathonIntroProps {
@@ -33,18 +37,17 @@ export const HackathonIntro: React.FC<HackathonIntroProps> = ({ onStart }) => {
   ];
 
   const highlights = [
-    { icon: Trophy, title: 'جوائز كبرى', desc: 'تمويل مباشر للمراكز الأولى وشراكات استراتيجية.' },
+    { icon: Trophy, title: 'تكريم وتميّز', desc: 'إبراز أفضل الفرق ومنحها فرص عرض أوسع وربطها بمسارات دعم وتوجيه.' },
     { icon: Users, title: 'مجتمع النخبة', desc: 'تواصل مع أفضل العقول والمؤسسين في المنطقة.' },
     { icon: Globe, title: 'وصول عالمي', desc: 'عرض مشروعك على مستثمرين دوليين وصناديق جريئة.' },
   ];
 
   return (
     <div className="min-h-screen bg-white text-slate-900 font-tajawal overflow-x-hidden" dir="rtl">
-      {/* Hero Section */}
       <section className="relative pt-20 pb-32 overflow-hidden">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-indigo-50/50 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2" />
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-50/30 rounded-full blur-3xl -z-10 -translate-x-1/2 translate-y-1/2" />
-        
+
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -55,16 +58,16 @@ export const HackathonIntro: React.FC<HackathonIntroProps> = ({ onStart }) => {
               <Sparkles size={16} />
               <span>أكبر هاكثون استثماري في المنطقة</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tight">
               حوّل فكرتك إلى <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-l from-indigo-600 to-blue-600">كيان استثماري سيادي</span>
             </h1>
-            
+
             <p className="text-xl text-slate-500 max-w-3xl mx-auto mb-12 font-medium leading-relaxed">
               انضم إلى رحلة مكثفة لمدة 7 أيام، نصمم خلالها مستقبلك التجاري عبر أدوات استخباراتية استراتيجية وجلسات تنفيذية قاسية للوصول إلى الجاهزية الاستثمارية الكاملة.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <button
                 onClick={onStart}
@@ -73,7 +76,7 @@ export const HackathonIntro: React.FC<HackathonIntroProps> = ({ onStart }) => {
                 ابدأ رحلة التنفيذ
                 <ChevronRight size={20} className="group-hover:-translate-x-1 transition-transform" />
               </button>
-              
+
               <div className="flex items-center gap-4 text-slate-400">
                 <div className="flex -space-x-3 space-x-reverse">
                   {[1, 2, 3, 4].map((i) => (
@@ -92,7 +95,6 @@ export const HackathonIntro: React.FC<HackathonIntroProps> = ({ onStart }) => {
         </div>
       </section>
 
-      {/* Program Definition */}
       <section className="py-24 bg-slate-50/50">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -116,7 +118,6 @@ export const HackathonIntro: React.FC<HackathonIntroProps> = ({ onStart }) => {
         </div>
       </section>
 
-      {/* 7-Day Timeline */}
       <section className="py-32 overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
@@ -127,9 +128,8 @@ export const HackathonIntro: React.FC<HackathonIntroProps> = ({ onStart }) => {
           </div>
 
           <div className="relative">
-            {/* Horizontal Line (Desktop) */}
             <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-slate-100 -translate-y-1/2 -z-10" />
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8">
               {steps.map((step, idx) => (
                 <motion.div
@@ -140,13 +140,13 @@ export const HackathonIntro: React.FC<HackathonIntroProps> = ({ onStart }) => {
                   transition={{ delay: idx * 0.1 }}
                   className="relative flex flex-col items-center text-center group"
                 >
-                  <div 
+                  <div
                     className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-slate-100 border border-white transition-all group-hover:scale-110 group-hover:rotate-3"
                     style={{ backgroundColor: step.color, color: 'white' }}
                   >
                     <step.icon size={28} />
                   </div>
-                  
+
                   <div className="mb-2 text-[10px] font-black uppercase tracking-widest text-slate-400">
                     اليوم {step.day}
                   </div>
@@ -154,8 +154,7 @@ export const HackathonIntro: React.FC<HackathonIntroProps> = ({ onStart }) => {
                   <p className="text-xs text-slate-500 font-bold leading-relaxed px-4 opacity-0 group-hover:opacity-100 transition-opacity">
                     {step.desc}
                   </p>
-                  
-                  {/* Circle on line */}
+
                   <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-white border-2 border-slate-200 rounded-full" />
                 </motion.div>
               ))}
@@ -164,20 +163,19 @@ export const HackathonIntro: React.FC<HackathonIntroProps> = ({ onStart }) => {
         </div>
       </section>
 
-      {/* Call to Action */}
       <section className="py-32">
         <div className="container mx-auto px-6">
           <div className="bg-slate-900 rounded-[4rem] p-12 md:p-24 text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-3xl" />
-            
+
             <div className="relative z-10">
               <Award size={64} className="text-indigo-400 mx-auto mb-8" />
               <h2 className="text-4xl md:text-6xl font-black text-white mb-8">هل أنت مستعد للتحدي؟</h2>
               <p className="text-slate-400 text-xl font-medium max-w-2xl mx-auto mb-12">
                 الآلاف من رواد الأعمال بدأوا من هنا. رحلتك نحو القمة تبدأ بالتزام حقيقي.
               </p>
-              
+
               <div className="max-w-xl mx-auto mb-12 bg-white/5 border border-white/10 rounded-3xl p-8 text-right backdrop-blur-md">
                 <h4 className="text-white font-black mb-4 flex items-center gap-2">
                   <ShieldCheck size={20} className="text-indigo-400" /> ميثاق الالتزام (Founder's Pledge)
@@ -186,10 +184,10 @@ export const HackathonIntro: React.FC<HackathonIntroProps> = ({ onStart }) => {
                   أتعهد بصفتي مؤسساً بالالتزام الكامل بالجدول الزمني للهاكثون، والبحث عن الحقيقة السوقية بصدق، وتنفيذ المهام بمعايير احترافية عالية، مع إدراكي أن الفكرة بلا تنفيذ هي مجرد وهم.
                 </p>
                 <label className="flex items-center gap-3 cursor-pointer group">
-                  <input 
-                    type="checkbox" 
+                  <input
+                    type="checkbox"
                     id="commitment-check"
-                    className="w-6 h-6 rounded-lg bg-white/10 border-white/20 text-indigo-500 focus:ring-indigo-500 focus:ring-offset-slate-900" 
+                    className="w-6 h-6 rounded-lg bg-white/10 border-white/20 text-indigo-500 focus:ring-indigo-500 focus:ring-offset-slate-900"
                   />
                   <span className="text-white text-sm font-bold group-hover:text-indigo-300 transition-colors">أوافق على ميثاق الالتزام وأتعهد بالتنفيذ</span>
                 </label>
@@ -213,7 +211,6 @@ export const HackathonIntro: React.FC<HackathonIntroProps> = ({ onStart }) => {
         </div>
       </section>
 
-      {/* Footer Branding */}
       <footer className="py-12 border-t border-slate-100">
         <div className="container mx-auto px-6 text-center">
           <p className="text-slate-400 text-sm font-bold">
