@@ -179,6 +179,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeT
                 <NavItem icon={Home} label="الصفحة الرئيسية" href={tabHref('home')} active={activeTab === 'home'} onClick={() => handleNavigate('home')} />
                 <NavItem icon={Layers} label="مشاريعي" href={tabHref('my-plans')} active={activeTab === 'my-plans'} onClick={() => handleNavigate('my-plans')} />
                 <NavItem icon={Rocket} label="خلق فكرة" href={tabHref('new-plan')} active={activeTab === 'new-plan'} onClick={() => handleNavigate('new-plan')} />
+                <NavItem icon={LayoutDashboard} label="مساحة المشروع" href={tabHref('workspace')} active={activeTab === 'workspace'} onClick={() => handleNavigate('workspace')} isNew />
                 <NavItem icon={LayoutDashboard} label="خارطة المنصة" href={tabHref('site-map')} active={activeTab === 'site-map'} onClick={() => handleNavigate('site-map')} isNew />
               </NavGroup>
 
@@ -233,7 +234,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeT
               <div className="mx-2 mt-4 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-4 border border-gray-200/50">
                 <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">الدعم الاستراتيجي</h4>
                 <p className="text-[11px] font-bold text-gray-600 mb-3 leading-relaxed">تحتاج لخبرة استثمارية؟</p>
-                <button className="w-full py-2.5 bg-white border border-gray-100 rounded-xl text-[11px] font-black text-gray-800 hover:bg-gray-900 hover:text-white transition-all">تحدث مع مستشار</button>
+                <button onClick={() => handleNavigate('contact-us')} className="w-full py-2.5 bg-white border border-gray-100 rounded-xl text-[11px] font-black text-gray-800 hover:bg-gray-900 hover:text-white transition-all">تحدث مع مستشار</button>
               </div>
             </>
           )}

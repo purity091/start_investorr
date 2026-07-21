@@ -1,3 +1,4 @@
+
 // v4.0.1 - Production Sync
 import React, { useState, useEffect, useRef } from 'react';
 import { Sidebar } from './components/layout/Sidebar';
@@ -11,10 +12,11 @@ import SiteTour from './components/views/SiteTour';
 import { MOCK_USER, INITIAL_SECTIONS, ADMIN_TABS } from './data/constants';
 import { PlanSection } from './types';
 import { getTabFromPathname, getTabPath } from './utils/routes';
+import { ProjectWorkspaceProvider, useProjectWorkspace } from './features/workspace/ProjectWorkspaceContext';
 
 const DEFAULT_TAB = 'home';
 
-const App: React.FC = () => {
+const AppShell: React.FC = () => {
   const [activeTab, setActiveTabState] = useState<string>(() => {
     const pathTab = getTabFromPathname(window.location.pathname);
     if (pathTab) return pathTab;
@@ -33,9 +35,11 @@ const App: React.FC = () => {
   const [isTourRunning, setIsTourRunning] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [subTabLabel, setSubTabLabel] = useState<string | null>(null);
+  const [selectedCompanyId, setSelectedCompanyId] = useState<string | undefined>(undefined);
   
   const notificationRef = useRef<HTMLDivElement>(null);
   const profileRef = useRef<HTMLDivElement>(null);
+  const { setPlanSections, setStage } = useProjectWorkspace();
 
   const setActiveTab = (tab: string, options?: { replace?: boolean }) => {
     const nextTab = tab || DEFAULT_TAB;
@@ -92,6 +96,24 @@ const App: React.FC = () => {
       return () => clearTimeout(timer);
     }
   }, [saveStatus]);
+
+  useEffect(() => {
+    setPlanSections(sections);
+  }, [sections, setPlanSections]);
+
+  useEffect(() => {
+    const tabToStageMap: Record<string, 'discovery' | 'analysis' | 'decision' | 'planning' | 'execution'> = {
+      'market-discovery': 'discovery',
+      'problem-engine': 'analysis',
+      'strategic-dashboard': 'decision',
+      'editor': 'planning',
+      'workspace': 'execution',
+    };
+
+    if (tabToStageMap[activeTab]) {
+      setStage(tabToStageMap[activeTab]);
+    }
+  }, [activeTab, setStage]);
 
   const handleSectionUpdate = (id: string, updates: Partial<PlanSection>) => {
     setSaveStatus('saving');
@@ -157,6 +179,8 @@ const App: React.FC = () => {
           handleSectionUpdate={handleSectionUpdate}
           expandedSectionId={expandedSectionId}
           onSectionExpand={setExpandedSectionId}
+          selectedCompanyId={selectedCompanyId}
+          setSelectedCompanyId={setSelectedCompanyId}
         />
       </main>
       {isTourRunning && (
@@ -182,6 +206,16 @@ const App: React.FC = () => {
         onMenuClick={() => setIsMobileMenuOpen(true)}
       />
     </div>
+  );
+};
+
+const App: React.FC = () => {
+  const [initialSections] = useState<PlanSection[]>(INITIAL_SECTIONS);
+
+  return (
+    <ProjectWorkspaceProvider planSections={initialSections}>
+      <AppShell />
+    </ProjectWorkspaceProvider>
   );
 };
 

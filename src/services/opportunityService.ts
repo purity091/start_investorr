@@ -10,7 +10,6 @@ export const loadDynamicOpportunities = async (): Promise<Problem[]> => {
       const mod: any = await modules[path]();
       const data = mod.default || mod;
       
-      console.log(`Checking file: ${path}`, data); // Debug Log
 
       if (data.opportunity) {
         const opp = data.opportunity;

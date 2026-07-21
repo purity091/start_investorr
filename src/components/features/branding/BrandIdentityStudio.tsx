@@ -16,6 +16,11 @@ interface PaletteOption {
   colors: string[];
 }
 
+interface BrandIdentityStudioProps {
+  setActiveTab?: (tab: string) => void;
+  onBrandDraftChange?: (draft: { prompt: string; personality: string; palette: string }) => void;
+}
+
 const COLOR_PALETTES: PaletteOption[] = [
   { id: '1', name: 'التقني الحديث (Tech Modern)', colors: ['#0052FF', '#8B5CF6', '#3B82F6', '#F8FAFC'] },
   { id: '2', name: 'الفخامة الهادئة (Quiet Luxury)', colors: ['#0F172A', '#CBD5E1', '#334155', '#F1F5F9'] },
@@ -30,7 +35,7 @@ const BRAND_PERSONALITIES = [
   { id: 'traditional', label: 'رصين (Traditional)', icon: Briefcase }
 ];
 
-export const BrandIdentityStudio: React.FC<{ setActiveTab?: (tab: string) => void }> = ({ setActiveTab }) => {
+export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({ setActiveTab, onBrandDraftChange }) => {
   const [isGenerating, setIsGenerating] = useState(false);
   const [prompt, setPrompt] = useState('');
   const [selectedPalette, setSelectedPalette] = useState<string>('1');
@@ -55,6 +60,14 @@ export const BrandIdentityStudio: React.FC<{ setActiveTab?: (tab: string) => voi
       setIsGenerating(false);
     }
   };
+
+  React.useEffect(() => {
+    onBrandDraftChange?.({
+      prompt,
+      personality: selectedPersonality,
+      palette: selectedPalette,
+    });
+  }, [onBrandDraftChange, prompt, selectedPersonality, selectedPalette]);
 
   return (
     <div dir="rtl" className={`font-['IBM_Plex_Sans_Arabic'] min-h-screen transition-colors duration-700 pb-32 ${isDarkMode ? 'bg-slate-950 text-white' : 'bg-[#FAFAF9] text-slate-900'}`}>

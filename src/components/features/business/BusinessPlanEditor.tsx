@@ -93,6 +93,7 @@ interface BusinessPlanEditorProps {
   expandedSectionId: string | null;
   onSectionExpand: (id: string | null) => void;
   setActiveTab: (tab: string) => void;
+  onWorkspaceSync?: (sections: PlanSection[]) => void;
 }
 
 export const BusinessPlanEditor: React.FC<BusinessPlanEditorProps> = ({
@@ -100,7 +101,8 @@ export const BusinessPlanEditor: React.FC<BusinessPlanEditorProps> = ({
   onSectionUpdate,
   expandedSectionId,
   onSectionExpand,
-  setActiveTab
+  setActiveTab,
+  onWorkspaceSync
 }) => {
   const [editingId, setEditingId] = useState<string | null>(null);
   const [editContent, setEditContent] = useState('');
@@ -131,6 +133,10 @@ export const BusinessPlanEditor: React.FC<BusinessPlanEditorProps> = ({
     });
     setEditingId(null);
   };
+
+  useEffect(() => {
+    onWorkspaceSync?.(sections);
+  }, [onWorkspaceSync, sections]);
 
   return (
     <div dir="rtl" className="h-full lg:h-[calc(100vh-64px)] flex flex-col font-['IBM_Plex_Sans_Arabic'] bg-white overflow-hidden text-slate-900 w-full max-w-full">

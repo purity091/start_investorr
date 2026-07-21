@@ -17,6 +17,8 @@ import { PricingPlans } from './PricingPlans';
 import { Settings } from './Settings';
 import { Tasks } from './Tasks';
 import { Changelog } from './Changelog';
+import { ContactUs } from './ContactUs';
+import { MarketInsightPlaceholder } from './MarketInsightPlaceholder';
 import { ExportTemplates } from '../ui/ExportTemplates';
 import { Notifications } from '../features/social/Notifications';
 import { SmartAnalyzer } from '../features/ai/SmartAnalyzer';
@@ -24,6 +26,10 @@ import { Profile } from './Profile';
 import { MobileSiteMap } from './MobileSiteMap';
 import HackathonView from '../features/hackathon/HackathonView';
 import ResultPage from '../../features/easy-mode/ResultPage';
+import { BusinessModelCanvas } from '../features/business/BusinessModelCanvas';
+import { UnifiedWorkspace } from '../../features/workspace/UnifiedWorkspace';
+import { useProjectWorkspace } from '../../features/workspace/ProjectWorkspaceContext';
+import { CompanyDeepDive } from '../features/discovery/CompanyDeepDive';
 
 // Dashboards
 import AdvertisingDashboard from '../sectors/AdvertisingMarketing/AdvertisingDashboard';
@@ -233,6 +239,8 @@ interface DashboardRouterProps {
   onSectionExpand: (id: string | null) => void;
   setSubTabLabel: (label: string | null) => void;
   subTabLabel?: string | null;
+  selectedCompanyId?: string;
+  setSelectedCompanyId?: (id: string) => void;
 }
 
 export const DashboardRouter: React.FC<DashboardRouterProps> = ({
@@ -244,24 +252,40 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
   expandedSectionId,
   onSectionExpand,
   setSubTabLabel,
-  subTabLabel
+  subTabLabel,
+  selectedCompanyId,
+  setSelectedCompanyId
 }) => {
-  const containerClass = ['home', 'editor', 'strategic-dashboard', 'contact-us', 'market-discovery', 'problem-engine', 'hackathon'].includes(activeTab) || activeTab.endsWith('-dashboard') 
+  const { updateProfile, updateBrand, setPlanSections } = useProjectWorkspace();
+  const containerClass = ['home', 'editor', 'strategic-dashboard', 'contact-us', 'market-discovery', 'problem-engine', 'hackathon', 'workspace', 'company-deep-dive', 'site-map', 'discovery-center'].includes(activeTab) || activeTab.endsWith('-dashboard') 
     ? 'w-full' 
     : 'max-w-6xl mx-auto py-6 sm:py-8 lg:py-10 px-4 sm:px-6 lg:px-12 pb-20 lg:pb-10';
 
   const handleBuildPlan = (projectName?: string) => {
-    setActiveTab('new-plan');
-    // Logic to pre-fill the name could go here if needed
+    if (projectName) {
+      updateProfile({ name: projectName });
+    }
+    setActiveTab('workspace');
+  };
+
+  const handleCompanyClick = (companyId: string) => {
+    if (setSelectedCompanyId) {
+      setSelectedCompanyId(companyId);
+      setActiveTab('company-deep-dive');
+    }
   };
 
   const renderContent = () => {
     switch (activeTab) {
+      case 'company-deep-dive':
+        return <CompanyDeepDive companyId={selectedCompanyId} onBack={() => setActiveTab('home')} />;
       case 'home':
       case 'admin-dashboard':
-        return <Home setActiveTab={setActiveTab} />;
+        return <Home setActiveTab={setActiveTab} onCompanyClick={handleCompanyClick} />;
       case 'profile':
         return <Profile user={user} />;
+      case 'workspace':
+        return <UnifiedWorkspace setActiveTab={setActiveTab} />;
       case 'users-management':
         return <UsersManagement />;
       case 'admin-plans':
@@ -280,29 +304,63 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
           <NewPlan 
             key={`${activeTab}-${subTabLabel ? 'sub' : 'root'}`}
             onStart={(id) => id === 'easy' ? setActiveTab('strategic-dashboard') : setActiveTab('editor')} 
-            onBuildPlan={() => setActiveTab('editor')}
+            onBuildPlan={() => setActiveTab('workspace')}
             setSubTabLabel={setSubTabLabelSafe} 
             subTabLabel={subTabLabelSafe}
           />
         );
+      case 'strategic-dashboard':
+        return <ResultPage />;
+      case 'bmc':
+        return <BusinessModelCanvas onComplete={() => setActiveTab('workspace')} />;
       case 'brand-identity':
-        return <BrandIdentityStudio setActiveTab={setActiveTab} />;
+        return (
+          <BrandIdentityStudio
+            setActiveTab={setActiveTab}
+            onBrandDraftChange={(draft) =>
+              updateBrand({
+                prompt: draft.prompt,
+                personality: draft.personality,
+                palette: draft.palette,
+              })
+            }
+          />
+        );
       case 'unicorn-benchmark':
         return <UnicornBenchmarking />;
+      case 'discovery-center':
       case 'market-discovery':
-        return <DiscoveryCenter setActiveTab={setActiveTab} />;
+        return (
+          <DiscoveryCenter
+            setActiveTab={setActiveTab}
+            onSelectSector={(sector) =>
+              updateProfile({
+                sectorId: sector.id,
+                sectorLabel: sector.label,
+                sectorGroup: sector.groupTitle,
+                opportunityTitle: sector.label,
+              })
+            }
+          />
+        );
       case 'comparison':
         return <PlanComparison />;
       case 'pricing':
         return <PricingPlans />;
       case 'hackathon':
         return <HackathonView />;
+      case 'contact-us':
+        return <ContactUs />;
       case 'settings':
         return <Settings user={user} />;
       case 'tasks':
         return <Tasks />;
       case 'changelog':
         return <Changelog />;
+      case 'notifications':
+        return <Notifications />;
+      case 'site-map':
+        return <MobileSiteMap setActiveTab={setActiveTab} />;
       case 'export-templates':
         return <ExportTemplates />;
       case 'smart-analyzer':
@@ -315,42 +373,38 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
             expandedSectionId={expandedSectionId}
             onSectionExpand={onSectionExpand}
             setActiveTab={setActiveTab}
+            onWorkspaceSync={setPlanSections}
           />
         );
-      case 'strategic-dashboard':
-        return <ResultPage />;
-      case 'notifications':
-        return <Notifications />;
-      case 'site-map':
-        return <MobileSiteMap setActiveTab={setActiveTab} />;
-      
-      // Dashboards with navigation props
-      case 'advertising-dashboard':
-        return <AdvertisingDashboard sectorId="advertising-dashboard" onBack={() => setActiveTab('discovery-center')} parentCategory="الإعلانات والتسويق" />;
-      case 'brands-leaders-dashboard':
-        return <BrandsLeadersDashboard sectorId="brands-leaders-dashboard" onBack={() => setActiveTab('discovery-center')} parentCategory="الإعلانات والتسويق" />;
-      case 'marketing-dashboard':
-        return <MarketingDashboard sectorId="marketing-dashboard" onBack={() => setActiveTab('discovery-center')} parentCategory="الإعلانات والتسويق" />;
-      case 'influencer-marketing-dashboard':
-        return <InfluencerMarketingDashboard sectorId="influencer-marketing-dashboard" onBack={() => setActiveTab('discovery-center')} parentCategory="الإعلانات والتسويق" />;
-      case 'farming-dashboard':
-        return <FarmingDashboard sectorId="farming-dashboard" onBack={() => setActiveTab('discovery-center')} onBuildPlan={handleBuildPlan} parentCategory="الزراعة والموارد الطبيعية" />;
-      case 'fisheries-aquaculture-dashboard':
-        return <FisheriesAquacultureDashboard sectorId="fisheries-aquaculture-dashboard" onBack={() => setActiveTab('discovery-center')} parentCategory="الزراعة والموارد الطبيعية" />;
-      case 'forestry-dashboard':
-        return <ForestryDashboard sectorId="forestry-dashboard" onBack={() => setActiveTab('discovery-center')} parentCategory="الزراعة والموارد الطبيعية" />;
-      case 'agritech-dashboard':
-        return <AgriculturalTechnologyAgritechDashboard sectorId="agritech-dashboard" onBack={() => setActiveTab('discovery-center')} parentCategory="الزراعة والموارد الطبيعية" />;
-      case 'seeds-crop-protection-dashboard':
-        return <SeedsCropProtectionDashboard sectorId="seeds-crop-protection-dashboard" onBack={() => setActiveTab('discovery-center')} parentCategory="الزراعة والموارد الطبيعية" />;
-
-      // Chemicals & Resources (Newly automated)
-      case 'chemical-industry-dashboard': 
-        return <ChemicalIndustryDashboard sectorId="chemical-industry-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الكيمياء والموارد" />;
-      case 'fossil-fuels-dashboard': 
-        return <FossilFuelsDashboard sectorId="fossil-fuels-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الكيمياء والموارد" />;
-      case 'mining-dashboard': 
         return <MiningDashboard sectorId="mining-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الكيمياء والموارد" />;
+      case 'advertising-dashboard':
+        return <AdvertisingDashboard sectorId="advertising-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الإعلانات والتسويق" />;
+      case 'marketing-dashboard':
+        return <MarketingDashboard sectorId="marketing-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الإعلانات والتسويق" />;
+      case 'brands-leaders-dashboard':
+        return <BrandsLeadersDashboard sectorId="brands-leaders-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الإعلانات والتسويق" />;
+      case 'influencer-marketing-dashboard':
+        return <InfluencerMarketingDashboard sectorId="influencer-marketing-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الإعلانات والتسويق" />;
+      case 'farming-dashboard':
+        return <FarmingDashboard sectorId="farming-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الزراعة والموارد الطبيعية" />;
+      case 'fisheries-aquaculture-dashboard':
+        return <FisheriesAquacultureDashboard sectorId="fisheries-aquaculture-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الزراعة والموارد الطبيعية" />;
+      case 'forestry-dashboard':
+        return <ForestryDashboard sectorId="forestry-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الزراعة والموارد الطبيعية" />;
+      case 'chemical-industry-dashboard':
+        return <ChemicalIndustryDashboard sectorId="chemical-industry-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الكيمياء والموارد" />;
+      case 'fossil-fuels-dashboard':
+        return <FossilFuelsDashboard sectorId="fossil-fuels-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الكيمياء والموارد" />;
+      case 'mining-dashboard':
+        return <MiningDashboard sectorId="mining-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الكيمياء والموارد" />;
+      case 'alcoholic-beverages-dashboard':
+        return <MarketInsightPlaceholder title="المشروبات الكحولية" category="السلع الاستهلاكية" summary="تم إنشاء هذه الصفحة كواجهة انتقالية مرتبطة لأن بطاقة القطاع كانت تظهر في اكتشاف السوق دون شاشة فعلية. يمكنك العودة للمكتبة أو متابعة بناء المشروع من المساحة التنفيذية." setActiveTab={setActiveTab} />;
+      case 'cannabis-dashboard':
+        return <MarketInsightPlaceholder title="القنب القانوني" category="السلع الاستهلاكية" summary="كانت هذه البطاقة قابلة للنقر داخل اكتشاف السوق من دون صفحة عرض مقابلة. أصبحت الآن مرتبطة بواجهة انتقالية واضحة بدلاً من شاشة فارغة." setActiveTab={setActiveTab} />;
+      case 'tobacco-dashboard':
+        return <MarketInsightPlaceholder title="التبغ" category="السلع الاستهلاكية" summary="هذه الصفحة أضيفت كمسار واجهة صالح حتى لا يبقى قطاع التبغ رابطاً مكسوراً داخل رادار السوق." setActiveTab={setActiveTab} />;
+      case 'love-sex-dashboard':
+        return <MarketInsightPlaceholder title="الحب والعلاقات الحميمة" category="الحياة والمجتمع" summary="أصبح القطاع متصلاً بواجهة عرض انتقالية تحافظ على استمرارية التنقل، إلى أن تتم إضافة لوحة بيانات متخصصة له لاحقاً." setActiveTab={setActiveTab} />;
       case 'petroleum-refinery-dashboard': 
         return <PetroleumRefineryDashboard sectorId="petroleum-refinery-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الكيمياء والموارد" />;
       case 'plastic-rubber-dashboard': 
@@ -499,7 +553,7 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
         return <GeneralMerchandiseDashboard sectorId="general-merchandise-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="التجزئة والتجارة" />;
       case 'health-hygiene-dashboard': 
         return <HealthHygieneDashboard sectorId="health-hygiene-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="التجزئة والتجارة" />;
-      case 'international-trade-dashboard': 
+      case 'international-trade-dashboard-retail-legacy': 
         return <InternationalTradeDashboard sectorId="international-trade-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="التجزئة والتجارة" />;
       case 'office-supplies-dashboard': 
         return <OfficeSuppliesDashboard sectorId="office-supplies-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="التجزئة والتجارة" />;
@@ -659,11 +713,10 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
         return <MedicalTourismDashboard sectorId="medical-tourism-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="السياحة والضيافة" />;
       case 'travel-technology-dashboard': 
         return <TravelTechnologyDashboard sectorId="travel-technology-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="السياحة والضيافة" />;
-      case 'non-alcoholic-beverages-dashboard': return <NonAlcoholicBeveragesDashboard />;
       // Economy & Politics
       case 'economy-dashboard': 
         return <EconomyDashboard sectorId="economy-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الاقتصاد والسياسة" />;
-      case 'international-trade-dashboard': 
+      case 'international-trade-dashboard':
         return <InternationalTradeDashboard sectorId="international-trade-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الاقتصاد والسياسة" />;
       case 'politics-dashboard': 
         return <PoliticsDashboard sectorId="politics-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الاقتصاد والسياسة" />;
@@ -693,9 +746,6 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
         return <PublicPolicyEconomicStrategyDashboard sectorId="public-policy-economic-strategy-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الاقتصاد والسياسة" />;
       case 'geopolitical-risk-global-trade-analysis-dashboard': 
         return <GeopoliticalRiskTradeAnalysisDashboard sectorId="geopolitical-risk-global-trade-analysis-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الاقتصاد والسياسة" />;
-      case 'modular-prefab-construction-dashboard': return <ModularPrefabConstructionDashboard onBack={() => setActiveTab('market-discovery')} parentCategory="البناء والإنشاءات" />;
-      case 'seeds-crop-protection-dashboard': return <SeedsCropProtectionDashboard onBack={() => setActiveTab('market-discovery')} parentCategory="الزراعة والموارد الطبيعية" />;
-      case 'c2c-ecommerce-dashboard': return <C2CEcommerceDashboard onBack={() => setActiveTab('market-discovery')} onBuildPlan={handleBuildPlan} parentCategory="التجارة الإلكترونية" />;
 
       default:
         return null;

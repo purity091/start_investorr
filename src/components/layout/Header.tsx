@@ -150,6 +150,7 @@ export const Header: React.FC<HeaderProps> = ({
                    <span className={`w-1 h-1 rounded-full flex-shrink-0 ${subTabLabel ? 'bg-slate-300' : 'bg-primary-500'}`}></span>
                    <span className="truncate">
                      {activeTab === 'market-discovery' && 'اكتشاف السوق'}
+                     {activeTab === 'workspace' && 'مساحة المشروع'}
                      {activeTab === 'profile' && 'الملف الشخصي'}
                      {activeTab === 'settings' && 'إعدادات الحساب'}
                      {activeTab === 'pricing' && 'الاشتراكات'}
@@ -250,7 +251,7 @@ export const Header: React.FC<HeaderProps> = ({
                  </div>
 
                  <div className="p-2 sm:p-3 py-3 sm:py-4">
-                    <button onClick={() => { setIsProfileOpen(false); setActiveTab('settings'); }} className="w-full flex items-center gap-2.5 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl text-[11px] sm:text-[12px] font-bold text-gray-600 hover:bg-primary-50 hover:text-primary-700 transition-all group">
+                    <button onClick={() => { setIsProfileOpen(false); setActiveTab('profile'); }} className="w-full flex items-center gap-2.5 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl text-[11px] sm:text-[12px] font-bold text-gray-600 hover:bg-primary-50 hover:text-primary-700 transition-all group">
                        <UserIcon size={14} className="group-hover:scale-110 transition-transform w-4 h-4 sm:w-5 sm:h-5" />
                        <span>ملفي الشخصي</span>
                     </button>

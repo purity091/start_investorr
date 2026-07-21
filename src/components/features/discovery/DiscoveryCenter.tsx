@@ -340,7 +340,13 @@ const DISCOVERY_DATA: DiscoveryGroup[] = [
   }
 ];
 
-export function DiscoveryCenter({ setActiveTab }: { setActiveTab: (tab: string) => void }) {
+export function DiscoveryCenter({
+  setActiveTab,
+  onSelectSector,
+}: {
+  setActiveTab: (tab: string) => void;
+  onSelectSector?: (sector: { id: string; label: string; groupTitle: string }) => void;
+}) {
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredGroups = useMemo(() => {
@@ -380,7 +386,10 @@ export function DiscoveryCenter({ setActiveTab }: { setActiveTab: (tab: string) 
           {(group.sectors || []).map((sector) => (
             <button
               key={sector.id}
-              onClick={() => setActiveTab(sector.id)}
+              onClick={() => {
+                onSelectSector?.({ id: sector.id, label: sector.label, groupTitle: group.title });
+                setActiveTab(sector.id);
+              }}
               className={`w-full flex items-center justify-between py-2 px-3 rounded-lg text-right transition-all group/item ${theme.hover}`}
             >
               <div className="flex items-center gap-2">
@@ -468,7 +477,16 @@ export function DiscoveryCenter({ setActiveTab }: { setActiveTab: (tab: string) 
                   {filteredGroups.flatMap(g => g.sectors).slice(0, 8).map((sector) => (
                     <button
                       key={sector.id}
-                      onClick={() => { setActiveTab(sector.id); setSearchTerm(''); }}
+                      onClick={() => {
+                        const parentGroup = filteredGroups.find((group) => group.sectors.some((candidate) => candidate.id === sector.id));
+                        onSelectSector?.({
+                          id: sector.id,
+                          label: sector.label,
+                          groupTitle: parentGroup?.title || 'قطاع غير مصنف',
+                        });
+                        setActiveTab(sector.id);
+                        setSearchTerm('');
+                      }}
                       className="w-full flex items-center justify-between px-6 py-4 hover:bg-slate-50 transition-colors border-b border-slate-50 last:border-none text-right"
                     >
                       <div className="flex items-center gap-3">

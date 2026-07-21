@@ -47,7 +47,7 @@ import {
   Globe,
   Languages,
   Palette as PaletteIcon,
-  Image as ImageIcon,
+  ImageIcon,
   Cpu,
   Server,
   HardDrive,
@@ -427,6 +427,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, isOpen = true, isCollaps
                 <NavItem id="tour-home" icon={Home} label="الصفحة الرئيسية" href={tabHref('home')} active={activeTab === 'home'} onClick={() => setActiveTab?.('home')} isCollapsed={isCollapsed} />
                 <NavItem id="tour-projects" icon={Layers} label="مشاريعي" href={tabHref('my-plans')} active={activeTab === 'my-plans'} onClick={() => setActiveTab?.('my-plans')} isCollapsed={isCollapsed} />
                 <NavItem id="tour-new-plan" icon={Rocket} label="خلق فكرة" href={tabHref('new-plan')} active={activeTab === 'new-plan'} onClick={() => setActiveTab?.('new-plan')} isCollapsed={isCollapsed} />
+                <NavItem id="tour-workspace" icon={LayoutDashboard} label="مساحة المشروع" href={tabHref('workspace')} active={activeTab === 'workspace'} onClick={() => setActiveTab?.('workspace')} isCollapsed={isCollapsed} isNew />
               </NavGroup>
 
               <NavGroup title="مختبر الاستراتيجية" isCollapsed={isCollapsed}>
@@ -455,13 +456,24 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, isOpen = true, isCollaps
                   isNew
                 />
 
-                <NavItem
+                <NavItem 
                   id="tour-hackathon"
                   icon={Zap}
                   label="هاكاثون المستثمر"
                   href={tabHref('hackathon')}
                   active={activeTab === 'hackathon'}
                   onClick={() => setActiveTab?.('hackathon')}
+                  isCollapsed={isCollapsed}
+                  isNew
+                />
+
+                <NavItem 
+                  id="tour-bmc"
+                  icon={LayoutGrid}
+                  label="نموذج العمل (BMC)"
+                  href={tabHref('bmc')}
+                  active={activeTab === 'bmc'}
+                  onClick={() => setActiveTab?.('bmc')}
                   isCollapsed={isCollapsed}
                   isNew
                 />
@@ -490,7 +502,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, isOpen = true, isCollaps
                       <div className="absolute -top-6 -right-6 w-12 h-12 bg-primary-100 rounded-full blur-2xl group-hover:bg-primary-200 transition-all opacity-40"></div>
                       <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 relative z-10">الدعم الاستراتيجي</h4>
                       <p className="text-[11px] font-bold text-gray-600 mb-3 leading-relaxed relative z-10">تحتاج لخبرة استثمارية؟</p>
-                      <button className="w-full py-2.5 bg-white border border-gray-100 rounded-xl text-[11px] font-black text-gray-800 hover:bg-gray-900 hover:text-white transition-all shadow-sm relative z-10">تحدث مع مستشار</button>
+                      <button onClick={() => setActiveTab?.('contact-us')} className="w-full py-2.5 bg-white border border-gray-100 rounded-xl text-[11px] font-black text-gray-800 hover:bg-gray-900 hover:text-white transition-all shadow-sm relative z-10">تحدث مع مستشار</button>
                     </div>
                   </div>
                 </>

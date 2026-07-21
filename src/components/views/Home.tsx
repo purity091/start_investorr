@@ -7,7 +7,7 @@ import { StrategicUpgrade } from "./HomeViews/StrategicUpgrade";
 import { StrategicLaunchpad } from "./HomeViews/StrategicLaunchpad";
 import { StrategicPathFinder } from "./HomeViews/StrategicPathFinder";
 
-export const Home = ({ setActiveTab }: any) => {
+export const Home = ({ setActiveTab, onCompanyClick }: any) => {
   return (
     <div 
       className="min-h-screen bg-white pb-24 lg:pb-0 w-full max-w-full overflow-x-hidden" 
@@ -25,7 +25,7 @@ export const Home = ({ setActiveTab }: any) => {
         <IntelligenceStream setActiveTab={setActiveTab} />
 
         {/* ── Layer 2.5: Unicorn Anatomy (Case Studies) ── */}
-        <UnicornAnatomy />
+        <UnicornAnatomy onCompanyClick={onCompanyClick} />
 
         {/* ── Layer 2.5.5: Intelligence Stories (Carousel) ── */}
         <IntelligenceStories />

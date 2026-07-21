@@ -48,8 +48,11 @@ const cases = [
   }
 ];
 
-const AnatomyCard = ({ data }: any) => (
-  <div className="bg-white border border-slate-100 rounded-2xl relative overflow-hidden group hover:shadow-lg transition-all duration-300">
+const AnatomyCard = ({ data, onClick }: { data: any; onClick: () => void }) => (
+  <div 
+    onClick={onClick}
+    className="bg-white border border-slate-100 rounded-2xl relative overflow-hidden group hover:shadow-lg transition-all duration-300 cursor-pointer"
+  >
     <div className="p-6 sm:p-7">
       {/* Header */}
       <div className="flex justify-between items-start mb-6">
@@ -108,16 +111,16 @@ const AnatomyCard = ({ data }: any) => (
         <div className="flex items-center gap-1.5 px-2 py-1 bg-slate-50 rounded-lg text-[8px] font-black text-slate-500 uppercase border border-slate-100">
           <Activity size={10} className="text-indigo-400" /> قيادة السوق
         </div>
-        <button className="text-[10px] font-black text-indigo-600 flex items-center gap-1.5 group/btn">
+        <div className="text-[10px] font-black text-indigo-600 flex items-center gap-1.5 group/btn">
           التشريح الكامل 
           <ArrowRight size={12} className="rotate-180 group-hover:-translate-x-1 transition-transform" />
-        </button>
+        </div>
       </div>
     </div>
   </div>
 );
 
-export const UnicornAnatomy = () => {
+export const UnicornAnatomy = ({ onCompanyClick }: { onCompanyClick?: (id: string) => void }) => {
   return (
     <section className="py-10 sm:py-14 px-5 sm:px-10 lg:px-14 bg-white border-b border-slate-100">
       <div className="max-w-7xl mx-auto" dir="rtl">
@@ -137,7 +140,11 @@ export const UnicornAnatomy = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-6">
           {cases.map((c, i) => (
-            <AnatomyCard key={i} data={c} />
+            <AnatomyCard 
+              key={i} 
+              data={c} 
+              onClick={() => onCompanyClick?.(c.name.toLowerCase())} 
+            />
           ))}
         </div>
       </div>
