@@ -17,26 +17,26 @@ import {
 
 export const ContactUs: React.FC = () => {
   return (
-    <div className="animate-in fade-in slide-in-from-bottom-2 duration-700 py-8 px-6 lg:px-12 max-w-[1600px] mx-auto font-['IBM_Plex_Sans_Arabic']">
+    <div className="app-page-shell-wide animate-in fade-in slide-in-from-bottom-2 duration-700 py-8 lg:py-10 font-['IBM_Plex_Sans_Arabic']">
       {/* Hero Section - Compact Executive View */}
-      <section className="mb-8 relative overflow-hidden rounded-[2rem] p-8 md:p-10 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white shadow-xl shadow-blue-900/10">
-        <div className="relative z-10 w-full text-center">
+      <section className="surface-card mb-8 relative overflow-hidden p-8 md:p-10 lg:p-12">
+        <div className="relative z-10 grid gap-6 xl:grid-cols-[minmax(0,1fr)_320px] xl:items-end">
           <h2 className="text-2xl md:text-3xl font-black mb-3 tracking-tight">اتصل بنا</h2>
-          <p className="text-[13px] md:text-[14px] opacity-90 leading-relaxed max-w-3xl font-medium mx-auto">
+          <p className="text-[13px] md:text-[14px] text-slate-600 leading-relaxed max-w-4xl font-medium mx-auto xl:mx-0">
             شراكتنا تبدأ بتوفير الدعم الاستراتيجي والتقني الذي تحتاجه لتحويل أهدافك إلى نتائج ملموسة. فريق خبراء "خطة" متاح للإجابة على تساؤلاتكم ودعم نمو مشاريعكم الاستثمارية باحترافية وكفاءة.
           </p>
         </div>
         {/* Aesthetic Glass Elements - Scaled Down */}
-        <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-white/10 backdrop-blur-3xl rounded-full"></div>
-        <div className="absolute -top-6 -right-6 w-64 h-64 bg-indigo-400/20 backdrop-blur-2xl rounded-full"></div>
+        <div className="absolute -bottom-12 -left-6 w-48 h-48 bg-slate-100 rounded-full blur-3xl"></div>
+        <div className="absolute -top-12 -right-6 w-64 h-64 bg-blue-50 rounded-full blur-3xl"></div>
       </section>
 
 
 
       {/* Main Layout Split: Form & Visual */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start mb-8">
+      <section className="grid grid-cols-1 xl:grid-cols-[minmax(0,1.15fr)_minmax(340px,0.85fr)] 2xl:grid-cols-[minmax(0,1.2fr)_minmax(420px,0.8fr)] gap-6 items-start mb-8">
         {/* Contact Form */}
-        <div className="bg-white p-8 rounded-[2rem] shadow-lg shadow-slate-200/30 border border-slate-50">
+        <div className="surface-card p-8 lg:p-10">
           <h3 className="text-lg font-black text-slate-900 mb-6 border-r-4 border-blue-600 pr-3">أرسل لنا رسالة مباشرة</h3>
           <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -83,7 +83,7 @@ export const ContactUs: React.FC = () => {
         </div>
 
         {/* Side Info - Compact Integrated Contact Card */}
-        <div className="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 shadow-sm space-y-8 flex flex-col">
+        <div className="surface-card p-6 lg:p-7 space-y-8 flex flex-col">
           
           {/* Map Card Visualization - Top of Sidebar */}
           <div 

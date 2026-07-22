@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { 
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, 
   AreaChart, Area, LineChart, Line, Legend, Cell, PieChart, Pie
@@ -20,6 +20,8 @@ import {
   Compass
 } from 'lucide-react';
 import { fisheriesService, GlobalFishProduction, MarketSegment, RegionalProduction } from '../services/fisheriesService';
+import { escapeReportHtml, slugifyReportName } from '../../../utils/reportDownloads';
+import { exportElementToPdf } from '../../../utils/pdfExport';
 
 const CustomChartTooltip = ({ active, payload, label }: any) => {
   if (active && payload && payload.length) {
@@ -45,6 +47,7 @@ export const FisheriesDashboard: React.FC<any> = (props) => {
   const [regionalData, setRegionalData] = useState<RegionalProduction[]>([]);
   const [activeNav, setActiveNav] = useState('overview');
   const [isLoading, setIsLoading] = useState(true);
+  const [isDownloading, setIsDownloading] = useState(false);
 
   useEffect(() => {
     const loadData = async () => {
@@ -65,6 +68,131 @@ export const FisheriesDashboard: React.FC<any> = (props) => {
     };
     loadData();
   }, []);
+
+  const handleDownloadReport = async () => {
+    setIsDownloading(true);
+
+    const generatedAt = new Intl.DateTimeFormat('ar', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    }).format(new Date());
+
+    const productionRows = productionData
+      .slice(-8)
+      .map(
+        (item) =>
+          `<tr><td>${escapeReportHtml(String(item.year))}</td><td>${escapeReportHtml(String(item.volume))}</td></tr>`,
+      )
+      .join('');
+
+    const segmentRows = segmentData
+      .slice(-6)
+      .map(
+        (item) =>
+          `<tr><td>${escapeReportHtml(String(item.year))}</td><td>${escapeReportHtml(String(item.fishing))}</td><td>${escapeReportHtml(String(item.aquaculture))}</td></tr>`,
+      )
+      .join('');
+
+    const regionalRows = regionalData
+      .slice(0, 10)
+      .map(
+        (item) =>
+          `<tr><td>${escapeReportHtml(item.name)}</td><td>${escapeReportHtml(String(item.value))}</td></tr>`,
+      )
+      .join('');
+
+    const html = `<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تقرير مصايد الأسماك وتربية الأحياء المائية</title>
+  <style>
+    body { margin: 0; padding: 32px; font-family: "IBM Plex Sans Arabic", "Tajawal", sans-serif; background: #f8fafc; color: #0f172a; }
+    .shell { max-width: 1120px; margin: 0 auto; display: grid; gap: 20px; }
+    .panel { background: #fff; border: 1px solid #e2e8f0; border-radius: 28px; padding: 28px; }
+    .hero { background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%); }
+    .badge { display: inline-block; border: 1px solid #cbd5e1; border-radius: 999px; padding: 8px 14px; font-size: 12px; color: #475569; background: #fff; }
+    h1 { margin: 14px 0 8px; font-size: 38px; }
+    p { margin: 0; color: #475569; line-height: 1.9; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .metric { border: 1px solid #e2e8f0; border-radius: 20px; padding: 18px; background: #fff; }
+    .metric strong { display: block; font-size: 28px; margin-top: 8px; }
+    ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+    li { border: 1px solid #e2e8f0; border-radius: 16px; padding: 14px 16px; background: #fff; line-height: 1.8; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border-bottom: 1px solid #e2e8f0; padding: 12px 10px; text-align: right; }
+    th { font-size: 12px; color: #64748b; }
+    @media (max-width: 900px) { .grid-3 { grid-template-columns: 1fr; } h1 { font-size: 30px; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <section class="panel hero">
+      <span class="badge">تقرير سوقي جاهز للمشاركة • ${escapeReportHtml(generatedAt)}</span>
+      <h1>مصايد الأسماك وتربية الأحياء المائية</h1>
+      <p>تقرير تنفيذي مبني على بيانات لوحة القطاع الحالية، ويصلح للمراجعة الداخلية أو لمشاركة سريعة مع شريك أو مستثمر.</p>
+    </section>
+    <section class="grid-3">
+      <div class="metric"><span>الإنتاج السمكي العالمي</span><strong>184.6M</strong><p>طن متري</p></div>
+      <div class="metric"><span>الدولة الرائدة</span><strong>الصين</strong><p>المرتبة الأولى عالمياً</p></div>
+      <div class="metric"><span>العاملون في القطاع</span><strong>58.5M</strong><p>صياد ومزارع</p></div>
+    </section>
+    <section class="panel">
+      <h2 style="margin:0 0 16px;font-size:24px;">خلاصات تنفيذية</h2>
+      <ul>
+        <li>الإنتاج السمكي العالمي يواصل النمو مدفوعاً بارتفاع الطلب على البروتين البحري.</li>
+        <li>الاستزراع المائي تجاوز الصيد التقليدي كخيار أكثر استدامة للنمو.</li>
+        <li>الصين ما تزال اللاعب الأكثر تأثيراً في الطاقة الإنتاجية والبنية التحتية للقطاع.</li>
+      </ul>
+    </section>
+    <section class="panel">
+      <h2 style="margin:0 0 16px;font-size:24px;">الإنتاج العالمي الأخير</h2>
+      <table>
+        <thead><tr><th>السنة</th><th>الإنتاج</th></tr></thead>
+        <tbody>${productionRows}</tbody>
+      </table>
+    </section>
+    <section class="panel">
+      <h2 style="margin:0 0 16px;font-size:24px;">الصيد مقابل الاستزراع</h2>
+      <table>
+        <thead><tr><th>السنة</th><th>الصيد</th><th>الاستزراع</th></tr></thead>
+        <tbody>${segmentRows}</tbody>
+      </table>
+    </section>
+    <section class="panel">
+      <h2 style="margin:0 0 16px;font-size:24px;">أكبر الدول المنتجة</h2>
+      <table>
+        <thead><tr><th>الدولة</th><th>القيمة</th></tr></thead>
+        <tbody>${regionalRows}</tbody>
+      </table>
+    </section>
+  </div>
+</body>
+</html>`;
+
+    const container = document.createElement('div');
+    container.style.position = 'fixed';
+    container.style.left = '-99999px';
+    container.style.top = '0';
+    container.style.width = '1240px';
+    container.style.background = '#ffffff';
+    container.innerHTML = html;
+    document.body.appendChild(container);
+
+    try {
+      await exportElementToPdf({
+        element: container,
+        fileName: `${
+          slugifyReportName(`fisheries-report-${new Date().toISOString().slice(0, 10)}`) || 'fisheries-report'
+        }.pdf`,
+      });
+    } finally {
+      container.remove();
+      setIsDownloading(false);
+    }
+  };
 
   if (isLoading) {
     return (
@@ -95,9 +223,12 @@ export const FisheriesDashboard: React.FC<any> = (props) => {
           </div>
 
           <div className="flex items-center gap-3 bg-white p-2 rounded-3xl shadow-sm border border-slate-100">
-            <button className="flex items-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-2xl font-bold text-sm transition-all hover:bg-sky-600">
+            <button
+              onClick={handleDownloadReport}
+              className="flex items-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-2xl font-bold text-sm transition-all hover:bg-sky-600"
+            >
               <Download size={18} />
-              <span>تحميل التقرير (PDF)</span>
+              <span>{isDownloading ? 'جاري تجهيز التقرير...' : 'تحميل التقرير'}</span>
             </button>
             <button className="p-3 text-slate-400 hover:text-sky-600 transition-colors">
               <Filter size={20} />

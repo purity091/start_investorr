@@ -34,11 +34,11 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 py-8 flex flex-col lg:flex-row gap-8 animate-in fade-in slide-in-from-bottom-6 duration-1000 overflow-x-hidden">
+    <div className="app-page-shell-wide flex w-full flex-col gap-8 py-8 animate-in fade-in slide-in-from-bottom-6 duration-1000 overflow-x-hidden xl:flex-row">
       {/* Sidebar Navigation - Fixed on desktop, Tabs on mobile */}
       <aside className="w-full lg:w-72 flex-shrink-0">
         <div className="lg:sticky lg:top-24 space-y-4">
-          <div className="bg-white border border-gray-100 rounded-[2rem] sm:rounded-[2.5rem] p-2 sm:p-3 shadow-xl shadow-gray-200/20 overflow-x-auto lg:overflow-visible no-scrollbar">
+          <div className="surface-card overflow-x-auto p-2 sm:p-3 no-scrollbar lg:overflow-visible">
             <div className="flex lg:flex-col min-w-max lg:min-w-0">
               {['الإعدادات', 'الفوترة'].map((group) => (
                 <div key={group} className="flex lg:flex-col lg:mb-6 last:mb-0">
@@ -65,7 +65,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
           </div>
 
           {/* Account Health Card - Hidden on very small screens, visible on LG */}
-          <div className="hidden lg:block bg-gradient-to-br from-primary-600 to-indigo-700 rounded-[2.5rem] p-6 text-white shadow-2xl shadow-primary-200 relative overflow-hidden group">
+          <div className="hidden lg:block surface-card rounded-[1.75rem] p-6 relative overflow-hidden group bg-[linear-gradient(180deg,#0f172a_0%,#1e293b_100%)] text-white">
             <div className="absolute -right-4 -top-4 w-24 h-24 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-1000"></div>
             <div className="relative z-10">
               <div className="flex items-center gap-2 mb-4">
@@ -84,7 +84,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
 
       {/* Main Form Area */}
       <div className="flex-1">
-        <div className="bg-white border border-gray-100 rounded-[3rem] shadow-2xl shadow-gray-200/30 overflow-hidden">
+        <div className="surface-card overflow-hidden rounded-[1.75rem]">
           
           {activeSubTab === 'profile' && (
             <div className="flex flex-col">

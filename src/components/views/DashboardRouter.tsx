@@ -1,233 +1,238 @@
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Home } from './Home';
 import { DiscoveryCenter } from '../features/discovery/DiscoveryCenter';
 import { MyProjects } from './MyProjects';
 import { NewPlan } from '../features/business/NewPlan';
 import { PlanComparison } from '../features/business/PlanComparison';
 import { UnicornBenchmarking } from '../features/discovery/UnicornBenchmarking';
-import { BrandIdentityStudio } from '../features/branding/BrandIdentityStudio';
-import { ProblemOpportunityEngine } from '../features/discovery/ProblemOpportunityEngine';
 import { BusinessPlanEditor } from '../features/business/BusinessPlanEditor';
-import { UsersManagement } from './UsersManagement';
-import { AdminProjectsManagement } from '../sectors/Admin/AdminProjectsManagement';
-import { AdminAnalyticsDashboard } from '../sectors/Admin/AdminAnalyticsDashboard';
-import { AdminSecurityDashboard } from '../sectors/Admin/AdminSecurityDashboard';
 import { PricingPlans } from './PricingPlans';
 import { Settings } from './Settings';
 import { Tasks } from './Tasks';
 import { Changelog } from './Changelog';
 import { ContactUs } from './ContactUs';
 import { MarketInsightPlaceholder } from './MarketInsightPlaceholder';
-import { ExportTemplates } from '../ui/ExportTemplates';
 import { Notifications } from '../features/social/Notifications';
-import { SmartAnalyzer } from '../features/ai/SmartAnalyzer';
 import { Profile } from './Profile';
 import { MobileSiteMap } from './MobileSiteMap';
-import HackathonView from '../features/hackathon/HackathonView';
-import ResultPage from '../../features/easy-mode/ResultPage';
-import { BusinessModelCanvas } from '../features/business/BusinessModelCanvas';
-import { UnifiedWorkspace } from '../../features/workspace/UnifiedWorkspace';
+import { CustomerPortalSection } from './CustomerPortal';
 import { useProjectWorkspace } from '../../features/workspace/ProjectWorkspaceContext';
-import { CompanyDeepDive } from '../features/discovery/CompanyDeepDive';
-
-// Dashboards
-import AdvertisingDashboard from '../sectors/AdvertisingMarketing/AdvertisingDashboard';
-import MarketingDashboard from '../sectors/AdvertisingMarketing/MarketingDashboard';
-import InfluencerMarketingDashboard from '../sectors/AdvertisingMarketing/InfluencerMarketingDashboard';
-import BrandsLeadersDashboard from '../sectors/AdvertisingMarketing/BrandsLeadersDashboard';
-import SearchEngineOptimizationContentMarketingDashboard from '../sectors/AdvertisingMarketing/SearchEngineOptimizationContentMarketingDashboard';
-
-import FarmingDashboard from '../sectors/Agriculture/FarmingDashboard';
-import FisheriesAquacultureDashboard from '../sectors/Agriculture/FisheriesAquacultureDashboard';
-import ForestryDashboard from '../sectors/Agriculture/ForestryDashboard';
-import AgriculturalTechnologyAgritechDashboard from '../sectors/Agriculture/AgriculturalTechnologyAgritechDashboard';
-import SmartFarmingDashboard from '../sectors/Agriculture/SmartFarmingDashboard';
-import SeedsCropProtectionDashboard from '../sectors/Agriculture/SeedsCropProtectionDashboard';
-
-import ChemicalIndustryDashboard from '../sectors/ChemicalsResources/ChemicalIndustryDashboard';
-import FossilFuelsDashboard from '../sectors/ChemicalsResources/FossilFuelsDashboard';
-import MiningDashboard from '../sectors/ChemicalsResources/MiningDashboard';
-import PulpPaperDashboard from '../sectors/ChemicalsResources/PulpPaperDashboard';
-import PlasticRubberDashboard from '../sectors/ChemicalsResources/PlasticRubberDashboard';
-import PetroleumRefineryDashboard from '../sectors/ChemicalsResources/PetroleumRefineryDashboard';
-import RecycledMaterialsDashboard from '../sectors/ChemicalsResources/RecycledMaterialsDashboard';
-import BatteryMaterialsDashboard from '../sectors/ChemicalsResources/BatteryMaterialsDashboard';
-
-import ApparelShoesDashboard from '../sectors/ConsumerGoodsFMCG/ApparelShoesDashboard';
-import NonAlcoholicBeveragesDashboard from '../sectors/ConsumerGoodsFMCG/NonAlcoholicBeveragesDashboard';
-import CleaningProductsDashboard from '../sectors/ConsumerGoodsFMCG/CleaningProductsDashboard';
-import CosmeticsPersonalCareDashboard from '../sectors/ConsumerGoodsFMCG/CosmeticsPersonalCareDashboard';
-import FoodNutritionDashboard from '../sectors/ConsumerGoodsFMCG/FoodNutritionDashboard';
-import FurnitureHouseholdDashboard from '../sectors/ConsumerGoodsFMCG/FurnitureHouseholdDashboard';
-import GardenPatioDashboard from '../sectors/ConsumerGoodsFMCG/GardenPatioDashboard';
-import HomeImprovementDashboard from '../sectors/ConsumerGoodsFMCG/HomeImprovementDashboard';
-import PetSuppliesDashboard from '../sectors/ConsumerGoodsFMCG/PetSuppliesDashboard';
-import ToysDashboard from '../sectors/ConsumerGoodsFMCG/ToysDashboard';
-import SustainableConsumerGoodsDashboard from '../sectors/ConsumerGoodsFMCG/SustainableConsumerGoodsDashboard';
-import PackagedFoodsDashboard from '../sectors/ConsumerGoodsFMCG/PackagedFoodsDashboard';
-
-import EconomyDashboard from '../sectors/EconomyPolitics/EconomyDashboard';
-import InternationalTradeDashboard from '../sectors/EconomyPolitics/InternationalTradeDashboard';
-import PoliticsDashboard from '../sectors/EconomyPolitics/PoliticsDashboard';
-import PublicPolicyEconomicStrategyDashboard from '../sectors/EconomyPolitics/PublicPolicyEconomicStrategyDashboard';
-import GeopoliticalRiskTradeAnalysisDashboard from '../sectors/EconomyPolitics/GeopoliticalRiskTradeAnalysisDashboard';
-
-import ClimateDashboard from '../sectors/EnergyEnvironment/ClimateDashboard';
-import EmissionsDashboard from '../sectors/EnergyEnvironment/EmissionsDashboard';
-import EnergyDashboard from '../sectors/EnergyEnvironment/EnergyDashboard';
-import GreentechDashboard from '../sectors/EnergyEnvironment/GreentechDashboard';
-import WasteDashboard from '../sectors/EnergyEnvironment/WasteDashboard';
-import WaterDashboard from '../sectors/EnergyEnvironment/WaterDashboard';
-import RenewableEnergyInfrastructureDashboard from '../sectors/EnergyEnvironment/RenewableEnergyInfrastructureDashboard';
-import CarbonCaptureClimateTechDashboard from '../sectors/EnergyEnvironment/CarbonCaptureClimateTechDashboard';
-
-import FinancialInstitutionsDashboard from '../sectors/FinanceInsurance/FinancialInstitutionsDashboard';
-import InvestmentsDashboard from '../sectors/FinanceInsurance/InvestmentsDashboard';
-import FinancialServicesDashboard from '../sectors/FinanceInsurance/FinancialServicesDashboard';
-import InsuranceDashboard from '../sectors/FinanceInsurance/InsuranceDashboard';
-import FinancialTechnologyFintechDashboard from '../sectors/FinanceInsurance/FinancialTechnologyFintechDashboard';
-import DigitalPaymentsDashboard from '../sectors/FinanceInsurance/DigitalPaymentsDashboard';
-import WealthManagementDashboard from '../sectors/FinanceInsurance/WealthManagementDashboard';
-
-import CareSupportDashboard from '../sectors/HealthPharma/CareSupportDashboard';
-import HospitalsHealthProfessionalsDashboard from '../sectors/HealthPharma/HospitalsHealthProfessionalsDashboard';
-import HealthSystemDashboard from '../sectors/HealthPharma/HealthSystemDashboard';
-import MedicalTechnologyDashboard from '../sectors/HealthPharma/MedicalTechnologyDashboard';
-import PharmaceuticalProductsDashboard from '../sectors/HealthPharma/PharmaceuticalProductsDashboard';
-import StateOfHealthDashboard from '../sectors/HealthPharma/StateOfHealthDashboard';
-import BiotechnologyDashboard from '../sectors/HealthPharma/BiotechnologyDashboard';
-import DigitalHealthDashboard from '../sectors/HealthPharma/DigitalHealthDashboard';
-import MentalHealthServicesDashboard from '../sectors/HealthPharma/MentalHealthServicesDashboard';
-import PharmaDashboard from '../sectors/HealthPharma/PharmaDashboard';
-import HealthCareDashboard from '../sectors/HealthPharma/HealthCareDashboard';
-
-import CyberCrimeSecurityDashboard from '../sectors/Internet/CyberCrimeSecurityDashboard';
-import CommunicationsDashboard from '../sectors/Internet/CommunicationsDashboard';
-import InternetDemographicsDashboard from '../sectors/Internet/InternetDemographicsDashboard';
-import MobileInternetAppsDashboard from '../sectors/Internet/MobileInternetAppsDashboard';
-import OnlineSearchDashboard from '../sectors/Internet/OnlineSearchDashboard';
-import OnlineVideoEntertainmentDashboard from '../sectors/Internet/OnlineVideoEntertainmentDashboard';
-import ReachTrafficDashboard from '../sectors/Internet/ReachTrafficDashboard';
-import SocialMediaDashboard from '../sectors/Internet/SocialMediaDashboard';
-import AiPlatformsDashboard from '../sectors/Internet/AiPlatformsDashboard';
-
-import CelebritiesDashboard from '../sectors/Life/CelebritiesDashboard';
-import FamilyFriendsDashboard from '../sectors/Life/FamilyFriendsDashboard';
-import PersonalityBehaviorDashboard from '../sectors/Life/PersonalityBehaviorDashboard';
-import HolidaysDashboard from '../sectors/Life/HolidaysDashboard';
-import MentalHealthWellbeingDashboard from '../sectors/Life/MentalHealthWellbeingDashboard';
-import LongevityHumanPerformanceDashboard from '../sectors/Life/LongevityHumanPerformanceDashboard';
-
-import AudioDashboard from '../sectors/Media/AudioDashboard';
-import BooksPublishingDashboard from '../sectors/Media/BooksPublishingDashboard';
-import NewsDashboard from '../sectors/Media/NewsDashboard';
-import TVVideoFilmDashboard from '../sectors/Media/TVVideoFilmDashboard';
-import VideoGamingESportsDashboard from '../sectors/Media/VideoGamingESportsDashboard';
-import StreamingPlatformsDashboard from '../sectors/Media/StreamingPlatformsDashboard';
-import PodcastIndustryDashboard from '../sectors/Media/PodcastIndustryDashboard';
-import DigitalPublishingDashboard from '../sectors/Media/DigitalPublishingDashboard';
-
-import AerospaceDefenseDashboard from '../sectors/MetalsElectronics/AerospaceDefenseDashboard';
-import ElectronicsDashboard from '../sectors/MetalsElectronics/ElectronicsDashboard';
-import IndustrialMachineryDashboard from '../sectors/MetalsElectronics/IndustrialMachineryDashboard';
-import MetalsDashboard from '../sectors/MetalsElectronics/MetalsDashboard';
-import RollingStockDashboard from '../sectors/MetalsElectronics/RollingStockDashboard';
-import ShipbuildingDashboard from '../sectors/MetalsElectronics/ShipbuildingDashboard';
-import VehicleManufacturingDashboard from '../sectors/MetalsElectronics/VehicleManufacturingDashboard';
-import SemiconductorsDashboard from '../sectors/MetalsElectronics/SemiconductorsDashboard';
-import AdvancedRoboticsManufacturingDashboard from '../sectors/MetalsElectronics/AdvancedRoboticsManufacturingDashboard';
-
-import CommercialRealEstateDashboard from '../sectors/RealEstate/CommercialRealEstateDashboard';
-import IndustrialRealEstateDashboard from '../sectors/RealEstate/IndustrialRealEstateDashboard';
-import MortgagesFinancingDashboard from '../sectors/RealEstate/MortgagesFinancingDashboard';
-import PropertyServicesDashboard from '../sectors/RealEstate/PropertyServicesDashboard';
-import ResidentialRealEstateDashboard from '../sectors/RealEstate/ResidentialRealEstateDashboard';
-import PropTechDashboard from '../sectors/RealEstate/PropTechDashboard';
-import SmartCitiesDevelopmentDashboard from '../sectors/RealEstate/SmartCitiesDevelopmentDashboard';
-
-import DIYRetailDashboard from '../sectors/RetailTrade/DIYRetailDashboard';
-import FashionAccessoriesDashboard from '../sectors/RetailTrade/FashionAccessoriesDashboard';
-import FoodBeverageRetailDashboard from '../sectors/RetailTrade/FoodBeverageRetailDashboard';
-import FurnitureRetailDashboard from '../sectors/RetailTrade/FurnitureRetailDashboard';
-import GeneralMerchandiseDashboard from '../sectors/RetailTrade/GeneralMerchandiseDashboard';
-import HealthHygieneDashboard from '../sectors/RetailTrade/HealthHygieneDashboard';
-import OfficeSuppliesDashboard from '../sectors/RetailTrade/OfficeSuppliesDashboard';
-import PrivateLabelDashboard from '../sectors/RetailTrade/PrivateLabelDashboard';
-import RetailTechnologyDashboard from '../sectors/RetailTrade/RetailTechnologyDashboard';
-import ShoppingBehaviorDashboard from '../sectors/RetailTrade/ShoppingBehaviorDashboard';
-import SportsLeisureRetailDashboard from '../sectors/RetailTrade/SportsLeisureRetailDashboard';
-import SubscriptionsDirectSellingDashboard from '../sectors/RetailTrade/SubscriptionsDirectSellingDashboard';
-import SupplyChainDashboard from '../sectors/RetailTrade/SupplyChainDashboard';
-import WholesaleDashboard from '../sectors/RetailTrade/WholesaleDashboard';
-import EcommerceLogisticsFulfillmentDashboard from '../sectors/RetailTrade/EcommerceLogisticsFulfillmentDashboard';
-import OmnichannelRetailSystemsDashboard from '../sectors/RetailTrade/OmnichannelRetailSystemsDashboard';
-
-import BusinessServicesDashboard from '../sectors/Services/BusinessServicesDashboard';
-import SkilledLaborDashboard from '../sectors/Services/SkilledLaborDashboard';
-import DigitalTransformationConsultingDashboard from '../sectors/Services/DigitalTransformationConsultingDashboard';
-import BPODashboard from '../sectors/Services/BPODashboard';
-
-import CrimeLawEnforcementDashboard from '../sectors/Society/CrimeLawEnforcementDashboard';
-import DemographicsDashboard from '../sectors/Society/DemographicsDashboard';
-import EducationScienceDashboard from '../sectors/Society/EducationScienceDashboard';
-import GeographyNatureDashboard from '../sectors/Society/GeographyNatureDashboard';
-import HistoricalDataDashboard from '../sectors/Society/HistoricalDataDashboard';
-import ReligionDashboard from '../sectors/Society/ReligionDashboard';
-import UrbanDevelopmentPolicyDashboard from '../sectors/Society/UrbanDevelopmentPolicyDashboard';
-import PopulationAnalyticsDashboard from '../sectors/Society/PopulationAnalyticsDashboard';
-
-import ArtCultureDashboard from '../sectors/SportsRecreation/ArtCultureDashboard';
-import GamblingDashboard from '../sectors/SportsRecreation/GamblingDashboard';
-import HobbiesDashboard from '../sectors/SportsRecreation/HobbiesDashboard';
-import ParksOutdoorsDashboard from '../sectors/SportsRecreation/ParksOutdoorsDashboard';
-import ProfessionalSportsDashboard from '../sectors/SportsRecreation/ProfessionalSportsDashboard';
-import SportsFitnessDashboard from '../sectors/SportsRecreation/SportsFitnessDashboard';
-import WellnessSpasDashboard from '../sectors/SportsRecreation/WellnessSpasDashboard';
-import SportsAnalyticsPerformanceDashboard from '../sectors/SportsRecreation/SportsAnalyticsPerformanceDashboard';
-import EsportsGamingIndustryDashboard from '../sectors/SportsRecreation/EsportsGamingIndustryDashboard';
-
-import ConsumerElectronicsDashboard from '../sectors/TechnologyTelecommunications/ConsumerElectronicsDashboard';
-import HardwareDashboard from '../sectors/TechnologyTelecommunications/HardwareDashboard';
-import HouseholdAppliancesDashboard from '../sectors/TechnologyTelecommunications/HouseholdAppliancesDashboard';
-import ITServicesDashboard from '../sectors/TechnologyTelecommunications/ITServicesDashboard';
-import SoftwareDashboard from '../sectors/TechnologyTelecommunications/SoftwareDashboard';
-import TelecommunicationsDashboard from '../sectors/TechnologyTelecommunications/TelecommunicationsDashboard';
-import CloudServicesDashboard from '../sectors/TechnologyTelecommunications/CloudServicesDashboard';
-import ArtificialIntelligenceDashboard from '../sectors/TechnologyTelecommunications/ArtificialIntelligenceDashboard';
-
-import AviationDashboard from '../sectors/TransportationLogistics/AviationDashboard';
-import LogisticsDashboard from '../sectors/TransportationLogistics/LogisticsDashboard';
-import PublicTransportDashboard from '../sectors/TransportationLogistics/PublicTransportDashboard';
-import RailTransportDashboard from '../sectors/TransportationLogistics/RailTransportDashboard';
-import VehiclesRoadTrafficDashboard from '../sectors/TransportationLogistics/VehiclesRoadTrafficDashboard';
-import WaterTransportDashboard from '../sectors/TransportationLogistics/WaterTransportDashboard';
-import ElectricVehicleEvInfrastructureDashboard from '../sectors/TransportationLogistics/ElectricVehicleEvInfrastructureDashboard';
-import AutonomousVehiclesDashboard from '../sectors/TransportationLogistics/AutonomousVehiclesDashboard';
-
-import AccommodationDashboard from '../sectors/TravelTourism/AccommodationDashboard';
-import BusinessTravelDashboard from '../sectors/TravelTourism/BusinessTravelDashboard';
-import FoodDrinkServicesDashboard from '../sectors/TravelTourism/FoodDrinkServicesDashboard';
-import LeisureTravelDashboard from '../sectors/TravelTourism/LeisureTravelDashboard';
-import MedicalTourismDashboard from '../sectors/TravelTourism/MedicalTourismDashboard';
-import TravelTechnologyDashboard from '../sectors/TravelTourism/TravelTechnologyDashboard';
-
-import BuildingConstructionDashboard from '../sectors/Construction/BuildingConstructionDashboard';
-import HeavyConstructionDashboard from '../sectors/Construction/HeavyConstructionDashboard';
-import SmartConstructionBIMDashboard from '../sectors/Construction/SmartConstructionBIMDashboard';
-import ModularPrefabConstructionDashboard from '../sectors/Construction/ModularPrefabConstructionDashboard';
-
-import B2BEcommerceDashboard from '../sectors/Ecommerce/B2BEcommerceDashboard';
-import B2CEcommerceDashboard from '../sectors/Ecommerce/B2CEcommerceDashboard';
-import C2CEcommerceDashboard from '../sectors/Ecommerce/C2CEcommerceDashboard';
-import DigitalShoppingBehaviourDashboard from '../sectors/Ecommerce/DigitalShoppingBehaviourDashboard';
-import ECommerceKeyFiguresDashboard from '../sectors/Ecommerce/EcommerceKeyFiguresDashboard';
-import PaidContentDashboard from '../sectors/Ecommerce/PaidContentDashboard';
-import OnlineMarketplacesDashboard from '../sectors/Ecommerce/OnlineMarketplacesDashboard';
-import CrossBorderEcommerceDashboard from '../sectors/Ecommerce/CrossBorderECommerceDashboard';
-import SocialCommerceDashboard from '../sectors/Ecommerce/SocialCommerceDashboard';
 
 import { User, PlanSection } from '../../types';
+
+const lazyPage = <T extends React.ComponentType<any>>(
+  loader: () => Promise<{ default: T }>
+) => React.lazy(loader);
+
+const lazyNamedPage = <T extends React.ComponentType<any>>(
+  loader: () => Promise<Record<string, unknown>>,
+  exportName: string
+) =>
+  React.lazy(async () => {
+    const module = await loader();
+    return { default: module[exportName] as T };
+  });
+
+const BrandIdentityStudio = lazyNamedPage(() => import('../features/branding/BrandIdentityStudio'), 'BrandIdentityStudio');
+const ProblemOpportunityEngine = lazyNamedPage(() => import('../features/discovery/ProblemOpportunityEngine'), 'ProblemOpportunityEngine');
+const UsersManagement = lazyNamedPage(() => import('./UsersManagement'), 'UsersManagement');
+const AdminProjectsManagement = lazyNamedPage(() => import('../sectors/Admin/AdminProjectsManagement'), 'AdminProjectsManagement');
+const AdminAnalyticsDashboard = lazyNamedPage(() => import('../sectors/Admin/AdminAnalyticsDashboard'), 'AdminAnalyticsDashboard');
+const AdminSecurityDashboard = lazyNamedPage(() => import('../sectors/Admin/AdminSecurityDashboard'), 'AdminSecurityDashboard');
+const ExportTemplates = lazyNamedPage(() => import('../ui/ExportTemplates'), 'ExportTemplates');
+const SmartAnalyzer = lazyNamedPage(() => import('../features/ai/SmartAnalyzer'), 'SmartAnalyzer');
+const CustomerPortal = lazyNamedPage(() => import('./CustomerPortal'), 'CustomerPortal');
+const HackathonView = lazyPage(() => import('../features/hackathon/HackathonView'));
+const ResultPage = lazyPage(() => import('../../features/easy-mode/ResultPage'));
+const BusinessModelCanvas = lazyNamedPage(() => import('../features/business/BusinessModelCanvas'), 'BusinessModelCanvas');
+const UnifiedWorkspace = lazyNamedPage(() => import('../../features/workspace/UnifiedWorkspace'), 'UnifiedWorkspace');
+const CompanyDeepDive = lazyNamedPage(() => import('../features/discovery/CompanyDeepDive'), 'CompanyDeepDive');
+
+const AdvertisingDashboard = lazyPage(() => import('../sectors/AdvertisingMarketing/AdvertisingDashboard'));
+const MarketingDashboard = lazyPage(() => import('../sectors/AdvertisingMarketing/MarketingDashboard'));
+const InfluencerMarketingDashboard = lazyPage(() => import('../sectors/AdvertisingMarketing/InfluencerMarketingDashboard'));
+const BrandsLeadersDashboard = lazyPage(() => import('../sectors/AdvertisingMarketing/BrandsLeadersDashboard'));
+const SearchEngineOptimizationContentMarketingDashboard = lazyPage(() => import('../sectors/AdvertisingMarketing/SearchEngineOptimizationContentMarketingDashboard'));
+const FarmingDashboard = lazyPage(() => import('../sectors/Agriculture/FarmingDashboard'));
+const FisheriesAquacultureDashboard = lazyPage(() => import('../sectors/Agriculture/FisheriesAquacultureDashboard'));
+const ForestryDashboard = lazyPage(() => import('../sectors/Agriculture/ForestryDashboard'));
+const AgriculturalTechnologyAgritechDashboard = lazyPage(() => import('../sectors/Agriculture/AgriculturalTechnologyAgritechDashboard'));
+const SmartFarmingDashboard = lazyPage(() => import('../sectors/Agriculture/SmartFarmingDashboard'));
+const SeedsCropProtectionDashboard = lazyPage(() => import('../sectors/Agriculture/SeedsCropProtectionDashboard'));
+const ChemicalIndustryDashboard = lazyPage(() => import('../sectors/ChemicalsResources/ChemicalIndustryDashboard'));
+const FossilFuelsDashboard = lazyPage(() => import('../sectors/ChemicalsResources/FossilFuelsDashboard'));
+const MiningDashboard = lazyPage(() => import('../sectors/ChemicalsResources/MiningDashboard'));
+const PulpPaperDashboard = lazyPage(() => import('../sectors/ChemicalsResources/PulpPaperDashboard'));
+const PlasticRubberDashboard = lazyPage(() => import('../sectors/ChemicalsResources/PlasticRubberDashboard'));
+const PetroleumRefineryDashboard = lazyPage(() => import('../sectors/ChemicalsResources/PetroleumRefineryDashboard'));
+const RecycledMaterialsDashboard = lazyPage(() => import('../sectors/ChemicalsResources/RecycledMaterialsDashboard'));
+const BatteryMaterialsDashboard = lazyPage(() => import('../sectors/ChemicalsResources/BatteryMaterialsDashboard'));
+const ApparelShoesDashboard = lazyPage(() => import('../sectors/ConsumerGoodsFMCG/ApparelShoesDashboard'));
+const NonAlcoholicBeveragesDashboard = lazyPage(() => import('../sectors/ConsumerGoodsFMCG/NonAlcoholicBeveragesDashboard'));
+const CleaningProductsDashboard = lazyPage(() => import('../sectors/ConsumerGoodsFMCG/CleaningProductsDashboard'));
+const CosmeticsPersonalCareDashboard = lazyPage(() => import('../sectors/ConsumerGoodsFMCG/CosmeticsPersonalCareDashboard'));
+const FoodNutritionDashboard = lazyPage(() => import('../sectors/ConsumerGoodsFMCG/FoodNutritionDashboard'));
+const FurnitureHouseholdDashboard = lazyPage(() => import('../sectors/ConsumerGoodsFMCG/FurnitureHouseholdDashboard'));
+const GardenPatioDashboard = lazyPage(() => import('../sectors/ConsumerGoodsFMCG/GardenPatioDashboard'));
+const HomeImprovementDashboard = lazyPage(() => import('../sectors/ConsumerGoodsFMCG/HomeImprovementDashboard'));
+const PetSuppliesDashboard = lazyPage(() => import('../sectors/ConsumerGoodsFMCG/PetSuppliesDashboard'));
+const ToysDashboard = lazyPage(() => import('../sectors/ConsumerGoodsFMCG/ToysDashboard'));
+const SustainableConsumerGoodsDashboard = lazyPage(() => import('../sectors/ConsumerGoodsFMCG/SustainableConsumerGoodsDashboard'));
+const PackagedFoodsDashboard = lazyPage(() => import('../sectors/ConsumerGoodsFMCG/PackagedFoodsDashboard'));
+const EconomyDashboard = lazyPage(() => import('../sectors/EconomyPolitics/EconomyDashboard'));
+const InternationalTradeDashboard = lazyPage(() => import('../sectors/EconomyPolitics/InternationalTradeDashboard'));
+const PoliticsDashboard = lazyPage(() => import('../sectors/EconomyPolitics/PoliticsDashboard'));
+const PublicPolicyEconomicStrategyDashboard = lazyPage(() => import('../sectors/EconomyPolitics/PublicPolicyEconomicStrategyDashboard'));
+const GeopoliticalRiskTradeAnalysisDashboard = lazyPage(() => import('../sectors/EconomyPolitics/GeopoliticalRiskTradeAnalysisDashboard'));
+const ClimateDashboard = lazyPage(() => import('../sectors/EnergyEnvironment/ClimateDashboard'));
+const EmissionsDashboard = lazyPage(() => import('../sectors/EnergyEnvironment/EmissionsDashboard'));
+const EnergyDashboard = lazyPage(() => import('../sectors/EnergyEnvironment/EnergyDashboard'));
+const GreentechDashboard = lazyPage(() => import('../sectors/EnergyEnvironment/GreentechDashboard'));
+const WasteDashboard = lazyPage(() => import('../sectors/EnergyEnvironment/WasteDashboard'));
+const WaterDashboard = lazyPage(() => import('../sectors/EnergyEnvironment/WaterDashboard'));
+const RenewableEnergyInfrastructureDashboard = lazyPage(() => import('../sectors/EnergyEnvironment/RenewableEnergyInfrastructureDashboard'));
+const CarbonCaptureClimateTechDashboard = lazyPage(() => import('../sectors/EnergyEnvironment/CarbonCaptureClimateTechDashboard'));
+const FinancialInstitutionsDashboard = lazyPage(() => import('../sectors/FinanceInsurance/FinancialInstitutionsDashboard'));
+const InvestmentsDashboard = lazyPage(() => import('../sectors/FinanceInsurance/InvestmentsDashboard'));
+const FinancialServicesDashboard = lazyPage(() => import('../sectors/FinanceInsurance/FinancialServicesDashboard'));
+const InsuranceDashboard = lazyPage(() => import('../sectors/FinanceInsurance/InsuranceDashboard'));
+const FinancialTechnologyFintechDashboard = lazyPage(() => import('../sectors/FinanceInsurance/FinancialTechnologyFintechDashboard'));
+const DigitalPaymentsDashboard = lazyPage(() => import('../sectors/FinanceInsurance/DigitalPaymentsDashboard'));
+const WealthManagementDashboard = lazyPage(() => import('../sectors/FinanceInsurance/WealthManagementDashboard'));
+const CareSupportDashboard = lazyPage(() => import('../sectors/HealthPharma/CareSupportDashboard'));
+const HospitalsHealthProfessionalsDashboard = lazyPage(() => import('../sectors/HealthPharma/HospitalsHealthProfessionalsDashboard'));
+const HealthSystemDashboard = lazyPage(() => import('../sectors/HealthPharma/HealthSystemDashboard'));
+const MedicalTechnologyDashboard = lazyPage(() => import('../sectors/HealthPharma/MedicalTechnologyDashboard'));
+const PharmaceuticalProductsDashboard = lazyPage(() => import('../sectors/HealthPharma/PharmaceuticalProductsDashboard'));
+const StateOfHealthDashboard = lazyPage(() => import('../sectors/HealthPharma/StateOfHealthDashboard'));
+const BiotechnologyDashboard = lazyPage(() => import('../sectors/HealthPharma/BiotechnologyDashboard'));
+const DigitalHealthDashboard = lazyPage(() => import('../sectors/HealthPharma/DigitalHealthDashboard'));
+const MentalHealthServicesDashboard = lazyPage(() => import('../sectors/HealthPharma/MentalHealthServicesDashboard'));
+const PharmaDashboard = lazyPage(() => import('../sectors/HealthPharma/PharmaDashboard'));
+const HealthCareDashboard = lazyPage(() => import('../sectors/HealthPharma/HealthCareDashboard'));
+const CyberCrimeSecurityDashboard = lazyPage(() => import('../sectors/Internet/CyberCrimeSecurityDashboard'));
+const CommunicationsDashboard = lazyPage(() => import('../sectors/Internet/CommunicationsDashboard'));
+const InternetDemographicsDashboard = lazyPage(() => import('../sectors/Internet/InternetDemographicsDashboard'));
+const MobileInternetAppsDashboard = lazyPage(() => import('../sectors/Internet/MobileInternetAppsDashboard'));
+const OnlineSearchDashboard = lazyPage(() => import('../sectors/Internet/OnlineSearchDashboard'));
+const OnlineVideoEntertainmentDashboard = lazyPage(() => import('../sectors/Internet/OnlineVideoEntertainmentDashboard'));
+const ReachTrafficDashboard = lazyPage(() => import('../sectors/Internet/ReachTrafficDashboard'));
+const SocialMediaDashboard = lazyPage(() => import('../sectors/Internet/SocialMediaDashboard'));
+const AiPlatformsDashboard = lazyPage(() => import('../sectors/Internet/AiPlatformsDashboard'));
+const CelebritiesDashboard = lazyPage(() => import('../sectors/Life/CelebritiesDashboard'));
+const FamilyFriendsDashboard = lazyPage(() => import('../sectors/Life/FamilyFriendsDashboard'));
+const PersonalityBehaviorDashboard = lazyPage(() => import('../sectors/Life/PersonalityBehaviorDashboard'));
+const HolidaysDashboard = lazyPage(() => import('../sectors/Life/HolidaysDashboard'));
+const MentalHealthWellbeingDashboard = lazyPage(() => import('../sectors/Life/MentalHealthWellbeingDashboard'));
+const LongevityHumanPerformanceDashboard = lazyPage(() => import('../sectors/Life/LongevityHumanPerformanceDashboard'));
+const AudioDashboard = lazyPage(() => import('../sectors/Media/AudioDashboard'));
+const BooksPublishingDashboard = lazyPage(() => import('../sectors/Media/BooksPublishingDashboard'));
+const NewsDashboard = lazyPage(() => import('../sectors/Media/NewsDashboard'));
+const TVVideoFilmDashboard = lazyPage(() => import('../sectors/Media/TVVideoFilmDashboard'));
+const VideoGamingESportsDashboard = lazyPage(() => import('../sectors/Media/VideoGamingESportsDashboard'));
+const StreamingPlatformsDashboard = lazyPage(() => import('../sectors/Media/StreamingPlatformsDashboard'));
+const PodcastIndustryDashboard = lazyPage(() => import('../sectors/Media/PodcastIndustryDashboard'));
+const DigitalPublishingDashboard = lazyPage(() => import('../sectors/Media/DigitalPublishingDashboard'));
+const AerospaceDefenseDashboard = lazyPage(() => import('../sectors/MetalsElectronics/AerospaceDefenseDashboard'));
+const ElectronicsDashboard = lazyPage(() => import('../sectors/MetalsElectronics/ElectronicsDashboard'));
+const IndustrialMachineryDashboard = lazyPage(() => import('../sectors/MetalsElectronics/IndustrialMachineryDashboard'));
+const MetalsDashboard = lazyPage(() => import('../sectors/MetalsElectronics/MetalsDashboard'));
+const RollingStockDashboard = lazyPage(() => import('../sectors/MetalsElectronics/RollingStockDashboard'));
+const ShipbuildingDashboard = lazyPage(() => import('../sectors/MetalsElectronics/ShipbuildingDashboard'));
+const VehicleManufacturingDashboard = lazyPage(() => import('../sectors/MetalsElectronics/VehicleManufacturingDashboard'));
+const SemiconductorsDashboard = lazyPage(() => import('../sectors/MetalsElectronics/SemiconductorsDashboard'));
+const AdvancedRoboticsManufacturingDashboard = lazyPage(() => import('../sectors/MetalsElectronics/AdvancedRoboticsManufacturingDashboard'));
+const CommercialRealEstateDashboard = lazyPage(() => import('../sectors/RealEstate/CommercialRealEstateDashboard'));
+const IndustrialRealEstateDashboard = lazyPage(() => import('../sectors/RealEstate/IndustrialRealEstateDashboard'));
+const MortgagesFinancingDashboard = lazyPage(() => import('../sectors/RealEstate/MortgagesFinancingDashboard'));
+const PropertyServicesDashboard = lazyPage(() => import('../sectors/RealEstate/PropertyServicesDashboard'));
+const ResidentialRealEstateDashboard = lazyPage(() => import('../sectors/RealEstate/ResidentialRealEstateDashboard'));
+const PropTechDashboard = lazyPage(() => import('../sectors/RealEstate/PropTechDashboard'));
+const SmartCitiesDevelopmentDashboard = lazyPage(() => import('../sectors/RealEstate/SmartCitiesDevelopmentDashboard'));
+const DIYRetailDashboard = lazyPage(() => import('../sectors/RetailTrade/DIYRetailDashboard'));
+const FashionAccessoriesDashboard = lazyPage(() => import('../sectors/RetailTrade/FashionAccessoriesDashboard'));
+const FoodBeverageRetailDashboard = lazyPage(() => import('../sectors/RetailTrade/FoodBeverageRetailDashboard'));
+const FurnitureRetailDashboard = lazyPage(() => import('../sectors/RetailTrade/FurnitureRetailDashboard'));
+const GeneralMerchandiseDashboard = lazyPage(() => import('../sectors/RetailTrade/GeneralMerchandiseDashboard'));
+const HealthHygieneDashboard = lazyPage(() => import('../sectors/RetailTrade/HealthHygieneDashboard'));
+const OfficeSuppliesDashboard = lazyPage(() => import('../sectors/RetailTrade/OfficeSuppliesDashboard'));
+const PrivateLabelDashboard = lazyPage(() => import('../sectors/RetailTrade/PrivateLabelDashboard'));
+const RetailTechnologyDashboard = lazyPage(() => import('../sectors/RetailTrade/RetailTechnologyDashboard'));
+const ShoppingBehaviorDashboard = lazyPage(() => import('../sectors/RetailTrade/ShoppingBehaviorDashboard'));
+const SportsLeisureRetailDashboard = lazyPage(() => import('../sectors/RetailTrade/SportsLeisureRetailDashboard'));
+const SubscriptionsDirectSellingDashboard = lazyPage(() => import('../sectors/RetailTrade/SubscriptionsDirectSellingDashboard'));
+const SupplyChainDashboard = lazyPage(() => import('../sectors/RetailTrade/SupplyChainDashboard'));
+const WholesaleDashboard = lazyPage(() => import('../sectors/RetailTrade/WholesaleDashboard'));
+const EcommerceLogisticsFulfillmentDashboard = lazyPage(() => import('../sectors/RetailTrade/EcommerceLogisticsFulfillmentDashboard'));
+const OmnichannelRetailSystemsDashboard = lazyPage(() => import('../sectors/RetailTrade/OmnichannelRetailSystemsDashboard'));
+const BusinessServicesDashboard = lazyPage(() => import('../sectors/Services/BusinessServicesDashboard'));
+const SkilledLaborDashboard = lazyPage(() => import('../sectors/Services/SkilledLaborDashboard'));
+const DigitalTransformationConsultingDashboard = lazyPage(() => import('../sectors/Services/DigitalTransformationConsultingDashboard'));
+const BPODashboard = lazyPage(() => import('../sectors/Services/BPODashboard'));
+const CrimeLawEnforcementDashboard = lazyPage(() => import('../sectors/Society/CrimeLawEnforcementDashboard'));
+const DemographicsDashboard = lazyPage(() => import('../sectors/Society/DemographicsDashboard'));
+const EducationScienceDashboard = lazyPage(() => import('../sectors/Society/EducationScienceDashboard'));
+const GeographyNatureDashboard = lazyPage(() => import('../sectors/Society/GeographyNatureDashboard'));
+const HistoricalDataDashboard = lazyPage(() => import('../sectors/Society/HistoricalDataDashboard'));
+const ReligionDashboard = lazyPage(() => import('../sectors/Society/ReligionDashboard'));
+const UrbanDevelopmentPolicyDashboard = lazyPage(() => import('../sectors/Society/UrbanDevelopmentPolicyDashboard'));
+const PopulationAnalyticsDashboard = lazyPage(() => import('../sectors/Society/PopulationAnalyticsDashboard'));
+const ArtCultureDashboard = lazyPage(() => import('../sectors/SportsRecreation/ArtCultureDashboard'));
+const GamblingDashboard = lazyPage(() => import('../sectors/SportsRecreation/GamblingDashboard'));
+const HobbiesDashboard = lazyPage(() => import('../sectors/SportsRecreation/HobbiesDashboard'));
+const ParksOutdoorsDashboard = lazyPage(() => import('../sectors/SportsRecreation/ParksOutdoorsDashboard'));
+const ProfessionalSportsDashboard = lazyPage(() => import('../sectors/SportsRecreation/ProfessionalSportsDashboard'));
+const SportsFitnessDashboard = lazyPage(() => import('../sectors/SportsRecreation/SportsFitnessDashboard'));
+const WellnessSpasDashboard = lazyPage(() => import('../sectors/SportsRecreation/WellnessSpasDashboard'));
+const SportsAnalyticsPerformanceDashboard = lazyPage(() => import('../sectors/SportsRecreation/SportsAnalyticsPerformanceDashboard'));
+const EsportsGamingIndustryDashboard = lazyPage(() => import('../sectors/SportsRecreation/EsportsGamingIndustryDashboard'));
+const ConsumerElectronicsDashboard = lazyPage(() => import('../sectors/TechnologyTelecommunications/ConsumerElectronicsDashboard'));
+const HardwareDashboard = lazyPage(() => import('../sectors/TechnologyTelecommunications/HardwareDashboard'));
+const HouseholdAppliancesDashboard = lazyPage(() => import('../sectors/TechnologyTelecommunications/HouseholdAppliancesDashboard'));
+const ITServicesDashboard = lazyPage(() => import('../sectors/TechnologyTelecommunications/ITServicesDashboard'));
+const SoftwareDashboard = lazyPage(() => import('../sectors/TechnologyTelecommunications/SoftwareDashboard'));
+const TelecommunicationsDashboard = lazyPage(() => import('../sectors/TechnologyTelecommunications/TelecommunicationsDashboard'));
+const CloudServicesDashboard = lazyPage(() => import('../sectors/TechnologyTelecommunications/CloudServicesDashboard'));
+const ArtificialIntelligenceDashboard = lazyPage(() => import('../sectors/TechnologyTelecommunications/ArtificialIntelligenceDashboard'));
+const AviationDashboard = lazyPage(() => import('../sectors/TransportationLogistics/AviationDashboard'));
+const LogisticsDashboard = lazyPage(() => import('../sectors/TransportationLogistics/LogisticsDashboard'));
+const PublicTransportDashboard = lazyPage(() => import('../sectors/TransportationLogistics/PublicTransportDashboard'));
+const RailTransportDashboard = lazyPage(() => import('../sectors/TransportationLogistics/RailTransportDashboard'));
+const VehiclesRoadTrafficDashboard = lazyPage(() => import('../sectors/TransportationLogistics/VehiclesRoadTrafficDashboard'));
+const WaterTransportDashboard = lazyPage(() => import('../sectors/TransportationLogistics/WaterTransportDashboard'));
+const ElectricVehicleEvInfrastructureDashboard = lazyPage(() => import('../sectors/TransportationLogistics/ElectricVehicleEvInfrastructureDashboard'));
+const AutonomousVehiclesDashboard = lazyPage(() => import('../sectors/TransportationLogistics/AutonomousVehiclesDashboard'));
+const AccommodationDashboard = lazyPage(() => import('../sectors/TravelTourism/AccommodationDashboard'));
+const BusinessTravelDashboard = lazyPage(() => import('../sectors/TravelTourism/BusinessTravelDashboard'));
+const FoodDrinkServicesDashboard = lazyPage(() => import('../sectors/TravelTourism/FoodDrinkServicesDashboard'));
+const LeisureTravelDashboard = lazyPage(() => import('../sectors/TravelTourism/LeisureTravelDashboard'));
+const MedicalTourismDashboard = lazyPage(() => import('../sectors/TravelTourism/MedicalTourismDashboard'));
+const TravelTechnologyDashboard = lazyPage(() => import('../sectors/TravelTourism/TravelTechnologyDashboard'));
+const BuildingConstructionDashboard = lazyPage(() => import('../sectors/Construction/BuildingConstructionDashboard'));
+const HeavyConstructionDashboard = lazyPage(() => import('../sectors/Construction/HeavyConstructionDashboard'));
+const SmartConstructionBIMDashboard = lazyPage(() => import('../sectors/Construction/SmartConstructionBIMDashboard'));
+const ModularPrefabConstructionDashboard = lazyPage(() => import('../sectors/Construction/ModularPrefabConstructionDashboard'));
+const B2BEcommerceDashboard = lazyPage(() => import('../sectors/Ecommerce/B2BEcommerceDashboard'));
+const B2CEcommerceDashboard = lazyPage(() => import('../sectors/Ecommerce/B2CEcommerceDashboard'));
+const C2CEcommerceDashboard = lazyPage(() => import('../sectors/Ecommerce/C2CEcommerceDashboard'));
+const DigitalShoppingBehaviourDashboard = lazyPage(() => import('../sectors/Ecommerce/DigitalShoppingBehaviourDashboard'));
+const ECommerceKeyFiguresDashboard = lazyPage(() => import('../sectors/Ecommerce/EcommerceKeyFiguresDashboard'));
+const PaidContentDashboard = lazyPage(() => import('../sectors/Ecommerce/PaidContentDashboard'));
+const OnlineMarketplacesDashboard = lazyPage(() => import('../sectors/Ecommerce/OnlineMarketplacesDashboard'));
+const CrossBorderEcommerceDashboard = lazyPage(() => import('../sectors/Ecommerce/CrossBorderECommerceDashboard'));
+const SocialCommerceDashboard = lazyPage(() => import('../sectors/Ecommerce/SocialCommerceDashboard'));
+
+const RouteLoadingState: React.FC = () => (
+  <div className="app-page-shell-wide py-10">
+    <div className="surface-card flex min-h-[280px] items-center justify-center rounded-[2rem] border border-slate-200/70">
+      <div className="text-center">
+        <div className="mx-auto mb-4 h-11 w-11 animate-spin rounded-full border-4 border-slate-200 border-t-slate-900" />
+        <p className="text-sm font-semibold text-slate-600">جاري تحميل الصفحة...</p>
+      </div>
+    </div>
+  </div>
+);
 
 interface DashboardRouterProps {
   activeTab: string;
@@ -257,9 +262,20 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
   setSelectedCompanyId
 }) => {
   const { updateProfile, updateBrand, setPlanSections } = useProjectWorkspace();
-  const containerClass = ['home', 'editor', 'strategic-dashboard', 'contact-us', 'market-discovery', 'problem-engine', 'hackathon', 'workspace', 'company-deep-dive', 'site-map', 'discovery-center'].includes(activeTab) || activeTab.endsWith('-dashboard') 
+  const containerClass = ['home', 'editor', 'strategic-dashboard', 'contact-us', 'market-discovery', 'problem-engine', 'hackathon', 'workspace', 'company-deep-dive', 'site-map', 'discovery-center', 'subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-subscription', 'customer-usage', 'customer-activity', 'customer-account', 'customer-support'].includes(activeTab) || activeTab.endsWith('-dashboard') 
     ? 'w-full' 
-    : 'max-w-6xl mx-auto py-6 sm:py-8 lg:py-10 px-4 sm:px-6 lg:px-12 pb-20 lg:pb-10';
+    : 'app-page-shell-wide py-6 sm:py-8 lg:py-10 pb-20 lg:pb-10';
+
+  const customerSectionMap: Record<string, CustomerPortalSection> = {
+    'subscriber-hub': 'dashboard',
+    'customer-dashboard': 'dashboard',
+    'customer-projects': 'projects',
+    'customer-subscription': 'subscription',
+    'customer-usage': 'usage',
+    'customer-activity': 'activity',
+    'customer-account': 'account',
+    'customer-support': 'support',
+  };
 
   const handleBuildPlan = (projectName?: string) => {
     if (projectName) {
@@ -284,6 +300,15 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
         return <Home setActiveTab={setActiveTab} onCompanyClick={handleCompanyClick} />;
       case 'profile':
         return <Profile user={user} />;
+      case 'subscriber-hub':
+      case 'customer-dashboard':
+      case 'customer-projects':
+      case 'customer-subscription':
+      case 'customer-usage':
+      case 'customer-activity':
+      case 'customer-account':
+      case 'customer-support':
+        return <CustomerPortal user={user} setActiveTab={setActiveTab} section={customerSectionMap[activeTab]} />;
       case 'workspace':
         return <UnifiedWorkspace setActiveTab={setActiveTab} />;
       case 'users-management':
@@ -346,7 +371,7 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
       case 'comparison':
         return <PlanComparison />;
       case 'pricing':
-        return <PricingPlans />;
+        return <PricingPlans setActiveTab={setActiveTab} />;
       case 'hackathon':
         return <HackathonView />;
       case 'contact-us':
@@ -754,9 +779,11 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
 
   return (
     <div className={containerClass}>
-      <div className="animate-in slide-in-from-bottom-4 duration-700">
-        {renderContent()}
-      </div>
+      <Suspense fallback={<RouteLoadingState />}>
+        <div className="animate-in slide-in-from-bottom-4 duration-700">
+          {renderContent()}
+        </div>
+      </Suspense>
     </div>
   );
 };

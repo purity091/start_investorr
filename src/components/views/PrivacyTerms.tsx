@@ -45,26 +45,26 @@ export const PrivacyTerms: React.FC = () => {
   ];
 
   return (
-    <div className="animate-in fade-in slide-in-from-bottom-2 duration-700 py-8 px-6 lg:px-12 max-w-[1600px] mx-auto font-['IBM_Plex_Sans_Arabic']">
+    <div className="app-page-shell-wide animate-in fade-in slide-in-from-bottom-2 duration-700 py-8 lg:py-10 font-['IBM_Plex_Sans_Arabic']">
       
       {/* Hero Section - Identical to ContactUs Style */}
-      <section className="mb-8 relative overflow-hidden rounded-[2rem] p-8 md:p-10 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white shadow-xl shadow-blue-900/10">
+      <section className="surface-card mb-8 relative overflow-hidden p-8 md:p-10 lg:p-12">
         <div className="relative z-10 w-full text-center">
           <h2 className="text-2xl md:text-3xl font-black mb-3 tracking-tight">سياسة الخصوصية والشروط</h2>
-          <p className="text-[13px] md:text-[14px] opacity-90 leading-relaxed max-w-3xl font-medium mx-auto">
+          <p className="text-[13px] md:text-[14px] text-slate-600 leading-relaxed max-w-4xl font-medium mx-auto">
             نحن نلتزم بحماية خصوصيتك وضمان تجربة آمنة وشفافة. هذه الوثيقة توضح حقوقك ومسؤولياتنا تجاه بياناتك الشخصية وشروط استخدام منصة "خطة".
           </p>
         </div>
         {/* Aesthetic Glass Elements - Identical to ContactUs */}
-        <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-white/10 backdrop-blur-3xl rounded-full"></div>
-        <div className="absolute -top-6 -right-6 w-64 h-64 bg-indigo-400/20 backdrop-blur-2xl rounded-full"></div>
+        <div className="absolute -bottom-12 -left-6 w-48 h-48 bg-slate-100 rounded-full blur-3xl"></div>
+        <div className="absolute -top-12 -right-6 w-64 h-64 bg-blue-50 rounded-full blur-3xl"></div>
       </section>
 
       {/* Main Grid Section - Inspired by ContactUs 2-Column Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-8 mb-16">
+      <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,1.2fr)_360px] 2xl:grid-cols-[minmax(0,1.28fr)_420px] gap-8 mb-16">
         
         {/* Main Content Card - Like the Contact Form Card */}
-        <div className="bg-white p-8 md:p-12 rounded-[2.5rem] border border-slate-200 shadow-sm relative overflow-hidden group">
+        <div className="surface-card p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden group">
           <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-50/50 rounded-full translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-1000"></div>
           
           <main className="relative z-10 space-y-12">
@@ -120,7 +120,7 @@ export const PrivacyTerms: React.FC = () => {
 
         {/* Side Actions Drawer - Like the Contact Info Card */}
         <aside className="space-y-6">
-          <div className="bg-slate-50/50 p-6 rounded-[2.5rem] border border-slate-100 shadow-sm space-y-8 flex flex-col sticky top-24">
+          <div className="surface-card p-6 rounded-[2.5rem] space-y-8 flex flex-col sticky top-24">
             
             {/* Table of Contents - Sidebar View */}
             <div className="space-y-4">
@@ -164,7 +164,7 @@ export const PrivacyTerms: React.FC = () => {
       </div>
 
       {/* FAQ Re-integrated at bottom - Identical to ContactUs footer style */}
-      <div className="animate-in fade-in slide-in-from-bottom-2 duration-700 py-8 max-w-[1400px] mx-auto">
+      <div className="animate-in fade-in slide-in-from-bottom-2 duration-700 py-8">
         <header className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-indigo-50 px-4 py-2 rounded-full mb-6 text-indigo-600 shadow-sm">
             <BookOpen size={16} />
@@ -174,7 +174,7 @@ export const PrivacyTerms: React.FC = () => {
           <p className="text-slate-500 text-[13px] font-medium max-w-2xl mx-auto leading-relaxed">تعرف على المزيد حول أمن بياناتك وشروط الخدمة.</p>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4">
            {/* Summary FAQ Data */}
            <details className="group bg-white border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-300 hover:border-indigo-500/50 hover:shadow-lg h-fit">
               <summary className="flex items-center justify-between p-6 cursor-pointer list-none bg-white hover:bg-slate-50/50 transition-colors">

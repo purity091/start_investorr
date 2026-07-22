@@ -107,10 +107,10 @@ export const Changelog: React.FC = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto py-12 px-6 animate-in fade-in slide-in-from-bottom-8 duration-700">
+    <div className="app-page-shell-wide py-12 animate-in fade-in slide-in-from-bottom-8 duration-700">
       {/* Header Section */}
-      <div className="text-center mb-16">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-600 rounded-[1.5rem] text-white shadow-2xl shadow-primary-200 mb-6 rotate-3">
+      <div className="surface-card text-center mb-10 p-8 lg:p-10">
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-950 rounded-[1.5rem] text-white shadow-lg mb-6">
           <History size={32} strokeWidth={2.5} />
         </div>
         <h1 className="text-4xl font-bold text-gray-900 mb-4 tracking-tight">سجل التحديثات</h1>
@@ -124,7 +124,7 @@ export const Changelog: React.FC = () => {
         {/* Central Vertical Line */}
         <div className="absolute top-0 bottom-0 right-[27px] w-0.5 bg-gradient-to-b from-primary-200 via-gray-100 to-transparent hidden md:block"></div>
 
-        <div className="space-y-12">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
           {UPDATES.map((update, index) => {
             const styles = getTypeStyles(update.type);
             const Icon = styles.icon;

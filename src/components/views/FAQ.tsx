@@ -21,7 +21,7 @@ export const FAQ: React.FC = () => {
   ];
 
   return (
-    <div className="animate-in fade-in slide-in-from-bottom-2 duration-700 py-8 px-6 lg:px-12 max-w-[1400px] mx-auto font-['IBM_Plex_Sans_Arabic']">
+    <div className="app-page-shell-wide animate-in fade-in slide-in-from-bottom-2 duration-700 py-8 lg:py-10 font-['IBM_Plex_Sans_Arabic']">
       {/* Header Section - Restored */}
       <header className="text-center mb-16 pt-8">
         <div className="inline-flex items-center gap-2 bg-indigo-50 px-4 py-2 rounded-full mb-6 text-indigo-600 animate-in slide-in-from-top-4 duration-1000 shadow-sm">
@@ -35,9 +35,9 @@ export const FAQ: React.FC = () => {
           كل ما تحتاجه لإطلاق مشروعك بثقة. ابحث عن إجابات لاستفساراتك أو تواصل مع فريقنا للمساعدة.
         </p>
       </header>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4">
         {faqData.map((item, idx) => (
-          <details key={idx} className="group bg-white border border-slate-200 rounded-[2rem] overflow-hidden transition-all duration-300 hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/5 h-fit">
+          <details key={idx} className="group surface-card rounded-[2rem] overflow-hidden transition-all duration-300 hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/5 h-fit">
             <summary className="flex items-center justify-between p-6 cursor-pointer list-none bg-white hover:bg-slate-50/50 transition-colors">
               <span className="text-[14px] font-black text-slate-800 group-open:text-indigo-600 transition-colors pr-2 leading-relaxed">{item.q}</span>
               <div className="w-10 h-10 rounded-xl bg-slate-50 text-slate-400 flex items-center justify-center group-open:bg-indigo-600 group-open:text-white group-open:rotate-180 transition-all duration-500 shrink-0">

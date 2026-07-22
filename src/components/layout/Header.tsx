@@ -3,7 +3,7 @@ import React from 'react';
 import { 
   Menu, Bell, Settings as SettingsIcon, ChevronLeft, 
   Home as HomeIcon, Compass, Zap, User as UserIcon, 
-  Briefcase, CreditCard, LogOut, Sparkles, Clock3, Check
+  Briefcase, CreditCard, LogOut, Sparkles, Clock3, Check, Crown
 } from 'lucide-react';
 import { User } from '../../types';
 
@@ -151,6 +151,13 @@ export const Header: React.FC<HeaderProps> = ({
                    <span className="truncate">
                      {activeTab === 'market-discovery' && 'اكتشاف السوق'}
                      {activeTab === 'workspace' && 'مساحة المشروع'}
+                     {(activeTab === 'subscriber-hub' || activeTab === 'customer-dashboard') && 'بوابة العميل'}
+                     {activeTab === 'customer-projects' && 'مشاريع العميل'}
+                     {activeTab === 'customer-subscription' && 'الاشتراك والفوترة'}
+                     {activeTab === 'customer-usage' && 'الاستخدام والصلاحيات'}
+                     {activeTab === 'customer-activity' && 'النشاط والتنبيهات'}
+                     {activeTab === 'customer-account' && 'الحساب والهوية'}
+                     {activeTab === 'customer-support' && 'الدعم والطلبات'}
                      {activeTab === 'profile' && 'الملف الشخصي'}
                      {activeTab === 'settings' && 'إعدادات الحساب'}
                      {activeTab === 'pricing' && 'الاشتراكات'}
@@ -258,6 +265,10 @@ export const Header: React.FC<HeaderProps> = ({
                     <button onClick={() => { setIsProfileOpen(false); setActiveTab('my-plans'); }} className="w-full flex items-center gap-2.5 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl text-[11px] sm:text-[12px] font-bold text-gray-600 hover:bg-primary-50 hover:text-primary-700 transition-all group">
                        <Briefcase size={14} className="group-hover:scale-110 transition-transform w-4 h-4 sm:w-5 sm:h-5" />
                        <span>مشاريعي</span>
+                    </button>
+                    <button onClick={() => { setIsProfileOpen(false); setActiveTab('customer-dashboard'); }} className="w-full flex items-center gap-2.5 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl text-[11px] sm:text-[12px] font-bold text-gray-600 hover:bg-primary-50 hover:text-primary-700 transition-all group">
+                       <Crown size={14} className="group-hover:scale-110 transition-transform w-4 h-4 sm:w-5 sm:h-5" />
+                       <span>بوابة العميل</span>
                     </button>
                     <div className="h-px bg-gray-50 my-2 sm:my-3 mx-3 sm:mx-4"></div>
                     <button className="w-full flex items-center gap-2.5 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl text-[11px] sm:text-[12px] font-bold text-red-500 hover:bg-red-50 transition-all group">

@@ -172,6 +172,7 @@ import {
   Bus,
   Bed,
   Box
+  ,Crown
 } from 'lucide-react';
 import { User } from '../../types';
 import { getTabPath } from '../../utils/routes';
@@ -349,6 +350,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, isOpen = true, isCollaps
   const adminTabs = ['admin-dashboard', 'users-management', 'admin-plans', 'admin-analytics', 'admin-security'];
   const isAdminMode = adminTabs.includes(activeTab || '');
   const tabHref = (tab: string) => getTabPath(tab);
+  const isCustomerPortalActive = ['subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-subscription', 'customer-usage', 'customer-activity', 'customer-account', 'customer-support'].includes(activeTab || '');
 
 
   const sidebarBg = isAdminMode
@@ -494,6 +496,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, isOpen = true, isCollaps
                   <NavGroup title="الإدارة والضبط" isCollapsed={isCollapsed}>
                     <NavItem icon={Bell} label="التنبيهات" href={tabHref('notifications')} active={activeTab === 'notifications'} onClick={() => setActiveTab?.('notifications')} isCollapsed={isCollapsed} badge={3} />
                     <NavItem icon={CreditCard} label="الاشتراكات والأسعار" href={tabHref('pricing')} active={activeTab === 'pricing'} onClick={() => setActiveTab?.('pricing')} isCollapsed={isCollapsed} />
+                    <NavItem icon={Crown} label="بوابة العميل" href={tabHref('customer-dashboard')} active={isCustomerPortalActive} onClick={() => setActiveTab?.('customer-dashboard')} isCollapsed={isCollapsed} isNew />
                     <NavItem icon={Settings} label="إعدادات المنصة" href={tabHref('settings')} active={activeTab === 'settings'} onClick={() => setActiveTab?.('settings')} isCollapsed={isCollapsed} />
                   </NavGroup>
 

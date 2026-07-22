@@ -97,14 +97,14 @@ export const UsersManagement: React.FC = () => {
       </div>
 
       {/* Stats Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
         {[
           { label: 'إجمالي المستخدمين', value: users.length, icon: Users, color: 'text-blue-600', bg: 'bg-blue-50' },
           { label: 'نشط', value: users.filter(u => u.status === 'active').length, icon: CheckCircle2, color: 'text-emerald-600', bg: 'bg-emerald-50' },
           { label: 'بانتظار التفعيل', value: users.filter(u => u.status === 'pending').length, icon: Clock, color: 'text-amber-600', bg: 'bg-amber-50' },
           { label: 'موقوف', value: users.filter(u => u.status === 'suspended').length, icon: ShieldOff, color: 'text-rose-600', bg: 'bg-rose-50' },
         ].map((stat, idx) => (
-          <div key={idx} className="bg-white p-5 rounded-[20px] border border-slate-100 shadow-sm flex items-center justify-between">
+          <div key={idx} className="surface-card p-5 rounded-[20px] flex items-center justify-between">
              <div>
                 <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-1">{stat.label}</p>
                 <h4 className="text-2xl font-black text-slate-800">{stat.value}</h4>
@@ -117,7 +117,7 @@ export const UsersManagement: React.FC = () => {
       </div>
 
       {/* Filters Bar */}
-      <div className="bg-white border border-slate-100 rounded-[20px] p-4 flex flex-col md:flex-row items-center gap-4 shadow-sm">
+      <div className="surface-card rounded-[20px] p-4 flex flex-col xl:flex-row xl:items-center gap-4">
         <div className="relative flex-1 w-full">
            <Search size={18} className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400" />
            <input 
@@ -161,7 +161,7 @@ export const UsersManagement: React.FC = () => {
       </div>
 
       {/* Users DataTable */}
-      <div className="bg-white border border-slate-100 rounded-[20px] shadow-sm overflow-hidden flex flex-col min-h-[500px]">
+      <div className="surface-card rounded-[20px] shadow-sm overflow-hidden flex flex-col min-h-[500px]">
         <div className="overflow-x-auto">
           <table className="w-full text-right border-collapse">
             <thead>

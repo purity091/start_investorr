@@ -8,7 +8,7 @@ import {
   X, Zap, ChevronDown, Megaphone, TrendingUp, Award, Compass, Sprout, Waves, TreePine,
   FlaskConical, Flame, Mountain, Factory, Shirt, FileBox, Building2, HardHat, Heart,
   Utensils, Armchair, Flower2, Hammer, PawPrint, Gamepad2, Briefcase, ShoppingCart,
-  Handshake, Hash, PlayCircle, Coffee, Landmark, Map, Sparkles, CloudSun, Cpu, Recycle, LineChart
+  Handshake, Hash, PlayCircle, Coffee, Landmark, Map, Sparkles, CloudSun, Cpu, Recycle, LineChart, Crown
 } from 'lucide-react';
 import { getTabPath } from '../../utils/routes';
 
@@ -124,6 +124,7 @@ interface MobileMenuProps {
 
 export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeTab, setActiveTab, isAdminMode }) => {
   const tabHref = (tab: string) => getTabPath(tab);
+  const isCustomerPortalActive = ['subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-subscription', 'customer-usage', 'customer-activity', 'customer-account', 'customer-support'].includes(activeTab || '');
 
   if (!isOpen) return null;
 
@@ -228,6 +229,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeT
               <NavGroup title="الإدارة والضبط">
                 <NavItem icon={Bell} label="التنبيهات" href={tabHref('notifications')} active={activeTab === 'notifications'} onClick={() => handleNavigate('notifications')} badge={3} />
                 <NavItem icon={CreditCard} label="الاشتراكات والأسعار" href={tabHref('pricing')} active={activeTab === 'pricing'} onClick={() => handleNavigate('pricing')} />
+                <NavItem icon={Crown} label="بوابة العميل" href={tabHref('customer-dashboard')} active={isCustomerPortalActive} onClick={() => handleNavigate('customer-dashboard')} isNew />
                 <NavItem icon={Settings} label="إعدادات المنصة" href={tabHref('settings')} active={activeTab === 'settings'} onClick={() => handleNavigate('settings')} />
               </NavGroup>
 

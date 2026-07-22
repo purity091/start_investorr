@@ -38,12 +38,12 @@ export const Profile: React.FC<ProfileProps> = ({ user }) => {
   ];
 
   return (
-    <div className="animate-in fade-in slide-in-from-bottom-4 duration-700" dir="rtl">
+    <div className="app-page-shell-wide animate-in fade-in slide-in-from-bottom-4 duration-700" dir="rtl">
       
       {/* 1. IDENTITY HEADER */}
       <div className="relative mb-8 group">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/10 via-purple-600/10 to-emerald-500/10 rounded-[2.5rem] blur-2xl opacity-50 group-hover:opacity-80 transition-opacity"></div>
-        <div className="relative bg-white/70 backdrop-blur-xl border border-white/60 p-8 rounded-[2.5rem] shadow-xl shadow-slate-200/40 flex flex-col md:flex-row items-center gap-8">
+        <div className="surface-card relative flex flex-col items-center gap-8 rounded-[1.75rem] p-8 md:flex-row">
           
           {/* Avatar Area */}
           <div className="relative">
@@ -94,9 +94,9 @@ export const Profile: React.FC<ProfileProps> = ({ user }) => {
       </div>
 
       {/* 2. STATS GRID */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <div className="mb-8 grid grid-cols-1 gap-4 xl:grid-cols-3 md:grid-cols-2">
         {stats.map((stat, i) => (
-          <div key={i} className="bg-white border border-slate-100 p-6 rounded-[2rem] shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 relative group overflow-hidden">
+          <div key={i} className="surface-card relative overflow-hidden p-6 transition-all duration-300 hover:-translate-y-0.5">
             <div className={`absolute top-0 right-0 w-full h-1 bg-gradient-to-l ${stat.color === 'text-indigo-600' ? 'from-indigo-500' : 'from-emerald-500'} to-transparent opacity-0 group-hover:opacity-20 transition-opacity`}></div>
             <div className="flex items-center gap-4">
               <div className={`w-12 h-12 ${stat.bg} ${stat.color} rounded-2xl flex items-center justify-center transition-transform group-hover:scale-110 shadow-inner`}>
@@ -112,9 +112,9 @@ export const Profile: React.FC<ProfileProps> = ({ user }) => {
       </div>
 
       {/* 3. MAIN CONTENT TABS */}
-      <div className="bg-white border border-slate-50 rounded-[3rem] p-4 lg:p-6 shadow-2xl shadow-slate-100/50 min-h-[500px]">
+      <div className="surface-card min-h-[500px] rounded-[1.75rem] p-4 lg:p-6">
         {/* Navigation Sub-Tabs */}
-        <div className="flex items-center gap-2 p-1.5 bg-slate-50/80 rounded-[2rem] mb-10 overflow-x-auto no-scrollbar">
+        <div className="surface-toolbar mb-8 flex items-center gap-2 overflow-x-auto p-1.5 no-scrollbar">
           {[
             { id: 'general', label: 'البيانات الأساسية', icon: User },
             { id: 'security', label: 'الأمان والخصوصية', icon: KeyRound },
@@ -138,7 +138,7 @@ export const Profile: React.FC<ProfileProps> = ({ user }) => {
         {/* Tab Content */}
         <div className="px-2 lg:px-6">
           {activeSubTab === 'general' && (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 animate-in fade-in slide-in-from-right-4 duration-500">
+            <div className="grid grid-cols-1 gap-10 2xl:grid-cols-[minmax(0,1.1fr)_minmax(420px,0.9fr)] xl:grid-cols-2 animate-in fade-in slide-in-from-right-4 duration-500">
               <div className="space-y-6">
                 <div>
                    <h3 className="text-lg font-black text-slate-900 mb-6 flex items-center gap-2">

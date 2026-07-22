@@ -115,8 +115,25 @@ export const Tasks: React.FC = () => {
         </button>
       </div>
 
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+        {[
+          { label: 'Ø¥Ø¬Ù…Ø§Ù„ÙŠ Ø§Ù„Ù…Ù‡Ø§Ù…', value: counts.all, tone: 'text-slate-900 bg-slate-100' },
+          { label: 'Ù‚ÙŠØ¯ Ø§Ù„ØªÙ†ÙÙŠØ°', value: counts.in_progress, tone: 'text-blue-700 bg-blue-50' },
+          { label: 'Ù…ÙƒØªÙ…Ù„Ø©', value: counts.completed, tone: 'text-emerald-700 bg-emerald-50' },
+          { label: 'Ù‚ÙŠØ¯ Ø§Ù„Ø§Ù†ØªØ¸Ø§Ø±', value: counts.pending, tone: 'text-amber-700 bg-amber-50' },
+        ].map((stat) => (
+          <div key={stat.label} className="surface-card p-5 flex items-center justify-between">
+            <div className="text-right">
+              <p className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-400">{stat.label}</p>
+              <p className="mt-2 text-3xl font-black text-slate-950">{stat.value}</p>
+            </div>
+            <div className={`rounded-2xl px-3 py-2 text-xs font-black ${stat.tone}`}>Live</div>
+          </div>
+        ))}
+      </div>
+
       {/* Tabs / Filters - Redesigned for Mobile */}
-      <div className="bg-white p-1.5 sm:p-2 rounded-[1.5rem] sm:rounded-[2rem] md:rounded-[2.5rem] border border-gray-100 shadow-lg sm:shadow-xl shadow-slate-200/40 ring-1 ring-black/5">
+      <div className="surface-card p-1.5 sm:p-2 rounded-[1.5rem] sm:rounded-[2rem] md:rounded-[2.5rem] ring-1 ring-black/5">
         {/* Desktop View: Horizontal */}
         <div className="hidden sm:flex flex-wrap gap-2">
           {[
@@ -169,9 +186,9 @@ export const Tasks: React.FC = () => {
       </div>
 
       {/* Tasks List - Improved for Mobile */}
-      <div className="space-y-3 sm:space-y-4">
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-3 sm:gap-4">
         {filteredTasks.length === 0 ? (
-          <div className="py-20 sm:py-24 text-center bg-white border border-dashed border-gray-200 rounded-[2rem] sm:rounded-[3rem]">
+          <div className="xl:col-span-2 py-20 sm:py-24 text-center bg-white border border-dashed border-gray-200 rounded-[2rem] sm:rounded-[3rem]">
             <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gray-50 rounded-[1.5rem] sm:rounded-[2rem] flex items-center justify-center text-gray-300 mx-auto mb-4 sm:mb-6">
               <ListTodo size={32} strokeWidth={1.5} className="w-8 h-8 sm:w-10 sm:h-10" />
             </div>
@@ -182,7 +199,7 @@ export const Tasks: React.FC = () => {
           filteredTasks.map((task) => {
             const statusStyle = getStatusLabel(task.status);
             return (
-              <div key={task.id} className="group relative bg-white border border-gray-100 rounded-[1.5rem] sm:rounded-[2.5rem] p-4 sm:p-6 md:p-8 hover:shadow-2xl hover:shadow-primary-100/30 transition-all duration-500 overflow-hidden">
+              <div key={task.id} className="group relative surface-card rounded-[1.5rem] sm:rounded-[2.5rem] p-4 sm:p-6 md:p-8 hover:shadow-2xl hover:shadow-primary-100/30 transition-all duration-500 overflow-hidden h-full">
                 <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 sm:gap-6">
 
                   <div className="flex-1 space-y-3 sm:space-y-4 min-w-0">
