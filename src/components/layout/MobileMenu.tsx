@@ -140,9 +140,9 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeT
         onClick={onClose}
       />
 
-      <div className="fixed top-0 right-0 h-full w-[85vw] max-w-[320px] bg-white shadow-2xl z-[160] lg:hidden animate-in slide-in-from-right duration-300 flex flex-col">
+      <div className="ui-sidebar-surface fixed top-0 right-0 z-[160] flex h-full w-[85vw] max-w-[320px] flex-col shadow-2xl lg:hidden animate-in slide-in-from-right duration-300">
         {/* Header */}
-        <div className="p-5 bg-gradient-to-br from-primary-600 to-primary-700 text-white flex items-center justify-between">
+        <div className="p-5 bg-slate-950 text-white flex items-center justify-between border-b border-slate-800">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
               <Zap size={20} />
@@ -222,8 +222,6 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeT
               <NavGroup title="مركز العمليات">
                 <NavItem icon={FileText} label="محرر الخطط" href={tabHref('editor')} active={activeTab === 'editor'} onClick={() => handleNavigate('editor')} variant={activeTab === 'editor' ? 'active-project' : 'default'} />
                 <NavItem icon={Trello} label="المهام والجدولة" href={tabHref('tasks')} active={activeTab === 'tasks'} onClick={() => handleNavigate('tasks')} badge={2} />
-                <NavItem icon={BrainCircuit} label="المحلل الذكي (AI)" href={tabHref('smart-analyzer')} active={activeTab === 'smart-analyzer'} onClick={() => handleNavigate('smart-analyzer')} variant="ai" />
-                <NavItem icon={FileCheck} label="قوالب التصدير" href={tabHref('export-templates')} active={activeTab === 'export-templates'} onClick={() => handleNavigate('export-templates')} />
               </NavGroup>
 
               <NavGroup title="الإدارة والضبط">
@@ -233,7 +231,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeT
                 <NavItem icon={Settings} label="إعدادات المنصة" href={tabHref('settings')} active={activeTab === 'settings'} onClick={() => handleNavigate('settings')} />
               </NavGroup>
 
-              <div className="mx-2 mt-4 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-4 border border-gray-200/50">
+              <div className="mx-2 mt-4 rounded-2xl border border-gray-200 bg-slate-50 p-4">
                 <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">الدعم الاستراتيجي</h4>
                 <p className="text-[11px] font-bold text-gray-600 mb-3 leading-relaxed">تحتاج لخبرة استثمارية؟</p>
                 <button onClick={() => handleNavigate('contact-us')} className="w-full py-2.5 bg-white border border-gray-100 rounded-xl text-[11px] font-black text-gray-800 hover:bg-gray-900 hover:text-white transition-all">تحدث مع مستشار</button>

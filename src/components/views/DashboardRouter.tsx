@@ -40,8 +40,6 @@ const UsersManagement = lazyNamedPage(() => import('./UsersManagement'), 'UsersM
 const AdminProjectsManagement = lazyNamedPage(() => import('../sectors/Admin/AdminProjectsManagement'), 'AdminProjectsManagement');
 const AdminAnalyticsDashboard = lazyNamedPage(() => import('../sectors/Admin/AdminAnalyticsDashboard'), 'AdminAnalyticsDashboard');
 const AdminSecurityDashboard = lazyNamedPage(() => import('../sectors/Admin/AdminSecurityDashboard'), 'AdminSecurityDashboard');
-const ExportTemplates = lazyNamedPage(() => import('../ui/ExportTemplates'), 'ExportTemplates');
-const SmartAnalyzer = lazyNamedPage(() => import('../features/ai/SmartAnalyzer'), 'SmartAnalyzer');
 const CustomerPortal = lazyNamedPage(() => import('./CustomerPortal'), 'CustomerPortal');
 const HackathonView = lazyPage(() => import('../features/hackathon/HackathonView'));
 const ResultPage = lazyPage(() => import('../../features/easy-mode/ResultPage'));
@@ -386,10 +384,6 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
         return <Notifications />;
       case 'site-map':
         return <MobileSiteMap setActiveTab={setActiveTab} />;
-      case 'export-templates':
-        return <ExportTemplates />;
-      case 'smart-analyzer':
-        return <SmartAnalyzer />;
       case 'editor':
         return (
           <BusinessPlanEditor 

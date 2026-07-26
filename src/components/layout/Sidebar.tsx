@@ -246,7 +246,7 @@ interface NavItemProps {
  * Prevents re-renders unless props actually change.
  */
 const NavItem = memo(({ icon: Icon, label, href, variant = 'default', active, onClick, badge, isNew, isCollapsed, isAdminMode, id }: NavItemProps) => {
-  const baseClasses = `w-full flex items-center ${isCollapsed ? 'justify-center p-0 h-10 sm:h-11 w-10 sm:w-11 mx-auto mb-1' : 'gap-2 sm:gap-3 px-3 sm:px-4 py-2 sm:py-2.5'} rounded-[0.9rem] sm:rounded-[1.1rem] text-[12px] sm:text-[13px] font-bold transition-all duration-300 group relative`;
+  const baseClasses = `w-full flex items-center ${isCollapsed ? 'justify-center p-0 h-9 sm:h-10 w-9 sm:w-10 mx-auto mb-0.5' : 'gap-2 px-2.5 sm:px-3 py-1.5'} rounded-[0.85rem] sm:rounded-[1rem] text-[11px] sm:text-[12px] font-bold transition-all duration-300 group relative`;
 
   const variants = {
     default: active
@@ -270,12 +270,12 @@ const NavItem = memo(({ icon: Icon, label, href, variant = 'default', active, on
       className={`${baseClasses} ${variants[variant]}`}
       title={isCollapsed ? label : ''}
     >
-      <div className={`${isCollapsed ? 'p-1.5 sm:p-2' : 'p-1.5 sm:p-2'} rounded-lg sm:rounded-xl transition-all duration-500 ${
+      <div className={`${isCollapsed ? 'p-1.5' : 'p-1 sm:p-1.5'} rounded-lg transition-all duration-500 ${
         active
           ? 'bg-white/20 text-white'
           : (isAdminMode ? 'bg-transparent group-hover:bg-slate-700/50 group-hover:scale-110' : 'bg-transparent group-hover:bg-gray-50 group-hover:scale-110')
       }`}>
-        <Icon size={isCollapsed ? 18 : 16} strokeWidth={active ? 2.5 : 2} className="w-4 h-4 sm:w-5 sm:h-5" />
+        <Icon size={isCollapsed ? 16 : 15} strokeWidth={active ? 2.5 : 2} className="w-4 h-4" />
       </div>
 
       {!isCollapsed && (
@@ -317,19 +317,19 @@ interface NavGroupProps {
 }
 
 const NavGroup = memo(({ title, children, isCollapsed, isAdminMode }: NavGroupProps & { isCollapsed: boolean }) => (
-  <div className="mb-4 sm:mb-6">
+  <div className="mb-2 sm:mb-3">
     {!isCollapsed && (
-      <div className="px-3 sm:px-6 mb-2 sm:mb-3 flex items-center justify-between animate-in fade-in duration-500">
-        <h3 className={`text-[9px] sm:text-[10px] font-black ${isAdminMode ? 'text-slate-500' : 'text-gray-400'} uppercase tracking-[0.2em] sm:tracking-[0.25em]`}>{title}</h3>
-        <div className={`h-[1px] flex-1 ${isAdminMode ? 'bg-slate-800' : 'bg-gray-100/60'} mr-2 sm:mr-4`}></div>
+      <div className="px-3 sm:px-5 mb-1.5 sm:mb-2 flex items-center justify-between animate-in fade-in duration-500">
+        <h3 className={`text-[8px] sm:text-[9px] font-black ${isAdminMode ? 'text-slate-500' : 'text-gray-400'} uppercase tracking-[0.16em] sm:tracking-[0.2em]`}>{title}</h3>
+        <div className={`h-[1px] flex-1 ${isAdminMode ? 'bg-slate-800' : 'bg-gray-100/60'} mr-2 sm:mr-3`}></div>
       </div>
     )}
     {isCollapsed && (
-      <div className="px-3 sm:px-6 mb-3 sm:mb-4 flex justify-center">
+      <div className="px-3 sm:px-6 mb-2 sm:mb-3 flex justify-center">
          <div className={`h-[2px] w-5 sm:w-6 ${isAdminMode ? 'bg-slate-700' : 'bg-slate-100'} rounded-full`}></div>
       </div>
     )}
-    <div className={`space-y-0.5 sm:space-y-1 ${isCollapsed ? 'px-1 sm:px-2' : 'px-2 sm:px-3'}`}>
+    <div className={`space-y-0.5 ${isCollapsed ? 'px-1 sm:px-1.5' : 'px-2 sm:px-2.5'}`}>
       {children}
     </div>
   </div>
@@ -372,7 +372,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, isOpen = true, isCollaps
         />
       )}
 
-      <aside className={`${isCollapsed ? 'w-18 sm:w-20' : 'w-64 sm:w-72'} ${sidebarBg} h-screen fixed right-0 top-0 border-l flex flex-col z-50 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'}`}>
+      <aside className={`${isCollapsed ? 'w-18 sm:w-20' : 'w-60 sm:w-64'} ${sidebarBg} h-screen fixed right-0 top-0 border-l flex flex-col z-50 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? 'translate-x-0' : 'translate-x-full lg:translate-x-0'}`}>
 
         {/* Collapse Toggle Button */}
         <button
@@ -383,14 +383,14 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, isOpen = true, isCollaps
         </button>
 
         {/* Premium Branding Section */}
-        <div className={`p-5 sm:p-8 ${isCollapsed ? 'px-3 sm:px-4' : 'pb-4 sm:pb-6'}`}>
-          <div className={`flex items-center ${isCollapsed ? 'justify-center' : 'gap-2 sm:gap-4'} group cursor-pointer`} onClick={() => setActiveTab?.(isAdminMode ? 'admin-dashboard' : 'home')}>
+        <div className={`p-3 sm:p-4 ${isCollapsed ? 'px-3 sm:px-3.5' : 'pb-2 sm:pb-3'}`}>
+            <div className={`flex items-center ${isCollapsed ? 'justify-center' : 'gap-2 sm:gap-3'} group cursor-pointer`} onClick={() => setActiveTab?.(isAdminMode ? 'admin-dashboard' : 'home')}>
             {!isCollapsed && (
               <div className="animate-in fade-in duration-500 text-right">
-                <h2 className={`text-lg sm:text-2xl font-black tracking-tight leading-none mb-1 ${isAdminMode ? 'text-white' : 'text-gray-900'}`}>{isAdminMode ? 'واجهة الإدارة' : 'خطة'}</h2>
+                <h2 className={`text-base sm:text-lg font-black tracking-tight leading-none mb-0.5 ${isAdminMode ? 'text-white' : 'text-gray-900'}`}>{isAdminMode ? 'واجهة الإدارة' : 'خطة'}</h2>
                 <div className="flex items-center gap-1 justify-end">
-                  <span className={`w-1 sm:w-1.5 h-1 sm:h-1.5 ${isAdminMode ? 'bg-amber-400' : 'bg-success'} rounded-full animate-pulse`}></span>
-                  <p className={`text-[7px] sm:text-[9px] font-black ${isAdminMode ? 'text-slate-400' : 'text-gray-400'} uppercase tracking-widest`}>{isAdminMode ? 'System Admin' : 'Business AI Platform'}</p>
+                  <span className={`w-1 h-1 ${isAdminMode ? 'bg-amber-400' : 'bg-success'} rounded-full animate-pulse`}></span>
+                  <p className={`text-[7px] font-black ${isAdminMode ? 'text-slate-400' : 'text-gray-400'} uppercase tracking-[0.18em]`}>{isAdminMode ? 'System Admin' : 'Business AI Platform'}</p>
                 </div>
               </div>
             )}
@@ -403,7 +403,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, isOpen = true, isCollaps
         </div>
 
         {/* Main Navigation Area */}
-        <nav className="flex-1 py-1 overflow-y-auto no-scrollbar">
+        <nav className="flex-1 py-0.5 overflow-hidden">
           {isAdminMode ? (
             <>
               <NavGroup title="القلب النابض" isCollapsed={isCollapsed} isAdminMode={isAdminMode}>
@@ -489,8 +489,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, isOpen = true, isCollaps
                   <NavGroup title="مركز العمليات" isCollapsed={isCollapsed}>
                     <NavItem icon={FileText} id="tour-editor" label="محرر الخطط" href={tabHref('editor')} active={activeTab === 'editor'} onClick={() => setActiveTab?.('editor')} isCollapsed={isCollapsed} variant={activeTab === 'editor' ? 'active-project' : 'default'} />
                     <NavItem icon={Trello} id="tour-tasks" label="المهام والجدولة" href={tabHref('tasks')} active={activeTab === 'tasks'} onClick={() => setActiveTab?.('tasks')} isCollapsed={isCollapsed} badge={2} />
-                    <NavItem icon={BrainCircuit} id="tour-analyzer" label="المحلل الذكي (AI)" href={tabHref('smart-analyzer')} active={activeTab === 'smart-analyzer'} onClick={() => setActiveTab?.('smart-analyzer')} variant="ai" isCollapsed={isCollapsed} />
-                    <NavItem icon={FileCheck} label="قوالب التصدير" href={tabHref('export-templates')} active={activeTab === 'export-templates'} onClick={() => setActiveTab?.('export-templates')} isCollapsed={isCollapsed} />
                   </NavGroup>
 
                   <NavGroup title="الإدارة والضبط" isCollapsed={isCollapsed}>
@@ -500,12 +498,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, isOpen = true, isCollaps
                     <NavItem icon={Settings} label="إعدادات المنصة" href={tabHref('settings')} active={activeTab === 'settings'} onClick={() => setActiveTab?.('settings')} isCollapsed={isCollapsed} />
                   </NavGroup>
 
-                  <div className="px-6 py-4 animate-in fade-in duration-500">
-                    <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-5 border border-gray-200/50 relative overflow-hidden group">
-                      <div className="absolute -top-6 -right-6 w-12 h-12 bg-primary-100 rounded-full blur-2xl group-hover:bg-primary-200 transition-all opacity-40"></div>
+                  <div className="px-4 py-2 animate-in fade-in duration-500">
+                    <div className="rounded-2xl border border-gray-200 bg-slate-50 p-3 relative overflow-hidden group">
                       <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 relative z-10">الدعم الاستراتيجي</h4>
-                      <p className="text-[11px] font-bold text-gray-600 mb-3 leading-relaxed relative z-10">تحتاج لخبرة استثمارية؟</p>
-                      <button onClick={() => setActiveTab?.('contact-us')} className="w-full py-2.5 bg-white border border-gray-100 rounded-xl text-[11px] font-black text-gray-800 hover:bg-gray-900 hover:text-white transition-all shadow-sm relative z-10">تحدث مع مستشار</button>
+                      <p className="text-[10px] font-bold text-gray-600 mb-2 leading-relaxed relative z-10">تحتاج لخبرة استثمارية؟</p>
+                      <button onClick={() => setActiveTab?.('contact-us')} className="w-full py-2 bg-white border border-gray-100 rounded-xl text-[10px] font-black text-gray-800 hover:bg-gray-900 hover:text-white transition-all shadow-sm relative z-10">تحدث مع مستشار</button>
                     </div>
                   </div>
                 </>
@@ -520,10 +517,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, isOpen = true, isCollaps
         </nav>
 
         {/* User Footer Card */}
-        <div className={`p-3 sm:p-4 ${isAdminMode ? 'bg-slate-900 border-slate-800' : 'bg-gradient-to-t from-white via-white to-transparent border-gray-50'} border-t ${isCollapsed ? 'flex flex-col items-center' : 'flex flex-col'} gap-3 sm:gap-4 transition-colors duration-500`}>
+        <div className={`p-2.5 sm:p-3 ${isAdminMode ? 'bg-slate-900 border-slate-800' : 'bg-white border-gray-100'} border-t ${isCollapsed ? 'flex flex-col items-center' : 'flex flex-col'} gap-2 transition-colors duration-500`}>
           <button
             onClick={() => setActiveTab?.(isAdminMode ? 'home' : 'admin-dashboard')}
-            className={`w-full flex items-center ${isCollapsed ? 'justify-center p-3 sm:p-3.5' : 'justify-center gap-1.5 sm:gap-2 py-2.5 sm:py-3 px-3 sm:px-4'} rounded-[1rem] sm:rounded-[1.2rem] text-[10px] sm:text-[11px] font-black transition-all duration-300 group ${
+            className={`w-full flex items-center ${isCollapsed ? 'justify-center p-2.5 sm:p-3' : 'justify-center gap-1.5 py-2 px-3'} rounded-[1rem] text-[10px] font-black transition-all duration-300 group ${
               isAdminMode
                 ? 'bg-amber-500/10 border border-amber-500/20 text-amber-500 hover:bg-amber-500 hover:text-white shadow-sm'
                 : 'bg-white border border-amber-200 text-amber-600 hover:bg-amber-50 hover:border-amber-400 shadow-sm'
@@ -536,7 +533,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, isOpen = true, isCollaps
 
           {!isCollapsed && (
             <div className="flex justify-center animate-in slide-in-from-bottom-2 duration-500">
-              <p className={`text-[8px] sm:text-[10px] font-black ${isAdminMode ? 'text-slate-600' : 'text-gray-300'} uppercase tracking-[0.2em] sm:tracking-[0.3em]`}>KHOTTA • ENGINE 2.5</p>
+              <p className={`text-[7px] font-black ${isAdminMode ? 'text-slate-600' : 'text-gray-300'} uppercase tracking-[0.18em]`}>KHOTTA • ENGINE 2.5</p>
             </div>
           )}
         </div>

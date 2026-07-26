@@ -1,6 +1,7 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+﻿import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   ArrowLeft,
+  Briefcase,
   CheckCircle2,
   ChevronDown,
   CircleX,
@@ -12,6 +13,9 @@ import {
 } from 'lucide-react';
 import { useProjectWorkspace } from '../../../features/workspace/ProjectWorkspaceContext';
 import { exportElementToPdf } from '../../../utils/pdfExport';
+import { Badge } from '../../ui/Badge';
+import { Button } from '../../ui/Button';
+import { Card } from '../../ui/Card';
 
 interface BrandIdentityStudioProps {
   setActiveTab?: (tab: string) => void;
@@ -625,7 +629,7 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
 }) => {
   const { workspace } = useProjectWorkspace();
   const reportRef = useRef<HTMLDivElement>(null);
-  const [isExporting, setIsExporting] = useState(false);
+  const [exportState, setExportState] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const projectName = workspace.profile.name || 'المشروع';
   const sectorLabel = workspace.profile.sectorLabel || 'القطاع المستهدف';
@@ -669,6 +673,13 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
     [applicationFocus],
   );
 
+  const completedBrandSteps = useMemo(
+    () => [projectType, personality, colorSystem, typography, logoDirection, imageryStyle, applicationFocus].filter(Boolean).length,
+    [applicationFocus, colorSystem, imageryStyle, logoDirection, personality, projectType, typography],
+  );
+
+  const completionPercent = Math.round((completedBrandSteps / 7) * 100);
+
   const finalSummary = useMemo(
     () => ({
       prompt: `هوية بصرية لمشروع ${projectName} في ${sectorLabel} حول ${opportunityTitle}`,
@@ -709,16 +720,17 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
   const handleExportReport = async () => {
     if (!reportRef.current) return;
 
-    setIsExporting(true);
+    setExportState('loading');
     try {
       await exportElementToPdf({
         element: reportRef.current,
         fileName: `${projectName}-brand-identity-report.pdf`,
       });
+      setExportState('success');
+      window.setTimeout(() => setExportState('idle'), 3200);
     } catch {
-      alert('تعذر تصدير تقرير الهوية البصرية حالياً. حاول مرة أخرى.');
-    } finally {
-      setIsExporting(false);
+      setExportState('error');
+      window.setTimeout(() => setExportState('idle'), 3200);
     }
   };
 
@@ -739,14 +751,14 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
   return (
     <div dir="rtl" className="min-h-screen bg-[#f8fafc] pb-24 font-['IBM_Plex_Sans_Arabic'] text-slate-900">
       <div className="app-page-shell-wide pt-8 sm:pt-10">
-        <section className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_24px_80px_-40px_rgba(15,23,42,0.25)]">
+        <Card className="overflow-hidden rounded-[2rem] border-slate-200 shadow-[0_24px_80px_-40px_rgba(15,23,42,0.25)]">
           <div className="grid gap-0 xl:grid-cols-[minmax(0,1.15fr)_420px]">
             <div className="relative overflow-hidden p-6 sm:p-8 lg:p-10">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.10),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(15,118,110,0.09),transparent_28%)]" />
+              <div className="absolute inset-0 bg-slate-50" />
               <div className="relative">
-                <span className="inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-[11px] font-black text-blue-700">
+                <Badge variant="secondary" className="px-4 py-2 text-[11px]">
                   مساحة قرار الهوية البصرية للمشروع
-                </span>
+                </Badge>
                 <h1 className="mt-5 max-w-4xl text-3xl font-black tracking-tight text-slate-950 sm:text-4xl xl:text-5xl">
                   استوديو الهوية البصرية
                 </h1>
@@ -754,6 +766,80 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
                   الواجهة هنا ليست form تقليدي. هي مساحة قرار تساعد العميل على بناء هوية المشروع بصرياً على مراحل
                   واضحة، مع معاينة حيّة للاختيارات، ثم إخراج تقرير نهائي جاهز للمصمم والتنفيذ.
                 </p>
+
+                <div className="mt-6 rounded-[1.75rem] border border-slate-200 bg-slate-50/90 p-4 sm:p-5">
+                  <div className="flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
+                    <div className="max-w-2xl">
+                      <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">الخطوة الأولى</p>
+                      <h2 className="mt-2 text-xl font-black text-slate-950 sm:text-2xl">حدد المشروع الذي ستبني له الهوية الآن</h2>
+                      <p className="mt-2 text-sm font-bold leading-7 text-slate-600">
+                        الاستوديو يبني الهوية للمشروع النشط حالياً في حسابك، وليس لمشروع عام. إذا كان هذا ليس المشروع المطلوب، انتقل إلى
+                        <span className="mx-1 text-slate-900">مشاريعي</span>
+                        ثم افتح المشروع الصحيح وارجع هنا.
+                      </p>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2">
+                      <Button
+                        type="button"
+                        onClick={() => setActiveTab?.('my-plans')}
+                        variant="outline"
+                        size="lg"
+                      >
+                        <Briefcase size={16} />
+                        الذهاب إلى مشاريعي
+                      </Button>
+                      <Button
+                        type="button"
+                        onClick={() => setActiveTab?.('new-plan')}
+                        size="lg"
+                      >
+                        <Sparkles size={16} />
+                        إنشاء مشروع جديد
+                      </Button>
+                    </div>
+                  </div>
+
+                  <div className="mt-5 grid gap-4 xl:grid-cols-[minmax(0,1.25fr)_minmax(0,0.75fr)]">
+                    <Card className="rounded-[1.5rem] p-4 sm:p-5">
+                      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                        <div className="flex min-w-0 items-start gap-3">
+                          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-blue-700">
+                            <Target size={20} />
+                          </div>
+                          <div className="min-w-0">
+                            <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">المشروع النشط في حسابك</p>
+                            <h3 className="mt-1 text-lg font-black text-slate-950 sm:text-xl">{projectName}</h3>
+                            <p className="mt-1 text-sm font-bold text-slate-500">{sectorLabel}</p>
+                          </div>
+                        </div>
+                        <Badge variant="success">
+                          المشروع المستخدم الآن
+                        </Badge>
+                      </div>
+
+                      <div className="mt-4 grid gap-3 sm:grid-cols-3">
+                        <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
+                          <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">الفرصة</p>
+                          <p className="mt-2 text-sm font-bold leading-6 text-slate-700">{opportunityTitle}</p>
+                        </div>
+                        <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
+                          <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">العميل المستهدف</p>
+                          <p className="mt-2 text-sm font-bold leading-6 text-slate-700">{customerType}</p>
+                        </div>
+                        <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
+                          <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">مصدر الاختيار</p>
+                          <p className="mt-2 text-sm font-bold leading-6 text-slate-700">من المشروع الحالي داخل الحساب ومساحة العمل</p>
+                        </div>
+                      </div>
+                    </Card>
+
+                    <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-1">
+                      <TopCard icon={<FileText size={18} />} label="الناتج النهائي" value="Brand Brief PDF" note="جاهز للمصمم" />
+                      <TopCard icon={<Layers3 size={18} />} label="طريقة العمل" value="اختيارات متدرجة" note="كل مرحلة تبني ما بعدها" />
+                    </div>
+                  </div>
+                </div>
 
                 <div className="mt-8 grid gap-4 md:grid-cols-3 xl:grid-cols-3">
                   <TopCard icon={<Target size={18} />} label="المشروع" value={projectName} note={sectorLabel} />
@@ -806,9 +892,35 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
               selectedApplicationFocus={selectedApplicationFocus.title}
             />
           </div>
-        </section>
+        </Card>
 
         <div className="mt-6 space-y-6">
+          <section className="surface-card p-5 sm:p-6">
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+              <div className="text-right">
+                <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">حالة التفاعل</p>
+                <h2 className="mt-2 text-lg font-black text-slate-950">التقدم والتأكيد وحالة التحميل</h2>
+                <p className="mt-2 text-[13px] font-bold leading-7 text-slate-600">
+                  هذه الطبقة تعرض بشكل مقصود كيف يجب أن تبدو حالات التفاعل في الواجهة: تقدم حي، اختيار نشط، تحميل، ثم تأكيد بعد الإنجاز.
+                </p>
+              </div>
+
+              <div className="min-w-[220px] rounded-[1.5rem] border border-slate-200 bg-slate-50 px-4 py-4 text-right">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-black text-slate-900">{completionPercent}%</span>
+                  <span className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">اكتمال الهوية</span>
+                </div>
+                <div className="ui-progress-track mt-3 h-3 rounded-full bg-slate-200">
+                  <div
+                    className="ui-progress-fill h-full rounded-full bg-slate-900 transition-[width] duration-500"
+                    style={{ width: `${completionPercent}%` }}
+                  />
+                </div>
+                <p className="mt-3 text-[12px] font-bold text-slate-600">{completedBrandSteps} من 7 قرارات تم تحديدها</p>
+              </div>
+            </div>
+          </section>
+
           <StepSection
             sectionId="project"
             step="01"
@@ -825,7 +937,7 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
               onChange={setProjectType}
               showDetailsAction
               onOpenDetails={(id) => openDetails('فكرة نوع المشروع', PROJECT_TYPES, id)}
-              gridClassName="md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3"
+              gridClassName="sm:grid-cols-2 xl:grid-cols-3"
             />
           </StepSection>
 
@@ -845,7 +957,7 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
               onChange={setPersonality}
               showDetailsAction
               onOpenDetails={(id) => openDetails('فكرة شخصية العلامة', BRAND_PERSONALITIES, id)}
-              gridClassName="md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3"
+              gridClassName="sm:grid-cols-2 xl:grid-cols-3"
             />
           </StepSection>
 
@@ -866,7 +978,7 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
               showSwatches
               showDetailsAction
               onOpenDetails={(id) => openDetails('فكرة نظام الألوان', COLOR_SYSTEMS, id)}
-              gridClassName="md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5"
+              gridClassName="sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5"
             />
             <div className="mt-5 rounded-[1.5rem] border border-dashed border-slate-300 bg-slate-50 p-5">
               <p className="text-sm font-black text-slate-900">لم يعجبك أي نموذج؟</p>
@@ -876,7 +988,7 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
               </p>
               <button
                 onClick={() => setActiveTab?.('contact-us')}
-                className="mt-4 inline-flex items-center justify-center gap-2 rounded-2xl bg-slate-950 px-5 py-3 text-[12px] font-black text-white transition hover:bg-slate-800"
+                className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-slate-950 px-5 py-3 text-[12px] font-black text-white transition hover:bg-slate-800 sm:w-auto"
               >
                 طلب تصميم هوية مخصصة
                 <ArrowLeft size={14} />
@@ -900,7 +1012,7 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
               onChange={setTypography}
               showDetailsAction
               onOpenDetails={(id) => openDetails('فكرة الخطوط', TYPOGRAPHY_OPTIONS, id)}
-              gridClassName="md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"
+              gridClassName="sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"
             />
           </StepSection>
 
@@ -920,7 +1032,7 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
               onChange={setLogoDirection}
               showDetailsAction
               onOpenDetails={(id) => openDetails('فكرة اتجاه الشعار', LOGO_DIRECTIONS, id)}
-              gridClassName="md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3"
+              gridClassName="sm:grid-cols-2 xl:grid-cols-3"
             />
           </StepSection>
 
@@ -940,7 +1052,7 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
               onChange={setImageryStyle}
               showDetailsAction
               onOpenDetails={(id) => openDetails('فكرة أسلوب الصور', IMAGERY_OPTIONS, id)}
-              gridClassName="md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3"
+              gridClassName="sm:grid-cols-2 xl:grid-cols-3"
             />
           </StepSection>
 
@@ -960,7 +1072,7 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
               onChange={setApplicationFocus}
               showDetailsAction
               onOpenDetails={(id) => openDetails('فكرة أولوية التطبيق', APPLICATION_OPTIONS, id)}
-              gridClassName="md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3"
+              gridClassName="sm:grid-cols-2 xl:grid-cols-3"
             />
           </StepSection>
 
@@ -980,7 +1092,7 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
               </div>
             </div>
 
-            <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6">
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6">
               <SummaryChoice label="نوع المشروع" value={selectedProjectType.title} />
               <SummaryChoice label="الشخصية" value={selectedPersonality.title} />
               <SummaryChoice label="الألوان" value={selectedColorSystem.title} />
@@ -989,7 +1101,7 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
               <SummaryChoice label="الصور" value={selectedImageryStyle.title} />
             </div>
 
-            <div className="mt-6 grid gap-4 xl:grid-cols-[minmax(0,1fr)_320px]">
+            <div className="mt-6 grid gap-4 2xl:grid-cols-[minmax(0,1fr)_320px]">
               <div className="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-5">
                 <h3 className="text-sm font-black text-slate-950">وصف الهوية الناتج</h3>
                 <p className="mt-3 text-[13px] font-bold leading-8 text-slate-700">{finalSummary.brandStatement}</p>
@@ -1004,21 +1116,46 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
                 </p>
 
                 <div className="mt-5 flex flex-col gap-3">
-                  <button
+                  <Button
                     onClick={handleExportReport}
-                    disabled={isExporting}
-                    className="inline-flex items-center justify-center gap-3 rounded-3xl bg-slate-950 px-6 py-4 text-sm font-black text-white transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-60"
+                    loading={exportState === 'loading'}
+                    loadingText="جارٍ إنشاء التقرير..."
+                    size="lg"
+                    className={`w-full rounded-3xl px-6 py-4 ${
+                      exportState === 'success'
+                        ? 'ui-confirmation-flash bg-emerald-600 hover:bg-emerald-600'
+                        : exportState === 'error'
+                          ? 'bg-rose-600 hover:bg-rose-600'
+                          : ''
+                    }`}
                   >
                     <Download size={18} />
-                    {isExporting ? 'جارٍ إنشاء التقرير...' : 'تصدير التقرير النهائي PDF'}
-                  </button>
-                  <button
+                    {exportState === 'success'
+                      ? 'تم إنشاء التقرير بنجاح'
+                      : exportState === 'error'
+                        ? 'تعذر إنشاء التقرير حالياً'
+                        : 'تصدير التقرير النهائي PDF'}
+                  </Button>
+                  <Button
                     onClick={() => setActiveTab?.('workspace')}
-                    className="inline-flex items-center justify-center gap-2 rounded-3xl border border-slate-200 bg-white px-6 py-4 text-sm font-black text-slate-700 transition hover:border-slate-300"
+                    variant="outline"
+                    size="lg"
+                    className="w-full rounded-3xl px-6 py-4"
                   >
                     الانتقال إلى مساحة العمل
                     <ArrowLeft size={14} />
-                  </button>
+                  </Button>
+                </div>
+                <div className="mt-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
+                  <p className="text-[12px] font-bold leading-7 text-slate-600">
+                    {exportState === 'loading'
+                      ? 'يتم الآن تجهيز ملف الـ PDF النهائي مع جميع الاختيارات المعتمدة.'
+                      : exportState === 'success'
+                        ? 'التأكيد ظهر هنا لإيضاح حالة النجاح بعد التصدير وتسليم Feedback واضح للمستخدم.'
+                        : exportState === 'error'
+                          ? 'هذه حالة خطأ مرئية للمطور حتى يبني رسالة فشل واضحة إذا تعذر التصدير لاحقاً.'
+                          : 'هذه المنطقة تمثل حالة التأكيد النصي أسفل الإجراء الرئيسي بعد كل تفاعل مهم.'}
+                  </p>
                 </div>
               </div>
             </div>
@@ -1214,7 +1351,7 @@ const StepSection = ({
   selectedNote: string;
   children: React.ReactNode;
 }) => (
-  <section className="surface-card p-6 sm:p-8">
+  <section className="surface-card p-5 sm:p-6 xl:p-8">
     <button
       type="button"
       onClick={() => onToggle(sectionId)}
@@ -1228,7 +1365,7 @@ const StepSection = ({
         <p className="mt-2 max-w-3xl text-[13px] font-bold leading-7 text-slate-600">{description}</p>
       </div>
       <div className="flex items-stretch justify-end">
-        <div className="flex w-full items-center justify-between rounded-[1.5rem] border border-slate-200 bg-slate-50 px-4 py-4 xl:min-h-[104px]">
+        <div className="ui-card-interactive flex w-full items-center justify-between rounded-[1.5rem] border border-slate-200 bg-slate-50 px-4 py-4 xl:min-h-[104px]">
           <div>
             <p className="text-[11px] font-black uppercase tracking-[0.14em] text-slate-400">الاختيار الحالي</p>
             <p className="mt-2 text-sm font-black text-slate-900">{selectedTitle}</p>
@@ -1251,7 +1388,7 @@ const OptionGrid = ({
   showSwatches = false,
   showDetailsAction = false,
   onOpenDetails,
-  gridClassName = 'md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4',
+  gridClassName = 'sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4',
 }: {
   options: SelectOption[];
   value: string;
@@ -1268,9 +1405,10 @@ const OptionGrid = ({
         <button
           key={option.id}
           onClick={() => onChange(option.id)}
-          className={`rounded-[1.5rem] border p-4 text-right transition xl:min-h-[220px] ${
+          aria-pressed={active}
+          className={`ui-card-interactive rounded-[1.5rem] border p-4 text-right transition sm:min-h-[208px] xl:min-h-[220px] ${
             active
-              ? 'border-slate-900 bg-slate-900 text-white shadow-sm'
+              ? 'ui-selected-ring border-slate-900 bg-slate-900 text-white shadow-sm'
               : 'border-slate-200 bg-slate-50 text-slate-900 hover:border-slate-300'
           }`}
         >
@@ -1368,14 +1506,14 @@ const LiveIdentityBoard = ({
   selectedLogoDirection: string;
   selectedApplicationFocus: string;
 }) => (
-  <aside className="border-t border-slate-200 bg-slate-50 p-6 sm:p-8 xl:border-r xl:border-t-0">
+  <aside className="border-t border-slate-200 bg-slate-50 p-5 sm:p-6 xl:border-r xl:border-t-0 xl:p-8">
     <div className="xl:sticky xl:top-8">
       <div className="rounded-[1.75rem] border border-slate-200 bg-white p-5 shadow-sm">
         <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">لوحة الهوية الحية</p>
         <h2 className="mt-3 text-2xl font-black text-slate-950">{projectName}</h2>
         <p className="mt-2 text-[13px] font-bold text-slate-600">{sectorLabel}</p>
 
-        <div className="mt-6 rounded-[1.75rem] border border-slate-200 bg-slate-950 p-6 text-white">
+        <div className="mt-6 rounded-[1.75rem] border border-slate-200 bg-slate-950 p-5 text-white sm:p-6">
           <div className="flex items-start justify-between gap-4">
             <div>
               <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">شكل الهوية الحالي</p>
@@ -1390,7 +1528,7 @@ const LiveIdentityBoard = ({
             <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">هوية أولية</p>
             <p className="mt-4 text-3xl font-black tracking-tight">{projectName}</p>
             <p className="mt-2 text-sm font-bold text-slate-500">{selectedLogoDirection}</p>
-            <div className="mt-6 flex justify-center gap-3">
+            <div className="mt-6 flex flex-wrap justify-center gap-3">
               {(selectedColorSystem.swatches ?? []).map((color) => (
                 <span
                   key={color}
@@ -1402,7 +1540,7 @@ const LiveIdentityBoard = ({
           </div>
         </div>
 
-        <div className="mt-5 grid gap-3">
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
           <BoardRow label="الألوان" value={selectedColorSystem.title} />
           <BoardRow label="الخطوط" value={selectedTypography} />
           <BoardRow label="الشعار" value={selectedLogoDirection} />
@@ -1431,7 +1569,7 @@ const BoardRow = ({ label, value }: { label: string; value: string }) => (
 const SummaryChoice = ({ label, value }: { label: string; value: string }) => (
   <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-4">
     <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">{label}</p>
-    <p className="mt-3 text-sm font-black text-slate-900">{value}</p>
+    <p className="mt-3 text-sm font-black leading-7 text-slate-900">{value}</p>
   </div>
 );
 
@@ -1470,3 +1608,4 @@ const ReportLine = ({ label, value }: { label: string; value: string }) => (
     <span className="text-base font-black text-slate-800">{value}</span>
   </div>
 );
+

@@ -60,7 +60,7 @@ export const TabTemplate: React.FC<TabTemplateProps> = ({
             <div className="results-icon w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-lg flex-shrink-0" style={{ background: `linear-gradient(135deg, ${config.themeColor} 0%, ${config.themeColor}dd 100%)` }}>
               <Lucide.ShieldCheck size={20} />
             </div>
-            <h2 className="results-title text-lg sm:text-xl font-black text-white m-0">{config.resultsTitle}</h2>
+            <h2 className="results-title text-lg sm:text-xl font-black text-slate-900 m-0">{config.resultsTitle}</h2>
           </div>
           {renderResults(answers)}
         </div>
@@ -118,17 +118,17 @@ const TabForm = ({ config, onFinish }: { config: TabConfig, onFinish: (vals: any
     return (
       <div className="py-16 text-center">
         <Lucide.Hammer size={36} className="text-[#3b82f6] mx-auto mb-4" />
-        <h3 className="text-base font-black text-white">هذا المختبر قيد التحديث</h3>
+        <h3 className="text-base font-black text-slate-900">هذا المختبر قيد التحديث</h3>
       </div>
     );
   }
 
   if (isAnalyzing) {
     return (
-      <div className="min-h-[350px] sm:min-h-[450px] flex flex-col items-center justify-center bg-slate-900 rounded-xl sm:rounded-2xl p-5 sm:p-8 text-white">
+      <div className="min-h-[350px] sm:min-h-[450px] flex flex-col items-center justify-center bg-white border border-slate-200 rounded-xl sm:rounded-2xl p-5 sm:p-8 text-slate-900 shadow-sm">
          <Lucide.Cpu size={36} className="animate-spin-slow text-[#3b82f6] mb-4" />
          <h2 className="text-base sm:text-lg font-black mb-2 text-center">جاري استخراج التحليلات...</h2>
-         <div className="px-3 py-2 bg-white/5 rounded-full border border-white/10">
+         <div className="px-3 py-2 bg-blue-50 rounded-full border border-blue-100">
             <p className="text-[10px] sm:text-xs text-[#3b82f6] font-bold">{config.loadingMessages[loadingStep]}</p>
          </div>
       </div>
@@ -138,13 +138,13 @@ const TabForm = ({ config, onFinish }: { config: TabConfig, onFinish: (vals: any
   return (
     <div className="tab-form w-full space-y-3 sm:space-y-4" dir="rtl">
       {/* Lab Header */}
-      <div className="lab-header bg-white/5 backdrop-blur-md rounded-2xl border p-4 flex items-center gap-4 mb-2 animate-in slide-in-from-top-4 duration-500" style={{ borderColor: `${config.themeColor}40` }}>
+      <div className="lab-header bg-white rounded-2xl border border-slate-200 p-4 flex items-center gap-4 mb-2 animate-in slide-in-from-top-4 duration-500 shadow-sm">
         <div className="lab-icon w-12 h-12 rounded-xl flex items-center justify-center text-white flex-shrink-0 shadow-lg" style={{ background: `linear-gradient(135deg, ${config.themeColor}, ${config.themeColor}dd)` }}>
           <Lucide.Beaker size={20} />
         </div>
         <div className="lab-info flex-1 min-w-0">
-          <h4 className="lab-title text-sm sm:text-lg font-black text-white m-0 truncate">{config.bannerTitle}</h4>
-          <p className="lab-subtitle text-[11px] sm:text-xs text-slate-400 m-0 mt-1 truncate font-bold uppercase tracking-wider">{config.bannerSubtitle}</p>
+          <h4 className="lab-title text-sm sm:text-lg font-black text-slate-900 m-0 truncate">{config.bannerTitle}</h4>
+          <p className="lab-subtitle text-[11px] sm:text-xs text-slate-500 m-0 mt-1 truncate font-bold uppercase tracking-wider">{config.bannerSubtitle}</p>
         </div>
       </div>
 
@@ -172,7 +172,7 @@ const TabForm = ({ config, onFinish }: { config: TabConfig, onFinish: (vals: any
                 <div key={q.id} className="question-item animate-in fade-in slide-in-from-bottom-4 duration-500" style={{ animationDelay: `${idx * 0.1}s` }}>
                   {/* Question Header */}
                   <div className="question-header flex gap-2.5 mb-3">
-                    <div className="q-icon w-7 h-7 bg-slate-900 rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                    <div className="q-icon w-7 h-7 bg-slate-100 rounded-lg flex items-center justify-center text-slate-700 flex-shrink-0 border border-slate-200">
                       {React.createElement((Lucide as any)[q.icon] || Lucide.Target, { size: 14 })}
                     </div>
                     <div className="q-info flex-1">

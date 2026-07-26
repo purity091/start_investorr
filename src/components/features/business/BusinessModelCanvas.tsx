@@ -168,6 +168,18 @@ const BLOCK_METADATA = {
   }
 };
 
+const BLOCK_ORDER: (keyof BmcData)[] = [
+  'keyPartners',
+  'keyActivities',
+  'keyResources',
+  'valuePropositions',
+  'customerRelationships',
+  'channels',
+  'customerSegments',
+  'costStructure',
+  'revenueStreams',
+];
+
 // --- Components ---
 
 const StickyNote: React.FC<{
@@ -435,67 +447,60 @@ export const BusinessModelCanvas: React.FC<{
 
   const filledBlocks = Object.keys(data).filter(key => data[key as keyof BmcData].length > 0).length;
   const pct = Math.round((filledBlocks / 9) * 100);
+  const totalNotes = Object.values(data).reduce((sum, notes) => sum + notes.length, 0);
+  const populatedBlocks = BLOCK_ORDER.filter((key) => data[key].length > 0);
+  const suggestedFocus: (keyof BmcData)[] = populatedBlocks.length < 2
+    ? ['valuePropositions', 'customerSegments']
+    : populatedBlocks.length < 5
+      ? ['channels', 'customerRelationships']
+      : ['costStructure', 'revenueStreams'];
 
   return (
-    <div dir="rtl" className="w-full max-w-[1600px] mx-auto min-h-screen flex flex-col p-4 md:p-8 gap-8 animate-in fade-in duration-1000">
+    <div dir="rtl" className="w-full max-w-[1880px] mx-auto min-h-screen flex flex-col px-3 py-4 md:px-6 md:py-6 xl:px-8 gap-6 xl:gap-8 animate-in fade-in duration-1000">
       
       {/* --- Strategic Header --- */}
-      <div className="w-full bg-white/40 backdrop-blur-xl border border-white/60 p-6 md:p-8 rounded-[3rem] shadow-2xl shadow-indigo-500/5 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden group">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/5 blur-[80px] -mr-32 -mt-32" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-500/5 blur-[80px] -ml-32 -mb-32" />
+      <div className="w-full bg-white border border-slate-200 p-5 md:p-6 xl:p-7 rounded-[2rem] shadow-sm flex flex-col xl:flex-row xl:items-center xl:justify-between gap-5 xl:gap-8">
 
-        <div className="relative flex items-center gap-6">
-          <div className="w-16 h-16 bg-slate-900 text-white rounded-3xl flex items-center justify-center shadow-2xl shadow-slate-900/20 group-hover:rotate-6 transition-transform duration-500">
+        <div className="flex items-start gap-4 md:gap-5">
+          <div className="w-14 h-14 md:w-16 md:h-16 bg-slate-900 text-white rounded-2xl flex items-center justify-center shadow-sm shrink-0">
             <LayoutGrid size={32} />
           </div>
-          <div>
-            <div className="flex items-center gap-3 mb-1">
-              <h2 className="text-2xl font-black text-slate-900 tracking-tight">Business Model Canvas</h2>
-              <span className="px-3 py-1 bg-indigo-50 text-indigo-600 text-[10px] font-black rounded-full border border-indigo-100 uppercase tracking-widest">v2.0 Professional</span>
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-2">
+              <h2 className="text-xl md:text-2xl xl:text-[1.7rem] font-black text-slate-900 tracking-tight">Business Model Canvas</h2>
+              <span className="px-2.5 py-1 bg-slate-100 text-slate-600 text-[10px] font-black rounded-full border border-slate-200 uppercase tracking-[0.18em]">Strategic Workspace</span>
             </div>
-            <p className="text-sm font-bold text-slate-400">تخطيط الهيكل التشغيلي واستراتيجية توليد القيمة للمشروع الناشئ</p>
+            <p className="text-sm md:text-[15px] font-bold text-slate-500 leading-relaxed max-w-3xl">مساحة عمل منظمة لرسم عناصر نموذج العمل كاملة، مع توزيع بصري أوضح للمربعات، ومؤشرات تغطية تساعد الفريق على إنهاء النموذج قبل نقله للتنفيذ أو للمراجعة.</p>
           </div>
         </div>
 
-        <div className="relative flex items-center gap-8">
-          <div className="hidden lg:flex items-center gap-4 border-l border-slate-100 pl-8">
+        <div className="flex flex-col lg:flex-row lg:items-center gap-4 xl:gap-6">
+          <div className="hidden md:flex items-center gap-4 border border-slate-200 rounded-2xl px-4 py-3 bg-slate-50">
             <div className="text-left">
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">تغطية النموذج</span>
+                <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.18em]">تغطية النموذج</span>
                 <span className="text-sm font-black text-slate-900">{filledBlocks}/9</span>
               </div>
-              <div className="w-40 h-2.5 bg-slate-100 rounded-full overflow-hidden border border-slate-50">
+              <div className="w-40 h-2 bg-slate-100 rounded-full overflow-hidden">
                 <motion.div 
                   initial={{ width: 0 }}
                   animate={{ width: `${pct}%` }}
-                  className="h-full bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full" 
+                  className="h-full bg-slate-900 rounded-full" 
                 />
               </div>
             </div>
-            <div className="w-14 h-14 rounded-2xl border-4 border-indigo-50 flex items-center justify-center relative">
-               <svg className="w-full h-full transform -rotate-90">
-                 <circle cx="28" cy="28" r="24" stroke="currentColor" strokeWidth="4" fill="transparent" className="text-slate-100" />
-                 <motion.circle 
-                    cx="28" cy="28" r="24" stroke="currentColor" strokeWidth="4" fill="transparent" 
-                    strokeDasharray={150}
-                    initial={{ strokeDashoffset: 150 }}
-                    animate={{ strokeDashoffset: 150 - (150 * pct / 100) }}
-                    className="text-indigo-600" 
-                 />
-               </svg>
-               <span className="absolute text-[10px] font-black text-indigo-600">{pct}%</span>
-            </div>
+            <div className="w-11 h-11 rounded-full border-2 border-slate-200 flex items-center justify-center text-[11px] font-black text-slate-900 bg-white">{pct}%</div>
           </div>
 
           <div className="flex items-center gap-3">
-             <button className="p-4 bg-white border border-slate-200 text-slate-400 rounded-2xl hover:text-slate-900 hover:border-slate-400 transition-all active:scale-95 shadow-sm">
+             <button className="p-3.5 bg-white border border-slate-200 text-slate-400 rounded-2xl hover:text-slate-900 hover:border-slate-300 transition-all active:scale-95 shadow-sm">
                 <Download size={20} />
              </button>
              <button
               onClick={() => onComplete(data)}
-              className="flex items-center gap-3 px-8 py-4 bg-slate-900 text-white rounded-2xl text-xs font-black shadow-2xl shadow-slate-900/20 hover:bg-slate-800 hover:-translate-y-1 transition-all active:scale-95 group"
+              className="flex items-center gap-3 px-5 md:px-6 py-3.5 bg-slate-900 text-white rounded-2xl text-xs font-black shadow-sm hover:bg-slate-800 transition-all active:scale-95 group"
             >
-              <Sparkles size={18} className="text-indigo-400 group-hover:animate-pulse" />
+              <Sparkles size={18} className="text-slate-300 group-hover:animate-pulse" />
               تحليل الاستراتيجية بالذكاء الاصطناعي
               <ArrowUpRight size={18} />
             </button>
@@ -503,8 +508,9 @@ export const BusinessModelCanvas: React.FC<{
         </div>
       </div>
 
-      {/* --- Main Canvas Layout --- */}
-      <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+      <div className="flex-1 xl:grid xl:grid-cols-[minmax(0,1fr)_320px] 2xl:grid-cols-[minmax(0,1fr)_360px] xl:gap-6 items-start">
+        {/* --- Main Canvas Layout --- */}
+        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-5 gap-4 xl:gap-5">
         
         {/* Row 1: The Core 5 Columns */}
         {/* Column 1: Key Partners */}
@@ -516,7 +522,7 @@ export const BusinessModelCanvas: React.FC<{
           onUpdateNote={(id, ct) => updateNote('keyPartners', id, ct)}
           onUpdateNoteColor={(id, c) => updateNoteColor('keyPartners', id, c)}
           onToggleFocus={() => setFocusedBlock('keyPartners')}
-          className="lg:row-span-2"
+          className="2xl:row-span-2"
         />
 
         {/* Column 2: Activities & Resources */}
@@ -552,7 +558,7 @@ export const BusinessModelCanvas: React.FC<{
           onUpdateNote={(id, ct) => updateNote('valuePropositions', id, ct)}
           onUpdateNoteColor={(id, c) => updateNoteColor('valuePropositions', id, c)}
           onToggleFocus={() => setFocusedBlock('valuePropositions')}
-          className="lg:row-span-2 border-2 border-indigo-100 ring-8 ring-indigo-50/30 shadow-indigo-100 shadow-xl"
+          className="2xl:row-span-2 border border-slate-300 ring-1 ring-slate-200 shadow-sm"
         />
 
         {/* Column 4: Relationships & Channels */}
@@ -588,11 +594,11 @@ export const BusinessModelCanvas: React.FC<{
           onUpdateNote={(id, ct) => updateNote('customerSegments', id, ct)}
           onUpdateNoteColor={(id, c) => updateNoteColor('customerSegments', id, c)}
           onToggleFocus={() => setFocusedBlock('customerSegments')}
-          className="lg:row-span-2"
+          className="2xl:row-span-2"
         />
 
         {/* Row 2: Bottom Layer - Financials (span 5 columns on large screens) */}
-        <div className="lg:col-span-5 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="2xl:col-span-5 grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-5">
           <CanvasBlock 
             id="costStructure" 
             notes={data.costStructure}
@@ -612,6 +618,84 @@ export const BusinessModelCanvas: React.FC<{
             onToggleFocus={() => setFocusedBlock('revenueStreams')}
           />
         </div>
+
+        </div>
+
+        <aside className="hidden xl:flex xl:flex-col xl:gap-4 xl:sticky xl:top-6">
+          <div className="rounded-[1.75rem] border border-slate-200 bg-white p-5 shadow-sm">
+            <div className="flex items-center justify-between mb-4">
+              <div>
+                <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.18em] mb-1">???? ????</p>
+                <h3 className="text-base font-black text-slate-900">???? ??????? ????</h3>
+              </div>
+              <div className="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center text-xs font-black">{pct}%</div>
+            </div>
+            <div className="space-y-3">
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3">
+                <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.18em] mb-1">???? ????</p>
+                <p className="text-sm font-black text-slate-900">{filledBlocks} ?? 9</p>
+              </div>
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3">
+                <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.18em] mb-1">????? ??????</p>
+                <p className="text-sm font-black text-slate-900">{totalNotes} ?????? ???</p>
+              </div>
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3">
+                <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.18em] mb-1">?????? ???????? ???????</p>
+                <p className="text-sm font-black text-slate-900 leading-relaxed">{BLOCK_METADATA[suggestedFocus[0]].title}</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-[1.75rem] border border-slate-200 bg-white p-5 shadow-sm">
+            <div className="mb-4">
+              <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.18em] mb-1">????? ????????</p>
+              <h3 className="text-base font-black text-slate-900">??? ????? ??????? ????? ????</h3>
+            </div>
+            <div className="space-y-2.5">
+              {BLOCK_ORDER.map((key) => {
+                const hasNotes = data[key].length > 0;
+                return (
+                  <button
+                    key={key}
+                    onClick={() => setFocusedBlock(key)}
+                    className={`w-full flex items-center justify-between rounded-2xl border px-3.5 py-3 text-right transition-all ${
+                      hasNotes
+                        ? 'border-slate-200 bg-white hover:bg-slate-50'
+                        : 'border-dashed border-slate-200 bg-slate-50 hover:bg-slate-100'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 ${BLOCK_METADATA[key].color}`}>
+                        {React.cloneElement(BLOCK_METADATA[key].icon as React.ReactElement, { size: 14 })}
+                      </div>
+                      <div className="min-w-0">
+                        <p className="text-[11px] font-black text-slate-900 truncate">{BLOCK_METADATA[key].title}</p>
+                        <p className="text-[10px] font-bold text-slate-400">{data[key].length} ?????</p>
+                      </div>
+                    </div>
+                    <span className={`w-2.5 h-2.5 rounded-full ${hasNotes ? 'bg-emerald-500' : 'bg-slate-200'}`} />
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-5 shadow-sm">
+            <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.18em] mb-2">?????? ??????</p>
+            <ul className="space-y-2.5 text-[11px] font-bold text-slate-600 leading-relaxed">
+              {suggestedFocus.map((key) => (
+                <li key={key} className="flex items-start gap-2">
+                  <span className="mt-1 w-1.5 h-1.5 rounded-full bg-slate-900 shrink-0" />
+                  ???? ???? ?? {BLOCK_METADATA[key].title} ???? ?????? ???????.
+                </li>
+              ))}
+              <li className="flex items-start gap-2">
+                <span className="mt-1 w-1.5 h-1.5 rounded-full bg-slate-900 shrink-0" />
+                ???? ?? ???? ???????? ????? ????? ???????? ??? ????? ?????.
+              </li>
+            </ul>
+          </div>
+        </aside>
       </div>
 
       {/* --- Focused Block Overlay --- */}
@@ -646,7 +730,7 @@ export const BusinessModelCanvas: React.FC<{
       </AnimatePresence>
 
       {/* --- Footer Status --- */}
-      <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6 px-4 py-6 bg-slate-50 border border-slate-100 rounded-[2rem]">
+      <div className="w-full flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 px-4 py-5 bg-slate-50 border border-slate-200 rounded-[1.75rem]">
          <div className="flex items-center gap-8">
             <div className="flex items-center gap-2">
                <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
@@ -667,7 +751,7 @@ export const BusinessModelCanvas: React.FC<{
                </div>
             </div>
          </div>
-         <p className="text-[10px] font-bold text-slate-400 italic">نصيحة: ابدأ دائماً بـ "القيمة المقدمة" و "شرائح العملاء" فهما قلب النموذج.</p>
+         <p className="text-[11px] font-bold text-slate-500 leading-relaxed">نصيحة: ابدأ دائماً بـ "القيمة المقدمة" و "شرائح العملاء" فهما قلب النموذج.</p>
       </div>
 
       <style>{`

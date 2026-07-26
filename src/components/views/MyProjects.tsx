@@ -1,13 +1,29 @@
-
-import React, { useState, useMemo } from 'react';
-import { 
-  Search, Plus, 
-  Clock, CheckCircle2, 
-  TrendingUp, LayoutGrid, 
-  Share2, Trash2, 
-  FileDown, ArrowRight, Star,
-  List, Activity
+import React, { useMemo, useState } from 'react';
+import {
+  Activity,
+  ArrowRight,
+  CheckCircle2,
+  Clock,
+  FileDown,
+  LayoutGrid,
+  List,
+  Plus,
+  Search,
+  Share2,
+  Star,
+  TrendingUp,
 } from 'lucide-react';
+import { Button } from '../ui/Button';
+import { Card } from '../ui/Card';
+import { Input } from '../ui/Input';
+import {
+  EmptyState,
+  ErrorState,
+  FirstUseState,
+  InlineStatusBanner,
+  NoResultsState,
+  PageSectionSkeleton,
+} from '../ui/PageStates';
 
 interface Project {
   id: string;
@@ -27,245 +43,435 @@ interface Project {
 
 const MOCK_PROJECTS: Project[] = [
   {
-    id: 'p1', name: 'أكاديمية الذكاء الاصطناعي', sector: 'EdTech', status: 'ready',
+    id: 'p1',
+    name: 'أكاديمية الذكاء الاصطناعي',
+    sector: 'EdTech',
+    status: 'ready',
     progress: { market: 100, product: 90, financial: 95 },
-    aiScore: 94, lastEdited: 'منذ ساعتين', marketCap: '$1.4M', isFavorite: true
+    aiScore: 94,
+    lastEdited: 'منذ ساعتين',
+    marketCap: '$1.4M',
+    isFavorite: true,
   },
   {
-    id: 'p2', name: 'منصة الحصاد الذكي', sector: 'AgriTech', status: 'review',
+    id: 'p2',
+    name: 'منصة الحصاد الذكي',
+    sector: 'AgriTech',
+    status: 'review',
     progress: { market: 85, product: 70, financial: 40 },
-    aiScore: 78, lastEdited: 'منذ 5 ساعات', marketCap: '$800K', isFavorite: false
+    aiScore: 78,
+    lastEdited: 'منذ 5 ساعات',
+    marketCap: '$800K',
+    isFavorite: false,
   },
   {
-    id: 'p3', name: 'بوابة الدفع الإقليمية', sector: 'FinTech', status: 'draft',
+    id: 'p3',
+    name: 'بوابة الدفع الإقليمية',
+    sector: 'FinTech',
+    status: 'draft',
     progress: { market: 40, product: 20, financial: 10 },
-    aiScore: 45, lastEdited: 'أمس', marketCap: '$5.2M', isFavorite: false
+    aiScore: 45,
+    lastEdited: 'أمس',
+    marketCap: '$5.2M',
+    isFavorite: false,
   },
   {
-    id: 'p4', name: 'عقارات فيرتشوال', sector: 'Property', status: 'ready',
+    id: 'p4',
+    name: 'عقارات فيرتشوال',
+    sector: 'Property',
+    status: 'ready',
     progress: { market: 100, product: 100, financial: 90 },
-    aiScore: 91, lastEdited: 'منذ يومين', marketCap: '$12M', isFavorite: true
-  }
+    aiScore: 91,
+    lastEdited: 'منذ يومين',
+    marketCap: '$12M',
+    isFavorite: true,
+  },
 ];
 
 interface MyProjectsProps {
   setActiveTab?: (tab: string) => void;
 }
 
+type ProjectsPreviewState = 'live' | 'loading' | 'first-use' | 'empty' | 'no-results' | 'success' | 'error';
+
+const PROJECT_PAGE_STATES: Array<{ id: ProjectsPreviewState; label: string }> = [
+  { id: 'live', label: 'الحالة الحية' },
+  { id: 'loading', label: 'تحميل' },
+  { id: 'first-use', label: 'أول استخدام' },
+  { id: 'empty', label: 'فارغة' },
+  { id: 'no-results', label: 'بدون نتائج' },
+  { id: 'success', label: 'نجاح' },
+  { id: 'error', label: 'خطأ' },
+];
+
 export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filterMode, setFilterMode] = useState<'all' | 'ready' | 'draft'>('all');
   const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
+  const [previewState, setPreviewState] = useState<ProjectsPreviewState>('live');
 
   const filteredProjects = useMemo(() => {
-    return MOCK_PROJECTS.filter(p => {
-      const matchSearch = p.name.includes(searchTerm) || p.sector.includes(searchTerm);
-      const matchFilter = filterMode === 'all' ? true : p.status === filterMode;
+    return MOCK_PROJECTS.filter((project) => {
+      const matchSearch = project.name.includes(searchTerm) || project.sector.includes(searchTerm);
+      const matchFilter = filterMode === 'all' ? true : project.status === filterMode;
       return matchSearch && matchFilter;
     });
   }, [searchTerm, filterMode]);
 
+  const showNoResults =
+    previewState === 'no-results' || (previewState === 'live' && filteredProjects.length === 0 && searchTerm.trim().length > 0);
+  const showEmpty = previewState === 'empty';
+  const showFirstUse = previewState === 'first-use';
+  const showLoading = previewState === 'loading';
+  const showError = previewState === 'error';
+  const showSuccess = previewState === 'success';
+  const shouldShowCollection = previewState === 'live' || previewState === 'success';
+
+  const resetDiscovery = () => {
+    setSearchTerm('');
+    setFilterMode('all');
+    setPreviewState('live');
+  };
+
   return (
     <div dir="rtl" className="app-page-shell-wide min-h-screen pb-20 font-['IBM_Plex_Sans_Arabic'] animate-in fade-in duration-700">
-      
-      {/* Header Strip - Clean and Scannable */}
-      <div className="pt-6 sm:pt-8 mb-6">
-        <div className="surface-card flex flex-col items-start justify-between gap-5 p-4 sm:p-6 xl:flex-row xl:items-center">
-           
-           {/* Title Section */}
-           <div className="flex items-center justify-between lg:justify-start w-full lg:w-auto">
-              <div className="flex items-center gap-3 sm:gap-4">
-                 <div className="w-12 h-12 sm:w-14 sm:h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center shadow-inner shrink-0">
-                   <Activity size={24} className="sm:w-7 sm:h-7" strokeWidth={2.5} />
-                 </div>
-                 <div>
-                   <h1 className="text-xl sm:text-2xl font-black text-slate-900 mb-0.5 sm:mb-1 leading-none uppercase tracking-tight">مشاريعي</h1>
-                   <p className="text-xs sm:text-sm font-bold text-slate-500">{MOCK_PROJECTS.length} خطط أعمال</p>
-                 </div>
-              </div>
-              
-              {/* Mobile View Toggle */}
-              <div className="flex sm:hidden bg-slate-100 p-1 rounded-xl shrink-0">
-                 <button onClick={() => setViewMode('list')} className={`p-2 rounded-lg flex items-center justify-center transition-all ${viewMode === 'list' ? 'bg-white shadow-sm text-blue-600' : 'text-slate-400'}`}>
-                   <List size={16} strokeWidth={2.5} />
-                 </button>
-                 <button onClick={() => setViewMode('grid')} className={`p-2 rounded-lg flex items-center justify-center transition-all ${viewMode === 'grid' ? 'bg-white shadow-sm text-blue-600' : 'text-slate-400'}`}>
-                   <LayoutGrid size={16} strokeWidth={2.5} />
-                 </button>
-              </div>
-           </div>
-           
-           <div className="flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center xl:w-auto">
-              {/* Desktop View Toggle */}
-              <div className="hidden sm:flex bg-slate-100 p-1 rounded-xl shrink-0">
-                 <button onClick={() => setViewMode('list')} className={`p-2.5 rounded-lg flex items-center justify-center transition-all ${viewMode === 'list' ? 'bg-white shadow-sm text-blue-600' : 'text-slate-400 hover:text-slate-600'}`}>
-                   <List size={18} strokeWidth={2.5} />
-                 </button>
-                 <button onClick={() => setViewMode('grid')} className={`p-2.5 rounded-lg flex items-center justify-center transition-all ${viewMode === 'grid' ? 'bg-white shadow-sm text-blue-600' : 'text-slate-400 hover:text-slate-600'}`}>
-                   <LayoutGrid size={18} strokeWidth={2.5} />
-                 </button>
+      <div className="mb-6 pt-6 sm:pt-8">
+        <Card className="overflow-hidden rounded-[24px] border-slate-200 bg-white p-4 sm:p-5">
+          <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+            <div className="text-right">
+              <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">مساحة المشاريع</p>
+              <h1 className="mt-2 text-2xl font-black text-slate-950 sm:text-3xl">مشاريعي</h1>
+              <p className="mt-2 text-[13px] font-bold leading-6 text-slate-600">
+                مراجعة سريعة للمشاريع والعودة إلى آخر نقطة عمل.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center xl:justify-end">
+              <div className="grid grid-cols-3 gap-2 sm:min-w-[330px]">
+                <MiniStat label="المشاريع" value={`${MOCK_PROJECTS.length}`} />
+                <MiniStat
+                  label="جاهزة"
+                  value={`${MOCK_PROJECTS.filter((project) => project.status === 'ready').length}`}
+                />
+                <MiniStat
+                  label="المفضلة"
+                  value={`${MOCK_PROJECTS.filter((project) => project.isFavorite).length}`}
+                />
               </div>
 
-              <div className="relative group w-full xl:min-w-[360px] 2xl:min-w-[420px]">
-                 <Search className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors" size={18} />
-                 <input 
-                   type="text" 
-                   placeholder="ابحث عن مشروع..."
-                   value={searchTerm}
-                   onChange={(e) => setSearchTerm(e.target.value)}
-                   className="w-full pr-11 pl-4 py-3 sm:py-3 bg-slate-50 border border-slate-100 rounded-xl outline-none text-sm font-bold text-slate-800 focus:bg-white focus:border-blue-200 focus:ring-4 focus:ring-blue-50 transition-all"
-                 />
-              </div>
-              <button 
-                onClick={() => setActiveTab?.('new-plan')}
-                className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-xl text-sm font-black shadow-lg shadow-blue-200/50 flex items-center justify-center gap-2 hover:bg-blue-700 active:scale-95 transition-all shrink-0">
-                 <Plus size={18} strokeWidth={3} />
-                 <span>مشروع جديد</span>
-              </button>
-           </div>
-        </div>
+              <Button onClick={() => setActiveTab?.('new-plan')} size="lg" className="w-full sm:w-auto">
+                <Plus size={16} strokeWidth={3} />
+                <span>مشروع جديد</span>
+              </Button>
+            </div>
+          </div>
+        </Card>
       </div>
 
-      {/* Content Container */}
-      <div>
-        {viewMode === 'list' ? (
-          <div className="flex flex-col gap-3">
-             {/* List Header (Desktop Only) */}
-             <div className="hidden xl:flex items-center px-6 py-3 text-xs font-bold text-slate-400 uppercase tracking-wider">
-                <div className="flex-[2] flex items-center">
-                   <div className="w-[42px] shrink-0"></div> {/* Space for star icon */}
-                   <div className="pl-4">المشروع / القطاع</div>
-                </div>
-                <div className="flex-[2] flex items-center">
-                   <div className="flex-1 pr-2">التقدم</div>
-                   <div className="flex-1 text-center">تقييم الذكاء الاصطناعي</div>
-                </div>
-                <div className="flex-[2] flex items-center">
-                   <div className="flex-1 text-center">الحالة</div>
-                   <div className="flex-1 text-left pl-4">الإجراءات</div>
-                </div>
-             </div>
-             
-             {/* List Items */}
-             {filteredProjects.map(project => (
-               <ProjectListRow key={project.id} project={project} setActiveTab={setActiveTab} />
-             ))}
+      <Card className="mb-6 p-4 sm:p-5">
+        <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-3 rounded-2xl bg-slate-50 px-3 py-2">
+              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-white">
+                <Activity size={18} strokeWidth={2.5} />
+              </div>
+              <div>
+                <p className="text-sm font-black text-slate-900">مركز المشاريع</p>
+                <p className="text-[11px] font-bold text-slate-500">بحث وتنقل سريع</p>
+              </div>
+            </div>
 
-             <div 
-               onClick={() => setActiveTab?.('new-plan')}
-               className="border-2 border-dashed border-slate-200 rounded-2xl flex items-center justify-center p-6 group hover:border-blue-400 transition-all cursor-pointer hover:bg-blue-50/30 gap-4 mt-2">
-                <div className="w-10 h-10 bg-slate-100 rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                   <Plus size={20} strokeWidth={3} />
-                </div>
-                <span className="text-sm font-black text-slate-400 group-hover:text-blue-600">إضافة مشروع جديد</span>
-             </div>
+            <div className="flex rounded-xl bg-slate-100 p-1 sm:hidden">
+              <button
+                aria-pressed={viewMode === 'list'}
+                onClick={() => setViewMode('list')}
+                className={`ui-card-interactive rounded-lg p-2 transition-all ${
+                  viewMode === 'list' ? 'ui-selected-ring bg-white text-slate-900 shadow-sm' : 'text-slate-400'
+                }`}
+              >
+                <List size={16} strokeWidth={2.5} />
+              </button>
+              <button
+                aria-pressed={viewMode === 'grid'}
+                onClick={() => setViewMode('grid')}
+                className={`ui-card-interactive rounded-lg p-2 transition-all ${
+                  viewMode === 'grid' ? 'ui-selected-ring bg-white text-slate-900 shadow-sm' : 'text-slate-400'
+                }`}
+              >
+                <LayoutGrid size={16} strokeWidth={2.5} />
+              </button>
+            </div>
           </div>
-        ) : (
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 sm:gap-6">
-             {filteredProjects.map(project => (
-               <ProjectGridCard key={project.id} project={project} setActiveTab={setActiveTab} />
-             ))}
-             
-             <div 
-               onClick={() => setActiveTab?.('new-plan')}
-               className="border-2 border-dashed border-slate-200 rounded-3xl flex flex-col items-center justify-center p-8 group hover:border-blue-400 transition-all cursor-pointer hover:bg-blue-50/30 min-h-[250px] sm:min-h-[300px]">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-400 group-hover:bg-blue-600 group-hover:text-white transition-all mb-4">
-                   <Plus size={24} className="sm:w-7 sm:h-7" strokeWidth={3} />
-                </div>
-                <span className="text-xs sm:text-sm font-black text-slate-400 group-hover:text-blue-600">إضافة مشروع</span>
-             </div>
+
+          <div className="flex w-full flex-col gap-3 sm:flex-row sm:items-center xl:w-auto">
+            <div className="hidden rounded-xl bg-slate-100 p-1 sm:flex">
+              <button
+                aria-pressed={viewMode === 'list'}
+                onClick={() => setViewMode('list')}
+                className={`ui-card-interactive rounded-lg p-2.5 transition-all ${
+                  viewMode === 'list' ? 'ui-selected-ring bg-white text-slate-900 shadow-sm' : 'text-slate-400 hover:text-slate-600'
+                }`}
+              >
+                <List size={18} strokeWidth={2.5} />
+              </button>
+              <button
+                aria-pressed={viewMode === 'grid'}
+                onClick={() => setViewMode('grid')}
+                className={`ui-card-interactive rounded-lg p-2.5 transition-all ${
+                  viewMode === 'grid' ? 'ui-selected-ring bg-white text-slate-900 shadow-sm' : 'text-slate-400 hover:text-slate-600'
+                }`}
+              >
+                <LayoutGrid size={18} strokeWidth={2.5} />
+              </button>
+            </div>
+
+            <div className="relative w-full xl:min-w-[360px] 2xl:min-w-[420px]">
+              <Search className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+              <Input
+                placeholder="ابحث عن مشروع..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="pr-11"
+              />
+            </div>
+            <Button onClick={() => setActiveTab?.('new-plan')} size="lg" className="w-full sm:w-auto">
+              <Plus size={18} strokeWidth={3} />
+              <span>مشروع جديد</span>
+            </Button>
           </div>
-        )}
+        </div>
+      </Card>
+
+      <Card className="mb-6 p-4 sm:p-5">
+        <div className="flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between">
+          <div className="text-right">
+            <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">حالات الواجهة</p>
+            <h2 className="mt-1 text-base font-black text-slate-950">معاينة حالات الصفحة</h2>
+            <p className="mt-1 text-[12px] font-bold leading-6 text-slate-600">تبديل سريع بين الحالات المرجعية للمبرمج.</p>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {PROJECT_PAGE_STATES.map((stateOption) => (
+              <Button
+                key={stateOption.id}
+                variant={previewState === stateOption.id ? 'default' : 'outline'}
+                size="sm"
+                className={previewState === stateOption.id ? 'ui-selected-ring' : ''}
+                onClick={() => setPreviewState(stateOption.id)}
+              >
+                {stateOption.label}
+              </Button>
+            ))}
+          </div>
+        </div>
+      </Card>
+
+      {showSuccess ? (
+        <div className="mb-6">
+          <InlineStatusBanner
+            tone="success"
+            title="تم حفظ تغييرات المشروع بنجاح"
+            description="هذه هي حالة النجاح بعد إجراء مهم مثل تحديث المشروع أو تثبيت خطة العمل أو تفعيل التصدير."
+          />
+        </div>
+      ) : null}
+
+      <div>
+        {showLoading ? (
+          <div className="space-y-4">
+            <PageSectionSkeleton blocks={4} />
+            <PageSectionSkeleton blocks={3} compact />
+          </div>
+        ) : showFirstUse ? (
+          <FirstUseState
+            description="هذه هي الحالة الأولى للمستخدم قبل إنشاء أي مشروع. يجب أن تشرح القيمة مباشرة وتقوده إلى أول خطوة بدون ازدحام."
+            actionLabel="إنشاء أول مشروع"
+            onAction={() => setActiveTab?.('new-plan')}
+          />
+        ) : showEmpty ? (
+          <EmptyState
+            title="لا توجد مشاريع محفوظة حالياً"
+            description="هذه هي الحالة الفارغة بعد حذف المشاريع أو قبل المزامنة. يجب أن تشرح لماذا الصفحة فارغة وما الخطوة التالية المتاحة."
+            actionLabel="إنشاء مشروع جديد"
+            onAction={() => setActiveTab?.('new-plan')}
+          />
+        ) : showError ? (
+          <ErrorState
+            description="هذه هي حالة الخطأ عندما يتعذر تحميل المشاريع أو مزامنة البيانات. المطلوب بصرياً هو رسالة واضحة مع إجراء استعادة مباشر."
+            onRetry={() => setPreviewState('loading')}
+          />
+        ) : showNoResults ? (
+          <NoResultsState
+            description="لا يوجد مشروع يطابق كلمات البحث أو الفلاتر الحالية. يجب أن يرى المستخدم فوراً ما الذي يفعله لإعادة النتائج."
+            onReset={resetDiscovery}
+          />
+        ) : viewMode === 'list' && shouldShowCollection ? (
+          <div className="flex flex-col gap-3">
+            <div className="hidden items-center px-6 py-3 text-xs font-bold uppercase tracking-wider text-slate-400 xl:flex">
+              <div className="flex flex-[2] items-center">
+                <div className="w-[42px] shrink-0" />
+                <div className="pl-4">المشروع / القطاع</div>
+              </div>
+              <div className="flex flex-[2] items-center">
+                <div className="flex-1 pr-2">التقدم</div>
+                <div className="flex-1 text-center">تقييم الذكاء الاصطناعي</div>
+              </div>
+              <div className="flex flex-[2] items-center">
+                <div className="flex-1 text-center">الحالة</div>
+                <div className="flex-1 pl-4 text-left">الإجراءات</div>
+              </div>
+            </div>
+
+            {filteredProjects.map((project) => (
+              <ProjectListRow key={project.id} project={project} setActiveTab={setActiveTab} />
+            ))}
+
+            <div
+              onClick={() => setActiveTab?.('new-plan')}
+              className="group mt-2 flex cursor-pointer items-center justify-center gap-4 rounded-2xl border-2 border-dashed border-slate-200 p-6 transition-all hover:border-blue-400 hover:bg-blue-50/30"
+            >
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-slate-400 transition-all group-hover:bg-blue-600 group-hover:text-white">
+                <Plus size={20} strokeWidth={3} />
+              </div>
+              <span className="text-sm font-black text-slate-400 group-hover:text-blue-600">إضافة مشروع جديد</span>
+            </div>
+          </div>
+        ) : shouldShowCollection ? (
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3 2xl:grid-cols-4">
+            {filteredProjects.map((project) => (
+              <ProjectGridCard key={project.id} project={project} setActiveTab={setActiveTab} />
+            ))}
+
+            <div
+              onClick={() => setActiveTab?.('new-plan')}
+              className="group flex min-h-[250px] cursor-pointer flex-col items-center justify-center rounded-3xl border-2 border-dashed border-slate-200 p-8 transition-all hover:border-blue-400 hover:bg-blue-50/30 sm:min-h-[300px]"
+            >
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 text-slate-400 transition-all group-hover:bg-blue-600 group-hover:text-white sm:h-14 sm:w-14">
+                <Plus size={24} className="sm:h-7 sm:w-7" strokeWidth={3} />
+              </div>
+              <span className="text-xs font-black text-slate-400 group-hover:text-blue-600 sm:text-sm">إضافة مشروع</span>
+            </div>
+          </div>
+        ) : null}
       </div>
     </div>
   );
 };
 
+const MiniStat = ({ label, value }: { label: string; value: string }) => (
+  <div className="rounded-2xl border border-slate-200 bg-white px-3 py-3 text-center">
+    <p className="text-[10px] font-black text-slate-400">{label}</p>
+    <p className="mt-1 text-lg font-black text-slate-950">{value}</p>
+  </div>
+);
+
 const ProjectListRow: React.FC<{ project: Project; setActiveTab?: (tab: string) => void }> = ({ project, setActiveTab }) => {
   const averageProgress = Math.round((project.progress.market + project.progress.product + project.progress.financial) / 3);
-  
-  return (
-    <div className="group bg-white border border-slate-100 rounded-2xl p-4 hover:border-blue-300 hover:shadow-md transition-all duration-300 flex flex-col md:flex-row items-start md:items-center gap-0 md:gap-4 relative overflow-hidden">
-      
-      {/* Row 1 on Mobile / Col 1 & 2 on Desktop */}
-      <div className="flex items-center justify-between w-full md:w-auto md:flex-[2] mb-3 md:mb-0">
-        
-        {/* Favorite (Desktop only) */}
-        <button className={`hidden md:block shrink-0 p-2 rounded-xl transition-all mr-0 ml-4 ${project.isFavorite ? 'text-amber-400 bg-amber-50' : 'text-slate-300 hover:text-amber-400 bg-slate-50'}`}>
-           <Star size={18} fill={project.isFavorite ? 'currentColor' : 'none'} strokeWidth={2.5} />
-        </button>
 
-        <div className="flex items-center gap-3 md:gap-4 flex-1 min-w-0">
-           <div className="w-10 h-10 md:w-12 md:h-12 bg-slate-900 text-white rounded-xl flex items-center justify-center shrink-0 shadow-sm">
-              <LayoutGrid size={20} strokeWidth={2.5} className="w-5 h-5" />
-           </div>
-           <div className="min-w-0">
-              <h3 className="text-sm font-black text-slate-900 mb-0.5 md:mb-1 group-hover:text-blue-600 transition-colors cursor-pointer truncate" onClick={() => setActiveTab?.('editor')}>
+  return (
+    <Card className="ui-card-interactive group rounded-2xl border-slate-200 p-4 transition-all duration-300 hover:border-slate-300 hover:shadow-md">
+      <div className="relative flex flex-col items-start gap-0 overflow-hidden xl:flex-row xl:items-center xl:gap-4">
+        <div className="mb-3 flex w-full items-center justify-between xl:mb-0 xl:w-auto xl:flex-[2]">
+          <button
+            className={`mr-0 ml-4 hidden shrink-0 rounded-xl p-2 transition-all xl:block ${
+              project.isFavorite ? 'bg-amber-50 text-amber-400' : 'bg-slate-50 text-slate-300 hover:text-amber-400'
+            }`}
+          >
+            <Star size={18} fill={project.isFavorite ? 'currentColor' : 'none'} strokeWidth={2.5} />
+          </button>
+
+          <div className="flex min-w-0 flex-1 items-center gap-3 md:gap-4">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-900 text-white shadow-sm md:h-12 md:w-12">
+              <LayoutGrid size={20} strokeWidth={2.5} className="h-5 w-5" />
+            </div>
+            <div className="min-w-0">
+              <h3
+                className="mb-0.5 cursor-pointer truncate text-sm font-black text-slate-900 transition-colors group-hover:text-blue-600 md:mb-1"
+                onClick={() => setActiveTab?.('editor')}
+              >
                 {project.name}
               </h3>
-              <div className="flex items-center gap-2 text-[10px] md:text-[11px] font-bold text-slate-400 flex-wrap">
-                 <span className="px-1.5 md:px-2 py-0.5 bg-slate-100 rounded text-slate-500 uppercase tracking-wider">{project.sector}</span>
-                 <span className="hidden sm:inline">•</span>
-                 <span className="flex items-center gap-1"><Clock size={10} /> <span className="hidden sm:inline">آخر تعديل</span> {project.lastEdited}</span>
+              <div className="flex flex-wrap items-center gap-2 text-[10px] font-bold text-slate-400 md:text-[11px]">
+                <span className="rounded bg-slate-100 px-1.5 py-0.5 uppercase tracking-wider text-slate-500 md:px-2">
+                  {project.sector}
+                </span>
+                <span className="hidden sm:inline">•</span>
+                <span className="flex items-center gap-1">
+                  <Clock size={10} />
+                  <span className="hidden sm:inline">آخر تعديل</span>
+                  {project.lastEdited}
+                </span>
               </div>
-           </div>
+            </div>
+          </div>
+
+          <button
+            className={`shrink-0 rounded-xl p-2 transition-all xl:hidden ${
+              project.isFavorite ? 'bg-amber-50 text-amber-400' : 'bg-slate-50 text-slate-300 hover:text-amber-400'
+            }`}
+          >
+            <Star size={16} fill={project.isFavorite ? 'currentColor' : 'none'} strokeWidth={2.5} />
+          </button>
         </div>
 
-        {/* Favorite (Mobile only) */}
-        <button className={`md:hidden shrink-0 p-2 rounded-xl transition-all ${project.isFavorite ? 'text-amber-400 bg-amber-50' : 'text-slate-300 hover:text-amber-400 bg-slate-50'}`}>
-           <Star size={16} fill={project.isFavorite ? 'currentColor' : 'none'} strokeWidth={2.5} />
-        </button>
-      </div>
-
-      {/* Row 2 on Mobile / Col 3 & 4 on Desktop */}
-      <div className="grid grid-cols-2 md:flex w-full md:w-auto md:flex-[2] items-center gap-4 md:gap-0 mb-3 md:mb-0">
-         {/* Progress Bar */}
-         <div className="w-full md:flex-1 md:pr-2 lg:pr-6 md:pl-2">
-            <div className="flex justify-between items-center text-[10px] font-black text-slate-400 mb-1.5 uppercase">
-               <span>التقدم</span>
-               <span className="text-slate-700">{averageProgress}%</span>
+        <div className="mb-3 grid w-full grid-cols-1 gap-3 sm:grid-cols-2 xl:mb-0 xl:flex xl:w-auto xl:flex-[2] xl:items-center xl:gap-0">
+          <div className="w-full xl:flex-1 xl:pl-2 xl:pr-2 2xl:pr-6">
+            <div className="mb-1.5 flex items-center justify-between text-[10px] font-black uppercase text-slate-400">
+              <span>التقدم</span>
+              <span className="text-slate-700">{averageProgress}%</span>
             </div>
-            <div className="flex items-center gap-0.5 h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
-               <div className="h-full bg-blue-600" style={{ width: `${project.progress.market / 3}%` }}></div>
-               <div className="h-full bg-emerald-500" style={{ width: `${project.progress.product / 3}%` }}></div>
-               <div className="h-full bg-amber-500" style={{ width: `${project.progress.financial / 3}%` }}></div>
+            <div className="ui-progress-track flex h-1.5 w-full items-center gap-0.5 overflow-hidden rounded-full bg-slate-100">
+              <div className="ui-progress-fill h-full bg-blue-600" style={{ width: `${project.progress.market / 3}%` }} />
+              <div className="ui-progress-fill h-full bg-emerald-500" style={{ width: `${project.progress.product / 3}%` }} />
+              <div className="ui-progress-fill h-full bg-amber-500" style={{ width: `${project.progress.financial / 3}%` }} />
             </div>
-         </div>
+          </div>
 
-         {/* AI Score */}
-         <div className="w-full md:flex-1 flex justify-start md:justify-center items-center">
-            <div className="flex items-center justify-center w-full md:w-auto gap-2 bg-blue-50/50 px-3 py-1.5 rounded-lg border border-blue-50 text-blue-700">
-               <Activity size={14} className="text-blue-500" />
-               <span className="text-xs md:text-sm font-black">{project.aiScore}%</span>
+          <div className="flex w-full items-center justify-start sm:justify-center xl:flex-1">
+            <div className="flex w-full items-center justify-center gap-2 rounded-lg border border-blue-50 bg-blue-50/50 px-3 py-2 text-blue-700 sm:w-auto sm:py-1.5">
+              <Activity size={14} className="text-blue-500" />
+              <span className="text-xs font-black md:text-sm">{project.aiScore}%</span>
             </div>
-         </div>
-      </div>
+          </div>
+        </div>
 
-      {/* Row 3 on Mobile / Col 5 & 6 on Desktop */}
-      <div className="flex items-center justify-between md:justify-end w-full md:w-auto md:flex-[2] pt-3 md:pt-0 border-t border-slate-50 md:border-t-0 gap-2">
-         {/* Status Badge */}
-         <div className="md:flex-1 flex justify-start md:justify-center items-center">
-           <div className={`flex items-center gap-1.5 px-2.5 md:px-3 py-1.5 rounded-lg text-[10px] md:text-xs font-bold border ${project.status === 'ready' ? 'bg-emerald-50 text-emerald-700 border-emerald-100' : project.status === 'review' ? 'bg-amber-50 text-amber-700 border-amber-100' : 'bg-slate-50 text-slate-600 border-slate-200'}`}>
-              {project.status === 'ready' ? <CheckCircle2 size={12} className="md:w-[14px] md:h-[14px]" /> : project.status === 'review' ? <Clock size={12} className="md:w-[14px] md:h-[14px]" /> : <TrendingUp size={12} className="md:w-[14px] md:h-[14px]" />}
+        <div className="flex w-full flex-col gap-3 border-t border-slate-50 pt-3 sm:flex-row sm:items-center sm:justify-between xl:w-auto xl:flex-[2] xl:justify-end xl:border-t-0 xl:pt-0">
+          <div className="flex items-center justify-start sm:flex-1 sm:justify-center">
+            <div
+              className={`flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 text-[10px] font-bold md:px-3 md:text-xs ${
+                project.status === 'ready'
+                  ? 'border-emerald-100 bg-emerald-50 text-emerald-700'
+                  : project.status === 'review'
+                    ? 'border-amber-100 bg-amber-50 text-amber-700'
+                    : 'border-slate-200 bg-slate-50 text-slate-600'
+              }`}
+            >
+              {project.status === 'ready' ? (
+                <CheckCircle2 size={12} className="md:h-[14px] md:w-[14px]" />
+              ) : project.status === 'review' ? (
+                <Clock size={12} className="md:h-[14px] md:w-[14px]" />
+              ) : (
+                <TrendingUp size={12} className="md:h-[14px] md:w-[14px]" />
+              )}
               <span>{project.status === 'ready' ? 'جاهز' : project.status === 'review' ? 'مراجعة' : 'مسودة'}</span>
-           </div>
-         </div>
-
-         {/* Actions */}
-         <div className="md:flex-1 flex items-center justify-end gap-2">
-            <div className="flex gap-1 md:opacity-0 md:-translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 hidden sm:flex">
-               <ActionIcon icon={<Share2 size={14} />} color="slate" />
-               <ActionIcon icon={<FileDown size={14} />} color="slate" />
             </div>
-            <button 
+          </div>
+
+          <div className="flex items-center justify-between gap-2 sm:flex-1 sm:justify-end">
+            <div className="hidden gap-1 transition-all duration-300 xl:flex xl:-translate-x-2 xl:opacity-0 xl:group-hover:translate-x-0 xl:group-hover:opacity-100">
+              <ActionIcon icon={<Share2 size={14} />} />
+              <ActionIcon icon={<FileDown size={14} />} />
+            </div>
+            <button
               onClick={() => setActiveTab?.('editor')}
-              className="px-4 py-2 bg-slate-900 text-white rounded-xl text-xs font-black hover:bg-blue-600 transition-colors flex items-center gap-2 shrink-0">
-               <span>فتح</span>
-               <ArrowRight size={14} className="rtl:rotate-180" />
+              className="flex shrink-0 items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-xs font-black text-white transition-colors hover:bg-blue-600 sm:min-w-[112px]"
+            >
+              <span>فتح</span>
+              <ArrowRight size={14} className="rtl:rotate-180" />
             </button>
-         </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </Card>
   );
 };
 
@@ -273,71 +479,71 @@ const ProjectGridCard: React.FC<{ project: Project; setActiveTab?: (tab: string)
   const averageProgress = Math.round((project.progress.market + project.progress.product + project.progress.financial) / 3);
 
   return (
-    <div className="group bg-white border border-slate-100 rounded-3xl p-4 sm:p-5 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-900/5 transition-all duration-300 relative flex flex-col h-full">
-       
-       {/* Card Header: Favorite & Menu */}
-       <div className="flex justify-between items-start mb-4">
-          <button className={`p-2 rounded-xl transition-all ${project.isFavorite ? 'text-amber-400 bg-amber-50' : 'text-slate-300 hover:text-amber-400 bg-slate-50'}`}>
-             <Star size={16} fill={project.isFavorite ? 'currentColor' : 'none'} strokeWidth={2.5} />
-          </button>
-          <div className={`px-2.5 py-1 rounded-lg text-[10px] font-bold border flex items-center gap-1 ${project.status === 'ready' ? 'bg-emerald-50 text-emerald-700 border-emerald-100' : project.status === 'review' ? 'bg-amber-50 text-amber-700 border-amber-100' : 'bg-slate-50 text-slate-600 border-slate-200'}`}>
-             {project.status === 'ready' ? <CheckCircle2 size={12} /> : project.status === 'review' ? <Clock size={12} /> : <TrendingUp size={12} />}
-             <span>{project.status === 'ready' ? 'جاهز' : project.status === 'review' ? 'مراجعة' : 'مسودة'}</span>
-          </div>
-       </div>
+    <Card className="ui-card-interactive group relative flex h-full flex-col rounded-3xl border-slate-200 p-4 transition-all duration-300 hover:border-slate-300 hover:shadow-xl hover:shadow-slate-900/5 sm:p-5">
+      <div className="mb-4 flex items-start justify-between">
+        <button
+          className={`rounded-xl p-2 transition-all ${
+            project.isFavorite ? 'bg-amber-50 text-amber-400' : 'bg-slate-50 text-slate-300 hover:text-amber-400'
+          }`}
+        >
+          <Star size={16} fill={project.isFavorite ? 'currentColor' : 'none'} strokeWidth={2.5} />
+        </button>
+        <div
+          className={`flex items-center gap-1 rounded-lg border px-2.5 py-1 text-[10px] font-bold ${
+            project.status === 'ready'
+              ? 'border-emerald-100 bg-emerald-50 text-emerald-700'
+              : project.status === 'review'
+                ? 'border-amber-100 bg-amber-50 text-amber-700'
+                : 'border-slate-200 bg-slate-50 text-slate-600'
+          }`}
+        >
+          {project.status === 'ready' ? <CheckCircle2 size={12} /> : project.status === 'review' ? <Clock size={12} /> : <TrendingUp size={12} />}
+          <span>{project.status === 'ready' ? 'جاهز' : project.status === 'review' ? 'مراجعة' : 'مسودة'}</span>
+        </div>
+      </div>
 
-       {/* Icon & Details */}
-       <div className="flex flex-col items-center text-center mb-5 sm:mb-6">
-          <div className="w-14 h-14 sm:w-16 sm:h-16 bg-slate-900 text-white rounded-2xl flex items-center justify-center mb-3 shadow-md group-hover:scale-105 transition-transform duration-300">
-             <LayoutGrid size={24} className="sm:w-7 sm:h-7" strokeWidth={2} />
-          </div>
-          <h3 className="text-sm sm:text-base font-black text-slate-900 leading-tight mb-1 group-hover:text-blue-600 transition-colors line-clamp-1">
-            {project.name}
-          </h3>
-          <span className="text-[10px] sm:text-[11px] font-bold text-slate-400 bg-slate-100 px-2 py-0.5 rounded-md uppercase">
-            {project.sector}
-          </span>
-       </div>
+      <div className="mb-5 flex flex-col items-center text-center sm:mb-6">
+        <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-900 text-white shadow-md transition-transform duration-300 group-hover:scale-105 sm:h-16 sm:w-16">
+          <LayoutGrid size={24} className="sm:h-7 sm:w-7" strokeWidth={2} />
+        </div>
+        <h3 className="mb-1 line-clamp-1 text-sm font-black leading-tight text-slate-900 transition-colors group-hover:text-blue-600 sm:text-base">
+          {project.name}
+        </h3>
+        <span className="rounded-md bg-slate-100 px-2 py-0.5 text-[10px] font-bold uppercase text-slate-400 sm:text-[11px]">
+          {project.sector}
+        </span>
+      </div>
 
-       {/* Stats Grid */}
-       <div className="grid grid-cols-2 gap-2 mb-5 sm:mb-6">
-          <div className="bg-slate-50 rounded-xl p-2 sm:p-2.5 text-center border border-slate-100">
-             <span className="block text-[8px] sm:text-[9px] font-bold text-slate-400 uppercase mb-1">التقدم</span>
-             <span className="text-xs sm:text-sm font-black text-slate-700">{averageProgress}%</span>
-          </div>
-          <div className="bg-blue-50 rounded-xl p-2 sm:p-2.5 text-center border border-blue-100">
-             <span className="block text-[8px] sm:text-[9px] font-bold text-blue-400 uppercase mb-1">تقييم AI</span>
-             <span className="text-xs sm:text-sm font-black text-blue-700">{project.aiScore}%</span>
-          </div>
-       </div>
+      <div className="mb-5 grid grid-cols-2 gap-2 sm:mb-6">
+        <div className="rounded-xl border border-slate-100 bg-slate-50 p-2 text-center sm:p-2.5">
+          <span className="mb-1 block text-[8px] font-bold uppercase text-slate-400 sm:text-[9px]">التقدم</span>
+          <span className="text-xs font-black text-slate-700 sm:text-sm">{averageProgress}%</span>
+        </div>
+        <div className="rounded-xl border border-blue-100 bg-blue-50 p-2 text-center sm:p-2.5">
+          <span className="mb-1 block text-[8px] font-bold uppercase text-blue-400 sm:text-[9px]">تقييم AI</span>
+          <span className="text-xs font-black text-blue-700 sm:text-sm">{project.aiScore}%</span>
+        </div>
+      </div>
 
-       {/* Action Buttons Hub */}
-       <div className="mt-auto pt-4 border-t border-slate-100 flex items-center gap-2">
-          <button 
-            onClick={() => setActiveTab?.('editor')}
-            className="flex-1 py-2 sm:py-2.5 bg-slate-900 text-white rounded-xl text-xs font-black flex items-center justify-center gap-1.5 hover:bg-blue-600 transition-colors">
-             <span>فتح الخطة</span>
-          </button>
-          
-          <div className="flex gap-1.5 shrink-0">
-             <ActionIcon icon={<Share2 size={14} className="w-3.5 h-3.5 sm:w-4 sm:h-4" />} color="slate" />
-             <ActionIcon icon={<FileDown size={14} className="w-3.5 h-3.5 sm:w-4 sm:h-4" />} color="slate" />
-          </div>
-       </div>
-    </div>
+      <div className="mt-auto flex items-center gap-2 border-t border-slate-100 pt-4">
+        <button
+          onClick={() => setActiveTab?.('editor')}
+          className="flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-slate-900 py-2 text-xs font-black text-white transition-colors hover:bg-blue-600 sm:py-2.5"
+        >
+          <span>فتح الخطة</span>
+        </button>
+
+        <div className="flex shrink-0 gap-1.5">
+          <ActionIcon icon={<Share2 size={14} className="h-3.5 w-3.5 sm:h-4 sm:w-4" />} />
+          <ActionIcon icon={<FileDown size={14} className="h-3.5 w-3.5 sm:h-4 sm:w-4" />} />
+        </div>
+      </div>
+    </Card>
   );
 };
 
-const ActionIcon = ({ icon, color }: { icon: React.ReactNode, color: string }) => {
-  const styles: any = {
-    blue: 'text-blue-600 bg-blue-50 hover:bg-blue-600 hover:text-white',
-    slate: 'text-slate-500 bg-slate-50 hover:bg-slate-800 hover:text-white border border-slate-100',
-    red: 'text-red-600 bg-red-50 hover:bg-red-600 hover:text-white'
-  };
-  return (
-    <button className={`w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center transition-all ${styles[color]}`}>
-       {icon}
-    </button>
-  );
-};
-
+const ActionIcon = ({ icon }: { icon: React.ReactNode }) => (
+  <button className="flex h-8 w-8 items-center justify-center rounded-xl border border-slate-100 bg-slate-50 text-slate-500 transition-all hover:bg-slate-800 hover:text-white sm:h-9 sm:w-9">
+    {icon}
+  </button>
+);

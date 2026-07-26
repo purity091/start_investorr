@@ -27,8 +27,6 @@ const STATIC_TABS = new Set([
   'settings',
   'tasks',
   'changelog',
-  'export-templates',
-  'smart-analyzer',
   'editor',
   'strategic-dashboard',
   'notifications',

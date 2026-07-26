@@ -63,7 +63,7 @@ export const ProgressDots: React.FC<StepWizardProps> = ({ steps, current }) => (
             <div className={`
               w-7 h-7 rounded-lg flex items-center justify-center transition-all duration-500 relative z-10
               ${isCompleted ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-100 rotate-[360deg]' : 
-                isActive ? 'bg-slate-900 text-white shadow-xl shadow-indigo-100 animate-in zoom-in-75' : 
+                isActive ? 'bg-blue-600 text-white shadow-lg shadow-blue-100 animate-in zoom-in-75' : 
                 'bg-slate-50 text-slate-300 border border-slate-100'}
             `}>
               {isCompleted ? <Lucide.Check size={14} strokeWidth={4} /> : <IconComp size={isActive ? 14 : 12} strokeWidth={isActive ? 2.5 : 2} />}

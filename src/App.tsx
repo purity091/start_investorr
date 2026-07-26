@@ -150,7 +150,7 @@ const AppShell: React.FC = () => {
 
       <main className={`flex-1 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] w-full max-w-full overflow-x-hidden
         ${!isSidebarOpen ? 'mr-0' : isSidebarCollapsed ? 'mr-0 lg:mr-24' : 'mr-0 lg:mr-72'} 
-        ${!isAdminView && isAiSidebarOpen ? 'ml-0 xl:ml-96' : 'ml-0'}`}>
+        ${!isAdminView && isAiSidebarOpen ? 'ml-0 2xl:ml-96' : 'ml-0'}`}>
 
         <Header 
           activeTab={activeTab}

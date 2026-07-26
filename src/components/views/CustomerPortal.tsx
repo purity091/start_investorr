@@ -2,6 +2,11 @@ import React from 'react';
 import { ArrowLeft, BellRing, Briefcase, CheckCircle2, CreditCard, Crown, Headphones, Layers3, Sparkles, UserCircle2, Wallet } from 'lucide-react';
 import { User } from '../../types';
 import { useProjectWorkspace } from '../../features/workspace/ProjectWorkspaceContext';
+import { Badge } from '../ui/Badge';
+import { Button } from '../ui/Button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/Card';
+import { PageHeader } from '../ui/PageHeader';
+import { EmptyState, ErrorState, FirstUseState, InlineStatusBanner, NoResultsState, PageSectionSkeleton } from '../ui/PageStates';
 
 export type CustomerPortalSection =
   | 'dashboard'
@@ -17,6 +22,8 @@ interface CustomerPortalProps {
   setActiveTab: (tab: string) => void;
   section: CustomerPortalSection;
 }
+
+type PortalPreviewState = 'live' | 'loading' | 'first-use' | 'empty' | 'no-results' | 'success' | 'error';
 
 const SECTION_META: Record<CustomerPortalSection, { label: string; desc: string }> = {
   dashboard: { label: 'لوحة التحكم', desc: 'ملخص الحساب والاشتراك والمشاريع والنشاط من مكان واحد.' },
@@ -51,54 +58,64 @@ const ACTIVITY_FEED = [
   { title: 'تمت مزامنة تغييرات إعدادات الحساب', meta: '20 يوليو 2026', type: 'account' },
 ];
 
+const PORTAL_PAGE_STATES: Array<{ id: PortalPreviewState; label: string }> = [
+  { id: 'live', label: 'الحالة الحية' },
+  { id: 'loading', label: 'تحميل' },
+  { id: 'first-use', label: 'أول استخدام' },
+  { id: 'empty', label: 'فارغة' },
+  { id: 'no-results', label: 'بدون نتائج' },
+  { id: 'success', label: 'نجاح' },
+  { id: 'error', label: 'خطأ' },
+];
+
 export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveTab, section }) => {
   const { workspace } = useProjectWorkspace();
+  const [previewState, setPreviewState] = React.useState<PortalPreviewState>('live');
   const meta = SECTION_META[section];
   const completedSections = workspace.planSections.filter((item) => item.isCompleted).length;
   const totalSections = Math.max(workspace.planSections.length, 1);
   const usedCredits = user.totalCredits - user.credits;
   const allTasks = [...workspace.execution.autoTasks, ...workspace.execution.firstCustomerSprint];
   const completedTasks = allTasks.filter((task) => task.status === 'completed').length;
+  const showLoading = previewState === 'loading';
+  const showFirstUse = previewState === 'first-use';
+  const showEmpty = previewState === 'empty';
+  const showNoResults = previewState === 'no-results';
+  const showSuccess = previewState === 'success';
+  const showError = previewState === 'error';
+  const showLiveContent = previewState === 'live' || previewState === 'success';
 
   return (
     <div dir="rtl" className="min-h-screen bg-slate-50 py-6">
       <div className="app-page-shell-wide space-y-6">
-        <section className="surface-card overflow-hidden rounded-[1.75rem] bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] p-6 sm:p-8">
-          <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-            <div className="max-w-3xl space-y-4">
-              <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[11px] font-black text-slate-700">
-                <Crown size={14} className="text-slate-900" />
-                مساحة العميل
-              </div>
-              <div>
-                <h1 className="text-3xl font-black leading-tight text-slate-950 sm:text-4xl lg:text-[3.25rem]">{meta.label}</h1>
-                <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">{meta.desc}</p>
-              </div>
-              <div className="flex flex-wrap gap-3">
-                <QuickHeroButton label="فتح مساحة المشروع" onClick={() => setActiveTab('workspace')} />
-                <QuickHeroButton label="إعدادات الحساب" onClick={() => setActiveTab('settings')} secondary />
-              </div>
-            </div>
+        <PageHeader
+          badge="مساحة العميل"
+          title={meta.label}
+          description={meta.desc}
+          actions={[
+            { label: 'فتح مساحة المشروع', onClick: () => setActiveTab('workspace'), icon: <Crown size={16} /> },
+            { label: 'إعدادات الحساب', onClick: () => setActiveTab('settings'), variant: 'outline' },
+          ]}
+          metrics={[
+            { label: 'الخطة', value: 'الاحترافي', helper: 'نشطة حتى 21 أغسطس 2026' },
+            { label: 'الرصيد', value: `${user.credits}/${user.totalCredits}`, helper: 'اعتمادات الذكاء' },
+            { label: 'الجاهزية', value: `${workspace.metrics.readinessScore}%`, helper: 'مرتبطة بالمشروع' },
+          ]}
+        />
 
-            <div className="grid gap-3 sm:grid-cols-3 lg:w-[480px]">
-              <HeroMetric label="الخطة" value="الاحترافي" helper="نشطة حتى 21 أغسطس 2026" />
-              <HeroMetric label="الرصيد" value={`${user.credits}/${user.totalCredits}`} helper="اعتمادات الذكاء" />
-              <HeroMetric label="الجاهزية" value={`${workspace.metrics.readinessScore}%`} helper="مرتبطة بالمشروع" />
-            </div>
-          </div>
-        </section>
-
-        <div className="grid gap-6 2xl:grid-cols-[300px_minmax(0,1fr)] xl:grid-cols-[280px_minmax(0,1fr)]">
-          <aside className="space-y-4">
-            <div className="surface-card p-3">
+        <div className="grid gap-6 xl:grid-cols-[280px_minmax(0,1fr)] 2xl:grid-cols-[300px_minmax(0,1fr)]">
+          <aside className="space-y-4 xl:sticky xl:top-24 xl:self-start">
+            <div className="surface-card overflow-x-auto p-3 xl:overflow-visible">
+              <div className="flex gap-2 xl:block">
               {PORTAL_NAV.map((item) => {
                 const isActive = item.section === section;
                 return (
                   <button
                     key={item.tab}
                     onClick={() => setActiveTab(item.tab)}
-                    className={`mb-2 flex w-full items-center gap-3 rounded-xl px-4 py-3 text-right text-sm font-black transition last:mb-0 ${
-                      isActive ? 'bg-slate-900 text-white shadow-sm' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                    aria-pressed={isActive}
+                    className={`ui-nav-item ui-card-interactive flex min-w-[170px] items-center gap-3 rounded-xl px-4 py-3 text-right text-sm font-black transition xl:mb-2 xl:min-w-0 xl:w-full last:mb-0 ${
+                      isActive ? 'ui-selected-ring bg-slate-900 text-white shadow-sm' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
                     }`}
                   >
                     <item.icon size={18} />
@@ -106,6 +123,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
                   </button>
                 );
               })}
+              </div>
             </div>
 
             <div className="surface-card p-5">
@@ -120,16 +138,81 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
           </aside>
 
           <main className="space-y-8">
-            {section === 'dashboard' && (
+            <Card className="p-4 sm:p-5">
+              <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+                <div className="text-right">
+                  <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">حالات الصفحة</p>
+                  <h2 className="mt-2 text-lg font-black text-slate-950">معاينة حالات بوابة العميل</h2>
+                  <p className="mt-2 text-[13px] font-bold leading-7 text-slate-600">
+                    هذه الطبقة توضح للمبرمج شكل الصفحة في حالات التحميل والفراغ والنجاح والخطأ، وليس في حالة العرض المثالية فقط.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {PORTAL_PAGE_STATES.map((stateOption) => (
+                    <Button
+                      key={stateOption.id}
+                      variant={previewState === stateOption.id ? 'default' : 'outline'}
+                      size="sm"
+                      className={previewState === stateOption.id ? 'ui-selected-ring' : ''}
+                      onClick={() => setPreviewState(stateOption.id)}
+                    >
+                      {stateOption.label}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+            </Card>
+
+            {showSuccess ? (
+              <InlineStatusBanner
+                tone="success"
+                title="تم تحديث بوابة العميل بنجاح"
+                description="هذه هي حالة النجاح بعد عملية مثل حفظ الإعدادات أو تحديث الفوترة أو مزامنة المشروع."
+              />
+            ) : null}
+
+            {showLoading ? (
+              <div className="space-y-4">
+                <PageSectionSkeleton blocks={4} />
+                <PageSectionSkeleton blocks={3} compact />
+              </div>
+            ) : showFirstUse ? (
+              <FirstUseState
+                title="هذه أول زيارة لبوابة العميل"
+                description="في أول استخدام يجب أن توضح البوابة ما الذي يتحكم به العميل هنا: المشاريع، الفوترة، الاستخدام، النشاط، والدعم."
+                actionLabel="فتح المشروع الرئيسي"
+                onAction={() => setActiveTab('workspace')}
+              />
+            ) : showEmpty ? (
+              <EmptyState
+                title="لا توجد بيانات مرتبطة بالحساب حالياً"
+                description="هذه الحالة تغطي غياب المشاريع أو الفواتير أو النشاط. المطلوب أن تشرح الصفحة سبب الفراغ وما الإجراء التالي المناسب."
+                actionLabel="إنشاء مشروع جديد"
+                onAction={() => setActiveTab('new-plan')}
+              />
+            ) : showNoResults ? (
+              <NoResultsState
+                description="هذه الحالة مخصصة لغياب نتائج المشاريع أو النشاط أو الفواتير بعد تطبيق فلتر أو فترة زمنية أو بحث."
+                resetLabel="العودة للحالة الحية"
+                onReset={() => setPreviewState('live')}
+              />
+            ) : showError ? (
+              <ErrorState
+                description="هذه هي الحالة التي يجب أن تظهر إذا فشل تحميل بيانات الحساب أو الفوترة أو المشروع الحالي، مع إجراء إعادة محاولة واضح."
+                onRetry={() => setPreviewState('loading')}
+              />
+            ) : null}
+
+            {section === 'dashboard' && showLiveContent && (
               <>
-                <div className="grid gap-4 md:grid-cols-2 2xl:grid-cols-4 xl:grid-cols-2">
+                <div className="grid gap-4 sm:grid-cols-2 2xl:grid-cols-4">
                   <MetricCard icon={Briefcase} label="المشاريع" value="3" note="نشطة داخل حسابك" tone="blue" />
                   <MetricCard icon={Layers3} label="أقسام الخطة" value={`${completedSections}/${totalSections}`} note="مكتملة حتى الآن" tone="emerald" />
                   <MetricCard icon={CheckCircle2} label="المهام التنفيذية" value={`${completedTasks}/${allTasks.length || 1}`} note="ضمن المساحة" tone="amber" />
                   <MetricCard icon={Wallet} label="المستهلك من الرصيد" value={`${usedCredits}`} note="اعتماد مستخدم" tone="purple" />
                 </div>
 
-                <div className="grid gap-6 2xl:grid-cols-[minmax(0,1.35fr)_minmax(420px,0.95fr)] xl:grid-cols-[minmax(0,1.2fr)_minmax(360px,0.9fr)]">
+                <div className="grid gap-6 2xl:grid-cols-[minmax(0,1.35fr)_minmax(420px,0.95fr)]">
                   <Panel title="مركز التحكم السريع" subtitle="أهم نقاط الوصول للمستخدم المشترك">
                     <div className="grid gap-4 md:grid-cols-2">
                       <ActionTile title="إدارة المشاريع" desc="راجع مشاريعك وانتقل مباشرة إلى التحرير أو التشغيل." cta="المشاريع" onClick={() => setActiveTab('customer-projects')} />
@@ -150,7 +233,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
               </>
             )}
 
-            {section === 'projects' && (
+            {section === 'projects' && showLiveContent && (
               <div className="space-y-6">
                 <Panel title="كل مشاريعك" subtitle="إدارة المشاريع التابعة لحسابك المشترك">
                   <div className="space-y-4">
@@ -189,8 +272,8 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
               </div>
             )}
 
-            {section === 'subscription' && (
-              <div className="grid gap-6 2xl:grid-cols-[minmax(0,1.25fr)_minmax(420px,0.95fr)] xl:grid-cols-[minmax(0,1.1fr)_minmax(360px,0.9fr)]">
+            {section === 'subscription' && showLiveContent && (
+              <div className="grid gap-6 2xl:grid-cols-[minmax(0,1.25fr)_minmax(420px,0.95fr)]">
                 <Panel title="حالة الاشتراك الحالية" subtitle="كل ما يتعلق بالخطة والفواتير">
                   <div className="grid gap-4 md:grid-cols-3">
                     <BadgeCard label="الخطة الحالية" value="الاحترافي" />
@@ -227,7 +310,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
               </div>
             )}
 
-            {section === 'usage' && (
+            {section === 'usage' && showLiveContent && (
               <div className="grid gap-6 md:grid-cols-2 2xl:grid-cols-3 xl:grid-cols-2">
                 <Panel title="اعتمادات الذكاء" subtitle="المتاح والمستهلك من خطتك">
                   <ProgressBar value={Math.round((usedCredits / Math.max(user.totalCredits, 1)) * 100)} />
@@ -246,8 +329,8 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
               </div>
             )}
 
-            {section === 'activity' && (
-              <div className="grid gap-6 2xl:grid-cols-[minmax(0,1.2fr)_minmax(420px,0.95fr)] xl:grid-cols-[minmax(0,1.1fr)_minmax(360px,0.9fr)]">
+            {section === 'activity' && showLiveContent && (
+              <div className="grid gap-6 2xl:grid-cols-[minmax(0,1.2fr)_minmax(420px,0.95fr)]">
                 <Panel title="آخر النشاطات" subtitle="كل ما جرى في حسابك عبر الموقع">
                   <div className="space-y-3">
                     {ACTIVITY_FEED.map((item) => (
@@ -268,8 +351,8 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
               </div>
             )}
 
-            {section === 'account' && (
-              <div className="grid gap-6 2xl:grid-cols-2 xl:grid-cols-2">
+            {section === 'account' && showLiveContent && (
+              <div className="grid gap-6 xl:grid-cols-2">
                 <Panel title="بيانات الحساب" subtitle="هوية العميل وتفاصيل الوصول">
                   <div className="space-y-3">
                     <SideFact label="الاسم" value={user.name} />
@@ -289,8 +372,8 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
               </div>
             )}
 
-            {section === 'support' && (
-              <div className="grid gap-6 2xl:grid-cols-[minmax(0,1.15fr)_minmax(420px,0.95fr)] xl:grid-cols-[minmax(0,1fr)_minmax(360px,0.95fr)]">
+            {section === 'support' && showLiveContent && (
+              <div className="grid gap-6 2xl:grid-cols-[minmax(0,1.15fr)_minmax(420px,0.95fr)]">
                 <Panel title="الدعم والطلبات" subtitle="كل ما يخص مساعدة العميل المشترك">
                   <div className="grid gap-4 md:grid-cols-2">
                     <ActionTile title="التواصل مع مستشار" desc="للاستفسار عن الترقية أو الاستخدام الاستراتيجي للمنصة." cta="تواصل" onClick={() => setActiveTab('contact-us')} />
@@ -317,13 +400,13 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
 };
 
 const Panel = ({ title, subtitle, children }: { title: string; subtitle: string; children: React.ReactNode }) => (
-  <section className="surface-card p-6 sm:p-7">
-    <div className="mb-5 text-right">
-      <h2 className="text-lg font-black text-slate-900">{title}</h2>
-      <p className="mt-1 text-xs font-bold text-slate-400">{subtitle}</p>
-    </div>
-    {children}
-  </section>
+  <Card>
+    <CardHeader className="pb-5 text-right">
+      <CardTitle>{title}</CardTitle>
+      <CardDescription className="text-xs font-bold text-slate-400">{subtitle}</CardDescription>
+    </CardHeader>
+    <CardContent>{children}</CardContent>
+  </Card>
 );
 
 const HeroMetric = ({ label, value, helper }: { label: string; value: string; helper: string }) => (
@@ -355,7 +438,7 @@ const MetricCard = ({
   };
 
   return (
-    <div className="surface-card p-5">
+    <Card className="ui-card-interactive p-5">
       <div className="mb-4 flex items-center justify-between">
         <div className={`flex h-11 w-11 items-center justify-center rounded-2xl ${tones[tone]}`}>
           <Icon size={18} />
@@ -364,12 +447,12 @@ const MetricCard = ({
       </div>
       <p className="text-3xl font-black text-slate-900">{value}</p>
       <p className="mt-2 text-xs font-bold text-slate-500">{note}</p>
-    </div>
+    </Card>
   );
 };
 
 const SideFact = ({ label, value }: { label: string; value: string }) => (
-  <div className="surface-muted flex items-center justify-between px-4 py-3">
+  <div className="surface-muted flex flex-col gap-1 px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
     <span className="text-sm font-black text-slate-700">{value}</span>
     <span className="text-xs font-black text-slate-400">{label}</span>
   </div>
@@ -386,11 +469,11 @@ const StepRow = ({
   button: string;
   onClick: () => void;
 }) => (
-  <div className="surface-muted p-4">
-    <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-      <button onClick={onClick} className="rounded-2xl bg-slate-900 px-4 py-2.5 text-xs font-black text-white transition hover:bg-slate-800">
+  <div className="surface-muted ui-card-interactive p-4">
+    <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+      <Button onClick={onClick} size="sm">
         {button}
-      </button>
+      </Button>
       <div className="text-right">
         <p className="text-sm font-black text-slate-900">{title}</p>
         <p className="mt-1 text-xs font-bold leading-6 text-slate-500">{desc}</p>
@@ -410,13 +493,13 @@ const ActionTile = ({
   cta: string;
   onClick: () => void;
 }) => (
-  <div className="surface-muted p-5">
+  <div className="surface-muted ui-card-interactive p-5">
     <h3 className="text-sm font-black text-slate-900">{title}</h3>
     <p className="mt-2 text-xs font-bold leading-6 text-slate-500">{desc}</p>
-    <button onClick={onClick} className="mt-4 inline-flex items-center gap-2 rounded-2xl bg-white px-4 py-2.5 text-xs font-black text-slate-800 shadow-sm transition hover:bg-slate-900 hover:text-white">
+    <Button onClick={onClick} variant="outline" size="sm" className="mt-4">
       {cta}
       <ArrowLeft size={14} />
-    </button>
+    </Button>
   </div>
 );
 
@@ -429,14 +512,9 @@ const PortalButton = ({
   onClick: () => void;
   secondary?: boolean;
 }) => (
-  <button
-    onClick={onClick}
-    className={`rounded-2xl px-4 py-3 text-sm font-black transition ${
-      secondary ? 'border border-slate-200 bg-white text-slate-700 hover:bg-slate-50' : 'bg-slate-900 text-white hover:bg-slate-800'
-    }`}
-  >
+  <Button onClick={onClick} variant={secondary ? 'outline' : 'default'} size="md">
     {label}
-  </button>
+  </Button>
 );
 
 const QuickHeroButton = ({
@@ -448,19 +526,14 @@ const QuickHeroButton = ({
   onClick: () => void;
   secondary?: boolean;
 }) => (
-  <button
-    onClick={onClick}
-    className={`rounded-2xl px-5 py-3 text-sm font-black transition ${
-      secondary ? 'border border-slate-200 bg-white text-slate-700 hover:bg-slate-100' : 'bg-slate-900 text-white hover:bg-slate-800'
-    }`}
-  >
+  <Button onClick={onClick} variant={secondary ? 'outline' : 'default'} size="lg">
     {label}
-  </button>
+  </Button>
 );
 
 const BadgeCard = ({ label, value }: { label: string; value: string }) => (
   <div className="surface-muted p-4 text-right">
-    <p className="text-[11px] font-black text-slate-400">{label}</p>
+    <Badge variant="outline" className="rounded-md px-0 py-0 text-[11px] text-slate-400 border-0 bg-transparent">{label}</Badge>
     <p className="mt-2 text-lg font-black text-slate-900">{value}</p>
   </div>
 );
@@ -471,8 +544,8 @@ const ProgressBar = ({ value }: { value: number }) => (
       <span className="text-sm font-black text-slate-800">{value}%</span>
       <span className="text-[11px] font-black text-slate-400">نسبة الاستهلاك</span>
     </div>
-    <div className="h-3 overflow-hidden rounded-full bg-slate-100">
-      <div className="h-full rounded-full bg-gradient-to-l from-indigo-600 to-sky-500" style={{ width: `${Math.min(100, value)}%` }} />
+    <div className="ui-progress-track h-3 overflow-hidden rounded-full bg-slate-100">
+      <div className="ui-progress-fill h-full rounded-full bg-slate-900" style={{ width: `${Math.min(100, value)}%` }} />
     </div>
   </div>
 );
@@ -480,7 +553,7 @@ const ProgressBar = ({ value }: { value: number }) => (
 const FeatureList = ({ items }: { items: string[] }) => (
   <div className="space-y-3">
     {items.map((item) => (
-      <div key={item} className="surface-muted flex items-center gap-3 px-4 py-3">
+      <div key={item} className="surface-muted ui-card-interactive flex items-center gap-3 px-4 py-3">
         <CheckCircle2 size={18} className="text-emerald-500" />
         <span className="text-sm font-black text-slate-700">{item}</span>
       </div>
@@ -489,9 +562,9 @@ const FeatureList = ({ items }: { items: string[] }) => (
 );
 
 const JourneyStrip = ({ items }: { items: string[] }) => (
-  <div className="grid gap-3 md:grid-cols-5">
+  <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
     {items.map((item, index) => (
-      <div key={item} className="surface-muted p-4 text-center">
+      <div key={item} className="surface-muted ui-card-interactive p-4 text-center">
         <p className="text-[11px] font-black text-slate-400">المرحلة {index + 1}</p>
         <p className="mt-2 text-sm font-black text-slate-800">{item}</p>
       </div>

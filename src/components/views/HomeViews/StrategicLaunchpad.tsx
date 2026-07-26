@@ -1,55 +1,36 @@
 import React from 'react';
-import { 
-  Palette, 
-  FileEdit, 
-  Cpu, 
-  ArrowRight,
-  Globe,
-  Layers
-} from 'lucide-react';
-
-/* ═══════════════════════════════════════════════════════════════
-   STRATEGIC WORKBENCH — "Engineering Lab"
-   ═══════════════════════════════════════════════════════════════ */
+import { Palette, FileEdit, ArrowRight, Globe, Layers, LayoutDashboard } from 'lucide-react';
 
 const WorkbenchCard = ({ tool, onClick }: any) => {
   return (
-    <div 
+    <div
       onClick={() => onClick(tool.tab)}
-      className="group relative cursor-pointer hover:-translate-y-2 active:scale-95 transition-all duration-300 h-full"
+      className="group relative h-full cursor-pointer transition-all duration-300 hover:-translate-y-2 active:scale-95"
     >
-      {/* Background Glow */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${tool.gradient} opacity-0 group-hover:opacity-[0.05] blur-2xl transition-all duration-700 rounded-2xl pointer-events-none`} />
-      
-      <div className="relative h-full bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm group-hover:shadow-xl transition-all duration-500 border-b-2 border-b-transparent group-hover:border-b-indigo-500">
-        
-        {/* Top Accent Line */}
-        <div className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r ${tool.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-
-        <div className="p-5 sm:p-6 flex flex-col h-full min-h-[260px] lg:min-h-[220px]">
-          <div className="flex items-start justify-between mb-4">
-            <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${tool.gradient} text-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-500`}>
+      <div className="relative h-full overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-500 group-hover:border-slate-300 group-hover:shadow-lg">
+        <div className="p-5 sm:p-6 flex h-full min-h-[260px] flex-col lg:min-h-[220px]">
+          <div className="mb-4 flex items-start justify-between">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-950 text-white shadow-sm">
               <tool.icon size={20} />
             </div>
-            <div className={`px-2 py-0.5 rounded-md text-[7px] font-black uppercase tracking-wider ${tool.badgeBg} ${tool.badgeText} border ${tool.badgeBorder} opacity-60 group-hover:opacity-100 transition-opacity`}>
+            <div className={`rounded-md border px-2 py-0.5 text-[7px] font-black uppercase tracking-wider ${tool.badgeBg} ${tool.badgeText} ${tool.badgeBorder}`}>
               {tool.badge}
             </div>
           </div>
 
-          <h3 className="text-base font-black text-slate-900 mb-1.5 leading-tight">
+          <h3 className="mb-1.5 text-base font-black leading-tight text-slate-900">
             {tool.title}
           </h3>
 
-          <p className="text-slate-400 font-bold text-[11px] leading-relaxed mb-4 flex-1">
+          <p className="mb-4 flex-1 text-[11px] font-bold leading-relaxed text-slate-500">
             {tool.desc}
           </p>
 
-          {/* Footer (Condensed) */}
-          <div className="flex items-center justify-between pt-4 border-t border-slate-50 mt-auto">
-            <span className="text-[9px] font-black text-indigo-600 uppercase tracking-widest group-hover:translate-x-[-2px] transition-transform">
+          <div className="mt-auto flex items-center justify-between border-t border-slate-100 pt-4">
+            <span className="text-[9px] font-black uppercase tracking-widest text-slate-700 transition-transform group-hover:translate-x-[-2px]">
               {tool.cta}
             </span>
-            <div className="w-7 h-7 rounded-lg bg-slate-50 flex items-center justify-center text-slate-300 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
+            <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-slate-100 text-slate-500 transition-all duration-300 group-hover:bg-slate-900 group-hover:text-white">
               <ArrowRight size={14} className="rotate-180" />
             </div>
           </div>
@@ -63,69 +44,63 @@ export const StrategicLaunchpad = ({ setActiveTab }: any) => {
   const tools = [
     {
       title: 'رادار اكتشاف الفرص',
-      desc: 'استكشف الفجوات السوقية العالمية ورصد التوجهات الاستثمارية الحية في 14 قطاعاً.',
+      desc: 'استكشف الفجوات السوقية العالمية ورصد التوجهات الاستثمارية الحية في القطاعات الرئيسية.',
       icon: Globe,
       tab: 'market-discovery',
-      gradient: 'from-indigo-500 to-blue-600',
-      badge: 'محرك رئيسي',
-      badgeBg: 'bg-indigo-50',
-      badgeText: 'text-indigo-600',
-      badgeBorder: 'border-indigo-100',
+      badge: 'رئيسي',
+      badgeBg: 'bg-slate-100',
+      badgeText: 'text-slate-700',
+      badgeBorder: 'border-slate-200',
       cta: 'افتح الرادار',
     },
     {
       title: 'استوديو الهوية البصرية',
-      desc: 'صمم روح علامتك التجارية والشعارات لتجسيد مشروعك بصرياً.',
+      desc: 'صمّم هوية المشروع بطريقة منظمة، وحدد الألوان والخطوط والاتجاه البصري النهائي.',
       icon: Palette,
       tab: 'brand-identity',
-      gradient: 'from-violet-500 to-purple-600',
-      badge: 'تصميم',
-      badgeBg: 'bg-violet-50',
-      badgeText: 'text-violet-600',
-      badgeBorder: 'border-violet-100',
+      badge: 'هوية',
+      badgeBg: 'bg-slate-100',
+      badgeText: 'text-slate-700',
+      badgeBorder: 'border-slate-200',
       cta: 'افتح الاستوديو',
     },
     {
       title: 'محرر الخطط',
-      desc: 'ابنِ خطة عملك الاحترافية وحول أفكارك إلى وثائق جاهزة للتنفيذ.',
+      desc: 'ابنِ خطة عمل المشروع وحرر الأقسام الأساسية قبل الانتقال إلى التنفيذ والتشغيل.',
       icon: FileEdit,
       tab: 'new-plan',
-      gradient: 'from-rose-500 to-pink-600',
       badge: 'بناء',
-      badgeBg: 'bg-rose-50',
-      badgeText: 'text-rose-600',
-      badgeBorder: 'border-rose-100',
+      badgeBg: 'bg-slate-100',
+      badgeText: 'text-slate-700',
+      badgeBorder: 'border-slate-200',
       cta: 'ابدأ البناء',
     },
     {
-      title: 'المحلل الذكي',
-      desc: 'استخدم قوة الذكاء الاصطناعي لتحليل متانة فكرتك وحساب الجاهزية.',
-      icon: Cpu,
-      tab: 'smart-analyzer',
-      gradient: 'from-amber-500 to-orange-600',
-      badge: 'ذكاء',
-      badgeBg: 'bg-amber-50',
-      badgeText: 'text-amber-600',
-      badgeBorder: 'border-amber-100',
-      cta: 'شغل المحلل',
+      title: 'مساحة المشروع',
+      desc: 'ادخل إلى مركز التشغيل لمتابعة الجاهزية والمهام والتقدم من نقطة عمل موحدة.',
+      icon: LayoutDashboard,
+      tab: 'workspace',
+      badge: 'تشغيل',
+      badgeBg: 'bg-slate-100',
+      badgeText: 'text-slate-700',
+      badgeBorder: 'border-slate-200',
+      cta: 'افتح المساحة',
     },
   ];
 
   return (
-    <section className="py-8 sm:py-12 lg:py-16 px-5 sm:px-10 lg:px-14 bg-slate-50/50 border-b border-slate-100 overflow-hidden">
-      <div className="max-w-7xl mx-auto" dir="rtl">
-        {/* Section Heading (Compact) */}
-        <div className="space-y-2 sm:space-y-3 mb-8 sm:mb-10 text-right">
-          <div className="inline-flex items-center gap-2 px-2.5 py-1 bg-white text-indigo-600 rounded-full text-[9px] font-black uppercase tracking-widest border border-slate-200 shadow-sm">
-             <Layers size={12} /> منصة العمل
+    <section className="overflow-hidden border-b border-slate-100 bg-slate-50/50 px-5 py-8 sm:px-10 sm:py-12 lg:px-14 lg:py-16">
+      <div className="mx-auto max-w-7xl" dir="rtl">
+        <div className="mb-8 space-y-2 text-right sm:mb-10 sm:space-y-3">
+          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-2.5 py-1 text-[9px] font-black uppercase tracking-widest text-slate-700 shadow-sm">
+            <Layers size={12} /> منصة العمل
           </div>
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 leading-tight">
-             مختبر الهندسة الاستثمارية
+          <h2 className="text-2xl font-black leading-tight text-slate-900 sm:text-3xl">
+            مختبر الهندسة الاستثمارية
           </h2>
         </div>
 
-        {/* 4-Column Balanced Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {tools.map((tool, index) => (
             <WorkbenchCard key={index} tool={tool} onClick={setActiveTab} />
           ))}

@@ -60,7 +60,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
 
   return (
     <div className="app-page-shell-wide py-10 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-      <div className="surface-card mb-6 overflow-hidden rounded-[1.75rem] bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] px-6 py-7 sm:px-8">
+      <div className="surface-card mb-6 overflow-hidden rounded-[1.75rem] bg-white px-6 py-7 sm:px-8">
         <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl text-right">
             <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-black text-slate-700">

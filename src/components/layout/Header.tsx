@@ -78,7 +78,7 @@ export const Header: React.FC<HeaderProps> = ({
   ];
 
   return (
-    <div className="sticky top-0 z-40 w-full max-w-full bg-white/80 backdrop-blur-xl border-b border-gray-100 px-3 sm:px-4 md:px-6 lg:px-12 py-2 sm:py-3 flex items-center justify-between">
+    <div className="ui-header-surface sticky top-0 z-40 flex w-full max-w-full items-center justify-between px-3 py-2 sm:px-4 sm:py-3 md:px-6 lg:px-12">
        <div className="flex items-center gap-2 sm:gap-3 lg:gap-6">
           {/* Mobile Back Button / Hamburger Toggle */}
           {['editor', 'brand-identity', 'site-map'].includes(activeTab) ? (
@@ -208,7 +208,7 @@ export const Header: React.FC<HeaderProps> = ({
 
             {isNotificationsOpen && (
               <div className="fixed sm:absolute top-[70px] sm:top-auto sm:mt-4 left-4 right-4 sm:left-0 sm:right-auto sm:w-[380px] bg-white border border-slate-100 rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.12)] z-[100] animate-in fade-in slide-in-from-top-4 duration-500 overflow-hidden rtl text-right">
-                <div className="p-4 sm:p-6 pb-3 sm:pb-4 border-b border-slate-50 flex items-center justify-between bg-gradient-to-l from-slate-50/50 to-white">
+                <div className="p-4 sm:p-6 pb-3 sm:pb-4 border-b border-slate-100 flex items-center justify-between bg-slate-50">
                   <div>
                     <h3 className="font-black text-base sm:text-lg text-slate-900 leading-none">مركز التنبيهات</h3>
                     <p className="text-[9px] sm:text-[10px] font-bold text-slate-400 mt-1 uppercase tracking-wider sm:tracking-widest">3 تنبيهات غير مقروءة</p>
@@ -247,7 +247,7 @@ export const Header: React.FC<HeaderProps> = ({
 
             {isProfileOpen && (
               <div className="fixed sm:absolute top-[70px] sm:top-auto sm:mt-3 left-4 right-4 sm:left-0 sm:right-auto sm:w-72 bg-white border border-gray-100 rounded-[2rem] shadow-2xl z-[100] animate-in fade-in slide-in-from-top-2 duration-300 overflow-hidden rtl text-right">
-                 <div className="p-4 sm:p-5 bg-gradient-to-br from-gray-50 to-white border-b border-gray-100">
+                 <div className="p-4 sm:p-5 bg-slate-50 border-b border-gray-100">
                     <div className="flex items-center gap-3 sm:gap-4 mb-3">
                        <img src={user.avatar} className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl border-2 border-white shadow-sm" alt="Avatar" />
                        <div className="min-w-0">
