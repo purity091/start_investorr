@@ -137,20 +137,20 @@ const competitionLabels: Record<CompetitionBand, string> = {
 };
 
 const typeToneClasses: Record<RecordKind, string> = {
-  problem: 'border-slate-300 bg-slate-100 text-slate-900',
-  opportunity: 'border-indigo-200 bg-indigo-50 text-indigo-700',
+  problem: 'border-transparent bg-slate-100 text-slate-900',
+  opportunity: 'border-transparent bg-indigo-50 text-indigo-700',
 };
 
 const statusToneClasses: Record<RecordStatus, string> = {
-  draft: 'border-slate-300 bg-slate-100 text-slate-800',
-  validated: 'border-slate-300 bg-white text-slate-800',
-  priority: 'border-indigo-200 bg-indigo-50 text-indigo-700',
+  draft: 'border-transparent bg-slate-100 text-slate-800',
+  validated: 'border-transparent bg-slate-100/70 text-slate-800',
+  priority: 'border-transparent bg-indigo-50 text-indigo-700',
 };
 
 const priorityTone = (score: number) => {
-  if (score >= 8) return 'border-indigo-200 bg-indigo-50 text-indigo-700';
-  if (score >= 6) return 'border-slate-300 bg-slate-100 text-slate-800';
-  return 'border-slate-200 bg-background text-slate-700';
+  if (score >= 8) return 'border-transparent bg-indigo-50 text-indigo-700';
+  if (score >= 6) return 'border-transparent bg-slate-100 text-slate-800';
+  return 'border-transparent bg-slate-100/70 text-slate-700';
 };
 
 const suggestions = [
@@ -314,9 +314,9 @@ const FiltersSkeleton = () => (
 );
 
 const ResultsEmpty = ({ onReset }: { onReset: () => void }) => (
-  <Card className="border-dashed shadow-sm">
+  <Card className="shadow-sm">
     <CardContent className="flex min-h-[260px] flex-col items-center justify-center gap-4 p-8 text-center">
-      <div className="rounded-full border bg-muted/40 p-4">
+      <div className="rounded-full bg-muted/60 p-4">
         <Search className="size-6 text-muted-foreground" />
       </div>
       <div className="space-y-2">
@@ -335,7 +335,7 @@ const ResultsEmpty = ({ onReset }: { onReset: () => void }) => (
 const DetailList = ({ record }: { record: EngineRecord | null }) => {
   if (!record) {
     return (
-      <Card className="border-dashed shadow-sm">
+      <Card className="shadow-sm">
         <CardContent className="flex min-h-[280px] items-center justify-center p-6 text-center text-sm text-muted-foreground">
           اختر صفاً من الجدول لمراجعة الملخص السريع.
         </CardContent>
@@ -344,7 +344,7 @@ const DetailList = ({ record }: { record: EngineRecord | null }) => {
   }
 
   return (
-    <Card className="border-border shadow-sm">
+    <Card className="shadow-sm">
       <CardHeader className="space-y-3">
         <div className="flex flex-wrap items-center gap-2">
           <Badge variant="outline" className={cn('rounded-md border font-medium', typeToneClasses[record.kind])}>
@@ -361,19 +361,19 @@ const DetailList = ({ record }: { record: EngineRecord | null }) => {
       </CardHeader>
       <CardContent className="space-y-4 text-sm">
         <div className="grid gap-3 sm:grid-cols-2">
-          <div className="rounded-lg border bg-muted/20 p-3">
+          <div className="rounded-lg bg-muted/40 p-3">
             <div className="text-xs text-muted-foreground">القطاع</div>
             <div className="mt-1 font-medium">{record.sectorName}</div>
           </div>
-          <div className="rounded-lg border bg-muted/20 p-3">
+          <div className="rounded-lg bg-muted/40 p-3">
             <div className="text-xs text-muted-foreground">الشريحة</div>
             <div className="mt-1 font-medium">{record.audience}</div>
           </div>
-          <div className="rounded-lg border bg-muted/20 p-3">
+          <div className="rounded-lg bg-muted/40 p-3">
             <div className="text-xs text-muted-foreground">الحجم السوقي</div>
             <div className="mt-1 font-medium">{marketLabels[record.marketBand]}</div>
           </div>
-          <div className="rounded-lg border bg-muted/20 p-3">
+          <div className="rounded-lg bg-muted/40 p-3">
             <div className="text-xs text-muted-foreground">إمكانية الربح</div>
             <div className="mt-1 font-medium">{profitLabels[record.profitBand]}</div>
           </div>
@@ -381,7 +381,7 @@ const DetailList = ({ record }: { record: EngineRecord | null }) => {
         <Separator />
         <div className="space-y-2">
           <div className="text-sm font-medium">العنصر المرتبط</div>
-          <div className="rounded-lg border bg-muted/20 p-3">{record.linkedTitle}</div>
+          <div className="rounded-lg bg-muted/40 p-3">{record.linkedTitle}</div>
         </div>
         <div className="space-y-2">
           <div className="text-sm font-medium">الدول المرتبطة</div>
@@ -619,10 +619,10 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
           variant="ghost"
           size="sm"
           className={cn(
-            'h-8 rounded-md border px-2 text-xs font-medium transition-colors',
+            'h-8 rounded-md px-2 text-xs font-medium transition-colors',
             bookmarks[record.id]
-              ? 'border-indigo-200 bg-indigo-50 text-indigo-700 hover:bg-indigo-100'
-              : 'border-border bg-background text-muted-foreground hover:bg-muted hover:text-foreground',
+              ? 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100'
+              : 'bg-muted/40 text-muted-foreground hover:bg-muted hover:text-foreground',
           )}
           onClick={(event) => {
             event.stopPropagation();
@@ -662,7 +662,7 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
         </div>
       </TableCell>
       <TableCell>
-        <Badge variant="outline" className={cn('rounded-md border font-medium', typeToneClasses[record.kind])}>
+          <Badge variant="outline" className={cn('rounded-md font-medium shadow-none', typeToneClasses[record.kind])}>
           {typeLabels[record.kind]}
         </Badge>
       </TableCell>
@@ -698,7 +698,7 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
         </Tooltip>
       </TableCell>
       <TableCell>
-        <Badge variant="outline" className={cn('rounded-md border font-medium', priorityTone(record.priorityScore))}>
+        <Badge variant="outline" className={cn('rounded-md font-medium shadow-none', priorityTone(record.priorityScore))}>
           {record.priorityScore}/10
         </Badge>
       </TableCell>
@@ -710,9 +710,9 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
     <TooltipProvider>
       <div dir="rtl" className="min-h-screen bg-background text-right text-foreground">
         <div className="mx-auto flex w-full max-w-[1700px] flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 xl:px-10">
-          <Card className="border-border shadow-sm">
+          <Card className="shadow-sm">
             <CardContent className="p-4">
-              <div className="flex flex-col gap-3 rounded-xl border bg-card px-4 py-3">
+              <div className="flex flex-col gap-3 rounded-xl bg-muted/20 px-4 py-3">
                 <div className="flex flex-col gap-2 lg:flex-row lg:items-start lg:justify-between">
                   <div className="min-w-0 space-y-2">
                     <div className="flex flex-wrap items-center gap-1.5">
@@ -729,19 +729,19 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
                     </div>
                   </div>
                   <div className="grid grid-cols-2 gap-2 text-xs sm:grid-cols-4 lg:min-w-[480px]">
-                    <div className="rounded-lg border bg-muted/30 px-2.5 py-2">
+                    <div className="rounded-lg bg-background px-3 py-2.5">
                       <div className="text-[11px] text-muted-foreground">المشاكل</div>
                       <div className="mt-1 text-sm font-semibold leading-none sm:text-base">{totalProblems}</div>
                     </div>
-                    <div className="rounded-lg border bg-muted/30 px-2.5 py-2">
+                    <div className="rounded-lg bg-background px-3 py-2.5">
                       <div className="text-[11px] text-muted-foreground">الفرص</div>
                       <div className="mt-1 text-sm font-semibold leading-none sm:text-base">{totalOpportunities}</div>
                     </div>
-                    <div className="rounded-lg border bg-muted/30 px-2.5 py-2">
+                    <div className="rounded-lg bg-background px-3 py-2.5">
                       <div className="text-[11px] text-muted-foreground">الأولوية العالية</div>
                       <div className="mt-1 text-sm font-semibold leading-none sm:text-base">{priorityRecords}</div>
                     </div>
-                    <div className="rounded-lg border bg-muted/30 px-2.5 py-2">
+                    <div className="rounded-lg bg-background px-3 py-2.5">
                       <div className="text-[11px] text-muted-foreground">القطاعات النشطة</div>
                       <div className="mt-1 text-sm font-semibold leading-none sm:text-base">{activeSectors}</div>
                     </div>
@@ -751,7 +751,7 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
             </CardContent>
           </Card>
 
-          <Card className="border-border shadow-sm">
+          <Card className="shadow-sm">
             <CardContent className="flex flex-col gap-3 p-4">
               <div className="flex flex-col gap-2.5 lg:flex-row lg:items-center">
                 <div className="relative flex-1">
@@ -785,7 +785,7 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
             </CardContent>
           </Card>
 
-          <Card className="border-border shadow-sm">
+          <Card className="shadow-sm">
             <CardHeader className="pb-2">
               <div className="flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between">
                 <div className="space-y-1">
@@ -840,7 +840,7 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
                 <FiltersSkeleton />
               ) : (
                 <div className="overflow-x-auto">
-                  <div className="flex min-w-max items-center gap-3 pb-1">
+                  <div className="flex min-w-max items-center gap-3 rounded-xl bg-muted/30 p-3">
                   <Select value={sortBy} onValueChange={setSortBy}>
                     <SelectTrigger><SelectValue placeholder="ترتيب حسب" /></SelectTrigger>
                     <SelectContent>
@@ -937,7 +937,7 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
 
           <div className="space-y-4">
               {isLoading ? (
-                <Card className="border-border shadow-sm">
+                <Card className="shadow-sm">
                   <CardContent className="space-y-3 p-4">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <LoaderCircle className="size-4 animate-spin" />
@@ -951,11 +951,11 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
               ) : filteredRecords.length === 0 ? (
                 <ResultsEmpty onReset={resetFilters} />
               ) : (
-                <Card className="border-border shadow-sm">
+                <Card className="overflow-hidden shadow-sm">
                   <CardContent className="p-0">
-                    <div className="overflow-x-auto">
+                    <div className="overflow-x-auto rounded-xl bg-card">
                       <Table dir="rtl" className="w-full min-w-[1680px] table-fixed">
-                        <TableHeader>
+                        <TableHeader className="bg-muted/30">
                           <TableRow>
                             <TableHead className="w-[140px] whitespace-nowrap">حفظ المشروع</TableHead>
                             <TableHead className="w-[320px] whitespace-nowrap">العنوان</TableHead>
@@ -980,10 +980,10 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
               {filteredRecords.length > 0 ? (
                 <div className="flex flex-col gap-4">
                   <div className="flex flex-wrap items-center gap-2 text-sm">
-                    <Badge variant="outline" className="rounded-md px-3 py-1">
+                    <Badge variant="outline" className="rounded-md border-transparent bg-muted px-3 py-1 text-foreground">
                       {filteredRecords.length} نتيجة
                     </Badge>
-                    <Badge variant="outline" className="rounded-md px-3 py-1">
+                    <Badge variant="outline" className="rounded-md border-transparent bg-muted px-3 py-1 text-foreground">
                       <Database className="me-1 size-3.5" />
                       عرض قاعدة بيانات
                     </Badge>
