@@ -46,6 +46,8 @@ const ResultPage = lazyPage(() => import('../../features/easy-mode/ResultPage'))
 const BusinessModelCanvas = lazyNamedPage(() => import('../features/business/BusinessModelCanvas'), 'BusinessModelCanvas');
 const UnifiedWorkspace = lazyNamedPage(() => import('../../features/workspace/UnifiedWorkspace'), 'UnifiedWorkspace');
 const CompanyDeepDive = lazyNamedPage(() => import('../features/discovery/CompanyDeepDive'), 'CompanyDeepDive');
+const ProblemDeepDive = lazyNamedPage(() => import('../features/discovery/ProblemDeepDive'), 'ProblemDeepDive');
+const SavedMarketItems = lazyNamedPage(() => import('../features/discovery/SavedMarketItems'), 'SavedMarketItems');
 
 const AdvertisingDashboard = lazyPage(() => import('../sectors/AdvertisingMarketing/AdvertisingDashboard'));
 const MarketingDashboard = lazyPage(() => import('../sectors/AdvertisingMarketing/MarketingDashboard'));
@@ -260,7 +262,7 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
   setSelectedCompanyId
 }) => {
   const { updateProfile, updateBrand, setPlanSections } = useProjectWorkspace();
-  const containerClass = ['home', 'editor', 'strategic-dashboard', 'contact-us', 'market-discovery', 'problem-engine', 'hackathon', 'workspace', 'company-deep-dive', 'site-map', 'discovery-center', 'subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-subscription', 'customer-usage', 'customer-activity', 'customer-account', 'customer-support'].includes(activeTab) || activeTab.endsWith('-dashboard') 
+  const containerClass = ['home', 'editor', 'strategic-dashboard', 'contact-us', 'market-discovery', 'problem-engine', 'problem-detail', 'saved-market-items', 'hackathon', 'workspace', 'company-deep-dive', 'site-map', 'discovery-center', 'subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-subscription', 'customer-usage', 'customer-activity', 'customer-account', 'customer-support'].includes(activeTab) || activeTab.endsWith('-dashboard') 
     ? 'w-full' 
     : 'app-page-shell-wide py-6 sm:py-8 lg:py-10 pb-20 lg:pb-10';
 
@@ -291,6 +293,10 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
 
   const renderContent = () => {
     switch (activeTab) {
+      case 'saved-market-items':
+        return <SavedMarketItems setActiveTab={setActiveTab} />;
+      case 'problem-detail':
+        return <ProblemDeepDive onBack={() => setActiveTab('problem-engine')} />;
       case 'company-deep-dive':
         return <CompanyDeepDive companyId={selectedCompanyId} onBack={() => setActiveTab('home')} />;
       case 'home':
@@ -320,18 +326,62 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
       case 'my-plans':
         return <MyProjects setActiveTab={setActiveTab} />;
       case 'new-plan':
-        // Guard optional props to avoid runtime ReferenceError if not provided by the caller
-        const subTabLabelSafe = typeof subTabLabel === 'string' ? subTabLabel : undefined;
-        const setSubTabLabelSafe = typeof setSubTabLabel === 'function' ? setSubTabLabel : undefined;
-        return (
+      // Guard optional props to avoid runtime ReferenceError if not provided by the caller
+          const subTabLabelSafe = typeof subTabLabel === 'string' ? subTabLabel : undefined;
+          const setSubTabLabelSafe = typeof setSubTabLabel === 'function' ? setSubTabLabel : undefined;
+          return (
           <NewPlan 
             key={`${activeTab}-${subTabLabel ? 'sub' : 'root'}`}
             onStart={(id) => id === 'easy' ? setActiveTab('strategic-dashboard') : setActiveTab('editor')} 
             onBuildPlan={() => setActiveTab('workspace')}
-            setSubTabLabel={setSubTabLabelSafe} 
-            subTabLabel={subTabLabelSafe}
-          />
-        );
+              setSubTabLabel={setSubTabLabelSafe} 
+              subTabLabel={subTabLabelSafe}
+            />
+          );
+        case 'new-plan-family':
+          return (
+            <NewPlan
+              key="new-plan-family"
+              initialMode="family"
+              onStart={(id) => id === 'easy' ? setActiveTab('strategic-dashboard') : setActiveTab('editor')}
+              onBuildPlan={() => setActiveTab('workspace')}
+              setSubTabLabel={typeof setSubTabLabel === 'function' ? setSubTabLabel : (() => {})}
+              subTabLabel="مود الأهل"
+            />
+          );
+        case 'new-plan-pro':
+          return (
+            <NewPlan
+              key="new-plan-pro"
+              initialMode="easy"
+              onStart={(id) => id === 'easy' ? setActiveTab('strategic-dashboard') : setActiveTab('editor')}
+              onBuildPlan={() => setActiveTab('workspace')}
+              setSubTabLabel={typeof setSubTabLabel === 'function' ? setSubTabLabel : (() => {})}
+              subTabLabel="النموذج الاحترافي"
+            />
+          );
+        case 'new-plan-mit24':
+          return (
+            <NewPlan
+              key="new-plan-mit24"
+              initialMode="mit24"
+              onStart={(id) => id === 'easy' ? setActiveTab('strategic-dashboard') : setActiveTab('editor')}
+              onBuildPlan={() => setActiveTab('workspace')}
+              setSubTabLabel={typeof setSubTabLabel === 'function' ? setSubTabLabel : (() => {})}
+              subTabLabel="MIT 24 Steps"
+            />
+          );
+        case 'new-plan-bmc':
+          return (
+            <NewPlan
+              key="new-plan-bmc"
+              initialMode="bmc"
+              onStart={(id) => id === 'easy' ? setActiveTab('strategic-dashboard') : setActiveTab('editor')}
+              onBuildPlan={() => setActiveTab('workspace')}
+              setSubTabLabel={typeof setSubTabLabel === 'function' ? setSubTabLabel : (() => {})}
+              subTabLabel="Business Canvas"
+            />
+          );
       case 'strategic-dashboard':
         return <ResultPage />;
       case 'bmc':
@@ -366,8 +416,6 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
             }
           />
         );
-      case 'comparison':
-        return <PlanComparison />;
       case 'pricing':
         return <PricingPlans setActiveTab={setActiveTab} />;
       case 'hackathon':
@@ -696,7 +744,7 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
       case 'digital-health': return <DigitalHealthDashboard />;
       case 'mental-health-services': return <MentalHealthServicesDashboard />;
       case 'ai-platforms': return <AiPlatformsDashboard />;
-      case 'problem-engine': return <ProblemOpportunityEngine />;
+      case 'problem-engine': return <ProblemOpportunityEngine setActiveTab={setActiveTab} />;
       case 'cloud-services-internet': return <CloudServicesDashboard />;
       case 'streaming-platforms': return <StreamingPlatformsDashboard />;
       case 'podcast-industry': return <PodcastIndustryDashboard />;

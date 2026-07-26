@@ -5,6 +5,7 @@ import {
   CheckCircle2,
   Clock,
   FileDown,
+  Grid3X3,
   LayoutGrid,
   List,
   Plus,
@@ -13,6 +14,8 @@ import {
   Star,
   TrendingUp,
 } from 'lucide-react';
+
+import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
 import { Input } from '../ui/Input';
@@ -24,6 +27,14 @@ import {
   NoResultsState,
   PageSectionSkeleton,
 } from '../ui/PageStates';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '../ui/table';
 
 interface Project {
   id: string;
@@ -92,10 +103,17 @@ interface MyProjectsProps {
   setActiveTab?: (tab: string) => void;
 }
 
-type ProjectsPreviewState = 'live' | 'loading' | 'first-use' | 'empty' | 'no-results' | 'success' | 'error';
+type ProjectsPreviewState =
+  | 'live'
+  | 'loading'
+  | 'first-use'
+  | 'empty'
+  | 'no-results'
+  | 'success'
+  | 'error';
 
 const PROJECT_PAGE_STATES: Array<{ id: ProjectsPreviewState; label: string }> = [
-  { id: 'live', label: 'الحالة الحية' },
+  { id: 'live', label: 'الحية' },
   { id: 'loading', label: 'تحميل' },
   { id: 'first-use', label: 'أول استخدام' },
   { id: 'empty', label: 'فارغة' },
@@ -106,20 +124,23 @@ const PROJECT_PAGE_STATES: Array<{ id: ProjectsPreviewState; label: string }> = 
 
 export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [filterMode, setFilterMode] = useState<'all' | 'ready' | 'draft'>('all');
-  const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
+  const [viewMode, setViewMode] = useState<'table' | 'grid'>('table');
   const [previewState, setPreviewState] = useState<ProjectsPreviewState>('live');
 
   const filteredProjects = useMemo(() => {
-    return MOCK_PROJECTS.filter((project) => {
-      const matchSearch = project.name.includes(searchTerm) || project.sector.includes(searchTerm);
-      const matchFilter = filterMode === 'all' ? true : project.status === filterMode;
-      return matchSearch && matchFilter;
-    });
-  }, [searchTerm, filterMode]);
+    const query = searchTerm.trim();
+    if (!query) return MOCK_PROJECTS;
 
+    return MOCK_PROJECTS.filter((project) => {
+      return project.name.includes(query) || project.sector.includes(query);
+    });
+  }, [searchTerm]);
+
+  const readyCount = MOCK_PROJECTS.filter((project) => project.status === 'ready').length;
+  const favoriteCount = MOCK_PROJECTS.filter((project) => project.isFavorite).length;
   const showNoResults =
-    previewState === 'no-results' || (previewState === 'live' && filteredProjects.length === 0 && searchTerm.trim().length > 0);
+    previewState === 'no-results' ||
+    (previewState === 'live' && filteredProjects.length === 0 && searchTerm.trim().length > 0);
   const showEmpty = previewState === 'empty';
   const showFirstUse = previewState === 'first-use';
   const showLoading = previewState === 'loading';
@@ -129,421 +150,409 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
 
   const resetDiscovery = () => {
     setSearchTerm('');
-    setFilterMode('all');
     setPreviewState('live');
   };
 
   return (
-    <div dir="rtl" className="app-page-shell-wide min-h-screen pb-20 font-['IBM_Plex_Sans_Arabic'] animate-in fade-in duration-700">
-      <div className="mb-6 pt-6 sm:pt-8">
-        <Card className="overflow-hidden rounded-[24px] border-slate-200 bg-white p-4 sm:p-5">
-          <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
-            <div className="text-right">
-              <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">مساحة المشاريع</p>
-              <h1 className="mt-2 text-2xl font-black text-slate-950 sm:text-3xl">مشاريعي</h1>
-              <p className="mt-2 text-[13px] font-bold leading-6 text-slate-600">
+    <div dir="rtl" className="min-h-screen w-full bg-background px-3 pb-16 pt-4 sm:px-4 lg:px-5 2xl:px-6">
+      <div className="mx-auto flex w-full max-w-[1840px] flex-col gap-4">
+        <section className="rounded-lg border border-border bg-background">
+          <div className="flex flex-col gap-3 border-b border-border px-4 py-3 lg:flex-row lg:items-center lg:justify-between">
+            <div className="min-w-0 text-right">
+              <div className="flex flex-wrap items-center justify-start gap-2">
+                <h1 className="text-xl font-semibold text-foreground">مشاريعي</h1>
+                <Badge variant="secondary">مساحة المشاريع</Badge>
+              </div>
+              <p className="mt-1 text-sm text-muted-foreground">
                 مراجعة سريعة للمشاريع والعودة إلى آخر نقطة عمل.
               </p>
             </div>
 
-            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center xl:justify-end">
-              <div className="grid grid-cols-3 gap-2 sm:min-w-[330px]">
-                <MiniStat label="المشاريع" value={`${MOCK_PROJECTS.length}`} />
-                <MiniStat
-                  label="جاهزة"
-                  value={`${MOCK_PROJECTS.filter((project) => project.status === 'ready').length}`}
-                />
-                <MiniStat
-                  label="المفضلة"
-                  value={`${MOCK_PROJECTS.filter((project) => project.isFavorite).length}`}
+            <div className="grid grid-cols-3 gap-2 sm:min-w-[320px]">
+              <CompactStat label="المشاريع" value={MOCK_PROJECTS.length} />
+              <CompactStat label="جاهزة" value={readyCount} />
+              <CompactStat label="المفضلة" value={favoriteCount} />
+            </div>
+          </div>
+
+          <div className="grid gap-3 px-4 py-3 xl:grid-cols-[minmax(280px,1fr)_auto] xl:items-center">
+            <div className="flex min-w-0 flex-col gap-2 md:flex-row md:items-center">
+              <div className="relative min-w-0 flex-1">
+                <Search className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+                <Input
+                  placeholder="ابحث عن مشروع أو قطاع"
+                  value={searchTerm}
+                  onChange={(event) => setSearchTerm(event.target.value)}
+                  className="h-9 pr-9"
                 />
               </div>
 
-              <Button onClick={() => setActiveTab?.('new-plan')} size="lg" className="w-full sm:w-auto">
-                <Plus size={16} strokeWidth={3} />
+              <div className="inline-flex h-9 shrink-0 items-center rounded-lg border border-border bg-muted p-0.5">
+                <Button
+                  aria-pressed={viewMode === 'table'}
+                  variant={viewMode === 'table' ? 'secondary' : 'ghost'}
+                  size="icon-sm"
+                  onClick={() => setViewMode('table')}
+                  title="عرض جدول"
+                >
+                  <List className="size-4" />
+                </Button>
+                <Button
+                  aria-pressed={viewMode === 'grid'}
+                  variant={viewMode === 'grid' ? 'secondary' : 'ghost'}
+                  size="icon-sm"
+                  onClick={() => setViewMode('grid')}
+                  title="عرض بطاقات"
+                >
+                  <Grid3X3 className="size-4" />
+                </Button>
+              </div>
+
+              <Button onClick={() => setActiveTab?.('new-plan')} size="sm" className="md:w-auto">
+                <Plus className="size-4" />
                 <span>مشروع جديد</span>
               </Button>
             </div>
-          </div>
-        </Card>
-      </div>
 
-      <Card className="mb-6 p-4 sm:p-5">
-        <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
-          <div className="flex items-center justify-between gap-3">
-            <div className="flex items-center gap-3 rounded-2xl bg-slate-50 px-3 py-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-slate-900 text-white">
-                <Activity size={18} strokeWidth={2.5} />
-              </div>
-              <div>
-                <p className="text-sm font-black text-slate-900">مركز المشاريع</p>
-                <p className="text-[11px] font-bold text-slate-500">بحث وتنقل سريع</p>
-              </div>
-            </div>
-
-            <div className="flex rounded-xl bg-slate-100 p-1 sm:hidden">
-              <button
-                aria-pressed={viewMode === 'list'}
-                onClick={() => setViewMode('list')}
-                className={`ui-card-interactive rounded-lg p-2 transition-all ${
-                  viewMode === 'list' ? 'ui-selected-ring bg-white text-slate-900 shadow-sm' : 'text-slate-400'
-                }`}
-              >
-                <List size={16} strokeWidth={2.5} />
-              </button>
-              <button
-                aria-pressed={viewMode === 'grid'}
-                onClick={() => setViewMode('grid')}
-                className={`ui-card-interactive rounded-lg p-2 transition-all ${
-                  viewMode === 'grid' ? 'ui-selected-ring bg-white text-slate-900 shadow-sm' : 'text-slate-400'
-                }`}
-              >
-                <LayoutGrid size={16} strokeWidth={2.5} />
-              </button>
+            <div className="flex flex-wrap items-center gap-2 xl:justify-end">
+              <span className="text-xs font-medium text-muted-foreground">حالات الواجهة</span>
+              {PROJECT_PAGE_STATES.map((stateOption) => (
+                <Button
+                  key={stateOption.id}
+                  variant={previewState === stateOption.id ? 'secondary' : 'ghost'}
+                  size="xs"
+                  onClick={() => setPreviewState(stateOption.id)}
+                >
+                  {stateOption.label}
+                </Button>
+              ))}
             </div>
           </div>
+        </section>
 
-          <div className="flex w-full flex-col gap-3 sm:flex-row sm:items-center xl:w-auto">
-            <div className="hidden rounded-xl bg-slate-100 p-1 sm:flex">
-              <button
-                aria-pressed={viewMode === 'list'}
-                onClick={() => setViewMode('list')}
-                className={`ui-card-interactive rounded-lg p-2.5 transition-all ${
-                  viewMode === 'list' ? 'ui-selected-ring bg-white text-slate-900 shadow-sm' : 'text-slate-400 hover:text-slate-600'
-                }`}
-              >
-                <List size={18} strokeWidth={2.5} />
-              </button>
-              <button
-                aria-pressed={viewMode === 'grid'}
-                onClick={() => setViewMode('grid')}
-                className={`ui-card-interactive rounded-lg p-2.5 transition-all ${
-                  viewMode === 'grid' ? 'ui-selected-ring bg-white text-slate-900 shadow-sm' : 'text-slate-400 hover:text-slate-600'
-                }`}
-              >
-                <LayoutGrid size={18} strokeWidth={2.5} />
-              </button>
-            </div>
-
-            <div className="relative w-full xl:min-w-[360px] 2xl:min-w-[420px]">
-              <Search className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
-              <Input
-                placeholder="ابحث عن مشروع..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pr-11"
-              />
-            </div>
-            <Button onClick={() => setActiveTab?.('new-plan')} size="lg" className="w-full sm:w-auto">
-              <Plus size={18} strokeWidth={3} />
-              <span>مشروع جديد</span>
-            </Button>
-          </div>
-        </div>
-      </Card>
-
-      <Card className="mb-6 p-4 sm:p-5">
-        <div className="flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between">
-          <div className="text-right">
-            <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">حالات الواجهة</p>
-            <h2 className="mt-1 text-base font-black text-slate-950">معاينة حالات الصفحة</h2>
-            <p className="mt-1 text-[12px] font-bold leading-6 text-slate-600">تبديل سريع بين الحالات المرجعية للمبرمج.</p>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {PROJECT_PAGE_STATES.map((stateOption) => (
-              <Button
-                key={stateOption.id}
-                variant={previewState === stateOption.id ? 'default' : 'outline'}
-                size="sm"
-                className={previewState === stateOption.id ? 'ui-selected-ring' : ''}
-                onClick={() => setPreviewState(stateOption.id)}
-              >
-                {stateOption.label}
-              </Button>
-            ))}
-          </div>
-        </div>
-      </Card>
-
-      {showSuccess ? (
-        <div className="mb-6">
+        {showSuccess ? (
           <InlineStatusBanner
             tone="success"
             title="تم حفظ تغييرات المشروع بنجاح"
-            description="هذه هي حالة النجاح بعد إجراء مهم مثل تحديث المشروع أو تثبيت خطة العمل أو تفعيل التصدير."
+            description="حالة مرجعية بعد تحديث المشروع أو تثبيت خطة العمل."
           />
-        </div>
-      ) : null}
+        ) : null}
 
-      <div>
         {showLoading ? (
-          <div className="space-y-4">
+          <div className="space-y-3">
             <PageSectionSkeleton blocks={4} />
             <PageSectionSkeleton blocks={3} compact />
           </div>
         ) : showFirstUse ? (
           <FirstUseState
-            description="هذه هي الحالة الأولى للمستخدم قبل إنشاء أي مشروع. يجب أن تشرح القيمة مباشرة وتقوده إلى أول خطوة بدون ازدحام."
+            description="هذه الحالة تظهر قبل إنشاء أول مشروع، مع إجراء مباشر لبدء المشروع."
             actionLabel="إنشاء أول مشروع"
             onAction={() => setActiveTab?.('new-plan')}
           />
         ) : showEmpty ? (
           <EmptyState
             title="لا توجد مشاريع محفوظة حالياً"
-            description="هذه هي الحالة الفارغة بعد حذف المشاريع أو قبل المزامنة. يجب أن تشرح لماذا الصفحة فارغة وما الخطوة التالية المتاحة."
+            description="الحالة الفارغة للصفحة عندما لا توجد مشاريع قابلة للعرض."
             actionLabel="إنشاء مشروع جديد"
             onAction={() => setActiveTab?.('new-plan')}
           />
         ) : showError ? (
           <ErrorState
-            description="هذه هي حالة الخطأ عندما يتعذر تحميل المشاريع أو مزامنة البيانات. المطلوب بصرياً هو رسالة واضحة مع إجراء استعادة مباشر."
+            description="حالة الخطأ عند تعذر تحميل المشاريع أو مزامنة البيانات."
             onRetry={() => setPreviewState('loading')}
           />
         ) : showNoResults ? (
           <NoResultsState
-            description="لا يوجد مشروع يطابق كلمات البحث أو الفلاتر الحالية. يجب أن يرى المستخدم فوراً ما الذي يفعله لإعادة النتائج."
+            description="لا يوجد مشروع يطابق كلمات البحث الحالية."
             onReset={resetDiscovery}
           />
-        ) : viewMode === 'list' && shouldShowCollection ? (
-          <div className="flex flex-col gap-3">
-            <div className="hidden items-center px-6 py-3 text-xs font-bold uppercase tracking-wider text-slate-400 xl:flex">
-              <div className="flex flex-[2] items-center">
-                <div className="w-[42px] shrink-0" />
-                <div className="pl-4">المشروع / القطاع</div>
-              </div>
-              <div className="flex flex-[2] items-center">
-                <div className="flex-1 pr-2">التقدم</div>
-                <div className="flex-1 text-center">تقييم الذكاء الاصطناعي</div>
-              </div>
-              <div className="flex flex-[2] items-center">
-                <div className="flex-1 text-center">الحالة</div>
-                <div className="flex-1 pl-4 text-left">الإجراءات</div>
-              </div>
-            </div>
-
-            {filteredProjects.map((project) => (
-              <ProjectListRow key={project.id} project={project} setActiveTab={setActiveTab} />
-            ))}
-
-            <div
-              onClick={() => setActiveTab?.('new-plan')}
-              className="group mt-2 flex cursor-pointer items-center justify-center gap-4 rounded-2xl border-2 border-dashed border-slate-200 p-6 transition-all hover:border-blue-400 hover:bg-blue-50/30"
-            >
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-slate-400 transition-all group-hover:bg-blue-600 group-hover:text-white">
-                <Plus size={20} strokeWidth={3} />
-              </div>
-              <span className="text-sm font-black text-slate-400 group-hover:text-blue-600">إضافة مشروع جديد</span>
-            </div>
-          </div>
+        ) : viewMode === 'table' && shouldShowCollection ? (
+          <ProjectsTable projects={filteredProjects} setActiveTab={setActiveTab} />
         ) : shouldShowCollection ? (
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3 2xl:grid-cols-4">
-            {filteredProjects.map((project) => (
-              <ProjectGridCard key={project.id} project={project} setActiveTab={setActiveTab} />
-            ))}
-
-            <div
-              onClick={() => setActiveTab?.('new-plan')}
-              className="group flex min-h-[250px] cursor-pointer flex-col items-center justify-center rounded-3xl border-2 border-dashed border-slate-200 p-8 transition-all hover:border-blue-400 hover:bg-blue-50/30 sm:min-h-[300px]"
-            >
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 text-slate-400 transition-all group-hover:bg-blue-600 group-hover:text-white sm:h-14 sm:w-14">
-                <Plus size={24} className="sm:h-7 sm:w-7" strokeWidth={3} />
-              </div>
-              <span className="text-xs font-black text-slate-400 group-hover:text-blue-600 sm:text-sm">إضافة مشروع</span>
-            </div>
-          </div>
+          <ProjectsGrid projects={filteredProjects} setActiveTab={setActiveTab} />
         ) : null}
       </div>
     </div>
   );
 };
 
-const MiniStat = ({ label, value }: { label: string; value: string }) => (
-  <div className="rounded-2xl border border-slate-200 bg-white px-3 py-3 text-center">
-    <p className="text-[10px] font-black text-slate-400">{label}</p>
-    <p className="mt-1 text-lg font-black text-slate-950">{value}</p>
-  </div>
-);
+function ProjectsTable({
+  projects,
+  setActiveTab,
+}: {
+  projects: Project[];
+  setActiveTab?: (tab: string) => void;
+}) {
+  return (
+    <section className="overflow-hidden rounded-lg border border-border bg-background">
+      <Table dir="rtl">
+        <TableHeader>
+          <TableRow className="bg-muted/60 hover:bg-muted/60">
+            <TableHead className="h-10 min-w-[280px]">المشروع</TableHead>
+            <TableHead className="h-10 min-w-[190px]">التقدم</TableHead>
+            <TableHead className="h-10 min-w-[120px]">التقييم</TableHead>
+            <TableHead className="h-10 min-w-[120px]">الحالة</TableHead>
+            <TableHead className="h-10 min-w-[140px]">آخر تعديل</TableHead>
+            <TableHead className="h-10 min-w-[148px] text-left">الإجراءات</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {projects.map((project) => (
+            <ProjectTableRow key={project.id} project={project} setActiveTab={setActiveTab} />
+          ))}
+          <TableRow className="hover:bg-muted/30">
+            <TableCell colSpan={6} className="p-3">
+              <Button variant="ghost" size="sm" className="w-full" onClick={() => setActiveTab?.('new-plan')}>
+                <Plus className="size-4" />
+                <span>إضافة مشروع جديد</span>
+              </Button>
+            </TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+    </section>
+  );
+}
 
-const ProjectListRow: React.FC<{ project: Project; setActiveTab?: (tab: string) => void }> = ({ project, setActiveTab }) => {
-  const averageProgress = Math.round((project.progress.market + project.progress.product + project.progress.financial) / 3);
+function ProjectTableRow({
+  project,
+  setActiveTab,
+}: {
+  project: Project;
+  setActiveTab?: (tab: string) => void;
+}) {
+  const averageProgress = getAverageProgress(project);
 
   return (
-    <Card className="ui-card-interactive group rounded-2xl border-slate-200 p-4 transition-all duration-300 hover:border-slate-300 hover:shadow-md">
-      <div className="relative flex flex-col items-start gap-0 overflow-hidden xl:flex-row xl:items-center xl:gap-4">
-        <div className="mb-3 flex w-full items-center justify-between xl:mb-0 xl:w-auto xl:flex-[2]">
-          <button
-            className={`mr-0 ml-4 hidden shrink-0 rounded-xl p-2 transition-all xl:block ${
-              project.isFavorite ? 'bg-amber-50 text-amber-400' : 'bg-slate-50 text-slate-300 hover:text-amber-400'
-            }`}
-          >
-            <Star size={18} fill={project.isFavorite ? 'currentColor' : 'none'} strokeWidth={2.5} />
-          </button>
-
-          <div className="flex min-w-0 flex-1 items-center gap-3 md:gap-4">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-900 text-white shadow-sm md:h-12 md:w-12">
-              <LayoutGrid size={20} strokeWidth={2.5} className="h-5 w-5" />
-            </div>
-            <div className="min-w-0">
-              <h3
-                className="mb-0.5 cursor-pointer truncate text-sm font-black text-slate-900 transition-colors group-hover:text-blue-600 md:mb-1"
-                onClick={() => setActiveTab?.('editor')}
-              >
-                {project.name}
-              </h3>
-              <div className="flex flex-wrap items-center gap-2 text-[10px] font-bold text-slate-400 md:text-[11px]">
-                <span className="rounded bg-slate-100 px-1.5 py-0.5 uppercase tracking-wider text-slate-500 md:px-2">
-                  {project.sector}
-                </span>
-                <span className="hidden sm:inline">•</span>
-                <span className="flex items-center gap-1">
-                  <Clock size={10} />
-                  <span className="hidden sm:inline">آخر تعديل</span>
-                  {project.lastEdited}
-                </span>
-              </div>
-            </div>
+    <TableRow className="group">
+      <TableCell className="py-3">
+        <div className="flex min-w-0 items-center gap-3">
+          <div className="flex size-9 shrink-0 items-center justify-center rounded-md border border-border bg-muted text-muted-foreground">
+            <LayoutGrid className="size-4" />
           </div>
 
-          <button
-            className={`shrink-0 rounded-xl p-2 transition-all xl:hidden ${
-              project.isFavorite ? 'bg-amber-50 text-amber-400' : 'bg-slate-50 text-slate-300 hover:text-amber-400'
-            }`}
-          >
-            <Star size={16} fill={project.isFavorite ? 'currentColor' : 'none'} strokeWidth={2.5} />
-          </button>
-        </div>
-
-        <div className="mb-3 grid w-full grid-cols-1 gap-3 sm:grid-cols-2 xl:mb-0 xl:flex xl:w-auto xl:flex-[2] xl:items-center xl:gap-0">
-          <div className="w-full xl:flex-1 xl:pl-2 xl:pr-2 2xl:pr-6">
-            <div className="mb-1.5 flex items-center justify-between text-[10px] font-black uppercase text-slate-400">
-              <span>التقدم</span>
-              <span className="text-slate-700">{averageProgress}%</span>
-            </div>
-            <div className="ui-progress-track flex h-1.5 w-full items-center gap-0.5 overflow-hidden rounded-full bg-slate-100">
-              <div className="ui-progress-fill h-full bg-blue-600" style={{ width: `${project.progress.market / 3}%` }} />
-              <div className="ui-progress-fill h-full bg-emerald-500" style={{ width: `${project.progress.product / 3}%` }} />
-              <div className="ui-progress-fill h-full bg-amber-500" style={{ width: `${project.progress.financial / 3}%` }} />
-            </div>
-          </div>
-
-          <div className="flex w-full items-center justify-start sm:justify-center xl:flex-1">
-            <div className="flex w-full items-center justify-center gap-2 rounded-lg border border-blue-50 bg-blue-50/50 px-3 py-2 text-blue-700 sm:w-auto sm:py-1.5">
-              <Activity size={14} className="text-blue-500" />
-              <span className="text-xs font-black md:text-sm">{project.aiScore}%</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex w-full flex-col gap-3 border-t border-slate-50 pt-3 sm:flex-row sm:items-center sm:justify-between xl:w-auto xl:flex-[2] xl:justify-end xl:border-t-0 xl:pt-0">
-          <div className="flex items-center justify-start sm:flex-1 sm:justify-center">
-            <div
-              className={`flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 text-[10px] font-bold md:px-3 md:text-xs ${
-                project.status === 'ready'
-                  ? 'border-emerald-100 bg-emerald-50 text-emerald-700'
-                  : project.status === 'review'
-                    ? 'border-amber-100 bg-amber-50 text-amber-700'
-                    : 'border-slate-200 bg-slate-50 text-slate-600'
-              }`}
-            >
-              {project.status === 'ready' ? (
-                <CheckCircle2 size={12} className="md:h-[14px] md:w-[14px]" />
-              ) : project.status === 'review' ? (
-                <Clock size={12} className="md:h-[14px] md:w-[14px]" />
-              ) : (
-                <TrendingUp size={12} className="md:h-[14px] md:w-[14px]" />
-              )}
-              <span>{project.status === 'ready' ? 'جاهز' : project.status === 'review' ? 'مراجعة' : 'مسودة'}</span>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-between gap-2 sm:flex-1 sm:justify-end">
-            <div className="hidden gap-1 transition-all duration-300 xl:flex xl:-translate-x-2 xl:opacity-0 xl:group-hover:translate-x-0 xl:group-hover:opacity-100">
-              <ActionIcon icon={<Share2 size={14} />} />
-              <ActionIcon icon={<FileDown size={14} />} />
-            </div>
+          <div className="min-w-0 flex-1 text-right">
             <button
+              className="block max-w-[260px] truncate text-sm font-semibold text-foreground transition-colors hover:text-primary"
               onClick={() => setActiveTab?.('editor')}
-              className="flex shrink-0 items-center justify-center gap-2 rounded-xl bg-slate-900 px-4 py-2 text-xs font-black text-white transition-colors hover:bg-blue-600 sm:min-w-[112px]"
             >
-              <span>فتح</span>
-              <ArrowRight size={14} className="rtl:rotate-180" />
+              {project.name}
             </button>
+            <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+              <span>{project.sector}</span>
+              <span>{project.marketCap}</span>
+            </div>
+          </div>
+
+          <Button
+            variant="ghost"
+            size="icon-xs"
+            className={project.isFavorite ? 'text-amber-600' : 'text-muted-foreground'}
+            title={project.isFavorite ? 'مفضل' : 'إضافة للمفضلة'}
+          >
+            <Star className="size-4" fill={project.isFavorite ? 'currentColor' : 'none'} />
+          </Button>
+        </div>
+      </TableCell>
+
+      <TableCell className="py-3">
+        <div className="space-y-2">
+          <div className="flex items-center justify-between text-xs">
+            <span className="font-semibold text-foreground">{averageProgress}%</span>
+            <span className="text-muted-foreground">الإجمالي</span>
+          </div>
+          <div className="h-2 overflow-hidden rounded-full bg-muted">
+            <div className="h-full rounded-full bg-primary" style={{ width: `${averageProgress}%` }} />
+          </div>
+          <div className="flex flex-wrap gap-2 text-[11px] text-muted-foreground">
+            <span>سوق {project.progress.market}%</span>
+            <span>منتج {project.progress.product}%</span>
+            <span>مالي {project.progress.financial}%</span>
           </div>
         </div>
-      </div>
-    </Card>
-  );
-};
+      </TableCell>
 
-const ProjectGridCard: React.FC<{ project: Project; setActiveTab?: (tab: string) => void }> = ({ project, setActiveTab }) => {
-  const averageProgress = Math.round((project.progress.market + project.progress.product + project.progress.financial) / 3);
+      <TableCell className="py-3">
+        <Badge variant={project.aiScore >= 80 ? 'success' : 'secondary'} className="gap-1">
+          <Activity className="size-3.5" />
+          {project.aiScore}%
+        </Badge>
+      </TableCell>
+
+      <TableCell className="py-3">
+        <ProjectStatus status={project.status} />
+      </TableCell>
+
+      <TableCell className="py-3">
+        <div className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
+          <Clock className="size-4" />
+          <span>{project.lastEdited}</span>
+        </div>
+      </TableCell>
+
+      <TableCell className="py-3">
+        <div className="flex items-center justify-end gap-1">
+          <Button variant="ghost" size="icon-sm" title="مشاركة">
+            <Share2 className="size-4" />
+          </Button>
+          <Button variant="ghost" size="icon-sm" title="تحميل">
+            <FileDown className="size-4" />
+          </Button>
+          <Button size="sm" onClick={() => setActiveTab?.('editor')}>
+            <span>فتح</span>
+            <ArrowRight className="size-4" />
+          </Button>
+        </div>
+      </TableCell>
+    </TableRow>
+  );
+}
+
+function ProjectsGrid({
+  projects,
+  setActiveTab,
+}: {
+  projects: Project[];
+  setActiveTab?: (tab: string) => void;
+}) {
+  return (
+    <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+      {projects.map((project) => (
+        <ProjectGridCard key={project.id} project={project} setActiveTab={setActiveTab} />
+      ))}
+      <button
+        onClick={() => setActiveTab?.('new-plan')}
+        className="flex min-h-[190px] flex-col items-center justify-center gap-3 rounded-lg border border-dashed border-border bg-background p-4 text-muted-foreground transition-colors hover:bg-muted/40 hover:text-foreground"
+      >
+        <Plus className="size-5" />
+        <span className="text-sm font-semibold">إضافة مشروع</span>
+      </button>
+    </div>
+  );
+}
+
+function ProjectGridCard({
+  project,
+  setActiveTab,
+}: {
+  project: Project;
+  setActiveTab?: (tab: string) => void;
+}) {
+  const averageProgress = getAverageProgress(project);
 
   return (
-    <Card className="ui-card-interactive group relative flex h-full flex-col rounded-3xl border-slate-200 p-4 transition-all duration-300 hover:border-slate-300 hover:shadow-xl hover:shadow-slate-900/5 sm:p-5">
-      <div className="mb-4 flex items-start justify-between">
-        <button
-          className={`rounded-xl p-2 transition-all ${
-            project.isFavorite ? 'bg-amber-50 text-amber-400' : 'bg-slate-50 text-slate-300 hover:text-amber-400'
-          }`}
+    <Card className="rounded-lg p-4 shadow-none">
+      <div className="flex items-start justify-between gap-3">
+        <ProjectStatus status={project.status} />
+        <Button
+          variant="ghost"
+          size="icon-xs"
+          className={project.isFavorite ? 'text-amber-600' : 'text-muted-foreground'}
+          title={project.isFavorite ? 'مفضل' : 'إضافة للمفضلة'}
         >
-          <Star size={16} fill={project.isFavorite ? 'currentColor' : 'none'} strokeWidth={2.5} />
-        </button>
-        <div
-          className={`flex items-center gap-1 rounded-lg border px-2.5 py-1 text-[10px] font-bold ${
-            project.status === 'ready'
-              ? 'border-emerald-100 bg-emerald-50 text-emerald-700'
-              : project.status === 'review'
-                ? 'border-amber-100 bg-amber-50 text-amber-700'
-                : 'border-slate-200 bg-slate-50 text-slate-600'
-          }`}
-        >
-          {project.status === 'ready' ? <CheckCircle2 size={12} /> : project.status === 'review' ? <Clock size={12} /> : <TrendingUp size={12} />}
-          <span>{project.status === 'ready' ? 'جاهز' : project.status === 'review' ? 'مراجعة' : 'مسودة'}</span>
+          <Star className="size-4" fill={project.isFavorite ? 'currentColor' : 'none'} />
+        </Button>
+      </div>
+
+      <div className="mt-4 flex items-start gap-3">
+        <div className="flex size-10 shrink-0 items-center justify-center rounded-md border border-border bg-muted text-muted-foreground">
+          <LayoutGrid className="size-4" />
+        </div>
+        <div className="min-w-0 text-right">
+          <h3 className="truncate text-sm font-semibold text-foreground">{project.name}</h3>
+          <p className="mt-1 text-xs text-muted-foreground">
+            {project.sector} · {project.marketCap}
+          </p>
         </div>
       </div>
 
-      <div className="mb-5 flex flex-col items-center text-center sm:mb-6">
-        <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-2xl bg-slate-900 text-white shadow-md transition-transform duration-300 group-hover:scale-105 sm:h-16 sm:w-16">
-          <LayoutGrid size={24} className="sm:h-7 sm:w-7" strokeWidth={2} />
+      <div className="mt-4 space-y-2">
+        <div className="flex items-center justify-between text-xs">
+          <span className="font-semibold text-foreground">{averageProgress}%</span>
+          <span className="text-muted-foreground">جاهزية المشروع</span>
         </div>
-        <h3 className="mb-1 line-clamp-1 text-sm font-black leading-tight text-slate-900 transition-colors group-hover:text-blue-600 sm:text-base">
-          {project.name}
-        </h3>
-        <span className="rounded-md bg-slate-100 px-2 py-0.5 text-[10px] font-bold uppercase text-slate-400 sm:text-[11px]">
-          {project.sector}
-        </span>
-      </div>
-
-      <div className="mb-5 grid grid-cols-2 gap-2 sm:mb-6">
-        <div className="rounded-xl border border-slate-100 bg-slate-50 p-2 text-center sm:p-2.5">
-          <span className="mb-1 block text-[8px] font-bold uppercase text-slate-400 sm:text-[9px]">التقدم</span>
-          <span className="text-xs font-black text-slate-700 sm:text-sm">{averageProgress}%</span>
-        </div>
-        <div className="rounded-xl border border-blue-100 bg-blue-50 p-2 text-center sm:p-2.5">
-          <span className="mb-1 block text-[8px] font-bold uppercase text-blue-400 sm:text-[9px]">تقييم AI</span>
-          <span className="text-xs font-black text-blue-700 sm:text-sm">{project.aiScore}%</span>
+        <div className="h-2 overflow-hidden rounded-full bg-muted">
+          <div className="h-full rounded-full bg-primary" style={{ width: `${averageProgress}%` }} />
         </div>
       </div>
 
-      <div className="mt-auto flex items-center gap-2 border-t border-slate-100 pt-4">
-        <button
-          onClick={() => setActiveTab?.('editor')}
-          className="flex flex-1 items-center justify-center gap-1.5 rounded-xl bg-slate-900 py-2 text-xs font-black text-white transition-colors hover:bg-blue-600 sm:py-2.5"
-        >
-          <span>فتح الخطة</span>
-        </button>
+      <div className="mt-4 grid grid-cols-2 gap-2">
+        <SmallMetric label="تقييم AI" value={`${project.aiScore}%`} icon={<Activity className="size-3.5" />} />
+        <SmallMetric label="آخر تعديل" value={project.lastEdited} icon={<Clock className="size-3.5" />} />
+      </div>
 
-        <div className="flex shrink-0 gap-1.5">
-          <ActionIcon icon={<Share2 size={14} className="h-3.5 w-3.5 sm:h-4 sm:w-4" />} />
-          <ActionIcon icon={<FileDown size={14} className="h-3.5 w-3.5 sm:h-4 sm:w-4" />} />
-        </div>
+      <div className="mt-4 flex items-center gap-2">
+        <Button variant="outline" size="icon-sm" title="مشاركة">
+          <Share2 className="size-4" />
+        </Button>
+        <Button variant="outline" size="icon-sm" title="تحميل">
+          <FileDown className="size-4" />
+        </Button>
+        <Button size="sm" className="flex-1" onClick={() => setActiveTab?.('editor')}>
+          <span>فتح</span>
+          <ArrowRight className="size-4" />
+        </Button>
       </div>
     </Card>
   );
-};
+}
 
-const ActionIcon = ({ icon }: { icon: React.ReactNode }) => (
-  <button className="flex h-8 w-8 items-center justify-center rounded-xl border border-slate-100 bg-slate-50 text-slate-500 transition-all hover:bg-slate-800 hover:text-white sm:h-9 sm:w-9">
-    {icon}
-  </button>
-);
+function ProjectStatus({ status }: { status: Project['status'] }) {
+  if (status === 'ready') {
+    return (
+      <Badge variant="success" className="gap-1">
+        <CheckCircle2 className="size-3.5" />
+        جاهز
+      </Badge>
+    );
+  }
+
+  if (status === 'review') {
+    return (
+      <Badge variant="outline" className="gap-1 border-amber-200 bg-amber-50 text-amber-800">
+        <Clock className="size-3.5" />
+        مراجعة
+      </Badge>
+    );
+  }
+
+  return (
+    <Badge variant="secondary" className="gap-1">
+      <TrendingUp className="size-3.5" />
+      مسودة
+    </Badge>
+  );
+}
+
+function CompactStat({ label, value }: { label: string; value: number }) {
+  return (
+    <div className="rounded-md border border-border bg-muted/40 px-3 py-2 text-right">
+      <p className="text-xs text-muted-foreground">{label}</p>
+      <p className="mt-0.5 text-base font-semibold text-foreground">{value}</p>
+    </div>
+  );
+}
+
+function SmallMetric({
+  label,
+  value,
+  icon,
+}: {
+  label: string;
+  value: string;
+  icon: React.ReactNode;
+}) {
+  return (
+    <div className="rounded-md border border-border bg-muted/30 p-2 text-right">
+      <div className="mb-1 flex items-center gap-1.5 text-muted-foreground">
+        {icon}
+        <span className="text-[11px]">{label}</span>
+      </div>
+      <p className="truncate text-xs font-semibold text-foreground">{value}</p>
+    </div>
+  );
+}
+
+function getAverageProgress(project: Project) {
+  return Math.round((project.progress.market + project.progress.product + project.progress.financial) / 3);
+}

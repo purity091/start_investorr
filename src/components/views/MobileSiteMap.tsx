@@ -12,7 +12,6 @@ import {
   Target,
   Rocket,
   FileText,
-  ArrowRightLeft,
   Compass,
 } from 'lucide-react';
 
@@ -55,7 +54,6 @@ export const MobileSiteMap: React.FC<MobileSiteMapProps> = ({ setActiveTab }) =>
         { id: 'market-discovery', label: 'استكشاف السوق', description: 'رصد الاتجاهات العالمية والقطاعات', icon: Compass, color: 'text-slate-700 bg-slate-100' },
         { id: 'unicorn-benchmark', label: 'رادار اليونيكورن', description: 'مقارنة مع الشركات المليونية', icon: Sparkles, color: 'text-slate-700 bg-slate-100', isNew: true },
         { id: 'brand-identity', label: 'استوديو الهوية', description: 'تصميم العلامة التجارية بصرياً', icon: Palette, color: 'text-slate-700 bg-slate-100' },
-        { id: 'comparison', label: 'مقارنة السيناريوهات', description: 'تحليل المسارات الاستثمارية المختلفة', icon: ArrowRightLeft, color: 'text-slate-700 bg-slate-100' },
       ],
     },
     {

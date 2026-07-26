@@ -2,12 +2,14 @@
 // v4.0.1 - Production Sync
 import React, { useState, useEffect, useRef } from 'react';
 import { Sidebar } from './components/layout/Sidebar';
-import { MobileMenu } from './components/layout/MobileMenu';
+import { StrategicSupportFloat } from './components/layout/StrategicSupportFloat';
 import { LeftAiSidebar } from './components/features/ai/LeftAiSidebar';
 import { BottomNavBar } from './components/layout/BottomNavBar';
 import { Header } from './components/layout/Header';
 import { DashboardRouter } from './components/views/DashboardRouter';
 import SiteTour from './components/views/SiteTour';
+import { TooltipProvider } from './components/ui/tooltip';
+import { SidebarInset, SidebarProvider } from './components/ui/sidebar';
 
 import { MOCK_USER, INITIAL_SECTIONS, ADMIN_TABS } from './data/constants';
 import { PlanSection } from './types';
@@ -27,13 +29,11 @@ const AppShell: React.FC = () => {
   const [sections, setSections] = useState<PlanSection[]>(INITIAL_SECTIONS);
   const [expandedSectionId, setExpandedSectionId] = useState<string | null>('1');
   const [saveStatus, setSaveStatus] = useState<'saved' | 'saving' | null>('saved');
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true);
   const [isAiSidebarOpen, setIsAiSidebarOpen] = useState(false);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isTourRunning, setIsTourRunning] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [subTabLabel, setSubTabLabel] = useState<string | null>(null);
   const [selectedCompanyId, setSelectedCompanyId] = useState<string | undefined>(undefined);
   
@@ -125,87 +125,81 @@ const AppShell: React.FC = () => {
   const isAdminView = ADMIN_TABS.includes(activeTab);
 
   return (
-    <div className="flex min-h-screen bg-white lg:bg-[#F1F5F9]/80 w-full max-w-full overflow-x-hidden">
-      {/* 1. Global AI Sidebar (Left) - Hidden on Mobile */}
-      {!isAdminView && (
-        <div className="hidden xl:flex">
-          <LeftAiSidebar 
-            isOpen={isAiSidebarOpen} 
-            onToggle={() => setIsAiSidebarOpen(!isAiSidebarOpen)} 
+    <TooltipProvider>
+      <SidebarProvider open={!isSidebarCollapsed} onOpenChange={(open) => setIsSidebarCollapsed(!open)}>
+        <div className="flex min-h-screen w-full max-w-full overflow-x-hidden bg-background">
+          {!isAdminView && (
+            <div className="hidden xl:flex">
+              <LeftAiSidebar
+                isOpen={isAiSidebarOpen}
+                onToggle={() => setIsAiSidebarOpen(!isAiSidebarOpen)}
+              />
+            </div>
+          )}
+
+          <Sidebar
+            user={MOCK_USER}
+            isCollapsed={isSidebarCollapsed}
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+          />
+
+          <SidebarInset
+            className={`min-h-screen w-full max-w-full overflow-x-hidden bg-background transition-[margin] duration-300 ${
+              !isAdminView && isAiSidebarOpen ? '2xl:ml-96' : ''
+            }`}
+          >
+            <Header
+              activeTab={activeTab}
+              setActiveTab={setActiveTab}
+              subTabLabel={subTabLabel}
+              setSubTabLabel={setSubTabLabel}
+              isNotificationsOpen={isNotificationsOpen}
+              setIsNotificationsOpen={setIsNotificationsOpen}
+              isProfileOpen={isProfileOpen}
+              setIsProfileOpen={setIsProfileOpen}
+              isTourRunning={isTourRunning}
+              setIsTourRunning={setIsTourRunning}
+              setIsSidebarCollapsed={setIsSidebarCollapsed}
+              setIsMobileMenuOpen={() => {}}
+              notificationRef={notificationRef}
+              profileRef={profileRef}
+              user={MOCK_USER}
+            />
+
+            <DashboardRouter
+              activeTab={activeTab}
+              setActiveTab={setActiveTab}
+              setSubTabLabel={setSubTabLabel}
+              user={MOCK_USER}
+              sections={sections}
+              handleSectionUpdate={handleSectionUpdate}
+              expandedSectionId={expandedSectionId}
+              onSectionExpand={setExpandedSectionId}
+              selectedCompanyId={selectedCompanyId}
+              setSelectedCompanyId={setSelectedCompanyId}
+            />
+
+            {!isAdminView ? (
+              <StrategicSupportFloat onOpenContact={() => setActiveTab('contact-us')} />
+            ) : null}
+          </SidebarInset>
+
+          {isTourRunning && (
+            <SiteTour
+              onComplete={() => setIsTourRunning(false)}
+              onSkip={() => setIsTourRunning(false)}
+            />
+          )}
+
+          <BottomNavBar
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+            onMenuClick={() => setIsSidebarCollapsed(false)}
           />
         </div>
-      )}
-
-      {/* 2. Global Navigation Sidebar (Right) - Hidden on Mobile */}
-      <div className="hidden lg:flex">
-        <Sidebar 
-          user={MOCK_USER} 
-          isOpen={isSidebarOpen} 
-          isCollapsed={isSidebarCollapsed}
-          onCollapseToggle={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
-          activeTab={activeTab} 
-          setActiveTab={setActiveTab} 
-        />
-      </div>
-
-      <main className={`flex-1 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] w-full max-w-full overflow-x-hidden
-        ${!isSidebarOpen ? 'mr-0' : isSidebarCollapsed ? 'mr-0 lg:mr-24' : 'mr-0 lg:mr-72'} 
-        ${!isAdminView && isAiSidebarOpen ? 'ml-0 2xl:ml-96' : 'ml-0'}`}>
-
-        <Header 
-          activeTab={activeTab}
-          setActiveTab={setActiveTab}
-          subTabLabel={subTabLabel}
-          setSubTabLabel={setSubTabLabel}
-          isNotificationsOpen={isNotificationsOpen}
-          setIsNotificationsOpen={setIsNotificationsOpen}
-          isProfileOpen={isProfileOpen}
-          setIsProfileOpen={setIsProfileOpen}
-          isTourRunning={isTourRunning}
-          setIsTourRunning={setIsTourRunning}
-          setIsSidebarCollapsed={setIsSidebarCollapsed}
-          setIsMobileMenuOpen={setIsMobileMenuOpen}
-          notificationRef={notificationRef}
-          profileRef={profileRef}
-          user={MOCK_USER}
-        />
-
-        <DashboardRouter 
-          activeTab={activeTab}
-          setActiveTab={setActiveTab}
-          setSubTabLabel={setSubTabLabel}
-          user={MOCK_USER}
-          sections={sections}
-          handleSectionUpdate={handleSectionUpdate}
-          expandedSectionId={expandedSectionId}
-          onSectionExpand={setExpandedSectionId}
-          selectedCompanyId={selectedCompanyId}
-          setSelectedCompanyId={setSelectedCompanyId}
-        />
-      </main>
-      {isTourRunning && (
-        <SiteTour
-          onComplete={() => setIsTourRunning(false)}
-          onSkip={() => setIsTourRunning(false)}
-        />
-      )}
-
-      {/* 3. Mobile Menu (Hamburger) */}
-      <MobileMenu
-        isOpen={isMobileMenuOpen}
-        onClose={() => setIsMobileMenuOpen(false)}
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-        isAdminMode={ADMIN_TABS.includes(activeTab)}
-      />
-
-      {/* 4. Bottom Navigation (Mobile Only) */}
-      <BottomNavBar 
-        activeTab={activeTab} 
-        setActiveTab={setActiveTab} 
-        onMenuClick={() => setIsMobileMenuOpen(true)}
-      />
-    </div>
+      </SidebarProvider>
+    </TooltipProvider>
   );
 };
 

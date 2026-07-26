@@ -1,55 +1,76 @@
-import React from 'react';
-import { cn } from '../../lib/cn';
+import * as React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
+import { Slot } from "radix-ui";
 
-type ButtonVariant = 'default' | 'secondary' | 'outline' | 'ghost';
-type ButtonSize = 'sm' | 'md' | 'lg' | 'icon';
+import { cn } from "@/lib/utils";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: ButtonVariant;
-  size?: ButtonSize;
-  loading?: boolean;
-  loadingText?: string;
-}
+const buttonVariants = cva(
+  "group/button inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-lg border border-transparent bg-clip-padding text-sm font-semibold transition-colors outline-none select-none focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/40 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  {
+    variants: {
+      variant: {
+        default: "bg-primary text-primary-foreground hover:bg-primary/95",
+        outline: "border-border bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/95",
+        link: "text-primary underline-offset-4 hover:underline",
+      },
+      size: {
+        default: "h-9 px-4 py-2",
+        xs: "h-7 rounded-md px-2.5 text-xs",
+        sm: "h-8 rounded-md px-3 text-xs",
+        md: "h-9 rounded-lg px-4 text-sm",
+        lg: "h-10 rounded-lg px-5 text-sm",
+        icon: "size-9",
+        "icon-xs": "size-7 rounded-md",
+        "icon-sm": "size-8 rounded-md",
+        "icon-lg": "size-10 rounded-lg",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+);
 
-const variantClasses: Record<ButtonVariant, string> = {
-  default:
-    'bg-slate-950 text-white shadow-sm hover:bg-slate-800 focus-visible:ring-slate-300',
-  secondary:
-    'bg-slate-100 text-slate-900 hover:bg-slate-200 focus-visible:ring-slate-300',
-  outline:
-    'border border-slate-200 bg-white text-slate-800 hover:bg-slate-50 focus-visible:ring-slate-300',
-  ghost:
-    'text-slate-700 hover:bg-slate-100 focus-visible:ring-slate-200',
-};
+type ButtonProps = React.ComponentProps<"button"> &
+  VariantProps<typeof buttonVariants> & {
+    asChild?: boolean;
+    loading?: boolean;
+    loadingText?: string;
+  };
 
-const sizeClasses: Record<ButtonSize, string> = {
-  sm: 'h-9 rounded-xl px-3 text-xs font-bold',
-  md: 'h-10 rounded-xl px-4 text-sm font-bold',
-  lg: 'h-11 rounded-2xl px-5 text-sm font-black',
-  icon: 'h-10 w-10 rounded-xl p-0',
-};
+function Button({
+  className,
+  variant = "default",
+  size = "default",
+  asChild = false,
+  loading = false,
+  loadingText,
+  children,
+  disabled,
+  ...props
+}: ButtonProps) {
+  const Comp = asChild ? Slot.Root : "button";
 
-export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = 'default', size = 'md', type = 'button', loading = false, loadingText, children, disabled, ...props }, ref) => (
-    <button
-      ref={ref}
-      type={type}
+  return (
+    <Comp
+      data-slot="button"
+      data-variant={variant}
+      data-size={size}
+      data-loading={loading ? "true" : "false"}
+      className={cn(buttonVariants({ variant, size, className }))}
       disabled={disabled || loading}
-      data-loading={loading ? 'true' : 'false'}
-      className={cn(
-        'ui-button inline-flex items-center justify-center gap-2 whitespace-nowrap transition-all duration-200 outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:scale-[0.985]',
-        variantClasses[variant],
-        sizeClasses[size],
-        className,
-      )}
       {...props}
     >
       {loading ? <span className="ui-spinner" aria-hidden="true" /> : null}
-      <span className={cn('inline-flex items-center gap-2', loading ? 'opacity-90' : '')}>
+      <span className={cn("inline-flex items-center gap-2", loading ? "opacity-90" : "")}>
         {loading && loadingText ? loadingText : children}
       </span>
-    </button>
-  ),
-);
+    </Comp>
+  );
+}
 
-Button.displayName = 'Button';
+export { Button, buttonVariants };

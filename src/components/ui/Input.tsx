@@ -1,18 +1,19 @@
-import React from 'react';
-import { cn } from '../../lib/cn';
+import * as React from "react";
 
-export const Input = React.forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(
-  ({ className, type = 'text', ...props }, ref) => (
+import { cn } from "@/lib/utils";
+
+function Input({ className, type, ...props }: React.ComponentProps<"input">) {
+  return (
     <input
-      ref={ref}
       type={type}
+      data-slot="input"
       className={cn(
-        'ui-input flex h-11 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-900 outline-none transition focus:border-slate-300 focus:bg-white focus:ring-4 focus:ring-slate-100 disabled:cursor-not-allowed disabled:opacity-50',
-        className,
+        "h-10 w-full min-w-0 rounded-lg border border-input bg-background px-3 py-2 text-sm font-medium text-foreground transition-colors outline-none file:inline-flex file:h-6 file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:pointer-events-none disabled:cursor-not-allowed disabled:bg-muted disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20",
+        className
       )}
       {...props}
     />
-  ),
-);
+  );
+}
 
-Input.displayName = 'Input';
+export { Input };

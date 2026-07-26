@@ -24,8 +24,8 @@ export const BottomNavBar: React.FC<BottomNavBarProps> = ({ activeTab, setActive
   ];
 
   return (
-    <div className="lg:hidden fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-[100] w-[95%] sm:w-[92%] max-w-[400px] sm:max-w-[440px] pb-[env(safe-area-inset-bottom)]">
-      <div className="bg-white/90 backdrop-blur-2xl border border-white/60 rounded-[2rem] sm:rounded-[2.5rem] p-1.5 sm:p-2 flex items-center justify-between shadow-[0_20px_50px_rgba(0,0,0,0.15)] ring-1 ring-black/5">
+    <div id="tour-mobile-bottom-nav" className="lg:hidden fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-[100] w-[95%] sm:w-[92%] max-w-[400px] sm:max-w-[440px] pb-[env(safe-area-inset-bottom)]">
+      <div className="rounded-[2rem] border border-border bg-background p-1.5 sm:p-2 shadow-sm ring-1 ring-border/60 flex items-center justify-between">
         {navItems.map((item) => {
           const isActive = activeTab === item.id;
 
@@ -37,15 +37,16 @@ export const BottomNavBar: React.FC<BottomNavBarProps> = ({ activeTab, setActive
             return (
               <a
                 key={item.id}
+                id={`tour-mobile-${item.id}`}
                 href={getTabPath(item.id)}
                 onClick={(event) => {
                   event.preventDefault();
                   handleClick();
                 }}
-                className="relative -top-6 sm:-top-8 w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-indigo-600 to-purple-600 text-white rounded-full flex items-center justify-center shadow-2xl shadow-indigo-200 border-4 border-white active:scale-90 transition-transform group touch-manipulation hover:shadow-indigo-400/50"
+                className="relative -top-4 sm:-top-5 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full border border-border bg-primary text-primary-foreground shadow-sm transition-colors touch-manipulation hover:bg-primary/95"
                 aria-label={item.label}
               >
-                <item.icon size={24} className="group-hover:rotate-90 transition-transform duration-500 sm:w-7 sm:h-7" />
+                <item.icon size={22} className="sm:w-6 sm:h-6" />
               </a>
             );
           }
@@ -53,18 +54,19 @@ export const BottomNavBar: React.FC<BottomNavBarProps> = ({ activeTab, setActive
           return (
             <a
               key={item.id}
+              id={`tour-mobile-${item.id}`}
               href={getTabPath(item.id)}
               onClick={(event) => {
                 event.preventDefault();
                 handleClick();
               }}
-              className={`flex-1 flex flex-col items-center justify-center gap-0.5 sm:gap-1 py-1.5 sm:py-2 px-1 sm:px-2 rounded-2xl transition-all min-h-[48px] touch-manipulation active:scale-90 ${isActive ? 'text-indigo-600 translate-y-[-2px]' : 'text-slate-400 hover:text-slate-600'}`}
+              className={`flex min-h-[48px] flex-1 flex-col items-center justify-center gap-0.5 rounded-xl px-1 py-1.5 sm:gap-1 sm:px-2 sm:py-2 transition-colors touch-manipulation ${isActive ? 'bg-accent text-accent-foreground' : 'text-muted-foreground hover:bg-accent/60 hover:text-foreground'}`}
               aria-label={item.label}
             >
-              <div className={`p-1.5 sm:p-2 transition-all ${isActive ? 'bg-indigo-50 rounded-xl' : ''}`}>
-                <item.icon size={isActive ? 20 : 18} strokeWidth={isActive ? 2.5 : 2} className="w-5 h-5 sm:w-5 sm:h-5" />
+              <div className={`rounded-lg p-1.5 sm:p-2 ${isActive ? 'bg-background ring-1 ring-border' : ''}`}>
+                <item.icon size={18} strokeWidth={2} className="w-5 h-5 sm:w-5 sm:h-5" />
               </div>
-              <span className={`text-[8px] sm:text-[9px] font-black tracking-tight transition-all ${isActive ? 'text-indigo-600' : 'text-slate-400'}`}>
+              <span className={`text-[8px] sm:text-[9px] font-semibold tracking-tight ${isActive ? 'text-foreground' : 'text-muted-foreground'}`}>
                 {item.label}
               </span>
             </a>

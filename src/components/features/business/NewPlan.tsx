@@ -19,7 +19,7 @@ import {
   Heart,
   LayoutGrid
 } from 'lucide-react';
-import SmartBeginnerPro from '../easy_mode/SmartBeginnerPro';
+import SmartBeginnerPro from '../../../features/easy-mode/SmartBeginnerPro';
 import { IdeaCreation, CreationMode } from './IdeaCreation';
 
 interface Template {
@@ -90,15 +90,24 @@ export const NewPlan: React.FC<{
   onBuildPlan?: () => void;
   setSubTabLabel: (label: string | null) => void;
   subTabLabel?: string | null;
-}> = ({ onStart, onBuildPlan, setSubTabLabel, subTabLabel }) => {
+  initialMode?: 'selection' | 'easy' | 'family' | 'bmc' | 'mit24';
+}> = ({ onStart, onBuildPlan, setSubTabLabel, subTabLabel, initialMode = 'selection' }) => {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
-  const [mode, setMode] = useState<'selection' | 'easy' | 'ai' | 'family' | 'bmc' | 'mit24'>('selection');
+  const [mode, setMode] = useState<'selection' | 'easy' | 'ai' | 'family' | 'bmc' | 'mit24'>(initialMode);
 
   useEffect(() => {
     if (!subTabLabel) {
-      setMode('selection');
+      setMode(initialMode);
     }
-  }, [subTabLabel]);
+  }, [subTabLabel, initialMode]);
+
+  useEffect(() => {
+    setMode(initialMode);
+  }, [initialMode]);
+
+  if (mode === 'easy') {
+    return <SmartBeginnerPro />;
+  }
 
   if (mode === 'ai' || mode === 'family' || mode === 'bmc' || mode === 'mit24') {
     return (
@@ -132,19 +141,19 @@ export const NewPlan: React.FC<{
             setMode('family');
             setSubTabLabel('مود الأهل');
           }}
-          className="group relative overflow-hidden bg-gradient-to-br from-pink-500 to-rose-600 p-5 rounded-[2rem] shadow-xl hover:shadow-pink-100 transition-all duration-500 text-right text-white"
+          className="group relative overflow-hidden bg-white border border-rose-100 p-5 rounded-[2rem] shadow-sm hover:shadow-xl hover:shadow-rose-100/60 transition-all duration-500 text-right"
         >
-          <div className="absolute top-0 left-0 p-2 opacity-10"><Heart size={60} /></div>
+          <div className="absolute top-0 left-0 p-2 opacity-[0.06] text-rose-400"><Heart size={60} /></div>
           <div className="flex flex-col gap-3 relative z-10">
-            <div className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+            <div className="w-10 h-10 bg-rose-50 text-rose-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-inner">
               <Heart size={20} strokeWidth={2.5} fill="currentColor" />
             </div>
             <div>
               <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-1.5">
-                <h3 className="text-sm font-black tracking-tight leading-tight">مود الأهل</h3>
-                <span className="bg-white/20 text-[9px] px-2 py-0.5 rounded-full font-black uppercase shrink-0 leading-none">سهل</span>
+                <h3 className="text-sm font-black tracking-tight leading-tight text-slate-950">مود الأهل</h3>
+                <span className="bg-rose-50 text-rose-700 border border-rose-100 text-[9px] px-2 py-0.5 rounded-full font-black uppercase shrink-0 leading-none">سهل</span>
               </div>
-              <p className="text-pink-50 font-bold text-[10px] opacity-90 leading-relaxed line-clamp-2">صغ فكرتك بكلمات بسيطة لتشرحها بوضوح.</p>
+              <p className="text-slate-700 font-bold text-[10px] leading-relaxed line-clamp-2">صغ فكرتك بكلمات بسيطة لتشرحها بوضوح.</p>
             </div>
           </div>
         </button>
@@ -152,19 +161,19 @@ export const NewPlan: React.FC<{
         {/* EASY MODE CARD */}
         <button 
           onClick={() => onStart('easy')}
-          className="group relative overflow-hidden bg-gradient-to-br from-emerald-500 to-teal-600 p-5 rounded-[2rem] shadow-xl hover:shadow-emerald-100 transition-all duration-500 text-right text-white"
+          className="group relative overflow-hidden bg-white border border-emerald-100 p-5 rounded-[2rem] shadow-sm hover:shadow-xl hover:shadow-emerald-100/60 transition-all duration-500 text-right"
         >
-          <div className="absolute top-0 left-0 p-2 opacity-10"><Zap size={60} /></div>
+          <div className="absolute top-0 left-0 p-2 opacity-[0.06] text-emerald-400"><Zap size={60} /></div>
           <div className="flex flex-col gap-3 relative z-10">
-            <div className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+            <div className="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-inner">
               <Zap size={20} strokeWidth={2.5} fill="currentColor" />
             </div>
             <div>
               <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-1.5">
-                <h3 className="text-sm font-black tracking-tight leading-tight">Easy Mode</h3>
-                <span className="bg-white/20 text-[9px] px-2 py-0.5 rounded-full font-black uppercase shrink-0 leading-none">ناشئ</span>
+                <h3 className="text-sm font-black tracking-tight leading-tight text-slate-950">النموذج الاحترافي</h3>
+                <span className="bg-emerald-50 text-emerald-700 border border-emerald-100 text-[9px] px-2 py-0.5 rounded-full font-black uppercase shrink-0 leading-none">ناشئ</span>
               </div>
-              <p className="text-emerald-50 font-bold text-[10px] opacity-90 leading-relaxed line-clamp-2">تحليل فكرتك عبر 8 أسئلة ذكية مبسطة.</p>
+              <p className="text-slate-700 font-bold text-[10px] leading-relaxed line-clamp-2">تحليل فكرتك عبر 8 أسئلة ذكية مبسطة.</p>
             </div>
           </div>
         </button>
@@ -175,18 +184,18 @@ export const NewPlan: React.FC<{
             setMode('ai');
             setSubTabLabel('التوليد الذكي (AI)');
           }}
-          className="group relative overflow-hidden bg-gradient-to-br from-purple-600 to-indigo-600 p-5 rounded-[2rem] shadow-xl hover:shadow-purple-100 transition-all duration-500 text-right text-white"
+          className="group relative overflow-hidden bg-white border border-indigo-100 p-5 rounded-[2rem] shadow-sm hover:shadow-xl hover:shadow-indigo-100/60 transition-all duration-500 text-right"
         >
-          <div className="absolute top-0 left-0 p-2 opacity-10"><Sparkles size={60} /></div>
+          <div className="absolute top-0 left-0 p-2 opacity-[0.06] text-indigo-400"><Sparkles size={60} /></div>
           <div className="flex flex-col gap-3 relative z-10">
-            <div className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+            <div className="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-inner">
               <Wand2 size={20} strokeWidth={2.5} />
             </div>
             <div>
               <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-1.5">
-                <h3 className="text-sm font-black tracking-tight leading-tight">التوليد الذكي (AI)</h3>
+                <h3 className="text-sm font-black tracking-tight leading-tight text-slate-950">التوليد الذكي (AI)</h3>
               </div>
-              <p className="text-purple-100 font-bold text-[10px] opacity-90 leading-relaxed line-clamp-2">الذكاء الاصطناعي يبني لك الهيكل الاستراتيجي آلياً.</p>
+              <p className="text-slate-700 font-bold text-[10px] leading-relaxed line-clamp-2">الذكاء الاصطناعي يبني لك الهيكل الاستراتيجي آلياً.</p>
             </div>
           </div>
         </button>
@@ -215,42 +224,42 @@ export const NewPlan: React.FC<{
             setMode('bmc');
             setSubTabLabel('Business Canvas');
           }}
-          className="group relative overflow-hidden bg-gradient-to-br from-emerald-600 to-teal-700 p-5 rounded-[2rem] shadow-xl hover:shadow-emerald-100 transition-all duration-500 text-right text-white"
+          className="group relative overflow-hidden bg-white border border-teal-100 p-5 rounded-[2rem] shadow-sm hover:shadow-xl hover:shadow-teal-100/60 transition-all duration-500 text-right"
         >
-          <div className="absolute top-0 left-0 p-2 opacity-10"><LayoutGrid size={60} /></div>
+          <div className="absolute top-0 left-0 p-2 opacity-[0.06] text-teal-400"><LayoutGrid size={60} /></div>
           <div className="flex flex-col gap-3 relative z-10">
-            <div className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+            <div className="w-10 h-10 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-inner">
               <LayoutGrid size={20} strokeWidth={2} />
             </div>
             <div>
               <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-1.5">
-                <h3 className="text-sm font-black tracking-tight leading-tight">Business Canvas</h3>
-                <span className="bg-white/20 text-[9px] px-2 py-0.5 rounded-full font-black uppercase shrink-0 leading-none">9 حقول</span>
+                <h3 className="text-sm font-black tracking-tight leading-tight text-slate-950">Business Canvas</h3>
+                <span className="bg-teal-50 text-teal-700 border border-teal-100 text-[9px] px-2 py-0.5 rounded-full font-black uppercase shrink-0 leading-none">9 حقول</span>
               </div>
-              <p className="text-emerald-50 font-bold text-[10px] opacity-90 leading-relaxed line-clamp-2">لوحة نموذج العمل الكلاسيكية بشكل تفاعلي.</p>
+              <p className="text-slate-700 font-bold text-[10px] leading-relaxed line-clamp-2">لوحة نموذج العمل الكلاسيكية بشكل تفاعلي.</p>
             </div>
           </div>
         </button>
 
         {/* MIT24 CARD */}
         <button 
-          onClick={() => {
-            setMode('mit24');
-            setSubTabLabel('MIT 24 Steps');
-          }}
-          className="group relative overflow-hidden bg-gradient-to-br from-amber-500 to-orange-600 p-5 rounded-[2rem] shadow-xl hover:shadow-amber-100 transition-all duration-500 text-right text-white"
+            onClick={() => {
+              setMode('mit24');
+              setSubTabLabel('MIT 24 Steps');
+            }}
+          className="group relative overflow-hidden bg-white border border-amber-100 p-5 rounded-[2rem] shadow-sm hover:shadow-xl hover:shadow-amber-100/60 transition-all duration-500 text-right"
         >
-          <div className="absolute top-0 left-0 p-2 opacity-10"><Rocket size={60} /></div>
+          <div className="absolute top-0 left-0 p-2 opacity-[0.06] text-amber-400"><Rocket size={60} /></div>
           <div className="flex flex-col gap-3 relative z-10">
-            <div className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+            <div className="w-10 h-10 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-inner">
               <Rocket size={20} strokeWidth={2} />
             </div>
             <div>
               <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-1.5">
-                <h3 className="text-sm font-black tracking-tight leading-tight">MIT 24 Steps</h3>
-                <span className="bg-white/20 text-[9px] px-2 py-0.5 rounded-full font-black uppercase shrink-0 leading-none">احترافي</span>
+                <h3 className="text-sm font-black tracking-tight leading-tight text-slate-950">MIT 24 Steps</h3>
+                <span className="bg-amber-50 text-amber-700 border border-amber-100 text-[9px] px-2 py-0.5 rounded-full font-black uppercase shrink-0 leading-none">متقدم</span>
               </div>
-              <p className="text-amber-50 font-bold text-[10px] opacity-90 leading-relaxed line-clamp-2">منهج بيل أوليت — 20 خطوة انضباطية تأسيسية.</p>
+              <p className="text-slate-700 font-bold text-[10px] leading-relaxed line-clamp-2">منهج بيل أوليت — 20 خطوة انضباطية تأسيسية.</p>
             </div>
           </div>
         </button>

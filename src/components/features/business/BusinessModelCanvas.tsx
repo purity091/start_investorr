@@ -1,774 +1,1030 @@
- 
-import React, { useState, useEffect } from 'react';
-import { 
-  Users, DollarSign, Zap, Package, Heart, 
-  Truck, Key, Settings, ArrowUpRight, 
-  Plus, X, HelpCircle, Lightbulb, 
-  ChevronRight, ChevronLeft, Save, 
-  Info, Sparkles, Download, LayoutGrid,
-  Maximize2, Minimize2, Search, Filter, Star
+import React, { useEffect, useMemo, useState } from 'react';
+import {
+  ArrowUpRight,
+  BriefcaseBusiness,
+  Building2,
+  CheckCircle2,
+  ChevronDown,
+  CircleDollarSign,
+  Handshake,
+  HeartHandshake,
+  LayoutGrid,
+  Package,
+  PencilLine,
+  Plus,
+  Search,
+  Sparkles,
+  Target,
+  Truck,
+  Users,
+  Wrench,
 } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 
-// --- Types ---
+import { Badge } from '../../ui/Badge';
+import { Button } from '../../ui/Button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../ui/Card';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '../../ui/collapsible';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '../../ui/dialog';
+import { Input } from '../../ui/Input';
+import { PageHeader } from '../../ui/PageHeader';
+import { Textarea } from '../../ui/textarea';
+import { cn } from '../../../lib/utils';
 
-interface Note {
+type CanvasKey =
+  | 'customerSegments'
+  | 'valuePropositions'
+  | 'channels'
+  | 'customerRelationships'
+  | 'revenueStreams'
+  | 'keyResources'
+  | 'keyActivities'
+  | 'keyPartners'
+  | 'costStructure';
+
+interface QuestionAnswer {
   id: string;
-  content: string;
-  color: 'yellow' | 'blue' | 'rose' | 'emerald' | 'amber';
+  question: string;
+  answer: string;
 }
 
-interface BmcData {
-  keyPartners: Note[];
-  keyActivities: Note[];
-  keyResources: Note[];
-  valuePropositions: Note[];
-  customerRelationships: Note[];
-  channels: Note[];
-  customerSegments: Note[];
-  costStructure: Note[];
-  revenueStreams: Note[];
+export interface BmcData {
+  customerSegments: QuestionAnswer[];
+  valuePropositions: QuestionAnswer[];
+  channels: QuestionAnswer[];
+  customerRelationships: QuestionAnswer[];
+  revenueStreams: QuestionAnswer[];
+  keyResources: QuestionAnswer[];
+  keyActivities: QuestionAnswer[];
+  keyPartners: QuestionAnswer[];
+  costStructure: QuestionAnswer[];
 }
 
-const INITIAL_DATA: BmcData = {
-  keyPartners: [],
-  keyActivities: [],
-  keyResources: [],
-  valuePropositions: [],
-  customerRelationships: [],
-  channels: [],
-  customerSegments: [],
-  costStructure: [],
-  revenueStreams: [],
-};
+interface ProjectBrief {
+  name: string;
+  ideaSummary: string;
+  problem: string;
+  offering: string;
+  targetCustomer: string;
+  market: string;
+  stage: string;
+  competitors: string;
+  goal: string;
+}
 
-const NOTE_COLORS = {
-  yellow: 'bg-yellow-100 text-yellow-800 border-yellow-200',
-  blue: 'bg-blue-100 text-blue-800 border-blue-200',
-  rose: 'bg-rose-100 text-rose-800 border-rose-200',
-  emerald: 'bg-emerald-100 text-emerald-800 border-emerald-200',
-  amber: 'bg-amber-100 text-amber-800 border-amber-200',
-};
+interface BmcProject {
+  id: string;
+  brief: ProjectBrief;
+  data: BmcData;
+  started: boolean;
+  updatedAt: string;
+}
 
-// --- Block Metadata ---
+interface BlockMeta {
+  title: string;
+  objective: string;
+  icon: React.ElementType;
+  questions: string[];
+  cardClassName: string;
+  iconClassName: string;
+  badgeClassName: string;
+  questionDefaultClassName: string;
+  questionAnsweredClassName: string;
+  questionExpandedClassName: string;
+  actionButtonClassName: string;
+}
 
-const BLOCK_METADATA = {
-  keyPartners: {
-    title: 'الشركاء الرئيسيون',
-    icon: <Key />,
-    description: 'الموردون والشركاء الذين يجعلون نموذج العمل يعمل.',
-    questions: [
-      'من هم شركاؤنا الرئيسيون؟',
-      'من هم موردونا الرئيسيون؟',
-      'ما هي الموارد الرئيسية التي نحصل عليها من الشركاء؟',
-      'ما هي الأنشطة الرئيسية التي يقوم بها الشركاء؟'
-    ],
-    examples: ['موردي المواد الخام', 'شركات الخدمات اللوجستية', 'المسوقين بالعمولة'],
-    color: 'bg-violet-50 text-violet-600',
-    indicator: 'bg-violet-500'
-  },
-  keyActivities: {
-    title: 'الأنشطة الرئيسية',
-    icon: <Settings />,
-    description: 'أهم الأشياء التي يجب على الشركة القيام بها لإنجاح نموذج عملها.',
-    questions: [
-      'ما هي الأنشطة التي تتطلبها قيمنا المقترحة؟',
-      'ما هي قنوات التوزيع لدينا؟',
-      'كيف ندير علاقاتنا مع العملاء؟'
-    ],
-    examples: ['تطوير البرمجيات', 'إدارة سلاسل الإمداد', 'حل المشكلات التقنية'],
-    color: 'bg-blue-50 text-blue-600',
-    indicator: 'bg-blue-500'
-  },
-  keyResources: {
-    title: 'الموارد الرئيسية',
-    icon: <Package />,
-    description: 'الأصول المطلوبة لعرض وتقديم العناصر المذكورة سابقاً.',
-    questions: [
-      'ما هي الموارد التي تتطلبها قيمنا المقترحة؟',
-      'الموارد البشرية، الفكرية، المالية، والمادية؟'
-    ],
-    examples: ['براءات الاختراع', 'فريق المطورين', 'رأس المال الاستثماري'],
-    color: 'bg-sky-50 text-sky-600',
-    indicator: 'bg-sky-500'
-  },
-  valuePropositions: {
-    title: 'القيمة المقدَّمة',
-    icon: <Zap />,
-    description: 'مجموعة المنتجات والخدمات التي تخلق قيمة لشريحة محددة من العملاء.',
-    questions: [
-      'ما هي القيمة التي نقدمها للعميل؟',
-      'ما هي المشكلة التي نساعد في حلها؟',
-      'ما هي احتياجات العملاء التي نلبيها؟'
-    ],
-    examples: ['توفير التكاليف', 'سهولة الاستخدام', 'التصميم المتميز'],
-    color: 'bg-indigo-50 text-indigo-600',
-    indicator: 'bg-indigo-500'
-  },
-  customerRelationships: {
-    title: 'علاقات العملاء',
-    icon: <Heart />,
-    description: 'أنواع العلاقات التي تقيمها الشركة مع شرائح محددة من العملاء.',
-    questions: [
-      'ما نوع العلاقة التي تتوقعها كل شريحة من عملائنا؟',
-      'كيف يتم دمج هذه العلاقات في نموذج عملنا؟'
-    ],
-    examples: ['المساعدة الشخصية', 'الخدمات الذاتية', 'المجتمعات عبر الإنترنت'],
-    color: 'bg-rose-50 text-rose-600',
-    indicator: 'bg-rose-500'
-  },
-  channels: {
-    title: 'قنوات التوصيل',
-    icon: <Truck />,
-    description: 'كيف تتواصل الشركة مع شرائح عملائها وتصل إليهم لتقديم القيمة.',
-    questions: [
-      'من خلال أي قنوات يريد عملاؤنا الوصول إليهم؟',
-      'كيف نصل إليهم الآن؟ كيف يتم دمج قنواتنا؟'
-    ],
-    examples: ['الموقع الإلكتروني', 'مواقع التواصل الاجتماعي', 'متاجر التجزئة'],
-    color: 'bg-teal-50 text-teal-600',
-    indicator: 'bg-teal-500'
-  },
+const STORAGE_KEY = 'bmc_projects_v3';
+
+const GENERAL_BRIEF_FIELDS: Array<{
+  key: keyof ProjectBrief;
+  label: string;
+  placeholder: string;
+  textarea?: boolean;
+}> = [
+  { key: 'name', label: 'اسم المشروع', placeholder: 'مثال: منصة لإدارة الإعلانات المحلية' },
+  { key: 'ideaSummary', label: 'وصف فكرة المشروع', placeholder: 'صف الفكرة في جملتين أو ثلاث.', textarea: true },
+  { key: 'problem', label: 'المشكلة التي يحلها المشروع', placeholder: 'ما المشكلة الأساسية؟', textarea: true },
+  { key: 'offering', label: 'المنتج أو الخدمة', placeholder: 'ما الذي يقدمه المشروع فعلياً؟', textarea: true },
+  { key: 'targetCustomer', label: 'العميل المستهدف', placeholder: 'من العميل الأساسي؟' },
+  { key: 'market', label: 'الدولة أو السوق', placeholder: 'مثال: السعودية - الشركات الصغيرة' },
+  { key: 'stage', label: 'مرحلة المشروع', placeholder: 'الفكرة / التطوير / التشغيل' },
+  { key: 'competitors', label: 'المنافسون المعروفون', placeholder: 'من هم المنافسون؟', textarea: true },
+  { key: 'goal', label: 'الهدف من بناء النموذج', placeholder: 'تحقق من الفكرة / دراسة جدوى / جذب مستثمرين...' },
+];
+
+const BLOCK_ORDER: CanvasKey[] = [
+  'customerSegments',
+  'customerRelationships',
+  'valuePropositions',
+  'keyActivities',
+  'keyPartners',
+  'channels',
+  'keyResources',
+  'revenueStreams',
+  'costStructure',
+];
+
+const BLOCK_META: Record<CanvasKey, BlockMeta> = {
   customerSegments: {
     title: 'شرائح العملاء',
-    icon: <Users />,
-    description: 'المجموعات المختلفة من الأشخاص أو المؤسسات التي تهدف الشركة للوصول إليها.',
+    objective: 'تحديد العملاء الذين سيخلق المشروع قيمة لهم.',
+    icon: Users,
+    cardClassName: 'border-emerald-200/80 bg-emerald-50/40',
+    iconClassName: 'border-emerald-200 bg-emerald-100 text-emerald-700',
+    badgeClassName: 'border-emerald-200 bg-emerald-100/80 text-emerald-800',
+    questionDefaultClassName: 'border-emerald-200/70 bg-background hover:bg-emerald-50/60',
+    questionAnsweredClassName: 'border-emerald-300 bg-emerald-100/60 hover:bg-emerald-100/80',
+    questionExpandedClassName: 'border-emerald-200/70',
+    actionButtonClassName: 'border-emerald-300 text-emerald-800 hover:bg-emerald-100',
     questions: [
-      'لمن نخلق القيمة؟',
-      'من هم أهم عملائنا؟'
+      'من هم العملاء الرئيسيون الذين يستهدفهم المشروع؟',
+      'ما الخصائص الديموغرافية للعملاء (العمر، الجنس، الموقع، الدخل...)؟',
+      'هل تستهدف أفرادًا أم شركات أم جهات حكومية؟',
+      'ما المشكلة أو الحاجة التي يعاني منها هؤلاء العملاء؟',
+      'هل توجد شرائح عملاء مختلفة تحتاج إلى حلول مختلفة؟',
+      'أي شريحة تمثل الأولوية عند إطلاق المشروع؟',
+      'ما حجم هذه الشريحة تقريبًا؟',
+      'كيف يتخذ العميل قرار الشراء؟',
     ],
-    examples: ['جيل زد المهتم بالتقنية', 'أصحاب الشركات الصغيرة', 'المستثمرون الأفراد'],
-    color: 'bg-emerald-50 text-emerald-600',
-    indicator: 'bg-emerald-500'
   },
-  costStructure: {
-    title: 'هيكل التكاليف',
-    icon: <DollarSign />,
-    description: 'جميع التكاليف المتكبدة لتشغيل نموذج العمل.',
+  valuePropositions: {
+    title: 'القيمة المقدمة',
+    objective: 'توضيح السبب الذي يجعل العميل يختارك.',
+    icon: Sparkles,
+    cardClassName: 'border-violet-200/80 bg-violet-50/40',
+    iconClassName: 'border-violet-200 bg-violet-100 text-violet-700',
+    badgeClassName: 'border-violet-200 bg-violet-100/80 text-violet-800',
+    questionDefaultClassName: 'border-violet-200/70 bg-background hover:bg-violet-50/60',
+    questionAnsweredClassName: 'border-violet-300 bg-violet-100/60 hover:bg-violet-100/80',
+    questionExpandedClassName: 'border-violet-200/70',
+    actionButtonClassName: 'border-violet-300 text-violet-800 hover:bg-violet-100',
     questions: [
-      'ما هي أهم التكاليف الكامنة في نموذج عملنا؟',
-      'ما هي الموارد الرئيسية الأكثر تكلفة؟',
-      'ما هي الأنشطة الرئيسية الأكثر تكلفة؟'
+      'ما المشكلة الأساسية التي يحلها المشروع؟',
+      'ما القيمة التي يحصل عليها العميل؟',
+      'لماذا سيختار العميل مشروعك بدلاً من المنافسين؟',
+      'ما الفوائد الوظيفية التي تقدمها؟',
+      'ما الفوائد العاطفية أو النفسية التي تحققها؟',
+      'هل تقدم توفيرًا في الوقت أو المال أو الجهد؟',
+      'ما أكثر ميزة تجعل عرضك فريدًا؟',
+      'ما الاحتياجات التي يلبيها المشروع؟',
     ],
-    examples: ['رواتب الموظفين', 'تكاليف السيرفرات', 'ميزانية التسويق'],
-    color: 'bg-amber-50 text-amber-600',
-    indicator: 'bg-amber-500'
+  },
+  channels: {
+    title: 'قنوات الوصول',
+    objective: 'معرفة كيف سيصل المنتج إلى العميل.',
+    icon: Truck,
+    cardClassName: 'border-sky-200/80 bg-sky-50/40',
+    iconClassName: 'border-sky-200 bg-sky-100 text-sky-700',
+    badgeClassName: 'border-sky-200 bg-sky-100/80 text-sky-800',
+    questionDefaultClassName: 'border-sky-200/70 bg-background hover:bg-sky-50/60',
+    questionAnsweredClassName: 'border-sky-300 bg-sky-100/60 hover:bg-sky-100/80',
+    questionExpandedClassName: 'border-sky-200/70',
+    actionButtonClassName: 'border-sky-300 text-sky-800 hover:bg-sky-100',
+    questions: [
+      'كيف سيكتشف العملاء مشروعك؟',
+      'ما القنوات التي ستستخدمها للتسويق؟',
+      'أين سيشتري العميل المنتج أو الخدمة؟',
+      'هل سيكون البيع عبر الإنترنت أم من خلال متجر فعلي أم عبر موزعين؟',
+      'ما القنوات الأكثر فاعلية للوصول إلى العملاء؟',
+      'كيف سيتم تسليم المنتج أو تقديم الخدمة؟',
+      'كيف ستدعم العميل بعد عملية الشراء؟',
+    ],
+  },
+  customerRelationships: {
+    title: 'العلاقة مع العملاء',
+    objective: 'تحديد طبيعة العلاقة مع العملاء.',
+    icon: HeartHandshake,
+    cardClassName: 'border-rose-200/80 bg-rose-50/40',
+    iconClassName: 'border-rose-200 bg-rose-100 text-rose-700',
+    badgeClassName: 'border-rose-200 bg-rose-100/80 text-rose-800',
+    questionDefaultClassName: 'border-rose-200/70 bg-background hover:bg-rose-50/60',
+    questionAnsweredClassName: 'border-rose-300 bg-rose-100/60 hover:bg-rose-100/80',
+    questionExpandedClassName: 'border-rose-200/70',
+    actionButtonClassName: 'border-rose-300 text-rose-800 hover:bg-rose-100',
+    questions: [
+      'ما نوع العلاقة التي تريد بناءها مع العملاء؟',
+      'كيف ستكسب ثقة العملاء؟',
+      'كيف ستحافظ عليهم بعد أول عملية شراء؟',
+      'كيف ستشجعهم على تكرار الشراء؟',
+      'هل سيتم تقديم دعم شخصي أم دعم ذاتي؟',
+      'كيف ستتعامل مع الشكاوى؟',
+      'كيف ستقيس رضا العملاء؟',
+    ],
   },
   revenueStreams: {
     title: 'مصادر الإيرادات',
-    icon: <DollarSign />,
-    description: 'النقد الذي تولده الشركة من كل شريحة من شرائح العملاء.',
+    objective: 'تحديد كيفية تحقيق الأرباح.',
+    icon: CircleDollarSign,
+    cardClassName: 'border-lime-200/80 bg-lime-50/40',
+    iconClassName: 'border-lime-200 bg-lime-100 text-lime-700',
+    badgeClassName: 'border-lime-200 bg-lime-100/80 text-lime-800',
+    questionDefaultClassName: 'border-lime-200/70 bg-background hover:bg-lime-50/60',
+    questionAnsweredClassName: 'border-lime-300 bg-lime-100/60 hover:bg-lime-100/80',
+    questionExpandedClassName: 'border-lime-200/70',
+    actionButtonClassName: 'border-lime-300 text-lime-800 hover:bg-lime-100',
     questions: [
-      'ما هي القيمة التي يكون عملاؤنا مستعدين حقاً لدفع ثمنها؟',
-      'كيف يفضلون الدفع؟ كم تساهم كل قناة في الإيرادات؟'
+      'كيف سيحقق المشروع الإيرادات؟',
+      'ما المنتجات أو الخدمات المدفوعة؟',
+      'هل ستكون الإيرادات لمرة واحدة أم متكررة؟',
+      'كيف سيتم تحديد الأسعار؟',
+      'هل توجد مصادر دخل إضافية؟',
+      'ما طريقة الدفع المناسبة للعملاء؟',
+      'ما المصدر المتوقع لأكبر نسبة من الإيرادات؟',
     ],
-    examples: ['الاشتراكات الشهرية', 'رسوم الاستخدام', 'الإعلانات'],
-    color: 'bg-emerald-50 text-emerald-600',
-    indicator: 'bg-emerald-500'
-  }
+  },
+  keyResources: {
+    title: 'الموارد الرئيسية',
+    objective: 'معرفة ما يحتاجه المشروع ليعمل.',
+    icon: Package,
+    cardClassName: 'border-amber-200/80 bg-amber-50/40',
+    iconClassName: 'border-amber-200 bg-amber-100 text-amber-700',
+    badgeClassName: 'border-amber-200 bg-amber-100/80 text-amber-800',
+    questionDefaultClassName: 'border-amber-200/70 bg-background hover:bg-amber-50/60',
+    questionAnsweredClassName: 'border-amber-300 bg-amber-100/60 hover:bg-amber-100/80',
+    questionExpandedClassName: 'border-amber-200/70',
+    actionButtonClassName: 'border-amber-300 text-amber-800 hover:bg-amber-100',
+    questions: [
+      'ما أهم الموارد التي يحتاجها المشروع؟',
+      'ما الموارد البشرية المطلوبة؟',
+      'ما الموارد التقنية المطلوبة؟',
+      'ما الموارد المالية اللازمة؟',
+      'هل توجد أصول فكرية أو تراخيص ضرورية؟',
+      'ما الموارد التي تمتلكها بالفعل؟',
+      'ما الموارد التي تحتاج إلى توفيرها؟',
+    ],
+  },
+  keyActivities: {
+    title: 'الأنشطة الرئيسية',
+    objective: 'تحديد أهم الأعمال اليومية للمشروع.',
+    icon: Wrench,
+    cardClassName: 'border-blue-200/80 bg-blue-50/40',
+    iconClassName: 'border-blue-200 bg-blue-100 text-blue-700',
+    badgeClassName: 'border-blue-200 bg-blue-100/80 text-blue-800',
+    questionDefaultClassName: 'border-blue-200/70 bg-background hover:bg-blue-50/60',
+    questionAnsweredClassName: 'border-blue-300 bg-blue-100/60 hover:bg-blue-100/80',
+    questionExpandedClassName: 'border-blue-200/70',
+    actionButtonClassName: 'border-blue-300 text-blue-800 hover:bg-blue-100',
+    questions: [
+      'ما الأنشطة الأساسية التي يجب تنفيذها لإنجاح المشروع؟',
+      'ما أهم العمليات التشغيلية؟',
+      'ما الأنشطة المتعلقة بالإنتاج أو تقديم الخدمة؟',
+      'ما الأنشطة التسويقية الضرورية؟',
+      'ما الأنشطة المتعلقة بالمبيعات؟',
+      'ما الأنشطة الخاصة بخدمة العملاء؟',
+      'ما الأنشطة التي تضيف أكبر قيمة للعملاء؟',
+    ],
+  },
+  keyPartners: {
+    title: 'الشركاء الرئيسيون',
+    objective: 'تحديد الجهات التي تساعد المشروع على النجاح.',
+    icon: Handshake,
+    cardClassName: 'border-fuchsia-200/80 bg-fuchsia-50/40',
+    iconClassName: 'border-fuchsia-200 bg-fuchsia-100 text-fuchsia-700',
+    badgeClassName: 'border-fuchsia-200 bg-fuchsia-100/80 text-fuchsia-800',
+    questionDefaultClassName: 'border-fuchsia-200/70 bg-background hover:bg-fuchsia-50/60',
+    questionAnsweredClassName: 'border-fuchsia-300 bg-fuchsia-100/60 hover:bg-fuchsia-100/80',
+    questionExpandedClassName: 'border-fuchsia-200/70',
+    actionButtonClassName: 'border-fuchsia-300 text-fuchsia-800 hover:bg-fuchsia-100',
+    questions: [
+      'من هم الشركاء الرئيسيون للمشروع؟',
+      'هل يوجد موردون أساسيون؟',
+      'هل تحتاج إلى شركاء تقنيين؟',
+      'هل توجد جهات لوجستية أو تشغيلية؟',
+      'ما سبب اختيار كل شريك؟',
+      'ما القيمة التي يضيفها كل شريك؟',
+      'ما المخاطر في حال فقدان أحد الشركاء؟',
+    ],
+  },
+  costStructure: {
+    title: 'هيكل التكاليف',
+    objective: 'معرفة أين سيتم إنفاق الأموال.',
+    icon: Building2,
+    cardClassName: 'border-orange-200/80 bg-orange-50/40',
+    iconClassName: 'border-orange-200 bg-orange-100 text-orange-700',
+    badgeClassName: 'border-orange-200 bg-orange-100/80 text-orange-800',
+    questionDefaultClassName: 'border-orange-200/70 bg-background hover:bg-orange-50/60',
+    questionAnsweredClassName: 'border-orange-300 bg-orange-100/60 hover:bg-orange-100/80',
+    questionExpandedClassName: 'border-orange-200/70',
+    actionButtonClassName: 'border-orange-300 text-orange-800 hover:bg-orange-100',
+    questions: [
+      'ما أهم التكاليف الثابتة في المشروع؟',
+      'ما أهم التكاليف المتغيرة؟',
+      'ما أكبر بند يستهلك الميزانية؟',
+      'ما تكلفة تشغيل المشروع شهريًا؟',
+      'ما تكلفة اكتساب عميل جديد؟',
+      'هل توجد تكاليف موسمية؟',
+      'ما التكاليف التي يمكن تقليلها دون التأثير على جودة الخدمة؟',
+    ],
+  },
 };
 
-const BLOCK_ORDER: (keyof BmcData)[] = [
-  'keyPartners',
-  'keyActivities',
-  'keyResources',
-  'valuePropositions',
-  'customerRelationships',
-  'channels',
-  'customerSegments',
-  'costStructure',
-  'revenueStreams',
-];
+function createQuestionId() {
+  return crypto.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+}
 
-// --- Components ---
+function createInitialData(): BmcData {
+  return {
+    customerSegments: BLOCK_META.customerSegments.questions.map((question) => ({ id: createQuestionId(), question, answer: '' })),
+    valuePropositions: BLOCK_META.valuePropositions.questions.map((question) => ({ id: createQuestionId(), question, answer: '' })),
+    channels: BLOCK_META.channels.questions.map((question) => ({ id: createQuestionId(), question, answer: '' })),
+    customerRelationships: BLOCK_META.customerRelationships.questions.map((question) => ({ id: createQuestionId(), question, answer: '' })),
+    revenueStreams: BLOCK_META.revenueStreams.questions.map((question) => ({ id: createQuestionId(), question, answer: '' })),
+    keyResources: BLOCK_META.keyResources.questions.map((question) => ({ id: createQuestionId(), question, answer: '' })),
+    keyActivities: BLOCK_META.keyActivities.questions.map((question) => ({ id: createQuestionId(), question, answer: '' })),
+    keyPartners: BLOCK_META.keyPartners.questions.map((question) => ({ id: createQuestionId(), question, answer: '' })),
+    costStructure: BLOCK_META.costStructure.questions.map((question) => ({ id: createQuestionId(), question, answer: '' })),
+  };
+}
 
-const StickyNote: React.FC<{
-  note: Note;
-  onDelete: () => void;
-  onUpdate: (content: string) => void;
-  onColorChange: (color: Note['color']) => void;
-}> = ({ note, onDelete, onUpdate, onColorChange }) => {
-  const [isEditing, setIsEditing] = useState(!note.content);
-  const [isPriority, setIsPriority] = useState(false);
+function createEmptyBrief(index: number): ProjectBrief {
+  return {
+    name: `مشروع ${index}`,
+    ideaSummary: '',
+    problem: '',
+    offering: '',
+    targetCustomer: '',
+    market: '',
+    stage: '',
+    competitors: '',
+    goal: '',
+  };
+}
 
-  return (
-    <motion.div
-      layout
-      initial={{ scale: 0.8, opacity: 0, rotate: -2 }}
-      animate={{ scale: 1, opacity: 1, rotate: 0 }}
-      exit={{ scale: 0.8, opacity: 0 }}
-      className={`relative p-3 rounded-xl shadow-sm border-b-4 mb-3 group transition-all hover:shadow-md ${isPriority ? 'ring-2 ring-amber-400 ring-offset-2' : ''} ${NOTE_COLORS[note.color]}`}
-    >
-      <div className="flex items-center justify-between mb-1 opacity-0 group-hover:opacity-100 transition-opacity">
-        <div className="flex gap-1">
-          {(['yellow', 'blue', 'rose', 'emerald', 'amber'] as Note['color'][]).map(c => (
-            <button
-              key={c}
-              onClick={() => onColorChange(c)}
-              className={`w-2 h-2 rounded-full border border-black/5 ${NOTE_COLORS[c].split(' ')[0]}`}
-            />
-          ))}
-        </div>
-        <div className="flex items-center gap-1">
-          <button 
-            onClick={() => setIsPriority(!isPriority)}
-            className={`transition-colors ${isPriority ? 'text-amber-500' : 'text-slate-300 hover:text-amber-400'}`}
-          >
-            <Star size={12} fill={isPriority ? 'currentColor' : 'none'} />
-          </button>
-          <button
-            onClick={onDelete}
-            className="text-slate-300 hover:text-rose-500"
-          >
-            <X size={12} />
-          </button>
-        </div>
-      </div>
+function createProject(index: number): BmcProject {
+  return {
+    id: createQuestionId(),
+    brief: createEmptyBrief(index),
+    data: createInitialData(),
+    started: false,
+    updatedAt: new Date().toISOString(),
+  };
+}
 
-      {isEditing ? (
-        <textarea
-          autoFocus
-          value={note.content}
-          onChange={(e) => onUpdate(e.target.value)}
-          onBlur={() => setIsEditing(false)}
-          className="w-full bg-transparent border-none focus:ring-0 text-[11px] font-bold resize-none leading-tight min-h-[60px] p-0"
-          placeholder="اكتب هنا..."
-        />
-      ) : (
-        <div
-          onClick={() => setIsEditing(true)}
-          className="text-[11px] font-bold leading-tight cursor-text break-words min-h-[40px]"
-        >
-          {note.content || <span className="opacity-30 italic font-medium text-[10px]">اضغط لإضافة تفاصيل استراتيجية...</span>}
-        </div>
-      )}
-
-      {isPriority && !isEditing && (
-        <div className="absolute -top-1 -left-1">
-           <span className="flex h-3 w-3">
-             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-             <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
-           </span>
-        </div>
-      )}
-    </motion.div>
+function countAnswered(data: BmcData) {
+  return Object.values(data).reduce(
+    (sum, questions) => sum + questions.filter((item) => item.answer.trim().length > 0).length,
+    0
   );
-};
+}
 
-const CanvasBlock: React.FC<{
-  id: keyof BmcData;
-  notes: Note[];
-  onAdd: (color: Note['color']) => void;
-  onDeleteNote: (noteId: string) => void;
-  onUpdateNote: (noteId: string, content: string) => void;
-  onUpdateNoteColor: (noteId: string, color: Note['color']) => void;
-  isFocused?: boolean;
-  onToggleFocus?: () => void;
-  className?: string;
-}> = ({ id, notes, onAdd, onDeleteNote, onUpdateNote, onUpdateNoteColor, isFocused = false, onToggleFocus, className = '' }) => {
-  const meta = BLOCK_METADATA[id];
-  const [showGuide, setShowGuide] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+function countBlocksWithAnswers(data: BmcData) {
+  return BLOCK_ORDER.filter((key) => data[key].some((item) => item.answer.trim().length > 0)).length;
+}
 
-  const filteredNotes = notes.filter(n => n.content.toLowerCase().includes(searchQuery.toLowerCase()));
+function formatDate(value: string) {
+  return new Date(value).toLocaleDateString('ar-SA', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+}
 
+function briefCompletion(brief: ProjectBrief) {
+  const filled = GENERAL_BRIEF_FIELDS.filter(({ key }) => brief[key].trim().length > 0).length;
+  return Math.round((filled / GENERAL_BRIEF_FIELDS.length) * 100);
+}
+
+function getProjectHealth(project: BmcProject) {
+  const answered = countAnswered(project.data);
+  const total = Object.values(project.data).reduce((sum, items) => sum + items.length, 0);
+  return Math.round((answered / total) * 100);
+}
+
+function getNextBlock(project: BmcProject) {
+  return BLOCK_ORDER.find((key) => !project.data[key].some((item) => item.answer.trim().length > 0)) ?? 'valuePropositions';
+}
+
+function CompactMetric({
+  label,
+  value,
+  hint,
+}: {
+  label: string;
+  value: string;
+  hint: string;
+}) {
   return (
-    <div className={`group relative bg-white flex flex-col p-4 transition-all duration-300 ${isFocused ? 'h-full' : 'hover:shadow-2xl hover:ring-1 hover:ring-slate-200 border border-slate-100 rounded-3xl min-h-[200px]'} overflow-visible ${className}`}>
-      {/* Indicator */}
-      {!isFocused && <div className={`absolute top-0 right-0 w-1 h-full ${meta.indicator} opacity-10 group-hover:opacity-100 transition-opacity rounded-r-3xl`} />}
-      
-      {/* Header */}
-      <div className="flex items-start justify-between mb-3">
-        <div className="flex items-center gap-2">
-          <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${meta.color} shadow-sm shrink-0`}>
-            {React.cloneElement(meta.icon as React.ReactElement, { size: 16 })}
-          </div>
-          <div>
-            <h3 className="text-xs font-black text-slate-800 leading-tight">
-              {meta.title}
-            </h3>
-            {isFocused && <p className="text-[10px] font-bold text-slate-400 mt-0.5">{meta.description}</p>}
-          </div>
-        </div>
-        <div className="flex items-center gap-1">
-          {isFocused && (
-            <div className="flex items-center bg-slate-50 border border-slate-100 rounded-lg px-2 py-1 mr-2 ml-4">
-              <Search size={12} className="text-slate-400 mr-2" />
-              <input 
-                type="text" 
-                placeholder="بحث في الملاحظات..." 
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="bg-transparent border-none focus:ring-0 text-[10px] font-bold w-32"
-              />
-            </div>
-          )}
-          <button 
-            onClick={() => setShowGuide(!showGuide)}
-            className={`w-7 h-7 rounded-full flex items-center justify-center transition-colors ${showGuide ? 'bg-indigo-100 text-indigo-600' : 'text-slate-300 hover:text-slate-500 hover:bg-slate-50'}`}
-          >
-            <HelpCircle size={14} />
-          </button>
-          <button 
-            onClick={onToggleFocus}
-            className="w-7 h-7 text-slate-300 hover:text-slate-500 hover:bg-slate-50 rounded-full flex items-center justify-center transition-all"
-          >
-            {isFocused ? <Minimize2 size={14} /> : <Maximize2 size={14} />}
-          </button>
-          <button 
-            onClick={() => onAdd('yellow')}
-            className="w-7 h-7 bg-slate-900 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all"
-          >
-            <Plus size={14} />
-          </button>
-        </div>
-      </div>
-
-      {/* Content Area */}
-      <div className={`relative flex-1 flex flex-col overflow-y-auto custom-scrollbar pr-1 ${isFocused ? 'px-4' : 'max-h-[400px]'}`}>
-        <div className={isFocused ? 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-8' : 'flex flex-col'}>
-          <AnimatePresence mode="popLayout">
-            {filteredNotes.map(note => (
-              <StickyNote
-                key={note.id}
-                note={note}
-                onDelete={() => onDeleteNote(note.id)}
-                onUpdate={(content) => onUpdateNote(note.id, content)}
-                onColorChange={(color) => onUpdateNoteColor(note.id, color)}
-              />
-            ))}
-          </AnimatePresence>
-        </div>
-        
-        {filteredNotes.length === 0 && !showGuide && (
-          <div className="flex-1 flex flex-col items-center justify-center opacity-20 py-8">
-            <LayoutGrid size={32} className="text-slate-300 mb-2" />
-            <p className="text-[10px] font-bold text-slate-400">
-              {searchQuery ? 'لا توجد نتائج للبحث' : 'لا يوجد ملاحظات'}
-            </p>
-          </div>
-        )}
-
-        {/* Guidance Overlay */}
-        <AnimatePresence>
-          {showGuide && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 10 }}
-              className="absolute inset-0 bg-white/95 backdrop-blur-sm z-20 p-4 rounded-2xl flex flex-col gap-3"
-            >
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] font-black text-indigo-600 flex items-center gap-1">
-                  <Lightbulb size={12} />
-                  دليل القسم
-                </span>
-                <button onClick={() => setShowGuide(false)} className="text-slate-400 hover:text-slate-600">
-                  <X size={14} />
-                </button>
-              </div>
-              <div className="space-y-3 overflow-y-auto">
-                <div>
-                  <p className="text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-wider">أسئلة موجهة:</p>
-                  <ul className="space-y-1">
-                    {meta.questions.map((q, i) => (
-                      <li key={i} className="text-[10px] font-semibold text-slate-600 flex items-start gap-1">
-                        <span className="text-indigo-400 mt-1">•</span>
-                        {q}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <p className="text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-wider">أمثلة:</p>
-                  <div className="flex flex-wrap gap-1">
-                    {meta.examples.map((ex, i) => (
-                      <span key={i} className="px-2 py-0.5 bg-slate-100 text-slate-500 rounded text-[9px] font-bold italic">
-                        {ex}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+    <div className="rounded-lg border border-border bg-background px-3 py-3 text-right">
+      <p className="text-[11px] font-semibold text-muted-foreground">{label}</p>
+      <p className="mt-1 text-xl font-semibold text-foreground">{value}</p>
+      <p className="mt-1 text-[11px] text-muted-foreground">{hint}</p>
     </div>
   );
-};
+}
+
+function ProjectSwitchItem({
+  project,
+  active,
+  onClick,
+}: {
+  project: BmcProject;
+  active: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={cn(
+        'min-w-[220px] rounded-lg border px-3 py-3 text-right transition-colors',
+        active
+          ? 'border-primary bg-primary/[0.06] text-foreground'
+          : 'border-border bg-background hover:bg-accent hover:text-accent-foreground'
+      )}
+    >
+      <div className="flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <p className="truncate text-sm font-semibold">{project.brief.name || 'مشروع بدون اسم'}</p>
+          <p className="mt-1 truncate text-[11px] text-muted-foreground">
+            {project.brief.market || 'لم يتم تحديد السوق بعد'}
+          </p>
+        </div>
+        <Badge variant={project.started ? 'secondary' : 'outline'} className="shrink-0">
+          {project.started ? 'قيد البناء' : 'تهيئة'}
+        </Badge>
+      </div>
+    </button>
+  );
+}
+
+function BmcBlockCard({
+  block,
+  questions,
+  searchQuery,
+  onOpenQuestion,
+}: {
+  block: CanvasKey;
+  questions: QuestionAnswer[];
+  searchQuery: string;
+  onOpenQuestion: (block: CanvasKey, questionId: string) => void;
+}) {
+  const [showAllQuestions, setShowAllQuestions] = useState(false);
+  const meta = BLOCK_META[block];
+  const answered = questions.filter((item) => item.answer.trim().length > 0).length;
+  const filteredQuestions = questions.filter((item) =>
+    `${item.question} ${item.answer}`.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+  const shouldShowAll = showAllQuestions || searchQuery.trim().length > 0;
+  const visibleQuestions = shouldShowAll ? filteredQuestions : filteredQuestions.slice(0, 2);
+  const hiddenQuestionsCount = Math.max(filteredQuestions.length - visibleQuestions.length, 0);
+
+  return (
+    <Card className={cn('h-full rounded-xl shadow-none', meta.cardClassName)}>
+      <CardHeader className="gap-3 border-b border-border/50 p-4">
+        <div className="flex items-start justify-between gap-3">
+          <div className="flex min-w-0 items-start gap-3">
+            <div className={cn('flex size-10 shrink-0 items-center justify-center rounded-lg border', meta.iconClassName)}>
+              <meta.icon size={18} />
+            </div>
+            <div className="min-w-0 text-right">
+              <CardTitle className="text-sm font-semibold text-foreground">{meta.title}</CardTitle>
+              <CardDescription className="mt-1 text-xs leading-6">{meta.objective}</CardDescription>
+            </div>
+          </div>
+          <Badge variant="outline" className={cn('shrink-0 text-[10px]', meta.badgeClassName)}>
+            {answered}/{questions.length}
+          </Badge>
+        </div>
+      </CardHeader>
+
+      <CardContent className="p-3">
+        <div className="space-y-2">
+          {filteredQuestions.length > 0 ? (
+            visibleQuestions.map((question) => {
+              const hasAnswer = question.answer.trim().length > 0;
+              return (
+                <Collapsible
+                  key={question.id}
+                  className={cn(
+                    'rounded-lg border text-right transition-colors',
+                    hasAnswer
+                      ? meta.questionAnsweredClassName
+                      : meta.questionDefaultClassName
+                  )}
+                >
+                  <CollapsibleTrigger asChild>
+                    <button
+                      type="button"
+                      className="group flex w-full items-center justify-between gap-3 px-3 py-3 transition-colors"
+                    >
+                      <div className="min-w-0 flex-1 text-right">
+                        <p className="text-sm font-medium leading-6 text-foreground">{question.question}</p>
+                      </div>
+                      <div className="flex shrink-0 items-center gap-2">
+                        {hasAnswer ? (
+                          <CheckCircle2 size={16} className="text-primary" />
+                        ) : (
+                          <PencilLine size={16} className="text-muted-foreground" />
+                        )}
+                        <ChevronDown size={16} className="text-muted-foreground transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                      </div>
+                    </button>
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className={cn('border-t px-3 py-3', meta.questionExpandedClassName)}>
+                    <div className="space-y-3">
+                      <p className="text-xs leading-6 text-muted-foreground">
+                        {hasAnswer ? question.answer : 'لا توجد إجابة مكتوبة بعد. افتح نافذة الإجابة لتوثيق القرار الخاص بهذا السؤال.'}
+                      </p>
+                      <div className="flex justify-start">
+                        <Button
+                          size="sm"
+                          variant={hasAnswer ? 'outline' : 'secondary'}
+                          className={hasAnswer ? meta.actionButtonClassName : ''}
+                          onClick={() => onOpenQuestion(block, question.id)}
+                        >
+                          <PencilLine size={14} />
+                          {hasAnswer ? 'تحرير الإجابة' : 'إضافة إجابة'}
+                        </Button>
+                      </div>
+                    </div>
+                  </CollapsibleContent>
+                </Collapsible>
+              );
+            })
+          ) : (
+            <div className="rounded-lg border border-dashed border-border px-4 py-8 text-center text-sm text-muted-foreground">
+              لا توجد أسئلة مطابقة للبحث داخل هذا القسم.
+            </div>
+          )}
+
+          {hiddenQuestionsCount > 0 ? (
+            <Button
+              variant="outline"
+              size="sm"
+              className="w-full"
+              onClick={() => setShowAllQuestions(true)}
+            >
+              عرض المزيد
+              <Badge variant="secondary" className="mr-1">
+                +{hiddenQuestionsCount}
+              </Badge>
+            </Button>
+          ) : null}
+
+          {showAllQuestions && searchQuery.trim().length === 0 && filteredQuestions.length > 2 ? (
+            <Button
+              variant="ghost"
+              size="sm"
+              className="w-full"
+              onClick={() => setShowAllQuestions(false)}
+            >
+              عرض أقل
+            </Button>
+          ) : null}
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
 
 export const BusinessModelCanvas: React.FC<{
   onComplete: (data: BmcData) => void;
 }> = ({ onComplete }) => {
-  const [data, setData] = useState<BmcData>(() => {
-    const saved = localStorage.getItem('bmc_data');
-    return saved ? JSON.parse(saved) : INITIAL_DATA;
+  const [projects, setProjects] = useState<BmcProject[]>(() => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (!saved) return [createProject(1)];
+    try {
+      const parsed = JSON.parse(saved) as BmcProject[];
+      return parsed.length > 0 ? parsed : [createProject(1)];
+    } catch {
+      return [createProject(1)];
+    }
   });
-
-  const [focusedBlock, setFocusedBlock] = useState<keyof BmcData | null>(null);
+  const [activeProjectId, setActiveProjectId] = useState<string>(() => {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (!saved) return '';
+    try {
+      const parsed = JSON.parse(saved) as BmcProject[];
+      return parsed[0]?.id ?? '';
+    } catch {
+      return '';
+    }
+  });
+  const [searchQuery, setSearchQuery] = useState('');
+  const [briefOpen, setBriefOpen] = useState(false);
+  const [projectDialogOpen, setProjectDialogOpen] = useState(false);
+  const [newProjectName, setNewProjectName] = useState('');
+  const [currentQuestion, setCurrentQuestion] = useState<{ block: CanvasKey; questionId: string } | null>(null);
 
   useEffect(() => {
-    localStorage.setItem('bmc_data', JSON.stringify(data));
-  }, [data]);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(projects));
+  }, [projects]);
 
-  const addNote = (key: keyof BmcData, color: Note['color']) => {
-    const newNote: Note = {
-      id: Math.random().toString(36).substr(2, 9),
-      content: '',
-      color
-    };
-    setData(prev => ({
-      ...prev,
-      [key]: [newNote, ...prev[key]]
+  useEffect(() => {
+    if (!activeProjectId && projects[0]) {
+      setActiveProjectId(projects[0].id);
+    }
+  }, [activeProjectId, projects]);
+
+  const activeProject = useMemo(
+    () => projects.find((project) => project.id === activeProjectId) ?? projects[0],
+    [activeProjectId, projects]
+  );
+
+  const currentQuestionEntry = useMemo(() => {
+    if (!activeProject || !currentQuestion) return null;
+    return activeProject.data[currentQuestion.block].find((item) => item.id === currentQuestion.questionId) ?? null;
+  }, [activeProject, currentQuestion]);
+
+  const answeredQuestions = activeProject ? countAnswered(activeProject.data) : 0;
+  const totalQuestions = activeProject ? Object.values(activeProject.data).reduce((sum, items) => sum + items.length, 0) : 0;
+  const readiness = activeProject ? getProjectHealth(activeProject) : 0;
+  const answeredBlocks = activeProject ? countBlocksWithAnswers(activeProject.data) : 0;
+  const nextBlock = activeProject ? BLOCK_META[getNextBlock(activeProject)].title : 'القيمة المقدمة';
+  const briefProgress = activeProject ? briefCompletion(activeProject.brief) : 0;
+
+  const updateActiveProject = (updater: (project: BmcProject) => BmcProject) => {
+    if (!activeProject) return;
+    setProjects((prev) =>
+      prev.map((project) =>
+        project.id === activeProject.id
+          ? {
+              ...updater(project),
+              updatedAt: new Date().toISOString(),
+            }
+          : project
+      )
+    );
+  };
+
+  const handleCreateProject = () => {
+    const next = createProject(projects.length + 1);
+    if (newProjectName.trim()) {
+      next.brief.name = newProjectName.trim();
+    }
+    setProjects((prev) => [next, ...prev]);
+    setActiveProjectId(next.id);
+    setNewProjectName('');
+    setProjectDialogOpen(false);
+  };
+
+  const handleBriefFieldChange = (key: keyof ProjectBrief, value: string) => {
+    updateActiveProject((project) => ({
+      ...project,
+      brief: {
+        ...project.brief,
+        [key]: value,
+      },
     }));
   };
 
-  const deleteNote = (key: keyof BmcData, noteId: string) => {
-    setData(prev => ({
-      ...prev,
-      [key]: prev[key].filter(n => n.id !== noteId)
+  const handleStartProject = () => {
+    updateActiveProject((project) => ({
+      ...project,
+      started: true,
     }));
   };
 
-  const updateNote = (key: keyof BmcData, noteId: string, content: string) => {
-    setData(prev => ({
-      ...prev,
-      [key]: prev[key].map(n => n.id === noteId ? { ...n, content } : n)
+  const handleQuestionAnswerChange = (value: string) => {
+    if (!currentQuestion || !activeProject) return;
+    updateActiveProject((project) => ({
+      ...project,
+      data: {
+        ...project.data,
+        [currentQuestion.block]: project.data[currentQuestion.block].map((item) =>
+          item.id === currentQuestion.questionId ? { ...item, answer: value } : item
+        ),
+      },
     }));
   };
-
-  const updateNoteColor = (key: keyof BmcData, noteId: string, color: Note['color']) => {
-    setData(prev => ({
-      ...prev,
-      [key]: prev[key].map(n => n.id === noteId ? { ...n, color } : n)
-    }));
-  };
-
-  const filledBlocks = Object.keys(data).filter(key => data[key as keyof BmcData].length > 0).length;
-  const pct = Math.round((filledBlocks / 9) * 100);
-  const totalNotes = Object.values(data).reduce((sum, notes) => sum + notes.length, 0);
-  const populatedBlocks = BLOCK_ORDER.filter((key) => data[key].length > 0);
-  const suggestedFocus: (keyof BmcData)[] = populatedBlocks.length < 2
-    ? ['valuePropositions', 'customerSegments']
-    : populatedBlocks.length < 5
-      ? ['channels', 'customerRelationships']
-      : ['costStructure', 'revenueStreams'];
 
   return (
-    <div dir="rtl" className="w-full max-w-[1880px] mx-auto min-h-screen flex flex-col px-3 py-4 md:px-6 md:py-6 xl:px-8 gap-6 xl:gap-8 animate-in fade-in duration-1000">
-      
-      {/* --- Strategic Header --- */}
-      <div className="w-full bg-white border border-slate-200 p-5 md:p-6 xl:p-7 rounded-[2rem] shadow-sm flex flex-col xl:flex-row xl:items-center xl:justify-between gap-5 xl:gap-8">
+    <div dir="rtl" className="min-h-screen bg-background px-3 pb-10 pt-4 sm:px-4 lg:px-5 2xl:px-6">
+      <div className="mx-auto flex w-full max-w-[1880px] flex-col gap-4">
+        <PageHeader
+          badge="Business Model Canvas"
+          title="بناء نموذج العمل BMC"
+          description="هذه الصفحة تعطي العميل تخطيط نموذج العمل بصورته المعروفة، مع أسئلة جاهزة داخل كل قسم، وإجابات منظمة يمكن نقلها لاحقاً للمبرمج أو لفريق دراسة الجدوى."
+          actions={[
+            {
+              label: 'متابعة التحليل',
+              onClick: () => activeProject && onComplete(activeProject.data),
+              icon: <ArrowUpRight size={16} />,
+            },
+          ]}
+          metrics={[
+            { label: 'المشاريع', value: `${projects.length}`, helper: 'نماذج محفوظة داخل الصفحة' },
+            { label: 'الجاهزية', value: `${readiness}%`, helper: 'نسبة الإجابات المكتملة' },
+            { label: 'الأقسام النشطة', value: `${answeredBlocks}/9`, helper: 'أقسام فيها قرارات مكتوبة' },
+          ]}
+          className="rounded-xl"
+        />
 
-        <div className="flex items-start gap-4 md:gap-5">
-          <div className="w-14 h-14 md:w-16 md:h-16 bg-slate-900 text-white rounded-2xl flex items-center justify-center shadow-sm shrink-0">
-            <LayoutGrid size={32} />
-          </div>
-          <div className="min-w-0">
-            <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-2">
-              <h2 className="text-xl md:text-2xl xl:text-[1.7rem] font-black text-slate-900 tracking-tight">Business Model Canvas</h2>
-              <span className="px-2.5 py-1 bg-slate-100 text-slate-600 text-[10px] font-black rounded-full border border-slate-200 uppercase tracking-[0.18em]">Strategic Workspace</span>
-            </div>
-            <p className="text-sm md:text-[15px] font-bold text-slate-500 leading-relaxed max-w-3xl">مساحة عمل منظمة لرسم عناصر نموذج العمل كاملة، مع توزيع بصري أوضح للمربعات، ومؤشرات تغطية تساعد الفريق على إنهاء النموذج قبل نقله للتنفيذ أو للمراجعة.</p>
-          </div>
-        </div>
-
-        <div className="flex flex-col lg:flex-row lg:items-center gap-4 xl:gap-6">
-          <div className="hidden md:flex items-center gap-4 border border-slate-200 rounded-2xl px-4 py-3 bg-slate-50">
-            <div className="text-left">
-              <div className="flex items-center gap-2 mb-1">
-                <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.18em]">تغطية النموذج</span>
-                <span className="text-sm font-black text-slate-900">{filledBlocks}/9</span>
+        <section className="rounded-xl border border-border bg-background">
+          <div className="flex flex-col gap-4 p-4 lg:flex-row lg:items-start lg:justify-between">
+            <div className="min-w-0 flex-1">
+              <div className="mb-3 flex items-center justify-between gap-3">
+                <div className="text-right">
+                  <p className="text-xs font-semibold text-muted-foreground">مساحة المشاريع</p>
+                  <h2 className="text-sm font-semibold text-foreground">يمكن للعميل بناء أكثر من نموذج عمل من نفس الصفحة</h2>
+                </div>
+                <Button size="sm" onClick={() => setProjectDialogOpen(true)}>
+                  <Plus size={14} />
+                  مشروع جديد
+                </Button>
               </div>
-              <div className="w-40 h-2 bg-slate-100 rounded-full overflow-hidden">
-                <motion.div 
-                  initial={{ width: 0 }}
-                  animate={{ width: `${pct}%` }}
-                  className="h-full bg-slate-900 rounded-full" 
+
+              <div className="flex gap-3 overflow-x-auto pb-1">
+                {projects.map((project) => (
+                  <ProjectSwitchItem
+                    key={project.id}
+                    project={project}
+                    active={project.id === activeProject?.id}
+                    onClick={() => setActiveProjectId(project.id)}
+                  />
+                ))}
+              </div>
+            </div>
+
+            <div className="grid w-full gap-3 sm:grid-cols-3 lg:max-w-[520px]">
+              <CompactMetric label="المشروع النشط" value={activeProject?.brief.name || 'بدون اسم'} hint="النموذج الجاري تحريره الآن" />
+              <CompactMetric label="إجابات مكتملة" value={`${answeredQuestions}/${totalQuestions}`} hint="إجمالي الأسئلة المجاب عنها" />
+              <CompactMetric label="الخطوة التالية" value={nextBlock} hint="القسم الذي يحتاج قراراً أولاً" />
+            </div>
+          </div>
+        </section>
+
+        <section className="grid gap-4 xl:grid-cols-[minmax(0,1.8fr)_minmax(320px,0.8fr)]">
+          <Card className="rounded-xl shadow-none">
+            <CardHeader className="gap-3 border-b border-border p-4">
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0 text-right">
+                  <Badge variant="outline">قبل بناء اللوحة</Badge>
+                  <CardTitle className="mt-3 text-lg font-semibold">
+                    تعريف المشروع الذي ستبنى عليه دراسة الجدوى
+                  </CardTitle>
+                  <CardDescription className="mt-2 max-w-3xl text-sm leading-7">
+                    ابدأ بتوصيف الفكرة، العميل، السوق، والهدف من بناء النموذج. بعد ذلك انتقل إلى اللوحة الفعلية وسيظهر كل قسم بأسئلته الافتراضية داخل `modal` منظم.
+                  </CardDescription>
+                </div>
+                <Button variant="outline" size="sm" onClick={() => setBriefOpen(true)}>
+                  <PencilLine size={14} />
+                  تحرير البيانات الأساسية
+                </Button>
+              </div>
+            </CardHeader>
+            <CardContent className="grid gap-3 p-4 sm:grid-cols-2 2xl:grid-cols-3">
+              {GENERAL_BRIEF_FIELDS.slice(0, 6).map((field) => (
+                <div key={field.key} className="rounded-lg border border-border bg-background px-3 py-3 text-right">
+                  <p className="text-[11px] font-semibold text-muted-foreground">{field.label}</p>
+                  <p className="mt-1 text-sm font-medium leading-7 text-foreground">
+                    {activeProject?.brief[field.key] || 'لم يتم إدخال هذه المعلومة بعد'}
+                  </p>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
+
+          <Card className="rounded-xl shadow-none">
+            <CardHeader className="gap-3 border-b border-border p-4">
+              <CardTitle className="text-base font-semibold">قرار البدء</CardTitle>
+              <CardDescription className="text-sm leading-7">
+                لا يتم عرض اللوحة التفصيلية إلا بعد تثبيت سياق المشروع. هذا يجعل رحلة المستخدم أوضح ويسلم للمبرمج واجهة منطقية.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4 p-4">
+              <div className="rounded-lg border border-border bg-accent/40 p-4 text-right">
+                <p className="text-xs font-semibold text-muted-foreground">اكتمال البيانات التمهيدية</p>
+                <p className="mt-2 text-3xl font-semibold text-foreground">{briefProgress}%</p>
+                <p className="mt-2 text-sm leading-7 text-muted-foreground">
+                  كلما كانت هذه الطبقة أوضح، أصبحت إجابات `BMC` أدق وأكثر قابلية للتحويل إلى مخرجات دراسة جدوى.
+                </p>
+              </div>
+              <div className="rounded-lg border border-border bg-background p-4 text-right">
+                <p className="text-sm font-semibold text-foreground">ماذا سيحدث بعد البدء؟</p>
+                <ul className="mt-3 space-y-2 text-sm leading-7 text-muted-foreground">
+                  <li>سيظهر التخطيط الكامل لنموذج العمل بالشكل المعروف.</li>
+                  <li>كل قسم يحتوي أسئلة افتراضية جاهزة وليست خانات حرة مبهمة.</li>
+                  <li>كل إجابة تحفظ ضمن المشروع النشط ويمكن الانتقال بين المشاريع بسهولة.</li>
+                </ul>
+              </div>
+              <Button className="w-full" onClick={handleStartProject}>
+                <LayoutGrid size={16} />
+                {activeProject?.started ? 'العودة إلى اللوحة' : 'ابدأ بناء النموذج'}
+              </Button>
+            </CardContent>
+          </Card>
+        </section>
+
+        {activeProject?.started ? (
+          <>
+            <section className="rounded-xl border border-border bg-background">
+              <div className="flex flex-col gap-3 p-4 lg:flex-row lg:items-center lg:justify-between">
+                <div className="text-right">
+                  <p className="text-xs font-semibold text-muted-foreground">لوحة النموذج</p>
+                  <h2 className="text-base font-semibold text-foreground">
+                    التخطيط التقليدي لنموذج العمل مع مركزية القيمة المقدمة
+                  </h2>
+                </div>
+                <div className="relative w-full lg:max-w-sm">
+                  <Search size={16} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
+                  <Input
+                    value={searchQuery}
+                    onChange={(event) => setSearchQuery(event.target.value)}
+                    placeholder="ابحث داخل أسئلة وأجوبة النموذج..."
+                    className="pr-9"
+                  />
+                </div>
+              </div>
+            </section>
+
+            <section className="grid gap-4 xl:grid-cols-5">
+              <div className="xl:row-span-2">
+                <BmcBlockCard
+                  block="customerSegments"
+                  questions={activeProject.data.customerSegments}
+                  searchQuery={searchQuery}
+                  onOpenQuestion={(block, questionId) => setCurrentQuestion({ block, questionId })}
                 />
               </div>
-            </div>
-            <div className="w-11 h-11 rounded-full border-2 border-slate-200 flex items-center justify-center text-[11px] font-black text-slate-900 bg-white">{pct}%</div>
-          </div>
-
-          <div className="flex items-center gap-3">
-             <button className="p-3.5 bg-white border border-slate-200 text-slate-400 rounded-2xl hover:text-slate-900 hover:border-slate-300 transition-all active:scale-95 shadow-sm">
-                <Download size={20} />
-             </button>
-             <button
-              onClick={() => onComplete(data)}
-              className="flex items-center gap-3 px-5 md:px-6 py-3.5 bg-slate-900 text-white rounded-2xl text-xs font-black shadow-sm hover:bg-slate-800 transition-all active:scale-95 group"
-            >
-              <Sparkles size={18} className="text-slate-300 group-hover:animate-pulse" />
-              تحليل الاستراتيجية بالذكاء الاصطناعي
-              <ArrowUpRight size={18} />
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex-1 xl:grid xl:grid-cols-[minmax(0,1fr)_320px] 2xl:grid-cols-[minmax(0,1fr)_360px] xl:gap-6 items-start">
-        {/* --- Main Canvas Layout --- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-5 gap-4 xl:gap-5">
-        
-        {/* Row 1: The Core 5 Columns */}
-        {/* Column 1: Key Partners */}
-        <CanvasBlock 
-          id="keyPartners" 
-          notes={data.keyPartners}
-          onAdd={(c) => addNote('keyPartners', c)}
-          onDeleteNote={(id) => deleteNote('keyPartners', id)}
-          onUpdateNote={(id, ct) => updateNote('keyPartners', id, ct)}
-          onUpdateNoteColor={(id, c) => updateNoteColor('keyPartners', id, c)}
-          onToggleFocus={() => setFocusedBlock('keyPartners')}
-          className="2xl:row-span-2"
-        />
-
-        {/* Column 2: Activities & Resources */}
-        <div className="lg:row-span-2 flex flex-col gap-4">
-          <CanvasBlock 
-            id="keyActivities" 
-            notes={data.keyActivities}
-            onAdd={(c) => addNote('keyActivities', c)}
-            onDeleteNote={(id) => deleteNote('keyActivities', id)}
-            onUpdateNote={(id, ct) => updateNote('keyActivities', id, ct)}
-            onUpdateNoteColor={(id, c) => updateNoteColor('keyActivities', id, c)}
-            onToggleFocus={() => setFocusedBlock('keyActivities')}
-            className="flex-1"
-          />
-          <CanvasBlock 
-            id="keyResources" 
-            notes={data.keyResources}
-            onAdd={(c) => addNote('keyResources', c)}
-            onDeleteNote={(id) => deleteNote('keyResources', id)}
-            onUpdateNote={(id, ct) => updateNote('keyResources', id, ct)}
-            onUpdateNoteColor={(id, c) => updateNoteColor('keyResources', id, c)}
-            onToggleFocus={() => setFocusedBlock('keyResources')}
-            className="flex-1"
-          />
-        </div>
-
-        {/* Column 3: Value Propositions */}
-        <CanvasBlock 
-          id="valuePropositions" 
-          notes={data.valuePropositions}
-          onAdd={(c) => addNote('valuePropositions', c)}
-          onDeleteNote={(id) => deleteNote('valuePropositions', id)}
-          onUpdateNote={(id, ct) => updateNote('valuePropositions', id, ct)}
-          onUpdateNoteColor={(id, c) => updateNoteColor('valuePropositions', id, c)}
-          onToggleFocus={() => setFocusedBlock('valuePropositions')}
-          className="2xl:row-span-2 border border-slate-300 ring-1 ring-slate-200 shadow-sm"
-        />
-
-        {/* Column 4: Relationships & Channels */}
-        <div className="lg:row-span-2 flex flex-col gap-4">
-          <CanvasBlock 
-            id="customerRelationships" 
-            notes={data.customerRelationships}
-            onAdd={(c) => addNote('customerRelationships', c)}
-            onDeleteNote={(id) => deleteNote('customerRelationships', id)}
-            onUpdateNote={(id, ct) => updateNote('customerRelationships', id, ct)}
-            onUpdateNoteColor={(id, c) => updateNoteColor('customerRelationships', id, c)}
-            onToggleFocus={() => setFocusedBlock('customerRelationships')}
-            className="flex-1"
-          />
-          <CanvasBlock 
-            id="channels" 
-            notes={data.channels}
-            onAdd={(c) => addNote('channels', c)}
-            onDeleteNote={(id) => deleteNote('channels', id)}
-            onUpdateNote={(id, ct) => updateNote('channels', id, ct)}
-            onUpdateNoteColor={(id, c) => updateNoteColor('channels', id, c)}
-            onToggleFocus={() => setFocusedBlock('channels')}
-            className="flex-1"
-          />
-        </div>
-
-        {/* Column 5: Customer Segments */}
-        <CanvasBlock 
-          id="customerSegments" 
-          notes={data.customerSegments}
-          onAdd={(c) => addNote('customerSegments', c)}
-          onDeleteNote={(id) => deleteNote('customerSegments', id)}
-          onUpdateNote={(id, ct) => updateNote('customerSegments', id, ct)}
-          onUpdateNoteColor={(id, c) => updateNoteColor('customerSegments', id, c)}
-          onToggleFocus={() => setFocusedBlock('customerSegments')}
-          className="2xl:row-span-2"
-        />
-
-        {/* Row 2: Bottom Layer - Financials (span 5 columns on large screens) */}
-        <div className="2xl:col-span-5 grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-5">
-          <CanvasBlock 
-            id="costStructure" 
-            notes={data.costStructure}
-            onAdd={(c) => addNote('costStructure', c)}
-            onDeleteNote={(id) => deleteNote('costStructure', id)}
-            onUpdateNote={(id, ct) => updateNote('costStructure', id, ct)}
-            onUpdateNoteColor={(id, c) => updateNoteColor('costStructure', id, c)}
-            onToggleFocus={() => setFocusedBlock('costStructure')}
-          />
-          <CanvasBlock 
-            id="revenueStreams" 
-            notes={data.revenueStreams}
-            onAdd={(c) => addNote('revenueStreams', c)}
-            onDeleteNote={(id) => deleteNote('revenueStreams', id)}
-            onUpdateNote={(id, ct) => updateNote('revenueStreams', id, ct)}
-            onUpdateNoteColor={(id, c) => updateNoteColor('revenueStreams', id, c)}
-            onToggleFocus={() => setFocusedBlock('revenueStreams')}
-          />
-        </div>
-
-        </div>
-
-        <aside className="hidden xl:flex xl:flex-col xl:gap-4 xl:sticky xl:top-6">
-          <div className="rounded-[1.75rem] border border-slate-200 bg-white p-5 shadow-sm">
-            <div className="flex items-center justify-between mb-4">
               <div>
-                <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.18em] mb-1">???? ????</p>
-                <h3 className="text-base font-black text-slate-900">???? ??????? ????</h3>
+                <BmcBlockCard
+                  block="customerRelationships"
+                  questions={activeProject.data.customerRelationships}
+                  searchQuery={searchQuery}
+                  onOpenQuestion={(block, questionId) => setCurrentQuestion({ block, questionId })}
+                />
               </div>
-              <div className="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center text-xs font-black">{pct}%</div>
-            </div>
-            <div className="space-y-3">
-              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3">
-                <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.18em] mb-1">???? ????</p>
-                <p className="text-sm font-black text-slate-900">{filledBlocks} ?? 9</p>
+              <div className="xl:row-span-2">
+                <BmcBlockCard
+                  block="valuePropositions"
+                  questions={activeProject.data.valuePropositions}
+                  searchQuery={searchQuery}
+                  onOpenQuestion={(block, questionId) => setCurrentQuestion({ block, questionId })}
+                />
               </div>
-              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3">
-                <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.18em] mb-1">????? ??????</p>
-                <p className="text-sm font-black text-slate-900">{totalNotes} ?????? ???</p>
+              <div>
+                <BmcBlockCard
+                  block="keyActivities"
+                  questions={activeProject.data.keyActivities}
+                  searchQuery={searchQuery}
+                  onOpenQuestion={(block, questionId) => setCurrentQuestion({ block, questionId })}
+                />
               </div>
-              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-3">
-                <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.18em] mb-1">?????? ???????? ???????</p>
-                <p className="text-sm font-black text-slate-900 leading-relaxed">{BLOCK_METADATA[suggestedFocus[0]].title}</p>
+              <div className="xl:row-span-2">
+                <BmcBlockCard
+                  block="keyPartners"
+                  questions={activeProject.data.keyPartners}
+                  searchQuery={searchQuery}
+                  onOpenQuestion={(block, questionId) => setCurrentQuestion({ block, questionId })}
+                />
               </div>
-            </div>
-          </div>
-
-          <div className="rounded-[1.75rem] border border-slate-200 bg-white p-5 shadow-sm">
-            <div className="mb-4">
-              <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.18em] mb-1">????? ????????</p>
-              <h3 className="text-base font-black text-slate-900">??? ????? ??????? ????? ????</h3>
-            </div>
-            <div className="space-y-2.5">
-              {BLOCK_ORDER.map((key) => {
-                const hasNotes = data[key].length > 0;
-                return (
-                  <button
-                    key={key}
-                    onClick={() => setFocusedBlock(key)}
-                    className={`w-full flex items-center justify-between rounded-2xl border px-3.5 py-3 text-right transition-all ${
-                      hasNotes
-                        ? 'border-slate-200 bg-white hover:bg-slate-50'
-                        : 'border-dashed border-slate-200 bg-slate-50 hover:bg-slate-100'
-                    }`}
-                  >
-                    <div className="flex items-center gap-3 min-w-0">
-                      <div className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 ${BLOCK_METADATA[key].color}`}>
-                        {React.cloneElement(BLOCK_METADATA[key].icon as React.ReactElement, { size: 14 })}
-                      </div>
-                      <div className="min-w-0">
-                        <p className="text-[11px] font-black text-slate-900 truncate">{BLOCK_METADATA[key].title}</p>
-                        <p className="text-[10px] font-bold text-slate-400">{data[key].length} ?????</p>
-                      </div>
-                    </div>
-                    <span className={`w-2.5 h-2.5 rounded-full ${hasNotes ? 'bg-emerald-500' : 'bg-slate-200'}`} />
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-5 shadow-sm">
-            <p className="text-[10px] font-black text-slate-400 uppercase tracking-[0.18em] mb-2">?????? ??????</p>
-            <ul className="space-y-2.5 text-[11px] font-bold text-slate-600 leading-relaxed">
-              {suggestedFocus.map((key) => (
-                <li key={key} className="flex items-start gap-2">
-                  <span className="mt-1 w-1.5 h-1.5 rounded-full bg-slate-900 shrink-0" />
-                  ???? ???? ?? {BLOCK_METADATA[key].title} ???? ?????? ???????.
-                </li>
-              ))}
-              <li className="flex items-start gap-2">
-                <span className="mt-1 w-1.5 h-1.5 rounded-full bg-slate-900 shrink-0" />
-                ???? ?? ???? ???????? ????? ????? ???????? ??? ????? ?????.
-              </li>
-            </ul>
-          </div>
-        </aside>
+              <div>
+                <BmcBlockCard
+                  block="channels"
+                  questions={activeProject.data.channels}
+                  searchQuery={searchQuery}
+                  onOpenQuestion={(block, questionId) => setCurrentQuestion({ block, questionId })}
+                />
+              </div>
+              <div>
+                <BmcBlockCard
+                  block="keyResources"
+                  questions={activeProject.data.keyResources}
+                  searchQuery={searchQuery}
+                  onOpenQuestion={(block, questionId) => setCurrentQuestion({ block, questionId })}
+                />
+              </div>
+              <div className="xl:col-span-2">
+                <BmcBlockCard
+                  block="revenueStreams"
+                  questions={activeProject.data.revenueStreams}
+                  searchQuery={searchQuery}
+                  onOpenQuestion={(block, questionId) => setCurrentQuestion({ block, questionId })}
+                />
+              </div>
+              <div className="xl:col-span-3">
+                <BmcBlockCard
+                  block="costStructure"
+                  questions={activeProject.data.costStructure}
+                  searchQuery={searchQuery}
+                  onOpenQuestion={(block, questionId) => setCurrentQuestion({ block, questionId })}
+                />
+              </div>
+            </section>
+          </>
+        ) : null}
       </div>
 
-      {/* --- Focused Block Overlay --- */}
-      <AnimatePresence>
-        {focusedBlock && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-12 bg-slate-900/40 backdrop-blur-md"
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: 20 }}
-              className="w-full max-w-6xl h-full max-h-[90vh] bg-white rounded-[3rem] shadow-2xl flex flex-col overflow-hidden"
-            >
-              <CanvasBlock 
-                id={focusedBlock}
-                notes={data[focusedBlock]}
-                onAdd={(c) => addNote(focusedBlock, c)}
-                onDeleteNote={(id) => deleteNote(focusedBlock, id)}
-                onUpdateNote={(id, ct) => updateNote(focusedBlock, id, ct)}
-                onUpdateNoteColor={(id, c) => updateNoteColor(focusedBlock, id, c)}
-                isFocused={true}
-                onToggleFocus={() => setFocusedBlock(null)}
-                className="flex-1 rounded-none border-none"
+      <Dialog open={briefOpen} onOpenChange={setBriefOpen}>
+        <DialogContent className="max-h-[90vh] overflow-hidden p-0">
+          <DialogHeader className="border-b border-border px-6 py-5">
+            <DialogTitle>البيانات التمهيدية للمشروع</DialogTitle>
+            <DialogDescription>
+              هذه الطبقة تسبق بناء اللوحة وتثبت سياق المشروع قبل الإجابة على أقسام نموذج العمل التسعة.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="grid max-h-[calc(90vh-160px)] gap-4 overflow-y-auto px-6 py-5">
+            {GENERAL_BRIEF_FIELDS.map((field) => (
+              <div key={field.key} className="space-y-2 text-right">
+                <label className="text-sm font-medium text-foreground">{field.label}</label>
+                {field.textarea ? (
+                  <Textarea
+                    value={activeProject?.brief[field.key] ?? ''}
+                    onChange={(event) => handleBriefFieldChange(field.key, event.target.value)}
+                    placeholder={field.placeholder}
+                    className="min-h-28 resize-y"
+                  />
+                ) : (
+                  <Input
+                    value={activeProject?.brief[field.key] ?? ''}
+                    onChange={(event) => handleBriefFieldChange(field.key, event.target.value)}
+                    placeholder={field.placeholder}
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+          <DialogFooter className="border-t border-border px-6 py-4">
+            <Button onClick={() => setBriefOpen(false)}>إغلاق</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={projectDialogOpen} onOpenChange={setProjectDialogOpen}>
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <DialogTitle>إنشاء مشروع جديد داخل صفحة BMC</DialogTitle>
+            <DialogDescription>
+              سيتم إنشاء مشروع مستقل ببيانات تمهيدية ولوحة أسئلة خاصة به، ويمكن التنقل بينه وبين باقي المشاريع من الأعلى.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="space-y-2 text-right">
+            <label className="text-sm font-medium text-foreground">اسم المشروع</label>
+            <Input
+              value={newProjectName}
+              onChange={(event) => setNewProjectName(event.target.value)}
+              placeholder="مثال: منصة خدمات لوجستية للشركات الصغيرة"
+            />
+          </div>
+          <DialogFooter>
+            <Button variant="outline" onClick={() => setProjectDialogOpen(false)}>
+              إلغاء
+            </Button>
+            <Button onClick={handleCreateProject}>
+              <Plus size={14} />
+              إنشاء المشروع
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={!!currentQuestion && !!currentQuestionEntry} onOpenChange={(open) => !open && setCurrentQuestion(null)}>
+        <DialogContent className="max-h-[90vh] overflow-hidden p-0">
+          <DialogHeader className="border-b border-border px-6 py-5">
+            <div className="flex items-start justify-between gap-3">
+              <div className="min-w-0 text-right">
+                <Badge variant="outline">{currentQuestion ? BLOCK_META[currentQuestion.block].title : ''}</Badge>
+                <DialogTitle className="mt-3 text-right">
+                  {currentQuestionEntry?.question}
+                </DialogTitle>
+                <DialogDescription className="mt-2 text-right">
+                  اكتب إجابة واضحة وقابلة للتحويل لاحقاً إلى قرار تنفيذي داخل دراسة الجدوى أو وثيقة العمل.
+                </DialogDescription>
+              </div>
+              <div className="hidden rounded-lg border border-border bg-background px-3 py-2 text-right sm:block">
+                <p className="text-[11px] font-semibold text-muted-foreground">المشروع</p>
+                <p className="text-sm font-medium text-foreground">{activeProject?.brief.name || 'بدون اسم'}</p>
+              </div>
+            </div>
+          </DialogHeader>
+          <div className="space-y-4 px-6 py-5">
+            <div className="rounded-lg border border-border bg-accent/30 p-4 text-right">
+              <p className="text-xs font-semibold text-muted-foreground">الهدف من هذا القسم</p>
+              <p className="mt-2 text-sm leading-7 text-foreground">
+                {currentQuestion ? BLOCK_META[currentQuestion.block].objective : ''}
+              </p>
+            </div>
+            <div className="space-y-2 text-right">
+              <label className="text-sm font-medium text-foreground">الإجابة</label>
+              <Textarea
+                value={currentQuestionEntry?.answer ?? ''}
+                onChange={(event) => handleQuestionAnswerChange(event.target.value)}
+                placeholder="اكتب الإجابة بصياغة واضحة ومباشرة..."
+                className="min-h-40 resize-y"
               />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* --- Footer Status --- */}
-      <div className="w-full flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 px-4 py-5 bg-slate-50 border border-slate-200 rounded-[1.75rem]">
-         <div className="flex items-center gap-8">
-            <div className="flex items-center gap-2">
-               <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-               <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">تزامن حيّ نشط</span>
             </div>
-            <div className="flex items-center gap-6">
-               <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded bg-yellow-200" />
-                  <span className="text-[10px] font-bold text-slate-400">مسودة</span>
-               </div>
-               <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded bg-rose-200" />
-                  <span className="text-[10px] font-bold text-slate-400">تحت الاختبار</span>
-               </div>
-               <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded bg-emerald-200" />
-                  <span className="text-[10px] font-bold text-slate-400">مؤكد</span>
-               </div>
-            </div>
-         </div>
-         <p className="text-[11px] font-bold text-slate-500 leading-relaxed">نصيحة: ابدأ دائماً بـ "القيمة المقدمة" و "شرائح العملاء" فهما قلب النموذج.</p>
-      </div>
-
-      <style>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background: #e2e8f0;
-          border-radius: 10px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: #cbd5e1;
-        }
-      `}</style>
+          </div>
+          <DialogFooter className="border-t border-border px-6 py-4">
+            <Button
+              variant="outline"
+              onClick={() => handleQuestionAnswerChange('')}
+            >
+              مسح الإجابة
+            </Button>
+            <Button onClick={() => setCurrentQuestion(null)}>
+              حفظ وإغلاق
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

@@ -73,10 +73,10 @@ interface NavItemProps {
 
 const NavItem = memo(({ icon: Icon, label, href, active, onClick, badge, isNew, variant = 'default' }: NavItemProps) => {
   const variants = {
-    default: active ? 'bg-primary-600 text-white shadow-lg shadow-primary-200' : 'text-gray-600 hover:bg-gray-50',
-    ai: active ? 'bg-purple-600 text-white shadow-lg shadow-purple-200' : 'text-purple-600 hover:bg-purple-50',
-    danger: 'text-red-500 hover:bg-red-50',
-    'active-project': 'bg-primary-600 text-white shadow-lg shadow-primary-200'
+    default: active ? 'bg-accent text-accent-foreground' : 'text-muted-foreground hover:bg-accent/60 hover:text-foreground',
+    ai: active ? 'bg-accent text-accent-foreground' : 'text-muted-foreground hover:bg-accent/60 hover:text-foreground',
+    danger: 'text-destructive hover:bg-destructive/5',
+    'active-project': 'bg-accent text-accent-foreground'
   };
 
   return (
@@ -86,15 +86,15 @@ const NavItem = memo(({ icon: Icon, label, href, active, onClick, badge, isNew, 
         event.preventDefault();
         onClick();
       }}
-      className={`w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-[13px] font-bold transition-all touch-manipulation active:scale-[0.98] ${variants[variant]}`}
+      className={`flex w-full items-center gap-3 rounded-lg px-4 py-3 text-[13px] font-medium transition-colors touch-manipulation ${variants[variant]}`}
     >
-      <Icon size={18} strokeWidth={active ? 2.5 : 2} className="flex-shrink-0" />
+      <Icon size={18} strokeWidth={2} className="flex-shrink-0" />
       <span className="flex-1 text-right truncate">{label}</span>
       {isNew && (
-        <span className="bg-amber-400 text-amber-950 text-[8px] font-black px-1.5 py-0.5 rounded-lg animate-pulse">جديد</span>
+        <span className="rounded-md border border-border bg-background px-1.5 py-0.5 text-[8px] font-semibold text-foreground">جديد</span>
       )}
       {badge && (
-        <span className="bg-red-500 text-white text-[9px] px-1.5 py-0.5 rounded-full font-bold">{badge}</span>
+        <span className="rounded-full bg-primary px-1.5 py-0.5 text-[9px] font-semibold text-primary-foreground">{badge}</span>
       )}
     </a>
   );
@@ -125,6 +125,7 @@ interface MobileMenuProps {
 export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeTab, setActiveTab, isAdminMode }) => {
   const tabHref = (tab: string) => getTabPath(tab);
   const isCustomerPortalActive = ['subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-subscription', 'customer-usage', 'customer-activity', 'customer-account', 'customer-support'].includes(activeTab || '');
+  const [isAccountGroupOpen, setIsAccountGroupOpen] = useState(false);
 
   if (!isOpen) return null;
 
@@ -136,11 +137,11 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeT
   return (
     <>
       <div
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[150] lg:hidden animate-in fade-in duration-300"
+        className="fixed inset-0 z-[150] bg-black/10 lg:hidden animate-in fade-in duration-200"
         onClick={onClose}
       />
 
-      <div className="ui-sidebar-surface fixed top-0 right-0 z-[160] flex h-full w-[85vw] max-w-[320px] flex-col shadow-2xl lg:hidden animate-in slide-in-from-right duration-300">
+      <div id="tour-mobile-menu" className="ui-sidebar-surface fixed top-0 right-0 z-[160] flex h-full w-[85vw] max-w-[320px] flex-col lg:hidden animate-in slide-in-from-right duration-200">
         {/* Header */}
         <div className="p-5 bg-slate-950 text-white flex items-center justify-between border-b border-slate-800">
           <div className="flex items-center gap-3">
@@ -176,60 +177,62 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeT
             </>
           ) : (
             <>
-              <NavGroup title="القلب النابض">
-                <NavItem icon={Home} label="الصفحة الرئيسية" href={tabHref('home')} active={activeTab === 'home'} onClick={() => handleNavigate('home')} />
+              <NavGroup title="الوصول السريع">
+                <NavItem icon={Home} label="الرئيسية" href={tabHref('home')} active={activeTab === 'home'} onClick={() => handleNavigate('home')} />
                 <NavItem icon={Layers} label="مشاريعي" href={tabHref('my-plans')} active={activeTab === 'my-plans'} onClick={() => handleNavigate('my-plans')} />
-                <NavItem icon={Rocket} label="خلق فكرة" href={tabHref('new-plan')} active={activeTab === 'new-plan'} onClick={() => handleNavigate('new-plan')} />
-                <NavItem icon={LayoutDashboard} label="مساحة المشروع" href={tabHref('workspace')} active={activeTab === 'workspace'} onClick={() => handleNavigate('workspace')} isNew />
-                <NavItem icon={LayoutDashboard} label="خارطة المنصة" href={tabHref('site-map')} active={activeTab === 'site-map'} onClick={() => handleNavigate('site-map')} isNew />
               </NavGroup>
 
-              <NavGroup title="مختبر الاستراتيجية">
-                <NavItem icon={Globe} label="رادار اليونيكورن" href={tabHref('unicorn-benchmark')} active={activeTab === 'unicorn-benchmark'} onClick={() => handleNavigate('unicorn-benchmark')} isNew />
-                
+              <NavGroup title="بناء دراسة جدوى مشروع">
+                <NavItem icon={Heart} label="مود الأهل" href={tabHref('new-plan-family')} active={activeTab === 'new-plan-family'} onClick={() => handleNavigate('new-plan-family')} />
+                <NavItem icon={Zap} label="النموذج الاحترافي" href={tabHref('new-plan-pro')} active={activeTab === 'new-plan-pro' || activeTab === 'strategic-dashboard'} onClick={() => handleNavigate('new-plan-pro')} />
+                <NavItem icon={Rocket} label="MIT 24 Steps" href={tabHref('new-plan-mit24')} active={activeTab === 'new-plan-mit24'} onClick={() => handleNavigate('new-plan-mit24')} />
+                <NavItem icon={LayoutGrid} label="بناء بنموذج العمل BMC" href={tabHref('new-plan-bmc')} active={activeTab === 'new-plan-bmc' || activeTab === 'bmc'} onClick={() => handleNavigate('new-plan-bmc')} />
+              </NavGroup>
+
+              <NavGroup title="أفكار مشاريع">
+                <NavItem icon={Layers} label="مشاريع ناجحة مثبتة" href={tabHref('my-plans')} active={activeTab === 'my-plans'} onClick={() => handleNavigate('my-plans')} />
                 <NavItem 
                   icon={Compass} 
                   label="استكشاف السوق" 
                   href={tabHref('market-discovery')}
                   active={activeTab === 'market-discovery' || MARKET_DISCOVERY_DASHBOARDS.includes(activeTab)} 
-                  onClick={() => handleNavigate('market-discovery')} 
-                  isNew
+                  onClick={() => handleNavigate('market-discovery')}
                 />
-
                 <NavItem 
                   icon={Activity} 
                   label="المشاكل والفرص" 
                   href={tabHref('problem-engine')}
                   active={activeTab === 'problem-engine'} 
-                  onClick={() => handleNavigate('problem-engine')} 
-                  isNew
+                  onClick={() => handleNavigate('problem-engine')}
                 />
-
-                <NavItem
-                  icon={Zap}
-                  label="هاكاثون المستثمر"
-                  href={tabHref('hackathon')}
-                  active={activeTab === 'hackathon'}
-                  onClick={() => handleNavigate('hackathon')}
-                  isNew
-                />
-
-
-                <NavItem icon={Palette} label="استوديو الهوية" href={tabHref('brand-identity')} active={activeTab === 'brand-identity'} onClick={() => handleNavigate('brand-identity')} />
-                <NavItem icon={ArrowRightLeft} label="مقارنة السيناريوهات" href={tabHref('comparison')} active={activeTab === 'comparison'} onClick={() => handleNavigate('comparison')} />
               </NavGroup>
 
-              <NavGroup title="مركز العمليات">
-                <NavItem icon={FileText} label="محرر الخطط" href={tabHref('editor')} active={activeTab === 'editor'} onClick={() => handleNavigate('editor')} variant={activeTab === 'editor' ? 'active-project' : 'default'} />
-                <NavItem icon={Trello} label="المهام والجدولة" href={tabHref('tasks')} active={activeTab === 'tasks'} onClick={() => handleNavigate('tasks')} badge={2} />
+              <NavGroup title="ملحقات المشروع">
+                <NavItem icon={Globe} label="رادار اليونيكورن" href={tabHref('unicorn-benchmark')} active={activeTab === 'unicorn-benchmark'} onClick={() => handleNavigate('unicorn-benchmark')} />
+                <NavItem icon={Palette} label="الهوية البصرية" href={tabHref('brand-identity')} active={activeTab === 'brand-identity'} onClick={() => handleNavigate('brand-identity')} />
               </NavGroup>
 
-              <NavGroup title="الإدارة والضبط">
-                <NavItem icon={Bell} label="التنبيهات" href={tabHref('notifications')} active={activeTab === 'notifications'} onClick={() => handleNavigate('notifications')} badge={3} />
-                <NavItem icon={CreditCard} label="الاشتراكات والأسعار" href={tabHref('pricing')} active={activeTab === 'pricing'} onClick={() => handleNavigate('pricing')} />
-                <NavItem icon={Crown} label="بوابة العميل" href={tabHref('customer-dashboard')} active={isCustomerPortalActive} onClick={() => handleNavigate('customer-dashboard')} isNew />
-                <NavItem icon={Settings} label="إعدادات المنصة" href={tabHref('settings')} active={activeTab === 'settings'} onClick={() => handleNavigate('settings')} />
-              </NavGroup>
+              <div className="mb-4">
+                <button
+                  type="button"
+                  onClick={() => setIsAccountGroupOpen((value) => !value)}
+                  className="w-full px-4 mb-2 flex items-center justify-between"
+                >
+                  <div className="flex items-center gap-3">
+                    <h3 className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em]">إدارة الحساب</h3>
+                    <div className="h-[1px] w-8 bg-gray-100 rounded-full"></div>
+                  </div>
+                  <ChevronDown size={16} className={`text-gray-400 transition-transform ${isAccountGroupOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {isAccountGroupOpen && (
+                  <div className="space-y-1 px-2 animate-in slide-in-from-top-2 fade-in duration-300">
+                    <NavItem icon={Bell} label="التنبيهات" href={tabHref('notifications')} active={activeTab === 'notifications'} onClick={() => handleNavigate('notifications')} badge={3} />
+                    <NavItem icon={CreditCard} label="الاشتراكات والأسعار" href={tabHref('pricing')} active={activeTab === 'pricing'} onClick={() => handleNavigate('pricing')} />
+                    <NavItem icon={Crown} label="بوابة العميل" href={tabHref('customer-dashboard')} active={isCustomerPortalActive} onClick={() => handleNavigate('customer-dashboard')} />
+                    <NavItem icon={Settings} label="إعدادات المنصة" href={tabHref('settings')} active={activeTab === 'settings'} onClick={() => handleNavigate('settings')} />
+                  </div>
+                )}
+              </div>
 
               <div className="mx-2 mt-4 rounded-2xl border border-gray-200 bg-slate-50 p-4">
                 <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">الدعم الاستراتيجي</h4>
