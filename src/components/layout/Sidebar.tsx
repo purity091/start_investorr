@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Activity,
+  Bookmark,
   ChevronDown,
   Compass,
   CreditCard,
@@ -38,7 +39,6 @@ import {
   SidebarHeader,
   SidebarMenu,
   SidebarMenuAction,
-  SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarMenuSub,
@@ -120,6 +120,7 @@ const ADMIN_TABS = [
 const QUICK_ACCESS: NavItemConfig[] = [
   { tab: 'home', label: 'الرئيسية', icon: Home, id: 'tour-home' },
   { tab: 'my-plans', label: 'مشاريعي', icon: Layers, id: 'tour-projects' },
+  { tab: 'saved-market-items', label: 'المحفوظات', icon: Bookmark },
 ];
 
 const PROJECT_BUILD: NavItemConfig[] = [
@@ -231,10 +232,14 @@ function SidebarLink({
           onClick={(event) => goToTab(event, item.tab, setActiveTab)}
         >
           <Icon />
-          <span>{item.label}</span>
+          <span className="min-w-0 flex-1 truncate">{item.label}</span>
+          {item.badge ? (
+            <span className="ms-auto flex h-5 min-w-5 shrink-0 items-center justify-center rounded-md bg-sidebar-accent px-1.5 text-[11px] font-medium tabular-nums text-sidebar-foreground group-data-[collapsible=icon]:hidden">
+              {item.badge}
+            </span>
+          ) : null}
         </a>
       </SidebarMenuButton>
-      {item.badge ? <SidebarMenuBadge>{item.badge}</SidebarMenuBadge> : null}
     </SidebarMenuItem>
   );
 }
@@ -338,7 +343,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
 
   return (
     <UiSidebar side="right" dir="rtl" variant="sidebar" collapsible="icon">
-      <SidebarHeader>
+      <SidebarHeader className="hidden">
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton
@@ -362,7 +367,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
         </SidebarMenu>
       </SidebarHeader>
 
-      <SidebarSeparator />
+      <SidebarSeparator className="hidden" />
 
       <SidebarContent>
         {isAdminMode ? (
@@ -376,7 +381,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
             <SidebarSection title="بناء دراسة جدوى مشروع" items={PROJECT_BUILD} activeTab={activeTab} setActiveTab={setActiveTab} />
             <SidebarSection title="أفكار مشاريع" items={PROJECT_IDEAS} activeTab={activeTab} setActiveTab={setActiveTab} />
             <SidebarSection title="ملحقات المشروع" items={PROJECT_ATTACHMENTS} activeTab={activeTab} setActiveTab={setActiveTab} />
-            <AccountSection activeTab={activeTab} setActiveTab={setActiveTab} />
           </>
         )}
       </SidebarContent>
@@ -385,7 +389,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
 
       <SidebarFooter>
         <SidebarMenu>
-          <SidebarMenuItem>
+          <SidebarMenuItem className="hidden">
             <SidebarMenuButton
               className="h-9 justify-start gap-2 px-2 text-right"
               onClick={() => setActiveTab?.(isAdminMode ? 'home' : 'admin-dashboard')}

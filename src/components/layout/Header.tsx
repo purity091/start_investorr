@@ -7,9 +7,6 @@ import {
   Crown,
   LayoutDashboard,
   LogOut,
-  MoreHorizontal,
-  Settings as SettingsIcon,
-  Sparkles,
   User as UserIcon,
 } from 'lucide-react';
 
@@ -76,12 +73,6 @@ const notifications = [
   { title: 'توصية جديدة متاحة داخل المنصة', meta: 'منذ ساعة' },
 ];
 
-const quickActions = [
-  { label: 'حسابي الشخصي', icon: Crown, tab: 'customer-dashboard' },
-  { label: 'ملف التعريف', icon: SettingsIcon, tab: 'profile' },
-  { label: 'اشتراكي', icon: CreditCard, tab: 'pricing' },
-];
-
 function getContextBadge(activeTab: string) {
   if (activeTab.startsWith('admin-') || activeTab === 'users-management') {
     return { label: 'وضع الإدارة', variant: 'secondary' as const };
@@ -120,10 +111,6 @@ export const Header: React.FC<HeaderProps> = ({
   user,
 }) => {
   const title = TAB_LABELS[activeTab] || subTabLabel || 'لوحة العمل';
-  const subtitle =
-    subTabLabel && subTabLabel !== title
-      ? subTabLabel
-      : 'تنقل واضح وسريع مبني على shadcn/ui ويحافظ على تجربة RTL.';
   const contextBadge = getContextBadge(activeTab);
 
   const startTour = () => {
@@ -146,64 +133,22 @@ export const Header: React.FC<HeaderProps> = ({
                   {contextBadge.label}
                 </Badge>
               </div>
-              <p className="mt-1 truncate text-xs font-medium text-muted-foreground sm:text-sm">{subtitle}</p>
             </div>
           </div>
 
           <div className="flex items-center justify-between gap-2 sm:justify-start">
-            <div className="hidden items-center gap-2 lg:flex">
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                className="h-9 rounded-lg"
-                onClick={() => setActiveTab('saved-market-items')}
-              >
-                المحفوظات
-              </Button>
-
-              <Button
-                id="tour-site-tour-trigger-header"
-                type="button"
-                variant="outline"
-                size="sm"
-                className="h-9 rounded-lg"
-                onClick={startTour}
-              >
-                <Compass className="size-4" />
-                جولة تعريفية
-              </Button>
-            </div>
-
-            <DropdownMenu dir="rtl">
-              <DropdownMenuTrigger asChild>
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="sm"
-                  className="h-9 rounded-lg sm:min-w-32"
-                >
-                  <MoreHorizontal className="size-4" />
-                  <span className="hidden sm:inline">وصول سريع</span>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="min-w-56">
-                <DropdownMenuLabel className="text-right">إجراءات سريعة</DropdownMenuLabel>
-                <DropdownMenuSeparator />
-                <DropdownMenuGroup>
-                  {quickActions.map(({ label, icon: Icon, tab }) => (
-                    <DropdownMenuItem key={tab} onClick={() => setActiveTab(tab)}>
-                      <Icon className="size-4" />
-                      <span>{label}</span>
-                    </DropdownMenuItem>
-                  ))}
-                  <DropdownMenuItem onClick={startTour}>
-                    <Sparkles className="size-4" />
-                    <span>بدء الجولة التعريفية</span>
-                  </DropdownMenuItem>
-                </DropdownMenuGroup>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <Button
+              id="tour-site-tour-trigger-header"
+              type="button"
+              variant="outline"
+              size="icon-sm"
+              className="h-9 w-9 rounded-lg"
+              onClick={startTour}
+              aria-label="بدء الجولة التعريفية"
+              title="بدء الجولة التعريفية"
+            >
+              <Compass className="size-4" />
+            </Button>
 
             <DropdownMenu dir="rtl">
               <DropdownMenuTrigger asChild>

@@ -90,12 +90,12 @@ export const IdeaCreation: React.FC<{
   }
 
   return (
-    <main className="app-page-shell-wide space-y-6 text-right" dir="rtl">
+    <main className="app-page-shell-wide space-y-4 py-3 text-right" dir="rtl">
       {step === 'input' && (
         <>
-          <section className="rounded-xl bg-card p-5 shadow-sm ring-1 ring-border/60">
-            <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-              <div className="max-w-3xl space-y-3">
+          <section className="rounded-xl bg-card p-4 shadow-sm ring-1 ring-border/60">
+            <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+              <div className="max-w-3xl space-y-2">
                 <Badge variant="secondary" className="w-fit">بناء دراسة جدوى مشروع</Badge>
                 <div className="space-y-2">
                   <h1 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">صف فكرة مشروعك كبداية</h1>
@@ -109,11 +109,11 @@ export const IdeaCreation: React.FC<{
           </section>
 
           <Card className="shadow-sm">
-            <CardHeader>
+            <CardHeader className="p-4 pb-3">
               <CardTitle>وصف الفكرة</CardTitle>
               <CardDescription>اكتب المشكلة، العميل، والمنتج المقترح بجمل بسيطة.</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-3 p-4 pt-0">
               {activeMode === 'scratch' ? (
                 <div className="flex flex-col items-center justify-center rounded-lg bg-muted/35 p-10 text-center">
                   <DraftingCompass className="mb-3 size-10 text-muted-foreground" />
@@ -127,8 +127,8 @@ export const IdeaCreation: React.FC<{
                   <Textarea
                     value={prompt}
                     onChange={(event) => setPrompt(event.target.value)}
-                    rows={8}
-                    className="min-h-[220px] resize-y leading-7"
+                    rows={5}
+                    className="min-h-[150px] resize-y leading-7"
                     placeholder="مثال: منصة تساعد أصحاب المتاجر الصغيرة على إدارة الطلبات والمخزون والتوصيل من لوحة واحدة..."
                   />
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -184,7 +184,7 @@ export const IdeaCreation: React.FC<{
 
       {step === 'result' && (
         <>
-          <section className="rounded-xl bg-card p-5 shadow-sm ring-1 ring-border/60">
+          <section className="rounded-xl bg-card p-4 shadow-sm ring-1 ring-border/60">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-3xl space-y-3">
                 <Badge variant="secondary" className="w-fit">تحليل مكتمل</Badge>

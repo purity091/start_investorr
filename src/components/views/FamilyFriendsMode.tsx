@@ -76,7 +76,7 @@ export const FamilyFriendsMode: React.FC<{
   const progress = Math.round((completedCount / STEPS.length) * 100);
 
   return (
-    <main dir="rtl" className="mx-auto w-full max-w-6xl space-y-5 px-4 py-6 text-right sm:px-6 lg:px-8">
+    <main dir="rtl" className="mx-auto w-full max-w-7xl space-y-4 px-3 py-3 text-right sm:px-4 lg:px-5">
       <section className="rounded-xl bg-card p-5 shadow-sm ring-1 ring-border/60">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="space-y-2">
@@ -107,7 +107,7 @@ export const FamilyFriendsMode: React.FC<{
         </div>
       </section>
 
-      <div className="grid gap-5 lg:grid-cols-[320px_1fr]">
+      <div className="grid gap-4 lg:grid-cols-[280px_1fr]">
         <Card>
           <CardHeader>
             <CardTitle className="text-base">خطوات النموذج</CardTitle>
@@ -154,12 +154,12 @@ export const FamilyFriendsMode: React.FC<{
               </div>
             </div>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-3">
             <Textarea
               value={currentValue}
               onChange={(event) => onChange({ [current.id]: event.target.value })}
               placeholder={current.placeholder}
-              className="min-h-[240px] resize-y bg-background text-right leading-7"
+              className="min-h-[160px] resize-y bg-background text-right leading-7"
             />
 
             <div className="flex flex-col gap-3 border-t border-border pt-4 sm:flex-row sm:items-center sm:justify-between">

@@ -220,18 +220,18 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
   return (
     <div
       dir="rtl"
-      className="mx-auto flex w-full max-w-[1440px] flex-col gap-5 px-4 py-6 sm:px-6 lg:px-8"
+      className="mx-auto flex w-full max-w-[1440px] flex-col gap-4 px-3 py-3 sm:px-4 lg:px-5"
     >
       <Card className="border-0 bg-background shadow-none">
-        <CardHeader className="gap-5 px-0 pt-0">
-          <div className="flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between">
+        <CardHeader className="gap-3 px-0 pt-0">
+          <div className="flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
             <div className="space-y-3">
               <Badge variant="secondary" className="w-fit rounded-md px-3 py-1 font-medium">
                 منهجية بناء مشروع منضبطة
               </Badge>
               <div className="space-y-2">
-                <CardTitle className="text-2xl leading-tight sm:text-3xl">MIT 24 Steps</CardTitle>
-                <CardDescription className="max-w-3xl text-sm leading-7 sm:text-[15px]">
+                <CardTitle className="text-xl leading-tight sm:text-2xl">MIT 24 Steps</CardTitle>
+                <CardDescription className="line-clamp-3 max-w-3xl text-sm leading-6">
                   مسار منظم لتحويل فكرة المشروع إلى نموذج قابل للتنفيذ عبر 24 خطوة تغطي العميل،
                   القيمة، الإيراد، التحقق، والجاهزية للنمو.
                 </CardDescription>
@@ -239,23 +239,23 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
             </div>
 
             <div className="grid w-full gap-3 sm:grid-cols-3 xl:w-[560px]">
-              <div className="rounded-xl bg-muted/40 p-4">
+              <div className="rounded-lg bg-muted/40 p-3">
                 <div className="text-xs font-medium text-muted-foreground">إجمالي الخطوات</div>
-                <div className="mt-2 text-2xl font-semibold text-foreground">{totalSteps}</div>
+                <div className="mt-1 text-xl font-semibold text-foreground">{totalSteps}</div>
               </div>
-              <div className="rounded-xl bg-muted/40 p-4">
+              <div className="rounded-lg bg-muted/40 p-3">
                 <div className="text-xs font-medium text-muted-foreground">خطوات مكتملة</div>
-                <div className="mt-2 text-2xl font-semibold text-foreground">{filledCount}</div>
+                <div className="mt-1 text-xl font-semibold text-foreground">{filledCount}</div>
               </div>
-              <div className="rounded-xl bg-muted/40 p-4">
+              <div className="rounded-lg bg-muted/40 p-3">
                 <div className="text-xs font-medium text-muted-foreground">نسبة الإنجاز</div>
-                <div className="mt-2 text-2xl font-semibold text-foreground">{completion}%</div>
+                <div className="mt-1 text-xl font-semibold text-foreground">{completion}%</div>
               </div>
             </div>
           </div>
 
-          <div className="rounded-2xl bg-muted/30 px-4 py-4 sm:px-5">
-            <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div className="rounded-xl bg-muted/30 px-3 py-3 sm:px-4">
+            <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
               <div className="space-y-2">
                 <div className="text-sm font-semibold text-foreground">مستوى التقدم العام</div>
                 <div className="flex items-center gap-3">
@@ -283,13 +283,13 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
       </Card>
 
       <Card className="border-0 bg-muted/20 shadow-none">
-        <CardHeader className="pb-4">
+        <CardHeader className="p-4 pb-3">
           <CardTitle className="text-lg">مراحل المنهجية</CardTitle>
           <CardDescription>
             اختر المرحلة التي تريد العمل عليها. كل مرحلة تحتوي 4 خطوات واضحة.
           </CardDescription>
         </CardHeader>
-        <CardContent className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+        <CardContent className="grid gap-3 p-4 pt-0 sm:grid-cols-2 xl:grid-cols-3">
           {PHASES.map((phase) => {
             const progress = phaseProgress(phase);
             const isActive = phase.id === activePhase;
@@ -301,7 +301,7 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
                 type="button"
                 onClick={() => moveToStep(phase.id, phase.steps[0].id)}
                 className={cn(
-                  'flex flex-col gap-3 rounded-xl p-4 text-right transition-colors',
+                  'flex flex-col gap-2 rounded-lg p-3 text-right transition-colors',
                   isActive ? `${phase.tone.soft} shadow-sm` : 'bg-background/80 hover:bg-background',
                 )}
               >
@@ -339,7 +339,7 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
       </Card>
 
       <Card className="border-0 bg-background shadow-none">
-        <CardHeader className="pb-4 px-0">
+        <CardHeader className="px-0 pb-3">
           <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
             <div className="space-y-1">
               <CardTitle className="text-lg">{currentPhase.label}</CardTitle>
@@ -360,7 +360,7 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
               <div
                 key={step.id}
                 className={cn(
-                  'overflow-hidden rounded-2xl bg-muted/20 transition-colors',
+                  'overflow-hidden rounded-xl bg-muted/20 transition-colors',
                   isOpen && `${currentPhase.tone.soft}`,
                   isCompleted && !isOpen && 'bg-emerald-50/30',
                 )}
@@ -368,7 +368,7 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
                 <button
                   type="button"
                   onClick={() => setOpenStep(isOpen ? -1 : step.id)}
-                  className="flex w-full items-start gap-3 px-4 py-4 text-right hover:bg-background/40"
+                  className="flex w-full items-start gap-3 px-3 py-3 text-right hover:bg-background/40"
                 >
                   <div
                     className={cn(
@@ -403,10 +403,10 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
                 </button>
 
                 {isOpen ? (
-                  <div className="px-4 pb-4">
+                  <div className="px-3 pb-3">
                     <div
                       className={cn(
-                        'mb-4 rounded-xl px-3 py-3 text-sm leading-7',
+                        'mb-3 rounded-lg px-3 py-2 text-sm leading-6',
                         currentPhase.tone.soft,
                         currentPhase.tone.text,
                       )}
@@ -418,10 +418,10 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
                       value={value}
                       onChange={(event) => setValue(step.id, event.target.value)}
                       placeholder="اكتب إجابتك هنا بشكل واضح ومباشر..."
-                      className="min-h-[170px] resize-y border-0 bg-background text-right leading-7 shadow-none focus-visible:ring-1"
+                      className="min-h-[130px] resize-y border-0 bg-background text-right leading-7 shadow-none focus-visible:ring-1"
                     />
 
-                    <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                    <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                       <div className="text-xs text-muted-foreground">عدد الأحرف: {value.length}</div>
 
                       <div className="flex flex-wrap items-center gap-2">

@@ -5,6 +5,7 @@ import { Sidebar } from './components/layout/Sidebar';
 import { StrategicSupportFloat } from './components/layout/StrategicSupportFloat';
 import { BottomNavBar } from './components/layout/BottomNavBar';
 import { Header } from './components/layout/Header';
+import { AppBreadcrumb } from './components/layout/AppBreadcrumb';
 import { DashboardRouter } from './components/views/DashboardRouter';
 import SiteTour from './components/views/SiteTour';
 import { TooltipProvider } from './components/ui/tooltip';
@@ -125,6 +126,12 @@ const AppShell: React.FC = () => {
               setSubTabLabel={setSubTabLabel}
               setIsTourRunning={setIsTourRunning}
               user={MOCK_USER}
+            />
+
+            <AppBreadcrumb
+              activeTab={activeTab}
+              subTabLabel={subTabLabel}
+              setActiveTab={setActiveTab}
             />
 
             <DashboardRouter

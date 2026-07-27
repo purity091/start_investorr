@@ -1,20 +1,17 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import {
   ArrowUpRight,
-  BriefcaseBusiness,
   Building2,
   CheckCircle2,
-  ChevronDown,
   CircleDollarSign,
   Handshake,
   HeartHandshake,
-  LayoutGrid,
+  HelpCircle,
   Package,
   PencilLine,
   Plus,
   Search,
   Sparkles,
-  Target,
   Truck,
   Users,
   Wrench,
@@ -23,7 +20,6 @@ import {
 import { Badge } from '../../ui/Badge';
 import { Button } from '../../ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../ui/Card';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '../../ui/collapsible';
 import {
   Dialog,
   DialogContent,
@@ -33,8 +29,8 @@ import {
   DialogTitle,
 } from '../../ui/dialog';
 import { Input } from '../../ui/Input';
-import { PageHeader } from '../../ui/PageHeader';
 import { Textarea } from '../../ui/textarea';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../../ui/tooltip';
 import { cn } from '../../../lib/utils';
 
 type CanvasKey =
@@ -374,10 +370,6 @@ function countAnswered(data: BmcData) {
   );
 }
 
-function countBlocksWithAnswers(data: BmcData) {
-  return BLOCK_ORDER.filter((key) => data[key].some((item) => item.answer.trim().length > 0)).length;
-}
-
 function formatDate(value: string) {
   return new Date(value).toLocaleDateString('ar-SA', {
     year: 'numeric',
@@ -386,37 +378,10 @@ function formatDate(value: string) {
   });
 }
 
-function briefCompletion(brief: ProjectBrief) {
-  const filled = GENERAL_BRIEF_FIELDS.filter(({ key }) => brief[key].trim().length > 0).length;
-  return Math.round((filled / GENERAL_BRIEF_FIELDS.length) * 100);
-}
-
 function getProjectHealth(project: BmcProject) {
   const answered = countAnswered(project.data);
   const total = Object.values(project.data).reduce((sum, items) => sum + items.length, 0);
   return Math.round((answered / total) * 100);
-}
-
-function getNextBlock(project: BmcProject) {
-  return BLOCK_ORDER.find((key) => !project.data[key].some((item) => item.answer.trim().length > 0)) ?? 'valuePropositions';
-}
-
-function CompactMetric({
-  label,
-  value,
-  hint,
-}: {
-  label: string;
-  value: string;
-  hint: string;
-}) {
-  return (
-    <div className="rounded-lg border border-border bg-background px-3 py-3 text-right">
-      <p className="text-[11px] font-semibold text-muted-foreground">{label}</p>
-      <p className="mt-1 text-xl font-semibold text-foreground">{value}</p>
-      <p className="mt-1 text-[11px] text-muted-foreground">{hint}</p>
-    </div>
-  );
 }
 
 function ProjectSwitchItem({
@@ -458,127 +423,87 @@ function BmcBlockCard({
   block,
   questions,
   searchQuery,
-  onOpenQuestion,
+  onOpenBlock,
 }: {
   block: CanvasKey;
   questions: QuestionAnswer[];
   searchQuery: string;
-  onOpenQuestion: (block: CanvasKey, questionId: string) => void;
+  onOpenBlock: (block: CanvasKey) => void;
 }) {
-  const [showAllQuestions, setShowAllQuestions] = useState(false);
   const meta = BLOCK_META[block];
   const answered = questions.filter((item) => item.answer.trim().length > 0).length;
   const filteredQuestions = questions.filter((item) =>
     `${item.question} ${item.answer}`.toLowerCase().includes(searchQuery.toLowerCase())
   );
-  const shouldShowAll = showAllQuestions || searchQuery.trim().length > 0;
-  const visibleQuestions = shouldShowAll ? filteredQuestions : filteredQuestions.slice(0, 2);
-  const hiddenQuestionsCount = Math.max(filteredQuestions.length - visibleQuestions.length, 0);
+  const visibleQuestions = filteredQuestions.slice(0, 3);
 
   return (
-    <Card className={cn('h-full rounded-xl shadow-none', meta.cardClassName)}>
-      <CardHeader className="gap-3 border-b border-border/50 p-4">
-        <div className="flex items-start justify-between gap-3">
-          <div className="flex min-w-0 items-start gap-3">
-            <div className={cn('flex size-10 shrink-0 items-center justify-center rounded-lg border', meta.iconClassName)}>
-              <meta.icon size={18} />
+    <Card className={cn('flex h-full min-h-[208px] flex-col overflow-hidden rounded-xl shadow-none ring-1 ring-black/[0.03]', meta.cardClassName)}>
+      <CardHeader className="shrink-0 border-b border-border/50 px-2.5 py-2.5 text-right">
+        <div className="space-y-2">
+          <div className="space-y-1.5">
+            <div className={cn('flex size-8 shrink-0 items-center justify-center rounded-md border', meta.iconClassName)}>
+              <meta.icon size={15} />
             </div>
-            <div className="min-w-0 text-right">
-              <CardTitle className="text-sm font-semibold text-foreground">{meta.title}</CardTitle>
-              <CardDescription className="mt-1 text-xs leading-6">{meta.objective}</CardDescription>
-            </div>
+            <Badge variant="outline" className={cn('h-5 w-fit shrink-0 rounded-md px-1.5 text-[10px]', meta.badgeClassName)}>
+              {answered}/{questions.length}
+            </Badge>
           </div>
-          <Badge variant="outline" className={cn('shrink-0 text-[10px]', meta.badgeClassName)}>
-            {answered}/{questions.length}
-          </Badge>
+          <div className="min-w-0">
+            <CardTitle className="truncate text-[12px] font-semibold leading-5 text-foreground">{meta.title}</CardTitle>
+            <CardDescription className="mt-0.5 line-clamp-2 text-[10px] leading-4">{meta.objective}</CardDescription>
+          </div>
         </div>
       </CardHeader>
 
-      <CardContent className="p-3">
-        <div className="space-y-2">
+      <CardContent className="flex min-h-0 flex-1 flex-col gap-2 p-2">
+        <div className="text-[10px] font-medium leading-4 text-muted-foreground">محاور الأسئلة</div>
+        <button
+          type="button"
+          onClick={() => onOpenBlock(block)}
+          className="flex flex-1 flex-col gap-1.5 rounded-lg text-right outline-none transition-colors focus-visible:ring-2 focus-visible:ring-ring"
+        >
           {filteredQuestions.length > 0 ? (
             visibleQuestions.map((question) => {
               const hasAnswer = question.answer.trim().length > 0;
               return (
-                <Collapsible
+                <div
                   key={question.id}
                   className={cn(
-                    'rounded-lg border text-right transition-colors',
+                    'w-full rounded-md border px-2 py-1.5 text-right transition-colors',
                     hasAnswer
                       ? meta.questionAnsweredClassName
                       : meta.questionDefaultClassName
                   )}
                 >
-                  <CollapsibleTrigger asChild>
-                    <button
-                      type="button"
-                      className="group flex w-full items-center justify-between gap-3 px-3 py-3 transition-colors"
-                    >
-                      <div className="min-w-0 flex-1 text-right">
-                        <p className="text-sm font-medium leading-6 text-foreground">{question.question}</p>
-                      </div>
-                      <div className="flex shrink-0 items-center gap-2">
-                        {hasAnswer ? (
-                          <CheckCircle2 size={16} className="text-primary" />
-                        ) : (
-                          <PencilLine size={16} className="text-muted-foreground" />
-                        )}
-                        <ChevronDown size={16} className="text-muted-foreground transition-transform duration-200 group-data-[state=open]:rotate-180" />
-                      </div>
-                    </button>
-                  </CollapsibleTrigger>
-                  <CollapsibleContent className={cn('border-t px-3 py-3', meta.questionExpandedClassName)}>
-                    <div className="space-y-3">
-                      <p className="text-xs leading-6 text-muted-foreground">
-                        {hasAnswer ? question.answer : 'لا توجد إجابة مكتوبة بعد. افتح نافذة الإجابة لتوثيق القرار الخاص بهذا السؤال.'}
-                      </p>
-                      <div className="flex justify-start">
-                        <Button
-                          size="sm"
-                          variant={hasAnswer ? 'outline' : 'secondary'}
-                          className={hasAnswer ? meta.actionButtonClassName : ''}
-                          onClick={() => onOpenQuestion(block, question.id)}
-                        >
-                          <PencilLine size={14} />
-                          {hasAnswer ? 'تحرير الإجابة' : 'إضافة إجابة'}
-                        </Button>
-                      </div>
-                    </div>
-                  </CollapsibleContent>
-                </Collapsible>
+                  <div className="space-y-1">
+                    {hasAnswer ? (
+                      <CheckCircle2 size={12} className="block text-primary" />
+                    ) : (
+                      <span className="block size-1.5 rounded-full bg-muted-foreground/40" />
+                    )}
+                    <p className="line-clamp-2 text-[10px] font-medium leading-4 text-foreground">
+                      {question.question}
+                    </p>
+                  </div>
+                </div>
               );
             })
           ) : (
-            <div className="rounded-lg border border-dashed border-border px-4 py-8 text-center text-sm text-muted-foreground">
+            <div className="rounded-md border border-dashed border-border px-2 py-4 text-center text-[10px] leading-5 text-muted-foreground">
               لا توجد أسئلة مطابقة للبحث داخل هذا القسم.
             </div>
           )}
+        </button>
 
-          {hiddenQuestionsCount > 0 ? (
-            <Button
-              variant="outline"
-              size="sm"
-              className="w-full"
-              onClick={() => setShowAllQuestions(true)}
-            >
-              عرض المزيد
-              <Badge variant="secondary" className="mr-1">
-                +{hiddenQuestionsCount}
-              </Badge>
-            </Button>
-          ) : null}
-
-          {showAllQuestions && searchQuery.trim().length === 0 && filteredQuestions.length > 2 ? (
-            <Button
-              variant="ghost"
-              size="sm"
-              className="w-full"
-              onClick={() => setShowAllQuestions(false)}
-            >
-              عرض أقل
-            </Button>
-          ) : null}
-        </div>
+        <Button
+          variant="outline"
+          size="sm"
+          className={cn('h-7 w-full text-[11px]', answered > 0 ? meta.actionButtonClassName : '')}
+          onClick={() => onOpenBlock(block)}
+        >
+          فتح أسئلة القسم
+        </Button>
       </CardContent>
     </Card>
   );
@@ -611,7 +536,7 @@ export const BusinessModelCanvas: React.FC<{
   const [briefOpen, setBriefOpen] = useState(false);
   const [projectDialogOpen, setProjectDialogOpen] = useState(false);
   const [newProjectName, setNewProjectName] = useState('');
-  const [currentQuestion, setCurrentQuestion] = useState<{ block: CanvasKey; questionId: string } | null>(null);
+  const [currentBlock, setCurrentBlock] = useState<CanvasKey | null>(null);
 
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(projects));
@@ -628,17 +553,14 @@ export const BusinessModelCanvas: React.FC<{
     [activeProjectId, projects]
   );
 
-  const currentQuestionEntry = useMemo(() => {
-    if (!activeProject || !currentQuestion) return null;
-    return activeProject.data[currentQuestion.block].find((item) => item.id === currentQuestion.questionId) ?? null;
-  }, [activeProject, currentQuestion]);
+  const currentBlockQuestions = useMemo(() => {
+    if (!activeProject || !currentBlock) return [];
+    return activeProject.data[currentBlock];
+  }, [activeProject, currentBlock]);
 
   const answeredQuestions = activeProject ? countAnswered(activeProject.data) : 0;
   const totalQuestions = activeProject ? Object.values(activeProject.data).reduce((sum, items) => sum + items.length, 0) : 0;
   const readiness = activeProject ? getProjectHealth(activeProject) : 0;
-  const answeredBlocks = activeProject ? countBlocksWithAnswers(activeProject.data) : 0;
-  const nextBlock = activeProject ? BLOCK_META[getNextBlock(activeProject)].title : 'القيمة المقدمة';
-  const briefProgress = activeProject ? briefCompletion(activeProject.brief) : 0;
 
   const updateActiveProject = (updater: (project: BmcProject) => BmcProject) => {
     if (!activeProject) return;
@@ -675,21 +597,14 @@ export const BusinessModelCanvas: React.FC<{
     }));
   };
 
-  const handleStartProject = () => {
-    updateActiveProject((project) => ({
-      ...project,
-      started: true,
-    }));
-  };
-
-  const handleQuestionAnswerChange = (value: string) => {
-    if (!currentQuestion || !activeProject) return;
+  const handleBlockQuestionAnswerChange = (block: CanvasKey, questionId: string, value: string) => {
+    if (!activeProject) return;
     updateActiveProject((project) => ({
       ...project,
       data: {
         ...project.data,
-        [currentQuestion.block]: project.data[currentQuestion.block].map((item) =>
-          item.id === currentQuestion.questionId ? { ...item, answer: value } : item
+        [block]: project.data[block].map((item) =>
+          item.id === questionId ? { ...item, answer: value } : item
         ),
       },
     }));
@@ -698,130 +613,74 @@ export const BusinessModelCanvas: React.FC<{
   return (
     <div dir="rtl" className="min-h-screen bg-background px-3 pb-10 pt-4 sm:px-4 lg:px-5 2xl:px-6">
       <div className="mx-auto flex w-full max-w-[1880px] flex-col gap-4">
-        <PageHeader
-          badge="Business Model Canvas"
-          title="بناء نموذج العمل BMC"
-          description="هذه الصفحة تعطي العميل تخطيط نموذج العمل بصورته المعروفة، مع أسئلة جاهزة داخل كل قسم، وإجابات منظمة يمكن نقلها لاحقاً للمبرمج أو لفريق دراسة الجدوى."
-          actions={[
-            {
-              label: 'متابعة التحليل',
-              onClick: () => activeProject && onComplete(activeProject.data),
-              icon: <ArrowUpRight size={16} />,
-            },
-          ]}
-          metrics={[
-            { label: 'المشاريع', value: `${projects.length}`, helper: 'نماذج محفوظة داخل الصفحة' },
-            { label: 'الجاهزية', value: `${readiness}%`, helper: 'نسبة الإجابات المكتملة' },
-            { label: 'الأقسام النشطة', value: `${answeredBlocks}/9`, helper: 'أقسام فيها قرارات مكتوبة' },
-          ]}
-          className="rounded-xl"
-        />
-
-        <section className="rounded-xl border border-border bg-background">
-          <div className="flex flex-col gap-4 p-4 lg:flex-row lg:items-start lg:justify-between">
-            <div className="min-w-0 flex-1">
-              <div className="mb-3 flex items-center justify-between gap-3">
-                <div className="text-right">
-                  <p className="text-xs font-semibold text-muted-foreground">مساحة المشاريع</p>
-                  <h2 className="text-sm font-semibold text-foreground">يمكن للعميل بناء أكثر من نموذج عمل من نفس الصفحة</h2>
+        <TooltipProvider>
+          <section className="rounded-xl border border-border bg-card p-3 shadow-sm">
+            <div className="flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between">
+              <div className="min-w-0 text-right">
+                <div className="flex items-center gap-2">
+                  <Badge variant="outline">Canvas</Badge>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="ghost" size="icon" className="size-7">
+                        <HelpCircle size={15} />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent side="bottom" className="max-w-sm text-right leading-6">
+                      كل قسم في المخطط يفتح أسئلته داخل نافذة منظمة. استخدم الصفحة لتعديل المخطط، وليس لقراءة شرح طويل قبل الوصول إليه.
+                    </TooltipContent>
+                  </Tooltip>
                 </div>
-                <Button size="sm" onClick={() => setProjectDialogOpen(true)}>
-                  <Plus size={14} />
-                  مشروع جديد
-                </Button>
-              </div>
-
-              <div className="flex gap-3 overflow-x-auto pb-1">
-                {projects.map((project) => (
-                  <ProjectSwitchItem
-                    key={project.id}
-                    project={project}
-                    active={project.id === activeProject?.id}
-                    onClick={() => setActiveProjectId(project.id)}
-                  />
-                ))}
-              </div>
-            </div>
-
-            <div className="grid w-full gap-3 sm:grid-cols-3 lg:max-w-[520px]">
-              <CompactMetric label="المشروع النشط" value={activeProject?.brief.name || 'بدون اسم'} hint="النموذج الجاري تحريره الآن" />
-              <CompactMetric label="إجابات مكتملة" value={`${answeredQuestions}/${totalQuestions}`} hint="إجمالي الأسئلة المجاب عنها" />
-              <CompactMetric label="الخطوة التالية" value={nextBlock} hint="القسم الذي يحتاج قراراً أولاً" />
-            </div>
-          </div>
-        </section>
-
-        <section className="grid gap-4 xl:grid-cols-[minmax(0,1.8fr)_minmax(320px,0.8fr)]">
-          <Card className="rounded-xl shadow-none">
-            <CardHeader className="gap-3 border-b border-border p-4">
-              <div className="flex items-start justify-between gap-3">
-                <div className="min-w-0 text-right">
-                  <Badge variant="outline">قبل بناء اللوحة</Badge>
-                  <CardTitle className="mt-3 text-lg font-semibold">
-                    تعريف المشروع الذي ستبنى عليه دراسة الجدوى
-                  </CardTitle>
-                  <CardDescription className="mt-2 max-w-3xl text-sm leading-7">
-                    ابدأ بتوصيف الفكرة، العميل، السوق، والهدف من بناء النموذج. بعد ذلك انتقل إلى اللوحة الفعلية وسيظهر كل قسم بأسئلته الافتراضية داخل `modal` منظم.
-                  </CardDescription>
-                </div>
-                <Button variant="outline" size="sm" onClick={() => setBriefOpen(true)}>
-                  <PencilLine size={14} />
-                  تحرير البيانات الأساسية
-                </Button>
-              </div>
-            </CardHeader>
-            <CardContent className="grid gap-3 p-4 sm:grid-cols-2 2xl:grid-cols-3">
-              {GENERAL_BRIEF_FIELDS.slice(0, 6).map((field) => (
-                <div key={field.key} className="rounded-lg border border-border bg-background px-3 py-3 text-right">
-                  <p className="text-[11px] font-semibold text-muted-foreground">{field.label}</p>
-                  <p className="mt-1 text-sm font-medium leading-7 text-foreground">
-                    {activeProject?.brief[field.key] || 'لم يتم إدخال هذه المعلومة بعد'}
-                  </p>
-                </div>
-              ))}
-            </CardContent>
-          </Card>
-
-          <Card className="rounded-xl shadow-none">
-            <CardHeader className="gap-3 border-b border-border p-4">
-              <CardTitle className="text-base font-semibold">قرار البدء</CardTitle>
-              <CardDescription className="text-sm leading-7">
-                لا يتم عرض اللوحة التفصيلية إلا بعد تثبيت سياق المشروع. هذا يجعل رحلة المستخدم أوضح ويسلم للمبرمج واجهة منطقية.
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4 p-4">
-              <div className="rounded-lg border border-border bg-accent/40 p-4 text-right">
-                <p className="text-xs font-semibold text-muted-foreground">اكتمال البيانات التمهيدية</p>
-                <p className="mt-2 text-3xl font-semibold text-foreground">{briefProgress}%</p>
-                <p className="mt-2 text-sm leading-7 text-muted-foreground">
-                  كلما كانت هذه الطبقة أوضح، أصبحت إجابات `BMC` أدق وأكثر قابلية للتحويل إلى مخرجات دراسة جدوى.
+                <h1 className="mt-2 text-xl font-semibold tracking-tight text-foreground">بناء نموذج العمل BMC</h1>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {activeProject?.brief.name || 'مشروع بدون اسم'} · {answeredQuestions}/{totalQuestions} إجابة · الجاهزية {readiness}%
                 </p>
               </div>
-              <div className="rounded-lg border border-border bg-background p-4 text-right">
-                <p className="text-sm font-semibold text-foreground">ماذا سيحدث بعد البدء؟</p>
-                <ul className="mt-3 space-y-2 text-sm leading-7 text-muted-foreground">
-                  <li>سيظهر التخطيط الكامل لنموذج العمل بالشكل المعروف.</li>
-                  <li>كل قسم يحتوي أسئلة افتراضية جاهزة وليست خانات حرة مبهمة.</li>
-                  <li>كل إجابة تحفظ ضمن المشروع النشط ويمكن الانتقال بين المشاريع بسهولة.</li>
-                </ul>
-              </div>
-              <Button className="w-full" onClick={handleStartProject}>
-                <LayoutGrid size={16} />
-                {activeProject?.started ? 'العودة إلى اللوحة' : 'ابدأ بناء النموذج'}
-              </Button>
-            </CardContent>
-          </Card>
-        </section>
 
-        {activeProject?.started ? (
+              <div className="flex flex-col gap-2 lg:flex-row lg:items-center">
+                <div className="flex gap-2 overflow-x-auto pb-1 lg:max-w-[520px]">
+                  {projects.map((project) => (
+                    <ProjectSwitchItem
+                      key={project.id}
+                      project={project}
+                      active={project.id === activeProject?.id}
+                      onClick={() => setActiveProjectId(project.id)}
+                    />
+                  ))}
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  <Button variant="outline" size="sm" onClick={() => setBriefOpen(true)}>
+                    <PencilLine size={14} />
+                    بيانات المشروع
+                  </Button>
+                  <Button variant="outline" size="sm" onClick={() => setProjectDialogOpen(true)}>
+                    <Plus size={14} />
+                    مشروع جديد
+                  </Button>
+                  <Button size="sm" onClick={() => activeProject && onComplete(activeProject.data)}>
+                    <ArrowUpRight size={14} />
+                    متابعة التحليل
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <>
-            <section className="rounded-xl border border-border bg-background">
-              <div className="flex flex-col gap-3 p-4 lg:flex-row lg:items-center lg:justify-between">
-                <div className="text-right">
-                  <p className="text-xs font-semibold text-muted-foreground">لوحة النموذج</p>
-                  <h2 className="text-base font-semibold text-foreground">
-                    التخطيط التقليدي لنموذج العمل مع مركزية القيمة المقدمة
-                  </h2>
+            <section className="rounded-xl border border-border bg-card p-3 shadow-sm">
+              <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+                <div className="flex flex-wrap items-center gap-2 text-right">
+                  <Badge variant="secondary">لوحة النموذج</Badge>
+                  <span className="text-sm font-medium text-foreground">الأقسام التسعة جاهزة للتعديل</span>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button variant="ghost" size="icon" className="size-7">
+                        <HelpCircle size={15} />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent side="bottom" className="max-w-sm text-right leading-6">
+                      اضغط على أي قسم لفتح أسئلته وإدخال الإجابات. ترتيب المخطط يحافظ على الشكل التقليدي لنموذج العمل.
+                    </TooltipContent>
+                  </Tooltip>
                 </div>
                 <div className="relative w-full lg:max-w-sm">
                   <Search size={16} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
@@ -835,82 +694,84 @@ export const BusinessModelCanvas: React.FC<{
               </div>
             </section>
 
-            <section className="grid gap-4 xl:grid-cols-5">
-              <div className="xl:row-span-2">
+            <section className="rounded-2xl border border-border bg-muted/30 p-2 shadow-sm sm:p-3">
+              <div className="grid auto-rows-fr gap-2 md:grid-cols-2 xl:grid-cols-5 xl:[grid-template-areas:'partners_activities_value_relationships_segments'_'partners_resources_value_channels_segments'_'costs_costs_costs_revenue_revenue'] 2xl:gap-3">
+              <div className="xl:[grid-area:segments]">
                 <BmcBlockCard
                   block="customerSegments"
                   questions={activeProject.data.customerSegments}
                   searchQuery={searchQuery}
-                  onOpenQuestion={(block, questionId) => setCurrentQuestion({ block, questionId })}
+                  onOpenBlock={setCurrentBlock}
                 />
               </div>
-              <div>
+              <div className="xl:[grid-area:relationships]">
                 <BmcBlockCard
                   block="customerRelationships"
                   questions={activeProject.data.customerRelationships}
                   searchQuery={searchQuery}
-                  onOpenQuestion={(block, questionId) => setCurrentQuestion({ block, questionId })}
+                  onOpenBlock={setCurrentBlock}
                 />
               </div>
-              <div className="xl:row-span-2">
+              <div className="xl:[grid-area:value]">
                 <BmcBlockCard
                   block="valuePropositions"
                   questions={activeProject.data.valuePropositions}
                   searchQuery={searchQuery}
-                  onOpenQuestion={(block, questionId) => setCurrentQuestion({ block, questionId })}
+                  onOpenBlock={setCurrentBlock}
                 />
               </div>
-              <div>
+              <div className="xl:[grid-area:activities]">
                 <BmcBlockCard
                   block="keyActivities"
                   questions={activeProject.data.keyActivities}
                   searchQuery={searchQuery}
-                  onOpenQuestion={(block, questionId) => setCurrentQuestion({ block, questionId })}
+                  onOpenBlock={setCurrentBlock}
                 />
               </div>
-              <div className="xl:row-span-2">
+              <div className="xl:[grid-area:partners]">
                 <BmcBlockCard
                   block="keyPartners"
                   questions={activeProject.data.keyPartners}
                   searchQuery={searchQuery}
-                  onOpenQuestion={(block, questionId) => setCurrentQuestion({ block, questionId })}
+                  onOpenBlock={setCurrentBlock}
                 />
               </div>
-              <div>
+              <div className="xl:[grid-area:channels]">
                 <BmcBlockCard
                   block="channels"
                   questions={activeProject.data.channels}
                   searchQuery={searchQuery}
-                  onOpenQuestion={(block, questionId) => setCurrentQuestion({ block, questionId })}
+                  onOpenBlock={setCurrentBlock}
                 />
               </div>
-              <div>
+              <div className="xl:[grid-area:resources]">
                 <BmcBlockCard
                   block="keyResources"
                   questions={activeProject.data.keyResources}
                   searchQuery={searchQuery}
-                  onOpenQuestion={(block, questionId) => setCurrentQuestion({ block, questionId })}
+                  onOpenBlock={setCurrentBlock}
                 />
               </div>
-              <div className="xl:col-span-2">
+              <div className="xl:[grid-area:revenue]">
                 <BmcBlockCard
                   block="revenueStreams"
                   questions={activeProject.data.revenueStreams}
                   searchQuery={searchQuery}
-                  onOpenQuestion={(block, questionId) => setCurrentQuestion({ block, questionId })}
+                  onOpenBlock={setCurrentBlock}
                 />
               </div>
-              <div className="xl:col-span-3">
+              <div className="xl:[grid-area:costs]">
                 <BmcBlockCard
                   block="costStructure"
                   questions={activeProject.data.costStructure}
                   searchQuery={searchQuery}
-                  onOpenQuestion={(block, questionId) => setCurrentQuestion({ block, questionId })}
+                  onOpenBlock={setCurrentBlock}
                 />
+              </div>
               </div>
             </section>
           </>
-        ) : null}
+        </TooltipProvider>
       </div>
 
       <Dialog open={briefOpen} onOpenChange={setBriefOpen}>
@@ -976,17 +837,24 @@ export const BusinessModelCanvas: React.FC<{
         </DialogContent>
       </Dialog>
 
-      <Dialog open={!!currentQuestion && !!currentQuestionEntry} onOpenChange={(open) => !open && setCurrentQuestion(null)}>
-        <DialogContent className="max-h-[90vh] overflow-hidden p-0">
+      <Dialog open={!!currentBlock} onOpenChange={(open) => !open && setCurrentBlock(null)}>
+        <DialogContent className="max-h-[90vh] overflow-hidden p-0 sm:max-w-3xl">
           <DialogHeader className="border-b border-border px-6 py-5">
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0 text-right">
-                <Badge variant="outline">{currentQuestion ? BLOCK_META[currentQuestion.block].title : ''}</Badge>
+                <div className="space-y-3">
+                  {currentBlock ? (
+                    <div className={cn('flex size-10 items-center justify-center rounded-lg border', BLOCK_META[currentBlock].iconClassName)}>
+                      {React.createElement(BLOCK_META[currentBlock].icon, { size: 18 })}
+                    </div>
+                  ) : null}
+                  <Badge variant="outline">{currentBlock ? BLOCK_META[currentBlock].title : ''}</Badge>
+                </div>
                 <DialogTitle className="mt-3 text-right">
-                  {currentQuestionEntry?.question}
+                  أسئلة القسم وإجابات نموذج العمل
                 </DialogTitle>
                 <DialogDescription className="mt-2 text-right">
-                  اكتب إجابة واضحة وقابلة للتحويل لاحقاً إلى قرار تنفيذي داخل دراسة الجدوى أو وثيقة العمل.
+                  اكتب إجابات واضحة وقابلة للتحويل لاحقاً إلى قرارات تنفيذية داخل دراسة الجدوى أو وثيقة العمل.
                 </DialogDescription>
               </div>
               <div className="hidden rounded-lg border border-border bg-background px-3 py-2 text-right sm:block">
@@ -995,31 +863,55 @@ export const BusinessModelCanvas: React.FC<{
               </div>
             </div>
           </DialogHeader>
-          <div className="space-y-4 px-6 py-5">
+          <div className="max-h-[calc(90vh-180px)] space-y-4 overflow-y-auto px-6 py-5">
             <div className="rounded-lg border border-border bg-accent/30 p-4 text-right">
               <p className="text-xs font-semibold text-muted-foreground">الهدف من هذا القسم</p>
               <p className="mt-2 text-sm leading-7 text-foreground">
-                {currentQuestion ? BLOCK_META[currentQuestion.block].objective : ''}
+                {currentBlock ? BLOCK_META[currentBlock].objective : ''}
               </p>
             </div>
-            <div className="space-y-2 text-right">
-              <label className="text-sm font-medium text-foreground">الإجابة</label>
-              <Textarea
-                value={currentQuestionEntry?.answer ?? ''}
-                onChange={(event) => handleQuestionAnswerChange(event.target.value)}
-                placeholder="اكتب الإجابة بصياغة واضحة ومباشرة..."
-                className="min-h-40 resize-y"
-              />
+            <div className="space-y-3">
+              {currentBlockQuestions.map((question, index) => {
+                const hasAnswer = question.answer.trim().length > 0;
+                return (
+                  <div key={question.id} className="rounded-lg border border-border bg-background p-4 text-right">
+                    <div className="space-y-3">
+                      <Badge variant={hasAnswer ? 'secondary' : 'outline'} className="mt-0.5 shrink-0">
+                        {index + 1}
+                      </Badge>
+                      <div className="min-w-0 space-y-2">
+                        <label className="block text-sm font-medium leading-7 text-foreground">
+                          {question.question}
+                        </label>
+                        <Textarea
+                          value={question.answer}
+                          onChange={(event) =>
+                            currentBlock &&
+                            handleBlockQuestionAnswerChange(currentBlock, question.id, event.target.value)
+                          }
+                          placeholder="اكتب الإجابة بصياغة واضحة ومباشرة..."
+                          className="min-h-28 resize-y"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
           <DialogFooter className="border-t border-border px-6 py-4">
             <Button
               variant="outline"
-              onClick={() => handleQuestionAnswerChange('')}
+              onClick={() => {
+                if (!currentBlock) return;
+                currentBlockQuestions.forEach((question) =>
+                  handleBlockQuestionAnswerChange(currentBlock, question.id, '')
+                );
+              }}
             >
-              مسح الإجابة
+              مسح إجابات القسم
             </Button>
-            <Button onClick={() => setCurrentQuestion(null)}>
+            <Button onClick={() => setCurrentBlock(null)}>
               حفظ وإغلاق
             </Button>
           </DialogFooter>
