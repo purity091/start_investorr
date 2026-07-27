@@ -4,8 +4,24 @@ import * as LucideIcons from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
+import {
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
 import { Input } from '@/components/ui/Input';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table';
 import { cn } from '@/lib/utils';
 
 const SafeIcon = ({ iconName, ...props }: { iconName: string; [key: string]: any }) => {
@@ -286,6 +302,8 @@ export function DiscoveryCenter({
   onSelectSector?: (sector: { id: string; label: string; groupTitle: string }) => void;
 }) {
   const [searchTerm, setSearchTerm] = useState('');
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [filterType, setFilterType] = useState<'all' | 'new'>('all');
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({});
   const [selectedSectorId, setSelectedSectorId] = useState<string | null>(null);
 
@@ -304,11 +322,20 @@ export function DiscoveryCenter({
   const filteredGroups = useMemo(() => {
     const query = searchTerm.trim().toLowerCase();
 
-    if (!query) {
-      return normalizedGroups;
+    let groups = normalizedGroups;
+
+    if (filterType === 'new') {
+      groups = groups.map(group => ({
+        ...group,
+        sectors: group.sectors.filter(s => s.isNew)
+      }));
     }
 
-    return normalizedGroups
+    if (!query) {
+      return groups.filter(group => group.sectors.length > 0);
+    }
+
+    return groups
       .map(group => ({
         ...group,
         sectors: group.sectors.filter(
@@ -319,7 +346,7 @@ export function DiscoveryCenter({
         ),
       }))
       .filter(group => group.sectors.length > 0);
-  }, [normalizedGroups, searchTerm]);
+  }, [normalizedGroups, searchTerm, filterType]);
 
   const allSectors = useMemo(
     () =>
@@ -345,6 +372,18 @@ export function DiscoveryCenter({
   const totalSectors = allSectors.length;
   const totalNewSectors = allSectors.filter(sector => sector.isNew).length;
   const matchingSectors = filteredGroups.reduce((count, group) => count + group.sectors.length, 0);
+
+  const tableRecords = useMemo(() => {
+    return filteredGroups.flatMap(group => 
+      group.sectors.map(sector => ({
+        ...sector,
+        groupTitle: group.title,
+        groupIcon: group.iconName,
+        gatekeepers: group.gatekeepers,
+        tone: group.tone
+      }))
+    );
+  }, [filteredGroups]);
 
   const openSector = (sector: { id: string; label: string; groupTitle: string }) => {
     setSelectedSectorId(sector.id);
@@ -389,65 +428,129 @@ export function DiscoveryCenter({
             </div>
             </div>
 
-            <div className="flex flex-col gap-4 rounded-xl border bg-muted/20 p-4">
-              <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-                <div className="min-w-0 text-right">
-                  <div className="text-sm font-semibold text-foreground">شرح استخدام الرادار</div>
-                  <div className="text-xs text-muted-foreground">اضغط على علامة التعجب لعرض خطوات الاستخدام.</div>
-                </div>
-                <div className="flex flex-wrap items-center gap-2">
-                  <Badge variant="outline" className="rounded-md px-3 py-1 font-medium">
-                    النتائج الحالية: {matchingSectors}
-                  </Badge>
-                  <HoverCard openDelay={100}>
-                    <HoverCardTrigger asChild>
-                      <Button
-                        type="button"
-                        variant="outline"
-                        size="icon-sm"
-                        className="shrink-0 rounded-full"
-                        aria-label="كيف تستخدم الرادار؟"
-                      >
-                        <LucideIcons.CircleAlert className="size-4" />
-                      </Button>
-                    </HoverCardTrigger>
-                    <HoverCardContent align="start" className="w-[360px] space-y-3 text-right" dir="rtl">
-                      <div className="space-y-1">
-                        <div className="text-sm font-semibold text-foreground">كيف تستخدم الرادار؟</div>
-                        <p className="text-xs leading-6 text-muted-foreground">
-                          ابدأ من المجموعة الأقرب لفكرة المشروع، ثم ادخل إلى القطاع المناسب لمراجعة السوق وبناء تصور أعمق للفرصة.
-                        </p>
-                      </div>
-                      <div className="space-y-2 text-xs leading-6 text-muted-foreground">
-                        <div className="rounded-lg border bg-muted/30 px-3 py-2">
-                          اختر مجموعة رئيسية تمثل نوع السوق الذي تنوي تحليله قبل الانتقال إلى القطاعات الفرعية.
-                        </div>
-                        <div className="rounded-lg border bg-muted/30 px-3 py-2">
-                          استخدم البحث للوصول السريع عندما يكون لديك اتجاه محدد أو صناعة واضحة.
-                        </div>
-                        <div className="rounded-lg border bg-muted/30 px-3 py-2">
-                          انتقل إلى القطاع المطلوب لبدء القراءة أو استكمال بقية رحلة المشروع داخل المنصة.
-                        </div>
-                      </div>
-                    </HoverCardContent>
-                  </HoverCard>
-                  {searchTerm ? (
-                    <Button type="button" variant="outline" size="sm" onClick={() => setSearchTerm('')}>
-                      مسح البحث
+            <div className="flex w-full flex-col gap-3 rounded-xl border bg-muted/20 p-2 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex flex-wrap items-center gap-2 overflow-x-auto pb-1 sm:pb-0">
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="outline" size="sm" className="h-9 gap-2 rounded-lg bg-background shadow-sm">
+                      <LucideIcons.Filter className="size-4" />
+                      تصفية: {filterType === 'all' ? 'الكل' : 'القطاعات الجديدة'}
                     </Button>
-                  ) : null}
-                </div>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end" className="w-48 text-right" dir="rtl">
+                    <DropdownMenuLabel>حالة القطاع</DropdownMenuLabel>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuCheckboxItem 
+                      checked={filterType === 'all'} 
+                      onCheckedChange={() => setFilterType('all')}
+                    >
+                      الكل
+                    </DropdownMenuCheckboxItem>
+                    <DropdownMenuCheckboxItem 
+                      checked={filterType === 'new'} 
+                      onCheckedChange={() => setFilterType('new')}
+                    >
+                      القطاعات الجديدة فقط
+                    </DropdownMenuCheckboxItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+
+                <div className="mx-1 h-5 w-[1px] bg-border" />
+                
+                <Badge variant="outline" className="h-9 rounded-lg bg-background px-3 font-medium text-sm">
+                  النتائج: {matchingSectors}
+                </Badge>
+
+                <HoverCard openDelay={100}>
+                  <HoverCardTrigger asChild>
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="icon-sm"
+                      className="h-9 w-9 shrink-0 rounded-lg text-muted-foreground"
+                    >
+                      <LucideIcons.CircleAlert className="size-4" />
+                    </Button>
+                  </HoverCardTrigger>
+                  <HoverCardContent align="start" className="w-[360px] space-y-3 text-right" dir="rtl">
+                    <div className="space-y-1">
+                      <div className="text-sm font-semibold text-foreground">كيف تستخدم الرادار؟</div>
+                      <p className="text-xs leading-6 text-muted-foreground">
+                        ابدأ من المجموعة الأقرب لفكرة المشروع، ثم ادخل إلى القطاع المناسب لمراجعة السوق وبناء تصور أعمق للفرصة.
+                      </p>
+                    </div>
+                    <div className="space-y-2 text-xs leading-6 text-muted-foreground">
+                      <div className="rounded-lg border bg-muted/30 px-3 py-2">
+                        اختر مجموعة رئيسية تمثل نوع السوق الذي تنوي تحليله قبل الانتقال إلى القطاعات الفرعية.
+                      </div>
+                      <div className="rounded-lg border bg-muted/30 px-3 py-2">
+                        استخدم البحث للوصول السريع عندما يكون لديك اتجاه محدد أو صناعة واضحة.
+                      </div>
+                      <div className="rounded-lg border bg-muted/30 px-3 py-2">
+                        انتقل إلى القطاع المطلوب لبدء القراءة أو استكمال بقية رحلة المشروع داخل المنصة.
+                      </div>
+                    </div>
+                  </HoverCardContent>
+                </HoverCard>
               </div>
 
-              <div className="relative w-full">
-                <LucideIcons.Search className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
-                <Input
-                  type="text"
-                  value={searchTerm}
-                  onChange={event => setSearchTerm(event.target.value)}
-                  placeholder="ابحث عن قطاع، سوق، أو فرصة استثمارية"
-                  className="pr-10 text-right"
-                />
+              <div className="flex shrink-0 items-center gap-2">
+                {searchTerm && !isSearchOpen && (
+                  <Badge variant="secondary" className="h-9 gap-1.5 pr-2.5 text-sm">
+                    {searchTerm}
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="icon-sm"
+                      className="h-5 w-5 rounded-full p-0 hover:bg-background/80"
+                      onClick={() => setSearchTerm('')}
+                    >
+                      <LucideIcons.X className="size-3" />
+                    </Button>
+                  </Badge>
+                )}
+                
+                <div 
+                  className={cn(
+                    "flex items-center overflow-hidden transition-all duration-300 ease-in-out",
+                    isSearchOpen ? "w-full opacity-100 sm:w-64" : "w-0 opacity-0"
+                  )}
+                >
+                  <div className="relative w-full">
+                    <LucideIcons.Search className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+                    <Input
+                      type="text"
+                      value={searchTerm}
+                      onChange={event => setSearchTerm(event.target.value)}
+                      placeholder="ابحث عن قطاع أو سوق..."
+                      className="h-9 w-full bg-background pr-9 text-sm focus-visible:ring-1"
+                    />
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      size="icon-sm"
+                      className="absolute left-1 top-1/2 h-7 w-7 -translate-y-1/2 rounded-md text-muted-foreground hover:text-foreground"
+                      onClick={() => {
+                        setIsSearchOpen(false);
+                        if (!searchTerm) setSearchTerm('');
+                      }}
+                    >
+                      <LucideIcons.X className="size-3.5" />
+                    </Button>
+                  </div>
+                </div>
+
+                {!isSearchOpen && (
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="icon-sm"
+                    onClick={() => setIsSearchOpen(true)}
+                    className="h-9 w-9 shrink-0 bg-background rounded-lg shadow-sm"
+                  >
+                    <LucideIcons.Search className="size-4" />
+                  </Button>
+                )}
               </div>
             </div>
           </CardHeader>
@@ -519,101 +622,80 @@ export function DiscoveryCenter({
               </CardContent>
             </Card>
 
-            {filteredGroups.length > 0 ? (
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 2xl:grid-cols-3">
-                {filteredGroups.map(group => {
-                  const expanded = expandedGroups[group.title] ?? false;
-                  const hasSearch = searchTerm.trim().length > 0;
-                  const visibleSectors = hasSearch || expanded ? group.sectors : group.sectors.slice(0, DEFAULT_VISIBLE_SECTORS);
-                  const hiddenCount = Math.max(group.sectors.length - DEFAULT_VISIBLE_SECTORS, 0);
-
-                  return (
-                    <Card key={group.title} className={cn('shadow-sm', group.tone.card)}>
-                      <CardHeader className="gap-4 pb-4">
-                        <div className="flex items-start justify-between gap-3">
-                          <div className="space-y-2">
-                            <div className="flex items-center gap-2">
-                              <CardTitle className="text-lg leading-7 text-foreground">{group.title}</CardTitle>
-                              <Badge className={cn('rounded-md border px-2.5 py-1 text-xs font-medium', group.tone.badge)}>
-                                {group.sectors.length} قطاع
-                              </Badge>
-                            </div>
-                            <CardDescription className="text-sm leading-7 text-muted-foreground">
-                              {group.description}
-                            </CardDescription>
-                          </div>
-
-                          <div className={cn('flex size-11 shrink-0 items-center justify-center rounded-xl border', group.tone.icon)}>
-                            <SafeIcon iconName={group.iconName} className="size-5" />
-                          </div>
-                        </div>
-
-                        <div className="flex flex-wrap gap-2">
-                          {group.gatekeepers.map(gatekeeper => (
-                            <Badge key={gatekeeper} variant="outline" className={cn('rounded-md border bg-background/80 text-xs', group.tone.badge)}>
-                              {gatekeeper}
-                            </Badge>
-                          ))}
-                        </div>
-                      </CardHeader>
-
-                      <CardContent className="space-y-3">
-                        <div className="space-y-2">
-                          {visibleSectors.map(sector => {
-                            const isActive = selectedSectorId === sector.id;
-
-                            return (
-                              <button
-                                key={sector.id}
-                                type="button"
-                                onClick={() => openSector({ id: sector.id, label: sector.label, groupTitle: group.title })}
-                                className={cn(
-                                  'flex w-full items-start justify-between gap-3 rounded-xl border px-4 py-3 text-right transition-colors',
-                                  group.tone.item,
-                                  isActive && group.tone.itemActive,
-                                )}
-                              >
-                                <div className="space-y-1">
-                                  <div className="flex flex-wrap items-center gap-2">
-                                    <span className="text-sm font-semibold leading-6 text-foreground">{sector.label}</span>
-                                    {sector.isNew ? (
-                                      <Badge variant="outline" className="rounded-md border bg-background text-[11px] font-medium">
-                                        جديد
-                                      </Badge>
-                                    ) : null}
-                                    <Badge variant="outline" className="rounded-md border bg-background text-[11px] font-medium text-muted-foreground">
-                                      {sector.exists ? 'جاهز للعرض' : 'قيد الإعداد'}
-                                    </Badge>
-                                  </div>
-                                  <p className="text-xs leading-6 text-muted-foreground">{group.title}</p>
-                                </div>
-                                <LucideIcons.ChevronLeft className="mt-1 size-4 shrink-0 text-muted-foreground" />
-                              </button>
-                            );
-                          })}
-                        </div>
-
-                        {!hasSearch && hiddenCount > 0 ? (
-                          <Button
-                            type="button"
-                            variant="ghost"
-                            size="sm"
-                            className="w-full justify-center rounded-xl border border-dashed bg-background text-sm font-medium hover:bg-accent"
-                            onClick={() =>
-                              setExpandedGroups(current => ({
-                                ...current,
-                                [group.title]: !expanded,
-                              }))
-                            }
+            {tableRecords.length > 0 ? (
+              <Card className="shadow-sm overflow-hidden border-border">
+                <div className="overflow-x-auto">
+                  <Table dir="rtl">
+                    <TableHeader>
+                      <TableRow className="bg-muted/50 hover:bg-muted/50">
+                        <TableHead className="text-right font-semibold h-10">اسم القطاع</TableHead>
+                        <TableHead className="text-right font-semibold h-10">المجموعة الرئيسية</TableHead>
+                        <TableHead className="text-right font-semibold h-10">أبرز اللاعبين</TableHead>
+                        <TableHead className="text-right font-semibold h-10">الحالة</TableHead>
+                        <TableHead className="w-[80px] text-left font-semibold h-10">عرض</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {tableRecords.map(record => {
+                        const isActive = selectedSectorId === record.id;
+                        return (
+                          <TableRow 
+                            key={record.id} 
+                            data-state={isActive ? "selected" : undefined}
+                            className="cursor-pointer group hover:bg-muted/30 transition-colors"
+                            onClick={() => openSector({ id: record.id, label: record.label, groupTitle: record.groupTitle })}
                           >
-                            {expanded ? 'عرض أقل' : `عرض المزيد (${hiddenCount})`}
-                          </Button>
-                        ) : null}
-                      </CardContent>
-                    </Card>
-                  );
-                })}
-              </div>
+                            <TableCell className="font-medium text-[13px] sm:text-sm py-3">
+                              {record.label}
+                            </TableCell>
+                            <TableCell className="py-3">
+                              <div className="flex items-center gap-2">
+                                <div className={cn('flex size-6 shrink-0 items-center justify-center rounded-md border', record.tone.icon)}>
+                                  <SafeIcon iconName={record.groupIcon} className="size-3" />
+                                </div>
+                                <span className="text-[13px] text-muted-foreground">{record.groupTitle}</span>
+                              </div>
+                            </TableCell>
+                            <TableCell className="py-3">
+                              <div className="flex flex-wrap gap-1">
+                                {record.gatekeepers.slice(0, 2).map((gk, i) => (
+                                  <Badge key={i} variant="secondary" className="text-[10px] px-1.5 py-0 font-normal bg-muted/60">
+                                    {gk}
+                                  </Badge>
+                                ))}
+                                {record.gatekeepers.length > 2 && (
+                                  <span className="text-[10px] text-muted-foreground self-center">+{record.gatekeepers.length - 2}</span>
+                                )}
+                              </div>
+                            </TableCell>
+                            <TableCell className="py-3">
+                              <div className="flex items-center gap-1.5">
+                                {record.isNew ? (
+                                  <Badge variant="outline" className="text-[10px] px-1.5 py-0 font-medium bg-primary/5 text-primary border-primary/20 shadow-none">
+                                    جديد
+                                  </Badge>
+                                ) : null}
+                                <Badge variant="outline" className="text-[10px] px-1.5 py-0 font-normal text-muted-foreground">
+                                  {record.exists ? 'جاهز' : 'قيد الإعداد'}
+                                </Badge>
+                              </div>
+                            </TableCell>
+                            <TableCell className="text-left py-3">
+                              <Button 
+                                variant="ghost" 
+                                size="icon-sm" 
+                                className="h-7 w-7 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity rounded-full bg-background border shadow-sm"
+                              >
+                                <LucideIcons.ChevronLeft className="size-3" />
+                              </Button>
+                            </TableCell>
+                          </TableRow>
+                        );
+                      })}
+                    </TableBody>
+                  </Table>
+                </div>
+              </Card>
             ) : (
               <Card className="border-dashed shadow-sm">
                 <CardContent className="flex min-h-[320px] flex-col items-center justify-center gap-4 p-8 text-center">

@@ -3,6 +3,8 @@ import {
   Activity,
   Bookmark,
   ChevronDown,
+  ChevronLeft,
+  ChevronRight,
   Compass,
   CreditCard,
   Crown,
@@ -46,6 +48,7 @@ import {
   SidebarMenuSubItem,
   SidebarRail,
   SidebarSeparator,
+  useSidebar,
 } from '../ui/sidebar';
 
 const MARKET_DISCOVERY_DASHBOARDS = [
@@ -224,7 +227,7 @@ function SidebarLink({
         asChild
         isActive={isActive}
         tooltip={item.label}
-        className="h-8 justify-start gap-2 px-2 text-right text-[13px] leading-none"
+        className="h-auto py-1.5 min-h-8 justify-start gap-2 px-2 text-right text-[13px] leading-relaxed"
       >
         <a
           id={item.id}
@@ -232,7 +235,7 @@ function SidebarLink({
           onClick={(event) => goToTab(event, item.tab, setActiveTab)}
         >
           <Icon />
-          <span className="min-w-0 flex-1 truncate">{item.label}</span>
+          <span className="min-w-0 flex-1">{item.label}</span>
           {item.badge ? (
             <span className="ms-auto flex h-5 min-w-5 shrink-0 items-center justify-center rounded-md bg-sidebar-accent px-1.5 text-[11px] font-medium tabular-nums text-sidebar-foreground group-data-[collapsible=icon]:hidden">
               {item.badge}
@@ -246,28 +249,52 @@ function SidebarLink({
 
 function SidebarSection({
   title,
+  icon: Icon,
   items,
   activeTab,
   setActiveTab,
 }: {
   title: string;
+  icon?: React.ElementType;
   items: NavItemConfig[];
   activeTab: string;
   setActiveTab?: (tab: string) => void;
 }) {
   return (
     <SidebarGroup>
-      <SidebarGroupLabel className="justify-start text-right">{title}</SidebarGroupLabel>
+      <SidebarGroupLabel className="bg-transparent font-semibold text-sidebar-foreground/70">
+        {title}
+      </SidebarGroupLabel>
       <SidebarGroupContent>
         <SidebarMenu>
-          {items.map((item) => (
-            <SidebarLink
-              key={`${title}-${item.tab}-${item.label}`}
-              item={item}
-              activeTab={activeTab}
-              setActiveTab={setActiveTab}
-            />
-          ))}
+          {items.map((item) => {
+            const SubIcon = item.icon;
+            const isActive = isItemActive(item, activeTab);
+            return (
+              <SidebarMenuItem key={`${title}-${item.tab}-${item.label}`}>
+                <SidebarMenuButton 
+                  asChild 
+                  isActive={isActive} 
+                  tooltip={item.label}
+                  className="h-auto py-1.5 min-h-8 justify-start gap-2 px-2 text-right text-[13px] leading-relaxed"
+                >
+                  <a
+                    id={item.id}
+                    href={getTabPath(item.tab)}
+                    onClick={(event) => goToTab(event, item.tab, setActiveTab)}
+                  >
+                    <SubIcon />
+                    <span className="min-w-0 flex-1">{item.label}</span>
+                    {item.badge ? (
+                      <span className="ms-auto flex h-5 min-w-5 shrink-0 items-center justify-center rounded-md bg-sidebar-accent px-1.5 text-[11px] font-medium tabular-nums text-sidebar-foreground group-data-[collapsible=icon]:hidden">
+                        {item.badge}
+                      </span>
+                    ) : null}
+                  </a>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            );
+          })}
         </SidebarMenu>
       </SidebarGroupContent>
     </SidebarGroup>
@@ -281,57 +308,35 @@ function AccountSection({
   activeTab: string;
   setActiveTab?: (tab: string) => void;
 }) {
-  const isAccountActive = ACCOUNT_ITEMS.some((item) => isItemActive(item, activeTab));
-  const [open, setOpen] = React.useState(isAccountActive);
-
-  React.useEffect(() => {
-    if (isAccountActive) {
-      setOpen(true);
-    }
-  }, [isAccountActive]);
-
   return (
     <SidebarGroup>
-      <SidebarGroupLabel className="justify-start text-right">إدارة المستخدم</SidebarGroupLabel>
+      <SidebarGroupLabel className="bg-transparent font-semibold text-sidebar-foreground/70">إدارة المستخدم</SidebarGroupLabel>
       <SidebarGroupContent>
         <SidebarMenu>
-          <Collapsible open={open} onOpenChange={setOpen} asChild>
-            <SidebarMenuItem className="group/collapsible">
-              <CollapsibleTrigger asChild>
-                <SidebarMenuButton
-                  isActive={isAccountActive}
-                  className="h-8 justify-start gap-2 px-2 text-right text-[13px] leading-none"
-                >
-                  <Settings />
-                  <span>صفحات المستخدم</span>
-                  <ChevronDown className="me-auto size-4 transition-transform group-data-[state=open]/collapsible:rotate-180" />
-                </SidebarMenuButton>
-              </CollapsibleTrigger>
-              <CollapsibleContent>
-                <SidebarMenuSub>
-                  {ACCOUNT_ITEMS.map((item) => {
-                    const Icon = item.icon;
-                    const isActive = isItemActive(item, activeTab);
+          {ACCOUNT_ITEMS.map((item) => {
+            const Icon = item.icon;
+            const isActive = isItemActive(item, activeTab);
 
-                    return (
-                      <SidebarMenuSubItem key={`account-${item.tab}`}>
-                        <SidebarMenuSubButton asChild isActive={isActive} className="justify-start text-right">
-                          <a
-                            id={item.id}
-                            href={getTabPath(item.tab)}
-                            onClick={(event) => goToTab(event, item.tab, setActiveTab)}
-                          >
-                            <Icon />
-                            <span>{item.label}</span>
-                          </a>
-                        </SidebarMenuSubButton>
-                      </SidebarMenuSubItem>
-                    );
-                  })}
-                </SidebarMenuSub>
-              </CollapsibleContent>
-            </SidebarMenuItem>
-          </Collapsible>
+            return (
+              <SidebarMenuItem key={`account-${item.tab}`}>
+                <SidebarMenuButton 
+                  asChild 
+                  isActive={isActive} 
+                  tooltip={item.label}
+                  className="h-auto py-1.5 min-h-8 justify-start gap-2 px-2 text-right text-[13px] leading-relaxed"
+                >
+                  <a
+                    id={item.id}
+                    href={getTabPath(item.tab)}
+                    onClick={(event) => goToTab(event, item.tab, setActiveTab)}
+                  >
+                    <Icon />
+                    <span className="min-w-0 flex-1">{item.label}</span>
+                  </a>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            );
+          })}
         </SidebarMenu>
       </SidebarGroupContent>
     </SidebarGroup>
@@ -340,10 +345,11 @@ function AccountSection({
 
 export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setActiveTab }) => {
   const isAdminMode = ADMIN_TABS.includes(activeTab);
+  const { state, toggleSidebar } = useSidebar();
 
   return (
     <UiSidebar side="right" dir="rtl" variant="sidebar" collapsible="icon">
-      <SidebarHeader className="hidden">
+      <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton
@@ -359,7 +365,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
                   {isAdminMode ? 'لوحة الإدارة' : 'خطة'}
                 </span>
                 <span className="truncate text-xs text-muted-foreground">
-                  {isAdminMode ? 'إدارة المنصة' : 'منصة دراسة الجدوى'}
+                  {isAdminMode ? 'إدارة المنصة' : 'الجيل الجديد من دراسات الجدوى'}
                 </span>
               </span>
             </SidebarMenuButton>
@@ -367,7 +373,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
         </SidebarMenu>
       </SidebarHeader>
 
-      <SidebarSeparator className="hidden" />
+      <SidebarSeparator />
 
       <SidebarContent>
         {isAdminMode ? (
@@ -399,17 +405,13 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
             </SidebarMenuButton>
           </SidebarMenuItem>
           <SidebarMenuItem>
-            <SidebarMenuButton className="h-9 justify-start gap-2 px-2 text-right">
-              <Crown />
-              <span className="truncate">{user.name}</span>
-            </SidebarMenuButton>
-            <SidebarMenuAction
-              aria-label="ملف التعريف"
-              title="ملف التعريف"
-              onClick={() => setActiveTab?.('profile')}
+            <SidebarMenuButton 
+              className="h-9 justify-center cursor-pointer"
+              onClick={toggleSidebar}
+              title={state === "collapsed" ? "توسيع القائمة" : "طي القائمة"}
             >
-              <Settings />
-            </SidebarMenuAction>
+              {state === "collapsed" ? <ChevronLeft className="size-4" /> : <ChevronRight className="size-4" />}
+            </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarFooter>

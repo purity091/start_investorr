@@ -2,16 +2,15 @@ import React, { useEffect, useState } from 'react';
 import {
   CheckCircle2,
   Clock,
-  FileDown,
   Heart,
   LayoutGrid,
   Layers,
   Lightbulb,
-  MoreHorizontal,
+  Pencil,
   Rocket,
   Share2,
   Sparkles,
-  Wand2,
+  Trash2,
   Zap,
 } from 'lucide-react';
 
@@ -19,14 +18,6 @@ import SmartBeginnerPro from '../../../features/easy-mode/SmartBeginnerPro';
 import { Badge } from '../../ui/Badge';
 import { Button } from '../../ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../ui/Card';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '../../ui/dropdown-menu';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../../ui/table';
 import { IdeaCreation, CreationMode } from './IdeaCreation';
 
@@ -395,7 +386,32 @@ function ExplanationCard({ title, items }: { title: string; items: string[] }) {
 
 function ModeProjectsSection({ mode }: { mode: IntroMode }) {
   const intro = TOOL_INTROS[mode];
-  const projects = SECTION_PROJECTS[mode];
+  const [projectsList, setProjectsList] = useState<SectionProject[]>([]);
+
+  useEffect(() => {
+    setProjectsList(SECTION_PROJECTS[mode]);
+  }, [mode]);
+
+  const handleDelete = (id: string, name: string) => {
+    if (window.confirm(`هل أنت متأكد من رغبتك في حذف مشروع "${name}"؟`)) {
+      setProjectsList((prev) => prev.filter((p) => p.id !== id));
+      SECTION_PROJECTS[mode] = SECTION_PROJECTS[mode].filter((p) => p.id !== id);
+    }
+  };
+
+  const handleShare = (name: string) => {
+    if (navigator.share) {
+      navigator.share({
+        title: name,
+        text: `مشروع: ${name}`,
+        url: window.location.href,
+      }).catch(console.error);
+    } else {
+      navigator.clipboard.writeText(`${window.location.href}?project=${encodeURIComponent(name)}`);
+      alert(`تم نسخ رابط المشاركة لمشروع "${name}" إلى الحافظة!`);
+    }
+  };
+
   const Icon = intro.icon;
 
   return (
@@ -412,34 +428,65 @@ function ModeProjectsSection({ mode }: { mode: IntroMode }) {
             <TableHeader>
               <TableRow>
                 <TableHead className="min-w-[260px]">المشروع</TableHead>
-                <TableHead className="w-[64px]">إجراءات</TableHead>
-                <TableHead className="min-w-[150px]">النموذج</TableHead>
-                <TableHead className="min-w-[170px]">التقدم</TableHead>
+                <TableHead className="w-[125px]">إجراءات</TableHead>
+                <TableHead className="w-[100px]">التقدم</TableHead>
                 <TableHead className="min-w-[130px]">الحالة</TableHead>
                 <TableHead className="min-w-[130px]">آخر تعديل</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              {projects.map((project) => (
-                <ProjectRow key={project.id} project={project} label={intro.projectShortLabel} icon={Icon} />
+              {projectsList.map((project) => (
+                <ProjectRow 
+                  key={project.id} 
+                  project={project} 
+                  onDelete={handleDelete}
+                  onShare={handleShare}
+                />
               ))}
             </TableBody>
           </Table>
         </div>
 
         <div className="grid gap-3 lg:hidden">
-          {projects.map((project) => (
+          {projectsList.map((project) => (
             <Card key={project.id} className="p-4 shadow-none">
               <div className="flex items-start justify-between gap-3">
                 <ProjectStatusBadge status={project.status} />
-                <ProjectActions />
+                <div className="flex items-center gap-1">
+                  <Button
+                    variant="ghost"
+                    size="icon-sm"
+                    onClick={() => {
+                      alert(`جاري فتح المشروع "${project.name}"...`);
+                    }}
+                    title="تعديل"
+                    className="text-muted-foreground hover:text-primary"
+                  >
+                    <Pencil className="size-4" />
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="icon-sm"
+                    onClick={() => handleShare(project.name)}
+                    title="مشاركة"
+                    className="text-muted-foreground hover:text-primary"
+                  >
+                    <Share2 className="size-4" />
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="icon-sm"
+                    onClick={() => handleDelete(project.id, project.name)}
+                    title="حذف"
+                    className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+                  >
+                    <Trash2 className="size-4" />
+                  </Button>
+                </div>
               </div>
               <div className="mt-4 text-right">
                 <h3 className="truncate text-sm font-medium text-foreground">{project.name}</h3>
                 <p className="mt-1 text-xs text-muted-foreground">{project.sector}</p>
-              </div>
-              <div className="mt-3 flex flex-wrap items-center gap-2">
-                <ModelBadge label={intro.projectShortLabel} icon={Icon} />
               </div>
               <div className="mt-3">
                 <ProgressSummary progress={project.progress} />
@@ -454,12 +501,12 @@ function ModeProjectsSection({ mode }: { mode: IntroMode }) {
 
 function ProjectRow({
   project,
-  label,
-  icon,
+  onDelete,
+  onShare,
 }: {
   project: SectionProject;
-  label: string;
-  icon: React.ElementType;
+  onDelete: (id: string, name: string) => void;
+  onShare: (name: string) => void;
 }) {
   return (
     <TableRow>
@@ -470,10 +517,37 @@ function ProjectRow({
         </div>
       </TableCell>
       <TableCell>
-        <ProjectActions />
-      </TableCell>
-      <TableCell>
-        <ModelBadge label={label} icon={icon} />
+        <div className="flex items-center gap-1">
+          <Button
+            variant="ghost"
+            size="icon-sm"
+            onClick={() => {
+              alert(`جاري فتح المشروع "${project.name}"...`);
+            }}
+            title="تعديل"
+            className="text-muted-foreground hover:text-primary"
+          >
+            <Pencil className="size-4" />
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon-sm"
+            onClick={() => onShare(project.name)}
+            title="مشاركة"
+            className="text-muted-foreground hover:text-primary"
+          >
+            <Share2 className="size-4" />
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon-sm"
+            onClick={() => onDelete(project.id, project.name)}
+            title="حذف"
+            className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+          >
+            <Trash2 className="size-4" />
+          </Button>
+        </div>
       </TableCell>
       <TableCell>
         <ProgressSummary progress={project.progress} />
@@ -514,43 +588,7 @@ function ProjectStatusBadge({ status }: { status: ProjectStatus }) {
 
 function ProgressSummary({ progress }: { progress: number }) {
   return (
-    <div className="min-w-[150px] space-y-2">
-      <div className="flex items-center justify-between gap-3 text-xs">
-        <span className="font-medium tabular-nums text-foreground">{progress}%</span>
-        <span className="text-muted-foreground">الإنجاز</span>
-      </div>
-      <div className="h-1.5 overflow-hidden rounded-full bg-muted">
-        <div className="h-full rounded-full bg-primary" style={{ width: `${progress}%` }} />
-      </div>
-    </div>
-  );
-}
-
-function ProjectActions() {
-  return (
-    <DropdownMenu dir="rtl">
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon-sm" aria-label="إجراءات المشروع">
-          <MoreHorizontal className="size-4" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-44">
-        <DropdownMenuLabel className="text-right">إجراءات المشروع</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          <Wand2 className="size-4" />
-          فتح المشروع
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Share2 className="size-4" />
-          مشاركة
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <FileDown className="size-4" />
-          تحميل
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <span className="text-sm font-medium tabular-nums text-foreground">{progress}%</span>
   );
 }
 

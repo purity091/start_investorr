@@ -3,8 +3,7 @@ import {
   Activity,
   CheckCircle2,
   Clock,
-  FileDown,
-  MoreHorizontal,
+  Pencil,
   Plus,
   RefreshCcw,
   Rocket,
@@ -12,6 +11,7 @@ import {
   Share2,
   Sparkles,
   Star,
+  Trash2,
   Workflow,
   Zap,
 } from 'lucide-react';
@@ -19,14 +19,6 @@ import {
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
 import { Input } from '@/components/ui/Input';
 import { EmptyState, NoResultsState } from '@/components/ui/PageStates';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -201,6 +193,7 @@ interface MyProjectsProps {
 }
 
 export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
+  const [projectsList, setProjectsList] = useState<Project[]>(MOCK_PROJECTS);
   const [searchTerm, setSearchTerm] = useState('');
   const [typeFilter, setTypeFilter] = useState<TypeFilter>('all');
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('all');
@@ -208,7 +201,7 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
   const filteredProjects = useMemo(() => {
     const query = searchTerm.trim().toLowerCase();
 
-    return MOCK_PROJECTS.filter((project) => {
+    return projectsList.filter((project) => {
       const typeLabel = PROJECT_TYPE_META[project.type].label.toLowerCase();
       const matchesSearch =
         !query ||
@@ -220,7 +213,26 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
 
       return matchesSearch && matchesType && matchesStatus;
     });
-  }, [searchTerm, typeFilter, statusFilter]);
+  }, [searchTerm, typeFilter, statusFilter, projectsList]);
+
+  const handleDelete = (id: string, name: string) => {
+    if (window.confirm(`هل أنت متأكد من رغبتك في حذف مشروع "${name}"؟`)) {
+      setProjectsList((prev) => prev.filter((p) => p.id !== id));
+    }
+  };
+
+  const handleShare = (name: string) => {
+    if (navigator.share) {
+      navigator.share({
+        title: name,
+        text: `مشروع: ${name}`,
+        url: window.location.href,
+      }).catch(console.error);
+    } else {
+      navigator.clipboard.writeText(`${window.location.href}?project=${encodeURIComponent(name)}`);
+      alert(`تم نسخ رابط المشاركة لمشروع "${name}" إلى الحافظة!`);
+    }
+  };
 
   const hasActiveFilters = searchTerm.trim().length > 0 || typeFilter !== 'all' || statusFilter !== 'all';
 
@@ -230,7 +242,7 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
     setStatusFilter('all');
   };
 
-  if (MOCK_PROJECTS.length === 0) {
+  if (projectsList.length === 0) {
     return (
       <main dir="rtl" className="min-h-screen bg-background px-4 py-5">
         <EmptyState
@@ -309,8 +321,18 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
               <NoResultsState description="لا يوجد مشروع يطابق البحث أو الفلاتر الحالية." onReset={resetFilters} />
             ) : (
               <>
-                <ProjectsTable projects={filteredProjects} setActiveTab={setActiveTab} />
-                <ProjectsMobileList projects={filteredProjects} setActiveTab={setActiveTab} />
+                <ProjectsTable 
+                  projects={filteredProjects} 
+                  setActiveTab={setActiveTab} 
+                  onDelete={handleDelete}
+                  onShare={handleShare}
+                />
+                <ProjectsMobileList 
+                  projects={filteredProjects} 
+                  setActiveTab={setActiveTab} 
+                  onDelete={handleDelete}
+                  onShare={handleShare}
+                />
               </>
             )}
           </CardContent>
@@ -323,9 +345,13 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
 function ProjectsTable({
   projects,
   setActiveTab,
+  onDelete,
+  onShare,
 }: {
   projects: Project[];
   setActiveTab?: (tab: string) => void;
+  onDelete: (id: string, name: string) => void;
+  onShare: (name: string) => void;
 }) {
   return (
     <div className="hidden overflow-hidden rounded-md lg:block">
@@ -333,7 +359,7 @@ function ProjectsTable({
         <TableHeader>
           <TableRow>
             <TableHead className="min-w-[280px]">المشروع</TableHead>
-            <TableHead className="w-[64px]">إجراءات</TableHead>
+            <TableHead className="w-[125px]">إجراءات</TableHead>
             <TableHead className="min-w-[150px]">النموذج</TableHead>
             <TableHead className="min-w-[180px]">التقدم</TableHead>
             <TableHead className="min-w-[110px]">التقييم</TableHead>
@@ -343,7 +369,13 @@ function ProjectsTable({
         </TableHeader>
         <TableBody>
           {projects.map((project) => (
-            <ProjectTableRow key={project.id} project={project} setActiveTab={setActiveTab} />
+            <ProjectTableRow 
+              key={project.id} 
+              project={project} 
+              setActiveTab={setActiveTab} 
+              onDelete={onDelete}
+              onShare={onShare}
+            />
           ))}
         </TableBody>
       </Table>
@@ -354,9 +386,13 @@ function ProjectsTable({
 function ProjectTableRow({
   project,
   setActiveTab,
+  onDelete,
+  onShare,
 }: {
   project: Project;
   setActiveTab?: (tab: string) => void;
+  onDelete: (id: string, name: string) => void;
+  onShare: (name: string) => void;
 }) {
   return (
     <TableRow>
@@ -379,7 +415,35 @@ function ProjectTableRow({
       </TableCell>
 
       <TableCell>
-        <ProjectActions setActiveTab={setActiveTab} />
+        <div className="flex items-center gap-1">
+          <Button
+            variant="ghost"
+            size="icon-sm"
+            onClick={() => setActiveTab?.('editor')}
+            title="تعديل"
+            className="text-muted-foreground hover:text-primary"
+          >
+            <Pencil className="size-4" />
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon-sm"
+            onClick={() => onShare(project.name)}
+            title="مشاركة"
+            className="text-muted-foreground hover:text-primary"
+          >
+            <Share2 className="size-4" />
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon-sm"
+            onClick={() => onDelete(project.id, project.name)}
+            title="حذف"
+            className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+          >
+            <Trash2 className="size-4" />
+          </Button>
+        </div>
       </TableCell>
 
       <TableCell>
@@ -413,9 +477,13 @@ function ProjectTableRow({
 function ProjectsMobileList({
   projects,
   setActiveTab,
+  onDelete,
+  onShare,
 }: {
   projects: Project[];
   setActiveTab?: (tab: string) => void;
+  onDelete: (id: string, name: string) => void;
+  onShare: (name: string) => void;
 }) {
   return (
     <div className="grid gap-3 lg:hidden">
@@ -423,7 +491,35 @@ function ProjectsMobileList({
         <Card key={project.id} className="p-4 shadow-none">
           <div className="flex items-start justify-between gap-3">
             <ProjectStatusBadge status={project.status} />
-            <ProjectActions setActiveTab={setActiveTab} />
+            <div className="flex items-center gap-1">
+              <Button
+                variant="ghost"
+                size="icon-sm"
+                onClick={() => setActiveTab?.('editor')}
+                title="تعديل"
+                className="text-muted-foreground hover:text-primary"
+              >
+                <Pencil className="size-4" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon-sm"
+                onClick={() => onShare(project.name)}
+                title="مشاركة"
+                className="text-muted-foreground hover:text-primary"
+              >
+                <Share2 className="size-4" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon-sm"
+                onClick={() => onDelete(project.id, project.name)}
+                title="حذف"
+                className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+              >
+                <Trash2 className="size-4" />
+              </Button>
+            </div>
           </div>
 
           <div className="mt-4 flex items-start gap-3">
@@ -496,32 +592,7 @@ function ProgressSummary({ project }: { project: Project }) {
   );
 }
 
-function ProjectActions({ setActiveTab }: { setActiveTab?: (tab: string) => void }) {
-  return (
-    <DropdownMenu dir="rtl">
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon-sm" aria-label="إجراءات المشروع">
-          <MoreHorizontal className="size-4" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-44">
-        <DropdownMenuLabel className="text-right">إجراءات المشروع</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={() => setActiveTab?.('editor')}>
-          فتح المشروع
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Share2 className="size-4" />
-          مشاركة
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <FileDown className="size-4" />
-          تحميل
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  );
-}
+// Removed unused ProjectActions dropdown component
 
 function getAverageProgress(project: Project) {
   return Math.round((project.progress.market + project.progress.product + project.progress.financial) / 3);

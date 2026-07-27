@@ -24,8 +24,11 @@ export const BottomNavBar: React.FC<BottomNavBarProps> = ({ activeTab, setActive
   ];
 
   return (
-    <div id="tour-mobile-bottom-nav" className="lg:hidden fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-[100] w-[95%] sm:w-[92%] max-w-[400px] sm:max-w-[440px] pb-[env(safe-area-inset-bottom)]">
-      <div className="rounded-[2rem] border border-border bg-background p-1.5 sm:p-2 shadow-sm ring-1 ring-border/60 flex items-center justify-between">
+    <div 
+      id="tour-mobile-bottom-nav" 
+      className="lg:hidden fixed bottom-0 left-0 right-0 z-[100] w-full border-t border-border/40 bg-background/85 backdrop-blur-xl pb-[max(env(safe-area-inset-bottom),0.5rem)]"
+    >
+      <div className="flex h-16 items-center justify-around px-2 max-w-md mx-auto relative">
         {navItems.map((item) => {
           const isActive = activeTab === item.id;
 
@@ -43,10 +46,10 @@ export const BottomNavBar: React.FC<BottomNavBarProps> = ({ activeTab, setActive
                   event.preventDefault();
                   handleClick();
                 }}
-                className="relative -top-4 sm:-top-5 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full border border-border bg-primary text-primary-foreground shadow-sm transition-colors touch-manipulation hover:bg-primary/95"
+                className="relative -top-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg ring-4 ring-background transition-transform active:scale-95 touch-manipulation"
                 aria-label={item.label}
               >
-                <item.icon size={22} className="sm:w-6 sm:h-6" />
+                <item.icon size={26} strokeWidth={2.5} />
               </a>
             );
           }
@@ -60,15 +63,23 @@ export const BottomNavBar: React.FC<BottomNavBarProps> = ({ activeTab, setActive
                 event.preventDefault();
                 handleClick();
               }}
-              className={`flex min-h-[48px] flex-1 flex-col items-center justify-center gap-0.5 rounded-xl px-1 py-1.5 sm:gap-1 sm:px-2 sm:py-2 transition-colors touch-manipulation ${isActive ? 'bg-accent text-accent-foreground' : 'text-muted-foreground hover:bg-accent/60 hover:text-foreground'}`}
+              className="flex flex-1 flex-col items-center justify-center gap-1 min-h-[48px] touch-manipulation transition-colors"
               aria-label={item.label}
             >
-              <div className={`rounded-lg p-1.5 sm:p-2 ${isActive ? 'bg-background ring-1 ring-border' : ''}`}>
-                <item.icon size={18} strokeWidth={2} className="w-5 h-5 sm:w-5 sm:h-5" />
+              <div 
+                className={`flex flex-col items-center justify-center transition-all duration-200 ${
+                  isActive ? 'text-primary scale-110' : 'text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                <item.icon 
+                  size={22} 
+                  strokeWidth={isActive ? 2.5 : 2} 
+                  className="mb-1"
+                />
+                <span className="text-[10px] font-medium tracking-tight">
+                  {item.label}
+                </span>
               </div>
-              <span className={`text-[8px] sm:text-[9px] font-semibold tracking-tight ${isActive ? 'text-foreground' : 'text-muted-foreground'}`}>
-                {item.label}
-              </span>
             </a>
           );
         })}

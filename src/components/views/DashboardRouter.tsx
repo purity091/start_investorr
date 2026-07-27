@@ -259,6 +259,15 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
   setSelectedCompanyId
 }) => {
   const { updateProfile, updateBrand, setPlanSections } = useProjectWorkspace();
+  
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    const mainContainer = document.querySelector('main');
+    if (mainContainer) {
+      mainContainer.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  }, [activeTab]);
+
   const containerClass = ['home', 'editor', 'strategic-dashboard', 'contact-us', 'market-discovery', 'problem-engine', 'problem-detail', 'saved-market-items', 'hackathon', 'workspace', 'company-deep-dive', 'site-map', 'discovery-center', 'subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-subscription', 'customer-usage', 'customer-activity', 'customer-account', 'customer-support'].includes(activeTab) || activeTab.endsWith('-dashboard') 
     ? 'w-full' 
     : 'app-page-shell-wide py-6 sm:py-8 lg:py-10 pb-20 lg:pb-10';

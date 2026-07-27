@@ -73,11 +73,10 @@ export const Home = ({ setActiveTab }: HomeProps) => {
                 منصة تحويل التردد إلى مشروع واضح
               </Badge>
               <h1 className="mt-4 max-w-4xl text-3xl font-black tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-                ابدأ من الحيرة، واخرج بخطوة عملية لبناء أول مشروع
+                حوّل فكرتك إلى مشروع قابل للتنفيذ
               </h1>
               <p className="mt-4 max-w-3xl text-sm font-medium leading-8 text-muted-foreground sm:text-base">
-                الصفحة الرئيسية يجب أن تقود المستخدم الضائع بهدوء: هل يبدأ بفكرة؟ هل يستكشف السوق؟ أم يبني دراسة جدوى؟
-                كل مسار هنا يفتح أداة واضحة داخل المنصة بدون إغراقه بتفاصيل غير لازمة.
+                ابدأ من أي نقطة: فكرة جديدة، أو فرصة في السوق، أو مشروع قائم. تساعدك منصة خطة على تحليل السوق، وبناء نموذج العمل، وإعداد دراسة جدوى احترافية خطوة بخطوة، باستخدام أدوات ذكية تقودك إلى قرار استثماري واثق.
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 <Button size="lg" onClick={() => setActiveTab('new-plan-family')}>

@@ -120,23 +120,18 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur" dir="rtl">
-      <div className="flex flex-col gap-3 px-4 py-3 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between">
-          <div className="flex min-w-0 items-start gap-3">
-            <SidebarTrigger className="mt-0.5 h-9 w-9 rounded-lg border border-border bg-background text-foreground hover:bg-muted" />
-            <Separator orientation="vertical" className="hidden h-9 sm:block" />
+      <div className="flex items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
+        <div className="flex min-w-0 items-center gap-2 flex-1">
+          <SidebarTrigger className="lg:hidden h-8 w-8 text-foreground hover:bg-muted [&_svg]:size-5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-5"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </SidebarTrigger>
+          <h1 className="truncate text-sm font-semibold text-foreground sm:text-base">{title}</h1>
+          <Badge variant={contextBadge.variant} className="rounded-md hidden sm:inline-flex">
+            {contextBadge.label}
+          </Badge>
+        </div>
 
-            <div className="min-w-0 flex-1 text-right">
-              <div className="flex flex-wrap items-center justify-start gap-2">
-                <h1 className="truncate text-sm font-semibold text-foreground sm:text-base">{title}</h1>
-                <Badge variant={contextBadge.variant} className="rounded-md">
-                  {contextBadge.label}
-                </Badge>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-between gap-2 sm:justify-start">
+        <div className="flex items-center justify-end gap-2 shrink-0">
             <Button
               id="tour-site-tour-trigger-header"
               type="button"
@@ -231,7 +226,6 @@ export const Header: React.FC<HeaderProps> = ({
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-        </div>
       </div>
     </header>
   );
