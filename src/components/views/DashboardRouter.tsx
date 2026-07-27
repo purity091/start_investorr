@@ -4,7 +4,6 @@ import { Home } from './Home';
 import { DiscoveryCenter } from '../features/discovery/DiscoveryCenter';
 import { MyProjects } from './MyProjects';
 import { NewPlan } from '../features/business/NewPlan';
-import { PlanComparison } from '../features/business/PlanComparison';
 import { UnicornBenchmarking } from '../features/discovery/UnicornBenchmarking';
 import { BusinessPlanEditor } from '../features/business/BusinessPlanEditor';
 import { PricingPlans } from './PricingPlans';
@@ -16,7 +15,6 @@ import { MarketInsightPlaceholder } from './MarketInsightPlaceholder';
 import { Notifications } from '../features/social/Notifications';
 import { Profile } from './Profile';
 import { MobileSiteMap } from './MobileSiteMap';
-import { CustomerPortalSection } from './CustomerPortal';
 import { useProjectWorkspace } from '../../features/workspace/ProjectWorkspaceContext';
 
 import { User, PlanSection } from '../../types';
@@ -40,7 +38,6 @@ const UsersManagement = lazyNamedPage(() => import('./UsersManagement'), 'UsersM
 const AdminProjectsManagement = lazyNamedPage(() => import('../sectors/Admin/AdminProjectsManagement'), 'AdminProjectsManagement');
 const AdminAnalyticsDashboard = lazyNamedPage(() => import('../sectors/Admin/AdminAnalyticsDashboard'), 'AdminAnalyticsDashboard');
 const AdminSecurityDashboard = lazyNamedPage(() => import('../sectors/Admin/AdminSecurityDashboard'), 'AdminSecurityDashboard');
-const CustomerPortal = lazyNamedPage(() => import('./CustomerPortal'), 'CustomerPortal');
 const HackathonView = lazyPage(() => import('../features/hackathon/HackathonView'));
 const ResultPage = lazyPage(() => import('../../features/easy-mode/ResultPage'));
 const BusinessModelCanvas = lazyNamedPage(() => import('../features/business/BusinessModelCanvas'), 'BusinessModelCanvas');
@@ -225,10 +222,10 @@ const SocialCommerceDashboard = lazyPage(() => import('../sectors/Ecommerce/Soci
 
 const RouteLoadingState: React.FC = () => (
   <div className="app-page-shell-wide py-10">
-    <div className="surface-card flex min-h-[280px] items-center justify-center rounded-[2rem] border border-slate-200/70">
+    <div className="flex min-h-[280px] items-center justify-center rounded-xl bg-card shadow-sm ring-1 ring-border/60">
       <div className="text-center">
-        <div className="mx-auto mb-4 h-11 w-11 animate-spin rounded-full border-4 border-slate-200 border-t-slate-900" />
-        <p className="text-sm font-semibold text-slate-600">جاري تحميل الصفحة...</p>
+        <div className="mx-auto mb-4 h-10 w-10 animate-spin rounded-full border-4 border-muted border-t-foreground" />
+        <p className="text-sm font-medium text-muted-foreground">جاري تحميل الصفحة...</p>
       </div>
     </div>
   </div>
@@ -266,17 +263,6 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
     ? 'w-full' 
     : 'app-page-shell-wide py-6 sm:py-8 lg:py-10 pb-20 lg:pb-10';
 
-  const customerSectionMap: Record<string, CustomerPortalSection> = {
-    'subscriber-hub': 'dashboard',
-    'customer-dashboard': 'dashboard',
-    'customer-projects': 'projects',
-    'customer-subscription': 'subscription',
-    'customer-usage': 'usage',
-    'customer-activity': 'activity',
-    'customer-account': 'account',
-    'customer-support': 'support',
-  };
-
   const handleBuildPlan = (projectName?: string) => {
     if (projectName) {
       updateProfile({ name: projectName });
@@ -303,16 +289,19 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
       case 'admin-dashboard':
         return <Home setActiveTab={setActiveTab} onCompanyClick={handleCompanyClick} />;
       case 'profile':
-        return <Profile user={user} />;
+      case 'settings':
+      case 'customer-account':
+        return <Settings user={user} />;
       case 'subscriber-hub':
       case 'customer-dashboard':
       case 'customer-projects':
+      case 'customer-activity':
+      case 'customer-support':
+        return <Profile user={user} setActiveTab={setActiveTab} />;
       case 'customer-subscription':
       case 'customer-usage':
-      case 'customer-activity':
-      case 'customer-account':
-      case 'customer-support':
-        return <CustomerPortal user={user} setActiveTab={setActiveTab} section={customerSectionMap[activeTab]} />;
+      case 'pricing':
+        return <PricingPlans setActiveTab={setActiveTab} />;
       case 'workspace':
         return <UnifiedWorkspace setActiveTab={setActiveTab} />;
       case 'users-management':
@@ -346,7 +335,7 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
               onStart={(id) => id === 'easy' ? setActiveTab('strategic-dashboard') : setActiveTab('editor')}
               onBuildPlan={() => setActiveTab('workspace')}
               setSubTabLabel={typeof setSubTabLabel === 'function' ? setSubTabLabel : (() => {})}
-              subTabLabel="مود الأهل"
+              subTabLabel="النموذج السهل"
             />
           );
         case 'new-plan-pro':
@@ -379,7 +368,7 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
               onStart={(id) => id === 'easy' ? setActiveTab('strategic-dashboard') : setActiveTab('editor')}
               onBuildPlan={() => setActiveTab('workspace')}
               setSubTabLabel={typeof setSubTabLabel === 'function' ? setSubTabLabel : (() => {})}
-              subTabLabel="Business Canvas"
+              subTabLabel="بناء نموذج العمل BMC"
             />
           );
       case 'strategic-dashboard':
@@ -416,14 +405,10 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
             }
           />
         );
-      case 'pricing':
-        return <PricingPlans setActiveTab={setActiveTab} />;
       case 'hackathon':
         return <HackathonView />;
       case 'contact-us':
         return <ContactUs />;
-      case 'settings':
-        return <Settings user={user} />;
       case 'tasks':
         return <Tasks />;
       case 'changelog':

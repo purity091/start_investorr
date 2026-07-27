@@ -1,73 +1,132 @@
-import React from 'react';
-import { ChevronLeft, HelpCircle, BookOpen, MessageCircle, Sparkles, Wrench } from 'lucide-react';
+import React, { useState } from 'react';
+import { ChevronDown, HelpCircle, MessageCircle, ShieldCheck, Sparkles } from 'lucide-react';
+import { Badge } from '@/components/ui/Badge';
+import { Button } from '@/components/ui/Button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { cn } from '@/lib/utils';
 
-export const FAQ: React.FC = () => {
-  const faqData = [
-    { q: "ما هو \"مساعد الإطلاق\"؟", a: "مساعد الإطلاق هو منصة تعتمد على الذكاء الاصطناعي لمساعدتك في تحويل فكرتك إلى مشروع حقيقي، من خلال تحليل السوق، دراسة الجدوى، ووضع خطة تنفيذ واضحة تساعدك على البدء بثقة." },
-    { q: "هل يمكنني استخدام المنصة بدون خبرة مسبقة في الأعمال؟", a: "نعم، تم تصميم المنصة خصيصاً للمبتدئين. كل خطوة مدعومة بتوجيهات مبسطة تساعدك على الفهم واتخاذ القرار، حتى لو لم تكن لديك أي خلفية في ريادة الأعمال." },
-    { q: "ما نوع المشاريع التي يمكن تحليلها؟", a: "يمكنك تحليل معظم أنواع المشاريع مثل المطاعم والكافيهات، التجارة الإلكترونية، الخدمات، والمشاريع التقنية. المنصة تتكيف مع نوع المشروع وتعطيك تحليلاً مخصصاً لكل حالة." },
-    { q: "هل النتائج التي يقدمها الذكاء الاصطناعي دقيقة؟", a: "التحليلات مبنية على نماذج ذكية وبيانات سوقية واقعية، وتهدف لتقريبك من القرار الصحيح بنسبة عالية. لكنها تظل أداة دعم قرار، ويُفضل دائماً دمجها مع التحقق الميداني." },
-    { q: "ماذا سأحصل بعد إدخال بيانات مشروعي؟", a: "ستحصل على تقرير شامل يتضمن: تحليل استراتيجي كامل، توقعات مالية، كشف المخاطر، خطة تنفيذ، وتوصيات واضحة لاتخاذ القرار." },
-    { q: "هل يمكنني تعديل البيانات وإعادة التحليل؟", a: "نعم، يمكنك تعديل أي معلومة وإعادة توليد التحليل في أي وقت، مما يساعدك على اختبار أكثر من سيناريو قبل اتخاذ القرار النهائي." },
-    { q: "هل المنصة تعطي خطوات عملية أم مجرد معلومات؟", a: "المنصة لا تقدم معلومات فقط، بل تعطيك خطوات تنفيذ واضحة، مهام يومية وتوجيهات عملية تساعدك على الانتقال من الفكرة إلى التنفيذ مباشرة." },
-    { q: "هل يمكنني تحميل التقرير أو مشاركته؟", a: "نعم، يمكنك تصدير التقرير بصيغ مختلفة (مثل PDF) ومشاركته مع شركاء أو مستثمرين بسهولة." },
-    { q: "كيف تساعدك المنصة على تقليل المخاطر؟", a: "تقوم المنصة بتحليل مشروعك واكتشاف نقاط الضعف والمخاطر المحتملة مبكراً، ثم تقدم لك توصيات عملية لتقليلها قبل أن تؤثر على نجاح المشروع." },
-    { q: "هل أحتاج لاشتراك مدفوع لاستخدام المنصة؟", a: "تتوفر نسخة مجانية لتجربة المنصة، بالإضافة إلى باقات مدفوعة تقدم ميزات متقدمة وتحليلات أعمق تناسب المستخدمين الجادين في إطلاق مشاريعهم." },
-    { q: "ما هو \"الوضع السهل\" (Easy Mode)؟", a: "هو نظام توجيه ذكي يأخذك خطوة بخطوة عبر واجهة مبسطة لإدخال بياناتك دون الحاجة لخبرة تقنية، حيث يقوم الذكاء الاصطناعي بمعالجة التعقيدات خلف الكواليس لتوليد دراسة متكاملة." },
-    { q: "ما الفرق بين الوضع السهل والوضع الاحترافي؟", a: "الوضع السهل يركز على السرعة والبساطة للمبتدئين، بينما يمنحك الوضع الاحترافي (Advanced Mode) تحكماً كاملاً في التفاصيل المالية الدقيقة والمعايير المتقدمة للتحليل الاستراتيجي." },
-    { q: "كيف تعمل ميزة \"محاكي المالية\" (Financial Simulator)؟", a: "هي أداة تتيح لك اختبار سيناريوهات مختلفة (مثل تغير أسعار البيع أو تكاليف التشغيل) لترى تأثيرها الفوري على أرباحك وتدفقاتك النقدية المستقبلية." },
-    { q: "ما هو \"تحليل المنافسين الذكي\" وكيف يساعدني؟", a: "يقوم النظام بتحليل الشركات الرائدة في قطاعك ليمنحك رؤية واضحة حول نقاط قوتهم وضعفهم، مما يساعدك على ابتكار ميزة تنافسية تضمن لك التفوق في السوق." },
-    { q: "هل التقارير المستخرجة مقبولة لدى الجهات التمويلية؟", a: "نعم، التقارير مصممة لتكون \"جاهزة للمستثمر\"، حيث تشمل كافة البيانات المالية والتحليلات الاستراتيجية التي تطلبها الصناديق الاستثمارية والجهات المانحة للقروض." }
-  ];
+type FAQProps = {
+  embedded?: boolean;
+};
+
+const faqs = [
+  {
+    question: 'ما هي منصة خطة؟',
+    answer:
+      'منصة تساعد المستخدم على الانتقال من فكرة غير واضحة إلى تصور عملي للمشروع عبر أدوات منظمة لبناء دراسة الجدوى، نموذج العمل، تحليل السوق، والهوية البصرية.',
+  },
+  {
+    question: 'هل أحتاج خبرة سابقة في الاستثمار أو ريادة الأعمال؟',
+    answer:
+      'لا. الواجهات مصممة لتقود المستخدم خطوة بخطوة، مع أسئلة واضحة ومخرجات قابلة للتسليم لاحقاً للمبرمج أو المصمم أو المستشار.',
+  },
+  {
+    question: 'ما الفرق بين النموذج السهل والنموذج الاحترافي؟',
+    answer:
+      'النموذج السهل مناسب للبداية السريعة وفهم الفكرة، بينما النموذج الاحترافي يقدم رحلة أعمق لتنظيم دراسة جدوى مشروع بطريقة أكثر تفصيلاً.',
+  },
+  {
+    question: 'هل يمكن تصدير النتائج؟',
+    answer:
+      'الواجهة مجهزة لتوضيح تجربة التصدير والقيمة المتوقعة من التقرير النهائي. الربط البرمجي الكامل للتصدير يمكن تنفيذه لاحقاً حسب متطلبات المنتج.',
+  },
+  {
+    question: 'هل المنصة تبني المشروع بدلاً عني؟',
+    answer:
+      'لا. المنصة تنظم التفكير والقرارات والمعلومات، وتساعد المستخدم على بناء تصور واضح يمكن تطويره لاحقاً إلى مشروع قابل للتنفيذ.',
+  },
+  {
+    question: 'كيف يتم التعامل مع بياناتي؟',
+    answer:
+      'التصميم الحالي يوضح تجربة المستخدم والواجهات فقط. عند بناء المنطق البرمجي يجب تحديد سياسات التخزين، الصلاحيات، والحماية بشكل مستقل.',
+  },
+];
+
+const supportCards = [
+  { title: 'بدء سريع', value: 'مسارات واضحة', icon: Sparkles },
+  { title: 'دعم القرار', value: 'أسئلة عملية', icon: ShieldCheck },
+  { title: 'تواصل مباشر', value: 'قنوات محددة', icon: MessageCircle },
+];
+
+export const FAQ: React.FC<FAQProps> = ({ embedded = false }) => {
+  const [openId, setOpenId] = useState(0);
 
   return (
-    <div className="app-page-shell-wide animate-in fade-in slide-in-from-bottom-2 duration-700 py-8 lg:py-10 font-['IBM_Plex_Sans_Arabic']">
-      {/* Header Section - Restored */}
-      <header className="text-center mb-16 pt-8">
-        <div className="inline-flex items-center gap-2 bg-indigo-50 px-4 py-2 rounded-full mb-6 text-indigo-600 animate-in slide-in-from-top-4 duration-1000 shadow-sm">
-          <BookOpen size={16} className="animate-pulse" />
-          <span className="text-[11px] font-black tracking-widest uppercase">مركز المساعدة</span>
-        </div>
-        <h1 className="text-4xl lg:text-5xl font-black text-slate-900 mb-6 tracking-tight">
-          الأسئلة <span className="text-indigo-600">الشائعة</span>
-        </h1>
-        <p className="text-slate-500 text-[15px] font-medium max-w-2xl mx-auto leading-relaxed">
-          كل ما تحتاجه لإطلاق مشروعك بثقة. ابحث عن إجابات لاستفساراتك أو تواصل مع فريقنا للمساعدة.
-        </p>
-      </header>
-      <div className="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4">
-        {faqData.map((item, idx) => (
-          <details key={idx} className="group surface-card rounded-[2rem] overflow-hidden transition-all duration-300 hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/5 h-fit">
-            <summary className="flex items-center justify-between p-6 cursor-pointer list-none bg-white hover:bg-slate-50/50 transition-colors">
-              <span className="text-[14px] font-black text-slate-800 group-open:text-indigo-600 transition-colors pr-2 leading-relaxed">{item.q}</span>
-              <div className="w-10 h-10 rounded-xl bg-slate-50 text-slate-400 flex items-center justify-center group-open:bg-indigo-600 group-open:text-white group-open:rotate-180 transition-all duration-500 shrink-0">
-                <ChevronLeft size={18} strokeWidth={3} />
+    <section className={cn('w-full text-right', embedded ? 'space-y-5' : 'app-page-shell-wide space-y-6')} dir="rtl">
+      {!embedded && (
+        <div className="rounded-xl bg-card p-5 shadow-sm ring-1 ring-border/60">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-3xl space-y-3">
+              <Badge variant="secondary" className="w-fit">مركز المساعدة</Badge>
+              <div className="space-y-2">
+                <h1 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">الأسئلة الشائعة</h1>
+                <p className="text-sm leading-7 text-muted-foreground">
+                  إجابات مختصرة تساعد المستخدم على فهم المنصة، المسارات، ومخرجات كل أداة قبل البدء.
+                </p>
               </div>
-            </summary>
-            <div className="px-7 pb-7 animate-in fade-in slide-in-from-top-2 duration-500">
-              <p className="text-[13px] text-slate-500 leading-relaxed font-medium border-t border-slate-100 pt-5">{item.a}</p>
             </div>
-          </details>
-        ))}
-      </div>
+            <Button variant="outline" className="w-full justify-center lg:w-auto">
+              <MessageCircle className="size-4" />
+              تواصل مع الدعم
+            </Button>
+          </div>
+        </div>
+      )}
 
+      {!embedded && (
+        <div className="grid gap-3 md:grid-cols-3">
+          {supportCards.map((item) => {
+            const Icon = item.icon;
+            return (
+              <Card key={item.title} className="shadow-sm">
+                <CardContent className="flex items-center gap-3 p-4">
+                  <div className="flex size-9 items-center justify-center rounded-lg bg-muted text-foreground">
+                    <Icon className="size-4" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-foreground">{item.title}</p>
+                    <p className="text-xs text-muted-foreground">{item.value}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+      )}
 
-    </div>
+      <Card className="shadow-sm">
+        <CardHeader className="pb-3">
+          <div className="flex items-center gap-2">
+            <HelpCircle className="size-5 text-muted-foreground" />
+            <div>
+              <CardTitle className="text-lg">إجابات مهمة قبل استخدام المنصة</CardTitle>
+              <CardDescription>كل سؤال قابل للفتح بدون تشويش بصري أو بطاقات ضخمة.</CardDescription>
+            </div>
+          </div>
+        </CardHeader>
+        <CardContent className="space-y-2">
+          {faqs.map((faq, index) => (
+            <Collapsible key={faq.question} open={openId === index} onOpenChange={() => setOpenId(openId === index ? -1 : index)}>
+              <CollapsibleTrigger asChild>
+                <Button
+                  type="button"
+                  variant="ghost"
+                  className="flex w-full items-center justify-between gap-4 rounded-lg px-3 py-3 text-right text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                >
+                  <span>{faq.question}</span>
+                  <ChevronDown className={cn('size-4 shrink-0 text-muted-foreground transition-transform', openId === index && 'rotate-180')} />
+                </Button>
+              </CollapsibleTrigger>
+              <CollapsibleContent className="px-3 pb-4 text-sm leading-7 text-muted-foreground">
+                {faq.answer}
+              </CollapsibleContent>
+            </Collapsible>
+          ))}
+        </CardContent>
+      </Card>
+    </section>
   );
 };
 
-// Add styles to hide default summary arrow
-const styles = `
-  details summary::-webkit-details-marker {
-    display: none;
-  }
-  details > summary {
-    list-style: none;
-  }
-`;
-
-if (typeof document !== 'undefined') {
-  const styleSheet = document.createElement("style");
-  styleSheet.innerText = styles;
-  document.head.appendChild(styleSheet);
-}
+export default FAQ;

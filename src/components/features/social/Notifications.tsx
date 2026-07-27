@@ -1,240 +1,197 @@
-
 import React, { useState } from 'react';
-import { 
-  Bell, 
-  CheckCheck, 
-  Trash2, 
-  Info, 
-  AlertTriangle, 
-  CheckCircle2, 
-  Sparkles, 
-  Settings,
-  MoreHorizontal,
+import {
+  AlertTriangle,
+  Bell,
+  CheckCheck,
+  CheckCircle2,
   Clock,
-  ChevronLeft,
-  X
+  Info,
+  MoreHorizontal,
+  Settings,
+  Sparkles,
+  Trash2,
 } from 'lucide-react';
-import { Notification } from '../types';
+import { Notification } from '../../../types';
+import { Badge } from '@/components/ui/Badge';
+import { Button } from '@/components/ui/Button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { cn } from '@/lib/utils';
 
 const INITIAL_NOTIFICATIONS: Notification[] = [
   {
     id: '1',
     type: 'success',
-    title: 'اكتمل تحليل الخطة',
-    message: 'قام الذكاء الاصطناعي بإنهاء تحليل "خطة عمل eslam" بنسبة نجاح 92%. يمكنك مراجعة النتائج الآن.',
+    title: 'اكتمل تحليل خطة المشروع',
+    message: 'تم تجهيز ملخص دراسة الجدوى الأولي ويمكنك مراجعة النتائج من مساحة المشروع.',
     timestamp: 'منذ دقيقتين',
-    isRead: false
+    isRead: false,
   },
   {
     id: '2',
-    type: 'ai',
-    title: 'اقتراحات جديدة متوفرة',
-    message: 'لديك 5 اقتراحات جديدة لتحسين قسم "التوقعات المالية" بناءً على اتجاهات السوق الحالية.',
+    type: 'info',
+    title: 'تحديث على صفحة المشاكل والفرص',
+    message: 'تم حفظ فرصة جديدة ضمن قائمة المشاريع المحفوظة للعودة إليها لاحقاً.',
     timestamp: 'منذ ساعة',
-    isRead: false
+    isRead: false,
   },
   {
     id: '3',
     type: 'warning',
-    title: 'قرب انتهاء الرصيد',
-    message: 'رصيد نقاط الذكاء الاصطناعي الخاص بك أقل من 15 نقطة. يرجى الشحن للاستمرار في استخدام الميزات المتقدمة.',
+    title: 'تنبيه حول اكتمال البيانات',
+    message: 'بعض أقسام نموذج العمل لا تزال فارغة. يفضل إكمالها قبل تصدير التقرير.',
     timestamp: 'منذ 5 ساعات',
-    isRead: true
+    isRead: true,
   },
   {
     id: '4',
     type: 'system',
-    title: 'تحديث النظام v2.5',
-    message: 'تم إضافة ميزة توليد الهوية البصرية الجديدة. ابدأ بتجربتها في قسم المحرر الآن!',
+    title: 'تحديث واجهة المنصة',
+    message: 'تم تحسين تجربة لوحة المشترك وخريطة الموقع لتسهيل التنقل بين الأدوات.',
     timestamp: 'منذ يوم',
-    isRead: true
+    isRead: true,
   },
   {
     id: '5',
-    type: 'info',
-    title: 'تعليق جديد',
-    message: 'قامت سارة أحمد بإضافة تعليق على قسم "الملخص التنفيذي".',
+    type: 'ai',
+    title: 'ميزة ذكية مؤجلة',
+    message: 'سيتم طرح المساعد الاستراتيجي الذكي في مرحلة لاحقة، والواجهة الحالية تخفيه عن المستخدم.',
     timestamp: 'منذ يومين',
-    isRead: true
-  }
+    isRead: true,
+  },
 ];
+
+const notificationMeta: Record<Notification['type'], { label: string; icon: React.ElementType; className: string }> = {
+  success: { label: 'نجاح', icon: CheckCircle2, className: 'text-emerald-700 bg-emerald-50' },
+  info: { label: 'معلومة', icon: Info, className: 'text-sky-700 bg-sky-50' },
+  warning: { label: 'تنبيه', icon: AlertTriangle, className: 'text-amber-700 bg-amber-50' },
+  ai: { label: 'لاحقاً', icon: Sparkles, className: 'text-muted-foreground bg-muted' },
+  system: { label: 'النظام', icon: Settings, className: 'text-slate-700 bg-slate-100' },
+};
 
 export const Notifications: React.FC = () => {
   const [notifications, setNotifications] = useState<Notification[]>(INITIAL_NOTIFICATIONS);
   const [filter, setFilter] = useState<'all' | 'unread'>('all');
 
-  const unreadCount = notifications.filter(n => !n.isRead).length;
+  const unreadCount = notifications.filter((notification) => !notification.isRead).length;
+  const filteredNotifications = filter === 'all' ? notifications : notifications.filter((notification) => !notification.isRead);
 
-  const markAllAsRead = () => {
-    setNotifications(prev => prev.map(n => ({ ...n, isRead: true })));
-  };
-
-  const clearAll = () => {
-    setNotifications([]);
-  };
-
-  const deleteNotification = (id: string) => {
-    setNotifications(prev => prev.filter(n => n.id !== id));
-  };
-
-  const toggleRead = (id: string) => {
-    setNotifications(prev => prev.map(n => n.id === id ? { ...n, isRead: !n.isRead } : n));
-  };
-
-  const filteredNotifications = filter === 'all' 
-    ? notifications 
-    : notifications.filter(n => !n.isRead);
-
-  const getIcon = (type: Notification['type']) => {
-    switch(type) {
-      case 'success': return { icon: CheckCircle2, color: 'text-emerald-500', bg: 'bg-emerald-50' };
-      case 'warning': return { icon: AlertTriangle, color: 'text-amber-500', bg: 'bg-amber-50' };
-      case 'ai': return { icon: Sparkles, color: 'text-purple-500', bg: 'bg-purple-50' };
-      case 'system': return { icon: Settings, color: 'text-blue-500', bg: 'bg-blue-50' };
-      default: return { icon: Info, color: 'text-gray-500', bg: 'bg-gray-100' };
-    }
-  };
+  const markAllAsRead = () => setNotifications((prev) => prev.map((notification) => ({ ...notification, isRead: true })));
+  const clearAll = () => setNotifications([]);
+  const deleteNotification = (id: string) => setNotifications((prev) => prev.filter((notification) => notification.id !== id));
+  const toggleRead = (id: string) =>
+    setNotifications((prev) =>
+      prev.map((notification) => (notification.id === id ? { ...notification, isRead: !notification.isRead } : notification)),
+    );
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 py-8 animate-in fade-in slide-in-from-bottom-8 duration-700 overflow-x-hidden">
-      {/* Header Section */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-10">
-        <div>
-          <div className="flex items-center gap-3 mb-2">
-            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-primary-600 rounded-xl lg:rounded-2xl flex items-center justify-center text-white shadow-xl shadow-primary-100 shrink-0">
-              <Bell size={22} strokeWidth={2.5} />
+    <main className="app-page-shell-wide space-y-6 text-right" dir="rtl">
+      <section className="rounded-xl bg-card p-5 shadow-sm ring-1 ring-border/60">
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-3xl space-y-3">
+            <Badge variant="secondary" className="w-fit">مركز الإشعارات</Badge>
+            <div className="space-y-2">
+              <h1 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">الإشعارات</h1>
+              <p className="text-sm leading-7 text-muted-foreground">
+                متابعة مختصرة لما يحدث داخل الحساب والمشاريع، بدون ازدحام أو بطاقات ضخمة.
+              </p>
             </div>
-            <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight">الإشعارات</h1>
           </div>
-          <p className="text-gray-400 font-bold text-xs lg:text-sm">لديك {unreadCount} إشعار غير مقروء يحتاج انتباهك.</p>
+          <div className="flex flex-col gap-2 sm:flex-row">
+            <Button onClick={markAllAsRead} variant="outline" size="sm">
+              <CheckCheck className="size-4" />
+              تعيين الكل كمقروء
+            </Button>
+            <Button onClick={clearAll} variant="outline" size="sm">
+              <Trash2 className="size-4" />
+              حذف الكل
+            </Button>
+          </div>
         </div>
+      </section>
 
-        <div className="flex items-center gap-3">
-          <button 
-            onClick={markAllAsRead}
-            className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 lg:px-5 py-2.5 bg-white border border-gray-100 rounded-xl text-[10px] lg:text-xs font-bold text-gray-600 hover:bg-gray-50 hover:text-primary-600 transition-all shadow-sm whitespace-nowrap"
-          >
-            <CheckCheck size={14} className="lg:w-4 lg:h-4" />
-            تعيين الكل كمقروء
-          </button>
-          <button 
-            onClick={clearAll}
-            className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 lg:px-5 py-2.5 bg-red-50 text-red-600 rounded-xl text-[10px] lg:text-xs font-bold hover:bg-red-100 transition-all whitespace-nowrap"
-          >
-            <Trash2 size={14} className="lg:w-4 lg:h-4" />
-            حذف الكل
-          </button>
-        </div>
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <Tabs value={filter} onValueChange={(value) => setFilter(value as 'all' | 'unread')}>
+          <TabsList>
+            <TabsTrigger value="all">الكل</TabsTrigger>
+            <TabsTrigger value="unread">غير المقروءة</TabsTrigger>
+          </TabsList>
+        </Tabs>
+        <p className="text-sm text-muted-foreground">
+          لديك <span className="font-medium text-foreground">{unreadCount}</span> إشعار غير مقروء.
+        </p>
       </div>
 
-      {/* Tabs / Filter */}
-      <div className="flex bg-gray-100/50 p-1 rounded-xl sm:rounded-2xl mb-8 w-fit border border-gray-100">
-        <button 
-          onClick={() => setFilter('all')}
-          className={`px-6 sm:px-8 py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-[10px] sm:text-xs font-bold transition-all ${filter === 'all' ? 'bg-white text-primary-600 shadow-lg' : 'text-gray-400 hover:text-gray-600'}`}
-        >
-          الكل
-        </button>
-        <button 
-          onClick={() => setFilter('unread')}
-          className={`px-6 sm:px-8 py-2 sm:py-2.5 rounded-lg sm:rounded-xl text-[10px] sm:text-xs font-bold transition-all flex items-center gap-2 ${filter === 'unread' ? 'bg-white text-primary-600 shadow-lg' : 'text-gray-400 hover:text-gray-600'}`}
-        >
-          غير المقروءة
-          {unreadCount > 0 && <span className="bg-primary-600 text-white text-[9px] px-1.5 py-0.5 rounded-full">{unreadCount}</span>}
-        </button>
-      </div>
-
-      {/* Notifications List */}
-      <div className="space-y-4">
-        {filteredNotifications.length === 0 ? (
-          <div className="py-24 text-center bg-white border border-dashed border-gray-200 rounded-[3rem] animate-in zoom-in-95 duration-500">
-            <div className="w-20 h-20 bg-gray-50 rounded-[2rem] flex items-center justify-center text-gray-300 mx-auto mb-6">
-              <Bell size={40} strokeWidth={1.5} />
+      <Card className="shadow-sm">
+        <CardHeader className="pb-3">
+          <CardTitle>قائمة الإشعارات</CardTitle>
+          <CardDescription>حالة فارغة، مقروءة، وغير مقروءة جاهزة للتسليم البرمجي.</CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-2">
+          {filteredNotifications.length === 0 ? (
+            <div className="flex flex-col items-center justify-center rounded-lg bg-muted/40 px-4 py-14 text-center">
+              <Bell className="mb-3 size-9 text-muted-foreground" />
+              <h3 className="text-base font-semibold text-foreground">لا توجد إشعارات</h3>
+              <p className="mt-1 max-w-sm text-sm leading-6 text-muted-foreground">
+                عندما يحدث شيء مهم داخل المشروع أو الحساب سيظهر هنا بوضوح.
+              </p>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">لا توجد إشعارات جديدة</h3>
-            <p className="text-gray-400 font-bold text-sm max-w-xs mx-auto">عندما يحدث شيء مهم، ستجد تفاصيله هنا فوراً.</p>
-          </div>
-        ) : (
-          filteredNotifications.map((notification) => {
-            const { icon: Icon, color, bg } = getIcon(notification.type);
-            return (
-              <div 
-                key={notification.id}
-                className={`
-                  group relative flex items-start gap-5 p-6 rounded-[2.5rem] transition-all duration-300 border
-                  ${notification.isRead 
-                    ? 'bg-white border-gray-50 hover:border-gray-200 opacity-80 hover:opacity-100' 
-                    : 'bg-white border-primary-100 shadow-xl shadow-primary-50/20 ring-4 ring-primary-50/10'
-                  }
-                `}
-              >
-                {/* Unread Indicator Dot */}
-                {!notification.isRead && (
-                  <div className="absolute top-6 sm:top-8 right-2 w-2 h-2 bg-primary-600 rounded-full shadow-[0_0_10px_rgba(37,99,235,0.8)] animate-pulse"></div>
-                )}
-
-                {/* Icon Container */}
-                <div className={`w-12 h-12 lg:w-14 lg:h-14 rounded-xl lg:rounded-2xl flex-shrink-0 flex items-center justify-center shadow-inner ${bg} ${color}`}>
-                  <Icon size={22} strokeWidth={2.5} className="lg:w-[26px] lg:h-[26px]" />
-                </div>
-
-                {/* Content */}
-                <div className="flex-1 min-w-0 pr-1 lg:pl-28">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2 sm:mb-1.5">
-                    <h4 className={`text-sm sm:text-base font-bold truncate ${notification.isRead ? 'text-gray-700' : 'text-gray-900'}`}>
-                      {notification.title}
-                    </h4>
-                    <div className="flex items-center gap-1.5 text-[9px] sm:text-[10px] font-bold text-gray-400 uppercase tracking-tighter shrink-0">
-                      <Clock size={12} />
-                      {notification.timestamp}
+          ) : (
+            filteredNotifications.map((notification) => {
+              const meta = notificationMeta[notification.type];
+              const Icon = meta.icon;
+              return (
+                <div
+                  key={notification.id}
+                  className={cn(
+                    'flex items-start gap-3 rounded-lg px-3 py-3 transition-colors hover:bg-muted/60',
+                    !notification.isRead && 'bg-muted/35',
+                  )}
+                >
+                  <div className={cn('flex size-9 shrink-0 items-center justify-center rounded-lg', meta.className)}>
+                    <Icon className="size-4" />
+                  </div>
+                  <div className="min-w-0 flex-1 space-y-1">
+                    <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                      <div className="flex min-w-0 items-center gap-2">
+                        {!notification.isRead && <span className="size-2 rounded-full bg-primary" />}
+                        <h3 className="truncate text-sm font-medium text-foreground">{notification.title}</h3>
+                        <Badge variant="outline" className="shrink-0">{meta.label}</Badge>
+                      </div>
+                      <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
+                        <Clock className="size-3" />
+                        {notification.timestamp}
+                      </span>
                     </div>
+                    <p className="line-clamp-2 text-sm leading-6 text-muted-foreground">{notification.message}</p>
                   </div>
-                  <p className="text-[12px] sm:text-sm font-bold text-gray-500 leading-relaxed mb-4">
-                    {notification.message}
-                  </p>
-
-                  <div className="flex flex-wrap items-center gap-3 sm:gap-4">
-                    <button className="text-[10px] sm:text-[11px] font-black text-primary-600 hover:text-primary-800 transition-colors flex items-center gap-1 group/btn">
-                      متابعة التفاصيل
-                      <ChevronLeft size={14} className="group-hover/btn:-translate-x-1 transition-transform" />
-                    </button>
-                    <span className="w-1 h-1 bg-gray-200 rounded-full hidden sm:block"></span>
-                    <button 
-                      onClick={() => toggleRead(notification.id)}
-                      className="text-[10px] sm:text-[11px] font-bold text-gray-400 hover:text-gray-600 transition-colors"
-                    >
-                      {notification.isRead ? 'تعليم كغير مقروء' : 'تعليم كمقروء'}
-                    </button>
-                    <button 
-                      onClick={() => deleteNotification(notification.id)}
-                      className="sm:hidden text-[10px] font-bold text-red-400 hover:text-red-500 transition-colors flex items-center gap-1"
-                    >
-                      <Trash2 size={12} /> حذف
-                    </button>
-                  </div>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="ghost" size="icon-sm" className="shrink-0">
+                        <MoreHorizontal className="size-4" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end" className="w-40">
+                      <DropdownMenuItem onClick={() => toggleRead(notification.id)}>
+                        {notification.isRead ? 'تعيين كغير مقروء' : 'تعيين كمقروء'}
+                      </DropdownMenuItem>
+                      <DropdownMenuItem variant="destructive" onClick={() => deleteNotification(notification.id)}>
+                        حذف الإشعار
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 </div>
-
-                {/* Quick Actions (Appear on Hover) - Hidden on mobile, replaced by inline delete */}
-                <div className="absolute top-1/2 -translate-y-1/2 left-8 opacity-0 lg:group-hover:opacity-100 transition-all hidden lg:flex items-center gap-2 translate-x-[-15px] group-hover:translate-x-0 z-10">
-                  <button className="p-2.5 bg-white/90 backdrop-blur-sm text-gray-400 rounded-xl hover:text-gray-900 border border-gray-100 shadow-lg">
-                    <MoreHorizontal size={14} strokeWidth={3} />
-                  </button>
-                  <button 
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      deleteNotification(notification.id);
-                    }}
-                    className="p-2.5 bg-red-50/90 backdrop-blur-sm text-red-500 rounded-xl hover:bg-red-500 hover:text-white transition-all shadow-lg border border-red-100 hover:border-red-500"
-                    title="حذف"
-                  >
-                    <Trash2 size={14} strokeWidth={3} />
-                  </button>
-                </div>
-              </div>
-            );
-          })
-        )}
-      </div>
-    </div>
+              );
+            })
+          )}
+        </CardContent>
+      </Card>
+    </main>
   );
 };

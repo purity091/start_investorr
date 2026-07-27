@@ -1,12 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import {
-  CheckCircle2,
-  ChevronLeft,
-  ChevronRight,
-  Compass,
-  Sparkles,
-  X,
-} from 'lucide-react';
+import { CheckCircle2, ChevronLeft, ChevronRight, Sparkles, X } from 'lucide-react';
+import { Badge } from '@/components/ui/Badge';
+import { Button } from '@/components/ui/Button';
 
 interface TourStep {
   targetId: string;
@@ -21,109 +16,102 @@ const ALL_STEPS: TourStep[] = [
   {
     targetId: 'tour-site-tour-trigger-header',
     title: 'الجولة الشاملة',
-    content: 'من هنا يستطيع المستخدم إعادة تشغيل الجولة التعريفية في أي وقت ومراجعة كل مناطق المنصة الأساسية.',
+    content: 'من هنا يستطيع المستخدم إعادة تشغيل الجولة التعريفية في أي وقت ومراجعة مناطق المنصة الأساسية.',
     position: 'bottom',
   },
   {
     targetId: 'tour-home',
-    title: 'الصفحة الرئيسية',
-    content: 'هذه نقطة البداية: تقدم صورة عامة عن المنصة، القيمة الأساسية، والانتقال إلى أهم المسارات.',
+    title: 'الرئيسية',
+    content: 'نقطة البداية لفهم المنصة والانتقال إلى مسارات بناء دراسة الجدوى واستكشاف السوق.',
     position: 'left',
     desktopOnly: true,
   },
   {
     targetId: 'tour-projects',
     title: 'مشاريعي',
-    content: 'هنا يعود المستخدم إلى جميع مشاريعه، يراجع الحالة، ويفتح آخر نقطة عمل بسرعة.',
+    content: 'مساحة مراجعة المشاريع، حالتها، وآخر نقطة عمل يمكن العودة إليها بسرعة.',
     position: 'left',
     desktopOnly: true,
   },
   {
     targetId: 'tour-new-plan',
-    title: 'بناء مشروع',
-    content: 'هذه بداية رحلة بناء المشروع من التوجه الأولي وحتى تحويله إلى مشروع واضح قابل للتنفيذ.',
+    title: 'بناء دراسة جدوى مشروع',
+    content: 'بداية رحلة تحويل الفكرة إلى دراسة منظمة عبر النموذج السهل، الاحترافي، MIT 24 Steps، أو BMC.',
     position: 'left',
     desktopOnly: true,
   },
   {
     targetId: 'tour-market-discovery',
-    title: 'اكتشاف السوق',
-    content: 'هذا القسم مخصص لاكتشاف القطاعات، قراءة اللوحات السوقية، وفهم السياق قبل اتخاذ القرار.',
+    title: 'استكشاف السوق',
+    content: 'قسم مخصص لفهم القطاعات، قراءة اللوحات السوقية، وبناء تصور قبل اتخاذ قرار المشروع.',
     position: 'left',
     desktopOnly: true,
   },
   {
     targetId: 'tour-problem-engine',
     title: 'المشاكل والفرص',
-    content: 'هنا ينتقل المستخدم من الاستكشاف العام إلى تشخيص الفجوات والفرص الحقيقية في السوق.',
+    content: 'قاعدة بيانات تعرض مشاكل وفرص السوق بطريقة تساعد المستخدم على اختيار فرصة قابلة للدراسة.',
     position: 'left',
     desktopOnly: true,
   },
   {
     targetId: 'tour-unicorn',
     title: 'رادار اليونيكورن',
-    content: 'هذا المسار يساعد على مقارنة الفكرة بمعايير النمو العالية ورؤية عناصر التوسع والتميز.',
-    position: 'left',
-    desktopOnly: true,
-  },
-  {
-    targetId: 'tour-hackathon',
-    title: 'هاكاثون المستثمر',
-    content: 'مساحة لتجميع الأفكار والتحديات في تجربة مركزة تساعد المستخدم على اختبار الفكرة بصيغة تنافسية.',
+    content: 'أداة لمقارنة الفكرة بمعايير النمو العالي وقابلية التوسع والتميّز.',
     position: 'left',
     desktopOnly: true,
   },
   {
     targetId: 'tour-bmc',
-    title: 'نموذج العمل',
-    content: 'هنا يتم تحويل الفكرة إلى Business Model Canvas واضح يشرح القيمة والعملاء والقنوات والإيرادات.',
+    title: 'نموذج العمل BMC',
+    content: 'تحويل الفكرة إلى نموذج عمل واضح يشرح العملاء، القيمة، القنوات، الإيرادات، والتكاليف.',
     position: 'left',
     desktopOnly: true,
   },
   {
     targetId: 'tour-brand',
-    title: 'استوديو الهوية',
-    content: 'القسم المسؤول عن بناء هوية المشروع بصرياً من الألوان والخطوط وحتى تسليم brief للمصمم.',
+    title: 'استوديو الهوية البصرية',
+    content: 'مساحة تحديد عناصر الهوية البصرية للمشروع وتجهيز brief قابل للتسليم للمصمم.',
     position: 'left',
     desktopOnly: true,
   },
   {
     targetId: 'tour-workspace',
     title: 'مساحة المشروع',
-    content: 'هذه هي المساحة التشغيلية التي تجمع المشروع الحالي، مرحلته، وعناصر التنفيذ والمتابعة.',
+    content: 'المساحة التشغيلية التي تجمع المشروع الحالي، المرحلة، عناصر التنفيذ، والمراجعة.',
     position: 'left',
     desktopOnly: true,
   },
   {
     targetId: 'tour-tasks',
-    title: 'المهام والجدولة',
-    content: 'من هنا يتابع المستخدم التنفيذ اليومي، الأولويات، والمواعيد المرتبطة بتقدم المشروع.',
+    title: 'المهام',
+    content: 'متابعة الأولويات اليومية والمواعيد المرتبطة بتقدم المشروع.',
     position: 'left',
     desktopOnly: true,
   },
   {
     targetId: 'tour-notifications',
-    title: 'التنبيهات',
-    content: 'مركز التنبيهات يعرض آخر التحديثات، الإشعارات المهمة، والأنشطة التي تحتاج متابعة.',
+    title: 'الإشعارات',
+    content: 'مركز يعرض آخر التحديثات والتنبيهات التي تحتاج متابعة من المستخدم.',
     position: 'bottom',
   },
   {
     targetId: 'tour-profile-menu',
-    title: 'الحساب وبوابة العميل',
-    content: 'من قائمة الحساب يصل المستخدم إلى ملفه الشخصي، مشاريعه، وبوابة العميل الخاصة بالاشتراك والإدارة.',
+    title: 'الحساب وبوابة المشترك',
+    content: 'من قائمة الحساب يصل المستخدم إلى ملفه الشخصي، الإعدادات، وبوابة إدارة الاشتراك.',
     position: 'bottom',
   },
   {
     targetId: 'tour-mobile-bottom-nav',
-    title: 'الملاحة المحمولة',
-    content: 'على الجوال، هذه الشريط هو الطريق الأسرع للتنقل بين استكشاف السوق، المشاريع، الفرص، والفكرة الجديدة.',
+    title: 'التنقل على الجوال',
+    content: 'على الشاشات الصغيرة يظهر شريط تنقل مختصر للوصول السريع إلى أهم أقسام المنصة.',
     position: 'center',
     mobileOnly: true,
   },
   {
     targetId: 'tour-mobile-menu',
     title: 'القائمة المحمولة',
-    content: 'القائمة المحمولة تجمع الأقسام الكاملة للمنصة عندما يحتاج المستخدم الوصول إلى جميع الروابط على الشاشات الصغيرة.',
+    content: 'القائمة المحمولة تجمع روابط المنصة الكاملة عندما يحتاج المستخدم إلى كل الخيارات.',
     position: 'center',
     mobileOnly: true,
   },
@@ -143,10 +131,7 @@ const SiteTour: React.FC<SiteTourProps> = ({ onComplete, onSkip }) => {
 
   const tourSteps = useMemo(() => {
     const mobile = window.innerWidth < 1024;
-    return ALL_STEPS.filter((step) => {
-      if (mobile) return !step.desktopOnly;
-      return !step.mobileOnly;
-    });
+    return ALL_STEPS.filter((step) => (mobile ? !step.desktopOnly : !step.mobileOnly));
   }, []);
 
   const step = tourSteps[currentStep];
@@ -161,14 +146,9 @@ const SiteTour: React.FC<SiteTourProps> = ({ onComplete, onSkip }) => {
       const element = document.getElementById(step.targetId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
-        setTimeout(() => {
+        window.setTimeout(() => {
           const rect = element.getBoundingClientRect();
-          setTooltipPos({
-            top: rect.top,
-            left: rect.left,
-            width: rect.width,
-            height: rect.height,
-          });
+          setTooltipPos({ top: rect.top, left: rect.left, width: rect.width, height: rect.height });
         }, 260);
       } else {
         setTooltipPos({
@@ -193,40 +173,29 @@ const SiteTour: React.FC<SiteTourProps> = ({ onComplete, onSkip }) => {
     setIsFinished(true);
   };
 
-  const handlePrev = () => {
-    if (currentStep > 0) {
-      setCurrentStep((value) => value - 1);
-    }
-  };
-
   if (!step) return null;
 
   if (isFinished) {
     return (
-      <div className="fixed inset-0 z-[10000] flex items-center justify-center p-5 sm:p-6 bg-slate-950/35 backdrop-blur-sm transition-all duration-500">
-        <div className="bg-white rounded-[2rem] sm:rounded-[2.5rem] p-8 sm:p-12 max-w-2xl w-full text-center shadow-[0_40px_100px_rgba(0,0,0,0.18)] border border-slate-200">
-          <div className="w-16 h-16 sm:w-20 sm:h-20 bg-emerald-100 text-emerald-600 rounded-[1.5rem] sm:rounded-[2rem] flex items-center justify-center mx-auto mb-6 sm:mb-8 shadow-lg">
-            <CheckCircle2 size={34} className="sm:w-10 sm:h-10" strokeWidth={2.5} />
+      <div className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/20 p-5 backdrop-blur-sm" dir="rtl">
+        <div className="w-full max-w-xl rounded-xl bg-background p-6 text-center shadow-lg ring-1 ring-border">
+          <div className="mx-auto mb-5 flex size-12 items-center justify-center rounded-lg bg-muted text-foreground">
+            <CheckCircle2 className="size-6 text-emerald-600" />
           </div>
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4">أصبحت الجولة شاملة لكل المنصة</h2>
-          <p className="text-slate-500 font-bold mb-8 sm:mb-10 leading-relaxed text-sm sm:text-base text-right">
-            راجعت الآن المسارات الرئيسية: البداية، المشاريع، بناء المشروع، الاكتشاف، التحليل، الهوية، الحساب، والتنبيهات. هذا يعكس رحلة الاستخدام الكاملة التي سيستلمها المبرمج لاحقاً.
+          <h2 className="text-xl font-semibold text-foreground">اكتملت الجولة التعريفية</h2>
+          <p className="mx-auto mt-3 max-w-md text-sm leading-7 text-muted-foreground">
+            راجعت الآن المسارات الرئيسية في المنصة: الرئيسية، المشاريع، بناء دراسة الجدوى، الاستكشاف، الهوية، الحساب، والإشعارات.
           </p>
-          <button
-            onClick={onComplete}
-            className="w-full py-4 sm:py-5 bg-slate-950 text-white rounded-xl sm:rounded-2xl text-[14px] sm:text-[15px] font-black shadow-lg hover:bg-slate-800 active:scale-95 transition-all"
-          >
-            ابدأ استخدام المنصة
-          </button>
+          <Button onClick={onComplete} className="mt-6 w-full sm:w-fit">ابدأ استخدام المنصة</Button>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="fixed inset-0 z-[10000] pointer-events-none">
+    <div className="pointer-events-none fixed inset-0 z-[10000]" dir="rtl">
       <div
-        className="absolute z-[10001] border-[3px] border-blue-500/80 rounded-2xl transition-all duration-500 pointer-events-none shadow-[0_0_30px_rgba(59,130,246,0.24)]"
+        className="pointer-events-none absolute z-[10001] rounded-xl ring-2 ring-ring/70 transition-all duration-300"
         style={{
           top: tooltipPos.top - 6,
           left: tooltipPos.left - 6,
@@ -238,60 +207,55 @@ const SiteTour: React.FC<SiteTourProps> = ({ onComplete, onSkip }) => {
 
       <div
         ref={tooltipRef}
-        className={`fixed lg:absolute z-[10002] pointer-events-auto transition-all duration-500 ${isMobile ? 'bottom-20 left-1/2 -translate-x-1/2' : ''}`}
-        style={!isMobile ? {
-          top: step.position === 'center' ? tooltipPos.top + tooltipPos.height + 18 : tooltipPos.top + tooltipPos.height / 2,
-          left: step.position === 'left' ? tooltipPos.left - 24 : tooltipPos.left + tooltipPos.width / 2,
-          transform: step.position === 'left' ? 'translate(-100%, -50%)' : 'translate(-50%, 0)',
-          opacity: tooltipPos.width > 0 ? 1 : 0,
-        } : {
-          opacity: tooltipPos.width > 0 ? 1 : 0,
-        }}
+        className={`pointer-events-auto fixed z-[10002] transition-all duration-300 lg:absolute ${isMobile ? 'bottom-20 left-1/2 -translate-x-1/2' : ''}`}
+        style={
+          !isMobile
+            ? {
+                top: step.position === 'center' ? tooltipPos.top + tooltipPos.height + 18 : tooltipPos.top + tooltipPos.height / 2,
+                left: step.position === 'left' ? tooltipPos.left - 24 : tooltipPos.left + tooltipPos.width / 2,
+                transform: step.position === 'left' ? 'translate(-100%, -50%)' : 'translate(-50%, 0)',
+                opacity: tooltipPos.width > 0 ? 1 : 0,
+              }
+            : { opacity: tooltipPos.width > 0 ? 1 : 0 }
+        }
       >
-        <div className="bg-white rounded-[2rem] lg:rounded-[2.5rem] p-6 lg:p-8 w-[calc(100vw-32px)] lg:w-[390px] shadow-[0_30px_90px_rgba(0,0,0,0.18)] border border-slate-200 flex flex-col relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50/70 rounded-full blur-3xl -mr-16 -mt-16" />
-
+        <div className="relative flex w-[calc(100vw-32px)] flex-col rounded-xl bg-background p-5 text-right shadow-lg ring-1 ring-border lg:w-[390px]">
           {!isMobile && step.position === 'left' && (
-            <div className="absolute w-5 h-5 bg-white rotate-45 -right-2 top-1/2 -translate-y-1/2 border-r border-t border-slate-200" />
+            <div className="absolute -right-2 top-1/2 size-4 -translate-y-1/2 rotate-45 bg-background ring-1 ring-border" />
           )}
 
-          <div className="flex items-center justify-between mb-5 relative z-10 rtl text-right">
+          <div className="relative z-10 mb-4 flex items-center justify-between gap-3">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-slate-950 text-white rounded-xl flex items-center justify-center shadow-sm">
-                <Sparkles size={18} />
+              <div className="flex size-9 items-center justify-center rounded-lg bg-muted text-foreground">
+                <Sparkles className="size-4" />
               </div>
-              <h3 className="font-black text-[15px] text-slate-900 tracking-tight">{step.title}</h3>
+              <div>
+                <Badge variant="outline" className="mb-1">الجولة</Badge>
+                <h3 className="text-sm font-semibold text-foreground">{step.title}</h3>
+              </div>
             </div>
-            <button onClick={onSkip} className="text-slate-300 hover:text-slate-900 transition-colors bg-slate-50 p-2 rounded-full">
-              <X size={16} />
-            </button>
+            <Button onClick={onSkip} variant="ghost" size="icon-sm">
+              <X className="size-4" />
+            </Button>
           </div>
 
-          <p className="text-[13px] font-bold text-slate-500 leading-relaxed text-right mb-8 relative z-10 px-1">
-            {step.content}
-          </p>
+          <p className="relative z-10 mb-5 text-sm leading-7 text-muted-foreground">{step.content}</p>
 
-          <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-100 relative z-10">
-            <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">
-              {currentStep + 1} / {tourSteps.length}
-            </div>
-
+          <div className="relative z-10 flex items-center justify-between border-t border-border pt-4">
+            <span className="text-xs text-muted-foreground">{currentStep + 1} / {tourSteps.length}</span>
             <div className="flex items-center gap-2">
-              <button
-                onClick={handlePrev}
+              <Button
+                onClick={() => setCurrentStep((value) => Math.max(0, value - 1))}
                 disabled={currentStep === 0}
-                className={`w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center transition-all ${currentStep === 0 ? 'text-slate-200 bg-slate-50' : 'text-slate-500 bg-white border border-slate-200 hover:bg-slate-50 hover:text-slate-900 shadow-sm'}`}
+                variant="outline"
+                size="icon-sm"
               >
-                <ChevronRight size={18} />
-              </button>
-
-              <button
-                onClick={handleNext}
-                className="px-4 sm:px-6 py-2.5 sm:py-3 bg-blue-600 text-white rounded-lg sm:rounded-xl text-[11px] sm:text-[12px] font-black flex items-center gap-2 hover:bg-blue-700 transition-all shadow-sm active:scale-95"
-              >
-                <span className="whitespace-nowrap">{currentStep === tourSteps.length - 1 ? 'إنهاء الجولة' : 'الخطوة التالية'}</span>
-                <ChevronLeft size={16} />
-              </button>
+                <ChevronRight className="size-4" />
+              </Button>
+              <Button onClick={handleNext} size="sm">
+                {currentStep === tourSteps.length - 1 ? 'إنهاء الجولة' : 'الخطوة التالية'}
+                <ChevronLeft className="size-4" />
+              </Button>
             </div>
           </div>
         </div>

@@ -1,118 +1,30 @@
-
-import React, { memo, useState } from 'react';
+import React, { useState } from 'react';
 import {
-  ShieldPlus,
   Activity,
-  Home, Layers, Rocket, Globe, Palette, ArrowRightLeft, FileText, Trello, BrainCircuit,
-  FileCheck, Bell, CreditCard, Settings, LayoutDashboard, AreaChart, Users, Shield, LogOut,
-  X, Zap, ChevronDown, Megaphone, TrendingUp, Award, Compass, Sprout, Waves, TreePine,
-  FlaskConical, Flame, Mountain, Factory, Shirt, FileBox, Building2, HardHat, Heart,
-  Utensils, Armchair, Flower2, Hammer, PawPrint, Gamepad2, Briefcase, ShoppingCart,
-  Handshake, Hash, PlayCircle, Coffee, Landmark, Map, Sparkles, CloudSun, Cpu, Recycle, LineChart, Crown
+  AreaChart,
+  Briefcase,
+  ChevronDown,
+  Compass,
+  CreditCard,
+  Crown,
+  Globe,
+  Heart,
+  Home,
+  Layers,
+  LayoutDashboard,
+  LayoutGrid,
+  LogOut,
+  Palette,
+  Rocket,
+  Settings,
+  Shield,
+  Users,
+  X,
+  Zap,
 } from 'lucide-react';
+
 import { getTabPath } from '../../utils/routes';
-
-// ─── Data Configuration ───────────────────────────────────────────────────
-
-const MARKET_DISCOVERY_DASHBOARDS = [
-  'advertising-dashboard', 'brands-leaders-dashboard', 'marketing-dashboard', 'farming-dashboard',
-  'fisheries-aquaculture-dashboard', 'forestry-dashboard', 'chemical-industry-dashboard',
-  'fossil-fuels-dashboard', 'mining-dashboard', 'pulp-paper-dashboard',
-  'plastic-rubber-dashboard', 'petroleum-refinery-dashboard', 'apparel-shoes-dashboard',
-  'non-alcoholic-beverages-dashboard', 'economy-dashboard', 'building-construction-dashboard',
-  'heavy-construction-dashboard', 'cleaning-products-dashboard', 'cosmetics-personal-care-dashboard',
-  'food-nutrition-dashboard', 'furniture-household-dashboard', 'garden-patio-dashboard',
-  'home-improvement-dashboard', 'pet-supplies-dashboard', 'toys-dashboard',
-  'b2b-ecommerce-dashboard', 'b2c-ecommerce-dashboard', 'c2c-ecommerce-dashboard',
-  'digital-shopping-behaviour-dashboard', 'ecommerce-key-figures-dashboard', 'paid-content-dashboard',
-  'international-trade-dashboard', 'politics-dashboard', 'climate-dashboard',
-  'emissions-dashboard', 'energy-dashboard', 'greentech-dashboard',
-  'waste-dashboard', 'water-dashboard', 'financial-services-dashboard', 'financial-institutions-dashboard', 
-  'investments-dashboard', 'insurance-dashboard', 'care-support-dashboard',
-  'hospitals-health-professionals-dashboard', 'health-system-dashboard', 'medical-technology-dashboard',
-  'pharma-market-dashboard', 'state-of-health-dashboard', 'cyber-crime-security-dashboard',
-  'internet-demographics-dashboard', 'mobile-internet-apps-dashboard', 'online-search-dashboard',
-  'online-video-entertainment-dashboard', 'reach-traffic-dashboard', 'social-media-dashboard',
-  'celebrities-dashboard', 'family-friends-dashboard', 'personality-behavior-dashboard',
-  'holidays-dashboard', 'audio-dashboard', 'books-publishing-dashboard',
-  'news-dashboard', 'tv-video-film-dashboard', 'video-gaming-esports-dashboard', 'communications-dashboard',
-  'aerospace-defense-dashboard', 'electronics-dashboard', 'industrial-machinery-dashboard',
-  'metals-dashboard', 'rolling-stock-dashboard', 'shipbuilding-dashboard',
-  'vehicle-manufacturing-dashboard', 'commercial-real-estate-dashboard', 'industrial-real-estate-dashboard',
-  'mortgages-financing-dashboard', 'property-services-dashboard', 'residential-real-estate-dashboard',
-  'diy-retail-dashboard', 'fashion-accessories-dashboard', 'food-beverage-retail-dashboard',
-  'furniture-retail-dashboard', 'general-merchandise-dashboard', 'health-hygiene-dashboard',
-  'office-supplies-dashboard', 'private-label-dashboard', 'retail-technology-dashboard',
-  'shopping-behavior-dashboard', 'sports-leisure-retail-dashboard', 'subscriptions-direct-selling-dashboard',
-  'supply-chain-dashboard', 'wholesale-dashboard', 'business-services-dashboard',
-  'skilled-labor-dashboard', 'crime-law-enforcement-dashboard', 'demographics-dashboard',
-  'education-science-dashboard', 'geography-nature-dashboard', 'historical-data-dashboard',
-  'art-culture-dashboard', 'gambling-dashboard', 'hobbies-dashboard',
-  'parks-outdoors-dashboard', 'professional-sports-dashboard', 'sports-fitness-dashboard',
-  'wellness-spas-dashboard', 'consumer-electronics-dashboard', 'hardware-dashboard',
-  'household-appliances-dashboard', 'it-services-dashboard', 'software-dashboard',
-  'telecommunications-dashboard', 'aviation-dashboard', 'logistics-dashboard',
-  'public-transport-dashboard', 'rail-transport-dashboard', 'vehicles-road-traffic-dashboard',
-  'water-transport-dashboard', 'accommodation-dashboard', 'business-travel-dashboard',
-  'food-drink-services-dashboard', 'leisure-travel-dashboard'
-];
-
-
-// ─── Sub-components ────────────────────────────────────────────────────────
-
-interface NavItemProps {
-  icon: React.ElementType;
-  label: string;
-  href?: string;
-  active?: boolean;
-  onClick: () => void;
-  badge?: number;
-  isNew?: boolean;
-  variant?: 'default' | 'ai' | 'danger' | 'active-project';
-}
-
-const NavItem = memo(({ icon: Icon, label, href, active, onClick, badge, isNew, variant = 'default' }: NavItemProps) => {
-  const variants = {
-    default: active ? 'bg-accent text-accent-foreground' : 'text-muted-foreground hover:bg-accent/60 hover:text-foreground',
-    ai: active ? 'bg-accent text-accent-foreground' : 'text-muted-foreground hover:bg-accent/60 hover:text-foreground',
-    danger: 'text-destructive hover:bg-destructive/5',
-    'active-project': 'bg-accent text-accent-foreground'
-  };
-
-  return (
-    <a
-      href={href || '#'}
-      onClick={(event) => {
-        event.preventDefault();
-        onClick();
-      }}
-      className={`flex w-full items-center gap-3 rounded-lg px-4 py-3 text-[13px] font-medium transition-colors touch-manipulation ${variants[variant]}`}
-    >
-      <Icon size={18} strokeWidth={2} className="flex-shrink-0" />
-      <span className="flex-1 text-right truncate">{label}</span>
-      {isNew && (
-        <span className="rounded-md border border-border bg-background px-1.5 py-0.5 text-[8px] font-semibold text-foreground">جديد</span>
-      )}
-      {badge && (
-        <span className="rounded-full bg-primary px-1.5 py-0.5 text-[9px] font-semibold text-primary-foreground">{badge}</span>
-      )}
-    </a>
-  );
-});
-
-const NavGroup = memo(({ title, children }: { title: string; children: React.ReactNode }) => (
-  <div className="mb-4">
-    <div className="px-4 mb-2 flex items-center justify-between">
-      <h3 className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em]">{title}</h3>
-      <div className="h-[1px] flex-1 bg-gray-100 mr-3"></div>
-    </div>
-    <div className="space-y-1 px-2">
-      {children}
-    </div>
-  </div>
-));
-
-// ─── Main Component ───────────────────────────────────────────────────────
+import { Button } from '../ui/Button';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -122,9 +34,62 @@ interface MobileMenuProps {
   isAdminMode: boolean;
 }
 
+type NavItem = {
+  icon: React.ElementType;
+  label: string;
+  tab: string;
+  active?: (activeTab: string) => boolean;
+  badge?: string;
+};
+
+const buildItems: NavItem[] = [
+  { icon: Heart, label: 'النموذج السهل', tab: 'new-plan-family' },
+  { icon: Zap, label: 'النموذج الاحترافي', tab: 'new-plan-pro', active: (tab) => tab === 'new-plan-pro' || tab === 'strategic-dashboard' },
+  { icon: Rocket, label: 'MIT 24 Steps', tab: 'new-plan-mit24' },
+  { icon: LayoutGrid, label: 'بناء نموذج العمل BMC', tab: 'new-plan-bmc', active: (tab) => tab === 'new-plan-bmc' || tab === 'bmc' },
+];
+
+const discoveryItems: NavItem[] = [
+  { icon: Layers, label: 'مشاريع ناجحة مثبتة', tab: 'my-plans' },
+  { icon: Compass, label: 'استكشاف السوق', tab: 'market-discovery', active: (tab) => tab === 'market-discovery' || tab.endsWith('-dashboard') },
+  { icon: Activity, label: 'المشكلات والفرص', tab: 'problem-engine', active: (tab) => tab === 'problem-engine' || tab === 'problem-detail' },
+];
+
+const addOnItems: NavItem[] = [
+  { icon: Globe, label: 'رادار اليونيكورن', tab: 'unicorn-benchmark' },
+  { icon: Palette, label: 'الهوية البصرية', tab: 'brand-identity' },
+];
+
+const accountItems: NavItem[] = [
+  {
+    icon: Crown,
+    label: 'حسابي الشخصي',
+    tab: 'customer-dashboard',
+    active: (tab) => ['subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-activity', 'customer-support'].includes(tab),
+  },
+  {
+    icon: Settings,
+    label: 'ملف التعريف',
+    tab: 'profile',
+    active: (tab) => ['profile', 'settings', 'customer-account'].includes(tab),
+  },
+  {
+    icon: CreditCard,
+    label: 'اشتراكي',
+    tab: 'pricing',
+    active: (tab) => ['pricing', 'customer-subscription', 'customer-usage'].includes(tab),
+  },
+];
+
+const adminItems: NavItem[] = [
+  { icon: LayoutDashboard, label: 'لوحة الإدارة', tab: 'admin-dashboard' },
+  { icon: AreaChart, label: 'تحليلات المنصة', tab: 'admin-analytics' },
+  { icon: Users, label: 'المستخدمون', tab: 'users-management', badge: '248' },
+  { icon: Layers, label: 'أرشيف الخطط', tab: 'admin-plans' },
+  { icon: Shield, label: 'الأمان', tab: 'admin-security' },
+];
+
 export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeTab, setActiveTab, isAdminMode }) => {
-  const tabHref = (tab: string) => getTabPath(tab);
-  const isCustomerPortalActive = ['subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-subscription', 'customer-usage', 'customer-activity', 'customer-account', 'customer-support'].includes(activeTab || '');
   const [isAccountGroupOpen, setIsAccountGroupOpen] = useState(false);
 
   if (!isOpen) return null;
@@ -136,129 +101,147 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeT
 
   return (
     <>
-      <div
-        className="fixed inset-0 z-[150] bg-black/10 lg:hidden animate-in fade-in duration-200"
+      <button
+        type="button"
+        className="fixed inset-0 z-[150] bg-black/20 lg:hidden"
         onClick={onClose}
+        aria-label="إغلاق القائمة"
       />
 
-      <div id="tour-mobile-menu" className="ui-sidebar-surface fixed top-0 right-0 z-[160] flex h-full w-[85vw] max-w-[320px] flex-col lg:hidden animate-in slide-in-from-right duration-200">
-        {/* Header */}
-        <div className="p-5 bg-slate-950 text-white flex items-center justify-between border-b border-slate-800">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
-              <Zap size={20} />
-            </div>
-            <div>
-              <h2 className="text-lg font-black">{isAdminMode ? 'واجهة الإدارة' : 'خطة'}</h2>
-              <p className="text-[9px] font-bold opacity-80">{isAdminMode ? 'System Admin' : 'Business AI Platform'}</p>
+      <aside
+        id="tour-mobile-menu"
+        className="fixed right-0 top-0 z-[160] flex h-full w-[86vw] max-w-[340px] flex-col border-l border-border bg-background shadow-xl lg:hidden"
+        dir="rtl"
+      >
+        <div className="flex items-center justify-between border-b border-border px-4 py-4">
+          <div className="flex min-w-0 items-center gap-3">
+            <span className="flex size-10 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+              {isAdminMode ? <Shield className="size-5" /> : <Zap className="size-5" />}
+            </span>
+            <div className="min-w-0">
+              <h2 className="truncate text-sm font-semibold text-foreground">
+                {isAdminMode ? 'واجهة الإدارة' : 'خطة'}
+              </h2>
+              <p className="truncate text-xs text-muted-foreground">
+                {isAdminMode ? 'إدارة النظام' : 'منصة بناء المشاريع'}
+              </p>
             </div>
           </div>
-          <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-lg">
-            <X size={20} />
-          </button>
+          <Button variant="ghost" size="icon-sm" onClick={onClose} aria-label="إغلاق">
+            <X className="size-4" />
+          </Button>
         </div>
 
-        {/* Navigation */}
-        <nav className="flex-1 overflow-y-auto py-4 px-3">
+        <nav className="flex-1 space-y-5 overflow-y-auto px-3 py-4">
           {isAdminMode ? (
-            <>
-              <NavGroup title="القلب النابض">
-                <NavItem icon={LayoutDashboard} label="الصفحة الرئيسية" href={tabHref('admin-dashboard')} active={activeTab === 'admin-dashboard'} onClick={() => handleNavigate('admin-dashboard')} />
-                <NavItem icon={AreaChart} label="تحليلات المنصة" href={tabHref('admin-analytics')} active={activeTab === 'admin-analytics'} onClick={() => handleNavigate('admin-analytics')} />
-              </NavGroup>
-              <NavGroup title="إدارة النظام">
-                <NavItem icon={Users} label="قاعدة المستخدمين" href={tabHref('users-management')} active={activeTab === 'users-management'} onClick={() => handleNavigate('users-management')} badge={248} />
-                <NavItem icon={FileText} label="أرشيف الخطط" href={tabHref('admin-plans')} active={activeTab === 'admin-plans'} onClick={() => handleNavigate('admin-plans')} />
-                <NavItem icon={Shield} label="بروتوكولات الأمان" href={tabHref('admin-security')} active={activeTab === 'admin-security'} onClick={() => handleNavigate('admin-security')} />
-              </NavGroup>
-              <NavGroup title="النظام">
-                <NavItem icon={LogOut} label="تسجيل الخروج Safe" variant="danger" onClick={() => handleNavigate('home')} />
-              </NavGroup>
-            </>
+            <NavGroup title="إدارة النظام">
+              {adminItems.map((item) => (
+                <MenuItem key={item.tab} item={item} activeTab={activeTab} onNavigate={handleNavigate} />
+              ))}
+            </NavGroup>
           ) : (
             <>
               <NavGroup title="الوصول السريع">
-                <NavItem icon={Home} label="الرئيسية" href={tabHref('home')} active={activeTab === 'home'} onClick={() => handleNavigate('home')} />
-                <NavItem icon={Layers} label="مشاريعي" href={tabHref('my-plans')} active={activeTab === 'my-plans'} onClick={() => handleNavigate('my-plans')} />
+                <MenuItem item={{ icon: Home, label: 'الرئيسية', tab: 'home' }} activeTab={activeTab} onNavigate={handleNavigate} />
+                <MenuItem item={{ icon: Briefcase, label: 'مشاريعي', tab: 'my-plans' }} activeTab={activeTab} onNavigate={handleNavigate} />
               </NavGroup>
 
               <NavGroup title="بناء دراسة جدوى مشروع">
-                <NavItem icon={Heart} label="مود الأهل" href={tabHref('new-plan-family')} active={activeTab === 'new-plan-family'} onClick={() => handleNavigate('new-plan-family')} />
-                <NavItem icon={Zap} label="النموذج الاحترافي" href={tabHref('new-plan-pro')} active={activeTab === 'new-plan-pro' || activeTab === 'strategic-dashboard'} onClick={() => handleNavigate('new-plan-pro')} />
-                <NavItem icon={Rocket} label="MIT 24 Steps" href={tabHref('new-plan-mit24')} active={activeTab === 'new-plan-mit24'} onClick={() => handleNavigate('new-plan-mit24')} />
-                <NavItem icon={LayoutGrid} label="بناء بنموذج العمل BMC" href={tabHref('new-plan-bmc')} active={activeTab === 'new-plan-bmc' || activeTab === 'bmc'} onClick={() => handleNavigate('new-plan-bmc')} />
+                {buildItems.map((item) => (
+                  <MenuItem key={item.tab} item={item} activeTab={activeTab} onNavigate={handleNavigate} />
+                ))}
               </NavGroup>
 
               <NavGroup title="أفكار مشاريع">
-                <NavItem icon={Layers} label="مشاريع ناجحة مثبتة" href={tabHref('my-plans')} active={activeTab === 'my-plans'} onClick={() => handleNavigate('my-plans')} />
-                <NavItem 
-                  icon={Compass} 
-                  label="استكشاف السوق" 
-                  href={tabHref('market-discovery')}
-                  active={activeTab === 'market-discovery' || MARKET_DISCOVERY_DASHBOARDS.includes(activeTab)} 
-                  onClick={() => handleNavigate('market-discovery')}
-                />
-                <NavItem 
-                  icon={Activity} 
-                  label="المشاكل والفرص" 
-                  href={tabHref('problem-engine')}
-                  active={activeTab === 'problem-engine'} 
-                  onClick={() => handleNavigate('problem-engine')}
-                />
+                {discoveryItems.map((item) => (
+                  <MenuItem key={item.tab} item={item} activeTab={activeTab} onNavigate={handleNavigate} />
+                ))}
               </NavGroup>
 
               <NavGroup title="ملحقات المشروع">
-                <NavItem icon={Globe} label="رادار اليونيكورن" href={tabHref('unicorn-benchmark')} active={activeTab === 'unicorn-benchmark'} onClick={() => handleNavigate('unicorn-benchmark')} />
-                <NavItem icon={Palette} label="الهوية البصرية" href={tabHref('brand-identity')} active={activeTab === 'brand-identity'} onClick={() => handleNavigate('brand-identity')} />
+                {addOnItems.map((item) => (
+                  <MenuItem key={item.tab} item={item} activeTab={activeTab} onNavigate={handleNavigate} />
+                ))}
               </NavGroup>
 
-              <div className="mb-4">
+              <div>
                 <button
                   type="button"
                   onClick={() => setIsAccountGroupOpen((value) => !value)}
-                  className="w-full px-4 mb-2 flex items-center justify-between"
+                  className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-xs font-semibold text-muted-foreground hover:bg-muted hover:text-foreground"
                 >
-                  <div className="flex items-center gap-3">
-                    <h3 className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em]">إدارة الحساب</h3>
-                    <div className="h-[1px] w-8 bg-gray-100 rounded-full"></div>
-                  </div>
-                  <ChevronDown size={16} className={`text-gray-400 transition-transform ${isAccountGroupOpen ? 'rotate-180' : ''}`} />
+                  <span>صفحات المستخدم</span>
+                  <ChevronDown className={`size-4 transition-transform ${isAccountGroupOpen ? 'rotate-180' : ''}`} />
                 </button>
-                {isAccountGroupOpen && (
-                  <div className="space-y-1 px-2 animate-in slide-in-from-top-2 fade-in duration-300">
-                    <NavItem icon={Bell} label="التنبيهات" href={tabHref('notifications')} active={activeTab === 'notifications'} onClick={() => handleNavigate('notifications')} badge={3} />
-                    <NavItem icon={CreditCard} label="الاشتراكات والأسعار" href={tabHref('pricing')} active={activeTab === 'pricing'} onClick={() => handleNavigate('pricing')} />
-                    <NavItem icon={Crown} label="بوابة العميل" href={tabHref('customer-dashboard')} active={isCustomerPortalActive} onClick={() => handleNavigate('customer-dashboard')} />
-                    <NavItem icon={Settings} label="إعدادات المنصة" href={tabHref('settings')} active={activeTab === 'settings'} onClick={() => handleNavigate('settings')} />
+                {isAccountGroupOpen ? (
+                  <div className="mt-2 space-y-1">
+                    {accountItems.map((item) => (
+                      <MenuItem key={item.tab} item={item} activeTab={activeTab} onNavigate={handleNavigate} />
+                    ))}
                   </div>
-                )}
-              </div>
-
-              <div className="mx-2 mt-4 rounded-2xl border border-gray-200 bg-slate-50 p-4">
-                <h4 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">الدعم الاستراتيجي</h4>
-                <p className="text-[11px] font-bold text-gray-600 mb-3 leading-relaxed">تحتاج لخبرة استثمارية؟</p>
-                <button onClick={() => handleNavigate('contact-us')} className="w-full py-2.5 bg-white border border-gray-100 rounded-xl text-[11px] font-black text-gray-800 hover:bg-gray-900 hover:text-white transition-all">تحدث مع مستشار</button>
+                ) : null}
               </div>
             </>
           )}
         </nav>
 
-        {/* Footer */}
-        <div className="p-4 border-t border-gray-100">
-          <button
+        <div className="border-t border-border p-3">
+          <Button
+            variant={isAdminMode ? 'secondary' : 'outline'}
+            className="w-full"
             onClick={() => handleNavigate(isAdminMode ? 'home' : 'admin-dashboard')}
-            className={`w-full flex items-center justify-center gap-2 py-3 rounded-xl text-[11px] font-black transition-all ${
-              isAdminMode
-                ? 'bg-amber-500/10 border border-amber-500/20 text-amber-500 hover:bg-amber-500 hover:text-white'
-                : 'bg-white border border-amber-200 text-amber-600 hover:bg-amber-50 hover:border-amber-400'
-            }`}
           >
-            {isAdminMode ? <LogOut size={16} /> : <Shield size={16} />}
-            {isAdminMode ? 'العودة لواجهة المستخدم' : 'لوحة تحكم الآدمن'}
-          </button>
-          <p className="text-[9px] font-black text-gray-300 uppercase tracking-[0.3em] text-center mt-3">KHOTTA • ENGINE 2.5</p>
+            {isAdminMode ? <LogOut className="size-4" /> : <Shield className="size-4" />}
+            {isAdminMode ? 'العودة لواجهة المستخدم' : 'لوحة تحكم الإدارة'}
+          </Button>
         </div>
-      </div>
+      </aside>
     </>
   );
 };
+
+function NavGroup({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <section>
+      <h3 className="mb-2 px-3 text-xs font-semibold text-muted-foreground">{title}</h3>
+      <div className="space-y-1">{children}</div>
+    </section>
+  );
+}
+
+function MenuItem({
+  item,
+  activeTab,
+  onNavigate,
+}: {
+  item: NavItem;
+  activeTab: string;
+  onNavigate: (tab: string) => void;
+}) {
+  const Icon = item.icon;
+  const isActive = item.active ? item.active(activeTab) : activeTab === item.tab;
+
+  return (
+    <a
+      href={getTabPath(item.tab)}
+      onClick={(event) => {
+        event.preventDefault();
+        onNavigate(item.tab);
+      }}
+      className={`flex min-h-10 items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+        isActive
+          ? 'bg-primary text-primary-foreground'
+          : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+      }`}
+      aria-current={isActive ? 'page' : undefined}
+    >
+      <Icon className="size-4 shrink-0" />
+      <span className="min-w-0 flex-1 truncate text-right">{item.label}</span>
+      {item.badge ? (
+        <span className={`rounded-md px-1.5 py-0.5 text-[10px] ${isActive ? 'bg-primary-foreground/15' : 'bg-muted text-muted-foreground'}`}>
+          {item.badge}
+        </span>
+      ) : null}
+    </a>
+  );
+}

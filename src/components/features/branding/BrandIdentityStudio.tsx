@@ -15,7 +15,6 @@ import { useProjectWorkspace } from '../../../features/workspace/ProjectWorkspac
 import { exportElementToPdf } from '../../../utils/pdfExport';
 import { Badge } from '../../ui/Badge';
 import { Button } from '../../ui/Button';
-import { Card } from '../../ui/Card';
 
 interface BrandIdentityStudioProps {
   setActiveTab?: (tab: string) => void;
@@ -751,151 +750,60 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
   return (
     <div dir="rtl" className="min-h-screen bg-[#f8fafc] pb-24 font-['IBM_Plex_Sans_Arabic'] text-slate-900">
       <div className="app-page-shell-wide pt-8 sm:pt-10">
-        <Card className="overflow-hidden rounded-[2rem] border-slate-200 shadow-[0_24px_80px_-40px_rgba(15,23,42,0.25)]">
-          <div className="grid gap-0 xl:grid-cols-[minmax(0,1.15fr)_420px]">
-            <div className="relative overflow-hidden p-6 sm:p-8 lg:p-10">
-              <div className="absolute inset-0 bg-slate-50" />
-              <div className="relative">
-                <Badge variant="secondary" className="px-4 py-2 text-[11px]">
-                  مساحة قرار الهوية البصرية للمشروع
-                </Badge>
-                <h1 className="mt-5 max-w-4xl text-3xl font-black tracking-tight text-slate-950 sm:text-4xl xl:text-5xl">
-                  استوديو الهوية البصرية
-                </h1>
-                <p className="mt-4 max-w-4xl text-sm font-bold leading-8 text-slate-600 sm:text-[15px]">
-                  الواجهة هنا ليست form تقليدي. هي مساحة قرار تساعد العميل على بناء هوية المشروع بصرياً على مراحل
-                  واضحة، مع معاينة حيّة للاختيارات، ثم إخراج تقرير نهائي جاهز للمصمم والتنفيذ.
-                </p>
-
-                <div className="mt-6 rounded-[1.75rem] border border-slate-200 bg-slate-50/90 p-4 sm:p-5">
-                  <div className="flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
-                    <div className="max-w-2xl">
-                      <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">الخطوة الأولى</p>
-                      <h2 className="mt-2 text-xl font-black text-slate-950 sm:text-2xl">حدد المشروع الذي ستبني له الهوية الآن</h2>
-                      <p className="mt-2 text-sm font-bold leading-7 text-slate-600">
-                        الاستوديو يبني الهوية للمشروع النشط حالياً في حسابك، وليس لمشروع عام. إذا كان هذا ليس المشروع المطلوب، انتقل إلى
-                        <span className="mx-1 text-slate-900">مشاريعي</span>
-                        ثم افتح المشروع الصحيح وارجع هنا.
-                      </p>
-                    </div>
-
-                    <div className="flex flex-wrap gap-2">
-                      <Button
-                        type="button"
-                        onClick={() => setActiveTab?.('my-plans')}
-                        variant="outline"
-                        size="lg"
-                      >
-                        <Briefcase size={16} />
-                        الذهاب إلى مشاريعي
-                      </Button>
-                      <Button
-                        type="button"
-                        onClick={() => setActiveTab?.('new-plan')}
-                        size="lg"
-                      >
-                        <Sparkles size={16} />
-                        إنشاء مشروع جديد
-                      </Button>
-                    </div>
-                  </div>
-
-                  <div className="mt-5 grid gap-4 xl:grid-cols-[minmax(0,1.25fr)_minmax(0,0.75fr)]">
-                    <Card className="rounded-[1.5rem] p-4 sm:p-5">
-                      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                        <div className="flex min-w-0 items-start gap-3">
-                          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-blue-700">
-                            <Target size={20} />
-                          </div>
-                          <div className="min-w-0">
-                            <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">المشروع النشط في حسابك</p>
-                            <h3 className="mt-1 text-lg font-black text-slate-950 sm:text-xl">{projectName}</h3>
-                            <p className="mt-1 text-sm font-bold text-slate-500">{sectorLabel}</p>
-                          </div>
-                        </div>
-                        <Badge variant="success">
-                          المشروع المستخدم الآن
-                        </Badge>
-                      </div>
-
-                      <div className="mt-4 grid gap-3 sm:grid-cols-3">
-                        <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
-                          <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">الفرصة</p>
-                          <p className="mt-2 text-sm font-bold leading-6 text-slate-700">{opportunityTitle}</p>
-                        </div>
-                        <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
-                          <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">العميل المستهدف</p>
-                          <p className="mt-2 text-sm font-bold leading-6 text-slate-700">{customerType}</p>
-                        </div>
-                        <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
-                          <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">مصدر الاختيار</p>
-                          <p className="mt-2 text-sm font-bold leading-6 text-slate-700">من المشروع الحالي داخل الحساب ومساحة العمل</p>
-                        </div>
-                      </div>
-                    </Card>
-
-                    <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-1">
-                      <TopCard icon={<FileText size={18} />} label="الناتج النهائي" value="Brand Brief PDF" note="جاهز للمصمم" />
-                      <TopCard icon={<Layers3 size={18} />} label="طريقة العمل" value="اختيارات متدرجة" note="كل مرحلة تبني ما بعدها" />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-8 grid gap-4 md:grid-cols-3 xl:grid-cols-3">
-                  <TopCard icon={<Target size={18} />} label="المشروع" value={projectName} note={sectorLabel} />
-                  <TopCard icon={<Sparkles size={18} />} label="الفرصة" value={opportunityTitle} note={customerType} />
-                  <TopCard icon={<FileText size={18} />} label="الناتج" value="تقرير مصمم PDF" note="جاهز للتنفيذ" />
-                </div>
-
-                <div className="mt-6 grid gap-4 xl:grid-cols-[1.15fr_0.85fr]">
-                  <div className="rounded-[1.75rem] border border-slate-200 bg-slate-950 p-5 text-white">
-                    <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">ماذا سيحدث هنا؟</p>
-                    <div className="mt-4 grid gap-3 sm:grid-cols-3">
-                      {[
-                        'اختيار نوع المشروع وشخصية العلامة',
-                        'تحديد الألوان والخطوط والشعار',
-                        'تصدير brief نهائي للمصمم',
-                      ].map((item) => (
-                        <div key={item} className="rounded-2xl bg-white/10 px-4 py-4">
-                          <p className="text-[13px] font-bold leading-7 text-slate-100">{item}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-5">
-                    <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">قيمة الاستوديو</p>
-                    <div className="mt-4 space-y-3">
-                      {[
-                        'قرارات بصرية مترابطة بدل اختيارات معزولة',
-                        'شرح لكل خيار عبر modal عند الحاجة',
-                        'ملخص حيّ يوضح أين وصلت الهوية الآن',
-                      ].map((item) => (
-                        <div key={item} className="rounded-2xl border border-slate-200 bg-white px-4 py-3">
-                          <p className="text-[13px] font-bold leading-7 text-slate-700">{item}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <section className="rounded-lg bg-background px-1 py-2 text-right">
+          <div className="flex flex-col gap-5 xl:flex-row xl:items-end xl:justify-between">
+            <div className="max-w-4xl">
+              <Badge variant="secondary" className="h-7 px-3 text-[11px]">
+                مساحة قرار الهوية البصرية
+              </Badge>
+              <h1 className="mt-4 text-2xl font-black tracking-tight text-foreground sm:text-3xl lg:text-4xl">
+                استوديو الهوية البصرية
+              </h1>
+              <p className="mt-3 max-w-3xl text-sm font-medium leading-7 text-muted-foreground">
+                ابنِ اتجاه الهوية للمشروع عبر قرارات واضحة: نوع المشروع، الشخصية، الألوان، الخطوط، الشعار، الصور،
+                وأولوية التطبيق. النتيجة النهائية brief جاهز للمصمم بدون عمود جانبي أو واجهة مشتتة.
+              </p>
             </div>
 
-            <LiveIdentityBoard
-              projectName={projectName}
-              sectorLabel={sectorLabel}
-              selectedProjectType={selectedProjectType.title}
-              selectedPersonality={selectedPersonality.title}
-              selectedColorSystem={selectedColorSystem}
-              selectedTypography={selectedTypography.title}
-              selectedLogoDirection={selectedLogoDirection.title}
-              selectedApplicationFocus={selectedApplicationFocus.title}
-            />
+            <div className="flex flex-wrap gap-2">
+              <Button type="button" onClick={() => setActiveTab?.('my-plans')} variant="outline" size="sm">
+                <Briefcase size={16} />
+                مشاريعي
+              </Button>
+              <Button type="button" onClick={() => setActiveTab?.('new-plan')} size="sm">
+                <Sparkles size={16} />
+                إنشاء مشروع
+              </Button>
+            </div>
           </div>
-        </Card>
+
+          <div className="mt-6 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+            <TopCard icon={<Target size={17} />} label="المشروع النشط" value={projectName} note={sectorLabel} />
+            <TopCard icon={<Sparkles size={17} />} label="الفرصة" value={opportunityTitle} note={customerType} />
+            <TopCard icon={<Layers3 size={17} />} label="اتجاه الهوية" value={selectedPersonality.title} note={selectedColorSystem.title} />
+            <TopCard icon={<FileText size={17} />} label="الناتج" value="Brand Brief PDF" note="جاهز للمصمم" />
+          </div>
+
+          <div className="mt-5 grid gap-3 lg:grid-cols-7">
+            {[
+              ['نوع المشروع', selectedProjectType.title],
+              ['الشخصية', selectedPersonality.title],
+              ['الألوان', selectedColorSystem.title],
+              ['الخطوط', selectedTypography.title],
+              ['الشعار', selectedLogoDirection.title],
+              ['الصور', selectedImageryStyle.title],
+              ['التطبيق', selectedApplicationFocus.title],
+            ].map(([label, value]) => (
+              <div key={label} className="rounded-lg bg-muted/55 px-3 py-3">
+                <p className="text-[10px] font-semibold text-muted-foreground">{label}</p>
+                <p className="mt-1 truncate text-[12px] font-bold text-foreground">{value}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <div className="mt-6 space-y-6">
-          <section className="surface-card p-5 sm:p-6">
+          <section className="rounded-lg bg-background p-5 shadow-sm sm:p-6">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
               <div className="text-right">
                 <p className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">حالة التفاعل</p>
@@ -905,7 +813,7 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
                 </p>
               </div>
 
-              <div className="min-w-[220px] rounded-[1.5rem] border border-slate-200 bg-slate-50 px-4 py-4 text-right">
+              <div className="min-w-[220px] rounded-lg bg-muted/60 px-4 py-4 text-right">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-black text-slate-900">{completionPercent}%</span>
                   <span className="text-[11px] font-black uppercase tracking-[0.16em] text-slate-400">اكتمال الهوية</span>
@@ -1351,27 +1259,27 @@ const StepSection = ({
   selectedNote: string;
   children: React.ReactNode;
 }) => (
-  <section className="surface-card p-5 sm:p-6 xl:p-8">
+  <section className="rounded-lg bg-background p-5 shadow-sm sm:p-6 xl:p-7">
     <button
       type="button"
       onClick={() => onToggle(sectionId)}
-      className="grid w-full gap-4 text-right xl:grid-cols-[minmax(0,1fr)_280px]"
+      className="flex w-full flex-col gap-4 text-right lg:flex-row lg:items-start lg:justify-between"
     >
       <div>
-        <span className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-[10px] font-black text-slate-500">
+        <span className="inline-flex rounded-md bg-muted px-2.5 py-1 text-[10px] font-black text-muted-foreground">
           المرحلة {step}
         </span>
-        <h2 className="mt-4 text-xl font-black text-slate-950">{title}</h2>
-        <p className="mt-2 max-w-3xl text-[13px] font-bold leading-7 text-slate-600">{description}</p>
+        <h2 className="mt-4 text-xl font-black text-foreground">{title}</h2>
+        <p className="mt-2 max-w-3xl text-[13px] font-medium leading-7 text-muted-foreground">{description}</p>
       </div>
-      <div className="flex items-stretch justify-end">
-        <div className="ui-card-interactive flex w-full items-center justify-between rounded-[1.5rem] border border-slate-200 bg-slate-50 px-4 py-4 xl:min-h-[104px]">
+      <div className="flex items-stretch justify-end lg:w-[320px]">
+        <div className="ui-card-interactive flex w-full items-center justify-between rounded-lg bg-muted/60 px-4 py-3">
           <div>
-            <p className="text-[11px] font-black uppercase tracking-[0.14em] text-slate-400">الاختيار الحالي</p>
-            <p className="mt-2 text-sm font-black text-slate-900">{selectedTitle}</p>
-            <p className="mt-2 text-[12px] font-bold leading-6 text-slate-600">{selectedNote}</p>
+            <p className="text-[11px] font-black uppercase tracking-[0.14em] text-muted-foreground">الاختيار الحالي</p>
+            <p className="mt-2 text-sm font-black text-foreground">{selectedTitle}</p>
+            <p className="mt-2 line-clamp-2 text-[12px] font-medium leading-6 text-muted-foreground">{selectedNote}</p>
           </div>
-          <span className="rounded-2xl border border-slate-200 bg-white p-3 text-slate-600">
+          <span className="rounded-md bg-background p-2.5 text-muted-foreground shadow-sm">
             <ChevronDown className={`transition ${isOpen ? 'rotate-180' : ''}`} size={18} />
           </span>
         </div>
@@ -1406,28 +1314,28 @@ const OptionGrid = ({
           key={option.id}
           onClick={() => onChange(option.id)}
           aria-pressed={active}
-          className={`ui-card-interactive rounded-[1.5rem] border p-4 text-right transition sm:min-h-[208px] xl:min-h-[220px] ${
+          className={`ui-card-interactive rounded-lg p-4 text-right transition sm:min-h-[180px] xl:min-h-[190px] ${
             active
-              ? 'ui-selected-ring border-slate-900 bg-slate-900 text-white shadow-sm'
-              : 'border-slate-200 bg-slate-50 text-slate-900 hover:border-slate-300'
+              ? 'bg-primary text-primary-foreground shadow-sm ring-2 ring-ring/20'
+              : 'bg-muted/55 text-foreground hover:bg-muted'
           }`}
         >
           <div className="flex items-center justify-between gap-3">
             <span
               className={`rounded-full px-3 py-1 text-[10px] font-black ${
-                active ? 'bg-white/15 text-white' : 'bg-white text-slate-500'
+                active ? 'bg-primary-foreground/15 text-primary-foreground' : 'bg-background text-muted-foreground'
               }`}
             >
               {active ? 'تم الاختيار' : 'اختيار متاح'}
             </span>
-            <CheckCircle2 size={16} className={active ? 'text-white' : 'text-slate-300'} />
+            <CheckCircle2 size={16} className={active ? 'text-primary-foreground' : 'text-muted-foreground/40'} />
           </div>
           <h3 className="mt-3 text-[15px] font-black">{option.title}</h3>
-          <p className={`mt-2 text-[12px] font-bold leading-6 ${active ? 'text-slate-200' : 'text-slate-600'}`}>
+          <p className={`mt-2 text-[12px] font-medium leading-6 ${active ? 'text-primary-foreground/75' : 'text-muted-foreground'}`}>
             {option.description}
           </p>
           {!showDetailsAction && option.hint ? (
-            <p className={`mt-2 text-[11px] font-bold leading-6 ${active ? 'text-slate-300' : 'text-slate-500'}`}>
+            <p className={`mt-2 text-[11px] font-medium leading-6 ${active ? 'text-primary-foreground/65' : 'text-muted-foreground'}`}>
               {option.hint}
             </p>
           ) : null}
@@ -1453,7 +1361,7 @@ const OptionGrid = ({
                 className={`rounded-2xl px-4 py-2 text-[12px] font-black transition ${
                   active
                     ? 'bg-white/15 text-white hover:bg-white/20'
-                    : 'border border-slate-200 bg-white text-slate-700 hover:border-slate-300'
+                    : 'bg-background text-foreground shadow-sm hover:bg-background/80'
                 }`}
               >
                 عرض الفكرة
@@ -1477,13 +1385,13 @@ const TopCard = ({
   value: string;
   note: string;
 }) => (
-  <div className="rounded-[1.75rem] border border-slate-200 bg-slate-50 p-4 text-right">
+  <div className="rounded-lg bg-muted/55 p-4 text-right">
     <div className="flex items-center justify-between gap-4">
-      <div className="rounded-2xl bg-white p-3 text-slate-700 shadow-sm">{icon}</div>
-      <span className="text-[10px] font-black uppercase tracking-[0.18em] text-slate-400">{label}</span>
+      <div className="rounded-md bg-background p-3 text-foreground shadow-sm">{icon}</div>
+      <span className="text-[10px] font-black uppercase tracking-[0.18em] text-muted-foreground">{label}</span>
     </div>
-    <p className="mt-4 line-clamp-2 text-sm font-black text-slate-950">{value}</p>
-    <p className="mt-2 text-[12px] font-bold text-slate-500">{note}</p>
+    <p className="mt-4 line-clamp-2 text-sm font-black text-foreground">{value}</p>
+    <p className="mt-2 text-[12px] font-medium text-muted-foreground">{note}</p>
   </div>
 );
 

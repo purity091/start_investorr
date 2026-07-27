@@ -1,8 +1,6 @@
 import React from 'react';
 import {
   Activity,
-  Bell,
-  Bookmark,
   ChevronDown,
   Compass,
   CreditCard,
@@ -18,19 +16,23 @@ import {
   Rocket,
   Settings,
   Shield,
+  Sparkles,
   Users,
   Zap,
 } from 'lucide-react';
 
 import type { User } from '../../types';
 import { getTabPath } from '../../utils/routes';
-import { Button } from '../ui/Button';
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '../ui/collapsible';
 import {
   Sidebar as UiSidebar,
   SidebarContent,
   SidebarFooter,
   SidebarGroup,
-  SidebarGroupAction,
   SidebarGroupContent,
   SidebarGroupLabel,
   SidebarHeader,
@@ -43,6 +45,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
   SidebarRail,
+  SidebarSeparator,
 } from '../ui/sidebar';
 
 const MARKET_DISCOVERY_DASHBOARDS = [
@@ -106,15 +109,12 @@ type NavItemConfig = {
   active?: (activeTab: string) => boolean;
 };
 
-const CUSTOMER_TABS = [
-  'subscriber-hub',
-  'customer-dashboard',
-  'customer-projects',
-  'customer-subscription',
-  'customer-usage',
-  'customer-activity',
-  'customer-account',
-  'customer-support',
+const ADMIN_TABS = [
+  'admin-dashboard',
+  'users-management',
+  'admin-plans',
+  'admin-analytics',
+  'admin-security',
 ];
 
 const QUICK_ACCESS: NavItemConfig[] = [
@@ -123,16 +123,35 @@ const QUICK_ACCESS: NavItemConfig[] = [
 ];
 
 const PROJECT_BUILD: NavItemConfig[] = [
-  { tab: 'new-plan-family', label: 'مود الأهل', icon: Heart, id: 'tour-new-plan' },
-  { tab: 'new-plan-pro', label: 'النموذج الاحترافي', icon: Zap, active: (tab) => tab === 'new-plan-pro' || tab === 'strategic-dashboard' },
-  { tab: 'new-plan-mit24', label: 'MIT 24 Steps', icon: Rocket },
-  { tab: 'new-plan-bmc', label: 'بناء بنموذج العمل BMC', icon: LayoutGrid, id: 'tour-bmc', active: (tab) => tab === 'new-plan-bmc' || tab === 'bmc' },
+  { tab: 'new-plan-family', label: 'النموذج السهل', icon: Heart, id: 'tour-new-plan', badge: 2 },
+  {
+    tab: 'new-plan-pro',
+    label: 'النموذج الاحترافي',
+    icon: Zap,
+    badge: 2,
+    active: (tab) => tab === 'new-plan-pro' || tab === 'strategic-dashboard',
+  },
+  { tab: 'new-plan-mit24', label: 'MIT 24 Steps', icon: Rocket, badge: 1 },
+  {
+    tab: 'new-plan-bmc',
+    label: 'بناء نموذج العمل BMC',
+    icon: LayoutGrid,
+    id: 'tour-bmc',
+    badge: 1,
+    active: (tab) => tab === 'new-plan-bmc' || tab === 'bmc',
+  },
 ];
 
 const PROJECT_IDEAS: NavItemConfig[] = [
-  { tab: 'my-plans', label: 'مشاريع ناجحة مثبتة', icon: Layers },
-  { tab: 'market-discovery', label: 'استكشاف السوق', icon: Compass, id: 'tour-market-discovery', active: (tab) => tab === 'market-discovery' || MARKET_DISCOVERY_DASHBOARDS.includes(tab) },
-  { tab: 'problem-engine', label: 'المشاكل والفرص', icon: Activity, id: 'tour-problem-engine' },
+  { tab: 'my-plans', label: 'مشاريع ناجحة مثبتة', icon: Sparkles },
+  {
+    tab: 'market-discovery',
+    label: 'استكشاف السوق',
+    icon: Compass,
+    id: 'tour-market-discovery',
+    active: (tab) => tab === 'market-discovery' || MARKET_DISCOVERY_DASHBOARDS.includes(tab),
+  },
+  { tab: 'problem-engine', label: 'المشكلات والفرص', icon: Activity, id: 'tour-problem-engine' },
 ];
 
 const PROJECT_ATTACHMENTS: NavItemConfig[] = [
@@ -141,64 +160,81 @@ const PROJECT_ATTACHMENTS: NavItemConfig[] = [
 ];
 
 const ACCOUNT_ITEMS: NavItemConfig[] = [
-  { tab: 'notifications', label: 'التنبيهات', icon: Bell, id: 'tour-notifications', badge: 3 },
-  { tab: 'saved-market-items', label: 'المحفوظات', icon: Bookmark },
-  { tab: 'pricing', label: 'الاشتراكات والأسعار', icon: CreditCard },
-  { tab: 'customer-dashboard', label: 'بوابة العميل', icon: Crown, active: (tab) => CUSTOMER_TABS.includes(tab) },
-  { tab: 'settings', label: 'إعدادات المنصة', icon: Settings },
+  {
+    tab: 'customer-dashboard',
+    label: 'حسابي الشخصي',
+    icon: Crown,
+    active: (tab) =>
+      ['subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-activity', 'customer-support'].includes(tab),
+  },
+  {
+    tab: 'profile',
+    label: 'ملف التعريف',
+    icon: Settings,
+    active: (tab) => ['profile', 'settings', 'customer-account'].includes(tab),
+  },
+  {
+    tab: 'pricing',
+    label: 'اشتراكي',
+    icon: CreditCard,
+    active: (tab) => ['pricing', 'customer-subscription', 'customer-usage'].includes(tab),
+  },
 ];
 
 const ADMIN_CORE: NavItemConfig[] = [
-  { tab: 'admin-dashboard', label: 'الصفحة الرئيسية', icon: LayoutDashboard },
+  { tab: 'admin-dashboard', label: 'الرئيسية', icon: LayoutDashboard },
   { tab: 'admin-analytics', label: 'تحليلات المنصة', icon: Activity },
 ];
 
 const ADMIN_MANAGEMENT: NavItemConfig[] = [
-  { tab: 'users-management', label: 'قاعدة المستخدمين', icon: Users, badge: 248 },
+  { tab: 'users-management', label: 'المستخدمون', icon: Users, badge: 248 },
   { tab: 'admin-plans', label: 'أرشيف الخطط', icon: Layers },
-  { tab: 'admin-security', label: 'بروتوكولات الأمان', icon: Shield },
+  { tab: 'admin-security', label: 'الأمان', icon: Shield },
 ];
+
+function isItemActive(item: NavItemConfig, activeTab: string) {
+  return item.active ? item.active(activeTab) : activeTab === item.tab;
+}
+
+function goToTab(
+  event: React.MouseEvent<HTMLAnchorElement>,
+  tab: string,
+  setActiveTab?: (tab: string) => void,
+) {
+  event.preventDefault();
+  setActiveTab?.(tab);
+}
 
 function SidebarLink({
   item,
   activeTab,
   setActiveTab,
-  size = 'default',
 }: {
   item: NavItemConfig;
   activeTab: string;
   setActiveTab?: (tab: string) => void;
-  size?: 'sm' | 'default' | 'lg';
 }) {
-  const isActive = item.active ? item.active(activeTab) : activeTab === item.tab;
+  const Icon = item.icon;
+  const isActive = isItemActive(item, activeTab);
 
   return (
     <SidebarMenuItem>
       <SidebarMenuButton
         asChild
         isActive={isActive}
-        size={size}
         tooltip={item.label}
-        className="justify-start gap-2.5 rounded-lg text-[13px] font-medium text-right"
+        className="h-8 justify-start gap-2 px-2 text-right text-[13px] leading-none"
       >
         <a
           id={item.id}
           href={getTabPath(item.tab)}
-          className="flex w-full items-center gap-2.5 text-right"
-          onClick={(event) => {
-            event.preventDefault();
-            setActiveTab?.(item.tab);
-          }}
+          onClick={(event) => goToTab(event, item.tab, setActiveTab)}
         >
-          <item.icon />
-          <span className="truncate">{item.label}</span>
+          <Icon />
+          <span>{item.label}</span>
         </a>
       </SidebarMenuButton>
-      {item.badge ? (
-        <SidebarMenuBadge className="rounded-full bg-sidebar-primary/10 px-1.5 text-[10px] font-semibold text-sidebar-primary">
-          {item.badge}
-        </SidebarMenuBadge>
-      ) : null}
+      {item.badge ? <SidebarMenuBadge>{item.badge}</SidebarMenuBadge> : null}
     </SidebarMenuItem>
   );
 }
@@ -208,30 +244,24 @@ function SidebarSection({
   items,
   activeTab,
   setActiveTab,
-  actionLabel,
-  onAction,
 }: {
   title: string;
   items: NavItemConfig[];
   activeTab: string;
   setActiveTab?: (tab: string) => void;
-  actionLabel?: string;
-  onAction?: () => void;
 }) {
   return (
     <SidebarGroup>
-      <SidebarGroupLabel className="justify-start px-3 text-right text-[11px] font-semibold text-sidebar-foreground/50">
-        {title}
-      </SidebarGroupLabel>
-      {actionLabel && onAction ? (
-        <SidebarGroupAction aria-label={actionLabel} title={actionLabel} onClick={onAction}>
-          <Zap />
-        </SidebarGroupAction>
-      ) : null}
+      <SidebarGroupLabel className="justify-start text-right">{title}</SidebarGroupLabel>
       <SidebarGroupContent>
         <SidebarMenu>
           {items.map((item) => (
-            <SidebarLink key={`${title}-${item.tab}`} item={item} activeTab={activeTab} setActiveTab={setActiveTab} />
+            <SidebarLink
+              key={`${title}-${item.tab}-${item.label}`}
+              item={item}
+              activeTab={activeTab}
+              setActiveTab={setActiveTab}
+            />
           ))}
         </SidebarMenu>
       </SidebarGroupContent>
@@ -239,33 +269,102 @@ function SidebarSection({
   );
 }
 
-export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setActiveTab }) => {
-  const isAdminMode = ['admin-dashboard', 'users-management', 'admin-plans', 'admin-analytics', 'admin-security'].includes(activeTab);
-  const [accountOpen, setAccountOpen] = React.useState(false);
+function AccountSection({
+  activeTab,
+  setActiveTab,
+}: {
+  activeTab: string;
+  setActiveTab?: (tab: string) => void;
+}) {
+  const isAccountActive = ACCOUNT_ITEMS.some((item) => isItemActive(item, activeTab));
+  const [open, setOpen] = React.useState(isAccountActive);
+
+  React.useEffect(() => {
+    if (isAccountActive) {
+      setOpen(true);
+    }
+  }, [isAccountActive]);
 
   return (
-    <UiSidebar side="right" dir="rtl" variant="floating" collapsible="icon" className="border-l-0">
-      <SidebarHeader className="gap-3 px-3 py-3">
-        <button
-          type="button"
-          onClick={() => setActiveTab?.(isAdminMode ? 'admin-dashboard' : 'home')}
-          className="flex w-full items-center gap-3 rounded-xl border border-sidebar-border/70 bg-sidebar px-3 py-3 text-right transition-colors hover:bg-sidebar-accent"
-        >
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-sidebar-border bg-sidebar-accent text-sidebar-accent-foreground">
-            {isAdminMode ? <Shield size={18} /> : <Zap size={18} />}
-          </div>
-          <div className="min-w-0 flex-1 text-right group-data-[collapsible=icon]:hidden">
-            <p className="truncate text-sm font-semibold text-sidebar-foreground">
-              {isAdminMode ? 'واجهة الإدارة' : 'خطة'}
-            </p>
-            <p className="mt-1 text-[11px] font-medium text-sidebar-foreground/55">
-              {isAdminMode ? 'System Admin' : 'Business AI Platform'}
-            </p>
-          </div>
-        </button>
+    <SidebarGroup>
+      <SidebarGroupLabel className="justify-start text-right">إدارة المستخدم</SidebarGroupLabel>
+      <SidebarGroupContent>
+        <SidebarMenu>
+          <Collapsible open={open} onOpenChange={setOpen} asChild>
+            <SidebarMenuItem className="group/collapsible">
+              <CollapsibleTrigger asChild>
+                <SidebarMenuButton
+                  isActive={isAccountActive}
+                  className="h-8 justify-start gap-2 px-2 text-right text-[13px] leading-none"
+                >
+                  <Settings />
+                  <span>صفحات المستخدم</span>
+                  <ChevronDown className="me-auto size-4 transition-transform group-data-[state=open]/collapsible:rotate-180" />
+                </SidebarMenuButton>
+              </CollapsibleTrigger>
+              <CollapsibleContent>
+                <SidebarMenuSub>
+                  {ACCOUNT_ITEMS.map((item) => {
+                    const Icon = item.icon;
+                    const isActive = isItemActive(item, activeTab);
+
+                    return (
+                      <SidebarMenuSubItem key={`account-${item.tab}`}>
+                        <SidebarMenuSubButton asChild isActive={isActive} className="justify-start text-right">
+                          <a
+                            id={item.id}
+                            href={getTabPath(item.tab)}
+                            onClick={(event) => goToTab(event, item.tab, setActiveTab)}
+                          >
+                            <Icon />
+                            <span>{item.label}</span>
+                          </a>
+                        </SidebarMenuSubButton>
+                      </SidebarMenuSubItem>
+                    );
+                  })}
+                </SidebarMenuSub>
+              </CollapsibleContent>
+            </SidebarMenuItem>
+          </Collapsible>
+        </SidebarMenu>
+      </SidebarGroupContent>
+    </SidebarGroup>
+  );
+}
+
+export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setActiveTab }) => {
+  const isAdminMode = ADMIN_TABS.includes(activeTab);
+
+  return (
+    <UiSidebar side="right" dir="rtl" variant="sidebar" collapsible="icon">
+      <SidebarHeader>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton
+              size="lg"
+              className="h-12 justify-start gap-2 px-2 text-right"
+              onClick={() => setActiveTab?.(isAdminMode ? 'admin-dashboard' : 'home')}
+            >
+              <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
+                {isAdminMode ? <Shield className="size-4" /> : <Zap className="size-4" />}
+              </span>
+              <span className="grid min-w-0 flex-1 text-right leading-tight">
+                <span className="truncate text-sm font-semibold">
+                  {isAdminMode ? 'لوحة الإدارة' : 'خطة'}
+                </span>
+                <span className="truncate text-xs text-muted-foreground">
+                  {isAdminMode ? 'إدارة المنصة' : 'منصة دراسة الجدوى'}
+                </span>
+              </span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
       </SidebarHeader>
 
-      <SidebarContent className="px-2 pb-2">
+      <SidebarSeparator />
+
+      <SidebarContent>
         {isAdminMode ? (
           <>
             <SidebarSection title="التحكم" items={ADMIN_CORE} activeTab={activeTab} setActiveTab={setActiveTab} />
@@ -273,114 +372,42 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
           </>
         ) : (
           <>
-            <SidebarSection
-              title="الوصول السريع"
-              items={QUICK_ACCESS}
-              activeTab={activeTab}
-              setActiveTab={setActiveTab}
-              actionLabel="الانتقال إلى الرئيسية"
-              onAction={() => setActiveTab?.('home')}
-            />
+            <SidebarSection title="الوصول السريع" items={QUICK_ACCESS} activeTab={activeTab} setActiveTab={setActiveTab} />
             <SidebarSection title="بناء دراسة جدوى مشروع" items={PROJECT_BUILD} activeTab={activeTab} setActiveTab={setActiveTab} />
             <SidebarSection title="أفكار مشاريع" items={PROJECT_IDEAS} activeTab={activeTab} setActiveTab={setActiveTab} />
             <SidebarSection title="ملحقات المشروع" items={PROJECT_ATTACHMENTS} activeTab={activeTab} setActiveTab={setActiveTab} />
-
-            <SidebarGroup>
-              <SidebarGroupLabel className="justify-start px-3 text-right text-[11px] font-semibold text-sidebar-foreground/50">
-                إدارة الحساب
-              </SidebarGroupLabel>
-              <SidebarGroupAction
-                aria-label="فتح الإعدادات"
-                title="فتح الإعدادات"
-                onClick={() => setActiveTab?.('settings')}
-              >
-                <Settings />
-              </SidebarGroupAction>
-              <SidebarGroupContent>
-                <SidebarMenu>
-                  <SidebarMenuItem>
-                    <SidebarMenuButton
-                      isActive={ACCOUNT_ITEMS.some((item) => item.active ? item.active(activeTab) : item.tab === activeTab)}
-                      className="justify-start gap-2.5 rounded-lg text-right text-[13px] font-medium"
-                      onClick={() => setAccountOpen((current) => !current)}
-                    >
-                      <Settings />
-                      <span className="truncate">خيارات الحساب</span>
-                    </SidebarMenuButton>
-                    <SidebarMenuAction
-                      aria-label={accountOpen ? 'إخفاء خيارات الحساب' : 'إظهار خيارات الحساب'}
-                      title={accountOpen ? 'إخفاء خيارات الحساب' : 'إظهار خيارات الحساب'}
-                      onClick={() => setAccountOpen((current) => !current)}
-                    >
-                      <ChevronDown className={`transition-transform ${accountOpen ? 'rotate-180' : ''}`} />
-                    </SidebarMenuAction>
-                    {accountOpen ? (
-                      <SidebarMenuSub>
-                        {ACCOUNT_ITEMS.map((item) => {
-                          const isActive = item.active ? item.active(activeTab) : activeTab === item.tab;
-                          return (
-                            <SidebarMenuSubItem key={`account-${item.tab}`}>
-                              <SidebarMenuSubButton
-                                asChild
-                                isActive={isActive}
-                                size="md"
-                                className="justify-start gap-2.5 text-right"
-                              >
-                                <a
-                                  id={item.id}
-                                  href={getTabPath(item.tab)}
-                                  onClick={(event) => {
-                                    event.preventDefault();
-                                    setActiveTab?.(item.tab);
-                                  }}
-                                >
-                                  <item.icon />
-                                  <span>{item.label}</span>
-                                  {item.badge ? (
-                                    <span className="me-auto rounded-full bg-sidebar-primary/10 px-1.5 py-0.5 text-[10px] font-semibold text-sidebar-primary">
-                                      {item.badge}
-                                    </span>
-                                  ) : null}
-                                </a>
-                              </SidebarMenuSubButton>
-                            </SidebarMenuSubItem>
-                          );
-                        })}
-                      </SidebarMenuSub>
-                    ) : null}
-                  </SidebarMenuItem>
-                </SidebarMenu>
-              </SidebarGroupContent>
-            </SidebarGroup>
+            <AccountSection activeTab={activeTab} setActiveTab={setActiveTab} />
           </>
         )}
       </SidebarContent>
 
-      <SidebarFooter className="gap-3 px-3 pb-3 pt-2">
-        {!isAdminMode ? (
-          <div className="hidden group-data-[collapsible=icon]:hidden">
-            <div className="rounded-xl border border-sidebar-border/70 bg-sidebar-accent/40 p-3 text-right">
-              <p className="text-[11px] font-semibold text-muted-foreground">الدعم الاستراتيجي</p>
-              <p className="mt-2 text-sm font-semibold text-foreground">تحتاج لخبرة استثمارية؟</p>
-              <Button className="mt-3 w-full" variant="outline" onClick={() => setActiveTab?.('contact-us')}>
-                تحدث مع مستشار
-              </Button>
-            </div>
-          </div>
-        ) : null}
+      <SidebarSeparator />
 
-        <Button
-          variant="outline"
-          className="w-full justify-center rounded-lg group-data-[collapsible=icon]:px-0"
-          onClick={() => setActiveTab?.(isAdminMode ? 'home' : 'admin-dashboard')}
-        >
-          {isAdminMode ? <LogOut size={16} /> : <Shield size={16} />}
-          <span>{isAdminMode ? 'العودة لحساب المستخدم' : 'لوحة تحكم الآدمن'}</span>
-        </Button>
-
-        <div className="px-2 text-center group-data-[collapsible=icon]:hidden">
-          <p className="text-[10px] font-semibold text-muted-foreground">{user.name}</p>
-        </div>
+      <SidebarFooter>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton
+              className="h-9 justify-start gap-2 px-2 text-right"
+              onClick={() => setActiveTab?.(isAdminMode ? 'home' : 'admin-dashboard')}
+            >
+              {isAdminMode ? <LogOut /> : <Shield />}
+              <span>{isAdminMode ? 'حساب المستخدم' : 'لوحة الأدمن'}</span>
+            </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarMenuButton className="h-9 justify-start gap-2 px-2 text-right">
+              <Crown />
+              <span className="truncate">{user.name}</span>
+            </SidebarMenuButton>
+            <SidebarMenuAction
+              aria-label="ملف التعريف"
+              title="ملف التعريف"
+              onClick={() => setActiveTab?.('profile')}
+            >
+              <Settings />
+            </SidebarMenuAction>
+          </SidebarMenuItem>
+        </SidebarMenu>
       </SidebarFooter>
 
       <SidebarRail />

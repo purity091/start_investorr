@@ -9,10 +9,14 @@ import {
   LayoutGrid,
   List,
   Plus,
+  Rocket,
   Search,
   Share2,
+  Sparkles,
   Star,
   TrendingUp,
+  Workflow,
+  Zap,
 } from 'lucide-react';
 
 import { Badge } from '../ui/Badge';
@@ -28,6 +32,13 @@ import {
   PageSectionSkeleton,
 } from '../ui/PageStates';
 import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '../ui/select';
+import {
   Table,
   TableBody,
   TableCell,
@@ -36,11 +47,17 @@ import {
   TableRow,
 } from '../ui/table';
 
+type ProjectStatus = 'ready' | 'review' | 'draft';
+type ProjectType = 'easy' | 'pro' | 'mit24' | 'bmc';
+type TypeFilter = 'all' | ProjectType;
+type StatusFilter = 'all' | ProjectStatus;
+
 interface Project {
   id: string;
   name: string;
   sector: string;
-  status: 'ready' | 'review' | 'draft';
+  type: ProjectType;
+  status: ProjectStatus;
   progress: {
     market: number;
     product: number;
@@ -52,11 +69,67 @@ interface Project {
   isFavorite: boolean;
 }
 
+const PROJECT_TYPE_META: Record<
+  ProjectType,
+  {
+    label: string;
+    shortLabel: string;
+    icon: React.ComponentType<{ className?: string }>;
+    accent: string;
+    actionTab: string;
+  }
+> = {
+  easy: {
+    label: 'النموذج السهل',
+    shortLabel: 'السهل',
+    icon: Sparkles,
+    accent: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+    actionTab: 'new-plan-family',
+  },
+  pro: {
+    label: 'النموذج الاحترافي',
+    shortLabel: 'الاحترافي',
+    icon: Zap,
+    accent: 'bg-blue-50 text-blue-700 border-blue-200',
+    actionTab: 'new-plan-pro',
+  },
+  mit24: {
+    label: 'MIT 24 Steps',
+    shortLabel: 'MIT 24',
+    icon: Rocket,
+    accent: 'bg-amber-50 text-amber-700 border-amber-200',
+    actionTab: 'new-plan-mit24',
+  },
+  bmc: {
+    label: 'بناء نموذج العمل BMC',
+    shortLabel: 'BMC',
+    icon: Workflow,
+    accent: 'bg-violet-50 text-violet-700 border-violet-200',
+    actionTab: 'new-plan-bmc',
+  },
+};
+
+const STATUS_OPTIONS: Array<{ id: StatusFilter; label: string }> = [
+  { id: 'all', label: 'كل الحالات' },
+  { id: 'ready', label: 'جاهز' },
+  { id: 'review', label: 'مراجعة' },
+  { id: 'draft', label: 'مسودة' },
+];
+
+const TYPE_OPTIONS: Array<{ id: TypeFilter; label: string }> = [
+  { id: 'all', label: 'كل النماذج' },
+  { id: 'easy', label: 'النموذج السهل' },
+  { id: 'pro', label: 'النموذج الاحترافي' },
+  { id: 'mit24', label: 'MIT 24 Steps' },
+  { id: 'bmc', label: 'BMC' },
+];
+
 const MOCK_PROJECTS: Project[] = [
   {
     id: 'p1',
     name: 'أكاديمية الذكاء الاصطناعي',
     sector: 'EdTech',
+    type: 'pro',
     status: 'ready',
     progress: { market: 100, product: 90, financial: 95 },
     aiScore: 94,
@@ -68,6 +141,7 @@ const MOCK_PROJECTS: Project[] = [
     id: 'p2',
     name: 'منصة الحصاد الذكي',
     sector: 'AgriTech',
+    type: 'easy',
     status: 'review',
     progress: { market: 85, product: 70, financial: 40 },
     aiScore: 78,
@@ -79,6 +153,7 @@ const MOCK_PROJECTS: Project[] = [
     id: 'p3',
     name: 'بوابة الدفع الإقليمية',
     sector: 'FinTech',
+    type: 'mit24',
     status: 'draft',
     progress: { market: 40, product: 20, financial: 10 },
     aiScore: 45,
@@ -90,11 +165,36 @@ const MOCK_PROJECTS: Project[] = [
     id: 'p4',
     name: 'عقارات فيرتشوال',
     sector: 'Property',
+    type: 'bmc',
     status: 'ready',
     progress: { market: 100, product: 100, financial: 90 },
     aiScore: 91,
     lastEdited: 'منذ يومين',
     marketCap: '$12M',
+    isFavorite: true,
+  },
+  {
+    id: 'p5',
+    name: 'استوديو محتوى عربي',
+    sector: 'Media',
+    type: 'easy',
+    status: 'draft',
+    progress: { market: 55, product: 45, financial: 25 },
+    aiScore: 59,
+    lastEdited: 'قبل 3 أيام',
+    marketCap: '$420K',
+    isFavorite: false,
+  },
+  {
+    id: 'p6',
+    name: 'حل لوجستي للصيدليات',
+    sector: 'Health Logistics',
+    type: 'pro',
+    status: 'review',
+    progress: { market: 88, product: 76, financial: 61 },
+    aiScore: 82,
+    lastEdited: 'قبل 4 أيام',
+    marketCap: '$2.1M',
     isFavorite: true,
   },
 ];
@@ -126,21 +226,37 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'table' | 'grid'>('table');
   const [previewState, setPreviewState] = useState<ProjectsPreviewState>('live');
+  const [typeFilter, setTypeFilter] = useState<TypeFilter>('all');
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>('all');
 
   const filteredProjects = useMemo(() => {
     const query = searchTerm.trim();
-    if (!query) return MOCK_PROJECTS;
 
     return MOCK_PROJECTS.filter((project) => {
-      return project.name.includes(query) || project.sector.includes(query);
+      const matchesSearch =
+        !query || project.name.includes(query) || project.sector.includes(query) || PROJECT_TYPE_META[project.type].label.includes(query);
+      const matchesType = typeFilter === 'all' || project.type === typeFilter;
+      const matchesStatus = statusFilter === 'all' || project.status === statusFilter;
+
+      return matchesSearch && matchesType && matchesStatus;
     });
-  }, [searchTerm]);
+  }, [searchTerm, typeFilter, statusFilter]);
 
   const readyCount = MOCK_PROJECTS.filter((project) => project.status === 'ready').length;
   const favoriteCount = MOCK_PROJECTS.filter((project) => project.isFavorite).length;
+  const typeCounts = useMemo(() => {
+    return {
+      easy: MOCK_PROJECTS.filter((project) => project.type === 'easy').length,
+      pro: MOCK_PROJECTS.filter((project) => project.type === 'pro').length,
+      mit24: MOCK_PROJECTS.filter((project) => project.type === 'mit24').length,
+      bmc: MOCK_PROJECTS.filter((project) => project.type === 'bmc').length,
+    };
+  }, []);
+
+  const activeFilterCount = Number(typeFilter !== 'all') + Number(statusFilter !== 'all') + Number(searchTerm.trim().length > 0);
   const showNoResults =
     previewState === 'no-results' ||
-    (previewState === 'live' && filteredProjects.length === 0 && searchTerm.trim().length > 0);
+    (previewState === 'live' && filteredProjects.length === 0 && (searchTerm.trim().length > 0 || typeFilter !== 'all' || statusFilter !== 'all'));
   const showEmpty = previewState === 'empty';
   const showFirstUse = previewState === 'first-use';
   const showLoading = previewState === 'loading';
@@ -150,6 +266,8 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
 
   const resetDiscovery = () => {
     setSearchTerm('');
+    setTypeFilter('all');
+    setStatusFilter('all');
     setPreviewState('live');
   };
 
@@ -164,7 +282,7 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
                 <Badge variant="secondary">مساحة المشاريع</Badge>
               </div>
               <p className="mt-1 text-sm text-muted-foreground">
-                مراجعة سريعة للمشاريع والعودة إلى آخر نقطة عمل.
+                تنظيم أوضح للمشاريع حسب نوع النموذج والحالة، مع العودة السريعة إلى آخر نقطة عمل.
               </p>
             </div>
 
@@ -175,57 +293,126 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
             </div>
           </div>
 
-          <div className="grid gap-3 px-4 py-3 xl:grid-cols-[minmax(280px,1fr)_auto] xl:items-center">
-            <div className="flex min-w-0 flex-col gap-2 md:flex-row md:items-center">
-              <div className="relative min-w-0 flex-1">
+          <div className="grid gap-3 border-b border-border px-4 py-4">
+            <div className="grid gap-3 xl:grid-cols-[minmax(280px,1.3fr)_220px_220px_auto] xl:items-center">
+              <div className="relative min-w-0">
                 <Search className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
                 <Input
-                  placeholder="ابحث عن مشروع أو قطاع"
+                  placeholder="ابحث عن مشروع أو قطاع أو نوع نموذج"
                   value={searchTerm}
                   onChange={(event) => setSearchTerm(event.target.value)}
-                  className="h-9 pr-9"
+                  className="h-10 pr-9"
                 />
               </div>
 
-              <div className="inline-flex h-9 shrink-0 items-center rounded-lg border border-border bg-muted p-0.5">
-                <Button
-                  aria-pressed={viewMode === 'table'}
-                  variant={viewMode === 'table' ? 'secondary' : 'ghost'}
-                  size="icon-sm"
-                  onClick={() => setViewMode('table')}
-                  title="عرض جدول"
-                >
-                  <List className="size-4" />
-                </Button>
-                <Button
-                  aria-pressed={viewMode === 'grid'}
-                  variant={viewMode === 'grid' ? 'secondary' : 'ghost'}
-                  size="icon-sm"
-                  onClick={() => setViewMode('grid')}
-                  title="عرض بطاقات"
-                >
-                  <Grid3X3 className="size-4" />
+              <FilterField label="نوع النموذج">
+                <Select value={typeFilter} onValueChange={(value) => setTypeFilter(value as TypeFilter)}>
+                  <SelectTrigger className="h-10 text-right">
+                    <SelectValue placeholder="اختر النموذج" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {TYPE_OPTIONS.map((option) => (
+                      <SelectItem key={option.id} value={option.id}>
+                        {option.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </FilterField>
+
+              <FilterField label="الحالة">
+                <Select value={statusFilter} onValueChange={(value) => setStatusFilter(value as StatusFilter)}>
+                  <SelectTrigger className="h-10 text-right">
+                    <SelectValue placeholder="اختر الحالة" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {STATUS_OPTIONS.map((option) => (
+                      <SelectItem key={option.id} value={option.id}>
+                        {option.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </FilterField>
+
+              <div className="flex items-center gap-2 xl:justify-end">
+                <div className="inline-flex h-10 shrink-0 items-center rounded-lg border border-border bg-muted p-0.5">
+                  <Button
+                    aria-pressed={viewMode === 'table'}
+                    variant={viewMode === 'table' ? 'secondary' : 'ghost'}
+                    size="icon-sm"
+                    onClick={() => setViewMode('table')}
+                    title="عرض جدول"
+                  >
+                    <List className="size-4" />
+                  </Button>
+                  <Button
+                    aria-pressed={viewMode === 'grid'}
+                    variant={viewMode === 'grid' ? 'secondary' : 'ghost'}
+                    size="icon-sm"
+                    onClick={() => setViewMode('grid')}
+                    title="عرض بطاقات"
+                  >
+                    <Grid3X3 className="size-4" />
+                  </Button>
+                </div>
+
+                <Button onClick={() => setActiveTab?.('new-plan')} size="sm" className="h-10">
+                  <Plus className="size-4" />
+                  <span>مشروع جديد</span>
                 </Button>
               </div>
-
-              <Button onClick={() => setActiveTab?.('new-plan')} size="sm" className="md:w-auto">
-                <Plus className="size-4" />
-                <span>مشروع جديد</span>
-              </Button>
             </div>
 
-            <div className="flex flex-wrap items-center gap-2 xl:justify-end">
-              <span className="text-xs font-medium text-muted-foreground">حالات الواجهة</span>
-              {PROJECT_PAGE_STATES.map((stateOption) => (
-                <Button
-                  key={stateOption.id}
-                  variant={previewState === stateOption.id ? 'secondary' : 'ghost'}
-                  size="xs"
-                  onClick={() => setPreviewState(stateOption.id)}
-                >
-                  {stateOption.label}
-                </Button>
-              ))}
+            <div className="grid gap-3 xl:grid-cols-[minmax(0,1fr)_auto] xl:items-center">
+              <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-4">
+                {(Object.keys(PROJECT_TYPE_META) as ProjectType[]).map((type) => {
+                  const meta = PROJECT_TYPE_META[type];
+                  const Icon = meta.icon;
+                  const isActive = typeFilter === type;
+
+                  return (
+                    <button
+                      key={type}
+                      type="button"
+                      onClick={() => setTypeFilter((current) => (current === type ? 'all' : type))}
+                      className={`rounded-xl border px-4 py-3 text-right transition-colors ${
+                        isActive ? 'border-primary bg-primary/5' : 'border-border bg-muted/25 hover:bg-muted/45'
+                      }`}
+                    >
+                      <div className="flex items-center justify-between gap-3">
+                        <Badge variant={isActive ? 'secondary' : 'outline'}>{typeCounts[type]}</Badge>
+                        <span className={`flex size-9 items-center justify-center rounded-lg border ${meta.accent}`}>
+                          <Icon className="size-4" />
+                        </span>
+                      </div>
+                      <p className="mt-3 text-sm font-semibold text-foreground">{meta.label}</p>
+                      <p className="mt-1 text-xs text-muted-foreground">
+                        {typeCounts[type]} مشروع داخل هذا المسار
+                      </p>
+                    </button>
+                  );
+                })}
+              </div>
+
+              <div className="flex flex-wrap items-center gap-2 xl:justify-end">
+                {activeFilterCount > 0 ? (
+                  <Button variant="outline" size="sm" onClick={resetDiscovery}>
+                    تصفير الفلاتر
+                  </Button>
+                ) : null}
+                <span className="text-xs font-medium text-muted-foreground">حالات الواجهة</span>
+                {PROJECT_PAGE_STATES.map((stateOption) => (
+                  <Button
+                    key={stateOption.id}
+                    variant={previewState === stateOption.id ? 'secondary' : 'ghost'}
+                    size="xs"
+                    onClick={() => setPreviewState(stateOption.id)}
+                  >
+                    {stateOption.label}
+                  </Button>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -263,7 +450,7 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
           />
         ) : showNoResults ? (
           <NoResultsState
-            description="لا يوجد مشروع يطابق كلمات البحث الحالية."
+            description="لا يوجد مشروع يطابق الفلاتر أو كلمات البحث الحالية."
             onReset={resetDiscovery}
           />
         ) : viewMode === 'table' && shouldShowCollection ? (
@@ -288,7 +475,8 @@ function ProjectsTable({
       <Table dir="rtl">
         <TableHeader>
           <TableRow className="bg-muted/60 hover:bg-muted/60">
-            <TableHead className="h-10 min-w-[280px]">المشروع</TableHead>
+            <TableHead className="h-10 min-w-[320px]">المشروع</TableHead>
+            <TableHead className="h-10 min-w-[160px]">نوع النموذج</TableHead>
             <TableHead className="h-10 min-w-[190px]">التقدم</TableHead>
             <TableHead className="h-10 min-w-[120px]">التقييم</TableHead>
             <TableHead className="h-10 min-w-[120px]">الحالة</TableHead>
@@ -301,7 +489,7 @@ function ProjectsTable({
             <ProjectTableRow key={project.id} project={project} setActiveTab={setActiveTab} />
           ))}
           <TableRow className="hover:bg-muted/30">
-            <TableCell colSpan={6} className="p-3">
+            <TableCell colSpan={7} className="p-3">
               <Button variant="ghost" size="sm" className="w-full" onClick={() => setActiveTab?.('new-plan')}>
                 <Plus className="size-4" />
                 <span>إضافة مشروع جديد</span>
@@ -322,6 +510,7 @@ function ProjectTableRow({
   setActiveTab?: (tab: string) => void;
 }) {
   const averageProgress = getAverageProgress(project);
+  const typeMeta = PROJECT_TYPE_META[project.type];
 
   return (
     <TableRow className="group">
@@ -356,6 +545,11 @@ function ProjectTableRow({
       </TableCell>
 
       <TableCell className="py-3">
+        <ProjectTypeBadge type={project.type} />
+        <p className="mt-1 text-[11px] text-muted-foreground">{typeMeta.shortLabel}</p>
+      </TableCell>
+
+      <TableCell className="py-3">
         <div className="space-y-2">
           <div className="flex items-center justify-between text-xs">
             <span className="font-semibold text-foreground">{averageProgress}%</span>
@@ -380,7 +574,7 @@ function ProjectTableRow({
       </TableCell>
 
       <TableCell className="py-3">
-        <ProjectStatus status={project.status} />
+        <ProjectStatusBadge status={project.status} />
       </TableCell>
 
       <TableCell className="py-3">
@@ -443,7 +637,7 @@ function ProjectGridCard({
   return (
     <Card className="rounded-lg p-4 shadow-none">
       <div className="flex items-start justify-between gap-3">
-        <ProjectStatus status={project.status} />
+        <ProjectStatusBadge status={project.status} />
         <Button
           variant="ghost"
           size="icon-xs"
@@ -464,6 +658,10 @@ function ProjectGridCard({
             {project.sector} · {project.marketCap}
           </p>
         </div>
+      </div>
+
+      <div className="mt-4 flex flex-wrap justify-end gap-2">
+        <ProjectTypeBadge type={project.type} />
       </div>
 
       <div className="mt-4 space-y-2">
@@ -497,7 +695,19 @@ function ProjectGridCard({
   );
 }
 
-function ProjectStatus({ status }: { status: Project['status'] }) {
+function ProjectTypeBadge({ type }: { type: ProjectType }) {
+  const meta = PROJECT_TYPE_META[type];
+  const Icon = meta.icon;
+
+  return (
+    <span className={`inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 text-xs font-medium ${meta.accent}`}>
+      <Icon className="size-3.5" />
+      {meta.shortLabel}
+    </span>
+  );
+}
+
+function ProjectStatusBadge({ status }: { status: ProjectStatus }) {
   if (status === 'ready') {
     return (
       <Badge variant="success" className="gap-1">
@@ -549,6 +759,21 @@ function SmallMetric({
         <span className="text-[11px]">{label}</span>
       </div>
       <p className="truncate text-xs font-semibold text-foreground">{value}</p>
+    </div>
+  );
+}
+
+function FilterField({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="text-right">
+      <p className="mb-1.5 text-xs font-medium text-muted-foreground">{label}</p>
+      {children}
     </div>
   );
 }

@@ -359,7 +359,8 @@ export function DiscoveryCenter({
     >
       <div className="mx-auto flex w-full max-w-[1700px] flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 xl:px-10">
         <Card className="border-border shadow-sm">
-          <CardHeader className="gap-5 lg:flex-row lg:items-start lg:justify-between">
+          <CardHeader className="gap-5">
+            <div className="lg:flex lg:items-start lg:justify-between lg:gap-5">
             <div className="space-y-3">
               <Badge variant="outline" className="w-fit rounded-md px-3 py-1 text-xs font-medium">
                 مساحة القرار الاستثماري
@@ -386,10 +387,73 @@ export function DiscoveryCenter({
                 <div className="mt-2 text-2xl font-semibold text-foreground">{totalNewSectors}</div>
               </div>
             </div>
+            </div>
+
+            <div className="flex flex-col gap-4 rounded-xl border bg-muted/20 p-4">
+              <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+                <div className="min-w-0 text-right">
+                  <div className="text-sm font-semibold text-foreground">شرح استخدام الرادار</div>
+                  <div className="text-xs text-muted-foreground">اضغط على علامة التعجب لعرض خطوات الاستخدام.</div>
+                </div>
+                <div className="flex flex-wrap items-center gap-2">
+                  <Badge variant="outline" className="rounded-md px-3 py-1 font-medium">
+                    النتائج الحالية: {matchingSectors}
+                  </Badge>
+                  <HoverCard openDelay={100}>
+                    <HoverCardTrigger asChild>
+                      <Button
+                        type="button"
+                        variant="outline"
+                        size="icon-sm"
+                        className="shrink-0 rounded-full"
+                        aria-label="كيف تستخدم الرادار؟"
+                      >
+                        <LucideIcons.CircleAlert className="size-4" />
+                      </Button>
+                    </HoverCardTrigger>
+                    <HoverCardContent align="start" className="w-[360px] space-y-3 text-right" dir="rtl">
+                      <div className="space-y-1">
+                        <div className="text-sm font-semibold text-foreground">كيف تستخدم الرادار؟</div>
+                        <p className="text-xs leading-6 text-muted-foreground">
+                          ابدأ من المجموعة الأقرب لفكرة المشروع، ثم ادخل إلى القطاع المناسب لمراجعة السوق وبناء تصور أعمق للفرصة.
+                        </p>
+                      </div>
+                      <div className="space-y-2 text-xs leading-6 text-muted-foreground">
+                        <div className="rounded-lg border bg-muted/30 px-3 py-2">
+                          اختر مجموعة رئيسية تمثل نوع السوق الذي تنوي تحليله قبل الانتقال إلى القطاعات الفرعية.
+                        </div>
+                        <div className="rounded-lg border bg-muted/30 px-3 py-2">
+                          استخدم البحث للوصول السريع عندما يكون لديك اتجاه محدد أو صناعة واضحة.
+                        </div>
+                        <div className="rounded-lg border bg-muted/30 px-3 py-2">
+                          انتقل إلى القطاع المطلوب لبدء القراءة أو استكمال بقية رحلة المشروع داخل المنصة.
+                        </div>
+                      </div>
+                    </HoverCardContent>
+                  </HoverCard>
+                  {searchTerm ? (
+                    <Button type="button" variant="outline" size="sm" onClick={() => setSearchTerm('')}>
+                      مسح البحث
+                    </Button>
+                  ) : null}
+                </div>
+              </div>
+
+              <div className="relative w-full">
+                <LucideIcons.Search className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+                <Input
+                  type="text"
+                  value={searchTerm}
+                  onChange={event => setSearchTerm(event.target.value)}
+                  placeholder="ابحث عن قطاع، سوق، أو فرصة استثمارية"
+                  className="pr-10 text-right"
+                />
+              </div>
+            </div>
           </CardHeader>
         </Card>
 
-        <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_340px]">
+        <div className="grid gap-6">
           <div className="space-y-6">
             <div className="hidden items-center justify-between gap-3 rounded-xl border border-border bg-card px-4 py-3 shadow-sm">
               <div className="min-w-0 text-right">
@@ -429,7 +493,7 @@ export function DiscoveryCenter({
                 </HoverCardContent>
               </HoverCard>
             </div>
-            <Card className="border-border shadow-sm">
+            <Card className="hidden border-border shadow-sm">
               <CardContent className="flex flex-col gap-4 p-4 sm:p-5 lg:flex-row lg:items-center lg:justify-between">
                 <div className="relative w-full lg:max-w-xl">
                   <LucideIcons.Search className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
@@ -570,7 +634,7 @@ export function DiscoveryCenter({
             )}
           </div>
 
-          <div className="space-y-4">
+          <div className="hidden space-y-4">
             <div className="flex items-center justify-between gap-3 rounded-xl border border-border bg-card px-4 py-3 shadow-sm">
               <div className="min-w-0 text-right">
                 <div className="text-sm font-semibold text-foreground">شرح استخدام الرادار</div>

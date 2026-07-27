@@ -1,261 +1,452 @@
-
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import {
-  ChevronDown, ChevronLeft, CheckCircle2,
-  Target, Users, DollarSign, TrendingUp, BarChart2,
-  ArrowUpRight
+  CheckCircle2,
+  ChevronDown,
+  ChevronLeft,
+  DollarSign,
+  Lightbulb,
+  Rocket,
+  Target,
+  TrendingUp,
+  Users,
 } from 'lucide-react';
 
-interface StepData { id: number; value: string; }
+import { Badge } from '@/components/ui/Badge';
+import { Button } from '@/components/ui/Button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Textarea } from '@/components/ui/textarea';
+import { cn } from '@/lib/utils';
 
-const PHASES = [
+type Step = {
+  id: number;
+  title: string;
+  hint: string;
+};
+
+type Phase = {
+  id: number;
+  label: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+  tone: {
+    soft: string;
+    text: string;
+    strong: string;
+  };
+  steps: Step[];
+};
+
+type StepAnswer = {
+  id: number;
+  value: string;
+};
+
+const PHASES: Phase[] = [
   {
-    id: 1, label: 'اكتشاف العميل', color: 'indigo', icon: <Users size={15} />,
+    id: 1,
+    label: 'اكتشاف العميل',
+    description: 'فهم السوق المستهدف وتحديد نقطة الدخول الأولى.',
+    icon: Users,
+    tone: {
+      soft: 'bg-sky-50',
+      text: 'text-sky-700',
+      strong: 'bg-sky-600',
+    },
     steps: [
-      { id: 1,  title: 'تقسيم السوق (Market Segmentation)',         hint: 'حدد 6-12 شريحة سوقية ممكنة. ما الفئات التي يمكن للمشروع أن يخدمها؟' },
-      { id: 2,  title: 'اختيار سوق الانطلاق (Beachhead Market)',    hint: 'أي شريحة واحدة ستركز عليها أولاً للاختراق والنمو؟ ولماذا؟' },
-      { id: 3,  title: 'بناء ملف المستخدم النهائي',                 hint: 'صف المستخدم: عمره، يومه المعتاد، أولوياته، ومشكلته الجوهرية.' },
-      { id: 4,  title: 'حجم السوق الكلي (TAM)',                     hint: 'قدّر عدد العملاء المحتملين × متوسط القيمة السنوية لكل عميل.' },
+      { id: 1, title: 'تقسيم السوق', hint: 'حدد الشرائح السوقية الممكنة، ثم صف الفروق الجوهرية بينها.' },
+      { id: 2, title: 'اختيار سوق الانطلاق', hint: 'اختر شريحة واحدة فقط لتكون البداية، ووضح لماذا هي الأنسب.' },
+      { id: 3, title: 'بناء ملف المستخدم النهائي', hint: 'صف العميل المثالي، أولوياته، وسياق استخدامه للمشروع.' },
+      { id: 4, title: 'تقدير الحجم الكلي للسوق', hint: 'قدّر إجمالي السوق القابل للخدمة بلغة كمية واضحة.' },
     ],
   },
   {
-    id: 2, label: 'تحليل الفرصة', color: 'blue', icon: <BarChart2 size={15} />,
+    id: 2,
+    label: 'تحليل القيمة',
+    description: 'تحويل فهم العميل إلى مشكلة وعرض قيمة واضح.',
+    icon: Lightbulb,
+    tone: {
+      soft: 'bg-violet-50',
+      text: 'text-violet-700',
+      strong: 'bg-violet-600',
+    },
     steps: [
-      { id: 5,  title: 'رسم شخصية المستخدم (Persona)',             hint: 'ابتكر شخصية خيالية تمثل عميلك المثالي باسم وقصة وتفاصيل دقيقة.' },
-      { id: 6,  title: 'رحلة الاستخدام الكاملة (Full Life Cycle)', hint: 'كيف يكتشف المنتج؟ كيف يستخدمه؟ ماذا يفعل بعد ذلك؟' },
-      { id: 7,  title: 'مواصفات المنتج عالية المستوى',             hint: 'ما الوظائف الـ 3-5 الأساسية التي تجعل المنتج يعمل لهذا المستخدم؟' },
-      { id: 8,  title: 'قياس القيمة المقدَّمة',                    hint: 'كم يوفّر المنتج من وقت أو مال أو جهد لكل عميل سنوياً؟' },
+      { id: 5, title: 'رسم شخصية العميل', hint: 'أنشئ Persona واضحة تعكس العميل الأقرب للواقع.' },
+      { id: 6, title: 'رحلة الاستخدام الكاملة', hint: 'اشرح كيف يكتشف العميل الحل ويستخدمه ويقيّمه.' },
+      { id: 7, title: 'صياغة الوظائف الأساسية', hint: 'حدد الوظائف الأساسية التي لا بد أن ينجزها المنتج.' },
+      { id: 8, title: 'قياس القيمة المقدمة', hint: 'صف القيمة بلغة وقت أو مال أو جهد أو دقة أو سرعة.' },
     ],
   },
   {
-    id: 3, label: 'النموذج والتسعير', color: 'emerald', icon: <DollarSign size={15} />,
+    id: 3,
+    label: 'النموذج والإيراد',
+    description: 'تحديد ما الذي يباع ولمن وبأي منطق سعري.',
+    icon: DollarSign,
+    tone: {
+      soft: 'bg-emerald-50',
+      text: 'text-emerald-700',
+      strong: 'bg-emerald-600',
+    },
     steps: [
-      { id: 9,  title: 'تحديد أول 10 عملاء',                      hint: 'أذكرهم بأسمائهم أو فئاتهم المحددة. من يمكنك الاتصال به اليوم؟' },
-      { id: 10, title: 'تحديد الجوهر الأساسي للمنتج (Core)',       hint: 'ما الشيء الواحد الذي يجب أن يفعله منتجك بشكل لا يُضاهى؟' },
-      { id: 11, title: 'تصميم نموذج الإيرادات',                    hint: 'اشتراك؟ بيع مباشر؟ عمولة؟ freemium؟ وضّح المنطق.' },
-      { id: 12, title: 'استراتيجية التسعير',                       hint: 'ما السعر المقترح؟ كيف توصلت لهذا الرقم؟ ما نموذج المقارنة؟' },
+      { id: 9, title: 'تحديد أول 10 عملاء', hint: 'اكتب العملاء أو الحسابات الأقرب للوصول في البداية.' },
+      { id: 10, title: 'تحديد جوهر المنتج', hint: 'ما الشيء الواحد الذي يجب أن ينجزه المنتج بشكل متفوق؟' },
+      { id: 11, title: 'تصميم نموذج الإيرادات', hint: 'حدد منطق الدفع: اشتراك أو ترخيص أو عمولة أو بيع مباشر.' },
+      { id: 12, title: 'وضع استراتيجية التسعير', hint: 'اقترح السعر ومنطق الوصول إليه والمقارنة التي تدعمه.' },
     ],
   },
   {
-    id: 4, label: 'التحقق والإطلاق', color: 'amber', icon: <TrendingUp size={15} />,
+    id: 4,
+    label: 'التحقق التجاري',
+    description: 'اختبار صلاحية النموذج من الناحية الاقتصادية.',
+    icon: TrendingUp,
+    tone: {
+      soft: 'bg-amber-50',
+      text: 'text-amber-700',
+      strong: 'bg-amber-600',
+    },
     steps: [
-      { id: 13, title: 'قيمة عمر العميل (LTV)',                    hint: 'ما متوسط الإيراد من كل عميل طوال فترة تعامله مع المشروع؟' },
-      { id: 14, title: 'تكلفة اكتساب العميل (COCA)',              hint: 'كم يكلف الحصول على عميل واحد؟ ما نسبة LTV/COCA؟' },
-      { id: 15, title: 'الافتراضات الرئيسية',                     hint: 'ما الافتراضات التي إذا كانت خاطئة ستُفشل الفكرة؟' },
-      { id: 16, title: 'المنتج الأدنى قابلية البيع (MVBP)',        hint: 'أبسط نسخة يمكن بيعها اليوم لتحقيق إيراد فعلي وتغذية راجعة؟' },
+      { id: 13, title: 'حساب قيمة عمر العميل', hint: 'قدّر الإيراد المتوقع من العميل طوال علاقته بالمشروع.' },
+      { id: 14, title: 'حساب تكلفة اكتساب العميل', hint: 'قدّر تكلفة الوصول إلى عميل واحد رابح وقارنها بالعائد.' },
+      { id: 15, title: 'تحديد الفرضيات الحرجة', hint: 'حدد الفرضيات الأخطر التي قد تضعف النموذج إذا ثبت خطؤها.' },
+      { id: 16, title: 'صياغة النسخة القابلة للبيع', hint: 'صف أبسط نسخة تحقق قيمة قابلة للبيع الآن.' },
     ],
   },
   {
-    id: 5, label: 'خطة النمو', color: 'rose', icon: <Target size={15} />,
+    id: 5,
+    label: 'أفضلية السوق',
+    description: 'تثبيت عناصر التفوق والتميّز أمام المنافسة.',
+    icon: Target,
+    tone: {
+      soft: 'bg-rose-50',
+      text: 'text-rose-700',
+      strong: 'bg-rose-600',
+    },
     steps: [
-      { id: 17, title: 'مؤشرات النجاح (Milestones)',               hint: 'ما الأرقام الملموسة التي تعرف بها أن المشروع ينجح؟' },
-      { id: 18, title: 'خارطة طريق المنتج (Roadmap)',              hint: 'ما الميزات في الـ 3 و6 و12 شهراً القادمة؟' },
-      { id: 19, title: 'متطلبات التمويل',                          hint: 'كم تحتاج؟ كيف ستنفقه؟ ما المرحلة التمويلية المناسبة؟' },
-      { id: 20, title: 'استراتيجية الخروج أو التوسع',              hint: 'هل الهدف الاستحواذ؟ IPO؟ التوسع الجغرافي؟ رؤيتك بعد 5 سنوات.' },
+      { id: 17, title: 'رسم المشهد التنافسي', hint: 'من البدائل الحالية وكيف يقارن العميل بينها وبين مشروعك؟' },
+      { id: 18, title: 'بناء الميزة التنافسية', hint: 'ما الذي يجعل المشروع أصعب في النسخ أو اللحاق لاحقاً؟' },
+      { id: 19, title: 'تصميم آلية البيع الأولى', hint: 'اشرح كيف ستتم أول عملية بيع من الوصول إلى الإغلاق.' },
+      { id: 20, title: 'تحديد مؤشرات النجاح', hint: 'اختر مؤشرات تشغيلية وتجارية واضحة لقياس التقدم.' },
+    ],
+  },
+  {
+    id: 6,
+    label: 'الإطلاق والنمو',
+    description: 'تحويل النموذج إلى خطة تنفيذ وتمويل وتوسع.',
+    icon: Rocket,
+    tone: {
+      soft: 'bg-slate-100',
+      text: 'text-slate-700',
+      strong: 'bg-slate-900',
+    },
+    steps: [
+      { id: 21, title: 'خارطة طريق المنتج', hint: 'ما الذي سيبنى خلال 3 و6 و12 شهراً؟' },
+      { id: 22, title: 'تحديد متطلبات التمويل', hint: 'كم يحتاج المشروع من تمويل، ولماذا، وكيف سيوزع؟' },
+      { id: 23, title: 'خطة التوسع', hint: 'ما السوق أو الشريحة أو الدولة التالية بعد إثبات البداية؟' },
+      { id: 24, title: 'الرؤية خلال 24 شهراً', hint: 'صف أين يجب أن يكون المشروع بعد عامين من الآن.' },
     ],
   },
 ];
 
-const colorMap: Record<string, { bg: string; text: string; border: string; activeBg: string }> = {
-  indigo:  { bg: 'bg-indigo-50',  text: 'text-indigo-600',  border: 'border-indigo-200',  activeBg: 'bg-indigo-600'  },
-  blue:    { bg: 'bg-blue-50',    text: 'text-blue-600',    border: 'border-blue-200',    activeBg: 'bg-blue-600'    },
-  emerald: { bg: 'bg-emerald-50', text: 'text-emerald-600', border: 'border-emerald-200', activeBg: 'bg-emerald-600' },
-  amber:   { bg: 'bg-amber-50',   text: 'text-amber-600',   border: 'border-amber-200',   activeBg: 'bg-amber-600'   },
-  rose:    { bg: 'bg-rose-50',    text: 'text-rose-600',    border: 'border-rose-200',    activeBg: 'bg-rose-600'    },
-};
+const INITIAL_ANSWERS: StepAnswer[] = PHASES.flatMap((phase) =>
+  phase.steps.map((step) => ({
+    id: step.id,
+    value: '',
+  })),
+);
 
 export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) => {
-  const [steps, setSteps] = useState<StepData[]>(
-    PHASES.flatMap(p => p.steps.map(s => ({ id: s.id, value: '' })))
-  );
+  const [answers, setAnswers] = useState<StepAnswer[]>(INITIAL_ANSWERS);
   const [activePhase, setActivePhase] = useState(1);
-  const [openStep, setOpenStep]       = useState<number | null>(1);
+  const [openStep, setOpenStep] = useState(1);
 
-  const getValue = (id: number) => steps.find(s => s.id === id)?.value ?? '';
-  const setValue = (id: number, v: string) =>
-    setSteps(prev => prev.map(s => s.id === id ? { ...s, value: v } : s));
+  const getValue = (id: number) => answers.find((answer) => answer.id === id)?.value ?? '';
 
-  const filledCount = steps.filter(s => s.value.trim()).length;
-  const totalSteps  = steps.length;
-  const pct         = Math.round((filledCount / totalSteps) * 100);
+  const setValue = (id: number, value: string) => {
+    setAnswers((current) =>
+      current.map((answer) => (answer.id === id ? { ...answer, value } : answer)),
+    );
+  };
 
-  const currentPhase = PHASES.find(p => p.id === activePhase)!;
-  const c = colorMap[currentPhase.color];
+  const totalSteps = answers.length;
+  const filledCount = answers.filter((answer) => answer.value.trim().length > 0).length;
+  const completion = Math.round((filledCount / totalSteps) * 100);
 
-  const phaseFilled = (phase: typeof PHASES[0]) =>
-    phase.steps.filter(s => getValue(s.id).trim()).length;
+  const currentPhase = PHASES.find((phase) => phase.id === activePhase) ?? PHASES[0];
+
+  const currentStepIndex = useMemo(
+    () => currentPhase.steps.findIndex((step) => step.id === openStep),
+    [currentPhase.steps, openStep],
+  );
+
+  const currentStep = currentPhase.steps[currentStepIndex] ?? currentPhase.steps[0];
+
+  const phaseProgress = (phase: Phase) => {
+    const filled = phase.steps.filter((step) => getValue(step.id).trim().length > 0).length;
+    return {
+      filled,
+      percent: Math.round((filled / phase.steps.length) * 100),
+    };
+  };
+
+  const moveToStep = (phaseId: number, stepId: number) => {
+    setActivePhase(phaseId);
+    setOpenStep(stepId);
+  };
+
+  const goToAdjacentStep = (direction: 'previous' | 'next') => {
+    if (direction === 'previous') {
+      if (currentStepIndex > 0) {
+        setOpenStep(currentPhase.steps[currentStepIndex - 1].id);
+        return;
+      }
+
+      const previousPhase = PHASES.find((phase) => phase.id === currentPhase.id - 1);
+      if (previousPhase) {
+        moveToStep(previousPhase.id, previousPhase.steps[previousPhase.steps.length - 1].id);
+      }
+      return;
+    }
+
+    if (currentStepIndex < currentPhase.steps.length - 1) {
+      setOpenStep(currentPhase.steps[currentStepIndex + 1].id);
+      return;
+    }
+
+    const nextPhase = PHASES.find((phase) => phase.id === currentPhase.id + 1);
+    if (nextPhase) {
+      moveToStep(nextPhase.id, nextPhase.steps[0].id);
+    }
+  };
 
   return (
-    <div dir="rtl" className="w-full max-w-6xl mx-auto flex flex-col items-center px-4 sm:px-6 md:px-8 xl:px-14 py-4 sm:py-6 gap-4 sm:gap-6 animate-in fade-in duration-500 overflow-x-hidden">
-
-      {/* ── Header ─────────────────────────────────────────────── */}
-      <div className="w-full flex items-start sm:items-center justify-between flex-wrap gap-3">
-        <div className="min-w-0">
-          <h2 className="text-base sm:text-lg font-black text-slate-900 leading-tight">MIT Disciplined Entrepreneurship</h2>
-          <p className="text-xs sm:text-sm font-semibold text-slate-400 leading-snug">منهجية بيل أوليت — 20 خطوة منضبطة لبناء مشروع ناجح</p>
-        </div>
-        <div className="flex items-center gap-3 sm:gap-4">
-          <div className="flex items-center gap-2">
-            <div className="w-20 sm:w-32 h-1.5 sm:h-2 bg-slate-100 rounded-full overflow-hidden">
-              <div className="h-full bg-indigo-600 rounded-full transition-all duration-500" style={{ width: `${pct}%` }} />
+    <div
+      dir="rtl"
+      className="mx-auto flex w-full max-w-[1440px] flex-col gap-5 px-4 py-6 sm:px-6 lg:px-8"
+    >
+      <Card className="border-0 bg-background shadow-none">
+        <CardHeader className="gap-5 px-0 pt-0">
+          <div className="flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between">
+            <div className="space-y-3">
+              <Badge variant="secondary" className="w-fit rounded-md px-3 py-1 font-medium">
+                منهجية بناء مشروع منضبطة
+              </Badge>
+              <div className="space-y-2">
+                <CardTitle className="text-2xl leading-tight sm:text-3xl">MIT 24 Steps</CardTitle>
+                <CardDescription className="max-w-3xl text-sm leading-7 sm:text-[15px]">
+                  مسار منظم لتحويل فكرة المشروع إلى نموذج قابل للتنفيذ عبر 24 خطوة تغطي العميل،
+                  القيمة، الإيراد، التحقق، والجاهزية للنمو.
+                </CardDescription>
+              </div>
             </div>
-            <span className="text-xs font-black text-slate-400 whitespace-nowrap">{filledCount}/{totalSteps}</span>
+
+            <div className="grid w-full gap-3 sm:grid-cols-3 xl:w-[560px]">
+              <div className="rounded-xl bg-muted/40 p-4">
+                <div className="text-xs font-medium text-muted-foreground">إجمالي الخطوات</div>
+                <div className="mt-2 text-2xl font-semibold text-foreground">{totalSteps}</div>
+              </div>
+              <div className="rounded-xl bg-muted/40 p-4">
+                <div className="text-xs font-medium text-muted-foreground">خطوات مكتملة</div>
+                <div className="mt-2 text-2xl font-semibold text-foreground">{filledCount}</div>
+              </div>
+              <div className="rounded-xl bg-muted/40 p-4">
+                <div className="text-xs font-medium text-muted-foreground">نسبة الإنجاز</div>
+                <div className="mt-2 text-2xl font-semibold text-foreground">{completion}%</div>
+              </div>
+            </div>
           </div>
-          <button
-            onClick={onComplete}
-            className={`flex items-center gap-1.5 px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-black transition-all active:scale-95 whitespace-nowrap ${
-              pct >= 40
-                ? 'bg-indigo-600 text-white shadow-md shadow-indigo-100 hover:bg-indigo-700'
-                : 'bg-slate-100 text-slate-300 cursor-not-allowed'
-            }`}
-          >
-            تحليل النتائج
-            <ArrowUpRight size={13} />
-          </button>
-        </div>
-      </div>
 
-      {/* ── Phase Tabs — wrapped on mobile ──────────────────── */}
-      <div className="flex flex-wrap gap-2 pb-1 w-full justify-center sm:justify-start">
-        {PHASES.map(phase => {
-          const phC = colorMap[phase.color];
-          const filled = phaseFilled(phase);
-          const isActive = activePhase === phase.id;
-          return (
-            <button
-              key={phase.id}
-              onClick={() => { setActivePhase(phase.id); setOpenStep(phase.steps[0].id); }}
-              className={`flex flex-col items-center gap-1 sm:gap-1.5 p-2 sm:p-3 rounded-xl sm:rounded-2xl text-center transition-all border shrink-0 flex-1 min-w-[30%] sm:min-w-[80px] ${
-                isActive
-                  ? `${phC.bg} ${phC.text} ${phC.border} shadow-sm`
-                  : 'bg-slate-50 text-slate-500 border-transparent hover:bg-slate-100'
-              }`}
-            >
-              <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl flex items-center justify-center ${isActive ? phC.activeBg + ' text-white' : 'bg-white text-slate-400 shadow-sm'}`}>
-                {phase.icon}
-              </div>
-              <span className="text-[9px] sm:text-[10px] font-black leading-tight text-center line-clamp-2">{phase.label}</span>
-              <div className="flex items-center gap-1 w-full justify-center">
-                <div className="w-6 sm:w-10 h-1 bg-white/50 rounded-full overflow-hidden">
-                  <div
-                    className={`h-full rounded-full transition-all ${isActive ? phC.activeBg : 'bg-emerald-400'}`}
-                    style={{ width: `${(filled / phase.steps.length) * 100}%` }}
-                  />
+          <div className="rounded-2xl bg-muted/30 px-4 py-4 sm:px-5">
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+              <div className="space-y-2">
+                <div className="text-sm font-semibold text-foreground">مستوى التقدم العام</div>
+                <div className="flex items-center gap-3">
+                  <div className="h-2.5 w-48 overflow-hidden rounded-full bg-muted sm:w-72">
+                    <div
+                      className="h-full rounded-full bg-primary transition-all duration-300"
+                      style={{ width: `${completion}%` }}
+                    />
+                  </div>
+                  <span className="text-sm font-semibold text-foreground">{completion}%</span>
                 </div>
-                <span className={`text-[8px] sm:text-[9px] font-black ${isActive ? phC.text : filled === phase.steps.length ? 'text-emerald-500' : 'text-slate-300'}`}>
-                  {filled}/{phase.steps.length}
-                </span>
               </div>
-            </button>
-          );
-        })}
-      </div>
 
-      {/* ── Steps Accordion ────────────────────────────────────── */}
-      <div className="space-y-2 sm:space-y-3">
-        {currentPhase.steps.map((step, sIdx) => {
-          const isOpen = openStep === step.id;
-          const val = getValue(step.id);
-          const isDone = val.trim() !== '';
+              <div className="flex flex-wrap items-center gap-2">
+                <Badge variant="secondary" className="rounded-md px-3 py-1 font-medium">
+                  الخطوة الحالية: {currentStep.id}
+                </Badge>
+                <Button type="button" onClick={onComplete} disabled={filledCount < 8}>
+                  تحليل النتائج
+                </Button>
+              </div>
+            </div>
+          </div>
+        </CardHeader>
+      </Card>
 
-          return (
-            <div
-              key={step.id}
-              className={`rounded-xl sm:rounded-2xl overflow-hidden transition-all border ${
-                isOpen
-                  ? `border-2 ${c.border} shadow-sm`
-                  : isDone
-                  ? 'border-emerald-100 bg-emerald-50/30'
-                  : 'border-slate-100 bg-white'
-              }`}
-            >
-              {/* Step Header */}
+      <Card className="border-0 bg-muted/20 shadow-none">
+        <CardHeader className="pb-4">
+          <CardTitle className="text-lg">مراحل المنهجية</CardTitle>
+          <CardDescription>
+            اختر المرحلة التي تريد العمل عليها. كل مرحلة تحتوي 4 خطوات واضحة.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+          {PHASES.map((phase) => {
+            const progress = phaseProgress(phase);
+            const isActive = phase.id === activePhase;
+            const Icon = phase.icon;
+
+            return (
               <button
-                className={`w-full flex items-center gap-3 sm:gap-4 p-4 sm:p-5 text-right transition-all ${
-                  isOpen ? 'bg-white' : 'hover:bg-slate-50/80 active:bg-slate-50'
-                }`}
-                onClick={() => setOpenStep(isOpen ? null : step.id)}
+                key={phase.id}
+                type="button"
+                onClick={() => moveToStep(phase.id, phase.steps[0].id)}
+                className={cn(
+                  'flex flex-col gap-3 rounded-xl p-4 text-right transition-colors',
+                  isActive ? `${phase.tone.soft} shadow-sm` : 'bg-background/80 hover:bg-background',
+                )}
               >
-                <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl flex items-center justify-center shrink-0 text-sm font-black transition-all ${
-                  isDone
-                    ? 'bg-emerald-500 text-white'
-                    : isOpen
-                    ? `${c.activeBg} text-white`
-                    : 'bg-slate-100 text-slate-400'
-                }`}>
-                  {isDone ? <CheckCircle2 size={16} /> : step.id}
-                </div>
-
-                <div className="flex-1 text-right min-w-0">
-                  <p className={`text-xs sm:text-sm font-black leading-snug ${isOpen ? 'text-slate-900' : isDone ? 'text-slate-600' : 'text-slate-700'}`}>
-                    {step.title}
-                  </p>
-                  {isDone && !isOpen && (
-                    <p className="text-xs font-semibold text-slate-400 mt-0.5 line-clamp-1 leading-snug">{val}</p>
-                  )}
-                </div>
-
-                <div className="shrink-0">
-                  {isOpen
-                    ? <ChevronDown size={15} className={c.text} />
-                    : <ChevronLeft size={15} className="text-slate-300" />
-                  }
-                </div>
-              </button>
-
-              {/* Step Body */}
-              {isOpen && (
-                <div className="px-4 sm:px-5 pb-4 sm:pb-5 bg-white animate-in slide-in-from-top-1 duration-200">
-                  <p className={`text-xs sm:text-sm font-semibold leading-relaxed mb-3 sm:mb-4 pr-3 sm:pr-4 border-r-2 ${c.border} ${c.text}`}>
-                    {step.hint}
-                  </p>
-                  <textarea
-                    value={val}
-                    onChange={e => setValue(step.id, e.target.value)}
-                    placeholder="أدخل إجابتك هنا بوضوح ودقة..."
-                    className={`w-full min-h-[130px] sm:min-h-[160px] bg-slate-50 border border-slate-100 focus:border-${currentPhase.color}-200 focus:bg-white rounded-xl p-3 sm:p-4 text-xs sm:text-sm font-medium text-slate-700 outline-none resize-none placeholder:text-slate-300 transition-all leading-relaxed`}
-                    autoFocus
-                  />
-                  <div className="flex items-center justify-between mt-2 sm:mt-3">
-                    <span className="text-[10px] font-black text-slate-300">{val.length} حرف</span>
-                    <div className="flex gap-2">
-                      {sIdx > 0 && (
-                        <button
-                          onClick={() => setOpenStep(currentPhase.steps[sIdx - 1].id)}
-                          className="flex items-center gap-1 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg sm:rounded-xl text-xs font-black bg-slate-100 text-slate-500 hover:bg-slate-200 transition-all active:scale-95"
-                        >
-                          السابقة
-                        </button>
-                      )}
-                      {sIdx < currentPhase.steps.length - 1 ? (
-                        <button
-                          onClick={() => setOpenStep(currentPhase.steps[sIdx + 1].id)}
-                          className={`flex items-center gap-1 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl text-xs font-black ${c.bg} ${c.text} hover:opacity-80 transition-all active:scale-95`}
-                        >
-                          الخطوة التالية
-                          <ChevronLeft size={12} />
-                        </button>
-                      ) : activePhase < PHASES.length ? (
-                        <button
-                          onClick={() => {
-                            const next = PHASES[activePhase];
-                            setActivePhase(next.id);
-                            setOpenStep(next.steps[0].id);
-                          }}
-                          className="flex items-center gap-1 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg sm:rounded-xl text-xs font-black bg-indigo-600 text-white hover:bg-indigo-700 transition-all active:scale-95"
-                        >
-                          المرحلة التالية
-                          <ChevronLeft size={12} />
-                        </button>
-                      ) : null}
-                    </div>
+                <div className="flex items-start justify-between gap-3">
+                  <div className="space-y-1">
+                    <div className="text-sm font-semibold text-foreground">{phase.label}</div>
+                    <div className="text-xs leading-6 text-muted-foreground">{phase.description}</div>
+                  </div>
+                  <div
+                    className={cn(
+                      'flex size-9 shrink-0 items-center justify-center rounded-lg bg-background',
+                      phase.tone.text,
+                    )}
+                  >
+                    <Icon className="size-4" />
                   </div>
                 </div>
-              )}
+
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between text-xs text-muted-foreground">
+                    <span>{progress.filled}/4</span>
+                    <span>{progress.percent}%</span>
+                  </div>
+                  <div className="h-2 overflow-hidden rounded-full bg-background">
+                    <div
+                      className={cn('h-full rounded-full transition-all', phase.tone.strong)}
+                      style={{ width: `${progress.percent}%` }}
+                    />
+                  </div>
+                </div>
+              </button>
+            );
+          })}
+        </CardContent>
+      </Card>
+
+      <Card className="border-0 bg-background shadow-none">
+        <CardHeader className="pb-4 px-0">
+          <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+            <div className="space-y-1">
+              <CardTitle className="text-lg">{currentPhase.label}</CardTitle>
+              <CardDescription>{currentPhase.description}</CardDescription>
             </div>
-          );
-        })}
-      </div>
+            <Badge variant="secondary" className="w-fit rounded-md px-3 py-1 font-medium">
+              {phaseProgress(currentPhase).filled} من {currentPhase.steps.length} مكتملة
+            </Badge>
+          </div>
+        </CardHeader>
+        <CardContent className="space-y-3 px-0">
+          {currentPhase.steps.map((step) => {
+            const value = getValue(step.id);
+            const isOpen = openStep === step.id;
+            const isCompleted = value.trim().length > 0;
+
+            return (
+              <div
+                key={step.id}
+                className={cn(
+                  'overflow-hidden rounded-2xl bg-muted/20 transition-colors',
+                  isOpen && `${currentPhase.tone.soft}`,
+                  isCompleted && !isOpen && 'bg-emerald-50/30',
+                )}
+              >
+                <button
+                  type="button"
+                  onClick={() => setOpenStep(isOpen ? -1 : step.id)}
+                  className="flex w-full items-start gap-3 px-4 py-4 text-right hover:bg-background/40"
+                >
+                  <div
+                    className={cn(
+                      'mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-lg text-sm font-semibold',
+                      isCompleted
+                        ? 'bg-emerald-500 text-white'
+                        : isOpen
+                          ? `${currentPhase.tone.strong} text-white`
+                          : 'bg-background text-muted-foreground',
+                    )}
+                  >
+                    {isCompleted ? <CheckCircle2 className="size-4" /> : step.id}
+                  </div>
+
+                  <div className="min-w-0 flex-1 space-y-1">
+                    <div className="text-sm font-semibold text-foreground">{step.title}</div>
+                    {isCompleted && !isOpen ? (
+                      <div className="line-clamp-1 text-xs leading-6 text-muted-foreground">{value}</div>
+                    ) : (
+                      <div className="text-xs leading-6 text-muted-foreground">
+                        اضغط لفتح هذه الخطوة وتحرير الإجابة.
+                      </div>
+                    )}
+                  </div>
+
+                  <ChevronDown
+                    className={cn(
+                      'mt-1 size-4 shrink-0 text-muted-foreground transition-transform',
+                      isOpen && 'rotate-180',
+                    )}
+                  />
+                </button>
+
+                {isOpen ? (
+                  <div className="px-4 pb-4">
+                    <div
+                      className={cn(
+                        'mb-4 rounded-xl px-3 py-3 text-sm leading-7',
+                        currentPhase.tone.soft,
+                        currentPhase.tone.text,
+                      )}
+                    >
+                      {step.hint}
+                    </div>
+
+                    <Textarea
+                      value={value}
+                      onChange={(event) => setValue(step.id, event.target.value)}
+                      placeholder="اكتب إجابتك هنا بشكل واضح ومباشر..."
+                      className="min-h-[170px] resize-y border-0 bg-background text-right leading-7 shadow-none focus-visible:ring-1"
+                    />
+
+                    <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                      <div className="text-xs text-muted-foreground">عدد الأحرف: {value.length}</div>
+
+                      <div className="flex flex-wrap items-center gap-2">
+                        <Button
+                          type="button"
+                          variant="outline"
+                          size="sm"
+                          onClick={() => goToAdjacentStep('previous')}
+                          disabled={currentPhase.id === 1 && currentStep.id === 1}
+                        >
+                          السابقة
+                        </Button>
+                        <Button type="button" size="sm" onClick={() => goToAdjacentStep('next')}>
+                          التالية
+                          <ChevronLeft className="size-4" />
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                ) : null}
+              </div>
+            );
+          })}
+        </CardContent>
+      </Card>
     </div>
   );
 };

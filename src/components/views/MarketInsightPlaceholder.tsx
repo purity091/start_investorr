@@ -1,5 +1,8 @@
 import React from 'react';
-import { ArrowRight, Compass, Sparkles } from 'lucide-react';
+import { ArrowRight, Compass, FileSearch, LayoutDashboard, Route } from 'lucide-react';
+import { Badge } from '@/components/ui/Badge';
+import { Button } from '@/components/ui/Button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
 
 interface MarketInsightPlaceholderProps {
   title: string;
@@ -8,6 +11,12 @@ interface MarketInsightPlaceholderProps {
   setActiveTab: (tab: string) => void;
 }
 
+const handoffItems = [
+  { title: 'حالة الصفحة', value: 'واجهة انتقالية مرتبطة', icon: FileSearch },
+  { title: 'الطبقة التالية', value: 'العودة إلى مكتبة القطاعات', icon: Compass },
+  { title: 'هدف المستخدم', value: 'لا توجد صفحة يتيمة في الرحلة', icon: Route },
+];
+
 export const MarketInsightPlaceholder: React.FC<MarketInsightPlaceholderProps> = ({
   title,
   category,
@@ -15,70 +24,58 @@ export const MarketInsightPlaceholder: React.FC<MarketInsightPlaceholderProps> =
   setActiveTab,
 }) => {
   return (
-    <div
-      dir="rtl"
-      className="min-h-screen bg-white px-5 py-8 sm:px-8 lg:px-12"
-      style={{ fontFamily: '"IBM Plex Sans Arabic", sans-serif' }}
-    >
-      <div className="mx-auto max-w-6xl">
-        <div className="overflow-hidden rounded-[2rem] border border-slate-100 bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 p-8 text-white shadow-2xl shadow-slate-200/60">
-          <div className="mb-6 flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
-              <Compass size={24} />
-            </div>
-            <div>
-              <p className="text-[11px] font-black uppercase tracking-[0.3em] text-indigo-200">
-                {category}
-              </p>
-              <h1 className="mt-1 text-2xl font-black tracking-tight sm:text-3xl">{title}</h1>
+    <main className="app-page-shell-wide space-y-6 text-right" dir="rtl">
+      <section className="rounded-xl bg-card p-5 shadow-sm ring-1 ring-border/60">
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-3xl space-y-3">
+            <Badge variant="secondary" className="w-fit">{category}</Badge>
+            <div className="space-y-2">
+              <h1 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">{title}</h1>
+              <p className="text-sm leading-7 text-muted-foreground">{summary}</p>
             </div>
           </div>
-
-          <p className="max-w-3xl text-sm font-medium leading-8 text-slate-200 sm:text-base">
-            {summary}
-          </p>
-
-          <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
-              <p className="text-[10px] font-black uppercase tracking-[0.25em] text-slate-400">
-                Status
-              </p>
-              <p className="mt-3 text-sm font-bold text-white">واجهة انتقالية مرتبطة</p>
-            </div>
-            <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
-              <p className="text-[10px] font-black uppercase tracking-[0.25em] text-slate-400">
-                Next Layer
-              </p>
-              <p className="mt-3 text-sm font-bold text-white">يمكن العودة فوراً إلى مكتبة القطاعات</p>
-            </div>
-            <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5">
-              <p className="text-[10px] font-black uppercase tracking-[0.25em] text-slate-400">
-                Note
-              </p>
-              <p className="mt-3 flex items-center gap-2 text-sm font-bold text-white">
-                <Sparkles size={16} className="text-indigo-300" />
-                لا توجد نهاية فارغة بعد الآن
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <button
-              onClick={() => setActiveTab('market-discovery')}
-              className="inline-flex items-center gap-2 rounded-2xl bg-white px-5 py-3 text-sm font-black text-slate-900 transition-all hover:scale-[1.02]"
-            >
-              <ArrowRight size={16} />
-              العودة إلى اكتشاف السوق
-            </button>
-            <button
-              onClick={() => setActiveTab('workspace')}
-              className="inline-flex items-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-black text-white transition-all hover:bg-white/10"
-            >
-              الانتقال إلى مساحة المشروع
-            </button>
-          </div>
+          <Button onClick={() => setActiveTab('market-discovery')} className="w-full sm:w-fit">
+            <ArrowRight className="size-4" />
+            العودة لاستكشاف السوق
+          </Button>
         </div>
-      </div>
-    </div>
+      </section>
+
+      <section className="grid gap-3 md:grid-cols-3">
+        {handoffItems.map((item) => {
+          const Icon = item.icon;
+          return (
+            <Card key={item.title} className="shadow-sm">
+              <CardContent className="flex items-start gap-3 p-4">
+                <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-muted text-foreground">
+                  <Icon className="size-4" />
+                </div>
+                <div className="space-y-1">
+                  <p className="text-sm font-medium text-foreground">{item.title}</p>
+                  <p className="text-sm leading-6 text-muted-foreground">{item.value}</p>
+                </div>
+              </CardContent>
+            </Card>
+          );
+        })}
+      </section>
+
+      <Card className="shadow-sm">
+        <CardHeader>
+          <CardTitle>ماذا يمكن أن يفعل المستخدم الآن؟</CardTitle>
+          <CardDescription>اختيارات واضحة حتى لا تنتهي رحلة المستخدم في صفحة انتقالية.</CardDescription>
+        </CardHeader>
+        <CardContent className="flex flex-col gap-2 sm:flex-row">
+          <Button onClick={() => setActiveTab('market-discovery')} variant="outline" className="sm:w-fit">
+            <Compass className="size-4" />
+            استكمال استكشاف السوق
+          </Button>
+          <Button onClick={() => setActiveTab('workspace')} variant="outline" className="sm:w-fit">
+            <LayoutDashboard className="size-4" />
+            الانتقال إلى مساحة المشروع
+          </Button>
+        </CardContent>
+      </Card>
+    </main>
   );
 };

@@ -1,34 +1,39 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
-import { QUESTIONS } from "./constants";
-import { AiAnalysisResult } from "./types";
-import { analyzeWithAI } from "./services/aiService";
-import { ProgressDots } from "./components/CommonUI";
-import * as Lucide from "lucide-react";
-import * as Renderers from "./components/QuestionRenderer";
-import ResultPage from "./ResultPage";
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import * as Lucide from 'lucide-react';
+
+import { Badge } from '@/components/ui/Badge';
+import { Button } from '@/components/ui/Button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
+
+import { QUESTIONS } from './constants';
+import { analyzeWithAI } from './services/aiService';
+import { ProgressDots } from './components/CommonUI';
+import * as Renderers from './components/QuestionRenderer';
+import ResultPage from './ResultPage';
 
 export default function SmartBeginnerPro() {
-  const [phase, setPhase] = useState<"form" | "analyzing" | "results">("form");
+  const [phase, setPhase] = useState<'form' | 'analyzing' | 'results'>('form');
   const [qIndex, setQIndex] = useState(0);
   const [answers, setAnswers] = useState<any>({});
   const [tempAnswer, setTempAnswer] = useState<any>(null);
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
   const [loadingStep, setLoadingStep] = useState(0);
   const loadingTimerRef = useRef<any>(null);
 
   const currentQ = QUESTIONS[qIndex];
   const formProgress = Math.round((qIndex / QUESTIONS.length) * 100);
+  const isLastStep = qIndex === QUESTIONS.length - 1;
 
   const loadingMessages = [
-    "تحليل 'تقاطع القطاعات' واكتشاف المحيط الأزرق (Blue Ocean)...",
-    "بناء 'خريطة التعاطف' وسيكولوجية العميل (Behavioral Mapping)...",
-    "حساب 'تكلفة الفرصة البديلة' ومعايرة الجدوى (Economic Modeling)...",
-    "توليد مخطط Gantt وتحديد المسار الحرج (Critical Path)...",
-    "صياغة مصفوفة المخاطر وبروتوكولات الطوارئ (Plan B Engine)...",
+    'تحليل الفكرة وربطها بمسارات السوق المناسبة...',
+    'فهم العميل والمشكلة ومنطق القيمة المقترحة...',
+    'قياس الجاهزية الأولية وهيكل الجدوى المحتمل...',
+    'ترتيب المخاطر والفرص وخطوات التنفيذ الأقرب...',
+    'تجهيز القراءة النهائية بشكل واضح وقابل للمراجعة...',
   ];
 
   useEffect(() => {
-    if (phase !== "analyzing") return;
+    if (phase !== 'analyzing') return;
     let i = 0;
     loadingTimerRef.current = setInterval(() => {
       i = (i + 1) % loadingMessages.length;
@@ -38,159 +43,299 @@ export default function SmartBeginnerPro() {
   }, [phase]);
 
   const runAnalysis = useCallback(async (finalAnswers: any) => {
-    setPhase("analyzing");
-    setError("");
+    setPhase('analyzing');
+    setError('');
+
     try {
-       // Analysis logic is kept but results display is removed
-       await analyzeWithAI(finalAnswers, (process.env as any).API_KEY);
-       setPhase("results");
+      await analyzeWithAI(finalAnswers, (process.env as any).API_KEY);
+      setPhase('results');
     } catch (e: any) {
-      setError("حدث خطأ في النظام الاستراتيجي: " + (e.response?.data?.message || e.message));
-      setPhase("form");
+      setError(`حدث خطأ في التحليل: ${e.response?.data?.message || e.message}`);
+      setPhase('form');
     }
   }, []);
 
-  const handleAnswer = useCallback((val: any) => {
-    const q = QUESTIONS[qIndex];
-    let newAnswers = { ...answers };
-    
-    if (["profile_builder", "resources_check", "goal_matrix", "empathy_map"].includes(q.type)) {
-       newAnswers = { ...answers, ...val };
-    } else {
-       newAnswers[q.id] = val;
-    }
+  const handleAnswer = useCallback(
+    (val: any) => {
+      const q = QUESTIONS[qIndex];
+      let newAnswers = { ...answers };
 
-    setAnswers(newAnswers);
-    setTempAnswer(null);
+      if (['profile_builder', 'resources_check', 'goal_matrix', 'empathy_map'].includes(q.type)) {
+        newAnswers = { ...answers, ...val };
+      } else {
+        newAnswers[q.id] = val;
+      }
 
-    if (qIndex < QUESTIONS.length - 1) {
-      setQIndex(qIndex + 1);
-    } else {
-      runAnalysis(newAnswers);
-    }
-  }, [qIndex, answers, runAnalysis]);
+      setAnswers(newAnswers);
+      setTempAnswer(null);
 
-  /* ─── RENDER PHASES ─── */
+      if (qIndex < QUESTIONS.length - 1) {
+        setQIndex(qIndex + 1);
+      } else {
+        runAnalysis(newAnswers);
+      }
+    },
+    [qIndex, answers, runAnalysis],
+  );
 
-  if (phase === "form") return (
-    <div className="min-h-screen flex flex-col bg-slate-50/30 overflow-hidden" dir="rtl">
-      {/* Executive Progress Header */}
-      <div className="px-8 py-4 flex items-center justify-between border-b border-slate-100 bg-white/80 backdrop-blur-2xl sticky top-0 z-50 shadow-sm">
-        <button 
-          onClick={() => qIndex > 0 ? setQIndex(qIndex-1) : window.location.reload()} 
-          className="flex items-center gap-3 text-slate-400 hover:text-slate-900 font-black text-[11px] transition-all group px-4 py-2 hover:bg-slate-50 rounded-xl"
-        >
-          <Lucide.ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-          <span>العودة للمنصة</span>
-        </button>
-        <div className="hidden md:block">
-           <ProgressDots 
-             steps={QUESTIONS.map(q => ({ icon: q.icon, id: q.id }))} 
-             current={qIndex} 
-           />
-        </div>
-        <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.3em] bg-slate-100 px-4 py-1.5 rounded-full border border-slate-200 shadow-inner">
-          Intelligence Module: {qIndex + 1} / {QUESTIONS.length}
-        </div>
-      </div>
-      
-      {/* Shimmering Progress Bar */}
-      <div className="h-2 bg-slate-100 overflow-hidden relative">
-        <div 
-          className="h-full bg-gradient-to-r from-indigo-600 via-purple-600 to-emerald-500 transition-all duration-1000 ease-out shadow-[0_0_20px_rgba(79,70,229,0.5)]" 
-          style={{ width: `${formProgress}%` }} 
-        >
-           <div className="absolute inset-0 bg-white/20 animate-shimmer scale-x-[500%]"></div>
-        </div>
-      </div>
+  if (phase === 'form') {
+    return (
+      <div className="min-h-screen bg-background" dir="rtl">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8">
+          <Card className="border-0 bg-background shadow-none">
+            <CardHeader className="gap-5 px-0 pt-0">
+              <div className="flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between">
+                <div className="space-y-3">
+                  <Badge variant="secondary" className="w-fit rounded-md px-3 py-1 font-medium">
+                    النموذج السهل
+                  </Badge>
+                  <div className="space-y-2">
+                    <CardTitle className="text-2xl leading-tight sm:text-3xl">
+                      بناء دراسة جدوى مشروع بشكل مبسط
+                    </CardTitle>
+                    <CardDescription className="max-w-3xl text-sm leading-7 sm:text-[15px]">
+                      أجب على الأسئلة التالية بشكل مباشر. كل خطوة تضيف طبقة أوضح إلى دراسة الجدوى،
+                      ثم تنتقل في النهاية إلى قراءة تحليلية تساعدك على اتخاذ القرار.
+                    </CardDescription>
+                  </div>
+                </div>
 
-      <div className="flex-1 flex flex-col items-center p-4 lg:p-8 overflow-y-auto no-scrollbar scroll-smooth">
-        <div className="max-w-3xl w-full">
-          <div key={qIndex} className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <div className="flex items-center gap-3 mb-2">
-              <div className="p-2 bg-slate-900 text-white rounded-xl shadow-sm">
-                {(Lucide as any)[currentQ.icon] ? React.createElement((Lucide as any)[currentQ.icon], { size: 18, strokeWidth: 2.5 }) : <Lucide.Target size={18} />}
+                <div className="grid w-full gap-3 sm:grid-cols-3 xl:w-[520px]">
+                  <div className="rounded-xl bg-muted/40 p-4">
+                    <div className="text-xs font-medium text-muted-foreground">المرحلة الحالية</div>
+                    <div className="mt-2 text-2xl font-semibold text-foreground">{qIndex + 1}</div>
+                  </div>
+                  <div className="rounded-xl bg-muted/40 p-4">
+                    <div className="text-xs font-medium text-muted-foreground">إجمالي الأسئلة</div>
+                    <div className="mt-2 text-2xl font-semibold text-foreground">{QUESTIONS.length}</div>
+                  </div>
+                  <div className="rounded-xl bg-muted/40 p-4">
+                    <div className="text-xs font-medium text-muted-foreground">نسبة الإنجاز</div>
+                    <div className="mt-2 text-2xl font-semibold text-foreground">{formProgress}%</div>
+                  </div>
+                </div>
               </div>
-              <h2 className="text-xl lg:text-2xl font-black text-slate-900 tracking-tighter" style={{ fontFamily: 'IBM Plex Sans Arabic, sans-serif' }}>
-                {currentQ.label}
-              </h2>
-            </div>
-            
-            <p className="text-slate-400 font-bold text-sm mb-6 leading-relaxed max-w-3xl opacity-90" style={{ fontFamily: 'IBM Plex Sans Arabic, sans-serif' }}>
-              {currentQ.sublabel}
-            </p>
 
-            <div className="mt-4">
-              {currentQ.type === 'cards' && <Renderers.QuestionCards question={currentQ} onSelect={handleAnswer} selected={answers[currentQ.id]} tempAnswer={tempAnswer} setTempAnswer={setTempAnswer} />}
-              {currentQ.type === 'textarea_choice' && <Renderers.QuestionTextAreaChoice question={currentQ} onSelect={handleAnswer} selected={answers[currentQ.id]} tempAnswer={tempAnswer} setTempAnswer={setTempAnswer} />}
-              {currentQ.type === 'empathy_map' && <Renderers.EmpathyMapRenderer question={currentQ} onSelect={handleAnswer} selected={answers[currentQ.id]} tempAnswer={tempAnswer} setTempAnswer={setTempAnswer} />}
-              {currentQ.type === 'profile_builder' && <Renderers.MultiSelectionRenderer question={currentQ} items={currentQ.profiles!} fieldPrefix="customer" onSelect={handleAnswer} selected={answers} tempAnswer={tempAnswer} setTempAnswer={setTempAnswer} />}
-              {currentQ.type === 'competition_map' && <Renderers.CompetitionMap question={currentQ} onSelect={handleAnswer} selected={answers} tempAnswer={tempAnswer} setTempAnswer={setTempAnswer} />}
-              {currentQ.type === 'resources_check' && <Renderers.MultiSelectionRenderer question={currentQ} items={currentQ.items!} fieldPrefix="" onSelect={handleAnswer} selected={answers} tempAnswer={tempAnswer} setTempAnswer={setTempAnswer} />}
-              {currentQ.type === 'validation_scale' && <Renderers.ValidationScale question={currentQ} onSelect={handleAnswer} selected={answers[currentQ.id]} tempAnswer={tempAnswer} setTempAnswer={setTempAnswer} />}
-              {currentQ.type === 'goal_matrix' && <Renderers.MultiSelectionRenderer question={currentQ} items={currentQ.goals!} fieldPrefix="" onSelect={handleAnswer} selected={answers} tempAnswer={tempAnswer} setTempAnswer={setTempAnswer} />}
-              {currentQ.type === 'fear_select' && <Renderers.FearSelect question={currentQ} onSelect={handleAnswer} selected={answers[currentQ.id]} tempAnswer={tempAnswer} setTempAnswer={setTempAnswer} />}
-            </div>
-          </div>
+              <div className="rounded-2xl bg-muted/20 px-4 py-4 sm:px-5">
+                <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+                  <div className="space-y-2">
+                    <div className="text-sm font-semibold text-foreground">مسار الإجابة</div>
+                    <div className="flex items-center gap-3">
+                      <div className="h-2.5 w-48 overflow-hidden rounded-full bg-muted sm:w-72">
+                        <div
+                          className="h-full rounded-full bg-primary transition-all duration-300"
+                          style={{ width: `${formProgress}%` }}
+                        />
+                      </div>
+                      <span className="text-sm font-semibold text-foreground">{formProgress}%</span>
+                    </div>
+                  </div>
 
-          {/* Action Center (Next) */}
-          <div className="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center">
-             <div className="text-[10px] font-black text-slate-300 uppercase tracking-widest italic opacity-60">
-                You can pivot anytime after result generation.
-             </div>
-             <button 
-               onClick={() => handleAnswer(tempAnswer || answers[currentQ.id] || { skipped: true })}
-               className="group relative flex items-center gap-4 px-8 py-3.5 bg-slate-900 text-white rounded-[1.5rem] font-black text-[13px] shadow-[0_30px_60px_rgba(0,0,0,0.25)] hover:scale-[1.03] transition-all hover:bg-indigo-600 overflow-hidden"
-             >
-                <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <span style={{ fontFamily: 'IBM Plex Sans Arabic, sans-serif' }}>
-                   {qIndex === QUESTIONS.length - 1 ? 'توليد الرؤية الاستراتيجية' : 'الخطوة التالية'}
-                </span>
-                <Lucide.Zap size={16} className="group-hover:text-amber-400 group-hover:scale-110 transition-all font-black" />
-             </button>
-          </div>
-        
-          {error && (
-            <div className="mt-6 p-4 bg-rose-50 border-2 border-rose-100 rounded-2xl text-rose-600 text-[12px] font-black flex items-center gap-3 animate-in shake duration-500">
-              <Lucide.AlertOctagon size={20} />
-              {error}
-            </div>
-          )}
+                  <div className="hidden md:block">
+                    <ProgressDots
+                      steps={QUESTIONS.map((q) => ({ icon: q.icon, id: q.id }))}
+                      current={qIndex}
+                    />
+                  </div>
+                </div>
+              </div>
+            </CardHeader>
+          </Card>
+
+          <Card className="border-0 bg-muted/20 shadow-none">
+            <CardContent className="px-5 py-5 sm:px-6">
+              <div key={qIndex} className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <div className="mb-6 flex items-start gap-3">
+                  <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-background text-foreground shadow-sm">
+                    {(Lucide as any)[currentQ.icon]
+                      ? React.createElement((Lucide as any)[currentQ.icon], {
+                          size: 18,
+                          strokeWidth: 2.25,
+                        })
+                      : <Lucide.Target size={18} />}
+                  </div>
+                  <div className="space-y-2">
+                    <h2 className="text-xl font-semibold leading-8 text-foreground sm:text-2xl">
+                      {currentQ.label}
+                    </h2>
+                    <p className="max-w-3xl text-sm leading-7 text-muted-foreground">
+                      {currentQ.sublabel}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-4">
+                  {currentQ.type === 'cards' && (
+                    <Renderers.QuestionCards
+                      question={currentQ}
+                      onSelect={handleAnswer}
+                      selected={answers[currentQ.id]}
+                      tempAnswer={tempAnswer}
+                      setTempAnswer={setTempAnswer}
+                    />
+                  )}
+                  {currentQ.type === 'textarea_choice' && (
+                    <Renderers.QuestionTextAreaChoice
+                      question={currentQ}
+                      onSelect={handleAnswer}
+                      selected={answers[currentQ.id]}
+                      tempAnswer={tempAnswer}
+                      setTempAnswer={setTempAnswer}
+                    />
+                  )}
+                  {currentQ.type === 'empathy_map' && (
+                    <Renderers.EmpathyMapRenderer
+                      question={currentQ}
+                      onSelect={handleAnswer}
+                      selected={answers[currentQ.id]}
+                      tempAnswer={tempAnswer}
+                      setTempAnswer={setTempAnswer}
+                    />
+                  )}
+                  {currentQ.type === 'profile_builder' && (
+                    <Renderers.MultiSelectionRenderer
+                      question={currentQ}
+                      items={currentQ.profiles!}
+                      fieldPrefix="customer"
+                      onSelect={handleAnswer}
+                      selected={answers}
+                      tempAnswer={tempAnswer}
+                      setTempAnswer={setTempAnswer}
+                    />
+                  )}
+                  {currentQ.type === 'competition_map' && (
+                    <Renderers.CompetitionMap
+                      question={currentQ}
+                      onSelect={handleAnswer}
+                      selected={answers}
+                      tempAnswer={tempAnswer}
+                      setTempAnswer={setTempAnswer}
+                    />
+                  )}
+                  {currentQ.type === 'resources_check' && (
+                    <Renderers.MultiSelectionRenderer
+                      question={currentQ}
+                      items={currentQ.items!}
+                      fieldPrefix=""
+                      onSelect={handleAnswer}
+                      selected={answers}
+                      tempAnswer={tempAnswer}
+                      setTempAnswer={setTempAnswer}
+                    />
+                  )}
+                  {currentQ.type === 'validation_scale' && (
+                    <Renderers.ValidationScale
+                      question={currentQ}
+                      onSelect={handleAnswer}
+                      selected={answers[currentQ.id]}
+                      tempAnswer={tempAnswer}
+                      setTempAnswer={setTempAnswer}
+                    />
+                  )}
+                  {currentQ.type === 'goal_matrix' && (
+                    <Renderers.MultiSelectionRenderer
+                      question={currentQ}
+                      items={currentQ.goals!}
+                      fieldPrefix=""
+                      onSelect={handleAnswer}
+                      selected={answers}
+                      tempAnswer={tempAnswer}
+                      setTempAnswer={setTempAnswer}
+                    />
+                  )}
+                  {currentQ.type === 'fear_select' && (
+                    <Renderers.FearSelect
+                      question={currentQ}
+                      onSelect={handleAnswer}
+                      selected={answers[currentQ.id]}
+                      tempAnswer={tempAnswer}
+                      setTempAnswer={setTempAnswer}
+                    />
+                  )}
+                </div>
+
+                <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="text-xs font-medium text-muted-foreground">
+                    يمكنك تعديل أي خطوة قبل الانتقال إلى النتائج النهائية.
+                  </div>
+
+                  <div className="flex flex-wrap items-center gap-2">
+                    <Button
+                      type="button"
+                      variant="outline"
+                      onClick={() => (qIndex > 0 ? setQIndex(qIndex - 1) : window.location.reload())}
+                    >
+                      <Lucide.ArrowRight size={16} />
+                      العودة
+                    </Button>
+                    <Button
+                      type="button"
+                      onClick={() => handleAnswer(tempAnswer || answers[currentQ.id] || { skipped: true })}
+                    >
+                      {isLastStep ? 'إنشاء التحليل النهائي' : 'الخطوة التالية'}
+                      <Lucide.Zap size={16} />
+                    </Button>
+                  </div>
+                </div>
+
+                {error ? (
+                  <div className="mt-6 flex items-center gap-3 rounded-2xl bg-rose-50 px-4 py-4 text-sm font-medium text-rose-700">
+                    <Lucide.AlertOctagon size={18} />
+                    {error}
+                  </div>
+                ) : null}
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 
-  if (phase === "analyzing") return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-900 overflow-hidden" dir="rtl">
-       <div className="text-center max-w-xl relative animate-in zoom-in duration-[1500ms]">
-          {/* Futuristic Scanner */}
-          <div className="relative mb-16">
-             <div className="absolute -inset-10 bg-indigo-500/20 rounded-full blur-[100px] animate-pulse"></div>
-             <div className="w-32 h-32 bg-white/5 border border-white/10 text-indigo-400 rounded-[3rem] flex items-center justify-center mx-auto shadow-2xl backdrop-blur-3xl relative overflow-hidden">
-                <Lucide.Cpu size={64} className="animate-spin-slow" />
-                <div className="absolute inset-0 h-1 bg-indigo-500/50 animate-scan pointer-events-none"></div>
-             </div>
-          </div>
+  if (phase === 'analyzing') {
+    return (
+      <div className="min-h-screen bg-background" dir="rtl">
+        <div className="mx-auto flex min-h-screen w-full max-w-4xl items-center justify-center px-4 py-8 sm:px-6">
+          <Card className="w-full border-0 bg-muted/20 shadow-none">
+            <CardContent className="flex flex-col items-center gap-8 px-6 py-10 text-center sm:px-10">
+              <div className="flex size-24 items-center justify-center rounded-[2rem] bg-background text-primary shadow-sm">
+                <Lucide.Cpu size={40} className="animate-spin-slow" />
+              </div>
 
-          <h2 className="text-2xl lg:text-4xl font-black text-white mb-6 tracking-tighter" style={{ fontFamily: 'IBM Plex Sans Arabic, sans-serif' }}>جاري استخراج "الوعي الاستراتيجي"...</h2>
-          <div className="inline-block px-10 py-5 bg-white/5 border border-white/10 rounded-[2rem] backdrop-blur-md shadow-2xl">
-             <p className="text-[13px] text-indigo-300 font-extrabold tracking-widest uppercase italic">{loadingMessages[loadingStep]}</p>
-          </div>
+              <div className="space-y-3">
+                <h2 className="text-2xl font-semibold text-foreground sm:text-3xl">
+                  جارٍ تجهيز التحليل النهائي
+                </h2>
+                <p className="text-sm leading-7 text-muted-foreground">
+                  نقوم الآن بترتيب الإجابات وتحويلها إلى مخرجات أوضح تساعدك على قراءة دراسة الجدوى
+                  بشكل أفضل.
+                </p>
+              </div>
 
-          <div className="mt-16 flex justify-center gap-6">
-             {loadingMessages.map((_, i) => (
-                <div 
-                  key={i} 
-                  className={`h-2 rounded-full transition-all duration-[800ms] ${loadingStep === i ? 'w-16 bg-indigo-500 shadow-[0_0_30px_rgba(99,102,241,0.8)]' : 'w-3 bg-white/10'}`} 
-                />
-             ))}
-          </div>
-       </div>
-    </div>
-  );
+              <div className="w-full rounded-2xl bg-background/80 px-5 py-5 shadow-sm">
+                <p className="text-sm font-medium leading-7 text-foreground">{loadingMessages[loadingStep]}</p>
+              </div>
 
-  if (phase === "results") return <ResultPage />;
+              <div className="flex justify-center gap-2">
+                {loadingMessages.map((_, i) => (
+                  <div
+                    key={i}
+                    className={`h-2 rounded-full transition-all duration-500 ${
+                      loadingStep === i ? 'w-12 bg-primary' : 'w-2 bg-muted-foreground/20'
+                    }`}
+                  />
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    );
+  }
+
+  if (phase === 'results') {
+    return <ResultPage />;
+  }
 
   return null;
 }

@@ -1,20 +1,10 @@
-
 import React, { useState } from 'react';
-import { 
-  Heart, 
-  Users, 
-  Sparkles, 
-  DollarSign, 
-  ArrowLeft, 
-  ArrowRight,
-  CheckCircle2,
-  Layers,
-  Target,
-  Activity,
-  Rocket,
-  ChevronLeft,
-  ChevronRight
-} from 'lucide-react';
+import { Activity, CheckCircle2, ChevronLeft, ChevronRight, DollarSign, Heart, Layers, Target, Users } from 'lucide-react';
+
+import { Badge } from '@/components/ui/Badge';
+import { Button } from '@/components/ui/Button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Textarea } from '@/components/ui/textarea';
 
 interface FamilyFriendsData {
   nickname: string;
@@ -24,256 +14,190 @@ interface FamilyFriendsData {
   moneyModel: string;
 }
 
-export const FamilyFriendsMode: React.FC<{ 
-  data: FamilyFriendsData; 
+type StepConfig = {
+  id: keyof FamilyFriendsData;
+  title: string;
+  subtitle: string;
+  placeholder: string;
+  icon: React.ElementType;
+};
+
+const STEPS: StepConfig[] = [
+  {
+    id: 'nickname',
+    title: 'تسمية المشروع',
+    subtitle: 'اسم أولي يوضح فكرة المشروع واتجاهه.',
+    placeholder: 'مثال: منصة تربط الحرفيين المحليين بالعملاء داخل المدينة.',
+    icon: Layers,
+  },
+  {
+    id: 'simpleProblem',
+    title: 'المشكلة الأساسية',
+    subtitle: 'ما المشكلة الحقيقية التي يحاول المشروع حلها؟',
+    placeholder: 'مثال: صعوبة وصول العميل إلى مزودي خدمة موثوقين بسرعة وبسعر واضح.',
+    icon: Target,
+  },
+  {
+    id: 'grandmaExplanation',
+    title: 'شرح الفكرة ببساطة',
+    subtitle: 'اشرح كيف يعمل المشروع بلغة يفهمها أي شخص.',
+    placeholder: 'مثال: التطبيق يربط العميل بمقدم الخدمة، ثم يتابع الطلب والدفع والتقييم في مكان واحد.',
+    icon: Activity,
+  },
+  {
+    id: 'firstUser',
+    title: 'العميل الأول',
+    subtitle: 'من الشريحة الأقرب لاستخدام المشروع عند الإطلاق؟',
+    placeholder: 'مثال: الأسر الشابة، أصحاب المشاريع الصغيرة، الطلاب، أو الشركات الصغيرة.',
+    icon: Users,
+  },
+  {
+    id: 'moneyModel',
+    title: 'طريقة تحقيق الإيراد',
+    subtitle: 'كيف سيحقق المشروع الدخل أو الربح؟',
+    placeholder: 'مثال: اشتراك شهري، عمولة على الطلبات، رسوم تشغيل ثابتة، أو بيع مباشر.',
+    icon: DollarSign,
+  },
+];
+
+export const FamilyFriendsMode: React.FC<{
+  data: FamilyFriendsData;
   onChange: (data: Partial<FamilyFriendsData>) => void;
   onComplete: () => void;
 }> = ({ data, onChange, onComplete }) => {
   const [currentStep, setCurrentStep] = useState(0);
 
-  const steps = [
-    {
-      id: 'vision',
-      title: 'التسمية التجارية',
-      subtitle: 'اختر اسماً أولياً يعكس هوية الفكرة وهدفها الجوهري.',
-      icon: <Layers className="text-indigo-600" size={20} />,
-      iconBg: 'bg-indigo-50',
-      placeholder: 'مثال: منصة "سريع" للخدمات، أو تطبيق "مؤشر" للتحليلات...',
-      field: 'nickname',
-      phase: 'PHASE 01',
-    },
-    {
-      id: 'problem',
-      title: 'الفجوة السوقية',
-      subtitle: 'ما التحدي الذي يطرح مشروعك حلاً جذرياً له؟',
-      icon: <Target className="text-rose-600" size={20} />,
-      iconBg: 'bg-rose-50',
-      placeholder: 'مثال: يعاني أصحاب المشاريع الصغيرة من نقص في قنوات التوزيع الموثوقة...',
-      field: 'simpleProblem',
-      phase: 'PHASE 02',
-    },
-    {
-      id: 'grandma',
-      title: 'النموذج التشغيلي',
-      subtitle: 'كيف تصف طريقة عمل مشروعك بعبارات بسيطة وواضحة؟',
-      icon: <Activity className="text-emerald-600" size={20} />,
-      iconBg: 'bg-emerald-50',
-      placeholder: 'مثال: يربط المشروع مقدمي الخدمات بالعملاء عبر واجهة رقمية موحدة تضمن الأمان...',
-      field: 'grandmaExplanation',
-      phase: 'PHASE 03',
-    },
-    {
-      id: 'hero',
-      title: 'الشريحة المستهدفة',
-      subtitle: 'من هي الفئة الأكثر احتياجاً لهذا الحل؟',
-      icon: <Users className="text-blue-600" size={20} />,
-      iconBg: 'bg-blue-50',
-      placeholder: 'مثال: الطلاب الجامعيون الباحثون عن فرص عمل جزئية مرنة...',
-      field: 'firstUser',
-      phase: 'PHASE 04',
-    },
-    {
-      id: 'reward',
-      title: 'استراتيجية الإيرادات',
-      subtitle: 'كيف يحقق مشروعك الأرباح ويستدام مالياً؟',
-      icon: <DollarSign className="text-amber-600" size={20} />,
-      iconBg: 'bg-amber-50',
-      placeholder: 'مثال: عمولات على العمليات الناجحة مع اشتراكات شهرية للمؤسسات...',
-      field: 'moneyModel',
-      phase: 'PHASE 05',
-    }
-  ];
-
-  const current = steps[currentStep];
-  const isLast = currentStep === steps.length - 1;
-  const hasValue = !!(data as any)[current.field];
-
-  const next = () => {
-    if (currentStep < steps.length - 1) setCurrentStep(p => p + 1);
-    else onComplete();
-  };
-
-  const prev = () => {
-    if (currentStep > 0) setCurrentStep(p => p - 1);
-  };
+  const current = STEPS[currentStep];
+  const CurrentIcon = current.icon;
+  const currentValue = data[current.id] || '';
+  const hasValue = currentValue.trim().length > 0;
+  const isLast = currentStep === STEPS.length - 1;
+  const completedCount = STEPS.filter((step) => (data[step.id] || '').trim().length > 0).length;
+  const progress = Math.round((completedCount / STEPS.length) * 100);
 
   return (
-    <div dir="rtl" className="w-full h-full flex flex-col px-4 sm:px-6 md:px-8 xl:px-14 py-5 sm:py-7 animate-in fade-in duration-500">
-      
-      {/* Step Progress Bar */}
-      <div className="flex items-center gap-1.5 sm:gap-2 mb-6 sm:mb-8">
-        {steps.map((s, idx) => (
-          <React.Fragment key={idx}>
-            <button
-              onClick={() => setCurrentStep(idx)}
-              className="flex items-center gap-1.5 sm:gap-2 group shrink-0"
-            >
-              <div className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center text-xs font-black transition-all duration-300 ${
-                idx === currentStep
-                  ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-100'
-                  : idx < currentStep
-                  ? 'bg-emerald-500 text-white'
-                  : 'bg-slate-100 text-slate-400 group-hover:bg-slate-200'
-              }`}>
-                {idx < currentStep ? <CheckCircle2 size={12} /> : idx + 1}
-              </div>
-              {/* Phase label — only on md+ */}
-              <span className={`hidden md:block text-[11px] font-black tracking-wider uppercase transition-colors ${
-                idx === currentStep ? 'text-indigo-600' : idx < currentStep ? 'text-emerald-500' : 'text-slate-300'
-              }`}>{s.phase}</span>
-            </button>
-            {idx < steps.length - 1 && (
-              <div className={`flex-1 h-px transition-all duration-500 ${idx < currentStep ? 'bg-emerald-400' : 'bg-slate-100'}`} />
-            )}
-          </React.Fragment>
-        ))}
-      </div>
-
-      {/* Main Content Area */}
-      <div className="flex-1 flex flex-col lg:grid lg:grid-cols-5 gap-5 sm:gap-6 xl:gap-10 min-h-0">
-
-        {/* Left: Metadata Panel — hidden on mobile, visible on lg+ */}
-        <div className="hidden lg:flex lg:col-span-2 flex-col justify-between py-4">
-          <div className="space-y-5">
-            {/* Icon + Phase */}
-            <div className="flex items-center gap-3">
-              <div className={`w-10 h-10 rounded-2xl ${current.iconBg} flex items-center justify-center shadow-sm`}>
-                {current.icon}
-              </div>
-              <span className="text-[10px] font-black text-slate-400 tracking-[0.25em] uppercase">{current.phase}</span>
+    <main dir="rtl" className="mx-auto w-full max-w-6xl space-y-5 px-4 py-6 text-right sm:px-6 lg:px-8">
+      <section className="rounded-xl bg-card p-5 shadow-sm ring-1 ring-border/60">
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div className="space-y-2">
+            <div className="flex flex-wrap items-center gap-2">
+              <Badge variant="secondary">
+                <Heart className="h-3.5 w-3.5" />
+                النموذج السهل
+              </Badge>
+              <Badge variant="outline">خطوة {currentStep + 1} من {STEPS.length}</Badge>
             </div>
-
-            {/* Title & Subtitle */}
-            <div>
-              <h2 className="text-3xl xl:text-4xl font-black text-slate-900 leading-tight tracking-tight mb-3">
-                {current.title}
-              </h2>
-              <p className="text-sm font-semibold text-slate-400 leading-relaxed max-w-xs">
-                {current.subtitle}
+            <div className="space-y-1">
+              <h1 className="text-2xl font-semibold tracking-tight text-foreground">ابدأ دراسة الجدوى بلغة بسيطة</h1>
+              <p className="max-w-3xl text-sm leading-6 text-muted-foreground">
+                هذا المسار مناسب لمن يريد تحويل فكرة أولية إلى وصف واضح قبل الانتقال للتفاصيل المتقدمة.
               </p>
             </div>
-
-            {/* Divider + branding */}
-            <div className="flex items-center gap-3 pt-2">
-              <div className="w-8 h-px bg-slate-200"></div>
-              <Sparkles size={13} className="text-slate-300" />
-              <span className="text-[9px] font-black text-slate-300 uppercase tracking-[0.3em]">Strategic Thinking Mode</span>
-            </div>
           </div>
 
-          {/* Step summary on lg+ */}
-          <div className="mt-8">
-            <div className="space-y-2">
-              {steps.map((s, idx) => (
-                <div key={idx} className={`flex items-center gap-3 p-3 rounded-2xl transition-all ${
-                  idx === currentStep ? 'bg-indigo-50/80 border border-indigo-100' : ''
-                }`}>
-                  <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 ${
-                    idx < currentStep ? 'bg-emerald-500 text-white' :
-                    idx === currentStep ? 'bg-indigo-600 text-white' : 'bg-slate-100'
-                  }`}>
-                    {idx < currentStep
-                      ? <CheckCircle2 size={11} />
-                      : <span className="text-[9px] font-black text-slate-400">{idx + 1}</span>
-                    }
+          <div className="min-w-[220px] space-y-2">
+            <div className="flex items-center justify-between text-xs text-muted-foreground">
+              <span>الاكتمال</span>
+              <span>{progress}%</span>
+            </div>
+            <div className="h-2 overflow-hidden rounded-full bg-muted">
+              <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${progress}%` }} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="grid gap-5 lg:grid-cols-[320px_1fr]">
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-base">خطوات النموذج</CardTitle>
+            <CardDescription>اختر أي خطوة وعدّل الإجابة بدون تعقيد.</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-2">
+            {STEPS.map((step, index) => {
+              const Icon = step.icon;
+              const isActive = index === currentStep;
+              const isCompleted = (data[step.id] || '').trim().length > 0;
+
+              return (
+                <Button
+                  key={step.id}
+                  type="button"
+                  variant={isActive ? 'secondary' : 'ghost'}
+                  onClick={() => setCurrentStep(index)}
+                  className="h-auto w-full justify-start whitespace-normal px-3 py-3 text-right"
+                >
+                  <div className="flex w-full items-center gap-3">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-background text-muted-foreground ring-1 ring-border">
+                      {isCompleted ? <CheckCircle2 className="h-4 w-4 text-primary" /> : <Icon className="h-4 w-4" />}
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate text-sm font-medium text-foreground">{step.title}</p>
+                      <p className="truncate text-xs text-muted-foreground">{step.subtitle}</p>
+                    </div>
                   </div>
-                  <span className={`text-xs font-bold truncate ${
-                    idx === currentStep ? 'text-indigo-700' : idx < currentStep ? 'text-emerald-600' : 'text-slate-300'
-                  }`}>{s.title}</span>
-                  {(data as any)[s.field] && idx !== currentStep && (
-                    <div className="mr-auto w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
-                  )}
-                </div>
-              ))}
+                </Button>
+              );
+            })}
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardHeader>
+            <div className="flex items-start gap-3">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground">
+                <CurrentIcon className="h-4 w-4" />
+              </div>
+              <div className="space-y-1">
+                <CardTitle className="text-lg">{current.title}</CardTitle>
+                <CardDescription className="leading-6">{current.subtitle}</CardDescription>
+              </div>
             </div>
-          </div>
-        </div>
-
-        {/* Mobile-only: compact title header */}
-        <div className="lg:hidden flex items-center gap-3 -mt-1">
-          <div className={`w-9 h-9 rounded-2xl ${current.iconBg} flex items-center justify-center shadow-sm shrink-0`}>
-            {current.icon}
-          </div>
-          <div className="min-w-0">
-            <p className="text-[10px] font-black text-slate-400 tracking-widest uppercase">{current.phase}</p>
-            <h2 className="text-lg font-black text-slate-900 leading-tight truncate">{current.title}</h2>
-            <p className="text-xs font-semibold text-slate-400 leading-snug line-clamp-2">{current.subtitle}</p>
-          </div>
-        </div>
-
-        {/* Right: Input Area */}
-        <div className="lg:col-span-3 flex flex-col gap-4 sm:gap-6 flex-1 min-h-0">
-          
-          {/* Textarea */}
-          <div className="flex-1 relative min-h-[180px]">
-            <textarea
-              key={current.field}
-              value={(data as any)[current.field] || ''}
-              onChange={(e) => onChange({ [current.field]: e.target.value })}
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <Textarea
+              value={currentValue}
+              onChange={(event) => onChange({ [current.id]: event.target.value })}
               placeholder={current.placeholder}
-              className="w-full h-full min-h-[200px] sm:min-h-[240px] bg-slate-50 border-2 border-slate-200 hover:border-slate-300 focus:border-indigo-400 focus:bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 text-sm sm:text-base font-semibold text-slate-800 outline-none transition-all duration-300 resize-none placeholder:text-slate-300 placeholder:font-medium shadow-sm focus:shadow-xl focus:shadow-indigo-50/50 leading-relaxed"
+              className="min-h-[240px] resize-y bg-background text-right leading-7"
             />
 
-            {/* Character count */}
-            <div className="absolute bottom-3 left-3 text-[10px] font-black text-slate-300">
-              {((data as any)[current.field] || '').length} حرف
-            </div>
+            <div className="flex flex-col gap-3 border-t border-border pt-4 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-xs text-muted-foreground">عدد الأحرف: {currentValue.length}</p>
 
-            {/* Completion indicator */}
-            {hasValue && (
-              <div className="absolute top-3 left-3">
-                <div className="w-6 h-6 bg-emerald-500 rounded-full flex items-center justify-center shadow-sm animate-in zoom-in-50 duration-300">
-                  <CheckCircle2 size={13} className="text-white" />
-                </div>
+              <div className="flex flex-wrap items-center gap-2">
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setCurrentStep((value) => Math.max(0, value - 1))}
+                  disabled={currentStep === 0}
+                >
+                  <ChevronRight className="h-4 w-4" />
+                  السابقة
+                </Button>
+
+                <Button
+                  type="button"
+                  size="sm"
+                  onClick={() => {
+                    if (!hasValue) return;
+                    if (isLast) {
+                      onComplete();
+                      return;
+                    }
+                    setCurrentStep((value) => Math.min(STEPS.length - 1, value + 1));
+                  }}
+                  disabled={!hasValue}
+                >
+                  {isLast ? 'إنشاء دراسة الجدوى' : 'التالي'}
+                  <ChevronLeft className="h-4 w-4" />
+                </Button>
               </div>
-            )}
-          </div>
-
-          {/* Actions */}
-          <div className="flex items-center justify-between gap-3">
-            {/* Back Button */}
-            <button
-              onClick={prev}
-              disabled={currentStep === 0}
-              className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl text-sm font-black transition-all duration-200 ${
-                currentStep === 0
-                  ? 'opacity-0 pointer-events-none'
-                  : 'bg-slate-100 text-slate-500 hover:bg-slate-200 hover:text-slate-900 active:scale-95'
-              }`}
-            >
-              <ChevronRight size={15} />
-              <span className="hidden sm:inline">السابق</span>
-            </button>
-
-            {/* Progress Text */}
-            <span className="text-xs font-black text-slate-300 uppercase tracking-widest">
-              {currentStep + 1} / {steps.length}
-            </span>
-
-            {/* Next / Submit Button */}
-            <button
-              onClick={next}
-              className={`flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3.5 rounded-xl sm:rounded-2xl text-sm font-black transition-all duration-200 active:scale-95 ${
-                hasValue
-                  ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-100 hover:bg-indigo-700 hover:scale-105'
-                  : 'bg-slate-100 text-slate-300 cursor-not-allowed'
-              }`}
-            >
-              {isLast ? (
-                <>
-                  إصدار التقرير
-                  <Rocket size={14} className="text-amber-300" />
-                </>
-              ) : (
-                <>
-                  التالي
-                  <ChevronLeft size={15} />
-                </>
-              )}
-            </button>
-          </div>
-        </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
-    </div>
+    </main>
   );
 };

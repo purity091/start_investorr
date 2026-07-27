@@ -613,13 +613,13 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
         setDetailsOpen(true);
       }}
     >
-      <TableCell className="w-[140px]">
+      <TableCell className={cn('w-[56px]', compact ? 'px-2 py-2' : undefined)}>
         <Button
           type="button"
           variant="ghost"
           size="sm"
           className={cn(
-            'h-8 rounded-md px-2 text-xs font-medium transition-colors',
+            'h-8 w-8 rounded-md p-0 text-xs font-medium transition-colors',
             bookmarks[record.id]
               ? 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100'
               : 'bg-muted/40 text-muted-foreground hover:bg-muted hover:text-foreground',
@@ -631,15 +631,14 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
           aria-label={`حفظ المشروع ${record.title}`}
         >
           {bookmarks[record.id] ? <BookmarkCheck className="size-3.5" /> : <Bookmark className="size-3.5" />}
-          <span className="truncate">{bookmarks[record.id] ? 'محفوظ' : 'حفظ المشروع'}</span>
         </Button>
       </TableCell>
-      <TableCell className="min-w-[240px] whitespace-nowrap">
-        <div className="space-y-1 overflow-hidden">
+      <TableCell className={cn('min-w-[220px] whitespace-nowrap', compact ? 'px-2 py-2' : undefined)}>
+        <div className="overflow-hidden">
           <div className="flex items-center gap-2">
             <HoverCard>
               <HoverCardTrigger asChild>
-                <button type="button" className="truncate text-right font-semibold text-foreground hover:text-primary">
+                <button type="button" className="truncate text-right text-sm font-semibold text-foreground hover:text-primary">
                   {record.title}
                 </button>
               </HoverCardTrigger>
@@ -656,53 +655,50 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
             </HoverCard>
             {bookmarks[record.id] ? <Bookmark className="size-3.5 fill-current text-primary" /> : null}
           </div>
-          <div className="truncate text-xs text-muted-foreground">
-            {record.summary}
-          </div>
         </div>
       </TableCell>
-      <TableCell>
-          <Badge variant="outline" className={cn('rounded-md font-medium shadow-none', typeToneClasses[record.kind])}>
+      <TableCell className={cn(compact ? 'px-2 py-2' : undefined)}>
+          <Badge variant="outline" className={cn('rounded-md px-2 py-0.5 text-[11px] font-medium shadow-none', typeToneClasses[record.kind])}>
           {typeLabels[record.kind]}
         </Badge>
       </TableCell>
-      <TableCell className="whitespace-nowrap">{record.sectorName}</TableCell>
-      <TableCell>
+      <TableCell className={cn('whitespace-nowrap text-sm', compact ? 'px-2 py-2' : undefined)}>{record.sectorName}</TableCell>
+      <TableCell className={cn(compact ? 'px-2 py-2' : undefined)}>
         <Tooltip>
           <TooltipTrigger asChild>
-            <Badge variant="outline" className="rounded-md">
+            <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[11px]">
               {marketLabels[record.marketBand]}
             </Badge>
           </TooltipTrigger>
           <TooltipContent>درجة السوق: {record.marketScore}/10</TooltipContent>
         </Tooltip>
       </TableCell>
-      <TableCell>
+      <TableCell className={cn(compact ? 'px-2 py-2' : undefined)}>
         <Tooltip>
           <TooltipTrigger asChild>
-            <Badge variant="outline" className="rounded-md">
+            <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[11px]">
               {easeLabels[record.easeBand]}
             </Badge>
           </TooltipTrigger>
           <TooltipContent>سهولة التنفيذ: {record.easeScore}/10</TooltipContent>
         </Tooltip>
       </TableCell>
-      <TableCell>
+      <TableCell className={cn(compact ? 'px-2 py-2' : undefined)}>
         <Tooltip>
           <TooltipTrigger asChild>
-            <Badge variant="outline" className="rounded-md">
+            <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[11px]">
               {profitLabels[record.profitBand]}
             </Badge>
           </TooltipTrigger>
           <TooltipContent>إمكانية الربح: {record.profitScore}/10</TooltipContent>
         </Tooltip>
       </TableCell>
-      <TableCell>
-        <Badge variant="outline" className={cn('rounded-md font-medium shadow-none', priorityTone(record.priorityScore))}>
+      <TableCell className={cn(compact ? 'px-2 py-2' : undefined)}>
+        <Badge variant="outline" className={cn('rounded-md px-2 py-0.5 text-[11px] font-medium shadow-none', priorityTone(record.priorityScore))}>
           {record.priorityScore}/10
         </Badge>
       </TableCell>
-      <TableCell className="whitespace-nowrap">{record.updatedLabel}</TableCell>
+      <TableCell className={cn('whitespace-nowrap text-sm', compact ? 'px-2 py-2' : undefined)}>{record.updatedLabel}</TableCell>
     </TableRow>
   );
 
@@ -954,7 +950,7 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
                 <Card className="overflow-hidden shadow-sm">
                   <CardContent className="p-0">
                     <div className="overflow-x-auto rounded-xl bg-card">
-                      <Table dir="rtl" className="w-full min-w-[1680px] table-fixed">
+                      <Table dir="rtl" className="w-full min-w-[1220px] table-fixed text-sm">
                         <TableHeader className="bg-muted/30">
                           <TableRow>
                             <TableHead className="w-[140px] whitespace-nowrap">حفظ المشروع</TableHead>
@@ -969,7 +965,7 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
                           </TableRow>
                         </TableHeader>
                         <TableBody>
-                          {paginatedRecords.map(record => renderRow(record))}
+                          {paginatedRecords.map(record => renderRow(record, true))}
                         </TableBody>
                       </Table>
                     </div>

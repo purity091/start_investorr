@@ -1,9 +1,8 @@
 
 // v4.0.1 - Production Sync
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Sidebar } from './components/layout/Sidebar';
 import { StrategicSupportFloat } from './components/layout/StrategicSupportFloat';
-import { LeftAiSidebar } from './components/features/ai/LeftAiSidebar';
 import { BottomNavBar } from './components/layout/BottomNavBar';
 import { Header } from './components/layout/Header';
 import { DashboardRouter } from './components/views/DashboardRouter';
@@ -30,15 +29,9 @@ const AppShell: React.FC = () => {
   const [expandedSectionId, setExpandedSectionId] = useState<string | null>('1');
   const [saveStatus, setSaveStatus] = useState<'saved' | 'saving' | null>('saved');
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true);
-  const [isAiSidebarOpen, setIsAiSidebarOpen] = useState(false);
-  const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
-  const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isTourRunning, setIsTourRunning] = useState(false);
   const [subTabLabel, setSubTabLabel] = useState<string | null>(null);
   const [selectedCompanyId, setSelectedCompanyId] = useState<string | undefined>(undefined);
-  
-  const notificationRef = useRef<HTMLDivElement>(null);
-  const profileRef = useRef<HTMLDivElement>(null);
   const { setPlanSections, setStage } = useProjectWorkspace();
 
   const setActiveTab = (tab: string, options?: { replace?: boolean }) => {
@@ -78,19 +71,6 @@ const AppShell: React.FC = () => {
   }, [activeTab]);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (notificationRef.current && !notificationRef.current.contains(event.target as Node)) {
-        setIsNotificationsOpen(false);
-      }
-      if (profileRef.current && !profileRef.current.contains(event.target as Node)) {
-        setIsProfileOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  useEffect(() => {
     if (saveStatus === 'saving') {
       const timer = setTimeout(() => setSaveStatus('saved'), 1000);
       return () => clearTimeout(timer);
@@ -128,15 +108,6 @@ const AppShell: React.FC = () => {
     <TooltipProvider>
       <SidebarProvider open={!isSidebarCollapsed} onOpenChange={(open) => setIsSidebarCollapsed(!open)}>
         <div className="flex min-h-screen w-full max-w-full overflow-x-hidden bg-background">
-          {!isAdminView && (
-            <div className="hidden xl:flex">
-              <LeftAiSidebar
-                isOpen={isAiSidebarOpen}
-                onToggle={() => setIsAiSidebarOpen(!isAiSidebarOpen)}
-              />
-            </div>
-          )}
-
           <Sidebar
             user={MOCK_USER}
             isCollapsed={isSidebarCollapsed}
@@ -145,25 +116,14 @@ const AppShell: React.FC = () => {
           />
 
           <SidebarInset
-            className={`min-h-screen w-full max-w-full overflow-x-hidden bg-background transition-[margin] duration-300 ${
-              !isAdminView && isAiSidebarOpen ? '2xl:ml-96' : ''
-            }`}
+            className="min-h-screen w-full max-w-full overflow-x-hidden bg-background transition-[margin] duration-300"
           >
             <Header
               activeTab={activeTab}
               setActiveTab={setActiveTab}
               subTabLabel={subTabLabel}
               setSubTabLabel={setSubTabLabel}
-              isNotificationsOpen={isNotificationsOpen}
-              setIsNotificationsOpen={setIsNotificationsOpen}
-              isProfileOpen={isProfileOpen}
-              setIsProfileOpen={setIsProfileOpen}
-              isTourRunning={isTourRunning}
               setIsTourRunning={setIsTourRunning}
-              setIsSidebarCollapsed={setIsSidebarCollapsed}
-              setIsMobileMenuOpen={() => {}}
-              notificationRef={notificationRef}
-              profileRef={profileRef}
               user={MOCK_USER}
             />
 
@@ -180,9 +140,7 @@ const AppShell: React.FC = () => {
               setSelectedCompanyId={setSelectedCompanyId}
             />
 
-            {!isAdminView ? (
-              <StrategicSupportFloat onOpenContact={() => setActiveTab('contact-us')} />
-            ) : null}
+            {!isAdminView ? <StrategicSupportFloat /> : null}
           </SidebarInset>
 
           {isTourRunning && (
