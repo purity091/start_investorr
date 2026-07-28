@@ -1,9 +1,9 @@
 import React, { useState, type FC } from 'react';
 import { ChevronDown, ExternalLink } from 'lucide-react';
 import { BusinessOpportunity } from './types';
-import { Card, CardContent } from '../../../ui/card';
-import { Badge } from '../../../ui/badge';
-import { Button } from '../../../ui/button';
+import { Card, CardContent } from '../../../ui/Card';
+import { Badge } from '../../../ui/Badge';
+import { Button } from '../../../ui/Button';
 import { cn } from '../../../../lib/utils';
 
 export const OpportunityCard: FC<{ opp: BusinessOpportunity; index: number; onBuildPlan?: (p?: string) => void }> = ({

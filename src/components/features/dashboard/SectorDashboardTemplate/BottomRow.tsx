@@ -1,6 +1,6 @@
 import React, { type FC } from 'react';
-import { Card, CardContent } from '../../../ui/card';
-import { Badge } from '../../../ui/badge';
+import { Card, CardContent } from '../../../ui/Card';
+import { Badge } from '../../../ui/Badge';
 import { cn } from '../../../../lib/utils';
 
 export const BottomRow: FC<{

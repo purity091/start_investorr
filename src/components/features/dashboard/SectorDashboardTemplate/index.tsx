@@ -8,8 +8,8 @@ import React, {
 } from 'react';
 import { Download } from 'lucide-react';
 import { SectorDashboardProps } from './types';
-import { Button } from '../../../ui/button';
-import { Badge } from '../../../ui/badge';
+import { Button } from '../../../ui/Button';
+import { Badge } from '../../../ui/Badge';
 import { cn } from '../../../../lib/utils';
 import { useAccentVars } from '../../../../hooks/useAccentVars';
 import { LightCard, DarkCard, KpiCard } from './SectionCards';

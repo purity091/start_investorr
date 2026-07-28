@@ -1,6 +1,6 @@
 import React, { type FC } from 'react';
 import { SectorLeader } from './types';
-import { Card } from '../../../ui/card';
+import { Card } from '../../../ui/Card';
 
 export const LeadersSection: FC<{
   leaders: SectorLeader[];

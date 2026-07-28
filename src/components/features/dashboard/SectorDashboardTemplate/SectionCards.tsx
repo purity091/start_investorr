@@ -1,6 +1,6 @@
 import React, { type FC } from 'react';
 import { SectorKPI, SectorSection, SectorMarket } from './types';
-import { Card, CardContent, CardHeader, CardTitle } from '../../../ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '../../../ui/Card';
 import { cn } from '../../../../lib/utils';
 
 const parseContent = (content: string, dark: boolean): React.ReactNode => {
