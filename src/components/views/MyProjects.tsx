@@ -14,7 +14,9 @@ import {
   Trash2,
   Workflow,
   Zap,
+  ArrowUpDown,
 } from 'lucide-react';
+import { Checkbox } from '@/components/ui/checkbox';
 
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
@@ -23,6 +25,14 @@ import { Input } from '@/components/ui/Input';
 import { EmptyState, NoResultsState } from '@/components/ui/PageStates';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from '@/components/ui/pagination';
 import { cn } from '@/lib/utils';
 
 type ProjectStatus = 'ready' | 'review' | 'draft';
@@ -197,6 +207,8 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [typeFilter, setTypeFilter] = useState<TypeFilter>('all');
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('all');
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5;
 
   const filteredProjects = useMemo(() => {
     const query = searchTerm.trim().toLowerCase();
@@ -215,9 +227,22 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
     });
   }, [searchTerm, typeFilter, statusFilter, projectsList]);
 
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, typeFilter, statusFilter]);
+
+  const totalPages = Math.ceil(filteredProjects.length / itemsPerPage);
+  const paginatedProjects = useMemo(() => {
+    return filteredProjects.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+  }, [filteredProjects, currentPage]);
+
   const handleDelete = (id: string, name: string) => {
     if (window.confirm(`هل أنت متأكد من رغبتك في حذف مشروع "${name}"؟`)) {
       setProjectsList((prev) => prev.filter((p) => p.id !== id));
+      // Adjust page if deleting the last item on the current page
+      if (paginatedProjects.length === 1 && currentPage > 1) {
+        setCurrentPage((prev) => prev - 1);
+      }
     }
   };
 
@@ -322,17 +347,51 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
             ) : (
               <>
                 <ProjectsTable 
-                  projects={filteredProjects} 
+                  projects={paginatedProjects} 
                   setActiveTab={setActiveTab} 
                   onDelete={handleDelete}
                   onShare={handleShare}
                 />
                 <ProjectsMobileList 
-                  projects={filteredProjects} 
+                  projects={paginatedProjects} 
                   setActiveTab={setActiveTab} 
                   onDelete={handleDelete}
                   onShare={handleShare}
                 />
+                
+                {totalPages > 1 && (
+                  <div className="mt-4 border-t border-border pt-4">
+                    <Pagination>
+                      <PaginationContent>
+                        <PaginationItem>
+                          <PaginationPrevious 
+                            onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                            aria-disabled={currentPage === 1}
+                            className={currentPage === 1 ? 'pointer-events-none opacity-50' : 'cursor-pointer'}
+                          />
+                        </PaginationItem>
+                        {Array.from({ length: totalPages }).map((_, i) => (
+                          <PaginationItem key={i}>
+                            <PaginationLink 
+                              isActive={currentPage === i + 1}
+                              onClick={() => setCurrentPage(i + 1)}
+                              className="cursor-pointer"
+                            >
+                              {i + 1}
+                            </PaginationLink>
+                          </PaginationItem>
+                        ))}
+                        <PaginationItem>
+                          <PaginationNext 
+                            onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                            aria-disabled={currentPage === totalPages}
+                            className={currentPage === totalPages ? 'pointer-events-none opacity-50' : 'cursor-pointer'}
+                          />
+                        </PaginationItem>
+                      </PaginationContent>
+                    </Pagination>
+                  </div>
+                )}
               </>
             )}
           </CardContent>
@@ -354,17 +413,40 @@ function ProjectsTable({
   onShare: (name: string) => void;
 }) {
   return (
-    <div className="hidden overflow-hidden rounded-md lg:block">
+    <div className="hidden rounded-xl border border-border bg-card shadow-sm lg:block">
       <Table dir="rtl">
-        <TableHeader>
-          <TableRow>
-            <TableHead className="min-w-[280px]">المشروع</TableHead>
-            <TableHead className="w-[125px]">إجراءات</TableHead>
-            <TableHead className="min-w-[150px]">النموذج</TableHead>
-            <TableHead className="min-w-[180px]">التقدم</TableHead>
-            <TableHead className="min-w-[110px]">التقييم</TableHead>
-            <TableHead className="min-w-[130px]">الحالة</TableHead>
-            <TableHead className="min-w-[130px]">آخر تعديل</TableHead>
+        <TableHeader className="bg-muted/30">
+          <TableRow className="hover:bg-transparent">
+            <TableHead className="w-[50px] px-4">
+              <Checkbox className="translate-y-0.5" />
+            </TableHead>
+            <TableHead className="min-w-[280px]">
+              <div className="flex cursor-pointer items-center gap-2 font-bold text-foreground transition-colors hover:text-primary">
+                المشروع
+                <ArrowUpDown className="size-3.5 text-muted-foreground" />
+              </div>
+            </TableHead>
+            <TableHead className="w-[130px] font-bold text-foreground">إجراءات</TableHead>
+            <TableHead className="min-w-[150px]">
+              <div className="flex cursor-pointer items-center gap-2 font-bold text-foreground transition-colors hover:text-primary">
+                النموذج
+                <ArrowUpDown className="size-3.5 text-muted-foreground" />
+              </div>
+            </TableHead>
+            <TableHead className="min-w-[180px] font-bold text-foreground">التقدم</TableHead>
+            <TableHead className="min-w-[110px]">
+              <div className="flex cursor-pointer items-center gap-2 font-bold text-foreground transition-colors hover:text-primary">
+                التقييم
+                <ArrowUpDown className="size-3.5 text-muted-foreground" />
+              </div>
+            </TableHead>
+            <TableHead className="min-w-[130px] font-bold text-foreground">الحالة</TableHead>
+            <TableHead className="min-w-[130px]">
+              <div className="flex cursor-pointer items-center gap-2 font-bold text-foreground transition-colors hover:text-primary">
+                آخر تعديل
+                <ArrowUpDown className="size-3.5 text-muted-foreground" />
+              </div>
+            </TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -394,34 +476,42 @@ function ProjectTableRow({
   onDelete: (id: string, name: string) => void;
   onShare: (name: string) => void;
 }) {
+  const ProjectIcon = PROJECT_TYPE_META[project.type].icon;
+
   return (
-    <TableRow>
-      <TableCell>
-        <div className="flex min-w-0 items-center gap-2">
+    <TableRow className="group transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+      <TableCell className="px-4 py-4">
+        <Checkbox className="translate-y-0.5 transition-opacity group-hover:opacity-100 opacity-40 data-[state=checked]:opacity-100" />
+      </TableCell>
+      <TableCell className="py-4">
+        <div className="flex min-w-0 items-center gap-3">
+          <div className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-border bg-background shadow-sm">
+            <ProjectIcon className="size-5 text-muted-foreground" />
+          </div>
           <div className="min-w-0 flex-1 text-right">
             <button
               type="button"
               onClick={() => setActiveTab?.('editor')}
-              className="block max-w-[260px] truncate text-sm font-medium leading-5 text-foreground hover:text-primary"
+              className="block max-w-[260px] truncate text-sm font-bold leading-5 text-foreground hover:text-primary hover:underline"
             >
               {project.name}
             </button>
-            <p className="truncate text-xs leading-5 text-muted-foreground">
-              {project.sector} · {project.marketCap}
+            <p className="mt-0.5 truncate text-[13px] font-medium leading-5 text-muted-foreground">
+              {project.sector} <span className="mx-1 text-muted-foreground/40">•</span> {project.marketCap}
             </p>
           </div>
-          {project.isFavorite ? <Star className="size-4 shrink-0 text-amber-600" fill="currentColor" /> : null}
+          {project.isFavorite ? <Star className="size-4 shrink-0 text-amber-500" fill="currentColor" /> : null}
         </div>
       </TableCell>
 
-      <TableCell>
-        <div className="flex items-center gap-1">
+      <TableCell className="py-4">
+        <div className="flex items-center gap-1 opacity-0 transition-opacity group-hover:opacity-100">
           <Button
             variant="ghost"
             size="icon-sm"
             onClick={() => setActiveTab?.('editor')}
             title="تعديل"
-            className="text-muted-foreground hover:text-primary"
+            className="size-8 text-muted-foreground hover:text-primary"
           >
             <Pencil className="size-4" />
           </Button>
@@ -430,7 +520,7 @@ function ProjectTableRow({
             size="icon-sm"
             onClick={() => onShare(project.name)}
             title="مشاركة"
-            className="text-muted-foreground hover:text-primary"
+            className="size-8 text-muted-foreground hover:text-primary"
           >
             <Share2 className="size-4" />
           </Button>
@@ -439,7 +529,7 @@ function ProjectTableRow({
             size="icon-sm"
             onClick={() => onDelete(project.id, project.name)}
             title="حذف"
-            className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+            className="size-8 text-muted-foreground hover:bg-destructive/10 hover:text-destructive"
           >
             <Trash2 className="size-4" />
           </Button>

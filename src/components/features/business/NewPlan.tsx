@@ -20,6 +20,7 @@ import { Button } from '../../ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../ui/Card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../../ui/table';
 import { IdeaCreation, CreationMode } from './IdeaCreation';
+import { ExampleViewer } from './ExampleViewer';
 
 type ToolMode = 'selection' | 'easy' | 'ai' | 'family' | 'bmc' | 'mit24';
 type IntroMode = Exclude<ToolMode, 'selection' | 'ai'>;
@@ -34,6 +35,12 @@ type ToolIntro = {
   summary: string;
   steps: string[];
   outcomes: string[];
+  example: {
+    name: string;
+    sector: string;
+    description: string;
+    points: string[];
+  };
 };
 
 interface Template {
@@ -72,6 +79,16 @@ const TOOL_INTROS: Record<IntroMode, ToolIntro> = {
       'رؤية مبكرة للفجوات: هل المشكلة واضحة؟ هل العميل محدد؟ هل نموذج الربح مفهوم؟',
       'قرار عملي حول الخطوة التالية: تطوير الفكرة، اختبارها، أو الانتقال إلى النموذج الاحترافي.',
     ],
+    example: {
+      name: 'LinkSync - أداة ربط الحسابات',
+      sector: 'Micro SaaS - أدوات مطورين',
+      description: 'أداة سحابية خفيفة تربط بين منصات الدفع وخدمات البريد الإلكتروني للمتاجر الصغيرة دون الحاجة لأي كود.',
+      points: [
+        'المشكلة: المتاجر الصغيرة لا تملك مبرمجين لربط الخدمات.',
+        'العميل المستهدف: أصحاب المتاجر الإلكترونية المستقلة.',
+        'نموذج الربح المبدئي: اشتراك شهري رمزي بـ 9$.'
+      ]
+    }
   },
   easy: {
     title: 'النموذج الاحترافي',
@@ -93,6 +110,16 @@ const TOOL_INTROS: Record<IntroMode, ToolIntro> = {
       'مخرجات قابلة للتحويل لاحقاً إلى دراسة جدوى تفصيلية أو عرض للمستثمر.',
       'أساس عملي للمراجعة مع مستشار أو فريق تقني قبل الدخول في التنفيذ.',
     ],
+    example: {
+      name: 'FormAI - صانع نماذج ذكي',
+      sector: 'Micro SaaS - إنتاجية وتسويق',
+      description: 'منصة لإنشاء نماذج جمع البيانات باستخدام الذكاء الاصطناعي مع تحليلات متقدمة.',
+      points: [
+        'حجم السوق المتاح: 50 ألف وكالة تسويق إقليمية.',
+        'الميزة التنافسية: دعم كامل وتلقائي للغة العربية.',
+        'المخاطر الرئيسية: تكلفة واجهة برمجة تطبيقات الذكاء الاصطناعي.'
+      ]
+    }
   },
   mit24: {
     title: 'MIT 24 Steps',
@@ -114,6 +141,16 @@ const TOOL_INTROS: Record<IntroMode, ToolIntro> = {
       'تقليل القفزات العشوائية بين الفكرة والتنفيذ عبر مسار متدرج.',
       'محتوى قابل للتطوير إلى وثائق تنفيذية أعمق عند نضج المشروع.',
     ],
+    example: {
+      name: 'ClinicSync - حجز العيادات السحابي',
+      sector: 'Micro SaaS - تقنية صحية',
+      description: 'نظام حجز وإدارة مبسط جداً لعيادات الأسنان المستقلة للحد من تغيب المرضى.',
+      points: [
+        'الشريحة الأولى: 100 عيادة أسنان في مدينة الرياض كإطلاق أولي.',
+        'القيمة الأساسية: تقليل عدم الحضور بنسبة 40% عبر رسائل واتساب آلية.',
+        'تكلفة الاستحواذ على العميل (CAC): حوالي 150$.'
+      ]
+    }
   },
   bmc: {
     title: 'بناء نموذج العمل BMC',
@@ -135,6 +172,16 @@ const TOOL_INTROS: Record<IntroMode, ToolIntro> = {
       'كشف مبكر للتناقضات بين القيمة، العميل، القنوات، والتكاليف.',
       'مادة جاهزة للمراجعة أو العرض أو التطوير لاحقاً.',
     ],
+    example: {
+      name: 'MenuQR - منيو المطاعم التفاعلي',
+      sector: 'Micro SaaS - ضيافة ومطاعم',
+      description: 'خدمة سريعة لتحويل قوائم الطعام التقليدية إلى قوائم رقمية تفاعلية بمسح الـ QR.',
+      points: [
+        'شرائح العملاء: المقاهي والمطاعم ذات الميزانية المحدودة.',
+        'القنوات: التسويق المباشر والزيارات الميدانية للمقاهي.',
+        'هيكل التكاليف: استضافة سحابية بسيطة ودعم فني غير معقد.'
+      ]
+    }
   },
 };
 
@@ -174,7 +221,7 @@ const TOOL_CARDS: Array<{ mode: IntroMode; title: string; description: string; i
   { mode: 'bmc', title: 'بناء نموذج العمل BMC', description: 'لوحة منظمة لفهم عناصر المشروع وعلاقاتها الأساسية.', icon: LayoutGrid },
 ];
 
-const ToolIntroPanel: React.FC<{ mode: IntroMode; onStart: () => void; onBack?: () => void }> = ({ mode, onStart, onBack }) => {
+const ToolIntroPanel: React.FC<{ mode: IntroMode; onStart: () => void; onBack?: () => void; onViewExample: () => void }> = ({ mode, onStart, onBack, onViewExample }) => {
   const intro = TOOL_INTROS[mode];
   const IntroIcon = intro.icon;
 
@@ -206,9 +253,10 @@ const ToolIntroPanel: React.FC<{ mode: IntroMode; onStart: () => void; onBack?: 
               </Button>
             </div>
           </div>
-          <div className="grid gap-3 md:grid-cols-2">
-            <ExplanationCard title="كيف تبني هذه الأداة دراسة جدوى مشروع؟" items={intro.steps} />
+          <div className="grid gap-3 md:grid-cols-3">
+            <ExplanationCard title="كيف تبني الدراسة بهذا المسار؟" items={intro.steps} />
             <ExplanationCard title="ماذا ستحصل في النهاية؟" items={intro.outcomes} />
+            <ExampleCard example={intro.example} onViewExample={onViewExample} />
           </div>
         </CardContent>
       </Card>
@@ -227,13 +275,19 @@ export const NewPlan: React.FC<{
 }> = ({ onStart, onBuildPlan, setSubTabLabel, initialMode = 'selection' }) => {
   const [mode, setMode] = useState<ToolMode>(initialMode);
   const [hasStarted, setHasStarted] = useState(initialMode === 'selection');
+  const [isViewingExample, setIsViewingExample] = useState(false);
 
   useEffect(() => {
     setMode(initialMode);
     setHasStarted(initialMode === 'selection');
+    setIsViewingExample(false);
   }, [initialMode]);
 
   const isIntroMode = mode === 'family' || mode === 'easy' || mode === 'mit24' || mode === 'bmc';
+
+  if (isViewingExample && isIntroMode) {
+    return <ExampleViewer mode={mode as IntroMode} onBack={() => setIsViewingExample(false)} />;
+  }
 
   if (mode === 'easy' && hasStarted) {
     return <SmartBeginnerPro />;
@@ -256,9 +310,10 @@ export const NewPlan: React.FC<{
   if (isIntroMode && !hasStarted) {
     return (
       <ToolIntroPanel
-        mode={mode}
+        mode={mode as IntroMode}
         onStart={() => setHasStarted(true)}
         onBack={initialMode === 'selection' ? () => setMode('selection') : undefined}
+        onViewExample={() => setIsViewingExample(true)}
       />
     );
   }
@@ -598,5 +653,31 @@ function GuideCard({ title, text }: { title: string; text: string }) {
       <p className="mb-2 text-sm font-semibold text-foreground">{title}</p>
       <p className="text-xs leading-6 text-muted-foreground">{text}</p>
     </div>
+  );
+}
+
+function ExampleCard({ example, onViewExample }: { example: ToolIntro['example']; onViewExample: () => void }) {
+  return (
+    <Card className="h-full border border-primary/20 bg-primary/5 shadow-none relative overflow-hidden flex flex-col">
+      <div className="absolute right-0 top-0 w-1 h-full bg-primary" />
+      <CardHeader className="px-4 py-3 pb-2">
+        <CardTitle className="text-sm text-primary flex items-center gap-2">
+          <Lightbulb className="size-4" />
+          مثال توضيحي للنتيجة
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="space-y-3 px-4 pb-4 pt-0 flex-1 flex flex-col">
+        <div>
+          <h4 className="font-bold text-foreground text-sm">{example.name}</h4>
+          <p className="text-[11px] font-bold text-primary mt-0.5">{example.sector}</p>
+        </div>
+        <p className="text-xs leading-5 text-muted-foreground flex-1">{example.description}</p>
+        <div className="pt-3 mt-auto">
+          <Button type="button" variant="default" className="w-full text-xs" onClick={onViewExample}>
+            عرض المثال كاملاً
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
   );
 }

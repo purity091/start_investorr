@@ -8,6 +8,9 @@ import React, {
 } from 'react';
 import { Download } from 'lucide-react';
 import { SectorDashboardProps } from './types';
+import { Button } from '../../../ui/button';
+import { Badge } from '../../../ui/badge';
+import { cn } from '../../../../lib/utils';
 import { useAccentVars } from '../../../../hooks/useAccentVars';
 import { LightCard, DarkCard, KpiCard } from './SectionCards';
 import { OpportunitiesSection } from './BusinessOpportunities';
@@ -77,88 +80,8 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLDivElement>(null);
-  const visibleRef = useRef<Set<string>>(new Set());
-
-  useEffect(() => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollTo({ top: 0, behavior: 'instant' });
-    }
-  }, []);
-
-  const handleNavClick = useCallback(
-    (label: string) => {
-      setActiveNav(label);
-      const sectionId = navMap[label];
-      if (!sectionId) return;
-
-      const el =
-        document.querySelector<HTMLElement>(`[data-section="${sectionId}"]`) ??
-        document.getElementById(`${sectionId}-section`);
-
-      if (el && scrollContainerRef.current) {
-        const container = scrollContainerRef.current;
-        const navHeight = navRef.current?.offsetHeight ?? 60;
-        const targetScroll =
-          el.getBoundingClientRect().top -
-          container.getBoundingClientRect().top +
-          container.scrollTop -
-          navHeight -
-          20;
-
-        container.scrollTo({ top: targetScroll, behavior: 'smooth' });
-      }
-    },
-    [navMap],
-  );
-
-  useEffect(() => {
-    const root = mainRef.current;
-    if (!root) return;
-
-    const tracked: Element[] = [];
-
-    sections.forEach((section) => {
-      const el = root.querySelector(`[data-section="${section.id}"]`);
-      if (el) tracked.push(el);
-    });
-
-    ['opportunities-section', 'leaders', 'definition', 'insights-bottom', 'swot-analysis'].forEach((id) => {
-      const el = document.querySelector(`[data-section="${id}"]`) || document.getElementById(id);
-      if (el) tracked.push(el);
-    });
-
-    visibleRef.current.clear();
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          const id = entry.target.getAttribute('data-section') ?? entry.target.id ?? '';
-          if (entry.isIntersecting) {
-            visibleRef.current.add(id);
-          } else {
-            visibleRef.current.delete(id);
-          }
-        }
-
-        for (const sectionId of visibleRef.current) {
-          for (const [label, navSectionId] of Object.entries(navMap)) {
-            if (navSectionId === sectionId && nav.includes(label)) {
-              setActiveNav(label);
-              return;
-            }
-          }
-        }
-      },
-      {
-        root: scrollContainerRef.current,
-        rootMargin: '-120px 0px -40% 0px',
-        threshold: [0, 0.2],
-      },
-    );
-
-    tracked.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, [sections, navMap, nav]);
+  // The active nav state is handled by regular React state.
+  // We no longer need the IntersectionObserver since we are using a tabbed view instead of scrolling.
 
   const handleDownloadReport = useCallback(async () => {
     if (!reportRef.current) return;
@@ -181,80 +104,41 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
       <div
         dir="rtl"
         ref={scrollContainerRef}
-        className="sd-mobile-safe"
-        style={{
-          minHeight: '100vh',
-          background: '#f8fafc',
-          fontFamily: "'Cairo', 'Tajawal', 'IBM Plex Sans Arabic', system-ui, sans-serif",
-          height: '100vh',
-          overflowY: 'auto',
-        }}
+        className="relative h-screen min-h-screen overflow-y-auto bg-background font-['IBM_Plex_Sans_Arabic',system-ui,sans-serif]"
       >
-        <header className="sd-light-hero-section">
-          <div className="sd-container">
-            <div className="sd-light-hero-grid">
-              <div className="sd-light-hero-content">
-                <div className="sd-light-badge">دراسة قطاع {parentCategory}</div>
-                <h1
-                  style={{
-                    fontSize: 'clamp(36px, 5vw, 48px)',
-                    fontWeight: 900,
-                    color: '#020617',
-                    margin: 0,
-                    lineHeight: 1.2,
-                    letterSpacing: '-0.02em',
-                  }}
-                >
+        <header className="relative border-b border-border bg-background px-4 py-6 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-[1700px]">
+            <div className="grid gap-6 lg:grid-cols-[1fr_400px] xl:grid-cols-[1fr_500px]">
+              <div className="space-y-4">
+                <Badge variant="secondary" className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[10px] font-bold text-primary hover:bg-primary/20">
+                  دراسة قطاع {parentCategory}
+                </Badge>
+                <h1 className="text-3xl font-black tracking-tight text-foreground sm:text-4xl">
                   {title}
                 </h1>
-                <p style={{ maxWidth: '100%', fontSize: 16, lineHeight: 1.8, color: '#475569', margin: 0 }}>
+                <p className="max-w-3xl text-sm font-medium leading-relaxed text-muted-foreground sm:text-base">
                   {subtitle}
                 </p>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 12 }}>
-                  <button
+                <div className="flex flex-wrap items-center gap-3 pt-2">
+                  <Button
                     onClick={handleDownloadReport}
-                    className="sd-download-btn"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 8,
-                      borderRadius: 12,
-                      background: '#0f172a',
-                      padding: '12px 20px',
-                      fontSize: 14,
-                      fontWeight: 900,
-                      color: '#fff',
-                      border: 'none',
-                      cursor: 'pointer',
-                      transition: 'background 0.2s',
-                    }}
+                    className="h-10 gap-2 rounded-lg px-5 font-bold text-[13px]"
+                    disabled={isDownloading}
                   >
-                    {isDownloading ? 'جاري تجهيز ملف PDF...' : pdfLabel}
-                    <Download size={16} />
-                  </button>
-                  <button
+                    {isDownloading ? 'جاري التجهيز...' : pdfLabel}
+                    <Download className="size-4" />
+                  </Button>
+                  <Button
                     onClick={onBack}
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 8,
-                      borderRadius: 12,
-                      border: '1px solid #e2e8f0',
-                      background: '#fff',
-                      padding: '12px 20px',
-                      fontSize: 14,
-                      fontWeight: 900,
-                      color: '#334155',
-                      cursor: 'pointer',
-                      transition: 'background 0.2s',
-                    }}
+                    variant="outline"
+                    className="h-10 rounded-lg px-5 font-bold text-[13px]"
                   >
-                    الرجوع لاستكشاف القطاعات
-                  </button>
+                    الرجوع
+                  </Button>
                 </div>
               </div>
 
-              <div className="sd-light-kpi-grid">
+              <div className="grid grid-cols-2 gap-3 self-center">
                 {kpis.slice(0, 4).map((kpi, index) => (
                   <KpiCard key={index} kpi={kpi} />
                 ))}
@@ -263,70 +147,55 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
           </div>
         </header>
 
-        <nav
-          ref={navRef}
-          style={{
-            position: 'sticky',
-            top: 0,
-            zIndex: 100,
-            background: 'rgba(255,255,255,0.9)',
-            backdropFilter: 'blur(24px)',
-            borderBottom: '1px solid #f1f5f9',
-          }}
-        >
-          <div className="sd-container" style={{ height: 72 }}>
-            <div className="sd-nav-container">
+        <div className="mx-auto flex w-full max-w-[1700px] flex-col gap-8 px-4 py-10 sm:px-6 lg:flex-row lg:px-8">
+          {/* Sidebar Navigation */}
+          <aside className="w-full shrink-0 lg:w-64">
+            <div className="sticky top-24 flex flex-col gap-1 rounded-2xl border border-border bg-background p-3">
               {nav.map((item) => (
                 <button
                   key={item}
-                  onClick={() => handleNavClick(item)}
-                  className={`sd-nav-btn ${activeNav === item ? 'active' : ''}`}
-                  style={{
-                    padding: '10px 24px',
-                    borderRadius: '100px',
-                    border: '1px solid transparent',
-                    background: activeNav === item ? '#0f172a' : 'transparent',
-                    color: activeNav === item ? '#fff' : '#475569',
-                    fontSize: 14,
-                    fontWeight: 800,
-                    cursor: 'pointer',
-                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                  }}
+                  onClick={() => setActiveNav(item)}
+                  className={cn(
+                    "flex w-full items-center justify-start rounded-xl px-4 py-3 text-right text-[13px] font-bold transition-all",
+                    activeNav === item 
+                      ? "bg-primary text-primary-foreground shadow-sm" 
+                      : "bg-transparent text-muted-foreground hover:bg-muted hover:text-foreground"
+                  )}
                 >
                   {item}
                 </button>
               ))}
             </div>
-          </div>
-        </nav>
+          </aside>
 
-        <main
-          ref={mainRef}
-          className="sd-container"
-          style={{
-            paddingTop: '40px',
-            paddingBottom: '160px',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 24,
-          }}
-        >
-          <BottomRow definition={definition} industryInsights={industryInsights} tags={tags} title={title} />
+          {/* Main Content Area */}
+          <main ref={mainRef} className="flex-1 min-w-0">
+            {navMap[activeNav] === 'definition' && (
+              <BottomRow definition={definition} industryInsights={industryInsights} tags={tags} title={title} />
+            )}
 
-          {hasSwot && <SwotSection swot={swot} title={title} />}
+            {navMap[activeNav] === 'swot-analysis' && hasSwot && swot && (
+              <SwotSection swot={swot} title={title} />
+            )}
 
-          {hasOpportunities && (
-            <OpportunitiesSection opportunities={businessOpportunities} onBuildPlan={onBuildPlan} />
-          )}
+            {navMap[activeNav] === 'opportunities-section' && hasOpportunities && (
+              <OpportunitiesSection opportunities={businessOpportunities} onBuildPlan={onBuildPlan} />
+            )}
 
-          {sections.map((section) => (
-            <div key={section.id} data-section={section.id}>
-              {section.variant === 'dark' ? <DarkCard section={section} /> : <LightCard section={section} />}
-            </div>
-          ))}
+            {sections.find(s => s.id === navMap[activeNav]) && (
+              <div key={navMap[activeNav]} className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                {sections.find(s => s.id === navMap[activeNav])?.variant === 'dark' 
+                  ? <DarkCard section={sections.find(s => s.id === navMap[activeNav])!} /> 
+                  : <LightCard section={sections.find(s => s.id === navMap[activeNav])!} />
+                }
+              </div>
+            )}
 
-          {hasLeaders && <LeadersSection leaders={leaders} title={title} />}
-        </main>
+            {navMap[activeNav] === 'leaders' && hasLeaders && (
+              <LeadersSection leaders={leaders} title={title} />
+            )}
+          </main>
+        </div>
       </div>
 
       <div className="fixed left-[-99999px] top-0 z-[-1] w-[1240px] bg-white p-8 text-slate-900" aria-hidden="true">

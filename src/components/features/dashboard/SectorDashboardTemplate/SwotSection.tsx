@@ -6,10 +6,10 @@ import {
   TrendingUp, 
   Zap, 
   Lightbulb, 
-  ArrowUpRight, 
   LucideIcon 
 } from 'lucide-react';
 import { SwotAnalysis, SwotItem } from './types';
+import { Card } from '../../../ui/card';
 
 interface SwotCardProps {
   title: string;
@@ -87,31 +87,21 @@ interface SwotSectionProps {
 
 export function SwotSection({ swot, title }: SwotSectionProps) {
   return (
-    <div 
-      className="sd-section-light sd-section-card" 
+    <Card 
       data-section="swot-analysis"
-      style={{
-        position: 'relative',
-        background: '#fff',
-        borderRadius: 24,
-        border: '1px solid #e2e8f0',
-        padding: '32px',
-        overflow: 'hidden',
-        transition: 'all 0.3s ease',
-      }}
+      className="border-border bg-background p-8 dir-rtl"
     >
-      
-      <div style={{ display: 'flex', alignItems: 'flex-start', gap: 16, marginBottom: 32, direction: 'rtl' }}>
-        <div style={{ width: 4, height: 32, background: 'var(--acc)', borderRadius: 4, flexShrink: 0, marginTop: 4 }} />
-        <div style={{ flex: 1 }}>
-          <h2 style={{ margin: 0, fontSize: 24, fontWeight: 900, color: '#0f172a', letterSpacing: '-0.02em' }}>تحليل SWOT الاستراتيجي</h2>
-          <p style={{ margin: '8px 0 0', fontSize: 16, fontWeight: 500, color: '#64748b', lineHeight: 1.6 }}>نظرة تحليلية شاملة للقطاع: {title}</p>
+      <div className="mb-8 flex items-start gap-4">
+        <div className="mt-1 h-8 w-1 shrink-0 rounded bg-primary" />
+        <div className="flex-1">
+          <h2 className="m-0 text-2xl font-black tracking-tight text-foreground">تحليل SWOT الاستراتيجي</h2>
+          <p className="mt-2 text-base font-medium leading-relaxed text-muted-foreground">نظرة تحليلية شاملة للقطاع: {title}</p>
         </div>
       </div>
 
-      <div className="sd-section-light-body" style={{ direction: 'rtl' }}>
+      <div className="dir-rtl">
         <div className="mb-10 text-right">
-          <p style={{ fontSize: 16, fontWeight: 500, color: '#475569', lineHeight: 1.8 }}>
+          <p className="text-base font-medium leading-relaxed text-muted-foreground">
             {swot.description}
           </p>
         </div>
@@ -123,26 +113,26 @@ export function SwotSection({ swot, title }: SwotSectionProps) {
           <SwotCard title="التهديدات والمخاطر" items={swot.threats} icon={Zap} color="indigo" />
         </div>
 
-        <div className="mt-12 relative group overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-amber-400/5 via-yellow-400/5 to-orange-400/5 rounded-[2rem]" />
-          <div className="relative bg-white border border-amber-100/50 rounded-[2rem] p-1 shadow-sm transition-all duration-500 hover:shadow-xl hover:shadow-amber-900/5">
-            <div className="bg-amber-50/10 backdrop-blur-xl rounded-[1.8rem] p-8 md:p-10 border border-white overflow-hidden relative">
+        <div className="mt-12 relative group overflow-hidden rounded-[2rem]">
+          <div className="absolute inset-0 bg-gradient-to-r from-amber-400/5 via-yellow-400/5 to-orange-400/5" />
+          <div className="relative border border-amber-100/50 bg-background/50 p-1 shadow-sm transition-all duration-500 hover:shadow-xl hover:shadow-amber-900/5">
+            <div className="relative overflow-hidden rounded-[1.8rem] border border-border bg-amber-50/10 p-8 backdrop-blur-xl md:p-10">
               
-              <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 text-center md:text-right">
-                <div className="w-16 h-16 bg-gradient-to-tr from-amber-500 to-yellow-400 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-amber-200/50">
+              <div className="relative z-10 flex flex-col items-center gap-8 text-center md:flex-row md:text-right">
+                <div className="flex size-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-tr from-amber-500 to-yellow-400 shadow-lg shadow-amber-200/50">
                   <Lightbulb size={32} className="text-white" strokeWidth={1.5} />
                 </div>
                 <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-3 justify-center md:justify-start">
-                    <span className="px-3 py-1 bg-amber-100/50 border border-amber-200/50 rounded-full text-[10px] font-black text-amber-800 uppercase tracking-widest">
+                  <div className="mb-3 flex items-center justify-center gap-3 md:justify-start">
+                    <span className="rounded-full border border-amber-200/50 bg-amber-100/50 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-amber-800">
                       STRATEGIC INSIGHT
                     </span>
                     <div className="h-px w-10 bg-amber-200" />
                   </div>
-                  <h4 className="text-2xl font-black text-slate-900 mb-3 leading-tight">
+                  <h4 className="mb-3 text-2xl font-black leading-tight text-foreground">
                     الملخص الذكي لتحليل SWOT
                   </h4>
-                  <p className="text-slate-600 text-lg font-medium leading-relaxed max-w-3xl">
+                  <p className="max-w-3xl text-lg font-medium leading-relaxed text-muted-foreground">
                     {swot.insight}
                   </p>
                 </div>
@@ -151,6 +141,6 @@ export function SwotSection({ swot, title }: SwotSectionProps) {
           </div>
         </div>
       </div>
-    </div>
+    </Card>
   );
 }

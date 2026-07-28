@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import {
+  AlertTriangle,
   ArrowRight,
   BarChart3,
   BriefcaseBusiness,
@@ -13,6 +14,7 @@ import {
   ShieldAlert,
   Target,
   Users,
+  XCircle,
 } from 'lucide-react';
 
 import { Badge } from '@/components/ui/Badge';
@@ -59,130 +61,128 @@ const EMPTY_MESSAGE = 'لم يتم إدخال بيانات بعد';
 
 const PRO_STEPS: ProStep[] = [
   {
-    id: 'project_identity',
-    title: 'تعريف المشروع والفرضية الاستثمارية',
-    shortTitle: 'التعريف',
-    description: 'بناء تعريف دقيق للمشروع قبل الدخول في السوق والماليات. هذه هي صفحة الغلاف الفكرية لدراسة الجدوى.',
+    id: 'executive_summary',
+    title: 'الملخص التنفيذي وهوية المشروع',
+    shortTitle: 'الملخص والفكرة',
+    description: 'واجهة المشروع التي تلخص الرؤية والهدف الاستراتيجي. هذا القسم هو ما يقرأه المستثمر أولاً لتقرير ما إذا كان سيكمل القراءة.',
     icon: BriefcaseBusiness,
-    professionalNote: 'المستثمر أو المستشار يحتاج أن يفهم المشروع في دقيقة واحدة: ماذا تبني، لمن، ولماذا الآن.',
+    professionalNote: 'الملخص التنفيذي الجيد يجب أن يجيب على: ماذا، لمن، ولماذا الآن، وبأي ميزة تنافسية.',
     fields: [
-      { id: 'name', label: 'اسم المشروع', placeholder: 'مثال: منصة إدارة مشتريات المتاجر الصغيرة', required: true },
-      { id: 'sector', label: 'القطاع والسوق الجغرافي', placeholder: 'مثال: تجارة الجملة للمتاجر الصغيرة في سوريا والخليج', required: true },
-      { id: 'one_liner', label: 'وصف المشروع في سطر واحد', placeholder: 'نساعد المتاجر الصغيرة على الوصول لموردي الجملة وإدارة الطلبات من مكان واحد', required: true },
-      { id: 'why_now', label: 'لماذا هذا التوقيت مناسب؟', type: 'textarea', placeholder: 'اشرح التحولات السوقية أو التقنية أو السلوكية التي تجعل الفرصة الآن أقوى من السابق' },
+      { id: 'name', label: 'اسم المشروع / العلامة التجارية', placeholder: 'مثال: منصة إدارة مشتريات المتاجر الصغيرة', required: true },
+      { id: 'vision', label: 'الرؤية الاستراتيجية', placeholder: 'ما هو الطموح على المدى الطويل؟ (مثال: رقمنة سلاسل الإمداد لقطاع التجزئة في الشرق الأوسط)', required: true },
+      { id: 'one_liner', label: 'وصف المشروع (Elevator Pitch)', type: 'textarea', placeholder: 'وصف دقيق في جملتين يشرح القيمة الأساسية التي تقدمها المنصة للمستخدمين.', required: true },
+      { id: 'why_now', label: 'لماذا الآن؟ (Timing)', type: 'textarea', placeholder: 'اشرح الدوافع السوقية، التقنية، أو التنظيمية التي تجعل إطلاق المشروع الآن فرصة لا تعوض.' },
     ],
   },
   {
-    id: 'problem_customer',
-    title: 'المشكلة والعميل المستهدف',
-    shortTitle: 'العميل',
-    description: 'تحديد الألم الاقتصادي أو التشغيلي الذي يدفع العميل للبحث عن حل، وليس مجرد وصف عام للشريحة.',
-    icon: Users,
-    professionalNote: 'في الدراسات الاحترافية يجب إثبات أن المشكلة متكررة، مكلفة، ولها صاحب قرار واضح.',
-    optionsLabel: 'نوع العميل',
-    options: ['B2C أفراد', 'B2B شركات', 'B2B2C', 'Marketplace', 'Enterprise', 'Government'],
-    fields: [
-      { id: 'segment', label: 'الشريحة الأساسية', placeholder: 'مثال: متاجر بقالة مستقلة تشتري من 5 موردين أو أكثر أسبوعياً', required: true },
-      { id: 'pain', label: 'المشكلة الأساسية', type: 'textarea', placeholder: 'ما الألم المتكرر؟ كم يكلّف العميل وقتاً أو مالاً أو فرصاً؟', required: true },
-      { id: 'current_solution', label: 'كيف يحل العميل المشكلة حالياً؟', type: 'textarea', placeholder: 'واتساب، موردين عشوائيين، إكسل، موظف مشتريات، حلول منافسة...' },
-      { id: 'decision_maker', label: 'صاحب قرار الشراء', placeholder: 'المالك، مدير العمليات، مدير المشتريات، المستخدم النهائي...' },
-    ],
-  },
-  {
-    id: 'solution_prototype',
-    title: 'الحل وقوة النموذج الأولي',
-    shortTitle: 'النموذج الأولي',
-    description: 'تحويل الفكرة إلى نموذج أولي قابل للاختبار قبل بناء المنتج الكامل.',
-    icon: Layers,
-    professionalNote: 'النموذج الأولي الاحترافي يثبت الطلب ويقلل المخاطر التقنية قبل صرف ميزانية كبيرة.',
-    optionsLabel: 'نوع النموذج الأولي',
-    options: ['Landing Page', 'Concierge MVP', 'No-code MVP', 'Prototype تفاعلي', 'Pilot مع عملاء', 'نسخة SaaS أولية'],
-    fields: [
-      { id: 'core_solution', label: 'وصف الحل', type: 'textarea', placeholder: 'ما الذي سيحصل عليه العميل تحديداً؟', required: true },
-      { id: 'mvp_scope', label: 'نطاق MVP', type: 'textarea', placeholder: 'ما الخصائص التي يجب بناؤها أولاً؟ وما الذي سيتم تأجيله؟', required: true },
-      { id: 'test_method', label: 'طريقة اختبار الطلب', type: 'textarea', placeholder: 'مقابلات، صفحة حجز، طلبات مسبقة، تجربة مدفوعة، Pilot محدود...' },
-      { id: 'success_signal', label: 'إشارة نجاح النموذج الأولي', placeholder: 'مثال: 20 طلب تجريبي، 5 عملاء مدفوعين، 30% تحويل من صفحة الهبوط' },
-    ],
-  },
-  {
-    id: 'value_model',
-    title: 'القيمة ونموذج الإيرادات',
-    shortTitle: 'الإيراد',
-    description: 'ربط القيمة التي يشعر بها العميل بمنطق تسعير واضح وقابل للدفاع.',
-    icon: LineChart,
-    professionalNote: 'لا يكفي أن يكون الحل مفيداً. يجب أن يكون قابلاً للتسعير والتحصيل والتكرار.',
-    optionsLabel: 'نموذج الإيراد',
-    options: ['اشتراك', 'عمولة', 'بيع مباشر', 'ترخيص', 'رسوم إعداد', 'Freemium', 'حزم خدمات'],
-    fields: [
-      { id: 'value_proposition', label: 'القيمة المقترحة', type: 'textarea', placeholder: 'ما الوعد الأساسي للعميل؟ توفير وقت، خفض تكلفة، زيادة مبيعات، تقليل مخاطر...' },
-      { id: 'pricing', label: 'التسعير الأولي', placeholder: 'مثال: 15 دولار شهرياً لكل متجر + عمولة 1% على الطلبات', required: true },
-      { id: 'revenue_streams', label: 'مصادر الإيراد', type: 'textarea', placeholder: 'مصدر أساسي ومصادر ثانوية محتملة' },
-      { id: 'willingness_to_pay', label: 'سبب قبول العميل للدفع', type: 'textarea', placeholder: 'اربط السعر بالمشكلة والتكلفة الحالية والبدائل' },
-    ],
-  },
-  {
-    id: 'market_competition',
-    title: 'السوق والمنافسة والتموضع',
-    shortTitle: 'السوق',
-    description: 'تحويل السوق من وصف عام إلى فرضيات قابلة للقياس: حجم، منافسين، قنوات، وتموضع.',
+    id: 'market_analysis',
+    title: 'تحليل السوق والصناعة',
+    shortTitle: 'السوق والصناعة',
+    description: 'تقييم شامل لحجم السوق، ومعدلات النمو، والبيئة التنظيمية التي يعمل فيها المشروع.',
     icon: BarChart3,
-    professionalNote: 'الهدف هنا ليس كتابة أرقام كبيرة فقط، بل تحديد أين يمكن الفوز أولاً.',
-    optionsLabel: 'طبيعة السوق',
-    options: ['سوق محلي', 'سوق إقليمي', 'Niche', 'سوق مزدحم', 'سوق ناشئ', 'سوق منظم قانونياً'],
+    professionalNote: 'الأرقام هنا يجب أن تكون مبنية على أبحاث أو افتراضات منطقية يمكن الدفاع عنها (Bottom-up أو Top-down).',
+    optionsLabel: 'خصائص السوق',
+    options: ['سوق متنامي', 'سوق متشبع', 'احتكار قلة', 'سوق ناشئ', 'تنظيم حكومي صارم', 'تغيرات تقنية سريعة'],
     fields: [
-      { id: 'tam_sam_som', label: 'TAM / SAM / SOM تقديري', type: 'textarea', placeholder: 'ضع تقديراً أولياً لحجم السوق الكلي، السوق القابل للخدمة، والحصة الواقعية الأولى' },
-      { id: 'competitors', label: 'المنافسون والبدائل', type: 'textarea', placeholder: 'اذكر المنافسين المباشرين والبدائل غير المباشرة' },
-      { id: 'positioning', label: 'التموضع والميزة', type: 'textarea', placeholder: 'لماذا سيختارك العميل بدل البدائل؟' },
-      { id: 'go_to_market', label: 'قناة الوصول الأولى', placeholder: 'مبيعات مباشرة، شراكات، إعلانات، محتوى، موزعون، مجتمع...' },
+      { id: 'tam', label: 'حجم السوق الكلي (TAM)', placeholder: 'القيمة الإجمالية للسوق المستهدف بالدولار أو العدد.' },
+      { id: 'sam_som', label: 'السوق القابل للخدمة والمستهدف (SAM / SOM)', type: 'textarea', placeholder: 'حدد الشريحة التي يمكنك خدمتها فعلياً (SAM) والحصة التي تستهدفها في أول 3 سنوات (SOM).' },
+      { id: 'growth_rate', label: 'معدل النمو السنوي (CAGR)', placeholder: 'كم نسبة نمو هذا السوق سنوياً؟' },
+      { id: 'market_trends', label: 'التوجهات والفرص (Market Trends)', type: 'textarea', placeholder: 'ما هي أهم التغيرات في سلوك العملاء أو التقنية في هذا القطاع؟' },
+      { id: 'barriers', label: 'عوائق الدخول (Barriers to Entry)', type: 'textarea', placeholder: 'تراخيص، تكلفة تقنية عالية، عقود حصرية للمنافسين...' },
     ],
   },
   {
-    id: 'financial_assumptions',
-    title: 'الافتراضات المالية الأولية',
-    shortTitle: 'الماليات',
-    description: 'إدخال أرقام أولية منفصلة تساعد على قراءة جدوى المشروع قبل بناء نموذج مالي كامل.',
-    icon: Gauge,
-    professionalNote: 'الدراسة الاحترافية تبدأ بأرقام مفهومة حتى لو كانت تقديرية، ثم يتم تحسينها بالتحقق.',
-    optionsLabel: 'درجة وضوح الأرقام',
-    options: ['أرقام موثقة', 'أرقام تقديرية', 'أحتاج تحقق', 'لا توجد أرقام بعد'],
+    id: 'target_customer',
+    title: 'العميل المستهدف وتحليل الاحتياج',
+    shortTitle: 'العميل',
+    description: 'تشريح دقيق لشريحة العملاء، مشاكلهم، وسلوكهم الشرائي لضمان وجود توافق بين المنتج والسوق (PMF).',
+    icon: Users,
+    professionalNote: 'كلما كان تعريف العميل أدق (Niche)، زادت دقة استراتيجية التسويق وانخفضت تكلفة الاستحواذ.',
+    optionsLabel: 'نوع نموذج الأعمال (B2X)',
+    options: ['B2B Enterprise', 'B2B SME', 'B2C', 'B2B2C', 'Marketplace (C2C)', 'SaaS', 'D2C'],
     fields: [
-      { id: 'capex', label: 'تكلفة التأسيس CAPEX', type: 'number', placeholder: 'مثال: 15000' },
-      { id: 'opex', label: 'التكلفة الشهرية OPEX', type: 'number', placeholder: 'مثال: 3000' },
-      { id: 'unit_price', label: 'متوسط سعر البيع أو الاشتراك', type: 'number', placeholder: 'مثال: 25' },
-      { id: 'monthly_customers', label: 'عدد العملاء المتوقع شهرياً', type: 'number', placeholder: 'مثال: 120' },
-      { id: 'break_even', label: 'فرضية نقطة التعادل', placeholder: 'مثال: خلال 9 أشهر عند الوصول إلى 400 عميل نشط' },
+      { id: 'primary_persona', label: 'شخصية العميل الأساسية (Persona)', type: 'textarea', placeholder: 'من هو؟ كم عمره/حجم شركته؟ أين يتواجد؟', required: true },
+      { id: 'core_pain', label: 'الألم أو المشكلة الجوهرية', type: 'textarea', placeholder: 'ما هي التكلفة المالية أو الزمنية أو النفسية التي يعاني منها العميل حالياً؟', required: true },
+      { id: 'alternatives', label: 'البدائل الحالية للعميل', type: 'textarea', placeholder: 'كيف يحل العميل هذه المشكلة اليوم؟ (إكسل، واتساب، منافس تقليدي)' },
+      { id: 'buying_behavior', label: 'دوافع الشراء (Buying Motives)', type: 'textarea', placeholder: 'ما الذي يجعله يتخذ قرار الدفع؟ (توفير المال، زيادة الأرباح، تقليل الجهد)' },
     ],
   },
   {
-    id: 'operations_risks',
-    title: 'التشغيل والمخاطر والاعتماديات',
-    shortTitle: 'المخاطر',
-    description: 'تحديد ما يحتاجه المشروع حتى يعمل فعلياً، وما الذي يمكن أن يعطل الإطلاق أو النمو.',
+    id: 'product_operations',
+    title: 'المنتج، التقنية والنموذج التشغيلي',
+    shortTitle: 'المنتج والتشغيل',
+    description: 'وصف شامل للحل المقدم، وكيف سيتم تصنيعه أو تطويره، وسلسلة القيمة التشغيلية.',
+    icon: Layers,
+    professionalNote: 'في المشاريع التقنية، توضيح الـ Tech Stack وأطراف الربط (APIs) يعكس نضج التخطيط التقني.',
+    optionsLabel: 'مرحلة المنتج',
+    options: ['فكرة فقط', 'Wireframes / تصميم', 'MVP (نموذج أولي)', 'منتج جاهز للسوق', 'منتج يحقق إيرادات'],
+    fields: [
+      { id: 'uvp', label: 'عرض القيمة الفريد (UVP)', type: 'textarea', placeholder: 'ما هو المزيج الفريد (سعر، جودة، سرعة) الذي ستقدمه ولا يستطيع المنافس تقديمه؟', required: true },
+      { id: 'core_features', label: 'الميزات التقنية الأساسية للمنتج', type: 'textarea', placeholder: 'اكتب الميزات الجوهرية (مثال: لوحة تحكم، تطبيق مناديب، ربط مع بوابات الدفع).' },
+      { id: 'tech_stack', label: 'البنية التقنية (Tech Stack) والأدوات', type: 'textarea', placeholder: 'لغات البرمجة، خوادم الاستضافة، أدوات الـ No-code، أطراف الربط الخارجية.' },
+      { id: 'supply_chain', label: 'سلسلة الإمداد والموردين', type: 'textarea', placeholder: 'الشركاء التشغيليون، مزودي الخدمات السحابية، شركاء التوصيل.' },
+      { id: 'legal_requirements', label: 'المتطلبات القانونية والتراخيص', placeholder: 'تراخيص تجارية، موافقات من جهات حكومية، سياسات الخصوصية.' },
+    ],
+  },
+  {
+    id: 'marketing_sales',
+    title: 'استراتيجية التسويق والمبيعات (GTM)',
+    shortTitle: 'التسويق والمبيعات',
+    description: 'خطة اختراق السوق (Go-to-Market)، قنوات الاستحواذ، وهيكلة المبيعات لضمان نمو مستدام.',
+    icon: Target,
+    professionalNote: 'أكبر فخ في دراسات الجدوى هو افتراض أن "العميل سيأتي بمجرد الإطلاق". يجب تفصيل كيف ستصل إليه.',
+    fields: [
+      { id: 'acquisition_channels', label: 'قنوات الاستحواذ (Acquisition)', type: 'textarea', placeholder: 'إعلانات ممولة، SEO، مبيعات مباشرة (B2B)، علاقات عامة...', required: true },
+      { id: 'sales_cycle', label: 'دورة المبيعات (Sales Cycle)', type: 'textarea', placeholder: 'كم يوماً يستغرق العميل من أول اتصال حتى الدفع؟ وما هي مراحل التفاوض؟' },
+      { id: 'cac_target', label: 'تكلفة الاستحواذ المستهدفة (CAC Target)', type: 'number', placeholder: 'بالدولار. كم تتوقع أن يكلفك جلب عميل واحد دافع؟' },
+      { id: 'retention_strategy', label: 'استراتيجية الاحتفاظ بالعملاء (Retention)', type: 'textarea', placeholder: 'برامج ولاء، دعم فني ممتاز، عقود سنوية مقفلة.' },
+    ],
+  },
+  {
+    id: 'financial_model',
+    title: 'النموذج المالي والاقتصاديات',
+    shortTitle: 'النموذج المالي',
+    description: 'الترجمة الرقمية للمشروع. تقدير التكاليف التأسيسية، التشغيلية، ومسارات الإيرادات والربحية.',
+    icon: LineChart,
+    professionalNote: 'المستثمر يبحث هنا عن واقعية التكاليف ومنطقية الإيرادات، وليس عن أرباح خيالية من السنة الأولى.',
+    optionsLabel: 'نماذج الإيرادات المطبقة',
+    options: ['اشتراك شهري (SaaS)', 'عمولة (Marketplace)', 'رسوم تأسيس (Setup Fee)', 'مبيعات مباشرة', 'Freemium', 'B2B Contracts'],
+    fields: [
+      { id: 'revenue_model', label: 'نموذج الإيرادات والتسعير', type: 'textarea', placeholder: 'اشرح باقات التسعير بالتفصيل (مثال: باقة أساسية 10$، باقة متقدمة 50$).', required: true },
+      { id: 'capex', label: 'النفقات الرأسمالية والتأسيسية (CAPEX)', type: 'textarea', placeholder: 'تكلفة تطوير التطبيق، التراخيص، المعدات، تأسيس الشركة.' },
+      { id: 'opex', label: 'النفقات التشغيلية الشهرية (OPEX)', type: 'textarea', placeholder: 'رواتب الفريق، خوادم سحابية، ميزانية تسويق شهرية، إيجار.' },
+      { id: 'ltv', label: 'القيمة العمرية للعميل (LTV)', type: 'number', placeholder: 'إجمالي الإيراد المتوقع من العميل الواحد قبل أن يغادر المنصة.' },
+      { id: 'funding_ask', label: 'حجم التمويل المطلوب ومجالات الصرف', type: 'textarea', placeholder: 'مثال: نطلب 200 ألف دولار. تصرف 40% للتطوير، 40% للتسويق، 20% للتشغيل لمدة 18 شهراً.' },
+    ],
+  },
+  {
+    id: 'swot_risk',
+    title: 'التحليل الرباعي (SWOT) وإدارة المخاطر',
+    shortTitle: 'SWOT والمخاطر',
+    description: 'تقييم واقعي لنقاط القوة والضعف، وتحليل استباقي للمخاطر التي قد تهدد بقاء المشروع.',
     icon: ShieldAlert,
-    professionalNote: 'أي نموذج أولي قوي يجب أن يعرف نقاط فشله المحتملة قبل أن يكتشفها السوق.',
-    optionsLabel: 'أهم فئات المخاطر',
-    options: ['مالية', 'تقنية', 'قانونية', 'تشغيلية', 'مبيعات', 'توريد', 'اعتماد على طرف ثالث'],
+    professionalNote: 'المشروع القوي هو الذي يعترف بنقاط ضعفه ومخاطره ويضع خططاً واضحة لتخفيفها (Mitigation).',
     fields: [
-      { id: 'team', label: 'الفريق المطلوب', type: 'textarea', placeholder: 'الأدوار الأساسية: مؤسس، مطور، مبيعات، تشغيل، مالية...' },
-      { id: 'dependencies', label: 'الاعتماديات الأساسية', type: 'textarea', placeholder: 'موردون، بوابات دفع، تراخيص، بيانات، تكاملات، شراكات...' },
-      { id: 'top_risks', label: 'أكبر 3 مخاطر', type: 'textarea', placeholder: 'اكتب المخاطر بوضوح مع سبب خطورتها' },
-      { id: 'mitigation', label: 'خطة تخفيف المخاطر', type: 'textarea', placeholder: 'ما الإجراء الوقائي أو خطة B لكل خطر؟' },
+      { id: 'strengths', label: 'نقاط القوة (Strengths)', type: 'textarea', placeholder: 'خبرات الفريق، تقنية حصرية، شراكات استراتيجية، تكلفة منخفضة.' },
+      { id: 'weaknesses', label: 'نقاط الضعف (Weaknesses)', type: 'textarea', placeholder: 'نقص التمويل، عدم وجود وعي بالعلامة التجارية، فريق غير مكتمل.' },
+      { id: 'opportunities_threats', label: 'الفرص والتهديدات (Opportunities & Threats)', type: 'textarea', placeholder: 'الفرص: قرارات حكومية داعمة. التهديدات: دخول منافس عالمي للسوق.' },
+      { id: 'risk_mitigation', label: 'خطة تخفيف المخاطر (Risk Mitigation)', type: 'textarea', placeholder: 'كيف ستواجه أسوأ السيناريوهات (انقطاع السيرفرات، تسرب مؤسس، نفاذ الكاش)؟', required: true },
     ],
   },
   {
-    id: 'next_90_days',
-    title: 'خطة التحقق والتنفيذ خلال 90 يوم',
-    shortTitle: '90 يوم',
-    description: 'إنهاء الرحلة بخطة تنفيذ قابلة للمتابعة وليست مجرد توصيات عامة.',
-    icon: ClipboardList,
-    professionalNote: 'النهاية الاحترافية يجب أن تجيب: ماذا سنفعل الآن؟ ماذا سنقيس؟ ومتى نقرر الاستمرار أو التعديل؟',
-    optionsLabel: 'أولوية التنفيذ',
-    options: ['تحقق من الطلب', 'MVP', 'مبيعات أولية', 'شراكات', 'تمويل', 'توظيف', 'إطلاق تجريبي'],
+    id: 'implementation_plan',
+    title: 'خطة التنفيذ (Roadmap) والفريق',
+    shortTitle: 'خطة التنفيذ',
+    description: 'جدول زمني يوضح مراحل نقل المشروع من فكرة على ورق إلى كيان حي يولد إيرادات.',
+    icon: Gauge,
+    professionalNote: 'خطة التنفيذ الجيدة تقسم الإنجازات إلى مراحل (Milestones) مرتبطة بفترات زمنية وأهداف قابلة للقياس.',
+    optionsLabel: 'هيكل الفريق الحالي',
+    options: ['مؤسس فرد (Solo)', 'فريق تقني متكامل', 'فريق تشغيلي فقط', 'شراكة مؤسسين', 'يوجد مستشارون'],
     fields: [
-      { id: 'first_14_days', label: 'أول 14 يوم', type: 'textarea', placeholder: 'مقابلات، صفحة هبوط، عرض تجريبي، قائمة عملاء محتملين...' },
-      { id: 'first_30_days', label: 'أول 30 يوم', type: 'textarea', placeholder: 'اختبار قناة الوصول، بناء النسخة الأولية، أول مبيعات...' },
-      { id: 'days_31_90', label: 'من اليوم 31 إلى 90', type: 'textarea', placeholder: 'Pilot، تحسين المنتج، قياس التكرار، تجهيز قرار التوسع...' },
-      { id: 'decision_metric', label: 'مؤشر قرار الاستمرار', placeholder: 'مثال: 10 عملاء مدفوعين أو 30% تحويل أو CAC أقل من قيمة محددة', required: true },
+      { id: 'team_structure', label: 'هيكلة الفريق الأساسي (Key Personnel)', type: 'textarea', placeholder: 'اذكر المؤسسين والأدوار الحيوية (CEO, CTO, CMO) وخبراتهم.' },
+      { id: 'q1_milestone', label: 'مستهدفات الربع الأول (Q1)', type: 'textarea', placeholder: 'تأسيس قانوني، إطلاق MVP، الحصول على أول 10 عملاء تجريبيين.' },
+      { id: 'q2_q4_milestone', label: 'مستهدفات الربع الثاني إلى الرابع', type: 'textarea', placeholder: 'الوصول لنقطة التعادل التشغيلي، التوسع لمدينة ثانية، إطلاق النسخة الثانية من المنتج.' },
+      { id: 'kpis', label: 'مؤشرات الأداء الرئيسية (KPIs)', type: 'textarea', placeholder: 'ما هي أهم 3 مقاييس ستراقبها يومياً؟ (مثال: MRR, Churn Rate, Active Users).', required: true },
     ],
   },
 ];
@@ -242,6 +242,67 @@ function inferReadiness(answers: Answers) {
   };
 }
 
+type Gap = {
+  id: string;
+  type: 'danger' | 'warning' | 'success';
+  title: string;
+  description: string;
+};
+
+function analyzeGaps(answers: Answers): Gap[] {
+  const gaps: Gap[] = [];
+  
+  // 1. Competitive UVP Gap
+  const competitors = getFieldValue(answers, 'market_analysis', 'competitors');
+  const uvp = getFieldValue(answers, 'product_operations', 'uvp');
+  if (competitors && !uvp) {
+    gaps.push({ id: 'uvp_danger', type: 'danger', title: 'فجوة تنافسية حرجة', description: 'يوجد منافسون في السوق ولكن الميزة التنافسية (UVP) غير محددة. الدخول بدون ميزة سيؤدي إلى حرب أسعار خاسرة.' });
+  } else if (uvp) {
+    gaps.push({ id: 'uvp_ok', type: 'success', title: 'ميزة تنافسية محددة', description: 'تحديد الميزة التنافسية بوضوح يسهل عملية التسعير واختراق السوق.' });
+  }
+
+  // 2. Unit Economics (CAC vs LTV)
+  const cacStr = getFieldValue(answers, 'marketing_sales', 'cac_target');
+  const ltvStr = getFieldValue(answers, 'financial_model', 'ltv');
+  if (cacStr && ltvStr) {
+    const cac = parseFloat(cacStr);
+    const ltv = parseFloat(ltvStr);
+    if (!isNaN(cac) && !isNaN(ltv)) {
+      if (cac >= ltv) {
+        gaps.push({ id: 'unit_econ_danger', type: 'danger', title: 'انهيار النموذج المالي (CAC ≥ LTV)', description: `تكلفة استحواذ العميل (${cac}) أعلى من أو تساوي القيمة العمرية له (${ltv}). المشروع يخسر أموالاً مع كل عميل جديد!` });
+      } else if (ltv / cac < 3) {
+        gaps.push({ id: 'unit_econ_warning', type: 'warning', title: 'اقتصاديات وحدة ضعيفة (LTV/CAC < 3)', description: 'العميل لا يغطي تكلفة الاستحواذ بشكل مريح. تحتاج إما لرفع الأسعار أو خفض تكلفة التسويق لضمان الاستدامة.' });
+      } else {
+        gaps.push({ id: 'unit_econ_success', type: 'success', title: 'اقتصاديات وحدة صحية', description: 'نسبة LTV إلى CAC ممتازة وتسمح بالنمو المتسارع بأمان.' });
+      }
+    }
+  } else if (!cacStr) {
+    gaps.push({ id: 'cac_missing', type: 'warning', title: 'غياب تكلفة الاستحواذ (CAC)', description: 'لم تحدد التكلفة المستهدفة لجلب العميل. هذا يجعل من المستحيل تقييم ميزانية التسويق بدقة.' });
+  }
+
+  // 3. Execution / Validation Risk
+  const q1 = getFieldValue(answers, 'implementation_plan', 'q1_milestone');
+  if (q1 && !q1.includes('نموذج') && !q1.includes('MVP') && !q1.includes('اختبار') && !q1.includes('تجريبي')) {
+    gaps.push({ id: 'mvp_warning', type: 'warning', title: 'مخاطرة التنفيذ المباشر (Waterfall Risk)', description: 'خطة الربع الأول لا تحتوي على مصطلحات تحقق (مثل: MVP، إطلاق تجريبي). بناء المنتج بالكامل قبل الاختبار يعرضك لخسارة فادحة.' });
+  }
+
+  // 4. Marketing vs Sales Cycle
+  const channels = getFieldValue(answers, 'marketing_sales', 'acquisition_channels');
+  const salesCycle = getFieldValue(answers, 'marketing_sales', 'sales_cycle');
+  if (!channels && salesCycle) {
+    gaps.push({ id: 'gtm_warning', type: 'warning', title: 'فجوة قنوات الاستحواذ', description: 'تم تحديد دورة المبيعات لكن دون قنوات استحواذ واضحة. العميل لن يأتي من تلقاء نفسه بمجرد الإطلاق.' });
+  }
+
+  // 5. Funding vs CAPEX
+  const capex = getFieldValue(answers, 'financial_model', 'capex');
+  const funding = getFieldValue(answers, 'financial_model', 'funding_ask');
+  if (capex && !funding) {
+    gaps.push({ id: 'funding_warning', type: 'warning', title: 'فجوة التمويل الرأسمالي', description: 'يوجد تكاليف تأسيسية (CAPEX) ولكن لم يتم تحديد حجم أو مصدر التمويل المطلوب لتغطيتها.' });
+  }
+
+  return gaps;
+}
+
 function toggleOption(current: string | string[] | undefined, option: string): string[] {
   const selected = Array.isArray(current) ? current : [];
   if (selected.includes(option)) return selected.filter((item) => item !== option);
@@ -263,6 +324,9 @@ function ProjectDashboard({
     const value = answers[`${step.id}.options`];
     return Array.isArray(value) ? value : [];
   });
+  
+  const gaps = useMemo(() => analyzeGaps(answers), [answers]);
+  const dangerGaps = gaps.filter(g => g.type === 'danger').length;
 
   return (
     <div className="min-h-screen bg-background" dir="rtl">
@@ -290,56 +354,193 @@ function ProjectDashboard({
         </Card>
 
         <Tabs defaultValue="overview" dir="rtl" className="gap-4">
-          <TabsList className="grid h-auto w-full grid-cols-3 rounded-xl md:w-fit">
+          <TabsList className="grid h-auto w-full grid-cols-4 rounded-xl md:w-fit">
             <TabsTrigger value="overview">الملخص</TabsTrigger>
             <TabsTrigger value="inputs">كل الإدخالات</TabsTrigger>
+            <TabsTrigger value="gaps" className="relative">
+              كشف الفجوات
+              {dangerGaps > 0 && (
+                <span className="absolute -top-1 -right-1 flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                </span>
+              )}
+            </TabsTrigger>
             <TabsTrigger value="mvp">قوة MVP</TabsTrigger>
           </TabsList>
 
-          <TabsContent value="overview" className="space-y-4">
-            <div className="grid gap-4 xl:grid-cols-[1.1fr_0.9fr]">
-              <Card className="border-0 bg-muted/20 shadow-none">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-lg">
-                    <FileText className="size-5" />
-                    قراءة تنفيذية
+          <TabsContent value="overview" className="space-y-6 mt-4">
+            {/* Header */}
+            <div className="flex flex-col gap-2 mb-4">
+              <h1 className="text-3xl font-black text-foreground">{getFieldValue(answers, 'executive_summary', 'name') || 'اسم المشروع غير محدد'}</h1>
+              <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
+                {getFieldValue(answers, 'executive_summary', 'one_liner') || 'لم يتم إدخال وصف المشروع (Elevator Pitch) بعد.'}
+              </p>
+            </div>
+
+            {/* Executive Summary */}
+            <Card className="border-primary/10 shadow-none bg-primary/[0.02]">
+              <CardHeader className="pb-3 border-b border-primary/10">
+                <CardTitle className="text-lg flex items-center gap-2 text-primary">
+                  <BriefcaseBusiness className="size-5" />
+                  الملخص التنفيذي
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="pt-4 grid md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-bold text-sm mb-1 text-foreground">المشكلة الجوهرية</h4>
+                    <p className="text-sm leading-6 text-muted-foreground">{getAnswerText(answers['target_customer.core_pain'])}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sm mb-1 text-foreground">الحل المقترح (UVP)</h4>
+                    <p className="text-sm leading-6 text-muted-foreground">{getAnswerText(answers['product_operations.uvp'])}</p>
+                  </div>
+                </div>
+                <div className="space-y-4 bg-background p-4 rounded-xl border border-border/50">
+                  <div>
+                    <h4 className="font-bold text-sm mb-1 text-foreground">الرؤية الاستراتيجية</h4>
+                    <p className="text-sm leading-6 text-muted-foreground">{getAnswerText(answers['executive_summary.vision'])}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sm mb-1 text-foreground">التمويل المطلوب</h4>
+                    <p className="text-sm leading-6 text-emerald-600 font-semibold">{getAnswerText(answers['financial_model.funding_ask'])}</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <div className="grid lg:grid-cols-2 gap-6">
+              {/* Market Analysis */}
+              <Card className="shadow-none border-border/50">
+                <CardHeader className="pb-3 border-b border-border/50 bg-muted/20">
+                  <CardTitle className="text-base flex items-center gap-2">
+                    <BarChart3 className="size-5 text-blue-500" />
+                    تحليل السوق (TAM/SAM/SOM)
                   </CardTitle>
-                  <CardDescription className={cn('text-sm font-medium leading-7', readiness.tone)}>
-                    {readiness.label}
-                  </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-3">
-                  <p className="text-sm leading-7 text-muted-foreground">{readiness.summary}</p>
-                  <Separator />
-                  <div className="grid gap-3 sm:grid-cols-2">
-                    <SummaryBlock label="اسم المشروع" value={answers['project_identity.name']} />
-                    <SummaryBlock label="العميل المستهدف" value={answers['problem_customer.segment']} />
-                    <SummaryBlock label="نطاق MVP" value={answers['solution_prototype.mvp_scope']} />
-                    <SummaryBlock label="التسعير" value={answers['value_model.pricing']} />
+                <CardContent className="pt-4 space-y-4">
+                  <div className="p-3 bg-muted/30 rounded-lg">
+                    <div className="text-xs text-muted-foreground mb-1">حجم السوق الكلي (TAM)</div>
+                    <div className="font-bold text-sm">{getAnswerText(answers['market_analysis.tam'])}</div>
+                  </div>
+                  <div className="p-3 bg-muted/30 rounded-lg">
+                    <div className="text-xs text-muted-foreground mb-1">السوق القابل للخدمة والمستهدف (SAM/SOM)</div>
+                    <div className="font-bold text-sm">{getAnswerText(answers['market_analysis.sam_som'])}</div>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sm mb-1 text-foreground">تحليل المنافسة</h4>
+                    <p className="text-sm leading-6 text-muted-foreground">{getAnswerText(answers['market_analysis.competitors'])}</p>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="border-0 bg-muted/20 shadow-none">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-lg">
-                    <Target className="size-5" />
-                    ما الذي يمكن البناء عليه الآن؟
+              {/* Marketing & Sales (GTM) */}
+              <Card className="shadow-none border-border/50">
+                <CardHeader className="pb-3 border-b border-border/50 bg-muted/20">
+                  <CardTitle className="text-base flex items-center gap-2">
+                    <Target className="size-5 text-amber-500" />
+                    استراتيجية الاختراق (GTM)
                   </CardTitle>
-                  <CardDescription>قرارات عملية ناتجة عن بنية الإدخال الاحترافية.</CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-3">
-                  {[
-                    'تحويل نطاق MVP إلى Backlog تطوير واضح.',
-                    'تحويل الافتراضات المالية إلى نموذج Excel أو Dashboard.',
-                    'اختبار قناة الوصول الأولى قبل الاستثمار في المنتج الكامل.',
-                    'مراجعة المخاطر والاعتماديات قبل أي إطلاق تجريبي.',
-                  ].map((item) => (
-                    <div key={item} className="flex items-start gap-3 rounded-xl bg-background p-3 text-sm leading-6">
-                      <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-primary" />
-                      <span>{item}</span>
+                <CardContent className="pt-4 space-y-4">
+                  <div>
+                    <h4 className="font-bold text-sm mb-1 text-foreground">قنوات الاستحواذ الرئيسية</h4>
+                    <p className="text-sm leading-6 text-muted-foreground">{getAnswerText(answers['marketing_sales.acquisition_channels'])}</p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="p-3 border border-border/50 rounded-lg">
+                      <div className="text-xs text-muted-foreground mb-1">دورة المبيعات المتوقعة</div>
+                      <div className="font-bold text-sm">{getFieldValue(answers, 'marketing_sales', 'sales_cycle') || '-'}</div>
                     </div>
-                  ))}
+                    <div className="p-3 border border-border/50 rounded-lg">
+                      <div className="text-xs text-muted-foreground mb-1">استراتيجية الاحتفاظ</div>
+                      <div className="font-bold text-sm">{getFieldValue(answers, 'marketing_sales', 'retention_strategy') || '-'}</div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Financial Projections */}
+            <Card className="shadow-none border-border/50">
+              <CardHeader className="pb-3 border-b border-border/50 bg-emerald-500/5">
+                <CardTitle className="text-base flex items-center gap-2 text-emerald-700">
+                  <LineChart className="size-5" />
+                  المؤشرات المالية (Unit Economics)
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="pt-4 grid md:grid-cols-4 gap-4">
+                <div className="p-4 bg-background border border-border/50 rounded-xl text-center">
+                  <div className="text-xs text-muted-foreground mb-1">التأسيس (CAPEX)</div>
+                  <div className="text-lg font-bold">{getFieldValue(answers, 'financial_model', 'capex') || '-'}</div>
+                </div>
+                <div className="p-4 bg-background border border-border/50 rounded-xl text-center">
+                  <div className="text-xs text-muted-foreground mb-1">تكلفة استحواذ العميل (CAC)</div>
+                  <div className="text-lg font-bold text-red-500">{getFieldValue(answers, 'marketing_sales', 'cac_target') || '-'}</div>
+                </div>
+                <div className="p-4 bg-background border border-border/50 rounded-xl text-center">
+                  <div className="text-xs text-muted-foreground mb-1">القيمة العمرية للعميل (LTV)</div>
+                  <div className="text-lg font-bold text-emerald-600">{getFieldValue(answers, 'financial_model', 'ltv') || '-'}</div>
+                </div>
+                <div className="p-4 bg-background border border-border/50 rounded-xl text-center">
+                  <div className="text-xs text-muted-foreground mb-1">التشغيل الشهري (OPEX)</div>
+                  <div className="text-lg font-bold">{getFieldValue(answers, 'financial_model', 'opex') || '-'}</div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <div className="grid lg:grid-cols-2 gap-6">
+              {/* SWOT */}
+              <Card className="shadow-none border-border/50">
+                <CardHeader className="pb-3 border-b border-border/50 bg-muted/20">
+                  <CardTitle className="text-base flex items-center gap-2">
+                    <ShieldAlert className="size-5 text-purple-500" />
+                    تحليل SWOT والمخاطر
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-4 grid sm:grid-cols-2 gap-4">
+                  <div className="p-3 bg-emerald-500/10 rounded-lg border border-emerald-500/20">
+                    <h4 className="font-bold text-emerald-700 text-sm mb-2">نقاط القوة (S)</h4>
+                    <p className="text-xs text-emerald-900/80 leading-5">{getAnswerText(answers['swot_risk.strengths'])}</p>
+                  </div>
+                  <div className="p-3 bg-red-500/10 rounded-lg border border-red-500/20">
+                    <h4 className="font-bold text-red-700 text-sm mb-2">نقاط الضعف (W)</h4>
+                    <p className="text-xs text-red-900/80 leading-5">{getAnswerText(answers['swot_risk.weaknesses'])}</p>
+                  </div>
+                  <div className="sm:col-span-2 mt-2 p-3 bg-muted/30 rounded-lg">
+                    <h4 className="font-bold text-sm mb-1 text-foreground">خطة تخفيف المخاطر</h4>
+                    <p className="text-xs leading-5 text-muted-foreground">{getAnswerText(answers['swot_risk.risk_mitigation'])}</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Roadmap */}
+              <Card className="shadow-none border-border/50">
+                <CardHeader className="pb-3 border-b border-border/50 bg-muted/20">
+                  <CardTitle className="text-base flex items-center gap-2">
+                    <Gauge className="size-5 text-indigo-500" />
+                    خطة التنفيذ (Roadmap)
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-4 space-y-4">
+                  <div className="relative border-r-2 border-primary/20 pr-4 space-y-6 my-2">
+                    <div className="relative">
+                      <div className="absolute w-3 h-3 bg-primary rounded-full -right-[23px] top-1"></div>
+                      <h4 className="font-bold text-sm text-foreground">الربع الأول (Q1)</h4>
+                      <p className="text-xs text-muted-foreground leading-5 mt-1">{getAnswerText(answers['implementation_plan.q1_milestone'])}</p>
+                    </div>
+                    <div className="relative">
+                      <div className="absolute w-3 h-3 bg-primary/40 rounded-full -right-[23px] top-1"></div>
+                      <h4 className="font-bold text-sm text-foreground">الأرباع التالية (Q2-Q4)</h4>
+                      <p className="text-xs text-muted-foreground leading-5 mt-1">{getAnswerText(answers['implementation_plan.q2_q4_milestone'])}</p>
+                    </div>
+                    <div className="relative">
+                      <div className="absolute w-3 h-3 bg-primary/20 rounded-full -right-[23px] top-1"></div>
+                      <h4 className="font-bold text-sm text-foreground">مؤشرات الأداء (KPIs)</h4>
+                      <p className="text-xs text-muted-foreground leading-5 mt-1">{getAnswerText(answers['implementation_plan.kpis'])}</p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -389,11 +590,59 @@ function ProjectDashboard({
             </Card>
           </TabsContent>
 
+          <TabsContent value="gaps" className="space-y-4">
+            <Card className="border-0 bg-muted/20 shadow-none">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-lg">
+                  <ShieldAlert className="size-5 text-primary" />
+                  محرك فحص الجدوى والفجوات
+                </CardTitle>
+                <CardDescription>
+                  يقوم المحرك بتحليل مدخلاتك للبحث عن تناقضات أو فجوات خطيرة قد تؤدي إلى فشل المشروع مبكراً.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                {gaps.length === 0 ? (
+                  <div className="flex flex-col items-center justify-center p-8 text-center bg-background rounded-xl">
+                    <CheckCircle2 className="size-12 text-emerald-500 mb-4 opacity-20" />
+                    <p className="text-muted-foreground text-sm">أكمل المزيد من الحقول (خاصة المالية والتنافسية) ليتمكن المحرك من تحليل الفجوات.</p>
+                  </div>
+                ) : (
+                  <div className="grid gap-3">
+                    {gaps.map(gap => (
+                      <div key={gap.id} className={cn("p-4 rounded-xl border flex gap-3 items-start", 
+                        gap.type === 'danger' ? "bg-red-500/10 border-red-500/20" : 
+                        gap.type === 'warning' ? "bg-amber-500/10 border-amber-500/20" : 
+                        "bg-emerald-500/10 border-emerald-500/20"
+                      )}>
+                        {gap.type === 'danger' && <XCircle className="size-5 text-red-600 shrink-0 mt-0.5" />}
+                        {gap.type === 'warning' && <AlertTriangle className="size-5 text-amber-600 shrink-0 mt-0.5" />}
+                        {gap.type === 'success' && <CheckCircle2 className="size-5 text-emerald-600 shrink-0 mt-0.5" />}
+                        <div>
+                          <h4 className={cn("font-bold text-sm mb-1", 
+                            gap.type === 'danger' ? "text-red-800" : 
+                            gap.type === 'warning' ? "text-amber-800" : 
+                            "text-emerald-800"
+                          )}>{gap.title}</h4>
+                          <p className={cn("text-xs leading-6", 
+                            gap.type === 'danger' ? "text-red-900/80" : 
+                            gap.type === 'warning' ? "text-amber-900/80" : 
+                            "text-emerald-900/80"
+                          )}>{gap.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          </TabsContent>
+
           <TabsContent value="mvp" className="space-y-4">
             <div className="grid gap-4 lg:grid-cols-3">
-              <PrototypeCard title="فرضية الألم" value={answers['problem_customer.pain']} />
-              <PrototypeCard title="نطاق MVP" value={answers['solution_prototype.mvp_scope']} />
-              <PrototypeCard title="إشارة النجاح" value={answers['solution_prototype.success_signal']} />
+              <PrototypeCard title="الرؤية والمشكلة" value={answers['executive_summary.vision']} />
+              <PrototypeCard title="قنوات الاستحواذ" value={answers['marketing_sales.acquisition_channels']} />
+              <PrototypeCard title="مؤشرات الأداء" value={answers['implementation_plan.kpis']} />
             </div>
 
             <Card className="border-0 bg-muted/20 shadow-none">

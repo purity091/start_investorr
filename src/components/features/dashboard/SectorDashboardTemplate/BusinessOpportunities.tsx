@@ -1,6 +1,10 @@
 import React, { useState, type FC } from 'react';
-import { ChevronDown, CheckCircle2, ExternalLink } from 'lucide-react';
+import { ChevronDown, ExternalLink } from 'lucide-react';
 import { BusinessOpportunity } from './types';
+import { Card, CardContent } from '../../../ui/card';
+import { Badge } from '../../../ui/badge';
+import { Button } from '../../../ui/button';
+import { cn } from '../../../../lib/utils';
 
 export const OpportunityCard: FC<{ opp: BusinessOpportunity; index: number; onBuildPlan?: (p?: string) => void }> = ({
   opp,
@@ -11,92 +15,48 @@ export const OpportunityCard: FC<{ opp: BusinessOpportunity; index: number; onBu
   const Icon = opp.icon;
 
   return (
-    <div
-      className="sd-opp-card"
-      style={{
-        background: '#ffffff',
-        border: '1px solid #e2e8f0',
-        borderRadius: 24,
-        padding: '24px',
-        transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-        position: 'relative',
-        overflow: 'hidden',
-        display: 'flex',
-        flexDirection: 'column',
-        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.05)',
-      }}
-      onMouseEnter={(e) => {
-        const el = e.currentTarget as HTMLElement;
-        el.style.borderColor = '#6366f1';
-        el.style.boxShadow = '0 20px 25px -5px rgba(0,0,0,0.1)';
-        el.style.transform = 'translateY(-4px)';
-      }}
-      onMouseLeave={(e) => {
-        const el = e.currentTarget as HTMLElement;
-        el.style.borderColor = '#e2e8f0';
-        el.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.05)';
-        el.style.transform = 'translateY(0)';
-      }}
+    <Card 
+      className="group flex cursor-default flex-col overflow-hidden border-border bg-background shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-md"
     >
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'flex-start',
-          marginBottom: 20,
-        }}
-      >
-        <div style={{ 
-          width: 48, height: 48, borderRadius: 14, 
-          background: '#f8fafc', display: 'flex', 
-          alignItems: 'center', justifyContent: 'center', 
-          color: '#6366f1', border: '1px solid #f1f5f9',
-        }}>
+      <div className="flex items-start justify-between p-6 pb-2 dir-rtl">
+        <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-border bg-muted/30 text-primary">
           {Icon && <Icon size={22} strokeWidth={2.5} />}
         </div>
         
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <span style={{ fontSize: 24, fontWeight: 900, color: '#f1f5f9', lineHeight: 1, userSelect: 'none' }}>
+        <div className="flex items-center gap-3">
+          <span className="text-2xl font-black leading-none text-muted-foreground/30 select-none">
             {(index + 1).toString().padStart(2, '0')}
           </span>
-          <button 
+          <Button 
+            variant="outline"
+            size="icon"
             onClick={() => setIsOpen(!isOpen)}
-            style={{
-              width: 32,
-              height: 32,
-              borderRadius: 8,
-              background: isOpen ? '#6366f1' : '#f8fafc',
-              color: isOpen ? '#fff' : '#64748b',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              transition: 'all 0.3s',
-              transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-              border: '1px solid #f1f5f9',
-              cursor: 'pointer'
-            }}
+            className={cn(
+              "size-8 rounded-lg transition-all",
+              isOpen ? "bg-primary text-primary-foreground hover:bg-primary/90" : "bg-muted text-muted-foreground hover:bg-muted/80"
+            )}
           >
-            <ChevronDown size={18} strokeWidth={2.5} />
-          </button>
+            <ChevronDown size={18} strokeWidth={2.5} className={cn("transition-transform duration-300", isOpen && "rotate-180")} />
+          </Button>
         </div>
       </div>
 
-      <h4 style={{ margin: '0 0 12px', fontSize: 18, fontWeight: 900, color: '#0f172a', letterSpacing: '-0.01em' }}>{opp.title}</h4>
+      <div className="px-6 pb-6 dir-rtl">
+        <h4 className="m-0 text-lg font-black tracking-tight text-foreground">{opp.title}</h4>
+      </div>
 
-      {/* Expandable Content (Open by Default) */}
-      <div style={{
-        maxHeight: isOpen ? '1200px' : '0',
-        opacity: isOpen ? 1 : 0,
-        overflow: 'hidden',
-        transition: 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
-        paddingTop: isOpen ? 8 : 0,
-      }}>
-        <div style={{ borderTop: '1px solid #f1f5f9', paddingTop: 20 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
-            <div style={{ width: 4, height: 16, background: '#6366f1', borderRadius: 2 }} />
-            <p style={{ margin: 0, fontSize: 11, fontWeight: 900, color: '#6366f1', textTransform: 'uppercase', letterSpacing: '0.1em' }}>المسارات الاستثمارية المقترحة:</p>
+      <div 
+        className={cn(
+          "overflow-hidden transition-all duration-500 ease-in-out dir-rtl",
+          isOpen ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
+        )}
+      >
+        <CardContent className="border-t border-border bg-muted/10 pt-5">
+          <div className="mb-4 flex items-center gap-2">
+            <div className="h-4 w-1 rounded-sm bg-primary" />
+            <p className="m-0 text-[11px] font-black uppercase tracking-widest text-primary">المسارات الاستثمارية المقترحة:</p>
           </div>
-          <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <ul className="m-0 flex flex-col gap-2.5 p-0 list-none">
             {opp.examples.map((ex, i) => (
               <li key={i}>
                 <button
@@ -104,35 +64,18 @@ export const OpportunityCard: FC<{ opp: BusinessOpportunity; index: number; onBu
                     e.stopPropagation();
                     onBuildPlan?.(ex);
                   }}
-                  className="sd-touch-btn"
-                  style={{
-                    width: '100%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: 12,
-                    fontSize: 14,
-                    fontWeight: 700,
-                    color: '#475569',
-                    padding: '14px',
-                    background: '#f8fafc',
-                    border: '1px solid #f1f5f9',
-                    borderRadius: 14,
-                    cursor: 'pointer',
-                    transition: 'all 0.2s',
-                    textAlign: 'right',
-                    direction: 'rtl',
-                  }}
+                  className="flex w-full items-center gap-3 rounded-xl border border-border bg-background p-3.5 text-right text-sm font-bold text-muted-foreground transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/30 hover:bg-primary/5 hover:text-foreground hover:shadow-sm"
                 >
-                  <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#6366f1' }} />
-                  <span style={{ flex: 1 }}>{ex}</span>
-                  <ExternalLink size={14} style={{ opacity: 0.3 }} />
+                  <div className="size-1.5 shrink-0 rounded-full bg-primary" />
+                  <span className="flex-1">{ex}</span>
+                  <ExternalLink size={14} className="shrink-0 opacity-30" />
                 </button>
               </li>
             ))}
           </ul>
-        </div>
+        </CardContent>
       </div>
-    </div>
+    </Card>
   );
 };
 
@@ -141,79 +84,34 @@ export const OpportunitiesSection: FC<{ opportunities: BusinessOpportunity[]; on
   onBuildPlan,
 }) => {
   return (
-    <div
+    <Card
       id="opportunities-section"
       data-section="opportunities-section"
-      className="sd-section-card"
-      style={{
-        background: '#fff',
-        borderRadius: 24,
-        border: '1px solid #e2e8f0',
-        padding: '32px',
-        direction: 'rtl',
-      }}
+      className="border-border bg-background p-8 dir-rtl"
     >
-      {/* Header */}
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'flex-start',
-          gap: 16,
-          marginBottom: 32,
-        }}
-      >
-        <div
-          style={{ width: 4, height: 32, background: 'var(--acc)', borderRadius: 4, flexShrink: 0, marginTop: 4 }}
-        />
-        <div style={{ textAlign: 'right', flex: 1 }}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 12 }}>
-            <h3
-              style={{
-                margin: 0,
-                fontSize: 24,
-                fontWeight: 900,
-                color: '#0f172a',
-                letterSpacing: '-0.02em',
-              }}
-            >
+      <div className="mb-8 flex items-start gap-4">
+        <div className="mt-1 h-8 w-1 shrink-0 rounded bg-primary" />
+        <div className="flex-1 text-right">
+          <div className="flex flex-wrap items-center gap-3">
+            <h3 className="m-0 text-2xl font-black tracking-tight text-foreground">
               نماذج الأعمال والفرص الاستثمارية
             </h3>
-            <span
-              style={{
-                background: '#0f172a',
-                color: '#fff',
-                fontSize: '11px',
-                fontWeight: 900,
-                padding: '4px 12px',
-                borderRadius: '100px',
-                letterSpacing: '0.05em'
-              }}
-            >
+            <Badge variant="default" className="rounded-full px-3 py-1 text-[11px] font-black tracking-wider">
               فرص واعدة
-            </span>
+            </Badge>
           </div>
-          <p
-            style={{
-              margin: '8px 0 0',
-              fontSize: 16,
-              fontWeight: 500,
-              color: '#64748b',
-              lineHeight: 1.6,
-              maxWidth: 800
-            }}
-          >
+          <p className="mt-2 max-w-3xl text-base font-medium leading-relaxed text-muted-foreground">
             أبرز مسارات العمل المتاحة في هذا القطاع وكيفية البدء في تنفيذها من خلال نماذج عمل واقعية ومجربة.
           </p>
         </div>
       </div>
 
-      {/* Grid */}
-      <div className="sd-opp-grid">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {opportunities.map((opp, idx) => (
           <OpportunityCard key={opp.id} opp={opp} index={idx} onBuildPlan={onBuildPlan} />
         ))}
       </div>
-    </div>
+    </Card>
   );
 };
 

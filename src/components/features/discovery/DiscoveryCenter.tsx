@@ -397,36 +397,42 @@ export function DiscoveryCenter({
       className="min-h-screen bg-background pb-16 font-['IBM_Plex_Sans_Arabic'] text-right text-foreground"
     >
       <div className="mx-auto flex w-full max-w-[1700px] flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 xl:px-10">
-        <Card className="border-border shadow-sm">
-          <CardHeader className="gap-5">
-            <div className="lg:flex lg:items-start lg:justify-between lg:gap-5">
-            <div className="space-y-3">
-              <Badge variant="outline" className="w-fit rounded-md px-3 py-1 text-xs font-medium">
-                مساحة القرار الاستثماري
-              </Badge>
-              <div className="space-y-2">
-                <CardTitle className="text-2xl leading-tight sm:text-3xl">رادار استكشاف الأسواق والفرص الاستثمارية</CardTitle>
-                <CardDescription className="max-w-3xl text-sm leading-7 text-muted-foreground sm:text-[15px]">
-                  واجهة منظمة لاكتشاف القطاعات، مقارنة المسارات، والانتقال السريع إلى السوق المناسب لبناء دراسة جدوى أكثر دقة.
-                </CardDescription>
-              </div>
+        <div className="mb-2 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+          <div className="space-y-4 lg:max-w-3xl">
+            <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
+              <span className="me-2 flex size-1.5 rounded-full bg-primary"></span>
+              مساحة القرار الاستثماري
             </div>
-
-            <div className="grid w-full gap-3 sm:grid-cols-3 lg:w-[560px]">
-              <div className="rounded-xl border bg-muted/30 p-4">
-                <div className="text-xs font-medium text-muted-foreground">المجموعات</div>
-                <div className="mt-2 text-2xl font-semibold text-foreground">{normalizedGroups.length}</div>
-              </div>
-              <div className="rounded-xl border bg-muted/30 p-4">
-                <div className="text-xs font-medium text-muted-foreground">القطاعات</div>
-                <div className="mt-2 text-2xl font-semibold text-foreground">{totalSectors}</div>
-              </div>
-              <div className="rounded-xl border bg-muted/30 p-4">
-                <div className="text-xs font-medium text-muted-foreground">القطاعات الجديدة</div>
-                <div className="mt-2 text-2xl font-semibold text-foreground">{totalNewSectors}</div>
-              </div>
+            <div>
+              <h1 className="text-3xl font-black tracking-tight text-foreground sm:text-4xl">
+                رادار استكشاف الأسواق والفرص الاستثمارية
+              </h1>
+              <p className="mt-3 text-base leading-relaxed text-muted-foreground sm:text-lg">
+                واجهة منظمة لاكتشاف القطاعات، مقارنة المسارات، والانتقال السريع إلى السوق المناسب لبناء دراسة جدوى أكثر دقة.
+              </p>
             </div>
+          </div>
+          
+          <div className="flex flex-wrap items-center gap-6 rounded-2xl bg-muted/30 px-6 py-4 sm:gap-10">
+            <div className="flex flex-col gap-1">
+              <span className="text-sm font-medium text-muted-foreground">المجموعات</span>
+              <span className="text-3xl font-bold tracking-tight text-foreground">{normalizedGroups.length}</span>
             </div>
+            <div className="h-10 w-px bg-border/60"></div>
+            <div className="flex flex-col gap-1">
+              <span className="text-sm font-medium text-muted-foreground">القطاعات</span>
+              <span className="text-3xl font-bold tracking-tight text-foreground">{totalSectors}</span>
+            </div>
+            <div className="h-10 w-px bg-border/60"></div>
+            <div className="flex flex-col gap-1">
+              <span className="text-sm font-medium text-muted-foreground">القطاعات الجديدة</span>
+              <span className="flex items-center gap-2 text-3xl font-bold tracking-tight text-foreground">
+                {totalNewSectors}
+                {totalNewSectors > 0 && <span className="flex size-2.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]"></span>}
+              </span>
+            </div>
+          </div>
+        </div>
 
             <div className="flex w-full flex-col gap-3 rounded-xl border bg-muted/20 p-2 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex flex-wrap items-center gap-2 overflow-x-auto pb-1 sm:pb-0">
@@ -553,8 +559,6 @@ export function DiscoveryCenter({
                 )}
               </div>
             </div>
-          </CardHeader>
-        </Card>
 
         <div className="grid gap-6">
           <div className="space-y-6">
