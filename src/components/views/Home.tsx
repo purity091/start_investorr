@@ -53,6 +53,7 @@ const PLATFORM_TOOLS = [
   { title: 'الهوية البصرية', description: 'حوّل اتجاه المشروع إلى brief واضح للمصمم.', tab: 'brand-identity', icon: Palette },
   { title: 'رادار اليونيكورن', description: 'قارن مؤشرات المشروع مع نماذج نمو عالية.', tab: 'unicorn-benchmark', icon: BarChart3 },
   { title: 'MIT 24 Steps', description: 'اتبع منهجية منظمة لبناء مشروع قابل للنمو.', tab: 'new-plan-mit24', icon: Rocket },
+  { title: 'Lean Startup', description: 'دورة تفاعلية لاختبار الفرضيات قبل التنفيذ.', tab: 'new-plan-lean', icon: Sparkles },
 ];
 
 const MINDSET_STEPS = [

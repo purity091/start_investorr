@@ -380,6 +380,17 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
               subTabLabel="بناء نموذج العمل BMC"
             />
           );
+        case 'new-plan-lean':
+          return (
+            <NewPlan
+              key="new-plan-lean"
+              initialMode="lean"
+              onStart={(id) => id === 'easy' ? setActiveTab('strategic-dashboard') : setActiveTab('editor')}
+              onBuildPlan={() => setActiveTab('workspace')}
+              setSubTabLabel={typeof setSubTabLabel === 'function' ? setSubTabLabel : (() => {})}
+              subTabLabel="منهجية Lean Startup"
+            />
+          );
       case 'strategic-dashboard':
         return <ResultPage />;
       case 'bmc':

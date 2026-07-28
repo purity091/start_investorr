@@ -29,6 +29,7 @@ const TAB_LABELS: Record<string, string> = {
   'new-plan-pro': 'النموذج الاحترافي',
   'new-plan-mit24': 'MIT 24 Steps',
   'new-plan-bmc': 'نموذج بناء نموذج العمل BMC',
+  'new-plan-lean': 'منهجية Lean Startup',
   'market-discovery': 'استكشاف السوق',
   'problem-engine': 'المشكلات والفرص',
   'problem-detail': 'تفاصيل المشكلة',

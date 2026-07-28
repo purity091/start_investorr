@@ -47,6 +47,7 @@ const buildItems: NavItem[] = [
   { icon: Zap, label: 'النموذج الاحترافي', tab: 'new-plan-pro', active: (tab) => tab === 'new-plan-pro' || tab === 'strategic-dashboard' },
   { icon: Rocket, label: 'MIT 24 Steps', tab: 'new-plan-mit24' },
   { icon: LayoutGrid, label: 'بناء نموذج العمل BMC', tab: 'new-plan-bmc', active: (tab) => tab === 'new-plan-bmc' || tab === 'bmc' },
+  { icon: Activity, label: 'منهجية Lean Startup', tab: 'new-plan-lean' },
 ];
 
 const discoveryItems: NavItem[] = [

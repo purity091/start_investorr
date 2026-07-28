@@ -39,6 +39,7 @@ const groups = [
       { label: 'النموذج الاحترافي', id: 'new-plan-pro', icon: BadgeCheck },
       { label: 'منهجية MIT 24 Steps', id: 'new-plan-mit24', icon: Route },
       { label: 'بناء نموذج العمل BMC', id: 'new-plan-bmc', icon: Building2 },
+      { label: 'منهجية Lean Startup', id: 'new-plan-lean', icon: Route },
     ],
   },
   {

@@ -144,6 +144,7 @@ const PROJECT_BUILD: NavItemConfig[] = [
     badge: 1,
     active: (tab) => tab === 'new-plan-bmc' || tab === 'bmc',
   },
+  { tab: 'new-plan-lean', label: 'منهجية Lean Startup', icon: Activity, badge: 'جديد' },
 ];
 
 const PROJECT_IDEAS: NavItemConfig[] = [

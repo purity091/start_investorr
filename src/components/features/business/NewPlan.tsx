@@ -12,6 +12,7 @@ import {
   Sparkles,
   Trash2,
   Zap,
+  RefreshCcw,
 } from 'lucide-react';
 
 import SmartBeginnerPro from '../../../features/easy-mode/SmartBeginnerPro';
@@ -21,8 +22,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../..
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../../ui/table';
 import { IdeaCreation, CreationMode } from './IdeaCreation';
 import { ExampleViewer } from './ExampleViewer';
+import LeanStartupWizard from '@/features/business/LeanStartupWizard';
 
-type ToolMode = 'selection' | 'easy' | 'ai' | 'family' | 'bmc' | 'mit24';
+type ToolMode = 'selection' | 'easy' | 'ai' | 'family' | 'bmc' | 'mit24' | 'lean';
 type IntroMode = Exclude<ToolMode, 'selection' | 'ai'>;
 type ProjectStatus = 'ready' | 'review' | 'draft';
 
@@ -183,6 +185,37 @@ const TOOL_INTROS: Record<IntroMode, ToolIntro> = {
       ]
     }
   },
+  lean: {
+    title: 'منهجية Lean Startup',
+    badge: 'دورة التعلم',
+    projectLabel: 'مشاريع Lean Startup',
+    projectShortLabel: 'Lean',
+    icon: RefreshCcw,
+    summary:
+      'Lean Startup ليس نموذجاً لملء البيانات، بل هو رحلة استكشاف وتجربة (Build → Measure → Learn). يبدأ من الفرضيات، يقيس أهميتها، ويساعدك في تصميم تجارب حقيقية (مثل المقابلات، صفحات الهبوط، والـ MVP) للتحقق منها بناءً على بيانات فعلية قبل كتابة سطر كود واحد.',
+    steps: [
+      'تحدد المشكلة والعميل ليقوم النظام بإنشاء الفرضيات تلقائياً.',
+      'تقيّم الفرضيات وترتبها من الأخطر إلى الأقل خطورة.',
+      'تختار أسلوب الاختبار لكل فرضية وتصمم التجربة بوضوح.',
+      'تُدخل النتائج ليحللها النظام ويوجهك للقرار: استمر، أو عدل، أو غيّر مسارك تماماً (Pivot).',
+    ],
+    outcomes: [
+      'فهم عميق للاحتياج الحقيقي للعميل قبل استثمار الأموال.',
+      'قائمة واضحة بالفرضيات الحرجة واختباراتها.',
+      'نسب نجاح مدعمة ببيانات حقيقية (كم عدد الزوار، من اشترى؟).',
+      'قرار مبني على التعلم الحقيقي يساعد في تجنب الفشل المكلف.',
+    ],
+    example: {
+      name: 'DeliverNow - توصيل سريع',
+      sector: 'Logistics',
+      description: 'نموذج لاختبار ما إذا كانت المطاعم مستعدة للدفع مقابل نظام إدارة أسطول المناديب المستقلين.',
+      points: [
+        'أخطر فرضية: المطاعم ستدفع اشتراكاً شهرياً.',
+        'التجربة: صفحة هبوط وهمية بإعلانات مستهدفة.',
+        'النتيجة: 45 تسجيل اهتمام، مما أدى لقرار بالاستمرار وبناء MVP.'
+      ]
+    }
+  },
 };
 
 const SECTION_PROJECTS: Record<IntroMode, SectionProject[]> = {
@@ -199,6 +232,9 @@ const SECTION_PROJECTS: Record<IntroMode, SectionProject[]> = {
   ],
   bmc: [
     { id: 'bmc-1', name: 'عقارات افتراضية', sector: 'Property', status: 'ready', progress: 97, updated: 'منذ يومين' },
+  ],
+  lean: [
+    { id: 'lean-1', name: 'تطبيق مناديب', sector: 'Logistics', status: 'review', progress: 40, updated: 'قبل ساعة' },
   ],
 };
 
@@ -219,6 +255,7 @@ const TOOL_CARDS: Array<{ mode: IntroMode; title: string; description: string; i
   { mode: 'easy', title: 'النموذج الاحترافي', description: 'تحليل موجه لبناء دراسة جدوى أكثر انضباطاً واستعداداً للتطوير.', icon: Zap },
   { mode: 'mit24', title: 'MIT 24 Steps', description: 'منهجية عميقة خطوة بخطوة لبناء المشروع والتحقق من منطقه التجاري.', icon: Rocket },
   { mode: 'bmc', title: 'بناء نموذج العمل BMC', description: 'لوحة منظمة لفهم عناصر المشروع وعلاقاتها الأساسية.', icon: LayoutGrid },
+  { mode: 'lean', title: 'منهجية Lean Startup', description: 'دورة تفاعلية (تبني، تقيس، تتعلم) لاختبار الفرضيات قبل التنفيذ.', icon: RefreshCcw },
 ];
 
 const ToolIntroPanel: React.FC<{ mode: IntroMode; onStart: () => void; onBack?: () => void; onViewExample: () => void }> = ({ mode, onStart, onBack, onViewExample }) => {
@@ -271,7 +308,7 @@ export const NewPlan: React.FC<{
   onBuildPlan?: () => void;
   setSubTabLabel: (label: string | null) => void;
   subTabLabel?: string | null;
-  initialMode?: 'selection' | 'easy' | 'family' | 'bmc' | 'mit24';
+  initialMode?: 'selection' | 'easy' | 'family' | 'bmc' | 'mit24' | 'lean';
 }> = ({ onStart, onBuildPlan, setSubTabLabel, initialMode = 'selection' }) => {
   const [mode, setMode] = useState<ToolMode>(initialMode);
   const [hasStarted, setHasStarted] = useState(initialMode === 'selection');
@@ -283,7 +320,7 @@ export const NewPlan: React.FC<{
     setIsViewingExample(false);
   }, [initialMode]);
 
-  const isIntroMode = mode === 'family' || mode === 'easy' || mode === 'mit24' || mode === 'bmc';
+  const isIntroMode = mode === 'family' || mode === 'easy' || mode === 'mit24' || mode === 'bmc' || mode === 'lean';
 
   if (isViewingExample && isIntroMode) {
     return <ExampleViewer mode={mode as IntroMode} onBack={() => setIsViewingExample(false)} />;
@@ -291,6 +328,10 @@ export const NewPlan: React.FC<{
 
   if (mode === 'easy' && hasStarted) {
     return <SmartBeginnerPro />;
+  }
+
+  if (mode === 'lean' && hasStarted) {
+    return <LeanStartupWizard />;
   }
 
   if ((mode === 'family' || mode === 'bmc' || mode === 'mit24') && hasStarted) {
