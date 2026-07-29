@@ -129,7 +129,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
   const readinessScore = workspace.metrics.readinessScore;
 
   return (
-    <div className="app-page-shell-wide space-y-6 py-6" dir="rtl">
+    <div className="mx-auto max-w-5xl space-y-6 px-4 py-8 sm:px-6 pb-24" dir="rtl">
       <section className="rounded-xl bg-card p-4 shadow-sm sm:p-5">
         <div className="flex flex-col gap-5 xl:flex-row xl:items-center xl:justify-between">
           <div className="min-w-0 space-y-2">

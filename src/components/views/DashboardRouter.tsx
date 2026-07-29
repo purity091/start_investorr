@@ -1,8 +1,11 @@
-
 import React, { Suspense } from 'react';
 import { Home } from './Home';
 import { DiscoveryCenter } from '../features/discovery/DiscoveryCenter';
 import { MyProjects } from './MyProjects';
+import { ProvenProjectsGallery } from './ProvenProjectsGallery';
+import { FailedProjectsGallery } from './FailedProjectsGallery';
+import { SaaSIdeasGallery } from './SaaSIdeasGallery';
+import { MicroSaaSIdeasGallery } from './MicroSaaSIdeasGallery';
 import { NewPlan } from '../features/business/NewPlan';
 import { UnicornBenchmarking } from '../features/discovery/UnicornBenchmarking';
 import { BusinessPlanEditor } from '../features/business/BusinessPlanEditor';
@@ -268,7 +271,7 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
     }
   }, [activeTab]);
 
-  const containerClass = ['home', 'editor', 'strategic-dashboard', 'contact-us', 'market-discovery', 'problem-engine', 'problem-detail', 'saved-market-items', 'hackathon', 'workspace', 'company-deep-dive', 'site-map', 'discovery-center', 'subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-subscription', 'customer-usage', 'customer-activity', 'customer-account', 'customer-support'].includes(activeTab) || activeTab.endsWith('-dashboard') 
+  const containerClass = ['home', 'editor', 'strategic-dashboard', 'contact-us', 'market-discovery', 'problem-engine', 'problem-detail', 'saved-market-items', 'hackathon', 'workspace', 'company-deep-dive', 'site-map', 'discovery-center', 'subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-subscription', 'customer-usage', 'customer-activity', 'customer-account', 'customer-support', 'proven-projects', 'failed-projects', 'saas-ideas', 'micro-saas-ideas'].includes(activeTab) || activeTab.endsWith('-dashboard') 
     ? 'w-full' 
     : 'app-page-shell-wide py-6 sm:py-8 lg:py-10 pb-20 lg:pb-10';
 
@@ -323,6 +326,14 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
         return <AdminSecurityDashboard />;
       case 'my-plans':
         return <MyProjects setActiveTab={setActiveTab} />;
+      case 'proven-projects':
+        return <ProvenProjectsGallery />;
+      case 'failed-projects':
+        return <FailedProjectsGallery />;
+      case 'saas-ideas':
+        return <SaaSIdeasGallery />;
+      case 'micro-saas-ideas':
+        return <MicroSaaSIdeasGallery />;
       case 'new-plan':
       // Guard optional props to avoid runtime ReferenceError if not provided by the caller
           const subTabLabelSafe = typeof subTabLabel === 'string' ? subTabLabel : undefined;

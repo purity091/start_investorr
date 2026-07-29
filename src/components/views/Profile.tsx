@@ -62,218 +62,175 @@ const accountFacts = [
   { label: 'أولوية الدعم', value: 'قياسية' },
 ];
 
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+
 export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
   const usagePercentage = Math.min((user.credits / Math.max(user.totalCredits, 1)) * 100, 100);
 
   return (
-    <div className="app-page-shell-wide space-y-6 py-6" dir="rtl">
-      <section className="rounded-2xl border border-border bg-card px-4 py-5 shadow-sm sm:px-6">
-        <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_340px] xl:items-start">
-          <div className="space-y-4 text-right">
-            <div className="flex flex-wrap items-center justify-start gap-2">
-              <Badge variant="secondary">حسابي الشخصي</Badge>
-              <Badge variant="outline">مركز المستخدم</Badge>
-            </div>
-
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-              <img
-                src={user.avatar}
-                alt={user.name}
-                className="size-20 rounded-2xl object-cover ring-1 ring-border"
-              />
-              <div className="min-w-0 space-y-2">
-                <h1 className="truncate text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-                  {user.name}
-                </h1>
-                <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-                  <span className="inline-flex items-center gap-1.5">
-                    <Mail className="size-4" />
-                    {user.email}
-                  </span>
-                  <span className="inline-flex items-center gap-1.5">
-                    <MapPin className="size-4" />
-                    السوق الأساسي: الخليج
-                  </span>
-                </div>
-                <p className="max-w-3xl text-sm leading-7 text-muted-foreground">
-                  هذه الصفحة تجمع كل ما يحتاجه المستخدم بشكل يومي: ملخص الحساب، آخر المشاريع،
-                  النشاط الأخير، والوصول السريع إلى ملف التعريف والاشتراك.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <Card className="border-border/70 shadow-none">
-            <CardHeader className="pb-3 text-right">
-              <CardTitle className="text-base">ملخص سريع</CardTitle>
-              <CardDescription>نظرة مختصرة على حالة الحساب والرصيد.</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-2 text-right">
-                <div className="flex items-center justify-between gap-3 text-sm">
-                  <span className="text-muted-foreground">رصيد الأدوات</span>
-                  <span className="font-semibold text-foreground">
-                    {user.credits}/{user.totalCredits}
-                  </span>
-                </div>
-                <div className="h-2 overflow-hidden rounded-full bg-muted">
-                  <div
-                    className="h-full rounded-full bg-primary"
-                    style={{ width: `${usagePercentage}%` }}
-                  />
-                </div>
-              </div>
-
-              <div className="grid gap-2">
-                <Button onClick={() => setActiveTab?.('profile')} className="w-full">
-                  <User className="size-4" />
-                  فتح ملف التعريف
-                </Button>
-                <Button onClick={() => setActiveTab?.('pricing')} variant="outline" className="w-full">
-                  <CreditCard className="size-4" />
-                  إدارة الاشتراك
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+    <div className="mx-auto max-w-5xl space-y-6 px-4 py-8 sm:px-6 pb-24" dir="rtl">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <h2 className="text-3xl font-bold tracking-tight text-foreground">حسابي الشخصي</h2>
+          <p className="mt-1 text-sm text-muted-foreground">
+            ملخص الحساب، والمشاريع، والنشاطات الأخيرة في مكان واحد.
+          </p>
         </div>
-      </section>
+        <div className="flex items-center gap-2">
+          <Button onClick={() => setActiveTab?.('pricing')} variant="outline">
+            <CreditCard className="size-4 ml-2" />
+            إدارة الاشتراك
+          </Button>
+          <Button onClick={() => setActiveTab?.('profile')}>
+            <User className="size-4 ml-2" />
+            إعدادات الحساب
+          </Button>
+        </div>
+      </div>
 
-      <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-        {accountStats.map((item) => (
-          <Card key={item.label} className="border-border/70 shadow-sm">
-            <CardContent className="p-4 text-right">
-              <p className="text-xs font-medium text-muted-foreground">{item.label}</p>
-              <div className="mt-2 flex items-end justify-between gap-3">
-                <p className="text-xl font-semibold text-foreground">{item.value}</p>
-                <span className="text-xs text-muted-foreground">{item.hint}</span>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </section>
+      <Tabs defaultValue="overview" className="space-y-6">
+        <TabsList className="grid w-full grid-cols-3 max-w-[400px]">
+          <TabsTrigger value="overview">نظرة عامة</TabsTrigger>
+          <TabsTrigger value="activity">النشاط</TabsTrigger>
+          <TabsTrigger value="account">الحساب</TabsTrigger>
+        </TabsList>
 
-      <section className="grid gap-4 xl:grid-cols-[1.3fr_0.9fr]">
-        <Card className="border-border/70 shadow-sm">
-          <CardHeader className="text-right">
-            <CardTitle>آخر المشاريع داخل الحساب</CardTitle>
-            <CardDescription>
-              عودة سريعة إلى الأعمال المفتوحة والجارية بدون التنقل بين صفحات متعددة.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="pt-0">
-            <div className="overflow-x-auto">
-              <Table dir="rtl">
-                <TableHeader>
-                  <TableRow>
-                    <TableHead className="text-right">المشروع</TableHead>
-                    <TableHead className="text-right">النوع</TableHead>
-                    <TableHead className="text-right">الحالة</TableHead>
-                    <TableHead className="text-right">آخر تحديث</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {recentProjects.map((project) => (
-                    <TableRow key={project.name}>
-                      <TableCell className="font-medium text-foreground">{project.name}</TableCell>
-                      <TableCell>{project.type}</TableCell>
-                      <TableCell>
-                        <Badge variant="outline">{project.status}</Badge>
-                      </TableCell>
-                      <TableCell>{project.updated}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card className="border-border/70 shadow-sm">
-          <CardHeader className="text-right">
-            <CardTitle>النشاط الأخير</CardTitle>
-            <CardDescription>أهم ما جرى على الحساب والمشاريع خلال الفترة القريبة.</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-2 pt-0">
-            {activityFeed.map((item) => (
-              <div
-                key={item.title}
-                className="flex items-center justify-between gap-4 rounded-xl border border-border/70 bg-muted/35 px-4 py-3"
-              >
-                <ArrowLeft className="size-4 shrink-0 text-muted-foreground" />
-                <div className="flex min-w-0 flex-1 items-start gap-3 text-right">
-                  <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-background">
-                    <item.icon className="size-4 text-muted-foreground" />
-                  </span>
-                  <div className="min-w-0 flex-1">
-                    <p className="truncate text-sm font-medium text-foreground">{item.title}</p>
-                    <p className="mt-1 text-xs text-muted-foreground">{item.time}</p>
+        <TabsContent value="overview" className="space-y-6 mt-0">
+          <Card className="border-border/70 shadow-sm">
+            <CardContent className="p-6">
+              <div className="grid gap-6 md:grid-cols-[1fr_300px] items-center">
+                <div className="flex items-center gap-4">
+                  <img
+                    src={user.avatar}
+                    alt={user.name}
+                    className="size-16 rounded-full object-cover ring-1 ring-border"
+                  />
+                  <div>
+                    <h3 className="text-2xl font-semibold text-foreground">{user.name}</h3>
+                    <p className="text-sm text-muted-foreground">{user.email}</p>
+                    <div className="mt-2 flex gap-2">
+                      <Badge variant="secondary">الاحترافي</Badge>
+                      <Badge variant="outline">موثق</Badge>
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-muted-foreground">رصيد الأدوات</span>
+                    <span className="font-semibold">{user.credits} / {user.totalCredits}</span>
+                  </div>
+                  <div className="h-2 overflow-hidden rounded-full bg-muted">
+                    <div className="h-full bg-primary transition-all" style={{ width: `${usagePercentage}%` }} />
                   </div>
                 </div>
               </div>
-            ))}
-          </CardContent>
-        </Card>
-      </section>
+            </CardContent>
+          </Card>
 
-      <section className="grid gap-4 xl:grid-cols-2">
-        <Card className="border-border/70 shadow-sm">
-          <CardHeader className="text-right">
-            <CardTitle>بيانات الحساب</CardTitle>
-            <CardDescription>حقائق تشغيلية أساسية يحتاجها المستخدم في مكان واحد.</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-2 pt-0">
-            {accountFacts.map((fact) => (
-              <div
-                key={fact.label}
-                className="flex items-center justify-between gap-4 rounded-xl border border-border/70 bg-muted/35 px-4 py-3"
-              >
-                <span className="text-sm font-medium text-foreground">{fact.value}</span>
-                <span className="text-xs text-muted-foreground">{fact.label}</span>
-              </div>
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            {accountStats.map((item) => (
+              <Card key={item.label} className="border-border/70 shadow-sm">
+                <CardContent className="p-4 text-right">
+                  <p className="text-xs font-medium text-muted-foreground">{item.label}</p>
+                  <div className="mt-2 flex items-end justify-between gap-3">
+                    <p className="text-xl font-semibold text-foreground">{item.value}</p>
+                    <span className="text-xs text-muted-foreground">{item.hint}</span>
+                  </div>
+                </CardContent>
+              </Card>
             ))}
-          </CardContent>
-        </Card>
+          </div>
+        </TabsContent>
 
-        <Card className="border-border/70 shadow-sm">
-          <CardHeader className="text-right">
-            <CardTitle>إجراءات سريعة</CardTitle>
-            <CardDescription>
-              الروابط الأساسية التي تخص المستخدم فقط بعد إعادة تنظيم الحساب إلى 3 صفحات.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="grid gap-3 pt-0 sm:grid-cols-2">
-            <QuickAction
-              icon={User}
-              title="ملف التعريف"
-              description="الهوية، الأمان، والتفضيلات."
-              actionLabel="فتح الصفحة"
-              onClick={() => setActiveTab?.('profile')}
-            />
-            <QuickAction
-              icon={CreditCard}
-              title="اشتراكي"
-              description="الخطة الحالية، الفواتير، والاستخدام."
-              actionLabel="إدارة الاشتراك"
-              onClick={() => setActiveTab?.('pricing')}
-            />
-            <QuickAction
-              icon={Briefcase}
-              title="مشاريعي"
-              description="العودة إلى المشاريع المفتوحة والجارية."
-              actionLabel="فتح المشاريع"
-              onClick={() => setActiveTab?.('my-plans')}
-            />
-            <QuickAction
-              icon={LifeBuoy}
-              title="الدعم"
-              description="التواصل أو طلب مساعدة حول الحساب."
-              actionLabel="التواصل"
-              onClick={() => setActiveTab?.('contact-us')}
-            />
-          </CardContent>
-        </Card>
-      </section>
+        <TabsContent value="activity" className="space-y-6 mt-0">
+          <div className="grid gap-6 lg:grid-cols-[2fr_1fr]">
+            <Card className="border-border/70 shadow-sm">
+              <CardHeader className="text-right">
+                <CardTitle>آخر المشاريع</CardTitle>
+                <CardDescription>العودة السريعة للأعمال الجارية والمفتوحة.</CardDescription>
+              </CardHeader>
+              <CardContent className="pt-0">
+                <div className="overflow-x-auto">
+                  <Table dir="rtl">
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead className="text-right">المشروع</TableHead>
+                        <TableHead className="text-right">النوع</TableHead>
+                        <TableHead className="text-right">الحالة</TableHead>
+                        <TableHead className="text-right">تحديث</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {recentProjects.map((project) => (
+                        <TableRow key={project.name}>
+                          <TableCell className="font-medium text-foreground">{project.name}</TableCell>
+                          <TableCell className="text-muted-foreground">{project.type}</TableCell>
+                          <TableCell>
+                            <Badge variant="outline">{project.status}</Badge>
+                          </TableCell>
+                          <TableCell className="text-muted-foreground">{project.updated}</TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/70 shadow-sm">
+              <CardHeader className="text-right">
+                <CardTitle>النشاط الأخير</CardTitle>
+                <CardDescription>سجل العمليات السريعة.</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-3 pt-0">
+                {activityFeed.map((item) => (
+                  <div key={item.title} className="flex items-start gap-3 text-right">
+                    <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground">
+                      <item.icon className="size-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-sm font-medium text-foreground">{item.title}</p>
+                      <p className="text-xs text-muted-foreground">{item.time}</p>
+                    </div>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
+
+        <TabsContent value="account" className="space-y-6 mt-0">
+          <div className="grid gap-6 md:grid-cols-2">
+            <Card className="border-border/70 shadow-sm">
+              <CardHeader className="text-right">
+                <CardTitle>بيانات الحساب</CardTitle>
+                <CardDescription>المعلومات التشغيلية الأساسية.</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-2 pt-0">
+                {accountFacts.map((fact) => (
+                  <div key={fact.label} className="flex items-center justify-between gap-4 rounded-xl border border-border/70 bg-muted/35 px-4 py-3">
+                    <span className="text-sm font-medium text-foreground">{fact.value}</span>
+                    <span className="text-xs text-muted-foreground">{fact.label}</span>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/70 shadow-sm">
+              <CardHeader className="text-right">
+                <CardTitle>إجراءات سريعة</CardTitle>
+                <CardDescription>الوصول السريع للمهام.</CardDescription>
+              </CardHeader>
+              <CardContent className="grid gap-3 pt-0 sm:grid-cols-2">
+                <QuickAction icon={User} title="إعدادات الملف" description="الهوية والأمان." actionLabel="تعديل" onClick={() => setActiveTab?.('profile')} />
+                <QuickAction icon={CreditCard} title="الاشتراك" description="الفواتير والاستخدام." actionLabel="إدارة" onClick={() => setActiveTab?.('pricing')} />
+                <QuickAction icon={Briefcase} title="مشاريعي" description="عرض كل الأعمال." actionLabel="فتح" onClick={() => setActiveTab?.('my-plans')} />
+                <QuickAction icon={LifeBuoy} title="الدعم" description="التواصل للاستفسار." actionLabel="مساعدة" onClick={() => setActiveTab?.('contact-us')} />
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
+      </Tabs>
     </div>
   );
 };

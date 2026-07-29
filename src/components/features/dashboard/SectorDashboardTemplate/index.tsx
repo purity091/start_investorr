@@ -75,13 +75,42 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
     [sections, hasLeaders, hasDefinition, hasOpportunities, hasSwot],
   );
 
-  const [activeNav, setActiveNav] = useState<string>(nav[0] ?? '');
+  const [activeId, setActiveId] = useState<string>(navMap[nav[0]] || '');
   const [isDownloading, setIsDownloading] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const navRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLDivElement>(null);
-  // The active nav state is handled by regular React state.
-  // We no longer need the IntersectionObserver since we are using a tabbed view instead of scrolling.
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntries = entries.filter((e) => e.isIntersecting);
+        if (visibleEntries.length > 0) {
+          setActiveId(visibleEntries[0].target.id);
+        }
+      },
+      { root: null, rootMargin: '-20% 0px -60% 0px' }
+    );
+
+    // Timeout ensures DOM elements are rendered
+    const timeout = setTimeout(() => {
+      const elements = document.querySelectorAll('.dashboard-section');
+      elements.forEach((el) => observer.observe(el));
+    }, 100);
+
+    return () => {
+      clearTimeout(timeout);
+      observer.disconnect();
+    };
+  }, [navMap, nav]);
+
+  const handleNavClick = (item: string) => {
+    const id = navMap[item];
+    setActiveId(id);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   const handleDownloadReport = useCallback(async () => {
     if (!reportRef.current) return;
@@ -149,17 +178,18 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
 
         <div className="mx-auto flex w-full max-w-[1700px] flex-col gap-8 px-4 py-10 sm:px-6 lg:flex-row lg:px-8">
           {/* Sidebar Navigation */}
-          <aside className="w-full shrink-0 lg:w-64">
+          <aside className="w-full shrink-0 lg:w-64 relative">
             <div className="sticky top-24 flex flex-col gap-1 rounded-2xl border border-border bg-background p-3">
+              <h3 className="px-4 py-2 text-xs font-bold text-muted-foreground uppercase tracking-wider mb-2">محتويات التقرير</h3>
               {nav.map((item) => (
                 <button
                   key={item}
-                  onClick={() => setActiveNav(item)}
+                  onClick={() => handleNavClick(item)}
                   className={cn(
                     "flex w-full items-center justify-start rounded-xl px-4 py-3 text-right text-[13px] font-bold transition-all",
-                    activeNav === item 
-                      ? "bg-primary text-primary-foreground shadow-sm" 
-                      : "bg-transparent text-muted-foreground hover:bg-muted hover:text-foreground"
+                    activeId === navMap[item]
+                      ? "bg-primary/10 text-primary shadow-sm border border-primary/20" 
+                      : "bg-transparent text-muted-foreground hover:bg-muted hover:text-foreground border border-transparent"
                   )}
                 >
                   {item}
@@ -169,30 +199,38 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
           </aside>
 
           {/* Main Content Area */}
-          <main ref={mainRef} className="flex-1 min-w-0">
-            {navMap[activeNav] === 'definition' && (
-              <BottomRow definition={definition} industryInsights={industryInsights} tags={tags} title={title} />
-            )}
+          <main ref={mainRef} className="flex-1 min-w-0 flex flex-col gap-12 pb-32">
+            {sections.map(section => (
+               <div id={section.id} key={section.id} className="dashboard-section scroll-mt-24">
+                 {section.variant === 'dark' 
+                   ? <DarkCard section={section} /> 
+                   : <LightCard section={section} />
+                 }
+               </div>
+            ))}
 
-            {navMap[activeNav] === 'swot-analysis' && hasSwot && swot && (
-              <SwotSection swot={swot} title={title} />
-            )}
-
-            {navMap[activeNav] === 'opportunities-section' && hasOpportunities && (
-              <OpportunitiesSection opportunities={businessOpportunities} onBuildPlan={onBuildPlan} />
-            )}
-
-            {sections.find(s => s.id === navMap[activeNav]) && (
-              <div key={navMap[activeNav]} className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                {sections.find(s => s.id === navMap[activeNav])?.variant === 'dark' 
-                  ? <DarkCard section={sections.find(s => s.id === navMap[activeNav])!} /> 
-                  : <LightCard section={sections.find(s => s.id === navMap[activeNav])!} />
-                }
+            {hasSwot && swot && (
+              <div id="swot-analysis" className="dashboard-section scroll-mt-24">
+                 <SwotSection swot={swot} title={title} />
               </div>
             )}
 
-            {navMap[activeNav] === 'leaders' && hasLeaders && (
-              <LeadersSection leaders={leaders} title={title} />
+            {hasOpportunities && (
+              <div id="opportunities-section" className="dashboard-section scroll-mt-24">
+                <OpportunitiesSection opportunities={businessOpportunities} onBuildPlan={onBuildPlan} />
+              </div>
+            )}
+
+            {hasDefinition && (
+              <div id="definition" className="dashboard-section scroll-mt-24">
+                <BottomRow definition={definition} industryInsights={industryInsights} tags={tags} title={title} />
+              </div>
+            )}
+
+            {hasLeaders && (
+              <div id="leaders" className="dashboard-section scroll-mt-24">
+                <LeadersSection leaders={leaders} title={title} />
+              </div>
             )}
           </main>
         </div>

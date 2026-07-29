@@ -22,6 +22,9 @@ import {
   Sparkles,
   Users,
   Zap,
+  TrendingDown,
+  CloudCog,
+  Settings2,
 } from 'lucide-react';
 
 import type { User } from '../../types';
@@ -148,7 +151,10 @@ const PROJECT_BUILD: NavItemConfig[] = [
 ];
 
 const PROJECT_IDEAS: NavItemConfig[] = [
-  { tab: 'my-plans', label: 'مشاريع ناجحة مثبتة', icon: Sparkles },
+  { tab: 'proven-projects', label: 'مشاريع ناجحة مثبتة', icon: Sparkles },
+  { tab: 'failed-projects', label: 'أفكار مشاريع فشلت', icon: TrendingDown },
+  { tab: 'saas-ideas', label: 'أفكار SaaS', icon: CloudCog },
+  { tab: 'micro-saas-ideas', label: 'أفكار Micro-SaaS', icon: Settings2 },
   {
     tab: 'market-discovery',
     label: 'استكشاف السوق',
@@ -405,13 +411,18 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
               <span>{isAdminMode ? 'حساب المستخدم' : 'لوحة الأدمن'}</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
-          <SidebarMenuItem>
+          <SidebarMenuItem className="mt-2">
             <SidebarMenuButton 
-              className="h-9 justify-center cursor-pointer"
+              className="h-10 justify-start gap-3 px-2 text-muted-foreground hover:text-foreground hover:bg-muted/50 border border-transparent hover:border-border/50 rounded-lg cursor-pointer transition-all"
               onClick={toggleSidebar}
               title={state === "collapsed" ? "توسيع القائمة" : "طي القائمة"}
             >
-              {state === "collapsed" ? <ChevronLeft className="size-4" /> : <ChevronRight className="size-4" />}
+              <div className="flex size-6 shrink-0 items-center justify-center rounded-md bg-muted shadow-sm border border-border/50 text-foreground">
+                {state === "collapsed" ? <ChevronLeft className="size-3.5" /> : <ChevronRight className="size-3.5" />}
+              </div>
+              <span className="font-medium text-sm group-data-[collapsible=icon]:hidden">
+                طي القائمة الجانبية
+              </span>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

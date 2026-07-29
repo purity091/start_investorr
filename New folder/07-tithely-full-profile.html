@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tithe.ly provides online and mobile giving tools for churches, along with broader church-management and engagement capabilities. It was created to make giving possible beyond a weekly in-person service.">
+  <meta name="research-date" content="2026-07-28">
+  <meta name="data-scope" content="public-source-only">
+  <title>Tithe.ly — Full Micro-SaaS Entry</title>
+  <style>
+:root {
+  --background: #f5f6f3;
+  --surface: #ffffff;
+  --surface-muted: #f8f9f7;
+  --text: #182019;
+  --muted: #687069;
+  --border: #dfe3de;
+  --accent: #1f6847;
+  --accent-soft: #e3f2e9;
+  --warning: #875b12;
+  --warning-bg: #fff7df;
+  --radius: 18px;
+  --shadow: 0 14px 42px rgba(20, 34, 24, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+a { color: var(--accent); }
+
+.container {
+  width: min(1120px, calc(100% - 28px));
+  margin-inline: auto;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid rgba(223, 227, 222, 0.9);
+  background: rgba(245, 246, 243, 0.92);
+  backdrop-filter: blur(14px);
+}
+
+.topbar-inner {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: var(--accent);
+  color: #fff;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.small-link,
+.copy-button {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 13px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hero {
+  padding: 66px 0 32px;
+}
+
+.kicker {
+  display: inline-flex;
+  padding: 6px 10px;
+  border: 1px solid #c7ddce;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 16px 0 8px;
+  font-size: clamp(42px, 7vw, 78px);
+  line-height: .98;
+  letter-spacing: -.055em;
+}
+
+.hero h2 {
+  max-width: 820px;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: 550;
+  line-height: 1.25;
+}
+
+.hero-summary {
+  max-width: 860px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.notice {
+  margin: 4px 0 28px;
+  padding: 15px 17px;
+  border: 1px solid #ead7a1;
+  border-radius: 14px;
+  background: var(--warning-bg);
+  color: #5f4819;
+  font-size: 14px;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.metric {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: var(--surface);
+  box-shadow: 0 5px 18px rgba(20, 34, 24, 0.04);
+}
+
+.metric-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
+.metric-value {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 22px;
+  padding-bottom: 70px;
+}
+
+.sidebar {
+  align-self: start;
+  position: sticky;
+  top: 82px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.sidebar strong {
+  display: block;
+  padding: 7px 9px 9px;
+  font-size: 13px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 8px 9px;
+  border-radius: 9px;
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background: var(--surface-muted);
+  color: var(--text);
+}
+
+.content {
+  min-width: 0;
+}
+
+.section {
+  margin-bottom: 18px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 6px 20px rgba(20, 34, 24, 0.035);
+}
+
+.section h3 {
+  margin: 0 0 15px;
+  font-size: 23px;
+  letter-spacing: -.025em;
+}
+
+.fact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.fact {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface-muted);
+}
+
+.fact dt {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.fact dd {
+  margin: 4px 0 0;
+  font-weight: 650;
+}
+
+.clean-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.clean-list li + li { margin-top: 8px; }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  display: inline-flex;
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-muted);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.timeline {
+  display: grid;
+  gap: 10px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr);
+  gap: 14px;
+  padding: 15px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: var(--surface-muted);
+}
+
+.timeline-date {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.timeline-amount {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.timeline-type {
+  margin-top: 2px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.timeline-note {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.source-list {
+  display: grid;
+  gap: 10px;
+}
+
+.source-card {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface-muted);
+}
+
+.source-card a {
+  font-weight: 800;
+  word-break: break-word;
+}
+
+.source-card p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+details {
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+summary {
+  padding: 15px;
+  background: var(--surface-muted);
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.json-tools {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 12px 0;
+}
+
+pre {
+  max-height: 640px;
+  margin: 0;
+  padding: 18px;
+  overflow: auto;
+  background: #111713;
+  color: #e7efe9;
+  font: 12px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.footer {
+  padding: 26px 0 42px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 850px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+  .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+  .container { width: min(100% - 20px, 1120px); }
+  .hero { padding-top: 42px; }
+  .hero h1 { font-size: 47px; }
+  .metrics,
+  .fact-grid { grid-template-columns: 1fr; }
+  .timeline-item { grid-template-columns: 1fr; }
+  .section { padding: 18px; }
+  .top-actions .small-link { display: none; }
+}
+</style>
+</head>
+<body data-company="tithely">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">TL</span>
+        <span>Tithe.ly Profile</span>
+      </a>
+      <div class="top-actions">
+        <a class="small-link" href="https://get.tithe.ly" target="_blank" rel="noopener noreferrer">Official website</a>
+        <button class="copy-button" type="button" data-copy-json>Copy JSON</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="container">
+      <section class="hero">
+        <span class="kicker">Fintech SaaS / Church giving</span>
+        <h1>Tithe.ly</h1>
+        <h2>Digital giving and church-engagement platform</h2>
+        <p class="hero-summary">Tithe.ly provides online and mobile giving tools for churches, along with broader church-management and engagement capabilities. It was created to make giving possible beyond a weekly in-person service.</p>
+      </section>
+
+      <div class="notice">
+        <strong>Data boundary:</strong> this page includes detailed publicly visible “behind-the-scenes”
+        business information and a machine-readable record. It does not contain private backend access,
+        paid-only content copied from a source, credentials, customer records, or confidential analytics.
+        Figures are preserved as dated claims or estimates.
+      </div>
+
+      <section class="metrics" aria-label="Starter Story directory snapshot">
+        <div class="metric"><span class="metric-label">Monthly revenue</span><strong class="metric-value">Unavailable on the directory card</strong></div><div class="metric"><span class="metric-label">Monthly traffic</span><strong class="metric-value">250K /mo</strong></div><div class="metric"><span class="metric-label">Revenue / visitor</span><strong class="metric-value">$6.00 /visitor</strong></div><div class="metric"><span class="metric-label">Solo score</span><strong class="metric-value">48.0</strong></div>
+      </section>
+
+      <div class="layout">
+        <aside class="sidebar" aria-label="Page sections">
+          <strong>Entry sections</strong>
+          <a href="#company">Company facts</a><a href="#problem_and_product">Problem and product</a><a href="#origin_story">Founder and origin</a><a href="#build_and_launch">Behind the scenes: build and launch</a><a href="#costs_and_operations">Behind the scenes: costs and operations</a><a href="#monetization">Monetization and pricing</a><a href="#growth">Growth and customer acquisition</a><a href="#tools">Technology and tools</a><a href="#revenue_timeline">Revenue evidence timeline</a><a href="#lessons">Key business lessons</a><a href="#sources">Sources</a><a href="#data_quality">Accuracy and data-quality notes</a><a href="#backend-json">Backend-ready JSON</a>
+        </aside>
+
+        <div class="content">
+          <section class="section" id="directory-snapshot">
+            <h3>Exact directory-card snapshot</h3>
+            <dl class="fact-grid"><div class="fact"><dt>monthly revenue</dt><dd>Unavailable on the directory card</dd></div><div class="fact"><dt>monthly traffic</dt><dd>250K /mo</dd></div><div class="fact"><dt>revenue per visitor</dt><dd>$6.00 /visitor</dd></div><div class="fact"><dt>solopreneur score</dt><dd>48.0</dd></div><div class="fact"><dt>idea label</dt><dd>Online donation platform</dd></div></dl>
+            <p style="margin:15px 0 0;color:var(--muted);font-size:13px">
+              Captured from the linked Starter Story micro-SaaS directory and separated from later
+              profile estimates to prevent values from different dates being mixed.
+            </p>
+          </section>
+
+          <section class="section" id="company"><h3>Company facts</h3><dl class="fact-grid"><div class="fact"><dt>business model</dt><dd>Payments/transaction-based fintech plus broader software services</dd></div><div class="fact"><dt>customer type</dt><dd>Churches, faith organizations, donors, and related nonprofit users</dd></div><div class="fact"><dt>founder</dt><dd>Dean Sweetman</dd></div><div class="fact"><dt>cofounder note</dt><dd>The profile lists three founders; Dean&#x27;s son Barnabas built the early application</dd></div><div class="fact"><dt>founder role</dt><dd>CEO and co-founder</dd></div><div class="fact"><dt>founders count</dt><dd>3</dd></div><div class="fact"><dt>employees</dt><dd>Approximately 180 in the June 2024 Starter Story profile</dd></div><div class="fact"><dt>started</dt><dd>2013</dd></div><div class="fact"><dt>location</dt><dd>Initial launch at Dean&#x27;s congregation in Atlanta</dd></div><div class="fact"><dt>funding</dt><dd>Not summarized from the cited profile</dd></div><div class="fact"><dt>profitability</dt><dd>Marked profitable in the Starter Story profile</dd></div><div class="fact"><dt>public revenue claim</dt><dd>Profile estimate $1.5M/month; article title referenced $16M ARR</dd></div></dl></section><section class="section" id="problem_and_product"><h3>Problem and product</h3><ul class="clean-list"><li>Traditional church giving was concentrated around weekly services and physical collection methods.</li><li>Weather, travel, holidays, and attendance changes could interrupt donations.</li><li>Recurring and mobile giving allow donors to contribute at any time.</li><li>The platform expanded into a wider set of church-management and engagement tools.</li></ul></section><section class="section" id="origin_story"><h3>Founder and origin</h3><ul class="clean-list"><li>Dean Sweetman observed that members had limited opportunities to give outside weekly gatherings.</li><li>He wanted a simpler way to support recurring donations and avoid revenue volatility caused by missed services.</li><li>His son Barnabas spent roughly 12 months building the early application.</li><li>The first rollout occurred at Dean&#x27;s Atlanta congregation in 2013.</li></ul></section><section class="section" id="build_and_launch"><h3>Behind the scenes: build and launch</h3><ul class="clean-list"><li>The early product focused on mobile and digital giving.</li><li>A real congregation served as the initial test environment.</li><li>The company used payment infrastructure rather than attempting to build the full payments layer from scratch.</li><li>The profile later described adoption by more than 37,000 churches.</li></ul></section><section class="section" id="costs_and_operations"><h3>Behind the scenes: costs and operations</h3><ul class="clean-list"><li>The cited profile did not expose a complete founding-cost breakdown.</li><li>Payment processing, compliance, reliability, and donor trust are central operating requirements.</li><li>The June 2024 profile estimated approximately 180 employees.</li><li>Acquisitions and partnerships expanded the platform beyond its initial single-product scope.</li></ul></section><section class="section" id="monetization"><h3>Monetization and pricing</h3><ul class="clean-list"><li>A historical source claim described an effective transaction rate of approximately 0.92% with no monthly subscription for the giving product.</li><li>The wider product suite may use additional pricing structures.</li><li>Transaction rates and plan terms should be checked on the official website because payment pricing changes over time.</li></ul></section><section class="section" id="growth"><h3>Growth and customer acquisition</h3><ul class="clean-list"><li>Organic search and paid search helped churches find digital-giving solutions.</li><li>Referrals, church conferences, and denominational relationships created trust in a specialized market.</li><li>Acquisitions expanded product capability and customer reach.</li><li>Partnerships and free access for some new church planters supported distribution.</li><li>A strong vertical focus made messaging and industry partnerships more specific.</li></ul></section><section class="section" id="tools"><h3>Technology and tools</h3><div class="tags"><span class="tag">Stripe</span><span class="tag">AWS</span><span class="tag">Mobile application infrastructure</span><span class="tag">Payment-processing and church-management systems</span></div></section><section class="section" id="revenue_timeline"><h3>Revenue evidence timeline</h3><div class="timeline"><div class="timeline-item"><div class="timeline-date">2013</div><div><div class="timeline-amount">Initial church launch</div><div class="timeline-type">Launch milestone</div><div class="timeline-note">The product first launched at the founder&#x27;s Atlanta congregation.</div></div></div><div class="timeline-item"><div class="timeline-date">2024-06-28 profile</div><div><div class="timeline-amount">$1.5M /month estimated</div><div class="timeline-type">Starter Story estimate</div><div class="timeline-note">The article title separately referenced $16M ARR.</div></div></div></div></section><section class="section" id="lessons"><h3>Key business lessons</h3><ul class="clean-list"><li>Vertical-market trust can be built through authentic domain experience and in-community launch partners.</li><li>A transaction-based model can align revenue with customer success and payment volume.</li><li>Starting with one high-frequency workflow can become an entry point into a broader operating platform.</li></ul></section><section class="section" id="sources"><h3>Sources</h3><div class="source-list"><div class="source-card"><a href="https://www.starterstory.com/data/micro-saas-ideas" target="_blank" rel="noopener noreferrer">Starter Story directory</a><p>Traffic, RPV, score, and card label</p></div><div class="source-card"><a href="https://www.starterstory.com/stories/tithely-breakdown" target="_blank" rel="noopener noreferrer">Starter Story Tithe.ly breakdown</a><p>Founder, origin, launch, team estimate, adoption, monetization, and growth</p></div><div class="source-card"><a href="https://get.tithe.ly" target="_blank" rel="noopener noreferrer">Official website</a><p>Current product suite, rates, and plan verification</p></div></div></section><section class="section" id="data_quality"><h3>Accuracy and data-quality notes</h3><ul class="clean-list"><li>Revenue appears as an estimate and differs from the annual figure used in the article title.</li><li>Payment pricing is historical and particularly sensitive to change.</li><li>The directory card did not display monthly revenue.</li><li>No donor information, payment records, or private backend data is included.</li></ul></section>
+
+          <section class="section" id="backend-json">
+            <h3>Backend-ready JSON record</h3>
+            <p style="color:var(--muted)">
+              Your agent can parse this object directly. The same JSON is also embedded in
+              <code>&lt;script id="entry-data" type="application/json"&gt;</code>.
+            </p>
+            <details open>
+              <summary>Show structured entry data</summary>
+              <div class="json-tools">
+                <button class="copy-button" type="button" data-copy-json>Copy JSON</button>
+              </div>
+              <pre id="json-output">{
+  &quot;order&quot;: 7,
+  &quot;slug&quot;: &quot;tithely&quot;,
+  &quot;name&quot;: &quot;Tithe.ly&quot;,
+  &quot;domain&quot;: &quot;get.tithe.ly&quot;,
+  &quot;website&quot;: &quot;https://get.tithe.ly&quot;,
+  &quot;category&quot;: &quot;Fintech SaaS / Church giving&quot;,
+  &quot;headline&quot;: &quot;Digital giving and church-engagement platform&quot;,
+  &quot;summary&quot;: &quot;Tithe.ly provides online and mobile giving tools for churches, along with broader church-management and engagement capabilities. It was created to make giving possible beyond a weekly in-person service.&quot;,
+  &quot;directory_snapshot&quot;: {
+    &quot;monthly_revenue&quot;: &quot;Unavailable on the directory card&quot;,
+    &quot;monthly_traffic&quot;: &quot;250K /mo&quot;,
+    &quot;revenue_per_visitor&quot;: &quot;$6.00 /visitor&quot;,
+    &quot;solopreneur_score&quot;: &quot;48.0&quot;,
+    &quot;idea_label&quot;: &quot;Online donation platform&quot;
+  },
+  &quot;company&quot;: {
+    &quot;business_model&quot;: &quot;Payments/transaction-based fintech plus broader software services&quot;,
+    &quot;customer_type&quot;: &quot;Churches, faith organizations, donors, and related nonprofit users&quot;,
+    &quot;founder&quot;: &quot;Dean Sweetman&quot;,
+    &quot;cofounder_note&quot;: &quot;The profile lists three founders; Dean&#x27;s son Barnabas built the early application&quot;,
+    &quot;founder_role&quot;: &quot;CEO and co-founder&quot;,
+    &quot;founders_count&quot;: &quot;3&quot;,
+    &quot;employees&quot;: &quot;Approximately 180 in the June 2024 Starter Story profile&quot;,
+    &quot;started&quot;: &quot;2013&quot;,
+    &quot;location&quot;: &quot;Initial launch at Dean&#x27;s congregation in Atlanta&quot;,
+    &quot;funding&quot;: &quot;Not summarized from the cited profile&quot;,
+    &quot;profitability&quot;: &quot;Marked profitable in the Starter Story profile&quot;,
+    &quot;public_revenue_claim&quot;: &quot;Profile estimate $1.5M/month; article title referenced $16M ARR&quot;
+  },
+  &quot;problem_and_product&quot;: [
+    &quot;Traditional church giving was concentrated around weekly services and physical collection methods.&quot;,
+    &quot;Weather, travel, holidays, and attendance changes could interrupt donations.&quot;,
+    &quot;Recurring and mobile giving allow donors to contribute at any time.&quot;,
+    &quot;The platform expanded into a wider set of church-management and engagement tools.&quot;
+  ],
+  &quot;origin_story&quot;: [
+    &quot;Dean Sweetman observed that members had limited opportunities to give outside weekly gatherings.&quot;,
+    &quot;He wanted a simpler way to support recurring donations and avoid revenue volatility caused by missed services.&quot;,
+    &quot;His son Barnabas spent roughly 12 months building the early application.&quot;,
+    &quot;The first rollout occurred at Dean&#x27;s Atlanta congregation in 2013.&quot;
+  ],
+  &quot;build_and_launch&quot;: [
+    &quot;The early product focused on mobile and digital giving.&quot;,
+    &quot;A real congregation served as the initial test environment.&quot;,
+    &quot;The company used payment infrastructure rather than attempting to build the full payments layer from scratch.&quot;,
+    &quot;The profile later described adoption by more than 37,000 churches.&quot;
+  ],
+  &quot;costs_and_operations&quot;: [
+    &quot;The cited profile did not expose a complete founding-cost breakdown.&quot;,
+    &quot;Payment processing, compliance, reliability, and donor trust are central operating requirements.&quot;,
+    &quot;The June 2024 profile estimated approximately 180 employees.&quot;,
+    &quot;Acquisitions and partnerships expanded the platform beyond its initial single-product scope.&quot;
+  ],
+  &quot;monetization&quot;: [
+    &quot;A historical source claim described an effective transaction rate of approximately 0.92% with no monthly subscription for the giving product.&quot;,
+    &quot;The wider product suite may use additional pricing structures.&quot;,
+    &quot;Transaction rates and plan terms should be checked on the official website because payment pricing changes over time.&quot;
+  ],
+  &quot;growth&quot;: [
+    &quot;Organic search and paid search helped churches find digital-giving solutions.&quot;,
+    &quot;Referrals, church conferences, and denominational relationships created trust in a specialized market.&quot;,
+    &quot;Acquisitions expanded product capability and customer reach.&quot;,
+    &quot;Partnerships and free access for some new church planters supported distribution.&quot;,
+    &quot;A strong vertical focus made messaging and industry partnerships more specific.&quot;
+  ],
+  &quot;tools&quot;: [
+    &quot;Stripe&quot;,
+    &quot;AWS&quot;,
+    &quot;Mobile application infrastructure&quot;,
+    &quot;Payment-processing and church-management systems&quot;
+  ],
+  &quot;revenue_timeline&quot;: [
+    {
+      &quot;date&quot;: &quot;2013&quot;,
+      &quot;amount&quot;: &quot;Initial church launch&quot;,
+      &quot;type&quot;: &quot;Launch milestone&quot;,
+      &quot;note&quot;: &quot;The product first launched at the founder&#x27;s Atlanta congregation.&quot;
+    },
+    {
+      &quot;date&quot;: &quot;2024-06-28 profile&quot;,
+      &quot;amount&quot;: &quot;$1.5M /month estimated&quot;,
+      &quot;type&quot;: &quot;Starter Story estimate&quot;,
+      &quot;note&quot;: &quot;The article title separately referenced $16M ARR.&quot;
+    }
+  ],
+  &quot;lessons&quot;: [
+    &quot;Vertical-market trust can be built through authentic domain experience and in-community launch partners.&quot;,
+    &quot;A transaction-based model can align revenue with customer success and payment volume.&quot;,
+    &quot;Starting with one high-frequency workflow can become an entry point into a broader operating platform.&quot;
+  ],
+  &quot;sources&quot;: [
+    {
+      &quot;label&quot;: &quot;Starter Story directory&quot;,
+      &quot;url&quot;: &quot;https://www.starterstory.com/data/micro-saas-ideas&quot;,
+      &quot;coverage&quot;: &quot;Traffic, RPV, score, and card label&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Starter Story Tithe.ly breakdown&quot;,
+      &quot;url&quot;: &quot;https://www.starterstory.com/stories/tithely-breakdown&quot;,
+      &quot;coverage&quot;: &quot;Founder, origin, launch, team estimate, adoption, monetization, and growth&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Official website&quot;,
+      &quot;url&quot;: &quot;https://get.tithe.ly&quot;,
+      &quot;coverage&quot;: &quot;Current product suite, rates, and plan verification&quot;
+    }
+  ],
+  &quot;data_quality&quot;: [
+    &quot;Revenue appears as an estimate and differs from the annual figure used in the article title.&quot;,
+    &quot;Payment pricing is historical and particularly sensitive to change.&quot;,
+    &quot;The directory card did not display monthly revenue.&quot;,
+    &quot;No donor information, payment records, or private backend data is included.&quot;
+  ],
+  &quot;research_metadata&quot;: {
+    &quot;researched_on&quot;: &quot;2026-07-28&quot;,
+    &quot;scope&quot;: &quot;Publicly visible information only&quot;,
+    &quot;source_method&quot;: &quot;Starter Story directory, linked public profile/case study, and official product website links&quot;,
+    &quot;private_backend_data_included&quot;: false,
+    &quot;copyright_note&quot;: &quot;Narrative text is independently summarized; source articles are not reproduced.&quot;
+  }
+}</pre>
+            </details>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      Public-source research snapshot prepared 2026-07-28. Verify changing revenue, traffic,
+      pricing, staffing, and product details before publication.
+    </div>
+  </footer>
+
+  <script id="entry-data" type="application/json">{
+  "order": 7,
+  "slug": "tithely",
+  "name": "Tithe.ly",
+  "domain": "get.tithe.ly",
+  "website": "https://get.tithe.ly",
+  "category": "Fintech SaaS / Church giving",
+  "headline": "Digital giving and church-engagement platform",
+  "summary": "Tithe.ly provides online and mobile giving tools for churches, along with broader church-management and engagement capabilities. It was created to make giving possible beyond a weekly in-person service.",
+  "directory_snapshot": {
+    "monthly_revenue": "Unavailable on the directory card",
+    "monthly_traffic": "250K /mo",
+    "revenue_per_visitor": "$6.00 /visitor",
+    "solopreneur_score": "48.0",
+    "idea_label": "Online donation platform"
+  },
+  "company": {
+    "business_model": "Payments/transaction-based fintech plus broader software services",
+    "customer_type": "Churches, faith organizations, donors, and related nonprofit users",
+    "founder": "Dean Sweetman",
+    "cofounder_note": "The profile lists three founders; Dean's son Barnabas built the early application",
+    "founder_role": "CEO and co-founder",
+    "founders_count": "3",
+    "employees": "Approximately 180 in the June 2024 Starter Story profile",
+    "started": "2013",
+    "location": "Initial launch at Dean's congregation in Atlanta",
+    "funding": "Not summarized from the cited profile",
+    "profitability": "Marked profitable in the Starter Story profile",
+    "public_revenue_claim": "Profile estimate $1.5M/month; article title referenced $16M ARR"
+  },
+  "problem_and_product": [
+    "Traditional church giving was concentrated around weekly services and physical collection methods.",
+    "Weather, travel, holidays, and attendance changes could interrupt donations.",
+    "Recurring and mobile giving allow donors to contribute at any time.",
+    "The platform expanded into a wider set of church-management and engagement tools."
+  ],
+  "origin_story": [
+    "Dean Sweetman observed that members had limited opportunities to give outside weekly gatherings.",
+    "He wanted a simpler way to support recurring donations and avoid revenue volatility caused by missed services.",
+    "His son Barnabas spent roughly 12 months building the early application.",
+    "The first rollout occurred at Dean's Atlanta congregation in 2013."
+  ],
+  "build_and_launch": [
+    "The early product focused on mobile and digital giving.",
+    "A real congregation served as the initial test environment.",
+    "The company used payment infrastructure rather than attempting to build the full payments layer from scratch.",
+    "The profile later described adoption by more than 37,000 churches."
+  ],
+  "costs_and_operations": [
+    "The cited profile did not expose a complete founding-cost breakdown.",
+    "Payment processing, compliance, reliability, and donor trust are central operating requirements.",
+    "The June 2024 profile estimated approximately 180 employees.",
+    "Acquisitions and partnerships expanded the platform beyond its initial single-product scope."
+  ],
+  "monetization": [
+    "A historical source claim described an effective transaction rate of approximately 0.92% with no monthly subscription for the giving product.",
+    "The wider product suite may use additional pricing structures.",
+    "Transaction rates and plan terms should be checked on the official website because payment pricing changes over time."
+  ],
+  "growth": [
+    "Organic search and paid search helped churches find digital-giving solutions.",
+    "Referrals, church conferences, and denominational relationships created trust in a specialized market.",
+    "Acquisitions expanded product capability and customer reach.",
+    "Partnerships and free access for some new church planters supported distribution.",
+    "A strong vertical focus made messaging and industry partnerships more specific."
+  ],
+  "tools": [
+    "Stripe",
+    "AWS",
+    "Mobile application infrastructure",
+    "Payment-processing and church-management systems"
+  ],
+  "revenue_timeline": [
+    {
+      "date": "2013",
+      "amount": "Initial church launch",
+      "type": "Launch milestone",
+      "note": "The product first launched at the founder's Atlanta congregation."
+    },
+    {
+      "date": "2024-06-28 profile",
+      "amount": "$1.5M /month estimated",
+      "type": "Starter Story estimate",
+      "note": "The article title separately referenced $16M ARR."
+    }
+  ],
+  "lessons": [
+    "Vertical-market trust can be built through authentic domain experience and in-community launch partners.",
+    "A transaction-based model can align revenue with customer success and payment volume.",
+    "Starting with one high-frequency workflow can become an entry point into a broader operating platform."
+  ],
+  "sources": [
+    {
+      "label": "Starter Story directory",
+      "url": "https://www.starterstory.com/data/micro-saas-ideas",
+      "coverage": "Traffic, RPV, score, and card label"
+    },
+    {
+      "label": "Starter Story Tithe.ly breakdown",
+      "url": "https://www.starterstory.com/stories/tithely-breakdown",
+      "coverage": "Founder, origin, launch, team estimate, adoption, monetization, and growth"
+    },
+    {
+      "label": "Official website",
+      "url": "https://get.tithe.ly",
+      "coverage": "Current product suite, rates, and plan verification"
+    }
+  ],
+  "data_quality": [
+    "Revenue appears as an estimate and differs from the annual figure used in the article title.",
+    "Payment pricing is historical and particularly sensitive to change.",
+    "The directory card did not display monthly revenue.",
+    "No donor information, payment records, or private backend data is included."
+  ],
+  "research_metadata": {
+    "researched_on": "2026-07-28",
+    "scope": "Publicly visible information only",
+    "source_method": "Starter Story directory, linked public profile/case study, and official product website links",
+    "private_backend_data_included": false,
+    "copyright_note": "Narrative text is independently summarized; source articles are not reproduced."
+  }
+}</script>
+  <script>
+    (() => {
+      const record = document.getElementById("entry-data").textContent;
+      document.querySelectorAll("[data-copy-json]").forEach((button) => {
+        button.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(record);
+            const oldText = button.textContent;
+            button.textContent = "Copied";
+            setTimeout(() => button.textContent = oldText, 1300);
+          } catch (error) {
+            const textarea = document.createElement("textarea");
+            textarea.value = record;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            textarea.remove();
+            button.textContent = "Copied";
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

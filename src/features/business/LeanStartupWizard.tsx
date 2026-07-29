@@ -116,7 +116,7 @@ export default function LeanStartupWizard() {
         successRate = Math.round((signups / visitors) * 100);
         // Normal conversion is usually lower, but let's normalize to a 100% scale for the score
         // 10% conversion is huge in real life, so let's multiply by 10 for the "Success Rate" score
-        successRate = Math.min(successRate * 10, 100); 
+        successRate = Math.min(successRate * 10, 100);
         if (successRate > 80) explanation = 'معدل التحويل ممتاز! رسالة المنتج واضحة وهناك طلب عالي.';
         else if (successRate > 40) explanation = 'معدل تحويل مقبول. قد تحتاج لتعديل الرسالة التسويقية أو السعر.';
         else explanation = 'معدل التحويل ضعيف جداً. العرض الحالي لا يغري الزوار.';
@@ -252,7 +252,7 @@ export default function LeanStartupWizard() {
               <h2 className="text-3xl font-black">المرحلة الثالثة: تقييم وترتيب الفرضيات</h2>
               <p className="text-muted-foreground">ليست كل الفرضيات بنفس الأهمية. قيمها لنرتب أولويات الاختبار.</p>
             </div>
-            
+
             <div className="space-y-4">
               {hypotheses.map((h, index) => (
                 <Card key={h.id} className="shadow-none border-border/50 relative overflow-hidden">
@@ -303,7 +303,7 @@ export default function LeanStartupWizard() {
               <h2 className="text-3xl font-black">المرحلة الرابعة: اختيار تجربة الاختبار</h2>
               <p className="text-muted-foreground">تم ترتيب الفرضيات (الأخطر أولاً). كيف تريد اختبار كل منها؟</p>
             </div>
-            
+
             <div className="space-y-4">
               {hypotheses.map((h, index) => (
                 <Card key={h.id} className="shadow-none border-border/50">
@@ -352,7 +352,7 @@ export default function LeanStartupWizard() {
               <h2 className="text-3xl font-black">المرحلة الخامسة: إعداد التجارب</h2>
               <p className="text-muted-foreground">حدد معالم كل تجربة بدقة لكي تتمكن من قياسها لاحقاً.</p>
             </div>
-            
+
             <div className="space-y-6">
               {hypotheses.map((h) => (
                 <Card key={h.id} className="shadow-none border-primary/20">
@@ -370,15 +370,15 @@ export default function LeanStartupWizard() {
                       <div className="grid sm:grid-cols-2 gap-4">
                         <div className="space-y-2">
                           <Label>العدد المستهدف للمقابلات</Label>
-                          <Input type="number" placeholder="مثال: 10" value={h.setup.targetCount || ''} onChange={(e) => updateHypothesis(h.id, { setup: { ...h.setup, targetCount: e.target.value }})} />
+                          <Input type="number" placeholder="مثال: 10" value={h.setup.targetCount || ''} onChange={(e) => updateHypothesis(h.id, { setup: { ...h.setup, targetCount: e.target.value } })} />
                         </div>
                         <div className="space-y-2">
                           <Label>الفئة المستهدفة</Label>
-                          <Input placeholder="مثال: أصحاب مطاعم صغيرة" value={h.setup.segment || ''} onChange={(e) => updateHypothesis(h.id, { setup: { ...h.setup, segment: e.target.value }})} />
+                          <Input placeholder="مثال: أصحاب مطاعم صغيرة" value={h.setup.segment || ''} onChange={(e) => updateHypothesis(h.id, { setup: { ...h.setup, segment: e.target.value } })} />
                         </div>
                         <div className="space-y-2 sm:col-span-2">
                           <Label>أهم سؤالين ستطرحهما</Label>
-                          <Textarea placeholder="1. كيف تحل المشكلة اليوم؟&#10;2. كم تنفق عليها؟" value={h.setup.questions || ''} onChange={(e) => updateHypothesis(h.id, { setup: { ...h.setup, questions: e.target.value }})} />
+                          <Textarea placeholder="1. كيف تحل المشكلة اليوم؟&#10;2. كم تنفق عليها؟" value={h.setup.questions || ''} onChange={(e) => updateHypothesis(h.id, { setup: { ...h.setup, questions: e.target.value } })} />
                         </div>
                       </div>
                     )}
@@ -387,15 +387,15 @@ export default function LeanStartupWizard() {
                       <div className="grid sm:grid-cols-2 gap-4">
                         <div className="space-y-2 sm:col-span-2">
                           <Label>رسالة الصفحة (Headline)</Label>
-                          <Input placeholder="مثال: أول نظام محاسبي يفهم مطعمك." value={h.setup.headline || ''} onChange={(e) => updateHypothesis(h.id, { setup: { ...h.setup, headline: e.target.value }})} />
+                          <Input placeholder="مثال: أول نظام محاسبي يفهم مطعمك." value={h.setup.headline || ''} onChange={(e) => updateHypothesis(h.id, { setup: { ...h.setup, headline: e.target.value } })} />
                         </div>
                         <div className="space-y-2">
                           <Label>نص زر الدعوة (CTA)</Label>
-                          <Input placeholder="مثال: سجل في القائمة البريدية" value={h.setup.cta || ''} onChange={(e) => updateHypothesis(h.id, { setup: { ...h.setup, cta: e.target.value }})} />
+                          <Input placeholder="مثال: سجل في القائمة البريدية" value={h.setup.cta || ''} onChange={(e) => updateHypothesis(h.id, { setup: { ...h.setup, cta: e.target.value } })} />
                         </div>
                         <div className="space-y-2">
                           <Label>الزوار المستهدفين (للاختبار)</Label>
-                          <Input type="number" placeholder="مثال: 500" value={h.setup.visitors || ''} onChange={(e) => updateHypothesis(h.id, { setup: { ...h.setup, visitors: e.target.value }})} />
+                          <Input type="number" placeholder="مثال: 500" value={h.setup.visitors || ''} onChange={(e) => updateHypothesis(h.id, { setup: { ...h.setup, visitors: e.target.value } })} />
                         </div>
                       </div>
                     )}
@@ -404,11 +404,11 @@ export default function LeanStartupWizard() {
                       <div className="grid gap-4">
                         <div className="space-y-2">
                           <Label>ما الذي ستبنيه/تفعله بالضبط؟</Label>
-                          <Textarea placeholder="وصف التجربة..." value={h.setup.desc || ''} onChange={(e) => updateHypothesis(h.id, { setup: { ...h.setup, desc: e.target.value }})} />
+                          <Textarea placeholder="وصف التجربة..." value={h.setup.desc || ''} onChange={(e) => updateHypothesis(h.id, { setup: { ...h.setup, desc: e.target.value } })} />
                         </div>
                         <div className="space-y-2">
                           <Label>المؤشر المستهدف للنجاح</Label>
-                          <Input placeholder="مثال: الحصول على 5 مبيعات" value={h.setup.successMetric || ''} onChange={(e) => updateHypothesis(h.id, { setup: { ...h.setup, successMetric: e.target.value }})} />
+                          <Input placeholder="مثال: الحصول على 5 مبيعات" value={h.setup.successMetric || ''} onChange={(e) => updateHypothesis(h.id, { setup: { ...h.setup, successMetric: e.target.value } })} />
                         </div>
                       </div>
                     )}
@@ -432,7 +432,7 @@ export default function LeanStartupWizard() {
               <h2 className="text-3xl font-black">المرحلة السادسة: إدخال النتائج</h2>
               <p className="text-muted-foreground">لنفترض أنك أجريت التجارب. أدخل الأرقام الواقعية التي حصلت عليها.</p>
             </div>
-            
+
             <div className="space-y-6">
               {hypotheses.map((h) => (
                 <Card key={h.id} className="shadow-none border-border/50 bg-muted/10">
@@ -447,15 +447,15 @@ export default function LeanStartupWizard() {
                       <div className="grid grid-cols-3 gap-4">
                         <div className="space-y-2">
                           <Label>إجمالي الأشخاص</Label>
-                          <Input type="number" placeholder="20" value={h.results.total || ''} onChange={(e) => updateHypothesis(h.id, { results: { ...h.results, total: e.target.value }})} />
+                          <Input type="number" placeholder="20" value={h.results.total || ''} onChange={(e) => updateHypothesis(h.id, { results: { ...h.results, total: e.target.value } })} />
                         </div>
                         <div className="space-y-2">
                           <Label>أكدوا المشكلة (نعم)</Label>
-                          <Input type="number" placeholder="16" value={h.results.yes || ''} onChange={(e) => updateHypothesis(h.id, { results: { ...h.results, yes: e.target.value }})} />
+                          <Input type="number" placeholder="16" value={h.results.yes || ''} onChange={(e) => updateHypothesis(h.id, { results: { ...h.results, yes: e.target.value } })} />
                         </div>
                         <div className="space-y-2">
                           <Label>أبدوا استعداداً للدفع</Label>
-                          <Input type="number" placeholder="5" value={h.results.paid || ''} onChange={(e) => updateHypothesis(h.id, { results: { ...h.results, paid: e.target.value }})} />
+                          <Input type="number" placeholder="5" value={h.results.paid || ''} onChange={(e) => updateHypothesis(h.id, { results: { ...h.results, paid: e.target.value } })} />
                         </div>
                       </div>
                     )}
@@ -464,11 +464,11 @@ export default function LeanStartupWizard() {
                       <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-2">
                           <Label>عدد الزوار الفعلي (Visitors)</Label>
-                          <Input type="number" placeholder="500" value={h.results.visitors || ''} onChange={(e) => updateHypothesis(h.id, { results: { ...h.results, visitors: e.target.value }})} />
+                          <Input type="number" placeholder="500" value={h.results.visitors || ''} onChange={(e) => updateHypothesis(h.id, { results: { ...h.results, visitors: e.target.value } })} />
                         </div>
                         <div className="space-y-2">
                           <Label>عدد المسجلين (Signups/Clicks)</Label>
-                          <Input type="number" placeholder="20" value={h.results.signups || ''} onChange={(e) => updateHypothesis(h.id, { results: { ...h.results, signups: e.target.value }})} />
+                          <Input type="number" placeholder="20" value={h.results.signups || ''} onChange={(e) => updateHypothesis(h.id, { results: { ...h.results, signups: e.target.value } })} />
                         </div>
                       </div>
                     )}
@@ -477,11 +477,11 @@ export default function LeanStartupWizard() {
                       <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-2">
                           <Label>الرقم المستهدف</Label>
-                          <Input type="number" placeholder="مثال: 100" value={h.results.target || ''} onChange={(e) => updateHypothesis(h.id, { results: { ...h.results, target: e.target.value }})} />
+                          <Input type="number" placeholder="مثال: 100" value={h.results.target || ''} onChange={(e) => updateHypothesis(h.id, { results: { ...h.results, target: e.target.value } })} />
                         </div>
                         <div className="space-y-2">
                           <Label>الرقم المحقق فعلياً</Label>
-                          <Input type="number" placeholder="مثال: 45" value={h.results.metric || ''} onChange={(e) => updateHypothesis(h.id, { results: { ...h.results, metric: e.target.value }})} />
+                          <Input type="number" placeholder="مثال: 45" value={h.results.metric || ''} onChange={(e) => updateHypothesis(h.id, { results: { ...h.results, metric: e.target.value } })} />
                         </div>
                       </div>
                     )}
@@ -505,7 +505,7 @@ export default function LeanStartupWizard() {
               <h2 className="text-3xl font-black">المرحلة السابعة: تحليل النتائج</h2>
               <p className="text-muted-foreground">حساب معدلات النجاح وتوليد الاستنتاجات آلياً.</p>
             </div>
-            
+
             <div className="space-y-4">
               {hypotheses.map((h) => {
                 const isSuccess = h.analysis && h.analysis.successRate >= 60;
@@ -546,7 +546,7 @@ export default function LeanStartupWizard() {
               <h2 className="text-3xl font-black">المرحلة الثامنة: القرار (ماذا بعد؟)</h2>
               <p className="text-muted-foreground">جوهر Lean Startup هو التعلم واتخاذ قرار بالاستمرار، التعديل، أو التغيير الجذري (Pivot).</p>
             </div>
-            
+
             <div className="space-y-4 mb-8">
               {hypotheses.map((h) => (
                 <Card key={h.id} className="shadow-none border-border/50">
@@ -577,13 +577,13 @@ export default function LeanStartupWizard() {
                     متوسط نجاح الفرضيات: {getOverallReadiness()}%
                   </div>
                   <p className="text-muted-foreground leading-7 max-w-xl mx-auto">
-                    {getOverallReadiness() > 70 
-                      ? 'النتائج ممتازة والأدلة تدعم الاستمرار. نوصي بالانتقال إلى بناء نموذج العمل التجاري (Business Model Canvas) أو النموذج الاحترافي لحساب التكاليف.' 
-                      : getOverallReadiness() > 40 
-                      ? 'النتائج متفاوتة. يجب إعادة صياغة الفرضيات التي فشلت (🟡 عدّل) وتصميم تجارب جديدة للتحقق منها قبل بناء المنتج.' 
-                      : 'الفرضيات الأساسية لم تثبت صحتها. نوصي بتغيير الشريحة المستهدفة أو تعديل فكرة المشروع جذرياً (🔴 Pivot) بدلاً من حرق رأس المال.'}
+                    {getOverallReadiness() > 70
+                      ? 'النتائج ممتازة والأدلة تدعم الاستمرار. نوصي بالانتقال إلى بناء نموذج العمل التجاري (Business Model Canvas) أو النموذج الاحترافي لحساب التكاليف.'
+                      : getOverallReadiness() > 40
+                        ? 'النتائج متفاوتة. يجب إعادة صياغة الفرضيات التي فشلت (🟡 عدّل) وتصميم تجارب جديدة للتحقق منها قبل بناء المنتج.'
+                        : 'الفرضيات الأساسية لم تثبت صحتها. نوصي بتغيير الشريحة المستهدفة أو تعديل فكرة المشروع جذرياً (🔴 Pivot) بدلاً من حرق رأس المال.'}
                   </p>
-                  
+
                   <div className="pt-6 flex flex-col sm:flex-row justify-center gap-4">
                     <Button onClick={() => window.location.reload()} variant="outline">بدء دورة تعلم جديدة</Button>
                     {getOverallReadiness() > 70 && (

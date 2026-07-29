@@ -13,6 +13,7 @@ import {
   Trash2,
   Zap,
   RefreshCcw,
+  Target,
 } from 'lucide-react';
 
 import SmartBeginnerPro from '../../../features/easy-mode/SmartBeginnerPro';
@@ -263,42 +264,44 @@ const ToolIntroPanel: React.FC<{ mode: IntroMode; onStart: () => void; onBack?: 
   const IntroIcon = intro.icon;
 
   return (
-    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-3 py-3 sm:px-4 lg:px-5">
-      <Card className="overflow-hidden bg-background shadow-none">
-        <CardContent className="grid gap-4 p-4 lg:grid-cols-[minmax(280px,0.85fr)_minmax(0,1.15fr)] xl:p-5">
-          <div className="flex flex-col justify-between gap-4 text-right">
-            <div className="space-y-3">
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <IntroIcon className="size-4" />
-                </span>
-                <Badge variant="secondary" className="w-fit">{intro.badge}</Badge>
-              </div>
-              <div className="space-y-1.5">
-                <CardTitle className="text-xl sm:text-2xl">{intro.title}</CardTitle>
-                <CardDescription className="line-clamp-4 max-w-2xl text-sm leading-6">{intro.summary}</CardDescription>
-              </div>
-            </div>
-            <div className="flex flex-wrap items-center gap-2">
-              {onBack ? (
-                <Button type="button" size="sm" variant="outline" onClick={onBack}>
-                  العودة للأدوات
-                </Button>
-              ) : null}
-              <Button type="button" size="sm" onClick={onStart}>
-                إنشاء دراسة جدوى مشروع
-              </Button>
-            </div>
+    <div dir="rtl" className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-8 sm:px-6 lg:px-8">
+      {/* Header Info */}
+      <div className="flex flex-col gap-6 text-right">
+        <div className="flex items-start gap-4">
+          <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary shadow-sm ring-1 ring-primary/20">
+            <IntroIcon className="size-6" />
           </div>
-          <div className="grid gap-3 md:grid-cols-3">
-            <ExplanationCard title="كيف تبني الدراسة بهذا المسار؟" items={intro.steps} />
-            <ExplanationCard title="ماذا ستحصل في النهاية؟" items={intro.outcomes} />
-            <ExampleCard example={intro.example} onViewExample={onViewExample} />
+          <div className="space-y-2">
+            <div className="flex items-center gap-3">
+              <h1 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">{intro.title}</h1>
+              <Badge variant="secondary" className="bg-muted/50 text-xs sm:text-sm">{intro.badge}</Badge>
+            </div>
+            <p className="max-w-4xl text-sm leading-8 text-muted-foreground sm:text-base sm:leading-8">
+              {intro.summary}
+            </p>
           </div>
-        </CardContent>
-      </Card>
+        </div>
+        <div className="flex flex-wrap items-center gap-3">
+          <Button type="button" size="lg" className="px-8 font-semibold shadow-sm" onClick={onStart}>
+            إنشاء دراسة عبر {intro.title}
+          </Button>
+          {onBack && (
+            <Button type="button" size="lg" variant="outline" className="px-8 shadow-sm" onClick={onBack}>
+              العودة للخيارات
+            </Button>
+          )}
+        </div>
+      </div>
 
-      <ModeProjectsSection mode={mode} />
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <ExplanationCard title="كيف تبني الدراسة بهذا المسار؟" items={intro.steps} />
+        <ExplanationCard title="ماذا ستحصل في النهاية؟" items={intro.outcomes} />
+        <ExampleCard example={intro.example} onViewExample={onViewExample} />
+      </div>
+
+      <div className="pt-4">
+        <ModeProjectsSection mode={mode} />
+      </div>
     </div>
   );
 };
@@ -360,121 +363,151 @@ export const NewPlan: React.FC<{
   }
 
   return (
-    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-3 py-3 sm:px-4 lg:px-5">
-      <Card className="bg-background shadow-none">
-        <CardHeader className="gap-2 p-4 sm:p-5">
-          <Badge variant="secondary" className="w-fit">بناء دراسة جدوى مشروع</Badge>
-          <div className="space-y-2">
-            <CardTitle className="text-xl sm:text-2xl">اختر أداة بناء الدراسة المناسبة</CardTitle>
-            <CardDescription className="line-clamp-3 max-w-3xl text-sm leading-6">
-              اختر المسار الأقرب لمرحلة مشروعك الحالية. كل أداة تبدأ بشرح واضح لما ستفعله، ثم تنتقل إلى التنفيذ داخل نفس الصفحة.
-            </CardDescription>
-          </div>
-        </CardHeader>
-      </Card>
-
-      <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-        {TOOL_CARDS.map((tool) => {
-          const Icon = tool.icon;
-          return (
-            <button
-              key={tool.mode}
-              type="button"
-              onClick={() => {
-                setMode(tool.mode);
-                setHasStarted(false);
-                setSubTabLabel(tool.title);
-              }}
-              className="rounded-lg bg-muted/30 p-4 text-right transition-colors hover:bg-muted/50"
-            >
-              <div className="mb-4 flex size-10 items-center justify-center rounded-lg bg-background text-foreground">
-                <Icon className="size-5" />
-              </div>
-              <p className="text-sm font-semibold text-foreground">{tool.title}</p>
-              <p className="mt-2 text-xs leading-5 text-muted-foreground">{tool.description}</p>
-            </button>
-          );
-        })}
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-8 sm:px-6 lg:px-8">
+      {/* Header */}
+      <div className="flex flex-col gap-3 mb-2">
+        <div className="flex items-center gap-3">
+          <Badge variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/10 border-0">بناء دراسة جدوى مشروع</Badge>
+        </div>
+        <h1 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">اختر أداة بناء الدراسة المناسبة</h1>
+        <p className="max-w-3xl text-sm leading-7 text-muted-foreground sm:text-base">
+          اختر المسار الأقرب لمرحلة مشروعك الحالية. كل أداة تبدأ بشرح واضح لما ستفعله، ثم تنتقل إلى التنفيذ داخل نفس الصفحة.
+        </p>
       </div>
 
-      <Card className="bg-muted/20 shadow-none">
-        <CardHeader className="pb-3">
-          <CardTitle className="text-lg">كيف تختار المسار المناسب؟</CardTitle>
-          <CardDescription>اختر الأداة بحسب مستوى النضج الحالي للمشروع.</CardDescription>
-        </CardHeader>
-        <CardContent className="grid gap-3 md:grid-cols-3">
-          <GuideCard title="بداية سريعة" text="ابدأ بالنموذج السهل إذا كانت الفكرة ما زالت في أول صياغتها وتحتاج إلى ترتيب سريع." />
-          <GuideCard title="قرار أوضح" text="استخدم النموذج الاحترافي عندما تريد قراءة أكثر تنظيماً للسوق والجاهزية." />
-          <GuideCard title="تفصيل أعمق" text="انتقل إلى MIT 24 Steps أو BMC إذا كنت تبني هيكلاً شاملاً للمشروع." />
-        </CardContent>
-      </Card>
+      <div className="grid lg:grid-cols-[1fr_320px] xl:grid-cols-[1fr_360px] gap-6 items-start">
+        {/* Main Content: Tools Grid */}
+        <div className="grid gap-4 sm:grid-cols-2">
+          {TOOL_CARDS.map((tool) => {
+            const Icon = tool.icon;
+            return (
+              <button
+                key={tool.mode}
+                type="button"
+                onClick={() => {
+                  setMode(tool.mode);
+                  setHasStarted(false);
+                  setSubTabLabel(tool.title);
+                }}
+                className="group flex flex-col items-start gap-4 rounded-xl border border-border/60 bg-card p-6 text-right transition-all hover:border-primary/40 hover:bg-muted/20 hover:shadow-md"
+              >
+                <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  <Icon className="size-6" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-foreground text-lg">{tool.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-muted-foreground">{tool.description}</p>
+                </div>
+              </button>
+            );
+          })}
+        </div>
 
-      <Card className="bg-muted/20 shadow-none">
-        <CardHeader className="pb-3">
-          <div className="flex items-center gap-2">
-            <Layers className="size-4 text-foreground" />
-            <CardTitle className="text-lg">قوالب بداية سريعة</CardTitle>
-          </div>
-          <CardDescription>اختصارات أولية تساعدك على بدء التفكير في نوع المشروع.</CardDescription>
-        </CardHeader>
-        <CardContent className="grid gap-3 md:grid-cols-3">
-          {TEMPLATES.map((template) => (
-            <button
-              key={template.id}
-              type="button"
-              onClick={() => onStart(template.id)}
-              className="rounded-xl bg-background/80 p-4 text-right transition-colors hover:bg-background"
-            >
-              <p className="mb-2 text-sm font-semibold text-foreground">{template.title}</p>
-              <p className="text-xs leading-6 text-muted-foreground">{template.description}</p>
-            </button>
-          ))}
-        </CardContent>
-      </Card>
+        {/* Sidebar Content: Helpers */}
+        <div className="flex flex-col gap-4">
+          <Card className="shadow-sm border-border/60">
+            <CardHeader className="pb-3 border-b border-border/40 bg-muted/20">
+              <CardTitle className="text-sm font-bold flex items-center gap-2">
+                <Target className="size-4 text-primary" />
+                كيف تختار المسار المناسب؟
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="pt-4 flex flex-col gap-4">
+              <div className="space-y-1">
+                <h4 className="text-sm font-bold text-foreground flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                  بداية سريعة
+                </h4>
+                <p className="text-xs leading-5 text-muted-foreground mr-3.5">ابدأ بالنموذج السهل إذا كانت الفكرة ما زالت في أول صياغتها وتحتاج إلى ترتيب سريع.</p>
+              </div>
+              <div className="space-y-1">
+                <h4 className="text-sm font-bold text-foreground flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                  قرار أوضح
+                </h4>
+                <p className="text-xs leading-5 text-muted-foreground mr-3.5">استخدم النموذج الاحترافي عندما تريد قراءة أكثر تنظيماً للسوق والجاهزية.</p>
+              </div>
+              <div className="space-y-1">
+                <h4 className="text-sm font-bold text-foreground flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                  تفصيل أعمق
+                </h4>
+                <p className="text-xs leading-5 text-muted-foreground mr-3.5">انتقل إلى MIT 24 Steps أو BMC إذا كنت تبني هيكلاً شاملاً للمشروع.</p>
+              </div>
+            </CardContent>
+          </Card>
 
-      <Card className="bg-muted/20 shadow-none">
-        <CardContent className="flex flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
-          <div className="space-y-1">
-            <div className="flex items-center gap-2">
-              <Lightbulb className="size-4 text-foreground" />
-              <p className="text-sm font-semibold text-foreground">هل تحتاج إلى ترشيح أسرع؟</p>
-            </div>
-            <p className="text-sm leading-7 text-muted-foreground">
-              ابدأ من النموذج السهل إذا كنت تريد صياغة الفكرة بسرعة، ثم انتقل إلى الأدوات الأعمق عند الحاجة.
-            </p>
-          </div>
-          <Button
-            type="button"
-            variant="outline"
-            onClick={() => {
-              setMode('family');
-              setHasStarted(false);
-              setSubTabLabel('النموذج السهل');
-            }}
-          >
-            ابدأ بالنموذج السهل
-          </Button>
-        </CardContent>
-      </Card>
+          <Card className="shadow-sm border-primary/20 bg-primary/5">
+            <CardContent className="p-5 flex flex-col gap-4">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <Lightbulb className="size-4 text-primary" />
+                  <h4 className="text-sm font-bold text-primary">هل تحتاج إلى ترشيح أسرع؟</h4>
+                </div>
+                <p className="text-xs leading-5 text-muted-foreground">
+                  ابدأ من النموذج السهل إذا كنت تريد صياغة الفكرة بسرعة، ثم انتقل إلى الأدوات الأعمق عند الحاجة.
+                </p>
+              </div>
+              <Button
+                type="button"
+                variant="default"
+                size="sm"
+                className="w-full text-xs font-semibold"
+                onClick={() => {
+                  setMode('family');
+                  setHasStarted(false);
+                  setSubTabLabel('النموذج السهل');
+                }}
+              >
+                ابدأ بالنموذج السهل فوراً
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card className="shadow-sm border-border/60">
+            <CardHeader className="pb-3 border-b border-border/40">
+              <CardTitle className="text-sm font-bold flex items-center gap-2">
+                <Layers className="size-4 text-muted-foreground" />
+                قوالب بداية سريعة
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="pt-4 flex flex-col gap-2">
+              {TEMPLATES.map((template) => (
+                <button
+                  key={template.id}
+                  type="button"
+                  onClick={() => onStart(template.id)}
+                  className="rounded-lg bg-muted/30 p-3 text-right transition-colors hover:bg-muted/60 border border-transparent hover:border-border/50"
+                >
+                  <h4 className="mb-1 text-xs font-bold text-foreground">{template.title}</h4>
+                  <p className="text-[11px] leading-5 text-muted-foreground">{template.description}</p>
+                </button>
+              ))}
+            </CardContent>
+          </Card>
+        </div>
+      </div>
     </div>
   );
 };
 
 function ExplanationCard({ title, items }: { title: string; items: string[] }) {
   return (
-    <Card className="h-full bg-muted/20 shadow-none">
-      <CardHeader className="px-3 py-3">
-        <CardTitle className="text-sm">{title}</CardTitle>
+    <Card className="h-full border-border/60 shadow-sm bg-card">
+      <CardHeader className="border-b border-border/40 bg-muted/20 px-5 py-4">
+        <CardTitle className="text-base text-foreground font-semibold">{title}</CardTitle>
       </CardHeader>
-      <CardContent className="space-y-2 px-3 pb-3 pt-0">
-        {items.map((item, index) => (
-          <div key={item} className="grid grid-cols-[1.25rem_minmax(0,1fr)] gap-2 rounded-md bg-background/80 px-3 py-2 text-right">
-            <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-primary text-[10px] font-semibold text-primary-foreground">
-              {index + 1}
-            </span>
-            <p className="text-xs leading-5 text-foreground">{item}</p>
-          </div>
-        ))}
+      <CardContent className="px-5 py-5">
+        <div className="space-y-4">
+          {items.map((item, index) => (
+            <div key={item} className="flex items-start gap-3 text-right">
+              <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-[11px] font-bold text-primary ring-1 ring-primary/20">
+                {index + 1}
+              </span>
+              <p className="text-sm leading-6 text-muted-foreground">{item}</p>
+            </div>
+          ))}
+        </div>
       </CardContent>
     </Card>
   );
@@ -699,22 +732,22 @@ function GuideCard({ title, text }: { title: string; text: string }) {
 
 function ExampleCard({ example, onViewExample }: { example: ToolIntro['example']; onViewExample: () => void }) {
   return (
-    <Card className="h-full border border-primary/20 bg-primary/5 shadow-none relative overflow-hidden flex flex-col">
-      <div className="absolute right-0 top-0 w-1 h-full bg-primary" />
-      <CardHeader className="px-4 py-3 pb-2">
-        <CardTitle className="text-sm text-primary flex items-center gap-2">
+    <Card className="h-full border-primary/20 bg-primary/5 shadow-sm relative overflow-hidden flex flex-col">
+      <div className="absolute right-0 top-0 w-1 h-full bg-primary/70" />
+      <CardHeader className="border-b border-primary/10 bg-primary/10 px-5 py-4">
+        <CardTitle className="text-base text-primary flex items-center gap-2 font-semibold">
           <Lightbulb className="size-4" />
           مثال توضيحي للنتيجة
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-3 px-4 pb-4 pt-0 flex-1 flex flex-col">
+      <CardContent className="space-y-4 px-5 pb-5 pt-4 flex-1 flex flex-col text-right">
         <div>
           <h4 className="font-bold text-foreground text-sm">{example.name}</h4>
-          <p className="text-[11px] font-bold text-primary mt-0.5">{example.sector}</p>
+          <Badge variant="outline" className="mt-2 bg-background/50 border-primary/20 text-primary">{example.sector}</Badge>
         </div>
-        <p className="text-xs leading-5 text-muted-foreground flex-1">{example.description}</p>
+        <p className="text-sm leading-6 text-muted-foreground flex-1">{example.description}</p>
         <div className="pt-3 mt-auto">
-          <Button type="button" variant="default" className="w-full text-xs" onClick={onViewExample}>
+          <Button type="button" variant="outline" className="w-full bg-background/50 shadow-sm hover:bg-primary hover:text-primary-foreground border-primary/20" onClick={onViewExample}>
             عرض المثال كاملاً
           </Button>
         </div>

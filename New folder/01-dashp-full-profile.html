@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dashp is a highly focused B2B SaaS product for pest-control companies that use door-to-door sales teams. It helps owners, managers, and salespeople calculate commissions, monitor performance, and communicate around compensation.">
+  <meta name="research-date" content="2026-07-28">
+  <meta name="data-scope" content="public-source-only">
+  <title>Dashp — Full Micro-SaaS Entry</title>
+  <style>
+:root {
+  --background: #f5f6f3;
+  --surface: #ffffff;
+  --surface-muted: #f8f9f7;
+  --text: #182019;
+  --muted: #687069;
+  --border: #dfe3de;
+  --accent: #1f6847;
+  --accent-soft: #e3f2e9;
+  --warning: #875b12;
+  --warning-bg: #fff7df;
+  --radius: 18px;
+  --shadow: 0 14px 42px rgba(20, 34, 24, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+a { color: var(--accent); }
+
+.container {
+  width: min(1120px, calc(100% - 28px));
+  margin-inline: auto;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid rgba(223, 227, 222, 0.9);
+  background: rgba(245, 246, 243, 0.92);
+  backdrop-filter: blur(14px);
+}
+
+.topbar-inner {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: var(--accent);
+  color: #fff;
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.small-link,
+.copy-button {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 13px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hero {
+  padding: 66px 0 32px;
+}
+
+.kicker {
+  display: inline-flex;
+  padding: 6px 10px;
+  border: 1px solid #c7ddce;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 16px 0 8px;
+  font-size: clamp(42px, 7vw, 78px);
+  line-height: .98;
+  letter-spacing: -.055em;
+}
+
+.hero h2 {
+  max-width: 820px;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: 550;
+  line-height: 1.25;
+}
+
+.hero-summary {
+  max-width: 860px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.notice {
+  margin: 4px 0 28px;
+  padding: 15px 17px;
+  border: 1px solid #ead7a1;
+  border-radius: 14px;
+  background: var(--warning-bg);
+  color: #5f4819;
+  font-size: 14px;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.metric {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: var(--surface);
+  box-shadow: 0 5px 18px rgba(20, 34, 24, 0.04);
+}
+
+.metric-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
+.metric-value {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 22px;
+  padding-bottom: 70px;
+}
+
+.sidebar {
+  align-self: start;
+  position: sticky;
+  top: 82px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.sidebar strong {
+  display: block;
+  padding: 7px 9px 9px;
+  font-size: 13px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 8px 9px;
+  border-radius: 9px;
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background: var(--surface-muted);
+  color: var(--text);
+}
+
+.content {
+  min-width: 0;
+}
+
+.section {
+  margin-bottom: 18px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 6px 20px rgba(20, 34, 24, 0.035);
+}
+
+.section h3 {
+  margin: 0 0 15px;
+  font-size: 23px;
+  letter-spacing: -.025em;
+}
+
+.fact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.fact {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface-muted);
+}
+
+.fact dt {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.fact dd {
+  margin: 4px 0 0;
+  font-weight: 650;
+}
+
+.clean-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.clean-list li + li { margin-top: 8px; }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  display: inline-flex;
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-muted);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.timeline {
+  display: grid;
+  gap: 10px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr);
+  gap: 14px;
+  padding: 15px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: var(--surface-muted);
+}
+
+.timeline-date {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.timeline-amount {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.timeline-type {
+  margin-top: 2px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.timeline-note {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.source-list {
+  display: grid;
+  gap: 10px;
+}
+
+.source-card {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface-muted);
+}
+
+.source-card a {
+  font-weight: 800;
+  word-break: break-word;
+}
+
+.source-card p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+details {
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+summary {
+  padding: 15px;
+  background: var(--surface-muted);
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.json-tools {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 12px 0;
+}
+
+pre {
+  max-height: 640px;
+  margin: 0;
+  padding: 18px;
+  overflow: auto;
+  background: #111713;
+  color: #e7efe9;
+  font: 12px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.footer {
+  padding: 26px 0 42px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 850px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+  .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+  .container { width: min(100% - 20px, 1120px); }
+  .hero { padding-top: 42px; }
+  .hero h1 { font-size: 47px; }
+  .metrics,
+  .fact-grid { grid-template-columns: 1fr; }
+  .timeline-item { grid-template-columns: 1fr; }
+  .section { padding: 18px; }
+  .top-actions .small-link { display: none; }
+}
+</style>
+</head>
+<body data-company="dashp">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">DA</span>
+        <span>Dashp Profile</span>
+      </a>
+      <div class="top-actions">
+        <a class="small-link" href="https://dashp.io" target="_blank" rel="noopener noreferrer">Official website</a>
+        <button class="copy-button" type="button" data-copy-json>Copy JSON</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="container">
+      <section class="hero">
+        <span class="kicker">B2B SaaS / Sales operations</span>
+        <h1>Dashp</h1>
+        <h2>Commission and performance software for pest-control sales teams</h2>
+        <p class="hero-summary">Dashp is a highly focused B2B SaaS product for pest-control companies that use door-to-door sales teams. It helps owners, managers, and salespeople calculate commissions, monitor performance, and communicate around compensation.</p>
+      </section>
+
+      <div class="notice">
+        <strong>Data boundary:</strong> this page includes detailed publicly visible “behind-the-scenes”
+        business information and a machine-readable record. It does not contain private backend access,
+        paid-only content copied from a source, credentials, customer records, or confidential analytics.
+        Figures are preserved as dated claims or estimates.
+      </div>
+
+      <section class="metrics" aria-label="Starter Story directory snapshot">
+        <div class="metric"><span class="metric-label">Monthly revenue</span><strong class="metric-value">$8.33K /mo</strong></div><div class="metric"><span class="metric-label">Monthly traffic</span><strong class="metric-value">1K /mo</strong></div><div class="metric"><span class="metric-label">Revenue / visitor</span><strong class="metric-value">$8.33 /visitor</strong></div><div class="metric"><span class="metric-label">Solo score</span><strong class="metric-value">75.0</strong></div>
+      </section>
+
+      <div class="layout">
+        <aside class="sidebar" aria-label="Page sections">
+          <strong>Entry sections</strong>
+          <a href="#company">Company facts</a><a href="#problem_and_product">Problem and product</a><a href="#origin_story">Founder and origin</a><a href="#build_and_launch">Behind the scenes: build and launch</a><a href="#costs_and_operations">Behind the scenes: costs and operations</a><a href="#monetization">Monetization and pricing</a><a href="#growth">Growth and customer acquisition</a><a href="#tools">Technology and tools</a><a href="#revenue_timeline">Revenue evidence timeline</a><a href="#lessons">Key business lessons</a><a href="#sources">Sources</a><a href="#data_quality">Accuracy and data-quality notes</a><a href="#backend-json">Backend-ready JSON</a>
+        </aside>
+
+        <div class="content">
+          <section class="section" id="directory-snapshot">
+            <h3>Exact directory-card snapshot</h3>
+            <dl class="fact-grid"><div class="fact"><dt>monthly revenue</dt><dd>$8.33K /mo</dd></div><div class="fact"><dt>monthly traffic</dt><dd>1K /mo</dd></div><div class="fact"><dt>revenue per visitor</dt><dd>$8.33 /visitor</dd></div><div class="fact"><dt>solopreneur score</dt><dd>75.0</dd></div><div class="fact"><dt>idea label</dt><dd>Commission tracking software</dd></div></dl>
+            <p style="margin:15px 0 0;color:var(--muted);font-size:13px">
+              Captured from the linked Starter Story micro-SaaS directory and separated from later
+              profile estimates to prevent values from different dates being mixed.
+            </p>
+          </section>
+
+          <section class="section" id="company"><h3>Company facts</h3><dl class="fact-grid"><div class="fact"><dt>business model</dt><dd>Seat-based recurring B2B software contracts</dd></div><div class="fact"><dt>customer type</dt><dd>Pest-control businesses with door-to-door sales teams</dd></div><div class="fact"><dt>founder</dt><dd>Isaac Z Tai</dd></div><div class="fact"><dt>founder role</dt><dd>Founder; software engineer turned business owner</dd></div><div class="fact"><dt>founders count</dt><dd>1</dd></div><div class="fact"><dt>employees</dt><dd>0 in the December 2024 profile</dd></div><div class="fact"><dt>started</dt><dd>October 2022</dd></div><div class="fact"><dt>location</dt><dd>Not stated in the public profile</dd></div><div class="fact"><dt>funding</dt><dd>Bootstrapped; founder said he raised and borrowed no money</dd></div><div class="fact"><dt>profitability</dt><dd>Not explicitly disclosed</dd></div><div class="fact"><dt>public revenue claim</dt><dd>Just over $100K ARR in the December 2024 case study</dd></div></dl></section><section class="section" id="problem_and_product"><h3>Problem and product</h3><ul class="clean-list"><li>The original workflow relied on spreadsheets and email to calculate commissions.</li><li>Commission-only salespeople lacked real-time visibility into expected pay, creating pay anxiety.</li><li>Dashp centralizes commission calculations, sales performance tracking, and team communication.</li><li>The niche is intentionally narrow: pest-control businesses using door-to-door acquisition.</li></ul></section><section class="section" id="origin_story"><h3>Founder and origin</h3><ul class="clean-list"><li>A friend in the pest-control industry asked whether a better commission-calculation tool could be built.</li><li>The founder validated that the pain was common by speaking with additional people in the industry.</li><li>A basic no-code demo produced an early buying signal when the friend&#x27;s managers immediately asked for the company name and price.</li><li>The founder preferred this concrete, operational problem over the hype-driven AI startup work he was doing at the time.</li></ul></section><section class="section" id="build_and_launch"><h3>Behind the scenes: build and launch</h3><ul class="clean-list"><li>October 2022: built a no-code prototype in Retool.</li><li>November 2022: began building a mobile application after repeated customer requests.</li><li>December 2022: left his job and worked full-time on Dashp while revenue was still zero.</li><li>January–March 2023: completed the app and worked through early B2B sales attempts.</li><li>April 2023: signed the first contract.</li><li>May 2023: signed the second customer.</li><li>June–August 2023: concentrated on bug fixes and customer support during the first sales season.</li><li>August 2023: joined a startup accelerator.</li></ul></section><section class="section" id="costs_and_operations"><h3>Behind the scenes: costs and operations</h3><ul class="clean-list"><li>The Retool prototype was effectively free because the founder received startup credits.</li><li>Early stated costs included a $12 domain, Google Workspace at $6 per month, and Supabase at $25 per month.</li><li>The founder said Vercel and Expo Application Services stayed within free tiers.</li><li>Design, engineering, selling, and customer support were handled by the founder.</li><li>Low headcount and a small number of high-value B2B customers kept operating costs low.</li></ul></section><section class="section" id="monetization"><h3>Monetization and pricing</h3><ul class="clean-list"><li>Pricing is seat based and balances predictable annual revenue against seasonal staffing.</li><li>Standard seats were described at roughly $10–$30 per month with a minimum 12-month commitment.</li><li>Flex seats were described at twice the standard rate on a month-to-month basis.</li><li>Flex seats could not exceed 30% of total seats in the cited contract structure.</li><li>Upselling existing customers into wider contracts was described as a major revenue source.</li></ul></section><section class="section" id="growth"><h3>Growth and customer acquisition</h3><ul class="clean-list"><li>The founder initially tried reaching owners, managers, and salespeople through offices and Instagram.</li><li>He later concluded that owners were the necessary buyer because the system requires access to sensitive business data.</li><li>The strongest acquisition methods were direct visits to physical offices and referrals.</li><li>Each qualified account is treated as a long-term business-development effort rather than a performance-marketing lead.</li><li>High-touch account management, immediate support, and direct founder access support retention and expansion.</li></ul></section><section class="section" id="tools"><h3>Technology and tools</h3><div class="tags"><span class="tag">Retool</span><span class="tag">Expo</span><span class="tag">Google Workspace</span><span class="tag">Supabase</span><span class="tag">Vercel</span><span class="tag">Mobile application stack</span></div></section><section class="section" id="revenue_timeline"><h3>Revenue evidence timeline</h3><div class="timeline"><div class="timeline-item"><div class="timeline-date">2024-12-17</div><div><div class="timeline-amount">$8.33K /month</div><div class="timeline-type">Founder/profile snapshot</div><div class="timeline-note">The case study also described revenue as just over $100K ARR.</div></div></div></div></section><section class="section" id="lessons"><h3>Key business lessons</h3><ul class="clean-list"><li>A narrow B2B niche can support a meaningful solo business with relatively few customers.</li><li>Trust, time, and responsiveness can be more valuable than scalable paid acquisition in a tiny market.</li><li>Deep support for a small customer base can create expansion revenue and lower infrastructure costs.</li></ul></section><section class="section" id="sources"><h3>Sources</h3><div class="source-list"><div class="source-card"><a href="https://www.starterstory.com/data/micro-saas-ideas" target="_blank" rel="noopener noreferrer">Starter Story directory</a><p>Directory metrics and entry label</p></div><div class="source-card"><a href="https://www.starterstory.com/stories/dashp" target="_blank" rel="noopener noreferrer">Starter Story Dashp case study</a><p>Founder, origin, build timeline, pricing, growth, tools, and December 2024 revenue</p></div><div class="source-card"><a href="https://dashp.io" target="_blank" rel="noopener noreferrer">Official website</a><p>Product website</p></div></div></section><section class="section" id="data_quality"><h3>Accuracy and data-quality notes</h3><ul class="clean-list"><li>The founder case study contains direct first-person information.</li><li>Revenue is a dated snapshot and should not be treated as a current audited figure.</li><li>No private database, account-only analytics, or internal backend information is included.</li></ul></section>
+
+          <section class="section" id="backend-json">
+            <h3>Backend-ready JSON record</h3>
+            <p style="color:var(--muted)">
+              Your agent can parse this object directly. The same JSON is also embedded in
+              <code>&lt;script id="entry-data" type="application/json"&gt;</code>.
+            </p>
+            <details open>
+              <summary>Show structured entry data</summary>
+              <div class="json-tools">
+                <button class="copy-button" type="button" data-copy-json>Copy JSON</button>
+              </div>
+              <pre id="json-output">{
+  &quot;order&quot;: 1,
+  &quot;slug&quot;: &quot;dashp&quot;,
+  &quot;name&quot;: &quot;Dashp&quot;,
+  &quot;domain&quot;: &quot;dashp.io&quot;,
+  &quot;website&quot;: &quot;https://dashp.io&quot;,
+  &quot;category&quot;: &quot;B2B SaaS / Sales operations&quot;,
+  &quot;headline&quot;: &quot;Commission and performance software for pest-control sales teams&quot;,
+  &quot;summary&quot;: &quot;Dashp is a highly focused B2B SaaS product for pest-control companies that use door-to-door sales teams. It helps owners, managers, and salespeople calculate commissions, monitor performance, and communicate around compensation.&quot;,
+  &quot;directory_snapshot&quot;: {
+    &quot;monthly_revenue&quot;: &quot;$8.33K /mo&quot;,
+    &quot;monthly_traffic&quot;: &quot;1K /mo&quot;,
+    &quot;revenue_per_visitor&quot;: &quot;$8.33 /visitor&quot;,
+    &quot;solopreneur_score&quot;: &quot;75.0&quot;,
+    &quot;idea_label&quot;: &quot;Commission tracking software&quot;
+  },
+  &quot;company&quot;: {
+    &quot;business_model&quot;: &quot;Seat-based recurring B2B software contracts&quot;,
+    &quot;customer_type&quot;: &quot;Pest-control businesses with door-to-door sales teams&quot;,
+    &quot;founder&quot;: &quot;Isaac Z Tai&quot;,
+    &quot;founder_role&quot;: &quot;Founder; software engineer turned business owner&quot;,
+    &quot;founders_count&quot;: &quot;1&quot;,
+    &quot;employees&quot;: &quot;0 in the December 2024 profile&quot;,
+    &quot;started&quot;: &quot;October 2022&quot;,
+    &quot;location&quot;: &quot;Not stated in the public profile&quot;,
+    &quot;funding&quot;: &quot;Bootstrapped; founder said he raised and borrowed no money&quot;,
+    &quot;profitability&quot;: &quot;Not explicitly disclosed&quot;,
+    &quot;public_revenue_claim&quot;: &quot;Just over $100K ARR in the December 2024 case study&quot;
+  },
+  &quot;problem_and_product&quot;: [
+    &quot;The original workflow relied on spreadsheets and email to calculate commissions.&quot;,
+    &quot;Commission-only salespeople lacked real-time visibility into expected pay, creating pay anxiety.&quot;,
+    &quot;Dashp centralizes commission calculations, sales performance tracking, and team communication.&quot;,
+    &quot;The niche is intentionally narrow: pest-control businesses using door-to-door acquisition.&quot;
+  ],
+  &quot;origin_story&quot;: [
+    &quot;A friend in the pest-control industry asked whether a better commission-calculation tool could be built.&quot;,
+    &quot;The founder validated that the pain was common by speaking with additional people in the industry.&quot;,
+    &quot;A basic no-code demo produced an early buying signal when the friend&#x27;s managers immediately asked for the company name and price.&quot;,
+    &quot;The founder preferred this concrete, operational problem over the hype-driven AI startup work he was doing at the time.&quot;
+  ],
+  &quot;build_and_launch&quot;: [
+    &quot;October 2022: built a no-code prototype in Retool.&quot;,
+    &quot;November 2022: began building a mobile application after repeated customer requests.&quot;,
+    &quot;December 2022: left his job and worked full-time on Dashp while revenue was still zero.&quot;,
+    &quot;January–March 2023: completed the app and worked through early B2B sales attempts.&quot;,
+    &quot;April 2023: signed the first contract.&quot;,
+    &quot;May 2023: signed the second customer.&quot;,
+    &quot;June–August 2023: concentrated on bug fixes and customer support during the first sales season.&quot;,
+    &quot;August 2023: joined a startup accelerator.&quot;
+  ],
+  &quot;costs_and_operations&quot;: [
+    &quot;The Retool prototype was effectively free because the founder received startup credits.&quot;,
+    &quot;Early stated costs included a $12 domain, Google Workspace at $6 per month, and Supabase at $25 per month.&quot;,
+    &quot;The founder said Vercel and Expo Application Services stayed within free tiers.&quot;,
+    &quot;Design, engineering, selling, and customer support were handled by the founder.&quot;,
+    &quot;Low headcount and a small number of high-value B2B customers kept operating costs low.&quot;
+  ],
+  &quot;monetization&quot;: [
+    &quot;Pricing is seat based and balances predictable annual revenue against seasonal staffing.&quot;,
+    &quot;Standard seats were described at roughly $10–$30 per month with a minimum 12-month commitment.&quot;,
+    &quot;Flex seats were described at twice the standard rate on a month-to-month basis.&quot;,
+    &quot;Flex seats could not exceed 30% of total seats in the cited contract structure.&quot;,
+    &quot;Upselling existing customers into wider contracts was described as a major revenue source.&quot;
+  ],
+  &quot;growth&quot;: [
+    &quot;The founder initially tried reaching owners, managers, and salespeople through offices and Instagram.&quot;,
+    &quot;He later concluded that owners were the necessary buyer because the system requires access to sensitive business data.&quot;,
+    &quot;The strongest acquisition methods were direct visits to physical offices and referrals.&quot;,
+    &quot;Each qualified account is treated as a long-term business-development effort rather than a performance-marketing lead.&quot;,
+    &quot;High-touch account management, immediate support, and direct founder access support retention and expansion.&quot;
+  ],
+  &quot;tools&quot;: [
+    &quot;Retool&quot;,
+    &quot;Expo&quot;,
+    &quot;Google Workspace&quot;,
+    &quot;Supabase&quot;,
+    &quot;Vercel&quot;,
+    &quot;Mobile application stack&quot;
+  ],
+  &quot;revenue_timeline&quot;: [
+    {
+      &quot;date&quot;: &quot;2024-12-17&quot;,
+      &quot;amount&quot;: &quot;$8.33K /month&quot;,
+      &quot;type&quot;: &quot;Founder/profile snapshot&quot;,
+      &quot;note&quot;: &quot;The case study also described revenue as just over $100K ARR.&quot;
+    }
+  ],
+  &quot;lessons&quot;: [
+    &quot;A narrow B2B niche can support a meaningful solo business with relatively few customers.&quot;,
+    &quot;Trust, time, and responsiveness can be more valuable than scalable paid acquisition in a tiny market.&quot;,
+    &quot;Deep support for a small customer base can create expansion revenue and lower infrastructure costs.&quot;
+  ],
+  &quot;sources&quot;: [
+    {
+      &quot;label&quot;: &quot;Starter Story directory&quot;,
+      &quot;url&quot;: &quot;https://www.starterstory.com/data/micro-saas-ideas&quot;,
+      &quot;coverage&quot;: &quot;Directory metrics and entry label&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Starter Story Dashp case study&quot;,
+      &quot;url&quot;: &quot;https://www.starterstory.com/stories/dashp&quot;,
+      &quot;coverage&quot;: &quot;Founder, origin, build timeline, pricing, growth, tools, and December 2024 revenue&quot;
+    },
+    {
+      &quot;label&quot;: &quot;Official website&quot;,
+      &quot;url&quot;: &quot;https://dashp.io&quot;,
+      &quot;coverage&quot;: &quot;Product website&quot;
+    }
+  ],
+  &quot;data_quality&quot;: [
+    &quot;The founder case study contains direct first-person information.&quot;,
+    &quot;Revenue is a dated snapshot and should not be treated as a current audited figure.&quot;,
+    &quot;No private database, account-only analytics, or internal backend information is included.&quot;
+  ],
+  &quot;research_metadata&quot;: {
+    &quot;researched_on&quot;: &quot;2026-07-28&quot;,
+    &quot;scope&quot;: &quot;Publicly visible information only&quot;,
+    &quot;source_method&quot;: &quot;Starter Story directory, linked public profile/case study, and official product website links&quot;,
+    &quot;private_backend_data_included&quot;: false,
+    &quot;copyright_note&quot;: &quot;Narrative text is independently summarized; source articles are not reproduced.&quot;
+  }
+}</pre>
+            </details>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      Public-source research snapshot prepared 2026-07-28. Verify changing revenue, traffic,
+      pricing, staffing, and product details before publication.
+    </div>
+  </footer>
+
+  <script id="entry-data" type="application/json">{
+  "order": 1,
+  "slug": "dashp",
+  "name": "Dashp",
+  "domain": "dashp.io",
+  "website": "https://dashp.io",
+  "category": "B2B SaaS / Sales operations",
+  "headline": "Commission and performance software for pest-control sales teams",
+  "summary": "Dashp is a highly focused B2B SaaS product for pest-control companies that use door-to-door sales teams. It helps owners, managers, and salespeople calculate commissions, monitor performance, and communicate around compensation.",
+  "directory_snapshot": {
+    "monthly_revenue": "$8.33K /mo",
+    "monthly_traffic": "1K /mo",
+    "revenue_per_visitor": "$8.33 /visitor",
+    "solopreneur_score": "75.0",
+    "idea_label": "Commission tracking software"
+  },
+  "company": {
+    "business_model": "Seat-based recurring B2B software contracts",
+    "customer_type": "Pest-control businesses with door-to-door sales teams",
+    "founder": "Isaac Z Tai",
+    "founder_role": "Founder; software engineer turned business owner",
+    "founders_count": "1",
+    "employees": "0 in the December 2024 profile",
+    "started": "October 2022",
+    "location": "Not stated in the public profile",
+    "funding": "Bootstrapped; founder said he raised and borrowed no money",
+    "profitability": "Not explicitly disclosed",
+    "public_revenue_claim": "Just over $100K ARR in the December 2024 case study"
+  },
+  "problem_and_product": [
+    "The original workflow relied on spreadsheets and email to calculate commissions.",
+    "Commission-only salespeople lacked real-time visibility into expected pay, creating pay anxiety.",
+    "Dashp centralizes commission calculations, sales performance tracking, and team communication.",
+    "The niche is intentionally narrow: pest-control businesses using door-to-door acquisition."
+  ],
+  "origin_story": [
+    "A friend in the pest-control industry asked whether a better commission-calculation tool could be built.",
+    "The founder validated that the pain was common by speaking with additional people in the industry.",
+    "A basic no-code demo produced an early buying signal when the friend's managers immediately asked for the company name and price.",
+    "The founder preferred this concrete, operational problem over the hype-driven AI startup work he was doing at the time."
+  ],
+  "build_and_launch": [
+    "October 2022: built a no-code prototype in Retool.",
+    "November 2022: began building a mobile application after repeated customer requests.",
+    "December 2022: left his job and worked full-time on Dashp while revenue was still zero.",
+    "January–March 2023: completed the app and worked through early B2B sales attempts.",
+    "April 2023: signed the first contract.",
+    "May 2023: signed the second customer.",
+    "June–August 2023: concentrated on bug fixes and customer support during the first sales season.",
+    "August 2023: joined a startup accelerator."
+  ],
+  "costs_and_operations": [
+    "The Retool prototype was effectively free because the founder received startup credits.",
+    "Early stated costs included a $12 domain, Google Workspace at $6 per month, and Supabase at $25 per month.",
+    "The founder said Vercel and Expo Application Services stayed within free tiers.",
+    "Design, engineering, selling, and customer support were handled by the founder.",
+    "Low headcount and a small number of high-value B2B customers kept operating costs low."
+  ],
+  "monetization": [
+    "Pricing is seat based and balances predictable annual revenue against seasonal staffing.",
+    "Standard seats were described at roughly $10–$30 per month with a minimum 12-month commitment.",
+    "Flex seats were described at twice the standard rate on a month-to-month basis.",
+    "Flex seats could not exceed 30% of total seats in the cited contract structure.",
+    "Upselling existing customers into wider contracts was described as a major revenue source."
+  ],
+  "growth": [
+    "The founder initially tried reaching owners, managers, and salespeople through offices and Instagram.",
+    "He later concluded that owners were the necessary buyer because the system requires access to sensitive business data.",
+    "The strongest acquisition methods were direct visits to physical offices and referrals.",
+    "Each qualified account is treated as a long-term business-development effort rather than a performance-marketing lead.",
+    "High-touch account management, immediate support, and direct founder access support retention and expansion."
+  ],
+  "tools": [
+    "Retool",
+    "Expo",
+    "Google Workspace",
+    "Supabase",
+    "Vercel",
+    "Mobile application stack"
+  ],
+  "revenue_timeline": [
+    {
+      "date": "2024-12-17",
+      "amount": "$8.33K /month",
+      "type": "Founder/profile snapshot",
+      "note": "The case study also described revenue as just over $100K ARR."
+    }
+  ],
+  "lessons": [
+    "A narrow B2B niche can support a meaningful solo business with relatively few customers.",
+    "Trust, time, and responsiveness can be more valuable than scalable paid acquisition in a tiny market.",
+    "Deep support for a small customer base can create expansion revenue and lower infrastructure costs."
+  ],
+  "sources": [
+    {
+      "label": "Starter Story directory",
+      "url": "https://www.starterstory.com/data/micro-saas-ideas",
+      "coverage": "Directory metrics and entry label"
+    },
+    {
+      "label": "Starter Story Dashp case study",
+      "url": "https://www.starterstory.com/stories/dashp",
+      "coverage": "Founder, origin, build timeline, pricing, growth, tools, and December 2024 revenue"
+    },
+    {
+      "label": "Official website",
+      "url": "https://dashp.io",
+      "coverage": "Product website"
+    }
+  ],
+  "data_quality": [
+    "The founder case study contains direct first-person information.",
+    "Revenue is a dated snapshot and should not be treated as a current audited figure.",
+    "No private database, account-only analytics, or internal backend information is included."
+  ],
+  "research_metadata": {
+    "researched_on": "2026-07-28",
+    "scope": "Publicly visible information only",
+    "source_method": "Starter Story directory, linked public profile/case study, and official product website links",
+    "private_backend_data_included": false,
+    "copyright_note": "Narrative text is independently summarized; source articles are not reproduced."
+  }
+}</script>
+  <script>
+    (() => {
+      const record = document.getElementById("entry-data").textContent;
+      document.querySelectorAll("[data-copy-json]").forEach((button) => {
+        button.addEventListener("click", async () => {
+          try {
+            await navigator.clipboard.writeText(record);
+            const oldText = button.textContent;
+            button.textContent = "Copied";
+            setTimeout(() => button.textContent = oldText, 1300);
+          } catch (error) {
+            const textarea = document.createElement("textarea");
+            textarea.value = record;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            textarea.remove();
+            button.textContent = "Copied";
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -21,6 +21,9 @@ import {
   Users,
   X,
   Zap,
+  TrendingDown,
+  CloudCog,
+  Settings2,
 } from 'lucide-react';
 
 import { getTabPath } from '../../utils/routes';
@@ -51,7 +54,10 @@ const buildItems: NavItem[] = [
 ];
 
 const discoveryItems: NavItem[] = [
-  { icon: Layers, label: 'مشاريع ناجحة مثبتة', tab: 'my-plans' },
+  { icon: Layers, label: 'مشاريع ناجحة مثبتة', tab: 'proven-projects' },
+  { icon: TrendingDown, label: 'أفكار مشاريع فشلت', tab: 'failed-projects' },
+  { icon: CloudCog, label: 'أفكار SaaS', tab: 'saas-ideas' },
+  { icon: Settings2, label: 'أفكار Micro-SaaS', tab: 'micro-saas-ideas' },
   { icon: Compass, label: 'استكشاف السوق', tab: 'market-discovery', active: (tab) => tab === 'market-discovery' || tab.endsWith('-dashboard') },
   { icon: Activity, label: 'المشكلات والفرص', tab: 'problem-engine', active: (tab) => tab === 'problem-engine' || tab === 'problem-detail' },
 ];

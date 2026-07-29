@@ -292,41 +292,155 @@ function ProModeExample() {
 
 function Mit24Example() {
   return (
-    <div className="flex flex-col gap-4">
-      <Card className="border-primary/20 bg-primary/5">
-        <CardHeader>
-          <div className="flex justify-between items-start">
-            <div>
-              <CardTitle className="text-2xl text-primary">ClinicSync - حجز العيادات السحابي</CardTitle>
-              <CardDescription className="mt-2 text-base text-foreground/80">نظام حجز وإدارة مبسط لعيادات الأسنان المستقلة للحد من تغيب المرضى.</CardDescription>
-            </div>
-            <Badge variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/10">MIT 24 Steps</Badge>
-          </div>
-        </CardHeader>
-      </Card>
+    <div className="flex flex-col gap-6 font-sans mt-4">
+      {/* Header */}
+      <div className="flex flex-col gap-2 mb-4">
+        <div className="flex items-center gap-3">
+          <Badge className="bg-primary/20 text-primary hover:bg-primary/20 rounded-md border-0">MIT 24 Steps</Badge>
+          <span className="text-sm text-muted-foreground">منهجية ريادة الأعمال المنضبطة</span>
+        </div>
+        <h1 className="text-3xl font-black text-foreground mt-2">ClinicSync - نظام إدارة العيادات</h1>
+        <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
+          نظام حجز وإدارة مبسط جداً لعيادات الأسنان المستقلة لتقليل الهدر المالي الناتج عن تخلف المرضى عن المواعيد بنسبة 40%.
+        </p>
+      </div>
 
-      <div className="grid gap-3">
-        {[
-          { step: 'الخطوة 1: تقسيم السوق', title: 'تحديد الأسواق المحتملة', desc: 'تم استبعاد المستشفيات الكبيرة وعيادات التجميل، والتركيز على عيادات الأسنان المستقلة في العاصمة.' },
-          { step: 'الخطوة 2: السوق المبدئي (Beachhead)', title: 'اختيار السوق الأولي', desc: '100 عيادة أسنان في مدينة الرياض، تعاني من نسبة تخلف عن المواعيد تتجاوز 30%.' },
-          { step: 'الخطوة 3: شخصية العميل (Persona)', title: 'من هو العميل الفعلي؟', desc: 'د. خالد (45 عاماً)، مالك عيادة أسنان، يدير العيادة بنفسه ويزعجه هدر الوقت بسبب عدم التزام المرضى، ولا يجيد استخدام أنظمة معقدة.' },
-          { step: 'الخطوة 6: دورة حياة العميل', title: 'كيف يجدنا ويشتري؟', desc: 'يتعرف علينا عبر إعلانات لينكد إن -> يجرب النظام مجاناً لمدة أسبوع ببطاقة ائتمان -> يتحول لاشتراك شهري تلقائي.' },
-          { step: 'الخطوة 10: جوهر العمل (Core)', title: 'الميزة التنافسية غير القابلة للنسخ', desc: 'خوارزمية قادرة على التنبؤ باحتمالية غياب المريض، وإرسال رسائل واتساب ذكية لتأكيد الحضور أو إعادة الجدولة فوراً.' },
-          { step: 'الخطوة 15: نموذج الإيرادات', title: 'كيف نجني المال؟', desc: 'رسم تأسيس قدره 100$ لتنظيف بياناتهم القديمة، واشتراك شهري 49$ يتضمن 500 رسالة واتساب.' },
-        ].map((item, i) => (
-          <Card key={i} className="shadow-none">
-            <CardContent className="p-4 flex gap-4 items-start">
-              <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-muted font-bold text-muted-foreground">{i + 1}</div>
-              <div>
+      <div className="grid lg:grid-cols-2 gap-6">
+        {/* Theme 1: Who is your customer? */}
+        <Card className="shadow-none border-border/50">
+          <CardHeader className="pb-3 border-b border-border/50 bg-blue-500/5">
+            <CardTitle className="text-base flex items-center gap-2 text-blue-700">
+              <Users className="size-5" />
+              من هو العميل؟ (Who is your customer?)
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="pt-4 space-y-4">
+            <div className="space-y-3">
+              <div className="p-3 bg-muted/30 rounded-lg">
                 <div className="flex items-center gap-2 mb-1">
-                  <Badge variant="outline" className="text-[10px]">{item.step}</Badge>
-                  <h4 className="font-bold text-sm text-foreground">{item.title}</h4>
+                  <Badge variant="outline" className="text-[10px]">الخطوة 1 و 2</Badge>
+                  <h4 className="font-bold text-sm text-foreground">السوق الأولي (Beachhead Market)</h4>
                 </div>
-                <p className="text-sm text-muted-foreground leading-6">{item.desc}</p>
+                <p className="text-xs text-muted-foreground leading-5">عيادات الأسنان المستقلة (1-3 كراسي) في الرياض. العدد الكلي: 450 عيادة. التركيز الأولي على 50 عيادة تعاني من نسبة تخلف عن المواعيد تتجاوز 25%.</p>
               </div>
-            </CardContent>
-          </Card>
-        ))}
+              <div className="p-3 bg-muted/30 rounded-lg">
+                <div className="flex items-center gap-2 mb-1">
+                  <Badge variant="outline" className="text-[10px]">الخطوة 3</Badge>
+                  <h4 className="font-bold text-sm text-foreground">شخصية العميل (End User Persona)</h4>
+                </div>
+                <p className="text-xs text-muted-foreground leading-5">د. طارق، 42 عاماً، طبيب أسنان ومالك العيادة. يعمل 10 ساعات يومياً. يخسر حوالي 5,000 ريال أسبوعياً بسبب المرضى الذين يحجزون ولا يحضرون.</p>
+              </div>
+              <div className="p-3 bg-muted/30 rounded-lg">
+                <div className="flex items-center gap-2 mb-1">
+                  <Badge variant="outline" className="text-[10px]">الخطوة 5</Badge>
+                  <h4 className="font-bold text-sm text-foreground">خريطة العميل (Customer Persona Profile)</h4>
+                </div>
+                <p className="text-xs text-muted-foreground leading-5">يعتمد على موظف استقبال واحد، يكره البرمجيات الطبية المعقدة التي تتطلب تدريباً طويلاً، ويبحث عن حل يعمل في الخلفية "Plug-and-Play".</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Theme 2: What can you do for your customer? */}
+        <Card className="shadow-none border-border/50">
+          <CardHeader className="pb-3 border-b border-border/50 bg-emerald-500/5">
+            <CardTitle className="text-base flex items-center gap-2 text-emerald-700">
+              <Lightbulb className="size-5" />
+              ماذا تفعل للعميل؟ (What can you do?)
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="pt-4 space-y-4">
+            <div className="space-y-3">
+              <div className="p-3 bg-muted/30 rounded-lg">
+                <div className="flex items-center gap-2 mb-1">
+                  <Badge variant="outline" className="text-[10px]">الخطوة 6 و 7</Badge>
+                  <h4 className="font-bold text-sm text-foreground">دورة حياة العميل والمواصفات عالية المستوى</h4>
+                </div>
+                <p className="text-xs text-muted-foreground leading-5">النظام يرتبط بتقويم Google/Apple الحالي للعيادة. يُرسل رسائل تأكيد عبر واتساب تلقائياً للمرضى. إذا اعتذر المريض، يُرسل النظام فوراً لمن هم في قائمة الانتظار.</p>
+              </div>
+              <div className="p-3 bg-emerald-500/10 rounded-lg border border-emerald-500/20">
+                <div className="flex items-center gap-2 mb-1">
+                  <Badge variant="outline" className="text-[10px] bg-background">الخطوة 8</Badge>
+                  <h4 className="font-bold text-sm text-emerald-900">عرض القيمة الكمي (Quantified Value Proposition)</h4>
+                </div>
+                <p className="text-xs text-emerald-800 leading-5 font-medium">تقليل نسبة التخلف عن المواعيد (No-shows) من 25% إلى 5%. مما يضيف حوالي 15,000 ريال شهرياً لإيرادات العيادة الواحدة بدون أي جهد إضافي للتسويق.</p>
+              </div>
+              <div className="p-3 bg-muted/30 rounded-lg">
+                <div className="flex items-center gap-2 mb-1">
+                  <Badge variant="outline" className="text-[10px]">الخطوة 10 و 11</Badge>
+                  <h4 className="font-bold text-sm text-foreground">الجوهر والمركز التنافسي (Core & Positioning)</h4>
+                </div>
+                <p className="text-xs text-muted-foreground leading-5"><b>Core:</b> خوارزمية ذكية تتنبأ باحتمالية الغياب وتقدم الحوافز. <br/><b>Positioning:</b> أبسط أداة في السوق (إعداد في 5 دقائق)، لا يحتاج لتغيير نظام العيادة الحالي.</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Theme 3: How does your customer acquire your product? */}
+        <Card className="shadow-none border-border/50">
+          <CardHeader className="pb-3 border-b border-border/50 bg-amber-500/5">
+            <CardTitle className="text-base flex items-center gap-2 text-amber-700">
+              <Target className="size-5" />
+              كيف يستحوذ العميل؟ (How does customer acquire?)
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="pt-4 space-y-4">
+            <div className="space-y-3">
+              <div className="p-3 bg-muted/30 rounded-lg">
+                <div className="flex items-center gap-2 mb-1">
+                  <Badge variant="outline" className="text-[10px]">الخطوة 12 و 13</Badge>
+                  <h4 className="font-bold text-sm text-foreground">وحدة اتخاذ القرار (DMU) وعملية الشراء</h4>
+                </div>
+                <p className="text-xs text-muted-foreground leading-5"><b>صانع القرار:</b> مالك العيادة. <b>المؤثر:</b> موظف الاستقبال. عملية الشراء سريعة جداً وتتم عبر تجربة مجانية لمدة 14 يوماً مع ربط فوري للبطاقة الائتمانية.</p>
+              </div>
+              <div className="p-3 bg-muted/30 rounded-lg">
+                <div className="flex items-center gap-2 mb-1">
+                  <Badge variant="outline" className="text-[10px]">الخطوة 18</Badge>
+                  <h4 className="font-bold text-sm text-foreground">خريطة عملية المبيعات (Sales Process)</h4>
+                </div>
+                <p className="text-xs text-muted-foreground leading-5">تواصل مباشر (Cold Outreach) للأطباء المالكين لعيادات عبر لينكد إن + إعلانات فيس بوك مخصصة للعيادات. الهدف: تحويل 10% من الزيارات إلى اشتراك تجريبي.</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Theme 4: How do you make money? */}
+        <Card className="shadow-none border-border/50">
+          <CardHeader className="pb-3 border-b border-border/50 bg-purple-500/5">
+            <CardTitle className="text-base flex items-center gap-2 text-purple-700">
+              <BarChart3 className="size-5" />
+              النموذج المالي (How do you make money?)
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="pt-4 space-y-4">
+            <div className="grid grid-cols-2 gap-3 mb-2">
+               <div className="p-3 border border-border/50 rounded-lg text-center bg-background">
+                 <div className="text-[10px] text-muted-foreground mb-1">LTV (القيمة العمرية)</div>
+                 <div className="font-bold text-sm text-emerald-600">3,600 ريال</div>
+               </div>
+               <div className="p-3 border border-border/50 rounded-lg text-center bg-background">
+                 <div className="text-[10px] text-muted-foreground mb-1">COCA (تكلفة الاستحواذ)</div>
+                 <div className="font-bold text-sm text-red-500">450 ريال</div>
+               </div>
+            </div>
+            <div className="space-y-3">
+              <div className="p-3 bg-muted/30 rounded-lg">
+                <div className="flex items-center gap-2 mb-1">
+                  <Badge variant="outline" className="text-[10px]">الخطوة 15 و 16</Badge>
+                  <h4 className="font-bold text-sm text-foreground">نموذج الإيرادات والتسعير</h4>
+                </div>
+                <p className="text-xs text-muted-foreground leading-5">نموذج اشتراك شهري (SaaS) بقيمة 299 ريال/الشهر للفرع الواحد يتضمن 1000 رسالة واتساب آلية. تسعير مبني على القيمة (القيمة المستردة للعيادة تتجاوز 15,000 ريال).</p>
+              </div>
+              <div className="p-3 bg-muted/30 rounded-lg">
+                <div className="flex items-center gap-2 mb-1">
+                  <Badge variant="outline" className="text-[10px]">الخطوة 23</Badge>
+                  <h4 className="font-bold text-sm text-foreground">إثبات افتراضات العمل (Show the Dogs Will Eat)</h4>
+                </div>
+                <p className="text-xs text-muted-foreground leading-5">تم توقيع خطابات نوايا (LOI) مع 7 عيادات وافقوا على الدفع المسبق بقيمة 2000 ريال للحصول على اشتراك سنوي بمجرد الإطلاق، مما يثبت القيمة الحقيقية للحل.</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
