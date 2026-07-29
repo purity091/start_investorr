@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Badge } from '@/components/ui/Badge';
 import { PROVEN_PROJECTS } from '@/data/provenProjects';
 import { ProvenProjectProfile } from '@/components/features/business/ProvenProjectProfile';
@@ -7,8 +7,30 @@ import { ProvenProjectsTable } from '@/components/features/business/ProvenProjec
 export const ProvenProjectsGallery: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const projectId = params.get('project');
+    if (projectId) {
+      const project = PROVEN_PROJECTS.find(p => p.slug === projectId || (p as any).id === projectId);
+      if (project) {
+        setSelectedProject(project);
+      }
+    }
+  }, []);
+
+  const handleProjectSelect = (project: any | null) => {
+    setSelectedProject(project);
+    const url = new URL(window.location.href);
+    if (project) {
+      url.searchParams.set('project', project.slug || project.id);
+    } else {
+      url.searchParams.delete('project');
+    }
+    window.history.pushState({}, '', url.toString());
+  };
+
   if (selectedProject) {
-    return <ProvenProjectProfile project={selectedProject} onBack={() => setSelectedProject(null)} />;
+    return <ProvenProjectProfile project={selectedProject} onBack={() => handleProjectSelect(null)} />;
   }
 
   return (
@@ -24,7 +46,7 @@ export const ProvenProjectsGallery: React.FC = () => {
       </div>
 
       <div className="w-full">
-        <ProvenProjectsTable data={PROVEN_PROJECTS} onRowClick={setSelectedProject} />
+        <ProvenProjectsTable data={PROVEN_PROJECTS} onRowClick={handleProjectSelect} />
       </div>
     </div>
   );

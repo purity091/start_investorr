@@ -68,7 +68,7 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
   const usagePercentage = Math.min((user.credits / Math.max(user.totalCredits, 1)) * 100, 100);
 
   return (
-    <div className="mx-auto max-w-5xl space-y-6 px-4 py-8 sm:px-6 pb-24" dir="rtl">
+    <div className="mx-auto max-w-5xl space-y-6 px-4 py-6 sm:py-8 sm:px-6 pb-24" dir="rtl">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h2 className="text-3xl font-bold tracking-tight text-foreground">حسابي الشخصي</h2>
@@ -97,7 +97,7 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
 
         <TabsContent value="overview" className="space-y-6 mt-0">
           <Card className="border-border/70 shadow-sm">
-            <CardContent className="p-6">
+            <CardContent className="p-4 sm:p-6">
               <div className="grid gap-6 md:grid-cols-[1fr_300px] items-center">
                 <div className="flex items-center gap-4">
                   <img
@@ -130,7 +130,7 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {accountStats.map((item) => (
               <Card key={item.label} className="border-border/70 shadow-sm">
-                <CardContent className="p-4 text-right">
+                <CardContent className="p-3 sm:p-4 text-right">
                   <p className="text-xs font-medium text-muted-foreground">{item.label}</p>
                   <div className="mt-2 flex items-end justify-between gap-3">
                     <p className="text-xl font-semibold text-foreground">{item.value}</p>

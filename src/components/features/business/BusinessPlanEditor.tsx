@@ -89,7 +89,7 @@ export const BusinessPlanEditor: React.FC<BusinessPlanEditorProps> = ({
 
   return (
     <main className="app-page-shell-wide space-y-6 text-right" dir="rtl">
-      <section className="rounded-xl bg-card p-5 shadow-sm ring-1 ring-border/60">
+      <section className="rounded-xl bg-card p-4 sm:p-5 shadow-sm ring-1 ring-border/60">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl space-y-3">
             <Badge variant="secondary" className="w-fit">محرر دراسة الجدوى</Badge>
@@ -135,11 +135,11 @@ export const BusinessPlanEditor: React.FC<BusinessPlanEditorProps> = ({
 
       <section className="grid gap-4 xl:grid-cols-[320px_minmax(0,1fr)]">
         <Card className="shadow-sm">
-          <CardHeader>
+          <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3">
             <CardTitle>أقسام الخطة</CardTitle>
             <CardDescription>اختر القسم الذي تريد مراجعته أو تحريره.</CardDescription>
           </CardHeader>
-          <CardContent className="space-y-1">
+          <CardContent className="space-y-1 p-4 sm:p-6 pt-0 sm:pt-0">
             {sections.map((section) => {
               const Icon = getSectionIcon(section.title);
               const isActive = section.id === activeSection.id;
@@ -163,7 +163,7 @@ export const BusinessPlanEditor: React.FC<BusinessPlanEditorProps> = ({
         </Card>
 
         <Card className="shadow-sm">
-          <CardHeader>
+          <CardHeader className="p-4 sm:p-6 pb-4 sm:pb-4">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
               <div className="flex items-start gap-3">
                 <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-muted text-foreground">
@@ -181,7 +181,7 @@ export const BusinessPlanEditor: React.FC<BusinessPlanEditorProps> = ({
               </Badge>
             </div>
           </CardHeader>
-          <CardContent>
+          <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
             {editingId === activeSection.id ? (
               <div className="space-y-4">
                 <Textarea
@@ -202,7 +202,7 @@ export const BusinessPlanEditor: React.FC<BusinessPlanEditorProps> = ({
             ) : (
               <div
                 className={cn(
-                  'min-h-[360px] rounded-lg bg-muted/35 p-5 text-sm leading-8 text-muted-foreground',
+                  'min-h-[360px] rounded-lg bg-muted/35 p-4 sm:p-5 text-sm leading-8 text-muted-foreground',
                   activeSection.content && 'bg-transparent text-foreground ring-1 ring-border/60',
                 )}
               >

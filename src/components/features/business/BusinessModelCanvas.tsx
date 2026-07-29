@@ -614,7 +614,7 @@ export const BusinessModelCanvas: React.FC<{
     <div dir="rtl" className="min-h-screen bg-background px-3 pb-10 pt-4 sm:px-4 lg:px-5 2xl:px-6">
       <div className="mx-auto flex w-full max-w-[1880px] flex-col gap-4">
         <TooltipProvider>
-          <section className="rounded-xl border border-border bg-card p-3 shadow-sm">
+          <section className="rounded-xl border border-border bg-card p-3 sm:p-4 shadow-sm">
             <div className="flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between">
               <div className="min-w-0 text-right">
                 <div className="flex items-center gap-2">
@@ -666,7 +666,7 @@ export const BusinessModelCanvas: React.FC<{
           </section>
 
           <>
-            <section className="rounded-xl border border-border bg-card p-3 shadow-sm">
+            <section className="rounded-xl border border-border bg-card p-3 sm:p-4 shadow-sm">
               <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
                 <div className="flex flex-wrap items-center gap-2 text-right">
                   <Badge variant="secondary">لوحة النموذج</Badge>
@@ -776,13 +776,13 @@ export const BusinessModelCanvas: React.FC<{
 
       <Dialog open={briefOpen} onOpenChange={setBriefOpen}>
         <DialogContent className="max-h-[90vh] overflow-hidden p-0">
-          <DialogHeader className="border-b border-border px-6 py-5">
+          <DialogHeader className="border-b border-border px-4 py-4 sm:px-6 sm:py-5">
             <DialogTitle>البيانات التمهيدية للمشروع</DialogTitle>
             <DialogDescription>
               هذه الطبقة تسبق بناء اللوحة وتثبت سياق المشروع قبل الإجابة على أقسام نموذج العمل التسعة.
             </DialogDescription>
           </DialogHeader>
-          <div className="grid max-h-[calc(90vh-160px)] gap-4 overflow-y-auto px-6 py-5">
+          <div className="grid max-h-[calc(90vh-160px)] gap-4 overflow-y-auto px-4 py-4 sm:px-6 sm:py-5">
             {GENERAL_BRIEF_FIELDS.map((field) => (
               <div key={field.key} className="space-y-2 text-right">
                 <label className="text-sm font-medium text-foreground">{field.label}</label>
@@ -803,7 +803,7 @@ export const BusinessModelCanvas: React.FC<{
               </div>
             ))}
           </div>
-          <DialogFooter className="border-t border-border px-6 py-4">
+          <DialogFooter className="border-t border-border px-4 py-3 sm:px-6 sm:py-4">
             <Button onClick={() => setBriefOpen(false)}>إغلاق</Button>
           </DialogFooter>
         </DialogContent>
@@ -811,13 +811,13 @@ export const BusinessModelCanvas: React.FC<{
 
       <Dialog open={projectDialogOpen} onOpenChange={setProjectDialogOpen}>
         <DialogContent className="max-w-md">
-          <DialogHeader>
+          <DialogHeader className="px-4 py-4 sm:px-6 sm:py-5 pb-0 sm:pb-0">
             <DialogTitle>إنشاء مشروع جديد داخل صفحة BMC</DialogTitle>
             <DialogDescription>
               سيتم إنشاء مشروع مستقل ببيانات تمهيدية ولوحة أسئلة خاصة به، ويمكن التنقل بينه وبين باقي المشاريع من الأعلى.
             </DialogDescription>
           </DialogHeader>
-          <div className="space-y-2 text-right">
+          <div className="space-y-2 text-right px-4 py-4 sm:px-6 sm:py-5">
             <label className="text-sm font-medium text-foreground">اسم المشروع</label>
             <Input
               value={newProjectName}
@@ -825,7 +825,7 @@ export const BusinessModelCanvas: React.FC<{
               placeholder="مثال: منصة خدمات لوجستية للشركات الصغيرة"
             />
           </div>
-          <DialogFooter>
+          <DialogFooter className="px-4 pb-4 sm:px-6 sm:pb-5">
             <Button variant="outline" onClick={() => setProjectDialogOpen(false)}>
               إلغاء
             </Button>
@@ -839,7 +839,7 @@ export const BusinessModelCanvas: React.FC<{
 
       <Dialog open={!!currentBlock} onOpenChange={(open) => !open && setCurrentBlock(null)}>
         <DialogContent className="max-h-[90vh] overflow-hidden p-0 sm:max-w-3xl">
-          <DialogHeader className="border-b border-border px-6 py-5">
+          <DialogHeader className="border-b border-border px-4 py-4 sm:px-6 sm:py-5">
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0 text-right">
                 <div className="space-y-3">
@@ -863,7 +863,7 @@ export const BusinessModelCanvas: React.FC<{
               </div>
             </div>
           </DialogHeader>
-          <div className="max-h-[calc(90vh-180px)] space-y-4 overflow-y-auto px-6 py-5">
+          <div className="max-h-[calc(90vh-180px)] space-y-4 overflow-y-auto px-4 py-4 sm:px-6 sm:py-5">
             <div className="rounded-lg border border-border bg-accent/30 p-4 text-right">
               <p className="text-xs font-semibold text-muted-foreground">الهدف من هذا القسم</p>
               <p className="mt-2 text-sm leading-7 text-foreground">
@@ -874,7 +874,7 @@ export const BusinessModelCanvas: React.FC<{
               {currentBlockQuestions.map((question, index) => {
                 const hasAnswer = question.answer.trim().length > 0;
                 return (
-                  <div key={question.id} className="rounded-lg border border-border bg-background p-4 text-right">
+                  <div key={question.id} className="rounded-lg border border-border bg-background p-3 sm:p-4 text-right">
                     <div className="space-y-3">
                       <Badge variant={hasAnswer ? 'secondary' : 'outline'} className="mt-0.5 shrink-0">
                         {index + 1}
@@ -899,7 +899,7 @@ export const BusinessModelCanvas: React.FC<{
               })}
             </div>
           </div>
-          <DialogFooter className="border-t border-border px-6 py-4">
+          <DialogFooter className="border-t border-border px-4 py-3 sm:px-6 sm:py-4">
             <Button
               variant="outline"
               onClick={() => {

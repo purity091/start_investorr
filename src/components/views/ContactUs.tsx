@@ -18,7 +18,7 @@ const contactMethods = [
 export const ContactUs: React.FC = () => {
   return (
     <main className="app-page-shell-wide space-y-6 text-right" dir="rtl">
-      <section className="rounded-xl bg-card p-5 shadow-sm ring-1 ring-border/60">
+      <section className="rounded-xl bg-card p-4 sm:p-5 shadow-sm ring-1 ring-border/60">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl space-y-3">
             <Badge variant="secondary" className="w-fit">تواصل معنا</Badge>
@@ -38,11 +38,11 @@ export const ContactUs: React.FC = () => {
 
       <section className="grid gap-4 xl:grid-cols-[minmax(0,1.35fr)_minmax(320px,0.65fr)]">
         <Card className="shadow-sm">
-          <CardHeader>
+          <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3">
             <CardTitle>إرسال طلب</CardTitle>
             <CardDescription>واجهة نموذج جاهزة للربط البرمجي لاحقاً بدون منطق خلفي حالياً.</CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
             <form className="grid gap-4 md:grid-cols-2" onSubmit={(event) => event.preventDefault()}>
               <div className="space-y-2">
                 <label className="text-sm font-medium text-foreground">الاسم الكامل</label>
@@ -103,7 +103,7 @@ export const ContactUs: React.FC = () => {
             const Icon = method.icon;
             return (
               <Card key={method.title} className="shadow-sm">
-                <CardContent className="flex items-start gap-3 p-4">
+                <CardContent className="flex items-start gap-3 p-3 sm:p-4">
                   <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-muted text-foreground">
                     <Icon className="size-4" />
                   </div>

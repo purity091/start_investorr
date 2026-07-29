@@ -264,7 +264,7 @@ const ToolIntroPanel: React.FC<{ mode: IntroMode; onStart: () => void; onBack?: 
   const IntroIcon = intro.icon;
 
   return (
-    <div dir="rtl" className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-8 sm:px-6 lg:px-8">
+    <div dir="rtl" className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-6 sm:py-8 sm:px-6 lg:px-8">
       {/* Header Info */}
       <div className="flex flex-col gap-6 text-right">
         <div className="flex items-start gap-4">
@@ -363,7 +363,7 @@ export const NewPlan: React.FC<{
   }
 
   return (
-    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-8 sm:px-6 lg:px-8">
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 sm:py-8 sm:px-6 lg:px-8">
       {/* Header */}
       <div className="flex flex-col gap-3 mb-2">
         <div className="flex items-center gap-3">
@@ -465,13 +465,13 @@ export const NewPlan: React.FC<{
           </Card>
 
           <Card className="shadow-sm border-border/60">
-            <CardHeader className="pb-3 border-b border-border/40">
+            <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3 border-b border-border/40">
               <CardTitle className="text-sm font-bold flex items-center gap-2">
                 <Layers className="size-4 text-muted-foreground" />
                 قوالب بداية سريعة
               </CardTitle>
             </CardHeader>
-            <CardContent className="pt-4 flex flex-col gap-2">
+            <CardContent className="p-4 sm:p-6 pt-4 sm:pt-4 flex flex-col gap-2">
               {TEMPLATES.map((template) => (
                 <button
                   key={template.id}
@@ -494,10 +494,10 @@ export const NewPlan: React.FC<{
 function ExplanationCard({ title, items }: { title: string; items: string[] }) {
   return (
     <Card className="h-full border-border/60 shadow-sm bg-card">
-      <CardHeader className="border-b border-border/40 bg-muted/20 px-5 py-4">
+      <CardHeader className="border-b border-border/40 bg-muted/20 px-4 sm:px-5 py-4">
         <CardTitle className="text-base text-foreground font-semibold">{title}</CardTitle>
       </CardHeader>
-      <CardContent className="px-5 py-5">
+      <CardContent className="p-4 sm:p-5">
         <div className="space-y-4">
           {items.map((item, index) => (
             <div key={item} className="flex items-start gap-3 text-right">
@@ -545,13 +545,13 @@ function ModeProjectsSection({ mode }: { mode: IntroMode }) {
 
   return (
     <Card className="shadow-none">
-      <CardHeader className="gap-1 p-4">
+      <CardHeader className="gap-1 p-4 sm:p-6">
         <CardTitle className="text-lg">{intro.projectLabel}</CardTitle>
         <CardDescription>
           تظهر هنا فقط المشاريع التي تم إنشاؤها من هذا المسار، بنفس أسلوب جدول مشاريعي.
         </CardDescription>
       </CardHeader>
-      <CardContent className="p-4 pt-0">
+      <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
         <div className="hidden overflow-hidden rounded-md lg:block">
           <Table dir="rtl">
             <TableHeader>
@@ -734,13 +734,13 @@ function ExampleCard({ example, onViewExample }: { example: ToolIntro['example']
   return (
     <Card className="h-full border-primary/20 bg-primary/5 shadow-sm relative overflow-hidden flex flex-col">
       <div className="absolute right-0 top-0 w-1 h-full bg-primary/70" />
-      <CardHeader className="border-b border-primary/10 bg-primary/10 px-5 py-4">
+      <CardHeader className="border-b border-primary/10 bg-primary/10 px-4 sm:px-5 py-4">
         <CardTitle className="text-base text-primary flex items-center gap-2 font-semibold">
           <Lightbulb className="size-4" />
           مثال توضيحي للنتيجة
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-4 px-5 pb-5 pt-4 flex-1 flex flex-col text-right">
+      <CardContent className="space-y-4 p-4 sm:p-5 pt-4 sm:pt-4 flex-1 flex flex-col text-right">
         <div>
           <h4 className="font-bold text-foreground text-sm">{example.name}</h4>
           <Badge variant="outline" className="mt-2 bg-background/50 border-primary/20 text-primary">{example.sector}</Badge>

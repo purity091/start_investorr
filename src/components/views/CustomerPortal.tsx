@@ -129,16 +129,16 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
   const readinessScore = workspace.metrics.readinessScore;
 
   return (
-    <div className="mx-auto max-w-5xl space-y-6 px-4 py-8 sm:px-6 pb-24" dir="rtl">
-      <section className="rounded-xl bg-card p-4 shadow-sm sm:p-5">
-        <div className="flex flex-col gap-5 xl:flex-row xl:items-center xl:justify-between">
-          <div className="min-w-0 space-y-2">
+    <div className="mx-auto max-w-5xl space-y-4 sm:space-y-6 px-4 py-6 sm:py-8 sm:px-6 pb-24" dir="rtl">
+      <section className="rounded-xl bg-card p-4 sm:p-5 shadow-sm">
+        <div className="flex flex-col gap-4 sm:gap-5 xl:flex-row xl:items-center xl:justify-between">
+          <div className="min-w-0 space-y-1.5 sm:space-y-2">
             <div className="flex flex-wrap items-center gap-2">
               <Badge variant="secondary">مساحة العميل</Badge>
               <Badge variant="outline">واجهة اشتراك</Badge>
             </div>
             <div>
-              <h1 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+              <h1 className="text-xl font-semibold tracking-tight text-foreground sm:text-3xl">
                 {meta.label}
               </h1>
               <p className="mt-2 max-w-3xl text-sm leading-7 text-muted-foreground">
@@ -245,7 +245,7 @@ function SectionContent({
 }) {
   if (section === 'dashboard') {
     return (
-      <div className="grid gap-4 xl:grid-cols-2">
+      <div className="grid gap-3 sm:gap-4 xl:grid-cols-2">
         <Panel title="مركز التحكم السريع" subtitle="أهم نقاط الوصول للمستخدم المشترك">
           <div className="grid gap-3 sm:grid-cols-2">
             <ActionTile title="إدارة المشاريع" desc="مراجعة المشاريع والعودة إلى آخر نقطة عمل." cta="فتح المشاريع" onClick={() => setActiveTab('customer-projects')} />
@@ -296,11 +296,11 @@ function SectionContent({
 
   if (section === 'subscription') {
     return (
-      <div className="grid gap-4 xl:grid-cols-[1fr_1.2fr]">
+      <div className="grid gap-3 sm:gap-4 xl:grid-cols-[1fr_1.2fr]">
         <Panel title="حالة الاشتراك" subtitle="ملخص واضح للخطة الحالية">
           <div className="space-y-3">
             <Badge variant="secondary">اشتراك نشط</Badge>
-            <h2 className="text-2xl font-semibold text-foreground">باقة المحترفين</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-foreground">باقة المحترفين</h2>
             <p className="text-sm leading-7 text-muted-foreground">
               التجديد القادم في 21 أغسطس 2026، ووسيلة الدفع الأساسية تنتهي بـ 4242.
             </p>
@@ -319,7 +319,7 @@ function SectionContent({
 
   if (section === 'usage') {
     return (
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid gap-3 sm:gap-4 md:grid-cols-3">
         <Panel title="اعتمادات الأدوات" subtitle="المتاح والمستهلك من خطتك">
           <ProgressBar value={Math.round((usedCredits / Math.max(user.totalCredits, 1)) * 100)} />
           <p className="mt-4 text-sm leading-7 text-muted-foreground">
@@ -356,7 +356,7 @@ function SectionContent({
 
   if (section === 'account') {
     return (
-      <div className="grid gap-4 xl:grid-cols-2">
+      <div className="grid gap-3 sm:gap-4 xl:grid-cols-2">
         <Panel title="بيانات الحساب" subtitle="هوية العميل وتفاصيل الوصول">
           <div className="space-y-2">
             <Fact label="الاسم" value={user.name} />
@@ -377,7 +377,7 @@ function SectionContent({
   }
 
   return (
-    <div className="grid gap-4 xl:grid-cols-2">
+    <div className="grid gap-3 sm:gap-4 xl:grid-cols-2">
       <Panel title="الدعم والطلبات" subtitle="كل ما يخص مساعدة العميل المشترك">
         <div className="grid gap-3 sm:grid-cols-2">
           <ActionTile title="التواصل مع مستشار" desc="للاستفسار عن الترقية أو استخدام المنصة." cta="تواصل" onClick={() => setActiveTab('contact-us')} />
@@ -400,10 +400,10 @@ function SectionContent({
 function Metric({ label, value, hint }: { label: string; value: string; hint: string }) {
   return (
     <Card className="border-transparent shadow-sm">
-      <CardContent className="p-4">
+      <CardContent className="p-3 sm:p-4">
         <p className="text-xs font-medium text-muted-foreground">{label}</p>
         <div className="mt-2 flex items-end justify-between gap-3">
-          <p className="text-xl font-semibold text-foreground">{value}</p>
+          <p className="text-lg sm:text-xl font-semibold text-foreground">{value}</p>
           <span className="text-xs text-muted-foreground">{hint}</span>
         </div>
       </CardContent>
@@ -414,11 +414,11 @@ function Metric({ label, value, hint }: { label: string; value: string; hint: st
 function Panel({ title, subtitle, children }: { title: string; subtitle: string; children: React.ReactNode }) {
   return (
     <Card className="border-transparent shadow-sm">
-      <CardHeader className="p-5">
-        <CardTitle>{title}</CardTitle>
-        <CardDescription>{subtitle}</CardDescription>
+      <CardHeader className="p-4 sm:p-5 pb-3">
+        <CardTitle className="text-lg sm:text-xl">{title}</CardTitle>
+        <CardDescription className="text-xs sm:text-sm">{subtitle}</CardDescription>
       </CardHeader>
-      <CardContent className="p-5 pt-0">{children}</CardContent>
+      <CardContent className="p-4 sm:p-5 pt-0">{children}</CardContent>
     </Card>
   );
 }
@@ -435,7 +435,7 @@ function ActionTile({ title, desc, cta, onClick }: { title: string; desc: string
 
 function StepRow({ title, desc, button, onClick }: { title: string; desc: string; button: string; onClick: () => void }) {
   return (
-    <div className="flex flex-col gap-3 rounded-lg bg-muted/45 px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
+    <div className="flex flex-col gap-2.5 sm:gap-3 rounded-lg bg-muted/45 px-3 sm:px-4 py-3 sm:flex-row sm:items-center sm:justify-between">
       <div>
         <p className="text-sm font-medium text-foreground">{title}</p>
         <p className="mt-1 text-xs leading-6 text-muted-foreground">{desc}</p>

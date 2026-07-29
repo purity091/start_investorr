@@ -177,8 +177,8 @@ const SiteTour: React.FC<SiteTourProps> = ({ onComplete, onSkip }) => {
 
   if (isFinished) {
     return (
-      <div className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/20 p-5 backdrop-blur-sm" dir="rtl">
-        <div className="w-full max-w-xl rounded-xl bg-background p-6 text-center shadow-lg ring-1 ring-border">
+      <div className="fixed inset-0 z-[10000] flex items-center justify-center bg-black/20 p-4 sm:p-5 backdrop-blur-sm" dir="rtl">
+        <div className="w-full max-w-xl rounded-xl bg-background p-4 sm:p-6 text-center shadow-lg ring-1 ring-border">
           <div className="mx-auto mb-5 flex size-12 items-center justify-center rounded-lg bg-muted text-foreground">
             <CheckCircle2 className="size-6 text-emerald-600" />
           </div>
@@ -219,7 +219,7 @@ const SiteTour: React.FC<SiteTourProps> = ({ onComplete, onSkip }) => {
             : { opacity: tooltipPos.width > 0 ? 1 : 0 }
         }
       >
-        <div className="relative flex w-[calc(100vw-32px)] flex-col rounded-xl bg-background p-5 text-right shadow-lg ring-1 ring-border lg:w-[390px]">
+        <div className="relative flex w-[calc(100vw-32px)] flex-col rounded-xl bg-background p-4 sm:p-5 text-right shadow-lg ring-1 ring-border lg:w-[390px]">
           {!isMobile && step.position === 'left' && (
             <div className="absolute -right-2 top-1/2 size-4 -translate-y-1/2 rotate-45 bg-background ring-1 ring-border" />
           )}

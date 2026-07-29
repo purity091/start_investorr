@@ -53,13 +53,13 @@ function FamilyModeExample() {
 
       <div className="grid md:grid-cols-2 gap-4">
         <Card className="shadow-none">
-          <CardHeader className="pb-3 border-b border-border/50">
+          <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3 border-b border-border/50">
             <CardTitle className="text-lg flex items-center gap-2">
               <Target className="size-5 text-destructive" />
               المشكلة
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-4 text-sm leading-6 text-muted-foreground">
+          <CardContent className="p-4 sm:p-6 pt-4 sm:pt-4 text-sm leading-6 text-muted-foreground">
             المتاجر الإلكترونية الصغيرة لا تملك مبرمجين لربط خدمات الدفع (مثل ميسر) بخدمات التسويق (مثل Mailchimp)، مما يضطرهم لنقل البيانات يدوياً وتضييع الوقت وفقدان العملاء المحتملين.
           </CardContent>
         </Card>
@@ -121,13 +121,13 @@ function ProModeExample() {
 
       {/* Executive Summary */}
       <Card className="border-primary/10 shadow-none bg-primary/[0.02]">
-        <CardHeader className="pb-3 border-b border-primary/10">
+        <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3 border-b border-primary/10">
           <CardTitle className="text-lg flex items-center gap-2 text-primary">
             <BriefcaseBusiness className="size-5" />
             الملخص التنفيذي
           </CardTitle>
         </CardHeader>
-        <CardContent className="pt-4 grid md:grid-cols-2 gap-6">
+        <CardContent className="p-4 sm:p-6 pt-4 sm:pt-4 grid md:grid-cols-2 gap-6">
           <div className="space-y-4">
             <div>
               <h4 className="font-bold text-sm mb-1 text-foreground">المشكلة الجوهرية</h4>
@@ -154,13 +154,13 @@ function ProModeExample() {
       <div className="grid lg:grid-cols-2 gap-6">
         {/* Market Analysis */}
         <Card className="shadow-none border-border/50">
-          <CardHeader className="pb-3 border-b border-border/50 bg-muted/20">
+          <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3 border-b border-border/50 bg-muted/20">
             <CardTitle className="text-base flex items-center gap-2">
               <BarChart3 className="size-5 text-blue-500" />
               تحليل السوق (TAM/SAM/SOM)
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-4 space-y-4">
+          <CardContent className="p-4 sm:p-6 pt-4 sm:pt-4 space-y-4">
             <div className="p-3 bg-muted/30 rounded-lg">
               <div className="text-xs text-muted-foreground mb-1">حجم السوق الكلي (TAM)</div>
               <div className="font-bold text-sm">$450M - سوق الاستبيانات العالمي</div>
@@ -211,7 +211,7 @@ function ProModeExample() {
             المؤشرات المالية (Unit Economics)
           </CardTitle>
         </CardHeader>
-        <CardContent className="pt-4 grid md:grid-cols-4 gap-4">
+        <CardContent className="p-4 sm:p-6 pt-4 sm:pt-4 grid md:grid-cols-4 gap-4">
           <div className="p-4 bg-background border border-border/50 rounded-xl text-center">
             <div className="text-xs text-muted-foreground mb-1">التأسيس (CAPEX)</div>
             <div className="text-lg font-bold">12,000$ تراخيص وسيرفرات</div>
@@ -240,7 +240,7 @@ function ProModeExample() {
               تحليل SWOT والمخاطر
             </CardTitle>
           </CardHeader>
-          <CardContent className="pt-4 grid sm:grid-cols-2 gap-4">
+          <CardContent className="p-4 sm:p-6 pt-4 sm:pt-4 grid sm:grid-cols-2 gap-4">
             <div className="p-3 bg-emerald-500/10 rounded-lg border border-emerald-500/20">
               <h4 className="font-bold text-emerald-700 text-sm mb-2">نقاط القوة (S)</h4>
               <p className="text-xs text-emerald-900/80 leading-5">معمارية النظام مصممة للغة العربية أساساً، وفريق مؤسس بخبرة فنية سابقة.</p>

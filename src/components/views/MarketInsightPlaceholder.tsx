@@ -25,7 +25,7 @@ export const MarketInsightPlaceholder: React.FC<MarketInsightPlaceholderProps> =
 }) => {
   return (
     <main className="app-page-shell-wide space-y-6 text-right" dir="rtl">
-      <section className="rounded-xl bg-card p-5 shadow-sm ring-1 ring-border/60">
+      <section className="rounded-xl bg-card p-4 sm:p-5 shadow-sm ring-1 ring-border/60">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl space-y-3">
             <Badge variant="secondary" className="w-fit">{category}</Badge>
@@ -46,7 +46,7 @@ export const MarketInsightPlaceholder: React.FC<MarketInsightPlaceholderProps> =
           const Icon = item.icon;
           return (
             <Card key={item.title} className="shadow-sm">
-              <CardContent className="flex items-start gap-3 p-4">
+              <CardContent className="flex items-start gap-3 p-3 sm:p-4">
                 <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-muted text-foreground">
                   <Icon className="size-4" />
                 </div>
@@ -61,11 +61,11 @@ export const MarketInsightPlaceholder: React.FC<MarketInsightPlaceholderProps> =
       </section>
 
       <Card className="shadow-sm">
-        <CardHeader>
+        <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3">
           <CardTitle>ماذا يمكن أن يفعل المستخدم الآن؟</CardTitle>
           <CardDescription>اختيارات واضحة حتى لا تنتهي رحلة المستخدم في صفحة انتقالية.</CardDescription>
         </CardHeader>
-        <CardContent className="flex flex-col gap-2 sm:flex-row">
+        <CardContent className="flex flex-col gap-2 sm:flex-row p-4 sm:p-6 pt-0 sm:pt-0">
           <Button onClick={() => setActiveTab('market-discovery')} variant="outline" className="sm:w-fit">
             <Compass className="size-4" />
             استكمال استكشاف السوق

@@ -75,7 +75,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
   };
 
   return (
-    <div className="mx-auto max-w-5xl space-y-8 px-4 py-8 sm:px-6 pb-24" dir="rtl">
+    <div className="mx-auto max-w-5xl space-y-6 sm:space-y-8 px-4 py-6 sm:py-8 sm:px-6 pb-24" dir="rtl">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h2 className="text-3xl font-bold tracking-tight text-foreground">إعدادات الحساب</h2>
@@ -114,7 +114,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
               <CardTitle>البيانات الشخصية</CardTitle>
               <CardDescription>المعلومات الأساسية لملفك التعريفي.</CardDescription>
             </CardHeader>
-            <CardContent className="grid gap-6 sm:grid-cols-2">
+            <CardContent className="grid gap-4 sm:gap-6 sm:grid-cols-2 p-4 sm:p-6 pt-0">
               <Field label="الاسم الكامل">
                 <Input defaultValue={user.name} className="text-right" />
               </Field>
@@ -155,7 +155,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
                 <CardDescription>خيارات تسجيل الدخول والحماية.</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="space-y-4 rounded-xl border border-border/70 bg-muted/35 p-5">
+                <div className="space-y-4 rounded-xl border border-border/70 bg-muted/35 p-4 sm:p-5">
                   <div className="flex items-center gap-2 text-right">
                     <LockKeyhole className="size-4 text-muted-foreground" />
                     <h3 className="text-sm font-semibold text-foreground">تغيير كلمة المرور</h3>
@@ -263,7 +263,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
         </TabsContent>
       </Tabs>
 
-      <div className="sticky bottom-4 z-10 flex items-center justify-between rounded-xl border border-border bg-card/95 px-6 py-4 shadow-sm backdrop-blur">
+      <div className="sticky bottom-4 z-10 flex items-center justify-between rounded-xl border border-border bg-card/95 px-4 py-3 sm:px-6 sm:py-4 shadow-sm backdrop-blur">
         <div className="flex items-center gap-3">
           {saved ? <CheckCircle2 className="size-5 text-emerald-600" /> : <Sparkles className="size-5 text-muted-foreground" />}
           <div>
@@ -294,7 +294,7 @@ function Field({ label, hint, children, className }: { label: string; hint?: str
 
 function ToggleRow({ title, description, checked = false }: { title: string; description: string; checked?: boolean }) {
   return (
-    <div className="flex items-start gap-4 rounded-xl border border-border/70 bg-muted/35 p-4 text-right">
+    <div className="flex items-start gap-4 rounded-xl border border-border/70 bg-muted/35 p-3 sm:p-4 text-right">
       <ShieldCheck className="size-4 shrink-0 text-muted-foreground mt-0.5" />
       <div className="flex-1 min-w-0">
         <p className="text-sm font-medium text-foreground">{title}</p>

@@ -93,7 +93,7 @@ export const IdeaCreation: React.FC<{
     <main className="app-page-shell-wide space-y-4 py-3 text-right" dir="rtl">
       {step === 'input' && (
         <>
-          <section className="rounded-xl bg-card p-4 shadow-sm ring-1 ring-border/60">
+          <section className="rounded-xl bg-card p-4 sm:p-5 shadow-sm ring-1 ring-border/60">
             <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-3xl space-y-2">
                 <Badge variant="secondary" className="w-fit">بناء دراسة جدوى مشروع</Badge>
@@ -109,11 +109,11 @@ export const IdeaCreation: React.FC<{
           </section>
 
           <Card className="shadow-sm">
-            <CardHeader className="p-4 pb-3">
+            <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3">
               <CardTitle>وصف الفكرة</CardTitle>
               <CardDescription>اكتب المشكلة، العميل، والمنتج المقترح بجمل بسيطة.</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-3 p-4 pt-0">
+            <CardContent className="space-y-3 p-4 sm:p-6 pt-0 sm:pt-0">
               {activeMode === 'scratch' ? (
                 <div className="flex flex-col items-center justify-center rounded-lg bg-muted/35 p-10 text-center">
                   <DraftingCompass className="mb-3 size-10 text-muted-foreground" />
@@ -159,14 +159,14 @@ export const IdeaCreation: React.FC<{
 
       {step === 'processing' && (
         <Card className="shadow-sm">
-          <CardHeader className="text-center">
+          <CardHeader className="text-center p-4 sm:p-6 pb-3 sm:pb-3">
             <div className="mx-auto mb-2 flex size-11 items-center justify-center rounded-lg bg-muted text-foreground">
               <Activity className="size-5" />
             </div>
             <CardTitle>تجهيز المسار</CardTitle>
             <CardDescription>عرض بصري لحالة المعالجة قبل الانتقال للنتيجة.</CardDescription>
           </CardHeader>
-          <CardContent className="mx-auto max-w-xl space-y-3">
+          <CardContent className="mx-auto max-w-xl space-y-3 p-4 sm:p-6 pt-0 sm:pt-0">
             {stages.map((stage) => (
               <div key={stage.id} className="flex items-start gap-3 rounded-lg bg-muted/35 p-3">
                 <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-background text-sm font-medium text-foreground">
@@ -184,7 +184,7 @@ export const IdeaCreation: React.FC<{
 
       {step === 'result' && (
         <>
-          <section className="rounded-xl bg-card p-4 shadow-sm ring-1 ring-border/60">
+          <section className="rounded-xl bg-card p-4 sm:p-5 shadow-sm ring-1 ring-border/60">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-3xl space-y-3">
                 <Badge variant="secondary" className="w-fit">تحليل مكتمل</Badge>
@@ -225,11 +225,11 @@ export const IdeaCreation: React.FC<{
           </section>
 
           <Card className="shadow-sm">
-            <CardHeader>
+            <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3">
               <CardTitle>ملخص الفكرة</CardTitle>
               <CardDescription>مخرجات واجهة فقط قابلة للتحويل لاحقاً إلى منطق برمجي.</CardDescription>
             </CardHeader>
-            <CardContent className="grid gap-3 md:grid-cols-2">
+            <CardContent className="grid gap-3 md:grid-cols-2 p-4 sm:p-6 pt-0 sm:pt-0">
               <div className="rounded-lg bg-muted/35 p-4">
                 <p className="text-sm font-medium text-foreground">الاسم المقترح</p>
                 <p className="mt-1 text-sm text-muted-foreground">{ideaData.nickname || 'مشروع قابل للتطوير'}</p>

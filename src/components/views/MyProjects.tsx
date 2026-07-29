@@ -269,7 +269,7 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
 
   if (projectsList.length === 0) {
     return (
-      <main dir="rtl" className="min-h-screen bg-background px-4 py-5">
+      <main dir="rtl" className="min-h-screen bg-background px-4 py-4 sm:py-5">
         <EmptyState
           title="لا توجد مشاريع محفوظة حالياً"
           description="ابدأ بإنشاء مشروع جديد ثم ستظهر المشاريع هنا."
@@ -298,7 +298,7 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
             </Button>
           </CardHeader>
 
-          <CardContent className="space-y-4 p-4 pt-0 sm:p-5 sm:pt-0">
+          <CardContent className="space-y-3 sm:space-y-4 p-3 sm:p-5 pt-0 sm:pt-0">
             <div className="grid gap-2 lg:grid-cols-[minmax(280px,1fr)_190px_170px_auto] lg:items-center">
               <div className="relative">
                 <Search className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
@@ -578,7 +578,7 @@ function ProjectsMobileList({
   return (
     <div className="grid gap-3 lg:hidden">
       {projects.map((project) => (
-        <Card key={project.id} className="p-4 shadow-none">
+        <Card key={project.id} className="p-3 sm:p-4 shadow-sm sm:shadow-none border border-border">
           <div className="flex items-start justify-between gap-3">
             <ProjectStatusBadge status={project.status} />
             <div className="flex items-center gap-1">

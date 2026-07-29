@@ -28,6 +28,13 @@ import {
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 
 interface ProvenProjectsTableProps {
   data: any[];
@@ -62,6 +69,7 @@ const getCountryInfo = (location: string) => {
   if (loc.includes('singapore')) return { name: 'سنغافورة', flag: '🇸🇬' };
   if (loc.includes('uk') || loc.includes('london')) return { name: 'المملكة المتحدة', flag: '🇬🇧' };
   if (loc.includes('canada')) return { name: 'كندا', flag: '🇨🇦' };
+  if (loc.includes('السعودية') || loc.includes('saudi arabia') || loc.includes('مكة')) return { name: 'المملكة العربية السعودية', flag: '🇸🇦' };
   return { name: 'عالمي', flag: '🌍' }; // Default for 'not stated' or remote
 };
 
@@ -103,11 +111,11 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
         ),
       },
       {
-        accessorFn: (row) => row.company?.location,
+        accessorFn: (row) => getCountryInfo(row.company?.location).name,
         id: 'country',
         header: 'الدولة',
         cell: ({ row }) => {
-          const locInfo = getCountryInfo(row.getValue('country') as string);
+          const locInfo = getCountryInfo(row.original.company?.location);
           return (
             <div className="flex items-center gap-2 pr-2">
               <span className="text-xl" title={locInfo.name}>{locInfo.flag}</span>
@@ -231,24 +239,41 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
   });
 
   return (
-    <div className="w-full flex flex-col gap-4">
+    <div className="w-full flex flex-col gap-3 sm:gap-4">
       {/* Table Toolbar */}
-      <div className="flex items-center justify-between">
-        <div className="relative flex-1 max-w-sm">
-          <Search className="absolute right-3 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
-          <Input
-            placeholder="ابحث عن شركة، مجال، أو تقنية..."
-            value={globalFilter ?? ''}
-            onChange={(event) => setGlobalFilter(event.target.value)}
-            className="pl-3 pr-9 h-10 w-full bg-white border-slate-200 focus-visible:ring-blue-500 rounded-xl font-medium text-sm shadow-sm"
-          />
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-3">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 w-full sm:w-auto">
+          <div className="relative w-full sm:w-72">
+            <Search className="absolute right-3 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
+            <Input
+              placeholder="ابحث عن شركة، مجال، أو تقنية..."
+              value={globalFilter ?? ''}
+              onChange={(event) => setGlobalFilter(event.target.value)}
+              className="pl-3 pr-9 h-10 w-full bg-white border-slate-200 focus-visible:ring-blue-500 rounded-xl font-medium text-sm shadow-sm"
+            />
+          </div>
+          
+          <Select 
+            value={(table.getColumn('country')?.getFilterValue() as string) ?? 'all'} 
+            onValueChange={(val) => table.getColumn('country')?.setFilterValue(val === 'all' ? '' : val)}
+          >
+            <SelectTrigger className="h-10 w-full sm:w-[160px] bg-white border-slate-200 rounded-xl font-bold text-sm text-slate-700">
+              <SelectValue placeholder="تصفية حسب الدولة" />
+            </SelectTrigger>
+            <SelectContent className="rounded-xl border-slate-200" dir="rtl">
+              <SelectItem value="all" className="font-bold cursor-pointer">كل الدول</SelectItem>
+              {Array.from(new Set(data.map(item => getCountryInfo(item.company?.location).name))).map(country => (
+                <SelectItem key={country} value={country} className="font-bold cursor-pointer">{country}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
         
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="ml-auto h-10 font-bold border-slate-200 rounded-xl text-slate-700 hover:bg-slate-50">
+            <Button variant="outline" className="w-full sm:w-auto h-10 font-bold border-slate-200 rounded-xl text-slate-700 hover:bg-slate-50 mt-1 sm:mt-0">
               الأعمدة
-              <ChevronDown className="ml-2 size-4 text-slate-400" />
+              <ChevronDown className="mr-auto sm:ml-2 sm:mr-0 size-4 text-slate-400" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-[200px] rounded-xl border-slate-200">
@@ -288,7 +313,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
               <TableRow key={headerGroup.id} className="hover:bg-transparent border-none">
                 {headerGroup.headers.map((header) => {
                   return (
-                    <TableHead key={header.id} className="h-12 text-slate-500 font-bold text-xs uppercase tracking-wider pr-4">
+                    <TableHead key={header.id} className="h-10 sm:h-12 text-slate-500 font-bold text-[11px] sm:text-xs uppercase tracking-wider pr-3 sm:pr-4 whitespace-nowrap">
                       {header.isPlaceholder
                         ? null
                         : flexRender(
@@ -311,7 +336,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
                   className="cursor-pointer hover:bg-blue-50/50 transition-colors border-b border-slate-100 group"
                 >
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id} className="py-3 pr-4 align-middle">
+                    <TableCell key={cell.id} className="py-2.5 sm:py-3 pr-3 sm:pr-4 align-middle">
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()
@@ -335,8 +360,8 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
       </div>
 
       {/* Pagination */}
-      <div className="flex items-center justify-between px-2 pt-2">
-        <div className="flex-1 text-sm font-medium text-slate-500">
+      <div className="flex flex-col-reverse sm:flex-row items-center justify-between px-2 pt-2 gap-3 sm:gap-0">
+        <div className="flex-1 text-xs sm:text-sm font-medium text-slate-500 text-center sm:text-right">
           عرض {table.getRowModel().rows.length} من أصل {table.getFilteredRowModel().rows.length} شركة
         </div>
         <div className="flex items-center space-x-2 space-x-reverse">

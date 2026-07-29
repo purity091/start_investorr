@@ -66,7 +66,7 @@ const MINDSET_STEPS = [
 export const Home = ({ setActiveTab }: HomeProps) => {
   return (
     <main dir="rtl" className="min-h-screen bg-background pb-24 text-right">
-      <div className="app-page-shell-wide space-y-8 py-8">
+      <div className="app-page-shell-wide space-y-6 sm:space-y-8 py-6 sm:py-8">
         <section className="rounded-lg bg-background px-1 py-2">
           <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_360px] xl:items-end">
             <div className="max-w-5xl">
@@ -91,7 +91,7 @@ export const Home = ({ setActiveTab }: HomeProps) => {
               </div>
             </div>
 
-            <div className="rounded-lg bg-muted/55 p-5">
+            <div className="rounded-lg bg-muted/55 p-4 sm:p-5">
               <div className="flex items-center gap-3">
                 <span className="rounded-md bg-background p-2 text-foreground shadow-sm">
                   <BrainCircuit size={18} />
@@ -123,7 +123,7 @@ export const Home = ({ setActiveTab }: HomeProps) => {
                 key={path.title}
                 type="button"
                 onClick={() => setActiveTab(path.tab)}
-                className="group rounded-lg bg-muted/55 p-5 text-right transition hover:bg-muted"
+                className="group rounded-lg bg-muted/55 p-4 sm:p-5 text-right transition hover:bg-muted"
               >
                 <div className="flex items-start justify-between gap-4">
                   <span className="rounded-md bg-background p-3 text-foreground shadow-sm">
@@ -141,7 +141,7 @@ export const Home = ({ setActiveTab }: HomeProps) => {
           })}
         </section>
 
-        <section className="rounded-lg bg-background p-5 shadow-sm">
+        <section className="rounded-lg bg-background p-4 sm:p-5 shadow-sm">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <h2 className="text-xl font-black text-foreground">ماذا تستطيع أن تفعل داخل المنصة؟</h2>
@@ -163,7 +163,7 @@ export const Home = ({ setActiveTab }: HomeProps) => {
                   key={tool.title}
                   type="button"
                   onClick={() => setActiveTab(tool.tab)}
-                  className="rounded-lg bg-muted/55 p-4 text-right transition hover:bg-muted"
+                  className="rounded-lg bg-muted/55 p-3 sm:p-4 text-right transition hover:bg-muted"
                 >
                   <div className="flex items-start gap-3">
                     <span className="rounded-md bg-background p-2 text-foreground shadow-sm">
@@ -181,7 +181,7 @@ export const Home = ({ setActiveTab }: HomeProps) => {
         </section>
 
         <section className="grid gap-3 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
-          <div className="rounded-lg bg-primary p-5 text-primary-foreground">
+          <div className="rounded-lg bg-primary p-4 sm:p-5 text-primary-foreground">
             <h2 className="text-xl font-black">الهدف من الصفحة الرئيسية</h2>
             <p className="mt-3 text-sm font-medium leading-7 text-primary-foreground/75">
               ليست صفحة إعلانات. هي نقطة دخول للقرار: ماذا أفعل الآن؟ أين أبدأ؟ وما الأداة المناسبة لوضعي الحالي؟
@@ -192,7 +192,7 @@ export const Home = ({ setActiveTab }: HomeProps) => {
             </Button>
           </div>
 
-          <div className="rounded-lg bg-muted/55 p-5">
+          <div className="rounded-lg bg-muted/55 p-4 sm:p-5">
             <h2 className="text-xl font-black text-foreground">رحلة المستخدم المقترحة</h2>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
               {[
@@ -201,7 +201,7 @@ export const Home = ({ setActiveTab }: HomeProps) => {
                 ['أبني النموذج', 'BMC وMIT 24 Steps يحولان الفكرة إلى هيكل عمل.'],
                 ['أجهز للتسليم', 'الهوية والرادار يرفعان وضوح المشروع قبل العرض.'],
               ].map(([title, description]) => (
-                <div key={title} className="rounded-lg bg-background p-4 shadow-sm">
+                <div key={title} className="rounded-lg bg-background p-3 sm:p-4 shadow-sm">
                   <p className="text-sm font-black text-foreground">{title}</p>
                   <p className="mt-2 text-[13px] font-medium leading-6 text-muted-foreground">{description}</p>
                 </div>

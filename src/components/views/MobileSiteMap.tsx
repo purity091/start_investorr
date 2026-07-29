@@ -72,7 +72,7 @@ const groups = [
 export const MobileSiteMap: React.FC<MobileSiteMapProps> = ({ setActiveTab }) => {
   return (
     <main className="app-page-shell-wide space-y-6 text-right" dir="rtl">
-      <section className="rounded-xl bg-card p-5 shadow-sm ring-1 ring-border/60">
+      <section className="rounded-xl bg-card p-4 sm:p-5 shadow-sm ring-1 ring-border/60">
         <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl space-y-3">
             <Badge variant="secondary" className="w-fit">خريطة الموقع</Badge>
@@ -92,11 +92,11 @@ export const MobileSiteMap: React.FC<MobileSiteMapProps> = ({ setActiveTab }) =>
       <section className="grid gap-4 xl:grid-cols-2">
         {groups.map((group) => (
           <Card key={group.title} className="shadow-sm">
-            <CardHeader className="pb-3">
+            <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3">
               <CardTitle className="text-base">{group.title}</CardTitle>
               <CardDescription>{group.description}</CardDescription>
             </CardHeader>
-            <CardContent className="grid gap-2 sm:grid-cols-2">
+            <CardContent className="grid gap-2 sm:grid-cols-2 p-4 sm:p-6 pt-0 sm:pt-0">
               {group.items.map((item) => {
                 const Icon = item.icon;
                 return (

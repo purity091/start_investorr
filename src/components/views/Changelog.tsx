@@ -84,7 +84,7 @@ export const Changelog: React.FC = () => {
 
           return (
             <Card key={update.id} className="border-transparent shadow-sm">
-              <CardHeader className="p-5">
+              <CardHeader className="p-4 sm:p-5">
                 <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
                   <div className="flex items-center gap-2">
                     <span className="flex size-9 items-center justify-center rounded-lg bg-muted">
@@ -102,7 +102,7 @@ export const Changelog: React.FC = () => {
                 <CardDescription>{update.description}</CardDescription>
               </CardHeader>
               {update.points ? (
-                <CardContent className="space-y-2 p-5 pt-0">
+                <CardContent className="space-y-2 p-4 sm:p-5 pt-0 sm:pt-0">
                   {update.points.map((point) => (
                     <div key={point} className="flex items-center gap-2 rounded-lg bg-muted/45 px-4 py-3 text-sm text-foreground">
                       <CheckCircle2 className="size-4 text-emerald-600" />
@@ -116,7 +116,7 @@ export const Changelog: React.FC = () => {
         })}
       </section>
 
-      <section className="rounded-xl bg-card p-5 text-center shadow-sm">
+      <section className="rounded-xl bg-card p-4 sm:p-5 text-center shadow-sm">
         <Package className="mx-auto mb-3 size-8 text-muted-foreground" />
         <h2 className="text-lg font-semibold text-foreground">هل لديك اقتراح لتحسين الواجهة؟</h2>
         <p className="mx-auto mt-2 max-w-2xl text-sm leading-7 text-muted-foreground">

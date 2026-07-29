@@ -97,7 +97,7 @@ export const PlanComparison: React.FC = () => {
     <div dir="rtl" className="min-h-screen pb-24 lg:pb-0 font-['IBM_Plex_Sans_Arabic'] animate-in fade-in duration-700 w-full max-w-full overflow-x-hidden bg-white">
       
       {/* ─── HEADER ─── */}
-      <div className="w-full max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 pt-8 sm:pt-12 pb-12 sm:pb-20">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-10 lg:px-14 pt-8 sm:pt-12 pb-12 sm:pb-20">
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 mb-12 lg:mb-16">
           <div className="flex-1 space-y-4">
              <div className="flex items-center gap-3">
@@ -145,7 +145,7 @@ export const PlanComparison: React.FC = () => {
                  <div 
                    key={plan.id}
                    onClick={() => toggleSelection(plan.id)}
-                   className={`group relative bg-white border-2 rounded-[2.5rem] p-8 cursor-pointer transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 ${active ? 'border-blue-600 shadow-xl' : 'border-slate-100'}`}
+                   className={`group relative bg-white border-2 rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-8 cursor-pointer transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 ${active ? 'border-blue-600 shadow-xl' : 'border-slate-100'}`}
                  >
                     <div className="flex justify-between items-start mb-6">
                        <div className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all ${active ? 'bg-blue-600 text-white' : 'bg-slate-50 text-slate-400'}`}>
@@ -182,7 +182,7 @@ export const PlanComparison: React.FC = () => {
              {/* 1. KPI Comparison Grid */}
              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {selectedPlans.map(plan => (
-                  <div key={plan.id} className="bg-white rounded-[3rem] p-10 border border-slate-100 shadow-sm relative overflow-hidden group">
+                  <div key={plan.id} className="bg-white rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-10 border border-slate-100 shadow-sm relative overflow-hidden group">
                      {/* Gradient Accent */}
                      <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-bl-full translate-x-10 -translate-y-10"></div>
                      
@@ -273,7 +273,7 @@ export const PlanComparison: React.FC = () => {
                          </div>
                       </div>
 
-                      <div className="bg-white/5 rounded-[3rem] p-10 border border-white/10 backdrop-blur-xl">
+                      <div className="bg-white/5 rounded-[2rem] sm:rounded-[3rem] p-6 sm:p-10 border border-white/10 backdrop-blur-xl">
                          <div className="flex items-center gap-4 mb-8">
                             <div className="w-10 h-10 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center"><BrainCircuit size={20} /></div>
                             <h4 className="text-lg font-black text-white">توصية المحلل الذكي</h4>
@@ -309,9 +309,9 @@ export const PlanComparison: React.FC = () => {
                 <table className="w-full text-right border-collapse min-w-[700px]">
                    <thead>
                       <tr className="bg-slate-50/50">
-                         <th className="p-10 text-[11px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 min-w-[200px]">معيار التنافسية</th>
+                         <th className="p-6 sm:p-10 text-[11px] font-black text-slate-400 uppercase tracking-widest border-b border-slate-100 min-w-[200px]">معيار التنافسية</th>
                          {selectedPlans.map(p => (
-                            <th key={p.id} className="p-10 border-b border-slate-100 text-center">
+                            <th key={p.id} className="p-6 sm:p-10 border-b border-slate-100 text-center">
                                <div className="text-sm font-black text-slate-900">{p.title}</div>
                             </th>
                          ))}
@@ -324,14 +324,14 @@ export const PlanComparison: React.FC = () => {
                         { label: 'تحليل SWOT المكتمل', icon: ShieldCheck },
                       ].map((row, i) => (
                         <tr key={row.label} className="hover:bg-slate-50/30 transition-colors">
-                           <td className="p-10">
+                           <td className="p-6 sm:p-10">
                               <div className="flex items-center gap-3">
                                  <row.icon size={16} className="text-blue-500" />
                                  <span className="text-sm font-black text-slate-700">{row.label}</span>
                               </div>
                            </td>
                            {selectedPlans.map(p => (
-                              <td key={p.id} className="p-10 text-center">
+                              <td key={p.id} className="p-6 sm:p-10 text-center">
                                  {i === 0 ? (
                                     <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs font-black">جاهز بنسبة {p.progress}%</div>
                                  ) : i === 1 ? (

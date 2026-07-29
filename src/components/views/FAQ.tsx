@@ -55,7 +55,7 @@ export const FAQ: React.FC<FAQProps> = ({ embedded = false }) => {
   return (
     <section className={cn('w-full text-right', embedded ? 'space-y-5' : 'app-page-shell-wide space-y-6')} dir="rtl">
       {!embedded && (
-        <div className="rounded-xl bg-card p-5 shadow-sm ring-1 ring-border/60">
+        <div className="rounded-xl bg-card p-4 sm:p-5 shadow-sm ring-1 ring-border/60">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl space-y-3">
               <Badge variant="secondary" className="w-fit">مركز المساعدة</Badge>
@@ -80,7 +80,7 @@ export const FAQ: React.FC<FAQProps> = ({ embedded = false }) => {
             const Icon = item.icon;
             return (
               <Card key={item.title} className="shadow-sm">
-                <CardContent className="flex items-center gap-3 p-4">
+                <CardContent className="flex items-center gap-3 p-3 sm:p-4">
                   <div className="flex size-9 items-center justify-center rounded-lg bg-muted text-foreground">
                     <Icon className="size-4" />
                   </div>
@@ -96,7 +96,7 @@ export const FAQ: React.FC<FAQProps> = ({ embedded = false }) => {
       )}
 
       <Card className="shadow-sm">
-        <CardHeader className="pb-3">
+        <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3">
           <div className="flex items-center gap-2">
             <HelpCircle className="size-5 text-muted-foreground" />
             <div>
@@ -105,7 +105,7 @@ export const FAQ: React.FC<FAQProps> = ({ embedded = false }) => {
             </div>
           </div>
         </CardHeader>
-        <CardContent className="space-y-2">
+        <CardContent className="space-y-2 p-3 sm:p-6 pt-0 sm:pt-0">
           {faqs.map((faq, index) => (
             <Collapsible key={faq.question} open={openId === index} onOpenChange={() => setOpenId(openId === index ? -1 : index)}>
               <CollapsibleTrigger asChild>

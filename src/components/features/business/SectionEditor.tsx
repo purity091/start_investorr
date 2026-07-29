@@ -83,7 +83,7 @@ export const SectionEditor: React.FC<SectionEditorProps> = ({
       
       {/* Header Area */}
       <div onClick={onToggle} className="flex flex-col cursor-pointer group">
-        <div className="flex items-center justify-between p-5">
+        <div className="flex items-center justify-between p-4 sm:p-5">
             <div className="flex items-center gap-4">
               <div className={`w-12 h-12 rounded-2xl flex items-center justify-center transition-all duration-300 ${
                   section.isCompleted ? 'bg-success text-white shadow-lg shadow-green-100' : 'bg-gray-50 text-gray-300'
@@ -147,13 +147,13 @@ export const SectionEditor: React.FC<SectionEditorProps> = ({
 
       {/* Content Area */}
       {isOpen && (
-        <div className="px-6 pb-8 pt-0 animate-in fade-in slide-in-from-top-4 duration-500">
+        <div className="px-4 sm:px-6 pb-6 sm:pb-8 pt-0 animate-in fade-in slide-in-from-top-4 duration-500">
           <div className="h-px w-full bg-gradient-to-l from-transparent via-gray-100 to-transparent mb-8"></div>
           
           <div className="relative">
             {!editMode ? (
               <div className="group relative">
-                 <div className="prose prose-sm max-w-none text-gray-600 leading-loose whitespace-pre-line min-h-[120px] p-8 rounded-[2rem] bg-gray-50/40 border border-gray-100/50 hover:bg-white hover:shadow-xl hover:shadow-gray-100 transition-all duration-300 font-medium text-[15px]">
+                 <div className="prose prose-sm max-w-none text-gray-600 leading-loose whitespace-pre-line min-h-[120px] p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] bg-gray-50/40 border border-gray-100/50 hover:bg-white hover:shadow-xl hover:shadow-gray-100 transition-all duration-300 font-medium text-[15px]">
                     {localContent || <span className="text-gray-300 italic font-bold text-center block py-4">ابدأ بكتابة مسودة أو دع الذكاء الاصطناعي يقترح عليك محتوى احترافياً...</span>}
                  </div>
                  {!isReadOnly && (
@@ -171,7 +171,7 @@ export const SectionEditor: React.FC<SectionEditorProps> = ({
                     <textarea
                         value={localContent}
                         onChange={(e) => setLocalContent(e.target.value)}
-                        className="w-full min-h-[300px] p-8 rounded-[2rem] border-2 border-primary-100 focus:border-primary-500 focus:ring-8 focus:ring-primary-50/50 transition-all outline-none text-gray-700 leading-loose resize-y font-medium text-[15px] shadow-inner bg-white"
+                        className="w-full min-h-[300px] p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] border-2 border-primary-100 focus:border-primary-500 focus:ring-8 focus:ring-primary-50/50 transition-all outline-none text-gray-700 leading-loose resize-y font-medium text-[15px] shadow-inner bg-white"
                         placeholder="اكتب تفاصيل هذا القسم باحترافية..."
                         autoFocus
                     />
@@ -199,7 +199,7 @@ export const SectionEditor: React.FC<SectionEditorProps> = ({
           </div>
 
           {/* New Enhanced Quality Scoreboard */}
-          <div className="mt-12 p-8 rounded-[2.5rem] bg-[#FDFDFF] border border-gray-100 shadow-inner">
+          <div className="mt-8 sm:mt-12 p-4 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] bg-[#FDFDFF] border border-gray-100 shadow-inner">
             <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-2">
                     <div className="p-2 bg-primary-50 text-primary-600 rounded-lg">
@@ -214,7 +214,7 @@ export const SectionEditor: React.FC<SectionEditorProps> = ({
 
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
                 {/* Enhanced AI Score Card */}
-                <div className="relative p-6 rounded-3xl bg-white border border-purple-50 shadow-sm group overflow-hidden">
+                <div className="relative p-4 sm:p-6 rounded-[1.5rem] sm:rounded-3xl bg-white border border-purple-50 shadow-sm group overflow-hidden">
                     <div className="absolute -top-10 -right-10 w-32 h-32 bg-purple-50 rounded-full opacity-40 group-hover:scale-150 transition-transform duration-1000"></div>
                     
                     <div className="relative z-10">
@@ -253,7 +253,7 @@ export const SectionEditor: React.FC<SectionEditorProps> = ({
                 </div>
 
                 {/* Enhanced Human Score Card */}
-                <div className="relative p-6 rounded-3xl bg-white border border-blue-50 shadow-sm group overflow-hidden">
+                <div className="relative p-4 sm:p-6 rounded-[1.5rem] sm:rounded-3xl bg-white border border-blue-50 shadow-sm group overflow-hidden">
                     <div className="absolute -top-10 -right-10 w-32 h-32 bg-blue-50 rounded-full opacity-40 group-hover:scale-150 transition-transform duration-1000"></div>
                     
                     <div className="relative z-10">

@@ -85,7 +85,7 @@ export const Tasks: React.FC = () => {
   };
 
   return (
-    <div className="app-page-shell-wide space-y-6 py-6" dir="rtl">
+    <div className="app-page-shell-wide space-y-4 sm:space-y-6 py-4 sm:py-6" dir="rtl">
       <section className="rounded-xl bg-card p-4 shadow-sm sm:p-5">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="min-w-0 space-y-2">
@@ -135,12 +135,12 @@ export const Tasks: React.FC = () => {
         </div>
       </section>
 
-      <Card className="border-transparent shadow-sm">
-        <CardHeader className="p-5">
-          <CardTitle>قائمة المهام</CardTitle>
-          <CardDescription>جدول مضغوط وواضح بدلاً من بطاقات ضخمة.</CardDescription>
+      <Card className="border-transparent shadow-sm overflow-hidden">
+        <CardHeader className="p-4 sm:p-5 pb-3 sm:pb-3">
+          <CardTitle className="text-lg sm:text-xl">قائمة المهام</CardTitle>
+          <CardDescription className="text-xs sm:text-sm">جدول مضغوط وواضح بدلاً من بطاقات ضخمة.</CardDescription>
         </CardHeader>
-        <CardContent className="p-5 pt-0">
+        <CardContent className="p-4 sm:p-5 pt-0 overflow-x-auto">
           {filteredTasks.length === 0 ? (
             <div className="flex min-h-56 flex-col items-center justify-center rounded-lg bg-muted/45 p-6 text-center">
               <ListTodo className="mb-3 size-9 text-muted-foreground" />
@@ -200,7 +200,7 @@ export const Tasks: React.FC = () => {
         </CardContent>
       </Card>
 
-      <section className="rounded-xl bg-card p-5 shadow-sm">
+      <section className="rounded-xl bg-card p-4 sm:p-5 shadow-sm">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-3">
             <span className="flex size-10 items-center justify-center rounded-lg bg-muted">
@@ -221,7 +221,7 @@ export const Tasks: React.FC = () => {
 function Metric({ label, value }: { label: string; value: number }) {
   return (
     <Card className="border-transparent shadow-sm">
-      <CardContent className="p-4">
+      <CardContent className="p-3 sm:p-4">
         <p className="text-xs font-medium text-muted-foreground">{label}</p>
         <p className="mt-2 text-xl font-semibold text-foreground">{value}</p>
       </CardContent>

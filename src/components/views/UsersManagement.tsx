@@ -107,7 +107,7 @@ export const UsersManagement: React.FC = () => {
 
   return (
     <main className="app-page-shell-wide space-y-6 text-right" dir="rtl">
-      <section className="rounded-xl bg-card p-5 shadow-sm ring-1 ring-border/60">
+      <section className="rounded-xl bg-card p-4 sm:p-5 shadow-sm ring-1 ring-border/60">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl space-y-3">
             <Badge variant="secondary" className="w-fit">لوحة الإدارة</Badge>
@@ -183,7 +183,7 @@ export const UsersManagement: React.FC = () => {
           const Icon = stat.icon;
           return (
             <Card key={stat.label} className="shadow-sm">
-              <CardContent className="flex items-center justify-between p-4">
+              <CardContent className="flex items-center justify-between p-3 sm:p-4">
                 <div>
                   <p className="text-xs text-muted-foreground">{stat.label}</p>
                   <p className="mt-1 text-2xl font-semibold text-foreground">{stat.value}</p>
@@ -198,7 +198,7 @@ export const UsersManagement: React.FC = () => {
       </section>
 
       <Card className="shadow-sm">
-        <CardHeader className="pb-3">
+        <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3">
           <div className="flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
             <div>
               <CardTitle>جدول المستخدمين</CardTitle>
@@ -248,7 +248,7 @@ export const UsersManagement: React.FC = () => {
             </div>
           </div>
         </CardHeader>
-        <CardContent>
+        <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0 overflow-x-auto">
           <Table>
             <TableHeader>
               <TableRow>

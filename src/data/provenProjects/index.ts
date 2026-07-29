@@ -8,8 +8,10 @@ import { tithelyProject } from './tithely';
 import { bannerbearProject } from './bannerbear';
 import { shipfastProject } from './shipfast';
 import { carrdProject } from './carrd';
+import { sallaProject } from './salla';
 
 export const PROVEN_PROJECTS = [
+  sallaProject,
   dashpProject,
   supademoProject,
   formulaBotProject,

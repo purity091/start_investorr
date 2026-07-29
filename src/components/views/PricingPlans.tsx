@@ -72,8 +72,8 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
   const usagePercentage = 62;
 
   return (
-    <div className="app-page-shell-wide space-y-6 py-6" dir="rtl">
-      <section className="rounded-2xl border border-border bg-card px-4 py-5 shadow-sm sm:px-6">
+    <div className="app-page-shell-wide space-y-4 sm:space-y-6 py-4 sm:py-6" dir="rtl">
+      <section className="rounded-2xl border border-border bg-card px-4 py-4 sm:py-5 shadow-sm sm:px-6">
         <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_320px] xl:items-start">
           <div className="space-y-4 text-right">
             <div className="flex flex-wrap items-center justify-start gap-2">
@@ -125,8 +125,8 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
               ملخص واضح لحالة الباقة، الرصيد، وتجهيزات الدفع والتجديد.
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-5 pt-0">
-            <div className="rounded-xl border border-border/70 bg-muted/35 p-4 text-right">
+          <CardContent className="space-y-5 p-4 sm:p-6 pt-0 sm:pt-0">
+            <div className="rounded-xl border border-border/70 bg-muted/35 p-3 sm:p-4 text-right">
               <Badge variant="secondary">اشتراك نشط</Badge>
               <h2 className="mt-3 text-2xl font-semibold text-foreground">باقة الاحترافي</h2>
               <p className="mt-2 text-sm leading-7 text-muted-foreground">
@@ -158,8 +158,8 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
             <CardTitle>سجل الفواتير</CardTitle>
             <CardDescription>آخر العمليات المالية الخاصة باشتراك المستخدم.</CardDescription>
           </CardHeader>
-          <CardContent className="pt-0">
-            <div className="overflow-x-auto">
+          <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0 overflow-x-auto">
+            <div className="min-w-0">
               <Table dir="rtl">
                 <TableHeader>
                   <TableRow>
@@ -229,7 +229,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
                 key={plan.name}
                 className={plan.featured ? 'border-primary shadow-sm' : 'border-border/70 shadow-sm'}
               >
-                <CardHeader className="p-5 text-right">
+                <CardHeader className="p-4 sm:p-5 text-right">
                   <div className="mb-4 flex items-center justify-between">
                     <span className="flex size-10 items-center justify-center rounded-lg bg-muted">
                       <Icon className="size-5 text-foreground" />
@@ -239,7 +239,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
                   <CardTitle>{plan.name}</CardTitle>
                   <CardDescription>{plan.description}</CardDescription>
                 </CardHeader>
-                <CardContent className="flex h-full flex-col p-5 pt-0 text-right">
+                <CardContent className="flex h-full flex-col p-4 sm:p-5 pt-0 sm:pt-0 text-right">
                   <div className="mb-5">
                     <span className="text-3xl font-semibold text-foreground">{price}</span>
                     <span className="mr-1 text-xs text-muted-foreground">
@@ -284,7 +284,7 @@ function Metric({
 }) {
   return (
     <Card className="border-border/70 shadow-sm">
-      <CardContent className="p-4 text-right">
+      <CardContent className="p-3 sm:p-4 text-right">
         <div className="mb-3 flex items-center justify-between gap-3">
           <span className="flex size-9 items-center justify-center rounded-lg bg-muted">
             <Icon className="size-4 text-muted-foreground" />
