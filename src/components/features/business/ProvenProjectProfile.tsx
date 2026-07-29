@@ -87,39 +87,56 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project, on
   return (
     <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-8 sm:px-6 lg:px-8 font-sans pb-32">
       
-      {/* Topbar */}
-      <div className="flex items-center justify-between border-b border-border/40 pb-4">
-        <button onClick={onBack} className="flex items-center gap-2 text-sm font-bold text-muted-foreground hover:text-foreground transition-colors">
-          <ArrowRight className="size-4" />
-          العودة للقائمة
-        </button>
-        <div className="flex gap-2">
-          <a href={project.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-xs font-bold px-4 py-2 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-colors shadow-sm">
-            الموقع الرسمي
-            <ExternalLink className="size-3" />
-          </a>
-        </div>
-      </div>
-
-      {/* Hero Section (Vibrant & Colorful) */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-50 via-white to-blue-50 border border-indigo-100 p-6 md:p-8 shadow-sm">
+      {/* Integrated Unified Header / Hero Section */}
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-50/80 via-white to-blue-50/80 border border-indigo-100/80 p-6 md:p-8 shadow-sm flex flex-col gap-6">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-100/40 via-transparent to-transparent pointer-events-none" />
-        <div className="relative z-10 flex flex-col gap-3">
-          <Badge variant="secondary" className="w-fit bg-indigo-100 text-indigo-700 hover:bg-indigo-200 border-0 px-2.5 py-0.5 font-bold text-[11px]">
-            {project.category}
-          </Badge>
-          <h1 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight leading-tight">{project.name}</h1>
-          <h2 className="text-lg md:text-xl font-bold text-slate-700">{project.headline}</h2>
-          <p className="text-sm md:text-base text-slate-600 max-w-4xl leading-relaxed mt-1 font-medium">{project.summary}</p>
+        
+        {/* Top Control Bar */}
+        <div className="relative z-10 flex items-center justify-between gap-4 border-b border-indigo-100/80 pb-4">
+          <button 
+            onClick={onBack} 
+            className="flex items-center gap-2 text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors"
+          >
+            <ArrowRight className="size-4" />
+            العودة للقائمة
+          </button>
+          
+          <div className="flex items-center gap-3">
+            <Badge variant="secondary" className="bg-indigo-100 text-indigo-700 hover:bg-indigo-200 border-0 px-3 py-1 font-bold text-xs">
+              {project.category}
+            </Badge>
+            <a 
+              href={project.website} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-2 text-xs font-bold px-3.5 py-1.5 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-colors shadow-sm"
+            >
+              الموقع الرسمي
+              <ExternalLink className="size-3" />
+            </a>
+          </div>
         </div>
-      </div>
 
-      {/* Alert Notice */}
-      <div className="p-4 rounded-xl border border-amber-200 bg-amber-50/80 text-amber-900 text-sm flex items-start gap-3 shadow-sm">
-        <Info className="size-5 text-amber-600 shrink-0 mt-0.5" />
-        <p className="leading-relaxed">
-          <strong className="font-bold">طبيعة البيانات:</strong> هذه الصفحة تحتوي على معلومات وأرقام عامة وواقعية وُثقت في مقابلات ودراسات حالة. لا تحتوي على بيانات خاصة أو تسريبات غير قانونية. الأرقام تُمثل فترة إعداد دراسة الحالة وقد تتغير بمرور الوقت.
-        </p>
+        {/* Hero Body Content */}
+        <div className="relative z-10 flex flex-col gap-2.5">
+          <h1 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight leading-tight">
+            {project.name}
+          </h1>
+          <h2 className="text-lg md:text-xl font-bold text-indigo-900/80">
+            {project.headline}
+          </h2>
+          <p className="text-sm md:text-base text-slate-600 max-w-4xl leading-relaxed font-medium mt-1">
+            {project.summary}
+          </p>
+        </div>
+
+        {/* Integrated Alert Banner */}
+        <div className="relative z-10 p-3.5 rounded-xl border border-amber-200/80 bg-amber-50/90 text-amber-900 text-xs md:text-sm flex items-start gap-2.5 shadow-2xs mt-1">
+          <Info className="size-4 text-amber-600 shrink-0 mt-0.5" />
+          <p className="leading-relaxed font-medium">
+            <strong className="font-bold text-amber-950">طبيعة البيانات:</strong> هذه الصفحة تحتوي على معلومات وأرقام عامة وواقعية وُثقت في مقابلات ودراسات حالة. لا تحتوي على بيانات خاصة أو تسريبات غير قانونية. الأرقام تُمثل فترة إعداد دراسة الحالة وقد تتغير بمرور الوقت.
+          </p>
+        </div>
       </div>
 
       {/* Layout Grid */}
