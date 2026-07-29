@@ -1,0 +1,91 @@
+{
+  "order": 10,
+  "slug": "jawbone",
+  "name": "Jawbone",
+  "domain": "jawbone.com",
+  "website": "https://en.wikipedia.org/wiki/Jawbone_(company)",
+  "category": "Hardware / أجهزة قابلة للارتداء",
+  "headline": "صناعة الأجهزة القابلة للارتداء والسماعات الذكية",
+  "summary": "واحدة من قصص الهبوط الأكثر دراماتيكية في وادي السيليكون. بلغت قيمتها 3.2 مليار دولار وجمعت تمويلات بأكثر من 900 مليون دولار. فشلت بسبب منافسة Fitbit و Apple، وضعف جودة المنتجات، والدعاوى القضائية المتبادلة، لتتم تصفيتها في 2017.",
+  "directory_snapshot": {
+    "monthly_revenue": "غير معلن",
+    "monthly_traffic": "0 /mo",
+    "revenue_per_visitor": "$0.00 /visitor",
+    "solopreneur_score": "0.0",
+    "idea_label": "أساور تتبع اللياقة"
+  },
+  "company": {
+    "business_model": "بيع الأجهزة الإلكترونية (Hardware)",
+    "customer_type": "مستهلكين (B2C)",
+    "founder": "Hosain Rahman & Alexander Asseily",
+    "founder_role": "مؤسسون",
+    "founder_social": "N/A",
+    "founders_count": "2",
+    "employees": "المئات",
+    "started": "1999",
+    "location": "سان فرانسيسكو، الولايات المتحدة",
+    "funding": "أكثر من 900 مليون دولار",
+    "profitability": "مغلق",
+    "public_revenue_claim": "مغلق"
+  },
+  "problem_and_product": [
+    "بدأت كسماعات بلوتوث عسكرية ثم تحولت لمستهلكي أساور تتبع اللياقة البدنية (Jawbone UP)."
+  ],
+  "origin_story": [
+    "كانت من الرواد في التصميم الجميل للأجهزة القابلة للارتداء (بفضل المصمم إيف بيهار)."
+  ],
+  "build_and_launch": [
+    "إطلاق سوار (UP) كان كارثياً بسبب مشاكل تقنية هائلة أدت إلى سحب المنتج من السوق (Recall) ورد الأموال."
+  ],
+  "costs_and_operations": [
+    "تعقيد سلسلة التوريد (Supply Chain) ومعدلات إرجاع (Return Rates) مرتفعة جداً أحرقت السيولة النقدية.",
+    "دعاوى قضائية طويلة ومكلفة مع المنافس Fitbit."
+  ],
+  "monetization": [
+    "هوامش الربح تآكلت بسبب المنتجات المعيبة والمنافسة الشرسة في التسعير."
+  ],
+  "growth": [
+    "تراجعت حصتها السوقية بسرعة بعد دخول أبل (Apple Watch) وفيت بيت (Fitbit) للساحة بميزات أفضل وموثوقية أعلى."
+  ],
+  "tools": [
+    "Hardware design",
+    "Bluetooth tech"
+  ],
+  "revenue_timeline": [
+    {
+      "date": "2014",
+      "amount": "تقييم 3.2B$",
+      "type": "ذروة",
+      "note": "أعلى تقييم للشركة قبل بدء الانهيار."
+    },
+    {
+      "date": "2017",
+      "amount": "0",
+      "type": "تصفية",
+      "note": "تصفية أصول الشركة وبدء كيان جديد للبرمجيات الطبية (Jawbone Health)."
+    }
+  ],
+  "lessons": [
+    "صناعة الهاردوير صعبة جداً (Hardware is hard)؛ عيب مصنعي واحد في المنتج يمكن أن يدمر سمعتك ويحرق ملايين الدولارات.",
+    "التصميم الرائع لا يعوض عن منتج غير موثوق به (Reliability) يفشل في أداء وظيفته.",
+    "القدرة على جمع التبرعات لا تعني بناء عمل تجاري مستدام ومربح."
+  ],
+  "sources": [
+    {
+      "label": "Business Insider",
+      "url": "https://www.businessinsider.com",
+      "coverage": "تحقيقات حول الانهيار"
+    }
+  ],
+  "data_quality": [
+    "مبني على أحداث تاريخية وتقارير استقصائية."
+  ],
+  "research_metadata": {
+    "researched_on": "2026-07-29",
+    "scope": "دراسة حالة",
+    "source_method": "صحافة",
+    "private_backend_data_included": false,
+    "copyright_note": "تحليل الأسباب"
+  },
+  "id": "jawbone"
+}

@@ -1,0 +1,317 @@
+[
+  {
+    "id": "salla",
+    "slug": "salla",
+    "name": "سلة (Salla)",
+    "headline": "منصة التجارة الإلكترونية الرائدة لتمكين التجار في المملكة العربية السعودية",
+    "category": "B2B SaaS / التجارة الإلكترونية (E-commerce)",
+    "company": {
+      "location": "مكة المكرمة، المملكة العربية السعودية",
+      "business_model": "اشتراكات SaaS شهرية/سنوية + رسوم مدفوعات إلكترونية"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "غير معلن (بملايين الدولارات)",
+      "monthly_traffic": "15M+ /mo"
+    }
+  },
+  {
+    "id": "dashp",
+    "slug": "dashp",
+    "name": "Dashp",
+    "headline": "برمجية لتتبع العمولات والأداء لفرق مبيعات مكافحة الحشرات",
+    "category": "B2B SaaS / عمليات المبيعات",
+    "company": {
+      "location": "غير مذكور",
+      "business_model": "اشتراكات B2B متكررة تعتمد على عدد المستخدمين (Seats)"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "$8.33K /mo",
+      "monthly_traffic": "1K /mo"
+    }
+  },
+  {
+    "id": "supademo",
+    "slug": "supademo",
+    "name": "Supademo",
+    "headline": "منصة مدعومة بالذكاء الاصطناعي لإنشاء عروض منتجات تفاعلية تحمل هويتك التجارية",
+    "category": "AI SaaS / عروض المنتجات التفاعلية",
+    "company": {
+      "location": "غير مذكور في النظرة العامة",
+      "business_model": "اشتراكات SaaS متكررة بالإضافة إلى رسوم إعداد أو تهيئة"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "$250K /mo",
+      "monthly_traffic": "60K /mo"
+    }
+  },
+  {
+    "id": "formula-bot",
+    "slug": "formula-bot",
+    "name": "Formula Bot",
+    "headline": "أداة ذكاء اصطناعي لإنشاء وشرح معادلات Excel و Google Sheets",
+    "category": "AI SaaS / إنتاجية الجداول",
+    "company": {
+      "location": "أورلاندو، فلوريدا",
+      "business_model": "SaaS مجاني محدود مع اشتراكات متكررة (Freemium)"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "$23K /mo",
+      "monthly_traffic": "غير متاح"
+    }
+  },
+  {
+    "id": "convertkit",
+    "slug": "convertkit",
+    "name": "ConvertKit",
+    "headline": "أدوات التسويق عبر البريد الإلكتروني، الأتمتة، وتحقيق الدخل لصناع المحتوى",
+    "category": "SaaS / التسويق عبر البريد الإلكتروني لصناع المحتوى",
+    "company": {
+      "location": "غير مطلوب حسب اللمحة المذكورة",
+      "business_model": "اشتراكات SaaS متكررة متعددة المستويات"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "غير متوفر في بطاقة الدليل",
+      "monthly_traffic": "7.5M /mo"
+    }
+  },
+  {
+    "id": "customer-io",
+    "slug": "customer-io",
+    "name": "Customer.io",
+    "headline": "الرسائل القائمة على السلوك وأتمتة رحلة العميل للمنتجات الرقمية",
+    "category": "B2B SaaS / أتمتة رسائل العملاء",
+    "company": {
+      "location": "شملت خلفية المؤسس سنغافورة ومعهد رينسيلار؛ موقع الشركة لم يؤكد هنا",
+      "business_model": "اشتراكات SaaS B2B متكررة"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "غير متوفر في بطاقة الدليل",
+      "monthly_traffic": "336K /mo"
+    }
+  },
+  {
+    "id": "outseta",
+    "slug": "outseta",
+    "name": "Outseta",
+    "headline": "منصة تشغيل الكل في واحد لشركات العضويات والاشتراكات",
+    "category": "SaaS / عمليات الشركات الناشئة المتكاملة",
+    "company": {
+      "location": "غير مذكور في النظرة العامة المذكورة",
+      "business_model": "اشتراكات SaaS متكررة"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "$83.3K /mo",
+      "monthly_traffic": "119K /mo"
+    }
+  },
+  {
+    "id": "tithely",
+    "slug": "tithely",
+    "name": "Tithe.ly",
+    "headline": "منصة رقمية للتبرعات والمشاركة المجتمعية للكنائس",
+    "category": "Fintech SaaS / التبرعات للكنائس",
+    "company": {
+      "location": "الإطلاق الأولي كان في جماعة دين في أتلانتا",
+      "business_model": "تكنولوجيا مالية قائمة على المعاملات والمدفوعات بالإضافة إلى خدمات برمجية أوسع"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "غير متوفر في بطاقة الدليل",
+      "monthly_traffic": "250K /mo"
+    }
+  },
+  {
+    "id": "bannerbear",
+    "slug": "bannerbear",
+    "name": "Bannerbear",
+    "headline": "واجهة برمجة تطبيقات (API) لإنشاء الصور والفيديو تلقائياً من القوالب",
+    "category": "Developer SaaS / واجهة برمجة تطبيقات للأتمتة",
+    "company": {
+      "location": "غير مذكور في النظرة العامة",
+      "business_model": "اشتراكات متكررة، خطط حسب استخدام API، وعروض الدفع لمرة واحدة تاريخياً"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "$50K /mo",
+      "monthly_traffic": "غير متاح"
+    }
+  },
+  {
+    "id": "shipfast",
+    "slug": "shipfast",
+    "name": "ShipFast",
+    "headline": "قالب Next.js جاهز لإطلاق منتجات SaaS بشكل أسرع",
+    "category": "Developer product / قوالب برمجية (SaaS boilerplate)",
+    "company": {
+      "location": "غير مذكور في النظرة العامة",
+      "business_model": "شراء لمرة واحدة مع وصول وتحديثات مدى الحياة"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "$64.4K /mo",
+      "monthly_traffic": "342K /mo"
+    }
+  },
+  {
+    "id": "carrd",
+    "slug": "carrd",
+    "name": "Carrd",
+    "headline": "منشئ مواقع بسيط ومتجاوب للصفحة الواحدة",
+    "category": "SaaS / بناء مواقع الصفحة الواحدة",
+    "company": {
+      "location": "غير مذكور في النظرة العامة",
+      "business_model": "اشتراكات متكررة (Freemium) مع خيارات دفع لمرة واحدة/مدى الحياة في الماضي"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "$30K /mo",
+      "monthly_traffic": "17.5M /mo"
+    }
+  },
+  {
+    "id": "foodics",
+    "slug": "foodics",
+    "name": "فودكس (Foodics)",
+    "headline": "نظام شامل لإدارة المطاعم ونقاط البيع السحابية",
+    "category": "B2B SaaS / نقاط البيع للمطاعم",
+    "company": {
+      "location": "الرياض، المملكة العربية السعودية",
+      "business_model": "اشتراكات SaaS + رسوم المدفوعات + الأجهزة"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "غير معلن (عشرات الملايين)",
+      "monthly_traffic": "1M+ /mo"
+    }
+  },
+  {
+    "id": "tamara",
+    "slug": "tamara",
+    "name": "تمارا (Tamara)",
+    "headline": "منصة الدفع المرنة التي غيرت سلوك المستهلك في الخليج",
+    "category": "Fintech / اشتر الآن وادفع لاحقاً (BNPL)",
+    "company": {
+      "location": "الرياض، المملكة العربية السعودية",
+      "business_model": "رسوم وعمولات تُحصّل من التجار (B2B2C)"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "غير معلن",
+      "monthly_traffic": "5M+ /mo"
+    }
+  },
+  {
+    "id": "swvl",
+    "slug": "swvl",
+    "name": "سويفل (Swvl)",
+    "headline": "منصة النقل التشاركي بالحافلات التي وصلت لناسداك",
+    "category": "Mobility / النقل التشاركي",
+    "company": {
+      "location": "تأسست بمصر (مقرها الحالي بدبي)",
+      "business_model": "حجز رحلات أفراد (B2C) + حلول نقل للشركات (B2B) + منصة SaaS لنقل المشغلين"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "ملايين الدولارات شهرياً",
+      "monthly_traffic": "2M+ /mo"
+    }
+  },
+  {
+    "id": "fawry",
+    "slug": "fawry",
+    "name": "فوري (Fawry)",
+    "headline": "شبكة الدفع الإلكتروني الأكبر في مصر وتجربة الشمول المالي",
+    "category": "Fintech / المدفوعات",
+    "company": {
+      "location": "القاهرة، مصر",
+      "business_model": "عمولات على العمليات المالية والخدمات المصرفية المفتوحة (B2B & B2C)"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "عشرات الملايين من الدولارات",
+      "monthly_traffic": "10M+ /mo"
+    }
+  },
+  {
+    "id": "anghami",
+    "slug": "anghami",
+    "name": "أنغامي (Anghami)",
+    "headline": "منصة البث الموسيقي الأولى في العالم العربي",
+    "category": "Media & Entertainment / البث الموسيقي",
+    "company": {
+      "location": "تأسست في بيروت، وتتخذ من أبوظبي مقراً رئيسياً لها",
+      "business_model": "Freemium (إعلانات) + اشتراكات شهرية مدفوعة (Premium)"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "ملايين الدولارات",
+      "monthly_traffic": "25M+ /mo"
+    }
+  },
+  {
+    "id": "gumroad",
+    "slug": "gumroad",
+    "name": "جم رود (Gumroad)",
+    "headline": "منصة التجارة الإلكترونية الأبسط لصناع المحتوى",
+    "category": "Creator Economy / بيع المنتجات الرقمية",
+    "company": {
+      "location": "الولايات المتحدة (تعمل بشكل موزع بالكامل)",
+      "business_model": "اقتطاع نسبة ثابتة (Flat Fee) من كل عملية بيع (10% + رسوم بنكية)"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "~$1.5M /mo",
+      "monthly_traffic": "25M+ /mo"
+    }
+  },
+  {
+    "id": "lemlist",
+    "slug": "lemlist",
+    "name": "ليمليست (lemlist)",
+    "headline": "أداة إرسال البريد البارد الأولى المخصصة شخصياً (Cold Email)",
+    "category": "B2B SaaS / المبيعات والتسويق",
+    "company": {
+      "location": "فرنسا",
+      "business_model": "اشتراكات SaaS شهرية وسنوية (B2B)"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "$2M+ /mo",
+      "monthly_traffic": "1.5M+ /mo"
+    }
+  },
+  {
+    "id": "beehiiv",
+    "slug": "beehiiv",
+    "name": "بي هايف (beehiiv)",
+    "headline": "المنصة العصرية لإنشاء ونمو النشرات البريدية",
+    "category": "Creator Economy / النشرات البريدية",
+    "company": {
+      "location": "نيويورك، الولايات المتحدة",
+      "business_model": "اشتراكات SaaS شهرية (Flat Fee) للمبدعين بدون اقتطاع نسبة من أرباحهم"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "ملايين الدولارات سنوياً",
+      "monthly_traffic": "15M+ /mo"
+    }
+  },
+  {
+    "id": "midjourney",
+    "slug": "midjourney",
+    "name": "ميدجورني (Midjourney)",
+    "headline": "مختبر الذكاء الاصطناعي المستقل الذي أحدث ثورة في الفن البصري",
+    "category": "AI / توليد الصور المتقدم",
+    "company": {
+      "location": "سان فرانسيسكو، الولايات المتحدة",
+      "business_model": "اشتراكات شهرية/سنوية لتوليد الصور (SaaS)"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "$16M+ /mo",
+      "monthly_traffic": "30M+ /mo"
+    }
+  },
+  {
+    "id": "plausible",
+    "slug": "plausible",
+    "name": "بلاوسبل (Plausible Analytics)",
+    "headline": "البديل الخفيف الذي يحترم الخصوصية لـ Google Analytics",
+    "category": "B2B SaaS / تحليلات الويب",
+    "company": {
+      "location": "العمل عن بعد (Remote)",
+      "business_model": "اشتراكات شهرية مدفوعة حسب عدد زيارات المواقع + التبرعات"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "$100K+ /mo",
+      "monthly_traffic": "1M+ /mo"
+    }
+  }
+]

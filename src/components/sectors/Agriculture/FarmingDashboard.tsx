@@ -1,7 +1,6 @@
 import React from 'react';
 import SectorDashboardTemplate, { SectorDashboardProps } from '../../features/dashboard/SectorDashboardTemplate';
 import { Sprout, Globe, BarChart3, TrendingUp, ShieldCheck, Zap, Leaf, Truck } from 'lucide-react';
-import { AGRICULTURE_OPPORTUNITIES } from '../../data/agricultureOpportunities';
 
 const config: SectorDashboardProps = {
   title: 'قطاع الزراعة',

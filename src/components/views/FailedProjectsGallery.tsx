@@ -1,32 +1,67 @@
 import React, { useState, useEffect } from 'react';
 import { Badge } from '@/components/ui/Badge';
-import { FAILED_PROJECTS } from '@/data/failedProjects';
 import { ProvenProjectProfile } from '@/components/features/business/ProvenProjectProfile';
 import { ProvenProjectsTable } from '@/components/features/business/ProvenProjectsTable';
+import { Loader2 } from 'lucide-react';
 
 export const FailedProjectsGallery: React.FC = () => {
+  const [projectsList, setProjectsList] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const projectId = params.get('project');
-    if (projectId) {
-      const project = FAILED_PROJECTS.find(p => p.slug === projectId || (p as any).id === projectId);
-      if (project) {
-        setSelectedProject(project);
+    const loadData = async () => {
+      try {
+        setIsLoading(true);
+        // Load the index of all failed projects
+        const res = await fetch('/data/failed-projects/index.json');
+        const list = await res.json();
+        setProjectsList(list);
+
+        // Check if there is a specific project in the URL
+        const params = new URLSearchParams(window.location.search);
+        const projectId = params.get('project');
+        
+        if (projectId) {
+          const detailRes = await fetch(`/data/failed-projects/${projectId}.json`);
+          if (detailRes.ok) {
+            const projectDetails = await detailRes.json();
+            setSelectedProject(projectDetails);
+          }
+        }
+      } catch (err) {
+        console.error("Failed to load failed projects", err);
+      } finally {
+        setIsLoading(false);
       }
-    }
+    };
+    
+    loadData();
   }, []);
 
-  const handleProjectSelect = (project: any | null) => {
-    setSelectedProject(project);
-    const url = new URL(window.location.href);
-    if (project) {
-      url.searchParams.set('project', project.slug || project.id);
-    } else {
+  const handleProjectSelect = async (project: any | null) => {
+    if (!project) {
+      setSelectedProject(null);
+      const url = new URL(window.location.href);
       url.searchParams.delete('project');
+      window.history.pushState({}, '', url.toString());
+      return;
     }
-    window.history.pushState({}, '', url.toString());
+
+    try {
+      const projectId = project.slug || project.id;
+      const detailRes = await fetch(`/data/failed-projects/${projectId}.json`);
+      if (detailRes.ok) {
+        const fullProject = await detailRes.json();
+        setSelectedProject(fullProject);
+        
+        const url = new URL(window.location.href);
+        url.searchParams.set('project', projectId);
+        window.history.pushState({}, '', url.toString());
+      }
+    } catch (err) {
+      console.error("Failed to fetch failed project details", err);
+    }
   };
 
   if (selectedProject) {
@@ -46,7 +81,13 @@ export const FailedProjectsGallery: React.FC = () => {
       </div>
 
       <div className="w-full">
-        <ProvenProjectsTable data={FAILED_PROJECTS} onRowClick={handleProjectSelect} />
+        {isLoading ? (
+          <div className="w-full flex justify-center py-20">
+            <Loader2 className="size-8 animate-spin text-slate-300" />
+          </div>
+        ) : (
+          <ProvenProjectsTable data={projectsList} onRowClick={handleProjectSelect} />
+        )}
       </div>
     </div>
   );

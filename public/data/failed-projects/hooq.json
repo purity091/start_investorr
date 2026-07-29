@@ -1,0 +1,91 @@
+{
+  "order": 13,
+  "slug": "hooq",
+  "name": "HOOQ",
+  "domain": "hooq.tv",
+  "website": "https://en.wikipedia.org/wiki/HOOQ",
+  "category": "Media / بث الفيديو",
+  "headline": "منصة البث المباشر (VOD) في جنوب شرق آسيا",
+  "summary": "مشروع مشترك بين Singtel، و Sony Pictures، و Warner Bros. جمعت الشركة تمويلات ضخمة لتقديم خدمة بث الأفلام في آسيا. أغلقت الشركة وتمت تصفيتها في 2020 بعد فشلها في النمو بشكل كافٍ وسط منافسة ضارية من Netflix والبدائل المجانية المقرصنة.",
+  "directory_snapshot": {
+    "monthly_revenue": "مغلق",
+    "monthly_traffic": "0 /mo",
+    "revenue_per_visitor": "$0.00 /visitor",
+    "solopreneur_score": "0.0",
+    "idea_label": "خدمة بث إقليمية"
+  },
+  "company": {
+    "business_model": "اشتراك (SVOD) وخدمات مجانية بإعلانات (AVOD)",
+    "customer_type": "المستهلكون في آسيا (الهند، إندونيسيا، تايلاند، الفلبين)",
+    "founder": "Singtel, Sony, Warner",
+    "founder_role": "مستثمرون مؤسسون",
+    "founder_social": "N/A",
+    "founders_count": "3",
+    "employees": "المئات",
+    "started": "2015",
+    "location": "سنغافورة",
+    "funding": "أكثر من 85 مليون دولار",
+    "profitability": "مغلق (إفلاس)",
+    "public_revenue_claim": "مغلق"
+  },
+  "problem_and_product": [
+    "الرغبة في توفير محتوى هوليوودي ومحلي مدفوع للمستهلكين في آسيا قبل دخول Netflix للمنطقة."
+  ],
+  "origin_story": [
+    "مدعومة بأكبر شركات الاتصالات والترفيه، بدتHOOQ وكأنها الفائز الحتمي في آسيا."
+  ],
+  "build_and_launch": [
+    "التركيز على التسعير المنخفض ودعم التحميل للمشاهدة بدون إنترنت نظراً لضعف الشبكات في المنطقة."
+  ],
+  "costs_and_operations": [
+    "تكلفة الحصول على حقوق المحتوى (Licensing) كانت ضخمة جداً.",
+    "تكاليف اكتساب العملاء كانت مرتفعة في أسواق غير معتادة على الدفع مقابل المحتوى."
+  ],
+  "monetization": [
+    "العملاء في جنوب شرق آسيا فضلوا البدائل المجانية والمقرصنة، ولم تكن الاشتراكات كافية لتغطية تكاليف المحتوى."
+  ],
+  "growth": [
+    "عانت من دخول Netflix بإنتاجات ضخمة أصلية، ومنافسين إقليميين آخرين (Iflix, Viu)."
+  ],
+  "tools": [
+    "Streaming Infrastructure",
+    "DRM Technology"
+  ],
+  "revenue_timeline": [
+    {
+      "date": "2017",
+      "amount": "جمع 65M$",
+      "type": "تمويل",
+      "note": "محاولة للتوسع وزيادة المحتوى الأصلي."
+    },
+    {
+      "date": "April 2020",
+      "amount": "0",
+      "type": "إغلاق",
+      "note": "الشركة تعلن التصفية وإغلاق الخدمة بالكامل."
+    }
+  ],
+  "lessons": [
+    "حتى مع وجود شركاء ضخام (Telecoms + Studios)، التوافق مع السوق والتسعير المناسب هو الأساس.",
+    "في الأسواق الناشئة، يجب أن يكون عرض القيمة أقوى بكثير من 'المحتوى المجاني/المقرصن' لكي يدفع المستهلك.",
+    "تكلفة حقوق بث المحتوى (Content Licensing) هي قاتل صامت لمنصات البث إذا لم يرافقها نمو سريع للاشتراكات."
+  ],
+  "sources": [
+    {
+      "label": "Tech in Asia",
+      "url": "https://www.techinasia.com",
+      "coverage": "تغطية سقوط HOOQ"
+    }
+  ],
+  "data_quality": [
+    "معلومات مالية وتاريخية علنية."
+  ],
+  "research_metadata": {
+    "researched_on": "2026-07-29",
+    "scope": "دراسة حالة",
+    "source_method": "صحافة",
+    "private_backend_data_included": false,
+    "copyright_note": "تحليل الأسباب"
+  },
+  "id": "hooq"
+}

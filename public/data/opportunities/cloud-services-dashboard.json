@@ -1,0 +1,38 @@
+[
+  {
+    "id": "clo-infrastructure",
+    "title": "البنية السحابية والتخزين",
+    "icon": {},
+    "examples": [
+      "خوادم السحابة وأنظمة التخزين",
+      "تقنيات المحاكاة الافتراضية Virtualization"
+    ]
+  },
+  {
+    "id": "clo-computing",
+    "title": "خدمات الحوسبة SaaS/IaaS",
+    "icon": {},
+    "examples": [
+      "المنصات كخدمة PaaS والبنية كخدمة IaaS",
+      "خدمات البرمجيات السحابية المتكاملة"
+    ]
+  },
+  {
+    "id": "clo-management",
+    "title": "إدارة السحابة وقابلية التوسع",
+    "icon": {},
+    "examples": [
+      "مراقبة السحابة والـ DevOps",
+      "أنظمة توسيع الموارد التلقائية"
+    ]
+  },
+  {
+    "id": "clo-providers",
+    "title": "مزودو الخدمات السحابية الكبرى",
+    "icon": {},
+    "examples": [
+      "منصات شبيهة بـ AWS و Azure",
+      "أنظمة Google Cloud-like المخصصة"
+    ]
+  }
+]

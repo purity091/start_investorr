@@ -18,8 +18,6 @@ import { LeadersSection } from './LeadersSection';
 import { BottomRow } from './BottomRow';
 import { buildNav, buildNavMap } from './NavHelpers';
 import { SwotSection } from './SwotSection';
-import { OPPORTUNITIES_REGISTRY } from '../../../../data/opportunitiesRegistry';
-import { SWOT_REGISTRY } from '../../../../data/swotRegistry';
 import { exportElementToPdf } from '../../../../utils/pdfExport';
 import { slugifyReportName } from '../../../../utils/reportDownloads';
 import './mobile-responsive.css';
@@ -53,11 +51,44 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
   useAccentVars(accent, accentHex);
 
   const reportRef = useRef<HTMLDivElement>(null);
-  const registryOpportunities = sectorId ? OPPORTUNITIES_REGISTRY[sectorId] : [];
+  const [registryOpportunities, setRegistryOpportunities] = useState<any[]>([]);
+  const [registrySwot, setRegistrySwot] = useState<any | undefined>(undefined);
+  const [isDataLoading, setIsDataLoading] = useState(false);
+
+  useEffect(() => {
+    if (!sectorId) return;
+
+    const fetchSectorData = async () => {
+      setIsDataLoading(true);
+      try {
+        if (!manualOpportunities || manualOpportunities.length === 0) {
+          const oppRes = await fetch(`/data/opportunities/${sectorId}.json`);
+          if (oppRes.ok) {
+            const oppData = await oppRes.json();
+            setRegistryOpportunities(oppData);
+          }
+        }
+        
+        if (!manualSwot) {
+          const swotRes = await fetch(`/data/swot/${sectorId}.json`);
+          if (swotRes.ok) {
+            const swotData = await swotRes.json();
+            setRegistrySwot(swotData);
+          }
+        }
+      } catch (err) {
+        console.error("Failed to fetch sector data", err);
+      } finally {
+        setIsDataLoading(false);
+      }
+    };
+
+    fetchSectorData();
+  }, [sectorId, manualOpportunities, manualSwot]);
+
   const businessOpportunities =
     manualOpportunities && manualOpportunities.length > 0 ? manualOpportunities : registryOpportunities;
 
-  const registrySwot = sectorId ? SWOT_REGISTRY[sectorId] : undefined;
   const swot = manualSwot || registrySwot;
 
   const hasLeaders = leaders.length > 0;

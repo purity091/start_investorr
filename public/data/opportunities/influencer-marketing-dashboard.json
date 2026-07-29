@@ -1,0 +1,53 @@
+[
+  {
+    "id": "inf-management",
+    "title": "وكالات إدارة المؤثرين",
+    "icon": {},
+    "examples": [
+      "إدارة العقود",
+      "تنسيق الحملات",
+      "التفاوض مع البراندات"
+    ]
+  },
+  {
+    "id": "inf-matching",
+    "title": "شركات ربط البراندات بالمؤثرين",
+    "icon": {},
+    "examples": [
+      "influencer marketplace",
+      "campaign matching",
+      "niche discovery"
+    ]
+  },
+  {
+    "id": "inf-production",
+    "title": "شركات إنتاج المحتوى",
+    "icon": {},
+    "examples": [
+      "تصوير فيديو",
+      "مونتاج",
+      "reels production",
+      "script writing"
+    ]
+  },
+  {
+    "id": "inf-analytics",
+    "title": "شركات تحليل الأداء",
+    "icon": {},
+    "examples": [
+      "engagement analytics",
+      "fake follower detection",
+      "ROI measurement"
+    ]
+  },
+  {
+    "id": "inf-tech",
+    "title": "منصات Influencer Tech",
+    "icon": {},
+    "examples": [
+      "SaaS influencer platform",
+      "AI creator matching",
+      "campaign dashboards"
+    ]
+  }
+]
