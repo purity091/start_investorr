@@ -176,10 +176,10 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
           </div>
         </header>
 
-        <div className="mx-auto flex w-full max-w-[1700px] flex-col gap-8 px-4 py-10 sm:px-6 lg:flex-row lg:px-8">
+        <div className="mx-auto flex w-full max-w-[1700px] flex-col gap-8 px-4 py-10 sm:px-6 lg:flex-row lg:px-8 items-start relative">
           {/* Sidebar Navigation */}
-          <aside className="hidden lg:block w-56 shrink-0 relative h-full">
-            <div className="sticky top-24 flex flex-col gap-2">
+          <aside className="hidden lg:block w-56 shrink-0 sticky top-24 self-start">
+            <div className="flex flex-col gap-2">
               <h3 className="font-semibold text-sm text-foreground mb-1">محتويات التقرير</h3>
               <div className="flex flex-col border-r border-border/40 pr-3">
                 {nav.map((item) => (

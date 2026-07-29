@@ -101,11 +101,11 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project, on
       </div>
 
       {/* Layout Grid */}
-      <div className="grid lg:grid-cols-[220px_1fr] gap-10 mt-6">
+      <div className="grid lg:grid-cols-[220px_1fr] gap-10 mt-6 items-start relative">
         
         {/* Sidebar TOC */}
-        <aside className="hidden lg:block relative h-full">
-          <div className="sticky top-24 flex flex-col gap-2">
+        <aside className="hidden lg:block sticky top-24 self-start">
+          <div className="flex flex-col gap-2">
             <h3 className="font-bold text-sm text-foreground mb-2">محتويات دراسة الحالة</h3>
             <div className="flex flex-col border-r-2 border-muted pr-4 gap-1 relative">
               {navItems.map((item) => (
