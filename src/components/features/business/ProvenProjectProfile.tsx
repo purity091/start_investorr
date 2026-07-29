@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Badge } from '@/components/ui/Badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { ArrowRight, CheckCircle2, DollarSign, Users, Globe, ExternalLink, Lightbulb, Rocket, Settings, Info, Building2, UserCircle2, Code, ShieldCheck, FileText, Check } from 'lucide-react';
+import { ArrowRight, CheckCircle2, DollarSign, Users, Globe, ExternalLink, Lightbulb, Rocket, Settings, Info, Building2, UserCircle2, Code, ShieldCheck, FileText, Check, TrendingUp, Search, ArrowUpRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface ProvenProjectProps {
@@ -69,7 +69,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project, on
   };
 
   const navItems = [
-    { id: 'directory-snapshot', label: 'لمحة الدليل' },
+    { id: 'overview', label: 'نظرة عامة' },
     { id: 'company', label: 'حقائق الشركة' },
     { id: 'problem-and-product', label: 'المشكلة والمنتج' },
     { id: 'origin-story', label: 'المؤسس وقصة البداية' },
@@ -86,62 +86,30 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project, on
 
   return (
     <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-8 sm:px-6 lg:px-8 font-sans pb-32">
-      
-      {/* Integrated Unified Header / Hero Section */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-50/80 via-white to-blue-50/80 border border-indigo-100/80 p-6 md:p-8 shadow-sm flex flex-col gap-6">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-100/40 via-transparent to-transparent pointer-events-none" />
-        
-        {/* Top Control Bar */}
-        <div className="relative z-10 flex items-center justify-between gap-4 border-b border-indigo-100/80 pb-4">
-          <button 
-            onClick={onBack} 
-            className="flex items-center gap-2 text-sm font-bold text-slate-600 hover:text-indigo-600 transition-colors"
-          >
-            <ArrowRight className="size-4" />
-            العودة للقائمة
-          </button>
-          
-          <div className="flex items-center gap-3">
-            <Badge variant="secondary" className="bg-indigo-100 text-indigo-700 hover:bg-indigo-200 border-0 px-3 py-1 font-bold text-xs">
-              {project.category}
-            </Badge>
-            <a 
-              href={project.website} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="flex items-center gap-2 text-xs font-bold px-3.5 py-1.5 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-colors shadow-sm"
-            >
-              الموقع الرسمي
-              <ExternalLink className="size-3" />
-            </a>
+
+      {/* Top Alert & Back */}
+      <div className="flex flex-col gap-6">
+        <button
+          onClick={onBack}
+          className="flex items-center gap-2 text-sm font-bold text-slate-600 hover:text-blue-600 transition-colors w-fit"
+        >
+          <ArrowRight className="size-4" />
+          العودة للقائمة
+        </button>
+
+        <div className="flex items-start gap-3 p-4 bg-blue-50/50 border border-blue-100 rounded-xl text-blue-900 shadow-sm">
+          <div className="mt-0.5 text-blue-500">
+            <Search className="size-5" />
           </div>
-        </div>
-
-        {/* Hero Body Content */}
-        <div className="relative z-10 flex flex-col gap-2.5">
-          <h1 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight leading-tight">
-            {project.name}
-          </h1>
-          <h2 className="text-lg md:text-xl font-bold text-indigo-900/80">
-            {project.headline}
-          </h2>
-          <p className="text-sm md:text-base text-slate-600 max-w-4xl leading-relaxed font-medium mt-1">
-            {project.summary}
-          </p>
-        </div>
-
-        {/* Integrated Alert Banner */}
-        <div className="relative z-10 p-3.5 rounded-xl border border-amber-200/80 bg-amber-50/90 text-amber-900 text-xs md:text-sm flex items-start gap-2.5 shadow-2xs mt-1">
-          <Info className="size-4 text-amber-600 shrink-0 mt-0.5" />
-          <p className="leading-relaxed font-medium">
-            <strong className="font-bold text-amber-950">طبيعة البيانات:</strong> هذه الصفحة تحتوي على معلومات وأرقام عامة وواقعية وُثقت في مقابلات ودراسات حالة. لا تحتوي على بيانات خاصة أو تسريبات غير قانونية. الأرقام تُمثل فترة إعداد دراسة الحالة وقد تتغير بمرور الوقت.
+          <p className="text-[13.5px] font-medium leading-relaxed">
+            <strong className="font-bold text-slate-900">ملف مدروس.</strong> قام نظام الذكاء الاصطناعي الخاص بنا بتجميع هذه الصفحة من مصادر عامة — لم يقم المؤسس بكتابتها. قد تخطئ الأنظمة الآلية في قراءة بعض البيانات، لذا تعامل مع الأرقام كأفضل تقدير.
           </p>
         </div>
       </div>
 
       {/* Layout Grid */}
       <div ref={containerRef} className="grid lg:grid-cols-[220px_1fr] gap-10 mt-6 items-start relative">
-        
+
         {/* Sidebar TOC placeholder to maintain grid space */}
         <aside className="hidden lg:block" style={{ minHeight: '1px' }}>
           <div ref={tocRef} className="flex flex-col gap-2">
@@ -154,7 +122,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project, on
                   className={cn(
                     "w-full text-right py-1.5 text-[13.5px] transition-all focus:outline-none relative",
                     activeId === item.id
-                      ? "text-primary font-bold" 
+                      ? "text-primary font-bold"
                       : "text-muted-foreground hover:text-foreground font-medium"
                   )}
                 >
@@ -170,35 +138,150 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project, on
 
         {/* Main Content Sections */}
         <div className="flex flex-col gap-10 min-w-0">
-          
-          <section id="directory-snapshot" className="profile-section scroll-mt-24">
-            <h3 className="text-2xl font-black mb-6 text-foreground">لقطة الدليل (Snapshot)</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <Card className="shadow-sm border-blue-100 bg-blue-50/50">
-                <CardContent className="p-5 flex flex-col gap-1.5">
-                  <span className="text-[11px] font-bold text-blue-600 uppercase tracking-wider">الإيرادات الشهرية</span>
-                  <strong className="text-xl font-black text-blue-950">{project.directory_snapshot.monthly_revenue}</strong>
+
+          <section id="overview" className="profile-section scroll-mt-24">
+            <h2 className="text-xl font-black text-slate-900 mb-5">نظرة عامة</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-4">
+              
+              {/* Left Main Card */}
+              <Card className="shadow-sm border-slate-200/60 overflow-hidden flex flex-col rounded-xl">
+                <CardContent className="p-5 md:p-6 flex-1 flex flex-col">
+                  <div className="flex items-start gap-4 mb-5">
+                    <div className="flex items-center justify-center size-14 rounded-xl bg-blue-600 text-white text-2xl font-serif shadow-sm">
+                      {project.name.charAt(0).toUpperCase()}
+                    </div>
+                    <div className="pt-1">
+                      <h1 className="text-2xl font-black text-slate-900 flex items-center gap-2">
+                        {project.name}
+                        <a href={project.website} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 transition-colors">
+                          <ExternalLink className="size-4" />
+                        </a>
+                      </h1>
+                    </div>
+                  </div>
+                  
+                  <p className="text-slate-600 text-sm leading-relaxed mb-5 flex-1 font-medium">
+                    {project.summary}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    <Badge variant="secondary" className="bg-slate-100 text-slate-700 hover:bg-slate-200 border-0 font-bold px-2.5 py-1 text-xs whitespace-normal text-right leading-snug h-auto">
+                      {project.category}
+                    </Badge>
+                    <Badge variant="secondary" className="bg-slate-100 text-slate-700 hover:bg-slate-200 border-0 font-bold px-2.5 py-1 text-xs whitespace-normal text-right leading-snug h-auto">
+                      {project.company.customer_type}
+                    </Badge>
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-3 pt-5 border-t border-slate-100 mt-auto">
+                    <div>
+                      <div className="text-[11px] font-bold text-slate-500 mb-1">تحقيق الدخل</div>
+                      <div className="text-[13px] font-bold text-blue-600 leading-snug">{project.company.business_model}</div>
+                    </div>
+                    <div>
+                      <div className="text-[11px] font-bold text-slate-500 mb-1">الإطلاق</div>
+                      <div className="text-[13px] font-bold text-slate-900">{project.company.started}</div>
+                    </div>
+                    <div>
+                      <div className="text-[11px] font-bold text-slate-500 mb-1">تحديث</div>
+                      <div className="text-[13px] font-bold text-slate-900">مؤخراً</div>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
-              <Card className="shadow-sm border-indigo-100 bg-indigo-50/50">
-                <CardContent className="p-5 flex flex-col gap-1.5">
-                  <span className="text-[11px] font-bold text-indigo-600 uppercase tracking-wider">الزيارات الشهرية</span>
-                  <strong className="text-xl font-black text-indigo-950">{project.directory_snapshot.monthly_traffic}</strong>
-                </CardContent>
-              </Card>
-              <Card className="shadow-sm border-emerald-100 bg-emerald-50/50">
-                <CardContent className="p-5 flex flex-col gap-1.5">
-                  <span className="text-[11px] font-bold text-emerald-600 uppercase tracking-wider">الإيراد لكل زائر</span>
-                  <strong className="text-xl font-black text-emerald-950">{project.directory_snapshot.revenue_per_visitor}</strong>
-                </CardContent>
-              </Card>
-              <Card className="shadow-sm border-violet-200 bg-violet-100/50 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-2 h-full bg-violet-500" />
-                <CardContent className="p-5 flex flex-col gap-1.5">
-                  <span className="text-[11px] font-bold text-violet-700 uppercase tracking-wider">نقاط السولو (Solo)</span>
-                  <strong className="text-xl font-black text-violet-950">{project.directory_snapshot.solopreneur_score}</strong>
-                </CardContent>
-              </Card>
+
+              {/* Right Cards Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {/* Est. Monthly Revenue */}
+                <Card className="shadow-sm border-slate-200/60 hover:border-slate-300 transition-colors group cursor-default rounded-xl">
+                  <CardContent className="p-4 md:p-5 flex flex-col h-full justify-center">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-[13px] font-bold text-slate-900">الإيرادات الشهرية</span>
+                      <ArrowUpRight className="size-3.5 text-slate-400 group-hover:text-slate-600 transition-colors -scale-x-100" />
+                    </div>
+                    <div className="text-2xl font-black text-slate-900 mb-1">
+                      {project.directory_snapshot.monthly_revenue}
+                    </div>
+                    <div className="text-[11px] font-medium text-slate-500 mb-4">
+                      أرقام تقديرية
+                    </div>
+                    <div className="text-[11px] font-bold text-blue-600 mt-auto">
+                      مستند إلى مصادر عامة
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Founder */}
+                <Card className="shadow-sm border-slate-200/60 hover:border-slate-300 transition-colors group cursor-default rounded-xl">
+                  <CardContent className="p-4 md:p-5 flex flex-col h-full justify-center">
+                    <div className="text-[13px] font-bold text-slate-900 mb-4">المؤسس</div>
+                    <div className="flex items-center gap-3">
+                      <div className="size-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0">
+                        <UserCircle2 className="size-5" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-slate-900 text-sm">{project.company.founder}</div>
+                        <div className="text-[11px] font-medium text-slate-500 mt-0.5">@{project.name.replace(/\s+/g, '').toLowerCase()}</div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Tools they use */}
+                <Card className="shadow-sm border-slate-200/60 hover:border-slate-300 transition-colors group cursor-default rounded-xl">
+                  <CardContent className="p-4 md:p-5 flex flex-col h-full justify-center">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-[13px] font-bold text-slate-900">الأدوات المستخدمة</span>
+                      <ArrowUpRight className="size-3.5 text-slate-400 group-hover:text-slate-600 transition-colors -scale-x-100" />
+                    </div>
+                    <div className="text-[11px] font-medium text-slate-500 mb-4">التقنيات · {project.tools.length} أدوات</div>
+                    <div className="flex items-center gap-2 mt-auto">
+                      {project.tools.slice(0, 3).map((tool: string, i: number) => (
+                        <div key={i} className="size-9 rounded-lg border border-slate-200 flex items-center justify-center text-xs font-bold text-slate-700 bg-white shadow-sm" title={tool}>
+                          {tool.charAt(0).toUpperCase()}
+                        </div>
+                      ))}
+                      {project.tools.length > 3 && (
+                        <div className="size-9 rounded-lg border border-slate-100 flex items-center justify-center text-[10px] font-bold text-slate-400 bg-slate-50">
+                          +{project.tools.length - 3}
+                        </div>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Growth channels */}
+                <Card className="shadow-sm border-slate-200/60 hover:border-slate-300 transition-colors group cursor-default rounded-xl">
+                  <CardContent className="p-4 md:p-5 flex flex-col h-full">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-[13px] font-bold text-slate-900">قنوات النمو</span>
+                      <ArrowUpRight className="size-3.5 text-slate-400 group-hover:text-slate-600 transition-colors -scale-x-100" />
+                    </div>
+                    <div className="text-[11px] font-medium text-slate-500 mb-4">أهم قنوات الاستحواذ</div>
+                    <div className="flex flex-col gap-2.5 mt-auto">
+                      {project.growth.slice(0, 3).map((channel: string, i: number) => {
+                        let Icon = Globe;
+                        if (channel.toLowerCase().includes('seo') || channel.includes('بحث')) Icon = Search;
+                        else if (channel.includes('social') || channel.includes('تواصل')) Icon = Users;
+                        else if (channel.includes('backlink') || channel.includes('روابط')) Icon = TrendingUp;
+                        return (
+                          <div key={i} className="flex items-start gap-2.5">
+                            <div className="shrink-0 text-slate-400 mt-0.5">
+                              <Icon className="size-3.5" />
+                            </div>
+                            <div className="text-[13px] font-bold text-slate-700 leading-snug">{channel}</div>
+                          </div>
+                        );
+                      })}
+                      {project.growth.length > 3 && (
+                        <div className="text-[11px] font-medium text-slate-400 mt-1 mr-6">
+                          +{project.growth.length - 3} أخرى
+                        </div>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </section>
 
@@ -267,7 +350,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project, on
                   {project.problem_and_product.map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-4 text-base text-foreground font-medium leading-relaxed">
                       <div className="mt-1 flex items-center justify-center size-5 rounded-full bg-amber-100 shrink-0">
-                         <div className="size-2 rounded-full bg-amber-500" />
+                        <div className="size-2 rounded-full bg-amber-500" />
                       </div>
                       <span>{item}</span>
                     </li>
@@ -292,7 +375,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project, on
                   {project.origin_story.map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-4 text-base text-foreground font-medium leading-relaxed">
                       <div className="mt-1 flex items-center justify-center size-5 rounded-full bg-indigo-100 shrink-0">
-                         <div className="size-2 rounded-full bg-indigo-500" />
+                        <div className="size-2 rounded-full bg-indigo-500" />
                       </div>
                       <span>{item}</span>
                     </li>
@@ -318,7 +401,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project, on
                     const parts = item.split(': ');
                     const date = parts.length > 1 ? parts[0] : null;
                     const text = parts.length > 1 ? parts.slice(1).join(': ') : item;
-                    
+
                     return (
                       <div key={i} className="relative">
                         <div className="absolute w-4 h-4 bg-violet-500 rounded-full -right-[33px] top-1 ring-4 ring-background" />
@@ -347,7 +430,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project, on
                   {project.costs_and_operations.map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-4 text-base text-foreground font-medium leading-relaxed">
                       <div className="mt-1 flex items-center justify-center size-5 rounded-full bg-slate-100 shrink-0">
-                         <div className="size-2 rounded-full bg-slate-500" />
+                        <div className="size-2 rounded-full bg-slate-500" />
                       </div>
                       <span>{item}</span>
                     </li>
@@ -372,7 +455,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project, on
                   {project.monetization.map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-4 text-base text-foreground font-medium leading-relaxed">
                       <div className="mt-1 flex items-center justify-center size-5 rounded-full bg-emerald-100 shrink-0">
-                         <div className="size-2 rounded-full bg-emerald-500" />
+                        <div className="size-2 rounded-full bg-emerald-500" />
                       </div>
                       <span>{item}</span>
                     </li>
@@ -397,7 +480,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project, on
                   {project.growth.map((item: string, i: number) => (
                     <li key={i} className="flex items-start gap-4 text-base text-foreground font-medium leading-relaxed">
                       <div className="mt-1 flex items-center justify-center size-5 rounded-full bg-cyan-100 shrink-0">
-                         <div className="size-2 rounded-full bg-cyan-500" />
+                        <div className="size-2 rounded-full bg-cyan-500" />
                       </div>
                       <span>{item}</span>
                     </li>
