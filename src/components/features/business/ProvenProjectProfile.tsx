@@ -80,15 +80,15 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project, on
       </div>
 
       {/* Hero Section (Vibrant & Colorful) */}
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-50 via-white to-blue-50 border border-indigo-100 p-8 md:p-12 shadow-sm">
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-50 via-white to-blue-50 border border-indigo-100 p-6 md:p-8 shadow-sm">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-100/40 via-transparent to-transparent pointer-events-none" />
-        <div className="relative z-10 flex flex-col gap-5">
-          <Badge variant="secondary" className="w-fit bg-indigo-100 text-indigo-700 hover:bg-indigo-200 border-0 px-3 py-1 font-bold text-xs">
+        <div className="relative z-10 flex flex-col gap-3">
+          <Badge variant="secondary" className="w-fit bg-indigo-100 text-indigo-700 hover:bg-indigo-200 border-0 px-2.5 py-0.5 font-bold text-[11px]">
             {project.category}
           </Badge>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">{project.name}</h1>
-          <h2 className="text-xl md:text-2xl font-bold text-slate-700">{project.headline}</h2>
-          <p className="text-base md:text-lg text-slate-600 max-w-4xl leading-relaxed mt-2 font-medium">{project.summary}</p>
+          <h1 className="text-3xl md:text-4xl font-black text-slate-900 tracking-tight leading-tight">{project.name}</h1>
+          <h2 className="text-lg md:text-xl font-bold text-slate-700">{project.headline}</h2>
+          <p className="text-sm md:text-base text-slate-600 max-w-4xl leading-relaxed mt-1 font-medium">{project.summary}</p>
         </div>
       </div>
 
