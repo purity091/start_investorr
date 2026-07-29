@@ -89,6 +89,8 @@
 
 /* IBM Plex Sans Arabic - Strategic Visual Identity */
 
+/* IBM Plex Sans Arabic - Strategic Visual Identity */
+
 * {
   font-family: var(--font-sans) !important;
   box-sizing: border-box;
@@ -98,7 +100,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   background-color: #FFFFFF;
   font-family: var(--font-sans);
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   max-width: 100%;
   margin: 0;

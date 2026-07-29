@@ -838,7 +838,7 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
   return (
     <div className={containerClass}>
       <Suspense fallback={<RouteLoadingState />}>
-        <div className="animate-in slide-in-from-bottom-4 duration-700">
+        <div>
           {renderContent()}
         </div>
       </Suspense>
