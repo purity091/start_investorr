@@ -4,65 +4,65 @@ export const shipfastProject = {
   "name": "ShipFast",
   "domain": "shipfa.st",
   "website": "https://shipfa.st",
-  "category": "Developer product / SaaS boilerplate",
-  "headline": "Next.js boilerplate for launching SaaS products faster",
-  "summary": "ShipFast packages common startup features—authentication, payments, email, database setup, and UI foundations—so builders can start from a working product base rather than configure everything manually.",
+  "category": "Developer product / قوالب برمجية (SaaS boilerplate)",
+  "headline": "قالب Next.js جاهز لإطلاق منتجات SaaS بشكل أسرع",
+  "summary": "يجمع ShipFast ميزات الشركات الناشئة الشائعة - مثل المصادقة، المدفوعات، البريد الإلكتروني، إعداد قواعد البيانات، وأسس واجهة المستخدم - بحيث يمكن للمطورين البدء من قاعدة منتج تعمل بدلاً من تكوين كل شيء يدوياً.",
   "directory_snapshot": {
     "monthly_revenue": "$64.4K /mo",
     "monthly_traffic": "342K /mo",
     "revenue_per_visitor": "$0.19 /visitor",
     "solopreneur_score": "88.1",
-    "idea_label": "Directory card title says “Express shipping solution,” while its description identifies a Next.js SaaS boilerplate"
+    "idea_label": "قالب Next.js لبرمجيات SaaS"
   },
   "company": {
-    "business_model": "One-time purchase with lifetime access and updates",
-    "customer_type": "Indie hackers, developers, and founders launching web SaaS products",
-    "founder": "Marc Lou",
-    "founder_role": "Founder",
+    "business_model": "شراء لمرة واحدة مع وصول وتحديثات مدى الحياة",
+    "customer_type": "المطورون المستقلون (Indie hackers) والمؤسسون الذين يطلقون منتجات SaaS للويب",
+    "founder": "مارك لو (Marc Lou)",
+    "founder_role": "مؤسس",
     "founder_social": "@marc_louvion",
-    "founders_count": "Founder-led",
-    "employees": "Not reliably stated in the summarized overview",
-    "started": "Approximately 2023",
-    "location": "Not stated in the cited overview",
-    "funding": "Not established by the cited overview",
-    "profitability": "Not independently audited in the cited overview",
-    "public_revenue_claim": "Directory $64.4K/month; latest researched claim $77K/month in April 2026"
+    "founders_count": "مملوكة للمؤسس",
+    "employees": "غير محدد بشكل موثوق في النظرة العامة",
+    "started": "حوالي 2023",
+    "location": "غير مذكور في النظرة العامة",
+    "funding": "غير محدد في النظرة العامة",
+    "profitability": "لم يتم تدقيقها بشكل مستقل في النظرة العامة",
+    "public_revenue_claim": "الدليل 64.4 ألف دولار شهرياً؛ أحدث ادعاء بحثي 77 ألف دولار شهرياً في أبريل 2026"
   },
   "problem_and_product": [
-    "Developers repeatedly rebuild authentication, payment, email, database, and layout foundations for every SaaS project.",
-    "ShipFast provides a preconfigured Next.js codebase for these recurring tasks.",
-    "Customers buy the source code and use it across product launches according to the applicable license terms.",
-    "The directory's “Express shipping solution” label appears inconsistent with the actual product description."
+    "يقوم المطورون بشكل متكرر بإعادة بناء أسس المصادقة والمدفوعات والبريد الإلكتروني وقاعدة البيانات والتخطيط لكل مشروع SaaS.",
+    "يوفر ShipFast قاعدة برمجية (Codebase) معدة مسبقاً في Next.js لهذه المهام المتكررة.",
+    "يشتري العملاء الكود المصدري ويستخدمونه عبر إطلاقات منتجاتهم وفقاً لشروط الترخيص المعمول بها.",
+    "يحل المنتج مشكلة إضاعة الوقت في المهام المتكررة (Boilerplate) ويركز على الشحن السريع للمنتجات."
   ],
   "origin_story": [
-    "The available Starter Story page is a researched public-source profile rather than a founder-written case study.",
-    "The product reflects founder Marc Lou's repeated experience shipping small internet products.",
-    "The offer monetizes reusable launch knowledge as code, documentation, and updates."
+    "صفحة Starter Story المتاحة هي ملف بحثي من مصادر عامة وليست دراسة حالة مكتوبة بواسطة المؤسس.",
+    "يعكس المنتج خبرة المؤسس مارك لو المتكررة في شحن منتجات إنترنت صغيرة.",
+    "يقوم العرض بتحويل معرفة الإطلاق القابلة لإعادة الاستخدام إلى منتج متمثل في كود برمجي، توثيق، وتحديثات."
   ],
   "build_and_launch": [
-    "The product launched around 2023.",
-    "It bundles common Next.js SaaS infrastructure into a reusable starter.",
-    "The technical package includes authentication, payments, email, database integration, styling, and content support.",
-    "A one-time purchase reduces subscription friction for developers who want permanent access."
+    "تم إطلاق المنتج حوالي عام 2023.",
+    "يجمع بنية SaaS التحتية الشائعة لـ Next.js في قالب بداية (Starter) قابل لإعادة الاستخدام.",
+    "تشمل الحزمة الفنية المصادقة، المدفوعات، البريد الإلكتروني، دمج قاعدة البيانات، التصميم، ودعم المحتوى.",
+    "الشراء لمرة واحدة يقلل من احتكاك الاشتراك للمطورين الذين يريدون وصولاً دائماً."
   ],
   "costs_and_operations": [
-    "No verified founding-cost ledger was available in the cited overview.",
-    "The digital-product model has low marginal distribution cost but requires documentation, support, maintenance, and framework updates.",
-    "A strong founder audience reduced dependence on conventional paid advertising.",
-    "Revenue can be launch-sensitive because purchases are primarily one time rather than recurring."
+    "لم يتوفر دفتر تفصيلي موثق لتكاليف التأسيس في النظرة العامة.",
+    "يتميز نموذج المنتج الرقمي بتكلفة توزيع هامشية منخفضة ولكنه يتطلب توثيقاً، دعماً، صيانة، وتحديثات لأطر العمل (Frameworks).",
+    "قلل وجود جمهور قوي للمؤسس من الاعتماد على الإعلانات المدفوعة التقليدية.",
+    "يمكن أن تكون الإيرادات حساسة لمواسم الإطلاق لأن عمليات الشراء في الغالب تكون لمرة واحدة وليست متكررة."
   ],
   "monetization": [
-    "Customers pay once for lifetime access and future updates.",
-    "Publicly cited packages have ranged roughly from $129 to $299.",
-    "Specific source snapshots referenced prices around $169 and $199.",
-    "Current package names, prices, license terms, and included products should be verified officially."
+    "يدفع العملاء مرة واحدة للحصول على وصول مدى الحياة وتحديثات مستقبلية.",
+    "تراوحت الحزم المذكورة علناً بين 129 دولاراً و 299 دولاراً.",
+    "أشارت لقطات مصدر محددة إلى أسعار حوالي 169 دولاراً و 199 دولاراً.",
+    "يجب التحقق رسمياً من أسماء الحزم الحالية، أسعارها، شروط الترخيص، والمنتجات المضمنة."
   ],
   "growth": [
-    "The founder built an audience on Twitter/X over multiple years.",
-    "Launches and milestones generated media coverage and public discussion.",
-    "Reddit, Hacker News, Product Hunt, and founder communities contributed traffic.",
-    "Customer feedback was incorporated into the product and used publicly as social proof.",
-    "The founder's personal brand is a core distribution asset."
+    "بنى المؤسس جمهوراً على Twitter/X على مدار عدة سنوات.",
+    "ولدت الإطلاقات والمعالم الرئيسية تغطية إعلامية ومناقشات عامة.",
+    "ساهمت Reddit و Hacker News و Product Hunt ومجتمعات المؤسسين في جلب الزيارات.",
+    "تم دمج ملاحظات العملاء في المنتج واستخدامها علناً كدليل اجتماعي (Social proof).",
+    "تعتبر العلامة التجارية الشخصية للمؤسس أصلاً أساسياً من أصول التوزيع."
   ],
   "tools": [
     "Stripe",
@@ -83,68 +83,67 @@ export const shipfastProject = {
     {
       "date": "2023-09",
       "amount": "$36.4K /month",
-      "type": "Public-source claim",
-      "note": "One early revenue point in the compiled timeline."
+      "type": "ادعاء مصدر عام",
+      "note": "نقطة إيرادات مبكرة واحدة في الجدول الزمني المجمع."
     },
     {
       "date": "2023-10",
       "amount": "$27K /month",
-      "type": "Public-source claim",
-      "note": "Shows month-to-month variability in a one-time-purchase model."
+      "type": "ادعاء مصدر عام",
+      "note": "يظهر التقلب من شهر لآخر في نموذج الشراء لمرة واحدة."
     },
     {
       "date": "2024-03-06",
       "amount": "$50K /month",
-      "type": "Public-source claim",
-      "note": "Retained as a dated snapshot."
+      "type": "ادعاء مصدر عام",
+      "note": "تم الاحتفاظ بها كلقطة مؤرخة."
     },
     {
       "date": "2024-07-26",
       "amount": "$64K /month",
-      "type": "Public-source claim",
-      "note": "Close to the directory value of $64.4K."
+      "type": "ادعاء مصدر عام",
+      "note": "قريب من قيمة الدليل البالغة 64.4 ألف دولار."
     },
     {
       "date": "2026-04-29",
       "amount": "$77K /month",
-      "type": "Latest sourced claim in the Starter Story research",
-      "note": "Not an audited or guaranteed current run rate."
+      "type": "أحدث ادعاء بحثي",
+      "note": "ليس معدل تشغيل حالي مدقق أو مضمون."
     }
   ],
   "lessons": [
-    "Reusable developer infrastructure can be productized as a one-time digital asset.",
-    "Founder distribution can be as important as code quality in a crowded boilerplate market.",
-    "One-time-purchase revenue should be tracked as a timeline because it may fluctuate more than contracted MRR."
+    "يمكن تحويل البنية التحتية للمطورين القابلة لإعادة الاستخدام إلى أصل رقمي يدفع لمرة واحدة.",
+    "يمكن أن يكون توزيع المؤسس (جمهوره) بنفس أهمية جودة الكود في سوق القوالب البرمجية المزدحم.",
+    "يجب تتبع إيرادات الشراء لمرة واحدة كجدول زمني لأنها قد تتقلب أكثر من الإيرادات الشهرية المتكررة (MRR) المتعاقد عليها."
   ],
   "sources": [
     {
-      "label": "Starter Story directory",
+      "label": "دليل Starter Story",
       "url": "https://www.starterstory.com/data/micro-saas-ideas",
-      "coverage": "Directory metrics and inconsistent card label"
+      "coverage": "مقاييس الدليل"
     },
     {
-      "label": "Starter Story ShipFast researched profile",
+      "label": "الملف البحثي لـ ShipFast",
       "url": "https://www.starterstory.com/businesses/launch-your-startup-in-days-not-weeks-shipfast",
-      "coverage": "Overview, founder, revenue timeline, monetization, growth, and tools"
+      "coverage": "نظرة عامة، المؤسس، الجدول الزمني للإيرادات، التسعير، النمو، والأدوات"
     },
     {
-      "label": "Official website",
+      "label": "الموقع الرسمي",
       "url": "https://shipfa.st",
-      "coverage": "Current packages, license, code stack, and pricing verification"
+      "coverage": "التحقق من الحزم الحالية، الترخيص، الكود البرمجي، والتسعير"
     }
   ],
   "data_quality": [
-    "Starter Story labels the profile as automated public-source research.",
-    "The directory card's title conflicts with the product description; this file preserves both.",
-    "Revenue is especially variable because the primary model is one-time purchase.",
-    "No source code, private repository, license key, or internal backend is included."
+    "تصنف Starter Story هذا الملف كبحث عام مؤتمت من مصادر علنية.",
+    "الإيرادات متغيرة بشكل خاص لأن النموذج الأساسي هو شراء لمرة واحدة.",
+    "لا يتم تضمين أي كود مصدري، مستودع خاص، مفتاح ترخيص، أو خلفية برمجية داخلية."
   ],
   "research_metadata": {
     "researched_on": "2026-07-28",
-    "scope": "Publicly visible information only",
-    "source_method": "Starter Story directory, linked public profile/case study, and official product website links",
+    "scope": "المعلومات العامة فقط",
+    "source_method": "Starter Story",
     "private_backend_data_included": false,
-    "copyright_note": "Narrative text is independently summarized; source articles are not reproduced."
+    "copyright_note": "ملخص مستقل"
   },
   "id": "shipfast"
 };

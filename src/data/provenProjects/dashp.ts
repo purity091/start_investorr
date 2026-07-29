@@ -4,71 +4,71 @@ export const dashpProject = {
   "name": "Dashp",
   "domain": "dashp.io",
   "website": "https://dashp.io",
-  "category": "B2B SaaS / Sales operations",
-  "headline": "Commission and performance software for pest-control sales teams",
-  "summary": "Dashp is a highly focused B2B SaaS product for pest-control companies that use door-to-door sales teams. It helps owners, managers, and salespeople calculate commissions, monitor performance, and communicate around compensation.",
+  "category": "B2B SaaS / عمليات المبيعات",
+  "headline": "برمجية لتتبع العمولات والأداء لفرق مبيعات مكافحة الحشرات",
+  "summary": "داشب (Dashp) هو منتج SaaS B2B شديد التخصص لشركات مكافحة الحشرات التي تستخدم فرق مبيعات من الباب للباب. يساعد الملاك والمديرين ومندوبي المبيعات على حساب العمولات ومراقبة الأداء والتواصل بشأن التعويضات.",
   "directory_snapshot": {
     "monthly_revenue": "$8.33K /mo",
     "monthly_traffic": "1K /mo",
     "revenue_per_visitor": "$8.33 /visitor",
     "solopreneur_score": "75.0",
-    "idea_label": "Commission tracking software"
+    "idea_label": "برمجية تتبع العمولات"
   },
   "company": {
-    "business_model": "Seat-based recurring B2B software contracts",
-    "customer_type": "Pest-control businesses with door-to-door sales teams",
-    "founder": "Isaac Z Tai",
-    "founder_role": "Founder; software engineer turned business owner",
+    "business_model": "اشتراكات B2B متكررة تعتمد على عدد المستخدمين (Seats)",
+    "customer_type": "شركات مكافحة الحشرات ذات فرق المبيعات الميدانية",
+    "founder": "إسحاق زي تاي",
+    "founder_role": "مؤسس؛ مهندس برمجيات تحول إلى رائد أعمال",
     "founders_count": "1",
-    "employees": "0 in the December 2024 profile",
-    "started": "October 2022",
-    "location": "Not stated in the public profile",
-    "funding": "Bootstrapped; founder said he raised and borrowed no money",
-    "profitability": "Not explicitly disclosed",
-    "public_revenue_claim": "Just over $100K ARR in the December 2024 case study"
+    "employees": "0 (حسب بيانات ديسمبر 2024)",
+    "started": "أكتوبر 2022",
+    "location": "غير مذكور",
+    "funding": "تمويل ذاتي بالكامل (Bootstrapped)",
+    "profitability": "غير مفصح عنها صراحة",
+    "public_revenue_claim": "أكثر من 100 ألف دولار كإيرادات سنوية (ARR) في دراسة ديسمبر 2024"
   },
   "problem_and_product": [
-    "The original workflow relied on spreadsheets and email to calculate commissions.",
-    "Commission-only salespeople lacked real-time visibility into expected pay, creating pay anxiety.",
-    "Dashp centralizes commission calculations, sales performance tracking, and team communication.",
-    "The niche is intentionally narrow: pest-control businesses using door-to-door acquisition."
+    "كان سير العمل الأصلي يعتمد على جداول البيانات والبريد الإلكتروني لحساب العمولات.",
+    "كان مندوبو المبيعات الذين يتقاضون عمولات فقط يفتقرون إلى الرؤية الفورية لأجورهم المتوقعة، مما تسبب في قلق مالي.",
+    "يقوم Dashp بمركزة حسابات العمولات وتتبع أداء المبيعات والتواصل بين الفريق.",
+    "هذا المجال متخصص عمداً: شركات مكافحة الحشرات التي تعتمد على الاستحواذ عبر البيع من الباب للباب."
   ],
   "origin_story": [
-    "A friend in the pest-control industry asked whether a better commission-calculation tool could be built.",
-    "The founder validated that the pain was common by speaking with additional people in the industry.",
-    "A basic no-code demo produced an early buying signal when the friend's managers immediately asked for the company name and price.",
-    "The founder preferred this concrete, operational problem over the hype-driven AI startup work he was doing at the time."
+    "سأل صديق يعمل في مجال مكافحة الحشرات عما إذا كان من الممكن بناء أداة أفضل لحساب العمولات.",
+    "تحقق المؤسس من أن المشكلة شائعة من خلال التحدث مع أشخاص آخرين في الصناعة.",
+    "أنتج العرض الأولي المبني بدون كود (No-code) إشارة شراء مبكرة عندما طلب مديرو الصديق فوراً اسم الشركة والسعر.",
+    "فضّل المؤسس هذه المشكلة التشغيلية الملموسة على العمل في الشركات الناشئة المدفوعة بضجة الذكاء الاصطناعي التي كان يقوم بها في ذلك الوقت."
   ],
   "build_and_launch": [
-    "October 2022: built a no-code prototype in Retool.",
-    "November 2022: began building a mobile application after repeated customer requests.",
-    "December 2022: left his job and worked full-time on Dashp while revenue was still zero.",
-    "January–March 2023: completed the app and worked through early B2B sales attempts.",
-    "April 2023: signed the first contract.",
-    "May 2023: signed the second customer.",
-    "June–August 2023: concentrated on bug fixes and customer support during the first sales season.",
-    "August 2023: joined a startup accelerator."
+    "أكتوبر 2022: بناء نموذج أولي بدون كود باستخدام Retool.",
+    "نوفمبر 2022: بدأ في بناء تطبيق للهواتف المحمولة بعد طلبات متكررة من العملاء.",
+    "ديسمبر 2022: ترك وظيفته وعمل بدوام كامل على Dashp بينما كانت الإيرادات لا تزال صفراً.",
+    "يناير - مارس 2023: أكمل التطبيق وعمل من خلال محاولات مبيعات B2B المبكرة.",
+    "أبريل 2023: توقيع العقد الأول.",
+    "مايو 2023: توقيع العميل الثاني.",
+    "يونيو - أغسطس 2023: التركيز على إصلاح الأخطاء ودعم العملاء خلال موسم المبيعات الأول.",
+    "أغسطس 2023: انضم إلى مسرعة أعمال للشركات الناشئة."
   ],
   "costs_and_operations": [
-    "The Retool prototype was effectively free because the founder received startup credits.",
-    "Early stated costs included a $12 domain, Google Workspace at $6 per month, and Supabase at $25 per month.",
-    "The founder said Vercel and Expo Application Services stayed within free tiers.",
-    "Design, engineering, selling, and customer support were handled by the founder.",
-    "Low headcount and a small number of high-value B2B customers kept operating costs low."
+    "كان النموذج الأولي في Retool مجانياً فعلياً لأن المؤسس حصل على أرصدة للشركات الناشئة.",
+    "شملت التكاليف المبكرة المذكورة نطاقاً بـ 12 دولاراً، و Google Workspace بـ 6 دولارات شهرياً، و Supabase بـ 25 دولاراً شهرياً.",
+    "ذكر المؤسس أن Vercel و Expo بقيت ضمن الباقات المجانية.",
+    "تولى المؤسس مسؤولية التصميم والهندسة والبيع ودعم العملاء.",
+    "ساعد انخفاض عدد الموظفين وعدد قليل من عملاء B2B ذوي القيمة العالية في إبقاء تكاليف التشغيل منخفضة."
   ],
   "monetization": [
-    "Pricing is seat based and balances predictable annual revenue against seasonal staffing.",
-    "Standard seats were described at roughly $10–$30 per month with a minimum 12-month commitment.",
-    "Flex seats were described at twice the standard rate on a month-to-month basis.",
-    "Flex seats could not exceed 30% of total seats in the cited contract structure.",
-    "Upselling existing customers into wider contracts was described as a major revenue source."
+    "يعتمد التسعير على عدد المستخدمين (Seats) ويوازن بين الإيرادات السنوية المتوقعة والتوظيف الموسمي.",
+    "تم وصف الحسابات القياسية بحوالي 10 إلى 30 دولاراً شهرياً مع التزام بحد أدنى 12 شهراً.",
+    "تم وصف الحسابات المرنة بضعف السعر القياسي على أساس شهري.",
+    "لا يمكن أن تتجاوز الحسابات المرنة 30% من إجمالي الحسابات في هيكل العقد المذكور.",
+    "تم وصف ترقية العملاء الحاليين إلى عقود أكبر كمصدر رئيسي للإيرادات."
   ],
   "growth": [
-    "The founder initially tried reaching owners, managers, and salespeople through offices and Instagram.",
-    "He later concluded that owners were the necessary buyer because the system requires access to sensitive business data.",
-    "The strongest acquisition methods were direct visits to physical offices and referrals.",
-    "Each qualified account is treated as a long-term business-development effort rather than a performance-marketing lead.",
-    "High-touch account management, immediate support, and direct founder access support retention and expansion."
+    "حاول المؤسس في البداية الوصول إلى الملاك والمديرين ومندوبي المبيعات من خلال المكاتب وإنستغرام.",
+    "استنتج لاحقاً أن الملاك هم المشتري الضروري لأن النظام يتطلب الوصول إلى بيانات العمل الحساسة.",
+    "كانت أقوى طرق الاستحواذ هي الزيارات المباشرة للمكاتب المادية والإحالات (Referrals).",
+    "يتم التعامل مع كل حساب مؤهل كجهد تطوير أعمال طويل الأجل بدلاً من كونه عميلاً محتملاً للتسويق الرقمي.",
+    "إدارة الحسابات عالية اللمسة والدعم الفوري والوصول المباشر للمؤسس تدعم الاحتفاظ بالعملاء والتوسع."
   ],
   "tools": [
     "Retool",
@@ -82,43 +82,43 @@ export const dashpProject = {
     {
       "date": "2024-12-17",
       "amount": "$8.33K /month",
-      "type": "Founder/profile snapshot",
-      "note": "The case study also described revenue as just over $100K ARR."
+      "type": "لمحة عن المؤسس",
+      "note": "وصفت دراسة الحالة الإيرادات بأنها تتجاوز 100 ألف دولار كإيرادات سنوية متكررة."
     }
   ],
   "lessons": [
-    "A narrow B2B niche can support a meaningful solo business with relatively few customers.",
-    "Trust, time, and responsiveness can be more valuable than scalable paid acquisition in a tiny market.",
-    "Deep support for a small customer base can create expansion revenue and lower infrastructure costs."
+    "يمكن أن يدعم تخصص B2B الضيق عملاً فردياً ذا مغزى مع عدد قليل نسبياً من العملاء.",
+    "الثقة والوقت والاستجابة السريعة يمكن أن تكون أكثر قيمة من الاستحواذ المدفوع القابل للتطوير في سوق صغير.",
+    "الدعم العميق لقاعدة عملاء صغيرة يمكن أن يخلق إيرادات إضافية ويخفض تكاليف البنية التحتية."
   ],
   "sources": [
     {
-      "label": "Starter Story directory",
+      "label": "دليل Starter Story",
       "url": "https://www.starterstory.com/data/micro-saas-ideas",
-      "coverage": "Directory metrics and entry label"
+      "coverage": "مقاييس الدليل"
     },
     {
-      "label": "Starter Story Dashp case study",
+      "label": "دراسة حالة Dashp",
       "url": "https://www.starterstory.com/stories/dashp",
-      "coverage": "Founder, origin, build timeline, pricing, growth, tools, and December 2024 revenue"
+      "coverage": "المؤسس، البداية، الجدول الزمني، التسعير، النمو، الإيرادات"
     },
     {
-      "label": "Official website",
+      "label": "الموقع الرسمي",
       "url": "https://dashp.io",
-      "coverage": "Product website"
+      "coverage": "موقع المنتج"
     }
   ],
   "data_quality": [
-    "The founder case study contains direct first-person information.",
-    "Revenue is a dated snapshot and should not be treated as a current audited figure.",
-    "No private database, account-only analytics, or internal backend information is included."
+    "تحتوي دراسة حالة المؤسس على معلومات مباشرة.",
+    "تعتبر الإيرادات لمحة تاريخية ولا ينبغي التعامل معها كرقم دقيق حالي.",
+    "لا توجد بيانات داخلية أو تفاصيل حسابات خاصة مضمنة."
   ],
   "research_metadata": {
     "researched_on": "2026-07-28",
-    "scope": "Publicly visible information only",
-    "source_method": "Starter Story directory, linked public profile/case study, and official product website links",
+    "scope": "المعلومات العامة فقط",
+    "source_method": "Starter Story",
     "private_backend_data_included": false,
-    "copyright_note": "Narrative text is independently summarized; source articles are not reproduced."
+    "copyright_note": "ملخص مستقل"
   },
   "id": "dashp"
 };

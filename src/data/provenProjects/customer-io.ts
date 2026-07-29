@@ -4,127 +4,127 @@ export const customerIoProject = {
   "name": "Customer.io",
   "domain": "customer.io",
   "website": "https://customer.io",
-  "category": "B2B SaaS / Customer messaging automation",
-  "headline": "Behavior-based messaging and journey automation for digital products",
-  "summary": "Customer.io helps companies send personalized email and other messages based on customer behavior and data. Its early product evolved from an analytics concept into a customer-communication platform.",
+  "category": "B2B SaaS / أتمتة رسائل العملاء",
+  "headline": "الرسائل القائمة على السلوك وأتمتة رحلة العميل للمنتجات الرقمية",
+  "summary": "يساعد Customer.io الشركات على إرسال رسائل بريد إلكتروني مخصصة ورسائل أخرى بناءً على سلوك العميل وبياناته. تطور منتجهم المبكر من كونه مجرد فكرة تحليلية إلى منصة شاملة لتواصل العملاء.",
   "directory_snapshot": {
-    "monthly_revenue": "Unavailable on the directory card",
+    "monthly_revenue": "غير متوفر في بطاقة الدليل",
     "monthly_traffic": "336K /mo",
     "revenue_per_visitor": "$17.37 /visitor",
     "solopreneur_score": "66.3",
-    "idea_label": "Customer interaction automation"
+    "idea_label": "أتمتة تفاعل العملاء"
   },
   "company": {
-    "business_model": "Recurring B2B SaaS",
-    "customer_type": "Product-led and digital businesses needing behavioral customer messaging",
-    "founder": "Colin Nederkoorn",
-    "cofounder": "John Allison",
-    "founder_role": "Co-founder",
+    "business_model": "اشتراكات SaaS B2B متكررة",
+    "customer_type": "الشركات الرقمية وتلك التي تقودها المنتجات والتي تحتاج إلى مراسلات سلوكية للعملاء",
+    "founder": "كولين نيدركورن",
+    "cofounder": "جون أليسون",
+    "founder_role": "شريك مؤسس",
     "founders_count": "2",
-    "employees": "Not summarized as a reliable exact figure in this file",
+    "employees": "غير ملخص كرقم دقيق موثوق في هذا الملف",
     "started": "2012",
-    "location": "Founder background included Singapore and Rensselaer Polytechnic Institute; company location not asserted here",
-    "funding": "Not summarized from the available public lines",
-    "profitability": "Marked profitable in the Starter Story profile",
-    "public_revenue_claim": "Approximately $5.83M/month, corresponding to roughly $70M ARR, in the February 2025 profile"
+    "location": "شملت خلفية المؤسس سنغافورة ومعهد رينسيلار؛ موقع الشركة لم يؤكد هنا",
+    "funding": "غير ملخص من الأسطر العامة المتاحة",
+    "profitability": "مصنف كمربح في ملف Starter Story",
+    "public_revenue_claim": "حوالي 5.83 مليون دولار شهرياً (ما يعادل 70 مليون دولار سنوياً) في ملف فبراير 2025"
   },
   "problem_and_product": [
-    "Digital products need to communicate differently with users based on actions, attributes, and lifecycle stage.",
-    "Customer.io enables event-triggered and personalized messaging rather than one-size-fits-all campaigns.",
-    "The platform became a marketing automation and customer-journey system.",
-    "The core customer is a B2B organization integrating product data into customer communication."
+    "المنتجات الرقمية تحتاج إلى التواصل بشكل مختلف مع المستخدمين بناءً على أفعالهم وسماتهم ومرحلة دورة حياتهم.",
+    "يتيح Customer.io إرسال رسائل مخصصة ومبنية على الأحداث (Triggers) بدلاً من حملات تسويق مقاس واحد يناسب الجميع.",
+    "أصبحت المنصة نظاماً لأتمتة التسويق ورحلة العميل بالكامل.",
+    "العميل الأساسي هو منظمة B2B تدمج بيانات المنتج في تواصلها مع العملاء."
   ],
   "origin_story": [
-    "The founders met and developed the early concept through a Startup Weekend project.",
-    "The first idea resembled a more sophisticated analytics product.",
-    "Customer conversations pushed the concept toward communication automation.",
-    "The founder's previous technology and business experience helped bridge product development and sales."
+    "التقى المؤسسان وطورا المفهوم المبكر من خلال مشروع في فعالية Startup Weekend.",
+    "كانت الفكرة الأولى تشبه منتجاً أكثر تطوراً للتحليلات (Analytics).",
+    "دفعت محادثات العملاء المفهوم نحو التركيز على أتمتة الاتصال.",
+    "ساعدت الخبرة التكنولوجية والتجارية السابقة للمؤسس في سد الفجوة بين تطوير المنتج والمبيعات."
   ],
   "build_and_launch": [
-    "The early MVP was offered to five companies at approximately $10 per month.",
-    "The initial infrastructure used AWS and Google Cloud.",
-    "The team moved away from bare-metal infrastructure hosted in Quebec.",
-    "An early architecture used a separate MySQL database for each customer.",
-    "The business reportedly took about two years to reach its first $1M ARR."
+    "تم تقديم المنتج الأولي (MVP) لخمس شركات بسعر حوالي 10 دولارات شهرياً.",
+    "استخدمت البنية التحتية الأولية خدمات AWS و Google Cloud.",
+    "انتقل الفريق بعيداً عن البنية التحتية الفيزيائية المستضافة في كيبيك.",
+    "استخدمت بنية معمارية مبكرة قاعدة بيانات MySQL منفصلة لكل عميل.",
+    "ورد أن الشركة استغرقت حوالي عامين للوصول إلى أول مليون دولار كإيرادات سنوية (ARR)."
   ],
   "costs_and_operations": [
-    "The cited profile does not provide a reliable detailed startup-cost ledger.",
-    "Early architecture choices prioritized customer data separation but added operational complexity.",
-    "Moving from self-managed physical infrastructure toward cloud services supported scale.",
-    "The company grew from a small paid MVP into a large B2B SaaS organization."
+    "الملف المذكور لا يقدم دفتراً تفصيلياً موثوقاً لتكاليف التأسيس.",
+    "أعطت خيارات البنية التحتية المبكرة الأولوية لفصل بيانات العملاء ولكنها زادت من التعقيد التشغيلي.",
+    "الانتقال من البنية التحتية الفيزيائية المدارة ذاتياً نحو الخدمات السحابية دعم التوسع والنمو.",
+    "نمت الشركة من منتج أولي مدفوع صغير إلى منظمة B2B SaaS ضخمة."
   ],
   "monetization": [
-    "Customer.io monetizes through recurring plans based on customer needs, scale, and platform capabilities.",
-    "The first MVP pricing was intentionally low at roughly $10 per month for each of five early companies.",
-    "Current official pricing should be verified directly because the business and product scope have expanded substantially."
+    "يحقق Customer.io أرباحاً من خلال خطط متكررة تعتمد على احتياجات العميل، الحجم، وقدرات المنصة.",
+    "كان تسعير المنتج الأولي (MVP) منخفضاً عمداً بحوالي 10 دولارات شهرياً لكل من الشركات الخمس المبكرة.",
+    "يجب التحقق من التسعير الرسمي الحالي مباشرة لأن نطاق العمل والمنتج توسع بشكل كبير."
   ],
   "growth": [
-    "Email education and customer case studies demonstrated practical use cases.",
-    "SEO and content marketing attracted teams searching for lifecycle and behavioral messaging solutions.",
-    "Networking and partnerships helped establish credibility in the startup and SaaS ecosystem.",
-    "Customer success and retention became important as integrations and message workflows grew more deeply embedded."
+    "أظهر التثقيف عبر البريد الإلكتروني ودراسات حالة العملاء استخدامات عملية واضحة.",
+    "جذب الـ SEO والتسويق بالمحتوى الفرق التي تبحث عن حلول للرسائل السلوكية ودورة حياة العميل.",
+    "ساعدت الشراكات والتشبيك في بناء المصداقية داخل بيئة الشركات الناشئة وبرمجيات الـ SaaS.",
+    "أصبح نجاح العملاء والاحتفاظ بهم أمراً مهماً مع ترسيخ التكاملات وتعميق سير عمل الرسائل."
   ],
   "tools": [
     "AWS",
     "Google Cloud",
     "MySQL",
-    "Behavioral event and messaging infrastructure",
-    "Email automation systems"
+    "البنية التحتية للأحداث السلوكية والرسائل",
+    "أنظمة أتمتة البريد الإلكتروني"
   ],
   "revenue_timeline": [
     {
-      "date": "2012 early MVP",
-      "amount": "$10 /month per early company",
-      "type": "Initial pricing experiment",
-      "note": "The MVP was offered to a small group of five companies."
+      "date": "2012 (المنتج الأولي MVP)",
+      "amount": "$10 /month للشركات المبكرة",
+      "type": "تجربة تسعير أولية",
+      "note": "تم تقديم المنتج الأولي لمجموعة صغيرة من خمس شركات."
     },
     {
-      "date": "Approximately two years after launch",
+      "date": "بعد عامين تقريباً من الإطلاق",
       "amount": "$1M ARR",
-      "type": "Growth milestone",
-      "note": "The profile described roughly two years to reach this milestone."
+      "type": "علامة نمو فارقة",
+      "note": "وصف الملف الوصول لهذا الإنجاز بعد حوالي عامين."
     },
     {
-      "date": "2025-02-22 profile",
-      "amount": "$5.83M /month estimated",
-      "type": "Starter Story estimate",
-      "note": "Approximately equivalent to the article's $70M ARR headline."
+      "date": "ملف 22-02-2025",
+      "amount": "$5.83M /month (مقدرة)",
+      "type": "تقدير Starter Story",
+      "note": "ما يعادل تقريباً عنوان المقال الذي يشير إلى 70 مليون دولار سنوياً."
     }
   ],
   "lessons": [
-    "Early customer conversations can reveal that the valuable product differs from the initial concept.",
-    "Low-priced paid pilots can generate stronger validation than free usage.",
-    "Infrastructure architecture that works for five customers should be revisited before scale makes migration harder."
+    "يمكن أن تكشف محادثات العملاء المبكرة أن المنتج ذو القيمة يختلف عن المفهوم الأولي.",
+    "توليد الطيارين المدفوعين بأسعار منخفضة (Paid pilots) يمكن أن يعطي تحققاً (Validation) أقوى من الاستخدام المجاني.",
+    "يجب إعادة تقييم معمارية البنية التحتية التي تناسب خمسة عملاء قبل أن يجعل التوسع عملية الهجرة أكثر صعوبة."
   ],
   "sources": [
     {
-      "label": "Starter Story directory",
+      "label": "دليل Starter Story",
       "url": "https://www.starterstory.com/data/micro-saas-ideas",
-      "coverage": "Traffic, RPV, score, and card label"
+      "coverage": "الزيارات، الإيراد لكل زائر، التقييم، وتسمية البطاقة"
     },
     {
-      "label": "Starter Story Customer.io breakdown",
+      "label": "دراسة حالة Customer.io",
       "url": "https://www.starterstory.com/customer-io-breakdown",
-      "coverage": "Founder, origin, MVP, infrastructure, revenue estimate, and growth"
+      "coverage": "المؤسس، الأصل، MVP، البنية التحتية، تقدير الإيرادات، والنمو"
     },
     {
-      "label": "Official website",
+      "label": "الموقع الرسمي",
       "url": "https://customer.io",
-      "coverage": "Product and current pricing verification"
+      "coverage": "المنتج والتحقق من التسعير الحالي"
     }
   ],
   "data_quality": [
-    "Revenue is a profile estimate rather than an audited financial statement.",
-    "Early architecture and pricing describe historical stages of the company.",
-    "The directory card did not show monthly revenue.",
-    "No private customer events, message data, or backend credentials are included."
+    "الإيرادات هي تقدير ملف شخصي بدلاً من بيان مالي مدقق.",
+    "المعمارية الأولية والتسعير يصفان مراحل تاريخية للشركة.",
+    "بطاقة الدليل لم تظهر الإيرادات الشهرية.",
+    "لا يوجد أحداث عملاء خاصة، أو بيانات رسائل، أو بيانات تسجيل دخول مضمنة."
   ],
   "research_metadata": {
     "researched_on": "2026-07-28",
-    "scope": "Publicly visible information only",
-    "source_method": "Starter Story directory, linked public profile/case study, and official product website links",
+    "scope": "المعلومات العامة فقط",
+    "source_method": "Starter Story",
     "private_backend_data_included": false,
-    "copyright_note": "Narrative text is independently summarized; source articles are not reproduced."
+    "copyright_note": "ملخص مستقل"
   },
   "id": "customer-io"
 };

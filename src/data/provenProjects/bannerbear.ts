@@ -4,65 +4,65 @@ export const bannerbearProject = {
   "name": "Bannerbear",
   "domain": "bannerbear.com",
   "website": "https://bannerbear.com",
-  "category": "Developer SaaS / Media automation API",
-  "headline": "API for automated image and video generation from templates",
-  "summary": "Bannerbear lets developers and no-code teams generate images and videos programmatically. Reusable templates, API calls, and automation integrations turn repetitive creative production into a workflow.",
+  "category": "Developer SaaS / واجهة برمجة تطبيقات للأتمتة",
+  "headline": "واجهة برمجة تطبيقات (API) لإنشاء الصور والفيديو تلقائياً من القوالب",
+  "summary": "يسمح Bannerbear للمطورين وفرق العمل بدون كود (no-code) بإنشاء الصور والفيديوهات برمجياً. القوالب القابلة لإعادة الاستخدام، استدعاءات API، وتكاملات الأتمتة تحول الإنتاج الإبداعي المتكرر إلى سير عمل منظم.",
   "directory_snapshot": {
     "monthly_revenue": "$50K /mo",
-    "monthly_traffic": "Unavailable",
-    "revenue_per_visitor": "Unavailable",
+    "monthly_traffic": "غير متاح",
+    "revenue_per_visitor": "غير متاح",
     "solopreneur_score": "80.4",
-    "idea_label": "Automated image generation API"
+    "idea_label": "واجهة API لإنشاء الصور تلقائياً"
   },
   "company": {
-    "business_model": "Recurring subscriptions, API-usage tiers, and historically one-time or lifetime offers",
-    "customer_type": "Developers, marketers, agencies, and automation-focused teams",
-    "founder": "Jon Yongfook Cockle",
-    "founder_role": "Founder",
+    "business_model": "اشتراكات متكررة، خطط حسب استخدام API، وعروض الدفع لمرة واحدة تاريخياً",
+    "customer_type": "المطورون، المسوقون، الوكالات، والفرق التي تركز على الأتمتة",
+    "founder": "جون يونغفوك كوكيل",
+    "founder_role": "مؤسس",
     "founder_social": "@yongfook",
-    "founders_count": "Founder-led; exact current ownership structure not asserted",
-    "employees": "One 2022 source claim referenced a team of approximately seven",
-    "started": "Approximately 2019",
-    "location": "Not stated in the cited overview",
-    "funding": "Public profile describes the company as bootstrapped",
-    "profitability": "Not independently audited in the cited overview",
-    "public_revenue_claim": "Approximately $50K per month as of 2025"
+    "founders_count": "مملوكة للمؤسس؛ هيكل الملكية الحالي الدقيق غير مصرح به",
+    "employees": "أشار ادعاء من مصدر في 2022 إلى فريق من حوالي سبعة أشخاص",
+    "started": "تقريباً 2019",
+    "location": "غير مذكور في النظرة العامة",
+    "funding": "يصف الملف العام الشركة بأنها ذاتية التمويل (Bootstrapped)",
+    "profitability": "لم يتم تدقيقها بشكل مستقل في النظرة العامة",
+    "public_revenue_claim": "حوالي 50 ألف دولار شهرياً اعتباراً من 2025"
   },
   "problem_and_product": [
-    "Teams repeatedly create near-identical social images, banners, certificates, thumbnails, and videos.",
-    "Bannerbear separates the reusable visual template from dynamic text, image, and data inputs.",
-    "Developers can generate media through an API, while no-code users can connect workflows through integrations.",
-    "The product is infrastructure for automated creative production rather than a conventional manual design editor."
+    "تُنشئ الفرق بشكل متكرر صوراً اجتماعية، لافتات، شهادات، صوراً مصغرة، ومقاطع فيديو شبه متطابقة.",
+    "يفصل Bannerbear القالب المرئي القابل لإعادة الاستخدام عن النصوص والصور والبيانات الديناميكية المدخلة.",
+    "يمكن للمطورين إنشاء الوسائط عبر API، بينما يمكن لمستخدمي أدوات بدون كود ربط مسارات العمل عبر التكاملات.",
+    "المنتج هو بنية تحتية للإنتاج الإبداعي المؤتمت بدلاً من كونه محرر تصميم يدوي تقليدي."
   ],
   "origin_story": [
-    "The available Starter Story page is a researched public-source profile.",
-    "The founder is identified as Jon Yongfook Cockle.",
-    "The product grew through transparent public building and a developer-oriented automation proposition."
+    "صفحة Starter Story المتاحة هي ملف بحثي من مصادر عامة.",
+    "تم تحديد المؤسس على أنه جون يونغفوك كوكيل.",
+    "نما المنتج من خلال البناء العلني الشفاف وعرض قيمة الأتمتة الموجه للمطورين."
   ],
   "build_and_launch": [
-    "The researched profile places launch at approximately 2019.",
-    "API-first functionality allowed the product to become part of other applications and business workflows.",
-    "Zapier and similar integrations made the service accessible to non-developers.",
-    "Template-based generation supports repeatable output while preserving brand consistency."
+    "يشير الملف البحثي إلى أن الإطلاق كان في عام 2019 تقريباً.",
+    "سمحت وظيفية الـ API أولاً للمنتج بأن يصبح جزءاً من تطبيقات ومسارات عمل تجارية أخرى.",
+    "جعلت تكاملات Zapier وما شابهها الخدمة في متناول غير المطورين.",
+    "يدعم التوليد القائم على القوالب المخرجات القابلة للتكرار مع الحفاظ على اتساق العلامة التجارية."
   ],
   "costs_and_operations": [
-    "No verified detailed founding-cost breakdown was available in the cited overview.",
-    "Media rendering creates infrastructure and usage costs that naturally support tiered API pricing.",
-    "A 2022 public-source claim described more than 500 customers and a team of approximately seven.",
-    "The company was characterized as bootstrapped."
+    "لم يتوفر تفصيل موثق لتكاليف التأسيس في النظرة العامة المذكورة.",
+    "تخلق معالجة الوسائط (Rendering) تكاليف استخدام وبنية تحتية تدعم طبيعياً تسعير API المتدرج.",
+    "وصف ادعاء من مصدر عام في 2022 أكثر من 500 عميل وفريق من حوالي سبعة أشخاص.",
+    "تم وصف الشركة بأنها ذاتية التمويل."
   ],
   "monetization": [
-    "Recurring plans are organized around API usage and product limits.",
-    "Monthly and annual billing have been offered, with annual discounts.",
-    "The researched profile also mentions one-time-payment or lifetime-access experiments.",
-    "Current usage limits and prices should be verified on the official website."
+    "الخطط المتكررة منظمة حول استخدام الـ API وحدود المنتج.",
+    "تم تقديم الفواتير الشهرية والسنوية، مع خصومات للخطط السنوية.",
+    "يشير الملف البحثي أيضاً إلى تجارب الدفع لمرة واحدة أو الوصول مدى الحياة.",
+    "يجب التحقق من حدود الاستخدام والأسعار الحالية على الموقع الرسمي."
   ],
   "growth": [
-    "A Zapier integration exposed the product to automation users.",
-    "Tutorials and how-to content demonstrated concrete automated-media use cases.",
-    "Developers publicly shared their own Bannerbear integrations, creating word of mouth.",
-    "The founder's build-in-public activity on Twitter/X created transparency and community reach.",
-    "SEO and email marketing were also named in the compiled research."
+    "عرّض تكامل Zapier المنتج لمستخدمي الأتمتة.",
+    "أظهرت الدروس والمحتوى التعليمي حالات استخدام ملموسة للوسائط المؤتمتة.",
+    "شارك المطورون علناً تكاملات Bannerbear الخاصة بهم، مما خلق تسويقاً شفهياً.",
+    "خلق نشاط المؤسس في (البناء علناً) على Twitter/X شفافية ووصولاً للمجتمع.",
+    "تم ذكر الـ SEO والتسويق عبر البريد الإلكتروني أيضاً في البحث المجمع."
   ],
   "tools": [
     "Stripe",
@@ -77,56 +77,56 @@ export const bannerbearProject = {
     {
       "date": "2022-08-10",
       "amount": "$45K /month",
-      "type": "Public-source claim",
-      "note": "Associated with a bootstrapped company and a small team."
+      "type": "ادعاء مصدر عام",
+      "note": "مرتبط بشركة ذاتية التمويل وفريق صغير."
     },
     {
       "date": "2025",
       "amount": "$53K /month",
-      "type": "Public-source claim",
-      "note": "One figure retained from the researched revenue timeline."
+      "type": "ادعاء مصدر عام",
+      "note": "تم الاحتفاظ برقم واحد من الجدول الزمني للإيرادات الذي تم البحث فيه."
     },
     {
       "date": "2025-09-03",
       "amount": "$50K /month",
-      "type": "Public-source claim / profile estimate",
-      "note": "Matches the directory's $50K monthly figure."
+      "type": "ادعاء مصدر عام / تقدير ملف",
+      "note": "يطابق رقم الـ 50 ألف دولار الشهري في الدليل."
     }
   ],
   "lessons": [
-    "An API product can expand its market through no-code integrations.",
-    "Educational content works especially well when customers need examples before understanding a programmable product.",
-    "Usage-based infrastructure costs and customer value can be aligned through tiered limits."
+    "يمكن لمنتج الـ API توسيع سوقه من خلال تكاملات الـ no-code.",
+    "يعمل المحتوى التعليمي بشكل جيد بشكل خاص عندما يحتاج العملاء إلى أمثلة قبل فهم منتج قابل للبرمجة.",
+    "يمكن مواءمة تكاليف البنية التحتية القائمة على الاستخدام وقيمة العميل من خلال حدود المستويات (Tiers)."
   ],
   "sources": [
     {
-      "label": "Starter Story directory",
+      "label": "دليل Starter Story",
       "url": "https://www.starterstory.com/data/micro-saas-ideas",
-      "coverage": "Directory revenue, score, and entry label"
+      "coverage": "إيرادات الدليل، التقييم، وتسمية الإدخال"
     },
     {
-      "label": "Starter Story Bannerbear researched profile",
+      "label": "الملف البحثي لـ Bannerbear",
       "url": "https://www.starterstory.com/businesses/bannerbear",
-      "coverage": "Overview, founder, revenue timeline, monetization, growth, and tools"
+      "coverage": "النظرة العامة، المؤسس، جدول الإيرادات الزمني، تحقيق الدخل، النمو، والأدوات"
     },
     {
-      "label": "Official website",
+      "label": "الموقع الرسمي",
       "url": "https://bannerbear.com",
-      "coverage": "Current API, plans, and integration verification"
+      "coverage": "الـ API الحالي، الخطط، والتحقق من التكاملات"
     }
   ],
   "data_quality": [
-    "Starter Story labels the profile as automated research from public sources.",
-    "Revenue points are dated public claims and not audited statements.",
-    "The directory did not provide traffic or revenue-per-visitor values.",
-    "No internal API keys, customer templates, or proprietary rendering backend is included."
+    "تصنف Starter Story الملف على أنه بحث آلي من مصادر عامة.",
+    "نقاط الإيرادات هي ادعاءات عامة مؤرخة وليست بيانات مالية مدققة.",
+    "لم يقدم الدليل قيماً للزيارات أو الإيرادات لكل زائر.",
+    "لا يتم تضمين أي مفاتيح API داخلية أو قوالب عملاء أو خلفية معالجة خاصة."
   ],
   "research_metadata": {
     "researched_on": "2026-07-28",
-    "scope": "Publicly visible information only",
-    "source_method": "Starter Story directory, linked public profile/case study, and official product website links",
+    "scope": "المعلومات العامة فقط",
+    "source_method": "Starter Story",
     "private_backend_data_included": false,
-    "copyright_note": "Narrative text is independently summarized; source articles are not reproduced."
+    "copyright_note": "ملخص مستقل"
   },
   "id": "bannerbear"
 };

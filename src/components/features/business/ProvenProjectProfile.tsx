@@ -139,148 +139,53 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project, on
         {/* Main Content Sections */}
         <div className="flex flex-col gap-10 min-w-0">
 
-          <section id="overview" className="profile-section scroll-mt-24">
-            <h2 className="text-xl font-black text-slate-900 mb-5">نظرة عامة</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-4">
-              
-              {/* Left Main Card */}
-              <Card className="shadow-sm border-slate-200/60 overflow-hidden flex flex-col rounded-xl">
-                <CardContent className="p-5 md:p-6 flex-1 flex flex-col">
-                  <div className="flex items-start gap-4 mb-5">
-                    <div className="flex items-center justify-center size-14 rounded-xl bg-blue-600 text-white text-2xl font-serif shadow-sm">
-                      {project.name.charAt(0).toUpperCase()}
-                    </div>
-                    <div className="pt-1">
-                      <h1 className="text-2xl font-black text-slate-900 flex items-center gap-2">
-                        {project.name}
-                        <a href={project.website} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700 transition-colors">
-                          <ExternalLink className="size-4" />
-                        </a>
-                      </h1>
+          <section id="overview" className="profile-section scroll-mt-24 pb-10 border-b border-slate-100">
+            <div className="flex flex-col gap-6">
+              <div className="flex flex-col md:flex-row md:items-start gap-6 justify-between">
+                <div className="flex items-start gap-5">
+                  <div className="flex items-center justify-center size-20 rounded-2xl bg-blue-600 text-white text-4xl font-serif shadow-md shrink-0">
+                    {project.name.charAt(0).toUpperCase()}
+                  </div>
+                  <div className="flex flex-col gap-2 pt-1">
+                    <h1 className="text-3xl font-black text-slate-900 flex items-center gap-3">
+                      {project.name}
+                      <a href={project.website} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 transition-colors bg-blue-50 hover:bg-blue-100 p-1.5 rounded-lg">
+                        <ExternalLink className="size-5" />
+                      </a>
+                    </h1>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="secondary" className="bg-slate-100 text-slate-700 border-0 font-bold px-3 py-1 text-[13px]">
+                        {project.category}
+                      </Badge>
+                      <Badge variant="secondary" className="bg-slate-100 text-slate-700 border-0 font-bold px-3 py-1 text-[13px]">
+                        {project.company.customer_type}
+                      </Badge>
                     </div>
                   </div>
-                  
-                  <p className="text-slate-600 text-sm leading-relaxed mb-5 flex-1 font-medium">
-                    {project.summary}
-                  </p>
+                </div>
+              </div>
 
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    <Badge variant="secondary" className="bg-slate-100 text-slate-700 hover:bg-slate-200 border-0 font-bold px-2.5 py-1 text-xs whitespace-normal text-right leading-snug h-auto">
-                      {project.category}
-                    </Badge>
-                    <Badge variant="secondary" className="bg-slate-100 text-slate-700 hover:bg-slate-200 border-0 font-bold px-2.5 py-1 text-xs whitespace-normal text-right leading-snug h-auto">
-                      {project.company.customer_type}
-                    </Badge>
-                  </div>
+              <p className="text-slate-600 text-[16px] leading-relaxed font-medium max-w-3xl">
+                {project.summary}
+              </p>
 
-                  <div className="grid grid-cols-3 gap-3 pt-5 border-t border-slate-100 mt-auto">
-                    <div>
-                      <div className="text-[11px] font-bold text-slate-500 mb-1">تحقيق الدخل</div>
-                      <div className="text-[13px] font-bold text-blue-600 leading-snug">{project.company.business_model}</div>
-                    </div>
-                    <div>
-                      <div className="text-[11px] font-bold text-slate-500 mb-1">الإطلاق</div>
-                      <div className="text-[13px] font-bold text-slate-900">{project.company.started}</div>
-                    </div>
-                    <div>
-                      <div className="text-[11px] font-bold text-slate-500 mb-1">تحديث</div>
-                      <div className="text-[13px] font-bold text-slate-900">مؤخراً</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Right Cards Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {/* Est. Monthly Revenue */}
-                <Card className="shadow-sm border-slate-200/60 hover:border-slate-300 transition-colors group cursor-default rounded-xl">
-                  <CardContent className="p-4 md:p-5 flex flex-col h-full justify-center">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="text-[13px] font-bold text-slate-900">الإيرادات الشهرية</span>
-                      <ArrowUpRight className="size-3.5 text-slate-400 group-hover:text-slate-600 transition-colors -scale-x-100" />
-                    </div>
-                    <div className="text-2xl font-black text-slate-900 mb-1">
-                      {project.directory_snapshot.monthly_revenue}
-                    </div>
-                    <div className="text-[11px] font-medium text-slate-500 mb-4">
-                      أرقام تقديرية
-                    </div>
-                    <div className="text-[11px] font-bold text-blue-600 mt-auto">
-                      مستند إلى مصادر عامة
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Founder */}
-                <Card className="shadow-sm border-slate-200/60 hover:border-slate-300 transition-colors group cursor-default rounded-xl">
-                  <CardContent className="p-4 md:p-5 flex flex-col h-full justify-center">
-                    <div className="text-[13px] font-bold text-slate-900 mb-4">المؤسس</div>
-                    <div className="flex items-center gap-3">
-                      <div className="size-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0">
-                        <UserCircle2 className="size-5" />
-                      </div>
-                      <div>
-                        <div className="font-bold text-slate-900 text-sm">{project.company.founder}</div>
-                        <div className="text-[11px] font-medium text-slate-500 mt-0.5">@{project.name.replace(/\s+/g, '').toLowerCase()}</div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Tools they use */}
-                <Card className="shadow-sm border-slate-200/60 hover:border-slate-300 transition-colors group cursor-default rounded-xl">
-                  <CardContent className="p-4 md:p-5 flex flex-col h-full justify-center">
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-[13px] font-bold text-slate-900">الأدوات المستخدمة</span>
-                      <ArrowUpRight className="size-3.5 text-slate-400 group-hover:text-slate-600 transition-colors -scale-x-100" />
-                    </div>
-                    <div className="text-[11px] font-medium text-slate-500 mb-4">التقنيات · {project.tools.length} أدوات</div>
-                    <div className="flex items-center gap-2 mt-auto">
-                      {project.tools.slice(0, 3).map((tool: string, i: number) => (
-                        <div key={i} className="size-9 rounded-lg border border-slate-200 flex items-center justify-center text-xs font-bold text-slate-700 bg-white shadow-sm" title={tool}>
-                          {tool.charAt(0).toUpperCase()}
-                        </div>
-                      ))}
-                      {project.tools.length > 3 && (
-                        <div className="size-9 rounded-lg border border-slate-100 flex items-center justify-center text-[10px] font-bold text-slate-400 bg-slate-50">
-                          +{project.tools.length - 3}
-                        </div>
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Growth channels */}
-                <Card className="shadow-sm border-slate-200/60 hover:border-slate-300 transition-colors group cursor-default rounded-xl">
-                  <CardContent className="p-4 md:p-5 flex flex-col h-full">
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-[13px] font-bold text-slate-900">قنوات النمو</span>
-                      <ArrowUpRight className="size-3.5 text-slate-400 group-hover:text-slate-600 transition-colors -scale-x-100" />
-                    </div>
-                    <div className="text-[11px] font-medium text-slate-500 mb-4">أهم قنوات الاستحواذ</div>
-                    <div className="flex flex-col gap-2.5 mt-auto">
-                      {project.growth.slice(0, 3).map((channel: string, i: number) => {
-                        let Icon = Globe;
-                        if (channel.toLowerCase().includes('seo') || channel.includes('بحث')) Icon = Search;
-                        else if (channel.includes('social') || channel.includes('تواصل')) Icon = Users;
-                        else if (channel.includes('backlink') || channel.includes('روابط')) Icon = TrendingUp;
-                        return (
-                          <div key={i} className="flex items-start gap-2.5">
-                            <div className="shrink-0 text-slate-400 mt-0.5">
-                              <Icon className="size-3.5" />
-                            </div>
-                            <div className="text-[13px] font-bold text-slate-700 leading-snug">{channel}</div>
-                          </div>
-                        );
-                      })}
-                      {project.growth.length > 3 && (
-                        <div className="text-[11px] font-medium text-slate-400 mt-1 mr-6">
-                          +{project.growth.length - 3} أخرى
-                        </div>
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-2">
+                <div className="flex flex-col gap-1.5 p-5 rounded-2xl bg-slate-50/80 border border-slate-100">
+                  <span className="text-[12px] font-bold text-slate-500 uppercase tracking-wider">الإيرادات الشهرية</span>
+                  <span className="text-2xl font-black text-emerald-600">{project.directory_snapshot.monthly_revenue.split(' ')[0]}</span>
+                </div>
+                <div className="flex flex-col gap-1.5 p-5 rounded-2xl bg-slate-50/80 border border-slate-100">
+                  <span className="text-[12px] font-bold text-slate-500 uppercase tracking-wider">المؤسس</span>
+                  <span className="text-xl font-black text-slate-900">{project.company.founder}</span>
+                </div>
+                <div className="flex flex-col gap-1.5 p-5 rounded-2xl bg-slate-50/80 border border-slate-100">
+                  <span className="text-[12px] font-bold text-slate-500 uppercase tracking-wider">نموذج العمل</span>
+                  <span className="text-lg font-black text-slate-900 line-clamp-1" title={project.company.business_model}>{project.company.business_model}</span>
+                </div>
+                <div className="flex flex-col gap-1.5 p-5 rounded-2xl bg-slate-50/80 border border-slate-100">
+                  <span className="text-[12px] font-bold text-slate-500 uppercase tracking-wider">الإطلاق</span>
+                  <span className="text-xl font-black text-slate-900">{project.company.started}</span>
+                </div>
               </div>
             </div>
           </section>
@@ -335,159 +240,113 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project, on
             </Card>
           </section>
 
-          <section id="problem-and-product" className="profile-section scroll-mt-24">
-            <Card className="shadow-sm border-amber-100/50">
-              <CardHeader className="border-b border-border/30 bg-amber-50/30 pb-4">
-                <CardTitle className="text-xl font-black flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-amber-100 text-amber-600">
-                    <Lightbulb className="size-5" />
-                  </div>
-                  المشكلة والمنتج
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-6">
-                <ul className="space-y-5">
-                  {project.problem_and_product.map((item: string, i: number) => (
-                    <li key={i} className="flex items-start gap-4 text-base text-foreground font-medium leading-relaxed">
-                      <div className="mt-1 flex items-center justify-center size-5 rounded-full bg-amber-100 shrink-0">
-                        <div className="size-2 rounded-full bg-amber-500" />
-                      </div>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+          <section id="problem-and-product" className="profile-section scroll-mt-24 pb-10 border-b border-slate-100">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 rounded-lg bg-amber-50 text-amber-600">
+                <Lightbulb className="size-5" />
+              </div>
+              <h2 className="text-2xl font-black text-slate-900 tracking-tight">المشكلة والمنتج</h2>
+            </div>
+            <ul className="space-y-4 pr-11 border-r-2 border-amber-50 py-2">
+              {project.problem_and_product.map((item: string, i: number) => (
+                <li key={i} className="flex items-start gap-4">
+                  <div className="mt-2.5 size-1.5 rounded-full bg-amber-300 shrink-0" />
+                  <p className="text-[15px] text-slate-700 font-medium leading-relaxed">{item}</p>
+                </li>
+              ))}
+            </ul>
           </section>
 
-          <section id="origin-story" className="profile-section scroll-mt-24">
-            <Card className="shadow-sm border-indigo-100/50">
-              <CardHeader className="border-b border-border/30 bg-indigo-50/30 pb-4">
-                <CardTitle className="text-xl font-black flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-indigo-100 text-indigo-600">
-                    <UserCircle2 className="size-5" />
-                  </div>
-                  المؤسس وقصة البداية
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-6">
-                <ul className="space-y-5">
-                  {project.origin_story.map((item: string, i: number) => (
-                    <li key={i} className="flex items-start gap-4 text-base text-foreground font-medium leading-relaxed">
-                      <div className="mt-1 flex items-center justify-center size-5 rounded-full bg-indigo-100 shrink-0">
-                        <div className="size-2 rounded-full bg-indigo-500" />
-                      </div>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+          <section id="origin-story" className="profile-section scroll-mt-24 pb-10 border-b border-slate-100">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 rounded-lg bg-indigo-50 text-indigo-600">
+                <UserCircle2 className="size-5" />
+              </div>
+              <h2 className="text-2xl font-black text-slate-900 tracking-tight">المؤسس وقصة البداية</h2>
+            </div>
+            <ul className="space-y-4 pr-11 border-r-2 border-indigo-50 py-2">
+              {project.origin_story.map((item: string, i: number) => (
+                <li key={i} className="flex items-start gap-4">
+                  <div className="mt-2.5 size-1.5 rounded-full bg-indigo-300 shrink-0" />
+                  <p className="text-[15px] text-slate-700 font-medium leading-relaxed">{item}</p>
+                </li>
+              ))}
+            </ul>
           </section>
 
-          <section id="build-and-launch" className="profile-section scroll-mt-24">
-            <Card className="shadow-sm border-violet-100/50">
-              <CardHeader className="border-b border-border/30 bg-violet-50/30 pb-4">
-                <CardTitle className="text-xl font-black flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-violet-100 text-violet-600">
-                    <Rocket className="size-5" />
-                  </div>
-                  البناء والإطلاق
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-6">
-                <div className="relative border-r-2 border-violet-200/60 pr-6 space-y-8">
-                  {project.build_and_launch.map((item: string, i: number) => {
-                    const parts = item.split(': ');
-                    const date = parts.length > 1 ? parts[0] : null;
-                    const text = parts.length > 1 ? parts.slice(1).join(': ') : item;
+          <section id="build-and-launch" className="profile-section scroll-mt-24 pb-10 border-b border-slate-100">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 rounded-lg bg-violet-50 text-violet-600">
+                <Rocket className="size-5" />
+              </div>
+              <h2 className="text-2xl font-black text-slate-900 tracking-tight">البناء والإطلاق</h2>
+            </div>
+            <div className="relative border-r-2 border-violet-100 pr-11 py-2 space-y-6">
+              {project.build_and_launch.map((item: string, i: number) => {
+                const parts = item.split(': ');
+                const date = parts.length > 1 ? parts[0] : null;
+                const text = parts.length > 1 ? parts.slice(1).join(': ') : item;
 
-                    return (
-                      <div key={i} className="relative">
-                        <div className="absolute w-4 h-4 bg-violet-500 rounded-full -right-[33px] top-1 ring-4 ring-background" />
-                        {date && <h4 className="text-sm font-black text-violet-600 mb-2">{date}</h4>}
-                        <p className="text-base text-foreground font-medium leading-relaxed">{text}</p>
-                      </div>
-                    );
-                  })}
-                </div>
-              </CardContent>
-            </Card>
+                return (
+                  <div key={i} className="relative">
+                    <div className="absolute w-2 h-2 bg-violet-400 rounded-full -right-[49px] top-2 ring-4 ring-white" />
+                    {date && <h4 className="text-[13px] font-black text-violet-600 mb-1.5 uppercase tracking-wide">{date}</h4>}
+                    <p className="text-[15px] text-slate-700 font-medium leading-relaxed">{text}</p>
+                  </div>
+                );
+              })}
+            </div>
           </section>
 
-          <section id="costs-and-operations" className="profile-section scroll-mt-24">
-            <Card className="shadow-sm border-slate-200/60">
-              <CardHeader className="border-b border-border/30 bg-slate-50/50 pb-4">
-                <CardTitle className="text-xl font-black flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-slate-100 text-slate-600">
-                    <Settings className="size-5" />
-                  </div>
-                  التكاليف والتشغيل
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-6">
-                <ul className="space-y-5">
-                  {project.costs_and_operations.map((item: string, i: number) => (
-                    <li key={i} className="flex items-start gap-4 text-base text-foreground font-medium leading-relaxed">
-                      <div className="mt-1 flex items-center justify-center size-5 rounded-full bg-slate-100 shrink-0">
-                        <div className="size-2 rounded-full bg-slate-500" />
-                      </div>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+          <section id="costs-and-operations" className="profile-section scroll-mt-24 pb-10 border-b border-slate-100">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 rounded-lg bg-slate-100 text-slate-600">
+                <Settings className="size-5" />
+              </div>
+              <h2 className="text-2xl font-black text-slate-900 tracking-tight">التكاليف والتشغيل</h2>
+            </div>
+            <ul className="space-y-4 pr-11 border-r-2 border-slate-100 py-2">
+              {project.costs_and_operations.map((item: string, i: number) => (
+                <li key={i} className="flex items-start gap-4">
+                  <div className="mt-2.5 size-1.5 rounded-full bg-slate-300 shrink-0" />
+                  <p className="text-[15px] text-slate-700 font-medium leading-relaxed">{item}</p>
+                </li>
+              ))}
+            </ul>
           </section>
 
-          <section id="monetization" className="profile-section scroll-mt-24">
-            <Card className="shadow-sm border-emerald-100/50">
-              <CardHeader className="border-b border-border/30 bg-emerald-50/30 pb-4">
-                <CardTitle className="text-xl font-black flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-emerald-100 text-emerald-600">
-                    <DollarSign className="size-5" />
-                  </div>
-                  نموذج الربح والتسعير
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-6">
-                <ul className="space-y-5">
-                  {project.monetization.map((item: string, i: number) => (
-                    <li key={i} className="flex items-start gap-4 text-base text-foreground font-medium leading-relaxed">
-                      <div className="mt-1 flex items-center justify-center size-5 rounded-full bg-emerald-100 shrink-0">
-                        <div className="size-2 rounded-full bg-emerald-500" />
-                      </div>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+          <section id="monetization" className="profile-section scroll-mt-24 pb-10 border-b border-slate-100">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 rounded-lg bg-emerald-50 text-emerald-600">
+                <DollarSign className="size-5" />
+              </div>
+              <h2 className="text-2xl font-black text-slate-900 tracking-tight">نموذج الربح والتسعير</h2>
+            </div>
+            <ul className="space-y-4 pr-11 border-r-2 border-emerald-50 py-2">
+              {project.monetization.map((item: string, i: number) => (
+                <li key={i} className="flex items-start gap-4">
+                  <div className="mt-2.5 size-1.5 rounded-full bg-emerald-300 shrink-0" />
+                  <p className="text-[15px] text-slate-700 font-medium leading-relaxed">{item}</p>
+                </li>
+              ))}
+            </ul>
           </section>
 
-          <section id="growth" className="profile-section scroll-mt-24">
-            <Card className="shadow-sm border-cyan-100/50">
-              <CardHeader className="border-b border-border/30 bg-cyan-50/30 pb-4">
-                <CardTitle className="text-xl font-black flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-cyan-100 text-cyan-600">
-                    <Globe className="size-5" />
-                  </div>
-                  النمو والاستحواذ
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-6">
-                <ul className="space-y-5">
-                  {project.growth.map((item: string, i: number) => (
-                    <li key={i} className="flex items-start gap-4 text-base text-foreground font-medium leading-relaxed">
-                      <div className="mt-1 flex items-center justify-center size-5 rounded-full bg-cyan-100 shrink-0">
-                        <div className="size-2 rounded-full bg-cyan-500" />
-                      </div>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+          <section id="growth" className="profile-section scroll-mt-24 pb-10 border-b border-slate-100">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 rounded-lg bg-cyan-50 text-cyan-600">
+                <Globe className="size-5" />
+              </div>
+              <h2 className="text-2xl font-black text-slate-900 tracking-tight">النمو والاستحواذ</h2>
+            </div>
+            <ul className="space-y-4 pr-11 border-r-2 border-cyan-50 py-2">
+              {project.growth.map((item: string, i: number) => (
+                <li key={i} className="flex items-start gap-4">
+                  <div className="mt-2.5 size-1.5 rounded-full bg-cyan-300 shrink-0" />
+                  <p className="text-[15px] text-slate-700 font-medium leading-relaxed">{item}</p>
+                </li>
+              ))}
+            </ul>
           </section>
 
           <section id="tools" className="profile-section scroll-mt-24">

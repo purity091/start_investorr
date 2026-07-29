@@ -268,43 +268,50 @@ function SidebarSection({
   setActiveTab?: (tab: string) => void;
 }) {
   return (
-    <SidebarGroup>
-      <SidebarGroupLabel className="bg-transparent font-semibold text-sidebar-foreground/70">
-        {title}
-      </SidebarGroupLabel>
-      <SidebarGroupContent>
-        <SidebarMenu>
-          {items.map((item) => {
-            const SubIcon = item.icon;
-            const isActive = isItemActive(item, activeTab);
-            return (
-              <SidebarMenuItem key={`${title}-${item.tab}-${item.label}`}>
-                <SidebarMenuButton 
-                  asChild 
-                  isActive={isActive} 
-                  tooltip={item.label}
-                  className="h-auto py-1.5 min-h-8 justify-start gap-2 px-2 text-right text-[13px] leading-relaxed"
-                >
-                  <a
-                    id={item.id}
-                    href={getTabPath(item.tab)}
-                    onClick={(event) => goToTab(event, item.tab, setActiveTab)}
-                  >
-                    <SubIcon />
-                    <span className="min-w-0 flex-1">{item.label}</span>
-                    {item.badge ? (
-                      <span className="ms-auto flex h-5 min-w-5 shrink-0 items-center justify-center rounded-md bg-sidebar-accent px-1.5 text-[11px] font-medium tabular-nums text-sidebar-foreground group-data-[collapsible=icon]:hidden">
-                        {item.badge}
-                      </span>
-                    ) : null}
-                  </a>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            );
-          })}
-        </SidebarMenu>
-      </SidebarGroupContent>
-    </SidebarGroup>
+    <Collapsible defaultOpen className="group/collapsible">
+      <SidebarGroup>
+        <SidebarGroupLabel asChild className="bg-transparent font-semibold text-sidebar-foreground/70 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground cursor-pointer transition-colors w-full flex items-center justify-between">
+          <CollapsibleTrigger>
+            <span>{title}</span>
+            <ChevronDown className="ms-auto size-4 transition-transform group-data-[state=open]/collapsible:rotate-180" />
+          </CollapsibleTrigger>
+        </SidebarGroupLabel>
+        <CollapsibleContent>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {items.map((item) => {
+                const SubIcon = item.icon;
+                const isActive = isItemActive(item, activeTab);
+                return (
+                  <SidebarMenuItem key={`${title}-${item.tab}-${item.label}`}>
+                    <SidebarMenuButton 
+                      asChild 
+                      isActive={isActive} 
+                      tooltip={item.label}
+                      className="h-auto py-1.5 min-h-8 justify-start gap-2 px-2 text-right text-[13px] leading-relaxed"
+                    >
+                      <a
+                        id={item.id}
+                        href={getTabPath(item.tab)}
+                        onClick={(event) => goToTab(event, item.tab, setActiveTab)}
+                      >
+                        <SubIcon />
+                        <span className="min-w-0 flex-1">{item.label}</span>
+                        {item.badge ? (
+                          <span className="ms-auto flex h-5 min-w-5 shrink-0 items-center justify-center rounded-md bg-sidebar-accent px-1.5 text-[11px] font-medium tabular-nums text-sidebar-foreground group-data-[collapsible=icon]:hidden">
+                            {item.badge}
+                          </span>
+                        ) : null}
+                      </a>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                );
+              })}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </CollapsibleContent>
+      </SidebarGroup>
+    </Collapsible>
   );
 }
 

@@ -4,66 +4,66 @@ export const supademoProject = {
   "name": "Supademo",
   "domain": "supademo.com",
   "website": "https://supademo.com",
-  "category": "AI SaaS / Interactive product demos",
-  "headline": "AI-powered platform for creating interactive, branded product demonstrations",
-  "summary": "Supademo helps teams create interactive product walkthroughs for onboarding, sales, support, and product education. The Starter Story profile is an automated researched profile compiled from public sources rather than a founder-written case study.",
+  "category": "AI SaaS / عروض المنتجات التفاعلية",
+  "headline": "منصة مدعومة بالذكاء الاصطناعي لإنشاء عروض منتجات تفاعلية تحمل هويتك التجارية",
+  "summary": "يساعد Supademo الفِرَق على إنشاء جولات تفاعلية (Walkthroughs) في المنتج لغايات التهيئة، المبيعات، الدعم الفني، وتثقيف المستخدمين حول المنتج. الملف هو بحث مؤتمت من مصادر عامة وليس دراسة حالة من المؤسس.",
   "directory_snapshot": {
     "monthly_revenue": "$250K /mo",
     "monthly_traffic": "60K /mo",
     "revenue_per_visitor": "$4.17 /visitor",
     "solopreneur_score": "58.4",
-    "idea_label": "AI-powered interactive demos"
+    "idea_label": "عروض تفاعلية مدعومة بالذكاء الاصطناعي"
   },
   "company": {
-    "business_model": "Recurring SaaS subscriptions plus setup or onboarding fees",
-    "customer_type": "B2B product, sales, customer-success, support, and enablement teams",
-    "founder": "Joseph Lee",
-    "founder_role": "Co-founder and CEO",
+    "business_model": "اشتراكات SaaS متكررة بالإضافة إلى رسوم إعداد أو تهيئة",
+    "customer_type": "فرق منتجات B2B، المبيعات، نجاح العملاء، الدعم، والتمكين",
+    "founder": "جوزيف لي",
+    "founder_role": "الرئيس التنفيذي وشريك مؤسس",
     "founder_social": "@jhylee95",
-    "founders_count": "Not reliably stated in the public profile snapshot",
-    "employees": "Not reliably stated in the public profile snapshot",
-    "started": "Approximately 2023 according to the researched profile",
-    "location": "Not stated in the overview",
-    "funding": "Not established by the cited Starter Story overview",
-    "profitability": "Not established by the cited Starter Story overview",
-    "public_revenue_claim": "Starter Story estimated approximately $250K per month as of 2026"
+    "founders_count": "غير محدد بشكل موثوق في اللمحة العامة",
+    "employees": "غير محدد بشكل موثوق في اللمحة العامة",
+    "started": "حوالي 2023 بناءً على الملف البحثي",
+    "location": "غير مذكور في النظرة العامة",
+    "funding": "غير محدد في نظرة Starter Story",
+    "profitability": "غير محدد في نظرة Starter Story",
+    "public_revenue_claim": "قدرت Starter Story بحوالي 250 ألف دولار شهرياً اعتباراً من 2026"
   },
   "problem_and_product": [
-    "Teams often need product demonstrations without recording and editing a conventional video each time.",
-    "Supademo turns product workflows into interactive, branded experiences that viewers can explore step by step.",
-    "Common use cases include sales enablement, onboarding, product education, and customer support.",
-    "The product is positioned as a fast, shareable way to demonstrate software."
+    "غالباً ما تحتاج الفِرَق إلى عروض تقديمية للمنتجات (Demos) دون الحاجة لتسجيل وتحرير فيديو تقليدي في كل مرة.",
+    "يحول Supademo سير عمل المنتج إلى تجارب تفاعلية ذات هوية بصرية يمكن للمشاهدين استكشافها خطوة بخطوة.",
+    "حالات الاستخدام الشائعة تشمل تمكين المبيعات، تهيئة العملاء (Onboarding)، التثقيف بالمنتج، ودعم العملاء.",
+    "يتم وضع المنتج كطريقة سريعة وقابلة للمشاركة لعرض البرمجيات بشكل عملي."
   ],
   "origin_story": [
-    "The cited Starter Story page does not provide a reliable founder-written origin narrative.",
-    "The researched profile identifies Joseph Lee as the founder and compiles company information from public sources.",
-    "Because the profile is automated research, unattributed origin claims should be treated as provisional."
+    "صفحة Starter Story المذكورة لا توفر قصة منشأ موثوقة مكتوبة بواسطة المؤسس.",
+    "يحدد الملف البحثي جوزيف لي كمؤسس ويجمع معلومات الشركة من مصادر عامة.",
+    "نظراً لأن الملف عبارة عن بحث مؤتمت، يجب التعامل مع ادعاءات المنشأ غير المنسوبة على أنها مؤقتة أو غير مؤكدة تماماً."
   ],
   "build_and_launch": [
-    "The researched profile places launch at approximately 2023.",
-    "The public stack indicates a modern web application built around Next.js, React, Node.js, and cloud infrastructure.",
-    "The product supports a product-led distribution loop because every shared demo can expose new viewers to Supademo.",
-    "The company combines self-service usage with enterprise-oriented onboarding and sales."
+    "يشير الملف البحثي إلى أن الإطلاق كان في عام 2023 تقريباً.",
+    "تشير الحزمة التقنية العامة (Stack) إلى تطبيق ويب حديث مبني على Next.js و React و Node.js والبنية التحتية السحابية.",
+    "يدعم المنتج حلقة توزيع يقودها المنتج (Product-led) لأن كل عرض (Demo) يتم مشاركته يمكن أن يعرض مشاهدين جدداً لـ Supademo.",
+    "تجمع الشركة بين الاستخدام الذاتي والمبيعات الموجهة للشركات الكبرى."
   ],
   "costs_and_operations": [
-    "No verified founding cost or detailed operating-cost breakdown was available in the cited public overview.",
-    "The operation appears to combine self-service product adoption with founder-led or sales-assisted enterprise conversion.",
-    "A 14-day reverse-trial approach has been reported in the researched monetization material.",
-    "One researched-source claim indicated that a large majority of users remained on the free plan; this should be verified independently."
+    "لم يتوفر أي تفصيل موثق لتكاليف التأسيس أو تكاليف التشغيل التفصيلية في النظرة العامة.",
+    "يبدو أن العملية تجمع بين تبني المنتج الذاتي (Self-service) والمبيعات التي يقودها المؤسس أو المدعومة للشركات (Enterprise).",
+    "تم الإبلاغ عن نهج الإصدار التجريبي العكسي (Reverse-trial) لمدة 14 يوماً في مواد التحقيق.",
+    "أشار ادعاء من أحد مصادر البحث إلى أن الأغلبية العظمى من المستخدمين ظلوا على الخطة المجانية؛ يجب التحقق من هذا بشكل مستقل."
   ],
   "monetization": [
-    "Free access is used as an acquisition layer, with paid plans adding greater usage and team capabilities.",
-    "Starter Story categorizes monetization as recurring subscriptions plus setup or onboarding fees.",
-    "Historically cited public prices included Pro around $27 per month, Scale around $38 per month, and Growth around $350 per month.",
-    "Enterprise pricing is customized.",
-    "Prices are historical source snapshots and may differ from current official pricing."
+    "يُستخدم الوصول المجاني كطبقة استحواذ، مع إضافة الخطط المدفوعة لاستخدامات وقدرات فريق أكبر.",
+    "تصنف Starter Story تحقيق الدخل على أنه اشتراكات متكررة بالإضافة إلى رسوم الإعداد أو التهيئة.",
+    "تضمنت الأسعار العامة المذكورة تاريخياً: Pro بحوالي 27 دولاراً شهرياً، Scale بحوالي 38 دولاراً شهرياً، و Growth بحوالي 350 دولاراً شهرياً.",
+    "تسعير المؤسسات (Enterprise) مخصص.",
+    "الأسعار هي لقطات من مصادر تاريخية وقد تختلف عن الأسعار الرسمية الحالية."
   ],
   "growth": [
-    "Shared demos create a natural word-of-mouth and product-visibility loop.",
-    "Programmatic SEO and educational pages target product-demo and adjacent workflow searches.",
-    "Founder-led sales and proactive outreach support larger B2B deals.",
-    "Public channels named in the research include Reddit, LinkedIn, Indie Hackers, podcasts, building in public, and thought leadership.",
-    "The company appears to combine bottom-up user adoption with top-down enterprise selling."
+    "تخلق العروض (Demos) المشتركة تسويقاً شفهياً طبيعياً وحلقة رؤية للمنتج.",
+    "يستهدف الـ SEO البرمجي (Programmatic SEO) والصفحات التعليمية عمليات البحث عن عروض المنتجات وسير العمل ذي الصلة.",
+    "المبيعات التي يقودها المؤسس والتواصل الاستباقي تدعم صفقات الـ B2B الأكبر.",
+    "القنوات العامة المذكورة في البحث تشمل Reddit، LinkedIn، Indie Hackers، البودكاست، البناء علناً، وقيادة الفكر.",
+    "يبدو أن الشركة تجمع بين تبني المستخدمين من القاعدة للقمة (Bottom-up) وبيع المؤسسات من القمة للقاعدة (Top-down)."
   ],
   "tools": [
     "Next.js",
@@ -78,7 +78,7 @@ export const supademoProject = {
     "OpenAI",
     "Tailwind CSS",
     "Cursor",
-    "Claude Code / cloud coding tooling",
+    "Claude Code / أدوات البرمجة السحابية",
     "ElevenLabs",
     "Slack",
     "OpenAI Codex",
@@ -95,81 +95,81 @@ export const supademoProject = {
   "revenue_timeline": [
     {
       "date": "2022-11-30",
-      "amount": "$1.3K one-time / early snapshot",
-      "type": "Public-source claim",
-      "note": "Associated with an early group of roughly 10 paying customers."
+      "amount": "$1.3K مرة واحدة / لقطة مبكرة",
+      "type": "ادعاء مصدر عام",
+      "note": "مرتبط بمجموعة مبكرة من حوالي 10 عملاء يدفعون."
     },
     {
       "date": "2024",
       "amount": "$83K /month",
-      "type": "Public-source estimate",
-      "note": "An early sourced run-rate figure shown by Starter Story."
+      "type": "تقدير مصدر عام",
+      "note": "رقم مبكر لمعدل التشغيل (Run-rate) عُرض بواسطة Starter Story."
     },
     {
       "date": "2025-10-15",
       "amount": "$300K /month",
-      "type": "Public-source claim",
-      "note": "One of several conflicting figures in the researched revenue timeline."
+      "type": "ادعاء مصدر عام",
+      "note": "أحد الأرقام المتضاربة في الجدول الزمني للإيرادات الذي تم البحث فيه."
     },
     {
       "date": "2025-11-01",
       "amount": "$250K /month",
-      "type": "Public-source claim",
-      "note": "Retained as a dated claim rather than treated as audited revenue."
+      "type": "ادعاء مصدر عام",
+      "note": "تم الاحتفاظ به كادعاء مؤرخ بدلاً من معاملته كإيرادات مدققة."
     },
     {
       "date": "2026-04-08",
       "amount": "$417K /month",
-      "type": "Public-source claim",
-      "note": "High-end figure in the compiled research."
+      "type": "ادعاء مصدر عام",
+      "note": "الرقم الأعلى في البحث المجمع."
     },
     {
       "date": "2026-04-19",
       "amount": "$83K /month",
-      "type": "Starter Story sourced headline",
-      "note": "Conflicts with other 2025–2026 claims."
+      "type": "عنوان مصدري لـ Starter Story",
+      "note": "يتعارض مع ادعاءات أخرى في 2025–2026."
     },
     {
-      "date": "2026 profile estimate",
+      "date": "تقدير ملف 2026",
       "amount": "~$250K /month",
-      "type": "Triangulated estimate",
-      "note": "Starter Story overview estimate based on multiple public sources."
+      "type": "تقدير مبني على التثليث (Triangulated)",
+      "note": "تقدير النظرة العامة لـ Starter Story استناداً إلى مصادر عامة متعددة."
     }
   ],
   "lessons": [
-    "A shareable product artifact can function as both user value and distribution.",
-    "Free usage can create bottom-up adoption while enterprise onboarding monetizes larger teams.",
-    "When research sources conflict, store every dated claim instead of replacing the timeline with one apparently exact number."
+    "يمكن أن تعمل الأداة القابلة للمشاركة كقيمة للمستخدم وأداة توزيع وتسويق في نفس الوقت.",
+    "الاستخدام المجاني يخلق تبنياً من أسفل إلى أعلى (Bottom-up)، في حين أن تهيئة الشركات تدر أرباحاً من الفرق الكبيرة.",
+    "عندما تتعارض مصادر البحث، احفظ كل ادعاء مؤرخ بدلاً من استبدال الجدول الزمني برقم واحد يبدو دقيقاً."
   ],
   "sources": [
     {
-      "label": "Starter Story directory",
+      "label": "دليل Starter Story",
       "url": "https://www.starterstory.com/data/micro-saas-ideas",
-      "coverage": "Directory metrics"
+      "coverage": "مقاييس الدليل"
     },
     {
-      "label": "Starter Story Supademo researched profile",
+      "label": "الملف البحثي لـ Supademo",
       "url": "https://www.starterstory.com/businesses/supademo",
-      "coverage": "Overview, founder, estimated revenue, monetization, growth, and tools"
+      "coverage": "النظرة العامة، المؤسس، الإيرادات المقدرة، تحقيق الدخل، النمو، والأدوات"
     },
     {
-      "label": "Official website",
+      "label": "الموقع الرسمي",
       "url": "https://supademo.com",
-      "coverage": "Product website and current-plan verification"
+      "coverage": "موقع المنتج والتحقق من الخطط الحالية"
     }
   ],
   "data_quality": [
-    "Starter Story labels this as AI-compiled research from public sources, not a founder-written profile.",
-    "Revenue claims conflict materially across dates and sources.",
-    "Pricing and stack items are historical snapshots and must be checked against current official pages.",
-    "No private analytics, customer database, or proprietary backend information is included."
+    "تصنف Starter Story هذا كبحث مجمع بالذكاء الاصطناعي من مصادر عامة، وليس ملفاً مكتوباً بواسطة المؤسس.",
+    "ادعاءات الإيرادات تتعارض مادياً عبر التواريخ والمصادر.",
+    "عناصر التسعير والحزمة التقنية هي لقطات تاريخية ويجب التحقق منها مقابل الصفحات الرسمية الحالية.",
+    "لا توجد تحليلات خاصة، أو قاعدة بيانات للعملاء، أو معلومات مسجلة كملكية خاصة مضمنة."
   ],
   "research_metadata": {
     "researched_on": "2026-07-28",
-    "scope": "Publicly visible information only",
-    "source_method": "Starter Story directory, linked public profile/case study, and official product website links",
+    "scope": "المعلومات العامة فقط",
+    "source_method": "Starter Story",
     "private_backend_data_included": false,
-    "copyright_note": "Narrative text is independently summarized; source articles are not reproduced."
+    "copyright_note": "ملخص مستقل"
   },
   "id": "supademo"
 };

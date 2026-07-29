@@ -4,130 +4,130 @@ export const convertkitProject = {
   "name": "ConvertKit",
   "domain": "convertkit.com",
   "website": "https://convertkit.com",
-  "category": "SaaS / Creator email marketing",
-  "headline": "Email marketing, automation, and monetization tools for creators",
-  "summary": "ConvertKit was built for professional creators who need audience capture, automated email sequences, segmentation, and digital-product monetization. The company later evolved its brand, so this file preserves the Starter Story ConvertKit snapshot and dates every claim.",
+  "category": "SaaS / التسويق عبر البريد الإلكتروني لصناع المحتوى",
+  "headline": "أدوات التسويق عبر البريد الإلكتروني، الأتمتة، وتحقيق الدخل لصناع المحتوى",
+  "summary": "تم بناء ConvertKit لصناع المحتوى المحترفين الذين يحتاجون إلى بناء جمهور، وسلاسل رسائل بريد إلكتروني مؤتمتة، وتقسيم الجمهور، وتحقيق الدخل من المنتجات الرقمية. طورت الشركة علامتها التجارية لاحقاً، لذا يحافظ هذا الملف على لمحة Starter Story ويؤرخ كل ادعاء.",
   "directory_snapshot": {
-    "monthly_revenue": "Unavailable on the directory card",
+    "monthly_revenue": "غير متوفر في بطاقة الدليل",
     "monthly_traffic": "7.5M /mo",
     "revenue_per_visitor": "$0.48 /visitor",
     "solopreneur_score": "64.0",
-    "idea_label": "Email marketing platform"
+    "idea_label": "منصة التسويق عبر البريد الإلكتروني"
   },
   "company": {
-    "business_model": "Tiered recurring SaaS subscriptions",
-    "customer_type": "Professional creators, newsletter publishers, bloggers, authors, and online businesses",
-    "founder": "Nathan Barry",
-    "founder_role": "Founder",
+    "business_model": "اشتراكات SaaS متكررة متعددة المستويات",
+    "customer_type": "صناع المحتوى المحترفون، ناشرو النشرات البريدية، المدونون، الكتاب، والشركات عبر الإنترنت",
+    "founder": "ناثان باري",
+    "founder_role": "مؤسس",
     "founders_count": "1",
-    "employees": "Approximately 82 in the November 2023 Starter Story profile",
+    "employees": "حوالي 82 في ملف Starter Story لعام 2023",
     "started": "2013",
-    "location": "Not required by the cited snapshot",
-    "funding": "Founder initially committed approximately $5K, then later invested a further $50K during the recommitment phase",
-    "profitability": "Marked profitable in the Starter Story profile",
-    "public_revenue_claim": "Profile estimate $3.58M/month; article title referenced $25M/year"
+    "location": "غير مطلوب حسب اللمحة المذكورة",
+    "funding": "استثمر المؤسس في البداية حوالي 5 آلاف دولار، ثم استثمر لاحقاً 50 ألف دولار إضافية خلال مرحلة إعادة الالتزام بالمشروع",
+    "profitability": "مصنف كمربح في ملف Starter Story",
+    "public_revenue_claim": "يقدر التقرير بـ 3.58 مليون دولار شهرياً؛ أشار عنوان المقال إلى 25 مليون دولار سنوياً"
   },
   "problem_and_product": [
-    "Creators need to own audience relationships rather than rely entirely on social platforms.",
-    "The platform supports forms, landing pages, broadcasts, email sequences, automation, segmentation, and digital-product selling.",
-    "The product differentiates around creator workflows rather than generic small-business email marketing.",
-    "The historical target customer became professional bloggers and creators with established audiences."
+    "يحتاج صناع المحتوى لامتلاك علاقاتهم بجمهورهم بدلاً من الاعتماد بالكامل على المنصات الاجتماعية.",
+    "تدعم المنصة النماذج، صفحات الهبوط، الإرسال الجماعي، سلاسل البريد، الأتمتة، تقسيم الجمهور، وبيع المنتجات الرقمية.",
+    "يتميز المنتج بتركيزه على سير عمل صناع المحتوى بدلاً من التسويق البريدي العام للشركات الصغيرة.",
+    "أصبح العميل المستهدف تاريخياً هو المدونون والمحترفون الذين يمتلكون جمهوراً راسخاً."
   ],
   "origin_story": [
-    "Nathan Barry set himself a public challenge to build a SaaS business reaching $5K monthly revenue within six months using a $5K budget.",
-    "Complaints about existing tools such as Mailchimp helped reveal an opportunity for creator-specific email software.",
-    "The company initially stalled around $2K MRR.",
-    "Advice from Hiten Shah pushed the founder to choose between shutting down and committing fully.",
-    "He narrowed the target market, invested additional capital, and built a team."
+    "وضع ناثان باري تحدياً علنياً لنفسه لبناء مشروع SaaS يصل إلى إيرادات شهرية قدرها 5 آلاف دولار خلال ستة أشهر باستخدام ميزانية 5 آلاف دولار.",
+    "الشكاوى حول الأدوات الحالية مثل Mailchimp ساعدت في كشف فرصة لبرمجيات بريد إلكتروني مخصصة لصناع المحتوى.",
+    "توقفت الشركة في البداية عند حاجز الـ 2000 دولار كإيرادات شهرية متكررة (MRR).",
+    "دفعته نصيحة من هيتين شاه (Hiten Shah) إلى الاختيار بين إغلاق المشروع أو الالتزام الكامل به.",
+    "قام بتضييق السوق المستهدف، واستثمر رأس مال إضافي، وقام ببناء فريق."
   ],
   "build_and_launch": [
-    "The initial build was reported to take roughly 60 days.",
-    "Early sales were highly manual and founder led.",
-    "The company used concierge migrations to remove switching friction for customers leaving other email providers.",
-    "Focusing on one creator segment made positioning, product decisions, and outreach more precise.",
-    "By 2016, the source described the company as reaching approximately $500K MRR."
+    "ورد أن البناء الأولي استغرق حوالي 60 يوماً.",
+    "كانت المبيعات المبكرة يدوية للغاية وبقيادة المؤسس شخصياً.",
+    "استخدمت الشركة خدمات الترحيل الشاملة (Concierge migrations) لإزالة عقبات الانتقال للعملاء القادمين من مزودي بريد إلكتروني آخرين.",
+    "التركيز على شريحة واحدة من صناع المحتوى جعل التموضع وقرارات المنتج والتواصل أكثر دقة.",
+    "بحلول 2016، وصف المصدر الشركة بأنها وصلت إلى حوالي 500 ألف دولار إيرادات شهرية متكررة."
   ],
   "costs_and_operations": [
-    "The initial challenge budget was approximately $5,000.",
-    "A later recommitment included roughly $50,000 of additional founder investment.",
-    "Manual migration work increased early service effort but accelerated customer conversion.",
-    "The profile estimated approximately 82 employees in 2023.",
-    "Operational details represent historical snapshots, not a current audited company report."
+    "كانت الميزانية الأولية للتحدي حوالي 5000 دولار.",
+    "تضمنت إعادة الالتزام اللاحقة استثماراً إضافياً من المؤسس بحوالي 50,000 دولار.",
+    "أدى العمل اليدوي في ترحيل العملاء إلى زيادة جهد الخدمة المبكر لكنه سرّع من تحويل العملاء واكتسابهم.",
+    "قدر الملف الشخصي عدد الموظفين بحوالي 82 موظفاً في عام 2023.",
+    "تمثل التفاصيل التشغيلية لمحات تاريخية وليست تقريراً مالياً مدققاً للشركة في الوقت الحالي."
   ],
   "monetization": [
-    "Recurring plans scale with subscriber count and features.",
-    "The cited historical tiers included Free, Creator around $9 per month, and Creator Pro around $29 per month.",
-    "The company also monetizes creator-commerce and related platform capabilities.",
-    "Historical plan labels and prices may have changed with the company's later brand evolution."
+    "تتوسع الخطط المتكررة مع زيادة عدد المشتركين والميزات المطلوبة.",
+    "تضمنت المستويات التاريخية المذكورة: خطة مجانية، خطة Creator بحوالي 9 دولارات شهرياً، و Creator Pro بحوالي 29 دولاراً شهرياً.",
+    "تحقق الشركة أيضاً دخلاً من قدرات التجارة الإلكترونية الخاصة بصناع المحتوى عبر المنصة.",
+    "تسميات الخطط والأسعار التاريخية ربما تغيرت مع تطور العلامة التجارية للشركة لاحقاً."
   ],
   "growth": [
-    "Founder-led outreach targeted professional bloggers and creators directly.",
-    "Free concierge migrations lowered the practical risk of switching email platforms.",
-    "An affiliate program historically offered a 30% continuing revenue share, creating a strong creator-led acquisition channel.",
-    "Niche positioning and creator education supported organic referrals and content distribution.",
-    "The founder's transparent public challenge helped generate early attention."
+    "استهدف التواصل المباشر بقيادة المؤسس المدونين وصناع المحتوى المحترفين.",
+    "أدت خدمات الترحيل المجانية عالية الجودة إلى تقليل المخاطر العملية لتغيير منصة البريد الإلكتروني.",
+    "قدم برنامج التسويق بالعمولة (Affiliate) تاريخياً حصة 30% من الإيرادات المتكررة، مما خلق قناة استحواذ قوية يقودها صناع المحتوى.",
+    "دعم التموضع المتخصص وتثقيف صناع المحتوى الإحالات العضوية (Organic referrals) وتوزيع المحتوى.",
+    "ساعد التحدي العلني والشفاف للمؤسس في جذب اهتمام مبكر للمشروع."
   ],
   "tools": [
     "Stripe",
     "WordPress",
     "Zapier",
-    "Email automation infrastructure",
-    "Creator landing-page and commerce tooling"
+    "بنية تحتية لأتمتة البريد الإلكتروني",
+    "أدوات بناء صفحات الهبوط والتجارة لصناع المحتوى"
   ],
   "revenue_timeline": [
     {
-      "date": "Early stage",
+      "date": "مرحلة مبكرة",
       "amount": "~$2K MRR",
-      "type": "Historical plateau",
-      "note": "The business stalled before the founder recommitted and narrowed the market."
+      "type": "فترة ركود تاريخية",
+      "note": "توقف نمو العمل قبل أن يعيد المؤسس التزامه ويضيق شريحة السوق."
     },
     {
       "date": "2016",
       "amount": "~$500K MRR",
-      "type": "Historical growth milestone",
-      "note": "Reported in the Starter Story breakdown."
+      "type": "محطة نمو تاريخية",
+      "note": "ورد في تفصيل دراسة حالة Starter Story."
     },
     {
-      "date": "2023-11-13 profile",
-      "amount": "$3.58M /month estimated",
-      "type": "Starter Story estimate",
-      "note": "The article title separately described the company as a $25M/year platform."
+      "date": "ملف 13-11-2023",
+      "amount": "$3.58M /month (مقدرة)",
+      "type": "تقدير Starter Story",
+      "note": "وصف عنوان المقال بشكل منفصل الشركة بأنها منصة بـ 25 مليون دولار سنوياً."
     }
   ],
   "lessons": [
-    "A broad horizontal product can gain traction by first dominating a clearly defined niche.",
-    "High-touch migration services can overcome switching costs in infrastructure software.",
-    "A public challenge and affiliate economics can turn customers and creators into distribution partners."
+    "المنتج الأفقي الواسع يمكن أن يحقق قوة جذب من خلال السيطرة أولاً على سوق متخصصة (Niche) محددة بوضوح.",
+    "خدمات الترحيل عالية الدعم (High-touch) يمكنها التغلب على تكاليف الاستبدال والانتقال في برمجيات البنية التحتية.",
+    "يمكن للتحديات العلنية واقتصاديات التسويق بالعمولة تحويل العملاء إلى شركاء توزيع للشركة."
   ],
   "sources": [
     {
-      "label": "Starter Story directory",
+      "label": "دليل Starter Story",
       "url": "https://www.starterstory.com/data/micro-saas-ideas",
-      "coverage": "Traffic, RPV, score, and entry label"
+      "coverage": "الزيارات، الإيراد للزائر، التقييم، وتصنيف الدليل"
     },
     {
-      "label": "Starter Story ConvertKit breakdown",
+      "label": "دراسة حالة ConvertKit",
       "url": "https://www.starterstory.com/stories/convertkit-breakdown",
-      "coverage": "Founder, origin, costs, team estimate, historical revenue, pricing, and growth"
+      "coverage": "المؤسس، الأصل، التكاليف، تقدير الفريق، الإيراد التاريخي، التسعير، والنمو"
     },
     {
-      "label": "Official snapshot domain",
+      "label": "نطاق اللمحة الرسمي",
       "url": "https://convertkit.com",
-      "coverage": "Starter Story-listed domain; verify current brand and pricing"
+      "coverage": "التحقق من العلامة التجارية والأسعار الحالية"
     }
   ],
   "data_quality": [
-    "The profile mixes historical narrative, estimates, and a headline based on a different annual figure.",
-    "Current branding, employee count, pricing, and revenue may differ substantially.",
-    "The directory did not display a monthly-revenue value for this card.",
-    "No private company systems or subscriber data is included."
+    "يمزج الملف بين السرد التاريخي والتقديرات، بالإضافة إلى عنوان يعتمد على رقم سنوي مختلف.",
+    "العلامة التجارية الحالية، عدد الموظفين، التسعير، والإيرادات قد تختلف بشكل كبير الآن.",
+    "لم يعرض الدليل قيمة الإيرادات الشهرية لهذه البطاقة.",
+    "لا توجد بيانات داخلية للأنظمة أو المشتركين مضمنة."
   ],
   "research_metadata": {
     "researched_on": "2026-07-28",
-    "scope": "Publicly visible information only",
-    "source_method": "Starter Story directory, linked public profile/case study, and official product website links",
+    "scope": "المعلومات العامة فقط",
+    "source_method": "Starter Story",
     "private_backend_data_included": false,
-    "copyright_note": "Narrative text is independently summarized; source articles are not reproduced."
+    "copyright_note": "ملخص مستقل"
   },
   "id": "convertkit"
 };

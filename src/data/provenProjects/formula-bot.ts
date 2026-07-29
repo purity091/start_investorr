@@ -4,66 +4,66 @@ export const formulaBotProject = {
   "name": "Formula Bot",
   "domain": "formulabot.com",
   "website": "https://formulabot.com",
-  "category": "AI SaaS / Spreadsheet productivity",
-  "headline": "AI tool that generates and explains Excel and Google Sheets formulas",
-  "summary": "Formula Bot began as a fast side project that converted natural-language instructions into spreadsheet formulas. It expanded from a simple website into Excel and Google Sheets add-ons and a broader AI spreadsheet assistant.",
+  "category": "AI SaaS / إنتاجية الجداول",
+  "headline": "أداة ذكاء اصطناعي لإنشاء وشرح معادلات Excel و Google Sheets",
+  "summary": "بدأ Formula Bot كمشروع جانبي سريع يحول التعليمات باللغة الطبيعية إلى معادلات جداول البيانات. توسع من مجرد موقع ويب بسيط إلى إضافات (Add-ons) لـ Excel و Google Sheets ومساعد ذكاء اصطناعي شامل لجداول البيانات.",
   "directory_snapshot": {
     "monthly_revenue": "$23K /mo",
-    "monthly_traffic": "Unavailable",
-    "revenue_per_visitor": "Unavailable",
+    "monthly_traffic": "غير متاح",
+    "revenue_per_visitor": "غير متاح",
     "solopreneur_score": "89.8",
-    "idea_label": "Excel formula generator bot"
+    "idea_label": "بوت مولد لمعادلات إكسل"
   },
   "company": {
-    "business_model": "Freemium recurring SaaS",
-    "customer_type": "Spreadsheet users in finance, accounting, analytics, marketing, and operations",
-    "founder": "David Bressler",
-    "founder_role": "Founder",
+    "business_model": "SaaS مجاني محدود مع اشتراكات متكررة (Freemium)",
+    "customer_type": "مستخدمو جداول البيانات في المالية والمحاسبة والتحليلات والتسويق والعمليات",
+    "founder": "ديفيد بريسلر",
+    "founder_role": "مؤسس",
     "founders_count": "1",
-    "employees": "0 in the March 2023 profile",
-    "started": "July 2022; public launch around September 2022",
-    "location": "Orlando, Florida",
-    "funding": "Bootstrapped in the cited story",
-    "profitability": "Not explicitly audited in the cited story",
-    "public_revenue_claim": "Article title reported $26K/month; directory later displayed $23K/month"
+    "employees": "0 (في تقرير مارس 2023)",
+    "started": "يوليو 2022؛ الإطلاق العام حوالي سبتمبر 2022",
+    "location": "أورلاندو، فلوريدا",
+    "funding": "تمويل ذاتي (Bootstrapped)",
+    "profitability": "لم يتم الإفصاح عنها بشكل صريح",
+    "public_revenue_claim": "أشار عنوان المقال إلى 26 ألف دولار شهرياً، بينما عرض الدليل لاحقاً 23 ألف دولار شهرياً"
   },
   "problem_and_product": [
-    "Spreadsheet users know the result they need but often do not know the correct formula syntax.",
-    "Formula Bot converts plain-language instructions into formulas and can help explain formulas.",
-    "The product was made available through a web interface and spreadsheet add-ons.",
-    "The audience includes both occasional spreadsheet users and professionals who work with Excel daily."
+    "مستخدمو جداول البيانات يعرفون النتيجة التي يحتاجونها لكنهم غالباً لا يعرفون البناء الصحيح للمعادلة.",
+    "يحول Formula Bot التعليمات بلغة بسيطة إلى معادلات ويمكنه المساعدة في شرح المعادلات الحالية.",
+    "تم توفير المنتج عبر واجهة ويب وإضافات لبرامج جداول البيانات.",
+    "يشمل الجمهور كلاً من المستخدمين العرضيين لجداول البيانات والمحترفين الذين يعملون مع Excel يومياً."
   ],
   "origin_story": [
-    "The founder tested OpenAI on Excel-formula generation and estimated the model was already about 85% accurate without custom training.",
-    "His background in analytics and heavy Excel use made the problem personally familiar.",
-    "The first version intentionally contained only an instruction field, a generate button, output, and copy functionality.",
-    "The project started as a side experiment and became a business after unexpected viral demand."
+    "اختبر المؤسس OpenAI في توليد معادلات إكسل وقدر أن النموذج دقيق بنسبة 85% تقريباً بدون تدريب مخصص.",
+    "خلفيته في التحليلات واستخدامه المكثف لـ Excel جعلا المشكلة مألوفة شخصياً بالنسبة له.",
+    "النسخة الأولى تضمنت عمداً حقلاً للتعليمات وزراً للتوليد والمخرجات ووظيفة النسخ فقط.",
+    "بدأ المشروع كتجربة جانبية وأصبح عملاً تجارياً بعد طلب فيروسي غير متوقع."
   ],
   "build_and_launch": [
-    "The initial product was built rapidly in Bubble without conventional custom-code development.",
-    "The first public version focused on one task: text-to-formula generation.",
-    "Viral traffic generated meaningful model/API expense before a strong paywall existed.",
-    "The founder added authentication, usage limits, donations, and later subscriptions.",
-    "The first paid subscription reportedly arrived within minutes of enabling paid plans."
+    "تم بناء المنتج الأولي بسرعة باستخدام منصة Bubble بدون تطوير برمجي تقليدي.",
+    "ركزت النسخة العامة الأولى على مهمة واحدة: تحويل النص إلى معادلة.",
+    "ولدت حركة المرور الفيروسية نفقات كبيرة لاستخدام الـ API الخاص بالنموذج قبل وجود جدار دفع قوي.",
+    "أضاف المؤسس نظام المصادقة وحدود الاستخدام والتبرعات ثم الاشتراكات لاحقاً.",
+    "أول اشتراك مدفوع ورد أنه وصل في غضون دقائق من تفعيل الخطط المدفوعة."
   ],
   "costs_and_operations": [
-    "Primary early costs were AI API usage, Bubble hosting, and related software services.",
-    "The no-code approach reduced initial engineering time and allowed the founder to ship quickly.",
-    "Viral usage created a cost-control problem, making login and request limits operationally necessary.",
-    "The founder operated without employees in the cited March 2023 profile."
+    "التكاليف المبكرة الرئيسية كانت استخدام OpenAI API واستضافة Bubble وخدمات برمجية ذات صلة.",
+    "نهج الـ No-code (بدون كود) قلل من وقت الهندسة الأولي وسمح للمؤسس بإطلاق المنتج بسرعة.",
+    "خلق الاستخدام الفيروسي مشكلة في التحكم بالتكاليف، مما جعل تسجيل الدخول وحدود الطلبات ضرورة تشغيلية.",
+    "عمل المؤسس بدون موظفين في الملف المذكور في مارس 2023."
   ],
   "monetization": [
-    "The historical free tier allowed five formula requests per month.",
-    "An unlimited plan was described at $6.99 per month in the cited case study.",
-    "Subscriptions were introduced after traffic and API costs made unrestricted free usage unsustainable.",
-    "The pricing information is historical and should be checked against the current official product."
+    "سمحت الخطة المجانية التاريخية بخمس طلبات معادلات شهرياً.",
+    "تم وصف الخطة غير المحدودة بسعر 6.99 دولاراً شهرياً في دراسة الحالة المذكورة.",
+    "تم تقديم الاشتراكات بعد أن جعلت حركة المرور وتكاليف الـ API الاستخدام المجاني غير المحدود غير مستدام.",
+    "معلومات التسعير تاريخية ويجب التحقق منها مقابل المنتج الرسمي الحالي."
   ],
   "growth": [
-    "TikTok and Instagram spreadsheet creators generated large bursts of awareness.",
-    "The founder proactively contacted influencers rather than waiting for organic mentions.",
-    "Reported influencer costs commonly ranged from roughly $200 to $3,000, depending on the creator.",
-    "The strongest paying markets were described as the United States, United Kingdom, and Canada.",
-    "Twitter engagement around Excel and spreadsheet topics helped sustain attention."
+    "صناع محتوى جداول البيانات على TikTok و Instagram ولدوا موجات كبيرة من الوعي بالمنتج.",
+    "تواصل المؤسس بشكل استباقي مع المؤثرين بدلاً من انتظار الإشارات العضوية.",
+    "تراوحت تكاليف المؤثرين المبلغ عنها بين حوالي 200 إلى 3000 دولار، حسب صانع المحتوى.",
+    "تم وصف أقوى الأسواق الدافعة للإيرادات بأنها الولايات المتحدة والمملكة المتحدة وكندا.",
+    "المناقشات على تويتر حول Excel وجداول البيانات ساعدت في الحفاظ على الاهتمام."
   ],
   "tools": [
     "Bubble",
@@ -85,63 +85,62 @@ export const formulaBotProject = {
   "revenue_timeline": [
     {
       "date": "2022-09",
-      "amount": "Early launch",
-      "type": "Launch milestone",
-      "note": "The product publicly launched after development began in July 2022."
+      "amount": "إطلاق مبكر",
+      "type": "علامة فارقة",
+      "note": "تم إطلاق المنتج علناً بعد بدء التطوير في يوليو 2022."
     },
     {
-      "date": "2023 interview period",
-      "amount": "MRR above $14K",
-      "type": "Founder-reported snapshot",
-      "note": "Reported in the body of the Starter Story case study."
+      "date": "فترة مقابلة 2023",
+      "amount": "إيراد شهري يفوق $14K",
+      "type": "لمحة من المؤسس",
+      "note": "ورد في دراسة حالة Starter Story."
     },
     {
       "date": "2023-03-21",
       "amount": "$26K /month",
-      "type": "Article headline",
-      "note": "The headline and directory snapshots do not perfectly align."
+      "type": "عنوان مقال",
+      "note": "عنوان المقال ولقطات الدليل لا تتوافق تماماً."
     },
     {
-      "date": "Directory snapshot",
+      "date": "لقطة الدليل",
       "amount": "$23K /month",
-      "type": "Starter Story directory",
-      "note": "Displayed on the micro-SaaS ideas page."
+      "type": "دليل Starter Story",
+      "note": "معروض في صفحة أفكار الـ micro-SaaS."
     }
   ],
   "lessons": [
-    "A single-purpose MVP can validate demand before building a broad platform.",
-    "Usage-based AI costs require early limits, authentication, and monetization controls.",
-    "Creator partnerships can rapidly distribute a tool whose output is easy to demonstrate visually."
+    "المنتج الأولي (MVP) أحادي الغرض يمكن أن يثبت الطلب قبل بناء منصة واسعة.",
+    "تكاليف الذكاء الاصطناعي القائمة على الاستخدام تتطلب حدوداً مبكرة ومصادقة وضوابط لتحقيق الدخل.",
+    "يمكن لشراكات صناع المحتوى توزيع أداة يمكن توضيح مخرجاتها بصرياً بسهولة وبسرعة."
   ],
   "sources": [
     {
-      "label": "Starter Story directory",
+      "label": "دليل Starter Story",
       "url": "https://www.starterstory.com/data/micro-saas-ideas",
-      "coverage": "Directory metrics"
+      "coverage": "مقاييس الدليل"
     },
     {
-      "label": "Starter Story Formula Bot case study",
+      "label": "دراسة حالة Formula Bot",
       "url": "https://www.starterstory.com/stories/excelformulabot",
-      "coverage": "Founder, product origin, no-code build, launch, pricing, growth, and historical revenue"
+      "coverage": "المؤسس، أصل المنتج، البناء، الإطلاق، التسعير، النمو، الإيرادات"
     },
     {
-      "label": "Official website",
+      "label": "الموقع الرسمي",
       "url": "https://formulabot.com",
-      "coverage": "Product website and current pricing verification"
+      "coverage": "التحقق من موقع المنتج والتسعير"
     }
   ],
   "data_quality": [
-    "The case study contains founder-reported information.",
-    "The article headline, body, and directory show different revenue snapshots.",
-    "Historical prices and traffic outcomes are not guaranteed to remain current.",
-    "No private backend or customer-level data is included."
+    "تحتوي دراسة الحالة على معلومات مقدمة من المؤسس.",
+    "عنوان المقال والنص والدليل تظهر لمحات إيرادات مختلفة.",
+    "لا يوجد ضمان بأن الأسعار التاريخية أو الزيارات ستبقى كما هي."
   ],
   "research_metadata": {
     "researched_on": "2026-07-28",
-    "scope": "Publicly visible information only",
-    "source_method": "Starter Story directory, linked public profile/case study, and official product website links",
+    "scope": "المعلومات العامة فقط",
+    "source_method": "Starter Story",
     "private_backend_data_included": false,
-    "copyright_note": "Narrative text is independently summarized; source articles are not reproduced."
+    "copyright_note": "ملخص مستقل"
   },
   "id": "formula-bot"
 };

@@ -4,65 +4,65 @@ export const outsetaProject = {
   "name": "Outseta",
   "domain": "outseta.com",
   "website": "https://outseta.com",
-  "category": "SaaS / Integrated startup operations",
-  "headline": "All-in-one operating platform for membership and subscription businesses",
-  "summary": "Outseta combines authentication, subscription billing, CRM, email, help desk, and reporting so small SaaS and membership companies can avoid connecting many separate tools.",
+  "category": "SaaS / عمليات الشركات الناشئة المتكاملة",
+  "headline": "منصة تشغيل الكل في واحد لشركات العضويات والاشتراكات",
+  "summary": "يجمع Outseta بين المصادقة، فواتير الاشتراك، إدارة علاقات العملاء (CRM)، البريد الإلكتروني، مكتب المساعدة، وإعداد التقارير بحيث يمكن لشركات الـ SaaS الصغيرة والعضويات تجنب ربط العديد من الأدوات المنفصلة.",
   "directory_snapshot": {
     "monthly_revenue": "$83.3K /mo",
     "monthly_traffic": "119K /mo",
     "revenue_per_visitor": "$0.70 /visitor",
     "solopreneur_score": "67.0",
-    "idea_label": "All-in-one SaaS toolkit"
+    "idea_label": "أدوات SaaS الكل في واحد"
   },
   "company": {
-    "business_model": "Recurring SaaS subscriptions",
-    "customer_type": "B2B and B2C subscription, SaaS, membership, and online-community businesses",
-    "founder": "Geoff Roberts",
-    "founder_role": "Co-founder",
+    "business_model": "اشتراكات SaaS متكررة",
+    "customer_type": "شركات اشتراكات B2B و B2C، برمجيات SaaS، عضويات، والمجتمعات عبر الإنترنت",
+    "founder": "جيف روبرتس",
+    "founder_role": "شريك مؤسس",
     "founder_social": "@GeoffTRoberts",
-    "founders_count": "Not stated reliably in the summarized overview",
-    "employees": "Not stated reliably in the summarized overview",
-    "started": "Approximately 2016",
-    "location": "Not stated in the cited overview",
-    "funding": "Bootstrapped/product-led positioning is commonly associated with the public story; verify independently",
-    "profitability": "Not established by the cited overview",
-    "public_revenue_claim": "Approximately $83K–$85K per month as of 2023"
+    "founders_count": "غير محدد بشكل موثوق في النظرة العامة",
+    "employees": "غير محدد بشكل موثوق في النظرة العامة",
+    "started": "حوالي 2016",
+    "location": "غير مذكور في النظرة العامة المذكورة",
+    "funding": "غالباً ما ترتبط القصة العامة بتمويل ذاتي (Bootstrapped) / منتج يقود النمو؛ يجب التحقق بشكل مستقل",
+    "profitability": "لم يتم تأكيده في النظرة العامة",
+    "public_revenue_claim": "حوالي 83 إلى 85 ألف دولار شهرياً اعتباراً من 2023"
   },
   "problem_and_product": [
-    "Early-stage SaaS companies often assemble billing, CRM, email, support, authentication, and reporting from separate vendors.",
-    "Outseta provides these functions through one integrated product and customer record.",
-    "The product reduces integration work and the operational burden of maintaining a fragmented stack.",
-    "It is particularly suited to teams that want to launch and operate without a large internal back-office system."
+    "غالباً ما تقوم شركات الـ SaaS في مراحلها المبكرة بتجميع أنظمة الفواتير، CRM، البريد الإلكتروني، الدعم، والمصادقة والتقارير من موردين مختلفين.",
+    "يوفر Outseta هذه الوظائف من خلال منتج واحد متكامل وسجل عملاء موحد.",
+    "يقلل المنتج من أعمال الدمج والعبء التشغيلي للحفاظ على حزمة برمجية مشتتة.",
+    "مناسب بشكل خاص للفرق التي ترغب في الإطلاق والتشغيل دون بناء نظام خلفي (Back-office) ضخم."
   ],
   "origin_story": [
-    "The available Starter Story page is a researched profile rather than a founder-written case study.",
-    "The product thesis centers on replacing a collection of common startup tools with a unified operating platform.",
-    "Geoff Roberts is identified as a co-founder in the public profile."
+    "صفحة Starter Story المتاحة هي ملف بحثي وليست دراسة حالة مكتوبة بواسطة المؤسس.",
+    "تتمحور أطروحة المنتج حول استبدال مجموعة من أدوات الشركات الناشئة الشائعة بمنصة تشغيل موحدة.",
+    "تم تحديد جيف روبرتس كشريك مؤسس في الملف العام."
   ],
   "build_and_launch": [
-    "The researched profile places launch at approximately 2016.",
-    "The product evolved around a unified customer-data layer spanning billing, communication, and support.",
-    "Publicly named frontend and backend technologies include React, Angular, and .NET.",
-    "The company emphasizes product-led adoption rather than a large conventional sales operation."
+    "يشير الملف البحثي إلى أن الإطلاق كان في عام 2016 تقريباً.",
+    "تطور المنتج حول طبقة بيانات عملاء موحدة تغطي الفواتير، التواصل، والدعم.",
+    "التقنيات الخلفية والأمامية المسماة علناً تشمل React، Angular، و .NET.",
+    "تؤكد الشركة على تبني نمو يقوده المنتج بدلاً من الاعتماد على قسم مبيعات تقليدي كبير."
   ],
   "costs_and_operations": [
-    "No verified founding-cost ledger was available in the cited overview.",
-    "The company has publicly emphasized running without a traditional sales team.",
-    "Integrated functionality may increase product breadth but reduces the number of external tools customers need to manage.",
-    "A large number of companies reportedly used the product, including free accounts, by the 2023 revenue snapshot."
+    "لم يتوفر دفتر تفصيلي موثق لتكاليف التأسيس في النظرة العامة.",
+    "أكدت الشركة علناً على التشغيل بدون فريق مبيعات تقليدي.",
+    "الوظائف المتكاملة تزيد من اتساع المنتج ولكنها تقلل من عدد الأدوات الخارجية التي يحتاج العملاء لإدارتها.",
+    "ذكرت التقارير استخدام عدد كبير من الشركات للمنتج، بما في ذلك الحسابات المجانية، بحلول لقطة الإيرادات لعام 2023."
   ],
   "monetization": [
-    "The primary model is recurring subscription revenue.",
-    "A historical entry-plan price reportedly increased from $39 to $47 per month.",
-    "Annual billing historically included an approximately 25% discount.",
-    "Prices should be verified on the official website because the sourced figures are dated."
+    "النموذج الأساسي هو إيرادات الاشتراكات المتكررة.",
+    "أفادت التقارير تاريخياً بارتفاع سعر الخطة الأولية من 39 دولاراً إلى 47 دولاراً شهرياً.",
+    "تضمنت الفواتير السنوية تاريخياً خصماً بحوالي 25%.",
+    "يجب التحقق من الأسعار على الموقع الرسمي لأن الأرقام المستمدة قديمة."
   ],
   "growth": [
-    "Product-led onboarding and free trials allow prospects to experience the integrated workflow.",
-    "Content marketing and SEO explain operational problems faced by SaaS and membership founders.",
-    "Channel and distribution partnerships, including ecosystem relationships such as Stripe and Webflow, extend reach.",
-    "Founder-led selling and customer service support trust without a conventional large sales team.",
-    "The researched profile also named Product Hunt, press, and community-driven visibility."
+    "يسمح التوجيه داخل المنتج والفترات التجريبية المجانية للعملاء المحتملين بتجربة سير العمل المتكامل.",
+    "يشرح التسويق بالمحتوى والـ SEO المشاكل التشغيلية التي يواجهها مؤسسو SaaS وشركات العضوية.",
+    "الشراكات وقنوات التوزيع، بما في ذلك علاقات النظام البيئي مثل Stripe و Webflow، تزيد من الوصول.",
+    "المبيعات التي يقودها المؤسس وخدمة العملاء تدعم الثقة بدون فريق مبيعات تقليدي كبير.",
+    "ذكر الملف البحثي أيضاً Product Hunt، الصحافة، والظهور المجتمعي كأدوات للنمو."
   ],
   "tools": [
     "Webflow",
@@ -78,56 +78,56 @@ export const outsetaProject = {
     {
       "date": "2018",
       "amount": "$492 /month",
-      "type": "Early public-source snapshot",
-      "note": "Historical point retained to show the early stage."
+      "type": "لمحة مبكرة من مصدر عام",
+      "note": "تم الاحتفاظ بهذه النقطة التاريخية لإظهار المرحلة المبكرة."
     },
     {
       "date": "2023-01-19",
       "amount": "$83K /month",
-      "type": "Sourced public claim",
-      "note": "Associated with approximately 6,000 companies, many of them free users."
+      "type": "ادعاء عام مصدري",
+      "note": "مرتبط بحوالي 6,000 شركة، الكثير منها مستخدمون مجانيون."
     },
     {
-      "date": "2023 researched estimate",
+      "date": "تقدير بحثي 2023",
       "amount": "~$85K /month",
-      "type": "Starter Story estimate",
-      "note": "Close to the directory figure of $83.3K per month."
+      "type": "تقدير Starter Story",
+      "note": "قريب من رقم الدليل البالغ 83.3 ألف دولار شهرياً."
     }
   ],
   "lessons": [
-    "An integrated product can sell convenience and data continuity rather than one isolated feature.",
-    "A product-led company can pair self-service onboarding with ecosystem partnerships instead of a large sales team.",
-    "Long revenue timelines are useful: the 2018 and 2023 snapshots show compounding rather than overnight growth."
+    "المنتج المتكامل يمكنه بيع الراحة واستمرارية البيانات بدلاً من ميزة واحدة معزولة.",
+    "الشركة التي يقودها المنتج يمكنها دمج التوجيه الذاتي (Self-service) مع شراكات النظام البيئي بدلاً من الاعتماد على فريق مبيعات ضخم.",
+    "الجداول الزمنية الطويلة للإيرادات مفيدة: اللمحات بين 2018 و 2023 تظهر تراكماً تدريجياً بدلاً من نمو سريع بين ليلة وضحاها."
   ],
   "sources": [
     {
-      "label": "Starter Story directory",
+      "label": "دليل Starter Story",
       "url": "https://www.starterstory.com/data/micro-saas-ideas",
-      "coverage": "Directory metrics"
+      "coverage": "مقاييس الدليل"
     },
     {
-      "label": "Starter Story Outseta researched profile",
+      "label": "الملف البحثي لـ Outseta",
       "url": "https://www.starterstory.com/businesses/outseta",
-      "coverage": "Overview, estimated revenue, monetization, founder, growth, and tools"
+      "coverage": "النظرة العامة، الإيرادات المقدرة، تحقيق الدخل، المؤسس، النمو، والأدوات"
     },
     {
-      "label": "Official website",
+      "label": "الموقع الرسمي",
       "url": "https://outseta.com",
-      "coverage": "Current product and pricing verification"
+      "coverage": "التحقق من المنتج والتسعير الحالي"
     }
   ],
   "data_quality": [
-    "Starter Story identifies the profile as automated public-source research.",
-    "Tooling and price details are historical and may be incomplete.",
-    "The $83.3K directory value and ~$85K profile estimate are close but not identical.",
-    "No private account data or internal backend implementation is included."
+    "تصنف Starter Story الملف على أنه بحث آلي من مصادر عامة.",
+    "الأدوات وتفاصيل الأسعار تاريخية وقد تكون غير مكتملة.",
+    "القيمة البالغة 83.3 ألف دولار في الدليل و ~85 ألف دولار في التقدير متقاربتان لكنهما غير متطابقتين.",
+    "لا توجد بيانات حسابات خاصة أو تفاصيل تقنية خلفية (Backend) مضمنة."
   ],
   "research_metadata": {
     "researched_on": "2026-07-28",
-    "scope": "Publicly visible information only",
-    "source_method": "Starter Story directory, linked public profile/case study, and official product website links",
+    "scope": "المعلومات العامة فقط",
+    "source_method": "Starter Story",
     "private_backend_data_included": false,
-    "copyright_note": "Narrative text is independently summarized; source articles are not reproduced."
+    "copyright_note": "ملخص مستقل"
   },
   "id": "outseta"
 };

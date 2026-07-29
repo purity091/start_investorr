@@ -4,121 +4,121 @@ export const carrdProject = {
   "name": "Carrd",
   "domain": "carrd.co",
   "website": "https://carrd.co",
-  "category": "SaaS / One-page website builder",
-  "headline": "Simple, responsive builder for one-page websites",
-  "summary": "Carrd enables users to create lightweight responsive sites such as landing pages, profiles, portfolios, and small marketing pages. Its simplicity, low annual price, and product-led sharing helped it spread widely.",
+  "category": "SaaS / بناء مواقع الصفحة الواحدة",
+  "headline": "منشئ مواقع بسيط ومتجاوب للصفحة الواحدة",
+  "summary": "يتيح Carrd للمستخدمين إنشاء مواقع خفيفة ومتجاوبة مثل صفحات الهبوط (Landing Pages)، والملفات الشخصية، ومعارض الأعمال، وصفحات التسويق الصغيرة. بساطته، وسعره السنوي المنخفض، والمشاركة المعتمدة على المنتج ساعدت في انتشاره على نطاق واسع.",
   "directory_snapshot": {
     "monthly_revenue": "$30K /mo",
     "monthly_traffic": "17.5M /mo",
     "revenue_per_visitor": "$0.00 /visitor",
     "solopreneur_score": "63.2",
-    "idea_label": "One-page site builder"
+    "idea_label": "منشئ مواقع الصفحة الواحدة"
   },
   "company": {
-    "business_model": "Freemium recurring subscriptions plus historically reported one-time/lifetime options",
-    "customer_type": "Individuals, creators, freelancers, startups, and small businesses",
+    "business_model": "اشتراكات متكررة (Freemium) مع خيارات دفع لمرة واحدة/مدى الحياة في الماضي",
+    "customer_type": "الأفراد وصناع المحتوى والمستقلون والشركات الناشئة والصغيرة",
     "founder": "AJ",
-    "founder_role": "Founder / co-founder in the Starter Story researched profile",
+    "founder_role": "مؤسس / شريك مؤسس في الملف البحثي لـ Starter Story",
     "founder_social": "@ajlkn",
-    "founders_count": "Not stated reliably in the overview",
-    "employees": "Not stated reliably in the overview",
-    "started": "Approximately 2016",
-    "location": "Not stated in the cited overview",
-    "funding": "Not established by the cited overview",
-    "profitability": "Not independently audited in the cited overview",
-    "public_revenue_claim": "Approximately $30K per month in a public October 2019 snapshot"
+    "founders_count": "غير محدد بدقة في النظرة العامة",
+    "employees": "غير محدد بدقة في النظرة العامة",
+    "started": "حوالي عام 2016",
+    "location": "غير مذكور في النظرة العامة",
+    "funding": "غير محدد في النظرة العامة",
+    "profitability": "لم يتم تدقيقها بشكل مستقل في النظرة العامة",
+    "public_revenue_claim": "حوالي 30 ألف دولار شهرياً في تقرير عام من أكتوبر 2019"
   },
   "problem_and_product": [
-    "Many users need a polished web presence without a multi-page CMS or complex site builder.",
-    "Carrd focuses on one-page sites, reducing setup and design complexity.",
-    "Free publishing lowers trial friction, while paid plans add custom domains, forms, embeds, and integrations.",
-    "The product serves both personal and commercial use cases."
+    "العديد من المستخدمين يحتاجون إلى وجود ويب أنيق بدون نظام إدارة محتوى (CMS) معقد متعدد الصفحات أو منشئ مواقع معقد.",
+    "يركز Carrd على مواقع الصفحة الواحدة، مما يقلل من تعقيد الإعداد والتصميم.",
+    "النشر المجاني يقلل من احتكاك التجربة، بينما تضيف الخطط المدفوعة نطاقات مخصصة، نماذج، تضمينات، وتكاملات.",
+    "يخدم المنتج حالات الاستخدام الشخصية والتجارية على حد سواء."
   ],
   "origin_story": [
-    "The cited Starter Story page is a researched public-source profile rather than a founder-written case study.",
-    "Founder AJ launched a deliberately focused alternative to broad website-building platforms.",
-    "The product's simplicity and low price became central positioning advantages."
+    "صفحة Starter Story المذكورة هي ملف بحثي من مصادر عامة وليست دراسة حالة مكتوبة بواسطة المؤسس.",
+    "أطلق المؤسس AJ بديلاً مركزاً ومتعمداً لمنصات بناء المواقع الشاملة والضخمة.",
+    "أصبحت بساطة المنتج وسعره المنخفض من المزايا الأساسية لموقعه في السوق."
   ],
   "build_and_launch": [
-    "The researched profile places launch around 2016.",
-    "Twitter/X and Product Hunt helped generate early attention.",
-    "Free sites allowed users to experience and share the product before purchasing.",
-    "A constrained one-page format reduced product complexity while still supporting many use cases."
+    "يشير الملف البحثي إلى أن الإطلاق كان في عام 2016 تقريباً.",
+    "ساعد Twitter/X و Product Hunt في جذب الانتباه المبكر.",
+    "سمحت المواقع المجانية للمستخدمين بتجربة المنتج ومشاركته قبل الشراء.",
+    "قلل نموذج الصفحة الواحدة المقيد من تعقيد المنتج مع دعم العديد من حالات الاستخدام في نفس الوقت."
   ],
   "costs_and_operations": [
-    "No verified detailed startup-cost breakdown was available in the cited overview.",
-    "The freemium model requires infrastructure for a very large number of free and low-priced sites.",
-    "Low annual prices rely on efficient self-service onboarding and support.",
-    "The directory's very high traffic relative to its historical revenue snapshot reflects broad free-product usage and/or dated figures."
+    "لم يتوفر تفصيل موثق لتكاليف بدء التشغيل في النظرة العامة.",
+    "يتطلب نموذج الـ Freemium بنية تحتية لعدد كبير جداً من المواقع المجانية ومنخفضة السعر.",
+    "تعتمد الأسعار السنوية المنخفضة على الإعداد الذاتي الفعال والدعم الآلي.",
+    "يعكس حجم الزيارات المرتفع جداً في الدليل (مقارنة بالإيرادات التاريخية) الاستخدام الواسع للمنتج المجاني أو الأرقام القديمة."
   ],
   "monetization": [
-    "Paid plans add custom domains, forms, ecommerce-related features, integrations, and advanced site capabilities.",
-    "Historical public prices included Pro Lite at approximately $9 per year, Standard at $19 per year, and Plus at $49 per year.",
-    "The researched profile also mentioned one-time or lifetime payment experiments.",
-    "Current pricing should be checked directly because these are historical snapshots."
+    "تضيف الخطط المدفوعة نطاقات مخصصة، ونماذج، وميزات تجارة إلكترونية، وتكاملات، وقدرات متقدمة للموقع.",
+    "تضمنت الأسعار العامة التاريخية Pro Lite بسعر 9 دولارات سنوياً تقريباً، و Standard بـ 19 دولاراً سنوياً، و Plus بـ 49 دولاراً سنوياً.",
+    "ذكر الملف البحثي أيضاً تجارب للدفع لمرة واحدة أو مدى الحياة.",
+    "يجب التحقق من الأسعار الحالية مباشرة لأن هذه الأرقام تاريخية."
   ],
   "growth": [
-    "Twitter/X supported the initial launch and founder-led awareness.",
-    "Product Hunt introduced the product to early adopters.",
-    "Free published sites created word-of-mouth and visible product distribution.",
-    "SEO captures high-intent searches for simple landing pages and personal websites.",
-    "Low friction and affordability reduce the decision cost for first-time users."
+    "دعم Twitter/X الإطلاق الأولي والوعي الذي يقوده المؤسس.",
+    "قدم Product Hunt المنتج للمتبنين الأوائل.",
+    "خلقت المواقع المجانية المنشورة تسويقاً شفهياً (Word-of-mouth) وتوزيعاً مرئياً للمنتج.",
+    "يستحوذ تحسين محركات البحث (SEO) على عمليات البحث عالية النية لصفحات الهبوط والمواقع الشخصية البسيطة.",
+    "الاحتكاك المنخفض والسعر المناسب يقللان من تكلفة القرار للمستخدمين لأول مرة."
   ],
   "tools": [
     "PayPal",
     "Stripe",
     "Gumroad",
     "Typeform",
-    "Custom website-building and hosting infrastructure"
+    "بنية تحتية مخصصة لبناء واستضافة المواقع"
   ],
   "revenue_timeline": [
     {
       "date": "2019-10-07",
       "amount": "~$30K /month",
-      "type": "Public-source snapshot",
-      "note": "The researched profile also referenced a range around $25K–$30K per month."
+      "type": "لمحة من مصادر عامة",
+      "note": "أشار الملف البحثي أيضاً إلى نطاق يتراوح بين 25 ألف إلى 30 ألف دولار شهرياً."
     },
     {
-      "date": "Directory snapshot",
+      "date": "لقطة الدليل",
       "amount": "$30K /month",
-      "type": "Starter Story directory",
-      "note": "The figure may be inherited from the older 2019 public snapshot."
+      "type": "دليل Starter Story",
+      "note": "قد يكون هذا الرقم موروثاً من التقرير القديم في 2019."
     }
   ],
   "lessons": [
-    "A narrowly scoped product can win through clarity and ease rather than feature breadth.",
-    "Freemium products can turn published customer output into distribution.",
-    "Historical revenue paired with current traffic must be dated carefully to avoid misleading comparisons."
+    "المنتج ذو النطاق الضيق يمكن أن ينجح من خلال الوضوح والسهولة بدلاً من كثرة الميزات.",
+    "المنتجات المجانية (Freemium) يمكن أن تحول مخرجات العملاء المنشورة إلى قناة توزيع مجانية.",
+    "يجب التعامل مع الإيرادات التاريخية المقترنة بحركة المرور الحالية بحذر لتجنب المقارنات المضللة."
   ],
   "sources": [
     {
-      "label": "Starter Story directory",
+      "label": "دليل Starter Story",
       "url": "https://www.starterstory.com/data/micro-saas-ideas",
-      "coverage": "Directory revenue, traffic, RPV, score, and entry label"
+      "coverage": "إيرادات الدليل، الزيارات، التصنيف"
     },
     {
-      "label": "Starter Story Carrd researched profile",
+      "label": "الملف البحثي لـ Carrd",
       "url": "https://www.starterstory.com/businesses/carrd",
-      "coverage": "Overview, founder, monetization, growth, tools, and historical revenue"
+      "coverage": "نظرة عامة، المؤسس، نموذج الربح، النمو، الأدوات، والإيرادات التاريخية"
     },
     {
-      "label": "Official website",
+      "label": "الموقع الرسمي",
       "url": "https://carrd.co",
-      "coverage": "Current product, plans, features, and pricing verification"
+      "coverage": "المنتج الحالي، الخطط، الميزات، والتسعير"
     }
   ],
   "data_quality": [
-    "Starter Story labels the profile as automated public-source research.",
-    "The revenue figure appears to originate from an older 2019 snapshot.",
-    "The displayed RPV rounds to $0.00 because of the relationship between the listed revenue and very high traffic.",
-    "No user sites, account information, templates, or internal hosting backend is included."
+    "تصنف Starter Story هذا الملف كبحث عام مؤتمت من مصادر علنية.",
+    "يبدو أن رقم الإيرادات ينبع من لمحة قديمة في 2019.",
+    "يظهر الإيراد لكل زائر كـ $0.00 بسبب النسبة بين الإيراد المذكور وعدد الزيارات الهائل.",
+    "لا توجد مواقع مستخدمين، أو تفاصيل حسابات، أو معلومات بنية تحتية مضمنة."
   ],
   "research_metadata": {
     "researched_on": "2026-07-28",
-    "scope": "Publicly visible information only",
-    "source_method": "Starter Story directory, linked public profile/case study, and official product website links",
+    "scope": "المعلومات العامة فقط",
+    "source_method": "Starter Story",
     "private_backend_data_included": false,
-    "copyright_note": "Narrative text is independently summarized; source articles are not reproduced."
+    "copyright_note": "ملخص مستقل"
   },
   "id": "carrd"
 };
