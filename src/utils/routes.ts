@@ -111,6 +111,12 @@ const getBasePath = (pathname: string) => {
 
   const lastSegment = segments[segments.length - 1];
   const baseSegments = hasTabShape(lastSegment) || isIndexFile(lastSegment) ? segments.slice(0, -1) : segments;
+  
+  const firstTabIdx = baseSegments.findIndex(hasTabShape);
+  if (firstTabIdx !== -1) {
+    baseSegments.splice(firstTabIdx);
+  }
+
   return baseSegments.length ? `/${baseSegments.join('/')}` : '';
 };
 
