@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Badge } from '@/components/ui/Badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { ArrowRight, CheckCircle2, DollarSign, Users, Globe, ExternalLink, Lightbulb, Rocket, Settings, Info, Building2, UserCircle2, Code, ShieldCheck, FileText, Check } from 'lucide-react';
@@ -20,6 +20,28 @@ const getToolColor = (tool: string) => {
 
 export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project, onBack }) => {
   const [activeId, setActiveId] = useState<string>('company');
+  const containerRef = useRef<HTMLDivElement>(null);
+  const tocRef = useRef<HTMLDivElement>(null);
+
+  // Scroll-based sticky: track window scroll and fix the TOC panel manually
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current || !tocRef.current) return;
+      const containerTop = containerRef.current.getBoundingClientRect().top;
+      const headerHeight = 100; // header ~96px
+      if (containerTop <= headerHeight) {
+        tocRef.current.style.position = 'fixed';
+        tocRef.current.style.top = `${headerHeight}px`;
+        tocRef.current.style.width = '200px';
+      } else {
+        tocRef.current.style.position = 'relative';
+        tocRef.current.style.top = '0';
+        tocRef.current.style.width = 'auto';
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -101,11 +123,11 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project, on
       </div>
 
       {/* Layout Grid */}
-      <div className="grid lg:grid-cols-[220px_1fr] gap-10 mt-6 items-start relative">
+      <div ref={containerRef} className="grid lg:grid-cols-[220px_1fr] gap-10 mt-6 items-start relative">
         
-        {/* Sidebar TOC */}
-        <aside className="hidden lg:block sticky top-24 self-start">
-          <div className="flex flex-col gap-2">
+        {/* Sidebar TOC placeholder to maintain grid space */}
+        <aside className="hidden lg:block" style={{ minHeight: '1px' }}>
+          <div ref={tocRef} className="flex flex-col gap-2">
             <h3 className="font-bold text-sm text-foreground mb-2">محتويات دراسة الحالة</h3>
             <div className="flex flex-col border-r-2 border-muted pr-4 gap-1 relative">
               {navItems.map((item) => (
