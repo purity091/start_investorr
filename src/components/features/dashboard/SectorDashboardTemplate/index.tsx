@@ -178,23 +178,25 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
 
         <div className="mx-auto flex w-full max-w-[1700px] flex-col gap-8 px-4 py-10 sm:px-6 lg:flex-row lg:px-8">
           {/* Sidebar Navigation */}
-          <aside className="w-full shrink-0 lg:w-64 relative">
-            <div className="sticky top-24 flex flex-col gap-1 rounded-2xl border border-border bg-background p-3">
-              <h3 className="px-4 py-2 text-xs font-bold text-muted-foreground uppercase tracking-wider mb-2">محتويات التقرير</h3>
-              {nav.map((item) => (
-                <button
-                  key={item}
-                  onClick={() => handleNavClick(item)}
-                  className={cn(
-                    "flex w-full items-center justify-start rounded-xl px-4 py-3 text-right text-[13px] font-bold transition-all",
-                    activeId === navMap[item]
-                      ? "bg-primary/10 text-primary shadow-sm border border-primary/20" 
-                      : "bg-transparent text-muted-foreground hover:bg-muted hover:text-foreground border border-transparent"
-                  )}
-                >
-                  {item}
-                </button>
-              ))}
+          <aside className="hidden lg:block w-56 shrink-0 relative">
+            <div className="sticky top-24 flex flex-col gap-2">
+              <h3 className="font-semibold text-sm text-foreground mb-1">محتويات التقرير</h3>
+              <div className="flex flex-col border-r border-border/40 pr-3">
+                {nav.map((item) => (
+                  <button
+                    key={item}
+                    onClick={() => handleNavClick(item)}
+                    className={cn(
+                      "w-full text-right py-1.5 text-[13px] transition-colors focus:outline-none",
+                      activeId === navMap[item]
+                        ? "text-foreground font-semibold" 
+                        : "text-muted-foreground hover:text-foreground"
+                    )}
+                  >
+                    {item}
+                  </button>
+                ))}
+              </div>
             </div>
           </aside>
 
