@@ -108,7 +108,7 @@ const AppShell: React.FC = () => {
   return (
     <TooltipProvider>
       <SidebarProvider open={!isSidebarCollapsed} onOpenChange={(open) => setIsSidebarCollapsed(!open)}>
-        <div className="flex min-h-screen w-full max-w-full overflow-x-hidden bg-background">
+        <div className="flex min-h-screen w-full max-w-full bg-background">
           <Sidebar
             user={MOCK_USER}
             isCollapsed={isSidebarCollapsed}
@@ -117,7 +117,7 @@ const AppShell: React.FC = () => {
           />
 
           <SidebarInset
-            className="min-h-screen w-full max-w-full overflow-x-hidden bg-background transition-[margin] duration-300"
+            className="min-h-screen w-full max-w-full bg-background transition-[margin] duration-300"
           >
             <Header
               activeTab={activeTab}

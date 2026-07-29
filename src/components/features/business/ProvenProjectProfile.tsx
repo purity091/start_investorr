@@ -87,10 +87,10 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project, on
       </div>
 
       {/* Layout Grid */}
-      <div className="grid lg:grid-cols-[220px_1fr] gap-10 mt-4 items-start">
+      <div className="grid lg:grid-cols-[220px_1fr] gap-10 mt-4">
         
         {/* Sidebar TOC (Right Side in RTL) */}
-        <aside className="hidden lg:block relative">
+        <aside className="hidden lg:block relative h-full">
           <div className="sticky top-24 flex flex-col gap-2">
             <h3 className="font-semibold text-sm text-foreground mb-1">محتويات الصفحة</h3>
             <div className="flex flex-col border-r border-border/40 pr-3">
