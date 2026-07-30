@@ -49,15 +49,18 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   useEffect(() => {
-    // Get initial session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-      setUser(session?.user ?? null);
-      if (session?.user) {
-        fetchProfile(session.user.id).then(() => setLoading(false));
-      } else {
-        setLoading(false);
-      }
+    // Get initial user (getUser is more secure than getSession)
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      setUser(user ?? null);
+      // Also get session for session state
+      supabase.auth.getSession().then(({ data: { session } }) => {
+        setSession(session);
+        if (user) {
+          fetchProfile(user.id).then(() => setLoading(false));
+        } else {
+          setLoading(false);
+        }
+      });
     });
 
     // Listen for auth changes
