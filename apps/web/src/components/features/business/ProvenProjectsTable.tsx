@@ -21,7 +21,7 @@ import {
 import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
-import { ArrowUpDown, ChevronDown, ChevronLeft, ChevronRight, ExternalLink, Search, BarChart3, Users, Globe, Building2 } from 'lucide-react';
+import { ArrowUpDown, ChevronDown, ChevronLeft, ChevronRight, ExternalLink, Search, X, Filter } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -35,6 +35,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { cn } from '@/lib/utils';
 
 interface ProvenProjectsTableProps {
   data: any[];
@@ -70,7 +71,7 @@ const getCountryInfo = (location: string) => {
   if (loc.includes('uk') || loc.includes('london')) return { name: 'المملكة المتحدة', flag: '🇬🇧' };
   if (loc.includes('canada')) return { name: 'كندا', flag: '🇨🇦' };
   if (loc.includes('السعودية') || loc.includes('saudi arabia') || loc.includes('مكة')) return { name: 'المملكة العربية السعودية', flag: '🇸🇦' };
-  return { name: 'عالمي', flag: '🌍' }; // Default for 'not stated' or remote
+  return { name: 'عالمي', flag: '🌍' };
 };
 
 export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, onRowClick }) => {
@@ -78,6 +79,18 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   const [globalFilter, setGlobalFilter] = useState('');
   const [rowSelection, setRowSelection] = useState({});
+
+  // Extract unique main categories for dropdown filter
+  const uniqueCategories = useMemo(() => {
+    const set = new Set<string>();
+    data.forEach((item) => {
+      if (item.category) {
+        const mainCat = item.category.split('/')[0].trim();
+        if (mainCat) set.add(mainCat);
+      }
+    });
+    return Array.from(set).sort();
+  }, [data]);
 
   const columns: ColumnDef<any>[] = useMemo(
     () => [
@@ -104,11 +117,40 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
       {
         accessorKey: 'category',
         header: 'التصنيف',
-        cell: ({ row }) => (
-          <Badge variant="secondary" className="bg-slate-100 text-slate-700 hover:bg-slate-200 border-0 font-bold px-2.5 py-0.5 text-[11px]">
-            {row.original.category.split('/')[0].trim()}
-          </Badge>
-        ),
+        filterFn: (row, columnId, filterValue) => {
+          if (!filterValue) return true;
+          const cat = (row.getValue(columnId) as string || '').toLowerCase();
+          return cat.includes(filterValue.toLowerCase());
+        },
+        cell: ({ row, table }) => {
+          const rawCat = row.original.category || '';
+          const displayCat = rawCat.split('/')[0].trim();
+          const currentFilter = table.getColumn('category')?.getFilterValue() as string;
+          const isFiltered = currentFilter && currentFilter.toLowerCase() === displayCat.toLowerCase();
+
+          return (
+            <Badge
+              variant="secondary"
+              onClick={(e) => {
+                e.stopPropagation();
+                if (isFiltered) {
+                  table.getColumn('category')?.setFilterValue('');
+                } else {
+                  table.getColumn('category')?.setFilterValue(displayCat);
+                }
+              }}
+              className={cn(
+                "cursor-pointer font-bold px-2.5 py-0.5 text-[11px] transition-all hover:scale-105 active:scale-95 select-none",
+                isFiltered
+                  ? "bg-blue-600 text-white hover:bg-blue-700 shadow-sm"
+                  : "bg-slate-100 text-slate-700 hover:bg-blue-100 hover:text-blue-800 border-0"
+              )}
+              title="اضغط لتصفية المشاريع حسب هذا التصنيف"
+            >
+              {displayCat}
+            </Badge>
+          );
+        },
       },
       {
         accessorFn: (row) => getCountryInfo(row.company?.location).name,
@@ -203,7 +245,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
                 variant="outline"
                 size="sm"
                 onClick={(e) => {
-                  e.stopPropagation(); // prevent row click
+                  e.stopPropagation();
                   onRowClick(row.original);
                 }}
                 className="h-8 text-xs font-bold border-slate-200 hover:bg-slate-50 text-slate-700"
@@ -238,27 +280,54 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
     onGlobalFilterChange: setGlobalFilter,
   });
 
+  const categoryFilterVal = (table.getColumn('category')?.getFilterValue() as string) || '';
+  const countryFilterVal = (table.getColumn('country')?.getFilterValue() as string) || '';
+  const isAnyFilterActive = globalFilter || categoryFilterVal || countryFilterVal;
+
+  const resetAllFilters = () => {
+    setGlobalFilter('');
+    table.getColumn('category')?.setFilterValue('');
+    table.getColumn('country')?.setFilterValue('');
+  };
+
   return (
     <div className="w-full flex flex-col gap-3 sm:gap-4">
       {/* Table Toolbar */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-3">
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 w-full sm:w-auto">
-          <div className="relative w-full sm:w-72">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full sm:w-auto">
+          <div className="relative w-full sm:w-64">
             <Search className="absolute right-3 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
             <Input
-              placeholder="ابحث عن شركة، مجال، أو تقنية..."
+              placeholder="ابحث عن شركة، مجال..."
               value={globalFilter ?? ''}
               onChange={(event) => setGlobalFilter(event.target.value)}
               className="pl-3 pr-9 h-10 w-full bg-white border-slate-200 focus-visible:ring-blue-500 rounded-xl font-medium text-sm shadow-sm"
             />
           </div>
-          
-          <Select 
-            value={(table.getColumn('country')?.getFilterValue() as string) ?? 'all'} 
+
+          {/* Category Filter Dropdown */}
+          <Select
+            value={categoryFilterVal || 'all'}
+            onValueChange={(val) => table.getColumn('category')?.setFilterValue(val === 'all' ? '' : val)}
+          >
+            <SelectTrigger className="h-10 w-full sm:w-[170px] bg-white border-slate-200 rounded-xl font-bold text-sm text-slate-700">
+              <SelectValue placeholder="التصنيف" />
+            </SelectTrigger>
+            <SelectContent className="rounded-xl border-slate-200" dir="rtl">
+              <SelectItem value="all" className="font-bold cursor-pointer">كل التصنيفات</SelectItem>
+              {uniqueCategories.map((cat) => (
+                <SelectItem key={cat} value={cat} className="font-bold cursor-pointer">{cat}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+
+          {/* Country Filter Dropdown */}
+          <Select
+            value={countryFilterVal || 'all'}
             onValueChange={(val) => table.getColumn('country')?.setFilterValue(val === 'all' ? '' : val)}
           >
             <SelectTrigger className="h-10 w-full sm:w-[160px] bg-white border-slate-200 rounded-xl font-bold text-sm text-slate-700">
-              <SelectValue placeholder="تصفية حسب الدولة" />
+              <SelectValue placeholder="الدولة" />
             </SelectTrigger>
             <SelectContent className="rounded-xl border-slate-200" dir="rtl">
               <SelectItem value="all" className="font-bold cursor-pointer">كل الدول</SelectItem>
@@ -267,8 +336,21 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
               ))}
             </SelectContent>
           </Select>
+
+          {/* Clear Filters Button */}
+          {isAnyFilterActive && (
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={resetAllFilters}
+              className="h-10 px-3 text-xs font-bold text-red-600 hover:bg-red-50 hover:text-red-700 rounded-xl gap-1.5"
+            >
+              <X className="size-3.5" />
+              إلغاء التصفية
+            </Button>
+          )}
         </div>
-        
+
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" className="w-full sm:w-auto h-10 font-bold border-slate-200 rounded-xl text-slate-700 hover:bg-slate-50 mt-1 sm:mt-0">
@@ -281,7 +363,6 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
               .getAllColumns()
               .filter((column) => column.getCanHide())
               .map((column) => {
-                // Map internal column IDs to user-friendly labels
                 let label = column.id;
                 if (label === 'name') label = 'المشروع';
                 if (label === 'category') label = 'التصنيف';
@@ -289,7 +370,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
                 if (label === 'revenue') label = 'الدخل الشهري';
                 if (label === 'traffic') label = 'الزيارات الشهرية';
                 if (label === 'business_model') label = 'نموذج العمل';
-                
+
                 return (
                   <DropdownMenuCheckboxItem
                     key={column.id}
@@ -304,6 +385,22 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
+
+      {/* Active Filter Pill indicator if filtered */}
+      {categoryFilterVal && (
+        <div className="flex items-center gap-2 px-1">
+          <span className="text-xs font-medium text-slate-500">التصنيف المحدد:</span>
+          <Badge className="bg-blue-600 text-white font-bold gap-1 text-xs py-0.5 px-2.5 rounded-lg">
+            {categoryFilterVal}
+            <button
+              onClick={() => table.getColumn('category')?.setFilterValue('')}
+              className="mr-1 hover:text-blue-200"
+            >
+              <X className="size-3" />
+            </button>
+          </Badge>
+        </div>
+      )}
 
       {/* Table Container */}
       <div className="rounded-2xl border border-slate-200/80 bg-white shadow-sm overflow-hidden">
@@ -351,7 +448,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
                   colSpan={columns.length}
                   className="h-32 text-center text-slate-500 font-medium"
                 >
-                  لا يوجد نتائج مطابقة للبحث.
+                  لا يوجد نتائج مطابقة للبحث أو التصفية الحالية.
                 </TableCell>
               </TableRow>
             )}
@@ -361,9 +458,8 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
 
       {/* Pagination */}
       <div className="flex flex-col sm:flex-row items-center justify-between px-2 pt-4 gap-4">
-        {/* Spacer for desktop to keep pagination perfectly centered */}
         <div className="hidden sm:block sm:flex-1" />
-        
+
         {/* Centered Pagination Controls */}
         <div className="flex items-center justify-center space-x-2 space-x-reverse sm:flex-none">
           <Button
