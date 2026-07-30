@@ -23,6 +23,8 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useAuth } from '@/features/auth/AuthContext';
 
 interface ProfileProps {
   user: {
@@ -55,21 +57,27 @@ const activityFeed = [
   { title: 'تم تسجيل دخول من جهاز موثوق', time: 'قبل يومين', icon: ShieldCheck },
 ];
 
-const accountFacts = [
-  { label: 'اسم الحساب', value: 'حساب أعمال فردي' },
-  { label: 'الباقة الحالية', value: 'الاحترافي' },
-  { label: 'الرصيد المتاح', value: '85 من 100' },
-  { label: 'أولوية الدعم', value: 'قياسية' },
-];
-
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-
 export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
+  const { user: authUser, profile } = useAuth();
+
+  const displayName = profile?.full_name || authUser?.user_metadata?.full_name || user.name;
+  const displayEmail = profile?.email || authUser?.email || user.email;
+  const userRole = profile?.role || 'user';
+
   const usagePercentage = Math.min((user.credits / Math.max(user.totalCredits, 1)) * 100, 100);
 
+  const accountFacts = [
+    { label: 'اسم الحساب', value: displayName },
+    { label: 'الباقة الحالية', value: 'الاحترافي' },
+    { label: 'الدور في المنصة', value: userRole === 'admin' ? 'مدير النظام (Admin)' : 'مستخدم (User)' },
+    { label: 'الرصيد المتاح', value: `${user.credits} من ${user.totalCredits}` },
+    { label: 'أولوية الدعم', value: 'فائقة (VIP)' },
+  ];
+
   return (
-    <div className="mx-auto max-w-5xl space-y-6 px-4 py-6 sm:py-8 sm:px-6 pb-24" dir="rtl">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <div className="mx-auto max-w-5xl space-y-6 px-4 py-6 sm:py-8 sm:px-6 pb-24 text-right" dir="rtl">
+      {/* Top Header */}
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between text-right">
         <div>
           <h2 className="text-3xl font-bold tracking-tight text-foreground">حسابي الشخصي</h2>
           <p className="mt-1 text-sm text-muted-foreground">
@@ -81,7 +89,7 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
             <CreditCard className="size-4 ml-2" />
             إدارة الاشتراك
           </Button>
-          <Button onClick={() => setActiveTab?.('profile')}>
+          <Button onClick={() => setActiveTab?.('settings')}>
             <User className="size-4 ml-2" />
             إعدادات الحساب
           </Button>
@@ -92,35 +100,35 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
         <TabsList className="grid w-full grid-cols-3 max-w-[400px]">
           <TabsTrigger value="overview">نظرة عامة</TabsTrigger>
           <TabsTrigger value="activity">النشاط</TabsTrigger>
-          <TabsTrigger value="account">الحساب</TabsTrigger>
+          <TabsTrigger value="account">تفاصيل الحساب</TabsTrigger>
         </TabsList>
 
         <TabsContent value="overview" className="space-y-6 mt-0">
           <Card className="border-border/70 shadow-sm">
             <CardContent className="p-4 sm:p-6">
               <div className="grid gap-6 md:grid-cols-[1fr_300px] items-center">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 text-right">
                   <img
                     src={user.avatar}
-                    alt={user.name}
-                    className="size-16 rounded-full object-cover ring-1 ring-border"
+                    alt={displayName}
+                    className="size-16 rounded-full object-cover ring-2 ring-primary/20"
                   />
                   <div>
-                    <h3 className="text-2xl font-semibold text-foreground">{user.name}</h3>
-                    <p className="text-sm text-muted-foreground">{user.email}</p>
-                    <div className="mt-2 flex gap-2">
-                      <Badge variant="secondary">الاحترافي</Badge>
-                      <Badge variant="outline">موثق</Badge>
+                    <h3 className="text-2xl font-semibold text-foreground">{displayName}</h3>
+                    <p className="text-sm text-muted-foreground dir-ltr text-right">{displayEmail}</p>
+                    <div className="mt-2 flex gap-2 justify-start">
+                      <Badge variant="secondary">الباقة الاحترافية</Badge>
+                      <Badge variant="outline" className="capitalize">{userRole}</Badge>
                     </div>
                   </div>
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2 text-right">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-muted-foreground">رصيد الأدوات</span>
                     <span className="font-semibold">{user.credits} / {user.totalCredits}</span>
                   </div>
-                  <div className="h-2 overflow-hidden rounded-full bg-muted">
-                    <div className="h-full bg-primary transition-all" style={{ width: `${usagePercentage}%` }} />
+                  <div className="h-2.5 overflow-hidden rounded-full bg-muted">
+                    <div className="h-full bg-primary transition-all rounded-full" style={{ width: `${usagePercentage}%` }} />
                   </div>
                 </div>
               </div>
@@ -130,7 +138,7 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
           <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {accountStats.map((item) => (
               <Card key={item.label} className="border-border/70 shadow-sm">
-                <CardContent className="p-3 sm:p-4 text-right">
+                <CardContent className="p-4 text-right">
                   <p className="text-xs font-medium text-muted-foreground">{item.label}</p>
                   <div className="mt-2 flex items-end justify-between gap-3">
                     <p className="text-xl font-semibold text-foreground">{item.value}</p>
@@ -163,12 +171,12 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
                     <TableBody>
                       {recentProjects.map((project) => (
                         <TableRow key={project.name}>
-                          <TableCell className="font-medium text-foreground">{project.name}</TableCell>
-                          <TableCell className="text-muted-foreground">{project.type}</TableCell>
-                          <TableCell>
+                          <TableCell className="font-medium text-foreground text-right">{project.name}</TableCell>
+                          <TableCell className="text-muted-foreground text-right">{project.type}</TableCell>
+                          <TableCell className="text-right">
                             <Badge variant="outline">{project.status}</Badge>
                           </TableCell>
-                          <TableCell className="text-muted-foreground">{project.updated}</TableCell>
+                          <TableCell className="text-muted-foreground text-right">{project.updated}</TableCell>
                         </TableRow>
                       ))}
                     </TableBody>
@@ -208,7 +216,7 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
               </CardHeader>
               <CardContent className="space-y-2 pt-0">
                 {accountFacts.map((fact) => (
-                  <div key={fact.label} className="flex items-center justify-between gap-4 rounded-xl border border-border/70 bg-muted/35 px-4 py-3">
+                  <div key={fact.label} className="flex items-center justify-between gap-4 rounded-xl border border-border/70 bg-muted/35 px-4 py-3 text-right">
                     <span className="text-sm font-medium text-foreground">{fact.value}</span>
                     <span className="text-xs text-muted-foreground">{fact.label}</span>
                   </div>
@@ -222,7 +230,7 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
                 <CardDescription>الوصول السريع للمهام.</CardDescription>
               </CardHeader>
               <CardContent className="grid gap-3 pt-0 sm:grid-cols-2">
-                <QuickAction icon={User} title="إعدادات الملف" description="الهوية والأمان." actionLabel="تعديل" onClick={() => setActiveTab?.('profile')} />
+                <QuickAction icon={User} title="إعدادات الملف" description="الهوية والأمان." actionLabel="تعديل" onClick={() => setActiveTab?.('settings')} />
                 <QuickAction icon={CreditCard} title="الاشتراك" description="الفواتير والاستخدام." actionLabel="إدارة" onClick={() => setActiveTab?.('pricing')} />
                 <QuickAction icon={Briefcase} title="مشاريعي" description="عرض كل الأعمال." actionLabel="فتح" onClick={() => setActiveTab?.('my-plans')} />
                 <QuickAction icon={LifeBuoy} title="الدعم" description="التواصل للاستفسار." actionLabel="مساعدة" onClick={() => setActiveTab?.('contact-us')} />
