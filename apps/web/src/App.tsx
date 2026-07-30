@@ -132,8 +132,14 @@ const AppShell: React.FC = () => {
     );
   }
 
-  if (requiresAuth && !session) {
+  if (activeTab === 'login' && !session) {
     return <AuthScreen />;
+  }
+
+  if (requiresAuth && !session) {
+    // Client-side protection fallback
+    window.location.href = '/login';
+    return null;
   }
 
   return (

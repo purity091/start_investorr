@@ -35,7 +35,7 @@ export default function LandingPage() {
             <a href="#security" className="text-muted-foreground hover:text-foreground transition-colors">الأمان</a>
           </nav>
           <div className="flex items-center gap-4">
-            <Link href="/workspace">
+            <Link href="/login">
               <Button variant="ghost" className="hidden sm:inline-flex">تسجيل الدخول</Button>
             </Link>
             <Link href="/home">

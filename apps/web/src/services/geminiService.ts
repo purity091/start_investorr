@@ -1,20 +1,24 @@
-
-import { GoogleGenAI } from "@google/genai";
-
 // توليد المحتوى النصي
 export const generateSectionContent = async (
   sectionTitle: string, 
   context: string = ""
 ): Promise<string> => {
-  // Always use a named parameter and obtain the API key exclusively from the environment variable.
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
   try {
-    const prompt = `أنت خبير في كتابة خطط الأعمال. قم بكتابة محتوى احترافي ومفصل لقسم: "${sectionTitle}". سياق المشروع: ${context}. اللغة: العربية الرسمية.`;
-    const response = await ai.models.generateContent({
-      model: 'gemini-3-pro-preview',
-      contents: prompt,
+    const response = await fetch('/api/ai/generate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        type: 'text',
+        payload: { sectionTitle, context }
+      })
     });
-    return response.text || "";
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.text || "";
   } catch (error) {
     console.error("Error generating text:", error);
     throw error;
@@ -26,28 +30,25 @@ export const generateBrandImage = async (
   prompt: string,
   style: string = "minimalist professional"
 ): Promise<string> => {
-  // Always use a named parameter and obtain the API key exclusively from the environment variable.
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
   try {
-    const fullPrompt = `A high-quality professional brand asset for a business. Type: ${prompt}. Style: ${style}. High resolution, clean design, 4k, marketing quality.`;
-    
-    const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash-image',
-      contents: [{ parts: [{ text: fullPrompt }] }],
-      config: {
-        imageConfig: {
-          aspectRatio: "1:1"
-        }
-      }
+    const response = await fetch('/api/ai/generate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        type: 'image',
+        payload: { prompt, style }
+      })
     });
 
-    // البحث عن جزء الصورة في الرد. Iterating through all parts as required for image generation models.
-    for (const part of response.candidates![0].content.parts) {
-      if (part.inlineData) {
-        return `data:image/png;base64,${part.inlineData.data}`;
-      }
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
-    throw new Error("لم يتم العثور على صورة في الرد");
+
+    const data = await response.json();
+    if (data.image) {
+      return data.image;
+    }
+    throw new Error(data.error || "لم يتم العثور على صورة في الرد");
   } catch (error) {
     console.error("Error generating image:", error);
     throw error;
