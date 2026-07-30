@@ -564,24 +564,24 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
       )}
 
       {/* Table Container */}
-      <div className="rounded-2xl border border-slate-200/80 bg-white shadow-sm overflow-hidden">
+      <div className="rounded-2xl border border-slate-200/80 bg-white shadow-xs overflow-hidden">
         <Table>
           <TableHeader className="bg-slate-50/80 border-b border-slate-200/80">
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id} className="hover:bg-transparent border-none">
                 {headerGroup.headers.map((header) => {
                   let widthClass = '';
-                  if (header.id === 'name') widthClass = 'max-w-[240px] w-[240px]';
-                  if (header.id === 'category') widthClass = 'w-[130px]';
-                  if (header.id === 'sourceStatus') widthClass = 'w-[110px]';
-                  if (header.id === 'country') widthClass = 'w-[110px]';
-                  if (header.id === 'revenue') widthClass = 'w-[125px]';
-                  if (header.id === 'traffic') widthClass = 'w-[125px]';
-                  if (header.id === 'business_model') widthClass = 'max-w-[190px]';
-                  if (header.id === 'actions') widthClass = 'w-[120px] text-left';
+                  if (header.id === 'name') widthClass = 'max-w-[200px] w-[200px]';
+                  if (header.id === 'category') widthClass = 'w-[110px]';
+                  if (header.id === 'sourceStatus') widthClass = 'w-[95px]';
+                  if (header.id === 'country') widthClass = 'w-[100px]';
+                  if (header.id === 'revenue') widthClass = 'w-[105px]';
+                  if (header.id === 'traffic') widthClass = 'w-[105px]';
+                  if (header.id === 'business_model') widthClass = 'max-w-[140px] w-[140px]';
+                  if (header.id === 'actions') widthClass = 'w-[95px] text-left';
 
                   return (
-                    <TableHead key={header.id} className={cn("h-10 sm:h-12 text-slate-500 font-bold text-[11px] sm:text-xs uppercase tracking-wider pr-3 sm:pr-4 whitespace-nowrap", widthClass)}>
+                    <TableHead key={header.id} className={cn("h-9 text-slate-500 font-bold text-[11px] uppercase tracking-wider px-2 sm:px-3 whitespace-nowrap", widthClass)}>
                       {header.isPlaceholder
                         ? null
                         : flexRender(
@@ -601,21 +601,21 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
                   key={row.id}
                   data-state={row.getIsSelected() && 'selected'}
                   onClick={() => onRowClick(row.original)}
-                  className="cursor-pointer hover:bg-blue-50/50 transition-colors border-b border-slate-100 group"
+                  className="cursor-pointer hover:bg-blue-50/50 transition-colors border-b border-slate-100/80 group"
                 >
                   {row.getVisibleCells().map((cell) => {
                     let widthClass = '';
-                    if (cell.column.id === 'name') widthClass = 'max-w-[240px] w-[240px]';
-                    if (cell.column.id === 'category') widthClass = 'w-[130px]';
-                    if (cell.column.id === 'sourceStatus') widthClass = 'w-[110px]';
-                    if (cell.column.id === 'country') widthClass = 'w-[110px]';
-                    if (cell.column.id === 'revenue') widthClass = 'w-[125px]';
-                    if (cell.column.id === 'traffic') widthClass = 'w-[125px]';
-                    if (cell.column.id === 'business_model') widthClass = 'max-w-[190px]';
-                    if (cell.column.id === 'actions') widthClass = 'w-[120px]';
+                    if (cell.column.id === 'name') widthClass = 'max-w-[200px] w-[200px]';
+                    if (cell.column.id === 'category') widthClass = 'w-[110px]';
+                    if (cell.column.id === 'sourceStatus') widthClass = 'w-[95px]';
+                    if (cell.column.id === 'country') widthClass = 'w-[100px]';
+                    if (cell.column.id === 'revenue') widthClass = 'w-[105px]';
+                    if (cell.column.id === 'traffic') widthClass = 'w-[105px]';
+                    if (cell.column.id === 'business_model') widthClass = 'max-w-[140px] w-[140px]';
+                    if (cell.column.id === 'actions') widthClass = 'w-[95px]';
 
                     return (
-                      <TableCell key={cell.id} className={cn("py-2.5 sm:py-3 pr-3 sm:pr-4 align-middle", widthClass)}>
+                      <TableCell key={cell.id} className={cn("py-2 px-2 sm:px-3 align-middle text-xs", widthClass)}>
                         {flexRender(
                           cell.column.columnDef.cell,
                           cell.getContext()
