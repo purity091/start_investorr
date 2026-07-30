@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Bell,
   CheckCircle2,
@@ -10,6 +10,8 @@ import {
   ShieldCheck,
   Sparkles,
   User,
+  AlertCircle,
+  Loader2,
 } from 'lucide-react';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -29,6 +31,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
 import { User as UserType } from '../../types';
+import { useAuth } from '@/features/auth/AuthContext';
+import { supabase } from '@/lib/supabase';
 
 interface SettingsProps {
   user: UserType;
@@ -60,19 +64,138 @@ const tabItems: Array<{
 ];
 
 export const Settings: React.FC<SettingsProps> = ({ user }) => {
+  const { user: authUser, profile, refetchProfile } = useAuth();
+
   const [activeTab, setActiveTab] = useState<SettingsTab>('identity');
   const [isSaving, setIsSaving] = useState(false);
   const [saved, setSaved] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const handleSave = () => {
+  // Profile fields state
+  const [fullName, setFullName] = useState(profile?.full_name || authUser?.user_metadata?.full_name || user.name || '');
+  const [email, setEmail] = useState(profile?.email || authUser?.email || user.email || '');
+  const [jobTitle, setJobTitle] = useState(authUser?.user_metadata?.job_title || 'مؤسس مشروع / مدير منتج');
+  const [market, setMarket] = useState(authUser?.user_metadata?.market || 'sy');
+  const [bio, setBio] = useState(authUser?.user_metadata?.bio || 'أستخدم المنصة لتحويل فكرة المشروع إلى دراسة جدوى منظمة، ومتابعة التنفيذ.');
+
+  // System preferences state
+  const [language, setLanguage] = useState(authUser?.user_metadata?.language || 'ar');
+  const [density, setDensity] = useState(authUser?.user_metadata?.density || 'comfortable');
+  const [defaultReport, setDefaultReport] = useState(authUser?.user_metadata?.default_report || 'pdf');
+  const [defaultPage, setDefaultPage] = useState(authUser?.user_metadata?.default_page || 'customer-dashboard');
+
+  // Password change state
+  const [newPassword, setNewPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [isUpdatingPassword, setIsUpdatingPassword] = useState(false);
+  const [passwordMsg, setPasswordMsg] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+
+  useEffect(() => {
+    if (profile?.full_name) setFullName(profile.full_name);
+    if (profile?.email || authUser?.email) setEmail(profile?.email || authUser?.email || '');
+    if (authUser?.user_metadata?.job_title) setJobTitle(authUser.user_metadata.job_title);
+    if (authUser?.user_metadata?.market) setMarket(authUser.user_metadata.market);
+    if (authUser?.user_metadata?.bio) setBio(authUser.user_metadata.bio);
+    if (authUser?.user_metadata?.language) setLanguage(authUser.user_metadata.language);
+    if (authUser?.user_metadata?.density) setDensity(authUser.user_metadata.density);
+    if (authUser?.user_metadata?.default_report) setDefaultReport(authUser.user_metadata.default_report);
+    if (authUser?.user_metadata?.default_page) setDefaultPage(authUser.user_metadata.default_page);
+  }, [profile, authUser]);
+
+  const handleSave = async () => {
     setSaved(false);
+    setErrorMessage(null);
     setIsSaving(true);
-    window.setTimeout(() => {
+
+    try {
+      const currentUserId = authUser?.id;
+
+      if (currentUserId) {
+        // 1. Update public.profiles table in Supabase Database
+        const { error: profileError } = await supabase
+          .from('profiles')
+          .update({
+            full_name: fullName,
+            email: email,
+          })
+          .eq('id', currentUserId);
+
+        if (profileError) {
+          console.warn('Profile DB update warning:', profileError);
+        }
+
+        // 2. Update Supabase Auth user metadata & email if changed
+        const updatePayload: any = {
+          data: {
+            full_name: fullName,
+            job_title: jobTitle,
+            market: market,
+            bio: bio,
+            language: language,
+            density: density,
+            default_report: defaultReport,
+            default_page: defaultPage,
+          },
+        };
+
+        if (email && authUser.email && email !== authUser.email) {
+          updatePayload.email = email;
+        }
+
+        const { error: authError } = await supabase.auth.updateUser(updatePayload);
+        if (authError) throw authError;
+
+        // 3. Refresh context profile state
+        if (refetchProfile) {
+          await refetchProfile();
+        }
+      }
+
       setIsSaving(false);
       setSaved(true);
-      window.setTimeout(() => setSaved(false), 1800);
-    }, 900);
+      window.setTimeout(() => setSaved(false), 3000);
+    } catch (err: any) {
+      console.error('Error saving settings to DB:', err);
+      setIsSaving(false);
+      setErrorMessage(err.message || 'حدث خطأ أثناء حفظ التعديلات في قاعدة البيانات');
+    }
   };
+
+  const handleUpdatePassword = async () => {
+    setPasswordMsg(null);
+
+    if (!newPassword) {
+      setPasswordMsg({ type: 'error', text: 'يرجى إدخال كلمة المرور الجديدة' });
+      return;
+    }
+
+    if (newPassword.length < 6) {
+      setPasswordMsg({ type: 'error', text: 'كلمة المرور يجب أن تكون 6 أحرف على الأقل' });
+      return;
+    }
+
+    if (newPassword !== confirmPassword) {
+      setPasswordMsg({ type: 'error', text: 'كلمتا المرور غير متطابقتين' });
+      return;
+    }
+
+    setIsUpdatingPassword(true);
+    try {
+      const { error } = await supabase.auth.updateUser({ password: newPassword });
+      if (error) throw error;
+
+      setIsUpdatingPassword(false);
+      setPasswordMsg({ type: 'success', text: 'تم تحديث كلمة المرور بنجاح' });
+      setNewPassword('');
+      setConfirmPassword('');
+    } catch (err: any) {
+      setIsUpdatingPassword(false);
+      setPasswordMsg({ type: 'error', text: err.message || 'فشل تحديث كلمة المرور' });
+    }
+  };
+
+  const displayName = fullName || user.name;
+  const displayEmail = email || user.email;
 
   return (
     <div className="mx-auto max-w-5xl space-y-6 sm:space-y-8 px-4 py-6 sm:py-8 sm:px-6 pb-24" dir="rtl">
@@ -80,20 +203,27 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
         <div>
           <h2 className="text-3xl font-bold tracking-tight text-foreground">إعدادات الحساب</h2>
           <p className="mt-1 text-sm text-muted-foreground">
-            إدارة بياناتك الشخصية، الأمان، وتفضيلات النظام.
+            إدارة بياناتك الشخصية، الأمان، وتفضيلات النظام المنحفظة في قاعدة البيانات.
           </p>
         </div>
         <div className="flex items-center gap-3 bg-muted/50 px-4 py-2 rounded-lg border border-border/50">
           <Avatar className="size-10 rounded-full">
-            <AvatarImage src={user.avatar} alt={user.name} />
-            <AvatarFallback>{user.name.slice(0, 1)}</AvatarFallback>
+            <AvatarImage src={user.avatar} alt={displayName} />
+            <AvatarFallback>{displayName.slice(0, 1)}</AvatarFallback>
           </Avatar>
           <div className="text-right">
-            <p className="text-sm font-semibold">{user.name}</p>
-            <p className="text-xs text-muted-foreground">{user.email}</p>
+            <p className="text-sm font-semibold">{displayName}</p>
+            <p className="text-xs text-muted-foreground">{displayEmail}</p>
           </div>
         </div>
       </div>
+
+      {errorMessage && (
+        <div className="flex items-center gap-3 rounded-lg border border-destructive/50 bg-destructive/10 p-4 text-destructive">
+          <AlertCircle className="size-5 shrink-0" />
+          <p className="text-sm font-medium">{errorMessage}</p>
+        </div>
+      )}
 
       <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as SettingsTab)} className="space-y-6">
         <TabsList className="grid w-full max-w-md grid-cols-3">
@@ -112,20 +242,37 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
           <Card className="border-border/70 shadow-sm">
             <CardHeader className="text-right">
               <CardTitle>البيانات الشخصية</CardTitle>
-              <CardDescription>المعلومات الأساسية لملفك التعريفي.</CardDescription>
+              <CardDescription>المعلومات الأساسية لملفك التعريفي في قاعدة البيانات.</CardDescription>
             </CardHeader>
             <CardContent className="grid gap-4 sm:gap-6 sm:grid-cols-2 p-4 sm:p-6 pt-0">
               <Field label="الاسم الكامل">
-                <Input defaultValue={user.name} className="text-right" />
+                <Input
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                  className="text-right"
+                  placeholder="أدخل الاسم الكامل"
+                />
               </Field>
               <Field label="البريد الإلكتروني" hint="مخفي في المشاركات">
-                <Input defaultValue={user.email} type="email" dir="ltr" className="text-right" />
+                <Input
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  type="email"
+                  dir="ltr"
+                  className="text-right"
+                  placeholder="name@example.com"
+                />
               </Field>
               <Field label="المسمى أو الدور">
-                <Input defaultValue="مؤسس مشروع / مدير منتج" className="text-right" />
+                <Input
+                  value={jobTitle}
+                  onChange={(e) => setJobTitle(e.target.value)}
+                  className="text-right"
+                  placeholder="مؤسس مشروع / مدير منتج"
+                />
               </Field>
               <Field label="السوق الأساسي">
-                <Select defaultValue="sy">
+                <Select value={market} onValueChange={setMarket}>
                   <SelectTrigger className="text-right">
                     <SelectValue placeholder="اختر السوق" />
                   </SelectTrigger>
@@ -139,8 +286,10 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
               </Field>
               <Field label="نبذة مختصرة" className="sm:col-span-2">
                 <Textarea
-                  defaultValue="أستخدم المنصة لتحويل فكرة المشروع إلى دراسة جدوى منظمة، ومتابعة التنفيذ."
+                  value={bio}
+                  onChange={(e) => setBio(e.target.value)}
                   className="min-h-24 text-right leading-relaxed"
+                  placeholder="اكتب نبذة مختصرة عنك..."
                 />
               </Field>
             </CardContent>
@@ -160,14 +309,55 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
                     <LockKeyhole className="size-4 text-muted-foreground" />
                     <h3 className="text-sm font-semibold text-foreground">تغيير كلمة المرور</h3>
                   </div>
+
+                  {passwordMsg && (
+                    <div
+                      className={cn(
+                        'flex items-center gap-2 rounded-md p-3 text-xs font-medium',
+                        passwordMsg.type === 'success'
+                          ? 'bg-emerald-500/10 text-emerald-600 border border-emerald-500/20'
+                          : 'bg-destructive/10 text-destructive border border-destructive/20'
+                      )}
+                    >
+                      {passwordMsg.type === 'success' ? (
+                        <CheckCircle2 className="size-4 shrink-0" />
+                      ) : (
+                        <AlertCircle className="size-4 shrink-0" />
+                      )}
+                      <span>{passwordMsg.text}</span>
+                    </div>
+                  )}
+
                   <div className="grid gap-3 sm:grid-cols-2">
-                    <Input type="password" placeholder="كلمة المرور الحالية" className="text-right" />
-                    <div />
-                    <Input type="password" placeholder="الجديدة" className="text-right" />
-                    <Input type="password" placeholder="تأكيد الجديدة" className="text-right" />
+                    <Input
+                      type="password"
+                      placeholder="كلمة المرور الجديدة"
+                      value={newPassword}
+                      onChange={(e) => setNewPassword(e.target.value)}
+                      className="text-right"
+                    />
+                    <Input
+                      type="password"
+                      placeholder="تأكيد كلمة المرور الجديدة"
+                      value={confirmPassword}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                      className="text-right"
+                    />
                   </div>
-                  <Button size="sm" variant="secondary">
-                    تحديث كلمة المرور
+                  <Button
+                    size="sm"
+                    variant="secondary"
+                    onClick={handleUpdatePassword}
+                    disabled={isUpdatingPassword}
+                  >
+                    {isUpdatingPassword ? (
+                      <>
+                        <Loader2 className="size-4 ml-2 animate-spin" />
+                        جاري التحديث...
+                      </>
+                    ) : (
+                      'تحديث كلمة المرور'
+                    )}
                   </Button>
                 </div>
                 <div className="space-y-3">
@@ -206,7 +396,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
               </CardHeader>
               <CardContent className="grid gap-6 sm:grid-cols-2">
                 <Field label="لغة المنصة">
-                  <Select defaultValue="ar">
+                  <Select value={language} onValueChange={setLanguage}>
                     <SelectTrigger className="text-right"><SelectValue /></SelectTrigger>
                     <SelectContent>
                       <SelectItem value="ar">العربية</SelectItem>
@@ -215,7 +405,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
                   </Select>
                 </Field>
                 <Field label="كثافة العرض">
-                  <Select defaultValue="comfortable">
+                  <Select value={density} onValueChange={setDensity}>
                     <SelectTrigger className="text-right"><SelectValue /></SelectTrigger>
                     <SelectContent>
                       <SelectItem value="compact">مضغوط</SelectItem>
@@ -224,7 +414,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
                   </Select>
                 </Field>
                 <Field label="التقرير الافتراضي">
-                  <Select defaultValue="pdf">
+                  <Select value={defaultReport} onValueChange={setDefaultReport}>
                     <SelectTrigger className="text-right"><SelectValue /></SelectTrigger>
                     <SelectContent>
                       <SelectItem value="pdf">PDF احترافي</SelectItem>
@@ -233,7 +423,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
                   </Select>
                 </Field>
                 <Field label="الصفحة الافتراضية">
-                  <Select defaultValue="customer-dashboard">
+                  <Select value={defaultPage} onValueChange={setDefaultPage}>
                     <SelectTrigger className="text-right"><SelectValue /></SelectTrigger>
                     <SelectContent>
                       <SelectItem value="customer-dashboard">الرئيسية</SelectItem>
@@ -265,10 +455,18 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
 
       <div className="sticky bottom-4 z-10 flex items-center justify-between rounded-xl border border-border bg-card/95 px-4 py-3 sm:px-6 sm:py-4 shadow-sm backdrop-blur">
         <div className="flex items-center gap-3">
-          {saved ? <CheckCircle2 className="size-5 text-emerald-600" /> : <Sparkles className="size-5 text-muted-foreground" />}
+          {saved ? (
+            <CheckCircle2 className="size-5 text-emerald-600" />
+          ) : (
+            <Sparkles className="size-5 text-muted-foreground" />
+          )}
           <div>
-            <p className="text-sm font-semibold text-foreground">{saved ? 'تم حفظ التغييرات' : 'تعديلات غير محفوظة'}</p>
-            <p className="hidden text-xs text-muted-foreground sm:block">يرجى تأكيد أي تعديلات قمت بها في التبويبات أعلاه.</p>
+            <p className="text-sm font-semibold text-foreground">
+              {saved ? 'تم حفظ التغييرات في قاعدة البيانات بنجاح' : 'تعديلات إعدادات الحساب'}
+            </p>
+            <p className="hidden text-xs text-muted-foreground sm:block">
+              تأكد من الضغط على زر الحفظ أدناه لحفظ أي تعديلات قمت بها في التبويبات.
+            </p>
           </div>
         </div>
         <Button onClick={handleSave} loading={isSaving}>
