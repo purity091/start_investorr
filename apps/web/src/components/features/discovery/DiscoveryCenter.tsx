@@ -1,5 +1,14 @@
 import React, { useMemo, useState } from 'react';
 import * as LucideIcons from 'lucide-react';
+import {
+  ColumnDef,
+  flexRender,
+  getCoreRowModel,
+  useReactTable,
+  getPaginationRowModel,
+  getSortedRowModel,
+  SortingState,
+} from '@tanstack/react-table';
 
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
@@ -22,6 +31,13 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import { cn } from '@/lib/utils';
 
 const SafeIcon = ({ iconName, ...props }: { iconName: string; [key: string]: any }) => {
@@ -49,6 +65,19 @@ interface DiscoveryGroup {
   description: string;
   sectors: DiscoverySector[];
   gatekeepers: string[];
+}
+
+interface SectorRecord {
+  id: string;
+  label: string;
+  groupTitle: string;
+  groupIcon: string;
+  gatekeepers: string[];
+  isNew?: boolean;
+  exists: boolean;
+  tone: {
+    icon: string;
+  };
 }
 
 const DISCOVERY_DATA: DiscoveryGroup[] = [
@@ -379,7 +408,7 @@ const DISCOVERY_DATA: DiscoveryGroup[] = [
     tone: {
       card: 'border-yellow-200 bg-yellow-50/75',
       icon: 'border-yellow-200 bg-white text-yellow-700',
-      badge: 'border-yellow-200 bg-yellow-100 text-yellow-900',
+      badge: 'border-yellow-200 bg-white text-yellow-700',
       item: 'border-yellow-200 bg-white hover:border-yellow-300',
       itemActive: 'border-yellow-400 bg-yellow-50',
     },
@@ -450,7 +479,244 @@ const DISCOVERY_DATA: DiscoveryGroup[] = [
   },
 ];
 
-const DEFAULT_VISIBLE_SECTORS = 3;
+function DiscoveryTanStackTable({
+  data,
+  onOpenSector,
+  selectedSectorId,
+}: {
+  data: SectorRecord[];
+  onOpenSector: (sector: { id: string; label: string; groupTitle: string }) => void;
+  selectedSectorId: string | null;
+}) {
+  const [sorting, setSorting] = useState<SortingState>([]);
+  const [{ pageIndex, pageSize }, setPagination] = useState({
+    pageIndex: 0,
+    pageSize: 10,
+  });
+
+  const pagination = useMemo(
+    () => ({ pageIndex, pageSize }),
+    [pageIndex, pageSize]
+  );
+
+  const columns = useMemo<ColumnDef<SectorRecord>[]>(
+    () => [
+      {
+        accessorKey: 'label',
+        header: ({ column }) => (
+          <Button
+            variant="ghost"
+            onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+            className="h-8 px-1 text-right font-semibold hover:bg-transparent text-xs sm:text-sm"
+          >
+            <span>اسم القطاع</span>
+            <LucideIcons.ArrowUpDown className="mr-1 size-3.5 text-muted-foreground" />
+          </Button>
+        ),
+        cell: ({ row }) => (
+          <span className="font-medium text-xs sm:text-sm text-foreground">
+            {row.original.label}
+          </span>
+        ),
+      },
+      {
+        accessorKey: 'groupTitle',
+        header: ({ column }) => (
+          <Button
+            variant="ghost"
+            onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+            className="h-8 px-1 text-right font-semibold hover:bg-transparent text-xs sm:text-sm"
+          >
+            <span>المجموعة الرئيسية</span>
+            <LucideIcons.ArrowUpDown className="mr-1 size-3.5 text-muted-foreground" />
+          </Button>
+        ),
+        cell: ({ row }) => (
+          <div className="flex items-center gap-2">
+            <div className={cn('flex size-6 shrink-0 items-center justify-center rounded-md border', row.original.tone.icon)}>
+              <SafeIcon iconName={row.original.groupIcon} className="size-3" />
+            </div>
+            <span className="text-xs text-muted-foreground">{row.original.groupTitle}</span>
+          </div>
+        ),
+      },
+      {
+        accessorKey: 'gatekeepers',
+        header: 'أبرز اللاعبين',
+        cell: ({ row }) => (
+          <div className="flex flex-wrap gap-1">
+            {row.original.gatekeepers.slice(0, 2).map((gk, i) => (
+              <Badge key={i} variant="secondary" className="text-[10px] px-1.5 py-0 font-normal bg-muted/60">
+                {gk}
+              </Badge>
+            ))}
+            {row.original.gatekeepers.length > 2 && (
+              <span className="text-[10px] text-muted-foreground self-center">+{row.original.gatekeepers.length - 2}</span>
+            )}
+          </div>
+        ),
+      },
+      {
+        id: 'status',
+        header: 'الحالة',
+        cell: ({ row }) => (
+          <div className="flex items-center gap-1.5">
+            {row.original.isNew ? (
+              <Badge variant="outline" className="text-[10px] px-1.5 py-0 font-medium bg-primary/5 text-primary border-primary/20 shadow-none">
+                جديد
+              </Badge>
+            ) : null}
+            <Badge variant="outline" className="text-[10px] px-1.5 py-0 font-normal text-muted-foreground">
+              {row.original.exists ? 'جاهز' : 'قيد الإعداد'}
+            </Badge>
+          </div>
+        ),
+      },
+      {
+        id: 'actions',
+        header: '',
+        size: 60,
+        cell: ({ row }) => (
+          <Button
+            type="button"
+            variant="ghost"
+            size="icon-sm"
+            onClick={(e) => {
+              e.stopPropagation();
+              onOpenSector({
+                id: row.original.id,
+                label: row.original.label,
+                groupTitle: row.original.groupTitle,
+              });
+            }}
+            className="h-8 w-8 text-muted-foreground hover:text-primary hover:bg-muted/80 rounded-lg border border-border/50 shadow-2xs"
+            title="عرض القطاع"
+          >
+            <LucideIcons.ChevronLeft className="size-4" />
+          </Button>
+        ),
+      },
+    ],
+    [onOpenSector]
+  );
+
+  const table = useReactTable({
+    data,
+    columns,
+    state: {
+      sorting,
+      pagination,
+    },
+    onSortingChange: setSorting,
+    onPaginationChange: setPagination,
+    getCoreRowModel: getCoreRowModel(),
+    getSortedRowModel: getSortedRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+  });
+
+  return (
+    <Card className="shadow-sm overflow-hidden border-border bg-card rounded-xl">
+      <div className="overflow-x-auto">
+        <Table dir="rtl">
+          <TableHeader>
+            {table.getHeaderGroups().map((headerGroup) => (
+              <TableRow key={headerGroup.id} className="bg-muted/40 hover:bg-muted/40">
+                {headerGroup.headers.map((header) => (
+                  <TableHead key={header.id} className="h-10 text-right font-semibold text-xs">
+                    {header.isPlaceholder
+                      ? null
+                      : flexRender(header.column.columnDef.header, header.getContext())}
+                  </TableHead>
+                ))}
+              </TableRow>
+            ))}
+          </TableHeader>
+          <TableBody>
+            {table.getRowModel().rows.map((row) => {
+              const isActive = selectedSectorId === row.original.id;
+              return (
+                <TableRow
+                  key={row.id}
+                  data-state={isActive ? 'selected' : undefined}
+                  className="cursor-pointer group hover:bg-muted/30 transition-colors"
+                  onClick={() =>
+                    onOpenSector({
+                      id: row.original.id,
+                      label: row.original.label,
+                      groupTitle: row.original.groupTitle,
+                    })
+                  }
+                >
+                  {row.getVisibleCells().map((cell) => (
+                    <TableCell key={cell.id} className="py-2.5">
+                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                    </TableCell>
+                  ))}
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </div>
+
+      {/* Pagination Footer & Page Size Selector on Bottom Right */}
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 border-t border-border bg-muted/10 text-xs">
+        {/* Right side: Page size selector (RTL right) */}
+        <div className="flex items-center gap-2">
+          <span className="text-muted-foreground font-medium">عدد النتائج في الصفحة:</span>
+          <Select
+            value={`${table.getState().pagination.pageSize}`}
+            onValueChange={(value) => {
+              table.setPageSize(Number(value));
+            }}
+          >
+            <SelectTrigger className="h-8 w-[75px] text-xs bg-background">
+              <SelectValue placeholder={table.getState().pagination.pageSize} />
+            </SelectTrigger>
+            <SelectContent align="end">
+              {[10, 20, 50, 100].map((pageSize) => (
+                <SelectItem key={pageSize} value={`${pageSize}`}>
+                  {pageSize}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+
+        {/* Left side: Navigation buttons & Page info */}
+        <div className="flex items-center gap-3">
+          <span className="text-muted-foreground font-mono">
+            صفحة <strong className="text-foreground">{table.getState().pagination.pageIndex + 1}</strong> من{' '}
+            <strong className="text-foreground">{table.getPageCount() || 1}</strong> ({table.getFilteredRowModel().rows.length} قطاع)
+          </span>
+
+          <div className="flex items-center gap-1">
+            <Button
+              variant="outline"
+              size="icon-sm"
+              onClick={() => table.previousPage()}
+              disabled={!table.getCanPreviousPage()}
+              className="h-8 w-8"
+              title="الصفحة السابقة"
+            >
+              <LucideIcons.ChevronRight className="size-4" />
+            </Button>
+            <Button
+              variant="outline"
+              size="icon-sm"
+              onClick={() => table.nextPage()}
+              disabled={!table.getCanNextPage()}
+              className="h-8 w-8"
+              title="الصفحة التالية"
+            >
+              <LucideIcons.ChevronLeft className="size-4" />
+            </Button>
+          </div>
+        </div>
+      </div>
+    </Card>
+  );
+}
 
 export function DiscoveryCenter({
   setActiveTab,
@@ -462,7 +728,6 @@ export function DiscoveryCenter({
   const [searchTerm, setSearchTerm] = useState('');
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [filterType, setFilterType] = useState<'all' | 'new'>('all');
-  const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({});
   const [selectedSectorId, setSelectedSectorId] = useState<string | null>(null);
 
   const normalizedGroups = useMemo(
@@ -517,21 +782,11 @@ export function DiscoveryCenter({
     [normalizedGroups],
   );
 
-  const quickResults = useMemo(() => {
-    const source = searchTerm ? filteredGroups : normalizedGroups;
-    return source.flatMap(group =>
-      group.sectors.slice(0, 2).map(sector => ({
-        ...sector,
-        groupTitle: group.title,
-      })),
-    );
-  }, [filteredGroups, normalizedGroups, searchTerm]);
-
   const totalSectors = allSectors.length;
   const totalNewSectors = allSectors.filter(sector => sector.isNew).length;
   const matchingSectors = filteredGroups.reduce((count, group) => count + group.sectors.length, 0);
 
-  const tableRecords = useMemo(() => {
+  const tableRecords: SectorRecord[] = useMemo(() => {
     return filteredGroups.flatMap(group => 
       group.sectors.map(sector => ({
         ...sector,
@@ -600,7 +855,7 @@ export function DiscoveryCenter({
                   تصفية: {filterType === 'all' ? 'الكل' : 'القطاعات الجديدة'}
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48 text-right" >
+              <DropdownMenuContent align="end" className="w-48 text-right">
                 <DropdownMenuLabel>حالة القطاع</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuCheckboxItem 
@@ -635,7 +890,7 @@ export function DiscoveryCenter({
                   <LucideIcons.CircleAlert className="size-4" />
                 </Button>
               </HoverCardTrigger>
-              <HoverCardContent align="start" className="w-[360px] space-y-3 text-right" >
+              <HoverCardContent align="start" className="w-[360px] space-y-3 text-right">
                 <div className="space-y-1">
                   <div className="text-sm font-semibold text-foreground">كيف تستخدم الرادار؟</div>
                   <p className="text-xs leading-6 text-muted-foreground">
@@ -720,79 +975,11 @@ export function DiscoveryCenter({
         <div className="grid gap-6">
           <div className="space-y-6">
             {tableRecords.length > 0 ? (
-              <Card className="shadow-sm overflow-hidden border-border">
-                <div className="overflow-x-auto">
-                  <Table >
-                    <TableHeader>
-                      <TableRow className="bg-muted/50 hover:bg-muted/50">
-                        <TableHead className="text-right font-semibold h-10">اسم القطاع</TableHead>
-                        <TableHead className="text-right font-semibold h-10">المجموعة الرئيسية</TableHead>
-                        <TableHead className="text-right font-semibold h-10">أبرز اللاعبين</TableHead>
-                        <TableHead className="text-right font-semibold h-10">الحالة</TableHead>
-                        <TableHead className="w-[80px] text-left font-semibold h-10">عرض</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {tableRecords.map(record => {
-                        const isActive = selectedSectorId === record.id;
-                        return (
-                          <TableRow 
-                            key={record.id} 
-                            data-state={isActive ? "selected" : undefined}
-                            className="cursor-pointer group hover:bg-muted/30 transition-colors"
-                            onClick={() => openSector({ id: record.id, label: record.label, groupTitle: record.groupTitle })}
-                          >
-                            <TableCell className="font-medium text-[13px] sm:text-sm py-3">
-                              {record.label}
-                            </TableCell>
-                            <TableCell className="py-3">
-                              <div className="flex items-center gap-2">
-                                <div className={cn('flex size-6 shrink-0 items-center justify-center rounded-md border', record.tone.icon)}>
-                                  <SafeIcon iconName={record.groupIcon} className="size-3" />
-                                </div>
-                                <span className="text-[13px] text-muted-foreground">{record.groupTitle}</span>
-                              </div>
-                            </TableCell>
-                            <TableCell className="py-3">
-                              <div className="flex flex-wrap gap-1">
-                                {record.gatekeepers.slice(0, 2).map((gk, i) => (
-                                  <Badge key={i} variant="secondary" className="text-[10px] px-1.5 py-0 font-normal bg-muted/60">
-                                    {gk}
-                                  </Badge>
-                                ))}
-                                {record.gatekeepers.length > 2 && (
-                                  <span className="text-[10px] text-muted-foreground self-center">+{record.gatekeepers.length - 2}</span>
-                                )}
-                              </div>
-                            </TableCell>
-                            <TableCell className="py-3">
-                              <div className="flex items-center gap-1.5">
-                                {record.isNew ? (
-                                  <Badge variant="outline" className="text-[10px] px-1.5 py-0 font-medium bg-primary/5 text-primary border-primary/20 shadow-none">
-                                    جديد
-                                  </Badge>
-                                ) : null}
-                                <Badge variant="outline" className="text-[10px] px-1.5 py-0 font-normal text-muted-foreground">
-                                  {record.exists ? 'جاهز' : 'قيد الإعداد'}
-                                </Badge>
-                              </div>
-                            </TableCell>
-                            <TableCell className="text-left py-3">
-                              <Button 
-                                variant="ghost" 
-                                size="icon-sm" 
-                                className="h-7 w-7 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity rounded-full bg-background border shadow-sm"
-                              >
-                                <LucideIcons.ChevronLeft className="size-3" />
-                              </Button>
-                            </TableCell>
-                          </TableRow>
-                        );
-                      })}
-                    </TableBody>
-                  </Table>
-                </div>
-              </Card>
+              <DiscoveryTanStackTable
+                data={tableRecords}
+                onOpenSector={openSector}
+                selectedSectorId={selectedSectorId}
+              />
             ) : (
               <Card className="border-dashed shadow-sm">
                 <CardContent className="flex min-h-[320px] flex-col items-center justify-center gap-4 p-8 text-center">
