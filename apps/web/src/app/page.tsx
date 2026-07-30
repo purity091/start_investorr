@@ -248,10 +248,10 @@ export default function LandingPage() {
                 <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary text-primary-foreground font-black text-lg shadow-lg shadow-primary/20">
                   L
                 </div>
-                <span className="text-2xl font-black tracking-tight text-white">Start Investor<span className="text-primary">.</span></span>
+                <span className="text-2xl font-black tracking-tight text-white">خطة<span className="text-primary">.</span></span>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed max-w-xs mb-8">
-                المنصة الأولى لبناء المشاريع الريادية. نقدم أدوات ذكية تعتمد على الذكاء الاصطناعي لتحويل أفكارك إلى دراسات جدوى وخطط تنفيذية قابلة للنجاح والاستثمار.
+                الجيل الجديد من دراسات الجدوى. نقدم أدوات ذكية تعتمد على الذكاء الاصطناعي لتحويل أفكارك إلى خطط تنفيذية ونماذج عمل قابلة للنجاح والاستثمار.
               </p>
               <div className="flex items-center gap-4">
                 <a href="#" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-primary/20 hover:border-primary/30 transition-all">
@@ -301,7 +301,7 @@ export default function LandingPage() {
 
           <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-slate-500 text-sm">
-              © {new Date().getFullYear()} Start Investor. جميع الحقوق محفوظة.
+              © {new Date().getFullYear()} منصة خطة. جميع الحقوق محفوظة.
             </p>
             <div className="flex items-center gap-6 text-sm text-slate-500">
               <span className="flex items-center gap-2">

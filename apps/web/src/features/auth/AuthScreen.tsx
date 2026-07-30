@@ -3,6 +3,7 @@ import { supabase } from '@/lib/supabase';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Badge } from '@/components/ui/Badge';
 import { Loader2, Mail, Lock, AlertCircle, ArrowRight, User as UserIcon, KeyRound, Sparkles } from 'lucide-react';
 
 type AuthMode = 'login' | 'register' | 'forgot_password';
@@ -85,7 +86,7 @@ export const AuthScreen: React.FC = () => {
           <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white font-black text-2xl shadow-xl shadow-blue-500/30">
             L
           </div>
-          <span className="text-3xl font-black tracking-tight text-white">Start Investor</span>
+          <span className="text-3xl font-black tracking-tight text-white">خطة<span className="text-blue-400">.</span></span>
         </div>
 
         <div className="relative z-10 max-w-lg mt-20">
@@ -102,7 +103,7 @@ export const AuthScreen: React.FC = () => {
         </div>
 
         <div className="relative z-10 flex items-center gap-4 text-sm text-slate-500 font-medium">
-          <span>© {new Date().getFullYear()} Start Investor. جميع الحقوق محفوظة.</span>
+          <span>© {new Date().getFullYear()} منصة خطة. جميع الحقوق محفوظة.</span>
         </div>
       </div>
 
@@ -114,7 +115,7 @@ export const AuthScreen: React.FC = () => {
           <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-600 text-white font-black text-xl shadow-lg shadow-blue-600/20">
             L
           </div>
-          <span className="text-xl font-black tracking-tight text-slate-900">Start Investor</span>
+          <span className="text-xl font-black tracking-tight text-slate-900">خطة<span className="text-blue-600">.</span></span>
         </div>
 
         <div className="w-full max-w-[420px]">
