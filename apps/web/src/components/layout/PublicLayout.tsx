@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Sparkles } from 'lucide-react';
 
 export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -9,20 +9,24 @@ export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children
       {/* Header Navigation */}
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/" className="text-2xl font-black text-primary">خطة<span className="text-foreground">.</span></Link>
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
+          <Link href="/" className="text-2xl font-black text-primary tracking-tight">
+            خطة<span className="text-foreground">.</span>
+          </Link>
+          <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+            <Link href="/features" className="text-muted-foreground hover:text-foreground transition-colors">المميزات والحلول</Link>
+            <Link href="/pricing-plans" className="text-muted-foreground hover:text-foreground transition-colors">الأسعار والخطط</Link>
             <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">من نحن</Link>
+            <Link href="/faq" className="text-muted-foreground hover:text-foreground transition-colors">الأسئلة الشائعة</Link>
             <Link href="/contact-us" className="text-muted-foreground hover:text-foreground transition-colors">اتصل بنا</Link>
-            <Link href="/terms" className="text-muted-foreground hover:text-foreground transition-colors">شروط الاستخدام</Link>
           </nav>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <Link href="/login">
-              <Button variant="ghost" className="hidden sm:inline-flex">تسجيل الدخول</Button>
+              <Button variant="ghost" size="sm" className="hidden sm:inline-flex">تسجيل الدخول</Button>
             </Link>
-            <Link href="/home">
-              <Button className="gap-2">
-                ابدأ رحلتك الآن
-                <ArrowLeft className="size-4" />
+            <Link href="/login">
+              <Button size="sm" className="gap-2 shadow-sm">
+                <Sparkles className="size-4" />
+                ابدأ رحلتك مجاناً
               </Button>
             </Link>
           </div>
@@ -44,7 +48,7 @@ export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children
             <div className="lg:col-span-2">
               <div className="flex items-center gap-2 mb-6">
                 <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary text-primary-foreground font-black text-lg shadow-lg shadow-primary/20">
-                  L
+                  خ
                 </div>
                 <span className="text-2xl font-black tracking-tight text-white">خطة<span className="text-primary">.</span></span>
               </div>
@@ -54,32 +58,32 @@ export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children
             </div>
 
             <div>
-              <h4 className="text-white font-bold mb-6">المنتج</h4>
+              <h4 className="text-white font-bold mb-6">المنصة والحلول</h4>
               <ul className="space-y-4">
-                <li><Link href="/market-discovery" className="text-slate-400 hover:text-primary transition-colors text-sm">استكشاف السوق</Link></li>
-                <li><Link href="/problem-engine" className="text-slate-400 hover:text-primary transition-colors text-sm">محرك المشكلات</Link></li>
-                <li><Link href="/brand-identity" className="text-slate-400 hover:text-primary transition-colors text-sm">بناء الهوية البصرية</Link></li>
-                <li><Link href="/unicorn-benchmark" className="text-slate-400 hover:text-primary transition-colors text-sm">رادار اليونيكورن</Link></li>
+                <li><Link href="/features" className="text-slate-400 hover:text-primary transition-colors text-sm">المميزات الرئيسية</Link></li>
+                <li><Link href="/pricing-plans" className="text-slate-400 hover:text-primary transition-colors text-sm">خطط الأسعار</Link></li>
+                <li><Link href="/faq" className="text-slate-400 hover:text-primary transition-colors text-sm">الأسئلة الشائعة</Link></li>
+                <li><Link href="/login" className="text-slate-400 hover:text-primary transition-colors text-sm">إنشاء حساب جديد</Link></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-white font-bold mb-6">المصادر</h4>
+              <h4 className="text-white font-bold mb-6">المصادر والمعرفة</h4>
               <ul className="space-y-4">
-                <li><Link href="/saas-ideas" className="text-slate-400 hover:text-primary transition-colors text-sm">أفكار مشاريع SaaS</Link></li>
-                <li><Link href="/micro-saas-ideas" className="text-slate-400 hover:text-primary transition-colors text-sm">أفكار Micro-SaaS</Link></li>
-                <li><Link href="/proven-projects" className="text-slate-400 hover:text-primary transition-colors text-sm">مشاريع أثبتت نجاحها</Link></li>
-                <li><Link href="/failed-projects" className="text-slate-400 hover:text-primary transition-colors text-sm">تفكيك مشاريع فشلت</Link></li>
+                <li><Link href="/about" className="text-slate-400 hover:text-primary transition-colors text-sm">رؤيتنا ورسالتنا</Link></li>
+                <li><Link href="/contact-us" className="text-slate-400 hover:text-primary transition-colors text-sm">الدعم والمساعدة</Link></li>
+                <li><Link href="/privacy" className="text-slate-400 hover:text-primary transition-colors text-sm">سياسة الخصوصية</Link></li>
+                <li><Link href="/terms" className="text-slate-400 hover:text-primary transition-colors text-sm">شروط الخدمة</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="text-white font-bold mb-6">الشركة</h4>
               <ul className="space-y-4">
-                <li><Link href="/about" className="text-slate-400 hover:text-primary transition-colors text-sm">من نحن</Link></li>
-                <li><Link href="/contact-us" className="text-slate-400 hover:text-primary transition-colors text-sm">اتصل بنا</Link></li>
-                <li><Link href="/privacy" className="text-slate-400 hover:text-primary transition-colors text-sm">سياسة الخصوصية</Link></li>
-                <li><Link href="/terms" className="text-slate-400 hover:text-primary transition-colors text-sm">شروط الاستخدام</Link></li>
+                <li><Link href="/about" className="text-slate-400 hover:text-primary transition-colors text-sm">عن خطة.</Link></li>
+                <li><Link href="/contact-us" className="text-slate-400 hover:text-primary transition-colors text-sm">تواصل معنا</Link></li>
+                <li><Link href="/privacy" className="text-slate-400 hover:text-primary transition-colors text-sm">الأمان والخصوصية</Link></li>
+                <li><Link href="/login" className="text-slate-400 hover:text-primary transition-colors text-sm">تسجيل الدخول</Link></li>
               </ul>
             </div>
             
@@ -95,9 +99,9 @@ export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full size-2 bg-emerald-500"></span>
                 </span>
-                الأنظمة تعمل بكفاءة
+                الأنظمة تعمل بكفاءة عالية
               </span>
-              <span>تطوير بحب في العالم العربي</span>
+              <span>تطوير بحب للمستثمرين في العالم العربي</span>
             </div>
           </div>
         </div>
