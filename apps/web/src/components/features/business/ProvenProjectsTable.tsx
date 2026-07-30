@@ -298,7 +298,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
           const currentFilter = (table.getColumn('business_model')?.getFilterValue() as string) || '';
 
           return (
-            <div className="flex flex-wrap gap-1 max-w-[180px]">
+            <div className="flex flex-wrap gap-1 max-w-[150px] whitespace-normal">
               {tags.map((tag, idx) => {
                 const isFiltered = currentFilter && currentFilter.toLowerCase() === tag.toLowerCase();
                 return (
@@ -314,7 +314,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
                       }
                     }}
                     className={cn(
-                      "cursor-pointer text-[10px] font-bold px-2 py-0.5 rounded-md transition-all hover:scale-105 active:scale-95 select-none",
+                      "cursor-pointer text-[10px] font-bold px-1.5 py-0.5 rounded-md transition-all hover:scale-105 active:scale-95 select-none whitespace-normal text-right leading-tight break-words",
                       isFiltered
                         ? "bg-indigo-600 text-white border-indigo-600 shadow-xs"
                         : "bg-slate-50 text-slate-700 border-slate-200 hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-200"
@@ -335,16 +335,16 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
           return (
             <div className="flex justify-end">
               <Button
-                variant="outline"
-                size="sm"
+                variant="ghost"
+                size="icon"
                 onClick={(e) => {
                   e.stopPropagation();
                   onRowClick(row.original);
                 }}
-                className="h-8 text-xs font-bold border-slate-200 hover:bg-slate-50 text-slate-700"
+                className="size-8 rounded-lg border border-slate-200 bg-white hover:bg-blue-600 hover:text-white hover:border-blue-600 text-slate-500 shadow-2xs transition-all active:scale-95"
+                title="عرض تفاصيل المشروع"
               >
-                عرض التفاصيل
-                <ExternalLink className="mr-2 size-3.5 text-slate-400" />
+                <ExternalLink className="size-4" />
               </Button>
             </div>
           );
@@ -578,7 +578,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
                   if (header.id === 'revenue') widthClass = 'w-[105px]';
                   if (header.id === 'traffic') widthClass = 'w-[105px]';
                   if (header.id === 'business_model') widthClass = 'max-w-[140px] w-[140px]';
-                  if (header.id === 'actions') widthClass = 'w-[95px] text-left';
+                  if (header.id === 'actions') widthClass = 'w-[60px] text-left';
 
                   return (
                     <TableHead key={header.id} className={cn("h-9 text-slate-500 font-bold text-[11px] uppercase tracking-wider px-2 sm:px-3 whitespace-nowrap", widthClass)}>
@@ -612,7 +612,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
                     if (cell.column.id === 'revenue') widthClass = 'w-[105px]';
                     if (cell.column.id === 'traffic') widthClass = 'w-[105px]';
                     if (cell.column.id === 'business_model') widthClass = 'max-w-[140px] w-[140px]';
-                    if (cell.column.id === 'actions') widthClass = 'w-[95px]';
+                    if (cell.column.id === 'actions') widthClass = 'w-[60px]';
 
                     return (
                       <TableCell key={cell.id} className={cn("py-2 px-2 sm:px-3 align-middle text-xs", widthClass)}>
