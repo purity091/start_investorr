@@ -235,7 +235,6 @@ export const Header: React.FC<HeaderProps> = ({
                   <DropdownMenuSeparator />
                   <DropdownMenuItem variant="destructive" onClick={async () => {
                     await signOut();
-                    window.location.reload();
                   }}>
                     <LogOut className="size-4" />
                     <span>تسجيل الخروج</span>
