@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { supabase } from '@/lib/supabase';
 import { 
   FileText, Search, Filter, Edit2, Trash2, Eye, 
   MoreVertical, Clock, CheckCircle2, AlertCircle, PlayCircle,
@@ -48,12 +49,63 @@ const MOCK_PROJECTS: AdminProject[] = Array.from({ length: 36 }).map((_, i) => (
 }));
 
 export const AdminProjectsManagement: React.FC = () => {
-  const [projects, setProjects] = useState<AdminProject[]>(MOCK_PROJECTS);
+  const [projects, setProjects] = useState<AdminProject[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [sectorFilter, setSectorFilter] = useState<ProjectSector | 'all'>('all');
   const [statusFilter, setStatusFilter] = useState<ProjectStatus | 'all'>('all');
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9;
+
+  React.useEffect(() => {
+    const fetchProjects = async () => {
+      setIsLoading(true);
+      try {
+        const { data: canvasData, error: canvasError } = await supabase
+          .from('business_canvas')
+          .select('*')
+          .order('created_at', { ascending: false });
+
+        if (canvasError) throw canvasError;
+
+        if (canvasData && canvasData.length > 0) {
+          const userIds = [...new Set(canvasData.map((p) => p.user_id))];
+          
+          const { data: profilesData } = await supabase
+            .from('profiles')
+            .select('id, full_name, email')
+            .in('id', userIds);
+
+          const profilesMap = new Map(profilesData?.map((p) => [p.id, p]) || []);
+
+          const mappedProjects: AdminProject[] = canvasData.map((p: any) => {
+            const profile = profilesMap.get(p.user_id);
+            const ownerName = profile?.full_name || profile?.email?.split('@')[0] || 'مستخدم مجهول';
+            const canvasPayload = p.canvas_data || {};
+            // Try to infer status and progress from the saved canvas data (or default)
+            const progress = canvasPayload.execution?.kpis ? 50 : 20; 
+            
+            return {
+              id: p.id,
+              name: p.project_title || 'مشروع بدون عنوان',
+              owner: ownerName,
+              ownerAvatar: `https://api.dicebear.com/7.x/notionists/svg?seed=${p.user_id}&backgroundColor=f1f5f9`,
+              sector: 'tech', // Default as we don't store sector at root yet
+              createdAt: new Date(p.created_at).toISOString().split('T')[0],
+              progress: progress,
+              status: 'active',
+            };
+          });
+          setProjects(mappedProjects);
+        }
+      } catch (err) {
+        console.error('Error fetching admin projects:', err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchProjects();
+  }, []);
 
   // Filter Logic
   const filteredProjects = useMemo(() => {
@@ -70,9 +122,15 @@ export const AdminProjectsManagement: React.FC = () => {
   const paginatedProjects = filteredProjects.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   // Actions
-  const handleDelete = (id: string, name: string) => {
+  const handleDelete = async (id: string, name: string) => {
     if(window.confirm(`هل أنت متأكد من حذف مشروع "${name}"؟ هذا الإجراء نهائي ولا يمكن التراجع عنه.`)) {
-      setProjects(projects.filter(p => p.id !== id));
+      try {
+        await supabase.from('business_canvas').delete().eq('id', id);
+        setProjects(projects.filter(p => p.id !== id));
+      } catch (err) {
+        console.error('Error deleting project', err);
+        alert('حدث خطأ أثناء محاولة الحذف.');
+      }
     }
   };
 
