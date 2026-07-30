@@ -86,6 +86,13 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
+  // If user is already logged in and tries to access /login → redirect to /home
+  if (pathname.startsWith('/login') && session) {
+    const url = request.nextUrl.clone();
+    url.pathname = '/home';
+    return NextResponse.redirect(url);
+  }
+
   return response;
 }
 

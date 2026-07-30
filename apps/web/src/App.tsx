@@ -132,12 +132,19 @@ const AppShell: React.FC = () => {
     );
   }
 
-  if (activeTab === 'login' && !session) {
+  // If user is on login tab but already has a session → redirect to home
+  if (activeTab === 'login' && session) {
+    window.location.href = '/home';
+    return null;
+  }
+
+  // If user is on login tab with no session → show login/register screen
+  if (activeTab === 'login') {
     return <AuthScreen />;
   }
 
+  // If user tries to access a protected tab without a session → redirect to login
   if (requiresAuth && !session) {
-    // Client-side protection fallback
     window.location.href = '/login';
     return null;
   }
