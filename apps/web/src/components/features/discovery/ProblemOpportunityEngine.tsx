@@ -926,7 +926,7 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
   };
 
   const handleSelectRecord = (record: EngineRecord) => {
-    if (record.kind === 'problem' && setActiveTab) {
+    if (setActiveTab) {
       localStorage.setItem(MARKET_PROBLEM_STORAGE_KEY, JSON.stringify(record));
       setActiveTab('problem-detail');
       return;

@@ -764,6 +764,7 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
       case 'mental-health-services': return <MentalHealthServicesDashboard />;
       case 'ai-platforms': return <AiPlatformsDashboard />;
       case 'problem-engine': return <ProblemOpportunityEngine setActiveTab={setActiveTab} />;
+      case 'problem-detail': return <ProblemDeepDive onBack={() => setActiveTab('problem-engine')} />;
       case 'cloud-services-internet': return <CloudServicesDashboard />;
       case 'streaming-platforms': return <StreamingPlatformsDashboard />;
       case 'podcast-industry': return <PodcastIndustryDashboard />;
