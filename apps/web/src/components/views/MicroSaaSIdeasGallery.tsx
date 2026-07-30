@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Badge } from '@/components/ui/Badge';
-import { Card, CardContent } from '@/components/ui/Card';
 import { ProvenProjectProfile } from '@/components/features/business/ProvenProjectProfile';
 import { ProvenProjectsTable } from '@/components/features/business/ProvenProjectsTable';
-import { Settings2, Sparkles, TrendingDown, Loader2, UserCheck, Target } from 'lucide-react';
+import { Settings2, Sparkles, TrendingDown, Loader2, Target } from 'lucide-react';
 
 // Explicit list of verified Micro-SaaS projects from the JSON dataset
 const MICRO_SAAS_SLUGS = new Set([
@@ -125,79 +124,46 @@ export const MicroSaaSIdeasGallery: React.FC = () => {
   }
 
   return (
-    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-8 sm:px-6 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-8 sm:px-6 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
 
-      {/* Header */}
-      <div className="flex flex-col gap-3 mb-2">
-        <div className="flex items-center gap-2">
-          <Badge variant="secondary" className="w-fit bg-purple-500/10 text-purple-600 hover:bg-purple-500/20 border-0 font-bold px-3 py-1">
-            <Settings2 className="size-3.5 me-1.5 inline-block" />
-            فلترة دقيقة لشركات Micro-SaaS
-          </Badge>
-        </div>
-        <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">أفكار مشاريع Micro-SaaS الحقيقية</h1>
-        <p className="max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
-          المشاريع البرمجية المصغرة (Micro-SaaS) هي تطبيقات مخصصة تعتمد على مؤسس فردي (Solo Founder) أو فريق صغير جداً لتلبية احتياج موجه لشريحة نيش (Niche Market). تصفح المشاريع الناجحة والفاشلة واستخدم الفلاتر الموحدة أدناه للبحث والتصفية.
-        </p>
-      </div>
-
-      {/* KPI Stats Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <Card className="border-purple-100 shadow-sm bg-gradient-to-br from-purple-50/50 to-white">
-          <CardContent className="p-5 flex items-center justify-between">
-            <div>
-              <p className="text-xs font-bold text-purple-700 uppercase tracking-wider mb-1">إجمالي مشاريع Micro-SaaS</p>
-              <h3 className="text-2xl sm:text-3xl font-black text-slate-900">{isLoading ? '...' : projectsList.length}</h3>
-            </div>
-            <div className="p-3 rounded-2xl bg-purple-100 text-purple-600">
-              <Target className="size-6" />
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card className="border-amber-100 shadow-sm bg-gradient-to-br from-amber-50/50 to-white">
-          <CardContent className="p-5 flex items-center justify-between">
-            <div>
-              <p className="text-xs font-bold text-amber-700 uppercase tracking-wider mb-1">مشاريع ناجحة ومستقرة</p>
-              <h3 className="text-2xl sm:text-3xl font-black text-amber-600">{isLoading ? '...' : provenCount}</h3>
-            </div>
-            <div className="p-3 rounded-2xl bg-amber-100 text-amber-600">
-              <Sparkles className="size-6" />
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card className="border-red-100 shadow-sm bg-gradient-to-br from-red-50/50 to-white">
-          <CardContent className="p-5 flex items-center justify-between">
-            <div>
-              <p className="text-xs font-bold text-red-700 uppercase tracking-wider mb-1">تجارب فشلت (Post-Mortem)</p>
-              <h3 className="text-2xl sm:text-3xl font-black text-red-600">{isLoading ? '...' : failedCount}</h3>
-            </div>
-            <div className="p-3 rounded-2xl bg-red-100 text-red-600">
-              <TrendingDown className="size-6" />
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Criteria Info Banner */}
-      <div className="p-4 rounded-2xl bg-purple-50/60 border border-purple-100 text-purple-900 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        <div className="flex items-start gap-3">
-          <div className="p-2 rounded-xl bg-purple-100 text-purple-600 shrink-0">
-            <UserCheck className="size-5" />
+      {/* Sleek Integrated Header with Compact Summary Pills */}
+      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 bg-purple-50/50 p-5 rounded-2xl border border-purple-100 shadow-2xs">
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center gap-2">
+            <Badge variant="secondary" className="w-fit bg-purple-500/10 text-purple-600 hover:bg-purple-500/20 border-0 font-bold px-3 py-1">
+              <Settings2 className="size-3.5 me-1.5 inline-block" />
+              فلترة دقيقة لشركات Micro-SaaS
+            </Badge>
           </div>
-          <div>
-            <h4 className="font-bold text-sm text-slate-900 mb-1">معايير اختيار مشاريع الـ Micro-SaaS الدقيقة:</h4>
-            <div className="text-xs text-slate-600 leading-relaxed space-y-1">
-              <p>• **مؤسس فردي (Solo Founder) أو فريق صغير جداً (1-3 أشخاص)** لتقليل التعقيد الإداري.</p>
-              <p>• **سوق موجه بدقة (Niche Focus)**: مثل أداة معادلات Excel، حزمة أتمتة، واجهة برمجة API صور، قالب إطلاق سريع.</p>
-              <p>• **تكلفة تشغيل منخفضة (Bootstrapped)** بدون الحاجة لرأس مال جولات استثمارية ضخمة.</p>
-            </div>
+          <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">أفكار مشاريع Micro-SaaS الحقيقية</h1>
+          <p className="max-w-2xl text-xs sm:text-sm leading-relaxed text-slate-600 font-medium">
+            تطبيقات مخصصة تعتمد على مؤسس فردي (Solo Founder) أو فريق صغير جداً لتلبية احتياج موجه لشريحة نiche. تصفح النتائج مباشرةً أدناه.
+          </p>
+        </div>
+
+        {/* Compact Quick Stats Pills */}
+        <div className="flex flex-wrap items-center gap-2.5 shrink-0 pt-2 lg:pt-0">
+          <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-purple-100 shadow-2xs">
+            <Target className="size-4 text-purple-600" />
+            <span className="text-xs font-bold text-slate-600">إجمالي Micro-SaaS:</span>
+            <span className="text-sm font-black text-slate-900">{isLoading ? '...' : projectsList.length}</span>
+          </div>
+
+          <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-amber-50/90 border border-amber-200/70">
+            <Sparkles className="size-4 text-amber-600" />
+            <span className="text-xs font-bold text-amber-800">مشاريع ناجحة:</span>
+            <span className="text-sm font-black text-amber-700">{isLoading ? '...' : provenCount}</span>
+          </div>
+
+          <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-red-50/90 border border-red-200/70">
+            <TrendingDown className="size-4 text-red-600" />
+            <span className="text-xs font-bold text-red-800">تجارب فشلت:</span>
+            <span className="text-sm font-black text-red-700">{isLoading ? '...' : failedCount}</span>
           </div>
         </div>
       </div>
 
-      {/* Table section with status filter integrated into table toolbar */}
+      {/* Main Table section */}
       <div className="w-full">
         {isLoading ? (
           <div className="w-full flex justify-center py-20">
