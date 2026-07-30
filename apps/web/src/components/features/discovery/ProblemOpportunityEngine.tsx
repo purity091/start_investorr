@@ -395,6 +395,36 @@ const DetailList = ({ record }: { record: EngineRecord | null }) => {
   );
 };
 
+const sectorToneClasses: Record<string, string> = {
+  'التقنية والذكاء الاصطناعي': 'bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100',
+  'التجارة الإلكترونية والتجزئة': 'bg-emerald-50 text-emerald-700 border-emerald-200 hover:bg-emerald-100',
+  'الخدمات اللوجستية والنقل': 'bg-purple-50 text-purple-700 border-purple-200 hover:bg-purple-100',
+  'التقنية المالية (FinTech)': 'bg-amber-50 text-amber-700 border-amber-200 hover:bg-amber-100',
+  'الرعاية الصحية والتقنية الطبية': 'bg-rose-50 text-rose-700 border-rose-200 hover:bg-rose-100',
+  'التعليم والتدريب الرقمي': 'bg-cyan-50 text-cyan-700 border-cyan-200 hover:bg-cyan-100',
+  'العقارات والتقنية العقارية': 'bg-indigo-50 text-indigo-700 border-indigo-200 hover:bg-indigo-100',
+  'الأغذية والمشروبات': 'bg-orange-50 text-orange-700 border-orange-200 hover:bg-orange-100',
+  'الطاقة والتكنولوجيا النظيفة': 'bg-teal-50 text-teal-700 border-teal-200 hover:bg-teal-100',
+  'السياحة والضيافة': 'bg-pink-50 text-pink-700 border-pink-200 hover:bg-pink-100',
+  'الإعلام والمحتوى الرقمي': 'bg-violet-50 text-violet-700 border-violet-200 hover:bg-violet-100',
+};
+
+function getSectorTone(sectorName: string): string {
+  if (sectorToneClasses[sectorName]) return sectorToneClasses[sectorName];
+  const tones = [
+    'bg-sky-50 text-sky-700 border-sky-200 hover:bg-sky-100',
+    'bg-pink-50 text-pink-700 border-pink-200 hover:bg-pink-100',
+    'bg-lime-50 text-lime-700 border-lime-200 hover:bg-lime-100',
+    'bg-fuchsia-50 text-fuchsia-700 border-fuchsia-200 hover:bg-fuchsia-100',
+    'bg-slate-100 text-slate-700 border-slate-300 hover:bg-slate-200',
+  ];
+  let charSum = 0;
+  for (let i = 0; i < sectorName.length; i++) {
+    charSum += sectorName.charCodeAt(i);
+  }
+  return tones[charSum % tones.length];
+}
+
 // TanStack Table Component for Problem & Opportunity Engine
 function ProblemOpportunityTanStackTable({
   records,
@@ -409,7 +439,10 @@ function ProblemOpportunityTanStackTable({
   selectedRecordId: string | null;
   onSelectRecord: (record: EngineRecord) => void;
   onBookmark: (record: EngineRecord) => void;
-  onCellFilter?: (field: 'kind' | 'sectorName' | 'marketBand' | 'easeBand' | 'profitBand', value: string) => void;
+  onCellFilter?: (
+    field: 'kind' | 'sectorName' | 'marketBand' | 'easeBand' | 'profitBand' | 'priorityBand' | 'updatedLabel',
+    value: string
+  ) => void;
 }) {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [{ pageIndex, pageSize }, setPagination] = useState({
@@ -473,7 +506,14 @@ function ProblemOpportunityTanStackTable({
             <div className="flex items-center gap-2">
               <HoverCard>
                 <HoverCardTrigger asChild>
-                  <button type="button" className="truncate text-right text-sm font-semibold text-foreground hover:text-primary">
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onSelectRecord(record);
+                    }}
+                    className="truncate text-right text-sm font-semibold text-foreground hover:text-primary hover:underline cursor-pointer"
+                  >
                     {record.title}
                   </button>
                 </HoverCardTrigger>
@@ -510,7 +550,7 @@ function ProblemOpportunityTanStackTable({
                   }}
                   className="cursor-pointer transition-transform hover:scale-105"
                 >
-                  <Badge variant="outline" className={cn('rounded-md px-2 py-0.5 text-[11px] font-bold shadow-none hover:ring-2 hover:ring-primary/20', typeToneClasses[record.kind])}>
+                  <Badge variant="outline" className={cn('rounded-md px-2.5 py-1 text-xs font-bold shadow-none transition-all hover:ring-2 hover:ring-primary/20', typeToneClasses[record.kind])}>
                     {typeLabels[record.kind]}
                   </Badge>
                 </button>
@@ -533,23 +573,29 @@ function ProblemOpportunityTanStackTable({
             <ArrowUpDown className="mr-1.5 size-3.5 text-muted-foreground" />
           </Button>
         ),
-        cell: ({ row }) => (
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onCellFilter?.('sectorName', row.original.sectorName);
-                }}
-                className="text-sm font-medium text-foreground hover:text-primary hover:underline transition-colors text-right cursor-pointer"
-              >
-                {row.original.sectorName}
-              </button>
-            </TooltipTrigger>
-            <TooltipContent dir="rtl">انقر لتصفية الجدول حسب قطاع: {row.original.sectorName}</TooltipContent>
-          </Tooltip>
-        ),
+        cell: ({ row }) => {
+          const sectorName = row.original.sectorName;
+          const toneClass = getSectorTone(sectorName);
+          return (
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onCellFilter?.('sectorName', sectorName);
+                  }}
+                  className="cursor-pointer transition-transform hover:scale-105"
+                >
+                  <Badge variant="outline" className={cn('rounded-md px-2.5 py-1 text-xs font-bold shadow-none transition-all hover:ring-2 hover:ring-primary/20', toneClass)}>
+                    {sectorName}
+                  </Badge>
+                </button>
+              </TooltipTrigger>
+              <TooltipContent dir="rtl">انقر لتصفية الجدول حسب قطاع: {sectorName}</TooltipContent>
+            </Tooltip>
+          );
+        },
       },
       {
         accessorKey: 'marketScore',
@@ -674,6 +720,7 @@ function ProblemOpportunityTanStackTable({
         ),
         cell: ({ row }) => {
           const record = row.original;
+          const prioBand = record.priorityScore >= 8 ? 'high' : record.priorityScore >= 5 ? 'medium' : 'low';
           return (
             <Tooltip>
               <TooltipTrigger asChild>
@@ -681,16 +728,16 @@ function ProblemOpportunityTanStackTable({
                   type="button"
                   onClick={(e) => {
                     e.stopPropagation();
-                    onCellFilter?.('kind', record.kind);
+                    onCellFilter?.('priorityBand', prioBand);
                   }}
                   className="cursor-pointer transition-transform hover:scale-105"
                 >
-                  <Badge variant="outline" className={cn('rounded-md px-2 py-0.5 text-[11px] font-bold shadow-none', priorityTone(record.priorityScore))}>
+                  <Badge variant="outline" className={cn('rounded-md px-2 py-0.5 text-[11px] font-bold shadow-none hover:ring-2 hover:ring-primary/20', priorityTone(record.priorityScore))}>
                     {record.priorityScore}/10
                   </Badge>
                 </button>
               </TooltipTrigger>
-              <TooltipContent dir="rtl">الأولوية: {record.priorityScore}/10</TooltipContent>
+              <TooltipContent dir="rtl">الأولوية: {record.priorityScore}/10 (انقر لتصفية الأولوية)</TooltipContent>
             </Tooltip>
           );
         },
@@ -699,10 +746,29 @@ function ProblemOpportunityTanStackTable({
         accessorKey: 'updatedLabel',
         id: 'updatedLabel',
         header: 'آخر تحديث',
-        cell: ({ row }) => <span className="text-xs text-muted-foreground font-medium">{row.original.updatedLabel}</span>,
+        cell: ({ row }) => {
+          const label = row.original.updatedLabel;
+          return (
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onCellFilter?.('updatedLabel', label);
+                  }}
+                  className="text-xs text-muted-foreground font-medium hover:text-primary hover:underline cursor-pointer"
+                >
+                  {label}
+                </button>
+              </TooltipTrigger>
+              <TooltipContent dir="rtl">تحديث: {label} (انقر للتصفية)</TooltipContent>
+            </Tooltip>
+          );
+        },
       },
     ],
-    [bookmarks, onBookmark, onCellFilter]
+    [bookmarks, onBookmark, onCellFilter, onSelectRecord]
   );
 
   const table = useReactTable({
@@ -744,8 +810,7 @@ function ProblemOpportunityTanStackTable({
                   <TableRow
                     key={row.id}
                     data-state={isActive ? 'selected' : undefined}
-                    className="cursor-pointer group hover:bg-muted/40 transition-colors border-b border-border/60"
-                    onClick={() => onSelectRecord(row.original)}
+                    className="group hover:bg-muted/40 transition-colors border-b border-border/60"
                   >
                     {row.getVisibleCells().map((cell) => (
                       <TableCell key={cell.id} className="py-2.5">
@@ -838,6 +903,7 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
   const [countryFilter, setCountryFilter] = useState('all');
   const [competitionFilter, setCompetitionFilter] = useState<'all' | CompetitionBand>('all');
   const [sourceFilter, setSourceFilter] = useState<DataSource>('all');
+  const [priorityFilter, setPriorityFilter] = useState<'all' | 'high' | 'medium' | 'low'>('all');
   const [advancedStatuses, setAdvancedStatuses] = useState<Record<RecordStatus, boolean>>({
     draft: true,
     validated: true,
@@ -915,6 +981,11 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
       const matchesCompetition = competitionFilter === 'all' || record.competitionBand === competitionFilter;
       const matchesSource = sourceFilter === 'all' || record.source === sourceFilter;
       const matchesStatus = advancedStatuses[record.status];
+      const matchesPriority =
+        priorityFilter === 'all' ||
+        (priorityFilter === 'high' && record.priorityScore >= 8) ||
+        (priorityFilter === 'medium' && record.priorityScore >= 5 && record.priorityScore < 8) ||
+        (priorityFilter === 'low' && record.priorityScore < 5);
 
       return (
         matchesQuery &&
@@ -926,7 +997,8 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
         matchesCountry &&
         matchesCompetition &&
         matchesSource &&
-        matchesStatus
+        matchesStatus &&
+        matchesPriority
       );
     });
 
@@ -947,6 +1019,7 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
     countryFilter,
     easeFilter,
     marketFilter,
+    priorityFilter,
     profitFilter,
     query,
     records,
@@ -988,15 +1061,21 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
     setCountryFilter('all');
     setCompetitionFilter('all');
     setSourceFilter('all');
+    setPriorityFilter('all');
     setAdvancedStatuses({ draft: true, validated: true, priority: true });
   };
 
-  const handleCellFilter = (field: 'kind' | 'sectorName' | 'marketBand' | 'easeBand' | 'profitBand', value: string) => {
+  const handleCellFilter = (
+    field: 'kind' | 'sectorName' | 'marketBand' | 'easeBand' | 'profitBand' | 'priorityBand' | 'updatedLabel',
+    value: string,
+  ) => {
     if (field === 'kind') setTypeFilter(value as 'all' | RecordKind);
     if (field === 'sectorName') setSectorFilter(value);
     if (field === 'marketBand') setMarketFilter(value as 'all' | MarketBand);
     if (field === 'easeBand') setEaseFilter(value as 'all' | EaseBand);
     if (field === 'profitBand') setProfitFilter(value as 'all' | ProfitBand);
+    if (field === 'priorityBand') setPriorityFilter(value as 'all' | 'high' | 'medium' | 'low');
+    if (field === 'updatedLabel') setQuery(value);
   };
 
   const handleBookmark = (record: EngineRecord) => {
@@ -1209,7 +1288,7 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
           </Card>
 
           {/* Active Cell Filters Bar */}
-          {(typeFilter !== 'all' || sectorFilter !== 'all' || marketFilter !== 'all' || easeFilter !== 'all' || profitFilter !== 'all' || countryFilter !== 'all' || competitionFilter !== 'all' || sourceFilter !== 'all' || query) && (
+          {(typeFilter !== 'all' || sectorFilter !== 'all' || marketFilter !== 'all' || easeFilter !== 'all' || profitFilter !== 'all' || priorityFilter !== 'all' || countryFilter !== 'all' || competitionFilter !== 'all' || sourceFilter !== 'all' || query) && (
             <div className="flex flex-wrap items-center gap-2 rounded-xl bg-muted/40 p-2.5 border border-border/60 text-xs">
               <span className="font-bold text-muted-foreground flex items-center gap-1">
                 <Filter className="size-3.5" /> الفلاتر النشطة:
@@ -1242,6 +1321,12 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
                 <Badge variant="secondary" className="gap-1 rounded-md px-2 py-0.5 text-xs bg-primary/10 text-primary border border-primary/20">
                   إمكانية الربح: {profitLabels[profitFilter]}
                   <button type="button" onClick={() => setProfitFilter('all')} className="hover:text-destructive ms-1 cursor-pointer"><X className="size-3" /></button>
+                </Badge>
+              )}
+              {priorityFilter !== 'all' && (
+                <Badge variant="secondary" className="gap-1 rounded-md px-2 py-0.5 text-xs bg-primary/10 text-primary border border-primary/20">
+                  الأولوية: {priorityFilter === 'high' ? 'عالية (8+)' : priorityFilter === 'medium' ? 'متوسطة (5-7)' : 'منخفضة (<5)'}
+                  <button type="button" onClick={() => setPriorityFilter('all')} className="hover:text-destructive ms-1 cursor-pointer"><X className="size-3" /></button>
                 </Badge>
               )}
               {query && (
