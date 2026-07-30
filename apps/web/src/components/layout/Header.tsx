@@ -6,7 +6,9 @@ import {
   CreditCard,
   Crown,
   LayoutDashboard,
+  Lightbulb,
   LogOut,
+  MessageSquarePlus,
   User as UserIcon,
 } from 'lucide-react';
 
@@ -26,6 +28,7 @@ import {
 } from '../ui/dropdown-menu';
 import { Separator } from '../ui/separator';
 import { SidebarTrigger } from '../ui/sidebar';
+import { PlatformFeedbackModal } from './PlatformFeedbackModal';
 
 interface HeaderProps {
   activeTab: string;
@@ -125,6 +128,19 @@ export const Header: React.FC<HeaderProps> = ({
   const { signOut } = useAuth();
   const title = TAB_LABELS[activeTab] || subTabLabel || 'لوحة العمل';
   const contextBadge = getContextBadge(activeTab);
+  const [isFeedbackOpen, setIsFeedbackOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    const hasPrompted = sessionStorage.getItem('platform_feedback_prompted');
+    if (hasPrompted) return;
+
+    const timer = setTimeout(() => {
+      setIsFeedbackOpen(true);
+      sessionStorage.setItem('platform_feedback_prompted', 'true');
+    }, 180000); // 3 minutes = 180,000ms
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const startTour = () => {
     setIsTourRunning(true);
@@ -145,6 +161,18 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         <div className="flex items-center justify-end gap-2 shrink-0">
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              onClick={() => setIsFeedbackOpen(!isFeedbackOpen)}
+              className="h-9 gap-1.5 rounded-lg border-amber-200 bg-amber-50/70 text-amber-900 hover:bg-amber-100 hover:text-amber-950 transition-all font-medium"
+              title="أرسل اقتراحك لتطوير المنصة"
+            >
+              <Lightbulb className="size-4 text-amber-600 animate-pulse" />
+              <span className="hidden sm:inline text-xs">اقتراح للمنصة</span>
+            </Button>
+
             <Button
               id="tour-site-tour-trigger-header"
               type="button"
@@ -252,6 +280,12 @@ export const Header: React.FC<HeaderProps> = ({
             )}
           </div>
       </div>
+
+      <PlatformFeedbackModal
+        open={isFeedbackOpen}
+        onOpenChange={setIsFeedbackOpen}
+        userName={user?.name}
+      />
     </header>
   );
 };
