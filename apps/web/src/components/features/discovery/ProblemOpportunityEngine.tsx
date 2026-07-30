@@ -3,6 +3,8 @@ import {
   ArrowUpDown,
   Bookmark,
   BookmarkCheck,
+  ChevronLeft,
+  ChevronRight,
   Database,
   Filter,
   Globe2,
@@ -11,6 +13,15 @@ import {
   SlidersHorizontal,
   Sparkles,
 } from 'lucide-react';
+import {
+  ColumnDef,
+  flexRender,
+  getCoreRowModel,
+  getPaginationRowModel,
+  getSortedRowModel,
+  SortingState,
+  useReactTable,
+} from '@tanstack/react-table';
 
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
@@ -25,15 +36,6 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
 import { Input } from '@/components/ui/Input';
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from '@/components/ui/pagination';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Separator } from '@/components/ui/separator';
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from '@/components/ui/sheet';
@@ -128,12 +130,6 @@ const profitLabels: Record<ProfitBand, string> = {
   low: 'ضعيفة',
   medium: 'متوسطة',
   high: 'مرتفعة',
-};
-
-const competitionLabels: Record<CompetitionBand, string> = {
-  high: 'مرتفعة',
-  medium: 'متوسطة',
-  low: 'منخفضة',
 };
 
 const typeToneClasses: Record<RecordKind, string> = {
@@ -398,6 +394,363 @@ const DetailList = ({ record }: { record: EngineRecord | null }) => {
   );
 };
 
+// TanStack Table Component for Problem & Opportunity Engine
+function ProblemOpportunityTanStackTable({
+  records,
+  bookmarks,
+  selectedRecordId,
+  onSelectRecord,
+  onBookmark,
+}: {
+  records: EngineRecord[];
+  bookmarks: Record<string, boolean>;
+  selectedRecordId: string | null;
+  onSelectRecord: (record: EngineRecord) => void;
+  onBookmark: (record: EngineRecord) => void;
+}) {
+  const [sorting, setSorting] = useState<SortingState>([]);
+  const [{ pageIndex, pageSize }, setPagination] = useState({
+    pageIndex: 0,
+    pageSize: 10,
+  });
+
+  const pagination = useMemo(
+    () => ({ pageIndex, pageSize }),
+    [pageIndex, pageSize]
+  );
+
+  const columns = useMemo<ColumnDef<EngineRecord>[]>(
+    () => [
+      {
+        id: 'bookmark',
+        header: 'الحفظ',
+        size: 60,
+        cell: ({ row }) => {
+          const record = row.original;
+          const isSaved = bookmarks[record.id];
+          return (
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              className={cn(
+                'h-8 w-8 rounded-md p-0 text-xs font-medium transition-colors',
+                isSaved
+                  ? 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100'
+                  : 'bg-muted/40 text-muted-foreground hover:bg-muted hover:text-foreground',
+              )}
+              onClick={(event) => {
+                event.stopPropagation();
+                onBookmark(record);
+              }}
+              aria-label={`حفظ المشروع ${record.title}`}
+            >
+              {isSaved ? <BookmarkCheck className="size-3.5" /> : <Bookmark className="size-3.5" />}
+            </Button>
+          );
+        },
+      },
+      {
+        accessorKey: 'title',
+        id: 'title',
+        header: ({ column }) => (
+          <Button
+            variant="ghost"
+            onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+            className="h-8 px-1 text-right font-bold hover:bg-transparent text-xs sm:text-sm text-foreground"
+          >
+            <span>العنوان</span>
+            <ArrowUpDown className="mr-1.5 size-3.5 text-muted-foreground" />
+          </Button>
+        ),
+        cell: ({ row }) => {
+          const record = row.original;
+          const isSaved = bookmarks[record.id];
+          return (
+            <div className="flex items-center gap-2">
+              <HoverCard>
+                <HoverCardTrigger asChild>
+                  <button type="button" className="truncate text-right text-sm font-semibold text-foreground hover:text-primary">
+                    {record.title}
+                  </button>
+                </HoverCardTrigger>
+                <HoverCardContent className="w-[360px] text-right" dir="rtl">
+                  <div className="space-y-2">
+                    <div className="text-sm font-semibold">{record.title}</div>
+                    <p className="text-sm leading-7 text-muted-foreground">{record.summary}</p>
+                    <div className="flex flex-wrap gap-2">
+                      <Badge variant="outline" className="rounded-md">{record.sectorName}</Badge>
+                      <Badge variant="outline" className="rounded-md">{record.subSectorName}</Badge>
+                    </div>
+                  </div>
+                </HoverCardContent>
+              </HoverCard>
+              {isSaved ? <Bookmark className="size-3.5 fill-current text-primary shrink-0" /> : null}
+            </div>
+          );
+        },
+      },
+      {
+        accessorKey: 'kind',
+        id: 'kind',
+        header: 'النوع',
+        cell: ({ row }) => {
+          const record = row.original;
+          return (
+            <Badge variant="outline" className={cn('rounded-md px-2 py-0.5 text-[11px] font-bold shadow-none', typeToneClasses[record.kind])}>
+              {typeLabels[record.kind]}
+            </Badge>
+          );
+        },
+      },
+      {
+        accessorKey: 'sectorName',
+        id: 'sectorName',
+        header: ({ column }) => (
+          <Button
+            variant="ghost"
+            onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+            className="h-8 px-1 text-right font-bold hover:bg-transparent text-xs sm:text-sm text-foreground"
+          >
+            <span>القطاع</span>
+            <ArrowUpDown className="mr-1.5 size-3.5 text-muted-foreground" />
+          </Button>
+        ),
+        cell: ({ row }) => <span className="text-sm font-medium text-foreground">{row.original.sectorName}</span>,
+      },
+      {
+        accessorKey: 'marketScore',
+        id: 'marketScore',
+        header: ({ column }) => (
+          <Button
+            variant="ghost"
+            onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+            className="h-8 px-1 text-right font-bold hover:bg-transparent text-xs sm:text-sm text-foreground"
+          >
+            <span>حجم السوق</span>
+            <ArrowUpDown className="mr-1.5 size-3.5 text-muted-foreground" />
+          </Button>
+        ),
+        cell: ({ row }) => {
+          const record = row.original;
+          return (
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[11px] font-bold">
+                  {marketLabels[record.marketBand]}
+                </Badge>
+              </TooltipTrigger>
+              <TooltipContent>درجة السوق: {record.marketScore}/10</TooltipContent>
+            </Tooltip>
+          );
+        },
+      },
+      {
+        accessorKey: 'easeScore',
+        id: 'easeScore',
+        header: ({ column }) => (
+          <Button
+            variant="ghost"
+            onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+            className="h-8 px-1 text-right font-bold hover:bg-transparent text-xs sm:text-sm text-foreground"
+          >
+            <span>سهولة الحل</span>
+            <ArrowUpDown className="mr-1.5 size-3.5 text-muted-foreground" />
+          </Button>
+        ),
+        cell: ({ row }) => {
+          const record = row.original;
+          return (
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[11px] font-bold">
+                  {easeLabels[record.easeBand]}
+                </Badge>
+              </TooltipTrigger>
+              <TooltipContent>سهولة التنفيذ: {record.easeScore}/10</TooltipContent>
+            </Tooltip>
+          );
+        },
+      },
+      {
+        accessorKey: 'profitScore',
+        id: 'profitScore',
+        header: ({ column }) => (
+          <Button
+            variant="ghost"
+            onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+            className="h-8 px-1 text-right font-bold hover:bg-transparent text-xs sm:text-sm text-foreground"
+          >
+            <span>إمكانية الربح</span>
+            <ArrowUpDown className="mr-1.5 size-3.5 text-muted-foreground" />
+          </Button>
+        ),
+        cell: ({ row }) => {
+          const record = row.original;
+          return (
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[11px] font-bold">
+                  {profitLabels[record.profitBand]}
+                </Badge>
+              </TooltipTrigger>
+              <TooltipContent>إمكانية الربح: {record.profitScore}/10</TooltipContent>
+            </Tooltip>
+          );
+        },
+      },
+      {
+        accessorKey: 'priorityScore',
+        id: 'priorityScore',
+        header: ({ column }) => (
+          <Button
+            variant="ghost"
+            onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+            className="h-8 px-1 text-right font-bold hover:bg-transparent text-xs sm:text-sm text-foreground"
+          >
+            <span>مؤشر الأولوية</span>
+            <ArrowUpDown className="mr-1.5 size-3.5 text-muted-foreground" />
+          </Button>
+        ),
+        cell: ({ row }) => {
+          const record = row.original;
+          return (
+            <Badge variant="outline" className={cn('rounded-md px-2 py-0.5 text-[11px] font-bold shadow-none', priorityTone(record.priorityScore))}>
+              {record.priorityScore}/10
+            </Badge>
+          );
+        },
+      },
+      {
+        accessorKey: 'updatedLabel',
+        id: 'updatedLabel',
+        header: 'آخر تحديث',
+        cell: ({ row }) => <span className="text-xs text-muted-foreground font-medium">{row.original.updatedLabel}</span>,
+      },
+    ],
+    [bookmarks, onBookmark]
+  );
+
+  const table = useReactTable({
+    data: records,
+    columns,
+    state: {
+      sorting,
+      pagination,
+    },
+    onSortingChange: setSorting,
+    onPaginationChange: setPagination,
+    getCoreRowModel: getCoreRowModel(),
+    getSortedRowModel: getSortedRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+  });
+
+  return (
+    <Card className="shadow-xs overflow-hidden border-border bg-card rounded-2xl">
+      <div className="overflow-x-auto">
+        <Table dir="rtl" className="w-full min-w-[1100px]">
+          <TableHeader className="bg-muted/50 border-b border-border/80">
+            {table.getHeaderGroups().map((headerGroup) => (
+              <TableRow key={headerGroup.id} className="hover:bg-transparent border-none">
+                {headerGroup.headers.map((header) => (
+                  <TableHead key={header.id} className="h-11 text-right font-bold text-xs text-foreground">
+                    {header.isPlaceholder
+                      ? null
+                      : flexRender(header.column.columnDef.header, header.getContext())}
+                  </TableHead>
+                ))}
+              </TableRow>
+            ))}
+          </TableHeader>
+          <TableBody>
+            {table.getRowModel().rows.length > 0 ? (
+              table.getRowModel().rows.map((row) => {
+                const isActive = selectedRecordId === row.original.id;
+                return (
+                  <TableRow
+                    key={row.id}
+                    data-state={isActive ? 'selected' : undefined}
+                    className="cursor-pointer group hover:bg-muted/40 transition-colors border-b border-border/60"
+                    onClick={() => onSelectRecord(row.original)}
+                  >
+                    {row.getVisibleCells().map((cell) => (
+                      <TableCell key={cell.id} className="py-2.5">
+                        {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                      </TableCell>
+                    ))}
+                  </TableRow>
+                );
+              })
+            ) : (
+              <TableRow>
+                <TableCell colSpan={columns.length} className="h-32 text-center text-muted-foreground text-sm font-medium">
+                  لا توجد نتائج مطابقة لعملية البحث المحددة.
+                </TableCell>
+              </TableRow>
+            )}
+          </TableBody>
+        </Table>
+      </div>
+
+      {/* Footer Pagination Bar */}
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 border-t border-border bg-muted/20 text-xs">
+        {/* Right side: Page size selector */}
+        <div className="flex items-center gap-2">
+          <span className="text-muted-foreground font-medium">عدد النتائج في الصفحة:</span>
+          <Select
+            value={`${table.getState().pagination.pageSize}`}
+            onValueChange={(value) => {
+              table.setPageSize(Number(value));
+            }}
+          >
+            <SelectTrigger className="h-8 w-[75px] text-xs bg-background rounded-lg border-border">
+              <SelectValue placeholder={table.getState().pagination.pageSize} />
+            </SelectTrigger>
+            <SelectContent align="end" className="rounded-lg border-border">
+              {[10, 20, 50, 100].map((pageSize) => (
+                <SelectItem key={pageSize} value={`${pageSize}`}>
+                  {pageSize}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+
+        {/* Left side: Navigation buttons & Page info */}
+        <div className="flex items-center gap-3">
+          <span className="text-muted-foreground font-mono">
+            صفحة <strong className="text-foreground">{table.getState().pagination.pageIndex + 1}</strong> من{' '}
+            <strong className="text-foreground">{table.getPageCount() || 1}</strong> ({records.length} عنصر)
+          </span>
+
+          <div className="flex items-center gap-1">
+            <Button
+              variant="outline"
+              size="icon-sm"
+              onClick={() => table.previousPage()}
+              disabled={!table.getCanPreviousPage()}
+              className="h-8 w-8 rounded-lg"
+              title="الصفحة السابقة"
+            >
+              <ChevronRight className="size-4" />
+            </Button>
+            <Button
+              variant="outline"
+              size="icon-sm"
+              onClick={() => table.nextPage()}
+              disabled={!table.getCanNextPage()}
+              className="h-8 w-8 rounded-lg"
+              title="الصفحة التالية"
+            >
+              <ChevronLeft className="size-4" />
+            </Button>
+          </div>
+        </div>
+      </div>
+    </Card>
+  );
+}
+
 export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) => void }> = ({ setActiveTab }) => {
   const [dynamicProblems, setDynamicProblems] = useState<Problem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -418,7 +771,6 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
   });
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [bookmarks, setBookmarks] = useState<Record<string, boolean>>({});
-  const [page, setPage] = useState(1);
   const [detailsOpen, setDetailsOpen] = useState(false);
 
   useEffect(() => {
@@ -530,39 +882,21 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
     typeFilter,
   ]);
 
-  const perPage = 10;
-  const totalPages = Math.max(1, Math.ceil(filteredRecords.length / perPage));
-
-  useEffect(() => {
-    setPage(1);
-  }, [query, sortBy, typeFilter, sectorFilter, marketFilter, easeFilter, profitFilter, countryFilter, competitionFilter, sourceFilter, advancedStatuses]);
-
-  useEffect(() => {
-    if (page > totalPages) {
-      setPage(totalPages);
-    }
-  }, [page, totalPages]);
-
-  const paginatedRecords = useMemo(() => {
-    const start = (page - 1) * perPage;
-    return filteredRecords.slice(start, start + perPage);
-  }, [filteredRecords, page, perPage]);
-
   const selectedRecord = useMemo(
-    () => filteredRecords.find(record => record.id === selectedId) ?? paginatedRecords[0] ?? null,
-    [filteredRecords, paginatedRecords, selectedId],
+    () => filteredRecords.find(record => record.id === selectedId) ?? filteredRecords[0] ?? null,
+    [filteredRecords, selectedId],
   );
 
   useEffect(() => {
-    if (!selectedId && paginatedRecords[0]) {
-      setSelectedId(paginatedRecords[0].id);
+    if (!selectedId && filteredRecords[0]) {
+      setSelectedId(filteredRecords[0].id);
       return;
     }
 
     if (selectedId && !filteredRecords.some(record => record.id === selectedId)) {
       setSelectedId(filteredRecords[0]?.id ?? null);
     }
-  }, [filteredRecords, paginatedRecords, selectedId]);
+  }, [filteredRecords, selectedId]);
 
   const totalProblems = records.filter(record => record.kind === 'problem').length;
   const totalOpportunities = records.filter(record => record.kind === 'opportunity').length;
@@ -591,116 +925,15 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
     }));
   };
 
-  const pageNumbers = useMemo(() => {
-    if (totalPages <= 5) return Array.from({ length: totalPages }, (_, index) => index + 1);
-    if (page <= 3) return [1, 2, 3, 4, totalPages];
-    if (page >= totalPages - 2) return [1, totalPages - 3, totalPages - 2, totalPages - 1, totalPages];
-    return [1, page - 1, page, page + 1, totalPages];
-  }, [page, totalPages]);
-
-  const renderRow = (record: EngineRecord, compact = false) => (
-    <TableRow
-      key={record.id}
-      data-state={selectedRecord?.id === record.id ? 'selected' : undefined}
-      className="cursor-pointer"
-      onClick={() => {
-        if (record.kind === 'problem' && setActiveTab) {
-          localStorage.setItem(MARKET_PROBLEM_STORAGE_KEY, JSON.stringify(record));
-          setActiveTab('problem-detail');
-          return;
-        }
-        setSelectedId(record.id);
-        setDetailsOpen(true);
-      }}
-    >
-      <TableCell className={cn('w-[56px]', compact ? 'px-2 py-2' : undefined)}>
-        <Button
-          type="button"
-          variant="ghost"
-          size="sm"
-          className={cn(
-            'h-8 w-8 rounded-md p-0 text-xs font-medium transition-colors',
-            bookmarks[record.id]
-              ? 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100'
-              : 'bg-muted/40 text-muted-foreground hover:bg-muted hover:text-foreground',
-          )}
-          onClick={(event) => {
-            event.stopPropagation();
-            handleBookmark(record);
-          }}
-          aria-label={`حفظ المشروع ${record.title}`}
-        >
-          {bookmarks[record.id] ? <BookmarkCheck className="size-3.5" /> : <Bookmark className="size-3.5" />}
-        </Button>
-      </TableCell>
-      <TableCell className={cn('min-w-[220px] whitespace-nowrap', compact ? 'px-2 py-2' : undefined)}>
-        <div className="overflow-hidden">
-          <div className="flex items-center gap-2">
-            <HoverCard>
-              <HoverCardTrigger asChild>
-                <button type="button" className="truncate text-right text-sm font-semibold text-foreground hover:text-primary">
-                  {record.title}
-                </button>
-              </HoverCardTrigger>
-              <HoverCardContent className="w-[360px] text-right">
-                <div className="space-y-2">
-                  <div className="text-sm font-semibold">{record.title}</div>
-                  <p className="text-sm leading-7 text-muted-foreground">{record.summary}</p>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline" className="rounded-md">{record.sectorName}</Badge>
-                    <Badge variant="outline" className="rounded-md">{record.subSectorName}</Badge>
-                  </div>
-                </div>
-              </HoverCardContent>
-            </HoverCard>
-            {bookmarks[record.id] ? <Bookmark className="size-3.5 fill-current text-primary" /> : null}
-          </div>
-        </div>
-      </TableCell>
-      <TableCell className={cn(compact ? 'px-2 py-2' : undefined)}>
-          <Badge variant="outline" className={cn('rounded-md px-2 py-0.5 text-[11px] font-medium shadow-none', typeToneClasses[record.kind])}>
-          {typeLabels[record.kind]}
-        </Badge>
-      </TableCell>
-      <TableCell className={cn('whitespace-nowrap text-sm', compact ? 'px-2 py-2' : undefined)}>{record.sectorName}</TableCell>
-      <TableCell className={cn(compact ? 'px-2 py-2' : undefined)}>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[11px]">
-              {marketLabels[record.marketBand]}
-            </Badge>
-          </TooltipTrigger>
-          <TooltipContent>درجة السوق: {record.marketScore}/10</TooltipContent>
-        </Tooltip>
-      </TableCell>
-      <TableCell className={cn(compact ? 'px-2 py-2' : undefined)}>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[11px]">
-              {easeLabels[record.easeBand]}
-            </Badge>
-          </TooltipTrigger>
-          <TooltipContent>سهولة التنفيذ: {record.easeScore}/10</TooltipContent>
-        </Tooltip>
-      </TableCell>
-      <TableCell className={cn(compact ? 'px-2 py-2' : undefined)}>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[11px]">
-              {profitLabels[record.profitBand]}
-            </Badge>
-          </TooltipTrigger>
-          <TooltipContent>إمكانية الربح: {record.profitScore}/10</TooltipContent>
-        </Tooltip>
-      </TableCell>
-      <TableCell className={cn(compact ? 'px-2 py-2' : undefined)}>
-        <Badge variant="outline" className={cn('rounded-md px-2 py-0.5 text-[11px] font-medium shadow-none', priorityTone(record.priorityScore))}>
-          {record.priorityScore}/10
-        </Badge>
-      </TableCell>
-      <TableCell className={cn('whitespace-nowrap text-sm', compact ? 'px-2 py-2' : undefined)}>{record.updatedLabel}</TableCell>
-    </TableRow>
-  );
+  const handleSelectRecord = (record: EngineRecord) => {
+    if (record.kind === 'problem' && setActiveTab) {
+      localStorage.setItem(MARKET_PROBLEM_STORAGE_KEY, JSON.stringify(record));
+      setActiveTab('problem-detail');
+      return;
+    }
+    setSelectedId(record.id);
+    setDetailsOpen(true);
+  };
 
   return (
     <TooltipProvider>
@@ -713,7 +946,7 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
                   <div className="min-w-0 space-y-2">
                     <div className="flex flex-wrap items-center gap-1.5">
                       <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[10px]">مساحة تحليل السوق</Badge>
-                      <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[10px]">SaaS-ready UI</Badge>
+                      <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[10px]">TanStack Table</Badge>
                       <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[10px]">Shadcn style</Badge>
                       <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[10px]">كثافة معلومات عالية</Badge>
                     </div>
@@ -932,95 +1165,29 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
           </Card>
 
           <div className="space-y-4">
-              {isLoading ? (
-                <Card className="shadow-sm">
-                  <CardContent className="space-y-3 p-4">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <LoaderCircle className="size-4 animate-spin" />
-                      جاري تجهيز نتائج السوق
-                    </div>
-                    {Array.from({ length: 6 }).map((_, index) => (
-                      <Skeleton key={index} className="h-14 rounded-lg" />
-                    ))}
-                  </CardContent>
-                </Card>
-              ) : filteredRecords.length === 0 ? (
-                <ResultsEmpty onReset={resetFilters} />
-              ) : (
-                <Card className="overflow-hidden shadow-sm">
-                  <CardContent className="p-0">
-                    <div className="overflow-x-auto rounded-xl bg-card">
-                      <Table dir="rtl" className="w-full min-w-[1220px] table-fixed text-sm">
-                        <TableHeader className="bg-muted/30">
-                          <TableRow>
-                            <TableHead className="w-[140px] whitespace-nowrap">حفظ المشروع</TableHead>
-                            <TableHead className="w-[320px] whitespace-nowrap">العنوان</TableHead>
-                            <TableHead className="w-[120px] whitespace-nowrap">النوع</TableHead>
-                            <TableHead className="w-[180px] whitespace-nowrap">القطاع</TableHead>
-                            <TableHead className="w-[120px] whitespace-nowrap">حجم السوق</TableHead>
-                            <TableHead className="w-[120px] whitespace-nowrap">سهولة الحل</TableHead>
-                            <TableHead className="w-[140px] whitespace-nowrap">إمكانية الربح</TableHead>
-                            <TableHead className="w-[140px] whitespace-nowrap">مؤشر الأولوية</TableHead>
-                            <TableHead className="w-[120px] whitespace-nowrap">آخر تحديث</TableHead>
-                          </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                          {paginatedRecords.map(record => renderRow(record, true))}
-                        </TableBody>
-                      </Table>
-                    </div>
-                  </CardContent>
-                </Card>
-              )}
-
-              {filteredRecords.length > 0 ? (
-                <div className="flex flex-col gap-4">
-                  <div className="flex flex-wrap items-center gap-2 text-sm">
-                    <Badge variant="outline" className="rounded-md border-transparent bg-muted px-3 py-1 text-foreground">
-                      {filteredRecords.length} نتيجة
-                    </Badge>
-                    <Badge variant="outline" className="rounded-md border-transparent bg-muted px-3 py-1 text-foreground">
-                      <Database className="me-1 size-3.5" />
-                      عرض قاعدة بيانات
-                    </Badge>
+            {isLoading ? (
+              <Card className="shadow-sm">
+                <CardContent className="space-y-3 p-4">
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <LoaderCircle className="size-4 animate-spin" />
+                    جاري تجهيز نتائج السوق
                   </div>
-                <Pagination>
-                  <PaginationContent className="justify-start">
-                    <PaginationItem>
-                      <PaginationPrevious
-                        disabled={page <= 1}
-                        onClick={() => page > 1 && setPage(current => current - 1)}
-                      />
-                    </PaginationItem>
-                    {pageNumbers.map((pageNumber, index) => {
-                      const previous = pageNumbers[index - 1];
-                      const shouldShowEllipsis = previous && pageNumber - previous > 1;
-
-                      return (
-                        <React.Fragment key={pageNumber}>
-                          {shouldShowEllipsis ? (
-                            <PaginationItem>
-                              <PaginationEllipsis />
-                            </PaginationItem>
-                          ) : null}
-                          <PaginationItem>
-                            <PaginationLink isActive={page === pageNumber} onClick={() => setPage(pageNumber)}>
-                              {pageNumber}
-                            </PaginationLink>
-                          </PaginationItem>
-                        </React.Fragment>
-                      );
-                    })}
-                    <PaginationItem>
-                      <PaginationNext
-                        disabled={page >= totalPages}
-                        onClick={() => page < totalPages && setPage(current => current + 1)}
-                      />
-                    </PaginationItem>
-                  </PaginationContent>
-                </Pagination>
-                </div>
-              ) : null}
+                  {Array.from({ length: 6 }).map((_, index) => (
+                    <Skeleton key={index} className="h-14 rounded-lg" />
+                  ))}
+                </CardContent>
+              </Card>
+            ) : filteredRecords.length === 0 ? (
+              <ResultsEmpty onReset={resetFilters} />
+            ) : (
+              <ProblemOpportunityTanStackTable
+                records={filteredRecords}
+                bookmarks={bookmarks}
+                selectedRecordId={selectedId}
+                onSelectRecord={handleSelectRecord}
+                onBookmark={handleBookmark}
+              />
+            )}
           </div>
         </div>
 

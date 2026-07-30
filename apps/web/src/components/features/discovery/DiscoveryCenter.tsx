@@ -7,7 +7,10 @@ import {
   useReactTable,
   getPaginationRowModel,
   getSortedRowModel,
+  getFilteredRowModel,
   SortingState,
+  ColumnFiltersState,
+  VisibilityState,
 } from '@tanstack/react-table';
 
 import { Badge } from '@/components/ui/Badge';
@@ -481,14 +484,19 @@ const DISCOVERY_DATA: DiscoveryGroup[] = [
 
 function DiscoveryTanStackTable({
   data,
+  groups,
   onOpenSector,
   selectedSectorId,
 }: {
   data: SectorRecord[];
+  groups: DiscoveryGroup[];
   onOpenSector: (sector: { id: string; label: string; groupTitle: string }) => void;
   selectedSectorId: string | null;
 }) {
   const [sorting, setSorting] = useState<SortingState>([]);
+  const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
+  const [globalFilter, setGlobalFilter] = useState('');
+  const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({});
   const [{ pageIndex, pageSize }, setPagination] = useState({
     pageIndex: 0,
     pageSize: 10,
@@ -499,59 +507,80 @@ function DiscoveryTanStackTable({
     [pageIndex, pageSize]
   );
 
+  const uniqueGroupTitles = useMemo(() => {
+    return Array.from(new Set(groups.map((g) => g.title))).sort();
+  }, [groups]);
+
   const columns = useMemo<ColumnDef<SectorRecord>[]>(
     () => [
       {
         accessorKey: 'label',
+        id: 'label',
         header: ({ column }) => (
           <Button
             variant="ghost"
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
-            className="h-8 px-1 text-right font-semibold hover:bg-transparent text-xs sm:text-sm"
+            className="h-8 px-1 text-right font-bold hover:bg-transparent text-xs sm:text-sm text-foreground"
           >
-            <span>اسم القطاع</span>
-            <LucideIcons.ArrowUpDown className="mr-1 size-3.5 text-muted-foreground" />
+            <span>القطاع</span>
+            <LucideIcons.ArrowUpDown className="mr-1.5 size-3.5 text-muted-foreground" />
           </Button>
         ),
-        cell: ({ row }) => (
-          <span className="font-medium text-xs sm:text-sm text-foreground">
-            {row.original.label}
-          </span>
-        ),
+        cell: ({ row }) => {
+          const item = row.original;
+          return (
+            <div className="flex items-center gap-3">
+              <div className={cn("flex size-9 shrink-0 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary font-bold shadow-2xs", item.tone.icon)}>
+                <SafeIcon iconName={item.groupIcon} className="size-4" />
+              </div>
+              <div className="flex flex-col min-w-0">
+                <span className="font-bold text-xs sm:text-sm text-foreground truncate" title={item.label}>
+                  {item.label}
+                </span>
+                <span className="text-[11px] font-medium text-muted-foreground truncate">
+                  {item.groupTitle}
+                </span>
+              </div>
+            </div>
+          );
+        },
       },
       {
         accessorKey: 'groupTitle',
+        id: 'groupTitle',
         header: ({ column }) => (
           <Button
             variant="ghost"
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
-            className="h-8 px-1 text-right font-semibold hover:bg-transparent text-xs sm:text-sm"
+            className="h-8 px-1 text-right font-bold hover:bg-transparent text-xs sm:text-sm text-foreground"
           >
             <span>المجموعة الرئيسية</span>
-            <LucideIcons.ArrowUpDown className="mr-1 size-3.5 text-muted-foreground" />
+            <LucideIcons.ArrowUpDown className="mr-1.5 size-3.5 text-muted-foreground" />
           </Button>
         ),
+        filterFn: (row, columnId, filterValue) => {
+          if (!filterValue || filterValue === 'all') return true;
+          return row.getValue(columnId) === filterValue;
+        },
         cell: ({ row }) => (
-          <div className="flex items-center gap-2">
-            <div className={cn('flex size-6 shrink-0 items-center justify-center rounded-md border', row.original.tone.icon)}>
-              <SafeIcon iconName={row.original.groupIcon} className="size-3" />
-            </div>
-            <span className="text-xs text-muted-foreground">{row.original.groupTitle}</span>
-          </div>
+          <Badge variant="secondary" className="font-bold text-[11px] px-2.5 py-0.5 bg-slate-100 text-slate-700 border-0 rounded-md">
+            {row.original.groupTitle}
+          </Badge>
         ),
       },
       {
         accessorKey: 'gatekeepers',
+        id: 'gatekeepers',
         header: 'أبرز اللاعبين',
         cell: ({ row }) => (
-          <div className="flex flex-wrap gap-1">
+          <div className="flex flex-wrap gap-1 max-w-[200px]">
             {row.original.gatekeepers.slice(0, 2).map((gk, i) => (
-              <Badge key={i} variant="secondary" className="text-[10px] px-1.5 py-0 font-normal bg-muted/60">
+              <Badge key={i} variant="outline" className="text-[10px] font-bold px-1.5 py-0.5 bg-slate-50 text-slate-700 border-slate-200 rounded-md">
                 {gk}
               </Badge>
             ))}
             {row.original.gatekeepers.length > 2 && (
-              <span className="text-[10px] text-muted-foreground self-center">+{row.original.gatekeepers.length - 2}</span>
+              <span className="text-[10px] font-bold text-muted-foreground self-center">+{row.original.gatekeepers.length - 2}</span>
             )}
           </div>
         ),
@@ -559,14 +588,20 @@ function DiscoveryTanStackTable({
       {
         id: 'status',
         header: 'الحالة',
+        filterFn: (row, columnId, filterValue) => {
+          if (!filterValue || filterValue === 'all') return true;
+          if (filterValue === 'new') return !!row.original.isNew;
+          if (filterValue === 'ready') return !!row.original.exists;
+          return true;
+        },
         cell: ({ row }) => (
           <div className="flex items-center gap-1.5">
             {row.original.isNew ? (
-              <Badge variant="outline" className="text-[10px] px-1.5 py-0 font-medium bg-primary/5 text-primary border-primary/20 shadow-none">
+              <Badge variant="outline" className="text-[11px] px-2.5 py-0.5 font-bold bg-emerald-50 text-emerald-700 border-0 ring-1 ring-inset ring-emerald-600/20 rounded-md">
                 جديد
               </Badge>
             ) : null}
-            <Badge variant="outline" className="text-[10px] px-1.5 py-0 font-normal text-muted-foreground">
+            <Badge variant="outline" className="text-[11px] px-2.5 py-0.5 font-bold text-slate-600 bg-slate-100/70 border-0 rounded-md">
               {row.original.exists ? 'جاهز' : 'قيد الإعداد'}
             </Badge>
           </div>
@@ -574,26 +609,27 @@ function DiscoveryTanStackTable({
       },
       {
         id: 'actions',
-        header: '',
         size: 60,
         cell: ({ row }) => (
-          <Button
-            type="button"
-            variant="ghost"
-            size="icon-sm"
-            onClick={(e) => {
-              e.stopPropagation();
-              onOpenSector({
-                id: row.original.id,
-                label: row.original.label,
-                groupTitle: row.original.groupTitle,
-              });
-            }}
-            className="h-8 w-8 text-muted-foreground hover:text-primary hover:bg-muted/80 rounded-lg border border-border/50 shadow-2xs"
-            title="عرض القطاع"
-          >
-            <LucideIcons.ChevronLeft className="size-4" />
-          </Button>
+          <div className="flex justify-end">
+            <Button
+              type="button"
+              variant="ghost"
+              size="icon-sm"
+              onClick={(e) => {
+                e.stopPropagation();
+                onOpenSector({
+                  id: row.original.id,
+                  label: row.original.label,
+                  groupTitle: row.original.groupTitle,
+                });
+              }}
+              className="size-8 rounded-lg border border-border bg-background hover:bg-primary hover:text-primary-foreground hover:border-primary text-muted-foreground shadow-2xs transition-all active:scale-95"
+              title="عرض التفاصيل"
+            >
+              <LucideIcons.ChevronLeft className="size-4" />
+            </Button>
+          </div>
         ),
       },
     ],
@@ -605,116 +641,268 @@ function DiscoveryTanStackTable({
     columns,
     state: {
       sorting,
+      columnFilters,
+      globalFilter,
+      columnVisibility,
       pagination,
     },
     onSortingChange: setSorting,
+    onColumnFiltersChange: setColumnFilters,
+    onGlobalFilterChange: setGlobalFilter,
+    onColumnVisibilityChange: setColumnVisibility,
     onPaginationChange: setPagination,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
   });
 
-  return (
-    <Card className="shadow-sm overflow-hidden border-border bg-card rounded-xl">
-      <div className="overflow-x-auto">
-        <Table dir="rtl">
-          <TableHeader>
-            {table.getHeaderGroups().map((headerGroup) => (
-              <TableRow key={headerGroup.id} className="bg-muted/40 hover:bg-muted/40">
-                {headerGroup.headers.map((header) => (
-                  <TableHead key={header.id} className="h-10 text-right font-semibold text-xs">
-                    {header.isPlaceholder
-                      ? null
-                      : flexRender(header.column.columnDef.header, header.getContext())}
-                  </TableHead>
-                ))}
-              </TableRow>
-            ))}
-          </TableHeader>
-          <TableBody>
-            {table.getRowModel().rows.map((row) => {
-              const isActive = selectedSectorId === row.original.id;
-              return (
-                <TableRow
-                  key={row.id}
-                  data-state={isActive ? 'selected' : undefined}
-                  className="cursor-pointer group hover:bg-muted/30 transition-colors"
-                  onClick={() =>
-                    onOpenSector({
-                      id: row.original.id,
-                      label: row.original.label,
-                      groupTitle: row.original.groupTitle,
-                    })
-                  }
-                >
-                  {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id} className="py-2.5">
-                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                    </TableCell>
-                  ))}
-                </TableRow>
-              );
-            })}
-          </TableBody>
-        </Table>
-      </div>
+  const groupFilterVal = (table.getColumn('groupTitle')?.getFilterValue() as string) || '';
+  const statusFilterVal = (table.getColumn('status')?.getFilterValue() as string) || '';
+  const isAnyFilterActive = globalFilter || groupFilterVal || statusFilterVal;
 
-      {/* Pagination Footer & Page Size Selector on Bottom Right */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 border-t border-border bg-muted/10 text-xs">
-        {/* Right side: Page size selector (RTL right) */}
-        <div className="flex items-center gap-2">
-          <span className="text-muted-foreground font-medium">عدد النتائج في الصفحة:</span>
+  const resetAllFilters = () => {
+    setGlobalFilter('');
+    table.getColumn('groupTitle')?.setFilterValue('');
+    table.getColumn('status')?.setFilterValue('');
+  };
+
+  return (
+    <div className="w-full flex flex-col gap-4">
+      {/* Table Toolbar matching ProvenProjectsTable style */}
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
+          {/* Search Box */}
+          <div className="relative w-full sm:w-64">
+            <LucideIcons.Search className="absolute right-3 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
+            <Input
+              placeholder="ابحث عن قطاع، مجموعة، لاعبين..."
+              value={globalFilter ?? ''}
+              onChange={(event) => setGlobalFilter(event.target.value)}
+              className="pl-3 pr-9 h-10 w-full bg-background border-border focus-visible:ring-1 rounded-xl font-medium text-sm shadow-xs"
+            />
+          </div>
+
+          {/* Group Filter Dropdown */}
           <Select
-            value={`${table.getState().pagination.pageSize}`}
-            onValueChange={(value) => {
-              table.setPageSize(Number(value));
-            }}
+            value={groupFilterVal || 'all'}
+            onValueChange={(val) => table.getColumn('groupTitle')?.setFilterValue(val === 'all' ? '' : val)}
           >
-            <SelectTrigger className="h-8 w-[75px] text-xs bg-background">
-              <SelectValue placeholder={table.getState().pagination.pageSize} />
+            <SelectTrigger className="h-10 w-full sm:w-[170px] bg-background border-border rounded-xl font-bold text-sm text-foreground">
+              <SelectValue placeholder="المجموعة الرئيسية" />
             </SelectTrigger>
-            <SelectContent align="end">
-              {[10, 20, 50, 100].map((pageSize) => (
-                <SelectItem key={pageSize} value={`${pageSize}`}>
-                  {pageSize}
+            <SelectContent className="rounded-xl border-border" dir="rtl">
+              <SelectItem value="all" className="font-bold cursor-pointer">كل المجموعات</SelectItem>
+              {uniqueGroupTitles.map((groupTitle) => (
+                <SelectItem key={groupTitle} value={groupTitle} className="font-bold cursor-pointer">
+                  {groupTitle}
                 </SelectItem>
               ))}
             </SelectContent>
           </Select>
+
+          {/* Status Filter Dropdown */}
+          <Select
+            value={statusFilterVal || 'all'}
+            onValueChange={(val) => table.getColumn('status')?.setFilterValue(val === 'all' ? '' : val)}
+          >
+            <SelectTrigger className="h-10 w-full sm:w-[150px] bg-background border-border rounded-xl font-bold text-sm text-foreground">
+              <SelectValue placeholder="حالة القطاع" />
+            </SelectTrigger>
+            <SelectContent className="rounded-xl border-border" dir="rtl">
+              <SelectItem value="all" className="font-bold cursor-pointer">كل حالات القطاعات</SelectItem>
+              <SelectItem value="new" className="font-bold cursor-pointer text-emerald-600">القطاعات الجديدة</SelectItem>
+              <SelectItem value="ready" className="font-bold cursor-pointer">القطاعات الجاهزة</SelectItem>
+            </SelectContent>
+          </Select>
+
+          {/* Clear Filters Button */}
+          {isAnyFilterActive && (
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={resetAllFilters}
+              className="h-10 px-3 text-xs font-bold text-red-600 hover:bg-red-500/10 hover:text-red-700 rounded-xl gap-1.5"
+            >
+              <LucideIcons.X className="size-3.5" />
+              إلغاء التصفية
+            </Button>
+          )}
         </div>
 
-        {/* Left side: Navigation buttons & Page info */}
-        <div className="flex items-center gap-3">
-          <span className="text-muted-foreground font-mono">
-            صفحة <strong className="text-foreground">{table.getState().pagination.pageIndex + 1}</strong> من{' '}
-            <strong className="text-foreground">{table.getPageCount() || 1}</strong> ({table.getFilteredRowModel().rows.length} قطاع)
-          </span>
+        {/* Columns View Menu */}
+        <DropdownMenu modal={false}>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline" className="w-full sm:w-auto h-10 font-bold border-border rounded-xl text-foreground hover:bg-muted/50 mt-1 sm:mt-0">
+              الأعمدة
+              <LucideIcons.ChevronDown className="mr-auto sm:ml-2 sm:mr-0 size-4 text-muted-foreground" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="w-[180px] rounded-xl border-border">
+            {table
+              .getAllColumns()
+              .filter((column) => column.getCanHide())
+              .map((column) => {
+                let label = column.id;
+                if (label === 'label') label = 'القطاع';
+                if (label === 'groupTitle') label = 'المجموعة الرئيسية';
+                if (label === 'gatekeepers') label = 'أبرز اللاعبين';
+                if (label === 'status') label = 'الحالة';
 
-          <div className="flex items-center gap-1">
-            <Button
-              variant="outline"
-              size="icon-sm"
-              onClick={() => table.previousPage()}
-              disabled={!table.getCanPreviousPage()}
-              className="h-8 w-8"
-              title="الصفحة السابقة"
+                return (
+                  <DropdownMenuCheckboxItem
+                    key={column.id}
+                    className="capitalize font-medium text-sm cursor-pointer"
+                    checked={column.getIsVisible()}
+                    onCheckedChange={(value) => column.toggleVisibility(!!value)}
+                  >
+                    {label}
+                  </DropdownMenuCheckboxItem>
+                );
+              })}
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
+
+      {/* Active Filter Pills Indicator */}
+      {(groupFilterVal || statusFilterVal) && (
+        <div className="flex flex-wrap items-center gap-2 px-1">
+          <span className="text-xs font-medium text-muted-foreground">الفلاتر المحددة:</span>
+          {groupFilterVal && (
+            <Badge className="bg-primary text-primary-foreground font-bold gap-1 text-xs py-0.5 px-2.5 rounded-lg">
+              المجموعة: {groupFilterVal}
+              <button
+                onClick={() => table.getColumn('groupTitle')?.setFilterValue('')}
+                className="mr-1 opacity-80 hover:opacity-100"
+              >
+                <LucideIcons.X className="size-3" />
+              </button>
+            </Badge>
+          )}
+          {statusFilterVal && (
+            <Badge className="bg-emerald-600 text-white font-bold gap-1 text-xs py-0.5 px-2.5 rounded-lg">
+              الحالة: {statusFilterVal === 'new' ? 'الجديدة' : 'الجاهزة'}
+              <button
+                onClick={() => table.getColumn('status')?.setFilterValue('')}
+                className="mr-1 opacity-80 hover:opacity-100"
+              >
+                <LucideIcons.X className="size-3" />
+              </button>
+            </Badge>
+          )}
+        </div>
+      )}
+
+      {/* Main Table Card Container */}
+      <Card className="shadow-xs overflow-hidden border-border bg-card rounded-2xl">
+        <div className="overflow-x-auto">
+          <Table dir="rtl">
+            <TableHeader className="bg-muted/50 border-b border-border/80">
+              {table.getHeaderGroups().map((headerGroup) => (
+                <TableRow key={headerGroup.id} className="hover:bg-transparent border-none">
+                  {headerGroup.headers.map((header) => (
+                    <TableHead key={header.id} className="h-11 text-right font-bold text-xs text-foreground">
+                      {header.isPlaceholder
+                        ? null
+                        : flexRender(header.column.columnDef.header, header.getContext())}
+                    </TableHead>
+                  ))}
+                </TableRow>
+              ))}
+            </TableHeader>
+            <TableBody>
+              {table.getRowModel().rows.length > 0 ? (
+                table.getRowModel().rows.map((row) => {
+                  const isActive = selectedSectorId === row.original.id;
+                  return (
+                    <TableRow
+                      key={row.id}
+                      data-state={isActive ? 'selected' : undefined}
+                      className="cursor-pointer group hover:bg-muted/40 transition-colors border-b border-border/60"
+                      onClick={() =>
+                        onOpenSector({
+                          id: row.original.id,
+                          label: row.original.label,
+                          groupTitle: row.original.groupTitle,
+                        })
+                      }
+                    >
+                      {row.getVisibleCells().map((cell) => (
+                        <TableCell key={cell.id} className="py-3">
+                          {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                        </TableCell>
+                      ))}
+                    </TableRow>
+                  );
+                })
+              ) : (
+                <TableRow>
+                  <TableCell colSpan={columns.length} className="h-32 text-center text-muted-foreground text-sm font-medium">
+                    لا توجد قطاعات مطابقة للبحث المحدد.
+                  </TableCell>
+                </TableRow>
+              )}
+            </TableBody>
+          </Table>
+        </div>
+
+        {/* Footer Pagination Bar */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 border-t border-border bg-muted/20 text-xs">
+          {/* Right side: Page size selector (RTL right) */}
+          <div className="flex items-center gap-2">
+            <span className="text-muted-foreground font-medium">عدد النتائج في الصفحة:</span>
+            <Select
+              value={`${table.getState().pagination.pageSize}`}
+              onValueChange={(value) => {
+                table.setPageSize(Number(value));
+              }}
             >
-              <LucideIcons.ChevronRight className="size-4" />
-            </Button>
-            <Button
-              variant="outline"
-              size="icon-sm"
-              onClick={() => table.nextPage()}
-              disabled={!table.getCanNextPage()}
-              className="h-8 w-8"
-              title="الصفحة التالية"
-            >
-              <LucideIcons.ChevronLeft className="size-4" />
-            </Button>
+              <SelectTrigger className="h-8 w-[75px] text-xs bg-background rounded-lg border-border">
+                <SelectValue placeholder={table.getState().pagination.pageSize} />
+              </SelectTrigger>
+              <SelectContent align="end" className="rounded-lg border-border">
+                {[10, 20, 50, 100].map((pageSize) => (
+                  <SelectItem key={pageSize} value={`${pageSize}`}>
+                    {pageSize}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+
+          {/* Left side: Navigation buttons & Page info */}
+          <div className="flex items-center gap-3">
+            <span className="text-muted-foreground font-mono">
+              صفحة <strong className="text-foreground">{table.getState().pagination.pageIndex + 1}</strong> من{' '}
+              <strong className="text-foreground">{table.getPageCount() || 1}</strong> ({table.getFilteredRowModel().rows.length} قطاع)
+            </span>
+
+            <div className="flex items-center gap-1">
+              <Button
+                variant="outline"
+                size="icon-sm"
+                onClick={() => table.previousPage()}
+                disabled={!table.getCanPreviousPage()}
+                className="h-8 w-8 rounded-lg"
+                title="الصفحة السابقة"
+              >
+                <LucideIcons.ChevronRight className="size-4" />
+              </Button>
+              <Button
+                variant="outline"
+                size="icon-sm"
+                onClick={() => table.nextPage()}
+                disabled={!table.getCanNextPage()}
+                className="h-8 w-8 rounded-lg"
+                title="الصفحة التالية"
+              >
+                <LucideIcons.ChevronLeft className="size-4" />
+              </Button>
+            </div>
           </div>
         </div>
-      </div>
-    </Card>
+      </Card>
+    </div>
   );
 }
 
@@ -725,9 +913,6 @@ export function DiscoveryCenter({
   setActiveTab: (tab: string) => void;
   onSelectSector?: (sector: { id: string; label: string; groupTitle: string }) => void;
 }) {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [filterType, setFilterType] = useState<'all' | 'new'>('all');
   const [selectedSectorId, setSelectedSectorId] = useState<string | null>(null);
 
   const normalizedGroups = useMemo(
@@ -742,35 +927,6 @@ export function DiscoveryCenter({
     [],
   );
 
-  const filteredGroups = useMemo(() => {
-    const query = searchTerm.trim().toLowerCase();
-
-    let groups = normalizedGroups;
-
-    if (filterType === 'new') {
-      groups = groups.map(group => ({
-        ...group,
-        sectors: group.sectors.filter(s => s.isNew)
-      }));
-    }
-
-    if (!query) {
-      return groups.filter(group => group.sectors.length > 0);
-    }
-
-    return groups
-      .map(group => ({
-        ...group,
-        sectors: group.sectors.filter(
-          sector =>
-            sector.label.toLowerCase().includes(query) ||
-            sector.id.toLowerCase().includes(query) ||
-            group.title.toLowerCase().includes(query),
-        ),
-      }))
-      .filter(group => group.sectors.length > 0);
-  }, [normalizedGroups, searchTerm, filterType]);
-
   const allSectors = useMemo(
     () =>
       normalizedGroups.flatMap(group =>
@@ -784,10 +940,9 @@ export function DiscoveryCenter({
 
   const totalSectors = allSectors.length;
   const totalNewSectors = allSectors.filter(sector => sector.isNew).length;
-  const matchingSectors = filteredGroups.reduce((count, group) => count + group.sectors.length, 0);
 
   const tableRecords: SectorRecord[] = useMemo(() => {
-    return filteredGroups.flatMap(group => 
+    return normalizedGroups.flatMap(group => 
       group.sectors.map(sector => ({
         ...sector,
         groupTitle: group.title,
@@ -796,7 +951,7 @@ export function DiscoveryCenter({
         tone: group.tone
       }))
     );
-  }, [filteredGroups]);
+  }, [normalizedGroups]);
 
   const openSector = (sector: { id: string; label: string; groupTitle: string }) => {
     setSelectedSectorId(sector.id);
@@ -846,158 +1001,14 @@ export function DiscoveryCenter({
           </div>
         </div>
 
-        <div className="flex w-full flex-col gap-3 rounded-xl border bg-muted/20 p-2 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex flex-wrap items-center gap-2 overflow-x-auto pb-1 sm:pb-0">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="h-9 gap-2 rounded-lg bg-background shadow-sm">
-                  <LucideIcons.Filter className="size-4" />
-                  تصفية: {filterType === 'all' ? 'الكل' : 'القطاعات الجديدة'}
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48 text-right">
-                <DropdownMenuLabel>حالة القطاع</DropdownMenuLabel>
-                <DropdownMenuSeparator />
-                <DropdownMenuCheckboxItem 
-                  checked={filterType === 'all'} 
-                  onCheckedChange={() => setFilterType('all')}
-                >
-                  الكل
-                </DropdownMenuCheckboxItem>
-                <DropdownMenuCheckboxItem 
-                  checked={filterType === 'new'} 
-                  onCheckedChange={() => setFilterType('new')}
-                >
-                  القطاعات الجديدة فقط
-                </DropdownMenuCheckboxItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            <div className="mx-1 h-5 w-[1px] bg-border" />
-            
-            <Badge variant="outline" className="h-9 rounded-lg bg-background px-3 font-medium text-sm">
-              النتائج: {matchingSectors}
-            </Badge>
-
-            <HoverCard openDelay={100}>
-              <HoverCardTrigger asChild>
-                <Button
-                  type="button"
-                  variant="ghost"
-                  size="icon-sm"
-                  className="h-9 w-9 shrink-0 rounded-lg text-muted-foreground"
-                >
-                  <LucideIcons.CircleAlert className="size-4" />
-                </Button>
-              </HoverCardTrigger>
-              <HoverCardContent align="start" className="w-[360px] space-y-3 text-right">
-                <div className="space-y-1">
-                  <div className="text-sm font-semibold text-foreground">كيف تستخدم الرادار؟</div>
-                  <p className="text-xs leading-6 text-muted-foreground">
-                    ابدأ من المجموعة الأقرب لفكرة المشروع، ثم ادخل إلى القطاع المناسب لمراجعة السوق وبناء تصور أعمق للفرصة.
-                  </p>
-                </div>
-                <div className="space-y-2 text-xs leading-6 text-muted-foreground">
-                  <div className="rounded-lg border bg-muted/30 px-3 py-2">
-                    اختر مجموعة رئيسية تمثل نوع السوق الذي تنوي تحليله قبل الانتقال إلى القطاعات الفرعية.
-                  </div>
-                  <div className="rounded-lg border bg-muted/30 px-3 py-2">
-                    استخدم البحث للوصول السريع عندما يكون لديك اتجاه محدد أو صناعة واضحة.
-                  </div>
-                  <div className="rounded-lg border bg-muted/30 px-3 py-2">
-                    انتقل إلى القطاع المطلوب لبدء القراءة أو استكمال بقية رحلة المشروع داخل المنصة.
-                  </div>
-                </div>
-              </HoverCardContent>
-            </HoverCard>
-          </div>
-
-          <div className="flex shrink-0 items-center gap-2">
-            {searchTerm && !isSearchOpen && (
-              <Badge variant="secondary" className="h-9 gap-1.5 pr-2.5 text-sm">
-                {searchTerm}
-                <Button
-                  type="button"
-                  variant="ghost"
-                  size="icon-sm"
-                  className="h-5 w-5 rounded-full p-0 hover:bg-background/80"
-                  onClick={() => setSearchTerm('')}
-                >
-                  <LucideIcons.X className="size-3" />
-                </Button>
-              </Badge>
-            )}
-            
-            <div 
-              className={cn(
-                "flex items-center overflow-hidden transition-all duration-300 ease-in-out",
-                isSearchOpen ? "w-full opacity-100 sm:w-64" : "w-0 opacity-0"
-              )}
-            >
-              <div className="relative w-full">
-                <LucideIcons.Search className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
-                <Input
-                  type="text"
-                  value={searchTerm}
-                  onChange={event => setSearchTerm(event.target.value)}
-                  placeholder="ابحث عن قطاع أو سوق..."
-                  className="h-9 w-full bg-background pr-9 text-sm focus-visible:ring-1"
-                />
-                <Button
-                  type="button"
-                  variant="ghost"
-                  size="icon-sm"
-                  className="absolute left-1 top-1/2 h-7 w-7 -translate-y-1/2 rounded-md text-muted-foreground hover:text-foreground"
-                  onClick={() => {
-                    setIsSearchOpen(false);
-                    if (!searchTerm) setSearchTerm('');
-                  }}
-                >
-                  <LucideIcons.X className="size-3.5" />
-                </Button>
-              </div>
-            </div>
-
-            {!isSearchOpen && (
-              <Button
-                type="button"
-                variant="outline"
-                size="icon-sm"
-                onClick={() => setIsSearchOpen(true)}
-                className="h-9 w-9 shrink-0 bg-background rounded-lg shadow-sm"
-              >
-                <LucideIcons.Search className="size-4" />
-              </Button>
-            )}
-          </div>
-        </div>
-
         <div className="grid gap-6">
           <div className="space-y-6">
-            {tableRecords.length > 0 ? (
-              <DiscoveryTanStackTable
-                data={tableRecords}
-                onOpenSector={openSector}
-                selectedSectorId={selectedSectorId}
-              />
-            ) : (
-              <Card className="border-dashed shadow-sm">
-                <CardContent className="flex min-h-[320px] flex-col items-center justify-center gap-4 p-8 text-center">
-                  <div className="flex size-16 items-center justify-center rounded-full border bg-muted/40">
-                    <LucideIcons.Orbit className="size-8 text-muted-foreground" />
-                  </div>
-                  <div className="space-y-2">
-                    <div className="text-lg font-semibold">لا توجد نتائج مطابقة</div>
-                    <p className="max-w-md text-sm leading-7 text-muted-foreground">
-                      جرّب وصفاً أعم مثل الزراعة أو التقنية أو التمويل للوصول إلى مجموعة أوسع من الأسواق.
-                    </p>
-                  </div>
-                  <Button type="button" variant="outline" onClick={() => setSearchTerm('')}>
-                    إعادة ضبط البحث
-                  </Button>
-                </CardContent>
-              </Card>
-            )}
+            <DiscoveryTanStackTable
+              data={tableRecords}
+              groups={DISCOVERY_DATA}
+              onOpenSector={openSector}
+              selectedSectorId={selectedSectorId}
+            />
           </div>
         </div>
       </div>
