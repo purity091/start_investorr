@@ -508,7 +508,7 @@ function ProjectsTable({
   const { loadProject } = useProjectWorkspace();
 
   const handleOpenProject = async (project: Project) => {
-    if (!project.id.startsWith('p') && !project.id.startsWith('example')) {
+    if (!project.isMockExample) {
       await loadProject(project.id);
     }
     setActiveTab?.('editor');

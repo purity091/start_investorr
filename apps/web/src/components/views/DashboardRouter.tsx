@@ -462,7 +462,6 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
             onWorkspaceSync={setPlanSections}
           />
         );
-        return <MiningDashboard sectorId="mining-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الكيمياء والموارد" />;
       case 'advertising-dashboard':
         return <AdvertisingDashboard sectorId="advertising-dashboard" onBack={() => setActiveTab('market-discovery')} parentCategory="الإعلانات والتسويق" />;
       case 'marketing-dashboard':
@@ -764,7 +763,6 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
       case 'mental-health-services': return <MentalHealthServicesDashboard />;
       case 'ai-platforms': return <AiPlatformsDashboard />;
       case 'problem-engine': return <ProblemOpportunityEngine setActiveTab={setActiveTab} />;
-      case 'problem-detail': return <ProblemDeepDive onBack={() => setActiveTab('problem-engine')} />;
       case 'cloud-services-internet': return <CloudServicesDashboard />;
       case 'streaming-platforms': return <StreamingPlatformsDashboard />;
       case 'podcast-industry': return <PodcastIndustryDashboard />;
