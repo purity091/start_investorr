@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { ArrowLeft, Sparkles } from 'lucide-react';
+import { FeaturesMegaMenu } from '@/components/layout/FeaturesMegaMenu';
 
 export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -13,11 +14,11 @@ export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children
             خطة<span className="text-foreground">.</span>
           </Link>
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-            <Link href="/features" className="text-muted-foreground hover:text-foreground transition-colors">المميزات والحلول</Link>
-            <Link href="/pricing-plans" className="text-muted-foreground hover:text-foreground transition-colors">الأسعار والخطط</Link>
-            <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">من نحن</Link>
-            <Link href="/faq" className="text-muted-foreground hover:text-foreground transition-colors">الأسئلة الشائعة</Link>
-            <Link href="/contact-us" className="text-muted-foreground hover:text-foreground transition-colors">اتصل بنا</Link>
+            <FeaturesMegaMenu />
+            <Link href="/pricing-plans" className="text-muted-foreground hover:text-foreground transition-colors font-semibold">الأسعار والخطط</Link>
+            <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors font-semibold">من نحن</Link>
+            <Link href="/faq" className="text-muted-foreground hover:text-foreground transition-colors font-semibold">الأسئلة الشائعة</Link>
+            <Link href="/contact-us" className="text-muted-foreground hover:text-foreground transition-colors font-semibold">اتصل بنا</Link>
           </nav>
           <div className="flex items-center gap-3">
             <Link href="/login">
