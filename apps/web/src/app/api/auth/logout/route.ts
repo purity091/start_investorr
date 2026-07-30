@@ -5,7 +5,7 @@ export async function POST(request: NextRequest) {
   let response = NextResponse.json({ success: true }, { status: 200 });
 
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
-  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder';
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || 'placeholder';
 
   const supabase = createServerClient(
     supabaseUrl,
