@@ -21,7 +21,7 @@ import {
 import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
-import { ArrowUpDown, ChevronDown, ChevronLeft, ChevronRight, ExternalLink, Search, X, Filter } from 'lucide-react';
+import { ArrowUpDown, ChevronDown, ChevronLeft, ChevronRight, ExternalLink, Search, X } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -87,6 +87,22 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
       if (item.category) {
         const mainCat = item.category.split('/')[0].trim();
         if (mainCat) set.add(mainCat);
+      }
+    });
+    return Array.from(set).sort();
+  }, [data]);
+
+  // Extract unique business models for dropdown filter
+  const uniqueBusinessModels = useMemo(() => {
+    const set = new Set<string>();
+    data.forEach((item) => {
+      const bmStr = item.company?.business_model || '';
+      if (bmStr) {
+        const parts = bmStr.split(/[,/&]+/);
+        parts.forEach((p: string) => {
+          const trimmed = p.trim();
+          if (trimmed) set.add(trimmed);
+        });
       }
     });
     return Array.from(set).sort();
@@ -230,11 +246,49 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
         accessorFn: (row) => row.company?.business_model,
         id: 'business_model',
         header: 'نموذج العمل',
-        cell: ({ row }) => (
-          <span className="text-[12px] font-medium text-slate-600 line-clamp-1 max-w-[150px]" title={row.getValue('business_model')}>
-            {row.getValue('business_model') || '-'}
-          </span>
-        ),
+        filterFn: (row, columnId, filterValue) => {
+          if (!filterValue) return true;
+          const bm = (row.getValue(columnId) as string || '').toLowerCase();
+          return bm.includes(filterValue.toLowerCase());
+        },
+        cell: ({ row, table }) => {
+          const bmStr = (row.getValue('business_model') as string) || '';
+          if (!bmStr) return <span className="text-slate-400 text-[12px]">-</span>;
+
+          const tags = bmStr.split(/[,/&]+/).map((t) => t.trim()).filter(Boolean);
+          const currentFilter = (table.getColumn('business_model')?.getFilterValue() as string) || '';
+
+          return (
+            <div className="flex flex-wrap gap-1 max-w-[180px]">
+              {tags.map((tag, idx) => {
+                const isFiltered = currentFilter && currentFilter.toLowerCase() === tag.toLowerCase();
+                return (
+                  <Badge
+                    key={idx}
+                    variant="outline"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      if (isFiltered) {
+                        table.getColumn('business_model')?.setFilterValue('');
+                      } else {
+                        table.getColumn('business_model')?.setFilterValue(tag);
+                      }
+                    }}
+                    className={cn(
+                      "cursor-pointer text-[10px] font-bold px-2 py-0.5 rounded-md transition-all hover:scale-105 active:scale-95 select-none",
+                      isFiltered
+                        ? "bg-indigo-600 text-white border-indigo-600 shadow-xs"
+                        : "bg-slate-50 text-slate-700 border-slate-200 hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-200"
+                    )}
+                    title={`اضغط لتصفية المشاريع حسب نموذج العمل "${tag}"`}
+                  >
+                    {tag}
+                  </Badge>
+                );
+              })}
+            </div>
+          );
+        },
       },
       {
         id: 'actions',
@@ -282,12 +336,14 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
 
   const categoryFilterVal = (table.getColumn('category')?.getFilterValue() as string) || '';
   const countryFilterVal = (table.getColumn('country')?.getFilterValue() as string) || '';
-  const isAnyFilterActive = globalFilter || categoryFilterVal || countryFilterVal;
+  const bmFilterVal = (table.getColumn('business_model')?.getFilterValue() as string) || '';
+  const isAnyFilterActive = globalFilter || categoryFilterVal || countryFilterVal || bmFilterVal;
 
   const resetAllFilters = () => {
     setGlobalFilter('');
     table.getColumn('category')?.setFilterValue('');
     table.getColumn('country')?.setFilterValue('');
+    table.getColumn('business_model')?.setFilterValue('');
   };
 
   return (
@@ -295,7 +351,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
       {/* Table Toolbar */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-3">
         <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full sm:w-auto">
-          <div className="relative w-full sm:w-64">
+          <div className="relative w-full sm:w-60">
             <Search className="absolute right-3 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
             <Input
               placeholder="ابحث عن شركة، مجال..."
@@ -310,7 +366,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
             value={categoryFilterVal || 'all'}
             onValueChange={(val) => table.getColumn('category')?.setFilterValue(val === 'all' ? '' : val)}
           >
-            <SelectTrigger className="h-10 w-full sm:w-[170px] bg-white border-slate-200 rounded-xl font-bold text-sm text-slate-700">
+            <SelectTrigger className="h-10 w-full sm:w-[150px] bg-white border-slate-200 rounded-xl font-bold text-sm text-slate-700">
               <SelectValue placeholder="التصنيف" />
             </SelectTrigger>
             <SelectContent className="rounded-xl border-slate-200" dir="rtl">
@@ -321,12 +377,28 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
             </SelectContent>
           </Select>
 
+          {/* Business Model Filter Dropdown */}
+          <Select
+            value={bmFilterVal || 'all'}
+            onValueChange={(val) => table.getColumn('business_model')?.setFilterValue(val === 'all' ? '' : val)}
+          >
+            <SelectTrigger className="h-10 w-full sm:w-[160px] bg-white border-slate-200 rounded-xl font-bold text-sm text-slate-700">
+              <SelectValue placeholder="نموذج العمل" />
+            </SelectTrigger>
+            <SelectContent className="rounded-xl border-slate-200" dir="rtl">
+              <SelectItem value="all" className="font-bold cursor-pointer">كل النماذج</SelectItem>
+              {uniqueBusinessModels.map((bm) => (
+                <SelectItem key={bm} value={bm} className="font-bold cursor-pointer">{bm}</SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+
           {/* Country Filter Dropdown */}
           <Select
             value={countryFilterVal || 'all'}
             onValueChange={(val) => table.getColumn('country')?.setFilterValue(val === 'all' ? '' : val)}
           >
-            <SelectTrigger className="h-10 w-full sm:w-[160px] bg-white border-slate-200 rounded-xl font-bold text-sm text-slate-700">
+            <SelectTrigger className="h-10 w-full sm:w-[140px] bg-white border-slate-200 rounded-xl font-bold text-sm text-slate-700">
               <SelectValue placeholder="الدولة" />
             </SelectTrigger>
             <SelectContent className="rounded-xl border-slate-200" dir="rtl">
@@ -386,19 +458,32 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
         </DropdownMenu>
       </div>
 
-      {/* Active Filter Pill indicator if filtered */}
-      {categoryFilterVal && (
-        <div className="flex items-center gap-2 px-1">
-          <span className="text-xs font-medium text-slate-500">التصنيف المحدد:</span>
-          <Badge className="bg-blue-600 text-white font-bold gap-1 text-xs py-0.5 px-2.5 rounded-lg">
-            {categoryFilterVal}
-            <button
-              onClick={() => table.getColumn('category')?.setFilterValue('')}
-              className="mr-1 hover:text-blue-200"
-            >
-              <X className="size-3" />
-            </button>
-          </Badge>
+      {/* Active Filter Pills indicator if filtered */}
+      {(categoryFilterVal || bmFilterVal) && (
+        <div className="flex flex-wrap items-center gap-2 px-1">
+          <span className="text-xs font-medium text-slate-500">الفلاتر المحددة:</span>
+          {categoryFilterVal && (
+            <Badge className="bg-blue-600 text-white font-bold gap-1 text-xs py-0.5 px-2.5 rounded-lg">
+              التصنيف: {categoryFilterVal}
+              <button
+                onClick={() => table.getColumn('category')?.setFilterValue('')}
+                className="mr-1 hover:text-blue-200"
+              >
+                <X className="size-3" />
+              </button>
+            </Badge>
+          )}
+          {bmFilterVal && (
+            <Badge className="bg-indigo-600 text-white font-bold gap-1 text-xs py-0.5 px-2.5 rounded-lg">
+              نموذج العمل: {bmFilterVal}
+              <button
+                onClick={() => table.getColumn('business_model')?.setFilterValue('')}
+                className="mr-1 hover:text-indigo-200"
+              >
+                <X className="size-3" />
+              </button>
+            </Badge>
+          )}
         </div>
       )}
 
