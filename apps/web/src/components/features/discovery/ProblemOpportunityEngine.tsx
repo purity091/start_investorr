@@ -395,6 +395,24 @@ const DetailList = ({ record }: { record: EngineRecord | null }) => {
   );
 };
 
+const marketToneClasses: Record<MarketBand, string> = {
+  large: 'bg-emerald-50 text-emerald-700 border-emerald-200 hover:bg-emerald-100',
+  medium: 'bg-indigo-50 text-indigo-700 border-indigo-200 hover:bg-indigo-100',
+  small: 'bg-amber-50 text-amber-700 border-amber-200 hover:bg-amber-100',
+};
+
+const easeToneClasses: Record<EaseBand, string> = {
+  easy: 'bg-sky-50 text-sky-700 border-sky-200 hover:bg-sky-100',
+  moderate: 'bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100',
+  hard: 'bg-rose-50 text-rose-700 border-rose-200 hover:bg-rose-100',
+};
+
+const profitToneClasses: Record<ProfitBand, string> = {
+  high: 'bg-teal-50 text-teal-700 border-teal-200 hover:bg-teal-100',
+  medium: 'bg-orange-50 text-orange-700 border-orange-200 hover:bg-orange-100',
+  low: 'bg-violet-50 text-violet-700 border-violet-200 hover:bg-violet-100',
+};
+
 const sectorToneClasses: Record<string, string> = {
   'التقنية والذكاء الاصطناعي': 'bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100',
   'التجارة الإلكترونية والتجزئة': 'bg-emerald-50 text-emerald-700 border-emerald-200 hover:bg-emerald-100',
@@ -612,6 +630,7 @@ function ProblemOpportunityTanStackTable({
         ),
         cell: ({ row }) => {
           const record = row.original;
+          const toneClass = marketToneClasses[record.marketBand];
           return (
             <Tooltip>
               <TooltipTrigger asChild>
@@ -623,7 +642,7 @@ function ProblemOpportunityTanStackTable({
                   }}
                   className="cursor-pointer transition-transform hover:scale-105"
                 >
-                  <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[11px] font-bold hover:border-primary/50 hover:bg-muted/80">
+                  <Badge variant="outline" className={cn('rounded-md px-2.5 py-1 text-xs font-bold shadow-none transition-all hover:ring-2 hover:ring-primary/20', toneClass)}>
                     {marketLabels[record.marketBand]}
                   </Badge>
                 </button>
@@ -648,6 +667,7 @@ function ProblemOpportunityTanStackTable({
         ),
         cell: ({ row }) => {
           const record = row.original;
+          const toneClass = easeToneClasses[record.easeBand];
           return (
             <Tooltip>
               <TooltipTrigger asChild>
@@ -659,7 +679,7 @@ function ProblemOpportunityTanStackTable({
                   }}
                   className="cursor-pointer transition-transform hover:scale-105"
                 >
-                  <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[11px] font-bold hover:border-primary/50 hover:bg-muted/80">
+                  <Badge variant="outline" className={cn('rounded-md px-2.5 py-1 text-xs font-bold shadow-none transition-all hover:ring-2 hover:ring-primary/20', toneClass)}>
                     {easeLabels[record.easeBand]}
                   </Badge>
                 </button>
@@ -684,6 +704,7 @@ function ProblemOpportunityTanStackTable({
         ),
         cell: ({ row }) => {
           const record = row.original;
+          const toneClass = profitToneClasses[record.profitBand];
           return (
             <Tooltip>
               <TooltipTrigger asChild>
@@ -695,7 +716,7 @@ function ProblemOpportunityTanStackTable({
                   }}
                   className="cursor-pointer transition-transform hover:scale-105"
                 >
-                  <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[11px] font-bold hover:border-primary/50 hover:bg-muted/80">
+                  <Badge variant="outline" className={cn('rounded-md px-2.5 py-1 text-xs font-bold shadow-none transition-all hover:ring-2 hover:ring-primary/20', toneClass)}>
                     {profitLabels[record.profitBand]}
                   </Badge>
                 </button>
@@ -738,31 +759,6 @@ function ProblemOpportunityTanStackTable({
                 </button>
               </TooltipTrigger>
               <TooltipContent dir="rtl">الأولوية: {record.priorityScore}/10 (انقر لتصفية الأولوية)</TooltipContent>
-            </Tooltip>
-          );
-        },
-      },
-      {
-        accessorKey: 'updatedLabel',
-        id: 'updatedLabel',
-        header: 'آخر تحديث',
-        cell: ({ row }) => {
-          const label = row.original.updatedLabel;
-          return (
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <button
-                  type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onCellFilter?.('updatedLabel', label);
-                  }}
-                  className="text-xs text-muted-foreground font-medium hover:text-primary hover:underline cursor-pointer"
-                >
-                  {label}
-                </button>
-              </TooltipTrigger>
-              <TooltipContent dir="rtl">تحديث: {label} (انقر للتصفية)</TooltipContent>
             </Tooltip>
           );
         },
