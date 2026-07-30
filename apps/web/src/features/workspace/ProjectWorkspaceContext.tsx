@@ -60,9 +60,21 @@ export const ProjectWorkspaceProvider: React.FC<{
   planSections: PlanSection[];
 }> = ({ children, planSections }) => {
   const { user } = useAuth();
-  const [activeProjectId, setActiveProjectId] = useState<string | null>(null);
+  const [activeProjectId, setActiveProjectIdState] = useState<string | null>(() => {
+    // Restore active project from localStorage across page refreshes
+    return localStorage.getItem('khotta_active_project_id') ?? null;
+  });
   const [isSaving, setIsSaving] = useState(false);
   const [workspace, setWorkspace] = useState<ProjectWorkspace>(() => loadWorkspace(planSections));
+
+  const setActiveProjectId = (id: string | null) => {
+    setActiveProjectIdState(id);
+    if (id) {
+      localStorage.setItem('khotta_active_project_id', id);
+    } else {
+      localStorage.removeItem('khotta_active_project_id');
+    }
+  };
 
   useEffect(() => {
     setWorkspace((current) => {
@@ -83,15 +95,18 @@ export const ProjectWorkspaceProvider: React.FC<{
     const timeout = setTimeout(async () => {
       setIsSaving(true);
       try {
-        await supabase
+        const { error } = await supabase
           .from('business_canvas')
           .update({ 
             canvas_data: workspace,
             project_title: workspace.profile.name || 'مشروع بدون اسم'
           })
-          .eq('id', activeProjectId);
+          .eq('id', activeProjectId)
+          .eq('user_id', user.id); // Ensure user owns this project
+
+        if (error) throw error;
       } catch (err) {
-        console.error('Error saving to supabase', err);
+        console.error('Auto-save failed:', err);
       } finally {
         setIsSaving(false);
       }
@@ -107,6 +122,7 @@ export const ProjectWorkspaceProvider: React.FC<{
         .from('business_canvas')
         .select('canvas_data')
         .eq('id', id)
+        .eq('user_id', user.id) // Verify ownership
         .single();
         
       if (error) throw error;

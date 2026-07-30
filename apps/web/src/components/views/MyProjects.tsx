@@ -60,6 +60,7 @@ interface Project {
   lastEdited: string;
   marketCap: string;
   isFavorite: boolean;
+  isMockExample?: boolean;
 }
 
 const PROJECT_TYPE_META: Record<
@@ -130,64 +131,69 @@ const STATUS_OPTIONS: Array<{ id: StatusFilter; label: string }> = [
 
 const MOCK_PROJECTS: Project[] = [
   {
-    id: 'p1',
+    id: 'mock-p1',
     name: 'أكاديمية الذكاء الاصطناعي (مثال)',
     sector: 'EdTech',
     type: 'pro',
     status: 'ready',
     progress: { market: 100, product: 90, financial: 95 },
     aiScore: 94,
-    lastEdited: 'منذ ساعتين',
+    lastEdited: 'مثال',
     marketCap: '$1.4M',
-    isFavorite: true,
+    isFavorite: false,
+    isMockExample: true,
   },
   {
-    id: 'example-easy',
+    id: 'mock-easy',
     name: 'منصة الحصاد الذكي (مثال)',
     sector: 'AgriTech',
     type: 'easy',
     status: 'review',
     progress: { market: 85, product: 70, financial: 40 },
     aiScore: 78,
-    lastEdited: 'منذ 5 ساعات',
+    lastEdited: 'مثال',
     marketCap: '$800K',
     isFavorite: false,
+    isMockExample: true,
   },
   {
-    id: 'p3',
+    id: 'mock-p3',
     name: 'بوابة الدفع الإقليمية (مثال)',
     sector: 'FinTech',
     type: 'mit24',
     status: 'draft',
     progress: { market: 40, product: 20, financial: 10 },
     aiScore: 45,
-    lastEdited: 'أمس',
+    lastEdited: 'مثال',
     marketCap: '$5.2M',
     isFavorite: false,
+    isMockExample: true,
   },
   {
-    id: 'example-bmc',
+    id: 'mock-bmc',
     name: 'عقارات افتراضية (مثال)',
     sector: 'Property',
     type: 'bmc',
     status: 'ready',
     progress: { market: 100, product: 100, financial: 90 },
     aiScore: 91,
-    lastEdited: 'منذ يومين',
+    lastEdited: 'مثال',
     marketCap: '$12M',
-    isFavorite: true,
+    isFavorite: false,
+    isMockExample: true,
   },
   {
-    id: 'p5',
+    id: 'mock-p5',
     name: 'استوديو محتوى عربي (مثال)',
     sector: 'Media',
     type: 'easy',
     status: 'draft',
     progress: { market: 55, product: 45, financial: 25 },
     aiScore: 59,
-    lastEdited: 'قبل 3 أيام',
+    lastEdited: 'مثال',
     marketCap: '$420K',
     isFavorite: false,
+    isMockExample: true,
   }
 ];
 
@@ -207,7 +213,10 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
 
   React.useEffect(() => {
     const fetchProjects = async () => {
-      if (!user) return;
+      if (!user) {
+        setIsLoading(false);
+        return;
+      }
       setIsLoading(true);
       try {
         const { data, error } = await supabase
@@ -218,12 +227,12 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
 
         if (error) throw error;
 
-        if (data) {
+        if (data && data.length > 0) {
           const realProjects: Project[] = data.map((row) => ({
             id: row.id,
             name: row.project_title || 'مشروع بدون اسم',
             sector: row.canvas_data?.profile?.sectorLabel || 'غير محدد',
-            type: 'pro', // Defaulting for now
+            type: 'pro' as ProjectType,
             status: row.canvas_data?.currentStage === 'execution' ? 'ready' : 'review',
             progress: {
               market: row.canvas_data?.metrics?.validationScore || 0,
@@ -234,12 +243,17 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
             lastEdited: new Date(row.updated_at).toLocaleDateString('ar-SA'),
             marketCap: '-',
             isFavorite: false,
+            isMockExample: false,
           }));
-
+          // Real projects first, then mock examples appended
           setProjectsList([...realProjects, ...MOCK_PROJECTS]);
+        } else {
+          // No real projects: show only mock examples
+          setProjectsList(MOCK_PROJECTS);
         }
       } catch (err) {
         console.error('Error fetching projects:', err);
+        setProjectsList(MOCK_PROJECTS);
       } finally {
         setIsLoading(false);
       }
@@ -274,13 +288,28 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
     return filteredProjects.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
   }, [filteredProjects, currentPage]);
 
-  const handleDelete = (id: string, name: string) => {
-    if (window.confirm(`هل أنت متأكد من رغبتك في حذف مشروع "${name}"؟`)) {
+  const handleDelete = async (id: string, name: string) => {
+    // Mock examples cannot be deleted
+    const isMock = MOCK_PROJECTS.some((p) => p.id === id);
+    if (isMock) {
+      alert('لا يمكن حذف المشاريع التجريبية.');
+      return;
+    }
+    if (!window.confirm(`هل أنت متأكد من رغبتك في حذف مشروع "${name}"؟`)) return;
+    try {
+      const { error } = await supabase
+        .from('business_canvas')
+        .delete()
+        .eq('id', id)
+        .eq('user_id', user?.id ?? '');
+      if (error) throw error;
       setProjectsList((prev) => prev.filter((p) => p.id !== id));
-      // Adjust page if deleting the last item on the current page
       if (paginatedProjects.length === 1 && currentPage > 1) {
         setCurrentPage((prev) => prev - 1);
       }
+    } catch (err) {
+      console.error('Error deleting project:', err);
+      alert('حدث خطأ أثناء حذف المشروع.');
     }
   };
 
@@ -349,11 +378,14 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
             <div className="space-y-1 text-right">
               <CardTitle className="text-xl">مشاريعي</CardTitle>
               <CardDescription>
-                {filteredProjects.length} من {MOCK_PROJECTS.length} مشاريع
+                {projectsList.filter(p => !MOCK_PROJECTS.some(m => m.id === p.id)).length} مشروع حقيقي
+                {MOCK_PROJECTS.length > 0 && (
+                  <span className="text-muted-foreground/60"> + {MOCK_PROJECTS.length} مثال تجريبي</span>
+                )}
               </CardDescription>
             </div>
 
-            <Button size="lg" onClick={() => setActiveTab?.('new-plan')}>
+            <Button size="lg" onClick={() => setActiveTab?.('new-plan-pro')}>
               <Plus className="size-4" />
               مشروع جديد
             </Button>

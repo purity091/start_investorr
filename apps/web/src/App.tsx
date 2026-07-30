@@ -118,7 +118,11 @@ const AppShell: React.FC = () => {
 
   const isAdminView = ADMIN_TABS.includes(activeTab);
 
-  const PROTECTED_TABS = ['workspace', 'editor', 'my-plans', 'profile', 'settings', 'customer-dashboard', 'customer-projects', 'customer-account'];
+  const PROTECTED_TABS = [
+    'workspace', 'editor', 'my-plans', 'profile', 'settings',
+    'customer-dashboard', 'customer-projects', 'customer-account',
+    'market-discovery', 'problem-engine', 'strategic-dashboard',
+  ];
   const requiresAuth = PROTECTED_TABS.includes(activeTab);
 
   if (authLoading) {

@@ -57,21 +57,18 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   useEffect(() => {
-    // Get initial user (getUser is more secure than getSession)
-    supabase.auth.getUser().then(({ data: { user } }) => {
-      setUser(user ?? null);
-      // Also get session for session state
-      supabase.auth.getSession().then(({ data: { session } }) => {
-        setSession(session);
-        if (user) {
-          fetchProfile(user.id).then(() => setLoading(false));
-        } else {
-          setLoading(false);
-        }
-      });
+    // Single sequential init: get session (includes user) then fetch profile
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+      setUser(session?.user ?? null);
+      if (session?.user) {
+        fetchProfile(session.user.id).finally(() => setLoading(false));
+      } else {
+        setLoading(false);
+      }
     });
 
-    // Listen for auth changes
+    // Listen for auth state changes
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
@@ -93,16 +90,19 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       // 1. Call server API to clear HTTP cookies securely
       await fetch('/api/auth/logout', { method: 'POST' });
       
-      // 2. Clear client-side state
+      // 2. Clear client-side Supabase state
       await supabase.auth.signOut();
-      localStorage.clear();
+
+      // 3. Remove only auth-related keys — preserve workspace/project data
+      const authKeys = ['khotta_active_tab', 'platform_feedback_prompted'];
+      authKeys.forEach((key) => localStorage.removeItem(key));
       
-      // 3. Reset React state
+      // 4. Reset React state
       setSession(null);
       setUser(null);
       setProfile(null);
       
-      // 4. Force hard reload to landing page
+      // 5. Force hard reload to landing page
       window.location.href = '/';
     } catch (e) {
       console.error('Error signing out', e);
