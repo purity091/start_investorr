@@ -222,61 +222,61 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
         },
       },
       {
-        accessorFn: (row) => row.directory_snapshot?.monthly_revenue,
+        accessorFn: (row) => parseRevenue(row.directory_snapshot?.monthly_revenue),
         id: 'revenue',
         header: ({ column }) => {
           return (
             <Button
               variant="ghost"
               onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
-              className="-ml-4 h-8 data-[state=open]:bg-accent px-3 hover:bg-slate-100 font-bold text-xs"
+              className="-ml-2 h-8 data-[state=open]:bg-accent px-2 hover:bg-slate-100 font-bold text-xs"
             >
               الدخل الشهري
-              <ArrowUpDown className="ml-2 size-3.5 text-slate-400" />
+              <ArrowUpDown className="ml-1.5 size-3.5 text-slate-400" />
             </Button>
           );
         },
-        sortingFn: (rowA, rowB, columnId) => {
-          const a = parseRevenue(rowA.getValue(columnId) as string);
-          const b = parseRevenue(rowB.getValue(columnId) as string);
-          return a > b ? 1 : a < b ? -1 : 0;
-        },
+        sortingFn: 'basic',
         cell: ({ row }) => {
-          const val = row.getValue('revenue') as string;
-          const display = val ? val.split(' ')[0] : '-';
+          const rawNum = row.getValue('revenue') as number;
+          if (!rawNum || rawNum <= 0) {
+            return <span className="text-slate-400 text-xs font-medium">-</span>;
+          }
           return (
-            <div className="flex flex-col justify-center pr-3">
-              <span className="font-black text-[14px] text-slate-900 tracking-tight">{display}</span>
+            <div className="flex flex-col justify-center font-mono">
+              <span className="font-black text-xs text-slate-900 tracking-tight text-right dir-ltr">
+                ${rawNum.toLocaleString('en-US')}
+              </span>
             </div>
           );
         },
       },
       {
-        accessorFn: (row) => row.directory_snapshot?.monthly_traffic,
+        accessorFn: (row) => parseTraffic(row.directory_snapshot?.monthly_traffic),
         id: 'traffic',
         header: ({ column }) => {
           return (
             <Button
               variant="ghost"
               onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
-              className="-ml-4 h-8 data-[state=open]:bg-accent px-3 hover:bg-slate-100 font-bold text-xs"
+              className="-ml-2 h-8 data-[state=open]:bg-accent px-2 hover:bg-slate-100 font-bold text-xs"
             >
               الزيارات الشهرية
-              <ArrowUpDown className="ml-2 size-3.5 text-slate-400" />
+              <ArrowUpDown className="ml-1.5 size-3.5 text-slate-400" />
             </Button>
           );
         },
-        sortingFn: (rowA, rowB, columnId) => {
-          const a = parseTraffic(rowA.getValue(columnId) as string);
-          const b = parseTraffic(rowB.getValue(columnId) as string);
-          return a > b ? 1 : a < b ? -1 : 0;
-        },
+        sortingFn: 'basic',
         cell: ({ row }) => {
-          const val = row.getValue('traffic') as string;
-          const display = val ? val.split(' ')[0] : '-';
+          const rawNum = row.getValue('traffic') as number;
+          if (!rawNum || rawNum <= 0) {
+            return <span className="text-slate-400 text-xs font-medium">-</span>;
+          }
           return (
-            <div className="flex flex-col justify-center pr-3">
-              <span className="font-bold text-[14px] text-slate-700">{display}</span>
+            <div className="flex flex-col justify-center font-mono">
+              <span className="font-bold text-xs text-slate-700 tracking-tight text-right dir-ltr">
+                {rawNum.toLocaleString('en-US')}
+              </span>
             </div>
           );
         },
