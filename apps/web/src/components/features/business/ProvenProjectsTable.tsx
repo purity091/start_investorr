@@ -21,7 +21,7 @@ import {
 import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
-import { ArrowUpDown, ChevronDown, ChevronLeft, ChevronRight, ExternalLink, Search, X } from 'lucide-react';
+import { ArrowUpDown, Bookmark, BookmarkCheck, ChevronDown, ChevronLeft, ChevronRight, ExternalLink, Search, X } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -107,6 +107,13 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   const [globalFilter, setGlobalFilter] = useState('');
   const [rowSelection, setRowSelection] = useState({});
+  const [savedProjects, setSavedProjects] = useState<Record<string, boolean>>(() => {
+    try {
+      return JSON.parse(localStorage.getItem('saved_proven_projects') || '{}');
+    } catch {
+      return {};
+    }
+  });
 
   // Extract unique main categories for dropdown filter
   const uniqueCategories = useMemo(() => {
@@ -138,6 +145,49 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
 
   const columns: ColumnDef<any>[] = useMemo(
     () => [
+      {
+        id: 'save',
+        header: '',
+        size: 45,
+        cell: ({ row }) => {
+          const project = row.original;
+          const key = project.id || project.slug || project.name;
+          const isSaved = savedProjects[key];
+
+          const toggleSave = (e: React.MouseEvent) => {
+            e.stopPropagation();
+            const nextSaved = !isSaved;
+            setSavedProjects((prev) => {
+              const updated = { ...prev, [key]: nextSaved };
+              try {
+                localStorage.setItem('saved_proven_projects', JSON.stringify(updated));
+              } catch (err) {}
+              return updated;
+            });
+          };
+
+          return (
+            <Button
+              variant="ghost"
+              size="icon-sm"
+              onClick={toggleSave}
+              className={cn(
+                "size-8 rounded-lg transition-colors",
+                isSaved
+                  ? "bg-indigo-50 text-indigo-600 hover:bg-indigo-100"
+                  : "text-slate-400 hover:text-indigo-600 hover:bg-slate-100"
+              )}
+              title={isSaved ? "إلغاء حفظ المشروع" : "حفظ المشروع"}
+            >
+              {isSaved ? (
+                <BookmarkCheck className="size-3.5 text-indigo-600 fill-indigo-600/20" />
+              ) : (
+                <Bookmark className="size-3.5" />
+              )}
+            </Button>
+          );
+        },
+      },
       {
         accessorKey: 'name',
         header: 'المشروع',
@@ -379,7 +429,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
         },
       },
     ],
-    [onRowClick]
+    [onRowClick, savedProjects]
   );
 
   const table = useReactTable({

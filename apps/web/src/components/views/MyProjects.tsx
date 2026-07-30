@@ -1,6 +1,8 @@
 import React, { useMemo, useState } from 'react';
 import {
   Activity,
+  Bookmark,
+  BookmarkCheck,
   CheckCircle2,
   Clock,
   Pencil,
@@ -485,6 +487,7 @@ function ProjectsTable({
       <Table dir="rtl">
         <TableHeader className="bg-muted/30">
           <TableRow className="hover:bg-transparent">
+            <TableHead className="w-[45px] px-2 text-center"></TableHead>
             <TableHead className="w-[50px] px-4">
               <Checkbox className="translate-y-0.5" />
             </TableHead>
@@ -547,10 +550,35 @@ function ProjectTableRow({
   onShare: (id: string, name: string) => void;
   onOpen: () => void;
 }) {
+  const [isFav, setIsFav] = useState(project.isFavorite);
   const ProjectIcon = PROJECT_TYPE_META[project.type].icon;
 
   return (
     <TableRow className="group transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
+      <TableCell className="px-2 py-4 text-center">
+        <Button
+          type="button"
+          variant="ghost"
+          size="icon-sm"
+          onClick={(e) => {
+            e.stopPropagation();
+            setIsFav(!isFav);
+          }}
+          className={cn(
+            "size-7 rounded-lg transition-colors",
+            isFav
+              ? "bg-amber-50 text-amber-600 hover:bg-amber-100"
+              : "text-muted-foreground hover:text-amber-600 hover:bg-muted"
+          )}
+          title={isFav ? "إلغاء حفظ المشروع" : "حفظ المشروع"}
+        >
+          {isFav ? (
+            <BookmarkCheck className="size-3.5 text-amber-600 fill-amber-600/20" />
+          ) : (
+            <Bookmark className="size-3.5" />
+          )}
+        </Button>
+      </TableCell>
       <TableCell className="px-4 py-4">
         <Checkbox className="translate-y-0.5 transition-opacity group-hover:opacity-100 opacity-40 data-[state=checked]:opacity-100" />
       </TableCell>

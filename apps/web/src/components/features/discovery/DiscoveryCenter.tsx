@@ -502,6 +502,14 @@ function DiscoveryTanStackTable({
     pageSize: 10,
   });
 
+  const [savedSectors, setSavedSectors] = useState<Record<string, boolean>>(() => {
+    try {
+      return JSON.parse(localStorage.getItem('saved_discovery_sectors') || '{}');
+    } catch {
+      return {};
+    }
+  });
+
   const pagination = useMemo(
     () => ({ pageIndex, pageSize }),
     [pageIndex, pageSize]
@@ -513,6 +521,49 @@ function DiscoveryTanStackTable({
 
   const columns = useMemo<ColumnDef<SectorRecord>[]>(
     () => [
+      {
+        id: 'save',
+        header: '',
+        size: 45,
+        cell: ({ row }) => {
+          const item = row.original;
+          const isSaved = savedSectors[item.id];
+
+          const toggleSave = (e: React.MouseEvent) => {
+            e.stopPropagation();
+            const nextSaved = !isSaved;
+            setSavedSectors((prev) => {
+              const updated = { ...prev, [item.id]: nextSaved };
+              try {
+                localStorage.setItem('saved_discovery_sectors', JSON.stringify(updated));
+              } catch (err) {}
+              return updated;
+            });
+          };
+
+          return (
+            <Button
+              type="button"
+              variant="ghost"
+              size="icon-sm"
+              onClick={toggleSave}
+              className={cn(
+                "size-8 rounded-lg transition-colors",
+                isSaved
+                  ? "bg-primary/10 text-primary hover:bg-primary/20"
+                  : "text-muted-foreground hover:text-primary hover:bg-muted"
+              )}
+              title={isSaved ? "إلغاء حفظ القطاع" : "حفظ القطاع"}
+            >
+              {isSaved ? (
+                <LucideIcons.BookmarkCheck className="size-4 text-primary fill-primary/20" />
+              ) : (
+                <LucideIcons.Bookmark className="size-4" />
+              )}
+            </Button>
+          );
+        },
+      },
       {
         accessorKey: 'label',
         id: 'label',
@@ -633,7 +684,7 @@ function DiscoveryTanStackTable({
         ),
       },
     ],
-    [onOpenSector]
+    [onOpenSector, savedSectors]
   );
 
   const table = useReactTable({
