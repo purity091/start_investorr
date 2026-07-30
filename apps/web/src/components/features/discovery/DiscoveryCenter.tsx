@@ -69,7 +69,7 @@ const DISCOVERY_DATA: DiscoveryGroup[] = [
       { id: 'marketing-dashboard', label: 'الاستراتيجيات التسويقية', exists: true },
       { id: 'brands-leaders-dashboard', label: 'العلامات التجارية والقيادة السوقية', exists: true },
       { id: 'influencer-marketing-dashboard', label: 'التسويق عبر المؤثرين', exists: true, isNew: true },
-      { id: 'seo-content-marketing', label: 'تحسين الظهور والمحتوى', exists: true },
+      { id: 'seo-content-marketing', label: 'تحسين الظهور والمحتوى SEO', exists: true },
     ],
   },
   {
@@ -88,7 +88,7 @@ const DISCOVERY_DATA: DiscoveryGroup[] = [
       { id: 'farming-dashboard', label: 'الإنتاج الزراعي والمحاصيل', exists: true },
       { id: 'fisheries-aquaculture-dashboard', label: 'الثروة السمكية والاستزراع', exists: true },
       { id: 'forestry-dashboard', label: 'الغابات والأخشاب', exists: true },
-      { id: 'agritech-dashboard', label: 'التقنيات الزراعية', exists: true, isNew: true },
+      { id: 'agritech-dashboard', label: 'التقنيات الزراعية Agritech', exists: true, isNew: true },
       { id: 'seeds-crop-protection-dashboard', label: 'البذور وحماية المحاصيل', exists: true, isNew: true },
     ],
   },
@@ -106,7 +106,7 @@ const DISCOVERY_DATA: DiscoveryGroup[] = [
     },
     sectors: [
       { id: 'chemical-industry-dashboard', label: 'الصناعات الكيميائية', exists: true },
-      { id: 'fossil-fuels-dashboard', label: 'الوقود الأحفوري', exists: true },
+      { id: 'fossil-fuels-dashboard', label: 'الوقود الأحفوري والطاقة التقليدية', exists: true },
       { id: 'mining-dashboard', label: 'التعدين والمعادن الخام', exists: true },
       { id: 'petroleum-refinery-dashboard', label: 'التكرير والمشتقات النفطية', exists: true },
       { id: 'plastic-rubber-dashboard', label: 'البلاستيك والمطاط', exists: true },
@@ -127,12 +127,12 @@ const DISCOVERY_DATA: DiscoveryGroup[] = [
     sectors: [
       { id: 'building-construction-dashboard', label: 'البناء والإنشاءات العامة', exists: true },
       { id: 'heavy-construction-dashboard', label: 'المشاريع الثقيلة والبنية التحتية', exists: true },
-      { id: 'smart-construction-bim-dashboard', label: 'البناء الذكي وBIM', exists: true },
+      { id: 'smart-construction-bim-dashboard', label: 'البناء الذكي ونمذجة BIM', exists: true },
       { id: 'modular-prefab-construction-dashboard', label: 'البناء المعياري والمسبق الصنع', exists: true, isNew: true },
     ],
   },
   {
-    title: 'السلع الاستهلاكية',
+    title: 'السلع الاستهلاكية FMCG',
     iconName: 'ShoppingBag',
     description: 'لفحص فرص المنتجات اليومية، سلوك الشراء، والتوسع في أسواق الاستهلاك السريع.',
     gatekeepers: ['Unilever', 'P&G', 'Nestle', 'PepsiCo'],
@@ -164,18 +164,38 @@ const DISCOVERY_DATA: DiscoveryGroup[] = [
       itemActive: 'border-cyan-400 bg-cyan-50',
     },
     sectors: [
-      { id: 'b2b-ecommerce-dashboard', label: 'التجارة الإلكترونية بين الشركات', exists: true },
-      { id: 'b2c-ecommerce-dashboard', label: 'التجارة الإلكترونية للمستهلك', exists: true },
-      { id: 'c2c-ecommerce-dashboard', label: 'التجارة بين الأفراد', exists: true },
+      { id: 'b2b-ecommerce-dashboard', label: 'التجارة الإلكترونية بين الشركات (B2B)', exists: true },
+      { id: 'b2c-ecommerce-dashboard', label: 'التجارة الإلكترونية للمستهلك (B2C)', exists: true },
+      { id: 'c2c-ecommerce-dashboard', label: 'التجارة بين الأفراد (C2C)', exists: true },
       { id: 'digital-shopping-behaviour-dashboard', label: 'سلوك الشراء الرقمي', exists: true },
-      { id: 'ecommerce-key-figures-dashboard', label: 'مؤشرات التجارة الإلكترونية', exists: true },
+      { id: 'paid-content-dashboard', label: 'المحتوى والخدمات الرقمية المدفوعة', exists: true },
     ],
   },
   {
-    title: 'المال والتأمين',
+    title: 'الاقتصاد والسياسة العامة',
     iconName: 'Landmark',
+    description: 'دراسة مؤشرات التنمية، التجارة العالمية، والاستراتيجيات الحكومية والجيوسياسية.',
+    gatekeepers: ['World Bank', 'IMF', 'OECD', 'WTO'],
+    tone: {
+      card: 'border-purple-200 bg-purple-50/75',
+      icon: 'border-purple-200 bg-white text-purple-700',
+      badge: 'border-purple-200 bg-purple-100 text-purple-900',
+      item: 'border-purple-200 bg-white hover:border-purple-300',
+      itemActive: 'border-purple-400 bg-purple-50',
+    },
+    sectors: [
+      { id: 'economy-dashboard', label: 'الاقتصاد الكلي والتنمية', exists: true },
+      { id: 'international-trade-dashboard', label: 'التجارة الدولية والتبادل', exists: true },
+      { id: 'politics-dashboard', label: 'السياسات الحكومية والحوكمة', exists: true },
+      { id: 'public-policy-economic-strategy-dashboard', label: 'الاستراتيجيات الاقتصادية والسياسة العامة', exists: true },
+      { id: 'geopolitical-risk-global-trade-analysis-dashboard', label: 'المخاطر الجيوسياسية والتجارة العالمية', exists: true, isNew: true },
+    ],
+  },
+  {
+    title: 'المال والتأمين والـ Fintech',
+    iconName: 'Coins',
     description: 'لبناء قرارات في الخدمات المالية، التأمين، والمدفوعات والاستثمار المؤسسي.',
-    gatekeepers: ['Visa', 'Mastercard', 'BlackRock', 'AIG'],
+    gatekeepers: ['Visa', 'Mastercard', 'BlackRock', 'Stripe'],
     tone: {
       card: 'border-lime-200 bg-lime-50/75',
       icon: 'border-lime-200 bg-white text-lime-700',
@@ -184,14 +204,15 @@ const DISCOVERY_DATA: DiscoveryGroup[] = [
       itemActive: 'border-lime-400 bg-lime-50',
     },
     sectors: [
-      { id: 'financial-institutions-dashboard', label: 'المؤسسات المالية', exists: true },
-      { id: 'financial-services-dashboard', label: 'الخدمات المالية', exists: true },
+      { id: 'financial-institutions-dashboard', label: 'المؤسسات المالية والبنوك', exists: true },
+      { id: 'financial-services-dashboard', label: 'الخدمات المالية المتخصصة', exists: true },
       { id: 'investments-dashboard', label: 'الاستثمار وإدارة الأصول', exists: true },
-      { id: 'insurance-dashboard', label: 'التأمين', exists: true },
+      { id: 'insurance-dashboard', label: 'التأمين والخدمات الإكتوارية', exists: true },
+      { id: 'digital-payments-dashboard', label: 'المدفوعات الرقمية Fintech', exists: true, isNew: true },
     ],
   },
   {
-    title: 'الصحة والأدوية',
+    title: 'الصحة والأدوية والتقنيات الطبية',
     iconName: 'HeartPulse',
     description: 'لمراجعة فرص الرعاية، الحلول الصحية، والخدمات الطبية ذات القيمة العالية.',
     gatekeepers: ['Pfizer', 'Roche', 'Cleveland Clinic', 'UnitedHealth'],
@@ -205,9 +226,9 @@ const DISCOVERY_DATA: DiscoveryGroup[] = [
     sectors: [
       { id: 'care-support-dashboard', label: 'الرعاية والدعم الصحي', exists: true },
       { id: 'hospitals-health-professionals-dashboard', label: 'المستشفيات والمهنيون الصحيون', exists: true },
-      { id: 'health-system-dashboard', label: 'أنظمة الصحة', exists: true },
-      { id: 'pharma-market-dashboard', label: 'سوق الأدوية', exists: true },
-      { id: 'state-of-health-dashboard', label: 'مؤشرات الحالة الصحية', exists: true },
+      { id: 'health-system-dashboard', label: 'أنظمة وإدارة الصحة', exists: true },
+      { id: 'pharma-market-dashboard', label: 'سوق الأدوية والتصنيع الدوائي', exists: true },
+      { id: 'digital-health-dashboard', label: 'الصحة الرقمية والطب عن بعد', exists: true, isNew: true },
     ],
   },
   {
@@ -223,11 +244,11 @@ const DISCOVERY_DATA: DiscoveryGroup[] = [
       itemActive: 'border-indigo-400 bg-indigo-50',
     },
     sectors: [
-      { id: 'software-dashboard', label: 'البرمجيات', exists: true },
-      { id: 'it-services-dashboard', label: 'خدمات تقنية المعلومات', exists: true },
-      { id: 'telecommunications-dashboard', label: 'الاتصالات', exists: true },
-      { id: 'artificial-intelligence-dashboard', label: 'الذكاء الاصطناعي', exists: true, isNew: true },
-      { id: 'cloud-services-dashboard', label: 'الخدمات السحابية', exists: true, isNew: true },
+      { id: 'software-dashboard', label: 'البرمجيات وحلول السحاب SaaS', exists: true },
+      { id: 'it-services-dashboard', label: 'خدمات تقنية المعلومات والاستشارات', exists: true },
+      { id: 'telecommunications-dashboard', label: 'الاتصالات والبنية التحتية', exists: true },
+      { id: 'artificial-intelligence-dashboard', label: 'منصات الذكاء الاصطناعي AI', exists: true, isNew: true },
+      { id: 'cloud-services-dashboard', label: 'الخدمات والحوسبة السحابية', exists: true, isNew: true },
     ],
   },
   {
@@ -243,11 +264,11 @@ const DISCOVERY_DATA: DiscoveryGroup[] = [
       itemActive: 'border-orange-400 bg-orange-50',
     },
     sectors: [
-      { id: 'logistics-dashboard', label: 'الخدمات اللوجستية', exists: true },
-      { id: 'public-transport-dashboard', label: 'النقل العام', exists: true },
+      { id: 'logistics-dashboard', label: 'الخدمات اللوجستية والتخزين', exists: true },
+      { id: 'public-transport-dashboard', label: 'النقل العام والتنقل', exists: true },
       { id: 'rail-transport-dashboard', label: 'النقل بالسكك الحديدية', exists: true },
       { id: 'vehicles-road-traffic-dashboard', label: 'المركبات وحركة الطرق', exists: true },
-      { id: 'autonomous-vehicles-dashboard', label: 'المركبات الذاتية', exists: true, isNew: true },
+      { id: 'autonomous-vehicles-dashboard', label: 'المركبات الذاتية القيادة', exists: true, isNew: true },
     ],
   },
   {
@@ -263,15 +284,15 @@ const DISCOVERY_DATA: DiscoveryGroup[] = [
       itemActive: 'border-fuchsia-400 bg-fuchsia-50',
     },
     sectors: [
-      { id: 'accommodation-dashboard', label: 'الإقامة والفنادق', exists: true },
-      { id: 'business-travel-dashboard', label: 'سفر الأعمال', exists: true },
-      { id: 'food-drink-services-dashboard', label: 'خدمات الطعام والشراب', exists: true },
-      { id: 'leisure-travel-dashboard', label: 'السفر الترفيهي', exists: true },
-      { id: 'travel-technology-dashboard', label: 'تقنيات السفر', exists: true, isNew: true },
+      { id: 'accommodation-dashboard', label: 'الإقامة والفنادق والمنتجعات', exists: true },
+      { id: 'business-travel-dashboard', label: 'سفر الأعمال وتنظيم المؤتمرات', exists: true },
+      { id: 'food-drink-services-dashboard', label: 'المطاعم والضيافة', exists: true },
+      { id: 'leisure-travel-dashboard', label: 'السفر الترفيهي والسياحة', exists: true },
+      { id: 'travel-technology-dashboard', label: 'تقنيات وحلول السفر الذكي', exists: true, isNew: true },
     ],
   },
   {
-    title: 'الطاقة والبيئة',
+    title: 'الطاقة والبيئة والتقنيات الخضراء',
     iconName: 'Leaf',
     description: 'لتحليل مسارات الطاقة، المناخ، الموارد المستدامة، والحلول البيئية الجديدة.',
     gatekeepers: ['Siemens Energy', 'Shell', 'Tesla Energy', 'Veolia'],
@@ -283,11 +304,148 @@ const DISCOVERY_DATA: DiscoveryGroup[] = [
       itemActive: 'border-teal-400 bg-teal-50',
     },
     sectors: [
-      { id: 'energy-dashboard', label: 'الطاقة', exists: true },
-      { id: 'climate-dashboard', label: 'المناخ', exists: true },
-      { id: 'water-dashboard', label: 'المياه', exists: true },
-      { id: 'waste-dashboard', label: 'إدارة النفايات', exists: true },
+      { id: 'energy-dashboard', label: 'إنتاج وتوزيع الطاقة', exists: true },
+      { id: 'climate-dashboard', label: 'حلول المناخ والانبعاثات', exists: true },
+      { id: 'water-dashboard', label: 'تقنيات وإدارة المياه', exists: true },
+      { id: 'waste-dashboard', label: 'إدارة وتدوير النفايات', exists: true },
       { id: 'renewable-energy-infrastructure-dashboard', label: 'البنية التحتية للطاقة المتجددة', exists: true, isNew: true },
+    ],
+  },
+  {
+    title: 'الإعلام والنشر الرقمي والترفيه',
+    iconName: 'Tv',
+    description: 'مشاريع الصوتيات، البث الرقمي، الألعاب الإلكترونية والنشر الرقمي الحديث.',
+    gatekeepers: ['Spotify', 'Netflix', 'Sony Interactive', 'Tencent'],
+    tone: {
+      card: 'border-pink-200 bg-pink-50/75',
+      icon: 'border-pink-200 bg-white text-pink-700',
+      badge: 'border-pink-200 bg-pink-100 text-pink-900',
+      item: 'border-pink-200 bg-white hover:border-pink-300',
+      itemActive: 'border-pink-400 bg-pink-50',
+    },
+    sectors: [
+      { id: 'audio-dashboard', label: 'الصوتيات والمحتوى الصوتي', exists: true },
+      { id: 'books-publishing-dashboard', label: 'النشر والكتب الرقمية', exists: true },
+      { id: 'news-dashboard', label: 'الصحافة والإعلام الإخباري', exists: true },
+      { id: 'tv-video-film-dashboard', label: 'التلفزيون والسينما والإنتاج', exists: true },
+      { id: 'video-gaming-esports-dashboard', label: 'الألعاب والرياضات الإلكترونية', exists: true, isNew: true },
+    ],
+  },
+  {
+    title: 'المعادن والصناعات الإلكترونية',
+    iconName: 'CircuitBoard',
+    description: 'صناعة المعدات، أشباه الموصلات، التصنيع المتقدم، والطيران.',
+    gatekeepers: ['TSMC', 'Intel', 'Boeing', 'ASML'],
+    tone: {
+      card: 'border-slate-200 bg-slate-100/80',
+      icon: 'border-slate-300 bg-white text-slate-800',
+      badge: 'border-slate-300 bg-slate-200 text-slate-900',
+      item: 'border-slate-300 bg-white hover:border-slate-400',
+      itemActive: 'border-slate-500 bg-slate-100',
+    },
+    sectors: [
+      { id: 'aerospace-defense-dashboard', label: 'الطيران والدفاع', exists: true },
+      { id: 'electronics-dashboard', label: 'الإلكترونيات والمكونات', exists: true },
+      { id: 'industrial-machinery-dashboard', label: 'الآلات والمعدات الصناعية', exists: true },
+      { id: 'metals-dashboard', label: 'صناعات المعادن والصلب', exists: true },
+      { id: 'semiconductors-dashboard', label: 'أشباه الموصلات والرقائق', exists: true, isNew: true },
+    ],
+  },
+  {
+    title: 'العقارات والتطوير العمراني',
+    iconName: 'Building',
+    description: 'الاستثمار العقاري المباشر، التمويل، وإدارة الأملاك والتقنيات العقارية PropTech.',
+    gatekeepers: ['CBRE', 'JLL', 'Compass', 'Zillow'],
+    tone: {
+      card: 'border-blue-200 bg-blue-50/75',
+      icon: 'border-blue-200 bg-white text-blue-700',
+      badge: 'border-blue-200 bg-blue-100 text-blue-900',
+      item: 'border-blue-200 bg-white hover:border-blue-300',
+      itemActive: 'border-blue-400 bg-blue-50',
+    },
+    sectors: [
+      { id: 'commercial-real-estate-dashboard', label: 'العقارات التجارية والمكاتب', exists: true },
+      { id: 'industrial-real-estate-dashboard', label: 'العقارات الصناعية والمستودعات', exists: true },
+      { id: 'mortgages-financing-dashboard', label: 'التمويل العقاري والرهن', exists: true },
+      { id: 'property-services-dashboard', label: 'إدارة الأملاك والخدمات العقارية', exists: true },
+      { id: 'residential-real-estate-dashboard', label: 'العقارات السكنية والمشاريع', exists: true },
+    ],
+  },
+  {
+    title: 'التجزئة وسلاسل التوريد',
+    iconName: 'Store',
+    description: 'تحليل سلوك التجزئة، إدارة المخزون، وشبكات التوزيع والتوريد.',
+    gatekeepers: ['Walmart', 'Costco', 'Target', 'IKEA'],
+    tone: {
+      card: 'border-yellow-200 bg-yellow-50/75',
+      icon: 'border-yellow-200 bg-white text-yellow-700',
+      badge: 'border-yellow-200 bg-yellow-100 text-yellow-900',
+      item: 'border-yellow-200 bg-white hover:border-yellow-300',
+      itemActive: 'border-yellow-400 bg-yellow-50',
+    },
+    sectors: [
+      { id: 'diy-retail-dashboard', label: 'تجزئة الأدوات والحلول المنزلية', exists: true },
+      { id: 'fashion-accessories-dashboard', label: 'تجزئة الموضة والإكسسوارات', exists: true },
+      { id: 'food-beverage-retail-dashboard', label: 'تجزئة الأغذية والمشروبات', exists: true },
+      { id: 'furniture-retail-dashboard', label: 'تجزئة الأثاث والديكور', exists: true },
+      { id: 'supply-chain-dashboard', label: 'سلاسل التوريد والتوزيع', exists: true, isNew: true },
+    ],
+  },
+  {
+    title: 'خدمات الأعمال وتعهيد العمليات',
+    iconName: 'Briefcase',
+    description: 'استشارات الأعمال، الكفاءات البشرية، ومراكز التعهيد BPO.',
+    gatekeepers: ['McKinsey', 'Accenture', 'Deloitte', 'Teleperformance'],
+    tone: {
+      card: 'border-stone-200 bg-stone-100/80',
+      icon: 'border-stone-300 bg-white text-stone-800',
+      badge: 'border-stone-300 bg-stone-200 text-stone-900',
+      item: 'border-stone-300 bg-white hover:border-stone-400',
+      itemActive: 'border-stone-500 bg-stone-100',
+    },
+    sectors: [
+      { id: 'business-services-dashboard', label: 'الخدمات الاستشارية والتنفيذية', exists: true },
+      { id: 'skilled-labor-dashboard', label: 'إدارة الكفاءات والعمالة الماهرة', exists: true },
+      { id: 'digital-transformation-consulting-dashboard', label: 'استشارات التحول الرقمي', exists: true, isNew: true },
+      { id: 'bpo-dashboard', label: 'تعهيد العمليات BPO', exists: true, isNew: true },
+    ],
+  },
+  {
+    title: 'المجتمع والتحليل الديموغرافي',
+    iconName: 'Users2',
+    description: 'التعليم، أنظمة القانون، والتحليلات السكانية والتنمية الحضرية.',
+    gatekeepers: ['UNESCO', 'Pearson', 'Coursera'],
+    tone: {
+      card: 'border-emerald-200 bg-emerald-50/70',
+      icon: 'border-emerald-200 bg-white text-emerald-700',
+      badge: 'border-emerald-200 bg-emerald-100 text-emerald-900',
+      item: 'border-emerald-200 bg-white hover:border-emerald-300',
+      itemActive: 'border-emerald-400 bg-emerald-50',
+    },
+    sectors: [
+      { id: 'demographics-dashboard', label: 'التحليلات الديموغرافية ومؤشرات السكان', exists: true },
+      { id: 'education-science-dashboard', label: 'التعليم والعلوم والابتكار', exists: true },
+      { id: 'crime-law-enforcement-dashboard', label: 'الأمان وأنظمة إنفاذ القانون', exists: true },
+      { id: 'urban-development-smart-cities-policy-dashboard', label: 'التنمية الحضرية والسياسات Smart Cities', exists: true, isNew: true },
+    ],
+  },
+  {
+    title: 'الرياضة والأنشطة الترفيهية',
+    iconName: 'Trophy',
+    description: 'الفعاليات الرياضية، الاستجمام، الثقافة، والرياضات الرقمية.',
+    gatekeepers: ['Nike', 'Adidas', 'Formula 1', 'Peloton'],
+    tone: {
+      card: 'border-red-200 bg-red-50/75',
+      icon: 'border-red-200 bg-white text-red-700',
+      badge: 'border-red-200 bg-red-100 text-red-900',
+      item: 'border-red-200 bg-white hover:border-red-300',
+      itemActive: 'border-red-400 bg-red-50',
+    },
+    sectors: [
+      { id: 'art-culture-dashboard', label: 'الفنون والثقافة والفعاليات', exists: true },
+      { id: 'sports-fitness-dashboard', label: 'الرياضة واللياقة البدنية', exists: true },
+      { id: 'wellness-spas-dashboard', label: 'الاستجمام والصحة النفسية والبدنية', exists: true },
+      { id: 'esports-gaming-industry-dashboard', label: 'صناعة الألعاب والرياضات الإلكترونية', exists: true, isNew: true },
     ],
   },
 ];
@@ -393,7 +551,6 @@ export function DiscoveryCenter({
 
   return (
     <div
-      
       className="min-h-screen bg-background pb-16 font-['IBM_Plex_Sans_Arabic'] text-right text-foreground"
     >
       <div className="mx-auto flex w-full max-w-[1700px] flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 xl:px-10">
@@ -434,198 +591,134 @@ export function DiscoveryCenter({
           </div>
         </div>
 
-            <div className="flex w-full flex-col gap-3 rounded-xl border bg-muted/20 p-2 sm:flex-row sm:items-center sm:justify-between">
-              <div className="flex flex-wrap items-center gap-2 overflow-x-auto pb-1 sm:pb-0">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="outline" size="sm" className="h-9 gap-2 rounded-lg bg-background shadow-sm">
-                      <LucideIcons.Filter className="size-4" />
-                      تصفية: {filterType === 'all' ? 'الكل' : 'القطاعات الجديدة'}
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="w-48 text-right" >
-                    <DropdownMenuLabel>حالة القطاع</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuCheckboxItem 
-                      checked={filterType === 'all'} 
-                      onCheckedChange={() => setFilterType('all')}
-                    >
-                      الكل
-                    </DropdownMenuCheckboxItem>
-                    <DropdownMenuCheckboxItem 
-                      checked={filterType === 'new'} 
-                      onCheckedChange={() => setFilterType('new')}
-                    >
-                      القطاعات الجديدة فقط
-                    </DropdownMenuCheckboxItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-
-                <div className="mx-1 h-5 w-[1px] bg-border" />
-                
-                <Badge variant="outline" className="h-9 rounded-lg bg-background px-3 font-medium text-sm">
-                  النتائج: {matchingSectors}
-                </Badge>
-
-                <HoverCard openDelay={100}>
-                  <HoverCardTrigger asChild>
-                    <Button
-                      type="button"
-                      variant="ghost"
-                      size="icon-sm"
-                      className="h-9 w-9 shrink-0 rounded-lg text-muted-foreground"
-                    >
-                      <LucideIcons.CircleAlert className="size-4" />
-                    </Button>
-                  </HoverCardTrigger>
-                  <HoverCardContent align="start" className="w-[360px] space-y-3 text-right" >
-                    <div className="space-y-1">
-                      <div className="text-sm font-semibold text-foreground">كيف تستخدم الرادار؟</div>
-                      <p className="text-xs leading-6 text-muted-foreground">
-                        ابدأ من المجموعة الأقرب لفكرة المشروع، ثم ادخل إلى القطاع المناسب لمراجعة السوق وبناء تصور أعمق للفرصة.
-                      </p>
-                    </div>
-                    <div className="space-y-2 text-xs leading-6 text-muted-foreground">
-                      <div className="rounded-lg border bg-muted/30 px-3 py-2">
-                        اختر مجموعة رئيسية تمثل نوع السوق الذي تنوي تحليله قبل الانتقال إلى القطاعات الفرعية.
-                      </div>
-                      <div className="rounded-lg border bg-muted/30 px-3 py-2">
-                        استخدم البحث للوصول السريع عندما يكون لديك اتجاه محدد أو صناعة واضحة.
-                      </div>
-                      <div className="rounded-lg border bg-muted/30 px-3 py-2">
-                        انتقل إلى القطاع المطلوب لبدء القراءة أو استكمال بقية رحلة المشروع داخل المنصة.
-                      </div>
-                    </div>
-                  </HoverCardContent>
-                </HoverCard>
-              </div>
-
-              <div className="flex shrink-0 items-center gap-2">
-                {searchTerm && !isSearchOpen && (
-                  <Badge variant="secondary" className="h-9 gap-1.5 pr-2.5 text-sm">
-                    {searchTerm}
-                    <Button
-                      type="button"
-                      variant="ghost"
-                      size="icon-sm"
-                      className="h-5 w-5 rounded-full p-0 hover:bg-background/80"
-                      onClick={() => setSearchTerm('')}
-                    >
-                      <LucideIcons.X className="size-3" />
-                    </Button>
-                  </Badge>
-                )}
-                
-                <div 
-                  className={cn(
-                    "flex items-center overflow-hidden transition-all duration-300 ease-in-out",
-                    isSearchOpen ? "w-full opacity-100 sm:w-64" : "w-0 opacity-0"
-                  )}
+        <div className="flex w-full flex-col gap-3 rounded-xl border bg-muted/20 p-2 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-wrap items-center gap-2 overflow-x-auto pb-1 sm:pb-0">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="sm" className="h-9 gap-2 rounded-lg bg-background shadow-sm">
+                  <LucideIcons.Filter className="size-4" />
+                  تصفية: {filterType === 'all' ? 'الكل' : 'القطاعات الجديدة'}
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-48 text-right" >
+                <DropdownMenuLabel>حالة القطاع</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuCheckboxItem 
+                  checked={filterType === 'all'} 
+                  onCheckedChange={() => setFilterType('all')}
                 >
-                  <div className="relative w-full">
-                    <LucideIcons.Search className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
-                    <Input
-                      type="text"
-                      value={searchTerm}
-                      onChange={event => setSearchTerm(event.target.value)}
-                      placeholder="ابحث عن قطاع أو سوق..."
-                      className="h-9 w-full bg-background pr-9 text-sm focus-visible:ring-1"
-                    />
-                    <Button
-                      type="button"
-                      variant="ghost"
-                      size="icon-sm"
-                      className="absolute left-1 top-1/2 h-7 w-7 -translate-y-1/2 rounded-md text-muted-foreground hover:text-foreground"
-                      onClick={() => {
-                        setIsSearchOpen(false);
-                        if (!searchTerm) setSearchTerm('');
-                      }}
-                    >
-                      <LucideIcons.X className="size-3.5" />
-                    </Button>
+                  الكل
+                </DropdownMenuCheckboxItem>
+                <DropdownMenuCheckboxItem 
+                  checked={filterType === 'new'} 
+                  onCheckedChange={() => setFilterType('new')}
+                >
+                  القطاعات الجديدة فقط
+                </DropdownMenuCheckboxItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <div className="mx-1 h-5 w-[1px] bg-border" />
+            
+            <Badge variant="outline" className="h-9 rounded-lg bg-background px-3 font-medium text-sm">
+              النتائج: {matchingSectors}
+            </Badge>
+
+            <HoverCard openDelay={100}>
+              <HoverCardTrigger asChild>
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="icon-sm"
+                  className="h-9 w-9 shrink-0 rounded-lg text-muted-foreground"
+                >
+                  <LucideIcons.CircleAlert className="size-4" />
+                </Button>
+              </HoverCardTrigger>
+              <HoverCardContent align="start" className="w-[360px] space-y-3 text-right" >
+                <div className="space-y-1">
+                  <div className="text-sm font-semibold text-foreground">كيف تستخدم الرادار؟</div>
+                  <p className="text-xs leading-6 text-muted-foreground">
+                    ابدأ من المجموعة الأقرب لفكرة المشروع، ثم ادخل إلى القطاع المناسب لمراجعة السوق وبناء تصور أعمق للفرصة.
+                  </p>
+                </div>
+                <div className="space-y-2 text-xs leading-6 text-muted-foreground">
+                  <div className="rounded-lg border bg-muted/30 px-3 py-2">
+                    اختر مجموعة رئيسية تمثل نوع السوق الذي تنوي تحليله قبل الانتقال إلى القطاعات الفرعية.
+                  </div>
+                  <div className="rounded-lg border bg-muted/30 px-3 py-2">
+                    استخدم البحث للوصول السريع عندما يكون لديك اتجاه محدد أو صناعة واضحة.
+                  </div>
+                  <div className="rounded-lg border bg-muted/30 px-3 py-2">
+                    انتقل إلى القطاع المطلوب لبدء القراءة أو استكمال بقية رحلة المشروع داخل المنصة.
                   </div>
                 </div>
+              </HoverCardContent>
+            </HoverCard>
+          </div>
 
-                {!isSearchOpen && (
-                  <Button
-                    type="button"
-                    variant="outline"
-                    size="icon-sm"
-                    onClick={() => setIsSearchOpen(true)}
-                    className="h-9 w-9 shrink-0 bg-background rounded-lg shadow-sm"
-                  >
-                    <LucideIcons.Search className="size-4" />
-                  </Button>
-                )}
+          <div className="flex shrink-0 items-center gap-2">
+            {searchTerm && !isSearchOpen && (
+              <Badge variant="secondary" className="h-9 gap-1.5 pr-2.5 text-sm">
+                {searchTerm}
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="icon-sm"
+                  className="h-5 w-5 rounded-full p-0 hover:bg-background/80"
+                  onClick={() => setSearchTerm('')}
+                >
+                  <LucideIcons.X className="size-3" />
+                </Button>
+              </Badge>
+            )}
+            
+            <div 
+              className={cn(
+                "flex items-center overflow-hidden transition-all duration-300 ease-in-out",
+                isSearchOpen ? "w-full opacity-100 sm:w-64" : "w-0 opacity-0"
+              )}
+            >
+              <div className="relative w-full">
+                <LucideIcons.Search className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+                <Input
+                  type="text"
+                  value={searchTerm}
+                  onChange={event => setSearchTerm(event.target.value)}
+                  placeholder="ابحث عن قطاع أو سوق..."
+                  className="h-9 w-full bg-background pr-9 text-sm focus-visible:ring-1"
+                />
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="icon-sm"
+                  className="absolute left-1 top-1/2 h-7 w-7 -translate-y-1/2 rounded-md text-muted-foreground hover:text-foreground"
+                  onClick={() => {
+                    setIsSearchOpen(false);
+                    if (!searchTerm) setSearchTerm('');
+                  }}
+                >
+                  <LucideIcons.X className="size-3.5" />
+                </Button>
               </div>
             </div>
+
+            {!isSearchOpen && (
+              <Button
+                type="button"
+                variant="outline"
+                size="icon-sm"
+                onClick={() => setIsSearchOpen(true)}
+                className="h-9 w-9 shrink-0 bg-background rounded-lg shadow-sm"
+              >
+                <LucideIcons.Search className="size-4" />
+              </Button>
+            )}
+          </div>
+        </div>
 
         <div className="grid gap-6">
           <div className="space-y-6">
-            <div className="hidden items-center justify-between gap-3 rounded-xl border border-border bg-card px-4 py-3 shadow-sm">
-              <div className="min-w-0 text-right">
-                <div className="text-sm font-semibold text-foreground">شرح استخدام الرادار</div>
-                <div className="text-xs text-muted-foreground">اضغط على علامة التعجب لعرض خطوات الاستخدام.</div>
-              </div>
-              <HoverCard openDelay={100}>
-                <HoverCardTrigger asChild>
-                  <Button
-                    type="button"
-                    variant="outline"
-                    size="icon-sm"
-                    className="shrink-0 rounded-full"
-                    aria-label="كيف تستخدم الرادار؟"
-                  >
-                    <LucideIcons.CircleAlert className="size-4" />
-                  </Button>
-                </HoverCardTrigger>
-                <HoverCardContent align="start" className="w-[360px] space-y-3 text-right" >
-                  <div className="space-y-1">
-                    <div className="text-sm font-semibold text-foreground">كيف تستخدم الرادار؟</div>
-                    <p className="text-xs leading-6 text-muted-foreground">
-                      ابدأ من المجموعة الأقرب لفكرة المشروع، ثم ادخل إلى القطاع المناسب لمراجعة السوق وبناء تصور أعمق للفرصة.
-                    </p>
-                  </div>
-                  <div className="space-y-2 text-xs leading-6 text-muted-foreground">
-                    <div className="rounded-lg border bg-muted/30 px-3 py-2">
-                      اختر مجموعة رئيسية تمثل نوع السوق الذي تنوي تحليله قبل الانتقال إلى القطاعات الفرعية.
-                    </div>
-                    <div className="rounded-lg border bg-muted/30 px-3 py-2">
-                      استخدم البحث للوصول السريع عندما يكون لديك اتجاه محدد أو صناعة واضحة.
-                    </div>
-                    <div className="rounded-lg border bg-muted/30 px-3 py-2">
-                      انتقل إلى القطاع المطلوب لبدء القراءة أو استكمال بقية رحلة المشروع داخل المنصة.
-                    </div>
-                  </div>
-                </HoverCardContent>
-              </HoverCard>
-            </div>
-            <Card className="hidden border-border shadow-sm">
-              <CardContent className="flex flex-col gap-4 p-4 sm:p-5 lg:flex-row lg:items-center lg:justify-between">
-                <div className="relative w-full lg:max-w-xl">
-                  <LucideIcons.Search className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
-                  <Input
-                    type="text"
-                    value={searchTerm}
-                    onChange={event => setSearchTerm(event.target.value)}
-                    placeholder="ابحث عن قطاع، سوق، أو فرصة استثمارية"
-                    className="pr-10 text-right"
-                  />
-                </div>
-
-                <div className="flex flex-wrap items-center gap-2">
-                  <Badge variant="outline" className="rounded-md px-3 py-1 font-medium">
-                    النتائج الحالية: {matchingSectors}
-                  </Badge>
-                  {searchTerm ? (
-                    <Button type="button" variant="outline" size="sm" onClick={() => setSearchTerm('')}>
-                      مسح البحث
-                    </Button>
-                  ) : null}
-                </div>
-              </CardContent>
-            </Card>
-
             {tableRecords.length > 0 ? (
               <Card className="shadow-sm overflow-hidden border-border">
                 <div className="overflow-x-auto">
@@ -719,101 +812,8 @@ export function DiscoveryCenter({
               </Card>
             )}
           </div>
-
-          <div className="hidden space-y-4">
-            <div className="flex items-center justify-between gap-3 rounded-xl border border-border bg-card px-4 py-3 shadow-sm">
-              <div className="min-w-0 text-right">
-                <div className="text-sm font-semibold text-foreground">شرح استخدام الرادار</div>
-                <div className="text-xs text-muted-foreground">اضغط على علامة التعجب لعرض خطوات الاستخدام.</div>
-              </div>
-              <HoverCard openDelay={100}>
-                <HoverCardTrigger asChild>
-                  <Button
-                    type="button"
-                    variant="outline"
-                    size="icon-sm"
-                    className="shrink-0 rounded-full"
-                    aria-label="كيف تستخدم الرادار؟"
-                  >
-                    <LucideIcons.CircleAlert className="size-4" />
-                  </Button>
-                </HoverCardTrigger>
-                <HoverCardContent align="start" className="w-[360px] space-y-3 text-right" >
-                  <div className="space-y-1">
-                    <div className="text-sm font-semibold text-foreground">كيف تستخدم الرادار؟</div>
-                    <p className="text-xs leading-6 text-muted-foreground">
-                      ابدأ من المجموعة الأقرب لفكرة المشروع، ثم ادخل إلى القطاع المناسب لمراجعة السوق وبناء تصور أعمق للفرصة.
-                    </p>
-                  </div>
-                  <div className="space-y-2 text-xs leading-6 text-muted-foreground">
-                    <div className="rounded-lg border bg-muted/30 px-3 py-2">
-                      اختر مجموعة رئيسية تمثل نوع السوق الذي تنوي تحليله قبل الانتقال إلى القطاعات الفرعية.
-                    </div>
-                    <div className="rounded-lg border bg-muted/30 px-3 py-2">
-                      استخدم البحث للوصول السريع عندما يكون لديك اتجاه محدد أو صناعة واضحة.
-                    </div>
-                    <div className="rounded-lg border bg-muted/30 px-3 py-2">
-                      انتقل إلى القطاع المطلوب لبدء القراءة أو استكمال بقية رحلة المشروع داخل المنصة.
-                    </div>
-                  </div>
-                </HoverCardContent>
-              </HoverCard>
-            </div>
-            <Card className="hidden border-border shadow-sm">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-base">كيف تستخدم الرادار؟</CardTitle>
-                <CardDescription className="text-sm leading-7">
-                  ابدأ من المجموعة الأقرب لفكرة المشروع، ثم ادخل إلى القطاع المناسب لمراجعة السوق وبناء تصور أعمق للفرصة.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-3 text-sm leading-7 text-muted-foreground">
-                <div className="rounded-xl border bg-muted/20 p-4">
-                  اختر مجموعة رئيسية تمثل نوع السوق الذي تنوي تحليله قبل الانتقال إلى القطاعات الفرعية.
-                </div>
-                <div className="rounded-xl border bg-muted/20 p-4">
-                  استخدم البحث للوصول السريع عندما يكون لديك اتجاه محدد أو صناعة واضحة.
-                </div>
-                <div className="rounded-xl border bg-muted/20 p-4">
-                  انتقل إلى القطاع المطلوب لبدء القراءة أو استكمال بقية رحلة المشروع داخل المنصة.
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border shadow-sm">
-              <CardHeader className="pb-4">
-                <CardTitle className="text-base">نتائج سريعة</CardTitle>
-                <CardDescription className="text-sm">
-                  اختصارات مهيأة لأقرب القطاعات المطابقة للبحث الحالي.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-2">
-                {quickResults.slice(0, 6).map(result => (
-                  <button
-                    key={result.id}
-                    type="button"
-                    onClick={() => openSector({ id: result.id, label: result.label, groupTitle: result.groupTitle })}
-                    className="flex w-full items-center justify-between gap-3 rounded-lg border bg-background px-3 py-2.5 text-right transition-colors hover:bg-accent"
-                  >
-                    <div className="min-w-0">
-                      <div className="truncate text-sm font-medium text-foreground">{result.label}</div>
-                      <div className="truncate text-[11px] text-muted-foreground">{result.groupTitle}</div>
-                    </div>
-                    <LucideIcons.ChevronLeft className="size-4 shrink-0 text-muted-foreground" />
-                  </button>
-                ))}
-
-                {quickResults.length === 0 ? (
-                  <div className="rounded-lg border border-dashed px-3 py-4 text-center text-xs leading-6 text-muted-foreground">
-                    ابدأ بكتابة اسم سوق أو قطاع لعرض النتائج السريعة هنا.
-                  </div>
-                ) : null}
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </div>
     </div>
   );
 }
-
-DiscoveryCenter.displayName = 'DiscoveryCenter';
