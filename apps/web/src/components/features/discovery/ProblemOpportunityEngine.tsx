@@ -12,6 +12,7 @@ import {
   Search,
   SlidersHorizontal,
   Sparkles,
+  X,
 } from 'lucide-react';
 import {
   ColumnDef,
@@ -401,12 +402,14 @@ function ProblemOpportunityTanStackTable({
   selectedRecordId,
   onSelectRecord,
   onBookmark,
+  onCellFilter,
 }: {
   records: EngineRecord[];
   bookmarks: Record<string, boolean>;
   selectedRecordId: string | null;
   onSelectRecord: (record: EngineRecord) => void;
   onBookmark: (record: EngineRecord) => void;
+  onCellFilter?: (field: 'kind' | 'sectorName' | 'marketBand' | 'easeBand' | 'profitBand', value: string) => void;
 }) {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [{ pageIndex, pageSize }, setPagination] = useState({
@@ -497,9 +500,23 @@ function ProblemOpportunityTanStackTable({
         cell: ({ row }) => {
           const record = row.original;
           return (
-            <Badge variant="outline" className={cn('rounded-md px-2 py-0.5 text-[11px] font-bold shadow-none', typeToneClasses[record.kind])}>
-              {typeLabels[record.kind]}
-            </Badge>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onCellFilter?.('kind', record.kind);
+                  }}
+                  className="cursor-pointer transition-transform hover:scale-105"
+                >
+                  <Badge variant="outline" className={cn('rounded-md px-2 py-0.5 text-[11px] font-bold shadow-none hover:ring-2 hover:ring-primary/20', typeToneClasses[record.kind])}>
+                    {typeLabels[record.kind]}
+                  </Badge>
+                </button>
+              </TooltipTrigger>
+              <TooltipContent dir="rtl">انقر لتصفية الجدول حسب {typeLabels[record.kind]}</TooltipContent>
+            </Tooltip>
           );
         },
       },
@@ -516,7 +533,23 @@ function ProblemOpportunityTanStackTable({
             <ArrowUpDown className="mr-1.5 size-3.5 text-muted-foreground" />
           </Button>
         ),
-        cell: ({ row }) => <span className="text-sm font-medium text-foreground">{row.original.sectorName}</span>,
+        cell: ({ row }) => (
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onCellFilter?.('sectorName', row.original.sectorName);
+                }}
+                className="text-sm font-medium text-foreground hover:text-primary hover:underline transition-colors text-right cursor-pointer"
+              >
+                {row.original.sectorName}
+              </button>
+            </TooltipTrigger>
+            <TooltipContent dir="rtl">انقر لتصفية الجدول حسب قطاع: {row.original.sectorName}</TooltipContent>
+          </Tooltip>
+        ),
       },
       {
         accessorKey: 'marketScore',
@@ -536,11 +569,20 @@ function ProblemOpportunityTanStackTable({
           return (
             <Tooltip>
               <TooltipTrigger asChild>
-                <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[11px] font-bold">
-                  {marketLabels[record.marketBand]}
-                </Badge>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onCellFilter?.('marketBand', record.marketBand);
+                  }}
+                  className="cursor-pointer transition-transform hover:scale-105"
+                >
+                  <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[11px] font-bold hover:border-primary/50 hover:bg-muted/80">
+                    {marketLabels[record.marketBand]}
+                  </Badge>
+                </button>
               </TooltipTrigger>
-              <TooltipContent>درجة السوق: {record.marketScore}/10</TooltipContent>
+              <TooltipContent dir="rtl">درجة السوق: {record.marketScore}/10 (انقر للتصفية)</TooltipContent>
             </Tooltip>
           );
         },
@@ -563,11 +605,20 @@ function ProblemOpportunityTanStackTable({
           return (
             <Tooltip>
               <TooltipTrigger asChild>
-                <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[11px] font-bold">
-                  {easeLabels[record.easeBand]}
-                </Badge>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onCellFilter?.('easeBand', record.easeBand);
+                  }}
+                  className="cursor-pointer transition-transform hover:scale-105"
+                >
+                  <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[11px] font-bold hover:border-primary/50 hover:bg-muted/80">
+                    {easeLabels[record.easeBand]}
+                  </Badge>
+                </button>
               </TooltipTrigger>
-              <TooltipContent>سهولة التنفيذ: {record.easeScore}/10</TooltipContent>
+              <TooltipContent dir="rtl">سهولة التنفيذ: {record.easeScore}/10 (انقر للتصفية)</TooltipContent>
             </Tooltip>
           );
         },
@@ -590,11 +641,20 @@ function ProblemOpportunityTanStackTable({
           return (
             <Tooltip>
               <TooltipTrigger asChild>
-                <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[11px] font-bold">
-                  {profitLabels[record.profitBand]}
-                </Badge>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onCellFilter?.('profitBand', record.profitBand);
+                  }}
+                  className="cursor-pointer transition-transform hover:scale-105"
+                >
+                  <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[11px] font-bold hover:border-primary/50 hover:bg-muted/80">
+                    {profitLabels[record.profitBand]}
+                  </Badge>
+                </button>
               </TooltipTrigger>
-              <TooltipContent>إمكانية الربح: {record.profitScore}/10</TooltipContent>
+              <TooltipContent dir="rtl">إمكانية الربح: {record.profitScore}/10 (انقر للتصفية)</TooltipContent>
             </Tooltip>
           );
         },
@@ -615,9 +675,23 @@ function ProblemOpportunityTanStackTable({
         cell: ({ row }) => {
           const record = row.original;
           return (
-            <Badge variant="outline" className={cn('rounded-md px-2 py-0.5 text-[11px] font-bold shadow-none', priorityTone(record.priorityScore))}>
-              {record.priorityScore}/10
-            </Badge>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onCellFilter?.('kind', record.kind);
+                  }}
+                  className="cursor-pointer transition-transform hover:scale-105"
+                >
+                  <Badge variant="outline" className={cn('rounded-md px-2 py-0.5 text-[11px] font-bold shadow-none', priorityTone(record.priorityScore))}>
+                    {record.priorityScore}/10
+                  </Badge>
+                </button>
+              </TooltipTrigger>
+              <TooltipContent dir="rtl">الأولوية: {record.priorityScore}/10</TooltipContent>
+            </Tooltip>
           );
         },
       },
@@ -628,7 +702,7 @@ function ProblemOpportunityTanStackTable({
         cell: ({ row }) => <span className="text-xs text-muted-foreground font-medium">{row.original.updatedLabel}</span>,
       },
     ],
-    [bookmarks, onBookmark]
+    [bookmarks, onBookmark, onCellFilter]
   );
 
   const table = useReactTable({
@@ -917,6 +991,14 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
     setAdvancedStatuses({ draft: true, validated: true, priority: true });
   };
 
+  const handleCellFilter = (field: 'kind' | 'sectorName' | 'marketBand' | 'easeBand' | 'profitBand', value: string) => {
+    if (field === 'kind') setTypeFilter(value as 'all' | RecordKind);
+    if (field === 'sectorName') setSectorFilter(value);
+    if (field === 'marketBand') setMarketFilter(value as 'all' | MarketBand);
+    if (field === 'easeBand') setEaseFilter(value as 'all' | EaseBand);
+    if (field === 'profitBand') setProfitFilter(value as 'all' | ProfitBand);
+  };
+
   const handleBookmark = (record: EngineRecord) => {
     const result = toggleSavedMarketItem(record);
     setBookmarks(current => ({
@@ -950,6 +1032,9 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
 
             <div className="flex flex-wrap items-center gap-2">
               <Badge variant="outline" className="rounded-lg bg-card px-3 py-1 text-xs font-semibold">
+                {records.length} إجمالي الفجوات
+              </Badge>
+              <Badge variant="outline" className="rounded-lg bg-rose-50 text-rose-700 border-rose-200 px-3 py-1 text-xs font-semibold">
                 {totalProblems} مشكلة
               </Badge>
               <Badge variant="outline" className="rounded-lg bg-indigo-50 text-indigo-700 border-indigo-200 px-3 py-1 text-xs font-semibold">
@@ -961,22 +1046,22 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
             </div>
           </div>
 
-          {/* Compact Search & Filters Toolbar */}
-          <Card className="shadow-xs rounded-2xl border-border bg-card">
-            <CardContent className="p-3.5 space-y-3">
-              <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center">
+          {/* Main Controls Header & Filters Bar */}
+          <Card className="shadow-xs border-border bg-card rounded-2xl">
+            <CardContent className="space-y-3 p-4">
+              <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
                 <div className="relative flex-1">
-                  <Search className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+                  <Search className="absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
                   <Input
                     value={query}
                     onChange={event => setQuery(event.target.value)}
-                    placeholder="ابحث عن مشكلة، فرصة، قطاع، دولة، أو نموذج عمل..."
-                    className="h-9 pr-9 text-right text-sm rounded-xl"
+                    placeholder="ابحث بالاسم، الكلمات المفتاحية، أو القطاع..."
+                    className="h-10 text-xs sm:text-sm pr-9 rounded-xl border-border bg-background"
                   />
                 </div>
 
-                <div className="flex items-center gap-2 shrink-0">
-                  <Button type="button" size="sm" className="h-9 px-4 rounded-xl">
+                <div className="flex flex-wrap items-center gap-2">
+                  <Button type="button" variant="default" size="sm" onClick={() => setQuery('ذكاء اصطناعي')} className="h-9 text-xs rounded-xl">
                     <Sparkles className="size-4 me-1.5" />
                     اسأل
                   </Button>
@@ -1062,29 +1147,30 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
                       <SelectTrigger className="h-8 text-xs w-[110px] rounded-lg"><SelectValue placeholder="حجم السوق" /></SelectTrigger>
                       <SelectContent>
                         <SelectItem value="all">كل الأحجام</SelectItem>
-                        <SelectItem value="large">كبير</SelectItem>
-                        <SelectItem value="medium">متوسط</SelectItem>
-                        <SelectItem value="small">صغير</SelectItem>
+                        <SelectItem value="massive">سوق ضخم</SelectItem>
+                        <SelectItem value="large">سوق واسع</SelectItem>
+                        <SelectItem value="medium">سوق متوسط</SelectItem>
+                        <SelectItem value="niche">سوق متخصص</SelectItem>
                       </SelectContent>
                     </Select>
 
                     <Select value={easeFilter} onValueChange={value => setEaseFilter(value as 'all' | EaseBand)}>
-                      <SelectTrigger className="h-8 text-xs w-[115px] rounded-lg"><SelectValue placeholder="سهولة التنفيذ" /></SelectTrigger>
+                      <SelectTrigger className="h-8 text-xs w-[110px] rounded-lg"><SelectValue placeholder="سهولة الحل" /></SelectTrigger>
                       <SelectContent>
                         <SelectItem value="all">كل المستويات</SelectItem>
-                        <SelectItem value="easy">سهل</SelectItem>
-                        <SelectItem value="moderate">متوسط</SelectItem>
-                        <SelectItem value="hard">صعب</SelectItem>
+                        <SelectItem value="easy">سهل التنفيذ</SelectItem>
+                        <SelectItem value="medium">متوسط الصعوبة</SelectItem>
+                        <SelectItem value="complex">معقد وحساس</SelectItem>
                       </SelectContent>
                     </Select>
 
                     <Select value={profitFilter} onValueChange={value => setProfitFilter(value as 'all' | ProfitBand)}>
-                      <SelectTrigger className="h-8 text-xs w-[115px] rounded-lg"><SelectValue placeholder="إمكانية الربح" /></SelectTrigger>
+                      <SelectTrigger className="h-8 text-xs w-[120px] rounded-lg"><SelectValue placeholder="إمكانية الربح" /></SelectTrigger>
                       <SelectContent>
                         <SelectItem value="all">كل المستويات</SelectItem>
-                        <SelectItem value="high">مرتفعة</SelectItem>
-                        <SelectItem value="medium">متوسطة</SelectItem>
-                        <SelectItem value="low">ضعيفة</SelectItem>
+                        <SelectItem value="high">ربحية عالية</SelectItem>
+                        <SelectItem value="medium">ربحية متوسطة</SelectItem>
+                        <SelectItem value="steady">مستقرة تدريجياً</SelectItem>
                       </SelectContent>
                     </Select>
 
@@ -1121,6 +1207,54 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
               )}
             </CardContent>
           </Card>
+
+          {/* Active Cell Filters Bar */}
+          {(typeFilter !== 'all' || sectorFilter !== 'all' || marketFilter !== 'all' || easeFilter !== 'all' || profitFilter !== 'all' || countryFilter !== 'all' || competitionFilter !== 'all' || sourceFilter !== 'all' || query) && (
+            <div className="flex flex-wrap items-center gap-2 rounded-xl bg-muted/40 p-2.5 border border-border/60 text-xs">
+              <span className="font-bold text-muted-foreground flex items-center gap-1">
+                <Filter className="size-3.5" /> الفلاتر النشطة:
+              </span>
+              {typeFilter !== 'all' && (
+                <Badge variant="secondary" className="gap-1 rounded-md px-2 py-0.5 text-xs bg-primary/10 text-primary border border-primary/20">
+                  النوع: {typeLabels[typeFilter]}
+                  <button type="button" onClick={() => setTypeFilter('all')} className="hover:text-destructive ms-1 cursor-pointer"><X className="size-3" /></button>
+                </Badge>
+              )}
+              {sectorFilter !== 'all' && (
+                <Badge variant="secondary" className="gap-1 rounded-md px-2 py-0.5 text-xs bg-primary/10 text-primary border border-primary/20">
+                  القطاع: {sectorFilter}
+                  <button type="button" onClick={() => setSectorFilter('all')} className="hover:text-destructive ms-1 cursor-pointer"><X className="size-3" /></button>
+                </Badge>
+              )}
+              {marketFilter !== 'all' && (
+                <Badge variant="secondary" className="gap-1 rounded-md px-2 py-0.5 text-xs bg-primary/10 text-primary border border-primary/20">
+                  السوق: {marketLabels[marketFilter]}
+                  <button type="button" onClick={() => setMarketFilter('all')} className="hover:text-destructive ms-1 cursor-pointer"><X className="size-3" /></button>
+                </Badge>
+              )}
+              {easeFilter !== 'all' && (
+                <Badge variant="secondary" className="gap-1 rounded-md px-2 py-0.5 text-xs bg-primary/10 text-primary border border-primary/20">
+                  سهولة الحل: {easeLabels[easeFilter]}
+                  <button type="button" onClick={() => setEaseFilter('all')} className="hover:text-destructive ms-1 cursor-pointer"><X className="size-3" /></button>
+                </Badge>
+              )}
+              {profitFilter !== 'all' && (
+                <Badge variant="secondary" className="gap-1 rounded-md px-2 py-0.5 text-xs bg-primary/10 text-primary border border-primary/20">
+                  إمكانية الربح: {profitLabels[profitFilter]}
+                  <button type="button" onClick={() => setProfitFilter('all')} className="hover:text-destructive ms-1 cursor-pointer"><X className="size-3" /></button>
+                </Badge>
+              )}
+              {query && (
+                <Badge variant="secondary" className="gap-1 rounded-md px-2 py-0.5 text-xs bg-primary/10 text-primary border border-primary/20">
+                  البحث: "{query}"
+                  <button type="button" onClick={() => setQuery('')} className="hover:text-destructive ms-1 cursor-pointer"><X className="size-3" /></button>
+                </Badge>
+              )}
+              <Button type="button" variant="ghost" size="sm" onClick={resetFilters} className="h-6 px-2 text-[11px] text-muted-foreground hover:text-foreground ms-auto">
+                إعادة ضبط الكل
+              </Button>
+            </div>
+          )}
 
           <div className="space-y-4">
             {isLoading ? (
