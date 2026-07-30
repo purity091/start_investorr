@@ -1,10 +1,37 @@
 import React, { useState, type FC } from 'react';
-import { ChevronDown, ExternalLink } from 'lucide-react';
+import * as LucideIcons from 'lucide-react';
+import { ChevronDown, ExternalLink, Lightbulb } from 'lucide-react';
 import { BusinessOpportunity } from './types';
 import { Card, CardContent } from '../../../ui/Card';
 import { Badge } from '../../../ui/Badge';
 import { Button } from '../../../ui/Button';
 import { cn } from '../../../../lib/utils';
+
+const renderOpportunityIcon = (iconProp: any) => {
+  if (!iconProp) return <Lightbulb size={22} strokeWidth={2.5} />;
+
+  // If iconProp is a React component (function, class component, forwardRef/memo object)
+  if (typeof iconProp === 'function' || (typeof iconProp === 'object' && (iconProp.$$typeof || iconProp.render))) {
+    const Component = iconProp;
+    return <Component size={22} strokeWidth={2.5} />;
+  }
+
+  // If iconProp is a string name (e.g. "Lightbulb" or "Sparkles")
+  if (typeof iconProp === 'string' && iconProp.trim().length > 0) {
+    const IconComponent = (LucideIcons as any)[iconProp] || Lightbulb;
+    return <IconComponent size={22} strokeWidth={2.5} />;
+  }
+
+  // If iconProp is an object with a name property e.g. { name: "Lightbulb" } or { iconName: "Lightbulb" }
+  if (typeof iconProp === 'object' && (iconProp.name || iconProp.iconName)) {
+    const iconName = iconProp.name || iconProp.iconName;
+    const IconComponent = (LucideIcons as any)[iconName] || Lightbulb;
+    return <IconComponent size={22} strokeWidth={2.5} />;
+  }
+
+  // Fallback for empty objects {} or non-renderable structures (e.g. JSON empty object {})
+  return <Lightbulb size={22} strokeWidth={2.5} />;
+};
 
 export const OpportunityCard: FC<{ opp: BusinessOpportunity; index: number; onBuildPlan?: (p?: string) => void }> = ({
   opp,
@@ -12,7 +39,6 @@ export const OpportunityCard: FC<{ opp: BusinessOpportunity; index: number; onBu
   onBuildPlan,
 }) => {
   const [isOpen, setIsOpen] = useState(true);
-  const Icon = opp.icon;
 
   return (
     <Card 
@@ -20,7 +46,7 @@ export const OpportunityCard: FC<{ opp: BusinessOpportunity; index: number; onBu
     >
       <div className="flex items-start justify-between p-6 pb-2 dir-rtl">
         <div className="flex size-12 shrink-0 items-center justify-center rounded-xl border border-border bg-muted/30 text-primary">
-          {Icon && <Icon size={22} strokeWidth={2.5} />}
+          {renderOpportunityIcon(opp.icon)}
         </div>
         
         <div className="flex items-center gap-3">
@@ -57,7 +83,7 @@ export const OpportunityCard: FC<{ opp: BusinessOpportunity; index: number; onBu
             <p className="m-0 text-[11px] font-black uppercase tracking-widest text-primary">المسارات الاستثمارية المقترحة:</p>
           </div>
           <ul className="m-0 flex flex-col gap-2.5 p-0 list-none">
-            {opp.examples.map((ex, i) => (
+            {opp.examples?.map((ex, i) => (
               <li key={i}>
                 <button
                   onClick={(e) => {
@@ -108,10 +134,9 @@ export const OpportunitiesSection: FC<{ opportunities: BusinessOpportunity[]; on
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {opportunities.map((opp, idx) => (
-          <OpportunityCard key={opp.id} opp={opp} index={idx} onBuildPlan={onBuildPlan} />
+          <OpportunityCard key={opp.id || idx} opp={opp} index={idx} onBuildPlan={onBuildPlan} />
         ))}
       </div>
     </Card>
   );
 };
-
