@@ -151,8 +151,8 @@ const PROJECT_BUILD: NavItemConfig[] = [
 ];
 
 const PROJECT_IDEAS: NavItemConfig[] = [
-  { tab: 'proven-projects', label: 'مشاريع ناجحة مثبتة', icon: Sparkles },
-  { tab: 'failed-projects', label: 'أفكار مشاريع فشلت', icon: TrendingDown },
+  { tab: 'proven-projects', label: 'أفكار شركات ناجحة', icon: Sparkles },
+  { tab: 'failed-projects', label: 'شركات فشلت', icon: TrendingDown },
   { tab: 'saas-ideas', label: 'أفكار SaaS', icon: CloudCog },
   { tab: 'micro-saas-ideas', label: 'أفكار Micro-SaaS', icon: Settings2 },
   {

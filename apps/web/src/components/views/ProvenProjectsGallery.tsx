@@ -75,7 +75,7 @@ export const ProvenProjectsGallery: React.FC = () => {
         <Badge variant="secondary" className="w-fit bg-primary/10 text-primary hover:bg-primary/10 border-0 font-bold px-3 py-1">
           إلهام واقعي وقاعدة بيانات
         </Badge>
-        <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">مشاريع ناجحة مثبتة</h1>
+        <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">أفكار شركات ناجحة</h1>
         <p className="max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
           قاعدة بيانات تفاعلية لشركات ناشئة ومشاريع SaaS أثبتت نجاحها. استكشف الإيرادات، الزيارات، نماذج العمل، والتقنيات المستخدمة لاستلهام أفكار قابلة للتطبيق في مشروعك القادم.
         </p>

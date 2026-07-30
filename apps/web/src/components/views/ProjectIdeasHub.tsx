@@ -10,14 +10,14 @@ export const ProjectIdeasHub: React.FC<ProjectIdeasHubProps> = ({ setActiveTab }
   const categories = [
     {
       id: 'proven-projects',
-      title: 'مشاريع ناجحة مثبتة',
+      title: 'أفكار شركات ناجحة',
       description: 'قاعدة بيانات تفاعلية لشركات ناشئة ومشاريع أثبتت نجاحها. استكشف نماذج العمل والتقنيات التي استخدموها.',
       icon: <Sparkles className="size-8 text-amber-500" />,
       color: 'bg-amber-50 border-amber-100 hover:border-amber-300 hover:shadow-amber-100/50',
     },
     {
       id: 'failed-projects',
-      title: 'مشاريع فشلت (Post-Mortem)',
+      title: 'شركات فشلت (Post-Mortem)',
       description: 'دراسات حالة لمشاريع تقنية لم يكتب لها النجاح. تعلم من أخطاء الآخرين لكي تتجنب تكرارها في مشروعك.',
       icon: <TrendingDown className="size-8 text-red-500" />,
       color: 'bg-red-50 border-red-100 hover:border-red-300 hover:shadow-red-100/50',

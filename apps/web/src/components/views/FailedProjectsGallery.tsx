@@ -74,7 +74,7 @@ export const FailedProjectsGallery: React.FC = () => {
         <Badge variant="secondary" className="w-fit bg-red-500/10 text-red-600 hover:bg-red-500/20 border-0 font-bold px-3 py-1">
           تجارب ودروس مستفادة
         </Badge>
-        <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">مشاريع فشلت (Post-Mortem)</h1>
+        <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">شركات فشلت (Post-Mortem)</h1>
         <p className="max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
           التعلم من أخطاء الآخرين يختصر عليك الكثير من الوقت والمال. نستعرض هنا دراسات حالة لمشاريع تقنية لم يكتب لها النجاح، مع تحليل أسباب الفشل والدروس المستفادة منها حتى لا تكررها.
         </p>

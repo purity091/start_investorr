@@ -282,8 +282,8 @@ export default function LandingPage() {
               <ul className="space-y-4">
                 <li><Link href="/saas-ideas" className="text-slate-400 hover:text-primary transition-colors text-sm">أفكار مشاريع SaaS</Link></li>
                 <li><Link href="/micro-saas-ideas" className="text-slate-400 hover:text-primary transition-colors text-sm">أفكار Micro-SaaS</Link></li>
-                <li><Link href="/proven-projects" className="text-slate-400 hover:text-primary transition-colors text-sm">مشاريع أثبتت نجاحها</Link></li>
-                <li><Link href="/failed-projects" className="text-slate-400 hover:text-primary transition-colors text-sm">تفكيك مشاريع فشلت</Link></li>
+                <li><Link href="/proven-projects" className="text-slate-400 hover:text-primary transition-colors text-sm">أفكار شركات ناجحة</Link></li>
+                <li><Link href="/failed-projects" className="text-slate-400 hover:text-primary transition-colors text-sm">شركات فشلت</Link></li>
               </ul>
             </div>
 
