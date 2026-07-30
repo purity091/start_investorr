@@ -169,6 +169,45 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
         },
       },
       {
+        accessorKey: 'sourceStatus',
+        id: 'sourceStatus',
+        header: 'حالة الشركة',
+        filterFn: (row, columnId, filterValue) => {
+          if (!filterValue || filterValue === 'all') return true;
+          const status = row.original.sourceStatus || (row.original.directory_snapshot?.monthly_revenue?.includes('مغلق') ? 'failed' : 'proven');
+          return status === filterValue;
+        },
+        cell: ({ row, table }) => {
+          const status = row.original.sourceStatus || (row.original.directory_snapshot?.monthly_revenue?.includes('مغلق') ? 'failed' : 'proven');
+          const isFailed = status === 'failed';
+          const currentFilter = table.getColumn('sourceStatus')?.getFilterValue() as string;
+          const isFiltered = currentFilter === status;
+
+          return (
+            <Badge
+              variant="outline"
+              onClick={(e) => {
+                e.stopPropagation();
+                if (isFiltered) {
+                  table.getColumn('sourceStatus')?.setFilterValue('');
+                } else {
+                  table.getColumn('sourceStatus')?.setFilterValue(status);
+                }
+              }}
+              className={cn(
+                "cursor-pointer font-bold text-[11px] px-2.5 py-0.5 border border-transparent transition-all hover:scale-105 active:scale-95 select-none",
+                isFailed
+                  ? "bg-red-50 text-red-700 hover:bg-red-100 ring-1 ring-inset ring-red-600/20"
+                  : "bg-emerald-50 text-emerald-700 hover:bg-emerald-100 ring-1 ring-inset ring-emerald-600/20"
+              )}
+              title="اضغط لتصفية المشاريع حسب هذه الحالة"
+            >
+              {isFailed ? 'شركات فشلت' : 'ناجحة'}
+            </Badge>
+          );
+        },
+      },
+      {
         accessorFn: (row) => getCountryInfo(row.company?.location).name,
         id: 'country',
         header: 'الدولة',
@@ -337,13 +376,15 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
   const categoryFilterVal = (table.getColumn('category')?.getFilterValue() as string) || '';
   const countryFilterVal = (table.getColumn('country')?.getFilterValue() as string) || '';
   const bmFilterVal = (table.getColumn('business_model')?.getFilterValue() as string) || '';
-  const isAnyFilterActive = globalFilter || categoryFilterVal || countryFilterVal || bmFilterVal;
+  const statusFilterVal = (table.getColumn('sourceStatus')?.getFilterValue() as string) || '';
+  const isAnyFilterActive = globalFilter || categoryFilterVal || countryFilterVal || bmFilterVal || statusFilterVal;
 
   const resetAllFilters = () => {
     setGlobalFilter('');
     table.getColumn('category')?.setFilterValue('');
     table.getColumn('country')?.setFilterValue('');
     table.getColumn('business_model')?.setFilterValue('');
+    table.getColumn('sourceStatus')?.setFilterValue('');
   };
 
   return (
@@ -360,6 +401,21 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
               className="pl-3 pr-9 h-10 w-full bg-white border-slate-200 focus-visible:ring-blue-500 rounded-xl font-medium text-sm shadow-sm"
             />
           </div>
+
+          {/* Status Filter Dropdown */}
+          <Select
+            value={statusFilterVal || 'all'}
+            onValueChange={(val) => table.getColumn('sourceStatus')?.setFilterValue(val === 'all' ? '' : val)}
+          >
+            <SelectTrigger className="h-10 w-full sm:w-[150px] bg-white border-slate-200 rounded-xl font-bold text-sm text-slate-700">
+              <SelectValue placeholder="حالة الشركة" />
+            </SelectTrigger>
+            <SelectContent className="rounded-xl border-slate-200" dir="rtl">
+              <SelectItem value="all" className="font-bold cursor-pointer">جميع الشركات</SelectItem>
+              <SelectItem value="proven" className="font-bold cursor-pointer text-emerald-600">شركات ناجحة</SelectItem>
+              <SelectItem value="failed" className="font-bold cursor-pointer text-red-600">شركات فشلت</SelectItem>
+            </SelectContent>
+          </Select>
 
           {/* Category Filter Dropdown */}
           <Select
@@ -438,6 +494,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
                 let label = column.id;
                 if (label === 'name') label = 'المشروع';
                 if (label === 'category') label = 'التصنيف';
+                if (label === 'sourceStatus') label = 'حالة الشركة';
                 if (label === 'country') label = 'الدولة';
                 if (label === 'revenue') label = 'الدخل الشهري';
                 if (label === 'traffic') label = 'الزيارات الشهرية';
@@ -459,9 +516,23 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
       </div>
 
       {/* Active Filter Pills indicator if filtered */}
-      {(categoryFilterVal || bmFilterVal) && (
+      {(categoryFilterVal || bmFilterVal || statusFilterVal) && (
         <div className="flex flex-wrap items-center gap-2 px-1">
           <span className="text-xs font-medium text-slate-500">الفلاتر المحددة:</span>
+          {statusFilterVal && (
+            <Badge className={cn(
+              "font-bold gap-1 text-xs py-0.5 px-2.5 rounded-lg text-white",
+              statusFilterVal === 'failed' ? "bg-red-600" : "bg-emerald-600"
+            )}>
+              الحالة: {statusFilterVal === 'failed' ? 'شركات فشلت' : 'شركات ناجحة'}
+              <button
+                onClick={() => table.getColumn('sourceStatus')?.setFilterValue('')}
+                className="mr-1 hover:text-slate-200"
+              >
+                <X className="size-3" />
+              </button>
+            </Badge>
+          )}
           {categoryFilterVal && (
             <Badge className="bg-blue-600 text-white font-bold gap-1 text-xs py-0.5 px-2.5 rounded-lg">
               التصنيف: {categoryFilterVal}

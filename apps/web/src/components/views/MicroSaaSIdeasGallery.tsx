@@ -3,8 +3,7 @@ import { Badge } from '@/components/ui/Badge';
 import { Card, CardContent } from '@/components/ui/Card';
 import { ProvenProjectProfile } from '@/components/features/business/ProvenProjectProfile';
 import { ProvenProjectsTable } from '@/components/features/business/ProvenProjectsTable';
-import { Settings2, Sparkles, TrendingDown, Loader2, CheckCircle2, AlertTriangle, UserCheck, Target } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { Settings2, Sparkles, TrendingDown, Loader2, UserCheck, Target } from 'lucide-react';
 
 // Explicit list of verified Micro-SaaS projects from the JSON dataset
 const MICRO_SAAS_SLUGS = new Set([
@@ -25,7 +24,6 @@ export const MicroSaaSIdeasGallery: React.FC = () => {
   const [projectsList, setProjectsList] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
-  const [statusFilter, setStatusFilter] = useState<'all' | 'proven' | 'failed'>('all');
 
   useEffect(() => {
     const loadData = async () => {
@@ -93,16 +91,6 @@ export const MicroSaaSIdeasGallery: React.FC = () => {
     loadData();
   }, []);
 
-  const filteredProjects = useMemo(() => {
-    if (statusFilter === 'proven') {
-      return projectsList.filter((p) => p.sourceStatus === 'proven');
-    }
-    if (statusFilter === 'failed') {
-      return projectsList.filter((p) => p.sourceStatus === 'failed');
-    }
-    return projectsList;
-  }, [projectsList, statusFilter]);
-
   const provenCount = useMemo(() => projectsList.filter((p) => p.sourceStatus === 'proven').length, [projectsList]);
   const failedCount = useMemo(() => projectsList.filter((p) => p.sourceStatus === 'failed').length, [projectsList]);
 
@@ -149,7 +137,7 @@ export const MicroSaaSIdeasGallery: React.FC = () => {
         </div>
         <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">أفكار مشاريع Micro-SaaS الحقيقية</h1>
         <p className="max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
-          المشاريع البرمجية المصغرة (Micro-SaaS) هي تطبيقات مخصصة تعتمد على مؤسس فردي (Solo Founder) أو فريق صغير جداً لتلبية احتياج موجه لشريحة نيش (Niche Market). تتميز بتكلفة تشغيلية ضئيلة وسرعة إطلاق عالية بدون تمويل خارجي ضخم.
+          المشاريع البرمجية المصغرة (Micro-SaaS) هي تطبيقات مخصصة تعتمد على مؤسس فردي (Solo Founder) أو فريق صغير جداً لتلبية احتياج موجه لشريحة نيش (Niche Market). تصفح المشاريع الناجحة والفاشلة واستخدم الفلاتر الموحدة أدناه للبحث والتصفية.
         </p>
       </div>
 
@@ -202,62 +190,21 @@ export const MicroSaaSIdeasGallery: React.FC = () => {
             <h4 className="font-bold text-sm text-slate-900 mb-1">معايير اختيار مشاريع الـ Micro-SaaS الدقيقة:</h4>
             <div className="text-xs text-slate-600 leading-relaxed space-y-1">
               <p>• **مؤسس فردي (Solo Founder) أو فريق صغير جداً (1-3 أشخاص)** لتقليل التعقيد الإداري.</p>
-              <p>• **سوق موجه بدقة (Niche Focus)**: مثل أداة معادلات Excel، حزمت أتمتة، واجهة برمجة API صور، قالب إطلاق سريع.</p>
+              <p>• **سوق موجه بدقة (Niche Focus)**: مثل أداة معادلات Excel، حزمة أتمتة، واجهة برمجة API صور، قالب إطلاق سريع.</p>
               <p>• **تكلفة تشغيل منخفضة (Bootstrapped)** بدون الحاجة لرأس مال جولات استثمارية ضخمة.</p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Filter Tabs */}
-      <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-4">
-        <div className="flex items-center gap-2 bg-slate-100 p-1.5 rounded-xl">
-          <button
-            onClick={() => setStatusFilter('all')}
-            className={cn(
-              "px-4 py-2 text-xs sm:text-sm font-bold rounded-lg transition-all",
-              statusFilter === 'all'
-                ? "bg-white text-slate-900 shadow-sm"
-                : "text-slate-600 hover:text-slate-900"
-            )}
-          >
-            جميع مشاريع Micro-SaaS ({projectsList.length})
-          </button>
-          <button
-            onClick={() => setStatusFilter('proven')}
-            className={cn(
-              "px-4 py-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center gap-1.5",
-              statusFilter === 'proven'
-                ? "bg-amber-500 text-white shadow-sm"
-                : "text-slate-600 hover:text-amber-600"
-            )}
-          >
-            <CheckCircle2 className="size-3.5" />
-            مشاريع ناجحة ({provenCount})
-          </button>
-          <button
-            onClick={() => setStatusFilter('failed')}
-            className={cn(
-              "px-4 py-2 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center gap-1.5",
-              statusFilter === 'failed'
-                ? "bg-red-500 text-white shadow-sm"
-                : "text-slate-600 hover:text-red-600"
-            )}
-          >
-            <AlertTriangle className="size-3.5" />
-            شركات فشلت ({failedCount})
-          </button>
-        </div>
-      </div>
-
-      {/* Table section */}
+      {/* Table section with status filter integrated into table toolbar */}
       <div className="w-full">
         {isLoading ? (
           <div className="w-full flex justify-center py-20">
             <Loader2 className="size-8 animate-spin text-slate-300" />
           </div>
         ) : (
-          <ProvenProjectsTable data={filteredProjects} onRowClick={handleProjectSelect} />
+          <ProvenProjectsTable data={projectsList} onRowClick={handleProjectSelect} />
         )}
       </div>
     </div>
