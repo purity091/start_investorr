@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-TECH7",
+      "status_label": "تحليل فجوة توظيف المواهب التقنية",
+      "category_tag": "HRTech (Talent Matching / Developer Platforms)",
+      "business_model": "Commission per Hire + Subscription + SaaS for Companies",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Technology",
+      "HRTech",
+      "Developer Ecosystem"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Jordan", "flag": "🇯🇴" },
+        { "name": "Lebanon", "flag": "🇱🇧" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "منصة ذكية لربط المطورين العرب بفرص العمل المناسبة",
+      "problem_statement": "رغم وجود عدد كبير من المطورين في العالم العربي، إلا أن هناك فجوة كبيرة في ربطهم بفرص العمل المناسبة، خاصة مع الشركات العالمية. تعتمد الشركات على CVs تقليدية، بينما لا يوجد نظام حقيقي يقيم المهارات التقنية بشكل عملي، مما يؤدي إلى توظيف غير دقيق وضياع فرص للطرفين."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "DevMatch AI",
+        "industry_tag": "منصات توظيف المطورين",
+        "revenue_model": "Placement Fees + SaaS Hiring Tools",
+        "action_text": "استعراض مطابقة ذكية بين المطورين والشركات"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة توظيف المطورين (0-12 شهر)",
+      "subtitle": "التوظيف بناءً على المهارة وليس السيرة الذاتية",
+      "phases": [
+        {
+          "title": "تقييم المهارات التقنية",
+          "description": "بناء نظام اختبارات عملية للمطورين.",
+          "icon": "code",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك مطابقة ذكي",
+          "description": "ربط المهارات مع متطلبات الوظائف.",
+          "icon": "cpu",
+          "color_theme": "rose"
+        },
+        {
+          "title": "ربط مع الشركات",
+          "description": "توفير قناة توظيف مباشرة للشركات.",
+          "icon": "briefcase",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.2,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 8.8,
+      "data_points_analyzed": "1700+ (Developer Hiring Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "اعتماد على CVs غير دقيقة.",
+        "عدم وجود تقييم عملي للمهارات.",
+        "ضعف الربط بين السوقين المحلي والعالمي.",
+        "نقص منصات متخصصة للمطورين العرب."
+      ],
+      "recommended_tech_stack": [
+        "Skill Assessment Engines",
+        "AI Matching Systems",
+        "Code Execution Platforms",
+        "Cloud Infrastructure",
+        "API Integrations"
+      ],
+      "main_risk_index": "بناء الشبكة؛ يعتمد النجاح على جذب الشركات والمطورين معاً."
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-MKT15",
+      "status_label": "تحليل فجوة التنبؤ بقيمة العميل في التجزئة",
+      "category_tag": "MarTech / Big-Data / Predictive-Analytics",
+      "business_model": "SaaS Subscription + Success Fee on Churn Reduction + Data Consulting",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Marketing",
+      "Data Analytics",
+      "Retail"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "GCC Retail Giants",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Egypt & Morocco (Mass Markets)",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "مستقبل العميل: توقع القيمة والولاء بالذكاء الاصطناعي",
+      "problem_statement": "تعامل العلامات التجارية العربية جميع عملائها بنفس الطريقة، مما يسبب إهداراً في عروض الخصم ونزيفاً في العملاء ذوي القيمة العالية (High-LTV). الفجوة هي نظام تحليل تنبؤي يفهم أنماط الشراء العربية الفريدة، يتوقع متى سيتوقف العميل عن الشراء (Churn)، ويحدد من هم 'عملاء المستقبل' لتركيز ميزانيات التسويق عليهم."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Mustaqbal-CRM",
+        "industry_tag": "الذكاء الاصطناعي لتحليل بيانات العملاء والتجزئة",
+        "revenue_model": "Monthly SaaS Fee + Performance Fee based on Churn Reduction + Strategic Data Reports",
+        "action_text": "استعراض النظام الذي يضاعف أرباحك عبر فهم عملائك"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق ولاء العميل (0-24 شهر)",
+      "subtitle": "التوقف عن التخمين، والبدء في التنبؤ",
+      "phases": [
+        {
+          "title": "بناء محرك التنبؤ (LTV-Predictor)",
+          "description": "تطوير خوارزمية تحلل تاريخ المشتريات، التفاعل مع الرسائل، والقدرة الشرائية لتصنيف العملاء بناءً على قيمتهم المستقبلية المتوقعة.",
+          "icon": "presentation-chart-line",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام الإنذار المبكر (Churn-Alert)",
+          "description": "تنبيه فريق التسويق آلياً عندما يظهر عميل مهم علامات على التوقف عن التعامل، مع اقتراح عرض مخصص لاستعادته فوراً.",
+          "icon": "bell",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة العروض المخصصة (Personalized-Offers)",
+          "description": "أتمتة إرسال العروض المختلفة لكل فئة من العملاء (مثلاً: هدايا للعملاء الأوفياء، خصومات للمترددين) لضمان أقصى كفاءة للميزانية.",
+          "icon": "gift",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Customer Churn Rates in MENA Retail vs Potential Savings from Targeted Retention"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تشتت بيانات العملاء بين أنظمة المحاسبة، المتجر الإلكتروني، والمحل الفيزيائي.",
+        "نقص الخبرات المحلية في 'علم البيانات' الموجه للتسويق (Marketing Data Science).",
+        "الاعتماد على 'حملات الخصم الشاملة' بدلاً من الاستهداف الذكي.",
+        "صعوبة تكامل النظام مع أدوات التواصل المحلية (مثل أنظمة الـ SMS والواتساب)."
+      ],
+      "recommended_tech_stack": [
+        "Predictive Modeling (XGBoost/Random Forest)",
+        "Customer Data Platform (CDP) Architecture",
+        "Automated Marketing Workflows",
+        "RFM (Recency, Frequency, Monetary) Analysis",
+        "API Connectors for Local POS & E-com"
+      ],
+      "main_risk_index": "جودة البيانات المدخلة (GIGO)؛ إذا كانت بيانات العملاء غير دقيقة أو غير مكتملة، ستكون التنبؤات خاطئة، مما يتطلب نظام 'تطهير وتوحيد بيانات' قوي."
+    }
+  }
+}

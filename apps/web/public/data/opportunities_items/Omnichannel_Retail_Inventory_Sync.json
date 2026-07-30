@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-RET02",
+      "status_label": "تحليل فجوة تزامن المخزون متعدد القنوات",
+      "category_tag": "RetailTech / SaaS / Omnichannel",
+      "business_model": "SaaS Subscription (Monthly/Annual) + Setup Fees + API Integration Tiering",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Retail & Commerce",
+      "Retail Tech",
+      "Information Technology"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "GCC (Booming E-commerce & Mall Culture)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Regional Brands expanding across borders",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "الرف الموحد: مزامنة التجارة متعددة القنوات",
+      "problem_statement": "يعاني تجار التجزئة العرب من 'تضارب المخزون' حيث يُباع منتج في المتجر الفيزيائي بينما لا يزال متاحاً أونلاين، مما يسبب خيبة أمل للعملاء وإلغاء طلبات. الفجوة هي منصة وسيطة (Middleware) تربط أنظمة نقاط البيع (POS) في المحلات بجميع المتاجر الإلكترونية (سلة، زد، شوبيفاي) وتطبيقات التوصيل لضمان مخزون موحد لحظياً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Wahid-Sync",
+        "industry_tag": "برمجيات إدارة التجارة الموحدة (Unified Commerce SaaS)",
+        "revenue_model": "Subscription per Store Location + Per-Order Processing Fee + Analytics Dashboard Add-on",
+        "action_text": "استعراض النظام الذي سيربط متاجرك ببعضها بذكاء"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التجارة المتصلة (0-24 شهر)",
+      "subtitle": "لا طلبات ملغاة بعد اليوم، رف واحد لكل قنواتك",
+      "phases": [
+        {
+          "title": "بناء جسور الربط (API-Connectors)",
+          "description": "تطوير روابط تقنية مع أشهر أنظمة الـ POS المحلية والعالمية ومنصات التجارة الإلكترونية الأكثر استخداماً في الوطن العربي.",
+          "icon": "share",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التزامن اللحظي (Real-time Sync)",
+          "description": "تفعيل نظام 'دفع المعلومات' (Push) الذي يقوم بتحديث المخزون في كافة المنصات خلال أقل من ثانية عند وقوع أي عملية بيع.",
+          "icon": "refresh",
+          "color_theme": "rose"
+        },
+        {
+          "title": "لوحة البيانات الذكية (Inventory-Insights)",
+          "description": "تزويد التاجر بتحليلات تتنبأ بنقص المخزون في فروع معينة وتقترح نقل البضائع بين الفروع بناءً على طلب الأونلاين.",
+          "icon": "presentation-chart-line",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Inventory Discrepancy Costs in MENA Retail vs Potential Growth from Omnichannel Fulfillment"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تهالك الأنظمة التقنية (Legacy Systems) لبعض تجار التجزئة الكبار.",
+        "صعوبة التعامل مع تباين البنية التحتية البرمجية بين الأنظمة المختلفة.",
+        "الحاجة لدقة عالية جداً في التزامن (Latency) لمنع تضارب البيع في أوقات الذروة.",
+        "ارتفاع تكلفة الحلول العالمية وعدم دعمها للغات والعملات المحلية بشكل جيد."
+      ],
+      "recommended_tech_stack": [
+        "Serverless Architecture (AWS Lambda/Google Functions)",
+        "Event-driven Microservices",
+        "Webhooks & REST APIs",
+        "Real-time Databases (Redis/Firestore)",
+        "Secure OAuth for Platform Connectivity"
+      ],
+      "main_risk_index": "الاعتماد على الغير؛ أي عطل في API المنصة المرتبطة (مثل سلة أو POS معين) قد يعطل التزامن، مما يتطلب أنظمة 'فحص صحة' (Health-checks) مستمرة."
+    }
+  }
+}

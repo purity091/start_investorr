@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-HLT02",
+      "status_label": "تحليل فجوة البيانات الجينية الإقليمية",
+      "category_tag": "HealthTech / Genomics / Big Data",
+      "business_model": "Data Licensing (B2B) + Personalized Health SaaS (B2C) + Pharma Research Partnerships",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Healthcare",
+      "Biotechnology",
+      "Precision Medicine"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Genome Project)", "flag": "🇸🇦" },
+        { "name": "UAE (Population Genomics)", "flag": "🇦🇪" },
+        { "name": "Qatar (BioBank)", "flag": "🇶🇦" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "جينوم العرب: الطب الشخصي والوقائي التخصصي",
+      "problem_statement": "معظم أبحاث الجينوم والأدوية العالمية مبنية على بيانات 'قوقازية' (غربية)، مما يجعل استجابة العرب لبعض الأدوية وتشخيصهم لبعض الأمراض (مثل السكري والثلاسيميا) غير دقيق. الفجوة هي بناء أكبر قاعدة بيانات جينية مشفرة للمنطقة العربية، واستخدام الذكاء الاصطناعي لتطوير 'نصائح وقائية وأدوية' مصممة خصيصاً للشفرة الوراثية العربية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Gene-Arabia",
+        "industry_tag": "الاستخبارات الجينية والطب الشخصي",
+        "revenue_model": "Personalized Nutrition/Health SaaS + Bio-data Insights for Pharma + Direct-to-Consumer Genetic Testing",
+        "action_text": "استعراض خطة ريادة العرب في الطب الدقيق لعام 2030"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الصحة السيادية (0-48 شهر)",
+      "subtitle": "فهم الجينات لتصميم حياة أطول وأفضل",
+      "phases": [
+        {
+          "title": "بناء مستودع البيانات الجينية الآمن",
+          "description": "تجميع وتشفير البيانات الجينية منBiobanks الإقليمية باستخدام تقنيات الخصوصية التفاضلية لضمان سرية الهوية.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التنبؤ بالمخاطر الصحية (AI Risk Engine)",
+          "description": "تطوير خوارزميات تتنبأ باحتمالية الإصابة بالأمراض المزمنة قبل وقوعها بسنوات بناءً على التقاطع بين الجينات ونمط الحياة.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة الأدوية المخصصة (PharmaConnect)",
+          "description": "التعاون مع شركات الأدوية لتعديل جرعات وتركيبات الأدوية لتناسب الأنماط الظاهرية (Phenotypes) السائدة في المنطقة.",
+          "icon": "beaker",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.7,
+      "data_points_analyzed": "Prevalence of Genetic Diseases in MENA vs Lack of Specialized Treatments"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الحساسية العالية جداً للبيانات الجينية والمخاوف من سوء استخدامها.",
+        "التكلفة العالية لتسلسل الجينوم الكامل (WGS) في السابق (أصبحت رخيصة الآن).",
+        "نقص الكوادر المتخصصة في علم المعلوماتية الحيوية (Bioinformatics) عربياً.",
+        "الحاجة لتشريعات قانونية صارمة تنظم ملكية البيانات الجينية."
+      ],
+      "recommended_tech_stack": [
+        "Next-Generation Sequencing (NGS)",
+        "Federated Learning (Privacy-preserving AI)",
+        "Blockchain for Patient Consent Management",
+        "High-Performance Computing (HPC) for Genomic Analysis",
+        "CRISPR-related Research Datasets"
+      ],
+      "main_risk_index": "الأخلاقيات والخصوصية؛ أي تسريب للبيانات الجينية قد يؤدي لأزمات اجتماعية وتأمينية، مما يتطلب تشفيراً بمستوى عسكري."
+    }
+  }
+}

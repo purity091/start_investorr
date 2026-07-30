@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-AGR06",
+      "status_label": "تحليل فجوة استعادة الأمن الغذائي",
+      "category_tag": "AgriTech / Marketplace / AI",
+      "business_model": "Sales Commission + Subscription for AI Consultation + Data Analytics",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Agriculture",
+      "Marketplace",
+      "Supply Chain"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Hama (Agri-Central)", "flag": "🇸🇾" },
+        { "name": "Idlib & Aleppo Plains", "flag": "🇸🇾" },
+        { "name": "Al-Ghab Plain", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 6
+    },
+    "core_content": {
+      "title": "سوق المدخلات الزراعية الذكي (Syria-AgriGate)",
+      "problem_statement": "يواجه المزارع السوري صعوبة هائلة في الحصول على بذور وأسمدة ومبيدات ذات جودة عالية وبأسعار عادلة، نتيجة سيطرة الاحتكار وتشتت سلاسل التوريد. كما يفتقر المزارعون للخبرة العلمية لمواجهة الآفات الجديدة. الفجوة هي منصة رقمية تربط المزارعين بالموردين مباشرة، مع مدمج ذكاء اصطناعي يقدم استشارات زراعية بناءً على صور المحاصيل."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Hadara-Agri",
+        "industry_tag": "تمكين المزارعين وتأمين الإمدادات",
+        "revenue_model": "10% Commission on Transactions + AI Crop Analysis Subscription + Group Buying Discounts",
+        "action_text": "استعراض خطة رقمنة سلسلة توريد الغذاء السورية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق النهضة الخضراء (0-24 شهر)",
+      "subtitle": "تأمين الأرض، تمكين المزارع",
+      "phases": [
+        {
+          "title": "منصة التجارة الجماعية (Group Buying)",
+          "description": "تجميع طلبات صغار المزارعين لشراء الأسمدة والبذور بكميات ضخمة لتقليل التكلفة بنسبة 25%.",
+          "icon": "shopping-cart",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "المساعد الزراعي الذكي (AI Doctor)",
+          "description": "تفعيل محرك رؤية حاسوبية يحلل صور الآفات على المحاصيل عبر الواتساب ويقدم توصيات فورية بنوع المبيد والجرعة.",
+          "icon": "search",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة تسويق المحصول (Market Access)",
+          "description": "ربط المزارعين بتجار الجملة والمصدرين مباشرة لضمان بيع المحصول بسعر عادل وتجنب الوسطاء.",
+          "icon": "globe",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.3,
+      "competitive_moat": 8.8,
+      "data_points_analyzed": "Agri-Input Inflation Rates vs Crop Yield Data"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف الوصول للإنترنت في المناطق الريفية (يتم حله عبر الـ SMS/WhatsApp Bots).",
+        "الاعتماد على نظام 'الدين' التقليدي من التجار المحليين.",
+        "نقص البيانات الموثوقة حول جودة البذور المتوفرة في الأسواق المحلية.",
+        "التغيرات المناخية الحادة التي تتطلب زراعة أصناف جديدة غير مألوفة للمزارع."
+      ],
+      "recommended_tech_stack": [
+        "Computer Vision for Pest ID",
+        "WhatsApp Business API Integration",
+        "Geospatial Mapping for Supply Chain",
+        "Blockchain for Seed Authenticity",
+        "Low-bandwidth Progressive Web App (PWA)"
+      ],
+      "main_risk_index": "المخاطر اللوجستية؛ صعوبة شحن المواد الكيميائية والأسمدة بين المحافظات نتيجة الأوضاع الأمنية تتطلب شبكة توزيع محلية قوية."
+    }
+  }
+}

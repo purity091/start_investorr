@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-GCC-2026-AGRI",
+      "status_label": "تحليل استخباري لابتكارات الأمن الغذائي",
+      "category_tag": "تكنولوجيا الزراعة (Robotics / Pollination Tech)",
+      "business_model": "Hardware-as-a-Service (HaaS) + Productivity Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "AgriTech",
+      "Robotics",
+      "Vertical Farming",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Qatar", "flag": "🇶🇦" }
+      ],
+      "additional_regions_count": 1
+    },
+    "core_content": {
+      "title": "تلقيح المستقبل في المزارع المغلقة",
+      "problem_statement": "تتوسع دول الخليج بجنون في الزراعة العمودية والمغلقة لتحقيق الأمن الغذائي، لكنها تواجه عقبة 'بيولوجية' صامتة: غياب الملقحات الطبيعية (النحل والرياح) داخل هذه البيئات. حالياً، يتم التلقيح يدوياً أو باستخدام نحل مستورد يموت سريعاً نتيجة الحرارة والبيئة الاصطناعية، مما يؤدي لانخفاض جودة المحصول بنسبة 30% وتكاليف تشغيلية باهظة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "PollenBot",
+        "industry_tag": "الروبوتات الزراعية والذكاء الاصطناعي الحيوي",
+        "revenue_model": "Robot Leasing + Yield Enhancement Bonus + Remote Monitoring Subscription",
+        "action_text": "استعراض تقنية التلقيح الآلي بدقة تضاهي الطبيعة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الأتمتة الحيوية (0-15 شهر)",
+      "subtitle": "استنساخ وظائف الطبيعة تقنياً",
+      "phases": [
+        {
+          "title": "الرؤية الحاسوبية للأزهار (Flower Recognition AI)",
+          "description": "تطوير نظام بصري يكتشف جاهزية الأزهار للتلقيح بدقة 99%، ويميز بين أنواع المحاصيل المختلفة داخل المزرعة الواحدة.",
+          "icon": "eye",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "الروبوتات الطائرة/الأرضية المصغرة (Pollination Swarm)",
+          "description": "إطلاق أسراب من الروبوتات الصغيرة (Drones/Bots) تحاكي حركة النحل وتستخدم الموجات فوق الصوتية أو اللمس اللطيف لنقل اللقاح دون إتلاف النبات.",
+          "icon": "sparkles",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نظام تحسين الغلة (Yield Optimizer)",
+          "description": "ربط عملية التلقيح ببيانات نمو الثمار، لتوفير خريطة حرارية للمزارع تظهر المناطق الأكثر إنتاجية والتنبؤ بحجم الحصاد القادم.",
+          "icon": "trending-up",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.3,
+      "liquidity_tam": 9.1,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "1500+ (Greenhouse Yield Stats & Pollination Success Rates)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "صعوبة التحكم في النحل التقليدي داخل المساحات المغلقة والمظلمة.",
+        "ارتفاع نسبة فشل التلقيح اليدوي نتيجة الخطأ البشري.",
+        "الحاجة لتقنيات تلقيح لا تعتمد على المواد الكيميائية أو الهرمونات للحفاظ على تصنيف 'عضوي'.",
+        "عدم توفر حلول روبوتية مصممة خصيصاً للمناخ الحار والرطوبة العالية داخل الصوب الخليجية."
+      ],
+      "recommended_tech_stack": [
+        "TinyML (Machine Learning on Edge)",
+        "Micro-Robotics (Bio-inspired)",
+        "Computer Vision (Object Detection)",
+        "Ultrasonic Vibration Tech",
+        "LiDAR for Indoor Navigation"
+      ],
+      "main_risk_index": "التعقيد البيولوجي؛ كل نوع من المحاصيل (طماطم، فراولة، فلفل) يحتاج لنمط تلقيح مختلف، مما يتطلب محرك ذكاء اصطناعي مرن وقابل للتكيف السريع."
+    }
+  }
+}

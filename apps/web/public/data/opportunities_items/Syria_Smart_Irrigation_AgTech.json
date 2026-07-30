@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-AGRI",
+      "status_label": "تحليل استخباري للأمن الغذائي والمائي",
+      "category_tag": "الزراعة (AgriTech / Water Management)",
+      "business_model": "B2B (Hardware + AI Insights)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "AgriTech",
+      "Precision Farming",
+      "Resource Conservation"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Al-Ghab Plain", "flag": "🇸🇾" },
+        { "name": "Hauran", "flag": "🇸🇾" },
+        { "name": "Euphrates Basin", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 8
+    },
+    "core_content": {
+      "title": "تقنيات الري الذكي والزراعة المستدامة للأراضي الجافة",
+      "problem_statement": "تعتبر الزراعة العمود الفقري للاقتصاد السوري، لكنها تواجه تهديداً وجودياً نتيجة الجفاف المتزايد ونقص المياه الجوفية. يعتمد المزارعون على طرق ري تقليدية تهدر كميات هائلة من المياه، بالإضافة إلى الارتفاع الهائل في تكلفة الوقود اللازم لتشغيل المضخات، مما أدى لخروج مساحات شاسعة من الإنتاج وتهديد الأمن الغذائي الوطني."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "AgriSmart-SY",
+        "industry_tag": "تكنولوجيا الزراعة الدقيقة",
+        "revenue_model": "Hardware Sales + Installation Fees + Yield Analysis SaaS",
+        "action_text": "عرض نظام توفير المياه وزيادة الإنتاجية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق النهضة الزراعية (0-20 شهر)",
+      "subtitle": "تحويل الحقول إلى أنظمة إنتاج ذكية",
+      "phases": [
+        {
+          "title": "نشر محطات الرصد والمضخات الشمسية",
+          "description": "استبدال مضخات الديزل بمضخات تعمل بالطاقة الشمسية وتزويد التربة بحساسات رطوبة ذكية لقياس الاحتياج الفعلي للنبات.",
+          "icon": "sun",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "أتمتة أنظمة الري بالتنقيط",
+          "description": "بناء صمامات ذكية تفتح وتغلق آلياً بناءً على بيانات الحساسات، مما يوفر حتى 60% من استهلاك المياه وتكاليف التسميد.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة التنبؤ والإنتاج",
+          "description": "توفير تطبيق للمزارعين يقدم توصيات حول مواعيد الزراعة والري والوقاية من الآفات بناءً على تحليل البيانات الضخمة والأقمار الصناعية.",
+          "icon": "chart-line",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.2,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "1300+ (Soil Moisture Records & Rainfall History)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ارتفاع التكلفة الرأسمالية الأولية للأنظمة الذكية مقارنة بالري التقليدي.",
+        "غياب الدعم الحكومي والتمويل البنكي للمشاريع الزراعية الحديثة.",
+        "نقص الوعي التقني لدى صغار المزارعين بفوائد الزراعة الدقيقة.",
+        "تشرذم الحيازات الزراعية مما يصعب تطبيق حلول تقنية موحدة."
+      ],
+      "recommended_tech_stack": [
+        "LoRaWAN Sensors for Field Data",
+        "Solar-powered Submersible Pumps",
+        "Cloud AI for Evapotranspiration Modeling",
+        "Automated Drip Irrigation Controllers",
+        "Satellite Imagery (NDVI) Integration"
+      ],
+      "main_risk_index": "تحدي التبني الميداني؛ يتطلب المشروع بناء مزارع نموذجية (Pilot Farms) لإثبات الجدوى الاقتصادية والوفر المادي للمزارع بشكل ملموس قبل التوسع."
+    }
+  }
+}

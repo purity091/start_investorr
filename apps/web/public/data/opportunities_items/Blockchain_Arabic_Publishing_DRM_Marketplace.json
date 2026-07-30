@@ -1,0 +1,92 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-PUB01",
+      "status_label": "تحليل فجوة حماية وتوزيع النشر الرقمي",
+      "category_tag": "Publishing / Blockchain / Intellectual-Property",
+      "business_model": "Direct Sales Fee (10-15%) + NFT-Book Licensing + Anti-piracy Subscriptions",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Publishing",
+      "Copyright Protection",
+      "Blockchain"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Egypt (Largest Content Producer)",
+          "flag": "🇪🇬"
+        },
+        {
+          "name": "Syria & Lebanon (Heritage Publishing)",
+          "flag": "🇸🇾"
+        },
+        {
+          "name": "Arab Authors Worldwide",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "سوق الكاتب: حماية النشر الرقمي بالبلوكشين",
+      "problem_statement": "تقتل القرصنة صناعة النشر العربية، حيث يتم تداول الكتب PDF مجاناً فور صدورها، مما يحرم الكتّاب والناشرين من عوائدهم ويؤدي لإغلاق دور النشر. الفجوة هي منصة نشر رقمية تعتمد على 'ترميز الكتب' (NFT-Books) بحيث لا يمكن قراءة الكتاب إلا عبر مفتاح مشفر فريد، مع إمكانية إعادة بيع الكتاب المستعمل (Digital Second-hand) مع حصول المؤلف على نسبة آلياً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Ketab-Chain",
+        "industry_tag": "العدالة الرقمية لصناعة النشر العربي",
+        "revenue_model": "Transaction Fee per Book Sale + Smart-Contract Resale Commission + Anti-piracy Tracking Fee",
+        "action_text": "استعراض المنصة التي تنهي عصر قرصنة الكتب العربية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الملكية الرقمية (0-24 شهر)",
+      "subtitle": "حماية الفكر، وضمان حقوق المبدع",
+      "phases": [
+        {
+          "title": "بناء القارئ المشفر (Encrypted e-Reader)",
+          "description": "تطوير تطبيق قراءة فائق الأمان يمنع 'تصوير الشاشة' (Screenshot) ويفك تشفير الكتاب لحظياً عند التأكد من ملكية الرمز الرقمي.",
+          "icon": "book-open",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بروتوكول العقود الذكية للمؤلفين",
+          "description": "برمجة عقود توزع الأرباح آلياً بين الكاتب، الناشر، والموزع فور عملية البيع، دون الحاجة لوسطاء أو تقارير ورقية.",
+          "icon": "link",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق 'سوق الكتب المستعملة الرقمي'",
+          "description": "توفير ميزة تتيح للقارئ بيع نسخته الرقمية لشخص آخر بعد قراءتها، مع ضمان ذهاب نسبة من قيمة البيع للمؤلف الأصلي تلقائياً.",
+          "icon": "switch-horizontal",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.8,
+      "data_points_analyzed": "Piracy Rates for Arabic E-books vs Growth of Digital Reading Devices"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "سهولة تداول ملفات PDF وEPUB التقليدية وضعف الحماية الرقمية الحالية (DRM).",
+        "نقص الوعي بمزايا البلوكشين لدى دور النشر التقليدية.",
+        "التكلفة العالية لإنتاج منصات قراءة مخصصة ومحمية.",
+        "ثقافة 'المجانية' المترسخة في استهلاك المحتوى الرقمي العربي."
+      ],
+      "recommended_tech_stack": [
+        "Polygon/Ethereum for Asset Tokenization",
+        "E-Ink Optimized Mobile Apps",
+        "AES-256 Multi-layer Encryption",
+        "InterPlanetary File System (IPFS) for Secure Storage",
+        "Dynamic Watermarking Technology"
+      ],
+      "main_risk_index": "تبني المستخدم؛ إذا كانت تجربة القراءة المشفرة معقدة أو بطيئة، سيعود القراء للنسخ المقرصنة السهلة، مما يتطلب واجهة مستخدم (UX) فائقة السلاسة."
+    }
+  }
+}

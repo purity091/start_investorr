@@ -1,0 +1,81 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-HR10",
+      "status_label": "تحليل فجوة الثقة والمهارة في الخدمات الفنية المنزلية",
+      "category_tag": "تكنولوجيا الموارد البشرية (HR-Tech / Gig-Economy)",
+      "business_model": "Commission + Verification Subscription + Value Added Insurance",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Services",
+      "Skill Verification",
+      "Consumer Tech"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Qatar", "flag": "🇶🇦" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "المنصة الوطنية الموحدة للعمالة المهنية المعتمدة",
+      "problem_statement": "يعاني سكان المدن الكبرى من صعوبة الوصول لفنيين (كهرباء، سباكة، تكييف) موثوقين ومهرة. السوق مليء بعمالة غير مدربة تسبب أضراراً للمنازل، مع غياب كامل لنظام تقييم حقيقي يربط المهارة بالهوية القانونية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Mohtarif",
+        "industry_tag": "بوابة المحترفين المعتمدين",
+        "revenue_model": "10-15% Booking Fee + Professional Certification Fees + Liability Insurance Premium",
+        "action_text": "استعراض حل الأمان والجودة لخدمات الصيانة المنزلية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة الجودة المهنية (0-12 شهر)",
+      "subtitle": "بناء الثقة في كل لمصلحة",
+      "phases": [
+        {
+          "title": "الفحص والتدقيق (Vetting)",
+          "description": "الربط مع الهيئات الحكومية للتحقق من السجل الجنائي والتصاريح القانونية لكل فني.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "مركز اختبار المهارات",
+          "description": "إجراء اختبارات عملية (Offline/Online) لمنح 'شارة المهارة' التي ترفع من رتبة الفني وسعره في المنصة.",
+          "icon": "badge-check",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نظام الضمان والتعويض",
+          "description": "تفعيل بوليصة تأمين تلقائية لكل خدمة تتم عبر المنصة لحماية العميل والفني من الأخطاء العرضية.",
+          "icon": "hand-holding-heart",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 8.8,
+      "data_points_analyzed": "10,000+ (Home Service Complaints & Market Size Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "سيادة السوق غير الرسمي (العمالة السائبة).",
+        "نقص المنصات التي تضمن حق العميل في حال سوء التنفيذ.",
+        "ارتفاع معدل دوران العمالة وصعوبة تتبع تاريخهم المهني."
+      ],
+      "recommended_tech_stack": [
+        "AI for Matchmaking (Location/Skill)",
+        "Digital ID Integration (Absher/UAE Pass)",
+        "Blockchain for Work History",
+        "Automated Escrow Payments"
+      ],
+      "main_risk_index": "المنافسة السعرية؛ ميل المستهلك للبحث عن 'الأرخص' يتطلب حملات توعوية لربط السعر بالجودة والأمان."
+    }
+  }
+}

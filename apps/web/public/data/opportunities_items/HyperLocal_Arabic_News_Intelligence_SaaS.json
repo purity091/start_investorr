@@ -1,0 +1,92 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-MED07",
+      "status_label": "تحليل فجوة استخبارات الأخبار المحلية الفائقة",
+      "category_tag": "MediaTech / AI / Hyper-Local",
+      "business_model": "Ad Revenue Share + Premium Subscriptions + Corporate Data Licensing",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Media",
+      "Information Technology",
+      "Social Impact"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Syrian Provinces (Homs, Latakia, etc.)",
+          "flag": "🇸🇾"
+        },
+        {
+          "name": "Iraqi Cities",
+          "flag": "🇮🇶"
+        },
+        {
+          "name": "Maghreb Villages",
+          "flag": "🇲🇦"
+        }
+      ],
+      "additional_regions_count": 50
+    },
+    "core_content": {
+      "title": "خبر حارتك: استخبارات الأخبار المحلية الفائقة",
+      "problem_statement": "تغطي وسائل الإعلام الكبرى أخبار 'العواصم والسياسة'، بينما يفتقر المواطن العربي لمعلومات دقيقة عن 'حيّه' (انقطاع مياه، فتح طريق، فعالية محلية). الفجوة هي منصة تعتمد على الـ AI لجمع وتحليل 'همسات' التواصل الاجتماعي والتقارير الميدانية لتقديم نشرة أخبار مخصصة لكل حي سكني بدقة متناهية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Hay-News",
+        "industry_tag": "الإعلام المجتمعي المدعوم بالذكاء الاصطناعي",
+        "revenue_model": "Hyper-local Targeted Ads + Premium 'Service Alerts' Subscription + B2G Data Insights",
+        "action_text": "استعراض منصة أخبار الحي الأول في الوطن العربي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق إعلام الحي (0-24 شهر)",
+      "subtitle": "المعلومة التي تهمك، في مكانك",
+      "phases": [
+        {
+          "title": "محرك الاستماع الاجتماعي (Social Listening)",
+          "description": "بناء AI يراقب مجموعات الفيسبوك، واتساب، وتلغرام المحلية لتحليل الاتجاهات والمشاكل التي يناقشها سكان كل منطقة.",
+          "icon": "rss",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "شبكة 'المخبرين المواطنين' (Verified Citizens)",
+          "description": "تفعيل نظام توثيق للمستخدمين الموثوقين في كل حي لإرسال أخبار وصور ميدانية فورية مع نظام مكافآت.",
+          "icon": "user-group",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نشرة الخدمات اللحظية (Utility Alerts)",
+          "description": "توفير تنبيهات دقيقة حول الخدمات العامة (كهرباء، ماء، طرق) بناءً على تقاطعات البيانات الحكومية والبلاغات الشعبية.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "Engagement Rates on Local Facebook Groups vs National News Portals"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "صعوبة التحقق من صحة 'أخبار الشارع' وتجنب الإشاعات.",
+        "التكلفة العالية لتغطية مئات المدن الصغيرة بفرق عمل تقليدية.",
+        "نقص النماذج الربحية للإعلام المحلي مقارنة بالإعلام العام.",
+        "التحديات التقنية في فهم اللهجات العامية الدقيقة لكل منطقة."
+      ],
+      "recommended_tech_stack": [
+        "NLP for Arabic Dialect Analysis",
+        "Geofencing for Targeted Delivery",
+        "Fact-checking Scoring Algorithms",
+        "Automated Content Summarization",
+        "Community Moderation AI"
+      ],
+      "main_risk_index": "الموثوقية؛ أي خطأ في خبر محلي قد يسبب ذعراً أو مشاكل اجتماعية، مما يتطلب نظام 'فلترة' بشري وتقني مزدوج."
+    }
+  }
+}

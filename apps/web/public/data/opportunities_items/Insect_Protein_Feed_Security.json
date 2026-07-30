@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-DEEP-2026-BIO04",
+      "status_label": "تحليل فجوة استدامة سلاسل التوريد العلفية",
+      "category_tag": "BioTech / AgriTech / Circular Economy",
+      "business_model": "B2B Feed Sales + Organic Waste Processing Fees + Tech Franchising",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Agriculture",
+      "Bio-Manufacturing",
+      "Food Security"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt (Waste Logistics)", "flag": "🇪🇬" },
+        { "name": "Saudi Arabia (Food Waste Redux)", "flag": "🇸🇦" },
+        { "name": "Sudan (Agri-Resources)", "flag": "🇸🇩" }
+      ],
+      "additional_regions_count": 6
+    },
+    "core_content": {
+      "title": "ثورة البروتين الحيوي: إنتاج الأعلاف من المخلفات الغذائية",
+      "problem_statement": "تستورد المنطقة العربية 80% من بروتين أعلاف الدواجن والأسماك (مثل الصويا والسمك المجفف)، مما يجعل أسعار الغذاء مرتبطة بتقلبات الدولار والشحن العالمي. في الوقت نفسه، يتم إهدار ملايين الأطنان من الطعام. الفجوة هي استخدام 'يرقات الحشرات' (BSFL) لتحويل النفايات العضوية إلى بروتين عالي الجودة بكسر تكلفة المستورد."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Protein-Loom",
+        "industry_tag": "إنتاج البروتين الحيوي الدائري",
+        "revenue_model": "Sale of High-protein Animal Feed + Organic Fertilizer (Frass) + Waste Collection Fees",
+        "action_text": "استعراض تقنية تحويل نفايات الطعام إلى ذهب بروتيني"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الاستقلال العلفي (0-24 شهر)",
+      "subtitle": "تأمين البروتين من الطبيعة المحلية",
+      "phases": [
+        {
+          "title": "منظومة جمع وفرز النفايات العضوية",
+          "description": "بناء شبكة لوجستية لجمع مخلفات الفنادق والمطاعم والمصانع الغذائية ومعالجتها لتكون بيئة نمو للحشرات.",
+          "icon": "truck",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "مفاعلات التربية الحيوية الذكية",
+          "description": "بناء وحدات مغلقة متحكم بها حرارياً لاستزراع 'يرقات الذبابة الجندية السوداء' التي تحول النفايات لبروتين في 14 يوماً فقط.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "معالجة وتحويل المنتج النهائي",
+          "description": "تجفيف اليرقات وتحويلها إلى مسحوق بروتيني (Meal) وزيت عضوي، ومعالجة فضلاتها كأسمدة زراعية فاخرة.",
+          "icon": "beaker",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "Feed Import Costs vs Organic Waste Generation Data"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الوصمة الاجتماعية المرتبطة باستخدام الحشرات (تتلاشى في القطاع الصناعي).",
+        "غياب المعايير القياسية لاستخدام بروتين الحشرات في الأعلاف الحيوانية محلياً.",
+        "التحديات اللوجستية في فصل النفايات العضوية عن النفايات العامة.",
+        "الحاجة لاستثمارات أولية في تقنيات 'الأتمتة الحيوية' لضمان ثبات الجودة."
+      ],
+      "recommended_tech_stack": [
+        "Automated Bio-Reactors",
+        "AI for Larvae Growth Optimization",
+        "IoT Environmental Controls",
+        "Low-energy Dehydration Systems",
+        "Molecular Analysis for Protein Quality"
+      ],
+      "main_risk_index": "مخاطر العدوى الحيوية؛ أي مرض قد يصيب مستعمرة الحشرات قد يوقف الإنتاج، مما يتطلب بروتوكولات تعقيم صارمة."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-HEALTH-2026-GENOME-NUT",
+      "status_label": "تحليل استخباري لطب نمط الحياة",
+      "category_tag": "الصحة (Genomics / Wellness)",
+      "business_model": "D2C (Kit Sales) + Subscription (Meal Plans)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Genetics",
+      "Personalized Medicine",
+      "Consumer BioTech"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Qatar", "flag": "🇶🇦" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "التغذية الشخصية القائمة على تحليل الجينوم",
+      "problem_statement": "تعاني المنطقة من أعلى معدلات السمنة والسكري في العالم، والأنظمة الغذائية العامة غالباً ما تفشل لأن استجابة الأجسام تختلف بناءً على الجينات. المستهلكون يبحثون عن حلول علمية دقيقة تخبرهم ماذا يأكلون بناءً على حمضهم النووي (DNA) لتجنب الأمراض المزمنة وتحسين الأداء الجسدي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "GenoDiet-AR",
+        "industry_tag": "التحليل الجيني للمستهلك",
+        "revenue_model": "DNA Test Kit Sale + Monthly Personalized Supplement/Meal Plan Subscription",
+        "action_text": "استعراض خطة الربط بين الجينات وتوصيات الغذاء اللحظية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الصحة الجينية (0-15 شهر)",
+      "subtitle": "فك شفرة الغذاء المناسب لجسمك",
+      "phases": [
+        {
+          "title": "تطوير طقم الفحص المنزلي (Saliva Kit)",
+          "description": "توفير وسيلة سهلة لجمع عينات اللعاب وإرسالها للمختبر لتحليل المتغيرات الجينية المرتبطة بالأيض، الحساسية الغذائية، وامتصاص الفيتامينات.",
+          "icon": "beaker",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التوصيات الذكي (AI Bio-Engine)",
+          "description": "ترجمة تقرير الجينات المعقد إلى خطة عمل يومية (قوائم طعام، مكملات) عبر تطبيق سهل الاستخدام يتوافق مع المطابخ العربية المحلية.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "سوق المكملات والمواد الغذائية (Marketplace)",
+          "description": "ربط المريض بموردين يوفرون وجبات ومكملات مصممة خصيصاً لنتائجه الجينية، مما يخلق دورة إيرادات مستمرة.",
+          "icon": "shopping-bag",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.1,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 8.8,
+      "data_points_analyzed": "5000+ (Genetic Markers & Nutritional Studies)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية سابقاً لفحص تسلسل الجينوم.",
+        "صعوبة ترجمة التقارير العلمية الجافة إلى نصائح يومية عملية.",
+        "غياب البيانات الجينية الخاصة بالمجتمع العربي (أغلب الدراسات غربية).",
+        "الحاجة لربط الفحص بتوافر المواد الغذائية والوجبات في السوق المحلي."
+      ],
+      "recommended_tech_stack": [
+        "Next-Generation Sequencing (NGS)",
+        "Bioinformatics Pipelines",
+        "Machine Learning for Nutrigenomics",
+        "API integrations with Food Delivery Apps",
+        "Secure Genomics Data Vaults"
+      ],
+      "main_risk_index": "خصوصية البيانات؛ البيانات الجينية هي الأكثر حساسية على الإطلاق، لذا فإن بناء نظام تشفير سيادي هو ضرورة قصوى للقبول الشعبي."
+    }
+  }
+}

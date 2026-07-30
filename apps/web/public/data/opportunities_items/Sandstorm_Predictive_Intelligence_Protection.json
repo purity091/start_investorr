@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-ENV18",
+      "status_label": "تحليل فجوة التنبؤ بالمخاطر الجوية والبيئية",
+      "category_tag": "ClimateTech / AI / Infrastructure Protection",
+      "business_model": "SaaS per Installation + Gov/Airport Data Subscriptions + Insurance Risk Modeling",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Environment",
+      "Infrastructure",
+      "Predictive AI"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (NEOM/Riyadh Infrastructure)", "flag": "🇸🇦" },
+        { "name": "Kuwait & Iraq (High Sandstorm Frequency)", "flag": "🇰🇼" },
+        { "name": "UAE (Solar Plant Protection)", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "درع العواصف: نظام التنبؤ والحماية من الرمال",
+      "problem_statement": "تسبب العواصف الرملية خسائر بمليارات الدولارات سنوياً في المنطقة نتيجة تعطيل المطارات، تدمير كفاءة الألواح الشمسية، ومشاكل الجهاز التنفسي. الفجوة هي نظام تنبؤ فائق الدقة (Hyper-local) يستخدم الـ AI والأقمار الصناعية لإعطاء إنذار مبكر وتفعيل أنظمة حماية آلياً (مثل تنظيف الألواح أو إغلاق الممرات)."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sajir-Shield",
+        "industry_tag": "المرونة المناخية وحماية الأصول",
+        "revenue_model": "Subscription Fee for Infrastructure Managers + API Licensing for Solar Plants + Gov Alerting Fees",
+        "action_text": "استعراض حماية الأصول الاستراتيجية من زحف الرمال"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المرونة البيئية (0-36 شهر)",
+      "subtitle": "التنبؤ بالخطر قبل وصوله بفضل الذكاء الاصطناعي",
+      "phases": [
+        {
+          "title": "نشر شبكة الحساسات البيئية (Dust-IoT)",
+          "description": "توزيع حساسات لقياس جزيئات الغبار وسرعة الرياح في ممرات العواصف التاريخية لتغذية نموذج التنبؤ ببيانات لحظية.",
+          "icon": "rss",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التنبؤ الكوني (Sand-Forecaster)",
+          "description": "دمج بيانات الأقمار الصناعية مع البيانات الميدانية لبناء نموذج محاكاة يتنبأ بمسار وكثافة العاصفة الرملية بدقة 95%.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التفعيل الآلي للحماية (Auto-Mitigation)",
+          "description": "ربط نظام التنبؤ بمحطات الطاقة الشمسية والمطارات لتفعيل أنظمة التنظيف الروبوتية أو تعديل مسارات الطيران آلياً قبل وصول العاصفة.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "Annual Economic Loss from Sandstorms vs Predictive Accuracy ROI"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "صعوبة التنبؤ بحركة الرمال الدقيقة نتيجة تداخل العوامل المناخية المعقدة.",
+        "الاعتماد على نماذج طقس عامة لا تراعي التضاريس المحلية الدقيقة.",
+        "ضعف الربط بين أنظمة الأرصاد الجوية وأنظمة تشغيل البنية التحتية.",
+        "التكلفة العالية لتغطية المساحات الشاسعة بشبكات الحساسات."
+      ],
+      "recommended_tech_stack": [
+        "AI Deep Learning for Weather Pattern Recognition",
+        "Satellite Imagery Processing (Sentinel/MODIS)",
+        "IoT Long-range Wireless Sensors",
+        "Edge-computing for Real-time Alerts",
+        "Robotic Interface for Infrastructure Control"
+      ],
+      "main_risk_index": "دقة التنبؤ؛ أي إنذار خاطئ قد يسبب خسائر نتيجة إغلاق مرافق بشكل غير ضروري، مما يتطلب خوارزميات 'تثبت متعدد' (Multi-source Verification)."
+    }
+  }
+}

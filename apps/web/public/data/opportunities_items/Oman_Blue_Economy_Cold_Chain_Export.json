@@ -1,0 +1,82 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-OMN-2026-BLUE",
+      "status_label": "تحليل استخباري لاستغلال الثروات البحرية",
+      "category_tag": "اللوجستيات المتقدمة (Smart Cold Chain / Marine Logistics)",
+      "business_model": "Integrated Logistics + Export Intelligence",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Logistics",
+      "Blue Economy",
+      "Cold Chain",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Oman", "flag": "🇴🇲" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "تعظيم قيمة الصادرات البحرية العُمانية",
+      "problem_statement": "تمتلك عُمان سواحل تمتد لـ 3165 كم وثروة سمكية هائلة، لكنها تفقد ما يصل إلى 35% من قيمة إنتاجها نتيجة ضعف سلاسل التبريد والتأخر اللوجستي. معظم الصادرات تخرج 'كمواد خام' بأسعار منخفضة، بينما تفتقر السلطنة لمنظومة تبريد ذكية تضمن الجودة العالية المطلوبة في الأسواق الأوروبية والآسيوية (Premium Markets)، مما يضيع مليارات الدولارات من العوائد المحتملة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "MarineCold-OMN",
+        "industry_tag": "الخدمات اللوجستية المتخصصة في المأكولات البحرية",
+        "revenue_model": "Logistics Fees per Ton + Flash Freezing Services + Export Facilitation Commission",
+        "action_text": "استعراض خطة الربط بين موانئ الصيد والأسواق العالمية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الاقتصاد الأزرق (0-18 شهر)",
+      "subtitle": "من البحر إلى المائدة العالمية بجودة فائقة",
+      "phases": [
+        {
+          "title": "مراكز التجميد الفائق (Flash Freezing Hubs)",
+          "description": "تأسيس مراكز تبريد وتجميد فائق عند موانئ الصيد الرئيسية (الدقم، صلالة، صحار) للحفاظ على القيمة الغذائية والجودة اللحظية للصيد.",
+          "icon": "snowflake",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منظومة التتبع الرقمي (Sea-to-Plate Traceability)",
+          "description": "تفعيل نظام تتبع عبر الـ IoT والبلوكشين يثبت وقت الصيد، الموقع، وتاريخ درجات الحرارة، وهو المطلب الأول للمستوردين في أوروبا واليابان.",
+          "icon": "location-marker",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة التصدير المباشر (Direct Export Bridge)",
+          "description": "ربط الصيادين والشركات المحلية مباشرة بأسواق الجملة العالمية عبر منصة رقمية تلغي الوسطاء وتزيد من هامش ربح المنتج العُماني.",
+          "icon": "globe-alt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.3,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "1800+ (Oman Fishery Reports & Global Seafood Pricing)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تشتت الصيادين التقليديين وصعوبة تنظيمهم في سلسلة توريد موحدة.",
+        "ضعف الاستثمارات الخاصة في تكنولوجيا التبريد العميق (IQF) محلياً.",
+        "الاعتماد على النقل البري التقليدي الذي لا يضمن ثبات درجات الحرارة.",
+        "غياب 'العلامة التجارية' العُمانية القوية في أسواق السمك العالمية الفاخرة."
+      ],
+      "recommended_tech_stack": [
+        "IQF (Individual Quick Freezing) Technology",
+        "IoT Temperature Sensors (Real-time)",
+        "Blockchain Traceability Platform",
+        "AI for Market Price Forecasting",
+        "Smart Packaging Solutions"
+      ],
+      "main_risk_index": "التحديات الجيوسياسية في طرق الملاحة؛ تتطلب المنصة استراتيجية نقل جوي وبحري مرنة لضمان وصول المنتج الطازج في أسرع وقت."
+    }
+  }
+}

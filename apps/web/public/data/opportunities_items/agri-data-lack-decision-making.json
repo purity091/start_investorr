@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-AGRI9",
+      "status_label": "تحليل فجوة البيانات الزراعية",
+      "category_tag": "AgriTech (Data / Analytics)",
+      "business_model": "SaaS Platform + Data Subscription + API",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Agriculture",
+      "Data",
+      "Analytics"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Iraq", "flag": "🇮🇶" }
+      ],
+      "additional_regions_count": 9
+    },
+    "core_content": {
+      "title": "منصة بيانات زراعية لاتخاذ القرار الذكي",
+      "problem_statement": "يعتمد معظم المزارعين في العالم العربي على الخبرة الشخصية في اتخاذ قرارات الزراعة، مع غياب شبه كامل للبيانات الدقيقة حول الطقس، التربة، والأسواق. هذا يؤدي إلى قرارات غير دقيقة وخسائر متكررة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "AgriDataX",
+        "industry_tag": "تحليل البيانات الزراعية",
+        "revenue_model": "Subscription + API + Enterprise Licensing",
+        "action_text": "استعراض قرارات زراعية مبنية على البيانات"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة البيانات الزراعية (0-12 شهر)",
+      "subtitle": "الزراعة بالبيانات",
+      "phases": [
+        {
+          "title": "جمع البيانات",
+          "description": "دمج بيانات الطقس والتربة والأسواق.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تحليل البيانات",
+          "description": "بناء نماذج تحليل وتوصيات.",
+          "icon": "cpu",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تقديم التوصيات",
+          "description": "عرض insights للمزارعين عبر منصة سهلة.",
+          "icon": "chart",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "2600+ (Agricultural Data Sets)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "نقص البيانات المنظمة.",
+        "ضعف البنية الرقمية.",
+        "قلة استخدام التكنولوجيا.",
+        "غياب منصات موحدة."
+      ],
+      "recommended_tech_stack": [
+        "Data Aggregation Systems",
+        "AI Analytics",
+        "APIs",
+        "Cloud Platforms",
+        "Mobile Apps"
+      ],
+      "main_risk_index": "جودة البيانات؛ يعتمد المشروع على دقة وتكامل البيانات."
+    }
+  }
+}

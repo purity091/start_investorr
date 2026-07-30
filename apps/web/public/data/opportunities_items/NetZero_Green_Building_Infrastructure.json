@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-CON-2026-NET-ZERO",
+      "status_label": "تحليل استخباري للاقتصاد الدائري في العمران",
+      "category_tag": "الاستدامة (GreenTech / Net Zero)",
+      "business_model": "EPC (Engineering, Procurement, Construction) + Energy Savings Share",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Sustainability",
+      "Renewable Energy",
+      "Eco-Materials"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (SGI)", "flag": "🇸🇦" },
+        { "name": "UAE (COP 28 Legacy)", "flag": "🇦🇪" },
+        { "name": "Morocco (Green Energy Leader)", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "الأبنية الخضراء وحيادية الكربون ونظم الطاقة المدمجة",
+      "problem_statement": "تعتبر المباني مسؤولة عن 40% من انبعاثات الكربون العالمية. ومع فرض 'ضريبة الكربون' في 2026 وتوجه صناديق الاستثمار العالمية نحو المشاريع المتوافقة مع معايير (ESG)، أصبحت المباني التقليدية أصولاً عالية المخاطر وصعبة التمويل وغير مرغوبة للمستأجرين الكبار."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Waha-Green",
+        "industry_tag": "تطوير المنشآت الصفرية كربونياً",
+        "revenue_model": "Turnkey Construction + Carbon Credit Generation + Shared Utility Savings",
+        "action_text": "استعراض مباني تنتج طاقة أكثر مما تستهلك عبر الزجاج الشمسي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الحياد الكربوني (0-20 شهر)",
+      "subtitle": "مباني تتنفس وتولد طاقتها ذاتياً",
+      "phases": [
+        {
+          "title": "دمج الألواح الشمسية الشفافة (BIPV)",
+          "description": "استبدال واجهات المباني الزجاجية بزجاج توليد طاقة شمسية شفاف، يحول واجهة المبنى بالكامل إلى محطة طاقة دون المساس بالجمال المعماري.",
+          "icon": "sun",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "أنظمة التبريد السلبي وإدارة مياه الأمطار",
+          "description": "تصميم أنظمة تهوية طبيعية وتدوير للمياه الرمادية لاستخدامها في تبريد المبنى وري المساحات الخضراء العمودية، لتقليل الضغط على الشبكة العامة.",
+          "icon": "refresh",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بناء الهوية الكربونية الرقمية",
+          "description": "توثيق البصمة الكربونية للمبنى عبر البلوكشين للحصول على شهادات كربون قابلة للتداول، مما يخلق مصدر دخل إضافي للمالك.",
+          "icon": "globe",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "2000+ ESG Global Standards"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ارتفاع تكلفة المواد الإنشائية المستدامة مقارنة بالتقليدية (توازنت الآن).",
+        "الحاجة لخبرات هندسية متكاملة تجمع بين المعمار والطاقة والبيئة.",
+        "تأخر التشريعات الملزمة للحياد الكربوني (أصبحت ملزمة في 2026).",
+        "غياب آليات واضحة لتمويل 'الفرق السعري' للمباني الخضراء."
+      ],
+      "recommended_tech_stack": [
+        "Building-Integrated Photovoltaics (BIPV)",
+        "Phase Change Materials (PCM) for Cooling",
+        "Smart Glass (Electrochromic)",
+        "Greywater Recycling Systems",
+        "Energy Management AI (EMS)"
+      ],
+      "main_risk_index": "عائد الاستثمار (ROI)؛ إقناع المستثمر بأن التكلفة الإضافية (7-10%) ستسترد خلال 5 سنوات من توفير الطاقة والضرائب الكربونية."
+    }
+  }
+}

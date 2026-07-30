@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-KSA-2026-WASTE",
+      "status_label": "تحليل استخباري للاقتصاد الدائري (Vision 2030)",
+      "category_tag": "البيئة والاستدامة (Circular Economy / CleanTech)",
+      "business_model": "B2B + B2G (SaaS & Operational)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Sustainability",
+      "Waste-to-Resource",
+      "Smart Cities",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Riyadh", "flag": "🇸🇦" },
+        { "name": "Jeddah", "flag": "🇸🇦" },
+        { "name": "NEOM", "flag": "🇸🇦" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "أتمتة الاقتصاد الدائري في المدن الكبرى",
+      "problem_statement": "تنتج المدن السعودية الكبرى أكثر من 15 مليون طن من النفايات البلدية سنوياً، يُعاد تدوير أقل من 5% منها حالياً. مع توجه رؤية 2030 لاستبعاد 94% من النفايات عن المرادم، تبرز فجوة هائلة في 'الفرز من المصدر' واللوجستيات العكسية. الشركات والمجمعات التجارية تفتقر لنظام تتبع رقمي يحول النفايات من عبء تكلفي إلى أصل مالي قابل للتداول."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "WasteFlow",
+        "industry_tag": "الذكاء الاصطناعي في إدارة سلاسل التدوير",
+        "revenue_model": "SaaS Subscription + Marketplace Commission + Recycled Material Trading",
+        "action_text": "استعراض نموذج الربحية من استعادة المواد الخام"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق استعادة الموارد (0-18 شهر)",
+      "subtitle": "من إدارة النفايات إلى تعدين الموارد الحضرية",
+      "phases": [
+        {
+          "title": "الفرز الذكي واللوجستيات (Smart Collection)",
+          "description": "نشر حاويات متصلة بإنترنت الأشياء (IoT) في المجمعات الكبرى لقياس الامتلاء ونوع النفايات لحظياً، مع تحسين مسارات الشاحنات لتقليل الانبعاثات بنسبة 30%.",
+          "icon": "truck",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التصنيف الآلي (AI Sorting Layer)",
+          "description": "استخدام الرؤية الحاسوبية (Computer Vision) في مراكز التجميع لتصنيف النفايات (بلاستيك، ورق، معادن) بدقة تفوق العنصر البشري، لضمان نقاء المواد الخام المعاد تدويرها.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بورصة المواد المستعادة (Resource Exchange)",
+          "description": "إطلاق منصة تداول تربط بين مصانع التدوير والشركات المصنعة التي تحتاج لمواد معاد تدويرها (rPET, rAluminium) للامتثال لمعايير الاستدامة العالمية.",
+          "icon": "refresh",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.2,
+      "competitive_moat": 8.7,
+      "data_points_analyzed": "3400+ (Municipal Waste Logs & Vision 2030 Targets)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "غياب حوافز اقتصادية واضحة للشركات للقيام بالفرز من المصدر.",
+        "الاعتماد التاريخي على المرادم الرخيصة كحل نهائي للنفايات.",
+        "تشتت قطاع جمع النفايات بين شركات صغيرة تفتقر للحلول الرقمية.",
+        "الحاجة لبنية تحتية لوجستية متطورة تتحمل الظروف المناخية القاسية."
+      ],
+      "recommended_tech_stack": [
+        "IoT Fill-level Sensors",
+        "AI Computer Vision for Material Grading",
+        "Blockchain for Recycled Material Provenance",
+        "Dynamic Routing Algorithms",
+        "ERP Integration for ESG Reporting"
+      ],
+      "main_risk_index": "المخاطر التشغيلية؛ يتطلب المشروع تنسيقاً وثيقاً مع المركز الوطني لإدارة النفايات (موان) لضمان المواءمة مع التشريعات المتسارعة في هذا القطاع."
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ENERGY7",
+      "status_label": "تحليل فجوة رقمنة الشبكات الكهربائية",
+      "category_tag": "Smart Grid (Digital Grid / Demand Response)",
+      "business_model": "Utility SaaS + Smart Meter Analytics + Government/Utility Contracts",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Energy",
+      "Smart Grid",
+      "Digital Infrastructure"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Oman", "flag": "🇴🇲" }
+      ],
+      "additional_regions_count": 9
+    },
+    "core_content": {
+      "title": "منصة رقمنة الشبكات الكهربائية وإدارة الطلب لحظياً",
+      "problem_statement": "تواجه الشبكات الكهربائية في المنطقة ضغطاً متزايداً بسبب النمو السكاني، التوسع العمراني، ارتفاع درجات الحرارة، زيادة أحمال التكييف، ودخول مصادر متجددة متقطعة. كثير من الشبكات لا تزال تعمل بمنطق تقليدي: إنتاج مركزي، قياس محدود، واستجابة بطيئة للأعطال. الشبكة الذكية تحول الكهرباء من نظام جامد إلى نظام رقمي يتوقع الأحمال، يكتشف الأعطال، يوجه الطاقة بكفاءة، ويخفض الذروة بدل بناء محطات جديدة مكلفة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "GridOS MENA",
+        "industry_tag": "أنظمة الشبكات الذكية وإدارة الطلب",
+        "revenue_model": "Utility Licensing + Smart Meter Analytics + Demand Response Revenue Share",
+        "action_text": "استعراض لوحة تحكم ذكية تكشف الأحمال والأعطال وتدير الطلب الكهربائي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة الشبكة الذكية (0-24 شهر)",
+      "subtitle": "تحويل الشبكة من بنية كهربائية إلى منصة بيانات",
+      "phases": [
+        {
+          "title": "طبقة القياس والبيانات",
+          "description": "دمج بيانات العدادات الذكية، المحولات، الأحمال الصناعية، ومحطات التوزيع في منصة واحدة لخلق رؤية لحظية للشبكة.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "التنبؤ بالأحمال واكتشاف الأعطال",
+          "description": "استخدام نماذج AI للتنبؤ بذروة الطلب، كشف الأعطال قبل تفاقمها، وتحسين توزيع الأحمال بين المناطق.",
+          "icon": "activity",
+          "color_theme": "rose"
+        },
+        {
+          "title": "برامج إدارة الطلب",
+          "description": "تفعيل Demand Response مع المصانع والمباني الكبرى عبر حوافز مالية لتقليل الاستهلاك في أوقات الذروة، مما يقلل الحاجة لاستثمارات ضخمة في التوليد.",
+          "icon": "zap",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "3500+ (Electricity Demand, Smart Meter, Grid Outage & Peak Load Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تاريخياً كان التركيز على زيادة التوليد بدل تحسين الشبكة وإدارة الطلب.",
+        "أنظمة المرافق غالباً قديمة ومجزأة بين التوليد والنقل والتوزيع والفوترة.",
+        "ضعف استخدام البيانات اللحظية في اتخاذ القرار التشغيلي.",
+        "تحديات أمن سيبراني عالية لأن الشبكة الذكية تصبح بنية رقمية حساسة.",
+        "صعوبة إقناع المرافق بتغيير أنظمة تشغيل حرجة دون إثبات موثوقية عالية."
+      ],
+      "recommended_tech_stack": [
+        "Advanced Metering Infrastructure (AMI)",
+        "Grid Data Platform",
+        "AI Load Forecasting",
+        "Outage Detection Analytics",
+        "Demand Response Management System",
+        "SCADA Integration",
+        "Cybersecurity for Operational Technology (OT)"
+      ],
+      "main_risk_index": "حساسية البنية التحتية؛ أي خلل في أنظمة الشبكة قد يكون عالي التأثير. يجب بناء المنتج كطبقة تحليل وتوصية أولاً قبل السماح له بالتحكم المباشر، مع امتثال صارم للأمن السيبراني ومعايير المرافق."
+    }
+  }
+}

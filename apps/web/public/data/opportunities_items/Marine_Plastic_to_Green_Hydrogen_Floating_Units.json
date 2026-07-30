@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-ENV03",
+      "status_label": "تحليل فجوة الاقتصاد الدائري المائي",
+      "category_tag": "CleanTech / Ocean-Health / Green Hydrogen",
+      "business_model": "Hydrogen Sales + Carbon Credits + Plastic Upcycling Revenues",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Environment",
+      "Energy",
+      "Circular Economy"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Red Sea (Tourism & Biodiversity Zones)", "flag": "🇸🇦" },
+        { "name": "Mediterranean (Egypt/Morocco Coast)", "flag": "🇪🇬" },
+        { "name": "Arabian Gulf", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "الهيدروجين الأزرق: وحدات عائمة لتطهير البحار وتوليد الطاقة",
+      "problem_statement": "تعاني السواحل العربية من تراكم التلوث البلاستيكي الذي يهدد السياحة والشعب المرجانية. في الوقت نفسه، هناك سباق عالمي لإنتاج الهيدروجين الأخضر. الفجوة هي وحدات عائمة (Floating Units) تعمل كـ 'كانسات للبحار' تلتقط البلاستيك وتحوله عبر عملية (Plasma Gasification) إلى هيدروجين نظيف وكهرباء لتشغيل المنتجعات الساحلية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Blue-Hydrogen-Arabia",
+        "industry_tag": "تكنولوجيا البحار والطاقة المتجددة",
+        "revenue_model": "Sale of Green Hydrogen per kg + Government Cleanup Contracts + Plastic Carbon Offsets",
+        "action_text": "استعراض سفينة تحويل النفايات البحرية إلى وقود المستقبل"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المحيط النظيف (0-48 شهر)",
+      "subtitle": "تحويل التلوث إلى ثروة طاقية",
+      "phases": [
+        {
+          "title": "تطوير وحدات الالتقاط الآلية",
+          "description": "بناء أذرع عائمة ذكية تستخدم التيارات البحرية والـ AI لجمع النفايات البلاستيكية دون الإضرار بالكائنات الحية.",
+          "icon": "refresh",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تفاعل البلازما وتحويل الغاز (Gasification)",
+          "description": "استخدام تقنية البلازما لتحليل البلاستيك في درجات حرارة فائقة لاستخلاص الهيدروجين الصافي دون انبعاثات سامة.",
+          "icon": "fire",
+          "color_theme": "rose"
+        },
+        {
+          "title": "توزيع الطاقة للمنتجعات الساحلية",
+          "description": "تزويد الفنادق والمدن الساحلية بالهيدروجين والكهرباء المنتجة، مما يجعلها 'صفرية الانبعاثات' وجاذبة للسياحة البيئية.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Plastic Pollution Density vs Green Hydrogen Demand in GCC"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لأنظمة تغويز البلازما (Plasma Gasification) المصغرة.",
+        "صعوبة صيانة المنشآت العائمة في بيئات الملوحة العالية.",
+        "نقص التشريعات التي تسمح بإنتاج الطاقة في المياه الإقليمية من قبل القطاع الخاص.",
+        "تحديات تخزين الهيدروجين المنتج في عرض البحر."
+      ],
+      "recommended_tech_stack": [
+        "Plasma Arc Gasification",
+        "AI-driven Marine Waste Mapping",
+        "Autonomous Surface Vessels (ASVs)",
+        "Hydrogen Fuel Cell Integration",
+        "Corrosion-resistant Bio-materials"
+      ],
+      "main_risk_index": "المخاطر التشغيلية البحرية؛ العواصف والظروف الجوية القاسية قد تهدد سلامة الوحدات العائمة، مما يتطلب تصاميم مدرعة."
+    }
+  }
+}

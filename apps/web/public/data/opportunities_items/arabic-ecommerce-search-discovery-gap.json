@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ECOM7",
+      "status_label": "تحليل فجوة البحث واكتشاف المنتجات بالعربية",
+      "category_tag": "Search & Discovery (E-commerce AI)",
+      "business_model": "Search API + SaaS + Recommendation Engine",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "E-commerce",
+      "Search",
+      "AI"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "UAE", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "تحسين البحث واكتشاف المنتجات باللغة العربية",
+      "problem_statement": "تعاني منصات التجارة الإلكترونية من ضعف كبير في البحث باللغة العربية بسبب التعقيد اللغوي (اشتقاق، لهجات، أخطاء إملائية). هذا يؤدي إلى تجربة مستخدم سيئة وانخفاض معدلات التحويل، حيث لا يجد المستخدم المنتج الذي يبحث عنه بسهولة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Searchify Arabic",
+        "industry_tag": "Search & Recommendation Engines",
+        "revenue_model": "API Usage + Subscription",
+        "action_text": "استعراض بحث ذكي يفهم نية المستخدم"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة البحث الذكي (0-9 أشهر)",
+      "subtitle": "البحث يفهمك",
+      "phases": [
+        {
+          "title": "بناء نموذج فهم لغوي عربي",
+          "description": "تحليل النصوص وفهم نية المستخدم.",
+          "icon": "cpu",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك توصية",
+          "description": "اقتراح منتجات بناءً على السلوك.",
+          "icon": "star",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكامل مع المتاجر",
+          "description": "API جاهز للدمج.",
+          "icon": "link",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "2100+ (Search Conversion Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تعقيد اللغة العربية.",
+        "ضعف NLP العربي.",
+        "اعتماد على حلول أجنبية.",
+        "عدم تخصيص الحلول."
+      ],
+      "recommended_tech_stack": [
+        "Arabic NLP Models",
+        "Vector Search",
+        "Recommendation Systems",
+        "AI Ranking Algorithms",
+        "Search APIs"
+      ],
+      "main_risk_index": "الدقة؛ يجب تحقيق نتائج أفضل من الحلول الحالية."
+    }
+  }
+}

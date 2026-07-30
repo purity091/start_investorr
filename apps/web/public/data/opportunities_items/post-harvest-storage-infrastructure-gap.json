@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-AGRI10",
+      "status_label": "تحليل فجوة التخزين بعد الحصاد",
+      "category_tag": "AgriTech (Cold Storage / Infrastructure)",
+      "business_model": "Storage-as-a-Service + Logistics + Subscription",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Agriculture",
+      "Storage",
+      "Cold Chain"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Sudan", "flag": "🇸🇩" },
+        { "name": "Iraq", "flag": "🇮🇶" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "بنية تحتية ذكية للتخزين والتبريد بعد الحصاد",
+      "problem_statement": "يفقد المزارعون نسبة كبيرة من محاصيلهم بعد الحصاد بسبب نقص مرافق التخزين والتبريد، خاصة في الدول ذات المناخ الحار. هذا يؤدي إلى خسائر مالية كبيرة وارتفاع أسعار الغذاء."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "ColdFarm",
+        "industry_tag": "سلاسل التبريد الزراعية",
+        "revenue_model": "Storage Fees + Subscription + Logistics Services",
+        "action_text": "استعراض تقليل الفاقد بعد الحصاد بنسبة 40%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التخزين الذكي (0-18 شهر)",
+      "subtitle": "حفظ الإنتاج وزيادة الربحية",
+      "phases": [
+        {
+          "title": "بناء وحدات تخزين مبردة",
+          "description": "إنشاء مرافق تبريد قريبة من المزارع.",
+          "icon": "snowflake",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "إدارة ذكية للتخزين",
+          "description": "استخدام أنظمة لإدارة المخزون.",
+          "icon": "box",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكامل مع اللوجستيات",
+          "description": "ربط التخزين بالنقل والتوزيع.",
+          "icon": "truck",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "2400+ (Post-harvest Loss Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ارتفاع تكلفة البنية التحتية.",
+        "نقص الاستثمار في التخزين.",
+        "ضعف اللوجستيات.",
+        "غياب حلول موزعة."
+      ],
+      "recommended_tech_stack": [
+        "Cold Storage Systems",
+        "IoT Monitoring",
+        "Inventory Management",
+        "Energy-efficient Cooling",
+        "Logistics Integration"
+      ],
+      "main_risk_index": "رأس المال؛ يتطلب المشروع استثمارات كبيرة في البنية التحتية."
+    }
+  }
+}

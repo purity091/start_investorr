@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-JOB04",
+      "status_label": "تحليل فجوة تقنيات المراقبة الإنشائية الذكية",
+      "category_tag": "ConTech / Drone-AI / Civil Engineering",
+      "business_model": "Fee per Site Visit + Data Analysis Subscription + NGO Compliance Reporting",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Construction",
+      "Drones",
+      "Information Technology"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Syrian Reconstruction Sites",
+          "flag": "🇸🇾"
+        },
+        {
+          "name": "Regional Infrastructure Projects",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "تحليلات الدرون لإعادة الإعمار: دمج المدني والمعلوماتية",
+      "problem_statement": "تفتقر عمليات إعادة الإعمار في سوريا للشفافية والدقة في متابعة نسب الإنجاز، مما يسبب هدراً مالياً وتأخيراً. المهندسون المدنيون يفتقرون لأدوات حديثة، ومهندسو المعلوماتية يفتقرون لتطبيقات عملية. الفجوة هي نظام مراقبة جوي يستخدم الدرونات والذكاء الاصطناعي لتحليل تقدم البناء، كشف العيوب الإنشائية، وتوثيق المشاريع للمانحين والمستثمرين."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sama-Scan",
+        "industry_tag": "الرقابة الذكية على الإعمار",
+        "revenue_model": "Per-report Fee (NGOs/Gov) + Monthly Site Monitoring Subscription + AI Defects Analysis Fee",
+        "action_text": "استعراض منصة مراقبة الإعمار عبر الدرون والـ AI"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الرؤية الإنشائية (0-30 شهر)",
+      "subtitle": "عين في السماء لإعمار الأرض",
+      "phases": [
+        {
+          "title": "تأسيس أسطول الدرونات المرخص",
+          "description": "الحصول على تراخيص أمنية لاستخدام درونات التصوير المساحي وتدريب مهندسين سوريين على قيادتها بدقة.",
+          "icon": "rss",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تطوير محرك التحليل الإنشائي (AI Site-Audit)",
+          "description": "بناء خوارزميات تقارن الصور الجوية بالمخططات الهندسية (AutoCAD/BIM) وتحدد فروقات الإنجاز أو الأخطاء الإنشائية.",
+          "icon": "search",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة التقارير الشفافة (Investor Portal)",
+          "description": "توفير واجهة تتيح للممولين (منظمات أو مغتربين) رؤية تقدم مشاريعهم في سوريا لحظياً وببيانات موثقة.",
+          "icon": "presentation-chart-line",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "Construction Error Rates vs Automated Monitoring ROI"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "القيود الأمنية الصارمة على استخدام الطائرات بدون طيار داخل سوريا.",
+        "نقص المهارات في معالجة الصور المساحية (Photogrammetry) وتحويلها لنماذج 3D.",
+        "التكلفة العالية لمعدات التصوير الجوي الاحترافية.",
+        "صعوبة الربط بين بيانات الموقع الميداني والأنظمة المحاسبية للشركات."
+      ],
+      "recommended_tech_stack": [
+        "Photogrammetry Software (Pix4D/ODM)",
+        "Computer Vision (YOLOv8 for Object Detection)",
+        "Cloud Data Processing Pipelines",
+        "Digital Twin Integration",
+        "Blockchain for Immutable Progress Logs"
+      ],
+      "main_risk_index": "التصاريح الأمنية؛ المشروع يعتمد كلياً على مرونة القوانين في استخدام الدرونات، مما يتطلب شراكات وثيقة مع الجهات الرسمية."
+    }
+  }
+}

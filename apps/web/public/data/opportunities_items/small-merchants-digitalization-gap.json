@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ECOM10",
+      "status_label": "تحليل فجوة رقمنة التجار الصغار",
+      "category_tag": "SMB E-commerce Enablement",
+      "business_model": "SaaS + Marketplace + Subscription",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "E-commerce",
+      "SMB",
+      "Digitalization"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Morocco", "flag": "🇲🇦" },
+        { "name": "Iraq", "flag": "🇮🇶" }
+      ],
+      "additional_regions_count": 12
+    },
+    "core_content": {
+      "title": "تمكين التجار الصغار من دخول التجارة الإلكترونية",
+      "problem_statement": "لا يزال ملايين التجار الصغار في العالم العربي يعملون بشكل تقليدي (محلات بدون حضور رقمي). دخولهم إلى التجارة الإلكترونية معقد بسبب نقص المعرفة، الأدوات، والتكلفة. هذا يحرمهم من الوصول إلى سوق أوسع ويحد من نمو الاقتصاد الرقمي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "ShopStart",
+        "industry_tag": "SMB E-commerce Platforms",
+        "revenue_model": "Subscription + Transaction Fees",
+        "action_text": "استعراض تحويل متجر تقليدي إلى متجر إلكتروني"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة الرقمنة (0-12 شهر)",
+      "subtitle": "كل تاجر لديه متجر إلكتروني",
+      "phases": [
+        {
+          "title": "منصة سهلة الاستخدام",
+          "description": "إنشاء متجر خلال دقائق.",
+          "icon": "store",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تكامل الدفع والشحن",
+          "description": "ربط مع الخدمات.",
+          "icon": "link",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التدريب والدعم",
+          "description": "تعليم التجار.",
+          "icon": "users",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "3000+ (SMB Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف المعرفة التقنية.",
+        "تكلفة الدخول.",
+        "تعقيد الأدوات.",
+        "غياب الدعم."
+      ],
+      "recommended_tech_stack": [
+        "No-code Platforms",
+        "Payment Integration",
+        "Logistics APIs",
+        "Cloud SaaS",
+        "Mobile-first Apps"
+      ],
+      "main_risk_index": "التبني؛ يحتاج تبسيط شديد للتجربة."
+    }
+  }
+}

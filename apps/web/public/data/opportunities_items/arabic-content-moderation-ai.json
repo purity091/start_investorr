@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-TECH-2026-AR-MODERATION",
+      "status_label": "تحليل استخباري لسلامة الفضاء الرقمي العربي",
+      "category_tag": "الأمن الرقمي (SafetyTech / NLP)",
+      "business_model": "SaaS (API) + Enterprise Compliance",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "SafetyTech",
+      "Social Media Management",
+      "Arabic Dialect AI"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Global (Platforms targeting Arabs)", "flag": "🌍" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "الرقابة الذكية والآمنة على المحتوى العربي",
+      "problem_statement": "تفشل المنصات العالمية (فيسبوك، تويتر، تيك توك) باستمرار في مراقبة المحتوى العربي المسيء أو المضلل نتيجة عدم فهم اللهجات المحلية والرموز الثقافية. هذا يؤدي لانتشار خطاب الكراهية، التنمر، والاحتيال الرقمي، مما يضع الشركات والجهات الحكومية تحت ضغط أخلاقي وقانوني هائل."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Rageb-AI",
+        "industry_tag": "حارس المحتوى الرقمي العربي",
+        "revenue_model": "Per-API call Fee + Bulk Content Analysis for Platforms + Ad-safety Verification",
+        "action_text": "استعراض دقة اكتشاف المحتوى المسيء في اللهجات العربية بنسبة 97%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الفضاء الرقمي الآمن (0-12 شهر)",
+      "subtitle": "حماية المجتمع من السموم الرقمية",
+      "phases": [
+        {
+          "title": "تدريب النماذج على اللهجات والسياق",
+          "description": "بناء خوارزميات NLP تفهم 'الشيفرات اللفظية' والكلمات المسيئة المموّهة في مختلف اللهجات العربية والتي تتجاوزها النماذج الإنجليزية.",
+          "icon": "shield-exclamation",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك كشف الأخبار المضللة (Deepfake/Misinfo)",
+          "description": "تطوير أدوات تكتشف المحتوى المولد بالذكاء الاصطناعي (صور وفيديو وصوت) والأخبار الكاذبة التي تستهدف المجتمعات العربية.",
+          "icon": "finger-print",
+          "color_theme": "rose"
+        },
+        {
+          "title": "واجهة الامتثال للعلامات التجارية (Brand Safety)",
+          "description": "توفير أداة للمعلنين تضمن عدم ظهور إعلاناتهم بجانب محتوى عربي غير لائق، مما يحمي سمعة الشركات الكبرى.",
+          "icon": "badge-check",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "50M+ Arabic Social Media Interactions"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التطور المستمر في طرق الالتفاف على الرقابة الآلية التقليدية.",
+        "نقص الموارد اللغوية المتخصصة في اللهجات العربية 'الحية' والشارع.",
+        "الحاجة لاتخاذ قرارات في أجزاء من الثانية لمعالجة ملايين المنشورات.",
+        "التكلفة العالية للمراجعة البشرية التي لا يمكنها مواكبة حجم المحتوى."
+      ],
+      "recommended_tech_stack": [
+        "Multilingual BERT/Llama variants",
+        "Multimodal AI (Text + Image + Audio analysis)",
+        "Real-time Stream Processing",
+        "Context-Aware Sentiment Analysis",
+        "Active Learning for Model Updating"
+      ],
+      "main_risk_index": "حرية التعبير؛ التوازن بين 'الحماية' و'الرقابة المفرطة' هو التحدي الأخلاقي والتقني الأكبر الذي يتطلب إشرافاً بشرياً حكيماً."
+    }
+  }
+}

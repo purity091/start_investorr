@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ECOM3",
+      "status_label": "تحليل عدم كفاءة تكاليف اللوجستيات",
+      "category_tag": "E-commerce Logistics (Cost Optimization)",
+      "business_model": "Logistics Optimization SaaS + Marketplace",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "E-commerce",
+      "Logistics",
+      "Cost Optimization"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 11
+    },
+    "core_content": {
+      "title": "تحسين تكاليف اللوجستيات في التجارة الإلكترونية",
+      "problem_statement": "تشكل اللوجستيات ما بين 20% إلى 40% من تكلفة الطلب في التجارة الإلكترونية في المنطقة، وهي نسبة أعلى بكثير من الأسواق المتقدمة. السبب يعود إلى عدم كفاءة العمليات، ضعف التخطيط، وعدم استخدام البيانات لتحسين الشحن والتخزين. هذا يقلل من هامش الربح ويحد من نمو الشركات."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "LogiSmart",
+        "industry_tag": "Logistics Optimization Platforms",
+        "revenue_model": "Subscription + Cost-saving Commission",
+        "action_text": "استعراض تقليل تكاليف اللوجستيات"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة تحسين اللوجستيات (0-12 شهر)",
+      "subtitle": "لوجستيات أكثر كفاءة وربحية",
+      "phases": [
+        {
+          "title": "تحليل البيانات اللوجستية",
+          "description": "جمع بيانات الشحن والتخزين.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء محرك تحسين",
+          "description": "اقتراح تحسينات في الشحن.",
+          "icon": "cpu",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تنفيذ الحلول",
+          "description": "تطبيق التوصيات بشكل تلقائي.",
+          "icon": "automation",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "2400+ (Logistics Cost Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تجزئة شركات الشحن.",
+        "ضعف البيانات.",
+        "عدم وجود حلول موحدة.",
+        "نقص استخدام AI."
+      ],
+      "recommended_tech_stack": [
+        "AI Optimization Models",
+        "Logistics APIs",
+        "Data Analytics",
+        "Cloud Platforms",
+        "Automation Systems"
+      ],
+      "main_risk_index": "التكامل؛ يحتاج ربط مع عدة أطراف."
+    }
+  }
+}

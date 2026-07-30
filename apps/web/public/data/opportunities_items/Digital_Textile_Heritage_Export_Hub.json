@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-TEX08",
+      "status_label": "تحليل فجوة رقمنة وتصدير الصناعات العريقة",
+      "category_tag": "E-commerce / TextileTech / Digital Marketing",
+      "business_model": "Global Marketplace Fees + Digital Branding Services + Logistics Integration",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Textiles",
+      "Heritage",
+      "Digital Export"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Damascus (Silk & Brocade)", "flag": "🇸🇾" },
+        { "name": "Aleppo (Cotton & Garments)", "flag": "🇸🇾" },
+        { "name": "Hama (Traditional Crafts)", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "رقمنة النسيج السوري: منصة تصدير الإرث الصناعي",
+      "problem_statement": "تمتلك سوريا أفضل أنواع النسيج والقطن (البروكار، الصايات) عالمياً، لكن المصانع والورش تعيش في 'عزلة تسويقية'. غياب المعارض الدولية وضعف التواجد الرقمي يمنع وصول هذه المنتجات للأسواق الفاخرة في أوروبا والخليج. الفجوة هي صالة عرض رقمية (Digital Showroom) متطورة تربط المنتج السوري بالمصممين ودور الأزياء العالمية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Harir-Digital",
+        "industry_tag": "العلامة التجارية العالمية للنسيج السوري",
+        "revenue_model": "20% Sales Commission + Digital Cataloging Fees + Logistics Handling Margin",
+        "action_text": "استعراض بوابة تصدير الحرير والقطن السوري للعالم"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق النسيج الرقمي (0-24 شهر)",
+      "subtitle": "إعادة خيوط النسيج السوري للساحة العالمية",
+      "phases": [
+        {
+          "title": "أرشفة وتصوير 'المعرض الافتراضي'",
+          "description": "استخدام تقنيات تصوير 3D وفائقة الدقة لإظهار تفاصيل النسيج والزخارف السورية بدقة تضاهي الواقع للمشترين الدوليين.",
+          "icon": "camera",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بوابة الطلبات وتخصيص التصاميم",
+          "description": "توفير أداة للمصممين العالميين لطلب 'تعديلات خاصة' على النقشات السورية التقليدية لتناسب الأزياء العصرية.",
+          "icon": "adjustments",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تأمين سلاسل التوريد والشهادات",
+          "description": "الحصول على شهادات المنشأ والجودة الدولية (ISO) وضمان شحن آمن من سوريا عبر دول وسيطة للأسواق العالمية.",
+          "icon": "truck",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 9.8,
+      "data_points_analyzed": "Heritage Textile Demand vs Current Export Volume Gaps"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف التيار الكهربائي اللازم لتشغيل أنوال النسيج الحديثة والمصورات.",
+        "الصعوبات اللوجستية في الشحن الدولي المباشر من سوريا.",
+        "تخوف الحرفيين التقليديين من 'سرقة التصاميم' إذا عرضت رقمياً.",
+        "فجوة اللغة والمهارات الرقمية لدى أصحاب الورش العريقة."
+      ],
+      "recommended_tech_stack": [
+        "3D Texture Scanning",
+        "Virtual Try-on (AR) for Fabrics",
+        "Blockchain for Copyright Protection",
+        "E-commerce Platform (Shopify/Magento Hybrid)",
+        "Global SEO for Arabic Heritage Keywords"
+      ],
+      "main_risk_index": "استقرار الإنتاج؛ نقص المواد الخام (خيوط الحرير) قد يؤدي لتأخر الطلبيات، مما يتطلب استثماراً موازياً في 'مزارع الحرير' المحلية."
+    }
+  }
+}

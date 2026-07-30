@@ -1,0 +1,92 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-NRG04",
+      "status_label": "تحليل فجوة البنية التحتية للنقل الكهربائي العابر للحدود",
+      "category_tag": "Energy / Mobility / EV-Infrastructure",
+      "business_model": "Charging Station Revenue (per kWh) + Retail Partnership Commission + Fleet Management SaaS",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Mobility",
+      "Energy",
+      "Sustainable Infrastructure"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Cairo-Amman-Dubai Highway",
+          "flag": "🇦🇪"
+        },
+        {
+          "name": "GCC Interstate Network",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "North Africa Coastal Road",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "الطريق الكهربائي: شبكة شحن EV عابرة للحدود",
+      "problem_statement": "تنتشر السيارات الكهربائية في المدن العربية (دبي، الرياض، عمان)، لكن السفر بين هذه المدن يظل مستحيلاً لغياب محطات الشحن السريع على الطرق الدولية والربط البيني. الفجوة هي بناء 'ممرات خضراء' مجهزة بمحطات شحن فائقة السرعة تعمل بالطاقة الشمسية، مع نظام دفع موحد يتيح السفر من القاهرة إلى دبي بالكهرباء."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Arab-EV-Link",
+        "industry_tag": "البنية التحتية للنقل المستدام والمترابط",
+        "revenue_model": "Charging Margin + Fast-charge Premium Fees + Advertising in Charging Hubs",
+        "action_text": "استعراض أول ممر شحن كهربائي يربط العواصم العربية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الممر الأخضر (0-48 شهر)",
+      "subtitle": "ربط الوطن العربي بشبكة طاقة نظيفة",
+      "phases": [
+        {
+          "title": "نشر محطات الشحن السيادي (Fast-Charge Hubs)",
+          "description": "تأسيس محطات شحن بقدرة 350 كيلوواط على الطرق السريعة الرئيسية بمسافات لا تتعدى 150 كم بين كل محطة.",
+          "icon": "lightning-bolt",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منصة الدفع الموحدة (Universal EV-Pass)",
+          "description": "توفير محفظة رقمية تتيح للسائق الدفع في أي محطة شحن عربية بعملة موحدة أو عبر تقنية 'المسح والشحن'.",
+          "icon": "credit-card",
+          "color_theme": "rose"
+        },
+        {
+          "title": "دمج الطاقة الشمسية والتخزين (PV-Storage)",
+          "description": "تجهيز كل محطة بمظلات شمسية وبطاريات تخزين لضمان استمرارية الشحن في المناطق الصحراوية المعزولة.",
+          "icon": "refresh",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.8,
+      "data_points_analyzed": "EV Adoption Rates vs Highway Charging Gaps in Middle East"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة الباهظة لمد كابلات الطاقة لمسافات طويلة في الصحراء.",
+        "اختلاف معايير المقابس (Plugs) والجهد الكهربائي بين الدول.",
+        "غياب التنسيق اللوجستي والأمني على الطرق البرية الدولية.",
+        "المخاوف من استهلاك البطاريات في درجات الحرارة العربية الفائقة."
+      ],
+      "recommended_tech_stack": [
+        "Ultra-Fast DC Chargers (350kW+)",
+        "Solid-state Battery Storage for Hot Climates",
+        "Bifacial Solar Panels for Desert Efficiency",
+        "Blockchain for Inter-state Payment Clearing",
+        "IoT for Remote Station Monitoring"
+      ],
+      "main_risk_index": "الاستخدام المنخفض في البداية؛ العائد على الاستثمار قد يتأخر حتى تزداد نسبة السيارات الكهربائية، مما يتطلب دعماً حكومياً أو شراكات مع شركات السيارات."
+    }
+  }
+}

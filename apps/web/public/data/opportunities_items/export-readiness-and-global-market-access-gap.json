@@ -1,0 +1,77 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-IND9",
+      "status_label": "تحليل فجوة التصدير والوصول للأسواق العالمية",
+      "category_tag": "Export Tech (Trade Enablement / Compliance)",
+      "business_model": "Export Platform + Compliance SaaS + B2B Marketplace",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Industry",
+      "Export",
+      "Trade"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Morocco", "flag": "🇲🇦" },
+        { "name": "Jordan", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "تمكين المصانع من دخول الأسواق العالمية",
+      "problem_statement": "رغم وجود منتجات صناعية جيدة في المنطقة، إلا أن نسبة كبيرة منها لا تصل للأسواق العالمية بسبب عوائق مثل المعايير، الشهادات، اللوجستيات، والتسويق الدولي. المشكلة ليست فقط جودة المنتج، بل جاهزية التصدير (Export Readiness)، والتي تشمل الامتثال، التغليف، التوثيق، وسلاسل التوزيع."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "ExportBridge",
+        "industry_tag": "Export Enablement Platforms",
+        "revenue_model": "Commission + SaaS + Trade Services",
+        "action_text": "استعراض تحويل مصنع محلي إلى مصدر عالمي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التصدير (0-12 شهر)",
+      "subtitle": "من سوق محلي إلى عالمي",
+      "phases": [
+        {
+          "title": "تحليل الجاهزية",
+          "description": "تقييم المصنع للتصدير."
+        },
+        {
+          "title": "تأهيل المعايير",
+          "description": "الحصول على الشهادات المطلوبة."
+        },
+        {
+          "title": "ربط الأسواق",
+          "description": "الوصول إلى المشترين العالميين."
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "3000+ (Export Data, Trade Barriers)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تعقيد متطلبات التصدير.",
+        "ضعف المعرفة بالأسواق الخارجية.",
+        "نقص شبكات التوزيع.",
+        "غياب منصات متخصصة."
+      ],
+      "recommended_tech_stack": [
+        "Trade Platforms",
+        "Compliance Systems",
+        "Logistics APIs",
+        "B2B Marketplaces",
+        "Data Analytics"
+      ],
+      "main_risk_index": "الطلب؛ يجب ربط المصنع بمشترين حقيقيين."
+    }
+  }
+}

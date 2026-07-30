@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-SOLAR",
+      "status_label": "تحليل استخباري لحلول الطاقة البديلة",
+      "category_tag": "الطاقة (Renewable Energy / Off-grid)",
+      "business_model": "B2C + B2B (Leasing & Installation)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "EnergyTech",
+      "Decentralized Power",
+      "Solar Solutions"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Damascus", "flag": "🇸🇾" },
+        { "name": "Aleppo", "flag": "🇸🇾" },
+        { "name": "Homs", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "أنظمة الطاقة الشمسية الموزعة للمنازل والمنشآت",
+      "problem_statement": "تعاني سوريا من عجز حاد ومزمن في حوامل الطاقة، حيث تصل ساعات التقنين في بعض المناطق إلى أكثر من 20 ساعة يومياً. تعتمد الفعاليات الاقتصادية والمنازل بشكل مفرط على المولدات التي تستهلك وقوداً باهظ الثمن وغير مستقر التوفر. هناك فجوة هائلة بين الطلب على الطاقة والقدرة الإنتاجية المركزية، مما يجعل الأنظمة الشمسية الهجينة هي الملاذ الوحيد لاستمرارية الحياة والإنتاج."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Noor-SY",
+        "industry_tag": "حلول الطاقة الشمسية الذكية",
+        "revenue_model": "Direct Sales + Rent-to-Own + Maintenance Contracts",
+        "action_text": "استعراض كفاءة أنظمة التخزين الليلي للطاقة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الاستقلال الطاقي (0-18 شهر)",
+      "subtitle": "إعادة النور للمدن والمنشآت الصناعية",
+      "phases": [
+        {
+          "title": "تأمين سلاسل التوريد والقطع الموثوقة",
+          "description": "تأسيس قنوات استيراد مباشرة للألواح والبطاريات ذات الجودة العالية (Lithium-ion) لتجنب القطع المقلدة المنتشرة في السوق.",
+          "icon": "chip",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تطوير حزم التمويل الميسر",
+          "description": "عقد شراكات مع كيانات مالية محلية لتوفير برامج تقسيط مريح للمنازل والورش الصغيرة، لجعل الطاقة الشمسية في متناول الجميع.",
+          "icon": "cash",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق مراكز الصيانة والتحكم الذكي",
+          "description": "نشر تقنيات المراقبة عن بعد (Remote Monitoring) لضمان كفاءة الألواح وتنبيه المستخدمين لضرورة التنظيف أو الصيانة الدورية.",
+          "icon": "cog",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 8.8,
+      "data_points_analyzed": "1500+ (Grid Outage Patterns & Solar Irradiation)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف القدرة الشرائية الكاش لدى أغلب العائلات لشراء الأنظمة.",
+        "انتشار قطع غيار رديئة الجودة تسببت في ضعف ثقة المستهلك سابقاً.",
+        "نقص الكوادر الفنية القادرة على تصميم الأنظمة الهجينة المعقدة.",
+        "اعتماد السوق على الحلول الفردية العشوائية بدلاً من الشركات المؤسسية."
+      ],
+      "recommended_tech_stack": [
+        "LiFePO4 Battery Tech",
+        "Hybrid Inverters (Grid-tie/Off-grid)",
+        "IoT Smart Meters",
+        "Mobile App for Energy Analytics",
+        "Solar Tracking Controllers"
+      ],
+      "main_risk_index": "مخاطر استقرار العملة المحلية؛ يتطلب المشروع استراتيجية تسعير مرنة أو ربطاً بأصول مستقرة لضمان استمرارية رأس المال."
+    }
+  }
+}

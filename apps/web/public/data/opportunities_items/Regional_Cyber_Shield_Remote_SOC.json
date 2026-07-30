@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-JOB03",
+      "status_label": "تحليل فجوة أمن المعلومات المدار عن بُعد",
+      "category_tag": "CyberSecurity / Managed Services / IT-Jobs",
+      "business_model": "Monthly Retainer per Company + Incident Response Fees + Compliance Audit Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Information Technology",
+      "CyberSecurity",
+      "Remote Operations"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Syria (Operations Base)",
+          "flag": "🇸🇾"
+        },
+        {
+          "name": "MENA Region (Clients)",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "الدرع السيبراني الإقليمي: مركز العمليات الأمنية (SOC)",
+      "problem_statement": "تعاني الشركات المتوسطة والصغيرة في الوطن العربي من نقص حاد في خبراء الأمن السيبراني وارتفاع تكلفة توظيفهم محلياً. مهندسو المعلوماتية السوريون لديهم مهارات قوية في الشبكات والأمن لكنهم يفتقرون للفرصة. الفجوة هي مركز SOC مُدار داخل سوريا يقدم خدمات المراقبة والحماية اللحظية للشركات الإقليمية بتكلفة منافسة جداً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Syr-Shield",
+        "industry_tag": "الأمن السيبراني العابر للحدود",
+        "revenue_model": "Fixed Monthly SOC Subscription + Per-incident Response Fee + Security Awareness Training",
+        "action_text": "استعراض خطة حماية 1000 شركة عربية بأيادٍ سورية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الحصن الرقمي (0-24 شهر)",
+      "subtitle": "تحويل الخبرة المعلوماتية السورية لخدمة أمن المنطقة",
+      "phases": [
+        {
+          "title": "تأسيس مركز SOC المعتمد",
+          "description": "بناء بنية تحتية تقنية مؤمنة في دمشق وحصول الكادر على شهادات احترافية (CISSP, CEH) لضمان الموثوقية الدولية.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نشر منصة المراقبة (SIEM/SOAR)",
+          "description": "استخدام أدوات مفتوحة المصدر ومخصصة لمراقبة الشبكات وكشف التهديدات اللحظية لعملاء المنصة خارج سوريا.",
+          "icon": "eye",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق خدمة الاستجابة للحوادث",
+          "description": "تفعيل فرق تدخل سريع رقمية (Blue Teams) تقوم بصد الهجمات وتأمين البيانات للعملاء عند حدوث أي اختراق.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.3,
+      "data_points_analyzed": "Cyber Attack Frequency in MENA vs Cybersecurity Talent Scarcity"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الحاجة لاتصالات دولية فائقة السرعة ومستقرة (يتم حلها بدوائر إنترنت مخصصة).",
+        "تخوف العملاء من 'المخاطر الجيوسياسية' (يتم حله بضمانات تقنية واتفاقيات SLA صارمة).",
+        "صعوبة الحصول على تراخيص البرمجيات الأمنية العالمية الكبرى.",
+        "نقص المختبرات العملية للتدريب على أحدث تقنيات الاختراق."
+      ],
+      "recommended_tech_stack": [
+        "Open-source SIEM (Wazuh/ELK)",
+        "TheHive for Case Management",
+        "Grafana for Visual Analytics",
+        "Proxmox for Lab Virtualization",
+        "Blockchain for Secure Log Archiving"
+      ],
+      "main_risk_index": "الثقة الأمنية؛ أي اختراق لمركز العمليات نفسه سيؤدي لنتائج كارثية، مما يتطلب معايير أمان فيزيائي ورقمي (ISO 27001) صارمة جداً."
+    }
+  }
+}

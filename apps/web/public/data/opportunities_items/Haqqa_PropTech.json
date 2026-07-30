@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-PROP-2026-HAQ",
+      "status_label": "تحليل استخباري لدمقرطة الاستثمار العقاري",
+      "category_tag": "تقنيات العقار (Fractional Ownership / Blockchain)",
+      "business_model": "Marketplace + Asset Management Fee",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "PropTech",
+      "Blockchain/Tokenization",
+      "FinTech Integration",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "التملك العقاري المجزأ عبر البلوكشين",
+      "problem_statement": "يواجه جيل الشباب (Gen Z & Millennials) في المنطقة استحالة دخول السوق العقاري كأصل استثماري نتيجة التضخم السعري الكبير والمتطلبات البنكية المعقدة. حالياً، تظل الأصول العقارية الكبرى (أبراج، مجمعات تجارية) حكراً على كبار المستثمرين، مما يحرم الأفراد من وعاء ادخاري آمن ومدر للدخل، ويقلل من سيولة السوق العقاري الإجمالية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Haqqa",
+        "industry_tag": "توريق الأصول العقارية الرقمية",
+        "revenue_model": "Platform Transaction Fee + Management Fee (1-2%) + Secondary Market Trading Commission",
+        "action_text": "استعراض نموذج الامتثال القانوني مع هيئات أسواق المال"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق تسييل الأصول (0-15 شهر)",
+      "subtitle": "تحويل العقار إلى أصل سائل رقمياً",
+      "phases": [
+        {
+          "title": "منصة التوريق الرقمي (Tokenization Engine)",
+          "description": "بناء نظام يعتمد على العقود الذكية (Smart Contracts) لتقسيم ملكية الأصول العقارية إلى حصص رقمية (Tokens)، مع دمج نظام KYC/AML متطور للمستثمرين.",
+          "icon": "cube",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "سوق التداول الثانوي (Secondary Marketplace)",
+          "description": "إطلاق منصة تتيح للمستثمرين بيع وشراء حصصهم العقارية بمرونة عالية، مما يحل مشكلة 'حبس السيولة' التاريخية في العقارات.",
+          "icon": "refresh",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التوسع في الأصول التشغيلية (Yield-Focused Assets)",
+          "description": "التركيز على الاستحواذ على عقارات ذات عوائد إيجارية مرتفعة (مراكز بيانات، مخازن لوجستية) وتوزيع الأرباح آلياً على حاملي الحصص.",
+          "icon": "home",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.2,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 8.5,
+      "data_points_analyzed": "2400+ (Real Estate Price Indices & Youth Saving Habits)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الحواجز التشريعية السابقة تجاه تقنيات البلوكشين وتداول الحصص.",
+        "تعقيد إجراءات نقل الملكية التقليدية في دوائر الأراضي.",
+        "غياب منصات موثوقة تضمن الشفافية في إدارة الأصول وتوزيع العوائد.",
+        "اعتقاد سائد بأن الاستثمار العقاري يتطلب رؤوس أموال ضخمة فقط."
+      ],
+      "recommended_tech_stack": [
+        "Ethereum/Polygon for Smart Contracts",
+        "IPFS for Immutable Document Storage",
+        "Real-time Property Management Dashboard",
+        "AI for Automated Valuation (AVM)",
+        "Biometric Identity Verification"
+      ],
+      "main_risk_index": "التحدي التنظيمي؛ يتطلب المشروع تراخيص دقيقة من هيئات أسواق المال والبنك المركزي لضمان قانونية تداول الحصص كأدوات مالية."
+    }
+  }
+}

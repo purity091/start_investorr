@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-CYBER-2026-AR",
+      "status_label": "تحليل استخباري للسيادة الرقمية",
+      "category_tag": "التكنولوجيا (Cybersecurity / AI)",
+      "business_model": "SaaS + Managed Services",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Technology",
+      "Sovereign Cloud",
+      "National Security"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Qatar", "flag": "🇶🇦" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "أمن البنية التحتية الحرجة والذكاء الاصطناعي السيادي",
+      "problem_statement": "مع تسارع التحول الرقمي، أصبحت مراكز البيانات والشبكات الحكومية في الخليج أهدافاً استراتيجية للهجمات السيبرانية المعقدة. تعتمد المنطقة بشكل كبير على حلول أمنية خارجية، مما يثير مخاوف الخصوصية والسيادة. هناك حاجة ماسة لبرمجيات أمنية محلية ونماذج ذكاء اصطناعي (LLMs) مدربة وطنياً لضمان استقلالية القرار الرقمي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "SovereignAI",
+        "industry_tag": "الأمن السيبراني والذكاء الاصطناعي",
+        "revenue_model": "Subscription per User/Data-volume + Professional Services",
+        "action_text": "استعراض محرك الكشف المبكر عن التهديدات"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة الريادة الرقمية (0-15 شهر)",
+      "subtitle": "بناء درع رقمي بلمسة عربية",
+      "phases": [
+        {
+          "title": "بناء السحابة السيادية المخصصة",
+          "description": "تطوير بنية تحتية سحابية محلية تضمن بقاء البيانات داخل الحدود الوطنية وتحت إشراف كامل.",
+          "icon": "cloud",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تدريب نماذج الذكاء الاصطناعي المحلية",
+          "description": "تطوير نماذج لغوية تدعم اللغة العربية واللهجات المحلية وتفهم السياق القانوني والاجتماعي للمنطقة.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "مركز العمليات الأمنية الذكي (AI-SOC)",
+          "description": "إطلاق مركز عمليات أمنية يعتمد على الذكاء الاصطناعي للتنبؤ بالهجمات قبل وقوعها والاستجابة اللحظية.",
+          "icon": "shield-exclamation",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "5000+ (Regional Cyber Incident Reports)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الفجوة التقنية في الكوادر المحلية المتخصصة في أمن السحابة.",
+        "الارتباط العميق بمزودي الخدمات العالميين (Hyper-scalers).",
+        "سرعة تطور أساليب الهجمات السيبرانية المدعومة بالذكاء الاصطناعي.",
+        "غياب المبادرات التعاونية بين القطاعين الخاص والعام في البحث الأمني."
+      ],
+      "recommended_tech_stack": [
+        "Confidential Computing",
+        "Post-Quantum Cryptography",
+        "Zero Trust Architecture",
+        "Sovereign LLMs (Llama-based fine-tuning)",
+        "Automated Incident Response"
+      ],
+      "main_risk_index": "التحدي التقني؛ يتطلب المشروع مواكبة لحظية لابتكارات الأمن العالمي لضمان عدم تقادم الحلول المحلية أمام التهديدات المتطورة."
+    }
+  }
+}

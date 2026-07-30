@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-AGRI-2026-W1",
+      "status_label": "تحليل استخباراتي للأمن الغذائي والمائي",
+      "category_tag": "تكنولوجيا الزراعة (Precision AgriTech)",
+      "business_model": "Ag-as-a-Service (AaaS) + Subscription",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "AgriTech",
+      "Sustainability (ESG)",
+      "Cognitive Farming",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Morocco", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "إدارة ندرة المياه عبر الزراعة الدقيقة (Precision Irrigation)",
+      "problem_statement": "تواجه منطقة الشرق الأوسط وشمال أفريقيا أزمة وجودية في الموارد المائية، حيث يُستهلك 80% من المياه العذبة في الزراعة بكفاءة لا تتعدى 45%. الممارسات الحالية تعتمد على 'الري الغمري' أو الجدولة الزمنية الثابتة، مما يؤدي إلى استنزاف المياه الجوفية، تملح التربة، وفقدان 30% من المحاصيل نتيجة الإجهاد المائي، في ظل غياب كامل للبيانات اللحظية عن احتياجات النبات الفعلية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "AgroFlow",
+        "industry_tag": "الذكاء الاصطناعي في ترشيد الموارد الزراعية",
+        "revenue_model": "Hardware Leasing + Data Insights SaaS + Carbon Credit Integration",
+        "action_text": "مراجعة تقرير الاستدامة والعائد المالي المتوقع للفدان"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التنفيذ الاستراتيجية (التحول نحو الزراعة الذكية)",
+      "subtitle": "من الحقول التقليدية إلى النظم الإدراكية",
+      "phases": [
+        {
+          "title": "مرحلة الاستشعار والبيانات (The IoT Layer)",
+          "description": "نشر شبكة من الحساسات اللاسلكية (LoRaWAN) لقياس رطوبة التربة، ملوحتها، وحرارتها بعمق متعدد، مع ربطها بمحطات أرصاد جوية محلية لتوفير دقة متناهية في قراءة البيئة الدقيقة للحقل.",
+          "icon": "chip",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التحليل التنبؤي (Cognitive Engine)",
+          "description": "دمج صور الأقمار الصناعية (NDVI) مع بيانات الحساسات الأرضية عبر خوارزميات AI للتنبؤ بالاحتياجات المائية (Evapotranspiration) وتحديد مواعيد الري والتسميد بدقة 'النبات الواحد'، مما يقلل الهدر بنسبة 50%.",
+          "icon": "lightning-bolt",
+          "color_theme": "rose"
+        },
+        {
+          "title": "الأتمتة الشاملة وسوق الكربون",
+          "description": "تحويل النظام إلى ري ذاتي بالكامل (Autonomous Irrigation) مع توثيق وفر المياه وخفض الانبعاثات لتحويلها إلى 'سندات كربون' (Carbon Credits) تُباع للشركات الكبرى، مما يخلق مصدر دخل إضافي للمزارع.",
+          "icon": "globe",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.1,
+      "competitive_moat": 8.6,
+      "data_points_analyzed": "2800+ (Soil Samples, Weather Stations & Satellite Indices)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف البنية التحتية للاتصالات في المناطق الريفية النائية.",
+        "ارتفاع التكلفة الرأسمالية (CapEx) للأنظمة المستوردة وعدم ملاءمتها للمناخ الصحراوي.",
+        "تفتت الحيازات الزراعية مما يصعب تطبيق حلول تكنولوجية واسعة النطاق.",
+        "نقص نماذج التمويل المبتكرة التي تتناسب مع التدفقات النقدية للمزارعين."
+      ],
+      "recommended_tech_stack": [
+        "LoRaWAN & NB-IoT Connectivity",
+        "Multi-spectral Satellite Imagery (Sentinel/Planet)",
+        "Edge AI for Real-time Water Valve Control",
+        "Hybrid Cloud (AWS/Azure) for Big Data Processing",
+        "Proprietary Soil-Crop Correlation Algorithms"
+      ],
+      "main_risk_index": "تحدي 'الميل الأخير' في التبني؛ النجاح يعتمد على تبسيط واجهة المستخدم (UX) لتناسب المزارعين غير التقنيين، وضمان استدامة الأجهزة الميدانية في الظروف الجوية القاسية."
+    }
+  }
+}

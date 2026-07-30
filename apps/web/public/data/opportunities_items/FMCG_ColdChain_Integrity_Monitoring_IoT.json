@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-FMCG02",
+      "status_label": "تحليل فجوة سلامة سلاسل تبريد الأغذية",
+      "category_tag": "FMCG / Logistics / IoT",
+      "business_model": "Hardware-as-a-Service + Monitoring SaaS + Insurance Integration",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Consumer Goods",
+      "Logistics",
+      "Internet of Things"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "GCC (Extreme Heat Challenges)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Egypt & North Africa (Supply Chain Fragmentation)",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "حارس الطزاجة: مراقبة سلاسل التبريد بالـ IoT",
+      "problem_statement": "يُفقد حوالي 30% من الأغذية المعبأة والطازجة في الوطن العربي نتيجة فشل سلاسل التبريد أثناء النقل في درجات حرارة الصيف الحارقة. الفجوة هي نظام IoT متكامل يراقب درجة حرارة الشحنة لحظياً من المصنع للمستهلك، وينبه السائق والشركة فور حدوث أي خلل، مع توثيق جودة المنتج عبر البلوكشين لضمان الشفافية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sard-Safe-Link",
+        "industry_tag": "تكنولوجيا الغذاء واللوجستيات الذكية (Food-Log-Tech)",
+        "revenue_model": "Subscription per Vehicle/Warehouse + Quality Certificate Fee + Data Insights for FMCG Brands",
+        "action_text": "استعراض تكنولوجيا حماية الغذاء من الهدر والحرارة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خarطة طريق التبريد الذكي (0-36 شهر)",
+      "subtitle": "ضمان وصول الغذاء طازجاً، مهما كانت درجة الحرارة",
+      "phases": [
+        {
+          "title": "نشر حساسات النانو الحرارية (Nano-Sensors)",
+          "description": "تجهيز الشاحنات والمخازن بحساسات صغيرة جداً ومنخفضة التكلفة ترتبط بالأقمار الصناعية لإرسال البيانات لحظياً.",
+          "icon": "rss",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التنبؤ بالأعطال (Predictive-Cool)",
+          "description": "استخدام الـ AI لتحليل أداء أجهزة التبريد والتنبؤ بتعطلها قبل وقوعه، لتجنب خسارة الشحنات الثمينة.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة الشفافية للمستهلك (Consumer-Trust-API)",
+          "description": "توفير QR Code على عبوات الأغذية يتيح للمستهلك النهائي رؤية تاريخ 'درجة حرارة المنتج' منذ لحظة إنتاجه وحتى شرائه.",
+          "icon": "eye",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Food Waste Tonnage in MENA due to Cold Chain Failure vs Cost of IoT Monitoring"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية للأجهزة المستوردة وصعوبة صيانتها في البيئات الصحراوية.",
+        "تعدد الوسطاء في سلاسل التوريد العربية وصعوبة فرض نظام مراقبة موحد.",
+        "غياب التشريعات الصارمة التي تلزم الشركات بتقديم تقارير حرارية دقيقة لكل شحنة.",
+        "ضعف تغطية الإنترنت في بعض المسارات اللوجستية الطويلة."
+      ],
+      "recommended_tech_stack": [
+        "LoRaWAN & NB-IoT Connectivity",
+        "Low-power Thermal Sensors",
+        "Blockchain (for Immutable Temperature Logs)",
+        "AI for Route & Cooling Optimization",
+        "Fleet Management Integration"
+      ],
+      "main_risk_index": "المسؤولية القانونية؛ في حال حدوث تسمم غذائي رغم وجود الجهاز، قد تقع المسؤولية على النظام، مما يتطلب معايرة (Calibration) دقيقة ومستمرة للحساسات."
+    }
+  }
+}

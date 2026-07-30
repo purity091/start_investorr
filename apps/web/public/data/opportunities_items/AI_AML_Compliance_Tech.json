@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-FIN-2026-REGTECH",
+      "status_label": "تحليل استخباري للأمن المالي والدرع الرقابي",
+      "category_tag": "التقنية المالية (RegTech / AI)",
+      "business_model": "B2B SaaS (Enterprise Tier)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "RegTech",
+      "Financial Security",
+      "Anti-Fraud"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "UAE (Global Financial Hub)", "flag": "🇦🇪" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Qatar", "flag": "🇶🇦" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "أنظمة مكافحة غسيل الأموال والامتثال الرقمي الاستباقي",
+      "problem_statement": "تتكبد البنوك وشركات التقنية المالية في المنطقة مليارات الدولارات سنوياً كغرامات تنظيمية نتيجة ثغرات في أنظمة مكافحة غسيل الأموال (AML). الأنظمة الحالية تعتمد على قواعد جامدة تؤدي لآلاف 'التنبيهات الخاطئة' التي ترهق الموظفين، بينما تنجح العمليات المعقدة في المرور. هناك فجوة لنظام ذكاء اصطناعي 'استباقي' يحلل أنماط السلوك بدلاً من العمليات الفردية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Diraa-Compliance",
+        "industry_tag": "الدرع الرقابي الذكي للمؤسسات المالية",
+        "revenue_model": "Annual License Fee + Per-Transaction Scanning Fee + API Integration",
+        "action_text": "استعراض تقليل التنبيهات الخاطئة بنسبة 60% وزيادة دقة الكشف"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الامتثال الرقمي (0-15 شهر)",
+      "subtitle": "حماية النظام المالي بذكاء لا ينام",
+      "phases": [
+        {
+          "title": "بناء محرك تحليل الشبكات (Graph Analytics)",
+          "description": "تطوير خوارزميات ترسم خرائط للعلاقات بين الحسابات لاكتشاف 'الدوائر المالية المشبوهة' التي تعجز الأنظمة التقليدية عن رؤيتها.",
+          "icon": "share",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "النمذجة السلوكية الفورية (Real-time Profiling)",
+          "description": "استخدام تعلم الآلة لبناء 'بصمة سلوكية' لكل مستخدم، وتجميد العمليات فوراً عند حدوث انحراف مفاجئ لا يتناسب مع نمط النشاط المعتاد.",
+          "icon": "user-search",
+          "color_theme": "rose"
+        },
+        {
+          "title": "أتمتة التقارير الرقابية (Auto-Reporting)",
+          "description": "توليد تقارير الأنشطة المشبوهة (SARs) تلقائياً وبالصيغ المطلوبة من البنوك المركزية، مما يوفر آلاف ساعات العمل اليدوي.",
+          "icon": "document-report",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "5M+ Suspicious Transaction Records"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الارتباط بالأنظمة البنكية القديمة (Legacy Systems) التي يصعب دمج الذكاء الاصطناعي فيها.",
+        "التطور السريع والمستمر في أساليب غسيل الأموال الرقمية.",
+        "نقص الخبراء الذين يجمعون بين المعرفة القانونية العميقة وهندسة البيانات.",
+        "صرامة قوانين خصوصية البيانات التي قد تعيق مشاركة البيانات بين المؤسسات."
+      ],
+      "recommended_tech_stack": [
+        "Graph Databases (Neo4j/Amazon Neptune)",
+        "Federated Learning (للحفاظ على خصوصية البيانات)",
+        "NLP for Adverse Media Screening",
+        "Real-time Stream Processing (Kafka/Flink)",
+        "Explainable AI (XAI) لتبرير قرارات النظام للرقابة"
+      ],
+      "main_risk_index": "مخاطر الثقة؛ الاعتماد الزائد على الآلة قد يؤدي لإغلاق حسابات مشروعة بالخطأ، لذا يجب وجود 'إنسان في الحلقة' (Human-in-the-loop) للمراجعة النهائية."
+    }
+  }
+}

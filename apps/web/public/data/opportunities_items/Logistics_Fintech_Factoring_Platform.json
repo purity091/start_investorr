@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-FIN-2026-LOG-FACT",
+      "status_label": "تحليل استخباري لسيولة النقل البري",
+      "category_tag": "التقنية المالية (FinTech / Factoring)",
+      "business_model": "Factoring Fee (Discount Rate) + Fuel Cards Commission",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "FinTech",
+      "Trucking",
+      "Supply Chain Finance"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Jordan", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "منصة التمويل اللوجستي والتحصيل الفوري لسائقي الشاحنات",
+      "problem_statement": "يعاني قطاع النقل البري من أزمة سيولة خانقة؛ حيث يضطر السائقون والشركات الصغيرة للانتظار ما بين 30 إلى 90 يوماً لاستلام مستحقاتهم من كبار المصنعين، بينما يحتاجون لنقد فوري لتغطية تكاليف الوقود، الصيانة، والرواتب. هذا الخلل يؤدي لتوقف الشاحنات ورفع تكلفة النقل الإجمالية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Seely-Pay",
+        "industry_tag": "تمويل رأس المال العامل لقطاع النقل",
+        "revenue_model": "Invoice Factoring Fee + Transaction Margin + Maintenance Loan Interest",
+        "action_text": "عرض كيف تضمن المنصة استمرارية حركة الأسطول عبر الدفع اللحظي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق السيولة المتحركة (0-15 شهر)",
+      "subtitle": "ادفع للسائق فوراً، وحصل من الشركة لاحقاً",
+      "phases": [
+        {
+          "title": "بناء نظام التحقق من بوالص الشحن الرقمية",
+          "description": "ربط المنصة ببيانات الشحن اللحظية للتأكد من تسليم الحمولة فعلياً، مما يقلل مخاطر الاحتيال الائتماني.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك خصم الفواتير الفوري (Instant Factoring)",
+          "description": "توفير ميزة للسائق بخصم فاتورته واستلام 80-90% من قيمتها كاش في محفظته الرقمية بمجرد إنزال الحمولة، مقابل رسوم بسيطة.",
+          "icon": "cash",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بطاقة الخدمات اللوجستية الموحدة",
+          "description": "إصدار بطاقات دفع للسائقين توفر خصومات في محطات الوقود ومراكز الصيانة، مع خصم التكاليف مباشرة من مستحقاتهم المستقبلية.",
+          "icon": "credit-card",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 8.7,
+      "data_points_analyzed": "500K+ Trucking Trip Records"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "البنوك التقليدية لا تملك آليات لتقييم ملاءة السائقين أو الشركات الصغيرة.",
+        "تشتت العمليات الورقية وصعوبة إثبات التسليم اللحظي قانونياً.",
+        "ارتفاع مخاطر التعثر في قطاع يعتمد على أفراد ومؤسسات غير مهيكلة.",
+        "غياب الربط بين أنظمة الدفع وبين منصات تتبع الشاحنات."
+      ],
+      "recommended_tech_stack": [
+        "Digital Invoice Verification AI",
+        "Mobile Wallet Integration",
+        "Automated Credit Scoring Models",
+        "Blockchain for Proof-of-Delivery",
+        "ERP integration with large shippers"
+      ],
+      "main_risk_index": "مخاطر الائتمان؛ نجاح المنصة يعتمد على قوة التحصيل من الشركات الكبرى (Shippers)، لذا فإن التركيز يجب أن يكون على العملاء ذوي الملاءة المالية العالية."
+    }
+  }
+}

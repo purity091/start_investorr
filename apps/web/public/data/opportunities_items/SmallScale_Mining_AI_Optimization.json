@@ -1,0 +1,82 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-AFR-2026-MIN08",
+      "status_label": "تحليل فجوة كفاءة استخراج الموارد الثمينة",
+      "category_tag": "التعدين (MiningTech / AI Computer Vision)",
+      "business_model": "SaaS per Site + Mineral Yield Commission + Safety Monitoring",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Mining",
+      "Geospatial AI",
+      "Worker Safety"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Mauritania (Gold)", "flag": "🇲🇷" },
+        { "name": "Sudan (Gold/Copper)", "flag": "🇸🇩" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "التوأم الرقمي لتحسين إنتاجية التعدين التقليدي والآمن",
+      "problem_statement": "يعتمد التعدين الأهلي في السودان وموريتانيا على طرق عشوائية تؤدي لهدر 50% من الخام المستخرج ومخاطر انهيار الآبار. غياب التقنية يجعل المنقبين يعملون في 'عماء جيولوجي'. هناك فجوة لاستخدام الرؤية الحاسوبية والذكاء الاصطناعي لتحليل عينات التربة وتوجيه التنقيب لتقليل الجهد وزيادة العائد."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Manjam-AI",
+        "industry_tag": "استخبارات التنقيب الذكي",
+        "revenue_model": "Subscription per Mining Unit + 2% Yield Optimization Fee + Equipment Monitoring",
+        "action_text": "استعراض تقنية تحليل العروق الذهبية عبر الصور"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التنقيب العلمي (0-24 شهر)",
+      "subtitle": "تعظيم الثروة تحت الأرض بأقل المخاطر",
+      "phases": [
+        {
+          "title": "الفرز الجيولوجي بالرؤية الحاسوبية",
+          "description": "تطوير تطبيق جوال يحلل صور الصخور والتربة فوراً باستخدام نماذج مدربة على التشكيلات الجيولوجية المحلية لتحديد نسب التركيز.",
+          "icon": "camera",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام الإنذار المبكر لسلامة الآبار",
+          "description": "استخدام حساسات اهتزاز (Seismic Sensors) رخيصة الثمن مرتبطة بالذكاء الاصطناعي للتنبؤ بمخاطر الانهيارات وإخلاء المواقع قبل وقوع الكارثة.",
+          "icon": "exclamation",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة التتبع والشفافية (Supply Chain)",
+          "description": "توثيق كميات الخام المستخرج ومواقعها عبر البلوكشين لتسهيل عمليات البيع القانوني والوصول للأسواق العالمية بأسعار عادلة.",
+          "icon": "link",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "Satellite Mineral Signatures & Local Soil Samples"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف ثقافة استخدام التقنية بين المنقبين التقليديين.",
+        "البيئة القاسية (حرارة وغبار) التي تستهلك الأجهزة الإلكترونية بسرعة.",
+        "نقص البيانات الجيولوجية المفتوحة للمساحات الشاسعة.",
+        "التشتت الجغرافي للمنقبين وصعوبة الوصول إليهم."
+      ],
+      "recommended_tech_stack": [
+        "Convolutional Neural Networks (CNN) for Rock Analysis",
+        "Edge AI Processing (Mobile devices)",
+        "LoRaWAN for Underground communication",
+        "Hyper-spectral Satellite Imagery",
+        "Blockchain for Provenance tracking"
+      ],
+      "main_risk_index": "المخاطر القانونية والتنظيمية؛ يتطلب المشروع شراكات مع وزارات المعادن لضمان شرعية العمليات وحماية البيانات السيادية."
+    }
+  }
+}

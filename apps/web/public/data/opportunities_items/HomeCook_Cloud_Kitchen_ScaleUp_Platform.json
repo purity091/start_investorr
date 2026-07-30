@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-RET17",
+      "status_label": "تحليل فجوة توسيع نطاق الاقتصاد المنزلي",
+      "category_tag": "FoodTech / Gig Economy / Social Impact",
+      "business_model": "Commission per Order + Packaging Supply Sales + Delivery Logistics Management",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Food & Beverage",
+      "Logistics",
+      "Women Empowerment"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Syrian Refugee Communities (Food Heritage)", "flag": "🇸🇾" },
+        { "name": "Egypt (Home-cook Market)", "flag": "🇪🇬" },
+        { "name": "Saudi Arabia (Demand for Traditional Food)", "flag": "🇸🇦" }
+      ],
+      "additional_regions_count": 8
+    },
+    "core_content": {
+      "title": "مطبخ الأم: منصة تمكين وتوسيع الطبخ المنزلي",
+      "problem_statement": "تمتلك آلاف السيدات (خاصة السوريات) مهارات استثنائية في الطبخ التقليدي، لكنهن يفتقرن للوصول للسوق، ضمانات الجودة الصحية، ولوجستيات التوصيل. المستهلك العربي يبحث عن طعام منزلي حقيقي بدلاً من مطاعم الوجبات السريعة. الفجوة هي منصة 'مطبخ سحابي منزلي' توفر الغطاء القانوني، الرقابة الصحية، والتوصيل لهذه المواهب."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Lamma-Food",
+        "industry_tag": "تكنولوجيا الغذاء والتمكين المجتمعي",
+        "revenue_model": "15-20% Commission per Order + Sales of Standardized Eco-Packaging + Subscription for Specialized Ingredients",
+        "action_text": "استعراض خطة تحويل المطابخ المنزلية إلى سلاسل توريد كبرى"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الطعم الأصيل (0-24 شهر)",
+      "subtitle": "تمكين اليد المبدعة لتصل لكل مائدة",
+      "phases": [
+        {
+          "title": "نظام 'الاعتماد الصحي' المنزلي",
+          "description": "تزويد السيدات بمعدات أساسية ومعايير سلامة غذائية (HACCP) مع نظام مراقبة دوري لضمان جودة ونظافة الطعام المنتج.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منصة الطلب والتخصيص (Home-Gourmet)",
+          "description": "تطوير تطبيق يتيح للمستخدمين جدولة وجباتهم الأسبوعية من مطابخ منزلية مختلفة بناءً على تقييمات حقيقية وصور حية.",
+          "icon": "shopping-cart",
+          "color_theme": "rose"
+        },
+        {
+          "title": "شبكة التوصيل الحراري (Hot-Logistics)",
+          "description": "ربط المنصة بأسطول توصيل يستخدم حقائب حرارية ذكية لضمان وصول 'نفس الأم' ساخناً وطازجاً في الموعد المحدد.",
+          "icon": "truck",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "Demand for Traditional Food vs Growth of Food Delivery Apps"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التحديات القانونية في الحصول على تراخيص تجارية للمطابخ المنزلية.",
+        "صعوبة توحيد 'المذاق والجودة' بين مئات المطابخ المشتتة.",
+        "التكلفة العالية للتسويق الفردي لكل سيدة منتجة.",
+        "مخاوف المستهلكين من 'الشفافية الصحية' في الإنتاج المنزلي."
+      ],
+      "recommended_tech_stack": [
+        "IoT Sensors for Fridge/Cooking Temp",
+        "Real-time Delivery Tracking",
+        "AI for Menu Demand Forecasting",
+        "Blockchain for Feedback Verification",
+        "Mobile App with Multi-vendor Inventory"
+      ],
+      "main_risk_index": "السلامة الغذائية؛ أي حالة تسمم قد تنهي المنصة بالكامل، مما يتطلب نظام تأمين شامل ورقابة صحية صارمة جداً ومفاجئة."
+    }
+  }
+}

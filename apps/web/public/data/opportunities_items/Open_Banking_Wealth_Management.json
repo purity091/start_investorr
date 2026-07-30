@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-FIN-2026-WEALTH-HUB",
+      "status_label": "تحليل استخباري لثورة البيانات المصرفية المفتوحة",
+      "category_tag": "التقنية المالية (Open Banking / WealthTech)",
+      "business_model": "Freemium + Commission on Investments",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Open Finance",
+      "Personal Finance Management",
+      "WealthTech"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Bahrain", "flag": "🇧🇭" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "منصات المصرفية المفتوحة لإدارة الثروات الشخصية",
+      "problem_statement": "يمتلك المستخدم العادي 3 حسابات بنكية على الأقل ومحفظتين رقميتين، مما يجعل رؤية الصورة الكاملة لثروته مستحيلة. أموال الناس مشتتة، ونقص الوعي المالي يؤدي لهدر 25% من الدخل في مصاريف غير مبررة أو فرص استثمارية ضائعة نتيجة غياب 'لوحة تحكم' مركزية ذكية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Mali-One",
+        "industry_tag": "المساعد المالي الشامل",
+        "revenue_model": "Premium Subscription + Lead Generation for Banks + Asset Management Fee",
+        "action_text": "عرض كيف وفرنا 15% من مصاريف المستخدمين في أول شهر"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الوضوح المالي (0-12 شهر)",
+      "subtitle": "كل أموالك في شاشة واحدة، تحت ذكاء واحد",
+      "phases": [
+        {
+          "title": "تجميع الحسابات (Account Aggregation)",
+          "description": "استغلال تشريعات المصرفية المفتوحة لربط جميع حسابات المريض البنكية، بطاقاته الائتمانية، ومحافظه الرقمية في واجهة واحدة موحدة وآمنة.",
+          "icon": "view-grid",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التصنيف والتحليل (Auto-Categorization)",
+          "description": "استخدام الذكاء الاصطناعي لتصنيف المصاريف تلقائياً، واكتشاف الاشتراكات المنسية، وتقديم نصائح توفير مخصصة بناءً على سلوك الإنفاق.",
+          "icon": "presentation-chart-bar",
+          "color_theme": "rose"
+        },
+        {
+          "title": "الاستثمار الآلي (Smart Investing)",
+          "description": "تحويل 'الفائض المالي' المكتشف تلقائياً إلى محافظ استثمارية متنوعة (أسهم، صكوك، ذهب) بناءً على أهداف المستخدم وقدرته على تحمل المخاطر.",
+          "icon": "trending-up",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 8.8,
+      "data_points_analyzed": "500K+ (User Spending Habits & Bank API response times)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تأخر التشريعات الخاصة بالمصرفية المفتوحة في بعض الدول (تم حلها في 2025/2026).",
+        "تخوف المستخدمين من مشاركة بياناتهم المالية خارج التطبيق البنكي الرسمي.",
+        "صعوبة الربط التقني بين البنوك المختلفة نتيجة اختلاف الأنظمة البرمجية.",
+        "غياب حلول مالية تركز على المستخدم وليس على بيع منتجات بنكية محددة."
+      ],
+      "recommended_tech_stack": [
+        "Open Banking Frameworks (OBIE/SAMA standards)",
+        "AES-256 Encryption & OAuth 2.0",
+        "AI for Financial Forecasting",
+        "Micro-investment Engines",
+        "Real-time Notification Systems"
+      ],
+      "main_risk_index": "الأمن السيبراني؛ أي خرق أمني لمنصة تجمع كل البيانات المالية للمستخدم سيكون كارثياً، لذا فإن الاستثمار في الأمن هو استثمار في الوجود."
+    }
+  }
+}

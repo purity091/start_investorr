@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-RET01",
+      "status_label": "تحليل فجوة رقمنة تجارة الجملة للمنشآت الصغيرة",
+      "category_tag": "B2B / Retail / Supply-Chain",
+      "business_model": "Marketplace Commission + Credit Financing (BNPL for Business) + Logistics Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Retail & Commerce",
+      "Wholesale",
+      "Information Technology"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Egypt (Massive Fragmented Retail Market)",
+          "flag": "🇪🇬"
+        },
+        {
+          "name": "Saudi Arabia & Jordan (SME Digitization Trend)",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "سوق الجملة الرقمي: تمكين تجار التجزئة الصغار",
+      "problem_statement": "يعتمد ملايين تجار التجزئة الصغار (البقالات، المحلات الصغيرة) على وسطاء متعددين وتوريد يدوي غير منظم، مما يرفع التكاليف ويقلل التنوع. الفجوة هي منصة B2B تربط هؤلاء التجار بالمصانع والموردين الكبار مباشرة، مع توفير ميزة 'شراء الجملة بالتقسيط' (BNPL) وتوصيل موحد لتقليل تكلفة الميل الأخير."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Souq-Jumla-Hub",
+        "industry_tag": "تكنولوجيا التجارة البينية (B2B E-commerce) والخدمات اللوجستية",
+        "revenue_model": "Transaction Margin + Financing Interest + Subscription for Inventory Management Tools",
+        "action_text": "استعراض بوابة رقمنة تجارة الجملة العربية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التوريد الذكي (0-48 شهر)",
+      "subtitle": "تحديث قلب التجارة العربية التقليدية",
+      "phases": [
+        {
+          "title": "بناء شبكة الموردين المعتمدين",
+          "description": "عقد شراكات مع كبار منتجي السلع الاستهلاكية (FMCG) لإدراج منتجاتهم بأسعار المصنع المباشرة للتجار الصغار عبر التطبيق.",
+          "icon": "shopping-cart",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التمويل الرقمي (Credit-Logic)",
+          "description": "تطوير خوارزمية تقييم ائتماني تعتمد على تاريخ مشتريات التاجر لتقديم تسهيلات دفع مرنة تساعده على نمو مخزونه.",
+          "icon": "credit-card",
+          "color_theme": "rose"
+        },
+        {
+          "title": "أتمتة اللوجستيات التجميعية (Batch-Logistics)",
+          "description": "إنشاء مراكز تجميع ذكية تقوم بدمج طلبيات مئات المتاجر في منطقة واحدة وتوصيلها في رحلة واحدة لتقليل التكلفة بنسبة 40%.",
+          "icon": "truck",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Number of Unorganized Small Retailers in MENA vs Potential Savings from Direct B2B Sourcing"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف الثقافة الرقمية لدى صغار التجار التقليديين.",
+        "سيطرة شبكات التوزيع التقليدية والوسطاء الذين يدافعون عن حصصهم السوقية.",
+        "التحديات القانونية والضريبية المرتبطة بتوثيق معاملات السوق الموازي.",
+        "الحاجة لبنية تحتية لوجستية ضخمة للوصول للأحياء الضيقة والبعيدة."
+      ],
+      "recommended_tech_stack": [
+        "PWA (Progressive Web App) for Offline Capability",
+        "AI for Inventory Forecasting (SME-level)",
+        "Fintech APIs for Business Credit Scoring",
+        "Route Optimization Algorithms for Delivery",
+        "Multi-vendor Marketplace Engine"
+      ],
+      "main_risk_index": "مخاطر الائتمان؛ خطر تعثر صغار التجار في السداد، مما يتطلب نظام 'تأمين ائتماني' وتحليلات بيانات صارمة لسلوك الشراء."
+    }
+  }
+}

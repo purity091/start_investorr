@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-TECH3",
+      "status_label": "تحليل فجوة تنفيذ التحول الرقمي الحكومي",
+      "category_tag": "GovTech (Digital Transformation)",
+      "business_model": "Enterprise Contracts + SaaS + Consulting",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Technology",
+      "GovTech",
+      "Digital Transformation"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Jordan", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 6
+    },
+    "core_content": {
+      "title": "تنفيذ فعلي للتحول الرقمي الحكومي",
+      "problem_statement": "رغم استثمار الحكومات العربية مليارات الدولارات في التحول الرقمي، إلا أن التنفيذ الفعلي يعاني من بطء كبير، مشاريع متوقفة، وأنظمة غير مترابطة. السبب الرئيسي هو فجوة بين التخطيط والتنفيذ، واعتماد مشاريع ضخمة غير مرنة لا تتكيف مع الواقع."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "GovFlow",
+        "industry_tag": "منصات التحول الرقمي الحكومي",
+        "revenue_model": "Government Contracts + SaaS + Implementation Services",
+        "action_text": "استعراض تسريع تنفيذ المشاريع الرقمية الحكومية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التحول الرقمي (0-18 شهر)",
+      "subtitle": "من التخطيط إلى التنفيذ الفعلي",
+      "phases": [
+        {
+          "title": "تحليل المشاريع الحالية",
+          "description": "تحديد نقاط التعثر في المشاريع الرقمية.",
+          "icon": "search",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء منصة تنفيذ Agile",
+          "description": "تحويل المشاريع إلى وحدات قابلة للتنفيذ بسرعة.",
+          "icon": "layers",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكامل الأنظمة الحكومية",
+          "description": "ربط الأنظمة المختلفة ضمن منصة موحدة.",
+          "icon": "network",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "2000+ (Government Project Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تعقيد المشاريع الحكومية.",
+        "ضعف التنفيذ مقارنة بالتخطيط.",
+        "عدم مرونة الأنظمة.",
+        "نقص الكفاءات التقنية."
+      ],
+      "recommended_tech_stack": [
+        "Microservices Architecture",
+        "API-first Platforms",
+        "Cloud Infrastructure",
+        "DevOps Pipelines",
+        "Workflow Automation"
+      ],
+      "main_risk_index": "دورات البيع الطويلة؛ المشاريع الحكومية تحتاج وقت طويل للإغلاق."
+    }
+  }
+}

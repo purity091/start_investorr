@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-DEEP-2026-BLU02",
+      "status_label": "تحليل فجوة الأمن الغذائي المائي في البيئات الجافة",
+      "category_tag": "Blue Economy / AgriTech",
+      "business_model": "Fish Sales (B2B) + Fertilizer Co-products + Tech Licensing",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Agriculture",
+      "Water Technology",
+      "Sustainable Protein"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Brine Utilization)", "flag": "🇸🇦" },
+        { "name": "Oman (Coastal Farms)", "flag": "🇴🇲" },
+        { "name": "Egypt (Saline Aquifers)", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "صحارى البحار: استزراع الأحياء المائية في المياه المالحة",
+      "problem_statement": "تستورد دول الخليج ومصر كميات هائلة من الأسماك والبروتين البحري، بينما تمتلك مساحات شاسعة من الصحارى ومياه 'المحلول الملحي' (Brine) الناتجة عن التحلية. الفجوة هي غياب تكنولوجيا الاستزراع المغلق (RAS) التي تحول هذه المياه المالحة لبيئة منتجة للأسماك والقشريات دون الإضرار بالبحر."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Bahri-Bio",
+        "industry_tag": "البروتين المستدام في الصحراء",
+        "revenue_model": "Fresh Fish Offtake Contracts + Organic Fertilizer Sales + RAS Turnkey Projects",
+        "action_text": "استعراض خطة إنتاج 2000 طن سمك سنوياً في عمق الصحراء"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المحيط الأخضر (0-36 شهر)",
+      "subtitle": "تحويل الملوحة إلى ثروة سمكية",
+      "phases": [
+        {
+          "title": "تطوير أنظمة RAS المتوافقة مع الملوحة",
+          "description": "تصميم أحواض مغلقة متطورة تعيد تدوير 99% من المياه وتتحكم في تركيز الأملاح لتربية أنواع بحرية فاخرة (مثل الهامور والروبيان).",
+          "icon": "refresh",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "التكامل مع الزراعة الملحية (Aquaponics)",
+          "description": "استخدام مياه الأحواض الغنية بالنيتروجين لري محاصيل ملحية (مثل الساليكورنيا) لإنتاج أعلاف وأسمدة عضوية.",
+          "icon": "leaf",
+          "color_theme": "rose"
+        },
+        {
+          "title": "مركز معالجة وتصدير المنتجات",
+          "description": "بناء سلسلة تبريد ذكية لضمان وصول الأسماك الطازجة للمدن الكبرى في غضون ساعات من الحصاد.",
+          "icon": "truck",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Per Capita Fish Consumption vs Local Production Gaps (GCC)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية للطاقة اللازمة لتبريد وأكسجة أحواض السمك في الصحراء.",
+        "الحاجة لخبرات بيولوجية متخصصة في تربية الأنواع البحرية في أنظمة مغلقة.",
+        "صعوبة التعامل مع المحلول الملحي المركز دون تلويث التربة.",
+        "الاعتماد على أعلاف مستوردة غالية الثمن (يمكن حلها بإنتاج طحالب محلياً)."
+      ],
+      "recommended_tech_stack": [
+        "Recirculating Aquaculture Systems (RAS)",
+        "AI for Feeding & Water Quality Control",
+        "Solar-powered Oxygen Generators",
+        "Bio-filters & Nanofiltration",
+        "Algae-based Feed Production"
+      ],
+      "main_risk_index": "المخاطر البيولوجية؛ أي تفشٍ وبائي داخل الأحواض المغلقة قد يؤدي لخسارة المحصول بالكامل، مما يتطلب أنظمة 'حجر صحي' رقمية."
+    }
+  }
+}

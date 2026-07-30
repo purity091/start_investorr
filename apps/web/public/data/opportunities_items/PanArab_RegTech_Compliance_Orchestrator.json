@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-POL05",
+      "status_label": "تحليل فجوة الامتثال التنظيمي الموحد",
+      "category_tag": "RegTech / Legal / Cross-Border",
+      "business_model": "SaaS Subscription for Startups/SMEs + Per-License Compliance Check + API for VC Portfolios",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Economics",
+      "Legal Tech",
+      "Public Policy"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Regional Startups (Expanding from Egypt to KSA/UAE)",
+          "flag": "🇪🇬"
+        },
+        {
+          "name": "SMEs Operating in Multiple Arab Markets",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 22
+    },
+    "core_content": {
+      "title": "جسر التشريعات: أداة الامتثال الرقمي العربي الموحد",
+      "problem_statement": "تعاني الشركات الناشئة العربية عند التوسع من تباين اللوائح بين الدول (قوانين العمل، الضرائب، حماية البيانات، التراخيص الصناعية). الفجوة هي منصة 'RegTech' تقوم بمسح القوانين في 22 دولة عربية، وتزود الشركة بقائمة مهام (Compliance Checklist) آلية ومحدثة لحظياً لكل سوق جديد تدخله، مع أتمتة تقديم الأوراق الرسمية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Mithaq-Reg",
+        "industry_tag": "تكنولوجيا التنظيم والامتثال القانوني العابر للحدود",
+        "revenue_model": "Monthly Subscription for Startups + One-time Market Entry Compliance Report + API for Investors to monitor portfolio compliance",
+        "action_text": "استعراض المنصة التي ستجعل توسعك في الوطن العربي سهلاً"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الامتثال السلس (0-24 شهر)",
+      "subtitle": "إزالة العوائق القانونية أمام نمو الشركات العربية",
+      "phases": [
+        {
+          "title": "بناء قاعدة المعرفة القانونية (Legal-Graph)",
+          "description": "استخدام AI لقراءة وتصنيف آلاف الوثائق القانونية والجرائد الرسمية في الدول العربية لإنشاء خارطة امتثال موحدة.",
+          "icon": "search",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك 'المطابقة الذكية' (Compliance-Match)",
+          "description": "تطوير أداة تطلب من الشركة بياناتها مرة واحدة وتخبره فوراً بنقاط الفجوة القانونية (Gaps) في كل سوق عربي مستهدف.",
+          "icon": "refresh",
+          "color_theme": "rose"
+        },
+        {
+          "title": "أتمتة التراخيص (Auto-License-Bridge)",
+          "description": "الربط مع البوابات الحكومية الرقمية في السعودية والإمارات ومصر لتسهيل تقديم طلبات التراخيص مباشرة من المنصة.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "Legal/Compliance Costs for Startups Expanding in MENA vs Potential Savings from Automation"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التغير المستمر في التشريعات العربية خاصة في مجالات التقنية والبيانات.",
+        "نقص النسخ الرقمية القابلة للقراءة آلياً من بعض القوانين واللوائح القديمة.",
+        "الحاجة لخبرة قانونية بشرية في كل دولة لتدقيق مخرجات الـ AI.",
+        "تباين الأنظمة القضائية (المدني، الشريعة، المناطق الحرة) في المنطقة."
+      ],
+      "recommended_tech_stack": [
+        "Natural Language Processing (NLP) for Arabic Legal Text",
+        "Rule-based Logic Engines for Compliance",
+        "Secure Document Vault (Encrypted)",
+        "API Integrations with Government Portals",
+        "Continuous Monitoring for Regulatory Changes"
+      ],
+      "main_risk_index": "المسؤولية القانونية؛ أي خطأ في نصيحة الامتثال قد يعرض الشركة لغرامات، مما يتطلب 'إخلاء مسؤولية' قانوني واضح وتأميناً على الأخطاء المهنية."
+    }
+  }
+}

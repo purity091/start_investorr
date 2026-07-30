@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-AGRI-2026-DESERT",
+      "status_label": "تحليل استخباري للأمن الغذائي السيادي",
+      "category_tag": "التقنية الزراعية (AgriTech / Hydroponics)",
+      "business_model": "Sales of Tech Systems + Fresh Produce Subscriptions",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Agriculture",
+      "Sustainability",
+      "Food Security"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "التقنية الزراعية المتطورة للزراعة في البيئات الصحراوية",
+      "problem_statement": "تواجه المنطقة العربية تحدي ندرة المياه الصالحة للزراعة وتوسع التصحر، مما يجعلها تستورد أكثر من 80% من احتياجاتها الغذائية. الحلول التقليدية تهدر كميات هائلة من المياه، بينما تتطلب الزراعة في الصحراء تقنيات تتحكم بدقة في المناخ والموارد لإنتاج محاصيل عالية الجودة محلياً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sahara-Grow",
+        "industry_tag": "أنظمة الزراعة المائية والعمودية الذكية",
+        "revenue_model": "System Installation Fees + Managed Farm Services + Data-driven Yield Optimization",
+        "action_text": "استعراض تقنية توفير المياه بنسبة 90% وزيادة الإنتاج"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق خضراء للصحراء (0-24 شهر)",
+      "subtitle": "تحويل الرمال إلى سلة غذاء ذكية",
+      "phases": [
+        {
+          "title": "تطوير وحدات الزراعة المائية (Hydro/Aeroponics)",
+          "description": "بناء حاويات زراعية مغلقة ومؤتمتة بالكامل تعتمد على تدوير المياه المغذية للنبات دون الحاجة للتربة التقليدية.",
+          "icon": "beaker",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نشر محطات الحساسات والذكاء الاصطناعي",
+          "description": "تزويد المزارع بحساسات تراقب الرطوبة، الحرارة، ومستويات الضوء، وتعدلها لحظياً لضمان أسرع نمو للمحاصيل.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "دمج الطاقة المتجددة وتحلية المياه",
+          "description": "ربط المزارع بمحطات طاقة شمسية مصغرة ووحدات تحلية مياه متطورة لضمان استدامة كاملة واستقلال عن الشبكة العامة.",
+          "icon": "sun",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "1200+ Regional Water and Soil samples"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لإنشاء البيوت المحمية المتطورة (سابقاً).",
+        "نقص المعرفة التقنية لدى المزارعين التقليديين في إدارة الأنظمة الرقمية.",
+        "الحاجة لصيانة دورية لقطع الغيار الحساسة التي كانت تُستورد بالكامل.",
+        "الظروف المناخية القاسية التي تسرع من تهالك المعدات الخارجية."
+      ],
+      "recommended_tech_stack": [
+        "IoT Soil and Water Sensors",
+        "AI Climate Control Algorithms",
+        "Solar-powered Irrigation Systems",
+        "Vertical Farming Racks",
+        "Automated Nutrient Dosing"
+      ],
+      "main_risk_index": "المخاطر التشغيلية؛ استمرارية الطاقة والتبريد حيوية جداً، لأن أي عطل لساعات قد يؤدي لموت المحاصيل بالكامل في حرارة الصحراء."
+    }
+  }
+}

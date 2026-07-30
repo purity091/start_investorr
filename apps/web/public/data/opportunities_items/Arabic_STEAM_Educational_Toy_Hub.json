@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-FMCG05",
+      "status_label": "تحليل فجوة الألعاب التعليمية العربية",
+      "category_tag": "Toys / EdTech / Culture",
+      "business_model": "Product Sales + Subscription Box + Digital App Add-on",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Consumer Goods",
+      "Toys & Games",
+      "Education"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Global Arab Diaspora (High Demand for Language)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "GCC & Egypt (Large Child Population)",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "عقل المستقبل: ألعاب STEAM بالهوية العربية",
+      "problem_statement": "تمتلئ أسواقنا بألعاب تعليمية غربية أو صينية تفتقر للغة العربية والقصص المحلية، مما يخلق فجوة معرفية وهوياتية لدى الطفل العربي. الفجوة هي تطوير خط ألعاب STEAM (علوم، تكنولوجيا، هندسة، فنون، رياضيات) مدمجة بقصص من التاريخ والعلوم العربية، لتعليم الطفل مهارات المستقبل بروح انتمائية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Abkari-Toys",
+        "industry_tag": "صناعة الألعاب التعليمية والتقنيات التفاعلية للأطفال",
+        "revenue_model": "Direct Sales per Toy Kit + Monthly Activity Box Subscription + B2B Sales to Schools/Kindergartens",
+        "action_text": "استعراض مشروع بناء جيل المبدعين العرب القادم"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق بناء العقول (0-36 شهر)",
+      "subtitle": "العب، تعلم، وكن فخوراً بهويتك",
+      "phases": [
+        {
+          "title": "استوديو ابتكار الألعاب (Toy-Lab)",
+          "description": "التعاون مع مهندسين ومؤرخين عرب لتصميم تجارب علمية (مثل بناء روبوت مستوحى من اختراعات الجزري) بأسلوب ممتع.",
+          "icon": "beaker",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "دمج الواقع المعزز (Phygital-Play)",
+          "description": "تطوير تطبيق يرافق الألعاب الفيزيائية، حيث تظهر شخصيات تاريخية عربية تشرح التجارب العلمية للطفل عبر الـ AR.",
+          "icon": "sparkles",
+          "color_theme": "rose"
+        },
+        {
+          "title": "شبكة التصنيع الآمن والمستدام",
+          "description": "إنتاج الألعاب من مواد صديقة للبيئة (أخشاب مستدامة، بلاستيك معاد تدويره) لغرس قيم الاستدامة في الطفل منذ الصغر.",
+          "icon": "recycle",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.8,
+      "data_points_analyzed": "Number of Arabic-centric STEM Toys vs Total Educational Toy Market in MENA"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لإنتاج ألعاب تعليمية متطورة بكميات صغيرة.",
+        "سيطرة البراندات العالمية (LEGO, Mattel) التي لا تخصص محتوى للغة العربية.",
+        "نقص المصممين المتخصصين في تحويل المحتوى الثقافي إلى تجربة لعب ممتعة.",
+        "الحاجة لاختبارات أمان صارمة ومكلفة للألعاب قبل طرحها في السوق."
+      ],
+      "recommended_tech_stack": [
+        "Product Design (CAD/SolidWorks)",
+        "Augmented Reality (Unity/ARFoundation)",
+        "Eco-friendly Materials Science",
+        "Mobile App Development (React Native)",
+        "3D Printing for Prototyping"
+      ],
+      "main_risk_index": "المنافسة من الأجهزة اللوحية؛ توجه الأطفال للشاشات يقلل اهتمامهم بالألعاب الفيزيائية، مما يتطلب تجربة 'فيزيائية-رقمية' مذهلة لإعادتهم للعب الملموس."
+    }
+  }
+}

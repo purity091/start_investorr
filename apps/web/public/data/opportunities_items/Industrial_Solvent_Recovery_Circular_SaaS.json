@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-CHE09",
+      "status_label": "تحليل فجوة استعادة الكيماويات الصناعية",
+      "category_tag": "Chemicals / Circular-Economy / Industrial-Services",
+      "business_model": "Service Fee per Litre + Sale of Recycled Solvents + Corporate ESG Reporting",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Chemical Industries",
+      "Manufacturing",
+      "Environment"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Industrial Cities (MODON)", "flag": "🇸🇦" },
+        { "name": "Jebel Ali Free Zone", "flag": "🇦🇪" },
+        { "name": "Egypt (10th of Ramadan & Sadat City)", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "دورة المذيبات: استعادة المذيبات الصناعية المكلفة",
+      "problem_statement": "تستهلك مصانع الأدوية، الدهانات، والطباعة في الوطن العربي آلاف الأطنان من المذيبات الكيميائية (Solvents) التي يتم التخلص منها كنفايات خطرة بعد استخدام واحد. الفجوة هي مركز متخصص لاستعادة هذه المذيبات عبر التقطير الجزيئي المتقدم وإعادتها لنقاء 99.9%، مما يوفر 50% من تكلفة المواد الخام للمصانع ويحمي البيئة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Solvent-Cycle-MENA",
+        "industry_tag": "الخدمات الكيميائية الدائرية واستدامة التصنيع الثقيل",
+        "revenue_model": "Fee for Solvent Collection & Refining + Sales of Certified Recycled Solvents + Subscription for Waste Management Compliance",
+        "action_text": "استعراض تقنية توفير ملايين الدولارات في المواد الكيميائية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق النقاء الكيميائي (0-36 شهر)",
+      "subtitle": "لا هدر في الموارد، كفاءة صناعية قصوى",
+      "phases": [
+        {
+          "title": "تأسيس مجمع التقطير المتقدم (Fractional-Hub)",
+          "description": "بناء وحدات تقطير مجزأ قادرة على فصل المذيبات المختلطة بدقة متناهية وإعادتها لمواصفاتها الصناعية الأصلية.",
+          "icon": "beaker",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام اللوجستيات الذكية للمواد الخطرة",
+          "description": "توفير أسطول متخصص لنقل السوائل الكيميائية المستخدمة من المصانع للمركز مع نظام تتبع IoT لضمان الأمان.",
+          "icon": "truck",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق منصة 'المذيبات المعاد تدويرها'",
+          "description": "توفير متجر رقمي يبيع المذيبات المستعادة بأسعار منافسة جداً للمستورد، مع شهادات جودة مخبرية معتمدة.",
+          "icon": "shopping-cart",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Industrial Solvent Import Costs in MENA vs Disposal Fees for Chemical Waste"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لإنشاء محطات تقطير تخصصية للأحجام الكبيرة.",
+        "التخوف من جودة 'المذيب المعاد تدويره' في الصناعات الحساسة كالأدوية.",
+        "نقص التشريعات التي تمنع التخلص العشوائي من المذيبات الصناعية.",
+        "الحاجة لخبرة كيميائية دقيقة في فصل المركبات المعقدة."
+      ],
+      "recommended_tech_stack": [
+        "Advanced Fractional Distillation Columns",
+        "Molecular Sieves for Dehydration",
+        "In-line Purity Sensors (GC/IR)",
+        "IoT for Hazardous Waste Tracking",
+        "Cloud-based Inventory for Circular Assets"
+      ],
+      "main_risk_index": "السلامة التشغيلية؛ التعامل مع كميات ضخمة من المذيبات القابلة للاشتعال يتطلب أعلى معايير الحماية من الحرائق والانفجارات (ATEX Compliance)."
+    }
+  }
+}

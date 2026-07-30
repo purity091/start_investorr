@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-FIN07",
+      "status_label": "تحليل فجوة التسويات المالية الدولية",
+      "category_tag": "FinTech / Crypto / TradeFinance",
+      "business_model": "Escrow Fees + Swap Margin + Enterprise Integration Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Finance",
+      "Cross-border Trade",
+      "Stablecoins"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Syrian Export/Import Hubs",
+          "flag": "🇸🇾"
+        },
+        {
+          "name": "Regional Trade Partners (GCC/Lebanon/Iraq)",
+          "flag": "🇮🇶"
+        }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "بوابة التسوية المالية البديلة (Syria-Exchange)",
+      "problem_statement": "تعطل العقوبات المالية النظام البنكي السوري، مما يجعل الاستيراد والتصدير عملية شبه مستحيلة أو مكلفة جداً عبر الوسطاء. الشركات السورية تفتقر لآلية دفع دولية آمنة وشفافة. الفجوة هي منصة تعتمد على العملات المستقرة (Stablecoins) كأداة تسوية تجارية عابرة للحدود تضمن حق المصدر والمستورد بعيداً عن تعقيدات السويفت."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Jisr-Pay",
+        "industry_tag": "التجارة الدولية في ظل العقوبات",
+        "revenue_model": "1-2% Escrow Fee + Currency Swap Spread + B2B Premium Support",
+        "action_text": "استعراض حل التسوية المالية الفورية للتجار السوريين"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التدفق المالي (0-18 شهر)",
+      "subtitle": "كسر الحصار المالي بالتكنولوجيا",
+      "phases": [
+        {
+          "title": "منصة الضمان الرقمي (Escrow)",
+          "description": "تطوير عقود ذكية تحتجز القيمة (Stablecoins) ولا تفرج عنها للمصدر إلا بعد تأكيد وصول البضاعة للمستورد السوري.",
+          "icon": "lock-closed",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بوابة الربط مع النقد المحلي",
+          "description": "تأسيس شبكة 'وكلاء معتمدين' محلياً لتحويل النقد السوري إلى عملات مستقرة (On-ramp) والعكس لضمان سهولة الدخول والخروج.",
+          "icon": "switch-horizontal",
+          "color_theme": "rose"
+        },
+        {
+          "title": "الامتثال والشفافية (Compliance Tech)",
+          "description": "دمج أدوات تتبع لمنع غسيل الأموال وضمان أن التجارة تتم لأغراض مدنية وإنسانية فقط لضمان استمرارية المنصة دولياً.",
+          "icon": "shield-check",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 10.0,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "Cross-border Trade Volume vs Cost of Unofficial Exchange Gaps"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "القيود الصارمة على تداول العملات الرقمية في بعض المناطق.",
+        "غياب الثقة في التكنولوجيا المالية الحديثة لدى الجيل القديم من التجار.",
+        "تقلبات سعر الصرف العنيفة في السوق الموازية.",
+        "الخطر القانوني المرتبط بتفسيرات قوانين العقوبات الدولية."
+      ],
+      "recommended_tech_stack": [
+        "Polygon L2 for Low Fees",
+        "USDT/USDC Stablecoins",
+        "Smart Contracts (Solidity)",
+        "KYC/AML automated tools",
+        "P2P Network Infrastructure"
+      ],
+      "main_risk_index": "المخاطر التشريعية؛ تغيير مفاجئ في لوائح العقوبات أو القوانين المحلية قد يؤثر على عمل الوكلاء، مما يتطلب هيكلية قانونية مرنة جداً."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-TECH1",
+      "status_label": "تحليل فجوة أتمتة الشركات بالذكاء الاصطناعي",
+      "category_tag": "Enterprise AI (Automation / Gen-AI)",
+      "business_model": "SaaS + API + Enterprise Custom Deployment",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Technology",
+      "Enterprise AI",
+      "Automation"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Qatar", "flag": "🇶🇦" }
+      ],
+      "additional_regions_count": 7
+    },
+    "core_content": {
+      "title": "أتمتة العمليات الداخلية للشركات العربية باستخدام AI",
+      "problem_statement": "تعتمد معظم الشركات في الشرق الأوسط على عمليات يدوية أو أنظمة قديمة (Legacy Systems) في إدارة العمليات اليومية مثل خدمة العملاء، إدخال البيانات، ومعالجة الطلبات. هذا يؤدي إلى انخفاض الكفاءة التشغيلية بنسبة قد تصل إلى 30–50% مقارنة بالشركات العالمية. رغم توفر أدوات AI عالمية، إلا أنها لا تتكامل مع الأنظمة المحلية ولا تدعم اللغة العربية والسياق التجاري بشكل كافٍ، مما يخلق فجوة ضخمة في الأتمتة الذكية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "AutoFlow AI",
+        "industry_tag": "Enterprise Automation Platforms",
+        "revenue_model": "Subscription + API Usage + Enterprise Contracts",
+        "action_text": "استعراض أتمتة العمليات الداخلية وتقليل التكاليف التشغيلية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة أتمتة الشركات (0-12 شهر)",
+      "subtitle": "تحويل العمليات اليدوية إلى أنظمة ذكية",
+      "phases": [
+        {
+          "title": "تحليل العمليات داخل الشركات",
+          "description": "تحديد العمليات القابلة للأتمتة مثل خدمة العملاء والعمليات المالية.",
+          "icon": "search",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء محرك أتمتة ذكي",
+          "description": "تطوير نظام AI يتكامل مع الأنظمة الحالية ويقوم بالأتمتة.",
+          "icon": "cpu",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التوسع عبر API Ecosystem",
+          "description": "إتاحة الأتمتة عبر API للشركات الأخرى والمنصات.",
+          "icon": "link",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "2200+ (Enterprise Efficiency Benchmarks)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تعقيد الأنظمة القديمة داخل الشركات.",
+        "ضعف التكامل بين الأنظمة.",
+        "نقص حلول AI مخصصة للمنطقة.",
+        "ارتفاع تكلفة التحول الرقمي."
+      ],
+      "recommended_tech_stack": [
+        "LLMs (Fine-tuned Arabic)",
+        "RPA (Robotic Process Automation)",
+        "API Gateways",
+        "Workflow Automation Engines",
+        "Cloud Infrastructure"
+      ],
+      "main_risk_index": "تكامل الأنظمة؛ نجاح المشروع يعتمد على القدرة على الاندماج مع أنظمة الشركات القديمة."
+    }
+  }
+}

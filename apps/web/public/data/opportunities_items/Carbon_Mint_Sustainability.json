@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-GREEN-2026-CM",
+      "status_label": "تحليل استخباري لاقتصاد الكربون الجديد",
+      "category_tag": "تكنولوجيا الاستدامة (Carbon Markets / ESG)",
+      "business_model": "Exchange Marketplace + Certification Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "GreenTech",
+      "Carbon Credits",
+      "RegTech",
+      "الشركات الثورية"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "بورصة أرصدة الكربون الإقليمية",
+      "problem_statement": "تواجه الشركات الكبرى في المنطقة ضغوطاً تشريعية وعالمية لخفض انبعاثاتها الكربونية (Net Zero). حالياً، يفتقر السوق الإقليمي لمنصة موثوقة تتيح تداول 'أرصدة الكربون' بين الشركات التي لديها فائض (عبر مشاريع خضراء) والشركات التي تحتاج لتعويض انبعاثاتها، مما يؤدي إلى خروج السيولة لأسواق عالمية وعدم الاستفادة من المشاريع البيئية المحلية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Carbon-Mint",
+        "industry_tag": "سوق الكربون الطوعي والمنظم",
+        "revenue_model": "Transaction Commission + Verification SaaS + ESG Reporting Fees",
+        "action_text": "استعراض آليات توثيق المشاريع الخضراء عبر الأقمار الصناعية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الحياد الكربوني (0-18 شهر)",
+      "subtitle": "تحويل الاستدامة إلى أصل مالي سائل",
+      "phases": [
+        {
+          "title": "بروتوكول التوثيق الرقمي (MRV Layer)",
+          "description": "بناء نظام رقمي للرصد والإبلاغ والتحقق (MRV) يستخدم الـ AI وصور الأقمار الصناعية لتوثيق كمية الكربون التي يتم امتصاصها أو تقليلها من المشاريع البيئية بدقة عالية.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منصة التداول الفوري (Carbon Exchange)",
+          "description": "إطلاق بورصة رقمية تتيح للمشاريع الخضراء (طاقة شمسية، زراعة) إصدار أرصدة كربون موثقة وبيعها للشركات الصناعية لتعويض أثرها البيئي.",
+          "icon": "refresh",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التكامل مع سلاسل الإمداد الخضراء",
+          "description": "توفير أدوات تقنية للموردين الصغار لتتبع أثرهم الكربوني والحصول على تمويل أخضر بناءً على أدائهم البيئي الموثق في المنصة.",
+          "icon": "globe",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.0,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 8.8,
+      "data_points_analyzed": "2200+ (Regional Emission Reports & Global ESG Trends)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "غياب المعايير الموحدة لتوثيق الكربون في المنطقة العربية.",
+        "الاعتماد على مكاتب تدقيق دولية بطيئة ومرتفعة التكلفة.",
+        "نقص الوعي بكيفية تحويل المشاريع البيئية إلى عوائد مالية (Monetization).",
+        "حداثة القوانين المنظمة لأسواق الكربون المحلية."
+      ],
+      "recommended_tech_stack": [
+        "Blockchain for Immutable Carbon Ledgers",
+        "Remote Sensing (Satellite Imagery)",
+        "AI for Automated Verification Models",
+        "IoT for Industrial Emission Tracking",
+        "Smart Contracts for Instant Settlements"
+      ],
+      "main_risk_index": "التقلبات التشريعية؛ النجاح يعتمد على التوافق التام مع المبادرات الحكومية (السعودية الخضراء، COP28 وما بعدها) لضمان قبول الأرصدة المتداولة."
+    }
+  }
+}

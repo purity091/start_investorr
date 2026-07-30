@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-RET15",
+      "status_label": "تحليل فجوة قيمة الهدايا التذكارية الحرفية",
+      "category_tag": "Retail / Blockchain / Tourism",
+      "business_model": "Platform Fee per Product + Certificate of Authenticity Sales + Global Marketplace Commission",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Tourism",
+      "Retail",
+      "Blockchain"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Syrian Artisans (Damascene Craft)", "flag": "🇸🇾" },
+        { "name": "Moroccan Handicrafts", "flag": "🇲🇦" },
+        { "name": "Egyptian Artisans", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "قصص الهدايا: هدايا تذكارية فيزيائية بلمسة بلوكشين",
+      "problem_statement": "تغرق الأسواق العربية بهدايا تذكارية 'صينية' رخيصة، بينما تندثر الحرف اليدوية الأصلية لغياب التوثيق والوصول للسياح. الفجوة هي هدايا تذكارية فيزيائية تحمل 'هوية رقمية' (Phygital) عبر شريحة NFC أو QR مشفر بالبلوكشين يظهر للسائح فيديو لصانع القطعة، تاريخ الحرفة، وشهادة أصالة تضمن قيمتها."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Asal-Origin",
+        "industry_tag": "التجارة السياحية الموثقة والتمكين الثقافي",
+        "revenue_model": "Digital Certificate Fee per Unit + Marketplace Commission for Global Sales + AR Content Creation Service for Artisans",
+        "action_text": "استعراض خطة رقمنة ورفع قيمة الحرف اليدوية العربية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الحرفة الرقمية (0-24 شهر)",
+      "subtitle": "تحويل الهدايا التذكارية إلى أصول ثقافية موثقة",
+      "phases": [
+        {
+          "title": "بناء سجل الأصالة (Artisan-Ledger)",
+          "description": "تطوير قاعدة بيانات بلوكشين تسجل كل حرفي ومنتجاته، مع ربط كل قطعة برمز رقمي غير قابل للتزوير.",
+          "icon": "link",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام 'رواية القصة' (AR-Storytelling)",
+          "description": "توفير محتوى مرئي وتفاعلي يظهر للسائح فور مسح القطعة، يحكي قصة الصبر والإبداع خلف هذه الحرفة اليدوية.",
+          "icon": "video-camera",
+          "color_theme": "rose"
+        },
+        {
+          "title": "سوق 'ما بعد الرحلة' (Global-Craft)",
+          "description": "تمكين السائح من طلب قطع إضافية مباشرة من الحرفي بعد عودته لبلده، مع ضمان جودة الشحن والأصالة عبر المنصة.",
+          "icon": "shopping-cart",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.3,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.7,
+      "data_points_analyzed": "Economic Impact of Counterfeit Souvenirs vs Potential of Digital Provenance in Tourism"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "نقص الوعي التقني لدى الحرفيين التقليديين وضعف وصولهم للأسواق الرقمية.",
+        "سيطرة المنتجات المقلدة منخفضة التكلفة على منافذ البيع السياحية.",
+        "التكلفة العالية لتصوير وتوثيق كل قطعة يدوية بشكل احترافي.",
+        "صعوبة لوجستيات الشحن الدولي للقطع الفنية الحساسة."
+      ],
+      "recommended_tech_stack": [
+        "Blockchain (NFTs for Physical Assets)",
+        "NFC Tagging / Dynamic QR Codes",
+        "Mobile AR for Storytelling",
+        "Global Logistics Integration (DHL/FedEx)",
+        "Secure Escrow for International Payments"
+      ],
+      "main_risk_index": "قابلية التوسع؛ توثيق آلاف القطع اليدوية المشتتة يتطلب نظام تجميع (Aggregator) فعال جداً وفرق ميدانية قوية لضمان الجودة."
+    }
+  }
+}

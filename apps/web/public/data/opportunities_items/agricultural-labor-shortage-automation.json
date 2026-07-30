@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-AGRI7",
+      "status_label": "تحليل أزمة نقص العمالة الزراعية",
+      "category_tag": "AgriTech (Automation / Robotics)",
+      "business_model": "Robotics-as-a-Service (RaaS) + Equipment Leasing",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Agriculture",
+      "Automation",
+      "Labor Efficiency"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Kuwait", "flag": "🇰🇼" }
+      ],
+      "additional_regions_count": 6
+    },
+    "core_content": {
+      "title": "أتمتة العمليات الزراعية لتقليل الاعتماد على العمالة",
+      "problem_statement": "تعاني العديد من الدول العربية، خاصة الخليج، من نقص حاد في العمالة الزراعية نتيجة القيود على العمالة الأجنبية وارتفاع تكلفتها. العمليات الزراعية مثل الحصاد والزراعة لا تزال تعتمد بشكل كبير على العمل اليدوي، مما يرفع التكاليف ويؤثر على الاستدامة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "AgroBotics",
+        "industry_tag": "الروبوتات الزراعية",
+        "revenue_model": "Leasing + Pay-per-Use + Maintenance Contracts",
+        "action_text": "استعراض تقليل تكاليف العمالة بنسبة 50%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة الأتمتة الزراعية (0-24 شهر)",
+      "subtitle": "مزرعة تعمل بالروبوت",
+      "phases": [
+        {
+          "title": "تطوير روبوتات زراعية مخصصة",
+          "description": "تصميم روبوتات للحصاد والزراعة تتناسب مع المحاصيل المحلية.",
+          "icon": "robot",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نموذج تشغيل كخدمة (RaaS)",
+          "description": "توفير الروبوتات للمزارعين بنظام الاشتراك.",
+          "icon": "repeat",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكامل مع أنظمة المزارع",
+          "description": "ربط الروبوتات مع منصات إدارة المزارع.",
+          "icon": "network",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.3,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "1400+ (Labor Cost & Availability Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ارتفاع تكلفة الروبوتات.",
+        "تعقيد البيئة الزراعية مقارنة بالمصانع.",
+        "نقص الخبرات المحلية في Robotics.",
+        "عدم توفر حلول مخصصة للمنطقة."
+      ],
+      "recommended_tech_stack": [
+        "Robotics Systems",
+        "Computer Vision",
+        "Edge AI",
+        "IoT Integration",
+        "Autonomous Navigation"
+      ],
+      "main_risk_index": "تكلفة التطوير؛ يتطلب المشروع استثمار رأسمالي كبير قبل الوصول للربحية."
+    }
+  }
+}

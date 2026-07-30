@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-STRAT-2026-AGR06",
+      "status_label": "تحليل فجوة الاقتصاد الدائري في المنسوجات",
+      "category_tag": "Circular Economy / AgriTech",
+      "business_model": "Material Sales (B2B) + IP Licensing + Carbon Credits",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Agriculture",
+      "Textiles",
+      "Bio-Materials"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Palm Waste)", "flag": "🇸🇦" },
+        { "name": "Egypt (Cotton & Flax)", "flag": "🇪🇬" },
+        { "name": "Iraq (Date Palm Fibers)", "flag": "🇮🇶" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "تحويل المخلفات الزراعية إلى ألياف ومنسوجات مستدامة",
+      "problem_statement": "يُنتج الوطن العربي ملايين الأطنان من مخلفات النخيل والزراعة سنوياً، والتي غالباً ما تُحرق مسببة تلوثاً بيئياً. في المقابل، تبحث دور الأزياء العالمية وصناعة الأثاث عن بدائل مستدامة للجلود والمنسوجات التقليدية. الفجوة هي غياب التكنولوجيا الصناعية لتحويل هذه الألياف الخام إلى خيوط وأقمشة عالية الجودة ومعتمدة عالمياً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Nakhla-Fiber",
+        "industry_tag": "الألياف الحيوية المتقدمة",
+        "revenue_model": "Sale of Bio-Textiles to Fashion Brands + Supply Chain Integration + Export to EU Market",
+        "action_text": "استعراض خطة إنتاج الجلود النباتية من مخلفات النخيل"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق النسيج الأخضر (0-36 شهر)",
+      "subtitle": "من الحقول إلى منصات الأزياء",
+      "phases": [
+        {
+          "title": "تطوير تكنولوجيا استخلاص الألياف",
+          "description": "استخدام إنزيمات حيوية وعمليات ميكانيكية لفك ألياف سعف النخيل وسيقان الموز دون استخدام كيماويات ضارة.",
+          "icon": "leaf",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محطة الغزل والنسيج التجريبي",
+          "description": "تحويل الألياف الخام إلى خيوط هجينة (مع القطن أو المعاد تدويره) لإنتاج أقمشة متينة وقابلة للتنفس.",
+          "icon": "scissors",
+          "color_theme": "rose"
+        },
+        {
+          "title": "شهادات الاستدامة والتصدير",
+          "description": "الحصول على اعتمادات (GOTS/OEKO-TEX) وفتح قنوات توريد مع ماركات الملابس المستدامة في أوروبا والخليج.",
+          "icon": "globe",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.3,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Annual Agricultural Waste Tonnage vs Sustainable Fashion Demand"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف الاستثمار في البحث والتطوير لتحويل المخلفات الصلبة إلى ألياف ناعمة.",
+        "نقص التكامل بين القطاع الزراعي والقطاع الصناعي النسيجي.",
+        "التكلفة اللوجستية لجمع المخلفات من المزارع المشتتة.",
+        "النظرة التقليدية للمخلفات كعبء بيئي وليست ثروة صناعية."
+      ],
+      "recommended_tech_stack": [
+        "Bio-enzymatic Retting Process",
+        "Industrial Spinning Machines for Bast Fibers",
+        "Eco-friendly Dyeing Tech",
+        "Blockchain for Source Transparency",
+        "AI for Quality Sorting of Fibers"
+      ],
+      "main_risk_index": "جودة المنتج النهائي؛ الحفاظ على ثبات اللون والملمس يتطلب دقة عالية في المعالجة الكيميائية الحيوية."
+    }
+  }
+}

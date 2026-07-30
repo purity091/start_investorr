@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-CHE01",
+      "status_label": "تحليل فجوة توطين الكيماويات الدقيقة والمتخصصة",
+      "category_tag": "Chemicals / Manufacturing / Import-Substitution",
+      "business_model": "B2B Sales to Pharma/Industry + Long-term Supply Contracts + R&D as a Service",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Chemical Industries",
+      "Manufacturing",
+      "Healthcare"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Downstream Development)", "flag": "🇸🇦" },
+        { "name": "Egypt (Industrial Base)", "flag": "🇪🇬" },
+        { "name": "UAE (Global Logistics Hub)", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "الاستقلال الكيميائي: توطين إنتاج الكيماويات الدقيقة",
+      "problem_statement": "تستورد الدول العربية كيماويات دقيقة (Specialty Chemicals) بقيمة تتجاوز 40 مليار دولار سنوياً، وهي مواد حاسمة لصناعة الأدوية، المنظفات، والإلكترونيات. الفجوة هي مصنع متطور للكيماويات المتخصصة يستغل الوفرة في المواد الأولية البتروكيماوية المحلية لتحويلها إلى منتجات عالية القيمة بدلاً من تصديرها كمواد خام."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Arab-Specialty-Chem",
+        "industry_tag": "الصناعات الكيميائية التحويلية المتقدمة",
+        "revenue_model": "Sales per Ton (Specialty Grade) + Custom Synthesis for Pharma Companies + Tech Licensing",
+        "action_text": "استعراض خطة توطين إنتاج 50 مادة كيميائية حرجة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق السيادة الكيميائية (0-60 شهر)",
+      "subtitle": "من تصدير الخام إلى تصنيع الحلول الدقيقة",
+      "phases": [
+        {
+          "title": "تحديد القائمة الذهبية للمواد (Gap-Analysis)",
+          "description": "تحليل فواتير الاستيراد لتحديد أكثر 50 مادة كيميائية دقيقة طلباً في السوق العربي والبدء في هندسة إنتاجها محلياً.",
+          "icon": "search",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "إنشاء مجمع المفاعلات المتعددة (Multi-Purpose Plant)",
+          "description": "بناء منشأة صناعية مرنة قادرة على إنتاج أنواع مختلفة من الكيماويات المتخصصة حسب حاجة السوق المتقلبة.",
+          "icon": "beaker",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكامل البحث والتطوير (R&D-Loop)",
+          "description": "التعاون مع الجامعات المحلية لتطوير محفزات (Catalysts) وعمليات إنتاج أقل استهلاكاً للطاقة وأكثر صداقة للبيئة.",
+          "icon": "refresh",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Chemical Import Bill of MENA vs Local Feedstock Cost Advantages"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الحاجة لخبرات تقنية عالية جداً في الكيمياء العضوية والتحليلية.",
+        "ارتفاع تكاليف البحث والتطوير (R&D) قبل الوصول لمنتج تجاري منافس.",
+        "سيطرة الشركات العالمية الكبرى (BASF, Dow) على براءات الاختراع وسلاسل التوريد.",
+        "صعوبة الحصول على شهادات المطابقة الدولية للصناعات الدقيقة (مثل الأدوية)."
+      ],
+      "recommended_tech_stack": [
+        "Continuous Flow Chemistry",
+        "Automated Process Control Systems (DCS)",
+        "Advanced Chromatography (HPLC/GC-MS)",
+        "AI for Molecular Design & Reaction Prediction",
+        "Waste-to-Resource Recovery Systems"
+      ],
+      "main_risk_index": "تقلب أسعار المواد الأولية؛ الاعتماد على أسعار النفط والغاز العالمية قد يؤثر على هوامش الربح، مما يتطلب استراتيجية تسعير مرنة."
+    }
+  }
+}

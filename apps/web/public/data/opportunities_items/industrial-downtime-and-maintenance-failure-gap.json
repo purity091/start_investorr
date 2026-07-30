@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-IND3",
+      "status_label": "تحليل توقف خطوط الإنتاج والصيانة",
+      "category_tag": "Predictive Maintenance / Industrial Reliability",
+      "business_model": "SaaS + IoT + Subscription + Performance Contracts",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Industry",
+      "Maintenance",
+      "Reliability"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Algeria", "flag": "🇩🇿" }
+      ],
+      "additional_regions_count": 7
+    },
+    "core_content": {
+      "title": "تقليل توقف خطوط الإنتاج عبر الصيانة التنبؤية",
+      "problem_statement": "تُعد أعطال المعدات الصناعية أحد أكبر مصادر الخسائر في المصانع، حيث يمكن أن يؤدي توقف خط إنتاج واحد إلى خسائر بملايين الدولارات يومياً في بعض الصناعات. تشير تحليلات :contentReference[oaicite:4]{index=4} إلى أن تحسين كفاءة التشغيل والصيانة يمكن أن يخفض التكاليف بشكل كبير. المشكلة في المنطقة أن معظم المصانع تعتمد على الصيانة التفاعلية (Reactive Maintenance) بدلاً من الصيانة التنبؤية (Predictive Maintenance)، مما يعني أن الأعطال يتم التعامل معها بعد حدوثها وليس قبلها."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "MaintAI",
+        "industry_tag": "Predictive Maintenance Platforms",
+        "revenue_model": "Subscription + Hardware + Savings-based Pricing",
+        "action_text": "استعراض تقليل الأعطال قبل حدوثها باستخدام AI"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة الصيانة الذكية (0-12 شهر)",
+      "subtitle": "إصلاح الأعطال قبل حدوثها",
+      "phases": [
+        {
+          "title": "تركيب الحساسات",
+          "description": "جمع بيانات من الآلات.",
+          "icon": "sensor",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تحليل الأنماط",
+          "description": "اكتشاف إشارات الأعطال المبكرة.",
+          "icon": "cpu",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تنبيهات وتوصيات",
+          "description": "تنبيه قبل حدوث العطل.",
+          "icon": "alert",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.3,
+      "data_points_analyzed": "3000+ (Downtime Cost, Maintenance Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد على الصيانة التقليدية.",
+        "نقص البيانات من الآلات.",
+        "تكلفة التحول الأولي.",
+        "نقص الخبرة التقنية.",
+        "عدم إدراك حجم الخسائر."
+      ],
+      "recommended_tech_stack": [
+        "IoT Sensors",
+        "Predictive Maintenance AI",
+        "Time-series Databases",
+        "Edge Computing",
+        "Industrial Analytics"
+      ],
+      "main_risk_index": "إثبات القيمة؛ يجب إظهار تقليل الأعطال بسرعة لإقناع المصنع."
+    }
+  }
+}

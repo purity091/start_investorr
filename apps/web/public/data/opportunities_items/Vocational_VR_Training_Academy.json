@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-STRAT-2026-EDU09",
+      "status_label": "تحليل فجوة المهارات الفنية والتقنية",
+      "category_tag": "EdTech / VR Training / HR-Tech",
+      "business_model": "Subscription per Trainee + Corporate Training Contracts + Job Placement Fee",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Education",
+      "Virtual Reality",
+      "Vocational Training"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Vision 2030 Skilled Labor)", "flag": "🇸🇦" },
+        { "name": "Egypt (Industrial Zones)", "flag": "🇪🇬" },
+        { "name": "UAE (Tech Operations)", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 8
+    },
+    "core_content": {
+      "title": "أكاديمية التدريب المهني بالواقع الافتراضي (Mihan-VR)",
+      "problem_statement": "تحتاج المشاريع الكبرى في المنطقة لآلاف الفنيين المهرة (لحام، صيانة طاقة شمسية، تشغيل آلات)، لكن التدريب التقليدي بطيء، مكلف، ويستهلك مواد خام ضخمة. كما أن الفجوة بين التعليم الأكاديمي واحتياج السوق تتسع. الفجوة هي نظام تدريب 'محاكي للواقع' يختصر الوقت ويقلل التكلفة بنسبة 70%."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Mihan-Tech",
+        "industry_tag": "التعليم التقني الغامر",
+        "revenue_model": "Corporate Training Packages + Individual Certification Fees + Equipment Leasing for Schools",
+        "action_text": "تخريج 50,000 فني معتمد سنوياً باستخدام المحاكاة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التأهيل المهني (0-24 شهر)",
+      "subtitle": "تعلّم بالممارسة، في بيئة افتراضية آمنة",
+      "phases": [
+        {
+          "title": "تطوير مكتبة المحاكاة الصناعية",
+          "description": "بناء بيئات افتراضية دقيقة (Digital Twins) للمصانع ومواقع البناء لتدريب الطلاب على التعامل مع المعدات الثقيلة.",
+          "icon": "cube-transparent",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام تقييم المهارة اللحظي",
+          "description": "استخدام الذكاء الاصطناعي لتحليل حركة يد الطالب ودقته في تنفيذ المهام داخل الـ VR لإعطاء ملاحظات فورية.",
+          "icon": "badge-check",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة التوظيف المباشر (Hiring Bridge)",
+          "description": "ربط الخريجين الذين اجتازوا اختبارات المحاكاة بالشركات الكبرى التي تبحث عن عمالة جاهزة للعمل فوراً.",
+          "icon": "user-group",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "Job Vacancy vs Skill Shortage Reports in Manufacturing & Energy"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لنظارات الـ VR في السابق (أصبحت متاحة الآن).",
+        "مقاومة المؤسسات التعليمية التقليدية لتغيير المناهج.",
+        "نقص المحتوى التعليمي الفني باللغة العربية المتخصص.",
+        "الحاجة لاعتمادات حكومية رسمية لشهادات التدريب الافتراضي."
+      ],
+      "recommended_tech_stack": [
+        "Unreal Engine / Unity for Simulation",
+        "Oculus/Quest Meta Integration",
+        "Hand-tracking Algorithms",
+        "Cloud-based Progress Analytics",
+        "Gamification Engines"
+      ],
+      "main_risk_index": "الاعتماد الرسمي؛ يتطلب المشروع شراكات استراتيجية مع وزارات العمل وهيئات التدريب التقني لضمان قيمة الشهادة في سوق العمل."
+    }
+  }
+}

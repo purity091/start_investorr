@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-CON-2026-3D-PRINT",
+      "status_label": "تحليل استخباري لثورة البناء المؤتمت",
+      "category_tag": "تكنولوجيا البناء (ConTech / Advanced Manufacturing)",
+      "business_model": "Construction-as-a-Service (CaaS) + Printer Leasing",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Advanced Robotics",
+      "Building Materials",
+      "Affordable Housing"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Housing Program)", "flag": "🇸🇦" },
+        { "name": "UAE (3D Printing Strategy)", "flag": "🇦🇪" },
+        { "name": "Egypt (Fast Urbanization)", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "تكنولوجيا الطباعة ثلاثية الأبعاد للمباني",
+      "problem_statement": "تعاني مشاريع الإسكان الكبرى من بطء التنفيذ، الاعتماد المفرط على العمالة اليدوية، وهدر المواد الذي يصل إلى 30% في المواقع التقليدية. مع الحاجة لبناء ملايين الوحدات السكنية في وقت قياسي، أصبحت طرق البناء التقليدية عاجزة عن تلبية الطلب المتزايد مع الحفاظ على هوامش الربح والجودة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Bunyan-3D",
+        "industry_tag": "البناء الروبوتي الخرساني",
+        "revenue_model": "Price per Square Meter + Printer Sales & Maintenance + Proprietary Ink Sales",
+        "action_text": "استعراض بناء منزل كامل خلال 24 ساعة بتكلفة أقل بنسبة 40%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق العمران الرقمي (0-24 شهر)",
+      "subtitle": "تحويل المخططات الهندسية إلى واقع ملموس بلحظات",
+      "phases": [
+        {
+          "title": "تطوير 'الحبر الخرساني' المحلي",
+          "description": "ابتكار خلطات أسمنتية باستخدام رمال ومواد محلية تتناسب مع مناخ المنطقة (الحرارة العالية)، لضمان القوة الهيكلية والعزل الحراري.",
+          "icon": "beaker",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نشر الطابعات الروبوتية الضخمة",
+          "description": "إدخال طابعات (Gantry Systems) قادرة على طباعة هياكل بارتفاعات متعددة، مع دمج تمديدات الكهرباء والسباكة آلياً أثناء الطباعة.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "اعتماد الأكواد الإنشائية الرقمية",
+          "description": "التعاون مع البلديات وهيئات المواصفات لاعتماد الأبنية المطبوعة كمنشآت دائمة، وتطوير معايير الفحص السريع للحوائط المطبوعة.",
+          "icon": "badge-check",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "1500+ Pilot Project Results"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية للطابعات المستوردة في المراحل الأولى.",
+        "غياب الأكواد الإنشائية التي تغطي البناء بالطباعة (بدأت تتوفر في 2025/2026).",
+        "صعوبة التحكم في جفاف الخرسانة المطبوعة تحت أشعة الشمس المباشرة.",
+        "نقص المهندسين والمشغلين المتخصصين في التصميم البرمجي للبناء."
+      ],
+      "recommended_tech_stack": [
+        "Large-scale Cartesian/Polar 3D Printers",
+        "BIM (Building Information Modeling) Integration",
+        "Real-time Material Monitoring Sensors",
+        "Generative Structural Design AI",
+        "Robotic Arm Extruders"
+      ],
+      "main_risk_index": "المتانة طويلة الأمد؛ إثبات استدامة هذه المباني لمدة 50 عاماً هو المفتاح للحصول على تمويل بنكي عقاري طويل الأمد."
+    }
+  }
+}

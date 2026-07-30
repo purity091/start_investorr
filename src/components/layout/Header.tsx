@@ -65,6 +65,11 @@ const TAB_LABELS: Record<string, string> = {
   'admin-security': 'الأمان',
   'admin-plans': 'أرشيف الخطط',
   'contact-us': 'تواصل معنا',
+  'proven-projects': 'مشاريع ناجحة',
+  'failed-projects': 'مشاريع فشلت (Post-Mortem)',
+  'saas-ideas': 'أفكار SaaS',
+  'micro-saas-ideas': 'أفكار Micro-SaaS',
+  'project-ideas': 'أفكار مشاريع',
 };
 
 const notifications = [
@@ -97,6 +102,12 @@ function getContextBadge(activeTab: string) {
     activeTab === 'brand-identity'
   ) {
     return { label: 'أدوات النمو', variant: 'outline' as const };
+  }
+
+  if (
+    ['proven-projects', 'failed-projects', 'saas-ideas', 'micro-saas-ideas', 'project-ideas'].includes(activeTab)
+  ) {
+    return { label: 'قاعدة المعرفة', variant: 'secondary' as const };
   }
 
   return { label: 'مساحة العمل', variant: 'outline' as const };

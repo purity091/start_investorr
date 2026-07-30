@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-MOB07",
+      "status_label": "تحليل فجوة التنقل في المراكز التاريخية المزدحمة",
+      "category_tag": "Urban-Mobility / EV / Micro-Mobility",
+      "business_model": "Fleet Leasing + Per-Ride Fee (B2C/B2B) + Tourism Partnership",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Mobility",
+      "Urban Planning",
+      "Electric Vehicles"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Old Damascus & Aleppo", "flag": "🇸🇾" },
+        { "name": "Fez & Marrakech (Medinas)", "flag": "🇲🇦" },
+        { "name": "Historic Cairo", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "تنقل المدن العريقة: أسطول مركبات كهربائية مصغرة",
+      "problem_statement": "تعاني المدن العربية القديمة (المسجلة في اليونسكو) من اختناقات مرورية وتلوث ناتج عن الدراجات النارية والسيارات القديمة التي تضيق بها الشوارع الأثرية. الفجوة هي أسطول من 'التوكتوك الكهربائي' المتطور (E-Trikes) أو العربات المصغرة المصممة خصيصاً لتناسب عرض الشوارع التاريخية، هادئة، صديقة للبيئة، ومرتبطة بتطبيق ذكي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Asala-Mobile",
+        "industry_tag": "التنقل الحضري المستدام للمراكز التاريخية",
+        "revenue_model": "Subscription for Residents + Tourist Day-Pass + Corporate Logistics Fleet Leasing",
+        "action_text": "استعراض خطة تطهير المدن التاريخية من التلوث المروري"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التنقل التراثي (0-24 شهر)",
+      "subtitle": "الحفاظ على سحر الماضي بأدوات المستقبل",
+      "phases": [
+        {
+          "title": "تصميم المركبات المخصصة (Slim-EVs)",
+          "description": "تطوير مركبات كهربائية بعرض لا يتجاوز 1.2 متر، ذات عزم عالٍ لتسلق المنحدرات في المدن القديمة وبطاريات قابلة للتبديل (Swappable).",
+          "icon": "chip",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام الملاحة في 'الأزقة' (Alley-Navigator)",
+          "description": "بناء خرائط رقمية دقيقة للشوارع التي لا تصلها سيارات جوجل، وتوجيه السائقين للمسارات الأنسب بناءً على عرض الشارع والزحام.",
+          "icon": "map",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق خدمة النقل السياحي واللوجستي",
+          "description": "توفير الخدمة للسياح لاستكشاف المعالم، وللتجار لنقل البضائع داخل 'المدينة القديمة' دون الحاجة لدخول الشاحنات الملوثة.",
+          "icon": "shopping-bag",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "Pollution Levels in Historic Centers vs ROI of Micro-EV Conversion"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "صعوبة شحن المركبات داخل الأحياء التاريخية (يتم حله بمحطات تبديل البطاريات).",
+        "مقاومة أصحاب وسائل النقل التقليدية (يتم حله بدمجهم في المنصة الجديدة).",
+        "الحاجة لتراخيص خاصة للعمل في المناطق الأثرية المحمية.",
+        "وعورة وتعرج الشوارع التي تتطلب تصاميم ميكانيكية خاصة."
+      ],
+      "recommended_tech_stack": [
+        "Swappable Battery Stations",
+        "IoT-enabled Micro-EV Fleet",
+        "Ultra-precise GIS for Old Cities",
+        "Mobile App for Demand/Booking",
+        "Regenerative Braking for Hilly Terrain"
+      ],
+      "main_risk_index": "الاعتراف التنظيمي؛ المشروع يتطلب دعماً من البلديات لمنع وسائل النقل الملوثة من دخول هذه المناطق تدريجياً لضمان نجاح النموذج الاقتصادي."
+    }
+  }
+}

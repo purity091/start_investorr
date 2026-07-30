@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-AGRI3",
+      "status_label": "تحليل أزمة الهدر الغذائي وسلاسل الإمداد",
+      "category_tag": "AgriTech (Supply Chain / Food Logistics)",
+      "business_model": "Marketplace + Logistics Optimization + Storage Solutions",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Agriculture",
+      "Supply Chain",
+      "Food Distribution"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Iraq", "flag": "🇮🇶" },
+        { "name": "Syria", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 11
+    },
+    "core_content": {
+      "title": "تقليل الهدر الغذائي عبر تحسين سلاسل الإمداد",
+      "problem_statement": "يتم فقدان ما بين 30% إلى 50% من الإنتاج الزراعي في بعض الدول العربية قبل وصوله إلى المستهلك بسبب ضعف التخزين، سوء النقل، وانعدام التنسيق بين المزارعين والأسواق. هذا الهدر لا يمثل خسارة اقتصادية فقط، بل تهديد مباشر للأمن الغذائي وارتفاع الأسعار."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "FreshRoute",
+        "industry_tag": "لوجستيات الغذاء وسلاسل الإمداد",
+        "revenue_model": "Transaction Fees + Storage Fees + Logistics Optimization",
+        "action_text": "استعراض تقليل الهدر بنسبة تصل إلى 35%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة تقليل الهدر (0-18 شهر)",
+      "subtitle": "من الحقل إلى المستهلك بكفاءة",
+      "phases": [
+        {
+          "title": "ربط المزارعين بالأسواق",
+          "description": "إنشاء منصة تربط العرض بالطلب بشكل مباشر.",
+          "icon": "link",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تحسين النقل والتخزين",
+          "description": "إدخال حلول تخزين وتبريد ذكية.",
+          "icon": "snowflake",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تحليل الطلب والتوزيع",
+          "description": "استخدام البيانات لتوقع الطلب وتقليل الفائض.",
+          "icon": "chart",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "2500+ (Food Loss & Supply Chain Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تجزئة السوق الزراعي.",
+        "ضعف البنية التحتية للتخزين.",
+        "غياب التنسيق بين الأطراف.",
+        "نقص التكنولوجيا في اللوجستيات الزراعية."
+      ],
+      "recommended_tech_stack": [
+        "Marketplace Platforms",
+        "Cold Chain Logistics",
+        "Route Optimization AI",
+        "Inventory Systems",
+        "Demand Forecasting Models"
+      ],
+      "main_risk_index": "التشغيل؛ يتطلب المشروع إدارة معقدة لسلاسل الإمداد على أرض الواقع."
+    }
+  }
+}

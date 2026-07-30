@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-FIN-2026-SME",
+      "status_label": "تحليل استخباري لتمويل سلاسل الإمداد",
+      "category_tag": "التقنية المالية (SME Financing / AI)",
+      "business_model": "B2B SaaS + Transaction-based Commission",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "FinTech",
+      "Supply Chain Finance",
+      "Predictive Credit Scoring",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Kuwait", "flag": "🇰🇼" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "سد فجوة السيولة النقدية للمنشآت الصغيرة والمتوسطة",
+      "problem_statement": "تعاني المنشآت الصغيرة والمتوسطة في المنطقة من 'اختناق التدفق النقدي'؛ حيث تبلغ الفجوة التمويلية في دول الخليج وحدها أكثر من 250 مليار دولار. العقبة الكبرى هي دورات الدفع الطويلة (90-120 يومًا) من الكيانات الكبرى، وصعوبة الحصول على تمويل بنكي تقليدي نتيجة ضعف السجلات الائتمانية والاعتماد على الضمانات المادية بدلاً من تدفقات العقود."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "SME-Flow",
+        "industry_tag": "التمويل البديل القائم على البيانات",
+        "revenue_model": "Underwriting Fees + Interest Spread + Premium SaaS for Buyers",
+        "action_text": "مراجعة خوارزمية التقييم الائتماني اللحظي (Dynamic Scoring)"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الهيمنة الائتمانية (0-12 شهر)",
+      "subtitle": "من تحليل الفواتير إلى الأتمتة المالية الشاملة",
+      "phases": [
+        {
+          "title": "محرك التقييم الائتماني البديل (Data Ingestion)",
+          "description": "بناء نظام يربط بين بيانات الفوترة الإلكترونية (مثل نظام فاتورة في السعودية) والحسابات البنكية عبر الـ Open Banking لتقييم الجدارة الائتمانية في ثوانٍ بدلاً من أسابيع.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منصة التمويل العكسي (Reverse Factoring)",
+          "description": "إطلاق بوابة تربط الشركات الكبرى بمورديها، حيث تضمن الشركات الكبرى الدفع، ويقوم SME-Flow بخصم الفواتير فوراً للموردين بأسعار فائدة تنافسية مدعومة بالذكاء الاصطناعي.",
+          "icon": "currency-dollar",
+          "color_theme": "rose"
+        },
+        {
+          "title": "توسيع مجمعات السيولة (Capital Markets Integration)",
+          "description": "توريق (Securitization) محفظة القروض الصغيرة وتحويلها إلى أدوات استثمارية للمستثمرين المؤسسيين، مما يضمن تدفق سيولة لا نهائي للمنصة.",
+          "icon": "chart-line",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 8.7,
+      "data_points_analyzed": "4500+ (Regional Trade Flows & SME Failure Rates)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد التاريخي للبنوك على الرهون العقارية لتقديم القروض.",
+        "تشتت بيانات الفواتير وعدم وجود معايير رقمية موحدة (سابقاً).",
+        "غياب النماذج الرياضية التي تفهم تقلبات السوق المحلي والموسمية.",
+        "بيروقراطية الإجراءات القانونية لتحصيل الديون في حال التعثر."
+      ],
+      "recommended_tech_stack": [
+        "AI/ML for Behavioral Credit Scoring",
+        "Open Banking APIs Integration",
+        "Hyperledger Fabric for Immutable Invoice Records",
+        "OCR & NLP for Automated Document Verification",
+        "Real-time Fraud Detection Engine"
+      ],
+      "main_risk_index": "مخاطر التخلف عن السداد (Default Risk)؛ تتطلب المنصة مخصصات مخاطر قوية ونظام تحصيل ذكي يعتمد على التنبؤ المبكر بالتعثر."
+    }
+  }
+}

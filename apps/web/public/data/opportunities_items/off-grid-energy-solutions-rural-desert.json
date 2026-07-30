@@ -1,0 +1,87 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ENERGY10",
+      "status_label": "تحليل فجوة الطاقة في المناطق النائية والصحراوية",
+      "category_tag": "Distributed Energy (Off-grid / Microgrid / Energy Access)",
+      "business_model": "Energy-as-a-Service + Microgrid Leasing + Pay-as-you-go",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Energy",
+      "Off-grid",
+      "Microgrids"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Sudan", "flag": "🇸🇩" },
+        { "name": "Yemen", "flag": "🇾🇪" },
+        { "name": "Morocco (Rural)", "flag": "🇲🇦" },
+        { "name": "Saudi Arabia (Remote Areas)", "flag": "🇸🇦" }
+      ],
+      "additional_regions_count": 12
+    },
+    "core_content": {
+      "title": "أنظمة طاقة مستقلة (Microgrid) للمناطق النائية والصحراوية",
+      "problem_statement": "تعاني مناطق واسعة في العالم العربي، خصوصاً في القرى النائية والصحارى والمناطق الحدودية، من ضعف أو انعدام الوصول إلى شبكة كهرباء مستقرة. حتى في الدول الغنية، ربط هذه المناطق بالشبكة الرئيسية مكلف جداً وغير اقتصادي بسبب المسافات الطويلة وانخفاض الكثافة السكانية. الحل التقليدي (ديزل) مكلف، ملوث، وغير مستقر. الفرصة هنا ليست فقط توفير كهرباء، بل بناء نظام طاقة محلي مستقل يعتمد على الطاقة الشمسية + التخزين + إدارة ذكية، يمكنه تشغيل المنازل، المزارع، محطات المياه، والاتصالات."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "DesertGrid",
+        "industry_tag": "Microgrid & Off-grid Energy Solutions",
+        "revenue_model": "Pay-as-you-go + Leasing + Government/NGO Contracts + Energy Subscription",
+        "action_text": "استعراض نموذج طاقة مستقل يوفر كهرباء مستمرة للمناطق غير المرتبطة بالشبكة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة الطاقة اللامركزية (0-24 شهر)",
+      "subtitle": "كل قرية أو موقع يمكن أن يكون محطة طاقة مستقلة",
+      "phases": [
+        {
+          "title": "تصميم Microgrid مخصص",
+          "description": "تحليل الطلب المحلي (منازل، زراعة، مياه) وتصميم نظام يعتمد على Solar + Battery + Backup حسب الحاجة.",
+          "icon": "sun",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نشر النظام وتشغيله",
+          "description": "تركيب الأنظمة في الموقع مع نظام مراقبة عن بعد يضمن الأداء والاستمرارية.",
+          "icon": "tool",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نموذج الدفع المرن",
+          "description": "تطبيق Pay-as-you-go أو اشتراك شهري، مما يسمح للسكان أو المؤسسات بالدفع حسب الاستخدام دون تكلفة أولية عالية.",
+          "icon": "credit-card",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "3000+ (Energy Access, Rural Electrification, Diesel Cost vs Solar Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ارتفاع تكلفة تمديد الشبكات التقليدية لمسافات طويلة.",
+        "اعتماد تاريخي على مولدات الديزل رغم تكلفتها العالية وتقلب أسعار الوقود.",
+        "ضعف نماذج التمويل التي تسمح للمستخدم النهائي بالدفع تدريجياً.",
+        "تحديات تشغيل وصيانة الأنظمة في مناطق نائية.",
+        "عدم وجود شركات تبني Microgrids كخدمة مستمرة وليس كمشروع تركيب فقط."
+      ],
+      "recommended_tech_stack": [
+        "Solar PV Systems",
+        "Battery Storage (Li-ion / LFP)",
+        "Microgrid Controllers",
+        "Remote Monitoring IoT",
+        "Mobile Payment Systems",
+        "Energy Management Systems",
+        "Predictive Maintenance AI"
+      ],
+      "main_risk_index": "التشغيل الميداني والاستدامة المالية؛ التحدي ليس فقط تركيب النظام بل ضمان استمرارية التشغيل والصيانة والتحصيل المالي في بيئات قد تكون ضعيفة البنية التحتية. النجاح يعتمد على نموذج تشغيل طويل الأجل وليس بيع المعدات فقط."
+    }
+  }
+}

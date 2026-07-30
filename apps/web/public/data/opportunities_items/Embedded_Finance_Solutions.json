@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-FIN-2026-EMBED",
+      "status_label": "تحليل استخباري لدمج الخدمات المالية في غير المالية",
+      "category_tag": "التقنية المالية (Banking-as-a-Service / BNPL 2.0)",
+      "business_model": "Revenue Share + Merchant Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Embedded Finance",
+      "RetailTech",
+      "Consumer Credit"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "GCC E-commerce", "flag": "🇸🇦" },
+        { "name": "Egypt Retail", "flag": "🇪🇬" },
+        { "name": "Jordan Startup Scene", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "التمويل المدمج لقطاع التجزئة والتجارة الإلكترونية",
+      "problem_statement": "يفقد تجار التجزئة والمنصات الرقمية 30% من المبيعات عند صفحة الدفع (Checkout) لأن العميل لا يملك السيولة الكافية أو يجد خيارات التمويل البنكي معقدة. التمويل المدمج يحول المتجر إلى 'بنك صغير' يقدم قروضاً، تأميناً، ومحافظ ادخار داخل رحلة الشراء دون أن يغادر العميل الموقع، مما يرفع القيمة الشرائية بنسبة هائلة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sila-Finance",
+        "industry_tag": "مزود خدمات التمويل المدمج (BaaS)",
+        "revenue_model": "Transaction Processing Fee + Interest Sharing with Merchants + Default Risk Premium",
+        "action_text": "عرض كيف رفعنا مبيعات المتاجر بنسبة 45% عبر التمويل اللحظي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التجارة الممولة (0-18 شهر)",
+      "subtitle": "اجعل التمويل جزءاً لا يتجزأ من البيع",
+      "phases": [
+        {
+          "title": "بناء محرك الائتمان اللحظي (POS Lending)",
+          "description": "تطوير نظام يمنح موافقة على تقسيط المشتريات خلال 3 ثوانٍ بناءً على رقم الجوال وتاريخ العميل الشرائي، دون الحاجة لبطاقة ائتمان.",
+          "icon": "shopping-cart",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محفظة العلامة التجارية (White-label Wallet)",
+          "description": "تمكين المتاجر الكبرى من إطلاق محافظها الرقمية الخاصة وبرامج الولاء الممولة، مما يزيد من استبقاء العملاء (Customer Retention).",
+          "icon": "credit-card",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التأمين عند الدفع (Embedded Insurance)",
+          "description": "تقديم خيارات تأمين تلقائية على المنتجات (مثل حماية الشاشة للجوالات) بضغطة زر واحدة أثناء الدفع، مما يخلق مصدر دخل إضافي للمتجر.",
+          "icon": "shield-check",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 8.7,
+      "data_points_analyzed": "4M+ (Checkout Abandonment Rates & Cart Values)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "البنوك التقليدية لا تملك المرونة التقنية للاندماج داخل تطبيقات المتاجر.",
+        "التعقيد التقني في بناء محركات ائتمان تعمل في أجزاء من الثانية.",
+        "مخاوف التجار من تحمل مخاطر التعثر الائتماني (يتم حلها عبر وسيط مالي).",
+        "الحاجة لبيانات لحظية دقيقة للتحقق من هوية العميل وقدرته المالية."
+      ],
+      "recommended_tech_stack": [
+        "BaaS (Banking as a Service) Infrastructure",
+        "RESTful APIs for Seamless Integration",
+        "Real-time Credit Decisioning AI",
+        "Lending-as-a-Service (LaaS) modules",
+        "Digital KYC (E-kyc) integrations"
+      ],
+      "main_risk_index": "مخاطر الائتمان الاستهلاكي؛ التوسع المفرط في الإقراض السهل قد يؤدي لتعثرات جماعية في حال حدوث ركود اقتصادي، لذا فإن خوارزميات التقييم يجب أن تكون محافظة."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-TECH9",
+      "status_label": "تحليل فجوة كشف الاحتيال المالي",
+      "category_tag": "FinTech AI (Fraud Detection)",
+      "business_model": "API + SaaS + Transaction-based Pricing",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Technology",
+      "FinTech",
+      "Fraud Detection"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 9
+    },
+    "core_content": {
+      "title": "أنظمة ذكية لكشف الاحتيال المالي في الوقت الحقيقي",
+      "problem_statement": "مع نمو المدفوعات الرقمية، زادت حالات الاحتيال المالي بشكل كبير في المنطقة، خاصة في التجارة الإلكترونية والخدمات المالية. الأنظمة الحالية تعتمد على قواعد ثابتة (Rule-based) ولا تستطيع اكتشاف الأنماط المعقدة، مما يؤدي إلى خسائر كبيرة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "FraudShield AI",
+        "industry_tag": "أنظمة كشف الاحتيال",
+        "revenue_model": "Per Transaction Fee + API Subscription",
+        "action_text": "استعراض كشف الاحتيال في الوقت الحقيقي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة كشف الاحتيال (0-12 شهر)",
+      "subtitle": "حماية مالية ذكية",
+      "phases": [
+        {
+          "title": "جمع بيانات المعاملات",
+          "description": "تحليل سلوك المستخدمين والمعاملات.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء نماذج كشف الاحتيال",
+          "description": "استخدام AI لاكتشاف الأنماط غير الطبيعية.",
+          "icon": "cpu",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكامل مع البنوك والمنصات",
+          "description": "تقديم API للكشف المباشر.",
+          "icon": "link",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "2400+ (Fraud Cases Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تعقيد الاحتيال الحديث.",
+        "اعتماد الأنظمة التقليدية.",
+        "نقص البيانات المشتركة.",
+        "ضعف الذكاء الاصطناعي المحلي."
+      ],
+      "recommended_tech_stack": [
+        "Machine Learning Models",
+        "Real-time Processing",
+        "Behavioral Analytics",
+        "Cloud Infrastructure",
+        "API Systems"
+      ],
+      "main_risk_index": "الدقة؛ يجب تقليل False Positives."
+    }
+  }
+}

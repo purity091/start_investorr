@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-AGRI8",
+      "status_label": "تحليل فجوة جودة البذور والابتكار الزراعي",
+      "category_tag": "AgriBiotech (Seeds / Genetic Innovation)",
+      "business_model": "Seed Production + Licensing + R&D Partnerships",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Agriculture",
+      "Seeds",
+      "Biotechnology"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Morocco", "flag": "🇲🇦" },
+        { "name": "Algeria", "flag": "🇩🇿" }
+      ],
+      "additional_regions_count": 8
+    },
+    "core_content": {
+      "title": "تطوير بذور زراعية مقاومة للمناخ المحلي",
+      "problem_statement": "تعتمد العديد من الدول العربية على استيراد البذور، والتي غالباً لا تكون ملائمة للظروف المناخية المحلية (حرارة، جفاف، ملوحة). هذا يؤدي إلى انخفاض الإنتاجية وزيادة الاعتماد على الخارج. هناك نقص حاد في الابتكار المحلي في مجال البذور."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "SeedTech",
+        "industry_tag": "التكنولوجيا الحيوية الزراعية",
+        "revenue_model": "Seed Sales + Licensing + Government Contracts",
+        "action_text": "استعراض بذور مقاومة للجفاف والملوحة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة الابتكار الزراعي (0-36 شهر)",
+      "subtitle": "بذور مصممة للبيئة العربية",
+      "phases": [
+        {
+          "title": "البحث والتطوير",
+          "description": "تطوير سلالات جديدة مقاومة للظروف القاسية.",
+          "icon": "flask",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "التجارب الحقلية",
+          "description": "اختبار البذور في بيئات مختلفة.",
+          "icon": "leaf",
+          "color_theme": "rose"
+        },
+        {
+          "title": "الإنتاج والتوزيع",
+          "description": "توسيع الإنتاج وتوزيع البذور محلياً.",
+          "icon": "package",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.3,
+      "data_points_analyzed": "1800+ (Seed Performance Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف الاستثمار في البحث الزراعي.",
+        "الاعتماد على الاستيراد.",
+        "ارتفاع تكلفة تطوير البذور.",
+        "نقص البنية التحتية البحثية."
+      ],
+      "recommended_tech_stack": [
+        "Genetic Engineering",
+        "Bioinformatics",
+        "Lab Automation",
+        "Field Testing Systems",
+        "Data Analysis Tools"
+      ],
+      "main_risk_index": "زمن التطوير؛ يحتاج المشروع إلى سنوات قبل تحقيق نتائج تجارية."
+    }
+  }
+}

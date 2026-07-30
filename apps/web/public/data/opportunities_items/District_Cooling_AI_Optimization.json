@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-STRAT-2026-NRG07",
+      "status_label": "تحليل فجوة كفاءة التبريد الحضري",
+      "category_tag": "Energy Efficiency / PropTech / AI",
+      "business_model": "SaaS (Efficiency Share) + Integration Fees + Carbon Credits",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Energy",
+      "Smart Cities",
+      "Artificial Intelligence"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "United Arab Emirates", "flag": "🇦🇪" },
+        { "name": "Qatar (Smart Districts)", "flag": "🇶🇦" },
+        { "name": "Saudi Arabia (Urban Hubs)", "flag": "🇸🇦" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "منصة التحسين الذكي لأنظمة التبريد المركزي (Cool-AI)",
+      "problem_statement": "تستهلك أنظمة التبريد المركزي (District Cooling) في الخليج طاقة هائلة، لكنها غالباً ما تعمل بإعدادات ثابتة لا تراعي تغيرات الإشغال أو الطقس بدقة. هذا يؤدي لهدر 20-30% من الطاقة وانبعاثات كربونية غير ضرورية. الفجوة هي غياب 'عقل رقمي' يربط بين بيانات المباني ومحطات التبريد لحظياً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Thalaj-AI",
+        "industry_tag": "أتمتة التبريد المستدام",
+        "revenue_model": "Gain-Share (30% of Energy Savings) + Annual License for Facility Managers",
+        "action_text": "تقليل تكاليف تبريد الأبراج بنسبة 25% عبر الذكاء الاصطناعي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق كفاءة التبريد (0-18 شهر)",
+      "subtitle": "تبريد أذكى، كربون أقل",
+      "phases": [
+        {
+          "title": "دمج حساسات الـ IoT والبيانات",
+          "description": "ربط محطات التبريد بحساسات الإشغال والحرارة داخل المباني للحصول على رؤية شاملة للطلب الفعلي.",
+          "icon": "rss",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تفعيل محرك التنبؤ بالطلب (Demand Forecasting)",
+          "description": "استخدام تعلم الآلة للتنبؤ باحتياجات التبريد بناءً على توقعات الطقس والفعاليات المجدولة في المنطقة.",
+          "icon": "presentation-chart-line",
+          "color_theme": "rose"
+        },
+        {
+          "title": "الأتمتة الكاملة لمحطة التبريد",
+          "description": "تحكم آلي في المضخات والمبردات (Chillers) لضبط الإنتاج مع الطلب اللحظي، مما يطيل عمر المعدات ويوفر الطاقة.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "Power Consumption Profiles of GCC Skyscrapers"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد على أنظمة التحكم القديمة (Legacy BMS) التي يصعب ربطها بالسحابة.",
+        "تعقيد العقود بين شركات التبريد والملاك؛ غياب الحوافز المتبادلة للتوفير.",
+        "نقص الخبراء الذين يجمعون بين هندسة التكييف والبرمجة المتقدمة.",
+        "تخوف مديري المرافق من فقدان السيطرة اليدوية على الأنظمة الحساسة."
+      ],
+      "recommended_tech_stack": [
+        "Reinforcement Learning (RL) for Control",
+        "Edge Computing Gateways",
+        "Digital Twin for HVAC Systems",
+        "Cloud-native Analytics (AWS/Azure)",
+        "API integrations for Smart Meters"
+      ],
+      "main_risk_index": "الاستقرار التقني؛ أي خلل في الخوارزمية قد يسبب توقف التبريد في أوقات الذروة، مما يتطلب أنظمة 'تجاوز يدوية' (Fail-safe) معقدة."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-MAR05",
+      "status_label": "تحليل فجوة إنتاجية الموانئ البحرية",
+      "category_tag": "Maritime / Autonomous / Automation",
+      "business_model": "Hardware-as-a-Service (Autonomous Trucks) + Operational Efficiency SaaS + Maintenance Revenue",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Maritime",
+      "Autonomous Systems",
+      "Logistics"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Jebel Ali (Automation Benchmark)", "flag": "🇦🇪" },
+        { "name": "Sokhna & Alexandria (Modernization Target)", "flag": "🇪🇬" },
+        { "name": "Tangier Med (Global Hub)", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "الميناء الذكي: أتمتة الساحات بالمركبات الذاتية",
+      "problem_statement": "تعاني العديد من الموانئ العربية من 'تكدس الحاويات' نتيجة بطء النقل الداخلي اليدوي وارتفاع تكلفة العمالة والمخاطر البشرية. الفجوة هي نظام أتمتة كامل لساحات الحاويات باستخدام شاحنات ذاتية القيادة (AGVs) يتم توجيهها بواسطة ذكاء اصطناعي مركزي، مما يزيد إنتاجية الميناء بنسبة 50% ويقلل الأخطاء الصفرية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Mina-Auto",
+        "industry_tag": "أتمتة الموانئ واللوجستيات البحرية المتقدمة",
+        "revenue_model": "Fee per TEU Handled + Autonomous Fleet Leasing + Port Efficiency SaaS License",
+        "action_text": "استعراض تكنولوجيا أتمتة الموانئ العربية لعام 2030"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الميناء الآلي (0-48 شهر)",
+      "subtitle": "تحويل الموانئ إلى مصانع لوجستية لا تنام",
+      "phases": [
+        {
+          "title": "نشر الشاحنات ذاتية القيادة (AGV Deployment)",
+          "description": "استبدال الشاحنات التقليدية بشاحنات كهربائية ذاتية القيادة قادرة على نقل الحاويات بدقة مليمترية بين الرافعات والساحات.",
+          "icon": "truck",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام التنسيق المركزي (Port-Brain AI)",
+          "description": "تطوير 'عقل' للميناء يحدد المسارات الأمثل للشاحنات ويقلل وقت انتظار السفن عبر التنبؤ بحجم العمل القادم.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التكامل مع سلاسل التوريد (Gate-to-Gate)",
+          "description": "ربط بيانات الميناء آلياً مع شاحنات النقل الخارجي لضمان خروج الحاوية فور تحميلها دون تأخير جمركي أو إداري.",
+          "icon": "share",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Port Throughput Gaps (MENA vs Asia) vs Cost of Manual Port Operations"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الحاجة لاستثمارات ضخمة في البنية التحتية الفيزيائية للميناء (أرضيات، حساسات).",
+        "مقاومة النقابات العمالية لخسارة الوظائف التقليدية في الموانئ.",
+        "تعقيد الأنظمة البرمجية المطلوبة لإدارة مئات المركبات في مساحة ضيقة.",
+        "تحديات الاتصال المستقر (Low Latency) المطلوبة للتحكم في المركبات."
+      ],
+      "recommended_tech_stack": [
+        "Autonomous Guided Vehicles (AGVs)",
+        "Private 5G for Low-latency Control",
+        "Lidar & Stereo Vision for Obstacle Avoidance",
+        "Optimization Algorithms (Swarm Intelligence)",
+        "Digital Twin for Real-time Monitoring"
+      ],
+      "main_risk_index": "المخاطر التشغيلية؛ أي توقف في النظام البرمجي قد يشل حركة الميناء بالكامل، مما يتطلب أنظمة 'احتياطية' (Redundancy) متعددة المستويات."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-URBAN-2026-SMART-TRANS",
+      "status_label": "تحليل استخباري للتنقل كخدمة (MaaS)",
+      "category_tag": "النقل (Mobility / Smart City)",
+      "business_model": "Public-Private Partnership (PPP) + SaaS",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Mobility",
+      "Traffic Management",
+      "Electric Vehicles"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Riyadh", "flag": "🇸🇦" },
+        { "name": "Dubai", "flag": "🇦🇪" },
+        { "name": "Cairo (New Capital)", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "أنظمة النقل الذكي في المدن المستدامة",
+      "problem_statement": "تعاني المدن الكبرى من ازدحام مروري خانق يقلل الإنتاجية ويزيد التلوث. الأنظمة الحالية لإدارة المرور 'تفاعلية' (بعد وقوع الزحام) وليست 'تنبؤية'، وتفتقر للربط بين مختلف وسائل النقل (المترو، الحافلات، السيارات التشاركية) في رحلة مستخدم واحدة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Massar-Connect",
+        "industry_tag": "منصة التنقل المتكامل الذكي",
+        "revenue_model": "Integrated Ticketing Commission + Traffic Data Analytics for Gov + Fleet Mgmt SaaS",
+        "action_text": "استعراض نظام إدارة المرور التنبئي لتقليل الازدحام بنسبة 25%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق السيولة الحضرية (0-24 شهر)",
+      "subtitle": "تنقل بلا توقف، مدينة بلا اختناق",
+      "phases": [
+        {
+          "title": "دمج بيانات النقل المتعددة",
+          "description": "بناء منصة توحد بيانات المترو، الحافلات، وسيارات الأجرة في تطبيق واحد يتيح للمستخدم تخطيط رحلته ودفع قيمتها بضغطة زر.",
+          "icon": "link",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك إدارة المرور بالذكاء الاصطناعي",
+          "description": "تفعيل كاميرات وحساسات ذكية تعدل توقيت إشارات المرور لحظياً بناءً على كثافة السيارات، وتوجه السائقين لمسارات بديلة قبل وقوع الازدحام.",
+          "icon": "eye",
+          "color_theme": "rose"
+        },
+        {
+          "title": "دعم التنقل الكهربائي والمشترك",
+          "description": "توفير بنية تحتية رقمية لمحطات شحن السيارات الكهربائية وخدمات 'الميل الأخير' (سكوترات ودراجات تشاركية) لتقليل الاعتماد على السيارات الخاصة.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "10M+ Daily Commuter Trips"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تجزئة ملكية وإدارة وسائل النقل بين جهات حكومية وخاصة متعددة.",
+        "الحاجة لاستثمارات ضخمة في البنية التحتية للحساسات والكاميرات الذكية.",
+        "صعوبة تغيير سلوك المواطنين المعتمدين كلياً على السيارات الخاصة.",
+        "تحديات تكامل البيانات الضخمة (Big Data) من مصادر متنوعة وغير متوافقة."
+      ],
+      "recommended_tech_stack": [
+        "Computer Vision for Traffic Analysis",
+        "Predictive AI Modeling",
+        "V2X (Vehicle-to-Everything) Communication",
+        "Integrated Payment Gateways",
+        "Digital Twin for Urban Mobility"
+      ],
+      "main_risk_index": "مخاطر الخصوصية؛ تتبع حركة ملايين الأشخاص يتطلب أعلى معايير تشفير البيانات والالتزام الصارم بالقوانين الوطنية لحماية البيانات الشخصية."
+    }
+  }
+}

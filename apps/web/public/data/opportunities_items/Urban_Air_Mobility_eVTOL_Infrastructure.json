@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-AIR10",
+      "status_label": "تحليل فجوة البنية التحتية للنقل الجوي الحضري",
+      "category_tag": "Aviation / Urban-Mobility / eVTOL",
+      "business_model": "Vertiport Landing Fees + Charging-as-a-Service + Fleet Management SaaS",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Mobility",
+      "Aviation",
+      "Smart Cities"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "NEOM & Riyadh (The Line)", "flag": "🇸🇦" },
+        { "name": "Dubai (Advanced Air Mobility Hub)", "flag": "🇦🇪" },
+        { "name": "New Administrative Capital", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "التنقل الجوي الحضري: بنية مهابط الـ eVTOL",
+      "problem_statement": "تتجه مدن المستقبل العربية (نيوم، دبي) لتبني التاكسي الطائر (eVTOL) كحل للزحام، لكن التحدي الأكبر ليس الطائرة نفسها بل 'المهابط الذكية' (Vertiports) القادرة على الشحن السريع، الصيانة، وإدارة الحركة الجوية في المساحات الضيقة. الفجوة هي بناء شبكة المهابط المؤتمتة وبرمجيات إدارتها لتشغيل أول شبكة تاكسي جوي حقيقية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sky-Port-Arabia",
+        "industry_tag": "بنية تحتية للنقل الجوي المتقدم (AAM)",
+        "revenue_model": "Landing & Take-off Fees + Ultra-fast EV Charging for Drones + Sky-Lounge Subscriptions",
+        "action_text": "استعراض خطة بناء مهابط التاكسي الطائر في المدن العربية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق سماء المستقبل (0-60 شهر)",
+      "subtitle": "تجاوز الزحام الأرضي إلى السيادة الجوية",
+      "phases": [
+        {
+          "title": "تصميم المهابط الذكية (Vertiport Design)",
+          "description": "بناء مهابط معيارية يمكن تركيبها فوق الأبراج أو في محطات المترو، مزودة بأنظمة هبوط آلي تحت كل الظروف الجوية.",
+          "icon": "home",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك إدارة المرور الجوي المنخفض (UTM)",
+          "description": "تطوير برمجيات تنسق حركة مئات التاكسيات الجوية والدرونات في سماء المدينة الواحدة لمنع التصادم وضمان انسيابية الحركة.",
+          "icon": "rss",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكامل الشحن والخدمات اللوجستية",
+          "description": "توفير أنظمة شحن فائقة السرعة قادرة على شحن بطاريات التاكسي الجوي خلال دقائق انتظار الركاب.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.2,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.7,
+      "data_points_analyzed": "Growth of eVTOL Market in GCC vs Lack of Specialized Landing Infrastructure"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التعقيد التنظيمي والتشريعي للطيران فوق المناطق المأهولة بالسكان.",
+        "الحاجة لمعايير أمان عالمية صارمة جداً للبنية التحتية الجوية.",
+        "التكلفة العالية لبناء المهابط في مراكز المدن المزدحمة.",
+        "تحديات الضوضاء والقبول الاجتماعي للطيران الكثيف في الأحياء السكنية."
+      ],
+      "recommended_tech_stack": [
+        "Autonomous Landing Systems (Lidar/Vision)",
+        "High-density Battery Charging Tech",
+        "Unmanned Traffic Management (UTM) Software",
+        "5G/Satellite Communication Mesh",
+        "Renewable Energy Integration for Ground Ops"
+      ],
+      "main_risk_index": "التنظيمات الجوية؛ المشروع يعتمد كلياً على سرعة إصدار هيئات الطيران المدني لتراخيص الطيران الحضري، مما قد يؤخر العائد على الاستثمار."
+    }
+  }
+}

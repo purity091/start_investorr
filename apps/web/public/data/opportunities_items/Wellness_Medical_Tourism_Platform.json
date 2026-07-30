@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-STRAT-2026-HLT08",
+      "status_label": "تحليل فجوة السياحة العلاجية المتكاملة",
+      "category_tag": "HealthTech / Tourism / Fintech",
+      "business_model": "Marketplace Commission + Medical Concierge Subscriptions",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Healthcare",
+      "Tourism",
+      "Wellness"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt (Natural Healing Sites)", "flag": "🇪🇬" },
+        { "name": "Jordan (Dead Sea/Health Hubs)", "flag": "🇯🇴" },
+        { "name": "Morocco (Traditional Wellness)", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "منصة السياحة الاستشفائية والعلاجية المتكاملة",
+      "problem_statement": "يمتلك الوطن العربي مواقع استشفاء طبيعية عالمية، لكن السائح يواجه صعوبة في تنسيق 'الرحلة الكاملة' (من التأشيرة والموعد الطبي إلى النقل المتخصص والبرنامج الغذائي). السوق مشتت ويفتقر للشفافية في الأسعار والنتائج الطبية. الفجوة هي غياب وسيط رقمي يضمن جودة التجربة العلاجية من البداية للنهاية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Shifa-Route",
+        "industry_tag": "بوابة الاستشفاء الإقليمية",
+        "revenue_model": "15% Booking Commission + B2B Referral Fees from Hospitals + Travel Insurance Upsell",
+        "action_text": "رقمنة تجربة السياحة العلاجية لـ 500,000 مريض سنوياً"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الشفاء الرقمي (0-24 شهر)",
+      "subtitle": "تسهيل الوصول لأفضل مراكز العلاج",
+      "phases": [
+        {
+          "title": "بناء شبكة المراكز المعتمدة",
+          "description": "اختيار وتدقيق المستشفيات ومنتجعات الاستشفاء بناءً على معايير الجودة الدولية وتوثيقها بالصور والتقييمات الحقيقية.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام الحجز الموحد والملف الطبي",
+          "description": "تطوير منصة تتيح للمريض رفع تقاريره الطبية بأمان والحصول على خطة علاجية مخصصة وعروض أسعار واضحة.",
+          "icon": "document-report",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق 'المساعد الشخصي' (Concierge AI)",
+          "description": "توفير مرافقة رقمية وبشرية للمريض طوال رحلته، تشمل الترجمة الطبية، تنسيق النقل، والمتابعة بعد العلاج.",
+          "icon": "user-group",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "Medical Tourism Inflow Data (MENA vs Global Hubs)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "غياب التنسيق العابر للقطاعات (صحة، سياحة، طيران).",
+        "ضعف التسويق الرقمي الموجه للأسواق العالمية (أوروبا، أفريقيا).",
+        "تحديات منح التأشيرات العلاجية في بعض الدول العربية.",
+        "نقص معايير توثيق 'النتائج العلاجية' لبناء الثقة مع المرضى الدوليين."
+      ],
+      "recommended_tech_stack": [
+        "Secure Patient Portals (HIPAA compliant)",
+        "AI for Multi-lingual Medical Translation",
+        "Blockchain for Medical Records Verification",
+        "Marketplace Engines for Dynamic Pricing",
+        "Telemedicine Integration for Pre/Post-Op"
+      ],
+      "main_risk_index": "المخاطر الطبية والقانونية؛ أي خطأ طبي قد يؤثر على سمعة المنصة، مما يتطلب نظام تأمين شامل وعقوداً صارمة مع المزودين."
+    }
+  }
+}

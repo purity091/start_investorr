@@ -1,0 +1,82 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-FIN",
+      "status_label": "تحليل استخباري لتدفقات الأموال والشمول المالي",
+      "category_tag": "المالية (FinTech / Remittance)",
+      "business_model": "P2P + Digital Wallet",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "FinTech",
+      "Cross-border Payments",
+      "Financial Inclusion"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Global Diaspora Link", "flag": "🌍" },
+        { "name": "Local Distribution Network", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "منصة الحوالات الرقمية والشمول المالي للأفراد",
+      "problem_statement": "تعتمد نسبة هائلة من العائلات السورية على الحوالات الخارجية كمصدر رئيسي للدخل، لكن القنوات الحالية مكلفة، بطيئة، وتفتقر للشفافية. يواجه السوريون صعوبة في الوصول للخدمات المصرفية التقليدية، مما يخلق حاجة ملحة لمنصة رقمية تربط السوريين في الخارج بذويهم في الداخل، وتسمح بإدارة المدفوعات الأساسية (فواتير، أقساط) مباشرة من المحفظة الرقمية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Wasel-Digital",
+        "industry_tag": "التقنية المالية والتحويلات",
+        "revenue_model": "Transaction Fees + Currency Exchange Margin + Value Added Services",
+        "action_text": "عرض حلول التحويل الفوري الآمن"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التدفقات المالية (0-15 شهر)",
+      "subtitle": "تسهيل وصول السيولة لتعزيز الاستقرار المعيشي",
+      "phases": [
+        {
+          "title": "تأسيس البنية التقنية المؤمنة",
+          "description": "بناء محفظة رقمية تعتمد على تقنيات التشفير العالية لضمان أمن البيانات والعمليات في بيئة متقلبة.",
+          "icon": "shield-lock",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "ربط شبكة نقاط الاستلام المحلية",
+          "description": "التعاقد مع مراكز الصرافة المعتمدة والمحلات التجارية الكبرى لتكون نقاط 'سحب وإيداع' نقدي منتشرة جغرافياً.",
+          "icon": "map-pin",
+          "color_theme": "rose"
+        },
+        {
+          "title": "دمج خدمات الدفع المباشر",
+          "description": "تفعيل دفع الفواتير والرسوم الجامعية والشراء من المتاجر الكبرى مباشرة عبر التطبيق لتقليل الحاجة لحمل النقد.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 8.5,
+      "data_points_analyzed": "2000+ (Remittance Volumes & Diaspora Demographics)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تعقيد التشريعات الدولية والمحلية المحيطة بالتحويلات المالية.",
+        "ضعف البنية التحتية المصرفية التقليدية عن مواكبة التحول الرقمي.",
+        "اعتماد السوق على القنوات غير الرسمية (السوق الموازي) التي تفتقر للأمان.",
+        "نقص الثقافة المالية الرقمية لدى شرائح معينة من المجتمع."
+      ],
+      "recommended_tech_stack": [
+        "Blockchain for Transaction Ledger",
+        "End-to-End Encryption",
+        "Mobile First Design (Low Data Mode)",
+        "Automated KYC/AML Compliance Tools",
+        "API Gateways for Local Banks"
+      ],
+      "main_risk_index": "الامتثال التنظيمي؛ يتطلب المشروع موافقات قانونية دقيقة وتنسيقاً عالي المستوى مع الجهات المصرفية المركزية لضمان قانونية المسارات المالية."
+    }
+  }
+}

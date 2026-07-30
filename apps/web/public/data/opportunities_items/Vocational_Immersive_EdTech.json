@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-EDU-2026-AR",
+      "status_label": "تحليل استخباري لتنمية رأس المال البشري",
+      "category_tag": "التعليم (EdTech / Metaverse)",
+      "business_model": "B2B + B2C",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "EdTech",
+      "Skill Development",
+      "VR/AR Training"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "UAE", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "التعليم المهني الغامر لسد فجوة المهارات المستقبلية",
+      "problem_statement": "هناك فجوة متسعة بين مخرجات التعليم الأكاديمي واحتياجات سوق العمل في القطاعات التقنية والصناعية. التدريب المهني التقليدي مكلف ويتطلب معدات مادية ضخمة وغالباً ما يكون نظرياً بشكل مفرط. يحتاج الشباب العربي إلى بيئات تدريبية غامرة تحاكي الواقع وتسمح بإتقان المهارات التقنية (مثل صيانة الطائرات، إدارة مراكز البيانات، الجراحة) دون مخاطر أو تكاليف باهظة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "SkillVr",
+        "industry_tag": "التدريب التقني الافتراضي",
+        "revenue_model": "SaaS Subscription for Institutions + Certification Fees",
+        "action_text": "استعراض بيئات التدريب الافتراضية عالية الدقة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الكفاءة البشرية (0-12 شهر)",
+      "subtitle": "تأهيل جيل متمكن رقمياً وتقنياً",
+      "phases": [
+        {
+          "title": "تطوير مناهج المحاكاة التفاعلية",
+          "description": "بناء سيناريوهات تدريبية ثلاثية الأبعاد بالتعاون مع كبار أرباب العمل لضمان مطابقة التدريب للواقع الوظيفي.",
+          "icon": "view-grid",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "إطلاق مراكز التدريب الافتراضية",
+          "description": "توفير منصة سحابية تتيح للمتدربين الوصول للدروس الغامرة عبر نظارات الواقع الافتراضي من أي مكان.",
+          "icon": "desktop-computer",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نظام الاعتماد والربط الوظيفي",
+          "description": "توفير سجل رقمي لمهارات المتدربين (Skill Passport) وربطه مباشرة بمنصات التوظيف لتسريع شغل الوظائف التقنية.",
+          "icon": "badge-check",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 8.7,
+      "data_points_analyzed": "2500+ (Unemployment Rates & Tech Skills Gap)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لنظارات وأجهزة الواقع الافتراضي (سابقاً).",
+        "غياب المحتوى العربي المتخصص في المجالات التقنية الدقيقة.",
+        "النظرة الاجتماعية الدونية للتعليم المهني مقارنة بالشهادات الجامعية.",
+        "صعوبة اعتماد الشهادات الافتراضية من الجهات التنظيمية التقليدية."
+      ],
+      "recommended_tech_stack": [
+        "VR/AR Headsets (Meta Quest/Apple Vision Pro)",
+        "Unity/Unreal Engine for Simulations",
+        "Haptic Feedback Suits",
+        "Cloud-based Learning Management (LMS)",
+        "AI for Student Performance Tracking"
+      ],
+      "main_risk_index": "الاستمرارية؛ الحفاظ على حماس المتدربين وتحديث المحتوى لمواكبة التطور التقني السريع هما التحدي الأكبر."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-RECYCLE",
+      "status_label": "تحليل استخباري لتعويض نقص الموارد الخام",
+      "category_tag": "الصناعة والبيئة (Circular Economy / Industry)",
+      "business_model": "B2B (Raw Material Supply)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Sustainability",
+      "Industrial Recovery",
+      "Material Science"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Adra Industrial City", "flag": "🇸🇾" },
+        { "name": "Sheikh Najjar (Aleppo)", "flag": "🇸🇾" },
+        { "name": "Homs Industrial Zone", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "تدوير النفايات الصناعية واستعادة المواد الخام محلياً",
+      "problem_statement": "تعاني الصناعة السورية من صعوبة استيراد المواد الأولية نتيجة العقوبات، نقص العملة الصعبة، وتعثر سلاسل الإمداد. في المقابل، توجد كميات هائلة من النفايات الصناعية (خردة معادن، بلاستيك، مخلفات نسيجية) تُهدر أو تُباع كنفايات رخيصة. هناك فجوة استثمارية في إنشاء وحدات معالجة متقدمة تحول هذه النفايات إلى مواد أولية بجودة صناعية، مما يقلل تكاليف الإنتاج للمصانع المحلية بنسبة تصل إلى 40%."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Syr-Raw",
+        "industry_tag": "معالجة واستعادة الموارد الصناعية",
+        "revenue_model": "Waste Collection Contracts + Sales of Recycled Raw Materials",
+        "action_text": "استعراض خطة توطين مدخلات الإنتاج الصناعي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الاستقلال الصناعي (0-20 شهر)",
+      "subtitle": "تحويل المخلفات إلى عصب للصناعة الوطنية",
+      "phases": [
+        {
+          "title": "تأسيس مراكز الفرز والجمع التخصصية",
+          "description": "بناء مراكز تجميع داخل المدن الصناعية الكبرى لفرز النفايات المعدنية والبلاستيكية من المصدر لضمان نقاء المادة المستعادة.",
+          "icon": "truck",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تشغيل وحدات الصهر والمعالجة التقنية",
+          "description": "استخدام أفران صهر وتقنيات تدوير كيميائي لإنتاج حبيبات البلاستيك وسبائك المعادن (ألمنيوم، نحاس) بمواصفات قياسية.",
+          "icon": "fire",
+          "color_theme": "rose"
+        },
+        {
+          "title": "الربط مع المصانع التحويلية",
+          "description": "إنشاء منصة تداول تربط وحدات التدوير بالمصانع التي تحتاج هذه المواد، مع توفير عقود توريد طويلة الأمد بأسعار منافسة للمستورد.",
+          "icon": "refresh",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.1,
+      "competitive_moat": 8.5,
+      "data_points_analyzed": "1100+ (Industrial Output Data & Scrap Export Rates)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد التاريخي على المواد الخام المستوردة الرخيصة (قبل الأزمة).",
+        "غياب التكنولوجيا المتطورة لفرز وتصنيع المواد المستعادة بجودة عالية.",
+        "تشتت العمل في قطاع الخردة والنفايات وسيطرة القطاع غير الرسمي.",
+        "نقص الطاقة الكهربائية اللازمة لتشغيل مصانع التدوير الكبرى (الحل في الطاقة الشمسية)."
+      ],
+      "recommended_tech_stack": [
+        "Magnetic & Optical Sorting AI",
+        "Pyrolysis Units for Plastics",
+        "Electric Arc Furnaces (EAF)",
+        "Material Testing Labs (Quality Control)",
+        "Supply Chain Tracking Software"
+      ],
+      "main_risk_index": "استقرار تكاليف الطاقة؛ نجاح المشروع مرهون بالاعتماد على مصادر طاقة هجينة لضمان استمرارية أفران المعالجة دون انقطاع."
+    }
+  }
+}

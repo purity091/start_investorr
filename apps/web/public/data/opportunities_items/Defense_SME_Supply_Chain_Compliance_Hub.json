@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-IND11",
+      "status_label": "تحليل فجوة توطين الصناعات الدفاعية والأمنية",
+      "category_tag": "DefenseTech / Manufacturing / Compliance",
+      "business_model": "SaaS (Compliance) + Supply Chain Commission + Gov-Tech Contracts",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Industry",
+      "Defense",
+      "Sovereign Security"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (GAMI Localisation)", "flag": "🇸🇦" },
+        { "name": "UAE (EDGE Ecosystem)", "flag": "🇦🇪" },
+        { "name": "Egypt (Defense Production Hub)", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "دروع السيادة: منصة تأهيل الموردين للصناعات الدفاعية",
+      "problem_statement": "تخطط دول كبرى مثل السعودية لتوطين 50% من إنفاقها الدفاعي، لكن الشركات المحلية الصغيرة (SMEs) تجد صعوبة في الامتثال لمعايير الجودة والأمن السيبراني الصارمة المطلوبة لدخول هذا القطاع. الفجوة هي منصة 'تأهيل وربط' رقمية تضمن مطابقة الشركات الصغيرة للمعايير العسكرية وتربطها بالمقاولين الكبار آلياً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Der3-Integrator",
+        "industry_tag": "بنية تحتية رقمية للصناعات السيادية",
+        "revenue_model": "Certification Support Fees + Supply Chain Transaction Margin + Managed Security SaaS",
+        "action_text": "استعراض بوابة دمج الشركات المحلية في منظومة الدفاع"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التوطين الصناعي (0-36 شهر)",
+      "subtitle": "تمكين الموردين المحليين لدرع الوطن",
+      "phases": [
+        {
+          "title": "بناء محرك الامتثال العسكري (Mil-Std Audit)",
+          "description": "توفير أداة تدقيق رقمية تساعد الشركات المحلية على فهم وتطبيق معايير التصنيع العسكري (MIL-SPEC) والأمن السيبراني.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "سوق قطع الغيار والطلبات (B2B Marketplace)",
+          "description": "واجهة تتيح لمصانع الدفاع طلب قطع غيار أو خدمات هندسية من الموردين المحليين المعتمدين على المنصة.",
+          "icon": "shopping-cart",
+          "color_theme": "rose"
+        },
+        {
+          "title": "سلسلة التوريد الموثقة (Immutable Logistics)",
+          "description": "تتبع انتقال المكونات الحساسة من المورد للمصنع عبر البلوكشين لضمان عدم وجود تلاعب أو اختراق في سلسلة التوريد.",
+          "icon": "link",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Defense Localisation Targets (Billions of USD) vs Certified Local Supplier Gap"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية والتعقيد في الحصول على الشهادات الدفاعية الدولية.",
+        "نقص الشفافية في الفرص المتاحة للشركات الصغيرة في العقود العسكرية.",
+        "التخوف الأمني من مشاركة المخططات الهندسية الحساسة مع موردين محليين.",
+        "الاعتماد التاريخي على سلاسل توريد أجنبية جاهزة."
+      ],
+      "recommended_tech_stack": [
+        "Encryption per Product (E2E)",
+        "Blockchain for Supply Chain Provenance",
+        "AI for Quality Anomaly Detection",
+        "Secure Virtual Data Rooms (VDR)",
+        "NIST/CMMC Compliance Frameworks"
+      ],
+      "main_risk_index": "الأمان القومي؛ أي اختراق للمنصة قد يكشف سلاسل التوريد العسكرية، مما يتطلب استضافة على 'سحابة سيادية' مشفرة بالكامل ومعزولة."
+    }
+  }
+}

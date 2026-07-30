@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-FMCG06",
+      "status_label": "تحليل فجوة تغذية الحيوانات الأليفة الإقليمية",
+      "category_tag": "PetCare / Nutrition / AI",
+      "business_model": "Subscription (Fresh Food) + AI Health Dashboard + E-commerce Marketplace",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Consumer Goods",
+      "Pet Supplies",
+      "Nutrition"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "GCC (High Pet Ownership Growth)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Egypt & Lebanon (Urban Pet Owners)",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "أليف صحي: طباخ الحيوانات الأليفة الذكي",
+      "problem_statement": "تعتمد الحيوانات الأليفة في المنطقة على طعام مستورد معالج (Kibble) لا يناسب احتياجاتها الصحية في المناخ الصحراوي الحار، مما يسبب مشاكل في الجلد والجهاز الهضمي. الفجوة هي منصة تقدم وجبات 'طازجة' (Fresh Human-grade) مخصصة لكل حيوان بناءً على فصيلة دمه، نشاطه، وظروفه الصحية، مع توصيل دوري للمنازل."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Pet-Gourmet-MENA",
+        "industry_tag": "صناعة أغذية الحيوانات الأليفة الفاخرة وتكنولوجيا الصحة الحيوانية",
+        "revenue_model": "Weekly Subscription Fee + Success-based Health Plans + Sales of Supplements",
+        "action_text": "استعراض خطة قيادة سوق العناية بالحيوانات الأليفة في الوطن العربي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الصحة الأليفة (0-36 شهر)",
+      "subtitle": "تغذية حقيقية لرفيقك الوفي",
+      "phases": [
+        {
+          "title": "محرك التغذية التحليلي (Nutri-Pet AI)",
+          "description": "تطوير خوارزمية تطلب بيانات الحيوان وتحدد السعرات والمكونات المثالية له (مثلاً: إضافة مكونات ترطيب عالية لمواجهة حر الخليج).",
+          "icon": "chip",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء المطبخ المركزي المعتمد",
+          "description": "إنشاء منشأة لطهي الوجبات الطازجة باستخدام مكونات محلية عالية الجودة وتغليفها بتقنية سحب الأكسجين لضمان الطزاجة.",
+          "icon": "home",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة الرعاية المتكاملة (Health-Log)",
+          "description": "إطلاق تطبيق يتيح لصاحب الحيوان تتبع وزنه وحيويته، والحصول على استشارات تغذية فورية من خبراء.",
+          "icon": "presentation-chart-line",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "Pet Care Market Growth in MENA vs Lack of Specialized Local Fresh Food Options"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "سيطرة الشركات العالمية الكبرى (Mars, Nestlé) بمنتجات طويلة الأجل وسهلة التخزين.",
+        "التحديات اللوجستية في توصيل الأغذية الطازجة (مبردة) للمنازل بشكل يومي أو أسبوعي.",
+        "نقص الوعي بأهمية التغذية الطازجة للحيوانات الأليفة مقارنة بالطعام الجاف.",
+        "الحاجة لتراخيص صحية وزراعية معقدة لإنتاج طعام حيوانات محلي."
+      ],
+      "recommended_tech_stack": [
+        "AI for Personalization Algorithms",
+        "Cold-chain Delivery Logistics (IoT)",
+        "High-pressure Processing (HPP) for preservation",
+        "Mobile App (SaaS Model)",
+        "Automated Portioning Machinery"
+      ],
+      "main_risk_index": "تقلب أسعار المواد الخام؛ الاعتماد على اللحوم والخضروات الطازجة يتطلب سلاسل توريد مستقرة جداً لضمان عدم تغير السعر على المشتركين."
+    }
+  }
+}

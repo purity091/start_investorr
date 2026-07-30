@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-MKT02",
+      "status_label": "تحليل فجوة شفافية التسويق عبر المؤثرين",
+      "category_tag": "AdTech / Blockchain / Influencer-Marketing",
+      "business_model": "Verification Fee per Campaign + Escrow Commission + Data Licensing for Brands",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Marketing",
+      "Blockchain",
+      "Data Analytics"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Saudi Arabia (Highest Influencer Spend)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "UAE & Egypt",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "ميثاق المؤثرين: منصة توثيق جودة المتابعين والعائد",
+      "problem_statement": "تخسر العلامات التجارية العربية ملايين الدولارات سنوياً في حملات المؤثرين نتيجة المتابعين الوهميين، انعدام الشفافية في الأسعار، وعدم وجود رابط مباشر بين 'اللايك' والمبيعات. الفجوة هي منصة تعتمد على البلوكشين والـ AI لتحليل 'عمق التأثير'، إدارة العقود عبر الضمان (Escrow)، وربط الدفع بتحقيق نتائج حقيقية (CPA/CPS)."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Athar-Verified",
+        "industry_tag": "حوكمة تسويق المؤثرين واقتصاد المبدعين الموثق",
+        "revenue_model": "3-5% Escrow Fee + Monthly Brand Dashboard Subscription + Influencer 'Audit' Badge Fees",
+        "action_text": "استعراض منصة كشف الاحتيال في حملات المؤثرين العرب"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الثقة الرقمية (0-24 شهر)",
+      "subtitle": "تحويل الإعجاب إلى عائد استثماري حقيقي",
+      "phases": [
+        {
+          "title": "محرك تحليل النزاهة (Integrity-Check AI)",
+          "description": "تطوير خوارزمية تقوم بفحص تاريخ نمو الحساب، طبيعة التعليقات، ومصادر المتابعين لكشف أي تلاعب أو شراء متابعين آليين.",
+          "icon": "search",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام العقود الذكية (Escrow-Payments)",
+          "description": "تفعيل ميزة تجميد ميزانية الحملة في عقد ذكي، ولا يتم صرفها للمؤثر إلا بعد تأكيد النظام بنشر المحتوى المتفق عليه وتحقيق الحد الأدنى من التفاعل الحقيقي.",
+          "icon": "link",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة ربط المبيعات (Performance-Hub)",
+          "description": "تزويد كل مؤثر بروابط تتبع وأكواد خصم مرتبطة بنظام مبيعات البراند لحظياً لقياس الـ ROI الفعلي لكل منشور.",
+          "icon": "trending-up",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Percentage of Bot Followers in MENA Influencer Accounts vs Campaign ROI Losses"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "غياب المعايير الموحدة لتسعير خدمات المؤثرين في المنطقة.",
+        "الاعتماد على 'مقاييس الغرور' (Vanity Metrics) مثل عدد المتابعين فقط.",
+        "سهولة تزوير التفاعل عبر 'مجموعات الدعم' (Engagement Pods).",
+        "تخوف المؤثرين الكبار من أنظمة الشفافية التي قد تكشف ضعف تأثيرهم الفعلي."
+      ],
+      "recommended_tech_stack": [
+        "Blockchain (Solana/Polygon) for Smart Contracts",
+        "Social Media APIs (Instagram/TikTok/YouTube)",
+        "Natural Language Processing (NLP) to detect bot-like comments",
+        "Big Data Analytics for Cross-platform Correlation",
+        "Mobile App for Influencer Task Management"
+      ],
+      "main_risk_index": "سياسات المنصات؛ أي تغيير في سياسة الخصوصية لإنستغرام أو تيك توك قد يحد من قدرة النظام على جمع البيانات، مما يتطلب تنويع مصادر التحقق."
+    }
+  }
+}

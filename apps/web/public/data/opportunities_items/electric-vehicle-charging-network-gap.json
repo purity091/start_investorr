@@ -1,0 +1,87 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ENERGY6",
+      "status_label": "تحليل فجوة البنية التحتية لشحن السيارات الكهربائية",
+      "category_tag": "EV Infrastructure (Charging Networks / Mobility Energy)",
+      "business_model": "Charging-as-a-Service + Site Revenue Share + Fleet Charging Contracts",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Energy",
+      "Electric Mobility",
+      "Charging Infrastructure"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Qatar", "flag": "🇶🇦" },
+        { "name": "Jordan", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 7
+    },
+    "core_content": {
+      "title": "شبكة شحن ذكية للسيارات الكهربائية في المدن والطرق السريعة",
+      "problem_statement": "تسارع تبني السيارات الكهربائية عالمياً، لكن في كثير من الأسواق العربية لا تزال البنية التحتية للشحن غير كافية، غير موزعة جغرافياً بشكل ذكي، أو غير متكاملة مع أنظمة الدفع والتطبيقات. المشكلة الاستثمارية ليست فقط تركيب شواحن، بل بناء شبكة موثوقة تعرف أين يجب وضع الشاحن، متى يكون الطلب مرتفعاً، كيف يتم تسعير الطاقة، وكيف تخدم الأساطيل التجارية والتاكسي والتوصيل. بدون شبكة شحن كثيفة وموثوقة، سيبقى تبني السيارات الكهربائية بطيئاً حتى لو توفر الدعم الحكومي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "ChargeGrid Arabia",
+        "industry_tag": "شبكات شحن السيارات الكهربائية",
+        "revenue_model": "Pay-per-kWh + Fleet Subscriptions + Location Revenue Share + Charging Management SaaS",
+        "action_text": "استعراض شبكة شحن ذكية تربط المواقع التجارية والأساطيل والمستخدمين في تطبيق واحد"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة شبكة الشحن الكهربائي (0-24 شهر)",
+      "subtitle": "من شواحن متفرقة إلى بنية تحتية وطنية قابلة للتوسع",
+      "phases": [
+        {
+          "title": "تحليل مواقع الطلب العالي",
+          "description": "استخدام بيانات الحركة المرورية، كثافة السكان، مواقف المولات، محطات الوقود، الفنادق، والمناطق اللوجستية لتحديد أفضل مواقع الشحن بدلاً من التوزيع العشوائي.",
+          "icon": "map-pin",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "إطلاق نموذج الشحن كخدمة",
+          "description": "تركيب وإدارة الشواحن لصالح ملاك المواقع بنظام مشاركة الإيرادات، مع تطبيق للمستخدمين يوضح التوفر، السعر، ومدة الشحن.",
+          "icon": "battery-charging",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التوسع نحو الأساطيل التجارية",
+          "description": "تقديم حلول شحن مخصصة لشركات التوصيل، سيارات الأجرة، والمركبات الحكومية، مع جدولة ذكية للشحن لتقليل الضغط على الشبكة.",
+          "icon": "car",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "2800+ (EV Adoption, Charging Utilization, Traffic Density & Fleet Mobility Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الطلب لا يزال ناشئاً في عدة أسواق عربية، مما يجعل المستثمرين يترددون قبل بناء الشبكات.",
+        "ارتفاع تكلفة الشواحن السريعة والربط الكهربائي في المواقع التجارية.",
+        "غياب نموذج موحد للدفع والتشغيل بين مشغلين مختلفين.",
+        "ضعف التخطيط الجغرافي المبني على بيانات فعلية لحركة المركبات.",
+        "عدم وجود حلول قوية للأساطيل التجارية، رغم أنها قد تكون نقطة البداية الأكثر ربحية."
+      ],
+      "recommended_tech_stack": [
+        "EV Charging Management System (CMS)",
+        "OCPP Protocol Support",
+        "Mobile App for Charging Discovery",
+        "Payment Gateway Integration",
+        "Dynamic Pricing Engine",
+        "Fleet Charging Scheduler",
+        "Grid Load Management Analytics"
+      ],
+      "main_risk_index": "مخاطر الطلب المبكر ورأس المال؛ بناء شبكة شحن قبل وصول كثافة كافية من السيارات الكهربائية قد يضغط التدفقات النقدية. أفضل استراتيجية هي البدء بمواقع عالية الاستخدام وأساطيل تجارية مضمونة بدل الاعتماد فقط على المستخدم الفردي."
+    }
+  }
+}

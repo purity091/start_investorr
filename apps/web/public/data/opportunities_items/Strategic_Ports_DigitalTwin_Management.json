@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-LOG-2026-PORT-TWIN",
+      "status_label": "تحليل استخباري لتعظيم كفاءة الموانئ القارية",
+      "category_tag": "البنية التحتية اللوجستية (Digital Twin / Smart Port)",
+      "business_model": "B2G / B2B SaaS (Asset Management)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Maritime",
+      "Infrastructure",
+      "Digital Twin"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Jeddah Islamic Port", "flag": "🇸🇦" },
+        { "name": "Suez Canal Zone", "flag": "🇪🇬" },
+        { "name": "Jebel Ali", "flag": "🇦🇪" },
+        { "name": "Tanger Med", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "التوأم الرقمي لإدارة الموانئ الذكية والممرات الملاحية",
+      "problem_statement": "تخسر الموانئ الاستراتيجية الكبرى ملايين الدولارات نتيجة الازدحام في الأرصفة، وبطء عمليات مناولة الحاويات، وتعطل المعدات المفاجئ. الإدارة التقليدية تعتمد على رد الفعل، بينما تتطلب التجارة العالمية في 2026 نموذجاً يحاكي الميناء بالكامل رقمياً للتنبؤ بالاختناقات قبل حدوثها وتحسين حركة السفن لحظياً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "PortView-Digital",
+        "industry_tag": "محاكاة وإدارة الموانئ الذكية",
+        "revenue_model": "Enterprise SaaS License + Efficiency-based Performance Incentives",
+        "action_text": "استعراض زيادة الطاقة الاستيعابية للموانئ بنسبة 25% دون توسعة مادية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التحول السيادي للموانئ (0-24 شهر)",
+      "subtitle": "بناء النسخة الرقمية لقلب التجارة العالمية",
+      "phases": [
+        {
+          "title": "بناء النموذج الرقمي الحي (Digital Twin)",
+          "description": "إنشاء نموذج ثلاثي الأبعاد للميناء مربوط بآلاف الحساسات (IoT) والكاميرات لرصد حركة الحاويات، الرافعات، والسفن لحظياً بدقة مليمترية.",
+          "icon": "cube",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التنبؤ وجدولة الأرصفة (AI Scheduling)",
+          "description": "استخدام الذكاء الاصطناعي لتحليل بيانات الطقس وحركة الملاحة العالمية لجدولة رسو السفن وعمليات التفريغ، مما يقلل وقت الانتظار بنسبة 40%.",
+          "icon": "presentation-chart-line",
+          "color_theme": "rose"
+        },
+        {
+          "title": "الصيانة التنبؤية للأصول الضخمة",
+          "description": "مراقبة الحالة الفنية للرافعات والمعدات الثقيلة عبر التوأم الرقمي للتنبؤ بالأعطال قبل وقوعها، مما يمنع توقف العمليات المفاجئ.",
+          "icon": "cog",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "10M+ Container Movement Events"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الحاجة لقدرات معالجة بيانات ضخمة جداً (Big Data) بشكل لحظي.",
+        "تنوع أنظمة التحكم من شركات مختلفة وصعوبة توحيدها في واجهة واحدة.",
+        "ارتفاع التكلفة الأولية لبناء النموذج الرقمي الشامل للميناء.",
+        "المخاوف المتعلقة بالأمن السيبراني لمنشأة حيوية مرتبطة بالإنترنت."
+      ],
+      "recommended_tech_stack": [
+        "Unreal Engine for 3D Visualization",
+        "High-density IoT Sensor Networks",
+        "5G Private Networks for Ports",
+        "AI Edge Computing",
+        "Cybersecurity Shield for Critical Infrastructure"
+      ],
+      "main_risk_index": "التكامل التقني؛ نجاح التوأم الرقمي يعتمد كلياً على جودة البيانات القادمة من الأنظمة الميكانيكية القديمة في الميناء، مما قد يتطلب تحديثاً لبعض المعدات."
+    }
+  }
+}

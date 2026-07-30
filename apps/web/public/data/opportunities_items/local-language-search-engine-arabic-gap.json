@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-TECH10",
+      "status_label": "تحليل فجوة محركات البحث العربية والفهم الدلالي",
+      "category_tag": "Search AI (Semantic Search / NLP)",
+      "business_model": "API Search Engine + SaaS + Enterprise Licensing",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Technology",
+      "Search",
+      "Natural Language Processing"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Morocco", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 12
+    },
+    "core_content": {
+      "title": "محرك بحث عربي ذكي قائم على الفهم الدلالي والسياق",
+      "problem_statement": "تعاني محركات البحث الحالية من ضعف كبير في فهم اللغة العربية، خاصة عند التعامل مع اللهجات، الاشتقاق، والسياق الثقافي. المستخدم العربي غالباً لا يحصل على نتائج دقيقة أو ذات صلة، خصوصاً في البحث المحلي أو المتخصص (قانوني، طبي، حكومي). المشكلة أعمق من الترجمة؛ هي في الفهم الدلالي (Semantic Understanding)، حيث لا يتم ربط الكلمات بمعانيها الحقيقية ضمن السياق العربي. هذا يخلق فجوة ضخمة في تجربة البحث، وفرصة لبناء محرك بحث مخصص للغة العربية يتفوق في الدقة والفهم."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "ArabSearch AI",
+        "industry_tag": "محركات البحث الذكية",
+        "revenue_model": "Search API + Enterprise Licensing + Ads + Data Insights",
+        "action_text": "استعراض نتائج بحث دقيقة مبنية على الفهم السياقي العربي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة محرك البحث العربي (0-18 شهر)",
+      "subtitle": "بحث يفهمك فعلاً",
+      "phases": [
+        {
+          "title": "بناء قاعدة بيانات عربية ضخمة",
+          "description": "جمع وتنظيف بيانات عربية من مصادر متعددة (ويب، كتب، محتوى محلي).",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تطوير محرك فهم دلالي",
+          "description": "بناء نموذج NLP يفهم السياق واللهجات والاشتقاق.",
+          "icon": "cpu",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق API ومحرك بحث",
+          "description": "توفير البحث كخدمة للشركات والمنصات.",
+          "icon": "search",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.3,
+      "data_points_analyzed": "3000+ (Search Accuracy & Arabic NLP Benchmarks)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تعقيد اللغة العربية (اشتقاق، تشكيل، لهجات).",
+        "هيمنة محركات بحث عالمية غير مخصصة للعربية.",
+        "نقص البيانات العربية المنظمة.",
+        "تكلفة بناء محرك بحث متكامل."
+      ],
+      "recommended_tech_stack": [
+        "Semantic Search Engines",
+        "Vector Databases",
+        "Arabic NLP Models",
+        "Web Crawlers",
+        "Indexing Systems"
+      ],
+      "main_risk_index": "المنافسة؛ الدخول في مجال تهيمن عليه شركات عملاقة يتطلب تميز تقني قوي."
+    }
+  }
+}

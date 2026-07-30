@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-FIN-2026-B2B-PAY",
+      "status_label": "تحليل استخباري لتسريع السيولة العابرة للحدود",
+      "category_tag": "التقنية المالية (Cross-border / Stablecoins)",
+      "business_model": "Transaction Fee (FX Spread) + SaaS Subscription",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Payments",
+      "Wholesale Trade",
+      "Treasury Management"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "GCC Corridor", "flag": "🇸🇦" },
+        { "name": "Egypt - UAE Trade", "flag": "🇦🇪" },
+        { "name": "Jordan - Iraq", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 6
+    },
+    "core_content": {
+      "title": "حلول الدفع الرقمي لتجارة الجملة والشركات العابرة للحدود",
+      "problem_statement": "تخسر شركات الجملة والترانزيت في المنطقة ما يصل إلى 7% من قيمة بضائعها في عمولات التحويل المصرفي التقليدي (SWIFT) وفروقات الصرف، مع انتظار يصل لـ 5 أيام عمل. في عصر التجارة اللحظية، يعتبر هذا 'شحلاً' مالياً يعطل سلاسل الإمداد ويجمد رأس المال العامل في ممرات بيروقراطية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Jusoor-Pay",
+        "industry_tag": "بوابة الدفع العابرة للحدود للشركات",
+        "revenue_model": "Fixed Transaction Fee + FX Margin Optimization + Instant Liquidity Premium",
+        "action_text": "استعراض تقنية التسوية اللحظية التي توفر 80% من التكاليف"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التدفق اللحظي (0-18 شهر)",
+      "subtitle": "إلغاء الحدود أمام رأس المال",
+      "phases": [
+        {
+          "title": "تفعيل ممرات الدفع المباشر (Direct Corridors)",
+          "description": "بناء شبكة من الحسابات المحلية في الدول التجارية الكبرى لتمويل التحويلات داخلياً (Local-to-Local)، مما يلغي الحاجة للبنوك المراسلة الدولية.",
+          "icon": "map",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "دمج العملات المستقرة للسيولة (Stablecoin Rails)",
+          "description": "استخدام العملات الرقمية المستقرة (المربوطة بالدولار أو الدرهم/الريال) كجسر للتسوية اللحظية خارج ساعات العمل المصرفي، مما يضمن تدفق السيولة 24/7.",
+          "icon": "refresh",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة إدارة الخزينة الموحدة",
+          "description": "توفير لوحة تحكم للشركات تتيح لها إدارة حسابات متعددة العملات، والتحوط ضد تقلبات الصرف باستخدام عقود ذكية مؤتمتة.",
+          "icon": "presentation-chart-line",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "3M+ (Regional Trade Flows & FX Lag times)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد المفرط على الأنظمة البنكية التقليدية وبطء اعتماد تقنيات البلوكشين.",
+        "تعقيد إجراءات الامتثال (KYB) العابرة للحدود بين الدول العربية.",
+        "نقص الحلول التي تركز على 'الجملة' بدلاً من تحويلات الأفراد الصغيرة.",
+        "مخاوف الاستقرار النقدي في بعض دول المنطقة التي تفرض قيوداً على خروج العملة."
+      ],
+      "recommended_tech_stack": [
+        "Distributed Ledger Technology (DLT)",
+        "ISO 20022 Messaging Standard",
+        "Smart Contracts for Escrow",
+        "Automated KYC/AML Scanning",
+        "Multi-signature Wallets for Corporations"
+      ],
+      "main_risk_index": "المخاطر التنظيمية؛ التنسيق مع البنوك المركزية في ممرات التحويل هو المفتاح لضمان قانونية العمليات وتجنب تجميد الأموال."
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-POL04",
+      "status_label": "تحليل فجوة شفافية الإنفاق على البنية التحتية",
+      "category_tag": "GovTech / Blockchain / Public-Policy",
+      "business_model": "Platform Licensing to Governments + Auditing Service Fees + Citizen Engagement Dashboard",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Government",
+      "Infrastructure",
+      "Blockchain"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "GCC Megaprojects (NEOM, New Cities)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Post-Conflict Reconstruction (Iraq, Libya, Syria)",
+          "flag": "🇮🇶"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "سجل النزاهة: تتبع الإنفاق الحكومي بالبلوكشين",
+      "problem_statement": "تستثمر الدول العربية تريليونات الدولارات في مشاريع البنية التحتية، لكن غياب الشفافية في سلاسل التوريد والمقاولات الباطنة يسبب هدراً مالياً ويقلل من ثقة المستثمرين الأجانب. الفجوة هي منصة تعتمد على البلوكشين لتتبع كل دولار حكومي من الميزانية وحتى وصوله للمورد النهائي، مع توثيق كافة مراحل الإنجاز بشكل غير قابل للتلاعب."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Imtithal-Ledger",
+        "industry_tag": "تكنولوجيا الحكومات وحوكمة المشاريع القومية الكبرى",
+        "revenue_model": "Platform Setup & Maintenance Fee for Govs + Verification Fee for Contractors + Data Analytics for Efficiency Audits",
+        "action_text": "استعراض تكنولوجيا حماية المال العام وجذب الاستثمار"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الشفافية السيادية (0-48 شهر)",
+      "subtitle": "حوكمة رقمية لبناء المستقبل العربي",
+      "phases": [
+        {
+          "title": "نظام ترميز الميزانيات (Budget-Tokenization)",
+          "description": "تحويل ميزانيات المشاريع إلى 'عملات رقمية مشروطة' (Stablecoins) لا تُصرف إلا عند تحقيق معايير إنجاز محددة وموثقة آلياً.",
+          "icon": "credit-card",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تتبع سلاسل توريد المقاولات (Sub-contractor Tracking)",
+          "description": "إلزام كافة المقاولين بتسجيل تعاقداتهم ومدفوعاتهم على المنصة، لضمان وصول المستحقات للعمال والموردين الصغار ومنع الفساد.",
+          "icon": "share",
+          "color_theme": "rose"
+        },
+        {
+          "title": "لوحة بيانات الثقة (Public-Trust-Dashboard)",
+          "description": "توفير واجهة للمواطنين والمستثمرين تظهر نسب الإنجاز الفعلية للمشاريع وتكلفة كل مرحلة، مما يرفع تصنيف الدولة في مؤشرات النزاهة العالمية.",
+          "icon": "presentation-chart-line",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.8,
+      "data_points_analyzed": "Infrastructure Spend in MENA vs Estimated Waste from Lack of Transparency"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "المقاومة من قبل بعض أصحاب المصلحة الذين يستفيدون من ضبابية الإجراءات.",
+        "التعقيد الفني في ربط البلوكشين بأنظمة المحاسبة الحكومية القديمة.",
+        "الحاجة لتغيير ثقافي وتشريعي يجعل الشفافية الرقمية إلزامية.",
+        "التخوف من كشف بيانات حساسة تتعلق بالأمن القومي عبر منصات عامة."
+      ],
+      "recommended_tech_stack": [
+        "Private Blockchain (Hyperledger/Corda)",
+        "Smart Contracts for Milestone-based Payments",
+        "Zero-knowledge Proofs (for Privacy & Security)",
+        "ERP Integration Connectors",
+        "Real-time Auditing Dashboards"
+      ],
+      "main_risk_index": "التبني الحكومي؛ نجاح المشروع يعتمد كلياً على قرار سيادي بالشفافية، مما يتطلب تسويق المشروع كأداة لرفع كفاءة الإنفاق وجذب الاستثمار الأجنبي المباشر (FDI)."
+    }
+  }
+}

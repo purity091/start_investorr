@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-RET08",
+      "status_label": "تحليل فجوة رقمنة التجارة التقليدية",
+      "category_tag": "RetailTech / AR / Tourism",
+      "business_model": "Platform Fee from Merchants + Tourism Partner Commissions + AR Ad Space",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Retail",
+      "Augmented Reality",
+      "Cultural Tourism"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Old Damascus (Al-Hamidiyah)", "flag": "🇸🇾" },
+        { "name": "Cairo (Khan el-Khalili)", "flag": "🇪🇬" },
+        { "name": "Muscat (Mutrah Souq)", "flag": "🇴🇲" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "سوق الميتافيرس: رقمنة تجربة الأسواق الشعبية بالـ AR",
+      "problem_statement": "تفقد الأسواق الشعبية العربية حصتها السوقية لصالح التجارة الإلكترونية الباردة، ويجد السياح صعوبة في فهم تاريخ وقيمة المنتجات داخل الزحام. الفجوة هي 'طبقة رقمية' (AR Layer) فوق السوق الحقيقي تتيح للمستخدم عبر نظارته أو هاتفه رؤية قصص المنتجات، مقارنة الأسعار، والحصول على عروض لحظية مع الحفاظ على دفء المكان."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Souq-AR",
+        "industry_tag": "التجارة الهجينة والسياحة الذكية",
+        "revenue_model": "Merchant Listing & Promo Fees + AR Tour Tickets + Direct In-app Sales Commission",
+        "action_text": "استعراض تجربة التسوق في خان الخليلي عبر الواقع المعزز"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق السوق الذكي (0-24 شهر)",
+      "subtitle": "دمج سحر الماضي بتكنولوجيا المستقبل",
+      "phases": [
+        {
+          "title": "المسح المكاني الفائق (Spatial Mapping)",
+          "description": "بناء سحابة نقاط (Point Cloud) للأسواق التاريخية لتحديد مواقع المحلات بدقة والتمكن من تثبيت الأجسام الرقمية في الفضاء الحقيقي.",
+          "icon": "map",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بوابة التجار الرقمية (Vendor Portal)",
+          "description": "توفير أداة بسيطة للباعة التقليديين لرفع قصص منتجاتهم (حرفة صناعة النحاس مثلاً) لتظهر كفيديو AR فوق بضاعتهم.",
+          "icon": "user-group",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق 'دليل التسوق المعزز'",
+          "description": "تطبيق سياحي يوفر مسارات تسوق ذكية، ترجمة فورية لأسماء المنتجات، ودفعاً إلكترونياً لحظياً عبر مسح السلع.",
+          "icon": "sparkles",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.2,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Traditional Souq Footfall vs E-commerce Conversion Rates"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "صعوبة الملاحة الداخلية (Indoor Navigation) في الأسواق المسقوفة والضيقة.",
+        "مقاومة بعض التجار التقليديين للتكنولوجيا وتخوفهم من 'كشف الأسرار'.",
+        "الحاجة لنظارات AR خفيفة أو تطبيقات جوال لا تستهلك البطارية بسرعة.",
+        "تحديات الإضاءة المتغيرة في الأسواق المفتوحة التي تؤثر على دقة الـ AR."
+      ],
+      "recommended_tech_stack": [
+        "VPS (Visual Positioning System)",
+        "ARCore / ARKit Frameworks",
+        "WebAR for Zero-install Experience",
+        "Cloud-based Product Recognition",
+        "5G/Edge-computing for Low Latency"
+      ],
+      "main_risk_index": "تجربة المستخدم (UX)؛ إذا كان الـ AR يشتت المتسوق بدلاً من مساعدته سيفشل المشروع، مما يتطلب تصميماً واجهة مستخدم 'بسيطاً جداً'."
+    }
+  }
+}

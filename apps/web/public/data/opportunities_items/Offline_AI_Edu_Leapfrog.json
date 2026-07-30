@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-AFR-2026-EDG01",
+      "status_label": "تحليل فجوة الوصول المعرفي في المناطق المنعزلة",
+      "category_tag": "التعليم الرقمي (EdTech / Edge AI)",
+      "business_model": "B2G + Hardware Leasing + Content Licensing",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Education",
+      "Edge AI",
+      "Leapfrog Tech"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Mauritania (Interior)", "flag": "🇲🇷" },
+        { "name": "Sudan (Rural)", "flag": "🇸🇩" },
+        { "name": "Yemen (Remote)", "flag": "🇾🇪" }
+      ],
+      "additional_regions_count": 8
+    },
+    "core_content": {
+      "title": "منصة التعليم الإدراكية أوفلاين للمعلم الرقمي",
+      "problem_statement": "يعاني أكثر من 60% من الأطفال في المناطق الريفية في دول الساحل واليمن من ضعف الوصول للمدارس وغياب الإنترنت. الحلول الحالية القائمة على السحابة (Cloud) تفشل تماماً هنا. هناك فجوة هائلة لنظام تعليمي ذكي يعمل كلياً على 'الحافة' (On-device AI) دون الحاجة لاتصال، مما يتيح تعليماً عالي الجودة في مناطق بلا تغطية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Nibras-Offline",
+        "industry_tag": "التعليم الذكي منخفض البنية التحتية",
+        "revenue_model": "Government Device Procurement + Educational Content SaaS + Impact Credits",
+        "action_text": "استعراض تقنية النماذج اللغوية المصغرة للتعليم المستقل"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق محو الأمية الرقمي (0-24 شهر)",
+      "subtitle": "جلب المعرفة إلى حيث لا يوجد إنترنت",
+      "phases": [
+        {
+          "title": "تطوير نماذج TinyML التعليمية",
+          "description": "ضغط النماذج اللغوية الضخمة لتعمل على معالجات رخيصة الثمن داخل الأجهزة اللوحية، لتقديم إجابات ذكية وتفاعلية دون إنترنت.",
+          "icon": "chip",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "إنتاج المحتوى الصوتي باللهجات المحلية",
+          "description": "استخدام توليد الكلام الذكي (AI-Voice) لتحويل المناهج المكتوبة إلى دروس صوتية تفاعلية تتجاوز عقبة الأمية لدى الأهالي.",
+          "icon": "microphone",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تأسيس شبكة المزامنة الدورية",
+          "description": "نشر نقاط مزامنة في مراكز التموين أو البريد لتحديث أجهزة الطلاب ببيانات جديدة دورياً عبر تقنيات البلوتوث المتقدمة.",
+          "icon": "refresh",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.2,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "70% Zero-Internet Penetration in target rural zones"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التركيز العالمي على تطبيقات 'الأونلاين' وتجاهل الفجوة الرقمية الحقيقية.",
+        "التكلفة العالية للطاقة (تم حلها عبر أجهزة تعمل بالخلايا الشمسية المدمجة).",
+        "صعوبة تحديث المحتوى التعليمي في المناطق الوعرة جغرافياً.",
+        "نقص المناهج الذكية التي تدعم اللغات المحلية واللهجات غير المعيارية."
+      ],
+      "recommended_tech_stack": [
+        "Quantized LLMs (Llama-3-Small / Phi-3)",
+        "Solar-powered Edge Devices",
+        "TensorFlow Lite / Edge Impulse",
+        "Mesh Networking for Local Data Sync",
+        "Multilingual TTS (Text-to-Speech)"
+      ],
+      "main_risk_index": "الاستدامة التشغيلية؛ يعتمد المشروع على الشراكات مع المنظمات الدولية (UNICEF/NGOs) لضمان التوزيع الأولي للأجهزة."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-FIN-2026-AR",
+      "status_label": "تحليل استخباري للشمول الاستثماري",
+      "category_tag": "المالية (FinTech / Crowdfunding)",
+      "business_model": "Marketplace + Asset Management",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "FinTech",
+      "Alternative Investments",
+      "Asset Tokenization"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "منصات التمويل الجماعي لتطوير الأصول المنتجة",
+      "problem_statement": "يعاني المستثمر الفرد في المنطقة من محدودية القنوات الاستثمارية بعيداً عن سوق الأسهم أو العقارات الضخمة. في المقابل، تفتقر الأصول المنتجة (مثل المزارع الذكية، محطات الطاقة الشمسية الصغيرة، والمعدات الصناعية) للتمويل اللازم لتطويرها. هناك حاجة لمنصة تتيح تفتيت ملكية هذه الأصول وفتحها للاستثمار الجماعي بمبالغ صغيرة وعوائد دورية ناتجة عن الإنتاج الفعلي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "NamaaInvest",
+        "industry_tag": "تمويل الأصول الحقيقية",
+        "revenue_model": "Setup Fee + Management Fee (AUM) + Performance Carry",
+        "action_text": "عرض فرص الاستثمار في الأصول الزراعية والصناعية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق نمو الأصول (0-15 شهر)",
+      "subtitle": "دمقرطة الاستثمار في الاقتصاد الحقيقي",
+      "phases": [
+        {
+          "title": "بناء الإطار القانوني والشرعي",
+          "description": "الحصول على تراخيص 'التكنولوجيا المالية' وتصميم عقود استثمارية متوافقة مع الشريعة الإسلامية تضمن حقوق صغار المستثمرين.",
+          "icon": "document-text",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "إطلاق منصة تفتيت الأصول (Tokenization)",
+          "description": "تحويل الأصول المادية إلى حصص رقمية سهلة التداول والاكتتاب عبر تطبيق جوال سهل الاستخدام.",
+          "icon": "template",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تطوير سوق التداول الثانوي",
+          "description": "خلق بيئة تتيح للمستثمرين بيع وشراء حصصهم في الأصول لضمان السيولة دون الحاجة لانتظار نهاية عمر المشروع.",
+          "icon": "refresh",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.2,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 8.4,
+      "data_points_analyzed": "3200+ (SME Funding Gaps & Individual Savings Rates)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تعقيد إجراءات تملك الأصول لغير المتخصصين.",
+        "غياب منصات موثوقة تقوم بإدارة الأصول بعد تمويلها.",
+        "حواجز الدخول العالية (الحد الأدنى للاستثمار) في الصناديق التقليدية.",
+        "الحاجة لرقابة صارمة لضمان عدم تعرض صغار المستثمرين للاحتيال."
+      ],
+      "recommended_tech_stack": [
+        "Blockchain for Fractional Ownership",
+        "Smart Contracts for Profit Distribution",
+        "AI for Asset Valuation & Risk Assessment",
+        "Mobile App with KYC/AML Integration",
+        "Secure Payment Gateways"
+      ],
+      "main_risk_index": "المخاطر التشغيلية للأصل؛ نجاح الاستثمار يعتمد كلياً على جودة إدارة الأصول (مثل كفاءة المزرعة أو المصنع)، مما يتطلب فريقاً فنياً قوياً."
+    }
+  }
+}

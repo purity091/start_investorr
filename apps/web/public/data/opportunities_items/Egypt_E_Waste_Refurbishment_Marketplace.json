@@ -1,0 +1,82 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-EGY-2026-EWAS",
+      "status_label": "تحليل استخباري لاقتصاد الندرة وإعادة التدوير",
+      "category_tag": "التجارة الإلكترونية المستدامة (Re-commerce / Circular Tech)",
+      "business_model": "Marketplace + Refurbishment Service",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Circular Economy",
+      "E-waste Recycling",
+      "Urban Mining",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "منصة إحياء وتداول الأجهزة الإلكترونية",
+      "problem_statement": "تنتج مصر أكثر من 90 ألف طن من النفايات الإلكترونية سنوياً، يذهب معظمها للقطاع غير الرسمي بطرق حرق خطيرة. في الوقت ذاته، أدى التضخم وارتفاع أسعار الأجهزة الجديدة بنسبة 200% إلى خروج التكنولوجيا عن متناول شريحة واسعة من الشباب والشركات الناشئة. هناك فجوة سوقية هائلة لمنصة مؤسسية تضمن 'شهادة جودة' للأجهزة المعاد تجديدها وتستخرج المعادن الثمينة من الأجهزة التالفة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "ReCirc-EGY",
+        "industry_tag": "اقتصاد التجديد والتعدين الحضري",
+        "revenue_model": "Sales Margin + Certification Fees + B2B E-waste Collection Contracts",
+        "action_text": "مراجعة معدلات نمو سوق الأجهزة المستعملة المعتمدة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التدوير والنمو (0-15 شهر)",
+      "subtitle": "تحويل المخلفات الرقمية إلى قيمة اقتصادية",
+      "phases": [
+        {
+          "title": "مركز الفحص والاعتماد (Certified Refurbishment)",
+          "description": "تأسيس مرافق تقنية لفحص وتجديد الأجهزة (لابتوب، موبايل) مع منح 'ضمان حقيقي' للمستهلك، مما يكسر حاجز الخوف من المستعمل.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منصة التبادل والتقسيط (Trade-in Marketplace)",
+          "description": "إطلاق تطبيق يسمح للمستخدمين باستبدال أجهزتهم القديمة برصيد شراء، مع دمج حلول 'اشترِ الآن وادفع لاحقاً' (BNPL) لتسهيل الوصول للتكنولوجيا.",
+          "icon": "shopping-cart",
+          "color_theme": "rose"
+        },
+        {
+          "title": "استخراج المعادن الثمينة (Urban Mining)",
+          "description": "تطوير خط إنتاج لفصل المكونات التي لا يمكن إصلاحها لاستخراج الذهب والنحاس والليثيوم وبيعها كمواد خام صناعية، مما يغلق حلقة الاقتصاد الدائري.",
+          "icon": "fire",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.1,
+      "competitive_moat": 8.5,
+      "data_points_analyzed": "2200+ (Inflation Data & E-waste Generation Reports)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "سيطرة القطاع غير الرسمي الذي يفتقر للمعايير البيئية والتقنية.",
+        "غياب الثقة بين البائع والمشتري في سوق الأجهزة المستعملة.",
+        "الارتباط النفسي للمستهلك بامتلاك الجديد، والذي بدأ يتغير نتيجة الأزمة الاقتصادية.",
+        "صعوبة لوجستيات التجميع من الأفراد والمؤسسات بشكل منظم."
+      ],
+      "recommended_tech_stack": [
+        "AI for Diagnostic Testing",
+        "Blockchain for Device History Tracking",
+        "ERP for Inventory Management",
+        "E-commerce Engine (Custom UX)",
+        "Automated Recycling Separation Tech"
+      ],
+      "main_risk_index": "مخاطر التوريد؛ النجاح يعتمد على القدرة على بناء 'قنوات تجميع' مستمرة وقوية من الشركات الكبرى والأفراد لضمان مخزون دائم من الأجهزة."
+    }
+  }
+}

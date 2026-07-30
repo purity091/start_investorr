@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-AGR04",
+      "status_label": "تحليل فجوة إعادة التشجير ومكافحة التصحر",
+      "category_tag": "AgriTech / DroneTech / Climate-Resilience",
+      "business_model": "Carbon Credit Generation + Gov Reforestation Contracts + Seed-pod Sales",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Environment",
+      "Agriculture",
+      "Autonomous Systems"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Green Initiative)", "flag": "🇸🇦" },
+        { "name": "UAE (Mangrove Restoration)", "flag": "🇦🇪" },
+        { "name": "Jordan (Badia Restoration)", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "سرب التشجير الآلي: طائرات درون لمكافحة التصحر",
+      "problem_statement": "تخطط الدول العربية لزراعة مليارات الأشجار (مثل مبادرة السعودية الخضراء)، لكن الزراعة اليدوية بطيئة جداً ومستحيلة في المناطق الوعرة أو شديدة الحرارة. الفجوة هي استخدام 'أسراب' من الدرونات ذاتية القيادة القادرة على إطلاق 'قنابل بذور' (Seed-pods) مغلفة بمغذيات وحافظات رطوبة، وزراعة آلاف الهكتارات في أيام معدودة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Ghabat-Drone",
+        "industry_tag": "التشجير الآلي واسع النطاق",
+        "revenue_model": "Fee per Hectare Seeded + Long-term Survival Monitoring SaaS + Carbon Credit Sharing",
+        "action_text": "استعراض تقنية زراعة 100 مليون شجرة سنوياً بالدرون"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الصحراء الخضراء (0-36 شهر)",
+      "subtitle": "إعادة الحياة للتربة العربية من السماء",
+      "phases": [
+        {
+          "title": "تحليل التربة والمناخ (Precision Mapping)",
+          "description": "استخدام الـ AI لتحليل صور الأقمار الصناعية وتحديد الأماكن المثالية للزراعة بناءً على مستويات الرطوبة ونوع التربة.",
+          "icon": "map",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تطوير 'كبسولات البذور' الذكية",
+          "description": "تصميم كبسولات تحتوي على بذور الأشجار المحلية (مثل الغاف والسدر) مع طبقة من الهيدروجيل لامتصاص الندى ومغذيات طبيعية.",
+          "icon": "beaker",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نشر أسراب الزراعة الذاتية",
+          "description": "إطلاق أسراب من الدرونات تعمل بشكل منسق لزرع البذور بدقة مليمترية ومتابعة نموها دورياً عبر التصوير الحراري.",
+          "icon": "rss",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Reforestation Targets (Billions of Trees) vs Manual Planting Speed"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف نسبة نجاح إنبات البذور في البيئات الصحراوية القاسية.",
+        "التحديات التقنية في إدارة 'سرب' من الدرونات في مساحات شاسعة.",
+        "الحاجة لمصادر مياه مستدامة (مثل حصاد الندى) لدعم الشتلات في مراحلها الأولى.",
+        "القيود التنظيمية على تحليق الدرونات في المناطق المفتوحة."
+      ],
+      "recommended_tech_stack": [
+        "Drone Swarm Orchestration AI",
+        "Bio-polymer Seed Encapsulation",
+        "Multi-spectral Imaging for Health Monitoring",
+        "AI for Soil Micro-climate Prediction",
+        "Automated Seed Refilling Stations"
+      ],
+      "main_risk_index": "معدل البقاء؛ زراعة البذور سهلة، لكن ضمان بقائها حية في الصيف يتطلب تكنولوجيا 'حصاد رطوبة' مدمجة في كل كبسولة."
+    }
+  }
+}

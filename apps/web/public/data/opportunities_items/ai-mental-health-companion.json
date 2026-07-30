@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-2026-X8",
+      "status_label": "تحليل استخباري استراتيجي عالي الدقة",
+      "category_tag": "الصحة الرقمية (HealthTech/AI)",
+      "business_model": "B2B2C Hybrid",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "HealthTech",
+      "Cognitive AI",
+      "Preventive Care",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Kuwait", "flag": "🇰🇼" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "سد فجوة الرعاية النفسية الرقمية في الشرق الأوسط",
+      "problem_statement": "تعاني المنطقة من فجوة هائلة بين الطلب المتزايد على الدعم النفسي (بسبب ضغوط الحياة الحديثة) وبين العرض المحدود؛ حيث تبلغ نسبة الأطباء النفسيين لكل 100 ألف نسمة أقل من المعدلات العالمية بـ 60%. يضاف إلى ذلك 'وصمة العار' الاجتماعية وتكلفة الجلسات التقليدية التي تفوق القدرة الشرائية لـ 70% من جيل الشباب (Gen Z & Millennials)."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "NafsAI",
+        "industry_tag": "الذكاء الاصطناعي التوليدي للصحة النفسية",
+        "revenue_model": "SaaS (Enterprise) + Micro-transactions + Tiered Subscriptions",
+        "action_text": "مراجعة نموذج التدفقات النقدية والجدول الزمني للتخارج"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التنفيذ الاستراتيجية (النمو المتسارع)",
+      "subtitle": "من مرحلة التأسيس إلى الريادة الإقليمية",
+      "phases": [
+        {
+          "title": "مرحلة السيادة التقنية (MVP+)",
+          "description": "تطوير محرك Nafs-LLM المدرب على أكبر قاعدة بيانات نفسية باللغات العربية واللهجات المحلية، مع ضمان التوافق مع معايير HIPAA وGDPR لحماية البيانات.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "الاختراق الرأسي (B2B/B2G)",
+          "description": "توقيع شراكات مع صناديق التأمين الصحي الكبرى، والجامعات، والجهات الحكومية لتقديم NafsAI كميزة 'رفاهية الموظف' لتقليل الاحتراق الوظيفي وزيادة الإنتاجية.",
+          "icon": "briefcase",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التوسع الأفقي والنظام البيئي",
+          "description": "دمج الأجهزة القابلة للارتداء (Wearables) لتحليل المؤشرات الحيوية (مثل ضربات القلب) والتنبؤ بنوبات القلق قبل حدوثها، مع فتح سوق للجلسات البشرية الهجينة.",
+          "icon": "globe-alt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 8.8,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "2500+ (User Surveys & Clinical Studies)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "النماذج الحالية تفتقر للحس الثقافي والديني العربي (Cultural Nuances).",
+        "صعوبة معالجة اللغة العربية الطبيعية (NLP) باللهجات المحلية المعقدة.",
+        "غياب الخصوصية الكاملة في الحلول التقليدية (المواجهة المباشرة).",
+        "ارتفاع التكاليف التشغيلية للمنصات التي تعتمد على البشر فقط."
+      ],
+      "recommended_tech_stack": [
+        "Hybrid RAG Architecture (Retrieval-Augmented Generation)",
+        "Fine-tuned Arabic Dialect LLMs",
+        "Zero-Knowledge Encryption for User Privacy",
+        "Integration with HealthKit/Google Fit APIs",
+        "Real-time Sentiment Analysis Engine"
+      ],
+      "main_risk_index": "التحدي التشريعي هو الأبرز؛ يتطلب المشروع تعاوناً وثيقاً مع وزارات الصحة للحصول على تراخيص 'الاستشارة الرقمية المساندة' وضمان السلامة السريرية للنماذج."
+    }
+  }
+}

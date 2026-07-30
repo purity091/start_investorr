@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-HEALTH-2026-AI-DIAG",
+      "status_label": "تحليل استخباري لثورة الطب الوقائي",
+      "category_tag": "التكنولوجيا الطبية (AI / Health Data)",
+      "business_model": "SaaS (Pay-per-scan) + Hospital Integration",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "DeepTech",
+      "Predictive Medicine",
+      "Early Detection"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "التشخيص التنبئي المدعوم بالذكاء الاصطناعي للاكتشاف المبكر",
+      "problem_statement": "يتم تشخيص أكثر من 60% من حالات السرطان وأمراض القلب في مراحل متأخرة، مما يرفع تكاليف العلاج ويقلل فرص النجاة. الأطباء يواجهون ضغطاً هائلاً في تحليل آلاف الصور الإشعاعية يومياً، مما يزيد من احتمالية الخطأ البشري أو إغفال العلامات الدقيقة التي تسبق المرض بسنوات."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "VisionHealth-AI",
+        "industry_tag": "التحليل الذكي للصور الطبية",
+        "revenue_model": "Licensing to Diagnostic Centers + Tiered Subscription for Clinics",
+        "action_text": "استعراض دقة الخوارزميات في اكتشاف الأورام بنسبة 98%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التشخيص الذكي (0-18 شهر)",
+      "subtitle": "تحويل الأشعة الصامتة إلى بيانات منقذة للحياة",
+      "phases": [
+        {
+          "title": "تدريب النماذج على البيانات المحلية",
+          "description": "بناء قاعدة بيانات طبية ضخمة تشمل صور الأشعة (MRI, CT, X-ray) الخاصة بمرضى من المنطقة لضمان دقة الخوارزميات في فهم الخصائص الجينية والبيئية المحلية.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "دمج الأنظمة في المستشفيات (Integration)",
+          "description": "ربط محرك الذكاء الاصطناعي بأنظمة الـ PACS في المستشفيات ليعمل كمساعد طيار للطبيب، حيث يحدد مناطق الشك فور ظهور الصورة.",
+          "icon": "link",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة التنبؤ المستقبلية (Risk Scoring)",
+          "description": "إطلاق أداة تحلل التاريخ الطبي للمريض مع نتائج الفحوصات الحالية لإعطاء 'درجة خطورة' مستقبلية تتيح التدخل الوقائي قبل ظهور الأعراض.",
+          "icon": "chart-pie",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "1.5M+ (Diagnostic Images & Patient Records)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "النقص العالمي في أطباء الأشعة المتخصصين.",
+        "ارتفاع نسبة الخطأ في التشخيص المبكر جداً للعين البشرية.",
+        "عدم وجود أدوات ربط بين الفحوصات الطبية المختلفة (بيانات متناثرة).",
+        "الحاجة لسرعة فائقة في اتخاذ القرار الطبي في حالات الطوارئ."
+      ],
+      "recommended_tech_stack": [
+        "Convolutional Neural Networks (CNN)",
+        "Cloud-based PACS Integration",
+        "Deep Learning for Pattern Recognition",
+        "Edge Computing for Zero-latency analysis",
+        "Federated Learning (لخصوصية البيانات)"
+      ],
+      "main_risk_index": "الاعتمادات التنظيمية؛ الحصول على تصنيف 'جهاز طبي' (Medical Device) من هيئات الغذاء والدواء هو العقبة الأكبر والأكثر حيوية."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-AGR02",
+      "status_label": "تحليل فجوة موثوقية وجودة الصادرات الزراعية",
+      "category_tag": "AgriTech / Blockchain / Global Trade",
+      "business_model": "Quality Certification Fee + Export Commission + Blockchain Provenance SaaS",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Agriculture",
+      "Food Safety",
+      "Export Integrity"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Coastal Region (Tartus/Latakia)", "flag": "🇸🇾" },
+        { "name": "Idlib (Olive Groves)", "flag": "🇸🇾" },
+        { "name": "Afrin", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "موثوقية الذهب الأخضر: تصدير زيت الزيتون السوري بالبلوكشين",
+      "problem_statement": "سوريا من أكبر منتجي زيت الزيتون عالمياً، لكن معظم الإنتاج يُباع 'فَلّ' بأسعار زهيدة لدول الجوار التي تعيد تعبئته وتصديره كمنتج إيطالي أو إسباني. الفجوة هي غياب نظام تتبع (Traceability) يثبت جودة الزيت السوري (Extra Virgin) وأصله الجغرافي، مما يحرم المزارع من أرباح التصدير المباشر بأسعار عالمية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Zait-Souri",
+        "industry_tag": "العلامة التجارية العالمية للزيت السوري الموثق",
+        "revenue_model": "Sales Margin on Bottled Export + Certification Fee for Local Farmers + Data Access for EU Buyers",
+        "action_text": "استعراض بوابة تصدير زيت الزيتون السوري الموثق رقمياً"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الجودة العالمية (0-36 شهر)",
+      "subtitle": "من المعصرة إلى موائد العالم",
+      "phases": [
+        {
+          "title": "رقمنة المعاصر وتدقيق الجودة",
+          "description": "تزويد المعاصر السورية بأجهزة تحليل فورية (Spectroscopy) لقياس نسبة الحموضة والبيروكسيد، وربط النتائج بسجل البلوكشين.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "توسيم الزجاجات بـ Smart QR",
+          "description": "وضع رمز QR على كل عبوة يتيح للمستهلك في أوروبا أو الخليج رؤية صور المزرعة، تاريخ العصر، ونتائج المختبر الموثقة.",
+          "icon": "qrcode",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تأسيس تحالف المصدرين الرقمي",
+          "description": "بناء منصة تجارة إلكترونية B2B تربط المزارعين السوريين بسلاسل المطاعم والمتاجر الكبرى عالمياً دون وسطاء.",
+          "icon": "globe",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.7,
+      "data_points_analyzed": "Export Price Difference (Syria Bulk vs Italy Branded)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "غياب المختبرات المعتمدة دولياً داخل سوريا القادرة على منح شهادات المطابقة.",
+        "صعوبة الشحن اللوجستي المباشر من الموانئ السورية للأسواق الغربية.",
+        "تشتت المزارعين الصغار وعدم قدرتهم على تحمل تكاليف التعبئة والتسويق.",
+        "التلاعب بالزيت وخلطه بأنواع رديئة في بعض حلقات التوزيع."
+      ],
+      "recommended_tech_stack": [
+        "Blockchain (Ethereum/Hyperledger)",
+        "NIR (Near-Infrared) Spectroscopy",
+        "IoT Temperature Logging for Shipping",
+        "AI for Crop Yield Prediction",
+        "Digital Certificates (NFT for Batches)"
+      ],
+      "main_risk_index": "المخاطر السياسية واللوجستية؛ إغلاق المعابر أو الموانئ قد يعطل سلاسل التصدير، مما يتطلب استراتيجية شحن مرنة عبر دول وسيطة."
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-JOB02",
+      "status_label": "تحليل فجوة العمالة التقنية في عصر الذكاء الاصطناعي",
+      "category_tag": "AI-Services / Data Science / IT-Jobs",
+      "business_model": "Managed AI Services + Data Curation Fees + Model Customization",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Information Technology",
+      "Artificial Intelligence",
+      "Digital Labor"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Syria (IT Talent Pool)",
+          "flag": "🇸🇾"
+        },
+        {
+          "name": "Global Tech Companies",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "مركز تدريب الذكاء الاصطناعي العربي (Syria-AI Lab)",
+      "problem_statement": "تحتاج النماذج اللغوية الكبيرة (LLMs) لبيانات مدققة بشرياً (RLHF) في المجالات التخصصية (طب، قانون، هندسة) باللغة العربية. مهندسو المعلوماتية السوريون لديهم القدرة على هذا التدقيق لكنهم يفتقرون للمنصة التي تربطهم بشركات الـ AI العالمية. الفجوة هي مركز 'تنقيح بيانات' تخصصي يوظف العقول السورية لضبط جودة الذكاء الاصطناعي العربي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Aqil-Labs",
+        "industry_tag": "خدمات البيانات للذكاء الاصطناعي السيادي",
+        "revenue_model": "Price per Data Point Audited + Model Fine-tuning Contracts + Enterprise AI Consulting",
+        "action_text": "استعراض خطة تدريب 500 خبير بيانات سوري لخدمة النماذج العربية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق السيادة الرقمية (0-18 شهر)",
+      "subtitle": "تطوير العقل الرقمي العربي بأيادٍ سورية",
+      "phases": [
+        {
+          "title": "منصة 'التنقيح التخصصي'",
+          "description": "بناء واجهة برمجية تتيح للمهندسين والأطباء السوريين مراجعة مخرجات الـ AI وتصحيحها لغوياً ومعرفياً.",
+          "icon": "adjustments",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "مختبر ضبط النماذج (Fine-tuning)",
+          "description": "استخدام الكفاءات البرمجية السورية لإعادة تدريب النماذج المفتوحة (مثل Llama-3) لتناسب بيئات العمل العربية المحلية.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "مركز خدمات الـ AI للشركات (B2B)",
+          "description": "تقديم خدمات أتمتة الأعمال والامتثال للشركات الإقليمية باستخدام النماذج التي تم تطويرها محلياً.",
+          "icon": "briefcase",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Demand for Specialized Arabic RLHF vs IT Graduate Availability"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "غياب منصات العمل الحر التي تدعم السوريين مباشرة بسبب العقوبات.",
+        "الحاجة لقوة حوسبة (GPUs) عالية للتدريب (يتم حلها بالاستئجار السحابي).",
+        "تشتت الجهود الفردية وغياب كيان مؤسساتي يضمن جودة البيانات.",
+        "ضعف الربط بين الأكاديميين السوريين وصناعة التقنية العالمية."
+      ],
+      "recommended_tech_stack": [
+        "PyTorch / TensorFlow Frameworks",
+        "RLHF (Reinforcement Learning from Human Feedback)",
+        "Hugging Face Hub Integration",
+        "GPU Cloud Instances (AWS/Azure)",
+        "Annotation Tools (Labelbox/Custom)"
+      ],
+      "main_risk_index": "التسارع التقني؛ تطور النماذج ذاتية التعلم قد يقلل الحاجة للتدخل البشري، مما يتطلب تطويراً دائماً لمهارات المهندسين نحو 'هندسة الأوامر' (Prompt Engineering)."
+    }
+  }
+}

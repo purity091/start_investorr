@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-CUL01",
+      "status_label": "تحليل فجوة سوق الحرف الفاخرة",
+      "category_tag": "CreativeTech / EdTech / E-commerce",
+      "business_model": "Certification Fees + Global Marketplace Commission + Masterclass Subscriptions",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Culture",
+      "Education",
+      "Luxury Export"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Morocco (Zellige & Leather)", "flag": "🇲🇦" },
+        { "name": "Egypt (Tentmakers & Carpets)", "flag": "🇪🇬" },
+        { "name": "Syria (Damascene Woodwork)", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "أكاديمية المعلم: رقمنة وتصدير الحرف اليدوية الفاخرة",
+      "problem_statement": "تمتلك المنطقة العربية أعرق الحرف اليدوية في العالم، لكن 'المعلمين' الكبار يرحلون دون نقل أسرارهم، والمنتج النهائي يفتقر للمعايير القياسية والوصول للأسواق الفاخرة العالمية. الفجوة هي منصة تقوم بتوثيق 'أسرار الصنعة' رقمياً (Digital Archiving)، وإصدار شهادات جودة عالمية للمنتجات، وربطها بمصممي الديكور والأزياء في نيويورك وباريس."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Moallem-Elite",
+        "industry_tag": "العلامة التجارية العالمية للحرف العربية",
+        "revenue_model": "Global Export Commission (25%) + Masterclass Subscription for Hobbyists + Authenticity Certificates (NFT)",
+        "action_text": "استعراض خطة تحويل الحرف التقليدية إلى صناعة فاخرة بمليارات الدولارات"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق النهضة الحرفية (0-36 شهر)",
+      "subtitle": "من ورشة 'المعلم' إلى قصور العالم",
+      "phases": [
+        {
+          "title": "توثيق 'أسرار الصنعة' (Master Archives)",
+          "description": "استخدام التصوير السينمائي والـ 3D لتوثيق حركات يد المعلمين وتقنياتهم النادرة لضمان عدم اندثار الحرفة.",
+          "icon": "video-camera",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام شهادات الموثوقية (Provenance)",
+          "description": "إصدار شهادات رقمية (Blockchain-based) لكل قطعة تضمن أنها يدوية الصنع وتوثق قصة الحرفي الذي صنعها لرفع قيمتها التسويقية.",
+          "icon": "badge-check",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة التصميم التشاركي (Designer-Craftsman Bridge)",
+          "description": "توفير أداة تتيح لمصممي الديكور العالميين طلب قطع 'مخصصة' (Bespoke) يتم تنفيذها بأيادٍ عربية بمعايير جودة عالمية.",
+          "icon": "sparkles",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.8,
+      "data_points_analyzed": "Global Luxury Craft Demand vs Middle East Export Gaps"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الفجوة اللغوية والرقمية بين الحرفيين التقليديين والأسواق العالمية.",
+        "غياب معايير 'ضبط الجودة' (Quality Control) التي يطلبها المشتري الدولي.",
+        "التحديات اللوجستية في شحن القطع الهشة والثمينة دولياً.",
+        "نظرة الشباب المحلي للحرف كمهن 'من الدرجة الثانية' (يتم حله ببرستيج العلامة العالمية)."
+      ],
+      "recommended_tech_stack": [
+        "3D Photogrammetry for Product Cataloging",
+        "Blockchain for Digital Certificates of Authenticity",
+        "AI for Matching Artisans with Designers",
+        "Logistics Tracking for High-value Goods",
+        "E-learning Platforms for Craft Preservation"
+      ],
+      "main_risk_index": "الاستمرارية البشرية؛ المشروع يعتمد على صحة وقدرة كبار المعلمين، مما يتطلب برنامج 'تلمذة' سريع لنقل الخبرة للجيل الشاب."
+    }
+  }
+}

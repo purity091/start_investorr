@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-RET19",
+      "status_label": "تحليل فجوة ولاء المستهلك العابر للعلامات",
+      "category_tag": "RetailTech / Blockchain / Fintech",
+      "business_model": "Network Interchange Fee + SaaS for Retailers + Data Insights on Consumer Spending Patterns",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Retail & Commerce",
+      "Fintech",
+      "Blockchain"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "GCC (Multiple Loyalty Programs Fatigue)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Egypt & Jordan (Need for Value-driven Rewards)",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "الولاء الموحد: محرك تبادل النقاط بالبلوكشين",
+      "problem_statement": "يمتلك المستهلك العربي عشرات بطاقات الولاء (Supermarkets, Airlines, Cafes) التي تنتهي نقاطها دون استخدام لصغر قيمتها في كل متجر على حدة. الفجوة هي نظام موحد يعتمد على البلوكشين يتيح للمستهلك 'تبادل' نقاطه بين المتاجر المختلفة أو تحويلها لـ 'عملة تسوق' موحدة يمكن صرفها في أي متجر داخل الشبكة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Nuqat-Exchange",
+        "industry_tag": "تكنولوجيا الولاء المتقدمة وحلول الفينتيك للتجزئة",
+        "revenue_model": "Transaction Fee on Point Exchanges + Annual Participation Fee for Retailers + Targeted Marketing Data Sales",
+        "action_text": "استعراض النظام الذي سيعيد القيمة لنقاط ولاء العرب"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الولاء اللامركزي (0-48 شهر)",
+      "subtitle": "نقاطك ثروة حقيقية، في كل مكان",
+      "phases": [
+        {
+          "title": "بروتوكول تبادل النقاط (Points-Swap)",
+          "description": "بناء شبكة بلوكشين (Private Ledger) تسمح بتحديد قيمة 'عادلة' لتبادل النقاط بين العلامات التجارية المختلفة بناءً على تكلفتها.",
+          "icon": "refresh",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بوابة التاجر والذكاء الاصطناعي",
+          "description": "توفير أداة لتجار التجزئة تظهر لهم سلوك العميل العابر للمتاجر (Cross-retail) لتقديم عروض مخصصة جداً تزيد من ولائه للشبكة ككل.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "محفظة المستهلك الشاملة (Super-App-Link)",
+          "description": "إطلاق تطبيق يجمع كل برامج الولاء في مكان واحد، مع إمكانية تحويل النقاط لرصيد دفع مباشر عبر Apple Pay أو محافظ محلية.",
+          "icon": "credit-card",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.7,
+      "data_points_analyzed": "Unredeemed Loyalty Points Value in MENA vs Potential Increase in Retail Traffic from Unified Systems"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "رغبة كل علامة تجارية في 'حبس' العميل داخل نظامها الخاص (Siloed thinking).",
+        "التعقيد المحاسبي والضريبي في نقل 'الالتزامات المالية' للنقاط بين الشركات.",
+        "نقص الوعي التقني بكيفية عمل البلوكشين في تسوية المعاملات لحظياً.",
+        "الحاجة لكتلة حرجة (Critical Mass) من المتاجر الكبرى لنجاح النظام."
+      ],
+      "recommended_tech_stack": [
+        "Hyperledger Fabric / Ethereum Layer 2",
+        "Smart Contracts for Auto-settlement",
+        "API Gateways for POS Integration",
+        "Real-time Data Analytics",
+        "High-security Digital Wallets"
+      ],
+      "main_risk_index": "مقاومة العلامات الكبرى؛ الشركات الضخمة قد ترفض مشاركة بيانات عملائها، مما يتطلب نموذج عمل يركز على 'الخصوصية' (Privacy-preserving analytics)."
+    }
+  }
+}

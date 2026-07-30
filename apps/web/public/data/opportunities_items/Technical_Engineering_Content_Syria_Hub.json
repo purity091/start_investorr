@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-JOB10",
+      "status_label": "تحليل فجوة المحتوى المعرفي الهندسي العربي",
+      "category_tag": "EdTech / Knowledge Economy / Engineering",
+      "business_model": "Subscription per Firm + Pay-per-Course (B2C) + Content Licensing to Govs",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Education",
+      "Engineering Knowledge",
+      "Knowledge Economy"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Syria (Knowledge Hub)",
+          "flag": "🇸🇾"
+        },
+        {
+          "name": "Arab World (Market)",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "مركز المحتوى الهندسي: رقمنة الخبرة السورية للعالم العربي",
+      "problem_statement": "يفتقر العالم العربي لمحتوى هندسي تقني عالي الجودة باللغة العربية (دورات، مراجع، حلول مشاكل ميدانية). المهندسون السوريون معروفون بقوة تأهيلهم الأكاديمي وخبرتهم الميدانية في 'إيجاد الحلول من اللا شيء'. الفجوة هي منصة معرفية توظف مئات المهندسين السوريين لإنتاج وتوثيق المحتوى الهندسي التخصصي وبيعه للشركات والجامعات العربية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Muhan-Diss-Souri",
+        "industry_tag": "اقتصاد المعرفة الهندسية الرقمية",
+        "revenue_model": "B2B Subscription for Engineering Firms + Individual Course Fees + Technical Documentation Services",
+        "action_text": "استعراض خطة توظيف 1000 مهندس سوري في صناعة المحتوى المعرفي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق النهضة المعرفية (0-24 شهر)",
+      "subtitle": "تحويل الخبرة الهندسية إلى ثروة رقمية",
+      "phases": [
+        {
+          "title": "استوديو الإنتاج الهندسي الرقمي",
+          "description": "تأسيس استوديوهات مجهزة لتسجيل الدورات التخصصية (في الكهرباء، الميكانيك، العمارة، البرمجة) بأعلى معايير الإنتاج العالمي.",
+          "icon": "video-camera",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء 'موسوعة الهندسة العملية' (WIKI-Eng)",
+          "description": "توثيق آلاف 'دراسات الحالة' (Case Studies) لمشاكل هندسية حقيقية تم حلها في سوريا لتكون مرجعاً للمهندسين العرب.",
+          "icon": "book-open",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة الاستشارات الهندسية اللحظية (On-demand Experts)",
+          "description": "توفير ميزة 'تحدث مع خبير سوري' تتيح للمهندسين في مواقع العمل العربية الحصول على استشارة فنية فورية مقابل رسوم.",
+          "icon": "user-group",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.3,
+      "competitive_moat": 9.7,
+      "data_points_analyzed": "Arabic Technical Content Gap in Global Platforms vs Syrian Academic Strength"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف الاهتمام بـ 'حقوق الملكية الفكرية' للمحتوى العربي.",
+        "الاعتماد التاريخي على الترجمة الضعيفة بدلاً من التأصيل المعرفي.",
+        "نقص المهارات الرقمية (مونتاج، إخراج، تسويق) لدى المهندسين الخبراء.",
+        "تشتت الجهود الفردية على يوتيوب ومنصات التواصل دون إطار مؤسساتي."
+      ],
+      "recommended_tech_stack": [
+        "LMS (Learning Management System)",
+        "Video Rendering Cloud Infrastructure",
+        "Interactive Simulations (HTML5/Canvas)",
+        "AI for Auto-subtitling & Translation",
+        "Knowledge Graph Database (Neo4j)"
+      ],
+      "main_risk_index": "المنافسة من المحتوى المجاني؛ نجاح المشروع يتطلب أن يكون المحتوى 'تطبيقياً وعالياً الجودة' لدرجة أن الشركات تراه استثماراً رابحاً لموظفيها."
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-EDU05",
+      "status_label": "تحليل فجوة التعليم التقني المتطور لإعادة الإعمار",
+      "category_tag": "EdTech / Engineering / Hybrid Learning",
+      "business_model": "Corporate Training Contracts + Certification Fees + Remote Lab Subscriptions",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Education",
+      "Engineering",
+      "Skills Development"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Syrian Universities Hub", "flag": "🇸🇾" },
+        { "name": "Reconstruction Engineering Firms", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "مختبرات إعادة الإعمار: التعليم الهندسي الهجين",
+      "problem_statement": "تعاني الجامعات السورية من نقص هائل في المختبرات الهندسية الحديثة والمعدات (بسبب العقوبات والدمار)، مما يخرج مهندسين يفتقرون للخبرة العملية في تقنيات البناء والرقمنة الحديثة. الفجوة هي منصة 'مختبرات افتراضية' (Virtual Labs) تربط الطالب السوري بتجارب هندسية حقيقية وتدريب دولي عبر السحاب، مع تطبيق ميداني في مواقع الإعمار."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Jamiat-Tech",
+        "industry_tag": "التأهيل الهندسي السيادي",
+        "revenue_model": "University Partnership Fees + Corporate Sponsored Scholarships + Professional Licensing Support",
+        "action_text": "استعراض منصة تأهيل الجيل القادم من مهندسي سوريا"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التفوق الهندسي (0-24 شهر)",
+      "subtitle": "تجهيز عقول سورية لتبني سوريا",
+      "phases": [
+        {
+          "title": "إطلاق المختبرات الافتراضية (Digital Twins)",
+          "description": "توفير محاكاة دقيقة للمختبرات الإنشائية، الكيميائية، والكهربائية تتيح للطلاب إجراء التجارب رقمياً بنسبة دقة 95%.",
+          "icon": "cube-transparent",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "برنامج 'التوأمة' مع الخبراء المغتربين",
+          "description": "ربط الطلاب السوريين بأساتذة وخبراء سوريين في الخارج لتقديم محاضرات وتدريبات عملية عابرة للحدود عبر الإنترنت.",
+          "icon": "user-group",
+          "color_theme": "rose"
+        },
+        {
+          "title": "الاعتماد الدولي للمهارات (Skill Accreditation)",
+          "description": "منح شهادات كفاءة معترف بها من شركات دولية تسهل على المهندسين السوريين العمل في مشاريع إعادة الإعمار الكبرى.",
+          "icon": "badge-check",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 9.3,
+      "data_points_analyzed": "Engineering Graduate Skills Gap vs Industry 4.0 Requirements"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "صعوبة استيراد أجهزة المختبرات الفيزيائية بسبب قيود الشحن والعقوبات.",
+        "الهجرة الكبيرة للكادر التدريسي الجامعي الخبير.",
+        "ضعف البنية التحتية للإنترنت داخل الحرم الجامعي.",
+        "التركيز على المناهج النظرية التقليدية لغياب البديل العملي."
+      ],
+      "recommended_tech_stack": [
+        "Virtual Reality (VR) Simulations",
+        "Cloud-based Engineering Software (BIM/CAD)",
+        "Learning Management Systems (LMS)",
+        "Collaborative Whiteboards",
+        "Peer-to-peer Mentorship Algorithms"
+      ],
+      "main_risk_index": "الاستدامة المالية؛ يعتمد المشروع على تمويل المنظمات أو عقود الجامعات الحكومية، مما يتطلب نموذج عمل مرن يراعي القدرة الشرائية المحلية."
+    }
+  }
+}

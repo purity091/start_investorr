@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-RET04",
+      "status_label": "تحليل فجوة القياس الافتراضي للموضة المحتشمة",
+      "category_tag": "FashionTech / AI / E-commerce",
+      "business_model": "SaaS per Transaction Fee + License for Fashion Retailers + Data Analytics for Brands",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Retail & Commerce",
+      "Fashion & Accessories",
+      "Artificial Intelligence"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "GCC (High E-commerce Return Rates in Fashion)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Turkey & Egypt (Major Modest Fashion Hubs)",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "القياس المثالي: تجربة القياس الافتراضي للموضة المحتشمة",
+      "problem_statement": "تصل نسب إرجاع الملابس في التجارة الإلكترونية العربية لـ 35% نتيجة مشاكل القياس، خاصة في العبايات والموضة المحتشمة التي تتطلب دقة في 'القماش والقصة'. الفجوة هي محرك AI يتيح للمتوقة أخذ قياساتها عبر الهاتف ورؤية شكل الملابس (بمحاكاة فيزيائية للقماش) على مجسم ثلاثي الأبعاد يطابق جسدها."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Qiyas-AI",
+        "industry_tag": "تكنولوجيا الموضة (FashionTech) وتقليل هدر اللوجستيات العكسية",
+        "revenue_model": "Fee per successful 'Virtual Try-on' + Monthly License for E-shops + Analytics on Body Type Trends",
+        "action_text": "استعراض التكنولوجيا التي ستنهي مشاكل إرجاع الملابس"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق القياس الرقمي (0-36 شهر)",
+      "subtitle": "تسوقي بثقة، والقياس دائماً مضبوط",
+      "phases": [
+        {
+          "title": "محرك المسح الجسماني (Body-Scan AI)",
+          "description": "تطوير تقنية تستخدم كاميرا الهاتف لإنشاء نموذج 3D دقيق لجسم المستخدم بخصوصية كاملة ودون تخزين صور حساسة.",
+          "icon": "user-circle",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محاكاة القماش والقصة (Fabric-Physics)",
+          "description": "بناء محرك رسومي يحاكي انسيابية أقمشة الموضة المحتشمة (حرير، كريب، شيفون) على الجسم لضمان رؤية واقعية للقصة.",
+          "icon": "sparkles",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التكامل مع متاجر 'سلة وزد' (Platform-Widget)",
+          "description": "توفير 'ودجت' بسيط يضاف للمتاجر الإلكترونية يتيح للعملاء استخدام 'القياس الافتراضي' بضغطة زر واحدة قبل الشراء.",
+          "icon": "desktop-computer",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Cost of Returns in MENA E-commerce vs Accuracy of AI Body Measurement Tools"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التعقيد في محاكاة أقمشة الموضة المحتشمة التي تتميز بالوسع والانسيابية (Drape).",
+        "تخوف المستخدمات من 'الخصوصية' عند استخدام الكاميرا لأخذ القياسات.",
+        "الحاجة لقدرات معالجة رسومية عالية في الهواتف المحمولة لتجربة سلسة.",
+        "نقص البيانات الضخمة (Dataset) لأجسام النساء العربيات لتدريب الـ AI بدقة."
+      ],
+      "recommended_tech_stack": [
+        "Computer Vision for Body Pose Estimation",
+        "Physics Engines for Cloth Simulation",
+        "Edge AI (On-device processing for privacy)",
+        "Unity/Unreal for 3D Visualization",
+        "JavaScript Widget for E-com Integration"
+      ],
+      "main_risk_index": "دقة البيانات؛ أي خطأ في القياس سيؤدي لإرجاع المنتج وفقدان الثقة، مما يتطلب خوارزمية 'تحسين ذاتي' تتعلم من المرتجعات الفعلية."
+    }
+  }
+}

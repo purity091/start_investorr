@@ -1,0 +1,92 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-PROP13",
+      "status_label": "تحليل فجوة أتمتة دور العبادة والمراكز المجتمعية",
+      "category_tag": "Smart-Infrastructure / CleanTech / Social-Tech",
+      "business_model": "SaaS per Mosque + Energy Efficiency Gain-Share + Community Services Marketplace",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Infrastructure",
+      "Energy Efficiency",
+      "Social Innovation"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Saudi Arabia (The Vision of Mosques)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Egypt (Highest Mosque Density)",
+          "flag": "🇪🇬"
+        },
+        {
+          "name": "Jordan & Morocco",
+          "flag": "🇯🇴"
+        }
+      ],
+      "additional_regions_count": 22
+    },
+    "core_content": {
+      "title": "نور ومساحة: منصة إدارة المساجد والمراكز الذكية",
+      "problem_statement": "يوجد ملايين المساجد في العالم العربي تستهلك طاقة هائلة (تكييف/إنارة) ومياه (وضوء) دون أي نظام كفاءة ذكي، كما أن دورها المجتمعي يظل تقليدياً. الفجوة هي نظام أتمتة يربط التكييف والإنارة بأوقات الصلاة الفعلية وبعدد المصلين (عبر الحساسات)، مع منصة رقمية تربط سكان الحي بالمسجد للخدمات الاجتماعية والوقفية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Masjid-Net",
+        "industry_tag": "البنية التحتية الذكية والمستدامة للمساجد",
+        "revenue_model": "Energy Savings Commission + Annual SaaS Maintenance + Community Marketplace Transaction Fee",
+        "action_text": "استعراض تحويل مساجد الحي إلى مراكز طاقة وخدمات ذكية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المسجد المستدام (0-24 شهر)",
+      "subtitle": "تكنولوجيا في خدمة الروح والمجتمع",
+      "phases": [
+        {
+          "title": "نظام الأتمتة المعتمد على الصلاة",
+          "description": "ربط أنظمة التكييف (HVAC) والإنارة آلياً ببرنامج الأذان وحساسات الإشغال لتقليل الهدر في أوقات فراغ المسجد.",
+          "icon": "lightning-bolt",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "حلقة الوضوء المغلقة (Water-Cycle)",
+          "description": "تركيب أنظمة معالجة مياه رمادية مصغرة تعيد تدوير مياه الوضوء لري حدائق المسجد أو المرافق العامة المجاورة.",
+          "icon": "refresh",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق 'منصة الحي الرقمية'",
+          "description": "توفير تطبيق يتيح للمصلين التبرع المباشر، حجز دروس العلم، وتنسيق المبادرات الخيرية لأهل الحي عبر المسجد.",
+          "icon": "user-group",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "Average Mosque Electricity Bill vs Automated Savings Potential"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الحساسية التقليدية تجاه إدخال التكنولوجيا المتقدمة في دور العبادة.",
+        "نظام التمويل 'التبرعي' غير المستقر لعمليات التحديث التقني.",
+        "غياب المعايير الهندسية الموحدة لبناء 'المسجد الذكي'.",
+        "الحاجة لتراخيص من وزارات الأوقاف والشؤون الدينية."
+      ],
+      "recommended_tech_stack": [
+        "Smart HVAC Controllers with Prayer-time Logic",
+        "Greywater Recycling Systems",
+        "Occupancy Sensors (Infrared/Visual)",
+        "Mobile App (Flutter) with Donation API",
+        "Solar PV Hybrid Systems"
+      ],
+      "main_risk_index": "القبول الاجتماعي؛ يتطلب المشروع شرحاً واضحاً بأن التكنولوجيا تهدف لحفظ النعمة (توفير الطاقة والماء) وليس للتشويش على العبادة."
+    }
+  }
+}

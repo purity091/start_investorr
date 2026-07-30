@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ED-2026-VRP",
+      "status_label": "تحليل استخباري لتأهيل الكوادر الصناعية",
+      "category_tag": "تكنولوجيا التعليم (Immersive Training / VR)",
+      "business_model": "B2B (Enterprise Training) + Gov Partnerships",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "EdTech",
+      "Vocational Training",
+      "VR/AR Simulation",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "محاكاة المستقبل لتأهيل القوى العاملة",
+      "problem_statement": "تعاني المشاريع الكبرى (مثل نيوم، القدية، ومشاريع الطاقة في الإمارات) من نقص حاد في العمالة الماهرة والمهندسين الميدانيين. التدريب التقليدي بطيء، مكلف، ومحفوف بالمخاطر عند التعامل مع معدات ثقيلة أو بيئات خطرة. هناك فجوة زمنية هائلة بين سرعة بناء المدن وسرعة تأهيل البشر لإدارتها وبنائها."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "VR-Pro Skills",
+        "industry_tag": "التدريب الغامر للقطاعات التقنية والثقيلة",
+        "revenue_model": "Enterprise Per-Seat License + Custom Scenario Development + Hardware Leasing",
+        "action_text": "مراجعة تقليل تكلفة التدريب بنسبة 60% وزيادة سرعة الاستيعاب"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التدريب الغامر (0-12 شهر)",
+      "subtitle": "من المحاكاة الافتراضية إلى الإتقان الميداني",
+      "phases": [
+        {
+          "title": "مكتبة السيناريوهات الصناعية (Scenario Library)",
+          "description": "تطوير بيئات VR دقيقة للمصانع، منصات النفط، ومواقع الإنشاء، تتيح للمتدربين ممارسة المهام المعقدة وحالات الطوارئ في بيئة آمنة تماماً.",
+          "icon": "view-grid",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام تقييم الأداء بالذكاء الاصطناعي (AI Assessment)",
+          "description": "دمج حساسات تتبع الحركة والعين لتحليل دقة المتدرب، وتقديم تقارير فورية حول نقاط الضعف والمهارات التي تحتاج إلى تحسين.",
+          "icon": "user-check",
+          "color_theme": "rose"
+        },
+        {
+          "title": "مركز الاعتماد الرقمي (Digital Certification Hub)",
+          "description": "إصدار شهادات مهارية مدعومة ببيانات أداء فعلية داخل المحاكاة، معترف بها من قبل الشركات الكبرى كبديل أو مكمل للشهادات الأكاديمية.",
+          "icon": "badge-check",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.1,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "1800+ (Industrial Accident Reports & Talent Gap Stats)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لنظارات VR في السابق وصعوبة برمجتها (قبل ظهور الـ Gen-AI).",
+        "النظرة التقليدية للتعليم المهني التي تعتمد على الوجود المادي فقط.",
+        "نقص المحتوى التعليمي العربي المتخصص في المهارات التقنية الدقيقة.",
+        "صعوبة الوصول للمعدات الثقيلة لغرض التدريب فقط."
+      ],
+      "recommended_tech_stack": [
+        "Unreal Engine 5 for Photorealistic Simulations",
+        "Generative AI for Dynamic Scenario Building",
+        "Standalone VR Headsets (Meta Quest/Pico)",
+        "Haptic Feedback Suits Integration",
+        "Cloud-based Training Management System"
+      ],
+      "main_risk_index": "سرعة التطور التقني للأجهزة؛ الحل هو بناء منصة برمجية مرنة (Hardware Agnostic) تعمل على أي نظارات مستقبلية."
+    }
+  }
+}

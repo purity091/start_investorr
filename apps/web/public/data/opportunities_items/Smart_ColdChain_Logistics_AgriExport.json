@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-LOG09",
+      "status_label": "تحليل فجوة لوجستيات تصدير المنتجات الطازجة",
+      "category_tag": "Logistics / AgriTech / ColdChain",
+      "business_model": "Cold-Storage Leasing + Fleet Management + Export Brokerage",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Logistics",
+      "Agriculture",
+      "Fresh Supply Chain"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Coastal Mountains (Citrus & Fruits)", "flag": "🇸🇾" },
+        { "name": "Sweida (Apples & Grapes)", "flag": "🇸🇾" },
+        { "name": "Hama (Vegetables)", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "الممر الطازج: سلاسل تبريد ذكية لتصدير الفواكه السورية",
+      "problem_statement": "تخسر سوريا 40% من محصول الحمضيات والتفاح سنوياً بسبب سوء التخزين وضعف اللوجستيات المبردة خلال النقل البري الطويل للخليج. المزارع يبيع بأرخص الأثمان لتجنب التلف. الفجوة هي شبكة 'مبردات ذكية' وحاويات IoT تضمن ثبات الحرارة من المزرعة وحتى وصولها لرفوف المتاجر في دبي أو الرياض."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Fresho-Souri",
+        "industry_tag": "لوجستيات التصدير الزراعي المبرد",
+        "revenue_model": "Fee per Ton/KM + Cold-Hub Storage Leasing + Export Documentation Services",
+        "action_text": "استعراض تقليل تلف المحاصيل التصديرية بنسبة 80%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الممر الأخضر (0-24 شهر)",
+      "subtitle": "الحفاظ على جودة الأرض السورية للعالم",
+      "phases": [
+        {
+          "title": "بناء مراكز التبريد الأولية (First-mile Hubs)",
+          "description": "تأسيس مراكز تبريد تعمل بالطاقة الشمسية في قلب المناطق الزراعية لاستلام المحصول وتبريده فورياً بعد القطف.",
+          "icon": "lightning-bolt",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تطوير أسطول الحاويات الذكية (IoT Trailers)",
+          "description": "تجهيز شاحنات النقل بحساسات حرارة ورطوبة مرتبطة بالأقمار الصناعية تتيح للمصدر والمستورد مراقبة حالة الشحنة لحظياً.",
+          "icon": "rss",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة التنسيق التصديري (Trade Connect)",
+          "description": "ربط الشحنات المبردة بطلبات الشراء المؤكدة في الخليج لتقليل وقت انتظار الشاحنات على المعابر وضمان سرعة الوصول.",
+          "icon": "truck",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "Post-harvest Loss Rates vs Potential Export Revenue"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "نقص الكهرباء المستمرة لتشغيل برادات التخزين الكبيرة.",
+        "تهالك أسطول الشاحنات المبردة القديم وصعوبة تحديثه.",
+        "البيروقراطية والتأخير على المعابر الحدودية التي تسبب تلف الشحنات.",
+        "ضعف ثقافة التعبئة والتغليف (Packaging) التي تحمي المنتج في الرحلات الطويلة."
+      ],
+      "recommended_tech_stack": [
+        "IoT Temperature Sensors (LoRaWAN)",
+        "Solar-powered Cold Storage Tech",
+        "Blockchain for Logistics Tracking",
+        "Predictive Analytics for Shelf Life",
+        "Fleet Optimization Algorithms"
+      ],
+      "main_risk_index": "المخاطر الجيوسياسية على المعابر؛ أي إغلاق مفاجئ للحدود قد يسبب كارثة للمنتجات الطازجة، مما يتطلب حلول معالجة وتجفيف بديلة (Plan B)."
+    }
+  }
+}

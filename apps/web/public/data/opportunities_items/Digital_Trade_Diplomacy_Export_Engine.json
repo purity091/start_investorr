@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-POL08",
+      "status_label": "تحليل فجوة الدبلوماسية التجارية الرقمية",
+      "category_tag": "International Trade / GovTech / Diplomacy",
+      "business_model": "License Fee per Diplomatic Mission + Performance Bonus on Export Targets + Market Data Sales",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Economics",
+      "International Trade",
+      "Government"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Arab Diplomatic Missions Globally",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Local Export Authorities (Export Promotion)",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "محرك الصادرات: منصة الدبلوماسية التجارية الرقمية",
+      "problem_statement": "تعاني السفارات والملحقيات التجارية العربية من تشتت البيانات وعدم وجود ربط لحظي مع المصدرين المحليين في بلدانهم، مما يضيع فرصاً تجارية كبرى. الفجوة هي منصة رقمية تربط 'الملحق التجاري' في الخارج بـ 'المصنع المحلي' في الداخل لتمرير الفرص، طلب العينات، وتسهيل الصفقات (B2G/B2B) بضمانة حكومية رقمية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Export-Diplomacy-MENA",
+        "industry_tag": "تكنولوجيا الحكومات ودعم التجارة الخارجية السيادي",
+        "revenue_model": "Annual Platform Fee per Country + Commission on Brokered Trade Contracts + Premium Market Intel Subscription",
+        "action_text": "استعراض تكنولوجيا تحويل السفارات إلى محركات نمو اقتصادي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق نفوذ التجارة (0-36 شهر)",
+      "subtitle": "ربط المصنع العربي بالأسواق العالمية بذكاء دبلوماسي",
+      "phases": [
+        {
+          "title": "بوابة تمرير الفرص (Opportunity-Bridge)",
+          "description": "توفير تطبيق للملحقين التجاريين لتصوير وإرسال المناقصات والفرص الاستثمارية من الأسواق العالمية للمصدرين المؤهلين فوراً.",
+          "icon": "lightning-bolt",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام تأهيل المصدرين (Exporter-Verification)",
+          "description": "تفعيل نظام توثيق رقمي يضمن جودة المصدرين المحليين وقدرتهم على التوريد، مما يسهل على السفارات ترشيحهم للشركاء الدوليين بثقة.",
+          "icon": "shield-check",
+          "color_theme": "rose"
+        },
+        {
+          "title": "استوديو الصفقات الافتراضي (Trade-Deal-Studio)",
+          "description": "منصة لعقد اجتماعات (B2B) آمنة بين المورد المحلي والمشتري الدولي بإشراف السفارة، مع دعم ترجمة فورية وتحليل قانوني للعقود.",
+          "icon": "desktop-computer",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.3,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Non-oil Export Targets in MENA vs Effectiveness of Traditional Commercial Attaché Services"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد التاريخي على الطرق البيروقراطية والورقية في المراسلات الدبلوماسية.",
+        "نقص الثقافة الرقمية التجارية لدى بعض الكوادر الدبلوماسية.",
+        "صعوبة التنسيق بين وزارات الخارجية ووزارات التجارة والمصانع المحلية.",
+        "المخاوف الأمنية المتعلقة بتداول بيانات الصفقات التجارية الحساسة."
+      ],
+      "recommended_tech_stack": [
+        "End-to-End Encrypted Communication",
+        "CRM for Diplomatic Trade Leads",
+        "Video Conferencing with Real-time Translation AI",
+        "Document Management Systems (DMS)",
+        "Automated Lead Scoring Engine"
+      ],
+      "main_risk_index": "التنسيق البيني؛ نجاح المشروع يتطلب توافقاً كاملاً بين وزارتي الخارجية والتجارة داخل كل دولة، وهو تحدٍ إداري يتطلب رعاية وزارية."
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-BRD05",
+      "status_label": "تحليل فجوة بناء الهوية التجارية التراثية",
+      "category_tag": "Branding / AI / Design",
+      "business_model": "Design-as-a-Service (Subscription) + Custom Branding Packages + Asset Licensing",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Branding",
+      "Artificial Intelligence",
+      "Culture"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Global Arab Startups",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Luxury Brands in GCC",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "SMEs in Post-Conflict Recovery (Syria/Iraq)",
+          "flag": "🇮🇶"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "جذور البراند: محرك بناء الهوية التراثية بالـ AI",
+      "problem_statement": "تعاني العلامات التجارية العربية الجديدة من 'فقدان الهوية'، حيث تتبنى تصاميم غربية بحتة أو تصاميم تراثية تقليدية (كليشيه). الفجوة هي محرك AI يفهم الزخارف، الخطوط، والألوان، وفلسفة الجمال العربية، ليساعد الشركات على توليد هويات بصرية وسردية (Storytelling) عصرية تنبض بالجذور العربية الأصيلة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Asala-Studio-AI",
+        "industry_tag": "تكنولوجيا التصميم والهوية البصرية العربية المتقدمة",
+        "revenue_model": "One-time Branding Package + Monthly Subscription for Content Assets + AI Model Licensing for Agencies",
+        "action_text": "استعراض المحرك الذي يصمم مستقبل العلامات التجارية العربية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق البراند الأصيل (0-36 شهر)",
+      "subtitle": "إعادة ابتكار الجمال العربي في العصر الرقمي",
+      "phases": [
+        {
+          "title": "بناء 'جينوم الجمال العربي' (Visual-Genome)",
+          "description": "تدريب نماذج (Generative AI) على آلاف الأنماط الفنية من العمارة الإسلامية، الخط العربي، والمنسوجات التراثية.",
+          "icon": "cube",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منصة 'المصمم المساعد' (Co-Designer)",
+          "description": "توفير أداة تتيح للشركات إدخال قيمها والحصول على شعارات، خطوط، وتغليف (Packaging) يحمل بصمة عربية فريدة وعصرية.",
+          "icon": "sparkles",
+          "color_theme": "rose"
+        },
+        {
+          "title": "محرك السرد الثقافي (Story-AI)",
+          "description": "توليد نصوص وقصص للعلامة التجارية (Brand Voice) تعكس القيم العربية مثل الكرم، العراقة، والابتكار بأسلوب أدبي رفيع.",
+          "icon": "pencil",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.7,
+      "data_points_analyzed": "Growth of Local Arab Brands vs Consumer Preference for Authentic Cultural Identities"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية جداً للوكالات الإبداعية التي تفهم العمق الثقافي العربي.",
+        "نقص المصممين الذين يجمعون بين التقنية الحديثة وفهم التراث.",
+        "سيطرة 'القوالب الجاهزة' الغربية على منصات التصميم السريع.",
+        "صعوبة رقمنة الخط العربي وتطبيقاته الفنية بشكل مرن."
+      ],
+      "recommended_tech_stack": [
+        "Diffusion Models for Visual Generation",
+        "Custom Arabic Typography Engines",
+        "NLP for Cultural Storytelling (Arabic context)",
+        "3D Rendering for Packaging Preview",
+        "Vector-based Export for Professional Printing"
+      ],
+      "main_risk_index": "التكرار؛ خطر إنتاج هويات بصرية تتشابه مع بعضها، مما يتطلب خوارزميات تضمن 'التفرد' (Uniqueness) لكل علامة تجارية."
+    }
+  }
+}

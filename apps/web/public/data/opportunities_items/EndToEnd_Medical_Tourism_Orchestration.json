@@ -1,0 +1,92 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-MED15",
+      "status_label": "تحليل فجوة تكامل سلاسل القيمة العلاجية",
+      "category_tag": "HealthTech / TravelTech / Medical-Tourism",
+      "business_model": "Commission per Procedure + Post-op Care SaaS + Insurance Integration Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Healthcare",
+      "Tourism",
+      "Information Technology"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Jordan (Regional Med-Hub)",
+          "flag": "🇯🇴"
+        },
+        {
+          "name": "UAE (High-end Medical Tourism)",
+          "flag": "🇦🇪"
+        },
+        {
+          "name": "Egypt & Tunisia (Affordable Care)",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "رحلة الشفاء: المنصة المتكاملة للسياحة العلاجية",
+      "problem_statement": "يسافر ملايين العرب والأجانب للعلاج في المنطقة، لكنهم يواجهون تشتتاً بين حجز المستشفى، الفيزا، الإقامة، ومتابعة ما بعد الجراحة، مع غياب للشفافية في الأسعار. الفجوة هي منصة 'أوركسترا' تدير الرحلة بالكامل، تضمن جودة المستشفيات، توفر تأميناً طبياً سياحياً، وتؤمن متابعة المريض رقمياً بعد عودته لبلده."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Shifa-Route",
+        "industry_tag": "تكنولوجيا الصحة والضيافة العلاجية",
+        "revenue_model": "Service Fee per Package + Commission from Hospitals/Hotels + Tele-health Follow-up Subscription",
+        "action_text": "استعراض منصة قيادة سوق السياحة العلاجية في المنطقة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الرعاية العابرة للحدود (0-36 شهر)",
+      "subtitle": "ثقة كاملة، من أول فحص حتى الشفاء التام",
+      "phases": [
+        {
+          "title": "بوابة المستشفيات المعتمدة (Certified-Connect)",
+          "description": "ربط المستشفيات التي تمتلك شهادات جودة دولية بنظام حجز لحظي يعرض الأسعار والنتائج السابقة للمرضى بشفافية.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام 'مساعد الرحلة' (Patient-Concierge AI)",
+          "description": "توفير مساعد ذكي ينسق مواعيد الطيران، السكن المجهز طبياً، والمرافقين، مع ترجمة التقارير الطبية فورياً.",
+          "icon": "user-group",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة التعافي عن بُعد (Tele-Recovery)",
+          "description": "تمكين الأطباء من مراقبة حالة المريض بعد سفره عبر أجهزة قابلة للارتداء واستشارات فيديو لضمان نجاح العملية.",
+          "icon": "rss",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Medical Tourism Revenue (Billions) vs Fragmented Patient Journey Costs"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "صعوبة التنسيق بين قطاعات متباعدة (صحة، طيران، فنادق).",
+        "التحديات القانونية المتعلقة بالمسؤولية الطبية في حال حدوث مضاعفات.",
+        "غياب ملف طبي رقمي موحد (EHR) يسهل انتقال البيانات بين الدول.",
+        "تغير لوائح التأشيرات الطبية وصعوبة الحصول عليها لبعض الجنسيات."
+      ],
+      "recommended_tech_stack": [
+        "Interoperable Electronic Health Records (FHIR Standards)",
+        "AI for Medical Data Summarization",
+        "Blockchain for Transparent Billing & Insurance Claims",
+        "Tele-medicine Video Infrastructure",
+        "Remote Patient Monitoring (RPM) Integration"
+      ],
+      "main_risk_index": "السمعة الطبية؛ أي خطأ طبي في مستشفى شريك يؤثر على المنصة بالكامل، مما يتطلب نظام 'تدقيق جودة' (Quality Audit) صارم جداً."
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ENV07",
+      "status_label": "تحليل فجوة استدامة المواد في المشاريع العملاقة",
+      "category_tag": "بيئة وإنشاءات (Green-Con / Sustainability)",
+      "business_model": "Waste Collection Fees + Recycled Material Sales + Carbon Credit Generation",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Environment",
+      "Construction",
+      "Recycling"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "مصانع تدوير ركام البناء والهدم الذكية",
+      "problem_statement": "تنتج مشاريع 'نيوم' و'العاصمة الإدارية' ملايين الأطنان من نفايات البناء. تكلفة التخلص منها عالية، بينما تستورد هذه المشاريع مواد أولية (حصى، طوب) بتكلفة بيئية ومالية ضخمة. الفجوة هي تحويل الركام لمواد معتمدة إنشائياً في موقع العمل."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Tadweer-Con",
+        "industry_tag": "البناء الدائري المستدام",
+        "revenue_model": "Disposal Fee for Contractors + Sale of Recycled Aggregate + ESG Reporting Services",
+        "action_text": "تحويل ركام الهدم إلى طوب بناء أخضر معتمد"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة البناء الأخضر (0-24 شهر)",
+      "subtitle": "لا نفايات في مدن المستقبل",
+      "phases": [
+        {
+          "title": "نشر المحطات المتنقلة",
+          "description": "توزيع وحدات كسح وفرز ذكية داخل مواقع المشاريع الكبرى لتقليل تكلفة النقل.",
+          "icon": "truck",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "معالجة وتحسين جودة الركام",
+          "description": "استخدام تقنيات المعالجة الكيميائية لضمان مطابقة المواد المعاد تدويرها لأكواد البناء العالمية.",
+          "icon": "beaker",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إصدار شهادات الكربون",
+          "description": "توثيق التوفير في الانبعاثات الناتجة عن التدوير وبيعها كـ Carbon Credits في الأسواق الدولية.",
+          "icon": "ticket",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "1M+ Tons (Annual Construction Waste Projection)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "غياب المعايير القياسية (Standards) لاستخدام المواد المعاد تدويرها في المشاريع الدائمة.",
+        "تفضيل المقاولين للمواد الخام لرخص ثمنها التقليدي (قبل ضرائب الكربون).",
+        "التحديات اللوجستية في فصل النفايات المختلطة بالموقع."
+      ],
+      "recommended_tech_stack": [
+        "AI Visual Sorting for Waste",
+        "Advanced Chemical Additives",
+        "Blockchain for Carbon Tracking",
+        "Mobile Industrial Crushers"
+      ],
+      "main_risk_index": "قبول السوق؛ إقناع المكاتب الاستشارية باعتماد الركام المعاد تدويره في الهياكل الخرسانية يتطلب فحوصات مخبرية مطولة."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-AGRI1",
+      "status_label": "تحليل أزمة ندرة المياه وكفاءة الري",
+      "category_tag": "AgriTech (Smart Irrigation / Water Management)",
+      "business_model": "Hardware (IoT Sensors) + SaaS Analytics + Government Contracts",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Agriculture",
+      "Water Management",
+      "Precision Irrigation"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Jordan", "flag": "🇯🇴" },
+        { "name": "UAE", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "أنظمة ري ذكية لتقليل استهلاك المياه وزيادة الإنتاج",
+      "problem_statement": "تعاني دول الشرق الأوسط من واحدة من أعلى معدلات الإجهاد المائي في العالم، حيث يتم استهلاك أكثر من 70% من الموارد المائية في الزراعة، ومع ذلك يتم هدر نسبة كبيرة بسبب أنظمة الري التقليدية (Flood Irrigation). في دول مثل السعودية والأردن، يتم ضخ المياه الجوفية بوتيرة أسرع بكثير من معدل تجددها، مما يهدد الأمن الغذائي على المدى الطويل. المشكلة ليست فقط في ندرة المياه، بل في غياب أنظمة ذكية لإدارتها بناءً على بيانات التربة والطقس."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "AquaMind",
+        "industry_tag": "أنظمة الري الذكي وإدارة المياه",
+        "revenue_model": "Device Sales + SaaS Subscription + Data Insights for Governments",
+        "action_text": "استعراض تقليل استهلاك المياه بنسبة تصل إلى 40%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة إدارة المياه (0-18 شهر)",
+      "subtitle": "كل قطرة محسوبة",
+      "phases": [
+        {
+          "title": "نشر أجهزة استشعار التربة والمياه",
+          "description": "تركيب IoT Sensors لقياس رطوبة التربة واحتياجات النبات بشكل لحظي.",
+          "icon": "droplet",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء محرك توصيات ذكي",
+          "description": "تحليل بيانات الطقس والتربة لتحديد متى وكم يجب الري.",
+          "icon": "cpu",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكامل مع المزارع والحكومات",
+          "description": "تقديم النظام كخدمة للمزارع الكبرى والجهات الحكومية.",
+          "icon": "network",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "3000+ (Water Usage & Irrigation Efficiency Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "اعتماد المزارعين على طرق تقليدية عمرها مئات السنين.",
+        "ارتفاع تكلفة التكنولوجيا الزراعية الحديثة.",
+        "ضعف الوعي بكفاءة استهلاك المياه.",
+        "غياب البيانات الدقيقة لاتخاذ القرار."
+      ],
+      "recommended_tech_stack": [
+        "IoT Soil Sensors",
+        "Satellite Data Integration",
+        "AI Irrigation Models",
+        "Mobile Apps for Farmers",
+        "Cloud Analytics Platforms"
+      ],
+      "main_risk_index": "تبني المزارعين؛ يتطلب المشروع إثبات ROI واضح وسريع لإقناع المزارعين بالتغيير."
+    }
+  }
+}

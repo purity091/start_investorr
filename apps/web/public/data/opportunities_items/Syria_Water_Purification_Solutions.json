@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-WATER",
+      "status_label": "تحليل استخباري للأمن المائي الصحي",
+      "category_tag": "المياه (WaterTech / Social Impact)",
+      "business_model": "B2C + B2B (Decentralized Systems)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "WaterTech",
+      "Filtration Systems",
+      "Off-grid Solutions"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Rural Damascus", "flag": "🇸🇾" },
+        { "name": "Eastern Regions", "flag": "🇸🇾" },
+        { "name": "Coastline Communities", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 8
+    },
+    "core_content": {
+      "title": "حلول تنقية وتحلية المياه منخفضة التكلفة",
+      "problem_statement": "تعرضت شبكات المياه الرئيسية لأضرار بالغة، مما أدى لانتشار الآبار غير المراقبة وتلوث المياه الجوفية. تفتقر الكثير من القرى والمدن لمياه شرب آمنة، بينما تكلفة المياه المعبأة تتجاوز قدرة المواطن الشرائية. هناك حاجة ملحة لأنظمة تنقية منزلية ومحطات تحلية محلية صغيرة تعمل بالطاقة الشمسية وتعتمد على مواد ترشيح محلية (مثل الفحم المنشط والسيراميك) لتوفير مياه نقية بتكلفة زهيدة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Safi-Water",
+        "industry_tag": "تقنيات الفلترة والتحلية اللامركزية",
+        "revenue_model": "System Sales + Replacement Filter Subscriptions + Community Water Kiosks",
+        "action_text": "عرض تقنيات الفلترة منخفضة التكلفة وعالية الكفاءة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المياه الآمنة (0-15 شهر)",
+      "subtitle": "تأمين شريان الحياة لكل منزل سوري",
+      "phases": [
+        {
+          "title": "تطوير فلاتر السيراميك والكربون المحلي",
+          "description": "تصنيع شمعات فلترة تعتمد على مواد أولية محلية لتقليل الاعتماد على القطع المستوردة وضمان استدامة الصيانة.",
+          "icon": "filter",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "إطلاق محطات التحلية الصغرى (Micro-Desalination)",
+          "description": "نشر محطات صغيرة في الأحياء والقرى تعمل بالطاقة الشمسية وتحلي المياه المالحة أو الملوثة وتبيعها بأسعار رمزية للمجتمع.",
+          "icon": "office-building",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نظام الرصد والتحليل البكتيري",
+          "description": "تزويد المحطات بحساسات ذكية لمراقبة جودة المياه لحظياً وضمان خلوها من الملوثات، مع ربط البيانات بتطبيق جوال للمستخدمين.",
+          "icon": "beaker",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 8.8,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "900+ (Waterborne Disease Reports & Groundwater Salinity)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تهالك البنية التحتية المركزية للمياه وصعوبة ترميمها سريعاً.",
+        "التكلفة العالية للطاقة والمواد الكيميائية في محطات التحلية التقليدية.",
+        "ضعف الرقابة الصحية على صهاريج المياه الجوالة.",
+        "صعوبة نقل المياه لمسافات طويلة نتيجة تدمير الطرق وتكاليف الوقود."
+      ],
+      "recommended_tech_stack": [
+        "Solar-Powered Reverse Osmosis (RO)",
+        "Nano-Ceramic Filtration",
+        "UV-C Disinfection Modules",
+        "Activated Carbon from Local Waste",
+        "IoT Water Quality Sensors"
+      ],
+      "main_risk_index": "مخاطر الصيانة الدورية؛ يتطلب المشروع شبكة فنيين محليين مدربين لضمان تغيير الفلاتر في مواعيدها والحفاظ على جودة المياه."
+    }
+  }
+}

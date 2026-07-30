@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-HOS03",
+      "status_label": "تحليل فجوة السياحة البيئية الصحراوية الفاخرة",
+      "category_tag": "Hospitality / Eco-Tech / Glamping",
+      "business_model": "Sale of Modular Units + Franchise Management + Off-grid Tech Licensing",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Hospitality",
+      "Sustainability",
+      "Construction"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Wadi Rum", "flag": "🇯🇴" },
+        { "name": "AlUla & NEOM Regions", "flag": "🇸🇦" },
+        { "name": "Liwa Desert", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "رمال مستدامة: وحدات الـ Glamping الفاخرة مسبقة الصنع",
+      "problem_statement": "يزداد الطلب على السياحة الصحراوية، لكن بناء فنادق ثابتة يدمر البيئة الهشة ويستغرق سنوات. الفجوة هي 'كبسولات فندقية فاخرة' (Glamping Pods) مسبقة الصنع، تعمل كلياً بالطاقة الشمسية، مع نظام معالجة مياه مغلق، يمكن تركيبها في أيام وتوفر تجربة رفاهية 5 نجوم في قلب الصحراء دون ترك أثر بيئي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Saha-Pod",
+        "industry_tag": "صناعة الضيافة المستدامة والكبسولات الفندقية الذكية",
+        "revenue_model": "Sales of Pod Units to Landowners + Franchise Management Fee (10%) + IoT Energy SaaS Subscription",
+        "action_text": "استعراض كبسولة الفندق الصحراوي التي تعمل بالكامل بالشمس"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الفنادق المرنة (0-36 شهر)",
+      "subtitle": "رفاهية الـ 5 نجوم، بصمة كربونية صفرية",
+      "phases": [
+        {
+          "title": "تصميم الهيكل 'المقاوم للحرارة' (Thermal-Shell)",
+          "description": "تطوير وحدات باستخدام مواد عازلة فائقة التطور ونظام تبريد سلبي لتقليل استهلاك الطاقة في الصيف العربي القاسي.",
+          "icon": "chip",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تكامل الطاقة والمياه (Off-grid Logic)",
+          "description": "تجهيز الوحدات بألواح شمسية شفافة، ونظام تكثيف الرطوبة لإنتاج مياه الشرب، ومعالجة المياه الرمادية للري.",
+          "icon": "lightning-bolt",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق منصة 'الانتشار السريع' (Rapid-Launch)",
+          "description": "توفير نظام إدارة يتيح للمستثمرين شراء الوحدات وإطلاق 'منتجع صحراوي' متكامل خلال 3 أشهر فقط مع ربطه بنظام حجز عالمي.",
+          "icon": "rocket",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "Demand for Adventure/Eco-Tourism in GCC vs Environmental Impact Constraints"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لتكنولوجيا العزل والتبريد في المساحات الصغيرة.",
+        "صعوبة لوجستيات نقل الوحدات مسبقة الصنع إلى أعماق الصحاري.",
+        "نقص التشريعات التي تنظم الفنادق 'المتنقلة' أو غير الثابتة.",
+        "الحاجة لصيانة دورية معقدة لأنظمة الطاقة والمياه المستقلة."
+      ],
+      "recommended_tech_stack": [
+        "Modular Prefabricated Construction",
+        "Aerogel for Ultra-thin Thermal Insulation",
+        "Atmospheric Water Generators (AWG) Integration",
+        "IoT Smart Energy Management",
+        "Bifacial Solar Panels"
+      ],
+      "main_risk_index": "المناخ المتطرف؛ العواصف الرملية والحرارة التي تتجاوز 50 درجة قد ترهق الأنظمة التقنية، مما يتطلب تصميماً 'مدرعاً' (Ruggedized Design)."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-TECH-2026-EDTECH-AR",
+      "status_label": "تحليل استخباري لسد فجوة المهارات المستقبلية",
+      "category_tag": "التعليم الرقمي (EdTech / Skill-based)",
+      "business_model": "B2C Subscription + B2B Corporate Training",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "EdTech",
+      "Vocational Training",
+      "Lifelong Learning"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Morocco", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "منصة التعليم الإلكتروني والمهني المتخصصة باللغة العربية",
+      "problem_statement": "تعاني المنطقة العربية من فجوة هائلة بين مخرجات الجامعات ومتطلبات سوق العمل التقني الحديث. المحتوى العربي المتاح عالي الجودة في مجالات (البرمجة، الذكاء الاصطناعي، الطاقة المتجددة، الإدارة الحديثة) نادر جداً ومشتت، بينما تظل اللغة الإنجليزية عائقاً أمام ملايين الشباب الطموحين للوصول للمصادر العالمية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Mahara-Digital",
+        "industry_tag": "أكاديمية مهارات المستقبل العربية",
+        "revenue_model": "Monthly Subscription + Industry-recognized Certifications + Recruitment Placement Fees",
+        "action_text": "استعراض كيف نؤهل الشباب لوظائف الغد في 6 أشهر"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التمكين المعرفي (0-15 شهر)",
+      "subtitle": "بناء الجيل الرقمي العربي القادم",
+      "phases": [
+        {
+          "title": "إنتاج محتوى تخصصي فائق الجودة",
+          "description": "التعاون مع خبراء الصناعة السوريين والعرب المغتربين لإنتاج دورات عملية تطبيقية باللغة العربية تنافس في جودتها محتوى 'كورسيرا' و'يوداستي'.",
+          "icon": "video-camera",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التعلم المخصص (AI Learning Path)",
+          "description": "استخدام الذكاء الاصطناعي لتحليل مهارات المتدرب الحالية واقتراح مسار تعليمي مخصص يضمن وصوله لمستوى التوظيف في أقصر وقت ممكن.",
+          "icon": "sparkles",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نظام الاعتماد والربط الوظيفي",
+          "description": "بناء شراكات مع كبرى الشركات العربية لتقديم شهادات معتمدة وتوفير مسار مباشر للمتميزين لشغل الوظائف الشاغرة لدى هؤلاء الشركاء.",
+          "icon": "badge-check",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 8.7,
+      "data_points_analyzed": "2.5M+ Job Postings vs Candidate Skills"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "اعتماد المنصات الحالية على الترجمة الآلية الرديئة للمحتوى الأجنبي.",
+        "غياب التطبيق العملي والمشاريع الحقيقية في الدورات النظرية المتاحة.",
+        "ضعف ثقة الشركات في الشهادات الصادرة عن منصات التعليم الإلكتروني التقليدية.",
+        "نقص المناهج التي تغطي المهارات 'الناعمة' والتقنية معاً في سياق العمل العربي."
+      ],
+      "recommended_tech_stack": [
+        "LMS (Learning Management System) Cloud Architecture",
+        "AI for Student Progress Tracking",
+        "Blockchain for Digital Certificates",
+        "Interactive Coding Sandboxes",
+        "Live Mentorship Video Streaming"
+      ],
+      "main_risk_index": "الاستمرارية؛ الحفاظ على حماس الطلاب لإكمال المسارات التعليمية الطويلة يتطلب آليات 'Gamification' قوية ودعماً مستمراً."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-AFR-2026-FIN04",
+      "status_label": "تحليل فجوة الجدارة الائتمانية والشمول المالي",
+      "category_tag": "التقنية المالية (FinTech / AI Scoring)",
+      "business_model": "SaaS (API for Banks/MFI) + Data Monetization",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Finance",
+      "Artificial Intelligence",
+      "Financial Inclusion"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Sudan", "flag": "🇸🇩" },
+        { "name": "Mauritania", "flag": "🇲🇷" },
+        { "name": "Yemen", "flag": "🇾🇪" }
+      ],
+      "additional_regions_count": 6
+    },
+    "core_content": {
+      "title": "منصة التقييم الائتماني البديل لصغار المنتجين",
+      "problem_statement": "يُحرم أكثر من 80% من السكان في هذه الدول من القروض الرسمية لغياب التاريخ البنكي (Credit History). البنوك ترفض تمويلهم لعدم قدرتها على قياس المخاطر. هناك فجوة هائلة لمحرك ذكاء اصطناعي يقوم ببناء 'هوية ائتمانية رقمية' بناءً على بيانات غير تقليدية، مما يفتح سوق تمويل بمليارات الدولارات."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Yakeen-Score",
+        "industry_tag": "الشمول المالي الذكي",
+        "revenue_model": "Fee per Credit Query + Commission on Successful Loans + Risk Analytics SaaS",
+        "action_text": "استعراض محرك قياس الجدارة الائتمانية للمجتمعات الريفية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق السيولة الشاملة (0-18 شهر)",
+      "subtitle": "تحويل السلوك الرقمي إلى ضمان مالي",
+      "phases": [
+        {
+          "title": "تجميع البيانات غير التقليدية (Alt-Data)",
+          "description": "بناء شراكات مع شركات الاتصالات وموزعي البذور لتحليل أنماط شحن الرصيد، سداد الفواتير، ومشتريات المدخلات الزراعية.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تطوير نموذج التقييم السلوكي (ML Scoring)",
+          "description": "استخدام التعلم الآلي لربط أنماط استخدام الهاتف المحمول والموقع الجغرافي بمدى الالتزام المالي المتوقع للمقترض.",
+          "icon": "chart-bar",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق بوابة الربط مع الممولين",
+          "description": "توفير واجهة برمجة تطبيقات (API) للبنوك ومؤسسات التمويل الأصغر تتيح لهم اتخاذ قرار الإقراض في ثوانٍ.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "Mobile Top-up History & Agri-input Purchase Patterns"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد التاريخي للبنوك على الضمانات العينية (أراضي/عقارات).",
+        "تشتت البيانات بين شركات الاتصالات وجهات البيع بالتجزئة.",
+        "غياب السجلات المدنية الرقمية المحدثة في المناطق النائية.",
+        "النظرة التقليدية للمجتمعات الريفية كمنطقة 'عالية المخاطر'."
+      ],
+      "recommended_tech_stack": [
+        "Random Forest / XGBoost Models",
+        "Mobile Money APIs Integration",
+        "Data Encryption Standards (AES-256)",
+        "Edge Analytics for Low-connectivity Sync",
+        "Automated KYC via Computer Vision"
+      ],
+      "main_risk_index": "خصوصية البيانات؛ يتطلب المشروع الالتزام الصارم بقوانين حماية البيانات المحلية والدولية لضمان ثقة المستخدمين."
+    }
+  }
+}

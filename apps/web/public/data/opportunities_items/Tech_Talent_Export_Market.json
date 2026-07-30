@@ -1,0 +1,81 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-TAL05",
+      "status_label": "تحليل فجوة استغلال الكفاءات التقنية وتصدير الخدمات",
+      "category_tag": "الموارد البشرية والتقنية (HR-Tech / Remote Work)",
+      "business_model": "Commission on Contracts + Talent Managed Services + Training-to-Hire",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Gig Economy",
+      "Digital Services",
+      "Talent Export"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Tunisia", "flag": "🇹🇳" },
+        { "name": "Morocco", "flag": "🇲🇦" },
+        { "name": "Jordan", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "منصة تصدير المهارات التقنية العربية للأسواق العالمية",
+      "problem_statement": "تعاني دول مثل تونس والمغرب والأردن من بطالة عالية بين الخريجين التقنيين المهرة، بينما تشتكي الشركات الأوروبية من نقص حاد في المطورين ورواتب فلكية. الفجوة تكمن في غياب وسيط يضمن الجودة التقنية والامتثال القانوني والمالي العابر للحدود."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Jisr-Talent",
+        "industry_tag": "جسر الكفاءات الرقمية",
+        "revenue_model": "15-20% Service Fee per Contract + Upskilling Subscriptions",
+        "action_text": "استعراض خطة توظيف 10,000 مبرمج عربي في السوق الأوروبي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق تدفق العقول (0-15 شهر)",
+      "subtitle": "تصدير العقول لا الهجرة",
+      "phases": [
+        {
+          "title": "بناء مجمع الكفاءات المعتمد",
+          "description": "تطوير نظام تقييم تقني ولغوي (Vetting) لضمان جودة المبرمجين قبل إدراجهم.",
+          "icon": "user-group",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بوابة الامتثال المالي والقانوني",
+          "description": "توفير حلول لتحويل العملات الصعبة للمبرمجين محلياً مع إدارة العقود الضريبية الدولية.",
+          "icon": "shield-check",
+          "color_theme": "rose"
+        },
+        {
+          "title": "أكاديمية الجسر التقني",
+          "description": "تدريب المهارات الناعمة (Soft Skills) وثقافة العمل عن بعد لتناسب المعايير الغربية.",
+          "icon": "academic-cap",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "2,000+ (Tech Salary Arbitrage Reports)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف ثقة الشركات العالمية في التوظيف المباشر من المنطقة.",
+        "تعقيدات التحويلات المالية في بعض الدول العربية.",
+        "فجوة المهارات اللغوية والثقافية في بيئة العمل الدولية."
+      ],
+      "recommended_tech_stack": [
+        "AI-powered Matching Algorithms",
+        "Blockchain for Work Credentials",
+        "Secure Global Payment Rails",
+        "Remote Management Tools Integration"
+      ],
+      "main_risk_index": "تغيير قوانين العمل عن بعد في الاتحاد الأوروبي؛ يتطلب المشروع فريقاً قانونياً متخصصاً في لوائح الـ GDPR والعمل المستقل."
+    }
+  }
+}

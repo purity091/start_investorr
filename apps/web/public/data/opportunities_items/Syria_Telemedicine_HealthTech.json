@@ -1,0 +1,82 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-HEALTH",
+      "status_label": "تحليل استخباري للرعاية الصحية الهجينة",
+      "category_tag": "الصحة (HealthTech / Telemedicine)",
+      "business_model": "B2C + Subscription + E-Pharmacy Integration",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "HealthTech",
+      "Telehealth",
+      "Digital Health Records"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "All Syrian Governorates", "flag": "🇸🇾" },
+        { "name": "Diaspora Doctor Network", "flag": "🌍" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "خدمات الرعاية الطبية عن بعد والاستشارة الرقمية",
+      "problem_statement": "تعاني المنظومة الصحية في سوريا من نقص حاد في الأطباء الأخصائيين (نتيجة الهجرة)، وصعوبة وصول المرضى في المناطق الريفية للعيادات المركزية، بالإضافة إلى الارتفاع الهائل في تكاليف النقل. يفتقر المرضى لسجلات طبية موحدة، مما يؤدي لتكرار الفحوصات وإهدار الموارد. هناك فرصة لسد هذه الفجوة عبر منصة تربط المرضى بأفضل الأطباء السوريين (داخل وخارج البلاد) وتقدم استشارات موثوقة وتدير الوصفات الطبية رقمياً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Tabibi-Online",
+        "industry_tag": "الاستشارات الطبية والتشخيص الرقمي",
+        "revenue_model": "Consultation Fee Commission + Premium Health Subscriptions + Lab/Pharmacy Referrals",
+        "action_text": "عرض حلول الرعاية الصحية الشاملة عن بعد"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الصحة الرقمية (0-12 شهر)",
+      "subtitle": "إيصال الرعاية الطبية لكل منزل سوري",
+      "phases": [
+        {
+          "title": "بناء شبكة الأطباء (داخلية وخارجية)",
+          "description": "استقطاب الأطباء الأخصائيين السوريين في المغترب لتقديم استشارات تطوعية أو مأجورة، ودمج الأطباء المحليين في منصة موحدة.",
+          "icon": "user-group",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام السجل الطبي الرقمي الموحد",
+          "description": "تطوير منصة سحابية آمنة تتيح للمريض الاحتفاظ بكامل تاريخه الطبي (صور أشعة، تحاليل، وصفات) ومشاركتها مع الطبيب بضغطة زر.",
+          "icon": "clipboard-list",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكامل الصيدليات والمختبرات",
+          "description": "ربط المنصة مع كبرى الصيدليات لإرسال الوصفات الإلكترونية ومع المختبرات لإرسال نتائج التحاليل مباشرة لملف المريض.",
+          "icon": "plus-circle",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.2,
+      "competitive_moat": 8.7,
+      "data_points_analyzed": "1400+ (Doctor-to-Patient Ratios & Healthcare Cost Indices)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "هجرة نسبة كبيرة من الكادر الطبي التخصصي خارج البلاد.",
+        "ضعف الوعي العام بإمكانية التشخيص والمتابعة عن بعد للأمراض غير الحرجة.",
+        "تحديات الاتصال المستقر (فيديو) في بعض المناطق الريفية.",
+        "غياب الأطر التنظيمية التي تعترف بالوصفة الطبية الرقمية."
+      ],
+      "recommended_tech_stack": [
+        "WebRTC for Video Consultations",
+        "Secure Electronic Health Records (EHR)",
+        "AI Chatbots for Initial Triage",
+        "Mobile Health (mHealth) Application",
+        "Cloud Data Encryption"
+      ],
+      "main_risk_index": "الموثوقية الطبية والإنترنت؛ نجاح المنصة يعتمد على ضمان جودة الطبيب وتوفير حلول تقنية تعمل بكفاءة حتى في سرعات الإنترنت المنخفضة."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-AGRI5",
+      "status_label": "تحليل تأثير التغير المناخي على الإنتاج الزراعي",
+      "category_tag": "AgriTech (Climate Intelligence / Crop Modeling)",
+      "business_model": "SaaS (Climate Analytics) + Insurance Integration + Enterprise Contracts",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Agriculture",
+      "Climate Tech",
+      "Crop Forecasting"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Morocco", "flag": "🇲🇦" },
+        { "name": "Tunisia", "flag": "🇹🇳" }
+      ],
+      "additional_regions_count": 9
+    },
+    "core_content": {
+      "title": "منصات توقع الإنتاج الزراعي بناءً على المناخ",
+      "problem_statement": "أدى التغير المناخي إلى تقلبات حادة في درجات الحرارة والأمطار، مما يجعل الإنتاج الزراعي غير مستقر. المزارعون يزرعون بدون رؤية واضحة للمخاطر المناخية، مما يؤدي إلى خسائر كبيرة. لا توجد أدوات دقيقة تساعدهم على اتخاذ قرارات مبنية على بيانات مناخية مستقبلية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "AgriClimateX",
+        "industry_tag": "تحليل المناخ الزراعي",
+        "revenue_model": "Subscription + Insurance Partnerships + Data Licensing",
+        "action_text": "استعراض توقعات إنتاجية دقيقة قبل الزراعة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التنبؤ الزراعي (0-12 شهر)",
+      "subtitle": "الزراعة بذكاء مناخي",
+      "phases": [
+        {
+          "title": "دمج بيانات الطقس والأقمار الصناعية",
+          "description": "جمع بيانات مناخية تاريخية وحالية لبناء نماذج تنبؤ.",
+          "icon": "cloud",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء نماذج تنبؤ بالإنتاج",
+          "description": "تطوير AI Models لتوقع الإنتاج بناءً على الظروف المناخية.",
+          "icon": "cpu",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكامل مع المزارعين وشركات التأمين",
+          "description": "تمكين اتخاذ قرارات زراعية وتأمينية ذكية.",
+          "icon": "shield",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "2800+ (Climate & Crop Yield Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تعقيد النماذج المناخية.",
+        "نقص البيانات المحلية الدقيقة.",
+        "ضعف استخدام التكنولوجيا في الزراعة.",
+        "ارتفاع تكلفة بناء نماذج تنبؤ دقيقة."
+      ],
+      "recommended_tech_stack": [
+        "Climate Data APIs",
+        "Satellite Imagery",
+        "Machine Learning Models",
+        "Geospatial Analytics",
+        "Data Visualization Platforms"
+      ],
+      "main_risk_index": "دقة التنبؤ؛ يعتمد نجاح المشروع على جودة البيانات والنماذج."
+    }
+  }
+}

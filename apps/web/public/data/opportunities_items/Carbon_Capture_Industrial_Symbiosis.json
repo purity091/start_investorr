@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-DEEP-2026-ENV05",
+      "status_label": "تحليل فجوة إزالة الكربون الصناعي",
+      "category_tag": "CleanTech / Carbon Capture",
+      "business_model": "Carbon Credit Sales + Industrial Gas Sales + Government Subsidies",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Environment",
+      "Industrial Efficiency",
+      "Climate Tech"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Industrial Clusters)", "flag": "🇸🇦" },
+        { "name": "Egypt (Cement & Steel Plants)", "flag": "🇪🇬" },
+        { "name": "Qatar (Gas Processing)", "flag": "🇶🇦" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "اقتناص الكربون الصناعي: تحويل الانبعاثات إلى مواد خام",
+      "problem_statement": "تواجه مصانع الأسمنت والحديد في المنطقة ضغوطاً هائلة (وضرائب كربون قادمة) لتقليل انبعاثاتها. في الوقت نفسه، تحتاج صناعات الأسمدة والبلاستيك لثاني أكسيد الكربون كمادة خام. الفجوة هي نظام 'التكافل الصناعي' الذي يقتنص الكربون من فوهات المداخن ويحوله لمواد صلبة أو غازية قابلة للبيع."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Karb-Logic",
+        "industry_tag": "اقتصاد الكربون الدائري",
+        "revenue_model": "Fee-per-ton Captured + Sale of Purified CO2 + Carbon Credit Brokerage",
+        "action_text": "استعراض تقنية تحويل دخان المصانع إلى طوب بناء وأسمدة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التصفير الكربوني (0-48 شهر)",
+      "subtitle": "تطهير الهواء لدعم الصناعة",
+      "phases": [
+        {
+          "title": "نشر وحدات الاقتناص (Post-combustion)",
+          "description": "تركيب وحدات معالجة كيميائية (Amine-based) على مداخن المصانع الكبرى لسحب ثاني أكسيد الكربون قبل وصوله للغلاف الجوي.",
+          "icon": "filter",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "مجمع تحويل الكربون (Utilization)",
+          "description": "تحويل الغاز المقتنص إلى 'كربونات كالسيوم' لصناعة البناء أو استخدامه في البيوت المحمية لزيادة الإنتاج الزراعي.",
+          "icon": "beaker",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة تتبع الانبعاثات (Blockchain Tracking)",
+          "description": "توثيق كل طن تم اقتناصه عبر البلوكشين لإصدار شهادات كربون موثقة وقابلة للتداول في الأسواق العالمية.",
+          "icon": "link",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Industrial CO2 Output vs Global Carbon Tax Projections"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية جداً للطاقة المستهلكة في عمليات اقتناص الكربون.",
+        "نقص البنية التحتية لنقل وتخزين الغاز (Pipelines).",
+        "غياب الأسواق المحلية المنظمة لتداول أرصدة الكربون حتى عام 2025.",
+        "الحاجة لمساحات شاسعة لإقامة منشآت المعالجة قرب المناطق الصناعية."
+      ],
+      "recommended_tech_stack": [
+        "Direct Air Capture (DAC) Hybrid Modules",
+        "Mineral Carbonation Technology",
+        "IOT Sensors for Emission Monitoring",
+        "Digital Twin for Industrial Symbiosis",
+        "Solar-thermal Energy for Capture Units"
+      ],
+      "main_risk_index": "الجدوى الاقتصادية؛ يعتمد المشروع على أسعار شهادات الكربون العالمية؛ أي انخفاض فيها قد يطيل فترة استرداد الاستثمار."
+    }
+  }
+}

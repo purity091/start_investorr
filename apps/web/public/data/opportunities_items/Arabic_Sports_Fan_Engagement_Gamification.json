@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-SPT11",
+      "status_label": "تحليل فجوة الاقتصاد الرياضي الرقمي",
+      "category_tag": "SportsTech / Gamification / Web3",
+      "business_model": "Token Sales (Fan Tokens) + AR Ad Revenue + Digital Collectibles (NFT)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Sports",
+      "Entertainment",
+      "Digital Economy"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Pro League Growth)", "flag": "🇸🇦" },
+        { "name": "Egypt (Mass Fan Base)", "flag": "🇪🇬" },
+        { "name": "Morocco (National Team Momentum)", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "اللاعب رقم 12: منصة التفاعل الجماهيري والولاء الرقمي",
+      "problem_statement": "تمتلك الأندية العربية ملايين المشجعين المخلصين، لكن العلاقة تظل 'أحادية الجانب' (مشاهدة فقط) دون قدرة المشجع على التأثير أو الحصول على قيمة رقمية. الفجوة هي منصة تربط المشجعين بناديهم عبر 'رموز الولاء' (Fan Tokens) التي تتيح لهم التصويت على قرارات بسيطة، والحصول على تجارب AR داخل الملعب، وامتلاك لحظات تاريخية رقمية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Jumhoor-Net",
+        "industry_tag": "تكنولوجيا الرياضة والترفيه الغامر",
+        "revenue_model": "Revenue Share from Fan Token Sales + Digital Merchandise Sales + AR Integrated Ad Space",
+        "action_text": "استعراض منصة تحويل المشجع العربي إلى شريك رقمي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الشغف الرقمي (0-36 شهر)",
+      "subtitle": "تسييل العاطفة الرياضية عبر التكنولوجيا",
+      "phases": [
+        {
+          "title": "إطلاق 'بطاقة المشجع الرقمية' (NFT Pass)",
+          "description": "توفير عضوية رقمية تمنح المشجع وصولاً حصرياً لمحتوى وخصومات وتصويتات داخل النادي بناءً على مستوى تفاعله.",
+          "icon": "badge-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تفعيل تجربة الملعب المعززة (Stadium-AR)",
+          "description": "إتاحة رؤية إحصائيات اللاعبين لحظياً وتفاعلياً فوق أرض الملعب عبر كاميرا الموبايل للمشجعين داخل المدرجات.",
+          "icon": "sparkles",
+          "color_theme": "rose"
+        },
+        {
+          "title": "سوق اللحظات التاريخية (Digital Collectibles)",
+          "description": "تمكين المشجعين من امتلاك وتداول أهداف أو لقطات تاريخية نادرة لناديهم موثقة عبر البلوكشين.",
+          "icon": "switch-horizontal",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.3,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Fan Base Growth vs Digital Monetization Gap in Arab Leagues"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف البنية التحتية الرقمية في بعض الملاعب القديمة.",
+        "النظرة التقليدية لإدارة الأندية التي تركز على 'بيع التذاكر' فقط.",
+        "نقص الوعي بمزايا العملات الرقمية والـ NFTs لدى المشجع العادي.",
+        "تحديات حقوق البث التلفزيوني التي قد تمنع عرض اللقطات رقمياً."
+      ],
+      "recommended_tech_stack": [
+        "Polygon Blockchain for Fan Tokens",
+        "WebAR (No-app AR experience)",
+        "Real-time Sports Data APIs",
+        "Gamification Engines",
+        "Mobile-first Fan Engagement Apps"
+      ],
+      "main_risk_index": "التقلبات الجماهيرية؛ أداء الفريق في الملعب يؤثر مباشرة على قيمة الرموز الرقمية، مما يتطلب آليات 'تحوط عاطفي' في تصميم النظام الاقتصادي للمنصة."
+    }
+  }
+}

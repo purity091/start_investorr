@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-CRAFT",
+      "status_label": "تحليل استخباري لإحياء التراث وتصدير القيمة",
+      "category_tag": "التجارة الإلكترونية (E-commerce / Artisanal)",
+      "business_model": "Marketplace + Logistics Hub",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "E-commerce",
+      "Cultural Heritage",
+      "Export Economy"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Old Damascus", "flag": "🇸🇾" },
+        { "name": "Aleppo Old City", "flag": "🇸🇾" },
+        { "name": "Hama (Traditional Weaving)", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "رقمنة الحرف اليدوية التقليدية والتصدير للأسواق العالمية",
+      "problem_statement": "تمتلك سوريا إرثاً حرفياً عالمياً (بروكار، موزاييك، صابون غار، صناعات خشبية)، لكن هذا القطاع يندثر نتيجة ضعف القوة الشرائية محلياً وصعوبة الوصول للأسواق الخارجية. الحرفيون يفتقرون لمهارات التسويق الرقمي والربط اللوجستي الدولي. هناك فرصة هائلة لبناء منصة 'براند' عالمي يجمع هذه الحرف، يطور تصاميمها لتناسب الذوق العالمي، ويدير عمليات الشحن والدفع الدولي لصالح الحرفيين."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Heritage-SY",
+        "industry_tag": "التسويق الرقمي وتصدير المنتجات التراثية",
+        "revenue_model": "Sales Commission + Branding Services + International Shipping Margin",
+        "action_text": "استعراض خطة الوصول للأسواق الفاخرة العالمية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق النهضة الحرفية (0-12 شهر)",
+      "subtitle": "نقل الإبداع السوري من الورش القديمة إلى العالم",
+      "phases": [
+        {
+          "title": "حصر وتوثيق الورش الحرفية",
+          "description": "بناء قاعدة بيانات للحرفيين المبدعين وتصوير منتجاتهم باحترافية عالية تبرز القيمة الفنية والتاريخية.",
+          "icon": "camera",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "مركز التصميم والابتكار (Design Lab)",
+          "description": "التعاون مع مصممين عالميين لتطوير منتجات تجمع بين الأصالة السورية والوظيفة العصرية (مثل دمج الموزاييك في الأثاث المكتبي الحديث).",
+          "icon": "pencil-alt",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة الشحن والدفع الدولي",
+          "description": "تأسيس مركز تجميع لوجستي في دولة مجاورة (مثل لبنان أو الأردن) لتسهيل عمليات الشحن الدولي واستلام الدفعات الإلكترونية بالعملة الصعبة.",
+          "icon": "globe",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.2,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "700+ (Artisan Workshops & Global Handmade Demand)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "صعوبة الشحن المباشر من داخل سوريا نتيجة العقوبات والقيود اللوجستية.",
+        "عدم قدرة الحرفيين على استلام قيم مبيعاتهم بالعملات الصعبة بسهولة.",
+        "الفجوة بين التصاميم التقليدية القديمة وما يطلبه السوق العالمي المعاصر.",
+        "خوف الحرفيين من اندثار مهنهم لعدم وجود جدوى اقتصادية حالياً."
+      ],
+      "recommended_tech_stack": [
+        "E-commerce Platform (Headless Commerce)",
+        "Digital Storytelling (AR/VR Showrooms)",
+        "Blockchain for Provenance (شهادة أصالة)",
+        "Global Logistics Integrators",
+        "International Payment Intermediaries"
+      ],
+      "main_risk_index": "مخاطر استمرارية الإنتاج؛ هجرة الحرفيين المهرة تمثل التحدي الأكبر، مما يتطلب استراتيجية لدعم الحرفيين الشباب ونقل الخبرات إليهم."
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "order": 22,
+  "slug": "webvan",
+  "name": "Webvan",
+  "domain": "webvan.com",
+  "website": "https://en.wikipedia.org/wiki/Webvan",
+  "category": "E-commerce / توصيل البقالة",
+  "headline": "الفشل الأكبر في توصيل البقالة المبكر",
+  "summary": "شركة ناشئة واعدة في أواخر التسعينات وعدت بتوصيل البقالة للمنازل خلال 30 دقيقة. جمعت الشركة أكثر من 800 مليون دولار وبنت بنية تحتية مبالغ فيها قبل التحقق من الطلب. أعلنت إفلاسها في 2001.",
+  "directory_snapshot": {
+    "monthly_revenue": "مغلق",
+    "monthly_traffic": "0 /mo",
+    "revenue_per_visitor": "$0.00 /visitor",
+    "solopreneur_score": "0.0",
+    "idea_label": "توصيل بقالة"
+  },
+  "company": {
+    "business_model": "توصيل بقالة، أرباح من هوامش المنتجات ورسوم التوصيل",
+    "customer_type": "مستهلكين (B2C)",
+    "founder": "Louis Borders",
+    "founder_role": "مؤسس",
+    "founder_social": "N/A",
+    "founders_count": "1",
+    "employees": "الآلاف (أكثر من 2000 أُقيلوا عند الإغلاق)",
+    "started": "1996",
+    "location": "فوستر سيتي، كاليفورنيا",
+    "funding": "800 مليون دولار",
+    "profitability": "خسائر متتالية",
+    "public_revenue_claim": "مغلق"
+  },
+  "problem_and_product": [
+    "طلب البقالة عبر الإنترنت وتوصيلها بدلاً من الذهاب للسوبر ماركت."
+  ],
+  "origin_story": [
+    "أسسها مؤسس (مكتبات بوردرز) وأقنع المستثمرين ببناء سلسلة مستودعات روبوتية متقدمة في كل أمريكا."
+  ],
+  "build_and_launch": [
+    "أمرت ببناء مستودعات روبوتية تبلغ تكلفتها مليار دولار قبل التحقق من عدد العملاء الحقيقيين (Premature Scaling)."
+  ],
+  "costs_and_operations": [
+    "الاستثمار الرأسمالي (CAPEX) الكارثي في بنية تحتية لم يتم استخدام سوى جزء ضئيل منها.",
+    "هوامش ربح البقالة الضعيفة لم تستطع دعم تكاليف التوصيل والبنية التحتية المتطورة."
+  ],
+  "monetization": [
+    "الإنفاق كان متسارعاً للدرجة التي جعلت أي إيراد يتضاءل أمام الالتزامات المالية."
+  ],
+  "growth": [
+    "توسع إلى العديد من المدن بسرعة هائلة قبل إثبات النموذج الاقتصادي في مدينة واحدة."
+  ],
+  "tools": [
+    "Automated Warehouses"
+  ],
+  "revenue_timeline": [
+    {
+      "date": "1999",
+      "amount": "1.2B$",
+      "type": "اكتتاب (IPO)",
+      "note": "طرحت أسهمها في البورصة ووصل تقييمها لمستويات قياسية."
+    },
+    {
+      "date": "July 2001",
+      "amount": "0",
+      "type": "إفلاس",
+      "note": "توقفت تماماً وأعلنت إفلاسها، وتسريح كل العمال."
+    }
+  ],
+  "lessons": [
+    "التوسع المبكر (Premature Scaling) وبناء بنية تحتية قبل إثبات طلب العملاء (Product-Market Fit) هو انتحار مالي.",
+    "قواعد (Brick-and-mortar) التقليدية لا تزال تنطبق؛ هوامش البقالة ضيقة جداً وتحتاج إلى كفاءة تشغيلية (Operational Excellence) قصوى للنجاح.",
+    "تُعتبر Webvan درساً يُدرس عالمياً بأن توفر التمويل الضخم لا يحل عيوب نموذج العمل الأساسية."
+  ],
+  "sources": [
+    {
+      "label": "Harvard Business Review",
+      "url": "https://hbr.org",
+      "coverage": "دراسات عن فشل التوسع المبكر"
+    }
+  ],
+  "data_quality": [
+    "بيانات تاريخية موثقة."
+  ],
+  "research_metadata": {
+    "researched_on": "2026-07-29",
+    "scope": "دراسة حالةتاريخية",
+    "source_method": "كتب أعمال ودراسات أكاديمية",
+    "private_backend_data_included": false,
+    "copyright_note": "تحليل الأسباب"
+  },
+  "id": "webvan"
+}

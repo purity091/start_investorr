@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-RE-2026-SMART-SHED",
+      "status_label": "تحليل استخباري للبنية التحتية للتجارة الحديثة",
+      "category_tag": "العقارات الصناعية (Industrial / Logistics)",
+      "business_model": "Development & Lease + Management Services",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Industrial Real Estate",
+      "Automation",
+      "Cold Chain"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Modon / Logistics Hubs)", "flag": "🇸🇦" },
+        { "name": "Dubai (South Logistics District)", "flag": "🇦🇪" },
+        { "name": "Egypt (Suez Canal Economic Zone)", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "العقارات الصناعية اللوجستية والمخازن المؤتمتة",
+      "problem_statement": "مع نمو التجارة الإلكترونية بنسبة 25% سنوياً، لم تعد المستودعات التقليدية (أربعة جدران وسقف) كافية. السوق متعطش لعقارات صناعية 'جاهزة للتكنولوجيا' (Tech-ready) توفر ارتفاعات تخزينية شاهقة، أرضيات فائقة الاستواء للروبوتات، وبنية تحتية مدمجة للتبريد والطاقة المتجددة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Shed-Logic",
+        "industry_tag": "تطوير الجيل القادم من المستودعات الذكية",
+        "revenue_model": "Long-term Leases to Global Shippers + Shared Service Fees + Solar Power Resale",
+        "action_text": "استعراض مستودعات مؤتمتة بالكامل توفر 50% من تكلفة العمالة للمستأجر"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الأصول الصناعية (0-24 شهر)",
+      "subtitle": "بناء عصب التجارة العالمية الرقمية",
+      "phases": [
+        {
+          "title": "تطوير 'المخازن المظلمة' (Dark Warehouses)",
+          "description": "تصميم مستودعات مصممة خصيصاً للروبوتات (بدون إضاءة أو تكييف بشري كامل)، مما يقلل استهلاك الطاقة بنسبة 60%.",
+          "icon": "moon",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "دمج حلول الطاقة السيادية (Microgrids)",
+          "description": "تغطية أسطح المستودعات الشاسعة بألواح شمسية لتأمين طاقة مستقلة ومستقرة، وهو ما يطلبه المستأجرون الكبار لضمان استمرارية العمل.",
+          "icon": "sun",
+          "color_theme": "rose"
+        },
+        {
+          "title": "أنظمة التبريد والمناولة المتكاملة",
+          "description": "تجهيز العقار بمناطق تبريد عميق مؤتمتة بالكامل، مما يجعل العقار مغناطيساً لشركات الأدوية والأغذية الكبرى.",
+          "icon": "snowflake",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.3,
+      "data_points_analyzed": "E-commerce penetration vs Grade A Warehouse availability"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تركيز المطورين العقاريين تاريخياً على القطاعين السكني والمكتبي.",
+        "نقص الأراضي المجهزة بالبنية التحتية الكهربائية العالية المطلوبة للأتمتة.",
+        "التكلفة العالية لبناء المستودعات من الفئة (A) المتوافقة مع الروبوتات.",
+        "الحاجة لعقود إيجار طويلة الأمد لضمان استرداد رأس المال الكبير."
+      ],
+      "recommended_tech_stack": [
+        "Super-flat Flooring Technology",
+        "ASRS (Automated Storage and Retrieval Systems)",
+        "IoT Monitoring for Humidity/Temp",
+        "Heavy-duty Structural Racking AI",
+        "On-site Renewable Energy Storage"
+      ],
+      "main_risk_index": "الموقع الجغرافي؛ قيمة العقار الصناعي مرتبطة كلياً بقربه من الموانئ أو مراكز الاستهلاك، مما يجعل الصراع على الأراضي الاستراتيجية شديداً."
+    }
+  }
+}

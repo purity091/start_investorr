@@ -1,0 +1,92 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-MKT07",
+      "status_label": "تحليل فجوة الامتثال لحماية بيانات التسويق",
+      "category_tag": "LegalTech / AdTech / Data-Privacy",
+      "business_model": "Compliance-as-a-Service (SaaS) + Data Residency Hosting + Audit Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Marketing",
+      "Legal Tech",
+      "Data Security"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Saudi Arabia (NDMO Compliance)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "UAE (Data Protection Law)",
+          "flag": "🇦🇪"
+        },
+        {
+          "name": "Egypt & Qatar",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "درع الخصوصية: الامتثال لقوانين بيانات التسويق الإقليمية",
+      "problem_statement": "تفرض الدول العربية قوانين صارمة لحماية البيانات (مثل قانون NDMO السعودي) تمنع إرسال بيانات المواطنين للخارج أو معالجتها دون موافقة دقيقة. معظم أدوات التسويق العالمية (Google/Facebook) لا تمتثل لهذه القوانين المحلية. الفجوة هي منصة 'وسيطة' تضمن معالجة بيانات الحملات التسويقية داخل حدود الدولة وبامتثال قانوني كامل وتلقائي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Siyan-Data",
+        "industry_tag": "تكنولوجيا السيادة الرقمية وخصوصية البيانات التسويقية",
+        "revenue_model": "Monthly Subscription per Brand + Data Vault Management Fees + Compliance Audit Certification",
+        "action_text": "استعراض حماية ميزانيات التسويق من الغرامات القانونية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الامتثال السيادي (0-24 شهر)",
+      "subtitle": "تسويق ذكي، بخصوصية قانونية كاملة",
+      "phases": [
+        {
+          "title": "بناء 'خزنة البيانات المحلية' (Data-Vault)",
+          "description": "تأسيس بنية تحتية سحابية داخل السعودية والإمارات تتيح للشركات تخزين بيانات عملائها واستخدامها في الحملات دون خروجها من الحدود.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك إدارة الموافقة (Consent-Manager-AI)",
+          "description": "توفير أدوات ذكية تضمن الحصول على موافقة المستخدمين على استخدام بياناتهم بطريقة تتوافق تماماً مع صياغة القوانين المحلية.",
+          "icon": "pencil",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة الامتثال للمعلنين (Ad-Privacy-Bridge)",
+          "description": "ربط المنصات الإعلانية العالمية (Google/Meta) بنظام 'إخفاء هوية' (Anonymization) يتيح استهداف الجمهور دون انتهاك خصوصية البيانات الفردية.",
+          "icon": "share",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.7,
+      "data_points_analyzed": "Potential Fines for Data Non-compliance vs Cost of Local Privacy Solutions"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد الكلي للشركات العربية على السحب البرمجية (Cloud) الأجنبية.",
+        "تعقيد النصوص القانونية وتغيرها المستمر في دول المنطقة.",
+        "نقص الخبرات التقنية التي تجمع بين أمن المعلومات والقانون والماركتينج.",
+        "ارتفاع تكلفة استضافة البيانات محلياً مقارنة بالخوادم العالمية."
+      ],
+      "recommended_tech_stack": [
+        "Localized Sovereign Cloud (AWS-Saudi/Azure-UAE)",
+        "Zero-knowledge Proofs for Data Anonymization",
+        "Blockchain for Consent Audit Trails",
+        "API-based Privacy Proxy",
+        "Automated Compliance Policy Generator"
+      ],
+      "main_risk_index": "سرعة التشريع؛ قد تتغير القوانين بشكل مفاجئ مما يتطلب فريقاً قانونياً وتقنياً سريع الاستجابة لتحديث النظام."
+    }
+  }
+}

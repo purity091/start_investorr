@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-LOG-2026-DRONE-FREIGHT",
+      "status_label": "تحليل استخباري للسيادة الجوية اللوجستية",
+      "category_tag": "النقل الجوي (UAV / Drone Logistics)",
+      "business_model": "Subscription per Flight Hour + Critical Delivery Premium",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Aviation",
+      "Autonomous Systems",
+      "Emergency Logistics"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "NEOM", "flag": "🇸🇦" },
+        { "name": "Red Sea Islands", "flag": "🇸🇦" },
+        { "name": "Oman (Remote Mountains)", "flag": "🇴🇲" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "شبكة الشحن الجوي المستقل عبر الدرونز",
+      "problem_statement": "تواجه المشاريع العملاقة في الجزر والمناطق الجبلية صعوبة بالغة في إيصال القطع الطارئة، الأدوية، والسلع الفاخرة بسرعة. النقل بالهليكوبتر مكلف جداً، والنقل البحري بطيء. هناك فجوة لشبكة درونز شحن ثقيلة (VTOL) قادرة على الطيران لمسافات طويلة بحمولات تصل لـ 50 كجم دون الحاجة لمدارج."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sama-Logistics",
+        "industry_tag": "النقل الجوي ذاتي القيادة",
+        "revenue_model": "Leasing Flight Operations + Per-Kilogram Cargo Fee + Managed Air Corridors",
+        "action_text": "استعراض تقنية الشحن الجوي الذي يوفر 90% من وقت الوصول"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق النقل الجوي الذكي (0-18 شهر)",
+      "subtitle": "تجاوز التحديات الجغرافية من السماء",
+      "phases": [
+        {
+          "title": "بناء ممرات الطيران الآمنة (Air Corridors)",
+          "description": "تحديد ممرات جوية رقمية آمنة ومراقبة عبر الأقمار الصناعية لضمان عدم تداخل الدرونز مع الطيران المدني أو المناطق السكنية.",
+          "icon": "map",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "إطلاق محطات الشحن والإنزال الذاتية",
+          "description": "نشر منصات هبوط (Nest Stations) تقوم بشحن بطاريات الدرون آلياً وتبادل الشحنات دون تدخل بشري.",
+          "icon": "status-online",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة إدارة الأسطول الجوي (UTM)",
+          "description": "برمجية مركزية تدير مئات الدرونز في وقت واحد، وتعدل المسارات لحظياً بناءً على سرعة الرياح والظروف الجوية.",
+          "icon": "presentation-chart-line",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.2,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "5000+ Flight Simulation Scenarios"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التشريعات الجوية الصارمة التي كانت تمنع طيران الدرونز خارج مدى الرؤية (BVLOS).",
+        "محدودية عمر البطاريات والقدرة على حمل أوزان ثقيلة (حُلت في 2026 عبر نماذج الـ VTOL الهجينة).",
+        "الحاجة لنظام اتصالات فائق الموثوقية (Starlink/5G) للتحكم اللحظي.",
+        "تحديات العواصف الرملية والرياح الشديدة في المناطق المفتوحة."
+      ],
+      "recommended_tech_stack": [
+        "Vertical Take-Off and Landing (VTOL) Technology",
+        "Computer Vision for Obstacle Avoidance",
+        "Starlink Satellite Connectivity",
+        "AI Fleet Coordination Algorithms",
+        "Advanced Carbon Fiber Materials"
+      ],
+      "main_risk_index": "المخاطر الجيوسياسية والأمنية؛ حماية الممرات الجوية من الاختراق أو التشويش هي الأولوية القصوى لضمان استمرارية الترخيص."
+    }
+  }
+}

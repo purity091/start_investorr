@@ -1,0 +1,77 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-IND10",
+      "status_label": "تحليل هدر المواد الصناعية والاقتصاد الدائري",
+      "category_tag": "Circular Industry (Waste / Recycling)",
+      "business_model": "Marketplace + Recycling + Material Exchange Platform",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Industry",
+      "Waste",
+      "Circular Economy"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "UAE", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 9
+    },
+    "core_content": {
+      "title": "تحويل المخلفات الصناعية إلى قيمة اقتصادية",
+      "problem_statement": "تنتج المصانع كميات كبيرة من المخلفات (معدن، بلاستيك، كيميائيات، حرارة مهدورة)، وغالباً يتم التخلص منها بدلاً من إعادة استخدامها. هذا يمثل خسارة مزدوجة: تكلفة التخلص + ضياع مواد يمكن إعادة تدويرها أو بيعها. وفق توجهات الاقتصاد الدائري، يمكن تحويل هذه المخلفات إلى مدخلات لصناعات أخرى."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "CircularX",
+        "industry_tag": "Industrial Recycling Platforms",
+        "revenue_model": "Transaction Fees + Recycling Services",
+        "action_text": "استعراض تحويل النفايات إلى دخل"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة الاقتصاد الدائري (0-18 شهر)",
+      "subtitle": "لا شيء يضيع",
+      "phases": [
+        {
+          "title": "تصنيف المخلفات",
+          "description": "تحليل أنواع النفايات."
+        },
+        {
+          "title": "ربط الصناعات",
+          "description": "بيع المخلفات كمواد خام."
+        },
+        {
+          "title": "إعادة التدوير",
+          "description": "تحويلها لمنتجات جديدة."
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "2900+ (Industrial Waste Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "عدم وجود سوق للمخلفات.",
+        "ضعف الربط بين الصناعات.",
+        "نقص البنية التحتية.",
+        "عدم إدراك القيمة."
+      ],
+      "recommended_tech_stack": [
+        "Material Exchange Platforms",
+        "Recycling Tech",
+        "Supply Chain Systems",
+        "Data Analytics",
+        "IoT Tracking"
+      ],
+      "main_risk_index": "اللوجستيات؛ نقل ومعالجة المخلفات تحدي كبير."
+    }
+  }
+}

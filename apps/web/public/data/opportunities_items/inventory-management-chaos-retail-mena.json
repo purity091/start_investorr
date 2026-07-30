@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ECOM4",
+      "status_label": "تحليل فوضى إدارة المخزون في قطاع التجزئة",
+      "category_tag": "RetailTech (Inventory Management / Supply Chain)",
+      "business_model": "SaaS + API + Subscription per Store",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "E-commerce",
+      "Retail",
+      "Inventory Management"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "UAE", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 9
+    },
+    "core_content": {
+      "title": "نظام ذكي لإدارة المخزون في التجارة والتجزئة",
+      "problem_statement": "تعاني الشركات والمتاجر في المنطقة من فوضى في إدارة المخزون بين الفروع والمستودعات، مما يؤدي إلى نفاد المنتجات المطلوبة (Stockouts) أو تراكم مخزون غير مباع. تشير التقديرات إلى أن سوء إدارة المخزون يمكن أن يكلف الشركات ما يصل إلى 20–30% من الإيرادات المفقودة سنوياً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "StockMind",
+        "industry_tag": "أنظمة إدارة المخزون",
+        "revenue_model": "Subscription + Analytics Upsell",
+        "action_text": "استعراض تحسين دقة المخزون وتقليل الهدر"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة إدارة المخزون (0-9 أشهر)",
+      "subtitle": "المخزون تحت السيطرة",
+      "phases": [
+        {
+          "title": "تجميع بيانات المخزون",
+          "description": "ربط الأنظمة الحالية بالمخزون.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تحليل الطلب",
+          "description": "توقع الطلب بناءً على البيانات.",
+          "icon": "chart",
+          "color_theme": "rose"
+        },
+        {
+          "title": "توصيات التوريد",
+          "description": "اقتراح إعادة التخزين بشكل ذكي.",
+          "icon": "box",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "2100+ (Retail Inventory Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "أنظمة قديمة غير مترابطة.",
+        "ضعف تحليل البيانات.",
+        "إدارة يدوية للمخزون.",
+        "عدم التنبؤ بالطلب."
+      ],
+      "recommended_tech_stack": [
+        "Inventory Systems",
+        "Demand Forecasting AI",
+        "Cloud SaaS",
+        "POS Integrations",
+        "Data Analytics"
+      ],
+      "main_risk_index": "تكامل الأنظمة؛ يحتاج ربط مع POS و ERP."
+    }
+  }
+}

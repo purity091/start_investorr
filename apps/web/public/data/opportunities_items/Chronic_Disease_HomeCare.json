@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-HEALTH-2026-CHRONIC",
+      "status_label": "تحليل استخباري للتحول في الرعاية الصحية",
+      "category_tag": "الصحة (HealthTech / Remote Care)",
+      "business_model": "B2C + B2B (Insurance Integration)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "HealthTech",
+      "Remote Monitoring",
+      "Chronic Disease Management"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Kuwait", "flag": "🇰🇼" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "حلول الرعاية المنزلية المتخصصة للأمراض المزمنة",
+      "problem_statement": "تعاني المجتمعات العربية من أعلى معدلات الإصابة بالأمراض المزمنة (السكري، الضغط، القلب) عالمياً، مما يضغط على ميزانيات المستشفيات ويقلل جودة حياة المرضى. الرعاية الحالية تعتمد على المراجعات الدورية المتباعدة، بينما يحتاج هؤلاء المرضى لمتابعة لحظية وتدخل استباقي في بيئاتهم المنزلية لتجنب المضاعفات الحادة والزيارات الطارئة للمستشفى."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "HomeVital",
+        "industry_tag": "المستشفى المنزلي الرقمي",
+        "revenue_model": "Monthly Subscription + Telehealth Fees + Device Integration Charges",
+        "action_text": "استعراض منصة المتابعة اللحظية للمرضى"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الرعاية المستمرة (0-15 شهر)",
+      "subtitle": "تحويل المنزل إلى نقطة رعاية طبية",
+      "phases": [
+        {
+          "title": "تطوير طقم الحساسات المنزلية",
+          "description": "توفير أجهزة قياس (سكر، ضغط، نبض) متصلة سحابياً ترسل البيانات تلقائياً للمنصة دون تدخل المريض.",
+          "icon": "status-online",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تفعيل محرك التنبيه الاستباقي",
+          "description": "استخدام الذكاء الاصطناعي لتحليل المؤشرات الحيوية وإرسال تنبيهات للأطباء أو الأهل عند رصد أي أنماط تنذر بخطر وشيك.",
+          "icon": "lightning-bolt",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التكامل مع شبكات التأمين",
+          "description": "عقد شراكات مع شركات التأمين الصحي لتمويل الخدمة كإجراء وقائي يقلل من تكاليف المطالبات الطويلة الأمد.",
+          "icon": "heart",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "3500+ (Regional Chronic Disease Statistics)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف ثقة كبار السن في التكنولوجيا الصحية بعيداً عن الطبيب الفعلي.",
+        "تشتت البيانات الصحية وعدم تكاملها مع السجلات الطبية الوطنية.",
+        "نقص الكوادر التمريضية القادرة على المتابعة الرقمية عن بُعد.",
+        "الحاجة لبيئة تشريعية تنظم 'المستشفى المنزلي' بشكل قانوني."
+      ],
+      "recommended_tech_stack": [
+        "IoT Medical Sensors",
+        "Predictive AI Algorithms",
+        "HIPAA Compliant Cloud",
+        "Telemedicine Video Interface",
+        "Real-time Data Visualizers"
+      ],
+      "main_risk_index": "المسؤولية الطبية؛ دقة البيانات والتنبيهات هي المفتاح لتجنب التشخيص الخاطئ وضمان سلامة المرضى."
+    }
+  }
+}

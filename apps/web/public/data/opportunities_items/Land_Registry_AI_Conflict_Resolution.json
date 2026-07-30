@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-AFR-2026-LAW09",
+      "status_label": "تحليل فجوة الملكية القانونية والاستقرار الاجتماعي",
+      "category_tag": "القانون والعقارات (LegalTech / PropTech / Blockchain)",
+      "business_model": "Transaction Fees + Government Consulting + Legal Verification Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Land Rights",
+      "Blockchain",
+      "Conflict Resolution"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Yemen", "flag": "🇾🇪" },
+        { "name": "Sudan", "flag": "🇸🇩" },
+        { "name": "Mauritania", "flag": "🇲🇷" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "منصة رقمنة الملكية وحل النزاعات العقارية",
+      "problem_statement": "تمثل النزاعات على الأراضي (سواء الزراعية أو الحضرية) أكثر من 60% من القضايا في المحاكم والنزاعات القبلية في السودان واليمن. غياب السجلات الرقمية الموثوقة والتلاعب بالأوراق التقليدية يعطل الاستثمار. هناك فجوة لنظام يدمج 'التوافق المجتمعي' مع 'الأدلة التاريخية للأقمار الصناعية' لتوثيق الملكية غير القابلة للتلاعب."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Wathiq-Chain",
+        "industry_tag": "العدالة الرقمية العقارية",
+        "revenue_model": "Title Verification Fee + Secondary Market Transaction Fees + Gov Service Contracts",
+        "action_text": "استعراض حل النزاعات العقارية عبر البلوكشين وصور الفضاء"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق السلم العقاري (0-36 شهر)",
+      "subtitle": "تثبيت الحقوق لتعزيز الاستقرار",
+      "phases": [
+        {
+          "title": "الأرشفة التاريخية بالأقمار الصناعية",
+          "description": "استخدام صور الأقمار الصناعية التاريخية لإثبات حدود الأراضي وطرق استخدامها على مدى عقود كدليل تقني لا يقبل الجدل.",
+          "icon": "map",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التوثيق المجتمعي (Oracle Verification)",
+          "description": "تطوير نظام لجمع شهادات كبار السن والمجتمع وتوثيقها رقمياً بمطابقة الأدلة المكانية.",
+          "icon": "user-group",
+          "color_theme": "rose"
+        },
+        {
+          "title": "سجل البلوكشين الموحد (Immutable Ledger)",
+          "description": "تحويل كافة الملكيات المثبتة إلى أصول رقمية مرمزّة (Tokens) يستحيل التلاعب بها أو تزويرها.",
+          "icon": "link",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.7,
+      "data_points_analyzed": "Court Case Backlogs & Historical Satellite Archive"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف ثقة الناس في المؤسسات الرسمية المركزية.",
+        "ضياع الأوراق الرسمية نتيجة الحروب والنزاعات.",
+        "تعقيد الأنظمة العرفية (القبلية) وصعوبة مواءمتها مع القوانين الحديثة.",
+        "الخوف من الشفافية الرقمية لدى الجهات التي تستفيد من العشوائية."
+      ],
+      "recommended_tech_stack": [
+        "Hyperledger Fabric (Private Blockchain)",
+        "Deep Learning for Land Partitioning (GIS)",
+        "High-resolution Historical Satellite Data",
+        "Biometric Identity Verification",
+        "Smart Contracts for Ownership Transfer"
+      ],
+      "main_risk_index": "المخاطر الأمنية؛ مقاومة 'المتنفذين' الذين يستفيدون من ضياع السجلات تتطلب دعماً سياسياً رفيعاً وضمانات أمنية للفريق الميداني."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-CHE10",
+      "status_label": "تحليل فجوة دمج الطاقة النظيفة في البتروكيماويات",
+      "category_tag": "Energy / Chemicals / Green-Hydrogen",
+      "business_model": "Sale of Green Ammonia/Methanol + Hydrogen Supply Contracts + Carbon Offsetting Services",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Energy",
+      "Chemical Industries",
+      "Sustainability"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "NEOM & Yanbu (Green Hydrogen Pioneer)", "flag": "🇸🇦" },
+        { "name": "Oman (Duqm Green Hydrogen Hub)", "flag": "🇴🇲" },
+        { "name": "Egypt (Suez Canal Green Corridor)", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "بتروكيماويات خضراء: دمج الهيدروجين في الصناعة",
+      "problem_statement": "تتعرض صادرات البتروكيماويات العربية لضغوط عالمية نتيجة بصمتها الكربونية العالية (خاصة مع ضرائب الكربون الأوروبية CBAM). الفجوة هي دمج 'الهيدروجين الأخضر' المنتج من الطاقة الشمسية والرياح في العمليات الصناعية لإنتاج أمونيا، ميثانول، وأسمدة 'خضراء' بالكامل، مما يضمن بقاء المنتجات العربية منافسة في الأسواق العالمية المستقبلية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Arab-Green-Petro",
+        "industry_tag": "الصناعات الكيميائية منخفضة الكربون واقتصاد الهيدروجين",
+        "revenue_model": "Premium Price per Ton of Green Product + Carbon Credit Trading + Technology Transfer Services",
+        "action_text": "استعراض مستقبل البتروكيماويات العربية منخفضة الكربون"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الهيدروجين الصناعي (0-60 شهر)",
+      "subtitle": "تحويل أشعة الشمس العربية إلى وقود ومواد كيميائية",
+      "phases": [
+        {
+          "title": "بناء مجمعات التحليل الكهربائي (Electrolyzer-Hubs)",
+          "description": "تأسيس وحدات تحليل مياه ضخمة تعمل بالطاقة الشمسية لإنتاج الهيدروجين الأخضر بالقرب من المجمعات البتروكيماوية.",
+          "icon": "lightning-bolt",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تعديل العمليات الكيميائية (Process-Retrofiting)",
+          "description": "تحديث المفاعلات الحالية لتتمكن من استقبال الهيدروجين الأخضر بدلاً من 'الهيدروجين الرمادي' المشتق من الغاز الطبيعي.",
+          "icon": "cog",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق العلامة الخضراء (Green-Premium)",
+          "description": "الحصول على شهادات دولية تثبت انخفاض الانبعاثات بنسبة 90% وبيع المنتجات بأسعار تفضيلية للأسواق الأوروبية واليابانية.",
+          "icon": "globe",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.8,
+      "data_points_analyzed": "Impact of CBAM Taxes on Arab Chemical Exports vs Cost of Green Hydrogen Integration"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة الحالية المرتفعة لإنتاج الهيدروجين الأخضر مقارنة بالغاز الطبيعي.",
+        "الحاجة لاستثمارات ضخمة في البنية التحتية للطاقة المتجددة ونقل الهيدروجين.",
+        "التعقيد التقني في تخزين ونقل الهيدروجين بكميات صناعية كبيرة.",
+        "البطء في تطوير التشريعات والمحفزات المالية للصناعات الخضراء."
+      ],
+      "recommended_tech_stack": [
+        "PEM and Alkaline Electrolyzers",
+        "Smart Grid Integration AI",
+        "High-pressure Hydrogen Storage Tanks",
+        "Ammonia Synthesis Loop (Haber-Bosch Adaptation)",
+        "Blockchain for Carbon Lifecycle Tracking"
+      ],
+      "main_risk_index": "السوق العالمي؛ يعتمد نجاح المشروع على استعداد الأسواق العالمية لدفع 'علاوة سعرية' (Premium) للمنتجات الخضراء، وهو ما يتشكل حالياً عبر الاتفاقات الدولية."
+    }
+  }
+}

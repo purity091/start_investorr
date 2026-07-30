@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-EDAI8",
+      "status_label": "تحليل فجوة الإرشاد المهني الذكي",
+      "category_tag": "الإرشاد المهني (Career Tech / AI Guidance)",
+      "business_model": "Freemium + Subscription + University Partnerships",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Education",
+      "Career Guidance",
+      "AI Matching"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 9
+    },
+    "core_content": {
+      "title": "منصة إرشاد مهني ذكية مخصصة للطلاب العرب",
+      "problem_statement": "يفتقر الطلاب في العالم العربي إلى إرشاد مهني حقيقي، مما يؤدي إلى اختيار تخصصات غير مناسبة وانخفاض الإنتاجية لاحقاً في سوق العمل. معظم القرارات المهنية تعتمد على العائلة أو المجتمع وليس على تحليل علمي للمهارات والفرص."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "CareerMind",
+        "industry_tag": "منصات التوجيه المهني",
+        "revenue_model": "Premium Subscription + University Integration + Data Insights",
+        "action_text": "استعراض تحليل مسار مهني مخصص للطالب"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التوجيه المهني (0-10 أشهر)",
+      "subtitle": "كل طالب يعرف مساره الصحيح",
+      "phases": [
+        {
+          "title": "تحليل شخصية ومهارات الطالب",
+          "description": "بناء نظام يقيم مهارات واهتمامات الطالب بدقة.",
+          "icon": "user",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك توصية مهني",
+          "description": "ربط المهارات بفرص سوق العمل المستقبلية.",
+          "icon": "target",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكامل مع الجامعات والشركات",
+          "description": "ربط المنصة بفرص تدريب وتوظيف حقيقية.",
+          "icon": "link",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.1,
+      "liquidity_tam": 9.3,
+      "competitive_moat": 8.6,
+      "data_points_analyzed": "1600+ (Career Path Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "غياب أنظمة إرشاد مهني متطورة.",
+        "عدم توفر بيانات سوق العمل للطلاب.",
+        "ثقافة مجتمعية تؤثر على القرارات المهنية.",
+        "نقص أدوات تحليل الشخصية المهنية."
+      ],
+      "recommended_tech_stack": [
+        "AI Recommendation Systems",
+        "Psychometric Analysis Tools",
+        "Labor Market Data APIs",
+        "Mobile Apps",
+        "Data Analytics Platforms"
+      ],
+      "main_risk_index": "تبني المستخدم؛ يحتاج المشروع إلى بناء ثقة قوية مع الطلاب والمؤسسات التعليمية."
+    }
+  }
+}

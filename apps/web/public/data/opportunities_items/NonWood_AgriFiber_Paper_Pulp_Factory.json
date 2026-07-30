@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-CHE06",
+      "status_label": "تحليل فجوة إنتاج لب الورق المستدام",
+      "category_tag": "Manufacturing / Sustainability / Paper-Pulp",
+      "business_model": "B2B Sales to Paper Mills + Agri-waste Management Contracts + Export of Sustainable Pulp",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Manufacturing",
+      "Sustainability",
+      "Agriculture"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt (Rice Straw Abundance)", "flag": "🇪🇬" },
+        { "name": "Iraq (Palm Waste Resource)", "flag": "🇮🇶" },
+        { "name": "Sudan (Sugarcane Bagasse)", "flag": "🇸🇩" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "ورق بلا غابات: إنتاج لب الورق من مخلفات الزراعة",
+      "problem_statement": "يفتقر الوطن العربي للغابات المنتجة للخشب، مما يضطره لاستيراد لب الورق (Pulp) بمليارات الدولارات، بينما يتم حرق ملايين الأطنان من مخلفات الأرز والقمح وقصب السكر مسبباً تلوثاً بيئياً هائلاً. الفجوة هي مصنع كيميائي متطور يحول هذه الألياف الزراعية (Non-wood fibers) إلى لب ورق عالي الجودة يدخل في صناعة التعبئة والتغليف والمناديل."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Arab-Pulp-Green",
+        "industry_tag": "صناعة لب الورق المستدام والاقتصاد الزراعي الدائري",
+        "revenue_model": "Sales per Ton (Unbleached/Bleached Pulp) + Carbon Credit Monetization + Supply Chain Integration with Packaging Firms",
+        "action_text": "استعراض خطة إنتاج الورق من 'ذهب الحقول' العربي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الورق الأخضر (0-48 شهر)",
+      "subtitle": "تحويل المخلفات إلى ثروة صناعية",
+      "phases": [
+        {
+          "title": "محرك استخلاص الألياف (Fiber-Extract)",
+          "description": "تطوير عملية كيميائية 'خضراء' تستخدم كميات أقل من المياه والمواد الكيميائية القاسية لفصل السليلوز عن اللجنين في مخلفات الأرز والنخيل.",
+          "icon": "beaker",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء مجمع التبييض والتجفيف (Pulping-Hub)",
+          "description": "إنشاء وحدات معالجة تحول الألياف المستخلصة إلى 'بلاطات' لب ورق جاف جاهز للتصدير أو التصنيع المحلي.",
+          "icon": "cog",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكامل صناعة التعبئة والتغليف",
+          "description": "عقد اتفاقيات مع شركات التجزئة لاستخدام الكرتون والورق المنتج محلياً كبديل مستدام وصديق للبيئة للمستورد.",
+          "icon": "shopping-bag",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Paper Pulp Import Volumes in MENA vs Available Agri-waste Tonnage"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التحديات اللوجستية في جمع وضغط ونقل مخلفات المزارع المشتتة.",
+        "التكلفة العالية لمعالجة مياه الصرف الصناعي الناتجة عن صناعة الورق.",
+        "المنافسة السعرية من المنتجين العالميين الكبار (البرازيل، كندا).",
+        "الحاجة لتكنولوجيا تبييض (Bleaching) لا تستخدم الكلور الضار بالبيئة."
+      ],
+      "recommended_tech_stack": [
+        "Organosolv Pulping Technology",
+        "Closed-loop Water Recycling Systems",
+        "Enzymatic Pre-treatment for Fibers",
+        "High-efficiency Drying Kilns",
+        "Waste Heat Recovery Integration"
+      ],
+      "main_risk_index": "موسمية المواد الخام؛ توفر مخلفات الأرز أو القمح يرتبط بمواسم الحصاد، مما يتطلب نظام 'تخزين وضغط' متطور لضمان استمرارية المصنع طوال العام."
+    }
+  }
+}

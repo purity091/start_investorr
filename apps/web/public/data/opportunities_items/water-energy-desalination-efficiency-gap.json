@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ENERGY2",
+      "status_label": "تحليل كفاءة الطاقة في تحلية المياه",
+      "category_tag": "Water-Energy Tech (Desalination Optimization)",
+      "business_model": "Industrial SaaS + Energy Optimization + Contracts",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Energy",
+      "Water",
+      "Desalination"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Kuwait", "flag": "🇰🇼" }
+      ],
+      "additional_regions_count": 6
+    },
+    "core_content": {
+      "title": "تحسين كفاءة الطاقة في محطات تحلية المياه",
+      "problem_statement": "تشكل تحلية المياه واحدة من أكبر مصادر استهلاك الطاقة في الخليج، حيث تستهلك بعض المحطات ما يصل إلى 15–25% من إجمالي إنتاج الكهرباء. مع زيادة الطلب على المياه، تصبح التكلفة غير مستدامة اقتصادياً وبيئياً. المشكلة ليست في التحلية نفسها، بل في كفاءتها المنخفضة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "AquaEnergyX",
+        "industry_tag": "تحسين كفاءة التحلية",
+        "revenue_model": "Performance-based Contracts + SaaS",
+        "action_text": "استعراض تقليل استهلاك الطاقة في التحلية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة كفاءة التحلية (0-18 شهر)",
+      "subtitle": "مياه أقل تكلفة طاقياً",
+      "phases": [
+        {
+          "title": "تحليل استهلاك الطاقة",
+          "description": "قياس وتحليل العمليات الحالية.",
+          "icon": "chart",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تحسين العمليات",
+          "description": "إعادة ضبط الأنظمة لزيادة الكفاءة.",
+          "icon": "cpu",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكامل مع الأنظمة الصناعية",
+          "description": "تطبيق الحلول في المحطات.",
+          "icon": "factory",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "2000+ (Desalination Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تعقيد الأنظمة.",
+        "ارتفاع تكلفة التحديث.",
+        "نقص الابتكار.",
+        "الاعتماد على حلول تقليدية."
+      ],
+      "recommended_tech_stack": [
+        "Industrial AI",
+        "Energy Monitoring",
+        "IoT Sensors",
+        "Optimization Algorithms",
+        "Cloud Systems"
+      ],
+      "main_risk_index": "التنفيذ الصناعي؛ يحتاج تعاون مع جهات كبيرة."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-DEEP-2026-LEG01",
+      "status_label": "تحليل فجوة الأتمتة القضائية والامتثال",
+      "category_tag": "LegalTech / Specialized LLM",
+      "business_model": "SaaS per Firm/Gov + API Licensing + Automated Audit Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Legal",
+      "Artificial Intelligence",
+      "Governance"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Judicial Reform)", "flag": "🇸🇦" },
+        { "name": "UAE (Regulatory Sandboxes)", "flag": "🇦🇪" },
+        { "name": "Egypt (Civil Law System)", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 6
+    },
+    "core_content": {
+      "title": "العقل القانوني العربي: محرك الاجتهاد والامتثال الآلي",
+      "problem_statement": "تعاني الأنظمة القانونية العربية من 'بطء المراجعة' وتشتت النصوص بين التشريعات الحديثة والأحكام التاريخية. النماذج اللغوية العالمية (مثل GPT) تخطئ في فهم الفوارق الدقيقة في القانون المدني والشرعي العربي. هناك فجوة لنموذج LLM مدرب حصرياً على التشريعات العربية لإجراء صياغة العقود والتدقيق القانوني في ثوانٍ."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Adli-Brain",
+        "industry_tag": "الذكاء الاصطناعي القانوني السيادي",
+        "revenue_model": "Annual License for Law Firms + Gov Integration Contracts + B2B Contract Auditing SaaS",
+        "action_text": "استعراض محرك صياغة العقود الآلي الأكثر دقة عربياً"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق العدالة الرقمية (0-24 شهر)",
+      "subtitle": "تحويل النصوص القانونية إلى ذكاء تنبئي",
+      "phases": [
+        {
+          "title": "بناء المستودع القانوني الموحد",
+          "description": "أرشفة ورقمنة كافة القوانين، اللوائح، والأحكام القضائية التاريخية وتصنيفها 'أنطولوجياً' لتدريب النموذج.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "ضبط النموذج (Fine-tuning) قانونياً",
+          "description": "تدريب النموذج على فهم المصطلحات القانونية المعقدة والفرق بين الأنظمة اللاتينية والأنظمة القائمة على الشريعة.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق منصة 'المدقق اللحظي'",
+          "description": "توفير واجهة تتيح للمحامين والشركات فحص العقود، اكتشاف الثغرات، ومطابقة الامتثال للوائح المحلية فورياً.",
+          "icon": "shield-check",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.7,
+      "data_points_analyzed": "Volume of Commercial Disputes vs Legal Service Delivery Speed"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الحساسية العالية لبيانات المحاكم والقضايا.",
+        "تعقيد اللغة القانونية العربية وتعدد اللهجات والمدارس الفقهية.",
+        "عدم قدرة النماذج الأجنبية على استيعاب 'روح القانون' المحلي.",
+        "مقاومة بعض القطاعات التقليدية للأتمتة في المجالات الحساسة."
+      ],
+      "recommended_tech_stack": [
+        "Arabic-Centric LLM (Llama-3-Arabic Optimized)",
+        "Retrieval-Augmented Generation (RAG)",
+        "Vector Databases for Case Law",
+        "Secure On-premise Deployment for Gov",
+        "Explainable AI (XAI) for Legal Reasoning"
+      ],
+      "main_risk_index": "الدقة والموثوقية؛ أي خطأ في التفسير القانوني قد يؤدي لتبعات قانونية كبيرة، مما يتطلب إشرافاً بشرياً (Human-in-the-loop) دائم."
+    }
+  }
+}

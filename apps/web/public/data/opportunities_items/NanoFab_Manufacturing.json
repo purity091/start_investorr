@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-IND-2026-NF",
+      "status_label": "تحليل استخباراتي لتوطين الصناعة المتقدمة",
+      "category_tag": "التصنيع المضاف (3D Printing / Advanced Tech)",
+      "business_model": "Manufacturing-as-a-Service (MaaS)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Industry 4.0",
+      "Additive Manufacturing",
+      "Supply Chain Localization",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "ثورة التصنيع المضاف لقطع الغيار الصناعية",
+      "problem_statement": "تعتمد قطاعات الطاقة والطيران والبتروكيماويات في المنطقة على استيراد قطع غيار معقدة من الخارج، مما يستغرق شهوراً ويؤدي إلى توقفات إنتاجية مكلفة (Downtime). هناك حاجة ماسة لتوطين إنتاج هذه القطع عبر تقنيات الطباعة ثلاثية الأبعاد للمعادن والمواد المتقدمة لتقليل الاعتماد على سلاسل الإمداد العالمية المتعثرة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "NanoFab",
+        "industry_tag": "التصنيع الرقمي عند الطلب",
+        "revenue_model": "Per-Part Pricing + Annual Maintenance Contracts + Digital Inventory Licensing",
+        "action_text": "عرض دراسة الجدوى لتقليل وقت التوريد بنسبة 85%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المصنع الرقمي (0-24 شهر)",
+      "subtitle": "من التصميم الرقمي إلى المنتج النهائي",
+      "phases": [
+        {
+          "title": "بناء المستودع الرقمي (Digital Inventory)",
+          "description": "تحويل قطع الغيار التقليدية إلى ملفات تصميم رقمية (CAD) معتمدة، مما يسمح بتخزينها سحابياً بدلاً من التخزين الفيزيائي المكلف.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "مركز الطباعة المعدنية المتقدمة (Metal 3D Hub)",
+          "description": "تأسيس مرافق تصنيع مجهزة بأحدث الطابعات المعدنية القادرة على إنتاج قطع معقدة (عنفات، صمامات) بدقة هندسية تفوق الطرق التقليدية.",
+          "icon": "cube-transparent",
+          "color_theme": "rose"
+        },
+        {
+          "title": "شبكة الإنتاج الموزع (On-demand Network)",
+          "description": "نشر وحدات تصنيع صغيرة بالقرب من حقول النفط والمناطق الصناعية الكبرى لضمان تسليم القطع في غضون أيام بدلاً من شهور.",
+          "icon": "share",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.2,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "1400+ (Industrial Downtime Costs & Logistics Lead Times)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية للطابعات الصناعية والحاجة لمواد خام متخصصة.",
+        "غياب معايير الاعتماد والجودة للقطع المصنعة مضافاً (Additively Manufactured).",
+        "نقص الخبرات الهندسية المحلية في 'التصميم من أجل التصنيع المضاف' (DfAM).",
+        "الارتباط بعقود توريد طويلة الأمد مع شركات التصنيع الأصلية (OEMs)."
+      ],
+      "recommended_tech_stack": [
+        "Selective Laser Melting (SLM)",
+        "Generative Design AI",
+        "Non-Destructive Testing (NDT) Tech",
+        "Digital Twin Simulation",
+        "Industrial IoT (IIoT) Integration"
+      ],
+      "main_risk_index": "الاعتماد الفني (Certification)؛ ضمان أن القطع المطبوعة تمتلك نفس خصائص المتانة والأمان للقطع التقليدية لضمان قبولها في الصناعات الحساسة."
+    }
+  }
+}

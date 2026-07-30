@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-TECH4",
+      "status_label": "تحليل فجوة البنية التحتية للبيانات",
+      "category_tag": "Data Infrastructure (Lakehouse / Analytics)",
+      "business_model": "SaaS + Enterprise Data Platform + API",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Technology",
+      "Data Infrastructure",
+      "Analytics"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 8
+    },
+    "core_content": {
+      "title": "بناء بنية بيانات حديثة للشركات العربية (Data Lakehouse)",
+      "problem_statement": "تعاني معظم الشركات في المنطقة من تشتت البيانات بين أنظمة متعددة (ERP، CRM، Excel)، مما يمنع اتخاذ قرارات مبنية على البيانات. لا توجد بنية موحدة (Data Lakehouse) تجمع البيانات وتحللها بشكل لحظي، مما يؤدي إلى خسائر في الكفاءة وفرص ضائعة في التحليل والتنبؤ."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "DataFusionX",
+        "industry_tag": "منصات البيانات والتحليل",
+        "revenue_model": "Subscription + Data Processing Fees + Enterprise Contracts",
+        "action_text": "استعراض توحيد البيانات وتحليلها في منصة واحدة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة البيانات الموحدة (0-12 شهر)",
+      "subtitle": "من بيانات مشتتة إلى ذكاء موحد",
+      "phases": [
+        {
+          "title": "تجميع البيانات من الأنظمة المختلفة",
+          "description": "ربط ERP و CRM وباقي الأنظمة ضمن منصة واحدة.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء طبقة التحليل",
+          "description": "تحليل البيانات وإنتاج dashboards ذكية.",
+          "icon": "chart",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إتاحة API للبيانات",
+          "description": "تمكين الشركات من استخدام البيانات عبر API.",
+          "icon": "link",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "2100+ (Enterprise Data Fragmentation Reports)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تعقيد دمج الأنظمة المختلفة.",
+        "ارتفاع تكلفة البنية التحتية.",
+        "نقص الكفاءات في Data Engineering.",
+        "ضعف الوعي بأهمية البيانات."
+      ],
+      "recommended_tech_stack": [
+        "Data Lakehouse (Delta Lake / Iceberg)",
+        "ETL Pipelines",
+        "Cloud Storage",
+        "Data Warehousing",
+        "BI Tools"
+      ],
+      "main_risk_index": "تعقيد التنفيذ؛ يحتاج إلى تكامل عميق مع أنظمة الشركات."
+    }
+  }
+}

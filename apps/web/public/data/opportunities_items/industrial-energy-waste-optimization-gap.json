@@ -1,0 +1,87 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ENERGY5",
+      "status_label": "تحليل هدر الطاقة في المصانع والصناعات الثقيلة",
+      "category_tag": "Industrial Energy Tech (Efficiency / AI Optimization)",
+      "business_model": "Industrial SaaS + Performance-based Savings + Energy Audits",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Energy",
+      "Industry",
+      "Energy Efficiency"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Morocco", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 8
+    },
+    "core_content": {
+      "title": "منصة ذكية لتقليل هدر الطاقة في المصانع والصناعات الثقيلة",
+      "problem_statement": "تعاني المصانع في المنطقة العربية، خصوصاً في قطاعات الإسمنت والحديد والبتروكيماويات والأغذية، من هدر كبير في الطاقة نتيجة المعدات القديمة، ضعف القياس اللحظي، غياب أنظمة إدارة الطاقة، وتشغيل خطوط الإنتاج دون تحسين مستمر. المشكلة ليست فقط ارتفاع فاتورة الكهرباء والوقود، بل خسارة تنافسية مباشرة أمام المصانع الأكثر كفاءة عالمياً. مع توجه الحكومات لخفض الانبعاثات وتحسين كفاءة الطاقة، تصبح المصانع التي لا تقيس استهلاكها ولا تحسنه معرضة لضغط تنظيمي ومالي متزايد."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "FactoryWatt AI",
+        "industry_tag": "منصات تحسين الطاقة الصناعية",
+        "revenue_model": "Monthly SaaS + Energy Audit Fees + Share of Verified Savings",
+        "action_text": "استعراض خفض استهلاك الطاقة الصناعية عبر تحليل خطوط الإنتاج لحظياً"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة كفاءة الطاقة الصناعية (0-18 شهر)",
+      "subtitle": "كل خط إنتاج يجب أن يعمل بأقل طاقة ممكنة",
+      "phases": [
+        {
+          "title": "تدقيق الطاقة وتركيب القياس الذكي",
+          "description": "تثبيت عدادات ذكية وحساسات على خطوط الإنتاج الرئيسية لقياس استهلاك الكهرباء والغاز والبخار والهواء المضغوط، وتحديد نقاط الهدر الأعلى تكلفة.",
+          "icon": "gauge",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك تحليل الهدر والتوصيات",
+          "description": "بناء نماذج AI تقارن الاستهلاك الفعلي بالاستهلاك الأمثل لكل آلة أو خط إنتاج، وتوصي بإجراءات مثل تعديل أوقات التشغيل، تقليل الأحمال الخاملة، وتحسين الصيانة.",
+          "icon": "cpu",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نموذج توفير موثق للمصانع",
+          "description": "تقديم تقارير شهرية تثبت مقدار التوفير المالي والانبعاثات المخفضة، مما يسمح بتسعير الخدمة كنسبة من التوفير المحقق بدل بيع برنامج فقط.",
+          "icon": "chart-line",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "3200+ (Industrial Energy Consumption, Energy Audit & Equipment Efficiency Benchmarks)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "المصانع غالباً تقيس فاتورة الطاقة الإجمالية ولا تعرف أين يحدث الهدر داخل خطوط الإنتاج.",
+        "أنظمة إدارة الطاقة الصناعية مكلفة ومعقدة، وغالباً مصممة للشركات الكبرى فقط.",
+        "ضعف وجود فرق داخلية متخصصة في كفاءة الطاقة والـ Industrial IoT.",
+        "الاعتماد على صيانة تفاعلية بعد الأعطال بدل الصيانة التنبؤية.",
+        "غياب نموذج تجاري جذاب يجعل المصنع يدفع بناءً على التوفير الفعلي وليس وعوداً نظرية."
+      ],
+      "recommended_tech_stack": [
+        "Industrial IoT Sensors",
+        "Energy Management Systems (EMS)",
+        "Machine Learning for Load Optimization",
+        "Predictive Maintenance Models",
+        "SCADA / PLC Integrations",
+        "Carbon Accounting Layer",
+        "Digital Twin for Production Lines"
+      ],
+      "main_risk_index": "تعقيد التكامل الصناعي؛ المصانع تختلف في المعدات وأنظمة التحكم، لذلك يحتاج المشروع إلى فريق ميداني قوي وشراكات مع مزودي الأتمتة الصناعية. الخطر الأكبر ليس في التقنية فقط، بل في إثبات توفير مالي سريع خلال 3-6 أشهر لإقناع الإدارة بالاستمرار."
+    }
+  }
+}

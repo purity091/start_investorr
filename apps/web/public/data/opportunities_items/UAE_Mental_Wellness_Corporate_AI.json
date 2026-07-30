@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-UAE-2026-WELL",
+      "status_label": "تحليل استخباري لرفاهية رأس المال البشري",
+      "category_tag": "الصحة الرقمية (HR-Tech / Mental Health AI)",
+      "business_model": "B2B (Enterprise SaaS)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "HealthTech",
+      "Corporate Wellness",
+      "Affective Computing",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Dubai", "flag": "🇦🇪" },
+        { "name": "Abu Dhabi", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "نظام الإنذار المبكر للاحتراق الوظيفي",
+      "problem_statement": "تعتبر بيئات العمل في دبي وأبوظبي من الأكثر تنافسية عالمياً، مما أدى لارتفاع معدلات 'الاحتراق الوظيفي' (Burnout) إلى 45% بين الموظفين. الشركات تخسر مليارات الدراهم سنوياً نتيجة انخفاض الإنتاجية والدوران الوظيفي. الحلول الحالية (جلسات التأمل العامة) لا تعالج جذور المشكلة، ويفتقر المدراء لأدوات تعتمد على البيانات للتنبؤ بالإجهاد النفسي للفريق قبل وقوعه، مع الحفاظ على الخصوصية المطلقة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "MindGuard",
+        "industry_tag": "الذكاء الاصطناعي العاطفي (Affective AI)",
+        "revenue_model": "Annual License per Employee + Executive Insight Reports + Clinical Referral Fees",
+        "action_text": "مراجعة مصفوفة تحسين الإنتاجية وتقليل التغيب المرضي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الرفاهية المؤسسية (0-12 شهر)",
+      "subtitle": "تحويل ثقافة العمل من التفاعل إلى الاستباقية",
+      "phases": [
+        {
+          "title": "تحليل النبض النفسي (Passive Sentiment Analysis)",
+          "description": "دمج أدوات تحليل المشاعر (بشكل مجهول) مع منصات التواصل الداخلي (Slack/Teams) لرصد مستويات التوتر العام في الأقسام دون كشف هوية الأفراد، باستخدام NLP متخصص في سياقات العمل.",
+          "icon": "chart-bar",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "المساعد الرقمي الشخصي (Confidential AI Coach)",
+          "description": "توفير مساعد ذكي لكل موظف يقدم نصائح مخصصة لإدارة التوتر بناءً على نمط عمله، مع توفير واجهة دردشة آمنة مدربة على بروتوكولات العلاج المعرفي السلوكي (CBT).",
+          "icon": "chat-alt",
+          "color_theme": "rose"
+        },
+        {
+          "title": "لوحة القيادة القيادية (Leadership Insights)",
+          "description": "تزويد إدارات الموارد البشرية بتقارير تنبؤية حول 'صحة الثقافة المؤسسية'، مما يسمح بتعديل أعباء العمل والسياسات بناءً على مؤشرات حقيقية بدلاً من التخمين.",
+          "icon": "presentation-chart-line",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.2,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 8.6,
+      "data_points_analyzed": "2800+ (Employee Surveys & HR Performance Metrics)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الوصمة الاجتماعية التي تمنع الموظفين من طلب الدعم النفسي المباشر.",
+        "مخاوف الموظفين من تأثير الإفصاح عن الضغوط على مستقبلهم الوظيفي.",
+        "ضعف قدرة الحلول التقليدية على التوسع لتغطية آلاف الموظفين بلغات متعددة.",
+        "الافتقار إلى الربط بين الصحة النفسية ومخرجات العمل المادية (ROI)."
+      ],
+      "recommended_tech_stack": [
+        "Natural Language Processing (NLP) for Sentiment",
+        "Differential Privacy Algorithms (حماية الهوية)",
+        "Generative AI for Personalized Coaching",
+        "API Integration with HRIS Systems",
+        "End-to-End Zero-Knowledge Encryption"
+      ],
+      "main_risk_index": "ثقة المستخدم؛ النجاح يعتمد كلياً على إثبات أن البيانات مجهولة تماماً ولا يمكن لصاحب العمل استخدامها ضد الموظف."
+    }
+  }
+}

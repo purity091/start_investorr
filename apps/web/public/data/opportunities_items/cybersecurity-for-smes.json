@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-TECH-2026-CYBER-SME",
+      "status_label": "تحليل استخباري لحماية العمود الفقري للاقتصاد",
+      "category_tag": "الأمن السيبراني (Cybersecurity / MSSP)",
+      "business_model": "Subscription (Per-Endpoint) + Automated Defense",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Cybersecurity",
+      "Managed Services",
+      "Infrastructure Protection"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Jordan", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 6
+    },
+    "core_content": {
+      "title": "الأمن السيبراني المدار للمنشآت الصغيرة والمتوسطة",
+      "problem_statement": "تتعرض المنشآت الصغيرة والمتوسطة لـ 43% من الهجمات السيبرانية، لكن 60% منها تنهار بعد هجمة واحدة ناجحة نتيجة نقص الميزانيات والخبرات. الحلول الحالية مصممة للشركات الكبرى بأسعار فلكية، مما يترك الملايين من الشركات الصغيرة 'مكشوفة'، وهو ما يهدد سلاسل الإمداد الوطنية بالكامل."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "SME-Shield",
+        "industry_tag": "الدفاع السيبراني المؤتمت والمدار",
+        "revenue_model": "Low-cost Monthly Subscription + Breach Insurance Integration + SOC-as-a-Service",
+        "action_text": "استعراض نظام الحماية الذي يعمل بذكاء اصطناعي دون تدخل بشري"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الدرع الرقمي (0-12 شهر)",
+      "subtitle": "أمن بمستوى عسكري وتكلفة اقتصادية",
+      "phases": [
+        {
+          "title": "تطوير عميل الحماية الخفيف (Lightweight EDR)",
+          "description": "برمجية ذكية تُثبت على أجهزة الموظفين تقوم برصد الهجمات (Ransomware) وتجميدها لحظياً باستخدام الذكاء الاصطناعي دون استهلاك موارد الجهاز.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "مركز العمليات المؤتمت (AI-SOC)",
+          "description": "بناء منصة سحابية مركزية تعالج التنبيهات من آلاف الشركات الصغيرة آلياً، وتتدخل بشرياً فقط في الحالات الحرجة، مما يقلل التكاليف بنسبة 80%.",
+          "icon": "view-grid",
+          "color_theme": "rose"
+        },
+        {
+          "title": "برنامج التوعية والامتثال الرقمي",
+          "description": "دمج أدوات تدريبية للموظفين واختبارات اختراق دورية مؤتمتة لضمان توافق الشركة مع المعايير الوطنية للأمن السيبراني.",
+          "icon": "academic-cap",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "5000+ Regional Cyber Incident Reports"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة الرأسمالية العالية لبناء فرق أمنية داخلية.",
+        "ندرة الكوادر البشرية المتخصصة في الأمن السيبراني محلياً.",
+        "تعقيد المنتجات الأمنية العالمية التي تتطلب إعدادات متقدمة.",
+        "عدم إدراك أصحاب الشركات الصغيرة لحجم الخطر الحقيقي."
+      ],
+      "recommended_tech_stack": [
+        "Zero Trust Architecture",
+        "AI-driven EDR (Endpoint Detection & Response)",
+        "Cloud-native Firewall",
+        "Automated Patch Management",
+        "Threat Intelligence Feeds"
+      ],
+      "main_risk_index": "المسؤولية القانونية؛ ضمان دقة النظام في منع الهجمات بنسبة قريبة من الكمال هو المفتاح لكسب ثقة أصحاب الأعمال والجهات التأمينية."
+    }
+  }
+}

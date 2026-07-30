@@ -1,0 +1,82 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-LOG12",
+      "status_label": "تحليل فجوة سلاسل توريد الرحلات البحرية",
+      "category_tag": "Maritime / Logistics / Cruise-Industry",
+      "business_model": "SaaS Platform Fee + Procurement Margin + Last-mile Delivery Fee",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Logistics",
+      "Maritime",
+      "Hospitality"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Red Sea (NEOM/Jeddah Cruises)", "flag": "🇸🇦" },
+        { "name": "Abu Dhabi & Dubai (Global Cruise Hubs)", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "لوجستيات الأفق الأزرق: أتمتة توريد الكروز",
+      "problem_statement": "تتوسع السياحة البحرية (Cruises) في البحر الأحمر والخليج بشكل هائل، لكن توريد آلاف الأطنان من الأغذية والمواد لمدن عائمة في وقت قصير يمثل كابوساً لوجستياً. الفجوة هي منصة أتمتة تربط الموانئ، الموردين المحليين، وسفن الكروز بنظام 'الطلب اللحظي' (Just-in-Time) لضمان التوريد السلس والامتثال للمعايير البحرية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Cruise-Chain",
+        "industry_tag": "تكنولوجيا اللوجستيات البحرية والضيافة العائمة",
+        "revenue_model": "Subscription per Ship + Marketplace Fee for Local Suppliers + Data Analytics for Demand Prediction",
+        "action_text": "استعراض محرك توريد أكبر سفن العالم في الموانئ العربية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المحيط الرقمي (0-36 شهر)",
+      "subtitle": "تحميل السفن بذكاء، وبسرعة قياسية",
+      "phases": [
+        {
+          "title": "بوابة الموردين المحليين (Port-Supplier Hub)",
+          "description": "تأهيل الموردين العرب (مزارع، مصانع أغذية) للالتزام بالمعايير العالمية لسفن الكروز وربطهم بنظام طلب آلي.",
+          "icon": "shopping-cart",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التنبؤ بالحمولة (Supply-Forecast AI)",
+          "description": "تحليل مسار السفينة وعدد الركاب للتنبؤ باحتياجاتها قبل وصولها للميناء بـ 48 ساعة وتجهيز الشحنات مسبقاً.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نظام التوصيل 'تحت الرافعات' (Last-Meter-Logistics)",
+          "description": "أتمتة عملية نقل المواد من المخازن إلى داخل السفينة باستخدام روبوتات وشاحنات ذاتية القيادة مخصصة للموانئ.",
+          "icon": "truck",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Growth of Cruise Tourism in Middle East vs Availability of Specialized Port Supply Tech"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التعقيد الهائل في تلبية آلاف الطلبات المتنوعة في نافذة زمنية ضيقة جداً (ساعات).",
+        "نقص الموردين المحليين القادرين على تلبية معايير الجودة والكمية للسفن العالمية.",
+        "غياب الربط الرقمي بين أنظمة إدارة السفن (Ship-ERP) وأنظمة الموانئ المحلية.",
+        "التحديات الجمركية والرقابية لتوريد المواد للسفن الدولية في المياه الإقليمية."
+      ],
+      "recommended_tech_stack": [
+        "Real-time Inventory Sync (API-first)",
+        "AI for Demand Forecasting",
+        "Blockchain for Supply Chain Transparency",
+        "Autonomous Delivery Robots",
+        "Environmental Compliance Tracking (ESG)"
+      ],
+      "main_risk_index": "دقة التوريد؛ أي تأخير في توريد مادة أساسية قد يسبب مشكلة لآلاف الركاب، مما يتطلب نظام 'موردين بدلاء' (Backup Suppliers) نشط دائماً."
+    }
+  }
+}

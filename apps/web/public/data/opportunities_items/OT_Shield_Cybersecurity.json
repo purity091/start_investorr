@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-CYBER-2026-OTS",
+      "status_label": "تحليل استخباري للأمن السيبراني الصناعي",
+      "category_tag": "الأمن السيبراني (OT/ICS Security)",
+      "business_model": "SaaS Subscription + Managed Security Services",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Cybersecurity",
+      "Operational Technology (OT)",
+      "Critical Infrastructure",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Kuwait", "flag": "🇰🇼" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "حماية البنية التحتية الحيوية من الهجمات المادية",
+      "problem_statement": "مع تحول المدن والمصانع إلى أنظمة ذكية، أصبحت 'التقنيات التشغيلية' (OT) التي تدير محطات الطاقة والتحلية والنفط أهدافاً رئيسية للهجمات السيبرانية. حلول الأمن التقليدية (IT Security) لا تحمي هذه الأصول، وأي اختراق قد يؤدي إلى كوارث مادية أو توقف كامل للحياة في مدن كبرى."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "OT-Shield",
+        "industry_tag": "أمن الأنظمة الصناعية والتحكم (ICS)",
+        "revenue_model": "Monthly Protection License + Incident Response Retainer + Compliance SaaS",
+        "action_text": "مراجعة تقييم مخاطر الأمن السيبراني للقطاع الصناعي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الصمود السيبراني (0-12 شهر)",
+      "subtitle": "تأمين القلب النابض للصناعة والطاقة",
+      "phases": [
+        {
+          "title": "محرك الرصد السلبي (Passive Visibility)",
+          "description": "بناء نظام يرصد جميع الاتصالات داخل الشبكة الصناعية دون التأثير على عمل الماكينات، لاكتشاف أي سلوك غير طبيعي أو محاولة اختراق في مهدها.",
+          "icon": "eye",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "طبقة الحماية الاستباقية (Industrial Firewall)",
+          "description": "نشر جدران حماية مخصصة للبروتوكولات الصناعية (Modbus, Profinet) تمنع تنفيذ أي أوامر ضارة قد تسبب تلفاً مادياً للمعدات.",
+          "icon": "shield-exclamation",
+          "color_theme": "rose"
+        },
+        {
+          "title": "مركز الاستجابة المؤتمت (AI-SOC)",
+          "description": "تفعيل مركز عمليات أمنية يعتمد على الذكاء الاصطناعي لعزل الأجزاء المصابة من المصنع تلقائياً ومنع انتشار الهجوم لباقي الشبكة الوطنية.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "1500+ (Regional Cyber Threat Intelligence Reports)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الفجوة المعرفية بين مهندسي الصناعة وخبراء أمن المعلومات.",
+        "تقادم الأنظمة الصناعية (Legacy Systems) التي لم تُصمم لتكون متصلة بالإنترنت.",
+        "ارتفاع تكلفة حلول الأمن العالمية وصعوبة تخصيصها للبيئة المحلية.",
+        "الحاجة لضمان استمرارية العمل (Zero Downtime) أثناء تركيب حلول الأمن."
+      ],
+      "recommended_tech_stack": [
+        "Deep Packet Inspection (DPI) for Industrial Protocols",
+        "Anomaly Detection (Machine Learning)",
+        "Cyber-Physical System Modeling",
+        "Air-gap Security Architecture",
+        "Identity & Access Management (IAM) for OT"
+      ],
+      "main_risk_index": "التبعية التقنية؛ التحدي يكمن في بناء حل 'سيادي' لا يعتمد على خوارزميات خارجية قد تحتوي على أبواب خلفية، لضمان استقلال القرار الأمني الوطني."
+    }
+  }
+}

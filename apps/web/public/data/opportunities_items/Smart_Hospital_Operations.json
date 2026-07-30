@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-HEALTH-2026-OPS",
+      "status_label": "تحليل استخباري للكفاءة التشغيلية الصحية",
+      "category_tag": "الإدارة الصحية (Digital Twin / AI Ops)",
+      "business_model": "B2B SaaS (Enterprise License)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Health Operations",
+      "Hospital Management",
+      "Patient Experience"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Jordan", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 6
+    },
+    "core_content": {
+      "title": "إدارة العمليات في المستشفيات الذكية وتحسين تدفق المرضى",
+      "problem_statement": "تعاني المستشفيات الكبرى من اختناقات تشغيلية؛ فترات انتظار طويلة في الطوارئ، سوء إدارة لأسرة التنويم، وعدم كفاءة في جدولة غرف العمليات. هذه المشاكل لا ترهق الكوادر الطبية فحسب، بل تؤدي لخسارة إيرادات تصل لـ 20% سنوياً نتيجة 'الوقت الضائع' والموارد غير المستغلة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Mustashfa-Optima",
+        "industry_tag": "محرك تحسين كفاءة المستشفيات",
+        "revenue_model": "Annual SaaS Fee + Performance-based Bonus (linked to efficiency gains)",
+        "action_text": "استعراض نموذج تقليل وقت انتظار المرضى بنسبة 30%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المستشفى الرقمي (0-18 شهر)",
+      "subtitle": "تحويل الإدارة الصحية من التفاعل إلى التنبؤ",
+      "phases": [
+        {
+          "title": "بناء التوأم الرقمي للمستشفى (Digital Twin)",
+          "description": "إنشاء نموذج رقمي حي يحاكي تدفق المرضى، الممرضين، والمعدات داخل المستشفى لرصد الاختناقات فور وقوعها.",
+          "icon": "map",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "الجدولة الذكية القائمة على الذكاء الاصطناعي",
+          "description": "تطوير خوارزمية تقوم بجدولة العمليات والفحوصات بناءً على أولوية الحالة، توافر الأطباء، وتجهيز الغرف، مما يقلل أوقات الفراغ.",
+          "icon": "calendar",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نظام تتبع الأصول والبشر (RTLS)",
+          "description": "استخدام حساسات تتبع المواقع للحظي للأجهزة الطبية والكوادر، لضمان وصول المعدات المطلوبة لغرفة الطوارئ في أسرع وقت.",
+          "icon": "location-marker",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "2500+ (Hospital Patient Flow Logs & Operational Costs)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد على أنظمة إدارة قديمة (Legacy Systems) غير مترابطة.",
+        "مقاومة الطواقم الإدارية والطبية لتغيير آليات العمل التقليدية.",
+        "صعوبة دمج البيانات الضخمة من أقسام مختلفة في واجهة واحدة.",
+        "التركيز التاريخي على 'العلاج' بدلاً من 'كفاءة التشغيل'."
+      ],
+      "recommended_tech_stack": [
+        "Digital Twin Simulation Software",
+        "AI for Operations Research",
+        "RTLS (Real-time Location Systems)",
+        "Predictive Analytics Dashboard",
+        "Integration APIs for HIS/RIS"
+      ],
+      "main_risk_index": "دقة البيانات؛ نجاح النظام يعتمد كلياً على جودة وتوفر البيانات التاريخية واللحظية من كافة أقسام المستشفى."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-EDAI2",
+      "status_label": "تحليل فجوة المناهج الرقمية التفاعلية",
+      "category_tag": "التعليم الرقمي (Digital Curriculum)",
+      "business_model": "B2G Licensing + B2B Content Platforms",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Education",
+      "K-12",
+      "Digital Curriculum"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Jordan", "flag": "🇯🇴" },
+        { "name": "Morocco", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 8
+    },
+    "core_content": {
+      "title": "تحويل المناهج المدرسية إلى تجربة تعليمية تفاعلية رقمية",
+      "problem_statement": "لا تزال معظم المناهج العربية تعتمد على الكتب الورقية والتلقين، مع غياب شبه كامل للمحتوى التفاعلي (Simulation, Gamification, Visual Learning). هذا يؤدي إلى ضعف الفهم العملي وانخفاض engagement لدى الطلاب. رغم وجود مبادرات رقمية، إلا أنها غالباً سطحية وغير مترابطة أو غير متوافقة مع المناهج الرسمية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "CurricuLab",
+        "industry_tag": "المحتوى التعليمي التفاعلي",
+        "revenue_model": "Government Contracts + Licensing per Student",
+        "action_text": "استعراض تحويل درس تقليدي إلى تجربة تفاعلية كاملة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة رقمنة المناهج (0-18 شهر)",
+      "subtitle": "من كتاب جامد إلى تجربة تفاعلية",
+      "phases": [
+        {
+          "title": "تحليل وتحويل المناهج الحالية",
+          "description": "تفكيك المناهج إلى وحدات معرفية وتحويلها إلى محتوى بصري وتفاعلي.",
+          "icon": "layers",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء محرك تفاعل (Interactive Engine)",
+          "description": "إنشاء بيئة تعليمية تعتمد على المحاكاة والألعاب لشرح المفاهيم المعقدة.",
+          "icon": "gamepad",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التكامل مع الأنظمة التعليمية الحكومية",
+          "description": "ربط المنصة بأنظمة المدارس لضمان الاستخدام الرسمي والمتابعة.",
+          "icon": "network",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.2,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 8.7,
+      "data_points_analyzed": "1800+ (Student Engagement & Performance Metrics)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تكلفة إنتاج المحتوى التفاعلي عالية جداً.",
+        "بطء تحديث المناهج الحكومية.",
+        "نقص الخبرات التي تجمع بين التعليم والتكنولوجيا.",
+        "غياب معايير موحدة للمحتوى الرقمي."
+      ],
+      "recommended_tech_stack": [
+        "Interactive WebGL Simulations",
+        "Game-based Learning Engines",
+        "Content Management Systems (CMS)",
+        "Learning Experience Platforms (LXP)",
+        "Cloud-based Delivery Systems"
+      ],
+      "main_risk_index": "تعقيد التعاقدات الحكومية؛ دورات البيع طويلة وتتطلب علاقات قوية مع وزارات التعليم."
+    }
+  }
+}

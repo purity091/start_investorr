@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-MKT08",
+      "status_label": "تحليل فجوة تحسين معدل التحويل السلوكي",
+      "category_tag": "MarTech / Behavioral-Science / AI",
+      "business_model": "Performance-based Fee (% of Sales Increase) + Monthly SaaS Fee + Training",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Marketing",
+      "Psychology",
+      "Artificial Intelligence"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Egypt & Jordan (E-commerce Growth)",
+          "flag": "🇪🇬"
+        },
+        {
+          "name": "GCC (High Purchase Power)",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "محرك التحويل: تحليل الأنماط الشرائية العربية",
+      "problem_statement": "تستخدم المتاجر الإلكترونية العربية أدوات تحسين تحويل (CRO) غربية لا تراعي 'السلوك الشرائي العربي' (مثل التردد العالي قبل الدفع، الاعتماد على واتساب للاستفسار، والشك في سياسات الإرجاع). الفجوة هي محرك AI يحلل رحلة المستخدم العربي ويقترح تعديلات لحظية (مثل تغيير لون الزر، إضافة ثقة عبر واتساب) تزيد المبيعات بناءً على سيكولوجية المستهلك المحلي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Iqna-Behavioral",
+        "industry_tag": "تكنولوجيا الإقناع الرقمي وسيكولوجية المستهلك العربي",
+        "revenue_model": "Monthly License for E-shops + Success Fee on Conversion Uplift + Behavioral Audit Consulting",
+        "action_text": "استعراض العلم الذي سيزيد مبيعات متجرك الإلكتروني فوراً"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الإقناع الرقمي (0-24 شهر)",
+      "subtitle": "فهم العقل العربي، لبيع أذكى",
+      "phases": [
+        {
+          "title": "بناء 'مستودع السلوكيات' (Behavioral-Atlas)",
+          "description": "جمع وتحليل بيانات مجهولة الهوية لملايين العمليات الشرائية العربية لتحديد نقاط 'الاحتكاك' النفسي (Friction points) الشائعة.",
+          "icon": "presentation-chart-line",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام الاختبارات المتعددة (A/B Testing for Arabs)",
+          "description": "توفير أداة تجري آلاف الاختبارات على واجهة المستخدم لاختيار الكلمات والصور التي تثير أعلى مستويات الثقة لدى المستخدم المحلي.",
+          "icon": "refresh",
+          "color_theme": "rose"
+        },
+        {
+          "title": "محرك 'الثقة اللحظية' (Social-Proof-AI)",
+          "description": "دمج أدوات تظهر 'أدلة اجتماعية' حقيقية (مثل: 5 أشخاص من الرياض اشتروا هذا الآن) بأسلوب يتماشى مع قيم الصدق العربية.",
+          "icon": "heart",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Abandoned Cart Rates in MENA vs Effectiveness of Culturally-relevant Trust Signals"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد على ترجمة حرفية لمفاهيم التسويق الغربية دون تبييئها.",
+        "نقص البيانات المفتوحة حول سلوك المستخدمين العرب عبر الأجهزة المختلفة.",
+        "تعقيد عملية 'الدفع عند الاستلام' التي تغير مسار التحويل التقليدي.",
+        "الحاجة لمزيج من خبرة علم النفس والبرمجة والماركتينج."
+      ],
+      "recommended_tech_stack": [
+        "Behavioral Analytics Engine (Heatmaps/Replays)",
+        "Machine Learning for Propensity Modeling",
+        "Real-time Personalization APIs",
+        "Natural Language Generation for Persuasive Copy",
+        "Multi-variate Testing Frameworks"
+      ],
+      "main_risk_index": "دقة البيانات؛ الاعتماد على بيانات ملوثة (Noise) قد يؤدي لتوصيات خاطئة، مما يتطلب نظام 'تطهير بيانات' (Data Cleaning) متطور."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-PROP-2026-FRACTIONAL",
+      "status_label": "تحليل استخباري لدمقرطة الثروة العقارية",
+      "category_tag": "التقنية العقارية (PropTech / Blockchain)",
+      "business_model": "Marketplace + Management Fee + Secondary Market Trading",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "PropTech",
+      "FinTech",
+      "Asset Tokenization"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Dubai (PropTech Hub)", "flag": "🇦🇪" },
+        { "name": "Riyadh (KAFD Integration)", "flag": "🇸🇦" },
+        { "name": "Global Investors", "flag": "🌍" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "منصات الملكية العقارية المجزأة والتمويل الجماعي",
+      "problem_statement": "الاستثمار العقاري في المدن الكبرى أصبح حلماً بعيد المنال للطبقة المتوسطة نتيجة الأسعار الفلكية. في عام 2026، تبرز منصات الملكية المجزأة كحل يتيح للمستثمر امتلاك حصة في برج تجاري أو شقة فاخرة بمبلغ يبدأ من 500 دولار، مع الحصول على عوائد إيجارية وتسييل الحصص عبر سوق ثانوي رقمي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Milkiya-Digital",
+        "industry_tag": "منصة الاستثمار العقاري المرمز (Tokenized)",
+        "revenue_model": "Listing Fee + 1-2% Management Fee + Exit Commission",
+        "action_text": "استعراض خطة التوسع في سوق دبي الذي يجذب 300 مليون دولار استثمارات بروبتيك"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق السيولة العقارية (0-12 شهر)",
+      "subtitle": "حول العقار إلى سهم رقمي قابل للتداول",
+      "phases": [
+        {
+          "title": "ترخيص وهيكلة المحافظ العقارية",
+          "description": "الحصول على تراخيص هيئات أسواق المال (مثل سلطة دبي للخدمات المالية) وتأسيس شركات غرض خاص (SPV) لكل عقار.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء نظام التداول بالبلوكشين",
+          "description": "تطوير منصة تتيح ترميز الأصول (Tokenization) لضمان شفافية الملكية وتسهيل عمليات البيع والشراء اللحظية بين المستخدمين.",
+          "icon": "link",
+          "color_theme": "rose"
+        },
+        {
+          "title": "أتمتة توزيع العوائد (Smart Dividends)",
+          "description": "استخدام العقود الذكية لجمع الإيجارات وتوزيع الأرباح على آلاف المستثمرين تلقائياً بنسبة ملكيتهم دون تدخل بشري.",
+          "icon": "cash",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "Maturity of fractional platforms like Stake in Dubai"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تعقيد إجراءات نقل الملكية القانونية لعدد كبير من الملاك الصغار.",
+        "غياب الأسواق الثانوية السائلة لبيع الحصص قبل عام 2024.",
+        "الحاجة لثقة عالية وتدقيق مستمر لقيمة الأصول العقارية.",
+        "مخاوف المستثمرين من تكاليف الصيانة والإدارة غير الواضحة."
+      ],
+      "recommended_tech_stack": [
+        "Blockchain (Ethereum L2/Polygon)",
+        "Smart Contracts for Governance",
+        "AI for Property Valuation Analytics",
+        "Digital ID Integration (UAE Pass / Absher)",
+        "Automated Tax/Zakat calculation"
+      ],
+      "main_risk_index": "المخاطر التشريعية؛ تغيير قوانين ملكية الأجانب أو الضرائب العقارية قد يؤثر على جاذبية المنصة للمستثمرين الدوليين."
+    }
+  }
+} 

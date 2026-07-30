@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-HEALTH-2026-MENTAL",
+      "status_label": "تحليل استخباري لرفاهية رأس المال البشري",
+      "category_tag": "الصحة النفسية (HR-Tech / Mental Wellness)",
+      "business_model": "B2B SaaS (Enterprise License)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Psychology",
+      "Corporate Wellness",
+      "Tele-therapy"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Dubai", "flag": "🇦🇪" },
+        { "name": "Riyadh", "flag": "🇸🇦" },
+        { "name": "Doha", "flag": "🇶🇦" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "منصات الصحة النفسية الرقمية وحلول الرفاهية للمؤسسات",
+      "problem_statement": "تخسر الشركات في مراكز الأعمال الكبرى مليارات الدولارات سنوياً نتيجة 'الاحتراق الوظيفي' وانخفاض الإنتاجية المرتبط بالصحة النفسية. الموظفون يخشون طلب المساعدة بسبب الوصمة الاجتماعية، والحلول الحالية (التأمين التقليدي) لا تغطي الجلسات النفسية بشكل كافٍ أو سري. هناك حاجة لمنصة رقمية مجهولة الهوية بالكامل توفر دعماً نفسياً فورياً عبر الذكاء الاصطناعي وجلسات فيديو مع أخصائيين يفهمون السياق الثقافي العربي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Nafas-Work",
+        "industry_tag": "الرفاهية النفسية المؤسسية",
+        "revenue_model": "Per-Employee Subscription (Annual) + Specialized Workshop Fees + Clinical Referrals",
+        "action_text": "استعراض عائد الاستثمار (ROI) من تحسين الرفاهية النفسية للموظفين"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الصحة الوجدانية (0-12 شهر)",
+      "subtitle": "بيئة عمل صحية، إنتاجية مستدامة",
+      "phases": [
+        {
+          "title": "محرك التقييم المجهول (Privacy-First Assessment)",
+          "description": "تطوير أدوات تقييم دورية تعتمد على الذكاء الاصطناعي لتحليل مستوى التوتر والرضا لدى الموظفين بشكل جماعي ومجهول، لإعطاء الإدارة نظرة شاملة دون كشف الأفراد.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "المساعد النفسي الذكي (AI Wellness Coach)",
+          "description": "توفير واجهة دردشة مدربة على بروتوكولات العلاج المعرفي السلوكي (CBT) لتقديم الدعم الأولي الفوري والتمارين السلوكية للموظفين على مدار الساعة.",
+          "icon": "chat-alt-2",
+          "color_theme": "rose"
+        },
+        {
+          "title": "شبكة المعالجين المختصين (Tele-Therapy)",
+          "description": "ربط الموظفين بأخصائيين نفسيين مرخصين عبر جلسات فيديو آمنة، مع التركيز على مطابقة الموظف بالمعالج الأنسب بناءً على نوع الضغط الوظيفي والثقافة.",
+          "icon": "user-group",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.2,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 8.7,
+      "data_points_analyzed": "3000+ (Employee Turnover Rates & Burnout Surveys)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الوصمة الاجتماعية المرتبطة بزيارة الطبيب النفسي.",
+        "مخاوف الموظفين من تأثير الحالة النفسية على تقييمهم الوظيفي.",
+        "ندرة الأخصائيين النفسيين العرب المتخصصين في بيئات العمل عالية الضغط.",
+        "صعوبة قياس الأثر المادي المباشر لبرامج الصحة النفسية التقليدية."
+      ],
+      "recommended_tech_stack": [
+        "NLP for Sentiment Analysis",
+        "E2E Encryption for Confidentiality",
+        "Behavioral Analytics Engine",
+        "Video Conferencing APIs",
+        "Gamification for wellness engagement"
+      ],
+      "main_risk_index": "الثقة والخصوصية؛ أي خرق لسرية الموظف سيؤدي لدمار المنصة فوراً، لذا فإن بناء نظام أمني بمستوى عسكري هو حجر الزاوية."
+    }
+  }
+}

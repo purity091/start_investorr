@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-DEEP-2026-CLD06",
+      "status_label": "تحليل فجوة البنية التحتية للحوسبة الموزعة",
+      "category_tag": "Edge Computing / Infrastructure",
+      "business_model": "Compute-as-a-Service + Infrastructure Leasing + Data Sovereignty Hosting",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Technology",
+      "Infrastructure",
+      "Cloud"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Mega Sites)", "flag": "🇸🇦" },
+        { "name": "Egypt (Remote Areas)", "flag": "🇪🇬" },
+        { "name": "Oman (Oil & Gas Fields)", "flag": "🇴🇲" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "سحابة الرمال: مراكز البيانات المعيارية المبردة ذاتياً",
+      "problem_statement": "تعاني مشاريع الطاقة والإنشاءات في عمق الصحراء من 'تأخير البيانات' (Latency) لغياب مراكز بيانات قريبة. مراكز البيانات التقليدية تنهار في الحرارة والغبار وتستهلك مياهاً ضخمة للتبريد. الفجوة هي وحدات حوسبة 'حافة' (Edge) معيارية ومدرعة، تعمل بالطاقة الشمسية وتستخدم تبريداً غامراً (Immersion Cooling) لا يحتاج لمياه."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sand-Compute",
+        "industry_tag": "البنية التحتية التقنية للمناطق الوعرة",
+        "revenue_model": "Managed Edge Compute Subscriptions + Private 5G Core Hosting + Data Localization Fees",
+        "action_text": "استعراض وحدة الحوسبة الصحراوية القادرة على تحمل 60 درجة مئوية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق السيادة الرقمية (0-24 شهر)",
+      "subtitle": "جلب السحابة إلى حيث لم تصل من قبل",
+      "phases": [
+        {
+          "title": "تصميم الحاوية المدرعة (Ruggedized Pod)",
+          "description": "بناء وحدات معيارية (Modular) محمية من العواصف الرملية والحرارة العالية، ومجهزة بنظام تبريد بالسوائل خامل كيميائياً.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "دمج الطاقة المتجددة المستقلة",
+          "description": "تزويد كل وحدة بألواح شمسية وبطاريات الحالة الصلبة لضمان التشغيل المستمر 24/7 دون الحاجة للشبكة القومية.",
+          "icon": "sun",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تفعيل برمجيات الحوسبة الموزعة",
+          "description": "ربط الوحدات المشتتة جغرافياً بشبكة موحدة تتيح معالجة البيانات الضخمة (AI/IoT) محلياً وإرسال النتائج فقط للسحابة المركزية.",
+          "icon": "share",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Latency Impact on Industrial AI vs Deployment Costs"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية جداً لصيانة الإلكترونيات الحساسة في بيئة الصحراء.",
+        "الاعتماد التاريخي على مراكز البيانات الضخمة في المدن الكبرى.",
+        "نقص حلول التبريد التي لا تستهلك مياه التحلية الغالية.",
+        "تحديات تأمين هذه الوحدات فيزيائياً في المواقع المفتوحة."
+      ],
+      "recommended_tech_stack": [
+        "Single-phase Immersion Cooling",
+        "Solar PV + Solid-state Batteries",
+        "Kubernetes for Edge Orchestration",
+        "LoRaWAN & Private 5G Integration",
+        "AI for Predictive Maintenance of Hardware"
+      ],
+      "main_risk_index": "المخاطر التشغيلية؛ تراكم الغبار على الألواح الشمسية وتأثيره على كفاءة الطاقة يتطلب أنظمة تنظيف آلي (Robotic Cleaning)."
+    }
+  }
+}

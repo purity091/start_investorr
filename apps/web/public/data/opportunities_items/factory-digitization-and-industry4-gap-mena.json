@@ -1,0 +1,82 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-IND5",
+      "status_label": "تحليل فجوة رقمنة المصانع والتحول نحو Industry 4.0",
+      "category_tag": "Industry 4.0 (Smart Factory / Industrial IoT)",
+      "business_model": "Industrial SaaS + IoT Hardware + Implementation Services",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Industry",
+      "Industry 4.0",
+      "Smart Factory"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Morocco", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 8
+    },
+    "core_content": {
+      "title": "منصة تحويل المصانع التقليدية إلى مصانع ذكية قابلة للقياس والتحسين",
+      "problem_statement": "لا تزال نسبة كبيرة من المصانع في المنطقة تعمل بأنظمة تشغيل تقليدية: سجلات ورقية، Excel، قرارات إنتاج تعتمد على الخبرة الشخصية، وغياب رؤية لحظية للأداء. هذا يجعل الإدارة لا تعرف بدقة: كم أنتجت الآلة؟ أين يحدث الاختناق؟ لماذا زاد الهدر؟ وما هو السبب الحقيقي لتأخير الطلبات؟ رقمنة المصنع ليست رفاهية؛ هي شرط أساسي لرفع الإنتاجية، خفض الهدر، تحسين الجودة، وجعل الصناعة قابلة للتصدير. تقارير UNIDO تؤكد أن الرقمنة والتكنولوجيا الصناعية أصبحت جزءاً مركزياً من السياسات الصناعية الحديثة، خصوصاً للدول التي تريد خلق وظائف إنتاجية وزيادة القيمة المضافة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "FactoryOS Arabia",
+        "industry_tag": "أنظمة المصانع الذكية والتحول الصناعي الرقمي",
+        "revenue_model": "SaaS Subscription + IoT Kit Sales + Implementation & Training Fees",
+        "action_text": "استعراض لوحة تشغيل لحظية تربط الآلات والعمال والإنتاج والجودة في نظام واحد"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة المصنع الذكي (0-18 شهر)",
+      "subtitle": "من مصنع لا يرى بياناته إلى مصنع يعمل كمنصة رقمية",
+      "phases": [
+        {
+          "title": "رقمنة خط إنتاج واحد كنقطة بداية",
+          "description": "اختيار خط إنتاج عالي الأهمية، تركيب حساسات بسيطة أو ربط PLC، وقياس الإنتاج والتوقف والهدر والجودة لحظياً."
+        },
+        {
+          "title": "توسيع نظام MES خفيف",
+          "description": "بناء طبقة Manufacturing Execution System بسيطة تربط أوامر الإنتاج، العمال، الآلات، المخزون، والجودة دون استبدال ERP الحالي."
+        },
+        {
+          "title": "التحسين الذكي والتنبؤ",
+          "description": "بعد تجميع البيانات، يتم تفعيل توصيات AI لتحسين الجداول، تقليل الاختناقات، توقع الأعطال، وتحسين استهلاك الطاقة."
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.3,
+      "data_points_analyzed": "3800+ (Factory Digitization, OEE, MES, Industrial IoT Adoption Benchmarks)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الحلول العالمية مثل MES وSCADA المتقدمة مكلفة ومعقدة للمصانع المتوسطة.",
+        "أصحاب المصانع يخافون من تعطيل الإنتاج أثناء التحول الرقمي.",
+        "غياب فرق داخلية قادرة على تشغيل وتحليل بيانات المصنع.",
+        "كثير من المصانع لا تعرف من أين تبدأ: ERP، حساسات، لوحة تحكم، أو أتمتة.",
+        "ضعف الربط بين التحول الرقمي والعائد المالي المباشر."
+      ],
+      "recommended_tech_stack": [
+        "Industrial IoT Gateways",
+        "Lightweight MES",
+        "PLC/SCADA Integration",
+        "OEE Dashboard",
+        "Time-series Databases",
+        "Edge Computing",
+        "AI Production Optimization",
+        "ERP Connector Layer"
+      ],
+      "main_risk_index": "مقاومة التغيير؛ المصنع لا يريد مشروعاً رقمياً نظرياً، بل نتيجة واضحة: إنتاج أعلى، توقف أقل، هدر أقل. يجب أن يبدأ المنتج بحل صغير قابل للقياس خلال 60-90 يوماً، لا بتحول شامل طويل."
+    }
+  }
+}

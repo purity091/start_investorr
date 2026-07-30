@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-EDAI1",
+      "status_label": "تحليل استخباري للتعليم الشخصي بالذكاء الاصطناعي",
+      "category_tag": "التعليم الرقمي (EdTech / AI Tutoring)",
+      "business_model": "SaaS (B2C Subscription) + B2B School Licensing",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Education",
+      "AI Tutoring",
+      "Personalized Learning"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 7
+    },
+    "core_content": {
+      "title": "مُعلم ذكي عربي يخصص المحتوى التعليمي لكل طالب",
+      "problem_statement": "يعتمد التعليم في العالم العربي على نموذج 'مقاس واحد للجميع'، حيث يتم تدريس نفس المحتوى بنفس الطريقة لجميع الطلاب رغم اختلاف مستوياتهم بشكل كبير. هذا يؤدي إلى فجوة تعليمية حادة؛ الطلاب المتفوقون يشعرون بالملل، والطلاب الأضعف يتخلفون تدريجياً حتى يخرجوا من النظام التعليمي. الحلول العالمية مثل GPT-based tutors لا تفهم المناهج العربية أو اللهجات، مما يجعلها غير دقيقة وغير موثوقة للاستخدام التعليمي الرسمي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Taalim-AI",
+        "industry_tag": "منصات التعليم الذكي المخصصة",
+        "revenue_model": "Monthly Subscription + School Contracts + API for EdTech Platforms",
+        "action_text": "استعراض تجربة تعلم مخصصة بالكامل لطالب عربي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التعليم الشخصي (0-12 شهر)",
+      "subtitle": "كل طالب لديه مسار تعلم خاص به",
+      "phases": [
+        {
+          "title": "بناء نموذج فهم المناهج العربية",
+          "description": "تدريب نموذج لغوي على المناهج الرسمية (السعودية، المصرية، الخليجية) مع ربط المفاهيم التعليمية ببنية معرفية قابلة للتخصيص.",
+          "icon": "book",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التخصيص (Adaptive Learning Engine)",
+          "description": "تحليل أداء الطالب لحظياً وتعديل مستوى الأسئلة والشرح تلقائياً لضمان أعلى معدل فهم.",
+          "icon": "cpu",
+          "color_theme": "rose"
+        },
+        {
+          "title": "دمج المدارس والمنصات التعليمية",
+          "description": "إتاحة API للمدارس والمنصات لدمج المعلم الذكي داخل أنظمتهم التعليمية الرسمية.",
+          "icon": "link",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "2500+ (Student Performance & Dropout Rates)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "عدم توفر نماذج AI مدربة على المناهج العربية بشكل دقيق.",
+        "ضعف البنية الرقمية في بعض المدارس الحكومية.",
+        "مقاومة التغيير من الأنظمة التعليمية التقليدية.",
+        "تكلفة تطوير أنظمة Adaptive Learning عالية تقنياً."
+      ],
+      "recommended_tech_stack": [
+        "Transformer-based LLMs (Arabic Fine-tuned)",
+        "Student Knowledge Graphs",
+        "Adaptive Learning Algorithms",
+        "Speech-to-Text Arabic Models",
+        "Mobile-first Learning Apps"
+      ],
+      "main_risk_index": "اعتماد رسمي من وزارات التعليم؛ دخول السوق يتطلب شراكات حكومية أو اعتماد أكاديمي لضمان التوسع السريع."
+    }
+  }
+}

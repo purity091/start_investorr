@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-LOG-2026-CLOUD-WH",
+      "status_label": "تحليل استخباري لمرونة سلاسل الإمداد الرقمية",
+      "category_tag": "التخزين (Robotic Warehousing / Fulfillment)",
+      "business_model": "Pay-as-you-grow (Storage SaaS) + Fulfillment Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "E-commerce",
+      "Warehousing",
+      "Robotics"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Riyadh", "flag": "🇸🇦" },
+        { "name": "Cairo", "flag": "🇪🇬" },
+        { "name": "Casablanca", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "مراكز التخزين السحابي والروبوتية لدعم التجارة الإلكترونية",
+      "problem_statement": "تواجه الشركات الناشئة والمتوسطة في التجارة الإلكترونية عائقاً ضخماً يتمثل في تكلفة استئجار وإدارة المستودعات، مما يستنزف سيولتها. المستودعات التقليدية تفتقر للأتمتة، مما يؤدي لبطء شديد في معالجة الطلبات وزيادة نسبة الأخطاء في الشحن. هناك حاجة لمنصة توفر 'تخزيناً سحابياً ملموساً' حيث يدفع التاجر فقط مقابل المساحة التي يشغلها، بينما تقوم الروبوتات بكافة عمليات الفرز والتغليف."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Makhzan-Cloud",
+        "industry_tag": "مراكز الوفاء الرقمي المؤتمتة",
+        "revenue_model": "Storage Fee per SKU + Pick & Pack Fee + Integration SaaS Subscription",
+        "action_text": "استعراض تقنية الروبوتات التي ترفع كفاءة التخزين بنسبة 300%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التخزين الذكي (0-18 شهر)",
+      "subtitle": "حول مخزنك إلى أصل رقمي مرن",
+      "phases": [
+        {
+          "title": "بناء المستودع الروبوتي الأول (Dark Store)",
+          "description": "تأسيس مركز توزيع يعتمد بالكامل على الروبوتات الأرضية (AGVs) لجلب المنتجات، مما يسمح باستغلال كامل لارتفاع المستودع وتقليل المساحات الضائعة.",
+          "icon": "chip",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منصة الربط السحابي (Integration API)",
+          "description": "تطوير برمجيات تربط متاجر (سلة، زد، شوبيفاي) مباشرة بالمستودع، ليتم شحن الطلب آلياً بمجرد إتمام العميل لعملية الشراء.",
+          "icon": "lightning-bolt",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التوسع عبر نموذج الامتياز اللوجستي",
+          "description": "تحويل المنصة إلى نموذج يسمح لأصحاب المستودعات التقليدية بتحويل مساحاتهم إلى 'مراكز سحابية' تابعة للشبكة باستخدام تقنيتنا.",
+          "icon": "share",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "3M+ E-commerce Order Logs"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة الرأسمالية العالية جداً للروبوتات (بدأت تنخفض في 2026).",
+        "تشتت التجار الصغار وصعوبة تقديم خدمات لوجستية موحدة لهم.",
+        "الحاجة لبرمجيات معقدة جداً لإدارة المخزون اللحظي لآلاف التجار في مكان واحد.",
+        "نقص الكوادر القادرة على صيانة وإدارة المستودعات المؤتمتة بالكامل."
+      ],
+      "recommended_tech_stack": [
+        "Automated Guided Vehicles (AGVs)",
+        "WMS (Warehouse Management System) with AI Optimization",
+        "IoT for Asset Tracking",
+        "Cloud-native APIs",
+        "Computer Vision for Quality Control"
+      ],
+      "main_risk_index": "مخاطر التكنولوجيا؛ أي عطل في النظام البرمجي المركزي قد يوقف آلاف المتاجر عن الشحن، مما يتطلب بنية تحتية سحابية فائقة الموثوقية."
+    }
+  }
+}

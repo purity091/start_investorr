@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-HOS10",
+      "status_label": "تحليل فجوة التخصيص الفندقي عبر الـ IoT",
+      "category_tag": "Hospitality / IoT / Smart-Room",
+      "business_model": "Hardware-as-a-Service (Leasing) + Maintenance SaaS + Energy Efficiency Share",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Hospitality",
+      "Smart Cities",
+      "Information Technology"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "GCC High-end Hotels",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "New Megaprojects (NEOM/Red Sea)",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "الجناح البديهي: غرف فندقية ذكية مخصصة للضيف العربي",
+      "problem_statement": "تستخدم الفنادق أنظمة IoT عامة لا تفهم احتياجات الضيف العربي الخاصة (مثل مواقيت الصلاة، اتجاه القبلة التفاعلي، روائح البخور المفضلة، أو تفضيلات الحرارة والخصوصية العالية). الفجوة هي نظام 'ذكاء مكاني' متكامل داخل الغرفة يتعرف على الضيف فور دخوله ويضبط البيئة بالكامل لتناسب هويته وثقافته تلقائياً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sakan-Smart",
+        "industry_tag": "تكنولوجيا الغرف الفندقية وتجربة الضيف الغامرة",
+        "revenue_model": "Subscription per Smart-Room + Energy Saving Commission + Up-sell Platform Share",
+        "action_text": "استعراض تكنولوجيا الغرفة الفندقية الأكثر ذكاءً في العالم العربي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الغرفة المستجيبة (0-36 شهر)",
+      "subtitle": "رفاهية تفهمك، دون أن تنطق بكلمة",
+      "phases": [
+        {
+          "title": "نشر طبقة الـ IoT المخصصة (Culture-Sensors)",
+          "description": "تجهيز الغرف بحساسات ذكية وإضاءة تفاعلية وسماعات عالية الدقة تبرمج مسبقاً لتناسب طقوس الضيف العربي.",
+          "icon": "rss",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك 'الوعي المكاني' (Spatial-Awareness AI)",
+          "description": "تطوير نظام يتعلم من عادات الضيف (مثلاً: متى يطلب القهوة، درجة حرارة النوم المفضلة) ويطبقها في زياراته القادمة لأي فندق في الشبكة.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "واجهة الخدمة 'غير التلامسية' (Intuitive-Service)",
+          "description": "تمكين الضيف من التحكم في كل شيء وطلب الخدمات عبر الأوامر الصوتية باللغة العربية (وباللهجات المحلية) لراحة قصوى.",
+          "icon": "microphone",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Guest Loyalty Rates in Smart Hotels vs Traditional Hotels in MENA"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لتجهيز الغرف بالبنية التحتية والشبكات المستقرة.",
+        "تعقيد الأنظمة العالمية التي لا تدعم اللغة العربية والطقوس المحلية بدقة.",
+        "الحاجة لصيانة تقنية مستمرة لضمان عدم تعطل ميزات الغرفة.",
+        "تخوف الضيوف من 'الخصوصية' في الغرف المليئة بالحساسات."
+      ],
+      "recommended_tech_stack": [
+        "Edge-based Voice Recognition (Privacy-focused)",
+        "LoRaWAN for Sensor Networking",
+        "Digital Twin for Room Management",
+        "AI for Guest Profiling (Anonymized)",
+        "Smart Lighting (DALI/Zigbee Integration)"
+      ],
+      "main_risk_index": "التعقيد التقني؛ إذا فشل النظام في الاستجابة (مثل عدم فتح الستائر) سيزعج الضيف بدلاً من إبهاره، مما يتطلب نظام 'تراجع يدوي' (Manual Override) بسيط."
+    }
+  }
+}

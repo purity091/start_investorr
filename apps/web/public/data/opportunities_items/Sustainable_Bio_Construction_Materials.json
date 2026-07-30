@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-CON-2026-BIO-MAT",
+      "status_label": "تحليل استخباري لثورة المواد الحيوية",
+      "category_tag": "التصنيع الإنشائي (Circular Economy / Green Materials)",
+      "business_model": "Manufacturing + Material Licensing",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Circular Economy",
+      "Green Concrete",
+      "Recycled Infrastructure"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt (Agricultural Waste Hub)", "flag": "🇪🇬" },
+        { "name": "Saudi Arabia (Mineral Recyclables)", "flag": "🇸🇦" },
+        { "name": "Morocco", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "إنتاج المواد الإنشائية المستدامة من المخلفات المحلية",
+      "problem_statement": "تمثل صناعة الأسمنت والصلب مصدراً هائلاً للانبعاثات وتكاليف الاستيراد. في 2026، هناك فرصة ذهبية لتحويل مخلفات البناء، الرماد المتطاير، والمخلفات الزراعية إلى مواد إنشائية (مثل الطوب الأخضر أو الخرسانة الجيوبوليمرية) التي تتميز بمتانة أعلى وبصمة كربونية سالبة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Tadweer-Construct",
+        "industry_tag": "تصنيع مواد البناء المستدامة",
+        "revenue_model": "Direct Sales to Contractors + ESG Incentives + Government Tenders",
+        "action_text": "استعراض خرسانة خضراء تمتص ثاني أكسيد الكربون من الجو"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق البناء الأخضر (0-24 شهر)",
+      "subtitle": "إعادة تدوير الطبيعة لبناء المستقبل",
+      "phases": [
+        {
+          "title": "مختبر البحث والتطوير للمواد المحلية",
+          "description": "تطوير تركيبات كيميائية تستخدم رمال الصحراء غير المستغلة والمخلفات الصناعية لإنتاج مواد بناء تضاهي الخرسانة التقليدية في القوة.",
+          "icon": "beaker",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تأسيس مصانع الإنتاج الكبسي",
+          "description": "بناء خطوط إنتاج مؤتمتة لإنتاج بلوكات البناء والألواح العازلة باستخدام تقنيات ضغط منخفضة الطاقة.",
+          "icon": "cog",
+          "color_theme": "rose"
+        },
+        {
+          "title": "توسيم الكربون (Carbon Labelling)",
+          "description": "الحصول على شهادات دولية تثبت توفير الكربون في كل وحدة إنتاج، مما يسهل بيعها للمشاريع العملاقة التي تلتزم بالاستدامة.",
+          "icon": "tag",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "Carbon Credit Pricing Trends and Material Scarcity Indexes"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة اللوجستية لجمع المخلفات وتجهيزها للإنتاج.",
+        "الحاجة لإثبات السلامة الإنشائية لهذه المواد في الظروف المناخية الصعبة.",
+        "مقاومة المقاولين للمواد الجديدة خوفاً من ضعف المتانة.",
+        "غياب المعايير القياسية المحلية للمواد المعاد تدويرها (يتم حلها الآن)."
+      ],
+      "recommended_tech_stack": [
+        "Geopolymer Technology",
+        "Carbon Sequestration in Concrete",
+        "Advanced Material Testing Equipment",
+        "Automated Waste Sorting AI",
+        "Lifecycle Assessment (LCA) Software"
+      ],
+      "main_risk_index": "سلاسل الإمداد؛ استمرارية توفر المخلفات بجودة موحدة هي العائق الأكبر، مما يتطلب شراكات طويلة الأمد مع شركات إدارة النفايات."
+    }
+  }
+}

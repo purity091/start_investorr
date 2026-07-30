@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-FIN-2026-INFLATION-SHIELD",
+      "status_label": "تحليل استخباري لخدمات الحماية النقدية",
+      "category_tag": "التقنية المالية (Stablecoins / Savings)",
+      "business_model": "Commission on Swap + Interest Earned on Assets",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Personal Finance",
+      "Currency Protection",
+      "Digital Assets"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Lebanon", "flag": "🇱🇧" },
+        { "name": "Turkey / Syria Border Regions", "flag": "🇹🇷" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "محافظ الادخار الرقمية للحماية من تضخم العملات",
+      "problem_statement": "يعاني ملايين المواطنين في دول عربية معينة من تآكل قيمة مدخراتهم بالعملة المحلية نتيجة التضخم الجامح. البنوك التقليدية لا توفر سهولة الوصول للعملات الصعبة، والتحويل للذهب مكلف لوجستياً. هناك حاجة ماسة لتطبيق بسيط يتيح للمواطن تحويل مدخراته الصغيرة (حتى لو كانت 10 دولارات) إلى أصول رقمية مستقرة (Stablecoins) أو ذهب رقمي بضغطة زر، للحفاظ على القوة الشرائية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sawn-App",
+        "industry_tag": "منصة التحوط المالي للأفراد",
+        "revenue_model": "Low FX Spread + Yield Generation (DeFi or Real Assets) + Tiered Membership",
+        "action_text": "استعراض حماية مدخرات 100 ألف مستخدم من التضخم"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الحصن المالي (0-12 شهر)",
+      "subtitle": "احمِ تعبك من تقلبات السوق",
+      "phases": [
+        {
+          "title": "بوابة التحويل المحلي السهل (Local-to-Digital)",
+          "description": "الربط مع محافظ المحمول المحلية (مثل فودافون كاش أو شبكات الصرافة) للسماح للمستخدمين بالإيداع بعملتهم المحلية فوراً.",
+          "icon": "switch-horizontal",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التحوط الآلي (Auto-Pegging)",
+          "description": "بمجرد الإيداع، يقوم النظام بتحويل المبلغ إلى سلة أصول (دولار رقمي، ذهب، صكوك قصيرة الأجل) للحفاظ على القيمة مع إمكانية تحقيق عائد بسيط.",
+          "icon": "shield-check",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نظام السحب السريع (Instant Off-ramp)",
+          "description": "توفير ميزة سحب الأموال بالعملة المحلية في أي وقت وبسعر الصرف الحقيقي، لمساعدة المستخدمين على تلبية احتياجاتهم الطارئة.",
+          "icon": "cash",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 8.7,
+      "data_points_analyzed": "100+ Inflation Indices & Mobile Wallet Usage Data"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "القيود الصارمة على تداول العملات الأجنبية في البنوك الرسمية.",
+        "صعوبة استخدام منصات العملات الرقمية العالمية للمستخدم العادي.",
+        "الحاجة لثقة عالية جداً في الجهة التي تحتفظ بالأصول الرقمية.",
+        "ارتفاع عمولات التحويل في السوق السوداء التي تستنزف المدخرات."
+      ],
+      "recommended_tech_stack": [
+        "Fiat-to-Crypto Gateways",
+        "Asset-backed Stablecoins (USDC/PYUSD)",
+        "MPC (Multi-Party Computation) Wallets",
+        "Liquidity Pools for FX Stabilization",
+        "Simplified UX for non-tech users"
+      ],
+      "main_risk_index": "المخاطر التشريعية؛ قد تعتبر بعض الدول هذه المنصات منافسة للعملة الوطنية، لذا فإن العمل ضمن تراخيص 'منطقة تجريبية' (Sandbox) هو الحل الأمثل."
+    }
+  }
+}

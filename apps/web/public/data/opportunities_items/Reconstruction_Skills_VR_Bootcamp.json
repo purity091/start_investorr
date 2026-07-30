@@ -1,0 +1,82 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-EDU09",
+      "status_label": "تحليل فجوة مهارات البناء والتقنيات الحديثة",
+      "category_tag": "EdTech / VR Training / Reconstruction",
+      "business_model": "Corporate Training Contracts + Gov Grants + Trainee Certification Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Education",
+      "Reconstruction",
+      "Virtual Reality"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Syria (Nationwide Training)", "flag": "🇸🇾" },
+        { "name": "Reconstruction Zones", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "بناة المستقبل: أكاديمية التدريب المهني بالواقع الافتراضي",
+      "problem_statement": "تحتاج سوريا لمئات الآلاف من العمال المهرة لإعادة الإعمار، لكن مراكز التدريب المهني التقليدية مدمرة أو تفتقر للمعدات الحديثة. التدريب الميداني بطيء وخطير في مناطق الركام. الفجوة هي استخدام الـ VR لتدريب الشباب على تقنيات البناء الحديثة، الكهرباء، والسباكة في بيئة افتراضية تحاكي الواقع السوري وتسرع التأهيل بنسبة 400%."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Buna-VR",
+        "industry_tag": "تأهيل كوادر إعادة الإعمار",
+        "revenue_model": "Contract with Reconstruction Companies + International NGO Funding + Specialized Certification",
+        "action_text": "استعراض خطة تدريب 20,000 عامل سوري سنوياً بالـ VR"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق بناء الكوادر (0-24 شهر)",
+      "subtitle": "تأهيل اليد العاملة لنهضة سوريا",
+      "phases": [
+        {
+          "title": "تطوير 'حقيبة التدريب المتنقلة'",
+          "description": "تجهيز وحدات تدريب متنقلة (Vans) مزودة بنظارات VR وحواسيب لزيادة القرى والمناطق النائية وتدريب الشباب في أماكنهم.",
+          "icon": "truck",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منهاج المحاكاة الإنشائية",
+          "description": "تصميم برامج VR تعلم الطالب كيفية تركيب الأنظمة الكهربائية الشمسية، ترميم الجدران الأثرية، وتشغيل الرافعات.",
+          "icon": "cube-transparent",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة التوظيف والاعتماد (Skill-Pass)",
+          "description": "إصدار 'جواز مهارات' رقمي لكل خريج يوثق ساعات التدريب والمهارات التي أتقنها ليكون مرجعاً لشركات الإعمار.",
+          "icon": "badge-check",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 10.0,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "Construction Labor Shortage vs Reconstruction Project Budgets"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لنظارات الـ VR (يتم حلها بشراكات مع منظمات دولية).",
+        "نقص الكهرباء لشحن الأجهزة (يتم حله بمولدات شمسية ملحقة بوحدات التدريب).",
+        "التسرب المدرسي الكبير ونقص التعليم الأساسي لدى الفئة المستهدفة.",
+        "غياب المعايير الوطنية الموحدة لشهادات المهارة الفنية."
+      ],
+      "recommended_tech_stack": [
+        "Unity for Construction Simulation",
+        "Oculus Quest (Offline Mode)",
+        "Solar Charging Stations",
+        "Blockchain for Certificate Issuance",
+        "Gamification Engines for Engagement"
+      ],
+      "main_risk_index": "استقرار الكوادر المدربة؛ خطر هجرة الفنيين بعد تدريبهم يتطلب تقديم حوافز عمل محلية وربطهم بمشاريع إعمار طويلة الأمد."
+    }
+  }
+}

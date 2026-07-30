@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-EDAI7",
+      "status_label": "تحليل فجوة أنظمة تقييم الطلاب الحديثة",
+      "category_tag": "تقييم التعليم (EdTech / Assessment)",
+      "business_model": "SaaS (Assessment Platform) + Government Licensing",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Education",
+      "Assessment",
+      "Learning Analytics"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Jordan", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 8
+    },
+    "core_content": {
+      "title": "نظام تقييم ذكي قائم على المهارات بدل الحفظ",
+      "problem_statement": "تعتمد الأنظمة التعليمية العربية على الامتحانات التقليدية التي تقيس الحفظ فقط، مما يؤدي إلى تخريج طلاب غير قادرين على التطبيق العملي أو التفكير النقدي. لا توجد أنظمة تقييم ديناميكية تقيس المهارات الحقيقية مثل التحليل، حل المشكلات، والإبداع."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "SkillScore",
+        "industry_tag": "أنظمة تقييم ذكية",
+        "revenue_model": "Per Student Licensing + Institutional Contracts",
+        "action_text": "استعراض تقييم مهارات الطالب بشكل ديناميكي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التقييم الذكي (0-12 شهر)",
+      "subtitle": "من الحفظ إلى قياس المهارات",
+      "phases": [
+        {
+          "title": "تصميم نموذج تقييم قائم على المهارات",
+          "description": "إنشاء إطار يقيس مهارات التفكير النقدي والتحليل.",
+          "icon": "brain",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك تحليل الأداء",
+          "description": "تطوير نظام يحلل أداء الطالب ويولد تقارير دقيقة.",
+          "icon": "chart-line",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكامل مع المدارس والجامعات",
+          "description": "دمج النظام مع الأنظمة التعليمية الحالية.",
+          "icon": "network",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 8.7,
+      "data_points_analyzed": "1900+ (Student Assessment Systems)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد التاريخي على الامتحانات التقليدية.",
+        "صعوبة تغيير السياسات التعليمية.",
+        "نقص أدوات قياس المهارات الحقيقية.",
+        "ضعف استخدام البيانات في التعليم."
+      ],
+      "recommended_tech_stack": [
+        "AI Assessment Engines",
+        "Learning Analytics Platforms",
+        "Adaptive Testing Systems",
+        "Data Visualization Dashboards",
+        "Cloud-based LMS Integration"
+      ],
+      "main_risk_index": "تغيير السياسات؛ يتطلب اعتماد حكومي وتحديث الأنظمة التعليمية الرسمية."
+    }
+  }
+}

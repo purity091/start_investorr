@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-MED01",
+      "status_label": "تحليل فجوة الدبلجة والتعريب الرقمي",
+      "category_tag": "MediaTech / AI / Generative-Video",
+      "business_model": "SaaS per Minute + Enterprise Licensing + Content Localization Services",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Media",
+      "Artificial Intelligence",
+      "Cinema & TV"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Global Content (USA/Korea/Turkey)",
+          "flag": "🇹🇷"
+        },
+        {
+          "name": "MENA Consumer Market",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 22
+    },
+    "core_content": {
+      "title": "صوت العالم بالعربي: دبلجة AI بلهجات محلية",
+      "problem_statement": "يستهلك الجمهور العربي محتوى عالمياً هائلاً، لكن الدبلجة التقليدية مكلفة، بطيئة، وتفتقر للتنوع في اللهجات (سوري، مصري، خليجي). كما أن حركة الشفاه تظل غير متطابقة. الفجوة هي محرك AI يقوم بدبلجة المحتوى آلياً بأصوات طبيعية تماماً مع تعديل حركة شفاه الممثلين لتطابق النطق العربي (Lip-Sync)."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sawt-Sync",
+        "industry_tag": "تكنولوجيا توطين المحتوى البصري",
+        "revenue_model": "Subscription for Content Creators + B2B Contracts for Streaming Platforms + API for Real-time Video Dubbing",
+        "action_text": "استعراض تقنية الدبلجة الآلية بلهجات عربية دقيقة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التعريب الذكي (0-36 شهر)",
+      "subtitle": "إلغاء حاجز اللغة في الترفيه العالمي",
+      "phases": [
+        {
+          "title": "محرك استنساخ الأصوات بلهجات محلية",
+          "description": "تدريب نماذج (Text-to-Speech) على نبرات ومشاعر اللهجات العربية المختلفة (الشامية، المصرية، الخليجية) لضمان طبيعية الصوت.",
+          "icon": "microphone",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تكنولوجيا مطابقة الشفاه (AI Lip-Sync)",
+          "description": "تطوير خوارزمية تعديل الفيديو التي تقوم بإعادة رسم منطقة الفم للممثلين الأصليين لتتوافق مع مخارج الحروف العربية.",
+          "icon": "sparkles",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة الإنتاج الضخم (Bulk-Localization)",
+          "description": "إطلاق واجهة تتيح لشركات الإنتاج رفع مسلسلات كاملة ودبلجتها خلال ساعات بدلاً من شهور، وبجزء من التكلفة التقليدية.",
+          "icon": "desktop-computer",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Dubbing Cost per Episode (Traditional vs AI) and Viewer Dialect Preference"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "صعوبة مطابقة 'المشاعر' والتهكم (Sarcasm) في اللغة العربية آلياً.",
+        "التعقيد التقني في تعديل الفيديو (Lip-Sync) عالي الجودة (4K).",
+        "نقص البيانات الضخمة (Datasets) للهجات العربية غير الرسمية.",
+        "الحاجة لقوة حوسبة هائلة لمعالجة الفيديو لحظياً."
+      ],
+      "recommended_tech_stack": [
+        "Generative Adversarial Networks (GANs) for Video Editing",
+        "Zero-shot Voice Cloning (RVC/So-VITS)",
+        "NLI (Natural Language Inference) for Contextual Translation",
+        "GPU Rendering Clusters",
+        "Blockchain for Digital Watermarking"
+      ],
+      "main_risk_index": "حقوق الملكية؛ استخدام أصوات الممثلين أو تعديل وجوههم يتطلب اتفاقيات قانونية معقدة وحماية من الـ (Deepfake) المسيء."
+    }
+  }
+}

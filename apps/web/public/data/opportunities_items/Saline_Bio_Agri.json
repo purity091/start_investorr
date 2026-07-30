@@ -1,0 +1,81 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-AGR09",
+      "status_label": "تحليل فجوة استغلال الأراضي السبخة والأمن العلفي",
+      "category_tag": "تكنولوجيا زراعية (AgriTech / Biosaline)",
+      "business_model": "Fodder Production + Land Reclamation Services + Salt-Tolerant Seed Sales",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Agriculture",
+      "Sustainability",
+      "Water Scarcity"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "United Arab Emirates", "flag": "🇦🇪" },
+        { "name": "Oman", "flag": "🇴🇲" },
+        { "name": "Mauritania", "flag": "🇲🇷" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "استصلاح الأراضي السبخة لإنتاج الأعلاف المستدامة",
+      "problem_statement": "تعاني دول المنطقة من ندرة المياه العذبة، وتستورد 90% من أعلاف الماشية، مما يهدد الأمن الغذائي ويرفع أسعار اللحوم. في المقابل، توجد مساحات شاسعة من 'السبخات' والمياه الجوفية المالحة غير المستغلة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sabkha-Green",
+        "industry_tag": "الزراعة الملحية المتطورة",
+        "revenue_model": "B2B Fodder Sales (Salicornia/Alfalfa) + Carbon Credits",
+        "action_text": "تحويل الصحاري المالحة إلى مزارع منتجة للأعلاف"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة الإنتاج الملحى (0-36 شهر)",
+      "subtitle": "بناء سلاسل توريد خضراء في بيئة مالحة",
+      "phases": [
+        {
+          "title": "هندسة التربة والمياه",
+          "description": "تصميم أنظمة ري ذكية تستخدم المياه المالحة جزئياً وتدير تركيز الأملاح في التربة لمنع تدهورها.",
+          "icon": "adjustments",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "استزراع المحاصيل الملحية (Halophytes)",
+          "description": "زراعة محاصيل مثل 'الساليكورنيا' والكينوا وأنواع خاصة من الأعلاف التي تزداد جودتها في التربة الملحية.",
+          "icon": "leaf",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التكامل مع الإنتاج الحيواني",
+          "description": "بناء مصانع لمعالجة المحاصيل وتحويلها إلى مكعبات علفية عالية البروتين للماشية المحلية.",
+          "icon": "archive",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "500+ (Soil Salinity & Fodder Import Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "النظرة التقليدية بأن الأرض المالحة هي أرض ميتة.",
+        "الحاجة لخبرة متخصصة في علم 'البيولوجيا الملحية'.",
+        "ارتفاع تكلفة التأسيس الأولية لأنظمة الري المتوافقة مع الملوحة."
+      ],
+      "recommended_tech_stack": [
+        "Biosaline Genetic Engineering",
+        "IoT Soil Salinity Monitoring",
+        "Desalination-lite Solar Pumps",
+        "Drip Irrigation Optimization"
+      ],
+      "main_risk_index": "تراكم الأملاح طويل الأمد؛ يتطلب المشروع إدارة دقيقة لـ $Drainage$ لمنع تحول الأرض إلى كتل ملحية غير قابلة للزراعة."
+    }
+  }
+}

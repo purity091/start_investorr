@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-HEALTH-2026-TELEMED",
+      "status_label": "تحليل استخباري لمستقبل الرعاية الصحية الهجينة",
+      "category_tag": "الصحة الرقمية (HealthTech / Telemedicine)",
+      "business_model": "Commission per Consult + B2B Corporate Plans",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "HealthTech",
+      "Remote Care",
+      "Digital Health Records"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "منصة الرعاية الصحية الشاملة للطب عن بُعد",
+      "problem_statement": "يواجه المرضى في المناطق المزدحمة أو النائية صعوبة في الوصول للأطباء الأخصائيين، مع قضاء ساعات في الانتظار والتنقل. كما تفتقر المنظومة الصحية إلى سجل طبي موحد يسهل تتبع حالة المريض بين مختلف العيادات والمستشفيات، مما يؤدي لتكرار الفحوصات وتأخر العلاج."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sehaty-Online",
+        "industry_tag": "المستشفى الافتراضي المتكامل",
+        "revenue_model": "Subscription for Chronic Patients + Pharmacy Referral Commission + Tele-consultation Fees",
+        "action_text": "استعراض دمج الفحص الأولي بالذكاء الاصطناعي مع الاستشارة البشرية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الصحة الرقمية (0-15 شهر)",
+      "subtitle": "رعاية طبية فائقة، في أي وقت ومكان",
+      "phases": [
+        {
+          "title": "إطلاق محرك الفرز الذكي (AI Triage)",
+          "description": "تطوير مساعد ذكي يقوم بتقييم أعراض المريض الأولية وتوجيهه للتخصص الصحيح أو تقديم نصائح إسعافية فورية.",
+          "icon": "clipboard-list",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تفعيل العيادة المرئية والسجل الموحد",
+          "description": "توفير منصة فيديو عالية الدقة تتيح للأطباء كتابة وصفات طبية إلكترونية وطلب تحاليل تُربط مباشرة بملف المريض السحابي.",
+          "icon": "video-camera",
+          "color_theme": "rose"
+        },
+        {
+          "title": "ربط الصيدليات والمختبرات (Last-mile Health)",
+          "description": "تكامل المنصة مع شبكات الصيدليات لتوصيل الدواء للمنزل ومع المختبرات لإجراء الفحوصات في منزل المريض ورفع النتائج آلياً.",
+          "icon": "truck",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 8.7,
+      "data_points_analyzed": "2M+ Patient Wait-time Records"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف ثقة بعض المرضى في التشخيص غير المباشر (سابقاً).",
+        "تحديات الخصوصية وأمن البيانات الطبية الحساسة.",
+        "عدم تكامل الأنظمة بين المستشفيات الخاصة والحكومية.",
+        "الحاجة لتراخيص قانونية معقدة لممارسة الطب عبر الحدود الإقليمية."
+      ],
+      "recommended_tech_stack": [
+        "WebRTC for Secure Video",
+        "FHIR Standards for Health Data Exchange",
+        "AI for Diagnostic Support",
+        "Cloud-native Patient Portal",
+        "E-Prescription Blockchain Verification"
+      ],
+      "main_risk_index": "المسؤولية الطبية؛ دقة الفرز الأولي بالذكاء الاصطناعي يجب أن تكون مضمونة قانونياً لتجنب أي مضاعفات للمرضى."
+    }
+  }
+}

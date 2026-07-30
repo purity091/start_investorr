@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-MED02",
+      "status_label": "تحليل فجوة الموثوقية الإعلامية والتحقق",
+      "category_tag": "MediaTech / Blockchain / Journalism",
+      "business_model": "Micropayments (B2C) + Verification-as-a-Service (B2B) + Grants",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Media",
+      "Journalism",
+      "Blockchain"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "MENA Region (Information Integrity Hub)",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 22
+    },
+    "core_content": {
+      "title": "ميثاق الحقيقة: منصة الصحافة اللامركزية الموثقة",
+      "problem_statement": "يعاني المشهد الإعلامي العربي من تضارب الأخبار، غياب الشفافية، وصعوبة تمويل الصحافة المستقلة. الفجوة هي منصة تعتمد على 'البلوكشين' لتسجيل المصادر والتحقق من الأخبار عبر شبكة من المحققين (Fact-checkers) المستقلين، مع نظام دفع مباشر (Micropayments) للصحفيين من القراء مباشرة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Mithaq-Media",
+        "industry_tag": "الصحافة الاستقصائية الرقمية الموثقة",
+        "revenue_model": "Transaction Fee per Content Unlock + Corporate Fact-checking API + Membership NFT Tiers",
+        "action_text": "استعراض أول منصة إعلامية عربية غير قابلة للتلاعب"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق إعلام الثقة (0-24 شهر)",
+      "subtitle": "تمكين الحقيقة وحماية المصادر بالتكنولوجيا",
+      "phases": [
+        {
+          "title": "بروتوكول 'بصمة الخبر' (News-Hashing)",
+          "description": "تطوير نظام يسجل كل خبر وصورة على البلوكشين فور نشرها، لضمان عدم تعديلها لاحقاً وتتبع مصدرها الأصلي.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "شبكة التحقق الجماعي (Crowd-Verification)",
+          "description": "نظام مكافآت (Tokens) للمحققين والصحفيين الذين يساهمون في كشف الأخبار المضللة بناءً على أدلة ملموسة.",
+          "icon": "user-group",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق محفظة القارئ (Reader-Wallet)",
+          "description": "دمج محفظة عملات مستقرة تتيح للقارئ دفع 'قرش واحد' لقراءة مقال، مما يلغي الحاجة للإعلانات التي تؤثر على استقلالية القرار.",
+          "icon": "link",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 9.7,
+      "data_points_analyzed": "Trust in Traditional Media vs Demand for Verified Independent News in MENA"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التحديات القانونية والسياسية التي تواجه الصحافة المستقلة في بعض الدول.",
+        "صعوبة إقناع الجمهور بالدفع مقابل المحتوى الإخباري.",
+        "الحاجة لبنية تحتية بلوكشين سريعة ومنخفضة التكلفة (L2 Solutions).",
+        "تعقيد عملية التحقق من الأخبار في بيئة سريعة التغير."
+      ],
+      "recommended_tech_stack": [
+        "Ethereum L2 (Arbitrum/Optimism) for Low-fee Transactions",
+        "IPFS for Decentralized Storage of Archives",
+        "AI for Automated Fake-news Detection Assistance",
+        "Zero-knowledge Proofs for Source Anonymity",
+        "Smart Contracts for Automatic Payment Distribution"
+      ],
+      "main_risk_index": "الاستقرار القانوني؛ المنصات اللامركزية قد تواجه حجباً رقمياً في بعض المناطق، مما يتطلب تقنيات (VPN-integrated) أو (P2P Mesh) لضمان الوصول."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-LOG-2026-PREDICT-INTEL",
+      "status_label": "تحليل استخباري للمرونة الاستراتيجية",
+      "category_tag": "إدارة البيانات (Big Data / Predictive Analytics)",
+      "business_model": "SaaS Subscription (Tiered) + Strategic Consulting",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Supply Chain Intelligence",
+      "Risk Management",
+      "Big Data"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Riyadh (Regional HQ Hub)", "flag": "🇸🇦" },
+        { "name": "Dubai (Trade Intelligence)", "flag": "🇦🇪" },
+        { "name": "Global Trade Routes", "flag": "🌍" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "مركز استخبارات سلاسل الإمداد للتنبؤ بالأزمات",
+      "problem_statement": "تعرضت سلاسل الإمداد في المنطقة لهزات كبرى نتيجة التوترات الجيوسياسية، تعثر الممرات الملاحية، وتقلبات أسعار الطاقة. الشركات والحكومات تعمل حالياً بمنطق 'رد الفعل' الذي يكلف المليارات. هناك حاجة لمنصة استخباراتية تعالج مليارات البيانات من الأقمار الصناعية، الأخبار، وحركة الموانئ للتنبؤ بالاضطرابات قبل وقوعها بأسابيع."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Baseera-Logistics",
+        "industry_tag": "الاستخبارات التنبؤية لسلاسل الإمداد",
+        "revenue_model": "Enterprise Subscription Fees + Crisis Mitigation Consulting + Data Licensing",
+        "action_text": "استعراض محرك التنبؤ بالأزمات الذي وفر 15% من تكاليف التأمين"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المرونة القومية (0-18 شهر)",
+      "subtitle": "رؤية ما خلف الأفق اللوجستي",
+      "phases": [
+        {
+          "title": "بناء بحيرة البيانات اللوجستية (Global Data Lake)",
+          "description": "دمج تدفقات البيانات من الأقمار الصناعية (تكدس الموانئ)، تقارير الأرصاد، أسعار الوقود، والتحليلات السياسية في قاعدة بيانات واحدة ضخمة.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تطوير محرك التنبؤ بالاضطرابات (Risk-AI)",
+          "description": "استخدام الذكاء الاصطناعي التوليدي والتحليلي لمحاكاة سيناريوهات الأزمات واقتراح مسارات إمداد بديلة ومستويات مخزون آمنة تلقائياً.",
+          "icon": "view-grid",
+          "color_theme": "rose"
+        },
+        {
+          "title": "لوحة تحكم القرار الاستراتيجي (Command Center)",
+          "description": "توفير واجهة تفاعلية لمديري سلاسل الإمداد تعطي تنبيهات مبكرة 'باللون الأحمر' لأي خطر محتمل، مع حلول فورية للتنفيذ.",
+          "icon": "presentation-chart-line",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "100B+ Global Logistics Data Points"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تشتت البيانات اللوجستية بين آلاف الشركات والجهات الحكومية بصيغ غير متوافقة.",
+        "الاعتماد على النماذج الإحصائية التقليدية التي تفشل في توقع 'البجعات السوداء' (الأزمات غير المتوقعة).",
+        "الحاجة لقدرات حوسبة فائقة لمعالجة بيانات الأقمار الصناعية والصور لحظياً.",
+        "النظرة القاصرة التي تعتبر اللوجستيات مجرد 'نقل' وليست 'أمناً قومياً'."
+      ],
+      "recommended_tech_stack": [
+        "Satellite Imagery Analytics (GIS)",
+        "Generative AI for Scenario Modeling",
+        "Real-time News Sentiment Analysis (NLP)",
+        "Predictive Digital Twins of Global Corridors",
+        "Quantum Computing for Route Optimization"
+      ],
+      "main_risk_index": "دقة التوقعات؛ بناء الثقة مع صناع القرار يتطلب سجل نجاح طويلاً في توقع الأحداث قبل وقوعها بدقة عالية."
+    }
+  }
+}

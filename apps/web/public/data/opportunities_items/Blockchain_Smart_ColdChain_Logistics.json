@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-LOG-2026-COLD-CHAIN",
+      "status_label": "تحليل استخباري لسلامة الأصول الحيوية",
+      "category_tag": "الخدمات اللوجستية (HealthTech / Agri-Logistics)",
+      "business_model": "Fee per Monitored Shipment + Insurance Integration",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Cold Chain",
+      "Blockchain Integrity",
+      "Food/Pharma Security"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Food Security)", "flag": "🇸🇦" },
+        { "name": "Egypt (Agri-Export Hub)", "flag": "🇪🇬" },
+        { "name": "UAE (Global Pharma Re-export)", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "سلاسل التبريد الذكية المعتمدة على البلوكشين",
+      "problem_statement": "تُفقد 20% من المواد الغذائية و15% من الأدوية الحساسة للحرارة في المنطقة العربية نتيجة 'فجوات التبريد' أثناء النقل والتخزين. درجات الحرارة المرتفعة تجعل الخطأ اللوجستي كارثياً، بينما تفتقر الأنظمة الحالية للقدرة على إثبات التزام الناقل بالمعايير الصحية طوال الرحلة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Safi-Logistics",
+        "industry_tag": "اللوجستيات الموثوقة للأمن الغذائي والدوائي",
+        "revenue_model": "Monitoring SaaS Fee + Quality Certification Premium + Waste Reduction Sharing",
+        "action_text": "عرض نظام التتبع غير القابل للتلاعب لضمان سلامة الغذاء والدواء"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الأمان الحيوي (0-18 شهر)",
+      "subtitle": "من المصنع إلى المستهلك.. تبريد لا ينقطع",
+      "phases": [
+        {
+          "title": "نشر حساسات IoT النشطة",
+          "description": "تزويد الحاويات والشاحنات بحساسات تقيس (الحرارة، الرطوبة، الصدمات) وترسل البيانات لحظياً عبر شبكات 5G.",
+          "icon": "fire",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "سجل البلوكشين للسلامة (Cold-Ledger)",
+          "description": "توثيق كافة قراءات الحساسات في سجل بلوكشين غير قابل للتعديل، مما يتيح للمشتري (مستشفى أو سوبر ماركت) التحقق من سلامة المنتج عبر QR Code.",
+          "icon": "shield-check",
+          "color_theme": "rose"
+        },
+        {
+          "title": "محرك التنبيه والتدخل الاستباقي",
+          "description": "نظام ذكاء اصطناعي يتنبأ بارتفاع الحرارة قبل وقوعه (نتيجة عطل محتمل) ويرسل تنبيهاً للسائق أو يوجه الشحنة لأقرب مخزن تبريد بديل.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.3,
+      "data_points_analyzed": "1.5M+ Temperature Excursion Records"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "المناخ القاسي للمنطقة الذي يتجاوز قدرات المبردات التقليدية في حالات الذروة.",
+        "تعدد الأطراف في سلسلة التبريد (تخزين، نقل، تفريغ) وضياع المسؤولية.",
+        "التكلفة العالية للطاقة اللازمة لتشغيل أنظمة التبريد المستمر.",
+        "غياب الشفافية اللحظية التي تسمح بالتدخل قبل تلف الشحنة."
+      ],
+      "recommended_tech_stack": [
+        "Blockchain (Hyperledger Fabric)",
+        "IoT Sensors (Battery-optimized)",
+        "5G Connectivity",
+        "AI for Predictive Maintenance of Chillers",
+        "Smart Contract for Auto-Insurance Payouts"
+      ],
+      "main_risk_index": "دقة البيانات؛ الاعتماد على حساسات ذات جودة منخفضة قد يعطي نتائج مضللة، لذا يجب أن يكون النظام متوافقاً مع معايير الـ WHO و FDA."
+    }
+  }
+}

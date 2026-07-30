@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-EDAI6",
+      "status_label": "تحليل فجوة البنية التحتية للتعليم عن بعد",
+      "category_tag": "البنية التحتية التعليمية (EdTech Infrastructure)",
+      "business_model": "Hardware + SaaS Bundles + Government Contracts",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Education",
+      "Remote Learning",
+      "Infrastructure"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Sudan", "flag": "🇸🇩" },
+        { "name": "Morocco (Rural)", "flag": "🇲🇦" },
+        { "name": "Iraq", "flag": "🇮🇶" }
+      ],
+      "additional_regions_count": 11
+    },
+    "core_content": {
+      "title": "حلول تعليم عن بعد للمناطق ذات البنية الضعيفة",
+      "problem_statement": "تعاني المناطق الريفية في العالم العربي من ضعف شديد في الإنترنت والكهرباء، مما يجعل التعليم الرقمي شبه مستحيل. الحلول الحالية تعتمد على اتصال دائم بالإنترنت، وهو غير متوفر، مما يخلق فجوة تعليمية عميقة بين المدن والأرياف."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "EduReach",
+        "industry_tag": "البنية التحتية للتعليم الرقمي",
+        "revenue_model": "Government Contracts + Hardware Sales + Subscription",
+        "action_text": "استعراض نظام تعليم يعمل بدون إنترنت دائم"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التعليم المتصل (0-18 شهر)",
+      "subtitle": "تعليم بدون إنترنت مستمر",
+      "phases": [
+        {
+          "title": "بناء حلول Offline-first",
+          "description": "تصميم أنظمة تعليمية تعمل بدون اتصال دائم وتزامن البيانات عند توفر الإنترنت.",
+          "icon": "wifi-off",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تطوير أجهزة تعليم منخفضة التكلفة",
+          "description": "إنتاج أجهزة مخصصة للتعليم تعمل بالطاقة الشمسية.",
+          "icon": "battery",
+          "color_theme": "rose"
+        },
+        {
+          "title": "الشراكة مع الحكومات والمنظمات",
+          "description": "نشر الحلول عبر برامج حكومية ومبادرات تعليمية.",
+          "icon": "globe",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.1,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "2000+ (Connectivity & Education Access Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف الاستثمار في البنية التحتية الريفية.",
+        "اعتماد الحلول على الإنترنت المستقر.",
+        "تكلفة الأجهزة المرتفعة.",
+        "صعوبة الوصول إلى المناطق النائية."
+      ],
+      "recommended_tech_stack": [
+        "Offline-first Applications",
+        "Edge Computing",
+        "Solar-powered Devices",
+        "Local Content Servers",
+        "Low-bandwidth Optimization"
+      ],
+      "main_risk_index": "التنفيذ الميداني؛ يتطلب المشروع قدرات تشغيلية قوية للوصول إلى المناطق النائية."
+    }
+  }
+}

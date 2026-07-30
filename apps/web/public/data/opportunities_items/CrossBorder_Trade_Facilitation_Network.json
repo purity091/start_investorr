@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-LOG-2026-CROSS-BORDER",
+      "status_label": "تحليل استخباري لسيادة سلاسل الإمداد الإقليمية",
+      "category_tag": "الخدمات اللوجستية (CustomsTech / Multi-modal)",
+      "business_model": "SaaS Platform + Lead Generation + Documentation Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Trade Facilitation",
+      "Digital Customs",
+      "Inter-Arab Connectivity"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "GCC Corridor", "flag": "🇸🇦" },
+        { "name": "Egypt - Jordan - Iraq", "flag": "🇪🇬" },
+        { "name": "Maghreb Link", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 8
+    },
+    "core_content": {
+      "title": "شبكة الربط اللوجستي العابر للحدود وتسهيل التجارة البينية",
+      "problem_statement": "تعاني التجارة العربية البينية من تكاليف لوجستية باهظة وتأخيرات جمركية تصل إلى 15 يوماً عند الحدود البرية. غياب التنسيق الرقمي وتعدد المستندات الورقية يؤدي لهدر 30% من الوقت التشغيلي، مما يجعل شحن بضاعة من أوروبا أحياناً أسهل من شحنها بين دولتين جارتين."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Jisr-Global",
+        "industry_tag": "بوابة التجارة الرقمية الموحدة",
+        "revenue_model": "Transaction Fee per Consignment + Compliance-as-a-Service + Fleet Optimization",
+        "action_text": "استعراض تقليل وقت العبور الجمركي بنسبة 70% عبر التوثيق المسبق"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التكامل اللوجستي (0-20 شهر)",
+      "subtitle": "إلغاء الحدود الورقية أمام تدفق السلع",
+      "phases": [
+        {
+          "title": "منصة التخليص المسبق الموحدة",
+          "description": "بناء نظام رقمي يربط المصدرين بالمخلصين الجمركيين والسلطات الحدودية، لرفع كافة المستندات والحصول على الموافقات قبل وصول الشاحنة للمنفذ.",
+          "icon": "document-duplicate",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك الربط متعدد الوسائط (Multi-modal)",
+          "description": "خوارزمية ذكية تدمج الشحن البحري والبري والجوي في بوليصة شحن واحدة، مع تحديد المسار الأسرع والأرخص عبر الموانئ والممرات الاستراتيجية.",
+          "icon": "truck",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نظام التتبع الجيومكاني للترانزيت",
+          "description": "استخدام أختام إلكترونية ذكية (Smart Seals) مرتبطة بالأقمار الصناعية تضمن عدم فتح الشحنات أثناء العبور، مما يسرع إجراءات التفتيش.",
+          "icon": "location-marker",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "5000+ Border Crossing Logs & Port Data"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "غياب بروتوكول موحد لتبادل البيانات بين الأنظمة الجمركية للدول المختلفة.",
+        "الاعتماد التاريخي على الوسطاء والوكلاء الورقيين.",
+        "نقص البنية التحتية الرقمية في بعض المنافذ الحدودية الحيوية.",
+        "تحديات الامتثال الأمني المعقدة في المناطق الحساسة."
+      ],
+      "recommended_tech_stack": [
+        "Blockchain for Smart Bill of Lading",
+        "AI for Risk Assessment (Customs)",
+        "IoT Smart Seals",
+        "Cloud-based TMS (Transport Management System)",
+        "EDI (Electronic Data Interchange) Standards"
+      ],
+      "main_risk_index": "التنسيق السياسي؛ نجاح المشروع يتطلب اتفاقيات ثنائية أو إقليمية لاعتماد البيانات الرقمية الصادرة عن المنصة كمرجع رسمي."
+    }
+  }
+}

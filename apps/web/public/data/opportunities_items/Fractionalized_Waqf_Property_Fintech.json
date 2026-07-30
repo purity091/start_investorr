@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-FIN05",
+      "status_label": "تحليل فجوة رقمنة الأصول الوقفية",
+      "category_tag": "FinTech / PropTech / Islamic-Finance",
+      "business_model": "Platform Fee (AUM) + Property Management Fees + Transparency SaaS",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Finance",
+      "Waqf (Endowments)",
+      "Social Impact"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Waqf Sector Reform)", "flag": "🇸🇦" },
+        { "name": "Egypt (Ministry of Awqaf Assets)", "flag": "🇪🇬" },
+        { "name": "Kuwait", "flag": "🇰🇼" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "الوقف الرقمي المجزأ: تمكين الاستثمار الخيري الجماعي",
+      "problem_statement": "تقدر أصول الأوقاف في العالم العربي بمليارات الدولارات، لكنها تعاني من 'الجمود الاستثماري' وضعف الشفافية وصعوبة مساهمة الأفراد الصغار في أوقاف عقارية كبرى. الفجوة هي منصة بلوكشين تقوم بـ 'ترميز' (Tokenization) العقارات الوقفية، مما يتيح لأي شخص المشاركة بمبالغ صغيرة في وقف عقاري وتتبع أثره الخيري والمالي لحظياً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Waqf-Chain",
+        "industry_tag": "تمويل الأثر الاجتماعي والوقفي",
+        "revenue_model": "Platform Management Fee (1-2%) + Asset Appreciation Share for Reinvestment + Transparency-as-a-Service",
+        "action_text": "استعراض منصة تحويل الأوقاف التقليدية إلى أصول رقمية سائلة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق النهضة الوقفية (0-24 شهر)",
+      "subtitle": "إحياء سنة الوقف بأدوات القرن الحادي والعشرين",
+      "phases": [
+        {
+          "title": "ترميز الأصول العقارية الوقفية",
+          "description": "تحويل صكوك الأوقاف إلى رموز رقمية (Tokens) على البلوكشين تضمن حقوق الواقفين وتسهل إدارتها وتوزيع ريعها.",
+          "icon": "link",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "داشبورد الشفافية والأثر (Impact Tracking)",
+          "description": "توفير واجهة تتيح لكل مساهم رؤية كيف يتم صرف ريع الوقف (مثلاً: كم طالب تم تعليمه اليوم من ريع هذا البرج العقاري).",
+          "icon": "presentation-chart-line",
+          "color_theme": "rose"
+        },
+        {
+          "title": "سوق الأوقاف الثانوي (Waqf Exchange)",
+          "description": "تمكين الواقفين من نقل 'إدارة' مساهماتهم أو إعادة استثمار العوائد في أوقاف جديدة لضمان نمو رأس المال الوقفي.",
+          "icon": "switch-horizontal",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "Total Waqf Assets vs Current Digital Investment Participation Rate"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التعقيد الفقهي والقانوني في تغيير طبيعة ملكية الوقف (يتم حله بترميز المنفعة لا الأصل).",
+        "ضعف البيانات الرقمية حول الأصول الوقفية القديمة.",
+        "نقص الثقة في المنصات الرقمية للعمل الخيري طويل الأمد.",
+        "الحاجة لاعتمادات رسمية من هيئات الأوقاف الشرعية."
+      ],
+      "recommended_tech_stack": [
+        "Asset Tokenization Protocols (ERC-3643)",
+        "Smart Contracts for Profit/Impact Distribution",
+        "Hyperledger for Government Collaboration",
+        "AI for Real Estate Valuation",
+        "Mobile App for Individual Waqif"
+      ],
+      "main_risk_index": "الامتثال الشرعي؛ أي خلل في توزيع الريع وفق شروط الواقف الأصلي ينهي شرعية المنصة، مما يتطلب تدقيقاً شرعياً آلياً وبشرياً."
+    }
+  }
+}

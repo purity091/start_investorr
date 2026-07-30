@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-DEEP-2026-MOB07",
+      "status_label": "تحليل فجوة التنقل في الأنسجة العمرانية القديمة",
+      "category_tag": "Mobility / Autonomous Tech / Heritage",
+      "business_model": "MaaS (Mobility-as-a-Service) + Tourism Data + Gov Fleet Management",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Mobility",
+      "Artificial Intelligence",
+      "Urban Heritage"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt (Old Cairo)", "flag": "🇪🇬" },
+        { "name": "Morocco (Fez/Marrakesh Medina)", "flag": "🇲🇦" },
+        { "name": "Saudi Arabia (Al-Balad Jeddah)", "flag": "🇸🇦" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "مستكشف المدن التاريخية: مركبات ذاتية القيادة للأزقة الضيقة",
+      "problem_statement": "تغلق المدن التاريخية (المدائن القديمة) أمام السيارات التقليدية لضيق شوارعها، مما يحد من حركة السياح وكبار السن ويصعب نقل البضائع. الفجوة هي مركبات كهربائية صغيرة (Micro-pods) ذاتية القيادة، قادرة على الملاحة في شوارع غير مرسومة بدقة وتجنب المشاة بكفاءة عالية، مع الحفاظ على الهوية المعمارية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Medina-Rover",
+        "industry_tag": "التنقل الحضري الذكي للمناطق التراثية",
+        "revenue_model": "Per-ride Fees (Tourists) + Monthly Subscriptions (Residents) + B2B Delivery Logistics",
+        "action_text": "استعراض المركبة ذاتية الملاحة في أزقة القاهرة القديمة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التنقيب العمراني (0-30 شهر)",
+      "subtitle": "ربط الماضي بالمستقبل عبر التكنولوجيا",
+      "phases": [
+        {
+          "title": "خرائطية ليدار ثلاثية الأبعاد (3D LiDAR)",
+          "description": "رسم خرائط فائقة الدقة للأزقة الضيقة والمباني الأثرية لتكون قاعدة بيانات لملاحة المركبات ذاتية القيادة.",
+          "icon": "map",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تطوير خوارزميات 'تجنب المشاة' في الزحام",
+          "description": "بناء محرك ذكاء اصطناعي يفهم حركة المشاة العشوائية في الأسواق الشعبية ويتنبأ بها لضمان سلامة التنقل.",
+          "icon": "user-group",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق أسطول التنقل السياحي",
+          "description": "نشر مركبات كهربائية بتصميم كلاسيكي (Vintage look) تقدم جولات سياحية ذكية مزودة بتفسير أثري عبر الواقع المعزز.",
+          "icon": "sparkles",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.3,
+      "competitive_moat": 9.7,
+      "data_points_analyzed": "Tourism Density vs Accessibility Constraints in Heritage Sites"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "فشل أنظمة الـ GPS التقليدية في الشوارع الضيقة والمغطاة.",
+        "الحاجة لمستوى عالٍ جداً من أمان الرؤية الحاسوبية بسبب الزحام البشري.",
+        "القيود التنظيمية الصارمة على إدخال آلات حديثة في المناطق الأثرية.",
+        "نقص البنية التحتية لشحن المركبات الكهربائية في الأحياء القديمة."
+      ],
+      "recommended_tech_stack": [
+        "LiDAR-based SLAM Navigation",
+        "Edge-AI for Real-time Obstacle Avoidance",
+        "Electric Hub Motors (Compact Design)",
+        "V2X (Vehicle to Everything) Communication",
+        "Computer Vision for Anomaly Detection"
+      ],
+      "main_risk_index": "السلامة العامة؛ خطر الاصطدام بالمشاة في شوارع مزدحمة جداً يتطلب سرعات منخفضة جداً (أقل من 10 كم/س) وأنظمة كبح طوارئ فيزيائية."
+    }
+  }
+}

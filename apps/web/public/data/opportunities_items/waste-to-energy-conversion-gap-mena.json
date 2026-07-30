@@ -1,0 +1,87 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ENERGY8",
+      "status_label": "تحليل فجوة تحويل النفايات إلى طاقة",
+      "category_tag": "Circular Energy (Waste-to-Energy / Biogas)",
+      "business_model": "PPP Infrastructure + Waste Processing Fees + Energy Sales + Carbon Credits",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Energy",
+      "Waste Management",
+      "Circular Economy"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Jordan", "flag": "🇯🇴" },
+        { "name": "Morocco", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "تحويل النفايات البلدية والعضوية إلى طاقة ومنتجات قابلة للبيع",
+      "problem_statement": "تواجه مدن عربية كثيرة أزمة متصاعدة في إدارة النفايات: نمو حضري سريع، مكبات مكتظة، فرز ضعيف، وتكاليف بيئية وصحية عالية. في المقابل، لا تزال النفايات تُعامل كعبء بلدي بدل أن تكون مادة خام للطاقة والغاز الحيوي والوقود البديل. الفرصة ليست فقط بناء محطات حرق نفايات، بل بناء منظومة متكاملة تبدأ بالفرز، ثم تحويل العضوي إلى Biogas، والمخلفات ذات القيمة الحرارية إلى RDF أو طاقة، مع بيع الكهرباء أو الحرارة أو الوقود الصناعي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "WasteVolt",
+        "industry_tag": "تحويل النفايات إلى طاقة والاقتصاد الدائري",
+        "revenue_model": "Municipal Tipping Fees + Electricity Sales + RDF Sales + Carbon Credits",
+        "action_text": "استعراض نموذج يحول النفايات من تكلفة بلدية إلى أصل طاقي منتج"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة تحويل النفايات إلى طاقة (0-36 شهر)",
+      "subtitle": "من مكبات مستنزفة إلى أصول طاقية قابلة للربح",
+      "phases": [
+        {
+          "title": "فرز وتدفق النفايات",
+          "description": "تحليل تركيبة النفايات في المدينة المستهدفة، بناء نظام فرز أولي، وتحديد أفضل مسار لكل نوع: عضوي، بلاستيك، ورق، معادن، أو مرفوضات عالية القيمة الحرارية.",
+          "icon": "recycle",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منشأة معالجة وتحويل",
+          "description": "إنشاء وحدة Biogas للنفايات العضوية ووحدة RDF للمخلفات القابلة للاستخدام كوقود بديل في الإسمنت أو الصناعات الثقيلة، مع خيار إنتاج كهرباء حسب الجدوى المحلية.",
+          "icon": "factory",
+          "color_theme": "rose"
+        },
+        {
+          "title": "عقود بلدية وصناعية طويلة الأجل",
+          "description": "توقيع عقود مع البلديات لجمع أو استقبال النفايات، ومع مصانع الإسمنت أو الشبكة الكهربائية لشراء المخرجات، مما يحول المشروع إلى بنية تحتية ذات تدفقات نقدية مستقرة.",
+          "icon": "file-signature",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "3000+ (Municipal Waste, Landfill, Biogas, RDF & Circular Economy Benchmarks)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "غياب الفرز من المصدر يجعل جودة النفايات غير مستقرة ويضعف الجدوى الفنية.",
+        "البلديات غالباً تعاني من قيود تمويلية وتشغيلية ولا تستطيع بناء مشاريع متقدمة وحدها.",
+        "مشاريع Waste-to-Energy تحتاج رأس مال كبير وعقود طويلة الأجل لتكون قابلة للتمويل.",
+        "ضعف تنظيم سوق بيع الكهرباء أو الوقود البديل في بعض الدول.",
+        "حساسية اجتماعية وبيئية تجاه محطات المعالجة إذا لم يتم تصميمها وفق معايير صارمة."
+      ],
+      "recommended_tech_stack": [
+        "Waste Sorting Systems",
+        "Anaerobic Digestion for Biogas",
+        "RDF Production Lines",
+        "Emission Monitoring Systems",
+        "IoT for Waste Collection",
+        "GIS Route Optimization",
+        "Carbon Credit MRV Systems"
+      ],
+      "main_risk_index": "مخاطر التشغيل والتنظيم؛ نجاح المشروع يعتمد على جودة النفايات، عقود بلدية طويلة الأجل، وضمان مشترٍ للمخرجات مثل الكهرباء أو RDF. بدون عقود شراء واضحة، يتحول المشروع من أصل بنية تحتية مربح إلى عبء رأسمالي ثقيل."
+    }
+  }
+}

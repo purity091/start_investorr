@@ -1,0 +1,92 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-RAI06",
+      "status_label": "تحليل فجوة صيانة أصول السكك الحديدية الحديثة",
+      "category_tag": "RailTech / Digital Twin / AI",
+      "business_model": "SaaS per Track KM + Predictive Maintenance Consulting + Data Insights for Operators",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Transport",
+      "Railways",
+      "Predictive Maintenance"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Saudi Arabia (Haramain & Landbridge)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Morocco (ONCF High-speed Network)",
+          "flag": "🇲🇦"
+        },
+        {
+          "name": "UAE & Egypt (National Rail Projects)",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "التوأم الرقمي للسكك الحديدية: الصيانة التنبؤية للأصول",
+      "problem_statement": "تستثمر الدول العربية مئات المليارات في شبكات القطارات السريعة (مثل قطار الحرمين والـ TGV المغربي)، لكن تكلفة الصيانة التقليدية باهظة وأي عطل مفاجئ يسبب خسائر مادية ومخاطر أمنية. الفجوة هي نظام 'توأم رقمي' (Digital Twin) يراقب حالة السكك الحديدية والقطارات لحظياً عبر الحساسات ويتنبأ بالأعطال قبل وقوعها بأسابيع."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sikka-Twin",
+        "industry_tag": "تكنولوجيا السكك الحديدية والذكاء الاصطناعي الصناعي",
+        "revenue_model": "Annual License Fee per Track/Train + Performance-based Maintenance Savings + Expert Systems Consulting",
+        "action_text": "استعراض حماية أصول السكك الحديدية العربية بمليارات الدولارات"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المسار الذكي (0-48 شهر)",
+      "subtitle": "ضمان أمان وكفاءة القطارات السريعة",
+      "phases": [
+        {
+          "title": "نشر شبكة الحساسات الذكية (Rail-Sense)",
+          "description": "تزويد القضبان وعربات القطارات بحساسات اهتزاز، حرارة، وإجهاد لنقل بيانات دقيقة حول حالة البنية التحتية.",
+          "icon": "rss",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء النموذج الرقمي (Asset Digital Twin)",
+          "description": "خلق نسخة افتراضية كاملة من شبكة السكك الحديدية تتيح للمهندسين محاكاة ضغوط الأحمال والظروف الجوية الصحراوية القاسية.",
+          "icon": "cube",
+          "color_theme": "rose"
+        },
+        {
+          "title": "محرك القرار التنبؤي (Predictive AI)",
+          "description": "تفعيل خوارزميات الذكاء الاصطناعي التي تحدد بدقة متى وأين يجب إجراء الصيانة، مما يقلل وقت التوقف بنسبة 30%.",
+          "icon": "chip",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Maintenance Cost per KM in High-speed Rail vs AI-Optimization Potential"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الحاجة لبيانات تاريخية ضخمة لتدريب نماذج التنبؤ (يتم حلها بالتعاون مع الشركات المصنعة).",
+        "تحديات نقل البيانات في المناطق الصحراوية الممتدة لمئات الكيلومترات.",
+        "الاعتماد التاريخي على عقود الصيانة الخارجية باهظة التكلفة.",
+        "التعقيد في دمج أنظمة الإشارة والتحكم مع أنظمة مراقبة الحالة."
+      ],
+      "recommended_tech_stack": [
+        "Industrial IoT (IIoT) Sensors",
+        "Digital Twin Modeling (Bentley/Siemens style)",
+        "Edge Computing for On-train Analytics",
+        "Deep Learning for Structural Health Monitoring",
+        "Augmented Reality (AR) for Maintenance Workers"
+      ],
+      "main_risk_index": "دقة البيانات؛ الاعتماد على حساسات غير دقيقة قد يؤدي لقرارات صيانة خاطئة، مما يتطلب نظام 'معايرة' آلي ومستمر."
+    }
+  }
+}

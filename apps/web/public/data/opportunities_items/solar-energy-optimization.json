@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ENERGY-2026-SOL",
+      "status_label": "تحليل استخباري عالي الجدوى (ESG Priority)",
+      "category_tag": "طاقة المستقبل (Smart Solar & Energy AI)",
+      "business_model": "SaaS (B2B/B2C) + Energy Management Revenue Share",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "EnergyTech",
+      "Predictive Maintenance",
+      "Virtual Power Plants (VPP)",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Jordan", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "أمثلية الأداء الشمسي في البيئات القاسية (SolarMind)",
+      "problem_statement": "تعاني أنظمة الطاقة الشمسية الموزعة (Residential & Commercial) في المنطقة من 'نزيف الكفاءة الصامت'؛ حيث يُفقد ما يصل إلى 25% من الطاقة المنتجة نتيجة تراكم الغبار (Soiling) والإجهاد الحراري دون مراقبة دقيقة. يفتقر الملاك لنموذج مالي تقني يربط بين جداول الصيانة التنبؤية وبين أسعار الطاقة اللحظية، مما يطيل فترة استرداد رأس المال (Payback Period) بنسبة 30% عن المتوقع."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "SolarMind",
+        "industry_tag": "الذكاء الاصطناعي لإدارة الأصول الطاقية",
+        "revenue_model": "Monthly Subscription + Maintenance Lead Gen + Grid Services Commission",
+        "action_text": "مراجعة مصفوفة العائد على الاستثمار التقني (Yield Optimization)"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التنفيذ الاستراتيجية (من المراقبة إلى تداول الطاقة)",
+      "subtitle": "تعظيم القيمة الاقتصادية لكل كيلوواط مستخرج",
+      "phases": [
+        {
+          "title": "مرحلة التوأمة الرقمية (Digital Twin Implementation)",
+          "description": "تطوير نظام لإنشاء نسخة رقمية لكل مصفوفة شمسية، تربط الإنتاج الفعلي بالبيانات المناخية اللحظية لتحديد 'الانحراف المعياري' في الأداء بدقة 99%.",
+          "icon": "lightning-bolt",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك الصيانة والتحكم الذكي (Predictive & Soiling Logic)",
+          "description": "إطلاق خوارزمية 'تنبؤ الغبار' التي تحدد الموعد الأمثل للتنظيف بناءً على تكلفة المياه والعمالة مقابل العائد الضائع من الطاقة، مع إرسال تنبيهات للصيانة الوقائية للأجزاء المتهالكة.",
+          "icon": "adjustments",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التكامل مع الشبكة الذكية (VPP Readiness)",
+          "description": "تحويل مئات الأنظمة المنزلية إلى 'محطة طاقة افتراضية' (Virtual Power Plant) قادرة على موازنة الأحمال وتبادل الطاقة مع الشبكة العامة وفقاً للتشريعات الجديدة (Net Metering).",
+          "icon": "globe",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 8.8,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 8.2,
+      "data_points_analyzed": "3100+ (Solar Irradiance, Dust Indices & Regulatory Policies)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "غياب حلول تحليلية تأخذ في الاعتبار 'معامل التلوث' (Soiling Factor) الخاص بصحراء المنطقة.",
+        "تجزئة السوق بين شركات تركيب صغيرة تفتقر للحلول البرمجية المتقدمة.",
+        "تعقيد الربط البرمجي مع العواكس الكهربائية (Inverters) من ماركات مختلفة.",
+        "نقص الوعي بأن خسارة 1% من الكفاءة تعني آلاف الدولارات على مدار عمر النظام."
+      ],
+      "recommended_tech_stack": [
+        "Edge AI for Inverter Data Processing",
+        "Computer Vision for Panel Degradation Analysis",
+        "High-Resolution Weather API Integration",
+        "Secure Energy APIs (IEEE 2030.5 Standards)",
+        "Blockchain for Peer-to-Peer Energy Tracking"
+      ],
+      "main_risk_index": "التحدي التشريعي (Regulatory Speed)؛ وتيرة اعتماد 'تداول الطاقة الفائض' من المنازل تختلف بين الدول وتؤثر على سرعة التوسع في نموذج الـ VPP."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-MIN08",
+      "status_label": "تحليل فجوة إنتاجية وكفاءة مناجم الذهب الصغيرة",
+      "category_tag": "Mining / Tech / Sustainability",
+      "business_model": "Equipment Leasing + Chemicals-as-a-Service (Safe-Gold) + Processing Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Mining",
+      "Technology",
+      "Environment"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Sudan (Artisanal Mining Hub)", "flag": "🇸🇩" },
+        { "name": "Egypt (Eastern Desert Prospecting)", "flag": "🇪🇬" },
+        { "name": "Saudi Arabia (Gold Mining Expansion)", "flag": "🇸🇦" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "التعدين المستدام: رفع إنتاجية مناجم الذهب الصغيرة",
+      "problem_statement": "يعتمد مئات الآلاف من المعدنين في السودان ومصر على طرق تقليدية وخطيرة (مثل استخدام الزئبق) مما يسبب فقدان 40% من الذهب وتلوثاً بيئياً قاتلاً. الفجوة هي توفير 'وحدات معالجة مركزية' تستخدم تكنولوجيا السيانيد الآمنة أو المعالجة الميكانيكية المتقدمة لرفع نسبة الاستخلاص إلى 95% وتوفير خدمات تقنية للمعدنين المستقلين."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Thahab-Tech",
+        "industry_tag": "تكنولوجيا التعدين المسؤول وتعظيم قيمة الموارد المعدنية",
+        "revenue_model": "Percentage of Gold Recovered (Processing Fee) + Sales of Safe Extraction Chemicals + Equipment Leasing",
+        "action_text": "استعراض حماية ثروات الذهب العربي وزيادة إنتاجها"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المعدن النفيس (0-36 شهر)",
+      "subtitle": "تحديث التعدين التقليدي، بفعالية عالمية",
+      "phases": [
+        {
+          "title": "تأسيس مراكز المعالجة المركزية (Processing-Hubs)",
+          "description": "بناء وحدات معالجة حديثة بالقرب من تجمعات التعدين التقليدي لاستقبال 'التربة الخام' ومعالجتها بأمان وكفاءة عالية.",
+          "icon": "home",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بدائل الزئبق (Mercury-Free-Mining)",
+          "description": "توفير تكنولوجيا الجاذبية المتقدمة والكيماويات العضوية التي تستخلص الذهب دون الحاجة للزئبق السام.",
+          "icon": "shield-check",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نظام التتبع والشهادات (Ethical-Gold)",
+          "description": "استخدام البلوكشين لتتبع مصدر الذهب المُنشر وضمان أنه 'ذهب أخضر' تم إنتاجه بطرق آمنة، مما يرفع سعره في الأسواق العالمية.",
+          "icon": "link",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Gold Recovery Rates in Artisanal Mining in Sudan vs Industrial Potential"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تشتت المعدنين في مناطق نائية جداً تصعب مراقبتها أو خدمتها.",
+        "ضعف التمويل المتاح للمعدنين الصغار لشراء معدات حديثة.",
+        "التخوف من الضرائب والبيروقراطية الحكومية التي تدفع المعدنين للسوق السوداء.",
+        "سيطرة شبكات التجارة التقليدية التي تستفيد من الوضع الحالي غير المنظم."
+      ],
+      "recommended_tech_stack": [
+        "Centrifugal Concentrators",
+        "Carbon-in-Leach (CIL) Mini-plants",
+        "Portable Spectrometers for On-site Testing",
+        "Solar-powered Processing Units",
+        "Blockchain for Supply Chain Traceability"
+      ],
+      "main_risk_index": "الاستقرار الأمني؛ مناطق التعدين التقليدي غالباً ما تكون في مناطق حدودية أو متوترة، مما يتطلب استراتيجية أمنية ولوجستية قوية لحماية الأصول."
+    }
+  }
+}

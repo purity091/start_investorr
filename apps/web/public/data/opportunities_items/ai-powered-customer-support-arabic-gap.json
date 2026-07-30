@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-TECH5",
+      "status_label": "تحليل فجوة خدمة العملاء الذكية بالعربية",
+      "category_tag": "AI Customer Support (Conversational AI)",
+      "business_model": "SaaS + API + Usage-based Billing",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Technology",
+      "Conversational AI",
+      "Customer Support"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Kuwait", "flag": "🇰🇼" }
+      ],
+      "additional_regions_count": 9
+    },
+    "core_content": {
+      "title": "أنظمة خدمة عملاء ذكية تفهم اللغة العربية والسياق",
+      "problem_statement": "تعتمد الشركات العربية بشكل كبير على فرق خدمة عملاء بشرية بسبب ضعف الأنظمة الآلية في فهم اللغة العربية واللهجات. هذا يؤدي إلى تكاليف تشغيلية عالية وتأخير في الاستجابة. الحلول العالمية لا تقدم دقة كافية في العربية، مما يخلق فجوة كبيرة في السوق."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "SupportAI Arabic",
+        "industry_tag": "AI Customer Service Platforms",
+        "revenue_model": "Subscription + API Calls + Enterprise Deployment",
+        "action_text": "استعراض دعم عملاء آلي باللغة العربية بدقة عالية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة خدمة العملاء الذكية (0-9 أشهر)",
+      "subtitle": "دعم فوري 24/7 باللغة العربية",
+      "phases": [
+        {
+          "title": "تدريب نموذج عربي متخصص",
+          "description": "بناء LLM يفهم اللهجات والسياق.",
+          "icon": "cpu",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء واجهات تواصل متعددة",
+          "description": "دعم واتساب، ويب، وتطبيقات.",
+          "icon": "message",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكامل مع CRM",
+          "description": "ربط النظام مع بيانات العملاء.",
+          "icon": "link",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "2500+ (Customer Support Cost Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف نماذج اللغة العربية.",
+        "تعقيد اللهجات.",
+        "اعتماد الشركات على البشر.",
+        "عدم وجود حلول مخصصة للمنطقة."
+      ],
+      "recommended_tech_stack": [
+        "Arabic LLMs",
+        "Speech-to-Text",
+        "RAG Systems",
+        "Chatbot Frameworks",
+        "CRM Integrations"
+      ],
+      "main_risk_index": "دقة النموذج؛ يعتمد النجاح على جودة الفهم اللغوي."
+    }
+  }
+}

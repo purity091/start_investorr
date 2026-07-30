@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-EDU16",
+      "status_label": "تحليل فجوة التعليم المتخصص لذوي الاحتياجات الخاصة",
+      "category_tag": "EdTech / NeuroTech / Social Impact",
+      "business_model": "Subscription for Families/Schools + Specialized Hardware Sales + Professional Training",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Education",
+      "Disability Support",
+      "Artificial Intelligence"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Inclusive Education Goals)", "flag": "🇸🇦" },
+        { "name": "UAE (Determination Programs)", "flag": "🇦🇪" },
+        { "name": "Egypt (Large Underserved Population)", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 15
+    },
+    "core_content": {
+      "title": "عقول مضيئة: منصة دعم التنوع العصبي والتوحد",
+      "problem_statement": "تعاني ملايين العائلات العربية من نقص حاد في مراكز التدخل المبكر والتعليم المتخصص للأطفال ذوي التوحد أو ADHD. التكلفة باهظة والمحتوى العربي المتخصص ضعيف جداً. الفجوة هي منصة تستخدم الـ AI لتقديم خطط علاجية وتدريبية مخصصة في المنزل، مع أدوات تواصل بديلة (AAC) باللهجات العربية، وربط العائلات بخبراء معتمدين."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Muneer-Kids",
+        "industry_tag": "تكنولوجيا الدمج التعليمي والعصبي",
+        "revenue_model": "Monthly Subscription for Personalized Learning Path + In-app Specialist Consultation + Sale of Sensory Kits",
+        "action_text": "استعراض منصة تمكين الأطفال ذوي الاختلافات العصبية عربياً"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الأمل الرقمي (0-24 شهر)",
+      "subtitle": "تحويل التكنولوجيا إلى جسر للتواصل والتعلم",
+      "phases": [
+        {
+          "title": "محرك التحليل السلوكي (Behavioral AI)",
+          "description": "تطوير أداة تتيح للأهل تسجيل سلوكيات الطفل والحصول على تحليل فوري وتوصيات تربوية مبنية على منهجية (ABA) المعتمدة عالمياً.",
+          "icon": "search",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام التواصل المعزز (Arabic AAC)",
+          "description": "بناء تطبيق تواصل بالصور والأصوات المسجلة باللهجات المحلية لمساعدة الأطفال غير الناطقين على التعبير عن احتياجاتهم.",
+          "icon": "microphone",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة الدمج المدرسي (Inclusive Bridge)",
+          "description": "توفير أدوات وتقارير للمعلمين في المدارس العادية لتمكينهم من فهم احتياجات الطفل ودمجه في الفصل بفاعلية.",
+          "icon": "academic-cap",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 10.0,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Prevalence of Autism/ADHD in MENA vs Availability of Specialized Centers"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الوصمة الاجتماعية التي تجعل الأهل يتأخرون في التشخيص.",
+        "النقص الشديد في الكوادر العربية المؤهلة عالمياً في هذا المجال.",
+        "ارتفاع تكلفة الجلسات الفردية التي لا تتحملها معظم العائلات.",
+        "غياب المناهج الرقمية التفاعلية المصممة للحواس الحساسة لهؤلاء الأطفال."
+      ],
+      "recommended_tech_stack": [
+        "Computer Vision for Eye Tracking & Sentiment Analysis",
+        "Speech-to-Speech Translation for Speech Therapy",
+        "Gamification Engines (Unity)",
+        "Progress Tracking Analytics Dashboard",
+        "Secure Video Conferencing for Tele-therapy"
+      ],
+      "main_risk_index": "دقة التشخيص؛ يجب ألا تحل المنصة محل الطبيب بل تكون أداة مساعدة، مما يتطلب بروتوكولات أخلاقية صارمة لتجنب التشخيص الخاطئ."
+    }
+  }
+}

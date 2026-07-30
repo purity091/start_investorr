@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-LOG09",
+      "status_label": "تحليل فجوة كفاءة وقود أساطيل الشحن البري",
+      "category_tag": "Logistics / AI / Green-Tech",
+      "business_model": "SaaS (Subscription) + Performance Share (from Savings) + Fleet Management API",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Logistics",
+      "Transport",
+      "Sustainability"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Massive Logistics Fleets)", "flag": "🇸🇦" },
+        { "name": "Egypt (High Transport Costs)", "flag": "🇪🇬" },
+        { "name": "UAE (Global Logistics Hub)", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "الأسطول الأخضر: تحسين كفاءة وقود الشاحنات بالـ AI",
+      "problem_statement": "يمثل الوقود أكثر من 40% من تكاليف شركات الشحن في الوطن العربي، ويضيع 15% من هذا الوقود بسبب سوء تخطيط المسارات، القيادة المتهورة، أو تهالك الأسطول. الفجوة هي نظام ذكاء اصطناعي يحلل سلوك السائق والمسار لحظياً لتقليل الاستهلاك بنسبة 20%، مما يحقق وفرات بملايين الدولارات ويقلل الانبعاثات الكربونية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Kuf-Fuel",
+        "industry_tag": "تحسين كفاءة النقل الثقيل واللوجستيات الخضراء",
+        "revenue_model": "Monthly Subscription per Truck + 10% Share of Documented Fuel Savings + Fleet Health API",
+        "action_text": "استعراض تقنية توفير ملايين الدولارات في وقود الشاحنات"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الكفاءة الطاقية (0-36 شهر)",
+      "subtitle": "نقل أكثر، بتكلفة أقل وكوكب أنظف",
+      "phases": [
+        {
+          "title": "تثبيت 'الصندوق الأسود' الذكي (Fleet-IoT)",
+          "description": "تجهيز الشاحنات بحساسات تقرأ بيانات المحرك، السرعة، والفرملة بشكل لحظي لنقلها لسحابة البيانات.",
+          "icon": "rss",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك المسارات الأخضر (Eco-Routing)",
+          "description": "تطوير خوارزمية تختار المسار الأقل استهلاكاً للوقود بناءً على التضاريس، الزحام، وحمولة الشاحنة وليس فقط المسار الأقصر.",
+          "icon": "map",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نظام تدريب السائقين الآلي (Co-Driver AI)",
+          "description": "إعطاء تنبيهات صوتية لحظية للسائق لتصحيح سلوكيات القيادة (مثل التسارع المفاجئ) التي ترفع استهلاك الوقود.",
+          "icon": "microphone",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "Fuel Cost Impact on SME Shipping Profitability in MENA Regions"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف ثقافة البيانات لدى أصحاب أساطيل الشاحنات التقليدية.",
+        "التكلفة العالية المبدئية لتجهيز الشاحنات القديمة بالحساسات.",
+        "نقص الحوافز الحكومية للشركات التي تتبنى حلول تقليل الانبعاثات.",
+        "صعوبة مراقبة جودة الوقود وعمليات السرقة التي تؤثر على دقة البيانات."
+      ],
+      "recommended_tech_stack": [
+        "CAN-bus Data Integration",
+        "Edge-computing for Real-time Fuel Analysis",
+        "Predictive AI for Maintenance and Load Balancing",
+        "Mobile App for Driver Coaching",
+        "Carbon Footprint Reporting Tools"
+      ],
+      "main_risk_index": "مقاومة السائقين؛ السائقون قد يرون في المراقبة تدخلاً في عملهم، مما يتطلب نظام حوافز مالية للموفرين منهم لضمان النجاح."
+    }
+  }
+}

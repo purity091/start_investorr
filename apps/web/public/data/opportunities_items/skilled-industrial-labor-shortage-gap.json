@@ -1,0 +1,81 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-IND6",
+      "status_label": "تحليل نقص العمالة الصناعية الماهرة",
+      "category_tag": "Industrial Workforce (Skills / Training / Talent)",
+      "business_model": "B2B Training Platform + Certification + Employer Placement Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Industry",
+      "Workforce",
+      "Technical Skills"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Jordan", "flag": "🇯🇴" },
+        { "name": "Morocco", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 9
+    },
+    "core_content": {
+      "title": "منصة تأهيل وربط العمالة الصناعية الماهرة بالمصانع",
+      "problem_statement": "تواجه الصناعة العربية فجوة حادة بين احتياجات المصانع والمهارات المتوفرة في سوق العمل. المصانع تحتاج فنيين قادرين على تشغيل وصيانة آلات حديثة، قراءة بيانات الإنتاج، التعامل مع PLC/CNC/SCADA، وفهم معايير الجودة والسلامة. في المقابل، كثير من برامج التدريب المهني تقليدية أو منفصلة عن احتياجات المصنع الفعلية. البنك الدولي يشير إلى أن المهارات الرقمية والخضراء أصبحت طريقاً مهماً للوظائف في MENA، لكن المنطقة لا تزال تواجه فجوات في المهارات الأساسية والعملية. هذه الفجوة تجعل المصانع تعتمد على عمالة أجنبية أو تتحمل تكلفة تدريب داخلية عالية، وتؤخر التحول نحو Industry 4.0."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "SkillMill",
+        "industry_tag": "منصات تدريب وتوظيف العمالة الصناعية",
+        "revenue_model": "Employer Subscription + Certification Fees + Placement Commission + Government Training Contracts",
+        "action_text": "استعراض مسار تأهيل فني صناعي من التدريب العملي إلى التوظيف داخل المصنع"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة المهارات الصناعية (0-15 شهر)",
+      "subtitle": "من تدريب نظري إلى كفاءة تشغيلية قابلة للتوظيف",
+      "phases": [
+        {
+          "title": "تحليل احتياجات المصانع",
+          "description": "جمع متطلبات المهارات من المصانع حسب القطاع: غذاء، أدوية، إسمنت، معادن، بلاستيك، وتجميع إلكتروني."
+        },
+        {
+          "title": "بناء مسارات تدريب عملية",
+          "description": "تصميم برامج قصيرة تركّز على مهارات قابلة للقياس: تشغيل آلة، قراءة لوحة تحكم، صيانة أساسية، جودة، سلامة، وتحليل بيانات بسيط."
+        },
+        {
+          "title": "نظام اعتماد وتوظيف",
+          "description": "اختبارات عملية وشهادات موثوقة، ثم ربط المتدربين بالمصانع عبر منصة توظيف تعتمد على المهارة لا السيرة الذاتية فقط."
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "3300+ (Industrial Skills, TVET, Hiring, Training Outcome Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التدريب المهني غالباً لا يتجدد بسرعة كافية مع تغير آلات وأنظمة المصانع.",
+        "ضعف التعاون بين مراكز التدريب والمصانع في تصميم المناهج.",
+        "الشهادات لا تعكس دائماً قدرة عملية حقيقية داخل خط الإنتاج.",
+        "المصانع الصغيرة والمتوسطة لا تملك ميزانية تدريب داخلية قوية.",
+        "ضعف الجاذبية الاجتماعية للوظائف الفنية مقارنة بالوظائف المكتبية، رغم ارتفاع الطلب الصناعي."
+      ],
+      "recommended_tech_stack": [
+        "LMS for Technical Training",
+        "Practical Skill Assessment Engine",
+        "Simulation-based Training",
+        "Employer Talent Marketplace",
+        "Digital Certification",
+        "Factory Training CRM",
+        "AI Skill Matching"
+      ],
+      "main_risk_index": "جودة المخرجات؛ إذا لم يلاحظ المصنع تحسناً حقيقياً في أداء العامل بعد التدريب، ستفقد المنصة الثقة. لذلك يجب أن يكون التدريب عملياً ومقاساً بنتائج تشغيلية مثل تقليل الأخطاء أو زيادة سرعة التشغيل."
+    }
+  }
+}

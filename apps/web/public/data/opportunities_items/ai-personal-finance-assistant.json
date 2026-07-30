@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-FIN-2026",
+      "status_label": "تحليل فني واقتصادي معمق",
+      "category_tag": "التقنية المالية (WealthTech & AI)",
+      "business_model": "B2C + B2B2C (White Label)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "FinTech",
+      "Behavioral Economics",
+      "Autonomous Finance"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Kuwait", "flag": "🇰🇼" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "ثورة الإدارة المالية الذكية (الطيار الآلي للمال)",
+      "problem_statement": "تعاني منطقة الخليج من 'فجوة التخطيط المالي'؛ حيث يمتلك الأفراد قوة شرائية عالية ولكن بمعدلات ادخار واستثمار منخفضة نتيجة غياب الأدوات التي تدمج السلوك الإنفاقي المحلي مع الإدارة الآلية للمدخرات. الحلول الحالية مجرد أدوات تتبع (Trackers) يدوية، بينما يطلب السوق 'محركاً تنبؤياً' يدير الثروات الصغيرة والناشئة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "MaliAI",
+        "industry_tag": "الجيل الثالث من الإدارة المالية (Autonomous Finance)",
+        "revenue_model": "Subscription + Interchange Fees + Robo-Advisory Commission",
+        "action_text": "عرض التوقعات المالية للعائد على الاستثمار (ROI) لخمس سنوات"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة الطريق الاستراتيجية (نحو الريادة المالية)",
+      "subtitle": "بناء منظومة مالية متكاملة مدعومة بالذكاء الاصطناعي",
+      "phases": [
+        {
+          "title": "مرحلة التجميع الذكي (Data Aggregation)",
+          "description": "إطلاق منصة تعتمد على Open Banking لاستيراد وتحليل البيانات البنكية لحظياً، مع محرك NLP متقدم لفهم وتصنيف الفواتير والرسائل البنكية باللغة العربية والظروف المحلية.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التنبؤ والتوجيه (Predictive Engine)",
+          "description": "تفعيل خوارزميات تعلم الآلة للتنبؤ بالتدفقات النقدية المستقبلية للمستخدم، وتقديم نصائح 'مجهرية' (Micro-nudges) لتقليل الهدر وتحويل الفائض تلقائياً نحو أوعية ادخارية.",
+          "icon": "chart-pie",
+          "color_theme": "rose"
+        },
+        {
+          "title": "الاستثمار الذاتي (Robo-Advisory)",
+          "description": "التوسع لربط المنصة بأسواق الأسهم والصناديق الاستثمارية، لتمكين الاستثمار الآلي المتوافق مع الشريعة الإسلامية بناءً على ملف المخاطر الخاص بكل مستخدم.",
+          "icon": "currency-dollar",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.2,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 8.5,
+      "data_points_analyzed": "450+ (Financial Reports & Consumer Trends 2026)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تعقيد الأنظمة البنكية التقليدية وبطء اعتماد المصرفية المفتوحة (سابقاً).",
+        "الافتقار إلى نماذج ذكاء اصطناعي تفهم الأنماط الاستهلاكية الموسمية في المنطقة (رمضان، الأعياد، المواسم).",
+        "تركيز التطبيقات الحالية على الشركات (B2B) وإهمال تجربة المستخدم الفرد (UX).",
+        "غياب الربط المباشر بين تحليل المصروفات وقرارات الاستثمار الفوري."
+      ],
+      "recommended_tech_stack": [
+        "Generative AI for Financial Coaching",
+        "Open Banking APIs (SAMA & UAE Central Bank Compliant)",
+        "Hyper-Secure Data Vaults (AES-256)",
+        "Real-time Analytics Engine (Apache Kafka)",
+        "Biometric Authentication Layer"
+      ],
+      "main_risk_index": "الامتثال التنظيمي (Regulatory Compliance) وتطور تشريعات 'المصرفية المفتوحة' يمثلان المتغير الأهم لضمان تدفق البيانات بسلاسة."
+    }
+  }
+}

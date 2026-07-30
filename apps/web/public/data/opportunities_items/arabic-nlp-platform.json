@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-TECH-2026-NLP-AR",
+      "status_label": "تحليل استخباري لسيادة البيانات اللغوية",
+      "category_tag": "الذكاء الاصطناعي (NLP / LLM)",
+      "business_model": "SaaS (API-based) + Enterprise Customization",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Artificial Intelligence",
+      "Natural Language Processing",
+      "Business Intelligence"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 7
+    },
+    "core_content": {
+      "title": "منصة معالجة اللغات الطبيعية العربية المتقدمة",
+      "problem_statement": "رغم تطور الذكاء الاصطناعي، لا تزال النماذج العالمية تعاني من فهم 'روح' اللغة العربية، خاصة اللهجات المحلية، السياق الثقافي، والتعقيدات الصرفية. الشركات العربية تفتقر لأدوات دقيقة لتحليل مشاعر العملاء، استخراج البيانات من الوثائق القانونية، أو بناء مساعدين أذكياء يفهمون اللهجات الدارجة بنسبة دقة تتجاوز 95%."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Faseeh-AI",
+        "industry_tag": "محرك الاستخبارات اللغوية العربية",
+        "revenue_model": "Tiered API Credits + Custom Model Fine-tuning for Banks/Gov",
+        "action_text": "استعراض محرك تحليل اللهجات المحلية الأكثر دقة في المنطقة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الفصاحة الرقمية (0-18 شهر)",
+      "subtitle": "تمكين الآلة من فهم لغة الضاد",
+      "phases": [
+        {
+          "title": "بناء أضخم مستودع للهجات (Dialect Data Lake)",
+          "description": "جمع وتصنيف ملايين البيانات النصية والصوتية من مختلف الدول العربية (خليجي، مصري، شامي، مغاربي) لتدريب النماذج على التنوع اللساني.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تطوير نماذج الـ Transformers المتخصصة",
+          "description": "بناء نماذج لغوية ضخمة (LLMs) مصممة خصيصاً للغة العربية من الصفر، لضمان كفاءة أعلى واستهلاك أقل للموارد مقارنة بالنماذج المترجمة.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق بوابة المطورين والحلول القطاعية",
+          "description": "توفير حلول جاهزة لقطاعات (القانون، خدمة العملاء، الإعلام) تتيح التلخيص الذكي، تحليل المشاعر، والترجمة التقنية الدقيقة.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "10B+ Arabic Tokens processed"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التركيز العالمي على اللغة الإنجليزية وإهمال خصوصية الصرف العربي.",
+        "تشتت البيانات العربية بين الفصحى ومئات اللهجات المحلية.",
+        "الحاجة لقدرات حوسبة هائلة وتكلفة تدريب مرتفعة للنماذج اللغوية.",
+        "ضعف الأدوات المتاحة حالياً في فهم 'السخرية' والسياق في المحتوى العربي."
+      ],
+      "recommended_tech_stack": [
+        "PyTorch / TensorFlow Frameworks",
+        "Arabic BERT/RoBERTa variants",
+        "GPU Clusters (NVIDIA H100)",
+        "Vector Databases for Semantic Search",
+        "Fine-tuning with RLHF"
+      ],
+      "main_risk_index": "السيادة المعلوماتية؛ يتطلب المشروع استضافة النماذج داخل سحب وطنية لضمان أمن البيانات الحكومية والمصرفية الحساسة."
+    }
+  }
+}

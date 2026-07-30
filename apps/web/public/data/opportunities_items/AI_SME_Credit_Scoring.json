@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-FIN-2026-SME-SCORE",
+      "status_label": "تحليل استخباري لسد فجوة التمويل الفجائية",
+      "category_tag": "التقنية المالية (Alternative Data / AI)",
+      "business_model": "B2B SaaS (API-based Revenue)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "FinTech",
+      "Credit Tech",
+      "SME Empowerment"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "UAE", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "التقييم الائتماني الذكي للمنشآت الصغيرة والمتوسطة",
+      "problem_statement": "تمثل المنشآت الصغيرة والمتوسطة 90% من الشركات، لكن البنوك ترفض تمويل 70% منها لعدم وجود تاريخ ائتماني تقليدي. هذه الشركات 'أشباح' في النظام المصرفي الحالي، مما يعطل نمواً اقتصادياً بمليارات الدولارات نتيجة الاعتماد على معايير تقييم عفا عليها الزمن."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Thiqah-AI",
+        "industry_tag": "محرك الجدارة الائتمانية البديلة",
+        "revenue_model": "Success Fee per Loan + Subscription for Banks + API Call Fees",
+        "action_text": "استعراض كيف حولنا بيانات المبيعات إلى قروض مضمونة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التمويل الفوري (0-15 شهر)",
+      "subtitle": "من الورق إلى الخوارزمية في ثوانٍ",
+      "phases": [
+        {
+          "title": "دمج تدفقات البيانات البديلة (Data Aggregation)",
+          "description": "ربط المنصة ببيانات نقاط البيع (POS)، فواتير المرافق، بيانات الموردين، وحتى تقييمات العملاء الرقمية لبناء صورة حقيقية للتدفق النقدي.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء محرك التقييم السلوكي (ML Engine)",
+          "description": "تطوير خوارزمية تعلم آلي تحلل أكثر من 500 متغير للتنبؤ بالقدرة على السداد بدقة تتجاوز الطرق التقليدية بنسبة 40%.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة الربط المصرفي اللحظي",
+          "description": "توفير واجهة برمجة تطبيقات (API) تتيح للبنوك وشركات التمويل منح موافقات ائتمانية خلال أقل من 5 دقائق للمنشآت المؤهلة.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "2.5M+ (SME Transaction Patterns)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "البنوك التقليدية تخشى المخاطرة وتفتقر للأدوات التقنية لتحليل البيانات غير المنظمة.",
+        "تشتت بيانات المنشآت الصغيرة بين منصات الدفع والدفاتر اليدوية.",
+        "غياب 'هوية رقمية موحدة' للشركات الصغيرة تسهل تقييمها.",
+        "تكلفة دراسة ملف ائتماني صغير بشرياً تتجاوز العائد المتوقع منه."
+      ],
+      "recommended_tech_stack": [
+        "Predictive Machine Learning (XGBoost/LightGBM)",
+        "Open Banking APIs",
+        "Big Data Processing (Apache Spark)",
+        "Automated KYC/AML Compliance",
+        "Cloud-native Microservices"
+      ],
+      "main_risk_index": "جودة البيانات؛ دقة التقييم تعتمد كلياً على سلامة البيانات القادمة من منصات الطرف الثالث، مما يتطلب بروتوكولات تحقق صارمة."
+    }
+  }
+}

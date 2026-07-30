@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ENERGY3",
+      "status_label": "تحليل عوائق تبني الطاقة الشمسية",
+      "category_tag": "Clean Energy (Solar / Distributed Energy)",
+      "business_model": "Solar-as-a-Service + Financing + SaaS Monitoring",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Energy",
+      "Solar",
+      "Distributed Systems"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Jordan", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "تسريع تبني الطاقة الشمسية للمنازل والشركات",
+      "problem_statement": "رغم توفر الشمس بكثرة في المنطقة، إلا أن تبني الطاقة الشمسية اللامركزية لا يزال محدوداً بسبب التعقيدات التنظيمية، التكلفة الأولية، ونقص التمويل. هذا يعيق تحول الطاقة ويزيد الاعتماد على الشبكات التقليدية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "SunFlow",
+        "industry_tag": "Solar Platforms",
+        "revenue_model": "Subscription + Financing + Installation Fees",
+        "action_text": "استعراض تركيب الطاقة الشمسية بسهولة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة الطاقة الشمسية (0-12 شهر)",
+      "subtitle": "الشمس للجميع",
+      "phases": [
+        {
+          "title": "تبسيط التثبيت",
+          "description": "تقديم حلول جاهزة.",
+          "icon": "sun",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تمويل مرن",
+          "description": "تقسيط التكلفة.",
+          "icon": "credit-card",
+          "color_theme": "rose"
+        },
+        {
+          "title": "مراقبة الإنتاج",
+          "description": "تطبيق لمتابعة الأداء.",
+          "icon": "chart",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "2300+ (Solar Adoption Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تكلفة أولية عالية.",
+        "تعقيدات تنظيمية.",
+        "نقص التمويل.",
+        "ضعف الوعي."
+      ],
+      "recommended_tech_stack": [
+        "Solar Monitoring Systems",
+        "IoT Devices",
+        "FinTech Integration",
+        "Mobile Apps",
+        "Cloud Platforms"
+      ],
+      "main_risk_index": "تنظيمي؛ يعتمد على السياسات الحكومية."
+    }
+  }
+}

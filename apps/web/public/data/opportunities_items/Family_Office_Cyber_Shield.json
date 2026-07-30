@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-STRAT-2026-CYB05",
+      "status_label": "تحليل فجوة الأمان الرقمي للثروات الخاصة",
+      "category_tag": "Cybersecurity / WealthTech",
+      "business_model": "Annual Retainer + Security Audits + Crisis Management Fee",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Cybersecurity",
+      "Family Offices",
+      "Digital Asset Protection"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Riyadh/Jeddah)", "flag": "🇸🇦" },
+        { "name": "UAE (Dubai/Abu Dhabi)", "flag": "🇦🇪" },
+        { "name": "Kuwait", "flag": "🇰🇼" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "درع الأمان السيبراني للمكاتب العائلية (Cyber Shield)",
+      "problem_statement": "تدير المكاتب العائلية في الخليج مليارات الدولارات، لكنها تفتقر لأقسام تقنية متخصصة كالبنوك. هم الهدف الأول لهجمات 'التصيد الاحتيالي' وانتحال الشخصية. اختراق واحد قد يؤدي لخسائر فادحة وتسريب أسرار تجارية حساسة. الفجوة هي غياب خدمة حماية سيبرانية شاملة 'مخصصة' لخصوصية العائلات الثرية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Hisn-Family",
+        "industry_tag": "الأمن السيبراني السيادي الخاص",
+        "revenue_model": "Fixed Annual Subscription per Household + Incident Response Fees + Wealth Guard SaaS",
+        "action_text": "استعراض خطة حماية 360 درجة للثروة الرقمية العائلية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الحصانة الرقمية (0-12 شهر)",
+      "subtitle": "تأمين الإرث من التهديدات غير المرئية",
+      "phases": [
+        {
+          "title": "تدقيق البصمة الرقمية (Surface Mapping)",
+          "description": "تحليل كافة الثغرات الرقمية لأفراد العائلة وموظفي المكتب، وإغلاق منافذ الاختراق في الحسابات الشخصية والبنكية.",
+          "icon": "search",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نشر 'الغرفة الآمنة' الرقمية",
+          "description": "تأسيس بنية تحتية مشفرة بالكامل للتواصل وإدارة المستندات والتحويلات المالية بعيداً عن الإنترنت العام.",
+          "icon": "lock-closed",
+          "color_theme": "rose"
+        },
+        {
+          "title": "مركز العمليات الأمنية (SOC) المخصص",
+          "description": "مراقبة نشاط الحسابات والشبكات على مدار الساعة لاكتشاف أي محاولة اختراق أو تسلل قبل وقوع الضرر.",
+          "icon": "shield-check",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 9.7,
+      "data_points_analyzed": "Cyber Attack Trends on Private Wealth Centers (GCC)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف وعي أفراد العائلات والجيل القديم بمخاطر الأمن الرقمي.",
+        "الشركات السيبرانية العالمية تركز على البنوك والشركات الكبرى ولا تخدم الأفراد بخصوصية.",
+        "الحساسية العالية تجاه مشاركة أسرار العائلة مع شركات تقنية خارجية.",
+        "التعقيد التقني في حماية أجهزة منزلية وشخصية متنوعة (IoT/Mobiles)."
+      ],
+      "recommended_tech_stack": [
+        "Zero Trust Network Access (ZTNA)",
+        "End-to-End Encryption (E2EE)",
+        "AI Behavioral Analysis for Identity",
+        "Secure Hardware Tokens",
+        "Privacy-focused Operating Systems"
+      ],
+      "main_risk_index": "عامل الثقة؛ نجاح المشروع يعتمد بنسبة 100% على سمعة المؤسسين وعلاقاتهم الشخصية مع العائلات الكبرى."
+    }
+  }
+}

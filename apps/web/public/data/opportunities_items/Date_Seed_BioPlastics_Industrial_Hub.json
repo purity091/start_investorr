@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-IND09",
+      "status_label": "تحليل فجوة استغلال المخلفات الزراعية الصناعية",
+      "category_tag": "Circular Economy / Bio-Materials / Agri-Industry",
+      "business_model": "B2B Bio-Plastic Pellets Sales + Waste Collection Contracts + IP Licensing",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Manufacturing",
+      "Agriculture",
+      "Environment"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Date Palm Wealth)", "flag": "🇸🇦" },
+        { "name": "Egypt (Largest Date Producer)", "flag": "🇪🇬" },
+        { "name": "Iraq (Heritage Palm Groves)", "flag": "🇮🇶" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "بلاستيك النوى: تحويل مخلفات التمور إلى مواد حيوية",
+      "problem_statement": "ينتج العالم العربي أكثر من 70% من تمور العالم، ويُخلف ذلك مئات الآلاف من أطنان النوى التي تُعتبر 'نفايات'. في المقابل، يضغط العالم لمنع البلاستيك التقليدي. الفجوة هي غياب مصانع متطورة تحول السليلوز والزيوت داخل نوى التمر إلى حبيبات بلاستيك حيوي (Bio-Plastic) قابل للتحلل يُستخدم في التغليف والطباعة ثلاثية الأبعاد."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Nawa-Plastic",
+        "industry_tag": "الصناعات التحويلية الحيوية من التمور",
+        "revenue_model": "Sale of Bio-plastic Pellets (per ton) + Licensing Production Tech + Eco-friendly Branding Support",
+        "action_text": "استعراض خطة تحويل نفايات التمور إلى بديل بلاستيكي عالمي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق البلاستيك الأخضر (0-36 شهر)",
+      "subtitle": "من النخلة إلى الصناعات المتقدمة",
+      "phases": [
+        {
+          "title": "تطوير تكنولوجيا استخلاص البوليمرات",
+          "description": "استخدام عمليات كيميائية حيوية (Bio-refining) لتحويل كربوهيدرات نوى التمر إلى مادة (PLA) أو بدائل بلاستيكية متينة.",
+          "icon": "beaker",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "خط إنتاج الحبيبات الصناعية (Pellets)",
+          "description": "تأسيس مصنع يقوم بإنتاج حبيبات بلاستيكية جاهزة للاستخدام في ماكينات الحقن (Injection Molding) التقليدية دون تعديلات.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "عقود التوريد الخضراء (B2B)",
+          "description": "إبرام اتفاقيات مع شركات التعبئة والتغليف (مثل شركات المياه والأغذية) لاستبدال البلاستيك النفطي ببلاستيك النوى المستدام.",
+          "icon": "truck",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Date Seed Waste Volume vs Plastic Replacement Demand in MENA"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لعمليات 'التكرير الحيوي' مقارنة بالبلاستيك الرخيص المشتق من النفط.",
+        "الحاجة لجمع كميات ضخمة من النوى من معاصر ومصانع التمور المشتتة.",
+        "التحديات التقنية في جعل البلاستيك الحيوي يتحمل درجات حرارة الصيف العربي.",
+        "نقص الوعي الصناعي بجدوى المنتجات المشتقة من التمور خارج نطاق الغذاء."
+      ],
+      "recommended_tech_stack": [
+        "Bio-refining Processing Units",
+        "Polymer Compounding Tech",
+        "AI for Supply Chain Optimization",
+        "3D Printing Filament Extruders",
+        "Advanced Biodegradability Testing Labs"
+      ],
+      "main_risk_index": "استقرار المواد الخام؛ يعتمد المشروع على موسمية حصاد التمور، مما يتطلب استراتيجية تخزين طويلة الأمد للنوى لضمان عمل المصنع طوال العام."
+    }
+  }
+}

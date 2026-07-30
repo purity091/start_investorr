@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-RET07",
+      "status_label": "تحليل فجوة اقتصاد تأجير المعدات الرياضية",
+      "category_tag": "Sports / Lifestyle / Subscription",
+      "business_model": "Rental-as-a-Service + Subscription (Unlimited Access) + Rent-to-Own",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Retail & Commerce",
+      "Sports & Leisure",
+      "Circular Economy"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "UAE & Saudi Arabia (Padel, Diving, Camping Centers)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Egypt & Lebanon (Hiking & Outdoor Community)",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "رياضة بلا حدود: اقتصاد تأجير المعدات الفاخرة",
+      "problem_statement": "تنمو ثقافة الرياضات والهوايات (باديل، غوص، تخييم، دراجات) في الوطن العربي، لكن تكلفة شراء المعدات الفاخرة عالية جداً وتأخذ مساحة تخزين كبيرة. الفجوة هي منصة تتيح 'تأجير' أو 'الاشتراك' في أجود المعدات الرياضية العالمية، مع خدمة التوصيل للملعب أو موقع النشاط وصيانتها دورياً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Nashat-Rent",
+        "industry_tag": "اقتصاد التشارك الرياضي وتكنولوجيا نمط الحياة الصحي",
+        "revenue_model": "Pay-per-use Rental Fee + Monthly Membership Subscription + Used Equipment Sales Marketplace",
+        "action_text": "استعراض مشروع بوابة الرياضة التشاركية في الوطن العربي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق النشاط المرن (0-36 شهر)",
+      "subtitle": "استمتع بالرياضة، ولا تحمل هم المعدات",
+      "phases": [
+        {
+          "title": "بناء أسطول المعدات الذكي (Asset-Fleet)",
+          "description": "الاستثمار في معدات رياضية عالية الجودة (Premium) مجهزة بحساسات تتبع وصيانة ذكية لضمان جاهزيتها الدائمة.",
+          "icon": "lightning-bolt",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك الحجز والتوصيل (Drop-Off-App)",
+          "description": "تطوير تطبيق يتيح للمستخدم حجز المضرب أو الخيمة وتحديد موعد ومكان التوصيل (مثلاً: لملعب الباديل المحجوز) واستلامها هناك.",
+          "icon": "map",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نظام 'الاشتراك في الشغف' (Passion-Pass)",
+          "description": "إطلاق باقات شهرية تسمح للمستخدم بتغيير نوع المعدات حسب نشاطه الأسبوعي (مثلاً: غوص هذا الأسبوع، وتخييم الأسبوع القادم).",
+          "icon": "refresh",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.2,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "Growth of Niche Sports in GCC vs Consumer Hesitancy due to Equipment Costs"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التخوف من تضرر المعدات الفاخرة وصعوبة إدارة عمليات التأمين عليها.",
+        "الحاجة لعمليات لوجستية معقدة (تنظيف، تعقيم، صيانة) بين كل عملية تأجير.",
+        "النظرة التقليدية التي تفضل الامتلاك على التأجير (يتم حلها عبر نموذج اشتراك جذاب).",
+        "صعوبة إدارة المخزون الموزع في مدن متباعدة."
+      ],
+      "recommended_tech_stack": [
+        "Asset Tracking IoT (RFID/BLE)",
+        "Real-time Inventory Management System",
+        "Booking & Scheduling Engine",
+        "Digital Security Deposit Integration",
+        "Automated Cleaning & Quality Logs"
+      ],
+      "main_risk_index": "الاستهلاك المفرط؛ تآكل المعدات بسرعة يتطلب استراتيجية 'إدارة دورة حياة الأصول' ذكية تضمن الربحية قبل خروج القطعة من الخدمة."
+    }
+  }
+}

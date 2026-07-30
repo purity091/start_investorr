@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-AGRI6",
+      "status_label": "تحليل فجوة تبني الزراعة الدقيقة",
+      "category_tag": "AgriTech (Precision Agriculture / IoT)",
+      "business_model": "Hardware + SaaS + Subscription",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Agriculture",
+      "Precision Farming",
+      "IoT"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 8
+    },
+    "core_content": {
+      "title": "إدخال الزراعة الدقيقة للمزارع التقليدية",
+      "problem_statement": "رغم توفر تقنيات الزراعة الدقيقة عالمياً (Sensors, Drones, AI)، إلا أن تبنيها في العالم العربي لا يزال محدوداً جداً. المزارعون يعتمدون على الخبرة الشخصية بدلاً من البيانات، مما يؤدي إلى هدر الموارد وانخفاض الإنتاجية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "FarmSense",
+        "industry_tag": "الزراعة الذكية",
+        "revenue_model": "Device Sales + Subscription + Data Insights",
+        "action_text": "استعراض تحويل مزرعة تقليدية إلى ذكية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة الزراعة الدقيقة (0-12 شهر)",
+      "subtitle": "القرار الزراعي مبني على البيانات",
+      "phases": [
+        {
+          "title": "توفير أجهزة استشعار منخفضة التكلفة",
+          "description": "إدخال IoT Sensors بأسعار مناسبة للمزارعين.",
+          "icon": "chip",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منصة تحليل بيانات زراعية",
+          "description": "تحليل البيانات وتقديم توصيات للمزارعين.",
+          "icon": "chart",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التدريب والتبني",
+          "description": "تدريب المزارعين على استخدام التكنولوجيا.",
+          "icon": "users",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "2300+ (Precision Agriculture Adoption Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ارتفاع تكلفة التكنولوجيا.",
+        "ضعف الوعي التقني لدى المزارعين.",
+        "غياب حلول مخصصة للسوق العربي.",
+        "نقص الدعم الحكومي في بعض الدول."
+      ],
+      "recommended_tech_stack": [
+        "IoT Sensors",
+        "Drone Monitoring",
+        "AI Analytics",
+        "Mobile Apps",
+        "Cloud Platforms"
+      ],
+      "main_risk_index": "تبني المستخدم؛ يتطلب المشروع تبسيط التكنولوجيا بشكل كبير للمزارعين."
+    }
+  }
+}

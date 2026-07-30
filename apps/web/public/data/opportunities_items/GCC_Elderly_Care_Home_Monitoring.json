@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-GCC-2026-ELDER",
+      "status_label": "تحليل استخباري للتحول الديموغرافي والاجتماعي",
+      "category_tag": "تكنولوجيا الرعاية (AgeTech / Remote Monitoring)",
+      "business_model": "Subscription (B2C) + B2B (Healthcare Providers)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "HealthTech",
+      "AgeTech",
+      "Ambient Sensing",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Kuwait", "flag": "🇰🇼" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "الاستقلالية الكريمة لكبار السن",
+      "problem_statement": "تشهد دول الخليج تحولاً ديموغرافياً متسارعاً مع زيادة متوسط العمر، تزامناً مع تحول الأسر نحو 'العائلة النووية' وانشغال الأبناء بالعمل. ثقافياً، هناك رفض تام لفكرة دور الرعاية، مما يترك كبار السن وحدهم في المنازل لفترات طويلة. غياب المراقبة غير الاقتحامية يؤدي إلى تأخر اكتشاف السقطات، تدهور العلامات الحيوية، أو عدم الالتزام بالأدوية، مما يسبب مضاعفات حرجة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Aseel-Home",
+        "industry_tag": "الرعاية التلطيفية والوقائية الذكية",
+        "revenue_model": "Hardware Install + Monthly Monitoring Fee + Emergency Response Service",
+        "action_text": "استعراض تقنيات الاستشعار البيئي بدون كاميرات (Privacy-First)"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الرعاية المنزلية (0-15 شهر)",
+      "subtitle": "حماية الأهل بأحدث ما توصلت إليه تكنولوجيا الاستشعار",
+      "phases": [
+        {
+          "title": "الاستشعار المحيطي (Ambient Radar Sensing)",
+          "description": "تركيب أجهزة رادار مصغرة (mmWave) تكتشف السقوط، ومعدل التنفس، والحركة في المنزل دون استخدام كاميرات، حفاظاً على الخصوصية والكرامة.",
+          "icon": "status-online",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التحليل السلوكي (Behavioral Baseline AI)",
+          "description": "بناء خوارزمية تفهم 'النمط المعتاد' للمسن (وقت الاستيقاظ، دخول الحمام، الحركة) وترسل تنبيهاً للأبناء أو الطوارئ عند حدوث أي انحراف مريب.",
+          "icon": "heart",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة الربط الطبي (Care Coordination Hub)",
+          "description": "ربط البيانات بأطباء العائلة وشركات الرعاية المنزلية، مع دمج موزعات أدوية ذكية تضمن الالتزام التام بالخطة العلاجية.",
+          "icon": "support",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.0,
+      "competitive_moat": 9.3,
+      "data_points_analyzed": "1200+ (Demographic Shifts & Elderly Health Records)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "رفض كبار السن لارتداء أجهزة التتبع (Wearables) أو وجود كاميرات داخل غرفهم.",
+        "النقص الحاد في الكوادر التمريضية المؤهلة للزيارات المنزلية الدائمة.",
+        "اعتماد العائلات على عمالة منزلية غير مدربة طبياً لمراقبة المسنين.",
+        "الحاجة لحلول تقنية تتفهم الحساسية الثقافية والاجتماعية في البيت الخليجي."
+      ],
+      "recommended_tech_stack": [
+        "mmWave Radar Technology",
+        "Edge AI for Fall Detection",
+        "Non-contact Vital Sign Monitoring",
+        "Predictive Health Analytics",
+        "Secure Family Notification Portal"
+      ],
+      "main_risk_index": "المسؤولية الطبية؛ يجب توضيح أن النظام 'مساعد' وليس 'بديلاً' عن الطوارئ الطبية لتجنب التبعات القانونية في الحالات الحرجة."
+    }
+  }
+}

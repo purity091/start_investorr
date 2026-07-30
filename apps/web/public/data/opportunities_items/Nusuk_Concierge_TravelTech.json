@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-TRAV-2026-NC",
+      "status_label": "تحليل استخباري لتجربة الحج والعمرة الرقمية",
+      "category_tag": "تكنولوجيا السياحة (Gen-AI / Pilgrimage Tech)",
+      "business_model": "SaaS (Subscription/Commissions) + Data Insights",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "TravelTech",
+      "Gen-AI Assistants",
+      "Religious Tourism",
+      "الشركات الثورية"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Global Muslim Markets", "flag": "🌍" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "المساعد الرقمي فائق الذكاء لضيف الرحمن",
+      "problem_statement": "يواجه ملايين المعتمرين والحجاج صعوبة في تخطيط رحلتهم وإدارتها (حجوزات، تفويج، إرشادات دينية، خدمات لوجستية) بشكل متكامل وشخصي. المنصات الحالية مجرد أدوات حجز، بينما يحتاج ضيف الرحمن إلى 'مرافق ذكي' يفهم سياقه اللغوي والديني والجسدي ويدير تجربته لحظياً لتقليل الازدحام وزيادة الخشوع."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Nusuk-Concierge",
+        "industry_tag": "الذكاء الاصطناعي التوليدي في السياحة الدينية",
+        "revenue_model": "Premium Services Fee + B2B Licensing for Agencies + Marketplace Commission",
+        "action_text": "عرض استراتيجية التكامل مع منصة 'نسك' الحكومية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق تجربة ضيف الرحمن (0-12 شهر)",
+      "subtitle": "من التخطيط إلى الرحلة الروحانية الكاملة",
+      "phases": [
+        {
+          "title": "محرك الاستجابة التوليدي (Gen-AI Brain)",
+          "description": "تطوير نموذج لغوي (LLM) مدرب على الفقه الإسلامي، الخرائط اللحظية للحرمين، وجداول النقل لتوفير إجابات وتوجيهات فورية للمعتمرين بـ 15 لغة.",
+          "icon": "chat-alt-2",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "إدارة التدفق والزحام اللحظي (Dynamic Navigation)",
+          "description": "ربط المساعد الرقمي ببيانات الكثافة البشرية لتوجيه المستخدمين للأوقات والأبواب الأقل ازدحاماً، وتنظيم تحركاتهم اللوجستية بدقة متناهية.",
+          "icon": "user-group",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة الخدمات الشاملة (Lifestyle & Faith)",
+          "description": "دمج خدمات الرعاية الصحية الطارئة، طلب الوجبات، حجز المرشدين، وتوفير محتوى إيماني مخصص حسب موقع المعتمر وحالته.",
+          "icon": "sparkles",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.2,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 8.5,
+      "data_points_analyzed": "5000+ (Pilgrim Feedback & Crowd Management Logs)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التفتت اللوجستي بين شركات الحج والعمرة والخدمات المساندة.",
+        "عائق اللغة والتنوع الثقافي الهائل للمعتمرين.",
+        "صعوبة الحصول على بيانات لحظية دقيقة للزحام والخدمات (سابقاً).",
+        "التركيز على الكم العددي بدلاً من جودة التجربة الفردية."
+      ],
+      "recommended_tech_stack": [
+        "Large Language Models (LLMs) specialized in Fiqh",
+        "Real-time Data Streaming (Kafka/Flink)",
+        "IoT Crowdsensing Integration",
+        "Multi-lingual NLP Engine",
+        "Cloud-Native Scalable Architecture"
+      ],
+      "main_risk_index": "دقة المحتوى الديني؛ يتطلب النظام إشرافاً شرعياً صارماً لضمان عدم تقديم فتاوى أو توجيهات دينية خاطئة عبر الـ AI."
+    }
+  }
+}

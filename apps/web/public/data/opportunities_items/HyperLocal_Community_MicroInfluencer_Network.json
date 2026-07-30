@@ -1,0 +1,92 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-MKT13",
+      "status_label": "تحليل فجوة التأثير المجتمعي فائق المحلية",
+      "category_tag": "Marketing / Community / Micro-Influencer",
+      "business_model": "Platform Fee + Campaign Management Commission + Data Insights",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Marketing",
+      "Community Building",
+      "Social Commerce"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Egypt (Neighborhood Influencers)",
+          "flag": "🇪🇬"
+        },
+        {
+          "name": "Saudi Arabia (District Leaders)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Jordan & Morocco",
+          "flag": "🇯🇴"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "أبطال الأحياء: شبكة المؤثرين المحليين الفائقة",
+      "problem_statement": "تتوجه الميزانيات للمؤثرين الكبار (Celebrities) الذين فقدوا المصداقية والارتباط بالشارع، بينما يمتلك 'أبطال الأحياء' (شخصيات موثوقة في مناطق سكنية ضيقة) تأثيراً حقيقياً على قرارات الشراء لكن لا يمكن الوصول إليهم برمجياً. الفجوة هي منصة تربط العلامات بآلاف المؤثرين الصغار (Micro-influencers) لإدارة حملات 'زحف شعبي' فائقة المحلية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Hara-Hero",
+        "industry_tag": "التسويق المجتمعي وقوة التأثير المحلي",
+        "revenue_model": "Platform Fee per Influencer Hire + Monthly Subscription for Brands + Campaign Design Services",
+        "action_text": "استعراض الشبكة التي تسيطر على قرارات الشراء في كل حي عربي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التأثير الحقيقي (0-24 شهر)",
+      "subtitle": "الثقة تأتي من القرب، وليس من الشهرة",
+      "phases": [
+        {
+          "title": "محرك الاكتشاف الجغرافي (Geo-Discovery)",
+          "description": "بناء نظام يكتشف الحسابات التي تمتلك 'تركيزاً جغرافياً' عالياً لمتابعين من حي أو مدينة معينة، بغض النظر عن عددهم الإجمالي.",
+          "icon": "map",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام الحملات التشاركية (Collective-Ads)",
+          "description": "تفعيل ميزة تتيح للبراند إطلاق حملة واحدة يشارك فيها 1000 مؤثر صغير في وقت واحد، لعمل 'ضجة' (Buzz) في منطقة جغرافية محددة.",
+          "icon": "share",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة الثقة والمكافآت (Loyalty-Rewards)",
+          "description": "نظام لإدارة المستحقات والمكافآت للمؤثرين الصغار بناءً على تفاعل جيرانهم الحقيقي ومشترياتهم عبر أكواد الخصم المحلية.",
+          "icon": "gift",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.3,
+      "data_points_analyzed": "Engagement Rates of Micro-influencers vs Mega-influencers in Arab Markets"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الصعوبة اللوجستية في إدارة مئات العقود والمحادثات مع مؤثرين صغار بشكل يدوي.",
+        "نقص الأدوات التقنية التي تحلل الموقع الجغرافي الدقيق لمتابعي الحسابات الصغرى.",
+        "تفضيل الوكالات الإعلانية للتعامل مع عدد قليل من المشاهير لسهولة الإدارة.",
+        "صعوبة قياس 'العائد التراكمي' لمئات الحملات الصغيرة المتزامنة."
+      ],
+      "recommended_tech_stack": [
+        "Social Graph Analysis Tools",
+        "Automated Onboarding & Payouts",
+        "Geofencing Ad-tracking",
+        "AI for Content Moderation at Scale",
+        "Mobile App for Influencers"
+      ],
+      "main_risk_index": "جودة المحتوى؛ تنوع المؤثرين الصغار قد يؤدي لرسائل تسويقية غير متناسقة، مما يتطلب نظام 'قوالب إبداعية' (Creative Templates) لضمان هوية البراند."
+    }
+  }
+}

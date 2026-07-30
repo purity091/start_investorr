@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-TOU06",
+      "status_label": "تحليل فجوة إحياء المواقع الأثرية المندثرة",
+      "category_tag": "TourismTech / AR / Cultural Heritage",
+      "business_model": "Licensing to Museums/Cities + In-app Premium Content + AR Tour Tickets",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Tourism",
+      "Augmented Reality",
+      "Culture"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Palmyra & Old Aleppo", "flag": "🇸🇾" },
+        { "name": "Petra & Jerash", "flag": "🇯🇴" },
+        { "name": "Luxor & Giza", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "إعادة بناء التاريخ: أدلة الواقع المعزز للأثر العربي",
+      "problem_statement": "يجد السياح في المواقع الأثرية العربية 'أطلالاً' صامتة، ويصعب عليهم تخيل عظمة المدن القديمة كما كانت. الترميم الفيزيائي مكلف ومثير للجدل أثرياً. الفجوة هي تطبيق واقع معزز (AR) فائق الدقة يعيد بناء القصور والمعابد رقمياً فوق أنقاضها الحقيقية عند توجيه الهاتف، مع رواية قصص تاريخية غامرة بأصوات عالمية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Athar-Scan",
+        "industry_tag": "التكنولوجيا الثقافية والسياحة الغامرة",
+        "revenue_model": "Revenue Share with Site Management + White-label App for Tourism Ministries + Sponsored AR Historic Characters",
+        "action_text": "استعراض خطة إعادة إحياء 50 موقعاً أثرياً عربياً رقمياً"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المشهد التاريخي (0-48 شهر)",
+      "subtitle": "رؤية الماضي بعيون المستقبل",
+      "phases": [
+        {
+          "title": "المسح والنمذجة التاريخية (Precision 3D)",
+          "description": "التعاون مع المؤرخين لاستعادة التصاميم الأصلية للمباني المندثرة وبنائها رقمياً بدقة معمارية فائقة.",
+          "icon": "cube",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام التثبيت المكاني (VPS-Logic)",
+          "description": "استخدام نظام التموضع البصري (VPS) لضمان بقاء النموذج الرقمي ثابتاً فوق الأثر الحقيقي بدقة مليمترية مهما كانت زاوية الرؤية.",
+          "icon": "map",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق بوابة 'حكايات العصور'",
+          "description": "دمج الرواية الصوتية الدرامية والمؤثرات البيئية (صوت الزحام في السوق القديم مثلاً) داخل تجربة الـ AR لخلق انغماس كامل.",
+          "icon": "sparkles",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.8,
+      "data_points_analyzed": "Visitor Satisfaction in Ruined Sites vs Demand for Immersive Education"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لإنتاج نماذج 3D عالية الدقة تتوافق مع محركات الألعاب.",
+        "صعوبة ثبات الأجسام الرقمية في البيئات الصحراوية والمفتوحة (تم حله بالـ VPS).",
+        "نقص التكامل بين البيانات الأثرية الرسمية والشركات التقنية المطورة.",
+        "الحاجة لاتصالات إنترنت فائقة في مواقع نائية (يتم حله بنظام الـ On-device AI)."
+      ],
+      "recommended_tech_stack": [
+        "Augmented Reality (ARCore/ARKit)",
+        "Visual Positioning System (VPS)",
+        "Photogrammetry & LiDAR Scanning",
+        "Spatial Audio Engines",
+        "NVIDIA CloudXR for High-fidelity Streaming"
+      ],
+      "main_risk_index": "الاعتراف العلمي؛ يجب أن يكون الترميم الرقمي مدعوماً بأدلة تاريخية لعدم تضليل السياح، مما يتطلب لجان تدقيق أثرية."
+    }
+  }
+}

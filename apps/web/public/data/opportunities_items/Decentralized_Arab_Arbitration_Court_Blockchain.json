@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-LAW10",
+      "status_label": "تحليل فجوة تسوية النزاعات التجارية العابرة للحدود",
+      "category_tag": "LegalTech / Blockchain / Smart Contracts",
+      "business_model": "Arbitration Fees (Escrow) + Verification Fees + Subscription for SMEs",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Legal",
+      "Cross-border Trade",
+      "Blockchain"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Intra-Arab Trade (B2B)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Digital Free Zones (UAE/KSA/Bahrain)",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 22
+    },
+    "core_content": {
+      "title": "محكمة الثقة: فض النزاعات التجارية بالبلوكشين",
+      "problem_statement": "تتجنب الشركات العربية الصغيرة (SMEs) التجارة البينية لخوفها من تعقيدات القضاء عند حدوث نزاع (تأخر دفع، بضاعة مخالفة). اللجوء للمحاكم الدولية مكلف جداً. الفجوة هي 'محكمة رقمية' تعتمد على البلوكشين والتحكيم الجماعي (Crowd-Arbitration) لفض النزاعات في أيام وبكسر تكلفة المحاكم التقليدية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Adl-Chain",
+        "industry_tag": "العدالة الرقمية العابرة للحدود",
+        "revenue_model": "1-3% Escrow Fee per Transaction + Arbitration Case Fees + Monthly Trust Badge Subscription",
+        "action_text": "استعراض منصة فض النزاعات التي تحمي التجارة البينية العربية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق العدل الرقمي (0-24 شهر)",
+      "subtitle": "تأمين الثقة بين التجار العرب بالتكنولوجيا",
+      "phases": [
+        {
+          "title": "بروتوكول العقود الذكية (Trust-Contracts)",
+          "description": "توفير قوالب عقود قانونية 'برمجية' تحتجز المبلغ (Escrow) آلياً ولا تطلقه إلا بتوافق الطرفين أو قرار التحكيم.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "شبكة المحكمين الرقمية (Expert Oracles)",
+          "description": "بناء شبكة من المحامين والخبراء العرب المستقلين الذين يقومون بمراجعة الأدلة رقمياً وإصدار أحكام ملزمة قانونياً بناءً على العقد المشفر.",
+          "icon": "user-group",
+          "color_theme": "rose"
+        },
+        {
+          "title": "الربط مع القضاء المحلي (Enforcement)",
+          "description": "إبرام مذكرات تفاهم مع وزارات العدل في الدول العربية للاعتراف بقرارات التحكيم الرقمية وتنفيذها عبر المحاكم الوطنية.",
+          "icon": "link",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Intra-Arab Trade Friction Costs vs Speed of Legal Settlement"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "اختلاف القوانين التجارية بين الدول العربية.",
+        "ضعف الوعي بقانونية 'التحكيم الرقمي' ونتائج البلوكشين.",
+        "صعوبة تنفيذ الأحكام الصادرة من منصة خاصة على أرض الواقع.",
+        "تخوف الشركات من مشاركة أسرارها التجارية على منصة عامة."
+      ],
+      "recommended_tech_stack": [
+        "Smart Contracts (Solidity/Rust)",
+        "Decentralized Dispute Resolution Protocols (like Kleros)",
+        "Zero-Knowledge Proofs for Evidence Privacy",
+        "Digital ID Integration (National ID Apps)",
+        "NLP for Contract Analysis"
+      ],
+      "main_risk_index": "الاعتراف القانوني؛ بدون غطاء قانوني رسمي من وزارات العدل، ستبقى المنصة 'اختيارية' وغير ملزمة، مما يتطلب مجهوداً دبلوماسياً وتقنياً موازياً."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-AGLOG",
+      "status_label": "تحليل استخباري لسلاسل الإمداد والسيادة الغذائية",
+      "category_tag": "الخدمات اللوجستية (Logistics / Agri-Supply Chain)",
+      "business_model": "Marketplace (Uber-for-Trucks) + Managed Services",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Logistics",
+      "Agri-Supply Chain",
+      "Fleet Management"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Hama (Central Hub)", "flag": "🇸🇾" },
+        { "name": "Tartus (Port Link)", "flag": "🇸🇾" },
+        { "name": "Rural Damascus (Markets)", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 12
+    },
+    "core_content": {
+      "title": "منصة الربط اللوجستي لنقل المحاصيل والسلع الأساسية",
+      "problem_statement": "يعاني المزارعون والمنتجون في سوريا من 'تبخر الأرباح' نتيجة تعثر سلاسل الإمداد؛ حيث يضيع ما يصل إلى 40% من المحاصيل الطازجة قبل وصولها للمستهلك نتيجة غياب التنسيق اللوجستي، ارتفاع تكاليف الوقود، وتحكم الوسطاء. هناك تشتت هائل في أسطول النقل الخاص (شاحنات صغيرة ومتوسطة) الذي يعمل دون تنظيم، مما يجعل تكلفة نقل الكيلومتر الواحد في سوريا من الأعلى إقليمياً مقارنة بالدخل، ويؤدي لرفع أسعار الغذاء بشكل جنوني."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Naqel-SY",
+        "industry_tag": "الخدمات اللوجستية الرقمية للنقل الثقيل والمتوسط",
+        "revenue_model": "Booking Commission + Fuel Group-Buying Discount + Route Optimization Fees",
+        "action_text": "استعراض تقنية تقليل الهدر اللوجستي وزيادة دخل السائقين"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التدفق اللوجستي (0-18 شهر)",
+      "subtitle": "تحسين كفاءة النقل من الحقل إلى المائدة",
+      "phases": [
+        {
+          "title": "حشد ورقمنة أسطول النقل (Driver Onboarding)",
+          "description": "بناء قاعدة بيانات وتطبيق للسائقين المستقلين وشركات النقل، يتيح لهم استقبال طلبات الشحن بناءً على الموقع لتقليل 'رحلات العودة الفارغة'.",
+          "icon": "truck",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك تحسين المسارات واستهلاك الوقود",
+          "description": "دمج خوارزميات ذكية تحدد الطرق الأسرع والأقل استهلاكاً للوقود، وتسمح بمبدأ 'الشحن المشترك' (LTL) لعدة مزارعين في شاحنة واحدة.",
+          "icon": "map",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكامل سلاسل التبريد والتخزين المؤقت",
+          "description": "ربط المنصة بمستودعات تبريد وسيطة (تعمل بالطاقة الشمسية) لضمان حفظ المحاصيل الحساسة في حال تأخر النقل أو تبدل ظروف السوق.",
+          "icon": "snowflake",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.3,
+      "competitive_moat": 8.6,
+      "data_points_analyzed": "1200+ (Fuel Price Fluctuation & Crop Harvest Schedules)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "نقص الوقود وصعوبة تأمينه بشكل مستقر لشركات النقل الكبرى.",
+        "تهالك الطرق الرئيسية وزيادة تكاليف صيانة الآليات.",
+        "تجزئة السوق وسيطرة 'تجار الشنطة' والوسطاء الذين يستغلون حاجة المزارع للنقل الفوري.",
+        "غياب التكنولوجيا التي تربط بين العرض (الشاحنات) والطلب (المحاصيل) لحظياً."
+      ],
+      "recommended_tech_stack": [
+        "GPS Fleet Tracking (Telematics)",
+        "Dynamic Routing Algorithms",
+        "Mobile App with Offline Capabilities",
+        "Real-time Inventory Management (WMS)",
+        "Data Analytics for Demand Forecasting"
+      ],
+      "main_risk_index": "أمن الطرق وتوفر المحروقات؛ يتطلب المشروع استراتيجية تأمين لوجستي مرنة والقدرة على تأمين عقود وقود مؤسسية أو بدائل طاقة هجينة لأسطول النقل."
+    }
+  }
+}

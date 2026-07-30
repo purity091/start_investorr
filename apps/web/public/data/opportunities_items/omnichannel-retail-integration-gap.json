@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ECOM8",
+      "status_label": "تحليل فجوة التكامل بين القنوات",
+      "category_tag": "RetailTech (Omnichannel / Integration)",
+      "business_model": "SaaS + Integration Platform + Subscription",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "E-commerce",
+      "Retail",
+      "Omnichannel"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Kuwait", "flag": "🇰🇼" }
+      ],
+      "additional_regions_count": 8
+    },
+    "core_content": {
+      "title": "توحيد تجربة البيع بين الأونلاين والمتاجر",
+      "problem_statement": "تعاني الشركات من انفصال بين المتجر الفعلي والمتجر الإلكتروني، مما يؤدي إلى تجربة غير متكاملة للعملاء (مثلاً: منتج متوفر أونلاين لكنه غير موجود في المتجر). هذا يؤدي إلى خسارة مبيعات وانخفاض رضا العملاء."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "OmniRetail",
+        "industry_tag": "Omnichannel Platforms",
+        "revenue_model": "Subscription + Integration Fees",
+        "action_text": "استعراض تجربة بيع موحدة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التكامل (0-12 شهر)",
+      "subtitle": "تجربة واحدة عبر كل القنوات",
+      "phases": [
+        {
+          "title": "ربط الأنظمة",
+          "description": "دمج POS مع المتجر الإلكتروني.",
+          "icon": "link",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "مزامنة المخزون",
+          "description": "تحديث البيانات لحظياً.",
+          "icon": "database",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تجربة موحدة",
+          "description": "واجهة واحدة لإدارة القنوات.",
+          "icon": "dashboard",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.3,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "1800+ (Retail Integration Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "أنظمة منفصلة.",
+        "ضعف التكامل.",
+        "تعقيد العمليات.",
+        "نقص الحلول المحلية."
+      ],
+      "recommended_tech_stack": [
+        "Integration Platforms",
+        "Real-time Sync Systems",
+        "POS APIs",
+        "Cloud Systems",
+        "Data Pipelines"
+      ],
+      "main_risk_index": "التكامل؛ يحتاج دعم أنظمة متعددة."
+    }
+  }
+}

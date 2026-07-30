@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-RE-2026-VR-SALES",
+      "status_label": "تحليل استخباري لاقتصاد المبيعات الرقمية",
+      "category_tag": "التسويق العقاري (Immersive Tech / XR)",
+      "business_model": "B2B SaaS + Per-Project Commission",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Virtual Reality",
+      "Digital Sales",
+      "Customer Experience"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Global Investors (Dubai/Riyadh Market)", "flag": "🌍" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "تجارب الواقع المعزز والافتراضي للمبيعات العقارية",
+      "problem_statement": "يجد المستثمرون الدوليون صعوبة في شراء عقارات 'على المخطط' دون رؤيتها واقعياً، والمجسمات التقليدية لم تعد كافية لإقناعهم. شركات التطوير تخسر صفقات مليارية نتيجة فجوة الثقة والبعد الجغرافي، بينما تظل تكلفة صالات العرض (Sales Galleries) باهظة جداً وغير قابلة للنقل."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Dar-Metaverse",
+        "industry_tag": "منصة المبيعات العقارية الغامرة",
+        "revenue_model": "Production Fee per Project + Annual SaaS for Global Sales Agents",
+        "action_text": "استعراض بيع 30% من المشروع لمستثمرين خارجيين قبل بدء الحفر"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق البيع الغامر (0-12 شهر)",
+      "subtitle": "عقاراتك حول العالم بضغطة زر",
+      "phases": [
+        {
+          "title": "بناء التوأم الرقمي التسويقي (High-fidelity VR)",
+          "description": "تحويل مخططات التصميم إلى بيئة افتراضية فائقة الواقعية تتيح للمشتري التجول في منزله القادم، وتجربة الإضاءة في أوقات مختلفة، وتغيير الديكورات لحظياً.",
+          "icon": "view-grid",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منصة 'التجربة المشتركة' (Multiplayer Viewings)",
+          "description": "تكنولوجيا تتيح للعميل في نيويورك والوكيل في دبي التواجد معاً داخل الشقة الافتراضية والتفاعل وكأنهم في نفس المكان.",
+          "icon": "user-group",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إغلاق الصفقة بالواقع المعزز (AR Closing)",
+          "description": "استخدام الـ AR لمشروع العقار على قطعة الأرض الواقعية عبر الجوال، مما يساعد العميل على تخيل المنظر النهائي والبدء في إجراءات الشراء فوراً.",
+          "icon": "sparkles",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.2,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "Virtual Tour Conversion Rates vs Physical Viewings"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الضعف التقني في الأجيال السابقة من الـ VR (تم حله في 2026 عبر نظارات الجيل الجديد).",
+        "ارتفاع تكلفة إنتاج المحتوى ثلاثي الأبعاد فائق الجودة.",
+        "الحاجة لاتصالات إنترنت فائقة السرعة لبث المحتوى الغامر.",
+        "تفضيل الأجيال القديمة للمعاينة المادية التقليدية."
+      ],
+      "recommended_tech_stack": [
+        "Unreal Engine 5 (Nanite/Lumen)",
+        "Meta Quest 3 / Apple Vision Pro support",
+        "Web-based XR for easy access",
+        "Cloud Rendering for high-end graphics",
+        "Eye-tracking Analytics for Sales Insights"
+      ],
+      "main_risk_index": "المصداقية؛ الفجوة بين 'الواقع الافتراضي الجميل' و'الواقع الفيزيائي النهائي' قد تسبب مشاكل قانونية إذا لم تكن التفاصيل مطابقة للعقود."
+    }
+  }
+}

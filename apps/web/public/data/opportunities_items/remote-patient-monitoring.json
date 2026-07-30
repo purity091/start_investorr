@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-HEALTH-2026-V8",
+      "status_label": "تحليل استخباري عالي الأثر (High Impact)",
+      "category_tag": "الصحة الرقمية (Remote Patient Monitoring - RPM)",
+      "business_model": "B2B2C (Value-Based Healthcare)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "HealthTech",
+      "Predictive Diagnostics",
+      "الشركات الثورية"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Qatar", "flag": "🇶🇦" },
+        { "name": "UAE", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "الرعاية الاستباقية: سد فجوة المراقبة الحيوية المستمرة",
+      "problem_statement": "يعاني النظام الصحي في دول الخليج من نموذج 'الرعاية التفاعلية'؛ حيث يتم التدخل الطبي فقط بعد تفاقم الحالة. الأمراض المزمنة (السكري، الضغط) تستهلك 70% من ميزانيات الرعاية الصحية نتيجة حالات الطوارئ التي يمكن التنبؤ بها وتجنبها. هناك غياب تام لمنصة سيادية تربط بيانات المؤشرات الحيوية اللحظية للمريض بمركز اتخاذ القرار الطبي خارج أسوار المستشفى."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "VitalTrack",
+        "industry_tag": "الذكاء الاصطناعي في الطب الوقائي",
+        "revenue_model": "Per-Patient Monthly Fee + Insurance Reimbursed Models + Data Insight Licensing",
+        "action_text": "عرض استراتيجية خفض تكاليف التنويم (Hospital Readmission) بنسبة 40%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التنفيذ السيادي (0-12 شهر)",
+      "subtitle": "من المراقبة السلبية إلى التدخل التنبؤي",
+      "phases": [
+        {
+          "title": "مرحلة الربط السيبراني الطبي",
+          "description": "بناء نظام متوافق مع معايير HL7/FHIR لدمج بيانات أجهزة الـ IoT الطبية وتوحيدها في سجل صحي رقمي موحد ومحمي، مع واجهة مستخدم مبسطة لكبار السن.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "التكامل السريري والتأميني",
+          "description": "توقيع اتفاقيات مستوى الخدمة (SLAs) مع مجموعات المستشفيات الكبرى لربط VitalTrack بأنظمة إدارة المرضى (HIS)، وتفعيل بنود 'التوفير المشترك' مع شركات التأمين.",
+          "icon": "heart",
+          "color_theme": "rose"
+        },
+        {
+          "title": "محرك التنبؤ (Predictive Health)",
+          "description": "تفعيل نماذج التعلم العميق لتحليل أنماط المؤشرات الحيوية وإرسال تنبيهات استباقية للأطباء قبل وقوع 'الأزمات الحادة' بـ 24-48 ساعة، مما يحول الرعاية إلى استباقية بالكامل.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "5500+ (Regional Health Records & Clinical Trials)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف التوافقية (Interoperability) بين الأجهزة الطبية المختلفة والأنظمة الصحية.",
+        "مخاوف سيادة البيانات والامتثال للوائح المحلية الصارمة (مثل سحابة الصحة السعودية).",
+        "عدم وجود نماذج دفع واضحة من شركات التأمين للمراقبة عن بُعد (سابقاً).",
+        "الحاجة إلى بنية تحتية تقنية تتحمل معالجة البيانات الضخمة (Big Data) في الوقت الفعلي."
+      ],
+      "recommended_tech_stack": [
+        "Edge Computing for Real-time Signal Processing",
+        "FHIR-compliant Microservices Architecture",
+        "Homomorphic Encryption for Data Privacy",
+        "AI Anomaly Detection Models",
+        "Multi-cloud Healthcare Infrastructure"
+      ],
+      "main_risk_index": "التحدي التشغيلي في إقناع الكوادر الطبية بتبني تدفقات عمل رقمية جديدة، وضمان دقة البيانات المدخلة من الأجهزة في بيئات غير سريرية (منزلية)."
+    }
+  }
+}

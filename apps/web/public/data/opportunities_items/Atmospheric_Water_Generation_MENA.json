@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-STRAT-2026-WAT01",
+      "status_label": "تحليل فجوة السيادة المائية المستقلة",
+      "category_tag": "WaterTech / Clean Energy",
+      "business_model": "Hardware Sales + Water-as-a-Service (WaaS)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Environment",
+      "Atmospheric Water",
+      "Sustainability"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Mega Projects)", "flag": "🇸🇦" },
+        { "name": "UAE (Coastal/Desert)", "flag": "🇦🇪" },
+        { "name": "Egypt (Western Desert)", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "أنظمة توليد المياه من الرطوبة الجوية بالطاقة الشمسية",
+      "problem_statement": "تعتمد المشاريع الإنشائية الكبرى (Giga Projects) والمجتمعات الصحراوية على شحن المياه بالصهاريج (Trucking)، وهي عملية مكلفة، ملوثة، وغير مستدامة. تكلفة المتر المكعب من مياه الصهاريج في المناطق البعيدة تتجاوز 10 أضعاف المياه البلدية. الفجوة هي غياب وحدات إنتاج مياه لامركزية تعمل بكفاءة عالية في ظروف الرطوبة المتغيرة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Saha-Water",
+        "industry_tag": "توليد المياه اللامركزي",
+        "revenue_model": "Sale of Industrial Units + Maintenance Contracts + Pay-per-Liter for Remote Sites",
+        "action_text": "استعراض تقنية إنتاج 5000 لتر يومياً من الهواء الجاف"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الاستقلال المائي (0-24 شهر)",
+      "subtitle": "تحويل الرطوبة إلى ثروة سائلة",
+      "phases": [
+        {
+          "title": "تطوير وحدات التبادل الحراري المتقدمة",
+          "description": "تصميم أنظمة تبريد تعتمد على مواد نانوية تزيد من معدل التكثيف بنسبة 30% مقارنة للأنظمة التقليدية.",
+          "icon": "lightning-bolt",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "التكامل مع الطاقة الشمسية الهجينة",
+          "description": "تزويد الوحدات بنظام تخزين طاقة حراري لضمان استمرار إنتاج المياه ليلاً عندما تكون الرطوبة في أعلى مستوياتها.",
+          "icon": "sun",
+          "color_theme": "rose"
+        },
+        {
+          "title": "وحدة الفلترة والتمعدن الذكية",
+          "description": "إضافة الأملاح المعدنية الضرورية للصحة آلياً لإنتاج مياه شرب مطابقة للمعايير العالمية (WHO).",
+          "icon": "filter",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "Average Humidity Logs in Neom, AlUla, and Siwa Oasis"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "استهلاك الطاقة العالي في الموديلات القديمة.",
+        "نقص كفاءة التكثيف في المناطق ذات الرطوبة المنخفضة (أقل من 30%).",
+        "الاعتماد على استيراد الأجهزة من الخارج دون صيانة محلية.",
+        "ارتفاع تكلفة التأسيس الأولية مقارنة بحلول التحلية التقليدية."
+      ],
+      "recommended_tech_stack": [
+        "Advanced Sorbent Materials (MOFs)",
+        "Peltier Cooling Modules",
+        "AI for Humidity-Cycle Optimization",
+        "IoT Water Quality Monitoring",
+        "Solar PV + Thermal Storage"
+      ],
+      "main_risk_index": "عوامل الطقس؛ تذبذب الإنتاج بناءً على تغير الفصول يتطلب نظام تخزين مياه ضخم لضمان الاستمرارية."
+    }
+  }
+}

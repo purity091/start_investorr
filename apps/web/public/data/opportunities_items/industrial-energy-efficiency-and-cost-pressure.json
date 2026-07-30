@@ -1,0 +1,77 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-IND8",
+      "status_label": "تحليل ضغط تكاليف الطاقة الصناعية",
+      "category_tag": "Industrial Energy (Efficiency / Cost Optimization)",
+      "business_model": "Energy SaaS + Performance-based Savings",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Industry",
+      "Energy",
+      "Efficiency"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Algeria", "flag": "🇩🇿" }
+      ],
+      "additional_regions_count": 9
+    },
+    "core_content": {
+      "title": "خفض تكلفة الطاقة في المصانع عبر أنظمة ذكية",
+      "problem_statement": "تشكل الطاقة أحد أكبر عناصر التكلفة في الصناعات الثقيلة والمتوسطة. مع تقلب أسعار الوقود والكهرباء، تصبح المصانع التي لا تدير استهلاكها بشكل ذكي أقل قدرة على المنافسة. وفق :contentReference[oaicite:3]{index=3}، تحسين كفاءة الطاقة يمكن أن يخفض التكاليف بنسبة كبيرة دون الحاجة لاستثمارات ضخمة في الإنتاج. المشكلة أن معظم المصانع لا تملك رؤية تفصيلية لاستهلاكها حسب الآلة أو العملية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "EnergyOptix",
+        "industry_tag": "Industrial Energy Optimization",
+        "revenue_model": "Subscription + Share of Savings",
+        "action_text": "استعراض تقليل فواتير الطاقة الصناعية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة تحسين الطاقة (0-12 شهر)",
+      "subtitle": "كل كيلوواط محسوب",
+      "phases": [
+        {
+          "title": "قياس الاستهلاك",
+          "description": "تثبيت أنظمة قياس دقيقة للطاقة."
+        },
+        {
+          "title": "تحليل الأنماط",
+          "description": "اكتشاف الهدر والذروة."
+        },
+        {
+          "title": "تحسين التشغيل",
+          "description": "إعادة جدولة وتشغيل ذكي."
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "2800+ (Industrial Energy Cost & Efficiency Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "عدم وجود قياس تفصيلي للطاقة.",
+        "نقص الوعي بـ Energy Management.",
+        "غياب أنظمة تحسين التشغيل.",
+        "التركيز على الإنتاج فقط."
+      ],
+      "recommended_tech_stack": [
+        "Energy Monitoring Systems",
+        "AI Optimization",
+        "IoT Sensors",
+        "Cloud Analytics",
+        "EMS Platforms"
+      ],
+      "main_risk_index": "إثبات التوفير؛ يجب تحقيق نتائج مالية واضحة بسرعة."
+    }
+  }
+}

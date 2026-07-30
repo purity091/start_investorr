@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-HEALTH-2026-3DPROS",
+      "status_label": "تحليل استخباري للهندسة الحيوية المتقدمة",
+      "category_tag": "التصنيع الطبي (Bio-Engineering / 3D Printing)",
+      "business_model": "B2B (Hospitals) + B2C (Customization)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Medical Devices",
+      "Bionics",
+      "Additive Manufacturing"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Syria (Rehabilitation Needs)", "flag": "🇸🇾" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "الأطراف الصناعية الذكية والطباعة ثلاثية الأبعاد",
+      "problem_statement": "تعاني المنطقة من ارتفاع عدد ذوي الإعاقة الحركية نتيجة الحوادث والنزاعات الإقليمية، بينما تظل الأطراف الصناعية التقليدية باهظة الثمن، ثقيلة، وتفتقر للتكيف مع حركة المستخدم الطبيعية. هناك فجوة في توفير أطراف 'بايونية' مخصصة بالطباعة ثلاثية الأبعاد، تكون خفيفة الوزن وبأسعار معقولة، ومدعومة بحساسات عصبية تتيح حركة أكثر سلاسة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Bionix-AR",
+        "industry_tag": "الأطراف الصناعية الروبوتية المخصصة",
+        "revenue_model": "Per-Unit Sale + Maintenance Plans + Software Updates (AI movement patterns)",
+        "action_text": "استعراض نموذج الطرف الصناعي المطبوع بتكلفة أقل بنسبة 70%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الحركة الرقمية (0-24 شهر)",
+      "subtitle": "إعادة الأمل عبر التصميم الرقمي والذكاء الاصطناعي",
+      "phases": [
+        {
+          "title": "المسح الضوئي والنمذجة المخصصة",
+          "description": "استخدام الماسحات الضوئية ثلاثية الأبعاد لإنشاء نموذج رقمي مطابق تماماً لجسم المريض، لضمان أعلى مستويات الراحة وتجنب القروح الناتجة عن الأطراف التقليدية.",
+          "icon": "cube-transparent",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "الطباعة بمواد حيوية متطورة",
+          "description": "استخدام طابعات ثلاثية الأبعاد صناعية لإنتاج الهيكل الخارجي للأطراف باستخدام مواد كربونية وبوليمرات خفيفة الوزن وعالية المتانة.",
+          "icon": "printer",
+          "color_theme": "rose"
+        },
+        {
+          "title": "دمج الواجهة العصبية-العضلية",
+          "description": "تزويد الأطراف بحساسات EMG (تخطيط كهربائية العضلات) ومعالجات ذكاء اصطناعي تترجم إشارات العضلات إلى حركات دقيقة، مع خاصية 'التعلم المستمر' لنمط مشي المستخدم.",
+          "icon": "cpu",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 8.9,
+      "competitive_moat": 9.3,
+      "data_points_analyzed": "800+ (Amputee Statistics & Manufacturing Costs)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية للأطراف البايونية المستوردة من الغرب.",
+        "صعوبة الصيانة وتوفر قطع الغيار محلياً.",
+        "الحاجة لعمليات ملاءمة يدوية طويلة ومؤلمة أحياناً للمرضى.",
+        "افتقار الأطراف الحالية للتكامل التقني الذي يسهل التحكم بها."
+      ],
+      "recommended_tech_stack": [
+        "Multi-material 3D Printing",
+        "EMG (Electromyography) Sensors",
+        "AI for Movement Prediction",
+        "Generative Design Algorithms",
+        "IoT for Remote Alignment"
+      ],
+      "main_risk_index": "الاستدامة الفنية؛ تتطلب الأطراف الذكية تحديثات برمجية مستمرة ودعماً فنياً محلياً قوياً لضمان عدم توقف الجهاز نتيجة عطل تقني بسيط."
+    }
+  }
+}

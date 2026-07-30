@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-PROP-2026-DXB-RUH",
+      "status_label": "تحليل استخباراتي للسوق العقاري",
+      "category_tag": "تقنيات العقار (PropTech & Intelligence)",
+      "business_model": "B2B + B2G + SaaS",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "PropTech",
+      "Automated Valuation Models (AVM)",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Qatar", "flag": "🇶🇦" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "حوكمة التقييم العقاري عبر الذكاء الاصطناعي",
+      "problem_statement": "يعاني القطاع العقاري من 'فجوة الثقة الرقمية'؛ حيث تعتمد التقييمات الحالية على تقديرات بشرية متأخرة زمنياً وغير مترابطة، مما يتسبب في تضخم وهمي أو إهدار لفرص استثمارية كبرى. يفتقر السوق إلى مرجع سعري لحظي (Real-time Floor Price) يعتمد على خوارزميات التعلم العميق لربط العرض والطلب الفعلي بالمتغيرات الجيوسياسية والاقتصادية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "ValuAI",
+        "industry_tag": "نماذج التقييم الآلي (AVM)",
+        "revenue_model": "API Licensing + Transactional Fees + Enterprise Subscription",
+        "action_text": "استعراض مصفوفة دقة التقييم مقارنة بالتقييم البشري"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التنفيذ الاستراتيجية (النمو الرأسي)",
+      "subtitle": "من رقمنة البيانات إلى هندسة القرار العقاري",
+      "phases": [
+        {
+          "title": "دمج الأصول والبيانات (Data Fusion)",
+          "description": "بناء مستودع بيانات ضخم يربط سجلات الأراضي، المخططات العمرانية، والأسعار التاريخية مع بيانات حية من البورصات العقارية، باستخدام تقنيات تنظيف البيانات لضمان الموثوقية.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك الرؤية الحاسوبية (Visual Intelligence)",
+          "description": "تطوير طبقة ذكاء اصطناعي تحلل جودة العقار من الصور والأقمار الصناعية (Computer Vision) لتقييم الحالة الإنشائية والموقع، مما يرفع دقة التقييم بنسبة 40%.",
+          "icon": "view-grid",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التكامل مع المنظومة المالية",
+          "description": "تحويل ValuAI إلى محرك مرجعي للبنوك لتقديم الموافقات الفورية على القروض العقارية، وشركات التأمين لتقدير المخاطر، وصناديق الاستثمار السيادية (REITs).",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "1500+ (Regional Real Estate Indices & Satellite Imagery)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تشتت البيانات بين جهات حكومية وخاصة متعددة.",
+        "الارتباط العاطفي والمضاربات التي تخرج عن المنطق السعري المعتمد على البيانات.",
+        "تحديات تقنية في فهم 'القيم النسبية' مثل جودة التشطيب وإطلالة العقار عبر الـ AI.",
+        "بطء تحديث التشريعات لتعتمد التقييم الآلي كمرجع قانوني."
+      ],
+      "recommended_tech_stack": [
+        "Deep Learning for Regression Models",
+        "GIS & Geospatial Analysis (ArcGIS/QGIS)",
+        "Computer Vision for Asset Inspection",
+        "Blockchain for Immutable Valuation Logs",
+        "High-Performance Cloud Compute"
+      ],
+      "main_risk_index": "تحدي 'سيولة البيانات' (Data Liquidity)؛ النجاح يعتمد على عمق الشراكات مع دوائر الأراضي والجهات التنظيمية لضمان تدفق البيانات الخام."
+    }
+  }
+}

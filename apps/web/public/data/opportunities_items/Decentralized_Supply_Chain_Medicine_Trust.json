@@ -1,0 +1,82 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-HLT05",
+      "status_label": "تحليل فجوة سلامة وأمن الدواء",
+      "category_tag": "HealthTech / Blockchain / Supply Chain",
+      "business_model": "Platform Fee per Product Unit + Gov Compliance SaaS + Pharma Data Insights",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Healthcare",
+      "Supply Chain",
+      "Blockchain"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Syrian Pharmaceutical Hubs", "flag": "🇸🇾" },
+        { "name": "Domestic Distribution Network", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "درع الدواء: منصة تتبع وضمان جودة الدواء السوري",
+      "problem_statement": "تعاني سوق الأدوية في سوريا من انتشار الأدوية المزورة والمهربة نتيجة ضعف الرقابة على سلاسل التوريد. هذا يهدد حياة المواطنين ويضرب سمعة الصناعة الدوائية السورية العريقة. الفجوة هي غياب نظام تتبع رقمي (Track & Trace) يربط المصنع بالصيدلية والمستهلك لضمان أصالة كل علبة دواء."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sana-Med",
+        "industry_tag": "أمن سلاسل التوريد الطبية",
+        "revenue_model": "Micro-fee per QR code scanned + Subscription for Pharma Factories + Regulatory Compliance Fees",
+        "action_text": "استعراض حماية حياة السوريين عبر تتبع الدواء بالبلوكشين"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الدواء الآمن (0-24 شهر)",
+      "subtitle": "الثقة في كل جرعة دواء",
+      "phases": [
+        {
+          "title": "تكويد الأدوية (Serialisation)",
+          "description": "إلزام المصانع بوضع رمز QR فريد على كل علبة دواء يحتوي على بيانات التصنيع وتاريخ الصلاحية.",
+          "icon": "qrcode",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نشر سجل البلوكشين الموزع",
+          "description": "تسجيل كل حركة انتقال للدواء (من المصنع للموزع للصيدلية) في سجل رقمي غير قابل للتلاعب لضمان عدم دخول أدوية مزورة في السلسلة.",
+          "icon": "link",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق تطبيق المستهلك (Verified Scan)",
+          "description": "توفير تطبيق جوال يتيح للمواطن مسح الرمز قبل الشراء للتأكد من أصالة الدواء ومصدره ومطابقته للسعر الرسمي.",
+          "icon": "shield-check",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "Prevalence of Fake Meds vs Domestic Pharma Output"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لتعديل خطوط الإنتاج في المصانع لوضع الأكواد.",
+        "مقاومة بعض الموزعين للشفافية الرقمية التي تحد من التلاعب بالأسعار.",
+        "ضعف البنية التحتية التقنية في الصيدليات الريفية.",
+        "الحاجة لقرار سيادي يلزم كافة أطراف العملية بالانضمام للمنصة."
+      ],
+      "recommended_tech_stack": [
+        "Hyperledger Fabric (Private Blockchain)",
+        "Computer Vision for Batch Scanning",
+        "Dynamic QR Codes",
+        "Cloud-native Database (Syrian Hosted)",
+        "Mobile App (Flutter/React Native)"
+      ],
+      "main_risk_index": "مخاطر الاختراق الرقمي للسجل؛ يتطلب المشروع حماية سيبرانية قصوى للسيرفرات لضمان عدم تزييف البيانات الرقمية نفسها."
+    }
+  }
+}

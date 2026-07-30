@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-CON-2026-MODULAR",
+      "status_label": "تحليل استخباري لثورة البناء السريع المستدام",
+      "category_tag": "تكنولوجيا البناء (ConTech / Prefab)",
+      "business_model": "Off-site Manufacturing + On-site Assembly",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Modular Construction",
+      "Lean Manufacturing",
+      "Sustainable Infrastructure"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Fastest Growing)", "flag": "🇸🇦" },
+        { "name": "UAE (Market Hub)", "flag": "🇦🇪" },
+        { "name": "Egypt (Urban Expansion)", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "الإنشاءات النمطية والمسبقة الصنع الذكية",
+      "problem_statement": "مع طفرة المشاريع الكبرى (Giga-projects) في المنطقة، لم يعد البناء التقليدي قادراً على مواكبة المواعيد النهائية الصارمة. الإنشاءات النمطية تحل مشكلة 'الوقت' و'الجودة' عبر نقل 80% من عملية البناء إلى المصانع، مما يقلل وقت التسليم بنسبة 50% ويخفض الهدر في المواد بنسبة 90%، وهو ما يتماشى مع المستهدفات البيئية لعام 2026."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Saree-Prefab",
+        "industry_tag": "تصنيع الغرف والوحدات الجاهزة الذكية",
+        "revenue_model": "Project Contracts + Unit Leasing for Remote Sites + Design Licensing",
+        "action_text": "استعراض خطة الاستحواذ على حصة من سوق يتجاوز 3.5 مليار دولار بحلول 2033"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المصنع الإنشائي (0-18 شهر)",
+      "subtitle": "تحويل موقع البناء إلى منصة تجميع ذكية",
+      "phases": [
+        {
+          "title": "تأسيس مصنع الوحدات المؤتمت",
+          "description": "بناء خطوط إنتاج تعتمد على الروبوتات لتصنيع وحدات خرسانية أو فولاذية كاملة (غرف، حمامات) مجهزة بالكامل بالتشطيبات والتمديدات.",
+          "icon": "cog",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "دمج التوأم الرقمي في التصنيع",
+          "description": "ربط عملية التصنيع بنموذج BIM حي يضمن دقة الميليمتر في كل وحدة، مما يسهل عملية التركيب في الموقع دون أخطاء.",
+          "icon": "desktop-computer",
+          "color_theme": "rose"
+        },
+        {
+          "title": "لوجستيات النقل والتركيب اللحظي",
+          "description": "تطوير أسطول نقل متخصص ونظام رافعات ذكي يقوم بتركيب الوحدات في الموقع فور وصولها، لتحقيق معدل بناء يصل لـ 4 طوابق في الأسبوع.",
+          "icon": "truck",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.3,
+      "data_points_analyzed": "7.2% CAGR projection for UAE & KSA markets"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لنقل الوحدات الضخمة لمسافات طويلة.",
+        "النظرة النمطية القديمة للبناء الجاهز كحل 'مؤقت' أو منخفض الجودة.",
+        "الحاجة لاستثمارات ضخمة في البنية التحتية الصناعية المتخصصة.",
+        "تعقيد إدارة سلاسل الإمداد للمكونات داخل المصنع."
+      ],
+      "recommended_tech_stack": [
+        "Robotic Arm Welding/Casting",
+        "ERP for Just-in-Time Manufacturing",
+        "IoT for Module Tracking",
+        "Drones for Site Surveying",
+        "Advanced Composite Materials"
+      ],
+      "main_risk_index": "استقرار الطلب؛ نجاح المصنع يتطلب عقود توريد ضخمة ومستمرة لضمان تشغيل خطوط الإنتاج بكامل طاقتها."
+    }
+  }
+}

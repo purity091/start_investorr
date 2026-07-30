@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-URBAN-2026-INFRA",
+      "status_label": "تحليل استخباري للمدن الإدراكية (Cognitive Cities)",
+      "category_tag": "البنية التحتية (Smart City / IoT)",
+      "business_model": "PPP (Public-Private Partnership) + Data Monetization",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Smart Infrastructure",
+      "Urban AI",
+      "Cognitive Connectivity"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "NEOM (The Line/Oxagon)", "flag": "🇸🇾" },
+        { "name": "Egypt (The Spine - Madinaty)", "flag": "🇪🇬" },
+        { "name": "Dubai (D33 Strategy)", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "إدارة البنية التحتية الذكية للمدن المترابطة",
+      "problem_statement": "المدن الحديثة في 2026 لم تعد مجرد مبانٍ، بل هي كيانات 'إدراكية'. الفجوة تكمن في غياب طبقة تشغيل موحدة (Operating Layer) تدير الطاقة، النقل، الأمن، واللوجستيات تحت الأرض وفوقها باستخدام الذكاء الاصطناعي، مما يوفر مليارات الدولارات من تكاليف الصيانة ويحسن حياة السكان."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Madar-Cognitive",
+        "industry_tag": "أنظمة تشغيل المدن الذكية بالذكاء الاصطناعي",
+        "revenue_model": "Government Contracts + Smart Utility Billing + Anonymized Data Insights",
+        "action_text": "استعراض أول 'مدينة إدراكية' في مصر تدير الخدمات آلياً بنسبة 100%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق العقل الحضري (0-36 شهر)",
+      "subtitle": "من الحساسات الصامتة إلى المدن المفكرة",
+      "phases": [
+        {
+          "title": "نشر شبكة الحواس الحضرية (IoT Mesh)",
+          "description": "تغطية المدينة بملايين الحساسات لمراقبة جودة الهواء، ضغط المياه، الازدحام المروري، واستهلاك الكهرباء لحظياً.",
+          "icon": "status-online",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تفعيل العقل المركزي (City OS)",
+          "description": "بناء منصة ذكاء اصطناعي تعالج مليارات البيانات لاتخاذ قرارات استباقية (مثل تعديل مسارات النقل أو ضخ المياه قبل حدوث ذروة الطلب).",
+          "icon": "cpu",
+          "color_theme": "rose"
+        },
+        {
+          "title": "دمج اللوجستيات تحت الأرض (Underground Logistics)",
+          "description": "بناء شبكات نقل آلية للبضائع والنفايات تحت المدن لتقليل الازدحام السطحي وتحسين جودة الحياة في المساحات الخضراء.",
+          "icon": "truck",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Investment phases in NEOM & Egypt's The Spine"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة الهائلة للبنية التحتية الأساسية (تحت الأرض).",
+        "تحديات تكامل البيانات بين جهات حكومية وخاصة متعددة.",
+        "الحاجة لأمن سيبراني بمستوى 'سيادي' لحماية مفاصل المدينة.",
+        "التعقيد الهندسي في بناء مدن 'من الصفر' (Greenfield) مقابل ترميم المدن القائمة."
+      ],
+      "recommended_tech_stack": [
+        "5G/6G Networks",
+        "Edge Computing Hubs",
+        "AI for Predictive Governance",
+        "Autonomous Mobility Systems",
+        "Cybersecurity Mesh"
+      ],
+      "main_risk_index": "الاعتماد المفرط على التقنية؛ أي عطل مركزي قد يشل المدينة بالكامل، مما يتطلب أنظمة احتياطية (Redundancy) فيزيائية وتقنية."
+    }
+  }
+}

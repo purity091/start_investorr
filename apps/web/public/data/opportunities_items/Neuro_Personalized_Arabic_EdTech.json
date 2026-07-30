@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-DEEP-2026-EDU08",
+      "status_label": "تحليل فجوة التعلم الشخصي المعتمد على الحالة الذهنية",
+      "category_tag": "EdTech / NeuroTech / AI",
+      "business_model": "SaaS (B2B/B2C) + Specialized Hardware Sales + Data Insights",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Education",
+      "Neuroscience",
+      "Personalized Learning"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "United Arab Emirates", "flag": "🇦🇪" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Qatar", "flag": "🇶🇦" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "التعليم الإدراكي: تخصيص المناهج بالذكاء العصبي",
+      "problem_statement": "يعاني الطلاب من تشتت الانتباه وعدم ملاءمة سرعة المنهج لقدراتهم الذهنية المختلفة. التعليم التقليدي هو 'مقاس واحد للجميع'. الفجوة هي نظام تعليمي يستخدم الذكاء الاصطناعي لتحليل استجابة الطالب (عبر الرؤية الحاسوبية لتعبيرات الوجه أو حساسات الانتباه) لتعديل المحتوى وصعوبته لحظياً، مما يزيد كفاءة التعلم بنسبة 300%."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Cogni-Dars",
+        "industry_tag": "تكنولوجيا التعليم فائقة التخصيص",
+        "revenue_model": "Per-student Subscription + School Enterprise Licenses + Neuro-assessment Tools",
+        "action_text": "استعراض منصة التعلم التي تشعر بحالة الطالب الذهنية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الذكاء التربوي (0-24 شهر)",
+      "subtitle": "فهم العقل لتمكين المستقبل",
+      "phases": [
+        {
+          "title": "تطوير محرك تحليل الحالة الذهنية",
+          "description": "بناء نماذج AI قادرة على رصد علامات الإحباط، التشتت، أو الفهم العميق من خلال تتبع حركة العين (Eye Tracking) وتعبيرات الوجه.",
+          "icon": "search",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تخصيص المحتوى التوليدي (Generative Ed)",
+          "description": "استخدام الـ AI لتوليد شرح مخصص (بصري، سمعي، أو نصي) بناءً على نمط التعلم الذي أظهره دماغ الطالب في المرحلة الأولى.",
+          "icon": "sparkles",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق منصة 'المعلم الخصوصي الذكي'",
+          "description": "دمج النظام في المدارس كأداة مساعدة للمعلم تظهر له حالة كل طالب في الفصل لحظياً للتدخل عند الضرورة.",
+          "icon": "academic-cap",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "Cognitive Load vs Learning Retention Rates in K-12"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التخوف الأخلاقي من مراقبة نشاط الأطفال الذهني.",
+        "الحاجة لقوة معالجة عالية في أجهزة الطلاب (تم حلها عبر Edge-AI).",
+        "نقص المناهج العربية المصممة لتكون 'مرنة' وقابلة للتعديل اللحظي.",
+        "تعقيد الربط بين العلوم العصبية والتطبيقات البرمجية التعليمية."
+      ],
+      "recommended_tech_stack": [
+        "Computer Vision for Affective Computing",
+        "Generative AI (GPT-4o for Content Adaption)",
+        "Edge Analytics on Tablets",
+        "Differential Privacy for Student Data",
+        "Multimodal Learning Analytics"
+      ],
+      "main_risk_index": "الخصوصية والأخلاق؛ حماية بيانات الحالة الذهنية للطلاب تتطلب بروتوكولات تشفير قصوى وموافقة صريحة من الأهالي."
+    }
+  }
+}

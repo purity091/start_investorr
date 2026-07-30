@@ -1,0 +1,81 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-CYB08",
+      "status_label": "تحليل فجوة حماية أنظمة التحكم الصناعي والحيوية",
+      "category_tag": "الأمن السيبراني (Cybersecurity / OT Security)",
+      "business_model": "Enterprise SaaS + Security Audits + Incident Response Retainer",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Cybersecurity",
+      "Industrial Control Systems",
+      "National Security"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Qatar", "flag": "🇶🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "درع السيادة الرقمية لحماية البنية التحتية الصناعية",
+      "problem_statement": "تعتمد الموانئ، محطات التحلية، ومنشآت النفط على أنظمة تحكم صناعي (OT) قديمة وغير مصممة للأمن السيبراني الحديث. الهجمات على هذه الأنظمة لا تسرق بيانات فحسب، بل يمكنها إيقاف محطات الطاقة أو تلويث مياه الشرب، وهو ما يتجاوز قدرات برامج الحماية التقليدية (IT Security)."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sana-Cyber",
+        "industry_tag": "الأمن السيبراني السيادي للصناعة",
+        "revenue_model": "Annual License per Node + SOC-as-a-Service for Industry",
+        "action_text": "استعراض حماية مفاصل الدولة الحيوية من الهجمات السيبرانية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة الحماية السيادية (0-24 شهر)",
+      "subtitle": "تحصين العصب الصناعي",
+      "phases": [
+        {
+          "title": "رسم خرائط الأصول الصناعية",
+          "description": "اكتشاف وتحليل كافة الأجهزة والأنظمة (PLC/SCADA) المتصلة بالشبكة الصناعية وتقييم ثغراتها.",
+          "icon": "map",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نشر جدران الحماية الصناعية (IDS/IPS)",
+          "description": "تركيب أنظمة رصد متخصصة تفهم بروتوكولات الصناعة وتكتشف الأنماط المريبة دون تعطيل العمليات الجارية.",
+          "icon": "shield-exclamation",
+          "color_theme": "rose"
+        },
+        {
+          "title": "الربط مع مركز الاستجابة الوطني",
+          "description": "تفعيل نظام استجابة فورية يعزل الأنظمة المصابة تلقائياً عند استشعار محاولة اختراق أو تخريب.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "1,000+ (OT Vulnerability Reports)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "نقص الخبراء الذين يجمعون بين المعرفة الهندسية والأمن السيبراني.",
+        "تخوف المنشآت من تركيب برامج قد تسبب توقفاً مفاجئاً للآلات.",
+        "الاعتماد التاريخي على عزل الشبكات (Air-gapping) الذي لم يعد فعالاً في عصر الربط الرقمي."
+      ],
+      "recommended_tech_stack": [
+        "Deep Packet Inspection (DPI)",
+        "Behavioral AI for OT",
+        "Zero Trust for Industrial Networks",
+        "Hardware-enforced Security Gates"
+      ],
+      "main_risk_index": "تحديث الأنظمة القديمة؛ قد تتطلب بعض الأجهزة الصناعية القديمة جداً حلولاً فيزيائية (Hardware) وليس برمجية فقط."
+    }
+  }
+}

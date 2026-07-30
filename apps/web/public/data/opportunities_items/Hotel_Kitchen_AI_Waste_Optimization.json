@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-HOS05",
+      "status_label": "تحليل فجوة كفاءة الغذاء في قطاع الضيافة",
+      "category_tag": "AgriTech / Hospitality / AI-Waste",
+      "business_model": "SaaS Subscription + Percentage of Savings Fee + Carbon Credit Monetization",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Hospitality",
+      "Sustainability",
+      "Artificial Intelligence"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "GCC Hotels (Large-scale Buffets)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Egypt & Morocco Tourism Hubs",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "بوفيه صفر نفايات: ذكاء اصطناعي لتقليل هدر الطعام",
+      "problem_statement": "تخسر الفنادق العربية بمليارات الدولارات سنوياً في 'البوفيهات المفتوحة' نتيجة الطبخ الزائد عن الحاجة بنسبة تصل لـ 30%. الفجوة هي نظام رؤية حاسوبية (Computer Vision) يوضع فوق سلال النفايات والمطابخ، يحلل نوع وكمية الطعام المهدور، ويربطه ببيانات الحجز للتنبؤ بالكمية المثالية للطبخ في اليوم التالي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Wafir-AI",
+        "industry_tag": "الضيافة المستدامة وتقليل الهدر الغذائي",
+        "revenue_model": "Annual SaaS Fee + 15% Share of Documented Food Cost Savings + ESG Reporting License",
+        "action_text": "استعراض خطة خفض تكاليف الغذاء الفندقي بنسبة 20%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المطبخ الذكي (0-36 شهر)",
+      "subtitle": "تحويل الهدر إلى وفر مالي وأثر بيئي",
+      "phases": [
+        {
+          "title": "نشر كاميرات الرصد والتحليل (Visual-Audit)",
+          "description": "تجهيز حاويات النفايات بمقاييس وكاميرات AI تقوم بتصنيف الطعام الملقى (مثلاً: أرز، دجاج) وتحديد أسباب الهدر.",
+          "icon": "eye",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التنبؤ بالطلب (Buffet-AI)",
+          "description": "ربط بيانات الهدر ببيانات جنسيات الضيوف، المواسم، والفعاليات للتنبؤ بدقة بما سيفضله الضيوف وكم سيأكلون.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة التبرع الفوري (Giving-API)",
+          "description": "ربط الفائض 'السليم' من المطبخ آلياً بجمعيات حفظ النعمة المحلية لضمان وصوله للمحتاجين في الوقت المناسب.",
+          "icon": "heart",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "Food Waste Costs in 5-star Hotels in GCC vs Cost of AI Implementation"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف ثقافة البيانات لدى رؤساء الطهاة التقليديين.",
+        "التخوف من مراقبة الموظفين داخل المطبخ.",
+        "صعوبة تكامل النظام مع برمجيات إدارة الفندق (PMS) المعقدة.",
+        "نظرة الإدارة للهدر كـ 'جزء لا يتجزأ' من كرم الضيافة (يتم حله بتوضيح الوفر المالي)."
+      ],
+      "recommended_tech_stack": [
+        "Computer Vision (Object Detection)",
+        "Edge AI for Real-time Image Processing",
+        "Predictive Analytics (Demand Forecasting)",
+        "IoT Weighing Scales",
+        "ESG Reporting Cloud"
+      ],
+      "main_risk_index": "التعقيد التشغيلي؛ يجب ألا يعيق النظام حركة الطهاة السريعة في المطبخ، مما يتطلب أجهزة 'غير تداخلية' (Non-intrusive)."
+    }
+  }
+}

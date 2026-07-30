@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ENV-2026-AR",
+      "status_label": "تحليل استخباري لاقتصاد تدوير الموارد الثمينة",
+      "category_tag": "البيئة (Greentech / Recycling)",
+      "business_model": "B2B + Commodity Trading",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Sustainability",
+      "Circular Economy",
+      "Urban Mining"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "إدارة النفايات الصناعية والتعدين الحضري للإلكترونيات",
+      "problem_statement": "تنتج المنطقة العربية ملايين الأطنان من النفايات الإلكترونية والصناعية سنوياً، والتي تحتوي على معادن ثمينة (ذهب، ليثيوم، نحاس) تفوق بتركيزها المناجم الطبيعية. حالياً، يتم التخلص من أغلب هذه الموارد في المرادم أو تصديرها كمواد خام بأسعار زهيدة، مما يضيع فرصاً اقتصادية هائلة ويسبب تلوثاً بيئياً خطيراً، في ظل غياب مراكز محلية متطورة للاستخلاص والتنقية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "EcoMiner",
+        "industry_tag": "استعادة المعادن الاستراتيجية",
+        "revenue_model": "Waste Collection Fees + Refined Metal Sales + Carbon Credits",
+        "action_text": "استعراض تقنيات الاستخلاص الكيميائي الأخضر"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق تعدين المستقبل (0-24 شهر)",
+      "subtitle": "استخراج الذهب من قلب الأجهزة التالفة",
+      "phases": [
+        {
+          "title": "بناء شبكة التجميع اللوجستية الذكية",
+          "description": "تأسيس نظام لجمع النفايات الإلكترونية من الشركات والمؤسسات الحكومية مع توفير شهادات إتلاف بيانات آمنة.",
+          "icon": "truck",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تأسيس مجمع التفكيك والفرز الآلي",
+          "description": "استخدام الرؤية الحاسوبية والذكاء الاصطناعي لفصل المكونات الغنية بالمعادن عن البلاستيك والمواد الأخرى بدقة عالية.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تشغيل مفاعلات الاستخلاص الكيميائي",
+          "description": "بدء عمليات استخلاص المعادن الثمينة وتنقيتها لبيعها كمواد خام للمصانع المحلية أو العالمية.",
+          "icon": "fire",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.3,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "2200+ (E-waste Volume & Metal Market Prices)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "سيطرة القطاع غير الرسمي الذي يستخدم طرقاً بدائية وخطيرة.",
+        "ارتفاع التكلفة الرأسمالية لتقنيات استخلاص المعادن الدقيقة.",
+        "غياب القوانين الصارمة التي تمنع رمي الإلكترونيات في النفايات العامة.",
+        "تعقيد اللوجستيات العكسية (Reverse Logistics) لتجميع الأجهزة من المستخدمين."
+      ],
+      "recommended_tech_stack": [
+        "AI Visual Sorting",
+        "Hydrometallurgical Extraction",
+        "Blockchain Traceability",
+        "Automated Shredding Systems",
+        "Pyrolysis for Material Recovery"
+      ],
+      "main_risk_index": "تقلب أسعار المعادن عالمياً؛ يتطلب المشروع استراتيجيات تحوط مالي لضمان الربحية المستدامة."
+    }
+  }
+}

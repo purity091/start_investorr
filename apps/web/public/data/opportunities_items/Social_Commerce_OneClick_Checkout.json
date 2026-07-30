@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-RET09",
+      "status_label": "تحليل فجوة الدفع في التجارة الاجتماعية",
+      "category_tag": "Social-Commerce / Fintech / Retail",
+      "business_model": "Transaction Fee (1.5-3%) + Monthly SaaS for Sellers + Logistics Referral Fee",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Retail & Commerce",
+      "Fintech",
+      "Social Media"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "GCC (World's Highest Social Media Usage for Shopping)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Egypt (Massive Social Commerce Seller Base)",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "الدفع الاجتماعي: إتمام الشراء بنقرة واحدة",
+      "problem_statement": "تتم معظم التجارة الاجتماعية في الوطن العربي (عبر إنستغرام وتيك توك) يدوياً عبر 'الخاص' أو 'واتساب'، مما يسبب فقدان 60% من المبيعات نتيجة تعقيد الدفع وعدم الثقة. الفجوة هي حل تقني (Checkout Widget) يدمج في روابط السوشيال ميديا، يتيح الدفع الفوري، وتتبع الشحنة، وضمان حقوق الطرفين بضغطة زر واحدة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Salla-Pay-Link",
+        "industry_tag": "تكنولوجيا التجارة الاجتماعية (Social-Commerce Tech) والفينتيك",
+        "revenue_model": "Small Fee per Successful Sale + Premium Customization for Big Influencers + Analytics on Social Conversion",
+        "action_text": "استعراض بوابة تحويل المتابعين إلى مشترين لحظياً"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التجارة اللحظية (0-24 شهر)",
+      "subtitle": "من الإعجاب.. إلى الشراء، في ثوانٍ معدودة",
+      "phases": [
+        {
+          "title": "رابط الشراء الذكي (Smart-Check-Link)",
+          "description": "تطوير رابط 'بيو' متقدم يظهر المنتجات بشكل جذاب ويتيح للمتسوق إتمام الدفع دون الخروج من تطبيق التواصل الاجتماعي.",
+          "icon": "link",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تكامل المحافظ المحلية (Local-Wallet-Sync)",
+          "description": "ربط الحل بجميع المحافظ الرقمية العربية (STC Pay, Fawry, Apple Pay) لضمان أعلى نسبة نجاح للدفع في كل دولة.",
+          "icon": "credit-card",
+          "color_theme": "rose"
+        },
+        {
+          "title": "أتمتة الشحن والضمان (Escrow-Logistics)",
+          "description": "تفعيل نظام 'حجز المبلغ' حتى استلام العميل للشحنة، مع ربط آلي لشركات الشحن لإصدار بوالص التوصيل فور الدفع.",
+          "icon": "truck",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Social Commerce Volume in MENA vs Drop-off Rates during Manual Checkout Processes"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تعقيد إجراءات فتح بوابات الدفع الإلكتروني للتجار الأفراد أو الصغار.",
+        "نقص الثقة بين المشتري والتاجر المجهول على شبكات التواصل.",
+        "صعوبة مزامنة المخزون بين منشورات السوشيال ميديا والمستودع الفعلي.",
+        "القيود التقنية التي تفرضها منصات السوشيال ميديا على الروابط الخارجية."
+      ],
+      "recommended_tech_stack": [
+        "Headless E-commerce Engine",
+        "Unified Payment Gateway API",
+        "Escrow Smart Contracts",
+        "Webhook Integration for Logistics",
+        "Real-time Analytics Dashboard"
+      ],
+      "main_risk_index": "الاحتيال؛ خطر استخدام المنصة من قبل تجار وهميين، مما يتطلب نظام 'تحقق من الهوية' (KYC) صارم وتأمين على المشتريات."
+    }
+  }
+}

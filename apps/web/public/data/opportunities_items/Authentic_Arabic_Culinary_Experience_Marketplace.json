@@ -1,0 +1,92 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-FNB11",
+      "status_label": "تحليل فجوة تجارب السياحة الغذائية الأصيلة",
+      "category_tag": "FoodTech / Tourism / Cultural-Immersion",
+      "business_model": "Marketplace Commission (15-20%) + Culinary Guide Training + Local Product Sales",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Tourism",
+      "Food & Beverage",
+      "Culture"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Morocco (Traditional Cooking Classes)",
+          "flag": "🇲🇦"
+        },
+        {
+          "name": "Syria & Lebanon (Levantine Cuisine)",
+          "flag": "🇸🇾"
+        },
+        {
+          "name": "GCC (Heritage Majlis Dining)",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "مذاق التراث: منصة تجارب الطعام العربي الأصيل",
+      "problem_statement": "يبحث السياح عن 'الطعم الحقيقي' للمدن العربية، لكنهم غالباً ما ينتهي بهم الأمر في مطاعم سياحية تجارية تفتقر للأصالة. الفجوة هي منصة تربط السياح بطهاة محليين (أسر منتجة، خبراء طهي تراثي) لتناول وجبات في بيئات منزلية أو تراثية، مع تعلم أسرار المطبخ العربي في تجارب غامرة وموثقة صحياً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sufra-Exp",
+        "industry_tag": "سياحة الطعام (Gastronomy Tourism) والتمكين المجتمعي",
+        "revenue_model": "Booking Fee per Guest + Sales of Authentic Ingredient Kits + Culinary Certification for Hosts",
+        "action_text": "استعراض المنصة التي تفتح أبواب المطابخ العربية للعالم"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق مائدة العالم (0-24 شهر)",
+      "subtitle": "تحويل المطبخ العربي إلى وجهة سياحية عالمية",
+      "phases": [
+        {
+          "title": "نظام اعتماد 'المضيف الأصيل'",
+          "description": "تفعيل معايير صارمة للجودة الصحية والأصالة التاريخية للوصفات المقدمة، مع تدريب المضيفين على مهارات الضيافة العالمية.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "سوق المكونات النادرة (Heritage-Pantry)",
+          "description": "توفير ميزة تتيح للسياح شراء 'صندوق المكونات' الذي استخدموه في التجربة (بهارات، زيوت نادرة) لشحنه لبلادهم.",
+          "icon": "shopping-bag",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكامل 'طريق الحرير' الرقمي",
+          "description": "ربط تجارب الطعام بمسارات سياحية أوسع تشمل زيارة الأسواق الشعبية ومزارع المكونات الأصلية لخلق رحلة متكاملة.",
+          "icon": "map",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.8,
+      "data_points_analyzed": "Growth of Gastronomy Tourism Globally vs Lack of Specialized Arabic Food Platforms"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التحديات المتعلقة بتراخيص الصحة والسلامة المنزلية للطبخ السياحي.",
+        "صعوبة الوصول للأسر المنتجة التي تمتلك الموهبة وتفتقر للوعي الرقمي.",
+        "مخاوف السياح من 'جودة وسلامة' الأكل خارج المطاعم الرسمية.",
+        "نقص المحتوى التسويقي الاحترافي الذي يبرز جمالية المائدة العربية التقليدية."
+      ],
+      "recommended_tech_stack": [
+        "Hyper-local Marketplace Engine",
+        "Secure Payments (Global Gateways)",
+        "AI for Personalizing Food Recommendations",
+        "AR for Recipe Visualization",
+        "Blockchain for Food Traceability (Farm-to-Table)"
+      ],
+      "main_risk_index": "السلامة الصحية؛ أي حالة تسمم قد تدمر سمعة المنصة، مما يتطلب تأميناً شاملاً ورقابة صحية دورية صارمة ومفاجئة."
+    }
+  }
+}

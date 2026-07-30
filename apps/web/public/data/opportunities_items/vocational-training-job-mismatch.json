@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-EDAI4",
+      "status_label": "تحليل فجوة التدريب المهني وسوق العمل",
+      "category_tag": "التدريب المهني (Vocational Training / Workforce)",
+      "business_model": "B2B Employer Partnerships + Training Fees + Job Placement Commission",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Education",
+      "Vocational Training",
+      "Workforce Development"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Morocco", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 9
+    },
+    "core_content": {
+      "title": "منصة ربط التدريب المهني باحتياجات سوق العمل الحقيقي",
+      "problem_statement": "يعاني سوق العمل العربي من فجوة حادة بين المهارات التي يتم تدريسها في مراكز التدريب المهني وبين المهارات المطلوبة فعلياً من الشركات. النتيجة: بطالة مرتفعة رغم وجود فرص عمل شاغرة. البرامج الحالية غير مرتبطة ببيانات سوق العمل الفعلية ولا تتحدث بشكل ديناميكي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "SkillBridge",
+        "industry_tag": "منصات الربط بين التدريب والتوظيف",
+        "revenue_model": "Placement Fees + Employer Subscriptions + Training Upsells",
+        "action_text": "استعراض نظام يربط التدريب مباشرة بوظائف حقيقية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة توظيف المهارات (0-12 شهر)",
+      "subtitle": "تحويل التدريب إلى وظيفة مباشرة",
+      "phases": [
+        {
+          "title": "تحليل بيانات سوق العمل",
+          "description": "جمع وتحليل بيانات الوظائف المفتوحة لتحديد المهارات المطلوبة بدقة.",
+          "icon": "chart",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تصميم برامج تدريب ديناميكية",
+          "description": "بناء برامج تدريب تتغير باستمرار بناءً على الطلب الفعلي للشركات.",
+          "icon": "refresh",
+          "color_theme": "rose"
+        },
+        {
+          "title": "ربط مباشر مع أصحاب العمل",
+          "description": "توفير نظام توظيف مباشر للخريجين عبر شراكات مع الشركات.",
+          "icon": "briefcase",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 8.8,
+      "data_points_analyzed": "2100+ (Job Market Demand vs Skill Supply)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "انفصال المؤسسات التعليمية عن القطاع الخاص.",
+        "عدم وجود بيانات محدثة لسوق العمل.",
+        "بطء تحديث برامج التدريب التقليدية.",
+        "ضعف الحوافز للتعاون بين الشركات ومراكز التدريب."
+      ],
+      "recommended_tech_stack": [
+        "Labor Market Analytics Platforms",
+        "AI Skill Matching Algorithms",
+        "LMS with Dynamic Curriculum",
+        "Job Marketplace APIs",
+        "Data Dashboards for Employers"
+      ],
+      "main_risk_index": "اعتماد الشركات؛ يتطلب المشروع بناء شبكة قوية من الشركاء في سوق العمل لضمان نجاح النموذج."
+    }
+  }
+}

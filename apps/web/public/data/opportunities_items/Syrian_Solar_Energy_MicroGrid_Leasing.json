@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-NRG01",
+      "status_label": "تحليل فجوة استقلال الطاقة المنزلي",
+      "category_tag": "Energy / CleanTech / FinTech",
+      "business_model": "Hardware Leasing + Subscription-to-Own + Maintenance SaaS",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Energy",
+      "Leasing",
+      "Sustainability"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Damascus & Suburbs", "flag": "🇸🇾" },
+        { "name": "Aleppo (Industrial & Residential)", "flag": "🇸🇾" },
+        { "name": "Homs", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 11
+    },
+    "core_content": {
+      "title": "نظام تأجير المنظومات الشمسية المنزلية (Energy Freedom)",
+      "problem_statement": "تعاني المدن السورية من انقطاع الكهرباء لمدة تصل لـ 20 ساعة يومياً. تكلفة شراء منظومة شمسية كاملة (بطاريات، ألواح، إنفيرتر) تتجاوز قدرة 90% من العائلات نقداً. الفجوة هي غياب جهة تمويلية أو تقنية تقدم هذه المنظومات بنظام 'التأجير المنتهي بالتمليك' أو الأقساط الميسرة، مما يحل أزمة الطاقة لآلاف المنازل."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Nour-Souri",
+        "industry_tag": "تمويل الطاقة الشمسية للأفراد",
+        "revenue_model": "Monthly Lease Payments + Maintenance Fees + Smart Metering SaaS",
+        "action_text": "استعراض خطة إنارة 50,000 منزل سوري عبر التأجير الذكي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الاستقلال الطاقي (0-24 شهر)",
+      "subtitle": "كهرباء مستدامة لكل منزل سوري",
+      "phases": [
+        {
+          "title": "تأسيس صندوق تمويل الألواح",
+          "description": "بناء شراكات مع مستثمرين لتوفير رأس المال اللازم لاستيراد كميات ضخمة من الألواح والبطاريات بأسعار منافسة.",
+          "icon": "cash",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نشر العدادات الذكية (Smart Meters)",
+          "description": "تزويد المنظومات بحساسات IoT تتيح للمستخدم دفع الأقساط عبر الموبايل وتسمح للشركة بمراقبة أداء البطاريات وصيانتها.",
+          "icon": "lightning-bolt",
+          "color_theme": "rose"
+        },
+        {
+          "title": "شبكة الصيانة المحلية المعتمدة",
+          "description": "تدريب فرق فنية في كل محافظة لضمان التركيب الصحيح والصيانة الفورية للمشتركين لضمان استمرارية الخدمة.",
+          "icon": "adjustments",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 10.0,
+      "liquidity_tam": 9.2,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "Average Grid Outage Hours vs Household Income Gaps"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف القوة الشرائية الفورية للمواطن السوري.",
+        "مخاطر تقلبات سعر الصرف التي تمنع الشركات من التقسيط الطويل.",
+        "نقص العدادات الذكية القادرة على قطع الخدمة آلياً في حال عدم السداد.",
+        "الاعتماد على بطاريات رديئة الجودة في السوق السوداء تتلف بسرعة."
+      ],
+      "recommended_tech_stack": [
+        "IoT Smart Meters (GSM/WiFi)",
+        "Mobile Payment Integration (Bemo/Syriatel Cash)",
+        "LiFePO4 Long-life Battery Tech",
+        "Remote Monitoring SaaS (Blynk/Custom)",
+        "Solar Yield Prediction Algorithms"
+      ],
+      "main_risk_index": "تقلب العملة المحلية؛ يتطلب المشروع ربط الأقساط بمؤشر مستقر (ذهب أو عملة صعبة) أو استخدام تحوط مالي لضمان استمرارية رأس المال."
+    }
+  }
+}

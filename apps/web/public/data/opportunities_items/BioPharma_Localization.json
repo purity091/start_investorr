@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-BIO-2026-AR",
+      "status_label": "تحليل استخباري للسيادة الدوائية",
+      "category_tag": "الصحة (BioTech / Pharma)",
+      "business_model": "B2B + B2G",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "HealthTech",
+      "Bio-Manufacturing",
+      "Value Chain Localization"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "UAE", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "توطين صناعة الأدوية الحيوية واللقاحات",
+      "problem_statement": "تستورد المنطقة العربية أكثر من 80% من الأدوية المتقدمة واللقاحات، مما يضع الأمن الصحي تحت رحمة تقلبات سلاسل الإمداد العالمية. هناك نقص حاد في مرافق الإنتاج المحلي للمواد الفعالة (APIs) والأدوية الحيوية، مما يرفع التكاليف على الحكومات والمواطنين ويقلل سرعة الاستجابة للأزمات الصحية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "BioArabi",
+        "industry_tag": "التصنيع الحيوي المتقدم",
+        "revenue_model": "Government Off-take Agreements + Private Label Manufacturing",
+        "action_text": "استعراض خطة بناء مفاعلات حيوية للإنتاج المحلي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التنفيذ الاستراتيجية (0-24 شهر)",
+      "subtitle": "من الاستيراد إلى التصنيع السيادي",
+      "phases": [
+        {
+          "title": "نقل التكنولوجيا والشراكات الدولية",
+          "description": "توقيع اتفاقيات نقل معرفة مع مراكز أبحاث عالمية لبدء تصنيع الأدوية الحيوية الأساسية محلياً.",
+          "icon": "handshake",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تأسيس مرافق الإنتاج الذكية",
+          "description": "بناء مصانع مؤتمتة بالكامل تعتمد على الذكاء الاصطناعي لضمان الجودة والامتثال للمعايير الدولية (GMP).",
+          "icon": "office-building",
+          "color_theme": "rose"
+        },
+        {
+          "title": "البحث والتطوير الإقليمي",
+          "description": "إطلاق مختبرات لتطوير أدوية مخصصة للأمراض الأكثر شيوعاً في المنطقة العربية بناءً على البيانات الجينية المحلية.",
+          "icon": "beaker",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "2500+ (Health Indices & Import Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة الرأسمالية العالية لبناء المفاعلات الحيوية.",
+        "الحاجة لخبرات علمية نادرة في تكنولوجيا الهندسة الوراثية.",
+        "تعقيد إجراءات الاعتماد والترخيص الدوائي الدولي.",
+        "الاعتماد الطويل على الوكالات التجارية بدلاً من الاستثمار في الإنتاج."
+      ],
+      "recommended_tech_stack": [
+        "Bioreactor Automation",
+        "AI for Molecular Simulation",
+        "Blockchain for Supply Chain Integrity",
+        "Clean-room Technology",
+        "Precision Data Analytics"
+      ],
+      "main_risk_index": "التحدي التشريعي؛ يتطلب المشروع توافقاً تاماً مع هيئات الغذاء والدواء المحلية لضمان سرعة الفسح والتوزيع."
+    }
+  }
+}

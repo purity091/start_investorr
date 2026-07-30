@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-MOB06",
+      "status_label": "تحليل فجوة اللوجستيات في المناطق غير المعبدة",
+      "category_tag": "Mobility / Autonomous Systems / Solar Energy",
+      "business_model": "Hardware-as-a-Service (Leasing) + Per-KM Logistics Fee + Data Insights",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Mobility",
+      "Desert Technology",
+      "Autonomous Logistics"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Empty Quarter & Remote Projects)", "flag": "🇸🇦" },
+        { "name": "Egypt (Western Desert)", "flag": "🇪🇬" },
+        { "name": "Algeria (Sahara Hubs)", "flag": "🇩🇿" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "مكوك الصحراء: كبسولات شحن شمسية ذاتية القيادة",
+      "problem_statement": "تعاني المشاريع الكبرى في الصحاري العربية (تعدين، طاقة شمسية، سياحة بيئية) من تكلفة وصعوبة نقل الإمدادات الصغيرة والمتوسطة عبر الرمال والوعر. الشاحنات الكبيرة مكلفة وتهدر الوقود، والسيارات الصغيرة تغرز في الرمال. الفجوة هي كبسولات شحن كهربائية (Micro-Pods) مستوحاة من 'مشية الإبل'، تعمل بالطاقة الشمسية وتنتقل ذاتياً عبر الكثبان الرملية لتوصيل الطرود والمعدات."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Rimal-Rover",
+        "industry_tag": "اللوجستيات الصحراوية ذاتية القيادة",
+        "revenue_model": "Leasing to Industrial Projects + Managed Fleet Service + Subscription for Remote Delivery",
+        "action_text": "استعراض كبسولة الشحن التي لا تغرز في الرمال وتعمل بالشمس"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق العبور الرملي (0-36 شهر)",
+      "subtitle": "تحويل الصحراء إلى ممر لوجستي ذكي",
+      "phases": [
+        {
+          "title": "تصميم الهيكل 'الديناميكي' (Camel-Bio)",
+          "description": "تطوير نظام تعليق وعجلات مرنة تحاكي خف الجمل لتوزيع الوزن ومنع الانغراز في الرمال الناعمة، مع تغطية الهيكل بخلايا شمسية مرنة.",
+          "icon": "chip",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك الملاحة الصحراوية (Sand-Navigator)",
+          "description": "بناء نظام رؤية حاسوبية مدرب على تمييز أنواع الرمال والمنحدرات الصحراوية واختيار المسار الأكثر استقراراً دون الحاجة لخرائط مسبقة.",
+          "icon": "eye",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق أسطول التوصيل المستقل",
+          "description": "نشر الكبسولات في مواقع التعدين أو المشاريع الكبرى (مثل نيوم) لتوصيل قطع الغيار والوجبات والمعدات الخفيفة آلياً بين المخيمات.",
+          "icon": "share",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.8,
+      "data_points_analyzed": "Logistics Cost per Mile in Off-road vs Paved Areas in GCC"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "فشل أنظمة الملاحة التقليدية (التي تعتمد على الطرق) في البيئات الرملية المتغيرة.",
+        "الاستهلاك العالي للطاقة في سحب المركبات عبر الرمال.",
+        "الحاجة لمواد تتحمل درجات حرارة تصل لـ 60 مئوية وتأثير الغبار الكاشط.",
+        "تحديات الاتصال المستمر في عمق الصحراء (يتم حله بالأقمار الصناعية)."
+      ],
+      "recommended_tech_stack": [
+        "Bio-mimetic Suspension Systems",
+        "Flexible Thin-film Perovskite Solar Cells",
+        "Lidar-based SLAM for Non-structured Terrain",
+        "Starlink/Satellite IoT Integration",
+        "Solid-state Batteries for High Heat Resistance"
+      ],
+      "main_risk_index": "المخاطر الميكانيكية؛ تآكل المحركات بفعل الرمال الدقيقة يتطلب أنظمة إغلاق (Sealing) بمستوى عسكري."
+    }
+  }
+}

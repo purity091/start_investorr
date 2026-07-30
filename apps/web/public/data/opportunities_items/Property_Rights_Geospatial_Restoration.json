@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-LAW04",
+      "status_label": "تحليل فجوة توثيق وحماية حقوق الملكية",
+      "category_tag": "LegalTech / Geospatial AI / PropTech",
+      "business_model": "Service Fee per Verification + Gov Consulting + Insurance Data Support",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Property Rights",
+      "Legal Recovery",
+      "Geospatial AI"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Rif Dimashq (Destroyed Suburbs)", "flag": "🇸🇾" },
+        { "name": "Aleppo (Eastern Districts)", "flag": "🇸🇾" },
+        { "name": "Homs (Old City Areas)", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "ذاكرة الملكية: استعادة حقوق الأراضي بالذكاء الاصطناعي",
+      "problem_statement": "تعرضت آلاف السجلات العقارية في سوريا للتلف أو الضياع، واختفت معالم الملكية في المناطق المدمرة بالكامل، مما يهدد حقوق ملايين السوريين ويعطل إعادة الإعمار. الفجوة هي نظام 'تدقيق تاريخي' يدمج صور الأقمار الصناعية التاريخية، السجلات الرقمية الناجية، والشهادات المجتمعية لتوثيق الملكية بدقة قانونية لا تقبل الجدل."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sanad-Souri",
+        "industry_tag": "العدالة العقارية الرقمية",
+        "revenue_model": "Title Verification Fee + Legal Support Packages + Gov Registry Reconstruction Contracts",
+        "action_text": "استعراض تقنية تثبيت الملكية في المناطق المدمرة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق استعادة الحقوق (0-48 شهر)",
+      "subtitle": "تثبيت الأرض، حفظ الحق",
+      "phases": [
+        {
+          "title": "الأرشفة التاريخية الفضائية",
+          "description": "تحليل صور الأقمار الصناعية من 2010 إلى 2026 لرسم حدود الأراضي والمباني قبل وأثناء وبعد النزاع لتحديد الملكيات الأصلية.",
+          "icon": "map",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منصة التوثيق اللامركزي (Community Validation)",
+          "description": "تطوير واجهة آمنة تتيح للمواطنين رفع ما لديهم من عقود، فواتير كهرباء، أو شهادات جيران وتوثيقها ببيانات الموقع الجغرافي.",
+          "icon": "user-group",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إصدار 'جواز الملكية الرقمي'",
+          "description": "تحويل الملكيات الموثقة إلى سجلات مشفرة (Blockchain) تعترف بها الجهات القانونية لتسهيل عمليات البيع، الشراء، أو التعويض.",
+          "icon": "shield-check",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 10.0,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.8,
+      "data_points_analyzed": "Pre-war Cadastral Maps vs Satellite Change Detection Logs"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الحساسية السياسية والقانونية الشديدة لملف الملكيات العقارية.",
+        "ضياع الأصول الورقية في المحاكم التي تعرضت للحريق أو النهب.",
+        "التغييرات الديموغرافية الكبيرة التي تجعل الشهادات البشرية متضاربة.",
+        "الحاجة لاعتراف حكومي رسمي بالنتائج التقنية للنظام."
+      ],
+      "recommended_tech_stack": [
+        "Historical Satellite Imagery Archive",
+        "Change Detection Computer Vision",
+        "Blockchain for Immutable Ledger",
+        "GIS (Geographic Information Systems)",
+        "Zero-Knowledge Proofs for Privacy"
+      ],
+      "main_risk_index": "القبول القانوني؛ أي ثغرة في النظام قد تؤدي لنزاعات قضائية لا تنتهي، مما يتطلب إشرافاً قضائياً سورياً مباشراً على عمليات التوثيق."
+    }
+  }
+}

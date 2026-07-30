@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ENV-2026-IOT-WASTE",
+      "status_label": "تحليل استخباري لاقتصاد التدوير الذكي",
+      "category_tag": "البيئة (Smart City / Greentech)",
+      "business_model": "SaaS + Efficiency-based Savings Share",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Internet of Things",
+      "Circular Economy",
+      "Urban Services"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt (New Cities)", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "الإدارة الذكية للنفايات عبر إنترنت الأشياء",
+      "problem_statement": "تُهدر البلديات وشركات النظافة مبالغ طائلة في مسارات جمع النفايات غير الفعالة (إفراغ حاويات نصف فارغة) بينما تتراكم النفايات في مناطق أخرى. غياب البيانات اللحظية يؤدي لتردي المنظر الحضري وزيادة الانبعاثات الكربونية الناتجة عن شاحنات الجمع."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "EcoRoute-AI",
+        "industry_tag": "لوجستيات النفايات الذكية",
+        "revenue_model": "Monthly License per Device + Route Optimization SaaS + Recyclable Data Sales",
+        "action_text": "استعراض تقليل تكاليف التشغيل بنسبة 40% عبر الحساسات الذكية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المدن النظيفة (0-15 شهر)",
+      "subtitle": "بيانات ذكية لبيئة أنظف",
+      "phases": [
+        {
+          "title": "تجهيز الحاويات بالحساسات (Level Sensors)",
+          "description": "تركيب حساسات تعمل بالموجات فوق الصوتية تقيس مستوى امتلاء الحاوية لحظياً وترسل التنبيهات عبر شبكة LPWAN.",
+          "icon": "status-online",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك تحسين المسارات اللحظي",
+          "description": "خوارزمية ذكية تعيد رسم مسارات شاحنات الجمع يومياً بناءً على الحاويات الممتلئة فقط، مما يوفر الوقود والوقت.",
+          "icon": "map",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة فرز المصدر الرقمية",
+          "description": "تطبيق للمواطنين يحفز على فرز النفايات مقابل مكافآت، ويوفر بيانات دقيقة للمصانع حول كميات المواد القابلة للتدوير.",
+          "icon": "shopping-bag",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.1,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 8.7,
+      "data_points_analyzed": "2M+ Waste Collection Logs"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد التاريخي على العقود التقليدية طويلة الأمد مع شركات التنظيف.",
+        "نقص البنية التحتية لشبكات الاتصال الموفرة للطاقة (LoRaWAN/Sigfox).",
+        "صعوبة تغيير العقلية التشغيلية في المؤسسات الخدمية الكبرى.",
+        "الحاجة لحساسات متينة تتحمل درجات الحرارة المرتفعة في المنطقة."
+      ],
+      "recommended_tech_stack": [
+        "Ultrasonic Fill-level Sensors",
+        "LPWAN (NB-IoT / LoRaWAN)",
+        "Dynamic Route Optimization AI",
+        "Cloud Management Dashboard",
+        "Mobile App for Field Staff"
+      ],
+      "main_risk_index": "تكلفة الأجهزة؛ تطلب الاستثمار الأولي شراء كميات كبيرة من الحساسات، لذا فإن نموذج 'الجهاز كخدمة' (HaaS) هو الأنسب للتوسع."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-CIN06",
+      "status_label": "تحليل فجوة الإنتاج السينمائي منخفض التكلفة",
+      "category_tag": "MediaTech / Virtual Production / Unreal Engine",
+      "business_model": "Studio Rental + Tech-as-a-Service + Post-production SaaS",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Media",
+      "Cinema",
+      "Information Technology"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt (Cinema Capital)", "flag": "🇪🇬" },
+        { "name": "Saudi Arabia (The Red Sea Film Project)", "flag": "🇸🇦" },
+        { "name": "Jordan (Landscape Filming)", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "استوديو الإبداع الافتراضي: السينما العربية المستقلة",
+      "problem_statement": "تعاني السينما العربية المستقلة من ميزانيات ضخمة للسفر وبناء الديكورات، مما يحد من خيال المخرجين العرب (خاصة في الخيال العلمي والفانتازيا). الفجوة هي 'استوديوهات الإنتاج الافتراضي' (Virtual Production) التي تستخدم جدران LED ومحركات الألعاب (Unreal Engine) لتصوير أي مكان في العالم داخل الاستوديو مع إضاءة وبيئات واقعية تماماً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sura-Virtual",
+        "industry_tag": "البنية التحتية السينمائية المعتمدة على الـ AI والـ 3D",
+        "revenue_model": "Daily Studio Rental + 3D Asset Environment Creation + Real-time VFX Services",
+        "action_text": "استعراض خطة تصوير الأفلام العالمية بميزانيات عربية ذكية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الفن الافتراضي (0-48 شهر)",
+      "subtitle": "خيال بلا حدود، بتكلفة تحت السيطرة",
+      "phases": [
+        {
+          "title": "تأسيس 'المحيط الرقمي' (LED Volume)",
+          "description": "بناء أول استوديو LED احترافي في المنطقة العربية مزود بكاميرات تتبع لحظي (Camera Tracking) مرتبطة بمحرك Unreal Engine.",
+          "icon": "desktop-computer",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "مكتبة البيئات العربية (Arabian Assets Library)",
+          "description": "تصوير ومسح (Photogrammetry) لمواقع أثرية وطبيعية عربية (البتراء، دمشق القديمة، العلا) وتوفيرها كبيئات رقمية جاهزة للتصوير السينمائي.",
+          "icon": "cube",
+          "color_theme": "rose"
+        },
+        {
+          "title": "أكاديمية الإنتاج الافتراضي",
+          "description": "تدريب الكوادر الفنية العربية على تقنيات الإضاءة الرقمية والـ ICVFX لخلق جيل جديد من صناع الأفلام 'التقنيين'.",
+          "icon": "academic-cap",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.7,
+      "data_points_analyzed": "Traditional Set Building Costs vs Virtual Production ROI in Global Cinema"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية جداً لشاشات الـ LED المتخصصة ومعالجات الرسوميات.",
+        "نقص المهارات الفنية التي تجمع بين الإخراج والتعامل مع محركات الألعاب.",
+        "الاعتماد التقليدي على التصوير الخارجي (On-location) وتكاليفه البيروقراطية.",
+        "الحاجة لاتصالات إنترنت ونقل بيانات ضخمة لمعالجة البيئات الرقمية."
+      ],
+      "recommended_tech_stack": [
+        "Unreal Engine 5 (In-Camera VFX)",
+        "Mo-Sys / OptiTrack Camera Tracking",
+        "High-pitch LED Panels (ROE Visual)",
+        "AI for Asset Up-scaling",
+        "NVIDIA RTX Clusters for Real-time Rendering"
+      ],
+      "main_risk_index": "التقادم التقني؛ تكنولوجيا الشاشات والمعالجات تتطور بسرعة، مما يتطلب استراتيجية 'تحديث مستمر' للأجهزة لضمان التنافسية."
+    }
+  }
+}

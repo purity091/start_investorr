@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-HEALTH-2026-VR-REHAB",
+      "status_label": "تحليل استخباري لتقنيات الاستشفاء الغامرة",
+      "category_tag": "التكنولوجيا الطبية (VR / Digital Therapeutics)",
+      "business_model": "B2B (Clinics) + B2C (Home-based Subscription)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "HealthTech",
+      "Virtual Reality",
+      "Physical Therapy"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "إعادة التأهيل الطبي والفيزيائي عبر تقنيات الواقع الافتراضي",
+      "problem_statement": "تعتبر جلسات إعادة التأهيل التقليدية (بعد الجلطات، الحوادث، أو العمليات) مملة ومرهقة نفسياً للمرضى، مما يؤدي لانخفاض نسبة الالتزام بالعلاج إلى أقل من 40%. كما أن الأطباء يفتقرون لأدوات دقيقة لقياس مدى تقدم المريض الحركي في بيئة محفزة، مما يطيل فترة التعافي ويزيد من تكاليف الرعاية الصحية على المدى الطويل."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Motaharek-VR",
+        "industry_tag": "علاجات التأهيل الرقمية الغامرة",
+        "revenue_model": "Hardware/Software Lease to Clinics + Remote Patient Monitoring Subscription + Pay-per-session",
+        "action_text": "استعراض تحسن نتائج التعافي الحركي بنسبة 50% عبر الألعاب العلاجية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الاستشفاء الافتراضي (0-18 شهر)",
+      "subtitle": "تحويل الألم إلى إنجاز عبر المحاكاة الرقمية",
+      "phases": [
+        {
+          "title": "تطوير بيئات العلاج باللعب (Gamified Therapy)",
+          "description": "بناء عوالم افتراضية تفاعلية تحفز المريض على أداء حركات علاجية معينة (مثل الوصول لأشياء، التوازن، المشي) ضمن مهام ممتعة تشتت انتباهه عن الألم وتزيد من إفراز الدوبامين.",
+          "icon": "sparkles",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "دمج حساسات التتبع الحركي الدقيق",
+          "description": "ربط نظارات الواقع الافتراضي بحساسات قابلة للارتداء تقيس زوايا المفاصل وقوة العضلات لحظياً، وترسل البيانات لغرفة تحكم الطبيب لمراقبة التطور.",
+          "icon": "status-online",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق منصة التأهيل المنزلي عن بعد",
+          "description": "توفير نسخ مبسطة من النظام للمرضى في منازلهم، مما يتيح للطبيب متابعة الجلسات عن بعد وتقليل الحاجة للزيارات الميدانية المتكررة للمركز الطبي.",
+          "icon": "home",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.1,
+      "liquidity_tam": 9.3,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "1100+ (Clinical Trials on VR Rehab & Patient Compliance Logs)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لنظارات الواقع الافتراضي في السنوات السابقة (تغيرت الآن).",
+        "نقص المحتوى الطبي العربي المتخصص في تمارين إعادة التأهيل الفيزيائي.",
+        "دوار الحركة (Motion Sickness) الذي كان يصيب بعض المرضى (تم حله بتقنيات Refresh Rate العالية).",
+        "النظرة التقليدية للعلاج الطبيعي التي تعتمد حصراً على التدخل اليدوي."
+      ],
+      "recommended_tech_stack": [
+        "Unity / Unreal Engine for VR development",
+        "Standalone VR Headsets (Quest 3 / Vision Pro)",
+        "Haptic Feedback Gloves",
+        "AI for Motion Capture Analysis",
+        "Secure Cloud for Tele-rehabilitation"
+      ],
+      "main_risk_index": "الموثوقية السريرية؛ يجب إثبات أن التمارين الافتراضية آمنة تماماً ولا تسبب إجهاداً عضلياً خاطئاً عبر إشراف طبي مباشر في المرحلة التجريبية."
+    }
+  }
+}

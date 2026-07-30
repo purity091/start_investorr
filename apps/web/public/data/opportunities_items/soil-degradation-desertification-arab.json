@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-AGRI2",
+      "status_label": "تحليل أزمة تدهور التربة والتصحر",
+      "category_tag": "AgriTech (Soil Health / Regenerative Agriculture)",
+      "business_model": "Soil Restoration Services + Bio Inputs + Carbon Credits",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Agriculture",
+      "Soil Health",
+      "Sustainability"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Morocco", "flag": "🇲🇦" },
+        { "name": "Sudan", "flag": "🇸🇩" }
+      ],
+      "additional_regions_count": 12
+    },
+    "core_content": {
+      "title": "إعادة إحياء التربة الزراعية ومكافحة التصحر",
+      "problem_statement": "أكثر من 30% من الأراضي الزراعية في العالم العربي تعاني من تدهور حاد في الخصوبة بسبب الاستغلال المفرط، استخدام الأسمدة الكيميائية بشكل غير متوازن، وتغير المناخ. في مصر وشمال أفريقيا، يؤدي تملح التربة وانجرافها إلى انخفاض الإنتاجية بشكل مستمر. المشكلة لا تُحل بالأسمدة التقليدية، بل تحتاج إلى حلول شاملة لإعادة بناء التربة بيولوجياً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "TerraRevive",
+        "industry_tag": "استعادة التربة والزراعة المستدامة",
+        "revenue_model": "Soil Treatment Packages + Subscription Monitoring + Carbon Credit Sales",
+        "action_text": "استعراض زيادة خصوبة التربة بنسبة 25% خلال موسم واحد"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة استعادة التربة (0-24 شهر)",
+      "subtitle": "إحياء الأرض من جديد",
+      "phases": [
+        {
+          "title": "تحليل التربة رقمياً",
+          "description": "أخذ عينات وتحليلها لتحديد مستوى التدهور.",
+          "icon": "flask",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تطبيق حلول بيولوجية",
+          "description": "استخدام Biofertilizers وتقنيات الزراعة التجديدية.",
+          "icon": "leaf",
+          "color_theme": "rose"
+        },
+        {
+          "title": "مراقبة طويلة المدى",
+          "description": "متابعة صحة التربة وتحسينها عبر منصة رقمية.",
+          "icon": "chart",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "2200+ (Soil Quality & Yield Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد على حلول قصيرة المدى (أسمدة فقط).",
+        "نقص المعرفة بالزراعة التجديدية.",
+        "غياب الحوافز الاقتصادية لاستعادة التربة.",
+        "ارتفاع تكلفة الحلول البيئية."
+      ],
+      "recommended_tech_stack": [
+        "Soil Testing Kits",
+        "Biofertilizer Production",
+        "Satellite Monitoring",
+        "Carbon Credit Platforms",
+        "AI Soil Modeling"
+      ],
+      "main_risk_index": "دورة العائد الطويلة؛ استعادة التربة تحتاج وقت مما يتطلب صبر استثماري."
+    }
+  }
+}

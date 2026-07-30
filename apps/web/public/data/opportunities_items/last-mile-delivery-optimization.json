@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-LOG-2026-RM",
+      "status_label": "تحليل استخباري عالي التنافسية",
+      "category_tag": "سلاسل الإمداد والخدمات اللوجستية (Logistics 4.0)",
+      "business_model": "SaaS (B2B) + Pay-per-Success",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Smart Logistics",
+      "Autonomous Last-Mile",
+      "الشركات الثورية"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "معالجة 'مفارقة الميل الأخير' في الأسواق الناشئة",
+      "problem_statement": "يمثل 'الميل الأخير' ما يصل إلى 53% من إجمالي تكاليف الشحن عالمياً، وفي منطقة الشرق الأوسط تتضاعف هذه التكلفة نتيجة انعدام دقة العناوين، والازدحام المروري غير المتوقع، وارتفاع معدلات فشل التسليم في المحاولة الأولى. تفتقر الشركات الحالية إلى حلول تعتمد على 'الذكاء المكاني' القادر على التعلم من السلوك اللحظي للسائقين وحالة الطرق المحلية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "RouteAI",
+        "industry_tag": "أتمتة العمليات اللوجستية (Deep Logistics AI)",
+        "revenue_model": "Volume-based API + Performance Optimization Fees",
+        "action_text": "مراجعة نموذج تقليل الكربون وتحسين هوامش الربح"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التنفيذ السيادي (0-12 شهر)",
+      "subtitle": "إعادة هندسة التدفق اللوجستي",
+      "phases": [
+        {
+          "title": "محرك الأوركسترا الديناميكي (Dynamic Orchestration)",
+          "description": "تطوير محرك يعتمد على 'تعلم التعزيز' (Reinforcement Learning) لإعادة جدولة المسارات لحظياً بناءً على إلغاء الطلبات، الازدحام المفاجئ، أو توافر السائقين، بدقة تتجاوز 98%.",
+          "icon": "map",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "التكامل العميق والتوائم الرقمية (Digital Twins)",
+          "description": "بناء نظام 'التوأم الرقمي' لأسطول النقل، مما يسمح بمحاكاة آلاف السيناريوهات اللوجستية قبل التنفيذ الفعلي لتقليل استهلاك الوقود والانبعاثات بنسبة 25%.",
+          "icon": "refresh",
+          "color_theme": "rose"
+        },
+        {
+          "title": "الهيمنة عبر الأتمتة (Scale & Autonomy)",
+          "description": "التوسع لدمج الروبوتات الأرضية والدرونز في المناطق المغلقة (مثل نيوم وذا لاين)، وربط المنصة مع كبار لاعبي التجارة الإلكترونية لتوحيد معايير التسليم الذكي.",
+          "icon": "truck",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "4200+ (Regional Traffic Data & Delivery Logs)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد على خرائط ثابتة لا تراعي التحديثات العمرانية المتسارعة في مدن مثل الرياض ودبي.",
+        "تفتت قطاع النقل الوسيط وغياب منصة موحدة تربط أساطيل الطرف الثالث (3PL).",
+        "تحديات العنونة الجغرافية المعقدة في المناطق غير الحضرية.",
+        "ارتفاع تكلفة التكنولوجيا المتخصصة وعدم قدرة الشركات الصغيرة على تطويرها داخلياً."
+      ],
+      "recommended_tech_stack": [
+        "Reinforcement Learning (PPO/DQN Algorithms)",
+        "Digital Twin Simulation Frameworks",
+        "High-Precision Geofencing APIs",
+        "Edge AI for Driver Mobile Applications",
+        "Predictive Demand Sensing Models"
+      ],
+      "main_risk_index": "مقاومة التغيير في العقلية التشغيلية التقليدية وتحدي جودة البيانات التاريخية المتاحة للتدريب الأولي للنماذج."
+    }
+  }
+}

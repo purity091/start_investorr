@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-MKT14",
+      "status_label": "تحليل فجوة التوطين اللغوي لإعلانات الفيديو",
+      "category_tag": "AdTech / AI / Generative-Video",
+      "business_model": "Fee per Personalized Video + Monthly SaaS + Enterprise Dialect Engine Licensing",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Marketing",
+      "Artificial Intelligence",
+      "Video Production"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Pan-Arab Brands (Regional Campaigns)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "E-commerce Platforms (Personalized Retargeting)",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 22
+    },
+    "core_content": {
+      "title": "فيديو لكل لهجة: أتمتة الإعلانات الشخصية",
+      "problem_statement": "تطلق الشركات العربية حملة فيديو واحدة بلغة بيضاء، وتفشل في الوصول العاطفي للمستهلك في كل دولة بلهجته الخاصة. الفجوة هي نظام AI يولد آلاف النسخ من إعلان الفيديو الواحد، يغير فيها اللهجة، اسم المنتج، وحتى العروض بناءً على موقع واهتمام كل عميل لحظياً (Dynamic Creative Optimization)."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Lahja-Video-AI",
+        "industry_tag": "تكنولوجيا الفيديو الديناميكي والذكاء الاصطناعي التوليدي",
+        "revenue_model": "Charge per Video Rendered + Subscription for High-volume E-commerce + Dialect Voice Cloning License",
+        "action_text": "استعراض الإعلانات التي تتحدث مع كل عميل بلهجته الخاصة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الفيديو الذكي (0-36 شهر)",
+      "subtitle": "إعلان واحد، بآلاف الوجوه واللهجات العربية",
+      "phases": [
+        {
+          "title": "محرك استنساخ اللهجات (Dialect-Cloning)",
+          "description": "تطوير AI يستطيع تحويل صوت الممثل الأصلي إلى كافة اللهجات العربية بدقة مذهلة مع الحفاظ على نفس النبرة والمشاعر.",
+          "icon": "microphone",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "مولد العناصر الديناميكية (Visual-Overlay)",
+          "description": "أتمتة تغيير النصوص، الصور، والعروض المكتوبة داخل الفيديو بناءً على بيانات العميل (مثل وضع اسم العميل على المنتج داخل الفيديو).",
+          "icon": "desktop-computer",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة الربط مع المنصات الإعلانية",
+          "description": "تكامل النظام مع فيسبوك ويوتيوب لعرض النسخة المناسبة من الفيديو لكل مستخدم بناءً على موقعه الجغرافي لحظياً.",
+          "icon": "share",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.7,
+      "data_points_analyzed": "CTR of Dialect-targeted Video Ads vs Generic Campaigns in MENA"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية جداً لإعادة تصوير وتسجيل الإعلانات بكل لهجة يدوياً.",
+        "التعقيد التقني في معالجة (Rendering) آلاف الفيديوهات لحظياً وبجودة عالية.",
+        "نقص التكنولوجيا التي تدعم مزامنة الشفاه (Lip-sync) للهجات العربية المختلفة.",
+        "الحاجة لبيانات دقيقة حول اهتمامات العميل لتفعيل التخصيص الحقيقي."
+      ],
+      "recommended_tech_stack": [
+        "Generative Video AI (Sora/Runway style for local context)",
+        "Voice Conversion (RVC) for Dialects",
+        "Cloud GPU Clusters for Mass Rendering",
+        "Dynamic Creative Optimization (DCO) Algorithms",
+        "API Integration with CRM Data"
+      ],
+      "main_risk_index": "القبول الاجتماعي؛ إذا بدا الفيديو 'مزيفاً' بشكل واضح (Uncanny Valley)، قد يسبب نفوراً من البراند، مما يتطلب واقعية فائقة في التنفيذ."
+    }
+  }
+}

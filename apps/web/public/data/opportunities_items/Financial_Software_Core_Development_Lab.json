@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-JOB07",
+      "status_label": "تحليل فجوة السيادة المالية الرقمية",
+      "category_tag": "FinTech / Software Engineering / Banking",
+      "business_model": "Software Licensing + Custom Feature Dev + Transaction Processing SaaS",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Information Technology",
+      "Finance",
+      "Software Development"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Syrian Domestic Market",
+          "flag": "🇸🇾"
+        },
+        {
+          "name": "Emerging Markets (Africa/Central Asia)",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "مختبر تطوير الأنظمة المالية: بناء عصب الاقتصاد الرقمي",
+      "problem_statement": "تعتمد البنوك السورية وشركات الدفع الناشئة على أنظمة 'جاهزة' أو قديمة تفتقر للمرونة والأمان العالي. مهندسو البرمجيات السوريون يهاجرون للعمل في شركات 'فينتك' عالمية. الفجوة هي مختبر تخصصي داخل سوريا يقوم ببناء 'المحركات المالية' (Fintech Cores) والمحافظ الرقمية وأنظمة المقاصة محلياً، لضمان السيادة المالية وخلق وظائف عالية القيمة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Syr-Fin-Labs",
+        "industry_tag": "البنية التحتية البرمجية للمالية الرقمية",
+        "revenue_model": "License-per-bank + Maintenance Contracts + Custom API Integration Fees",
+        "action_text": "استعراض محرك الدفع السوري الذي ينافس الأنظمة العالمية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الاستقلال المالي (0-24 شهر)",
+      "subtitle": "برمجيات سورية لخدمة الاقتصاد المحلي",
+      "phases": [
+        {
+          "title": "تطوير 'المحرك البنكي' (Core Banking Engine)",
+          "description": "بناء نظام محاسبي مالي فائق الأمان، يدعم المعاملات اللحظية، والعملات المتعددة، والامتثال للوائح المحلية.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منصة الـ API المفتوحة (Open Banking)",
+          "description": "توفير واجهات برمجية تتيح للتطبيقات الأخرى (توصيل، تسوق) الاندماج مع النظام المالي لإتمام عمليات الدفع آلياً.",
+          "icon": "link",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إدماج تقنيات الأمان الحيوي (Biometric Auth)",
+          "description": "تطوير أنظمة تحقق تعتمد على بصمة الوجه والصوت لضمان أمان المعاملات المالية في البيئات التي تفتقر لكلمات السر التقليدية.",
+          "icon": "finger-print",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "Syrian Digital Payment Adoption vs Cost of Foreign Banking Software"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التخوف التقليدي للبنوك من الاعتماد على برمجيات 'محلية' غير مجربة.",
+        "المعايير الأمنية العالمية (PCI-DSS) التي تتطلب استثمارات ضخمة في البنية التحتية.",
+        "نقص المهندسين السوريين ذوي الخبرة في 'الأمان المالي' العالي.",
+        "التعقيد القانوني والتشريعي المرتبط بنقل الأموال الرقمية."
+      ],
+      "recommended_tech_stack": [
+        "Microservices Architecture (Go/Rust)",
+        "Event-driven Processing (Kafka)",
+        "PostgreSQL for Financial Integrity",
+        "HSM (Hardware Security Modules) Integration",
+        "Kubernetes for Scaling"
+      ],
+      "main_risk_index": "الموثوقية؛ أي خطأ برمج في النظام المالي قد يؤدي لخسائر فادحة، مما يتطلب بروتوكولات اختبار (QA) صارمة جداً ومستمرة."
+    }
+  }
+}

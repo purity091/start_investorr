@@ -1,0 +1,82 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-JOB08",
+      "status_label": "تحليل فجوة إدارة الموارد الإنشائية المؤتمتة",
+      "category_tag": "SaaS / ConTech / ERP",
+      "business_model": "Monthly Subscription per User + Customization Fees + Implementation Services",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Information Technology",
+      "Construction",
+      "Business Management"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Syrian Construction Sector", "flag": "🇸🇾" },
+        { "name": "Iraqi Post-conflict Reconstruction", "flag": "🇮🇶" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "نظام إدارة مشاريع الإعمار (Syria-ERP): دمج المدني والمعلوماتية",
+      "problem_statement": "تعاني شركات المقاولات السورية من تشتت البيانات (إكسل، ورقي)، مما يسبب ضياع المواد، وتضارب الجداول الزمنية، وفشل في مراقبة التكاليف. الأنظمة العالمية (SAP/Oracle) باهظة وغير متوافقة مع 'واقع السوق السوري'. الفجوة هي نظام ERP محلي مصمم بمدخلات مهندسين مدنيين سوريين ليناسب آليات التوريد، العمالة، والظروف التشغيلية في سوريا."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Amal-ERP",
+        "industry_tag": "أتمتة شركات الإنشاءات وإعادة الإعمار",
+        "revenue_model": "SaaS per Active Site + Supply Chain Commission + Professional Support Fees",
+        "action_text": "استعراض المنصة التي تدير 50% من مشاريع الإعمار في حلب وحمص"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الأتمتة الإنشائية (0-24 شهر)",
+      "subtitle": "إدارة كل حجر ومسمار رقمياً",
+      "phases": [
+        {
+          "title": "تطوير محرك التكاليف والموارد (Cost-Control)",
+          "description": "بناء نظام يربط أوامر الشراء، مخازن الموقع، وكشوف الرواتب في واجهة واحدة تمنع الهدر المالي.",
+          "icon": "calculator",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تطبيق الميدان (Site-Reporter App)",
+          "description": "توفير تطبيق جوال يعمل (Offline) لمهندسي الموقع لتوثيق الإنجاز، المشاكل، والاحتياجات اليومية وإرسالها للمكتب الرئيسي عند توفر الإنترنت.",
+          "icon": "clipboard-check",
+          "color_theme": "rose"
+        },
+        {
+          "title": "محرك التنبؤ بالمخاطر والتأخير",
+          "description": "استخدام الذكاء الاصطناعي لتحليل البيانات التاريخية وتنبيه المدير بوجود احتمالية تأخير في التوريدات أو نقص في السيولة قبل وقوعها.",
+          "icon": "exclamation-circle",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "Profit Margins in Syrian Construction vs Unmanaged Project Losses"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف الثقافة الرقمية لدى أصحاب شركات المقاولات التقليدية.",
+        "الحاجة لإدخال بيانات كثيف ومستمر لضمان دقة النظام.",
+        "تقلب أسعار مواد البناء الذي يجعل التخطيط المالي تحدياً كبيراً.",
+        "غياب التكامل بين المكتب الهندسي (المخططات) والواقع الميداني (التنفيذ)."
+      ],
+      "recommended_tech_stack": [
+        "Python / Django for Backend",
+        "Flutter for Mobile App (Offline Sync)",
+        "PostgreSQL with Audit Logs",
+        "Docker for Scalable Deployment",
+        "AWS/DigitalOcean for Cloud Hosting"
+      ],
+      "main_risk_index": "تبني المستخدم؛ نجاح الـ ERP يعتمد على مدى التزام المهندسين والعمال في الموقع بإدخال البيانات، مما يتطلب واجهات مستخدم 'سورية' بسيطة ومحفزة."
+    }
+  }
+}

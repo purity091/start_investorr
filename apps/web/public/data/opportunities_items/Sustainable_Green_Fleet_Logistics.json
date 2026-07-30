@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-LOG-2026-GREEN-FLEET",
+      "status_label": "تحليل استخباري للتحول الكربوني الصفر",
+      "category_tag": "النقل المستدام (EV / Hydrogen Logistics)",
+      "business_model": "Fleet-as-a-Service (FaaS) + Carbon Credit Trading",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Sustainability",
+      "Electric Vehicles",
+      "Green Logistics"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "UAE (Net Zero 2050)", "flag": "🇦🇪" },
+        { "name": "Saudi Arabia (Green Initiative)", "flag": "🇸🇦" },
+        { "name": "Jordan (EV Hub)", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "أسطول النقل اللوجستي الأخضر وحلول الشحن المستدام",
+      "problem_statement": "يساهم قطاع النقل بـ 16% من الانبعاثات الكربونية عالمياً، ومع توجه الدول العربية لفرض ضرائب كربونية ومعايير بيئية صارمة في 2026، تواجه شركات اللوجستيات التقليدية خطر التوقف أو الغرامات الباهظة. هناك فجوة هائلة لأسطول شاحنات كهربائي وهيدروجيني مدار بالذكاء الاصطناعي لتقليل البصمة الكربونية وتوفير تكاليف الوقود الصاعد."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Khadra-Logistics",
+        "industry_tag": "النقل الثقيل الصديق للبيئة",
+        "revenue_model": "Premium Green Shipping Rates + Carbon Credit Sales + EV Charging Infrastructure",
+        "action_text": "استعراض خطة التحول لأسطول صفر انبعاثات وتوفير 60% من تكلفة الطاقة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق اللوجستيات الخضراء (0-24 شهر)",
+      "subtitle": "قيادة المستقبل بطاقة نظيفة",
+      "phases": [
+        {
+          "title": "تأسيس بنية الشحن السريع (Mega-Chargers)",
+          "description": "إنشاء محطات شحن فائقة السرعة مخصصة للشاحنات الثقيلة على الطرق السريعة الرابطة بين المدن الصناعية والموانئ، تعمل بالطاقة الشمسية.",
+          "icon": "lightning-bolt",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "إحلال الأسطول بالشاحنات الكهربائية والهيدروجينية",
+          "description": "استبدال تدريجي للشاحنات التي تعمل بالديزل بشاحنات كهربائية للمسافات القصيرة وهيدروجينية للمسافات الطويلة، مع نظام تبديل بطاريات (Battery Swapping).",
+          "icon": "truck",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة تداول أرصدة الكربون (Carbon Tracking)",
+          "description": "إطلاق برمجية تحسب التوفير في الانبعاثات لكل رحلة وتحولها إلى شهادات كربون قابلة للبيع في الأسواق العالمية.",
+          "icon": "globe",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "2M+ Kilometers of Fleet Data"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الارتفاع الأولي في أسعار الشاحنات الكهربائية مقارنة بشاحنات الديزل.",
+        "ضعف البنية التحتية لمحطات الشحن المخصصة للمركبات الثقيلة.",
+        "القلق من 'المدى الحركي' للبطاريات في المسافات الطويلة والحرارة العالية.",
+        "غياب الأطر التنظيمية التي تحفز الشركات على التحول الأخضر (بدأت تظهر الآن)."
+      ],
+      "recommended_tech_stack": [
+        "Hydrogen Fuel Cell Technology",
+        "Solid-state Batteries",
+        "AI Energy Management Systems",
+        "IoT for Telematics and Emission Tracking",
+        "Smart Grid Integration"
+      ],
+      "main_risk_index": "تكنولوجيا البطاريات؛ سرعة تطور كفاءة البطاريات قد تجعل الأجيال الحالية تتقادم سريعاً، مما يتطلب نماذج استئجار مرنة."
+    }
+  }
+}

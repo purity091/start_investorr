@@ -1,0 +1,92 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-HOS04",
+      "status_label": "تحليل فجوة موثوقية التجارب السياحية المتوافقة",
+      "category_tag": "TravelTech / Halal-Economy / Verification",
+      "business_model": "Certification Fees + Booking Commission + Data Licensing for OTAs",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Tourism",
+      "Halal Economy",
+      "Verification Services"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Global Muslim Travelers",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Non-OIC Destinations (Japan/Europe)",
+          "flag": "🇪🇺"
+        },
+        {
+          "name": "Intra-Arab Family Tourism",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "السياحة الحلال الموثقة: شبكة التجارب المعتمدة",
+      "problem_statement": "يمثل السياح المسلمون قطاعاً بمليارات الدولارات، لكنهم يواجهون 'غموضاً' في توافق التجارب (شواطئ خاصة، خصوصية المسابح، توفر أماكن صلاة) خاصة في الوجهات غير الإسلامية. الفجوة هي منصة توثيق عالمية تمنح 'وسام ثقة' (Trust-Badge) للوجهات والفنادق بناءً على معايير دقيقة ومراجعات موثقة، مع نظام حجز يضمن هذه الخصوصية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Halal-Vibe",
+        "industry_tag": "تكنولوجيا الاقتصاد الإسلامي والسياحة العائلية",
+        "revenue_model": "Commission on Specialized Bookings + Hotel Certification Fees + Targeted Ad Space for Halal Brands",
+        "action_text": "استعراض منصة قيادة سوق السياحة الحلال العالمية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الثقة السياحية (0-24 شهر)",
+      "subtitle": "سفر مريح، متوافق مع القيم، في كل مكان",
+      "phases": [
+        {
+          "title": "تطوير 'معايير التوافق' (Halal-Standard-AI)",
+          "description": "بناء خوارزمية تحلل صور وبيانات الفنادق لتصنيفها تلقائياً بناءً على مستويات الخصوصية والخدمات الحلال المتوفرة.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "شبكة المحققين الميدانيين (Ground-Verifiers)",
+          "description": "تفعيل جيش من المراجعين الموثقين الذين يقومون بزيارات ميدانية وتصوير 360 درجة لضمان دقة معلومات الخصوصية.",
+          "icon": "user-group",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة الحجز 'المشروط' (Guaranteed-Booking)",
+          "description": "محرك حجز يتيح للمستخدم طلب 'ضمان خصوصية المسبح' أو 'وجبات حلال مؤكدة' كجزء لا يتجزأ من شروط العقد مع الفندق.",
+          "icon": "check-circle",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Halal Travel Market Growth vs Lack of Standardized Global Verification"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "غياب تعريف عالمي موحد لـ 'السياحة الحلال' (يختلف بين الثقافات).",
+        "صعوبة تحديث بيانات الفنادق العالمية بشكل لحظي.",
+        "نقص التعاون من قبل الفنادق العالمية التي لا ترى حجم هذا السوق بوضوح.",
+        "الاعتماد على المراجعات العشوائية التي قد لا تكون دقيقة بشأن الخصوصية."
+      ],
+      "recommended_tech_stack": [
+        "Computer Vision for Privacy Level Analysis",
+        "Blockchain for Immutable Review Scoring",
+        "Multilingual AI Concierge (Fatwa-ready context)",
+        "360 VR for Remote Verification",
+        "Personalized Recommendation Engine"
+      ],
+      "main_risk_index": "المصداقية؛ أي خطأ في توثيق 'خصوصية' وجهة ما قد يسبب إحراجاً كبيراً ويفقد المنصة ثقة العائلات، مما يتطلب صرامة في المنح."
+    }
+  }
+}

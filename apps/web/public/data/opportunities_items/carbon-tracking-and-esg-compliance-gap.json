@@ -1,0 +1,87 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ENERGY9",
+      "status_label": "تحليل فجوة تتبع الانبعاثات والامتثال البيئي",
+      "category_tag": "Climate Tech (Carbon Accounting / ESG Compliance)",
+      "business_model": "SaaS + Enterprise Compliance Platform + Carbon Reporting API",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Energy",
+      "Climate",
+      "ESG"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Qatar", "flag": "🇶🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "منصة موحدة لتتبع الانبعاثات الكربونية والامتثال لمعايير ESG",
+      "problem_statement": "مع تصاعد الضغوط العالمية نحو تقليل الانبعاثات الكربونية وفرض معايير ESG، تواجه الشركات في العالم العربي فجوة كبيرة في القدرة على قياس وإدارة والإفصاح عن انبعاثاتها. المشكلة ليست فقط تقنية، بل تنظيمية واستراتيجية: معظم الشركات لا تمتلك بيانات دقيقة عن Scope 1 وScope 2 وScope 3، ولا تعرف كيف تربط استهلاك الطاقة، سلاسل التوريد، والنقل ضمن نظام موحد. هذا يعرضها لخطر فقدان الاستثمارات الأجنبية، صعوبة التصدير للأسواق الأوروبية، وارتفاع تكلفة التمويل. الفرصة هنا ليست مجرد Dashboard، بل بناء 'طبقة ثقة' (Trust Layer) تربط الشركات بالجهات التنظيمية والمستثمرين."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "CarbonLens MENA",
+        "industry_tag": "Carbon Accounting & ESG Platforms",
+        "revenue_model": "Enterprise Subscription + Reporting Fees + API for Financial Institutions",
+        "action_text": "استعراض منصة توحد بيانات الانبعاثات وتولد تقارير ESG قابلة للتدقيق"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة الامتثال الكربوني (0-18 شهر)",
+      "subtitle": "من بيانات مشتتة إلى تقارير قابلة للتدقيق العالمي",
+      "phases": [
+        {
+          "title": "طبقة جمع البيانات متعددة المصادر",
+          "description": "ربط بيانات استهلاك الطاقة، الوقود، النقل، الموردين، وسلاسل التوريد عبر Integrations مع ERP وعدادات الطاقة وأنظمة اللوجستيات.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك حساب الانبعاثات",
+          "description": "تطبيق منهجيات GHG Protocol لحساب Scope 1/2/3 بشكل دقيق، مع تحديث عوامل الانبعاث حسب الدولة والقطاع.",
+          "icon": "calculator",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تقارير ESG وتكامل مالي",
+          "description": "إنتاج تقارير قابلة للتدقيق متوافقة مع معايير مثل IFRS Sustainability وEU CSRD، وربطها مع البنوك والمستثمرين.",
+          "icon": "file-text",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.3,
+      "data_points_analyzed": "3400+ (Carbon Reporting, ESG Compliance, Supply Chain Emissions Benchmarks)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الشركات لا تمتلك بيانات موثوقة أو موحدة عن استهلاكها الفعلي للطاقة والانبعاثات.",
+        "تعقيد حساب Scope 3 الذي يشمل الموردين والنقل والخدمات الخارجية.",
+        "غياب منصات محلية تدعم القوانين الإقليمية وتتكامل مع الأنظمة العربية.",
+        "النظر إلى ESG كمتطلب تقريري وليس أداة استراتيجية لإدارة التكلفة والمخاطر.",
+        "ضعف الربط بين البيانات البيئية والقرارات المالية (Financing, Lending, Investment)."
+      ],
+      "recommended_tech_stack": [
+        "Carbon Accounting Engines",
+        "GHG Protocol Models",
+        "Data Integration (ERP, IoT, Logistics APIs)",
+        "AI-based Emission Estimation",
+        "Audit Trail & Compliance Layer",
+        "ESG Reporting Standards (IFRS / CSRD)",
+        "Blockchain (optional for verification layer)"
+      ],
+      "main_risk_index": "الموثوقية التنظيمية؛ أي خطأ في حساب الانبعاثات قد يؤثر على قرارات استثمارية وتمويلية. يجب بناء النظام وفق معايير تدقيق صارمة وقابلية تتبع كاملة (Auditability)، وإلا يفقد قيمته كمصدر ثقة."
+    }
+  }
+}

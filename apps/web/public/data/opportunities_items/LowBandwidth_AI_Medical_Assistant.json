@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-AFR-2026-HLT03",
+      "status_label": "تحليل فجوة الوصول للرعاية الأولية في مناطق النزاع",
+      "category_tag": "الصحة الرقمية (HealthTech / NLP)",
+      "business_model": "Micro-payments via Airtime + B2G Support",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Healthcare",
+      "Telemedicine",
+      "Low-Tech Delivery"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Yemen", "flag": "🇾🇪" },
+        { "name": "Sudan", "flag": "🇸🇩" },
+        { "name": "Mauritania", "flag": "🇲🇷" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "مساعد الطبيب الذكي عبر الرسائل النصية (SMS/USSD)",
+      "problem_statement": "يوجد طبيب واحد لكل 15,000 شخص في المناطق الريفية باليمن والسودان. المرضى يقطعون مئات الكيلومترات للوصول لمستشفى فقط ليكتشفوا أن حالتهم بسيطة، أو يتجاهلون أعراضاً قاتلة. هناك فجوة لخدمة 'فرز طبي' تعتمد على الذكاء الاصطناعي وتعمل عبر الرسائل النصية (SMS) البسيطة، لتقديم توجيه طبي فوري وتشخيص أولي للحالات الشائعة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Tabeeb-Baleel",
+        "industry_tag": "التوجيه الطبي الرقمي منخفض التكلفة",
+        "revenue_model": "Carrier Billing (Small fee per query) + Public Health Surveillance Data",
+        "action_text": "استعراض نظام التشخيص الطبي عبر الـ SMS المدعوم بالذكاء الاصطناعي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الصحة الشاملة (0-15 شهر)",
+      "subtitle": "طبيب في جيب كل مواطن، بلا إنترنت",
+      "phases": [
+        {
+          "title": "تطوير محرك الفرز الطبي (Medical NLP)",
+          "description": "بناء محرك لغوي يعالج النصوص باللهجات المحلية لتحويل وصف المريض لأعراضه إلى تشخيص أولي بناءً على بروتوكولات منظمة الصحة العالمية.",
+          "icon": "stethoscope",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تكامل بوابة الـ USSD/SMS",
+          "description": "الربط مع شركات الاتصالات المحلية لتوفير الخدمة عبر أكواد بسيطة (مثل *123#) لا تحتاج لهواتف ذكية أو إنترنت.",
+          "icon": "phone",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نظام الإحالة الذكي للعيادات الميدانية",
+          "description": "توجيه الحالات الحرجة لأقرب مستوصف متاح وتزويد المسعفين هناك بتقرير الحالة رقمياً لتقليل وقت الاستجابة.",
+          "icon": "location-marker",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.1,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "Prevalence of Infectious Diseases vs Distance to Healthcare"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التركيز على تطبيقات الهواتف الذكية التي لا يملكها 60% من سكان هذه المناطق.",
+        "الحاجة لاتصال إنترنت مستقر في حلول الطب عن بعد التقليدية.",
+        "غياب المساعدين الرقميين الذين يفهمون السياق الطبي المحلي (مثل الكوليرا، الملاريا، سوء التغذية).",
+        "صعوبة سداد الرسوم الطبية (تم حلها عبر الخصم من رصيد الهاتف)."
+      ],
+      "recommended_tech_stack": [
+        "Lightweight NLP Engine (Local Dialects)",
+        "SMS/USSD Gateway Integration",
+        "Expert Systems (Decision Trees)",
+        "Zero-rating partnerships with Telcos",
+        "End-to-End Encryption for Patient Privacy"
+      ],
+      "main_risk_index": "المسؤولية الطبية؛ يجب أن يكون النظام واضحاً في كونه 'أداة توجيه وفرز' وليس بديلاً عن الطبيب لتجنب التعقيدات القانونية."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-PROP",
+      "status_label": "تحليل استخباري لنهضة العمران والتوثيق",
+      "category_tag": "العقارات والإنشاءات (PropTech / ConTech)",
+      "business_model": "B2G + B2B SaaS",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "PropTech",
+      "Smart Construction",
+      "Urban Planning"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Damascus Countryside", "flag": "🇸🇾" },
+        { "name": "Homs Reconstruction Zones", "flag": "🇸🇾" },
+        { "name": "Aleppo Industrial City", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 7
+    },
+    "core_content": {
+      "title": "إدارة عمليات إعادة الإعمار والتوثيق العمراني الرقمي",
+      "problem_statement": "يواجه ملف إعادة الإعمار في سوريا تحديات هائلة تتمثل في ضياع الوثائق العقارية، وتدمير البنية التحتية، وغياب البيانات الدقيقة حول حجم الأضرار. التخطيط العشوائي قد يؤدي لهدر الموارد وضياع حقوق الملكية. هناك حاجة ملحة لمنصة رقمية تعتمد على تقنيات الجيومكانية والبلوكشين لتوثيق الأملاك، وإدارة مشاريع الإعمار، وربط المستثمرين بالمخططات التنظيمية المعتمدة بشفافية عالية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Emaar-Digital",
+        "industry_tag": "تقنيات إدارة الإعمار والتوثيق العقاري",
+        "revenue_model": "Licensing Fees for Authorities + Project Management SaaS + Data Verification Fees",
+        "action_text": "استعراض نظام التوثيق العقاري غير القابل للتلاعب"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق العمران الذكي (0-24 شهر)",
+      "subtitle": "بناء الأساس الرقمي لنهضة المدن السورية",
+      "phases": [
+        {
+          "title": "التوثيق الرقمي والمسح الجوي",
+          "description": "استخدام الدرونز وتقنيات الـ LiDAR لمسح المناطق المتضررة وإنشاء توائم رقمية (Digital Twins) تساعد في تقدير التكاليف وتخطيط الإعمار.",
+          "icon": "map",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "سجل الملكية الرقمي (Blockchain Ledger)",
+          "description": "تطوير قاعدة بيانات غير قابلة للتعديل لتوثيق حقوق الملكية بناءً على السجلات المتاحة، لضمان حقوق الملاك وجذب الاستثمارات العقارية الآمنة.",
+          "icon": "shield-check",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة إدارة مشاريع الإعمار",
+          "description": "إطلاق نظام مركزي يربط شركات المقاولات، المكاتب الهندسية، والجهات المانحة لمراقبة سير التنفيذ والإنفاق المالي بكل شفافية.",
+          "icon": "briefcase",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "1500+ (Satellite Destruction Images & Land Registry Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضياع أو تدمير الأرشيف الورقي في كثير من المناطق الساخنة.",
+        "تعقيد النزاعات القانونية حول الملكيات العقارية وتداخلها.",
+        "الحاجة لتمويلات ضخمة تتجاوز قدرات الشركات المحلية الحالية.",
+        "البيروقراطية في اعتماد المخططات التنظيمية الجديدة وتحديث البيانات."
+      ],
+      "recommended_tech_stack": [
+        "GIS (Geographic Information Systems)",
+        "Blockchain (Ethereum/Hyperledger)",
+        "LiDAR & Photogrammetry",
+        "BIM (Building Information Modeling)",
+        "Secure Cloud Infrastructure"
+      ],
+      "main_risk_index": "المخاطر القانونية والتشريعية؛ يتطلب المشروع دعماً تشريعياً قوياً لاعتبار الوثائق الرقمية والمخططات الناتجة كمرجع قانوني معتمد لدى الدولة."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ENERGY-2026-MICROGRID",
+      "status_label": "تحليل استخباري لامركزية الطاقة",
+      "category_tag": "الطاقة (CleanTech / Smart Grid)",
+      "business_model": "Energy-as-a-Service (EaaS) + Infrastructure Development",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Renewable Energy",
+      "Microgrids",
+      "Energy Storage"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (NEOM/Red Sea)", "flag": "🇸🇦" },
+        { "name": "Egypt (Remote Areas)", "flag": "🇪🇬" },
+        { "name": "Jordan", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "الشبكات الكهربائية الصغيرة والمتجددة",
+      "problem_statement": "تعاني الشبكات المركزية التقليدية من فقدان الطاقة أثناء النقل وصعوبة الوصول للمناطق النائية أو المجمعات الصناعية الجديدة. مع زيادة الطلب، تصبح الحلول اللامركزية (الشبكات الصغيرة) التي تعتمد على الطاقة الشمسية والرياح ضرورة لضمان استقرار الإمداد وتقليل الانبعاثات الكربونية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Grid-Next",
+        "industry_tag": "أنظمة إدارة الطاقة اللامركزية",
+        "revenue_model": "Long-term Power Purchase Agreements (PPA) + Maintenance Contracts",
+        "action_text": "استعراض كفاءة تخزين الطاقة وتوزيعها الذكي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق استقلال الطاقة (0-24 شهر)",
+      "subtitle": "توليد الطاقة حيث تُستهلك",
+      "phases": [
+        {
+          "title": "تأسيس محطات التوليد الهجينة",
+          "description": "تركيب مصفوفات شمسية وتوربينات رياح صغيرة مرتبطة بأنظمة تخزين ببطاريات الليثيوم المتطورة لتأمين طاقة 24/7.",
+          "icon": "lightning-bolt",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تفعيل محرك التوزيع الذكي (AI Controller)",
+          "description": "استخدام خوارزميات الذكاء الاصطناعي للتنبؤ بالاستهلاك وتوجيه الطاقة للأحمال الحرجة، مما يقلل الهدر بنسبة 30%.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "الربط مع شبكات التداول (P2P Trading)",
+          "description": "تمكين المجمعات من بيع فائض الطاقة للشبكة الرئيسية أو للمجمعات المجاورة عبر تقنية البلوكشين.",
+          "icon": "refresh",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.3,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "800+ Regional Power Consumption Patterns"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية المبدئية لأنظمة تخزين الطاقة (البطاريات).",
+        "الحاجة لتشريعات تسمح بإنتاج وبيع الطاقة بشكل مستقل.",
+        "تعقيد إدارة الأحمال المتغيرة في الشبكات الصغيرة برمجياً.",
+        "نقص الخبرات المحلية في إدارة الشبكات الذكية اللامركزية."
+      ],
+      "recommended_tech_stack": [
+        "AI Load Forecasting",
+        "Battery Energy Storage Systems (BESS)",
+        "IoT Power Meters",
+        "Smart Inverters",
+        "Blockchain for Energy Billing"
+      ],
+      "main_risk_index": "المخاطر التنظيمية؛ سرعة منح التراخيص لإنتاج الطاقة المستقلة هي المحرك الأكبر لربحية هذا القطاع."
+    }
+  }
+}

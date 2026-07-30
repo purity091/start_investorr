@@ -1,0 +1,82 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-WORK",
+      "status_label": "تحليل استخباري لاقتصاد المعرفة وتصدير الخدمات",
+      "category_tag": "التعليم والتوظيف (EdTech / Future of Work)",
+      "business_model": "B2B + Skill-as-a-Service",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "EdTech",
+      "Remote Work",
+      "Human Capital"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Digital Hubs (Damascus/Homs)", "flag": "🇸🇾" },
+        { "name": "Global Export Markets", "flag": "🌍" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "تأهيل الكفاءات للعمل الحر والعمل عن بعد",
+      "problem_statement": "تعاني سوريا من هجرة العقول (Brain Drain) وارتفاع معدلات البطالة بين الخريجين الجدد، رغم وجود مواهب تقنية وإبداعية فذة. العائق الرئيسي هو انقطاع التيار الكهربائي والإنترنت، وصعوبة استلام المستحقات المالية، وغياب الربط مع الأسواق العالمية. هناك فرصة هائلة لبناء 'حواضن عمل رقمية' توفر البنية التحتية والتدريب التقني المتقدم لربط الموهبة السورية بسوق العمل العالمي المتعطش للعمالة منخفضة التكلفة وعالية الجودة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "SyriTalent-Bridge",
+        "industry_tag": "تأهيل وتصدير الكفاءات الرقمية",
+        "revenue_model": "Commission on Contracts + Workspace Membership + Corporate Training Fees",
+        "action_text": "استعراض خطة ربط المواهب بالأسواق الإقليمية والدولية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق تصدير الخدمات (0-15 شهر)",
+      "subtitle": "تحويل العقول السورية إلى قوة تصديرية رقمية",
+      "phases": [
+        {
+          "title": "تأسيس مراكز العمل المستقلة (Smart Hubs)",
+          "description": "تجهيز مساحات عمل مزودة بطاقة شمسية دائمة وإنترنت فضائي (Starlink أو بدائل) لضمان استمرارية العمل بنسبة 100% تحت أي ظرف.",
+          "icon": "desktop-computer",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "أكاديمية الصقل التقني واللغوي",
+          "description": "إطلاق برامج تدريبية مكثفة (Bootcamps) تركز على المهارات الأكثر طلباً (برمجة، تحليل بيانات، تصميم) مع التركيز على مهارات التواصل واللغة الإنجليزية.",
+          "icon": "academic-cap",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة الدفع والربط القانوني",
+          "description": "توفير نظام مالي يضمن استلام الرواتب بالعملات الصعبة وتوزيعها محلياً بطرق قانونية وميسرة، لضمان استبقاء الكفاءات داخل البلاد.",
+          "icon": "link",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "1100+ (Graduate Statistics & Global Outsourcing Rates)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "غياب بيئة العمل المستقرة (كهرباء وإنترنت) التي تطلبها الشركات العالمية.",
+        "صعوبة التحويلات المالية الدولية المباشرة نتيجة العقوبات والقيود المصرفية.",
+        "الفجوة بين المناهج الجامعية التقليدية ومتطلبات سوق العمل الحر العالمي.",
+        "غياب منصة موحدة تضمن جودة المخرج السوري أمام المشغل الأجنبي."
+      ],
+      "recommended_tech_stack": [
+        "LMS (Learning Management System)",
+        "Satellite Internet Solutions",
+        "Blockchain for Payment Tracking",
+        "AI-based Skill Assessment Tools",
+        "Project Management Collaborative Platforms"
+      ],
+      "main_risk_index": "الاستقرار الأمني والتقني؛ نجاح المشروع يعتمد على القدرة على توفير 'جزيرة تقنية' مستقرة تماماً وسط بيئة تعاني من اضطراب الخدمات الأساسية."
+    }
+  }
+}

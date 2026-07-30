@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-AFR-2026-WAT05",
+      "status_label": "تحليل فجوة الأمن المائي واستدامة الآبار",
+      "category_tag": "المياه (WaterTech / Geospatial AI)",
+      "business_model": "Consulting Fees + Data Licensing to Gov/NGOs + Hardware Sales",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Water Resources",
+      "Satellite Analytics",
+      "Sustainability"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Mauritania", "flag": "🇲🇷" },
+        { "name": "Sudan", "flag": "🇸🇩" },
+        { "name": "Yemen", "flag": "🇾🇪" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "الإدارة الذكية والخرائطية للمياه الجوفية",
+      "problem_statement": "يتم حفر الآبار في موريتانيا واليمن بشكل عشوائي، مما يؤدي لفشل 40% من عمليات الحفر أو نضوب الآبار بسرعة. غياب الخرائط التنبؤية للأحواض المائية يعرض الأمن الغذائي للخطر. هناك فجوة لمنصة تحلل بيانات الجاذبية والأقمار الصناعية لتحديد مواقع المياه الجوفية بدقة 90%."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Hydro-Ayn",
+        "industry_tag": "استخبارات الموارد المائية",
+        "revenue_model": "Pre-drilling Survey Fees + Long-term Aquifer Monitoring + Gov Data Subscriptions",
+        "action_text": "استعراض تقنية المسح الفضائي لتحديد الآبار الناجحة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق السيادة المائية (0-24 شهر)",
+      "subtitle": "رؤية الكنوز المخفية تحت الأرض",
+      "phases": [
+        {
+          "title": "تحليل البيانات الجيوفيزيائية الضخمة",
+          "description": "دمج صور الأقمار الصناعية (GRACE) مع البيانات الزلزالية التاريخية لإنشاء نموذج ثلاثي الأبعاد للأحواض المائية الجوفية.",
+          "icon": "globe",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تطوير محرك التنبؤ بالاستدامة",
+          "description": "استخدام الذكاء الاصطناعي للتنبؤ بمعدلات تجدد المياه الجوفية بناءً على أنماط الأمطار وتغير المناخ.",
+          "icon": "trending-up",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نشر حساسات الرصد اللحظي",
+          "description": "تزويد الآبار القائمة بحساسات IoT رخيصة الثمن لمراقبة مستوى المياه وجودتها لحظياً لمنع السحب الجائر.",
+          "icon": "status-online",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.3,
+      "competitive_moat": 9.7,
+      "data_points_analyzed": "Satellite Gravity Anomaly Data & Geological Surveys"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة الباهظة للمسح الجيولوجي التقليدي على الأرض.",
+        "نقص الكوادر القادرة على معالجة البيانات الجيومكانية المعقدة.",
+        "غياب التنسيق بين الجهات المانحة والمزارعين المحليين.",
+        "التقلبات الحادة في معدلات الأمطار نتيجة التغير المناخي."
+      ],
+      "recommended_tech_stack": [
+        "GRACE Mission Satellite Data",
+        "Convolutional Neural Networks (CNN) for Imaging",
+        "IoT Pressure & Salinity Sensors",
+        "QGIS / ArcGIS Integration",
+        "Machine Learning for Aquifer Modeling"
+      ],
+      "main_risk_index": "دقة البيانات التاريخية؛ بعض البيانات الجيولوجية القديمة قد تكون غير دقيقة، مما يتطلب 'معايرة' ميدانية مستمرة للنماذج."
+    }
+  }
+}

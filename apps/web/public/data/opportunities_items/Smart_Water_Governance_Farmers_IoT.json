@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-WAT04",
+      "status_label": "تحليل فجوة استدامة الموارد المائية الزراعية",
+      "category_tag": "AgriTech / WaterTech / IoT",
+      "business_model": "Hardware Sales + Data Insights Subscription + Yield Share",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Agriculture",
+      "Water Management",
+      "IoT Implementation"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Ghouta (Damascus)", "flag": "🇸🇾" },
+        { "name": "Hama & Homs Plains", "flag": "🇸🇾" },
+        { "name": "Al-Jazira Region", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "إدارة المياه الذكية للمزارعين السوريين (Smart-Saki)",
+      "problem_statement": "تعاني الزراعة في سوريا من جفاف حاد واستنزاف جائر للمياه الجوفية نتيجة الري العشوائي بالغمر. المزارعون يفتقرون للكهرباء لتشغيل المضخات ويهدرون المياه القليلة المتاحة. الفجوة هي نظام ري ذكي منخفض التكلفة يعتمد على حساسات IoT رخيصة لتوفير 50% من المياه وزيادة الإنتاجية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Saki-Souri",
+        "industry_tag": "الري الذكي منخفض البنية التحتية",
+        "revenue_model": "Sale of Low-cost Sensor Kits + SMS-based Advice Subscription + Carbon Credits for Water Saving",
+        "action_text": "استعراض تقنية توفير المياه للمزارع السوري الصغير"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الرخاء المائي (0-24 شهر)",
+      "subtitle": "كل قطرة ماء تصنع ثمرة",
+      "phases": [
+        {
+          "title": "نشر حساسات الرطوبة الأرضية",
+          "description": "تطوير حساسات تربة محلية الصنع (رخيصة الثمن) ترتبط بشبكة GSM لإرسال بيانات رطوبة التربة للمزارع.",
+          "icon": "chip",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تفعيل نظام التنبيه الذكي (SMS Insights)",
+          "description": "إرسال نصائح للمزارعين عبر الـ SMS (لعدم توفر إنترنت دائم) حول التوقيت المثالي للري بناءً على رطوبة التربة وتوقعات الطقس.",
+          "icon": "chat",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التحول للري بالتنقيط المؤتمت",
+          "description": "تركيب صمامات كهرومغناطيسية بسيطة تفتح وتغلق آلياً بناءً على حاجة المحصول، مما يقلل هدر المياه والجهد البشري.",
+          "icon": "adjustments",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.1,
+      "competitive_moat": 8.7,
+      "data_points_analyzed": "Groundwater Depletion Rates vs Crop Failure Logs"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لأنظمة الري الذكية المستوردة.",
+        "نقص الكهرباء المستمرة لتشغيل أنظمة التحكم المعقدة.",
+        "ضعف الخبرة التقنية لدى المزارعين التقليديين.",
+        "الاعتماد على نظام الري بالغمر التاريخي الذي يصعب تغييره دون حوافز مالية."
+      ],
+      "recommended_tech_stack": [
+        "LoRaWAN for Rural Connectivity",
+        "Low-cost Soil Moisture Sensors",
+        "Solar-powered IoT Controllers",
+        "SMS Gateway Infrastructure",
+        "Satellite Imagery for Soil Analysis"
+      ],
+      "main_risk_index": "استقرار شبكة الاتصالات الريفية؛ يعتمد المشروع على تغطية الـ GSM؛ أي انقطاع في الشبكة قد يعطل إرسال البيانات والتحكم بالري."
+    }
+  }
+}

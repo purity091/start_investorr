@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-HEALTH-2026-COLD",
+      "status_label": "تحليل استخباري لسلامة سلاسل الإمداد الدوائية",
+      "category_tag": "اللوجستيات الطبية (IoT / Blockchain)",
+      "business_model": "SaaS + Hardware-as-a-Service",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Logistics",
+      "PharmaTech",
+      "Supply Chain Integrity"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt (Export Hub)", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "سلاسل التبريد الذكية لتتبع الأدوية واللقاحات",
+      "problem_statement": "تُفقد مليارات الدولارات سنوياً نتيجة تلف الأدوية واللقاحات الحساسة للحرارة أثناء النقل، حيث تشير التقارير إلى أن 25% من اللقاحات تصل لوجهتها بفعالية منخفضة بسبب تذبذب درجات الحرارة. في المنطقة العربية، تزيد درجات الحرارة المرتفعة من مخاطر هذه السلاسل، وتفتقر الأنظمة الحالية للشفافية اللحظية والقدرة على إثبات سلامة الدواء من المصنع حتى يد المريض."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "ColdTrace-AR",
+        "industry_tag": "تكنولوجيا تتبع الأدوية الحساسة",
+        "revenue_model": "Per-Shipment Fee + Monthly Monitoring Subscription + Compliance Reporting Fees",
+        "action_text": "استعراض نظام التتبع اللحظي وضمان الجودة المعتمد"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق النقل الآمن (0-15 شهر)",
+      "subtitle": "ضمان فعالية الدواء عبر ذكاء البيانات",
+      "phases": [
+        {
+          "title": "نشر حساسات النانو الذكية",
+          "description": "تزويد حاويات الأدوية بحساسات إنترنت الأشياء (IoT) متناهية الصغر تقيس الحرارة، الرطوبة، والاهتزاز، وترسل البيانات لحظياً عبر شبكات 5G.",
+          "icon": "chip",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "توثيق سلاسل الإمداد بالبلوكشين",
+          "description": "بناء سجل رقمي غير قابل للتلاعب يوثق كل مرحلة يمر بها الدواء، مما يوفر 'شهادة جودة رقمية' تطلبها الهيئات التنظيمية والمستشفيات.",
+          "icon": "link",
+          "color_theme": "rose"
+        },
+        {
+          "title": "محرك التنبؤ بالأعطال اللوجستية",
+          "description": "استخدام الذكاء الاصطناعي للتنبؤ بمخاطر التلف قبل وقوعها (مثل التنبؤ بتعطل مبرد شاحنة بناءً على أنماط الأداء) واقتراح مسارات بديلة.",
+          "icon": "exclamation-circle",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 8.8,
+      "data_points_analyzed": "1500+ (Pharma Waste Reports & Logistics KPIs)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد على التسجيل اليدوي لدرجات الحرارة في كثير من مراحل النقل.",
+        "تعدد الأطراف في سلسلة التوريد مما يؤدي لضياع المسؤولية عند وقوع التلف.",
+        "ارتفاع التكلفة الرأسمالية لتجهيز أساطيل النقل بالتقنيات الذكية.",
+        "غياب الربط المباشر بين بيانات النقل والأنظمة الطبية في المستشفيات."
+      ],
+      "recommended_tech_stack": [
+        "IoT Sensors (LPWAN/5G)",
+        "Blockchain (Hyperledger Fabric)",
+        "Cloud Data Warehousing",
+        "Predictive AI Algorithms",
+        "Smart Contract Automation"
+      ],
+      "main_risk_index": "الامتثال التنظيمي؛ يتطلب المشروع مواءمة دقيقة مع شروط 'ممارسات التوزيع الجيد' (GDP) الصادرة عن هيئات الغذاء والدواء المحلية."
+    }
+  }
+}

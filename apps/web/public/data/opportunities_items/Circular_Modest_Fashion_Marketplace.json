@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-FMCG10",
+      "status_label": "تحليل فجوة الموضة المحتشمة المستدامة",
+      "category_tag": "Fashion / Sustainability / Circular-Economy",
+      "business_model": "D2C Luxury Sales + Upcycling Service + Global Export",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Consumer Goods",
+      "Modest Fashion",
+      "Sustainability"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Global Modest Fashion Markets (GCC/Turkey/Indonesia)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Egypt & Morocco (Textile Manufacturing Hubs)",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "أناقة مستدامة: سوق الموضة المحتشمة المعاد تدويرها",
+      "problem_statement": "تعتبر الموضة المحتشمة (Modest Fashion) سوقاً بتريليون دولار، لكنها تساهم في التلوث البيئي عبر ألياف البوليستر غير المستدامة. الفجوة هي براند فاخر للموضة المحتشمة يستخدم أليافاً مبتكرة معاد تدويرها (مثل تدوير المنسوجات القديمة أو ألياف النخيل) مع توثيق البصمة البيئية لكل قطعة عبر البلوكشين."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Layan-Circular-Modesty",
+        "industry_tag": "الموضة الأخلاقية وتكنولوجيا المنسوجات المستدامة",
+        "revenue_model": "Premium Clothing Sales + Upcycling-as-a-Service for Clients + Wholesale to Global Luxury Retailers",
+        "action_text": "استعراض علامة الموضة العربية التي ستحتل منصات العالم البيئية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الموضة النظيفة (0-48 شهر)",
+      "subtitle": "الحشمة، الأناقة، وحماية كوكب الأرض",
+      "phases": [
+        {
+          "title": "تطوير 'الأقمشة الخضراء' (Eco-Fabric R&D)",
+          "description": "عقد شراكات مع مصانع تدوير لإنتاج أقمشة فاخرة من مخلفات المنسوجات أو البلاستيك، بملامس تناسب العبايات والفساتين الراقية.",
+          "icon": "recycle",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "استوديو التصميم الرقمي والتوثيق",
+          "description": "استخدام الـ AI لتصميم قطع تقلل هدر القماش، وربط كل قطعة بشريحة NFC تظهر تاريخ صنعها وأثرها البيئي الإيجابي.",
+          "icon": "link",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة التدوير والخدمات (Circular-App)",
+          "description": "إطلاق ميزة تتيح للعميلات إعادة بيع قطعهن المستعملة أو طلب 'تحديث' (Upcycle) لها من قبل مصممي البراند لضمان حياة أطول للملابس.",
+          "icon": "refresh",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Modest Fashion Market Growth vs Increasing Consumer Demand for Sustainable Brands"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية للألياف المعاد تدويرها مقارنة بالأقمشة التجارية الرخيصة.",
+        "النظرة النمطية بأن الملابس المعاد تدويرها أقل فخامة (يتم حلها بالتصميم الراقي).",
+        "صعوبة التحكم في جودة الألوان والملمس في الأقمشة المعاد تدويرها على نطاق واسع.",
+        "الحاجة لسلسلة توريد شفافة جداً وموثقة لإثبات 'الاستدامة' فعلياً."
+      ],
+      "recommended_tech_stack": [
+        "Recycled Textile Processing Tech",
+        "Blockchain for Supply Chain Transparency",
+        "NFC-enabled Garment Tracking",
+        "AI for Pattern Optimization (Zero-waste)",
+        "3D Digital Fashion Prototyping"
+      ],
+      "main_risk_index": "تغير الصيحات؛ سوق الموضة متقلب جداً، مما يتطلب توازناً بين 'التصاميم الخالدة' (Timeless) وسرعة الاستجابة للصيحات العالمية المستدامة."
+    }
+  }
+}

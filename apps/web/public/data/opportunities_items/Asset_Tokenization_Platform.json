@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-FIN-2026-TOKEN-REAL",
+      "status_label": "تحليل استخباري لدمقرطة الاستثمار العقاري",
+      "category_tag": "التقنية المالية (Blockchain / Real Estate Tech)",
+      "business_model": "Marketplace + Asset Management Fee",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Web3",
+      "Tokenization",
+      "Alternative Assets"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Dubai", "flag": "🇦🇪" },
+        { "name": "Riyadh", "flag": "🇸🇦" },
+        { "name": "Cairo", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "رقمنة وتجزئة ملكية الأصول العقارية والاستثمارية",
+      "problem_statement": "الاستثمار في العقارات التجارية الكبرى أو المشاريع الضخمة مقتصر على 'نادي الـ 1%' من الأثرياء نتيجة الحواجز المالية العالية. العقار أصل غير سائل، والشباب العربي يبحث عن وسيلة لامتلاك حصص في أصول مدرة للدخل بمبالغ صغيرة (تبدأ من 100 دولار)، مع القدرة على بيع حصصهم بضغطة زر."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sahm-Digital",
+        "industry_tag": "منصة تداول الأصول المرمزة",
+        "revenue_model": "Issuance Fee (for owners) + Secondary Market Trading Fee + AUM Fees",
+        "action_text": "استعراض كيف يمكن لـ 1000 مستثمر امتلاك برج تجاري واحد"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق تسييل الأصول (0-18 شهر)",
+      "subtitle": "حول العقارات الثقيلة إلى أصول رقمية سائلة",
+      "phases": [
+        {
+          "title": "هيكلة الأصول قانونياً (SPV setup)",
+          "description": "تأسيس كيانات قانونية خاصة لكل أصل عقاري، وتحويل ملكيتها إلى حصص رقمية (Tokens) متوافقة مع القوانين المحلية والشرعية.",
+          "icon": "document-text",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "إطلاق منصة الاكتتاب والتداول (Secondary Market)",
+          "description": "تطوير تطبيق يتيح للمستخدمين تصفح الأصول، رؤية العوائد المتوقعة، وشراء الحصص فوراً باستخدام العملات المستقرة أو النقد الرقمي.",
+          "icon": "refresh",
+          "color_theme": "rose"
+        },
+        {
+          "title": "توزيع العوائد الآلي (Smart Dividends)",
+          "description": "استخدام العقود الذكية لتوزيع الأرباح (الإيجارات) تلقائياً على محافظ المستثمرين بنسبة ملكيتهم، دون تدخل بشري.",
+          "icon": "cash",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.3,
+      "data_points_analyzed": "1M+ (Real Estate Transactions & Gen-Z Investment Trends)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "غياب الأطر التنظيمية لتداول الأوراق المالية الرقمية (تم تحديثها في دبي والرياض مؤخراً).",
+        "الحاجة لثقافة استثمارية جديدة تؤمن بامتلاك 'جزء' من الأصل بدلاً من 'كله'.",
+        "تعقيد إجراءات نقل الملكية العقارية التقليدية وبطؤها الشديد.",
+        "مخاوف السيولة في الأسواق الثانوية الصغيرة."
+      ],
+      "recommended_tech_stack": [
+        "Ethereum L2 (Polygon/Arbitrum) for Scalability",
+        "ERC-3643 (Compliance Token Standard)",
+        "Smart Contracts for Asset Governance",
+        "Interoperable Custody Solutions",
+        "Legal-Tech automation for SPVs"
+      ],
+      "main_risk_index": "مخاطر تقييم الأصول؛ الاعتماد على مقيمين عقاريين مستقلين وموثوقين هو المفتاح لمنع تضخم أسعار الرموز وضمان حقوق المستثمرين."
+    }
+  }
+}

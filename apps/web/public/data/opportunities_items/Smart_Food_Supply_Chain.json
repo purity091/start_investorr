@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-FOOD-2026-AR",
+      "status_label": "تحليل استخباري للأمن الغذائي السيادي",
+      "category_tag": "الخدمات اللوجستية (FoodTech / Supply Chain)",
+      "business_model": "B2B + SaaS",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Logistics",
+      "Food Security",
+      "Blockchain Tracking"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 6
+    },
+    "core_content": {
+      "title": "سلاسل الإمداد الذكية لتعزيز الأمن الغذائي",
+      "problem_statement": "تعتمد المنطقة العربية بشكل حرج على استيراد الغذاء، ومع ذلك يُفقد ما يقرب من 30% من المحاصيل والسلع المستوردة نتيجة سوء التخزين وضعف التنسيق اللوجستي. تفتقر سلاسل الإمداد الحالية للشفافية والقدرة على التنبؤ بالأزمات، مما يرفع الأسعار ويهدد الاستقرار الغذائي في أوقات الاضطرابات العالمية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "FoodFlow",
+        "industry_tag": "اللوجستيات الغذائية الرقمية",
+        "revenue_model": "Transaction Fee + Supply Chain Management SaaS",
+        "action_text": "عرض نظام التتبع والإنذار المبكر لنقص السلع"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق السيادة الغذائية (0-15 شهر)",
+      "subtitle": "تأمين الغذاء عبر ذكاء البيانات",
+      "phases": [
+        {
+          "title": "رقمنة المخزون الاستراتيجي",
+          "description": "ربط الصوامع والمستودعات الكبرى بنظام مركزي لمراقبة مستويات المخزون وجودته لحظياً باستخدام الحساسات الذكية.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التنبؤ بالطلب والأسعار",
+          "description": "استخدام الذكاء الاصطناعي لتحليل تقلبات السوق العالمية وتوقع فترات نقص السلع لتأمين العقود الاستباقية.",
+          "icon": "trending-up",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة الربط المباشر مع المزارعين",
+          "description": "تقليل الوسطاء عبر ربط المنتجين المحليين بمراكز التوزيع الكبرى مباشرة لضمان نضارة المنتج وتقليل الهدر اللوجستي.",
+          "icon": "shopping-cart",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 8.5,
+      "data_points_analyzed": "4000+ (Import Dependencies & Logistics Waste Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تجزئة قطاع اللوجستيات بين صغار الموردين والشركات الكبرى.",
+        "ضعف البنية التحتية التكنولوجية في مراكز التخزين التقليدية.",
+        "الحاجة لبيانات دقيقة من الموانئ والجهات الجمركية بشكل لحظي.",
+        "مقاومة التغيير في العقلية التشغيلية لوسطاء تجارة الغذاء."
+      ],
+      "recommended_tech_stack": [
+        "Blockchain for Traceability",
+        "IoT Temperature & Humidity Sensors",
+        "AI Predictive Analytics",
+        "Cloud Logistics Platforms",
+        "Dynamic Routing Algorithms"
+      ],
+      "main_risk_index": "المخاطر الجيوسياسية؛ تعطل طرق التجارة العالمية يمثل التحدي الأكبر، مما يتطلب استثمارات في بدائل التخزين المحلي طويل الأمد."
+    }
+  }
+}

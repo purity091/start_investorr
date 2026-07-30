@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ECOM1",
+      "status_label": "تحليل أزمة التوصيل في الميل الأخير",
+      "category_tag": "E-commerce Logistics (Last-Mile Delivery)",
+      "business_model": "Logistics Platform + Delivery-as-a-Service + API",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "E-commerce",
+      "Logistics",
+      "Last Mile"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "UAE", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "حلول ذكية لتوصيل الميل الأخير في التجارة الإلكترونية",
+      "problem_statement": "يُعد الميل الأخير (Last Mile) أضعف حلقة في التجارة الإلكترونية في العالم العربي، حيث تصل نسب فشل التوصيل إلى 20–35% في بعض الأسواق. السبب يعود إلى عناوين غير دقيقة، ضعف التنسيق، وسوء إدارة الأساطيل. هذا يؤدي إلى ارتفاع التكاليف التشغيلية بنسبة تصل إلى 40% بسبب إعادة المحاولات والمرتجعات، إضافة إلى تدهور تجربة العميل."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "RouteX",
+        "industry_tag": "منصات التوصيل الذكي",
+        "revenue_model": "Delivery Fees + SaaS Subscription + API for Merchants",
+        "action_text": "استعراض تقليل فشل التوصيل وتحسين الكفاءة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة تحسين التوصيل (0-12 شهر)",
+      "subtitle": "توصيل دقيق وفعال",
+      "phases": [
+        {
+          "title": "بناء نظام عناوين ذكي",
+          "description": "استخدام GPS + User Input لإنشاء عناوين دقيقة.",
+          "icon": "map",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تحسين المسارات باستخدام AI",
+          "description": "تحديد أفضل طرق التوصيل وتقليل الزمن.",
+          "icon": "cpu",
+          "color_theme": "rose"
+        },
+        {
+          "title": "ربط المتاجر ومنصات التجارة",
+          "description": "توفير API للتكامل مع المتاجر الإلكترونية.",
+          "icon": "link",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "2600+ (Delivery Failure & Cost Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "عدم وجود نظام عناوين موحد.",
+        "تجزئة شركات التوصيل.",
+        "ضعف استخدام التكنولوجيا.",
+        "الاعتماد على طرق تقليدية."
+      ],
+      "recommended_tech_stack": [
+        "Route Optimization AI",
+        "Geolocation Systems",
+        "Mobile Apps",
+        "Fleet Management Systems",
+        "Real-time Tracking"
+      ],
+      "main_risk_index": "التنفيذ الميداني؛ يحتاج إدارة تشغيل قوية على أرض الواقع."
+    }
+  }
+}

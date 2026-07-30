@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-WATER-2026-AR",
+      "status_label": "تحليل استخباري للأمن المائي",
+      "category_tag": "البيئة (WaterTech / Sustainability)",
+      "business_model": "B2G + B2B",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Sustainability",
+      "Clean Energy",
+      "Resource Management"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Jordan", "flag": "🇯🇴" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "إدارة استدامة المياه والتحلية الخضراء",
+      "problem_statement": "تعاني المنطقة العربية من إجهاد مائي حاد، حيث تعتمد دول الخليج على تحلية المياه المستهلكة للطاقة بشكل كثيف، بينما تعاني دول مثل الأردن ومصر من نقص الموارد الطبيعية وهدر الشبكات. هناك فجوة هائلة في تقنيات التحلية باستخدام الطاقة المتجددة وحلول تقليل الفواقد في الشبكات الحضرية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "HydroEco",
+        "industry_tag": "تحلية المياه بالطاقة المتجددة",
+        "revenue_model": "Water Purchase Agreements (WPA) + Maintenance SaaS",
+        "action_text": "عرض تقنيات التحلية منخفضة الكربون"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التنفيذ المائي (0-18 شهر)",
+      "subtitle": "تحويل التحدي المائي إلى فرصة اقتصادية",
+      "phases": [
+        {
+          "title": "تطوير وحدات التحلية المتنقلة",
+          "description": "إطلاق وحدات تحلية تعمل بالطاقة الشمسية لخدمة المناطق البعيدة والمشاريع الزراعية.",
+          "icon": "lightning-bolt",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "الرقابة الرقمية على الشبكات",
+          "description": "نشر حساسات IoT لاكتشاف التسريبات في شبكات المدن لحظياً، مما يوفر ملايين الأمتار المكعبة.",
+          "icon": "status-online",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكنولوجيا إعادة تدوير المياه",
+          "description": "بناء أنظمة متطورة لمعالجة مياه الصرف الرمادية لاستخدامها في التشجير والصناعة.",
+          "icon": "refresh",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 8.8,
+      "data_points_analyzed": "3000+ (Global Water Scarcity Maps)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ارتفاع تكلفة الطاقة اللازمة لعمليات التحلية التقليدية.",
+        "تهالك البنية التحتية لشبكات المياه في المدن القديمة.",
+        "غياب الابتكار المحلي في أغشية التناضح العكسي (Membranes).",
+        "ضعف الاستثمار الخاص في قطاع كان يُدار تقليدياً من الحكومات."
+      ],
+      "recommended_tech_stack": [
+        "Solar-Thermal Desalination",
+        "IoT Smart Meters",
+        "AI Leak Detection Algorithms",
+        "Nanotechnology Filters",
+        "Digital Twin for Water Grids"
+      ],
+      "main_risk_index": "مخاطر التشغيل؛ تتطلب هذه المشاريع استثمارات رأسمالية ضخمة وطويلة الأجل مع ضمانات حكومية للاستمرارية."
+    }
+  }
+}

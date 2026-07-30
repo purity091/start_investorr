@@ -1,0 +1,81 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-IND4",
+      "status_label": "تحليل هشاشة سلاسل التوريد الصناعية والتوطين",
+      "category_tag": "Industrial Supply Chain (Localization / Resilience)",
+      "business_model": "B2B Supply Platform + Supplier Intelligence SaaS + Procurement-as-a-Service",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Industry",
+      "Supply Chain",
+      "Localization"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Morocco", "flag": "🇲🇦" },
+        { "name": "UAE", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 9
+    },
+    "core_content": {
+      "title": "منصة توطين وربط سلاسل التوريد الصناعية داخل المنطقة",
+      "problem_statement": "تعاني المصانع العربية من هشاشة واضحة في سلاسل التوريد، خصوصاً في المكونات الصناعية، قطع الغيار، المواد الوسيطة، والمعدات المتخصصة. أي اضطراب في الشحن العالمي أو أسعار العملات أو الموانئ ينعكس مباشرة على توقف الإنتاج، ارتفاع التكلفة، وتأخير تسليم العقود. المشكلة ليست أن كل شيء يجب أن يُصنع محلياً، بل أن الشركات لا تمتلك رؤية دقيقة حول البدائل الإقليمية، الموردين المؤهلين، مستويات المخاطر، وأفضل خيارات التوريد. مع انتقال الاقتصاد العالمي من نموذج الكفاءة المطلقة إلى نموذج المرونة والتنوع، تظهر فرصة ضخمة لبناء منصة B2B تربط المصانع بالموردين المحليين والإقليميين وتوفر طبقة بيانات موثوقة للمشتريات الصناعية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "SupplyForge MENA",
+        "industry_tag": "منصات سلاسل التوريد الصناعية والتوطين",
+        "revenue_model": "Supplier Subscription + Transaction Commission + Enterprise Procurement Intelligence",
+        "action_text": "استعراض خريطة بدائل توريد محلية وإقليمية تقلل مخاطر توقف الإنتاج"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة مرونة التوريد الصناعي (0-18 شهر)",
+      "subtitle": "من اعتماد خارجي هش إلى شبكة توريد إقليمية ذكية",
+      "phases": [
+        {
+          "title": "بناء قاعدة بيانات الموردين الصناعيين",
+          "description": "تجميع وتصنيف الموردين المحليين والإقليميين حسب المواد، الطاقة الإنتاجية، الشهادات، الأسعار، زمن التسليم، وتاريخ الأداء."
+        },
+        {
+          "title": "محرك تقييم المخاطر والتطابق",
+          "description": "تطوير نظام يطابق احتياجات المصنع مع أفضل الموردين بناءً على السعر، الجودة، القرب الجغرافي، الاعتمادية، ومخاطر الدولة أو الشحن."
+        },
+        {
+          "title": "تفعيل المشتريات والتعاقدات",
+          "description": "إتاحة طلبات عروض أسعار، عقود توريد طويلة الأجل، وتمويل مشتريات صناعية بالتعاون مع البنوك وشركات التأمين."
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "4200+ (Supplier Risk, Lead Time, Import Dependency, Procurement Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "المشتريات الصناعية في كثير من الشركات ما زالت تعتمد على علاقات شخصية وقوائم موردين قديمة.",
+        "غياب قواعد بيانات موثوقة عن الموردين المحليين وقدراتهم الفعلية.",
+        "صعوبة التحقق من جودة الموردين والتزامهم بالمعايير الصناعية.",
+        "تفضيل الاستيراد لأنه أسرع ظاهرياً، رغم أنه أعلى مخاطرة عند الأزمات.",
+        "ضعف التكامل بين بيانات المشتريات، المخزون، الإنتاج، والمالية."
+      ],
+      "recommended_tech_stack": [
+        "B2B Marketplace Infrastructure",
+        "Supplier Risk Scoring",
+        "Procurement Management System",
+        "ERP Integrations",
+        "Trade Data Analytics",
+        "AI Matching Engine",
+        "Contract & Compliance Workflow"
+      ],
+      "main_risk_index": "جودة الموردين؛ نجاح المنصة يعتمد على التحقق الصارم من الموردين وليس مجرد إدراجهم. بدون طبقة اعتماد وفحص جودة، ستصبح المنصة Marketplace عادي غير موثوق للصناعة."
+    }
+  }
+}

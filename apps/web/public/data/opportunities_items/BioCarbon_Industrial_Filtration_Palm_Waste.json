@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-IND14",
+      "status_label": "تحليل فجوة الكربون المنشط والصناعات الترشيحية",
+      "category_tag": "Circular Economy / Industrial Chemicals / WaterTech",
+      "business_model": "B2B Sales to Industries + Gov Water Contracts + Export of High-value Bio-Carbon",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Manufacturing",
+      "Agriculture",
+      "Water Treatment"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Palm Waste Resource)", "flag": "🇸🇦" },
+        { "name": "Iraq (Industrial Potential)", "flag": "🇮🇶" },
+        { "name": "UAE (Global Trade Hub)", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "كربون النخيل النشط: تحويل المخلفات لمرشحات صناعية",
+      "problem_statement": "تستورد الدول العربية كميات هائلة من الكربون المنشط (Activated Carbon) لتنقية المياه، تكرير الزيوت، وصناعات الأدوية. في المقابل، تُحرق ملايين الأطنان من جذوع وسعف النخيل. الفجوة هي مصنع متطور يستخدم الكربنة الحرارية (Pyrolysis) لتحويل مخلفات النخيل إلى كربون منشط عالي الجودة يفوق المستورد في الكفاءة وبنصف التكلفة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Karb-Nakhla",
+        "industry_tag": "الصناعات الكيميائية الحيوية المتقدمة",
+        "revenue_model": "Sales per Ton (Industrial Grade) + Specialized Filters Production + Carbon Sequestration Credits",
+        "action_text": "استعراض خطة إنتاج الكربون المنشط من مخلفات النخيل العربي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الكربون الأخضر (0-36 شهر)",
+      "subtitle": "تحويل المخلفات الزراعية إلى ذهب أسود صناعي",
+      "phases": [
+        {
+          "title": "تطوير تكنولوجيا التنشيط الكيميائي والفيزيائي",
+          "description": "بناء وحدات معالجة حرارية تزيد من مسامية الكربون الناتج من النخيل ليكون قادراً على امتصاص الملوثات الدقيقة من المياه والهواء.",
+          "icon": "beaker",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "خط إنتاج المرشحات التخصصية (Filtration Units)",
+          "description": "تصنيع فلاتر جاهزة لمحطات تحلية المياه ومصانع الأغذية تعتمد بالكامل على كربون النخيل المحلي.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التوسع لأسواق التصدير العالمية",
+          "description": "الحصول على شهادات الجودة الدولية لتصدير الكربون المنشط العربي كبديل مستدام وصديق للبيئة للمنافسة في السوق الأوروبي.",
+          "icon": "globe",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Activated Carbon Import Bill vs Palm Waste Tonnage in MENA"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لإنشاء وحدات الكربنة والتحكم في الانبعاثات الناتجة عنها.",
+        "نقص الخبرة الفنية في 'تخصيص' جودة الكربون لكل صناعة (مياه، غاز، دواء).",
+        "الاعتماد على الموردين التقليديين من دول شرق آسيا.",
+        "صعوبة لوجستيات جمع سعف النخيل من المزارع المتباعدة."
+      ],
+      "recommended_tech_stack": [
+        "Advanced Pyrolysis Kilns",
+        "Chemical Activation Reactors",
+        "Specific Surface Area (BET) Analyzers",
+        "IoT for Process Heat Control",
+        "Automated Quality Assurance Sensors"
+      ],
+      "main_risk_index": "جودة المنتج النهائي؛ الحفاظ على درجة نقاء عالية وثبات في المسامية يتطلب دقة كيميائية فائقة وإشرافاً مخبرياً مستمراً."
+    }
+  }
+}

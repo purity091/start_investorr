@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-DEEP-2026-SPA09",
+      "status_label": "تحليل فجوة الاستخبارات المكانية التجارية",
+      "category_tag": "SpaceTech / PropTech / Big Data",
+      "business_model": "Data Subscriptions (API) + Custom Predictive Reports + Land Valuation Tools",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Space",
+      "Real Estate",
+      "Alternative Data"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Urban Expansion)", "flag": "🇸🇦" },
+        { "name": "Egypt (New Urban Communities)", "flag": "🇪🇬" },
+        { "name": "UAE (Global Investment Hub)", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "استخبارات الفضاء العقارية: التنبؤ بالأسعار من السماء",
+      "problem_statement": "يعتمد التقييم العقاري والاستثمار في الأراضي حالياً على بيانات تاريخية وبشرية بطيئة وغير دقيقة. المستثمرون يفتقرون للرؤية اللحظية لسرعة الإنجاز، الكثافة السكانية الحقيقية، والنمو العمراني في المناطق الجديدة. الفجوة هي استخدام صور الأقمار الصناعية التجارية لتحليل 'النشاط الاقتصادي الملموس' من الفضاء للتنبؤ بارتفاع أسعار الأراضي قبل وقوعه."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Ayn-Space",
+        "industry_tag": "البيانات البديلة للاستثمار العقاري",
+        "revenue_model": "Monthly License for Developers & Banks + Transaction-based Valuation Fees + Gov Planning Data",
+        "action_text": "استعراض أول محرك تنبؤ عقاري يعتمد على الأقمار الصناعية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الرؤية الكونية (0-18 شهر)",
+      "subtitle": "بيانات من السماء لقرارات على الأرض",
+      "phases": [
+        {
+          "title": "دمج صور الأقمار الصناعية (Daily Revisit)",
+          "description": "التعاقد مع مزودي صور الفضاء للحصول على تحديثات يومية للمناطق العمرانية المستهدفة بدقة تصل لـ 30 سم.",
+          "icon": "globe",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "أتمتة تحليل الإنجاز الإنشائي (Computer Vision)",
+          "description": "استخدام الـ AI لعد الرافعات، شاحنات الخرسانة، ومساحات الحفر تلقائياً لتقييم سرعة تنفيذ المشاريع الكبرى.",
+          "icon": "camera",
+          "color_theme": "rose"
+        },
+        {
+          "title": "محرك التقييم التنبئي (Predictive Alpha)",
+          "description": "ربط بيانات النمو العمراني المرصودة من الفضاء مع خرائط الطلب والأسعار التاريخية لتوليد 'مؤشر نمو مستقبلي' لكل منطقة.",
+          "icon": "trending-up",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Daily Construction Activity vs Real Estate Price Fluctuations"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لصور الأقمار الصناعية عالية الدقة في الماضي.",
+        "صعوبة معالجة البيانات الضخمة (Big Data) القادمة من الفضاء آلياً.",
+        "نقص الربط بين البيانات المكانية والبيانات المالية العقارية المحلية.",
+        "الاعتماد التقليدي على التقييم الميداني البشري 'البطيء'."
+      ],
+      "recommended_tech_stack": [
+        "Change Detection Algorithms",
+        "Hyper-spectral Satellite Imaging",
+        "GPU-accelerated Computer Vision",
+        "GIS Data Fusion",
+        "Machine Learning (XGBoost) for Pricing"
+      ],
+      "main_risk_index": "المخاطر التنظيمية؛ القيود على استخدام البيانات المكانية عالية الدقة في بعض الدول قد تتطلب تراخيص أمنية خاصة."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-EDAI5",
+      "status_label": "تحليل فجوة جودة المحتوى التعليمي العربي",
+      "category_tag": "المحتوى التعليمي (EdTech Content)",
+      "business_model": "Content Licensing + Subscription + API Distribution",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Education",
+      "Content Creation",
+      "Arabic Learning"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Jordan", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "إنتاج محتوى تعليمي عربي عالي الجودة بمعايير عالمية",
+      "problem_statement": "المحتوى التعليمي العربي الرقمي يعاني من ضعف كبير في الجودة مقارنة بالمحتوى الإنجليزي (مثل Khan Academy). معظم المحتوى العربي إما مترجم بشكل ضعيف أو غير متوافق مع المناهج المحلية، مما يقلل من فعاليته التعليمية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "ArabLearn",
+        "industry_tag": "إنتاج وتوزيع المحتوى التعليمي",
+        "revenue_model": "Licensing to Platforms + Subscription + Government Contracts",
+        "action_text": "استعراض محتوى عربي بمستوى عالمي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة إنتاج المحتوى (0-15 شهر)",
+      "subtitle": "بناء Khan Academy عربي",
+      "phases": [
+        {
+          "title": "تحديد المعايير التعليمية",
+          "description": "وضع معايير جودة صارمة للمحتوى التعليمي العربي.",
+          "icon": "check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "إنتاج محتوى عالي الجودة",
+          "description": "إنشاء فيديوهات ومواد تعليمية احترافية باستخدام أفضل الممارسات العالمية.",
+          "icon": "video",
+          "color_theme": "rose"
+        },
+        {
+          "title": "توزيع المحتوى عبر المنصات",
+          "description": "توفير المحتوى عبر API ومنصات تعليمية مختلفة.",
+          "icon": "share",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.3,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "1700+ (Content Quality Benchmarks)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "قلة الاستثمار في المحتوى العربي.",
+        "نقص الخبرات الإنتاجية التعليمية.",
+        "ضعف نماذج الربح في المحتوى التعليمي.",
+        "الاعتماد على الترجمة بدلاً من الإنتاج الأصلي."
+      ],
+      "recommended_tech_stack": [
+        "AI Content Generation (Arabic)",
+        "Video Production Pipelines",
+        "Content Delivery Networks (CDN)",
+        "Learning Content APIs",
+        "Interactive Content Tools"
+      ],
+      "main_risk_index": "تكلفة الإنتاج؛ يتطلب المشروع استثمار أولي كبير قبل تحقيق العوائد."
+    }
+  }
+}

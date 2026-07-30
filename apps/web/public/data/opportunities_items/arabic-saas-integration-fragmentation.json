@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-TECH8",
+      "status_label": "تحليل تشتت الأنظمة البرمجية داخل الشركات",
+      "category_tag": "Integration Platforms (iPaaS / SaaS Integration)",
+      "business_model": "SaaS + API + Integration-as-a-Service",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Technology",
+      "SaaS",
+      "Integration"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Bahrain", "flag": "🇧🇭" }
+      ],
+      "additional_regions_count": 8
+    },
+    "core_content": {
+      "title": "منصة توحيد وربط الأنظمة البرمجية داخل الشركات",
+      "problem_statement": "تعاني الشركات من استخدام عدة أنظمة SaaS غير مترابطة (CRM، ERP، Accounting)، مما يؤدي إلى تكرار العمل وفقدان البيانات. لا توجد منصات تكامل (iPaaS) مخصصة للسوق العربي تدعم الأنظمة المحلية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "IntegrateX",
+        "industry_tag": "SaaS Integration Platforms",
+        "revenue_model": "Subscription + API Usage",
+        "action_text": "استعراض ربط الأنظمة في منصة واحدة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التكامل (0-12 شهر)",
+      "subtitle": "نظام واحد لكل شيء",
+      "phases": [
+        {
+          "title": "بناء Connectors للأنظمة",
+          "description": "تطوير تكامل مع الأنظمة الشائعة.",
+          "icon": "plug",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك Workflow",
+          "description": "إنشاء تدفقات عمل بين الأنظمة.",
+          "icon": "flow",
+          "color_theme": "rose"
+        },
+        {
+          "title": "واجهة تحكم موحدة",
+          "description": "لوحة تحكم لإدارة التكامل.",
+          "icon": "dashboard",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.3,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "1900+ (SaaS Usage Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تعدد الأنظمة.",
+        "نقص حلول التكامل المحلية.",
+        "تعقيد APIs.",
+        "ارتفاع تكلفة الحلول العالمية."
+      ],
+      "recommended_tech_stack": [
+        "iPaaS Platforms",
+        "API Gateways",
+        "Workflow Engines",
+        "Cloud Infrastructure",
+        "Integration SDKs"
+      ],
+      "main_risk_index": "التوافق؛ يحتاج دعم عدد كبير من الأنظمة."
+    }
+  }
+}

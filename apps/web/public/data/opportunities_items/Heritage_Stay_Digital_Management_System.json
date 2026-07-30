@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-HOS01",
+      "status_label": "تحليل فجوة إدارة أصول الضيافة التراثية",
+      "category_tag": "Hospitality / PropTech / Heritage",
+      "business_model": "Management Fee (Revenue Share) + Tech Licensing + Marketplace Commission",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Hospitality",
+      "Heritage Tourism",
+      "Real Estate"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "AlUla & Diriyah", "flag": "🇸🇦" },
+        { "name": "Old Damascus & Aleppo", "flag": "🇸🇾" },
+        { "name": "Historic Cairo", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "المضيف العريق: رقمنة وإدارة فنادق البوتيك التراثية",
+      "problem_statement": "يمتلك العالم العربي آلاف البيوت والقصور التاريخية المعطلة، والمستثمرون يجدون صعوبة في تحويلها لفنادق بمعايير عالمية بسبب تعقيد الترميم وغياب التكنولوجيا المتخصصة. الفجوة هي منصة تدير 'سلسلة فنادق بوتيك مشتتة' توفر معايير خدمة موحدة، نظام حجز ذكي، وتكامل مع تجارب سياحية محلية تحت علامة تجارية فاخرة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Dar-Elite",
+        "industry_tag": "الضيافة التراثية الفاخرة المعتمدة على التكنولوجيا",
+        "revenue_model": "15-20% Management Fee + Tech Integration Fee for Property Owners + Experience Commission",
+        "action_text": "استعراض خطة تحويل القصور القديمة إلى أصول فندقية مدرة للربح"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق إحياء القصور (0-48 شهر)",
+      "subtitle": "تحويل التاريخ إلى تجربة ضيافة عالمية",
+      "phases": [
+        {
+          "title": "نظام 'الترميم الذكي' (Heritage-BIM)",
+          "description": "استخدام الـ BIM والمسح الليزري لمساعدة الملاك على ترميم قصورهم بما يتوافق مع المعايير الفندقية دون المساس بالهوية الأثرية.",
+          "icon": "home",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منصة التشغيل الموحدة (Hub-Ops)",
+          "description": "توفير نظام إدارة فندقي (PMS) سحابي يربط عشرات البيوت التراثية المشتتة بمركز خدمة عملاء وتنظيف ولوجستيات موحد.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق علامة 'التجارب الغامرة'",
+          "description": "ربط الإقامة الفندقية بفعاليات ثقافية حصرية (طهي تقليدي، فنون يدوية) لزيادة متوسط الإنفاق السياحي.",
+          "icon": "sparkles",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.7,
+      "data_points_analyzed": "Growth of Boutique Hotel Demand vs Availability of Authentic Heritage Stays"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية جداً لترميم المباني التاريخية وتجهيزها بالبنية التحتية الحديثة.",
+        "التعقيدات القانونية المرتبطة بملكية المباني القديمة وحمايتها أثرياً.",
+        "صعوبة الوصول لفرق صيانة متخصصة في العمارة التقليدية.",
+        "غياب معايير 'الخدمة الفاخرة' في إدارة العقارات التاريخية المستقلة."
+      ],
+      "recommended_tech_stack": [
+        "Cloud-based Property Management System (PMS)",
+        "IoT for Energy Management in Ancient Walls",
+        "Mobile Key & Contactless Check-in",
+        "AI for Personalizing Guest Local Experiences",
+        "Blockchain for Ownership & Profit Sharing"
+      ],
+      "main_risk_index": "الاستدامة الفيزيائية؛ المباني القديمة تتطلب صيانة وقائية مستمرة، مما قد يرفع التكاليف التشغيلية إذا لم تدار بالذكاء الاصطناعي."
+    }
+  }
+}

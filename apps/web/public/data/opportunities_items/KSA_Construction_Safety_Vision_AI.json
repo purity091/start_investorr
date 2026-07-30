@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-KSA-2026-SAFE",
+      "status_label": "تحليل استخباري لإدارة مخاطر المشاريع العملاقة",
+      "category_tag": "تكنولوجيا الإنشاءات (ConTech / Computer Vision)",
+      "business_model": "B2B SaaS + Safety-as-a-Service",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "ConTech",
+      "Computer Vision",
+      "Occupational Safety",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "NEOM", "flag": "🇸🇦" },
+        { "name": "Riyadh (Expo 2030 sites)", "flag": "🇸🇦" },
+        { "name": "Red Sea Global", "flag": "🇸🇦" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "الرقابة الذكية لمواقع الإنشاءات المليونية",
+      "problem_statement": "مع وجود أكثر من 5000 موقع إنشائي نشط ضمن المشاريع الكبرى في السعودية، أصبح من المستحيل بشرياً مراقبة امتثال مئات آلاف العمال لمعايير السلامة (PPE) أو رصد المخاطر اللحظية. تؤدي حوادث المواقع إلى خسائر بشرية، وتأخيرات مكلفة في الجداول الزمنية، وارتفاع هائل في أقساط التأمين، مما يهدد زخم تنفيذ مشاريع الرؤية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "SafetyVision-AI",
+        "industry_tag": "الرؤية الحاسوبية في الأمن الصناعي",
+        "revenue_model": "Per-Site License + Insurance Premium Reduction Rebates + Drone Inspection Fees",
+        "action_text": "عرض تقرير خفض الحوادث بنسبة 70% عبر التنبيهات اللحظية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق السلامة الرقمية (0-12 شهر)",
+      "subtitle": "تحويل الكاميرات الصامتة إلى عيون ذكية لا تنام",
+      "phases": [
+        {
+          "title": "دمج الرؤية الحاسوبية (Vision Edge AI)",
+          "description": "ربط كاميرات الدوائر التلفزيونية المغلقة (CCTV) الحالية بمحرك ذكاء اصطناعي يرصد تلقائياً عدم ارتداء الخوذ، السترات، أو الاقتراب من مناطق الخطر، مع إطلاق تنبيهات فورية.",
+          "icon": "eye",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "التحليل التنبؤي للمخاطر (Risk Heatmaps)",
+          "description": "إنشاء خرائط حرارية رقمية تحدد 'مناطق الاحتمالية العالية للحوادث' بناءً على سلوك العمال وتدفق المعدات، مما يسمح لمدراء السلامة بالتدخل قبل وقوع الحادث.",
+          "icon": "fire",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التكامل مع سجلات التأمين (InsureTech Link)",
+          "description": "ربط بيانات الامتثال اللحظية بشركات التأمين لخفض التكاليف التشغيلية للمقاولين الملتزمين، مما يخلق حافزاً مالياً مباشراً لتبني التقنية.",
+          "icon": "clipboard-check",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "4000+ (Site Accident Logs & CCTV Stream Patterns)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد على مراقبين بشريين يسهل تشتتهم في المواقع الشاسعة والمزدحمة.",
+        "ضعف البنية التحتية للإنترنت في المواقع البعيدة (تم حلها مؤخراً عبر Starlink/5G).",
+        "تنوع الجنسيات واللغات مما يصعب التواصل السريع للتحذيرات.",
+        "نظرة المقاولين للسلامة كعبء مالي وليس كأصل تشغيلي."
+      ],
+      "recommended_tech_stack": [
+        "Edge Computing (for Real-time Inference)",
+        "Deep Learning (YOLOv8/Custom Models)",
+        "Drone-based Site Scanning",
+        "Wearable IoT for Vitals Tracking",
+        "5G Private Networks"
+      ],
+      "main_risk_index": "القبول العمالي والخصوصية؛ يتطلب الأمر سياسات واضحة تضمن أن الهدف هو 'الحماية' وليس 'التجسس' لضمان تعاون القوى العاملة."
+    }
+  }
+}

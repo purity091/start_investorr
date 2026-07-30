@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ECOM5",
+      "status_label": "تحليل عوائق التجارة الإلكترونية العابرة للحدود",
+      "category_tag": "Cross-border E-commerce (Trade / Logistics / Payments)",
+      "business_model": "Marketplace + Logistics + Payment Gateway",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "E-commerce",
+      "Cross-border",
+      "Trade"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 12
+    },
+    "core_content": {
+      "title": "تمكين التجارة الإلكترونية بين الدول العربية",
+      "problem_statement": "رغم القرب الجغرافي والثقافي، إلا أن التجارة الإلكترونية بين الدول العربية لا تزال ضعيفة جداً بسبب تعقيدات الشحن، الجمارك، أنظمة الدفع، والضرائب. هذا يمنع الشركات من التوسع إقليمياً ويحد من حجم السوق بشكل كبير."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "ArabTradeX",
+        "industry_tag": "Cross-border Platforms",
+        "revenue_model": "Transaction Fees + Logistics + Payment Margins",
+        "action_text": "استعراض منصة توحد التجارة بين الدول العربية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التجارة الإقليمية (0-18 شهر)",
+      "subtitle": "سوق عربي موحد",
+      "phases": [
+        {
+          "title": "بناء شبكة لوجستية",
+          "description": "ربط شركات الشحن بين الدول.",
+          "icon": "truck",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "حلول دفع موحدة",
+          "description": "توفير طرق دفع متعددة.",
+          "icon": "credit-card",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تسهيل الجمارك",
+          "description": "تبسيط الإجراءات القانونية.",
+          "icon": "document",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "2500+ (Cross-border Trade Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تعقيد القوانين.",
+        "اختلاف الأنظمة.",
+        "ضعف البنية اللوجستية.",
+        "مشاكل الدفع."
+      ],
+      "recommended_tech_stack": [
+        "Payment Gateways",
+        "Logistics APIs",
+        "Trade Compliance Systems",
+        "Marketplace Platforms",
+        "Cloud Infrastructure"
+      ],
+      "main_risk_index": "تنظيمي؛ يعتمد على القوانين بين الدول."
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-CON-2026-AR",
+      "status_label": "تحليل استخباري لمستقبل الإسكان والتشييد",
+      "category_tag": "الإنشاءات (ConTech / 3D Printing)",
+      "business_model": "B2B + B2G",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Construction",
+      "Additive Manufacturing",
+      "Sustainable Materials"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "تكنولوجيا البناء المستدام والطباعة ثلاثية الأبعاد",
+      "problem_statement": "تواجه المنطقة طلباً هائلاً على الوحدات السكنية مع ارتفاع تكاليف العمالة والمواد التقليدية، بالإضافة إلى البصمة الكربونية العالية لقطاع الإنشاءات. الحلول الحالية بطيئة ولا تلبي طموحات المدن الذكية في البناء السريع ومنخفض التكلفة، مما يخلق حاجة ماسة لتقنيات الطباعة الخرسانية والمواد الصديقة للبيئة المستخلصة من البيئة المحلية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Benaa3D",
+        "industry_tag": "البناء الرقمي المؤتمت",
+        "revenue_model": "Construction Contracts + Technology Licensing + Material Supply",
+        "action_text": "استعراض كفاءة الطباعة الإنشائية في تقليل الهدر بنسبة 60%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق العمران السريع (0-20 شهر)",
+      "subtitle": "تشييد المستقبل بضغطة زر",
+      "phases": [
+        {
+          "title": "تطوير الخلطات الخرسانية المحلية",
+          "description": "ابتكار مواد بناء تعتمد على الرمال والمخلفات الصناعية المحلية لتتناسب مع الطابعات ثلاثية الأبعاد وتتحمل المناخ الصحراوي.",
+          "icon": "beaker",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تنفيذ المشاريع النموذجية (Pilot Projects)",
+          "description": "بناء أول مجمع سكني مطبوع بالكامل لاختبار السرعة والجودة وامتثالها لكود البناء السعودي والإماراتي.",
+          "icon": "home",
+          "color_theme": "rose"
+        },
+        {
+          "title": "أتمتة مواقع البناء الشاملة",
+          "description": "دمج الروبوتات والدرونز لمراقبة الجودة والتنفيذ اللحظي، مما يقلل الاعتماد على العمالة غير الماهرة بنسبة 80%.",
+          "icon": "chip",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "1800+ (Housing Demand & Material Costs)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الحاجة لتعديل تشريعات البناء لتشمل التقنيات الحديثة.",
+        "ارتفاع التكلفة الأولية لشراء وصيانة الطابعات الضخمة.",
+        "ضعف الخبرات الهندسية المحلية في التصميم الإنشائي الرقمي.",
+        "التخوف من متانة المواد المطبوعة مقارنة بالخرسانة التقليدية."
+      ],
+      "recommended_tech_stack": [
+        "Large-scale 3D Printers",
+        "Generative Design Software",
+        "BIM (Building Information Modeling)",
+        "Eco-friendly Geopolymer Concrete",
+        "Robotic Arm Integration"
+      ],
+      "main_risk_index": "المخاطر التنظيمية؛ سرعة اعتماد التقنية من قبل البلديات ووزارات الإسكان هي المحرك الأساسي لربحية المشروع."
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-POL02",
+      "status_label": "تحليل فجوة الامتثال التجاري البيني",
+      "category_tag": "International Trade / GovTech / Logistics",
+      "business_model": "Transaction-based Fee + Annual Subscription for Exporters + B2G Platform Integration License",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "International Trade",
+      "Government",
+      "Logistics"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "PAFTA Countries (Pan-Arab Free Trade Area)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Border Crossings (Egypt-Sudan, Jordan-KSA, UAE-Oman)",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 22
+    },
+    "core_content": {
+      "title": "المسار التجاري السريع: بوابة الامتثال الرقمي العربي",
+      "problem_statement": "رغم وجود اتفاقية منطقة التجارة الحرة العربية الكبرى (PAFTA)، لا تزال التجارة البينية العربية ضعيفة (أقل من 15%) نتيجة تضارب اللوائح، تعقيد شهادات المنشأ، والبيروقراطية الحدودية. الفجوة هي بوابة رقمية موحدة توحد متطلبات الامتثال، تصدر شهادات منشأ رقمية غير قابلة للتزوير، وتنهي الإجراءات الجمركية قبل وصول الشحنة للحدود."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Arab-Trade-Link",
+        "industry_tag": "تكنولوجيا الحكومات وتيسير التجارة الدولية",
+        "revenue_model": "Flat Fee per Digital Customs Declaration + Compliance SaaS for Corporates + Data Insights on Intra-Arab Trade Flows",
+        "action_text": "استعراض تكنولوجيا تسريع الصادرات العربية البينية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الوصل التجاري (0-48 شهر)",
+      "subtitle": "سوق عربي واحد، بإجراءات رقمية موحدة",
+      "phases": [
+        {
+          "title": "منصة توحيد اللوائح (Reg-Harmonizer)",
+          "description": "بناء قاعدة بيانات ذكية تخرائط اللوائح التجارية لكل دولة عربية وتقدم للمصدر قائمة متطلبات دقيقة وشاملة لكل منتج.",
+          "icon": "share",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "سجل المنشأ بالبلوكشين (Origin-Ledger)",
+          "description": "تفعيل نظام توثيق رقمي يضمن صحة منشأ المنتجات العربية، مما يمنع التهرب الجمركي ويسرع تطبيق الإعفاءات المتفق عليها.",
+          "icon": "link",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نظام التخليص المسبق (Pre-Clearance)",
+          "description": "ربط أنظمة الجمارك في الدول العربية للسماح بالتحقق من البيانات والموافقة عليها أثناء وجود الشاحنة في الطريق، لتقليل وقت الحدود من أيام إلى دقائق.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Intra-Arab Trade Volume Potential vs Current Bottlenecks and Border Wait Times"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "نقص الثقة الرقمية والربط التقني بين أنظمة الجمارك في الدول المختلفة.",
+        "تضارب المصالح المحلية والحماية الجمركية لبعض الصناعات الوطنية.",
+        "التعقيد الكبير في قواعد المنشأ وتغير اللوائح بشكل مفاجئ.",
+        "الحاجة لإرادة سياسية وتنسيق حكومي رفيع المستوى لاعتماد النظام الموحد."
+      ],
+      "recommended_tech_stack": [
+        "Blockchain (Hyperledger Fabric) for Certificates",
+        "Semantic AI for Regulatory Mapping",
+        "Interoperability APIs for Customs Systems",
+        "Secure Cloud Infrastructure (Regional)",
+        "Mobile App for Drivers/Exporters"
+      ],
+      "main_risk_index": "المخاطر السياسية؛ أي توتر سياسي بين دولتين قد يؤدي لتعطيل الربط الرقمي، مما يتطلب بنية تحتية مستقلة ومحايدة سياسياً."
+    }
+  }
+}

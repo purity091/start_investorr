@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-LOG-2026-ARC",
+      "status_label": "تحليل استخباراتي لسلاسل التبريد الذكية",
+      "category_tag": "الخدمات اللوجستية (Cold Chain / IoT)",
+      "business_model": "B2B SaaS + Logistics-as-a-Service",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Logistics",
+      "Cold Chain Optimization",
+      "IoT Sensing",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "الجيل القادم من سلاسل التبريد السيادية",
+      "problem_statement": "تخسر المنطقة العربية ما يصل إلى 40% من الأغذية الطازجة والأدوية الحساسة أثناء النقل نتيجة فشل سلاسل التبريد، خاصة في فصول الصيف التي تتجاوز فيها الحرارة 50 درجة مئوية. الأنظمة الحالية تفتقر للمراقبة اللحظية والتحليل التنبؤي، مما يؤدي إلى خسائر بمليارات الدولارات وتهديد مباشر للأمن الصحي والغذائي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Arctic-Logic",
+        "industry_tag": "إنترنت الأشياء في اللوجستيات الحرارية",
+        "revenue_model": "Per-Pallet Monitoring Fee + Smart Warehouse Subscription + Data Insurance Integration",
+        "action_text": "عرض تقارير خفض الهدر اللوجستي بنسبة 30%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق اللوجستيات الذكية (0-12 شهر)",
+      "subtitle": "ضمان سلامة المنتج من المصنع إلى المستهلك",
+      "phases": [
+        {
+          "title": "شبكة الحساسات المتصلة (Ubiquitous Sensing)",
+          "description": "نشر حساسات IoT متطورة في الشاحنات والمخازن تقيس الحرارة، الرطوبة، والاهتزاز، مع ربطها عبر الأقمار الصناعية لضمان الاتصال الدائم في المناطق النائية.",
+          "icon": "rss",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بروتوكول السلامة التنبؤي (Predictive Spoilage AI)",
+          "description": "تطوير خوارزميات تتنبأ بفساد المنتجات قبل حدوثه بناءً على تقلبات الحرارة، وإعادة توجيه الشاحنات تلقائياً لأقرب مركز توزيع في حال استشعار خطر.",
+          "icon": "shield-exclamation",
+          "color_theme": "rose"
+        },
+        {
+          "title": "أتمتة المخازن المبردة (Dark Cold Stores)",
+          "description": "بناء مراكز توزيع صغيرة (Micro-fulfillment) مؤتمتة بالكامل لتقليل فتح الأبواب والحفاظ على استقرار الحرارة، مخصصة للتوصيل السريع للمدن.",
+          "icon": "truck",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.3,
+      "competitive_moat": 8.8,
+      "data_points_analyzed": "3100+ (Regional Temperature Maps & Pharma Spoilage Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد على أنظمة تبريد ميكانيكية دون طبقة برمجية ذكية.",
+        "ارتفاع تكلفة استهلاك الطاقة في المناخات الصحراوية.",
+        "تفتت قطاع النقل (كثرة السائقين الأفراد والشركات الصغيرة).",
+        "صعوبة مراقبة 'الميل الأخير' (Last Mile) لضمان عدم انقطاع التبريد عند باب المستهلك."
+      ],
+      "recommended_tech_stack": [
+        "NB-IoT & Satellite Connectivity",
+        "Machine Learning for Thermal Modeling",
+        "Blockchain for Cold Chain Audit Trails",
+        "Solar-Powered Refrigeration Units",
+        "Real-time Routing Optimization"
+      ],
+      "main_risk_index": "التكلفة التشغيلية (CapEx) العالية للأجهزة؛ الحل يكمن في نموذج 'الاشتراك' لتسهيل تبني الشركات الصغيرة للتقنية دون استثمار رأسمالي ضخم."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-STRAT-2026-SPT03",
+      "status_label": "تحليل فجوة الاحتراف الرياضي والبيانات",
+      "category_tag": "SportsTech / AI Analytics",
+      "business_model": "SaaS (Clubs) + B2C Subscription + Agent Commission",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Sports",
+      "Artificial Intelligence",
+      "Talent Management"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (League Expansion)", "flag": "🇸🇦" },
+        { "name": "Egypt (Talent Pool)", "flag": "🇪🇬" },
+        { "name": "Morocco (Professional Academies)", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "منصة كشاف المواهب الرقمي (AI Scout)",
+      "problem_statement": "تُنفق الأندية العربية مئات الملايين على لاعبين أجانب، بينما تضيع المواهب المحلية لغياب نظام رصد علمي. الكشافة التقليديون لا يغطون 1% من القرى والمدن. هناك فجوة لمنصة تتيح لأي شاب رفع أداؤه ليتم تحليله تقنياً وبيومترياً، مما يوفر للأندية قاعدة بيانات 'مفلترة' للمواهب الخام."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Najm-Vision",
+        "industry_tag": "تحليلات الأداء الرياضي",
+        "revenue_model": "Club Subscription (Talent DB) + Player Premium Profile + Transfer Matchmaking Fee",
+        "action_text": "استعراض محرك تحليل المواهب الكروية بالذكاء الاصطناعي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الاحتراف الرقمي (0-24 شهر)",
+      "subtitle": "من الملاعب الشعبية إلى المنصات العالمية",
+      "phases": [
+        {
+          "title": "تطوير محرك الرؤية الحاسوبية",
+          "description": "بناء خوارزميات تحلل فيديوهات الهواتف الذكية لاستخراج مؤشرات السرعة، التمركز، دقة التمرير، وقوة التسديد.",
+          "icon": "video-camera",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بوابة التقييم البيومتري",
+          "description": "دمج بيانات الساعات الذكية وأجهزة التتبع لتحليل القدرة البدنية ومعدل نمو الموهبة.",
+          "icon": "heart",
+          "color_theme": "rose"
+        },
+        {
+          "title": "سوق الانتقالات الرقمي",
+          "description": "إنشاء منصة تربط اللاعبين المتميزين بالوكلاء والأندية محلياً ودولياً بناءً على تقارير فنية موثقة.",
+          "icon": "switch-horizontal",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.3,
+      "data_points_analyzed": "Youth Population vs Pro Academy Vacancies"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد على 'العين المجردة' والوساطة في اختيار اللاعبين.",
+        "التكلفة العالية للسفر لمسافات طويلة لاختبار لاعبين غير مضمونين.",
+        "نقص البيانات التاريخية عن تطور اللاعبين الصغار.",
+        "ضعف ثقافة الأندية في استخدام التقنية لاتخاذ قرارات التوظيف."
+      ],
+      "recommended_tech_stack": [
+        "Computer Vision (Pose Estimation)",
+        "Deep Learning for Match Analysis",
+        "Cloud-based Video Processing",
+        "Blockchain for Career History Verification",
+        "Mobile App for Grassroots Data Entry"
+      ],
+      "main_risk_index": "جودة البيانات؛ الفيديوهات المصورة بهواتف ضعيفة قد تعطي نتائج غير دقيقة، مما يتطلب نظام 'تصحيح آلي' للصور."
+    }
+  }
+}

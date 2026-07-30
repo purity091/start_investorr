@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-JOR-2026-WATER",
+      "status_label": "تحليل استخباري للأمن المائي الاستراتيجي",
+      "category_tag": "تكنولوجيا المياه (Smart Water Management / IoT)",
+      "business_model": "B2G + Performance-based Contracting",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "WaterTech",
+      "Smart Utilities",
+      "Infrastructure AI",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Amman", "flag": "🇯🇴" },
+        { "name": "Zarqa", "flag": "🇯🇴" },
+        { "name": "Irbid", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "إنقاذ فواقد المياه في أكثر بلدان العالم جفافاً",
+      "problem_statement": "يعاني الأردن من فاقد مياه (Non-Revenue Water) يصل إلى 50% نتيجة التسريبات في الشبكات المتهالكة والسرقات غير القانونية. في بلد يصنف كأفقر ثاني دولة مائياً في العالم، يمثل هذا الهدر خسارة اقتصادية وأمنية وجودية. الحلول التقليدية تعتمد على الكشف اليدوي المتأخر، بينما تحتاج الحكومة إلى نظام 'عصبي' رقمي يكتشف التسرب في اللحظة التي يبدأ فيها وبدقة مليمترية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "SmartHydro-JOR",
+        "industry_tag": "الذكاء الاصطناعي في لوجستيات المياه",
+        "revenue_model": "Shared Savings Model (Gainshare) + SaaS Licensing + IoT Maintenance Contracts",
+        "action_text": "مراجعة نموذج العائد من استعادة فواقد المياه بنسبة 20%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الكفاءة المائية (0-18 شهر)",
+      "subtitle": "تحويل الشبكات الميتة إلى بنية تحتية ذكية",
+      "phases": [
+        {
+          "title": "الاستشعار الصوتي اللحظي (Acoustic IoT Deployment)",
+          "description": "نشر حساسات صوتية وهيدروليكية متطورة على خطوط الأنابيب الرئيسية لرصد الذبذبات الناتجة عن أدنى تسرب، مع إرسال البيانات فورياً عبر شبكات LPWAN.",
+          "icon": "volume-up",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك تحليل الأنماط والسرقات (Theft Detection AI)",
+          "description": "تطوير خوارزميات تقارن بين كميات المياه المضخوخة والمستهلكة فعلياً لتحديد مواقع 'الاستخدام غير المشروع' والكسور المخفية تحت الأرض قبل تفاقمها.",
+          "icon": "search-circle",
+          "color_theme": "rose"
+        },
+        {
+          "title": "الأتمتة الهيدروليكية (Pressure Management)",
+          "description": "التحكم الآلي في ضغط المياه بناءً على الطلب الفعلي، مما يقلل الضغط على الأنابيب الضعيفة ويمنع الانفجارات المستقبلية، مع ربطها بغرفة عمليات مركزية.",
+          "icon": "adjustments",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 8.9,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "1100+ (Hydraulic Flow Models & Jordan Utility Reports)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "عمر الشبكات التحتية الذي يتجاوز 40 عاماً في بعض المناطق.",
+        "التكلفة العالية لاستبدال الشبكات بالكامل، مما يجعل 'الإصلاح الذكي' هو الحل الوحيد.",
+        "تحديات العنونة الجغرافية وصعوبة الوصول للكسور في المناطق الجبلية والمكتظة.",
+        "غياب الميزانيات الرأسمالية الضخمة لدى شركات المياه للتحول الرقمي الشامل."
+      ],
+      "recommended_tech_stack": [
+        "Acoustic Correlation Sensors",
+        "LoRaWAN/NB-IoT Communication",
+        "Digital Twin for Urban Water Grids",
+        "Machine Learning for Transient Analysis",
+        "GIS (Geographic Information Systems) Integration"
+      ],
+      "main_risk_index": "البيروقراطية الحكومية؛ النجاح يعتمد على صياغة عقود 'الأداء' حيث تربح الشركة من قيمة المياه التي توفرها فعلياً للدولة (Win-Win)."
+    }
+  }
+}

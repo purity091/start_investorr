@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-COR14",
+      "status_label": "تحليل فجوة إدارة نفقات سفر الشركات الإقليمية",
+      "category_tag": "FinTech / TravelTech / Corporate-SaaS",
+      "business_model": "SaaS Subscription (per Employee) + Payment Processing Fee + Corporate Cashback",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Finance",
+      "Business Travel",
+      "Information Technology"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "GCC Corporate Market",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Egypt & Jordan (Fast Growing Hubs)",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "رحلات الأعمال الذكية: إدارة المصاريف والامتثال",
+      "problem_statement": "تعاني الشركات العربية الكبرى من 'ثقب أسود' في مصاريف سفر الموظفين، مع غياب للتحكم اللحظي والامتثال لسياسات الشركة الضريبية والقانونية. الفجوة هي نظام إدارة سفر (T&E) يدمج بطاقات دفع ذكية، حجز آلي متوافق مع السياسة، وأتمتة الفواتير الضريبية (VAT) المخصصة لقوانين المنطقة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Rihla-Corp",
+        "industry_tag": "تكنولوجيا المالية وإدارة نفقات الشركات",
+        "revenue_model": "Monthly SaaS Subscription + 1-2% Processing Fee on Spend + Travel Agency Commission Share",
+        "action_text": "استعراض نظام توفير 20% من ميزانية سفر الشركات"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق كفاءة الإنفاق (0-24 شهر)",
+      "subtitle": "تحكم كامل في ميزانية السفر، بلمسة زر واحدة",
+      "phases": [
+        {
+          "title": "دمج بطاقات الشركات الذكية (Smart-Cards)",
+          "description": "إصدار بطاقات دفع افتراضية وفيزيائية مرتبطة بالنظام، تفرض قيوداً آلية على نوع ومبلغ الإنفاق بناءً على رتبة الموظف ووجهته.",
+          "icon": "credit-card",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك الامتثال الآلي (Compliance-Engine)",
+          "description": "ذكاء اصطناعي يقرأ الفواتير ويصنفها ويطابقها مع سياسة الشركة لحظياً، ويقوم بحساب ضرائب القيمة المضافة القابلة للاسترداد.",
+          "icon": "shield-check",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة الحجز المركزي (Booking-Hub)",
+          "description": "منصة تتيح للموظف حجز الطيران والفنادق التي تقع ضمن 'ميزانيته' المسموحة فقط، مع موافقة آلية وسريعة من الإدارة.",
+          "icon": "shopping-bag",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Corporate Travel Spend in MENA vs Waste from Lack of Centralized Expense Control"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد على العمليات اليدوية والفواتير الورقية في معظم الشركات.",
+        "نقص التكامل بين أنظمة المحاسبة المحلية (ERP) ومنصات السفر العالمية.",
+        "تعقيد القوانين الضريبية (VAT) المختلفة بين الدول العربية.",
+        "مقاومة الموظفين للأنظمة التي تفرض رقابة صارمة على نفقاتهم."
+      ],
+      "recommended_tech_stack": [
+        "Fintech Infrastructure (Card Issuing APIs)",
+        "OCR (Optical Character Recognition) for Receipt Scanning",
+        "AI for Fraud Detection in Expenses",
+        "Direct API Integration with Major Airlines/Hotels",
+        "VAT Compliance Logic Engine"
+      ],
+      "main_risk_index": "أمن البيانات المالية؛ التعامل مع نفقات وبطاقات الشركات يتطلب أعلى معايير الأمان (PCI DSS) لمنع الاختراقات وسرقة البيانات الحساسة."
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-IND1",
+      "status_label": "تحليل الاعتماد الصناعي على الاستيراد",
+      "category_tag": "Industrial Policy / Local Manufacturing",
+      "business_model": "Manufacturing + B2B Supply + Government Contracts",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Industry",
+      "Manufacturing",
+      "Import Substitution"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Algeria", "flag": "🇩🇿" }
+      ],
+      "additional_regions_count": 9
+    },
+    "core_content": {
+      "title": "تقليل الاعتماد على استيراد السلع الصناعية الحيوية",
+      "problem_statement": "تعاني معظم دول المنطقة العربية من اعتماد مرتفع على استيراد السلع الصناعية الأساسية مثل الأدوية، المعدات الطبية، المكونات الإلكترونية، والآلات الصناعية. وفق بيانات التجارة الدولية، تتجاوز نسبة الاعتماد على الاستيراد في بعض هذه القطاعات 70–90%. هذا الاعتماد يجعل الاقتصادات عرضة لصدمات خارجية مثل اضطرابات سلاسل التوريد (كما حدث خلال جائحة COVID-19) أو تقلبات أسعار العملة. المشكلة ليست فقط في الاستيراد، بل في غياب قاعدة صناعية محلية قادرة على إنتاج المكونات وليس فقط تجميع المنتجات."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "LocalForge Industries",
+        "industry_tag": "Strategic Manufacturing Platforms",
+        "revenue_model": "B2B Contracts + Government Incentives + Long-term Supply Agreements",
+        "action_text": "استعراض بناء خطوط إنتاج محلية للسلع الاستراتيجية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التصنيع المحلي (0-36 شهر)",
+      "subtitle": "من الاستيراد إلى الإنتاج السيادي",
+      "phases": [
+        {
+          "title": "تحليل سلاسل الاستيراد الحرجة",
+          "description": "تحديد المنتجات الأعلى استيراداً من حيث القيمة والتأثير (مثل الأدوية والمكونات الصناعية) وتحليل جدوى تصنيعها محلياً.",
+          "icon": "search",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء شراكات تقنية",
+          "description": "الدخول في شراكات مع شركات عالمية لنقل التكنولوجيا بدلاً من بناء كل شيء من الصفر.",
+          "icon": "link",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق تصنيع تدريجي",
+          "description": "البدء بالتجميع ثم الانتقال إلى تصنيع المكونات محلياً لزيادة القيمة المضافة.",
+          "icon": "factory",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "4000+ (Trade Dependency, Import Ratios, Industrial Output Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تكلفة بناء المصانع المتقدمة عالية جداً مقارنة بالاستيراد.",
+        "نقص نقل التكنولوجيا (Technology Transfer).",
+        "ضعف سلاسل التوريد المحلية للمكونات.",
+        "غياب سياسات صناعية طويلة الأجل في بعض الدول.",
+        "التركيز على الاستيراد السريع بدلاً من الاستثمار طويل الأمد."
+      ],
+      "recommended_tech_stack": [
+        "Advanced Manufacturing Systems",
+        "Industrial Automation (PLC/SCADA)",
+        "Supply Chain Planning Systems",
+        "ERP Industrial Platforms",
+        "Quality Control Systems"
+      ],
+      "main_risk_index": "رأس المال والتنفيذ؛ هذا النوع من المشاريع يحتاج استثمارات ضخمة وأفق زمني طويل قبل تحقيق العائد، لكنه في المقابل يخلق 'Moat سيادي' قوي جداً."
+    }
+  }
+}

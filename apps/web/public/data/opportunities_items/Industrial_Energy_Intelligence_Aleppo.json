@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-IND01",
+      "status_label": "تحليل فجوة كفاءة الطاقة في الصناعة الثقيلة",
+      "category_tag": "Industrial AI / CleanTech / Manufacturing",
+      "business_model": "SaaS (Efficiency-Share) + Hardware Installation + Energy Consulting",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Industry",
+      "Energy Efficiency",
+      "Artificial Intelligence"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Aleppo (Sheikh Najjar)", "flag": "🇸🇾" },
+        { "name": "Damascus (Adra Industrial City)", "flag": "🇸🇾" },
+        { "name": "Homs (Industrial Estate)", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "ذكاء الطاقة الصناعي: تحسين استهلاك المصانع الحلبية",
+      "problem_statement": "تستهلك المصانع في حلب (النسيج، الكيماويات) كميات هائلة من الوقود (الديزل) لتشغيل المولدات لغياب الكهرباء القومية. هدر الطاقة في الماكينات القديمة وسوء إدارة الأحمال يرفع تكلفة المنتج بنسبة 40%. الفجوة هي نظام 'ذكاء طاقة' يربط الماكينات بحساسات IoT لتحسين الاستهلاك لحظياً وتوزيع الطاقة بناءً على خطوط الإنتاج النشطة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Halab-Core",
+        "industry_tag": "رقمنة الطاقة الصناعية",
+        "revenue_model": "30% share of saved energy costs + Monthly Monitoring Subscription + Equipment Modernization Consulting",
+        "action_text": "استعراض تقليل تكلفة تشغيل المصانع بنسبة 25%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الكفاءة الإنتاجية (0-24 شهر)",
+      "subtitle": "إعادة نبض الصناعة السورية بأقل التكاليف",
+      "phases": [
+        {
+          "title": "تدقيق الأحمال والربط الرقمي",
+          "description": "تركيب عدادات ذكية وحساسات اهتزاز على محركات المصانع لرصد الهدر الحراري والكهربائي في كل ماكينة.",
+          "icon": "lightning-bolt",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "خوارزمية موازنة الأحمال (Load Balancing AI)",
+          "description": "تفعيل نظام يتحكم آلياً في توزيع كهرباء المولدات بين الأقسام، مع إيقاف الماكينات غير المستخدمة آلياً في أوقات الذروة.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التكامل مع الطاقة الشمسية الصناعية",
+          "description": "بناء مصفوفة طاقة شمسية هجينة تدعم المحركات الثقيلة نهاراً وتقلل استهلاك الديزل بنسبة 60%.",
+          "icon": "sun",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "Fuel Consumption per Output Unit in Sheikh Najjar Industrial City"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الاعتماد على أنظمة تشغيل يدوية قديمة جداً في معظم المصانع.",
+        "التكلفة العالية لتحديث المحركات الكهربائية الكبيرة.",
+        "نقص البيانات الموثوقة حول 'البصمة الطاقية' لكل منتج صناعي سوري.",
+        "التركيز على 'توفير الكهرباء' بدلاً من 'إدارة الاستهلاك ذكياً'."
+      ],
+      "recommended_tech_stack": [
+        "Industrial IoT (IIoT) Sensors",
+        "Predictive Maintenance Algorithms",
+        "Edge-AI Controllers",
+        "Energy Management Systems (ISO 50001 compliant)",
+        "SCADA Hybrid Integration"
+      ],
+      "main_risk_index": "استقرار التمويل؛ تحديث المصانع الكبرى يتطلب قروضاً ميسرة أو استثمارات أجنبية مباشرة (FDI) في قطاع الصناعة السوري المتعافي."
+    }
+  }
+}

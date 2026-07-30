@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-RETAIL-2026-AR",
+      "status_label": "تحليل استخباري لرقمنة التجارة الشعبية",
+      "category_tag": "التجزئة (Big Data / RetailTech)",
+      "business_model": "SaaS + Data Insights Marketplace",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "RetailTech",
+      "Data Analytics",
+      "Micro-SME Empowerment"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Morocco", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 7
+    },
+    "core_content": {
+      "title": "تحليل البيانات الضخمة لدعم التجارة المحلية التقليدية",
+      "problem_statement": "تمثل التجارة التقليدية (البقالات، المحلات الصغيرة) عصب الاقتصاد المحلي، لكنها تنهار أمام عمالقة التجارة الإلكترونية لافتقارها للبيانات حول عملائها ومخزونها. هذه المحلات تمتلك 'بيانات ذهبية' عن سلوك المستهلك المحلي لكنها تظل ميتة في دفاتر ورقية، مما يمنعها من المنافسة ويمنع شركات السلع الاستهلاكية (FMCG) من فهم السوق الحقيقي بدقة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "SouqPulse",
+        "industry_tag": "استخبارات التجزئة المحلية",
+        "revenue_model": "Monthly POS SaaS + Data Reports for Brands + Supply Chain Commission",
+        "action_text": "استعراض محرك التنبؤ بالمخزون للمحلات الصغيرة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التحول الرقمي للتجزئة (0-18 شهر)",
+      "subtitle": "تمكين 'البقالة' بأدوات العمالقة",
+      "phases": [
+        {
+          "title": "نشر أنظمة البيع الذكية (Smart POS)",
+          "description": "تزويد المحلات بأنظمة بيع سهلة الاستخدام تقوم برقمنة كل معاملة وتحويلها إلى بيانات فورية.",
+          "icon": "desktop-computer",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء منصة البيانات الكبرى",
+          "description": "تجميع البيانات مجهولة المصدر لتحليل أنماط الشراء في الأحياء السكنية وتقديم تقارير لشركات الإنتاج حول الطلب الحقيقي.",
+          "icon": "database",
+          "color_theme": "rose"
+        },
+        {
+          "title": "أتمتة سلاسل التوريد المحلية",
+          "description": "ربط المحلات بالموردين مباشرة عبر النظام لطلب البضائع تلقائياً عند انخفاض المخزون، مما يقلل الهدر ويزيد الأرباح.",
+          "icon": "refresh",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.1,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 8.7,
+      "data_points_analyzed": "5000+ (Small Retail Transaction Patterns)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "مقاومة أصحاب المحلات التقليديين للتكنولوجيا (الحاجة لـ UX بسيط جداً).",
+        "الاعتماد الكبير على المعاملات النقدية التي يصعب تتبعها.",
+        "تفتت السوق الجغرافي وصعوبة الوصول لكل محل على حدة.",
+        "عدم وجود حوافز واضحة للمحلات الصغيرة لمشاركة بيانات مبيعاتها."
+      ],
+      "recommended_tech_stack": [
+        "Lightweight POS Hardware",
+        "Cloud Data Warehousing",
+        "Demand Forecasting Algorithms",
+        "Mobile App for Inventory Management",
+        "API Gateways for FMCG Brands"
+      ],
+      "main_risk_index": "التبني من قبل المستخدم؛ نجاح المشروع يعتمد على جعل التكنولوجيا 'تضيف مالاً فورياً' لصاحب المحل لضمان استخدامه اليومي لها."
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-POL03",
+      "status_label": "تحليل فجوة مرونة سلاسل التوريد الجيوسياسية",
+      "category_tag": "Risk-Management / Logistics / Geopolitics",
+      "business_model": "Annual Retainer + Per-Alert Fee + Strategic Simulation Consulting",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Economics",
+      "Geopolitics",
+      "Logistics"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Red Sea & Suez Canal (Global Choke Point)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Strait of Hormuz (Energy Flow)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Mediterranean Routes",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "درع الاستقرار: متنبئ مخاطر سلاسل التوريد الجيوسياسية",
+      "problem_statement": "تتأثر الشركات العربية الكبرى والشركات العالمية العاملة في المنطقة بشدة بالتقلبات الجيوسياسية (مثل أزمة البحر الأحمر أو توترات الحدود) التي تسبب تأخيرات ضخمة وارتفاعاً في تكاليف التأمين. الفجوة هي نظام إنذار مبكر يدمج تحليل الأخبار السياسية بالـ AI مع بيانات تتبع السفن اللحظية للتنبؤ بالاضطرابات قبل وقوعها واقتراح مسارات بديلة فوراً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sabil-Risk-Monitor",
+        "industry_tag": "إدارة المخاطر الجيوسياسية ومرونة سلاسل التوريد",
+        "revenue_model": "Monthly Subscription for Logistics Firms + Risk Reports for Insurance Companies + Custom Crisis Simulation for Govs",
+        "action_text": "استعراض نظام حماية التجارة من التقلبات السياسية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المشهد الآمن (0-36 شهر)",
+      "subtitle": "تأمين تدفق التجارة في عالم متقلب",
+      "phases": [
+        {
+          "title": "محرك تحليل النزاعات (Conflict-Analytics AI)",
+          "description": "تطوير AI يحلل آلاف المصادر الإخبارية والبيانات السياسية والميدانية لتحديد بؤر التوتر المحتملة التي قد تؤثر على الممرات التجارية.",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام محاكاة المسارات البديلة (Dynamic-Rerouting)",
+          "description": "توفير أداة تحسب فوراً تكلفة وزمن البدائل (مثلاً: التحويل للطيران، أو مسارات برية بديلة عبر دول الجوار) في حال إغلاق أي ممر مائي أو حدودي.",
+          "icon": "refresh",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة التأمين المرتبطة بالمخاطر (Insure-Tech Link)",
+          "description": "ربط شركات التأمين بالنظام لتسعير بوالص تأمين 'ديناميكية' تنخفض تكلفتها عندما تتبع الشركات المسارات المقترحة الأكثر أماناً.",
+          "icon": "credit-card",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.8,
+      "data_points_analyzed": "Economic Impact of Choke Point Closures in MENA vs Demand for Adaptive Supply Chain Tech"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "صعوبة التنبؤ بالسلوكيات السياسية التي قد لا تتبع منطقاً اقتصادياً واضحاً.",
+        "نقص البيانات الميدانية اللحظية في مناطق النزاع.",
+        "الاعتماد على وكالات استخباراتية أو إخبارية تقليدية بطيئة في التحليل.",
+        "تعقيد لوجستيات 'تغيير المسار' المفاجئ التي تتطلب تنسيقات جمركية ودولية معقدة."
+      ],
+      "recommended_tech_stack": [
+        "Natural Language Processing (NLP) for Global News",
+        "AIS (Automatic Identification System) for Ship Tracking",
+        "Agent-based Modeling for Supply Chain Simulations",
+        "Geospatial Intelligence (GEOINT)",
+        "Monte Carlo Simulations for Risk Assessment"
+      ],
+      "main_risk_index": "سرعة التغير؛ الأحداث الجيوسياسية قد تتطور أسرع من قدرة الـ AI على التعلم، مما يتطلب فريق 'محللين جيوسياسيين' بشريين للإشراف على المخرجات."
+    }
+  }
+}

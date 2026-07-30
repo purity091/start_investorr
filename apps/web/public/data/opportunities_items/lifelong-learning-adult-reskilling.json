@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-EDAI9",
+      "status_label": "تحليل فجوة إعادة تأهيل القوى العاملة",
+      "category_tag": "التعلم المستمر (Lifelong Learning / Reskilling)",
+      "business_model": "Subscription + Corporate Training + Certification",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Education",
+      "Adult Learning",
+      "Reskilling"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Kuwait", "flag": "🇰🇼" }
+      ],
+      "additional_regions_count": 7
+    },
+    "core_content": {
+      "title": "منصة إعادة تأهيل الكبار لسوق العمل الجديد",
+      "problem_statement": "مع التحول الرقمي، يفقد العديد من الموظفين مهاراتهم الحالية، لكن لا توجد منصات فعالة لإعادة تأهيلهم بشكل سريع وعملي. البرامج الحالية طويلة، نظرية، وغير مرتبطة بوظائف حقيقية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "ReSkillX",
+        "industry_tag": "منصات التعلم المستمر",
+        "revenue_model": "Corporate Subscriptions + Certification Fees",
+        "action_text": "استعراض مسار إعادة تأهيل خلال 3 أشهر"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة إعادة التأهيل (0-12 شهر)",
+      "subtitle": "تحويل الخبرة إلى مهارات حديثة",
+      "phases": [
+        {
+          "title": "تحليل المهارات الحالية",
+          "description": "تقييم مهارات المستخدم الحالية وتحديد الفجوات.",
+          "icon": "search",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء مسارات قصيرة وعملية",
+          "description": "تصميم برامج تدريب مكثفة مرتبطة بوظائف حقيقية.",
+          "icon": "rocket",
+          "color_theme": "rose"
+        },
+        {
+          "title": "ربط مع فرص العمل",
+          "description": "توفير فرص توظيف مباشرة بعد التدريب.",
+          "icon": "briefcase",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 8.8,
+      "data_points_analyzed": "2000+ (Workforce Transition Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "بطء استجابة التعليم التقليدي للتغيرات.",
+        "نقص برامج تدريب قصيرة وعملية.",
+        "ضعف الربط بين التدريب والتوظيف.",
+        "قلة وعي الأفراد بأهمية إعادة التأهيل."
+      ],
+      "recommended_tech_stack": [
+        "AI Skill Gap Analysis",
+        "Learning Platforms (LMS)",
+        "Microlearning Systems",
+        "Certification Engines",
+        "Job Matching Platforms"
+      ],
+      "main_risk_index": "التحفيز الشخصي؛ يحتاج المشروع إلى تصميم تجربة تحفز المستخدم على الالتزام."
+    }
+  }
+}

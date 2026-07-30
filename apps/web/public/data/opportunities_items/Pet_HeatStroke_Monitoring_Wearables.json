@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-FMCG15",
+      "status_label": "تحليل فجوة حماية الحيوانات من الإجهاد الحراري",
+      "category_tag": "PetCare / IoT / Wearables",
+      "business_model": "Hardware Sales + Subscription for Premium Alerts + Veterinary Data Integration",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Consumer Goods",
+      "Pet Supplies",
+      "Internet of Things"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "GCC Countries (High Heatstroke Risk)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Egypt & Iraq (Urban Heat Island Effects)",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "الأليف الآمن: سوار الحماية من ضربات الشمس",
+      "problem_statement": "تموت مئات الحيوانات الأليفة سنوياً في المنطقة العربية نتيجة ضربات الشمس (Heatstroke) التي تحدث بسرعة هائلة في المناخ الحار، وغالباً ما يكتشف أصحابها الأمر بعد فوات الأوان. الفجوة هي جهاز قابل للارتداء (سوار ذكي) يراقب درجة حرارة جسم الحيوان ومعدل ضربات قلبه، ويرسل تنبيهاً فورياً لهاتف صاحبه عند وصول الحرارة لمستويات خطيرة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Amana-Pet-Shield",
+        "industry_tag": "تكنولوجيا الصحة الحيوانية والأجهزة القابلة للارتداء (Pet-Wearables)",
+        "revenue_model": "One-time Hardware Purchase + Monthly Subscription for Health Monitoring + Referral Commission to Vets",
+        "action_text": "استعراض تكنولوجيا حماية حياة الحيوانات الأليفة في الصيف"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الصيف الآمن (0-36 شهر)",
+      "subtitle": "الحماية التي تتكلم نيابة عن حيوانك",
+      "phases": [
+        {
+          "title": "تطوير حساسات الحرارة الدقيقة (Core-Temp Sensors)",
+          "description": "بناء سوار صغير، خفيف الوزن، ومقاوم للماء يوضع حول العنق ويقيس درجة الحرارة الأساسية بدقة عبر الفراء.",
+          "icon": "rss",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام الإنذار المبكر (Heat-Alert-AI)",
+          "description": "تطوير تطبيق يحلل درجة الحرارة الخارجية والداخلية للحيوان ويرسل تنبيهاً 'حرجاً' يتجاوز وضع الصامت في هاتف المستخدم.",
+          "icon": "bell",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة الطوارئ والخرائط (Vet-Now)",
+          "description": "توفير ميزة تظهر للمستخدم أقرب العيادات البيطرية المفتوحة فور حدوث خطر، مع إمكانية مشاركة بيانات الحيوان مع الطبيب فوراً.",
+          "icon": "map",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Pet Mortality Rates during Summer in GCC vs Consumer Willingness to Pay for Safety Tech"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "صعوبة قياس درجة حرارة جسم الحيوان بدقة عبر الفراء الكثيف دون تلامس مباشر.",
+        "التكلفة العالية للأجهزة الذكية المستوردة التي لا تدعم تطبيقاتها اللغة العربية.",
+        "قصر عمر بطارية الأجهزة القابلة للارتداء التي تحتاج لبث بيانات مستمر.",
+        "عدم وجود قاعدة بيانات موحدة للعيادات البيطرية والخدمات الطارئة في المنطقة."
+      ],
+      "recommended_tech_stack": [
+        "Infrared Temperature Sensors",
+        "BLE (Bluetooth Low Energy) for Syncing",
+        "GPS Tracking Integration",
+        "Mobile App (Cross-platform)",
+        "Cloud-based Health Analytics"
+      ],
+      "main_risk_index": "الثقة التقنية؛ في حال تأخر التنبيه ولو لدقائق قد يموت الحيوان، مما يتطلب بنية تحتية برمجية فائقة الاستقرار (High-Availability)."
+    }
+  }
+}

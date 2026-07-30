@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-AFR-2026-AGI02",
+      "status_label": "تحليل فجوة الاستجابة البيئية وحماية المحاصيل",
+      "category_tag": "الزراعة (AgriTech / Predictive Intelligence)",
+      "business_model": "B2G / B2B (Data-as-a-Service)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Agriculture",
+      "Climate Intelligence",
+      "Food Security"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Mauritania", "flag": "🇲🇷" },
+        { "name": "Sudan", "flag": "🇸🇩" },
+        { "name": "Chad", "flag": "🇹🇩" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "نظام الإنذار المبكر للآفات والتصحر بالذكاء الاصطناعي",
+      "problem_statement": "تخسر دول الساحل وموريتانيا والسودان ما يعادل 20-30% من ناتجها الزراعي سنوياً بسبب أسراب الجراد والزحف الصحراوي المفاجئ. الأنظمة الحالية يدوية وتعتمد على البلاغات المتأخرة، مما يجعل التدخل غير فعال. هناك فجوة لمنصة استخباراتية تربط صور الأقمار الصناعية ببيانات الرياح للتنبؤ بالكوارث الزراعية قبل وقوعها بأسابيع."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sahara-Shield",
+        "industry_tag": "استخبارات الأرض الزراعية",
+        "revenue_model": "Annual Gov Subscriptions + Insurance Data Licensing + SMS Alert Fees",
+        "action_text": "استعراض محرك التنبؤ بأسراب الجراد والزحف الرملي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة حماية السلة الغذائية (0-24 شهر)",
+      "subtitle": "رؤية المخاطر البيئية قبل وصولها",
+      "phases": [
+        {
+          "title": "دمج صور الأقمار الصناعية عالية التردد",
+          "description": "تحليل التغيرات في الغطاء النباتي ورطوبة التربة باستخدام الرؤية الحاسوبية لاكتشاف بؤر تكاثر الآفات.",
+          "icon": "globe",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تطوير نماذج التنبؤ المساري (Trajectory AI)",
+          "description": "استخدام خوارزميات التعلم العميق لربط سرعة الرياح والضغط الجوي بتوقع حركة أسراب الجراد أو اتجاهات زحف الكثبان.",
+          "icon": "trending-up",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق بوابة التنبيه الجماعي (SMS Beacon)",
+          "description": "ربط النظام ببوابات الرسائل النصية القصيرة لإبلاغ المزارعين والجهات المختصة فورياً بالتحركات المشبوهة في مناطقهم.",
+          "icon": "chat",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 9.7,
+      "data_points_analyzed": "20+ Years of Historical Locust and Sand Storm Logs"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف التنسيق الإقليمي بين دول الجوار في تبادل البيانات.",
+        "الاعتماد على المسح الميداني البشري الذي يستحيل في المناطق الصحراوية الشاسعة.",
+        "نقص النماذج الرياضية التي تأخذ بعين الاعتبار المناخ الدقيق للصحراء الكبرى.",
+        "ضعف البنية التحتية للاتصالات في مناطق الرصد الأولية."
+      ],
+      "recommended_tech_stack": [
+        "Computer Vision (Sentinel-2 Data)",
+        "LSTM (Long Short-Term Memory) for Prediction",
+        "IoT Soil Moisture Grids (LoRaWAN)",
+        "SMS Gateway Infrastructure",
+        "Satellite-to-Ground Data Fusion"
+      ],
+      "main_risk_index": "المخاطر الجيوسياسية؛ صعوبة صيانة الحساسات الأرضية في مناطق التوتر الأمني، مما يتطلب الاعتماد بنسبة 90% على الأقمار الصناعية."
+    }
+  }
+}

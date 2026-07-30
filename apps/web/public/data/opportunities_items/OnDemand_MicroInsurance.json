@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-FIN-2026-MICRO-INS",
+      "status_label": "تحليل استخباري لثورة التأمين الرقمي (InsureTech)",
+      "category_tag": "التأمين الرقمي (Embedded / Micro-Insurance)",
+      "business_model": "B2B2C + Pay-as-you-go",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "InsureTech",
+      "Gig Economy",
+      "Consumer Protection"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Morocco", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "التأمين الرقمي متناهي الصغر حسب الطلب",
+      "problem_statement": "يعمل ملايين الشباب العربي في 'اقتصاد المنصة' (توصيل، عمل حر) دون أي مظلة تأمينية، لأن بوالص التأمين التقليدية معقدة وباهظة الثمن ولا تناسب طبيعة عملهم المتقطع. هناك فجوة هائلة لتأمين 'بالدقيقة' أو 'بالرحلة' يحمي العامل من الحوادث أو يحمي الشحنة من التلف بتكلفة سنتات قليلة تُخصم تلقائياً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Tamin-Go",
+        "industry_tag": "التأمين اللحظي لاقتصاد العمل الحر",
+        "revenue_model": "Micro-premium Commission + Platform Integration Fees + Claims Management SaaS",
+        "action_text": "عرض كيف أمّنا مليون رحلة توصيل في شهر واحد"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الحماية الرقمية (0-12 شهر)",
+      "subtitle": "تأمين ذكي يناسب نمط حياتك",
+      "phases": [
+        {
+          "title": "دمج واجهات البرمجية (API Integration)",
+          "description": "ربط المنصة بتطبيقات التوصيل والعمل الحر لتفعيل التأمين تلقائياً بمجرد بدء الرحلة أو المهمة، وإيقافه عند الانتهاء.",
+          "icon": "code",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام المطالبات المؤتمت (Instant Claims)",
+          "description": "استخدام الذكاء الاصطناعي لتحليل الصور والبيانات عند وقوع حادث، وصرف التعويضات الصغيرة فوراً لمحفظة المستخدم دون أوراق.",
+          "icon": "lightning-bolt",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التأمين السلوكي (Telematics-based)",
+          "description": "تقديم خصومات فورية للمستخدمين ذوي السلوك الآمن (مثل سائقي الدراجات الملتزمين بالسرعة) بناءً على بيانات حساسات الجوال.",
+          "icon": "shield-check",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "2M+ (Gig Worker Accident Logs & Delivery Patterns)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "شركات التأمين الكبرى تجد صعوبة في إدارة ملايين البوالص ذات القيمة المنخفضة يدوياً.",
+        "ضعف الوعي التأميني وصعوبة إجراءات الاشتراك التقليدية.",
+        "غياب البيانات الدقيقة لتقدير المخاطر في اقتصاد المنصات الحديث.",
+        "الحاجة لنظام تقني يعالج المطالبات في ثوانٍ لضمان ثقة المستخدم."
+      ],
+      "recommended_tech_stack": [
+        "Mobile Telematics SDKs",
+        "AI for Damage Assessment (Vision)",
+        "Smart Contracts for Payouts",
+        "Cloud-native Underwriting Engine",
+        "Real-time Fraud Detection AI"
+      ],
+      "main_risk_index": "مخاطر الاحتيال؛ التعامل مع مطالبات صغيرة وكثيرة يتطلب محرك ذكاء اصطناعي قوي جداً لاكتشاف الصور المزيفة أو المطالبات المتكررة."
+    }
+  }
+}

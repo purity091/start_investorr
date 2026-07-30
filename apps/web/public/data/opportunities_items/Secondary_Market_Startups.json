@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-FIN-2026-SECOND-MKT",
+      "status_label": "تحليل استخباري لتسييل الثروات الورقية",
+      "category_tag": "التقنية المالية (Private Equity / Liquidity)",
+      "business_model": "Trading Commissions + Listing Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Capital Markets",
+      "Startup Ecosystem",
+      "Liquidity Solutions"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "سوق التداول الثانوي لأسهم الشركات الناشئة والخاصة",
+      "problem_statement": "يمتلك الموظفون والمستثمرون الأوائل في الشركات الناشئة العربية الكبرى 'ثروات ورقية' بمليارات الدولارات، لكنهم مضطرون للانتظار لسنوات (أو حتى الاكتتاب العام) لتحويلها إلى نقد. غياب سوق ثانوي منظم يجعل هذه الأسهم أصولاً مجمدة، ويقلل من جاذبية العمل في الشركات الناشئة، ويحرم المستثمرين الجدد من الدخول في شركات واعدة قبل وصولها للبورصة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sila-Exchange",
+        "industry_tag": "منصة تداول حصص الشركات الخاصة",
+        "revenue_model": "2-3% Trading Commission + Cap Table Management SaaS fees",
+        "action_text": "استعراض خطة تسييل حصص الموظفين في شركات الـ 'يونيكورن' العربية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق تسييل الأسهم (0-18 شهر)",
+      "subtitle": "حول أوراقك إلى سيولة في دقائق",
+      "phases": [
+        {
+          "title": "أتمتة سجلات المساهمين (Digital Cap Table)",
+          "description": "تطوير نظام برمي يربط سجلات الشركات بالمنصة، لضمان تحديث الملكيات لحظياً ومنع التلاعب أو الأخطاء القانونية.",
+          "icon": "clipboard-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء نظام التسعير العادل (Valuation Engine)",
+          "description": "استخدام خوارزميات تحلل جولات التمويل السابقة، والمؤشرات المالية الحالية، وعروض الشراء والبيع لتحديد سعر عادل للسهم في السوق الثانوي.",
+          "icon": "trending-up",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق منصة التداول المعتمدة",
+          "description": "تفعيل لوحة تداول تتيح للمستثمرين المعتمدين والمؤسسات شراء حصص من الموظفين والمستثمرين الملائكيين بكل سلاسة وقانونية.",
+          "icon": "currency-dollar",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "200+ Regional Startups & 10K+ Employee Option Plans"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تعقيد الإجراءات القانونية والموافقة المسبقة من مجالس إدارة الشركات.",
+        "خوف الشركات من فقدان السيطرة على سجل المساهمين ودخول أطراف غير مرغوبة.",
+        "صعوبة تقييم سعر السهم في ظل غياب تداول يومي أو إفصاحات مالية عامة.",
+        "الحاجة لتراخيص هيئات أسواق مال متخصصة لهذا النوع من التداول."
+      ],
+      "recommended_tech_stack": [
+        "Private Blockchain for Cap Table Integrity",
+        "Secure Document Vaults (E2E)",
+        "Automated Compliance Engine",
+        "High-frequency Trading matching engine",
+        "API integrations with HR platforms"
+      ],
+      "main_risk_index": "مخاطر السيولة؛ نجاح المنصة يعتمد على خلق توازن بين عدد البائعين (الموظفين) والمشترين (المؤسسات) لضمان عدم انهيار سعر السهم."
+    }
+  }
+}

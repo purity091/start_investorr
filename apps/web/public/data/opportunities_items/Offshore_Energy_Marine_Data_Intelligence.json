@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-NRG12",
+      "status_label": "تحليل فجوة بيانات الطاقة البحرية المتجددة",
+      "category_tag": "Blue Energy / Ocean-Data / Renewables",
+      "business_model": "Data Subscriptions (B2B) + Consulting for Energy Developers + Gov Tech Support",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Energy",
+      "Marine Technology",
+      "Blue Economy"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Red Sea (NEOM Energy)", "flag": "🇸🇦" },
+        { "name": "Oman (Coast of Dhofar)", "flag": "🇴🇲" },
+        { "name": "Egypt (Mediterranean Wind)", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "بيانات الرياح الزرقاء: ذكاء الطاقة البحرية المتكامل",
+      "problem_statement": "تخطط دول المنطقة لمشاريع طاقة رياح بحرية (Offshore Wind) وطاقة أمواج بمليارات الدولارات، لكنها تفتقر لبيانات دقيقة وطويلة الأمد حول سرعة الرياح في الأعماق، طبيعة قاع البحر، والتيارات المائية. الفجوة هي شبكة من العوامات الذكية (Smart Buoys) والحساسات البحرية التي ترسم 'أطلس الطاقة الزرقاء' اللحظي للمستثمرين."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Bahr-Pulse",
+        "industry_tag": "استخبارات الطاقة والبيئة البحرية",
+        "revenue_model": "Annual Data Licensing for Energy Firms + Site Suitability Reports + Marine Biodiversity Monitoring",
+        "action_text": "استعراض أول خريطة حية لطاقة الرياح البحرية في البحر الأحمر"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المحيط الطاقي (0-48 شهر)",
+      "subtitle": "فك شفرة البحار لدعم الطاقة الخضراء",
+      "phases": [
+        {
+          "title": "نشر شبكة العوامات الاستكشافية",
+          "description": "توزيع عوامات ذكية مزودة بحساسات ليدار (LiDAR) لقياس سرعة الرياح على مستويات مختلفة والتيارات المائية بدقة فائقة.",
+          "icon": "rss",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "رسم خرائط قاع البحر (Bathy-Mapping)",
+          "description": "استخدام مركبات تحت مائية ذاتية القيادة (AUVs) لتصوير قاع البحر وتحديد أفضل أماكن لتثبيت توربينات الرياح البحرية.",
+          "icon": "map",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة 'التوأم الرقمي للبحار' (Marine Twin)",
+          "description": "توفير واجهة برمجية تتيح لمطوري الطاقة محاكاة أداء محطاتهم المستقبلية بناءً على البيانات التاريخية واللحظية للبحار.",
+          "icon": "presentation-chart-line",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Offshore Wind Potential (GW) vs Existing Marine Data Gaps"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية جداً للعمليات البحرية الميدانية.",
+        "صعوبة صيانة الحساسات في بيئات الأعماق وتحت الأمطار العاتية.",
+        "الحاجة لتراخيص أمنية معقدة للمسح البحري في المياه الإقليمية.",
+        "نقص النماذج الرياضية التي تتنبأ بسلوك الرياح في الممرات الضيقة كالبحر الأحمر."
+      ],
+      "recommended_tech_stack": [
+        "Floating LiDAR Systems",
+        "Autonomous Underwater Vehicles (AUVs)",
+        "Satellite Bathymetry Data",
+        "AI for Oceanographic Forecasting",
+        "Solar-powered Marine Sensors"
+      ],
+      "main_risk_index": "الاستدامة الفيزيائية؛ الظروف البحرية القاسية قد تدمر الحساسات، مما يتطلب تصاميم مدرعة واستراتيجية صيانة دورية مكلفة."
+    }
+  }
+}

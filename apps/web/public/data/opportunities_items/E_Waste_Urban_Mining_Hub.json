@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-STRAT-2026-ENV04",
+      "status_label": "تحليل فجوة استعادة المعادن الثمينة من المخلفات",
+      "category_tag": "GreenTech / Circular Economy",
+      "business_model": "Mineral Sales + Collection Fees + Carbon Credits",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Environment",
+      "Recycling",
+      "Rare Minerals"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia (Electronics Consumption)", "flag": "🇸🇦" },
+        { "name": "UAE (Tech Hub)", "flag": "🇦🇪" },
+        { "name": "Egypt (Mass Volume)", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "مركز تعدين النفايات الإلكترونية لاستخلاص المعادن الاستراتيجية",
+      "problem_statement": "يُنتج الوطن العربي ملايين الأطنان من النفايات الإلكترونية سنوياً. 95% منها يُرمى في المكبات، مما يضيع مليارات الدولارات من الذهب والنحاس والكوبالت الموجود بداخلها، ويسبب تلوثاً ساماً للمياه الجوفية. الفجوة هي غياب مصانع استخلاص كيميائية وفيزيائية متطورة محلياً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Thamin-Recycle",
+        "industry_tag": "التعدين الحضري المستدام",
+        "revenue_model": "Sale of Extracted Gold/Copper + Collection Subscriptions + Export of Hazardous Parts",
+        "action_text": "تحويل أطنان الهواتف القديمة إلى سبائك ذهب ونحاس"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التعدين الأخضر (0-36 شهر)",
+      "subtitle": "من المهملات إلى المعادن النفيسة",
+      "phases": [
+        {
+          "title": "بناء شبكة الجمع الذكية",
+          "description": "تطوير تطبيق وتوزيع صناديق جمع ذكية في المولات والشركات تمنح مكافآت رقمية مقابل تسليم الأجهزة القديمة.",
+          "icon": "truck",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "أتمتة التفكيك والفرز",
+          "description": "استخدام أذرع روبوتية ورؤية حاسوبية لفصل اللوحات الإلكترونية (PCBs) عن الهياكل البلاستيكية والمعدنية بسرعة.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "وحدة الاستخلاص الكيميائي النظيف",
+          "description": "تطبيق تقنيات (Hydrometallurgy) لاستخلاص المعادن الثمينة بنسبة نقاء 99% وبأدنى حد من الانبعاثات الكربونية.",
+          "icon": "beaker",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Annual E-waste Growth Rate vs Global Commodity Prices"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لتقنيات الصهر التقليدية الملوثة.",
+        "غياب القوانين الصارمة التي تمنع رمي الإلكترونيات في النفايات العامة.",
+        "صعوبة جمع كميات ضخمة ومستمرة لتشغيل المصانع.",
+        "نقص الخبرات التقنية المحلية في الكيمياء الصناعية لاستخلاص المعادن."
+      ],
+      "recommended_tech_stack": [
+        "Robotic Disassembly Lines",
+        "Computer Vision for Component ID",
+        "Hydrometallurgy Processing Systems",
+        "Blockchain for Material Provenance",
+        "Digital Reward Systems (Loyalty Tech)"
+      ],
+      "main_risk_index": "تقلب أسعار المعادن؛ نجاح المشروع يتطلب عقود توريد طويلة الأمد مع شركات التصنيع الإلكتروني العالمية."
+    }
+  }
+}

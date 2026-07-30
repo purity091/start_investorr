@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-AFR-2026-LOG07",
+      "status_label": "تحليل فجوة سلاسل الإمداد والوصول للأسواق",
+      "category_tag": "اللوجستيات (Logistics / Supply Chain AI)",
+      "business_model": "Aggregator Commission + Subscription for Drivers + Data Insights",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Mobility",
+      "Logistics",
+      "Market Access"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Sudan", "flag": "🇸🇩" },
+        { "name": "Mauritania", "flag": "🇲🇷" },
+        { "name": "Yemen", "flag": "🇾🇪" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "منصة الربط اللوجستي الذكي للمنتجات الريفية",
+      "problem_statement": "يفقد المزارعون في السودان وموريتانيا 30% من أرباحهم بسبب تكلفة النقل المرتفعة وغياب الربط المباشر مع المدن. الشاحنات تعود فارغة في رحلة الإياب، والوسطاء يستغلون غياب البيانات. هناك فجوة لمنصة ذكاء اصطناعي تنظم حركة النقل 'التشاركي' وتربط المنتج بالبائع النهائي مباشرة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Rahal-Connect",
+        "industry_tag": "عصب التجارة الريفية الذكي",
+        "revenue_model": "10-15% Commission on Freight + Premium Listing for Bulk Buyers + Fuel Financing",
+        "action_text": "استعراض تقليل تكاليف النقل بنسبة 25% عبر الأتمتة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التدفق التجاري (0-18 شهر)",
+      "subtitle": "ربط الحقول بالأسواق بذكاء",
+      "phases": [
+        {
+          "title": "بناء شبكة السائقين والمجمعين",
+          "description": "تطوير تطبيق يعمل عبر الرسائل النصية والإنترنت الضعيف لتسجيل الشاحنات المتاحة وتحديد مساراتها.",
+          "icon": "truck",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "خوارزمية تجميع الحمولات (Load Pooling)",
+          "description": "استخدام الذكاء الاصطناعي لدمج حمولات صغار المزارعين في شاحنة واحدة لتقليل التكلفة وضمان الامتلاء الدائم.",
+          "icon": "duplicate",
+          "color_theme": "rose"
+        },
+        {
+          "title": "توقع الطلب والأسعار اللحظي",
+          "description": "تزويد المزارعين ببيانات حول الأسعار في المدن لاختيار أفضل وقت لإرسال محاصيلهم وتجنب الوفرة الزائدة.",
+          "icon": "presentation-chart-line",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "Mapping of Rural Production Zones vs Urban Demand Centers"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تهالك البنية التحتية للطرق في المناطق الريفية.",
+        "غياب الثقة بين المزارعين وسائقي الشاحنات المستقلين.",
+        "عدم توفر وقود مستقر أو مراكز صيانة على الطرق الطويلة.",
+        "الاعتماد على نظام 'الوسطاء' التقليدي الذي يقاوم التغيير الرقمي."
+      ],
+      "recommended_tech_stack": [
+        "Route Optimization Algorithms (Genetic Algorithms)",
+        "USSD Gateway for Non-smartphone users",
+        "IoT Fleet Tracking (Low-cost GPS)",
+        "Digital Escrow for Payments",
+        "Predictive Demand Modeling"
+      ],
+      "main_risk_index": "المخاطر التشغيلية؛ تأخر الشاحنات بسبب ظروف الطرق أو الأعطال الميكانيكية يتطلب نظام 'إدارة استثناءات' ذكي ومرن."
+    }
+  }
+}

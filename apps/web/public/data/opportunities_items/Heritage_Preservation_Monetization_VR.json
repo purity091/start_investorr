@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-CUL10",
+      "status_label": "تحليل فجوة حفظ التراث والترميم الرقمي",
+      "category_tag": "HeritageTech / VR / NFT / Tourism",
+      "business_model": "Digital Twin Licensing + VR Tourism Subscriptions + Academic Data Sales",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Culture",
+      "Virtual Reality",
+      "Digital Archiving"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Palmyra (Tadmur)", "flag": "🇸🇾" },
+        { "name": "Old Aleppo (Citadel/Souks)", "flag": "🇸🇾" },
+        { "name": "Old Damascus (Umayyad Mosque)", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "تدوير التراث: الحفظ والترميم الرقمي المربح",
+      "problem_statement": "تعرضت المواقع الأثرية السورية (6 مواقع مسجلة في اليونسكو) لدمار كبير، ويصعب ترميمها فيزيائياً حالياً لنقص التمويل والخبراء. العالم متعطش لرؤية هذا التراث. الفجوة هي غياب 'توائم رقمية' (Digital Twins) فائقة الدقة لهذه المواقع تتيح للعالم زيارتها افتراضياً والمساهمة في ترميمها رقمياً كنموذج استثماري ثقافي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Athar-Souri",
+        "industry_tag": "تكنولوجيا الحفاظ الثقافي الغامر",
+        "revenue_model": "VR Global Tour Tickets + Digital Asset Licensing (Games/Movies) + NFT-based Crowdfunding for Restoration",
+        "action_text": "استعراض خطة تخليد آثار سوريا رقمياً للعالم"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق تخليد الحضارة (0-48 شهر)",
+      "subtitle": "بناء ما دمرته الحرب في الفضاء الرقمي",
+      "phases": [
+        {
+          "title": "المسح الليزري والفوتوغرامتري",
+          "description": "استخدام الطائرات بدون طيار وماسحات الليزر لرسم خرائط 3D دقيقة للمواقع الأثرية، مع دمج الصور التاريخية لإعادة بناء الأجزاء المدمرة رقمياً.",
+          "icon": "camera",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تطوير 'متحف الميتافيرس السوري'",
+          "description": "بناء منصة واقع افتراضي اجتماعية تتيح للسياح والطلاب حول العالم زيارة تدمر أو حلب القديمة والتفاعل مع تاريخها وقصصها.",
+          "icon": "sparkles",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة التمويل الجماعي للترميم (Restore-to-Earn)",
+          "description": "تمكين المانحين والمستثمرين من شراء 'قطع رقمية' من الآثار، حيث تذهب العوائد لتمويل عمليات الترميم الفيزيائي على الأرض.",
+          "icon": "link",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.2,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 9.9,
+      "data_points_analyzed": "Pre-war Tourism Revenue vs Global Interest in Heritage Protection"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية جداً لعمليات المسح والرقمنة عالية الجودة.",
+        "القيود الأمنية على استخدام الطائرات بدون طيار (Drones) في المواقع الحساسة.",
+        "نقص التكامل بين البيانات الأثرية التاريخية والتقنيات الرقمية الحديثة.",
+        "الحاجة لاعتراف دولي (يونسكو) بالتوائم الرقمية كأدوات حفظ رسمية."
+      ],
+      "recommended_tech_stack": [
+        "LiDAR & Photogrammetry Data Fusion",
+        "Unreal Engine 5 for Cinematic VR",
+        "Spatial Audio for Immersive Experience",
+        "Blockchain for Provenance & Ownership",
+        "AI for Automated Reconstruction of Ruins"
+      ],
+      "main_risk_index": "الاستقرار السياسي؛ حماية المعدات الميدانية في المواقع الأثرية البعيدة تتطلب تنسيقاً أمنياً معقداً وضمانات دولية."
+    }
+  }
+}

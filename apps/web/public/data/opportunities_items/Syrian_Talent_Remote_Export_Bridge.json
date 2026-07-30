@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-TAL03",
+      "status_label": "تحليل فجوة استغلال المواهب الرقمية العابرة للحدود",
+      "category_tag": "HR-Tech / Remote Work / FinTech",
+      "business_model": "Managed Services Fee + Talent Subscription + Payment Processing Margin",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Gig Economy",
+      "Digital Services",
+      "Financial Inclusion"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Syria (Talent Base)", "flag": "🇸🇾" },
+        { "name": "GCC Markets (Demand)", "flag": "🇸🇦" },
+        { "name": "EU Tech Sector", "flag": "🇪🇺" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "جسر المواهب السورية: منصة تصدير الخدمات الرقمية",
+      "problem_statement": "تمتلك سوريا آلاف المبرمجين والمصممين المبدعين الذين يعملون برواتب منخفضة جداً محلياً، بينما تعاني الشركات العالمية من نقص الكفاءات. العقبة الكبرى هي 'العقوبات المالية' وصعوبة استلام المستحقات، وغياب الثقة القانونية. الفجوة هي منصة وسيطة تؤمن العقود، تضمن الجودة، وتحل مشكلة المدفوعات عبر حلول بديلة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Syria-Remote",
+        "industry_tag": "تصدير الكفاءات الرقمية الخاضعة للعقوبات",
+        "revenue_model": "15-20% Platform Fee + Managed Team Contracts + Upskilling Academy",
+        "action_text": "استعراض خطة تشغيل 5000 خبير سوري في الأسواق الدولية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التدفق المعرفي (0-18 شهر)",
+      "subtitle": "تجاوز الحدود عبر السحاب",
+      "phases": [
+        {
+          "title": "بناء مجمع الكفاءات المعتمد (Vetted Pool)",
+          "description": "اختيار وتدقيق أفضل المبرمجين السوريين واختبار مهاراتهم لضمان مطابقتها للمعايير العالمية.",
+          "icon": "user-group",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تأسيس بوابة الدفع 'الموازية'",
+          "description": "استخدام العملات المستقرة (Stablecoins) أو بطاقات دفع دولية من دول وسيطة لتمكين المبرمجين من استلام مستحقاتهم بالعملة الصعبة.",
+          "icon": "switch-horizontal",
+          "color_theme": "rose"
+        },
+        {
+          "title": "مركز إدارة العقود الدولية",
+          "description": "توفير غطاء قانوني (Entity) خارج سوريا لإبرام العقود مع الشركات العالمية لضمان الامتثال والشفافية.",
+          "icon": "shield-check",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "Salary Arbitrage (Syria vs GCC/EU) & Digital Literacy Rates"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "صعوبة التحويلات البنكية الرسمية (SWIFT) بسبب العقوبات.",
+        "ضعف الوصول للكهرباء والإنترنت المستقر (يتم حله بمراكز عمل Co-working Hubs).",
+        "نقص المهارات الناعمة (Soft Skills) واللغة الإنجليزية لدى بعض المبدعين السوريين.",
+        "تخوف الشركات العالمية من 'التعقيدات القانونية' المرتبطة بالعمل مع أفراد داخل سوريا."
+      ],
+      "recommended_tech_stack": [
+        "Stablecoin Payment Rails (USDC/USDT)",
+        "Decentralized Identity (DID) for Freelancers",
+        "Remote Management Tools Integration",
+        "Secure VPN/Edge Infrastructure for Talent Hubs",
+        "AI for Skill Matching & Job Postings"
+      ],
+      "main_risk_index": "المخاطر السياسية والتشريعية؛ يتطلب المشروع هيكلية قانونية دقيقة في دول مثل الإمارات أو تركيا لتجنب انتهاك لوائح العقوبات مع تقديم حلول شرعية."
+    }
+  }
+}

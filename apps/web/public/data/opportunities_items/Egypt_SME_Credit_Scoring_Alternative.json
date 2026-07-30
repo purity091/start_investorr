@@ -1,0 +1,82 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-EGY-2026-CREDIT",
+      "status_label": "تحليل استخباري للفجوة الائتمانية والشمول المالي",
+      "category_tag": "التقنية المالية (Alternative Credit Scoring / ML)",
+      "business_model": "B2B SaaS (API Integration)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "FinTech",
+      "Big Data Analytics",
+      "Financial Inclusion",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "محرك الجدارة الائتمانية السلوكي",
+      "problem_statement": "تعاني أكثر من 3.5 مليون منشأة صغيرة ومتوسطة في مصر من صعوبة الوصول للتمويل، حيث يرفض القطاع المصرفي 70% من الطلبات لعدم توفر قوائم مالية مدققة أو سجل ائتماني رسمي (I-Score). هذا يخلق 'فجوة سيولة' تعيق نمو الاقتصاد، بينما تتوفر بيانات ضخمة غير مستغلة (فواتير كهرباء، معاملات محافظ إلكترونية، أنماط شراء) يمكنها رسم صورة دقيقة للمخاطر الائتمانية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "SME-Score",
+        "industry_tag": "التقييم الائتماني القائم على الذكاء الاصطناعي",
+        "revenue_model": "Per-Score Transaction Fee + Annual API Licensing + Risk Management Advisory",
+        "action_text": "عرض نتائج دقة التنبؤ بالتعثر باستخدام البيانات البديلة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق تسييل البيانات (0-12 شهر)",
+      "subtitle": "تحويل السلوك الرقمي إلى ملاءة مالية",
+      "phases": [
+        {
+          "title": "تجميع البيانات البديلة (Data Aggregation)",
+          "description": "الربط مع شركات الاتصالات، شركات المرافق، ومنصات التجارة الإلكترونية لجمع نقاط بيانات غير تقليدية تعكس الالتزام المالي والنشاط التجاري.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك النمذجة السلوكية (ML Scoring Engine)",
+          "description": "تطوير خوارزميات تعلم آلة (XGBoost/LightGBM) تقوم بتحليل أكثر من 500 متغير سلوكي لإنشاء 'درجة جدارة' فورية تعادل السجل الائتماني التقليدي.",
+          "icon": "beaker",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التكامل مع جهات الإقراض (Lending Pipeline)",
+          "description": "توفير بوابة رقمية للبنوك وشركات التمويل متناهي الصغر (MFIs) لاتخاذ قرارات إقراض فورية مبنية على تقارير SME-Score، مما يقلل وقت الموافقة من أسابيع إلى دقائق.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "1.2M+ (Utility Bills & Mobile Wallet Transactions)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف جودة البيانات التاريخية في القطاع غير الرسمي.",
+        "تحفظ القطاع المصرفي المصري تجاه النماذج الاحتمالية بدلاً من الضمانات العينية.",
+        "تحديات تقنية في ربط قواعد البيانات المشتتة بين القطاع العام والخاص.",
+        "الحاجة لتشريعات تدعم استخدام البيانات الشخصية في التقييم الائتماني."
+      ],
+      "recommended_tech_stack": [
+        "Advanced Machine Learning for Credit Risk",
+        "Big Data Processing (Apache Spark)",
+        "API-First Architecture",
+        "Hyper-Secure Data Vaults (Encryption at rest/transit)",
+        "Explainable AI (XAI) for Regulatory Compliance"
+      ],
+      "main_risk_index": "الامتثال التنظيمي (CBE Regulations)؛ يتطلب المشروع موافقة البنك المركزي المصري لضمان قبول هذه النماذج كمرجع معتمد في قرارات الإقراض."
+    }
+  }
+}

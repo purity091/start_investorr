@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-MED10",
+      "status_label": "تحليل فجوة الوسائط الاستقصائية التفاعلية",
+      "category_tag": "MediaTech / Interactive-Storytelling / Journalism",
+      "business_model": "Premium Pay-per-Story + Syndication to Global Outlets + Academic Licensing",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Media",
+      "Journalism",
+      "Information Technology"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Global Arabic Audience (Truth Seekers)",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "الصحافة التفاعلية: تقارير 'اختر مسارك' الاستقصائية",
+      "problem_statement": "يعاني الجمهور من 'تخمة المعلومات' (Information Overload) والملل من التقارير الإخبارية التقليدية الطويلة. الفجوة هي منصة إعلامية تقدم تحقيقات استقصائية بصيغة تفاعلية غامرة، حيث يقرر المشاهد أي زاوية من الحقيقة يريد استكشافها أولاً، مع دمج بيانات حية وخرائط تفاعلية تجعل القارئ 'شريكاً' في البحث عن الحقيقة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Haqiqa-Interactive",
+        "industry_tag": "إعلام المستقبل والقصص الصحفية الغامرة",
+        "revenue_model": "Micro-payments for Deep-dives + Licensing for Educational Institutes + Institutional Memberships",
+        "action_text": "استعراض المنصة التي تحول التحقيق الصحفي إلى تجربة تفاعلية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق إعلام المشاركة (0-24 شهر)",
+      "subtitle": "أنت لا تشاهد الخبر، أنت تستكشفه",
+      "phases": [
+        {
+          "title": "تطوير محرك القصص المتفرعة (Branching Story Engine)",
+          "description": "بناء منصة برمجية تتيح للصحفيين بناء تقارير تحتوي على مسارات متعددة (Choose-your-own-path) تدمج الفيديو، الوثائق، والبيانات.",
+          "icon": "share",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "دمج 'البيانات الحية' (Live-Data Layer)",
+          "description": "ربط التقارير ببيانات أقمار صناعية أو إحصائيات اقتصادية لحظية تتغير داخل القصة لتعطي المشاهد أدلة واقعية متجددة.",
+          "icon": "presentation-chart-line",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة التحقق التشاركي (Open-Evidence)",
+          "description": "توفير ميزة تتيح للقراء المتخصصين رفع أدلة إضافية أو تدقيق الوثائق المعروضة لخلق 'تحقيق صحفي حي' يتطور مع الوقت.",
+          "icon": "search",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.3,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Engagement Time on Interactive Content vs Linear Video in MENA"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لإنتاج التقارير التفاعلية التي تتطلب مهارات برمجية وصحفية معاً.",
+        "نقص 'أدوات التأليف' (Authoring Tools) العربية المخصصة لهذا النوع من القصص.",
+        "الحاجة لوقت طويل لإنتاج تحقيق واحد عالي الجودة.",
+        "تحديات العرض السلس على الهواتف المحمولة ذات المواصفات المتوسطة."
+      ],
+      "recommended_tech_stack": [
+        "Web-based Branching Video Player",
+        "Data Visualization Frameworks (D3.js/Three.js)",
+        "Secure Content Management System (CMS)",
+        "AI for Automated Subtitle and Data Overlay",
+        "Cloud-based Interactive Hosting"
+      ],
+      "main_risk_index": "الموازنة بين التفاعل والمحتوى؛ خطر تحول التحقيق إلى 'لعبة' يفقدها جديتها الصحفية، مما يتطلب لمسة إخراجية احترافية تحافظ على التوازن."
+    }
+  }
+}

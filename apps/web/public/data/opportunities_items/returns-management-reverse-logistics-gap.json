@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ECOM9",
+      "status_label": "تحليل فوضى إدارة المرتجعات",
+      "category_tag": "Logistics (Reverse Logistics / Returns)",
+      "business_model": "Returns Platform + Logistics Fees + SaaS",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "E-commerce",
+      "Logistics",
+      "Returns"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "UAE", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 9
+    },
+    "core_content": {
+      "title": "نظام ذكي لإدارة المرتجعات في التجارة الإلكترونية",
+      "problem_statement": "تصل نسب المرتجعات في بعض الأسواق إلى 30%، ومع ذلك لا توجد أنظمة فعالة لإدارتها. يتم التعامل معها بشكل عشوائي، مما يؤدي إلى خسائر مالية كبيرة وتأخير في إعادة المنتجات إلى المخزون."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "ReturnFlow",
+        "industry_tag": "Reverse Logistics Platforms",
+        "revenue_model": "Return Fees + SaaS + Logistics Integration",
+        "action_text": "استعراض إدارة ذكية للمرتجعات"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة المرتجعات (0-9 أشهر)",
+      "subtitle": "تحويل الخسارة إلى كفاءة",
+      "phases": [
+        {
+          "title": "نظام تتبع المرتجعات",
+          "description": "تتبع كل طلب مرتجع.",
+          "icon": "box",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تحليل الأسباب",
+          "description": "فهم سبب الإرجاع.",
+          "icon": "chart",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تحسين العمليات",
+          "description": "تسريع إعادة المنتج.",
+          "icon": "cpu",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "2000+ (Returns Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "إدارة يدوية.",
+        "غياب الأنظمة.",
+        "تعقيد اللوجستيات.",
+        "عدم تحليل البيانات."
+      ],
+      "recommended_tech_stack": [
+        "Tracking Systems",
+        "AI Analytics",
+        "Logistics APIs",
+        "Inventory Integration",
+        "Cloud Platforms"
+      ],
+      "main_risk_index": "التشغيل؛ يحتاج إدارة معقدة."
+    }
+  }
+}

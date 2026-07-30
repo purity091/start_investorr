@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ECOM2",
+      "status_label": "تحليل أزمة الدفع عند الاستلام",
+      "category_tag": "E-commerce FinTech (Payments / COD)",
+      "business_model": "FinTech Platform + Risk Scoring + Transaction Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "E-commerce",
+      "Payments",
+      "Risk Management"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Morocco", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 9
+    },
+    "core_content": {
+      "title": "تقليل مخاطر الدفع عند الاستلام في التجارة الإلكترونية",
+      "problem_statement": "يشكل الدفع عند الاستلام (COD) أكثر من 60% من المعاملات في بعض الدول العربية، لكنه يأتي مع معدل إرجاع مرتفع يصل إلى 30–50%. هذا يؤدي إلى خسائر ضخمة للتجار تشمل تكاليف الشحن، التخزين، وفقدان المنتج. المشكلة الأساسية هي غياب نظام تقييم للمخاطر للعملاء قبل الشحن."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "PayTrust AI",
+        "industry_tag": "FinTech Risk Scoring",
+        "revenue_model": "Transaction Fee + Risk Scoring API",
+        "action_text": "استعراض تقليل المرتجعات الناتجة عن COD"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة تقليل المخاطر (0-9 أشهر)",
+      "subtitle": "شحن ذكي قائم على الثقة",
+      "phases": [
+        {
+          "title": "بناء نظام تقييم العملاء",
+          "description": "تحليل سلوك المستخدم وتاريخه.",
+          "icon": "user",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "دمج مع منصات التجارة",
+          "description": "تقديم API للتجار.",
+          "icon": "link",
+          "color_theme": "rose"
+        },
+        {
+          "title": "توصيات الشحن الذكي",
+          "description": "تحديد الطلبات عالية المخاطر.",
+          "icon": "shield",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "2300+ (COD Return Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف الدفع الإلكتروني.",
+        "عدم وجود بيانات موحدة للعملاء.",
+        "غياب أدوات تقييم المخاطر.",
+        "اعتماد كبير على COD."
+      ],
+      "recommended_tech_stack": [
+        "Machine Learning Models",
+        "Fraud Detection Systems",
+        "Payment APIs",
+        "User Behavior Analytics",
+        "Cloud Systems"
+      ],
+      "main_risk_index": "توفر البيانات؛ يحتاج الوصول إلى بيانات دقيقة للعملاء."
+    }
+  }
+}

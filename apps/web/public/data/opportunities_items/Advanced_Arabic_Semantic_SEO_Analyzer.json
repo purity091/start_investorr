@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-MKT03",
+      "status_label": "تحليل فجوة نية البحث باللغة العربية",
+      "category_tag": "AdTech / SEO / AI-Search",
+      "business_model": "SaaS Subscription + SEO Agency Dashboard + API for Content Platforms",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Marketing",
+      "SEO",
+      "Artificial Intelligence"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Egypt (Largest Content Hub)",
+          "flag": "🇪🇬"
+        },
+        {
+          "name": "Saudi Arabia & UAE (High Competition)",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 22
+    },
+    "core_content": {
+      "title": "محرك الظهور: أداة SEO العربية المتقدمة",
+      "problem_statement": "تعاني الشركات العربية من عدم دقة الأدوات العالمية (Semrush/Ahrefs) في فهم 'المرادفات' و'الصرف العربي' والكلمات الطويلة (Long-tail keywords) باللهجات المحلية. الفجوة هي أداة SEO تفهم دلالات اللغة العربية (Semantics)، تتنبأ بالترندات المحلية، وتساعد المواقع العربية على تصدر نتائج جوجل عبر محتوى ذكي يفهم نية الباحث الحقيقية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Tasadur-AI",
+        "industry_tag": "تكنولوجيا محركات البحث والذكاء اللغوي العربي",
+        "revenue_model": "Tiered SaaS Subscription (Pro/Business/Enterprise) + API Licensing for Large News Portals",
+        "action_text": "استعراض الأداة التي ستجعل موقعك الرقم الأول في البحث العربي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق السيادة البحثية (0-36 شهر)",
+      "subtitle": "فهم ما يبحث عنه العرب حقاً، وبأي لغة",
+      "phases": [
+        {
+          "title": "بناء الرسم البياني للمعرفة العربية (Knowledge Graph)",
+          "description": "خلق شبكة علاقات بين الكلمات والمفاهيم العربية (مثلاً: الربط بين 'سكن، شقة، عقار، بيت' سياقياً) لتوجيه الـ SEO بدقة.",
+          "icon": "share",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك تحليل المنافسين المحليين",
+          "description": "تطوير أداة تراقب أفضل المواقع العربية في كل تخصص وتحلل 'الفجوة المحتواه' (Content Gap) التي يمكن للمستثمر استغلالها.",
+          "icon": "presentation-chart-line",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نظام تحسين 'البحث الصوتي' (Voice-SEO)",
+          "description": "توفير ميزة تحسين المحتوى ليظهر في إجابات المساعدات الصوتية التي يتزايد استخدامها باللهجات العربية في المنازل والسيارات.",
+          "icon": "microphone",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.8,
+      "data_points_analyzed": "Accuracy Gaps in Global SEO Tools for Arabic Language vs Local Search Volume Growth"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التعقيد الصرفي للغة العربية (الجذور والاشتقاقات) الذي يصعب على الخوارزميات الغربية.",
+        "تنوع اللهجات التي تؤثر على كلمات البحث (مثلاً: 'جوال' vs 'موبايل' vs 'خليوي').",
+        "نقص البيانات المتاحة حول تكلفة النقرة (CPC) الدقيقة للمناطق العربية الصغرى.",
+        "التحديثات المستمرة لخوارزميات جوجل التي تتطلب متابعة تقنية لحظية."
+      ],
+      "recommended_tech_stack": [
+        "NLP with Morphological Analysis for Arabic",
+        "Machine Learning for Search Intent Classification",
+        "Big Data Processing for Keyword Trends",
+        "Cloud-native Web Scraping Infrastructure",
+        "API First Architecture"
+      ],
+      "main_risk_index": "تغيير خوارزميات جوجل؛ أي تغيير جذري من جوجل قد يؤثر على فعالية الأداة، مما يتطلب فريق 'هندسة عكسية' (Reverse Engineering) سريع الاستجابة."
+    }
+  }
+}

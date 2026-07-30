@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-KSA-2026-EV",
+      "status_label": "تحليل استخباري للبنية التحتية للطاقة النظيفة",
+      "category_tag": "النقل والطاقة (EV Infrastructure / IoT)",
+      "business_model": "CaaS (Charging-as-a-Service) + Data Monetization",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Mobility",
+      "Energy Storage",
+      "Smart Grids",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Inter-city Highways", "flag": "🇸🇦" },
+        { "name": "Secondary Cities", "flag": "🇸🇦" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "ربط المملكة عبر شبكة شحن ذكية عابرة للصحاري",
+      "problem_statement": "تستهدف السعودية وصول نسبة السيارات الكهربائية في الرياض إلى 30% بحلول 2030، لكن 'قلق المدى' (Range Anxiety) يظل العائق الأكبر للسفر بين المدن. تفتقر الطرق السريعة والمناطق غير الحضرية لمحطات شحن سريع وموثوقة، كما أن شبكة الكهرباء في بعض المناطق النائية لا تتحمل الأحمال العالية المفاجئة للشحن السريع."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "EV-Rural",
+        "industry_tag": "حلول الشحن الهجين والمنفصل عن الشبكة",
+        "revenue_model": "Charging Fees + Grid Balancing Services + Retail/Advertising Revenue",
+        "action_text": "استعراض خطة نشر المحطات المدعومة بالطاقة الشمسية وتخزين البطاريات"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق كهربة الطرق السريعة (0-24 شهر)",
+      "subtitle": "تمكين التنقل الأخضر في أوسع جغرافيا بالمنطقة",
+      "phases": [
+        {
+          "title": "محطات الشحن الهجينة (Solar-Storage Hubs)",
+          "description": "بناء محطات شحن تعتمد على الألواح الشمسية وبطاريات تخزين ضخمة لضمان الشحن السريع حتى في المناطق التي تعاني من ضعف الربط بالشبكة الوطنية.",
+          "icon": "lightning-bolt",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منصة الإدارة الذكية (AI Load Balancing)",
+          "description": "تطوير نظام يتحكم في توزيع الطاقة بناءً على حركة المرور التنبؤية، مع توجيه السائقين للمحطات الأقل ازدحاماً عبر تطبيق ذكي مرتبط بأنظمة السيارات.",
+          "icon": "map",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكامل أساطيل النقل (Fleet Electrification)",
+          "description": "توقيع اتفاقيات مع شركات اللوجستيات الكبرى لتوفير مسارات شحن مخصصة لشاحنات النقل الكهربائية، مما يسرع من التحول الأخضر في قطاع الشحن.",
+          "icon": "truck",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "1500+ (Highway Traffic Volume & Power Grid Maps)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكاليف الباهظة لمد خطوط الكهرباء عالية الجهد لمسافات طويلة في الصحراء.",
+        "تأثير الحرارة العالية على كفاءة البطاريات وسرعة الشحن.",
+        "غياب نموذج تجاري واضح للمحطات في المناطق قليلة الكثافة السكانية.",
+        "الحاجة لتوحيد معايير الشحن (Connectors) بين مختلف ماركات السيارات."
+      ],
+      "recommended_tech_stack": [
+        "Silicon Carbide (SiC) Inverters (لكفاءة عالية في الحرارة)",
+        "BESS (Battery Energy Storage Systems)",
+        "IoT for Remote Monitoring & Maintenance",
+        "V2G (Vehicle-to-Grid) Readiness",
+        "AI for Demand Forecasting"
+      ],
+      "main_risk_index": "سرعة تبني السيارات الكهربائية؛ المشروع يحتاج لنظام مالي مرن يتحمل فترة انخفاض عدد المستخدمين في البداية مقابل الهيمنة المستقبلية."
+    }
+  }
+}

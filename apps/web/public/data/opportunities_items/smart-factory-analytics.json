@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-IND-2026-FM",
+      "status_label": "تحليل استخباراتي للثورة الصناعية الرابعة",
+      "category_tag": "الذكاء الاصطناعي الصناعي (Industrial AI & IIoT)",
+      "business_model": "B2B SaaS + Edge Deployment",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Industry 4.0",
+      "Cognitive Manufacturing",
+      "Operational Intelligence"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "FactoryMind: إنهاء الحقبة المظلمة في سلاسل الإنتاج",
+      "problem_statement": "تعاني المصانع في المنطقة من 'العمى التشغيلي'؛ حيث يتم اتخاذ القرارات بناءً على تقارير ورقية أو بيانات تاريخية متأخرة. يؤدي غياب الرؤية اللحظية إلى هدر بنسبة 20% في كفاءة المعدات الإجمالية (OEE)، وارتفاع تكاليف الصيانة التصحيحية المفاجئة، وفشل في توقع أعطال خطوط الإنتاج قبل وقوعها، مما يعطل سلاسل الإمداد الإقليمية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "FactoryMind",
+        "industry_tag": "منصة التوائم الرقمية (Digital Twin) والتحليل التنبؤي",
+        "revenue_model": "Annual Recurring Revenue (ARR) + Sensor Integration Fees",
+        "action_text": "مراجعة تقرير خفض التكاليف التشغيلية بنسبة 25% للهياكل الصناعية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التحول الرقمي الشامل (0-12 شهر)",
+      "subtitle": "من الأتمتة التقليدية إلى المصنع الإدراكي",
+      "phases": [
+        {
+          "title": "مرحلة التوأمة الرقمية (Digital Twin)",
+          "description": "ربط حساسات IoT بخطوط الإنتاج لبناء نموذج افتراضي لحظي يعكس الحالة الصحية للمعدات، مع تفعيل لوحات تحكم ذكية تقيس معدل OEE لحظة بلحظة.",
+          "icon": "cpu",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك الصيانة التنبؤية (Predictive AI)",
+          "description": "نشر خوارزميات تعلم الآلة لتحليل الاهتزازات والحرارة والطاقة، للتنبؤ بالأعطال قبل حدوثها بأسابيع، وتقليل وقت التوقف غير المخطط له (Downtime) بنسبة 30%.",
+          "icon": "shield-check",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التكامل الرأسي والأفقي (Smart Ecosystem)",
+          "description": "ربط منصة FactoryMind بأنظمة ERP وMES لآتمتة طلبات قطع الغيار وجدولة الإنتاج بناءً على حالة الماكينات الفعلية، وتحويل المصنع إلى وحدة ذكية ذاتية التنظيم.",
+          "icon": "share",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.2,
+      "competitive_moat": 8.8,
+      "data_points_analyzed": "3500+ (Factory Logs & Industrial Sensor Streams)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "فجوة التكامل بين تقنية المعلومات (IT) والتقنية التشغيلية (OT).",
+        "تنوع البروتوكولات الصناعية واختلاف أجيال الماكينات في المصنع الواحد.",
+        "ارتفاع التكلفة الرأسمالية الأولية للحلول العالمية غير المخصصة للسوق المحلي.",
+        "المخاوف الأمنية المتعلقة بربط أنظمة الإنتاج الحساسة بالسحابة الإلكترونية."
+      ],
+      "recommended_tech_stack": [
+        "Edge Computing (for Real-time Processing)",
+        "MQTT & OPC-UA Protocols",
+        "Time-Series Databases (InfluxDB)",
+        "Computer Vision for Quality Control",
+        "Cyber-Physical System Security (Zero Trust)"
+      ],
+      "main_risk_index": "تحدي 'تكامل البيانات الموروثة' (Legacy Systems)؛ يتطلب الأمر مهندسين متخصصين في البروتوكولات القديمة لضمان تدفق البيانات بسلامة من الماكينات الكلاسيكية."
+    }
+  }
+}

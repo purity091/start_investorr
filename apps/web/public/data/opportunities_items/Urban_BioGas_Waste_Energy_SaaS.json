@@ -1,0 +1,82 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-ENV09",
+      "status_label": "تحليل فجوة إدارة النفايات والطاقة المنزلية",
+      "category_tag": "Circular Economy / Clean Energy / BioTech",
+      "business_model": "Hardware Sales (Biogas Units) + Maintenance SaaS + Fertilizer Sales",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Environment",
+      "Energy Autonomy",
+      "Waste Management"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Syrian Cities (Urban Waste Hubs)", "flag": "🇸🇾" },
+        { "name": "Peri-urban Areas", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "طاقة الأحياء: معالجة النفايات وتوليد الغاز الحيوي (BioGas)",
+      "problem_statement": "تعاني المدن السورية من تراكم النفايات العضوية في الشوارع ونقص حاد في 'غاز الطهي' والكهرباء. الفجوة هي غياب وحدات 'هاضم حيوي' (Bio-Digesters) منزلية أو حيّية، تقوم بتحويل فضلات الطعام والنفايات العضوية إلى غاز طهي نظيف وأسمدة سائلة عالية الجودة للمزارع القريبة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Nar-Bio",
+        "industry_tag": "الاستقلال الطاقي المنزلي المستدام",
+        "revenue_model": "Sale of Household/Community Biogas Units + Maintenance Subscriptions + Organic Fertilizer Offtake",
+        "action_text": "تحويل نفايات المطبخ إلى غاز طهي مجاني يومياً"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق تدوير الطاقة (0-24 شهر)",
+      "subtitle": "لا نفايات بعد اليوم، فقط طاقة",
+      "phases": [
+        {
+          "title": "تصنيع الهاضمات الحيوية المعيارية",
+          "description": "تطوير وحدات 'بيوغاز' بلاستيكية متينة ومنخفضة التكلفة يمكن تركيبها في حدائق المنازل أو أسطح الأبنية السكنية.",
+          "icon": "chip",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام الفرز والتحلل الذكي",
+          "description": "استخدام إضافات بكتيرية (Enzymes) تسرع عملية التحلل العضوي وتضمن إنتاج غاز نقي بلا روائح كريهة.",
+          "icon": "beaker",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة الأسمدة العضوية (Bio-Fertilizer)",
+          "description": "جمع وتعبئة المخلفات السائلة الناتجة (Slurry) وبيعها كمخصبات زراعية ممتازة للمشاتل والمزارع المحلية.",
+          "icon": "leaf",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "Organic Waste Percentage in Syrian Urban Centers vs Fuel Prices"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف الوعي التقني بكيفية عمل أنظمة البيوغاز المنزلية.",
+        "الحاجة لمساحة فيزيائية صغيرة للتركيب (تم حلها بتصاميم عمودية).",
+        "النظرة التقليدية للنفايات كمادة يجب التخلص منها لا استثمارها.",
+        "التحديات التقنية في ضغط وتخزين الغاز الناتج للاستخدام الفوري."
+      ],
+      "recommended_tech_stack": [
+        "Small-scale Anaerobic Digesters",
+        "Biogas Purification Filters (H2S removal)",
+        "IoT Pressure & Level Monitoring",
+        "Bio-enzymatic Catalysts",
+        "Mobile App for Maintenance & Gas Alerts"
+      ],
+      "main_risk_index": "السلامة العامة؛ مخاطر تسرب الغاز تتطلب صمامات أمان عالية الجودة وتدريباً دقيقاً للمستخدمين على كيفية التشغيل."
+    }
+  }
+}

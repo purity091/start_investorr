@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-CON02",
+      "status_label": "تحليل فجوة استدامة مواد إعادة الإعمار",
+      "category_tag": "ConTech / Circular Economy",
+      "business_model": "Waste Processing Fees + Recycled Material Sales + Gov Contracts",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Reconstruction",
+      "Environment",
+      "Construction Tech"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Aleppo (East)", "flag": "🇸🇾" },
+        { "name": "Homs (Old City)", "flag": "🇸🇾" },
+        { "name": "Rif Dimashq", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "نهضة الركام: تدوير أنقاض الحرب إلى مواد بناء",
+      "problem_statement": "يوجد في سوريا ملايين الأطنان من ركام الأبنية المدمرة التي تعيق الحركة وتشكل عبئاً بيئياً. في المقابل، تكلفة مواد البناء الجديدة (أسمنت، حصى) باهظة جداً وتتطلب استيراداً. الفجوة هي غياب مصانع تدوير متنقلة تقوم بطحن الركام، فرزه، وتحويله إلى طوب بناء (Blocks) أو مواد رصف طرق معتمدة إنشائياً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "I-maar-Recycle",
+        "industry_tag": "تدوير ركام الإعمار المستدام",
+        "revenue_model": "Service Fee for Debris Clearance + Sale of Recycled Aggregate + Carbon Credits",
+        "action_text": "تحويل أنقاض المدن المدمرة إلى وحدات بناء سكنية رخيصة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق إحياء المدن (0-36 شهر)",
+      "subtitle": "البناء مما تبقى، لأجل ما سيأتي",
+      "phases": [
+        {
+          "title": "نشر محطات الكسح المتنقلة",
+          "description": "توزيع وحدات فرز وطحن آلي في الأحياء الأكثر تضرراً لتقليل تكلفة نقل الركام ومعالجته في الموقع.",
+          "icon": "truck",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "معالجة وتحسين المواد (Chemical Stabilization)",
+          "description": "استخدام إضافات كيميائية لرفع متانة الركام المطحون ليطابق كود البناء السوري للمنشآت غير الإنشائية والطرق.",
+          "icon": "beaker",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تصنيع الطوب الأخضر (Eco-Bricks)",
+          "description": "إنتاج طوب بناء منخفض التكلفة وعازل للحرارة يعتمد بنسبة 80% على الركام المعاد تدويره.",
+          "icon": "home",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Volume of Debris (Millions of Tons) vs Housing Shortage Units"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الحاجة لاستثمارات ضخمة في آليات الطحن الثقيلة.",
+        "تعقيد ملكية الأنقاض قانونياً (لمن يعود الركام؟).",
+        "نقص المختبرات الميدانية التي تؤكد جودة المواد المعاد تدويرها.",
+        "تفضيل المقاولين للمواد التقليدية لسهولة توفرها (رغم غلاء ثمنها)."
+      ],
+      "recommended_tech_stack": [
+        "Mobile Industrial Crushers",
+        "Magnetic Separators for Steel Recovery",
+        "Automated Quality Control Sensors",
+        "Geospatial AI for Debris Volume Mapping",
+        "Low-carbon Cement Additives"
+      ],
+      "main_risk_index": "المخاطر القانونية والملكية؛ يتطلب المشروع تعاوناً وثيقاً مع البلديات لتنظيم عملية إزالة الأنقاض ومنح حقوق التدوير."
+    }
+  }
+}

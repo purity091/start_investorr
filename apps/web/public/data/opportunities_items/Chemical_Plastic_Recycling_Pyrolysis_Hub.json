@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-CHE07",
+      "status_label": "تحليل فجوة التدوير الكيميائي للبوليمرات",
+      "category_tag": "Chemicals / Sustainability / Recycling",
+      "business_model": "Waste Tipping Fees + Sale of Pyrolysis Oil (Feedstock) + Carbon Credits",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Chemical Industries",
+      "Sustainability",
+      "Waste Management"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "GCC (High Plastic Consumption)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Egypt & Morocco (Urban Waste Hubs)",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "كربون دائري: التدوير الكيميائي للبلاستيك بالتحلل الحراري",
+      "problem_statement": "لا يمكن تدوير أكثر من 70% من النفايات البلاستيكية في الوطن العربي ميكانيكياً (مثل الأكياس والرقائق الملوثة)، فتنتهي في المكبات. الفجوة هي 'التدوير الكيميائي' (Pyrolysis) الذي يكسر الروابط البوليمرية للبلاستيك ويحولها إلى 'زيت تحلل حراري' (Taco Oil) عالي الجودة يُعاد استخدامه كلقيم (Feedstock) في المصانع البتروكيماوية لإنتاج بلاستيك بكر."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Poly-Circular-Arabia",
+        "industry_tag": "الصناعات الكيميائية الدائرية وتدوير البوليمرات المتقدم",
+        "revenue_model": "Sales of Recycled Feedstock to Petrochem Giants + Waste Collection Contracts + ESG Performance Fees",
+        "action_text": "استعراض مصنع تحويل البلاستيك الملوث إلى وقود ومواد خام"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الكربون المتجدد (0-48 شهر)",
+      "subtitle": "إغلاق الحلقة المفقودة في صناعة البلاستيك",
+      "phases": [
+        {
+          "title": "مفاعل التحلل الحراري المستمر (Pyrolysis Reactor)",
+          "description": "بناء وحدات صناعية قادرة على معالجة البلاستيك المختلط (PE, PP, PS) في بيئة خالية من الأكسجين لإنتاج سوائل هيدروكربونية.",
+          "icon": "beaker",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نظام تنقية الزيت الناتج (Oil-Upgrading)",
+          "description": "تطوير وحدة تقطير وتكرير للزيت الناتج لضمان خلوه من الملوثات (مثل الكلور) ليكون صالحاً للاستخدام في المصانع الكبرى.",
+          "icon": "lightning-bolt",
+          "color_theme": "rose"
+        },
+        {
+          "title": "الربط مع المجمعات البتروكيماوية",
+          "description": "عقد شراكات مع شركات مثل (سابك أو أدنوك) لتوريد زيت التحلل الحراري كجزء من التزامهم بالاستدامة والتحول الدائري.",
+          "icon": "link",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Non-recyclable Plastic Waste Volumes in MENA vs Petrochemical Demand for Circular Feedstock"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية للطاقة اللازمة لعملية التحلل الحراري (يتم حلها باستخدام غازات العملية نفسها).",
+        "الحاجة لتكنولوجيا فصل وتصنيف أولية للنفايات قبل دخول المفاعل.",
+        "نقص التشريعات التي تجبر المصانع على استخدام نسبة من المواد المعاد تدويرها كيميائياً.",
+        "تعقيد العملية الكيميائية لضمان نقاء المنتج النهائي."
+      ],
+      "recommended_tech_stack": [
+        "Continuous Pyrolysis Kilns",
+        "Fractional Distillation Columns",
+        "Catalytic Hydro-treating (for Oil Purity)",
+        "Automated Sorting Sensors (NIR)",
+        "Digital Traceability for Recycled Content"
+      ],
+      "main_risk_index": "جودة اللقيم؛ وجود مواد غريبة (مثل PVC) قد ينتج غازات حمضية تدمر المفاعل، مما يتطلب نظام 'فلترة أولية' صارم جداً."
+    }
+  }
+}

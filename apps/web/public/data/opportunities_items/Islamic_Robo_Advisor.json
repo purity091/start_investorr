@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-FIN-2026-HALAL-ROBO",
+      "status_label": "تحليل استخباري لثروات الجيل الرقمي المحافظ",
+      "category_tag": "التقنية المالية (WealthTech / Sharia-Compliant)",
+      "business_model": "AUM Fee (Management Fee) + Subscription",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "WealthTech",
+      "Islamic Finance",
+      "AI Asset Management"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Global Islamic Market", "flag": "🌍" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Indonesia / Malaysia Link", "flag": "🇲🇾" }
+      ],
+      "additional_regions_count": 8
+    },
+    "core_content": {
+      "title": "المستشار الاستثماري الآلي المتوافق مع الشريعة الإسلامية",
+      "problem_statement": "هناك تريليونات الدولارات في حسابات جارية 'راكدة' لمسلمين يبحثون عن استثمار حلال، لكنهم يواجهون عوائق: صناديق الاستثمار الإسلامية التقليدية تتطلب مبالغ ضخمة، والبحث اليدوي عن الأسهم المتوافقة مرهق، والمستشارون الماليون يفتقرون للحياد. الجيل الشاب يريد استثماراً يبدأ بـ 10 دولارات، مؤتمت بالكامل، وموثق شرعياً بضغطة زر."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Mizan-Wealth",
+        "industry_tag": "الإدارة الرقمية للثروات الإسلامية",
+        "revenue_model": "0.5% - 1% Annual AUM Fee + Fractional Share Trading Commission",
+        "action_text": "استعراض محرك الفرز الشرعي اللحظي للأسهم العالمية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المال الحلال (0-15 شهر)",
+      "subtitle": "ذكاء اصطناعي يحفظ قيمك وينمي ثروتك",
+      "phases": [
+        {
+          "title": "محرك الفرز الشرعي الآلي (Sharia Screening)",
+          "description": "تطوير خوارزمية تراقب الأسهم العالمية لحظياً وتستبعد الشركات ذات المديونية العالية أو النشاطات المحرمة بناءً على معايير 'أيوفي' (AAOIFI).",
+          "icon": "check-circle",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء المحافظ المخصصة (Portfolio Builder)",
+          "description": "استخدام الذكاء الاصطناعي لبناء محفظة متنوعة من (أسهم، صكوك، ذهب، عقارات مرمزة) تناسب أهداف المستخدم مع إعادة توازن آلي (Rebalancing).",
+          "icon": "adjustments",
+          "color_theme": "rose"
+        },
+        {
+          "title": "أتمتة الزكاة والتطهير (Zakat Engine)",
+          "description": "ميزة فريدة تقوم بحساب الزكاة السنوية على الاستثمارات تلقائياً وإخراج مبالغ 'التطهير' (من الفوائد العارضة) لجهات خيرية معتمدة.",
+          "icon": "heart",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "50K+ (Publicly Traded Stocks & Sharia Fatwas)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "صعوبة الحفاظ على تحديث البيانات المالية للشركات لضمان توافقها الشرعي المستمر.",
+        "الحواجز النفسية تجاه الاستثمار في الأسهم العالمية لدى بعض الفئات.",
+        "ارتفاع تكاليف التشغيل للمستشارين الماليين البشريين المتخصصين في الفقه المالي.",
+        "نقص المنصات التي توفر 'تجزئة الأسهم' (Fractional Shares) المتوافقة مع الشريعة."
+      ],
+      "recommended_tech_stack": [
+        "Quantitative Investment Algorithms",
+        "NLP for Analyzing Financial Statements",
+        "Real-time Market Data APIs",
+        "Automated Tax/Zakat Calculation Logic",
+        "SOC2 Compliant Security Infrastructure"
+      ],
+      "main_risk_index": "مخاطر السمعة؛ أي خطأ في الفرز الشرعي قد يؤدي لانسحاب جماعي للمستخدمين، لذا فإن وجود هيئة رقابة شرعية رقمية مستقلة هو صمام الأمان."
+    }
+  }
+}

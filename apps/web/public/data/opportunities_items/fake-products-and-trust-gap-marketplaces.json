@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ECOM6",
+      "status_label": "تحليل فجوة الثقة في المتاجر الإلكترونية",
+      "category_tag": "TrustTech (Marketplace Trust / Verification)",
+      "business_model": "Verification SaaS + Trust Scoring + API",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "E-commerce",
+      "Trust",
+      "Marketplace"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Morocco", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "نظام تقييم وثقة للمتاجر والمنتجات",
+      "problem_statement": "يعاني المستهلكون في المنطقة من انتشار المنتجات المقلدة أو ذات الجودة المنخفضة في المتاجر الإلكترونية، مما يؤدي إلى فقدان الثقة وزيادة المرتجعات. لا توجد أنظمة موثوقة لتقييم جودة البائعين والمنتجات بشكل دقيق."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "TrustCart",
+        "industry_tag": "Trust & Verification Platforms",
+        "revenue_model": "Subscription + Verification Fees + API",
+        "action_text": "استعراض نظام تقييم موثوق للبائعين"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة بناء الثقة (0-12 شهر)",
+      "subtitle": "تجارة مبنية على الثقة",
+      "phases": [
+        {
+          "title": "تحليل بيانات البائعين",
+          "description": "تقييم الأداء والسلوك.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء نظام Trust Score",
+          "description": "تقييم موثوقية كل متجر.",
+          "icon": "star",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تكامل مع المتاجر",
+          "description": "عرض التقييمات للعملاء.",
+          "icon": "link",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "2000+ (Customer Trust Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "غياب أنظمة تقييم موحدة.",
+        "ضعف الرقابة.",
+        "انتشار البائعين غير الموثوقين.",
+        "عدم شفافية السوق."
+      ],
+      "recommended_tech_stack": [
+        "AI Trust Scoring",
+        "Data Analytics",
+        "Review Systems",
+        "API Integration",
+        "Fraud Detection"
+      ],
+      "main_risk_index": "الدقة؛ يجب بناء نظام تقييم موثوق."
+    }
+  }
+}

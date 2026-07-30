@@ -1,0 +1,81 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-FIN02",
+      "status_label": "تحليل فجوة الحماية النقدية للأفراد",
+      "category_tag": "تقنية مالية (FinTech / Crypto-Savings)",
+      "business_model": "Transaction Spread + Yield Farming (DeFi) + Subscription",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Finance",
+      "Inflation Protection",
+      "Digital Assets"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Lebanon", "flag": "🇱🇧" },
+        { "name": "Tunisia", "flag": "🇹🇳" }
+      ],
+      "additional_regions_count": 4
+    },
+    "core_content": {
+      "title": "محافظ الادخار الرقمية المحمية من التضخم",
+      "problem_statement": "يعاني المواطن في دول ذات تضخم مرتفع من فقدان 20-50% من قيمة مدخراته سنوياً. القوانين البنكية تصعّب الوصول للدولار، والذهب الفيزيائي صعب التخزين والتسييل للمبالغ الصغيرة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sawn",
+        "industry_tag": "الحفاظ على الثروة الرقمية",
+        "revenue_model": "Exchange Spread + Micro-fees + Yield on Stable Assets",
+        "action_text": "تحويل المدخرات المحلية إلى أصول صلبة بلحظات"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة النجاة المالية (0-12 شهر)",
+      "subtitle": "تجميد القوة الشرائية",
+      "phases": [
+        {
+          "title": "بوابة النقد المحلي (On-ramp)",
+          "description": "الربط مع محافظ المحمول المحلية (مثل فودافون كاش) للسماح بالإيداع الفوري بالعملة المحلية.",
+          "icon": "cash",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "الترميز الآلي (Tokenization)",
+          "description": "تحويل الإيداع فوراً إلى ذهب رقمي (Pax Gold) أو عملات مستقرة (USDC) عبر عقود ذكية.",
+          "icon": "switch-horizontal",
+          "color_theme": "rose"
+        },
+        {
+          "title": "سوق التسييل السريع",
+          "description": "توفير ميزة سحب الأموال بالعملة المحلية في أي وقت بناءً على سعر السوق الحقيقي.",
+          "icon": "refresh",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "50,000+ (Inflation & Currency Volatility Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "صعوبة استخدام منصات التداول العالمية للمستخدم العادي.",
+        "القيود المفروضة على التحويلات البنكية الدولية.",
+        "غياب الثقة في التطبيقات غير المرخصة محلياً."
+      ],
+      "recommended_tech_stack": [
+        "Blockchain (Polygon L2)",
+        "Smart Contracts (Solidity)",
+        "E-KYC Tools",
+        "Local Payment Gateways Integration"
+      ],
+      "main_risk_index": "المخاطر التشريعية؛ يتطلب المشروع العمل تحت مظلة البيئة التجريبية (Sandbox) للبنك المركزي."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-STRAT-2026-FIN02",
+      "status_label": "تحليل فجوة السيولة في تجارة التجزئة التقليدية",
+      "category_tag": "FinTech / B2B SaaS",
+      "business_model": "Revenue Share + Transaction Fees + Risk Analytics Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Finance",
+      "Retail Tech",
+      "Micro-Lending"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt (Informal Market)", "flag": "🇪🇬" },
+        { "name": "Saudi Arabia (SME Support)", "flag": "🇸🇦" },
+        { "name": "Morocco", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 7
+    },
+    "core_content": {
+      "title": "منصة التمويل المدمج لتجار التجزئة (B2B BNPL)",
+      "problem_statement": "يعاني أكثر من 3 ملايين بقالة ومحل صغير في المنطقة من 'فجوة رأس المال العامل'. البنوك تتجاهلهم لغياب السجلات المالية المنظمة. يضطر التاجر لتقليل مشترياته، مما يؤدي لنقص البضائع وضعف الربحية. هناك فجوة لمنصة تربط المورد بالتاجر وتقدم ائتماناً فورياً لشراء المخزون."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Raseed-Store",
+        "industry_tag": "تمويل سلاسل الإمداد",
+        "revenue_model": "Service Fee from Suppliers + Interest/Markup from Retailers + Data Insights",
+        "action_text": "استعراض حل تمويل المخزون لـ 100,000 تاجر"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق نمو التجزئة (0-18 شهر)",
+      "subtitle": "تحويل الرفوف إلى أصول مالية",
+      "phases": [
+        {
+          "title": "تكامل بوابة المشتريات",
+          "description": "بناء تطبيق يتيح للتاجر طلب البضائع من كبار الموردين (FMCG) مع خيار 'ادفع لاحقاً'.",
+          "icon": "shopping-cart",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك التقييم الائتماني السلوكي",
+          "description": "استخدام AI لتحليل وتيرة طلبات التاجر والتزامه بالسداد لبناء سقف ائتماني متنامي تلقائياً.",
+          "icon": "chart-bar",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التوسع لخدمات القيمة المضافة",
+          "description": "تقديم تأمين على المخزون وحلول دفع رقمية للزبائن النهائيين مدمجة في نفس التطبيق.",
+          "icon": "shield-check",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 8.8,
+      "data_points_analyzed": "Informal Retail Turnover Data (Egypt/KSA)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "سيطرة النقد (Cash) على التعاملات التقليدية.",
+        "تخوف الموردين من تحمل مخاطر تعثر صغار التجار.",
+        "غياب الربط التقني بين أنظمة المستودعات ومحلات التجزئة.",
+        "التعقيدات القانونية لإصدار قروض صغيرة جداً (Micro-loans) بتكلفة منخفضة."
+      ],
+      "recommended_tech_stack": [
+        "Open Banking APIs",
+        "Machine Learning for Credit Scoring",
+        "Blockchain for Smart Contract Financing",
+        "Mobile-first ERP for Small Shops",
+        "Real-time Settlement Rails"
+      ],
+      "main_risk_index": "مخاطر التعثر المالي؛ تتطلب المنصة نظام تحصيل قوي وشراكات مع شركات التأمين على الائتمان."
+    }
+  }
+}

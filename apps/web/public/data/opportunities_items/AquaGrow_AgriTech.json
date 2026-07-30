@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-AGRI-2026-AQUA",
+      "status_label": "تحليل استخباري للأمن الغذائي المستدام",
+      "category_tag": "تكنولوجيا الزراعة (Vertical Farming / Desalination)",
+      "business_model": "Infrastructure-as-a-Service + Crop Sales",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "AgriTech",
+      "Circular Economy",
+      "Water Management",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Morocco", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "تحويل الصحراء إلى سلة غذاء ذكية",
+      "problem_statement": "تستورد دول الخليج أكثر من 80% من احتياجاتها الغذائية الطازجة، وهي معرضة لمخاطر سلاسل الإمداد العالمية. التحدي هو انعدام الأراضي الصالحة للزراعة وندرة المياه العذبة، حيث تستهلك الزراعة التقليدية 70% من المياه الجوفية المحدودة، مما يجعل النماذج الحالية غير مستدامة بيئياً أو اقتصادياً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "AquaGrow",
+        "industry_tag": "الزراعة العمودية المدمجة بالتحلية الشمسية",
+        "revenue_model": "Direct Sales to Retailers + Smart Farm Franchising + Water Tech Licensing",
+        "action_text": "عرض الجدوى الاقتصادية لإنتاج الخضروات الورقية بتكلفة تنافسية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق السيادة الغذائية (0-24 شهر)",
+      "subtitle": "من المختبرات الزراعية إلى الإنتاج الضخم",
+      "phases": [
+        {
+          "title": "وحدة التحلية والنمو المتكاملة (Solar-to-Farm)",
+          "description": "تطوير وحدات زراعية مغلقة تعتمد على تحلية المياه المالحة باستخدام الطاقة الشمسية، مع إعادة تدوير المياه داخل النظام بنسبة 95%.",
+          "icon": "sun",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "الاستزراع الإدراكي (AI-Driven Growth)",
+          "description": "استخدام رؤية الحاسوب (Computer Vision) لمراقبة نمو النباتات لحظياً وتعديل المغذيات والإضاءة (LED) تلقائياً لتحقيق أقصى إنتاجية بأقل موارد.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التوسع في محاصيل القيمة العالية",
+          "description": "الانتقال من الخضروات الورقية إلى الفواكه والنباتات الطبية النادرة، مع بناء مراكز توزيع ذكية مرتبطة بالمزارع لضمان نضارة المنتج (Farm-to-Fork).",
+          "icon": "shopping-cart",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "1200+ (Water Scarcity Indices & Import Logistics Costs)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ارتفاع استهلاك الطاقة في أنظمة الزراعة المغلقة التقليدية.",
+        "صعوبة تحلية المياه بتكلفة منخفضة بعيداً عن السواحل.",
+        "ضعف الاستثمار في البحث والتطوير للمحاصيل التي تتحمل المناخ الصحراوي.",
+        "المنافسة السعرية مع المنتجات المستوردة المدعومة من دول المنشأ."
+      ],
+      "recommended_tech_stack": [
+        "Advanced Hydroponics/Aeroponics Systems",
+        "Low-Energy Reverse Osmosis (RO) Tech",
+        "Edge AI for Greenhouse Environment Control",
+        "Spectral LED Tuning for Growth Acceleration",
+        "IoT Monitoring for Nutrient Accuracy"
+      ],
+      "main_risk_index": "الاستدامة التشغيلية وتكاليف الطاقة؛ الحل يكمن في التكامل التام مع الطاقة المتجددة لتقليل تكلفة الإنتاج إلى مستويات تكسر حاجز السعر المستورد."
+    }
+  }
+}

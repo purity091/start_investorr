@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-AFR-2026-NRG10",
+      "status_label": "تحليل فجوة كفاءة الطاقة في القرى والنجوع",
+      "category_tag": "الطاقة (CleanTech / Smart Grid AI)",
+      "business_model": "Energy-as-a-Service (EaaS) + Efficiency Consulting + Carbon Credits",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Energy Management",
+      "Off-grid AI",
+      "Rural Electrification"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Sudan", "flag": "🇸🇩" },
+        { "name": "Mauritania", "flag": "🇲🇷" },
+        { "name": "Yemen", "flag": "🇾🇪" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "إدارة الشبكات المصغرة بالذكاء الاصطناعي",
+      "problem_statement": "تعاني مشاريع الطاقة الشمسية في القرى من سوء إدارة الأحمال، حيث تُستهلك البطاريات بسرعة في المساء أو تُهدر الطاقة نهاراً. غياب 'العقل المدبر' للشبكة يؤدي لفشل المشروع خلال أشهر. هناك فجوة لمنظومة ذكاء اصطناعي (Edge-AI Controller) تدير توزيع الطاقة لحظياً وتتنبأ بالاستهلاك لإطالة عمر النظام بنسبة 40%."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Taqat-Smart",
+        "industry_tag": "العقل المدبر للشبكات الريفية",
+        "revenue_model": "License per Micro-grid + Energy-saving Profit Sharing + Carbon Credit Portfolio",
+        "action_text": "استعراض محرك إدارة الطاقة الذكي للمجتمعات النائية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الاستدامة الطاقية (0-18 شهر)",
+      "subtitle": "تحسين كل واط لإضاءة كل منزل",
+      "phases": [
+        {
+          "title": "تطوير متحكم الأحمال التنبئي",
+          "description": "بناء خوارزمية ذكاء اصطناعي تتعلم عادات استهلاك المجتمع وتفصل الأحمال غير الضرورية آلياً عند انخفاض شحن البطاريات.",
+          "icon": "chip",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تكامل التنبؤ الجوي اللحظي",
+          "description": "ربط الشبكة بنماذج طقس مصغرة لتعديل سلوك الاستهلاك بناءً على ساعات السطوع المتوقعة للأيام القادمة.",
+          "icon": "cloud",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بوابة الدفع والتجارة البينية (P2P Energy)",
+          "description": "تمكين القرويين من تداول فائض الطاقة بينهم عبر نظام دفع بسيط (SMS/Micro-payments).",
+          "icon": "switch-horizontal",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "Battery Lifecycle Data & Rural Consumption Profiles"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لأنظمة التحكم المركزية المستوردة.",
+        "صعوبة صيانة الأنظمة التقنية في المناطق النائية.",
+        "غياب الوعي لدى المستخدمين بأهمية 'إدارة الأحمال'.",
+        "الاعتماد على بطاريات الرصاص الرخيصة التي تتلف بسرعة دون إدارة ذكية."
+      ],
+      "recommended_tech_stack": [
+        "Reinforcement Learning for Load Balancing",
+        "TinyML Controllers (ARM Cortex-M)",
+        "NB-IoT for Remote Monitoring",
+        "LiFePO4 Management Systems",
+        "Dynamic Pricing Algorithms"
+      ],
+      "main_risk_index": "معدلات التحصيل المالي؛ نجاح المشروع يعتمد على دمج حلول الدفع المتناهي الصغر (Micro-payments) لضمان استمرارية الصيانة وتوسعة الشبكة."
+    }
+  }
+}

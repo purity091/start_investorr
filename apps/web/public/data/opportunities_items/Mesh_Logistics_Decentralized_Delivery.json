@@ -1,0 +1,82 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-LOG10",
+      "status_label": "تحليل فجوة اللوجستيات التشاركية والوصول",
+      "category_tag": "Logistics / Mobility / Sharing Economy",
+      "business_model": "Aggregator Commission + Subscription for Fleet + Ad-revenue on Trucks",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Mobility",
+      "Logistics",
+      "Social Trade"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Inter-city Syria (Damascus-Aleppo-Homs)", "flag": "🇸🇾" },
+        { "name": "Rural-to-Urban Routes", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "لوجستيات الشبكة الشعبية: منصة النقل التشاركي للبضائع",
+      "problem_statement": "تعاني سوريا من تضاعف تكاليف شحن البضائع بين المحافظات لغياب شركات لوجستية منظمة واعتماد السائقين على 'رحلات الذهاب' فقط. الشاحنات والسيارات الخاصة تتحرك بنصف حمولة، بينما يدفع التاجر والمواطن مبالغ طائلة. الفجوة هي منصة تشاركية (Crowd-shipping) تربط أي شخص لديه وسيلة نقل بأي شخص يحتاج لنقل بضاعة في نفس المسار."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Saree-Logi",
+        "industry_tag": "اللوجستيات التشاركية منخفضة التكلفة",
+        "revenue_model": "10% Commission on Freight + Fuel Discount Membership + Cargo Insurance Spread",
+        "action_text": "استعراض تقليل تكاليف الشحن الداخلي في سوريا بنسبة 30%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الترابط اللوجستي (0-18 شهر)",
+      "subtitle": "تحويل كل سيارة إلى وسيلة نقل تجارية",
+      "phases": [
+        {
+          "title": "بناء قاعدة بيانات 'سائقي المسارات'",
+          "description": "تسجيل آلاف السائقين الذين يتحركون بانتظام بين المحافظات وتوثيق بياناتهم لضمان الأمان والموثوقية.",
+          "icon": "truck",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "خوارزمية مطابقة الحمولات (Smart Matching)",
+          "description": "استخدام الـ AI لربط الطلبات الصغيرة بمساحات التخزين الفارغة في السيارات والشاحنات التي تسير في نفس الاتجاه لحظياً.",
+          "icon": "duplicate",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نقاط الاستلام والتسليم (Hubs)",
+          "description": "تأسيس نقاط تجميع صغيرة في الأحياء والقرى لتسهيل عمليات الإيداع والاستلام وتقليل وقت انتظار السائقين.",
+          "icon": "location-marker",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.5,
+      "competitive_moat": 8.7,
+      "data_points_analyzed": "Daily Inter-city Vehicle Flow vs Freight Cost Inflation"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "المخاوف الأمنية وصعوبة تتبع الشحنات في بعض المناطق.",
+        "نقص الوقود الذي يجعل رحلات النقل غير منتظمة.",
+        "غياب الثقة بين الأفراد في نقل بضائع ثمينة دون ضمانات.",
+        "صعوبة سداد المستحقات للسائقين (يتم حله عبر الدفع الإلكتروني أو الرصيد)."
+      ],
+      "recommended_tech_stack": [
+        "Real-time GPS Tracking (Low data)",
+        "Decentralized Reputation System",
+        "Dynamic Pricing Engine",
+        "Automated Route Planning",
+        "Digital Identity Verification"
+      ],
+      "main_risk_index": "المخاطر الأمنية؛ فقدان الشحنة أو مصادرتها يتطلب نظام 'تأمين تكافلي' بين المشتركين لتعويض الخسائر."
+    }
+  }
+}

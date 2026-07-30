@@ -1,0 +1,81 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-NRG04",
+      "status_label": "تحليل فجوة استمرارية الطاقة الصناعية",
+      "category_tag": "طاقة متجددة (Clean Energy / Infrastructure)",
+      "business_model": "Power Purchase Agreement (PPA) + Service Fee",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Energy",
+      "Manufacturing",
+      "Sustainability"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Lebanon", "flag": "🇱🇧" },
+        { "name": "Iraq", "flag": "🇮🇶" },
+        { "name": "Yemen", "flag": "🇾🇪" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "محطات الطاقة الشمسية للمناطق الصناعية",
+      "problem_statement": "تتوقف المصانع في هذه الدول لعدة ساعات يومياً بسبب انقطاع الكهرباء، وتعتمد على ديزل المولدات عالي التكلفة، مما يجعل المنتج المحلي غير منافس."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Nibras-Power",
+        "industry_tag": "مزود طاقة مستقل (IPP)",
+        "revenue_model": "Fixed Price per kWh (Cheaper than Diesel) + Maintenance",
+        "action_text": "استعراض حل الطاقة المستدامة للمصانع"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة تشغيل المصانع (0-24 شهر)",
+      "subtitle": "كهرباء بلا انقطاع",
+      "phases": [
+        {
+          "title": "مسح الأحمال وتصميم المحطة",
+          "description": "تحليل استهلاك المصانع في المنطقة الصناعية المستهدفة وتصميم شبكة هجينة.",
+          "icon": "document-search",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تركيب مصفوفات الطاقة والبطاريات",
+          "description": "بناء محطة طاقة شمسية مركزية مع نظام تخزين طاقة ضخم (BESS) لضمان العمل ليلاً.",
+          "icon": "lightning-bolt",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إدارة الشبكة الذكية",
+          "description": "توزيع الكهرباء للمصانع عبر شبكة ذكية توازن بين الإنتاج والاستهلاك لحظياً.",
+          "icon": "chip",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "3,000+ (Industrial Power Outage Logs)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف الاستثمار الحكومي في الشبكات القومية.",
+        "صعوبة حصول المصانع الفردية على تمويل للألواح الشمسية.",
+        "الاعتماد التاريخي على مافيات المولدات (تغير الوضع مع التشريعات الجديدة)."
+      ],
+      "recommended_tech_stack": [
+        "Utility-scale PV Inverters",
+        "Lithium Iron Phosphate (LFP) Batteries",
+        "Smart Metering Systems",
+        "AI for Load Balancing"
+      ],
+      "main_risk_index": "المخاطر الأمنية؛ تتطلب هذه المنشآت حماية فيزيائية وتأميناً شاملاً ضد الاضطرابات."
+    }
+  }
+}

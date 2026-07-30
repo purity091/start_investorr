@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-CON09",
+      "status_label": "تحليل فجوة التحول الرقمي في قطاع البناء",
+      "category_tag": "ConTech / BIM / Digital Twin",
+      "business_model": "SaaS (Subscription) + Project Management Fees + BIM Modeling Services",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Reconstruction",
+      "Engineering",
+      "Digital Construction"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Syrian Reconstruction Projects",
+          "flag": "🇸🇾"
+        },
+        {
+          "name": "Syrian Engineers Overseas (Collaboration)",
+          "flag": "🇸🇾"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "بناء سوريا الرقمي: منصة BIM التعاونية لإعادة الإعمار",
+      "problem_statement": "تتم مشاريع إعادة الإعمار حالياً بطرق تقليدية وورقية، مما يسبب هدراً في المواد بنسبة 30% وأخطاء في التنفيذ وتأخيراً في الجداول الزمنية. الفجوة هي منصة تعاونية تعتمد على 'نمذجة معلومات البناء' (BIM) تتيح للمهندسين السوريين (في الداخل والخارج) العمل على 'نسخة رقمية' للمبنى قبل تنفيذه، لضمان الكفاءة القصوى."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Syria-BIM",
+        "industry_tag": "إدارة مشاريع الإعمار الرقمية",
+        "revenue_model": "License per Project/Company + Custom BIM Object Libraries + Real-time Coordination SaaS",
+        "action_text": "استعراض تقليل هدر مواد البناء بنسبة 25% عبر الرقمنة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الهندسة الرقمية (0-24 شهر)",
+      "subtitle": "تخطيط دقيق، تنفيذ أسرع",
+      "phases": [
+        {
+          "title": "بناء مكتبة العناصر السورية (Local BIM Library)",
+          "description": "تطوير قاعدة بيانات رقمية لمواد البناء المتوفرة محلياً في سوريا (أسمنت، بلوك، فتحات) لاستخدامها في النمذجة الدقيقة.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منصة التنسيق السحابي (Cloud Collaboration)",
+          "description": "توفير بيئة عمل تتيح للمعماري، والإنشائي، وفنيي الميكانيك اكتشاف 'التعارضات' (Clash Detection) رقمياً قبل البدء بالموقع.",
+          "icon": "share",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التكامل مع إدارة الموقع (Digital Site Monitoring)",
+          "description": "ربط النموذج الرقمي بالواقع عبر تطبيقات الجوال لمتابعة نسب الإنجاز الفعلي ومقارنتها بالمخطط لحظياً.",
+          "icon": "clipboard-check",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Material Waste Costs in Large Scale Housing Projects (MENA)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لبرامج الـ BIM العالمية وعدم توافقها مع السوق المحلي.",
+        "نقص الكوادر المدربة على تقنيات النمذجة الحديثة داخل سوريا.",
+        "ضعف ثقافة التعاون الرقمي بين المكاتب الهندسية وشركات المقاولات.",
+        "الحاجة لسرعة الإنجاز التي تدفع البعض لإهمال التخطيط الرقمي الدقيق."
+      ],
+      "recommended_tech_stack": [
+        "OpenBIM Standards (IFC)",
+        "Cloud-based CDE (Common Data Environment)",
+        "WebGL for Browser-based 3D Viewing",
+        "Mobile-first Clash Detection Tools",
+        "AI for Material Estimation"
+      ],
+      "main_risk_index": "الاعتماد الفني؛ نجاح المشروع يتطلب فرض استخدام الـ BIM من قبل الجهات الحكومية أو المانحة كشرط أساسي في مشاريع الإعمار الكبرى."
+    }
+  }
+}

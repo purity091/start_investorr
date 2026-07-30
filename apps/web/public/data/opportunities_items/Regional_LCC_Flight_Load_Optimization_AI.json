@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-AIR02",
+      "status_label": "تحليل فجوة كفاءة الطيران الاقتصادي الإقليمي",
+      "category_tag": "Aviation / AI / Optimization",
+      "business_model": "Software-as-a-Service (SaaS) for Airlines + Dynamic Pricing API + Load Consolidation Marketplace",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Aviation",
+      "Transport",
+      "Optimization"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Inter-Arab Short-haul Routes",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "GCC-Levant-Egypt Corridors",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "السماء المتاحة: تحسين حمولة الطيران الاقتصادي",
+      "problem_statement": "تعتبر تكلفة الطيران بين المدن العربية من الأعلى عالمياً (مقارنة بأوروبا) نتيجة ضعف شبكة الطيران الاقتصادي (LCC) وعدم كفاءة إدارة الحمولة في الرحلات القصيرة. الفجوة هي نظام تحسين ذكي يربط أساطيل الطيران الاقتصادي العربي بمحرك تسعير ديناميكي ومنصة لـ 'تجميع الحمولة' (Load Consolidation) لضمان طيران الطائرات بسعة كاملة دائماً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Arab-Sky-Optim",
+        "industry_tag": "تكنولوجيا الطيران والكفاءة التشغيلية",
+        "revenue_model": "Performance-based Fee (Percentage of fuel/load savings) + Subscription for Route Planning Tools + API for Dynamic Booking",
+        "action_text": "استعراض خطة خفض تكاليف السفر الجوي العربي بنسبة 25%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الطيران المرن (0-48 شهر)",
+      "subtitle": "ربط العواصم العربية برحلات يومية وبأسعار شعبية",
+      "phases": [
+        {
+          "title": "محرك التنبؤ بالطلب الإقليمي (MENA Demand AI)",
+          "description": "تحليل بيانات السفر، الفعاليات، والمواسم في العالم العربي للتنبؤ بدقة بالطلب على المسارات المنسية (مثل حلب-القاهرة).",
+          "icon": "presentation-chart-line",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منصة الربط البيني (Interline-Tech)",
+          "description": "توفير تكنولوجيا تتيح للمسافر حجز رحلة واحدة عبر أكثر من شركة طيران اقتصادي عربية بتذكرة موحدة وضمانات تحويل.",
+          "icon": "share",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تحسين الوقود والمسارات (Fuel-Flow AI)",
+          "description": "استخدام الـ AI لتعديل مسارات الطيران لحظياً بناءً على الرياح والازدحام الجوي لتقليل استهلاك الوقود، وهو البند الأكبر في التكلفة.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.3,
+      "data_points_analyzed": "Average Ticket Price per KM (MENA vs Europe) vs Middle Class Travel Demand"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "السياسات الحمائية لشركات الطيران الوطنية الكبرى.",
+        "ارتفاع رسوم المطارات والضرائب في الدول العربية.",
+        "نقص التعاون التقني في تبادل بيانات المسافرين بين الناقلات المحلية.",
+        "التعقيدات الجيوسياسية التي تفرض مسارات طيران طويلة وغير مباشرة."
+      ],
+      "recommended_tech_stack": [
+        "Dynamic Pricing Algorithms (Revenue Management)",
+        "NDC (New Distribution Capability) APIs",
+        "AI for Predictive Maintenance of Fleet",
+        "Load Consolidation Optimization Tools",
+        "Bio-fuel Logistics Integration"
+      ],
+      "main_risk_index": "المخاطر التنظيمية؛ نجاح الطيران الاقتصادي يعتمد على 'اتفاقيات الأجواء المفتوحة' (Open Skies) التي لا تزال غائبة بين العديد من الدول العربية."
+    }
+  }
+}

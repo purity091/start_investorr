@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-RET12",
+      "status_label": "تحليل فجوة الأثاث المباشر للمستهلك",
+      "category_tag": "Furniture / D2C / Interior",
+      "business_model": "Direct Sales (D2C) + Virtual Design Service + Regional Fulfillment",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Retail & Commerce",
+      "Furniture",
+      "Design"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Riyadh (Fast Urban Expansion)", "flag": "🇸🇦" },
+        { "name": "Dubai (Design Conscious Market)", "flag": "🇦🇪" },
+        { "name": "Cairo (Production Excellence)", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "أثاث من المصنع: براند D2C للأثاث العصري العربي",
+      "problem_statement": "يواجه المستهلك العربي في المدن الكبرى ارتفاعاً هائلاً في أسعار الأثاث الفاخر نتيجة الوسطاء وصالات العرض المكلفة، أو يضطر لشراء أثاث تجاري ضعيف الجودة. الفجوة هي علامة تجارية 'مباشرة للمستهلك' (D2C) تبيع أثاثاً راقياً بتصاميم عربية معاصرة (Minimalist Neo-Arab) من المصنع للبيت مباشرة، مما يوفر 40% من التكلفة مع ضمان جودة الأخشاب المحلية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Othath-D2C",
+        "industry_tag": "صناعة الأثاث الرقمي والتصميم الداخلي المباشر",
+        "revenue_model": "Product Sales per Unit + Premium Assembly Service + Personalized Interior Packages",
+        "action_text": "استعراض الثورة في شراء الأثاث العربي المعاصر"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المسكن الراقي (0-48 شهر)",
+      "subtitle": "تصميم فاخر، سعر عادل، ومن المصنع إليك",
+      "phases": [
+        {
+          "title": "استوديو التصميم العربي المعاصر (Modern-Heritage)",
+          "description": "تطوير مجموعات أثاث تجمع بين البساطة الوظيفية واللمسات الجمالية العربية، مصممة للشحن المسطح (Flat-pack) لتقليل تكاليف اللوجستيات.",
+          "icon": "pencil",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تكامل التصنيع الرقمي المحلي",
+          "description": "التعاون مع مصانع محلية متطورة لإنتاج القطع بدقة عالية واستخدام مواد مستدامة، مع نظام مراقبة جودة صارم في المصنع.",
+          "icon": "cog",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تجربة الشراء الافتراضية (AR-Visualizer)",
+          "description": "إتاحة رؤية الأثاث في منزل العميل عبر الواقع المعزز (AR) قبل الطلب، لتجربة شراء رقمية خالية من المخاطر.",
+          "icon": "sparkles",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Furniture Retail Margins in MENA vs Potential Savings from D2C Models"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التحديات اللوجستية في شحن وتركيب الأثاث كبير الحجم بأمان.",
+        "تفضيل المستهلك لـ 'لمس وتجربة' الأثاث في صالة عرض حقيقية قبل الشراء.",
+        "صعوبة بناء علامة تجارية قوية تنافس العمالقة العالميين (مثل IKEA) في السعر.",
+        "الحاجة لخدمة ما بعد البيع (تركيب، صيانة) موثوقة في كل مدينة."
+      ],
+      "recommended_tech_stack": [
+        "Augmented Reality (AR) Tools",
+        "Direct-to-Consumer E-commerce Platform",
+        "3D Furniture Rendering (CGI)",
+        "Supply Chain Visibility Software",
+        "Customer Data Platform (CDP) for Personalization"
+      ],
+      "main_risk_index": "المرتجعات؛ تكلفة إرجاع الأثاث ضخمة، مما يتطلب استراتيجية 'وصف دقيق جداً' وتقنيات AR متطورة لضمان اختيار العميل الصحيح من المرة الأولى."
+    }
+  }
+}

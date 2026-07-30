@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-LOG-2026-REVERSE",
+      "status_label": "تحليل استخباري لاستعادة القيمة الضائعة",
+      "category_tag": "اللوجستيات (Circular Economy / E-commerce)",
+      "business_model": "B2B SaaS + Per-item Processing Fee",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Retail Operations",
+      "Sustainability",
+      "Reverse Logistics"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "حلول اللوجستيات العكسية وإدارة المرتجعات",
+      "problem_statement": "تصل نسبة المرتجعات في التجارة الإلكترونية العربية إلى 30%، وهي من الأعلى عالمياً. المتاجر تخسر مبالغ طائلة في إعادة الشحن، فحص المنتجات، وإعادة تغليفها، وكثير من المرتجعات ينتهي بها الأمر كنفايات لعدم وجود آلية سريعة لإعادة طرحها في السوق (Secondary Market)."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Rajea-Logistics",
+        "industry_tag": "إدارة المرتجعات وإعادة التدوير التجاري",
+        "revenue_model": "Return-as-a-Service (RaaS) Fees + Resale Commission + Disposal Fees",
+        "action_text": "استعراض كيف حولنا المرتجعات من خسارة إلى مصدر دخل إضافي"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الاستدامة التجارية (0-12 شهر)",
+      "subtitle": "إغلاق حلقة التوريد بكفاءة",
+      "phases": [
+        {
+          "title": "بناء مراكز الفرز والتقييم الآلي",
+          "description": "تأسيس مراكز تستخدم الرؤية الحاسوبية (Computer Vision) لتقييم حالة المنتج المرتجع وتحديد ما إذا كان صالحاً للبيع الفوري أو يحتاج لصيانة.",
+          "icon": "refresh",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "إطلاق منصة 'الفرصة الثانية' (Resale Marketplace)",
+          "description": "بوابة رقمية لبيع المنتجات المرتجعة بأسعار مخفضة (Open-box) مباشرة للمستهلكين، مما يقلل من فترات بقاء المخزون الراكد.",
+          "icon": "shopping-cart",
+          "color_theme": "rose"
+        },
+        {
+          "title": "أتمتة المبالغ المستردة (Instant Refunds)",
+          "description": "ربط المنصة بنظم الدفع لرد الأموال للعميل فور تأكد مركز الفرز من سلامة المنتج، لتعزيز ثقة العميل في العلامة التجارية.",
+          "icon": "cash",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 8.8,
+      "data_points_analyzed": "5M+ Return Transactions"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التركيز المفرط للمتاجر على عمليات البيع وتجاهل 'الرحلة العكسية' للمنتج.",
+        "التعقيد اللوجستي في جمع قطع فردية من مواقع متفرقة وإعادة فحصها.",
+        "غياب المعايير الواضحة لتصنيف المنتجات المستعملة أو المرتجعة.",
+        "التكلفة العالية للعمالة اليدوية اللازمة لعمليات الفحص الدقيق."
+      ],
+      "recommended_tech_stack": [
+        "AI Image Recognition for Quality Control",
+        "Dynamic Pricing Algorithms for Resale",
+        "Automated Warehouse Sorting",
+        "Integration with E-commerce APIs",
+        "Circular Supply Chain Tracking"
+      ],
+      "main_risk_index": "ثقة المستهلك؛ ضمان جودة المنتجات المعاد بيعها هو التحدي الأكبر لتجنب المرتجعات المتكررة للمنتج الواحد."
+    }
+  }
+}

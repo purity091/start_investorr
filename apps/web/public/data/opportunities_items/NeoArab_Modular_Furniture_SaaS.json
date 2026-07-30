@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-FMCG04",
+      "status_label": "تحليل فجوة الأثاث العصري المحلي",
+      "category_tag": "Furniture / Design / Tech",
+      "business_model": "D2C Sales + Customization SaaS + Local Manufacturing Franchise",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Consumer Goods",
+      "Furniture & Interior",
+      "Technology"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Riyadh & Dubai (Urban High-growth)",
+          "flag": "🇦🇪"
+        },
+        {
+          "name": "Egypt & Syria (Manufacturing Expertise)",
+          "flag": "🇪🇬"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "أثاث الأجيال: منصة التصميم الموديولار العربي",
+      "problem_statement": "يضطر الشباب العرب للاختيار بين أثاث عالمي موحد (IKEA) يفتقر للهوية، أو أثاث تراثي ضخم لا يناسب الشقق الحديثة. الفجوة هي منصة تتيح تصميم أثاث 'موديولار' (قابل للتعديل والتركيب) مستوحى من روح العمارة العربية (المشربيات، النقوش) ومصنع محلياً بذكاء تقني يناسب المساحات الصغيرة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Maskan-Modular",
+        "industry_tag": "صناعة الأثاث التقني والتصميم الداخلي المخصص",
+        "revenue_model": "Product Sales per Unit + AR Design Fee + Licensing Designs to Local Carpenters",
+        "action_text": "استعراض الثورة القادمة في المنازل العربية المعاصرة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المسكن الحديث (0-36 شهر)",
+      "subtitle": "تأصيل الهوية في كل زاوية من المنزل",
+      "phases": [
+        {
+          "title": "استوديو التصميم الرقمي (Configurator-AI)",
+          "description": "بناء أداة 3D تتيح للمستخدم تخصيص أثاثه (تغيير المقاسات، الألوان، الزخارف) ورؤيته في غرفته عبر الواقع المعزز.",
+          "icon": "desktop-computer",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "شبكة التصنيع الرقمي (CNC-Cloud)",
+          "description": "ربط المنصة بورش نجارة محلية مزودة بآلات CNC لإنتاج القطع المصممة بدقة عالية وبشكل لحظي عند الطلب.",
+          "icon": "cog",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق مجموعة 'الهوية العصرية'",
+          "description": "التعاون مع مصممين عرب لإنشاء مجموعات أثاث تجمع بين الوظيفة الحديثة والجمال التاريخي العربي الأصيل.",
+          "icon": "sparkles",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Furniture Import Volumes vs Demand for Localized Modern Interior Solutions in MENA"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الصعوبة في موازنة التكلفة بين الإنتاج المخصص (Custom) وسعر الأثاث التجاري الضخم.",
+        "نقص الورش المحلية القادرة على تنفيذ التصاميم التقنية المعقدة بدقة.",
+        "التحديات اللوجستية في شحن وتركيب الأثاث الموديولار بشكل سليم.",
+        "تفضيل المستهلك للعلامات العالمية المعروفة لضمان الجودة."
+      ],
+      "recommended_tech_stack": [
+        "3D Web Configurator (Three.js/WebGL)",
+        "Augmented Reality (ARCore/ARKit)",
+        "ERP Integration for Manufacturing (CNC-ready)",
+        "AI for Space Planning",
+        "Direct-to-Consumer (D2C) E-commerce Engine"
+      ],
+      "main_risk_index": "جودة الخامات؛ الاعتماد على موردين محليين للخشب والمواد يتطلب نظام رقابة جودة صارم لضمان استدامة المنتج النهائي."
+    }
+  }
+}

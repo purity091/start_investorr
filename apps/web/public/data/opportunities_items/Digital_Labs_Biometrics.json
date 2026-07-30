@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-HEALTH-2026-DIGILAB",
+      "status_label": "تحليل استخباري للامركزية الفحوصات الطبية",
+      "category_tag": "التقنية الطبية (Micro-Diagnostics / Cloud Health)",
+      "business_model": "D2C + B2B (Clinics Integration)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Diagnostics",
+      "Point-of-Care",
+      "Biometric Data"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "المختبرات الرقمية والتحليل الفوري للبيانات الحيوية",
+      "problem_statement": "تعتمد الفحوصات المخبرية حالياً على زيارة مراكز مركزية، مما يسبب تأخراً في النتائج وهدراً في الوقت، خاصة للأمراض المزمنة التي تتطلب مراقبة دورية. هناك فجوة هائلة في توفير مختبرات 'نقطة الرعاية' (Point-of-Care) التي تتيح للمريض إجراء فحص دقيق في منزله أو في عيادة صغيرة والحصول على نتائج مخبرية فورية موثقة سحابياً ومحللة بالذكاء الاصطناعي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Lab-Go",
+        "industry_tag": "التشخيص المخبري الفوري",
+        "revenue_model": "Hardware Sales (Readers) + Test Cartridge Subscriptions + Data Analysis Fees",
+        "action_text": "استعراض تقنية تحليل الدم الميكروي (Micro-fluidics)"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق المختبر الرقمي (0-18 شهر)",
+      "subtitle": "نتائج مخبرية فورية في كف يدك",
+      "phases": [
+        {
+          "title": "تطوير القارئ المحمول (Smart Reader)",
+          "description": "تصنيع جهاز صغير الحجم يستخدم تقنية النانو لتحليل عينات صغيرة جداً (قطرة دم أو لعاب) وإعطاء نتائج دقيقة لأكثر من 50 مؤشراً حيوياً خلال دقائق.",
+          "icon": "microscope",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منصة الربط والتوثيق الرقمي",
+          "description": "بناء نظام سحابي يشفر النتائج ويرسلها فوراً للطبيب المعالج أو يدمجها في السجل الطبي الوطني، مع تقديم تحليل بياني لاتجاهات الصحة العامة للمريض.",
+          "icon": "cloud-upload",
+          "color_theme": "rose"
+        },
+        {
+          "title": "توزيع كبسولات الفحص المخصصة",
+          "description": "توفير اشتراكات دورية لكبسولات فحص متخصصة (فحص وظائف الكبد، مؤشرات الالتهاب، مستويات الهرمونات) تصل للمنزل أو الصيدليات القريبة.",
+          "icon": "beaker",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.5,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "1.2M+ (Diagnostic Turnaround Times & Lab Efficiency)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التحديات التقنية في تصغير أجهزة المختبر الضخمة دون فقدان الدقة.",
+        "الحاجة لاعتمادات طبية صارمة لمعدات التشخيص اللامركزية.",
+        "مقاومة المختبرات الكبرى التقليدية للنماذج اللامركزية.",
+        "صعوبة الحفاظ على جودة العينات والمواد الكيميائية في ظروف النقل."
+      ],
+      "recommended_tech_stack": [
+        "Microfluidics (Lab-on-a-chip)",
+        "Biosensors Integration",
+        "Cloud Data Encryption (Zero Trust)",
+        "Bluetooth Low Energy (BLE) connectivity",
+        "AI for Trend Prediction"
+      ],
+      "main_risk_index": "المخاطر التشريعية؛ تتطلب هذه التقنية موافقة الجهات الرقابية لضمان أن نتائج الفحص المنزلي معتمدة قانونياً للتشخيص الطبي الرسمي."
+    }
+  }
+}

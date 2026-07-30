@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-JOB06",
+      "status_label": "تحليل فجوة التخطيط العمراني الرقمي",
+      "category_tag": "PropTech / Smart Cities / Architecture",
+      "business_model": "SaaS (Digital Twin Hosting) + Urban Design Consulting + Gov Tech Contracts",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Architecture",
+      "Urban Planning",
+      "Digital Twin"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Syria (Talent)",
+          "flag": "🇸🇾"
+        },
+        {
+          "name": "GCC Smart Cities (Market)",
+          "flag": "🇸🇦"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "خدمات التوأمة الرقمية للمدن: آفاق جديدة لمهندسي العمارة",
+      "problem_statement": "تتجه دول المنطقة لبناء مدن ذكية (Smart Cities) تتطلب 'توائم رقمية' لإدارة استهلاك الطاقة، المرور، والنفايات. مهندسو العمارة والتخطيط السوريون يفتقرون للعمل في هذه المشاريع الحديثة. الفجوة هي مركز تميز في سوريا يقوم ببناء هذه النماذج الرقمية ثلاثية الأبعاد وربطها بالبيانات الحية، لتقديمها كخدمة للبلديات والمطورين العقاريين في المنطقة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Urban-Twin-Syr",
+        "industry_tag": "التخطيط العمراني الرقمي والمدن الذكية",
+        "revenue_model": "Setup Fee per District + Ongoing Management SaaS Subscription + Policy Modeling Consulting",
+        "action_text": "استعراض خطة تصميم المدن الذكية بأيدٍ سورية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق العمران الرقمي (0-30 شهر)",
+      "subtitle": "تحويل المخططات الورقية إلى مدن حية رقمياً",
+      "phases": [
+        {
+          "title": "تطوير 'محرك التوأمة' (Twin-Engine)",
+          "description": "بناء منصة برمجية قادرة على دمج مخططات الـ CAD مع بيانات الـ GIS والـ IoT لرسم صورة حية للمدينة.",
+          "icon": "cube",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "نمذجة كفاءة استهلاك الطاقة الحضرية",
+          "description": "استخدام خبرات المهندسين في تصميم محاكاة لتدفقات الطاقة والمياه داخل الأحياء لتقليل الهدر وتحسين الخدمات.",
+          "icon": "lightning-bolt",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق منصة 'المدينة التشاركية'",
+          "description": "توفير واجهة للمسؤولين لاتخاذ قرارات بناءً على 'المحاكاة الافتراضية' قبل تنفيذ أي مشروع على الأرض.",
+          "icon": "presentation-chart-line",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.3,
+      "data_points_analyzed": "Smart City Investment in MENA vs Technical Expertise Availability"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الحاجة لبيانات جغرافية فائقة الدقة (يتم حلها بصور الأقمار الصناعية التجارية).",
+        "نقص الربط بين الأكاديميين السوريين ومعايير المدن الذكية العالمية.",
+        "التعقيد البرمجي في ربط النماذج ثلاثية الأبعاد ببيانات الحساسات اللحظية.",
+        "تخوف البلديات من 'أمن البيانات' عند استضافتها خارجياً."
+      ],
+      "recommended_tech_stack": [
+        "Unreal Engine 5 (Pixel Streaming)",
+        "CesiumJS for Geospatial Data",
+        "MQTT for IoT Real-time Stream",
+        "Python for Urban Data Analytics",
+        "NVIDIA Omniverse for Collaboration"
+      ],
+      "main_risk_index": "استمرارية البيانات؛ نجاح التوأم الرقمي يعتمد على 'تغذية البيانات' المستمرة من الحساسات، مما يتطلب بنية تحتية IoT قوية في المدينة المستهدفة."
+    }
+  }
+}

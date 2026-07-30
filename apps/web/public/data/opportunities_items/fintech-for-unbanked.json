@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-FIN-2026-UNBANKED",
+      "status_label": "تحليل استخباري لتمكين القاعدة العريضة اقتصادياً",
+      "category_tag": "التقنية المالية (Financial Inclusion / Neobanking)",
+      "business_model": "Transaction Fees + Micro-loan Interest + Value Added Services",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "FinTech",
+      "Mobile Wallets",
+      "Social Impact Finance"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Morocco", "flag": "🇲🇦" },
+        { "name": "Jordan", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 8
+    },
+    "core_content": {
+      "title": "التقنية المالية لتعزيز الشمول المالي لغير المشمولين مصرفياً",
+      "problem_statement": "لا يزال أكثر من 50% من البالغين في المنطقة العربية يفتقرون لحسابات بنكية رسمية، مما يضطرهم للاعتماد على النقد (Cash) في كل معاملاتهم. هذا الغياب عن النظام المالي يحرمهم من فرص الادخار الآمن، الاستثمار، والوصول إلى الائتمان، كما يعيق نمو الاقتصاد الرقمي للدول."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Shamil-Pay",
+        "industry_tag": "المصرفية الرقمية الشاملة",
+        "revenue_model": "Small Transaction Fees + Commission on Utility Payments + Nano-credit Spreads",
+        "action_text": "استعراض خطة الوصول لـ 5 مليون مستخدم نشط خلال عامين"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التمكين المالي (0-18 شهر)",
+      "subtitle": "البنك في جيبك، لكل مواطن",
+      "phases": [
+        {
+          "title": "إطلاق المحفظة الرقمية فائقة البساطة",
+          "description": "تطوير تطبيق يعمل على أبسط الهواتف الذكية (ويدعم الرسائل النصية USSD) يتيح فتح حساب برقم الهوية خلال دقيقة واحدة فقط.",
+          "icon": "phone",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "توسيع شبكة الوكلاء الأرضية (Cash-in/Cash-out)",
+          "description": "التعاقد مع آلاف البقالات ومراكز الاتصالات لتكون نقاط إيداع وسحب نقدي، مما يحول كل متجر حي إلى فرع بنكي مصغر.",
+          "icon": "map",
+          "color_theme": "rose"
+        },
+        {
+          "title": "محرك القروض المتناهية الصغر (Nano-Lending)",
+          "description": "استخدام بيانات استهلاك الهاتف المحمول وسلوك الدفع لبناء تقييم ائتماني بديل يتيح منح قروض طارئة صغيرة جداً بضغطة زر.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 8.5,
+      "data_points_analyzed": "4M+ Unbanked Individual Profiles"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الشروط التعجيزية للبنوك التقليدية لفتح الحسابات (إثبات دخل، حد أدنى).",
+        "البنية التحتية البنكية الضعيفة في المناطق الريفية والنائية.",
+        "انخفاض الوعي المالي والخوف التقليدي من التعامل مع المؤسسات الرسمية.",
+        "التكلفة العالية لإدارة الحسابات الصغيرة يدوياً في البنوك الكبيرة."
+      ],
+      "recommended_tech_stack": [
+        "Blockchain for Immutable Transaction Ledger",
+        "AI for Alternative Credit Scoring",
+        "Biometric Authentication (KYC)",
+        "Microservices Cloud Architecture",
+        "USSD Gateway for Non-smartphone users"
+      ],
+      "main_risk_index": "المخاطر السيبرانية والاحتيال؛ حماية أموال البسطاء تتطلب أنظمة أمنية فائقة الذكاء تكتشف الأنماط المشبوهة فوراً."
+    }
+  }
+}

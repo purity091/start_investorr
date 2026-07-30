@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-HEALTH-2026-BIO",
+      "status_label": "تحليل استخباري للسيادة الحيوية",
+      "category_tag": "التكنولوجيا الحيوية (Genomics / Personalised Medicine)",
+      "business_model": "B2C + B2G (National Health Programs)",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "HealthTech",
+      "Precision Medicine",
+      "Bio-Data Analytics",
+      "Revolutionary Companies"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Qatar", "flag": "🇶🇦" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "فك شفرة الصحة للمستقبل العربي",
+      "problem_statement": "يعتمد الطب الحالي في المنطقة على بروتوكولات علاجية وبيانات جينية مستمدة من شعوب غربية، مما يقلل من فعالية العلاج بنسبة 30% لبعض الأمراض في العرب. تعاني المنطقة من أعلى معدلات الأمراض الوراثية والنادرة عالمياً، ويفتقر النظام الصحي إلى قاعدة بيانات 'البصمة الوراثية العربية' التي تمكن من التحول من العلاج العام إلى الطب الشخصي الوقائي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "BioGenome-AR",
+        "industry_tag": "تحليل البيانات الجينية الضخمة",
+        "revenue_model": "Direct-to-Consumer Kits + Pharma R&D Data Licensing + Govt Contracts",
+        "action_text": "استعراض خطة بناء أكبر بنك بيانات جيني في الشرق الأوسط"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الطب الدقيق (0-18 شهر)",
+      "subtitle": "من التسلسل الجيني إلى العلاج الرقمي",
+      "phases": [
+        {
+          "title": "بناء المرجع الجيني العربي (Arab Reference Genome)",
+          "description": "إطلاق حملات جمع عينات وبناء قاعدة بيانات جينية ضخمة باستخدام الذكاء الاصطناعي لتمييز الطفرات الخاصة بالمنطقة وتصنيفها.",
+          "icon": "finger-print",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منصة التنبؤ بالأمراض (Predictive Health Platform)",
+          "description": "توفير تطبيق للأفراد والأطباء يعطي تقارير حول القابلية للإصابة بأمراض (السكري، السرطان، القلب) بناءً على الجينات، مع خطط تغذية وعلاج مخصصة.",
+          "icon": "beaker",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التكامل مع شركات الأدوية (Precision R&D)",
+          "description": "التعاون مع شركات الأدوية العالمية والمحلية لتطوير أدوية 'مصممة خصيصاً' للمرضى العرب بناءً على استجابتهم الجينية، مما يقلل الآثار الجانبية ويزيد الفعالية.",
+          "icon": "office-building",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "8500+ (Regional Genetic Studies & Demographic Trends)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لتسلسل الجينوم (سابقاً) وتعقيد تحليل البيانات.",
+        "غياب المختبرات الرقمية المتخصصة في معالجة البيانات الجينية الضخمة محلياً.",
+        "التحديات الأخلاقية والقانونية المتعلقة بخصوصية البيانات الحيوية.",
+        "نقص الكوادر المتخصصة في 'المعلوماتية الحيوية' (Bioinformatics) في المنطقة."
+      ],
+      "recommended_tech_stack": [
+        "Next-Generation Sequencing (NGS) Data Pipelines",
+        "AI Deep Learning for Pattern Recognition",
+        "Encrypted Bio-Storage (GDPR & Local Compliance)",
+        "Cloud-based Bioinformatics Platforms",
+        "Distributed Ledger for Patient Data Sovereignty"
+      ],
+      "main_risk_index": "أمن وسيادة البيانات؛ حماية البيانات الجينية للمواطنين العرب تمثل التحدي القانوني والتقني الأكبر لضمان ثقة المستخدمين والحكومات."
+    }
+  }
+}

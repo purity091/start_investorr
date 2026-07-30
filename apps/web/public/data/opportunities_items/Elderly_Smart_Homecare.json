@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-HEALTH-2026-ELDER-CARE",
+      "status_label": "تحليل استخباري لاقتصاد الفضة (Silver Economy)",
+      "category_tag": "التكنولوجيا الصحية (IoT / Remote Monitoring)",
+      "business_model": "Subscription (B2C/B2B) + Hardware Bundle",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "HealthTech",
+      "IoT Solutions",
+      "Geriatric Care"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Kuwait", "flag": "🇰🇼" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "منصات الرعاية المنزلية الذكية ومراقبة المسنين",
+      "problem_statement": "مع ارتفاع متوسط العمر في الخليج، يفضل كبار السن البقاء في منازلهم بدلاً من المستشفيات، لكن هذا يعرضهم لمخاطر السقوط المفاجئ أو نسيان الأدوية دون مراقبة. العائلات تعاني من قلق دائم وصعوبة في إيجاد ممرضين مقيمين مؤهلين، مما يخلق حاجة لنظام 'مراقب صامت' يحفظ الخصوصية ويؤمن السلامة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Hanan-Care",
+        "industry_tag": "رعاية كبار السن الرقمية",
+        "revenue_model": "Monthly Service Fee + Hardware Installation + Emergency Response Fees",
+        "action_text": "استعراض تقنية الرادار لاكتشاف السقوط بدون كاميرات"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الرعاية الحانية (0-12 شهر)",
+      "subtitle": "استقلالية كاملة مع أمان مطلق",
+      "phases": [
+        {
+          "title": "تثبيت شبكة الحساسات البيئية",
+          "description": "نشر حساسات حركة وضغط ورادار (mmWave) في غرف المسنين لرصد النشاط اليومي دون الحاجة لارتداء أي أجهزة أو وضع كاميرات.",
+          "icon": "home",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء النموذج السلوكي (Baseline AI)",
+          "description": "الذكاء الاصطناعي يتعلم النمط الطبيعي لحياة المسن (وقت الاستيقاظ، دخول الحمام)، ويرسل تنبيهاً فورياً عند حدوث أي انحراف (مثل البقاء في الحمام لفترة طويلة).",
+          "icon": "sparkles",
+          "color_theme": "rose"
+        },
+        {
+          "title": "الربط مع الطوارئ والتمريض الجوال",
+          "description": "تفعيل زر استجابة فورية يربط المسن بفريق طبي متخصص بمجرد رصد خطر، مع إمكانية وصول الأبناء للبيانات الحيوية عبر تطبيق بسيط.",
+          "icon": "phone-incoming",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.1,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "2000+ (Caregiver Surveys & Fall Statistics)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "رفض كبار السن للكاميرات كخرق للخصوصية.",
+        "عدم الراحة في ارتداء الساعات الذكية طوال الوقت (خاصة أثناء النوم).",
+        "الحاجة لحلول تكتشف الحالة قبل تفاقمها (مثل تغير نمط الحركة).",
+        "الفجوة الرقمية بين الجيل الشاب (المقدم للرعاية) والجيل المسن."
+      ],
+      "recommended_tech_stack": [
+        "mmWave Radar Sensors",
+        "Edge AI for Behavior Modeling",
+        "Low-Power WAN (LPWAN) for connectivity",
+        "Secure Family Cloud Portal",
+        "Integrations with Smart Pill Dispensers"
+      ],
+      "main_risk_index": "دقة التنبيهات؛ التنبيهات الخاطئة المتكررة قد تؤدي لتعطيل النظام من قبل الأهل، لذا يجب موازنة الحساسية بدقة عالية."
+    }
+  }
+}

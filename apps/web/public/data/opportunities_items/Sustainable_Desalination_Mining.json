@@ -1,0 +1,81 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-WAT01",
+      "status_label": "تحليل فجوة السيادة المعدنية من نفايات التحلية",
+      "category_tag": "تكنولوجيا المياه والبيئة (WaterTech / Circular Economy)",
+      "business_model": "Mineral Sales + Zero Liquid Discharge (ZLD) Services",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Environment",
+      "Water Technology",
+      "Mineral Extraction"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Kuwait", "flag": "🇰🇼" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "تعدين المحلول الملحي: تحويل نفايات التحلية إلى ثروة معدنية",
+      "problem_statement": "تنتج دول الخليج مليار جالون من المحلول الملحي (Brine) يومياً، وهو نفايات كيميائية تقتل الشعب المرجانية وترفع ملوحة البحر. في الوقت نفسه، تستورد هذه الدول معادن استراتيجية (ليثيوم، مغنيسيوم) بأسعار فلكية لصناعات البطاريات."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "BrineGold",
+        "industry_tag": "استخلاص المعادن من البحر",
+        "revenue_model": "Mineral Sales (Lithium/Magnesium) + Industrial Salt Offtake",
+        "action_text": "استعراض خطة تحويل محطة تحلية إلى منجم معادن سائل"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة تعدين البحر (0-24 شهر)",
+      "subtitle": "من التلوث إلى الإنتاج",
+      "phases": [
+        {
+          "title": "وحدة الفصل الانتقائي",
+          "description": "تركيب أغشية نانوية متطورة لفصل أيونات المغنيسيوم والكالسيوم عن المحلول الملحي.",
+          "icon": "filter",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "استخلاص الليثيوم والسترونشيوم",
+          "description": "تفعيل مفاعلات كيميائية دقيقة لاستخراج المعادن النادرة المطلوبة في صناعة التكنولوجيا.",
+          "icon": "beaker",
+          "color_theme": "rose"
+        },
+        {
+          "title": "صفر نفايات سائلة (ZLD)",
+          "description": "تحويل ما تبقى من المحلول إلى ملح صناعي عالي النقاء للاستخدام في الصناعات البتروكيماوية.",
+          "icon": "globe",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "2500+ (Desalination Outflow Reports)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لتقنيات التبخير التقليدية.",
+        "نقص التكامل بين قطاع التحلية وقطاع التعدين.",
+        "غياب القوانين البيئية الصارمة التي تمنع رمي المحلول في البحر (تغيرت في 2026)."
+      ],
+      "recommended_tech_stack": [
+        "Selective Electrodialysis (SED)",
+        "Nanofiltration Membranes",
+        "Fractional Crystallization",
+        "IoT Monitoring for Brine Concentration"
+      ],
+      "main_risk_index": "تقلب أسعار المعادن العالمية؛ يتطلب المشروع عقود شراء مسبقة (Offtake) مع مصانع البطاريات."
+    }
+  }
+}

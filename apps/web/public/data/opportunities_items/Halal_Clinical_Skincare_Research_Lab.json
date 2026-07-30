@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-FMCG01",
+      "status_label": "تحليل فجوة مستحضرات التجميل الحلال والطبية",
+      "category_tag": "Beauty / Halal / Research-Lab",
+      "business_model": "Product Sales (D2C/B2B) + R&D Licensing + Custom Formulation for Spas",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Consumer Goods",
+      "Beauty & Personal Care",
+      "Science"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "GCC (High Spend on Premium Beauty)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Jordan & Morocco (Source of Ingredients)",
+          "flag": "🇯🇴"
+        }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "الجمال النقي: مختبر أبحاث الجلد الحلال",
+      "problem_statement": "تستورد المنطقة العربية منتجات تجميل وعناية بالبشرة بمليارات الدولارات، لكن معظمها لا يراعي 'معايير الحلال' الصارمة (خلوها من مشتقات معينة) ولا يستغل المكونات الطبيعية الفائقة في المنطقة. الفجوة هي مختبر أبحاث وعلامة تجارية تجمع بين العلم الطبي (Clinical) وأصالة المكونات العربية (مثل اللبان العماني، الزعفران، وطين البحر الميت) لتقديم بديل سيادي فاخر."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Asala-Clinical-Beauty",
+        "industry_tag": "صناعة مستحضرات التجميل الطبية والحلال (Cosmeceuticals)",
+        "revenue_model": "D2C Online Sales + Partnerships with Luxury Hotels + Export to Global Muslim Markets",
+        "action_text": "استعراض خطة إنشاء أول مختبر تجميل طبي عربي بمعايير عالمية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الجمال العلمي (0-48 شهر)",
+      "subtitle": "من المكونات الخام إلى المنتجات العالمية",
+      "phases": [
+        {
+          "title": "استخلاص المكونات النشطة (Bio-Extraction)",
+          "description": "تطوير عمليات كيميائية لاستخلاص المواد الفعالة من النباتات والمعادن العربية وتوثيق فوائدها علمياً في مختبرات متخصصة.",
+          "icon": "beaker",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "شهادة الحلال والفعالية الطبية",
+          "description": "الحصول على اعتمادات دولية (Halal Certified & Dermatologically Tested) لضمان ثقة المستهلك المحلي والعالمي.",
+          "icon": "shield-check",
+          "color_theme": "rose"
+        },
+        {
+          "title": "التوسع في القنوات الفاخرة (Luxury-Retail)",
+          "description": "إطلاق العلامة التجارية في المتاجر الكبرى والمنتجعات الصحية العالمية كأول براند عربي يجمع بين التراث والعلم.",
+          "icon": "shopping-bag",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.7,
+      "data_points_analyzed": "Cosmetics Import Value in GCC vs Demand for Halal-Certified Premium Products"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "سيطرة الشركات العالمية الكبرى (L'Oréal, Estée Lauder) على السوق بميزانيات تسويق ضخمة.",
+        "نقص الاستثمار في البحث والتطوير (R&D) الكيميائي المتخصص في التجميل بالمنطقة.",
+        "التصور النمطي بأن المنتجات المحلية أقل جودة من المنتجات الغربية.",
+        "صعوبة الحصول على شهادات الحلال الدولية التي تتطلب تدقيقاً كاملاً لسلسلة التوريد."
+      ],
+      "recommended_tech_stack": [
+        "Advanced Chemical Extraction (CO2 Extraction)",
+        "Microbiome-friendly Formulation Tech",
+        "Blockchain for Halal Supply Chain Traceability",
+        "AI for Skin Type Analysis (Personalization)",
+        "Eco-friendly Packaging Solutions"
+      ],
+      "main_risk_index": "الولاء للعلامة؛ المستهلك العربي وفي جداً للبراندات العالمية، مما يتطلب استراتيجية تسويق تعتمد على 'النتائج الطبية' المثبتة لتغيير القناعات."
+    }
+  }
+}

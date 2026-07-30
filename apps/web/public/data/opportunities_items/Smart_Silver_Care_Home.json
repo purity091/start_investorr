@@ -1,0 +1,80 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-HLT06",
+      "status_label": "تحليل فجوة الرعاية المنزلية لجيل كبار السن",
+      "category_tag": "تكنولوجيا الصحة (Health-Tech / Elder-Tech)",
+      "business_model": "Hardware Rental + Monthly Monitoring SaaS + Emergency Response Fee",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "HealthTech",
+      "IoT",
+      "Home Care"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "United Arab Emirates", "flag": "🇦🇪" },
+        { "name": "Saudi Arabia", "flag": "🇸🇦" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "نظام الرعاية المنزلية الإدراكي لكبار السن",
+      "problem_statement": "تشهد دول الخليج تحولاً ديموغرافياً واجتماعياً؛ حيث يفضل كبار السن البقاء في منازلهم، بينما ينشغل الأبناء في العمل. الحاجة ملحة لنظام مراقبة غير مرئي يحمي الخصوصية (بدون كاميرات) ويرصد السقوط أو تغير الأنماط الصحية فوراً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Baraka-Tech",
+        "industry_tag": "الرعاية الذكية المستقلة",
+        "revenue_model": "Installation Fee + Tiered Subscription (Basic/Gold) + Medical Partner Referral",
+        "action_text": "تأمين حياة الوالدين بذكاء اصطناعي يحفظ الخصوصية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة الأمان المنزلي (0-18 شهر)",
+      "subtitle": "رعاية بلا قيود",
+      "phases": [
+        {
+          "title": "نشر حساسات الردار والذكاء الاصطناعي",
+          "description": "تركيب أجهزة تعتمد على تقنية WiFi-Sensing لرصد الحركة والسقوط دون استخدام كاميرات.",
+          "icon": "rss",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تطوير محرك التحليل السلوكي",
+          "description": "بناء خوارزميات تتعلم نمط حياة المسن (وقت النوم، دخول الحمام) وترسل تنبيهاً عند أي انحراف مريب.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "مركز الاستجابة للطوارئ",
+          "description": "الربط مع خدمات الإسعاف الخاصة والمستشفيات للتدخل الفوري عند رصد خطر.",
+          "icon": "phone-incoming",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.3,
+      "data_points_analyzed": "500+ (Ageing Population & Chronic Disease Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "رفض كبار السن لوجود كاميرات مراقبة في منازلهم.",
+        "ضعف ثقافة أجهزة الـ Wearables (الساعات) التي ينسى المسن ارتداءها.",
+        "نقص الحلول المتكاملة التي تربط بين التكنولوجيا والتدخل الطبي الميداني."
+      ],
+      "recommended_tech_stack": [
+        "Passive WiFi Sensing / Radar Tech",
+        "AI Anomaly Detection",
+        "Cloud Health Records (FHIR Standards)",
+        "Mobile App for Family Members"
+      ],
+      "main_risk_index": "دقة التنبيهات؛ مخاطر 'التنبيهات الكاذبة' قد تسبب قلقاً غير مبرر للأهالي، مما يتطلب تصفية دقيقة للبيانات."
+    }
+  }
+}

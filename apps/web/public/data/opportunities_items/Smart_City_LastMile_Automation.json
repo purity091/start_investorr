@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-LOG-2026-LAST-MILE",
+      "status_label": "تحليل استخباري لكفاءة التوصيل الحضري",
+      "category_tag": "الخدمات اللوجستية (Robotics / Autonomous)",
+      "business_model": "Logistics-as-a-Service (LaaS) + Integration Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Mobility",
+      "Last Mile",
+      "Autonomous Delivery"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Dubai", "flag": "🇦🇪" },
+        { "name": "NEOM / Riyadh", "flag": "🇸🇦" },
+        { "name": "New Cairo", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 3
+    },
+    "core_content": {
+      "title": "منصة لوجستيات الميل الأخير المؤتمتة للمدن الذكية",
+      "problem_statement": "يمثل 'الميل الأخير' (من المستودع للمستهلك) حوالي 53% من إجمالي تكلفة الشحن، وهو الأكثر تسبباً في الازدحام المروري والانبعاثات. في المدن العربية الحديثة، يواجه عمال التوصيل تحديات في الوصول الدقيق للعناوين واستهلاك وقود هائل نتيجة توقفات الحركة المرورية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "SmartDrop-AR",
+        "industry_tag": "أتمتة التوصيل الحضري",
+        "revenue_model": "Per-delivery Fee + Smart Locker Subscription + Data Insights for Retailers",
+        "action_text": "استعراض تقنية الروبوتات والدرونز لخفض تكلفة التوصيل بنسبة 45%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق التوصيل الذكي (0-15 شهر)",
+      "subtitle": "الميل الأخير: أسرع، أرخص، وأكثر استدامة",
+      "phases": [
+        {
+          "title": "مراكز التوزيع المصغرة (Micro-fulfillment)",
+          "description": "تحويل المساحات غير المستغلة في المدن إلى مراكز تخزين صغيرة مؤتمتة لتقصير المسافة الجغرافية بين السلعة والمستهلك.",
+          "icon": "office-building",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "شبكة الخزائن الذكية (Smart Lockers)",
+          "description": "نشر محطات استلام ذاتية تعمل بالذكاء الاصطناعي في المجمعات السكنية والمولات، مما يلغي حاجة السائق لانتظار العميل.",
+          "icon": "key",
+          "color_theme": "rose"
+        },
+        {
+          "title": "أسطول الروبوتات والدرونز (Autonomous Fleet)",
+          "description": "إطلاق روبوتات أرضية صغيرة لتوصيل الطلبات داخل المجمعات المغلقة (Gated Communities) لتقليل التدخل البشري والازدحام.",
+          "icon": "chip",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.1,
+      "data_points_analyzed": "10M+ Delivery Route Patterns"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف دقة نظم العناوين التقليدية في بعض المناطق الحضرية القديمة.",
+        "ارتفاع تكلفة العمالة البشرية ومعدل دورانها العالي.",
+        "تحديات التشريعات المتعلقة بحركة الروبوتات والدرونز في الأماكن العامة.",
+        "الازدحام المروري الخانق الذي يجعل التوصيل التقليدي غير متوقع الزمان."
+      ],
+      "recommended_tech_stack": [
+        "AI for Route Optimization",
+        "Computer Vision for Autonomous Robots",
+        "IoT Enabled Smart Lockers",
+        "Hyper-local Geofencing",
+        "Predictive Analytics for Inventory Placement"
+      ],
+      "main_risk_index": "التبني المجتمعي؛ ثقة المستهلك في استلام الشحنات من الروبوتات أو الخزائن بدلاً من المندوب تتطلب تجربة مستخدم فائقة السلاسة."
+    }
+  }
+}

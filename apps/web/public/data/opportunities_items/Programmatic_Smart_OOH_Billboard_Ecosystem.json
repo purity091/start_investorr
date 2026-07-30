@@ -1,0 +1,88 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-ARA-2026-MKT04",
+      "status_label": "تحليل فجوة الإعلانات الخارجية البرمجية",
+      "category_tag": "AdTech / OOH / Digital-Signage",
+      "business_model": "Bidding Marketplace Commission + Billboard Network SaaS + Data Insight Sales",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Marketing",
+      "Smart Cities",
+      "AdTech"
+    ],
+    "geography": {
+      "active_regions": [
+        {
+          "name": "Riyadh (Fastest Growing OOH Market)",
+          "flag": "🇸🇦"
+        },
+        {
+          "name": "Cairo & Dubai",
+          "flag": "🇦🇪"
+        }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "الشوارع الذكية: شبكة اللوحات الإعلانية البرمجية",
+      "problem_statement": "لا تزال الإعلانات الخارجية (Billboards) في معظم المدن العربية تُدار يدوياً وعبر عقود طويلة الأمد، مما يحرم الشركات الصغيرة من الوصول إليها ويمنع تغيير الإعلان بناءً على الوقت أو حالة الطقس أو الازدحام. الفجوة هي منصة تحول هذه اللوحات إلى شاشات رقمية برمجية (pDOOH) تتيح المزايدة اللحظية على مساحات إعلانية بالدقيقة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Share-Street",
+        "industry_tag": "تكنولوجيا الإعلانات الخارجية والمدن الذكية",
+        "revenue_model": "10-15% Commission on Ad Bids + SaaS for Billboard Owners + Data Monetization (Vehicle counts)",
+        "action_text": "استعراض مستقبل الإعلانات الطرقية في العواصم العربية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الطريق الرقمي (0-48 شهر)",
+      "subtitle": "تحويل لوحات الشوارع إلى منصات إعلانية حية",
+      "phases": [
+        {
+          "title": "تأسيس شبكة 'اللوحات المتصلة' (Connected-Screens)",
+          "description": "تجهيز اللوحات الخارجية بحواسيب مصغرة (Edge devices) وشاشات عالية الدقة مرتبطة بالسحابة لقبول المحتوى لحظياً.",
+          "icon": "desktop-computer",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "محرك المزايدة اللحظية (RTB for OOH)",
+          "description": "إطلاق منصة تتيح للمعلنين شراء 'ظهور' في شارع معين في وقت الذروة فقط، مع إمكانية تغيير المحتوى بناءً على حالة المرور.",
+          "icon": "trending-up",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نظام 'الرؤية والقياس' (Audience-Measurement)",
+          "description": "استخدام كاميرات AI (مجهولة الهوية) لعد السيارات والمارة أمام اللوحة لإعطاء المعلن إحصائيات دقيقة حول عدد المشاهدات الفعلي.",
+          "icon": "eye",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "OOH Market Revenue in GCC vs Occupancy Rates of Traditional Static Billboards"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة العالية لتحويل اللوحات الورقية إلى شاشات LED متطورة.",
+        "التعقيد التنظيمي والحصول على تصاريح البلدية للوحات الرقمية المتحركة.",
+        "نقص البيانات اللحظية الموثوقة حول 'الجمهور المار' في الشوارع.",
+        "الاحتكار التاريخي لمواقع اللوحات الكبرى من قبل شركات محدودة."
+      ],
+      "recommended_tech_stack": [
+        "Programmatic Bidding Engines (RTB)",
+        "Edge Computing for Content Management",
+        "Computer Vision for Audience Counting (Anonymized)",
+        "5G Connectivity for Real-time Updates",
+        "Dynamic Creative Optimization (DCO)"
+      ],
+      "main_risk_index": "التنظيمات البلدية؛ القوانين المتعلقة بإضاءة وحركة الشاشات قد تتغير لأسباب تتعلق بسلامة القيادة، مما يتطلب مرونة عالية في عرض المحتوى."
+    }
+  }
+}

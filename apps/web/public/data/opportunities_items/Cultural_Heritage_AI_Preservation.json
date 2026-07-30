@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-AFR-2026-CUL06",
+      "status_label": "تحليل فجوة حماية الهوية الرقمية والتراث",
+      "category_tag": "الثقافة (CulturalTech / NLP)",
+      "business_model": "Grants + Licensing to Academics/Media + NFT Heritage Assets",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Culture",
+      "NLP",
+      "Digital Archiving"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Mauritania (Manuscripts)", "flag": "🇲🇷" },
+        { "name": "Sudan (Oral Traditions)", "flag": "🇸🇩" },
+        { "name": "Yemen (Ancient Scripts)", "flag": "🇾🇪" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "رقمنة وحفظ التراث الشفهي والمخطوطات بالذكاء الاصطناعي",
+      "problem_statement": "يواجه التراث العربي والأفريقي في موريتانيا واليمن خطر الضياع بسبب النزاعات والظروف البيئية. آلاف المخطوطات النادرة واللغات الشفهية تندثر. هناك فجوة لتقنيات رؤية حاسوبية ومعالجة لغات طبيعية (NLP) قادرة على رقمنة، ترجمة، وحفظ هذا الإرث للأجيال القادمة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Artheen-AI",
+        "industry_tag": "حارس الذاكرة الرقمي",
+        "revenue_model": "NGO Partnership Contracts + Digital Museum Subscriptions + Scholarly Data Access",
+        "action_text": "استعراض تقنية ترميم المخطوطات وترجمة اللهجات القديمة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الأرشفة الكبرى (0-36 شهر)",
+      "subtitle": "تخليد الحضارة في السحابة",
+      "phases": [
+        {
+          "title": "الرقمنة الجماعية بالرؤية الحاسوبية",
+          "description": "استخدام ماسحات ضوئية متنقلة مدعومة بالذكاء الاصطناعي لترميم الصور الرقمية للمخطوطات التالفة والخطوط القديمة (مثل المسند).",
+          "icon": "camera",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تدريب نماذج اللغات المحلية (Dialect NLP)",
+          "description": "تسجيل وحفظ اللغات الشفهية واللهجات النادرة وتدريب نماذج ذكاء اصطناعي قادرة على فهمها وترجمتها.",
+          "icon": "microphone",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بناء متحف الميتافيرس للتراث",
+          "description": "إنشاء تجارب واقع افتراضي تتيح للعالم زيارة المواقع التراثية المهددة والمكتبات القديمة بشكل رقمي تفاعلي.",
+          "icon": "sparkles",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.1,
+      "liquidity_tam": 8.8,
+      "competitive_moat": 9.6,
+      "data_points_analyzed": "Thousands of Ancient Manuscripts & Oral Recordings"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ضعف التمويل المخصص للحفظ الثقافي مقارنة بالقطاعات الخدمية.",
+        "صعوبة الوصول للمناطق النائية حيث توجد المكتبات العائلية القديمة.",
+        "تعقيد الخطوط القديمة واللهجات التي لا تفهمها النماذج العالمية (GPT/Gemini).",
+        "الحساسية الاجتماعية تجاه إخراج المخطوطات الأصلية من أماكنها."
+      ],
+      "recommended_tech_stack": [
+        "Optical Character Recognition (OCR) for Ancient Scripts",
+        "Self-supervised Learning for Under-resourced Languages",
+        "Photogrammetry for 3D Site Mapping",
+        "Blockchain for Provenance & Copyright",
+        "Edge Processing for Field Digitization"
+      ],
+      "main_risk_index": "الاستقرار السياسي؛ حماية المعدات والفرق الميدانية في مناطق النزاع تتطلب بروتوكولات أمنية صارمة وشراكات محلية متينة."
+    }
+  }
+}

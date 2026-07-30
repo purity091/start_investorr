@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-EDAI10",
+      "status_label": "تحليل فجوة التطبيق العملي في تعليم STEM",
+      "category_tag": "تعليم STEM (STEM Education / Practical Learning)",
+      "business_model": "Hardware Kits + SaaS Platform + School Licensing",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Education",
+      "STEM",
+      "Practical Learning"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Qatar", "flag": "🇶🇦" }
+      ],
+      "additional_regions_count": 6
+    },
+    "core_content": {
+      "title": "تجارب تعليم STEM عملية بدل النظرية",
+      "problem_statement": "يتم تدريس العلوم والهندسة في العالم العربي بشكل نظري، مع غياب شبه كامل للتجارب العملية. هذا يؤدي إلى ضعف مهارات الابتكار والتطبيق العملي لدى الطلاب."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "STEMLab",
+        "industry_tag": "التعليم العملي والتجارب",
+        "revenue_model": "School Licensing + Hardware Kits + Subscription",
+        "action_text": "استعراض تجربة STEM عملية للطلاب"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التعليم العملي (0-12 شهر)",
+      "subtitle": "التعلم عبر التجربة",
+      "phases": [
+        {
+          "title": "تصميم Kits تعليمية",
+          "description": "تطوير أدوات وتجارب STEM قابلة للتطبيق داخل المدارس.",
+          "icon": "tool",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منصة تعليم رقمية داعمة",
+          "description": "ربط التجارب بمنصة تعليمية تشرح المفاهيم.",
+          "icon": "monitor",
+          "color_theme": "rose"
+        },
+        {
+          "title": "توزيع المدارس والشراكات",
+          "description": "نشر الحلول عبر المدارس والمؤسسات التعليمية.",
+          "icon": "building",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.3,
+      "liquidity_tam": 9.4,
+      "competitive_moat": 8.7,
+      "data_points_analyzed": "1500+ (STEM Education Reports)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ارتفاع تكلفة المختبرات التقليدية.",
+        "نقص الكوادر المؤهلة.",
+        "ضعف التركيز على التطبيق العملي.",
+        "غياب حلول تعليمية متكاملة."
+      ],
+      "recommended_tech_stack": [
+        "IoT Learning Kits",
+        "Simulation Software",
+        "AR/VR Learning Tools",
+        "LMS Platforms",
+        "Cloud Integration"
+      ],
+      "main_risk_index": "التكلفة التشغيلية؛ يتطلب المشروع إدارة فعالة لسلسلة التوريد للأجهزة."
+    }
+  }
+}

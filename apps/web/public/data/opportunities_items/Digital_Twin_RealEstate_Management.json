@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-CON-2026-DIGI-TWIN",
+      "status_label": "تحليل استخباري لاستدامة الأصول الذكية",
+      "category_tag": "العقارات الذكية (PropTech / Asset Management)",
+      "business_model": "SaaS (Enterprise) + Performance-based Savings",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Digital Twin",
+      "Facility Management",
+      "Smart Cities"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "UAE (Smart Dubai)", "flag": "🇦🇪" },
+        { "name": "Saudi Arabia (Giga Projects)", "flag": "🇸🇦" },
+        { "name": "Qatar (Smart Districts)", "flag": "🇶🇦" }
+      ],
+      "additional_regions_count": 2
+    },
+    "core_content": {
+      "title": "التوأم الرقمي لإدارة الأصول والمرافق العقارية",
+      "problem_statement": "بعد الانتهاء من بناء الأبراج والمجمعات الضخمة، ترتفع تكاليف التشغيل (OpEx) بشكل جنوني نتيجة الصيانة التقليدية القائمة على 'رد الفعل'. غياب رؤية واضحة لحالة المعدات (المصاعد، التكييف، الكهرباء) داخل المبنى يؤدي لهدر الطاقة وتقليل العمر الافتراضي للأصل العقاري بمليارات الدولارات."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Sanad-Twin",
+        "industry_tag": "منصة إدارة التوائم الرقمية للمباني",
+        "revenue_model": "Subscription per Square Meter + Utility Savings Commission + Predictive Maintenance Fees",
+        "action_text": "استعراض تقليل تكاليف التشغيل بنسبة 35% عبر المحاكاة الرقمية"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق ذكاء المنشآت (0-18 شهر)",
+      "subtitle": "مباني تتحدث وتتوقع احتياجاتها",
+      "phases": [
+        {
+          "title": "تحويل مخططات BIM إلى توائم رقمية حية",
+          "description": "تحويل النماذج الهندسية ثلاثية الأبعاد إلى نسخة رقمية ديناميكية مربوطة بآلاف الحساسات اللحظية داخل المبنى.",
+          "icon": "cube",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "دمج محرك الصيانة التنبؤية (AI-Ops)",
+          "description": "تفعيل خوارزميات تتنبأ بعطل المصعد أو مضخة المياه قبل وقوعه بأسبوعين، مما يمنع توقف الخدمات عن السكان.",
+          "icon": "exclamation-circle",
+          "color_theme": "rose"
+        },
+        {
+          "title": "لوحة تحكم كفاءة الطاقة (ESG Dashboard)",
+          "description": "إدارة استهلاك الطاقة والمياه لحظياً، وتحقيق معايير الاستدامة العالمية (LEED) لرفع قيمة العقار السوقية.",
+          "icon": "lightning-bolt",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.4,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "500+ Mega-building Operational Datasets"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تشتت بيانات الصيانة بين مقاولين متعددين.",
+        "الارتباط بأنظمة إدارة مباني (BMS) مغلقة وصعبة التكامل.",
+        "الحاجة لاستثمار مبدئي في أجهزة الاستشعار وربط البيانات.",
+        "نقص الوعي لدى الملاك حول العائد على الاستثمار طويل الأمد للتوأم الرقمي."
+      ],
+      "recommended_tech_stack": [
+        "IoT Sensors (Temperature, Vibration, Flow)",
+        "Azure Digital Twins / AWS IoT TwinMaker",
+        "Machine Learning for Anomaly Detection",
+        "High-fidelity 3D Visualization Engines",
+        "Cloud-to-Edge Architecture"
+      ],
+      "main_risk_index": "الأمن السيبراني؛ تحويل المبنى إلى كيان رقمي يجعله عرضة للاختراق، لذا فإن تأمين 'العمود الفقري الرقمي' للمنشأة هو الأولوية."
+    }
+  }
+}

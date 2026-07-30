@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-SYR-2026-NRG03",
+      "status_label": "تحليل فجوة الطاقة المتجددة اللامركزية",
+      "category_tag": "Renewable Energy / HydroTech / IoT",
+      "business_model": "Energy-as-a-Service (EaaS) + Maintenance Fees + Gov Partnership",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Energy",
+      "Water Management",
+      "Decentralized Power"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Orontes River Basin (Hama/Homs)", "flag": "🇸🇾" },
+        { "name": "Euphrates Basin (Raqqa/Deir ez-Zor)", "flag": "🇸🇾" },
+        { "name": "Coastal Springs (Baniyas/Latakia)", "flag": "🇸🇾" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "طاقة المجاري المائية: توربينات صغيرة للقرى السورية",
+      "problem_statement": "تمتلك سوريا شبكة واسعة من الأنهار والسواقي (مثل العاصي وفروعه) التي تتدفق باستمرار، بينما تعاني القرى المحاذية لها من عتمة كاملة. الفجوة هي غياب توربينات مائية صغيرة (Micro-Hydro) ومنخفضة التكلفة يمكن تركيبها في المجاري المائية لتوليد كهرباء مستقرة ومستمرة 24/7 للإنارة المنزلية وضخ مياه الري."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Ayn-Power",
+        "industry_tag": "الطاقة المائية اللامركزية",
+        "revenue_model": "Fixed Monthly Fee per Household + Energy Sales for Irrigation Pumps + Hardware Maintenance",
+        "action_text": "استعراض خطة إنارة الريف السوري عبر تدفق الأنهار"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الضوء المتدفق (0-24 شهر)",
+      "subtitle": "كهرباء من خيرات الأرض السورية",
+      "phases": [
+        {
+          "title": "مسح هيدروليكي للمجاري المائية",
+          "description": "استخدام بيانات الأقمار الصناعية والمسح الميداني لتحديد أفضل نقاط تدفق المياه (Head/Flow) لتركيب التوربينات الصغيرة.",
+          "icon": "map",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تصنيع التوربينات المحلية (Open Design)",
+          "description": "تطوير توربينات مائية مبسطة وقوية يمكن تصنيع أجزاء منها محلياً لتقليل تكلفة الاستيراد وسهولة الصيانة.",
+          "icon": "chip",
+          "color_theme": "rose"
+        },
+        {
+          "title": "بناء الشبكات المصغرة (Smart Micro-Grids)",
+          "description": "ربط التوربينات بمنازل القرية عبر شبكة ذكية تضمن توزيعاً عادلاً للطاقة ومنع التحميل الزائد.",
+          "icon": "share",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.2,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "River Flow Rates (m3/s) vs Village Population Density"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التركيز الحكومي التاريخي على السدود الكبرى وإهمال الطاقة المائية الصغيرة.",
+        "تخوف السكان من تأثر حصص مياه الري بتركيب التوربينات (يتم حله بتوربينات انسيابية لا تعيق الماء).",
+        "الحاجة لصيانة دورية من الطمي والأوساخ العالقة في الأنهار.",
+        "نقص التمويل المخصص للمشاريع الطاقية الصغيرة في الأرياف."
+      ],
+      "recommended_tech_stack": [
+        "Cross-flow & Kaplan Turbines",
+        "Permanent Magnet Generators (PMG)",
+        "IoT Power Metering",
+        "Remote Flow Monitoring Sensors",
+        "Diverter-less Load Management"
+      ],
+      "main_risk_index": "تذبذب منسوب المياه؛ جفاف الأنهار في الصيف قد يقلل الإنتاج، مما يتطلب نظاماً هجيناً (مائي-شمسي) لضمان الاستقرار."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-HEALTH-2026-ROBOT",
+      "status_label": "تحليل استخباري لمستقبل الجراحة الرقمية",
+      "category_tag": "التكنولوجيا الجراحية (Robotics / Haptics)",
+      "business_model": "Hardware Sale + Service Maintenance + Consumables",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Surgery",
+      "Medical Robotics",
+      "Precision Medicine"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Riyadh", "flag": "🇸🇦" },
+        { "name": "Dubai", "flag": "🇦🇪" },
+        { "name": "Doha", "flag": "🇶🇦" }
+      ],
+      "additional_regions_count": 0
+    },
+    "core_content": {
+      "title": "الروبوتات الجراحية المساعدة في العمليات الدقيقة",
+      "problem_statement": "تعاني المستشفيات من نقص في الجراحين المتخصصين القادرين على إجراء العمليات المعقدة ذات التدخل المحدود (Minimally Invasive). الجراحة التقليدية تستهلك وقتاً أطول، وتزيد من مخاطر النزيف وفترة التعافي. هناك حاجة ماسة لأنظمة روبوتية توفر دقة تفوق اليد البشرية، وتقلل من إجهاد الجراح، وتسمح بإجراء عمليات عن بعد عبر شبكات الاتصال المتقدمة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Jarah-Bot",
+        "industry_tag": "المنصات الروبوتية الجراحية",
+        "revenue_model": "Unit Sale to Hospitals + Annual Maintenance + Per-Procedure Consumable Kits",
+        "action_text": "استعراض دقة التحكم والتقليل من فترات إقامة المرضى بنسبة 40%"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق الجراحة الآلية (0-24 شهر)",
+      "subtitle": "تمكين الجراحين بأدوات الغد",
+      "phases": [
+        {
+          "title": "تطوير أذرع التحكم متناهية الدقة",
+          "description": "تصنيع أذرع روبوتية بمدى حركة 360 درجة، مزودة بتقنية 'إلغاء الرعاش' الطبيعي ليد الجراح لضمان دقة مليمترية.",
+          "icon": "hand",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "دمج الرؤية المجسمة ثلاثية الأبعاد (3D Visuals)",
+          "description": "تزويد الجراح بواجهة بصرية فائقة الدقة تكبر منطقة الجراحة 10 مرات، مع دمج بيانات الأشعة لحظياً فوق الصورة الحية (Augmented Reality).",
+          "icon": "view-grid",
+          "color_theme": "rose"
+        },
+        {
+          "title": "منصة التدريب والمحاكاة الافتراضية",
+          "description": "بناء نظام محاكاة يتيح للجراحين التدرب على العمليات المعقدة قبل إجرائها فعلياً، مما يقلل من مخاطر الأخطاء الطبية.",
+          "icon": "desktop-computer",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.3,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "500+ (Surgical Outcome Data & Hospital CAPEX Trends)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التكلفة الرأسمالية الباهظة للأنظمة الروبوتية العالمية الحالية.",
+        "الحاجة لتدريب مكثف ومتخصص للجراحين وطواقم التمريض.",
+        "غياب مراكز صيانة محلية متخصصة للأجهزة الدقيقة.",
+        "تخوف بعض المرضى من 'الآلة' في العمليات الحساسة."
+      ],
+      "recommended_tech_stack": [
+        "Haptic Feedback Systems",
+        "AI Computer Vision",
+        "Real-time Tele-surgery (5G/6G)",
+        "Advanced Material Science (Biocompatible)",
+        "Cloud-based Surgical Analytics"
+      ],
+      "main_risk_index": "المسؤولية الطبية؛ تحديد المسؤولية القانونية في حال حدوث عطل تقني أثناء الجراحة يتطلب أطراً قانونية وتأمينية جديدة."
+    }
+  }
+}

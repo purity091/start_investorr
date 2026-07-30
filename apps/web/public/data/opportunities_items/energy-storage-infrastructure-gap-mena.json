@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ENERGY4",
+      "status_label": "تحليل فجوة تخزين الطاقة",
+      "category_tag": "Energy Storage (Battery / Grid Storage)",
+      "business_model": "Hardware + Energy Storage as a Service",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Energy",
+      "Storage",
+      "Infrastructure"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Morocco", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 9
+    },
+    "core_content": {
+      "title": "بناء بنية تحتية لتخزين الطاقة",
+      "problem_statement": "الطاقة المتجددة غير مستقرة بطبيعتها، ومع غياب حلول تخزين فعالة، يتم فقدان جزء كبير من الطاقة المنتجة. هذا يحد من قدرة الدول على الاعتماد على الطاقة النظيفة بشكل كامل."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "EnergyStoreX",
+        "industry_tag": "Energy Storage Systems",
+        "revenue_model": "Storage Leasing + Energy Trading",
+        "action_text": "استعراض تخزين الطاقة واستخدامها لاحقاً"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التخزين (0-24 شهر)",
+      "subtitle": "تخزين الطاقة للمستقبل",
+      "phases": [
+        {
+          "title": "بناء أنظمة تخزين",
+          "description": "تطوير بطاريات.",
+          "icon": "battery",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تكامل مع الشبكة",
+          "description": "ربط التخزين بالشبكة.",
+          "icon": "network",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إدارة الطاقة",
+          "description": "تحسين الاستخدام.",
+          "icon": "cpu",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.9,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.4,
+      "data_points_analyzed": "2500+ (Energy Storage Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تكلفة عالية.",
+        "نقص البنية التحتية.",
+        "تعقيد التكنولوجيا.",
+        "نقص الاستثمار."
+      ],
+      "recommended_tech_stack": [
+        "Battery Tech",
+        "Energy Management Systems",
+        "IoT Monitoring",
+        "AI Optimization",
+        "Grid Integration"
+      ],
+      "main_risk_index": "رأس المال؛ يحتاج استثمار ضخم."
+    }
+  }
+}

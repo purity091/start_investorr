@@ -1,0 +1,84 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-IND2",
+      "status_label": "تحليل فجوة الإنتاجية الصناعية",
+      "category_tag": "Industrial Efficiency / Productivity",
+      "business_model": "Industrial SaaS + Consulting + Performance-based Pricing",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Industry",
+      "Manufacturing",
+      "Productivity"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Morocco", "flag": "🇲🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Jordan", "flag": "🇯🇴" }
+      ],
+      "additional_regions_count": 8
+    },
+    "core_content": {
+      "title": "رفع إنتاجية المصانع إلى المعايير العالمية",
+      "problem_statement": "تشير تقارير :contentReference[oaicite:3]{index=3} إلى أن إنتاجية العمالة الصناعية في العديد من الدول النامية، بما فيها دول عربية، أقل بكثير من الدول الصناعية المتقدمة. الفرق لا يعود فقط إلى تكلفة العمالة، بل إلى كفاءة العمليات، استخدام التكنولوجيا، إدارة الإنتاج، وجودة البيانات. في كثير من المصانع، تعمل خطوط الإنتاج بنسبة كفاءة أقل من 60–70% مقارنة بمستويات تتجاوز 85% في المصانع المتقدمة (OEE – Overall Equipment Effectiveness). هذا الفرق يترجم مباشرة إلى خسارة في الأرباح والقدرة التنافسية."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "ProdMax AI",
+        "industry_tag": "Industrial Productivity Platforms",
+        "revenue_model": "SaaS + Performance-based Revenue Share",
+        "action_text": "استعراض تحسين إنتاجية خطوط الإنتاج باستخدام البيانات"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة رفع الإنتاجية (0-12 شهر)",
+      "subtitle": "كل دقيقة تشغيل محسوبة",
+      "phases": [
+        {
+          "title": "قياس الأداء الفعلي",
+          "description": "تطبيق أنظمة OEE لقياس الأداء الحقيقي للآلات.",
+          "icon": "gauge",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "تحليل الاختناقات",
+          "description": "تحديد نقاط الضعف في خطوط الإنتاج.",
+          "icon": "search",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تحسين العمليات",
+          "description": "إعادة تصميم العمليات لزيادة الإنتاجية.",
+          "icon": "cpu",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.8,
+      "competitive_moat": 9.2,
+      "data_points_analyzed": "3500+ (OEE Benchmarks, Productivity Metrics)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "غياب القياس الدقيق للأداء داخل المصانع.",
+        "الاعتماد على إدارة تقليدية غير مبنية على البيانات.",
+        "نقص التدريب التقني للعمال.",
+        "ضعف الاستثمار في التحسين المستمر.",
+        "عدم استخدام أدوات Industry 4.0."
+      ],
+      "recommended_tech_stack": [
+        "OEE Systems",
+        "Industrial IoT",
+        "AI Analytics",
+        "MES (Manufacturing Execution Systems)",
+        "Digital Twin"
+      ],
+      "main_risk_index": "التبني؛ التحدي الأكبر هو إقناع المصانع بتغيير طريقة عملها وليس فقط شراء نظام."
+    }
+  }
+}

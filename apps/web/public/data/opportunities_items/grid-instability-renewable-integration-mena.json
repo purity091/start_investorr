@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-ENERGY1",
+      "status_label": "تحليل عدم استقرار الشبكات مع الطاقة المتجددة",
+      "category_tag": "Energy Tech (Grid Management / Renewable Integration)",
+      "business_model": "SaaS (Grid Optimization) + Enterprise + Government Contracts",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Energy",
+      "Grid",
+      "Renewables"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Morocco", "flag": "🇲🇦" }
+      ],
+      "additional_regions_count": 8
+    },
+    "core_content": {
+      "title": "تحقيق استقرار الشبكات الكهربائية مع إدخال الطاقة المتجددة",
+      "problem_statement": "مع التوسع السريع في مشاريع الطاقة الشمسية والرياح في المنطقة، تواجه الشبكات الكهربائية تحديات كبيرة في الاستقرار بسبب الطبيعة المتقطعة لهذه المصادر. يؤدي ذلك إلى تقلبات في التردد والجهد، وانقطاعات محتملة. في بعض الحالات، يتم إيقاف إنتاج الطاقة المتجددة بسبب عدم قدرة الشبكة على استيعابها، مما يهدر استثمارات ضخمة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "GridSense AI",
+        "industry_tag": "أنظمة إدارة الشبكات الذكية",
+        "revenue_model": "Government Contracts + SaaS + Licensing",
+        "action_text": "استعراض استقرار الشبكة وتحسين استخدام الطاقة المتجددة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة استقرار الشبكة (0-18 شهر)",
+      "subtitle": "شبكة ذكية مرنة",
+      "phases": [
+        {
+          "title": "تحليل بيانات الشبكة",
+          "description": "جمع وتحليل بيانات الإنتاج والاستهلاك.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "بناء نماذج تنبؤ",
+          "description": "توقع الإنتاج والاستهلاك باستخدام AI.",
+          "icon": "cpu",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تحسين توزيع الطاقة",
+          "description": "إدارة تدفق الطاقة بشكل ديناميكي.",
+          "icon": "network",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.3,
+      "data_points_analyzed": "2600+ (Grid Stability Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تعقيد الشبكات الكهربائية.",
+        "الاعتماد على بنية قديمة.",
+        "نقص أنظمة التنبؤ.",
+        "ضعف الاستثمار في Grid Tech."
+      ],
+      "recommended_tech_stack": [
+        "AI Forecasting Models",
+        "Smart Grid Systems",
+        "IoT Sensors",
+        "Real-time Monitoring",
+        "Cloud Platforms"
+      ],
+      "main_risk_index": "تنظيمي؛ يعتمد على التعاون مع الجهات الحكومية."
+    }
+  }
+}

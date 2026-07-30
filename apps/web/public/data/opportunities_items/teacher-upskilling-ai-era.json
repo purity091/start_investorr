@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-EDAI3",
+      "status_label": "تحليل فجوة تأهيل المعلمين لعصر الذكاء الاصطناعي",
+      "category_tag": "التدريب المهني (Teacher Training / AI Education)",
+      "business_model": "B2B Training Programs + Certification Platform",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Education",
+      "Teacher Training",
+      "AI Integration"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Qatar", "flag": "🇶🇦" }
+      ],
+      "additional_regions_count": 6
+    },
+    "core_content": {
+      "title": "تأهيل المعلمين لاستخدام الذكاء الاصطناعي في التعليم",
+      "problem_statement": "رغم دخول الذكاء الاصطناعي إلى التعليم، إلا أن الغالبية العظمى من المعلمين في العالم العربي غير مؤهلين لاستخدامه بشكل فعال. هذا يؤدي إلى فجوة خطيرة حيث يمتلك الطلاب أدوات متقدمة بينما يفتقر المعلم إلى القدرة على توجيهها. البرامج الحالية سطحية ولا تقدم تدريب عملي حقيقي."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "EduCoach-AI",
+        "industry_tag": "تدريب المعلمين والتحول الرقمي",
+        "revenue_model": "Institutional Training Contracts + Certification Fees",
+        "action_text": "استعراض برنامج تدريب عملي للمعلمين باستخدام AI"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة تأهيل المعلم (0-9 أشهر)",
+      "subtitle": "تحويل المعلم إلى قائد رقمي",
+      "phases": [
+        {
+          "title": "تصميم منهج تدريب عملي",
+          "description": "بناء برامج تدريب تركز على الاستخدام الفعلي للـ AI داخل الصف.",
+          "icon": "book-open",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "منصة تدريب تفاعلية",
+          "description": "إنشاء بيئة تدريب تحاكي الصفوف الدراسية باستخدام أدوات AI.",
+          "icon": "monitor",
+          "color_theme": "rose"
+        },
+        {
+          "title": "نظام اعتماد وشهادات",
+          "description": "تقديم شهادات معتمدة للمعلمين لرفع مستوى الثقة والتوظيف.",
+          "icon": "certificate",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.0,
+      "liquidity_tam": 9.2,
+      "competitive_moat": 8.5,
+      "data_points_analyzed": "1500+ (Teacher Skill Gap & AI Adoption Rates)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "التركيز على التكنولوجيا دون تدريب العنصر البشري.",
+        "نقص برامج التدريب العملي.",
+        "ضعف الوعي بأهمية AI في التعليم.",
+        "عدم وجود معايير تقييم واضحة للمهارات الرقمية."
+      ],
+      "recommended_tech_stack": [
+        "AI-powered Training Simulations",
+        "Learning Management Systems (LMS)",
+        "Interactive Video Platforms",
+        "Assessment Engines",
+        "Certification Systems (Blockchain optional)"
+      ],
+      "main_risk_index": "اعتماد المؤسسات التعليمية؛ نجاح المشروع يعتمد على إقناع المدارس والجهات الرسمية بأهمية الاستثمار في تدريب المعلمين."
+    }
+  }
+}

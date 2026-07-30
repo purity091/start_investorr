@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-TECH2",
+      "status_label": "تحليل فجوة الأمن السيبراني للشركات الصغيرة",
+      "category_tag": "Cybersecurity (SME Protection)",
+      "business_model": "Subscription SaaS + Managed Security Services",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Technology",
+      "Cybersecurity",
+      "SME"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Egypt", "flag": "🇪🇬" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "حماية الشركات الصغيرة من الهجمات السيبرانية",
+      "problem_statement": "أكثر من 60% من الشركات الصغيرة والمتوسطة في المنطقة تعرضت لمحاولات اختراق، ومع ذلك لا تمتلك حلول حماية متقدمة بسبب ارتفاع التكلفة وتعقيد الأنظمة. الهجمات مثل phishing و ransomware تؤدي إلى خسائر مالية وتشغيلية كبيرة، بينما الحلول الحالية موجهة للشركات الكبرى فقط."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "SecureSME",
+        "industry_tag": "Cybersecurity SaaS",
+        "revenue_model": "Monthly Subscription + Managed Services",
+        "action_text": "استعراض نظام حماية شامل للشركات الصغيرة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة الأمن السيبراني (0-12 شهر)",
+      "subtitle": "حماية رقمية سهلة وفعالة",
+      "phases": [
+        {
+          "title": "تطوير نظام حماية مبسط",
+          "description": "بناء منصة سهلة الاستخدام للشركات الصغيرة.",
+          "icon": "shield",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "استخدام AI للكشف عن التهديدات",
+          "description": "تحليل الأنماط لاكتشاف الهجمات مبكراً.",
+          "icon": "cpu",
+          "color_theme": "rose"
+        },
+        {
+          "title": "خدمات إدارة أمنية",
+          "description": "تقديم خدمات مراقبة وإدارة مستمرة.",
+          "icon": "eye",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.7,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 8.8,
+      "data_points_analyzed": "1800+ (Cyber Attack Reports)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "ارتفاع تكلفة حلول الأمن.",
+        "تعقيد الأنظمة الحالية.",
+        "نقص الوعي الأمني.",
+        "التركيز على الشركات الكبرى فقط."
+      ],
+      "recommended_tech_stack": [
+        "Threat Detection AI",
+        "Cloud Security Platforms",
+        "SIEM Systems",
+        "Endpoint Protection",
+        "Zero Trust Architecture"
+      ],
+      "main_risk_index": "ثقة العملاء؛ يجب بناء سمعة قوية في مجال حساس."
+    }
+  }
+}

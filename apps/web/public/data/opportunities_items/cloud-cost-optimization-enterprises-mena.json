@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-TECH6",
+      "status_label": "تحليل هدر تكاليف السحابة",
+      "category_tag": "Cloud Optimization (FinOps / SaaS)",
+      "business_model": "SaaS + Savings-based Pricing",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Technology",
+      "Cloud",
+      "FinOps"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Saudi Arabia", "flag": "🇸🇦" },
+        { "name": "UAE", "flag": "🇦🇪" },
+        { "name": "Qatar", "flag": "🇶🇦" }
+      ],
+      "additional_regions_count": 7
+    },
+    "core_content": {
+      "title": "تحسين تكاليف السحابة للشركات",
+      "problem_statement": "تهدر الشركات في المنطقة ما يصل إلى 30% من ميزانيات السحابة بسبب سوء إدارة الموارد، مثل تشغيل خوادم غير مستخدمة أو عدم تحسين الاستهلاك. رغم توفر أدوات عالمية، إلا أنها معقدة ولا تُستخدم بشكل فعال."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "CloudSave",
+        "industry_tag": "Cloud Cost Optimization",
+        "revenue_model": "Percentage of Savings + Subscription",
+        "action_text": "استعراض تقليل التكاليف السحابية بشكل فوري"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة تحسين التكاليف (0-9 أشهر)",
+      "subtitle": "كل دولار محسوب",
+      "phases": [
+        {
+          "title": "تحليل استهلاك السحابة",
+          "description": "جمع وتحليل بيانات الاستخدام.",
+          "icon": "chart",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "توصيات تحسين",
+          "description": "اقتراح إيقاف أو تحسين الموارد.",
+          "icon": "cpu",
+          "color_theme": "rose"
+        },
+        {
+          "title": "تنفيذ تلقائي",
+          "description": "أتمتة تحسين التكاليف.",
+          "icon": "automation",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.3,
+      "liquidity_tam": 9.6,
+      "competitive_moat": 8.9,
+      "data_points_analyzed": "2000+ (Cloud Usage Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "تعقيد إدارة السحابة.",
+        "نقص الوعي بـ FinOps.",
+        "عدم استخدام الأدوات المتاحة.",
+        "توسع سريع بدون رقابة."
+      ],
+      "recommended_tech_stack": [
+        "Cloud APIs (AWS/GCP/Azure)",
+        "Cost Analysis Tools",
+        "Automation Scripts",
+        "Data Analytics",
+        "Monitoring Systems"
+      ],
+      "main_risk_index": "دقة التوصيات؛ يجب إثبات توفير حقيقي للعملاء."
+    }
+  }
+}

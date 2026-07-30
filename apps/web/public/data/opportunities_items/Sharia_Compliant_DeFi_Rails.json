@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-DEEP-2026-FIN03",
+      "status_label": "تحليل فجوة الابتكار في التمويل الإسلامي الرقمي",
+      "category_tag": "DeFi / Islamic Finance / Blockchain",
+      "business_model": "Protocol Fees + Staking Rewards + Institutional Integration Fees",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Finance",
+      "Blockchain",
+      "Sharia Compliance"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Bahrain (DeFi Hub)", "flag": "🇧🇭" },
+        { "name": "Saudi Arabia (Wealth Management)", "flag": "🇸🇦" },
+        { "name": "UAE (Crypto-Economy)", "flag": "🇦🇪" }
+      ],
+      "additional_regions_count": 5
+    },
+    "core_content": {
+      "title": "الجيل الثاني من التمويل الإسلامي اللامركزي (Islamic DeFi 2.0)",
+      "problem_statement": "تفتقر أدوات التمويل الإسلامي الحالية للشفافية والسرعة، وتعتمد على عقود ورقية معقدة. في المقابل، التمويل اللامركزي (DeFi) الحالي مليء بـ 'الربا' و'الغرر'. هناك فجوة لبروتوكول بلوكشين يقوم بأتمتة عقود المرابحة والمشاركة عبر 'عقود ذكية' (Smart Contracts) موثقة شرعياً ولحظياً."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "Meezan-Protocol",
+        "industry_tag": "البنية التحتية للمالية الإسلامية الرقمية",
+        "revenue_model": "Small Fee per Transaction + Liquidity Provision + Asset Tokenization Services",
+        "action_text": "استعراض بروتوكول السيولة المتوافقة مع الشريعة"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة طريق العدالة المالية (0-18 شهر)",
+      "subtitle": "ترميز الأصول وتوزيع العوائد بصدق",
+      "phases": [
+        {
+          "title": "تطوير 'أوراكل' الامتثال الشرعي",
+          "description": "بناء نظام برمجي يراقب المعاملات لحظياً ويمنع أي عقد يحتوي على شبهة ربا أو غرر بناءً على معايير (AAOIFI).",
+          "icon": "shield-check",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "ترميز الأصول الحقيقية (RWA)",
+          "description": "تحويل العقارات والصكوك والسلع إلى أصول رقمية (Tokens) لتمكين الاستثمار المجزأ والمشاركة في الأرباح آلياً.",
+          "icon": "link",
+          "color_theme": "rose"
+        },
+        {
+          "title": "إطلاق منصة التمويل التشاركي اللامركزي",
+          "description": "تمكين المستخدمين من إقراض واقتراض الأصول الرقمية بنظام 'المشاركة في الربح والخسارة' بدلاً من الفائدة الثابتة.",
+          "icon": "switch-horizontal",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.6,
+      "liquidity_tam": 9.9,
+      "competitive_moat": 9.5,
+      "data_points_analyzed": "Total Islamic Finance Assets vs Digital Adoption Rate"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "الجمود التنظيمي في بعض المؤسسات المالية الإسلامية التقليدية.",
+        "تعقيد البرمجة التي تجمع بين المنطق الفقهي والمنطق البرمجي (Solidity).",
+        "نقص الوعي بمزايا البلوكشين في تحقيق 'مقاصد الشريعة' (الشفافية والعدل).",
+        "المخاوف الأمنية المرتبطة بمنصات العملات الرقمية العامة."
+      ],
+      "recommended_tech_stack": [
+        "Ethereum L2 (Polygon / Arbitrum)",
+        "Solidity Smart Contracts",
+        "Chainlink Oracles (Sharia Validation)",
+        "Zero-Knowledge Proofs (Privacy)",
+        "Tokenization Protocols (ERC-3643)"
+      ],
+      "main_risk_index": "التقلبات التنظيمية؛ التغييرات في قوانين الأصول الرقمية في المنطقة تتطلب مرونة عالية في البرمجة والامتثال."
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "opportunity": {
+    "metadata": {
+      "id": "OP-MENA-2026-AGRI4",
+      "status_label": "تحليل فجوة التمويل الزراعي",
+      "category_tag": "AgriFinTech (Agricultural Finance / Credit Scoring)",
+      "business_model": "Lending Platform + Credit Scoring API + Commission per Loan",
+      "last_update": "2026-04-25"
+    },
+    "path": [
+      "Agriculture",
+      "Finance",
+      "Credit Access"
+    ],
+    "geography": {
+      "active_regions": [
+        { "name": "Egypt", "flag": "🇪🇬" },
+        { "name": "Sudan", "flag": "🇸🇩" },
+        { "name": "Iraq", "flag": "🇮🇶" }
+      ],
+      "additional_regions_count": 10
+    },
+    "core_content": {
+      "title": "منصة تمويل ذكية للمزارعين غير المخدومين مالياً",
+      "problem_statement": "يعاني ملايين المزارعين في العالم العربي من صعوبة الوصول إلى التمويل بسبب غياب السجلات المالية الرسمية وعدم قدرتهم على تقديم ضمانات تقليدية. البنوك تعتبر القطاع الزراعي عالي المخاطر، مما يؤدي إلى فجوة تمويلية ضخمة تعيق الاستثمار في البذور، المعدات، والتقنيات الحديثة."
+    },
+    "investment_proposals": [
+      {
+        "id": "prop_1",
+        "brand_name": "AgriCredit",
+        "industry_tag": "التمويل الزراعي الرقمي",
+        "revenue_model": "Loan Origination Fees + Interest Sharing + Data Analytics",
+        "action_text": "استعراض نموذج تقييم ائتماني بديل للمزارعين"
+      }
+    ],
+    "execution_roadmap": {
+      "title": "خارطة التمويل الزراعي (0-12 شهر)",
+      "subtitle": "تمويل مبني على البيانات وليس الضمانات",
+      "phases": [
+        {
+          "title": "بناء نظام تقييم ائتماني بديل",
+          "description": "استخدام بيانات الإنتاج، الطقس، والمحاصيل لتقييم الجدارة الائتمانية.",
+          "icon": "database",
+          "color_theme": "indigo"
+        },
+        {
+          "title": "إطلاق منصة إقراض رقمية",
+          "description": "ربط المزارعين بالمؤسسات المالية عبر منصة واحدة.",
+          "icon": "link",
+          "color_theme": "rose"
+        },
+        {
+          "title": "الشراكة مع البنوك وشركات التمويل",
+          "description": "توفير قنوات تمويل مباشرة للمزارعين.",
+          "icon": "bank",
+          "color_theme": "emerald"
+        }
+      ]
+    },
+    "strategic_matrix": {
+      "market_pain": 9.8,
+      "liquidity_tam": 9.7,
+      "competitive_moat": 9.0,
+      "data_points_analyzed": "2100+ (Farmer Credit & Loan Access Data)"
+    },
+    "deep_analysis": {
+      "why_unsolved_reasons": [
+        "غياب السجلات المالية الرسمية للمزارعين.",
+        "ارتفاع مخاطر الإقراض الزراعي.",
+        "ضعف الابتكار في نماذج التمويل الزراعي.",
+        "قلة البيانات التي تدعم التقييم الائتماني."
+      ],
+      "recommended_tech_stack": [
+        "Alternative Credit Scoring AI",
+        "Satellite Crop Monitoring",
+        "FinTech Platforms",
+        "Mobile Banking Integration",
+        "Blockchain for Loan Tracking"
+      ],
+      "main_risk_index": "مخاطر التعثر؛ يتطلب المشروع نماذج دقيقة لتقليل نسب التخلف عن السداد."
+    }
+  }
+}
