@@ -364,6 +364,11 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
     onSortingChange: setSorting,
     onColumnFiltersChange: setColumnFilters,
     globalFilterFn: "includesString",
+    initialState: {
+      pagination: {
+        pageSize: 10,
+      },
+    },
     state: {
       sorting,
       columnFilters,
@@ -614,7 +619,26 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
 
       {/* Pagination */}
       <div className="flex flex-col sm:flex-row items-center justify-between px-2 pt-4 gap-4">
-        <div className="hidden sm:block sm:flex-1" />
+        {/* Page Size Selector on the right side in RTL */}
+        <div className="flex items-center gap-2 w-full sm:w-auto justify-start">
+          <span className="text-xs font-bold text-slate-500 whitespace-nowrap">عرض:</span>
+          <Select
+            value={table.getState().pagination.pageSize.toString()}
+            onValueChange={(val) => {
+              table.setPageSize(Number(val));
+            }}
+          >
+            <SelectTrigger className="h-9 w-[115px] bg-white border-slate-200 rounded-xl font-bold text-xs text-slate-700 shadow-xs">
+              <SelectValue placeholder="10 نتائج" />
+            </SelectTrigger>
+            <SelectContent className="rounded-xl border-slate-200 min-w-[115px]" dir="rtl">
+              <SelectItem value="10" className="font-bold cursor-pointer text-xs">10 نتائج</SelectItem>
+              <SelectItem value="20" className="font-bold cursor-pointer text-xs">20 نتيجة</SelectItem>
+              <SelectItem value="50" className="font-bold cursor-pointer text-xs">50 نتيجة</SelectItem>
+              <SelectItem value="100" className="font-bold cursor-pointer text-xs">100 نتيجة</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
 
         {/* Centered Pagination Controls */}
         <div className="flex items-center justify-center space-x-2 space-x-reverse sm:flex-none">
