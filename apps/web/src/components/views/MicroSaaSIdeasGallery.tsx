@@ -3,8 +3,23 @@ import { Badge } from '@/components/ui/Badge';
 import { Card, CardContent } from '@/components/ui/Card';
 import { ProvenProjectProfile } from '@/components/features/business/ProvenProjectProfile';
 import { ProvenProjectsTable } from '@/components/features/business/ProvenProjectsTable';
-import { Settings2, Sparkles, TrendingDown, Loader2, Layers, CheckCircle2, AlertTriangle } from 'lucide-react';
+import { Settings2, Sparkles, TrendingDown, Loader2, CheckCircle2, AlertTriangle, UserCheck, Target } from 'lucide-react';
 import { cn } from '@/lib/utils';
+
+// Explicit list of verified Micro-SaaS projects from the JSON dataset
+const MICRO_SAAS_SLUGS = new Set([
+  'dashp',
+  'supademo',
+  'formula-bot',
+  'outseta',
+  'bannerbear',
+  'shipfast',
+  'carrd',
+  'plausible',
+  'cal-com',
+  'resend',
+  'scalefactor'
+]);
 
 export const MicroSaaSIdeasGallery: React.FC = () => {
   const [projectsList, setProjectsList] = useState<any[]>([]);
@@ -37,22 +52,20 @@ export const MicroSaaSIdeasGallery: React.FC = () => {
 
         const combined = [...provenList, ...failedList];
 
-        // Filter companies that fit Micro-SaaS / Developer tools / Niche AI products
+        // Precise Micro-SaaS filtering logic
         const microSaasOnly = combined.filter((item) => {
+          const id = item.slug || item.id;
+          if (MICRO_SAAS_SLUGS.has(id)) return true;
+
           const cat = (item.category || '').toLowerCase();
           const bm = (item.company?.business_model || '').toLowerCase();
-          const name = (item.name || '').toLowerCase();
-          const headline = (item.headline || '').toLowerCase();
-          const isSaas = cat.includes('saas') || bm.includes('saas') || cat.includes('برمجيات');
-          
-          return isSaas || 
-            cat.includes('developer') || 
-            cat.includes('open source') || 
-            cat.includes('ai') || 
-            cat.includes('إنتاجية') || 
-            cat.includes('تحليلات') ||
-            headline.includes('أداة') ||
-            headline.includes('واجهة برمجة');
+
+          // Check if category or business model explicitly specifies Micro-SaaS
+          if (cat.includes('micro-saas') || bm.includes('micro-saas') || cat.includes('micro saas')) {
+            return true;
+          }
+
+          return false;
         });
 
         setProjectsList(microSaasOnly);
@@ -60,7 +73,7 @@ export const MicroSaaSIdeasGallery: React.FC = () => {
         // Check if there is a specific project in the URL
         const params = new URLSearchParams(window.location.search);
         const projectId = params.get('project');
-        
+
         if (projectId) {
           const matchedItem = microSaasOnly.find((p) => (p.slug || p.id) === projectId);
           const folder = matchedItem?.sourceStatus === 'failed' ? 'failed-projects' : 'proven-projects';
@@ -76,7 +89,7 @@ export const MicroSaaSIdeasGallery: React.FC = () => {
         setIsLoading(false);
       }
     };
-    
+
     loadData();
   }, []);
 
@@ -109,7 +122,7 @@ export const MicroSaaSIdeasGallery: React.FC = () => {
       if (detailRes.ok) {
         const fullProject = await detailRes.json();
         setSelectedProject(fullProject);
-        
+
         const url = new URL(window.location.href);
         url.searchParams.set('project', projectId);
         window.history.pushState({}, '', url.toString());
@@ -125,39 +138,39 @@ export const MicroSaaSIdeasGallery: React.FC = () => {
 
   return (
     <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-8 sm:px-6 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
-      
+
       {/* Header */}
       <div className="flex flex-col gap-3 mb-2">
         <div className="flex items-center gap-2">
           <Badge variant="secondary" className="w-fit bg-purple-500/10 text-purple-600 hover:bg-purple-500/20 border-0 font-bold px-3 py-1">
             <Settings2 className="size-3.5 me-1.5 inline-block" />
-            فلترة البرمجيات المصغرة (Micro-SaaS)
+            فلترة دقيقة لشركات Micro-SaaS
           </Badge>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">أفكار مشاريع Micro-SaaS</h1>
+        <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">أفكار مشاريع Micro-SaaS الحقيقية</h1>
         <p className="max-w-3xl text-sm sm:text-base leading-relaxed text-slate-600 font-medium">
-          المشاريع البرمجية المصغرة (Micro-SaaS) هي الحل الأمثل للمطورين الأفراد ورواد الأعمال الذين يبحثون عن حل مشكلة دقيقة (Niche) لجمهور محدد. تصفح أفكاراً سهلة البناء سريعة الإطلاق.
+          المشاريع البرمجية المصغرة (Micro-SaaS) هي تطبيقات مخصصة تعتمد على مؤسس فردي (Solo Founder) أو فريق صغير جداً لتلبية احتياج موجه لشريحة نيش (Niche Market). تتميز بتكلفة تشغيلية ضئيلة وسرعة إطلاق عالية بدون تمويل خارجي ضخم.
         </p>
       </div>
 
       {/* KPI Stats Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <Card className="border-slate-200 shadow-sm bg-gradient-to-br from-purple-50/50 to-white">
+        <Card className="border-purple-100 shadow-sm bg-gradient-to-br from-purple-50/50 to-white">
           <CardContent className="p-5 flex items-center justify-between">
             <div>
-              <p className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">إجمالي أدوات Micro-SaaS</p>
+              <p className="text-xs font-bold text-purple-700 uppercase tracking-wider mb-1">إجمالي مشاريع Micro-SaaS</p>
               <h3 className="text-2xl sm:text-3xl font-black text-slate-900">{isLoading ? '...' : projectsList.length}</h3>
             </div>
             <div className="p-3 rounded-2xl bg-purple-100 text-purple-600">
-              <Layers className="size-6" />
+              <Target className="size-6" />
             </div>
           </CardContent>
         </Card>
 
-        <Card className="border-slate-200 shadow-sm bg-gradient-to-br from-amber-50/50 to-white">
+        <Card className="border-amber-100 shadow-sm bg-gradient-to-br from-amber-50/50 to-white">
           <CardContent className="p-5 flex items-center justify-between">
             <div>
-              <p className="text-xs font-bold text-amber-700 uppercase tracking-wider mb-1">أفكار ناجحة ومستقرة</p>
+              <p className="text-xs font-bold text-amber-700 uppercase tracking-wider mb-1">مشاريع ناجحة ومستقرة</p>
               <h3 className="text-2xl sm:text-3xl font-black text-amber-600">{isLoading ? '...' : provenCount}</h3>
             </div>
             <div className="p-3 rounded-2xl bg-amber-100 text-amber-600">
@@ -166,10 +179,10 @@ export const MicroSaaSIdeasGallery: React.FC = () => {
           </CardContent>
         </Card>
 
-        <Card className="border-slate-200 shadow-sm bg-gradient-to-br from-red-50/50 to-white">
+        <Card className="border-red-100 shadow-sm bg-gradient-to-br from-red-50/50 to-white">
           <CardContent className="p-5 flex items-center justify-between">
             <div>
-              <p className="text-xs font-bold text-red-700 uppercase tracking-wider mb-1">شركات فشلت (دروس مستفادة)</p>
+              <p className="text-xs font-bold text-red-700 uppercase tracking-wider mb-1">تجارب فشلت (Post-Mortem)</p>
               <h3 className="text-2xl sm:text-3xl font-black text-red-600">{isLoading ? '...' : failedCount}</h3>
             </div>
             <div className="p-3 rounded-2xl bg-red-100 text-red-600">
@@ -177,6 +190,23 @@ export const MicroSaaSIdeasGallery: React.FC = () => {
             </div>
           </CardContent>
         </Card>
+      </div>
+
+      {/* Criteria Info Banner */}
+      <div className="p-4 rounded-2xl bg-purple-50/60 border border-purple-100 text-purple-900 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div className="flex items-start gap-3">
+          <div className="p-2 rounded-xl bg-purple-100 text-purple-600 shrink-0">
+            <UserCheck className="size-5" />
+          </div>
+          <div>
+            <h4 className="font-bold text-sm text-slate-900 mb-1">معايير اختيار مشاريع الـ Micro-SaaS الدقيقة:</h4>
+            <div className="text-xs text-slate-600 leading-relaxed space-y-1">
+              <p>• **مؤسس فردي (Solo Founder) أو فريق صغير جداً (1-3 أشخاص)** لتقليل التعقيد الإداري.</p>
+              <p>• **سوق موجه بدقة (Niche Focus)**: مثل أداة معادلات Excel، حزمت أتمتة، واجهة برمجة API صور، قالب إطلاق سريع.</p>
+              <p>• **تكلفة تشغيل منخفضة (Bootstrapped)** بدون الحاجة لرأس مال جولات استثمارية ضخمة.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Filter Tabs */}
@@ -191,7 +221,7 @@ export const MicroSaaSIdeasGallery: React.FC = () => {
                 : "text-slate-600 hover:text-slate-900"
             )}
           >
-            جميع الأدوات ({projectsList.length})
+            جميع مشاريع Micro-SaaS ({projectsList.length})
           </button>
           <button
             onClick={() => setStatusFilter('proven')}
@@ -203,7 +233,7 @@ export const MicroSaaSIdeasGallery: React.FC = () => {
             )}
           >
             <CheckCircle2 className="size-3.5" />
-            ناجحة ({provenCount})
+            مشاريع ناجحة ({provenCount})
           </button>
           <button
             onClick={() => setStatusFilter('failed')}
