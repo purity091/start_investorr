@@ -938,98 +938,57 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
   return (
     <TooltipProvider>
       <div dir="rtl" className="min-h-screen bg-background text-right text-foreground">
-        <div className="mx-auto flex w-full max-w-[1700px] flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 xl:px-10">
-          <Card className="shadow-sm">
-            <CardContent className="p-4">
-              <div className="flex flex-col gap-3 rounded-xl bg-muted/20 px-4 py-3">
-                <div className="flex flex-col gap-2 lg:flex-row lg:items-start lg:justify-between">
-                  <div className="min-w-0 space-y-2">
-                    <div className="flex flex-wrap items-center gap-1.5">
-                      <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[10px]">مساحة تحليل السوق</Badge>
-                      <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[10px]">TanStack Table</Badge>
-                      <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[10px]">Shadcn style</Badge>
-                      <Badge variant="outline" className="rounded-md px-2 py-0.5 text-[10px]">كثافة معلومات عالية</Badge>
-                    </div>
-                    <div className="space-y-1">
-                      <h1 className="text-lg font-semibold leading-none tracking-tight sm:text-xl">مشاكل وفرص السوق</h1>
-                      <p className="max-w-4xl text-xs leading-5 text-muted-foreground sm:text-sm">
-                        مساحة قرار مضغوطة لقراءة المشاكل والفرص بسرعة داخل جدول احترافي وفلاتر واضحة.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-2 gap-2 text-xs sm:grid-cols-4 lg:min-w-[480px]">
-                    <div className="rounded-lg bg-background px-3 py-2.5">
-                      <div className="text-[11px] text-muted-foreground">المشاكل</div>
-                      <div className="mt-1 text-sm font-semibold leading-none sm:text-base">{totalProblems}</div>
-                    </div>
-                    <div className="rounded-lg bg-background px-3 py-2.5">
-                      <div className="text-[11px] text-muted-foreground">الفرص</div>
-                      <div className="mt-1 text-sm font-semibold leading-none sm:text-base">{totalOpportunities}</div>
-                    </div>
-                    <div className="rounded-lg bg-background px-3 py-2.5">
-                      <div className="text-[11px] text-muted-foreground">الأولوية العالية</div>
-                      <div className="mt-1 text-sm font-semibold leading-none sm:text-base">{priorityRecords}</div>
-                    </div>
-                    <div className="rounded-lg bg-background px-3 py-2.5">
-                      <div className="text-[11px] text-muted-foreground">القطاعات النشطة</div>
-                      <div className="mt-1 text-sm font-semibold leading-none sm:text-base">{activeSectors}</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+        <div className="mx-auto flex w-full max-w-[1700px] flex-col gap-4 px-4 py-5 sm:px-6 lg:px-8 xl:px-10">
+          {/* Header & Quick Stats Bar */}
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-b border-border/60 pb-3">
+            <div className="space-y-1">
+              <h1 className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">مشاكل وفرص السوق</h1>
+              <p className="text-xs text-muted-foreground sm:text-sm">
+                مساحة قرار مضغوطة لقراءة المشاكل والفرص بسرعة واستكشاف الفجوات الاستثمارية.
+              </p>
+            </div>
 
-          <Card className="shadow-sm">
-            <CardContent className="flex flex-col gap-3 p-4">
-              <div className="flex flex-col gap-2.5 lg:flex-row lg:items-center">
+            <div className="flex flex-wrap items-center gap-2">
+              <Badge variant="outline" className="rounded-lg bg-card px-3 py-1 text-xs font-semibold">
+                {totalProblems} مشكلة
+              </Badge>
+              <Badge variant="outline" className="rounded-lg bg-indigo-50 text-indigo-700 border-indigo-200 px-3 py-1 text-xs font-semibold">
+                {totalOpportunities} فرصة
+              </Badge>
+              <Badge variant="outline" className="rounded-lg bg-emerald-50 text-emerald-700 border-emerald-200 px-3 py-1 text-xs font-semibold">
+                {priorityRecords} عالية الأولوية
+              </Badge>
+            </div>
+          </div>
+
+          {/* Compact Search & Filters Toolbar */}
+          <Card className="shadow-xs rounded-2xl border-border bg-card">
+            <CardContent className="p-3.5 space-y-3">
+              <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center">
                 <div className="relative flex-1">
                   <Search className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
                   <Input
                     value={query}
                     onChange={event => setQuery(event.target.value)}
-                    placeholder="ابحث عن مشكلة، فرصة، قطاع، دولة، أو نموذج عمل"
-                    className="h-10 pr-10 text-right"
+                    placeholder="ابحث عن مشكلة، فرصة، قطاع، دولة، أو نموذج عمل..."
+                    className="h-9 pr-9 text-right text-sm rounded-xl"
                   />
                 </div>
-                <Button type="button" size="md" className="min-w-[110px]">
-                  <Sparkles className="size-4" />
-                  اسأل
-                </Button>
-              </div>
-              <div className="flex flex-wrap gap-1.5">
-                {suggestions.map(suggestion => (
-                  <Button
-                    key={suggestion}
-                    type="button"
-                    variant="outline"
-                    size="xs"
-                    className="rounded-full"
-                    onClick={() => setQuery(suggestion)}
-                  >
-                    {suggestion}
-                  </Button>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
 
-          <Card className="shadow-sm">
-            <CardHeader className="pb-2">
-              <div className="flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between">
-                <div className="space-y-1">
-                  <CardTitle className="text-sm">شريط الفلاتر</CardTitle>
-                  <CardDescription className="text-xs leading-6">فلترة النتائج حسب النوع، القطاع، الربحية، وسهولة التنفيذ.</CardDescription>
-                </div>
-                <div className="flex flex-wrap items-center gap-2">
-                  <Button type="button" variant="outline" size="sm" onClick={resetFilters}>
-                    إعادة ضبط الفلاتر
+                <div className="flex items-center gap-2 shrink-0">
+                  <Button type="button" size="sm" className="h-9 px-4 rounded-xl">
+                    <Sparkles className="size-4 me-1.5" />
+                    اسأل
                   </Button>
+                  <Button type="button" variant="outline" size="sm" onClick={resetFilters} className="h-9 text-xs rounded-xl">
+                    تصفير
+                  </Button>
+
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button type="button" variant="outline" size="sm">
-                        <SlidersHorizontal className="size-4" />
-                        فلاتر متقدمة
+                      <Button type="button" variant="outline" size="sm" className="h-9 text-xs rounded-xl">
+                        <SlidersHorizontal className="size-3.5 me-1.5" />
+                        فلاتر
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end" className="w-64">
@@ -1063,101 +1022,100 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
                   </DropdownMenu>
                 </div>
               </div>
-            </CardHeader>
-            <CardContent className="space-y-3 pt-0">
+
               {isLoading ? (
                 <FiltersSkeleton />
               ) : (
                 <div className="overflow-x-auto">
-                  <div className="flex min-w-max items-center gap-3 rounded-xl bg-muted/30 p-3">
-                  <Select value={sortBy} onValueChange={setSortBy}>
-                    <SelectTrigger><SelectValue placeholder="ترتيب حسب" /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="priority">ترتيب حسب الأولوية</SelectItem>
-                      <SelectItem value="latest">ترتيب حسب آخر تحديث</SelectItem>
-                      <SelectItem value="market">ترتيب حسب حجم السوق</SelectItem>
-                      <SelectItem value="ease">ترتيب حسب سهولة التنفيذ</SelectItem>
-                      <SelectItem value="profit">ترتيب حسب إمكانية الربح</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <div className="flex min-w-max items-center gap-2 pt-0.5">
+                    <Select value={sortBy} onValueChange={setSortBy}>
+                      <SelectTrigger className="h-8 text-xs w-[140px] rounded-lg"><SelectValue placeholder="ترتيب حسب" /></SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="priority">ترتيب حسب الأولوية</SelectItem>
+                        <SelectItem value="latest">ترتيب حسب آخر تحديث</SelectItem>
+                        <SelectItem value="market">ترتيب حسب حجم السوق</SelectItem>
+                        <SelectItem value="ease">ترتيب حسب سهولة التنفيذ</SelectItem>
+                        <SelectItem value="profit">ترتيب حسب إمكانية الربح</SelectItem>
+                      </SelectContent>
+                    </Select>
 
-                  <Select value={typeFilter} onValueChange={value => setTypeFilter(value as 'all' | RecordKind)}>
-                    <SelectTrigger><SelectValue placeholder="النوع" /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="all">كل الأنواع</SelectItem>
-                      <SelectItem value="problem">مشاكل</SelectItem>
-                      <SelectItem value="opportunity">فرص</SelectItem>
-                    </SelectContent>
-                  </Select>
+                    <Select value={typeFilter} onValueChange={value => setTypeFilter(value as 'all' | RecordKind)}>
+                      <SelectTrigger className="h-8 text-xs w-[110px] rounded-lg"><SelectValue placeholder="النوع" /></SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">كل الأنواع</SelectItem>
+                        <SelectItem value="problem">مشاكل</SelectItem>
+                        <SelectItem value="opportunity">فرص</SelectItem>
+                      </SelectContent>
+                    </Select>
 
-                  <Select value={sectorFilter} onValueChange={setSectorFilter}>
-                    <SelectTrigger><SelectValue placeholder="القطاع" /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="all">كل القطاعات</SelectItem>
-                      {sectors.map(sector => (
-                        <SelectItem key={sector} value={sector}>{sector}</SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                    <Select value={sectorFilter} onValueChange={setSectorFilter}>
+                      <SelectTrigger className="h-8 text-xs w-[130px] rounded-lg"><SelectValue placeholder="القطاع" /></SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">كل القطاعات</SelectItem>
+                        {sectors.map(sector => (
+                          <SelectItem key={sector} value={sector}>{sector}</SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
 
-                  <Select value={marketFilter} onValueChange={value => setMarketFilter(value as 'all' | MarketBand)}>
-                    <SelectTrigger><SelectValue placeholder="حجم السوق" /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="all">كل الأحجام</SelectItem>
-                      <SelectItem value="large">كبير</SelectItem>
-                      <SelectItem value="medium">متوسط</SelectItem>
-                      <SelectItem value="small">صغير</SelectItem>
-                    </SelectContent>
-                  </Select>
+                    <Select value={marketFilter} onValueChange={value => setMarketFilter(value as 'all' | MarketBand)}>
+                      <SelectTrigger className="h-8 text-xs w-[110px] rounded-lg"><SelectValue placeholder="حجم السوق" /></SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">كل الأحجام</SelectItem>
+                        <SelectItem value="large">كبير</SelectItem>
+                        <SelectItem value="medium">متوسط</SelectItem>
+                        <SelectItem value="small">صغير</SelectItem>
+                      </SelectContent>
+                    </Select>
 
-                  <Select value={easeFilter} onValueChange={value => setEaseFilter(value as 'all' | EaseBand)}>
-                    <SelectTrigger><SelectValue placeholder="سهولة التنفيذ" /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="all">كل المستويات</SelectItem>
-                      <SelectItem value="easy">سهل</SelectItem>
-                      <SelectItem value="moderate">متوسط</SelectItem>
-                      <SelectItem value="hard">صعب</SelectItem>
-                    </SelectContent>
-                  </Select>
+                    <Select value={easeFilter} onValueChange={value => setEaseFilter(value as 'all' | EaseBand)}>
+                      <SelectTrigger className="h-8 text-xs w-[115px] rounded-lg"><SelectValue placeholder="سهولة التنفيذ" /></SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">كل المستويات</SelectItem>
+                        <SelectItem value="easy">سهل</SelectItem>
+                        <SelectItem value="moderate">متوسط</SelectItem>
+                        <SelectItem value="hard">صعب</SelectItem>
+                      </SelectContent>
+                    </Select>
 
-                  <Select value={profitFilter} onValueChange={value => setProfitFilter(value as 'all' | ProfitBand)}>
-                    <SelectTrigger><SelectValue placeholder="إمكانية الربح" /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="all">كل المستويات</SelectItem>
-                      <SelectItem value="high">مرتفعة</SelectItem>
-                      <SelectItem value="medium">متوسطة</SelectItem>
-                      <SelectItem value="low">ضعيفة</SelectItem>
-                    </SelectContent>
-                  </Select>
+                    <Select value={profitFilter} onValueChange={value => setProfitFilter(value as 'all' | ProfitBand)}>
+                      <SelectTrigger className="h-8 text-xs w-[115px] rounded-lg"><SelectValue placeholder="إمكانية الربح" /></SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">كل المستويات</SelectItem>
+                        <SelectItem value="high">مرتفعة</SelectItem>
+                        <SelectItem value="medium">متوسطة</SelectItem>
+                        <SelectItem value="low">ضعيفة</SelectItem>
+                      </SelectContent>
+                    </Select>
 
-                  <Select value={countryFilter} onValueChange={setCountryFilter}>
-                    <SelectTrigger><SelectValue placeholder="الدولة" /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="all">كل الدول</SelectItem>
-                      {countries.map(country => (
-                        <SelectItem key={country} value={country}>{country}</SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                    <Select value={countryFilter} onValueChange={setCountryFilter}>
+                      <SelectTrigger className="h-8 text-xs w-[110px] rounded-lg"><SelectValue placeholder="الدولة" /></SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">كل الدول</SelectItem>
+                        {countries.map(country => (
+                          <SelectItem key={country} value={country}>{country}</SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
 
-                  <Select value={competitionFilter} onValueChange={value => setCompetitionFilter(value as 'all' | CompetitionBand)}>
-                    <SelectTrigger><SelectValue placeholder="المنافسة" /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="all">كل المستويات</SelectItem>
-                      <SelectItem value="low">منخفضة</SelectItem>
-                      <SelectItem value="medium">متوسطة</SelectItem>
-                      <SelectItem value="high">مرتفعة</SelectItem>
-                    </SelectContent>
-                  </Select>
+                    <Select value={competitionFilter} onValueChange={value => setCompetitionFilter(value as 'all' | CompetitionBand)}>
+                      <SelectTrigger className="h-8 text-xs w-[110px] rounded-lg"><SelectValue placeholder="المنافسة" /></SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">كل المستويات</SelectItem>
+                        <SelectItem value="low">منخفضة</SelectItem>
+                        <SelectItem value="medium">متوسطة</SelectItem>
+                        <SelectItem value="high">مرتفعة</SelectItem>
+                      </SelectContent>
+                    </Select>
 
-                  <Select value={sourceFilter} onValueChange={value => setSourceFilter(value as DataSource)}>
-                    <SelectTrigger><SelectValue placeholder="مصدر البيانات" /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="all">كل المصادر</SelectItem>
-                      <SelectItem value="base">المصدر الأساسي</SelectItem>
-                      <SelectItem value="dynamic">المصدر الديناميكي</SelectItem>
-                    </SelectContent>
-                  </Select>
+                    <Select value={sourceFilter} onValueChange={value => setSourceFilter(value as DataSource)}>
+                      <SelectTrigger className="h-8 text-xs w-[120px] rounded-lg"><SelectValue placeholder="مصدر البيانات" /></SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">كل المصادر</SelectItem>
+                        <SelectItem value="base">المصدر الأساسي</SelectItem>
+                        <SelectItem value="dynamic">المصدر الديناميكي</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
                 </div>
               )}
