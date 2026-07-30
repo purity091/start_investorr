@@ -110,11 +110,9 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
             <CardContent className="p-4 sm:p-6">
               <div className="grid gap-6 md:grid-cols-[1fr_300px] items-center">
                 <div className="flex items-center gap-4 text-right">
-                  <img
-                    src={user.avatar}
-                    alt={displayName}
-                    className="size-16 rounded-full object-cover ring-2 ring-primary/20"
-                  />
+                  <div className="size-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center font-black text-xl shadow-sm">
+                    {displayName.slice(0, 1).toUpperCase()}
+                  </div>
                   <div>
                     <h3 className="text-2xl font-semibold text-foreground">{displayName}</h3>
                     <p className="text-sm text-muted-foreground dir-ltr text-right">{displayEmail}</p>
