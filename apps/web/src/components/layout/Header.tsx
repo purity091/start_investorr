@@ -166,11 +166,11 @@ export const Header: React.FC<HeaderProps> = ({
               variant="outline"
               size="sm"
               onClick={() => setIsFeedbackOpen(!isFeedbackOpen)}
-              className="h-9 gap-1.5 rounded-lg border-amber-200 bg-amber-50/70 text-amber-900 hover:bg-amber-100 hover:text-amber-950 transition-all font-medium"
+              className="h-9 gap-1.5 rounded-lg border-border text-foreground hover:bg-muted font-medium text-xs"
               title="أرسل اقتراحك لتطوير المنصة"
             >
-              <Lightbulb className="size-4 text-amber-600 animate-pulse" />
-              <span className="hidden sm:inline text-xs">اقتراح للمنصة</span>
+              <MessageSquarePlus className="size-4 text-muted-foreground" />
+              <span className="hidden sm:inline">اقتراح للمنصة</span>
             </Button>
 
             <Button
