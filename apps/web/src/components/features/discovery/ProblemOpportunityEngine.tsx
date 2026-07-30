@@ -1363,6 +1363,7 @@ export const ProblemOpportunityEngine: React.FC<{ setActiveTab?: (tab: string) =
                 selectedRecordId={selectedId}
                 onSelectRecord={handleSelectRecord}
                 onBookmark={handleBookmark}
+                onCellFilter={handleCellFilter}
               />
             )}
           </div>
