@@ -96,7 +96,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html {
+  scrollbar-gutter: stable;
   -webkit-font-smoothing: antialiased;
   background-color: #FFFFFF;
   font-family: var(--font-sans);
@@ -108,11 +109,19 @@ html, body {
 
 body {
   background-color: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-sans);
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-/* Prevent Radix UI from hiding the scrollbar and causing layout shifts */
-body[data-scroll-locked] {
-  overflow: auto !important;
+/* Prevent Radix UI / react-remove-scroll from hiding the scrollbar and causing screen jitter/layout shifts */
+html[data-scroll-locked],
+body[data-scroll-locked],
+body[style*="overflow: hidden"] {
+  overflow-y: scroll !important;
   padding-right: 0 !important;
   margin-right: 0 !important;
 }
