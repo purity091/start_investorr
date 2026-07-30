@@ -225,18 +225,20 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
         </div>
       )}
 
-      <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as SettingsTab)} className="space-y-6">
-        <TabsList className="grid w-full max-w-md grid-cols-3">
-          {tabItems.map((item) => {
-            const Icon = item.icon;
-            return (
-              <TabsTrigger key={item.value} value={item.value} className="gap-2">
-                <Icon className="size-4" />
-                <span className="hidden sm:inline">{item.label}</span>
-              </TabsTrigger>
-            );
-          })}
-        </TabsList>
+      <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as SettingsTab)} dir="rtl" className="space-y-6">
+        <div className="flex justify-start">
+          <TabsList dir="rtl" className="grid w-full max-w-md grid-cols-3 mr-0">
+            {tabItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <TabsTrigger key={item.value} value={item.value} className="gap-2 justify-center">
+                  <Icon className="size-4" />
+                  <span className="hidden sm:inline">{item.label}</span>
+                </TabsTrigger>
+              );
+            })}
+          </TabsList>
+        </div>
 
         <TabsContent value="identity" className="space-y-6 mt-0">
           <Card className="border-border/70 shadow-sm">

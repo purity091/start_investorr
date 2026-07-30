@@ -96,12 +96,14 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
         </div>
       </div>
 
-      <Tabs defaultValue="overview" className="space-y-6">
-        <TabsList className="grid w-full grid-cols-3 max-w-[400px]">
-          <TabsTrigger value="overview">نظرة عامة</TabsTrigger>
-          <TabsTrigger value="activity">النشاط</TabsTrigger>
-          <TabsTrigger value="account">تفاصيل الحساب</TabsTrigger>
-        </TabsList>
+      <Tabs defaultValue="overview" dir="rtl" className="space-y-6">
+        <div className="flex justify-start">
+          <TabsList dir="rtl" className="grid w-full grid-cols-3 max-w-[400px]">
+            <TabsTrigger value="overview">نظرة عامة</TabsTrigger>
+            <TabsTrigger value="activity">النشاط</TabsTrigger>
+            <TabsTrigger value="account">تفاصيل الحساب</TabsTrigger>
+          </TabsList>
+        </div>
 
         <TabsContent value="overview" className="space-y-6 mt-0">
           <Card className="border-border/70 shadow-sm">
