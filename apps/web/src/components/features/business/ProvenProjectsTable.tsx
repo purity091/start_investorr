@@ -42,8 +42,18 @@ interface ProvenProjectsTableProps {
   onRowClick: (project: any) => void;
 }
 
-// Custom sorting function for revenue strings like "$250K /mo"
+// Custom sorting helper for revenue strings like "$250K /mo"
 const parseRevenue = (val: string) => {
+  if (!val || val.includes('مغلق')) return 0;
+  const clean = val.replace(/[^0-9.KkMm]/g, '');
+  let num = parseFloat(clean);
+  if (clean.toLowerCase().includes('k')) num *= 1000;
+  if (clean.toLowerCase().includes('m')) num *= 1000000;
+  return isNaN(num) ? 0 : num;
+};
+
+// Custom sorting helper for traffic strings like "60K /mo"
+const parseTraffic = (val: string) => {
   if (!val) return 0;
   const clean = val.replace(/[^0-9.KkMm]/g, '');
   let num = parseFloat(clean);
@@ -52,14 +62,32 @@ const parseRevenue = (val: string) => {
   return isNaN(num) ? 0 : num;
 };
 
-// Custom sorting function for traffic strings like "60K /mo"
-const parseTraffic = (val: string) => {
-  if (!val) return 0;
-  const clean = val.replace(/[^0-9.KkMm]/g, '');
-  let num = parseFloat(clean);
-  if (clean.toLowerCase().includes('k')) num *= 1000;
-  if (clean.toLowerCase().includes('m')) num *= 1000000;
-  return isNaN(num) ? 0 : num;
+// Helper to format compact revenue display ($250K, $2.5M)
+const formatCompactRevenue = (num: number) => {
+  if (!num || num <= 0) return '-';
+  if (num >= 1000000) {
+    const formatted = (num / 1000000).toFixed(1).replace(/\.0$/, '');
+    return `$${formatted}M`;
+  }
+  if (num >= 1000) {
+    const formatted = (num / 1000).toFixed(1).replace(/\.0$/, '');
+    return `$${formatted}K`;
+  }
+  return `$${num}`;
+};
+
+// Helper to format compact traffic display (60K, 1.2M)
+const formatCompactTraffic = (num: number) => {
+  if (!num || num <= 0) return '-';
+  if (num >= 1000000) {
+    const formatted = (num / 1000000).toFixed(1).replace(/\.0$/, '');
+    return `${formatted}M`;
+  }
+  if (num >= 1000) {
+    const formatted = (num / 1000).toFixed(1).replace(/\.0$/, '');
+    return `${formatted}K`;
+  }
+  return `${num}`;
 };
 
 // Helper for Country and Flags
@@ -243,9 +271,9 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
             return <span className="text-slate-400 text-xs font-medium">-</span>;
           }
           return (
-            <div className="flex flex-col justify-center font-mono">
-              <span className="font-black text-xs text-slate-900 tracking-tight text-right dir-ltr">
-                ${rawNum.toLocaleString('en-US')}
+            <div className="flex flex-col justify-center">
+              <span className="font-black text-xs text-slate-900 tracking-tight text-right dir-ltr" title={`$${rawNum.toLocaleString('en-US')}`}>
+                {formatCompactRevenue(rawNum)}
               </span>
             </div>
           );
@@ -273,9 +301,9 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
             return <span className="text-slate-400 text-xs font-medium">-</span>;
           }
           return (
-            <div className="flex flex-col justify-center font-mono">
-              <span className="font-bold text-xs text-slate-700 tracking-tight text-right dir-ltr">
-                {rawNum.toLocaleString('en-US')}
+            <div className="flex flex-col justify-center">
+              <span className="font-bold text-xs text-slate-700 tracking-tight text-right dir-ltr" title={rawNum.toLocaleString('en-US')}>
+                {formatCompactTraffic(rawNum)}
               </span>
             </div>
           );
