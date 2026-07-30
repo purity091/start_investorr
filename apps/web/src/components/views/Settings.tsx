@@ -12,6 +12,8 @@ import {
   User,
   AlertCircle,
   Loader2,
+  Camera,
+  Upload,
 } from 'lucide-react';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -71,6 +73,12 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
   const [saved, setSaved] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
+  // Avatar upload state
+  const [avatarUrl, setAvatarUrl] = useState(
+    authUser?.user_metadata?.avatar_url || user.avatar
+  );
+  const [uploadingAvatar, setUploadingAvatar] = useState(false);
+
   // Profile fields state
   const [fullName, setFullName] = useState(profile?.full_name || authUser?.user_metadata?.full_name || user.name || '');
   const [email, setEmail] = useState(profile?.email || authUser?.email || user.email || '');
@@ -100,7 +108,55 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
     if (authUser?.user_metadata?.density) setDensity(authUser.user_metadata.density);
     if (authUser?.user_metadata?.default_report) setDefaultReport(authUser.user_metadata.default_report);
     if (authUser?.user_metadata?.default_page) setDefaultPage(authUser.user_metadata.default_page);
+    if (authUser?.user_metadata?.avatar_url) setAvatarUrl(authUser.user_metadata.avatar_url);
   }, [profile, authUser]);
+
+  const handleAvatarUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    try {
+      setUploadingAvatar(true);
+      setErrorMessage(null);
+
+      if (!event.target.files || event.target.files.length === 0) {
+        throw new Error('يرجى اختيار صورة للرفع.');
+      }
+
+      const file = event.target.files[0];
+      const fileExt = file.name.split('.').pop();
+      const filePath = `${authUser?.id || 'user'}-${Math.random()}.${fileExt}`;
+
+      // Try uploading to Supabase Storage Bucket 'avatars'
+      const { error: uploadError } = await supabase.storage
+        .from('avatars')
+        .upload(filePath, file, { upsert: true });
+
+      if (uploadError) {
+        // Fallback: If bucket doesn't exist yet, convert image to Data URL Base64
+        const reader = new FileReader();
+        reader.onloadend = async () => {
+          const base64Url = reader.result as string;
+          setAvatarUrl(base64Url);
+          await supabase.auth.updateUser({ data: { avatar_url: base64Url } });
+          if (refetchProfile) await refetchProfile();
+          setUploadingAvatar(false);
+        };
+        reader.readAsDataURL(file);
+        return;
+      }
+
+      // Get public URL from Supabase Storage
+      const { data } = supabase.storage.from('avatars').getPublicUrl(filePath);
+      const publicUrl = data.publicUrl;
+
+      setAvatarUrl(publicUrl);
+      await supabase.auth.updateUser({ data: { avatar_url: publicUrl } });
+      if (refetchProfile) await refetchProfile();
+      setUploadingAvatar(false);
+    } catch (error: any) {
+      console.error('Avatar upload error:', error);
+      setErrorMessage(error.message || 'فشل رفع الصورة الشخصية');
+      setUploadingAvatar(false);
+    }
+  };
 
   const handleSave = async () => {
     setSaved(false);
@@ -135,6 +191,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
             density: density,
             default_report: defaultReport,
             default_page: defaultPage,
+            avatar_url: avatarUrl,
           },
         };
 
@@ -207,8 +264,8 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
           </p>
         </div>
         <div className="flex items-center gap-3 bg-muted/50 px-4 py-2 rounded-lg border border-border/50">
-          <Avatar className="size-10 rounded-full">
-            <AvatarImage src={user.avatar} alt={displayName} />
+          <Avatar className="size-10 rounded-full border border-primary/20">
+            <AvatarImage src={avatarUrl} alt={displayName} />
             <AvatarFallback>{displayName.slice(0, 1)}</AvatarFallback>
           </Avatar>
           <div className="text-right">
@@ -241,6 +298,48 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
         </div>
 
         <TabsContent value="identity" className="space-y-6 mt-0">
+          {/* Avatar Upload Card */}
+          <Card className="border-border/70 shadow-sm">
+            <CardHeader className="text-right">
+              <CardTitle>الصورة الشخصية والرمز التعبيري</CardTitle>
+              <CardDescription>قم بتحديث صورتك الشخصية لتظهر في التقارير والملف الشخصي.</CardDescription>
+            </CardHeader>
+            <CardContent className="p-4 sm:p-6 pt-0">
+              <div className="flex flex-col sm:flex-row items-center gap-6 text-right">
+                <div className="relative group">
+                  <Avatar className="size-20 rounded-full border-2 border-primary/20 shadow-sm">
+                    <AvatarImage src={avatarUrl} alt={displayName} />
+                    <AvatarFallback>{displayName.slice(0, 1)}</AvatarFallback>
+                  </Avatar>
+                  {uploadingAvatar && (
+                    <div className="absolute inset-0 bg-background/80 rounded-full flex items-center justify-center">
+                      <Loader2 className="size-6 animate-spin text-primary" />
+                    </div>
+                  )}
+                </div>
+                <div className="space-y-2 text-right">
+                  <h4 className="text-sm font-semibold text-foreground">تغيير الصورة الشخصية</h4>
+                  <p className="text-xs text-muted-foreground">صيغ الملفات المسموحة: JPG, PNG, WEBP</p>
+                  <div className="flex items-center gap-3">
+                    <label className="cursor-pointer">
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={handleAvatarUpload}
+                        disabled={uploadingAvatar}
+                        className="hidden"
+                      />
+                      <span className="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
+                        <Upload className="size-3.5" />
+                        {uploadingAvatar ? 'جاري الرفع...' : 'رفع صورة جديدة'}
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           <Card className="border-border/70 shadow-sm">
             <CardHeader className="text-right">
               <CardTitle>البيانات الشخصية</CardTitle>
