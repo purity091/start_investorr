@@ -839,9 +839,9 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
   };
 
   return (
-    <div className={containerClass}>
+    <div className={`min-w-0 max-w-full overflow-x-clip ${containerClass}`}>
       <Suspense fallback={<RouteLoadingState />}>
-        <div>
+        <div className="min-w-0 w-full max-w-full overflow-x-hidden">
           {renderContent()}
         </div>
       </Suspense>

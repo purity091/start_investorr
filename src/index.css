@@ -96,18 +96,20 @@
   box-sizing: border-box;
 }
 
-html, body {
+html {
   -webkit-font-smoothing: antialiased;
-  background-color: #FFFFFF;
-  font-family: var(--font-sans);
   width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
 }
 
 body {
   background-color: #f8fafc;
+  font-family: var(--font-sans);
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 /* Prevent Radix UI from hiding the scrollbar and causing layout shifts */
@@ -115,6 +117,8 @@ body[data-scroll-locked] {
   overflow: auto !important;
   padding-right: 0 !important;
   margin-right: 0 !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
 }
 
 /* Luxury Scrollbar Logic */
@@ -176,6 +180,7 @@ body[data-scroll-locked] {
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+  transition: max-width 200ms ease-linear, padding 200ms ease-linear, margin 200ms ease-linear;
 }
 
 .app-page-shell-wide {
@@ -185,6 +190,7 @@ body[data-scroll-locked] {
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+  transition: max-width 200ms ease-linear, padding 200ms ease-linear, margin 200ms ease-linear;
 }
 
 .surface-card {
@@ -613,7 +619,8 @@ body[data-scroll-locked] {
 #root {
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
+  position: relative;
   margin: 0;
   padding: 0;
 }

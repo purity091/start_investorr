@@ -130,7 +130,7 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur" dir="rtl">
+    <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur transition-all duration-200 ease-linear" dir="rtl">
       <div className="flex items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
         <div className="flex min-w-0 items-center gap-2 flex-1">
           <SidebarTrigger className="lg:hidden h-8 w-8 text-foreground hover:bg-muted [&_svg]:size-5">
