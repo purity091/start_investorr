@@ -2,36 +2,22 @@ import React, { useState } from 'react';
 import {
   Check,
   CreditCard,
-  Download,
   LayoutDashboard,
   Rocket,
   ShieldCheck,
   User,
   Wallet,
   Zap,
+  Clock,
 } from 'lucide-react';
 
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
 
 interface PricingPlansProps {
   setActiveTab?: (tab: string) => void;
 }
-
-const invoices = [
-  { id: 'INV-2026-071', date: '21 يوليو 2026', amount: '149 ر.س', status: 'مدفوعة' },
-  { id: 'INV-2026-061', date: '21 يونيو 2026', amount: '149 ر.س', status: 'مدفوعة' },
-  { id: 'INV-2026-051', date: '21 مايو 2026', amount: '149 ر.س', status: 'مدفوعة' },
-];
 
 const plans = [
   {
@@ -86,8 +72,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
                 إدارة الاشتراك والفوترة من صفحة واحدة
               </h1>
               <p className="max-w-3xl text-sm leading-7 text-muted-foreground">
-                هذه الصفحة تحتوي كل ما يخص المستخدم مالياً وتشغيلياً: الخطة الحالية، الرصيد،
-                سجل الفواتير، ومقارنة الباقات في مكان واحد بدون التشتت بين صفحات فرعية.
+                اختر الباقة المناسبة لاحتياجاتك. نظام الدفع قيد التطوير وسيكون متاحاً قريباً.
               </p>
             </div>
           </div>
@@ -99,8 +84,10 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
             </CardHeader>
             <CardContent className="space-y-3">
               <Fact label="الخطة الحالية" value="الاحترافي" />
-              <Fact label="التجديد القادم" value="26 أغسطس 2026" />
-              <Fact label="طريقة الدفع" value="Visa •••• 8821" />
+              <div className="flex items-center justify-between gap-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3">
+                <span className="text-xs text-amber-700 font-medium">نظام الدفع قيد التفعيل</span>
+                <Clock className="size-4 text-amber-600 shrink-0" />
+              </div>
               <Button onClick={() => setActiveTab?.('customer-dashboard')} variant="outline" className="w-full">
                 <LayoutDashboard className="size-4" />
                 العودة إلى حسابي الشخصي
@@ -114,7 +101,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
         <Metric label="الباقة" value="الاحترافي" hint="نشطة حالياً" icon={Zap} />
         <Metric label="الرصيد المتاح" value="85 / 100" hint="ضمن الدورة الحالية" icon={Wallet} />
         <Metric label="الاستخدام" value={`${usagePercentage}%`} hint="استهلاك الأدوات" icon={ShieldCheck} />
-        <Metric label="الفوترة" value="منتظمة" hint="لا توجد مدفوعات متأخرة" icon={CreditCard} />
+        <Metric label="الفوترة" value="قيد التفعيل" hint="نظام الدفع قادم" icon={CreditCard} />
       </section>
 
       <section className="grid gap-4 xl:grid-cols-[0.92fr_1.08fr]">
@@ -122,7 +109,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
           <CardHeader className="text-right">
             <CardTitle>الخطة الحالية والاستخدام</CardTitle>
             <CardDescription>
-              ملخص واضح لحالة الباقة، الرصيد، وتجهيزات الدفع والتجديد.
+              ملخص واضح لحالة الباقة والرصيد.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-5 p-4 sm:p-6 pt-0 sm:pt-0">
@@ -145,10 +132,9 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
               </div>
             </div>
 
-            <div className="grid gap-2">
-              <Fact label="التجديد القادم" value="26 أغسطس 2026" />
-              <Fact label="طريقة الدفع" value="Visa •••• 8821" />
-              <Fact label="الأولوية" value="دعم احترافي قياسي" />
+            <div className="flex items-center justify-between gap-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3">
+              <span className="text-xs text-amber-700 font-medium">نظام الفوترة والدفع قيد التفعيل — سيتاح قريباً</span>
+              <Clock className="size-4 text-amber-600 shrink-0" />
             </div>
           </CardContent>
         </Card>
@@ -156,38 +142,18 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
         <Card className="border-border/70 shadow-sm">
           <CardHeader className="text-right">
             <CardTitle>سجل الفواتير</CardTitle>
-            <CardDescription>آخر العمليات المالية الخاصة باشتراك المستخدم.</CardDescription>
+            <CardDescription>سيظهر سجل فواتيرك هنا بعد تفعيل نظام الدفع.</CardDescription>
           </CardHeader>
-          <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0 overflow-x-auto">
-            <div className="min-w-0">
-              <Table dir="rtl">
-                <TableHeader>
-                  <TableRow>
-                    <TableHead className="text-right">رقم الفاتورة</TableHead>
-                    <TableHead className="text-right">التاريخ</TableHead>
-                    <TableHead className="text-right">المبلغ</TableHead>
-                    <TableHead className="text-right">الحالة</TableHead>
-                    <TableHead className="text-right">الإجراء</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {invoices.map((invoice) => (
-                    <TableRow key={invoice.id}>
-                      <TableCell className="font-medium">{invoice.id}</TableCell>
-                      <TableCell>{invoice.date}</TableCell>
-                      <TableCell className="font-semibold">{invoice.amount}</TableCell>
-                      <TableCell>
-                        <Badge variant="success">{invoice.status}</Badge>
-                      </TableCell>
-                      <TableCell>
-                        <Button variant="ghost" size="icon-sm" aria-label="تحميل الفاتورة">
-                          <Download className="size-4" />
-                        </Button>
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
+          <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
+            <div className="flex flex-col items-center justify-center py-10 gap-3 text-center rounded-xl border border-dashed border-border bg-muted/30">
+              <Clock className="size-8 text-muted-foreground" />
+              <p className="text-sm font-semibold text-foreground">نظام الدفع قيد التفعيل</p>
+              <p className="text-xs text-muted-foreground max-w-xs">
+                سيتم تفعيل نظام الفوترة والدفع قريباً. للتواصل بخصوص التسعير أو طلب التفعيل المبكر اضغط على الزر أدناه.
+              </p>
+              <Button size="sm" variant="outline" onClick={() => setActiveTab?.('contact-us')}>
+                تواصل معنا
+              </Button>
             </div>
           </CardContent>
         </Card>

@@ -2,11 +2,13 @@ import React from 'react';
 import {
   Bell,
   Briefcase,
+  CheckCircle2,
   Compass,
   CreditCard,
   Crown,
   LayoutDashboard,
   Lightbulb,
+  Loader2,
   LogOut,
   MessageSquarePlus,
   User as UserIcon,
@@ -14,6 +16,7 @@ import {
 
 import type { User } from '../../types';
 import { useAuth } from '../../features/auth/AuthContext';
+import { useProjectWorkspace } from '../../features/workspace/ProjectWorkspaceContext';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
@@ -126,9 +129,22 @@ export const Header: React.FC<HeaderProps> = ({
   user,
 }) => {
   const { signOut } = useAuth();
+  const { isSaving, activeProjectId } = useProjectWorkspace();
   const title = TAB_LABELS[activeTab] || subTabLabel || 'لوحة العمل';
   const contextBadge = getContextBadge(activeTab);
   const [isFeedbackOpen, setIsFeedbackOpen] = React.useState(false);
+  const [showSaved, setShowSaved] = React.useState(false);
+  const prevSaving = React.useRef(false);
+
+  // Show "محفوظ" briefly after isSaving goes false
+  React.useEffect(() => {
+    if (prevSaving.current && !isSaving && activeProjectId) {
+      setShowSaved(true);
+      const timer = setTimeout(() => setShowSaved(false), 2000);
+      return () => clearTimeout(timer);
+    }
+    prevSaving.current = isSaving;
+  }, [isSaving, activeProjectId]);
 
   React.useEffect(() => {
     const hasPrompted = sessionStorage.getItem('platform_feedback_prompted');
@@ -158,6 +174,19 @@ export const Header: React.FC<HeaderProps> = ({
           <Badge variant={contextBadge.variant} className="rounded-md hidden sm:inline-flex">
             {contextBadge.label}
           </Badge>
+          {/* Auto-save indicator */}
+          {isSaving && (
+            <span className="hidden sm:flex items-center gap-1.5 text-xs text-muted-foreground">
+              <Loader2 className="size-3 animate-spin" />
+              جاري الحفظ...
+            </span>
+          )}
+          {!isSaving && showSaved && (
+            <span className="hidden sm:flex items-center gap-1.5 text-xs text-emerald-600">
+              <CheckCircle2 className="size-3" />
+              محفوظ
+            </span>
+          )}
         </div>
 
         <div className="flex items-center justify-end gap-2 shrink-0">

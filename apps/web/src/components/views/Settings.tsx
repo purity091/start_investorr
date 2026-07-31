@@ -39,17 +39,11 @@ interface SettingsProps {
 
 type SettingsTab = 'identity' | 'security' | 'preferences';
 
-const sessions = [
-  { device: 'Chrome على Windows', location: 'دمشق، سوريا', status: 'نشط الآن' },
-  { device: 'Safari على iPhone', location: 'دبي، الإمارات', status: 'قبل ساعتين' },
-  { device: 'Edge على Windows', location: 'الرياض، السعودية', status: 'قبل يوم' },
-];
-
-const notificationOptions = [
-  'تحديثات المشاريع ودراسات الجدوى',
-  'اكتمال التقارير والملفات الجاهزة للتصدير',
-  'ملخص أسبوعي عن نشاط الحساب',
-  'إصدارات جديدة وتحسينات المنصة',
+const NOTIFICATION_OPTIONS = [
+  { id: 'notif_projects', label: 'تحديثات المشاريع ودراسات الجدوى' },
+  { id: 'notif_reports', label: 'اكتمال التقارير والملفات الجاهزة للتصدير' },
+  { id: 'notif_weekly', label: 'ملخص أسبوعي عن نشاط الحساب' },
+  { id: 'notif_updates', label: 'إصدارات جديدة وتحسينات المنصة' },
 ];
 
 const tabItems: Array<{
@@ -83,6 +77,17 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
   const [defaultReport, setDefaultReport] = useState(authUser?.user_metadata?.default_report || 'pdf');
   const [defaultPage, setDefaultPage] = useState(authUser?.user_metadata?.default_page || 'customer-dashboard');
 
+  // Notification checkboxes state — persisted in user_metadata
+  const [notifications, setNotifications] = useState<Record<string, boolean>>(() => {
+    const saved = authUser?.user_metadata?.notifications as Record<string, boolean> | undefined;
+    return {
+      notif_projects: saved?.notif_projects ?? true,
+      notif_reports: saved?.notif_reports ?? true,
+      notif_weekly: saved?.notif_weekly ?? true,
+      notif_updates: saved?.notif_updates ?? false,
+    };
+  });
+
   // Password change state
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -99,6 +104,9 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
     if (authUser?.user_metadata?.density) setDensity(authUser.user_metadata.density);
     if (authUser?.user_metadata?.default_report) setDefaultReport(authUser.user_metadata.default_report);
     if (authUser?.user_metadata?.default_page) setDefaultPage(authUser.user_metadata.default_page);
+    // Sync notification prefs from auth metadata
+    const saved = authUser?.user_metadata?.notifications as Record<string, boolean> | undefined;
+    if (saved) setNotifications(prev => ({ ...prev, ...saved }));
   }, [profile, authUser]);
 
   const handleSave = async () => {
@@ -134,6 +142,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
             density: density,
             default_report: defaultReport,
             default_page: defaultPage,
+            notifications: notifications,
           },
         };
 
@@ -369,19 +378,21 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
 
             <Card className="border-border/70 shadow-sm">
               <CardHeader className="text-right">
-                <CardTitle>جلسات الدخول</CardTitle>
-                <CardDescription>الأجهزة المتصلة بحسابك حالياً.</CardDescription>
+                <CardTitle>جلسة الدخول الحالية</CardTitle>
+                <CardDescription>أنت مسجّل الدخول حالياً بهذا الحساب.</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                {sessions.map((session) => (
-                  <div key={`${session.device}-${session.location}`} className="flex items-center justify-between gap-3 text-right">
-                    <div>
-                      <p className="text-sm font-medium text-foreground">{session.device}</p>
-                      <p className="text-xs text-muted-foreground">{session.location}</p>
-                    </div>
-                    <Badge variant="outline" className="shrink-0">{session.status}</Badge>
+                <div className="flex items-start justify-between gap-3 rounded-xl border border-border/70 bg-muted/35 p-3 text-right">
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">الجلسة الحالية</p>
+                    <p className="text-xs text-muted-foreground mt-1">{displayEmail}</p>
+                    <p className="text-xs text-muted-foreground">آخر نشاط: الآن</p>
                   </div>
-                ))}
+                  <Badge className="shrink-0 bg-emerald-500/10 text-emerald-700 border-emerald-500/20">نشط الآن</Badge>
+                </div>
+                <p className="text-xs text-muted-foreground text-right">
+                  لإدارة الجلسات الأخرى أو إلغاء الوصول من أجهزة أخرى، استخدم خيار تسجيل الخروج من جميع الأجهزة.
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -437,14 +448,20 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
             <Card className="border-border/70 shadow-sm">
               <CardHeader className="text-right">
                 <CardTitle>الإشعارات</CardTitle>
-                <CardDescription>التنبيهات التي ترغب باستلامها.</CardDescription>
+                <CardDescription>التنبيهات التي ترغب باستلامها — تُحفظ تلقائياً عند الضغط على حفظ.</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                {notificationOptions.map((option, index) => (
-                  <label key={option} className="flex cursor-pointer items-start gap-3 text-right">
+                {NOTIFICATION_OPTIONS.map((option) => (
+                  <label key={option.id} className="flex cursor-pointer items-start gap-3 text-right">
                     <Bell className="mt-0.5 size-4 shrink-0 text-muted-foreground" />
-                    <span className="flex-1 text-sm text-foreground">{option}</span>
-                    <Checkbox defaultChecked={index < 3} className="shrink-0" />
+                    <span className="flex-1 text-sm text-foreground">{option.label}</span>
+                    <Checkbox
+                      checked={notifications[option.id] ?? false}
+                      onCheckedChange={(checked) =>
+                        setNotifications(prev => ({ ...prev, [option.id]: !!checked }))
+                      }
+                      className="shrink-0"
+                    />
                   </label>
                 ))}
               </CardContent>

@@ -1,12 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Activity,
-  ArrowLeft,
   Briefcase,
   CreditCard,
   LifeBuoy,
-  Mail,
-  MapPin,
+  Loader2,
   ShieldCheck,
   Sparkles,
   User,
@@ -15,6 +13,7 @@ import {
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Skeleton } from '@/components/ui/skeleton';
 import {
   Table,
   TableBody,
@@ -25,6 +24,7 @@ import {
 } from '@/components/ui/table';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useAuth } from '@/features/auth/AuthContext';
+import { supabase } from '@/lib/supabase';
 
 interface ProfileProps {
   user: {
@@ -37,41 +37,72 @@ interface ProfileProps {
   setActiveTab?: (tab: string) => void;
 }
 
-const accountStats = [
-  { label: 'المشاريع النشطة', value: '14', hint: '4 تحتاج مراجعة' },
-  { label: 'التقارير المصدرة', value: '8', hint: 'خلال آخر 30 يوماً' },
-  { label: 'جاهزية الحساب', value: '92%', hint: 'الهوية مكتملة تقريباً' },
-  { label: 'حالة الاشتراك', value: 'نشط', hint: 'التجديد في 26 أغسطس 2026' },
-];
-
-const recentProjects = [
-  { name: 'منصة إدارة العيادات', type: 'دراسة جدوى', status: 'جاهز للمراجعة', updated: 'اليوم' },
-  { name: 'هوية متجر عطور', type: 'هوية بصرية', status: 'مسودة', updated: 'أمس' },
-  { name: 'حل لوجستي للمتاجر', type: 'BMC', status: 'قيد البناء', updated: 'قبل 3 أيام' },
-];
-
-const activityFeed = [
-  { title: 'تم تحديث دراسة جدوى المشروع الرئيسي', time: 'قبل 35 دقيقة', icon: Briefcase },
-  { title: 'تم حفظ فرصة جديدة من صفحة المشكلات والفرص', time: 'اليوم 11:20', icon: Sparkles },
-  { title: 'تم تعديل إعدادات الحساب الأساسية', time: 'أمس 18:05', icon: User },
-  { title: 'تم تسجيل دخول من جهاز موثوق', time: 'قبل يومين', icon: ShieldCheck },
-];
+interface RealProject {
+  id: string;
+  name: string;
+  type: string;
+  status: string;
+  updated: string;
+}
 
 export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
   const { user: authUser, profile } = useAuth();
 
-  const displayName = profile?.full_name || authUser?.user_metadata?.full_name || user.name;
+  const displayName = profile?.full_name || authUser?.user_metadata?.full_name || user.name || 'المستخدم';
   const displayEmail = profile?.email || authUser?.email || user.email;
   const userRole = profile?.role || 'user';
-
   const usagePercentage = Math.min((user.credits / Math.max(user.totalCredits, 1)) * 100, 100);
+
+  const [recentProjects, setRecentProjects] = useState<RealProject[]>([]);
+  const [projectCount, setProjectCount] = useState<number>(0);
+  const [loadingProjects, setLoadingProjects] = useState(true);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      if (!authUser?.id) { setLoadingProjects(false); return; }
+      setLoadingProjects(true);
+      try {
+        const { data, error } = await supabase
+          .from('business_canvas')
+          .select('id, project_title, canvas_data, updated_at')
+          .eq('user_id', authUser.id)
+          .order('updated_at', { ascending: false })
+          .limit(5);
+
+        if (error) throw error;
+
+        if (data) {
+          setProjectCount(data.length);
+          setRecentProjects(
+            data.map((row) => ({
+              id: row.id,
+              name: row.project_title || 'مشروع بدون اسم',
+              type: row.canvas_data?.profile?.opportunityTitle ? 'دراسة جدوى' : 'مسودة',
+              status:
+                row.canvas_data?.currentStage === 'execution'
+                  ? 'جاهز للتنفيذ'
+                  : row.canvas_data?.currentStage === 'planning'
+                    ? 'قيد التخطيط'
+                    : 'قيد البناء',
+              updated: new Date(row.updated_at).toLocaleDateString('ar-SA'),
+            }))
+          );
+        }
+      } catch (err) {
+        console.error('Error fetching recent projects:', err);
+      } finally {
+        setLoadingProjects(false);
+      }
+    };
+    fetchProjects();
+  }, [authUser?.id]);
 
   const accountFacts = [
     { label: 'اسم الحساب', value: displayName },
     { label: 'الباقة الحالية', value: 'الاحترافي' },
     { label: 'الدور في المنصة', value: userRole === 'admin' ? 'مدير النظام (Admin)' : 'مستخدم (User)' },
     { label: 'الرصيد المتاح', value: `${user.credits} من ${user.totalCredits}` },
-    { label: 'أولوية الدعم', value: 'فائقة (VIP)' },
+    { label: 'أولوية الدعم', value: 'قياسي' },
   ];
 
   return (
@@ -100,22 +131,31 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
         <div className="flex justify-start">
           <TabsList dir="rtl" className="grid w-full grid-cols-3 max-w-[400px]">
             <TabsTrigger value="overview">نظرة عامة</TabsTrigger>
-            <TabsTrigger value="activity">النشاط</TabsTrigger>
+            <TabsTrigger value="activity">مشاريعي</TabsTrigger>
             <TabsTrigger value="account">تفاصيل الحساب</TabsTrigger>
           </TabsList>
         </div>
 
+        {/* Overview Tab */}
         <TabsContent value="overview" className="space-y-6 mt-0">
           <Card className="border-border/70 shadow-sm">
             <CardContent className="p-4 sm:p-6">
               <div className="grid gap-6 md:grid-cols-[1fr_300px] items-center">
                 <div className="flex items-center gap-4 text-right">
-                  <div className="size-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center font-black text-xl shadow-sm">
-                    {displayName.slice(0, 1).toUpperCase()}
-                  </div>
+                  {displayName ? (
+                    <div className="size-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center font-black text-xl shadow-sm">
+                      {displayName.slice(0, 1).toUpperCase()}
+                    </div>
+                  ) : (
+                    <Skeleton className="size-14 rounded-2xl" />
+                  )}
                   <div>
-                    <h3 className="text-2xl font-semibold text-foreground">{displayName}</h3>
-                    <p className="text-sm text-muted-foreground dir-ltr text-right">{displayEmail}</p>
+                    {displayName ? (
+                      <h3 className="text-2xl font-semibold text-foreground">{displayName}</h3>
+                    ) : (
+                      <Skeleton className="h-6 w-40 mb-2" />
+                    )}
+                    <p className="text-sm text-muted-foreground">{displayEmail}</p>
                     <div className="mt-2 flex gap-2 justify-start">
                       <Badge variant="secondary">الباقة الاحترافية</Badge>
                       <Badge variant="outline" className="capitalize">{userRole}</Badge>
@@ -135,29 +175,70 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
             </CardContent>
           </Card>
 
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-            {accountStats.map((item) => (
-              <Card key={item.label} className="border-border/70 shadow-sm">
-                <CardContent className="p-4 text-right">
-                  <p className="text-xs font-medium text-muted-foreground">{item.label}</p>
-                  <div className="mt-2 flex items-end justify-between gap-3">
-                    <p className="text-xl font-semibold text-foreground">{item.value}</p>
-                    <span className="text-xs text-muted-foreground">{item.hint}</span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          {/* Real stats from Supabase */}
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <Card className="border-border/70 shadow-sm">
+              <CardContent className="p-4 text-right">
+                <p className="text-xs font-medium text-muted-foreground">المشاريع المحفوظة</p>
+                <div className="mt-2 flex items-end justify-between gap-3">
+                  {loadingProjects ? (
+                    <Skeleton className="h-7 w-12" />
+                  ) : (
+                    <p className="text-xl font-semibold text-foreground">{projectCount}</p>
+                  )}
+                  <span className="text-xs text-muted-foreground">في Supabase</span>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border-border/70 shadow-sm">
+              <CardContent className="p-4 text-right">
+                <p className="text-xs font-medium text-muted-foreground">حالة الاشتراك</p>
+                <div className="mt-2 flex items-end justify-between gap-3">
+                  <p className="text-xl font-semibold text-foreground">نشط</p>
+                  <Badge variant="secondary" className="text-xs">احترافي</Badge>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border-border/70 shadow-sm">
+              <CardContent className="p-4 text-right">
+                <p className="text-xs font-medium text-muted-foreground">الرصيد المتبقي</p>
+                <div className="mt-2 flex items-end justify-between gap-3">
+                  <p className="text-xl font-semibold text-foreground">{user.credits}</p>
+                  <span className="text-xs text-muted-foreground">من {user.totalCredits}</span>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </TabsContent>
 
+        {/* Projects Tab — Real data */}
         <TabsContent value="activity" className="space-y-6 mt-0">
-          <div className="grid gap-6 lg:grid-cols-[2fr_1fr]">
-            <Card className="border-border/70 shadow-sm">
-              <CardHeader className="text-right">
-                <CardTitle>آخر المشاريع</CardTitle>
-                <CardDescription>العودة السريعة للأعمال الجارية والمفتوحة.</CardDescription>
-              </CardHeader>
-              <CardContent className="pt-0">
+          <Card className="border-border/70 shadow-sm">
+            <CardHeader className="text-right">
+              <CardTitle>آخر المشاريع</CardTitle>
+              <CardDescription>أحدث مشاريعك المحفوظة في المنصة.</CardDescription>
+            </CardHeader>
+            <CardContent className="pt-0">
+              {loadingProjects ? (
+                <div className="flex items-center justify-center py-8 gap-2 text-muted-foreground">
+                  <Loader2 className="size-4 animate-spin" />
+                  <span className="text-sm">جاري تحميل المشاريع...</span>
+                </div>
+              ) : recentProjects.length === 0 ? (
+                <div className="py-8 text-center">
+                  <Briefcase className="size-8 mx-auto text-muted-foreground mb-3" />
+                  <p className="text-sm font-medium text-foreground">لا توجد مشاريع محفوظة بعد</p>
+                  <p className="text-xs text-muted-foreground mt-1">ابدأ أول مشروع وسيظهر هنا</p>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="mt-4"
+                    onClick={() => setActiveTab?.('new-plan-pro')}
+                  >
+                    إنشاء مشروع جديد
+                  </Button>
+                </div>
+              ) : (
                 <div className="overflow-x-auto">
                   <Table dir="rtl">
                     <TableHeader>
@@ -165,12 +246,16 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
                         <TableHead className="text-right">المشروع</TableHead>
                         <TableHead className="text-right">النوع</TableHead>
                         <TableHead className="text-right">الحالة</TableHead>
-                        <TableHead className="text-right">تحديث</TableHead>
+                        <TableHead className="text-right">آخر تعديل</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
                       {recentProjects.map((project) => (
-                        <TableRow key={project.name}>
+                        <TableRow
+                          key={project.id}
+                          className="cursor-pointer hover:bg-muted/50"
+                          onClick={() => setActiveTab?.('my-plans')}
+                        >
                           <TableCell className="font-medium text-foreground text-right">{project.name}</TableCell>
                           <TableCell className="text-muted-foreground text-right">{project.type}</TableCell>
                           <TableCell className="text-right">
@@ -182,31 +267,12 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
                     </TableBody>
                   </Table>
                 </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-border/70 shadow-sm">
-              <CardHeader className="text-right">
-                <CardTitle>النشاط الأخير</CardTitle>
-                <CardDescription>سجل العمليات السريعة.</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-3 pt-0">
-                {activityFeed.map((item) => (
-                  <div key={item.title} className="flex items-start gap-3 text-right">
-                    <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground">
-                      <item.icon className="size-4" />
-                    </div>
-                    <div className="min-w-0">
-                      <p className="text-sm font-medium text-foreground">{item.title}</p>
-                      <p className="text-xs text-muted-foreground">{item.time}</p>
-                    </div>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-          </div>
+              )}
+            </CardContent>
+          </Card>
         </TabsContent>
 
+        {/* Account Details Tab */}
         <TabsContent value="account" className="space-y-6 mt-0">
           <div className="grid gap-6 md:grid-cols-2">
             <Card className="border-border/70 shadow-sm">
