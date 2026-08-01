@@ -19,6 +19,7 @@ import { MarketInsightPlaceholder } from './MarketInsightPlaceholder';
 import { Notifications } from '../features/social/Notifications';
 import { Profile } from './Profile';
 import { MobileSiteMap } from './MobileSiteMap';
+import { LandingPage } from './LandingPage';
 import { useProjectWorkspace } from '../../features/workspace/ProjectWorkspaceContext';
 
 import { User, PlanSection } from '../../types';
@@ -247,6 +248,7 @@ interface DashboardRouterProps {
   subTabLabel?: string | null;
   selectedCompanyId?: string;
   setSelectedCompanyId?: (id: string) => void;
+  onAuthRequested?: (mode: 'login' | 'signup') => void;
 }
 
 export const DashboardRouter: React.FC<DashboardRouterProps> = ({
@@ -260,7 +262,8 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
   setSubTabLabel,
   subTabLabel,
   selectedCompanyId,
-  setSelectedCompanyId
+  setSelectedCompanyId,
+  onAuthRequested,
 }) => {
   const { updateProfile, updateBrand, setPlanSections } = useProjectWorkspace();
   
@@ -298,6 +301,8 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
         return <ProblemDeepDive onBack={() => setActiveTab('problem-engine')} />;
       case 'company-deep-dive':
         return <CompanyDeepDive companyId={selectedCompanyId} onBack={() => setActiveTab('home')} />;
+      case 'landing':
+        return <LandingPage setActiveTab={setActiveTab} activeTab={activeTab} onAuthRequested={onAuthRequested} />;
       case 'home':
       case 'admin-dashboard':
         return <Home setActiveTab={setActiveTab} onCompanyClick={handleCompanyClick} />;

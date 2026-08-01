@@ -33,6 +33,7 @@ interface HeaderProps {
   setSubTabLabel?: (label: string | null) => void;
   setIsTourRunning: (running: boolean) => void;
   user: User;
+  onLogout?: () => void;
 }
 
 const TAB_LABELS: Record<string, string> = {
@@ -120,6 +121,7 @@ export const Header: React.FC<HeaderProps> = ({
   setSubTabLabel,
   setIsTourRunning,
   user,
+  onLogout,
 }) => {
   const title = TAB_LABELS[activeTab] || subTabLabel || 'لوحة العمل';
   const contextBadge = getContextBadge(activeTab);
@@ -230,7 +232,7 @@ export const Header: React.FC<HeaderProps> = ({
                   </DropdownMenuItem>
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem variant="destructive">
+                <DropdownMenuItem variant="destructive" onClick={onLogout}>
                   <LogOut className="size-4" />
                   <span>تسجيل الخروج</span>
                 </DropdownMenuItem>

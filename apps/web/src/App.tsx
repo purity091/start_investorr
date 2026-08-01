@@ -1,5 +1,5 @@
 
-// v4.0.1 - Production Sync
+// v5.0.0 - Next.js Production AppShell with Supabase Auth & Route Protection
 import React, { useState, useEffect } from 'react';
 import { Sidebar } from './components/layout/Sidebar';
 import { StrategicSupportFloat } from './components/layout/StrategicSupportFloat';
@@ -12,17 +12,35 @@ import { TooltipProvider } from './components/ui/tooltip';
 import { SidebarInset, SidebarProvider } from './components/ui/sidebar';
 
 import { MOCK_USER, INITIAL_SECTIONS, ADMIN_TABS } from './data/constants';
-import { PlanSection } from './types';
+import { PlanSection, User } from './types';
 import { getTabFromPathname, getTabPath } from './utils/routes';
 import { ProjectWorkspaceProvider, useProjectWorkspace } from './features/workspace/ProjectWorkspaceContext';
-
-const DEFAULT_TAB = 'home';
-
 import { AuthProvider, useAuth } from './features/auth/AuthContext';
 import { AuthScreen } from './features/auth/AuthScreen';
 
+const DEFAULT_TAB = 'home';
+
+/** Public routes accessible without logging in */
+const PUBLIC_TABS = new Set([
+  'landing',
+  'pricing-plans',
+  'pricing',
+  'contact-us',
+  'faq',
+  'about',
+  'terms',
+  'privacy',
+  'proven-projects',
+  'failed-projects',
+  'saas-ideas',
+  'micro-saas-ideas',
+  'project-ideas',
+]);
+
+const isPublicTab = (tab: string) => PUBLIC_TABS.has(tab) || tab.endsWith('-dashboard');
+
 const AppShell: React.FC = () => {
-  const { session, user: authUser, loading: authLoading } = useAuth();
+  const { session, user: authUser, profile, loading: authLoading } = useAuth();
   
   const [activeTab, setActiveTabState] = useState<string>(() => {
     const pathTab = getTabFromPathname(window.location.pathname);
@@ -31,13 +49,19 @@ const AppShell: React.FC = () => {
     return (savedTab as any) || DEFAULT_TAB;
   });
 
-  const appUser = authUser ? {
-    name: authUser.user_metadata?.full_name || authUser.email?.split('@')[0] || 'مستخدم',
+  const appUser: User = authUser ? {
+    name: profile?.full_name || authUser.user_metadata?.full_name || authUser.email?.split('@')[0] || 'مستخدم خطة',
     email: authUser.email || '',
     avatar: authUser.user_metadata?.avatar_url || `https://api.dicebear.com/7.x/avataaars/svg?seed=${authUser.email}`,
     credits: 100,
     totalCredits: 100,
-  } : MOCK_USER;
+  } : {
+    name: '',
+    email: '',
+    avatar: '',
+    credits: 0,
+    totalCredits: 0,
+  };
 
   const [sections, setSections] = useState<PlanSection[]>(INITIAL_SECTIONS);
   const [expandedSectionId, setExpandedSectionId] = useState<string | null>('1');
@@ -48,8 +72,17 @@ const AppShell: React.FC = () => {
   const [selectedCompanyId, setSelectedCompanyId] = useState<string | undefined>(undefined);
   const { setPlanSections, setStage } = useProjectWorkspace();
 
+  const requiresAuth = !isPublicTab(activeTab);
+
   const setActiveTab = (tab: string, options?: { replace?: boolean }) => {
     const nextTab = tab || DEFAULT_TAB;
+
+    // Route Protection
+    if (!session && !isPublicTab(nextTab)) {
+      window.location.href = `/login?redirect=${encodeURIComponent(nextTab)}`;
+      return;
+    }
+
     const nextPath = getTabPath(nextTab, window.location.pathname);
     const currentPath = `${window.location.pathname}${window.location.search}`;
 
@@ -68,12 +101,16 @@ const AppShell: React.FC = () => {
   useEffect(() => {
     const handlePopState = () => {
       const nextTab = getTabFromPathname(window.location.pathname) || DEFAULT_TAB;
+      if (!session && !isPublicTab(nextTab)) {
+        window.location.href = `/login?redirect=${encodeURIComponent(nextTab)}`;
+        return;
+      }
       setActiveTabState(nextTab);
     };
 
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
+  }, [session]);
 
   useEffect(() => {
     localStorage.setItem('khotta_active_tab', activeTab);
@@ -118,19 +155,12 @@ const AppShell: React.FC = () => {
 
   const isAdminView = ADMIN_TABS.includes(activeTab);
 
-  const PROTECTED_TABS = [
-    'workspace', 'editor', 'my-plans', 'profile', 'settings',
-    'customer-dashboard', 'customer-projects', 'customer-account',
-    'market-discovery', 'problem-engine', 'strategic-dashboard',
-  ];
-  const requiresAuth = PROTECTED_TABS.includes(activeTab);
-
   if (authLoading) {
     return (
       <div className="flex h-screen w-full items-center justify-center bg-background">
         <div className="flex flex-col items-center gap-4">
-          <div className="h-10 w-10 animate-spin rounded-full border-4 border-blue-200 border-t-blue-600" />
-          <p className="text-slate-500 font-medium">جاري التحقق من الحساب...</p>
+          <div className="h-10 w-10 animate-spin rounded-full border-4 border-primary/20 border-t-primary" />
+          <p className="text-muted-foreground font-medium">جاري التحقق من الحساب...</p>
         </div>
       </div>
     );
@@ -149,7 +179,7 @@ const AppShell: React.FC = () => {
 
   // If user tries to access a protected tab without a session → redirect to login
   if (requiresAuth && !session) {
-    window.location.href = '/login';
+    window.location.href = `/login?redirect=${encodeURIComponent(activeTab)}`;
     return null;
   }
 
