@@ -2,65 +2,1436 @@
   "id": "patreon",
   "slug": "patreon",
   "name": "باتريون (Patreon)",
-  "headline": "اقتصاد المبدعين: المنصة التي أنقذت الفنانين من احتكار يوتيوب",
-  "category": "Creator Economy / اقتصاد صناع المحتوى",
+  "headline": "من زر دعم إلى نظام أعمال للمبدعين: كيف حوّل Patreon العلاقة مع المعجب إلى عضوية ومجتمع وتجارة مباشرة",
+  "category": "Creator Economy / Membership, Community & Commerce / العضويات والمجتمعات وتجارة المبدعين",
   "company": {
-    "location": "سان فرانسيسكو، الولايات المتحدة",
-    "business_model": "اقتطاع نسبة (5% إلى 12%) من إيرادات الاشتراكات الشهرية"
+    "location": "سان فرانسيسكو، كاليفورنيا، الولايات المتحدة. تأسست Patreon عام 2013 على يد الموسيقي Jack Conte والمهندس Sam Yam، وتعمل كشركة خاصة تخدم المبدعين والمعجبين عالميًا.",
+    "business_model": "منصة معاملات وخدمات للمبدعين. يطبق Patreon على الصفحات المنشورة بعد 4 أغسطس 2025 رسم منصة قياسيًا قدره 10% من المدفوعات الناجحة للعضويات والمشتريات الفردية. تحتفظ الصفحات القديمة المؤهلة بخطط Legacy تبلغ 5% أو 8% أو 11%. تُضاف بصورة منفصلة رسوم معالجة الدفع والتحويل بين العملات والسحب والضرائب المحتملة، بينما تمثل رسوم Apple داخل iOS تكلفة متجر تطبيقات وليست إيرادًا يحتفظ به Patreon بالكامل."
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين",
-    "monthly_traffic": "ملايين الداعمين (Patrons) لمئات الآلاف من المبدعين"
+    "monthly_revenue": "غير معلن. Patreon شركة خاصة ولا تنشر إيرادات شهرية أو سنوية مدققة. لا يمكن اشتقاق الإيراد بدقة من أموال المبدعين لأن الرسوم تختلف بين الخطط القديمة والجديدة، والعملات، وطرق الدفع، والمشتريات داخل iOS، والاستردادات والضرائب.",
+    "monthly_traffic": "لا تنشر الشركة رقمًا موحدًا للزيارات أو المستخدمين النشطين شهريًا. أحدث مؤشرات المنصة المنشورة هي أكثر من 10 ملايين معجب يدفعون مقابل عضويات كل شهر، وأكثر من 100 مليون عضوية مجانية، وأكثر من 300 ألف مبدع، وأكثر من 10 مليارات دولار وصلت إلى المبدعين منذ 2013."
   },
   "overview": {
     "problem": {
-      "text": "صناع المحتوى (رسامون، موسيقيون، صناع بودكاست) يحصلون على ملايين المشاهدات، لكن خوارزميات الإعلانات (مثل يوتيوب) تدفع لهم ملاليم، مما يجعل استمرارهم في الفن مستحيلاً اقتصادياً. بالإضافة إلى أن خوارزميات يوتيوب وفيسبوك كانت تتغير فجأة وتخفي محتوى المبدعين، مما يجعل الاعتماد على الإعلانات (Ad-sense) مخاطرة قاتلة للمسيرة المهنية. الفنانون وجدوا أنفسهم يعملون كـ (عبيد للخوارزمية) ينتجون محتوى رخيصاً ومثيراً للجدل فقط لجلب المشاهدات، بدلاً من الفن الراقي.",
-      "impact": "اضطرار المبدعين للتخلي عن فنهم للبحث عن وظائف تقليدية، أو تحويل محتواهم لمجرد إعلانات تجارية مزعجة. مما أدى لإفلاس آلاف المبدعين المستقلين، وتسرب المواهب العظيمة لصالح الوظائف التقليدية، وتسطيح المحتوى الثقافي ليناسب خوارزميات الإعلانات فقط."
+      "text": "أسس Jack Conte المنصة بعد أن حققت فيديوهاته جمهورًا كبيرًا على YouTube بينما بقي الدخل المباشر من هذا التأثير محدودًا. المشكلة الأوسع أن منصات الوصول والإعلانات تكافئ الحجم والتكرار وقابلية المحتوى للخوارزمية، لكنها لا تمنح كل مبدع طريقة مستقرة نسبيًا لتحويل أكثر المعجبين اهتمامًا إلى علاقة مباشرة ومدفوعة، ولا تمنحه بالضرورة بيانات جمهوره أو قناة يمكن الاعتماد عليها للوصول إليهم.",
+      "impact": "قد يمتلك المبدع جمهورًا واسعًا دون قدرة كافية على تمويل العمل التالي، ويظل دخله معرضًا لتغير الوصول وأسعار الإعلانات والرعايات والمواسم. كما أن بناء نشاط عضوية بصورة مستقلة يتطلب الدفع والفوترة وإدارة الصلاحيات والمحتوى والمجتمع والتحليلات وخدمة الأعضاء، وهي بنية تشغيلية يصعب على مبدع فردي تطويرها وصيانتها."
     },
     "solution": {
-      "text": "منصة تتيح للمعجبين (الداعمين) دفع اشتراك شهري صغير (مثلاً 5 دولارات) مباشرة لصانع المحتوى المفضل لديهم، مقابل الحصول على محتوى حصري وتواصل مباشر. باتريون لم تبتكر فكرة (الدعم المالي)، بل أعادت إحياء مفهوم (رعاية الفنون Patronage) التاريخي بصيغة رقمية. المبدع لم يعد بحاجة لملايين المشاهدات؛ يكفيه 1000 معجب حقيقي (True Fans) يدفع كل منهم 5 دولارات شهرياً ليعيش بكرامة."
+      "text": "يوفر Patreon صفحة مستضافة وعضويات مجانية ومدفوعة ومستويات ومزايا وفوترة شهرية أو سنوية، إلى جانب متجر لبيع المحتوى الرقمي مرة واحدة. توسعت المنصة إلى استضافة الفيديو والبودكاست وRSS وSpotify والبث المباشر وDrops والمحادثات والتعليقات والرسائل، وأدوات اكتشاف ونمو، وإهداء العضويات والتجارب المجانية والخصومات وAutopilot. يستطيع المبدع إدارة الأعضاء عبر Relationship Manager وتصدير بيانات التواصل المتاحة، ومراجعة مؤشرات العضوية والإيراد والمتجر، وربط Discord أو بناء تكاملات عبر OAuth وAPI v2 وWebhooks."
     }
   },
   "market_data": {
-    "target_audience": "صناع المحتوى المستقلون ومعجبوهم المخلصون (Superfans). وصولاً إلى مطوري الألعاب المستقلين، صناع البودكاست الاستقصائي، والصحفيين المستقلين الذين يبحثون عن تمويل خارج سيطرة المؤسسات الكبرى.",
-    "market_size": "سوق اقتصاد المبدعين (Creator Economy) المتنامي بسرعة. وهو سوق (اقتصاد المبدعين Creator Economy) الذي ينفجر عالمياً متجاوزاً 100 مليار دولار، حيث يتحول الأفراد إلى شركات إعلامية بحد ذاتهم.",
-    "growth_rate": "حولت آلاف الهواة إلى فنانين متفرغين، وجمعت تمويلات دفعت تقييمها فوق 4 مليارات دولار. بفضل نموذج الولاء العميق، حيث أن المعجب لا يشتري منتجاً، بل يستثمر عاطفياً في نجاح مبدعه المفضل."
+    "target_audience": "صناع الفيديو والبودكاست والموسيقى والكتابة والفنون والألعاب والتعليم والكوميديا والمجتمعات المتخصصة، من الأفراد إلى فرق الإنتاج والشركات الإعلامية الصغيرة، إضافة إلى المعجبين الذين يريدون الوصول إلى محتوى أو مجتمع أو تجربة حصرية ودعم المبدع مباشرة. كما يخدم المطورين الذين يربطون العضوية بالتطبيقات والمزايا الخارجية.",
+    "market_size": "لا تنشر Patreon رقمًا رسميًا بالدولار لسوقها الكلي القابل للاستهداف. مؤشرات الحجم المباشرة للمنصة هي أكثر من 300 ألف مبدع، وأكثر من 10 ملايين معجب يدفعون شهريًا، وأكثر من 100 مليون عضوية مجانية، وأكثر من 10 مليارات دولار من دخل المبدعين التراكمي. هذه مقاييس شبكة واستخدام وليست حجم سوق اقتصاد المبدعين العالمي.",
+    "growth_rate": "لا تنشر الشركة معدل نمو سنويًا متجانسًا للإيرادات أو المستخدمين. ارتفع عدد المبدعين النشطين المعلن من أكثر من 250 ألفًا في مسح 2022 إلى أكثر من 280 ألفًا في تقرير الشفافية عن 2023 ثم أكثر من 300 ألف حاليًا. وارتفعت العضويات المجانية من أكثر من 60 مليونًا في نهاية 2024 إلى أكثر من 100 مليون حاليًا، بينما ارتفع دخل المبدعين التراكمي من أكثر من 8 مليارات دولار في نهاية 2024 إلى أكثر من 10 مليارات. كما تضاعفت إيرادات المشتريات الفردية الشهرية أربع مرات خلال 2024، وتقول الشركة إن أدوات الاكتشاف تولد أكثر من 200 مليون دولار سنويًا للمبدعين."
   },
   "financials": {
-    "initial_investment": "بدأت بتمويلات مبكرة من مستثمرين ملائكيين في وادي السيليكون. وهو ما كان صعباً في البداية لأن وادي السيليكون لم يكن يؤمن بأن (دعم الفنون) يمكن أن يكون نموذج عمل ربحي مليارياً.",
-    "valuation": "$4B+ (يونيكورن) (تقييم يعكس قوة التدفقات النقدية المتكررة SaaS للمبدعين).",
+    "initial_investment": "رأس المال الشخصي الأول للمؤسسين غير معلن. جمعت Patreon جولة Seed بنحو 2.1 مليون دولار في 2013 ثم Series A بقيمة 15 مليون دولار في 2014. شملت المحطات اللاحقة 60 مليون دولار في 2017، و60 مليون دولار في 2019، و90 مليون دولار في 2020، ثم 155 مليون دولار في Series F عام 2021. ووفق تقارير التمويل بلغ إجمالي رأس المال المجمع بحلول جولة 2021 أكثر من 400 مليون دولار.",
+    "valuation": "آخر تقييم خاص معلن على نطاق واسع بلغ 4 مليارات دولار في جولة Series F البالغة 155 مليون دولار في أبريل 2021، بعد تقييم قدره 1.2 مليار دولار في جولة 2020. Patreon شركة خاصة ولا يوجد سعر سوقي يومي أو تقييم حالي معلن؛ لذلك لا ينبغي عرض 4 مليارات دولار كقيمة مؤكدة في 2026.",
     "revenue_streams": [
-      "عمولة المنصة على كل اشتراك شهري ناجح",
-      "رسوم معالجة الدفع المقتطعة من الداعمين",
-      "رسوم التحويلات المالية (Payment Processing Fees).",
-      "رسوم اشتراك للميزات المتقدمة للمبدعين (Patreon Pro & Premium)."
+      "رسم منصة قياسي قدره 10% للمبدعين الجدد من المدفوعات الناجحة للعضويات والمشتريات الفردية",
+      "رسوم Legacy بنسبة 5% أو 8% أو 11% للصفحات القديمة المؤهلة بحسب خطتها",
+      "رسوم معالجة الدفع التي تختلف حسب العملة وطريقة الدفع وحجم العملية",
+      "رسم تحويل عملة قدره 2.5% عندما تختلف عملة دفع المعجب عن عملة سحب المبدع",
+      "رسوم السحب التي تختلف حسب وسيلة التحويل والعملة والدولة",
+      "رسوم المنصة والمعالجة على بيع الفيديو والصوت والمنشورات والملفات والمجموعات كمشتريات فردية",
+      "رسوم وخدمات مرتبطة بخطط Merch القديمة وتنفيذ المزايا المادية للمبدعين المؤهلين",
+      "الضرائب المحصلة ليست إيرادًا اقتصاديًا صافياً لـPatreon، كما أن عمولة Apple البالغة 30% في معاملات iOS المؤهلة تخص Apple"
     ]
   },
   "lessons": [
     {
-      "title": "قوة الألف معجب مخلص (1,000 True Fans)",
-      "description": "أثبتت Patreon نظرية أنه لا حاجة لملايين المشاهدات لكي تنجح. يكفي أن تمتلك 1000 معجب مخلص يدفع كل منهم 10 دولارات شهرياً لتكوين دخل ممتاز يبلغ 10,000 دولار شهرياً."
+      "title": "عمق العلاقة قد يكون أكثر قيمة من اتساع الوصول",
+      "description": "المبدع لا يحتاج إلى تحويل كل متابع إلى عميل؛ يحتاج إلى عرض واضح يجعل جزءًا صغيرًا من جمهوره يرغب في الدفع باستمرار. جودة العلاقة والقيمة المتكررة والاحتفاظ أهم من عدد المشاهدات وحده."
     },
     {
-      "title": "الاستقلال عن الخوارزميات (Algorithm Independence)",
-      "description": "بالاعتماد على الدعم المباشر من الجمهور، حررت المنصة المبدعين من رحمة (خوارزميات التوصية) في فيسبوك ويوتيوب التي قد تخفي محتواهم فجأة، ومنحتهم دخلاً شهرياً ثابتاً يمكن التنبؤ به (MRR)."
+      "title": "نظرية الألف معجب مثال حسابي وليست ضمانًا",
+      "description": "ألف شخص يدفعون عشرة دولارات ينتجون عشرة آلاف دولار قبل الرسوم والضرائب والتكاليف والتسرب. الوصول إلى الألف والاحتفاظ بهم وتقديم المزايا وخدمتهم عمل تجاري كامل، وليس نتيجة تلقائية لامتلاك متابعين."
     },
     {
-      "title": "نظرية الـ 1000 معجب حقيقي (1000 True Fans)",
-      "description": "بُنيت باتريون بالكامل على مقال كيفن كيلي الشهير. المبدع لا يحتاج لمليون متابع عشوائي. يحتاج فقط لـ 1000 معجب مخلص يدفعون له 100 دولار سنوياً ليحقق 100,000 دولار. هذا التحول من (الكمية إلى الجودة) هو ما أنقذ آلاف الفنانين وصناع المحتوى المتخصص."
+      "title": "العضوية المجانية تبني مسارًا قبل لحظة الدفع",
+      "description": "أكثر من 100 مليون عضوية مجانية تعكس انتقال Patreon من جدار دفع مباشر إلى علاقة تبدأ مجانًا ثم يمكن تطويرها. هذا يخفض الاحتكاك، لكنه يتطلب محتوى واتصالات وتجارب تحول الاهتمام إلى عضوية مدفوعة دون إزعاج الجمهور."
     },
     {
-      "title": "تجنب الاعتماد على منصة واحدة (Platform Risk)",
-      "description": "باتريون تبيع للمبدعين (تأميناً ضد الخوارزميات). إذا قام يوتيوب بإلغاء قناة مبدع فجأة، فلن يموت جوعاً لأن إيراداته الحقيقية تأتي مباشرة من جمهوره عبر باتريون. امتلاك العلاقة المباشرة مع العميل (قائمة الإيميلات والدفع المباشر) هو أقوى حاجز حماية لأي مشروع."
+      "title": "الدخل المتكرر أكثر قابلية للتوقع وليس مضمونًا",
+      "description": "الفوترة الاشتراكية توضح تاريخ الدفع وتمنح خط أساس أفضل، لكن الإلغاء وفشل الدفع والموسمية وتراجع النشر تغير الدخل. يجب قياس الاحتفاظ والترقية والتخفيض والتعثر وصافي النمو بدل وصف كل عضوية بأنها MRR دائم."
+    },
+    {
+      "title": "المزايا غير الرقمية قد تلتهم هامش العضوية",
+      "description": "المنتجات والشحن والمكالمات والعمل اليدوي قد تجعل tier مرتفع السعر أقل ربحًا من tier رقمي بسيط. تصميم المزايا يحتاج حساب تكلفة التنفيذ والوقت والدعم والضرائب، لا مقارنة السعر بالإيراد الإجمالي فقط."
+    },
+    {
+      "title": "التصدير يقلل الخطر لكنه لا يلغي اعتماد المنصة",
+      "description": "يستطيع المبدع تصدير بيانات التواصل المتاحة من Relationship Manager، وهذا يحسن قابلية النقل. لكنه يظل معتمدًا على Patreon في الفوترة والصلاحيات والمحتوى والمجتمع ما لم يبنِ بدائل تشغيلية حقيقية."
+    },
+    {
+      "title": "تحويل المنصة من دفع إلى مجتمع يرفع أسباب البقاء",
+      "description": "الفيديو والبودكاست والبث المباشر والمحادثات وDrops تجعل العضوية مكانًا للاستهلاك والمشاركة، لا إيصال دفع فقط. كل سبب استخدام إضافي قد يحسن الاحتفاظ، لكنه يزيد احتياجات الإشراف والأمان وتجربة التطبيق."
+    },
+    {
+      "title": "التجارة الفردية تستثمر الأرشيف دون التزام مستمر",
+      "description": "المتجر يسمح ببيع حلقة أو فيديو أو مجموعة لمشترٍ لا يريد عضوية. هذه قناة مكملة تفيد المحتوى القديم، لكنها لا تعطي تلقائيًا دخلًا متكررًا مثل الاشتراك."
+    },
+    {
+      "title": "الاكتشاف والعلاقة المباشرة بينهما توتر دائم",
+      "description": "يريد المبدع اكتشاف جمهور جديدًا دون أن تصبح الخوارزمية وسيطًا يتحكم في جمهوره الحالي. Explore والتوصيات يمكن أن تجلب نموًا، لكن نجاح Patreon يعتمد على عدم التضحية بوصول المبدع إلى أعضائه لصالح Feed تنافسي."
+    },
+    {
+      "title": "تغيير الرسوم يخلق طبقات تشغيلية طويلة الأجل",
+      "description": "وجود خطط 5% و8% و11% وخطة قياسية 10% يجعل اقتصاد كل مبدع مختلفًا. الحفاظ على Legacy يقلل الصدمة، لكنه يعقد الدعم والفوترة والمقارنات وتحليل ربحية المنصة."
+    },
+    {
+      "title": "سياسات متجر التطبيقات قد تعيد تصميم المنتج",
+      "description": "متطلبات Apple دفعت Patreon نحو Subscription Billing وأدخلت رسومًا داخل iOS لبعض المعاملات. المنصة التي تعتمد على الهواتف تحتاج استراتيجية دفع تراعي قواعد المتاجر دون تحميل المبدع أو المعجب تعقيدًا غير مفهوم."
+    },
+    {
+      "title": "مجموع ما كسبه المبدعون ليس إيراد الشركة",
+      "description": "أكثر من 10 مليارات دولار تمثل أموالًا وصلت إلى المبدعين عبر سنوات، قبل أو بعد رسوم مختلفة بحسب تعريف المصدر. لا يجوز ضربها في نسبة واحدة لاستخراج إيراد Patreon السنوي أو الحالي."
+    },
+    {
+      "title": "أدوات المجتمع تتطلب حوكمة بقدر ما تتطلب ميزات",
+      "description": "Chats وLive والتعليقات تقوي العلاقة، لكنها تفتح مخاطر الإساءة والمحتوى المخالف والنزاعات. الثقة والسلامة والتحقق والإشراف والاستئناف عناصر أساسية لمنصة تستضيف مجتمعات مدفوعة."
     }
   ],
   "tools": [
-    "Python",
-    "React",
-    "AWS",
-    "Payment Gateways",
-    "Ruby on Rails",
-    "React",
-    "Stripe API (لإدارة المدفوعات الدورية)"
+    "صفحة مبدع مستضافة مع عضويات مجانية ومدفوعة ومستويات ومزايا وحدود للأعضاء",
+    "Subscription Billing وعضويات شهرية وسنوية وإدارة الترقية والتخفيض والإلغاء",
+    "Shop لبيع الفيديو والصوت والمنشورات والملفات والمجموعات كمشتريات فردية",
+    "Patreon Video لاستضافة فيديو بدقة 720p و1080p للمبدعين المؤهلين",
+    "بودكاست وRSS خاص وعام وتكامل Spotify وSpotify Synced Feeds",
+    "Patreon Live مع إشعارات ودردشة وإعادة تشغيل للمحادثة وتكامل OBS",
+    "Drops لإطلاق الصوت والفيديو مع عد تنازلي ومشاهدة أو استماع جماعي",
+    "Community Chats والتعليقات والرسائل المباشرة والاستطلاعات",
+    "Explore والتوصيات وQuips وCollab Posts لاكتشاف المبدعين والمحتوى",
+    "عضويات مجانية ومنشورات عامة ومحتوى مخصص لفئات العضوية",
+    "Fan Gifting وCreator Gifting وإهداء العضويات",
+    "تجارب مجانية لمدة سبعة أيام وخصومات وإعادة تسعير المستويات",
+    "Autopilot لعروض الترقية وحملات Teaser وعروض منع الإلغاء",
+    "Relationship Manager للبحث والتصفية وإدارة المزايا وحالات الدفع",
+    "تصدير بيانات الجمهور المتاحة بصيغة CSV واستخدامها في أدوات الأتمتة",
+    "Membership وEarnings وShop وPost وSurvey Insights مع تصدير البيانات",
+    "Discord Integration لمزامنة أدوار الخادم مع مستويات Patreon",
+    "Patreon API v2 وOAuth 2.0 وWebhooks لأحداث الأعضاء والمنشورات",
+    "تطبيقات Web وiOS وAndroid مع الإشعارات والاستهلاك وإدارة الحساب",
+    "Teammate Permissions لإدارة النشاط الإبداعي بواسطة فرق متعددة",
+    "أنظمة سحب يدوي أو تلقائي وتحويلات متعددة العملات وطرق دفع دولية"
+  ],
+  "verification": {
+    "status": "verified_from_current_patreon_product_pricing_help_and_financing_sources_with_field_level_evidence",
+    "verified_on": "2026-08-02",
+    "source_policy": "تم إعطاء الأولوية لموقع Patreon الرسمي وصفحة About ومركز المساعدة ووثائق المطورين وغرفة الأخبار. استُخدمت Reuters وAxios وTechCrunch وWired وتقارير التمويل الصادرة عن Patreon لتوثيق الجولات والتقييم التاريخي الذي لا تنشره الشركة في صفحة مالية دورية.",
+    "important_notes": [
+      "لا تنشر Patreon إيرادات شهرية أو سنوية مدققة، ولذلك لم تُستخدم عبارة «عشرات الملايين» أو تقدير مستخرج من أموال المبدعين.",
+      "الخطة القياسية 10% تطبق على الصفحات المنشورة بعد 4 أغسطس 2025؛ الصفحات Legacy المؤهلة قد تحتفظ برسوم 5% أو 8% أو 11%.",
+      "رسوم معالجة الدفع والسحب والتحويل والضرائب منفصلة عن رسم المنصة، وتختلف حسب الدولة والعملة وطريقة الدفع.",
+      "رسوم Apple البالغة 30% لبعض مشتريات iOS ليست عمولة Patreon، ويمكن أن تؤثر في السعر أو صافي دخل المبدع حسب الإعداد والسوق.",
+      "أكثر من 10 ملايين معجب يدفعون شهريًا لا يساوي بالضرورة عدد العضويات المدفوعة؛ قد يدعم المعجب أكثر من مبدع.",
+      "أكثر من 100 مليون عضوية مجانية هو عدد علاقات عضوية وليس بالضرورة عدد أشخاص فريدين.",
+      "أكثر من 10 مليارات دولار هو دخل تراكمي للمبدعين منذ 2013، وليس حجم مدفوعات سنويًا أو إيراد Patreon.",
+      "تقييم 4 مليارات دولار يعود إلى جولة أبريل 2021 ولا يوجد تقييم عام أحدث موثق.",
+      "تم حذف Python وReact وAWS وRuby on Rails وStripe API كحزمة تقنية حالية لأن الملف الأصلي لم يقدم مصدرًا موثوقًا ولأنها لا تمثل قدرات المنتج التي يحتاجها الدليل."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تفصيلية تربط كل حقل بقيمته وحالة التحقق والثقة والمصادر وحدود تعريف البيانات.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي واحد أو أكثر.",
+      "verified_as_not_publicly_disclosed": "لم تنشر الشركة المقياس المطلوب، ولذلك لم يُستخدم تقدير غير موثوق.",
+      "verified_current_platform_metrics": "المقياس منشور في صفحات Patreon الحالية مع تعريفه كما هو.",
+      "verified_with_metric_definition_limits": "الأرقام صحيحة وفق تعريف المصدر لكن لا يجوز تحويلها إلى مستخدمين فريدين أو إيراد.",
+      "verified_historical_financing": "المعلومة تتعلق بتمويل أو تقييم تاريخي موثق.",
+      "verified_product_capability": "القدرة موثقة في وثائق المنتج أو المطورين الحالية.",
+      "analytical_inference": "تحليل مهني مبني على حقائق موثقة وليس تصريحًا حرفيًا من الشركة."
+    },
+    "confidence_scale": {
+      "high": "مصدر رسمي مباشر أو عدة مصادر مالية موثوقة متطابقة.",
+      "medium_high": "مصدر صحفي مالي قوي أو مصدر رسمي مع استنتاج محدود.",
+      "medium": "بيان منصة أو مقياس يحتاج إلى قراءة تحفظية بسبب تغير التعريف أو غياب التدقيق."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "سان فرانسيسكو، كاليفورنيا، الولايات المتحدة. تأسست Patreon عام 2013 على يد الموسيقي Jack Conte والمهندس Sam Yam، وتعمل كشركة خاصة تخدم المبدعين والمعجبين عالميًا.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "founding_location_private_company_and_legal_context",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تثبت صفحة الشركة التأسيس والقصة، وتصف مصادر التمويل Patreon كشركة مقرها سان فرانسيسكو، بينما تربط الشروط النزاعات بسان فرانسيسكو وقانون كاليفورنيا.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-22",
+        "SRC-27"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "The Story of Patreon",
+          "publisher": "Patreon",
+          "source_type": "official_company_page",
+          "url": "https://www.patreon.com/about",
+          "evidence_type": "direct",
+          "source_locator": "About → Story",
+          "supports": "التأسيس في 2013 بواسطة Jack Conte وSam Yam."
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Patreon Series F Financing",
+          "publisher": "Patreon via PR Newswire",
+          "source_type": "official_funding_announcement",
+          "url": "https://www.prnewswire.com/news-releases/patreon-fuels-the-future-of-the-creator-economy-with-155-million-in-additional-funding-301263804.html",
+          "evidence_type": "direct",
+          "source_locator": "Funding release dateline",
+          "supports": "Patreon شركة في سان فرانسيسكو عند جولة 2021.",
+          "published_on": "2021-04-07"
+        },
+        {
+          "source_id": "SRC-27",
+          "title": "Patreon Terms of Use",
+          "publisher": "Patreon",
+          "source_type": "official_legal_document",
+          "url": "https://www.patreon.com/policy/legal",
+          "evidence_type": "direct",
+          "source_locator": "Terms → Dispute resolution",
+          "supports": "Patreon, Inc. ومحاكم سان فرانسيسكو وقانون كاليفورنيا.",
+          "published_on": "2026-05-27"
+        }
+      ],
+      "limitations": "لم تنشر صفحة About الحالية عنوان مقر تنفيذي تفصيليًا، لذلك يقتصر الحقل على المدينة والولاية."
+    },
+    "$.company.business_model": {
+      "field_value": "منصة معاملات وخدمات للمبدعين. يطبق Patreon على الصفحات المنشورة بعد 4 أغسطس 2025 رسم منصة قياسيًا قدره 10% من المدفوعات الناجحة للعضويات والمشتريات الفردية. تحتفظ الصفحات القديمة المؤهلة بخطط Legacy تبلغ 5% أو 8% أو 11%. تُضاف بصورة منفصلة رسوم معالجة الدفع والتحويل بين العملات والسحب والضرائب المحتملة، بينما تمثل رسوم Apple داخل iOS تكلفة متجر تطبيقات وليست إيرادًا يحتفظ به Patreon بالكامل.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "transaction_platform_fee_and_payment_services_model",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تشرح وثائق الرسوم الخطة القياسية والLegacy ورسوم المعالجة والتحويل والسحب، وتوضح وثائق التجارة تطبيق الرسوم على المشتريات الفردية.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Creator Fees Overview",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_current_pricing_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/11111747095181-Creator-fees-overview",
+          "evidence_type": "direct",
+          "source_locator": "Creator fees overview",
+          "supports": "10% و5% و8% و11% والرسوم المنفصلة.",
+          "published_on": "2026-07-19"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Standard Platform Fee for New Creators",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_pricing_policy",
+          "url": "https://support.patreon.com/hc/en-us/articles/36426991446797-A-standard-platform-fee-for-new-creators-effective-after-August-4-2025",
+          "evidence_type": "direct",
+          "source_locator": "Standard fee policy",
+          "supports": "تاريخ تطبيق الخطة القياسية ومعدلات المعالجة وiOS.",
+          "published_on": "2026-01-28"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Selling One-Time Purchases on Patreon",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_commerce_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/16303719836813-Selling-one-time-purchases-on-Patreon",
+          "evidence_type": "direct",
+          "source_locator": "Commerce fees",
+          "supports": "رسوم المشتريات الفردية.",
+          "published_on": "2026-07-20"
+        }
+      ],
+      "limitations": "بعض الرسوم تعوض تكاليف معالجة أو تحويل خارجية، ولا تنشر الشركة هامشها الصافي من كل رسم."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. Patreon شركة خاصة ولا تنشر إيرادات شهرية أو سنوية مدققة. لا يمكن اشتقاق الإيراد بدقة من أموال المبدعين لأن الرسوم تختلف بين الخطط القديمة والجديدة، والعملات، وطرق الدفع، والمشتريات داخل iOS، والاستردادات والضرائب.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "private_company_revenue_not_disclosed",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "لا تنشر Patreon إيرادات دورية مدققة، كما تمنع اختلافات الرسوم والمشتريات والعملات استخراج إيراد موثوق من أموال المبدعين.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-02",
+        "SRC-01",
+        "SRC-26"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Creator Fees Overview",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_current_pricing_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/11111747095181-Creator-fees-overview",
+          "evidence_type": "direct",
+          "source_locator": "Creator fees overview",
+          "supports": "تعدد الرسوم والخطط والمعالجة والتحويل.",
+          "published_on": "2026-07-19"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "The Story of Patreon",
+          "publisher": "Patreon",
+          "source_type": "official_company_page",
+          "url": "https://www.patreon.com/about",
+          "evidence_type": "direct",
+          "source_locator": "About → Metrics",
+          "supports": "دخل المبدعين التراكمي دون تقديم إيراد Patreon."
+        },
+        {
+          "source_id": "SRC-26",
+          "title": "Patreon Private-Company Scale and Funding",
+          "publisher": "Axios",
+          "source_type": "high_quality_current_company_report",
+          "url": "https://www.axios.com/newsletters/axios-media-trends-cb9d9430-71fa-11f0-9cf2-b79c6fa050e6",
+          "evidence_type": "direct",
+          "source_locator": "Axios company report",
+          "supports": "Patreon شركة خاصة وتمويلها وتقييمها دون رقم إيراد منشور.",
+          "published_on": "2025-08-05"
+        }
+      ],
+      "limitations": "أي تقدير مبني على ضرب 10 مليارات دولار في نسبة واحدة سيتجاهل الزمن وخطط Legacy والمعالجة والاستردادات والضرائب."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "لا تنشر الشركة رقمًا موحدًا للزيارات أو المستخدمين النشطين شهريًا. أحدث مؤشرات المنصة المنشورة هي أكثر من 10 ملايين معجب يدفعون مقابل عضويات كل شهر، وأكثر من 100 مليون عضوية مجانية، وأكثر من 300 ألف مبدع، وأكثر من 10 مليارات دولار وصلت إلى المبدعين منذ 2013.",
+      "verification_status": "verified_current_platform_metrics",
+      "confidence": "high",
+      "claim_type": "official_current_membership_creator_and_payout_scale",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تعرض صفحة About الحالية أربعة مؤشرات شبكة، لكنها لا تقدم زيارات أو MAU موحدة.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "The Story of Patreon",
+          "publisher": "Patreon",
+          "source_type": "official_company_page",
+          "url": "https://www.patreon.com/about",
+          "evidence_type": "direct",
+          "source_locator": "About → Our numbers",
+          "supports": "10 ملايين+ دافعين شهريًا و100 مليون+ عضوية مجانية و300 ألف+ مبدع و10 مليارات+ للمبدعين."
+        }
+      ],
+      "limitations": "المعجب قد يدعم أكثر من مبدع، والعضويات المجانية ليست أشخاصًا فريدين."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "أسس Jack Conte المنصة بعد أن حققت فيديوهاته جمهورًا كبيرًا على YouTube بينما بقي الدخل المباشر من هذا التأثير محدودًا. المشكلة الأوسع أن منصات الوصول والإعلانات تكافئ الحجم والتكرار وقابلية المحتوى للخوارزمية، لكنها لا تمنح كل مبدع طريقة مستقرة نسبيًا لتحويل أكثر المعجبين اهتمامًا إلى علاقة مباشرة ومدفوعة، ولا تمنحه بالضرورة بيانات جمهوره أو قناة يمكن الاعتماد عليها للوصول إليهم.",
+        "impact": "قد يمتلك المبدع جمهورًا واسعًا دون قدرة كافية على تمويل العمل التالي، ويظل دخله معرضًا لتغير الوصول وأسعار الإعلانات والرعايات والمواسم. كما أن بناء نشاط عضوية بصورة مستقلة يتطلب الدفع والفوترة وإدارة الصلاحيات والمحتوى والمجتمع والتحليلات وخدمة الأعضاء، وهي بنية تشغيلية يصعب على مبدع فردي تطويرها وصيانتها."
+      },
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "founder_origin_and_creator_business_infrastructure_problem",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "توثق قصة Patreon فجوة التأثير والدخل لدى Jack Conte، وتوضح أبحاث الشركة صعوبة الوصول والاعتماد على المنصات الخارجية.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-05",
+        "SRC-08",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "The Story of Patreon",
+          "publisher": "Patreon",
+          "source_type": "official_company_page",
+          "url": "https://www.patreon.com/about",
+          "evidence_type": "direct",
+          "source_locator": "About → 2013",
+          "supports": "ملايين المشاهدات مقابل مئات الدولارات كدافع للتأسيس."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "What Is Patreon?",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_product_definition",
+          "url": "https://support.patreon.com/hc/en-us/articles/204606315-What-is-Patreon",
+          "evidence_type": "direct",
+          "source_locator": "What is Patreon",
+          "supports": "الوصول والتفاعل والدفع خارج الأنظمة الإعلانية."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Patreon Creator Census 2022",
+          "publisher": "Patreon Newsroom",
+          "source_type": "official_creator_research",
+          "url": "https://news.patreon.com/articles/the-first-ever-patreon-creator-census",
+          "evidence_type": "direct",
+          "source_locator": "Creator Census",
+          "supports": "المبدعون والترويج والدخل واحتياجات الأعمال.",
+          "published_on": "2022-05-04"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Connecting Creators and Their Real Fans in 2024",
+          "publisher": "Patreon Newsroom",
+          "source_type": "official_annual_product_update",
+          "url": "https://news.patreon.com/articles/celebrating-another-year-of-connecting-creators-and-their-real-fans",
+          "evidence_type": "direct",
+          "source_locator": "2024 update",
+          "supports": "التحول إلى منصة مجتمع وتجارة.",
+          "published_on": "2024-12-12"
+        }
+      ],
+      "limitations": "لا يثبت المصدر أن YouTube يدفع دائمًا مبالغ ضئيلة أو أن Patreon وحدها تحل استدامة العمل الإبداعي."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "يوفر Patreon صفحة مستضافة وعضويات مجانية ومدفوعة ومستويات ومزايا وفوترة شهرية أو سنوية، إلى جانب متجر لبيع المحتوى الرقمي مرة واحدة. توسعت المنصة إلى استضافة الفيديو والبودكاست وRSS وSpotify والبث المباشر وDrops والمحادثات والتعليقات والرسائل، وأدوات اكتشاف ونمو، وإهداء العضويات والتجارب المجانية والخصومات وAutopilot. يستطيع المبدع إدارة الأعضاء عبر Relationship Manager وتصدير بيانات التواصل المتاحة، ومراجعة مؤشرات العضوية والإيراد والمتجر، وربط Discord أو بناء تكاملات عبر OAuth وAPI v2 وWebhooks."
+      },
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "membership_community_commerce_media_and_developer_platform",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تثبت وثائق المنتج الحالية جميع المكونات الأساسية من العضوية والتجارة إلى الفيديو والبودكاست وLive والمجتمع والنمو والبيانات والتكاملات.",
+      "source_count": 10,
+      "source_ids": [
+        "SRC-05",
+        "SRC-04",
+        "SRC-13",
+        "SRC-14",
+        "SRC-15",
+        "SRC-16",
+        "SRC-17",
+        "SRC-18",
+        "SRC-11",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "What Is Patreon?",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_product_definition",
+          "url": "https://support.patreon.com/hc/en-us/articles/204606315-What-is-Patreon",
+          "evidence_type": "direct",
+          "source_locator": "Product definition",
+          "supports": "العضوية والتجارة والمجتمع."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Selling One-Time Purchases on Patreon",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_commerce_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/16303719836813-Selling-one-time-purchases-on-Patreon",
+          "evidence_type": "direct",
+          "source_locator": "Commerce",
+          "supports": "Shop.",
+          "published_on": "2026-07-20"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Patreon Video Overview",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_video_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/6598555214477-Patreon-Video-overview",
+          "evidence_type": "direct",
+          "source_locator": "Video overview",
+          "supports": "Video.",
+          "published_on": "2026-07-06"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Live FAQ",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_live_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/35594631117197-Live-FAQ",
+          "evidence_type": "direct",
+          "source_locator": "Live FAQ",
+          "supports": "Live.",
+          "published_on": "2026-07-06"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Drops FAQ",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_shared_release_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/24388100447245-Drops-FAQ",
+          "evidence_type": "direct",
+          "source_locator": "Drops",
+          "supports": "Drops.",
+          "published_on": "2026-07-06"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Building Community with Chats",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_community_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/18855652505357-Building-Community-with-Chats",
+          "evidence_type": "direct",
+          "source_locator": "Chats",
+          "supports": "Chats.",
+          "published_on": "2026-07-06"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Podcasting and Spotify Integration",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_podcast_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/34699048104333-Set-up-a-podcast-on-Patreon",
+          "evidence_type": "direct",
+          "source_locator": "Podcast setup",
+          "supports": "Podcast and RSS.",
+          "published_on": "2026-07-06"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Automate Growth with Autopilot",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_growth_tool_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/28030768415629-Automate-your-growth-with-Autopilot",
+          "evidence_type": "direct",
+          "source_locator": "Growth automation",
+          "supports": "Autopilot.",
+          "published_on": "2026-07-06"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Relationship Manager",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_audience_management_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/360045516212-How-to-use-your-Relationship-manager",
+          "evidence_type": "direct",
+          "source_locator": "Audience management",
+          "supports": "Relationship Manager.",
+          "published_on": "2026-07-06"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Patreon API Reference",
+          "publisher": "Patreon Developer Platform",
+          "source_type": "official_developer_documentation",
+          "url": "https://docs.patreon.com/",
+          "evidence_type": "direct",
+          "source_locator": "Developer docs",
+          "supports": "API v2 وOAuth وWebhooks."
+        }
+      ]
+    },
+    "$.market_data.target_audience": {
+      "field_value": "صناع الفيديو والبودكاست والموسيقى والكتابة والفنون والألعاب والتعليم والكوميديا والمجتمعات المتخصصة، من الأفراد إلى فرق الإنتاج والشركات الإعلامية الصغيرة، إضافة إلى المعجبين الذين يريدون الوصول إلى محتوى أو مجتمع أو تجربة حصرية ودعم المبدع مباشرة. كما يخدم المطورين الذين يربطون العضوية بالتطبيقات والمزايا الخارجية.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "multi_format_creators_fans_teams_and_developers",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تصف Patreon مئات الآلاف من المبدعين في الفيديو والبودكاست والكتابة والفن والموسيقى والألعاب، وتوفر أدوات للفرق والمطورين.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-08",
+        "SRC-21",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "The Story of Patreon",
+          "publisher": "Patreon",
+          "source_type": "official_company_page",
+          "url": "https://www.patreon.com/about",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "المبدعون والمعجبون وبناء الأعمال."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Patreon Creator Census 2022",
+          "publisher": "Patreon Newsroom",
+          "source_type": "official_creator_research",
+          "url": "https://news.patreon.com/articles/the-first-ever-patreon-creator-census",
+          "evidence_type": "direct",
+          "source_locator": "Creator Census",
+          "supports": "وسائط المبدعين وتنوعهم وفرقهم.",
+          "published_on": "2022-05-04"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Patreon API Reference",
+          "publisher": "Patreon Developer Platform",
+          "source_type": "official_developer_documentation",
+          "url": "https://docs.patreon.com/",
+          "evidence_type": "direct",
+          "source_locator": "API reference",
+          "supports": "المطورون والتكاملات."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "What Is Patreon?",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_product_definition",
+          "url": "https://support.patreon.com/hc/en-us/articles/204606315-What-is-Patreon",
+          "evidence_type": "direct",
+          "source_locator": "Product definition",
+          "supports": "المبدعون والأعضاء والعملاء."
+        }
+      ]
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر Patreon رقمًا رسميًا بالدولار لسوقها الكلي القابل للاستهداف. مؤشرات الحجم المباشرة للمنصة هي أكثر من 300 ألف مبدع، وأكثر من 10 ملايين معجب يدفعون شهريًا، وأكثر من 100 مليون عضوية مجانية، وأكثر من 10 مليارات دولار من دخل المبدعين التراكمي. هذه مقاييس شبكة واستخدام وليست حجم سوق اقتصاد المبدعين العالمي.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "high",
+      "claim_type": "platform_scale_without_external_creator_economy_tam",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "يستخدم الحقل أرقام Patreon نفسها بدل تقدير خارجي واسع لاقتصاد المبدعين.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-01",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "The Story of Patreon",
+          "publisher": "Patreon",
+          "source_type": "official_company_page",
+          "url": "https://www.patreon.com/about",
+          "evidence_type": "direct",
+          "source_locator": "About → Our numbers",
+          "supports": "أرقام المبدعين والدافعين والعضويات والدخل التراكمي."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Discovery Is Driving Over $200M to Creators Per Year",
+          "publisher": "Patreon Newsroom",
+          "source_type": "official_discovery_metrics",
+          "url": "https://news.patreon.com/articles/discovery-on-patreon-is-driving-over-200-million-to-creators-per-year",
+          "evidence_type": "direct",
+          "source_locator": "Discovery update",
+          "supports": "أكثر من 200 مليون دولار سنويًا من الاكتشاف.",
+          "published_on": "2025-03-03"
+        }
+      ],
+      "limitations": "أموال المبدعين التراكمية وحجم الشبكة لا يمثلان TAM أو إيرادات Patreon."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا تنشر الشركة معدل نمو سنويًا متجانسًا للإيرادات أو المستخدمين. ارتفع عدد المبدعين النشطين المعلن من أكثر من 250 ألفًا في مسح 2022 إلى أكثر من 280 ألفًا في تقرير الشفافية عن 2023 ثم أكثر من 300 ألف حاليًا. وارتفعت العضويات المجانية من أكثر من 60 مليونًا في نهاية 2024 إلى أكثر من 100 مليون حاليًا، بينما ارتفع دخل المبدعين التراكمي من أكثر من 8 مليارات دولار في نهاية 2024 إلى أكثر من 10 مليارات. كما تضاعفت إيرادات المشتريات الفردية الشهرية أربع مرات خلال 2024، وتقول الشركة إن أدوات الاكتشاف تولد أكثر من 200 مليون دولار سنويًا للمبدعين.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "medium_high",
+      "claim_type": "creator_free_membership_payout_and_commerce_growth_indicators",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تقدم المصادر نقاطًا زمنية للمبدعين والعضويات المجانية والدخل التراكمي والتجارة، لكن لا تنشر سلسلة إيرادات شركة متجانسة.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-08",
+        "SRC-09",
+        "SRC-06",
+        "SRC-01",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "Patreon Creator Census 2022",
+          "publisher": "Patreon Newsroom",
+          "source_type": "official_creator_research",
+          "url": "https://news.patreon.com/articles/the-first-ever-patreon-creator-census",
+          "evidence_type": "direct",
+          "source_locator": "Creator Census",
+          "supports": "250 ألف+ مبدع في 2022.",
+          "published_on": "2022-05-04"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Patreon Transparency Report 2023",
+          "publisher": "Patreon Newsroom",
+          "source_type": "official_transparency_report",
+          "url": "https://news.patreon.com/articles/patreon-s-inaugural-transparency-report",
+          "evidence_type": "direct",
+          "source_locator": "Transparency Report",
+          "supports": "280 ألف+ مبدع في 2023.",
+          "published_on": "2024-03-11"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Connecting Creators and Their Real Fans in 2024",
+          "publisher": "Patreon Newsroom",
+          "source_type": "official_annual_product_update",
+          "url": "https://news.patreon.com/articles/celebrating-another-year-of-connecting-creators-and-their-real-fans",
+          "evidence_type": "direct",
+          "source_locator": "Annual update",
+          "supports": "60 مليون عضوية مجانية و8 مليارات دولار و4X للتجارة في نهاية 2024.",
+          "published_on": "2024-12-12"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "The Story of Patreon",
+          "publisher": "Patreon",
+          "source_type": "official_company_page",
+          "url": "https://www.patreon.com/about",
+          "evidence_type": "direct",
+          "source_locator": "Current metrics",
+          "supports": "300 ألف+ مبدع و100 مليون+ عضوية مجانية و10 مليارات+ حاليًا."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Discovery Is Driving Over $200M to Creators Per Year",
+          "publisher": "Patreon Newsroom",
+          "source_type": "official_discovery_metrics",
+          "url": "https://news.patreon.com/articles/discovery-on-patreon-is-driving-over-200-million-to-creators-per-year",
+          "evidence_type": "direct",
+          "source_locator": "Discovery",
+          "supports": "200 مليون+ دولار سنويًا من الاكتشاف.",
+          "published_on": "2025-03-03"
+        }
+      ],
+      "limitations": "الأرقام بصيغة «أكثر من» وتغطي فترات وتعريفات مختلفة، لذلك لا تمثل CAGR دقيقًا لإيراد Patreon.",
+      "calculation": {
+        "creators_2022": ">250,000",
+        "creators_2023_report": ">280,000",
+        "creators_current": ">300,000",
+        "free_memberships_end_2024": ">60,000,000",
+        "free_memberships_current": ">100,000,000",
+        "minimum_free_membership_increase_percent": 66.67,
+        "creator_earnings_end_2024_usd": ">8,000,000,000",
+        "creator_earnings_current_usd": ">10,000,000,000",
+        "minimum_cumulative_earnings_increase_percent": 25,
+        "one_time_purchase_monthly_revenue_growth_2024": "4x"
+      }
+    },
+    "$.financials.initial_investment": {
+      "field_value": "رأس المال الشخصي الأول للمؤسسين غير معلن. جمعت Patreon جولة Seed بنحو 2.1 مليون دولار في 2013 ثم Series A بقيمة 15 مليون دولار في 2014. شملت المحطات اللاحقة 60 مليون دولار في 2017، و60 مليون دولار في 2019، و90 مليون دولار في 2020، ثم 155 مليون دولار في Series F عام 2021. ووفق تقارير التمويل بلغ إجمالي رأس المال المجمع بحلول جولة 2021 أكثر من 400 مليون دولار.",
+      "verification_status": "verified_historical_financing",
+      "confidence": "medium_high",
+      "claim_type": "early_and_late_private_funding_history",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تدعم المصادر Seed وSeries A وجولات 2017 و2020 و2021 وإجمالي تمويل يفوق 400 مليون دولار، بينما لا يُعرف رأس المال الشخصي الأول.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-23",
+        "SRC-24",
+        "SRC-25",
+        "SRC-22",
+        "SRC-26"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-23",
+          "title": "Patreon Series A and Seed Funding",
+          "publisher": "Wired",
+          "source_type": "high_quality_historical_funding_report",
+          "url": "https://www.wired.com/2014/06/patreon-series-a-funding/",
+          "evidence_type": "direct",
+          "source_locator": "Wired funding report",
+          "supports": "Seed بقيمة 2.1 مليون وSeries A بقيمة 15 مليون.",
+          "published_on": "2014-06-23"
+        },
+        {
+          "source_id": "SRC-24",
+          "title": "Patreon Raises $60 Million",
+          "publisher": "Axios",
+          "source_type": "high_quality_funding_report",
+          "url": "https://www.axios.com/2017/12/15/patreon-raises-60-million-because-fans-still-pay-for-content-1513305597",
+          "evidence_type": "direct",
+          "source_locator": "Axios funding report",
+          "supports": "60 مليون دولار في 2017 وإجمالي 100 مليون وقتها.",
+          "published_on": "2017-09-19"
+        },
+        {
+          "source_id": "SRC-25",
+          "title": "Patreon Raises $90 Million",
+          "publisher": "Axios",
+          "source_type": "high_quality_funding_report",
+          "url": "https://www.axios.com/2020/09/02/patreon-raises-90-million-as-the-pandemic-drives-artists-to-it",
+          "evidence_type": "direct",
+          "source_locator": "Axios 2020",
+          "supports": "90 مليون دولار في 2020.",
+          "published_on": "2020-09-02"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Patreon Series F Financing",
+          "publisher": "Patreon via PR Newswire",
+          "source_type": "official_funding_announcement",
+          "url": "https://www.prnewswire.com/news-releases/patreon-fuels-the-future-of-the-creator-economy-with-155-million-in-additional-funding-301263804.html",
+          "evidence_type": "direct",
+          "source_locator": "Official release",
+          "supports": "155 مليون دولار Series F.",
+          "published_on": "2021-04-07"
+        },
+        {
+          "source_id": "SRC-26",
+          "title": "Patreon Private-Company Scale and Funding",
+          "publisher": "Axios",
+          "source_type": "high_quality_current_company_report",
+          "url": "https://www.axios.com/newsletters/axios-media-trends-cb9d9430-71fa-11f0-9cf2-b79c6fa050e6",
+          "evidence_type": "direct",
+          "source_locator": "Axios 2025",
+          "supports": "أكثر من 400 مليون دولار إجماليًا.",
+          "published_on": "2025-08-05"
+        }
+      ],
+      "limitations": "لم تُراجع كل جولة وسيطًا وسيطًا داخل الحقل، ولا تنشر الشركة مقدار مساهمة المؤسسين."
+    },
+    "$.financials.valuation": {
+      "field_value": "آخر تقييم خاص معلن على نطاق واسع بلغ 4 مليارات دولار في جولة Series F البالغة 155 مليون دولار في أبريل 2021، بعد تقييم قدره 1.2 مليار دولار في جولة 2020. Patreon شركة خاصة ولا يوجد سعر سوقي يومي أو تقييم حالي معلن؛ لذلك لا ينبغي عرض 4 مليارات دولار كقيمة مؤكدة في 2026.",
+      "verification_status": "verified_historical_financing",
+      "confidence": "high",
+      "claim_type": "latest_publicly_reported_private_valuation",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تؤكد الشركة وReuters وAxios تقييم 4 مليارات دولار في 2021، دون تقييم عام أحدث.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-22",
+        "SRC-25",
+        "SRC-26"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-22",
+          "title": "Patreon Series F Financing",
+          "publisher": "Patreon via PR Newswire",
+          "source_type": "official_funding_announcement",
+          "url": "https://www.prnewswire.com/news-releases/patreon-fuels-the-future-of-the-creator-economy-with-155-million-in-additional-funding-301263804.html",
+          "evidence_type": "direct",
+          "source_locator": "Official funding release",
+          "supports": "4 مليارات دولار في Series F.",
+          "published_on": "2021-04-07"
+        },
+        {
+          "source_id": "SRC-25",
+          "title": "Patreon Raises $90 Million",
+          "publisher": "Axios",
+          "source_type": "high_quality_funding_report",
+          "url": "https://www.axios.com/2020/09/02/patreon-raises-90-million-as-the-pandemic-drives-artists-to-it",
+          "evidence_type": "direct",
+          "source_locator": "Axios funding report",
+          "supports": "1.2 مليار دولار في 2020.",
+          "published_on": "2020-09-02"
+        },
+        {
+          "source_id": "SRC-26",
+          "title": "Patreon Private-Company Scale and Funding",
+          "publisher": "Axios",
+          "source_type": "high_quality_current_company_report",
+          "url": "https://www.axios.com/newsletters/axios-media-trends-cb9d9430-71fa-11f0-9cf2-b79c6fa050e6",
+          "evidence_type": "direct",
+          "source_locator": "Axios current report",
+          "supports": "آخر تقييم معلن فوق 4 مليارات في 2021 والشركة خاصة.",
+          "published_on": "2025-08-05"
+        }
+      ],
+      "limitations": "لا يعكس تقييم 2021 بالضرورة القيمة الاقتصادية الحالية بعد تغير أسواق التقنية والتسعير والمنتج.",
+      "calculation": {
+        "2020_private_valuation_usd": 1200000000,
+        "2021_series_f_amount_usd": 155000000,
+        "2021_private_valuation_usd": 4000000000,
+        "current_verified_valuation": "not_publicly_disclosed",
+        "public_market_status": "private"
+      }
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "رسم منصة قياسي قدره 10% للمبدعين الجدد من المدفوعات الناجحة للعضويات والمشتريات الفردية",
+        "رسوم Legacy بنسبة 5% أو 8% أو 11% للصفحات القديمة المؤهلة بحسب خطتها",
+        "رسوم معالجة الدفع التي تختلف حسب العملة وطريقة الدفع وحجم العملية",
+        "رسم تحويل عملة قدره 2.5% عندما تختلف عملة دفع المعجب عن عملة سحب المبدع",
+        "رسوم السحب التي تختلف حسب وسيلة التحويل والعملة والدولة",
+        "رسوم المنصة والمعالجة على بيع الفيديو والصوت والمنشورات والملفات والمجموعات كمشتريات فردية",
+        "رسوم وخدمات مرتبطة بخطط Merch القديمة وتنفيذ المزايا المادية للمبدعين المؤهلين",
+        "الضرائب المحصلة ليست إيرادًا اقتصاديًا صافياً لـPatreon، كما أن عمولة Apple البالغة 30% في معاملات iOS المؤهلة تخص Apple"
+      ],
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "platform_processing_conversion_payout_and_commerce_fees",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تحدد وثائق الرسوم جميع القنوات الحالية وتفصل بينها وبين الضرائب ورسوم Apple.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Creator Fees Overview",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_current_pricing_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/11111747095181-Creator-fees-overview",
+          "evidence_type": "direct",
+          "source_locator": "Fees overview",
+          "supports": "رسوم المنصة والمعالجة والتحويل والسحب.",
+          "published_on": "2026-07-19"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Standard Platform Fee for New Creators",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_pricing_policy",
+          "url": "https://support.patreon.com/hc/en-us/articles/36426991446797-A-standard-platform-fee-for-new-creators-effective-after-August-4-2025",
+          "evidence_type": "direct",
+          "source_locator": "Standard fee policy",
+          "supports": "معدلات المعالجة وApple و2.5%.",
+          "published_on": "2026-01-28"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Selling One-Time Purchases on Patreon",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_commerce_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/16303719836813-Selling-one-time-purchases-on-Patreon",
+          "evidence_type": "direct",
+          "source_locator": "One-time purchases",
+          "supports": "رسوم التجارة.",
+          "published_on": "2026-07-20"
+        }
+      ],
+      "limitations": "لا تنشر Patreon الإيراد أو الهامش الناتج من كل فئة رسوم."
+    },
+    "$.tools": {
+      "field_value": [
+        "صفحة مبدع مستضافة مع عضويات مجانية ومدفوعة ومستويات ومزايا وحدود للأعضاء",
+        "Subscription Billing وعضويات شهرية وسنوية وإدارة الترقية والتخفيض والإلغاء",
+        "Shop لبيع الفيديو والصوت والمنشورات والملفات والمجموعات كمشتريات فردية",
+        "Patreon Video لاستضافة فيديو بدقة 720p و1080p للمبدعين المؤهلين",
+        "بودكاست وRSS خاص وعام وتكامل Spotify وSpotify Synced Feeds",
+        "Patreon Live مع إشعارات ودردشة وإعادة تشغيل للمحادثة وتكامل OBS",
+        "Drops لإطلاق الصوت والفيديو مع عد تنازلي ومشاهدة أو استماع جماعي",
+        "Community Chats والتعليقات والرسائل المباشرة والاستطلاعات",
+        "Explore والتوصيات وQuips وCollab Posts لاكتشاف المبدعين والمحتوى",
+        "عضويات مجانية ومنشورات عامة ومحتوى مخصص لفئات العضوية",
+        "Fan Gifting وCreator Gifting وإهداء العضويات",
+        "تجارب مجانية لمدة سبعة أيام وخصومات وإعادة تسعير المستويات",
+        "Autopilot لعروض الترقية وحملات Teaser وعروض منع الإلغاء",
+        "Relationship Manager للبحث والتصفية وإدارة المزايا وحالات الدفع",
+        "تصدير بيانات الجمهور المتاحة بصيغة CSV واستخدامها في أدوات الأتمتة",
+        "Membership وEarnings وShop وPost وSurvey Insights مع تصدير البيانات",
+        "Discord Integration لمزامنة أدوار الخادم مع مستويات Patreon",
+        "Patreon API v2 وOAuth 2.0 وWebhooks لأحداث الأعضاء والمنشورات",
+        "تطبيقات Web وiOS وAndroid مع الإشعارات والاستهلاك وإدارة الحساب",
+        "Teammate Permissions لإدارة النشاط الإبداعي بواسطة فرق متعددة",
+        "أنظمة سحب يدوي أو تلقائي وتحويلات متعددة العملات وطرق دفع دولية"
+      ],
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "official_creator_media_community_growth_data_and_developer_capabilities",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "استُبدلت تقنيات داخلية مفترضة بقدرات المنتج والتكامل الموثقة في وثائق 2026.",
+      "source_count": 13,
+      "source_ids": [
+        "SRC-03",
+        "SRC-04",
+        "SRC-11",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14",
+        "SRC-15",
+        "SRC-16",
+        "SRC-17",
+        "SRC-18",
+        "SRC-19",
+        "SRC-20",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Standard Platform Fee for New Creators",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_pricing_policy",
+          "url": "https://support.patreon.com/hc/en-us/articles/36426991446797-A-standard-platform-fee-for-new-creators-effective-after-August-4-2025",
+          "evidence_type": "direct",
+          "source_locator": "Standard plan",
+          "supports": "العضويات والفيديو والمجتمع والتحليلات.",
+          "published_on": "2026-01-28"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Selling One-Time Purchases on Patreon",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_commerce_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/16303719836813-Selling-one-time-purchases-on-Patreon",
+          "evidence_type": "direct",
+          "source_locator": "Commerce",
+          "supports": "Shop.",
+          "published_on": "2026-07-20"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Relationship Manager",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_audience_management_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/360045516212-How-to-use-your-Relationship-manager",
+          "evidence_type": "direct",
+          "source_locator": "Audience management",
+          "supports": "Relationship Manager.",
+          "published_on": "2026-07-06"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Exporting Audience Emails",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_data_portability_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/34784011795469-Exporting-your-audience-s-emails-from-Patreon",
+          "evidence_type": "direct",
+          "source_locator": "Data export",
+          "supports": "CSV export.",
+          "published_on": "2026-07-06"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Patreon Video Overview",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_video_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/6598555214477-Patreon-Video-overview",
+          "evidence_type": "direct",
+          "source_locator": "Video",
+          "supports": "Video.",
+          "published_on": "2026-07-06"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Live FAQ",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_live_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/35594631117197-Live-FAQ",
+          "evidence_type": "direct",
+          "source_locator": "Live",
+          "supports": "Live.",
+          "published_on": "2026-07-06"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Drops FAQ",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_shared_release_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/24388100447245-Drops-FAQ",
+          "evidence_type": "direct",
+          "source_locator": "Drops",
+          "supports": "Drops.",
+          "published_on": "2026-07-06"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Building Community with Chats",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_community_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/18855652505357-Building-Community-with-Chats",
+          "evidence_type": "direct",
+          "source_locator": "Community",
+          "supports": "Chats.",
+          "published_on": "2026-07-06"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Podcasting and Spotify Integration",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_podcast_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/34699048104333-Set-up-a-podcast-on-Patreon",
+          "evidence_type": "direct",
+          "source_locator": "Podcast",
+          "supports": "Podcast/RSS/Spotify.",
+          "published_on": "2026-07-06"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Automate Growth with Autopilot",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_growth_tool_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/28030768415629-Automate-your-growth-with-Autopilot",
+          "evidence_type": "direct",
+          "source_locator": "Growth automation",
+          "supports": "Autopilot.",
+          "published_on": "2026-07-06"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Free Trials FAQ",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_subscription_growth_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/11044183172493-Free-Trials-FAQ",
+          "evidence_type": "direct",
+          "source_locator": "Trials",
+          "supports": "Free trials and subscription tools.",
+          "published_on": "2026-07-20"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Discord Integration for Creators",
+          "publisher": "Patreon Help Center",
+          "source_type": "official_integration_documentation",
+          "url": "https://support.patreon.com/hc/en-us/articles/4408208785549-What-is-Discord-Creator",
+          "evidence_type": "direct",
+          "source_locator": "Discord",
+          "supports": "Discord roles.",
+          "published_on": "2026-05-11"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Patreon API Reference",
+          "publisher": "Patreon Developer Platform",
+          "source_type": "official_developer_documentation",
+          "url": "https://docs.patreon.com/",
+          "evidence_type": "direct",
+          "source_locator": "Developer API",
+          "supports": "API/OAuth/Webhooks."
+        }
+      ],
+      "limitations": "القائمة تصف وظائف المنتج ولا تمثل كشفًا كاملًا عن لغات البرمجة أو البنية السحابية الداخلية."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "The Story of Patreon",
+      "publisher": "Patreon",
+      "source_type": "official_company_page",
+      "url": "https://www.patreon.com/about",
+      "supports": [
+        "التأسيس في 2013 بواسطة Jack Conte وSam Yam",
+        "أكثر من 10 ملايين معجب يدفعون شهريًا",
+        "أكثر من 100 مليون عضوية مجانية",
+        "أكثر من 300 ألف مبدع",
+        "أكثر من 10 مليارات دولار دخل للمبدعين"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Creator Fees Overview",
+      "publisher": "Patreon Help Center",
+      "source_type": "official_current_pricing_documentation",
+      "published_on": "2026-07-19",
+      "url": "https://support.patreon.com/hc/en-us/articles/11111747095181-Creator-fees-overview",
+      "supports": [
+        "الخطة القياسية 10%",
+        "خطط Legacy بنسبة 5% و8% و11%",
+        "رسوم المعالجة والتحويل والسحب والضرائب",
+        "شروط الاحتفاظ بالخطة القديمة"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Standard Platform Fee for New Creators",
+      "publisher": "Patreon Help Center",
+      "source_type": "official_pricing_policy",
+      "published_on": "2026-01-28",
+      "url": "https://support.patreon.com/hc/en-us/articles/36426991446797-A-standard-platform-fee-for-new-creators-effective-after-August-4-2025",
+      "supports": [
+        "تطبيق 10% بعد 4 أغسطس 2025",
+        "مزايا الخطة القياسية",
+        "معدلات معالجة الدفع",
+        "2.5% تحويل عملة",
+        "متطلبات ورسوم iOS"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Selling One-Time Purchases on Patreon",
+      "publisher": "Patreon Help Center",
+      "source_type": "official_commerce_documentation",
+      "published_on": "2026-07-20",
+      "url": "https://support.patreon.com/hc/en-us/articles/16303719836813-Selling-one-time-purchases-on-Patreon",
+      "supports": [
+        "بيع المنتجات والمنشورات والمجموعات الرقمية",
+        "رسم المنصة والمعالجة والسحب",
+        "عدم وجود رسم إدراج"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "What Is Patreon?",
+      "publisher": "Patreon Help Center",
+      "source_type": "official_product_definition",
+      "url": "https://support.patreon.com/hc/en-us/articles/204606315-What-is-Patreon",
+      "supports": [
+        "العضوية والتجارة والمجتمع",
+        "العلاقة المباشرة مع المعجبين",
+        "البدء المجاني للمبدعين"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Connecting Creators and Their Real Fans in 2024",
+      "publisher": "Patreon Newsroom",
+      "source_type": "official_annual_product_update",
+      "published_on": "2024-12-12",
+      "url": "https://news.patreon.com/articles/celebrating-another-year-of-connecting-creators-and-their-real-fans",
+      "supports": [
+        "60 مليون عضوية مجانية في 2024",
+        "أكثر من 8 مليارات دولار للمبدعين",
+        "أكثر من 10 ملايين معجب يدفعون شهريًا",
+        "نمو إيرادات المشتريات الفردية الشهرية أربع مرات",
+        "نمو استخدام Chats"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Discovery Is Driving Over $200M to Creators Per Year",
+      "publisher": "Patreon Newsroom",
+      "source_type": "official_discovery_metrics",
+      "published_on": "2025-03-03",
+      "url": "https://news.patreon.com/articles/discovery-on-patreon-is-driving-over-200-million-to-creators-per-year",
+      "supports": [
+        "أكثر من 200 مليون دولار سنويًا للمبدعين من أدوات الاكتشاف",
+        "Free Membership وRecommendations وExplore"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Patreon Creator Census 2022",
+      "publisher": "Patreon Newsroom",
+      "source_type": "official_creator_research",
+      "published_on": "2022-05-04",
+      "url": "https://news.patreon.com/articles/the-first-ever-patreon-creator-census",
+      "supports": [
+        "أكثر من 250 ألف مبدع نشط وقت المسح",
+        "عينة 13 ألف مبدع من 113 دولة",
+        "أنماط العمل والترويج والاحتفاظ",
+        "الارتباط بين تكرار الترويج والدخل دون إثبات السببية"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Patreon Transparency Report 2023",
+      "publisher": "Patreon Newsroom",
+      "source_type": "official_transparency_report",
+      "published_on": "2024-03-11",
+      "url": "https://news.patreon.com/articles/patreon-s-inaugural-transparency-report",
+      "supports": [
+        "أكثر من 280 ألف مبدع يستخدمون Patreon",
+        "الحوكمة والثقة والسلامة"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Introducing a New Patreon",
+      "publisher": "Patreon Newsroom",
+      "source_type": "official_product_announcement",
+      "url": "https://news.patreon.com/articles/introducing-a-new-patreon",
+      "supports": [
+        "العضوية المجانية",
+        "Commerce",
+        "توسيع Patreon من العضوية إلى المجتمع والتجارة"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Relationship Manager",
+      "publisher": "Patreon Help Center",
+      "source_type": "official_audience_management_documentation",
+      "published_on": "2026-07-06",
+      "url": "https://support.patreon.com/hc/en-us/articles/360045516212-How-to-use-your-Relationship-manager",
+      "supports": [
+        "إدارة الأعضاء المجانيين والمدفوعين",
+        "الفلاتر والحالات والمزايا والتواصل"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Exporting Audience Emails",
+      "publisher": "Patreon Help Center",
+      "source_type": "official_data_portability_documentation",
+      "published_on": "2026-07-06",
+      "url": "https://support.patreon.com/hc/en-us/articles/34784011795469-Exporting-your-audience-s-emails-from-Patreon",
+      "supports": [
+        "تصدير بيانات التواصل بصيغة CSV",
+        "الفلاتر",
+        "الاستخدام مع أدوات أتمتة مثل Zapier"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Patreon Video Overview",
+      "publisher": "Patreon Help Center",
+      "source_type": "official_video_documentation",
+      "published_on": "2026-07-06",
+      "url": "https://support.patreon.com/hc/en-us/articles/6598555214477-Patreon-Video-overview",
+      "supports": [
+        "استضافة الفيديو الأصلية",
+        "720p و1080p",
+        "الأهلية وحدود الاستخدام"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Live FAQ",
+      "publisher": "Patreon Help Center",
+      "source_type": "official_live_documentation",
+      "published_on": "2026-07-06",
+      "url": "https://support.patreon.com/hc/en-us/articles/35594631117197-Live-FAQ",
+      "supports": [
+        "البث المباشر",
+        "الدردشة والإشعارات وإعادة التشغيل",
+        "تكامل OBS وأدوات البث"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Drops FAQ",
+      "publisher": "Patreon Help Center",
+      "source_type": "official_shared_release_documentation",
+      "published_on": "2026-07-06",
+      "url": "https://support.patreon.com/hc/en-us/articles/24388100447245-Drops-FAQ",
+      "supports": [
+        "الإطلاق الجماعي للفيديو والصوت",
+        "العد التنازلي والدردشة الحية"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Building Community with Chats",
+      "publisher": "Patreon Help Center",
+      "source_type": "official_community_documentation",
+      "published_on": "2026-07-06",
+      "url": "https://support.patreon.com/hc/en-us/articles/18855652505357-Building-Community-with-Chats",
+      "supports": [
+        "حتى 10 مساحات دردشة",
+        "صلاحيات حسب العضوية أو المستوى",
+        "المحادثات المجتمعية"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Podcasting and Spotify Integration",
+      "publisher": "Patreon Help Center",
+      "source_type": "official_podcast_documentation",
+      "published_on": "2026-07-06",
+      "url": "https://support.patreon.com/hc/en-us/articles/34699048104333-Set-up-a-podcast-on-Patreon",
+      "supports": [
+        "استضافة البودكاست",
+        "RSS",
+        "استخراج الصوت من الفيديو",
+        "التوزيع والاستماع عبر Spotify"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Automate Growth with Autopilot",
+      "publisher": "Patreon Help Center",
+      "source_type": "official_growth_tool_documentation",
+      "published_on": "2026-07-06",
+      "url": "https://support.patreon.com/hc/en-us/articles/28030768415629-Automate-your-growth-with-Autopilot",
+      "supports": [
+        "عروض ترقية الأعضاء المجانيين",
+        "Teaser Campaigns",
+        "عروض منع الإلغاء"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "Free Trials FAQ",
+      "publisher": "Patreon Help Center",
+      "source_type": "official_subscription_growth_documentation",
+      "published_on": "2026-07-20",
+      "url": "https://support.patreon.com/hc/en-us/articles/11044183172493-Free-Trials-FAQ",
+      "supports": [
+        "التجارب المجانية لمدة سبعة أيام",
+        "الارتباط بنظام Subscription Billing",
+        "Gifting وDiscounts وTier Repricing"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "Discord Integration for Creators",
+      "publisher": "Patreon Help Center",
+      "source_type": "official_integration_documentation",
+      "published_on": "2026-05-11",
+      "url": "https://support.patreon.com/hc/en-us/articles/4408208785549-What-is-Discord-Creator",
+      "supports": [
+        "مزامنة أدوار Discord مع مستويات Patreon",
+        "الوصول الحصري بحسب المستوى"
+      ]
+    },
+    {
+      "id": "SRC-21",
+      "title": "Patreon API Reference",
+      "publisher": "Patreon Developer Platform",
+      "source_type": "official_developer_documentation",
+      "url": "https://docs.patreon.com/",
+      "supports": [
+        "API v2",
+        "OAuth 2.0",
+        "Webhooks",
+        "الأعضاء والمستويات والمزايا والتسليمات"
+      ]
+    },
+    {
+      "id": "SRC-22",
+      "title": "Patreon Series F Financing",
+      "publisher": "Patreon via PR Newswire",
+      "source_type": "official_funding_announcement",
+      "published_on": "2021-04-07",
+      "url": "https://www.prnewswire.com/news-releases/patreon-fuels-the-future-of-the-creator-economy-with-155-million-in-additional-funding-301263804.html",
+      "supports": [
+        "Series F بقيمة 155 مليون دولار",
+        "تقييم 4 مليارات دولار",
+        "المستثمرون واستخدامات التمويل"
+      ]
+    },
+    {
+      "id": "SRC-23",
+      "title": "Patreon Series A and Seed Funding",
+      "publisher": "Wired",
+      "source_type": "high_quality_historical_funding_report",
+      "published_on": "2014-06-23",
+      "url": "https://www.wired.com/2014/06/patreon-series-a-funding/",
+      "supports": [
+        "Series A بقيمة 15 مليون دولار",
+        "جولة Seed سابقة بقيمة 2.1 مليون دولار"
+      ]
+    },
+    {
+      "id": "SRC-24",
+      "title": "Patreon Raises $60 Million",
+      "publisher": "Axios",
+      "source_type": "high_quality_funding_report",
+      "published_on": "2017-09-19",
+      "url": "https://www.axios.com/2017/12/15/patreon-raises-60-million-because-fans-still-pay-for-content-1513305597",
+      "supports": [
+        "جولة 60 مليون دولار في 2017",
+        "إجمالي تمويل بلغ نحو 100 مليون دولار وقتها"
+      ]
+    },
+    {
+      "id": "SRC-25",
+      "title": "Patreon Raises $90 Million",
+      "publisher": "Axios",
+      "source_type": "high_quality_funding_report",
+      "published_on": "2020-09-02",
+      "url": "https://www.axios.com/2020/09/02/patreon-raises-90-million-as-the-pandemic-drives-artists-to-it",
+      "supports": [
+        "جولة 90 مليون دولار في 2020",
+        "تقييم 1.2 مليار دولار"
+      ]
+    },
+    {
+      "id": "SRC-26",
+      "title": "Patreon Private-Company Scale and Funding",
+      "publisher": "Axios",
+      "source_type": "high_quality_current_company_report",
+      "published_on": "2025-08-05",
+      "url": "https://www.axios.com/newsletters/axios-media-trends-cb9d9430-71fa-11f0-9cf2-b79c6fa050e6",
+      "supports": [
+        "Patreon شركة خاصة",
+        "أكثر من 400 مليون دولار تمويل تاريخي",
+        "آخر تقييم معلن يتجاوز 4 مليارات دولار في 2021",
+        "عدم وجود خطة حالية للطرح وفق CEO وقت التقرير"
+      ]
+    },
+    {
+      "id": "SRC-27",
+      "title": "Patreon Terms of Use",
+      "publisher": "Patreon",
+      "source_type": "official_legal_document",
+      "published_on": "2026-05-27",
+      "url": "https://www.patreon.com/policy/legal",
+      "supports": [
+        "الكيان Patreon, Inc.",
+        "خضوع النزاعات الأمريكية لمحاكم سان فرانسيسكو وقانون كاليفورنيا"
+      ]
+    }
   ]
 }

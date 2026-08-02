@@ -2,66 +2,1336 @@
   "id": "revolut",
   "slug": "revolut",
   "name": "ريفولوت (Revolut)",
-  "headline": "البنك الرقمي (Neobank) الذي أصبح التطبيق المالي الفائق في أوروبا",
-  "category": "FinTech / البنوك الرقمية",
+  "headline": "من بطاقة سفر متعددة العملات إلى شبكة بنكية عالمية: كيف حوّلت Revolut نقطة دخول واحدة إلى محركات مالية متعددة",
+  "category": "FinTech / Global Digital Banking & Financial Super App / الخدمات المصرفية الرقمية العالمية",
   "company": {
-    "location": "لندن، المملكة العربية السعودية",
-    "business_model": "مجاني للأساسيات (Freemium) + اشتراكات مدفوعة (Metal/Premium) ورسوم تبادل"
+    "location": "لندن، المملكة المتحدة. يقع المقر العالمي الحالي في Canary Wharf، بينما العنوان المسجل لـRevolut Ltd وRevolut Bank UK Ltd هو 30 South Colonnade، London E14 5HX. تعمل المجموعة عبر كيانات وتراخيص محلية متعددة وليست بنكًا قانونيًا واحدًا يخدم جميع الدول.",
+    "business_model": "منصة مالية متعددة الإيرادات للأفراد والشركات. تجمع بين خطة Standard المجانية وخطط Plus وPremium وMetal وUltra المدفوعة، ورسوم ومعاملات البطاقات، والصرف الأجنبي، والاستثمار والعملات المشفرة، وصافي دخل الفوائد والائتمان، وRevolut Business، وRevolut Pay وخدمات التجار، والتأمين والاتصال والخدمات الإضافية. تختلف المنتجات والرسوم والجهة القانونية والحماية التنظيمية حسب بلد العميل."
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين",
-    "monthly_traffic": "أكثر من 30 مليون عميل عالمياً"
+    "monthly_revenue": "نحو 500 مليون دولار شهريًا كمتوسط حسابي تاريخي، استنادًا إلى إيرادات المجموعة لعام 2025 البالغة 6.0 مليارات دولار. يعادل ذلك نحو 375 مليون جنيه شهريًا باستخدام الإيراد الرسمي البالغ 4.5 مليارات جنيه. هذا متوسط سنوي وليس MRR تعاقديًا، وتختلف مساهمته بين الاشتراكات والبطاقات والثروة والصرف والفوائد والأعمال.",
+    "monthly_traffic": "لا تنشر Revolut رقمًا عالميًا موحدًا للمستخدمين النشطين شهريًا. تجاوزت قاعدة العملاء الأفراد 75 مليونًا بحلول منتصف 2026، مقارنة بـ68.3 مليونًا في نهاية 2025، وكان لدى Revolut Business نحو 767 ألف عميل شركة في نهاية 2025. هذه حسابات عملاء وليست MAU أو زيارات موقع."
   },
   "overview": {
     "problem": {
-      "text": "البنوك التقليدية بطيئة، تفرض رسوماً خفية ضخمة على تحويل العملات واستخدام البطاقات في الخارج، وواجهات تطبيقاتها سيئة وتفتقر للشفافية. الأسوأ من ذلك، كانت البنوك التقليدية تعاقب المسافرين والمغتربين بهوامش صرف عملات خفية ومجحفة (FX Markups). تحويل الأموال بين الدول كان يستغرق أياماً ويتطلب زيارة فروع البنوك. الواجهات الرقمية للبنوك كانت قديمة، بطيئة، وتفتقر لأي أدوات تساعد العميل على تتبع مصروفاته أو الاستثمار بسهولة.",
-      "impact": "خسارة المسافرين والمغتربين لأموال طائلة بسبب رسوم الصرف، وتجربة بنكية محبطة للشباب. مما أدى لاستنزاف مدخرات المسافرين والعمالة الوافدة عبر الرسوم البنكية المخفية، وفقدان الجيل الشاب (Gen Z) الثقة تماماً في المؤسسات المالية التقليدية."
+      "text": "بدأت Revolut من مشكلة محددة: المسافر أو المغترب كان يواجه هوامش صرف ورسومًا غير واضحة، وتحويلات دولية بطيئة وتجربة تحتاج إلى عدة بنوك وبطاقات. ومع توسع الحياة المالية الرقمية، أصبحت المشكلة أوسع: الحساب والمدفوعات والادخار والاستثمار والعملات المشفرة والمصروفات التجارية موزعة بين تطبيقات ومؤسسات مختلفة، ولكل منها تسجيل ورسوم وواجهة ودعم منفصل.",
+      "impact": "التجزؤ يجعل العميل يقارن أسعارًا وشروطًا متعددة وينقل الأموال بين مزودين ويصعب عليه رؤية صورته المالية كاملة. لكن تجميع الخدمات داخل تطبيق واحد ينقل الخطر إلى المنصة نفسها: أي ضعف في الامتثال أو الأمن أو خدمة العملاء أو البنية أو الترخيص قد يؤثر في عدة جوانب مالية للعميل في وقت واحد."
     },
     "solution": {
-      "text": "تطبيق بنكي رقمي بالكامل (بدون فروع) يتيح فتح حساب في دقائق، وتحويل وصرف العملات بسعر الصرف الحقيقي (بدون هوامش بنكية مجحفة)، مع بطاقة دفع ذكية وتطبيق يحلل نفقاتك لحظياً. ريفولوت انطلقت كـ (تطبيق سفر) يتيح لك صرف العملات بأسعار الصرف بين البنوك (Interbank Rate) دون أي رسوم خفية. بضغطة زر، يمكنك تجميد بطاقتك، تحويل الأموال دولياً في ثوانٍ، وتقسيم الفواتير مع الأصدقاء. لاحقاً، تطور التطبيق ليقدم تداول الأسهم، العملات الرقمية، وحتى حجوزات السفر."
+      "text": "أطلقت Revolut في 2015 بطاقة وتطبيقًا متعدد العملات، ثم توسعت إلى حسابات ومدفوعات محلية ودولية وبطاقات افتراضية وخطط اشتراك، وأعمال وتجّار، وادخار وائتمان واستثمار وCrypto وCommodities وتأمين وKids & Teens وRevPoints وeSIM وMobile. وفي 2026 أطلقت بنكها الكامل في المملكة المتحدة وبنكًا مرخصًا في أستراليا، ووسعت تراخيصها في المكسيك والإمارات، وأضافت AIR كمساعد مالي داخل التطبيق وميزات حماية مثل Street Mode ومنصة ذكاء اصطناعي لمراجعة الاحتيال."
     }
   },
   "market_data": {
-    "target_audience": "المسافرون الدائمون، المغتربون، والشباب (Gen Z/Millennials) في أوروبا وحول العالم. المهاجرون، الرحالة الرقميون (Digital Nomads)، الشباب الذين يرفضون البيروقراطية البنكية، والشركات الناشئة (Revolut Business).",
-    "market_size": "سوق الخدمات المصرفية للأفراد (Retail Banking) والمدفوعات الدولية. سوق التكنولوجيا المالية (FinTech) العالمي، الذي يسحب البساط يومياً من تحت أقدام البنوك الكلاسيكية.",
-    "growth_rate": "أصبح أعلى شركة تقنية خاصة تقييماً في تاريخ بريطانيا (33 مليار دولار في ذروته). بفضل نموذج (المنتج الخارق Super App) الذي يضيف ميزة جديدة كل شهر، مما يمنع العميل من الحاجة لأي تطبيق مالي آخر."
+    "target_audience": "المسافرون والمغتربون والعملاء متعددو العملات، والأفراد الذين يريدون حسابًا يوميًا رقميًا، والمستثمرون ومستخدمو العملات المشفرة، والأسر عبر Kids & Teens، والعملاء ذوو الاحتياجات المتميزة عبر الخطط المدفوعة، والعاملون لحسابهم عبر Revolut Pro، والشركات الصغيرة والمتوسطة والمؤسسات العالمية عبر Revolut Business وRevolut Pay وخدمات التجار.",
+    "market_size": "لا تنشر Revolut قيمة واحدة رسمية لسوقها القابل للاستهداف، لأنها تنافس في الحسابات والمدفوعات والصرف والبطاقات والائتمان والاستثمار والعملات المشفرة وخدمات الشركات عبر دول وتراخيص مختلفة. مؤشرات النطاق الموثقة هي أكثر من 75 مليون عميل فردي، و767 ألف عميل شركة في نهاية 2025، و1.7 تريليون دولار حجم معاملات سنوي، والعمل في أكثر من 40 دولة مع تراخيص مصرفية أو دفع في أسواق متعددة.",
+    "growth_rate": "ارتفعت إيرادات المجموعة 46% من 4.0 مليارات دولار في 2024 إلى 6.0 مليارات في 2025، وارتفع الربح قبل الضريبة 57% إلى 2.3 مليار دولار. نما العملاء الأفراد 30% إلى 68.3 مليونًا والعملاء التجاريون 33% إلى 767 ألفًا، والأرصدة 66% إلى 67.5 مليار دولار، وحجم المعاملات 65% إلى 1.7 تريليون دولار، والخطط المدفوعة 42%. تجاوز العملاء الأفراد 75 مليونًا في 2026، لكن لا توجد بيانات فصلية منشورة تسمح بحساب معدل إيراد أحدث."
   },
   "financials": {
-    "initial_investment": "بدأ بتمويل أولي بسيط وحملات تمويل جماعي (Crowdfunding) ليحصل لاحقاً على دعم SoftBank و Tiger Global. لدعم عمليات التوسع السريع (Blitzscaling) في الأسواق الأوروبية للحصول على التراخيص البنكية اللازمة.",
-    "valuation": "$33B (يونيكورن ضخم) (أكبر شركة تكنولوجيا مالية خاصة في أوروبا بتقييم فاق 30 مليار دولار).",
+    "initial_investment": "لم يُنشر رأس المال الشخصي الأول للمؤسسين. قادت Balderton جولة Seed بقيمة 1.5 مليون جنيه في يوليو 2015، ثم ارتفع إجمالي التمويل المبكر إلى 4.8 ملايين دولار بحلول فبراير 2016. توثق الشركة لاحقًا 15 مليون دولار Series A، و66 مليونًا Series B، و250 مليونًا Series C، و580 مليونًا Series D، و800 مليون Series E. أما صفقات الأسهم الثانوية اللاحقة فوفرت سيولة للموظفين والمساهمين ولا ينبغي احتسابها كلها كرأس مال تشغيلي جديد للشركة.",
+    "valuation": "أحدث تقييم مكتمل ومعلن رسميًا هو 75 مليار دولار في صفقة أسهم أُغلقت في نوفمبر 2025. وفي يوليو 2026 أكدت الشركة أن عملية بيع ثانوية جديدة جارية، بينما أفادت Reuters بأن السعر المقترح 2,017 دولارًا للسهم يعني تقييمًا قدره 115 مليار دولار. وبما أن العملية لم تكن مكتملة عند التحقق، يُعامل 115 مليارًا كتقييم لصفقة جارية لا كتقييم نهائي مغلق.",
     "revenue_streams": [
-      "اشتراكات شهرية للبطاقات المميزة (Premium & Metal) التي تقدم تأمين سفر وكاش باك",
-      "رسوم التبادل (Interchange fees) من شبكات البطاقات (Visa/Mastercard)",
-      "رسوم على تداول العملات المشفرة والأسهم داخل التطبيق",
-      "رسوم اشتراكات البطاقات المعدنية والفاخرة (Revolut Metal & Premium).",
-      "عمولات من تداول العملات المشفرة والأسهم (Trading Fees)."
+      "اشتراكات Plus وPremium وMetal وUltra للأفراد، وخطط Revolut Business المدفوعة",
+      "إيرادات Card Payments ورسوم التبادل والمعالجة والخدمات المرتبطة بالبطاقات والتجار",
+      "رسوم وهوامش الصرف الأجنبي بعد الحدود أو وفق الخطة والسوق ونوع العملية",
+      "دخل Wealth من تداول الأسهم وETFs وCFDs والعملات المشفرة والسلع والخدمات الاستثمارية",
+      "صافي دخل الفوائد من أرصدة العملاء والأصول السائلة والقروض والبطاقات ومنتجات الادخار",
+      "دخل الائتمان من القروض الشخصية والبطاقات والرهون ومنتجات تمويل أخرى في الأسواق المرخصة",
+      "Revolut Business بما يشمل الحسابات والمدفوعات والمصروفات والبطاقات والتجارة الدولية",
+      "Revolut Pay وخدمات قبول المدفوعات والتجار والدفع السريع والتجارة الوكيلة",
+      "التأمين والسفر وeSIM وRevolut Mobile والخدمات والشراكات المضمّنة",
+      "Revolut X وخدمات الأصول الرقمية حيث تكون مرخصة ومتاحة",
+      "رسوم السحب والتحويل والخدمات الإضافية التي تختلف باختلاف الخطة والمنطقة"
     ]
   },
   "lessons": [
     {
-      "title": "حل مشكلة واحدة كاختراق (Wedge Strategy)",
-      "description": "لم يبدأ Revolut كبنك شامل، بل كأداة لحل مشكلة واحدة فقط: (رسوم تحويل العملات أثناء السفر). بمجرد أن اكتسبوا ملايين المسافرين كعملاء لهذا الغرض، أضافوا القروض والأسهم والكريبتو ليصبحوا تطبيقاً فائقاً (Super App)."
+      "title": "منتج الاختراق يجب أن يكون مؤلمًا وقابلًا للشرح في جملة",
+      "description": "بدأت Revolut بوعد واضح: إنفاق وتحويل عملات بتكلفة واحتكاك أقل. وضوح نقطة الدخول خفّض تكلفة فهم المنتج، ثم سمح بتوسيع العلاقة بعد اكتساب الثقة."
     },
     {
-      "title": "تسويق المكانة الاجتماعية (Status Symbol)",
-      "description": "بطاقة (Revolut Metal) المصنوعة من المعدن الخالص بوزن ثقيل، أصبحت رمزاً للوجاهة الاجتماعية (Status Symbol). دفع الناس اشتراكات شهرية فقط للحصول على هذه البطاقة المادية المبهرة التي تجذب الأنظار عند الدفع."
+      "title": "التطبيق الفائق نتيجة توسع الثقة لا كثرة المزايا",
+      "description": "إضافة الأسهم والكريبتو والادخار والتأمين لا تصنع Super App إذا لم يستخدم العميل الحساب الأساسي باستمرار. المقياس الأهم هو تحوله إلى حساب رئيسي وارتفاع الأرصدة والمعاملات والمنتجات المستخدمة."
     },
     {
-      "title": "حرق القوارب بالأسعار (Loss Leader Strategy)",
-      "description": "في البداية، كانت ريفولوت تخسر أموالاً في كل معاملة تحويل عملة لأنها قدمت الخدمة مجاناً بالكامل بسعر التكلفة. هذا (المنتج الخاسر Loss Leader) كان بمثابة أداة تسويقية جلبت لهم ملايين العملاء مجاناً دون إعلانات (عبر التوصية الشفهية). بمجرد دخول العميل، قاموا ببيعه خدمات مربحة كالتأمين والتداول."
+      "title": "التنويع يحمي الإيراد ويضاعف التعقيد التنظيمي",
+      "description": "في 2025 تجاوزت 11 خطوط منتجات مئة مليون جنيه سنويًا لكل منها. هذا يقلل الاعتماد على مصدر واحد، لكنه يتطلب كيانات وتراخيص وضوابط ومخاطر مختلفة لكل منتج وسوق."
     },
     {
-      "title": "سرعة الإطلاق المؤسسية (Shipping Velocity)",
-      "description": "البنوك تستغرق سنوات لإطلاق ميزة جديدة. ريفولوت تبنت ثقافة برمجية شرسة تطلق ميزات ضخمة (كشراء الذهب، حجز الفنادق، إنشاء حسابات للأطفال) في غضون أسابيع. هذه السرعة المرعبة جعلت البنوك التقليدية تبدو وكأنها ديناصورات بطيئة لا يمكنها مواكبة الابتكار."
+      "title": "المجاني يبني التوزيع والمدفوع يبيع حدودًا وتجربة أوسع",
+      "description": "Standard يتيح دخولًا بلا اشتراك، بينما تبيع الخطط الأعلى حدود صرف وسحب أكبر، وتأمينًا واشتراكات ومكافآت ودعمًا وتجارب سفر. نجاح النموذج يعتمد على أن تكون الترقية اختيارية ذات قيمة وليست مجرد إزالة احتكاك مصطنع."
+    },
+    {
+      "title": "سعر الصرف الجيد يحتاج تعريفًا أدق من كلمة حقيقي",
+      "description": "توضح الشروط الحالية أن Revolut تستخدم سعرها الخاص المبني على السوق والمبلغ والتكلفة، وقد تطبق رسوم وحدود استخدام. لذلك يجب بيع الشفافية والتكلفة النهائية المعروضة قبل العملية بدل الاعتماد على عبارة Interbank Rate المطلقة."
+    },
+    {
+      "title": "الحصول على الترخيص ليس نهاية العمل التنظيمي",
+      "description": "البنك الكامل في المملكة المتحدة وأستراليا وتراخيص الإمارات والمكسيك تفتح منتجات جديدة، لكنها تضيف متطلبات رأس مال وحوكمة وحماية ودائع وتقارير ورقابة. الترخيص يحول الوعد التسويقي إلى التزام تشغيلي دائم."
+    },
+    {
+      "title": "التوسع العالمي يعني بنية محلية فوق منصة مشتركة",
+      "description": "Revolut لا تقدم المنتج نفسه قانونيًا في كل دولة؛ الحساب والاستثمار والكريبتو والتأمين تقدمه كيانات مختلفة. المنصة العالمية تحتاج نواة تقنية مشتركة مع تراخيص وشروط وحماية ومنتجات محلية."
+    },
+    {
+      "title": "الأرصدة والاعتماد كحساب رئيسي أعمق من عدد التسجيلات",
+      "description": "إضافة المستخدمين مهمة، لكن ارتفاع الأرصدة 66% وزيادة من يختارون Revolut حسابًا رئيسيًا 45% يكشفان تعمق العلاقة. في الخدمات المالية، Share of Wallet أقوى من تنزيل التطبيق."
+    },
+    {
+      "title": "الفائدة محرك ربح قوي لكنه دوري",
+      "description": "دخل الفوائد بلغ 1.3 مليار دولار في 2025، لكنه يتأثر بأسعار الفائدة وحجم الأرصدة وتركيب الأصول والائتمان. بناء ربحية طويلة الأجل يحتاج مزيجًا من الفوائد والرسوم والاشتراكات والتجارة."
+    },
+    {
+      "title": "الخطة المعدنية تنجح عندما تكون بوابة لقيمة متكررة",
+      "description": "البطاقة المادية قد تجذب الانتباه، لكن الاحتفاظ يعتمد على التأمين والسفر والحدود والاشتراكات والمكافآت. رمز المكانة وحده لا يبرر رسومًا شهرية بعد انتهاء تأثيره الأول."
+    },
+    {
+      "title": "المساعد المالي يحتاج صلاحيات ومساءلة أكثر من Chatbot",
+      "description": "AIR يستطيع تحليل الإنفاق وإدارة الاشتراكات وتجميد البطاقة وشراء eSIM. كلما انتقل الذكاء الاصطناعي من الإجابة إلى الفعل، تصبح الموافقة والشرح والتراجع والسجلات والخصوصية عناصر أساسية."
+    },
+    {
+      "title": "الأمن يمكن أن يكون تدفق منتج لا تحذيرًا فقط",
+      "description": "Street Mode والتحقق من المكالمات ومراجعة الاحتيال المدعومة بالذكاء الاصطناعي تضع الحماية داخل لحظة القرار. الهدف ليس منع كل احتيال، بل رفع تكلفة الهجوم وتقليل خسارة العميل دون تعطيل الاستخدام الطبيعي."
+    },
+    {
+      "title": "الصفقة الثانوية ليست جولة نمو بالضرورة",
+      "description": "بيع الموظفين والمستثمرين لأسهمهم يمنح سيولة ويحدد سعرًا مرجعيًا، لكنه قد لا يضيف نقدًا تشغيليًا للشركة. يجب فصل قيمة الشركة عن رأس المال الجديد الذي دخل الميزانية."
+    },
+    {
+      "title": "التقييم الجاري ليس تقييمًا مغلقًا",
+      "description": "75 مليار دولار تقييم مكتمل رسمي، بينما 115 مليارًا سعر عملية ثانوية كانت لا تزال جارية عند التحقق. الملفات الاستثمارية الدقيقة تميز بين العرض والعملية المفتوحة والإغلاق النهائي."
     }
   ],
   "tools": [
-    "Java / Spring Boot",
-    "GCP (Google Cloud)",
-    "PostgreSQL",
-    "Kubernetes",
-    "Java / Spring Boot",
-    "Kubernetes",
-    "Machine Learning (لمكافحة غسيل الأموال)"
+    "تطبيق Revolut للهاتف والويب للوصول إلى الحسابات والبطاقات والخدمات المالية",
+    "حسابات متعددة العملات وتحويلات محلية ودولية ومدفوعات P2P",
+    "بطاقات فعلية وافتراضية وDisposable Virtual Cards وتجميد وتحكم فوري",
+    "خطط Standard وPlus وPremium وMetal وUltra بحدود ومزايا مختلفة",
+    "Revolut Bank UK وRevolut Bank Australia وRevolut Bank UAB وكيانات محلية أخرى",
+    "Revolut Business للحسابات والبطاقات والمصروفات والتحويلات والفرق",
+    "Revolut Pro للعاملين لحسابهم وخدمات تجارية مبسطة",
+    "Revolut Pay للدفع السريع وقبول المدفوعات والتجارة الإلكترونية",
+    "الأسهم وETFs وCFDs ومنصات الاستثمار وفق أهلية وسوق العميل",
+    "Crypto وRevolut X وخدمات أصول رقمية في الأسواق المرخصة",
+    "Commodities مثل التعرض للمعادن الثمينة وفق الشروط المحلية",
+    "Savings وVaults وInstant Access Savings ومنتجات فائدة وشركاء",
+    "قروض وبطاقات ائتمان ورهون ومنتجات ائتمانية بحسب السوق والترخيص",
+    "Kids & Teens وحسابات عائلية بإشراف الوالدين",
+    "RevPoints وبرامج ولاء ومكافآت وشراكات سفر وتجارية",
+    "eSIM وRevolut Mobile وخدمات اتصال مضمّنة داخل التطبيق",
+    "AIR — AI by Revolut للتحليل والتنقل وإدارة بعض الإجراءات بالمحادثة",
+    "Street Mode والتحقق من المكالمات ومنصة حماية العملاء المدعومة بالذكاء الاصطناعي",
+    "Revolut ATMs للسحب وإصدار البطاقات في أسواق مختارة",
+    "PRAGMA كنماذج Foundation داخلية لتمثيل أحداث مصرفية ودعم الاحتيال والائتمان والقيمة العمرية وفق البحث المنشور",
+    "واجهات وكيانات منفصلة للمنتجات المنظمة، مع عقود وشروط مختلفة داخل المجموعة"
+  ],
+  "verification": {
+    "status": "verified_from_revolut_annual_results_legal_pricing_regulatory_and_high_quality_transaction_sources",
+    "verified_on": "2026-08-02",
+    "source_policy": "تم إعطاء الأولوية لتقرير Revolut وبيان نتائج 2025، وصفحات التسعير والشروط القانونية، وإعلانات التراخيص والمنتجات والتمويل الرسمية. استُخدمت Reuters فقط لتوثيق تفاصيل صفقة التقييم الجارية البالغة 115 مليار دولار، واستخدمت Balderton لتاريخ التمويل المبكر.",
+    "important_notes": [
+      "الموقع الصحيح لندن، المملكة المتحدة، وليس «لندن، المملكة العربية السعودية» كما ورد في الملف الأصلي.",
+      "متوسط 500 مليون دولار شهريًا مشتق من إيراد 2025 الكامل البالغ 6.0 مليارات دولار، وليس MRR تعاقديًا.",
+      "75 مليونًا هو عدد عملاء أفراد عالميين معلن، وليس مستخدمين نشطين شهريًا.",
+      "بلغ عدد العملاء في نهاية السنة المالية 2025 نحو 68.3 مليونًا؛ تجاوز 75 مليونًا جاء لاحقًا في 2026.",
+      "أحدث تقييم مكتمل رسميًا هو 75 مليار دولار. تقييم 115 مليارًا يتعلق بعملية ثانوية جارية لم تكن مغلقة عند التحقق.",
+      "Revolut ليست كيانًا مصرفيًا واحدًا عالميًا؛ تختلف الجهة القانونية والحماية والمنتجات حسب البلد.",
+      "Standard ليس مجانيًا في كل استخدام؛ توجد حدود ورسوم محتملة للصرف والسحب والتحويل والخدمات.",
+      "الإيرادات الأساسية أكثر تنوعًا من الاشتراكات وInterchange، وتشمل الثروة والصرف والفوائد والأعمال والتجار والائتمان.",
+      "تم حذف Java وSpring Boot وGCP وPostgreSQL وKubernetes كحزمة تقنية حالية لعدم دعمها بمصدر أولي في الملف.",
+      "قائمة الأدوات تصف المنتجات والبنية التنظيمية والقدرات المعلنة، ولا تمثل كشفًا كاملًا عن الأنظمة الداخلية."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط كل حقل بالقيمة وحالة التحقق والثقة والمصادر والقيود الحسابية والتنظيمية.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي أو أكثر.",
+      "verified_historical_calculation": "القيمة مشتقة حسابيًا من رقم مالي رسمي مع إظهار المعادلة.",
+      "verified_customer_scale_not_mau": "الرقم يمثل حسابات عملاء أو شركات وليس مستخدمين نشطين شهريًا.",
+      "verified_with_legal_entity_limits": "الخدمة موثقة لكن الجهة والحماية تختلفان حسب السوق.",
+      "verified_historical_financing": "المعلومة تتعلق بجولة تمويل أو استثمار تاريخي موثق.",
+      "verified_completed_and_in_progress_valuations": "يميز الحقل بين تقييم مكتمل وعملية تقييم جارية.",
+      "verified_product_capability": "القدرة موثقة في صفحة منتج أو إعلان رسمي.",
+      "verified_external_transaction_report": "تفاصيل الصفقة وردت في Reuters مع تأكيد الشركة أن العملية جارية.",
+      "analytical_inference": "تحليل مهني مبني على بيانات موثقة وليس تصريحًا حرفيًا من الشركة."
+    },
+    "confidence_scale": {
+      "high": "تقرير مالي أو وثيقة قانونية أو إعلان تنظيمي رسمي.",
+      "medium_high": "مصدر استثماري مباشر أو Reuters مع تأكيد جزئي من الشركة.",
+      "medium": "رقم أو وصف شركة يحتاج إلى قيود تعريف أو لم ينشر معه تدقيق مستقل."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "لندن، المملكة المتحدة. يقع المقر العالمي الحالي في Canary Wharf، بينما العنوان المسجل لـRevolut Ltd وRevolut Bank UK Ltd هو 30 South Colonnade، London E14 5HX. تعمل المجموعة عبر كيانات وتراخيص محلية متعددة وليست بنكًا قانونيًا واحدًا يخدم جميع الدول.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "global_headquarters_registered_address_and_multi_entity_structure",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تثبت الشركة المقر العالمي في لندن، وتثبت الشروط العنوان المسجل وتعدد كيانات المنتجات.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-03",
+        "SRC-04",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Where Revolut Is Based",
+          "publisher": "Revolut",
+          "source_type": "official_headquarters_page",
+          "url": "https://www.revolut.com/blog/post/where-is-revolut-based/",
+          "evidence_type": "direct",
+          "source_locator": "Headquarters article",
+          "supports": "المقر العالمي في Canary Wharf.",
+          "published_on": "2026-04-28"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Revolut Website Terms",
+          "publisher": "Revolut Ltd",
+          "source_type": "official_legal_document",
+          "url": "https://www.revolut.com/legal/website-terms-and-conditions/",
+          "evidence_type": "direct",
+          "source_locator": "Website Terms → Who we are",
+          "supports": "العنوان المسجل والكيان Revolut Ltd."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Revolut Group Framework Terms",
+          "publisher": "Revolut",
+          "source_type": "official_group_product_and_entity_document",
+          "url": "https://www.revolut.com/legal/group-framework-terms/",
+          "evidence_type": "direct",
+          "source_locator": "Group Framework Terms",
+          "supports": "تعدد كيانات البنك والتقنية والاستثمار والكريبتو والتأمين."
+        }
+      ],
+      "limitations": "يختلف الكيان المتعاقد والعنوان والحماية حسب السوق والمنتج."
+    },
+    "$.company.business_model": {
+      "field_value": "منصة مالية متعددة الإيرادات للأفراد والشركات. تجمع بين خطة Standard المجانية وخطط Plus وPremium وMetal وUltra المدفوعة، ورسوم ومعاملات البطاقات، والصرف الأجنبي، والاستثمار والعملات المشفرة، وصافي دخل الفوائد والائتمان، وRevolut Business، وRevolut Pay وخدمات التجار، والتأمين والاتصال والخدمات الإضافية. تختلف المنتجات والرسوم والجهة القانونية والحماية التنظيمية حسب بلد العميل.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "diversified_consumer_business_banking_and_financial_services_model",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تثبت النتائج تنوع الإيراد، بينما تعرض التسعير والشروط الخطط والرسوم وفصل المنتجات قانونيًا.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-06",
+        "SRC-07",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Revolut 2025 Financial Results",
+          "publisher": "Revolut",
+          "source_type": "official_annual_results",
+          "url": "https://www.revolut.com/en-IE/news/revolut_reports_record_profit_of_2_3bn_for_2025_as_revenue_surges_to_6bn/",
+          "evidence_type": "direct",
+          "source_locator": "2025 Performance Highlights",
+          "supports": "تنويع الإيرادات وخطوط المنتجات.",
+          "published_on": "2026-03-24"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Compare Revolut Plans",
+          "publisher": "Revolut",
+          "source_type": "official_pricing_page",
+          "url": "https://www.revolut.com/our-pricing-plans/",
+          "evidence_type": "direct",
+          "source_locator": "Plans comparison",
+          "supports": "الخطط والمزايا."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Personal Fees — All Plans",
+          "publisher": "Revolut Bank UK Ltd",
+          "source_type": "official_fee_document",
+          "url": "https://www.revolut.com/legal/personal-current-account-fees/",
+          "evidence_type": "direct",
+          "source_locator": "Personal Fees",
+          "supports": "الرسوم والحدود والصرف."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Revolut Group Framework Terms",
+          "publisher": "Revolut",
+          "source_type": "official_group_product_and_entity_document",
+          "url": "https://www.revolut.com/legal/group-framework-terms/",
+          "evidence_type": "direct",
+          "source_locator": "Group terms",
+          "supports": "الكيانات والخدمات المختلفة."
+        }
+      ]
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "نحو 500 مليون دولار شهريًا كمتوسط حسابي تاريخي، استنادًا إلى إيرادات المجموعة لعام 2025 البالغة 6.0 مليارات دولار. يعادل ذلك نحو 375 مليون جنيه شهريًا باستخدام الإيراد الرسمي البالغ 4.5 مليارات جنيه. هذا متوسط سنوي وليس MRR تعاقديًا، وتختلف مساهمته بين الاشتراكات والبطاقات والثروة والصرف والفوائد والأعمال.",
+      "verification_status": "verified_historical_calculation",
+      "confidence": "high",
+      "claim_type": "derived_monthly_average_from_official_annual_revenue",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "بلغ إيراد 2025 الرسمي 6.0 مليارات دولار أو 4.5 مليارات جنيه، وتم تقسيمه على 12.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Revolut 2025 Financial Results",
+          "publisher": "Revolut",
+          "source_type": "official_annual_results",
+          "url": "https://www.revolut.com/en-IE/news/revolut_reports_record_profit_of_2_3bn_for_2025_as_revenue_surges_to_6bn/",
+          "evidence_type": "direct",
+          "source_locator": "Results headline and revenue diversification",
+          "supports": "إيرادات المجموعة لعام 2025.",
+          "published_on": "2026-03-24"
+        }
+      ],
+      "limitations": "لا يعكس المتوسط موسمية العملات المشفرة والفوائد والسفر والمعاملات.",
+      "calculation": {
+        "annual_revenue_usd": 6000000000,
+        "annual_revenue_gbp": 4500000000,
+        "formula_usd": "6,000,000,000 ÷ 12",
+        "monthly_average_usd": 500000000,
+        "formula_gbp": "4,500,000,000 ÷ 12",
+        "monthly_average_gbp": 375000000,
+        "calculation_status": "annual_average_not_mrr"
+      }
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "لا تنشر Revolut رقمًا عالميًا موحدًا للمستخدمين النشطين شهريًا. تجاوزت قاعدة العملاء الأفراد 75 مليونًا بحلول منتصف 2026، مقارنة بـ68.3 مليونًا في نهاية 2025، وكان لدى Revolut Business نحو 767 ألف عميل شركة في نهاية 2025. هذه حسابات عملاء وليست MAU أو زيارات موقع.",
+      "verification_status": "verified_customer_scale_not_mau",
+      "confidence": "high",
+      "claim_type": "current_retail_and_business_customer_counts",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تعرض Revolut عدد العملاء المسجلين بدل MAU عالمي موحد.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-02",
+        "SRC-01",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Revolut Annual Report 2025 Overview",
+          "publisher": "Revolut",
+          "source_type": "official_annual_report_landing_page",
+          "url": "https://www.revolut.com/annual-report-2025/",
+          "evidence_type": "direct",
+          "source_locator": "Annual report overview",
+          "supports": "75 مليون+ عميل حالي و750 ألف+ شركة."
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Revolut 2025 Financial Results",
+          "publisher": "Revolut",
+          "source_type": "official_annual_results",
+          "url": "https://www.revolut.com/en-IE/news/revolut_reports_record_profit_of_2_3bn_for_2025_as_revenue_surges_to_6bn/",
+          "evidence_type": "direct",
+          "source_locator": "Customer acquisition",
+          "supports": "68.3 مليون فرد و767 ألف شركة في نهاية 2025.",
+          "published_on": "2026-03-24"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Revolut Surpasses 70 Million Customers",
+          "publisher": "Revolut",
+          "source_type": "official_customer_scale_update",
+          "url": "https://www.revolut.com/blog/post/revolut-number-of-customers/",
+          "evidence_type": "direct",
+          "source_locator": "Customer milestone",
+          "supports": "70 مليون+ في مايو 2026.",
+          "published_on": "2026-05-05"
+        }
+      ],
+      "limitations": "العميل المسجل أو الشركة لا يعني نشاطًا شهريًا أو حسابًا رئيسيًا."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "بدأت Revolut من مشكلة محددة: المسافر أو المغترب كان يواجه هوامش صرف ورسومًا غير واضحة، وتحويلات دولية بطيئة وتجربة تحتاج إلى عدة بنوك وبطاقات. ومع توسع الحياة المالية الرقمية، أصبحت المشكلة أوسع: الحساب والمدفوعات والادخار والاستثمار والعملات المشفرة والمصروفات التجارية موزعة بين تطبيقات ومؤسسات مختلفة، ولكل منها تسجيل ورسوم وواجهة ودعم منفصل.",
+        "impact": "التجزؤ يجعل العميل يقارن أسعارًا وشروطًا متعددة وينقل الأموال بين مزودين ويصعب عليه رؤية صورته المالية كاملة. لكن تجميع الخدمات داخل تطبيق واحد ينقل الخطر إلى المنصة نفسها: أي ضعف في الامتثال أو الأمن أو خدمة العملاء أو البنية أو الترخيص قد يؤثر في عدة جوانب مالية للعميل في وقت واحد."
+      },
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "founding_wedge_and_financial_fragmentation_analysis",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تثبت جولة Seed تركيز المنتج على إزالة رسوم الصرف والإنفاق العالمي، بينما يثبت توسع المنتجات المشكلة الأوسع للتجزؤ.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-15",
+        "SRC-17",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-15",
+          "title": "Revolut £1.5 Million Seed Round",
+          "publisher": "Balderton Capital",
+          "source_type": "direct_investor_announcement",
+          "url": "https://www.balderton.com/news/revolut-raise-1-5m-in-round-led-by-balderton-capital/",
+          "evidence_type": "direct",
+          "source_locator": "Seed announcement",
+          "supports": "الإنفاق والتحويل العالمي وتقليل الرسوم.",
+          "published_on": "2015-07-20"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "About Revolut — Company Timeline",
+          "publisher": "Revolut",
+          "source_type": "official_company_history",
+          "url": "https://www.revolut.com/en-US/about/",
+          "evidence_type": "direct",
+          "source_locator": "Company timeline",
+          "supports": "تطور المنتجات عبر السنوات."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Revolut Group Framework Terms",
+          "publisher": "Revolut",
+          "source_type": "official_group_product_and_entity_document",
+          "url": "https://www.revolut.com/legal/group-framework-terms/",
+          "evidence_type": "direct",
+          "source_locator": "Group Framework",
+          "supports": "تعدد المنتجات والكيانات داخل التطبيق."
+        }
+      ],
+      "limitations": "أثر التجزؤ وتحول المخاطر تحليل مهني وليس دراسة كمية من Revolut."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "أطلقت Revolut في 2015 بطاقة وتطبيقًا متعدد العملات، ثم توسعت إلى حسابات ومدفوعات محلية ودولية وبطاقات افتراضية وخطط اشتراك، وأعمال وتجّار، وادخار وائتمان واستثمار وCrypto وCommodities وتأمين وKids & Teens وRevPoints وeSIM وMobile. وفي 2026 أطلقت بنكها الكامل في المملكة المتحدة وبنكًا مرخصًا في أستراليا، ووسعت تراخيصها في المكسيك والإمارات، وأضافت AIR كمساعد مالي داخل التطبيق وميزات حماية مثل Street Mode ومنصة ذكاء اصطناعي لمراجعة الاحتيال."
+      },
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "multi_product_global_financial_platform_and_banking_network",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تثبت النتائج والخط الزمني والتراخيص والAI انتقال المنتج من FX إلى بنك ومنصة مالية متعددة الخدمات.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-17",
+        "SRC-01",
+        "SRC-08",
+        "SRC-09",
+        "SRC-10",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-17",
+          "title": "About Revolut — Company Timeline",
+          "publisher": "Revolut",
+          "source_type": "official_company_history",
+          "url": "https://www.revolut.com/en-US/about/",
+          "evidence_type": "direct",
+          "source_locator": "Timeline",
+          "supports": "تاريخ إطلاق Business وPremium وCrypto وTrading."
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Revolut 2025 Financial Results",
+          "publisher": "Revolut",
+          "source_type": "official_annual_results",
+          "url": "https://www.revolut.com/en-IE/news/revolut_reports_record_profit_of_2_3bn_for_2025_as_revenue_surges_to_6bn/",
+          "evidence_type": "direct",
+          "source_locator": "2025 highlights",
+          "supports": "الائتمان والثروة وMobile وRevPoints والحماية.",
+          "published_on": "2026-03-24"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Revolut Launches UK Bank",
+          "publisher": "Revolut",
+          "source_type": "official_banking_licence_announcement",
+          "url": "https://www.revolut.com/en-NL/news/revolut_launches_uk_bank/",
+          "evidence_type": "direct",
+          "source_locator": "Bank launch",
+          "supports": "UK Bank.",
+          "published_on": "2026-03-11"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Revolut Bank Australia Launch",
+          "publisher": "Revolut",
+          "source_type": "official_banking_licence_announcement",
+          "url": "https://www.revolut.com/en-IT/news/revolut_accelerates_global_banking_expansion_with_landmark_apac_licence_launches_revolut_bank_australia/",
+          "evidence_type": "direct",
+          "source_locator": "ADI launch",
+          "supports": "Australia Bank.",
+          "published_on": "2026-07-21"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Revolut UAE Payments Licences",
+          "publisher": "Revolut",
+          "source_type": "official_regulatory_announcement",
+          "url": "https://www.revolut.com/en-PT/news/revolut_obtains_approval_for_stored_value_facilities_and_retail_payment_services_licences_from_the_central_bank_of_the_uae/",
+          "evidence_type": "direct",
+          "source_locator": "Licensing",
+          "supports": "UAE payments.",
+          "published_on": "2026-06-17"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "AIR — AI by Revolut",
+          "publisher": "Revolut",
+          "source_type": "official_ai_product_announcement",
+          "url": "https://www.revolut.com/news/revolut_enters_new_era_of_money_intelligence_with_launch_of_ai_assistant/",
+          "evidence_type": "direct",
+          "source_locator": "AI assistant",
+          "supports": "AIR.",
+          "published_on": "2026-04-09"
+        }
+      ]
+    },
+    "$.market_data.target_audience": {
+      "field_value": "المسافرون والمغتربون والعملاء متعددو العملات، والأفراد الذين يريدون حسابًا يوميًا رقميًا، والمستثمرون ومستخدمو العملات المشفرة، والأسر عبر Kids & Teens، والعملاء ذوو الاحتياجات المتميزة عبر الخطط المدفوعة، والعاملون لحسابهم عبر Revolut Pro، والشركات الصغيرة والمتوسطة والمؤسسات العالمية عبر Revolut Business وRevolut Pay وخدمات التجار.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "retail_family_affluent_self_employed_business_and_merchant_segments",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تظهر الخطط والمنتجات والنتائج شرائح متعددة للأفراد والعائلات والأعمال والتجار.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-06",
+        "SRC-02",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Compare Revolut Plans",
+          "publisher": "Revolut",
+          "source_type": "official_pricing_page",
+          "url": "https://www.revolut.com/our-pricing-plans/",
+          "evidence_type": "direct",
+          "source_locator": "Plans",
+          "supports": "شرائح الخطط الفردية."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Revolut Annual Report 2025 Overview",
+          "publisher": "Revolut",
+          "source_type": "official_annual_report_landing_page",
+          "url": "https://www.revolut.com/annual-report-2025/",
+          "evidence_type": "direct",
+          "source_locator": "Annual overview",
+          "supports": "Kids & Teens وBusiness وRevolut Pay."
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Revolut 2025 Financial Results",
+          "publisher": "Revolut",
+          "source_type": "official_annual_results",
+          "url": "https://www.revolut.com/en-IE/news/revolut_reports_record_profit_of_2_3bn_for_2025_as_revenue_surges_to_6bn/",
+          "evidence_type": "direct",
+          "source_locator": "Results",
+          "supports": "الأفراد والشركات والثروة والاتصال والإقراض.",
+          "published_on": "2026-03-24"
+        }
+      ]
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر Revolut قيمة واحدة رسمية لسوقها القابل للاستهداف، لأنها تنافس في الحسابات والمدفوعات والصرف والبطاقات والائتمان والاستثمار والعملات المشفرة وخدمات الشركات عبر دول وتراخيص مختلفة. مؤشرات النطاق الموثقة هي أكثر من 75 مليون عميل فردي، و767 ألف عميل شركة في نهاية 2025، و1.7 تريليون دولار حجم معاملات سنوي، والعمل في أكثر من 40 دولة مع تراخيص مصرفية أو دفع في أسواق متعددة.",
+      "verification_status": "verified_with_legal_entity_limits",
+      "confidence": "high",
+      "claim_type": "global_platform_scale_without_single_tam",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "لا يوجد TAM واحد بسبب تعدد الأسواق والخدمات. تستخدم الأدلة العملاء والمعاملات والدول والتراخيص كمؤشرات نطاق.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-09",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Revolut 2025 Financial Results",
+          "publisher": "Revolut",
+          "source_type": "official_annual_results",
+          "url": "https://www.revolut.com/en-IE/news/revolut_reports_record_profit_of_2_3bn_for_2025_as_revenue_surges_to_6bn/",
+          "evidence_type": "direct",
+          "source_locator": "2025 results",
+          "supports": "العملاء والمعاملات والأسواق المرخصة.",
+          "published_on": "2026-03-24"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Revolut Annual Report 2025 Overview",
+          "publisher": "Revolut",
+          "source_type": "official_annual_report_landing_page",
+          "url": "https://www.revolut.com/annual-report-2025/",
+          "evidence_type": "direct",
+          "source_locator": "Annual overview",
+          "supports": "75 مليون+ و750 ألف+ شركة."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Revolut Bank Australia Launch",
+          "publisher": "Revolut",
+          "source_type": "official_banking_licence_announcement",
+          "url": "https://www.revolut.com/en-IT/news/revolut_accelerates_global_banking_expansion_with_landmark_apac_licence_launches_revolut_bank_australia/",
+          "evidence_type": "direct",
+          "source_locator": "Australia",
+          "supports": "التوسع المصرفي في APAC.",
+          "published_on": "2026-07-21"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Revolut UAE Payments Licences",
+          "publisher": "Revolut",
+          "source_type": "official_regulatory_announcement",
+          "url": "https://www.revolut.com/en-PT/news/revolut_obtains_approval_for_stored_value_facilities_and_retail_payment_services_licences_from_the_central_bank_of_the_uae/",
+          "evidence_type": "direct",
+          "source_locator": "UAE",
+          "supports": "التوسع في الشرق الأوسط.",
+          "published_on": "2026-06-17"
+        }
+      ],
+      "limitations": "حجم المعاملات والأرصدة والعملاء لا يمثل إيرادًا أو حصة سوقية."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "ارتفعت إيرادات المجموعة 46% من 4.0 مليارات دولار في 2024 إلى 6.0 مليارات في 2025، وارتفع الربح قبل الضريبة 57% إلى 2.3 مليار دولار. نما العملاء الأفراد 30% إلى 68.3 مليونًا والعملاء التجاريون 33% إلى 767 ألفًا، والأرصدة 66% إلى 67.5 مليار دولار، وحجم المعاملات 65% إلى 1.7 تريليون دولار، والخطط المدفوعة 42%. تجاوز العملاء الأفراد 75 مليونًا في 2026، لكن لا توجد بيانات فصلية منشورة تسمح بحساب معدل إيراد أحدث.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "official_revenue_profit_customer_balance_and_transaction_growth",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تنشر Revolut سلسلة مؤشرات متجانسة لعام 2025، مع تحديث العملاء في 2026.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Revolut 2025 Financial Results",
+          "publisher": "Revolut",
+          "source_type": "official_annual_results",
+          "url": "https://www.revolut.com/en-IE/news/revolut_reports_record_profit_of_2_3bn_for_2025_as_revenue_surges_to_6bn/",
+          "evidence_type": "direct",
+          "source_locator": "Results highlights",
+          "supports": "جميع معدلات النمو السنوية لعام 2025.",
+          "published_on": "2026-03-24"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Revolut Annual Report 2025 Overview",
+          "publisher": "Revolut",
+          "source_type": "official_annual_report_landing_page",
+          "url": "https://www.revolut.com/annual-report-2025/",
+          "evidence_type": "direct",
+          "source_locator": "Annual overview",
+          "supports": "75 مليون+ واتجاه الوصول إلى 100 مليون."
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Revolut Surpasses 70 Million Customers",
+          "publisher": "Revolut",
+          "source_type": "official_customer_scale_update",
+          "url": "https://www.revolut.com/blog/post/revolut-number-of-customers/",
+          "evidence_type": "direct",
+          "source_locator": "Customer update",
+          "supports": "تجاوز 70 مليونًا في مايو 2026.",
+          "published_on": "2026-05-05"
+        }
+      ],
+      "limitations": "النسب الرسمية محسوبة أساسًا بالجنيه الإسترليني، وقد تختلف نسبة الدولار بسبب أسعار الصرف.",
+      "calculation": {
+        "2024_revenue_usd": 4000000000,
+        "2025_revenue_usd": 6000000000,
+        "reported_revenue_growth_percent_gbp_basis": 46,
+        "profit_before_tax_growth_percent": 57,
+        "retail_customer_growth_percent": 30,
+        "business_customer_growth_percent": 33,
+        "customer_balance_growth_percent": 66,
+        "transaction_volume_growth_percent": 65,
+        "paid_plan_growth_percent": 42
+      }
+    },
+    "$.financials.initial_investment": {
+      "field_value": "لم يُنشر رأس المال الشخصي الأول للمؤسسين. قادت Balderton جولة Seed بقيمة 1.5 مليون جنيه في يوليو 2015، ثم ارتفع إجمالي التمويل المبكر إلى 4.8 ملايين دولار بحلول فبراير 2016. توثق الشركة لاحقًا 15 مليون دولار Series A، و66 مليونًا Series B، و250 مليونًا Series C، و580 مليونًا Series D، و800 مليون Series E. أما صفقات الأسهم الثانوية اللاحقة فوفرت سيولة للموظفين والمساهمين ولا ينبغي احتسابها كلها كرأس مال تشغيلي جديد للشركة.",
+      "verification_status": "verified_historical_financing",
+      "confidence": "high",
+      "claim_type": "seed_and_primary_funding_history_with_secondary_sale_distinction",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تثبت مصادر المستثمر والجولات الرسمية التمويل المبكر والجولات الكبرى، مع فصل صفقات السيولة الثانوية.",
+      "source_count": 7,
+      "source_ids": [
+        "SRC-15",
+        "SRC-16",
+        "SRC-17",
+        "SRC-18",
+        "SRC-19",
+        "SRC-20",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-15",
+          "title": "Revolut £1.5 Million Seed Round",
+          "publisher": "Balderton Capital",
+          "source_type": "direct_investor_announcement",
+          "url": "https://www.balderton.com/news/revolut-raise-1-5m-in-round-led-by-balderton-capital/",
+          "evidence_type": "direct",
+          "source_locator": "Balderton announcement",
+          "supports": "1.5 مليون جنيه Seed.",
+          "published_on": "2015-07-20"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Revolut Seed Extension",
+          "publisher": "Balderton Capital",
+          "source_type": "direct_investor_announcement",
+          "url": "https://www.balderton.com/news/investment-update-revolut-add-extra-investment-to-seed-round/",
+          "evidence_type": "direct",
+          "source_locator": "Seed extension",
+          "supports": "إجمالي مبكر 4.8 ملايين دولار.",
+          "published_on": "2016-02-04"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "About Revolut — Company Timeline",
+          "publisher": "Revolut",
+          "source_type": "official_company_history",
+          "url": "https://www.revolut.com/en-US/about/",
+          "evidence_type": "direct",
+          "source_locator": "Timeline",
+          "supports": "Series A وB وD وE."
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Revolut Series C",
+          "publisher": "Revolut",
+          "source_type": "official_funding_announcement",
+          "url": "https://www.revolut.com/news/revolut_raises_250m_at_1_7b_valuation_targets_100m_users_in_the_next_five_years_/",
+          "evidence_type": "direct",
+          "source_locator": "Funding announcement",
+          "supports": "Series C.",
+          "published_on": "2018-04-26"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Revolut Series D",
+          "publisher": "Revolut",
+          "source_type": "official_funding_announcement",
+          "url": "https://www.revolut.com/news/revolut_raises_500_million_in_series_d_funding_as_it_sets_sight_on_profitability_and_daily_adoption_in_2020_/",
+          "evidence_type": "direct",
+          "source_locator": "Funding announcement",
+          "supports": "Series D.",
+          "published_on": "2020-02-25"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Revolut Series E",
+          "publisher": "Revolut",
+          "source_type": "official_funding_announcement",
+          "url": "https://www.revolut.com/news/revolut_raises_800m_series_e_funding_from_softbank_vision_fund_2_and_tiger_global/",
+          "evidence_type": "direct",
+          "source_locator": "Funding announcement",
+          "supports": "Series E.",
+          "published_on": "2021-07-15"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Revolut $75 Billion Valuation",
+          "publisher": "Revolut",
+          "source_type": "official_completed_share_sale_announcement",
+          "url": "https://www.revolut.com/news/revolut_completes_fundraising_process_establishing_75_billion_valuation/",
+          "evidence_type": "direct",
+          "source_locator": "Valuation sale",
+          "supports": "صفقة موظفين ثانوية.",
+          "published_on": "2025-11-24"
+        }
+      ],
+      "calculation": {
+        "2015_seed_gbp": 1500000,
+        "early_total_by_feb_2016_usd": 4800000,
+        "series_a_usd": 15000000,
+        "series_b_usd": 66000000,
+        "series_c_usd": 250000000,
+        "series_d_total_usd": 580000000,
+        "series_e_usd": 800000000,
+        "founder_initial_personal_capital": "not_publicly_disclosed",
+        "secondary_sales_excluded_from_primary_capital": true
+      }
+    },
+    "$.financials.valuation": {
+      "field_value": "أحدث تقييم مكتمل ومعلن رسميًا هو 75 مليار دولار في صفقة أسهم أُغلقت في نوفمبر 2025. وفي يوليو 2026 أكدت الشركة أن عملية بيع ثانوية جديدة جارية، بينما أفادت Reuters بأن السعر المقترح 2,017 دولارًا للسهم يعني تقييمًا قدره 115 مليار دولار. وبما أن العملية لم تكن مكتملة عند التحقق، يُعامل 115 مليارًا كتقييم لصفقة جارية لا كتقييم نهائي مغلق.",
+      "verification_status": "verified_completed_and_in_progress_valuations",
+      "confidence": "high",
+      "claim_type": "completed_valuation_and_uncompleted_secondary_process",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "التقييم الرسمي المكتمل 75 مليارًا، بينما أكدت الشركة العملية الجارية وأفادت Reuters بتقييم 115 مليارًا وشروط السعر.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-13",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "Revolut $75 Billion Valuation",
+          "publisher": "Revolut",
+          "source_type": "official_completed_share_sale_announcement",
+          "url": "https://www.revolut.com/news/revolut_completes_fundraising_process_establishing_75_billion_valuation/",
+          "evidence_type": "direct",
+          "source_locator": "Official completed sale",
+          "supports": "إغلاق تقييم 75 مليار دولار.",
+          "published_on": "2025-11-24"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Revolut Starts Share Sale at $115 Billion Valuation",
+          "publisher": "Reuters",
+          "source_type": "high_quality_transaction_reporting",
+          "url": "https://www.reuters.com/legal/transactional/uk-finance-app-revolut-says-secondary-share-sale-is-underway-2026-07-22/",
+          "evidence_type": "direct",
+          "source_locator": "Reuters transaction report",
+          "supports": "عملية جارية عند 115 مليارًا ولم تكتمل.",
+          "published_on": "2026-07-22"
+        }
+      ],
+      "limitations": "قد تتغير شروط أو حجم أو تقييم العملية قبل الإغلاق، لذلك لا يُعرض 115 مليارًا كتقييم نهائي.",
+      "calculation": {
+        "latest_completed_valuation_usd": 75000000000,
+        "completed_on": "2025-11-24",
+        "in_progress_share_price_usd": 2017,
+        "in_progress_implied_valuation_usd": 115000000000,
+        "in_progress_as_of": "2026-07-22",
+        "in_progress_completion_status": "not_completed_at_verification_date"
+      }
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "اشتراكات Plus وPremium وMetal وUltra للأفراد، وخطط Revolut Business المدفوعة",
+        "إيرادات Card Payments ورسوم التبادل والمعالجة والخدمات المرتبطة بالبطاقات والتجار",
+        "رسوم وهوامش الصرف الأجنبي بعد الحدود أو وفق الخطة والسوق ونوع العملية",
+        "دخل Wealth من تداول الأسهم وETFs وCFDs والعملات المشفرة والسلع والخدمات الاستثمارية",
+        "صافي دخل الفوائد من أرصدة العملاء والأصول السائلة والقروض والبطاقات ومنتجات الادخار",
+        "دخل الائتمان من القروض الشخصية والبطاقات والرهون ومنتجات تمويل أخرى في الأسواق المرخصة",
+        "Revolut Business بما يشمل الحسابات والمدفوعات والمصروفات والبطاقات والتجارة الدولية",
+        "Revolut Pay وخدمات قبول المدفوعات والتجار والدفع السريع والتجارة الوكيلة",
+        "التأمين والسفر وeSIM وRevolut Mobile والخدمات والشراكات المضمّنة",
+        "Revolut X وخدمات الأصول الرقمية حيث تكون مرخصة ومتاحة",
+        "رسوم السحب والتحويل والخدمات الإضافية التي تختلف باختلاف الخطة والمنطقة"
+      ],
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "documented_subscription_card_fx_wealth_interest_business_and_adjacent_revenue",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تحدد النتائج خطوط الإيراد الكبرى، بينما تثبت الخطط والشروط الرسوم ومنتجات المجموعة.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-01",
+        "SRC-06",
+        "SRC-07",
+        "SRC-05",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Revolut 2025 Financial Results",
+          "publisher": "Revolut",
+          "source_type": "official_annual_results",
+          "url": "https://www.revolut.com/en-IE/news/revolut_reports_record_profit_of_2_3bn_for_2025_as_revenue_surges_to_6bn/",
+          "evidence_type": "direct",
+          "source_locator": "Revenue diversification",
+          "supports": "الاشتراكات والبطاقات والثروة والصرف والفوائد وBusiness.",
+          "published_on": "2026-03-24"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Compare Revolut Plans",
+          "publisher": "Revolut",
+          "source_type": "official_pricing_page",
+          "url": "https://www.revolut.com/our-pricing-plans/",
+          "evidence_type": "direct",
+          "source_locator": "Plan pricing",
+          "supports": "الاشتراكات."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Personal Fees — All Plans",
+          "publisher": "Revolut Bank UK Ltd",
+          "source_type": "official_fee_document",
+          "url": "https://www.revolut.com/legal/personal-current-account-fees/",
+          "evidence_type": "direct",
+          "source_locator": "Fees",
+          "supports": "الصرف والسحب والتحويل."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Revolut Group Framework Terms",
+          "publisher": "Revolut",
+          "source_type": "official_group_product_and_entity_document",
+          "url": "https://www.revolut.com/legal/group-framework-terms/",
+          "evidence_type": "direct",
+          "source_locator": "Group Framework",
+          "supports": "الاستثمار والكريبتو والتأمين والخدمات."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Revolut UAE Virtual Assets Approval",
+          "publisher": "Revolut",
+          "source_type": "official_regulatory_announcement",
+          "url": "https://www.revolut.com/en-SE/news/revolut_receives_in_principle_approval_to_provide_crypto_services_in_uae/",
+          "evidence_type": "direct",
+          "source_locator": "UAE VASP",
+          "supports": "Revolut X والعملات المشفرة.",
+          "published_on": "2026-07-15"
+        }
+      ],
+      "limitations": "لا تجمع المكونات المعلنة إلى كامل الإيراد، ولا تنشر الشركة هامش كل منتج."
+    },
+    "$.tools": {
+      "field_value": [
+        "تطبيق Revolut للهاتف والويب للوصول إلى الحسابات والبطاقات والخدمات المالية",
+        "حسابات متعددة العملات وتحويلات محلية ودولية ومدفوعات P2P",
+        "بطاقات فعلية وافتراضية وDisposable Virtual Cards وتجميد وتحكم فوري",
+        "خطط Standard وPlus وPremium وMetal وUltra بحدود ومزايا مختلفة",
+        "Revolut Bank UK وRevolut Bank Australia وRevolut Bank UAB وكيانات محلية أخرى",
+        "Revolut Business للحسابات والبطاقات والمصروفات والتحويلات والفرق",
+        "Revolut Pro للعاملين لحسابهم وخدمات تجارية مبسطة",
+        "Revolut Pay للدفع السريع وقبول المدفوعات والتجارة الإلكترونية",
+        "الأسهم وETFs وCFDs ومنصات الاستثمار وفق أهلية وسوق العميل",
+        "Crypto وRevolut X وخدمات أصول رقمية في الأسواق المرخصة",
+        "Commodities مثل التعرض للمعادن الثمينة وفق الشروط المحلية",
+        "Savings وVaults وInstant Access Savings ومنتجات فائدة وشركاء",
+        "قروض وبطاقات ائتمان ورهون ومنتجات ائتمانية بحسب السوق والترخيص",
+        "Kids & Teens وحسابات عائلية بإشراف الوالدين",
+        "RevPoints وبرامج ولاء ومكافآت وشراكات سفر وتجارية",
+        "eSIM وRevolut Mobile وخدمات اتصال مضمّنة داخل التطبيق",
+        "AIR — AI by Revolut للتحليل والتنقل وإدارة بعض الإجراءات بالمحادثة",
+        "Street Mode والتحقق من المكالمات ومنصة حماية العملاء المدعومة بالذكاء الاصطناعي",
+        "Revolut ATMs للسحب وإصدار البطاقات في أسواق مختارة",
+        "PRAGMA كنماذج Foundation داخلية لتمثيل أحداث مصرفية ودعم الاحتيال والائتمان والقيمة العمرية وفق البحث المنشور",
+        "واجهات وكيانات منفصلة للمنتجات المنظمة، مع عقود وشروط مختلفة داخل المجموعة"
+      ],
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "official_banking_payments_wealth_crypto_business_ai_and_security_capabilities",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "استُبدلت تقنيات داخلية مفترضة بمنتجات وقدرات وتراخيص وبحث تقني أولي موثق.",
+      "source_count": 10,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-05",
+        "SRC-06",
+        "SRC-08",
+        "SRC-09",
+        "SRC-10",
+        "SRC-11",
+        "SRC-12",
+        "SRC-22"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Revolut 2025 Financial Results",
+          "publisher": "Revolut",
+          "source_type": "official_annual_results",
+          "url": "https://www.revolut.com/en-IE/news/revolut_reports_record_profit_of_2_3bn_for_2025_as_revenue_surges_to_6bn/",
+          "evidence_type": "direct",
+          "source_locator": "Annual results",
+          "supports": "المنتجات والنشاط والحماية.",
+          "published_on": "2026-03-24"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Revolut Annual Report 2025 Overview",
+          "publisher": "Revolut",
+          "source_type": "official_annual_report_landing_page",
+          "url": "https://www.revolut.com/annual-report-2025/",
+          "evidence_type": "direct",
+          "source_locator": "Annual overview",
+          "supports": "Mobile وATM وPay وBusiness وKids."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Revolut Group Framework Terms",
+          "publisher": "Revolut",
+          "source_type": "official_group_product_and_entity_document",
+          "url": "https://www.revolut.com/legal/group-framework-terms/",
+          "evidence_type": "direct",
+          "source_locator": "Framework terms",
+          "supports": "الكيانات والمنتجات المنظمة."
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Compare Revolut Plans",
+          "publisher": "Revolut",
+          "source_type": "official_pricing_page",
+          "url": "https://www.revolut.com/our-pricing-plans/",
+          "evidence_type": "direct",
+          "source_locator": "Pricing",
+          "supports": "الخطط."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Revolut Launches UK Bank",
+          "publisher": "Revolut",
+          "source_type": "official_banking_licence_announcement",
+          "url": "https://www.revolut.com/en-NL/news/revolut_launches_uk_bank/",
+          "evidence_type": "direct",
+          "source_locator": "Licence",
+          "supports": "UK banking.",
+          "published_on": "2026-03-11"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Revolut Bank Australia Launch",
+          "publisher": "Revolut",
+          "source_type": "official_banking_licence_announcement",
+          "url": "https://www.revolut.com/en-IT/news/revolut_accelerates_global_banking_expansion_with_landmark_apac_licence_launches_revolut_bank_australia/",
+          "evidence_type": "direct",
+          "source_locator": "Licence",
+          "supports": "Australia banking.",
+          "published_on": "2026-07-21"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Revolut UAE Payments Licences",
+          "publisher": "Revolut",
+          "source_type": "official_regulatory_announcement",
+          "url": "https://www.revolut.com/en-PT/news/revolut_obtains_approval_for_stored_value_facilities_and_retail_payment_services_licences_from_the_central_bank_of_the_uae/",
+          "evidence_type": "direct",
+          "source_locator": "Licence",
+          "supports": "UAE payments.",
+          "published_on": "2026-06-17"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Revolut UAE Virtual Assets Approval",
+          "publisher": "Revolut",
+          "source_type": "official_regulatory_announcement",
+          "url": "https://www.revolut.com/en-SE/news/revolut_receives_in_principle_approval_to_provide_crypto_services_in_uae/",
+          "evidence_type": "direct",
+          "source_locator": "VASP",
+          "supports": "Crypto وRevolut X.",
+          "published_on": "2026-07-15"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "AIR — AI by Revolut",
+          "publisher": "Revolut",
+          "source_type": "official_ai_product_announcement",
+          "url": "https://www.revolut.com/news/revolut_enters_new_era_of_money_intelligence_with_launch_of_ai_assistant/",
+          "evidence_type": "direct",
+          "source_locator": "AI product",
+          "supports": "AIR.",
+          "published_on": "2026-04-09"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Revolut Foundation Model — PRAGMA",
+          "publisher": "Revolut Researchers / arXiv",
+          "source_type": "primary_technical_research",
+          "url": "https://arxiv.org/abs/2604.08649",
+          "evidence_type": "direct",
+          "source_locator": "Primary research",
+          "supports": "PRAGMA.",
+          "published_on": "2026-04-09"
+        }
+      ],
+      "limitations": "لا تتوفر كل ميزة في كل دولة، والقائمة لا تكشف كامل البنية البرمجية أو مزودي السحابة."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Revolut 2025 Financial Results",
+      "publisher": "Revolut",
+      "source_type": "official_annual_results",
+      "published_on": "2026-03-24",
+      "url": "https://www.revolut.com/en-IE/news/revolut_reports_record_profit_of_2_3bn_for_2025_as_revenue_surges_to_6bn/",
+      "supports": [
+        "إيرادات 6.0 مليارات دولار وربح قبل الضريبة 2.3 مليار",
+        "68.3 مليون عميل فردي و767 ألف عميل شركة",
+        "تفصيل الاشتراكات والبطاقات والثروة والصرف والفوائد",
+        "1.7 تريليون دولار معاملات و67.5 مليار أرصدة",
+        "42% نمو الخطط المدفوعة و63% اكتساب عضوي"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Revolut Annual Report 2025 Overview",
+      "publisher": "Revolut",
+      "source_type": "official_annual_report_landing_page",
+      "url": "https://www.revolut.com/annual-report-2025/",
+      "supports": [
+        "75 مليون+ عميل حاليًا",
+        "الهدف 100 مليون بحلول منتصف 2027",
+        "750 ألف+ شركة و365 مليار دولار معاملات أعمال",
+        "المنتجات والتراخيص والتوسع"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Where Revolut Is Based",
+      "publisher": "Revolut",
+      "source_type": "official_headquarters_page",
+      "published_on": "2026-04-28",
+      "url": "https://www.revolut.com/blog/post/where-is-revolut-based/",
+      "supports": [
+        "المقر العالمي في Canary Wharf بلندن",
+        "Revolut شركة مالية عالمية وبنك حي في المملكة المتحدة"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Revolut Website Terms",
+      "publisher": "Revolut Ltd",
+      "source_type": "official_legal_document",
+      "url": "https://www.revolut.com/legal/website-terms-and-conditions/",
+      "supports": [
+        "Revolut Ltd والرقم القانوني",
+        "العنوان المسجل 30 South Colonnade، لندن",
+        "تنظيم Revolut Ltd كمؤسسة نقود إلكترونية"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Revolut Group Framework Terms",
+      "publisher": "Revolut",
+      "source_type": "official_group_product_and_entity_document",
+      "url": "https://www.revolut.com/legal/group-framework-terms/",
+      "supports": [
+        "تعدد كيانات المجموعة",
+        "فصل البنك والتطبيق والاستثمار والكريبتو والتأمين",
+        "اختلاف العقود والجهات حسب المنتج"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Compare Revolut Plans",
+      "publisher": "Revolut",
+      "source_type": "official_pricing_page",
+      "url": "https://www.revolut.com/our-pricing-plans/",
+      "supports": [
+        "Standard وPlus وPremium وMetal وUltra",
+        "الأسعار الشهرية في المملكة المتحدة",
+        "الحدود والمزايا والتأمين والمكافآت"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Personal Fees — All Plans",
+      "publisher": "Revolut Bank UK Ltd",
+      "source_type": "official_fee_document",
+      "url": "https://www.revolut.com/legal/personal-current-account-fees/",
+      "supports": [
+        "أسعار الخطط الشهرية والسنوية",
+        "حدود السحب والصرف",
+        "سعر Revolut الخاص والرسوم المحتملة",
+        "اختلاف خدمات التداول والكريبتو قانونيًا"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Revolut Launches UK Bank",
+      "publisher": "Revolut",
+      "source_type": "official_banking_licence_announcement",
+      "published_on": "2026-03-11",
+      "url": "https://www.revolut.com/en-NL/news/revolut_launches_uk_bank/",
+      "supports": [
+        "إطلاق Revolut Bank UK Ltd",
+        "13 مليون عميل في المملكة المتحدة",
+        "حماية FSCS للودائع المؤهلة",
+        "الائتمان والخدمات البنكية المستقبلية"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Revolut Bank Australia Launch",
+      "publisher": "Revolut",
+      "source_type": "official_banking_licence_announcement",
+      "published_on": "2026-07-21",
+      "url": "https://www.revolut.com/en-IT/news/revolut_accelerates_global_banking_expansion_with_landmark_apac_licence_launches_revolut_bank_australia/",
+      "supports": [
+        "رخصة ADI الكاملة",
+        "إطلاق بنك أستراليا",
+        "مليون+ عميل أسترالي",
+        "استثمار 400 مليون دولار أسترالي"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Revolut UAE Payments Licences",
+      "publisher": "Revolut",
+      "source_type": "official_regulatory_announcement",
+      "published_on": "2026-06-17",
+      "url": "https://www.revolut.com/en-PT/news/revolut_obtains_approval_for_stored_value_facilities_and_retail_payment_services_licences_from_the_central_bank_of_the_uae/",
+      "supports": [
+        "رخصة Stored Value Facilities",
+        "رخصة Retail Payment Services",
+        "المنتجات المزمع إطلاقها في الإمارات"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Revolut UAE Virtual Assets Approval",
+      "publisher": "Revolut",
+      "source_type": "official_regulatory_announcement",
+      "published_on": "2026-07-15",
+      "url": "https://www.revolut.com/en-SE/news/revolut_receives_in_principle_approval_to_provide_crypto_services_in_uae/",
+      "supports": [
+        "الموافقة المبدئية من VARA",
+        "Revolut X",
+        "أكثر من 16 مليون عميل Crypto عالميًا"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "AIR — AI by Revolut",
+      "publisher": "Revolut",
+      "source_type": "official_ai_product_announcement",
+      "published_on": "2026-04-09",
+      "url": "https://www.revolut.com/news/revolut_enters_new_era_of_money_intelligence_with_launch_of_ai_assistant/",
+      "supports": [
+        "تحليل الإنفاق والاستثمار والاشتراكات",
+        "إدارة البطاقة وشراء eSIM بالمحادثة",
+        "سياسة عدم احتفاظ شركاء AI الخارجيين بالبيانات"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Revolut $75 Billion Valuation",
+      "publisher": "Revolut",
+      "source_type": "official_completed_share_sale_announcement",
+      "published_on": "2025-11-24",
+      "url": "https://www.revolut.com/news/revolut_completes_fundraising_process_establishing_75_billion_valuation/",
+      "supports": [
+        "تقييم مكتمل قدره 75 مليار دولار",
+        "صفقة سيولة للموظفين",
+        "المستثمرون المشاركون"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Revolut Starts Share Sale at $115 Billion Valuation",
+      "publisher": "Reuters",
+      "source_type": "high_quality_transaction_reporting",
+      "published_on": "2026-07-22",
+      "url": "https://www.reuters.com/legal/transactional/uk-finance-app-revolut-says-secondary-share-sale-is-underway-2026-07-22/",
+      "supports": [
+        "تأكيد Revolut أن العملية الثانوية جارية",
+        "سعر 2,017 دولارًا للسهم",
+        "تقييم صفقة مقترح قدره 115 مليار دولار",
+        "عدم اكتمال الصفقة وقت التقرير"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Revolut £1.5 Million Seed Round",
+      "publisher": "Balderton Capital",
+      "source_type": "direct_investor_announcement",
+      "published_on": "2015-07-20",
+      "url": "https://www.balderton.com/news/revolut-raise-1-5m-in-round-led-by-balderton-capital/",
+      "supports": [
+        "جولة Seed بقيمة 1.5 مليون جنيه",
+        "قيادة Balderton",
+        "تركيز المنتج على الصرف والإنفاق العالمي"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Revolut Seed Extension",
+      "publisher": "Balderton Capital",
+      "source_type": "direct_investor_announcement",
+      "published_on": "2016-02-04",
+      "url": "https://www.balderton.com/news/investment-update-revolut-add-extra-investment-to-seed-round/",
+      "supports": [
+        "ارتفاع إجمالي التمويل المبكر إلى 4.8 ملايين دولار",
+        "المستثمرون الأوائل"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "About Revolut — Company Timeline",
+      "publisher": "Revolut",
+      "source_type": "official_company_history",
+      "url": "https://www.revolut.com/en-US/about/",
+      "supports": [
+        "التأسيس في 2015",
+        "Series A وB وC وD وE",
+        "إطلاق Business وPremium وCrypto وTrading والبنك الأوروبي"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Revolut Series C",
+      "publisher": "Revolut",
+      "source_type": "official_funding_announcement",
+      "published_on": "2018-04-26",
+      "url": "https://www.revolut.com/news/revolut_raises_250m_at_1_7b_valuation_targets_100m_users_in_the_next_five_years_/",
+      "supports": [
+        "250 مليون دولار Series C",
+        "تقييم 1.7 مليار دولار",
+        "إجمالي تمويل 340 مليون دولار وقتها"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "Revolut Series D",
+      "publisher": "Revolut",
+      "source_type": "official_funding_announcement",
+      "published_on": "2020-02-25",
+      "url": "https://www.revolut.com/news/revolut_raises_500_million_in_series_d_funding_as_it_sets_sight_on_profitability_and_daily_adoption_in_2020_/",
+      "supports": [
+        "500 مليون دولار أولية و580 مليونًا بعد التمديد",
+        "تقييم 5.5 مليارات دولار",
+        "خطط Premium وMetal كمصدر دخل"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "Revolut Series E",
+      "publisher": "Revolut",
+      "source_type": "official_funding_announcement",
+      "published_on": "2021-07-15",
+      "url": "https://www.revolut.com/news/revolut_raises_800m_series_e_funding_from_softbank_vision_fund_2_and_tiger_global/",
+      "supports": [
+        "800 مليون دولار Series E",
+        "تقييم 33 مليار دولار",
+        "SoftBank وTiger Global"
+      ]
+    },
+    {
+      "id": "SRC-21",
+      "title": "Revolut Surpasses 70 Million Customers",
+      "publisher": "Revolut",
+      "source_type": "official_customer_scale_update",
+      "published_on": "2026-05-05",
+      "url": "https://www.revolut.com/blog/post/revolut-number-of-customers/",
+      "supports": [
+        "70 مليون+ عميل في مايو 2026",
+        "16 مليون عميل جديد في 2025",
+        "40+ دولة وبيانات الأسواق الرئيسية"
+      ]
+    },
+    {
+      "id": "SRC-22",
+      "title": "Revolut Foundation Model — PRAGMA",
+      "publisher": "Revolut Researchers / arXiv",
+      "source_type": "primary_technical_research",
+      "published_on": "2026-04-09",
+      "url": "https://arxiv.org/abs/2604.08649",
+      "supports": [
+        "نماذج Foundation للأحداث المصرفية",
+        "تطبيقات الاحتيال والتقييم الائتماني والقيمة العمرية",
+        "التعلم الذاتي على بيانات أحداث متعددة المصادر"
+      ]
+    }
   ]
 }
