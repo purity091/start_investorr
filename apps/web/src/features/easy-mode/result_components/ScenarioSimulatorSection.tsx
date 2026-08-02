@@ -15,7 +15,7 @@ export const ScenarioSimulatorSection = ({ activeScenario, setActiveScenario, sc
     <BaseCard variant={activeScenario === "optimistic" ? "success" : "danger"} style={{ border: `1.5px solid ${s.border}` }}>
        <CardHeader 
           title={s.title}
-          subtitle="محاكاة ذكاء الأعمال بناءً على متغيرات السوق الحالية"
+          subtitle="محاكاة الأعمال المتقدمة بناءً على متغيرات السوق الحالية"
           icon={s.icon}
           badge={activeScenario === "optimistic" ? "Optimistic" : "Pessimistic"}
           badgeType={activeScenario === "optimistic" ? "success" : "danger"}

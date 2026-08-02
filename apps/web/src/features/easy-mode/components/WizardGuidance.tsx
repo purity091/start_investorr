@@ -91,7 +91,7 @@ export const WizardGuidance: React.FC<WizardGuidanceProps> = ({
          </div>
          <div className="flex-1 min-w-0">
             <div className="text-[10px] font-semibold text-muted-foreground uppercase">حالة المساعد الاستراتيجي</div>
-            <div className="text-xs font-bold truncate">نظام الذكاء التكتيكي نشط</div>
+            <div className="text-xs font-bold truncate">نظام التحليل الاستراتيجي نشط</div>
          </div>
          <div className="flex items-center gap-2">
             <div className="size-2 rounded-full bg-emerald-500" />

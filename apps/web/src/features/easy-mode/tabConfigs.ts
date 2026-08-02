@@ -174,7 +174,7 @@ export const TAB_CONFIGS = {
       },
       // STEP 7 - PROPOSED EXECUTION PATH
       {
-        id: "want_safe_path", step: 7, label: "المسار الآمن", sublabel: "هل تريد الذكاء أن يقترح لك المسار الأكثر أمانًا ماليًا؟",
+        id: "want_safe_path", step: 7, label: "المسار الآمن", sublabel: "هل تريد اقتراح المسار الأكثر أمانًا ماليًا؟",
         icon: "Shield", type: "cards", options: [
           { val: "yes", title: "نعم", desc: "أقل مخاطرة" },
           { val: "no", title: "لا", desc: "أفضل الهجوم" },
@@ -1095,11 +1095,11 @@ export const TAB_CONFIGS = {
     bannerTitle: "غرفة اتخاذ القرار",
     bannerSubtitle: "هنا نجمع كل الخيوط لنعطيك الخلاصة النهائية: هل مشروعك يستحق الاستثمار؟",
     themeColor: "#0f172a", // Slate/Black
-    resultsTitle: "المذكرة الاستراتيجية النهائية: خلاصة الذكاء الاستثماري",
+    resultsTitle: "المذكرة الاستراتيجية النهائية: الخلاصة الاستثمارية المتقدمة",
     loadingMessages: [
       "تجميع كافة نقاط البيانات من المختبرات السابقة...",
       "إجراء 'اختبار الضغط' (Stress Test) للنموذج النهائي...",
-      "صياغة 'توصية الذكاء الاصطناعي' النهائية (Final Verdict)...",
+      "صياغة التوصية الاستراتيجية النهائية (Final Verdict)...",
     ],
     questions: [
       // STEP 1 - CURRENT READINESS
@@ -1288,9 +1288,9 @@ export const TAB_CONFIGS = {
         ]
       },
       {
-        id: "need_ai_recommend", step: 8, label: "توصيات الذكاء", sublabel: "هل تحتاج لتوصيات إضافية من الذكاء الاصطناعي لتقوية الخطة؟",
+        id: "need_ai_recommend", step: 8, label: "التوصيات الإضافية", sublabel: "هل تحتاج لتوصيات استراتيجية إضافية لتقوية الخطة؟",
         icon: "Sparkles", type: "cards", options: [
-          { val: "yes", title: "نعم", desc: "تحسين ذكي" },
+          { val: "yes", title: "نعم", desc: "تحسين متقدم" },
           { val: "no", title: "لا", desc: "خطة مستقلة" },
           { val: "partial", title: "جزئي", desc: "نقاط محددة" }
         ]

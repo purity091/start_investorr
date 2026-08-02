@@ -79,7 +79,7 @@ export const QUESTIONS: Question[] = [
     id: "competition",
     step: 4,
     icon: "SearchCode",
-    label: "الذكاء التنافسي (Competitive Intelligence)",
+    label: "التحليل التنافسي (Competitive Analysis)",
     sublabel: "من يسرق نومك؟ وكيف ستتفوق عليه بضربة استباقية؟",
     type: "competition_map",
     options: [
@@ -90,7 +90,7 @@ export const QUESTIONS: Question[] = [
     ],
     followup: {
       label: "محرك التميز (The Moat Strategy):",
-      options: ["⚡ سرعة استجابة فائقة", "🤖 تجربة مدعومة بالـ AI", "🎨 تصميم يتمحور حول العاطفة", "🌍 وصول محلي بدقة عالمية"],
+      options: ["⚡ سرعة استجابة فائقة", "📊 ميزات تحليل متقدمة", "🎨 تصميم يتمحور حول العاطفة", "🌍 وصول محلي بدقة عالمية"],
     },
   },
   {

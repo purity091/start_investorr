@@ -106,7 +106,7 @@ export const StrategicPulseForm = ({ onGenerate }: StrategicPulseFormProps) => {
           <Lucide.Lightbulb size={20} />
         </div>
         <div>
-          <h4 style={{ fontSize: "15px", fontWeight: 900, color: TOKENS.colors.text.title, margin: 0 }}>مختبر الذكاء الاستراتيجي</h4>
+          <h4 style={{ fontSize: "15px", fontWeight: 900, color: TOKENS.colors.text.title, margin: 0 }}>مختبر التحليل الاستراتيجي</h4>
           <p style={{ fontSize: "13px", color: TOKENS.colors.text.muted, margin: "2px 0 0", fontWeight: 600 }}>أجب بوضوح لنفكك التحديات ونبني لك مساراً استثمارياً فائق الدقة.</p>
         </div>
       </div>

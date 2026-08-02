@@ -190,7 +190,7 @@ export const FinalDecisionResults = () => {
         <CardBody>
           <div style={{ fontSize: "20px", fontWeight: 900, color: TOKENS.colors.secondary, marginBottom: "20px", display: "flex", alignItems: "center", gap: 10 }}>
              <Rocket size={24} />
-             القرار الواضح: ابدأ فوراً ولكن بذكاء
+             القرار الواضح: ابدأ فوراً وفق خطة محددة
           </div>
           
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "24px" }}>

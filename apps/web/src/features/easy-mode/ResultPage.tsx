@@ -128,7 +128,7 @@ export default function ResultPage() {
                   </Badge>
                 </div>
                 <p className="text-xs text-muted-foreground font-medium mt-1 hidden sm:block">
-                  لوحة تحكم استراتيجية متكاملة مدعومة بالذكاء الاصطناعي لتخطيط وتنفيذ المشروع
+                  لوحة تحكم استراتيجية متكاملة لتحليل وتخطيط وتنفيذ المشروع بناءً على مدخلاتك
                 </p>
               </div>
             </div>
