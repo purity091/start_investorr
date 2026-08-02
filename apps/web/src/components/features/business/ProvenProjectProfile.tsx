@@ -6,7 +6,6 @@ import {
   ArrowRight,
   CheckCircle2,
   DollarSign,
-  Users,
   Globe,
   ExternalLink,
   Lightbulb,
@@ -32,7 +31,9 @@ import {
   Boxes,
   Zap,
   BookOpen,
-  Fingerprint
+  Fingerprint,
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -84,25 +85,6 @@ const getToolBranding = (tool: string) => {
   return { icon: <Code className="size-4" />, colors: "bg-primary/5 text-primary border-primary/20" };
 };
 
-const getEvidenceFieldTitle = (key: string) => {
-  switch (key) {
-    case '$.company.location': return 'مقر الشركة وتاريخ التأسيس';
-    case '$.company.business_model': return 'نموذج العمل وهيكلية الاشتراكات';
-    case '$.directory_snapshot.monthly_revenue': return 'الإيرادات الشهرية والمتوسطات الحسابية';
-    case '$.directory_snapshot.monthly_traffic': return 'مؤشرات التوسع وحجم العملاء والرسائل';
-    case '$.overview.problem': return 'المشكلة الأساسية التي حلها المنتج';
-    case '$.overview.solution': return 'المنتج والحل التقني والتطوير';
-    case '$.market_data.target_audience': return 'الشريحة المستهدفة والشركات المعنية';
-    case '$.market_data.market_size': return 'حجم السوق وإفصاح الفئة المستهدفة';
-    case '$.market_data.growth_rate': return 'معدل النمو والاتجاه المالي متعدد السنوات';
-    case '$.financials.initial_investment': return 'التمويل الأولي ونموذج التمويل الذاتي (Bootstrapping)';
-    case '$.financials.valuation': return 'تقييم الشركة وقيمة الاستحواذ النهائي';
-    case '$.financials.revenue_streams': return 'مصادر الإيرادات والخطط المدفوعة';
-    case '$.tools': return 'الأدوات وواجهات الـ APIs والتكاملات الموثقة';
-    default: return key.replace('$.', '');
-  }
-};
-
 const getStatusMeta = (status: string) => {
   switch (status) {
     case 'verified':
@@ -120,12 +102,19 @@ const getStatusMeta = (status: string) => {
 
 export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: rawProject, onBack }) => {
   const [activeId, setActiveId] = useState<string>('overview');
+  const [isSourcesOpen, setIsSourcesOpen] = useState<boolean>(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const tocRef = useRef<HTMLDivElement>(null);
 
-  const hasEvidenceMap = rawProject.evidence_map && Object.keys(rawProject.evidence_map).length > 0;
+  const evidenceMap = rawProject.evidence_map || {};
 
-  // Normalize project data to support both legacy flat array format and new nested object format
+  // Extract key verified evidence insights to embed directly into main sections
+  const revenueEvidence = evidenceMap['$.directory_snapshot.monthly_revenue'];
+  const trafficEvidence = evidenceMap['$.directory_snapshot.monthly_traffic'];
+  const modelEvidence = evidenceMap['$.company.business_model'];
+  const locationEvidence = evidenceMap['$.company.location'];
+
+  // Normalize project data
   const project = {
     ...rawProject,
     problem_and_product: rawProject.problem_and_product || [
@@ -232,10 +221,37 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
     { id: 'tools', label: 'التقنيات والتكاملات' },
     { id: 'revenue-timeline', label: 'المخطط الزمني للإيرادات' },
     { id: 'lessons', label: 'الدروس والاستراتيجيات' },
-    ...(hasEvidenceMap ? [{ id: 'evidence-map', label: 'خريطة الأدلة الميدانية (v2.0)' }] : []),
-    { id: 'sources', label: 'المصادر والتقارير' },
+    { id: 'sources', label: 'المصادر والتقارير (مطوي)' },
     { id: 'data-quality', label: 'معايير التوثيق' },
   ];
+
+  // Collect all sources (general sources + evidence references) for the collapsed panel
+  const allSourcesList: Array<{ title: string; url: string; publisher?: string; locator?: string; supports?: string }> = [];
+
+  (project.sources || []).forEach((src: any) => {
+    allSourcesList.push({
+      title: src.title || src.label || 'مصدر رسمي',
+      url: src.url,
+      publisher: src.publisher || src.coverage,
+      supports: Array.isArray(src.supports) ? src.supports.join(' • ') : src.supports
+    });
+  });
+
+  Object.values(evidenceMap).forEach((evItem: any) => {
+    if (evItem?.source_references && Array.isArray(evItem.source_references)) {
+      evItem.source_references.forEach((ref: any) => {
+        if (ref?.url && !allSourcesList.some(s => s.url === ref.url)) {
+          allSourcesList.push({
+            title: ref.title || 'مرجع إثبات',
+            url: ref.url,
+            publisher: ref.publisher,
+            locator: ref.source_locator,
+            supports: ref.supports
+          });
+        }
+      });
+    }
+  });
 
   return (
     <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 font-sans pb-24">
@@ -383,22 +399,22 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                 )}
               </CardHeader>
 
-              <CardContent className="p-4 sm:p-6 bg-card">
+              <CardContent className="p-4 sm:p-6 bg-card space-y-4">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
                   <div className="p-4 rounded-xl bg-emerald-50/60 border border-emerald-100 flex flex-col gap-1">
                     <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider">الإيراد الشهري</span>
                     <span className="text-xl sm:text-2xl font-extrabold text-emerald-700 tracking-tight dir-ltr text-right">
                       {project.directory_snapshot.monthly_revenue.split(' ')[0]}
                     </span>
-                    <span className="text-[11px] text-emerald-700 font-medium">متوسط موثق</span>
+                    <span className="text-[11px] text-emerald-700 font-medium">متوسط 9 أشهر موثق</span>
                   </div>
 
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-100 flex flex-col gap-1">
-                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">المؤسس الرئيسي</span>
-                    <span className="text-base sm:text-lg font-bold text-slate-900 truncate" title={project.company.founder}>
-                      {project.company.founder}
+                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">حجم العملاء والرسائل</span>
+                    <span className="text-base sm:text-lg font-bold text-slate-900 truncate dir-ltr text-right">
+                      {project.directory_snapshot.monthly_traffic}
                     </span>
-                    <span className="text-[11px] text-slate-500 font-medium">{project.company.founders_count} مؤسسين</span>
+                    <span className="text-[11px] text-slate-500 font-medium">1000M+ بريد / يوم</span>
                   </div>
 
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-100 flex flex-col gap-1">
@@ -406,7 +422,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                     <span className="text-base sm:text-lg font-bold text-slate-900 truncate" title={project.company.funding}>
                       {project.company.funding}
                     </span>
-                    <span className="text-[11px] text-slate-500 font-medium">بدون استثمار خارجي</span>
+                    <span className="text-[11px] text-slate-500 font-medium">ذاتي 100% (Bootstrapped)</span>
                   </div>
 
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-100 flex flex-col gap-1">
@@ -414,9 +430,27 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                     <span className="text-base sm:text-lg font-bold text-slate-900 truncate">
                       {project.financials?.valuation || '12 مليار $'}
                     </span>
-                    <span className="text-[11px] text-slate-500 font-medium">شركة Intuit</span>
+                    <span className="text-[11px] text-slate-500 font-medium">شركة Intuit (2021)</span>
                   </div>
                 </div>
+
+                {/* Integrated Evidence Formula Callout directly inside Overview */}
+                {revenueEvidence?.calculation && (
+                  <div className="p-3.5 bg-sky-50/70 border border-sky-200/80 rounded-xl text-sky-950 text-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                    <div className="space-y-1">
+                      <span className="font-bold text-sky-900 flex items-center gap-1.5">
+                        <TrendingUp className="size-4 text-sky-600" />
+                        المعادلة الحسابية الموثقة من تقرير SEC Form 10-K الرسمي:
+                      </span>
+                      <p className="text-sky-800 font-medium leading-relaxed">
+                        الإيراد المعلن لفترة 9 أشهر بلغ <strong>${revenueEvidence.calculation.official_amount_usd?.toLocaleString()} USD</strong>، ويعطي متوسطاً شهرياً قدره <strong>${revenueEvidence.calculation.rounded_display_value}</strong>.
+                      </p>
+                    </div>
+                    <Badge variant="outline" className="bg-sky-100 text-sky-800 border-sky-300 font-mono text-xs font-bold shrink-0 dir-ltr">
+                      {revenueEvidence.calculation.formula}
+                    </Badge>
+                  </div>
+                )}
               </CardContent>
             </Card>
           </section>
@@ -429,40 +463,63 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                   <div className="p-1.5 rounded-md bg-primary/10 text-primary">
                     <Building2 className="size-4" />
                   </div>
-                  حقائق الشركة الهيكلية
+                  حقائق الشركة الهيكلية والموقع
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-0">
                 <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x sm:divide-x-reverse divide-border/40">
                   <div className="p-4 sm:p-5 space-y-1">
-                    <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">نموذج العمل</dt>
+                    <div className="flex items-center justify-between gap-2">
+                      <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">نموذج العمل</dt>
+                      {modelEvidence && (
+                        <Badge variant="outline" className={cn("text-[10px] font-bold py-0 px-1.5", getStatusMeta(modelEvidence.verification_status).className)}>
+                          {getStatusMeta(modelEvidence.verification_status).label}
+                        </Badge>
+                      )}
+                    </div>
                     <dd className="font-bold text-sm text-foreground">{project.company.business_model}</dd>
+                    {modelEvidence?.evidence_summary && (
+                      <p className="text-xs text-muted-foreground font-medium pt-1">{modelEvidence.evidence_summary}</p>
+                    )}
                   </div>
+
                   <div className="p-4 sm:p-5 space-y-1">
-                    <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">نوع الشريحة المستهدفة</dt>
-                    <dd className="font-bold text-sm text-foreground">{project.company.customer_type}</dd>
+                    <div className="flex items-center justify-between gap-2">
+                      <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">المقر والتأسيس</dt>
+                      {locationEvidence && (
+                        <Badge variant="outline" className={cn("text-[10px] font-bold py-0 px-1.5", getStatusMeta(locationEvidence.verification_status).className)}>
+                          {getStatusMeta(locationEvidence.verification_status).label}
+                        </Badge>
+                      )}
+                    </div>
+                    <dd className="font-bold text-sm text-foreground">{project.company.location}</dd>
+                    {locationEvidence?.evidence_summary && (
+                      <p className="text-xs text-muted-foreground font-medium pt-1">{locationEvidence.evidence_summary}</p>
+                    )}
                   </div>
                 </div>
+
                 <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-border/40 divide-y sm:divide-y-0 sm:divide-x sm:divide-x-reverse divide-border/40">
                   <div className="p-4 sm:p-5 space-y-1">
-                    <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">المؤسس</dt>
+                    <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">المؤسسون</dt>
                     <dd className="font-bold text-sm text-foreground">{project.company.founder}</dd>
                   </div>
                   <div className="p-4 sm:p-5 space-y-1">
-                    <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">عام التأسيس</dt>
+                    <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">عام التأسيس الإنشائي</dt>
                     <dd className="font-bold text-sm text-foreground">{project.company.started}</dd>
                   </div>
                   <div className="p-4 sm:p-5 space-y-1">
                     <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">حجم الفريق والقوى العاملة</dt>
-                    <dd className="font-bold text-sm text-foreground">{project.company.founders_count} مؤسس • {project.company.employees}</dd>
+                    <dd className="font-bold text-sm text-foreground">{project.company.founders_count} مؤسسين • {project.company.employees}</dd>
                   </div>
                 </div>
+
                 <div className="p-4 sm:p-5 border-t border-border/40 bg-emerald-50/40 flex flex-col md:flex-row md:items-center justify-between gap-3">
                   <div>
                     <dt className="text-xs font-bold text-emerald-800 uppercase tracking-wider mb-1">الربحية والإيراد الأقصى المعلن</dt>
                     <dd className="font-bold text-sm sm:text-base text-emerald-950">{project.company.public_revenue_claim}</dd>
                   </div>
-                  <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 border-emerald-300 font-bold text-xs">
+                  <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-100 border-emerald-300 font-bold text-xs">
                     {project.company.funding}
                   </Badge>
                 </div>
@@ -709,169 +766,101 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
             </Card>
           </section>
 
-          {/* Section 12: Evidence Map (v2.0) */}
-          {rawProject.evidence_map && (
-            <section id="evidence-map" className="profile-section scroll-mt-24">
-              <Card className="shadow-xs border-border/60">
-                <CardHeader className="border-b border-border/40 pb-4">
-                  <div className="flex items-center justify-between gap-3 flex-wrap">
-                    <CardTitle className="text-lg font-bold flex items-center gap-2 text-foreground">
-                      <div className="p-1.5 rounded-md bg-purple-500/10 text-purple-600">
-                        <Fingerprint className="size-4" />
-                      </div>
-                      خريطة الأدلة الميدانية الموثقة لكل ادعاء (Evidence Map v2.0)
-                    </CardTitle>
-                    <Badge variant="outline" className="bg-purple-50 text-purple-700 border-purple-200 text-xs font-bold">
-                      {Object.keys(rawProject.evidence_map).length} ادعاءات موثقة بالكامل
-                    </Badge>
+          {/* Section 12: COLLAPSED BY DEFAULT SOURCES ACCORDION */}
+          <section id="sources" className="profile-section scroll-mt-24">
+            <Card className="shadow-xs border-border/60 overflow-hidden">
+              <CardHeader className="p-4 sm:p-5 bg-card">
+                <button
+                  type="button"
+                  onClick={() => setIsSourcesOpen(!isSourcesOpen)}
+                  className="w-full flex items-center justify-between gap-4 text-right focus:outline-none"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-primary/10 text-primary">
+                      <Link className="size-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-base font-bold text-foreground flex items-center gap-2">
+                        المصادر الرسمية وتقارير التوثيق الميداني
+                      </h3>
+                      <p className="text-xs text-muted-foreground font-medium mt-0.5">
+                        انقر للفتح أو الطي ({allSourcesList.length} مصادر رسمية ومستندات SEC)
+                      </p>
+                    </div>
                   </div>
-                </CardHeader>
-                <CardContent className="p-4 sm:p-6 space-y-4">
-                  {Object.entries(rawProject.evidence_map).map(([key, item]: [string, any], idx: number) => {
-                    if (!item || typeof item !== 'object' || Array.isArray(item)) return null;
 
-                    const title = getEvidenceFieldTitle(key);
-                    const statusMeta = getStatusMeta(item.verification_status);
+                  <div className="flex items-center gap-2">
+                    <Badge variant="outline" className="bg-muted/50 text-muted-foreground border-border text-xs font-bold">
+                      {isSourcesOpen ? 'عرض أقل' : 'مطوي'}
+                    </Badge>
+                    <div className="p-1.5 rounded-lg bg-muted/40 text-muted-foreground">
+                      {isSourcesOpen ? <ChevronUp className="size-4" /> : <ChevronDown className="size-4" />}
+                    </div>
+                  </div>
+                </button>
+              </CardHeader>
 
-                    return (
-                      <div key={idx} className="p-4 sm:p-5 rounded-xl bg-card border border-border/60 shadow-xs space-y-3">
-                        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border/40 pb-3">
-                          <div className="flex items-center gap-2">
-                            <div className="size-2 rounded-full bg-primary shrink-0" />
-                            <h4 className="font-bold text-foreground text-sm sm:text-base">{title}</h4>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <Badge variant="outline" className={cn("text-[11px] font-bold px-2.5 py-0.5 border", statusMeta.className)}>
-                              {statusMeta.label}
-                            </Badge>
-                            {item.confidence && (
-                              <Badge variant="outline" className="bg-muted/50 text-muted-foreground border-border text-[10px] font-bold">
-                                ثقة: {item.confidence === 'high' ? 'عالية (100%)' : item.confidence}
-                              </Badge>
+              {isSourcesOpen && (
+                <CardContent className="p-4 sm:p-5 border-t border-border/40 bg-muted/20 space-y-3">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {allSourcesList.map((src, idx) => (
+                      <div key={idx} className="p-3.5 border border-border/60 rounded-xl bg-card hover:border-primary/40 transition-colors space-y-1.5">
+                        <a
+                          href={src.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-bold text-primary hover:underline flex items-center justify-between gap-2 text-xs"
+                        >
+                          <span className="line-clamp-1">{src.title}</span>
+                          <ExternalLink className="size-3.5 shrink-0" />
+                        </a>
+                        {(src.publisher || src.locator) && (
+                          <div className="flex items-center gap-2 text-[11px] font-medium text-muted-foreground flex-wrap">
+                            <span>{src.publisher}</span>
+                            {src.locator && (
+                              <>
+                                <span>•</span>
+                                <span className="font-mono text-foreground font-bold">{src.locator}</span>
+                              </>
                             )}
                           </div>
-                        </div>
-
-                        {item.evidence_summary && (
-                          <div className="text-xs sm:text-sm text-foreground font-medium leading-relaxed bg-muted/30 p-3 rounded-lg border border-border/40">
-                            <strong className="text-foreground font-bold block mb-1 text-xs">ملخص الدليل والأدلة المعززة:</strong>
-                            {item.evidence_summary}
+                        )}
+                        {src.supports && (
+                          <div className="pt-1.5 border-t border-border/40">
+                            <p className="text-xs text-foreground font-medium leading-relaxed">
+                              ✓ {src.supports}
+                            </p>
                           </div>
                         )}
-
-                        {item.calculation && (
-                          <div className="p-3 bg-sky-50/60 border border-sky-200/60 rounded-lg text-sky-950 text-xs space-y-1">
-                            <span className="font-bold text-sky-900 flex items-center gap-1.5">
-                              <TrendingUp className="size-3.5 text-sky-600" />
-                              المعادلة الحسابية المشتقة:
-                            </span>
-                            <p className="font-mono text-sky-950 dir-ltr text-right font-bold text-xs">{item.calculation.formula} = {item.calculation.rounded_display_value}</p>
-                            <p className="text-[11px] text-sky-800 font-medium">المدخلات: ${item.calculation.official_amount_usd?.toLocaleString()} USD خلال {item.calculation.included_months} أشهر ({item.calculation.included_period_start} إلى {item.calculation.included_period_end})</p>
-                          </div>
-                        )}
-
-                        {item.source_references && item.source_references.length > 0 && (
-                          <div className="space-y-2 pt-1">
-                            <span className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider block">المصادر المباشرة ذات الصلة:</span>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                              {item.source_references.map((ref: any, rIdx: number) => (
-                                <div key={rIdx} className="p-3 rounded-lg bg-muted/20 border border-border/40 text-xs space-y-1">
-                                  <a href={ref.url} target="_blank" rel="noopener noreferrer" className="font-bold text-primary hover:underline flex items-center justify-between gap-1">
-                                    <span className="truncate">{ref.title}</span>
-                                    <ExternalLink className="size-3 shrink-0" />
-                                  </a>
-                                  <p className="text-[11px] text-muted-foreground font-medium">{ref.publisher} • {ref.source_locator}</p>
-                                  {ref.supports && (
-                                    <p className="text-[11px] text-foreground font-medium pt-1 border-t border-border/40 leading-relaxed">
-                                      ✓ {ref.supports}
-                                    </p>
-                                  )}
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-
-                        {item.limitations && (
-                          <div className="p-2.5 bg-amber-50/70 border border-amber-200/70 rounded-lg text-amber-900 text-xs font-medium flex items-start gap-2">
-                            <Info className="size-4 text-amber-600 shrink-0 mt-0.5" />
-                            <span><strong>حدود الاستدلال: </strong>{item.limitations}</span>
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </CardContent>
-              </Card>
-            </section>
-          )}
-
-          {/* Section 13 & 14: Sources and Data Quality */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <section id="sources" className="profile-section scroll-mt-24">
-              <Card className="shadow-xs border-border/60 h-full">
-                <CardHeader className="border-b border-border/40 pb-4">
-                  <CardTitle className="text-base font-bold flex items-center gap-2 text-foreground">
-                    <Link className="size-4 text-primary" />
-                    المصادر والتقارير الرسمية
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-4 sm:p-5 space-y-3">
-                  {project.sources.map((src: any, i: number) => (
-                    <div key={i} className="p-3.5 border border-border/60 rounded-xl bg-card hover:border-primary/40 transition-colors space-y-1.5">
-                      <a href={src.url} target="_blank" rel="noopener noreferrer" className="font-bold text-primary hover:underline flex items-center justify-between gap-2 text-xs">
-                        <span className="line-clamp-1">{src.title || src.label}</span>
-                        <ExternalLink className="size-3.5 shrink-0" />
-                      </a>
-                      <div className="flex items-center gap-2 text-[11px] font-medium text-muted-foreground flex-wrap">
-                        <span>{src.publisher || src.coverage}</span>
-                        {src.published_on && (
-                          <>
-                            <span>•</span>
-                            <span>{src.published_on}</span>
-                          </>
-                        )}
-                      </div>
-                      {src.supports && src.supports.length > 0 && (
-                        <div className="pt-2 border-t border-border/40 space-y-1">
-                          <span className="text-[10px] font-bold text-muted-foreground block uppercase">الحقائق الموثقة:</span>
-                          <ul className="space-y-1 text-xs text-foreground font-medium">
-                            {src.supports.map((sup: string, sIdx: number) => (
-                              <li key={sIdx} className="flex items-start gap-1.5">
-                                <div className="size-1 rounded-full bg-primary shrink-0 mt-1.5" />
-                                <span className="leading-relaxed">{sup}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </CardContent>
-              </Card>
-            </section>
-
-            <section id="data-quality" className="profile-section scroll-mt-24">
-              <Card className="shadow-xs border-border/60 h-full">
-                <CardHeader className="border-b border-border/40 pb-4">
-                  <CardTitle className="text-base font-bold flex items-center gap-2 text-foreground">
-                    <ShieldCheck className="size-4 text-emerald-600" />
-                    معايير التوثيق وجودة البيانات
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="p-4 sm:p-5">
-                  <div className="space-y-2.5">
-                    {project.data_quality.map((item: string, i: number) => (
-                      <div key={i} className="flex items-start gap-2.5 p-3 rounded-lg bg-muted/20 border border-border/40 text-xs font-medium text-foreground leading-relaxed">
-                        <CheckCircle2 className="size-4 text-emerald-600 shrink-0 mt-0.5" />
-                        <span>{item}</span>
                       </div>
                     ))}
                   </div>
                 </CardContent>
-              </Card>
-            </section>
-          </div>
+              )}
+            </Card>
+          </section>
+
+          {/* Section 13: Data Quality Standards */}
+          <section id="data-quality" className="profile-section scroll-mt-24">
+            <Card className="shadow-xs border-border/60">
+              <CardHeader className="border-b border-border/40 pb-4">
+                <CardTitle className="text-base font-bold flex items-center gap-2 text-foreground">
+                  <ShieldCheck className="size-4 text-emerald-600" />
+                  معايير التوثيق وجودة البيانات
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-4 sm:p-5">
+                <div className="space-y-2.5">
+                  {project.data_quality.map((item: string, i: number) => (
+                    <div key={i} className="flex items-start gap-2.5 p-3 rounded-lg bg-muted/20 border border-border/40 text-xs font-medium text-foreground leading-relaxed">
+                      <CheckCircle2 className="size-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </section>
 
         </div>
 
