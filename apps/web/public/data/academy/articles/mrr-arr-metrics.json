@@ -1,0 +1,48 @@
+{
+  "id": "mrr-arr-metrics",
+  "slug": "mrr-arr-metrics",
+  "title": "الإيراد الشهري المكرر (MRR) والإيراد السنوي (ARR)",
+  "subtitle": "شريان التنبؤ المالي لنماذج الاشتراكات وخدمات SaaS",
+  "categoryId": "kpis",
+  "categoryName": "مؤشرات الأداء والنمو",
+  "readTime": "4 دقائق",
+  "difficulty": "مبتدئ",
+  "updatedAt": "2026-08-03",
+  "icon": "TrendingUp",
+  "tags": [
+    "MRR",
+    "ARR",
+    "SaaS",
+    "الاشتراكات",
+    "الإيراد المكرر"
+  ],
+  "summary": "المؤشر الأهم للتدفقات النقدية المتوقعة والثابتة شهرياً وسنوياً بعيداً عن المبيعات الموسمية العشوائية.",
+  "keyTakeaway": "النمو الحقيقي في MRR يأتي من تقليل التسرب والتوسع مع العملاء الحاليين Expansion MRR.",
+  "platformApplication": "يُعرض في نماذج SaaS، أفكار Micro-SaaS وفي الجداول النمذجية بالنموذج الاحترافي.",
+  "tableOfContents": [
+    {
+      "id": "mrr-definition",
+      "title": "تعريف الـ MRR و الـ ARR"
+    },
+    {
+      "id": "components-of-mrr",
+      "title": "أجزاء ومكونات الـ MRR"
+    }
+  ],
+  "sections": [
+    {
+      "id": "mrr-definition",
+      "heading": "تعريف الـ MRR و الـ ARR",
+      "content": "MRR هو الإيراد الشهري المكرر المتوقع تحصيله من اشتراكات العملاء الفاعلين. ARR هو قيمته المضروبة في 12 لتمثيل السنة الكاملة."
+    },
+    {
+      "id": "components-of-mrr",
+      "heading": "أجزاء ومكونات الـ MRR",
+      "content": "New MRR: من عملاء جدد.\nExpansion MRR: من ترقية باقات العملاء الحاليين.\nChurned MRR: الإيراد المفقود بسبب إلغاء الاشتراكات."
+    }
+  ],
+  "relatedArticles": [
+    "ltv-cac-ratio",
+    "churn-rate-reduction"
+  ]
+}
