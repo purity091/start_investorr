@@ -134,20 +134,6 @@ export default function ResultPage() {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2 shrink-0 w-full sm:w-auto justify-center sm:justify-end">
-            <Badge variant="outline" className="gap-1.5 px-3 py-1 text-xs font-semibold bg-primary/10 text-primary border-primary/20">
-              <Lucide.Sparkles size={13} className="animate-pulse" />
-              <span>تحليل استراتيجي أوتوماتيكي</span>
-            </Badge>
-            <Button variant="outline" size="sm" className="gap-1.5 text-xs font-semibold rounded-lg">
-              <Lucide.Download size={14} />
-              <span>تصدير PDF</span>
-            </Button>
-            <Button size="sm" className="gap-1.5 text-xs font-semibold rounded-lg shadow-xs">
-              <Lucide.Share2 size={14} />
-              <span>مشاركة</span>
-            </Button>
-          </div>
         </div>
       </header>
 
