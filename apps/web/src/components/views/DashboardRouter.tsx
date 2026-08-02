@@ -50,6 +50,7 @@ const CompanyDeepDive = lazyNamedPage(() => import('../features/discovery/Compan
 const ProblemDeepDive = lazyNamedPage(() => import('../features/discovery/ProblemDeepDive'), 'ProblemDeepDive');
 const SavedMarketItems = lazyNamedPage(() => import('../features/discovery/SavedMarketItems'), 'SavedMarketItems');
 const First90DaysView = lazyNamedPage(() => import('./First90DaysView'), 'First90DaysView');
+const PlatformAcademyView = lazyNamedPage(() => import('./PlatformAcademyView'), 'PlatformAcademyView');
 
 const AdvertisingDashboard = lazyPage(() => import('../sectors/AdvertisingMarketing/AdvertisingDashboard'));
 const MarketingDashboard = lazyPage(() => import('../sectors/AdvertisingMarketing/MarketingDashboard'));
@@ -273,7 +274,7 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
     }
   }, [activeTab]);
 
-  const containerClass = ['home', 'editor', 'strategic-dashboard', 'contact-us', 'market-discovery', 'problem-engine', 'problem-detail', 'saved-market-items', 'hackathon', 'workspace', 'first-90-days', 'company-deep-dive', 'site-map', 'discovery-center', 'subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-subscription', 'customer-usage', 'customer-activity', 'customer-account', 'customer-support', 'proven-projects', 'failed-projects', 'saas-ideas', 'micro-saas-ideas', 'project-ideas'].includes(activeTab) || activeTab.endsWith('-dashboard') 
+  const containerClass = ['home', 'editor', 'strategic-dashboard', 'contact-us', 'market-discovery', 'problem-engine', 'problem-detail', 'saved-market-items', 'hackathon', 'workspace', 'first-90-days', 'platform-academy', 'company-deep-dive', 'site-map', 'discovery-center', 'subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-subscription', 'customer-usage', 'customer-activity', 'customer-account', 'customer-support', 'proven-projects', 'failed-projects', 'saas-ideas', 'micro-saas-ideas', 'project-ideas'].includes(activeTab) || activeTab.endsWith('-dashboard') 
     ? 'w-full' 
     : 'app-page-shell-wide py-6 sm:py-8 lg:py-10 pb-20 lg:pb-10';
 
@@ -293,6 +294,8 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
 
   const renderContent = () => {
     switch (activeTab) {
+      case 'platform-academy':
+        return <PlatformAcademyView setActiveTab={setActiveTab} />;
       case 'first-90-days':
         return <First90DaysView setActiveTab={setActiveTab} />;
       case 'saved-market-items':

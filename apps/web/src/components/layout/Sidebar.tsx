@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Activity,
   Bookmark,
+  BookOpen,
   Calendar,
   ChevronDown,
   ChevronLeft,
@@ -164,6 +165,10 @@ const PROJECT_IDEAS: NavItemConfig[] = [
     active: (tab) => tab === 'market-discovery' || MARKET_DISCOVERY_DASHBOARDS.includes(tab),
   },
   { tab: 'problem-engine', label: 'المشكلات والفرص', icon: Activity, id: 'tour-problem-engine' },
+];
+
+const KNOWLEDGE_CENTER: NavItemConfig[] = [
+  { tab: 'platform-academy', label: 'أكاديمية المنصة', icon: BookOpen, badge: 'جديد', id: 'tour-academy' },
 ];
 
 const PROJECT_ATTACHMENTS: NavItemConfig[] = [
@@ -403,6 +408,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
             <SidebarSection title="بناء دراسة جدوى مشروع" items={PROJECT_BUILD} activeTab={activeTab} setActiveTab={setActiveTab} />
             <SidebarSection title="أفكار مشاريع" items={PROJECT_IDEAS} activeTab={activeTab} setActiveTab={setActiveTab} />
             <SidebarSection title="ملحقات المشروع" items={PROJECT_ATTACHMENTS} activeTab={activeTab} setActiveTab={setActiveTab} />
+            <SidebarSection title="المركز المعرفي" items={KNOWLEDGE_CENTER} activeTab={activeTab} setActiveTab={setActiveTab} />
           </>
         )}
       </SidebarContent>

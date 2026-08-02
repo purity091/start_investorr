@@ -24,6 +24,7 @@ const STATIC_TABS = new Set([
   'bmc',
   'brand-identity',
   'unicorn-benchmark',
+  'platform-academy',
   'market-discovery',
   'pricing',
   'hackathon',
