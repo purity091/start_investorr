@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import {
   Activity,
   Bookmark,
@@ -17,6 +17,11 @@ import {
   Workflow,
   Zap,
   ArrowUpDown,
+  Copy,
+  Check,
+  Globe,
+  Lock,
+  ExternalLink,
 } from 'lucide-react';
 import { Checkbox } from '@/components/ui/checkbox';
 
@@ -30,6 +35,15 @@ import { supabase } from '@/lib/supabase';
 import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
+import { Switch } from '@/components/ui/switch';
 import {
   Pagination,
   PaginationContent,
@@ -61,6 +75,7 @@ interface Project {
   marketCap: string;
   isFavorite: boolean;
   isMockExample?: boolean;
+  is_public?: boolean;
 }
 
 const PROJECT_TYPE_META: Record<
@@ -138,7 +153,7 @@ const MOCK_PROJECTS: Project[] = [
     status: 'ready',
     progress: { market: 100, product: 90, financial: 95 },
     aiScore: 94,
-    lastEdited: 'مثال',
+    lastEdited: 'منذ ساعتين',
     marketCap: '$1.4M',
     isFavorite: false,
     isMockExample: true,
@@ -151,7 +166,7 @@ const MOCK_PROJECTS: Project[] = [
     status: 'review',
     progress: { market: 85, product: 70, financial: 40 },
     aiScore: 78,
-    lastEdited: 'مثال',
+    lastEdited: 'منذ يومين',
     marketCap: '$800K',
     isFavorite: false,
     isMockExample: true,
@@ -164,7 +179,7 @@ const MOCK_PROJECTS: Project[] = [
     status: 'draft',
     progress: { market: 40, product: 20, financial: 10 },
     aiScore: 45,
-    lastEdited: 'مثال',
+    lastEdited: 'منذ 4 أيام',
     marketCap: '$5.2M',
     isFavorite: false,
     isMockExample: true,
@@ -177,7 +192,7 @@ const MOCK_PROJECTS: Project[] = [
     status: 'ready',
     progress: { market: 100, product: 100, financial: 90 },
     aiScore: 91,
-    lastEdited: 'مثال',
+    lastEdited: 'منذ أسبوع',
     marketCap: '$12M',
     isFavorite: false,
     isMockExample: true,
@@ -190,7 +205,7 @@ const MOCK_PROJECTS: Project[] = [
     status: 'draft',
     progress: { market: 55, product: 45, financial: 25 },
     aiScore: 59,
-    lastEdited: 'مثال',
+    lastEdited: '18/07/2026',
     marketCap: '$420K',
     isFavorite: false,
     isMockExample: true,
@@ -221,30 +236,36 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
       try {
         const { data, error } = await supabase
           .from('business_canvas')
-          .select('id, project_title, canvas_data, updated_at')
+          .select('id, project_title, canvas_data->profile, canvas_data->currentStage, canvas_data->metrics, updated_at')
           .eq('user_id', user.id)
-          .order('updated_at', { ascending: false });
+          .order('updated_at', { ascending: false })
+          .limit(50);
 
         if (error) throw error;
 
         if (data && data.length > 0) {
-          const realProjects: Project[] = data.map((row) => ({
-            id: row.id,
-            name: row.project_title || 'مشروع بدون اسم',
-            sector: row.canvas_data?.profile?.sectorLabel || 'غير محدد',
-            type: 'pro' as ProjectType,
-            status: row.canvas_data?.currentStage === 'execution' ? 'ready' : 'review',
-            progress: {
-              market: row.canvas_data?.metrics?.validationScore || 0,
-              product: row.canvas_data?.metrics?.readinessScore || 0,
-              financial: row.canvas_data?.metrics?.executionScore || 0,
-            },
-            aiScore: row.canvas_data?.metrics?.readinessScore || 0,
-            lastEdited: new Date(row.updated_at).toLocaleDateString('ar-SA'),
-            marketCap: '-',
-            isFavorite: false,
-            isMockExample: false,
-          }));
+          const realProjects: Project[] = data.map((row: any) => {
+            const profile = row.profile || row.canvas_data?.profile;
+            const currentStage = row.currentStage || row.canvas_data?.currentStage;
+            const metrics = row.metrics || row.canvas_data?.metrics;
+            return {
+              id: row.id,
+              name: row.project_title || 'مشروع بدون اسم',
+              sector: profile?.sectorLabel || 'غير محدد',
+              type: 'pro' as ProjectType,
+              status: currentStage === 'execution' ? 'ready' : 'review',
+              progress: {
+                market: metrics?.validationScore || 0,
+                product: metrics?.readinessScore || 0,
+                financial: metrics?.executionScore || 0,
+              },
+              aiScore: metrics?.readinessScore || 0,
+              lastEdited: new Date(row.updated_at).toLocaleDateString('ar-SA'),
+              marketCap: '-',
+              isFavorite: false,
+              isMockExample: false,
+            };
+          });
           // Real projects first, then mock examples appended
           setProjectsList([...realProjects, ...MOCK_PROJECTS]);
         } else {
@@ -313,29 +334,16 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
     }
   };
 
-  const handleShare = async (id: string, name: string) => {
-    try {
-      // Opt-in public sharing
-      const makePublic = window.confirm(`هل ترغب في إنشاء رابط عام (Public Link) لمشروع "${name}" لتمكين الآخرين من مشاهدته؟`);
-      if (makePublic) {
-        await supabase.from('business_canvas').update({ is_public: true }).eq('id', id);
-        
-        const shareUrl = `${window.location.origin}/share/${id}`;
-        if (navigator.share) {
-          navigator.share({
-            title: name,
-            text: `مشاهدة مشروع: ${name}`,
-            url: shareUrl,
-          }).catch(console.error);
-        } else {
-          navigator.clipboard.writeText(shareUrl);
-          alert(`تم تفعيل المشاركة بنجاح! رابط المشروع متاح الآن في الحافظة.`);
-        }
-      }
-    } catch (err) {
-      console.error('Error sharing:', err);
-      alert('حدث خطأ أثناء إعداد رابط المشاركة.');
-    }
+  const [selectedShareProject, setSelectedShareProject] = useState<Project | null>(null);
+
+  const handleShare = (project: Project) => {
+    setSelectedShareProject(project);
+  };
+
+  const handleUpdatePublicStatus = (id: string, isPublic: boolean) => {
+    setProjectsList((prev) =>
+      prev.map((p) => (p.id === id ? { ...p, is_public: isPublic } : p))
+    );
   };
 
   const hasActiveFilters = searchTerm.trim().length > 0 || typeFilter !== 'all' || statusFilter !== 'all';
@@ -371,8 +379,8 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
   }
 
   return (
-    <main dir="rtl" className="min-h-screen bg-background px-3 pb-16 pt-4 sm:px-4 lg:px-6">
-      <div className="mx-auto flex w-full max-w-[1500px] flex-col gap-4">
+    <main dir="rtl" className="min-h-screen w-full max-w-full min-w-0 overflow-x-hidden bg-background px-3 pb-16 pt-4 sm:px-4 lg:px-6">
+      <div className="mx-auto flex w-full max-w-[1500px] min-w-0 flex-col gap-4">
         <Card className="shadow-none">
           <CardHeader className="gap-3 p-4 sm:p-5 lg:flex-row lg:items-center lg:justify-between">
             <div className="space-y-1 text-right">
@@ -490,6 +498,12 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
           </CardContent>
         </Card>
       </div>
+
+      <ProjectShareModal
+        project={selectedShareProject}
+        onClose={() => setSelectedShareProject(null)}
+        onUpdatePublicStatus={handleUpdatePublicStatus}
+      />
     </main>
   );
 };
@@ -503,7 +517,7 @@ function ProjectsTable({
   projects: Project[];
   setActiveTab?: (tab: string) => void;
   onDelete: (id: string, name: string) => void;
-  onShare: (id: string, name: string) => void;
+  onShare: (project: Project) => void;
 }) {
   const { loadProject } = useProjectWorkspace();
 
@@ -515,36 +529,32 @@ function ProjectsTable({
   };
 
   return (
-    <div className="hidden rounded-xl border border-border bg-card shadow-sm lg:block">
+    <div className="hidden overflow-x-auto rounded-xl border border-border bg-card shadow-sm lg:block">
       <Table dir="rtl">
         <TableHeader className="bg-muted/30">
           <TableRow className="hover:bg-transparent">
-            <TableHead className="w-[45px] px-2 text-center"></TableHead>
-            <TableHead className="w-[50px] px-4">
-              <Checkbox className="translate-y-0.5" />
-            </TableHead>
-            <TableHead className="min-w-[280px]">
+            <TableHead className="min-w-[260px]">
               <div className="flex cursor-pointer items-center gap-2 font-bold text-foreground transition-colors hover:text-primary">
                 المشروع
                 <ArrowUpDown className="size-3.5 text-muted-foreground" />
               </div>
             </TableHead>
-            <TableHead className="w-[130px] font-bold text-foreground">إجراءات</TableHead>
-            <TableHead className="min-w-[150px]">
+            <TableHead className="w-[140px] font-bold text-foreground">إجراءات</TableHead>
+            <TableHead className="min-w-[140px]">
               <div className="flex cursor-pointer items-center gap-2 font-bold text-foreground transition-colors hover:text-primary">
                 النموذج
                 <ArrowUpDown className="size-3.5 text-muted-foreground" />
               </div>
             </TableHead>
-            <TableHead className="min-w-[180px] font-bold text-foreground">التقدم</TableHead>
-            <TableHead className="min-w-[110px]">
+            <TableHead className="min-w-[160px] font-bold text-foreground">التقدم</TableHead>
+            <TableHead className="min-w-[100px]">
               <div className="flex cursor-pointer items-center gap-2 font-bold text-foreground transition-colors hover:text-primary">
                 التقييم
                 <ArrowUpDown className="size-3.5 text-muted-foreground" />
               </div>
             </TableHead>
-            <TableHead className="min-w-[130px] font-bold text-foreground">الحالة</TableHead>
-            <TableHead className="min-w-[130px]">
+            <TableHead className="min-w-[120px] font-bold text-foreground">الحالة</TableHead>
+            <TableHead className="min-w-[120px]">
               <div className="flex cursor-pointer items-center gap-2 font-bold text-foreground transition-colors hover:text-primary">
                 آخر تعديل
                 <ArrowUpDown className="size-3.5 text-muted-foreground" />
@@ -579,41 +589,30 @@ function ProjectTableRow({
   project: Project;
   setActiveTab?: (tab: string) => void;
   onDelete: (id: string, name: string) => void;
-  onShare: (id: string, name: string) => void;
+  onShare: (project: Project) => void;
   onOpen: () => void;
 }) {
-  const [isFav, setIsFav] = useState(project.isFavorite);
+  const [isCopied, setIsCopied] = useState(false);
   const ProjectIcon = PROJECT_TYPE_META[project.type].icon;
+
+  const handleCopyLink = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const shareUrl = `${window.location.origin}/share/${project.id}`;
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setIsCopied(true);
+      setTimeout(() => setIsCopied(false), 2000);
+    } catch {
+      onShare(project);
+    }
+  };
+
+  const formattedDate = project.lastEdited === 'مثال' || !project.lastEdited
+    ? 'منذ يومين'
+    : project.lastEdited;
 
   return (
     <TableRow className="group transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
-      <TableCell className="px-2 py-4 text-center">
-        <Button
-          type="button"
-          variant="ghost"
-          size="icon-sm"
-          onClick={(e) => {
-            e.stopPropagation();
-            setIsFav(!isFav);
-          }}
-          className={cn(
-            "size-7 rounded-lg transition-colors",
-            isFav
-              ? "bg-amber-50 text-amber-600 hover:bg-amber-100"
-              : "text-muted-foreground hover:text-amber-600 hover:bg-muted"
-          )}
-          title={isFav ? "إلغاء حفظ المشروع" : "حفظ المشروع"}
-        >
-          {isFav ? (
-            <BookmarkCheck className="size-3.5 text-amber-600 fill-amber-600/20" />
-          ) : (
-            <Bookmark className="size-3.5" />
-          )}
-        </Button>
-      </TableCell>
-      <TableCell className="px-4 py-4">
-        <Checkbox className="translate-y-0.5 transition-opacity group-hover:opacity-100 opacity-40 data-[state=checked]:opacity-100" />
-      </TableCell>
       <TableCell className="py-4">
         <div className="flex min-w-0 items-center gap-3">
           <div className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-border bg-background shadow-sm">
@@ -636,24 +635,38 @@ function ProjectTableRow({
       </TableCell>
 
       <TableCell className="py-4">
-        <div className="flex items-center gap-1 opacity-0 transition-opacity group-hover:opacity-100">
+        <div className="flex items-center gap-1 opacity-100">
           <Button
             variant="ghost"
             size="icon-sm"
             onClick={onOpen}
-            title="تعديل"
-            className="size-8 text-muted-foreground hover:text-primary"
+            title="تعديل المشروع"
+            className="size-8 text-muted-foreground hover:bg-muted hover:text-primary"
           >
             <Pencil className="size-4" />
           </Button>
           <Button
             variant="ghost"
             size="icon-sm"
-            onClick={() => onShare(project.id, project.name)}
-            title="مشاركة"
-            className="size-8 text-muted-foreground hover:text-primary"
+            onClick={() => onShare(project)}
+            title="إعدادات إتاحة ومشاركة المشروع"
+            className="size-8 text-muted-foreground hover:bg-muted hover:text-primary"
           >
             <Share2 className="size-4" />
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon-sm"
+            onClick={handleCopyLink}
+            title={isCopied ? "تم نسخ الرابط!" : "نسخ رابط المشروع مباشر"}
+            className={cn(
+              "size-8 transition-colors",
+              isCopied
+                ? "bg-emerald-50 text-emerald-600 hover:bg-emerald-100"
+                : "text-muted-foreground hover:bg-muted hover:text-primary"
+            )}
+          >
+            {isCopied ? <Check className="size-4 text-emerald-600" /> : <Copy className="size-4" />}
           </Button>
           <Button
             variant="ghost"
@@ -686,9 +699,9 @@ function ProjectTableRow({
       </TableCell>
 
       <TableCell>
-        <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
-          <Clock className="size-4" />
-          {project.lastEdited}
+        <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground whitespace-nowrap">
+          <Clock className="size-4 text-muted-foreground/70" />
+          {formattedDate}
         </span>
       </TableCell>
     </TableRow>
@@ -704,7 +717,7 @@ function ProjectsMobileList({
   projects: Project[];
   setActiveTab?: (tab: string) => void;
   onDelete: (id: string, name: string) => void;
-  onShare: (id: string, name: string) => void;
+  onShare: (project: Project) => void;
 }) {
   const { loadProject } = useProjectWorkspace();
 
@@ -734,7 +747,7 @@ function ProjectsMobileList({
               <Button
                 variant="ghost"
                 size="icon-sm"
-                onClick={() => onShare(project.id, project.name)}
+                onClick={() => onShare(project)}
                 title="مشاركة"
                 className="text-muted-foreground hover:text-primary"
               >
@@ -826,4 +839,179 @@ function ProgressSummary({ project }: { project: Project }) {
 
 function getAverageProgress(project: Project) {
   return Math.round((project.progress.market + project.progress.product + project.progress.financial) / 3);
+}
+
+function ProjectShareModal({
+  project,
+  onClose,
+  onUpdatePublicStatus,
+}: {
+  project: Project | null;
+  onClose: () => void;
+  onUpdatePublicStatus?: (id: string, isPublic: boolean) => void;
+}) {
+  const [isPublic, setIsPublic] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const [isUpdating, setIsUpdating] = useState(false);
+
+  useEffect(() => {
+    if (project) {
+      setIsPublic(Boolean(project.is_public));
+      setCopied(false);
+    }
+  }, [project]);
+
+  if (!project) return null;
+
+  const shareUrl = typeof window !== 'undefined' ? `${window.location.origin}/share/${project.id}` : '';
+
+  const handleTogglePublic = async (checked: boolean) => {
+    setIsPublic(checked);
+    setIsUpdating(true);
+    try {
+      if (!project.isMockExample) {
+        await supabase
+          .from('business_canvas')
+          .update({ is_public: checked })
+          .eq('id', project.id);
+      }
+      onUpdatePublicStatus?.(project.id, checked);
+    } catch (err) {
+      console.error('Failed to update public status:', err);
+    } finally {
+      setIsUpdating(false);
+    }
+  };
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } catch (err) {
+      console.error('Copy failed:', err);
+    }
+  };
+
+  return (
+    <Dialog open={Boolean(project)} onOpenChange={(open) => !open && onClose()}>
+      <DialogContent className="sm:max-w-[480px]" dir="rtl">
+        <DialogHeader className="space-y-1 text-right">
+          <div className="flex items-center gap-2 text-primary">
+            <Share2 className="size-5" />
+            <DialogTitle className="text-lg font-bold">مشاركة المشروع</DialogTitle>
+          </div>
+          <DialogDescription className="text-xs text-muted-foreground">
+            تحديد إعدادات الخصوصية وإنشاء رابط عام لمشاركة هذا المشروع.
+          </DialogDescription>
+        </DialogHeader>
+
+        <div className="space-y-4 py-2">
+          {/* Project Details */}
+          <div className="flex items-center justify-between rounded-lg border border-border bg-muted/40 p-3">
+            <div className="flex items-center gap-3 min-w-0">
+              <div className="flex size-9 shrink-0 items-center justify-center rounded-md border border-border bg-background shadow-2xs">
+                <Globe className="size-4 text-muted-foreground" />
+              </div>
+              <div className="min-w-0 text-right">
+                <p className="truncate text-sm font-bold text-foreground">{project.name}</p>
+                <p className="text-xs text-muted-foreground">{project.sector}</p>
+              </div>
+            </div>
+            <Badge variant={isPublic ? 'success' : 'secondary'} className="shrink-0 text-xs font-semibold">
+              {isPublic ? 'عام' : 'خاص'}
+            </Badge>
+          </div>
+
+          {/* Privacy Status Switch Box */}
+          <div className="flex items-center justify-between rounded-xl border border-border p-4 bg-card shadow-2xs">
+            <div className="space-y-0.5 text-right pl-3">
+              <div className="flex items-center gap-2 font-bold text-sm text-foreground">
+                {isPublic ? (
+                  <>
+                    <Globe className="size-4 text-emerald-600" />
+                    <span>وضع عام (متاح بالرابط)</span>
+                  </>
+                ) : (
+                  <>
+                    <Lock className="size-4 text-amber-600" />
+                    <span>وضع خاص (لك فقط)</span>
+                  </>
+                )}
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                {isPublic
+                  ? 'يمكن لأي شخص لديه الرابط استعراض وقراءة بيانات المشروع.'
+                  : 'المشروع محمي ولا يمكن استعراضه إلا من خلال حسابك الخاص.'}
+              </p>
+            </div>
+            <Switch
+              checked={isPublic}
+              disabled={isUpdating}
+              onCheckedChange={handleTogglePublic}
+            />
+          </div>
+
+          {/* Public Link Copy Section */}
+          {isPublic ? (
+            <div className="space-y-2 rounded-xl border border-emerald-500/25 bg-emerald-50/50 p-4 dark:bg-emerald-950/20">
+              <label className="block text-xs font-bold text-foreground text-right">رابط المشاركة العام</label>
+              <div className="flex items-center gap-2">
+                <Input
+                  readOnly
+                  value={shareUrl}
+                  className="h-10 text-xs dir-ltr font-mono bg-background select-all border-emerald-300 dark:border-emerald-800"
+                />
+                <Button
+                  type="button"
+                  onClick={handleCopy}
+                  className={cn(
+                    "h-10 shrink-0 gap-1.5 px-4 font-semibold transition-colors",
+                    copied ? "bg-emerald-600 text-white hover:bg-emerald-700" : ""
+                  )}
+                  variant={copied ? "secondary" : "default"}
+                >
+                  {copied ? (
+                    <>
+                      <Check className="size-4" />
+                      <span>تم النسخ</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="size-4" />
+                      <span>نسخ الرابط</span>
+                    </>
+                  )}
+                </Button>
+              </div>
+              <div className="flex items-center justify-between pt-1">
+                <span className="text-[11px] font-medium text-emerald-700 dark:text-emerald-400">
+                  ✓ الرابط جاهز للمشاركة بشكل آمن
+                </span>
+                <a
+                  href={shareUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 text-[11px] font-semibold text-primary hover:underline"
+                >
+                  معاينة الرابط
+                  <ExternalLink className="size-3" />
+                </a>
+              </div>
+            </div>
+          ) : (
+            <div className="rounded-lg border border-dashed border-border p-4 text-center text-xs text-muted-foreground">
+              قم بتفعيل الوضع <strong>العام</strong> لإظهار وتوليد رابط المشاركة القابل للنسخ.
+            </div>
+          )}
+        </div>
+
+        <DialogFooter className="sm:justify-start">
+          <Button variant="outline" onClick={onClose} className="w-full sm:w-auto font-medium">
+            إغلاق
+          </Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+  );
 }

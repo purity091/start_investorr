@@ -81,8 +81,9 @@ export const UsersManagement: React.FC = () => {
       try {
         const { data, error } = await supabase
           .from('profiles')
-          .select('*')
-          .order('created_at', { ascending: false });
+          .select('id, full_name, email, role, status, created_at')
+          .order('created_at', { ascending: false })
+          .limit(100);
           
         if (error) throw error;
         

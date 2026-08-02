@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { supabase } from '@/lib/supabase';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
-import { Loader2, Mail, Lock, AlertCircle, ArrowRight, User as UserIcon, KeyRound, Sparkles } from 'lucide-react';
+import { Loader2, Mail, Lock, AlertCircle, ArrowLeft, User as UserIcon, Sparkles, Eye, EyeOff, CheckSquare, Square } from 'lucide-react';
 
 type AuthMode = 'login' | 'register' | 'forgot_password';
 
@@ -13,6 +12,8 @@ export const AuthScreen: React.FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [rememberMe, setRememberMe] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
@@ -21,6 +22,7 @@ export const AuthScreen: React.FC = () => {
     setError(null);
     setMessage(null);
     setPassword('');
+    setShowPassword(false);
   };
 
   const switchMode = (newMode: AuthMode) => {
@@ -33,11 +35,24 @@ export const AuthScreen: React.FC = () => {
     setIsLoading(true);
     resetState();
 
+    if (mode !== 'forgot_password' && password.length < 6) {
+      setError('كلمة المرور بسيطة جداً، يجب أن تتكون من 6 أرقام أو أحرف على الأقل.');
+      setIsLoading(false);
+      return;
+    }
+
     try {
       if (mode === 'login') {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
-        window.location.href = '/workspace'; // Force redirect to workspace on login
+
+        if (rememberMe) {
+          localStorage.setItem('khotta_remember_me', 'true');
+        } else {
+          localStorage.removeItem('khotta_remember_me');
+        }
+
+        window.location.href = '/workspace';
       } else if (mode === 'register') {
         const { error } = await supabase.auth.signUp({
           email,
@@ -48,7 +63,7 @@ export const AuthScreen: React.FC = () => {
           }
         });
         if (error) throw error;
-        setMessage('تم إرسال رابط التفعيل إلى بريدك الإلكتروني. يرجى مراجعة صندوق الوارد.');
+        setMessage('تم إنشاء الحساب بنجاح! إذا كانت المصادقة تتطلب تفعيلاً، مراجعة البريد الإلكتروني.');
       } else if (mode === 'forgot_password') {
         const { error } = await supabase.auth.resetPasswordForEmail(email, {
           redirectTo: `${window.location.origin}/reset-password`,
@@ -61,7 +76,9 @@ export const AuthScreen: React.FC = () => {
       if (err.message === 'Invalid login credentials') {
         setError('بيانات الدخول غير صحيحة، تأكد من البريد وكلمة المرور.');
       } else if (err.message.includes('User already registered')) {
-        setError('البريد الإلكتروني مسجل مسبقاً.');
+        setError('البريد الإلكتروني مسجل مسبقاً، يمكنك تسجيل الدخول مباشرة.');
+      } else if (err.message.includes('Password should be at least')) {
+        setError('كلمة المرور يجب أن تكون 6 أرقام أو أحرف على الأقل.');
       } else {
         setError(err.message || 'حدث خطأ غير متوقع. يرجى المحاولة لاحقاً.');
       }
@@ -71,10 +88,10 @@ export const AuthScreen: React.FC = () => {
   };
 
   return (
-    <div dir="rtl" className="min-h-screen w-full flex flex-col md:flex-row bg-slate-50 overflow-hidden font-['IBM_Plex_Sans_Arabic']">
+    <div dir="rtl" className="min-h-screen w-full flex flex-col md:flex-row bg-slate-50 overflow-hidden font-['IBM_Plex_Sans_Arabic'] text-right">
       
       {/* Visual / Branding Side */}
-      <div className="hidden md:flex md:w-1/2 relative bg-slate-900 overflow-hidden flex-col justify-between p-12">
+      <div className="hidden md:flex md:w-1/2 relative bg-slate-900 overflow-hidden flex-col justify-between p-12 text-right">
         {/* Animated Background */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-[-20%] right-[-10%] w-[70%] h-[70%] rounded-full bg-blue-600/20 blur-[120px] mix-blend-screen animate-pulse duration-1000" />
@@ -90,7 +107,7 @@ export const AuthScreen: React.FC = () => {
         </div>
 
         <div className="relative z-10 max-w-lg mt-20">
-          <Badge variant="outline" className="text-blue-300 border-blue-500/30 bg-blue-500/10 mb-6 px-4 py-1.5 backdrop-blur-md">
+          <Badge variant="outline" className="text-blue-300 border-blue-500/30 bg-blue-500/10 mb-6 px-4 py-1.5 backdrop-blur-md w-fit">
             <Sparkles className="size-4 ml-2 inline-block text-blue-300" />
             المنصة الأولى لبناء المشاريع
           </Badge>
@@ -127,31 +144,31 @@ export const AuthScreen: React.FC = () => {
             </h2>
             <p className="text-slate-500 text-sm font-medium">
               {mode === 'login' ? 'سجل دخولك لمتابعة العمل على مشاريعك الطموحة.' : 
-               mode === 'register' ? 'أنشئ حسابك للوصول إلى أدوات الذكاء الاصطناعي وبناء خطتك.' : 
+               mode === 'register' ? 'أنشئ حسابك بسهولة للوصول إلى أدوات الذكاء الاصطناعي.' : 
                'أدخل بريدك الإلكتروني وسنرسل لك رابطاً لتعيين كلمة مرور جديدة.'}
             </p>
           </div>
 
           <form onSubmit={handleAuth} className="space-y-5">
             {error && (
-              <div className="flex items-start gap-3 rounded-xl border border-red-200 bg-red-50 p-4 text-red-700 animate-in zoom-in-95 duration-300">
+              <div className="flex items-start gap-3 rounded-xl border border-red-200 bg-red-50 p-4 text-red-700 animate-in zoom-in-95 duration-300 text-right">
                 <AlertCircle className="h-5 w-5 shrink-0 mt-0.5" />
                 <p className="font-medium text-sm leading-relaxed">{error}</p>
               </div>
             )}
             
             {message && (
-              <div className="flex items-start gap-3 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-emerald-700 animate-in zoom-in-95 duration-300">
+              <div className="flex items-start gap-3 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-emerald-700 animate-in zoom-in-95 duration-300 text-right">
                 <AlertCircle className="h-5 w-5 shrink-0 mt-0.5" />
                 <p className="font-medium text-sm leading-relaxed">{message}</p>
               </div>
             )}
 
             {mode === 'register' && (
-              <div className="space-y-2">
+              <div className="space-y-2 text-right">
                 <label className="text-sm font-bold text-slate-700">الاسم الكامل</label>
                 <div className="relative group">
-                  <UserIcon className="absolute right-3.5 top-3.5 h-5 w-5 text-slate-400 group-focus-within:text-blue-600 transition-colors" />
+                  <UserIcon className="absolute right-3.5 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400 group-focus-within:text-blue-600 transition-colors pointer-events-none" />
                   <Input
                     type="text"
                     placeholder="محمد عبدالله"
@@ -164,10 +181,10 @@ export const AuthScreen: React.FC = () => {
               </div>
             )}
 
-            <div className="space-y-2">
+            <div className="space-y-2 text-right">
               <label className="text-sm font-bold text-slate-700">البريد الإلكتروني</label>
               <div className="relative group">
-                <Mail className="absolute right-3.5 top-3.5 h-5 w-5 text-slate-400 group-focus-within:text-blue-600 transition-colors" />
+                <Mail className="absolute right-3.5 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400 group-focus-within:text-blue-600 transition-colors pointer-events-none" />
                 <Input
                   type="email"
                   placeholder="name@example.com"
@@ -181,9 +198,11 @@ export const AuthScreen: React.FC = () => {
             </div>
             
             {mode !== 'forgot_password' && (
-              <div className="space-y-2">
+              <div className="space-y-2 text-right">
                 <div className="flex items-center justify-between">
-                  <label className="text-sm font-bold text-slate-700">كلمة المرور</label>
+                  <label className="text-sm font-bold text-slate-700">
+                    كلمة المرور <span className="text-xs font-normal text-slate-400">(6 أرقام/أحرف أو أكثر)</span>
+                  </label>
                   {mode === 'login' && (
                     <button 
                       type="button" 
@@ -195,17 +214,45 @@ export const AuthScreen: React.FC = () => {
                   )}
                 </div>
                 <div className="relative group">
-                  <Lock className="absolute right-3.5 top-3.5 h-5 w-5 text-slate-400 group-focus-within:text-blue-600 transition-colors" />
+                  <Lock className="absolute right-3.5 top-1/2 -translate-y-1/2 h-5 w-5 text-slate-400 group-focus-within:text-blue-600 transition-colors pointer-events-none" />
                   <Input
-                    type="password"
+                    type={showPassword ? 'text' : 'password'}
                     placeholder="••••••••"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
-                    className="pl-4 pr-11 py-6 bg-white border-slate-200 hover:border-slate-300 focus-visible:ring-blue-500 text-left shadow-sm rounded-xl transition-all tracking-widest"
+                    minLength={6}
+                    className="pl-12 pr-11 py-6 bg-white border-slate-200 hover:border-slate-300 focus-visible:ring-blue-500 text-left shadow-sm rounded-xl transition-all"
                     dir="ltr"
                   />
+                  {/* Eye Toggle Button */}
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors p-1 focus:outline-none"
+                    title={showPassword ? 'إخفاء كلمة المرور' : 'إظهار كلمة المرور'}
+                  >
+                    {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+                  </button>
                 </div>
+              </div>
+            )}
+
+            {/* Remember Me Checkbox */}
+            {mode === 'login' && (
+              <div className="flex items-center gap-2 pt-1 text-right">
+                <button
+                  type="button"
+                  onClick={() => setRememberMe(!rememberMe)}
+                  className="flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 transition-colors font-medium cursor-pointer select-none"
+                >
+                  {rememberMe ? (
+                    <CheckSquare className="h-5 w-5 text-blue-600 shrink-0" />
+                  ) : (
+                    <Square className="h-5 w-5 text-slate-300 shrink-0" />
+                  )}
+                  <span>حفظ تسجيل الدخول (تذكرني على هذا الجهاز)</span>
+                </button>
               </div>
             )}
 
@@ -215,13 +262,13 @@ export const AuthScreen: React.FC = () => {
               disabled={isLoading}
             >
               {isLoading ? (
-                <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                <Loader2 className="ml-2 h-5 w-5 animate-spin" />
               ) : (
-                <span className="flex items-center gap-2">
+                <span className="flex items-center justify-center gap-2">
                   {mode === 'login' ? 'تسجيل الدخول' : 
                    mode === 'register' ? 'إنشاء حساب جديد' : 
                    'إرسال رابط الاستعادة'}
-                  <ArrowRight className="h-5 w-5 transition-transform group-hover:-translate-x-1" />
+                  <ArrowLeft className="h-5 w-5 transition-transform group-hover:-translate-x-1" />
                 </span>
               )}
             </Button>
@@ -247,3 +294,4 @@ export const AuthScreen: React.FC = () => {
     </div>
   );
 };
+

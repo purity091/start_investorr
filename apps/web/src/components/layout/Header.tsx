@@ -171,9 +171,6 @@ export const Header: React.FC<HeaderProps> = ({
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-5"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
           </SidebarTrigger>
           <h1 className="truncate text-sm font-semibold text-foreground sm:text-base">{title}</h1>
-          <Badge variant={contextBadge.variant} className="rounded-md hidden sm:inline-flex">
-            {contextBadge.label}
-          </Badge>
           {/* Auto-save indicator */}
           {isSaving && (
             <span className="hidden sm:flex items-center gap-1.5 text-xs text-muted-foreground">

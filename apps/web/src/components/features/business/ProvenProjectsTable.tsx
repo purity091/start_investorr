@@ -147,8 +147,12 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
     () => [
       {
         id: 'save',
-        header: '',
-        size: 45,
+        header: () => (
+          <span title="الحفظ" className="flex items-center justify-center">
+            <Bookmark className="size-3.5 text-slate-400 mx-auto" />
+          </span>
+        ),
+        size: 44,
         cell: ({ row }) => {
           const project = row.original;
           const key = project.id || project.slug || project.name;
@@ -172,7 +176,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
               size="icon-sm"
               onClick={toggleSave}
               className={cn(
-                "size-8 rounded-lg transition-colors",
+                "size-7 rounded-md transition-colors mx-auto flex items-center justify-center p-0",
                 isSaved
                   ? "bg-indigo-50 text-indigo-600 hover:bg-indigo-100"
                   : "text-slate-400 hover:text-indigo-600 hover:bg-slate-100"
@@ -194,13 +198,13 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
         cell: ({ row }) => {
           const project = row.original;
           return (
-            <div className="flex items-center gap-2.5 max-w-[220px] sm:max-w-[240px]">
-              <div className="flex items-center justify-center size-9 rounded-xl bg-blue-600/10 text-blue-700 text-base font-serif font-black shadow-xs shrink-0 border border-blue-600/20">
+            <div className="flex items-center gap-2.5 max-w-[240px]">
+              <div className="flex items-center justify-center size-8 rounded-lg bg-blue-600/10 text-blue-700 text-xs font-bold shadow-xs shrink-0 border border-blue-600/20">
                 {project.name.charAt(0).toUpperCase()}
               </div>
               <div className="flex flex-col min-w-0">
                 <span className="font-bold text-slate-900 text-sm truncate" title={project.name}>{project.name}</span>
-                <span className="text-[11px] font-medium text-slate-500 truncate max-w-[160px] sm:max-w-[180px]" title={project.headline}>
+                <span className="text-[11px] font-medium text-slate-500 truncate max-w-[170px]" title={project.headline}>
                   {project.headline}
                 </span>
               </div>
@@ -649,7 +653,8 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
               <TableRow key={headerGroup.id} className="hover:bg-transparent border-none">
                 {headerGroup.headers.map((header) => {
                   let widthClass = '';
-                  if (header.id === 'name') widthClass = 'max-w-[200px] w-[200px]';
+                  if (header.id === 'save') widthClass = 'w-[44px] min-w-[44px] max-w-[44px] text-center px-1';
+                  if (header.id === 'name') widthClass = 'w-[240px] max-w-[260px] min-w-[200px]';
                   if (header.id === 'category') widthClass = 'w-[110px]';
                   if (header.id === 'sourceStatus') widthClass = 'w-[95px]';
                   if (header.id === 'country') widthClass = 'w-[100px]';
@@ -683,7 +688,8 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
                 >
                   {row.getVisibleCells().map((cell) => {
                     let widthClass = '';
-                    if (cell.column.id === 'name') widthClass = 'max-w-[200px] w-[200px]';
+                    if (cell.column.id === 'save') widthClass = 'w-[44px] min-w-[44px] max-w-[44px] text-center px-1';
+                    if (cell.column.id === 'name') widthClass = 'w-[240px] max-w-[260px] min-w-[200px]';
                     if (cell.column.id === 'category') widthClass = 'w-[110px]';
                     if (cell.column.id === 'sourceStatus') widthClass = 'w-[95px]';
                     if (cell.column.id === 'country') widthClass = 'w-[100px]';

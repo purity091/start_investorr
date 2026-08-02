@@ -66,7 +66,10 @@ const AppShell: React.FC = () => {
   const [sections, setSections] = useState<PlanSection[]>(INITIAL_SECTIONS);
   const [expandedSectionId, setExpandedSectionId] = useState<string | null>('1');
   const [saveStatus, setSaveStatus] = useState<'saved' | 'saving' | null>('saved');
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(true);
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(() => {
+    const savedState = localStorage.getItem('khotta_sidebar_collapsed');
+    return savedState !== null ? savedState === 'true' : false; // Default expanded for logged-in internal views
+  });
   const [isTourRunning, setIsTourRunning] = useState(false);
   const [subTabLabel, setSubTabLabel] = useState<string | null>(null);
   const [selectedCompanyId, setSelectedCompanyId] = useState<string | undefined>(undefined);
@@ -185,7 +188,14 @@ const AppShell: React.FC = () => {
 
   return (
     <TooltipProvider>
-      <SidebarProvider open={!isSidebarCollapsed} onOpenChange={(open) => setIsSidebarCollapsed(!open)}>
+      <SidebarProvider 
+        open={!isSidebarCollapsed} 
+        onOpenChange={(open) => {
+          const collapsed = !open;
+          setIsSidebarCollapsed(collapsed);
+          localStorage.setItem('khotta_sidebar_collapsed', String(collapsed));
+        }}
+      >
         <div className="flex min-h-screen w-full max-w-full bg-background">
           <Sidebar
             user={appUser}
@@ -195,7 +205,7 @@ const AppShell: React.FC = () => {
           />
 
           <SidebarInset
-            className="min-h-screen w-full max-w-full bg-background transition-[margin] duration-300"
+            className="min-h-screen w-full max-w-full min-w-0 overflow-x-hidden bg-background transition-[margin] duration-300"
           >
             <Header
               activeTab={activeTab}

@@ -64,7 +64,7 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
       try {
         const { data, error } = await supabase
           .from('business_canvas')
-          .select('id, project_title, canvas_data, updated_at')
+          .select('id, project_title, canvas_data->profile, canvas_data->currentStage, updated_at')
           .eq('user_id', authUser.id)
           .order('updated_at', { ascending: false })
           .limit(5);
@@ -74,18 +74,22 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
         if (data) {
           setProjectCount(data.length);
           setRecentProjects(
-            data.map((row) => ({
-              id: row.id,
-              name: row.project_title || 'مشروع بدون اسم',
-              type: row.canvas_data?.profile?.opportunityTitle ? 'دراسة جدوى' : 'مسودة',
-              status:
-                row.canvas_data?.currentStage === 'execution'
-                  ? 'جاهز للتنفيذ'
-                  : row.canvas_data?.currentStage === 'planning'
-                    ? 'قيد التخطيط'
-                    : 'قيد البناء',
-              updated: new Date(row.updated_at).toLocaleDateString('ar-SA'),
-            }))
+            data.map((row: any) => {
+              const profile = row.profile || row.canvas_data?.profile;
+              const currentStage = row.currentStage || row.canvas_data?.currentStage;
+              return {
+                id: row.id,
+                name: row.project_title || 'مشروع بدون اسم',
+                type: profile?.opportunityTitle ? 'دراسة جدوى' : 'مسودة',
+                status:
+                  currentStage === 'execution'
+                    ? 'جاهز للتنفيذ'
+                    : currentStage === 'planning'
+                      ? 'قيد التخطيط'
+                      : 'قيد البناء',
+                updated: new Date(row.updated_at).toLocaleDateString('ar-SA'),
+              };
+            })
           );
         }
       } catch (err) {

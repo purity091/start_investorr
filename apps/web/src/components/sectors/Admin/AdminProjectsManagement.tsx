@@ -63,8 +63,9 @@ export const AdminProjectsManagement: React.FC = () => {
       try {
         const { data: canvasData, error: canvasError } = await supabase
           .from('business_canvas')
-          .select('*')
-          .order('created_at', { ascending: false });
+          .select('id, user_id, project_title, created_at, canvas_data->execution')
+          .order('created_at', { ascending: false })
+          .limit(100);
 
         if (canvasError) throw canvasError;
 

@@ -477,8 +477,12 @@ function ProblemOpportunityTanStackTable({
     () => [
       {
         id: 'bookmark',
-        header: 'الحفظ',
-        size: 60,
+        header: () => (
+          <span title="الحفظ" className="flex items-center justify-center">
+            <Bookmark className="size-3.5 text-muted-foreground mx-auto" />
+          </span>
+        ),
+        size: 44,
         cell: ({ row }) => {
           const record = row.original;
           const isSaved = bookmarks[record.id];
@@ -486,9 +490,9 @@ function ProblemOpportunityTanStackTable({
             <Button
               type="button"
               variant="ghost"
-              size="sm"
+              size="icon-sm"
               className={cn(
-                'h-8 w-8 rounded-md p-0 text-xs font-medium transition-colors',
+                'size-7 rounded-md p-0 text-xs font-medium transition-colors mx-auto flex items-center justify-center',
                 isSaved
                   ? 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100'
                   : 'bg-muted/40 text-muted-foreground hover:bg-muted hover:text-foreground',
@@ -521,7 +525,7 @@ function ProblemOpportunityTanStackTable({
           const record = row.original;
           const isSaved = bookmarks[record.id];
           return (
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 max-w-[240px]">
               <HoverCard>
                 <HoverCardTrigger asChild>
                   <button
@@ -788,13 +792,18 @@ function ProblemOpportunityTanStackTable({
           <TableHeader className="bg-muted/50 border-b border-border/80">
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id} className="hover:bg-transparent border-none">
-                {headerGroup.headers.map((header) => (
-                  <TableHead key={header.id} className="h-11 text-right font-bold text-xs text-foreground">
-                    {header.isPlaceholder
-                      ? null
-                      : flexRender(header.column.columnDef.header, header.getContext())}
-                  </TableHead>
-                ))}
+                {headerGroup.headers.map((header) => {
+                  let widthClass = '';
+                  if (header.id === 'bookmark') widthClass = 'w-[44px] min-w-[44px] max-w-[44px] text-center px-1';
+                  if (header.id === 'title') widthClass = 'w-[240px] max-w-[260px] min-w-[200px]';
+                  return (
+                    <TableHead key={header.id} className={cn("h-11 text-right font-bold text-xs text-foreground", widthClass)}>
+                      {header.isPlaceholder
+                        ? null
+                        : flexRender(header.column.columnDef.header, header.getContext())}
+                    </TableHead>
+                  );
+                })}
               </TableRow>
             ))}
           </TableHeader>
@@ -808,11 +817,16 @@ function ProblemOpportunityTanStackTable({
                     data-state={isActive ? 'selected' : undefined}
                     className="group hover:bg-muted/40 transition-colors border-b border-border/60"
                   >
-                    {row.getVisibleCells().map((cell) => (
-                      <TableCell key={cell.id} className="py-2.5">
-                        {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                      </TableCell>
-                    ))}
+                    {row.getVisibleCells().map((cell) => {
+                      let widthClass = '';
+                      if (cell.column.id === 'bookmark') widthClass = 'w-[44px] min-w-[44px] max-w-[44px] text-center px-1';
+                      if (cell.column.id === 'title') widthClass = 'w-[240px] max-w-[260px] min-w-[200px]';
+                      return (
+                        <TableCell key={cell.id} className={cn("py-2.5", widthClass)}>
+                          {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                        </TableCell>
+                      );
+                    })}
                   </TableRow>
                 );
               })
