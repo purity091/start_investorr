@@ -1,0 +1,806 @@
+{
+  "id": "mailchimp",
+  "slug": "mailchimp",
+  "name": "ميل تشيمب (Mailchimp)",
+  "headline": "من مشروع جانبي ممول ذاتيًا إلى منصة نمو عالمية: قصة Mailchimp التي استحوذت عليها Intuit مقابل 12 مليار دولار",
+  "category": "B2B SaaS / البريد الإلكتروني وأتمتة التسويق وإدارة تفاعل العملاء",
+  "company": {
+    "location": "تأسست في أتلانتا، جورجيا، الولايات المتحدة عام 2001، وأصبحت جزءًا من شركة Intuit بعد إتمام الاستحواذ في 1 نوفمبر 2021",
+    "business_model": "نموذج SaaS متعدد المستويات يجمع بين خطة مجانية تمهيدية، وخطط اشتراك شهرية مدفوعة تتدرج وفق حجم جهات الاتصال وحدود الإرسال والميزات، وخيار Pay As You Go للإرسال غير المنتظم، إضافة إلى خدمات البريد والرسائل المعاملاتية عبر API أو SMTP"
+  },
+  "directory_snapshot": {
+    "monthly_revenue": "لا تفصح Intuit حاليًا عن إيراد Mailchimp الشهري كرقم مستقل. أقرب مرجع مالي مباشر وموثق: سجّلت Intuit إيرادات منسوبة إلى Mailchimp بقيمة 762 مليون دولار خلال الفترة من 1 نوفمبر 2021 حتى 31 يوليو 2022، أي متوسط حسابي يقارب 84.7 مليون دولار شهريًا خلال تلك الأشهر التسعة. هذا متوسط تاريخي محسوب، وليس تقديرًا للإيراد الحالي.",
+    "monthly_traffic": "لا تنشر Mailchimp رقمًا رسميًا موثقًا للزيارات الشهرية إلى موقعها. وبدل استخدام رقم تخميني، تعرض صفحة المطورين الرسمية مؤشرين تشغيليين: نحو 14 مليون عميل، ومعالجة قرابة مليار رسالة بريد إلكتروني يوميًا. وعند إعلان الاستحواذ في سبتمبر 2021، أعلنت Intuit وجود 13 مليون مستخدم إجمالي، و2.4 مليون مستخدم نشط شهريًا، و800 ألف عميل مدفوع."
+  },
+  "overview": {
+    "problem": {
+      "text": "ظهرت Mailchimp في سوق كانت فيه حلول البريد الإلكتروني في أوائل الألفينات كبيرة الحجم ومرتفعة التكلفة وموجهة أساسًا للمؤسسات. كانت الشركات الصغيرة تحتاج إلى وسيلة أبسط لبناء جمهورها وإرسال حملات احترافية والوصول إلى مزايا تسويقية كانت متاحة غالبًا للشركات الكبرى، دون شراء نظام مؤسسي معقد أو الاعتماد على فريق تقني متخصص.",
+      "impact": "هذا الحاجز كان يحد من قدرة الشركات الصغيرة على التواصل المنتظم مع العملاء، وقياس التفاعل، وبناء علاقات قابلة للتوسع. ومع غياب أداة سهلة وذاتية الخدمة، كانت الأنشطة الصغيرة تواجه تكلفة تشغيل أعلى وبطئًا في تنفيذ الحملات وضعفًا في الاستفادة من بيانات جمهورها."
+    },
+    "solution": {
+      "text": "بدأت Mailchimp كخدمة بريد إلكتروني بسيطة موجهة للشركات الصغيرة، ثم تطورت إلى منصة للبريد وأتمتة التسويق وإدارة الجمهور والتحليلات والتوصيات المدعومة بالبيانات والذكاء الاصطناعي. تتيح المنصة إنشاء الحملات، مزامنة بيانات العملاء، تشغيل الأتمتة بناءً على الأحداث والسلوك، وربط الأنظمة الخارجية عبر Marketing API وOAuth 2 وWebhooks. كما توفر Mailchimp Transactional لإرسال الرسائل الفردية المرتبطة بالأحداث، مثل تأكيد الطلب وإعادة تعيين كلمة المرور، عبر API أو SMTP."
+    }
+  },
+  "market_data": {
+    "target_audience": "الشركات الصغيرة والمتوسطة والشركات النامية، والمتاجر الإلكترونية، وفرق التسويق، والوكالات، وصناع المحتوى، والمطورون الذين يحتاجون إلى إدارة الجمهور وتشغيل حملات وأتمتة ودمج بيانات التسويق مع تطبيقاتهم وأنظمتهم.",
+    "market_size": "لم تنشر Mailchimp أو Intuit في المصادر الأولية التي تمت مراجعتها رقمًا مستقلاً وحديثًا وموثقًا لحجم السوق الكلي الخاص بـ Mailchimp. لذلك تم حذف التقديرات العامة غير المسندة. رسميًا، تصف Intuit المجال بأنه سوق عالمي لتفاعل العملاء وأتمتة التسويق للشركات الصغيرة والمتوسطة والـ Mid-Market.",
+    "growth_rate": "لا تفصح Intuit عن معدل نمو مستقل ثابت لـ Mailchimp في أحدث تقاريرها. أظهر تقرير السنة المالية 2024 زيادة قدرها 125 مليون دولار في إيرادات Mailchimp مقارنة بالسنة السابقة، مدفوعة بارتفاع الأسعار ونمو العملاء المدفوعين. وفي السنة المالية 2025 ارتفعت الإيرادات بمقدار 20 مليون دولار نتيجة ارتفاع الأسعار. وفي فبراير 2026 ذكرت Intuit أنها تتوقع عودة Mailchimp إلى نمو مزدوج الرقم في وقت لاحق بعد السنة المالية 2026."
+  },
+  "financials": {
+    "initial_investment": "تأسست Mailchimp عام 2001 على يد Ben Chestnut وDan Kurzius كمشروع جانبي داخل وكالة تصميم الويب Rocket Science Group، ونمت دون تمويل خارجي وفق المصادر الرسمية للشركة. هذا النمو الممول ذاتيًا منح المؤسسين سيطرة طويلة المدى على المنتج واتجاه الشركة.",
+    "valuation": "بلغت القيمة العادلة لمقابل الاستحواذ 12.0 مليار دولار عند إتمام الصفقة في 1 نوفمبر 2021، وتكوّنت من نحو 5.7 مليار دولار نقدًا و10.1 مليون سهم من أسهم Intuit قُدرت قيمتها بنحو 6.3 مليار دولار.",
+    "revenue_streams": [
+      "اشتراكات شهرية في خطط التسويق المدفوعة وفق حجم جهات الاتصال وحدود الإرسال ومستوى الميزات",
+      "خطة مجانية تمهيدية بحدود استخدام أقل، تُستخدم كبوابة لتجربة المنصة قبل الترقية",
+      "خيار Pay As You Go القائم على شراء أرصدة للإرسال غير المنتظم أو الموسمي",
+      "Mailchimp Transactional لإرسال البريد الفردي المرتبط بالأحداث عبر Transactional API أو SMTP، ويتطلب استخدامه الكامل خطة مؤهلة",
+      "إضافات وخدمات مدفوعة مثل الرسائل النصية، الأتمتة المتقدمة، الاختبارات، التقسيم التنبؤي، الدعم ذي الأولوية وخدمات الإعداد"
+    ]
+  },
+  "lessons": [
+    {
+      "title": "حل مشكلة محددة لشريحة مهملة أولًا",
+      "description": "بدأت Mailchimp كبديل أبسط وأقل تعقيدًا لبرمجيات البريد الإلكتروني المؤسسية الموجهة للشركات الكبرى. التركيز على الشركات الصغيرة منح المنتج شريحة واضحة واحتياجًا يمكن خدمته بتجربة ذاتية وسهلة."
+    },
+    {
+      "title": "التمويل الذاتي يفرض انضباطًا في بناء القيمة",
+      "description": "النمو دون تمويل خارجي يعني أن استمرار الشركة اعتمد على منتج يستخدمه العملاء ويدفعون مقابله. هذه الآلية تشجع على الربحية، وضبط التكاليف، والاستماع المباشر إلى احتياجات السوق بدل بناء نمو يعتمد فقط على رأس المال."
+    },
+    {
+      "title": "نموذج الاستخدام المجاني ينجح عندما يقود إلى ترقية منطقية",
+      "description": "توفر Mailchimp نقطة دخول مجانية محدودة، ثم ترتبط الترقية بحجم الجمهور والإرسال والحاجة إلى قدرات أكثر تقدمًا. بهذه الطريقة ينمو إنفاق العميل بالتوازي مع نمو استخدامه وقيمة المنصة بالنسبة إليه."
+    },
+    {
+      "title": "التوسع الأقوى يبدأ من أصل بيانات واحد",
+      "description": "توسعت Mailchimp من البريد الإلكتروني إلى الأتمتة وإدارة الجمهور والتحليلات والقنوات الإضافية. بقيت بيانات العميل وسلوكه هي المركز الذي يربط هذه الخدمات، ما يزيد قيمة المنصة كلما اتسع استخدامها."
+    },
+    {
+      "title": "الواجهات البرمجية والتكاملات توسع التوزيع",
+      "description": "Marketing API وOAuth 2 وWebhooks والتكاملات الجاهزة تسمح بربط Mailchimp بالمتاجر وأنظمة CRM والتطبيقات. المنتج هنا لا يعمل كأداة منفصلة فقط، وإنما يصبح جزءًا من البنية التشغيلية والتسويقية للعميل."
+    },
+    {
+      "title": "الشفافية في البيانات أقوى من الأرقام المبالغ فيها",
+      "description": "لا تنشر Intuit حاليًا جميع مؤشرات Mailchimp بصورة مستقلة. الملف الاحترافي يجب أن يميز بوضوح بين الرقم الرسمي، والرقم التاريخي، والمتوسط الحسابي، والتحليل؛ لأن المصداقية أهم من ملء كل حقل برقم غير قابل للتحقق."
+    }
+  ],
+  "tools": [
+    "Mailchimp Marketing API لإدارة الجمهور والحملات والأتمتة ومزامنة البيانات",
+    "Mailchimp Transactional API لإرسال الرسائل الفردية المرتبطة بالأحداث",
+    "SMTP Integration للبريد المعاملاتي",
+    "OAuth 2 لربط تطبيقات الجهات الخارجية بحسابات مستخدمي Mailchimp",
+    "Webhooks لمزامنة تغييرات الجمهور والأحداث مع الأنظمة الخارجية",
+    "Batch Requests وEvents Endpoints لتنفيذ العمليات الكبيرة وتشغيل الأتمتة على نطاق واسع",
+    "أكثر من 300 تكامل منشور مع أدوات التجارة والمحتوى والمبيعات والإنتاجية",
+    "أدوات أتمتة وتحليلات وتوصيات مدعومة بالبيانات والذكاء الاصطناعي",
+    "Transactional SMS للرسائل النصية المرتبطة بالطلبات والتنبيهات والأحداث في البيئات المدعومة"
+  ],
+  "verification": {
+    "status": "verified_from_primary_sources_with_field_level_evidence",
+    "verified_on": "2026-08-02",
+    "source_policy": "يعتمد الملف على صفحات Mailchimp وIntuit الرسمية وإفصاحات Intuit لدى هيئة SEC. تحتوي evidence_map على قيمة كل حقل وحالة التحقق ودرجة الثقة وملخص الدليل ومراجع كاملة توضح ما يثبته كل مصدر.",
+    "important_notes": [
+      "متوسط الإيراد الشهري البالغ 84.7 مليون دولار هو عملية حسابية: 762 مليون دولار ÷ 9 أشهر، وليس رقمًا شهريًا أعلنته الشركة.",
+      "أرقام المستخدمين النشطين والعملاء المدفوعين مرتبطة بإعلان الاستحواذ في سبتمبر 2021، وليست أرقامًا حالية.",
+      "رقم 14 مليون عميل ومليار رسالة يوميًا مأخوذ من صفحة Mailchimp Developer الرسمية التي كانت متاحة وقت التحقق.",
+      "قسم lessons يمثل استخلاصًا تحليليًا مبنيًا على الحقائق الموثقة، وليس تصريحات حرفية صادرة عن الشركة."
+    ],
+    "evidence_map_version": "2.0"
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "تأسست في أتلانتا، جورجيا، الولايات المتحدة عام 2001، وأصبحت جزءًا من شركة Intuit بعد إتمام الاستحواذ في 1 نوفمبر 2021",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "historical_company_fact",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تؤكد Mailchimp أنها تأسست في أتلانتا عام 2001، ويؤكد إفصاح إتمام الصفقة أن الشركة كانت قائمة في أتلانتا وأن Intuit أكملت الاستحواذ في 1 نوفمبر 2021.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-01",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Mailchimp — Mailchimp's Story",
+          "publisher": "Mailchimp",
+          "source_type": "official_company_page",
+          "url": "https://mailchimp.com/about/",
+          "evidence_type": "direct",
+          "source_locator": "About Mailchimp → Our founders / company history",
+          "supports": "تأسيس Mailchimp في أتلانتا عام 2001 ونشأتها كخدمة بريد إلكتروني للشركات الصغيرة."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Intuit Completes Acquisition of Mailchimp",
+          "publisher": "U.S. Securities and Exchange Commission / Intuit",
+          "source_type": "sec_filing_exhibit",
+          "url": "https://www.sec.gov/Archives/edgar/data/896878/000119312521314683/d147355dex991.htm",
+          "evidence_type": "direct",
+          "source_locator": "SEC exhibit → Completion announcement and About Mailchimp",
+          "supports": "إتمام Intuit استحواذها على Mailchimp وكون Mailchimp مؤسسة في 2001 ومقرها في أتلانتا وقت الصفقة.",
+          "published_on": "2021-11-01"
+        }
+      ]
+    },
+    "$.company.business_model": {
+      "field_value": "نموذج SaaS متعدد المستويات يجمع بين خطة مجانية تمهيدية، وخطط اشتراك شهرية مدفوعة تتدرج وفق حجم جهات الاتصال وحدود الإرسال والميزات، وخيار Pay As You Go للإرسال غير المنتظم، إضافة إلى خدمات البريد والرسائل المعاملاتية عبر API أو SMTP",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "current_product_and_pricing_fact",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "توثق صفحات Mailchimp الرسمية وجود خطة مجانية وخطط شهرية مدفوعة تتحدد تكلفتها وفق نوع الخطة وشريحة عدد جهات الاتصال وحدود الإرسال، إضافة إلى خيار Pay As You Go المعتمد على أرصدة البريد وخدمة البريد المعاملاتي.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-06",
+        "SRC-07",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "About Mailchimp Pricing Plans",
+          "publisher": "Mailchimp",
+          "source_type": "official_help_documentation",
+          "url": "https://mailchimp.com/help/about-mailchimp-pricing-plans/",
+          "evidence_type": "direct",
+          "source_locator": "About Mailchimp Pricing Plans → Types of Marketing plans",
+          "supports": "أربع خطط تسويق: Free وEssentials وStandard وPremium، مع تسعير شهري يرتبط بعدد جهات الاتصال وحدود الإرسال والميزات."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "About the Pay As You Go Plan",
+          "publisher": "Mailchimp",
+          "source_type": "official_help_documentation",
+          "url": "https://mailchimp.com/help/about-the-pay-as-you-go-plan/",
+          "evidence_type": "direct",
+          "source_locator": "About the Pay As You Go Plan → How the plan works",
+          "supports": "خيار Pay As You Go يستخدم أرصدة مدفوعة، ويستهلك كل إرسال فردي رصيدًا واحدًا، وهو مخصص للإرسال غير المنتظم أو الموسمي."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Mailchimp Transactional Documentation",
+          "publisher": "Mailchimp",
+          "source_type": "official_api_documentation",
+          "url": "https://mailchimp.com/developer/transactional/docs/",
+          "evidence_type": "direct",
+          "source_locator": "Transactional Documentation → Overview, API Reference, SMTP Integration",
+          "supports": "وجود منتج Mailchimp Transactional وإمكانية الإرسال البرمجي عبر API أو تكامل SMTP."
+        }
+      ],
+      "limitations": "الأسعار والقواعد التفصيلية قابلة للتغيير حسب التاريخ والمنطقة والعملة؛ لذلك يصف الحقل بنية نموذج الإيرادات ولا يثبت سعرًا ثابتًا."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "لا تفصح Intuit حاليًا عن إيراد Mailchimp الشهري كرقم مستقل. أقرب مرجع مالي مباشر وموثق: سجّلت Intuit إيرادات منسوبة إلى Mailchimp بقيمة 762 مليون دولار خلال الفترة من 1 نوفمبر 2021 حتى 31 يوليو 2022، أي متوسط حسابي يقارب 84.7 مليون دولار شهريًا خلال تلك الأشهر التسعة. هذا متوسط تاريخي محسوب، وليس تقديرًا للإيراد الحالي.",
+      "verification_status": "verified_historical_calculation",
+      "confidence": "high",
+      "claim_type": "derived_financial_metric",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "لا تنشر Intuit إيراد Mailchimp الشهري الحالي بصورة مستقلة. الرقم الشهري المذكور هو متوسط حسابي تاريخي مبني على إيراد رسمي قدره 762 مليون دولار منسوب إلى Mailchimp خلال الفترة التي أُدرجت فيها نتائجه بعد الاستحواذ في السنة المالية 2022.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Intuit Fiscal 2024 Form 10-K — Mailchimp Acquisition Note",
+          "publisher": "U.S. Securities and Exchange Commission / Intuit",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/896878/000089687824000039/intu-20240731.htm",
+          "evidence_type": "direct",
+          "source_locator": "Form 10-K → Note 7, Business Combinations → Mailchimp",
+          "supports": "تقرير Intuit يذكر أن نتائج السنة المالية المنتهية في 31 يوليو 2022 تضمنت 762 مليون دولار من الإيرادات المنسوبة إلى Mailchimp، بعد الاستحواذ في 1 نوفمبر 2021.",
+          "published_on": "2024-09-04"
+        }
+      ],
+      "calculation": {
+        "official_amount_usd": 762000000,
+        "included_period_start": "2021-11-01",
+        "included_period_end": "2022-07-31",
+        "included_months": 9,
+        "formula": "762,000,000 ÷ 9",
+        "calculated_monthly_average_usd": 84666666.67,
+        "rounded_display_value": "نحو 84.7 مليون دولار شهريًا",
+        "calculation_status": "derived_from_official_historical_data"
+      },
+      "limitations": "هذا متوسط تاريخي حسابي للفترة بعد الاستحواذ، وليس إفصاحًا عن إيراد شهري حالي أو معدل تشغيل حالي."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "لا تنشر Mailchimp رقمًا رسميًا موثقًا للزيارات الشهرية إلى موقعها. وبدل استخدام رقم تخميني، تعرض صفحة المطورين الرسمية مؤشرين تشغيليين: نحو 14 مليون عميل، ومعالجة قرابة مليار رسالة بريد إلكتروني يوميًا. وعند إعلان الاستحواذ في سبتمبر 2021، أعلنت Intuit وجود 13 مليون مستخدم إجمالي، و2.4 مليون مستخدم نشط شهريًا، و800 ألف عميل مدفوع.",
+      "verification_status": "verified_using_operational_proxies",
+      "confidence": "high",
+      "claim_type": "operational_scale_metric_not_web_traffic",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "لم يُعثر في المصادر الرسمية على رقم لزيارات موقع Mailchimp الشهرية. لذلك يعرض الحقل مؤشرات تشغيل موثقة بدل اختلاق رقم زيارات: 14 مليون عميل، مليار رسالة يوميًا، وأكثر من 300 تكامل في صفحة المطورين؛ وأرقام تاريخية وقت إعلان الاستحواذ شملت 13 مليون مستخدم و2.4 مليون مستخدم نشط شهريًا و800 ألف عميل مدفوع.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-08",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "Mailchimp Developer",
+          "publisher": "Mailchimp",
+          "source_type": "official_developer_portal",
+          "url": "https://mailchimp.com/developer/",
+          "evidence_type": "direct",
+          "source_locator": "Mailchimp Developer → You’ll be in good company",
+          "supports": "صفحة المطورين تعرض 14 مليون عميل، وتسليم مليار رسالة بريد يوميًا، وأكثر من 300 تكامل."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Intuit to Acquire Mailchimp",
+          "publisher": "Intuit Investor Relations",
+          "source_type": "official_investor_press_release",
+          "url": "https://investors.intuit.com/news-events/press-releases/detail/162/intuit-to-acquire-mailchimp",
+          "evidence_type": "direct",
+          "source_locator": "Intuit acquisition announcement → Global customer reach",
+          "supports": "وقت إعلان الصفقة في سبتمبر 2021 أعلنت Intuit وجود 13 مليون مستخدم إجمالي و2.4 مليون مستخدم نشط شهريًا و800 ألف عميل مدفوع.",
+          "published_on": "2021-09-13"
+        }
+      ],
+      "limitations": "اسم الحقل موروث من القالب، لكن محتواه لا يمثل زيارات الموقع. القيم الحالية المنشورة في صفحة المطورين هي مؤشرات عملاء وتسليم بريد وتكاملات."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "ظهرت Mailchimp في سوق كانت فيه حلول البريد الإلكتروني في أوائل الألفينات كبيرة الحجم ومرتفعة التكلفة وموجهة أساسًا للمؤسسات. كانت الشركات الصغيرة تحتاج إلى وسيلة أبسط لبناء جمهورها وإرسال حملات احترافية والوصول إلى مزايا تسويقية كانت متاحة غالبًا للشركات الكبرى، دون شراء نظام مؤسسي معقد أو الاعتماد على فريق تقني متخصص.",
+        "impact": "هذا الحاجز كان يحد من قدرة الشركات الصغيرة على التواصل المنتظم مع العملاء، وقياس التفاعل، وبناء علاقات قابلة للتوسع. ومع غياب أداة سهلة وذاتية الخدمة، كانت الأنشطة الصغيرة تواجه تكلفة تشغيل أعلى وبطئًا في تنفيذ الحملات وضعفًا في الاستفادة من بيانات جمهورها."
+      },
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "historical_problem_statement",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تصف Mailchimp نشأتها كبديل لبرمجيات البريد الإلكتروني الكبيرة والمكلفة والمعقدة في أوائل الألفينات، بهدف إتاحة قدرات التسويق الرقمي للشركات الصغيرة.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Mailchimp — Mailchimp's Story",
+          "publisher": "Mailchimp",
+          "source_type": "official_company_page",
+          "url": "https://mailchimp.com/about/",
+          "evidence_type": "direct",
+          "source_locator": "About Mailchimp → Our founders / founding problem",
+          "supports": "Mailchimp بدأت كبديل لبرمجيات البريد المكلفة والمرهقة، ومنحت أصحاب الشركات الصغيرة قدرات تسويق رقمي مشابهة لما لدى المنافسين الأكبر."
+        }
+      ],
+      "limitations": "قسم impact يتضمن تفسيرًا تحليليًا للآثار التجارية المنطقية للتعقيد والتكلفة، وليس رقمًا ماليًا أعلنته Mailchimp."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "بدأت Mailchimp كخدمة بريد إلكتروني بسيطة موجهة للشركات الصغيرة، ثم تطورت إلى منصة للبريد وأتمتة التسويق وإدارة الجمهور والتحليلات والتوصيات المدعومة بالبيانات والذكاء الاصطناعي. تتيح المنصة إنشاء الحملات، مزامنة بيانات العملاء، تشغيل الأتمتة بناءً على الأحداث والسلوك، وربط الأنظمة الخارجية عبر Marketing API وOAuth 2 وWebhooks. كما توفر Mailchimp Transactional لإرسال الرسائل الفردية المرتبطة بالأحداث، مثل تأكيد الطلب وإعادة تعيين كلمة المرور، عبر API أو SMTP."
+      },
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "product_capability_summary",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "المصادر الرسمية تدعم وصف Mailchimp كمنصة بريد وأتمتة تسويق وإدارة جمهور متعددة القنوات، مع مزامنة بيانات وواجهات API وWebhooks وOAuth، وخدمة رسائل معاملاتيّة تعتمد على الأحداث.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-09",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Mailchimp — Mailchimp's Story",
+          "publisher": "Mailchimp",
+          "source_type": "official_company_page",
+          "url": "https://mailchimp.com/about/",
+          "evidence_type": "direct",
+          "source_locator": "About Mailchimp → Platform description",
+          "supports": "Mailchimp منصة للبريد وأتمتة التسويق تستخدم توصيات قائمة على البيانات وقنوات تشمل البريد والاجتماعي وصفحات الهبوط والإعلانات."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Mailchimp Marketing API",
+          "publisher": "Mailchimp",
+          "source_type": "official_api_documentation",
+          "url": "https://mailchimp.com/developer/marketing/",
+          "evidence_type": "direct",
+          "source_locator": "Marketing API → Integrate your data",
+          "supports": "Marketing API يدعم مزامنة البيانات وطلبات batch وWebhooks والوصول إلى حسابات المستخدمين عبر OAuth 2."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Mailchimp Transactional Documentation",
+          "publisher": "Mailchimp",
+          "source_type": "official_api_documentation",
+          "url": "https://mailchimp.com/developer/transactional/docs/",
+          "evidence_type": "direct",
+          "source_locator": "Transactional Documentation → Overview and documentation index",
+          "supports": "Mailchimp Transactional يرسل رسائل مستهدفة مرتبطة بالأحداث ويدعم API وSMTP وWebhooks والقوالب."
+        }
+      ]
+    },
+    "$.market_data.target_audience": {
+      "field_value": "الشركات الصغيرة والمتوسطة والشركات النامية، والمتاجر الإلكترونية، وفرق التسويق، والوكالات، وصناع المحتوى، والمطورون الذين يحتاجون إلى إدارة الجمهور وتشغيل حملات وأتمتة ودمج بيانات التسويق مع تطبيقاتهم وأنظمتهم.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "target_customer_definition",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تصف Mailchimp وIntuit المنتج بأنه منصة للشركات الصغيرة والمتوسطة والشركات النامية، وتذكر الاستخدام عبر التجارة الإلكترونية والفرق التسويقية والتكاملات البرمجية.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Mailchimp — Mailchimp's Story",
+          "publisher": "Mailchimp",
+          "source_type": "official_company_page",
+          "url": "https://mailchimp.com/about/",
+          "evidence_type": "direct",
+          "source_locator": "About Mailchimp → Founders and product evolution",
+          "supports": "Mailchimp صُممت تاريخيًا للشركات الصغيرة وتوسعت لخدمة شركات وفرق تسويق بأحجام مختلفة."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Intuit to Acquire Mailchimp",
+          "publisher": "Intuit Investor Relations",
+          "source_type": "official_investor_press_release",
+          "url": "https://investors.intuit.com/news-events/press-releases/detail/162/intuit-to-acquire-mailchimp",
+          "evidence_type": "direct",
+          "source_locator": "Intuit acquisition announcement → Company and strategic description",
+          "supports": "Intuit تصف Mailchimp بأنها منصة عالمية لتفاعل العملاء والتسويق للشركات الصغيرة والمتوسطة والـ Mid-Market.",
+          "published_on": "2021-09-13"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Mailchimp Developer",
+          "publisher": "Mailchimp",
+          "source_type": "official_developer_portal",
+          "url": "https://mailchimp.com/developer/",
+          "evidence_type": "direct",
+          "source_locator": "Mailchimp Developer → Developer platform and integrations",
+          "supports": "بوابة المطورين موجهة لبناء تكاملات تربط Mailchimp بالتجارة الإلكترونية والتسويق وأنظمة الأعمال."
+        }
+      ]
+    },
+    "$.market_data.market_size": {
+      "field_value": "لم تنشر Mailchimp أو Intuit في المصادر الأولية التي تمت مراجعتها رقمًا مستقلاً وحديثًا وموثقًا لحجم السوق الكلي الخاص بـ Mailchimp. لذلك تم حذف التقديرات العامة غير المسندة. رسميًا، تصف Intuit المجال بأنه سوق عالمي لتفاعل العملاء وأتمتة التسويق للشركات الصغيرة والمتوسطة والـ Mid-Market.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "non_disclosure_statement",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "المصادر الأولية التي تمت مراجعتها تصف فئة السوق والعملاء المستهدفين، لكنها لا تقدم رقمًا حديثًا مستقلًا لحجم سوق Mailchimp. لذلك تم إبقاء الحقل صريحًا بدل استخدام تقدير سوقي غير رسمي.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Intuit to Acquire Mailchimp",
+          "publisher": "Intuit Investor Relations",
+          "source_type": "official_investor_press_release",
+          "url": "https://investors.intuit.com/news-events/press-releases/detail/162/intuit-to-acquire-mailchimp",
+          "evidence_type": "direct",
+          "source_locator": "Intuit acquisition announcement → Strategic rationale and customer market",
+          "supports": "الإعلان الرسمي يحدد السوق المستهدف بأنه تفاعل العملاء وأتمتة التسويق للشركات الصغيرة والمتوسطة والـ Mid-Market، دون نشر رقم مستقل حديث لحجم السوق الخاص بـ Mailchimp.",
+          "published_on": "2021-09-13"
+        }
+      ],
+      "limitations": "الحقل لا يقدم رقم TAM أو SAM لأن مصدرًا أوليًا حديثًا ومباشرًا لم يُعثر عليه ضمن المصادر الرسمية المستخدمة."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا تفصح Intuit عن معدل نمو مستقل ثابت لـ Mailchimp في أحدث تقاريرها. أظهر تقرير السنة المالية 2024 زيادة قدرها 125 مليون دولار في إيرادات Mailchimp مقارنة بالسنة السابقة، مدفوعة بارتفاع الأسعار ونمو العملاء المدفوعين. وفي السنة المالية 2025 ارتفعت الإيرادات بمقدار 20 مليون دولار نتيجة ارتفاع الأسعار. وفي فبراير 2026 ذكرت Intuit أنها تتوقع عودة Mailchimp إلى نمو مزدوج الرقم في وقت لاحق بعد السنة المالية 2026.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "multi_period_financial_trend",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "توضح إفصاحات Intuit اتجاه النمو بدل نسبة نمو واحدة ثابتة: زيادة 125 مليون دولار في السنة المالية 2024 مدفوعة بارتفاع الأسعار ونمو العملاء المدفوعين، ثم زيادة 20 مليون دولار في 2025 مدفوعة بالأسعار، مع توقع عودة Mailchimp إلى نمو مزدوج الرقم في فترة بعد السنة المالية 2026.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-11",
+        "SRC-12",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "Intuit Fiscal 2024 Form 10-K",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/896878/000089687824000039/intu-20240731.htm",
+          "evidence_type": "direct",
+          "source_locator": "Fiscal 2024 Form 10-K → Online Ecosystem revenue discussion",
+          "supports": "زادت إيرادات Mailchimp بمقدار 125 مليون دولار في السنة المالية 2024، بسبب ارتفاع الأسعار الفعلية ونمو العملاء المدفوعين."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Intuit Fiscal 2025 Form 10-K",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/896878/000089687825000035/intu-20250731.htm",
+          "evidence_type": "direct",
+          "source_locator": "Fiscal 2025 Form 10-K → Online Services revenue discussion",
+          "supports": "زادت إيرادات Mailchimp بمقدار 20 مليون دولار في السنة المالية 2025، وعزت Intuit الزيادة إلى ارتفاع الأسعار الفعلية."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Intuit Fiscal 2026 Second-Quarter Earnings Release",
+          "publisher": "U.S. Securities and Exchange Commission / Intuit",
+          "source_type": "sec_filing_exhibit",
+          "url": "https://www.sec.gov/Archives/edgar/data/896878/000089687826000012/fy26q2earningspressrelease.htm",
+          "evidence_type": "direct",
+          "source_locator": "Fiscal 2026 Q2 earnings release → Segment guidance",
+          "supports": "في 26 فبراير 2026 قالت Intuit إنها تتوقع عودة Mailchimp إلى نمو مزدوج الرقم في وقت ما بعد السنة المالية 2026.",
+          "published_on": "2026-02-26"
+        }
+      ],
+      "limitations": "المصادر لا تنشر معدل نمو مستقلًا واحدًا وثابتًا لـ Mailchimp لكل فترة؛ لذلك يعرض الحقل الاتجاه المالي المعلن وتوقيت التوقع."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "تأسست Mailchimp عام 2001 على يد Ben Chestnut وDan Kurzius كمشروع جانبي داخل وكالة تصميم الويب Rocket Science Group، ونمت دون تمويل خارجي وفق المصادر الرسمية للشركة. هذا النمو الممول ذاتيًا منح المؤسسين سيطرة طويلة المدى على المنتج واتجاه الشركة.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "funding_history",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تؤكد مادة رسمية منشورة من Mailchimp أن الشركة تأسست في 2001 على يد Ben Chestnut وDan Kurzius دون تمويل خارجي، بينما توضح صفحة الشركة أنها بدأت كمشروع جانبي داخل وكالة Rocket Science Group.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-02",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Bootstrapping Strategies for Business Success",
+          "publisher": "Mailchimp",
+          "source_type": "official_company_resource",
+          "url": "https://mailchimp.com/resources/bootstrapping/",
+          "evidence_type": "direct",
+          "source_locator": "Bootstrapping resource → Successful bootstrapped companies → Mailchimp",
+          "supports": "Mailchimp تأسست عام 2001 بواسطة Ben Chestnut وDan Kurzius باستخدام صفر تمويل خارجي."
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Mailchimp — Mailchimp's Story",
+          "publisher": "Mailchimp",
+          "source_type": "official_company_page",
+          "url": "https://mailchimp.com/about/",
+          "evidence_type": "direct",
+          "source_locator": "About Mailchimp → Our founders",
+          "supports": "المؤسسان كانا يديران وكالة تصميم ويب وأطلقا بالتوازي خدمة بريد إلكتروني للشركات الصغيرة."
+        }
+      ],
+      "limitations": "عبارة «صفر تمويل خارجي» لا تعني أن التشغيل لم يحتج أي أموال؛ بل تعني عدم الاعتماد على مستثمرين خارجيين وفق المصدر الرسمي."
+    },
+    "$.financials.valuation": {
+      "field_value": "بلغت القيمة العادلة لمقابل الاستحواذ 12.0 مليار دولار عند إتمام الصفقة في 1 نوفمبر 2021، وتكوّنت من نحو 5.7 مليار دولار نقدًا و10.1 مليون سهم من أسهم Intuit قُدرت قيمتها بنحو 6.3 مليار دولار.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "completed_acquisition_consideration",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "إفصاح إتمام الصفقة يثبت أن Intuit أغلقت الاستحواذ بمقابل يقارب 5.7 مليار دولار نقدًا و10.1 مليون سهم بقيمة عادلة تقارب 6.3 مليار دولار، أي نحو 12.0 مليار دولار إجمالًا قبل بعض منح الموظفين.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-04",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Intuit Completes Acquisition of Mailchimp",
+          "publisher": "U.S. Securities and Exchange Commission / Intuit",
+          "source_type": "sec_filing_exhibit",
+          "url": "https://www.sec.gov/Archives/edgar/data/896878/000119312521314683/d147355dex991.htm",
+          "evidence_type": "direct",
+          "source_locator": "SEC exhibit → Transaction Details",
+          "supports": "إتمام الصفقة مقابل 5.7 مليار دولار نقدًا و10.1 مليون سهم بقيمة عادلة تقارب 6.3 مليار دولار.",
+          "published_on": "2021-11-01"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Intuit Fiscal 2024 Form 10-K — Mailchimp Acquisition Note",
+          "publisher": "U.S. Securities and Exchange Commission / Intuit",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/896878/000089687824000039/intu-20240731.htm",
+          "evidence_type": "direct",
+          "source_locator": "Form 10-K → Note 7, Business Combinations → Mailchimp",
+          "supports": "تقرير 10-K يسجل القيمة العادلة لمقابل الاستحواذ عند 12.0 مليار دولار.",
+          "published_on": "2024-09-04"
+        }
+      ],
+      "limitations": "هذه قيمة مقابل الاستحواذ المنفذ وليست تقييمًا سوقيًا حاليًا مستقلًا لـ Mailchimp بعد دمجها في Intuit."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "اشتراكات شهرية في خطط التسويق المدفوعة وفق حجم جهات الاتصال وحدود الإرسال ومستوى الميزات",
+        "خطة مجانية تمهيدية بحدود استخدام أقل، تُستخدم كبوابة لتجربة المنصة قبل الترقية",
+        "خيار Pay As You Go القائم على شراء أرصدة للإرسال غير المنتظم أو الموسمي",
+        "Mailchimp Transactional لإرسال البريد الفردي المرتبط بالأحداث عبر Transactional API أو SMTP، ويتطلب استخدامه الكامل خطة مؤهلة",
+        "إضافات وخدمات مدفوعة مثل الرسائل النصية، الأتمتة المتقدمة، الاختبارات، التقسيم التنبؤي، الدعم ذي الأولوية وخدمات الإعداد"
+      ],
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "revenue_model_components",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تدعم الوثائق الرسمية الاشتراكات الشهرية متعددة المستويات، الخطة المجانية، الأرصدة المدفوعة Pay As You Go، البريد المعاملاتي، وإضافات مثل SMS والأتمتة والاختبارات والدعم.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-06",
+        "SRC-07",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "About Mailchimp Pricing Plans",
+          "publisher": "Mailchimp",
+          "source_type": "official_help_documentation",
+          "url": "https://mailchimp.com/help/about-mailchimp-pricing-plans/",
+          "evidence_type": "direct",
+          "source_locator": "Pricing Plans → Marketing plan types and features",
+          "supports": "خطط Free وEssentials وStandard وPremium، وتسعير يتأثر بعدد جهات الاتصال وحدود الإرسال، مع ميزات مثل الأتمتة والاختبارات وSMS والدعم."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "About the Pay As You Go Plan",
+          "publisher": "Mailchimp",
+          "source_type": "official_help_documentation",
+          "url": "https://mailchimp.com/help/about-the-pay-as-you-go-plan/",
+          "evidence_type": "direct",
+          "source_locator": "Pay As You Go → How it works and buy credits",
+          "supports": "شراء أرصدة Pay As You Go لاستخدامها في الإرسال غير المنتظم."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Mailchimp Transactional Documentation",
+          "publisher": "Mailchimp",
+          "source_type": "official_api_documentation",
+          "url": "https://mailchimp.com/developer/transactional/docs/",
+          "evidence_type": "direct",
+          "source_locator": "Transactional Documentation → Product and documentation index",
+          "supports": "وجود خدمة Mailchimp Transactional وواجهات API وSMTP والرسائل النصية المعاملاتية."
+        }
+      ],
+      "limitations": "القائمة تصف قنوات الإيراد والميزات المدفوعة، لكنها لا توزع نسبة الإيرادات على كل قناة لأن Intuit لا تفصح عن هذا التفصيل."
+    },
+    "$.tools": {
+      "field_value": [
+        "Mailchimp Marketing API لإدارة الجمهور والحملات والأتمتة ومزامنة البيانات",
+        "Mailchimp Transactional API لإرسال الرسائل الفردية المرتبطة بالأحداث",
+        "SMTP Integration للبريد المعاملاتي",
+        "OAuth 2 لربط تطبيقات الجهات الخارجية بحسابات مستخدمي Mailchimp",
+        "Webhooks لمزامنة تغييرات الجمهور والأحداث مع الأنظمة الخارجية",
+        "Batch Requests وEvents Endpoints لتنفيذ العمليات الكبيرة وتشغيل الأتمتة على نطاق واسع",
+        "أكثر من 300 تكامل منشور مع أدوات التجارة والمحتوى والمبيعات والإنتاجية",
+        "أدوات أتمتة وتحليلات وتوصيات مدعومة بالبيانات والذكاء الاصطناعي",
+        "Transactional SMS للرسائل النصية المرتبطة بالطلبات والتنبيهات والأحداث في البيئات المدعومة"
+      ],
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "official_product_and_developer_capabilities",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "استُبدلت التقنيات الداخلية غير الموثقة بقائمة قدرات وأدوات معلنة رسميًا: Marketing API وTransactional API وSMTP وOAuth 2 وWebhooks وBatch Requests وEvents وأكثر من 300 تكامل.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-08",
+        "SRC-09",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "Mailchimp Developer",
+          "publisher": "Mailchimp",
+          "source_type": "official_developer_portal",
+          "url": "https://mailchimp.com/developer/",
+          "evidence_type": "direct",
+          "source_locator": "Mailchimp Developer → Platform scale and integrations",
+          "supports": "بوابة المطورين تعرض منصة التكاملات و14 مليون عميل ومليار بريد يوميًا وأكثر من 300 تكامل."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Mailchimp Marketing API",
+          "publisher": "Mailchimp",
+          "source_type": "official_api_documentation",
+          "url": "https://mailchimp.com/developer/marketing/",
+          "evidence_type": "direct",
+          "source_locator": "Marketing API → Scale and integrate your data",
+          "supports": "Marketing API يدعم مزامنة البيانات وWebhooks وOAuth 2 وBatch Requests وتشغيل الأتمتة بالأحداث."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Mailchimp Transactional Documentation",
+          "publisher": "Mailchimp",
+          "source_type": "official_api_documentation",
+          "url": "https://mailchimp.com/developer/transactional/docs/",
+          "evidence_type": "direct",
+          "source_locator": "Transactional Documentation → Documentation index",
+          "supports": "وثائق Transactional تتضمن API وSMTP وWebhooks والقوالب والتقارير وTransactional SMS."
+        }
+      ],
+      "limitations": "هذه أدوات وقدرات منتج موثقة علنًا، وليست كشفًا كاملًا عن البنية التقنية الداخلية أو لغات البرمجة المستخدمة داخل الشركة."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "About Mailchimp — Mailchimp's Story",
+      "publisher": "Mailchimp",
+      "source_type": "official_company_page",
+      "url": "https://mailchimp.com/about/",
+      "supports": [
+        "تأسيس Mailchimp في أتلانتا عام 2001",
+        "المؤسسون وقصة المشروع الجانبي",
+        "المشكلة الأصلية المتعلقة ببرمجيات البريد الكبيرة والمكلفة",
+        "تطور Mailchimp إلى منصة بريد وأتمتة تسويق"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Bootstrapping Strategies for Business Success",
+      "publisher": "Mailchimp",
+      "source_type": "official_company_resource",
+      "url": "https://mailchimp.com/resources/bootstrapping/",
+      "supports": [
+        "تأسيس Mailchimp دون تمويل خارجي",
+        "الاستحواذ عليها من Intuit مقابل 12 مليار دولار"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Intuit to Acquire Mailchimp",
+      "publisher": "Intuit Investor Relations",
+      "source_type": "official_investor_press_release",
+      "published_on": "2021-09-13",
+      "url": "https://investors.intuit.com/news-events/press-releases/detail/162/intuit-to-acquire-mailchimp",
+      "supports": [
+        "قيمة الصفقة المعلنة",
+        "13 مليون مستخدم إجمالي",
+        "2.4 مليون مستخدم نشط شهريًا",
+        "800 ألف عميل مدفوع",
+        "70 مليار جهة اتصال و250+ تكامل و2.2 مليون تنبؤ يومي وقت الإعلان"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Intuit Completes Acquisition of Mailchimp",
+      "publisher": "U.S. Securities and Exchange Commission / Intuit",
+      "source_type": "sec_filing_exhibit",
+      "published_on": "2021-11-01",
+      "url": "https://www.sec.gov/Archives/edgar/data/896878/000119312521314683/d147355dex991.htm",
+      "supports": [
+        "إتمام الاستحواذ",
+        "5.7 مليار دولار نقدًا",
+        "10.1 مليون سهم بقيمة تقارب 6.3 مليار دولار"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Intuit Fiscal 2024 Form 10-K — Mailchimp Acquisition Note",
+      "publisher": "U.S. Securities and Exchange Commission / Intuit",
+      "source_type": "sec_annual_filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/896878/000089687824000039/intu-20240731.htm",
+      "supports": [
+        "إيرادات قدرها 762 مليون دولار منسوبة إلى Mailchimp ضمن نتائج السنة المالية 2022 من تاريخ الاستحواذ",
+        "مقابل استحواذ إجمالي بقيمة 12.0 مليار دولار",
+        "5.7 مليار دولار نقدًا و10.1 مليون سهم بقيمة تقارب 6.3 مليار دولار"
+      ],
+      "published_on": "2024-09-04"
+    },
+    {
+      "id": "SRC-06",
+      "title": "About Mailchimp Pricing Plans",
+      "publisher": "Mailchimp",
+      "source_type": "official_help_documentation",
+      "url": "https://mailchimp.com/help/about-mailchimp-pricing-plans/",
+      "supports": [
+        "الخطة المجانية",
+        "خطط التسويق المدفوعة",
+        "ارتباط الخطط بحجم جهات الاتصال والميزات"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "About the Pay As You Go Plan",
+      "publisher": "Mailchimp",
+      "source_type": "official_help_documentation",
+      "url": "https://mailchimp.com/help/about-the-pay-as-you-go-plan/",
+      "supports": [
+        "نموذج شراء أرصدة الإرسال",
+        "ملاءمة الخطة للمرسلين غير المنتظمين",
+        "وجود خطط شهرية مدفوعة"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Mailchimp Developer",
+      "publisher": "Mailchimp",
+      "source_type": "official_developer_portal",
+      "url": "https://mailchimp.com/developer/",
+      "supports": [
+        "نحو 14 مليون عميل",
+        "نحو مليار رسالة بريد يوميًا",
+        "أكثر من 300 تكامل",
+        "Marketing API وTransactional وOpen Commerce"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Mailchimp Marketing API",
+      "publisher": "Mailchimp",
+      "source_type": "official_api_documentation",
+      "url": "https://mailchimp.com/developer/marketing/",
+      "supports": [
+        "الأحداث والأتمتة",
+        "Batch API",
+        "Webhooks",
+        "OAuth 2",
+        "مزامنة البيانات والتكاملات"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Mailchimp Transactional Documentation",
+      "publisher": "Mailchimp",
+      "source_type": "official_api_documentation",
+      "url": "https://mailchimp.com/developer/transactional/docs/",
+      "supports": [
+        "البريد المعاملاتي",
+        "الإرسال عبر API أو SMTP",
+        "التقارير والقوالب وWebhooks والرسائل النصية المعاملاتية"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Intuit Fiscal 2024 Form 10-K",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "source_type": "sec_annual_filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/896878/000089687824000039/intu-20240731.htm",
+      "supports": [
+        "زيادة إيرادات Mailchimp بمقدار 125 مليون دولار في السنة المالية 2024",
+        "عزو الزيادة إلى ارتفاع الأسعار ونمو العملاء المدفوعين"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Intuit Fiscal 2025 Form 10-K",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "source_type": "sec_annual_filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/896878/000089687825000035/intu-20250731.htm",
+      "supports": [
+        "زيادة إيرادات Mailchimp بمقدار 20 مليون دولار في السنة المالية 2025",
+        "عزو الزيادة إلى ارتفاع الأسعار"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Intuit Fiscal 2026 Second-Quarter Earnings Release",
+      "publisher": "U.S. Securities and Exchange Commission / Intuit",
+      "source_type": "sec_filing_exhibit",
+      "published_on": "2026-02-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/896878/000089687826000012/fy26q2earningspressrelease.htm",
+      "supports": [
+        "توقع Intuit عودة Mailchimp إلى نمو مزدوج الرقم في وقت لاحق بعد السنة المالية 2026"
+      ]
+    }
+  ],
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تفصيلية تربط كل حقل بقيمته وحالة التحقق والمصادر المباشرة وما يثبته كل مصدر.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر أولي واحد أو أكثر.",
+      "verified_historical_calculation": "القيمة مشتقة حسابيًا من رقم تاريخي رسمي مع إظهار المعادلة.",
+      "verified_using_operational_proxies": "لا يتوفر المؤشر المطلوب مباشرة، فاستُخدمت مؤشرات تشغيل رسمية مع توضيح الفرق.",
+      "verified_as_not_publicly_disclosed": "تم التحقق من أن الرقم المحدد غير منشور في المصادر الأولية المستخدمة، ولذلك لم يُختلق تقدير."
+    },
+    "confidence_scale": {
+      "high": "مصدر رسمي مباشر أو إفصاح SEC، مع تطابق واضح بين الادعاء والدليل.",
+      "medium": "دليل رسمي جزئي أو يحتاج إلى استنتاج محدود.",
+      "low": "دليل غير مباشر؛ لا يُستخدم في هذا الملف لإثبات الأرقام الأساسية."
+    }
+  }
+}

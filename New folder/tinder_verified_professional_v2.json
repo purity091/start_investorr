@@ -1,0 +1,1330 @@
+{
+  "id": "tinder",
+  "slug": "tinder",
+  "name": "تيندر (Tinder)",
+  "headline": "من حركة سحب واحدة إلى سوق عالمي للانتباه والثقة: كيف أعاد Tinder تصميم بداية التعارف الرقمي",
+  "category": "Consumer Social / Online Dating & Social Discovery / التعارف والاكتشاف الاجتماعي",
+  "company": {
+    "location": "لوس أنجلوس، كاليفورنيا، الولايات المتحدة بوصفها مركز عمليات العلامة ومنشوراتها الحالية. الكيان القانوني Tinder LLC مسجل في ديلاوير ومملوك لـMatch Group، بينما يظهر عنوان التحكم بالبيانات للمستخدمين خارج أوروبا واليابان في دالاس، تكساس.",
+    "business_model": "نموذج Freemium: الاستخدام الأساسي متاح دون اشتراك، بينما تحقق Tinder إيرادات مباشرة من اشتراكات Plus وGold وPlatinum ومن مشتريات منفصلة مثل Super Likes وBoosts وTop Picks وعناصر افتراضية أخرى، إضافة إلى إيرادات إعلانية غير مباشرة. لا تنشر الشركة سعرًا عالميًا ثابتًا؛ إذ تختلف العروض بحسب المنطقة والمدة وحجم الحزمة والمشتريات السابقة ونشاط الحساب والاختبارات."
+  },
+  "directory_snapshot": {
+    "monthly_revenue": "نحو 156.2 مليون دولار كمتوسط شهري حسابي لأحدث ربع منشور. بلغ إيراد قطاع Tinder في الربع الأول من 2026 نحو 468.638 مليون دولار، شاملاً الإيراد المباشر والإيراد غير المباشر—وأغلبه إعلانات—وأي إيراد بين القطاعات قبل الإلغاءات. هذا متوسط ربعي وليس MRR تعاقديًا.",
+    "monthly_traffic": "نحو 50 مليون مستخدم شهريًا وفق صفحة Tinder الصحفية، مع أكثر من 630 مليون تنزيل وأكثر من 100 مليار Match منذ الإطلاق. الرقم الشهري تقريبي وتسويقي، بينما أفادت Match Group بأن MAU في مارس 2026 انخفض 7% سنويًا رغم تحسن الاتجاه وعودة التسجيلات الجديدة إلى النمو."
+  },
+  "overview": {
+    "problem": {
+      "text": "قبل Tinder، كانت خدمات التعارف الرقمية تعتمد غالبًا على ملفات طويلة وبحث وفلاتر ورسائل يمكن إرسالها قبل وجود اهتمام متبادل. هذا وضع عبء الاختيار والكتابة والرفض على المستخدم مبكرًا، وخلق صناديق وارد غير متوازنة ورسائل غير مرغوبة، خصوصًا عندما يستطيع أي شخص بدء المحادثة دون إشارة مقابلة.",
+      "impact": "كثرة الخطوات تجعل تجربة الهاتف بطيئة، بينما يؤدي غياب الموافقة المتبادلة إلى تكلفة اجتماعية ونفسية وإلى مشكلات سلامة وإشراف. لكن إزالة الرسالة غير المرغوبة لا تزيل الرفض بالكامل؛ فهي تخفي نتيجة بعض الاختيارات وتؤجلها إلى مرحلة Match أو محادثة قد لا تبدأ أو تستمر."
+    },
+    "solution": {
+      "text": "اختصر Tinder الاكتشاف في بطاقات مرئية وسحب Like أو Nope، ولا يفتح الدردشة إلا بعد اهتمام متبادل. توسع المنتج من Swipe وMatch إلى Passport وTop Picks وBoost وSuper Like، ثم إلى Modes مثل Double Date وCollege وMusic وAstrology، وEvents للقاءات الواقعية، وتوصيات AI عبر Chemistry وLearning Mode، وأدوات ملف شخصي مثل Photo Selector. بالتوازي، يضيف Face Check وPhoto Verification وID + Photo Verification وميزات لغوية مثل Are You Sure? وDoes This Bother You? طبقات للهوية والسلوك والإبلاغ."
+    }
+  },
+  "market_data": {
+    "target_audience": "البالغون بعمر 18 سنة فأكثر الباحثون عن التعارف والعلاقات والتواصل الاجتماعي. تقارب نسبة المستخدمين بعمر 18–30 نحو 60% وفق Tinder، مع تركيز قوي على Gen Z، إلى جانب مستخدمين أكبر سنًا ومسافرين وطلاب جامعات ومجتمعات LGBTQIA+ وأشخاص يريدون صيغًا أقل ضغطًا مثل Double Date أو Events.",
+    "market_size": "لا تنشر Tinder رقم TAM ماليًا رسميًا لسوق التعارف الرقمي. مؤشرات النطاق الأقرب هي نحو 50 مليون مستخدم شهريًا، وأكثر من 630 مليون تنزيل و100 مليار Match، وانتشار في أكثر من 185 دولة و60 لغة. وفي الربع الأول من 2026 بلغ متوسط Tinder نحو 8.632 ملايين Payer شهريًا، مع بقاء التطبيق الأول عالميًا في تنزيلات تطبيقات التعارف وفق Match Group.",
+    "growth_rate": "تاريخيًا انتقل Tinder من أول Match إلى مليار Match خلال عامين. ماليًا، انخفض إيراد القطاع من 1.991 مليار دولار في 2024 إلى 1.925 مليارًا في 2025، بينما انخفض الإيراد المباشر 4% والمشتركون الدافعون 7% وارتفع RPP بنسبة 3%. في الربع الأول من 2026 ارتفع إيراد القطاع 1% والإيراد المباشر 2%، مع انخفاض الدافعين 5% وارتفاع RPP 7%. وبعد تحييد العملات انخفض الإيراد المباشر 3%، ما يعني أن التحسن المعلن لا يزال في مرحلة تحول وليس نموًا مستقرًا."
+  },
+  "financials": {
+    "initial_investment": "أُطلق Tinder عام 2012 من Hackathon داخل Hatch Labs، وهي حاضنة كانت مملوكة لـIAC. لم يُنشر رقم منفصل لرأس المال الأول الذي خُصص لبناء Tinder، ولم تجمع العلامة جولة مستقلة بالطريقة التقليدية؛ إذ نمت داخل منظومة IAC ثم Match Group. أصبحت Tinder لاحقًا جزءًا من Match Group العامة، التي انفصلت عن IAC في 2020.",
+    "valuation": "لا يوجد تقييم مستقل حالي لـTinder؛ فهي قطاع تشغيلي وكيان تابع مملوك لـMatch Group العامة، وليست شركة مدرجة منفصلة. لذلك لا يصح استخدام قيمة Match Group السوقية أو إيراد Tinder كأنهما تقييم للعلامة. المؤشرات المالية الأنسب هي إيراد القطاع، والدافعين، وRPP، والدخل التشغيلي وAdjusted EBITDA.",
+    "revenue_streams": [
+      "اشتراكات Tinder Plus مع Likes غير محدودة وRewind وPassport ووضع Incognito ومزايا أخرى بحسب السوق والاختبار",
+      "اشتراكات Tinder Gold التي تضيف Likes You وTop Picks وSuper Likes ومزايا Boost بحسب الخطة والسوق",
+      "اشتراكات Tinder Platinum التي تضيف Prioritized Likes وسجل Likes المرسلة ومزايا الخطط الأدنى",
+      "حزم Super Likes التي تعطي الملف أولوية لدى المستلم المحتمل",
+      "حزم Boost التي ترفع ظهور الملف في المنطقة لمدة محدودة",
+      "مشتريات Top Picks وعناصر افتراضية أو مزايا محدودة الاستخدام",
+      "إعلانات وعروض ترويجية داخل الخدمة، مدرجة ضمن الإيراد غير المباشر لدى Match Group",
+      "شراكات وتجارب تجارية مرتبطة بالعلامة، مع عدم وجود إفصاح يفصل إيرادها عن إعلانات Tinder أو Match Group"
+    ]
+  },
+  "lessons": [
+    {
+      "title": "الموافقة المزدوجة تقلل التعرض للرفض ولا تلغيه",
+      "description": "عدم فتح الرسائل قبل Match يقلل الإحراج والرسائل غير المرغوبة، لكنه لا يضمن محادثة أو موعدًا. تصميم المنتج الجيد يعرّف بدقة أي احتكاك أزاله وأي مشكلة بقيت."
+    },
+    {
+      "title": "الإيماءة الناجحة تختصر قرارًا لا علاقة كاملة",
+      "description": "Swipe حوّل التصفح إلى قرار سريع يناسب الهاتف، لكنه لا يحمل وحده معلومات كافية عن التوافق. لهذا عاد Tinder لاحقًا إلى الاهتمامات والموسيقى والأسئلة وModes وAI لإضافة سياق بعد أن نجح في تقليل الخطوات."
+    },
+    {
+      "title": "سيولة الشبكة محلية ومجزأة",
+      "description": "خمسون مليون مستخدم عالميًا لا يفيدون مستخدمًا في مدينة أو شريحة لا تضم خيارات مناسبة. كثافة المستخدمين، والتوازن بين الشرائح، والنشاط والتوافق الجغرافي أهم من الرقم العالمي المجرد."
+    },
+    {
+      "title": "المجاني يبني الشبكة والمدفوع يبيع السرعة والتحكم",
+      "description": "قيمة Plus وGold وPlatinum لا تقوم على إنشاء إمكانية التعارف من الصفر، بل على توسيع Likes، وكشف الاهتمام، وتغيير الموقع، ورفع الظهور واستعادة القرارات. هذه طبقات قيمة حول سوق مجاني."
+    },
+    {
+      "title": "زيادة الإيراد لكل دافع قد تخفي تقلص قاعدة الدافعين",
+      "description": "في 2025 ارتفع RPP بينما انخفض عدد الدافعين والإيراد. رفع السعر أو بيع حزم أعلى يحسن الاقتصاد قصير الأجل، لكنه لا يعوض دائمًا ضعف الاكتساب أو الاحتفاظ أو نشاط السوق."
+    },
+    {
+      "title": "التسعير التجريبي يحتاج حدود عدالة واضحة",
+      "description": "تقول Tinder إن السعر يتغير بحسب عوامل متعددة، بينما واجهت Match Group دعوى تتعلق بالتسعير حسب العمر انتهت إلى تسوية مبدئية. الاختبار التجاري يجب أن يُراجع للتمييز والشفافية والآثار القانونية، لا التحويل فقط."
+    },
+    {
+      "title": "الأمان ليس طبقة دعم بل بنية سيولة",
+      "description": "إذا شك المستخدمون في أن الملفات حقيقية أو أن المحادثة آمنة، يقل إرسال Likes والرد والانتقال إلى لقاء. Face Check والإبلاغ والتنبيه اللغوي ليست ميزات جانبية؛ إنها استثمار في صحة السوق."
+    },
+    {
+      "title": "Match ليس النتيجة النهائية",
+      "description": "بدأت Match Group بقياس Sparks والمحادثات متعددة الرسائل بدل الاكتفاء بعدد Matches. السوق قد يرفع التفاعل السطحي بينما يفشل في خلق حوار أو لقاء، لذلك يجب أن يقترب المقياس من النتيجة التي يريدها المستخدم."
+    },
+    {
+      "title": "الصيغ الاجتماعية تخفض الضغط وتغير آلية السوق",
+      "description": "Double Date وEvents يجعلان الأصدقاء والأنشطة جزءًا من الاكتشاف. هذا قد يرفع الأمان والراحة، لكنه يضيف تنسيقًا جماعيًا وشركاء فعاليات واحتياجات تحقق وقواعد مختلفة عن Match ثنائي بسيط."
+    },
+    {
+      "title": "الذكاء الاصطناعي يجب أن يقترح دون مصادرة الوكالة",
+      "description": "Chemistry وLearning Mode وPhoto Selector تحاول تقليل إرهاق الاختيار وتحسين الملف، لكن المستخدم يحتاج إلى معرفة ما هو اختياري وما البيانات المستخدمة وما القرار الذي يبقى بيده."
+    },
+    {
+      "title": "البيانات البيومترية ترفع الثقة وترفع الالتزام",
+      "description": "Face Check يمكن أن يقلل الحسابات المزيفة، لكنه يتطلب سياسات تخزين وحذف وموافقة وأمن وشرحًا واضحًا لحدود الشارة. التحقق من الصورة لا يضمن نية الشخص أو سلامة اللقاء."
+    },
+    {
+      "title": "التنزيلات والمستخدمون والمطابقات مقاييس مختلفة",
+      "description": "630 مليون تنزيل رقم تراكمي، و50 مليون مستخدم شهريًا مقياس نشاط تقريبي، و100 مليار Match حدث تراكمي، و8.6 ملايين Payer مقياس نقدي. خلطها ينتج قصة نمو غير دقيقة."
+    },
+    {
+      "title": "رسوم متاجر التطبيقات قرار بنية ربح",
+      "description": "في الربع الأول 2026 انخفضت رسوم المشتريات داخل التطبيقات مع انتقال بعض الدافعين إلى طرق دفع بديلة. مسار الدفع يؤثر في الهامش والتحويل والامتثال وتجربة الإلغاء، وليس مجرد اختيار تقني."
+    }
+  ],
+  "tools": [
+    "تطبيقات iOS وAndroid وتجربة Tinder.com على الويب",
+    "Swipe وLike وNope ونظام Match المتبادل والدردشة",
+    "توصيات تعتمد على الملف والنشاط والموقع والتفضيلات",
+    "Tinder Plus وGold وPlatinum مع مزايا تختلف حسب السوق والاختبارات",
+    "Passport وRewind وIncognito وLikes You وTop Picks وPrioritized Likes",
+    "Super Like وBoost ومشتريات العناصر الافتراضية",
+    "Modes مثل Double Date وCollege وMusic وAstrology",
+    "Events لاكتشاف فعاليات محلية وRSVP وشراء تذاكر عبر شركاء مستقلين وشارة Attended",
+    "Chemistry كتوصيات AI يومية مع Q&A وخيارات اختيارية مثل Camera Roll Scan",
+    "Learning Mode لتخصيص التوصيات في الزمن الفعلي وفق نشاط المستخدم",
+    "Photo Selector لاختيار صور من الجهاز مع معالجة خصوصية تتم محليًا",
+    "Photo Verification وPhoto Check وFace Check باستخدام Video Selfie وLiveness",
+    "ID + Photo Verification في أسواق اختبار محددة والتحقق العمري في أسواق مؤهلة",
+    "Are You Sure? وDoes This Bother You? مع تحسينات LLM وفلاتر Auto-Blur",
+    "Block Contacts وBlock Profile والإبلاغ ومركز الاستئناف",
+    "Double Date group chat وMatchmaker وShare My Date لإشراك الأصدقاء",
+    "Tinder Connect وتكاملات Spotify وDuolingo وBeli لإظهار الاهتمامات",
+    "Photo Verified access requirements لبعض تجارب Events والفيديو",
+    "SMS verification وتدابير مكافحة Bots والاحتيال وانتحال الهوية",
+    "AWS لتخزين بعض بيانات التحقق وفق وثائق الخصوصية الرسمية"
+  ],
+  "verification": {
+    "status": "verified_from_tinder_match_group_sec_and_current_product_safety_sources_with_field_level_evidence",
+    "verified_on": "2026-08-02",
+    "source_policy": "تم الاعتماد على تقارير Match Group لدى SEC وعلاقات المستثمرين، وصفحات Tinder الصحفية، ومركز المساعدة والشروط وسياسات الخصوصية. استُبعدت تقديرات الإيرادات والزيارات ومزاعم البنية التقنية التي لا يدعمها مصدر أولي.",
+    "important_notes": [
+      "متوسط 156.2 مليون دولار شهريًا مشتق من إيراد قطاع Tinder في Q1 2026، وليس MRR ثابتًا أو توقعًا للربع الثاني.",
+      "نتائج Q2 2026 ستصدر في 4 أغسطس 2026، أي بعد تاريخ التحقق في هذا الملف.",
+      "رقم 50 مليون مستخدم شهريًا وارد في مواد Tinder الصحفية ويجب اعتباره رقمًا تقريبيًا، لا MAU مدققًا في SEC.",
+      "أكثر من 630 مليون تنزيل و100 مليار Match رقمان تراكميان ولا يقيسان النشاط الحالي.",
+      "أسعار الاشتراكات لا تُثبت داخل الملف لأن Tinder تقول صراحة إنها تختلف حسب المنطقة والمدة والحزمة والسلوك والاختبارات.",
+      "تعد Photo Verification وID Verification وFace Check إشارات مساعدة وليست ضمانًا لهوية كاملة أو سلامة المستخدم.",
+      "لا يوجد تقييم مستقل حالي لـTinder لأنها مملوكة لـMatch Group وليست شركة عامة منفصلة.",
+      "تم حذف ادعاءات Node.js وReact Native وRedis وElasticsearch لأنها غير موثقة كحزمة تقنية حالية في المصادر المستخدمة.",
+      "الحديث عن التلعيب أو المكافآت المتغيرة تحليل سلوكي محتمل، وليس وصفًا رسميًا لهدف تصميم Tinder، ولذلك لم يُعرض كحقيقة."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول بالقيم والمصادر وحالة التحقق وحدود تعريف المقاييس.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي أو إفصاح تنظيمي.",
+      "verified_current_quarter_calculation": "القيمة مشتقة حسابيًا من أحدث ربع مالي منشور.",
+      "verified_press_metric_with_definition_limits": "المقياس صادر عن الشركة لكنه تقريبي أو تسويقي وليس إفصاحًا ماليًا مدققًا.",
+      "verified_with_metric_definition_limits": "الأرقام موثقة لكن تعريفاتها لا تسمح بالمقارنة المباشرة دون تحفظ.",
+      "verified_as_not_independently_valued": "العلامة قطاع تابع ولا يوجد لها تقييم مستقل حالي.",
+      "verified_historical_incubation": "التأسيس داخل حاضنة أو شركة أم موثق، بينما رأس المال المخصص غير معلن.",
+      "verified_product_capability": "القدرة موثقة في صفحات المنتج أو المساعدة الحالية.",
+      "verified_regulatory_context": "المعلومة مدعومة بإفصاح قانوني أو تنظيمي رسمي.",
+      "analytical_inference": "تحليل مهني مبني على حقائق موثقة وليس تصريحًا حرفيًا من الشركة."
+    },
+    "confidence_scale": {
+      "high": "إفصاح SEC أو وثيقة Tinder رسمية واضحة.",
+      "medium_high": "بيان شركة مع تعريف أو قيود معلنة.",
+      "medium": "مقياس داخلي أو صحفي يحتاج إلى قراءة تحفظية."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "لوس أنجلوس، كاليفورنيا، الولايات المتحدة بوصفها مركز عمليات العلامة ومنشوراتها الحالية. الكيان القانوني Tinder LLC مسجل في ديلاوير ومملوك لـMatch Group، بينما يظهر عنوان التحكم بالبيانات للمستخدمين خارج أوروبا واليابان في دالاس، تكساس.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "operating_location_legal_entity_and_parent_ownership",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تستخدم Tinder لوس أنجلوس في إعلاناتها التشغيلية، بينما تثبت وثائق SEC أن Tinder LLC تابعة مسجلة في ديلاوير وتوضح سياسة الخصوصية عنوان الجهة المتحكمة بالبيانات.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-05",
+        "SRC-20",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Tinder Sparks 2026 Product Keynote",
+          "publisher": "Tinder Newsroom",
+          "source_type": "official_product_announcement",
+          "url": "https://www.tinderpressroom.com/2026-03-12-Tinder-Debuts-Inaugural-Product-Keynote-Tinder-Sparks-2026-Start-Something-New",
+          "evidence_type": "direct",
+          "source_locator": "Press release dateline",
+          "supports": "لوس أنجلوس كموقع إعلان المنتج الحالي.",
+          "published_on": "2026-03-12"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Match Group Subsidiaries",
+          "publisher": "U.S. Securities and Exchange Commission / Match Group",
+          "source_type": "sec_subsidiary_exhibit",
+          "url": "https://www.sec.gov/Archives/edgar/data/891103/000089110326000025/mtch10-k20251231ex211.htm",
+          "evidence_type": "direct",
+          "source_locator": "Exhibit 21.1",
+          "supports": "Tinder LLC تابعة مسجلة في ديلاوير.",
+          "published_on": "2026-02-26"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Tinder Privacy Policy",
+          "publisher": "Tinder",
+          "source_type": "official_privacy_document",
+          "url": "https://policies.tinder.com/privacy-policy-10-10-2025/intl/en/",
+          "evidence_type": "direct",
+          "source_locator": "Privacy Policy → Who We Are",
+          "supports": "عنوان Tinder LLC للمستخدمين خارج أوروبا واليابان.",
+          "published_on": "2025-10-10"
+        }
+      ],
+      "limitations": "لا يقدم المصدر الرسمي عنوان مكتب تشغيل في لوس أنجلوس، لذلك لا يُعرض عنوان شارع هناك."
+    },
+    "$.company.business_model": {
+      "field_value": "نموذج Freemium: الاستخدام الأساسي متاح دون اشتراك، بينما تحقق Tinder إيرادات مباشرة من اشتراكات Plus وGold وPlatinum ومن مشتريات منفصلة مثل Super Likes وBoosts وTop Picks وعناصر افتراضية أخرى، إضافة إلى إيرادات إعلانية غير مباشرة. لا تنشر الشركة سعرًا عالميًا ثابتًا؛ إذ تختلف العروض بحسب المنطقة والمدة وحجم الحزمة والمشتريات السابقة ونشاط الحساب والاختبارات.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "freemium_subscription_virtual_goods_and_advertising_model",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تثبت وثائق Tinder الخطط والمشتريات وتغير الأسعار، بينما يعرّف SEC الإيراد المباشر وغير المباشر.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-07",
+        "SRC-08",
+        "SRC-09",
+        "SRC-10",
+        "SRC-11",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Tinder Subscriptions",
+          "publisher": "Tinder Help Center",
+          "source_type": "official_subscription_documentation",
+          "url": "https://www.help.tinder.com/hc/en-gb/articles/115004487406-Tinder-subscriptions",
+          "evidence_type": "direct",
+          "source_locator": "Subscriptions table",
+          "supports": "Plus وGold وPlatinum ومزاياها."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Tinder Terms of Use",
+          "publisher": "Tinder",
+          "source_type": "official_legal_document",
+          "url": "https://policies.tinder.com/terms/intl/en-gb/",
+          "evidence_type": "direct",
+          "source_locator": "Terms → Purchases",
+          "supports": "التجديد والأسعار المتغيرة والعناصر الافتراضية.",
+          "published_on": "2026-03-01"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Super Like",
+          "publisher": "Tinder Help Center",
+          "source_type": "official_product_documentation",
+          "url": "https://www.help.tinder.com/hc/en-us/articles/115004493543-Super-Like",
+          "evidence_type": "direct",
+          "source_locator": "Product page",
+          "supports": "Super Likes."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Boost",
+          "publisher": "Tinder Help Center",
+          "source_type": "official_product_documentation",
+          "url": "https://www.help.tinder.com/hc/en-gb/articles/115004506186-Boost",
+          "evidence_type": "direct",
+          "source_locator": "Product page",
+          "supports": "Boost."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Top Picks",
+          "publisher": "Tinder Help Center",
+          "source_type": "official_product_documentation",
+          "url": "https://www.help.tinder.com/hc/en-us/articles/360005039092-Top-Picks",
+          "evidence_type": "direct",
+          "source_locator": "Product page",
+          "supports": "Top Picks."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Match Group Fiscal 2025 Form 10-K",
+          "publisher": "U.S. Securities and Exchange Commission / Match Group",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/891103/000089110326000025/mtch-20251231.htm",
+          "evidence_type": "direct",
+          "source_locator": "10-K → Revenue definitions",
+          "supports": "الإيراد المباشر والإعلانات.",
+          "published_on": "2026-02-26"
+        }
+      ]
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "نحو 156.2 مليون دولار كمتوسط شهري حسابي لأحدث ربع منشور. بلغ إيراد قطاع Tinder في الربع الأول من 2026 نحو 468.638 مليون دولار، شاملاً الإيراد المباشر والإيراد غير المباشر—وأغلبه إعلانات—وأي إيراد بين القطاعات قبل الإلغاءات. هذا متوسط ربعي وليس MRR تعاقديًا.",
+      "verification_status": "verified_current_quarter_calculation",
+      "confidence": "high",
+      "claim_type": "derived_monthly_average_from_latest_segment_revenue",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "بلغ إيراد قطاع Tinder في Q1 2026 نحو 468.638 مليون دولار. قُسم على ثلاثة أشهر لإظهار متوسط الفترة.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Match Group Q1 2026 Form 10-Q",
+          "publisher": "U.S. Securities and Exchange Commission / Match Group",
+          "source_type": "sec_quarterly_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/891103/000089110326000073/mtch-20260331.htm",
+          "evidence_type": "direct",
+          "source_locator": "10-Q → Segment Information",
+          "supports": "إيراد قطاع Tinder البالغ 468.638 مليون دولار.",
+          "published_on": "2026-05-05"
+        }
+      ],
+      "limitations": "قد يتضمن القطاع إيرادًا غير مباشر وبين القطاعات، ولا يوزع بالتساوي بين الشهور.",
+      "calculation": {
+        "q1_2026_tinder_segment_revenue_usd": 468638000,
+        "quarter_months": 3,
+        "formula": "468,638,000 ÷ 3",
+        "calculated_monthly_average_usd": 156212666.67,
+        "rounded_display_value": "نحو 156.2 مليون دولار شهريًا",
+        "calculation_status": "latest_quarter_average_not_contractual_mrr"
+      }
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "نحو 50 مليون مستخدم شهريًا وفق صفحة Tinder الصحفية، مع أكثر من 630 مليون تنزيل وأكثر من 100 مليار Match منذ الإطلاق. الرقم الشهري تقريبي وتسويقي، بينما أفادت Match Group بأن MAU في مارس 2026 انخفض 7% سنويًا رغم تحسن الاتجاه وعودة التسجيلات الجديدة إلى النمو.",
+      "verification_status": "verified_press_metric_with_definition_limits",
+      "confidence": "medium_high",
+      "claim_type": "rounded_monthly_user_and_cumulative_scale_metrics",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تنشر Tinder نحو 50 مليون مستخدم شهريًا و630 مليون تنزيل و100 مليار Match، بينما تضيف Match Group اتجاه MAU الحديث.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-01",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Tinder",
+          "publisher": "Tinder Newsroom",
+          "source_type": "official_company_page",
+          "url": "https://www.tinderpressroom.com/about",
+          "evidence_type": "direct",
+          "source_locator": "About Tinder",
+          "supports": "مؤشرات المستخدمين والتنزيلات والمطابقات."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Match Group Q1 2026 Results",
+          "publisher": "Match Group Investor Relations",
+          "source_type": "official_quarterly_results",
+          "url": "https://ir.mtch.com/investor-relations/news-events/news-events/news-details/2026/Match-Group-Announces-First-Quarter-Results/",
+          "evidence_type": "direct",
+          "source_locator": "Q1 results",
+          "supports": "MAU في مارس 2026 والتسجيلات الجديدة.",
+          "published_on": "2026-05-05"
+        }
+      ],
+      "limitations": "رقم المستخدمين شهريًا تقريبي وغير معروض في إفصاح SEC؛ التنزيلات والمطابقات تراكمية."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "قبل Tinder، كانت خدمات التعارف الرقمية تعتمد غالبًا على ملفات طويلة وبحث وفلاتر ورسائل يمكن إرسالها قبل وجود اهتمام متبادل. هذا وضع عبء الاختيار والكتابة والرفض على المستخدم مبكرًا، وخلق صناديق وارد غير متوازنة ورسائل غير مرغوبة، خصوصًا عندما يستطيع أي شخص بدء المحادثة دون إشارة مقابلة.",
+        "impact": "كثرة الخطوات تجعل تجربة الهاتف بطيئة، بينما يؤدي غياب الموافقة المتبادلة إلى تكلفة اجتماعية ونفسية وإلى مشكلات سلامة وإشراف. لكن إزالة الرسالة غير المرغوبة لا تزيل الرفض بالكامل؛ فهي تخفي نتيجة بعض الاختيارات وتؤجلها إلى مرحلة Match أو محادثة قد لا تبدأ أو تستمر."
+      },
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "product_design_problem_and_marketplace_analysis",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "يثبت تاريخ المنتج التحول إلى Swipe وMatch، بينما تعكس ميزات السلامة الحالية الحاجة إلى تقليل الرسائل المؤذية والملفات غير الحقيقية.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-05",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Tinder",
+          "publisher": "Tinder Newsroom",
+          "source_type": "official_company_page",
+          "url": "https://www.tinderpressroom.com/about",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "الإطلاق والنمو التاريخي للمطابقات."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Tinder Sparks 2026 Product Keynote",
+          "publisher": "Tinder Newsroom",
+          "source_type": "official_product_announcement",
+          "url": "https://www.tinderpressroom.com/2026-03-12-Tinder-Debuts-Inaugural-Product-Keynote-Tinder-Sparks-2026-Start-Something-New",
+          "evidence_type": "direct",
+          "source_locator": "Product keynote",
+          "supports": "مشكلات الإرهاق والأصالة والنتائج والأمان.",
+          "published_on": "2026-03-12"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Face Check U.S. Expansion",
+          "publisher": "Tinder Newsroom",
+          "source_type": "official_safety_announcement",
+          "url": "https://www.tinderpressroom.com/2025-10-22-Tinder-to-Expand-Facial-Verification-Feature-Across-the-U-S-%2C-Setting-a-New-Standard-for-Dating-Safety",
+          "evidence_type": "direct",
+          "source_locator": "Face Check announcement",
+          "supports": "الحسابات المزيفة والانتحال والثقة.",
+          "published_on": "2025-10-22"
+        }
+      ],
+      "limitations": "وصف المواقع السابقة والرفض تحليل تصميمي عام، وليس دراسة سببية منشورة من Tinder."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "اختصر Tinder الاكتشاف في بطاقات مرئية وسحب Like أو Nope، ولا يفتح الدردشة إلا بعد اهتمام متبادل. توسع المنتج من Swipe وMatch إلى Passport وTop Picks وBoost وSuper Like، ثم إلى Modes مثل Double Date وCollege وMusic وAstrology، وEvents للقاءات الواقعية، وتوصيات AI عبر Chemistry وLearning Mode، وأدوات ملف شخصي مثل Photo Selector. بالتوازي، يضيف Face Check وPhoto Verification وID + Photo Verification وميزات لغوية مثل Are You Sure? وDoes This Bother You? طبقات للهوية والسلوك والإبلاغ."
+      },
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "mutual_matching_social_formats_ai_and_safety_platform",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تدعم المصادر الحالية الخطط وModes وEvents وAI والتحقق والحظر.",
+      "source_count": 8,
+      "source_ids": [
+        "SRC-05",
+        "SRC-06",
+        "SRC-07",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14",
+        "SRC-16",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Tinder Sparks 2026 Product Keynote",
+          "publisher": "Tinder Newsroom",
+          "source_type": "official_product_announcement",
+          "url": "https://www.tinderpressroom.com/2026-03-12-Tinder-Debuts-Inaugural-Product-Keynote-Tinder-Sparks-2026-Start-Something-New",
+          "evidence_type": "direct",
+          "source_locator": "Sparks 2026",
+          "supports": "Modes وAI والسلامة والشراكات.",
+          "published_on": "2026-03-12"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Tinder Events Global Expansion",
+          "publisher": "Tinder Newsroom",
+          "source_type": "official_product_expansion",
+          "url": "https://www.tinderpressroom.com/2026-07-23-Tinder-Expands-Events-Globally%2C-Bringing-More-Ways-for-Singles-to-Spark-Connections-IRL",
+          "evidence_type": "direct",
+          "source_locator": "Events expansion",
+          "supports": "Events.",
+          "published_on": "2026-07-23"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Tinder Subscriptions",
+          "publisher": "Tinder Help Center",
+          "source_type": "official_subscription_documentation",
+          "url": "https://www.help.tinder.com/hc/en-gb/articles/115004487406-Tinder-subscriptions",
+          "evidence_type": "direct",
+          "source_locator": "Subscriptions",
+          "supports": "الاشتراكات."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Face Check U.S. Expansion",
+          "publisher": "Tinder Newsroom",
+          "source_type": "official_safety_announcement",
+          "url": "https://www.tinderpressroom.com/2025-10-22-Tinder-to-Expand-Facial-Verification-Feature-Across-the-U-S-%2C-Setting-a-New-Standard-for-Dating-Safety",
+          "evidence_type": "direct",
+          "source_locator": "Safety announcement",
+          "supports": "Face Check.",
+          "published_on": "2025-10-22"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Photo Verification",
+          "publisher": "Tinder Help Center",
+          "source_type": "official_safety_documentation",
+          "url": "https://www.help.tinder.com/hc/en-us/articles/360034941812-Photo-Verification",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "Photo Verification."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "ID + Photo Verification",
+          "publisher": "Tinder Help Center",
+          "source_type": "official_identity_documentation",
+          "url": "https://www.help.tinder.com/hc/en-us/articles/19868368795917-ID-Photo-Verification",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "ID + Photo."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Photo Selector Privacy",
+          "publisher": "Tinder Help Center",
+          "source_type": "official_ai_privacy_documentation",
+          "url": "https://www.help.tinder.com/hc/en-us/articles/21276850679693-Photo-Selector",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "Photo Selector."
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Double Date Launch",
+          "publisher": "Tinder Newsroom",
+          "source_type": "official_social_product_announcement",
+          "url": "https://www.tinderpressroom.com/2025-06-17-Tinder-Launches-Double-Date-The-New-Way-to-Make-Connections-with-Your-Bestie",
+          "evidence_type": "direct",
+          "source_locator": "Product announcement",
+          "supports": "Double Date.",
+          "published_on": "2025-06-17"
+        }
+      ]
+    },
+    "$.market_data.target_audience": {
+      "field_value": "البالغون بعمر 18 سنة فأكثر الباحثون عن التعارف والعلاقات والتواصل الاجتماعي. تقارب نسبة المستخدمين بعمر 18–30 نحو 60% وفق Tinder، مع تركيز قوي على Gen Z، إلى جانب مستخدمين أكبر سنًا ومسافرين وطلاب جامعات ومجتمعات LGBTQIA+ وأشخاص يريدون صيغًا أقل ضغطًا مثل Double Date أو Events.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "adult_global_dating_and_social_discovery_segments",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "توضح Tinder الحد الأدنى للعمر وانتشارها والفئة العمرية وأشكال الاستخدام الجديدة.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-08",
+        "SRC-05",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Tinder",
+          "publisher": "Tinder Newsroom",
+          "source_type": "official_company_page",
+          "url": "https://www.tinderpressroom.com/about",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "العمر النسبي والانتشار العالمي."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Tinder Terms of Use",
+          "publisher": "Tinder",
+          "source_type": "official_legal_document",
+          "url": "https://policies.tinder.com/terms/intl/en-gb/",
+          "evidence_type": "direct",
+          "source_locator": "Terms",
+          "supports": "الأهلية بعمر 18 عامًا أو أكثر.",
+          "published_on": "2026-03-01"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Tinder Sparks 2026 Product Keynote",
+          "publisher": "Tinder Newsroom",
+          "source_type": "official_product_announcement",
+          "url": "https://www.tinderpressroom.com/2026-03-12-Tinder-Debuts-Inaugural-Product-Keynote-Tinder-Sparks-2026-Start-Something-New",
+          "evidence_type": "direct",
+          "source_locator": "Product keynote",
+          "supports": "Gen Z وModes وEvents.",
+          "published_on": "2026-03-12"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Double Date Launch",
+          "publisher": "Tinder Newsroom",
+          "source_type": "official_social_product_announcement",
+          "url": "https://www.tinderpressroom.com/2025-06-17-Tinder-Launches-Double-Date-The-New-Way-to-Make-Connections-with-Your-Bestie",
+          "evidence_type": "direct",
+          "source_locator": "Launch",
+          "supports": "Double Date وتبني المستخدمين الأصغر سنًا.",
+          "published_on": "2025-06-17"
+        }
+      ]
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر Tinder رقم TAM ماليًا رسميًا لسوق التعارف الرقمي. مؤشرات النطاق الأقرب هي نحو 50 مليون مستخدم شهريًا، وأكثر من 630 مليون تنزيل و100 مليار Match، وانتشار في أكثر من 185 دولة و60 لغة. وفي الربع الأول من 2026 بلغ متوسط Tinder نحو 8.632 ملايين Payer شهريًا، مع بقاء التطبيق الأول عالميًا في تنزيلات تطبيقات التعارف وفق Match Group.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "medium_high",
+      "claim_type": "platform_scale_without_published_tam",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "لا يوجد TAM رسمي؛ يستخدم الحقل المستخدمين والتنزيلات والمطابقات والدافعين والانتشار كمؤشرات.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Tinder",
+          "publisher": "Tinder Newsroom",
+          "source_type": "official_company_page",
+          "url": "https://www.tinderpressroom.com/about",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "الحجم العالمي."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Match Group Q1 2026 Form 10-Q",
+          "publisher": "U.S. Securities and Exchange Commission / Match Group",
+          "source_type": "sec_quarterly_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/891103/000089110326000073/mtch-20260331.htm",
+          "evidence_type": "direct",
+          "source_locator": "10-Q",
+          "supports": "8.632 ملايين Payer في Q1 2026.",
+          "published_on": "2026-05-05"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Match Group Q1 2026 Results",
+          "publisher": "Match Group Investor Relations",
+          "source_type": "official_quarterly_results",
+          "url": "https://ir.mtch.com/investor-relations/news-events/news-events/news-details/2026/Match-Group-Announces-First-Quarter-Results/",
+          "evidence_type": "direct",
+          "source_locator": "Results",
+          "supports": "مكانة التنزيلات واتجاه النشاط.",
+          "published_on": "2026-05-05"
+        }
+      ],
+      "limitations": "هذه المؤشرات لا تمثل قيمة السوق بالدولار أو عدد المستخدمين الفريدين مدى الحياة."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "تاريخيًا انتقل Tinder من أول Match إلى مليار Match خلال عامين. ماليًا، انخفض إيراد القطاع من 1.991 مليار دولار في 2024 إلى 1.925 مليارًا في 2025، بينما انخفض الإيراد المباشر 4% والمشتركون الدافعون 7% وارتفع RPP بنسبة 3%. في الربع الأول من 2026 ارتفع إيراد القطاع 1% والإيراد المباشر 2%، مع انخفاض الدافعين 5% وارتفاع RPP 7%. وبعد تحييد العملات انخفض الإيراد المباشر 3%، ما يعني أن التحسن المعلن لا يزال في مرحلة تحول وليس نموًا مستقرًا.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "high",
+      "claim_type": "historical_network_growth_and_current_financial_turnaround",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تقدم Tinder نموًا تاريخيًا قويًا، لكن الأرقام الحديثة تظهر انخفاضًا في 2025 وتحسنًا مختلطًا في Q1 2026.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-02",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Tinder",
+          "publisher": "Tinder Newsroom",
+          "source_type": "official_company_page",
+          "url": "https://www.tinderpressroom.com/about",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "الوصول إلى مليار Match خلال عامين."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Match Group Fiscal 2025 Form 10-K",
+          "publisher": "U.S. Securities and Exchange Commission / Match Group",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/891103/000089110326000025/mtch-20251231.htm",
+          "evidence_type": "direct",
+          "source_locator": "10-K",
+          "supports": "إيرادات ودافعي وRPP 2023–2025.",
+          "published_on": "2026-02-26"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Match Group Q1 2026 Form 10-Q",
+          "publisher": "U.S. Securities and Exchange Commission / Match Group",
+          "source_type": "sec_quarterly_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/891103/000089110326000073/mtch-20260331.htm",
+          "evidence_type": "direct",
+          "source_locator": "10-Q",
+          "supports": "Q1 2026 إيراد القطاع والدافعين وRPP.",
+          "published_on": "2026-05-05"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Match Group Q1 2026 Results",
+          "publisher": "Match Group Investor Relations",
+          "source_type": "official_quarterly_results",
+          "url": "https://ir.mtch.com/investor-relations/news-events/news-events/news-details/2026/Match-Group-Announces-First-Quarter-Results/",
+          "evidence_type": "direct",
+          "source_locator": "Results",
+          "supports": "MAU والتسجيلات وSparks.",
+          "published_on": "2026-05-05"
+        }
+      ],
+      "limitations": "العملات والاختبارات وتغير التسعير تؤثر في الإيراد؛ المؤشرات لا تثبت عودة نمو مستدام.",
+      "calculation": {
+        "2024_tinder_segment_revenue_usd": 1991137000,
+        "2025_tinder_segment_revenue_usd": 1924711000,
+        "calculated_2025_segment_revenue_change_percent": -3.34,
+        "2025_direct_revenue_change_percent": -4,
+        "2025_payer_change_percent": -7,
+        "2025_rpp_change_percent": 3,
+        "q1_2026_segment_revenue_change_percent": 1.13,
+        "q1_2026_direct_revenue_change_percent": 2,
+        "q1_2026_payer_change_percent": -5,
+        "q1_2026_rpp_change_percent": 7,
+        "q1_2026_fx_neutral_direct_revenue_change_percent": -3,
+        "march_2026_mau_change_percent": -7
+      }
+    },
+    "$.financials.initial_investment": {
+      "field_value": "أُطلق Tinder عام 2012 من Hackathon داخل Hatch Labs، وهي حاضنة كانت مملوكة لـIAC. لم يُنشر رقم منفصل لرأس المال الأول الذي خُصص لبناء Tinder، ولم تجمع العلامة جولة مستقلة بالطريقة التقليدية؛ إذ نمت داخل منظومة IAC ثم Match Group. أصبحت Tinder لاحقًا جزءًا من Match Group العامة، التي انفصلت عن IAC في 2020.",
+      "verification_status": "verified_historical_incubation",
+      "confidence": "medium_high",
+      "claim_type": "incubator_funded_origin_without_separate_capital_disclosure",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "توضح Tinder أنها انطلقت داخل Hatch Labs المملوكة لـIAC، بينما توثق SEC انتقال Match Group إلى شركة مستقلة.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-21",
+        "SRC-22"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-21",
+          "title": "Tinder Launch at Hatch Labs",
+          "publisher": "Tinder Newsroom",
+          "source_type": "official_historical_company_statement",
+          "url": "https://www.tinderpressroom.com/2022-09-20-Tinder-Matches-Singles-With-Adoptable-Dogs-For-National-Dog-Week",
+          "evidence_type": "direct",
+          "source_locator": "Historical About paragraph",
+          "supports": "Hackathon وHatch Labs وIAC.",
+          "published_on": "2022-09-20"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Match Group and IAC Separation",
+          "publisher": "U.S. Securities and Exchange Commission / Match Group",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/891103/000089110322000020/mtch-20211231.htm",
+          "evidence_type": "direct",
+          "source_locator": "10-K → Separation",
+          "supports": "انفصال Match Group عن IAC في 2020.",
+          "published_on": "2022-03-01"
+        }
+      ],
+      "limitations": "لم يُنشر رقم رأس المال أو المصروفات المخصصة لتطوير Tinder في بدايتها."
+    },
+    "$.financials.valuation": {
+      "field_value": "لا يوجد تقييم مستقل حالي لـTinder؛ فهي قطاع تشغيلي وكيان تابع مملوك لـMatch Group العامة، وليست شركة مدرجة منفصلة. لذلك لا يصح استخدام قيمة Match Group السوقية أو إيراد Tinder كأنهما تقييم للعلامة. المؤشرات المالية الأنسب هي إيراد القطاع، والدافعين، وRPP، والدخل التشغيلي وAdjusted EBITDA.",
+      "verification_status": "verified_as_not_independently_valued",
+      "confidence": "high",
+      "claim_type": "wholly_owned_segment_without_standalone_market_value",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تثبت SEC أن Tinder قطاع تشغيلي وأن Tinder LLC شركة تابعة، لذلك لا توجد قيمة سوقية مستقلة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-02",
+        "SRC-20",
+        "SRC-22"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Match Group Q1 2026 Form 10-Q",
+          "publisher": "U.S. Securities and Exchange Commission / Match Group",
+          "source_type": "sec_quarterly_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/891103/000089110326000073/mtch-20260331.htm",
+          "evidence_type": "direct",
+          "source_locator": "10-Q → Segment Information",
+          "supports": "Tinder كقطاع تقريري.",
+          "published_on": "2026-05-05"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Match Group Subsidiaries",
+          "publisher": "U.S. Securities and Exchange Commission / Match Group",
+          "source_type": "sec_subsidiary_exhibit",
+          "url": "https://www.sec.gov/Archives/edgar/data/891103/000089110326000025/mtch10-k20251231ex211.htm",
+          "evidence_type": "direct",
+          "source_locator": "Subsidiary exhibit",
+          "supports": "Tinder LLC تابعة لـMatch Group.",
+          "published_on": "2026-02-26"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Match Group and IAC Separation",
+          "publisher": "U.S. Securities and Exchange Commission / Match Group",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/891103/000089110322000020/mtch-20211231.htm",
+          "evidence_type": "direct",
+          "source_locator": "10-K",
+          "supports": "Match Group العامة المستقلة عن IAC.",
+          "published_on": "2022-03-01"
+        }
+      ],
+      "limitations": "أي تقييم مستقل منشور خارجي سيكون تقديرًا وليس قيمة سوقية رسمية."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "اشتراكات Tinder Plus مع Likes غير محدودة وRewind وPassport ووضع Incognito ومزايا أخرى بحسب السوق والاختبار",
+        "اشتراكات Tinder Gold التي تضيف Likes You وTop Picks وSuper Likes ومزايا Boost بحسب الخطة والسوق",
+        "اشتراكات Tinder Platinum التي تضيف Prioritized Likes وسجل Likes المرسلة ومزايا الخطط الأدنى",
+        "حزم Super Likes التي تعطي الملف أولوية لدى المستلم المحتمل",
+        "حزم Boost التي ترفع ظهور الملف في المنطقة لمدة محدودة",
+        "مشتريات Top Picks وعناصر افتراضية أو مزايا محدودة الاستخدام",
+        "إعلانات وعروض ترويجية داخل الخدمة، مدرجة ضمن الإيراد غير المباشر لدى Match Group",
+        "شراكات وتجارب تجارية مرتبطة بالعلامة، مع عدم وجود إفصاح يفصل إيرادها عن إعلانات Tinder أو Match Group"
+      ],
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "subscription_a_la_carte_virtual_items_and_advertising",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تدعم وثائق Tinder الاشتراكات والمزايا والمشتريات، وتدعم SEC الإعلانات.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-07",
+        "SRC-08",
+        "SRC-09",
+        "SRC-10",
+        "SRC-11",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Tinder Subscriptions",
+          "publisher": "Tinder Help Center",
+          "source_type": "official_subscription_documentation",
+          "url": "https://www.help.tinder.com/hc/en-gb/articles/115004487406-Tinder-subscriptions",
+          "evidence_type": "direct",
+          "source_locator": "Subscriptions",
+          "supports": "خطط الاشتراك."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Tinder Terms of Use",
+          "publisher": "Tinder",
+          "source_type": "official_legal_document",
+          "url": "https://policies.tinder.com/terms/intl/en-gb/",
+          "evidence_type": "direct",
+          "source_locator": "Terms",
+          "supports": "Virtual Items والأسعار المتغيرة.",
+          "published_on": "2026-03-01"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Super Like",
+          "publisher": "Tinder Help Center",
+          "source_type": "official_product_documentation",
+          "url": "https://www.help.tinder.com/hc/en-us/articles/115004493543-Super-Like",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "Super Like."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Boost",
+          "publisher": "Tinder Help Center",
+          "source_type": "official_product_documentation",
+          "url": "https://www.help.tinder.com/hc/en-gb/articles/115004506186-Boost",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "Boost."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Top Picks",
+          "publisher": "Tinder Help Center",
+          "source_type": "official_product_documentation",
+          "url": "https://www.help.tinder.com/hc/en-us/articles/360005039092-Top-Picks",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "Top Picks."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Match Group Fiscal 2025 Form 10-K",
+          "publisher": "U.S. Securities and Exchange Commission / Match Group",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/891103/000089110326000025/mtch-20251231.htm",
+          "evidence_type": "direct",
+          "source_locator": "10-K",
+          "supports": "Indirect Revenue أساسه الإعلانات.",
+          "published_on": "2026-02-26"
+        }
+      ],
+      "limitations": "لا تفصل Match Group الإيراد حسب كل خطة أو عنصر افتراضي أو شراكة."
+    },
+    "$.tools": {
+      "field_value": [
+        "تطبيقات iOS وAndroid وتجربة Tinder.com على الويب",
+        "Swipe وLike وNope ونظام Match المتبادل والدردشة",
+        "توصيات تعتمد على الملف والنشاط والموقع والتفضيلات",
+        "Tinder Plus وGold وPlatinum مع مزايا تختلف حسب السوق والاختبارات",
+        "Passport وRewind وIncognito وLikes You وTop Picks وPrioritized Likes",
+        "Super Like وBoost ومشتريات العناصر الافتراضية",
+        "Modes مثل Double Date وCollege وMusic وAstrology",
+        "Events لاكتشاف فعاليات محلية وRSVP وشراء تذاكر عبر شركاء مستقلين وشارة Attended",
+        "Chemistry كتوصيات AI يومية مع Q&A وخيارات اختيارية مثل Camera Roll Scan",
+        "Learning Mode لتخصيص التوصيات في الزمن الفعلي وفق نشاط المستخدم",
+        "Photo Selector لاختيار صور من الجهاز مع معالجة خصوصية تتم محليًا",
+        "Photo Verification وPhoto Check وFace Check باستخدام Video Selfie وLiveness",
+        "ID + Photo Verification في أسواق اختبار محددة والتحقق العمري في أسواق مؤهلة",
+        "Are You Sure? وDoes This Bother You? مع تحسينات LLM وفلاتر Auto-Blur",
+        "Block Contacts وBlock Profile والإبلاغ ومركز الاستئناف",
+        "Double Date group chat وMatchmaker وShare My Date لإشراك الأصدقاء",
+        "Tinder Connect وتكاملات Spotify وDuolingo وBeli لإظهار الاهتمامات",
+        "Photo Verified access requirements لبعض تجارب Events والفيديو",
+        "SMS verification وتدابير مكافحة Bots والاحتيال وانتحال الهوية",
+        "AWS لتخزين بعض بيانات التحقق وفق وثائق الخصوصية الرسمية"
+      ],
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "official_mobile_web_matching_ai_social_safety_and_payment_capabilities",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "استُبدلت قائمة تقنيات داخلية مفترضة بقدرات منتج موثقة حاليًا.",
+      "source_count": 10,
+      "source_ids": [
+        "SRC-05",
+        "SRC-06",
+        "SRC-07",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14",
+        "SRC-15",
+        "SRC-16",
+        "SRC-17",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Tinder Sparks 2026 Product Keynote",
+          "publisher": "Tinder Newsroom",
+          "source_type": "official_product_announcement",
+          "url": "https://www.tinderpressroom.com/2026-03-12-Tinder-Debuts-Inaugural-Product-Keynote-Tinder-Sparks-2026-Start-Something-New",
+          "evidence_type": "direct",
+          "source_locator": "Sparks 2026",
+          "supports": "AI وModes والسلامة والشراكات.",
+          "published_on": "2026-03-12"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Tinder Events Global Expansion",
+          "publisher": "Tinder Newsroom",
+          "source_type": "official_product_expansion",
+          "url": "https://www.tinderpressroom.com/2026-07-23-Tinder-Expands-Events-Globally%2C-Bringing-More-Ways-for-Singles-to-Spark-Connections-IRL",
+          "evidence_type": "direct",
+          "source_locator": "Events",
+          "supports": "Events.",
+          "published_on": "2026-07-23"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Tinder Subscriptions",
+          "publisher": "Tinder Help Center",
+          "source_type": "official_subscription_documentation",
+          "url": "https://www.help.tinder.com/hc/en-gb/articles/115004487406-Tinder-subscriptions",
+          "evidence_type": "direct",
+          "source_locator": "Subscriptions",
+          "supports": "الخطط والمزايا."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Face Check U.S. Expansion",
+          "publisher": "Tinder Newsroom",
+          "source_type": "official_safety_announcement",
+          "url": "https://www.tinderpressroom.com/2025-10-22-Tinder-to-Expand-Facial-Verification-Feature-Across-the-U-S-%2C-Setting-a-New-Standard-for-Dating-Safety",
+          "evidence_type": "direct",
+          "source_locator": "Safety",
+          "supports": "Face Check.",
+          "published_on": "2025-10-22"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Photo Verification",
+          "publisher": "Tinder Help Center",
+          "source_type": "official_safety_documentation",
+          "url": "https://www.help.tinder.com/hc/en-us/articles/360034941812-Photo-Verification",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "Photo Verification."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "ID + Photo Verification",
+          "publisher": "Tinder Help Center",
+          "source_type": "official_identity_documentation",
+          "url": "https://www.help.tinder.com/hc/en-us/articles/19868368795917-ID-Photo-Verification",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "ID verification."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Photo Check Data and Privacy",
+          "publisher": "Tinder Help Center",
+          "source_type": "official_biometric_privacy_documentation",
+          "url": "https://www.help.tinder.com/hc/en-us/articles/26147205007885-Photo-Check-data-and-privacy-information",
+          "evidence_type": "direct",
+          "source_locator": "Privacy",
+          "supports": "AWS وبيانات التحقق."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Photo Selector Privacy",
+          "publisher": "Tinder Help Center",
+          "source_type": "official_ai_privacy_documentation",
+          "url": "https://www.help.tinder.com/hc/en-us/articles/21276850679693-Photo-Selector",
+          "evidence_type": "direct",
+          "source_locator": "Photo Selector",
+          "supports": "المعالجة على الجهاز."
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Double Date Launch",
+          "publisher": "Tinder Newsroom",
+          "source_type": "official_social_product_announcement",
+          "url": "https://www.tinderpressroom.com/2025-06-17-Tinder-Launches-Double-Date-The-New-Way-to-Make-Connections-with-Your-Bestie",
+          "evidence_type": "direct",
+          "source_locator": "Product",
+          "supports": "Double Date.",
+          "published_on": "2025-06-17"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Block Contacts",
+          "publisher": "Tinder Help Center",
+          "source_type": "official_privacy_and_safety_documentation",
+          "url": "https://www.help.tinder.com/hc/en-gb/articles/360039684672-Block-Contacts",
+          "evidence_type": "direct",
+          "source_locator": "Safety",
+          "supports": "Block Contacts."
+        }
+      ],
+      "limitations": "لا تمثل القائمة حزمة لغات البرمجة أو قواعد البيانات الداخلية، ولا تتوفر كل المزايا في كل سوق."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "About Tinder",
+      "publisher": "Tinder Newsroom",
+      "source_type": "official_company_page",
+      "url": "https://www.tinderpressroom.com/about",
+      "supports": [
+        "الإطلاق عام 2012",
+        "نحو 50 مليون مستخدم شهريًا",
+        "630 مليون+ تنزيل",
+        "100 مليار+ Match",
+        "الانتشار الدولي والفئة العمرية"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Match Group Q1 2026 Form 10-Q",
+      "publisher": "U.S. Securities and Exchange Commission / Match Group",
+      "source_type": "sec_quarterly_filing",
+      "published_on": "2026-05-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/891103/000089110326000073/mtch-20260331.htm",
+      "supports": [
+        "إيراد قطاع Tinder في Q1 2026",
+        "الإيراد المباشر والدافعين وRPP",
+        "الدخل التشغيلي وAdjusted EBITDA",
+        "رسوم متاجر التطبيقات",
+        "قضايا التسعير والخصوصية"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Match Group Fiscal 2025 Form 10-K",
+      "publisher": "U.S. Securities and Exchange Commission / Match Group",
+      "source_type": "sec_annual_filing",
+      "published_on": "2026-02-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/891103/000089110326000025/mtch-20251231.htm",
+      "supports": [
+        "إيرادات Tinder في 2023 و2024 و2025",
+        "الدافعين وRPP",
+        "تعريف الإيراد المباشر والإعلانات",
+        "Tinder كقطاع تشغيلي"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Match Group Q1 2026 Results",
+      "publisher": "Match Group Investor Relations",
+      "source_type": "official_quarterly_results",
+      "published_on": "2026-05-05",
+      "url": "https://ir.mtch.com/investor-relations/news-events/news-events/news-details/2026/Match-Group-Announces-First-Quarter-Results/",
+      "supports": [
+        "تحسن Sparks وSparks Coverage",
+        "انخفاض MAU في مارس 2026",
+        "عودة التسجيلات الجديدة إلى النمو",
+        "تعريف Sparks"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Tinder Sparks 2026 Product Keynote",
+      "publisher": "Tinder Newsroom",
+      "source_type": "official_product_announcement",
+      "published_on": "2026-03-12",
+      "url": "https://www.tinderpressroom.com/2026-03-12-Tinder-Debuts-Inaugural-Product-Keynote-Tinder-Sparks-2026-Start-Something-New",
+      "supports": [
+        "Modes وEvents والفيديو السريع",
+        "Chemistry وLearning Mode وCamera Roll Scan",
+        "LLM safety updates",
+        "Tinder Connect والشراكات",
+        "185+ دولة و60+ لغة"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Tinder Events Global Expansion",
+      "publisher": "Tinder Newsroom",
+      "source_type": "official_product_expansion",
+      "published_on": "2026-07-23",
+      "url": "https://www.tinderpressroom.com/2026-07-23-Tinder-Expands-Events-Globally%2C-Bringing-More-Ways-for-Singles-to-Spark-Connections-IRL",
+      "supports": [
+        "توسع Events إلى مدن جديدة",
+        "آلية RSVP والتذاكر وشارة Attended",
+        "اشتراط Photo Verification",
+        "بيانات تجربة لوس أنجلوس"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Tinder Subscriptions",
+      "publisher": "Tinder Help Center",
+      "source_type": "official_subscription_documentation",
+      "url": "https://www.help.tinder.com/hc/en-gb/articles/115004487406-Tinder-subscriptions",
+      "supports": [
+        "Plus وGold وPlatinum",
+        "Passport وRewind وIncognito",
+        "Likes You وTop Picks وPrioritized Likes"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Tinder Terms of Use",
+      "publisher": "Tinder",
+      "source_type": "official_legal_document",
+      "published_on": "2026-03-01",
+      "url": "https://policies.tinder.com/terms/intl/en-gb/",
+      "supports": [
+        "الاستخدام المجاني والاشتراكات المتجددة",
+        "تغير الأسعار حسب عوامل متعددة",
+        "Virtual Items",
+        "Apple وGoogle Play والدفع الداخلي"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Super Like",
+      "publisher": "Tinder Help Center",
+      "source_type": "official_product_documentation",
+      "url": "https://www.help.tinder.com/hc/en-us/articles/115004493543-Super-Like",
+      "supports": [
+        "شراء Super Likes",
+        "الأولوية لدى المستخدم المستهدف",
+        "المزايا الأسبوعية لبعض الاشتراكات"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Boost",
+      "publisher": "Tinder Help Center",
+      "source_type": "official_product_documentation",
+      "url": "https://www.help.tinder.com/hc/en-gb/articles/115004506186-Boost",
+      "supports": [
+        "رفع الظهور لمدة 30 دقيقة",
+        "شراء Boosts",
+        "المزايا المرتبطة ببعض الاشتراكات"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Top Picks",
+      "publisher": "Tinder Help Center",
+      "source_type": "official_product_documentation",
+      "url": "https://www.help.tinder.com/hc/en-us/articles/360005039092-Top-Picks",
+      "supports": [
+        "Top Picks اليومية",
+        "الشراء الإضافي",
+        "علاقة الميزة بـGold وPlatinum"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Face Check U.S. Expansion",
+      "publisher": "Tinder Newsroom",
+      "source_type": "official_safety_announcement",
+      "published_on": "2025-10-22",
+      "url": "https://www.tinderpressroom.com/2025-10-22-Tinder-to-Expand-Facial-Verification-Feature-Across-the-U-S-%2C-Setting-a-New-Standard-for-Dating-Safety",
+      "supports": [
+        "Face Check الإلزامي في أسواق",
+        "Liveness ومطابقة الصور ومنع الحسابات المكررة",
+        "بيانات انخفاض التعرض للحسابات السيئة",
+        "خصوصية FaceMap وFaceVector"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Photo Verification",
+      "publisher": "Tinder Help Center",
+      "source_type": "official_safety_documentation",
+      "url": "https://www.help.tinder.com/hc/en-us/articles/360034941812-Photo-Verification",
+      "supports": [
+        "Video Selfie ومقارنة الصور",
+        "شارة Photo Verified",
+        "حدود التحقق وعدم ضمان السلامة"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "ID + Photo Verification",
+      "publisher": "Tinder Help Center",
+      "source_type": "official_identity_documentation",
+      "url": "https://www.help.tinder.com/hc/en-us/articles/19868368795917-ID-Photo-Verification",
+      "supports": [
+        "التحقق بالهوية والصورة",
+        "فحص العمر",
+        "الاحتفاظ بالبيانات",
+        "فحص RSO لبعض المستخدمين الأمريكيين"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Photo Check Data and Privacy",
+      "publisher": "Tinder Help Center",
+      "source_type": "official_biometric_privacy_documentation",
+      "url": "https://www.help.tinder.com/hc/en-us/articles/26147205007885-Photo-Check-data-and-privacy-information",
+      "supports": [
+        "FaceMap وFaceVector",
+        "التخزين والحذف",
+        "AWS",
+        "مشاركة البيانات بين شركات Match Group ضمن الحدود القانونية"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Photo Selector Privacy",
+      "publisher": "Tinder Help Center",
+      "source_type": "official_ai_privacy_documentation",
+      "url": "https://www.help.tinder.com/hc/en-us/articles/21276850679693-Photo-Selector",
+      "supports": [
+        "المعالجة على الجهاز",
+        "عدم وصول Tinder إلى صور Camera Roll غير المختارة",
+        "حذف البيانات البيومترية المحلية"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Double Date Launch",
+      "publisher": "Tinder Newsroom",
+      "source_type": "official_social_product_announcement",
+      "published_on": "2025-06-17",
+      "url": "https://www.tinderpressroom.com/2025-06-17-Tinder-Launches-Double-Date-The-New-Way-to-Make-Connections-with-Your-Bestie",
+      "supports": [
+        "Double Date وآلية المجموعة",
+        "Group Chat",
+        "تبني Gen Z",
+        "50 مليون مستخدم شهريًا"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Block Contacts",
+      "publisher": "Tinder Help Center",
+      "source_type": "official_privacy_and_safety_documentation",
+      "url": "https://www.help.tinder.com/hc/en-gb/articles/360039684672-Block-Contacts",
+      "supports": [
+        "حظر جهات الاتصال",
+        "الإدخال اليدوي",
+        "معالجة بيانات قائمة الاتصال"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "Tinder Privacy Policy",
+      "publisher": "Tinder",
+      "source_type": "official_privacy_document",
+      "published_on": "2025-10-10",
+      "url": "https://policies.tinder.com/privacy-policy-10-10-2025/intl/en/",
+      "supports": [
+        "Tinder LLC",
+        "عنوان التحكم بالبيانات خارج أوروبا واليابان",
+        "الكيانات الإقليمية"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "Match Group Subsidiaries",
+      "publisher": "U.S. Securities and Exchange Commission / Match Group",
+      "source_type": "sec_subsidiary_exhibit",
+      "published_on": "2026-02-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/891103/000089110326000025/mtch10-k20251231ex211.htm",
+      "supports": [
+        "Tinder LLC شركة تابعة مسجلة في ديلاوير"
+      ]
+    },
+    {
+      "id": "SRC-21",
+      "title": "Tinder Launch at Hatch Labs",
+      "publisher": "Tinder Newsroom",
+      "source_type": "official_historical_company_statement",
+      "published_on": "2022-09-20",
+      "url": "https://www.tinderpressroom.com/2022-09-20-Tinder-Matches-Singles-With-Adoptable-Dogs-For-National-Dog-Week",
+      "supports": [
+        "إطلاق Tinder في Hackathon داخل Hatch Labs",
+        "ملكية IAC للحاضنة",
+        "الإطلاق عام 2012"
+      ]
+    },
+    {
+      "id": "SRC-22",
+      "title": "Match Group and IAC Separation",
+      "publisher": "U.S. Securities and Exchange Commission / Match Group",
+      "source_type": "sec_annual_filing",
+      "published_on": "2022-03-01",
+      "url": "https://www.sec.gov/Archives/edgar/data/891103/000089110322000020/mtch-20211231.htm",
+      "supports": [
+        "انفصال Match Group عن IAC في 30 يونيو 2020",
+        "استمرار Tinder ضمن محفظة Match Group"
+      ]
+    },
+    {
+      "id": "SRC-23",
+      "title": "Match Group Q2 2026 Results Schedule",
+      "publisher": "Match Group Investor Relations",
+      "source_type": "official_results_schedule",
+      "published_on": "2026-07-14",
+      "url": "https://ir.mtch.com/investor-relations/news-events/news-events/news-details/2026/Match-Group-to-Announce-Second-Quarter-2026-Results/default.aspx",
+      "supports": [
+        "تاريخ إصدار نتائج Q2 2026 في 4 أغسطس 2026"
+      ]
+    }
+  ]
+}
