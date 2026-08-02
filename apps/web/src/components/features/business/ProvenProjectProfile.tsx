@@ -102,24 +102,59 @@ const getStatusMeta = (status: string) => {
 };
 
 const getShortRevenueDisplay = (revenueStr: string) => {
-  if (!revenueStr) return '$84.7M /شهر';
-  if (revenueStr.includes('$84.7M')) return '$84.7M /شهر';
+  if (!revenueStr) return '-';
   if (revenueStr.length < 25) return revenueStr;
-  return '$84.7M /شهر';
+
+  if (revenueStr.includes('84.7')) return '$84.7M /شهر';
+  if (revenueStr.includes('4.19')) return '$4.19B /شهر';
+  if (revenueStr.includes('372.8')) return '$372.8M /شهر';
+  if (revenueStr.includes('2.9')) return '$2.9M /شهر';
+  if (revenueStr.includes('800 ألف')) return '800K درهم/شهر';
+  
+  const amountMatch = revenueStr.match(/(\$\d+(?:\.\d+)?\s*(?:B|M|K)?|نحو \d+(?:\.\d+)? (?:مليار|ملايين|مليون|ألف) (?:دولار|درهم|جنيه))/i);
+  if (amountMatch) return amountMatch[0];
+
+  if (revenueStr.includes('غير معلن')) return 'غير مفصح رسمياً';
+
+  return revenueStr.slice(0, 22) + '...';
 };
 
 const getShortTrafficDisplay = (trafficStr: string) => {
-  if (!trafficStr) return '14M+ عميل';
-  if (trafficStr.includes('14M') || trafficStr.includes('14 مليون')) return '14M+ عميل';
+  if (!trafficStr) return '-';
   if (trafficStr.length < 25) return trafficStr;
-  return '14M+ عميل';
+
+  if (trafficStr.includes('105')) return '105M+ زائر/شهر';
+  if (trafficStr.includes('14M') || trafficStr.includes('14 مليون')) return '14M+ عميل';
+  if (trafficStr.includes('500')) return '500+ عميل مؤسسي';
+  
+  const trafficMatch = trafficStr.match(/(\d+(?:\.\d+)?\s*(?:B|M|K|مليون|ألف)\s*(?:عميل|زائر|مستخدم|بريد)?)/i);
+  if (trafficMatch) return trafficMatch[0];
+
+  if (trafficStr.includes('غير معلن')) return 'غير مفصح رسمياً';
+
+  return trafficStr.slice(0, 22) + '...';
 };
 
 const getShortValuationDisplay = (valStr: string) => {
-  if (!valStr) return '12.0 مليار $';
-  if (valStr.includes('12.0') || valStr.includes('12 مليار')) return '12.0 مليار $';
+  if (!valStr) return '-';
   if (valStr.length < 25) return valStr;
-  return '12.0 مليار $';
+
+  if (valStr.includes('12.0') || valStr.includes('12 مليار')) return '12.0 مليار $';
+  if (valStr.includes('7.1')) return '7.1B$+ تقييم';
+  if (valStr.includes('1.1')) return '1.1B$ تقييم';
+  if (valStr.includes('825')) return '825M$ تقييم';
+  if (valStr.includes('970')) return '970M$ (Amazon)';
+  if (valStr.includes('50')) return '50M جنيه (Shark Tank)';
+  if (valStr.includes('19.2')) return '19.2M جنيه';
+  if (valStr.includes('3.33')) return '3.33M جنيه';
+  if (valStr.includes('Nasdaq')) return 'شركة عامة (Nasdaq)';
+
+  const valMatch = valStr.match(/(\$\d+(?:\.\d+)?\s*(?:B|M|K)?|\d+(?:\.\d+)? (?:مليار|ملايين|مليون) (?:دولار|درهم|جنيه))/i);
+  if (valMatch) return valMatch[0];
+
+  if (valStr.includes('لم تكشف') || valStr.includes('غير معلن')) return 'غير مفصح رسمياً';
+
+  return valStr.slice(0, 22) + '...';
 };
 
 export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: rawProject, onBack }) => {
