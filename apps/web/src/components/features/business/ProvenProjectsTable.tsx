@@ -472,7 +472,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
     },
     initialState: {
       pagination: {
-        pageSize: 10,
+        pageSize: 50,
       },
     },
     state: {
