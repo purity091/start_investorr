@@ -110,7 +110,6 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
 
   // Extract key verified evidence insights to embed directly into main sections
   const revenueEvidence = evidenceMap['$.directory_snapshot.monthly_revenue'];
-  const trafficEvidence = evidenceMap['$.directory_snapshot.monthly_traffic'];
   const modelEvidence = evidenceMap['$.company.business_model'];
   const locationEvidence = evidenceMap['$.company.location'];
 
@@ -221,6 +220,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
     { id: 'tools', label: 'التقنيات والتكاملات' },
     { id: 'revenue-timeline', label: 'المخطط الزمني للإيرادات' },
     { id: 'lessons', label: 'الدروس والاستراتيجيات' },
+    { id: 'verification-policy', label: 'حدود وسياسة التوثيق' },
     { id: 'sources', label: 'المصادر والتقارير (مطوي)' },
     { id: 'data-quality', label: 'معايير التوثيق' },
   ];
@@ -269,59 +269,8 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
         </Button>
       </div>
 
-      {/* Top Verification Alert Card */}
-      {rawProject.verification ? (
-        <Card className="border-emerald-200/80 bg-emerald-50/50 shadow-xs overflow-hidden">
-          <CardContent className="p-4 sm:p-5 flex flex-col gap-4">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 border-b border-emerald-200/60 pb-3">
-              <div className="flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-emerald-100 text-emerald-700">
-                  <ShieldCheck className="size-6" />
-                </div>
-                <div>
-                  <h2 className="font-bold text-slate-900 text-base flex items-center gap-2">
-                    ملف موثق بمصادر رسمية وأولية (Verified Primary Data)
-                  </h2>
-                  <p className="text-xs text-slate-600 font-medium mt-0.5">
-                    {rawProject.verification.source_policy}
-                  </p>
-                </div>
-              </div>
-              <Badge variant="outline" className="bg-emerald-100 text-emerald-800 border-emerald-300 font-bold text-xs shrink-0">
-                تم التوثيق: {rawProject.verification.verified_on || '2026'}
-              </Badge>
-            </div>
-
-            {rawProject.verification.important_notes && rawProject.verification.important_notes.length > 0 && (
-              <div className="space-y-2">
-                <span className="text-[11px] font-bold text-emerald-900 uppercase tracking-wider block">
-                  سياسة التوثيق وحدود الاستدلال الدقيقة:
-                </span>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-slate-700 font-medium">
-                  {rawProject.verification.important_notes.map((note: string, idx: number) => (
-                    <div key={idx} className="flex items-start gap-2 bg-white/90 p-2.5 rounded-lg border border-emerald-200/60">
-                      <div className="size-1.5 rounded-full bg-emerald-600 shrink-0 mt-1.5" />
-                      <span className="leading-relaxed">{note}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </CardContent>
-        </Card>
-      ) : (
-        <Card className="border-blue-200/80 bg-blue-50/50 shadow-xs">
-          <CardContent className="p-4 flex items-start gap-3 text-blue-900">
-            <Search className="size-5 text-blue-600 shrink-0 mt-0.5" />
-            <p className="text-xs sm:text-sm font-medium leading-relaxed">
-              <strong className="font-bold text-slate-900">ملف دراسة حالة موثق.</strong> تم تجميع وتحقيق هذه البيانات من التقارير الرسمية وإفصاحات الهيئات التنفيذية.
-            </p>
-          </CardContent>
-        </Card>
-      )}
-
       {/* Main Grid Layout */}
-      <div ref={containerRef} className="grid lg:grid-cols-[230px_1fr] gap-8 mt-2 items-start relative">
+      <div ref={containerRef} className="grid lg:grid-cols-[230px_1fr] gap-8 items-start relative">
 
         {/* Sticky Table of Contents Sidebar */}
         <aside className="hidden lg:block">
@@ -354,7 +303,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
         {/* Content Section Column */}
         <div className="flex flex-col gap-8 min-w-0">
 
-          {/* Section 1: Overview Card */}
+          {/* Section 1: Overview Card (Starts FIRST at top of page) */}
           <section id="overview" className="profile-section scroll-mt-24">
             <Card className="shadow-xs border-border/60 overflow-hidden">
               <CardHeader className="bg-muted/30 pb-6 border-b border-border/40">
@@ -368,6 +317,12 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                         <h1 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
                           {project.name}
                         </h1>
+                        {rawProject.verification && (
+                          <Badge variant="outline" className="bg-emerald-50 text-emerald-800 border-emerald-300 font-bold text-xs flex items-center gap-1.5">
+                            <ShieldCheck className="size-3.5 text-emerald-600 shrink-0" />
+                            <span>موثق بمصادر SEC أولية</span>
+                          </Badge>
+                        )}
                         {project.website && (
                           <a
                             href={project.website}
@@ -434,7 +389,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                   </div>
                 </div>
 
-                {/* Integrated Evidence Formula Callout directly inside Overview */}
+                {/* Derived Evidence Calculation Box */}
                 {revenueEvidence?.calculation && (
                   <div className="p-3.5 bg-sky-50/70 border border-sky-200/80 rounded-xl text-sky-950 text-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                     <div className="space-y-1">
@@ -766,7 +721,50 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
             </Card>
           </section>
 
-          {/* Section 12: COLLAPSED BY DEFAULT SOURCES ACCORDION */}
+          {/* PENULTIMATE SECTION: Verification Policy & Limitations Notice (Relocated from Top to Bottom) */}
+          {rawProject.verification && (
+            <section id="verification-policy" className="profile-section scroll-mt-24">
+              <Card className="border-emerald-200/80 bg-emerald-50/40 shadow-xs overflow-hidden">
+                <CardHeader className="border-b border-emerald-200/60 pb-3">
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 rounded-lg bg-emerald-100 text-emerald-700 shrink-0">
+                        <ShieldCheck className="size-5" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-slate-900 text-base">
+                          سياسة التوثيق وحدود الاستدلال الدقيقة (Verified Primary Data)
+                        </h3>
+                        <p className="text-xs text-slate-600 font-medium mt-0.5">
+                          {rawProject.verification.source_policy}
+                        </p>
+                      </div>
+                    </div>
+                    <Badge variant="outline" className="bg-emerald-100 text-emerald-800 border-emerald-300 font-bold text-xs shrink-0">
+                      تم التوثيق: {rawProject.verification.verified_on || '2026'}
+                    </Badge>
+                  </div>
+                </CardHeader>
+                {rawProject.verification.important_notes && rawProject.verification.important_notes.length > 0 && (
+                  <CardContent className="p-4 sm:p-5">
+                    <span className="text-[11px] font-bold text-emerald-900 uppercase tracking-wider block mb-2">
+                      حدود الاستدلال الشفافة والملاحظات الميدانية:
+                    </span>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-slate-700 font-medium">
+                      {rawProject.verification.important_notes.map((note: string, idx: number) => (
+                        <div key={idx} className="flex items-start gap-2 bg-white/90 p-2.5 rounded-lg border border-emerald-200/60">
+                          <div className="size-1.5 rounded-full bg-emerald-600 shrink-0 mt-1.5" />
+                          <span className="leading-relaxed">{note}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                )}
+              </Card>
+            </section>
+          )}
+
+          {/* Section 13: COLLAPSED BY DEFAULT SOURCES ACCORDION */}
           <section id="sources" className="profile-section scroll-mt-24">
             <Card className="shadow-xs border-border/60 overflow-hidden">
               <CardHeader className="p-4 sm:p-5 bg-card">
@@ -840,7 +838,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
             </Card>
           </section>
 
-          {/* Section 13: Data Quality Standards */}
+          {/* Section 14: Data Quality Standards */}
           <section id="data-quality" className="profile-section scroll-mt-24">
             <Card className="shadow-xs border-border/60">
               <CardHeader className="border-b border-border/40 pb-4">
