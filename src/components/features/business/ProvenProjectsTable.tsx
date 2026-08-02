@@ -43,21 +43,45 @@ interface ProvenProjectsTableProps {
 
 // Custom sorting function for revenue strings like "$250K /mo"
 const parseRevenue = (val: string) => {
-  if (!val) return 0;
-  const clean = val.replace(/[^0-9.KkMm]/g, '');
+  if (!val || val.includes('مغلق')) return 0;
+  
+  const mMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:M|m|\$M|M\$|مليون)/i);
+  if (mMatch) return parseFloat(mMatch[1]) * 1000000;
+
+  const bMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:B|b|\$B|B\$|مليار)/i);
+  if (bMatch) return parseFloat(bMatch[1]) * 1000000000;
+
+  const kMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:K|k|\$K|K\$|ألف)/i);
+  if (kMatch) return parseFloat(kMatch[1]) * 1000;
+
+  const clean = val.replace(/[^0-9.KkMmBb]/g, '');
   let num = parseFloat(clean);
   if (clean.toLowerCase().includes('k')) num *= 1000;
   if (clean.toLowerCase().includes('m')) num *= 1000000;
+  if (clean.toLowerCase().includes('b')) num *= 1000000000;
+
   return isNaN(num) ? 0 : num;
 };
 
 // Custom sorting function for traffic strings like "60K /mo"
 const parseTraffic = (val: string) => {
   if (!val) return 0;
-  const clean = val.replace(/[^0-9.KkMm]/g, '');
+
+  const mMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:M|m|مليون)/i);
+  if (mMatch) return parseFloat(mMatch[1]) * 1000000;
+
+  const bMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:B|b|مليار)/i);
+  if (bMatch) return parseFloat(bMatch[1]) * 1000000000;
+
+  const kMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:K|k|ألف)/i);
+  if (kMatch) return parseFloat(kMatch[1]) * 1000;
+
+  const clean = val.replace(/[^0-9.KkMmBb]/g, '');
   let num = parseFloat(clean);
   if (clean.toLowerCase().includes('k')) num *= 1000;
   if (clean.toLowerCase().includes('m')) num *= 1000000;
+  if (clean.toLowerCase().includes('b')) num *= 1000000000;
+
   return isNaN(num) ? 0 : num;
 };
 

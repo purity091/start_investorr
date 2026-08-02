@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Activity,
   Bookmark,
+  Calendar,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
@@ -132,7 +133,7 @@ const QUICK_ACCESS: NavItemConfig[] = [
 const PROJECT_BUILD: NavItemConfig[] = [
   { tab: 'new-plan-family', label: 'النموذج السهل', icon: Heart, id: 'tour-new-plan', badge: 2 },
   {
-    tab: 'new-plan-pro',
+    tab: 'strategic-dashboard',
     label: 'النموذج الاحترافي',
     icon: Zap,
     badge: 2,
@@ -166,6 +167,7 @@ const PROJECT_IDEAS: NavItemConfig[] = [
 ];
 
 const PROJECT_ATTACHMENTS: NavItemConfig[] = [
+  { tab: 'first-90-days', label: 'أول 90 يوم للمشروع', icon: Calendar, badge: 'جديد', id: 'tour-first-90-days' },
   { tab: 'unicorn-benchmark', label: 'رادار اليونيكورن', icon: Globe, id: 'tour-unicorn' },
   { tab: 'brand-identity', label: 'الهوية البصرية', icon: Palette, id: 'tour-brand' },
 ];

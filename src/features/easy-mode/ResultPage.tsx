@@ -129,20 +129,7 @@ export default function ResultPage() {
             </div>
           </div>
 
-          <div className="buttons-section flex flex-wrap items-center gap-2 sm:gap-3 flex-shrink-0 w-full sm:w-auto justify-center sm:justify-end">
-            <div className="badge flex items-center gap-1.5 bg-blue-50 border border-blue-100 rounded-full px-3 py-1.5 text-[9px] sm:text-[10px] font-black text-blue-700 shadow-sm shrink-0">
-              <Lucide.Sparkles size={12} fill="currentColor" className="animate-pulse" />
-              <span>الوضع المتقدم الذكي</span>
-            </div>
-            <button className="btn-pdf px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-xl text-[10px] sm:text-[11px] font-black hover:bg-slate-50 transition-all flex items-center gap-2">
-              <Lucide.Download size={14} />
-              PDF
-            </button>
-            <button className="btn-share px-5 py-2 bg-blue-600 border border-blue-600 text-white rounded-xl text-[10px] sm:text-[11px] font-black shadow-sm hover:bg-blue-700 transition-all flex items-center gap-2">
-              <Lucide.Share2 size={14} />
-              مشاركة
-            </button>
-          </div>
+
         </div>
       </header>
 

@@ -17,28 +17,29 @@ const TABS = [
 
 export const ResultHeader: React.FC<ResultHeaderProps> = ({ activeTab, setActiveTab }) => {
   return (
-    <div className="result-header-wrapper w-full bg-white/95 backdrop-blur-xl border-b border-slate-200 sticky top-0 z-40 shadow-sm flex-shrink-0" dir="rtl">
-      <div className="tabs-container flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-4 px-3 sm:px-6 py-2 sm:py-3 w-full" dir="rtl">
-        {TABS.map((tab, i) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(i)}
-            className={`tab-button flex items-center gap-1.5 sm:gap-2.5 px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl border-2 transition-all duration-300 flex-shrink-0 min-h-[42px] sm:min-h-[48px] whitespace-nowrap relative group ${
-              activeTab === i
-                ? "bg-blue-600 border-blue-600 text-white shadow-sm"
-                : "bg-slate-50 border-slate-200 text-slate-500 hover:bg-white hover:text-slate-900"
-            }`}
-          >
-            <tab.icon size={16} strokeWidth={activeTab === i ? 3 : 2} className={`transition-transform duration-300 ${activeTab === i ? "scale-110" : "group-hover:scale-110"}`} />
-            <span className="tab-label text-[11px] sm:text-sm font-black tracking-tight">
-              <span className="hidden sm:inline">{tab.label}</span>
-              <span className="sm:hidden">{tab.shortLabel}</span>
-            </span>
-            {activeTab === i && (
-              <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-8 h-1 bg-blue-600 rounded-full"></span>
-            )}
-          </button>
-        ))}
+    <div className="w-full bg-card shadow-xs sticky top-0 z-40 px-4 sm:px-6 py-2.5" dir="rtl">
+      <div className="flex flex-wrap items-center justify-center sm:justify-start gap-1.5 p-1.5 bg-muted/50 rounded-xl" dir="rtl">
+        {TABS.map((tab, i) => {
+          const Icon = tab.icon;
+          const isActive = activeTab === i;
+          return (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(i)}
+              className={`flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-lg text-xs font-semibold transition-all duration-200 ${
+                isActive
+                  ? "bg-background text-foreground shadow-xs font-bold"
+                  : "text-muted-foreground hover:text-foreground hover:bg-background/50"
+              }`}
+            >
+              <Icon size={14} className={isActive ? "text-primary" : "text-muted-foreground"} />
+              <span>
+                <span className="hidden sm:inline">{tab.label}</span>
+                <span className="sm:hidden">{tab.shortLabel}</span>
+              </span>
+            </button>
+          );
+        })}
       </div>
     </div>
   );

@@ -1,64 +1,63 @@
 import React from "react";
 
 /**
- * 🎨 DESIGN TOKENS
- * Single source of truth for the Results Page aesthetic.
+ * 🎨 DESIGN TOKENS (shadcn/ui Compliant - Borderless Surface System)
  */
 export const TOKENS = {
   radius: {
-    card: "24px",
-    inner: "16px",
-    button: "14px"
+    card: "16px",
+    inner: "12px",
+    button: "10px"
   },
   spacing: {
-    pageGap: "24px",
-    cardPadding: "32px",
+    pageGap: "20px",
+    cardPadding: "24px",
     contentGap: "16px",
-    sectionGap: "24px"
+    sectionGap: "20px"
   },
   colors: {
     primary: "#6366f1",
     primaryLight: "#818cf8",
-    primaryGlow: "rgba(99, 102, 241, 0.15)",
+    primaryGlow: "rgba(99, 102, 241, 0.08)",
     secondary: "#10b981", // Emerald
     danger: "#e11d48", // Rose
     warning: "#f59e0b", // Amber
-    surface: "#ffffff",
-    border: "rgba(226, 232, 240, 0.8)",
-    borderHover: "rgba(99, 102, 241, 0.3)",
+    surface: "var(--card, #ffffff)",
+    border: "transparent",
+    borderHover: "transparent",
     text: {
-      title: "#0f172a",
-      body: "#475569",
-      muted: "#94a3b8",
+      title: "var(--foreground, #0f172a)",
+      body: "var(--muted-foreground, #475569)",
+      muted: "var(--muted-foreground, #94a3b8)",
       accent: "#6366f1"
     }
   },
   typography: {
     title: {
-      size: "20px",
-      weight: "800",
+      size: "18px",
+      weight: "700",
       family: "'IBM Plex Sans Arabic', sans-serif"
     },
     body: {
-      size: "14.5px",
+      size: "14px",
       weight: "500",
       lineHeight: "1.6"
     },
     label: {
       size: "11px",
-      weight: "900",
-      spacing: "0.05em"
+      weight: "700",
+      spacing: "0.02em"
     }
   },
   shadows: {
-    soft: "0 10px 30px -10px rgba(0, 0, 0, 0.04)",
-    premium: "0 20px 40px -12px rgba(99, 102, 241, 0.08)",
-    glow: "0 0 20px rgba(99, 102, 241, 0.05)"
+    soft: "0 1px 3px 0 rgba(0, 0, 0, 0.05)",
+    premium: "0 4px 12px 0 rgba(0, 0, 0, 0.05)",
+    glow: "none"
   }
 };
 
 /**
- * ✨ BASE CARD WRAPPER
+ * ✨ BASE CARD WRAPPER (Borderless shadcn/ui Card)
  */
 export const BaseCard = ({ 
   children, 
@@ -79,20 +78,20 @@ export const BaseCard = ({
   
   const getVariantStyles = () => {
     switch (variant) {
-      case "highlight": return { borderColor: "rgba(99, 102, 241, 0.3)", background: "linear-gradient(to bottom right, #fff, #f8faff)" };
-      case "danger": return { borderColor: "rgba(225, 29, 72, 0.2)", background: "linear-gradient(to bottom right, #fff, #fff1f2)" };
-      case "success": return { borderColor: "rgba(16, 185, 129, 0.2)", background: "linear-gradient(to bottom right, #fff, #f0fdf4)" };
-      default: return { borderColor: TOKENS.colors.border, background: TOKENS.colors.surface };
+      case "highlight": return { background: "var(--muted, #f8fafc)" };
+      case "danger": return { background: "rgba(225, 29, 72, 0.04)" };
+      case "success": return { background: "rgba(16, 185, 129, 0.04)" };
+      default: return { background: "var(--card, #ffffff)" };
     }
   };
 
   const baseStyles: React.CSSProperties = {
     borderRadius: TOKENS.radius.card,
-    padding: isOpen ? TOKENS.spacing.cardPadding : "20px 24px",
-    transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+    padding: isOpen ? TOKENS.spacing.cardPadding : "18px 20px",
+    transition: "all 0.2s ease-in-out",
     position: "relative",
-    border: "1px solid",
-    boxShadow: isOpen ? TOKENS.shadows.premium : "0 4px 6px -1px rgba(0,0,0,0.02)",
+    border: "none",
+    boxShadow: isOpen ? TOKENS.shadows.premium : TOKENS.shadows.soft,
     cursor: onClick ? "pointer" : "default",
     overflow: "hidden",
     height: "fit-content",
@@ -103,7 +102,6 @@ export const BaseCard = ({
   };
 
   const toggleOpen = (e: React.MouseEvent) => {
-    // If there's an onClick passed, let it handle the logic if needed
     if (onClick) {
       onClick();
     } else {
@@ -112,28 +110,12 @@ export const BaseCard = ({
     e.stopPropagation();
   };
 
-  // Extract the header and the body from children to separate them
   const childrenArray = React.Children.toArray(children);
   const header = childrenArray.find((child: any) => child.type === CardHeader);
   const others = childrenArray.filter((child: any) => child.type !== CardHeader);
 
   return (
-    <div 
-      className={`group ${className} fade-in`}
-      style={baseStyles}
-    >
-      <div style={{
-        position: "absolute",
-        top: -100,
-        right: -100,
-        width: 300,
-        height: 300,
-        background: `radial-gradient(circle, ${TOKENS.colors.primaryGlow} 0%, transparent 70%)`,
-        opacity: 0.4,
-        pointerEvents: "none",
-        zIndex: 0
-      }} />
-      
+    <div className={`group ${className}`} style={baseStyles}>
       <div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "column", height: "100%" }}>
         {header && (
           <div 
@@ -142,14 +124,14 @@ export const BaseCard = ({
           >
              <div style={{ flex: 1 }}>{header}</div>
              <div style={{ 
-               padding: "8px", 
-               color: TOKENS.colors.text.muted, 
+               padding: "6px", 
+               color: "var(--muted-foreground, #94a3b8)", 
                transform: isOpen ? "rotate(180deg)" : "rotate(0deg)", 
-               transition: "transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+               transition: "transform 0.2s ease-in-out",
                marginLeft: "12px",
-               marginTop: "4px"
+               marginTop: "2px"
              }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                    <path d="m6 9 6 6 6-6"/>
                 </svg>
              </div>
@@ -160,8 +142,8 @@ export const BaseCard = ({
           maxHeight: isOpen ? "5000px" : "0px", 
           opacity: isOpen ? 1 : 0,
           overflow: "hidden",
-          transition: "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
-          marginTop: isOpen ? "0" : "-10px"
+          transition: "all 0.3s ease-in-out",
+          marginTop: isOpen ? "0" : "-6px"
         }}>
           {!header && children}
           {header && others}
@@ -172,7 +154,7 @@ export const BaseCard = ({
 };
 
 /**
- * 📝 TYPOGRAPHY COMPONENTS
+ * 📝 TYPOGRAPHY & HEADER COMPONENTS
  */
 
 export const CardHeader = ({ 
@@ -191,10 +173,10 @@ export const CardHeader = ({
   
   const getBadgeStyles = () => {
     switch (badgeType) {
-      case "success": return { color: TOKENS.colors.secondary, bg: "#dcfce7" };
-      case "danger": return { color: TOKENS.colors.danger, bg: "#ffe4e6" };
-      case "warning": return { color: TOKENS.colors.warning, bg: "#fef3c7" };
-      default: return { color: TOKENS.colors.primary, bg: "#eef2ff" };
+      case "success": return { color: "#047857", bg: "rgba(16, 185, 129, 0.1)" };
+      case "danger": return { color: "#b91c1c", bg: "rgba(225, 29, 72, 0.1)" };
+      case "warning": return { color: "#b45309", bg: "rgba(245, 158, 11, 0.1)" };
+      default: return { color: "#4f46e5", bg: "rgba(99, 102, 241, 0.1)" };
     }
   };
 
@@ -205,15 +187,14 @@ export const CardHeader = ({
       <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
         {icon && (
           <div style={{ 
-            width: 42, 
-            height: 42, 
-            borderRadius: "12px", 
-            background: "#f8fafc", 
-            border: `1px solid ${TOKENS.colors.border}`,
+            width: 38, 
+            height: 38, 
+            borderRadius: "10px", 
+            background: "var(--muted, #f1f5f9)", 
             display: "flex", 
             alignItems: "center", 
             justifyContent: "center",
-            color: TOKENS.colors.primary
+            color: "var(--primary, #6366f1)"
           }}>
             {icon}
           </div>
@@ -222,7 +203,7 @@ export const CardHeader = ({
           <h3 style={{ 
             fontSize: TOKENS.typography.title.size, 
             fontWeight: TOKENS.typography.title.weight, 
-            color: TOKENS.colors.text.title,
+            color: "var(--foreground, #0f172a)",
             margin: 0,
             lineHeight: 1.2
           }}>
@@ -230,9 +211,9 @@ export const CardHeader = ({
           </h3>
           {subtitle && (
             <p style={{ 
-              fontSize: "13px", 
-              color: TOKENS.colors.text.muted, 
-              margin: "4px 0 0",
+              fontSize: "12px", 
+              color: "var(--muted-foreground, #64748b)", 
+              margin: "3px 0 0",
               fontWeight: 500 
             }}>
               {subtitle}
@@ -246,9 +227,8 @@ export const CardHeader = ({
           fontWeight: TOKENS.typography.label.weight, 
           color: badgeStyles.color, 
           background: badgeStyles.bg, 
-          padding: "6px 14px", 
-          borderRadius: "100px",
-          letterSpacing: TOKENS.typography.label.spacing
+          padding: "4px 12px", 
+          borderRadius: "8px"
         }}>
           {badge}
         </div>
@@ -266,7 +246,7 @@ export const CardBody = ({
 }) => (
   <div style={{ 
     fontSize: TOKENS.typography.body.size, 
-    color: TOKENS.colors.text.body, 
+    color: "var(--foreground, #334155)", 
     lineHeight: TOKENS.typography.body.lineHeight,
     fontWeight: TOKENS.typography.body.weight,
     ...style
@@ -283,7 +263,6 @@ export const CardFooter = ({
   <div style={{ 
     marginTop: TOKENS.spacing.sectionGap, 
     paddingTop: TOKENS.spacing.sectionGap, 
-    borderTop: `1px solid ${TOKENS.colors.border}`,
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between"
@@ -304,39 +283,35 @@ export const TabHeader = ({
   color?: string;
 }) => (
   <div style={{ 
-    marginBottom: "32px", 
-    padding: "32px", 
-    background: "linear-gradient(to right, #fff, #f8fafc)", 
+    marginBottom: "24px", 
+    padding: "24px", 
+    background: "var(--card, #ffffff)", 
     borderRadius: TOKENS.radius.card, 
-    border: `1px solid ${TOKENS.colors.border}`,
-    borderRight: `6px solid ${color}`,
     boxShadow: TOKENS.shadows.soft,
     position: "relative",
     overflow: "hidden"
   }}>
-    <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "flex-start", gap: 20 }}>
+    <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "flex-start", gap: 16 }}>
       {icon && (
         <div style={{ 
-          width: 56, 
-          height: 56, 
-          borderRadius: "16px", 
-          background: "#fff", 
-          boxShadow: "0 10px 20px rgba(0,0,0,0.04)", 
+          width: 48, 
+          height: 48, 
+          borderRadius: "12px", 
+          background: "var(--muted, #f1f5f9)", 
           display: "flex", 
           alignItems: "center", 
           justifyContent: "center",
           color: color,
-          flexShrink: 0,
-          border: `1px solid ${TOKENS.colors.border}`
+          flexShrink: 0
         }}>
           {icon}
         </div>
       )}
       <div style={{ flex: 1 }}>
-        <h2 style={{ fontSize: "24px", fontWeight: 900, color: TOKENS.colors.text.title, margin: "0 0 12px", lineHeight: 1.2 }}>
+        <h2 style={{ fontSize: "20px", fontWeight: 700, color: "var(--foreground, #0f172a)", margin: "0 0 8px", lineHeight: 1.2 }}>
           {title}
         </h2>
-        <p style={{ fontSize: "14.5px", color: TOKENS.colors.text.body, lineHeight: 1.7, fontWeight: 600, maxWidth: "800px", margin: 0 }}>
+        <p style={{ fontSize: "13px", color: "var(--muted-foreground, #64748b)", lineHeight: 1.6, fontWeight: 500, maxWidth: "800px", margin: 0 }}>
           {description}
         </p>
       </div>

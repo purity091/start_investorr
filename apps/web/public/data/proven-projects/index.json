@@ -1,5 +1,20 @@
 [
   {
+    "id": "mailchimp",
+    "slug": "mailchimp",
+    "name": "ميل تشيمب (Mailchimp)",
+    "headline": "من مشروع جانبي ممول ذاتيًا إلى منصة نمو عالمية: قصة Mailchimp التي استحوذت عليها Intuit مقابل 12 مليار دولار",
+    "category": "B2B SaaS / البريد الإلكتروني وأتمتة التسويق",
+    "company": {
+      "location": "أتلانتا، جورجيا، الولايات المتحدة (Intuit)",
+      "business_model": "نموذج SaaS متعدد المستويات (Freemium + Pay As You Go + اشتراكات)"
+    },
+    "directory_snapshot": {
+      "monthly_revenue": "$84.7M /mo (متوسط 762M$)",
+      "monthly_traffic": "14M عميل (مليار بريد/يوم)"
+    }
+  },
+  {
     "id": "salla",
     "slug": "salla",
     "name": "سلة (Salla)",
@@ -1233,15 +1248,15 @@
     "id": "mailchimp",
     "slug": "mailchimp",
     "name": "ميل تشيمب (Mailchimp)",
-    "headline": "امبراطورية التسويق التي بنيت بدون دولار واحد من المستثمرين (Bootstrapped)",
-    "category": "B2B SaaS / التسويق عبر البريد الإلكتروني",
+    "headline": "من مشروع جانبي ممول ذاتيًا إلى منصة نمو عالمية: قصة Mailchimp التي استحوذت عليها Intuit مقابل 12 مليار دولار",
+    "category": "B2B SaaS / البريد الإلكتروني وأتمتة التسويق",
     "company": {
-      "location": "أتلانتا، الولايات المتحدة",
-      "business_model": "مجاني للبدايات (Freemium) ثم اشتراكات شهرية متدرجة حسب عدد المشتركين"
+      "location": "تأسست في أتلانتا، جورجيا، الولايات المتحدة عام 2001 (Intuit)",
+      "business_model": "نموذج SaaS متعدد المستويات (Freemium + Pay As You Go + اشتراكات)"
     },
     "directory_snapshot": {
-      "monthly_revenue": "مئات الملايين",
-      "monthly_traffic": "يرسل مليارات الإيميلات يومياً نيابة عن ملايين الشركات"
+      "monthly_revenue": "$84.7M /mo (متوسط 762M$)",
+      "monthly_traffic": "14M عميل (مليار بريد/يوم)"
     }
   },
   {

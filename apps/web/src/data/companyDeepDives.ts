@@ -1,5 +1,5 @@
 
-import { DollarSign, Box, TrendingUp, Zap, Target, Users, Globe, BarChart3, Shield, Rocket } from 'lucide-react';
+import { DollarSign, Box, TrendingUp, Zap, Target, Users, Globe, BarChart3, Shield, Rocket, Mails } from 'lucide-react';
 
 export interface CompanyDeepDive {
   id: string;
@@ -33,6 +33,48 @@ export interface CompanyDeepDive {
 }
 
 export const companyDeepDives: CompanyDeepDive[] = [
+  {
+    id: 'mailchimp',
+    name: 'Mailchimp',
+    sector: 'B2B SaaS / أتمتة التسويق والبريد الإلكتروني',
+    valuation: '$12B',
+    logo: 'M',
+    color: 'bg-amber-500',
+    gradient: 'from-amber-500 to-yellow-600',
+    icon: Mails,
+    problem: {
+      title: 'تعقيد وتكلفة برامج التسويق المؤسسية',
+      description: 'في أوائل الألفينات، كانت برامج إرسال البريد الإلكتروني معقدة وتطلب استثماراً هائلاً وتطبيقا مخصصاً، مما حرم الشركات الصغيرة من التفاعل الذاتي مع عملائها.',
+      impact: 'عجز أصحاب المشاريع الصغيرة والمستقلين عن بناء علاقات مستدامة وتتبع الحملات التسويقية بسهولة.'
+    },
+    solution: {
+      title: 'منصة تسويق ذاتية الخدمة وسهلة الاستخدام',
+      description: 'تقديم خدمة بريد بسيطة وسريعة مع خطة مجانية تمهيدية تتوسع إلى منصة أتمتة تسويق وإدارة جمهور شاملة مدعومة بالبيانات.',
+      keyFeature: 'نموذج مجاني (Freemium) مع ربط برمجي شامل (APIs & Webhooks).'
+    },
+    impact: {
+      title: 'بناء إمبراطورية ممولة ذاتياً بالكامل',
+      description: 'خدمة أكثر من 14 مليون عميل وإرسال مليار رسالة يومياً، وصولاً للاستحواذ التاريخي بـ 12 مليار دولار من Intuit دون تمويل خارجي.',
+      metrics: [
+        { label: 'عدد العملاء', value: '14M+' },
+        { label: 'رسائل يومية', value: '1B+' },
+        { label: 'قيمة الاستحواذ', value: '$12B' }
+      ]
+    },
+    strategy: {
+      title: 'سر القيادة والاستقلال',
+      points: [
+        'الانضباط التام بالتمويل الذاتي (Bootstrapping) لمنح المؤسسين الحرية المطلقة والتركيز على الربحية.',
+        'نموذج الاستخدام المجاني (Freemium) كقمع استحواذ وتجربة ممتازة قبل الترقية.',
+        'بناء منظومة متكاملة من أدوات التسويق والتكاملات البرمجية عبر APIs.'
+      ]
+    },
+    lessons: [
+      'حل مشكلة محددة لشريحة مهملة (الشركات الصغيرة) أولاً.',
+      'التمويل الذاتي يفرض انضباطاً حقيقياً في بناء القيمة والربحية.',
+      'الواجهات البرمجية والتكاملات تجعل المنتج جزءاً أساسياً من بنية العميل.'
+    ]
+  },
   {
     id: 'stripe',
     name: 'Stripe',

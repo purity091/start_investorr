@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Sidebar } from './components/layout/Sidebar';
 import { StrategicSupportFloat } from './components/layout/StrategicSupportFloat';
+import { PlatformRecommendationFloat } from './components/layout/PlatformRecommendationFloat';
 import { BottomNavBar } from './components/layout/BottomNavBar';
 import { Header } from './components/layout/Header';
 import { AppBreadcrumb } from './components/layout/AppBreadcrumb';
@@ -221,6 +222,8 @@ const AppShell: React.FC = () => {
               subTabLabel={subTabLabel}
               setActiveTab={setActiveTab}
             />
+
+            <PlatformRecommendationFloat setActiveTab={setActiveTab} />
 
             <DashboardRouter
               activeTab={activeTab}

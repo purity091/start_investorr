@@ -21,7 +21,7 @@ import {
 import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
-import { ArrowUpDown, Bookmark, BookmarkCheck, ChevronDown, ChevronLeft, ChevronRight, ExternalLink, Search, X } from 'lucide-react';
+import { ArrowUpDown, Bookmark, BookmarkCheck, ChevronDown, ChevronLeft, ChevronRight, ExternalLink, Search, X, ShieldCheck } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -42,23 +42,47 @@ interface ProvenProjectsTableProps {
   onRowClick: (project: any) => void;
 }
 
-// Custom sorting helper for revenue strings like "$250K /mo"
+// Custom sorting helper for revenue strings like "$250K /mo" or "$84.7M /mo"
 const parseRevenue = (val: string) => {
   if (!val || val.includes('مغلق')) return 0;
-  const clean = val.replace(/[^0-9.KkMm]/g, '');
+  
+  const mMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:M|m|\$M|M\$|مليون)/i);
+  if (mMatch) return parseFloat(mMatch[1]) * 1000000;
+
+  const bMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:B|b|\$B|B\$|مليار)/i);
+  if (bMatch) return parseFloat(bMatch[1]) * 1000000000;
+
+  const kMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:K|k|\$K|K\$|ألف)/i);
+  if (kMatch) return parseFloat(kMatch[1]) * 1000;
+
+  const clean = val.replace(/[^0-9.KkMmBb]/g, '');
   let num = parseFloat(clean);
   if (clean.toLowerCase().includes('k')) num *= 1000;
   if (clean.toLowerCase().includes('m')) num *= 1000000;
+  if (clean.toLowerCase().includes('b')) num *= 1000000000;
+
   return isNaN(num) ? 0 : num;
 };
 
-// Custom sorting helper for traffic strings like "60K /mo"
+// Custom sorting helper for traffic strings like "60K /mo" or "14M عميل"
 const parseTraffic = (val: string) => {
   if (!val) return 0;
-  const clean = val.replace(/[^0-9.KkMm]/g, '');
+
+  const mMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:M|m|مليون)/i);
+  if (mMatch) return parseFloat(mMatch[1]) * 1000000;
+
+  const bMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:B|b|مليار)/i);
+  if (bMatch) return parseFloat(bMatch[1]) * 1000000000;
+
+  const kMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:K|k|ألف)/i);
+  if (kMatch) return parseFloat(kMatch[1]) * 1000;
+
+  const clean = val.replace(/[^0-9.KkMmBb]/g, '');
   let num = parseFloat(clean);
   if (clean.toLowerCase().includes('k')) num *= 1000;
   if (clean.toLowerCase().includes('m')) num *= 1000000;
+  if (clean.toLowerCase().includes('b')) num *= 1000000000;
+
   return isNaN(num) ? 0 : num;
 };
 
@@ -94,11 +118,62 @@ const formatCompactTraffic = (num: number) => {
 const getCountryInfo = (location: string) => {
   if (!location) return { name: 'عالمي', flag: '🌍' };
   const loc = location.toLowerCase();
-  if (loc.includes('florida') || loc.includes('atlanta') || loc.includes('united states') || loc.includes('usa') || loc.includes('california')) return { name: 'الولايات المتحدة', flag: '🇺🇸' };
-  if (loc.includes('singapore')) return { name: 'سنغافورة', flag: '🇸🇬' };
-  if (loc.includes('uk') || loc.includes('london')) return { name: 'المملكة المتحدة', flag: '🇬🇧' };
-  if (loc.includes('canada')) return { name: 'كندا', flag: '🇨🇦' };
-  if (loc.includes('السعودية') || loc.includes('saudi arabia') || loc.includes('مكة')) return { name: 'المملكة العربية السعودية', flag: '🇸🇦' };
+
+  if (loc.includes('السعودية') || loc.includes('saudi arabia') || loc.includes('مكة') || loc.includes('الرياض') || loc.includes('جدة')) {
+    return { name: 'المملكة العربية السعودية', flag: '🇸🇦' };
+  }
+  if (loc.includes('مصر') || loc.includes('القاهرة') || loc.includes('egypt') || loc.includes('cairo')) {
+    return { name: 'مصر', flag: '🇪🇬' };
+  }
+  if (loc.includes('الإمارات') || loc.includes('دبي') || loc.includes('أبوظبي') || loc.includes('uae') || loc.includes('dubai') || loc.includes('abu dhabi')) {
+    return { name: 'الإمارات العربية المتحدة', flag: '🇦🇪' };
+  }
+  if (loc.includes('الأردن') || loc.includes('عمّان') || loc.includes('عمان') || loc.includes('jordan') || loc.includes('amman')) {
+    return { name: 'الأردن', flag: '🇯🇴' };
+  }
+  if (loc.includes('الكويت') || loc.includes('kuwait')) {
+    return { name: 'الكويت', flag: '🇰🇼' };
+  }
+  if (loc.includes('قطر') || loc.includes('الدوحة') || loc.includes('qatar') || loc.includes('doha')) {
+    return { name: 'قطر', flag: '🇶🇦' };
+  }
+  if (loc.includes('البحرين') || loc.includes('المنامة') || loc.includes('bahrain')) {
+    return { name: 'البحرين', flag: '🇧🇭' };
+  }
+  if (loc.includes('المغرب') || loc.includes('الدار البيضاء') || loc.includes('morocco') || loc.includes('casablanca')) {
+    return { name: 'المغرب', flag: '🇲🇦' };
+  }
+  if (loc.includes('الجزائر') || loc.includes('algeria')) {
+    return { name: 'الجزائر', flag: '🇩🇿' };
+  }
+  if (loc.includes('لبنان') || loc.includes('بيروت') || loc.includes('lebanon') || loc.includes('beirut')) {
+    return { name: 'لبنان', flag: '🇱🇧' };
+  }
+  if (loc.includes('florida') || loc.includes('atlanta') || loc.includes('united states') || loc.includes('usa') || loc.includes('california') || loc.includes('نيويورك') || loc.includes('سان فرانسيسكو') || loc.includes('مينلو بارك') || loc.includes('بيتسبرغ') || loc.includes('لوس أنجلوس') || loc.includes('لوس جاتوس') || loc.includes('san francisco') || loc.includes('new york')) {
+    return { name: 'الولايات المتحدة', flag: '🇺🇸' };
+  }
+  if (loc.includes('uk') || loc.includes('london') || loc.includes('المملكة المتحدة') || loc.includes('بريطانيا')) {
+    return { name: 'المملكة المتحدة', flag: '🇬🇧' };
+  }
+  if (loc.includes('canada') || loc.includes('أوتاوا') || loc.includes('كندا') || loc.includes('ottawa')) {
+    return { name: 'كندا', flag: '🇨🇦' };
+  }
+  if (loc.includes('singapore') || loc.includes('سنغافورة')) {
+    return { name: 'سنغافورة', flag: '🇸🇬' };
+  }
+  if (loc.includes('فرنسا') || loc.includes('france') || loc.includes('باريس')) {
+    return { name: 'فرنسا', flag: '🇫🇷' };
+  }
+  if (loc.includes('السويد') || loc.includes('ستوكهولم') || loc.includes('sweden')) {
+    return { name: 'السويد', flag: '🇸🇪' };
+  }
+  if (loc.includes('أستراليا') || loc.includes('سيدني') || loc.includes('australia') || loc.includes('sydney')) {
+    return { name: 'أستراليا', flag: '🇦🇺' };
+  }
+  if (loc.includes('أوكرانيا') || loc.includes('ukraine')) {
+    return { name: 'أوكرانيا', flag: '🇺🇦' };
+  }
+
   return { name: 'عالمي', flag: '🌍' };
 };
 
@@ -197,13 +272,22 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
         header: 'المشروع',
         cell: ({ row }) => {
           const project = row.original;
+          const isVerified = Boolean(project.verification || project.evidence_map);
+
           return (
             <div className="flex items-center gap-2.5 max-w-[240px]">
               <div className="flex items-center justify-center size-8 rounded-lg bg-blue-600/10 text-blue-700 text-xs font-bold shadow-xs shrink-0 border border-blue-600/20">
                 {project.name.charAt(0).toUpperCase()}
               </div>
               <div className="flex flex-col min-w-0">
-                <span className="font-bold text-slate-900 text-sm truncate" title={project.name}>{project.name}</span>
+                <span className="font-bold text-slate-900 text-sm truncate flex items-center gap-1" title={project.name}>
+                  {project.name}
+                  {isVerified && (
+                    <span title="شركة موثقة بمصادر رسمية وأدلة تفصيلية (Verified Primary Data)">
+                      <ShieldCheck className="size-3.5 text-emerald-600 shrink-0" />
+                    </span>
+                  )}
+                </span>
                 <span className="text-[11px] font-medium text-slate-500 truncate max-w-[170px]" title={project.headline}>
                   {project.headline}
                 </span>
@@ -321,12 +405,17 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
         sortingFn: 'basic',
         cell: ({ row }) => {
           const rawNum = row.getValue('revenue') as number;
+          const fullText = row.original.directory_snapshot?.monthly_revenue || '';
           if (!rawNum || rawNum <= 0) {
-            return <span className="text-slate-400 text-xs font-medium">-</span>;
+            return (
+              <span className="text-slate-400 text-xs font-medium truncate max-w-[100px] block" title={fullText}>
+                {fullText ? fullText.split(' ')[0] : '-'}
+              </span>
+            );
           }
           return (
-            <div className="flex flex-col justify-center">
-              <span className="font-black text-xs text-slate-900 tracking-tight text-right dir-ltr" title={`$${rawNum.toLocaleString('en-US')}`}>
+            <div className="flex flex-col justify-center" title={fullText}>
+              <span className="font-black text-xs text-slate-900 tracking-tight text-right dir-ltr">
                 {formatCompactRevenue(rawNum)}
               </span>
             </div>
@@ -351,12 +440,17 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
         sortingFn: 'basic',
         cell: ({ row }) => {
           const rawNum = row.getValue('traffic') as number;
+          const fullText = row.original.directory_snapshot?.monthly_traffic || '';
           if (!rawNum || rawNum <= 0) {
-            return <span className="text-slate-400 text-xs font-medium">-</span>;
+            return (
+              <span className="text-slate-400 text-xs font-medium truncate max-w-[100px] block" title={fullText}>
+                {fullText ? fullText.split(' ')[0] : '-'}
+              </span>
+            );
           }
           return (
-            <div className="flex flex-col justify-center">
-              <span className="font-bold text-xs text-slate-700 tracking-tight text-right dir-ltr" title={rawNum.toLocaleString('en-US')}>
+            <div className="flex flex-col justify-center" title={fullText}>
+              <span className="font-bold text-xs text-slate-700 tracking-tight text-right dir-ltr">
                 {formatCompactTraffic(rawNum)}
               </span>
             </div>

@@ -7,6 +7,8 @@ import { ExecutionPathTab } from "./tabs/ExecutionPathTab";
 import { GrowthPlanTab } from "./tabs/GrowthPlanTab";
 import { RevenueAccelerationTab } from "./tabs/RevenueAccelerationTab";
 import { FinalDecisionTab } from "./tabs/FinalDecisionTab";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
 
 const CHECKLIST_DATA = {
   setup: {
@@ -108,48 +110,54 @@ export default function ResultPage() {
   return (
     <div
       dir="rtl"
-      className="easy-mode-page flex flex-col w-full bg-slate-50 relative overflow-hidden"
+      className="flex flex-col w-full bg-background relative overflow-hidden text-right"
       style={{ fontFamily: "'IBM Plex Sans Arabic', sans-serif", minHeight: "calc(100vh - 64px)" }}
     >
-      <div className="absolute inset-x-0 top-0 h-56 pointer-events-none z-0 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.12),_transparent_68%)]" />
-
-      <header className="easy-mode-header px-4 sm:px-6 lg:px-12 pt-5 sm:pt-6 pb-4 border-b border-slate-200 relative z-10 flex-shrink-0 bg-white/95 backdrop-blur-sm">
-        <div className="header-content flex flex-col sm:flex-row justify-between items-center gap-4 relative z-10 w-full">
-          <div className="title-section text-center sm:text-right w-full sm:flex-1">
-            <div className="title-row flex items-center gap-3 mb-2 justify-center sm:justify-start">
-              <div className="icon-box w-10 h-10 sm:w-12 sm:h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white border border-blue-600 shadow-sm flex-shrink-0 animate-in zoom-in duration-500">
-                <Lucide.Rocket size={20} className="sm:w-6 sm:h-6" fill="currentColor" />
+      {/* Header Banner - Borderless Surface */}
+      <header className="px-4 sm:px-6 lg:px-10 pt-5 pb-4 relative z-10 shrink-0 bg-card shadow-xs">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 relative z-10 w-full">
+          <div className="text-center sm:text-right w-full sm:flex-1">
+            <div className="flex items-center gap-3 mb-1 justify-center sm:justify-start">
+              <div className="size-10 sm:size-11 bg-primary text-primary-foreground rounded-xl flex items-center justify-center shrink-0 shadow-xs">
+                <Lucide.Zap size={20} className="sm:w-5 sm:h-5" />
               </div>
               <div>
-                <h1 className="title-text text-base sm:text-xl lg:text-2xl font-black text-slate-900 leading-tight m-0 tracking-tight">مسار التنفيذ الاستراتيجي</h1>
-                <p className="subtitle text-[10px] sm:text-xs text-slate-500 font-bold mt-1 italic hidden sm:block">
-                  حلول مدعومة بالذكاء الاصطناعي لتحويل فكرتك إلى واقع
+                <div className="flex items-center gap-2">
+                  <h1 className="text-base sm:text-xl lg:text-2xl font-bold text-foreground leading-tight tracking-tight">النموذج الاحترافي</h1>
+                  <Badge variant="secondary" className="text-[10px] font-semibold">
+                    تحليل إستراتيجي متقدم
+                  </Badge>
+                </div>
+                <p className="text-xs text-muted-foreground font-medium mt-0.5 hidden sm:block">
+                  لوحة تحكم استراتيجية متكاملة مدعومة بالذكاء الاصطناعي لتخطيط وتنفيذ المشروع
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="buttons-section flex flex-wrap items-center gap-2 sm:gap-3 flex-shrink-0 w-full sm:w-auto justify-center sm:justify-end">
-            <div className="badge flex items-center gap-1.5 bg-blue-50 border border-blue-100 rounded-full px-3 py-1.5 text-[9px] sm:text-[10px] font-black text-blue-700 shadow-sm shrink-0">
-              <Lucide.Sparkles size={12} fill="currentColor" className="animate-pulse" />
-              <span>الوضع المتقدم الذكي</span>
-            </div>
-            <button className="btn-pdf px-4 py-2 bg-white border border-slate-200 text-slate-700 rounded-xl text-[10px] sm:text-[11px] font-black hover:bg-slate-50 transition-all flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2 shrink-0 w-full sm:w-auto justify-center sm:justify-end">
+            <Badge variant="secondary" className="gap-1.5 px-3 py-1 text-xs font-semibold bg-primary/10 text-primary">
+              <Lucide.Sparkles size={13} className="animate-pulse" />
+              <span>تحليل استراتيجي أوتوماتيكي</span>
+            </Badge>
+            <Button variant="outline" size="sm" className="gap-1.5 text-xs font-medium rounded-lg border-0 bg-muted/50 hover:bg-muted">
               <Lucide.Download size={14} />
-              PDF
-            </button>
-            <button className="btn-share px-5 py-2 bg-blue-600 border border-blue-600 text-white rounded-xl text-[10px] sm:text-[11px] font-black shadow-sm hover:bg-blue-700 transition-all flex items-center gap-2">
+              <span>تصدير PDF</span>
+            </Button>
+            <Button size="sm" className="gap-1.5 text-xs font-semibold rounded-lg shadow-xs">
               <Lucide.Share2 size={14} />
-              مشاركة
-            </button>
+              <span>مشاركة</span>
+            </Button>
           </div>
         </div>
       </header>
 
+      {/* Borderless Result Header Navigation Tabs */}
       <ResultHeader activeTab={activeTab} setActiveTab={setActiveTab} />
 
-      <main className="easy-mode-content flex-1 overflow-y-auto w-full px-4 sm:px-6 lg:px-10 py-6 relative z-10 no-scrollbar">
-        <div className="content-wrapper w-full max-w-[1600px] mx-auto">
+      {/* Main Content Area */}
+      <main className="flex-1 overflow-y-auto w-full px-4 sm:px-6 lg:px-10 py-6 relative z-10">
+        <div className="w-full max-w-[1600px] mx-auto">
           {renderTabContent()}
         </div>
       </main>

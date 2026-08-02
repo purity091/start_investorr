@@ -15,37 +15,38 @@ import {
   AlertCircle,
   ArrowRight
 } from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
 
 export const StrategicPulseResults = () => {
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "20px", width: "100%" }}>
+    <div className="flex flex-col gap-5 w-full text-right" dir="rtl">
       
       {/* 1. Project Snapshot */}
       <BaseCard variant="highlight">
         <CardHeader 
           title="قراءة سريعة لوضع المشروع" 
           subtitle="Project Snapshot"
-          icon={<BarChart3 size={24} />}
+          icon={<BarChart3 size={20} />}
           badge="نظرة تشخيصية"
         />
         <CardBody>
-          <div style={{ marginBottom: "20px" }}>
+          <div className="mb-4 text-xs sm:text-sm font-medium text-foreground">
              مشروعك حالياً في مرحلة ما قبل الانطلاق الفعلي مع جاهزية تشغيلية متوسطة.
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: "16px", marginBottom: "24px" }}>
-            <DataMiniCard label="رأس المال" value="$5,000" subValue="محدود" icon={<TrendingUp size={18} />} color={TOKENS.colors.primary} />
-            <DataMiniCard label="الهدف" value="$6,000/شهرياً" subValue="هدف طموح" icon={<Target size={18} />} color={TOKENS.colors.secondary} />
-            <DataMiniCard label="الجاهزية" value="44%" subValue="تحت الـ 50%" icon={<Activity size={18} />} color={TOKENS.colors.warning} />
-            <DataMiniCard label="الفجوة" value="مرتفعة" subValue="تحتاج عمل" icon={<AlertTriangle size={18} />} color={TOKENS.colors.danger} />
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+            <DataMiniCard label="رأس المال" value="$5,000" subValue="محدود" icon={<TrendingUp size={16} />} color="text-indigo-600 dark:text-indigo-400" />
+            <DataMiniCard label="الهدف" value="$6,000/شهرياً" subValue="هدف طموح" icon={<Target size={16} />} color="text-emerald-600 dark:text-emerald-400" />
+            <DataMiniCard label="الجاهزية" value="44%" subValue="تحت الـ 50%" icon={<Activity size={16} />} color="text-amber-600 dark:text-amber-400" />
+            <DataMiniCard label="الفجوة" value="مرتفعة" subValue="تحتاج عمل" icon={<AlertTriangle size={16} />} color="text-rose-600 dark:text-rose-400" />
           </div>
           <AlertBox 
             type="info" 
             title="التحليل الاستراتيجي" 
             text="هناك عدم توازن واضح بين الطموح والإمكانيات الحالية، وهذا طبيعي في البداية لكن يحتاج ضبط سريع." 
           />
-          <div style={{ marginTop: "16px", fontWeight: 800, color: TOKENS.colors.primary, display: "flex", alignItems: "center", gap: 8 }}>
-            <ArrowRight size={18} />
-            الخلاصة: أنت لست متأخر… لكنك بحاجة إلى إعادة ضبط المسار قبل التنفيذ.
+          <div className="mt-4 font-bold text-xs text-primary flex items-center gap-2">
+            <ArrowRight size={16} />
+            <span>الخلاصة: أنت لست متأخر… لكنك بحاجة إلى إعادة ضبط المسار قبل التنفيذ.</span>
           </div>
         </CardBody>
       </BaseCard>
@@ -55,32 +56,32 @@ export const StrategicPulseResults = () => {
         <CardHeader 
           title="فجوة الاستهداف" 
           subtitle="Target Gap Analysis"
-          icon={<AlertTriangle size={24} />}
+          icon={<AlertTriangle size={20} />}
           badge="-48% فجوة"
           badgeType="danger"
         />
         <CardBody>
-          <div style={{ display: "flex", alignItems: "center", gap: "24px", marginBottom: "20px" }}>
-             <div style={{ flex: 1 }}>
-                <div style={{ fontSize: "13px", color: TOKENS.colors.text.muted, marginBottom: "4px" }}>الإيراد المتوقع (شهر 12)</div>
-                <div style={{ fontSize: "20px", fontWeight: 900, color: TOKENS.colors.text.title }}>$3,200</div>
+          <div className="flex items-center gap-6 mb-4">
+             <div className="flex-1">
+                <div className="text-xs text-muted-foreground mb-1">الإيراد المتوقع (شهر 12)</div>
+                <div className="text-lg sm:text-xl font-bold text-foreground">$3,200</div>
              </div>
-             <div style={{ width: "1px", height: "40px", background: TOKENS.colors.border }} />
-             <div style={{ flex: 1 }}>
-                <div style={{ fontSize: "13px", color: TOKENS.colors.text.muted, marginBottom: "4px" }}>الهدف المطلوب</div>
-                <div style={{ fontSize: "20px", fontWeight: 900, color: TOKENS.colors.text.title }}>$6,000</div>
+             <div className="w-px h-10 bg-muted shrink-0" />
+             <div className="flex-1">
+                <div className="text-xs text-muted-foreground mb-1">الهدف المطلوب</div>
+                <div className="text-lg sm:text-xl font-bold text-foreground">$6,000</div>
              </div>
           </div>
           
-          <ProgressBar progress={53} color={TOKENS.colors.danger} label="الفجوة السلبية" />
+          <ProgressBar progress={53} label="الفجوة السلبية" />
 
           <AlertBox 
             type="warning" 
             title="تحليل الفجوة" 
             text="هذه الفجوة تعني أنك تحتاج إلى زيادة الطلبات اليومية بنسبة ~50% أو رفع متوسط الطلب (AOV) أو الجمع بين الاثنين." 
           />
-          <div style={{ marginTop: "16px", padding: "12px 16px", background: "rgba(99, 102, 241, 0.05)", borderRadius: "12px", fontSize: "14px", fontWeight: 700, color: TOKENS.colors.text.title }}>
-             💡 <span style={{ color: TOKENS.colors.primary, marginRight: 8 }}>بصيرة:</span> المشكلة ليست في الفكرة… بل في المعادلة التشغيلية الحالية.
+          <div className="mt-4 p-3 rounded-xl bg-muted/50 text-xs sm:text-sm font-semibold text-foreground">
+             💡 <span className="text-primary mr-1">بصيرة:</span> المشكلة ليست في الفكرة… بل في المعادلة التشغيلية الحالية.
           </div>
         </CardBody>
       </BaseCard>
@@ -90,20 +91,20 @@ export const StrategicPulseResults = () => {
         <CardHeader 
           title="مؤشر الجاهزية التشغيلية" 
           subtitle="Readiness Index"
-          icon={<Activity size={24} />}
+          icon={<Activity size={20} />}
           badge="تحتاج تطوير"
           badgeType="warning"
         />
         <CardBody>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "24px", alignItems: "center", marginBottom: "20px" }}>
-             <div style={{ width: 120, height: 120, position: "relative", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto" }}>
-                <svg width="120" height="120" viewBox="0 0 100 100">
-                  <circle cx="50" cy="50" r="45" fill="none" stroke="#f1f5f9" strokeWidth="8" />
-                  <circle cx="50" cy="50" r="45" fill="none" stroke={TOKENS.colors.warning} strokeWidth="8" strokeDasharray="282.7" strokeDashoffset={282.7 * (1 - 0.44)} strokeLinecap="round" transform="rotate(-90 50 50)" />
+          <div className="flex flex-wrap gap-6 items-center mb-4">
+             <div className="size-28 relative flex items-center justify-center mx-auto sm:mx-0 shrink-0">
+                <svg width="110" height="110" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="42" fill="none" className="stroke-muted" strokeWidth="8" />
+                  <circle cx="50" cy="50" r="42" fill="none" stroke="#f59e0b" strokeWidth="8" strokeDasharray="263.8" strokeDashoffset={263.8 * (1 - 0.44)} strokeLinecap="round" transform="rotate(-90 50 50)" />
                 </svg>
-                <div style={{ position: "absolute", fontSize: "24px", fontWeight: 900, color: TOKENS.colors.text.title }}>44%</div>
+                <div className="absolute text-xl font-bold text-foreground">44%</div>
              </div>
-             <div style={{ flex: "1 1 250px", display: "flex", flexDirection: "column", gap: "10px" }}>
+             <div className="flex-1 min-w-[240px] space-y-2">
                 <StatusItem status="success" label="فكرة واضحة ومحددة" />
                 <StatusItem status="warning" label="تنفيذ العمليات لا يزال غير مكتمل" />
                 <StatusItem status="danger" label="نظام التشغيل غير جاهز بالكامل" />
@@ -114,7 +115,7 @@ export const StrategicPulseResults = () => {
             title="تحليل الجاهزية" 
             text="هذا المستوى يعني أن المشروع قابل للانطلاق، لكنه ليس جاهزاً للتوسع؛ أي خطأ قد يعني استنزافاً سريعاً للميزانية." 
           />
-          <div style={{ marginTop: "16px", fontWeight: 800, color: TOKENS.colors.secondary }}>
+          <div className="mt-4 font-bold text-xs text-emerald-600 dark:text-emerald-400">
              📍 التوجيه الاستراتيجي: ابدأ بنسخة خفيفة (Lean Version) وليس بالمشروع الكامل حالياً.
           </div>
         </CardBody>
@@ -125,34 +126,34 @@ export const StrategicPulseResults = () => {
         <CardHeader 
           title="عنق الزجاجة الرئيسي" 
           subtitle="Core Bottleneck"
-          icon={<ShieldAlert size={24} />}
+          icon={<ShieldAlert size={20} />}
           badge="حرج جداً"
           badgeType="danger"
         />
         <CardBody>
-          <div style={{ background: "#fff1f2", padding: "20px", borderRadius: "16px", border: "1px solid rgba(225, 29, 72, 0.1)", marginBottom: "20px" }}>
-             <div style={{ fontSize: "16px", fontWeight: 900, color: TOKENS.colors.danger, marginBottom: "8px", display: "flex", alignItems: "center", gap: 8 }}>
-                <AlertCircle size={20} />
-                المشكلة الأساسية: عجز رأس المال التشغيلي
+          <div className="bg-rose-500/10 p-4 rounded-xl mb-4">
+             <div className="text-sm font-bold text-rose-600 dark:text-rose-400 mb-1 flex items-center gap-2">
+                <AlertCircle size={18} />
+                <span>المشكلة الأساسية: عجز رأس المال التشغيلي</span>
              </div>
-             <div style={{ fontSize: "14px", color: TOKENS.colors.text.body, fontWeight: 500 }}>
+             <div className="text-xs text-foreground font-medium">
                 الميزانية الحالية تغطي فقط 17% من الاحتياج الفعلي للتأسيس والتشغيل، مما يخلق فجوة تمويلية بنسبة 83%.
              </div>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "16px", marginBottom: "20px" }}>
-             <div style={{ padding: "16px", borderRadius: "12px", border: `1px solid ${TOKENS.colors.border}`, background: "#fff" }}>
-                <div style={{ fontSize: "12px", fontWeight: 800, color: TOKENS.colors.text.muted }}>مستوى التغطية ميزانية</div>
-                <div style={{ fontSize: "20px", fontWeight: 900, color: TOKENS.colors.danger }}>17%</div>
+          <div className="grid grid-cols-2 gap-3 mb-4">
+             <div className="p-3.5 rounded-xl bg-card">
+                <div className="text-xs font-semibold text-muted-foreground">مستوى التغطية</div>
+                <div className="text-lg font-bold text-rose-600 dark:text-rose-400">17%</div>
              </div>
-             <div style={{ padding: "16px", borderRadius: "12px", border: `1px solid ${TOKENS.colors.border}`, background: "#fff" }}>
-                <div style={{ fontSize: "12px", fontWeight: 800, color: TOKENS.colors.text.muted }}>فجوة التمويل</div>
-                <div style={{ fontSize: "20px", fontWeight: 900, color: TOKENS.colors.danger }}>-83%</div>
+             <div className="p-3.5 rounded-xl bg-card">
+                <div className="text-xs font-semibold text-muted-foreground">فجوة التمويل</div>
+                <div className="text-lg font-bold text-rose-600 dark:text-rose-400">-83%</div>
              </div>
           </div>
-          <div style={{ padding: "12px 16px", borderRight: `4px solid ${TOKENS.colors.danger}`, background: "rgba(0,0,0,0.02)", fontSize: "14px", fontWeight: 600 }}>
+          <div className="p-3 bg-muted/40 text-xs font-medium text-foreground rounded-lg">
              هذا أخطر شيء حالياً: ليس لأن الفكرة ضعيفة، بل لأن النموذج الحالي أكبر من ميزانيتك. الاستمرار بنفس الطريقة يعني الفشل قبل الإطلاق.
           </div>
-          <div style={{ marginTop: "16px", fontWeight: 900, color: TOKENS.colors.secondary, background: "rgba(16, 185, 129, 0.1)", padding: "10px 16px", borderRadius: "8px", width: "fit-content" }}>
+          <div className="mt-3 font-bold text-xs text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 px-3 py-1.5 rounded-lg w-fit">
              👉 الحل الفوري: تقليل CAPEX (تكاليف التأسيس) فوراً.
           </div>
         </CardBody>
@@ -163,29 +164,29 @@ export const StrategicPulseResults = () => {
         <CardHeader 
           title="القرار الاستراتيجي الذكي" 
           subtitle="AI Decision"
-          icon={<Zap size={24} />}
+          icon={<Zap size={20} />}
           badge="قرار مقترح"
         />
         <CardBody>
-          <div style={{ display: "flex", gap: "20px", alignItems: "flex-start" }}>
-             <div style={{ width: "48px", height: "48px", borderRadius: "50%", background: TOKENS.colors.primary, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                <CheckCircle2 size={24} />
+          <div className="flex gap-4 items-start">
+             <div className="size-10 rounded-xl bg-primary text-primary-foreground flex items-center justify-center shrink-0">
+                <CheckCircle2 size={20} />
              </div>
              <div>
-                <div style={{ fontSize: "18px", fontWeight: 900, color: TOKENS.colors.primary, marginBottom: "4px" }}>Proceed with Adjustments</div>
-                <div style={{ fontSize: "15px", fontWeight: 700, color: TOKENS.colors.text.title }}>التحول إلى نموذج المطبخ السحابي (Cloud Kitchen / Lean Model)</div>
+                <div className="text-sm font-bold text-primary">Proceed with Adjustments</div>
+                <div className="text-xs sm:text-sm font-bold text-foreground">التحول إلى نموذج المطبخ السحابي (Cloud Kitchen / Lean Model)</div>
              </div>
           </div>
           
-          <div style={{ marginTop: "24px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "12px" }}>
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-2.5">
              <ReasonCard title="تقليل التكاليف" desc="خفض المصاريف الثابتة بنسبة 60%" />
              <ReasonCard title="سرعة الوصول" desc="دخول السوق في أقل من 30 يوم" />
              <ReasonCard title="أمان أعلى" desc="تقليل مخاطر رأس المال المفقود" />
           </div>
 
-          <div style={{ marginTop: "20px", padding: "16px", background: "linear-gradient(135deg, #4f46e5, #6366f1)", borderRadius: "16px", color: "#fff" }}>
-             <div style={{ fontSize: "13px", opacity: 0.8, fontWeight: 600, marginBottom: "4px" }}>بصيرة استراتيجية قوية</div>
-             <div style={{ fontSize: "15px", fontWeight: 800 }}>أنت لا تحتاج إلى مطعم مادي كامل في هذه المرحلة؛ أنت تحتاج أولاً إلى "إثبات الطلب" (Proof of Demand).</div>
+          <div className="mt-4 p-4 bg-primary text-primary-foreground rounded-xl">
+             <div className="text-xs opacity-80 font-medium mb-1">بصيرة استراتيجية قوية</div>
+             <div className="text-xs sm:text-sm font-bold">أنت لا تحتاج إلى مطعم مادي كامل في هذه المرحلة؛ أنت تحتاج أولاً إلى "إثبات الطلب" (Proof of Demand).</div>
           </div>
         </CardBody>
       </BaseCard>
@@ -195,15 +196,15 @@ export const StrategicPulseResults = () => {
         <CardHeader 
           title="تحليل الأمان المالي" 
           subtitle="Financial Safety"
-          icon={<Compass size={24} />}
+          icon={<Compass size={20} />}
           badge="مخاطرة متوسطة"
           badgeType="warning"
         />
         <CardBody>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "16px", marginBottom: "24px" }}>
+          <div className="grid grid-cols-3 gap-3 mb-4">
              <KPIMiniBox label="نقطة التعادل" value="الشهر 8" sub="متأخر قليلاً" />
              <KPIMiniBox label="السيناريو" value="متحفظ" sub="واقعي جداً" />
-             <KPIMiniBox label="المخاطر" value="متوسطة ⟵ عالية" sub="تحتاج مراقبة" />
+             <KPIMiniBox label="المخاطر" value="متوسطة" sub="تحتاج مراقبة" />
           </div>
           
           <AlertBox 
@@ -212,171 +213,85 @@ export const StrategicPulseResults = () => {
             text="إذا لم يتم تعديل النموذج، فإن السيولة ستنتهي قبل تحقيق التعادل المالي، مما سيؤثر على جودة التشغيل ويؤدي لضغط هائل." 
           />
 
-          <div style={{ marginTop: "20px" }}>
-             <div style={{ fontSize: "14px", fontWeight: 800, marginBottom: "12px", color: TOKENS.colors.text.title }}>التوجيه المالي التنفيذي:</div>
-             <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+          <div className="mt-4 space-y-2">
+             <div className="text-xs font-bold text-foreground">التوجيه المالي التنفيذي:</div>
+             <div className="flex flex-col gap-1.5 text-xs text-foreground">
                 <CheckItem text="خفّض التكاليف الثابتة بنسبة 40% على الأقل" />
                 <CheckItem text="ركز على التدفق النقدي (Cash Flow) كأولوية قصوى قبل الأرباح" />
              </div>
           </div>
         </CardBody>
       </BaseCard>
-
-      {/* 7. Acceleration Strategy */}
-      <BaseCard variant="highlight">
-        <CardHeader 
-          title="خطة تسريع الوصول للهدف" 
-          subtitle="Acceleration Strategy"
-          icon={<Rocket size={24} />}
-          badge="خطة نمو"
-          badgeType="success"
-        />
-        <CardBody>
-          <div style={{ marginBottom: "20px", fontSize: "15px", fontWeight: 700 }}>
-             للوصول إلى هدفك ($6,000) خلال أول 90 يوم، يجب تحقيق هذه الأرقام:
-          </div>
-          
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "16px", marginBottom: "24px" }}>
-             <div style={{ flex: 1, padding: "16px", borderRadius: "16px", background: "#f8fafc", border: `1px solid ${TOKENS.colors.border}` }}>
-                <div style={{ fontSize: "12px", fontWeight: 800, color: TOKENS.colors.text.muted, marginBottom: "8px" }}>الطلبات اليومية</div>
-                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                   <span style={{ fontSize: "18px", fontWeight: 700, color: TOKENS.colors.text.muted }}>15</span>
-                   <ArrowRight size={16} />
-                   <span style={{ fontSize: "24px", fontWeight: 900, color: TOKENS.colors.secondary }}>28</span>
-                </div>
-             </div>
-             <div style={{ flex: 1, padding: "16px", borderRadius: "16px", background: "#f8fafc", border: `1px solid ${TOKENS.colors.border}` }}>
-                <div style={{ fontSize: "12px", fontWeight: 800, color: TOKENS.colors.text.muted, marginBottom: "8px" }}>متوسط قيمة الطلب (AOV)</div>
-                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                   <span style={{ fontSize: "18px", fontWeight: 700, color: TOKENS.colors.text.muted }}>$22</span>
-                   <ArrowRight size={16} />
-                   <span style={{ fontSize: "24px", fontWeight: 900, color: TOKENS.colors.secondary }}>$28</span>
-                </div>
-             </div>
-          </div>
-
-          <div style={{ fontSize: "14px", fontWeight: 800, marginBottom: "12px" }}>إجراءات مباشرة للنمو:</div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "12px" }}>
-             <GrowthTech icon={<Zap size={16} />} title="Upselling" desc="إضافة مشروبات ومقبلات" />
-             <GrowthTech icon={<Activity size={16} />} title="TikTok" desc="حملات تيك توك محلية" />
-          </div>
-
-          <div style={{ marginTop: "20px", color: TOKENS.colors.text.muted, fontSize: "14px", fontStyle: "italic" }}>
-             💡 الخلاصة: النمو لن يأتي من التوسع العرضي حالياً، بل من تحسين الأرقام الحقيقية المذكورة أعلاه.
-          </div>
-        </CardBody>
-      </BaseCard>
-
-      {/* 8. UVP Insight */}
-      <BaseCard>
-        <CardHeader 
-          title="الميزة التنافسية الحقيقية" 
-          subtitle="UVP Insight"
-          icon={<Search size={24} />}
-          badge="تحليل تنافسي"
-        />
-        <CardBody>
-          <div style={{ display: "flex", gap: "24px", flexWrap: "wrap", alignItems: "center", marginBottom: "24px" }}>
-             <div style={{ display: "flex", flexDirection: "column", gap: "8px", flex: "1 1 250px" }}>
-                <StatusItem status="success" label="جودة منتج استثنائية (UVP)" />
-                <StatusItem status="success" label="تجربة عميل قوية وعاطفية" />
-                <StatusItem status="danger" label="سرعة تسليم أقل من المنافسين" />
-             </div>
-             <div style={{ flex: "1 1 250px", padding: "20px", background: "#f8fafc", borderRadius: "20px", border: `1px solid ${TOKENS.colors.border}` }}>
-                <div style={{ fontSize: "13px", fontWeight: 800, color: TOKENS.colors.text.muted, marginBottom: "8px" }}>نصيحة الصراع التنافسي:</div>
-                <div style={{ fontSize: "15px", fontWeight: 800, color: TOKENS.colors.text.title }}>لا تحاول منافسة السوق في السرعة. ركز على:</div>
-                <div style={{ fontSize: "14px", color: TOKENS.colors.primary, fontWeight: 900, marginTop: "4px" }}>Premium Experience + Quality Positioning</div>
-             </div>
-          </div>
-
-          <div style={{ fontSize: "14px", color: TOKENS.colors.text.body, fontWeight: 600, padding: "16px", border: "1px dashed #cbd5e1", borderRadius: "16px" }}>
-             🚀 استراتيجية ذكية: استهدف عملاء الجودة وليس السعر؛ ابنِ براند (Brand) قوي بدل الدخول في "حرب أسعار" مهلكة. ميزتك ليست السرعة، بل التجربة الفائقة.
-          </div>
-        </CardBody>
-      </BaseCard>
-
     </div>
   );
 };
 
-// --- HELPER COMPONENTS ---
+// --- HELPER COMPONENTS (BORDERLESS SHADCN) ---
 
 const DataMiniCard = ({ label, value, subValue, icon, color }: any) => (
-  <div style={{ padding: "16px", background: "#f8fafc", borderRadius: "20px", border: `1px solid ${TOKENS.colors.border}`, display: "flex", flexDirection: "column", gap: "4px" }}>
-    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "4px" }}>
-       <span style={{ fontSize: "11px", fontWeight: 800, color: TOKENS.colors.text.muted }}>{label}</span>
-       <div style={{ color: color }}>{icon}</div>
+  <div className="p-3.5 bg-muted/40 rounded-xl flex flex-col gap-1">
+    <div className="flex justify-between items-center mb-1">
+       <span className="text-[11px] font-semibold text-muted-foreground">{label}</span>
+       <div className={color}>{icon}</div>
     </div>
-    <div style={{ fontSize: "18px", fontWeight: 900, color: TOKENS.colors.text.title }}>{value}</div>
-    <div style={{ fontSize: "10px", fontWeight: 900, opacity: 0.6, color: color }}>{subValue}</div>
+    <div className="text-base font-bold text-foreground">{value}</div>
+    <div className={`text-[10px] font-semibold opacity-80 ${color}`}>{subValue}</div>
   </div>
 );
 
 const AlertBox = ({ type, title, text }: any) => {
   const isWarning = type === "warning";
   const isDanger = type === "danger";
-  const bgColor = isWarning ? "#fffbeb" : isDanger ? "#fff1f2" : "#eff6ff";
-  const border = isWarning ? "#fef3c7" : isDanger ? "#ffe4e6" : "#dbeafe";
-  const color = isWarning ? "#92400e" : isDanger ? "#9f1239" : "#1e40af";
+  const bgClass = isWarning ? "bg-amber-500/10 text-amber-900 dark:text-amber-300" : isDanger ? "bg-rose-500/10 text-rose-900 dark:text-rose-300" : "bg-primary/10 text-primary-900";
 
   return (
-    <div style={{ padding: "16px", background: bgColor, borderRadius: "14px", border: `1px solid ${border}`, marginTop: "12px" }}>
-      <div style={{ fontSize: "13px", fontWeight: 900, color: color, marginBottom: "4px" }}>{title}</div>
-      <div style={{ fontSize: "13.5px", color: TOKENS.colors.text.body, fontWeight: 500, lineHeight: 1.5 }}>{text}</div>
+    <div className={`p-3.5 rounded-xl ${bgClass} mt-3`}>
+      <div className="text-xs font-bold mb-0.5">{title}</div>
+      <div className="text-xs leading-relaxed font-medium">{text}</div>
     </div>
   );
 };
 
-const ProgressBar = ({ progress, color, label }: any) => (
-  <div style={{ margin: "20px 0" }}>
-    <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "8px" }}>
-       <span style={{ fontSize: "13px", fontWeight: 800 }}>{label}</span>
-       <span style={{ fontSize: "13px", fontWeight: 900, color: color }}>{progress}%</span>
+const ProgressBar = ({ progress, label }: any) => (
+  <div className="my-4 space-y-1.5">
+    <div className="flex justify-between text-xs font-semibold">
+       <span>{label}</span>
+       <span className="text-rose-600 dark:text-rose-400 font-bold">{progress}%</span>
     </div>
-    <div style={{ height: "10px", background: "#f1f5f9", borderRadius: "100px", overflow: "hidden" }}>
-       <div style={{ height: "100%", background: color, width: `${progress}%`, transition: "width 1s ease-out" }} />
+    <div className="h-2 bg-muted rounded-full overflow-hidden">
+       <div className="h-full bg-rose-600 dark:bg-rose-500 transition-all duration-500" style={{ width: `${progress}%` }} />
     </div>
   </div>
 );
 
 const StatusItem = ({ status, label }: any) => {
-  const color = status === "success" ? TOKENS.colors.secondary : status === "warning" ? TOKENS.colors.warning : TOKENS.colors.danger;
+  const bgClass = status === "success" ? "bg-emerald-500" : status === "warning" ? "bg-amber-500" : "bg-rose-500";
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-       <div style={{ width: 8, height: 8, borderRadius: "50%", background: color }} />
-       <div style={{ fontSize: "14px", fontWeight: 600, color: TOKENS.colors.text.title }}>{label}</div>
+    <div className="flex items-center gap-2 text-xs font-medium text-foreground">
+       <div className={`size-2 rounded-full ${bgClass}`} />
+       <span>{label}</span>
     </div>
   );
 };
 
 const ReasonCard = ({ title, desc }: any) => (
-  <div style={{ padding: "12px", background: "#fff", border: `1px solid ${TOKENS.colors.border}`, borderRadius: "12px" }}>
-     <div style={{ fontSize: "13px", fontWeight: 800, color: TOKENS.colors.text.title, marginBottom: "4px" }}>{title}</div>
-     <div style={{ fontSize: "11px", fontWeight: 500, color: TOKENS.colors.text.muted }}>{desc}</div>
+  <div className="p-3 bg-card rounded-xl">
+     <div className="text-xs font-bold text-foreground mb-0.5">{title}</div>
+     <div className="text-[11px] font-medium text-muted-foreground">{desc}</div>
   </div>
 );
 
 const KPIMiniBox = ({ label, value, sub }: any) => (
-  <div style={{ padding: "12px", border: `1px solid ${TOKENS.colors.border}`, borderRadius: "12px", textAlign: "center" }}>
-     <div style={{ fontSize: "11px", fontWeight: 800, color: TOKENS.colors.text.muted, marginBottom: "4px" }}>{label}</div>
-     <div style={{ fontSize: "16px", fontWeight: 900, color: TOKENS.colors.text.title }}>{value}</div>
-     <div style={{ fontSize: "10px", color: TOKENS.colors.text.muted }}>{sub}</div>
+  <div className="p-3 bg-muted/40 rounded-xl text-center space-y-0.5">
+     <div className="text-[11px] font-semibold text-muted-foreground">{label}</div>
+     <div className="text-sm font-bold text-foreground">{value}</div>
+     <div className="text-[10px] text-muted-foreground">{sub}</div>
   </div>
 );
 
 const CheckItem = ({ text }: any) => (
-  <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: "13.5px", fontWeight: 600 }}>
-     <CheckCircle2 size={16} color={TOKENS.colors.secondary} />
-     {text}
-  </div>
-);
-
-const GrowthTech = ({ icon, title, desc }: any) => (
-  <div style={{ padding: "14px", background: "#fff", border: `1px solid ${TOKENS.colors.border}`, borderRadius: "14px", display: "flex", alignItems: "center", gap: 12 }}>
-     <div style={{ color: TOKENS.colors.primary }}>{icon}</div>
-     <div>
-        <div style={{ fontSize: "13px", fontWeight: 800, color: TOKENS.colors.text.title }}>{title}</div>
-        <div style={{ fontSize: "11px", color: TOKENS.colors.text.muted }}>{desc}</div>
-     </div>
+  <div className="flex items-center gap-2 text-xs font-medium text-foreground">
+     <CheckCircle2 size={14} className="text-emerald-600 shrink-0" />
+     <span>{text}</span>
   </div>
 );
