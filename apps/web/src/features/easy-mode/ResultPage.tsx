@@ -110,25 +110,24 @@ export default function ResultPage() {
   return (
     <div
       dir="rtl"
-      className="flex flex-col w-full bg-background relative overflow-hidden text-right"
-      style={{ fontFamily: "'IBM Plex Sans Arabic', sans-serif", minHeight: "calc(100vh - 64px)" }}
+      className="flex flex-col w-full min-h-screen bg-background relative text-right"
     >
-      {/* Header Banner - Borderless Surface */}
-      <header className="px-4 sm:px-6 lg:px-10 pt-5 pb-4 relative z-10 shrink-0 bg-card shadow-xs">
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 relative z-10 w-full">
+      {/* Header Banner - Surface */}
+      <header className="px-4 sm:px-6 lg:px-10 pt-6 pb-5 bg-card border-b border-border shadow-2xs">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 w-full">
           <div className="text-center sm:text-right w-full sm:flex-1">
-            <div className="flex items-center gap-3 mb-1 justify-center sm:justify-start">
-              <div className="size-10 sm:size-11 bg-primary text-primary-foreground rounded-xl flex items-center justify-center shrink-0 shadow-xs">
-                <Lucide.Zap size={20} className="sm:w-5 sm:h-5" />
+            <div className="flex items-center gap-3 justify-center sm:justify-start">
+              <div className="size-11 bg-primary text-primary-foreground rounded-xl flex items-center justify-center shrink-0 shadow-xs">
+                <Lucide.Zap size={22} />
               </div>
               <div>
-                <div className="flex items-center gap-2">
-                  <h1 className="text-base sm:text-xl lg:text-2xl font-bold text-foreground leading-tight tracking-tight">النموذج الاحترافي</h1>
-                  <Badge variant="secondary" className="text-[10px] font-semibold">
+                <div className="flex items-center gap-2.5 flex-wrap justify-center sm:justify-start">
+                  <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground leading-tight tracking-tight">النموذج الاحترافي</h1>
+                  <Badge variant="secondary" className="text-xs font-semibold px-2.5 py-0.5">
                     تحليل إستراتيجي متقدم
                   </Badge>
                 </div>
-                <p className="text-xs text-muted-foreground font-medium mt-0.5 hidden sm:block">
+                <p className="text-xs text-muted-foreground font-medium mt-1 hidden sm:block">
                   لوحة تحكم استراتيجية متكاملة مدعومة بالذكاء الاصطناعي لتخطيط وتنفيذ المشروع
                 </p>
               </div>
@@ -136,11 +135,11 @@ export default function ResultPage() {
           </div>
 
           <div className="flex flex-wrap items-center gap-2 shrink-0 w-full sm:w-auto justify-center sm:justify-end">
-            <Badge variant="secondary" className="gap-1.5 px-3 py-1 text-xs font-semibold bg-primary/10 text-primary">
+            <Badge variant="outline" className="gap-1.5 px-3 py-1 text-xs font-semibold bg-primary/10 text-primary border-primary/20">
               <Lucide.Sparkles size={13} className="animate-pulse" />
               <span>تحليل استراتيجي أوتوماتيكي</span>
             </Badge>
-            <Button variant="outline" size="sm" className="gap-1.5 text-xs font-medium rounded-lg border-0 bg-muted/50 hover:bg-muted">
+            <Button variant="outline" size="sm" className="gap-1.5 text-xs font-semibold rounded-lg">
               <Lucide.Download size={14} />
               <span>تصدير PDF</span>
             </Button>
@@ -152,11 +151,11 @@ export default function ResultPage() {
         </div>
       </header>
 
-      {/* Borderless Result Header Navigation Tabs */}
+      {/* Result Header Navigation Tabs */}
       <ResultHeader activeTab={activeTab} setActiveTab={setActiveTab} />
 
       {/* Main Content Area */}
-      <main className="flex-1 overflow-y-auto w-full px-4 sm:px-6 lg:px-10 py-6 relative z-10">
+      <main className="flex-1 w-full px-4 sm:px-6 lg:px-10 py-6 sm:py-8">
         <div className="w-full max-w-[1600px] mx-auto">
           {renderTabContent()}
         </div>

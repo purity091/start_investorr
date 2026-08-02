@@ -1,63 +1,66 @@
 import React from "react";
+import { Card } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
+import { cn } from "@/lib/utils";
+import { ChevronDown } from "lucide-react";
 
 /**
- * 🎨 DESIGN TOKENS (shadcn/ui Compliant - Borderless Surface System)
+ * 🎨 DESIGN TOKENS (shadcn/ui Compliant Tokens)
  */
 export const TOKENS = {
   radius: {
-    card: "16px",
-    inner: "12px",
-    button: "10px"
+    card: "rounded-xl",
+    inner: "rounded-lg",
+    button: "rounded-md"
   },
   spacing: {
-    pageGap: "20px",
-    cardPadding: "24px",
-    contentGap: "16px",
-    sectionGap: "20px"
+    pageGap: "gap-5",
+    cardPadding: "p-6",
+    contentGap: "gap-4",
+    sectionGap: "gap-5"
   },
   colors: {
-    primary: "#6366f1",
-    primaryLight: "#818cf8",
+    primary: "var(--primary)",
+    primaryLight: "var(--primary)",
     primaryGlow: "rgba(99, 102, 241, 0.08)",
     secondary: "#10b981", // Emerald
     danger: "#e11d48", // Rose
     warning: "#f59e0b", // Amber
-    surface: "var(--card, #ffffff)",
-    border: "transparent",
-    borderHover: "transparent",
+    surface: "var(--card)",
+    border: "var(--border)",
+    borderHover: "var(--border)",
     text: {
-      title: "var(--foreground, #0f172a)",
-      body: "var(--muted-foreground, #475569)",
-      muted: "var(--muted-foreground, #94a3b8)",
-      accent: "#6366f1"
+      title: "var(--foreground)",
+      body: "var(--muted-foreground)",
+      muted: "var(--muted-foreground)",
+      accent: "var(--primary)"
     }
   },
   typography: {
     title: {
-      size: "18px",
-      weight: "700",
-      family: "'IBM Plex Sans Arabic', sans-serif"
+      size: "text-lg",
+      weight: "font-bold"
     },
     body: {
-      size: "14px",
-      weight: "500",
-      lineHeight: "1.6"
+      size: "text-sm",
+      weight: "font-medium",
+      lineHeight: "leading-relaxed"
     },
     label: {
-      size: "11px",
-      weight: "700",
+      size: "text-xs",
+      weight: "font-bold",
       spacing: "0.02em"
     }
   },
   shadows: {
-    soft: "0 1px 3px 0 rgba(0, 0, 0, 0.05)",
-    premium: "0 4px 12px 0 rgba(0, 0, 0, 0.05)",
+    soft: "shadow-xs",
+    premium: "shadow-sm",
     glow: "none"
   }
 };
 
 /**
- * ✨ BASE CARD WRAPPER (Borderless shadcn/ui Card)
+ * ✨ BASE CARD WRAPPER (shadcn/ui Card Compliant)
  */
 export const BaseCard = ({ 
   children, 
@@ -75,31 +78,15 @@ export const BaseCard = ({
   isInitiallyOpen?: boolean;
 }) => {
   const [isOpen, setIsOpen] = React.useState(isInitiallyOpen);
-  
-  const getVariantStyles = () => {
-    switch (variant) {
-      case "highlight": return { background: "var(--muted, #f8fafc)" };
-      case "danger": return { background: "rgba(225, 29, 72, 0.04)" };
-      case "success": return { background: "rgba(16, 185, 129, 0.04)" };
-      default: return { background: "var(--card, #ffffff)" };
-    }
-  };
 
-  const baseStyles: React.CSSProperties = {
-    borderRadius: TOKENS.radius.card,
-    padding: isOpen ? TOKENS.spacing.cardPadding : "18px 20px",
-    transition: "all 0.2s ease-in-out",
-    position: "relative",
-    border: "none",
-    boxShadow: isOpen ? TOKENS.shadows.premium : TOKENS.shadows.soft,
-    cursor: onClick ? "pointer" : "default",
-    overflow: "hidden",
-    height: "fit-content",
-    display: "flex",
-    flexDirection: "column",
-    ...getVariantStyles(),
-    ...style
-  };
+  const variantClass = React.useMemo(() => {
+    switch (variant) {
+      case "highlight": return "bg-muted/50 border-muted";
+      case "danger": return "bg-destructive/5 border-destructive/20";
+      case "success": return "bg-emerald-500/5 border-emerald-500/20";
+      default: return "bg-card border-border";
+    }
+  }, [variant]);
 
   const toggleOpen = (e: React.MouseEvent) => {
     if (onClick) {
@@ -111,45 +98,44 @@ export const BaseCard = ({
   };
 
   const childrenArray = React.Children.toArray(children);
-  const header = childrenArray.find((child: any) => child.type === CardHeader);
-  const others = childrenArray.filter((child: any) => child.type !== CardHeader);
+  const header = childrenArray.find((child: any) => child?.type === CardHeader);
+  const others = childrenArray.filter((child: any) => child?.type !== CardHeader);
 
   return (
-    <div className={`group ${className}`} style={baseStyles}>
-      <div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "column", height: "100%" }}>
+    <Card 
+      className={cn(
+        "group relative overflow-hidden transition-all duration-200 border shadow-xs h-fit flex flex-col p-5 sm:p-6",
+        variantClass,
+        onClick ? "cursor-pointer" : "cursor-default",
+        className
+      )}
+      style={style}
+    >
+      <div className="relative z-10 flex flex-col h-full w-full">
         {header && (
           <div 
              onClick={toggleOpen} 
-             style={{ cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}
+             className="cursor-pointer flex justify-between items-start w-full"
           >
-             <div style={{ flex: 1 }}>{header}</div>
-             <div style={{ 
-               padding: "6px", 
-               color: "var(--muted-foreground, #94a3b8)", 
-               transform: isOpen ? "rotate(180deg)" : "rotate(0deg)", 
-               transition: "transform 0.2s ease-in-out",
-               marginLeft: "12px",
-               marginTop: "2px"
-             }}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                   <path d="m6 9 6 6 6-6"/>
-                </svg>
+             <div className="flex-1">{header}</div>
+             <div className={cn(
+               "p-1.5 text-muted-foreground transition-transform duration-200 mr-3 mt-0.5 rounded-md hover:bg-muted/80",
+               isOpen && "rotate-180"
+             )}>
+                <ChevronDown size={18} />
              </div>
           </div>
         )}
         
-        <div style={{ 
-          maxHeight: isOpen ? "5000px" : "0px", 
-          opacity: isOpen ? 1 : 0,
-          overflow: "hidden",
-          transition: "all 0.3s ease-in-out",
-          marginTop: isOpen ? "0" : "-6px"
-        }}>
+        <div className={cn(
+          "transition-all duration-300 ease-in-out overflow-hidden w-full",
+          isOpen ? "max-h-[5000px] opacity-100 mt-2" : "max-h-0 opacity-0 -mt-1"
+        )}>
           {!header && children}
           {header && others}
         </div>
       </div>
-    </div>
+    </Card>
   );
 };
 
@@ -170,68 +156,38 @@ export const CardHeader = ({
   badge?: string;
   badgeType?: "default" | "success" | "danger" | "warning";
 }) => {
-  
-  const getBadgeStyles = () => {
+  const badgeVariant = React.useMemo(() => {
     switch (badgeType) {
-      case "success": return { color: "#047857", bg: "rgba(16, 185, 129, 0.1)" };
-      case "danger": return { color: "#b91c1c", bg: "rgba(225, 29, 72, 0.1)" };
-      case "warning": return { color: "#b45309", bg: "rgba(245, 158, 11, 0.1)" };
-      default: return { color: "#4f46e5", bg: "rgba(99, 102, 241, 0.1)" };
+      case "success": return "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20";
+      case "danger": return "bg-rose-500/10 text-rose-700 dark:text-rose-400 border-rose-500/20";
+      case "warning": return "bg-amber-500/10 text-amber-700 dark:text-amber-400 border-amber-500/20";
+      default: return "bg-primary/10 text-primary border-primary/20";
     }
-  };
-
-  const badgeStyles = getBadgeStyles();
+  }, [badgeType]);
 
   return (
-    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: TOKENS.spacing.sectionGap }}>
-      <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+    <div className="flex items-start justify-between gap-3 mb-4 w-full">
+      <div className="flex items-center gap-3">
         {icon && (
-          <div style={{ 
-            width: 38, 
-            height: 38, 
-            borderRadius: "10px", 
-            background: "var(--muted, #f1f5f9)", 
-            display: "flex", 
-            alignItems: "center", 
-            justifyContent: "center",
-            color: "var(--primary, #6366f1)"
-          }}>
+          <div className="size-9 sm:size-10 rounded-lg bg-muted flex items-center justify-center text-primary shrink-0">
             {icon}
           </div>
         )}
         <div>
-          <h3 style={{ 
-            fontSize: TOKENS.typography.title.size, 
-            fontWeight: TOKENS.typography.title.weight, 
-            color: "var(--foreground, #0f172a)",
-            margin: 0,
-            lineHeight: 1.2
-          }}>
+          <h3 className="text-base sm:text-lg font-bold text-foreground leading-tight m-0">
             {title}
           </h3>
           {subtitle && (
-            <p style={{ 
-              fontSize: "12px", 
-              color: "var(--muted-foreground, #64748b)", 
-              margin: "3px 0 0",
-              fontWeight: 500 
-            }}>
+            <p className="text-xs text-muted-foreground font-medium mt-1">
               {subtitle}
             </p>
           )}
         </div>
       </div>
       {badge && (
-        <div style={{ 
-          fontSize: TOKENS.typography.label.size, 
-          fontWeight: TOKENS.typography.label.weight, 
-          color: badgeStyles.color, 
-          background: badgeStyles.bg, 
-          padding: "4px 12px", 
-          borderRadius: "8px"
-        }}>
+        <Badge variant="outline" className={cn("text-[11px] font-bold px-2.5 py-0.5 rounded-md border shrink-0", badgeVariant)}>
           {badge}
-        </div>
+        </Badge>
       )}
     </div>
   );
@@ -239,34 +195,29 @@ export const CardHeader = ({
 
 export const CardBody = ({ 
   children, 
-  style 
+  style,
+  className = ""
 }: { 
   children: React.ReactNode; 
-  style?: React.CSSProperties 
+  style?: React.CSSProperties;
+  className?: string;
 }) => (
-  <div style={{ 
-    fontSize: TOKENS.typography.body.size, 
-    color: "var(--foreground, #334155)", 
-    lineHeight: TOKENS.typography.body.lineHeight,
-    fontWeight: TOKENS.typography.body.weight,
-    ...style
-  }}>
+  <div 
+    className={cn("text-sm text-foreground leading-relaxed font-medium space-y-2 w-full", className)}
+    style={style}
+  >
     {children}
   </div>
 );
 
 export const CardFooter = ({ 
-  children 
+  children,
+  className = "" 
 }: { 
-  children: React.ReactNode 
+  children: React.ReactNode;
+  className?: string;
 }) => (
-  <div style={{ 
-    marginTop: TOKENS.spacing.sectionGap, 
-    paddingTop: TOKENS.spacing.sectionGap, 
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between"
-  }}>
+  <div className={cn("mt-5 pt-4 border-t border-border flex items-center justify-between w-full", className)}>
     {children}
   </div>
 );
@@ -275,46 +226,28 @@ export const TabHeader = ({
   title, 
   description, 
   icon, 
-  color = TOKENS.colors.primary 
+  color
 }: { 
   title: string; 
   description: string; 
   icon?: React.ReactNode; 
   color?: string;
 }) => (
-  <div style={{ 
-    marginBottom: "24px", 
-    padding: "24px", 
-    background: "var(--card, #ffffff)", 
-    borderRadius: TOKENS.radius.card, 
-    boxShadow: TOKENS.shadows.soft,
-    position: "relative",
-    overflow: "hidden"
-  }}>
-    <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "flex-start", gap: 16 }}>
+  <Card className="p-5 sm:p-6 mb-6 rounded-xl border border-border bg-card shadow-xs relative overflow-hidden">
+    <div className="flex items-start gap-4 relative z-10">
       {icon && (
-        <div style={{ 
-          width: 48, 
-          height: 48, 
-          borderRadius: "12px", 
-          background: "var(--muted, #f1f5f9)", 
-          display: "flex", 
-          alignItems: "center", 
-          justifyContent: "center",
-          color: color,
-          flexShrink: 0
-        }}>
+        <div className="size-11 sm:size-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
           {icon}
         </div>
       )}
-      <div style={{ flex: 1 }}>
-        <h2 style={{ fontSize: "20px", fontWeight: 700, color: "var(--foreground, #0f172a)", margin: "0 0 8px", lineHeight: 1.2 }}>
+      <div className="flex-1">
+        <h2 className="text-lg sm:text-xl font-bold text-foreground leading-tight mb-1.5">
           {title}
         </h2>
-        <p style={{ fontSize: "13px", color: "var(--muted-foreground, #64748b)", lineHeight: 1.6, fontWeight: 500, maxWidth: "800px", margin: 0 }}>
+        <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed max-w-4xl m-0">
           {description}
         </p>
       </div>
     </div>
-  </div>
+  </Card>
 );
