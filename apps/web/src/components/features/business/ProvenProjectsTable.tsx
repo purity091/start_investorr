@@ -198,33 +198,25 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
     }
   });
 
+  // Ensure table only contains successful companies (filter out failed ones)
+  const provenData = useMemo(() => {
+    return data.filter((item) => {
+      const status = item.sourceStatus || (item.directory_snapshot?.monthly_revenue?.includes('مغلق') ? 'failed' : 'proven');
+      return status !== 'failed';
+    });
+  }, [data]);
+
   // Extract unique main categories for dropdown filter
   const uniqueCategories = useMemo(() => {
     const set = new Set<string>();
-    data.forEach((item) => {
+    provenData.forEach((item) => {
       if (item.category) {
         const mainCat = item.category.split('/')[0].trim();
         if (mainCat) set.add(mainCat);
       }
     });
     return Array.from(set).sort();
-  }, [data]);
-
-  // Extract unique business models for dropdown filter
-  const uniqueBusinessModels = useMemo(() => {
-    const set = new Set<string>();
-    data.forEach((item) => {
-      const bmStr = item.company?.business_model || '';
-      if (bmStr) {
-        const parts = bmStr.split(/[,/&]+/);
-        parts.forEach((p: string) => {
-          const trimmed = p.trim();
-          if (trimmed) set.add(trimmed);
-        });
-      }
-    });
-    return Array.from(set).sort();
-  }, [data]);
+  }, [provenData]);
 
   const columns: ColumnDef<any>[] = useMemo(
     () => [
@@ -283,7 +275,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
           const isVerified = Boolean(project.verification || project.evidence_map);
 
           return (
-            <div className="flex items-center gap-2.5 max-w-[240px]">
+            <div className="flex items-center gap-2.5 max-w-[280px]">
               <div className="flex items-center justify-center size-8 rounded-lg bg-blue-600/10 text-blue-700 text-xs font-bold shadow-xs shrink-0 border border-blue-600/20">
                 {project.name.charAt(0).toUpperCase()}
               </div>
@@ -296,7 +288,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
                     </span>
                   )}
                 </span>
-                <span className="text-[11px] font-medium text-slate-500 truncate max-w-[170px]" title={project.headline}>
+                <span className="text-[11px] font-medium text-slate-500 truncate max-w-[200px]" title={project.headline}>
                   {project.headline}
                 </span>
               </div>
@@ -343,45 +335,6 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
         },
       },
       {
-        accessorKey: 'sourceStatus',
-        id: 'sourceStatus',
-        header: 'حالة الشركة',
-        filterFn: (row, columnId, filterValue) => {
-          if (!filterValue || filterValue === 'all') return true;
-          const status = row.original.sourceStatus || (row.original.directory_snapshot?.monthly_revenue?.includes('مغلق') ? 'failed' : 'proven');
-          return status === filterValue;
-        },
-        cell: ({ row, table }) => {
-          const status = row.original.sourceStatus || (row.original.directory_snapshot?.monthly_revenue?.includes('مغلق') ? 'failed' : 'proven');
-          const isFailed = status === 'failed';
-          const currentFilter = table.getColumn('sourceStatus')?.getFilterValue() as string;
-          const isFiltered = currentFilter === status;
-
-          return (
-            <Badge
-              variant="outline"
-              onClick={(e) => {
-                e.stopPropagation();
-                if (isFiltered) {
-                  table.getColumn('sourceStatus')?.setFilterValue('');
-                } else {
-                  table.getColumn('sourceStatus')?.setFilterValue(status);
-                }
-              }}
-              className={cn(
-                "cursor-pointer font-bold text-[11px] px-2.5 py-0.5 border border-transparent transition-all hover:scale-105 active:scale-95 select-none",
-                isFailed
-                  ? "bg-red-50 text-red-700 hover:bg-red-100 ring-1 ring-inset ring-red-600/20"
-                  : "bg-emerald-50 text-emerald-700 hover:bg-emerald-100 ring-1 ring-inset ring-emerald-600/20"
-              )}
-              title="اضغط لتصفية المشاريع حسب هذه الحالة"
-            >
-              {isFailed ? 'شركات فشلت' : 'ناجحة'}
-            </Badge>
-          );
-        },
-      },
-      {
         accessorFn: (row) => getCountryInfo(row.company?.location).name,
         id: 'country',
         header: 'الدولة',
@@ -390,7 +343,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
           return (
             <div className="flex items-center gap-2 pr-2">
               <span className="text-xl shrink-0" title={locInfo.name}>{locInfo.flag}</span>
-              <span className="text-[12px] font-bold text-slate-700 truncate max-w-[110px]" title={locInfo.name}>{locInfo.name}</span>
+              <span className="text-[12px] font-bold text-slate-700 truncate max-w-[130px]" title={locInfo.name}>{locInfo.name}</span>
             </div>
           );
         },
@@ -423,14 +376,6 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
                 </span>
                 <span className="text-[10px] text-slate-400 font-medium text-right dir-rtl">/شهرياً</span>
               </div>
-            );
-          }
-
-          if (fullText.includes('مغلق') || fullText.includes('فشلت')) {
-            return (
-              <Badge variant="outline" className="bg-red-50 text-red-600 border-red-200 text-[10px] py-0 px-1.5 font-bold">
-                مغلق
-              </Badge>
             );
           }
 
@@ -480,54 +425,6 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
         },
       },
       {
-        accessorFn: (row) => row.company?.business_model,
-        id: 'business_model',
-        header: 'نموذج العمل',
-        filterFn: (row, columnId, filterValue) => {
-          if (!filterValue) return true;
-          const bm = (row.getValue(columnId) as string || '').toLowerCase();
-          return bm.includes(filterValue.toLowerCase());
-        },
-        cell: ({ row, table }) => {
-          const bmStr = (row.getValue('business_model') as string) || '';
-          if (!bmStr) return <span className="text-slate-400 text-[12px]">-</span>;
-
-          const tags = bmStr.split(/[,/&]+/).map((t) => t.trim()).filter(Boolean);
-          const currentFilter = (table.getColumn('business_model')?.getFilterValue() as string) || '';
-
-          return (
-            <div className="flex flex-wrap gap-1 max-w-[150px] whitespace-normal">
-              {tags.map((tag, idx) => {
-                const isFiltered = currentFilter && currentFilter.toLowerCase() === tag.toLowerCase();
-                return (
-                  <Badge
-                    key={idx}
-                    variant="outline"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      if (isFiltered) {
-                        table.getColumn('business_model')?.setFilterValue('');
-                      } else {
-                        table.getColumn('business_model')?.setFilterValue(tag);
-                      }
-                    }}
-                    className={cn(
-                      "cursor-pointer text-[10px] font-bold px-1.5 py-0.5 rounded-md transition-all hover:scale-105 active:scale-95 select-none whitespace-normal text-right leading-tight break-words",
-                      isFiltered
-                        ? "bg-indigo-600 text-white border-indigo-600 shadow-xs"
-                        : "bg-slate-50 text-slate-700 border-slate-200 hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-200"
-                    )}
-                    title={`اضغط لتصفية المشاريع حسب نموذج العمل "${tag}"`}
-                  >
-                    {tag}
-                  </Badge>
-                );
-              })}
-            </div>
-          );
-        },
-      },
-      {
         id: 'actions',
         cell: ({ row }) => {
           return (
@@ -553,7 +450,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
   );
 
   const table = useReactTable({
-    data,
+    data: provenData,
     columns,
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
@@ -568,14 +465,12 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
       const headline = (row.original.headline || '').toLowerCase();
       const category = (row.original.category || '').toLowerCase();
       const location = (row.original.company?.location || '').toLowerCase();
-      const bm = (row.original.company?.business_model || '').toLowerCase();
 
       return (
         name.includes(searchTerm) ||
         headline.includes(searchTerm) ||
         category.includes(searchTerm) ||
-        location.includes(searchTerm) ||
-        bm.includes(searchTerm)
+        location.includes(searchTerm)
       );
     },
     initialState: {
@@ -594,16 +489,12 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
 
   const categoryFilterVal = (table.getColumn('category')?.getFilterValue() as string) || '';
   const countryFilterVal = (table.getColumn('country')?.getFilterValue() as string) || '';
-  const bmFilterVal = (table.getColumn('business_model')?.getFilterValue() as string) || '';
-  const statusFilterVal = (table.getColumn('sourceStatus')?.getFilterValue() as string) || '';
-  const isAnyFilterActive = globalFilter || categoryFilterVal || countryFilterVal || bmFilterVal || statusFilterVal;
+  const isAnyFilterActive = globalFilter || categoryFilterVal || countryFilterVal;
 
   const resetAllFilters = () => {
     setGlobalFilter('');
     table.getColumn('category')?.setFilterValue('');
     table.getColumn('country')?.setFilterValue('');
-    table.getColumn('business_model')?.setFilterValue('');
-    table.getColumn('sourceStatus')?.setFilterValue('');
   };
 
   return (
@@ -611,7 +502,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
       {/* Table Toolbar */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-3">
         <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full sm:w-auto">
-          <div className="relative w-full sm:w-60">
+          <div className="relative w-full sm:w-64">
             <Search className="absolute right-3 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
             <Input
               placeholder="ابحث عن شركة، مجال..."
@@ -621,27 +512,12 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
             />
           </div>
 
-          {/* Status Filter Dropdown */}
-          <Select
-            value={statusFilterVal || 'all'}
-            onValueChange={(val) => table.getColumn('sourceStatus')?.setFilterValue(val === 'all' ? '' : val)}
-          >
-            <SelectTrigger className="h-10 w-full sm:w-[150px] bg-white border-slate-200 rounded-xl font-bold text-sm text-slate-700">
-              <SelectValue placeholder="حالة الشركة" />
-            </SelectTrigger>
-            <SelectContent className="rounded-xl border-slate-200" dir="rtl">
-              <SelectItem value="all" className="font-bold cursor-pointer">جميع الشركات</SelectItem>
-              <SelectItem value="proven" className="font-bold cursor-pointer text-emerald-600">شركات ناجحة</SelectItem>
-              <SelectItem value="failed" className="font-bold cursor-pointer text-red-600">شركات فشلت</SelectItem>
-            </SelectContent>
-          </Select>
-
           {/* Category Filter Dropdown */}
           <Select
             value={categoryFilterVal || 'all'}
             onValueChange={(val) => table.getColumn('category')?.setFilterValue(val === 'all' ? '' : val)}
           >
-            <SelectTrigger className="h-10 w-full sm:w-[150px] bg-white border-slate-200 rounded-xl font-bold text-sm text-slate-700">
+            <SelectTrigger className="h-10 w-full sm:w-[170px] bg-white border-slate-200 rounded-xl font-bold text-sm text-slate-700">
               <SelectValue placeholder="التصنيف" />
             </SelectTrigger>
             <SelectContent className="rounded-xl border-slate-200" dir="rtl">
@@ -652,33 +528,17 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
             </SelectContent>
           </Select>
 
-          {/* Business Model Filter Dropdown */}
-          <Select
-            value={bmFilterVal || 'all'}
-            onValueChange={(val) => table.getColumn('business_model')?.setFilterValue(val === 'all' ? '' : val)}
-          >
-            <SelectTrigger className="h-10 w-full sm:w-[160px] bg-white border-slate-200 rounded-xl font-bold text-sm text-slate-700">
-              <SelectValue placeholder="نموذج العمل" />
-            </SelectTrigger>
-            <SelectContent className="rounded-xl border-slate-200" dir="rtl">
-              <SelectItem value="all" className="font-bold cursor-pointer">كل النماذج</SelectItem>
-              {uniqueBusinessModels.map((bm) => (
-                <SelectItem key={bm} value={bm} className="font-bold cursor-pointer">{bm}</SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-
           {/* Country Filter Dropdown */}
           <Select
             value={countryFilterVal || 'all'}
             onValueChange={(val) => table.getColumn('country')?.setFilterValue(val === 'all' ? '' : val)}
           >
-            <SelectTrigger className="h-10 w-full sm:w-[140px] bg-white border-slate-200 rounded-xl font-bold text-sm text-slate-700">
+            <SelectTrigger className="h-10 w-full sm:w-[160px] bg-white border-slate-200 rounded-xl font-bold text-sm text-slate-700">
               <SelectValue placeholder="الدولة" />
             </SelectTrigger>
             <SelectContent className="rounded-xl border-slate-200" dir="rtl">
               <SelectItem value="all" className="font-bold cursor-pointer">كل الدول</SelectItem>
-              {Array.from(new Set(data.map(item => getCountryInfo(item.company?.location).name))).map(country => (
+              {Array.from(new Set(provenData.map(item => getCountryInfo(item.company?.location).name))).map(country => (
                 <SelectItem key={country} value={country} className="font-bold cursor-pointer">{country}</SelectItem>
               ))}
             </SelectContent>
@@ -713,11 +573,9 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
                 let label = column.id;
                 if (label === 'name') label = 'المشروع';
                 if (label === 'category') label = 'التصنيف';
-                if (label === 'sourceStatus') label = 'حالة الشركة';
                 if (label === 'country') label = 'الدولة';
                 if (label === 'revenue') label = 'الدخل الشهري';
                 if (label === 'traffic') label = 'الزيارات الشهرية';
-                if (label === 'business_model') label = 'نموذج العمل';
 
                 return (
                   <DropdownMenuCheckboxItem
@@ -735,40 +593,15 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
       </div>
 
       {/* Active Filter Pills indicator if filtered */}
-      {(categoryFilterVal || bmFilterVal || statusFilterVal || countryFilterVal) && (
+      {(categoryFilterVal || countryFilterVal) && (
         <div className="flex flex-wrap items-center gap-2 px-1">
           <span className="text-xs font-medium text-slate-500">الفلاتر المحددة:</span>
-          {statusFilterVal && (
-            <Badge className={cn(
-              "font-bold gap-1 text-xs py-0.5 px-2.5 rounded-lg text-white",
-              statusFilterVal === 'failed' ? "bg-red-600" : "bg-emerald-600"
-            )}>
-              الحالة: {statusFilterVal === 'failed' ? 'شركات فشلت' : 'شركات ناجحة'}
-              <button
-                onClick={() => table.getColumn('sourceStatus')?.setFilterValue('')}
-                className="mr-1 hover:text-slate-200"
-              >
-                <X className="size-3" />
-              </button>
-            </Badge>
-          )}
           {categoryFilterVal && (
             <Badge className="bg-blue-600 text-white font-bold gap-1 text-xs py-0.5 px-2.5 rounded-lg">
               التصنيف: {categoryFilterVal}
               <button
                 onClick={() => table.getColumn('category')?.setFilterValue('')}
                 className="mr-1 hover:text-blue-200"
-              >
-                <X className="size-3" />
-              </button>
-            </Badge>
-          )}
-          {bmFilterVal && (
-            <Badge className="bg-indigo-600 text-white font-bold gap-1 text-xs py-0.5 px-2.5 rounded-lg">
-              نموذج العمل: {bmFilterVal}
-              <button
-                onClick={() => table.getColumn('business_model')?.setFilterValue('')}
-                className="mr-1 hover:text-indigo-200"
               >
                 <X className="size-3" />
               </button>
@@ -797,13 +630,11 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
                 {headerGroup.headers.map((header) => {
                   let widthClass = '';
                   if (header.id === 'save') widthClass = 'w-[44px] min-w-[44px] max-w-[44px] text-center px-1';
-                  if (header.id === 'name') widthClass = 'w-[240px] max-w-[260px] min-w-[200px]';
-                  if (header.id === 'category') widthClass = 'w-[110px]';
-                  if (header.id === 'sourceStatus') widthClass = 'w-[95px]';
-                  if (header.id === 'country') widthClass = 'w-[100px]';
-                  if (header.id === 'revenue') widthClass = 'w-[105px]';
-                  if (header.id === 'traffic') widthClass = 'w-[105px]';
-                  if (header.id === 'business_model') widthClass = 'max-w-[140px] w-[140px]';
+                  if (header.id === 'name') widthClass = 'w-[280px] max-w-[320px] min-w-[220px]';
+                  if (header.id === 'category') widthClass = 'w-[140px]';
+                  if (header.id === 'country') widthClass = 'w-[140px]';
+                  if (header.id === 'revenue') widthClass = 'w-[130px]';
+                  if (header.id === 'traffic') widthClass = 'w-[130px]';
                   if (header.id === 'actions') widthClass = 'w-[60px] text-left';
 
                   return (
@@ -832,13 +663,11 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
                   {row.getVisibleCells().map((cell) => {
                     let widthClass = '';
                     if (cell.column.id === 'save') widthClass = 'w-[44px] min-w-[44px] max-w-[44px] text-center px-1';
-                    if (cell.column.id === 'name') widthClass = 'w-[240px] max-w-[260px] min-w-[200px]';
-                    if (cell.column.id === 'category') widthClass = 'w-[110px]';
-                    if (cell.column.id === 'sourceStatus') widthClass = 'w-[95px]';
-                    if (cell.column.id === 'country') widthClass = 'w-[100px]';
-                    if (cell.column.id === 'revenue') widthClass = 'w-[105px]';
-                    if (cell.column.id === 'traffic') widthClass = 'w-[105px]';
-                    if (cell.column.id === 'business_model') widthClass = 'max-w-[140px] w-[140px]';
+                    if (cell.column.id === 'name') widthClass = 'w-[280px] max-w-[320px] min-w-[220px]';
+                    if (cell.column.id === 'category') widthClass = 'w-[140px]';
+                    if (cell.column.id === 'country') widthClass = 'w-[140px]';
+                    if (cell.column.id === 'revenue') widthClass = 'w-[130px]';
+                    if (cell.column.id === 'traffic') widthClass = 'w-[130px]';
                     if (cell.column.id === 'actions') widthClass = 'w-[60px]';
 
                     return (
@@ -916,7 +745,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
 
         {/* Info Text */}
         <div className="flex-1 text-xs sm:text-sm font-medium text-slate-500 text-center sm:text-left w-full sm:w-auto">
-          عرض {table.getRowModel().rows.length} من أصل {table.getFilteredRowModel().rows.length} شركة
+          عرض {table.getRowModel().rows.length} من أصل {table.getFilteredRowModel().rows.length} شركة ناجحة
         </div>
       </div>
     </div>
