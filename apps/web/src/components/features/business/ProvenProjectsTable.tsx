@@ -358,51 +358,38 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
         accessorFn: (row) => getCountryInfo(row.company?.location).name,
         id: 'country',
         header: 'الدولة',
-        cell: ({ row }) => {
+        filterFn: (row, columnId, filterValue) => {
+          if (!filterValue) return true;
+          const countryName = getCountryInfo(row.original.company?.location).name.toLowerCase();
+          return countryName.includes(filterValue.toLowerCase());
+        },
+        cell: ({ row, table }) => {
           const locInfo = getCountryInfo(row.original.company?.location);
+          const currentFilter = table.getColumn('country')?.getFilterValue() as string;
+          const isFiltered = currentFilter && currentFilter.toLowerCase() === locInfo.name.toLowerCase();
+
           return (
-            <div className="flex items-center gap-2 pr-2">
-              <span className="text-xl shrink-0" title={locInfo.name}>{locInfo.flag}</span>
-              <span className="text-[12px] font-bold text-slate-700 truncate max-w-[130px]" title={locInfo.name}>{locInfo.name}</span>
-            </div>
-          );
-        },
-      },
-      {
-        accessorFn: (row) => parseRevenue(row.directory_snapshot?.monthly_revenue),
-        id: 'revenue',
-        header: ({ column }) => {
-          return (
-            <Button
-              variant="ghost"
-              onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
-              className="-ml-2 h-8 data-[state=open]:bg-accent px-2 hover:bg-slate-100 font-bold text-xs"
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                if (isFiltered) {
+                  table.getColumn('country')?.setFilterValue('');
+                } else {
+                  table.getColumn('country')?.setFilterValue(locInfo.name);
+                }
+              }}
+              className={cn(
+                "flex items-center gap-1.5 px-2 py-1 rounded-lg text-[12px] font-bold transition-all cursor-pointer select-none",
+                isFiltered
+                  ? "bg-emerald-600 text-white hover:bg-emerald-700 shadow-xs"
+                  : "text-slate-700 hover:bg-slate-100 border border-transparent hover:border-slate-200"
+              )}
+              title={isFiltered ? "اضغط لإلغاء تصفية الدولة" : `اضغط لتصفية المشاريع في ${locInfo.name}`}
             >
-              الدخل الشهري
-              <ArrowUpDown className="ml-1.5 size-3.5 text-slate-400" />
-            </Button>
-          );
-        },
-        sortingFn: 'basic',
-        cell: ({ row }) => {
-          const rawNum = row.getValue('revenue') as number;
-          const fullText = row.original.directory_snapshot?.monthly_revenue || '';
-
-          if (rawNum > 0) {
-            return (
-              <div className="flex flex-col justify-center" title={fullText}>
-                <span className="font-black text-xs text-slate-900 tracking-tight text-right dir-ltr">
-                  {formatCompactRevenue(rawNum)}
-                </span>
-                <span className="text-[10px] text-slate-400 font-medium text-right dir-rtl">/شهرياً</span>
-              </div>
-            );
-          }
-
-          return (
-            <span className="text-slate-400 text-xs font-medium truncate max-w-[100px] block" title={fullText}>
-              غير معلن
-            </span>
+              <span className="text-base shrink-0">{locInfo.flag}</span>
+              <span className="truncate max-w-[120px]">{locInfo.name}</span>
+            </button>
           );
         },
       },
@@ -584,8 +571,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
                 if (label === 'name') label = 'المشروع';
                 if (label === 'category') label = 'التصنيف';
                 if (label === 'country') label = 'الدولة';
-                if (label === 'revenue') label = 'الدخل الشهري';
-                if (label === 'traffic') label = 'الزيارات الشهرية';
+                if (label === 'last_updated') label = 'آخر تعديل';
 
                 return (
                   <DropdownMenuCheckboxItem
@@ -640,11 +626,10 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
                 {headerGroup.headers.map((header) => {
                   let widthClass = '';
                   if (header.id === 'save') widthClass = 'w-[44px] min-w-[44px] max-w-[44px] text-center px-1';
-                  if (header.id === 'name') widthClass = 'w-[280px] max-w-[320px] min-w-[220px]';
-                  if (header.id === 'category') widthClass = 'w-[140px]';
-                  if (header.id === 'country') widthClass = 'w-[140px]';
-                  if (header.id === 'revenue') widthClass = 'w-[130px]';
-                  if (header.id === 'traffic') widthClass = 'w-[130px]';
+                  if (header.id === 'name') widthClass = 'w-[320px] max-w-[380px] min-w-[240px]';
+                  if (header.id === 'category') widthClass = 'w-[160px]';
+                  if (header.id === 'country') widthClass = 'w-[160px]';
+                  if (header.id === 'last_updated') widthClass = 'w-[140px]';
                   if (header.id === 'actions') widthClass = 'w-[60px] text-left';
 
                   return (
