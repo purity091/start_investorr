@@ -106,8 +106,9 @@ export const QuestionCards: React.FC<RendererProps> = ({
               </div>
 
               {active ? (
-                <div className="absolute left-2.5 top-2.5">
+                <div className="absolute left-2.5 top-2.5 flex items-center gap-1 bg-white/20 text-white border border-white/30 px-2 py-0.5 rounded-md text-[10px] font-bold shadow-2xs">
                   <Lucide.CheckCircle2 size={12} />
+                  <span>مدخَلك المباشر</span>
                 </div>
               ) : null}
             </button>

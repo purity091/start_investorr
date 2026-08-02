@@ -40,43 +40,50 @@ export const Badge: React.FC<BadgeProps> = ({ children, type = 'default' }) => {
 };
 
 interface StepWizardProps {
-  steps: { icon: string; id: string }[];
+  steps: { icon: string; id: string; title?: string }[];
   current: number;
+  onStepClick?: (index: number) => void;
 }
 
-export const ProgressDots: React.FC<StepWizardProps> = ({ steps, current }) => (
-  <div className="flex items-center gap-2" dir="rtl">
-    {steps.map((s, i) => {
-      const isCompleted = i < current;
-      const isActive = i === current;
-      const IconComp = (Lucide as any)[s.icon] || Lucide.Circle;
+export const ProgressDots: React.FC<StepWizardProps> = ({ steps, current, onStepClick }) => (
+  <div className="flex flex-col items-center gap-2 w-full" dir="rtl">
+    <div className="flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
+      {steps.map((s, i) => {
+        const isCompleted = i < current;
+        const isActive = i === current;
+        const IconComp = (Lucide as any)[s.icon] || Lucide.Circle;
 
-      return (
-        <React.Fragment key={s.id}>
-          <div className="relative group">
-            <div
+        return (
+          <React.Fragment key={s.id}>
+            <button
+              type="button"
+              onClick={() => onStepClick?.(i + 1)}
               className={cn(
-                "flex h-8 w-8 items-center justify-center rounded-lg text-xs font-bold transition-all duration-200",
+                "flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold transition-all duration-200 cursor-pointer border",
                 isCompleted
-                  ? "bg-emerald-600 text-white shadow-2xs"
+                  ? "bg-emerald-600 text-white border-emerald-600 shadow-2xs hover:bg-emerald-700"
                   : isActive
-                    ? "bg-primary text-primary-foreground shadow-2xs ring-2 ring-primary/20"
-                    : "bg-muted text-muted-foreground"
+                    ? "bg-primary text-primary-foreground border-primary shadow-xs ring-2 ring-primary/20"
+                    : "bg-muted/70 text-muted-foreground border-border hover:bg-muted hover:text-foreground"
               )}
+              title={`الخطوة ${i + 1}`}
             >
-              {isCompleted ? (
-                <Lucide.Check size={15} strokeWidth={3} />
-              ) : (
-                <IconComp size={15} strokeWidth={isActive ? 2.5 : 2} />
-              )}
-            </div>
-          </div>
+              <div className="flex items-center justify-center shrink-0">
+                {isCompleted ? (
+                  <Lucide.Check size={14} strokeWidth={3} />
+                ) : (
+                  <IconComp size={14} strokeWidth={isActive ? 2.5 : 2} />
+                )}
+              </div>
+              <span className="whitespace-nowrap">الخطوة {i + 1}</span>
+            </button>
 
-          {i < steps.length - 1 ? (
-            <div className={cn('h-0.5 w-4 rounded-full transition-all duration-300', isCompleted ? 'bg-emerald-600' : 'bg-muted')} />
-          ) : null}
-        </React.Fragment>
-      );
-    })}
+            {i < steps.length - 1 ? (
+              <div className={cn('h-0.5 w-3 sm:w-6 rounded-full transition-all duration-300 shrink-0', isCompleted ? 'bg-emerald-600' : 'bg-muted')} />
+            ) : null}
+          </React.Fragment>
+        );
+      })}
+    </div>
   </div>
 );
