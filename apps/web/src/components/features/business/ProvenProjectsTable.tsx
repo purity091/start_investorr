@@ -42,53 +42,49 @@ interface ProvenProjectsTableProps {
   onRowClick: (project: any) => void;
 }
 
-// Custom sorting helper for revenue strings like "$250K /mo" or "$84.7M /mo"
+// Custom sorting helper for revenue strings like "$250K /mo", "$84.7M /mo", "$4.19B"
 const parseRevenue = (val: string) => {
   if (!val || val.includes('مغلق')) return 0;
   
-  const mMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:M|m|\$M|M\$|مليون)/i);
-  if (mMatch) return parseFloat(mMatch[1]) * 1000000;
-
   const bMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:B|b|\$B|B\$|مليار)/i);
   if (bMatch) return parseFloat(bMatch[1]) * 1000000000;
+
+  const mMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:M|m|\$M|M\$|مليون)/i);
+  if (mMatch) return parseFloat(mMatch[1]) * 1000000;
 
   const kMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:K|k|\$K|K\$|ألف)/i);
   if (kMatch) return parseFloat(kMatch[1]) * 1000;
 
-  const clean = val.replace(/[^0-9.KkMmBb]/g, '');
-  let num = parseFloat(clean);
-  if (clean.toLowerCase().includes('k')) num *= 1000;
-  if (clean.toLowerCase().includes('m')) num *= 1000000;
-  if (clean.toLowerCase().includes('b')) num *= 1000000000;
-
+  const clean = val.replace(/[^0-9.]/g, '');
+  const num = parseFloat(clean);
   return isNaN(num) ? 0 : num;
 };
 
-// Custom sorting helper for traffic strings like "60K /mo" or "14M عميل"
+// Custom sorting helper for traffic strings like "60K /mo", "14M عميل", "105M زائر"
 const parseTraffic = (val: string) => {
-  if (!val) return 0;
-
-  const mMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:M|m|مليون)/i);
-  if (mMatch) return parseFloat(mMatch[1]) * 1000000;
+  if (!val || val.includes('غير')) return 0;
 
   const bMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:B|b|مليار)/i);
   if (bMatch) return parseFloat(bMatch[1]) * 1000000000;
 
+  const mMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:M|m|مليون)/i);
+  if (mMatch) return parseFloat(mMatch[1]) * 1000000;
+
   const kMatch = val.match(/(\d+(?:\.\d+)?)\s*(?:K|k|ألف)/i);
   if (kMatch) return parseFloat(kMatch[1]) * 1000;
 
-  const clean = val.replace(/[^0-9.KkMmBb]/g, '');
-  let num = parseFloat(clean);
-  if (clean.toLowerCase().includes('k')) num *= 1000;
-  if (clean.toLowerCase().includes('m')) num *= 1000000;
-  if (clean.toLowerCase().includes('b')) num *= 1000000000;
-
+  const clean = val.replace(/[^0-9.]/g, '');
+  const num = parseFloat(clean);
   return isNaN(num) ? 0 : num;
 };
 
-// Helper to format compact revenue display ($250K, $2.5M)
+// Helper to format compact revenue display ($250K, $84.7M, $4.19B)
 const formatCompactRevenue = (num: number) => {
   if (!num || num <= 0) return '-';
+  if (num >= 1000000000) {
+    const formatted = (num / 1000000000).toFixed(2).replace(/\.00$/, '');
+    return `$${formatted}B`;
+  }
   if (num >= 1000000) {
     const formatted = (num / 1000000).toFixed(1).replace(/\.0$/, '');
     return `$${formatted}M`;
@@ -100,9 +96,13 @@ const formatCompactRevenue = (num: number) => {
   return `$${num}`;
 };
 
-// Helper to format compact traffic display (60K, 1.2M)
+// Helper to format compact traffic display (60K, 1.2M, 105M)
 const formatCompactTraffic = (num: number) => {
   if (!num || num <= 0) return '-';
+  if (num >= 1000000000) {
+    const formatted = (num / 1000000000).toFixed(1).replace(/\.0$/, '');
+    return `${formatted}B`;
+  }
   if (num >= 1000000) {
     const formatted = (num / 1000000).toFixed(1).replace(/\.0$/, '');
     return `${formatted}M`;
@@ -119,43 +119,48 @@ const getCountryInfo = (location: string) => {
   if (!location) return { name: 'عالمي', flag: '🌍' };
   const loc = location.toLowerCase();
 
-  if (loc.includes('السعودية') || loc.includes('saudi arabia') || loc.includes('مكة') || loc.includes('الرياض') || loc.includes('جدة')) {
+  if (loc.includes('السعودية') || loc.includes('saudi') || loc.includes('مكة') || loc.includes('الرياض') || loc.includes('جدة')) {
     return { name: 'المملكة العربية السعودية', flag: '🇸🇦' };
   }
-  if (loc.includes('مصر') || loc.includes('القاهرة') || loc.includes('egypt') || loc.includes('cairo')) {
+  if (loc.includes('مصر') || loc.includes('القاهرة') || loc.includes('النوبارية') || loc.includes('البحيرة') || loc.includes('قنا') || loc.includes('egypt')) {
     return { name: 'مصر', flag: '🇪🇬' };
   }
-  if (loc.includes('الإمارات') || loc.includes('دبي') || loc.includes('أبوظبي') || loc.includes('uae') || loc.includes('dubai') || loc.includes('abu dhabi')) {
+  if (loc.includes('الإمارات') || loc.includes('دبي') || loc.includes('أبوظبي') || loc.includes('uae') || loc.includes('dubai')) {
     return { name: 'الإمارات العربية المتحدة', flag: '🇦🇪' };
   }
-  if (loc.includes('الأردن') || loc.includes('عمّان') || loc.includes('عمان') || loc.includes('jordan') || loc.includes('amman')) {
+  if (loc.includes('الأردن') || loc.includes('عمّان') || loc.includes('عمان') || loc.includes('jordan')) {
     return { name: 'الأردن', flag: '🇯🇴' };
   }
   if (loc.includes('الكويت') || loc.includes('kuwait')) {
     return { name: 'الكويت', flag: '🇰🇼' };
   }
-  if (loc.includes('قطر') || loc.includes('الدوحة') || loc.includes('qatar') || loc.includes('doha')) {
+  if (loc.includes('قطر') || loc.includes('الدوحة') || loc.includes('qatar')) {
     return { name: 'قطر', flag: '🇶🇦' };
   }
   if (loc.includes('البحرين') || loc.includes('المنامة') || loc.includes('bahrain')) {
     return { name: 'البحرين', flag: '🇧🇭' };
   }
-  if (loc.includes('المغرب') || loc.includes('الدار البيضاء') || loc.includes('morocco') || loc.includes('casablanca')) {
+  if (loc.includes('المغرب') || loc.includes('الدار البيضاء') || loc.includes('morocco')) {
     return { name: 'المغرب', flag: '🇲🇦' };
   }
   if (loc.includes('الجزائر') || loc.includes('algeria')) {
     return { name: 'الجزائر', flag: '🇩🇿' };
   }
-  if (loc.includes('لبنان') || loc.includes('بيروت') || loc.includes('lebanon') || loc.includes('beirut')) {
+  if (loc.includes('لبنان') || loc.includes('بيروت') || loc.includes('lebanon')) {
     return { name: 'لبنان', flag: '🇱🇧' };
   }
-  if (loc.includes('florida') || loc.includes('atlanta') || loc.includes('united states') || loc.includes('usa') || loc.includes('california') || loc.includes('نيويورك') || loc.includes('سان فرانسيسكو') || loc.includes('مينلو بارك') || loc.includes('بيتسبرغ') || loc.includes('لوس أنجلوس') || loc.includes('لوس جاتوس') || loc.includes('san francisco') || loc.includes('new york')) {
+  if (
+    loc.includes('florida') || loc.includes('atlanta') || loc.includes('united states') || loc.includes('usa') ||
+    loc.includes('california') || loc.includes('نيويورك') || loc.includes('سان فرانسيسكو') || loc.includes('مينلو بارك') ||
+    loc.includes('بيتسبرغ') || loc.includes('لوس أنجلوس') || loc.includes('لوس جاتوس') || loc.includes('لوس غاتوس') ||
+    loc.includes('جورجيا') || loc.includes('أورلاندو') || loc.includes('san francisco') || loc.includes('new york') || loc.includes('us')
+  ) {
     return { name: 'الولايات المتحدة', flag: '🇺🇸' };
   }
   if (loc.includes('uk') || loc.includes('london') || loc.includes('المملكة المتحدة') || loc.includes('بريطانيا')) {
     return { name: 'المملكة المتحدة', flag: '🇬🇧' };
   }
-  if (loc.includes('canada') || loc.includes('أوتاوا') || loc.includes('كندا') || loc.includes('ottawa')) {
+  if (loc.includes('canada') || loc.includes('أوتاوا') || loc.includes('كندا')) {
     return { name: 'كندا', flag: '🇨🇦' };
   }
   if (loc.includes('singapore') || loc.includes('سنغافورة')) {
@@ -167,11 +172,14 @@ const getCountryInfo = (location: string) => {
   if (loc.includes('السويد') || loc.includes('ستوكهولم') || loc.includes('sweden')) {
     return { name: 'السويد', flag: '🇸🇪' };
   }
-  if (loc.includes('أستراليا') || loc.includes('سيدني') || loc.includes('australia') || loc.includes('sydney')) {
+  if (loc.includes('أستراليا') || loc.includes('سيدني') || loc.includes('australia')) {
     return { name: 'أستراليا', flag: '🇦🇺' };
   }
   if (loc.includes('أوكرانيا') || loc.includes('ukraine')) {
     return { name: 'أوكرانيا', flag: '🇺🇦' };
+  }
+  if (loc.includes('غير مذكور') || loc.includes('غير مؤكد') || loc.includes('غير متاح')) {
+    return { name: 'غير محدد', flag: '🌐' };
   }
 
   return { name: 'عالمي', flag: '🌍' };
@@ -381,8 +389,8 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
           const locInfo = getCountryInfo(row.original.company?.location);
           return (
             <div className="flex items-center gap-2 pr-2">
-              <span className="text-xl" title={locInfo.name}>{locInfo.flag}</span>
-              <span className="text-[13px] font-bold text-slate-700">{locInfo.name}</span>
+              <span className="text-xl shrink-0" title={locInfo.name}>{locInfo.flag}</span>
+              <span className="text-[12px] font-bold text-slate-700 truncate max-w-[110px]" title={locInfo.name}>{locInfo.name}</span>
             </div>
           );
         },
@@ -406,19 +414,30 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
         cell: ({ row }) => {
           const rawNum = row.getValue('revenue') as number;
           const fullText = row.original.directory_snapshot?.monthly_revenue || '';
-          if (!rawNum || rawNum <= 0) {
+
+          if (rawNum > 0) {
             return (
-              <span className="text-slate-400 text-xs font-medium truncate max-w-[100px] block" title={fullText}>
-                {fullText ? fullText.split(' ')[0] : '-'}
-              </span>
+              <div className="flex flex-col justify-center" title={fullText}>
+                <span className="font-black text-xs text-slate-900 tracking-tight text-right dir-ltr">
+                  {formatCompactRevenue(rawNum)}
+                </span>
+                <span className="text-[10px] text-slate-400 font-medium text-right dir-rtl">/شهرياً</span>
+              </div>
             );
           }
+
+          if (fullText.includes('مغلق') || fullText.includes('فشلت')) {
+            return (
+              <Badge variant="outline" className="bg-red-50 text-red-600 border-red-200 text-[10px] py-0 px-1.5 font-bold">
+                مغلق
+              </Badge>
+            );
+          }
+
           return (
-            <div className="flex flex-col justify-center" title={fullText}>
-              <span className="font-black text-xs text-slate-900 tracking-tight text-right dir-ltr">
-                {formatCompactRevenue(rawNum)}
-              </span>
-            </div>
+            <span className="text-slate-400 text-xs font-medium truncate max-w-[100px] block" title={fullText}>
+              غير معلن
+            </span>
           );
         },
       },
@@ -441,19 +460,22 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
         cell: ({ row }) => {
           const rawNum = row.getValue('traffic') as number;
           const fullText = row.original.directory_snapshot?.monthly_traffic || '';
-          if (!rawNum || rawNum <= 0) {
+
+          if (rawNum > 0) {
             return (
-              <span className="text-slate-400 text-xs font-medium truncate max-w-[100px] block" title={fullText}>
-                {fullText ? fullText.split(' ')[0] : '-'}
-              </span>
+              <div className="flex flex-col justify-center" title={fullText}>
+                <span className="font-bold text-xs text-slate-700 tracking-tight text-right dir-ltr">
+                  {formatCompactTraffic(rawNum)}
+                </span>
+                <span className="text-[10px] text-slate-400 font-medium text-right dir-rtl">/شهرياً</span>
+              </div>
             );
           }
+
           return (
-            <div className="flex flex-col justify-center" title={fullText}>
-              <span className="font-bold text-xs text-slate-700 tracking-tight text-right dir-ltr">
-                {formatCompactTraffic(rawNum)}
-              </span>
-            </div>
+            <span className="text-slate-400 text-xs font-medium truncate max-w-[100px] block" title={fullText}>
+              غير معلن
+            </span>
           );
         },
       },
@@ -539,7 +561,23 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
     getFilteredRowModel: getFilteredRowModel(),
     onSortingChange: setSorting,
     onColumnFiltersChange: setColumnFilters,
-    globalFilterFn: "includesString",
+    globalFilterFn: (row, columnId, filterValue) => {
+      if (!filterValue) return true;
+      const searchTerm = filterValue.toLowerCase();
+      const name = (row.original.name || '').toLowerCase();
+      const headline = (row.original.headline || '').toLowerCase();
+      const category = (row.original.category || '').toLowerCase();
+      const location = (row.original.company?.location || '').toLowerCase();
+      const bm = (row.original.company?.business_model || '').toLowerCase();
+
+      return (
+        name.includes(searchTerm) ||
+        headline.includes(searchTerm) ||
+        category.includes(searchTerm) ||
+        location.includes(searchTerm) ||
+        bm.includes(searchTerm)
+      );
+    },
     initialState: {
       pagination: {
         pageSize: 10,
@@ -697,7 +735,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
       </div>
 
       {/* Active Filter Pills indicator if filtered */}
-      {(categoryFilterVal || bmFilterVal || statusFilterVal) && (
+      {(categoryFilterVal || bmFilterVal || statusFilterVal || countryFilterVal) && (
         <div className="flex flex-wrap items-center gap-2 px-1">
           <span className="text-xs font-medium text-slate-500">الفلاتر المحددة:</span>
           {statusFilterVal && (
@@ -731,6 +769,17 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
               <button
                 onClick={() => table.getColumn('business_model')?.setFilterValue('')}
                 className="mr-1 hover:text-indigo-200"
+              >
+                <X className="size-3" />
+              </button>
+            </Badge>
+          )}
+          {countryFilterVal && (
+            <Badge className="bg-emerald-700 text-white font-bold gap-1 text-xs py-0.5 px-2.5 rounded-lg">
+              الدولة: {countryFilterVal}
+              <button
+                onClick={() => table.getColumn('country')?.setFilterValue('')}
+                className="mr-1 hover:text-emerald-200"
               >
                 <X className="size-3" />
               </button>
