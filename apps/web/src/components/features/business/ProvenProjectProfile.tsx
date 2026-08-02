@@ -11,7 +11,6 @@ import {
   Lightbulb,
   Rocket,
   Settings,
-  Info,
   Building2,
   UserCircle2,
   Code,
@@ -19,7 +18,6 @@ import {
   FileText,
   Check,
   TrendingUp,
-  Search,
   Database,
   Cloud,
   Bot,
@@ -42,6 +40,76 @@ interface ProvenProjectProps {
   project: any;
   onBack: () => void;
 }
+
+const getCountryInfo = (location: string) => {
+  if (!location) return { name: 'عالمي', flag: '🌍' };
+  const loc = location.toLowerCase();
+
+  if (loc.includes('السعودية') || loc.includes('saudi') || loc.includes('مكة') || loc.includes('الرياض') || loc.includes('جدة')) {
+    return { name: 'المملكة العربية السعودية', flag: '🇸🇦' };
+  }
+  if (loc.includes('مصر') || loc.includes('القاهرة') || loc.includes('النوبارية') || loc.includes('البحيرة') || loc.includes('قنا') || loc.includes('egypt')) {
+    return { name: 'مصر', flag: '🇪🇬' };
+  }
+  if (loc.includes('الإمارات') || loc.includes('دبي') || loc.includes('أبوظبي') || loc.includes('uae') || loc.includes('dubai')) {
+    return { name: 'الإمارات العربية المتحدة', flag: '🇦🇪' };
+  }
+  if (loc.includes('الأردن') || loc.includes('عمّان') || loc.includes('عمان') || loc.includes('jordan')) {
+    return { name: 'الأردن', flag: '🇯🇴' };
+  }
+  if (loc.includes('الكويت') || loc.includes('kuwait')) {
+    return { name: 'الكويت', flag: '🇰🇼' };
+  }
+  if (loc.includes('قطر') || loc.includes('الدوحة') || loc.includes('qatar')) {
+    return { name: 'قطر', flag: '🇶🇦' };
+  }
+  if (loc.includes('البحرين') || loc.includes('المنامة') || loc.includes('bahrain')) {
+    return { name: 'البحرين', flag: '🇧🇭' };
+  }
+  if (loc.includes('المغرب') || loc.includes('الدار البيضاء') || loc.includes('morocco')) {
+    return { name: 'المغرب', flag: '🇲🇦' };
+  }
+  if (loc.includes('الجزائر') || loc.includes('algeria')) {
+    return { name: 'الجزائر', flag: '🇩🇿' };
+  }
+  if (loc.includes('لبنان') || loc.includes('بيروت') || loc.includes('lebanon')) {
+    return { name: 'لبنان', flag: '🇱🇧' };
+  }
+  if (
+    loc.includes('florida') || loc.includes('atlanta') || loc.includes('united states') || loc.includes('usa') ||
+    loc.includes('california') || loc.includes('نيويورك') || loc.includes('سان فرانسيسكو') || loc.includes('مينلو بارك') ||
+    loc.includes('بيتسبرغ') || loc.includes('لوس أنجلوس') || loc.includes('لوس جاتوس') || loc.includes('لوس غاتوس') ||
+    loc.includes('جورجيا') || loc.includes('أورلاندو') || loc.includes('san francisco') || loc.includes('new york') || loc.includes('us')
+  ) {
+    return { name: 'الولايات المتحدة', flag: '🇺🇸' };
+  }
+  if (loc.includes('uk') || loc.includes('london') || loc.includes('المملكة المتحدة') || loc.includes('بريطانيا')) {
+    return { name: 'المملكة المتحدة', flag: '🇬🇧' };
+  }
+  if (loc.includes('canada') || loc.includes('أوتاوا') || loc.includes('كندا')) {
+    return { name: 'كندا', flag: '🇨🇦' };
+  }
+  if (loc.includes('singapore') || loc.includes('سنغافورة')) {
+    return { name: 'سنغافورة', flag: '🇸🇬' };
+  }
+  if (loc.includes('فرنسا') || loc.includes('france') || loc.includes('باريس')) {
+    return { name: 'فرنسا', flag: '🇫🇷' };
+  }
+  if (loc.includes('السويد') || loc.includes('ستوكهولم') || loc.includes('sweden')) {
+    return { name: 'السويد', flag: '🇸🇪' };
+  }
+  if (loc.includes('أستراليا') || loc.includes('سيدني') || loc.includes('australia')) {
+    return { name: 'أستراليا', flag: '🇦🇺' };
+  }
+  if (loc.includes('أوكرانيا') || loc.includes('ukraine')) {
+    return { name: 'أوكرانيا', flag: '🇺🇦' };
+  }
+  if (loc.includes('غير مذكور') || loc.includes('غير مؤكد') || loc.includes('غير متاح')) {
+    return { name: 'غير محدد', flag: '🌐' };
+  }
+
+  return { name: 'عالمي', flag: '🌍' };
+};
 
 const getToolBranding = (tool: string) => {
   const t = tool.toLowerCase();
@@ -105,16 +173,11 @@ const getShortRevenueDisplay = (revenueStr: string) => {
   if (!revenueStr) return '-';
   if (revenueStr.length < 25) return revenueStr;
 
-  if (revenueStr.includes('84.7')) return '$84.7M /شهر';
-  if (revenueStr.includes('4.19')) return '$4.19B /شهر';
-  if (revenueStr.includes('372.8')) return '$372.8M /شهر';
-  if (revenueStr.includes('2.9')) return '$2.9M /شهر';
-  if (revenueStr.includes('800 ألف')) return '800K درهم/شهر';
-  
-  const amountMatch = revenueStr.match(/(\$\d+(?:\.\d+)?\s*(?:B|M|K)?|نحو \d+(?:\.\d+)? (?:مليار|ملايين|مليون|ألف) (?:دولار|درهم|جنيه))/i);
+  const amountMatch = revenueStr.match(/(\$\d+(?:\.\d+)?\s*(?:B|M|K)?|نحو \d+(?:\.\d+)?\s*(?:مليار|ملايين|مليون|ألف)\s*(?:دولار|درهم|جنيه)?)/i);
   if (amountMatch) return amountMatch[0];
 
-  if (revenueStr.includes('غير معلن')) return 'غير مفصح رسمياً';
+  if (revenueStr.includes('غير معلن') || revenueStr.includes('غير متوفر')) return 'غير مفصح رسمياً';
+  if (revenueStr.includes('مغلق')) return 'مغلق';
 
   return revenueStr.slice(0, 22) + '...';
 };
@@ -123,14 +186,10 @@ const getShortTrafficDisplay = (trafficStr: string) => {
   if (!trafficStr) return '-';
   if (trafficStr.length < 25) return trafficStr;
 
-  if (trafficStr.includes('105')) return '105M+ زائر/شهر';
-  if (trafficStr.includes('14M') || trafficStr.includes('14 مليون')) return '14M+ عميل';
-  if (trafficStr.includes('500')) return '500+ عميل مؤسسي';
-  
-  const trafficMatch = trafficStr.match(/(\d+(?:\.\d+)?\s*(?:B|M|K|مليون|ألف)\s*(?:عميل|زائر|مستخدم|بريد)?)/i);
+  const trafficMatch = trafficStr.match(/(\d+(?:\.\d+)?\s*(?:B|M|K|مليون|ألف)\s*(?:عميل|زائر|مستخدم|بريد|مشترك)?)/i);
   if (trafficMatch) return trafficMatch[0];
 
-  if (trafficStr.includes('غير معلن')) return 'غير مفصح رسمياً';
+  if (trafficStr.includes('غير معلن') || trafficStr.includes('غير متوفر') || trafficStr.includes('غير مناسب')) return 'غير مفصح رسمياً';
 
   return trafficStr.slice(0, 22) + '...';
 };
@@ -139,20 +198,11 @@ const getShortValuationDisplay = (valStr: string) => {
   if (!valStr) return '-';
   if (valStr.length < 25) return valStr;
 
-  if (valStr.includes('12.0') || valStr.includes('12 مليار')) return '12.0 مليار $';
-  if (valStr.includes('7.1')) return '7.1B$+ تقييم';
-  if (valStr.includes('1.1')) return '1.1B$ تقييم';
-  if (valStr.includes('825')) return '825M$ تقييم';
-  if (valStr.includes('970')) return '970M$ (Amazon)';
-  if (valStr.includes('50')) return '50M جنيه (Shark Tank)';
-  if (valStr.includes('19.2')) return '19.2M جنيه';
-  if (valStr.includes('3.33')) return '3.33M جنيه';
-  if (valStr.includes('Nasdaq')) return 'شركة عامة (Nasdaq)';
-
-  const valMatch = valStr.match(/(\$\d+(?:\.\d+)?\s*(?:B|M|K)?|\d+(?:\.\d+)? (?:مليار|ملايين|مليون) (?:دولار|درهم|جنيه))/i);
+  const valMatch = valStr.match(/(\$\d+(?:\.\d+)?\s*(?:B|M|K)?|\d+(?:\.\d+)?\s*(?:مليار|ملايين|مليون|ألف)\s*(?:دولار|درهم|جنيه)?)/i);
   if (valMatch) return valMatch[0];
 
-  if (valStr.includes('لم تكشف') || valStr.includes('غير معلن')) return 'غير مفصح رسمياً';
+  if (valStr.includes('Nasdaq') || valStr.includes('عامة')) return 'شركة عامة';
+  if (valStr.includes('لم تكشف') || valStr.includes('غير معلن') || valStr.includes('غير متوفر')) return 'غير مفصح رسمياً';
 
   return valStr.slice(0, 22) + '...';
 };
@@ -172,40 +222,45 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
   const locationEvidence = evidenceMap['$.company.location'];
   const valuationEvidence = evidenceMap['$.financials.valuation'];
 
-  // Normalize project data
+  // Normalize project data completely without hardcoded company fallbacks
   const project = {
     ...rawProject,
+    company: rawProject.company || {},
+    financials: rawProject.financials || {},
+    directory_snapshot: rawProject.directory_snapshot || {},
     problem_and_product: rawProject.problem_and_product || [
-      rawProject.overview?.problem?.text,
-      rawProject.overview?.problem?.impact,
-      rawProject.overview?.solution?.text
+      rawProject.overview?.problem?.text && `المشكلة: ${rawProject.overview.problem.text}`,
+      rawProject.overview?.problem?.impact && `الأثر الداعم: ${rawProject.overview.problem.impact}`,
+      rawProject.overview?.solution?.text && `الحل المبتكر: ${rawProject.overview.solution.text}`
     ].filter(Boolean),
     origin_story: rawProject.origin_story || [
-      rawProject.financials?.initial_investment,
+      rawProject.financials?.initial_investment && `جولات الاستثمار والتمويل: ${rawProject.financials.initial_investment}`,
       rawProject.market_data?.target_audience && `الجمهور المستهدف: ${rawProject.market_data.target_audience}`
     ].filter(Boolean),
     build_and_launch: rawProject.build_and_launch || [
       rawProject.company?.started && `عام التأسيس: ${rawProject.company.started}`,
-      rawProject.financials?.valuation && `التقييم/الاستحواذ: ${rawProject.financials.valuation}`
+      rawProject.financials?.valuation && `التقييم والتوسع: ${rawProject.financials.valuation}`
     ].filter(Boolean),
     costs_and_operations: rawProject.costs_and_operations || [
-      rawProject.company?.employees && `حجم الفريق: ${rawProject.company.employees}`,
-      rawProject.company?.location && `المقر: ${rawProject.company.location}`
+      rawProject.company?.employees && `حجم القوى العاملة: ${rawProject.company.employees}`,
+      rawProject.company?.location && `المقر والانتشار: ${rawProject.company.location}`
     ].filter(Boolean),
     monetization: rawProject.monetization || rawProject.financials?.revenue_streams || [],
     growth: rawProject.growth || [
-      rawProject.market_data?.growth_rate,
-      rawProject.market_data?.market_size && `سوق المنصة: ${rawProject.market_data.market_size}`
+      rawProject.market_data?.growth_rate && `معدل النمو: ${rawProject.market_data.growth_rate}`,
+      rawProject.market_data?.market_size && `حجم السوق المستهدف: ${rawProject.market_data.market_size}`
     ].filter(Boolean),
     tools: rawProject.tools || [],
-    revenue_timeline: rawProject.revenue_timeline || [
-      {
-        date: 'الإيراد المحسوب',
-        amount: rawProject.directory_snapshot?.monthly_revenue || '-',
-        type: 'إيرادات موثقة',
-        note: rawProject.company?.public_revenue_claim || 'بيانات مأخوذة من التقارير الرسمية'
-      }
-    ],
+    revenue_timeline: rawProject.revenue_timeline || (
+      rawProject.directory_snapshot?.monthly_revenue ? [
+        {
+          date: 'الإيراد الموثق',
+          amount: getShortRevenueDisplay(rawProject.directory_snapshot.monthly_revenue),
+          type: 'إفصاح موثق',
+          note: rawProject.company?.public_revenue_claim || rawProject.directory_snapshot.monthly_revenue
+        }
+      ] : []
+    ),
     lessons: (rawProject.lessons || []).map((l: any) => {
       if (typeof l === 'string') {
         const parts = l.split(': ');
@@ -271,15 +326,15 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
     { id: 'overview', label: 'نظرة عامة والملخص' },
     { id: 'company', label: 'حقائق الشركة الهيكلية' },
     { id: 'problem-and-product', label: 'المشكلة والحل التقني' },
-    { id: 'origin-story', label: 'المؤسس ومحطات التمويل الذاتي' },
+    { id: 'origin-story', label: 'المؤسس ومحطات التمويل' },
     { id: 'build-and-launch', label: 'البناء والتطور التاريخي' },
     { id: 'costs-and-operations', label: 'التكاليف ومؤشرات التشغيل' },
     { id: 'monetization', label: 'نموذج الربح وهيكلية التسعير' },
-    { id: 'growth', label: 'معدلات النمو والاستحواذ' },
-    { id: 'tools', label: 'التقنيات والتكاملات' },
+    { id: 'growth', label: 'معدلات النمو والتوسع' },
+    ...(project.tools.length > 0 ? [{ id: 'tools', label: 'التقنيات والتكاملات' }] : []),
     { id: 'revenue-timeline', label: 'المخطط الزمني للإيرادات' },
     { id: 'lessons', label: 'الدروس والاستراتيجيات' },
-    { id: 'verification-policy', label: 'حدود وسياسة التوثيق' },
+    ...(rawProject.verification ? [{ id: 'verification-policy', label: 'حدود وسياسة التوثيق' }] : []),
     { id: 'sources', label: 'المصادر والتقارير (مطوي)' },
     { id: 'data-quality', label: 'معايير التوثيق' },
   ];
@@ -312,12 +367,13 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
     }
   });
 
-  // Clean Founders display logic
-  const foundersText = project.company.founder || 'Ben Chestnut & Dan Kurzius';
-  const foundersCountText = project.company.founders_count ? `${project.company.founders_count} مؤسسين` : '2 مؤسسين';
-  const employeesText = (project.company.employees && project.company.employees.length < 35)
-    ? project.company.employees
-    : '1,200+ موظف (عند الاستحواذ)';
+  // Dynamic Company Details Logic
+  const foundersText = project.company.founder || project.company.founders || 'غير مذكور رسمياً';
+  const foundersCountText = project.company.founders_count
+    ? `${project.company.founders_count} مؤسسين`
+    : (project.company.founder || project.company.founders ? 'مؤسسو الشركة' : 'غير مذكور');
+  const employeesText = project.company.employees || 'غير مفصح عنه';
+  const locationInfo = getCountryInfo(project.company.location);
 
   return (
     <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 font-sans pb-24">
@@ -386,7 +442,9 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                         {rawProject.verification && (
                           <Badge variant="outline" className="bg-emerald-50 text-emerald-800 border-emerald-300 font-bold text-xs flex items-center gap-1.5">
                             <ShieldCheck className="size-3.5 text-emerald-600 shrink-0" />
-                            <span>موثق بمصادر SEC أولية</span>
+                            <span>
+                              {rawProject.verification.verified_on ? `موثق بتاريخ ${rawProject.verification.verified_on}` : 'موثق بمصادر رسمية'}
+                            </span>
                           </Badge>
                         )}
                         {project.website && (
@@ -405,59 +463,73 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                         <Badge variant="secondary" className="font-bold text-xs">
                           {project.category}
                         </Badge>
-                        <Badge variant="outline" className="font-bold text-xs bg-background">
-                          {project.company.customer_type}
+                        {project.company?.customer_type && (
+                          <Badge variant="outline" className="font-bold text-xs bg-background">
+                            {project.company.customer_type}
+                          </Badge>
+                        )}
+                        <Badge variant="outline" className="font-bold text-xs bg-background flex items-center gap-1">
+                          <span>{locationInfo.flag}</span>
+                          <span>{locationInfo.name}</span>
                         </Badge>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {project.summary && (
-                  <p className="text-sm sm:text-base text-muted-foreground font-normal leading-relaxed mt-4 pt-4 border-t border-border/40">
-                    {project.summary}
+                {project.headline && (
+                  <p className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed mt-4 pt-4 border-t border-border/40">
+                    {project.headline}
                   </p>
                 )}
               </CardHeader>
 
               <CardContent className="p-4 sm:p-6 bg-card space-y-4">
-                {/* Clean, Non-Overflowing 4-Stat Cards */}
+                {/* Dynamic 4-Stat Cards */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
                   
                   {/* Revenue Card */}
                   <div className="p-4 rounded-xl bg-emerald-50/60 border border-emerald-100 flex flex-col justify-between gap-1.5">
                     <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider">الإيراد الشهري</span>
-                    <span className="text-xl sm:text-2xl font-extrabold text-emerald-700 tracking-tight dir-ltr text-right">
+                    <span className="text-lg sm:text-xl font-extrabold text-emerald-700 tracking-tight dir-ltr text-right">
                       {getShortRevenueDisplay(project.directory_snapshot?.monthly_revenue)}
                     </span>
-                    <span className="text-[11px] text-emerald-700 font-medium">متوسط 9 أشهر موثق</span>
+                    <span className="text-[11px] text-emerald-700 font-medium truncate">
+                      {revenueEvidence?.confidence ? `درجة الثقة: ${revenueEvidence.confidence}` : 'بيانات إيراد موثقة'}
+                    </span>
                   </div>
 
                   {/* Traffic & Scale Card */}
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-100 flex flex-col justify-between gap-1.5">
-                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">حجم العملاء والرسائل</span>
+                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">الزيارات والانتشار</span>
                     <span className="text-lg sm:text-xl font-bold text-slate-900 dir-ltr text-right">
                       {getShortTrafficDisplay(project.directory_snapshot?.monthly_traffic)}
                     </span>
-                    <span className="text-[11px] text-slate-500 font-medium">1000M+ بريد / يوم</span>
+                    <span className="text-[11px] text-slate-500 font-medium truncate">
+                      {trafficEvidence?.confidence ? `التوثيق: ${trafficEvidence.confidence}` : 'مؤشرات نشاط تشغيلي'}
+                    </span>
                   </div>
 
                   {/* Funding Card */}
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-100 flex flex-col justify-between gap-1.5">
                     <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">نموذج التمويل</span>
-                    <span className="text-lg sm:text-xl font-bold text-slate-900">
-                      ذاتي 100%
+                    <span className="text-base sm:text-lg font-bold text-slate-900 truncate" title={project.company?.funding || project.financials?.initial_investment}>
+                      {project.company?.funding || (project.financials?.initial_investment ? 'جولة تمويلية' : 'تمويل ذاتي')}
                     </span>
-                    <span className="text-[11px] text-slate-500 font-medium">Bootstrapped</span>
+                    <span className="text-[11px] text-slate-500 font-medium truncate">
+                      {project.company?.bootstrapped ? 'Bootstrapped 100%' : (project.financials?.initial_investment ? 'استثمار معلن' : 'تمويل رأس مال')}
+                    </span>
                   </div>
 
                   {/* Valuation Card */}
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-100 flex flex-col justify-between gap-1.5">
-                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">الاستحواذ والتقييم</span>
-                    <span className="text-lg sm:text-xl font-bold text-slate-900">
+                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">التقييم / الاستحواذ</span>
+                    <span className="text-base sm:text-lg font-bold text-slate-900 truncate" title={project.financials?.valuation}>
                       {getShortValuationDisplay(project.financials?.valuation)}
                     </span>
-                    <span className="text-[11px] text-slate-500 font-medium">شركة Intuit (2021)</span>
+                    <span className="text-[11px] text-slate-500 font-medium truncate">
+                      {valuationEvidence?.claim_type ? valuationEvidence.claim_type : 'بيانات مالية موثقة'}
+                    </span>
                   </div>
                 </div>
 
@@ -487,15 +559,17 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                     <div className="space-y-1">
                       <span className="font-bold text-sky-900 flex items-center gap-1.5">
                         <TrendingUp className="size-4 text-sky-600" />
-                        المعادلة الحسابية الموثقة من تقرير SEC Form 10-K الرسمي:
+                        المعادلة الحسابية الموثقة من التقارير الرسمية:
                       </span>
                       <p className="text-sky-800 font-medium leading-relaxed">
-                        الإيراد المعلن لفترة 9 أشهر بلغ <strong>${revenueEvidence.calculation.official_amount_usd?.toLocaleString()} USD</strong>، ويعطي متوسطاً شهرياً قدره <strong>${revenueEvidence.calculation.rounded_display_value}</strong>.
+                        {revenueEvidence.evidence_summary || `الإيراد المعلن يعطي متوسطاً قدره ${revenueEvidence.calculation.rounded_display_value}.`}
                       </p>
                     </div>
-                    <Badge variant="outline" className="bg-sky-100 text-sky-800 border-sky-300 font-mono text-xs font-bold shrink-0 dir-ltr">
-                      {revenueEvidence.calculation.formula} = $84.7M/mo
-                    </Badge>
+                    {revenueEvidence.calculation.formula && (
+                      <Badge variant="outline" className="bg-sky-100 text-sky-800 border-sky-300 font-mono text-xs font-bold shrink-0 dir-ltr">
+                        {revenueEvidence.calculation.formula} = {revenueEvidence.calculation.rounded_display_value}
+                      </Badge>
+                    )}
                   </div>
                 )}
               </CardContent>
@@ -520,7 +594,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                   {/* Business Model */}
                   <div className="p-4 sm:p-5 space-y-2">
                     <div className="flex items-center justify-between gap-2">
-                      <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">نموذج العمل</dt>
+                      <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">نموذج العمل والربح</dt>
                       {modelEvidence && (
                         <Badge variant="outline" className={cn("text-[10px] font-bold py-0 px-2", getStatusMeta(modelEvidence.verification_status).className)}>
                           {getStatusMeta(modelEvidence.verification_status).label}
@@ -528,10 +602,10 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                       )}
                     </div>
                     <dd className="font-bold text-sm text-foreground leading-snug">
-                      نموذج SaaS متعدد المستويات (Freemium + Pay As You Go + اشتراكات)
+                      {project.company.customer_type || 'نموذج التشغيل والتسويق'}
                     </dd>
                     <p className="text-xs text-muted-foreground font-medium leading-relaxed bg-muted/30 p-2.5 rounded-lg border border-border/30">
-                      {project.company.business_model}
+                      {project.company.business_model || 'غير مفصح عنه رسمياً'}
                     </p>
                   </div>
 
@@ -546,10 +620,10 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                       )}
                     </div>
                     <dd className="font-bold text-sm text-foreground leading-snug">
-                      أتلانتا، جورجيا، الولايات المتحدة (تأسست عام 2001)
+                      {locationInfo.flag} {locationInfo.name}
                     </dd>
                     <p className="text-xs text-muted-foreground font-medium leading-relaxed bg-muted/30 p-2.5 rounded-lg border border-border/30">
-                      {project.company.location}
+                      {project.company.location || 'غير مذكور'}
                     </p>
                   </div>
                 </div>
@@ -562,14 +636,14 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                     <span className="text-[11px] text-muted-foreground block">{foundersCountText}</span>
                   </div>
                   <div className="p-4 sm:p-5 space-y-1">
-                    <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">عام التأسيس الإنشائي</dt>
-                    <dd className="font-bold text-sm text-foreground">{project.company.started || '2001'}</dd>
-                    <span className="text-[11px] text-muted-foreground block">جورجيا، أمريكا</span>
+                    <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">عام التأسيس</dt>
+                    <dd className="font-bold text-sm text-foreground">{project.company.started || 'غير مذكور'}</dd>
+                    <span className="text-[11px] text-muted-foreground block">{locationInfo.name}</span>
                   </div>
                   <div className="p-4 sm:p-5 space-y-1">
-                    <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">حجم الفريق والقوى العاملة</dt>
+                    <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">حجم الفريق</dt>
                     <dd className="font-bold text-sm text-foreground">{employeesText}</dd>
-                    <span className="text-[11px] text-muted-foreground block">عند الاستحواذ من Intuit</span>
+                    <span className="text-[11px] text-muted-foreground block">القوى العاملة المعلنة</span>
                   </div>
                 </div>
 
@@ -578,7 +652,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                   <div className="p-4 border-t border-border/40 bg-slate-50 space-y-1.5">
                     <span className="text-xs font-bold text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
                       <DollarSign className="size-4 text-emerald-600" />
-                      تفاصيل تقييم وصفقة الاستحواذ الموثقة ($12.0B):
+                      تفاصيل التقييم والاستحواذ الموثقة:
                     </span>
                     <p className="text-xs text-slate-700 font-medium leading-relaxed">
                       {valuationEvidence.evidence_summary}
@@ -589,13 +663,13 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                 {/* Bottom Revenue Bar */}
                 <div className="p-4 sm:p-5 border-t border-border/40 bg-emerald-50/40 flex flex-col md:flex-row md:items-center justify-between gap-3">
                   <div>
-                    <dt className="text-xs font-bold text-emerald-800 uppercase tracking-wider mb-1">الربحية والإيراد الأقصى المعلن</dt>
+                    <dt className="text-xs font-bold text-emerald-800 uppercase tracking-wider mb-1">الربحية والإيراد المعلن</dt>
                     <dd className="font-bold text-sm sm:text-base text-emerald-950">
-                      {project.company.public_revenue_claim || '$84.7M/mo متوسط تاريخي (762M$ / 9 أشهر)'}
+                      {project.company.public_revenue_claim || project.directory_snapshot?.monthly_revenue || 'غير مفصح عنه رسمياً'}
                     </dd>
                   </div>
                   <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-100 border-emerald-300 font-bold text-xs shrink-0">
-                    {project.company.funding || 'تمويل ذاتي 100%'}
+                    {project.company.funding || 'بيانات موثقة'}
                   </Badge>
                 </div>
               </CardContent>
@@ -632,7 +706,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                   <div className="p-1.5 rounded-md bg-indigo-500/10 text-indigo-600">
                     <UserCircle2 className="size-4" />
                   </div>
-                  المؤسس وقصة البداية والتمويل الذاتي
+                  المؤسس وقصة البداية والتمويل
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-4 sm:p-6 space-y-3">
@@ -731,7 +805,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                   <div className="p-1.5 rounded-md bg-cyan-500/10 text-cyan-600">
                     <Globe className="size-4" />
                   </div>
-                  معدلات النمو والاستحواذ النهائي
+                  معدلات النمو والتوسع
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-4 sm:p-6 space-y-3">
@@ -746,35 +820,37 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
           </section>
 
           {/* Section 9: Tools */}
-          <section id="tools" className="profile-section scroll-mt-24">
-            <Card className="shadow-xs border-border/60">
-              <CardHeader className="border-b border-border/40 pb-4">
-                <CardTitle className="text-lg font-bold flex items-center gap-2 text-foreground">
-                  <div className="p-1.5 rounded-md bg-pink-500/10 text-pink-600">
-                    <Code className="size-4" />
+          {project.tools.length > 0 && (
+            <section id="tools" className="profile-section scroll-mt-24">
+              <Card className="shadow-xs border-border/60">
+                <CardHeader className="border-b border-border/40 pb-4">
+                  <CardTitle className="text-lg font-bold flex items-center gap-2 text-foreground">
+                    <div className="p-1.5 rounded-md bg-pink-500/10 text-pink-600">
+                      <Code className="size-4" />
+                    </div>
+                    التقنيات والأدوات والتكاملات المستخدمة
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex flex-wrap gap-2.5">
+                    {project.tools.map((tool: string, i: number) => {
+                      const branding = getToolBranding(tool);
+                      return (
+                        <Badge
+                          key={i}
+                          variant="outline"
+                          className={cn("flex items-center gap-2 text-xs font-bold px-3 py-1.5 rounded-lg border", branding.colors)}
+                        >
+                          {branding.icon}
+                          <span>{tool}</span>
+                        </Badge>
+                      );
+                    })}
                   </div>
-                  التقنيات والأدوات والتكاملات المستخدمة
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-4 sm:p-6">
-                <div className="flex flex-wrap gap-2.5">
-                  {project.tools.map((tool: string, i: number) => {
-                    const branding = getToolBranding(tool);
-                    return (
-                      <Badge
-                        key={i}
-                        variant="outline"
-                        className={cn("flex items-center gap-2 text-xs font-bold px-3 py-1.5 rounded-lg border", branding.colors)}
-                      >
-                        {branding.icon}
-                        <span>{tool}</span>
-                      </Badge>
-                    );
-                  })}
-                </div>
-              </CardContent>
-            </Card>
-          </section>
+                </CardContent>
+              </Card>
+            </section>
+          )}
 
           {/* Section 10: Revenue Timeline */}
           <section id="revenue-timeline" className="profile-section scroll-mt-24">
@@ -801,7 +877,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                       </div>
                       <p className="text-sm font-medium text-muted-foreground mt-2">{rt.note}</p>
                     </div>
-                    <div className="text-2xl font-black text-emerald-700 tracking-tight dir-ltr">
+                    <div className="text-xl sm:text-2xl font-black text-emerald-700 tracking-tight dir-ltr">
                       {rt.amount}
                     </div>
                   </div>
@@ -841,7 +917,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
             </Card>
           </section>
 
-          {/* PENULTIMATE SECTION: Verification Policy & Limitations Notice */}
+          {/* Verification Policy & Limitations Notice */}
           {rawProject.verification && (
             <section id="verification-policy" className="profile-section scroll-mt-24">
               <Card className="border-emerald-200/80 bg-emerald-50/40 shadow-xs overflow-hidden">
@@ -884,7 +960,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
             </section>
           )}
 
-          {/* Section 13: COLLAPSED BY DEFAULT SOURCES ACCORDION */}
+          {/* COLLAPSED BY DEFAULT SOURCES ACCORDION */}
           <section id="sources" className="profile-section scroll-mt-24">
             <Card className="shadow-xs border-border/60 overflow-hidden">
               <CardHeader className="p-4 sm:p-5 bg-card">
@@ -902,7 +978,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                         المصادر الرسمية وتقارير التوثيق الميداني
                       </h3>
                       <p className="text-xs text-muted-foreground font-medium mt-0.5">
-                        انقر للفتح أو الطي ({allSourcesList.length} مصادر رسمية ومستندات SEC)
+                        انقر للفتح أو الطي ({allSourcesList.length} مصادر رسمية ومستندات موثقة)
                       </p>
                     </div>
                   </div>
@@ -958,7 +1034,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
             </Card>
           </section>
 
-          {/* Section 14: Data Quality Standards */}
+          {/* Data Quality Standards */}
           <section id="data-quality" className="profile-section scroll-mt-24">
             <Card className="shadow-xs border-border/60">
               <CardHeader className="border-b border-border/40 pb-4">
