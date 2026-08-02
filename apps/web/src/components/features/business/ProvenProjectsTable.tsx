@@ -198,12 +198,13 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
     }
   });
 
-  // Ensure table only contains successful companies (filter out failed ones)
+  // Ensure table only contains successful companies (filter out failed ones) and shows newest added first
   const provenData = useMemo(() => {
-    return data.filter((item) => {
+    const filtered = data.filter((item) => {
       const status = item.sourceStatus || (item.directory_snapshot?.monthly_revenue?.includes('مغلق') ? 'failed' : 'proven');
       return status !== 'failed';
     });
+    return [...filtered].reverse();
   }, [data]);
 
   // Extract unique main categories for dropdown filter
