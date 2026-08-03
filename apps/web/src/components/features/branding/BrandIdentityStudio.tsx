@@ -12,7 +12,6 @@ import {
   Target,
 } from 'lucide-react';
 import { useProjectWorkspace } from '../../../features/workspace/ProjectWorkspaceContext';
-import { exportElementToPdf } from '../../../utils/pdfExport';
 import { Badge } from '../../ui/Badge';
 import { Button } from '../../ui/Button';
 
@@ -717,14 +716,9 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
   }, [finalSummary.prompt, onBrandDraftChange, selectedColorSystem.title, selectedPersonality.title]);
 
   const handleExportReport = async () => {
-    if (!reportRef.current) return;
-
     setExportState('loading');
     try {
-      await exportElementToPdf({
-        element: reportRef.current,
-        fileName: `${projectName}-brand-identity-report.pdf`,
-      });
+      window.print();
       setExportState('success');
       window.setTimeout(() => setExportState('idle'), 3200);
     } catch {
@@ -1042,7 +1036,7 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
                       ? 'تم إنشاء التقرير بنجاح'
                       : exportState === 'error'
                         ? 'تعذر إنشاء التقرير حالياً'
-                        : 'تصدير التقرير النهائي PDF'}
+                        : 'طباعة التقرير / حفظ PDF'}
                   </Button>
                   <Button
                     onClick={() => setActiveTab?.('workspace')}
@@ -1057,7 +1051,7 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
                 <div className="mt-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
                   <p className="text-[12px] font-bold leading-7 text-slate-600">
                     {exportState === 'loading'
-                      ? 'يتم الآن تجهيز ملف الـ PDF النهائي مع جميع الاختيارات المعتمدة.'
+                      ? 'يتم الآن فتح نافذة الطباعة لحفظ التقرير أو طباعته.'
                       : exportState === 'success'
                         ? 'التأكيد ظهر هنا لإيضاح حالة النجاح بعد التصدير وتسليم Feedback واضح للمستخدم.'
                         : exportState === 'error'

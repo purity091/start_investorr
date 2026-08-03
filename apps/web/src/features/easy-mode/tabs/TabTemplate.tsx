@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useEffect, useMemo, useRef } from 'react';
 import * as Lucide from "lucide-react";
 import { BaseCard } from "../result_components/CardDesignSystem";
 import { ProgressDots } from "../components/CommonUI";
@@ -115,6 +115,7 @@ const TabForm = ({ config, onFinish }: { config: TabConfig, onFinish: (vals: any
   const [tempAnswers, setTempAnswers] = useState<any>({});
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [loadingStep, setLoadingStep] = useState(0);
+  const analysisIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const steps = useMemo(() => {
     const map = new Map<number, TabQuestion[]>();
@@ -129,6 +130,14 @@ const TabForm = ({ config, onFinish }: { config: TabConfig, onFinish: (vals: any
   const currentStep = steps.find(s => s.num === currentStepNumber) || steps[0];
   const totalSteps = steps.length;
 
+  useEffect(() => {
+    return () => {
+      if (analysisIntervalRef.current) {
+        clearInterval(analysisIntervalRef.current);
+      }
+    };
+  }, []);
+
   const handleNext = useCallback(() => {
      const newAnswers = { ...answers, ...tempAnswers };
      setAnswers(newAnswers);
@@ -139,11 +148,17 @@ const TabForm = ({ config, onFinish }: { config: TabConfig, onFinish: (vals: any
      } else {
         setIsAnalyzing(true);
         let i = 0;
-        const interval = setInterval(() => {
+        if (analysisIntervalRef.current) {
+          clearInterval(analysisIntervalRef.current);
+        }
+        analysisIntervalRef.current = setInterval(() => {
           i++;
           if (i < config.loadingMessages.length) setLoadingStep(i);
           else {
-            clearInterval(interval);
+            if (analysisIntervalRef.current) {
+              clearInterval(analysisIntervalRef.current);
+              analysisIntervalRef.current = null;
+            }
             onFinish(newAnswers);
           }
         }, 1200);

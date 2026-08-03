@@ -8,21 +8,17 @@ export default function LoginPage() {
   const router = useRouter();
 
   useEffect(() => {
-    // Check if user already has an active session
+    let mounted = true;
+
     supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session) {
+      if (mounted && session) {
         router.replace('/home');
       }
     });
 
-    // Listen for successful login and redirect
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      if (session) {
-        router.replace('/home');
-      }
-    });
-
-    return () => subscription.unsubscribe();
+    return () => {
+      mounted = false;
+    };
   }, [router]);
 
   return <AuthScreen />;

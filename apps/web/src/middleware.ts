@@ -1,90 +1,153 @@
-import { createServerClient } from '@supabase/ssr';
 import { NextResponse, type NextRequest } from 'next/server';
+
+const PROTECTED_ROUTES = [
+  '/workspace',
+  '/editor',
+  '/my-plans',
+  '/profile',
+  '/settings',
+  '/customer-dashboard',
+  '/customer-projects',
+  '/customer-account',
+  '/market-discovery',
+  '/problem-engine',
+  '/strategic-dashboard',
+];
+
+const hasSupabaseAuthCookie = (request: NextRequest) =>
+  request.cookies
+    .getAll()
+    .some((cookie) => cookie.name.startsWith('sb-') && Boolean(cookie.value));
+
+const base64UrlToBytes = (value: string) => {
+  const normalized = value.replace(/-/g, '+').replace(/_/g, '/');
+  const padded = normalized.padEnd(normalized.length + ((4 - normalized.length % 4) % 4), '=');
+  const binary = atob(padded);
+  return Uint8Array.from(binary, (char) => char.charCodeAt(0));
+};
+
+const base64UrlToString = (value: string) =>
+  new TextDecoder().decode(base64UrlToBytes(value));
+
+const decodeCookieValue = (value: string) => {
+  const decoded = decodeURIComponent(value);
+
+  if (!decoded.startsWith('base64-')) {
+    return decoded;
+  }
+
+  try {
+    return atob(decoded.slice('base64-'.length));
+  } catch {
+    return decoded;
+  }
+};
+
+const extractAccessToken = (request: NextRequest) => {
+  const groupedCookies = new Map<string, Array<{ index: number; value: string }>>();
+
+  request.cookies
+    .getAll()
+    .filter((cookie) => cookie.name.startsWith('sb-') && Boolean(cookie.value))
+    .forEach((cookie) => {
+      const chunkMatch = cookie.name.match(/^(.*)\.(\d+)$/);
+      const groupName = chunkMatch?.[1] ?? cookie.name;
+      const index = chunkMatch?.[2] ? Number(chunkMatch[2]) : 0;
+      const group = groupedCookies.get(groupName) ?? [];
+
+      group.push({ index, value: cookie.value });
+      groupedCookies.set(groupName, group);
+    });
+
+  for (const chunks of groupedCookies.values()) {
+    const rawValue = chunks
+      .sort((a, b) => a.index - b.index)
+      .map((chunk) => chunk.value)
+      .join('');
+    const decodedValue = decodeCookieValue(rawValue);
+    const tokenMatch = decodedValue.match(/eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+/);
+
+    if (tokenMatch) {
+      return tokenMatch[0];
+    }
+  }
+
+  return null;
+};
+
+const isJwtTimeValid = (token: string) => {
+  try {
+    const [, payload] = token.split('.');
+    const claims = JSON.parse(base64UrlToString(payload)) as { exp?: number; nbf?: number };
+    const now = Math.floor(Date.now() / 1000);
+
+    if (claims.nbf && claims.nbf > now) return false;
+    if (claims.exp && claims.exp <= now) return false;
+
+    return true;
+  } catch {
+    return false;
+  }
+};
+
+const isJwtSignatureValid = async (token: string) => {
+  const secret = process.env.SUPABASE_JWT_SECRET;
+
+  if (!secret) {
+    return true;
+  }
+
+  const [header, payload, signature] = token.split('.');
+  if (!header || !payload || !signature) {
+    return false;
+  }
+
+  const key = await crypto.subtle.importKey(
+    'raw',
+    new TextEncoder().encode(secret),
+    { name: 'HMAC', hash: 'SHA-256' },
+    false,
+    ['verify']
+  );
+
+  return crypto.subtle.verify(
+    'HMAC',
+    key,
+    base64UrlToBytes(signature),
+    new TextEncoder().encode(`${header}.${payload}`)
+  );
+};
+
+const hasUsableLocalSession = async (request: NextRequest) => {
+  if (!hasSupabaseAuthCookie(request)) {
+    return false;
+  }
+
+  const accessToken = extractAccessToken(request);
+
+  if (!accessToken) {
+    return true;
+  }
+
+  return isJwtTimeValid(accessToken) && isJwtSignatureValid(accessToken);
+};
 
 export async function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
-  // Quick check for Supabase auth cookie presence to avoid redundant network calls
-  const hasAuthCookie = request.cookies
-    .getAll()
-    .some((c) => c.name.startsWith('sb-') && c.value);
-
-  const PROTECTED_ROUTES = [
-    '/workspace',
-    '/editor',
-    '/my-plans',
-    '/profile',
-    '/settings',
-    '/customer-dashboard',
-    '/customer-projects',
-    '/customer-account',
-    '/market-discovery',
-    '/problem-engine',
-    '/strategic-dashboard',
-  ];
-
   const isProtectedRoute = PROTECTED_ROUTES.some((route) =>
     pathname.startsWith(route)
   );
+  const hasLocalSession = await hasUsableLocalSession(request);
 
-  // 1. Unauthenticated user accessing protected route: redirect immediately without hitting API rate limits
-  if (isProtectedRoute && !hasAuthCookie) {
+  if (isProtectedRoute && !hasLocalSession) {
     const url = request.nextUrl.clone();
     url.pathname = '/login';
+    url.searchParams.set('next', pathname);
     return NextResponse.redirect(url);
   }
 
-  // 2. Unauthenticated user accessing login page: render immediately
-  if (pathname.startsWith('/login') && !hasAuthCookie) {
-    return NextResponse.next();
-  }
-
-  // 3. Only verify with Supabase server when auth cookie exists
-  let supabaseResponse = NextResponse.next({ request });
-
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!;
-
-  const supabase = createServerClient(supabaseUrl, supabaseKey, {
-    cookies: {
-      getAll() {
-        return request.cookies.getAll();
-      },
-      setAll(cookiesToSet) {
-        cookiesToSet.forEach(({ name, value }) =>
-          request.cookies.set(name, value)
-        );
-        supabaseResponse = NextResponse.next({ request });
-        cookiesToSet.forEach(({ name, value, options }) =>
-          supabaseResponse.cookies.set(name, value, options)
-        );
-      },
-    },
-  });
-
-  try {
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
-
-    // Redirect unauthenticated users away from protected routes
-    if (isProtectedRoute && !user) {
-      const url = request.nextUrl.clone();
-      url.pathname = '/login';
-      return NextResponse.redirect(url);
-    }
-
-    // Redirect authenticated users away from the login page
-    if (pathname.startsWith('/login') && user) {
-      const url = request.nextUrl.clone();
-      url.pathname = '/home';
-      return NextResponse.redirect(url);
-    }
-  } catch (err) {
-    console.warn('Supabase auth check rate-limited or unavailable:', err);
-  }
-
-  return supabaseResponse;
+  return NextResponse.next();
 }
 
 export const config = {

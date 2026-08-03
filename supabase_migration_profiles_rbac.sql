@@ -5,11 +5,28 @@ CREATE TABLE IF NOT EXISTS public.profiles (
   email TEXT,
   role TEXT DEFAULT 'user' CHECK (role IN ('user', 'admin', 'manager')),
   status TEXT DEFAULT 'active' CHECK (status IN ('active', 'suspended', 'pending')),
+  bookmarked_ids TEXT[] DEFAULT ARRAY[]::TEXT[],
   created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now())
 );
 
+ALTER TABLE public.profiles
+  ADD COLUMN IF NOT EXISTS bookmarked_ids TEXT[] DEFAULT ARRAY[]::TEXT[];
+
 -- 2. Enable Row Level Security (RLS)
 ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
+
+-- Helper avoids recursive RLS checks when admin policies need the current user's role.
+CREATE OR REPLACE FUNCTION public.get_current_profile_role()
+RETURNS TEXT
+LANGUAGE SQL
+SECURITY DEFINER
+SET search_path = public
+AS $$
+  SELECT role
+  FROM public.profiles
+  WHERE id = auth.uid()
+  LIMIT 1
+$$;
 
 -- 3. Policies for users
 DROP POLICY IF EXISTS "Users can read own profile" ON public.profiles;
@@ -20,24 +37,22 @@ USING (auth.uid() = id);
 DROP POLICY IF EXISTS "Users can update own profile" ON public.profiles;
 CREATE POLICY "Users can update own profile" 
 ON public.profiles FOR UPDATE 
-USING (auth.uid() = id);
+USING (auth.uid() = id)
+WITH CHECK (auth.uid() = id);
 
 -- 4. Policies for admins
 -- Admin can read all profiles
 DROP POLICY IF EXISTS "Admins can read all profiles" ON public.profiles;
 CREATE POLICY "Admins can read all profiles" 
 ON public.profiles FOR SELECT 
-USING (
-  (SELECT role FROM public.profiles WHERE id = auth.uid()) = 'admin'
-);
+USING (public.get_current_profile_role() = 'admin');
 
 -- Admin can update all profiles
 DROP POLICY IF EXISTS "Admins can update all profiles" ON public.profiles;
 CREATE POLICY "Admins can update all profiles" 
 ON public.profiles FOR UPDATE 
-USING (
-  (SELECT role FROM public.profiles WHERE id = auth.uid()) = 'admin'
-);
+USING (public.get_current_profile_role() = 'admin')
+WITH CHECK (public.get_current_profile_role() = 'admin');
 
 -- 5. Trigger to create a profile automatically when a user signs up
 CREATE OR REPLACE FUNCTION public.handle_new_user()

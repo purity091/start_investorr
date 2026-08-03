@@ -220,7 +220,7 @@
 ## ملفات لا أنصح بحذفها بالجملة
 
 - `apps/web/public/data/**`: مستخدمة ديناميكياً عبر `fetch('/data/...')`.
-- `apps/web/public/data/opportunities_index.json`: مستخدم عبر `apps/web/src/services/opportunityService.ts`.
+- `apps/web/public/data/opportunities/index.json`: مستخدم عبر `apps/web/src/services/opportunityService.ts`.
 - `apps/web/public/data/proven-projects/**`: مستخدم في `ProvenProjectsGallery`, `SaaSIdeasGallery`, و`MicroSaaSIdeasGallery`.
 - `apps/web/public/data/failed-projects/**`: مستخدم في `FailedProjectsGallery`, `SaaSIdeasGallery`, و`MicroSaaSIdeasGallery`.
 - `apps/web/public/data/swot/**`: مستخدم ديناميكياً من `SectorDashboardTemplate`.

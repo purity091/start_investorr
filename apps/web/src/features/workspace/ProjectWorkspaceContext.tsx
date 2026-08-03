@@ -1,7 +1,9 @@
-import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import React, { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { PlanSection, ProjectWorkspace, WorkspaceJourneyStage } from '../../types';
 import { WORKSPACE_STORAGE_KEY, createInitialWorkspace, deriveWorkspace } from './workspaceUtils';
+import { getWorkspaceMetadata } from './workspacePersistence';
 import { supabase } from '@/lib/supabase';
+import { withSupabaseRetry } from '@/lib/supabaseRetry';
 import { useAuth } from '@/features/auth/AuthContext';
 
 interface ProjectWorkspaceContextValue {
@@ -18,11 +20,20 @@ interface ProjectWorkspaceContextValue {
   toggleChecklistItem: (groupId: string, itemId: string) => void;
   loadProject: (id: string) => Promise<void>;
   createProject: (title: string, mode: string) => Promise<string | null>;
+  flushWorkspace: () => Promise<void>;
   isSaving: boolean;
+  syncStatus: WorkspaceSyncStatus;
+  lastSyncedAt: number | null;
   activeProjectId: string | null;
 }
 
 const ProjectWorkspaceContext = createContext<ProjectWorkspaceContextValue | null>(null);
+
+type WorkspaceSyncStatus = 'idle' | 'pending' | 'saving' | 'saved' | 'failed' | 'conflict';
+
+const WORKSPACE_SYNC_DEBOUNCE_MS = 45 * 1000;
+const WORKSPACE_PENDING_SYNC_KEY = 'khotta_workspace_pending_sync_v1';
+const WORKSPACE_VERSION_SNAPSHOT_MS = 15 * 60 * 1000;
 
 const loadWorkspace = (planSections: PlanSection[]) => {
   try {
@@ -60,11 +71,20 @@ export const ProjectWorkspaceProvider: React.FC<{
   planSections: PlanSection[];
 }> = ({ children, planSections }) => {
   const { user } = useAuth();
+  const userRef = useRef(user);
+  const activeProjectIdRef = useRef<string | null>(null);
+  const workspaceRef = useRef<ProjectWorkspace | null>(null);
+  const syncInFlightRef = useRef(false);
+  const skipNextAutoSaveRef = useRef(true);
+  const activeProjectVersionRef = useRef<number | null>(null);
+  const lastVersionSnapshotAtRef = useRef<number>(0);
   const [activeProjectId, setActiveProjectIdState] = useState<string | null>(() => {
     // Restore active project from localStorage across page refreshes
     return localStorage.getItem('khotta_active_project_id') ?? null;
   });
   const [isSaving, setIsSaving] = useState(false);
+  const [syncStatus, setSyncStatus] = useState<WorkspaceSyncStatus>('idle');
+  const [lastSyncedAt, setLastSyncedAt] = useState<number | null>(null);
   const [workspace, setWorkspace] = useState<ProjectWorkspace>(() => loadWorkspace(planSections));
 
   const setActiveProjectId = (id: string | null) => {
@@ -83,55 +103,170 @@ export const ProjectWorkspaceProvider: React.FC<{
     });
   }, [planSections]);
 
+  useEffect(() => {
+    userRef.current = user;
+  }, [user]);
+
+  useEffect(() => {
+    activeProjectIdRef.current = activeProjectId;
+  }, [activeProjectId]);
+
+  useEffect(() => {
+    workspaceRef.current = workspace;
+  }, [workspace]);
+
   // Sync to local storage
   useEffect(() => {
     localStorage.setItem(WORKSPACE_STORAGE_KEY, JSON.stringify(workspace));
-  }, [workspace]);
-
-  // Auto-sync to Supabase with debounce
-  useEffect(() => {
     if (!user || !activeProjectId) return;
-    
-    const timeout = setTimeout(async () => {
-      setIsSaving(true);
-      try {
-        const { error } = await supabase
-          .from('business_canvas')
-          .update({ 
-            canvas_data: workspace,
-            project_title: workspace.profile.name || 'مشروع بدون اسم'
-          })
-          .eq('id', activeProjectId)
-          .eq('user_id', user.id); // Ensure user owns this project
 
-        if (error) throw error;
-      } catch (err) {
-        console.error('Auto-save failed:', err);
-      } finally {
-        setIsSaving(false);
+    localStorage.setItem(
+      WORKSPACE_PENDING_SYNC_KEY,
+      JSON.stringify({
+        projectId: activeProjectId,
+        userId: user.id,
+        workspace,
+        updatedAt: Date.now(),
+        status: 'pending_sync',
+      }),
+    );
+
+    if (skipNextAutoSaveRef.current) {
+      skipNextAutoSaveRef.current = false;
+      return;
+    }
+
+    setSyncStatus((current) => (current === 'saving' ? current : 'pending'));
+  }, [workspace, user, activeProjectId]);
+
+  const flushWorkspace = useCallback(async () => {
+    const currentUser = userRef.current;
+    const currentProjectId = activeProjectIdRef.current;
+    const currentWorkspace = workspaceRef.current;
+
+    if (!currentUser || !currentProjectId || !currentWorkspace || syncInFlightRef.current) return;
+
+    syncInFlightRef.current = true;
+    setIsSaving(true);
+    setSyncStatus('saving');
+
+    try {
+      const currentVersion = activeProjectVersionRef.current ?? 1;
+      const nextVersion = currentVersion + 1;
+      const now = new Date().toISOString();
+
+      const { data, error } = await withSupabaseRetry(() =>
+        supabase
+          .from('business_canvas')
+          .update({
+            canvas_data: currentWorkspace,
+            ...getWorkspaceMetadata(currentWorkspace),
+            last_snapshot_at: now,
+            row_version: nextVersion,
+          })
+          .eq('id', currentProjectId)
+          .eq('user_id', currentUser.id)
+          .eq('row_version', currentVersion)
+          .is('deleted_at', null)
+          .select('row_version')
+          .maybeSingle()
+      );
+
+      if (error) throw error;
+
+      if (!data) {
+        throw new Error('WORKSPACE_CONFLICT');
       }
-    }, 2000);
+
+      activeProjectVersionRef.current = data.row_version ?? nextVersion;
+
+      const shouldSnapshot =
+        Date.now() - lastVersionSnapshotAtRef.current >= WORKSPACE_VERSION_SNAPSHOT_MS;
+
+      if (shouldSnapshot) {
+        const { error: versionError } = await supabase.from('business_canvas_versions').insert({
+          canvas_id: currentProjectId,
+          user_id: currentUser.id,
+          version: activeProjectVersionRef.current,
+          snapshot: currentWorkspace,
+        });
+
+        if (!versionError) {
+          lastVersionSnapshotAtRef.current = Date.now();
+        }
+      }
+
+      setLastSyncedAt(Date.now());
+      setSyncStatus('saved');
+      localStorage.removeItem(WORKSPACE_PENDING_SYNC_KEY);
+    } catch (err) {
+      console.error('Workspace sync failed:', err);
+      setSyncStatus(err instanceof Error && err.message === 'WORKSPACE_CONFLICT' ? 'conflict' : 'failed');
+    } finally {
+      syncInFlightRef.current = false;
+      setIsSaving(false);
+    }
+  }, []);
+
+  // Auto-sync to Supabase with a longer debounce. Local storage remains instant.
+  useEffect(() => {
+    if (!user || !activeProjectId || syncStatus !== 'pending') return;
+
+    const timeout = setTimeout(() => {
+      void flushWorkspace();
+    }, WORKSPACE_SYNC_DEBOUNCE_MS);
 
     return () => clearTimeout(timeout);
-  }, [workspace, user, activeProjectId]);
+  }, [workspace, user, activeProjectId, syncStatus, flushWorkspace]);
+
+  useEffect(() => {
+    const flushOnExit = () => {
+      if (syncStatus === 'pending' || syncStatus === 'failed') {
+        void flushWorkspace();
+      }
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'hidden') {
+        flushOnExit();
+      }
+    };
+
+    window.addEventListener('pagehide', flushOnExit);
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      window.removeEventListener('pagehide', flushOnExit);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, [syncStatus, flushWorkspace]);
 
   const loadProject = async (id: string) => {
     if (!user) return;
     try {
-      const { data, error } = await supabase
-        .from('business_canvas')
-        .select('canvas_data')
-        .eq('id', id)
-        .eq('user_id', user.id) // Verify ownership
-        .single();
+      const { data, error } = await withSupabaseRetry(() =>
+        supabase
+          .from('business_canvas')
+          .select('canvas_data, row_version')
+          .eq('id', id)
+          .eq('user_id', user.id) // Verify ownership
+          .is('deleted_at', null)
+          .maybeSingle()
+      );
         
       if (error) throw error;
       if (data && data.canvas_data) {
+        skipNextAutoSaveRef.current = true;
         setWorkspace(deriveWorkspace({
           ...createInitialWorkspace(planSections),
           ...data.canvas_data as ProjectWorkspace
         }));
         setActiveProjectId(id);
+        activeProjectVersionRef.current = data.row_version ?? 1;
+        lastVersionSnapshotAtRef.current = Date.now();
+        setSyncStatus('saved');
+        setLastSyncedAt(Date.now());
+        localStorage.removeItem(WORKSPACE_PENDING_SYNC_KEY);
       }
     } catch (err) {
       console.error('Error loading project', err);
@@ -149,17 +284,23 @@ export const ProjectWorkspaceProvider: React.FC<{
         .from('business_canvas')
         .insert([{
           user_id: user.id,
-          project_title: title,
-          canvas_data: initial
+          canvas_data: initial,
+          ...getWorkspaceMetadata(initial),
         }])
-        .select('id')
+        .select('id, row_version')
         .single();
         
       if (error) throw error;
       
       if (data) {
+        skipNextAutoSaveRef.current = true;
         setWorkspace(deriveWorkspace(initial));
         setActiveProjectId(data.id);
+        activeProjectVersionRef.current = data.row_version ?? 1;
+        lastVersionSnapshotAtRef.current = Date.now();
+        setSyncStatus('saved');
+        setLastSyncedAt(Date.now());
+        localStorage.removeItem(WORKSPACE_PENDING_SYNC_KEY);
         return data.id;
       }
     } catch (err) {
@@ -295,7 +436,10 @@ export const ProjectWorkspaceProvider: React.FC<{
     toggleChecklistItem,
     loadProject,
     createProject,
+    flushWorkspace,
     isSaving,
+    syncStatus,
+    lastSyncedAt,
     activeProjectId,
   }), [
     workspace,
@@ -308,7 +452,10 @@ export const ProjectWorkspaceProvider: React.FC<{
     cycleAutoTaskStatus,
     cycleFirstCustomerTaskStatus,
     toggleChecklistItem,
+    flushWorkspace,
     isSaving,
+    syncStatus,
+    lastSyncedAt,
     activeProjectId,
   ]);
 

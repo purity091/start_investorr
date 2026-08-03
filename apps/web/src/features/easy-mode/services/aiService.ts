@@ -1,5 +1,7 @@
-/* AI STRATEGIC INTELLIGENCE SERVICE v3.0 - ELITE UPGRADE */
+/* AI STRATEGIC INTELLIGENCE SERVICE v3.0 - DISABLED */
 import { AiAnalysisResult } from '../types';
+
+export const AI_FEATURES_DISABLED_MESSAGE = 'AI features are currently disabled.';
 
 export function buildDeepPrompt(answers: any): string {
   const problemText = typeof answers.problem === 'object' ? answers.problem.problem : (answers.problem || 'غير محددة');
@@ -130,30 +132,7 @@ export function generateMockAnalysis(answers: any): AiAnalysisResult {
 }
 
 export async function analyzeWithAI(answers: any, apiKey?: string): Promise<AiAnalysisResult> {
-  try {
-    const res = await fetch("/api/anthropic/v1/messages", {
-       method: "POST",
-       headers: { 
-         "Content-Type": "application/json",
-         "x-api-key": apiKey || '',
-         "anthropic-version": "2023-06-01"
-        },
-       body: JSON.stringify({
-         model: "claude-3-5-sonnet-20240620",
-         max_tokens: 4000,
-         messages: [{ role: "user", content: buildDeepPrompt(answers) }],
-       }),
-    });
-
-    if (res.ok) {
-       const data = await res.json();
-       const text = data.content?.[0]?.text || "";
-       const clean = text.replace(/```json\n?/g, "").replace(/```\n?/g, "").trim();
-       return JSON.parse(clean) as AiAnalysisResult;
-    }
-    return new Promise(resolve => setTimeout(() => resolve(generateMockAnalysis(answers)), 1500));
-  } catch (error) {
-    console.warn("AI API unreachable. Fallback to Optimized Elite Mock Engine.");
-    return new Promise(resolve => setTimeout(() => resolve(generateMockAnalysis(answers)), 1800));
-  }
+  void answers;
+  void apiKey;
+  throw new Error(AI_FEATURES_DISABLED_MESSAGE);
 }

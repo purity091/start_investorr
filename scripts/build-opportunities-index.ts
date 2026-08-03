@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 
 const SRC_DIR = path.resolve(__dirname, '../src/data/opportunities/json_items');
 const PUBLIC_ITEMS_DIR = path.resolve(__dirname, '../public/data/opportunities_items');
-const PUBLIC_INDEX_FILE = path.resolve(__dirname, '../public/data/opportunities_index.json');
+const PUBLIC_INDEX_FILE = path.resolve(__dirname, '../data-raw/opportunities_index.full.json');
 
 // Ensure public directories exist
 if (!fs.existsSync(PUBLIC_ITEMS_DIR)) {

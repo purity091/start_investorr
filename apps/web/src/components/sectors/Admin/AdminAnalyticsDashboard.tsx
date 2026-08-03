@@ -30,7 +30,8 @@ export const AdminAnalyticsDashboard: React.FC<any> = (props) => {
           
         const { count: projectsCount } = await supabase
           .from('business_canvas')
-          .select('*', { count: 'exact', head: true });
+          .select('*', { count: 'exact', head: true })
+          .is('deleted_at', null);
           
         setStats(prev => ({
           ...prev,

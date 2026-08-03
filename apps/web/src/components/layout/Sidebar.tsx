@@ -159,7 +159,7 @@ const PROJECT_IDEAS: NavItemConfig[] = [
   { tab: 'micro-saas-ideas', label: 'أفكار Micro-SaaS', icon: Settings2 },
   {
     tab: 'market-discovery',
-    label: 'استكشاف السوق',
+    label: 'استكشاف قطاعات السوق',
     icon: Compass,
     id: 'tour-market-discovery',
     active: (tab) => tab === 'market-discovery' || MARKET_DISCOVERY_DASHBOARDS.includes(tab),

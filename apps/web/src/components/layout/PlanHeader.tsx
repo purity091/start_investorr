@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 import { 
   Calendar, Layers, MapPin, Briefcase, CheckCircle2, 
-  Download, BrainCircuit, Lightbulb, Wallet, Globe, 
+  Download, Wallet, 
   Share2, History, Copy, Trash2, ChevronDown,
   FileText, FileSpreadsheet, Presentation, BarChart3, QrCode,
-  Settings2, Wand2, Zap, Info
+  Settings2, Zap, Info
 } from 'lucide-react';
 
 // مكون صغير للمعلومات الأساسية بتصميم "كبسولة" ذكي
@@ -30,8 +29,7 @@ const SmartInfoPill = ({ icon: Icon, text, label, color }: { icon: any, text: st
   );
 };
 
-const ActionButton = ({ icon: Icon, label, active, onClick, variant = 'default' }: any) => {
-  const isAi = variant === 'ai';
+const ActionButton = ({ icon: Icon, label, active, onClick }: any) => {
   return (
     <button 
       onClick={onClick}
@@ -39,13 +37,11 @@ const ActionButton = ({ icon: Icon, label, active, onClick, variant = 'default' 
         flex items-center gap-2.5 px-4 py-2.5 rounded-xl text-[13px] font-bold transition-all border
         ${active 
           ? 'bg-primary-600 text-white border-primary-600 shadow-lg shadow-primary-100' 
-          : isAi 
-            ? 'bg-gradient-to-r from-purple-50 to-indigo-50 text-purple-700 border-purple-100 hover:from-purple-100 hover:to-indigo-100'
-            : 'bg-white text-gray-600 border-gray-100 hover:border-gray-300 hover:bg-gray-50'
+          : 'bg-white text-gray-600 border-gray-100 hover:border-gray-300 hover:bg-gray-50'
         }
       `}
     >
-      <Icon size={18} strokeWidth={2.5} className={isAi ? 'animate-pulse' : ''} />
+      <Icon size={18} strokeWidth={2.5} />
       <span>{label}</span>
       {onClick && <ChevronDown size={14} className={`transition-transform duration-300 ${active ? 'rotate-180' : ''}`} />}
     </button>
@@ -163,23 +159,6 @@ export const PlanHeader: React.FC = () => {
               )}
             </div>
 
-            {/* AI Assistant Menu */}
-            <div className="relative">
-              <ActionButton 
-                icon={Wand2} 
-                label="المساعد الذكي" 
-                active={activeMenu === 'ai'} 
-                variant="ai"
-                onClick={() => toggleMenu('ai')} 
-              />
-              {activeMenu === 'ai' && (
-                <Dropdown>
-                  <DropdownItem icon={BrainCircuit} text="تحليل SWOT ذكي" color="text-purple-600" />
-                  <DropdownItem icon={Lightbulb} text="اقتراح أهداف بديلة" color="text-amber-500" />
-                  <DropdownItem icon={Globe} text="ترجمة ذكية فورية" />
-                </Dropdown>
-              )}
-            </div>
 
             {/* Management Menu */}
             <div className="relative">

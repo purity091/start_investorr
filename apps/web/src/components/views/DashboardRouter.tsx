@@ -20,21 +20,52 @@ import { Notifications } from '../features/social/Notifications';
 import { Profile } from './Profile';
 import { MobileSiteMap } from './MobileSiteMap';
 import { useProjectWorkspace } from '../../features/workspace/ProjectWorkspaceContext';
+import { FeatureErrorBoundary } from '@/components/common/FeatureErrorBoundary';
 
 import { User, PlanSection } from '../../types';
 
 const lazyPage = <T extends React.ComponentType<any>>(
   loader: () => Promise<{ default: T }>
-) => React.lazy(loader);
+) => React.lazy(() => loadWithChunkRecovery(loader));
 
 const lazyNamedPage = <T extends React.ComponentType<any>>(
   loader: () => Promise<Record<string, unknown>>,
   exportName: string
 ) =>
   React.lazy(async () => {
-    const module = await loader();
+    const module = await loadWithChunkRecovery(loader);
     return { default: module[exportName] as T };
   });
+
+const CHUNK_RELOAD_KEY = 'khotta_chunk_reload_attempted';
+
+async function loadWithChunkRecovery<T>(loader: () => Promise<T>): Promise<T> {
+  try {
+    const module = await loader();
+
+    if (typeof window !== 'undefined') {
+      sessionStorage.removeItem(CHUNK_RELOAD_KEY);
+    }
+
+    return module;
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    const isChunkLoadError =
+      error instanceof Error && error.name === 'ChunkLoadError'
+      || /failed to load chunk|loading chunk|chunkloaderror/i.test(message);
+
+    if (
+      isChunkLoadError &&
+      typeof window !== 'undefined' &&
+      sessionStorage.getItem(CHUNK_RELOAD_KEY) !== 'true'
+    ) {
+      sessionStorage.setItem(CHUNK_RELOAD_KEY, 'true');
+      window.location.reload();
+    }
+
+    throw error;
+  }
+}
 
 const BrandIdentityStudio = lazyNamedPage(() => import('../features/branding/BrandIdentityStudio'), 'BrandIdentityStudio');
 const ProblemOpportunityEngine = lazyNamedPage(() => import('../features/discovery/ProblemOpportunityEngine'), 'ProblemOpportunityEngine');
@@ -334,13 +365,13 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
       case 'my-plans':
         return <MyProjects setActiveTab={setActiveTab} />;
       case 'proven-projects':
-        return <ProvenProjectsGallery />;
+        return <ProvenProjectsGallery setSubTabLabel={setSubTabLabel} />;
       case 'failed-projects':
-        return <FailedProjectsGallery />;
+        return <FailedProjectsGallery setSubTabLabel={setSubTabLabel} />;
       case 'saas-ideas':
-        return <SaaSIdeasGallery />;
+        return <SaaSIdeasGallery setSubTabLabel={setSubTabLabel} />;
       case 'micro-saas-ideas':
-        return <MicroSaaSIdeasGallery />;
+        return <MicroSaaSIdeasGallery setSubTabLabel={setSubTabLabel} />;
       case 'project-ideas':
         return <ProjectIdeasHub setActiveTab={setActiveTab} />;
       case 'new-plan':
@@ -743,7 +774,9 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
       case 'seo-content-marketing': return <SearchEngineOptimizationContentMarketingDashboard />;
       case 'agritech-dashboard': return <AgriculturalTechnologyAgritechDashboard />;
       case 'smart-farming': return <SmartFarmingDashboard />;
-      case 'seeds-crop-protection': return <SeedsCropProtectionDashboard onBuildPlan={handleBuildPlan} />;
+      case 'seeds-crop-protection-dashboard':
+      case 'seeds-crop-protection': 
+        return <SeedsCropProtectionDashboard sectorId="seeds-crop-protection-dashboard" onBack={() => setActiveTab('market-discovery')} onBuildPlan={handleBuildPlan} parentCategory="الزراعة والموارد الطبيعية" />;
       case 'recycled-materials': return <RecycledMaterialsDashboard />;
       case 'battery-materials': return <BatteryMaterialsDashboard />;
       case 'sustainable-consumer-goods': return <SustainableConsumerGoodsDashboard />;
@@ -835,11 +868,13 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
 
   return (
     <div className={containerClass}>
-      <Suspense fallback={<RouteLoadingState />}>
-        <div>
-          {renderContent()}
-        </div>
-      </Suspense>
+      <FeatureErrorBoundary boundaryKey={activeTab}>
+        <Suspense fallback={<RouteLoadingState />}>
+          <div>
+            {renderContent()}
+          </div>
+        </Suspense>
+      </FeatureErrorBoundary>
     </div>
   );
 };

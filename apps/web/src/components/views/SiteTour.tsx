@@ -42,7 +42,7 @@ const ALL_STEPS: TourStep[] = [
   },
   {
     targetId: 'tour-market-discovery',
-    title: 'استكشاف السوق',
+    title: 'استكشاف قطاعات السوق',
     content: 'قسم مخصص لفهم القطاعات، قراءة اللوحات السوقية، وبناء تصور قبل اتخاذ قرار المشروع.',
     position: 'left',
     desktopOnly: true,

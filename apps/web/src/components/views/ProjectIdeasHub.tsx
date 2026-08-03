@@ -38,7 +38,7 @@ export const ProjectIdeasHub: React.FC<ProjectIdeasHubProps> = ({ setActiveTab }
     },
     {
       id: 'market-discovery',
-      title: 'استكشاف السوق',
+      title: 'استكشاف قطاعات السوق',
       description: 'حلل أكثر من 100 قطاع مختلف واكتشف حجم السوق، المنافسين، والفرص المتاحة في مجالات متنوعة.',
       icon: <Compass className="size-8 text-indigo-500" />,
       color: 'bg-indigo-50 border-indigo-100 hover:border-indigo-300 hover:shadow-indigo-100/50',

@@ -1,0 +1,126 @@
+{
+  "total": 355,
+  "generatedAt": "2026-08-03T02:14:42.425Z",
+  "source": "data-raw/opportunities_index.full.json",
+  "sectors": [
+    {
+      "sectorId": "advertising",
+      "sectorName": "Marketing",
+      "count": 8,
+      "path": "opportunities/by-sector/advertising.json",
+      "indexPath": "opportunities/by-sector/advertising.index.json"
+    },
+    {
+      "sectorId": "agri",
+      "sectorName": "Agriculture",
+      "count": 29,
+      "path": "opportunities/by-sector/agri.json",
+      "indexPath": "opportunities/by-sector/agri.index.json"
+    },
+    {
+      "sectorId": "chemicals",
+      "sectorName": "Mining",
+      "count": 4,
+      "path": "opportunities/by-sector/chemicals.json",
+      "indexPath": "opportunities/by-sector/chemicals.index.json"
+    },
+    {
+      "sectorId": "dynamic_sector",
+      "sectorName": "Artificial Intelligence",
+      "count": 4,
+      "path": "opportunities/by-sector/dynamic_sector.json",
+      "indexPath": "opportunities/by-sector/dynamic_sector.index.json"
+    },
+    {
+      "sectorId": "economy",
+      "sectorName": "Economics",
+      "count": 7,
+      "path": "opportunities/by-sector/economy.json",
+      "indexPath": "opportunities/by-sector/economy.index.json"
+    },
+    {
+      "sectorId": "edu",
+      "sectorName": "Education",
+      "count": 26,
+      "path": "opportunities/by-sector/edu.json",
+      "indexPath": "opportunities/by-sector/edu.index.json"
+    },
+    {
+      "sectorId": "energy",
+      "sectorName": "Mining",
+      "count": 45,
+      "path": "opportunities/by-sector/energy.json",
+      "indexPath": "opportunities/by-sector/energy.index.json"
+    },
+    {
+      "sectorId": "fintech",
+      "sectorName": "Finance",
+      "count": 38,
+      "path": "opportunities/by-sector/fintech.json",
+      "indexPath": "opportunities/by-sector/fintech.index.json"
+    },
+    {
+      "sectorId": "health",
+      "sectorName": "HealthTech",
+      "count": 40,
+      "path": "opportunities/by-sector/health.json",
+      "indexPath": "opportunities/by-sector/health.index.json"
+    },
+    {
+      "sectorId": "industry",
+      "sectorName": "Technology",
+      "count": 26,
+      "path": "opportunities/by-sector/industry.json",
+      "indexPath": "opportunities/by-sector/industry.index.json"
+    },
+    {
+      "sectorId": "life",
+      "sectorName": "Tourism",
+      "count": 12,
+      "path": "opportunities/by-sector/life.json",
+      "indexPath": "opportunities/by-sector/life.index.json"
+    },
+    {
+      "sectorId": "logistics",
+      "sectorName": "Logistics",
+      "count": 21,
+      "path": "opportunities/by-sector/logistics.json",
+      "indexPath": "opportunities/by-sector/logistics.index.json"
+    },
+    {
+      "sectorId": "media",
+      "sectorName": "Media",
+      "count": 10,
+      "path": "opportunities/by-sector/media.json",
+      "indexPath": "opportunities/by-sector/media.index.json"
+    },
+    {
+      "sectorId": "realestate",
+      "sectorName": "Advanced Robotics",
+      "count": 11,
+      "path": "opportunities/by-sector/realestate.json",
+      "indexPath": "opportunities/by-sector/realestate.index.json"
+    },
+    {
+      "sectorId": "retail",
+      "sectorName": "Retail & Commerce",
+      "count": 43,
+      "path": "opportunities/by-sector/retail.json",
+      "indexPath": "opportunities/by-sector/retail.index.json"
+    },
+    {
+      "sectorId": "sports",
+      "sectorName": "Sports",
+      "count": 1,
+      "path": "opportunities/by-sector/sports.json",
+      "indexPath": "opportunities/by-sector/sports.index.json"
+    },
+    {
+      "sectorId": "tech",
+      "sectorName": "Technology",
+      "count": 30,
+      "path": "opportunities/by-sector/tech.json",
+      "indexPath": "opportunities/by-sector/tech.index.json"
+    }
+  ]
+}

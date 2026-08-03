@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
@@ -21,9 +21,10 @@ export default function PublicSharePage() {
         const { data, error } = await supabase
           .from('business_canvas')
           .select('canvas_data, project_title')
-          .eq('id', id)
+          .eq('share_token', id)
           .eq('is_public', true)
-          .single();
+          .is('deleted_at', null)
+          .maybeSingle();
 
         if (error) {
           throw error;
@@ -31,7 +32,24 @@ export default function PublicSharePage() {
 
         if (data && data.canvas_data) {
           setWorkspace(data.canvas_data as ProjectWorkspace);
+          return;
         } else {
+          const { data: legacyData, error: legacyError } = await supabase
+            .from('business_canvas')
+            .select('canvas_data, project_title')
+            .eq('id', id)
+            .eq('is_public', true)
+            .is('deleted_at', null)
+            .maybeSingle();
+
+          if (legacyError) {
+            throw legacyError;
+          }
+
+          if (legacyData && legacyData.canvas_data) {
+            setWorkspace(legacyData.canvas_data as ProjectWorkspace);
+            return;
+          }
           setError('لم يتم العثور على المشروع أو أنه غير متاح للعامة.');
         }
       } catch (err) {

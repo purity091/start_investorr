@@ -30,7 +30,17 @@ const TAB_LABELS: Record<string, string> = {
   'new-plan-mit24': 'MIT 24 Steps',
   'new-plan-bmc': 'نموذج بناء نموذج العمل BMC',
   'new-plan-lean': 'منهجية Lean Startup',
-  'market-discovery': 'استكشاف السوق',
+  'market-discovery': 'استكشاف قطاعات السوق',
+  'advertising-dashboard': 'قطاع الإعلانات والتسويق',
+  'agriculture-dashboard': 'قطاع الزراعة والأغذية',
+  'tech-dashboard': 'قطاع التقنية والبرمجيات',
+  'fintech-dashboard': 'قطاع التقنية المالية',
+  'ecommerce-dashboard': 'قطاع التجارة الإلكترونية',
+  'healthcare-dashboard': 'قطاع الرعاية الصحية',
+  'realestate-dashboard': 'قطاع العقارات والبناء',
+  'energy-dashboard': 'قطاع الطاقة والبيئة',
+  'education-dashboard': 'قطاع التعليم والتدريب',
+  'logistics-dashboard': 'قطاع النقل واللوجستيات',
   'problem-engine': 'المشكلات والفرص',
   'problem-detail': 'تفاصيل المشكلة',
   'saved-market-items': 'المحفوظات',
@@ -59,7 +69,6 @@ const TAB_LABELS: Record<string, string> = {
   hackathon: 'الهاكاثون',
   'admin-dashboard': 'لوحة الإدارة',
   'users-management': 'المستخدمون',
-  'admin-plans': 'أرشيف الخطط',
   'admin-analytics': 'تحليلات المنصة',
   'admin-security': 'الأمان',
   'proven-projects': 'أفكار شركات ناجحة',
@@ -116,11 +125,41 @@ function getBreadcrumbNodes(activeTab: string, subTabLabel?: string | null): Bre
     ];
   }
 
+  // Market Sector Discovery & Sector Dashboards
+  if (
+    activeTab === 'market-discovery' ||
+    (activeTab.endsWith('-dashboard') && !['admin-dashboard', 'customer-dashboard', 'strategic-dashboard'].includes(activeTab))
+  ) {
+    if (activeTab === 'market-discovery') {
+      return [
+        { label: 'الرئيسية', tab: 'home' },
+        { label: 'استكشاف قطاعات السوق', tab: 'market-discovery' },
+      ];
+    }
+    return [
+      { label: 'الرئيسية', tab: 'home' },
+      { label: 'استكشاف قطاعات السوق', tab: 'market-discovery' },
+      { label: currentLabel, tab: activeTab },
+    ];
+  }
+
+  // Problems & Opportunities Engine
+  if (activeTab === 'problem-engine' || activeTab === 'problem-detail') {
+    if (activeTab === 'problem-engine') {
+      return [
+        { label: 'الرئيسية', tab: 'home' },
+        { label: 'المشكلات والفرص', tab: 'problem-engine' },
+      ];
+    }
+    return [
+      { label: 'الرئيسية', tab: 'home' },
+      { label: 'المشكلات والفرص', tab: 'problem-engine' },
+      { label: currentLabel, tab: activeTab },
+    ];
+  }
+
   if (
     [
-      'market-discovery',
-      'problem-engine',
-      'problem-detail',
       'saved-market-items',
       'discovery-center',
       'company-deep-dive',
@@ -128,9 +167,25 @@ function getBreadcrumbNodes(activeTab: string, subTabLabel?: string | null): Bre
       'failed-projects',
       'saas-ideas',
       'micro-saas-ideas',
-    ].includes(activeTab) ||
-    activeTab.endsWith('-dashboard')
+      'project-ideas',
+    ].includes(activeTab)
   ) {
+    if (activeTab === 'project-ideas') {
+      return [
+        { label: 'الرئيسية', tab: 'home' },
+        { label: 'أفكار مشاريع', tab: 'project-ideas' },
+      ];
+    }
+
+    if (subTabLabel && ['proven-projects', 'failed-projects', 'saas-ideas', 'micro-saas-ideas'].includes(activeTab)) {
+      return [
+        { label: 'الرئيسية', tab: 'home' },
+        { label: 'أفكار مشاريع', tab: 'project-ideas' },
+        { label: TAB_LABELS[activeTab] || currentLabel, tab: activeTab },
+        { label: subTabLabel, tab: activeTab },
+      ];
+    }
+
     return [
       { label: 'الرئيسية', tab: 'home' },
       { label: 'أفكار مشاريع', tab: 'project-ideas' },

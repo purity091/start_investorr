@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useMemo, useState } from 'react';
 import * as LucideIcons from 'lucide-react';
 import {
@@ -844,115 +846,131 @@ function DiscoveryTanStackTable({
         </div>
       )}
 
-      {/* Main Table Card Container */}
-      <Card className="shadow-xs overflow-hidden border-border bg-card rounded-2xl">
-        <div className="overflow-x-auto">
-          <Table dir="rtl">
-            <TableHeader className="bg-muted/50 border-b border-border/80">
-              {table.getHeaderGroups().map((headerGroup) => (
-                <TableRow key={headerGroup.id} className="hover:bg-transparent border-none">
-                  {headerGroup.headers.map((header) => (
-                    <TableHead key={header.id} className="h-11 text-right font-bold text-xs text-foreground">
+      {/* Main Table Container */}
+      <div className="rounded-2xl border border-slate-200/80 bg-white shadow-xs overflow-hidden">
+        <Table dir="rtl">
+          <TableHeader className="bg-slate-50/80 border-b border-slate-200/80">
+            {table.getHeaderGroups().map((headerGroup) => (
+              <TableRow key={headerGroup.id} className="hover:bg-transparent border-none">
+                {headerGroup.headers.map((header) => {
+                  let widthClass = '';
+                  if (header.id === 'save') widthClass = 'w-[44px] min-w-[44px] max-w-[44px] text-center px-1';
+                  if (header.id === 'label') widthClass = 'w-[280px] max-w-[340px] min-w-[220px]';
+                  if (header.id === 'groupTitle') widthClass = 'w-[160px]';
+                  if (header.id === 'gatekeepers') widthClass = 'w-[220px]';
+                  if (header.id === 'status') widthClass = 'w-[140px]';
+                  if (header.id === 'actions') widthClass = 'w-[60px] text-left';
+
+                  return (
+                    <TableHead key={header.id} className={cn("h-9 text-slate-500 font-bold text-[11px] uppercase tracking-wider px-2 sm:px-3 whitespace-nowrap", widthClass)}>
                       {header.isPlaceholder
                         ? null
                         : flexRender(header.column.columnDef.header, header.getContext())}
                     </TableHead>
-                  ))}
-                </TableRow>
-              ))}
-            </TableHeader>
-            <TableBody>
-              {table.getRowModel().rows.length > 0 ? (
-                table.getRowModel().rows.map((row) => {
-                  const isActive = selectedSectorId === row.original.id;
-                  return (
-                    <TableRow
-                      key={row.id}
-                      data-state={isActive ? 'selected' : undefined}
-                      className="cursor-pointer group hover:bg-muted/40 transition-colors border-b border-border/60"
-                      onClick={() =>
-                        onOpenSector({
-                          id: row.original.id,
-                          label: row.original.label,
-                          groupTitle: row.original.groupTitle,
-                        })
-                      }
-                    >
-                      {row.getVisibleCells().map((cell) => (
-                        <TableCell key={cell.id} className="py-3">
+                  );
+                })}
+              </TableRow>
+            ))}
+          </TableHeader>
+          <TableBody>
+            {table.getRowModel().rows.length > 0 ? (
+              table.getRowModel().rows.map((row) => {
+                const isActive = selectedSectorId === row.original.id;
+                return (
+                  <TableRow
+                    key={row.id}
+                    data-state={isActive ? 'selected' : undefined}
+                    className="cursor-pointer hover:bg-blue-50/50 transition-colors border-b border-slate-100/80 group"
+                    onClick={() =>
+                      onOpenSector({
+                        id: row.original.id,
+                        label: row.original.label,
+                        groupTitle: row.original.groupTitle,
+                      })
+                    }
+                  >
+                    {row.getVisibleCells().map((cell) => {
+                      let widthClass = '';
+                      if (cell.column.id === 'save') widthClass = 'w-[44px] min-w-[44px] max-w-[44px] text-center px-1';
+                      if (cell.column.id === 'label') widthClass = 'w-[280px] max-w-[340px] min-w-[220px]';
+                      if (cell.column.id === 'groupTitle') widthClass = 'w-[160px]';
+                      if (cell.column.id === 'gatekeepers') widthClass = 'w-[220px]';
+                      if (cell.column.id === 'status') widthClass = 'w-[140px]';
+                      if (cell.column.id === 'actions') widthClass = 'w-[60px]';
+
+                      return (
+                        <TableCell key={cell.id} className={cn("py-2 px-2 sm:px-3 align-middle text-xs", widthClass)}>
                           {flexRender(cell.column.columnDef.cell, cell.getContext())}
                         </TableCell>
-                      ))}
-                    </TableRow>
-                  );
-                })
-              ) : (
-                <TableRow>
-                  <TableCell colSpan={columns.length} className="h-32 text-center text-muted-foreground text-sm font-medium">
-                    لا توجد قطاعات مطابقة للبحث المحدد.
-                  </TableCell>
-                </TableRow>
-              )}
-            </TableBody>
-          </Table>
+                      );
+                    })}
+                  </TableRow>
+                );
+              })
+            ) : (
+              <TableRow>
+                <TableCell colSpan={columns.length} className="h-32 text-center text-slate-500 font-medium">
+                  لا توجد قطاعات مطابقة للبحث المحدد.
+                </TableCell>
+              </TableRow>
+            )}
+          </TableBody>
+        </Table>
+      </div>
+
+      {/* Pagination Bar matching ProvenProjectsTable style */}
+      <div className="flex flex-col sm:flex-row items-center justify-between px-2 pt-4 gap-4">
+        {/* Page Size Selector on the right side in RTL */}
+        <div className="flex items-center gap-2 w-full sm:w-auto justify-start">
+          <span className="text-xs font-bold text-slate-500 whitespace-nowrap">عرض:</span>
+          <Select
+            value={table.getState().pagination.pageSize.toString()}
+            onValueChange={(val) => {
+              table.setPageSize(Number(val));
+            }}
+          >
+            <SelectTrigger className="h-9 w-[115px] bg-white border-slate-200 rounded-xl font-bold text-xs text-slate-700 shadow-xs">
+              <SelectValue placeholder="10 نتائج" />
+            </SelectTrigger>
+            <SelectContent className="rounded-xl border-slate-200 min-w-[115px]" dir="rtl">
+              <SelectItem value="10" className="font-bold cursor-pointer text-xs">10 نتائج</SelectItem>
+              <SelectItem value="20" className="font-bold cursor-pointer text-xs">20 نتيجة</SelectItem>
+              <SelectItem value="50" className="font-bold cursor-pointer text-xs">50 نتيجة</SelectItem>
+              <SelectItem value="100" className="font-bold cursor-pointer text-xs">100 نتيجة</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
 
-        {/* Footer Pagination Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 border-t border-border bg-muted/20 text-xs">
-          {/* Right side: Page size selector (RTL right) */}
-          <div className="flex items-center gap-2">
-            <span className="text-muted-foreground font-medium">عدد النتائج في الصفحة:</span>
-            <Select
-              value={`${table.getState().pagination.pageSize}`}
-              onValueChange={(value) => {
-                table.setPageSize(Number(value));
-              }}
-            >
-              <SelectTrigger className="h-8 w-[75px] text-xs bg-background rounded-lg border-border">
-                <SelectValue placeholder={table.getState().pagination.pageSize} />
-              </SelectTrigger>
-              <SelectContent align="end" className="rounded-lg border-border">
-                {[10, 20, 50, 100].map((pageSize) => (
-                  <SelectItem key={pageSize} value={`${pageSize}`}>
-                    {pageSize}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+        {/* Centered Pagination Controls */}
+        <div className="flex items-center justify-center space-x-2 space-x-reverse sm:flex-none">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => table.previousPage()}
+            disabled={!table.getCanPreviousPage()}
+            className="h-9 w-9 p-0 border-slate-200 rounded-lg shadow-sm"
+          >
+            <LucideIcons.ChevronRight className="h-4 w-4" />
+          </Button>
+          <div className="flex items-center justify-center text-sm font-bold text-slate-700 min-w-[4rem]">
+            {table.getState().pagination.pageIndex + 1} / {table.getPageCount() || 1}
           </div>
-
-          {/* Left side: Navigation buttons & Page info */}
-          <div className="flex items-center gap-3">
-            <span className="text-muted-foreground font-mono">
-              صفحة <strong className="text-foreground">{table.getState().pagination.pageIndex + 1}</strong> من{' '}
-              <strong className="text-foreground">{table.getPageCount() || 1}</strong> ({table.getFilteredRowModel().rows.length} قطاع)
-            </span>
-
-            <div className="flex items-center gap-1">
-              <Button
-                variant="outline"
-                size="icon-sm"
-                onClick={() => table.previousPage()}
-                disabled={!table.getCanPreviousPage()}
-                className="h-8 w-8 rounded-lg"
-                title="الصفحة السابقة"
-              >
-                <LucideIcons.ChevronRight className="size-4" />
-              </Button>
-              <Button
-                variant="outline"
-                size="icon-sm"
-                onClick={() => table.nextPage()}
-                disabled={!table.getCanNextPage()}
-                className="h-8 w-8 rounded-lg"
-                title="الصفحة التالية"
-              >
-                <LucideIcons.ChevronLeft className="size-4" />
-              </Button>
-            </div>
-          </div>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => table.nextPage()}
+            disabled={!table.getCanNextPage()}
+            className="h-9 w-9 p-0 border-slate-200 rounded-lg shadow-sm"
+          >
+            <LucideIcons.ChevronLeft className="h-4 w-4" />
+          </Button>
         </div>
-      </Card>
+
+        {/* Info Text */}
+        <div className="flex-1 text-xs sm:text-sm font-medium text-slate-500 text-center sm:text-left w-full sm:w-auto">
+          عرض {table.getRowModel().rows.length} من أصل {table.getFilteredRowModel().rows.length} قطاع
+        </div>
+      </div>
     </div>
   );
 }
@@ -1011,57 +1029,53 @@ export function DiscoveryCenter({
   };
 
   return (
-    <div
-      className="min-h-screen bg-background pb-16 font-['IBM_Plex_Sans_Arabic'] text-right text-foreground"
-    >
-      <div className="mx-auto flex w-full max-w-[1700px] flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 xl:px-10">
-        <div className="mb-2 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-          <div className="space-y-4 lg:max-w-3xl">
-            <div className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
-              <span className="me-2 flex size-1.5 rounded-full bg-primary"></span>
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-8 sm:px-6 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
+      
+      {/* Sleek Integrated Header with Compact Summary Pills matching ProvenProjectsGallery style */}
+      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 bg-slate-50/70 p-5 rounded-2xl border border-slate-200/80 shadow-2xs">
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center gap-2">
+            <Badge variant="secondary" className="w-fit bg-blue-500/10 text-blue-600 hover:bg-blue-500/20 border-0 font-bold px-3 py-1">
+              <LucideIcons.Compass className="size-3.5 me-1.5 inline-block" />
               مساحة القرار الاستثماري
-            </div>
-            <div>
-              <h1 className="text-3xl font-black tracking-tight text-foreground sm:text-4xl">
-                رادار استكشاف الأسواق والفرص الاستثمارية
-              </h1>
-              <p className="mt-3 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                واجهة منظمة لاكتشاف القطاعات، مقارنة المسارات، والانتقال السريع إلى السوق المناسب لبناء دراسة جدوى أكثر دقة.
-              </p>
-            </div>
+            </Badge>
           </div>
-          
-          <div className="flex flex-wrap items-center gap-6 rounded-2xl bg-muted/30 px-6 py-4 sm:gap-10">
-            <div className="flex flex-col gap-1">
-              <span className="text-sm font-medium text-muted-foreground">المجموعات</span>
-              <span className="text-3xl font-bold tracking-tight text-foreground">{normalizedGroups.length}</span>
-            </div>
-            <div className="h-10 w-px bg-border/60"></div>
-            <div className="flex flex-col gap-1">
-              <span className="text-sm font-medium text-muted-foreground">القطاعات</span>
-              <span className="text-3xl font-bold tracking-tight text-foreground">{totalSectors}</span>
-            </div>
-            <div className="h-10 w-px bg-border/60"></div>
-            <div className="flex flex-col gap-1">
-              <span className="text-sm font-medium text-muted-foreground">القطاعات الجديدة</span>
-              <span className="flex items-center gap-2 text-3xl font-bold tracking-tight text-foreground">
-                {totalNewSectors}
-                {totalNewSectors > 0 && <span className="flex size-2.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]"></span>}
-              </span>
-            </div>
-          </div>
+          <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">استكشاف قطاعات السوق</h1>
+          <p className="max-w-2xl text-xs sm:text-sm leading-relaxed text-slate-600 font-medium">
+            واجهة منظمة لاكتشاف القطاعات، مقارنة المسارات، والانتقال السريع إلى السوق المناسب لبناء دراسة جدوى أكثر دقة.
+          </p>
         </div>
 
-        <div className="grid gap-6">
-          <div className="space-y-6">
-            <DiscoveryTanStackTable
-              data={tableRecords}
-              groups={DISCOVERY_DATA}
-              onOpenSector={openSector}
-              selectedSectorId={selectedSectorId}
-            />
+        {/* Compact Quick Stats Pills */}
+        <div className="flex flex-wrap items-center gap-2.5 shrink-0 pt-2 lg:pt-0">
+          <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-slate-200/80 shadow-2xs">
+            <LucideIcons.Layers className="size-4 text-blue-600" />
+            <span className="text-xs font-bold text-slate-600">المجموعات:</span>
+            <span className="text-sm font-black text-slate-900">{normalizedGroups.length}</span>
+          </div>
+
+          <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-100/90 border border-slate-200/70">
+            <LucideIcons.LayoutGrid className="size-4 text-slate-600" />
+            <span className="text-xs font-bold text-slate-600">إجمالي القطاعات:</span>
+            <span className="text-sm font-black text-slate-900">{totalSectors}</span>
+          </div>
+
+          <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-50/90 border border-emerald-200/70">
+            <LucideIcons.Sparkles className="size-4 text-emerald-600" />
+            <span className="text-xs font-bold text-emerald-800">قطاعات جديدة:</span>
+            <span className="text-sm font-black text-emerald-700">{totalNewSectors}</span>
           </div>
         </div>
+      </div>
+
+      {/* Main Table section */}
+      <div className="w-full">
+        <DiscoveryTanStackTable
+          data={tableRecords}
+          groups={DISCOVERY_DATA}
+          onOpenSector={openSector}
+          selectedSectorId={selectedSectorId}
+        />
       </div>
     </div>
   );

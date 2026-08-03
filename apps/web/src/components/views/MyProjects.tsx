@@ -76,6 +76,7 @@ interface Project {
   isFavorite: boolean;
   isMockExample?: boolean;
   is_public?: boolean;
+  share_token?: string | null;
 }
 
 const PROJECT_TYPE_META: Record<
@@ -212,6 +213,38 @@ const MOCK_PROJECTS: Project[] = [
   }
 ];
 
+const PROJECTS_CACHE_TTL_MS = 60 * 1000;
+
+const getProjectsCacheKey = (userId: string) => `khotta_projects_cache_${userId}`;
+
+function readProjectsCache(userId: string): Project[] | null {
+  try {
+    const raw = sessionStorage.getItem(getProjectsCacheKey(userId));
+    if (!raw) return null;
+
+    const parsed = JSON.parse(raw) as { expiresAt: number; projects: Project[] };
+    if (!parsed.expiresAt || parsed.expiresAt <= Date.now()) return null;
+
+    return parsed.projects;
+  } catch {
+    return null;
+  }
+}
+
+function writeProjectsCache(userId: string, projects: Project[]) {
+  try {
+    sessionStorage.setItem(
+      getProjectsCacheKey(userId),
+      JSON.stringify({
+        expiresAt: Date.now() + PROJECTS_CACHE_TTL_MS,
+        projects,
+      }),
+    );
+  } catch {
+    // Browser storage can be unavailable or full; Supabase remains the source of truth.
+  }
+}
+
 interface MyProjectsProps {
   setActiveTab?: (tab: string) => void;
 }
@@ -232,12 +265,21 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
         setIsLoading(false);
         return;
       }
+
+      const cachedProjects = readProjectsCache(user.id);
+      if (cachedProjects) {
+        setProjectsList(cachedProjects);
+        setIsLoading(false);
+        return;
+      }
+
       setIsLoading(true);
       try {
         const { data, error } = await supabase
           .from('business_canvas')
-          .select('id, project_title, canvas_data->profile, canvas_data->currentStage, canvas_data->metrics, updated_at')
+          .select('id, project_title, sector_label, current_stage, readiness_score, validation_score, execution_score, canvas_data->profile, canvas_data->currentStage, canvas_data->metrics, updated_at, is_public, share_token')
           .eq('user_id', user.id)
+          .is('deleted_at', null)
           .order('updated_at', { ascending: false })
           .limit(50);
 
@@ -251,26 +293,31 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
             return {
               id: row.id,
               name: row.project_title || 'مشروع بدون اسم',
-              sector: profile?.sectorLabel || 'غير محدد',
+              sector: row.sector_label || profile?.sectorLabel || 'غير محدد',
               type: 'pro' as ProjectType,
-              status: currentStage === 'execution' ? 'ready' : 'review',
+              status: (row.current_stage || currentStage) === 'execution' ? 'ready' : 'review',
               progress: {
-                market: metrics?.validationScore || 0,
-                product: metrics?.readinessScore || 0,
-                financial: metrics?.executionScore || 0,
+                market: row.validation_score ?? metrics?.validationScore ?? 0,
+                product: row.readiness_score ?? metrics?.readinessScore ?? 0,
+                financial: row.execution_score ?? metrics?.executionScore ?? 0,
               },
-              aiScore: metrics?.readinessScore || 0,
+              aiScore: row.readiness_score ?? metrics?.readinessScore ?? 0,
               lastEdited: new Date(row.updated_at).toLocaleDateString('ar-SA'),
               marketCap: '-',
               isFavorite: false,
               isMockExample: false,
+              is_public: row.is_public,
+              share_token: row.share_token,
             };
           });
           // Real projects first, then mock examples appended
-          setProjectsList([...realProjects, ...MOCK_PROJECTS]);
+          const nextProjects = [...realProjects, ...MOCK_PROJECTS];
+          setProjectsList(nextProjects);
+          writeProjectsCache(user.id, nextProjects);
         } else {
           // No real projects: show only mock examples
           setProjectsList(MOCK_PROJECTS);
+          writeProjectsCache(user.id, MOCK_PROJECTS);
         }
       } catch (err) {
         console.error('Error fetching projects:', err);
@@ -320,11 +367,15 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
     try {
       const { error } = await supabase
         .from('business_canvas')
-        .delete()
+        .update({ deleted_at: new Date().toISOString() })
         .eq('id', id)
         .eq('user_id', user?.id ?? '');
       if (error) throw error;
-      setProjectsList((prev) => prev.filter((p) => p.id !== id));
+      setProjectsList((prev) => {
+        const nextProjects = prev.filter((p) => p.id !== id);
+        if (user?.id) writeProjectsCache(user.id, nextProjects);
+        return nextProjects;
+      });
       if (paginatedProjects.length === 1 && currentPage > 1) {
         setCurrentPage((prev) => prev - 1);
       }
@@ -340,10 +391,17 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
     setSelectedShareProject(project);
   };
 
-  const handleUpdatePublicStatus = (id: string, isPublic: boolean) => {
-    setProjectsList((prev) =>
-      prev.map((p) => (p.id === id ? { ...p, is_public: isPublic } : p))
+  const handleUpdatePublicStatus = (id: string, isPublic: boolean, shareToken?: string | null) => {
+    setSelectedShareProject((current) =>
+      current?.id === id ? { ...current, is_public: isPublic, share_token: shareToken ?? null } : current
     );
+    setProjectsList((prev) => {
+      const nextProjects = prev.map((p) =>
+        p.id === id ? { ...p, is_public: isPublic, share_token: shareToken ?? null } : p
+      );
+      if (user?.id) writeProjectsCache(user.id, nextProjects);
+      return nextProjects;
+    });
   };
 
   const hasActiveFilters = searchTerm.trim().length > 0 || typeFilter !== 'all' || statusFilter !== 'all';
@@ -597,7 +655,8 @@ function ProjectTableRow({
 
   const handleCopyLink = async (e: React.MouseEvent) => {
     e.stopPropagation();
-    const shareUrl = `${window.location.origin}/share/${project.id}`;
+    const shareId = project.share_token || project.id;
+    const shareUrl = `${window.location.origin}/share/${shareId}`;
     try {
       await navigator.clipboard.writeText(shareUrl);
       setIsCopied(true);
@@ -848,7 +907,7 @@ function ProjectShareModal({
 }: {
   project: Project | null;
   onClose: () => void;
-  onUpdatePublicStatus?: (id: string, isPublic: boolean) => void;
+  onUpdatePublicStatus?: (id: string, isPublic: boolean, shareToken?: string | null) => void;
 }) {
   const [isPublic, setIsPublic] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -863,19 +922,29 @@ function ProjectShareModal({
 
   if (!project) return null;
 
-  const shareUrl = typeof window !== 'undefined' ? `${window.location.origin}/share/${project.id}` : '';
+  const shareId = project.share_token || project.id;
+  const shareUrl = typeof window !== 'undefined' ? `${window.location.origin}/share/${shareId}` : '';
 
   const handleTogglePublic = async (checked: boolean) => {
     setIsPublic(checked);
     setIsUpdating(true);
     try {
       if (!project.isMockExample) {
-        await supabase
-          .from('business_canvas')
-          .update({ is_public: checked })
-          .eq('id', project.id);
+        const response = await fetch('/api/projects/publish', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ projectId: project.id, isPublic: checked }),
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to update public status');
+        }
+
+        const result = (await response.json()) as { shareToken?: string | null };
+        onUpdatePublicStatus?.(project.id, checked, result.shareToken ?? null);
+      } else {
+        onUpdatePublicStatus?.(project.id, checked);
       }
-      onUpdatePublicStatus?.(project.id, checked);
     } catch (err) {
       console.error('Failed to update public status:', err);
     } finally {

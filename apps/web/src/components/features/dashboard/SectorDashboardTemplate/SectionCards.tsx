@@ -45,29 +45,23 @@ export const LightCard: FC<{ section: SectorSection }> = ({ section }) => (
 );
 
 export const DarkCard: FC<{ section: SectorSection }> = ({ section }) => (
-  <Card className="relative overflow-hidden border-white/10 bg-gradient-to-br from-slate-900 to-slate-800 shadow-lg">
-    <div className="pointer-events-none absolute -left-20 -top-20 size-[280px] rounded-full bg-primary/20 blur-[80px]" />
-    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:28px_28px]" />
-    
-    <div className="relative z-10">
-      <CardHeader className="pb-4">
+  <Card className="relative overflow-hidden border-primary/20 bg-primary/5 shadow-sm transition-all duration-300 hover:shadow-md">
+    <div className="relative z-10 p-6 md:p-8">
+      <CardHeader className="p-0 pb-4">
         <div className="flex items-start gap-4 dir-rtl">
-          <div className="relative shrink-0">
-            <div className="h-11 w-1 rounded bg-primary" />
-            <div className="absolute inset-0 rounded bg-primary blur-[6px]" />
-          </div>
+          <div className="h-9 w-1.5 shrink-0 rounded-full bg-primary" />
           <div className="flex-1">
-            <CardTitle className="text-2xl font-extrabold leading-tight tracking-tight text-slate-50">{section.title}</CardTitle>
+            <CardTitle className="text-2xl font-black leading-tight tracking-tight text-foreground">{section.title}</CardTitle>
             {section.subtitle && (
-              <p className="mt-1 text-[10px] font-bold uppercase tracking-widest text-primary/80">
+              <p className="mt-1 text-xs font-bold uppercase tracking-wider text-primary">
                 {section.subtitle}
               </p>
             )}
           </div>
         </div>
       </CardHeader>
-      <CardContent className="dir-rtl">
-        {typeof section.content === 'string' ? parseContent(section.content, true) : section.content}
+      <CardContent className="p-0 dir-rtl">
+        {typeof section.content === 'string' ? parseContent(section.content, false) : section.content}
       </CardContent>
     </div>
   </Card>

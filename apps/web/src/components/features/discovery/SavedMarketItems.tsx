@@ -140,8 +140,9 @@ export const SavedMarketItems: React.FC<SavedMarketItemsProps> = ({ setActiveTab
         try {
           const { data, error } = await supabase
             .from('business_canvas')
-            .select('id, project_title, canvas_data->profile, canvas_data->metrics, updated_at')
+            .select('id, project_title, sector_label, project_summary, readiness_score, canvas_data->profile, canvas_data->metrics, updated_at')
             .eq('user_id', user.id)
+            .is('deleted_at', null)
             .in('id', bookmarkedProjectIds);
 
           if (!error && data) {
@@ -154,10 +155,10 @@ export const SavedMarketItems: React.FC<SavedMarketItemsProps> = ({ setActiveTab
                 sourcePageLabel: 'خطط ومشاريع الأعمال',
                 targetTab: 'editor',
                 title: row.project_title || 'مشروع بدون اسم',
-                summary: profile?.summary || 'دراسة جدوى ونموذج عمل قابل للتعديل المباشر.',
-                sector: profile?.sectorLabel || 'قطاع الأعمال',
-                scoreLabel: `${metrics?.readinessScore || 85}%`,
-                scoreValue: metrics?.readinessScore || 85,
+                summary: row.project_summary || profile?.summary || 'دراسة جدوى ونموذج عمل قابل للتعديل المباشر.',
+                sector: row.sector_label || profile?.sectorLabel || 'قطاع الأعمال',
+                scoreLabel: `${row.readiness_score ?? metrics?.readinessScore ?? 85}%`,
+                scoreValue: row.readiness_score ?? metrics?.readinessScore ?? 85,
                 savedDate: new Date(row.updated_at).toLocaleDateString('ar-SA'),
                 rawPayload: { isProject: true, id: row.id },
               });

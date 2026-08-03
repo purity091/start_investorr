@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import * as Lucide from "lucide-react";
 import { QUESTIONS } from "../constants";
 import * as Renderers from "../components/QuestionRenderer";
@@ -16,6 +16,7 @@ export const StrategicPulseForm = ({ onGenerate }: StrategicPulseFormProps) => {
   const [error, setError] = useState("");
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [loadingStep, setLoadingStep] = useState(0);
+  const analysisIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const currentQ = QUESTIONS[qIndex];
   const formProgress = Math.round((qIndex / QUESTIONS.length) * 100);
@@ -27,6 +28,14 @@ export const StrategicPulseForm = ({ onGenerate }: StrategicPulseFormProps) => {
     "توليد مخطط Gantt وتحديد المسار الحرج (Critical Path)...",
     "صياغة مصفوفة المخاطر وبروتوكولات الطوارئ (Plan B Engine)...",
   ];
+
+  useEffect(() => {
+    return () => {
+      if (analysisIntervalRef.current) {
+        clearInterval(analysisIntervalRef.current);
+      }
+    };
+  }, []);
 
   const handleAnswer = useCallback((val: any) => {
     let newAnswers = { ...answers };
@@ -46,12 +55,18 @@ export const StrategicPulseForm = ({ onGenerate }: StrategicPulseFormProps) => {
     } else {
       setIsAnalyzing(true);
       let i = 0;
-      const interval = setInterval(() => {
+      if (analysisIntervalRef.current) {
+        clearInterval(analysisIntervalRef.current);
+      }
+      analysisIntervalRef.current = setInterval(() => {
         i++;
         if (i < loadingMessages.length) {
           setLoadingStep(i);
         } else {
-          clearInterval(interval);
+          if (analysisIntervalRef.current) {
+            clearInterval(analysisIntervalRef.current);
+            analysisIntervalRef.current = null;
+          }
           onGenerate(newAnswers);
         }
       }, 1200);

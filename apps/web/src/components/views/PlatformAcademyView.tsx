@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect, useMemo } from 'react';
 import { 
   BookOpen, 
@@ -40,6 +42,7 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
+import { fetchPublicJson } from '@/lib/publicData';
 
 export interface AcademyCategory {
   id: string;
@@ -109,10 +112,14 @@ const getIconComponent = (iconName: string) => {
 
 type FontSizeOption = 'sm' | 'base' | 'lg' | 'xl';
 
-export const PlatformAcademyView: React.FC<{ setActiveTab?: (tab: string) => void }> = ({ setActiveTab }) => {
-  const [categories, setCategories] = useState<AcademyCategory[]>([]);
-  const [articlesIndex, setArticlesIndex] = useState<AcademyArticleIndexItem[]>([]);
-  const [isLoadingIndex, setIsLoadingIndex] = useState(true);
+export const PlatformAcademyView: React.FC<{
+  setActiveTab?: (tab: string) => void;
+  initialCategories?: AcademyCategory[];
+  initialArticles?: AcademyArticleIndexItem[];
+}> = ({ setActiveTab, initialCategories, initialArticles }) => {
+  const [categories, setCategories] = useState<AcademyCategory[]>(initialCategories || []);
+  const [articlesIndex, setArticlesIndex] = useState<AcademyArticleIndexItem[]>(initialArticles || []);
+  const [isLoadingIndex, setIsLoadingIndex] = useState(!initialCategories || !initialArticles);
 
   // View Mode: 'grid' vs 'reader'
   const [viewMode, setViewMode] = useState<'grid' | 'reader'>('grid');
@@ -167,25 +174,24 @@ export const PlatformAcademyView: React.FC<{ setActiveTab?: (tab: string) => voi
   useEffect(() => {
     const loadIndex = async () => {
       try {
-        setIsLoadingIndex(true);
-        const res = await fetch('/data/academy/index.json');
-        if (res.ok) {
-          const data = await res.json();
-          setCategories(data.categories || []);
-          setArticlesIndex(data.articles || []);
+        setIsLoadingIndex(!initialCategories || !initialArticles);
+        const data = initialCategories && initialArticles
+          ? { categories: initialCategories, articles: initialArticles }
+          : await fetchPublicJson<{ categories?: AcademyCategory[]; articles?: AcademyArticleIndexItem[] }>('/api/public-data/academy');
+        setCategories(data.categories || []);
+        setArticlesIndex(data.articles || []);
 
-          const initialExpandState: Record<string, boolean> = {};
-          (data.categories || []).forEach((cat: AcademyCategory) => {
-            initialExpandState[cat.id] = true;
-          });
-          setExpandedCategories(initialExpandState);
+        const initialExpandState: Record<string, boolean> = {};
+        (data.categories || []).forEach((cat: AcademyCategory) => {
+          initialExpandState[cat.id] = true;
+        });
+        setExpandedCategories(initialExpandState);
 
-          const params = new URLSearchParams(window.location.search);
-          const articleParam = params.get('article');
-          if (articleParam) {
-            setSelectedSlug(articleParam);
-            setViewMode('reader');
-          }
+        const params = new URLSearchParams(window.location.search);
+        const articleParam = params.get('article');
+        if (articleParam) {
+          setSelectedSlug(articleParam);
+          setViewMode('reader');
         }
       } catch (err) {
         console.error('Failed to load Academy Index JSON:', err);
@@ -195,7 +201,7 @@ export const PlatformAcademyView: React.FC<{ setActiveTab?: (tab: string) => voi
     };
 
     loadIndex();
-  }, []);
+  }, [initialArticles, initialCategories]);
 
   // 2. Load article JSON when selectedSlug changes and viewMode is 'reader'
   useEffect(() => {
@@ -204,18 +210,15 @@ export const PlatformAcademyView: React.FC<{ setActiveTab?: (tab: string) => voi
     const loadFullArticle = async () => {
       try {
         setIsLoadingArticle(true);
-        const res = await fetch(`/data/academy/articles/${selectedSlug}.json`);
-        if (res.ok) {
-          const articleData = await res.json();
-          setFullArticle(articleData);
-          if (articleData.tableOfContents && articleData.tableOfContents.length > 0) {
-            setActiveSectionId(articleData.tableOfContents[0].id);
-          }
-
-          const url = new URL(window.location.href);
-          url.searchParams.set('article', selectedSlug);
-          window.history.pushState({}, '', url.toString());
+        const articleData = await fetchPublicJson<AcademyFullArticle>(`/data/academy/articles/${selectedSlug}.json`);
+        setFullArticle(articleData);
+        if (articleData.tableOfContents && articleData.tableOfContents.length > 0) {
+          setActiveSectionId(articleData.tableOfContents[0].id);
         }
+
+        const url = new URL(window.location.href);
+        url.searchParams.set('article', selectedSlug);
+        window.history.pushState({}, '', url.toString());
       } catch (err) {
         console.error(`Failed to load article JSON for ${selectedSlug}:`, err);
       } finally {

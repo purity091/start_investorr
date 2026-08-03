@@ -42,6 +42,16 @@ export const AuthScreen: React.FC = () => {
     }
 
     try {
+      const limitResponse = await fetch('/api/auth/rate-limit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: mode, email }),
+      });
+
+      if (!limitResponse.ok) {
+        throw new Error('RATE_LIMITED');
+      }
+
       if (mode === 'login') {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
@@ -73,14 +83,16 @@ export const AuthScreen: React.FC = () => {
       }
     } catch (err: any) {
       console.error(err);
-      if (err.message === 'Invalid login credentials') {
+      if (err.message === 'RATE_LIMITED') {
+        setError('تم تجاوز عدد المحاولات المسموح. حاول لاحقاً.');
+      } else if (err.message === 'Invalid login credentials') {
         setError('بيانات الدخول غير صحيحة، تأكد من البريد وكلمة المرور.');
       } else if (err.message.includes('User already registered')) {
         setError('البريد الإلكتروني مسجل مسبقاً، يمكنك تسجيل الدخول مباشرة.');
       } else if (err.message.includes('Password should be at least')) {
         setError('كلمة المرور يجب أن تكون 6 أرقام أو أحرف على الأقل.');
       } else {
-        setError(err.message || 'حدث خطأ غير متوقع. يرجى المحاولة لاحقاً.');
+        setError('حدث خطأ غير متوقع. يرجى المحاولة لاحقاً.');
       }
     } finally {
       setIsLoading(false);
@@ -294,4 +306,3 @@ export const AuthScreen: React.FC = () => {
     </div>
   );
 };
-

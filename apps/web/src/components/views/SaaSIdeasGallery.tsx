@@ -1,54 +1,86 @@
+"use client";
+
 import React, { useState, useEffect, useMemo } from 'react';
 import { Badge } from '@/components/ui/Badge';
 import { ProvenProjectProfile } from '@/components/features/business/ProvenProjectProfile';
 import { ProvenProjectsTable } from '@/components/features/business/ProvenProjectsTable';
+import { fetchPublicJson } from '@/lib/publicData';
 import { CloudCog, Sparkles, TrendingDown, Loader2, Layers } from 'lucide-react';
 
-export const SaaSIdeasGallery: React.FC = () => {
-  const [projectsList, setProjectsList] = useState<any[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+interface SaaSIdeasGalleryProps {
+  setSubTabLabel?: (label: string | null) => void;
+  initialProjects?: any[];
+}
+
+export const SaaSIdeasGallery: React.FC<SaaSIdeasGalleryProps> = ({ setSubTabLabel, initialProjects }) => {
+  const [projectsList, setProjectsList] = useState<any[]>(initialProjects || []);
+  const [isLoading, setIsLoading] = useState(!initialProjects);
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
+
+  useEffect(() => {
+    if (selectedProject) {
+      setSubTabLabel?.(selectedProject.name || selectedProject.title || selectedProject.company?.name || null);
+    } else {
+      setSubTabLabel?.(null);
+    }
+  }, [selectedProject, setSubTabLabel]);
+
+  useEffect(() => {
+    const handleNavigation = () => {
+      const params = new URLSearchParams(window.location.search);
+      const projectId = params.get('project');
+      if (!projectId) {
+        setSelectedProject(null);
+      }
+    };
+
+    window.addEventListener('khotta:navigate', handleNavigation);
+    window.addEventListener('popstate', handleNavigation);
+    return () => {
+      window.removeEventListener('khotta:navigate', handleNavigation);
+      window.removeEventListener('popstate', handleNavigation);
+    };
+  }, []);
 
   useEffect(() => {
     const loadData = async () => {
       try {
-        setIsLoading(true);
-        // Load both proven and failed projects
-        const [provenRes, failedRes] = await Promise.all([
-          fetch('/data/proven-projects/index.json').catch(() => null),
-          fetch('/data/failed-projects/index.json').catch(() => null),
-        ]);
+        setIsLoading(!initialProjects);
+        let saasOnly = initialProjects;
 
-        let provenList: any[] = [];
-        let failedList: any[] = [];
+        if (!saasOnly) {
+          const [provenListResult, failedListResult] = await Promise.allSettled([
+            fetchPublicJson<any[]>('/api/public-data/proven-projects'),
+            fetchPublicJson<any[]>('/api/public-data/failed-projects'),
+          ]);
 
-        if (provenRes && provenRes.ok) {
-          provenList = await provenRes.json();
-          provenList = provenList.map((item) => ({ ...item, sourceStatus: 'proven' }));
+          let provenList: any[] = [];
+          let failedList: any[] = [];
+
+          if (provenListResult.status === 'fulfilled') {
+            provenList = provenListResult.value.map((item) => ({ ...item, sourceStatus: 'proven' }));
+          }
+
+          if (failedListResult.status === 'fulfilled') {
+            failedList = failedListResult.value.map((item) => ({ ...item, sourceStatus: 'failed' }));
+          }
+
+          const combined = [...provenList, ...failedList];
+          saasOnly = combined.filter((item) => {
+            const cat = (item.category || '').toLowerCase();
+            const bm = (item.company?.business_model || '').toLowerCase();
+            const name = (item.name || '').toLowerCase();
+            const headline = (item.headline || '').toLowerCase();
+            return (
+              cat.includes('saas') ||
+              bm.includes('saas') ||
+              name.includes('saas') ||
+              headline.includes('saas') ||
+              cat.includes('برمجيات') ||
+              cat.includes('اشتراك')
+            );
+          });
         }
-
-        if (failedRes && failedRes.ok) {
-          failedList = await failedRes.json();
-          failedList = failedList.map((item) => ({ ...item, sourceStatus: 'failed' }));
-        }
-
-        const combined = [...provenList, ...failedList];
-
-        // Filter companies that are SaaS
-        const saasOnly = combined.filter((item) => {
-          const cat = (item.category || '').toLowerCase();
-          const bm = (item.company?.business_model || '').toLowerCase();
-          const name = (item.name || '').toLowerCase();
-          const headline = (item.headline || '').toLowerCase();
-          return (
-            cat.includes('saas') ||
-            bm.includes('saas') ||
-            name.includes('saas') ||
-            headline.includes('saas') ||
-            cat.includes('برمجيات') ||
-            cat.includes('اشتراك')
-          );
-        });
 
         setProjectsList(saasOnly);
 
@@ -59,11 +91,8 @@ export const SaaSIdeasGallery: React.FC = () => {
         if (projectId) {
           const matchedItem = saasOnly.find((p) => (p.slug || p.id) === projectId);
           const folder = matchedItem?.sourceStatus === 'failed' ? 'failed-projects' : 'proven-projects';
-          const detailRes = await fetch(`/data/${folder}/${projectId}.json`);
-          if (detailRes.ok) {
-            const projectDetails = await detailRes.json();
-            setSelectedProject(projectDetails);
-          }
+          const projectDetails = await fetchPublicJson<any>(`/data/${folder}/${projectId}.json`);
+          setSelectedProject(projectDetails);
         }
       } catch (err) {
         console.error("Failed to load SaaS projects", err);
@@ -73,7 +102,7 @@ export const SaaSIdeasGallery: React.FC = () => {
     };
     
     loadData();
-  }, []);
+  }, [initialProjects]);
 
   const provenCount = useMemo(() => projectsList.filter((p) => p.sourceStatus === 'proven').length, [projectsList]);
   const failedCount = useMemo(() => projectsList.filter((p) => p.sourceStatus === 'failed').length, [projectsList]);
@@ -90,15 +119,12 @@ export const SaaSIdeasGallery: React.FC = () => {
     try {
       const projectId = project.slug || project.id;
       const folder = project.sourceStatus === 'failed' ? 'failed-projects' : 'proven-projects';
-      const detailRes = await fetch(`/data/${folder}/${projectId}.json`);
-      if (detailRes.ok) {
-        const fullProject = await detailRes.json();
-        setSelectedProject(fullProject);
-        
-        const url = new URL(window.location.href);
-        url.searchParams.set('project', projectId);
-        window.history.pushState({}, '', url.toString());
-      }
+      const fullProject = await fetchPublicJson<any>(`/data/${folder}/${projectId}.json`);
+      setSelectedProject(fullProject);
+
+      const url = new URL(window.location.href);
+      url.searchParams.set('project', projectId);
+      window.history.pushState({}, '', url.toString());
     } catch (err) {
       console.error("Failed to fetch project details", err);
     }

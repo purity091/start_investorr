@@ -58,7 +58,7 @@ const discoveryItems: NavItem[] = [
   { icon: TrendingDown, label: 'شركات فشلت', tab: 'failed-projects' },
   { icon: CloudCog, label: 'أفكار SaaS', tab: 'saas-ideas' },
   { icon: Settings2, label: 'أفكار Micro-SaaS', tab: 'micro-saas-ideas' },
-  { icon: Compass, label: 'استكشاف السوق', tab: 'market-discovery', active: (tab) => tab === 'market-discovery' || tab.endsWith('-dashboard') },
+  { icon: Compass, label: 'استكشاف قطاعات السوق', tab: 'market-discovery', active: (tab) => tab === 'market-discovery' || tab.endsWith('-dashboard') },
   { icon: Activity, label: 'المشكلات والفرص', tab: 'problem-engine', active: (tab) => tab === 'problem-engine' || tab === 'problem-detail' },
 ];
 

@@ -1,9 +1,7 @@
-"use client";
-import dynamic from 'next/dynamic';
+import { AppClientShell } from "./AppClientShell";
 
-// Dynamically import the App component to avoid SSR issues with browser APIs (window/localStorage)
-const App = dynamic(() => import('../../App'), { ssr: false });
+export const dynamic = "force-dynamic";
 
-export default function Home() {
-  return <App />;
+export default function AppRoutePage() {
+  return <AppClientShell />;
 }

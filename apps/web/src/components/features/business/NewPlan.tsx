@@ -527,8 +527,9 @@ function ModeProjectsSection({ mode }: { mode: IntroMode }) {
       try {
         const { data, error } = await supabase
           .from('business_canvas')
-          .select('id, project_title, canvas_data, updated_at')
+          .select('id, project_title, sector_label, current_stage, readiness_score, canvas_data, updated_at')
           .eq('user_id', user.id)
+          .is('deleted_at', null)
           .order('updated_at', { ascending: false });
 
         if (error) throw error;
@@ -538,9 +539,9 @@ function ModeProjectsSection({ mode }: { mode: IntroMode }) {
           realProjects = data.map((row) => ({
             id: row.id,
             name: row.project_title || 'مشروع بدون اسم',
-            sector: row.canvas_data?.profile?.sectorLabel || 'غير محدد',
-            status: row.canvas_data?.currentStage === 'execution' ? 'ready' : 'review',
-            progress: row.canvas_data?.metrics?.readinessScore || 0,
+            sector: row.sector_label || row.canvas_data?.profile?.sectorLabel || 'غير محدد',
+            status: (row.current_stage || row.canvas_data?.currentStage) === 'execution' ? 'ready' : 'review',
+            progress: row.readiness_score ?? row.canvas_data?.metrics?.readinessScore ?? 0,
             updated: new Date(row.updated_at).toLocaleDateString('ar-SA'),
           }));
         }
@@ -557,8 +558,26 @@ function ModeProjectsSection({ mode }: { mode: IntroMode }) {
     fetchProjects();
   }, [mode, user]);
 
-  const handleDelete = (id: string, name: string) => {
+  const handleDelete = async (id: string, name: string) => {
     if (window.confirm(`هل أنت متأكد من رغبتك في حذف مشروع "${name}"؟`)) {
+      if (!id.startsWith('example')) {
+        const {
+          data: { user },
+        } = await supabase.auth.getUser();
+
+        const { error } = await supabase
+          .from('business_canvas')
+          .update({ deleted_at: new Date().toISOString() })
+          .eq('id', id)
+          .eq('user_id', user?.id ?? '');
+
+        if (error) {
+          console.error('Error deleting project:', error);
+          alert('حدث خطأ أثناء حذف المشروع.');
+          return;
+        }
+      }
+
       setProjectsList((prev) => prev.filter((p) => p.id !== id));
       SECTION_PROJECTS[mode] = SECTION_PROJECTS[mode].filter((p) => p.id !== id);
     }
@@ -573,9 +592,20 @@ function ModeProjectsSection({ mode }: { mode: IntroMode }) {
       
       const makePublic = window.confirm(`هل ترغب في إنشاء رابط عام (Public Link) لمشروع "${name}" لتمكين الآخرين من مشاهدته؟`);
       if (makePublic) {
-        await supabase.from('business_canvas').update({ is_public: true }).eq('id', id);
+        const response = await fetch('/api/projects/publish', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ projectId: id, isPublic: true }),
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to publish project');
+        }
+
+        const result = (await response.json()) as { shareToken?: string | null };
+        const shareId = result.shareToken || id;
         
-        const shareUrl = `${window.location.origin}/share/${id}`;
+        const shareUrl = `${window.location.origin}/share/${shareId}`;
         if (navigator.share) {
           navigator.share({
             title: name,

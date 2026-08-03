@@ -1,15 +1,20 @@
 import { Problem } from '../components/features/discovery/ProblemOpportunityEngine/types';
+import { fetchPublicJson } from '@/lib/publicData';
 
 export const loadDynamicOpportunities = async (): Promise<Problem[]> => {
   try {
-    const res = await fetch('/data/opportunities_index.json');
-    if (!res.ok) {
-      throw new Error(`Failed to fetch opportunities: ${res.status}`);
-    }
-    const opportunities: Problem[] = await res.json();
-    return opportunities;
+    return await fetchPublicJson<Problem[]>('/data/opportunities/index.json');
   } catch (error) {
     console.error("Failed to load opportunities:", error);
+    return [];
+  }
+};
+
+export const loadDynamicOpportunitiesBySector = async (sectorId: string): Promise<Problem[]> => {
+  try {
+    return await fetchPublicJson<Problem[]>(`/data/opportunities/by-sector/${sectorId}.json`);
+  } catch (error) {
+    console.error("Failed to load sector opportunities:", error);
     return [];
   }
 };

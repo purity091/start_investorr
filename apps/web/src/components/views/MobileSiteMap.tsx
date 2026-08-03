@@ -46,7 +46,7 @@ const groups = [
     title: 'أفكار مشاريع',
     description: 'استكشاف السوق والمشكلات والفرص قبل اختيار الاتجاه.',
     items: [
-      { label: 'استكشاف السوق', id: 'market-discovery', icon: Compass },
+      { label: 'استكشاف قطاعات السوق', id: 'market-discovery', icon: Compass },
       { label: 'المشكلات والفرص', id: 'problem-engine', icon: Lightbulb },
       { label: 'رادار اليونيكورن', id: 'unicorn-benchmark', icon: Radar },
     ],

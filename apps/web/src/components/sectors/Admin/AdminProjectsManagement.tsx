@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { supabase } from '@/lib/supabase';
+import { withSupabaseRetry } from '@/lib/supabaseRetry';
 import { 
   FileText, Search, Filter, Edit2, Trash2, Eye, 
   MoreVertical, Clock, CheckCircle2, AlertCircle, PlayCircle,
@@ -48,6 +49,14 @@ const MOCK_PROJECTS: AdminProject[] = Array.from({ length: 36 }).map((_, i) => (
   status: (['active', 'completed', 'active', 'postponed', 'review', 'active'][i % 6]) as ProjectStatus,
 }));
 
+const normalizeProjectSector = (sector: string | null | undefined): ProjectSector => {
+  if (sector && Object.prototype.hasOwnProperty.call(SECTORS, sector)) {
+    return sector as ProjectSector;
+  }
+
+  return 'other';
+};
+
 export const AdminProjectsManagement: React.FC = () => {
   const [projects, setProjects] = useState<AdminProject[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -55,27 +64,38 @@ export const AdminProjectsManagement: React.FC = () => {
   const [sectorFilter, setSectorFilter] = useState<ProjectSector | 'all'>('all');
   const [statusFilter, setStatusFilter] = useState<ProjectStatus | 'all'>('all');
   const [currentPage, setCurrentPage] = useState(1);
+  const [totalProjects, setTotalProjects] = useState(0);
   const itemsPerPage = 9;
 
   React.useEffect(() => {
     const fetchProjects = async () => {
       setIsLoading(true);
       try {
-        const { data: canvasData, error: canvasError } = await supabase
-          .from('business_canvas')
-          .select('id, user_id, project_title, created_at, canvas_data->execution')
-          .order('created_at', { ascending: false })
-          .limit(100);
+        const from = (currentPage - 1) * itemsPerPage;
+        const to = from + itemsPerPage - 1;
+
+        const { data: canvasData, error: canvasError, count } = await withSupabaseRetry(() =>
+          supabase
+            .from('business_canvas')
+            .select('id, user_id, project_title, sector_label, current_stage, journey_progress, created_at, canvas_data->execution', { count: 'exact' })
+            .is('deleted_at', null)
+            .order('created_at', { ascending: false })
+            .range(from, to)
+        );
 
         if (canvasError) throw canvasError;
+
+        setTotalProjects(count ?? 0);
 
         if (canvasData && canvasData.length > 0) {
           const userIds = [...new Set(canvasData.map((p) => p.user_id))];
           
-          const { data: profilesData } = await supabase
-            .from('profiles')
-            .select('id, full_name, email')
-            .in('id', userIds);
+          const { data: profilesData } = await withSupabaseRetry(() =>
+            supabase
+              .from('profiles')
+              .select('id, full_name, email')
+              .in('id', userIds)
+          );
 
           const profilesMap = new Map(profilesData?.map((p) => [p.id, p]) || []);
 
@@ -84,20 +104,22 @@ export const AdminProjectsManagement: React.FC = () => {
             const ownerName = profile?.full_name || profile?.email?.split('@')[0] || 'مستخدم مجهول';
             const canvasPayload = p.canvas_data || {};
             // Try to infer status and progress from the saved canvas data (or default)
-            const progress = canvasPayload.execution?.kpis ? 50 : 20; 
+            const progress = p.journey_progress ?? (canvasPayload.execution?.kpis ? 50 : 20); 
             
             return {
               id: p.id,
               name: p.project_title || 'مشروع بدون عنوان',
               owner: ownerName,
               ownerAvatar: `https://api.dicebear.com/7.x/notionists/svg?seed=${p.user_id}&backgroundColor=f1f5f9`,
-              sector: 'tech', // Default as we don't store sector at root yet
+              sector: normalizeProjectSector(p.sector_label),
               createdAt: new Date(p.created_at).toISOString().split('T')[0],
               progress: progress,
-              status: 'active',
+              status: p.current_stage === 'execution' ? 'active' : 'review',
             };
           });
           setProjects(mappedProjects);
+        } else {
+          setProjects([]);
         }
       } catch (err) {
         console.error('Error fetching admin projects:', err);
@@ -106,7 +128,7 @@ export const AdminProjectsManagement: React.FC = () => {
       }
     };
     fetchProjects();
-  }, []);
+  }, [currentPage]);
 
   // Filter Logic
   const filteredProjects = useMemo(() => {
@@ -119,14 +141,15 @@ export const AdminProjectsManagement: React.FC = () => {
   }, [projects, searchQuery, sectorFilter, statusFilter]);
 
   // Pagination Logic
-  const totalPages = Math.ceil(filteredProjects.length / itemsPerPage);
-  const paginatedProjects = filteredProjects.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+  const hasLocalFilters = searchQuery.trim().length > 0 || sectorFilter !== 'all' || statusFilter !== 'all';
+  const totalPages = Math.max(1, Math.ceil((hasLocalFilters ? filteredProjects.length : totalProjects) / itemsPerPage));
+  const paginatedProjects = filteredProjects;
 
   // Actions
   const handleDelete = async (id: string, name: string) => {
     if(window.confirm(`هل أنت متأكد من حذف مشروع "${name}"؟ هذا الإجراء نهائي ولا يمكن التراجع عنه.`)) {
       try {
-        await supabase.from('business_canvas').delete().eq('id', id);
+        await supabase.from('business_canvas').update({ deleted_at: new Date().toISOString() }).eq('id', id);
         setProjects(projects.filter(p => p.id !== id));
       } catch (err) {
         console.error('Error deleting project', err);
@@ -330,7 +353,7 @@ export const AdminProjectsManagement: React.FC = () => {
       {totalPages > 1 && (
         <div className="flex items-center justify-between border-t border-slate-200/50 pt-8 mt-4">
            <p className="text-sm font-bold text-slate-500">
-             عرض <span className="text-slate-900 mx-1">{paginatedProjects.length}</span> من <span className="text-slate-900 mx-1">{filteredProjects.length}</span> مشروع
+             عرض <span className="text-slate-900 mx-1">{paginatedProjects.length}</span> من <span className="text-slate-900 mx-1">{hasLocalFilters ? filteredProjects.length : totalProjects}</span> مشروع
            </p>
            <div className="flex items-center gap-2">
              <button 

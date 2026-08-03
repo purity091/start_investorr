@@ -10,6 +10,9 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
+    "check:env": "node scripts/check-env.mjs",
+    "load:test": "k6 run load-tests/k6-smoke.js",
+    "split:opportunities": "node scripts/split-opportunities-index.mjs",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {

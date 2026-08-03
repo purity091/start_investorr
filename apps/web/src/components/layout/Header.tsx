@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  AlertCircle,
   Bell,
   Briefcase,
   CheckCircle2,
@@ -11,6 +12,7 @@ import {
   Loader2,
   LogOut,
   MessageSquarePlus,
+  Clock,
   User as UserIcon,
 } from 'lucide-react';
 
@@ -49,7 +51,7 @@ const TAB_LABELS: Record<string, string> = {
   'new-plan-pro': 'النموذج الاحترافي',
   'new-plan-mit24': 'MIT 24 Steps',
   'new-plan-bmc': 'بناء نموذج العمل BMC',
-  'market-discovery': 'استكشاف السوق',
+  'market-discovery': 'استكشاف قطاعات السوق',
   'problem-engine': 'المشكلات والفرص',
   'unicorn-benchmark': 'رادار اليونيكورن',
   'brand-identity': 'الهوية البصرية',
@@ -129,22 +131,22 @@ export const Header: React.FC<HeaderProps> = ({
   user,
 }) => {
   const { signOut } = useAuth();
-  const { isSaving, activeProjectId } = useProjectWorkspace();
+  const { isSaving, syncStatus, activeProjectId, flushWorkspace } = useProjectWorkspace();
   const title = TAB_LABELS[activeTab] || subTabLabel || 'لوحة العمل';
   const contextBadge = getContextBadge(activeTab);
   const [isFeedbackOpen, setIsFeedbackOpen] = React.useState(false);
   const [showSaved, setShowSaved] = React.useState(false);
   const prevSaving = React.useRef(false);
 
-  // Show "محفوظ" briefly after isSaving goes false
+  // Show the saved indicator briefly after a remote sync completes.
   React.useEffect(() => {
-    if (prevSaving.current && !isSaving && activeProjectId) {
+    if (prevSaving.current && !isSaving && activeProjectId && syncStatus === 'saved') {
       setShowSaved(true);
       const timer = setTimeout(() => setShowSaved(false), 2000);
       return () => clearTimeout(timer);
     }
     prevSaving.current = isSaving;
-  }, [isSaving, activeProjectId]);
+  }, [isSaving, activeProjectId, syncStatus]);
 
   React.useEffect(() => {
     const hasPrompted = sessionStorage.getItem('platform_feedback_prompted');
@@ -172,16 +174,49 @@ export const Header: React.FC<HeaderProps> = ({
           </SidebarTrigger>
           <h1 className="truncate text-sm font-semibold text-foreground sm:text-base">{title}</h1>
           {/* Auto-save indicator */}
-          {isSaving && (
+          {syncStatus === 'saving' && (
             <span className="hidden sm:flex items-center gap-1.5 text-xs text-muted-foreground">
               <Loader2 className="size-3 animate-spin" />
-              جاري الحفظ...
+              جاري مزامنة الحفظ...
             </span>
           )}
-          {!isSaving && showSaved && (
+          {syncStatus === 'pending' && (
+            <button
+              type="button"
+              onClick={() => void flushWorkspace()}
+              className="hidden sm:flex items-center gap-1.5 text-xs text-amber-700 hover:text-amber-800"
+              title="مزامنة التعديلات الآن"
+            >
+              <Clock className="size-3" />
+              محفوظ محلياً
+            </button>
+          )}
+          {syncStatus === 'failed' && (
+            <button
+              type="button"
+              onClick={() => void flushWorkspace()}
+              className="hidden sm:flex items-center gap-1.5 text-xs text-destructive hover:underline"
+              title="إعادة محاولة الحفظ"
+            >
+              <AlertCircle className="size-3" />
+              فشل الحفظ
+            </button>
+          )}
+          {syncStatus === 'conflict' && (
+            <button
+              type="button"
+              onClick={() => void flushWorkspace()}
+              className="hidden sm:flex items-center gap-1.5 text-xs text-amber-700 hover:underline"
+              title="تم اكتشاف تعارض مع نسخة أحدث"
+            >
+              <AlertCircle className="size-3" />
+              تعارض نسخة
+            </button>
+          )}
+          {syncStatus === 'saved' && showSaved && (
             <span className="hidden sm:flex items-center gap-1.5 text-xs text-emerald-600">
               <CheckCircle2 className="size-3" />
-              محفوظ
+              تمت المزامنة
             </span>
           )}
         </div>

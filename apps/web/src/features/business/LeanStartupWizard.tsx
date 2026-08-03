@@ -239,7 +239,7 @@ export default function LeanStartupWizard() {
             </Card>
             <div className="flex justify-between">
               <Button onClick={prevStep} variant="ghost">السابق</Button>
-              <Button onClick={generateHypotheses} size="lg">توليد الفرضيات <Zap className="size-4 mr-2" /></Button>
+              <Button onClick={generateHypotheses} size="lg">بناء الفرضيات <Zap className="size-4 mr-2" /></Button>
             </div>
           </div>
         )}
@@ -503,7 +503,7 @@ export default function LeanStartupWizard() {
             <div className="space-y-2 mb-8 text-center">
               <PieChart className="size-10 text-primary mx-auto mb-2" />
               <h2 className="text-3xl font-black">المرحلة السابعة: تحليل النتائج</h2>
-              <p className="text-muted-foreground">حساب معدلات النجاح وتوليد الاستنتاجات آلياً.</p>
+              <p className="text-muted-foreground">حساب معدلات النجاح واستخلاص النتائج وفق قواعد محددة.</p>
             </div>
 
             <div className="space-y-4">

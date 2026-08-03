@@ -1,7 +1,7 @@
 import React, { type FC } from 'react';
-import { Card, CardContent } from '../../../ui/Card';
+import { Card } from '../../../ui/Card';
 import { Badge } from '../../../ui/Badge';
-import { cn } from '../../../../lib/utils';
+import { BookOpen, Sparkles, Tag, TrendingUp, BrainCircuit, Video, CheckCircle2 } from 'lucide-react';
 
 export const BottomRow: FC<{
   definition?: string;
@@ -13,36 +13,63 @@ export const BottomRow: FC<{
   const hasInsights = industryInsights.length > 0;
   if (!hasDefinition && !hasInsights && tags.length === 0) return null;
 
+  const cleanTitle = title.replace(/^(قطاع|صناعة)\s*/, '');
+
+  const getInsightIcon = (index: number) => {
+    switch (index % 3) {
+      case 0: return BrainCircuit;
+      case 1: return TrendingUp;
+      case 2: return Video;
+      default: return Sparkles;
+    }
+  };
+
   return (
-    <div className={cn("grid gap-8 dir-rtl", hasDefinition && hasInsights ? "lg:grid-cols-[2fr_1fr]" : "grid-cols-1")}>
+    <div id="definition-section" data-section="definition" className="space-y-6 dir-rtl">
+      {/* Definition Box */}
       {hasDefinition && (
-        <Card
-          id="definition-section"
-          data-section="definition"
-          className="border-border bg-background p-8"
-        >
-          <div className="relative z-10">
-            <div className="mb-8 flex items-center gap-4">
-              <div className="h-8 w-1 shrink-0 rounded bg-primary" />
-              <h3 className="m-0 text-2xl font-black tracking-tight text-foreground">
-                تعريف {title.replace(/^(قطاع|صناعة)\s*/, '')}
-              </h3>
-            </div>
-            <p className="m-0 text-base font-medium leading-relaxed text-muted-foreground">{definition}</p>
-            {tags.length > 0 && (
-              <div className="mt-10">
-                <div className="mb-4 flex items-center gap-3">
-                  <div className="h-px w-6 bg-border" />
-                  <span className="text-[11px] font-black uppercase tracking-widest text-muted-foreground">الموضوعات المرتبطة</span>
+        <Card className="border-border bg-card p-6 rounded-xl shadow-xs">
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border pb-4">
+              <div className="flex items-center gap-3">
+                <div className="flex size-9 items-center justify-center rounded-lg bg-muted text-primary">
+                  <BookOpen size={18} strokeWidth={2} />
                 </div>
-                <div className="flex flex-wrap gap-2.5">
-                  {tags.map((tag, i) => (
+                <div>
+                  <h3 className="m-0 text-xl font-bold tracking-tight text-foreground">
+                    تعريف قطاع {cleanTitle}
+                  </h3>
+                  <p className="text-xs text-muted-foreground font-medium mt-0.5">
+                    النطاق التشغيلي وسياق السوق
+                  </p>
+                </div>
+              </div>
+              
+              <Badge variant="outline" className="w-fit text-xs font-semibold px-2.5 py-1">
+                سياق القطاع
+              </Badge>
+            </div>
+
+            <div className="p-4 bg-muted/30 rounded-lg border border-border">
+              <p className="m-0 text-sm md:text-base font-medium leading-relaxed text-foreground">
+                {definition}
+              </p>
+            </div>
+
+            {tags.length > 0 && (
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 pt-1">
+                <div className="flex items-center gap-1.5 text-xs font-semibold text-muted-foreground shrink-0">
+                  <Tag size={13} className="text-primary" />
+                  <span>الموضوعات:</span>
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {tags.map((tag) => (
                     <Badge 
                       key={tag} 
                       variant="secondary"
-                      className="gap-1.5 rounded-xl border-border bg-muted/30 px-3.5 py-1.5 text-[13px] font-bold text-muted-foreground hover:bg-muted"
+                      className="gap-1 rounded-md px-2.5 py-0.5 text-xs font-medium"
                     >
-                      <span className={i === 0 ? "text-primary" : "text-muted-foreground/60"}>#</span>
+                      <span className="text-muted-foreground">#</span>
                       {tag}
                     </Badge>
                   ))}
@@ -52,21 +79,58 @@ export const BottomRow: FC<{
           </div>
         </Card>
       )}
+
+      {/* Insights Cards Grid */}
       {hasInsights && (
-        <Card 
-          id="insights-section" 
-          data-section="insights-bottom" 
-          className="flex flex-col border-border bg-background p-8"
-        >
-          <h3 className="m-0 mb-6 text-2xl font-black tracking-tight text-foreground">أبرز النقاط</h3>
-          <ul className="m-0 flex flex-1 flex-col gap-5 p-0 list-none">
-            {industryInsights.map((insight, idx) => (
-              <li key={idx} className="flex items-start gap-4">
-                <div className="mt-2 size-2 shrink-0 rounded-full bg-primary" />
-                <p className="m-0 text-[15px] font-medium leading-relaxed text-muted-foreground">{insight}</p>
-              </li>
-            ))}
-          </ul>
+        <Card className="border-border bg-card p-6 rounded-xl shadow-xs">
+          <div className="mb-5 flex items-center justify-between border-b border-border pb-4">
+            <div className="flex items-center gap-3">
+              <div className="flex size-9 items-center justify-center rounded-lg bg-muted text-primary">
+                <Sparkles size={18} strokeWidth={2} />
+              </div>
+              <div>
+                <h3 className="m-0 text-xl font-bold tracking-tight text-foreground">
+                  أبرز الاتجاهات والشواهد الرئيسية
+                </h3>
+                <p className="text-xs text-muted-foreground font-medium mt-0.5">
+                  رؤى تحليلية تصف حركة السوق
+                </p>
+              </div>
+            </div>
+            <Badge variant="secondary" className="hidden sm:inline-flex text-xs font-medium">
+              {industryInsights.length} اتجاهات
+            </Badge>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {industryInsights.map((insight, idx) => {
+              const Icon = getInsightIcon(idx);
+              return (
+                <div 
+                  key={idx}
+                  className="flex flex-col justify-between p-4 rounded-lg bg-muted/20 border border-border space-y-3"
+                >
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <div className="flex size-8 items-center justify-center rounded-md bg-background text-primary border border-border">
+                        <Icon size={16} strokeWidth={2} />
+                      </div>
+                      <span className="text-xs font-bold text-muted-foreground/60">
+                        0{idx + 1}
+                      </span>
+                    </div>
+                    <p className="m-0 text-xs md:text-sm font-medium leading-relaxed text-foreground">
+                      {insight}
+                    </p>
+                  </div>
+                  <div className="pt-2 border-t border-border/50 flex items-center gap-1.5 text-[11px] font-semibold text-primary">
+                    <CheckCircle2 size={12} />
+                    <span>مؤشر رائد</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </Card>
       )}
     </div>

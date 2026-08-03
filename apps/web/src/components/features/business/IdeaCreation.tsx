@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Activity, ArrowUpRight, CheckCircle2, DraftingCompass, RotateCcw, Rocket, Sparkles, Wand2 } from 'lucide-react';
 import { FamilyFriendsMode } from '../../views/FamilyFriendsMode';
 import { BusinessModelCanvas } from './BusinessModelCanvas';
@@ -43,6 +43,7 @@ export const IdeaCreation: React.FC<{
   });
   const [stages, setStages] = useState<CreationStage[]>(INITIAL_STAGES);
   const [activeStageIndex, setActiveStageIndex] = useState(0);
+  const resultTimeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (step !== 'processing') return;
@@ -56,13 +57,22 @@ export const IdeaCreation: React.FC<{
           setActiveStageIndex((value) => value + 1);
         } else {
           window.clearInterval(interval);
-          window.setTimeout(() => setStep('result'), 500);
+          resultTimeoutRef.current = window.setTimeout(() => {
+            setStep('result');
+            resultTimeoutRef.current = null;
+          }, 500);
         }
         return next;
       });
     }, 1200);
 
-    return () => window.clearInterval(interval);
+    return () => {
+      window.clearInterval(interval);
+      if (resultTimeoutRef.current) {
+        window.clearTimeout(resultTimeoutRef.current);
+        resultTimeoutRef.current = null;
+      }
+    };
   }, [activeStageIndex, step]);
 
   const resetFlow = () => {

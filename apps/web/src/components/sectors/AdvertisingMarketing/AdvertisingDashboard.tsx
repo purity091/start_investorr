@@ -8,7 +8,7 @@ const config: SectorDashboardProps = {
   subtitle: 'تحليل الإنفاق العالمي على الإعلانات، هيمنة الوسائل الرقمية، صعود Retail Media، وريادة الوكالات العالمية',
   icon: Megaphone,
   accent: 'blue',
-  pdfLabel: 'تقرير الإعلانات (PDF)',
+  pdfLabel: 'تصدير دراسة الإعلانات (PDF)',
 
   kpis: [
     { label: 'حصة الإعلان الرقمي', value: '50', unit: '%+', icon: Smartphone },
@@ -89,22 +89,21 @@ const config: SectorDashboardProps = {
       id: 'retail-media',
       title: 'Retail Media: الموجة القادمة',
       subtitle: 'Retail Media Wave',
-      dark: true,
       content: (
         <div className="space-y-6 text-right">
-          <p className="text-slate-300">
-            أصبح Retail Media (الإعلانات داخل لأسواق الإلكترونية) الأداة الأسرع نمواً. فمن خلال وضع الإعلانات في مواقع وتطبيقات البيع بالتجزئة، يصل المعلنون للمستهلكين في لحظة الشراء الفعلية، مما يجعلها وسيلة حاسمة للعلامات التجارية في ظل اختفاء ملفات تعريف الارتباط (Cookies).
+          <p className="text-muted-foreground leading-relaxed text-base font-medium">
+            أصبح Retail Media (الإعلانات داخل الأسواق الإلكترونية) الأداة الأسرع نمواً. فمن خلال وضع الإعلانات في مواقع وتطبيقات البيع بالتجزئة، يصل المعلنون للمستهلكين في لحظة الشراء الفعلية، مما يجعلها وسيلة حاسمة للعلامات التجارية في ظل اختفاء ملفات تعريف الارتباط (Cookies).
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-             <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                <ShoppingCart className="text-blue-400 mb-3" size={24} />
-                <p className="font-bold text-white mb-2">إعلانات أمازون</p>
-                <p className="text-sm text-slate-400">تقود أمازون هذا التحول عالمياً، حيث توفر للمعلنين وصولاً مباشراً لبيانات نية الشراء الحقيقية.</p>
+             <div className="bg-muted/20 border border-border/60 rounded-2xl p-6">
+                <ShoppingCart className="text-primary mb-3" size={24} />
+                <p className="font-bold text-foreground mb-2">إعلانات أمازون</p>
+                <p className="text-sm text-muted-foreground">تقود أمازون هذا التحول عالمياً، حيث توفر للمعلنين وصولاً مباشراً لبيانات نية الشراء الحقيقية.</p>
              </div>
-             <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                <TrendingUp className="text-blue-400 mb-3" size={24} />
-                <p className="font-bold text-white mb-2">فعالية الاستهداف</p>
-                <p className="text-sm text-slate-400">Retail Media توفر عائداً أعلى على الاستثمار لأنها تستهدف المتسوقين النشطين بدلاً من التصفح العشوائي.</p>
+             <div className="bg-muted/20 border border-border/60 rounded-2xl p-6">
+                <TrendingUp className="text-primary mb-3" size={24} />
+                <p className="font-bold text-foreground mb-2">فعالية الاستهداف</p>
+                <p className="text-sm text-slate-600">Retail Media توفر عائداً أعلى على الاستثمار لأنها تستهدف المتسوقين النشطين بدلاً من التصفح العشوائي.</p>
              </div>
           </div>
         </div>

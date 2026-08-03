@@ -1,5 +1,3 @@
-"use client";
-
 import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
@@ -21,6 +19,13 @@ import {
 } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import { Card, CardContent } from '@/components/ui/Card';
+
+export const revalidate = 86400;
+
+export const metadata = {
+  title: 'خطة | منصة بناء ودراسة المشاريع',
+  description: 'منصة عربية لبناء نماذج العمل، دراسة السوق، واستكشاف فرص المشاريع.',
+};
 
 export default function LandingPage() {
   return (
@@ -270,7 +275,7 @@ export default function LandingPage() {
             <div>
               <h4 className="text-white font-bold mb-6">المنتج</h4>
               <ul className="space-y-4">
-                <li><Link href="/market-discovery" className="text-slate-400 hover:text-primary transition-colors text-sm">استكشاف السوق</Link></li>
+                <li><Link href="/market-discovery" className="text-slate-400 hover:text-primary transition-colors text-sm">استكشاف قطاعات السوق</Link></li>
                 <li><Link href="/problem-engine" className="text-slate-400 hover:text-primary transition-colors text-sm">محرك المشكلات</Link></li>
                 <li><Link href="/brand-identity" className="text-slate-400 hover:text-primary transition-colors text-sm">بناء الهوية البصرية</Link></li>
                 <li><Link href="/unicorn-benchmark" className="text-slate-400 hover:text-primary transition-colors text-sm">رادار اليونيكورن</Link></li>

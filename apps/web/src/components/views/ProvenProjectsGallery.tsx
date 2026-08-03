@@ -1,21 +1,52 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
 import { Badge } from '@/components/ui/Badge';
 import { ProvenProjectProfile } from '@/components/features/business/ProvenProjectProfile';
 import { ProvenProjectsTable } from '@/components/features/business/ProvenProjectsTable';
+import { fetchPublicJson, prefetchPublicJson } from '@/lib/publicData';
 import { Loader2 } from 'lucide-react';
 
-export const ProvenProjectsGallery: React.FC = () => {
-  const [projectsList, setProjectsList] = useState<any[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+interface ProvenProjectsGalleryProps {
+  setSubTabLabel?: (label: string | null) => void;
+  initialProjects?: any[];
+}
+
+export const ProvenProjectsGallery: React.FC<ProvenProjectsGalleryProps> = ({ setSubTabLabel, initialProjects }) => {
+  const [projectsList, setProjectsList] = useState<any[]>(initialProjects || []);
+  const [isLoading, setIsLoading] = useState(!initialProjects);
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
+
+  useEffect(() => {
+    if (selectedProject) {
+      setSubTabLabel?.(selectedProject.name || selectedProject.title || selectedProject.company?.name || null);
+    } else {
+      setSubTabLabel?.(null);
+    }
+  }, [selectedProject, setSubTabLabel]);
+
+  useEffect(() => {
+    const handleNavigation = () => {
+      const params = new URLSearchParams(window.location.search);
+      const projectId = params.get('project');
+      if (!projectId) {
+        setSelectedProject(null);
+      }
+    };
+
+    window.addEventListener('khotta:navigate', handleNavigation);
+    window.addEventListener('popstate', handleNavigation);
+    return () => {
+      window.removeEventListener('khotta:navigate', handleNavigation);
+      window.removeEventListener('popstate', handleNavigation);
+    };
+  }, []);
 
   useEffect(() => {
     const loadData = async () => {
       try {
-        setIsLoading(true);
-        // Load the index of all projects
-        const res = await fetch('/data/proven-projects/index.json');
-        const list = await res.json();
+        setIsLoading(!initialProjects);
+        const list = initialProjects || await fetchPublicJson<any[]>('/api/public-data/proven-projects');
         setProjectsList(list);
 
         // Check if there is a specific project in the URL
@@ -23,11 +54,8 @@ export const ProvenProjectsGallery: React.FC = () => {
         const projectId = params.get('project');
         
         if (projectId) {
-          const detailRes = await fetch(`/data/proven-projects/${projectId}.json`);
-          if (detailRes.ok) {
-            const projectDetails = await detailRes.json();
-            setSelectedProject(projectDetails);
-          }
+          const projectDetails = await fetchPublicJson<any>(`/data/proven-projects/${projectId}.json`);
+          setSelectedProject(projectDetails);
         }
       } catch (err) {
         console.error("Failed to load projects", err);
@@ -37,7 +65,7 @@ export const ProvenProjectsGallery: React.FC = () => {
     };
     
     loadData();
-  }, []);
+  }, [initialProjects]);
 
   const handleProjectSelect = async (project: any | null) => {
     if (!project) {
@@ -51,15 +79,13 @@ export const ProvenProjectsGallery: React.FC = () => {
     // Since the table only has index data, we fetch full details when clicked
     try {
       const projectId = project.slug || project.id;
-      const detailRes = await fetch(`/data/proven-projects/${projectId}.json`);
-      if (detailRes.ok) {
-        const fullProject = await detailRes.json();
-        setSelectedProject(fullProject);
-        
-        const url = new URL(window.location.href);
-        url.searchParams.set('project', projectId);
-        window.history.pushState({}, '', url.toString());
-      }
+      const fullProject = await fetchPublicJson<any>(`/data/proven-projects/${projectId}.json`);
+      setSelectedProject(fullProject);
+      prefetchPublicJson('/api/public-data/failed-projects');
+
+      const url = new URL(window.location.href);
+      url.searchParams.set('project', projectId);
+      window.history.pushState({}, '', url.toString());
     } catch (err) {
       console.error("Failed to fetch project details", err);
     }

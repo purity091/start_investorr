@@ -162,7 +162,7 @@ export const StrategicPathFinder = ({ setActiveTab }: any) => {
                         تمت المواءمة الذكية
                       </h4>
                       <p className="text-slate-500 font-bold text-sm max-w-lg mx-auto leading-relaxed">
-                         بناءً على ملفك، ننصحك بالبدء بـ <span className="text-indigo-600 font-black">رادار استكشاف الأسواق</span> للوصول إلى أعلى إمكانات النمو.
+                         بناءً على ملفك، ننصحك بالبدء بـ <span className="text-indigo-600 font-black">استكشاف قطاعات السوق</span> للوصول إلى أعلى إمكانات النمو.
                       </p>
                    </div>
 

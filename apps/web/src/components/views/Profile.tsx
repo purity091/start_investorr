@@ -64,8 +64,9 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
       try {
         const { data, error } = await supabase
           .from('business_canvas')
-          .select('id, project_title, canvas_data->profile, canvas_data->currentStage, updated_at')
+          .select('id, project_title, sector_label, opportunity_title, current_stage, canvas_data->profile, canvas_data->currentStage, updated_at')
           .eq('user_id', authUser.id)
+          .is('deleted_at', null)
           .order('updated_at', { ascending: false })
           .limit(5);
 
@@ -76,11 +77,11 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
           setRecentProjects(
             data.map((row: any) => {
               const profile = row.profile || row.canvas_data?.profile;
-              const currentStage = row.currentStage || row.canvas_data?.currentStage;
+              const currentStage = row.current_stage || row.currentStage || row.canvas_data?.currentStage;
               return {
                 id: row.id,
                 name: row.project_title || 'مشروع بدون اسم',
-                type: profile?.opportunityTitle ? 'دراسة جدوى' : 'مسودة',
+                type: (row.opportunity_title || profile?.opportunityTitle) ? 'دراسة جدوى' : 'مسودة',
                 status:
                   currentStage === 'execution'
                     ? 'جاهز للتنفيذ'

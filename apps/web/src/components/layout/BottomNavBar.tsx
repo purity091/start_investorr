@@ -16,7 +16,7 @@ interface BottomNavBarProps {
 
 export const BottomNavBar: React.FC<BottomNavBarProps> = ({ activeTab, setActiveTab, onMenuClick }) => {
   const navItems = [
-    { id: 'market-discovery', icon: Globe, label: 'استكشاف السوق' },
+    { id: 'market-discovery', icon: Globe, label: 'استكشاف قطاعات السوق' },
     { id: 'workspace', icon: LayoutDashboard, label: 'المساحة' },
     { id: 'new-plan', icon: Plus, label: 'خلق فكرة', isCenter: true },
     { id: 'my-plans', icon: Layers, label: 'مشاريعي' },
