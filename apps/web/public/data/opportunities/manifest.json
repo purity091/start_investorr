@@ -1,7 +1,7 @@
 {
   "total": 355,
-  "generatedAt": "2026-08-03T02:14:42.425Z",
-  "source": "data-raw/opportunities_index.full.json",
+  "generatedAt": "2026-08-03T02:52:29.874Z",
+  "source": "_archive_unused_not_for_git/data-raw/opportunities_index.full.json",
   "sectors": [
     {
       "sectorId": "advertising",

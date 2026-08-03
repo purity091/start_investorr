@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = 'e:/start-investor/nnew-ui';
-const dataRaw = path.join(root, 'data-raw');
+const dataRaw = path.join(root, '_archive_unused_not_for_git', 'data-raw');
 const docs = path.join(root, 'docs');
 
 const toDataRaw = ['file', 'fileText', 'new'];

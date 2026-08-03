@@ -5,6 +5,7 @@ const root = process.cwd();
 const sourceCandidates = [
   path.join(root, "apps/web/public/data/opportunities_index.json"),
   path.join(root, "data-raw/opportunities_index.full.json"),
+  path.join(root, "_archive_unused_not_for_git/data-raw/opportunities_index.full.json"),
 ];
 
 const sourceFile = sourceCandidates.find((candidate) => {
