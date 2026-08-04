@@ -46,7 +46,7 @@ const AppShell: React.FC = () => {
     const pathTab = getTabFromPathname(window.location.pathname);
     if (pathTab) return pathTab;
     const savedTab = localStorage.getItem('khotta_active_tab');
-    return (savedTab as any) || DEFAULT_TAB;
+    return savedTab || DEFAULT_TAB;
   });
 
   const appUser: User = authUser ? {
@@ -97,6 +97,7 @@ const AppShell: React.FC = () => {
       }
     }
 
+    setSubTabLabel(null);
     setActiveTabState(nextTab);
     window.dispatchEvent(new CustomEvent('khotta:navigate', { detail: { tab: nextTab, path: nextPath } }));
   };
@@ -105,9 +106,10 @@ const AppShell: React.FC = () => {
     const handlePopState = () => {
       const nextTab = getTabFromPathname(window.location.pathname) || DEFAULT_TAB;
       if (!session && !isPublicTab(nextTab)) {
-        window.location.href = `/login?redirect=${encodeURIComponent(nextTab)}`;
+        window.location.replace(`/login?redirect=${encodeURIComponent(nextTab)}`);
         return;
       }
+      setSubTabLabel(null);
       setActiveTabState(nextTab);
     };
 
@@ -121,8 +123,43 @@ const AppShell: React.FC = () => {
     if (window.location.pathname !== expectedPath) {
       window.history.replaceState({ tab: activeTab }, '', expectedPath);
     }
-    setSubTabLabel(null);
   }, [activeTab]);
+
+  useEffect(() => {
+    const handleAppNavigation = (event: Event) => {
+      const detail = (event as CustomEvent<{ tab?: string; path?: string }>).detail;
+      const nextTab = detail?.tab;
+      if (!nextTab) return;
+
+      if (!session && !isPublicTab(nextTab)) {
+        window.location.replace(`/login?redirect=${encodeURIComponent(nextTab)}`);
+        return;
+      }
+
+      const nextPath = detail.path || getTabPath(nextTab, window.location.pathname);
+      if (window.location.pathname !== nextPath) {
+        window.history.pushState({ tab: nextTab }, '', nextPath);
+      }
+      setSubTabLabel(null);
+      setActiveTabState(nextTab);
+    };
+
+    window.addEventListener('khotta:navigate', handleAppNavigation);
+    return () => window.removeEventListener('khotta:navigate', handleAppNavigation);
+  }, [session]);
+
+  useEffect(() => {
+    if (authLoading) return;
+
+    if (activeTab === 'login' && session) {
+      window.location.replace('/home');
+      return;
+    }
+
+    if (requiresAuth && !session) {
+      window.location.replace(`/login?redirect=${encodeURIComponent(activeTab)}`);
+    }
+  }, [activeTab, authLoading, requiresAuth, session]);
 
   useEffect(() => {
     if (saveStatus === 'saving') {
@@ -171,7 +208,6 @@ const AppShell: React.FC = () => {
 
   // If user is on login tab but already has a session → redirect to home
   if (activeTab === 'login' && session) {
-    window.location.href = '/home';
     return null;
   }
 
@@ -182,7 +218,6 @@ const AppShell: React.FC = () => {
 
   // If user tries to access a protected tab without a session → redirect to login
   if (requiresAuth && !session) {
-    window.location.href = `/login?redirect=${encodeURIComponent(activeTab)}`;
     return null;
   }
 

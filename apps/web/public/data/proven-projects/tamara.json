@@ -4,108 +4,1208 @@
   "name": "تمارا (Tamara)",
   "domain": "tamara.co",
   "website": "https://tamara.co",
-  "category": "Fintech / اشتر الآن وادفع لاحقاً (BNPL)",
-  "headline": "منصة الدفع المرنة التي غيرت سلوك المستهلك في الخليج",
-  "summary": "شركة تقنية مالية (Fintech) سعودية تقدم حلول (Buy Now, Pay Later)، تتيح للمستهلكين تقسيم مشترياتهم بدون فوائد، وتزيد من حجم المبيعات للتجار.",
+  "category": "Fintech / التمويل الاستهلاكي والمدفوعات المرنة وBNPL",
+  "headline": "كيف تحولت تمارا من زر «قسّمها» إلى منصة ائتمان وتجارة ممولة بأصول في الخليج",
+  "summary": "تمارا منصة تقنية مالية سعودية بدأت بخدمة اشتر الآن وادفع لاحقًا، ثم توسعت إلى تمويل استهلاكي يمتد حتى 24 شهرًا، وخدمات دفع كاملة، واشتراكات ومكافآت، وإعلانات للتجار. تمنح التاجر التسوية مقدمًا وتتحمل مخاطر التحصيل والائتمان. أحدث بياناتها التشغيلية المعلنة تتحدث عن أكثر من 25 مليون عميل و130 ألف شريك تجاري، بينما تنشر الشركة السعودية المرخصة قوائم مالية منفصلة لا تمثل بالضرورة المجموعة الإقليمية كاملة.",
   "directory_snapshot": {
-    "monthly_revenue": "غير معلن",
-    "monthly_traffic": "5M+ /mo",
-    "revenue_per_visitor": "غير محدد",
-    "solopreneur_score": "20.0",
-    "idea_label": "اشتر الآن وادفع لاحقاً (BNPL)"
+    "as_of_date": "2026-08-03",
+    "monthly_revenue": null,
+    "monthly_revenue_note": "لا تنشر مجموعة Tamara الإقليمية MRR أو إيرادًا شهريًا موحدًا. يمكن حساب متوسط شهري لنتائج Tamara Finance Company السعودية، لكنه ليس MRR ولا يشمل بالضرورة الكيانات الإقليمية الأخرى.",
+    "average_monthly_revenue_calculated_saudi_entity": {
+      "period": "FY2025",
+      "value_sar": 112322000,
+      "calculation": "1,347,864,000 / 12",
+      "metric_type": "calculated_average_not_MRR",
+      "financial_scope": "Tamara Finance Company والكيان التمويلي الموحّد معها فقط"
+    },
+    "latest_quarter_average_monthly_revenue_calculated_saudi_entity": {
+      "period": "Q1 2026",
+      "value_sar": 223181666.66666666,
+      "calculation": "669,545,000 / 3",
+      "metric_type": "calculated_quarterly_average_not_MRR",
+      "financial_scope": "Tamara Finance Company والكيان التمويلي الموحّد معها فقط"
+    },
+    "monthly_traffic": null,
+    "monthly_traffic_note": "حُذف رقم 5 ملايين زيارة شهريًا لأنه لم يكن مدعومًا بمصدر رسمي أو منهجية. زيارات الموقع لا تقيس استخدام التطبيق أو المعاملات في المتاجر.",
+    "revenue_per_visitor": null,
+    "revenue_per_visitor_note": "لا يمكن حسابه دون مرور رسمي متزامن، كما أن الزائر ليس وحدة الإيراد الأساسية لشركة تمويل.",
+    "solopreneur_score": null,
+    "solopreneur_score_note": "درجة 20.0 كانت مقياسًا خاصًا بدليل خارجي ولا تعبر عن أداء شركة مالية منظمة.",
+    "current_company_reported_scale": {
+      "customers": {
+        "value": 25000000,
+        "operator": ">",
+        "unit": "عميل",
+        "as_of": "2026-08-03",
+        "metric_type": "company_reported_customers",
+        "note": "لا يحدد الإعلان عدد العملاء النشطين شهريًا أو المقترضين أو الحسابات الدافعة."
+      },
+      "partner_merchants": {
+        "value": 130000,
+        "operator": ">",
+        "unit": "شريك تجاري",
+        "as_of": "2026-08-03",
+        "metric_type": "company_reported_partner_merchants",
+        "note": "لا يحدد الإعلان عدد التجار النشطين أو الذين نفذوا معاملة خلال فترة محددة."
+      },
+      "operating_markets": {
+        "markets": [
+          "السعودية",
+          "الإمارات",
+          "الكويت",
+          "البحرين"
+        ],
+        "metric_type": "commercial_availability",
+        "note": "تظهر الأسواق في موقع تمارا الحالي. الوضع التنظيمي الموثق هنا: ترخيص سعودي كامل وترخيص تمويل مقيّد في الإمارات؛ لم يُستنتج وضع ترخيص الكويت والبحرين."
+      }
+    },
+    "latest_financial_scope": {
+      "entity": "Tamara Finance Company",
+      "consolidated_with": "Tamara Capital Designated Activity Company",
+      "parent": "Tamara Company المسجلة في جزر كايمان",
+      "scope_note": "القوائم لا تمثل تلقائيًا كامل إيرادات وأصول Tamara Group في الإمارات والكويت والبحرين."
+    },
+    "latest_full_year_saudi_entity": {
+      "period": "FY2025",
+      "audit_status": "audited by PwC",
+      "revenue_sar": 1347864000,
+      "gross_profit_sar": 609338000,
+      "profit_before_tax_sar": 238973000,
+      "net_profit_sar": 193347000,
+      "revenue_growth_yoy_percent_calculated": 90.26984906747073,
+      "gross_margin_percent_calculated": 45.20767673889947,
+      "net_margin_percent_calculated": 14.344696497569487,
+      "consumer_receivables_net_sar": 4052287000,
+      "borrowings_sar": 3762718000,
+      "total_assets_sar": 4985398000
+    },
+    "latest_quarter_saudi_entity": {
+      "period": "Q1 2026",
+      "period_end": "2026-03-31",
+      "review_status": "unaudited interim information reviewed by PwC",
+      "revenue_sar": 669545000,
+      "gross_profit_sar": 273671000,
+      "profit_before_tax_sar": 154577000,
+      "net_profit_sar": 123391000,
+      "revenue_growth_yoy_percent_calculated": 209.99462928152752,
+      "net_profit_growth_yoy_percent_calculated": 378.0929133248092,
+      "gross_margin_percent_calculated": 40.87417574621571,
+      "net_margin_percent_calculated": 18.429082436580067,
+      "consumer_receivables_net_sar": 5399450000,
+      "gross_consumer_receivables_sar": 5594935000,
+      "ecl_allowance_sar": 195485000,
+      "borrowings_sar": 5337317000,
+      "total_assets_sar": 6667444000,
+      "shareholders_equity_sar": 681675000
+    },
+    "credit_rating": {
+      "rating": "A-",
+      "outlook": "Stable",
+      "agency": "Simah Rating Agency (Tassnief)",
+      "announced_on": "2026-08-03",
+      "status": "company_announced_first_independent_credit_rating",
+      "note": "التصنيف الائتماني يقيس الجدارة الائتمانية ومخاطر الدين؛ لا يساوي تقييم الملكية أو القيمة السوقية."
+    }
   },
   "company": {
-    "business_model": "رسوم وعمولات تُحصّل من التجار (B2B2C)",
-    "customer_type": "التجار (لزيادة المبيعات) والمستهلكين (لتسهيل الدفع)",
-    "founder": "عبدالمجيد الصيخان، تركي بن زرعه، وعبدالمحسن البابطين",
-    "founder_role": "مؤسسون",
-    "founders_count": "3",
-    "employees": "أكثر من 500 موظف",
-    "started": "2020",
+    "group_name": "Tamara",
+    "saudi_legal_name": "شركة تمارا للتمويل",
+    "saudi_legal_form": "شركة مساهمة مقفلة سعودية",
+    "saudi_share_capital_sar": 515000000,
+    "commercial_registration": "1010627663",
+    "unified_number": "7016874419",
+    "sama_license_number": "95/أ ش/202502",
+    "founded_year": 2020,
+    "official_launch": "2020-09",
+    "founders": [
+      "عبدالمجيد الصيخان",
+      "تركي بن زرعه",
+      "عبدالمحسن البابطين"
+    ],
+    "leadership": {
+      "group_cofounder_and_ceo": "عبدالمجيد الصيخان",
+      "saudi_finance_company_chairman": "عبدالمجيد الصيخان",
+      "saudi_finance_company_ceo": "راكان الرويس",
+      "chief_financial_officer": "محمد الأحمدي",
+      "note": "تستخدم المصادر أدوارًا مختلفة حسب الكيان؛ عبدالمجيد يقود المجموعة، بينما يوقع راكان الرويس القوائم بصفته CEO للشركة السعودية."
+    },
+    "employees": null,
+    "employees_note": "ذكرت الشركة أكثر من 500 موظف في 2023، لكن لم يُعثر على عدد رسمي حديث حتى أغسطس 2026؛ لذلك لم يُرفع الرقم التاريخي إلى الحاضر.",
     "location": "الرياض، المملكة العربية السعودية",
-    "funding": "جمعت تمويلات بأكثر من مليار دولار (ديون وملكية)، وأصبحت أول يونيكورن تقنية مالية سعودي",
-    "profitability": "نموذج يعتمد على حجم العمليات (GMV) وتقليل المخاطر الائتمانية",
-    "public_revenue_claim": "تخدم ملايين المستخدمين وعشرات الآلاف من المتاجر"
+    "registered_address": "طريق الملك عبدالله بن عبدالعزيز، حي الملك سلمان، مبنى 2907، الرياض 12444، المملكة العربية السعودية",
+    "public_company": false,
+    "ticker": null,
+    "sec_filings_available": false,
+    "parent_structure": {
+      "parent_company": "Tamara Company",
+      "parent_jurisdiction": "جزر كايمان",
+      "saudi_entity_owned_percent": 100,
+      "financing_vehicle": "Tamara Capital Designated Activity Company",
+      "financing_vehicle_jurisdiction": "أيرلندا",
+      "note": "تُوحّد الشركة السعودية الكيان التمويلي ذي الغرض الخاص لأنها المستفيد الرئيسي اقتصاديًا، رغم عدم امتلاك أسهمه مباشرة."
+    },
+    "regulatory_status": {
+      "saudi_arabia": {
+        "status": "licensed",
+        "activities": [
+          "التمويل الاستهلاكي",
+          "اشتر الآن وادفع لاحقًا"
+        ],
+        "license_date": "2025-03-03",
+        "prior_bnpl_permit": "2023-07-05"
+      },
+      "united_arab_emirates": {
+        "status": "restricted_finance_license",
+        "regulator": "مصرف الإمارات العربية المتحدة المركزي",
+        "announced_on": "2025-10-20"
+      }
+    },
+    "business_model": "نموذج B2B2C ائتماني وتجاري: تدفع تمارا للتاجر مقدمًا أو ضمن دورات التسوية، ثم تجمع الأقساط من العميل وتتحمل مخاطر الائتمان والتحصيل. تحقق الشركة السعودية إيرادًا من شبكة التجار، وأرباح التمويل الإسلامي، ورسوم معالجة العملاء وخدمات التسوية والتسويق. وعلى مستوى المنتج الأوسع، توجد اشتراكات Tamara Smart وإعلانات CPC للتجار وخدمات Pay in Full، لكن مساهمة كل قناة في إيراد المجموعة غير معلنة.",
+    "customer_type": [
+      "المستهلكون الباحثون عن دفع مرن أو تمويل استهلاكي",
+      "تجار التجزئة والمتاجر الإلكترونية",
+      "العلامات التجارية والمنصات",
+      "قطاعات السفر والتعليم والصحة",
+      "الشركات الصغيرة والمتوسطة",
+      "المعلنون داخل تطبيق تمارا"
+    ]
   },
   "problem_and_product": [
-    "القدرة الشرائية للعملاء كانت عائقاً أمام إتمام عمليات شراء السلع ذات القيمة المتوسطة والعالية.",
-    "التجار كانوا يعانون من نسب التخلي عن سلة المشتريات (Cart Abandonment).",
-    "قدمت تمارا خيار تقسيم الدفع على ٣ أو ٤ دفعات بدون أي فوائد خفية أو رسوم إضافية على العميل المنتظم.",
-    "يتم تعويض التاجر كاملاً فوراً، وتحمل تمارا مخاطر التحصيل من العميل مقابل نسبة تُخصم من التاجر."
+    "ترتفع خسارة التحويل عندما يواجه العميل سعرًا مرتفعًا أو خيارات دفع محدودة عند إتمام الطلب.",
+    "يحتاج التاجر إلى الحصول على قيمة البيع دون تحمل مخاطر تقسيط العميل أو تشغيل التحصيل.",
+    "بدأت تمارا بحلول قصيرة الأجل مثل Pay in 3، ثم أضافت تمويلًا يمتد إلى 24 شهرًا بعد الحصول على ترخيص التمويل الاستهلاكي.",
+    "تجمع المنصة الآن بين الدفع والتسوق والعروض والمكافآت والإعلانات، ما يجعل التطبيق قناة اكتشاف وشراء وليس أداة تقسيط فقط.",
+    "Pay in 3 معلن كخيار بدون رسوم وبـAPR يساوي صفرًا، بينما قد تشمل الخطط الأطول APR يختلف حسب الأهلية وعرض التاجر.",
+    "ألغت تمارا رسوم التأخير منذ 16 ديسمبر 2023، لذلك أصبح الادعاء القديم عن تحقيق إيراد منها غير صحيح."
   ],
+  "overview": {
+    "problem": {
+      "text": "التاجر يريد رفع التحويل ومتوسط السلة والحصول على النقد سريعًا، بينما يريد العميل توزيع التكلفة دون تجربة ائتمان معقدة. بطاقات الائتمان ليست متاحة أو مفضلة للجميع، والدفع عند الاستلام يزيد الإلغاءات والتكاليف.",
+      "impact": "تتخلى شريحة من العملاء عن السلة، ويتحمل التاجر مخاطر التحصيل أو تكلفة وسائل دفع غير ملائمة، وقد يُحرم العميل من مشتريات ضرورية أو عالية القيمة."
+    },
+    "solution": {
+      "text": "تدمج تمارا خيار الدفع والتمويل في المتجر أو التطبيق أو نقطة البيع، وتقيّم الأهلية بسرعة، ثم تدفع للتاجر وفق شروط التسوية وتحصّل من العميل. توسع الترخيص السعودي المنتج من أقساط قصيرة إلى تمويل استهلاكي حتى 24 شهرًا، مع منتجات مكافآت وإعلانات واكتشاف تجاري."
+    }
+  },
   "origin_story": [
-    "انطلقت في أواخر 2020 بعد الموافقة في البيئة التجريبية للبنك المركزي السعودي (SAMA).",
-    "استغل المؤسسون خبراتهم السابقة في مجال التجارة الإلكترونية والتكنولوجيا لتلبية فجوة الدفع الميسر.",
-    "استفادت بقوة من تسارع نمو التجارة الإلكترونية محلياً بسبب الجائحة."
+    "تأسست تمارا في 2020 وأطلقت رسميًا في سبتمبر من العام نفسه.",
+    "دخلت مبكرًا البيئة التجريبية للبنك المركزي السعودي، ثم حصلت على تصريح BNPL في 2023 وترخيص تمويل استهلاكي وBNPL كامل في 2025.",
+    "جمع المؤسسون بين خبرة التجارة الإلكترونية والتكنولوجيا والتمويل لبناء حل محلي متوافق مع طبيعة الدفع في الخليج.",
+    "استفادت الشركة من تسارع التجارة الإلكترونية، لكنها بنت أيضًا توزيعًا داخل المتاجر الفعلية ونقاط البيع.",
+    "تحولت الاستراتيجية لاحقًا من «BNPL فقط» إلى تطبيق مالي وتجاري أوسع يشمل الدفع والائتمان والعروض والإعلانات."
   ],
   "build_and_launch": [
-    "بناء محرك تقييم مخاطر قوي يعتمد على الذكاء الاصطناعي لتحديد أهلية العميل الائتمانية خلال ثوانٍ.",
-    "تكامل عميق وسريع مع منصات التجارة الإلكترونية الكبرى مثل سلة، وماجنتو، وشوبيفاي لضمان انتشار سريع.",
-    "التوسع بقوة نحو كبرى العلامات التجارية (مثل شي إن، نون، وإيكيا)."
+    "بدأت بخدمات Pay in 30 وPay in 3، ثم وسعت الخيارات إلى خطط بين 3 و24 شهرًا.",
+    "دعمت API وإضافات لمنصات مثل سلة وشوبيفاي وWooCommerce وزد وماجنتو ونقاط البيع.",
+    "بنت Partner Portal لإدارة الطلبات والتسويات والاستردادات والنزاعات والمستخدمين وWebhooks.",
+    "تسوي تمارا للتجار حتى لو لم يسدد العميل، فتفصل مخاطر البيع عن مخاطر الائتمان.",
+    "استخدمت التطبيق كقناة اكتشاف؛ ذكرت الشركة في 2023 أن أكثر من ثلث المستخدمين يبدأ رحلة التسوق داخله.",
+    "وسعت التمويل عبر هياكل مدعومة بالأصول بدل تمويل النمو من حقوق الملكية وحدها."
   ],
   "costs_and_operations": [
-    "تكلفة الحصول على رأس المال للتمويل (Debt Facilities) لدفع أموال التجار مقدماً.",
-    "تكلفة تحمل الديون المعدومة (Bad Debt) والعملاء المتعثرين.",
-    "التسويق وعقد الشراكات الاستراتيجية مع المتاجر."
+    "تكلفة التمويل والاقتراض اللازمين لتمويل أرصدة العملاء قبل التحصيل.",
+    "خسائر الائتمان المتوقعة والشطب والتحصيل ومراقبة مراحل التعثر.",
+    "رسوم معالجة المدفوعات والخدمة وعمولات المنصة والبنية التقنية.",
+    "الامتثال والتقييم الائتماني وحماية المستهلك في عدة أسواق.",
+    "تسويق المنتجات والتجار والإعلانات والمكافآت والنقد المسترد.",
+    "إدارة النزاعات والاستردادات وتسويات آلاف التجار.",
+    "تكلفة رأس المال ترتبط بجودة محفظة الذمم والتصنيف الائتماني وقدرة الشركة على التوريق والتمويل المدعوم بالأصول."
   ],
   "monetization": [
-    "يتم تحقيق الإيرادات بشكل أساسي من خلال خصم نسبة مئوية ورسوم ثابتة من التاجر على كل عملية دفع ناجحة عبر تمارا.",
-    "رسوم تأخير تفرض على العميل في حال عدم السداد (وفق الضوابط الشرعية ويتم توجيه بعضها للجمعيات الخيرية)."
+    {
+      "stream": "إيراد شبكة التجار",
+      "fy2025_revenue_sar": 1031859000,
+      "fy2025_share_percent_calculated": 76.5551272235181,
+      "q1_2026_revenue_sar": 421082000,
+      "q1_2026_share_percent_calculated": 62.89076910439179,
+      "model": "رسوم ثابتة ومتغيرة مرتبطة بخدمات الدفع والتمويل المقدمة للتاجر، حسب نموذج التعاقد.",
+      "financial_scope": "Tamara Finance Company السعودية"
+    },
+    {
+      "stream": "أرباح التمويل الإسلامي",
+      "fy2025_revenue_sar": 117777000,
+      "fy2025_share_percent_calculated": 8.738047755559908,
+      "q1_2026_revenue_sar": 182106000,
+      "q1_2026_share_percent_calculated": 27.19847060317081,
+      "model": "عائد على منتجات التمويل الاستهلاكي المتوافقة مع الشريعة.",
+      "financial_scope": "Tamara Finance Company السعودية"
+    },
+    {
+      "stream": "رسوم معالجة العملاء",
+      "fy2025_revenue_sar": 159100000,
+      "fy2025_share_percent_calculated": 11.803861517185709,
+      "q1_2026_revenue_sar": 52117000,
+      "q1_2026_share_percent_calculated": 7.783942826845096,
+      "note": "قد تُفرض رسوم مسموح بها بحسب المنتج والشروط؛ لا تشمل رسوم تأخير لأن الشركة أوقفتها."
+    },
+    {
+      "stream": "إيرادات خدمات أخرى",
+      "fy2025_revenue_sar": 39128000,
+      "q1_2026_revenue_sar": 14240000,
+      "components": [
+        "رسوم الاسترداد والتسوية",
+        "إيرادات تسويقية",
+        "خصومات وchargebacks"
+      ],
+      "financial_scope": "Tamara Finance Company السعودية"
+    },
+    {
+      "stream": "Tamara Smart",
+      "model": "اشتراك شهري متجدد يمنح مزايا ومكافآت ونقدًا مستردًا",
+      "public_price_example_sar_per_month": 19,
+      "status": "منتج مؤكد",
+      "revenue_disclosure": null,
+      "note": "سعر الموقع لقطة وقت البحث وقد يتغير؛ مساهمته في الإيراد غير معلنة."
+    },
+    {
+      "stream": "Tamara Ads",
+      "model": "إعلانات ذاتية الخدمة للتجار بتسعير تكلفة النقرة CPC",
+      "status": "منتج مؤكد",
+      "revenue_disclosure": null,
+      "note": "تعرض الصفحة 11 مليون+ متسوق عالي النية و6 ملايين+ نقرة شهريًا كادعاءات تسويقية، لا كإيراد."
+    },
+    {
+      "stream": "Pay in Full وخدمات الدفع",
+      "model": "خيار دفع كامل وموحد للتاجر إلى جانب الأقساط",
+      "status": "منتج مؤكد",
+      "revenue_disclosure": null
+    },
+    {
+      "stream": "رسوم التأخير",
+      "status": "متوقفة",
+      "effective_end_date": "2023-12-16",
+      "revenue_disclosure": 0,
+      "note": "لا يعني الصفر أن كل رسوم العميل صفر؛ الخطط الأطول قد تتضمن APR أو رسومًا معلنة بحسب المنتج والأهلية."
+    }
   ],
   "growth": [
-    "وصول الشركة لتقييم يزيد عن مليار دولار (Unicorn) في أواخر 2023.",
-    "نمو قاعدة العملاء إلى أكثر من 10 ملايين مستخدم مسجل.",
-    "التوسع في الأسواق الخليجية المجاورة (الإمارات والكويت)."
+    "ارتفعت إيرادات الشركة السعودية من 708.4 مليون ريال في 2024 إلى 1.348 مليار ريال في 2025، بنمو حسابي يقارب 90.3%.",
+    "تحولت من خسارة صافية 130.1 مليون ريال في 2024 إلى ربح صافٍ 193.3 مليون ريال في 2025.",
+    "قفز إيراد Q1 2026 إلى 669.5 مليون ريال مقابل 216.0 مليونًا قبل عام، بينما بلغ الربح الصافي 123.4 مليونًا.",
+    "نما صافي ذمم العملاء من 4.052 مليارات ريال بنهاية 2025 إلى 5.399 مليارات بنهاية مارس 2026.",
+    "ارتفعت الاقتراضات إلى 5.337 مليارات ريال في Q1 2026، ما يوضح اعتماد نموذج التمويل على رأس مال الدين إلى جانب حقوق الملكية.",
+    "ارتفع عدد العملاء المعلن من 20 مليونًا والتجار من 87 ألفًا في سبتمبر 2025 إلى أكثر من 25 مليون عميل و130 ألف تاجر في أغسطس 2026.",
+    "أضافت تمارا ترخيص تمويل كامل في السعودية وترخيص تمويل مقيّد في الإمارات.",
+    "حصلت في أغسطس 2026 على أول تصنيف ائتماني A- بنظرة مستقرة، ما يدعم تنويع مصادر التمويل المحلية."
   ],
   "tools": [
-    "AI/ML Credit Scoring",
-    "AWS",
-    "React Native",
-    "Java / Spring Boot",
-    "Kubernetes",
-    "Data Integration"
+    "Pay in 3 بدون رسوم وAPR يساوي صفرًا",
+    "خطط 4 و6 و9 و12 و24 شهرًا بحسب الأهلية والعرض",
+    "Pay in Full",
+    "Tamara App واكتشاف المتاجر والعروض",
+    "Tamara Smart وSmart+",
+    "Tamara Deals والنقد المسترد",
+    "Tamara Ads بنموذج CPC",
+    "Buyer Protection",
+    "Partner Portal للطلبات والتسويات والنزاعات",
+    "APIs وWebhooks",
+    "تكاملات Salla وShopify وWooCommerce وZid وMagento وPOS وPaymob",
+    "Checkout online وداخل المتجر وQR وروابط الدفع",
+    "APR Calculator",
+    "التقييم الائتماني وإدارة حدود الإنفاق",
+    "أدوات الاسترداد والتسوية والتقارير"
   ],
   "revenue_timeline": [
     {
-      "date": "2020",
-      "amount": "إطلاق",
-      "type": "دخول البيئة التجريبية",
-      "note": "التأسيس والعمل ضمن بيئة البنك المركزي السعودي التشريعية."
+      "date": "2021-01-20",
+      "amount": "USD 6M",
+      "type": "Seed equity",
+      "note": "تمويل ملكية وليس إيرادًا."
     },
     {
-      "date": "2021",
-      "amount": "$110M تمويل",
-      "type": "جولة استثمارية",
-      "note": "جولة Series A بقيادة Checkout.com كانت من الأضخم في المنطقة."
+      "date": "2021-04-22",
+      "amount": "USD 110M",
+      "type": "Series A mixed debt and equity",
+      "note": "الإعلان الرسمي وصفه صراحة بأنه مزيج دين وملكية دون نشر التقسيم؛ لا يجوز اعتباره 110 ملايين ملكية بالكامل."
     },
     {
-      "date": "2023",
-      "amount": "$340M تمويل",
-      "type": "Series C",
-      "note": "تقييم الشركة يتجاوز المليار دولار كأول يونيكورن فنتك سعودي."
+      "date": "2022-08-22",
+      "amount": "USD 100M",
+      "type": "Series B equity",
+      "note": "جولة ملكية بقيادة Sanabil Investments."
+    },
+    {
+      "date": "2023-11-14",
+      "amount": "up to USD 400M",
+      "type": "warehouse debt facility",
+      "note": "تسهيل دين وليس إيرادًا أو تقييمًا؛ رُفع لاحقًا إلى 500 مليون ثم أُعيد تمويله."
+    },
+    {
+      "date": "2023-12-18",
+      "amount": "USD 340M",
+      "type": "Series C equity",
+      "note": "رفع التقييم التاريخي إلى مليار دولار، وأعلنت الشركة وصول إجمالي تمويل الملكية إلى 500 مليون دولار."
+    },
+    {
+      "date": "2025-09-15",
+      "amount": "initial USD 1.4B; up to USD 2.4B",
+      "type": "asset-backed financing facility",
+      "note": "1.4 مليار أولي ومليار إضافي مشروط بالموافقات خلال ثلاث سنوات. يعيد تمويل ويرفع تسهيلًا سابقًا بقيمة 500 مليون؛ ليس مجموعًا تراكميًا فوقه."
+    },
+    {
+      "date": "2025",
+      "amount": "SAR 1.348B revenue",
+      "type": "audited Saudi entity revenue",
+      "note": "خاص بـTamara Finance Company والكيان التمويلي الموحّد معها."
+    },
+    {
+      "date": "2026-Q1",
+      "amount": "SAR 669.5M revenue",
+      "type": "reviewed interim Saudi entity revenue",
+      "note": "أحدث فترة مالية منشورة حتى 3 أغسطس 2026."
+    },
+    {
+      "date": "2026-08-03",
+      "amount": "A- / Stable",
+      "type": "credit rating",
+      "note": "تصنيف ائتماني وليس تقييم ملكية."
     }
   ],
+  "financials": {
+    "financial_reporting_scope": {
+      "reporting_entity": "Tamara Finance Company",
+      "subsidiary_or_structured_entity": "Tamara Capital Designated Activity Company",
+      "does_not_automatically_cover": [
+        "Tamara FZE في الإمارات",
+        "عمليات الكويت",
+        "عمليات البحرين",
+        "الشركة الأم في جزر كايمان"
+      ],
+      "note": "ينبغي عدم تسمية الإيراد المنشور «إيراد مجموعة تمارا العالمي»."
+    },
+    "actual_revenue": {
+      "fy2025_sar": 1347864000,
+      "q1_2026_sar": 669545000,
+      "scope": "Saudi licensed entity consolidation",
+      "group_wide_current_revenue": null
+    },
+    "profitability": {
+      "fy2025_net_profit_sar": 193347000,
+      "fy2024_net_loss_sar": 130127000,
+      "q1_2026_net_profit_sar": 123391000,
+      "q1_2025_net_profit_sar": 25809000,
+      "group_wide_profitability": null
+    },
+    "revenue_composition": {
+      "fy2025": {
+        "merchant_network_revenue_sar": 1031859000,
+        "profit_from_islamic_financing_sar": 117777000,
+        "customer_processing_fee_sar": 159100000,
+        "other_servicing_revenue_sar": 39128000
+      },
+      "q1_2026": {
+        "merchant_network_revenue_sar": 421082000,
+        "profit_from_islamic_financing_sar": 182106000,
+        "customer_processing_fee_sar": 52117000,
+        "other_servicing_revenue_sar": 14240000
+      }
+    },
+    "credit_and_funding_metrics": {
+      "as_of": "2026-03-31",
+      "gross_consumer_receivables_sar": 5594935000,
+      "ecl_allowance_sar": 195485000,
+      "net_consumer_receivables_sar": 5399450000,
+      "stage_3_gross_receivables_sar": 95546000,
+      "borrowings_sar": 5337317000,
+      "cash_and_cash_equivalents_sar": 993670000,
+      "total_assets_sar": 6667444000,
+      "shareholders_equity_sar": 681675000,
+      "ecl_to_gross_receivables_percent_calculated": 3.493963736844128,
+      "borrowings_to_assets_percent_calculated": 80.05042112089731,
+      "note": "أرصدة الائتمان والاقتراض ليست إيرادًا أو GMV."
+    },
+    "equity_funding": {
+      "official_total_equity_funding_as_of_series_c_usd": 500000000,
+      "as_of": "2023-12-18",
+      "current_total_equity_funding": null,
+      "note": "إجمالي رسمي معلن ومقرب؛ لا يُعاد حسابه بجمع الجولات لأن Series A كانت خليط دين وملكية غير مفصل."
+    },
+    "debt_and_asset_backed_facilities": {
+      "current_announced_capacity_usd": 2400000000,
+      "initial_committed_or_available_usd": 1400000000,
+      "additional_subject_to_approvals_usd": 1000000000,
+      "term_years": 3,
+      "refinanced_prior_facility_usd": 500000000,
+      "note": "السعة المعلنة لا تعني أنها مسحوبة بالكامل، ولا تضاف تلقائيًا إلى التسهيلات السابقة."
+    },
+    "valuation": {
+      "current_value_usd": null,
+      "historical_value_usd": 1000000000,
+      "historical_as_of": "2023-12-18",
+      "basis": "Series C",
+      "note": "لا يوجد تقييم ملكية حديث معلن حتى أغسطس 2026. A- تصنيف ائتماني وليس تقييمًا."
+    },
+    "transaction_volume": null,
+    "transaction_volume_note": "لم تنشر الشركة GMV أو إجمالي قيمة المعاملات الحالي. الأرصدة المدينة والإيراد وعدد العملاء ليست بدائل عن GMV.",
+    "undisclosed_metrics": [
+      "إيراد مجموعة Tamara الإقليمية كاملة",
+      "MRR وARR للمجموعة",
+      "GMV أو حجم المعاملات",
+      "عدد المعاملات الحالي",
+      "MAU وDAU للتطبيق",
+      "عدد العملاء المقترضين النشطين",
+      "عدد التجار النشطين",
+      "معدل التعثر والـNPL بصيغة موحدة للمجموعة",
+      "التقييم الحالي",
+      "مقدار السحب الفعلي من تسهيل 2.4 مليار دولار",
+      "متوسط تكلفة رأس المال",
+      "عدد الموظفين الحالي"
+    ]
+  },
+  "analysis": {
+    "core_thesis": "ميزة تمارا لم تعد مجرد تقسيم فاتورة. الشركة تجمع بين توزيع تجاري واسع، وقرار ائتماني، وتمويل مدعوم بالأصول، وتسوية للتاجر، ثم تعيد استخدام العلاقة لإطلاق تمويل أطول واشتراكات وإعلانات وعروض.",
+    "business_model_evolution": "بدأت تمارا برسوم التاجر على BNPL قصير الأجل. بعد الترخيص أضافت أرباح تمويل إسلامي ورسوم معالجة، وتوسعت إلى Pay in Full وSmart وAds. في المقابل، أصبحت كلفة التمويل وخسائر الائتمان جزءًا مركزيًا من اقتصادياتها.",
+    "growth_engine": [
+      "إضافة التاجر تجلب عملاء جدد دون اكتساب مباشر لكل مستخدم.",
+      "زيادة العملاء تجعل تمارا قناة بيع واكتشاف أكثر قيمة للتاجر.",
+      "البيانات التاريخية عن السداد تحسن قرارات الحدود والأهلية.",
+      "التمويل الأطول يرفع قيمة الاستخدام لكنه يحتاج دينًا ورأس مال أكثر.",
+      "Ads وSmart وDeals تضيف إيرادًا وتفاعلًا لا يعتمد فقط على كل معاملة BNPL.",
+      "التصنيف الائتماني والتمويل المدعوم بالأصول يخفضان قيود القدرة على الإقراض."
+    ],
+    "defensibility": [
+      "شبكة تضم أكثر من 130 ألف شريك تجاري وفق الشركة.",
+      "قاعدة معلنة تتجاوز 25 مليون عميل.",
+      "تراخيص محلية وعلاقات تنظيمية في أسواق رئيسية.",
+      "بيانات سداد ومخاطر مرتبطة بسلوك شراء فعلي.",
+      "تكاملات عميقة مع التجارة الإلكترونية ونقاط البيع.",
+      "قدرة تمويل كبيرة مدعومة بمحفظة ذمم استهلاكية."
+    ],
+    "key_risks": [
+      "نمو الخسائر الائتمانية مع توسع التمويل الأطول والأرصدة.",
+      "اعتماد كبير على تمويل الدين وتجديد التسهيلات.",
+      "اختلاف القواعد التنظيمية وحماية المستهلك بين دول الخليج.",
+      "ارتفاع تكلفة الأموال أو انخفاض شهية المستثمرين للأصول الاستهلاكية.",
+      "مخاطر الاحتيال والهوية والنزاعات والاستردادات.",
+      "تحول المستخدم من الدفع المرن إلى مديونية غير مستدامة.",
+      "عدم وضوح ربحية المجموعة الإقليمية رغم ربحية الكيان السعودي.",
+      "منافسة بنوك وبطاقات وشركات BNPL ومحافظ ومنصات تجارة."
+    ],
+    "metric_reading": "إيراد الشركة السعودية لا يساوي إيراد المجموعة. مبلغ 2.4 مليار دولار قدرة تمويل معلنة وليس إيرادًا أو تمويلًا مسحوبًا بالكامل. تقييم مليار دولار يعود إلى 2023، بينما A- تصنيف دين. العملاء والتجار لا يساوون MAU أو الحسابات النشطة، والذمم المدينة لا تساوي GMV.",
+    "profitability_interpretation": "انتقلت الشركة السعودية إلى الربح في 2025 واستمر الربح في Q1 2026، لكن ارتفاع مخصص الخسائر الائتمانية والاقتراض يوضح أن نمو الإيراد مرتبط بتوسيع الميزانية الائتمانية. لا تكفي هذه القوائم للحكم على ربحية المجموعة الإقليمية كاملة.",
+    "funding_interpretation": "تمارا تستخدم حقوق الملكية لبناء المنتج والشبكة، وتستخدم هياكل دين مدعومة بالأصول لتمويل الذمم. خلط النوعين يعطي صورة مضللة؛ الدين قابل للسداد ومربوط بالمحفظة، بينما الملكية تمتص المخاطر وتشارك في قيمة الشركة.",
+    "rating_interpretation": "التصنيف A- بنظرة مستقرة قد يفتح سوق الصكوك أو الدين المحلي ويخفض الاعتماد على ممولين عالميين، لكنه لا يلغي مخاطر الائتمان ولا يحدد سعر الشركة."
+  },
   "lessons": [
-    "توقيت السوق: الدخول المبكر والقوي لنموذج الـ BNPL في الخليج صنع حاجز دخول عالٍ للمنافسين.",
-    "أهمية الشراكات (B2B2C): ببيع الخدمة للتاجر، تكتسب الشركة مئات آلاف المستهلكين مجاناً عند تفعيل الخدمة.",
-    "البيئة التنظيمية: العمل جنباً إلى جنب مع المشرعين الماليين يعطي الثقة للمستثمرين والتجار."
+    {
+      "title": "الدفع المرن يصبح شركة ميزانية لا زر Checkout",
+      "description": "عندما تدفع للتاجر قبل تحصيل العميل، تتحول من أداة برمجية إلى ممول يحتاج رأس مال ومخصصات وتحكمًا في المخاطر."
+    },
+    {
+      "title": "الترخيص يغير المنتج ومصادر الإيراد",
+      "description": "ترخيص التمويل الاستهلاكي سمح بمنتجات أطول وعائد تمويل إسلامي، لكنه رفع متطلبات الإفصاح والامتثال ورأس المال."
+    },
+    {
+      "title": "افصل نمو المنصة عن نمو الكيان المنظم",
+      "description": "25 مليون عميل رقم إقليمي، بينما 1.348 مليار ريال إيراد كيان سعودي. جمعهما في نسبة واحدة يخلط نطاقين مختلفين."
+    },
+    {
+      "title": "سعة الدين ليست نقدًا مجانيًا",
+      "description": "تسهيل 2.4 مليار دولار يشمل جزءًا إضافيًا مشروطًا ويعيد تمويل تسهيل سابق. قيمته الحقيقية تظهر في تكلفة التمويل وجودة الذمم والقدرة على السداد."
+    },
+    {
+      "title": "إزالة رسوم التأخير تعيد ترتيب الحوافز",
+      "description": "حذف الرسوم يزيل مصدر دخل محتمل ويقوي وضوح المنتج، لكنه يزيد أهمية التسعير الصحيح والتحصيل والتقييم الائتماني."
+    },
+    {
+      "title": "التاجر قناة اكتساب وشريك إيراد معًا",
+      "description": "كل تكامل جديد يخلق رسومًا محتملة ويضع تمارا أمام عملاء التاجر، لذلك الشبكة التجارية أصل توزيع وليس مجرد قائمة قبول."
+    },
+    {
+      "title": "التصنيف الائتماني منتج نمو",
+      "description": "A- لا يزين الملف التعريفي فقط؛ قد يوسع قاعدة المقرضين ويمنح الشركة خيارات تمويل محلية أطول وأكثر تنوعًا."
+    },
+    {
+      "title": "اقرأ المخصصات مع الأرباح",
+      "description": "الربح المرتفع لا يُقرأ وحده في شركة تمويل. يجب تتبع نمو الذمم ومخصص ECL والشطب وتكلفة الأموال بالتوازي."
+    }
   ],
   "sources": [
     {
-      "label": "موقع تمارا",
-      "url": "https://tamara.co",
-      "coverage": "معلومات الشركة الرسمية"
+      "id": "S01",
+      "title": "Financial Reports",
+      "publisher": "Tamara",
+      "url": "https://tamara.co/en-sa/financial-reports",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_financial_reporting",
+      "coverage": "فهرس القوائم السنوية والربع سنوية"
+    },
+    {
+      "id": "S02",
+      "title": "Tamara Finance Company Financial Statements FY2025",
+      "publisher": "Tamara Finance Company / PwC",
+      "url": "https://files.tamara.co/public/financial-reports/financial-statements-fy-2025-en.pdf",
+      "published_date": "2026",
+      "accessed_date": "2026-08-03",
+      "source_type": "audited_financial_statements",
+      "coverage": "الإيراد والربح والأصول والاقتراض والذمم ومكونات الإيراد لعام 2025"
+    },
+    {
+      "id": "S03",
+      "title": "Tamara Finance Company Q1 2026 Interim Financial Information",
+      "publisher": "Tamara Finance Company / PwC",
+      "url": "https://files.tamara.co/public/financial-reports/financial-statement-1st-quarter-2026.pdf",
+      "published_date": "2026-04-28",
+      "accessed_date": "2026-08-03",
+      "source_type": "reviewed_interim_financial_statements",
+      "coverage": "نتائج Q1 2026 والذمم والاقتراض والخسائر الائتمانية وهيكل المجموعة"
+    },
+    {
+      "id": "S04",
+      "title": "SAMA Licenses Tamara Finance",
+      "publisher": "Saudi Central Bank",
+      "url": "https://www.sama.gov.sa/en-US/MediaCenter/News/pages/news-1079.aspx",
+      "published_date": "2025-03-03",
+      "accessed_date": "2026-08-03",
+      "source_type": "regulator_primary",
+      "coverage": "ترخيص التمويل الاستهلاكي وBNPL"
+    },
+    {
+      "id": "S05",
+      "title": "Licensed Finance Entities",
+      "publisher": "Saudi Central Bank",
+      "url": "https://sama.gov.sa/en-US/Supervision/LicenseEntities/pages/financelicencedentities.aspx",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "regulator_primary",
+      "coverage": "رقم الترخيص والنشاط والرقم الموحد"
+    },
+    {
+      "id": "S06",
+      "title": "Tamara Achieves A- Investment-Grade Rating",
+      "publisher": "Tamara",
+      "url": "https://tamara.co/en-sa/blog-post/tamara-achieves-investment-grade-credit-rating",
+      "published_date": "2026-08-03",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "coverage": "A- Stable و25 مليون عميل و130 ألف تاجر"
+    },
+    {
+      "id": "S07",
+      "title": "Tamara Secures Up to $2.4 Billion Asset-Backed Facility",
+      "publisher": "Tamara",
+      "url": "https://tamara.co/en-sa/blog-post/tamara-secures-up-to-2-4-billion-dollar-facility",
+      "published_date": "2025-09-15",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "coverage": "التسهيل وأجزاؤه وإعادة التمويل و20 مليون عميل و87 ألف تاجر"
+    },
+    {
+      "id": "S08",
+      "title": "Tamara Secures Central Bank of the UAE Approval",
+      "publisher": "Tamara",
+      "url": "https://tamara.co/en-ae/blog-post/tamara-secures-central-bank-uae-approval",
+      "published_date": "2025-10-20",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "coverage": "ترخيص التمويل المقيّد في الإمارات"
+    },
+    {
+      "id": "S09",
+      "title": "Tamara Series C",
+      "publisher": "Tamara",
+      "url": "https://tamara.co/en-ae/blog-post/tamara-series-c",
+      "published_date": "2023-12-18",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "coverage": "340 مليون دولار وتقييم مليار وإجمالي ملكية 500 مليون"
+    },
+    {
+      "id": "S10",
+      "title": "Tamara Series B",
+      "publisher": "Tamara",
+      "url": "https://www.tamara.co/en-AE/tamara-series-b",
+      "published_date": "2022-08-22",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "coverage": "100 مليون دولار ملكية ومؤشرات العملاء والتجار التاريخية"
+    },
+    {
+      "id": "S11",
+      "title": "Tamara Series A",
+      "publisher": "Tamara",
+      "url": "https://tamara.co/en-sa/blog-post/press-release-2",
+      "published_date": "2021-04-22",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "coverage": "110 ملايين دولار مختلطة بين الدين والملكية والإطلاق"
+    },
+    {
+      "id": "S12",
+      "title": "Tamara Seed Funding",
+      "publisher": "Tamara",
+      "url": "https://tamara.co/en-sa/blog-post/tamara-seed-funding",
+      "published_date": "2021-01-20",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "coverage": "جولة Seed بقيمة 6 ملايين دولار"
+    },
+    {
+      "id": "S13",
+      "title": "Tamara Removes Late Fees",
+      "publisher": "Tamara",
+      "url": "https://tamara.co/en-sa/blog-post/no-late-fee",
+      "published_date": "2023-12-16",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "coverage": "إلغاء رسوم التأخير"
+    },
+    {
+      "id": "S14",
+      "title": "Tamara Saudi Homepage",
+      "publisher": "Tamara",
+      "url": "https://tamara.co/en-sa",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_product",
+      "coverage": "الدفع حتى 24 شهرًا وSmart والمنتجات الحالية"
+    },
+    {
+      "id": "S15",
+      "title": "Financing Product Prices and APR Calculator",
+      "publisher": "Tamara",
+      "url": "https://tamara.co/en-sa/financing-product-prices",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_product",
+      "coverage": "Pay in 3 وAPR والخطط والحد الأعلى"
+    },
+    {
+      "id": "S16",
+      "title": "Merchant Terms and Conditions",
+      "publisher": "Tamara",
+      "url": "https://www.tamara.co/en-SA/merchant-terms-and-conditions",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_legal",
+      "coverage": "الرسوم الثابتة والمتغيرة وخدمات الدفع"
+    },
+    {
+      "id": "S17",
+      "title": "Customer Terms and Conditions",
+      "publisher": "Tamara",
+      "url": "https://www.tamara.co/en-SA/terms-and-conditions",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_legal",
+      "coverage": "التمويل والرسوم وعدم رسوم التأخير والامتثال الشرعي"
+    },
+    {
+      "id": "S18",
+      "title": "Tamara for Business",
+      "publisher": "Tamara",
+      "url": "https://tamara.co/en-sa/partners",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_product",
+      "coverage": "تسوية التاجر وخدمات Pay in Full وBNPL والتسويق"
+    },
+    {
+      "id": "S19",
+      "title": "Tamara Ads",
+      "publisher": "Tamara",
+      "url": "https://tamara.co/en-SA/tamara-ads",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_product",
+      "coverage": "إعلانات CPC ومؤشرات الجمهور والنقرات"
+    },
+    {
+      "id": "S20",
+      "title": "Tamara Smart Terms",
+      "publisher": "Tamara",
+      "url": "https://tamara.co/en-sa/tamara-smart-terms-and-conditions",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_legal",
+      "coverage": "الاشتراك الشهري والتجديد"
+    },
+    {
+      "id": "S21",
+      "title": "Tamara $400 Million Debt Facility",
+      "publisher": "Tamara",
+      "url": "https://www.tamara.co/en-SA/tamara-400m-financing-goldman-sachs-shorooq",
+      "published_date": "2023-11-14",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "coverage": "التسهيل السابق والموظفين والأسواق والمستخدمين التاريخيين"
     }
   ],
   "data_quality": [
-    "معلومات عامة مستقاة من البيانات الصحفية وجولات التمويل."
+    "أرقام 2025 مأخوذة من قوائم مالية مدققة، وأرقام Q1 2026 من معلومات مرحلية راجعها PwC دون رأي تدقيق كامل.",
+    "فُصل نطاق الشركة السعودية عن نطاق مجموعة تمارا الإقليمية.",
+    "فُصل الإيراد عن الذمم والاقتراض والتمويل والتقييم والتصنيف الائتماني.",
+    "فُصل العملاء والتجار عن MAU وDAU والمعاملات.",
+    "لم تُستخدم زيارات خارجية أو إيرادات شهرية مخترعة.",
+    "تم تسجيل ادعاءات الشركة عن العملاء والتجار باعتبارها مقاييس شركة غير مدققة."
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "language": "ar",
+    "researched_through": "2026-08-03",
+    "latest_available_financial_period": "Q1 2026 ended 2026-03-31",
+    "latest_full_year": "FY2025 audited",
+    "corrections": [
+      {
+        "original_claim": "5M+ monthly traffic",
+        "action": "حذف",
+        "replacement": "لا يوجد traffic رسمي حديث؛ استُخدمت أعداد العملاء والتجار مع تعريفها الصحيح."
+      },
+      {
+        "original_claim": "الإيراد غير معلن بصورة مطلقة",
+        "action": "مؤهل",
+        "replacement": "إيراد المجموعة غير معلن، لكن Tamara Finance Company السعودية تنشر إيرادات مدققة ومراجعة."
+      },
+      {
+        "original_claim": "أكثر من 10 ملايين مستخدم",
+        "action": "محدث",
+        "replacement": "أعلنت الشركة أكثر من 25 مليون عميل و130 ألف شريك تجاري في 3 أغسطس 2026."
+      },
+      {
+        "original_claim": "رسوم تأخير كمصدر إيراد",
+        "action": "حذف",
+        "replacement": "أوقفت تمارا رسوم التأخير منذ 16 ديسمبر 2023."
+      },
+      {
+        "original_claim": "التاجر يتقاضى كامل المبلغ فورًا دائمًا",
+        "action": "مؤهل",
+        "replacement": "تدفع تمارا للتاجر مقدمًا أو وفق دورة التسوية المتفق عليها، وتتحمل مخاطر تحصيل العميل."
+      },
+      {
+        "original_claim": "التقييم يزيد عن مليار دولار حاليًا",
+        "action": "مؤرخ",
+        "replacement": "مليار دولار تقييم تاريخي لجولة Series C في ديسمبر 2023؛ التقييم الحالي غير معلن."
+      },
+      {
+        "original_claim": "جمعت أكثر من مليار دولار ديونًا وملكية",
+        "action": "فصل",
+        "replacement": "أعلنت 500 مليون دولار إجمالي ملكية حتى 2023، وتسهيلًا مدعومًا بالأصول يصل إلى 2.4 مليار دولار في 2025؛ السعة ليست سحبًا كاملًا."
+      },
+      {
+        "original_claim": "Series A بقيمة 110 ملايين دولار استثمار ملكية",
+        "action": "صحح",
+        "replacement": "الإعلان الرسمي وصف الجولة بأنها مزيج من الدين والملكية دون تقسيم."
+      },
+      {
+        "original_claim": "AWS وReact Native وJava وSpring وKubernetes",
+        "action": "حذف",
+        "replacement": "لا توجد مصادر أولية حديثة كافية لإثبات الحزمة الإنتاجية الحالية."
+      },
+      {
+        "original_claim": "أكثر من 500 موظف حاليًا",
+        "action": "مؤرخ وحذف من اللقطة الحالية",
+        "replacement": "الرقم يعود إلى 2023، وعدد الموظفين الحالي غير معلن."
+      }
+    ],
+    "metric_distinctions": [
+      "إيراد الكيان السعودي لا يساوي إيراد المجموعة الإقليمية.",
+      "متوسط الإيراد الشهري المحسوب لا يساوي MRR.",
+      "التمويل بالملكية لا يساوي الدين أو الإيراد.",
+      "سعة التسهيل لا تساوي المبلغ المسحوب.",
+      "التقييم الائتماني A- لا يساوي تقييم الملكية.",
+      "العملاء لا يساوون MAU أو المقترضين النشطين.",
+      "الشركاء التجاريون لا يساوون التجار النشطين.",
+      "الذمم المدينة والاقتراض والأصول لا تساوي GMV.",
+      "رسوم التاجر ورسوم المعالجة وأرباح التمويل قنوات إيراد مختلفة."
+    ],
+    "known_limits": [
+      "لا توجد قوائم موحدة عامة للمجموعة الإقليمية كاملة.",
+      "لا يوجد GMV أو عدد معاملات حالي منشور.",
+      "لا يوجد MAU أو DAU للتطبيق.",
+      "لا يوجد تقييم ملكية محدث بعد 2023.",
+      "لا يُعرف مقدار السحب الفعلي من كامل تسهيل 2.4 مليار دولار.",
+      "لا يوجد عدد موظفين حديث رسمي.",
+      "لم يُنشر تقرير التصنيف الكامل من Tassnief ضمن المصادر المتاحة؛ استُخدم إعلان تمارا.",
+      "الحزمة التقنية الداخلية الكاملة غير معلنة."
+    ],
+    "programmatic_checks": {
+      "source_file_read": "passed",
+      "json_parse": "passed",
+      "required_top_level_keys": "passed",
+      "source_id_uniqueness": "passed",
+      "evidence_source_references": "passed",
+      "evidence_json_paths": "passed",
+      "financial_calculations": "passed",
+      "revenue_component_sums": "passed",
+      "undisclosed_group_metrics_are_null": "passed",
+      "legacy_id_slug_order_preserved": "passed"
+    }
+  },
+  "evidence_map_schema": {
+    "claim_id": "معرف فريد",
+    "json_paths": "المسارات داخل JSON",
+    "claim": "الادعاء",
+    "source_ids": "معرفات المصادر",
+    "evidence_type": "financial | regulatory | company_fact | operational | product | funding | valuation | credit_rating | calculation | absence_of_disclosure",
+    "confidence": "high | medium | low",
+    "status": "verified | qualified | removed",
+    "notes": "قيود الدليل أو تعريف المقياس"
+  },
+  "evidence_map": [
+    {
+      "claim_id": "E01",
+      "json_paths": [
+        "$.company.founded_year",
+        "$.company.official_launch",
+        "$.company.founders",
+        "$.origin_story"
+      ],
+      "claim": "تأسست تمارا في 2020 على يد ثلاثة مؤسسين سعوديين وأطلقت في سبتمبر 2020.",
+      "source_ids": [
+        "S09",
+        "S11"
+      ],
+      "evidence_type": "company_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "claim_id": "E02",
+      "json_paths": [
+        "$.company.regulatory_status.saudi_arabia",
+        "$.company.sama_license_number"
+      ],
+      "claim": "تمارا مرخصة في السعودية للتمويل الاستهلاكي وBNPL تحت الرقم 95/أ ش/202502.",
+      "source_ids": [
+        "S04",
+        "S05",
+        "S03"
+      ],
+      "evidence_type": "regulatory",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "claim_id": "E03",
+      "json_paths": [
+        "$.company.regulatory_status.united_arab_emirates"
+      ],
+      "claim": "حصلت Tamara FZE على ترخيص تمويل مقيّد من مصرف الإمارات المركزي في أكتوبر 2025.",
+      "source_ids": [
+        "S08"
+      ],
+      "evidence_type": "regulatory",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "claim_id": "E04",
+      "json_paths": [
+        "$.directory_snapshot.current_company_reported_scale.customers",
+        "$.directory_snapshot.current_company_reported_scale.partner_merchants"
+      ],
+      "claim": "أعلنت تمارا أكثر من 25 مليون عميل وأكثر من 130 ألف شريك تجاري في أغسطس 2026.",
+      "source_ids": [
+        "S06"
+      ],
+      "evidence_type": "operational",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "أرقام شركة غير مدققة ولا تعني نشاطًا يوميًا."
+    },
+    {
+      "claim_id": "E05",
+      "json_paths": [
+        "$.directory_snapshot.latest_financial_scope",
+        "$.financials.financial_reporting_scope",
+        "$.company.parent_structure"
+      ],
+      "claim": "القوائم تخص Tamara Finance Company السعودية مع Tamara Capital DAC ولا تشمل تلقائيًا كل المجموعة.",
+      "source_ids": [
+        "S02",
+        "S03"
+      ],
+      "evidence_type": "financial",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "claim_id": "E06",
+      "json_paths": [
+        "$.directory_snapshot.latest_full_year_saudi_entity",
+        "$.financials.actual_revenue",
+        "$.financials.profitability"
+      ],
+      "claim": "بلغ إيراد FY2025 للشركة السعودية 1.347864 مليار ريال وصافي الربح 193.347 مليون ريال.",
+      "source_ids": [
+        "S02"
+      ],
+      "evidence_type": "financial",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "قوائم مدققة."
+    },
+    {
+      "claim_id": "E07",
+      "json_paths": [
+        "$.directory_snapshot.latest_quarter_saudi_entity",
+        "$.financials.actual_revenue",
+        "$.financials.profitability"
+      ],
+      "claim": "بلغ إيراد Q1 2026 نحو 669.545 مليون ريال وصافي الربح 123.391 مليون ريال.",
+      "source_ids": [
+        "S03"
+      ],
+      "evidence_type": "financial",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "معلومات مرحلية غير مدققة راجعها PwC."
+    },
+    {
+      "claim_id": "E08",
+      "json_paths": [
+        "$.financials.revenue_composition",
+        "$.monetization[0]",
+        "$.monetization[1]",
+        "$.monetization[2]",
+        "$.monetization[3]"
+      ],
+      "claim": "يتكون الإيراد المنشور من شبكة التجار والتمويل الإسلامي ورسوم المعالجة والخدمات الأخرى.",
+      "source_ids": [
+        "S02",
+        "S03"
+      ],
+      "evidence_type": "financial",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "claim_id": "E09",
+      "json_paths": [
+        "$.financials.credit_and_funding_metrics",
+        "$.directory_snapshot.latest_quarter_saudi_entity"
+      ],
+      "claim": "بلغ صافي ذمم العملاء 5.399 مليارات ريال والاقتراض 5.337 مليارات في مارس 2026.",
+      "source_ids": [
+        "S03"
+      ],
+      "evidence_type": "financial",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "ليست إيرادًا أو GMV."
+    },
+    {
+      "claim_id": "E10",
+      "json_paths": [
+        "$.directory_snapshot.credit_rating",
+        "$.analysis.rating_interpretation"
+      ],
+      "claim": "أعلنت تمارا تصنيف A- بنظرة مستقرة من Tassnief في 3 أغسطس 2026.",
+      "source_ids": [
+        "S06"
+      ],
+      "evidence_type": "credit_rating",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "استُخدم إعلان الشركة؛ تقرير الوكالة الكامل لم يكن متاحًا في المصادر المفتوحة المستخدمة."
+    },
+    {
+      "claim_id": "E11",
+      "json_paths": [
+        "$.financials.equity_funding",
+        "$.revenue_timeline[4]"
+      ],
+      "claim": "جمعت Series C مبلغ 340 مليون دولار عند تقييم مليار دولار، وأعلنت 500 مليون دولار إجمالي تمويل ملكية.",
+      "source_ids": [
+        "S09"
+      ],
+      "evidence_type": "funding",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "التقييم تاريخي."
+    },
+    {
+      "claim_id": "E12",
+      "json_paths": [
+        "$.financials.debt_and_asset_backed_facilities",
+        "$.revenue_timeline[5]"
+      ],
+      "claim": "تسهيل 2025 يصل إلى 2.4 مليار دولار، منه 1.4 مليار أولي ومليار مشروط، ويعيد تمويل تسهيل 500 مليون.",
+      "source_ids": [
+        "S07"
+      ],
+      "evidence_type": "funding",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "السعة لا تعني السحب الكامل."
+    },
+    {
+      "claim_id": "E13",
+      "json_paths": [
+        "$.revenue_timeline[1]",
+        "$.verification.corrections[7]"
+      ],
+      "claim": "Series A بقيمة 110 ملايين دولار كانت خليط دين وملكية دون تقسيم معلن.",
+      "source_ids": [
+        "S11"
+      ],
+      "evidence_type": "funding",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "claim_id": "E14",
+      "json_paths": [
+        "$.monetization[7]",
+        "$.problem_and_product[5]"
+      ],
+      "claim": "ألغت تمارا رسوم التأخير في ديسمبر 2023.",
+      "source_ids": [
+        "S13",
+        "S17"
+      ],
+      "evidence_type": "product",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "claim_id": "E15",
+      "json_paths": [
+        "$.problem_and_product[4]",
+        "$.tools[0]",
+        "$.tools[1]"
+      ],
+      "claim": "Pay in 3 بلا رسوم وAPR صفر، بينما الخطط الأطول قد تتضمن APR وتمتد حتى 24 شهرًا.",
+      "source_ids": [
+        "S14",
+        "S15"
+      ],
+      "evidence_type": "product",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "السعر النهائي يعتمد على الأهلية وعرض التاجر."
+    },
+    {
+      "claim_id": "E16",
+      "json_paths": [
+        "$.monetization[4]",
+        "$.tools[4]"
+      ],
+      "claim": "Tamara Smart اشتراك شهري متجدد.",
+      "source_ids": [
+        "S14",
+        "S20"
+      ],
+      "evidence_type": "product",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "مساهمة الإيراد غير معلنة."
+    },
+    {
+      "claim_id": "E17",
+      "json_paths": [
+        "$.monetization[5]",
+        "$.tools[6]"
+      ],
+      "claim": "Tamara Ads منصة إعلانية ذاتية الخدمة بتسعير CPC.",
+      "source_ids": [
+        "S19"
+      ],
+      "evidence_type": "product",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "مؤشرات الجمهور والنقرات ادعاءات تسويقية."
+    },
+    {
+      "claim_id": "E18",
+      "json_paths": [
+        "$.company.business_model",
+        "$.build_and_launch[3]",
+        "$.monetization[0]"
+      ],
+      "claim": "تسوي تمارا للتاجر وتتحمل مخاطر تحصيل العميل، وتتضمن العقود رسومًا ثابتة ومتغيرة.",
+      "source_ids": [
+        "S16",
+        "S18"
+      ],
+      "evidence_type": "product",
+      "confidence": "high",
+      "status": "qualified",
+      "notes": "توقيت التسوية يخضع للعقد ودورة الدفع."
+    },
+    {
+      "claim_id": "E19",
+      "json_paths": [
+        "$.directory_snapshot.average_monthly_revenue_calculated_saudi_entity",
+        "$.directory_snapshot.latest_quarter_average_monthly_revenue_calculated_saudi_entity"
+      ],
+      "claim": "متوسط الإيراد الشهري المحسوب 112.322 مليون ريال في 2025 و223.182 مليونًا في Q1 2026.",
+      "source_ids": [
+        "S02",
+        "S03"
+      ],
+      "evidence_type": "calculation",
+      "confidence": "high",
+      "status": "qualified",
+      "notes": "ليس MRR ويخص نطاقًا ماليًا سعوديًا."
+    },
+    {
+      "claim_id": "E20",
+      "json_paths": [
+        "$.directory_snapshot.monthly_traffic",
+        "$.directory_snapshot.revenue_per_visitor",
+        "$.directory_snapshot.solopreneur_score"
+      ],
+      "claim": "لا توجد مصادر رسمية تدعم traffic أو revenue per visitor أو solopreneur score.",
+      "source_ids": [
+        "S01",
+        "S14"
+      ],
+      "evidence_type": "absence_of_disclosure",
+      "confidence": "high",
+      "status": "removed",
+      "notes": "أُبقيت القيم null."
+    },
+    {
+      "claim_id": "E21",
+      "json_paths": [
+        "$.company.employees",
+        "$.company.employees_note"
+      ],
+      "claim": "عدد الموظفين الحالي غير معلن؛ رقم 500+ يعود إلى 2023.",
+      "source_ids": [
+        "S21"
+      ],
+      "evidence_type": "absence_of_disclosure",
+      "confidence": "high",
+      "status": "qualified",
+      "notes": "لم يُستخدم كرقم حالي."
+    },
+    {
+      "claim_id": "E22",
+      "json_paths": [
+        "$.financials.transaction_volume",
+        "$.financials.transaction_volume_note"
+      ],
+      "claim": "لا تنشر تمارا GMV أو إجمالي حجم المعاملات الحالي.",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S06"
+      ],
+      "evidence_type": "absence_of_disclosure",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "لم تُستخدم الذمم أو الإيراد كبديل."
+    }
   ],
   "research_metadata": {
-    "researched_on": "2026-07-29",
-    "scope": "عام",
-    "source_method": "معلومات عامة",
+    "original_researched_on": "2026-07-29",
+    "professional_v2_researched_on": "2026-08-03",
+    "scope": "مصادر رسمية وتنظيمية وقوائم مالية مدققة ومراجعة",
+    "source_method": "Tamara official financials + SAMA + company product and legal sources",
     "private_backend_data_included": false,
-    "copyright_note": "دراسة حالة"
+    "copyright_note": "تحليل وملخص عربي مستقل",
+    "id_preserved": true
   },
   "id": "tamara"
 }

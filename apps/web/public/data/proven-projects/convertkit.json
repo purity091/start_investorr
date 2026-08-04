@@ -1,133 +1,1011 @@
 {
   "order": 4,
   "slug": "convertkit",
-  "name": "ConvertKit",
-  "domain": "convertkit.com",
-  "website": "https://convertkit.com",
-  "category": "SaaS / التسويق عبر البريد الإلكتروني لصناع المحتوى",
-  "headline": "أدوات التسويق عبر البريد الإلكتروني، الأتمتة، وتحقيق الدخل لصناع المحتوى",
-  "summary": "تم بناء ConvertKit لصناع المحتوى المحترفين الذين يحتاجون إلى بناء جمهور، وسلاسل رسائل بريد إلكتروني مؤتمتة، وتقسيم الجمهور، وتحقيق الدخل من المنتجات الرقمية. طورت الشركة علامتها التجارية لاحقاً، لذا يحافظ هذا الملف على لمحة Starter Story ويؤرخ كل ادعاء.",
+  "name": "كِت (Kit) — سابقًا ConvertKit",
+  "domain": "kit.com",
+  "website": "https://kit.com",
+  "category": "Creator Economy SaaS / نظام تشغيل بريدي وتجاري لصناع المحتوى",
+  "headline": "من أداة بريد للمدونين إلى نظام تشغيل لصناع المحتوى: كيف حوّلت Kit التخصص والملكية المستقلة إلى شبكة نمو وتحقيق دخل",
+  "summary": "بدأت الشركة في 2013 باسم ConvertKit كمنصة بريد متخصصة لصناع المحتوى، ثم أصبحت Kit في أكتوبر 2024 لتعكس توسعها إلى نظام تشغيل «Email-first» يضم بناء الجمهور والأتمتة والتوصيات والتجارة والاشتراكات والرعايات والتكاملات. ظلت ممولة ذاتيًا من المؤسس والعملاء، مع صفقات سيولة ثانوية محدودة لا تُعد تمويلًا دخل خزينة الشركة.",
   "directory_snapshot": {
-    "monthly_revenue": "غير متوفر في بطاقة الدليل",
-    "monthly_traffic": "7.5M /mo",
-    "revenue_per_visitor": "$0.48 /visitor",
-    "solopreneur_score": "64.0",
-    "idea_label": "منصة التسويق عبر البريد الإلكتروني"
+    "monthly_revenue": "غير معلن حاليًا. أحدث رقم مطلق موثّق هو قرابة 46 مليون دولار إيرادًا سنويًا لعام 2024؛ متوسطه الحسابي نحو 3.83 ملايين دولار شهريًا، لكنه ليس MRR معلنًا ولا رقمًا حاليًا لعام 2026.",
+    "monthly_traffic": "غير معلن. حُذف رقم 7.5 ملايين زيارة شهريًا لأنه تقدير خارجي قديم ولم يُعرَّف كمستخدمين فريدين أو حركة رسمية.",
+    "revenue_per_visitor": "غير قابل للحساب بصورة موثوقة لأن الحركة الشهرية الرسمية غير منشورة، ولأن الإيراد السنوي لا يجوز قسمته على تقدير حركة غير متجانس.",
+    "solopreneur_score": {
+      "value": 68,
+      "method": "تقييم تحريري لا مقياس مالي؛ القصة بدأت بمؤسس واحد ورأس مال محدود، لكن المنصة الحالية تحتاج فريقًا عالميًا وبنية إرسال ومدفوعات وامتثال واستحواذات."
+    },
+    "idea_label": "نظام بريد ونمو وتحقيق دخل لصناع المحتوى",
+    "current_financial_signals": {
+      "latest_absolute_revenue": {
+        "value": "~$46M",
+        "period": "2024",
+        "metric_type": "إيراد سنوي تقريبي",
+        "caveat": "رقم من مراجعة المؤسس؛ ليس ARR لعام 2026 ولا قوائم مالية مدققة."
+      },
+      "subscription_arr_goal": {
+        "value": ">$50M",
+        "period": "هدف 2025",
+        "status": "هدف لا نتيجة محققة",
+        "caveat": "لم يُعثر على إعلان أولي حتى 3 أغسطس 2026 يؤكد تحقيقه."
+      },
+      "explicit_secondary_valuation": {
+        "value": "$200M",
+        "transaction": "صفقة ثانوية نقلت 3.2% من الأسهم عبر AngelList RUV",
+        "caveat": "الأموال ذهبت إلى المساهمين البائعين، لا إلى الشركة."
+      },
+      "official_2026_business_descriptor": {
+        "value": "$300M business",
+        "date": "2026-06-11",
+        "caveat": "وصف رسمي بلا منهجية معلنة أو جولة تمويل؛ لا يُستخدم كتقييم تمويلي مؤكد."
+      },
+      "profit_sharing": {
+        "value": "$9.8M cumulative",
+        "period": "عشر سنوات حتى أبريل 2026",
+        "caveat": "مدفوعات تراكمية للفريق وليست صافي ربح سنة أو إيرادًا."
+      }
+    },
+    "current_usage_signals": {
+      "paying_creators": {
+        "value": "60,000",
+        "period": "نهاية 2024",
+        "caveat": "تاريخي وليس عددًا مؤكدًا في أغسطس 2026."
+      },
+      "free_users": {
+        "value": "500,000+",
+        "period": "نهاية 2024",
+        "caveat": "حسابات مجانية وليست MAU."
+      },
+      "team_members": {
+        "value": "112",
+        "period": "صفحة الشركة الحالية",
+        "caveat": "رقم ذاتي معلن وقابل للتغير."
+      },
+      "emails_sent": {
+        "value": "112.3B",
+        "period": "مؤشر تراكمي منشور في 2024",
+        "caveat": "ليس رسائل سنة واحدة ولا زيارات."
+      },
+      "commerce_creator_earnings": {
+        "value": "$32.1M",
+        "period": "مؤشر منشور في 2024",
+        "caveat": "أموال حققها المبدعون وليست إيراد Kit."
+      },
+      "recommendations_subscribers": {
+        "value": "5.8M",
+        "period": "إضافات اشتراك عبر Recommendations في مادة 2024",
+        "caveat": "ليست حسابات Kit المدفوعة."
+      },
+      "monthly_active_users": "غير معلن.",
+      "website_visits": "غير معلن."
+    }
   },
   "company": {
-    "business_model": "اشتراكات SaaS متكررة متعددة المستويات",
-    "customer_type": "صناع المحتوى المحترفون، ناشرو النشرات البريدية، المدونون، الكتاب، والشركات عبر الإنترنت",
-    "founder": "ناثان باري",
-    "founder_role": "مؤسس",
-    "founders_count": "1",
-    "employees": "حوالي 82 في ملف Starter Story لعام 2023",
-    "started": "2013",
-    "location": "غير مطلوب حسب اللمحة المذكورة",
-    "funding": "استثمر المؤسس في البداية حوالي 5 آلاف دولار، ثم استثمر لاحقاً 50 ألف دولار إضافية خلال مرحلة إعادة الالتزام بالمشروع",
-    "profitability": "مصنف كمربح في ملف Starter Story",
-    "public_revenue_claim": "يقدر التقرير بـ 3.58 مليون دولار شهرياً؛ أشار عنوان المقال إلى 25 مليون دولار سنوياً"
+    "business_model": "اشتراكات SaaS شهرية وسنوية تتدرج مع حجم القائمة والميزات، إضافة إلى رسوم Commerce وPaid Recommendations والرعايات والتكاملات التي تدعم تحقيق دخل صناع المحتوى.",
+    "customer_type": "صناع المحتوى والكتاب والمدونون وناشرو النشرات والبودكاستيون والمدربون والموسيقيون وفرق المحتوى والشركات المعتمدة على الجمهور.",
+    "founder": "ناثان باري (Nathan Barry)",
+    "founder_role": "المؤسس والرئيس التنفيذي",
+    "founders_count": 1,
+    "employees": "112 عضو فريق وفق صفحة الشركة الحالية؛ الرقم غير مدقق لحظة بلحظة.",
+    "started": "يناير 2013",
+    "location": "شركة موزعة عن بُعد. الكيان القانوني Kit, Inc. مسجل في أيداهو، وعنوان المراسلات المعلن في بويزي، أيداهو.",
+    "legal_entity": "Kit, Inc. — شركة في ولاية أيداهو.",
+    "funding": "بدأ المؤسس بنحو 5,000 دولار ثم ضخ قرابة 50,000 دولار عند إعادة الالتزام. لم تعلن الشركة جولة رأس مال أولي من صناديق VC؛ نمت من إيرادات العملاء، مع صفقات ثانوية باعت أسهمًا قائمة دون إدخال رأس مال جديد إلى الشركة.",
+    "ownership": "تصف الشركة نفسها بأنها مستقلة وممولة ذاتيًا، مع مساهمين ثانويين بحصص أقلية. جدول الملكية الحالي غير منشور.",
+    "profitability": "مربحة وفق المؤسس وتدير برنامج تقاسم أرباح؛ لا تنشر صافي الربح أو EBITDA أو الهامش الإجمالي.",
+    "public_revenue_claim": "قرابة 46 مليون دولار إيرادًا سنويًا لعام 2024؛ لا يوجد رقم سنوي مطلق موثق لعام 2025 أو 2026 حتى تاريخ التحقق.",
+    "current_positioning": "نظام تشغيل بريدي لصناع المحتوى يجمع بناء الجمهور والتواصل والأتمتة والتوصيات والتجارة والرعايات.",
+    "brand_history": "ConvertKit من 2013 حتى 30 سبتمبر 2024، ثم Kit منذ 1 أكتوبر 2024."
   },
   "problem_and_product": [
-    "يحتاج صناع المحتوى لامتلاك علاقاتهم بجمهورهم بدلاً من الاعتماد بالكامل على المنصات الاجتماعية.",
-    "تدعم المنصة النماذج، صفحات الهبوط، الإرسال الجماعي، سلاسل البريد، الأتمتة، تقسيم الجمهور، وبيع المنتجات الرقمية.",
-    "يتميز المنتج بتركيزه على سير عمل صناع المحتوى بدلاً من التسويق البريدي العام للشركات الصغيرة.",
-    "أصبح العميل المستهدف تاريخياً هو المدونون والمحترفون الذين يمتلكون جمهوراً راسخاً."
+    {
+      "stage": "المشكلة الأصلية",
+      "text": "صُممت أدوات البريد العامة للشركات، بينما احتاج صناع المحتوى إلى امتلاك علاقة مباشرة مع الجمهور وتقسيمه حسب الاهتمامات والمنتجات."
+    },
+    {
+      "stage": "حل التخصص",
+      "text": "قدمت ConvertKit سجل مشترك موحدًا قائمًا على الوسوم والتقسيمات، مع نماذج وصفحات هبوط ورسائل وسلاسل وأتمتة بصرية."
+    },
+    {
+      "stage": "مشكلة الانتقال",
+      "text": "تكلفة نقل القوائم والنماذج والأتمتة من مزود بريد إلى آخر تمنع العميل من التبديل حتى عندما يكون المنتج الجديد أفضل."
+    },
+    {
+      "stage": "الحل المبكر",
+      "text": "استخدمت الشركة ترحيلًا مجانيًا عالي اللمس لإزالة مخاطر الانتقال وتحويل الخدمة اليدوية إلى أداة اكتساب وتعلم."
+    },
+    {
+      "stage": "المشكلة الحالية",
+      "text": "صانع المحتوى يحتاج إلى اكتساب مشتركين وامتلاك بياناتهم وبيع المنتجات والاشتراكات والعثور على رعاة وربط التطبيقات، لا إلى إرسال البريد فقط."
+    },
+    {
+      "stage": "الحل الحالي",
+      "text": "تجمع Kit البريد والأتمتة وRecommendations وSparkLoop والتجارة والاشتراكات والرعايات والتحليلات والتكاملات وMCP داخل منصة واحدة."
+    }
   ],
   "origin_story": [
-    "وضع ناثان باري تحدياً علنياً لنفسه لبناء مشروع SaaS يصل إلى إيرادات شهرية قدرها 5 آلاف دولار خلال ستة أشهر باستخدام ميزانية 5 آلاف دولار.",
-    "الشكاوى حول الأدوات الحالية مثل Mailchimp ساعدت في كشف فرصة لبرمجيات بريد إلكتروني مخصصة لصناع المحتوى.",
-    "توقفت الشركة في البداية عند حاجز الـ 2000 دولار كإيرادات شهرية متكررة (MRR).",
-    "دفعته نصيحة من هيتين شاه (Hiten Shah) إلى الاختيار بين إغلاق المشروع أو الالتزام الكامل به.",
-    "قام بتضييق السوق المستهدف، واستثمر رأس مال إضافي، وقام ببناء فريق."
+    "في يناير 2013 وضع ناثان باري تحديًا لبناء SaaS يصل إلى 5,000 دولار MRR خلال ستة أشهر بميزانية 5,000 دولار.",
+    "كشف التحدث مع المدونين المحترفين أن الأدوات القائمة لم تكن ملائمة لبيع الكتب والدورات والمنتجات الرقمية.",
+    "استقر المشروع قرب 2,000 دولار MRR، ثم أصبح المؤسس بين الإغلاق أو الالتزام الكامل.",
+    "في أواخر 2014 تخصص في التسويق البريدي للمدونين المحترفين وضخ نحو 50,000 دولار وبدأ البيع والترحيل اليدوي.",
+    "وصل MRR إلى نحو 15,000 دولار في يوليو 2015، ثم 98,000 دولار بنهاية 2015، ونحو 500,000 دولار بنهاية 2016.",
+    "أصبحت ConvertKit باسم Kit في أكتوبر 2024 لأن نطاق المنتج تجاوز أداة البريد الضيقة."
   ],
   "build_and_launch": [
-    "ورد أن البناء الأولي استغرق حوالي 60 يوماً.",
-    "كانت المبيعات المبكرة يدوية للغاية وبقيادة المؤسس شخصياً.",
-    "استخدمت الشركة خدمات الترحيل الشاملة (Concierge migrations) لإزالة عقبات الانتقال للعملاء القادمين من مزودي بريد إلكتروني آخرين.",
-    "التركيز على شريحة واحدة من صناع المحتوى جعل التموضع وقرارات المنتج والتواصل أكثر دقة.",
-    "بحلول 2016، وصف المصدر الشركة بأنها وصلت إلى حوالي 500 ألف دولار إيرادات شهرية متكررة."
+    "بناء الإصدار الأول حول شريحة واحدة بدل منافسة كل أدوات التسويق.",
+    "استخدام التحدي العلني والكتابة المنتظمة لبناء جمهور قبل اكتمال المنتج.",
+    "البيع اليدوي بقيادة المؤسس لصناع محتوى معروفين.",
+    "تقديم Concierge Migrations لإزالة تكلفة التبديل.",
+    "تصميم سجل مشترك واحد مع وسوم وتقسيمات بدل تكرار الشخص عبر قوائم.",
+    "إضافة التجارة والتوصيات والرعايات لربط نمو القائمة بتحقيق الدخل.",
+    "الاستحواذ على FanBridge في 2021 وSparkLoop في 2023؛ القيم غير معلنة.",
+    "فتح منصة التكاملات وAPI ثم Kit MCP في 2026.",
+    "توسيع العلامة عبر Kit Studios في بويزي وشيكاغو ونيويورك."
   ],
   "costs_and_operations": [
-    "كانت الميزانية الأولية للتحدي حوالي 5000 دولار.",
-    "تضمنت إعادة الالتزام اللاحقة استثماراً إضافياً من المؤسس بحوالي 50,000 دولار.",
-    "أدى العمل اليدوي في ترحيل العملاء إلى زيادة جهد الخدمة المبكر لكنه سرّع من تحويل العملاء واكتسابهم.",
-    "قدر الملف الشخصي عدد الموظفين بحوالي 82 موظفاً في عام 2023.",
-    "تمثل التفاصيل التشغيلية لمحات تاريخية وليست تقريراً مالياً مدققاً للشركة في الوقت الحالي."
+    {
+      "item": "رأس المال الأولي",
+      "status": "موثق تاريخيًا",
+      "detail": "بدأ التحدي بنحو 5,000 دولار، ثم ضخ المؤسس قرابة 50,000 دولار إضافية."
+    },
+    {
+      "item": "الترحيل وخدمة العملاء",
+      "status": "موثق تاريخيًا",
+      "detail": "اعتمد النمو المبكر على ترحيل يدوي مرتفع التكلفة البشرية لكنه خفض مخاطر التبديل."
+    },
+    {
+      "item": "الفريق",
+      "status": "معلن حاليًا",
+      "detail": "تعرض صفحة الشركة 112 عضو فريق يعملون عن بُعد؛ لا تنشر تكلفة الرواتب."
+    },
+    {
+      "item": "تقاسم الأرباح",
+      "status": "معلن",
+      "detail": "ذكر المؤسس دفع 9.8 ملايين دولار تراكميًا للفريق خلال عشر سنوات."
+    },
+    {
+      "item": "البنية السحابية",
+      "status": "تاريخي",
+      "detail": "بلغ إنفاق AWS نحو 1.066 مليون دولار في 2021؛ لا يمثل ذلك تكلفة أو حزمة 2026 الكاملة."
+    },
+    {
+      "item": "الاستحواذات",
+      "status": "معلن جزئيًا",
+      "detail": "استحوذت على FanBridge وSparkLoop، لكن القيم غير معلنة."
+    },
+    {
+      "item": "الاستقلال والتمويل",
+      "status": "موثق",
+      "detail": "لا جولات رأس مال أولي معلنة؛ الصفقات الثانوية لا تمول التشغيل مباشرة."
+    },
+    {
+      "item": "الربحية",
+      "status": "معلن دون أرقام كاملة",
+      "detail": "تصف الشركة نفسها بأنها مربحة، ولا تنشر صافي الربح أو التدفق النقدي الحر."
+    }
   ],
   "monetization": [
-    "تتوسع الخطط المتكررة مع زيادة عدد المشتركين والميزات المطلوبة.",
-    "تضمنت المستويات التاريخية المذكورة: خطة مجانية، خطة Creator بحوالي 9 دولارات شهرياً، و Creator Pro بحوالي 29 دولاراً شهرياً.",
-    "تحقق الشركة أيضاً دخلاً من قدرات التجارة الإلكترونية الخاصة بصناع المحتوى عبر المنصة.",
-    "تسميات الخطط والأسعار التاريخية ربما تغيرت مع تطور العلامة التجارية للشركة لاحقاً."
+    {
+      "stream": "Newsletter",
+      "pricing": "خطة مجانية توصف في مواد المساعدة حتى 10,000 مشترك، بينما تعرض الحاسبة 1,000 كحجم افتراضي.",
+      "unit": "حجم القائمة",
+      "caveat": "قد ترتبط السعة الأعلى بشروط Recommendations؛ يجب مراجعة الشروط عند الاشتراك."
+    },
+    {
+      "stream": "Creator",
+      "pricing": "39 دولارًا شهريًا حتى 1,000 مشترك، أو 390 دولارًا سنويًا بما يعادل نحو 33 دولارًا شهريًا.",
+      "unit": "حجم القائمة",
+      "caveat": "يرتفع السعر مع عدد المشتركين."
+    },
+    {
+      "stream": "Pro",
+      "pricing": "79 دولارًا شهريًا حتى 1,000 مشترك، أو 790 دولارًا سنويًا بما يعادل نحو 66 دولارًا شهريًا.",
+      "unit": "حجم القائمة",
+      "caveat": "يرتفع السعر مع عدد المشتركين."
+    },
+    {
+      "stream": "Kit Commerce",
+      "pricing": "3.5% + 0.30 دولار لكل معاملة.",
+      "unit": "معاملة ناجحة",
+      "caveat": "تقول Kit إن حصتها الخاصة نحو 0.6% من الرسم، والباقي لمعالجة الدفع؛ الرسم ليس كله إيرادًا صافيًا."
+    },
+    {
+      "stream": "Paid Recommendations",
+      "pricing": "رسم منصة معلن 23.5%.",
+      "unit": "مدفوعات اكتساب المشتركين",
+      "caveat": "القيمة المتبادلة بين الناشرين ليست كلها إيراد Kit."
+    },
+    {
+      "stream": "Newsletter Sponsorships",
+      "pricing": "سوق رعاية يربط الناشرين بالعلامات التجارية.",
+      "unit": "حملة أو موضع رعاية",
+      "caveat": "لا توجد عمولة موحدة منشورة في المصادر المستخدمة."
+    }
   ],
   "growth": [
-    "استهدف التواصل المباشر بقيادة المؤسس المدونين وصناع المحتوى المحترفين.",
-    "أدت خدمات الترحيل المجانية عالية الجودة إلى تقليل المخاطر العملية لتغيير منصة البريد الإلكتروني.",
-    "قدم برنامج التسويق بالعمولة (Affiliate) تاريخياً حصة 30% من الإيرادات المتكررة، مما خلق قناة استحواذ قوية يقودها صناع المحتوى.",
-    "دعم التموضع المتخصص وتثقيف صناع المحتوى الإحالات العضوية (Organic referrals) وتوزيع المحتوى.",
-    "ساعد التحدي العلني والشفاف للمؤسس في جذب اهتمام مبكر للمشروع."
+    "التخصص في المدونين المحترفين جعل المنتج والرسائل والمبيعات أكثر دقة.",
+    "الترحيل المجاني أزال تكلفة التحول من المنافسين.",
+    "استخدم المؤسس الكتابة العلنية والمراجعات لبناء الثقة والتوزيع.",
+    "برنامج الإحالة الحالي يدفع 50% لأول 12 شهرًا ثم 10%–20% متكررًا حسب المستوى، بدل 30% التاريخية الثابتة.",
+    "Recommendations صنعت أثر شبكة بين الناشرين.",
+    "التجارة والرعايات حولت المنصة من تكلفة بريد إلى أداة إيراد.",
+    "استخدمت السيولة الثانوية لتقليل مخاطر المساهمين دون تمويل التشغيل.",
+    "غيّرت العلامة عندما أصبح اسم ConvertKit أضيق من المنتج."
   ],
   "tools": [
-    "Stripe",
-    "WordPress",
-    "Zapier",
-    "بنية تحتية لأتمتة البريد الإلكتروني",
-    "أدوات بناء صفحات الهبوط والتجارة لصناع المحتوى"
+    "Broadcasts وEmail Designer",
+    "Sequences وVisual Automations",
+    "Tags وSegments وSubscriber Signals",
+    "Forms وLanding Pages وCreator Profile",
+    "Recommendations وSparkLoop",
+    "Kit Commerce والاشتراكات المدفوعة",
+    "Newsletter Sponsorships",
+    "Engagement Analytics",
+    "Kit App Store وAPI وتكاملات WordPress وZapier وShopify وStripe وHubSpot وPatreon",
+    "Kit MCP لوكلاء وأدوات الذكاء الاصطناعي",
+    "Kit Studios في بويزي وشيكاغو ونيويورك",
+    "مصادقة متعددة العوامل وأدوات أمان",
+    "AWS كبنية تاريخية موثقة لعام 2021، لا كحزمة حالية كاملة"
   ],
   "revenue_timeline": [
     {
-      "date": "مرحلة مبكرة",
+      "date": "2013-H1",
       "amount": "~$2K MRR",
-      "type": "فترة ركود تاريخية",
-      "note": "توقف نمو العمل قبل أن يعيد المؤسس التزامه ويضيق شريحة السوق."
+      "type": "مرحلة ركود مبكرة",
+      "note": "رقم تقريبي من قصة الشركة."
     },
     {
-      "date": "2016",
+      "date": "2015-07",
+      "amount": "~$15K MRR",
+      "type": "إيراد شهري متكرر تاريخي",
+      "note": "بعد إعادة الالتزام والتخصص."
+    },
+    {
+      "date": "2015-12",
+      "amount": "~$98K MRR",
+      "type": "إيراد شهري متكرر تاريخي",
+      "note": "محطة نهاية 2015."
+    },
+    {
+      "date": "2016-12",
       "amount": "~$500K MRR",
-      "type": "محطة نمو تاريخية",
-      "note": "ورد في تفصيل دراسة حالة Starter Story."
+      "type": "إيراد شهري متكرر تاريخي",
+      "note": "محطة نهاية 2016، لا الإيراد الحالي."
     },
     {
-      "date": "ملف 13-11-2023",
-      "amount": "$3.58M /month (مقدرة)",
-      "type": "تقدير Starter Story",
-      "note": "وصف عنوان المقال بشكل منفصل الشركة بأنها منصة بـ 25 مليون دولار سنوياً."
+      "date": "2021",
+      "amount": ">$27M annual revenue",
+      "type": "إيراد سنوي تاريخي",
+      "note": "ورد في سياق استحواذ FanBridge."
+    },
+    {
+      "date": "2024-12",
+      "amount": "~$46M annual revenue",
+      "type": "إيراد سنوي تقريبي",
+      "note": "أحدث رقم مطلق موثّق من المؤسس."
+    },
+    {
+      "date": "2025-goal",
+      "amount": ">$50M subscription ARR",
+      "type": "هدف",
+      "note": "لم يُثبت كإيراد محقق."
+    },
+    {
+      "date": "2026-04",
+      "amount": "$200M valuation",
+      "type": "تقييم صفقة ثانوية",
+      "note": "انتقلت 3.2% من الأسهم؛ لم يدخل المقابل خزينة الشركة."
+    },
+    {
+      "date": "2026-06",
+      "amount": "$300M business",
+      "type": "وصف رسمي غير محدد المنهجية",
+      "note": "لا يُعامل كتقييم تمويلي مؤكد."
     }
   ],
   "lessons": [
-    "المنتج الأفقي الواسع يمكن أن يحقق قوة جذب من خلال السيطرة أولاً على سوق متخصصة (Niche) محددة بوضوح.",
-    "خدمات الترحيل عالية الدعم (High-touch) يمكنها التغلب على تكاليف الاستبدال والانتقال في برمجيات البنية التحتية.",
-    "يمكن للتحديات العلنية واقتصاديات التسويق بالعمولة تحويل العملاء إلى شركاء توزيع للشركة."
+    {
+      "title": "التخصص يعيد تعريف المنتج الأفقي",
+      "description": "دخلت Kit سوق البريد من زاوية صانع المحتوى، فغيّر التخصص نموذج البيانات والأتمتة والهجرة والدعم، لا الرسائل التسويقية فقط."
+    },
+    {
+      "title": "الخدمة اليدوية قد تكون ميزة مؤقتة",
+      "description": "الترحيل المجاني أزال عائق الشراء وعلّم الفريق ما يجب أتمتته لاحقًا."
+    },
+    {
+      "title": "الشفافية قناة توزيع وحوكمة",
+      "description": "ربط المؤسس التحديات العلنية بأرقام وقرارات، فبنى الثقة وفرض الانضباط على التنفيذ."
+    },
+    {
+      "title": "اربط تكلفة البرمجية بإيراد العميل",
+      "description": "التجارة والتوصيات والرعايات جعلت Kit جزءًا من اقتصاد المبدع لا مجرد فاتورة إرسال."
+    },
+    {
+      "title": "الشبكة أقوى من الميزة",
+      "description": "Recommendations تزداد قيمتها مع عدد الناشرين والمعلنين، بشرط ضبط الجودة والحوافز."
+    },
+    {
+      "title": "السيولة الثانوية ليست جولة تمويل",
+      "description": "بيع الأسهم القائمة يوفر سيولة للمساهمين لكنه لا يزيد نقد الشركة، ويجب فصله عن التمويل."
+    },
+    {
+      "title": "غيّر العلامة عندما يقيّد الاسم السوق",
+      "description": "اسم ConvertKit أصبح أضيق من المنتج؛ التحول إلى Kit وسّع الرؤية مع ضرورة الحفاظ على وضوح الفئة."
+    }
+  ],
+  "analysis": {
+    "title": "Kit بعد ConvertKit: هل تستطيع منصة مستقلة امتلاك اقتصاد صانع المحتوى من أول مشترك إلى أول دولار؟",
+    "strategic_thesis": "قوة Kit لم تعد في إرسال البريد وحده، بل في امتلاك العلاقة المباشرة بين المبدع وجمهوره وإضافة طبقات نمو وتحقيق دخل فوقها. البريد سجل الهوية والتفاعل، والتوصيات تجلب الجمهور، والتجارة والرعايات تحول الانتباه إلى إيراد.",
+    "business_model_evolution": [
+      "2013–2014: تجربة SaaS صغيرة وأداة بريد للمدونين.",
+      "2015–2017: تخصص، مبيعات مباشرة، ترحيل يدوي وتسارع MRR.",
+      "2018–2021: منصة أتمتة مستقرة واستحواذ FanBridge.",
+      "2022–2024: تجارة وتوصيات وSparkLoop ثم إعادة العلامة إلى Kit.",
+      "2025–2026: رعايات وإشارات وتحليلات وMCP واستوديوهات، مع سيولة ثانوية محدودة."
+    ],
+    "competitive_moat": [
+      "تموضع طويل الأمد حول صناع المحتوى.",
+      "سجل مشترك موحد يجمع التفاعل والشراء والتوصيات.",
+      "شبكة Recommendations وتأثيراتها الشبكية.",
+      "تكامل بناء الجمهور وتحقيق الدخل.",
+      "علامة يقودها مؤسس معروف وشفافية تاريخية.",
+      "ربحية وملكية مستقلة تمنح مرونة زمنية.",
+      "تكلفة تبديل مرتفعة بسبب القوائم والأتمتة والمنتجات."
+    ],
+    "key_risks": [
+      "منافسة Mailchimp وSubstack وBeehiiv وKlaviyo وHubSpot.",
+      "الاعتماد على سياسات Gmail وMicrosoft وApple والتسليم.",
+      "تكلفة الخطة المجانية وبرامج الإحالة إن لم تتحول إلى إيراد.",
+      "تشتت المنتج بين البريد والتجارة والرعايات والاستوديوهات.",
+      "غياب أرقام 2025 و2026 وchurn وNRR والهامش وصافي الربح.",
+      "غموض منهجية وصف 300 مليون دولار.",
+      "مخاطر جودة شبكة التوصيات والرعايات.",
+      "تحول الذكاء الاصطناعي إلى ميزة معيارية."
+    ],
+    "what_to_watch": [
+      "هل تحقق هدف تجاوز 50 مليون دولار Subscription ARR؟",
+      "عدد المبدعين المدفوعين الحالي ومعدل التحويل من المجاني.",
+      "نسبة الإيراد من الاشتراك مقابل Commerce وRecommendations والرعايات.",
+      "أي صفقة ثانوية لاحقة ومنهجية تقييم 300 مليون دولار.",
+      "أثر Subscriber Signals وMCP على الاستخدام والاحتفاظ.",
+      "اقتصاديات الخطة المجانية حتى 10,000 مشترك.",
+      "جودة Recommendations والعائد للناشرين.",
+      "وضوح الفئة بعد توسيع العلامة."
+    ],
+    "bottom_line": "Kit مثال قوي على بناء SaaS رأسي داخل سوق أفقي ثم توسيعه إلى منصة. الملف القديم بالغ في دقة الإيراد الشهري والحركة؛ البيانات الأولية تدعم إيرادًا تقريبيًا لعام 2024 وصفقة ثانوية عند 200 مليون دولار ووصفًا لاحقًا بقيمة 300 مليون دون منهجية. يجب فصل هذه المقاييس عن تمويل الشركة وعن أموال المبدعين."
+  },
+  "verification": {
+    "standard": "Professional V2",
+    "verified_until": "2026-08-03",
+    "result": "passed",
+    "research_scope": "الموقع الرسمي لـKit، كتابات المؤسس، صفحات الأسعار والقانون والتكاملات والهندسة والاستحواذات والمنتجات حتى 3 أغسطس 2026. الشركة خاصة ولا تقدم إفصاحات SEC تشغيلية.",
+    "primary_corrections": [
+      "تحديث العلامة من ConvertKit إلى Kit والنطاق إلى kit.com.",
+      "حذف 7.5 ملايين زيارة شهريًا و0.48 دولار لكل زائر.",
+      "استبدال تقدير 3.58 ملايين دولار شهريًا بنحو 46 مليون دولار إيرادًا سنويًا لعام 2024.",
+      "عدم اعتماد عنوان 25 مليون دولار الأقدم كرقم حالي.",
+      "تحديث عدد الفريق من 82 إلى 112.",
+      "تحديث الأسعار من 9 و29 دولارًا إلى 39 و79 دولارًا شهريًا عند 1,000 مشترك.",
+      "تحديث برنامج الإحالة من 30% التاريخية إلى الهيكل الحالي.",
+      "فصل إيراد Kit عن أرباح المبدعين وحجم الرسائل والمشتركين.",
+      "فصل تقييم 200 مليون دولار الثانوي عن التمويل.",
+      "تقييد وصف 300 مليون دولار لغياب المنهجية.",
+      "تحديث محفظة المنتجات والتكاملات، ووسم AWS كتاريخي."
+    ],
+    "programmatic_checks": {
+      "input_json_parse": "passed",
+      "output_json_parse": "passed",
+      "required_base_keys_preserved": "passed",
+      "source_id_integrity": "passed",
+      "evidence_map_paths": "passed",
+      "timeline_order": "passed",
+      "brand_and_domain_updated": "passed",
+      "revenue_traffic_separation": "passed",
+      "creator_earnings_not_counted_as_company_revenue": "passed",
+      "secondary_transaction_not_counted_as_funding": "passed",
+      "valuation_methodology_caveat_present": "passed",
+      "outdated_pricing_removed": "passed",
+      "unsupported_traffic_removed": "passed"
+    },
+    "limitations": [
+      "الشركة خاصة ولا تنشر قوائم مالية مدققة أو صافي دخل أو هوامش.",
+      "آخر رقم إيراد مطلق يعود إلى 2024؛ لم يُثبت هدف 2025.",
+      "وصف 300 مليون دولار لا يوضح طريقة التقييم.",
+      "أعداد المدفوعين والمجانيين المتاحة تعود إلى نهاية 2024.",
+      "مؤشرات الرسائل وأرباح المبدعين والتوصيات ذاتية الإفصاح.",
+      "الأسعار وشروط الخطط والعمولات قابلة للتغيير."
+    ]
+  },
+  "evidence_map_schema": {
+    "description": "خريطة تربط الادعاءات الجوهرية بالمصادر وتفصل الإيراد والتقييم والتمويل والحركة والمستخدمين وأموال المبدعين.",
+    "fields": {
+      "path": "مسار الحقل داخل JSON",
+      "claim": "الادعاء المختصر",
+      "metric_type": "نوع المقياس",
+      "status": "verified أو corrected أو unavailable أو qualified",
+      "confidence": "high أو medium أو low",
+      "source_ids": "معرفات المصادر الداعمة",
+      "caveat": "قيد التفسير"
+    }
+  },
+  "evidence_map": [
+    {
+      "path": "name",
+      "claim": "أصبحت العلامة Kit بدل ConvertKit في 1 أكتوبر 2024.",
+      "metric_type": "brand",
+      "status": "corrected",
+      "confidence": "high",
+      "source_ids": [
+        "S2",
+        "S3"
+      ],
+      "caveat": "قد يبقى الاسم القديم في المراجع التاريخية."
+    },
+    {
+      "path": "company.started",
+      "claim": "بدأت الشركة في يناير 2013.",
+      "metric_type": "company_history",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S1"
+      ],
+      "caveat": "وفق قصة الشركة."
+    },
+    {
+      "path": "company.founder",
+      "claim": "ناثان باري هو المؤسس والرئيس التنفيذي.",
+      "metric_type": "leadership",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S11"
+      ],
+      "caveat": "المنصب قابل للتغير."
+    },
+    {
+      "path": "company.employees",
+      "claim": "تعرض الصفحة الحالية 112 عضو فريق.",
+      "metric_type": "headcount",
+      "status": "corrected",
+      "confidence": "medium",
+      "source_ids": [
+        "S11"
+      ],
+      "caveat": "رقم ذاتي معلن."
+    },
+    {
+      "path": "company.location",
+      "claim": "Kit, Inc. مسجلة في أيداهو وعنوان المراسلات في بويزي.",
+      "metric_type": "company_profile",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S12",
+        "S13"
+      ],
+      "caveat": "العنوان القانوني لا يساوي مواقع الفريق."
+    },
+    {
+      "path": "company.funding",
+      "claim": "بدأت بـ5 آلاف دولار ثم نحو 50 ألفًا دون جولة VC أولية معلنة.",
+      "metric_type": "funding",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S1",
+        "S14"
+      ],
+      "caveat": "الصفقات الثانوية ليست تمويلًا."
+    },
+    {
+      "path": "company.profitability",
+      "claim": "تصف الشركة نفسها بأنها مربحة وتدير تقاسم أرباح.",
+      "metric_type": "profitability",
+      "status": "verified",
+      "confidence": "medium",
+      "source_ids": [
+        "S5"
+      ],
+      "caveat": "لا صافي ربح مدقق."
+    },
+    {
+      "path": "directory_snapshot.monthly_revenue",
+      "claim": "لا يوجد MRR حالي معلن؛ آخر إيراد مطلق نحو 46 مليون دولار في 2024.",
+      "metric_type": "revenue",
+      "status": "corrected",
+      "confidence": "high",
+      "source_ids": [
+        "S4"
+      ],
+      "caveat": "المتوسط الشهري الحسابي ليس MRR."
+    },
+    {
+      "path": "directory_snapshot.monthly_traffic",
+      "claim": "لا توجد حركة شهرية رسمية منشورة.",
+      "metric_type": "traffic",
+      "status": "unavailable",
+      "confidence": "high",
+      "source_ids": [
+        "S11"
+      ],
+      "caveat": "الحسابات والرسائل ليست زيارات."
+    },
+    {
+      "path": "directory_snapshot.current_financial_signals.latest_absolute_revenue",
+      "claim": "قرابة 46 مليون دولار إيرادًا لعام 2024.",
+      "metric_type": "annual_revenue",
+      "status": "verified",
+      "confidence": "medium",
+      "source_ids": [
+        "S4"
+      ],
+      "caveat": "تقريبي وغير مدقق."
+    },
+    {
+      "path": "directory_snapshot.current_financial_signals.explicit_secondary_valuation",
+      "claim": "صفقة ثانوية عند 200 مليون دولار نقلت 3.2% من الأسهم.",
+      "metric_type": "secondary_valuation",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S5"
+      ],
+      "caveat": "ليست جولة تمويل."
+    },
+    {
+      "path": "directory_snapshot.current_financial_signals.official_2026_business_descriptor",
+      "claim": "وصف رسمي بقيمة 300 مليون دولار.",
+      "metric_type": "valuation_descriptor",
+      "status": "qualified",
+      "confidence": "high",
+      "source_ids": [
+        "S24"
+      ],
+      "caveat": "لا منهجية معلنة."
+    },
+    {
+      "path": "directory_snapshot.current_financial_signals.profit_sharing",
+      "claim": "9.8 ملايين دولار تقاسم أرباح تراكميًا.",
+      "metric_type": "profit_distribution",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S5"
+      ],
+      "caveat": "ليس ربح سنة واحدة."
+    },
+    {
+      "path": "directory_snapshot.current_usage_signals.paying_creators",
+      "claim": "60 ألف صانع مدفوع بنهاية 2024.",
+      "metric_type": "customers",
+      "status": "qualified",
+      "confidence": "medium",
+      "source_ids": [
+        "S4"
+      ],
+      "caveat": "رقم تاريخي لا حالي."
+    },
+    {
+      "path": "directory_snapshot.current_usage_signals.free_users",
+      "claim": "أكثر من 500 ألف حساب مجاني بنهاية 2024.",
+      "metric_type": "users",
+      "status": "qualified",
+      "confidence": "medium",
+      "source_ids": [
+        "S4"
+      ],
+      "caveat": "ليست MAU."
+    },
+    {
+      "path": "directory_snapshot.current_usage_signals.emails_sent",
+      "claim": "112.3 مليار رسالة بريد كمؤشر تراكمي.",
+      "metric_type": "usage",
+      "status": "verified",
+      "confidence": "medium",
+      "source_ids": [
+        "S18"
+      ],
+      "caveat": "ليست زيارات أو مستخدمين."
+    },
+    {
+      "path": "directory_snapshot.current_usage_signals.commerce_creator_earnings",
+      "claim": "32.1 مليون دولار حققها المبدعون عبر Commerce.",
+      "metric_type": "creator_earnings",
+      "status": "verified",
+      "confidence": "medium",
+      "source_ids": [
+        "S18"
+      ],
+      "caveat": "ليست إيراد Kit."
+    },
+    {
+      "path": "directory_snapshot.current_usage_signals.recommendations_subscribers",
+      "claim": "5.8 ملايين مشترك أضافتهم Recommendations.",
+      "metric_type": "network_growth",
+      "status": "verified",
+      "confidence": "medium",
+      "source_ids": [
+        "S18"
+      ],
+      "caveat": "ليسوا حسابات Kit مدفوعة."
+    },
+    {
+      "path": "monetization[0]",
+      "claim": "الخطة المجانية موصوفة حتى 10 آلاف مشترك.",
+      "metric_type": "pricing",
+      "status": "qualified",
+      "confidence": "medium",
+      "source_ids": [
+        "S6",
+        "S7"
+      ],
+      "caveat": "قد ترتبط بشروط."
+    },
+    {
+      "path": "monetization[1]",
+      "claim": "Creator بسعر 39 دولارًا شهريًا أو 390 سنويًا عند 1,000 مشترك.",
+      "metric_type": "pricing",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S6",
+        "S7"
+      ],
+      "caveat": "يرتفع السعر مع القائمة."
+    },
+    {
+      "path": "monetization[2]",
+      "claim": "Pro بسعر 79 دولارًا شهريًا أو 790 سنويًا عند 1,000 مشترك.",
+      "metric_type": "pricing",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S6",
+        "S7"
+      ],
+      "caveat": "يرتفع السعر مع القائمة."
+    },
+    {
+      "path": "monetization[3]",
+      "claim": "Commerce: 3.5% + 30 سنتًا.",
+      "metric_type": "transaction_fee",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S8"
+      ],
+      "caveat": "ليس كله إيرادًا صافيًا."
+    },
+    {
+      "path": "monetization[4]",
+      "claim": "Paid Recommendations: رسم 23.5%.",
+      "metric_type": "platform_fee",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S9"
+      ],
+      "caveat": "المدفوعات الإجمالية ليست كلها إيرادًا."
+    },
+    {
+      "path": "growth[3]",
+      "claim": "الإحالة الحالية: 50% لأول سنة ثم 10%–20%.",
+      "metric_type": "distribution_cost",
+      "status": "corrected",
+      "confidence": "high",
+      "source_ids": [
+        "S10"
+      ],
+      "caveat": "الشروط قابلة للتغيير."
+    },
+    {
+      "path": "build_and_launch[6]",
+      "claim": "الاستحواذ على FanBridge وSparkLoop.",
+      "metric_type": "acquisitions",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S15",
+        "S16"
+      ],
+      "caveat": "القيم غير معلنة."
+    },
+    {
+      "path": "tools",
+      "claim": "تشمل المنصة البريد والأتمتة والتوصيات والتجارة والرعايات والتكاملات وMCP.",
+      "metric_type": "product_portfolio",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S6",
+        "S19",
+        "S20",
+        "S21",
+        "S23"
+      ],
+      "caveat": "الميزات قابلة للتحديث."
+    },
+    {
+      "path": "costs_and_operations[4]",
+      "claim": "إنفاق AWS نحو 1.066 مليون دولار في 2021.",
+      "metric_type": "infrastructure_cost",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S22"
+      ],
+      "caveat": "تاريخي لا يصف 2026."
+    },
+    {
+      "path": "revenue_timeline[5]",
+      "claim": "نحو 46 مليون دولار إيرادًا في 2024.",
+      "metric_type": "annual_revenue",
+      "status": "verified",
+      "confidence": "medium",
+      "source_ids": [
+        "S4"
+      ],
+      "caveat": "تقريبي وغير مدقق."
+    },
+    {
+      "path": "revenue_timeline[7]",
+      "claim": "تقييم 200 مليون دولار في صفقة ثانوية.",
+      "metric_type": "secondary_valuation",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S5"
+      ],
+      "caveat": "ليست تمويلًا."
+    },
+    {
+      "path": "revenue_timeline[8]",
+      "claim": "وصف 300 مليون دولار في 2026.",
+      "metric_type": "valuation_descriptor",
+      "status": "qualified",
+      "confidence": "high",
+      "source_ids": [
+        "S24"
+      ],
+      "caveat": "بلا منهجية."
+    }
   ],
   "sources": [
     {
-      "label": "دليل Starter Story",
-      "url": "https://www.starterstory.com/data/micro-saas-ideas",
-      "coverage": "الزيارات، الإيراد للزائر، التقييم، وتصنيف الدليل"
+      "id": "S1",
+      "title": "Our Story",
+      "publisher": "Kit",
+      "type": "official_company_history",
+      "date": "2026",
+      "url": "https://kit.com/about/story",
+      "accessed_at": "2026-08-03"
     },
     {
-      "label": "دراسة حالة ConvertKit",
-      "url": "https://www.starterstory.com/stories/convertkit-breakdown",
-      "coverage": "المؤسس، الأصل، التكاليف، تقدير الفريق، الإيراد التاريخي، التسعير، والنمو"
+      "id": "S2",
+      "title": "ConvertKit is now Kit",
+      "publisher": "Kit",
+      "type": "official_rebrand",
+      "date": "2024-10-01",
+      "url": "https://kit.com/resources/blog/convertkit-is-now-kit",
+      "accessed_at": "2026-08-03"
     },
     {
-      "label": "نطاق اللمحة الرسمي",
-      "url": "https://convertkit.com",
-      "coverage": "التحقق من العلامة التجارية والأسعار الحالية"
+      "id": "S3",
+      "title": "Why ConvertKit became Kit",
+      "publisher": "Kit",
+      "type": "official_rebrand_explanation",
+      "date": "2024",
+      "url": "https://kit.com/resources/blog/why-convertkit-became-kit",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S4",
+      "title": "2024 Year in Review",
+      "publisher": "Nathan Barry",
+      "type": "founder_primary_source",
+      "date": "2025",
+      "url": "https://nathanbarry.com/2024-review/",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S5",
+      "title": "Ten years of profit sharing at Kit",
+      "publisher": "Nathan Barry",
+      "type": "founder_primary_source",
+      "date": "2026-04-28",
+      "url": "https://nathanbarry.com/ten-years-of-profit-sharing/",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S6",
+      "title": "Pricing",
+      "publisher": "Kit",
+      "type": "official_pricing",
+      "date": "2026",
+      "url": "https://kit.com/pricing",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S7",
+      "title": "Kit plans and pricing",
+      "publisher": "Kit Help Center",
+      "type": "official_pricing_documentation",
+      "date": "2026-05-21",
+      "url": "https://help.kit.com/en/articles/2502552-kit-plans-and-pricing",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S8",
+      "title": "Commerce pricing",
+      "publisher": "Kit",
+      "type": "official_commerce_pricing",
+      "date": "2026",
+      "url": "https://kit.com/pricing/commerce",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S9",
+      "title": "Paid Recommendations pricing",
+      "publisher": "Kit",
+      "type": "official_recommendations_pricing",
+      "date": "2026",
+      "url": "https://kit.com/pricing/paid-recommendations",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S10",
+      "title": "Affiliate program",
+      "publisher": "Kit",
+      "type": "official_affiliate_terms",
+      "date": "2026",
+      "url": "https://kit.com/affiliate",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S11",
+      "title": "About Kit",
+      "publisher": "Kit",
+      "type": "official_company_profile",
+      "date": "2026",
+      "url": "https://kit.com/about",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S12",
+      "title": "Legal imprint",
+      "publisher": "Kit, Inc.",
+      "type": "official_legal",
+      "date": "2026",
+      "url": "https://kit.com/imprint",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S13",
+      "title": "Terms of Service",
+      "publisher": "Kit, Inc.",
+      "type": "official_legal",
+      "date": "2025-09-05",
+      "url": "https://kit.com/terms",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S14",
+      "title": "Mission and long-term vision",
+      "publisher": "Kit",
+      "type": "official_strategy",
+      "date": "2026",
+      "url": "https://kit.com/about/mission",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S15",
+      "title": "ConvertKit acquires FanBridge",
+      "publisher": "Kit",
+      "type": "official_acquisition",
+      "date": "2021",
+      "url": "https://kit.com/resources/blog/convertkit-acquires-fanbridge",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S16",
+      "title": "ConvertKit acquires SparkLoop",
+      "publisher": "Kit",
+      "type": "official_acquisition",
+      "date": "2023-06-09",
+      "url": "https://kit.com/resources/blog/convertkit-acquires-sparkloop",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S17",
+      "title": "Kit Commerce creator earnings",
+      "publisher": "Kit",
+      "type": "official_product_metrics",
+      "date": "2025-03-24",
+      "url": "https://kit.com/resources/blog/kit-commerce-creator-earnings",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S18",
+      "title": "The year creators built on Kit",
+      "publisher": "Kit",
+      "type": "official_usage_metrics",
+      "date": "2024",
+      "url": "https://kit.com/resources/blog/the-year-creators-built-on-kit",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S19",
+      "title": "Kit MCP",
+      "publisher": "Kit",
+      "type": "official_product_announcement",
+      "date": "2026-05-19",
+      "url": "https://kit.com/resources/blog/kit-mcp",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S20",
+      "title": "Craft + Commerce 2026 announcements",
+      "publisher": "Kit",
+      "type": "official_product_announcement",
+      "date": "2026",
+      "url": "https://kit.com/resources/blog/craft-commerce-2026-announcements",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S21",
+      "title": "Integrations",
+      "publisher": "Kit",
+      "type": "official_integrations",
+      "date": "2026",
+      "url": "https://kit.com/integrations",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S22",
+      "title": "AWS costs at ConvertKit",
+      "publisher": "Kit Engineering",
+      "type": "official_engineering_history",
+      "date": "2022",
+      "url": "https://engineering.kit.com/posts/aws-costs",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S23",
+      "title": "Kit Studios",
+      "publisher": "Kit",
+      "type": "official_creator_facilities",
+      "date": "2026",
+      "url": "https://kit.com/studios",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S24",
+      "title": "Kit unveils next chapter as a $300M bootstrapped business",
+      "publisher": "Kit",
+      "type": "official_press_release",
+      "date": "2026-06-11",
+      "url": "https://kit.com/newsroom/kit-unveils-next-chapter",
+      "accessed_at": "2026-08-03"
     }
   ],
   "data_quality": [
-    "يمزج الملف بين السرد التاريخي والتقديرات، بالإضافة إلى عنوان يعتمد على رقم سنوي مختلف.",
-    "العلامة التجارية الحالية، عدد الموظفين، التسعير، والإيرادات قد تختلف بشكل كبير الآن.",
-    "لم يعرض الدليل قيمة الإيرادات الشهرية لهذه البطاقة.",
-    "لا توجد بيانات داخلية للأنظمة أو المشتركين مضمنة."
+    "الأولوية لمصادر Kit الرسمية وكتابات المؤسس والوثائق القانونية والأسعار.",
+    "الشركة خاصة؛ أرقام الإيراد والتقييم والربحية ليست قوائم مدققة.",
+    "حُذفت الحركة الشهرية والإيراد لكل زائر لعدم وجود بيانات أولية.",
+    "فُصل إيراد الشركة عن أموال المبدعين والرسائل والمشتركين.",
+    "فُصل التقييم الثانوي عن التمويل، ووُسم وصف 300 مليون بأنه غير محدد المنهجية.",
+    "حُفظت المحطات التاريخية مع تأريخها بدل تقديمها كبيانات حالية."
   ],
   "research_metadata": {
-    "researched_on": "2026-07-28",
-    "scope": "المعلومات العامة فقط",
-    "source_method": "Starter Story",
+    "researched_on": "2026-08-03",
+    "scope": "Professional V2 — تحقق مالي وتشغيلي ومنتجي وقانوني حتى أغسطس 2026",
+    "source_method": "مصادر رسمية وأولية قدر الإمكان، مع فصل الحسابات المشتقة عن الإفصاحات المباشرة",
     "private_backend_data_included": false,
-    "copyright_note": "ملخص مستقل"
+    "copyright_note": "دراسة حالة تحليلية مستقلة مبنية على معلومات عامة.",
+    "original_file": "convertkit.json",
+    "language": "ar",
+    "version": "Professional V2"
   },
   "id": "convertkit"
 }

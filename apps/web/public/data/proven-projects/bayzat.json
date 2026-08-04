@@ -2,53 +2,840 @@
   "id": "bayzat",
   "slug": "bayzat",
   "name": "بيزات (Bayzat)",
-  "headline": "برنامج الموارد البشرية (المجاني) الذي يحقق الملايين من التأمين",
-  "category": "InsurTech & HR SaaS / تكنولوجيا الموارد البشرية والتأمين",
+  "headline": "كيف تحولت بيزات من بوابة تأمين إلى نظام تشغيل موحّد للأفراد والمدفوعات في الخليج",
+  "category": "B2B SaaS & InsurTech / الموارد البشرية والرواتب والتأمين والتمويل",
   "company": {
-    "location": "دبي، الإمارات العربية المتحدة (وتوسع في السعودية)",
-    "business_model": "SaaS مجاني (Freemium) + وساطة تأمين (B2B Brokerage)"
+    "legal_identity_note": "بيزات شركة خاصة مقرها دبي. تعرض المصادر الرسمية الحالية المنصة بوصفها مزودًا موحدًا للموارد البشرية والرواتب والمزايا والتأمين والتمويل في دول الخليج، ولا توجد ملفات SEC أو قوائم مالية عامة لأنها ليست شركة مدرجة.",
+    "location": "دبي، الإمارات العربية المتحدة، مع حضور ومنتج مخصص للسعودية وعمليات عبر دول مجلس التعاون الخليجي.",
+    "founded_year": 2012,
+    "founded_year_note": "تذكر الصفحة الرسمية الحالية ولينكدإن عام 2012، بينما استخدم إعلان التمويل الرسمي لعام 2022 عبارة «تأسست في 2013». اعتمد الملف التاريخ الأحدث والمتكرر رسميًا مع توثيق الاختلاف.",
+    "founded_by": [
+      "طلال البيّاع (Talal Bayaa)",
+      "براين حبيبي (Brian Habibi)",
+      "طارق سند (Tariq Sanad)"
+    ],
+    "public_company": false,
+    "sec_filings_available": false,
+    "business_model": "منصة B2B باشتراكات وتسعير مخصص حسب حجم الشركة والوحدات المطلوبة، تشمل HR والرواتب والمواهب والأتمتة والتمويل؛ وإلى جانب البرمجيات تقدم إدارة ووساطة مزايا وتأمين صحي، وقد تتلقى رسومًا من مقدمي الخدمات. لا تدعم المصادر الحالية وصف المنتج بأنه HR مجاني حصريًا مقابل شراء التأمين.",
+    "products": [
+      "Core HR وسجلات الموظفين والحضور والإجازات والانضمام والمغادرة",
+      "الرواتب المحلية والعالمية ودعم WPS وGOSI وMudad",
+      "إدارة الأداء والتوظيف والمواهب",
+      "إدارة التأمين الصحي ومزايا الموظفين",
+      "الحسابات الدائنة وبطاقات الشركات والمصروفات والمدفوعات العالمية",
+      "Bayzat AI للتقارير والمساعدة وقاعدة المعرفة",
+      "سير العمل والتكاملات والتذاكر الداخلية"
+    ]
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات",
-    "monthly_traffic": "يستخدمه مئات الآلاف من الموظفين يومياً"
+    "as_of_date": "2026-08-03",
+    "monthly_revenue": null,
+    "monthly_revenue_note": "لا تنشر بيزات إيرادًا شهريًا أو سنويًا فعليًا أو قوائم مالية مدققة. حُذف وصف «ملايين الدولارات» لأنه غير موثق.",
+    "monthly_traffic": null,
+    "monthly_traffic_note": "لا تنشر الشركة زيارات موقع أو تطبيق موثقة. أعداد الموظفين والشركات وتسجيلات الدخول ليست Traffic.",
+    "active_users": null,
+    "active_users_note": "لا تنشر بيزات MAU أو DAU. رقم 250,000+ يمثل موظفين تديرهم/تخدمهم المنصة وفق الشركة، وليس مستخدمين نشطين يوميًا.",
+    "companies_served": {
+      "value": 4000,
+      "operator": "+",
+      "unit": "شركة",
+      "period": "معلن على الموقع الرسمي عند الوصول في 2026-08-03",
+      "metric_type": "company_reported_customer_or_company_reach",
+      "note": "لا يثبت أن جميع الشركات على خطط مدفوعة متساوية أو نشطة في كل وحدة."
+    },
+    "employees_managed_or_served": {
+      "value": 250000,
+      "operator": "+",
+      "unit": "موظف",
+      "period": "معلن على الموقع الرسمي عند الوصول في 2026-08-03",
+      "metric_type": "company_reported_employee_reach",
+      "note": "عدد الموظفين تحت الإدارة/الخدمة لا يساوي المستخدمين النشطين أو الزيارات."
+    },
+    "historical_2022_operating_snapshot": {
+      "companies": 1500,
+      "employees": 127000,
+      "monthly_employee_logins": 2000000,
+      "period": "مذكور في إعلان Series C بتاريخ 2022-12-23",
+      "note": "مقياس تاريخي صادر عن الشركة؛ تسجيلات الدخول أحداث استخدام وليست مستخدمين فريدين أو زيارات موقع."
+    },
+    "transaction_volume": null,
+    "transaction_volume_note": "لا تنشر بيزات قيمة رواتب أو مدفوعات أو أقساط تأمين تمر عبر المنصة بصورة حديثة قابلة للتحقق.",
+    "valuation": null,
+    "valuation_note": "لا يوجد تقييم خاص حديث ومعلن يمكن اعتماده. التمويل لا يساوي التقييم."
   },
   "overview": {
     "problem": {
-      "text": "الشركات الصغيرة والمتوسطة (SMEs) تعاني من إدارة الموارد البشرية (الرواتب، الإجازات) ورقياً أو بجداول إكسل، ولا تستطيع تحمل تكلفة برامج (SaaS) العالمية. كما تعاني في الحصول على عروض تأمين طبي جيدة لموظفيها.",
-      "impact": "فوضى إدارية، تأخر في الرواتب، واختيار بوليصات تأمين سيئة أو مكلفة."
+      "text": "تدير شركات الخليج بيانات الموظفين والدوام والإجازات والرواتب والتأمين والمصروفات عبر أنظمة منفصلة وجداول ومراسلات يدوية، بينما تختلف متطلبات الامتثال بين الإمارات والسعودية. المشكلة ليست شراء برنامج HR فقط، بل ربط الأشخاص والمدفوعات والمزايا والضوابط المحلية في مسار واحد يمكن مراجعته.",
+      "impact": "التجزؤ يزيد الإدخال المكرر وأخطاء الرواتب وتأخر الموافقات وصعوبة رؤية تكلفة القوى العاملة والمزايا. لا ينسب الملف إلى بيزات وفرًا ماليًا أو زمنيًا عامًا كنسبة مؤكدة، لأن معظم أرقام الأثر المنشورة تسويقية أو خاصة بدراسات حالات وليست تدقيقًا مستقلاً لجميع العملاء."
     },
     "solution": {
-      "text": "توفير برنامج سحابي متكامل لإدارة الموارد البشرية (HRMS) للشركات (مجاناً أو بأسعار رمزية)، مقابل استخدام الشركة لـ Bayzat كوسيط حصري لشراء وإدارة التأمين الطبي لموظفيها."
+      "text": "توحد بيزات سجلات الموظفين والحضور والإجازات والرواتب والمزايا والتأمين والمصروفات والمدفوعات داخل منصة محلية للخليج. تربط تغييرات الموارد البشرية بالرواتب والموافقات، وتضيف أدوات امتثال مثل WPS وGOSI وMudad، ثم تستخدم الذكاء الاصطناعي للتقارير والبحث في سياسات الشركة ومساعدة الموظفين.",
+      "why_it_works": [
+        "التوطين التنظيمي يقلل حاجة العميل إلى تكييف برنامج عالمي مع قواعد الخليج.",
+        "توحيد HR والرواتب والتأمين والتمويل يزيد قيمة المنصة مقارنة بأداة منفردة.",
+        "الخدمة الذاتية عبر التطبيق تنقل جزءًا من الطلبات اليومية من فريق HR إلى الموظف.",
+        "سير العمل والتكاملات يربطان الموافقات بالبيانات بدل نقلها يدويًا بين الأنظمة.",
+        "إدارة التأمين والمزايا تضيف قناة خدمة وعلاقة متكررة تتجاوز ترخيص البرمجيات وحده."
+      ]
     }
   },
   "market_data": {
-    "target_audience": "الشركات الصغيرة والمتوسطة (SMEs) في الإمارات والسعودية.",
-    "market_size": "سوق برمجيات الـ HR ووساطة التأمين الطبي بمليارات الدولارات.",
-    "growth_rate": "جمعت الشركة سلسلة تمويلات C تجاوزت 25 مليون دولار وهيمنت على شريحة الـ SMEs."
+    "target_audience": "الشركات الصغيرة والمتوسطة والمتوسطة الكبيرة والمؤسسات العاملة في الإمارات والسعودية ودول الخليج، خصوصًا من تحتاج HR ورواتب محلية ومزايا وتأمينًا ومدفوعات ضمن منصة واحدة.",
+    "market_size": "لا يتضمن الملف قيمة مالية محددة لسوق HRTech أو وساطة التأمين في الخليج؛ تقديرات السوق الخارجية تختلف حسب إدراج الرواتب والتأمين والخدمات المالية، ولا تمثل إيراد بيزات أو حجم معاملاتها.",
+    "growth_rate": {
+      "verified_company_financial_growth": null,
+      "note": "لا توجد قوائم مالية عامة تسمح بحساب نمو الإيراد أو ARR.",
+      "company_reported_operating_signals": [
+        "ارتفع نطاق الشركة المعلن من أكثر من 1,500 شركة و127,000 موظف في ديسمبر 2022 إلى أكثر من 4,000 شركة و250,000 موظف على الموقع الحالي.",
+        "يوفر المنتج الحالي وحدات HR والرواتب والمواهب والتأمين والتمويل والذكاء الاصطناعي والأتمتة بدل التركيز التاريخي الأضيق على HR والتأمين.",
+        "يوثق سجل 2025 إطلاق AI Reports وAI Dashboards وتذاكر الموظفين والتعرف على الوجه للحضور.",
+        "تنشر الشركة في 2026 قدرات امتثال للرواتب في الإمارات والسعودية وأكثر من 90 تكاملًا وفق وصفها."
+      ],
+      "calculated_operating_change_since_2022": {
+        "companies_multiple": 2.67,
+        "employee_reach_multiple": 1.97,
+        "method": "4,000 ÷ 1,500 و250,000 ÷ 127,000، باستخدام الحدود الدنيا للأرقام ذات علامة +.",
+        "caution": "هذه مقارنة مشتقة من أرقام الشركة في تاريخين مختلفين، ولا تعادل معدل نمو سنويًا مدققًا ولا تثبت نمو الإيراد."
+      }
+    },
+    "competitive_position": "ميزة بيزات المعلنة هي الجمع بين البرمجيات المحلية والرواتب والتأمين والتمويل في حزمة خليجية واحدة. هذا توصيف منتج مثبت، وليس دليلًا مستقلًا على الهيمنة أو الحصة السوقية."
   },
   "financials": {
-    "initial_investment": "مدعومة من DisruptAD و Point72 Ventures و Mubadala.",
-    "valuation": "غير معلن (مئات الملايين)",
+    "initial_investment": "لا يوجد رقم رسمي موحد للاستثمار الأولي عند التأسيس؛ لم يُخترع مبلغ.",
+    "valuation": null,
+    "valuation_note": "الشركة خاصة ولا تنشر تقييمًا حديثًا. عبارة «مئات الملايين» في الملف الأصلي حُذفت لغياب الدليل.",
+    "valuation_type": "not_publicly_disclosed",
+    "actual_revenue": null,
+    "actual_revenue_note": "لا توجد قوائم مالية عامة أو إيراد فعلي حديث منشور.",
+    "funding_history": [
+      {
+        "date": "2022-12-23",
+        "round": "Series C",
+        "amount_usd": 25000000,
+        "display": "25 مليون دولار",
+        "lead_or_named_investors": [
+          "DisruptAD، منصة المشاريع التابعة لـADQ",
+          "Ischyros"
+        ],
+        "other_backers_named_in_announcement": [
+          "Mubadala Capital",
+          "Point72 Ventures"
+        ],
+        "status": "officially_announced_closed",
+        "note": "جولة تمويل أسهم؛ ليست إيرادًا ولا حجم معاملات."
+      }
+    ],
+    "total_funding_disclosed_by_company": {
+      "value_usd": 60000000,
+      "operator": ">",
+      "display": "أكثر من 60 مليون دولار",
+      "as_of": "2022-12-23",
+      "note": "إجمالي تمويل تراكمي وفق إعلان الشركة وقت الجولة؛ ليس تقييمًا أو إيرادًا."
+    },
     "revenue_streams": [
-      "عمولات وساطة ضخمة من شركات التأمين (Insurance Commissions)",
-      "رسوم على بعض الميزات المتقدمة (Premium HR Features)",
-      "خدمات مالية إضافية مثل السلف على الرواتب (Earned Wage Access)"
-    ]
+      {
+        "name": "اشتراكات ووحدات SaaS مخصصة",
+        "examples": [
+          "Core HR والرواتب",
+          "المواهب والأداء",
+          "الأتمتة والذكاء الاصطناعي",
+          "التمويل والمصروفات"
+        ],
+        "evidence_strength": "high_for_pricing_model_and_modules; revenue_share_undisclosed"
+      },
+      {
+        "name": "إدارة ووساطة التأمين والمزايا",
+        "examples": [
+          "التأمين الصحي الجماعي",
+          "إدارة الإضافات والحذف والمطالبات والمزايا"
+        ],
+        "evidence_strength": "high_for_service; commissions_or_fees_possible_under_terms; revenue_share_undisclosed",
+        "note": "بيزات ليست شركة التأمين نفسها وفق الشروط المنشورة."
+      },
+      {
+        "name": "خدمات التمويل والمدفوعات",
+        "examples": [
+          "بطاقات الشركات",
+          "الحسابات الدائنة",
+          "المصروفات",
+          "المدفوعات المحلية والعالمية"
+        ],
+        "evidence_strength": "high_for_product_availability; fee_structure_undisclosed"
+      },
+      {
+        "name": "خدمات إدارة موارد بشرية ودعم احترافي",
+        "examples": [
+          "Bayzat PRO وخدمات HR Management المعلنة في سجل 2025"
+        ],
+        "evidence_strength": "verified_product_release; commercial_terms_undisclosed"
+      }
+    ],
+    "revenue_mix": null,
+    "revenue_mix_note": "لا توجد نسب منشورة لمساهمة SaaS أو التأمين أو المدفوعات أو الخدمات.",
+    "transaction_volume": null,
+    "transaction_volume_note": "لم يُعثر على قيمة رواتب أو مدفوعات أو أقساط تأمين حديثة منشورة.",
+    "users": null,
+    "users_note": "250,000+ موظف نطاق خدمة معلن، وليس MAU أو DAU."
+  },
+  "analysis": {
+    "thesis": "قصة بيزات ليست «برنامج HR مجاني يبيع التأمين» بقدر ما هي انتقال من مدخل محلي عالي الاحتكاك إلى نظام تشغيل خليجي يجمع الأشخاص والمدفوعات والمزايا. كل وحدة جديدة ترفع عمق التكامل وتكلفة الاستبدال، لكن جودة النمو لا يمكن الحكم عليها ماليًا من دون ARR وهوامش وتجديدات ومزيج إيراد.",
+    "unit_economics_signals": [
+      "لا تتوافر بيانات معلنة عن ARR أو هامش SaaS أو عمولات التأمين أو CAC أو صافي الاحتفاظ؛ لذلك لا يمكن وصف CAC بالسالب أو النمو بالمربح.",
+      "أكثر من 4,000 شركة و250,000 موظف يعنيان حدًا أدنى مشتقًا يقارب 62.5 موظفًا لكل شركة، لكنه متوسط نطاق خدمة لا متوسط عقد مدفوع ولا مقياس استخدام.",
+      "الانتقال من 1,500 إلى 4,000+ شركة منذ لقطة 2022 يشير إلى اتساع التوزيع، بينما نمو الموظفين من 127,000 إلى 250,000+ كان أبطأ نسبيًا؛ قد يعكس دخول شركات أصغر أو اختلاف التعريف، ولا يمكن الجزم دون بيانات cohort.",
+      "دمج التأمين والمدفوعات قد يزيد الإيراد لكل عميل، لكنه يضيف تعقيدًا تنظيميًا وتشغيليًا ومخاطر شركاء مقارنة ببرمجيات HR الخالصة.",
+      "التسعير المخصص والوحدات المتعددة يسمحان بالتوسع داخل الحساب، لكن غياب مزيج الإيراد يمنع قياس مقدار نجاح cross-sell فعليًا."
+    ],
+    "strategic_strengths": [
+      "توطين عميق للإمارات والسعودية يشمل الرواتب والامتثال.",
+      "منتج موحد يغطي HR والرواتب والتأمين والتمويل.",
+      "قاعدة معلنة تتجاوز 4,000 شركة و250,000 موظف.",
+      "قدرات AI وتقارير وسير عمل وتكاملات توسع قيمة المنصة.",
+      "شهادات ISO 27001:2022 وSOC 2 Type II مهمة لبيانات حساسة."
+    ],
+    "risks_and_limits": [
+      "المنصة الخاصة لا تنشر إيرادات أو هوامش أو تجديدات، ما يصعب تقييم جودة النمو.",
+      "التأمين والمدفوعات يخضعان لشركاء وتراخيص ولوائح تختلف حسب الدولة.",
+      "توسيع المنتج من HR إلى Finance وAI قد يزيد التعقيد ويضعف وضوح الأولويات إن لم ترتفع نسبة التبني داخل العملاء.",
+      "الأرقام التشغيلية الحالية صادرة عن الشركة ولم تُراجع مستقلًا.",
+      "ادعاءات الامتثال الكاملة يجب اختبارها حسب حالة العميل والكيان والدولة، لا التعامل معها كضمان قانوني عام.",
+      "المنافسة تشمل منصات HR محلية وخليجية وأنظمة عالمية ومقدمي تأمين ومدفوعات متخصصين."
+    ],
+    "professional_v2_conclusion": "بيزات شركة خاصة ممولة بأكثر من 60 مليون دولار وفق آخر إجمالي رسمي منشور، منها 25 مليون دولار في Series C عام 2022. أحدث الأدلة العامة تضعها كمنصة موحدة تخدم 4,000+ شركة و250,000+ موظف، لا كأداة مجانية بسيطة. لا توجد بيانات موثوقة للإيراد أو التقييم أو الزيارات أو المستخدمين النشطين أو حجم المعاملات، لذلك يجب تقييم تقدمها عبر اتساع المنتج ونطاق الشركات والموظفين مع إبقاء الأداء المالي غير معلن."
   },
   "lessons": [
     {
-      "title": "تحقيق الدخل عبر منتج ثانوي (Cross-Selling)",
-      "description": "إقناع شركة بدفع آلاف الدولارات لبرنامج HR أمر صعب. لكن إعطائها البرنامج (مجاناً) مقابل أن تشتري التأمين الطبي الإلزامي (الذي ستشتريه على أي حال) من خلالك، هو عرض لا يمكن مقاومته."
+      "title": "ابدأ من ألم محلي يصعب على البرمجيات العامة فهمه",
+      "description": "قواعد WPS وGOSI وMudad والتأمين الصحي ليست إضافات تجميلية. عندما يبني المنتج هذه التفاصيل في صميمه، يصبح التوطين حاجزًا تنافسيًا لا مجرد ترجمة واجهة."
     },
     {
-      "title": "تكلفة اكتساب العميل (CAC) بالسالب",
-      "description": "البرنامج المجاني يعمل كأداة قوية لاكتساب العملاء (Lead Generation)، مما يقلل تكاليف التسويق بشكل هائل ويزيد من معدل الاحتفاظ بالعملاء (Retention) لأن بيانات الموظفين كلها أصبحت على المنصة."
+      "title": "وسّع الحساب قبل توسيع السوق",
+      "description": "ربط HR بالرواتب ثم التأمين والمصروفات والمدفوعات يخلق مسارات cross-sell داخل العميل نفسه. لكن النجاح يجب أن يقاس بتبني الوحدات والإيراد لكل حساب، لا بعدد الميزات المعلنة."
+    },
+    {
+      "title": "لا تجعل المجانية قصة دائمة بعد تغيّر النموذج",
+      "description": "الملف القديم اختزل بيزات في برنامج مجاني يمول نفسه من التأمين. التسعير الحالي مخصص ووحداتي؛ تحديث وصف نموذج العمل ضروري حتى لا تتحول استراتيجية إطلاق تاريخية إلى حقيقة مالية دائمة."
+    },
+    {
+      "title": "افصل الموظف المُدار عن المستخدم النشط",
+      "description": "250,000+ موظف رقم نطاق قوي، لكنه لا يساوي DAU أو MAU. ملفات الشركات تصبح أكثر موثوقية عندما تميز بين الحسابات والعملاء والموظفين وتسجيلات الدخول والزيارات."
+    },
+    {
+      "title": "التمويل يشتري وقتًا ولا يثبت اقتصاديات الوحدة",
+      "description": "جولة 25 مليون دولار وإجمالي تمويل يتجاوز 60 مليونًا يثبتان قدرة الشركة على جمع رأس المال، لا يثبتان الإيراد أو التقييم الحالي أو الربحية أو الاحتفاظ."
+    },
+    {
+      "title": "المنصة الموحدة تحتاج طبقة ثقة موحدة",
+      "description": "عندما يجتمع الراتب والتأمين والمصروفات وبيانات الموظف في نظام واحد، تصبح الشهادات والصلاحيات وسجل الموافقات جزءًا من المنتج نفسه، لا بندًا منفصلًا في الأمن."
     }
   ],
   "tools": [
-    "AWS",
-    "Ruby on Rails",
-    "React",
-    "Insurance APIs"
+    "Core HR وسجلات الموظفين والحضور والإجازات والخدمة الذاتية",
+    "محرك رواتب يدعم WPS في الإمارات وGOSI وMudad في السعودية",
+    "Bayzat AI Reporting للاستعلام والتقارير باللغة الطبيعية",
+    "Bayzat AI Assistant وKnowledge Hub لسياسات الشركة وطلبات الموظفين",
+    "سير عمل وتذاكر داخلية وأتمتة الموافقات",
+    "منصة Finance للحسابات الدائنة وبطاقات الشركات والمصروفات والمدفوعات العالمية",
+    "إدارة التأمين الصحي والمزايا والمطالبات والشبكات الطبية",
+    "أكثر من 90 تكاملًا وفق وصف الشركة في مايو 2026",
+    "ISO 27001:2022 وSOC 2 Type II",
+    "البنية الداخلية مثل AWS وRuby on Rails وReact غير مثبتة بمصدر أولي حديث، لذلك حُذفت من الحزمة النشطة"
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "language": "ar",
+    "researched_through": "2026-08-03",
+    "generated_at": "2026-08-03T17:00:00+03:00",
+    "company_status": "شركة خاصة؛ لا توجد ملفات SEC أو قوائم مالية عامة.",
+    "primary_source_priority": [
+      "الموقع الرسمي وصفحات المنتج",
+      "إعلان التمويل الرسمي",
+      "سجل إصدارات المنتج الرسمي",
+      "الشروط القانونية الرسمية",
+      "الصفحة الرسمية للشركة"
+    ],
+    "corrections": [
+      {
+        "original_claim": "برنامج الموارد البشرية المجاني الذي يحقق الملايين من التأمين",
+        "action": "مصحح",
+        "replacement": "منصة موحدة بتسعير مخصص ووحدات HR ورواتب وتأمين وتمويل وذكاء اصطناعي؛ لا توجد إيرادات منشورة تثبت «الملايين»."
+      },
+      {
+        "original_claim": "SaaS مجاني Freemium + وساطة تأمين",
+        "action": "مصحح",
+        "replacement": "التسعير الحالي مخصص حسب الشركة والوحدات، مع خدمات تأمين وتمويل؛ لا يوجد دليل أن المنتج الحالي مجاني عمومًا أو مشروط حصريًا بشراء التأمين."
+      },
+      {
+        "original_claim": "ملايين الدولارات إيرادًا شهريًا",
+        "action": "محذوف",
+        "replacement": "لا يوجد إيراد شهري أو سنوي فعلي منشور."
+      },
+      {
+        "original_claim": "مئات الآلاف من الموظفين يوميًا",
+        "action": "مصحح",
+        "replacement": "تذكر الشركة 250,000+ موظف تحت الإدارة/الخدمة، من دون MAU أو DAU منشور."
+      },
+      {
+        "original_claim": "سوق بمليارات الدولارات",
+        "action": "محذوف/مؤهل",
+        "replacement": "لم يستخدم الملف رقم سوق لأن التعريفات تختلف ولا تثبت أداء بيزات."
+      },
+      {
+        "original_claim": "سلسلة C تجاوزت 25 مليون دولار",
+        "action": "مصحح",
+        "replacement": "Series C كانت 25 مليون دولار بالضبط في ديسمبر 2022؛ وأعلنت الشركة أن إجمالي التمويل تجاوز 60 مليون دولار حتى ذلك التاريخ."
+      },
+      {
+        "original_claim": "تقييم بمئات الملايين",
+        "action": "محذوف",
+        "replacement": "لا يوجد تقييم خاص حديث معلن."
+      },
+      {
+        "original_claim": "عمولات تأمين ضخمة وميزات Premium وEarned Wage Access بوصفها مزيج الإيراد",
+        "action": "مؤهل",
+        "replacement": "الخدمات والوحدات مثبتة، لكن قيم الرسوم ونسب مساهمة كل مسار في الإيراد غير معلنة."
+      },
+      {
+        "original_claim": "تكلفة اكتساب العميل بالسالب",
+        "action": "محذوف",
+        "replacement": "لا توجد بيانات CAC أو LTV أو صافي احتفاظ تسمح بهذا الاستنتاج."
+      },
+      {
+        "original_claim": "AWS وRuby on Rails وReact وInsurance APIs",
+        "action": "محذوف",
+        "replacement": "لم يُعثر على مصدر أولي حديث يثبت الحزمة الداخلية؛ أبقيت القدرات الوظيفية والشهادات والتكاملات المعلنة."
+      }
+    ],
+    "metric_distinctions": {
+      "revenue": "دخل محاسبي فعلي؛ غير منشور.",
+      "funding": "رأس مال استثماري يدخل الشركة مقابل أسهم أو أدوات استثمار؛ ليس إيرادًا.",
+      "valuation": "قيمة الشركة في صفقة أسهم؛ غير معلنة حاليًا.",
+      "transaction_volume": "قيمة الرواتب أو المدفوعات أو الأقساط التي تمر عبر المنصة؛ غير منشورة.",
+      "companies_served": "عدد شركات تقول المنصة إنها تخدمها؛ لا يساوي بالضرورة شركات مدفوعة نشطة في كل وحدة.",
+      "employees_managed": "عدد موظفين ضمن أنظمة العملاء؛ لا يساوي مستخدمين نشطين.",
+      "monthly_logins": "أحداث تسجيل دخول تاريخية؛ لا تساوي مستخدمين فريدين أو زيارات موقع.",
+      "traffic": "زيارات موقع أو تطبيق وفق أداة قياس؛ غير منشورة رسميًا."
+    },
+    "known_limits": [
+      "لا توجد ملفات SEC لأن الشركة خاصة.",
+      "لا توجد قوائم مالية مدققة أو ARR أو MRR أو مزيج إيراد منشور.",
+      "أرقام 4,000+ شركة و250,000+ موظف صادرة عن الشركة ولم تُراجع مستقلًا.",
+      "المقارنة مع أرقام 2022 مشتقة من حدود دنيا وقد تتأثر بتغير تعريف المقياس.",
+      "الصفحات الرسمية تختلف بين 2012 و2013 في سنة التأسيس؛ اعتمد الملف 2012 مع إظهار الاختلاف.",
+      "لا تُعامل ادعاءات الامتثال والتوفير التسويقية كضمان قانوني أو نتيجة عامة لكل عميل.",
+      "لم تُستخدم تقديرات الزيارات أو الإيرادات من أدوات خارجية لعدم وجود إفصاح أولي."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_at": "2026-08-03T17:00:00+03:00",
+      "parser": "Python json",
+      "checks": [
+        {
+          "name": "required_top_level_keys",
+          "passed": true,
+          "details": {
+            "missing": []
+          }
+        },
+        {
+          "name": "unique_source_ids",
+          "passed": true,
+          "details": {
+            "duplicates": []
+          }
+        },
+        {
+          "name": "unique_claim_ids",
+          "passed": true,
+          "details": {
+            "duplicates": []
+          }
+        },
+        {
+          "name": "evidence_source_references",
+          "passed": true,
+          "details": {
+            "unknown": []
+          }
+        },
+        {
+          "name": "evidence_json_paths",
+          "passed": true,
+          "details": {
+            "invalid": []
+          }
+        },
+        {
+          "name": "unverified_monthly_metrics_not_fabricated",
+          "passed": true,
+          "details": {
+            "monthly_revenue": null,
+            "monthly_traffic": null,
+            "active_users": null,
+            "transaction_volume": null
+          }
+        },
+        {
+          "name": "undisclosed_financial_metrics_remain_null",
+          "passed": true,
+          "details": {
+            "valuation": null,
+            "actual_revenue": null,
+            "revenue_mix": null,
+            "transaction_volume": null,
+            "users": null
+          }
+        },
+        {
+          "name": "funding_not_misclassified_as_revenue",
+          "passed": true,
+          "details": {}
+        },
+        {
+          "name": "employee_reach_not_misclassified_as_active_users",
+          "passed": true,
+          "details": {}
+        },
+        {
+          "name": "unsupported_original_stack_removed_from_active_claims",
+          "passed": true,
+          "details": {
+            "matched": []
+          }
+        },
+        {
+          "name": "calculated_multiples_reconcile",
+          "passed": true,
+          "details": {}
+        },
+        {
+          "name": "no_nan_or_infinity",
+          "passed": true,
+          "details": {
+            "paths": []
+          }
+        }
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "claim_id": "معرف فريد للادعاء",
+    "json_paths": "المواضع داخل JSON التي يعتمد محتواها على الدليل",
+    "claim": "صياغة عربية مختصرة للادعاء",
+    "source_ids": "معرفات المصادر الداعمة",
+    "evidence_type": "historical_fact | metric | company_claim | product_fact | funding | legal | certification | calculation | absence_of_disclosure",
+    "confidence": "high | medium | low",
+    "status": "verified | qualified | removed",
+    "notes": "قيود أو طريقة تصنيف أو تمييز ضروري"
+  },
+  "evidence_map": [
+    {
+      "claim_id": "C01",
+      "json_paths": [
+        "company.location",
+        "company.founded_year",
+        "company.founded_year_note",
+        "company.founded_by"
+      ],
+      "claim": "بيزات شركة خاصة مقرها دبي وتعرض المصادر الحالية سنة تأسيس 2012 مع وجود اختلاف رسمي قديم يشير إلى 2013.",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S11"
+      ],
+      "evidence_type": "historical_fact",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "تم إظهار اختلاف سنة التأسيس بدل إخفائه."
+    },
+    {
+      "claim_id": "C02",
+      "json_paths": [
+        "company.business_model",
+        "company.products",
+        "overview.solution.text"
+      ],
+      "claim": "المنتج الحالي منصة وحدات مدفوعة/مخصصة تجمع HR والرواتب والتأمين والتمويل والذكاء الاصطناعي والأتمتة.",
+      "source_ids": [
+        "S1",
+        "S3",
+        "S5",
+        "S6",
+        "S7",
+        "S8"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "حُذف الاختزال التاريخي في HR مجاني وتمويله بالتأمين."
+    },
+    {
+      "claim_id": "C03",
+      "json_paths": [
+        "directory_snapshot.companies_served",
+        "directory_snapshot.employees_managed_or_served"
+      ],
+      "claim": "تذكر بيزات أنها تخدم أكثر من 4,000 شركة و250,000 موظف.",
+      "source_ids": [
+        "S1",
+        "S11"
+      ],
+      "evidence_type": "company_claim",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "لا تعادل هذه الأرقام مستخدمين نشطين أو إيرادًا."
+    },
+    {
+      "claim_id": "C04",
+      "json_paths": [
+        "directory_snapshot.historical_2022_operating_snapshot",
+        "market_data.growth_rate.calculated_operating_change_since_2022"
+      ],
+      "claim": "في ديسمبر 2022 أعلنت الشركة أكثر من 1,500 شركة و127,000 موظف ومليوني تسجيل دخول شهري، ما يسمح بمقارنة تشغيلية مشتقة مع الأرقام الحالية.",
+      "source_ids": [
+        "S2",
+        "S1"
+      ],
+      "evidence_type": "calculation",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "الأرقام بعلامة + والتعريف قد يتغير؛ ليست CAGR ولا نمو إيراد."
+    },
+    {
+      "claim_id": "C05",
+      "json_paths": [
+        "financials.funding_history.0",
+        "financials.total_funding_disclosed_by_company"
+      ],
+      "claim": "أغلقت بيزات Series C بقيمة 25 مليون دولار في 2022، وأعلنت أن إجمالي التمويل تجاوز 60 مليون دولار.",
+      "source_ids": [
+        "S2"
+      ],
+      "evidence_type": "funding",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "التمويل ليس إيرادًا أو تقييمًا."
+    },
+    {
+      "claim_id": "C06",
+      "json_paths": [
+        "directory_snapshot.monthly_revenue",
+        "financials.actual_revenue",
+        "financials.revenue_mix"
+      ],
+      "claim": "لا تنشر بيزات إيرادًا فعليًا أو شهريًا أو مزيج إيراد يمكن التحقق منه.",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S10",
+        "S11"
+      ],
+      "evidence_type": "absence_of_disclosure",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "لم تُستخدم تقديرات خارجية."
+    },
+    {
+      "claim_id": "C07",
+      "json_paths": [
+        "directory_snapshot.monthly_traffic",
+        "directory_snapshot.active_users",
+        "directory_snapshot.transaction_volume",
+        "financials.transaction_volume",
+        "financials.users"
+      ],
+      "claim": "لا توجد زيارات أو مستخدمون نشطون أو حجم معاملات حديث موثق؛ أعداد الموظفين وتسجيلات الدخول لا تستبدل هذه المقاييس.",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S5"
+      ],
+      "evidence_type": "absence_of_disclosure",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "تم الفصل بين reach وusage وtraffic وvolume."
+    },
+    {
+      "claim_id": "C08",
+      "json_paths": [
+        "financials.revenue_streams",
+        "verification.metric_distinctions"
+      ],
+      "claim": "توجد اشتراكات ووحدات SaaS وخدمات تأمين وتمويل، لكن قيم الرسوم ومساهمتها في الإيراد غير معلنة.",
+      "source_ids": [
+        "S1",
+        "S5",
+        "S8",
+        "S10"
+      ],
+      "evidence_type": "legal",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "وجود المنتج مثبت، أما مزيج الإيراد فغير منشور."
+    },
+    {
+      "claim_id": "C09",
+      "json_paths": [
+        "tools.1",
+        "market_data.growth_rate.company_reported_operating_signals.3"
+      ],
+      "claim": "تعرض بيزات قدرات رواتب محلية تشمل WPS وGOSI وMudad، وتذكر أكثر من 90 تكاملًا.",
+      "source_ids": [
+        "S3",
+        "S9"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "الادعاء عن قدرات المنتج من المصدر الرسمي، لا تدقيق امتثال مستقل."
+    },
+    {
+      "claim_id": "C10",
+      "json_paths": [
+        "tools.2",
+        "tools.3",
+        "market_data.growth_rate.company_reported_operating_signals.2"
+      ],
+      "claim": "أطلقت بيزات AI Reports وAI Dashboards وتوفر مساعدًا وقاعدة معرفة مدعومين بالذكاء الاصطناعي.",
+      "source_ids": [
+        "S6",
+        "S7",
+        "S8",
+        "S12"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "لا يتضمن ذلك قياسًا مستقلاً لدقة الذكاء الاصطناعي أو عائده."
+    },
+    {
+      "claim_id": "C11",
+      "json_paths": [
+        "tools.8",
+        "analysis.strategic_strengths.4"
+      ],
+      "claim": "تعلن بيزات حيازة ISO 27001:2022 وSOC 2 Type II.",
+      "source_ids": [
+        "S1",
+        "S4"
+      ],
+      "evidence_type": "certification",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "تم الاعتماد على عرض الشركة للشهادتين؛ لم تُراجع تقارير التدقيق ذاتها."
+    },
+    {
+      "claim_id": "C12",
+      "json_paths": [
+        "tools.9",
+        "verification.corrections.9"
+      ],
+      "claim": "لا يوجد مصدر أولي حديث كافٍ لإثبات AWS أو Ruby on Rails أو React كحزمة بيزات الحالية.",
+      "source_ids": [
+        "S1",
+        "S3",
+        "S5",
+        "S6",
+        "S7",
+        "S8",
+        "S9"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "removed",
+      "notes": "أبقيت القدرات الوظيفية وحذفت التخمين التقني."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title_ar": "الموقع الرسمي لمنصة بيزات",
+      "title_original": "Unified Platform that Supercharges HR, Payroll, Spend Management and Employee Benefits",
+      "publisher": "Bayzat",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_company_website",
+      "url": "https://www.bayzat.com/",
+      "used_for": [
+        "المنتجات الحالية",
+        "نموذج التسعير المخصص والوحدات",
+        "أكثر من 4,000 شركة و250,000 موظف",
+        "التأسيس في دبي عام 2012 بحسب الصفحة الحالية",
+        "ISO 27001:2022 وSOC 2 Type 2"
+      ]
+    },
+    {
+      "id": "S2",
+      "title_ar": "إعلان جولة السلسلة C بقيمة 25 مليون دولار",
+      "title_original": "Bayzat Targets Becoming Middle East Leader in HR & InsureTech following $25million Series C Round",
+      "publisher": "Bayzat",
+      "date": "2022-12-23",
+      "accessed": "2026-08-03",
+      "type": "primary_funding_announcement",
+      "url": "https://www.bayzat.com/blog/bayzat-targets-becoming-middle-east-leader-in-hr-insuretech-following-25million-series-c-round/",
+      "used_for": [
+        "قيمة جولة Series C",
+        "إجمالي التمويل الذي تجاوز 60 مليون دولار حتى ذلك الإعلان",
+        "المستثمرون",
+        "أرقام 2022 التاريخية للشركات والموظفين وتسجيلات الدخول",
+        "التركيز على التوسع في السعودية"
+      ]
+    },
+    {
+      "id": "S3",
+      "title_ar": "منصة بيزات للموارد البشرية والرواتب في السعودية",
+      "title_original": "All-in-one HR & Payroll Platform in Saudi Arabia",
+      "publisher": "Bayzat",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_company_website",
+      "url": "https://www.bayzat.com/ksa",
+      "used_for": [
+        "التوسع في السعودية",
+        "الموارد البشرية والرواتب والمزايا",
+        "تموضع المنتج في دول الخليج"
+      ]
+    },
+    {
+      "id": "S4",
+      "title_ar": "صفحة الأمن والامتثال الرسمية",
+      "title_original": "Enterprise-Grade Security. Hyperlocalised Compliance",
+      "publisher": "Bayzat",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_company_website",
+      "url": "https://www.bayzat.com/security",
+      "used_for": [
+        "ISO 27001:2022",
+        "SOC 2 Type II",
+        "ضوابط حماية بيانات الموارد البشرية والرواتب والمزايا"
+      ]
+    },
+    {
+      "id": "S5",
+      "title_ar": "منصة بيزات للتمويل والمدفوعات",
+      "title_original": "Bayzat Finance — Run Company Payments in One Place",
+      "publisher": "Bayzat",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_product_page",
+      "url": "https://www.bayzat.com/finance",
+      "used_for": [
+        "الحسابات الدائنة",
+        "بطاقات الشركات",
+        "المصروفات",
+        "المدفوعات العالمية",
+        "ربط المصروفات والرواتب"
+      ]
+    },
+    {
+      "id": "S6",
+      "title_ar": "التقارير المدعومة بالذكاء الاصطناعي",
+      "title_original": "Effortless Reporting, Smarter Decisions",
+      "publisher": "Bayzat",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_product_page",
+      "url": "https://www.bayzat.com/ai-reporting",
+      "used_for": [
+        "التقارير باللغة الطبيعية",
+        "تحليل بيانات وحدات بيزات",
+        "التحكم في الوصول"
+      ]
+    },
+    {
+      "id": "S7",
+      "title_ar": "مساعد بيزات للذكاء الاصطناعي",
+      "title_original": "Your Work Life Productivity Partner",
+      "publisher": "Bayzat",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_product_page",
+      "url": "https://www.bayzat.com/ai-assistant",
+      "used_for": [
+        "مساعد الموظفين",
+        "الإجابة عن السياسات والإجازات والمزايا",
+        "الدعم على مدار الساعة"
+      ]
+    },
+    {
+      "id": "S8",
+      "title_ar": "سجل إصدارات المنتج لعام 2025",
+      "title_original": "Feature release-2025",
+      "publisher": "Bayzat Help Center",
+      "date": "2025-12-18",
+      "accessed": "2026-08-03",
+      "type": "primary_product_changelog",
+      "url": "https://bayzathelp.zendesk.com/hc/en-gb/articles/33671021000465-Feature-release-2025",
+      "used_for": [
+        "AI Reports في مارس 2025",
+        "AI Dashboards في يوليو 2025",
+        "خدمات Bayzat PRO",
+        "تذاكر الموظفين",
+        "التعرف على الوجه للحضور"
+      ]
+    },
+    {
+      "id": "S9",
+      "title_ar": "برنامج الرواتب المتوافق مع أنظمة الخليج",
+      "title_original": "Automated Payroll Software Compliant with GCC Labor Laws",
+      "publisher": "Bayzat",
+      "date": "2026-05-25",
+      "accessed": "2026-08-03",
+      "type": "primary_company_blog",
+      "url": "https://www.bayzat.com/blog/payroll-software-bayzat/",
+      "used_for": [
+        "WPS وGOSI وMudad وEOSB وDEWS",
+        "الرواتب متعددة العملات",
+        "أكثر من 90 تكاملًا وفق الشركة",
+        "استمرار نشاط المنتج في 2026"
+      ]
+    },
+    {
+      "id": "S10",
+      "title_ar": "الشروط والأحكام الرسمية لبيزات",
+      "title_original": "Terms & Conditions",
+      "publisher": "Bayzat",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_legal_document",
+      "url": "https://www.bayzat.com/terms-and-conditions",
+      "used_for": [
+        "دور بيزات في ربط المستخدمين بمقدمي الخدمات",
+        "إمكانية تلقي رسوم من مقدمي الخدمات",
+        "عدم كون بيزات شركة تأمين أو مؤسسة مالية بحد ذاتها"
+      ]
+    },
+    {
+      "id": "S11",
+      "title_ar": "صفحة بيزات الرسمية على لينكدإن",
+      "title_original": "Bayzat — LinkedIn Company Profile",
+      "publisher": "Bayzat",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_company_profile",
+      "url": "https://www.linkedin.com/company/bayzat/",
+      "used_for": [
+        "المقر في دبي",
+        "التأسيس عام 2012",
+        "تموضع الشركة الحالي",
+        "أكثر من 4,000 شركة"
+      ]
+    },
+    {
+      "id": "S12",
+      "title_ar": "دراسة حالة The Cobbler",
+      "title_original": "The Cobbler — Bayzat Case Study",
+      "publisher": "Bayzat",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_company_case_study",
+      "url": "https://www.bayzat.com/case-studies/the-cobbler",
+      "used_for": [
+        "تكامل الجداول والحضور والرواتب والتأمين",
+        "Knowledge Hub المدعوم بالذكاء الاصطناعي",
+        "الاستخدام التشغيلي للمنصة"
+      ]
+    }
   ]
 }

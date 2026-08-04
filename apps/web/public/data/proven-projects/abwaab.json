@@ -2,52 +2,1530 @@
   "id": "abwaab",
   "slug": "abwaab",
   "name": "أبواب (Abwaab)",
-  "headline": "منصة التعليم الرقمي التي غيرت طريقة استيعاب الطلاب للمناهج المدرسية",
-  "category": "EdTech / تكنولوجيا التعليم",
+  "headline": "من فيديوهات المناهج إلى رحلة تعليم متكاملة: كيف بنت أبواب طبقة إرشاد واختبار وتوزيع محلية حول الطالب العربي",
+  "category": "EdTech, K-12 Learning & College Admissions / التعليم المدرسي والإرشاد الأكاديمي",
   "company": {
-    "location": "عمّان، الأردن (وتوسع ضخم في مصر وباكستان والعراق)",
-    "business_model": "اشتراكات للطلاب (B2C) للوصول للمحتوى التعليمي"
+    "location": "عمّان، الأردن. تأسست أبواب في أواخر 2019 وانطلقت تجاريًا في 2020، وتعرض متاجر التطبيقات الحالية أرقام دعم وتشغيل لمصر والأردن والعراق والسعودية. ما تزال مناهج باكستان ظاهرة في بعض نسخ التطبيق بعد الاستحواذ على Edmatrix، بينما تظهر قطر كخدمة اختبارات وتدريب فقط في بعض القوائم. مزود تطبيق iOS هو Abwaab Technologies Inc.",
+    "business_model": "منصة تعليم مدفوعة أساسًا للطلاب من الصفوف المدرسية المتوسطة والثانوية، مع حساب مجاني ومحتوى تجريبي محدود ثم اشتراكات حسب الصف أو الفصل أو السنة، وحزم أعلى تشمل مرشد أبواب. توزع الاشتراكات مباشرة عبر الويب والتطبيق، ومن خلال مفاتيح أو بطاقات تفعيل ومندوبين ومكتبات، وتقدم برامج وشراكات للمدارس والمؤسسات. بعد استحواذ Apex Education توسع النموذج إلى خدمات إرشاد جامعي متميزة ومسار أقل تكلفة قيد التطوير للسوق الأوسع. لا تنشر الشركة توزيع الإيراد بين القنوات."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات",
-    "monthly_traffic": "تخدم ملايين الطلاب النشطين"
+    "monthly_revenue": "غير معلن. أبواب شركة خاصة ولا تنشر إيرادًا شهريًا أو سنويًا أو ARR أو عدد الاشتراكات المدفوعة. مبالغ التمويل، وتنزيلات التطبيق، وعدد الطلاب الذين درسوا باستخدام المنصة لا تسمح بحساب الإيراد.",
+    "monthly_traffic": "لا تنشر أبواب مستخدمين نشطين شهريًا أو زيارات موقع موحدة. يعرض Google Play أكثر من 10 ملايين تنزيل و77 ألف مراجعة تقريبًا، بينما تقول المنصة إن ملايين الطلاب درسوا باستخدامها. التنزيلات والطلاب التاريخيون لا يساويان MAU أو مشتركين مدفوعين."
   },
   "overview": {
     "problem": {
-      "text": "التعليم المدرسي التقليدي في العالم العربي يعاني من الجمود، والدروس الخصوصية باهظة الثمن وتشكل عبئاً هائلاً على ميزانية الأسرة.",
-      "impact": "تفاوت كبير في جودة التعليم، وضغط مادي على الأهل، وضعف في فهم المواد العلمية المعقدة."
+      "text": "تعتمد أسر كثيرة في المنطقة على الدروس الخصوصية أو المراكز التعليمية للحصول على شرح إضافي وتدريب على الامتحانات، لكن جودة المعلم والتكلفة والوصول تختلف حسب المدينة والدخل. كما أن المحتوى العام على الإنترنت لا يطابق دائمًا المنهج الوطني أو ترتيب الكتاب والامتحان، ويترك الطالب أمام فيديوهات طويلة وأسئلة غير منظمة دون خطة أو متابعة.",
+      "impact": "يدفع الطالب وقتًا ومالًا للوصول إلى شرح مناسب، وقد يكرر المشاهدة دون معرفة ما أتقنه أو ما يجب أن يراجعه. ويصعب على الأسرة متابعة التقدم، بينما تحتاج المنصة إلى تحديث مناهج ومعلمين وأسئلة وطرق دفع ودعم محلي لكل بلد؛ لذلك لا يكفي إنتاج فيديو واحد وتوزيعه إقليميًا."
     },
     "solution": {
-      "text": "منصة تعليمية تقدم المناهج المدرسية الرسمية (الوطنية) على شكل فيديوهات قصيرة ممتعة (Micro-learning)، متبوعة باختبارات تفاعلية وتقييمات مستمرة، وباشتراك شهري يعادل جزءاً بسيطاً من تكلفة الدروس الخصوصية."
+      "text": "تقسم أبواب المناهج الوطنية إلى دروس فيديو قصيرة وملخصات واختبارات وبنك أسئلة وتدريب زمني، مع إجابات نموذجية وتتبع أداء وخاصية سؤال وجواب وبث مباشر. تضيف حزم Morshed خطة أسبوعية وتقارير ومتابعة بشرية، وتستخدم دوري أبواب والمنافسات للتحفيز. تشمل النسخ الحالية تنزيل الدروس للعمل دون اتصال وتقويمًا للخطة، وتدعم بيع الاشتراك رقميًا أو عبر مفاتيح تفعيل محلية. وفي 2026 أضاف الاستحواذ على Apex Education مسار إرشاد للقبول الجامعي الدولي."
     }
   },
   "market_data": {
-    "target_audience": "طلاب المدارس الإعدادية والثانوية في الأردن، مصر، العراق، وباكستان.",
-    "market_size": "سوق الدروس الخصوصية والتعليم الموازي بمليارات الدولارات.",
-    "growth_rate": "نمو استثنائي قاد الشركة لجمع أكثر من 27 مليون دولار (Series A) والتوسع السريع بالاستحواذ (مثل استحواذها على Edmatrix في باكستان)."
+    "target_audience": "طلاب الصفوف 4–12 وفق وصف التطبيق، مع تركيز قوي على المراحل الإعدادية والثانوية والامتحانات الوطنية في مصر والأردن والعراق والسعودية وباكستان. وتشمل الشرائح أولياء الأمور، والمدارس والجهات التي تشتري برامج أو خصومات، والمعلمين والمرشدين، ومندوبي ومكتبات توزيع الاشتراكات، إضافة إلى طلاب القبول الجامعي الدولي بعد دمج Apex Education.",
+    "market_size": "لا تنشر أبواب رقمًا رسميًا لحجم سوقها القابل للاستهداف. ذكرت جولة 2021 أن منطقة الشرق الأوسط وشمال أفريقيا وباكستان تضم نحو 160 مليون طالب، لكن هذا إجمالي سكاني تعليمي واسع وليس TAM مدققًا للمنتج. المؤشرات الحالية الأقرب هي أكثر من 10 ملايين تنزيل Android، وملايين الطلاب الذين درسوا عبر المنصة وفق الشركة، وتغطية مناهج وطنية في عدة دول.",
+    "growth_rate": "لا توجد سلسلة حديثة للإيرادات أو المستخدمين النشطين. أعلنت أبواب نمو المستخدمين النشطين عشرة أضعاف خلال العام الدراسي 2020/2021، ثم تجاوز تطبيق Android عشرة ملايين تنزيل بحلول 2026. توسعت تاريخيًا إلى باكستان عبر Edmatrix، وحصلت وفق بيان الشركة على ترخيص وطني للتعليم الإلكتروني في العراق عام 2025، ثم استحوذت على Apex Education في يناير 2026 لتوسيع الرحلة من المدرسة إلى القبول الجامعي. هذه مؤشرات نمو مختلفة وليست CAGR موحدًا."
   },
   "financials": {
-    "initial_investment": "مدعومة من مستثمرين بارزين مثل BECO Capital و GSV Ventures.",
-    "valuation": "غير معلن (عشرات الملايين)",
+    "initial_investment": "رأس المال الشخصي الأول للمؤسسين غير معلن. أغلقت أبواب جولة Pre-Seed بقيمة 2.4 مليون دولار في مارس 2020 بقيادة Adam Tech Ventures، ثم Seed بقيمة 5.1 ملايين دولار في مارس 2021، ثم Series A بقيمة 20 مليون دولار في نوفمبر 2021 بقيادة BECO Capital. يبلغ مجموع الجولات الثلاث المعلنة 27.5 مليون دولار. مبالغ الاستحواذ على Edmatrix وApex Education غير معلنة.",
+    "valuation": "غير معلن. لم تنشر أبواب أو مستثمروها نسبة الأسهم أو تقييم أي جولة، ولا توجد صفقة استحواذ على الشركة أو طرح عام يحدد قيمة سوقية. وصف «عشرات الملايين» غير مدعوم، كما أن إجمالي التمويل البالغ 27.5 مليون دولار لا يمثل تقييم الشركة.",
     "revenue_streams": [
-      "اشتراكات شهرية وسنوية (Freemium & Premium)",
-      "شراكات مع منظمات ومؤسسات تعليمية (B2B)"
+      "اشتراكات مدفوعة حسب الصف والمنهج والفصل أو السنة الدراسية",
+      "حزم تشمل جميع المواد أو مجموعات مواد محددة",
+      "خطط أعلى تتضمن Abwaab Morshed وجدولًا أسبوعيًا وتقارير ومتابعة",
+      "مشتريات داخل التطبيق عبر Apple وGoogle في الأسواق والخطط المؤهلة",
+      "بيع مفاتيح أو بطاقات تفعيل عبر المندوبين والمكتبات ونقاط التوزيع",
+      "اشتراكات رقمية مباشرة عبر Visa وMastercard وApple Pay وGoogle Pay وطرق محلية",
+      "الدفع بالتقسيط عبر Tamara في السعودية وفق مركز المساعدة",
+      "برامج للمدارس تشمل محتوى واختبارات وتجهيز GAT ونافس والاختبارات المركزية وعروضًا للطلاب",
+      "شراكات مؤسسية أو اجتماعية تمنح خصومات أو مقاعد تعليمية، دون إفصاح عن قيم العقود",
+      "دورات واختبارات تحضيرية ومواد إضافية خارج المناهج الأساسية بحسب السوق",
+      "خدمات إرشاد جامعي متميزة من Apex Education بعد الاستحواذ",
+      "منتج إرشاد جامعي أقل تكلفة مخطط لبنائه فوق خبرة Apex وبيانات أبواب",
+      "الاستحواذ على Edmatrix أضاف محتوى وشبكة تشغيل في باكستان لكنه ليس قناة إيراد مستقلة",
+      "لا يوجد إفصاح يثبت إيرادًا من الإعلانات أو ترخيص البيانات أو بيع التقنية للغير"
     ]
   },
   "lessons": [
     {
-      "title": "التعليم المصغر والتلعيب (Micro-learning & Gamification)",
-      "description": "لم تقم Abwaab بتسجيل حصة مدرسية مدتها ساعة ونشرها (كما تفعل معظم المنصات)، بل قطعت الدروس لمفاهيم مدتها دقائق، وأضافت عناصر ألعاب تنافسية (Leaderboards) لتناسب طبيعة تركيز الجيل الجديد."
+      "title": "مطابقة المنهج هي المنتج قبل جودة الفيديو",
+      "description": "الطالب يدفع مقابل مسار يطابق الصف والكتاب والامتحان، لا مكتبة فيديو عامة. تحديث ترتيب الوحدات والأسئلة مع تغيّر الوزارة عمل تشغيل مستمر يصنع الثقة المحلية."
     },
     {
-      "title": "التوسع بالاستحواذ (M&A Expansion)",
-      "description": "بدلاً من بناء فريق من الصفر لدخول سوق ضخم كباكستان، استحوذت أبواب على منصة تعليمية محلية هناك، مما اختصر سنوات من بناء الثقة وفهم المناهج."
+      "title": "الفيديو القصير يحتاج رحلة تعلم لا تجزئة آلية",
+      "description": "تقسيم الحصة إلى دقائق لا يضمن الفهم. يجب أن يرتبط كل مفهوم بهدف واختبار وتغذية راجعة ومراجعة لاحقة، وإلا يصبح المحتوى القصير مجرد مشاهدة متقطعة."
+    },
+    {
+      "title": "بنك الأسئلة يحول المحتوى إلى تدريب قابل للقياس",
+      "description": "الفيديو يشرح، أما الأسئلة فتحدد إن كان الطالب يستطيع الاسترجاع والتطبيق تحت الوقت. قيمة البنك تعتمد على التغطية والصعوبة والتفسير وتحديث نمط الامتحان."
+    },
+    {
+      "title": "المرشد البشري يبيع الالتزام لا المعرفة فقط",
+      "description": "Morshed يضيف جدولًا وتقارير ومتابعة، فيعالج التسويف والتنظيم. هذه الخدمة قد ترفع النتائج والاحتفاظ، لكنها تعتمد على جودة المرشد ونسبة الطلاب لكل مرشد وتكلفة المتابعة."
+    },
+    {
+      "title": "التلعيب مفيد عندما يعود بالطالب إلى المهمة",
+      "description": "الدوري والترتيب والمنافسة يمكن أن يزيد التكرار، لكن المقياس الأهم هو إكمال المفاهيم وتحسن الاختبار، لا الوقت داخل التطبيق أو السعي وراء نقاط منفصلة عن التعلم."
+    },
+    {
+      "title": "الاشتراك المدفوع لا يلغي الحاجة إلى تجربة مجانية",
+      "description": "إتاحة الوحدة الأولى تساعد الأسرة على تقييم الشرح قبل الدفع، بينما يحمي الاشتراك الكامل اقتصاد المحتوى. يجب أن تكشف التجربة القيمة الفعلية دون منح مسار كامل مجانًا."
+    },
+    {
+      "title": "الدفع المحلي جزء من الوصول التعليمي",
+      "description": "المفتاح الورقي وفوري وCliQ والمحافظ والدفع عند الاستلام ليست تفاصيل مالية فقط؛ إنها حل لغياب البطاقة أو ضعف الدفع الإلكتروني. كل طريقة تضيف تسوية ودعمًا واحتيالًا محتملاً."
+    },
+    {
+      "title": "شبكة المكتبات تحول SaaS إلى عملية توزيع ميداني",
+      "description": "بيع المفاتيح عبر المكتبات والمندوبين يفتح مدنًا وأسرًا خارج الشراء الرقمي، لكنه يحتاج مخزون أكواد وعمولات وتحصيلًا ومنع تكرار التفعيل وتدريب نقاط البيع."
+    },
+    {
+      "title": "كل دولة منتج محتوى مستقل فوق منصة مشتركة",
+      "description": "يمكن مشاركة التطبيق والدفع والتحليلات، لكن المنهج والمدرس والأسئلة والمواعيد والدعم محلية. التوسع لا يقاس بعدد الأعلام في القائمة بل بجودة الرحلة لكل صف."
+    },
+    {
+      "title": "الاستحواذ المحلي يشتري فريقًا وسياقًا لا دخولًا مضمونًا",
+      "description": "Edmatrix اختصر بناء فريق ومناهج باكستان، لكن استمرار السوق يحتاج تحديث المنتج والدفع والتوزيع والدعم. إغلاق الصفقة هو بداية الدمج وليس نهاية التوسع."
+    },
+    {
+      "title": "التنزيل لا يساوي طالبًا نشطًا أو مشتركًا",
+      "description": "عشرة ملايين تنزيل مؤشر قوي على الوصول، لكنه يشمل أجهزة قديمة وإعادة تثبيت ومستخدمين مجانيين. الاقتصاد يحتاج MAU ومعدل التفعيل والتحويل والتجديد وصافي الإيراد."
+    },
+    {
+      "title": "ادعاءات التحسن تحتاج منهجية منشورة",
+      "description": "35% تحسن و2.4 ضعف سرعة و97% توفير أرقام تعرضها الشركة. دون عينة وضابط وفترة وتعريف للمقياس يجب معاملتها كمؤشرات تسويقية، لا نتائج مضمونة لكل طالب."
+    },
+    {
+      "title": "الترخيص الحكومي يفتح التوسع ويزيد الالتزام",
+      "description": "الترخيص المعلن في العراق يعزز الشرعية والتعاون، لكنه يضيف توقعات حول جودة المحتوى وحماية القاصرين وتدريب المعلمين والتوافق مع المناهج والرقابة."
+    },
+    {
+      "title": "المدارس قناة مختلفة عن اشتراك الأسرة",
+      "description": "المدرسة تحتاج إدارة مقاعد وتقارير وتكاملًا وجدولة ودعمًا واتفاقيات، بينما الأسرة تشتري لصف واحد. بيع B2B لا يساوي تكبير صفحة الدفع B2C."
+    },
+    {
+      "title": "القبول الجامعي يوسع الرحلة ويغير الوحدة الاقتصادية",
+      "description": "Apex يقدم إرشادًا عالي اللمسة قد يكلف آلاف الدولارات، بينما أبواب منتج جماهيري منخفض السعر. الدمج الناجح يحتاج إبقاء الخدمة المميزة وبناء نسخة أوسع دون تمييع الخبرة."
+    },
+    {
+      "title": "الذكاء الاصطناعي لا يستبدل المعلم أو المرشد",
+      "description": "التخصيص يمكن أن يرتب المحتوى ويكشف الفجوات، لكن جودة الشرح والتوجيه والقرار الأكاديمي تحتاج خبرة بشرية. القيمة في الجمع بين البيانات والدعم، لا تسويق AI كحل منفرد."
+    },
+    {
+      "title": "إجمالي التمويل ليس Series A ولا تقييمًا",
+      "description": "20 مليون دولار هي Series A، أما 27.5 مليونًا فهي مجموع Pre-Seed وSeed وSeries A. ولا يمثل أي منهما قيمة الشركة أو الإيراد."
     }
   ],
   "tools": [
-    "AWS",
-    "Node.js",
-    "React",
-    "Video Streaming Tech"
+    "تطبيق Abwaab على Android وiOS والويب لطلاب الصفوف 4–12",
+    "أكثر من 10 ملايين تنزيل Android وفق Google Play",
+    "عشرات آلاف الدروس والاختبارات المتوافقة مع مناهج وطنية متعددة",
+    "فيديوهات قصيرة تفاعلية ورسوم وشرح مفاهيمي",
+    "ملخصات ومراجعات ودروس محفوظة وجداول دراسة",
+    "تنزيل الدروس للمشاهدة دون اتصال في النسخ الحالية",
+    "بنك أسئلة وتمارين غير محدودة وإنشاء اختبار مخصص",
+    "اختبارات مؤقتة وإجابات نموذجية وتغذية راجعة فورية",
+    "Abwaab Morshed مع جدول أسبوعي وتقارير وتواصل ومتابعة",
+    "خاصية سؤال وجواب بين الطلاب والمعلمين",
+    "بث مباشر وجلسات مدرسين وفق مركز المساعدة",
+    "Abwaab League ولوحات صدارة ومنافسات تعليمية",
+    "ملف طالب شخصي وتتبع تقدم وأداء",
+    "تسجيل الدخول بالهاتف أو Google أو Facebook",
+    "محتوى تجريبي مجاني للوحدة الأولى قبل الاشتراك",
+    "مفتاح أبواب: كود تفعيل من 13 حرفًا ورقمًا",
+    "مفاتيح وبطاقات اشتراك عبر المندوبين والمكتبات",
+    "تطبيق Madar الداخلي لإدارة مندوبي التوصيل والمكتبات التي تبيع الاشتراكات",
+    "Teacher's App كأداة منفصلة للمعلمين ضمن منظومة المطور",
+    "تطبيق خزنة أبواب ظاهر ضمن حزمة تطبيقات الشركة دون وصف عام كافٍ لوظيفته",
+    "Apple Pay وGoogle Pay وVisa وMastercard وطرق دفع محلية",
+    "CliQ والدفع عند الاستلام في الأردن",
+    "Fawry وقنوات دعم ودفع محلية في مصر",
+    "Tamara للتقسيط في السعودية",
+    "برامج مدارس سعودية لـGAT ونافس والاختبارات المركزية وخصومات ومقاعد",
+    "محتوى مناهج مصر والأردن والعراق والسعودية في القوائم الحالية",
+    "محتوى باكستان الناتج عن دمج Edmatrix في بعض قوائم التطبيق",
+    "اختبارات وتدريب لقطر في بعض نسخ قائمة Android",
+    "Apex Education للإرشاد الجامعي الدولي بعد استحواذ 2026",
+    "تصميم منتج إرشاد جامعي أقل تكلفة قائم على بيانات وخبرة المنصتين",
+    "التخصيص بالذكاء الاصطناعي وتعلم الآلة كاتجاه معلن، دون كشف تقني كافٍ لإثبات نظام إنتاج محدد",
+    "أنظمة دعم محلية وأرقام اتصال منفصلة لمصر والأردن والعراق والسعودية"
+  ],
+  "verification": {
+    "status": "verified_from_abwaab_product_help_app_stores_investors_funding_and_acquisition_sources",
+    "verified_on": "2026-08-03",
+    "source_policy": "تم إعطاء الأولوية لموقع أبواب ومركز المساعدة ومتاجر Apple وGoogle، وصفحات المستثمرين المباشرين، وإعلان المؤسس عن Apex. استُخدمت Wamda وTechCrunch وThe National وMENAbytes لتاريخ التمويل والاستحواذات عندما غاب بيان شركة أصلي مفصل.",
+    "important_notes": [
+      "لا تنشر أبواب إيرادات أو MRR أو ARR أو عدد اشتراكات مدفوعة.",
+      "يعرض Google Play أكثر من 10 ملايين تنزيل، لكن التنزيلات لا تمثل مستخدمين نشطين شهريًا.",
+      "تقول المنصة إن ملايين الطلاب درسوا باستخدامها، وهو رقم تراكمي تسويقي دون تعريف زمني أو إزالة تكرار.",
+      "Series A بلغت 20 مليون دولار؛ 27.5 مليون دولار هو مجموع الجولات الثلاث المعلنة وليس حجم Series A.",
+      "لم يُعثر على جولة تمويل أحدث من نوفمبر 2021 حتى 3 أغسطس 2026.",
+      "تقييم الشركة ونسب ملكية المستثمرين غير معلنة.",
+      "استحواذ Edmatrix في 2021 واستحواذ Apex Education في 2026 تمّا بقيم غير معلنة.",
+      "الأسواق الحالية غير متطابقة تمامًا بين نسخ متاجر التطبيقات: القائمة الإنجليزية تذكر مصر والأردن والعراق والسعودية، بينما قائمة Android عربية أخرى تضيف باكستان وقطر مع قصر قطر على الاختبارات والتدريب.",
+      "مركز الدعم الحالي يعرض فرق اتصال لمصر والأردن والعراق والسعودية، ولذلك عوملت كأسواق التشغيل الأساسية الواضحة.",
+      "موقع العراق يقول إن ملايين الطلاب درسوا بالمنصة ويعرض 35% تحسنًا و2.4 ضعف تعلم و97% توفيرًا؛ لم تُنشر منهجية مستقلة لهذه النتائج.",
+      "ترخيص العراق لعام 2025 موثق عبر بيان صحفي صادر عن الشركة ومنشور خارجيًا، ولم يُعثر على صفحة وزارة عراقية أصلية يمكن الوصول إليها لتأكيد النص نفسه.",
+      "المحتوى مجاني جزئيًا للتجربة، لكن الوصول الكامل يتطلب اشتراكًا مدفوعًا.",
+      "أسعار App Store أمثلة محلية ومتغيرة حسب الصف والخطة والمتجر، وليست قائمة أسعار عالمية.",
+      "برامج Morshed والبث المباشر وسؤال وجواب تضيف خدمة بشرية، لذلك لا يصح تصنيف المنتج كسجل فيديوهات فقط.",
+      "استحواذ Apex وسع الشركة إلى القبول الجامعي، لكنه لا يثبت إيرادًا أو نتيجة دمج مالية.",
+      "تم حذف AWS وNode.js وReact وVideo Streaming Tech كحزمة تقنية حالية لأن الشركة لا تنشر بنية موحدة موثقة.",
+      "تم الحفاظ على id وslug الأصليين لضمان توافق الملف مع قاعدة البيانات."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول بالقيم والمصادر وحالة التحقق، مع فصل الإيراد عن التمويل والتنزيلات والطلاب التاريخيين.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي أو مستثمر مباشر.",
+      "verified_as_not_publicly_disclosed": "لم تنشر الشركة المقياس، ولذلك لم يُستخدم تقدير.",
+      "verified_download_scale_not_mau": "الرقم تنزيلات أو طلاب تاريخيون وليس مستخدمين نشطين شهريًا.",
+      "verified_company_reported_metric": "النتيجة معلنة من الشركة دون منهجية مستقلة منشورة.",
+      "verified_historical_funding": "الجولة ومبلغها ومستثمروها موثقون تاريخيًا.",
+      "verified_as_not_publicly_valued": "لا يوجد تقييم أو نسبة أسهم منشورة.",
+      "verified_product_capability": "القدرة موثقة في المنتج أو مركز المساعدة أو متجر التطبيقات.",
+      "verified_acquisition_value_undisclosed": "الاستحواذ مؤكد لكن المقابل المالي غير منشور.",
+      "verified_market_list_with_store_inconsistency": "الدول ظاهرة في متاجر أو صفحات رسمية مع اختلاف بين النسخ المحلية.",
+      "verified_company_press_release_with_primary_confirmation_limit": "الادعاء وارد في بيان الشركة دون مصدر حكومي أصلي متاح.",
+      "analytical_inference": "تحليل مهني مبني على أدلة وليس تصريحًا حرفيًا من الشركة."
+    },
+    "confidence_scale": {
+      "high": "موقع أبواب أو متجر تطبيق رسمي أو صفحة مستثمر مباشر.",
+      "medium_high": "إعلان مؤسس أو أكثر من مصدر تمويل موثوق ومتطابق.",
+      "medium": "ادعاء شركة أو صفحة قديمة يحتاج إلى تعريف أو تأكيد مستقل."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "عمّان، الأردن. تأسست أبواب في أواخر 2019 وانطلقت تجاريًا في 2020، وتعرض متاجر التطبيقات الحالية أرقام دعم وتشغيل لمصر والأردن والعراق والسعودية. ما تزال مناهج باكستان ظاهرة في بعض نسخ التطبيق بعد الاستحواذ على Edmatrix، بينما تظهر قطر كخدمة اختبارات وتدريب فقط في بعض القوائم. مزود تطبيق iOS هو Abwaab Technologies Inc.",
+      "verification_status": "verified_market_list_with_store_inconsistency",
+      "confidence": "high",
+      "claim_type": "amman_origin_core_operating_markets_and_app_provider",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت مصادر المستثمرين عمّان، وتعرض التطبيقات أسواق المناهج والدعم الحالية مع اختلاف بين النسخ المحلية.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-17",
+        "SRC-18",
+        "SRC-02",
+        "SRC-03",
+        "SRC-20"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-17",
+          "title": "Abwaab Series A — Investor Portfolio",
+          "publisher": "BECO Capital",
+          "source_type": "direct_investor_portfolio",
+          "url": "https://www.becocapital.com/portfolio/abwaab/",
+          "evidence_type": "direct",
+          "source_locator": "Portfolio",
+          "supports": "Abwaab منصة أردنية ضمن محفظة BECO."
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Abwaab — GSV Ventures Portfolio",
+          "publisher": "GSV Ventures",
+          "source_type": "direct_investor_portfolio",
+          "url": "https://gsv.ventures/portfolio/",
+          "evidence_type": "direct",
+          "source_locator": "Portfolio listing",
+          "supports": "Amman, Jordan."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Abwaab Android App",
+          "publisher": "Google Play / Abwaab",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?id=me.abwaab.abwaabv2_app",
+          "evidence_type": "direct",
+          "source_locator": "Google Play listing",
+          "supports": "مصر والأردن والعراق والسعودية وأرقام الدعم.",
+          "published_on": "2026-06-25"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Abwaab iOS App",
+          "publisher": "Apple App Store / Abwaab Technologies Inc.",
+          "source_type": "official_app_store_listing",
+          "url": "https://apps.apple.com/us/app/abwaab/id1623367993",
+          "evidence_type": "direct",
+          "source_locator": "App Store provider",
+          "supports": "Abwaab Technologies Inc."
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Abwaab Announces Edmatrix Expansion",
+          "publisher": "Abwaab via LinkedIn",
+          "source_type": "company_acquisition_announcement",
+          "url": "https://www.linkedin.com/posts/abwaab-technologies_jordan-based-abwaab-acquires-pakistans-edmatrix-activity-6820759811156701184-ylP3",
+          "evidence_type": "direct",
+          "source_locator": "Company acquisition announcement",
+          "supports": "التوسع إلى باكستان.",
+          "published_on": "2021-07"
+        }
+      ],
+      "limitations": "تختلف قائمة الدول بين لغات Google Play، ولا يثبت المحتوى وجود كيان أو فريق كامل في كل بلد."
+    },
+    "$.company.business_model": {
+      "field_value": "منصة تعليم مدفوعة أساسًا للطلاب من الصفوف المدرسية المتوسطة والثانوية، مع حساب مجاني ومحتوى تجريبي محدود ثم اشتراكات حسب الصف أو الفصل أو السنة، وحزم أعلى تشمل مرشد أبواب. توزع الاشتراكات مباشرة عبر الويب والتطبيق، ومن خلال مفاتيح أو بطاقات تفعيل ومندوبين ومكتبات، وتقدم برامج وشراكات للمدارس والمؤسسات. بعد استحواذ Apex Education توسع النموذج إلى خدمات إرشاد جامعي متميزة ومسار أقل تكلفة قيد التطوير للسوق الأوسع. لا تنشر الشركة توزيع الإيراد بين القنوات.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "paid_student_subscription_guidance_distribution_school_and_admissions_model",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت صفحات المساعدة الاشتراك المدفوع والتجربة، وتثبت التطبيقات حزم Morshed، ويثبت Madar التوزيع الميداني وApex التوسع.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-05",
+        "SRC-04",
+        "SRC-11",
+        "SRC-13",
+        "SRC-21",
+        "SRC-23"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Is Abwaab Free or Paid?",
+          "publisher": "Abwaab Help Center",
+          "source_type": "official_subscription_documentation",
+          "url": "https://help.abwaab.com/hc/ar/articles/12816530504978",
+          "evidence_type": "direct",
+          "source_locator": "Help article",
+          "supports": "اشتراك مدفوع وتجربة محدودة.",
+          "published_on": "2023-08-01"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Abwaab iOS Jordan Pricing",
+          "publisher": "Apple App Store",
+          "source_type": "official_local_app_pricing",
+          "url": "https://apps.apple.com/jo/app/abwaab/id1623367993",
+          "evidence_type": "direct",
+          "source_locator": "In-app purchases",
+          "supports": "حزم الصف وMorshed."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Madar Abwaab Sales Operations App",
+          "publisher": "Google Play / Abwaab",
+          "source_type": "official_internal_distribution_app",
+          "url": "https://play.google.com/store/apps/details?id=com.abwaab.madar",
+          "evidence_type": "direct",
+          "source_locator": "Madar listing",
+          "supports": "المكتبات والمندوبون.",
+          "published_on": "2026-05-17"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Saudi Schools Programs",
+          "publisher": "Abwaab",
+          "source_type": "official_school_partnership_page",
+          "url": "https://abwaab.com/en-SA/ksa-schools",
+          "evidence_type": "direct",
+          "source_locator": "Saudi schools",
+          "supports": "برامج المدارس."
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Apex Joins Abwaab",
+          "publisher": "Hamdi Tabbaa / Abwaab",
+          "source_type": "founder_official_acquisition_announcement",
+          "url": "https://www.linkedin.com/pulse/apex-joins-abwaab-scale-its-elite-college-admissions-success-tabbaa-8kstf",
+          "evidence_type": "direct",
+          "source_locator": "Founder announcement",
+          "supports": "Apex.",
+          "published_on": "2026-01-26"
+        },
+        {
+          "source_id": "SRC-23",
+          "title": "Abwaab and Apex Two-Track Admissions Strategy",
+          "publisher": "EnterpriseAM Egypt",
+          "source_type": "founder_interview_and_business_analysis",
+          "url": "https://enterpriseam.com/egypt/blackboards/jordanian-edutech-firm-abwaab-has-acquired-local-admissions-counselling-firm-apex-in-a-two-track-play/",
+          "evidence_type": "direct",
+          "source_locator": "Interview",
+          "supports": "الخدمة المتميزة والمنتج الجماهيري المخطط.",
+          "published_on": "2026-06-08"
+        }
+      ],
+      "limitations": "لا تنشر الشركة عدد المشتركين أو مزيج B2C وB2B وApex."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. أبواب شركة خاصة ولا تنشر إيرادًا شهريًا أو سنويًا أو ARR أو عدد الاشتراكات المدفوعة. مبالغ التمويل، وتنزيلات التطبيق، وعدد الطلاب الذين درسوا باستخدام المنصة لا تسمح بحساب الإيراد.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "private_company_revenue_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يحتوي التمويل أو المنتج أو متاجر التطبيقات على رقم إيراد يمكن استخدامه.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-16",
+        "SRC-05",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-16",
+          "title": "Abwaab $20 Million Series A",
+          "publisher": "Wamda",
+          "source_type": "funding_press_release",
+          "url": "https://www.wamda.com/en/2021/11/jordan-abwaab-raises-20-million-series-round",
+          "evidence_type": "direct",
+          "source_locator": "Funding release",
+          "supports": "Series A دون إيراد.",
+          "published_on": "2021-11-15"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Is Abwaab Free or Paid?",
+          "publisher": "Abwaab Help Center",
+          "source_type": "official_subscription_documentation",
+          "url": "https://help.abwaab.com/hc/ar/articles/12816530504978",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "نموذج الاشتراك دون مبيعات.",
+          "published_on": "2023-08-01"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Abwaab iOS Jordan Pricing",
+          "publisher": "Apple App Store",
+          "source_type": "official_local_app_pricing",
+          "url": "https://apps.apple.com/jo/app/abwaab/id1623367993",
+          "evidence_type": "direct",
+          "source_locator": "App Store",
+          "supports": "أسعار محلية دون عدد مشتريات."
+        }
+      ],
+      "limitations": "لا يمكن ضرب التنزيلات أو الطلاب في سعر واحد بسبب المجاني والأسواق والخطط والخصومات."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "لا تنشر أبواب مستخدمين نشطين شهريًا أو زيارات موقع موحدة. يعرض Google Play أكثر من 10 ملايين تنزيل و77 ألف مراجعة تقريبًا، بينما تقول المنصة إن ملايين الطلاب درسوا باستخدامها. التنزيلات والطلاب التاريخيون لا يساويان MAU أو مشتركين مدفوعين.",
+      "verification_status": "verified_download_scale_not_mau",
+      "confidence": "high",
+      "claim_type": "android_downloads_and_cumulative_student_claim_without_mau",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يقدم Google Play تنزيلات التطبيق، بينما يقدم الموقع رقمًا تراكميًا عامًا للطلاب دون MAU.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-02",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Abwaab Android App",
+          "publisher": "Google Play / Abwaab",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?id=me.abwaab.abwaabv2_app",
+          "evidence_type": "direct",
+          "source_locator": "Google Play",
+          "supports": "10M+ downloads.",
+          "published_on": "2026-06-25"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Abwaab Learning Platform",
+          "publisher": "Abwaab",
+          "source_type": "official_product_website",
+          "url": "https://abwaab.com/en-MA",
+          "evidence_type": "direct",
+          "source_locator": "Official website",
+          "supports": "Millions of students have studied."
+        }
+      ],
+      "limitations": "التنزيلات والطلاب التاريخيون لا يكشفون النشاط أو الدفع أو التكرار."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "تعتمد أسر كثيرة في المنطقة على الدروس الخصوصية أو المراكز التعليمية للحصول على شرح إضافي وتدريب على الامتحانات، لكن جودة المعلم والتكلفة والوصول تختلف حسب المدينة والدخل. كما أن المحتوى العام على الإنترنت لا يطابق دائمًا المنهج الوطني أو ترتيب الكتاب والامتحان، ويترك الطالب أمام فيديوهات طويلة وأسئلة غير منظمة دون خطة أو متابعة.",
+        "impact": "يدفع الطالب وقتًا ومالًا للوصول إلى شرح مناسب، وقد يكرر المشاهدة دون معرفة ما أتقنه أو ما يجب أن يراجعه. ويصعب على الأسرة متابعة التقدم، بينما تحتاج المنصة إلى تحديث مناهج ومعلمين وأسئلة وطرق دفع ودعم محلي لكل بلد؛ لذلك لا يكفي إنتاج فيديو واحد وتوزيعه إقليميًا."
+      },
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "curriculum_alignment_tutoring_access_and_guided_learning_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تصف المصادر سبب بناء المنصة حول المنهج الوطني والدروس القصيرة والتقييم والمتابعة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-16",
+        "SRC-25",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-16",
+          "title": "Abwaab $20 Million Series A",
+          "publisher": "Wamda",
+          "source_type": "funding_press_release",
+          "url": "https://www.wamda.com/en/2021/11/jordan-abwaab-raises-20-million-series-round",
+          "evidence_type": "direct",
+          "source_locator": "Series A release",
+          "supports": "سد فجوة الموارد والاعتماد على الدروس.",
+          "published_on": "2021-11-15"
+        },
+        {
+          "source_id": "SRC-25",
+          "title": "About Abwaab",
+          "publisher": "Abwaab",
+          "source_type": "official_company_and_product_page",
+          "url": "https://www.abwaabiraq.com/en/about-us",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "التعلم بالسرعة الخاصة واختيار المعلمين."
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "What Is Abwaab?",
+          "publisher": "Abwaab Help Center",
+          "source_type": "official_product_documentation",
+          "url": "https://help.abwaab.com/hc/ar/articles/12816251243922",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "شرح ومئات/آلاف الأسئلة والدعم.",
+          "published_on": "2023-08-01"
+        }
+      ],
+      "limitations": "لا توجد دراسة مالية منشورة من أبواب تقيس إنفاق الأسرة على الدروس الخصوصية."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "تقسم أبواب المناهج الوطنية إلى دروس فيديو قصيرة وملخصات واختبارات وبنك أسئلة وتدريب زمني، مع إجابات نموذجية وتتبع أداء وخاصية سؤال وجواب وبث مباشر. تضيف حزم Morshed خطة أسبوعية وتقارير ومتابعة بشرية، وتستخدم دوري أبواب والمنافسات للتحفيز. تشمل النسخ الحالية تنزيل الدروس للعمل دون اتصال وتقويمًا للخطة، وتدعم بيع الاشتراك رقميًا أو عبر مفاتيح تفعيل محلية. وفي 2026 أضاف الاستحواذ على Apex Education مسار إرشاد للقبول الجامعي الدولي."
+      },
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "curriculum_video_assessment_guidance_offline_and_admissions_ecosystem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توثق التطبيقات والموقع والمساعدة كامل رحلة التعلم، بينما يثبت Apex التوسع إلى القبول الجامعي.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-02",
+        "SRC-01",
+        "SRC-06",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Abwaab Android App",
+          "publisher": "Google Play / Abwaab",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?id=me.abwaab.abwaabv2_app",
+          "evidence_type": "direct",
+          "source_locator": "Android app",
+          "supports": "الفيديو والاختبارات والممارسة وMorshed وQ&A والدوري والتنزيل.",
+          "published_on": "2026-06-25"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Abwaab Learning Platform",
+          "publisher": "Abwaab",
+          "source_type": "official_product_website",
+          "url": "https://abwaab.com/en-MA",
+          "evidence_type": "direct",
+          "source_locator": "Website",
+          "supports": "الملخصات والجداول والتقييم."
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "What Is Abwaab?",
+          "publisher": "Abwaab Help Center",
+          "source_type": "official_product_documentation",
+          "url": "https://help.abwaab.com/hc/ar/articles/12816251243922",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "البث المباشر.",
+          "published_on": "2023-08-01"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Apex Joins Abwaab",
+          "publisher": "Hamdi Tabbaa / Abwaab",
+          "source_type": "founder_official_acquisition_announcement",
+          "url": "https://www.linkedin.com/pulse/apex-joins-abwaab-scale-its-elite-college-admissions-success-tabbaa-8kstf",
+          "evidence_type": "direct",
+          "source_locator": "Acquisition",
+          "supports": "Apex.",
+          "published_on": "2026-01-26"
+        }
+      ]
+    },
+    "$.market_data.target_audience": {
+      "field_value": "طلاب الصفوف 4–12 وفق وصف التطبيق، مع تركيز قوي على المراحل الإعدادية والثانوية والامتحانات الوطنية في مصر والأردن والعراق والسعودية وباكستان. وتشمل الشرائح أولياء الأمور، والمدارس والجهات التي تشتري برامج أو خصومات، والمعلمين والمرشدين، ومندوبي ومكتبات توزيع الاشتراكات، إضافة إلى طلاب القبول الجامعي الدولي بعد دمج Apex Education.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "grades_4_12_parents_schools_teachers_distribution_and_admissions_segments",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تعرض التطبيقات الصفوف والبلدان، وتوثق المدارس ومندوبو التوزيع وApex الشرائح الإضافية.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-02",
+        "SRC-13",
+        "SRC-11",
+        "SRC-12",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Abwaab Android App",
+          "publisher": "Google Play / Abwaab",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?id=me.abwaab.abwaabv2_app",
+          "evidence_type": "direct",
+          "source_locator": "Google Play",
+          "supports": "Grades 4–12 and curricula.",
+          "published_on": "2026-06-25"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Saudi Schools Programs",
+          "publisher": "Abwaab",
+          "source_type": "official_school_partnership_page",
+          "url": "https://abwaab.com/en-SA/ksa-schools",
+          "evidence_type": "direct",
+          "source_locator": "Schools page",
+          "supports": "المدارس والاختبارات."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Madar Abwaab Sales Operations App",
+          "publisher": "Google Play / Abwaab",
+          "source_type": "official_internal_distribution_app",
+          "url": "https://play.google.com/store/apps/details?id=com.abwaab.madar",
+          "evidence_type": "direct",
+          "source_locator": "Madar",
+          "supports": "المندوبون والمكتبات.",
+          "published_on": "2026-05-17"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Abwaab Developer Apps",
+          "publisher": "Google Play / Abwaab",
+          "source_type": "official_developer_app_index",
+          "url": "https://play.google.com/store/apps/developer?id=Abwaab",
+          "evidence_type": "direct",
+          "source_locator": "Developer apps",
+          "supports": "Teacher's App."
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Apex Joins Abwaab",
+          "publisher": "Hamdi Tabbaa / Abwaab",
+          "source_type": "founder_official_acquisition_announcement",
+          "url": "https://www.linkedin.com/pulse/apex-joins-abwaab-scale-its-elite-college-admissions-success-tabbaa-8kstf",
+          "evidence_type": "direct",
+          "source_locator": "Apex announcement",
+          "supports": "طلاب القبول الجامعي.",
+          "published_on": "2026-01-26"
+        }
+      ]
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر أبواب رقمًا رسميًا لحجم سوقها القابل للاستهداف. ذكرت جولة 2021 أن منطقة الشرق الأوسط وشمال أفريقيا وباكستان تضم نحو 160 مليون طالب، لكن هذا إجمالي سكاني تعليمي واسع وليس TAM مدققًا للمنتج. المؤشرات الحالية الأقرب هي أكثر من 10 ملايين تنزيل Android، وملايين الطلاب الذين درسوا عبر المنصة وفق الشركة، وتغطية مناهج وطنية في عدة دول.",
+      "verification_status": "verified_company_reported_metric",
+      "confidence": "medium",
+      "claim_type": "regional_student_context_and_platform_reach_without_tam",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تعرض جولة 2021 عدد طلاب MENAP كسياق، بينما تقدم متاجر التطبيقات نطاق الوصول الحالي.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-16",
+        "SRC-02",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-16",
+          "title": "Abwaab $20 Million Series A",
+          "publisher": "Wamda",
+          "source_type": "funding_press_release",
+          "url": "https://www.wamda.com/en/2021/11/jordan-abwaab-raises-20-million-series-round",
+          "evidence_type": "direct",
+          "source_locator": "Funding release",
+          "supports": "160 مليون طالب كسياق MENAP.",
+          "published_on": "2021-11-15"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Abwaab Android App",
+          "publisher": "Google Play / Abwaab",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?id=me.abwaab.abwaabv2_app",
+          "evidence_type": "direct",
+          "source_locator": "Google Play",
+          "supports": "10M+ downloads and multiple curricula.",
+          "published_on": "2026-06-25"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Abwaab Learning Platform",
+          "publisher": "Abwaab",
+          "source_type": "official_product_website",
+          "url": "https://abwaab.com/en-MA",
+          "evidence_type": "direct",
+          "source_locator": "Website",
+          "supports": "Millions of students studied."
+        }
+      ],
+      "limitations": "160 مليونًا إجمالي طلاب منطقة واسعة وليس عدد العملاء المحتملين القابلين للدفع."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا توجد سلسلة حديثة للإيرادات أو المستخدمين النشطين. أعلنت أبواب نمو المستخدمين النشطين عشرة أضعاف خلال العام الدراسي 2020/2021، ثم تجاوز تطبيق Android عشرة ملايين تنزيل بحلول 2026. توسعت تاريخيًا إلى باكستان عبر Edmatrix، وحصلت وفق بيان الشركة على ترخيص وطني للتعليم الإلكتروني في العراق عام 2025، ثم استحوذت على Apex Education في يناير 2026 لتوسيع الرحلة من المدرسة إلى القبول الجامعي. هذه مؤشرات نمو مختلفة وليست CAGR موحدًا.",
+      "verification_status": "verified_company_reported_metric",
+      "confidence": "medium_high",
+      "claim_type": "historical_active_user_growth_download_scale_regulatory_and_acquisition_expansion",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تجمع الخريطة نموًا تاريخيًا للمستخدمين مع تنزيلات حالية وتوسع استحواذي وتنظيمي، دون ادعاء CAGR.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-16",
+        "SRC-02",
+        "SRC-19",
+        "SRC-24",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-16",
+          "title": "Abwaab $20 Million Series A",
+          "publisher": "Wamda",
+          "source_type": "funding_press_release",
+          "url": "https://www.wamda.com/en/2021/11/jordan-abwaab-raises-20-million-series-round",
+          "evidence_type": "direct",
+          "source_locator": "Series A release",
+          "supports": "10x active-user growth in 2020/21.",
+          "published_on": "2021-11-15"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Abwaab Android App",
+          "publisher": "Google Play / Abwaab",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?id=me.abwaab.abwaabv2_app",
+          "evidence_type": "direct",
+          "source_locator": "Google Play",
+          "supports": "10M+ downloads in 2026.",
+          "published_on": "2026-06-25"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Abwaab Acquires Edmatrix",
+          "publisher": "Wamda",
+          "source_type": "acquisition_announcement_coverage",
+          "url": "https://www.wamda.com/en/2021/07/jordanian-edtech-abwaab-acquires-pakistans-edmatrix",
+          "evidence_type": "direct",
+          "source_locator": "Wamda",
+          "supports": "Edmatrix acquisition.",
+          "published_on": "2021-07-13"
+        },
+        {
+          "source_id": "SRC-24",
+          "title": "Iraq E-Learning License Announcement",
+          "publisher": "Abwaab / EIN Presswire",
+          "source_type": "company_press_release",
+          "url": "https://natlawreview.com/press-releases/iraqs-ministry-education-grants-official-license-abwaab-nationwide-e",
+          "evidence_type": "direct",
+          "source_locator": "Press release",
+          "supports": "Iraq license company announcement.",
+          "published_on": "2025-10-21"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Apex Joins Abwaab",
+          "publisher": "Hamdi Tabbaa / Abwaab",
+          "source_type": "founder_official_acquisition_announcement",
+          "url": "https://www.linkedin.com/pulse/apex-joins-abwaab-scale-its-elite-college-admissions-success-tabbaa-8kstf",
+          "evidence_type": "direct",
+          "source_locator": "Founder announcement",
+          "supports": "Apex acquisition.",
+          "published_on": "2026-01-26"
+        }
+      ],
+      "limitations": "البيانات غير متجانسة: مستخدمون نشطون تاريخيون وتنزيلات وتراخيص واستحواذات."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "رأس المال الشخصي الأول للمؤسسين غير معلن. أغلقت أبواب جولة Pre-Seed بقيمة 2.4 مليون دولار في مارس 2020 بقيادة Adam Tech Ventures، ثم Seed بقيمة 5.1 ملايين دولار في مارس 2021، ثم Series A بقيمة 20 مليون دولار في نوفمبر 2021 بقيادة BECO Capital. يبلغ مجموع الجولات الثلاث المعلنة 27.5 مليون دولار. مبالغ الاستحواذ على Edmatrix وApex Education غير معلنة.",
+      "verification_status": "verified_historical_funding",
+      "confidence": "high",
+      "claim_type": "three_announced_funding_rounds_and_two_undisclosed_acquisitions",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تتطابق المصادر على 2.4 و5.1 و20 مليون دولار، ليبلغ المجموع 27.5 مليونًا.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-14",
+        "SRC-15",
+        "SRC-16",
+        "SRC-19",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-14",
+          "title": "Abwaab $2.4 Million Pre-Seed",
+          "publisher": "Wamda",
+          "source_type": "funding_announcement_coverage",
+          "url": "https://www.wamda.com/ar/2020/03/abwaab-raises-2-4-million-pre-seed",
+          "evidence_type": "direct",
+          "source_locator": "Wamda",
+          "supports": "2.4M pre-seed.",
+          "published_on": "2020-03-17"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Abwaab $5.1 Million Seed",
+          "publisher": "Wamda",
+          "source_type": "funding_announcement_coverage",
+          "url": "https://www.wamda.com/en/2021/03/abwaab-raises-51-million-seed-funding-expansion",
+          "evidence_type": "direct",
+          "source_locator": "Wamda",
+          "supports": "5.1M seed.",
+          "published_on": "2021-03-29"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Abwaab $20 Million Series A",
+          "publisher": "Wamda",
+          "source_type": "funding_press_release",
+          "url": "https://www.wamda.com/en/2021/11/jordan-abwaab-raises-20-million-series-round",
+          "evidence_type": "direct",
+          "source_locator": "Wamda",
+          "supports": "20M Series A.",
+          "published_on": "2021-11-15"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Abwaab Acquires Edmatrix",
+          "publisher": "Wamda",
+          "source_type": "acquisition_announcement_coverage",
+          "url": "https://www.wamda.com/en/2021/07/jordanian-edtech-abwaab-acquires-pakistans-edmatrix",
+          "evidence_type": "direct",
+          "source_locator": "Acquisition",
+          "supports": "Edmatrix amount undisclosed.",
+          "published_on": "2021-07-13"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Apex Joins Abwaab",
+          "publisher": "Hamdi Tabbaa / Abwaab",
+          "source_type": "founder_official_acquisition_announcement",
+          "url": "https://www.linkedin.com/pulse/apex-joins-abwaab-scale-its-elite-college-admissions-success-tabbaa-8kstf",
+          "evidence_type": "direct",
+          "source_locator": "Acquisition",
+          "supports": "Apex amount undisclosed.",
+          "published_on": "2026-01-26"
+        }
+      ],
+      "calculation": {
+        "pre_seed_usd": 2400000,
+        "seed_usd": 5100000,
+        "series_a_usd": 20000000,
+        "formula": "2,400,000 + 5,100,000 + 20,000,000",
+        "total_announced_funding_usd": 27500000,
+        "founder_initial_capital": "not_publicly_disclosed",
+        "edmatrix_acquisition_value": "undisclosed",
+        "apex_acquisition_value": "undisclosed"
+      }
+    },
+    "$.financials.valuation": {
+      "field_value": "غير معلن. لم تنشر أبواب أو مستثمروها نسبة الأسهم أو تقييم أي جولة، ولا توجد صفقة استحواذ على الشركة أو طرح عام يحدد قيمة سوقية. وصف «عشرات الملايين» غير مدعوم، كما أن إجمالي التمويل البالغ 27.5 مليون دولار لا يمثل تقييم الشركة.",
+      "verification_status": "verified_as_not_publicly_valued",
+      "confidence": "high",
+      "claim_type": "private_company_valuation_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا تنشر أي من الجولات نسبة الأسهم أو التقييم.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-14",
+        "SRC-15",
+        "SRC-16",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-14",
+          "title": "Abwaab $2.4 Million Pre-Seed",
+          "publisher": "Wamda",
+          "source_type": "funding_announcement_coverage",
+          "url": "https://www.wamda.com/ar/2020/03/abwaab-raises-2-4-million-pre-seed",
+          "evidence_type": "direct",
+          "source_locator": "Funding",
+          "supports": "Pre-seed without valuation.",
+          "published_on": "2020-03-17"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Abwaab $5.1 Million Seed",
+          "publisher": "Wamda",
+          "source_type": "funding_announcement_coverage",
+          "url": "https://www.wamda.com/en/2021/03/abwaab-raises-51-million-seed-funding-expansion",
+          "evidence_type": "direct",
+          "source_locator": "Funding",
+          "supports": "Seed without valuation.",
+          "published_on": "2021-03-29"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Abwaab $20 Million Series A",
+          "publisher": "Wamda",
+          "source_type": "funding_press_release",
+          "url": "https://www.wamda.com/en/2021/11/jordan-abwaab-raises-20-million-series-round",
+          "evidence_type": "direct",
+          "source_locator": "Funding",
+          "supports": "Series A without valuation.",
+          "published_on": "2021-11-15"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Abwaab Series A — Investor Portfolio",
+          "publisher": "BECO Capital",
+          "source_type": "direct_investor_portfolio",
+          "url": "https://www.becocapital.com/portfolio/abwaab/",
+          "evidence_type": "direct",
+          "source_locator": "BECO",
+          "supports": "Investor portfolio without value."
+        }
+      ],
+      "limitations": "إجمالي التمويل أو مبلغ Series A لا يساوي التقييم."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "اشتراكات مدفوعة حسب الصف والمنهج والفصل أو السنة الدراسية",
+        "حزم تشمل جميع المواد أو مجموعات مواد محددة",
+        "خطط أعلى تتضمن Abwaab Morshed وجدولًا أسبوعيًا وتقارير ومتابعة",
+        "مشتريات داخل التطبيق عبر Apple وGoogle في الأسواق والخطط المؤهلة",
+        "بيع مفاتيح أو بطاقات تفعيل عبر المندوبين والمكتبات ونقاط التوزيع",
+        "اشتراكات رقمية مباشرة عبر Visa وMastercard وApple Pay وGoogle Pay وطرق محلية",
+        "الدفع بالتقسيط عبر Tamara في السعودية وفق مركز المساعدة",
+        "برامج للمدارس تشمل محتوى واختبارات وتجهيز GAT ونافس والاختبارات المركزية وعروضًا للطلاب",
+        "شراكات مؤسسية أو اجتماعية تمنح خصومات أو مقاعد تعليمية، دون إفصاح عن قيم العقود",
+        "دورات واختبارات تحضيرية ومواد إضافية خارج المناهج الأساسية بحسب السوق",
+        "خدمات إرشاد جامعي متميزة من Apex Education بعد الاستحواذ",
+        "منتج إرشاد جامعي أقل تكلفة مخطط لبنائه فوق خبرة Apex وبيانات أبواب",
+        "الاستحواذ على Edmatrix أضاف محتوى وشبكة تشغيل في باكستان لكنه ليس قناة إيراد مستقلة",
+        "لا يوجد إفصاح يثبت إيرادًا من الإعلانات أو ترخيص البيانات أو بيع التقنية للغير"
+      ],
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "student_subscription_guidance_distribution_school_test_prep_and_admissions_channels",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم المساعدة والتطبيقات والمدارس والاستحواذات قنوات البيع، دون تفصيل مالي.",
+      "source_count": 7,
+      "source_ids": [
+        "SRC-05",
+        "SRC-04",
+        "SRC-07",
+        "SRC-11",
+        "SRC-13",
+        "SRC-21",
+        "SRC-23"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Is Abwaab Free or Paid?",
+          "publisher": "Abwaab Help Center",
+          "source_type": "official_subscription_documentation",
+          "url": "https://help.abwaab.com/hc/ar/articles/12816530504978",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "الاشتراك الكامل.",
+          "published_on": "2023-08-01"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Abwaab iOS Jordan Pricing",
+          "publisher": "Apple App Store",
+          "source_type": "official_local_app_pricing",
+          "url": "https://apps.apple.com/jo/app/abwaab/id1623367993",
+          "evidence_type": "direct",
+          "source_locator": "App Store",
+          "supports": "خطط الصف وMorshed."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Abwaab Subscription Key",
+          "publisher": "Abwaab Help Center",
+          "source_type": "official_activation_documentation",
+          "url": "https://help.abwaab.com/hc/ar/articles/12111779433362",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "مفتاح الاشتراك.",
+          "published_on": "2023-06-22"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Madar Abwaab Sales Operations App",
+          "publisher": "Google Play / Abwaab",
+          "source_type": "official_internal_distribution_app",
+          "url": "https://play.google.com/store/apps/details?id=com.abwaab.madar",
+          "evidence_type": "direct",
+          "source_locator": "Madar",
+          "supports": "توزيع المفاتيح.",
+          "published_on": "2026-05-17"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Saudi Schools Programs",
+          "publisher": "Abwaab",
+          "source_type": "official_school_partnership_page",
+          "url": "https://abwaab.com/en-SA/ksa-schools",
+          "evidence_type": "direct",
+          "source_locator": "Schools",
+          "supports": "برامج المدارس."
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Apex Joins Abwaab",
+          "publisher": "Hamdi Tabbaa / Abwaab",
+          "source_type": "founder_official_acquisition_announcement",
+          "url": "https://www.linkedin.com/pulse/apex-joins-abwaab-scale-its-elite-college-admissions-success-tabbaa-8kstf",
+          "evidence_type": "direct",
+          "source_locator": "Acquisition",
+          "supports": "Apex premium admissions.",
+          "published_on": "2026-01-26"
+        },
+        {
+          "source_id": "SRC-23",
+          "title": "Abwaab and Apex Two-Track Admissions Strategy",
+          "publisher": "EnterpriseAM Egypt",
+          "source_type": "founder_interview_and_business_analysis",
+          "url": "https://enterpriseam.com/egypt/blackboards/jordanian-edutech-firm-abwaab-has-acquired-local-admissions-counselling-firm-apex-in-a-two-track-play/",
+          "evidence_type": "direct",
+          "source_locator": "Interview",
+          "supports": "Lower-cost admissions plan.",
+          "published_on": "2026-06-08"
+        }
+      ],
+      "limitations": "بعض القنوات برامج أو خطط حالية/مستقبلية، ولا تنشر الشركة إيراد كل قناة."
+    },
+    "$.tools": {
+      "field_value": [
+        "تطبيق Abwaab على Android وiOS والويب لطلاب الصفوف 4–12",
+        "أكثر من 10 ملايين تنزيل Android وفق Google Play",
+        "عشرات آلاف الدروس والاختبارات المتوافقة مع مناهج وطنية متعددة",
+        "فيديوهات قصيرة تفاعلية ورسوم وشرح مفاهيمي",
+        "ملخصات ومراجعات ودروس محفوظة وجداول دراسة",
+        "تنزيل الدروس للمشاهدة دون اتصال في النسخ الحالية",
+        "بنك أسئلة وتمارين غير محدودة وإنشاء اختبار مخصص",
+        "اختبارات مؤقتة وإجابات نموذجية وتغذية راجعة فورية",
+        "Abwaab Morshed مع جدول أسبوعي وتقارير وتواصل ومتابعة",
+        "خاصية سؤال وجواب بين الطلاب والمعلمين",
+        "بث مباشر وجلسات مدرسين وفق مركز المساعدة",
+        "Abwaab League ولوحات صدارة ومنافسات تعليمية",
+        "ملف طالب شخصي وتتبع تقدم وأداء",
+        "تسجيل الدخول بالهاتف أو Google أو Facebook",
+        "محتوى تجريبي مجاني للوحدة الأولى قبل الاشتراك",
+        "مفتاح أبواب: كود تفعيل من 13 حرفًا ورقمًا",
+        "مفاتيح وبطاقات اشتراك عبر المندوبين والمكتبات",
+        "تطبيق Madar الداخلي لإدارة مندوبي التوصيل والمكتبات التي تبيع الاشتراكات",
+        "Teacher's App كأداة منفصلة للمعلمين ضمن منظومة المطور",
+        "تطبيق خزنة أبواب ظاهر ضمن حزمة تطبيقات الشركة دون وصف عام كافٍ لوظيفته",
+        "Apple Pay وGoogle Pay وVisa وMastercard وطرق دفع محلية",
+        "CliQ والدفع عند الاستلام في الأردن",
+        "Fawry وقنوات دعم ودفع محلية في مصر",
+        "Tamara للتقسيط في السعودية",
+        "برامج مدارس سعودية لـGAT ونافس والاختبارات المركزية وخصومات ومقاعد",
+        "محتوى مناهج مصر والأردن والعراق والسعودية في القوائم الحالية",
+        "محتوى باكستان الناتج عن دمج Edmatrix في بعض قوائم التطبيق",
+        "اختبارات وتدريب لقطر في بعض نسخ قائمة Android",
+        "Apex Education للإرشاد الجامعي الدولي بعد استحواذ 2026",
+        "تصميم منتج إرشاد جامعي أقل تكلفة قائم على بيانات وخبرة المنصتين",
+        "التخصيص بالذكاء الاصطناعي وتعلم الآلة كاتجاه معلن، دون كشف تقني كافٍ لإثبات نظام إنتاج محدد",
+        "أنظمة دعم محلية وأرقام اتصال منفصلة لمصر والأردن والعراق والسعودية"
+      ],
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "official_learning_assessment_guidance_distribution_payment_school_and_admissions_capabilities",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استُبدلت حزمة تقنية غير مثبتة بوظائف ظاهرة في المنتج والتطبيقات ومركز المساعدة.",
+      "source_count": 13,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03",
+        "SRC-06",
+        "SRC-07",
+        "SRC-08",
+        "SRC-09",
+        "SRC-10",
+        "SRC-11",
+        "SRC-12",
+        "SRC-13",
+        "SRC-21",
+        "SRC-25"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Abwaab Learning Platform",
+          "publisher": "Abwaab",
+          "source_type": "official_product_website",
+          "url": "https://abwaab.com/en-MA",
+          "evidence_type": "direct",
+          "source_locator": "Website",
+          "supports": "منظومة التعلم."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Abwaab Android App",
+          "publisher": "Google Play / Abwaab",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?id=me.abwaab.abwaabv2_app",
+          "evidence_type": "direct",
+          "source_locator": "Google Play",
+          "supports": "التطبيق والخصائص الحالية.",
+          "published_on": "2026-06-25"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Abwaab iOS App",
+          "publisher": "Apple App Store / Abwaab Technologies Inc.",
+          "source_type": "official_app_store_listing",
+          "url": "https://apps.apple.com/us/app/abwaab/id1623367993",
+          "evidence_type": "direct",
+          "source_locator": "App Store",
+          "supports": "iOS and purchases."
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "What Is Abwaab?",
+          "publisher": "Abwaab Help Center",
+          "source_type": "official_product_documentation",
+          "url": "https://help.abwaab.com/hc/ar/articles/12816251243922",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "البث والأسئلة.",
+          "published_on": "2023-08-01"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Abwaab Subscription Key",
+          "publisher": "Abwaab Help Center",
+          "source_type": "official_activation_documentation",
+          "url": "https://help.abwaab.com/hc/ar/articles/12111779433362",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "مفتاح الاشتراك.",
+          "published_on": "2023-06-22"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Jordan Payment Methods",
+          "publisher": "Abwaab Help Center",
+          "source_type": "official_payment_documentation",
+          "url": "https://help.abwaab.com/hc/ar/articles/11926105946642",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "مدفوعات الأردن.",
+          "published_on": "2024-01-29"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Egypt Payment Methods",
+          "publisher": "Abwaab Help Center",
+          "source_type": "official_payment_documentation",
+          "url": "https://help.abwaab.com/hc/ar/articles/11926104080402",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "مدفوعات مصر.",
+          "published_on": "2024-02-11"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Saudi Arabia Payment Methods",
+          "publisher": "Abwaab Help Center",
+          "source_type": "official_payment_documentation",
+          "url": "https://help.abwaab.com/hc/ar/articles/11926309540498",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "مدفوعات السعودية.",
+          "published_on": "2024-07-29"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Madar Abwaab Sales Operations App",
+          "publisher": "Google Play / Abwaab",
+          "source_type": "official_internal_distribution_app",
+          "url": "https://play.google.com/store/apps/details?id=com.abwaab.madar",
+          "evidence_type": "direct",
+          "source_locator": "App",
+          "supports": "Madar.",
+          "published_on": "2026-05-17"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Abwaab Developer Apps",
+          "publisher": "Google Play / Abwaab",
+          "source_type": "official_developer_app_index",
+          "url": "https://play.google.com/store/apps/developer?id=Abwaab",
+          "evidence_type": "direct",
+          "source_locator": "Developer index",
+          "supports": "Teacher and Khazna apps."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Saudi Schools Programs",
+          "publisher": "Abwaab",
+          "source_type": "official_school_partnership_page",
+          "url": "https://abwaab.com/en-SA/ksa-schools",
+          "evidence_type": "direct",
+          "source_locator": "B2B",
+          "supports": "Schools."
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Apex Joins Abwaab",
+          "publisher": "Hamdi Tabbaa / Abwaab",
+          "source_type": "founder_official_acquisition_announcement",
+          "url": "https://www.linkedin.com/pulse/apex-joins-abwaab-scale-its-elite-college-admissions-success-tabbaa-8kstf",
+          "evidence_type": "direct",
+          "source_locator": "Admissions",
+          "supports": "Apex.",
+          "published_on": "2026-01-26"
+        },
+        {
+          "source_id": "SRC-25",
+          "title": "About Abwaab",
+          "publisher": "Abwaab",
+          "source_type": "official_company_and_product_page",
+          "url": "https://www.abwaabiraq.com/en/about-us",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "ML/AI personalization as vision."
+        }
+      ],
+      "limitations": "لا تكشف المصادر الحالية عن لغات البرمجة أو السحابة أو نظام بث محدد، كما أن بعض ميزات AI رؤية معلنة لا وصف تقني لإنتاج حالي."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Abwaab Learning Platform",
+      "publisher": "Abwaab",
+      "source_type": "official_product_website",
+      "url": "https://abwaab.com/en-MA",
+      "supports": [
+        "الدروس والاختبارات والمنافسات والملخصات والجداول",
+        "Morshed وسؤال المعلم",
+        "ملايين الطلاب وفق الشركة",
+        "35% و2.4x و97% كادعاءات شركة"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Abwaab Android App",
+      "publisher": "Google Play / Abwaab",
+      "source_type": "official_app_store_listing",
+      "published_on": "2026-06-25",
+      "url": "https://play.google.com/store/apps/details?id=me.abwaab.abwaabv2_app",
+      "supports": [
+        "10M+ تنزيل",
+        "مناهج الدول الحالية",
+        "الدروس والاختبارات وMorshed وQ&A والدوري",
+        "التنزيل دون اتصال والتقويم",
+        "أرقام الدعم المحلية"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Abwaab iOS App",
+      "publisher": "Apple App Store / Abwaab Technologies Inc.",
+      "source_type": "official_app_store_listing",
+      "url": "https://apps.apple.com/us/app/abwaab/id1623367993",
+      "supports": [
+        "In-App Purchases",
+        "الدروس والاختبارات والمرشد",
+        "الصفوف 4–12",
+        "Abwaab Technologies Inc."
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Abwaab iOS Jordan Pricing",
+      "publisher": "Apple App Store",
+      "source_type": "official_local_app_pricing",
+      "url": "https://apps.apple.com/jo/app/abwaab/id1623367993",
+      "supports": [
+        "أمثلة أسعار محلية حسب الصف",
+        "حزم All Subjects + Morshed",
+        "المشتريات داخل التطبيق"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Is Abwaab Free or Paid?",
+      "publisher": "Abwaab Help Center",
+      "source_type": "official_subscription_documentation",
+      "published_on": "2023-08-01",
+      "url": "https://help.abwaab.com/hc/ar/articles/12816530504978",
+      "supports": [
+        "الاشتراك مدفوع",
+        "الوحدة الأولى مجانية للتجربة",
+        "الحساب المجاني",
+        "بطاقة أو مفتاح الاشتراك"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "What Is Abwaab?",
+      "publisher": "Abwaab Help Center",
+      "source_type": "official_product_documentation",
+      "published_on": "2023-08-01",
+      "url": "https://help.abwaab.com/hc/ar/articles/12816251243922",
+      "supports": [
+        "شرح المناهج",
+        "آلاف الأسئلة",
+        "سؤال وجواب",
+        "البث المباشر"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Abwaab Subscription Key",
+      "publisher": "Abwaab Help Center",
+      "source_type": "official_activation_documentation",
+      "published_on": "2023-06-22",
+      "url": "https://help.abwaab.com/hc/ar/articles/12111779433362",
+      "supports": [
+        "كود اشتراك من 13 حرفًا ورقمًا",
+        "فتح المزايا حسب الصف"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Jordan Payment Methods",
+      "publisher": "Abwaab Help Center",
+      "source_type": "official_payment_documentation",
+      "published_on": "2024-01-29",
+      "url": "https://help.abwaab.com/hc/ar/articles/11926105946642",
+      "supports": [
+        "الدفع عند الاستلام",
+        "CliQ",
+        "Google Pay وApple Pay",
+        "البطاقات ومفاتيح التفعيل"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Egypt Payment Methods",
+      "publisher": "Abwaab Help Center",
+      "source_type": "official_payment_documentation",
+      "published_on": "2024-02-11",
+      "url": "https://help.abwaab.com/hc/ar/articles/11926104080402",
+      "supports": [
+        "Fawry",
+        "الدعم المحلي",
+        "البطاقات وGoogle Pay",
+        "تفعيل مفتاح الاشتراك"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Saudi Arabia Payment Methods",
+      "publisher": "Abwaab Help Center",
+      "source_type": "official_payment_documentation",
+      "published_on": "2024-07-29",
+      "url": "https://help.abwaab.com/hc/ar/articles/11926309540498",
+      "supports": [
+        "Apple Pay وGoogle Pay",
+        "Visa",
+        "Tamara",
+        "خطط الاشتراك السعودية"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Madar Abwaab Sales Operations App",
+      "publisher": "Google Play / Abwaab",
+      "source_type": "official_internal_distribution_app",
+      "published_on": "2026-05-17",
+      "url": "https://play.google.com/store/apps/details?id=com.abwaab.madar",
+      "supports": [
+        "مندوبي التوصيل",
+        "المكتبات التي تبيع اشتراكات أبواب",
+        "التوزيع غير الرقمي"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Abwaab Developer Apps",
+      "publisher": "Google Play / Abwaab",
+      "source_type": "official_developer_app_index",
+      "url": "https://play.google.com/store/apps/developer?id=Abwaab",
+      "supports": [
+        "Teacher's App",
+        "خزنة أبواب",
+        "منظومة تطبيقات منفصلة"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Saudi Schools Programs",
+      "publisher": "Abwaab",
+      "source_type": "official_school_partnership_page",
+      "url": "https://abwaab.com/en-SA/ksa-schools",
+      "supports": [
+        "برامج المدارس",
+        "GAT ونافس والاختبارات المركزية",
+        "خصومات وأكواد ومقاعد"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Abwaab $2.4 Million Pre-Seed",
+      "publisher": "Wamda",
+      "source_type": "funding_announcement_coverage",
+      "published_on": "2020-03-17",
+      "url": "https://www.wamda.com/ar/2020/03/abwaab-raises-2-4-million-pre-seed",
+      "supports": [
+        "2.4 مليون دولار",
+        "Adam Tech Ventures",
+        "Endure وEquitrust وISSF"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Abwaab $5.1 Million Seed",
+      "publisher": "Wamda",
+      "source_type": "funding_announcement_coverage",
+      "published_on": "2021-03-29",
+      "url": "https://www.wamda.com/en/2021/03/abwaab-raises-51-million-seed-funding-expansion",
+      "supports": [
+        "5.1 ملايين دولار Seed",
+        "BECO و4DX وGSV وEQ2 وFoundation وSpartech"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Abwaab $20 Million Series A",
+      "publisher": "Wamda",
+      "source_type": "funding_press_release",
+      "published_on": "2021-11-15",
+      "url": "https://www.wamda.com/en/2021/11/jordan-abwaab-raises-20-million-series-round",
+      "supports": [
+        "20 مليون دولار Series A",
+        "المستثمرون",
+        "نمو المستخدمين 10x",
+        "160 مليون طالب كسياق إقليمي"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Abwaab Series A — Investor Portfolio",
+      "publisher": "BECO Capital",
+      "source_type": "direct_investor_portfolio",
+      "url": "https://www.becocapital.com/portfolio/abwaab/",
+      "supports": [
+        "Abwaab ضمن محفظة BECO",
+        "منصة دراسة وممارسة وتحضير في MENA"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Abwaab — GSV Ventures Portfolio",
+      "publisher": "GSV Ventures",
+      "source_type": "direct_investor_portfolio",
+      "url": "https://gsv.ventures/portfolio/",
+      "supports": [
+        "Abwaab في عمّان",
+        "التعلم الذاتي والاختبارات والمعلمون"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "Abwaab Acquires Edmatrix",
+      "publisher": "Wamda",
+      "source_type": "acquisition_announcement_coverage",
+      "published_on": "2021-07-13",
+      "url": "https://www.wamda.com/en/2021/07/jordanian-edtech-abwaab-acquires-pakistans-edmatrix",
+      "supports": [
+        "استحواذ Edmatrix",
+        "قيمة غير معلنة",
+        "التوسع إلى باكستان"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "Abwaab Announces Edmatrix Expansion",
+      "publisher": "Abwaab via LinkedIn",
+      "source_type": "company_acquisition_announcement",
+      "published_on": "2021-07",
+      "url": "https://www.linkedin.com/posts/abwaab-technologies_jordan-based-abwaab-acquires-pakistans-edmatrix-activity-6820759811156701184-ylP3",
+      "supports": [
+        "أول استحواذ",
+        "التوسع إلى باكستان",
+        "سوق طلابي كبير"
+      ]
+    },
+    {
+      "id": "SRC-21",
+      "title": "Apex Joins Abwaab",
+      "publisher": "Hamdi Tabbaa / Abwaab",
+      "source_type": "founder_official_acquisition_announcement",
+      "published_on": "2026-01-26",
+      "url": "https://www.linkedin.com/pulse/apex-joins-abwaab-scale-its-elite-college-admissions-success-tabbaa-8kstf",
+      "supports": [
+        "استحواذ Apex Education",
+        "الإرشاد للجامعات العالمية",
+        "قيمة غير معلنة",
+        "توسيع رحلة الطالب"
+      ]
+    },
+    {
+      "id": "SRC-22",
+      "title": "Abwaab Acquires Apex Education",
+      "publisher": "Wamda",
+      "source_type": "acquisition_press_release_coverage",
+      "published_on": "2026-01-28",
+      "url": "https://www.wamda.com/en/2026/01/jordan-abwaab-acquires-egyptian-edtech-apex-education",
+      "supports": [
+        "الاستحواذ في 2026",
+        "Apex شركة مصرية",
+        "دعم الرحلة من المدرسة إلى القبول الجامعي"
+      ]
+    },
+    {
+      "id": "SRC-23",
+      "title": "Abwaab and Apex Two-Track Admissions Strategy",
+      "publisher": "EnterpriseAM Egypt",
+      "source_type": "founder_interview_and_business_analysis",
+      "published_on": "2026-06-08",
+      "url": "https://enterpriseam.com/egypt/blackboards/jordanian-edutech-firm-abwaab-has-acquired-local-admissions-counselling-firm-apex-in-a-two-track-play/",
+      "supports": [
+        "الإبقاء على Apex كخدمة متميزة",
+        "منتج أقل تكلفة مخطط للسوق الجماهيري",
+        "قيمة الاستحواذ غير معلنة",
+        "بيانات أبواب وخبرة Apex"
+      ]
+    },
+    {
+      "id": "SRC-24",
+      "title": "Iraq E-Learning License Announcement",
+      "publisher": "Abwaab / EIN Presswire",
+      "source_type": "company_press_release",
+      "published_on": "2025-10-21",
+      "url": "https://natlawreview.com/press-releases/iraqs-ministry-education-grants-official-license-abwaab-nationwide-e",
+      "supports": [
+        "إعلان ترخيص وطني في العراق",
+        "شراكة مع وزارة التربية والتلفزيون التربوي",
+        "التدريب والتقييمات الرقمية"
+      ]
+    },
+    {
+      "id": "SRC-25",
+      "title": "About Abwaab",
+      "publisher": "Abwaab",
+      "source_type": "official_company_and_product_page",
+      "url": "https://www.abwaabiraq.com/en/about-us",
+      "supports": [
+        "التأسيس في 2019",
+        "الدروس القصيرة والتقييم والتحليلات",
+        "اختيار المعلمين",
+        "الذكاء الاصطناعي والتخصيص كرؤية"
+      ]
+    }
   ]
 }

@@ -2,51 +2,1183 @@
   "id": "lucidya",
   "slug": "lucidya",
   "name": "لوسيديا (Lucidya)",
-  "headline": "عين الشركات على الإنترنت: أداة الذكاء الاصطناعي التي تفهم اللهجات العربية",
-  "category": "B2B SaaS / تحليل البيانات والذكاء الاصطناعي",
+  "headline": "من رصد اللهجة إلى حل المشكلة: كيف تحولت لوسيديا إلى نظام تشغيل لتجربة العميل العربية",
+  "category": "AI-Native Customer Experience Management / إدارة تجربة العميل بالذكاء الاصطناعي",
   "company": {
-    "location": "الرياض، المملكة العربية السعودية",
-    "business_model": "اشتراكات SaaS سنوية للشركات الكبرى والعلامات التجارية (B2B)"
+    "location": "شركة سعودية تأسست في جدة عام 2016، ويقع مقرها التشغيلي الحالي في الرياض وفق إعلان جولة 2025. تعرض الشركة حاليًا عمليات في 13 دولة وأكثر من 250 موظفًا. وتعرّف سياسة الخصوصية الكيان القانوني باسم Lucidya LLC في جزر كايمان؛ لذلك يجب الفصل بين مكان التأسيس والمقر التشغيلي والكيان القانوني.",
+    "business_model": "منصة SaaS مؤسسية لإدارة تجربة العميل بالذكاء الاصطناعي، تُباع عبر عقود وخطط موجهة للشركات والجهات الحكومية. تشمل المنظومة الاستماع الاجتماعي، مراقبة الإعلام، خدمة العملاء متعددة القنوات، ملفات العملاء الموحدة CDP، الاستبيانات، ووكلاء الذكاء الاصطناعي. توجد مستويات Basic وProfessional وEnterprise لبعض المنتجات، إضافة إلى خدمات وتقارير وتكاملات مخصصة، لكن الأسعار وقيمة العقود ومعدل الإيراد لكل عميل غير منشورة."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات",
-    "monthly_traffic": "تحلل ملايين المنشورات يومياً"
+    "monthly_revenue": "غير معلن. لا تنشر لوسيديا إيرادًا شهريًا أو سنويًا مدققًا أو صافي ربح أو ARR. تعرض الشركة نحو 37 مليون دولار من التمويل الجريء المعلن، إضافة إلى منحة منفصلة بقيمة 5 ملايين ريال سعودي في 2025. التمويل والمنحة لا يمثلان الإيراد أو التقييم؛ لذلك حُذف تقدير «ملايين الدولارات شهريًا».",
+    "monthly_traffic": "زيارات الموقع والمستخدمون النشطون شهريًا وحجم البيانات المحللة يوميًا غير معلنة. تعرض الشركة أكثر من 120 عميلًا من المؤسسات والجهات الحكومية، وتقول إن هؤلاء العملاء يخدمون أكثر من 75 مليون عميل أو مواطن عبر 13 دولة، مع تكامل أكثر من 30 قناة ومنصة. هذه مؤشرات انتشار غير مباشرة، ولا تساوي مستخدمي لوسيديا أو الزيارات أو المنشورات اليومية أو العملاء الدافعين شهريًا."
   },
   "overview": {
     "problem": {
-      "text": "أدوات الاستماع الاجتماعي العالمية (Social Listening) تفشل في فهم اللغة العربية، وخاصة اللهجات العامية المعقدة (السعودية، المصرية، الخ)، مما يجعل الشركات عاجزة عن فهم رأي الجمهور بدقة.",
-      "impact": "أزمات علاقات عامة غير مكتشفة، وقرارات تسويقية مبنية على بيانات خاطئة."
+      "text": "تجربة العميل داخل المؤسسة موزعة عادةً بين أدوات للاستماع الاجتماعي ومراقبة الأخبار وخدمة العملاء والاستبيانات وبيانات CRM والتحليلات. هذا التجزؤ يفصل ما يقوله العميل علنًا عما يرسله للدعم أو يكتبه في الاستبيان، وتزداد المشكلة في المنطقة العربية عندما لا تفهم النماذج العامة اللهجات والسياق والسخرية والتعبيرات المحلية بدقة.",
+      "impact": "تتأخر إشارات الأزمات والشكاوى، وتعمل فرق التسويق والعلاقات العامة والخدمة على نسخ مختلفة من الحقيقة، ويُطلب من العميل تكرار قصته عبر القنوات. وقد تتحول الدقة اللغوية الضعيفة إلى تصنيف خاطئ للمشاعر أو أولوية غير مناسبة للتذاكر أو قرار حملات لا يعكس صوت الجمهور الفعلي."
     },
     "solution": {
-      "text": "منصة SaaS مدعومة بخوارزميات ذكاء اصطناعي (NLP) مصممة خصيصاً لتحليل المشاعر (Sentiment Analysis) في اللهجات العربية، لتنبيه الشركات بما يُقال عنهم لحظياً."
+      "text": "طورت لوسيديا منصة CXM موحدة تشترك منتجاتها في طبقة بيانات واحدة: Social Listening للمحادثات العامة، Media Monitoring للأخبار، OmniServe للمحادثات متعددة القنوات، Profiles لبناء ملف عميل موحد، Survey للتغذية الراجعة، وAI Agent لمعالجة حالات خدمة محددة وتنفيذ إجراءات مرتبطة بأنظمة المؤسسة. تعلن الشركة دقة 92% عبر 15 لهجة في مؤشرات الشركة، بينما تذكر بعض صفحات المنتجات الحالية 17 لهجة؛ ويُعامل الاختلاف كتطور محتمل في الإصدار أو تعريف المنتج لا كرقمين قابلين للدمج. توفر المنصة APIs وتنبيهات ولوحات وتقارير، واستضافة بيانات داخل السعودية وضوابط وصول وتدقيق."
     }
   },
   "market_data": {
-    "target_audience": "الوزارات، الهيئات الحكومية، والعلامات التجارية الكبرى في الخليج.",
-    "market_size": "سوق برمجيات تحليل تجربة العملاء (CX) والاستماع الاجتماعي.",
-    "growth_rate": "جمعت 6 ملايين دولار لتوسيع ميزاتها وإطلاق منتجات تحليل تجربة العملاء المتكاملة."
+    "target_audience": "الشركات الكبرى والجهات الحكومية في السعودية والمنطقة، وفرق تجربة العميل وخدمة العملاء والتسويق والعلاقات العامة والبحوث والرؤى، والبنوك والاتصالات والضيافة والرعاية الصحية والتجزئة والنقل، والمؤسسات التي تحتاج أتمتة خدمة عربية متوافقة مع الخصوصية وسيادة البيانات.",
+    "market_size": "لا يوجد رقم مستقل ومدقق في المصادر العامة يحدد السوق القابل للخدمة للوسيديا عبر CXM والاستماع الاجتماعي وخدمة العملاء وCDP ووكلاء الذكاء الاصطناعي. للسياق السعودي المجاور، قيّمت هيئة الحكومة الرقمية في 2025 خمسين منصة حكومية عبر أربعة مناظير وعشرين محورًا، وبلغ مؤشر نضج التجربة الرقمية 86.71% بمشاركة أكثر من 374 ألف مستفيد. هذا يثبت أولوية تجربة المستفيد، لكنه لا يمثل حجم سوق لوسيديا أو إيرادها أو TAM تجاريًا.",
+    "growth_rate": "لا تنشر الشركة معدل نمو مدققًا للإيراد أو ARR. عند إطلاق Enterprise AI Agent في 2026، ذكرت أن مبيعات الربع الرابع من 2025 بلغت ثلاثة أضعاف الربع الرابع من 2024، وأن المبيعات الجديدة في ذلك الربع تجاوزت مبيعات الأعوام الستة الأولى مجتمعة؛ وهي مؤشرات صادرة عن الشركة بلا قيم مطلقة. كما تعرض الصفحة الحالية 120+ عميلًا و13 دولة، مقابل 100+ عميل و11 دولة في لقطة المستثمرين الأقدم، لكن أرقام «+» لا تسمح بحساب نمو دقيق."
   },
   "financials": {
-    "initial_investment": "استثمارات من صناديق سعودية وإقليمية رائدة مثل Raed Ventures و VentureSouq.",
-    "valuation": "غير معلن",
+    "initial_investment": "تعرض صفحة المستثمرين ثلاث محطات: Seed بقيمة 1.1 مليون دولار في 2019، وSeries A بقيمة 6 ملايين في 2020، وSeries B بقيمة 30 مليونًا في يوليو 2025 بقيادة Impact46 وبمشاركة Wa’ed Ventures وTakamol Ventures وSparkLabs ومستثمرين قائمين. المجموع الحسابي 37.1 مليون دولار، بينما تعرض الشركة الرقم مقربًا إلى 37 مليونًا. كما حصلت في أبريل 2025 على منحة غير مخففة للملكية بقيمة 5 ملايين ريال سعودي؛ المنحة منفصلة عن التمويل الجريء.",
+    "valuation": "غير معلن. لم تكشف الشركة نسبة الملكية المباعة في Series B أو تقييم ما قبل الاستثمار أو بعده، ولا توجد قوائم مالية عامة أو معاملة ثانوية تسمح باشتقاق تقييم حالي.",
     "revenue_streams": [
-      "اشتراكات SaaS مدفوعة للشركات (تعتمد على حجم البيانات والميزات)"
+      "اشتراكات وعقود SaaS لمستويات Basic وProfessional وEnterprise، مع تسعير عبر فريق المبيعات.",
+      "اشتراكات وحدات OmniServe وProfiles وSurvey وMedia Monitoring وEnterprise AI Agent، منفردة أو ضمن حزمة CXM.",
+      "إضافات مثل Survey Panel وCall Analytics ومراقبة التلفزيون والراديو وLuci وواجهات API ولوحات التحكم المخصصة.",
+      "تقارير احترافية دورية وتحليلات يعدها محللو تجربة العميل بحسب القطاع والأهداف التنفيذية.",
+      "رسوم تنفيذ وتهيئة وتكامل مع CRM وأنظمة الخدمة والتحليلات والقنوات الخارجية.",
+      "خدمات دعم واستشارات وتشغيل مؤسسي مخصص؛ الأسعار والهوامش والمزيج المالي غير معلنة."
     ]
   },
   "lessons": [
     {
-      "title": "اللغة كخندق دفاعي (Language Moat)",
-      "description": "بينما تتنافس الشركات الغربية عالمياً، بنت Lucidya (خندقاً دفاعياً) عبر التركيز على اللهجات المحلية التي يصعب على العمالقة مثل (Hootsuite أو Sprinklr) إتقانها، فسيطرت على السوق المحلي."
+      "title": "الميزة اللغوية تحتاج تحديثًا مستمرًا",
+      "description": "اللهجات تتغير حسب البلد والقطاع والمنصة. اختلاف 15 و17 لهجة عبر الصفحات يوضح أن الخندق الحقيقي هو دورة البيانات والاختبار والتحسين، لا رقم دقة ثابت."
     },
     {
-      "title": "البيع للشركات الكبرى (Enterprise SaaS)",
-      "description": "استهدفت الشركة جهات حكومية وبنوك وشركات اتصالات تمتلك ميزانيات ضخمة (High ACV)، مما ساعدها على تحقيق إيرادات عالية جداً بعدد عملاء أقل نسبياً."
+      "title": "طبقة البيانات الموحدة أهم من كثرة المنتجات",
+      "description": "القيمة تظهر عندما يتحول المنشور السلبي إلى تنبيه وتذكرة، ثم يحدّث ملف العميل ويطلق استبيانًا ويصل إلى الإدارة، لا عندما تبقى الأدوات منفصلة."
+    },
+    {
+      "title": "العميل المباشر يختلف عن الجمهور المخدوم",
+      "description": "120+ مؤسسة هي قاعدة العملاء المباشرة، بينما 75 مليون+ يمثلون عملاء أو مواطنين تخدمهم تلك المؤسسات. الفصل يمنع تحويل الوصول غير المباشر إلى MAU أو تراخيص."
+    },
+    {
+      "title": "وكيل الذكاء الاصطناعي يُقاس بالحل المنفذ",
+      "description": "الانتقال من تحليل المشاعر إلى الاسترداد أو تعديل الاشتراك يغيّر المعيار إلى نسبة الحل الكامل، وزمن المعالجة، والتصعيد الصحيح، والأخطاء، وقابلية الإيقاف والمراجعة."
+    },
+    {
+      "title": "زخم المبيعات لا يكشف حجم الإيراد",
+      "description": "ثلاثة أضعاف المبيعات في ربع واحد إشارة نمو مهمة، لكنها لا تكشف قيمة المبيعات أو ARR أو الربحية. يجب الحفاظ على قوة الإشارة دون اختراع رقم مالي."
+    },
+    {
+      "title": "التمويل والمنحة أداتان مختلفتان",
+      "description": "رأس المال الجريء يمول التوسع مقابل ملكية، بينما المنحة الحكومية تمول نشاطًا محددًا دون أن تكون إيراد عميل أو تقييمًا."
+    },
+    {
+      "title": "الامتثال وسيادة البيانات جزء من المنتج",
+      "description": "الاستضافة داخل السعودية وPDPL وSOC 2 وISO 27001 تدخل في قرار شراء الجهات الحكومية والمالية، مع ضرورة مراجعة نطاق كل شهادة وإصدارها."
+    },
+    {
+      "title": "التسعير المؤسسي يتبع التعقيد",
+      "description": "قيمة العقد تتأثر بمصادر البيانات والقنوات والتاريخ والتقارير والتكاملات والأتمتة، لذلك تستخدم الشركة خططًا ومبيعات استشارية بدل سعر واحد."
+    },
+    {
+      "title": "الإضافات ترفع قيمة العقد وقد تعيد التجزؤ",
+      "description": "التلفزيون والمكالمات وواجهات API ولوحات القيادة توسع الاستخدام، لكن يجب أن تبقى الهوية والصلاحيات والبيانات موحدة."
+    },
+    {
+      "title": "التوسع الدولي يحتاج توطينًا تنظيميًا",
+      "description": "فهم اللهجة يفتح الباب، لكن النجاح في 13 دولة يحتاج استضافة وعقود معالجة بيانات وربط قنوات وامتثالًا محليًا مختلفًا."
     }
   ],
   "tools": [
-    "Machine Learning (NLP)",
-    "Python",
-    "Big Data Architecture",
-    "AWS"
+    "Social Listening لرصد الكلمات والحسابات والمراجعات وتحليل المشاعر والحصة الصوتية والتنبيهات.",
+    "Media Monitoring لمتابعة أكثر من 1,600 مصدر إخباري ومدونة، مع إضافة اختيارية للتلفزيون والراديو.",
+    "OmniServe لصندوق خدمة عملاء موحد عبر الشبكات الاجتماعية وWhatsApp والبريد والقنوات الرقمية.",
+    "Profiles كمنصة بيانات عملاء CDP تجمع الهوية والتفاعلات والمشاعر والاستبيانات وبيانات CRM.",
+    "Survey لإنشاء NPS وCSAT واستبيانات متفرعة وتوزيعها عبر الروابط وQR والبريد وWhatsApp.",
+    "Enterprise AI Agent لتنفيذ حالات خدمة محددة وربطها بأنظمة المؤسسة مع صلاحيات وسجلات تدقيق.",
+    "Luci كمساعد ذكاء اصطناعي للملخصات وتحليل السبب الجذري والتنبيهات.",
+    "واجهات API وWebhooks للوصول إلى بيانات الرصد والتحليلات والتنبيهات وOmniServe.",
+    "لوحات تحكم حية وتقارير مجدولة وتقارير احترافية يعدها محللون.",
+    "محرك تحليل عربي تعلن الشركة دقته 92% عبر 15 لهجة، مع صفحات منتجات تشير إلى 17 لهجة.",
+    "تكامل معلن في سياسة الخصوصية مع OpenAI وAWS Bedrock؛ لا يثبت أن كامل المنصة مستضافة على AWS.",
+    "معالجة أو استضافة بيانات على خوادم داخل السعودية وفق سياسة الخصوصية.",
+    "شهادات وممارسات أمن معلنة تشمل ISO 27001 وSOC 2 Type II وSAST وDAST وبرنامج إفصاح عن الثغرات."
+  ],
+  "verification": {
+    "status": "verified_from_official_company_funding_product_pricing_security_privacy_technical_and_saudi_government_sources",
+    "verified_on": "2026-08-03",
+    "source_policy": "أُعطيت الأولوية لصفحات لوسيديا الرسمية وإعلانات التمويل والمنتجات والأسعار والتوثيق وسياسات الأمن والخصوصية، ثم مؤشر هيئة الحكومة الرقمية كسياق مجاور. لم تُستخدم تقديرات مواقع الزيارات أو الإيرادات أو التقييم. لوسيديا شركة خاصة ولا توجد إيداعات SEC لمُصدر عام باسمها يمكن الاعتماد عليها حتى تاريخ التحقق.",
+    "important_notes": [
+      "30 مليون دولار جولة Series B وليست إيرادًا أو تقييمًا.",
+      "الجولات الثلاث تساوي حسابيًا 37.1 مليون دولار، بينما تعرض الشركة 37 مليونًا بالتقريب.",
+      "منحة 5 ملايين ريال منفصلة عن التمويل الجريء ولا تمثل إيراد عميل.",
+      "الإيراد وARR والربح والتقييم غير معلنة.",
+      "120+ عدد عملاء مباشرين، وليس مستخدمين نهائيين.",
+      "75M+ جمهور تخدمه مؤسسات العميل أو تجارب عميل، وليس MAU لوسيديا.",
+      "13 دولة لقطة حالية مقابل 11 دولة في لقطة أقدم.",
+      "حجم البيانات أو المنشورات يوميًا غير منشور.",
+      "92% و15 لهجة مقياس عام، وبعض صفحات المنتجات تذكر 17 لهجة.",
+      "3x مبيعات Q4 2025 مؤشر صادر عن الشركة دون قيم مطلقة.",
+      "1,600+ مصدر يخص Media Monitoring وليس عدد المنشورات اليومية.",
+      "OpenAI وAWS Bedrock تكاملان معلنان، ولا يثبتان المكدس الكامل.",
+      "حُذفت Python وBig Data Architecture لغياب التوثيق.",
+      "ISO 27001 وSOC 2 Type II شهادات تعلنها الشركة؛ لم تُراجع التقارير السرية.",
+      "مؤشر الحكومة الرقمية سياق للقطاع وليس حجم سوق لوسيديا.",
+      "حُذف ادعاء السيطرة على السوق والتفوق المطلق لغياب حصة سوق مستقلة."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول بالقيم والمصادر والقيود، مع فصل الإيراد والتمويل والمنحة والتقييم، وفصل العملاء المباشرين عن الجمهور المخدوم والزيارات وحجم البيانات، وتمييز المنتج عن المكدس الداخلي.",
+    "status_values": {
+      "verified_operating_location_with_legal_entity_distinction": "فصل التأسيس والمقر والكيان القانوني.",
+      "verified_enterprise_saas_pricing_not_public": "النموذج والخطط مثبتة والأسعار غير معلنة.",
+      "verified_as_not_publicly_disclosed": "المقياس غير منشور.",
+      "verified": "مدعوم بمصادر رسمية.",
+      "verified_adjacent_government_cx_indicator_not_company_tam": "سياق حكومي لا يمثل TAM.",
+      "verified_company_reported_sales_and_scale_with_definition_limits": "مؤشرات شركة مع حدود تعريف.",
+      "verified_venture_funding_and_grant_separated": "فصل التمويل الملكي عن المنحة.",
+      "verified_commercial_channels_prices_undisclosed": "قنوات مثبتة وأسعار غير معلنة.",
+      "verified_product_security_and_ai_integrations_without_speculative_stack": "قدرات وتكاملات مثبتة دون افتراض مكدس.",
+      "analytical_inference": "تحليل مهني مبني على حقائق."
+    },
+    "confidence_scale": {
+      "high": "مصدر رسمي مباشر.",
+      "medium_high": "استنتاج متعدد المصادر مع قيود.",
+      "medium": "تحليل تشغيلي دون قياس مستقل."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "شركة سعودية تأسست في جدة عام 2016، ويقع مقرها التشغيلي الحالي في الرياض وفق إعلان جولة 2025. تعرض الشركة حاليًا عمليات في 13 دولة وأكثر من 250 موظفًا. وتعرّف سياسة الخصوصية الكيان القانوني باسم Lucidya LLC في جزر كايمان؛ لذلك يجب الفصل بين مكان التأسيس والمقر التشغيلي والكيان القانوني.",
+      "verification_status": "verified_operating_location_with_legal_entity_distinction",
+      "confidence": "high",
+      "claim_type": "founding_operating_headquarters_and_legal_entity",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "جدة للتأسيس، الرياض للمقر التشغيلي، وكيان قانوني مذكور في سياسة الخصوصية.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Our Story and Vision for the Arab World",
+          "publisher": "Lucidya",
+          "source_type": "official_company_current_story_page",
+          "url": "https://www.lucidya.com/our-company/our-story",
+          "evidence_type": "direct",
+          "source_locator": "Company metrics",
+          "supports": "التأسيس في جدة والانتشار الحالي.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Lucidya Raises USD30 Million in Largest AI Funding Round in MENA",
+          "publisher": "Lucidya",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.lucidya.com/ar/news-media/lucidya-raises-usd30-million-in-largest-ai-funding-round-in-mena",
+          "evidence_type": "direct",
+          "source_locator": "Funding release",
+          "supports": "المقر في الرياض.",
+          "published_on": "2025-07-14"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Lucidya Privacy Policy",
+          "publisher": "Lucidya",
+          "source_type": "official_company_privacy_policy",
+          "url": "https://www.lucidya.com/privacy-policy",
+          "evidence_type": "direct",
+          "source_locator": "Definitions",
+          "supports": "Lucidya LLC في جزر كايمان.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "الكيان القانوني لا يحدد موقع العمليات أو البيانات."
+    },
+    "$.company.business_model": {
+      "field_value": "منصة SaaS مؤسسية لإدارة تجربة العميل بالذكاء الاصطناعي، تُباع عبر عقود وخطط موجهة للشركات والجهات الحكومية. تشمل المنظومة الاستماع الاجتماعي، مراقبة الإعلام، خدمة العملاء متعددة القنوات، ملفات العملاء الموحدة CDP، الاستبيانات، ووكلاء الذكاء الاصطناعي. توجد مستويات Basic وProfessional وEnterprise لبعض المنتجات، إضافة إلى خدمات وتقارير وتكاملات مخصصة، لكن الأسعار وقيمة العقود ومعدل الإيراد لكل عميل غير منشورة.",
+      "verification_status": "verified_enterprise_saas_pricing_not_public",
+      "confidence": "high",
+      "claim_type": "multi_product_enterprise_cxm_subscription_model",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الخطط والمنتجات والإضافات مثبتة، والأسعار غير منشورة.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-06",
+        "SRC-07",
+        "SRC-08",
+        "SRC-09",
+        "SRC-10",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Social Listening Pricing",
+          "publisher": "Lucidya",
+          "source_type": "official_company_pricing_page",
+          "url": "https://global.lucidya.com/pricing/social-listening",
+          "evidence_type": "direct",
+          "source_locator": "Plan tiers",
+          "supports": "Basic وProfessional وEnterprise.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Social Listening Tool and Real-Time Insights",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://www.lucidya.com/products/social-listening",
+          "evidence_type": "direct",
+          "source_locator": "Product page",
+          "supports": "Social Listening.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "AI-Powered Omnichannel Customer Service Platform",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://global.lucidya.com/products/omniserve",
+          "evidence_type": "direct",
+          "source_locator": "Product page",
+          "supports": "OmniServe.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Customer Profiles and Customer Data Platform",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://www.lucidya.com/products/profiles",
+          "evidence_type": "direct",
+          "source_locator": "Product page",
+          "supports": "Profiles.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "AI Customer Satisfaction Survey and CSAT Platform",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://www.lucidya.com/products/survey",
+          "evidence_type": "direct",
+          "source_locator": "Product page",
+          "supports": "Survey.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Lucidya Add-Ons",
+          "publisher": "Lucidya",
+          "source_type": "official_company_addons_page",
+          "url": "https://www.lucidya.com/add-ons",
+          "evidence_type": "direct",
+          "source_locator": "Add-ons",
+          "supports": "الإضافات.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا توجد بيانات ACV أو ARR أو الاحتفاظ."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. لا تنشر لوسيديا إيرادًا شهريًا أو سنويًا مدققًا أو صافي ربح أو ARR. تعرض الشركة نحو 37 مليون دولار من التمويل الجريء المعلن، إضافة إلى منحة منفصلة بقيمة 5 ملايين ريال سعودي في 2025. التمويل والمنحة لا يمثلان الإيراد أو التقييم؛ لذلك حُذف تقدير «ملايين الدولارات شهريًا».",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "revenue_not_disclosed_funding_and_grant_separated",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المتاح تمويل ومنحة، لا إيراد.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Lucidya Investment and Growth Journey",
+          "publisher": "Lucidya",
+          "source_type": "official_company_investor_page",
+          "url": "https://www.lucidya.com/our-company/investors",
+          "evidence_type": "direct",
+          "source_locator": "Funding timeline",
+          "supports": "37 مليون دولار.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Lucidya Raises USD30 Million in Largest AI Funding Round in MENA",
+          "publisher": "Lucidya",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.lucidya.com/ar/news-media/lucidya-raises-usd30-million-in-largest-ai-funding-round-in-mena",
+          "evidence_type": "direct",
+          "source_locator": "Series B",
+          "supports": "30 مليون دولار.",
+          "published_on": "2025-07-14"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Lucidya Secures SAR 5 Million Grant",
+          "publisher": "Lucidya / GlobeNewswire",
+          "source_type": "company_grant_announcement",
+          "url": "https://www.globenewswire.com/news-release/2025/04/09/3058182/0/en/Lucidya-Secures-SAR-5-Million-Grant-from-Saudi-Arabia-s-National-Technology-Development-Program.html",
+          "evidence_type": "direct",
+          "source_locator": "Grant",
+          "supports": "5 ملايين ريال.",
+          "published_on": "2025-04-09"
+        }
+      ],
+      "limitations": "غياب الإفصاح لا يعني عدم وجود إيراد."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "زيارات الموقع والمستخدمون النشطون شهريًا وحجم البيانات المحللة يوميًا غير معلنة. تعرض الشركة أكثر من 120 عميلًا من المؤسسات والجهات الحكومية، وتقول إن هؤلاء العملاء يخدمون أكثر من 75 مليون عميل أو مواطن عبر 13 دولة، مع تكامل أكثر من 30 قناة ومنصة. هذه مؤشرات انتشار غير مباشرة، ولا تساوي مستخدمي لوسيديا أو الزيارات أو المنشورات اليومية أو العملاء الدافعين شهريًا.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "traffic_data_volume_and_mau_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المتاح عملاء مباشرون ووصول غير مباشر، لا زيارات أو MAU أو حجم بيانات يومي.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Our Story and Vision for the Arab World",
+          "publisher": "Lucidya",
+          "source_type": "official_company_current_story_page",
+          "url": "https://www.lucidya.com/our-company/our-story",
+          "evidence_type": "direct",
+          "source_locator": "Current metrics",
+          "supports": "120+ و75M+ و13 دولة و30+ قناة.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Lucidya Investment and Growth Journey",
+          "publisher": "Lucidya",
+          "source_type": "official_company_investor_page",
+          "url": "https://www.lucidya.com/our-company/investors",
+          "evidence_type": "direct",
+          "source_locator": "Older snapshot",
+          "supports": "100+ عميل و11 دولة.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "75M+ لا يمثل مستخدمي لوسيديا المباشرين."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "تجربة العميل داخل المؤسسة موزعة عادةً بين أدوات للاستماع الاجتماعي ومراقبة الأخبار وخدمة العملاء والاستبيانات وبيانات CRM والتحليلات. هذا التجزؤ يفصل ما يقوله العميل علنًا عما يرسله للدعم أو يكتبه في الاستبيان، وتزداد المشكلة في المنطقة العربية عندما لا تفهم النماذج العامة اللهجات والسياق والسخرية والتعبيرات المحلية بدقة.",
+        "impact": "تتأخر إشارات الأزمات والشكاوى، وتعمل فرق التسويق والعلاقات العامة والخدمة على نسخ مختلفة من الحقيقة، ويُطلب من العميل تكرار قصته عبر القنوات. وقد تتحول الدقة اللغوية الضعيفة إلى تصنيف خاطئ للمشاعر أو أولوية غير مناسبة للتذاكر أو قرار حملات لا يعكس صوت الجمهور الفعلي."
+      },
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "fragmented_cx_stack_and_arabic_context_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التحليل مبني على تعدد الأدوات والحاجة لطبقة موحدة وفهم اللهجات.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-07",
+        "SRC-08",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Social Listening Tool and Real-Time Insights",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://www.lucidya.com/products/social-listening",
+          "evidence_type": "direct",
+          "source_locator": "Social listening workflows",
+          "supports": "الرصد العام.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "AI-Powered Omnichannel Customer Service Platform",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://global.lucidya.com/products/omniserve",
+          "evidence_type": "direct",
+          "source_locator": "Omnichannel workflows",
+          "supports": "محادثات الخدمة.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Customer Profiles and Customer Data Platform",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://www.lucidya.com/products/profiles",
+          "evidence_type": "direct",
+          "source_locator": "Profiles data layer",
+          "supports": "توحيد البيانات.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا توجد دراسة كمية منشورة لتكلفة التجزؤ."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "طورت لوسيديا منصة CXM موحدة تشترك منتجاتها في طبقة بيانات واحدة: Social Listening للمحادثات العامة، Media Monitoring للأخبار، OmniServe للمحادثات متعددة القنوات، Profiles لبناء ملف عميل موحد، Survey للتغذية الراجعة، وAI Agent لمعالجة حالات خدمة محددة وتنفيذ إجراءات مرتبطة بأنظمة المؤسسة. تعلن الشركة دقة 92% عبر 15 لهجة في مؤشرات الشركة، بينما تذكر بعض صفحات المنتجات الحالية 17 لهجة؛ ويُعامل الاختلاف كتطور محتمل في الإصدار أو تعريف المنتج لا كرقمين قابلين للدمج. توفر المنصة APIs وتنبيهات ولوحات وتقارير، واستضافة بيانات داخل السعودية وضوابط وصول وتدقيق."
+      },
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "unified_cxm_suite_arabic_ai_and_data_governance",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المنتجات والتكامل والأمن والاستضافة مثبتة رسميًا.",
+      "source_count": 9,
+      "source_ids": [
+        "SRC-07",
+        "SRC-11",
+        "SRC-08",
+        "SRC-09",
+        "SRC-10",
+        "SRC-05",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Social Listening Tool and Real-Time Insights",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://www.lucidya.com/products/social-listening",
+          "evidence_type": "direct",
+          "source_locator": "Social Listening",
+          "supports": "الرصد.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Real-Time Media Monitoring and PR Intelligence",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://www.lucidya.com/products/media-monitoring",
+          "evidence_type": "direct",
+          "source_locator": "Media Monitoring",
+          "supports": "الإعلام.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "AI-Powered Omnichannel Customer Service Platform",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://global.lucidya.com/products/omniserve",
+          "evidence_type": "direct",
+          "source_locator": "OmniServe",
+          "supports": "الخدمة.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Customer Profiles and Customer Data Platform",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://www.lucidya.com/products/profiles",
+          "evidence_type": "direct",
+          "source_locator": "Profiles",
+          "supports": "CDP.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "AI Customer Satisfaction Survey and CSAT Platform",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://www.lucidya.com/products/survey",
+          "evidence_type": "direct",
+          "source_locator": "Survey",
+          "supports": "الاستبيانات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Lucidya Launches Enterprise AI Agent Platform",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_launch",
+          "url": "https://global.lucidya.com/news-media/lucidya-launches-enterprise-ai-agent-platform",
+          "evidence_type": "direct",
+          "source_locator": "AI Agent launch",
+          "supports": "الوكيل المؤسسي.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Lucidya API Documentation",
+          "publisher": "Lucidya",
+          "source_type": "official_technical_documentation",
+          "url": "https://docs.lucidya.com/",
+          "evidence_type": "direct",
+          "source_locator": "API docs",
+          "supports": "APIs وWebhooks.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Security Practices",
+          "publisher": "Lucidya",
+          "source_type": "official_company_security_page",
+          "url": "https://www.lucidya.com/security-practices",
+          "evidence_type": "direct",
+          "source_locator": "Security",
+          "supports": "الأمن.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Lucidya Privacy Policy",
+          "publisher": "Lucidya",
+          "source_type": "official_company_privacy_policy",
+          "url": "https://www.lucidya.com/privacy-policy",
+          "evidence_type": "direct",
+          "source_locator": "Privacy",
+          "supports": "البيانات والاستضافة.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "اختلاف 15 و17 لهجة غير مفسر رسميًا."
+    },
+    "$.market_data.target_audience": {
+      "field_value": "الشركات الكبرى والجهات الحكومية في السعودية والمنطقة، وفرق تجربة العميل وخدمة العملاء والتسويق والعلاقات العامة والبحوث والرؤى، والبنوك والاتصالات والضيافة والرعاية الصحية والتجزئة والنقل، والمؤسسات التي تحتاج أتمتة خدمة عربية متوافقة مع الخصوصية وسيادة البيانات.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "enterprise_government_cx_service_marketing_and_research_segments",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "القطاعات والفرق مدعومة بصفحات الشركة.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-07",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Our Story and Vision for the Arab World",
+          "publisher": "Lucidya",
+          "source_type": "official_company_current_story_page",
+          "url": "https://www.lucidya.com/our-company/our-story",
+          "evidence_type": "direct",
+          "source_locator": "Clients",
+          "supports": "المؤسسات والحكومة.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Lucidya Raises USD30 Million in Largest AI Funding Round in MENA",
+          "publisher": "Lucidya",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.lucidya.com/ar/news-media/lucidya-raises-usd30-million-in-largest-ai-funding-round-in-mena",
+          "evidence_type": "direct",
+          "source_locator": "Industries",
+          "supports": "الاتصالات والمال والصحة والضيافة والقطاع العام.",
+          "published_on": "2025-07-14"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Social Listening Tool and Real-Time Insights",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://www.lucidya.com/products/social-listening",
+          "evidence_type": "direct",
+          "source_locator": "Use cases",
+          "supports": "التسويق والعلاقات العامة.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "AI-Powered Omnichannel Customer Service Platform",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://global.lucidya.com/products/omniserve",
+          "evidence_type": "direct",
+          "source_locator": "Use cases",
+          "supports": "خدمة العملاء.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا يوجد توزيع للعملاء أو الإيراد حسب القطاع."
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا يوجد رقم مستقل ومدقق في المصادر العامة يحدد السوق القابل للخدمة للوسيديا عبر CXM والاستماع الاجتماعي وخدمة العملاء وCDP ووكلاء الذكاء الاصطناعي. للسياق السعودي المجاور، قيّمت هيئة الحكومة الرقمية في 2025 خمسين منصة حكومية عبر أربعة مناظير وعشرين محورًا، وبلغ مؤشر نضج التجربة الرقمية 86.71% بمشاركة أكثر من 374 ألف مستفيد. هذا يثبت أولوية تجربة المستفيد، لكنه لا يمثل حجم سوق لوسيديا أو إيرادها أو TAM تجاريًا.",
+      "verification_status": "verified_adjacent_government_cx_indicator_not_company_tam",
+      "confidence": "high",
+      "claim_type": "saudi_digital_experience_context",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "مؤشر حكومي رسمي للسياق، لا TAM للشركة.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-15",
+          "title": "Digital Experience Maturity Index 2025 Results",
+          "publisher": "Saudi Digital Government Authority",
+          "source_type": "official_government_market_context",
+          "url": "https://dga.gov.sa/en/news/rise-in-the-digital-experience-maturity-Index-2025",
+          "evidence_type": "direct",
+          "source_locator": "Index results",
+          "supports": "86.71% و50 منصة و374 ألف+ مستفيد.",
+          "published_on": "2025-08-06"
+        }
+      ],
+      "limitations": "لا يقيس المؤشر إنفاق البرمجيات."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا تنشر الشركة معدل نمو مدققًا للإيراد أو ARR. عند إطلاق Enterprise AI Agent في 2026، ذكرت أن مبيعات الربع الرابع من 2025 بلغت ثلاثة أضعاف الربع الرابع من 2024، وأن المبيعات الجديدة في ذلك الربع تجاوزت مبيعات الأعوام الستة الأولى مجتمعة؛ وهي مؤشرات صادرة عن الشركة بلا قيم مطلقة. كما تعرض الصفحة الحالية 120+ عميلًا و13 دولة، مقابل 100+ عميل و11 دولة في لقطة المستثمرين الأقدم، لكن أرقام «+» لا تسمح بحساب نمو دقيق.",
+      "verification_status": "verified_company_reported_sales_and_scale_with_definition_limits",
+      "confidence": "medium_high",
+      "claim_type": "sales_growth_and_scale_snapshots",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "مبيعات Q4 ولقطات العملاء والدول صادرة عن الشركة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-05",
+        "SRC-01",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Lucidya Launches Enterprise AI Agent Platform",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_launch",
+          "url": "https://global.lucidya.com/news-media/lucidya-launches-enterprise-ai-agent-platform",
+          "evidence_type": "direct",
+          "source_locator": "Launch release",
+          "supports": "3x مبيعات Q4.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Our Story and Vision for the Arab World",
+          "publisher": "Lucidya",
+          "source_type": "official_company_current_story_page",
+          "url": "https://www.lucidya.com/our-company/our-story",
+          "evidence_type": "direct",
+          "source_locator": "Current metrics",
+          "supports": "120+ و13 دولة.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Lucidya Investment and Growth Journey",
+          "publisher": "Lucidya",
+          "source_type": "official_company_investor_page",
+          "url": "https://www.lucidya.com/our-company/investors",
+          "evidence_type": "direct",
+          "source_locator": "Older snapshot",
+          "supports": "100+ و11 دولة.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا توجد قيم مطلقة أو ARR، وأرقام + حدود دنيا."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "تعرض صفحة المستثمرين ثلاث محطات: Seed بقيمة 1.1 مليون دولار في 2019، وSeries A بقيمة 6 ملايين في 2020، وSeries B بقيمة 30 مليونًا في يوليو 2025 بقيادة Impact46 وبمشاركة Wa’ed Ventures وTakamol Ventures وSparkLabs ومستثمرين قائمين. المجموع الحسابي 37.1 مليون دولار، بينما تعرض الشركة الرقم مقربًا إلى 37 مليونًا. كما حصلت في أبريل 2025 على منحة غير مخففة للملكية بقيمة 5 ملايين ريال سعودي؛ المنحة منفصلة عن التمويل الجريء.",
+      "verification_status": "verified_venture_funding_and_grant_separated",
+      "confidence": "high",
+      "claim_type": "seed_series_a_series_b_and_grant",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الجولات والمنحة موثقة، مع تحقق حسابي من 37.1 مليون دولار.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Lucidya Investment and Growth Journey",
+          "publisher": "Lucidya",
+          "source_type": "official_company_investor_page",
+          "url": "https://www.lucidya.com/our-company/investors",
+          "evidence_type": "direct",
+          "source_locator": "Funding milestones",
+          "supports": "1.1 + 6 + 30.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Lucidya Raises USD30 Million in Largest AI Funding Round in MENA",
+          "publisher": "Lucidya",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.lucidya.com/ar/news-media/lucidya-raises-usd30-million-in-largest-ai-funding-round-in-mena",
+          "evidence_type": "direct",
+          "source_locator": "Series B",
+          "supports": "30 مليون والمستثمرون.",
+          "published_on": "2025-07-14"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Lucidya Secures SAR 5 Million Grant",
+          "publisher": "Lucidya / GlobeNewswire",
+          "source_type": "company_grant_announcement",
+          "url": "https://www.globenewswire.com/news-release/2025/04/09/3058182/0/en/Lucidya-Secures-SAR-5-Million-Grant-from-Saudi-Arabia-s-National-Technology-Development-Program.html",
+          "evidence_type": "direct",
+          "source_locator": "Grant",
+          "supports": "5 ملايين ريال.",
+          "published_on": "2025-04-09"
+        }
+      ],
+      "limitations": "تعرض الشركة المجموع مقربًا إلى 37 مليونًا."
+    },
+    "$.financials.valuation": {
+      "field_value": "غير معلن. لم تكشف الشركة نسبة الملكية المباعة في Series B أو تقييم ما قبل الاستثمار أو بعده، ولا توجد قوائم مالية عامة أو معاملة ثانوية تسمح باشتقاق تقييم حالي.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "valuation_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا توجد نسبة ملكية أو تقييم معلن.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Lucidya Investment and Growth Journey",
+          "publisher": "Lucidya",
+          "source_type": "official_company_investor_page",
+          "url": "https://www.lucidya.com/our-company/investors",
+          "evidence_type": "direct",
+          "source_locator": "Funding milestones",
+          "supports": "أحجام الجولات دون تقييم.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Lucidya Raises USD30 Million in Largest AI Funding Round in MENA",
+          "publisher": "Lucidya",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.lucidya.com/ar/news-media/lucidya-raises-usd30-million-in-largest-ai-funding-round-in-mena",
+          "evidence_type": "direct",
+          "source_locator": "Series B terms",
+          "supports": "المبلغ والمستثمرون دون نسبة ملكية.",
+          "published_on": "2025-07-14"
+        }
+      ],
+      "limitations": "حجم الجولة لا يساوي التقييم."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "اشتراكات وعقود SaaS لمستويات Basic وProfessional وEnterprise، مع تسعير عبر فريق المبيعات.",
+        "اشتراكات وحدات OmniServe وProfiles وSurvey وMedia Monitoring وEnterprise AI Agent، منفردة أو ضمن حزمة CXM.",
+        "إضافات مثل Survey Panel وCall Analytics ومراقبة التلفزيون والراديو وLuci وواجهات API ولوحات التحكم المخصصة.",
+        "تقارير احترافية دورية وتحليلات يعدها محللو تجربة العميل بحسب القطاع والأهداف التنفيذية.",
+        "رسوم تنفيذ وتهيئة وتكامل مع CRM وأنظمة الخدمة والتحليلات والقنوات الخارجية.",
+        "خدمات دعم واستشارات وتشغيل مؤسسي مخصص؛ الأسعار والهوامش والمزيج المالي غير معلنة."
+      ],
+      "verification_status": "verified_commercial_channels_prices_undisclosed",
+      "confidence": "medium_high",
+      "claim_type": "subscriptions_modules_addons_reports_integrations",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "القنوات مبنية على الخطط والمنتجات والإضافات والتوثيق.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-06",
+        "SRC-09",
+        "SRC-12",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Social Listening Pricing",
+          "publisher": "Lucidya",
+          "source_type": "official_company_pricing_page",
+          "url": "https://global.lucidya.com/pricing/social-listening",
+          "evidence_type": "direct",
+          "source_locator": "Plans",
+          "supports": "الاشتراكات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Customer Profiles and Customer Data Platform",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://www.lucidya.com/products/profiles",
+          "evidence_type": "direct",
+          "source_locator": "Profiles and reports",
+          "supports": "CDP والتقارير.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Lucidya API Documentation",
+          "publisher": "Lucidya",
+          "source_type": "official_technical_documentation",
+          "url": "https://docs.lucidya.com/",
+          "evidence_type": "direct",
+          "source_locator": "APIs",
+          "supports": "التكاملات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Lucidya Add-Ons",
+          "publisher": "Lucidya",
+          "source_type": "official_company_addons_page",
+          "url": "https://www.lucidya.com/add-ons",
+          "evidence_type": "direct",
+          "source_locator": "Add-ons",
+          "supports": "الإضافات.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "الأسعار والمزيج المالي غير منشورين."
+    },
+    "$.tools": {
+      "field_value": [
+        "Social Listening لرصد الكلمات والحسابات والمراجعات وتحليل المشاعر والحصة الصوتية والتنبيهات.",
+        "Media Monitoring لمتابعة أكثر من 1,600 مصدر إخباري ومدونة، مع إضافة اختيارية للتلفزيون والراديو.",
+        "OmniServe لصندوق خدمة عملاء موحد عبر الشبكات الاجتماعية وWhatsApp والبريد والقنوات الرقمية.",
+        "Profiles كمنصة بيانات عملاء CDP تجمع الهوية والتفاعلات والمشاعر والاستبيانات وبيانات CRM.",
+        "Survey لإنشاء NPS وCSAT واستبيانات متفرعة وتوزيعها عبر الروابط وQR والبريد وWhatsApp.",
+        "Enterprise AI Agent لتنفيذ حالات خدمة محددة وربطها بأنظمة المؤسسة مع صلاحيات وسجلات تدقيق.",
+        "Luci كمساعد ذكاء اصطناعي للملخصات وتحليل السبب الجذري والتنبيهات.",
+        "واجهات API وWebhooks للوصول إلى بيانات الرصد والتحليلات والتنبيهات وOmniServe.",
+        "لوحات تحكم حية وتقارير مجدولة وتقارير احترافية يعدها محللون.",
+        "محرك تحليل عربي تعلن الشركة دقته 92% عبر 15 لهجة، مع صفحات منتجات تشير إلى 17 لهجة.",
+        "تكامل معلن في سياسة الخصوصية مع OpenAI وAWS Bedrock؛ لا يثبت أن كامل المنصة مستضافة على AWS.",
+        "معالجة أو استضافة بيانات على خوادم داخل السعودية وفق سياسة الخصوصية.",
+        "شهادات وممارسات أمن معلنة تشمل ISO 27001 وSOC 2 Type II وSAST وDAST وبرنامج إفصاح عن الثغرات."
+      ],
+      "verification_status": "verified_product_security_and_ai_integrations_without_speculative_stack",
+      "confidence": "high",
+      "claim_type": "products_apis_arabic_ai_security_and_hosting",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استُبدلت Python وBig Data غير الموثقتين بقدرات معلنة، وقُيّد AWS بدور Bedrock.",
+      "source_count": 8,
+      "source_ids": [
+        "SRC-07",
+        "SRC-08",
+        "SRC-09",
+        "SRC-10",
+        "SRC-11",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Social Listening Tool and Real-Time Insights",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://www.lucidya.com/products/social-listening",
+          "evidence_type": "direct",
+          "source_locator": "Social Listening",
+          "supports": "الرصد.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "AI-Powered Omnichannel Customer Service Platform",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://global.lucidya.com/products/omniserve",
+          "evidence_type": "direct",
+          "source_locator": "OmniServe",
+          "supports": "الخدمة.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Customer Profiles and Customer Data Platform",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://www.lucidya.com/products/profiles",
+          "evidence_type": "direct",
+          "source_locator": "Profiles",
+          "supports": "CDP.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "AI Customer Satisfaction Survey and CSAT Platform",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://www.lucidya.com/products/survey",
+          "evidence_type": "direct",
+          "source_locator": "Survey",
+          "supports": "الاستبيانات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Real-Time Media Monitoring and PR Intelligence",
+          "publisher": "Lucidya",
+          "source_type": "official_company_product_page",
+          "url": "https://www.lucidya.com/products/media-monitoring",
+          "evidence_type": "direct",
+          "source_locator": "Media Monitoring",
+          "supports": "1,600+ مصدر.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Lucidya API Documentation",
+          "publisher": "Lucidya",
+          "source_type": "official_technical_documentation",
+          "url": "https://docs.lucidya.com/",
+          "evidence_type": "direct",
+          "source_locator": "API docs",
+          "supports": "APIs وWebhooks.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Security Practices",
+          "publisher": "Lucidya",
+          "source_type": "official_company_security_page",
+          "url": "https://www.lucidya.com/security-practices",
+          "evidence_type": "direct",
+          "source_locator": "Security",
+          "supports": "ISO وSOC 2 وSAST وDAST.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Lucidya Privacy Policy",
+          "publisher": "Lucidya",
+          "source_type": "official_company_privacy_policy",
+          "url": "https://www.lucidya.com/privacy-policy",
+          "evidence_type": "direct",
+          "source_locator": "Privacy",
+          "supports": "OpenAI وAWS Bedrock والخوادم السعودية.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا يوجد دليل رسمي على Python أو بنية Big Data محددة أو استضافة المنصة كلها على AWS."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Our Story and Vision for the Arab World",
+      "publisher": "Lucidya",
+      "source_type": "official_company_current_story_page",
+      "published_on": "2026",
+      "url": "https://www.lucidya.com/our-company/our-story",
+      "supports": [
+        "2016 جدة",
+        "120+ عميل",
+        "75M+ عبر 13 دولة",
+        "92% عبر 15 لهجة",
+        "30+ قناة",
+        "250+ موظف"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Lucidya Investment and Growth Journey",
+      "publisher": "Lucidya",
+      "source_type": "official_company_investor_page",
+      "published_on": "2026",
+      "url": "https://www.lucidya.com/our-company/investors",
+      "supports": [
+        "37 مليون دولار",
+        "جولات 2019 و2020 و2025",
+        "100+ عميل في 11 دولة"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Lucidya Raises USD30 Million in Largest AI Funding Round in MENA",
+      "publisher": "Lucidya",
+      "source_type": "official_company_funding_release",
+      "published_on": "2025-07-14",
+      "url": "https://www.lucidya.com/ar/news-media/lucidya-raises-usd30-million-in-largest-ai-funding-round-in-mena",
+      "supports": [
+        "Series B بقيمة 30 مليون دولار",
+        "المستثمرون",
+        "المقر في الرياض",
+        "11 دولة"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Lucidya Secures SAR 5 Million Grant",
+      "publisher": "Lucidya / GlobeNewswire",
+      "source_type": "company_grant_announcement",
+      "published_on": "2025-04-09",
+      "url": "https://www.globenewswire.com/news-release/2025/04/09/3058182/0/en/Lucidya-Secures-SAR-5-Million-Grant-from-Saudi-Arabia-s-National-Technology-Development-Program.html",
+      "supports": [
+        "منحة 5 ملايين ريال",
+        "دعم التطوير والتوسع"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Lucidya Launches Enterprise AI Agent Platform",
+      "publisher": "Lucidya",
+      "source_type": "official_company_product_launch",
+      "published_on": "2026",
+      "url": "https://global.lucidya.com/news-media/lucidya-launches-enterprise-ai-agent-platform",
+      "supports": [
+        "إطلاق AI Agent",
+        "3x مبيعات Q4 2025",
+        "نمو المبيعات الجديدة"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Social Listening Pricing",
+      "publisher": "Lucidya",
+      "source_type": "official_company_pricing_page",
+      "published_on": "2026",
+      "url": "https://global.lucidya.com/pricing/social-listening",
+      "supports": [
+        "Basic وProfessional وEnterprise",
+        "تسعير عبر المبيعات",
+        "الميزات والمصادر"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Social Listening Tool and Real-Time Insights",
+      "publisher": "Lucidya",
+      "source_type": "official_company_product_page",
+      "published_on": "2026",
+      "url": "https://www.lucidya.com/products/social-listening",
+      "supports": [
+        "الرصد والتنبيهات والمشاعر والاتجاهات",
+        "المنصات الاجتماعية"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "AI-Powered Omnichannel Customer Service Platform",
+      "publisher": "Lucidya",
+      "source_type": "official_company_product_page",
+      "published_on": "2026",
+      "url": "https://global.lucidya.com/products/omniserve",
+      "supports": [
+        "صندوق متعدد القنوات",
+        "SLA والتوجيه والتحليلات",
+        "ربط AI Agent وProfiles"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Customer Profiles and Customer Data Platform",
+      "publisher": "Lucidya",
+      "source_type": "official_company_product_page",
+      "published_on": "2026",
+      "url": "https://www.lucidya.com/products/profiles",
+      "supports": [
+        "CDP",
+        "ملفات 360 درجة",
+        "CRM وAPIs",
+        "تقارير احترافية"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "AI Customer Satisfaction Survey and CSAT Platform",
+      "publisher": "Lucidya",
+      "source_type": "official_company_product_page",
+      "published_on": "2026",
+      "url": "https://www.lucidya.com/products/survey",
+      "supports": [
+        "NPS وCSAT",
+        "التوزيع متعدد القنوات",
+        "15 و17 لهجة في مواضع مختلفة"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Real-Time Media Monitoring and PR Intelligence",
+      "publisher": "Lucidya",
+      "source_type": "official_company_product_page",
+      "published_on": "2026",
+      "url": "https://www.lucidya.com/products/media-monitoring",
+      "supports": [
+        "1,600+ مصدر",
+        "سمعة وعلاقات عامة",
+        "تلفزيون وراديو كإضافة"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Lucidya API Documentation",
+      "publisher": "Lucidya",
+      "source_type": "official_technical_documentation",
+      "published_on": "2026",
+      "url": "https://docs.lucidya.com/",
+      "supports": [
+        "APIs",
+        "Webhooks",
+        "تحليل المشاعر واللهجات",
+        "OmniServe Analytics"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Security Practices",
+      "publisher": "Lucidya",
+      "source_type": "official_company_security_page",
+      "published_on": "2026",
+      "url": "https://www.lucidya.com/security-practices",
+      "supports": [
+        "ISO 27001",
+        "SOC 2 Type II",
+        "SAST وDAST",
+        "إدارة الثغرات"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Lucidya Privacy Policy",
+      "publisher": "Lucidya",
+      "source_type": "official_company_privacy_policy",
+      "published_on": "2026",
+      "url": "https://www.lucidya.com/privacy-policy",
+      "supports": [
+        "PDPL",
+        "خوادم السعودية",
+        "Lucidya LLC كايمان",
+        "OpenAI وAWS Bedrock"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Digital Experience Maturity Index 2025 Results",
+      "publisher": "Saudi Digital Government Authority",
+      "source_type": "official_government_market_context",
+      "published_on": "2025-08-06",
+      "url": "https://dga.gov.sa/en/news/rise-in-the-digital-experience-maturity-Index-2025",
+      "supports": [
+        "86.71%",
+        "50 منصة",
+        "20 محورًا",
+        "374 ألف+ مستفيد"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Lucidya Add-Ons",
+      "publisher": "Lucidya",
+      "source_type": "official_company_addons_page",
+      "published_on": "2026",
+      "url": "https://www.lucidya.com/add-ons",
+      "supports": [
+        "Survey Panel",
+        "Call Analytics",
+        "TV and Radio",
+        "Luci",
+        "API",
+        "Custom Dashboards"
+      ]
+    }
   ]
 }

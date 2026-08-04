@@ -29,7 +29,7 @@ import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Input } from '@/components/ui/Input';
-import { EmptyState, NoResultsState } from '@/components/ui/PageStates';
+import { EmptyState, ErrorState, NoResultsState } from '@/components/ui/PageStates';
 import { useAuth } from '@/features/auth/AuthContext';
 import { supabase } from '@/lib/supabase';
 import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
@@ -78,6 +78,35 @@ interface Project {
   is_public?: boolean;
   share_token?: string | null;
 }
+
+type BusinessCanvasProjectRow = {
+  id: string;
+  project_title: string | null;
+  sector_label: string | null;
+  current_stage: string | null;
+  readiness_score: number | null;
+  validation_score: number | null;
+  execution_score: number | null;
+  profile?: { sectorLabel?: string | null } | null;
+  currentStage?: string | null;
+  metrics?: {
+    readinessScore?: number | null;
+    validationScore?: number | null;
+    executionScore?: number | null;
+  } | null;
+  canvas_data?: {
+    profile?: { sectorLabel?: string | null } | null;
+    currentStage?: string | null;
+    metrics?: {
+      readinessScore?: number | null;
+      validationScore?: number | null;
+      executionScore?: number | null;
+    } | null;
+  } | null;
+  updated_at: string;
+  is_public?: boolean | null;
+  share_token?: string | null;
+};
 
 const PROJECT_TYPE_META: Record<
   ProjectType,
@@ -251,84 +280,94 @@ interface MyProjectsProps {
 
 export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
   const { user } = useAuth();
-  const [projectsList, setProjectsList] = useState<Project[]>(MOCK_PROJECTS);
+  const [projectsList, setProjectsList] = useState<Project[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [loadError, setLoadError] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [typeFilter, setTypeFilter] = useState<TypeFilter>('all');
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('all');
   const [currentPage, setCurrentPage] = useState(1);
+  const [pendingDeleteProject, setPendingDeleteProject] = useState<Project | null>(null);
+  const [notice, setNotice] = useState<{ title: string; description: string } | null>(null);
   const itemsPerPage = 5;
 
-  React.useEffect(() => {
-    const fetchProjects = async () => {
-      if (!user) {
-        setIsLoading(false);
-        return;
-      }
+  const fetchProjects = React.useCallback(async () => {
+    if (!user) {
+      setProjectsList([]);
+      setLoadError(null);
+      setIsLoading(false);
+      return;
+    }
 
-      const cachedProjects = readProjectsCache(user.id);
-      if (cachedProjects) {
-        setProjectsList(cachedProjects);
-        setIsLoading(false);
-        return;
-      }
+    const cachedProjects = readProjectsCache(user.id);
+    if (cachedProjects) {
+      setProjectsList(cachedProjects);
+      setLoadError(null);
+      setIsLoading(false);
+      return;
+    }
 
-      setIsLoading(true);
-      try {
-        const { data, error } = await supabase
-          .from('business_canvas')
-          .select('id, project_title, sector_label, current_stage, readiness_score, validation_score, execution_score, canvas_data->profile, canvas_data->currentStage, canvas_data->metrics, updated_at, is_public, share_token')
-          .eq('user_id', user.id)
-          .is('deleted_at', null)
-          .order('updated_at', { ascending: false })
-          .limit(50);
+    setIsLoading(true);
+    setLoadError(null);
+    try {
+      const { data, error } = await supabase
+        .from('business_canvas')
+        .select('id, project_title, sector_label, current_stage, readiness_score, validation_score, execution_score, canvas_data->profile, canvas_data->currentStage, canvas_data->metrics, updated_at, is_public, share_token')
+        .eq('user_id', user.id)
+        .is('deleted_at', null)
+        .order('updated_at', { ascending: false })
+        .limit(50);
 
-        if (error) throw error;
+      if (error) throw error;
 
-        if (data && data.length > 0) {
-          const realProjects: Project[] = data.map((row: any) => {
-            const profile = row.profile || row.canvas_data?.profile;
-            const currentStage = row.currentStage || row.canvas_data?.currentStage;
-            const metrics = row.metrics || row.canvas_data?.metrics;
-            return {
-              id: row.id,
-              name: row.project_title || 'مشروع بدون اسم',
-              sector: row.sector_label || profile?.sectorLabel || 'غير محدد',
-              type: 'pro' as ProjectType,
-              status: (row.current_stage || currentStage) === 'execution' ? 'ready' : 'review',
-              progress: {
-                market: row.validation_score ?? metrics?.validationScore ?? 0,
-                product: row.readiness_score ?? metrics?.readinessScore ?? 0,
-                financial: row.execution_score ?? metrics?.executionScore ?? 0,
-              },
-              aiScore: row.readiness_score ?? metrics?.readinessScore ?? 0,
-              lastEdited: new Date(row.updated_at).toLocaleDateString('ar-SA'),
-              marketCap: '-',
-              isFavorite: false,
-              isMockExample: false,
-              is_public: row.is_public,
-              share_token: row.share_token,
-            };
-          });
-          // Real projects first, then mock examples appended
-          const nextProjects = [...realProjects, ...MOCK_PROJECTS];
-          setProjectsList(nextProjects);
-          writeProjectsCache(user.id, nextProjects);
-        } else {
-          // No real projects: show only mock examples
-          setProjectsList(MOCK_PROJECTS);
-          writeProjectsCache(user.id, MOCK_PROJECTS);
-        }
-      } catch (err) {
-        console.error('Error fetching projects:', err);
+      if (data && data.length > 0) {
+        const realProjects: Project[] = (data as BusinessCanvasProjectRow[]).map((row) => {
+          const profile = row.profile || row.canvas_data?.profile;
+          const currentStage = row.currentStage || row.canvas_data?.currentStage;
+          const metrics = row.metrics || row.canvas_data?.metrics;
+          return {
+            id: row.id,
+            name: row.project_title || 'مشروع بدون اسم',
+            sector: row.sector_label || profile?.sectorLabel || 'غير محدد',
+            type: 'pro' as ProjectType,
+            status: (row.current_stage || currentStage) === 'execution' ? 'ready' : 'review',
+            progress: {
+              market: row.validation_score ?? metrics?.validationScore ?? 0,
+              product: row.readiness_score ?? metrics?.readinessScore ?? 0,
+              financial: row.execution_score ?? metrics?.executionScore ?? 0,
+            },
+            aiScore: row.readiness_score ?? metrics?.readinessScore ?? 0,
+            lastEdited: new Date(row.updated_at).toLocaleDateString('ar-SA'),
+            marketCap: '-',
+            isFavorite: false,
+            isMockExample: false,
+            is_public: row.is_public,
+            share_token: row.share_token,
+          };
+        });
+        const nextProjects = [...realProjects, ...MOCK_PROJECTS];
+        setProjectsList(nextProjects);
+        writeProjectsCache(user.id, nextProjects);
+      } else {
         setProjectsList(MOCK_PROJECTS);
-      } finally {
-        setIsLoading(false);
+        writeProjectsCache(user.id, MOCK_PROJECTS);
       }
-    };
-
-    fetchProjects();
+    } catch (err) {
+      console.error('Error fetching projects:', err);
+      setProjectsList([]);
+      setLoadError('تعذر تحميل مشاريعك من قاعدة البيانات. تحقق من الاتصال أو حاول مرة أخرى.');
+    } finally {
+      setIsLoading(false);
+    }
   }, [user]);
+
+  React.useEffect(() => {
+    const timer = window.setTimeout(() => {
+      void fetchProjects();
+    }, 0);
+
+    return () => window.clearTimeout(timer);
+  }, [fetchProjects]);
 
   const filteredProjects = useMemo(() => {
     const query = searchTerm.trim().toLowerCase();
@@ -348,7 +387,8 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
   }, [searchTerm, typeFilter, statusFilter, projectsList]);
 
   React.useEffect(() => {
-    setCurrentPage(1);
+    const timer = window.setTimeout(() => setCurrentPage(1), 0);
+    return () => window.clearTimeout(timer);
   }, [searchTerm, typeFilter, statusFilter]);
 
   const totalPages = Math.ceil(filteredProjects.length / itemsPerPage);
@@ -357,31 +397,43 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
   }, [filteredProjects, currentPage]);
 
   const handleDelete = async (id: string, name: string) => {
-    // Mock examples cannot be deleted
-    const isMock = MOCK_PROJECTS.some((p) => p.id === id);
-    if (isMock) {
-      alert('لا يمكن حذف المشاريع التجريبية.');
+    const project = projectsList.find((item) => item.id === id);
+    if (project?.isMockExample || MOCK_PROJECTS.some((p) => p.id === id)) {
+      setNotice({
+        title: 'لا يمكن حذف المثال التجريبي',
+        description: 'الأمثلة التجريبية موجودة لمساعدتك على فهم شكل المشاريع. يمكنك إنشاء مشروع جديد أو تجاهل المثال.',
+      });
       return;
     }
-    if (!window.confirm(`هل أنت متأكد من رغبتك في حذف مشروع "${name}"؟`)) return;
+
+    setPendingDeleteProject(project ?? { ...MOCK_PROJECTS[0], id, name, isMockExample: false });
+  };
+
+  const confirmDelete = async () => {
+    if (!pendingDeleteProject) return;
+
     try {
       const { error } = await supabase
         .from('business_canvas')
         .update({ deleted_at: new Date().toISOString() })
-        .eq('id', id)
+        .eq('id', pendingDeleteProject.id)
         .eq('user_id', user?.id ?? '');
       if (error) throw error;
       setProjectsList((prev) => {
-        const nextProjects = prev.filter((p) => p.id !== id);
+        const nextProjects = prev.filter((p) => p.id !== pendingDeleteProject.id);
         if (user?.id) writeProjectsCache(user.id, nextProjects);
         return nextProjects;
       });
       if (paginatedProjects.length === 1 && currentPage > 1) {
         setCurrentPage((prev) => prev - 1);
       }
+      setPendingDeleteProject(null);
     } catch (err) {
       console.error('Error deleting project:', err);
-      alert('حدث خطأ أثناء حذف المشروع.');
+      setNotice({
+        title: 'تعذر حذف المشروع',
+        description: 'حدث خطأ أثناء حذف المشروع. حاول مرة أخرى بعد لحظات.',
+      });
     }
   };
 
@@ -419,6 +471,18 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
           <Activity className="size-8 animate-spin" />
           <p>جاري تحميل المشاريع...</p>
         </div>
+      </main>
+    );
+  }
+
+  if (loadError) {
+    return (
+      <main dir="rtl" className="min-h-screen bg-background px-4 py-4 sm:py-5">
+        <ErrorState
+          description={loadError}
+          retryLabel="إعادة تحميل المشاريع"
+          onRetry={fetchProjects}
+        />
       </main>
     );
   }
@@ -562,9 +626,68 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
         onClose={() => setSelectedShareProject(null)}
         onUpdatePublicStatus={handleUpdatePublicStatus}
       />
+      <DeleteProjectDialog
+        project={pendingDeleteProject}
+        onClose={() => setPendingDeleteProject(null)}
+        onConfirm={confirmDelete}
+      />
+      <NoticeDialog notice={notice} onClose={() => setNotice(null)} />
     </main>
   );
 };
+
+function DeleteProjectDialog({
+  project,
+  onClose,
+  onConfirm,
+}: {
+  project: Project | null;
+  onClose: () => void;
+  onConfirm: () => void;
+}) {
+  return (
+    <Dialog open={Boolean(project)} onOpenChange={(open) => !open && onClose()}>
+      <DialogContent className="sm:max-w-[440px]" dir="rtl">
+        <DialogHeader className="text-right">
+          <DialogTitle>حذف المشروع</DialogTitle>
+          <DialogDescription>
+            سيتم نقل مشروع &quot;{project?.name}&quot; إلى المحذوفات. لا تنفذ هذه العملية إلا إذا كنت متأكداً.
+          </DialogDescription>
+        </DialogHeader>
+        <DialogFooter>
+          <Button variant="destructive" onClick={onConfirm}>
+            حذف المشروع
+          </Button>
+          <Button variant="outline" onClick={onClose}>
+            إلغاء
+          </Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+  );
+}
+
+function NoticeDialog({
+  notice,
+  onClose,
+}: {
+  notice: { title: string; description: string } | null;
+  onClose: () => void;
+}) {
+  return (
+    <Dialog open={Boolean(notice)} onOpenChange={(open) => !open && onClose()}>
+      <DialogContent className="sm:max-w-[420px]" dir="rtl">
+        <DialogHeader className="text-right">
+          <DialogTitle>{notice?.title}</DialogTitle>
+          <DialogDescription>{notice?.description}</DialogDescription>
+        </DialogHeader>
+        <DialogFooter>
+          <Button onClick={onClose}>حسناً</Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+  );
+}
 
 function ProjectsTable({
   projects,
@@ -915,8 +1038,11 @@ function ProjectShareModal({
 
   useEffect(() => {
     if (project) {
-      setIsPublic(Boolean(project.is_public));
-      setCopied(false);
+      const timer = window.setTimeout(() => {
+        setIsPublic(Boolean(project.is_public));
+        setCopied(false);
+      }, 0);
+      return () => window.clearTimeout(timer);
     }
   }, [project]);
 

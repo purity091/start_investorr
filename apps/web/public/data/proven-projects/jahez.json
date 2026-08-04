@@ -2,52 +2,1559 @@
   "id": "jahez",
   "slug": "jahez",
   "name": "جاهز (Jahez)",
-  "headline": "المنصة السعودية التي أعادت تعريف سرعة توصيل الطعام",
-  "category": "Marketplace / توصيل الطعام واللوجستيات",
+  "headline": "من منصة توصيل إلى منظومة إقليمية متعددة الخدمات: كيف حوّلت جاهز كثافة الطلب إلى لوجستيات وإعلانات وأدوات للتجار",
+  "category": "On-Demand Commerce, Food Delivery, Logistics & Merchant Technology / التجارة والخدمات عند الطلب",
   "company": {
-    "location": "الرياض، المملكة العربية السعودية",
-    "business_model": "عمولات من المطاعم + رسوم توصيل + اشتراكات عملاء (Jahez Prime)"
+    "location": "الرياض، المملكة العربية السعودية. شركة جاهز الدولية لتقنية نظم المعلومات شركة مساهمة سعودية مدرجة في السوق الرئيسية لتداول السعودية تحت الرمز 6017. تعمل المجموعة عبر منصات داخل السعودية وخارجها، وتشمل عملياتها المعلنة السعودية والبحرين والكويت وقطر، مع جعل Snoonu المنصة الأساسية للتوسع الدولي خلال 2026.",
+    "business_model": "منظومة متعددة الأطراف تربط العملاء بالمطاعم والمتاجر وشركاء التوصيل، وتحقق الدخل من عمولات التجار ورسوم التوصيل والإعلانات والاشتراكات والمبيعات والخدمات الإضافية. تشمل المجموعة Jahez وBlu وSnoonu والمنصات الدولية، وLogi للخدمات اللوجستية، وCo للمطابخ السحابية والتنفيذ، وMarn لأنظمة نقاط البيع والعمليات، وSol لتوريد قطاع HoReCa، وRed Color للاستثمارات. لا تنشر المجموعة مزيج الإيراد التفصيلي لكل قناة أو علامة."
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين",
-    "monthly_traffic": "ملايين الطلبات شهرياً"
+    "monthly_revenue": "نحو 241.7 مليون ريال سعودي كمتوسط شهري حسابي لأحدث ربع منشور. بلغ صافي إيراد المجموعة 725.1 مليون ريال في الربع الأول من 2026، بينما بلغ Gross Revenue التشغيلي 779 مليون ريال. المتوسط ليس MRR ولا يمثل إيراد كل شهر على حدة.",
+    "monthly_traffic": "نحو 10.57 ملايين طلب شهريًا كمتوسط حسابي للربع الأول من 2026، استنادًا إلى 31.7 مليون طلب خلال الربع. بلغ عدد المستخدمين النشطين 4.6 ملايين في 2025 وفق تعريف المجموعة: مستخدم لديه طلب خلال آخر 180 يومًا. لا يمثل هذا التعريف MAU لمدة 30 يومًا."
   },
   "overview": {
     "problem": {
-      "text": "قطاع توصيل الطعام في السعودية كان يعاني من تأخر الطلبات، ضعف خدمة العملاء، واحتكار شركات معينة للسوق مع تجربة مستخدم غير مثالية.",
-      "impact": "إحباط لدى العملاء من تأخر الطعام، ومشاكل لوجستية للمطاعم في إدارة أساطيل التوصيل الخاصة بهم."
+      "text": "تواجه أسواق التوصيل تحدي تنسيق الطلب بين العميل والمطعم وشريك التوصيل في وقت واحد، مع تفاوت أوقات التحضير والمسافات والازدحام وتوافر السائقين. كما يحتاج المطعم إلى إدارة القوائم والفروع والعروض والعمليات والمخزون والمدفوعات عبر قنوات متعددة، بينما يريد العميل سعرًا واضحًا وتتبعًا وخدمة موثوقة.",
+      "impact": "أي خلل صغير في المطابقة أو التحضير أو التوصيل يظهر كتأخير أو إلغاء أو تعويض، ويضغط على هامش الطلب وثقة الأطراف. وعندما تشتد المنافسة، قد تزيد المنصة الإنفاق على الخصومات واكتساب العملاء، فتزداد الطلبات دون تحسن الربحية أو الاحتفاظ."
     },
     "solution": {
-      "text": "منصة سعودية بالكامل (Marketplace) تربط العملاء بالمطاعم مع أسطول توصيل مستقل (Freelance) يعتمد على تقنيات الذكاء الاصطناعي لتقليل وقت التوصيل."
+      "text": "بنت جاهز منصة طلب ودفع وتتبع تربط العملاء بالتجار وشركاء التوصيل، ثم أضافت اشتراكات Prime والعروض والإعلانات وواجهات إدارة التجار والتحليلات. توسعت المجموعة إلى البقالة والتجزئة والرياضة والسفر عبر التطبيق الموحد وBlu، وإلى اللوجستيات عبر Logi، والمطابخ السحابية والتنفيذ عبر Co، ونقاط البيع والمحاسبة وERP عبر Marn، وتوريد HoReCa والائتمان عبر Sol. في 2025 استحوذت على حصة مسيطرة في Snoonu لدخول قطر وبناء منصة دولية متعددة الخدمات."
     }
   },
   "market_data": {
-    "target_audience": "المستهلكون في السعودية والخليج، المطاعم (B2B)، ومناديب التوصيل.",
-    "market_size": "سوق توصيل الطعام في المنطقة يقدر بمليارات الدولارات.",
-    "growth_rate": "نمو فائق السرعة أدى إلى إدراجها في السوق الموازية (نمو) كأول شركة تقنية ناشئة تطرح للاكتتاب العام في السعودية."
+    "target_audience": "المستهلكون الذين يطلبون الطعام والبقالة والتجزئة والخدمات اليومية، والمطاعم والمقاهي والمتاجر والعلامات التجارية، وشركاء التوصيل وشركات التجارة الإلكترونية، وقطاع HoReCa، والتجار الذين يحتاجون نقاط بيع ومحاسبة وERP وإعلانات وولاء، إضافة إلى مستخدمي Snoonu وBlu والخدمات الإقليمية.",
+    "market_size": "لا تنشر جاهز رقم TAM ماليًا واحدًا يغطي جميع أنشطتها. في تقرير 2025 قالت المجموعة إنها تعمل في السعودية والبحرين والكويت وقطر ضمن نطاق سكاني قابل للاستهداف يتجاوز 45 مليون نسمة، مع 4.6 ملايين مستخدم نشط. بلغ GMV المجموعة 7.25 مليارات ريال في 2025 و2.3 مليار ريال في Q1 2026؛ وهذه مقاييس نشاط المنصة وليست حجم السوق أو الإيراد.",
+    "growth_rate": "ارتفع صافي الإيراد من 1.602 مليار ريال في 2022 إلى 1.785 مليارًا في 2023 و2.219 مليارًا في 2024 و2.324 مليارًا في 2025. في Q1 2026 ارتفع صافي الإيراد 37.9% سنويًا إلى 725.1 مليون ريال، وارتفع GMV 39% إلى 2.3 مليار ريال والطلبات 21% إلى 31.7 مليونًا، مدفوعًا بدرجة كبيرة بأول ربع كامل لتجميع Snoonu. داخل السعودية انخفض الإيراد 12% سنويًا وتراجعت الطلبات، ولذلك يجب فصل نمو المجموعة الناتج عن الاستحواذ عن النمو العضوي المحلي."
   },
   "financials": {
-    "initial_investment": "انطلقت كفكرة داخلية لشركة (مكاني) ثم استقلت لتصبح عملاقاً مستقلاً.",
-    "valuation": "$2B+ (بناءً على التقييم السوقي بعد الإدراج)",
+    "initial_investment": "رأس المال الشخصي الأول ومصادر التمويل قبل الإدراج غير مفصح عنها بصورة تسمح ببناء سجل تمويل ناشئ كامل. في الطرح العام الأولي حُدد السعر عند 850 ريالًا للسهم قبل تجزئة القيمة الاسمية، بما دل على قيمة سوقية تاريخية قدرها 8.9 مليارات ريال عند الإدراج. بلغ حجم الطرح المعلن 1.8 مليار ريال شامل أسهم التخصيص الإضافية، لكنه تضمن أسهمًا جديدة وأسهمًا مباعة من مساهمين قائمين؛ لذلك لا يمثل كامل المبلغ تمويلًا دخل الشركة. أدرجت الأسهم في نمو في يناير 2022 ثم انتقلت إلى السوق الرئيسية في ديسمبر 2024.",
+    "valuation": "جاهز شركة عامة، ولذلك قيمتها السوقية متغيرة يوميًا. أظهر أحدث سجل مفهرس من تداول السعودية قبل تاريخ التحقق سعرًا قدره 11.66 ريالًا وقيمة سوقية تقارب 2.524 مليار ريال بعد تجزئة السهم، مقابل قيمة تاريخية قدرها 8.9 مليارات ريال عند الإدراج. لا يصح تثبيت 2 مليار دولار كتقييم حالي دائم.",
     "revenue_streams": [
-      "اقتطاع نسبة (Commission) من كل طلب للمطعم",
-      "رسوم توصيل يدفعها العميل",
-      "جاهز برايم (اشتراك شهري لتوصيل مجاني)",
-      "المطابخ السحابية واللوجستيات (Logi)"
+      "عمولات المطاعم والمتاجر على الطلبات المؤهلة",
+      "رسوم التوصيل ورسوم الخدمة التي يدفعها العميل بحسب الطلب والسوق",
+      "اشتراكات Jahez Prime واشتراكات التوصيل في الأسواق المؤهلة",
+      "الإعلانات داخل التطبيقات والمواضع الترويجية والحملات الممولة من التجار",
+      "خدمات Jahez Ads والاستهداف والتقسيم الجغرافي أو حسب العميل",
+      "مبيعات البقالة والتجزئة والسلع والخدمات عبر المنصات الرأسية",
+      "عمولات شراكات البقالة مثل التكامل مع noon Minutes",
+      "إيرادات منصة Blu من المنتجات الرياضية والتذاكر والعضويات والمزادات والهدايا والسفر والخدمات الرقمية",
+      "إيرادات Snoonu من الطعام والبقالة والتجزئة والخدمات واللوجستيات في قطر والأسواق الدولية",
+      "إيرادات Logi من التوصيل للمجموعة والعملاء الخارجيين والخدمات اللوجستية",
+      "إيرادات Co من المطابخ السحابية والمخازن المظلمة والتنفيذ وحلول B2B",
+      "اشتراكات Marn في نقاط البيع والمحاسبة وERP وCRM والولاء والتحليلات",
+      "خدمات Marn Connect Plus والقوائم الرقمية والدفع على الطاولة والحجوزات",
+      "إيرادات Sol من توريد الأغذية والمشروبات لقطاع HoReCa والحزم والمخزون",
+      "حلول Jahez Credit أو BNPL المتكاملة في بعض وحدات المجموعة، مع عدم إفصاح مستقل عن مساهمتها",
+      "عوائد واستثمارات Red Color في شركات وتقنيات مرتبطة باللوجستيات والتجارة وFinTech وAdTech",
+      "رسوم أو عوائد خدمات التنفيذ والتخزين والتوصيل بين الشركات",
+      "Gross Revenue وGMV وGOV ليست مقاييس قابلة للاستبدال بصافي الإيراد المحاسبي"
     ]
   },
   "lessons": [
     {
-      "title": "فهم السوق المحلي بعمق (Hyper-localization)",
-      "description": "استفادت جاهز من فهمها العميق للثقافة السعودية وسلوكيات المستهلك، وقدمت خدمة عملاء استثنائية مقارنة بالمنافسين الأجانب."
+      "title": "الطلب هو بداية اقتصاد المنصة لا نهايته",
+      "description": "31.7 مليون طلب في ربع واحد تثبت كثافة تشغيل، لكن الربحية تعتمد على العمولة ورسوم التوصيل والإعلانات والتعويضات وتكلفة السائق والتسويق. الحجم وحده لا يضمن هامشًا أفضل."
     },
     {
-      "title": "الاكتتاب العام كأداة للنمو والتوسع",
-      "description": "كان إدراج الشركة في سوق الأسهم خطوة جريئة وفرت سيولة هائلة للاستحواذات (مثل شراء تطبيق The Chefz)."
+      "title": "Gross Revenue وصافي الإيراد مقياسان مختلفان",
+      "description": "في Q1 2026 عرضت المجموعة Gross Revenue قدره 779 مليون ريال وصافي إيراد محاسبي 725.1 مليونًا. الخصومات والكاش باك والتعويضات والمعالجة وفق IFRS تمنع استخدام المصطلحين بالتبادل."
     },
     {
-      "title": "التكامل الرأسي",
-      "description": "لم تكتفِ بالتوصيل فقط، بل أنشأت شركة لوجستية (Logi) واشترت منصات نقاط بيع، لتصبح شريكاً كاملاً للمطعم وليس مجرد وسيط."
+      "title": "GMV ليس إيرادًا",
+      "description": "2.3 مليار ريال GMV في Q1 2026 هي قيمة السلع المباعة عبر المنصة دون رسوم التوصيل والضريبة. ما تحتفظ به جاهز هو جزء من هذه القيمة إضافة إلى رسوم وخدمات أخرى."
+    },
+    {
+      "title": "المستخدم النشط لمدة 180 يومًا ليس MAU",
+      "description": "تعريف جاهز للمستخدم النشط أوسع من نافذة 30 يومًا. استخدام الرقم 4.6 ملايين كمستخدمين شهريين يضخم التكرار ويمنع المقارنة العادلة مع منصات تستخدم تعريفات أخرى."
+    },
+    {
+      "title": "الاستحواذ يرفع النمو المعلن قبل أن يثبت النمو العضوي",
+      "description": "نمو Q1 2026 تأثر بأول ربع كامل لتجميع Snoonu. تحليل الأداء يحتاج أرقامًا Like-for-Like تفصل قطر عن تغير الطلب داخل السعودية."
+    },
+    {
+      "title": "الدفاع عن الحصة قد يخفض ربح الطلب",
+      "description": "استخدمت جاهز التسويق والعروض لاستعادة الحصة في السعودية، فتراجع ربح القطاع رغم استقرار الطلب ربعياً. زيادة الإنفاق تصبح منطقية فقط إذا رفعت الاحتفاظ والقيمة العمرية."
+    },
+    {
+      "title": "الإعلانات ترفع Take Rate دون رفع رسوم التوصيل",
+      "description": "ارتفع Take Rate في 2025 إلى 15.4% مع زيادة العمولة والإعلانات. تحقيق دخل من انتباه المستخدم والتاجر يقلل الاعتماد على رفع سعر التوصيل، لكنه يحتاج قياسًا يمنع تدهور تجربة البحث."
+    },
+    {
+      "title": "Prime يشتري التكرار وليس التوصيل المجاني فعليًا",
+      "description": "الاشتراك يعيد توزيع تكلفة التوصيل على رسم ثابت وتكرار أعلى وشبكة مطاعم مؤهلة. نجاحه يقاس بالاحتفاظ والهامش بعد الإعفاءات، لا بعدد المشتركين فقط."
+    },
+    {
+      "title": "الأسطول الداخلي يمنح تحكمًا ويضيف التزامًا",
+      "description": "نفذت Logi 35% من طلبات المجموعة في 2025 بأسطول 4,000 سائق. ذلك يحسن التوافر والتكلفة، لكنه يضيف تشغيلًا وامتثالًا ومخاطر استخدام وأداء للسائقين."
+    },
+    {
+      "title": "تكديس الطلبات يخفض التكلفة وقد يرفع التأخير",
+      "description": "تحسين Order Stacking يقلل التكلفة الإضافية، لكن جمع طلبات غير متوافقة في المسار أو وقت التحضير قد يضر الجودة. الخوارزمية تحتاج حدود خدمة واضحة."
+    },
+    {
+      "title": "التسعير الديناميكي للسائق يحتاج حوافز قابلة للتفسير",
+      "description": "ربط السعر بالأداء والمناطق يحسن توزيع العرض، لكنه قد يدفع السائقين نحو سلوك قصير الأجل أو مناطق محددة. المؤشرات والحوافز يجب أن تكون مفهومة وقابلة للاعتراض."
+    },
+    {
+      "title": "واجهة التاجر تقلل العمل اليدوي وتكشف مسؤولية البيانات",
+      "description": "الإدارة الذاتية للفروع والعروض والإيراد تقلل التدخل، لكنها تجعل دقة الصلاحيات والبيانات والتسويات ضرورية. خطأ في فرع أو حملة قد يتوسع فورًا."
+    },
+    {
+      "title": "نقاط البيع تجعل التكامل أعمق من طلبات التوصيل",
+      "description": "Marn تربط الطلب بالمخزون والمحاسبة وERP والولاء. هذا يرفع الاحتفاظ ويخلق إيراد اشتراك، لكنه يجعل جاهز جزءًا من نظام تشغيل التاجر ومسؤولة عن الاعتمادية."
+    },
+    {
+      "title": "اللوجستيات الخارجية تختبر ما إذا كانت القدرة منتجًا مستقلًا",
+      "description": "بناء Logi لخدمة جاهز يخلق حجمًا مضمونًا؛ بيع الخدمة للغير يثبت قدرتها على المنافسة دون دعم داخلي ويكشف التكلفة الحقيقية لكل شحنة."
+    },
+    {
+      "title": "الشراكة Asset-Light قد تتفوق على بناء البنية",
+      "description": "تعاون noon سمح بتوسيع البقالة دون إنفاق رأسمالي على شبكة متاجر مظلمة جديدة. السرعة تتحسن، لكن جاهز تصبح معتمدة على توفر وتسعير وتنفيذ الشريك."
+    },
+    {
+      "title": "المطابخ السحابية ليست مجرد عقار",
+      "description": "Co تجمع المساحة والتنفيذ والمخزون والطلبات الرقمية. نجاحها يعتمد على إشغال الوحدات ودوران العلامات وجودة العمليات، لا عدد المطابخ وحده."
+    },
+    {
+      "title": "التوسع الدولي يحتاج منصة محلية قوية",
+      "description": "بدل بناء قطر عضويًا، اشترت جاهز 76.56% من Snoonu مقابل 245 مليون دولار. الصفقة اشترت علامة وفريقًا وتقنية وحجمًا فوريًا، لكنها أضافت مخاطر تكامل واستهلاك نقد."
+    },
+    {
+      "title": "الإعلان عن استحواذ لا يعني اكتماله",
+      "description": "محاولة شراء The Chefz انتهت دون استيفاء الشروط وإتمام الصفقة. يجب تحديث قواعد البيانات من إعلان النية إلى الإغلاق أو الإلغاء، لا إبقاء الاستحواذ المفترض."
+    },
+    {
+      "title": "الإدراج يوفر سيولة وحوكمة ولا يضمن تمويل كل استحواذ",
+      "description": "الطرح جمع أموالًا وسمح بتداول الأسهم، لكنه شمل بيع مساهمين قائمين. كما تم تمويل Snoonu بمزيج نقدي وأسهم وشروط صفقة، وليس من «سيولة الاكتتاب» وحدها."
+    },
+    {
+      "title": "القيمة السوقية لقطة وليست وصفًا ثابتًا للشركة",
+      "description": "جاهز قُيّمت عند 8.9 مليارات ريال وقت الإدراج، ثم أظهر سجل تداول قيمة أقل بكثير في 2026. التقييم العام يتغير مع السعر والأسهم ولا يكتب كحقيقة أبدية."
+    },
+    {
+      "title": "التطبيق الموحد يرفع التكرار ويزيد تعقيد الاكتشاف",
+      "description": "إضافة الطعام والبقالة والتجزئة والخدمات ترفع الحالات اليومية، لكنها قد تجعل الواجهة مزدحمة. البحث والتخصيص والتنقل يجب أن يمنع الخدمات الجديدة من إضعاف المهمة الأساسية."
+    },
+    {
+      "title": "الذكاء الاصطناعي يجب أن يقاس بنتيجة تشغيلية",
+      "description": "البحث والتنبؤ والتخصيص والتوجيه مفيدة عندما تقلل وقت القرار والتكلفة والإلغاء. نسبة اكتمال مبادرة AI لا تثبت أثرًا قبل نشر مؤشرات تجربة وربحية."
+    }
+  ],
+  "tools": [
+    "تطبيق Jahez للطلب والدفع وتتبع الطعام والبقالة والتجزئة",
+    "Jahez Prime لاشتراكات التوصيل والمزايا في الأسواق المؤهلة",
+    "واجهات عروض وخصومات واختيار فروع ومهلة Grace لتعديل الطلب",
+    "قوائم واختيارات مخصصة وواجهات اكتشاف محسنة",
+    "تطبيق Owner لإدارة التجار والفروع والأوامر والإيرادات",
+    "إدارة متعددة الفروع ورؤية لحظية للأداء",
+    "الانضمام الذاتي إلى حملات التوصيل والعروض والإعلانات",
+    "Jahez Ads والمواضع المدفوعة والاستهداف والتقسيم",
+    "Saned أو نظام توزيع الطلبات وإدارة الحوافز والمناطق",
+    "تسعير ديناميكي لشركاء التوصيل مرتبط بمؤشرات الأداء",
+    "إدارة Bonus Zones لموازنة العرض والطلب",
+    "تحسين Order Stacking لتقليل تكلفة التوصيل",
+    "اكتشاف التطبيقات غير المصرح بها لتعزيز الامتثال",
+    "Logi لخدمات الميل الأخير داخل المجموعة وللعملاء الخارجيين",
+    "أسطول يتجاوز 4,000 سائق وفق تقرير 2025",
+    "تكامل Tawakkalna لجدولة شركاء التوصيل",
+    "مركبات Ebayya الكهربائية المدعومة بالطاقة الشمسية",
+    "روبوتات توصيل ذاتية في ROSHN Sedra وتجارب الحج",
+    "Redbox كنقاط تجميع أو تنفيذ في المواقع عالية الكثافة",
+    "تكامل noon Minutes للبقالة والتنفيذ عبر المتاجر المظلمة",
+    "استثمار Doos للوصول الاستراتيجي إلى عمليات Q-commerce",
+    "Blu للمنتجات الرياضية والتذاكر والعضويات",
+    "Blu Auctions للمزادات على المنتجات الحصرية",
+    "Send Gift لمشاركة المنتجات كهدايا",
+    "Red Bull Mobile eSIM داخل Blu",
+    "تكاملات flynas وAlmosafer للحجوزات",
+    "Snoonu Super App للطعام والبقالة والتجزئة والخدمات في قطر",
+    "Snoonu Plus وSmart Campaigns والتوصيات والإعلانات",
+    "Snoonu Cloud والأتمتة اللوجستية والدعم",
+    "Marn POS مع العمل دون اتصال وخيارات دفع متعددة",
+    "Marn Connect Plus للقوائم وطلب الطاولة والدفع والحجوزات",
+    "Marn Books للمحاسبة المتكاملة",
+    "Marn PRO كحل ERP قابل للتخصيص",
+    "CRM والولاء ولوحات التحليل كإضافات اشتراك لدى Marn",
+    "Co للمطابخ السحابية والمخازن المظلمة والتنفيذ",
+    "Sol لتوريد الأغذية والمشروبات وإدارة المخزون لقطاع HoReCa",
+    "Jahez Credit أو حلول الدفع والائتمان المدمجة لبعض التجار",
+    "Red Color للاستثمار المؤسسي في LogTech وE-commerce وFinTech وAdTech",
+    "ISO/IEC 27001 لنظام إدارة أمن المعلومات ضمن نطاق الشركة المعلن",
+    "منصة بيانات وتحليلات لدعم التسعير والتوجيه والتنبؤ",
+    "بحث متقدم وتخصيص وتفاعلات صوتية كمبادرات 2026",
+    "بنية معيارية لتوحيد الخدمات والتوسع الدولي عبر Snoonu",
+    "تطبيق علاقات المستثمرين وتقارير ونتائج مالية للمساهمين"
+  ],
+  "verification": {
+    "status": "verified_from_jahez_annual_and_quarterly_reports_saudi_exchange_filings_and_official_product_sources",
+    "verified_on": "2026-08-03",
+    "source_policy": "تم إعطاء الأولوية للقوائم المالية وتقرير 2025 وعرض Q1 2026 وإعلانات تداول السعودية وسجلاتها، ثم صفحات المنتجات والعلامات الرسمية. فُصل صافي الإيراد عن Gross Revenue وGMV وGOV، وفُصلت أرقام المجموعة عن منصة Jahez السعودية.",
+    "important_notes": [
+      "أحدث نتائج منشورة وقت التحقق هي Q1 2026؛ لم تظهر نتائج Q2 أو H1 2026 في مركز علاقات المستثمرين.",
+      "صافي إيراد Q1 2026 بلغ 725.1 مليون ريال، ومتوسط 241.7 مليون شهريًا مجرد قسمة على ثلاثة وليس MRR.",
+      "Gross Revenue في Q1 2026 بلغ 779 مليون ريال؛ لا يساوي صافي الإيراد المحاسبي.",
+      "بلغ GMV في Q1 2026 نحو 2.3 مليار ريال والطلبات 31.7 مليونًا؛ هذه ليست إيرادات.",
+      "متوسط 10.57 ملايين طلب شهريًا مشتق من الربع ولا يعكس الموسمية اليومية أو الرمضانية.",
+      "المستخدم النشط لدى جاهز يُعرّف بأنه مستخدم طلب خلال آخر 180 يومًا، وليس MAU لمدة 30 يومًا.",
+      "بلغ المستخدمون النشطون 4.6 ملايين والطلبات 111.6 مليونًا في 2025.",
+      "بلغ صافي إيراد 2025 نحو 2.324 مليار ريال، وGMV 7.25 مليارات وGOV 9.26 مليارات.",
+      "نمو Q1 2026 تأثر بتجميع Snoonu؛ داخل السعودية انخفض صافي الإيراد 12% سنويًا.",
+      "استحوذت جاهز على 76.56% من Snoonu مقابل إجمالي 245 مليون دولار، واكتمل تجميعها من Q4 2025.",
+      "محاولة الاستحواذ على The Chefz لم تكتمل وانتهت مدة الاتفاق في 2023؛ لم تُعامل كاستحواذ.",
+      "انتقلت جاهز من نمو إلى السوق الرئيسية في ديسمبر 2024.",
+      "قيمة الإدراج التاريخية 8.9 مليارات ريال لا تمثل القيمة السوقية الحالية.",
+      "أحدث سجل تداول مفهرس قبل التحقق أظهر قيمة سوقية تقارب 2.524 مليار ريال؛ الرقم ديناميكي ويتغير مع السهم.",
+      "تجزأت القيمة الاسمية إلى 0.50 ريال وأصبح عدد الأسهم 209,836,060 وفق سجل تداول.",
+      "حجم الطرح التاريخي لم يدخل بالكامل خزينة الشركة لأنه جمع أسهمًا جديدة وبيع مساهمين قائمين.",
+      "Commission هي المساهم الأساسي في Gross Revenue، وارتفع دخل الإعلانات 17.5% في 2025 وفق الشركة.",
+      "Jahez Prime موجود في أسواق المجموعة، لكن السعر وعدد المشتركين والإيراد غير مفصح عنها.",
+      "تم حذف ادعاء أن الذكاء الاصطناعي وحده خفض زمن التوصيل؛ توجد مبادرات AI وتوجيه وتسعير، لكن الأثر الكمي الموحد غير منشور.",
+      "تم حذف أي قائمة لغات أو مزودي سحابة غير موثقة، واستبدالها بقدرات تشغيل ومنتجات معلنة.",
+      "الملف لا يقدم توصية استثمارية أو توقعًا لسعر السهم."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول بالقيم والمصادر وحالة التحقق، مع الفصل بين الإيراد وGross Revenue وGMV وGOV والطلبات والمستخدمين والقيمة السوقية.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بقوائم أو تقرير أو مصدر رسمي.",
+      "verified_latest_quarter_monthly_average": "القيمة متوسط مشتق من أحدث ربع وليست MRR.",
+      "verified_orders_average_not_user_traffic": "القيمة متوسط طلبات وليست زيارات أو مستخدمين شهريين.",
+      "verified_180_day_active_user_definition": "المقياس يستخدم نافذة نشاط 180 يومًا.",
+      "verified_group_metric_with_acquisition_effect": "المقياس يخص المجموعة ويتأثر بالتجميع أو الاستحواذ.",
+      "verified_public_market_dynamic_value": "القيمة السوقية لقطة متغيرة وليست تقييمًا ثابتًا.",
+      "verified_historical_ipo_value": "الرقم قيمة تاريخية عند الإدراج.",
+      "verified_transaction_not_revenue": "الرقم قيمة صفقة أو أصل وليس إيرادًا.",
+      "verified_failed_transaction": "صفقة معلنة لم تكتمل.",
+      "verified_product_capability": "القدرة موثقة في تقرير أو صفحة منتج رسمية.",
+      "verified_forward_looking_initiative": "القدرة أو الإطلاق مخطط أو قيد التنفيذ ولا يُعامل كنتيجة مكتملة.",
+      "analytical_inference": "تحليل مهني مبني على بيانات موثقة وليس تصريحًا حرفيًا."
+    },
+    "confidence_scale": {
+      "high": "قائمة مالية أو إفصاح تداول أو تقرير سنوي رسمي.",
+      "medium_high": "عرض مستثمرين أو صفحة منتج رسمية مع تعريف واضح.",
+      "medium": "مبادرة مستقبلية أو رقم تسويقي يحتاج إلى قيود إضافية."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "الرياض، المملكة العربية السعودية. شركة جاهز الدولية لتقنية نظم المعلومات شركة مساهمة سعودية مدرجة في السوق الرئيسية لتداول السعودية تحت الرمز 6017. تعمل المجموعة عبر منصات داخل السعودية وخارجها، وتشمل عملياتها المعلنة السعودية والبحرين والكويت وقطر، مع جعل Snoonu المنصة الأساسية للتوسع الدولي خلال 2026.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "saudi_public_company_headquarters_and_regional_operating_footprint",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت تداول الكيان المدرج والرياض، ويثبت التقرير السنوي الأسواق الحالية واستراتيجية Snoonu الدولية.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-08",
+        "SRC-03",
+        "SRC-15",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "Saudi Exchange Company Profile — Jahez",
+          "publisher": "Saudi Exchange",
+          "source_type": "official_exchange_company_profile",
+          "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/hidden/company-profile-main/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziTR3NDIw8LAz83d2MXA0C3SydAl1c3Q0NvE30w1EVGAQHmAIVBPga-xgEGbgbmOlHEaPfAAdwNCCsPwqvEndzdAVYnAhWgMcNXvpR6Tn5SZDwyCgpKbBSNVA1KElMSSwvzVEFujE5P7cgMa8yuDI3KR-oyNLUyEy_IDc0wiAzIDfcUVERAAu8VDY!/",
+          "evidence_type": "direct",
+          "source_locator": "Saudi Exchange company profile",
+          "supports": "الكيان المدرج والرمز والعنوان."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Jahez Annual Report 2025",
+          "publisher": "Jahez Group",
+          "source_type": "official_annual_report",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Annual Report → Where We Operate",
+          "supports": "السعودية والبحرين والكويت وقطر.",
+          "published_on": "2026-03"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Snoonu Acquisition Case Study",
+          "publisher": "Jahez Group",
+          "source_type": "official_acquisition_case_study",
+          "url": "https://jahezgroup.com/jahez-ar/2025/snoonu-case-study/",
+          "evidence_type": "direct",
+          "source_locator": "Case study",
+          "supports": "Snoonu كمنصة دولية.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Plans to Launch Snoonu in Kuwait and Bahrain",
+          "publisher": "Saudi Exchange / Jahez",
+          "source_type": "official_forward_looking_announcement",
+          "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details?anCat=1&anId=93100&locale=en",
+          "evidence_type": "direct",
+          "source_locator": "Exchange announcement",
+          "supports": "خطط الكويت والبحرين.",
+          "published_on": "2026-02-12"
+        }
+      ],
+      "limitations": "خطط الإطلاق أو نقل التشغيل لا تعني اكتمال كل انتقال تقني في تاريخ الإعلان."
+    },
+    "$.company.business_model": {
+      "field_value": "منظومة متعددة الأطراف تربط العملاء بالمطاعم والمتاجر وشركاء التوصيل، وتحقق الدخل من عمولات التجار ورسوم التوصيل والإعلانات والاشتراكات والمبيعات والخدمات الإضافية. تشمل المجموعة Jahez وBlu وSnoonu والمنصات الدولية، وLogi للخدمات اللوجستية، وCo للمطابخ السحابية والتنفيذ، وMarn لأنظمة نقاط البيع والعمليات، وSol لتوريد قطاع HoReCa، وRed Color للاستثمارات. لا تنشر المجموعة مزيج الإيراد التفصيلي لكل قناة أو علامة.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "multi_sided_on_demand_delivery_ads_subscription_logistics_and_merchant_technology_ecosystem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت التقارير العمولة والتوصيل والإعلانات والقطاعات التابعة والاشتراكات.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-03",
+        "SRC-05",
+        "SRC-07",
+        "SRC-18",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Jahez Annual Report 2025",
+          "publisher": "Jahez Group",
+          "source_type": "official_annual_report",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Annual Report → Business Model",
+          "supports": "نموذج أصحاب المصلحة والقطاعات.",
+          "published_on": "2026-03"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Jahez CFO Review 2025",
+          "publisher": "Jahez Group",
+          "source_type": "official_management_review",
+          "url": "https://jahezgroup.com/jahez-ar/2025/leadership/cfo/",
+          "evidence_type": "direct",
+          "source_locator": "CFO Review",
+          "supports": "العمولات والإعلانات والمبيعات والخدمات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Jahez Our Brands",
+          "publisher": "Jahez Group",
+          "source_type": "official_group_brand_directory",
+          "url": "https://jahezgroup.com/our-brands/",
+          "evidence_type": "direct",
+          "source_locator": "Our Brands",
+          "supports": "العلامات ووظائفها."
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Jahez 2025 Operating Review",
+          "publisher": "Jahez Group",
+          "source_type": "official_operating_review",
+          "url": "https://jahezgroup.com/jahez-ar/2025/operating-review/",
+          "evidence_type": "direct",
+          "source_locator": "Operating Review",
+          "supports": "القطاعات التشغيلية.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Marn 2025 Product and Operating Review",
+          "publisher": "Jahez Group",
+          "source_type": "official_subsidiary_review",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Marn review",
+          "supports": "إضافات اشتراك Marn.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا تنشر المجموعة نسب العمولة أو الإيراد حسب العلامة أو Prime."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "نحو 241.7 مليون ريال سعودي كمتوسط شهري حسابي لأحدث ربع منشور. بلغ صافي إيراد المجموعة 725.1 مليون ريال في الربع الأول من 2026، بينما بلغ Gross Revenue التشغيلي 779 مليون ريال. المتوسط ليس MRR ولا يمثل إيراد كل شهر على حدة.",
+      "verification_status": "verified_latest_quarter_monthly_average",
+      "confidence": "high",
+      "claim_type": "q1_2026_net_revenue_monthly_average_with_gross_revenue_distinction",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "بلغ صافي إيراد Q1 2026 نحو 725.1 مليون ريال؛ قُسم على ثلاثة، مع الفصل عن Gross Revenue.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Jahez Q1 2026 Earnings Presentation",
+          "publisher": "Jahez Group",
+          "source_type": "official_quarterly_results_presentation",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/05/Jahez-Q1-2026-Earnings-Call-V8.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Q1 presentation → Group KPIs and segment table",
+          "supports": "Net Revenue 725.1m and Gross Revenue 779m.",
+          "published_on": "2026-05"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Jahez Q1 2026 Interim Financial Statements",
+          "publisher": "Jahez Group / KPMG",
+          "source_type": "official_reviewed_interim_financial_statements",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/05/Jahez-Q1-2026-ENG-FULL-FS-with-review-report.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Statement of profit or loss",
+          "supports": "القوائم المراجعة للربع.",
+          "published_on": "2026-05-11"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Jahez Q1 2026 Financial Information Center",
+          "publisher": "Jahez Group",
+          "source_type": "official_investor_relations_index",
+          "url": "https://jahezgroup.com/financial-information/",
+          "evidence_type": "direct",
+          "source_locator": "Financial information index",
+          "supports": "Q1 أحدث نتائج منشورة."
+        }
+      ],
+      "limitations": "الربع يتأثر برمضان والمنافسة وتجميع Snoonu، ولا يثبت توزيع الإيراد بالتساوي على الأشهر.",
+      "calculation": {
+        "q1_2026_net_revenue_sar": 725100000,
+        "quarter_months": 3,
+        "formula": "725,100,000 ÷ 3",
+        "monthly_average_sar": 241700000,
+        "q1_2026_gross_revenue_sar": 779000000,
+        "calculation_status": "quarterly_average_not_mrr"
+      }
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "نحو 10.57 ملايين طلب شهريًا كمتوسط حسابي للربع الأول من 2026، استنادًا إلى 31.7 مليون طلب خلال الربع. بلغ عدد المستخدمين النشطين 4.6 ملايين في 2025 وفق تعريف المجموعة: مستخدم لديه طلب خلال آخر 180 يومًا. لا يمثل هذا التعريف MAU لمدة 30 يومًا.",
+      "verification_status": "verified_orders_average_not_user_traffic",
+      "confidence": "high",
+      "claim_type": "q1_order_average_and_180_day_active_users",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تقدم Q1 2026 الطلبات، ويقدم تقرير 2025 المستخدمين النشطين وتعريف 180 يومًا.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Jahez Q1 2026 Earnings Presentation",
+          "publisher": "Jahez Group",
+          "source_type": "official_quarterly_results_presentation",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/05/Jahez-Q1-2026-Earnings-Call-V8.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Q1 presentation → KPIs and Definitions",
+          "supports": "31.7m orders and active customer definition.",
+          "published_on": "2026-05"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Jahez Annual Report 2025",
+          "publisher": "Jahez Group",
+          "source_type": "official_annual_report",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Annual Report → At a Glance",
+          "supports": "4.6m active users and 111.6m annual orders.",
+          "published_on": "2026-03"
+        }
+      ],
+      "limitations": "الطلبات ليست Traffic، والمستخدم النشط لمدة 180 يومًا ليس MAU.",
+      "calculation": {
+        "q1_2026_orders": 31700000,
+        "quarter_months": 3,
+        "formula": "31,700,000 ÷ 3",
+        "monthly_order_average": 10566666.67,
+        "rounded_monthly_order_average": "10.57 million",
+        "fy2025_active_users": 4600000,
+        "active_user_window_days": 180
+      }
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "تواجه أسواق التوصيل تحدي تنسيق الطلب بين العميل والمطعم وشريك التوصيل في وقت واحد، مع تفاوت أوقات التحضير والمسافات والازدحام وتوافر السائقين. كما يحتاج المطعم إلى إدارة القوائم والفروع والعروض والعمليات والمخزون والمدفوعات عبر قنوات متعددة، بينما يريد العميل سعرًا واضحًا وتتبعًا وخدمة موثوقة.",
+        "impact": "أي خلل صغير في المطابقة أو التحضير أو التوصيل يظهر كتأخير أو إلغاء أو تعويض، ويضغط على هامش الطلب وثقة الأطراف. وعندما تشتد المنافسة، قد تزيد المنصة الإنفاق على الخصومات واكتساب العملاء، فتزداد الطلبات دون تحسن الربحية أو الاحتفاظ."
+      },
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "three_sided_order_preparation_dispatch_and_merchant_operations_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم التقارير تطوير التوجيه وإدارة السائقين والتاجر وتكلفة التعويض والمنافسة.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-05",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Jahez Q1 2026 Earnings Presentation",
+          "publisher": "Jahez Group",
+          "source_type": "official_quarterly_results_presentation",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/05/Jahez-Q1-2026-Earnings-Call-V8.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Q1 business update",
+          "supports": "Dispatch, pricing, stacking and merchant tools.",
+          "published_on": "2026-05"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Jahez Annual Report 2025",
+          "publisher": "Jahez Group",
+          "source_type": "official_annual_report",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Annual Report",
+          "supports": "تجربة العملاء والتجار وشركاء التوصيل.",
+          "published_on": "2026-03"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Jahez CFO Review 2025",
+          "publisher": "Jahez Group",
+          "source_type": "official_management_review",
+          "url": "https://jahezgroup.com/jahez-ar/2025/leadership/cfo/",
+          "evidence_type": "direct",
+          "source_locator": "CFO review",
+          "supports": "المنافسة والخصومات وربحية الطلب.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Marn 2025 Product and Operating Review",
+          "publisher": "Jahez Group",
+          "source_type": "official_subsidiary_review",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Marn review",
+          "supports": "تجزؤ POS والمحاسبة والعمليات.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لم يُعثر على دليل يثبت وجود احتكار سابق أو أن التأخير كان المشكلة المهيمنة في السوق كله."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "بنت جاهز منصة طلب ودفع وتتبع تربط العملاء بالتجار وشركاء التوصيل، ثم أضافت اشتراكات Prime والعروض والإعلانات وواجهات إدارة التجار والتحليلات. توسعت المجموعة إلى البقالة والتجزئة والرياضة والسفر عبر التطبيق الموحد وBlu، وإلى اللوجستيات عبر Logi، والمطابخ السحابية والتنفيذ عبر Co، ونقاط البيع والمحاسبة وERP عبر Marn، وتوريد HoReCa والائتمان عبر Sol. في 2025 استحوذت على حصة مسيطرة في Snoonu لدخول قطر وبناء منصة دولية متعددة الخدمات."
+      },
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "ordering_logistics_ads_subscription_merchant_ops_multivertical_and_international_platform",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توثق المصادر منصة العميل والتاجر واللوجستيات والقطاعات التابعة والاستحواذ.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-07",
+        "SRC-13",
+        "SRC-19",
+        "SRC-22"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Jahez Q1 2026 Earnings Presentation",
+          "publisher": "Jahez Group",
+          "source_type": "official_quarterly_results_presentation",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/05/Jahez-Q1-2026-Earnings-Call-V8.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Q1 presentation",
+          "supports": "واجهة العميل والتاجر وSaned.",
+          "published_on": "2026-05"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Jahez Annual Report 2025",
+          "publisher": "Jahez Group",
+          "source_type": "official_annual_report",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Annual report",
+          "supports": "Jahez, Blu, Logi, Co, Marn, Sol.",
+          "published_on": "2026-03"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Jahez Our Brands",
+          "publisher": "Jahez Group",
+          "source_type": "official_group_brand_directory",
+          "url": "https://jahezgroup.com/our-brands/",
+          "evidence_type": "direct",
+          "source_locator": "Our Brands",
+          "supports": "Brand capabilities."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Jahez Acquires 76.56% of Snoonu",
+          "publisher": "Saudi Exchange",
+          "source_type": "official_material_transaction_announcement",
+          "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=63&anId=88683&cs=6017&locale=en",
+          "evidence_type": "direct",
+          "source_locator": "Exchange announcement",
+          "supports": "Snoonu acquisition.",
+          "published_on": "2025-07-09"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Marn 2025 Product and Operating Review",
+          "publisher": "Jahez Group",
+          "source_type": "official_subsidiary_review",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Annual report",
+          "supports": "Marn products.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Jahez and Noon Grocery Partnership",
+          "publisher": "Jahez Group",
+          "source_type": "official_management_disclosure",
+          "url": "https://jahezgroup.com/jahez-ar/2025/leadership/cfo/",
+          "evidence_type": "direct",
+          "source_locator": "CFO review",
+          "supports": "Noon grocery partnership.",
+          "published_on": "2026"
+        }
+      ]
+    },
+    "$.market_data.target_audience": {
+      "field_value": "المستهلكون الذين يطلبون الطعام والبقالة والتجزئة والخدمات اليومية، والمطاعم والمقاهي والمتاجر والعلامات التجارية، وشركاء التوصيل وشركات التجارة الإلكترونية، وقطاع HoReCa، والتجار الذين يحتاجون نقاط بيع ومحاسبة وERP وإعلانات وولاء، إضافة إلى مستخدمي Snoonu وBlu والخدمات الإقليمية.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "consumers_merchants_delivery_partners_horeca_enterprise_and_regional_platform_users",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تعرض بنية المجموعة جميع أطراف المنصة والقطاعات المستهدفة.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-03",
+        "SRC-07",
+        "SRC-18",
+        "SRC-19",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Jahez Annual Report 2025",
+          "publisher": "Jahez Group",
+          "source_type": "official_annual_report",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Annual Report",
+          "supports": "أصحاب المصلحة والأسواق.",
+          "published_on": "2026-03"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Jahez Our Brands",
+          "publisher": "Jahez Group",
+          "source_type": "official_group_brand_directory",
+          "url": "https://jahezgroup.com/our-brands/",
+          "evidence_type": "direct",
+          "source_locator": "Our Brands",
+          "supports": "المستهلكون والتجار والرياضة واللوجستيات."
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Jahez 2025 Operating Review",
+          "publisher": "Jahez Group",
+          "source_type": "official_operating_review",
+          "url": "https://jahezgroup.com/jahez-ar/2025/operating-review/",
+          "evidence_type": "direct",
+          "source_locator": "Operating Review",
+          "supports": "HoReCa وB2B والتجار.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Marn 2025 Product and Operating Review",
+          "publisher": "Jahez Group",
+          "source_type": "official_subsidiary_review",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Marn",
+          "supports": "عملاء POS وERP.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Snoonu Acquisition Case Study",
+          "publisher": "Jahez Group",
+          "source_type": "official_acquisition_case_study",
+          "url": "https://jahezgroup.com/jahez-ar/2025/snoonu-case-study/",
+          "evidence_type": "direct",
+          "source_locator": "Case study",
+          "supports": "Snoonu multi-vertical users.",
+          "published_on": "2026"
+        }
+      ]
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر جاهز رقم TAM ماليًا واحدًا يغطي جميع أنشطتها. في تقرير 2025 قالت المجموعة إنها تعمل في السعودية والبحرين والكويت وقطر ضمن نطاق سكاني قابل للاستهداف يتجاوز 45 مليون نسمة، مع 4.6 ملايين مستخدم نشط. بلغ GMV المجموعة 7.25 مليارات ريال في 2025 و2.3 مليار ريال في Q1 2026؛ وهذه مقاييس نشاط المنصة وليست حجم السوق أو الإيراد.",
+      "verification_status": "verified_group_metric_with_acquisition_effect",
+      "confidence": "medium_high",
+      "claim_type": "addressable_population_and_platform_scale_without_single_tam",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد TAM واحد؛ تستخدم الخريطة السكان القابلين للاستهداف وGMV والمستخدمين كمؤشرات منفصلة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-03",
+        "SRC-01",
+        "SRC-26"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Jahez Annual Report 2025",
+          "publisher": "Jahez Group",
+          "source_type": "official_annual_report",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Annual Report → Investment Case",
+          "supports": "45m+ addressable population and 4.6m active users.",
+          "published_on": "2026-03"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Jahez Q1 2026 Earnings Presentation",
+          "publisher": "Jahez Group",
+          "source_type": "official_quarterly_results_presentation",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/05/Jahez-Q1-2026-Earnings-Call-V8.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Q1 KPIs",
+          "supports": "Q1 2026 GMV.",
+          "published_on": "2026-05"
+        },
+        {
+          "source_id": "SRC-26",
+          "title": "Jahez 2024 Investment Case",
+          "publisher": "Jahez Group",
+          "source_type": "official_historical_market_context",
+          "url": "https://jahezgroup.com/jahez-ar/2024/investment-case.html",
+          "evidence_type": "direct",
+          "source_locator": "Investment case",
+          "supports": "Historical Saudi and GCC market context.",
+          "published_on": "2025"
+        }
+      ],
+      "limitations": "السكان وGMV والمستخدمون لا يمثلون قيمة السوق أو حصة موحدة لكل القطاعات."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "ارتفع صافي الإيراد من 1.602 مليار ريال في 2022 إلى 1.785 مليارًا في 2023 و2.219 مليارًا في 2024 و2.324 مليارًا في 2025. في Q1 2026 ارتفع صافي الإيراد 37.9% سنويًا إلى 725.1 مليون ريال، وارتفع GMV 39% إلى 2.3 مليار ريال والطلبات 21% إلى 31.7 مليونًا، مدفوعًا بدرجة كبيرة بأول ربع كامل لتجميع Snoonu. داخل السعودية انخفض الإيراد 12% سنويًا وتراجعت الطلبات، ولذلك يجب فصل نمو المجموعة الناتج عن الاستحواذ عن النمو العضوي المحلي.",
+      "verification_status": "verified_group_metric_with_acquisition_effect",
+      "confidence": "high",
+      "claim_type": "historical_revenue_growth_and_q1_acquisition_driven_group_growth",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم القوائم سلسلة الإيراد، وتبين Q1 أثر Snoonu مقابل تراجع القطاع السعودي.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-03",
+        "SRC-04",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Jahez Annual Report 2025",
+          "publisher": "Jahez Group",
+          "source_type": "official_annual_report",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Annual Report → At a Glance",
+          "supports": "2022–2025 revenue series.",
+          "published_on": "2026-03"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Jahez FY 2025 Financial Statements",
+          "publisher": "Jahez Group / KPMG",
+          "source_type": "official_audited_financial_statements",
+          "url": "https://jahezgroup.com/jahez-ar/2025/financial-statements/",
+          "evidence_type": "direct",
+          "source_locator": "Audited statements",
+          "supports": "2025 revenue.",
+          "published_on": "2026-03-30"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Jahez Q1 2026 Earnings Presentation",
+          "publisher": "Jahez Group",
+          "source_type": "official_quarterly_results_presentation",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/05/Jahez-Q1-2026-Earnings-Call-V8.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Q1 presentation",
+          "supports": "Q1 2026 group and segment growth.",
+          "published_on": "2026-05"
+        }
+      ],
+      "limitations": "النمو الموحد Q1 لا يمثل نموًا عضويًا بسبب تجميع Snoonu، والمقارنة LFL مختلفة.",
+      "calculation": {
+        "2022_net_revenue_sar": 1602400000,
+        "2023_net_revenue_sar": 1784800000,
+        "2024_net_revenue_sar": 2218662735,
+        "2025_net_revenue_sar": 2323639572,
+        "2025_yoy_revenue_growth_percent": 4.7,
+        "q1_2026_net_revenue_yoy_growth_percent": 37.9,
+        "q1_2026_gmv_yoy_growth_percent": 39,
+        "q1_2026_orders_yoy_growth_percent": 21,
+        "q1_2026_ksa_net_revenue_yoy_growth_percent": -12,
+        "q1_2026_non_ksa_net_revenue_multiple": 5.6
+      }
+    },
+    "$.financials.initial_investment": {
+      "field_value": "رأس المال الشخصي الأول ومصادر التمويل قبل الإدراج غير مفصح عنها بصورة تسمح ببناء سجل تمويل ناشئ كامل. في الطرح العام الأولي حُدد السعر عند 850 ريالًا للسهم قبل تجزئة القيمة الاسمية، بما دل على قيمة سوقية تاريخية قدرها 8.9 مليارات ريال عند الإدراج. بلغ حجم الطرح المعلن 1.8 مليار ريال شامل أسهم التخصيص الإضافية، لكنه تضمن أسهمًا جديدة وأسهمًا مباعة من مساهمين قائمين؛ لذلك لا يمثل كامل المبلغ تمويلًا دخل الشركة. أدرجت الأسهم في نمو في يناير 2022 ثم انتقلت إلى السوق الرئيسية في ديسمبر 2024.",
+      "verification_status": "verified_historical_ipo_value",
+      "confidence": "high",
+      "claim_type": "founder_capital_undisclosed_and_public_offering_financing_milestone",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يثبت بيان الطرح السعر والقيمة والحجم، وتوضح FAQ وجود مكون أولي وثانوي.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-10",
+        "SRC-11",
+        "SRC-12",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-10",
+          "title": "Jahez Final IPO Offering Price",
+          "publisher": "Jahez Group",
+          "source_type": "official_ipo_announcement",
+          "url": "https://jahezgroup.com/wp-content/uploads/2021/12/Final-Offering-Price-1.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Final offering announcement",
+          "supports": "IPO price, value and offer size.",
+          "published_on": "2021-12-19"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Jahez IPO FAQ",
+          "publisher": "Jahez Group",
+          "source_type": "official_ipo_documentation",
+          "url": "https://jahezgroup.com/faq/",
+          "evidence_type": "direct",
+          "source_locator": "IPO FAQ",
+          "supports": "Primary and secondary structure."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Transfer to Saudi Main Market",
+          "publisher": "Jahez Group",
+          "source_type": "official_listing_update",
+          "url": "https://jahezgroup.com/jahez-ar/2024/year-in-review.html",
+          "evidence_type": "direct",
+          "source_locator": "Year in review",
+          "supports": "Transfer to main market.",
+          "published_on": "2024-12"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Saudi Exchange Company Profile — Jahez",
+          "publisher": "Saudi Exchange",
+          "source_type": "official_exchange_company_profile",
+          "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/hidden/company-profile-main/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziTR3NDIw8LAz83d2MXA0C3SydAl1c3Q0NvE30w1EVGAQHmAIVBPga-xgEGbgbmOlHEaPfAAdwNCCsPwqvEndzdAVYnAhWgMcNXvpR6Tn5SZDwyCgpKbBSNVA1KElMSSwvzVEFujE5P7cgMa8yuDI3KR-oyNLUyEy_IDc0wiAzIDfcUVERAAu8VDY!/",
+          "evidence_type": "direct",
+          "source_locator": "Exchange profile",
+          "supports": "Listing date and capital."
+        }
+      ],
+      "limitations": "حجم الطرح ليس صافي تمويل الشركة، والقيمة التاريخية لا تمثل قيمة اليوم.",
+      "calculation": {
+        "founder_initial_capital": "not_publicly_disclosed",
+        "historical_offer_price_sar_pre_split": 850,
+        "historical_implied_market_cap_sar": 8900000000,
+        "historical_implied_market_cap_usd": 2400000000,
+        "announced_total_offer_size_sar_including_overallotment": 1800000000,
+        "offer_contains_primary_and_secondary_shares": true,
+        "listing_date": "2022-01-05",
+        "main_market_transfer": "2024-12"
+      }
+    },
+    "$.financials.valuation": {
+      "field_value": "جاهز شركة عامة، ولذلك قيمتها السوقية متغيرة يوميًا. أظهر أحدث سجل مفهرس من تداول السعودية قبل تاريخ التحقق سعرًا قدره 11.66 ريالًا وقيمة سوقية تقارب 2.524 مليار ريال بعد تجزئة السهم، مقابل قيمة تاريخية قدرها 8.9 مليارات ريال عند الإدراج. لا يصح تثبيت 2 مليار دولار كتقييم حالي دائم.",
+      "verification_status": "verified_public_market_dynamic_value",
+      "confidence": "high",
+      "claim_type": "dynamic_saudi_exchange_market_cap_with_historical_ipo_comparison",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تعرض تداول قيمة سوقية ديناميكية، بينما يوثق بيان IPO القيمة التاريخية.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-09",
+        "SRC-08",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "Saudi Exchange Market Snapshot — Jahez",
+          "publisher": "Saudi Exchange",
+          "source_type": "official_exchange_market_snapshot",
+          "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/hidden/company-profile-main/!ut/p/z1/jZLbcpswEIafhsuiNdRAe4ftBjvBJ6iTwA0jy1tbEwGqJIe0T19BpjOtJ6mr0YwO-2v1_VqRkjySsqHP_EgNbxsq7Loog2ocB-DNI1hHs9kUtjd30fwW1h4EIXn4WwD5ZmwFm6WfQgYJBKT8n_PwTovh2vl7UpJSG5unvJAukwC2q3i79sIxQO5dCt5AHQT_YrlG81aGGCaZN_EBkgiuCNYeub2A3O4ie0V-MxlH4EXTsK_IyRj52QEHuq5z-b52WVs78FKLRjsgVXtw4EANNT8kOsDaxmBjHFCo27Ni-IG1QiDrC6xJyU5UmcpQzSt2VsoqK22DrSKPX6fJghS2PuF7wHHqkbz3RId0pOikdmWrjECjXcGbpz7Yj1RKfiCFBR2AO-nSQ80b94TCTqV0OxQ2iG5H9yTHZvgXYbXYJB9Hi8i7S-J8CkEehNnkUwxgX_Lhtx-SHdEsKW9WbX1mS6qe0MzQUC402TLKTpjiM4oNPeIrLNcdNeyUcm1y7F8CLdlqPXykwfqGKlqjQWXd282KFKMwBN8PXu33e4buBd5z7P7QjvqAwu9n1CZtGRVICutE1rtdE2RfsvnP9NtqNX7267iO_L7HvwCfxsRR/dz/d5/L0lHSklKQ1NDbENsQ1FvS1VRa2dvZ3BSQ2lDbEVpUSEhL1lGWUVBQUlNRUFBQUVFTUNNS0dJTUFPRU9CRUJFSkZORk5KRk1ERExMSExIRExQUEF2QWpQQ0tBLzRKQ2lqSzFiR0xqaUVFcE1oU1RVVTVsR210Mk10ck5Selc3R1cycW9wVlVWSUEhIS9aN181QTYwMkg4ME8wVkM0MDYwTzRHTUw4MUc1NS9aNl81QTYwMkg4ME9HRjJFMFFGOUJRREVHMTBLNC92aWV3L25vcm1hbC9sYW5nL2VuL2dsb2JhbC9odHRwOiUwJTB0YWRhd3VsJTAvY29tcGFueVN5bWJvbC82MDE3/?locale=en",
+          "evidence_type": "direct",
+          "source_locator": "Saudi Exchange indexed snapshot",
+          "supports": "Price 11.66 and market cap SAR2.524bn."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Saudi Exchange Company Profile — Jahez",
+          "publisher": "Saudi Exchange",
+          "source_type": "official_exchange_company_profile",
+          "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/hidden/company-profile-main/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziTR3NDIw8LAz83d2MXA0C3SydAl1c3Q0NvE30w1EVGAQHmAIVBPga-xgEGbgbmOlHEaPfAAdwNCCsPwqvEndzdAVYnAhWgMcNXvpR6Tn5SZDwyCgpKbBSNVA1KElMSSwvzVEFujE5P7cgMa8yuDI3KR-oyNLUyEy_IDc0wiAzIDfcUVERAAu8VDY!/",
+          "evidence_type": "direct",
+          "source_locator": "Company profile",
+          "supports": "209,836,060 shares after split."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Jahez Final IPO Offering Price",
+          "publisher": "Jahez Group",
+          "source_type": "official_ipo_announcement",
+          "url": "https://jahezgroup.com/wp-content/uploads/2021/12/Final-Offering-Price-1.pdf",
+          "evidence_type": "direct",
+          "source_locator": "IPO announcement",
+          "supports": "SAR8.9bn at IPO.",
+          "published_on": "2021-12-19"
+        }
+      ],
+      "limitations": "سعر السهم والقيمة السوقية يتغيران يوميًا، وقد تكون لقطة الفهرسة متأخرة عن جلسة التحقق.",
+      "calculation": {
+        "latest_indexed_price_sar": 11.66,
+        "latest_indexed_market_cap_sar": 2524000000,
+        "issued_shares_after_split": 209836060,
+        "historical_ipo_market_cap_sar": 8900000000,
+        "valuation_type": "dynamic_public_market_cap",
+        "snapshot_retrieved_on": "2026-08-03"
+      }
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "عمولات المطاعم والمتاجر على الطلبات المؤهلة",
+        "رسوم التوصيل ورسوم الخدمة التي يدفعها العميل بحسب الطلب والسوق",
+        "اشتراكات Jahez Prime واشتراكات التوصيل في الأسواق المؤهلة",
+        "الإعلانات داخل التطبيقات والمواضع الترويجية والحملات الممولة من التجار",
+        "خدمات Jahez Ads والاستهداف والتقسيم الجغرافي أو حسب العميل",
+        "مبيعات البقالة والتجزئة والسلع والخدمات عبر المنصات الرأسية",
+        "عمولات شراكات البقالة مثل التكامل مع noon Minutes",
+        "إيرادات منصة Blu من المنتجات الرياضية والتذاكر والعضويات والمزادات والهدايا والسفر والخدمات الرقمية",
+        "إيرادات Snoonu من الطعام والبقالة والتجزئة والخدمات واللوجستيات في قطر والأسواق الدولية",
+        "إيرادات Logi من التوصيل للمجموعة والعملاء الخارجيين والخدمات اللوجستية",
+        "إيرادات Co من المطابخ السحابية والمخازن المظلمة والتنفيذ وحلول B2B",
+        "اشتراكات Marn في نقاط البيع والمحاسبة وERP وCRM والولاء والتحليلات",
+        "خدمات Marn Connect Plus والقوائم الرقمية والدفع على الطاولة والحجوزات",
+        "إيرادات Sol من توريد الأغذية والمشروبات لقطاع HoReCa والحزم والمخزون",
+        "حلول Jahez Credit أو BNPL المتكاملة في بعض وحدات المجموعة، مع عدم إفصاح مستقل عن مساهمتها",
+        "عوائد واستثمارات Red Color في شركات وتقنيات مرتبطة باللوجستيات والتجارة وFinTech وAdTech",
+        "رسوم أو عوائد خدمات التنفيذ والتخزين والتوصيل بين الشركات",
+        "Gross Revenue وGMV وGOV ليست مقاييس قابلة للاستبدال بصافي الإيراد المحاسبي"
+      ],
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "commission_delivery_subscription_ads_goods_services_logistics_merchant_software_and_investment_channels",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت التقارير مساهمة العمولة والإعلانات والقطاعات والخدمات، مع غياب تفصيل كامل.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-05",
+        "SRC-03",
+        "SRC-07",
+        "SRC-19",
+        "SRC-22",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Jahez CFO Review 2025",
+          "publisher": "Jahez Group",
+          "source_type": "official_management_review",
+          "url": "https://jahezgroup.com/jahez-ar/2025/leadership/cfo/",
+          "evidence_type": "direct",
+          "source_locator": "CFO review",
+          "supports": "Commission, ads, goods and services.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Jahez Annual Report 2025",
+          "publisher": "Jahez Group",
+          "source_type": "official_annual_report",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Annual report",
+          "supports": "Business model and subsidiaries.",
+          "published_on": "2026-03"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Jahez Our Brands",
+          "publisher": "Jahez Group",
+          "source_type": "official_group_brand_directory",
+          "url": "https://jahezgroup.com/our-brands/",
+          "evidence_type": "direct",
+          "source_locator": "Our Brands",
+          "supports": "Brand products."
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Marn 2025 Product and Operating Review",
+          "publisher": "Jahez Group",
+          "source_type": "official_subsidiary_review",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Marn review",
+          "supports": "Marn subscriptions and products.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Jahez and Noon Grocery Partnership",
+          "publisher": "Jahez Group",
+          "source_type": "official_management_disclosure",
+          "url": "https://jahezgroup.com/jahez-ar/2025/leadership/cfo/",
+          "evidence_type": "direct",
+          "source_locator": "CFO review",
+          "supports": "Noon commission model.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Jahez 2025 Operating Review",
+          "publisher": "Jahez Group",
+          "source_type": "official_operating_review",
+          "url": "https://jahezgroup.com/jahez-ar/2025/operating-review/",
+          "evidence_type": "direct",
+          "source_locator": "Operating review",
+          "supports": "Logi, Co, Sol, Red Color.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "بعض البنود قنوات مجموعة أو منتجات قيد التوسع، ولا تنشر الشركة الإيراد حسب القناة."
+    },
+    "$.tools": {
+      "field_value": [
+        "تطبيق Jahez للطلب والدفع وتتبع الطعام والبقالة والتجزئة",
+        "Jahez Prime لاشتراكات التوصيل والمزايا في الأسواق المؤهلة",
+        "واجهات عروض وخصومات واختيار فروع ومهلة Grace لتعديل الطلب",
+        "قوائم واختيارات مخصصة وواجهات اكتشاف محسنة",
+        "تطبيق Owner لإدارة التجار والفروع والأوامر والإيرادات",
+        "إدارة متعددة الفروع ورؤية لحظية للأداء",
+        "الانضمام الذاتي إلى حملات التوصيل والعروض والإعلانات",
+        "Jahez Ads والمواضع المدفوعة والاستهداف والتقسيم",
+        "Saned أو نظام توزيع الطلبات وإدارة الحوافز والمناطق",
+        "تسعير ديناميكي لشركاء التوصيل مرتبط بمؤشرات الأداء",
+        "إدارة Bonus Zones لموازنة العرض والطلب",
+        "تحسين Order Stacking لتقليل تكلفة التوصيل",
+        "اكتشاف التطبيقات غير المصرح بها لتعزيز الامتثال",
+        "Logi لخدمات الميل الأخير داخل المجموعة وللعملاء الخارجيين",
+        "أسطول يتجاوز 4,000 سائق وفق تقرير 2025",
+        "تكامل Tawakkalna لجدولة شركاء التوصيل",
+        "مركبات Ebayya الكهربائية المدعومة بالطاقة الشمسية",
+        "روبوتات توصيل ذاتية في ROSHN Sedra وتجارب الحج",
+        "Redbox كنقاط تجميع أو تنفيذ في المواقع عالية الكثافة",
+        "تكامل noon Minutes للبقالة والتنفيذ عبر المتاجر المظلمة",
+        "استثمار Doos للوصول الاستراتيجي إلى عمليات Q-commerce",
+        "Blu للمنتجات الرياضية والتذاكر والعضويات",
+        "Blu Auctions للمزادات على المنتجات الحصرية",
+        "Send Gift لمشاركة المنتجات كهدايا",
+        "Red Bull Mobile eSIM داخل Blu",
+        "تكاملات flynas وAlmosafer للحجوزات",
+        "Snoonu Super App للطعام والبقالة والتجزئة والخدمات في قطر",
+        "Snoonu Plus وSmart Campaigns والتوصيات والإعلانات",
+        "Snoonu Cloud والأتمتة اللوجستية والدعم",
+        "Marn POS مع العمل دون اتصال وخيارات دفع متعددة",
+        "Marn Connect Plus للقوائم وطلب الطاولة والدفع والحجوزات",
+        "Marn Books للمحاسبة المتكاملة",
+        "Marn PRO كحل ERP قابل للتخصيص",
+        "CRM والولاء ولوحات التحليل كإضافات اشتراك لدى Marn",
+        "Co للمطابخ السحابية والمخازن المظلمة والتنفيذ",
+        "Sol لتوريد الأغذية والمشروبات وإدارة المخزون لقطاع HoReCa",
+        "Jahez Credit أو حلول الدفع والائتمان المدمجة لبعض التجار",
+        "Red Color للاستثمار المؤسسي في LogTech وE-commerce وFinTech وAdTech",
+        "ISO/IEC 27001 لنظام إدارة أمن المعلومات ضمن نطاق الشركة المعلن",
+        "منصة بيانات وتحليلات لدعم التسعير والتوجيه والتنبؤ",
+        "بحث متقدم وتخصيص وتفاعلات صوتية كمبادرات 2026",
+        "بنية معيارية لتوحيد الخدمات والتوسع الدولي عبر Snoonu",
+        "تطبيق علاقات المستثمرين وتقارير ونتائج مالية للمساهمين"
+      ],
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "official_consumer_merchant_dispatch_logistics_multivertical_ai_and_enterprise_capabilities",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استُبدلت الادعاءات العامة بقائمة منتجات وقدرات موثقة في التقارير الرسمية.",
+      "source_count": 9,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-06",
+        "SRC-07",
+        "SRC-18",
+        "SRC-19",
+        "SRC-20",
+        "SRC-23",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Jahez Q1 2026 Earnings Presentation",
+          "publisher": "Jahez Group",
+          "source_type": "official_quarterly_results_presentation",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/05/Jahez-Q1-2026-Earnings-Call-V8.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Q1 presentation",
+          "supports": "UI, Owner App, dispatch, pricing and stacking.",
+          "published_on": "2026-05"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Jahez Annual Report 2025",
+          "publisher": "Jahez Group",
+          "source_type": "official_annual_report",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Annual report",
+          "supports": "Group products and technology.",
+          "published_on": "2026-03"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Jahez CEO Message 2025",
+          "publisher": "Jahez Group",
+          "source_type": "official_management_statement",
+          "url": "https://jahezgroup.com/jahez-ar/2025/leadership/ceo/",
+          "evidence_type": "direct",
+          "source_locator": "CEO message",
+          "supports": "AI and unified platform.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Jahez Our Brands",
+          "publisher": "Jahez Group",
+          "source_type": "official_group_brand_directory",
+          "url": "https://jahezgroup.com/our-brands/",
+          "evidence_type": "direct",
+          "source_locator": "Our Brands",
+          "supports": "Brands."
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Jahez 2025 Operating Review",
+          "publisher": "Jahez Group",
+          "source_type": "official_operating_review",
+          "url": "https://jahezgroup.com/jahez-ar/2025/operating-review/",
+          "evidence_type": "direct",
+          "source_locator": "Operating review",
+          "supports": "Operating subsidiaries.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Marn 2025 Product and Operating Review",
+          "publisher": "Jahez Group",
+          "source_type": "official_subsidiary_review",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Marn review",
+          "supports": "Marn tools.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Jahez 2025 Technology and Innovation Review",
+          "publisher": "Jahez Group",
+          "source_type": "official_technology_review",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Technology review",
+          "supports": "AI, automation and data.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-23",
+          "title": "Jahez Autonomous Delivery and Robotics",
+          "publisher": "Jahez Group",
+          "source_type": "official_innovation_disclosure",
+          "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Innovation disclosure",
+          "supports": "Robots and EVs.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Snoonu Acquisition Case Study",
+          "publisher": "Jahez Group",
+          "source_type": "official_acquisition_case_study",
+          "url": "https://jahezgroup.com/jahez-ar/2025/snoonu-case-study/",
+          "evidence_type": "direct",
+          "source_locator": "Case study",
+          "supports": "Snoonu platform.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "القائمة لا تكشف كامل لغات البرمجة أو البنية السحابية، وبعض قدرات 2026 ما تزال قيد التنفيذ."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Jahez Q1 2026 Earnings Presentation",
+      "publisher": "Jahez Group",
+      "source_type": "official_quarterly_results_presentation",
+      "published_on": "2026-05",
+      "url": "https://jahezgroup.com/wp-content/uploads/2026/05/Jahez-Q1-2026-Earnings-Call-V8.pdf",
+      "supports": [
+        "725.1 مليون ريال صافي إيراد",
+        "779 مليون ريال Gross Revenue",
+        "31.7 مليون طلب",
+        "2.3 مليار ريال GMV",
+        "تعريف المستخدم النشط",
+        "قطاعات السعودية وخارجها واللوجستيات",
+        "خطة 2026 ودمج Snoonu"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Jahez Q1 2026 Interim Financial Statements",
+      "publisher": "Jahez Group / KPMG",
+      "source_type": "official_reviewed_interim_financial_statements",
+      "published_on": "2026-05-11",
+      "url": "https://jahezgroup.com/wp-content/uploads/2026/05/Jahez-Q1-2026-ENG-FULL-FS-with-review-report.pdf",
+      "supports": [
+        "القوائم المالية للربع الأول 2026",
+        "صافي الإيراد والربح والخسارة",
+        "الوضع المالي والتجميع"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Jahez Annual Report 2025",
+      "publisher": "Jahez Group",
+      "source_type": "official_annual_report",
+      "published_on": "2026-03",
+      "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+      "supports": [
+        "4.6 ملايين مستخدم نشط",
+        "111.6 مليون طلب",
+        "7.25 مليارات GMV و9.26 مليارات GOV",
+        "15.4% Take Rate",
+        "القطاعات والعلامات والتقنيات",
+        "نموذج العمل والأداء التشغيلي"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Jahez FY 2025 Financial Statements",
+      "publisher": "Jahez Group / KPMG",
+      "source_type": "official_audited_financial_statements",
+      "published_on": "2026-03-30",
+      "url": "https://jahezgroup.com/jahez-ar/2025/financial-statements/",
+      "supports": [
+        "إيراد 2.3236 مليار ريال",
+        "تكلفة الإيراد والربح الإجمالي",
+        "التدفق النقدي والأصول",
+        "القوائم الموحدة المدققة"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Jahez CFO Review 2025",
+      "publisher": "Jahez Group",
+      "source_type": "official_management_review",
+      "published_on": "2026",
+      "url": "https://jahezgroup.com/jahez-ar/2025/leadership/cfo/",
+      "supports": [
+        "الإيراد وGMV وGOV والطلبات",
+        "الإعلانات والعمولات",
+        "Logi وSnoonu",
+        "noon وDoos",
+        "الأداء حسب القطاع"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Jahez CEO Message 2025",
+      "publisher": "Jahez Group",
+      "source_type": "official_management_statement",
+      "published_on": "2026",
+      "url": "https://jahezgroup.com/jahez-ar/2025/leadership/ceo/",
+      "supports": [
+        "التطبيق الموحد",
+        "AI والبحث والتخصيص",
+        "4,000 سائق",
+        "تكامل المجموعة",
+        "استراتيجية Snoonu الدولية"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Jahez Our Brands",
+      "publisher": "Jahez Group",
+      "source_type": "official_group_brand_directory",
+      "url": "https://jahezgroup.com/our-brands/",
+      "supports": [
+        "Jahez وBlu وSnoonu",
+        "Logi وCo وMarn وSol",
+        "وظائف العلامات التابعة"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Saudi Exchange Company Profile — Jahez",
+      "publisher": "Saudi Exchange",
+      "source_type": "official_exchange_company_profile",
+      "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/hidden/company-profile-main/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziTR3NDIw8LAz83d2MXA0C3SydAl1c3Q0NvE30w1EVGAQHmAIVBPga-xgEGbgbmOlHEaPfAAdwNCCsPwqvEndzdAVYnAhWgMcNXvpR6Tn5SZDwyCgpKbBSNVA1KElMSSwvzVEFujE5P7cgMa8yuDI3KR-oyNLUyEy_IDc0wiAzIDfcUVERAAu8VDY!/",
+      "supports": [
+        "الرمز 6017",
+        "تاريخ الإدراج",
+        "رأس المال وتجـزئة السهم",
+        "عدد الأسهم الحالي",
+        "الكيان المدرج"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Saudi Exchange Market Snapshot — Jahez",
+      "publisher": "Saudi Exchange",
+      "source_type": "official_exchange_market_snapshot",
+      "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/hidden/company-profile-main/!ut/p/z1/jZLbcpswEIafhsuiNdRAe4ftBjvBJ6iTwA0jy1tbEwGqJIe0T19BpjOtJ6mr0YwO-2v1_VqRkjySsqHP_EgNbxsq7Loog2ocB-DNI1hHs9kUtjd30fwW1h4EIXn4WwD5ZmwFm6WfQgYJBKT8n_PwTovh2vl7UpJSG5unvJAukwC2q3i79sIxQO5dCt5AHQT_YrlG81aGGCaZN_EBkgiuCNYeub2A3O4ie0V-MxlH4EXTsK_IyRj52QEHuq5z-b52WVs78FKLRjsgVXtw4EANNT8kOsDaxmBjHFCo27Ni-IG1QiDrC6xJyU5UmcpQzSt2VsoqK22DrSKPX6fJghS2PuF7wHHqkbz3RId0pOikdmWrjECjXcGbpz7Yj1RKfiCFBR2AO-nSQ80b94TCTqV0OxQ2iG5H9yTHZvgXYbXYJB9Hi8i7S-J8CkEehNnkUwxgX_Lhtx-SHdEsKW9WbX1mS6qe0MzQUC402TLKTpjiM4oNPeIrLNcdNeyUcm1y7F8CLdlqPXykwfqGKlqjQWXd282KFKMwBN8PXu33e4buBd5z7P7QjvqAwu9n1CZtGRVICutE1rtdE2RfsvnP9NtqNX7267iO_L7HvwCfxsRR/dz/d5/L0lHSklKQ1NDbENsQ1FvS1VRa2dvZ3BSQ2lDbEVpUSEhL1lGWUVBQUlNRUFBQUVFTUNNS0dJTUFPRU9CRUJFSkZORk5KRk1ERExMSExIRExQUEF2QWpQQ0tBLzRKQ2lqSzFiR0xqaUVFcE1oU1RVVTVsR210Mk10ck5Selc3R1cycW9wVlVWSUEhIS9aN181QTYwMkg4ME8wVkM0MDYwTzRHTUw4MUc1NS9aNl81QTYwMkg4ME9HRjJFMFFGOUJRREVHMTBLNC92aWV3L25vcm1hbC9sYW5nL2VuL2dsb2JhbC9odHRwOiUwJTB0YWRhd3VsJTAvY29tcGFueVN5bWJvbC82MDE3/?locale=en",
+      "supports": [
+        "سعر 11.66 ريال في اللقطة المفهرسة",
+        "قيمة سوقية 2.524 مليار ريال",
+        "ديناميكية القيمة السوقية"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Jahez Final IPO Offering Price",
+      "publisher": "Jahez Group",
+      "source_type": "official_ipo_announcement",
+      "published_on": "2021-12-19",
+      "url": "https://jahezgroup.com/wp-content/uploads/2021/12/Final-Offering-Price-1.pdf",
+      "supports": [
+        "850 ريالًا للسهم",
+        "قيمة 8.9 مليارات ريال عند الإدراج",
+        "حجم الطرح",
+        "هيكل الطرح والمقاييس التاريخية"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Jahez IPO FAQ",
+      "publisher": "Jahez Group",
+      "source_type": "official_ipo_documentation",
+      "url": "https://jahezgroup.com/faq/",
+      "supports": [
+        "هيكل الأسهم الجديدة والثانوية",
+        "نمو كسوق الإدراج الأول",
+        "المستثمرون المؤهلون"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Transfer to Saudi Main Market",
+      "publisher": "Jahez Group",
+      "source_type": "official_listing_update",
+      "published_on": "2024-12",
+      "url": "https://jahezgroup.com/jahez-ar/2024/year-in-review.html",
+      "supports": [
+        "انتقال السهم من نمو إلى تاسي",
+        "تاريخ الانتقال في ديسمبر 2024"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Jahez Acquires 76.56% of Snoonu",
+      "publisher": "Saudi Exchange",
+      "source_type": "official_material_transaction_announcement",
+      "published_on": "2025-07-09",
+      "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=63&anId=88683&cs=6017&locale=en",
+      "supports": [
+        "حصة 76.56%",
+        "هيكل المقابل",
+        "بيانات Snoonu التاريخية",
+        "أهداف الاستحواذ"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Completion of Snoonu Acquisition First Phase",
+      "publisher": "Saudi Exchange",
+      "source_type": "official_transaction_completion_announcement",
+      "published_on": "2025-10",
+      "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=97&anId=90548&cs=6017&locale=en",
+      "supports": [
+        "اكتمال شراء 75%",
+        "بدء تجميع Snoonu",
+        "إغلاق المرحلة الأولى"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Snoonu Acquisition Case Study",
+      "publisher": "Jahez Group",
+      "source_type": "official_acquisition_case_study",
+      "published_on": "2026",
+      "url": "https://jahezgroup.com/jahez-ar/2025/snoonu-case-study/",
+      "supports": [
+        "الاستراتيجية الدولية",
+        "Snoonu كمنصة رئيسية خارج السعودية",
+        "التكامل والتوسع"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Plans to Launch Snoonu in Kuwait and Bahrain",
+      "publisher": "Saudi Exchange / Jahez",
+      "source_type": "official_forward_looking_announcement",
+      "published_on": "2026-02-12",
+      "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details?anCat=1&anId=93100&locale=en",
+      "supports": [
+        "خطة نقل التشغيل الدولي إلى Snoonu",
+        "الكويت والبحرين",
+        "الاستراتيجية الإقليمية"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "The Chefz Acquisition Did Not Complete",
+      "publisher": "Saudi Exchange",
+      "source_type": "official_failed_transaction_announcement",
+      "published_on": "2023-11",
+      "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=66&anId=76566&cs=9526&locale=en",
+      "supports": [
+        "انتهاء مدة الاتفاق",
+        "عدم استيفاء شروط إتمام The Chefz",
+        "عدم اكتمال الاستحواذ"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Jahez 2025 Operating Review",
+      "publisher": "Jahez Group",
+      "source_type": "official_operating_review",
+      "published_on": "2026",
+      "url": "https://jahezgroup.com/jahez-ar/2025/operating-review/",
+      "supports": [
+        "Logi وCo وMarn وSol وRed Color",
+        "منصات البحرين والكويت وSnoonu",
+        "الأداء التشغيلي للعلامات"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "Marn 2025 Product and Operating Review",
+      "publisher": "Jahez Group",
+      "source_type": "official_subsidiary_review",
+      "published_on": "2026",
+      "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+      "supports": [
+        "Marn Connect Plus",
+        "Marn Books وMarn PRO",
+        "CRM والولاء والتحليلات",
+        "POS والتكامل"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "Jahez 2025 Technology and Innovation Review",
+      "publisher": "Jahez Group",
+      "source_type": "official_technology_review",
+      "published_on": "2026",
+      "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+      "supports": [
+        "AI والأتمتة والبنية البيانية",
+        "البحث والتخصيص",
+        "الروبوتات والمركبات الكهربائية",
+        "الأمن السيبراني"
+      ]
+    },
+    {
+      "id": "SRC-21",
+      "title": "Jahez Q1 2026 Financial Information Center",
+      "publisher": "Jahez Group",
+      "source_type": "official_investor_relations_index",
+      "url": "https://jahezgroup.com/financial-information/",
+      "supports": [
+        "أحدث نتيجة متاحة Q1 2026",
+        "قوائم وتقارير 2025 و2026",
+        "عدم وجود Q2 2026 وقت التحقق"
+      ]
+    },
+    {
+      "id": "SRC-22",
+      "title": "Jahez and Noon Grocery Partnership",
+      "publisher": "Jahez Group",
+      "source_type": "official_management_disclosure",
+      "published_on": "2026",
+      "url": "https://jahezgroup.com/jahez-ar/2025/leadership/cfo/",
+      "supports": [
+        "شراكة قائمة على العمولة",
+        "توسع منخفض الإنفاق الرأسمالي",
+        "تنفيذ noon للبقالة"
+      ]
+    },
+    {
+      "id": "SRC-23",
+      "title": "Jahez Autonomous Delivery and Robotics",
+      "publisher": "Jahez Group",
+      "source_type": "official_innovation_disclosure",
+      "published_on": "2026",
+      "url": "https://jahezgroup.com/wp-content/uploads/2026/04/20260331-Jahez_AR25_English-PDF.pdf",
+      "supports": [
+        "روبوتات ROSHN Sedra",
+        "حلول الحج",
+        "مركبات Ebayya الكهربائية"
+      ]
+    },
+    {
+      "id": "SRC-24",
+      "title": "Jahez Group Corporate Profile",
+      "publisher": "Jahez Group",
+      "source_type": "official_company_profile",
+      "url": "https://jahezgroup.com/",
+      "supports": [
+        "الرسالة والمجموعة",
+        "العلامات والقطاعات",
+        "المقر والتواصل"
+      ]
+    },
+    {
+      "id": "SRC-25",
+      "title": "Jahez FY 2025 At a Glance",
+      "publisher": "Jahez Group",
+      "source_type": "official_kpi_summary",
+      "published_on": "2026",
+      "url": "https://jahezgroup.com/jahez-ar/2025/at-a-glance/",
+      "supports": [
+        "الإيرادات التاريخية",
+        "EBITDA والربح",
+        "المستخدمون والطلبات وGMV"
+      ]
+    },
+    {
+      "id": "SRC-26",
+      "title": "Jahez 2024 Investment Case",
+      "publisher": "Jahez Group",
+      "source_type": "official_historical_market_context",
+      "published_on": "2025",
+      "url": "https://jahezgroup.com/jahez-ar/2024/investment-case.html",
+      "supports": [
+        "تاريخ المنصة والإدراج",
+        "النطاق الإقليمي قبل Snoonu",
+        "سياق السوق السعودي"
+      ]
     }
   ]
 }

@@ -2,51 +2,1120 @@
   "id": "kitopi",
   "slug": "kitopi",
   "name": "كيتوبي (Kitopi)",
-  "headline": "العملاق الإماراتي الذي غير قواعد اللعبة في قطاع المطاعم السحابية",
-  "category": "FoodTech / المطابخ السحابية (Cloud Kitchens)",
+  "headline": "من المطابخ السحابية إلى مجموعة ضيافة مربحة: كيف أصبحت التقنية طبقة تشغيل لـ200+ منفذ",
+  "category": "الضيافة المدعومة بالتقنية وإدارة العلامات الغذائية / Tech-enabled Hospitality & Multi-brand F&B",
   "company": {
-    "location": "دبي، الإمارات العربية المتحدة",
-    "business_model": "إدارة المطاعم بالنيابة (B2B) + العلامات التجارية الافتراضية (DTC)"
+    "legal_name": null,
+    "legal_name_note": "لم يُعثر على اسم قانوني موحد للكيان الأم عبر جميع الأسواق. تظهر Kitopi Catering Services LLC كجهة تشغيل لتطبيق المكافآت في الإمارات، لكنها لا تثبت الاسم القانوني للمجموعة كاملة.",
+    "founded": "يناير 2018",
+    "headquarters": "دبي، الإمارات العربية المتحدة",
+    "location": "دبي، الإمارات، مع تشغيل تجاري في الإمارات والسعودية والكويت والبحرين وقطر، ومراكز دعم وتقنية في الأردن وبولندا.",
+    "founders": [
+      "محمد بلوط",
+      "سامان داركان",
+      "بدر عطايا",
+      "آندي أريناس"
+    ],
+    "current_public_leadership": {
+      "محمد بلوط": "الرئيس التنفيذي والشريك المؤسس",
+      "سامي بيجاني": "المدير المالي والشريك المؤسس وفق صفحة القيادة الحالية",
+      "سامان داركان": "المدير التقني والشريك المؤسس",
+      "بدر عطايا": "مدير النمو والشريك المؤسس",
+      "محمد سامي بلوط": "مدير العمليات"
+    },
+    "business_model": "مجموعة ضيافة متعددة العلامات تبني وتستحوذ وتستثمر في مفاهيم غذائية محلية، وتدير مطاعم فعلية ومواقع توصيل وخطط وجبات وقنوات طلب وولاء مباشرة. تستخدم SKOS لتوحيد التشغيل. نموذج إدارة المطابخ للعلامات الشريكة كان أساس الشركة تاريخيًا، لكنه لم يعد الوصف الكامل لأعمالها الحالية.",
+    "business_model_evolution": [
+      {
+        "phase": "2018-2020",
+        "model": "مطابخ سحابية مُدارة تساعد العلامات على التوسع في التوصيل."
+      },
+      {
+        "phase": "2021-2023",
+        "model": "الاستثمار في العلامات والاستحواذ على مجموعات مثل AWJ والتوسع إلى المطاعم الفعلية."
+      },
+      {
+        "phase": "2024-2026",
+        "model": "مجموعة ضيافة تجمع العلامات والمطاعم والتوصيل والتطبيق والولاء والامتياز، مع SKOS كبنية تشغيل."
+      }
+    ],
+    "customer_segments": [
+      "عملاء المطاعم الفعلية",
+      "عملاء التوصيل والاستلام",
+      "مشتركو خطط الوجبات",
+      "مستخدمو تطبيق كيتوبي والمكافآت",
+      "العلامات الغذائية وشركاء الامتياز"
+    ],
+    "operating_status_as_of_2026_08_03": {
+      "status": "نشطة وواسعة النطاق",
+      "evidence": "تعلن الشركة 200+ منفذ و100+ علامة و6,000+ موظف في خمسة أسواق خليجية.",
+      "profitability_status": "حققت محطة الربحية وفق إعلان تمويل EvolutionX في 2026.",
+      "profitability_caution": "لم تُنشر قوائم مدققة أو تعريف الفترة ومستوى الربحية."
+    }
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين",
-    "monthly_traffic": "غير متاح (B2B/Offline tech)"
+    "monthly_revenue": null,
+    "monthly_revenue_note": "لا توجد إيرادات شهرية منشورة. أزيلت عبارة «عشرات الملايين» لأنها بلا عملة أو فترة أو مصدر.",
+    "monthly_traffic": null,
+    "monthly_traffic_note": "لا توجد بيانات حديثة موثقة للزيارات أو المستخدمين النشطين. النشاط غير الرقمي لا يجعل المقياس غير قابل للقياس؛ البيانات فقط غير منشورة.",
+    "latest_verified_operating_snapshot": {
+      "as_of": "2026-08-03",
+      "outlets": {
+        "count": "200+",
+        "formats": [
+          "مطاعم فعلية",
+          "مواقع توصيل"
+        ],
+        "status": "company_reported"
+      },
+      "brands": {
+        "count": "100+",
+        "examples": [
+          "Operation Falafel",
+          "Catch 22",
+          "Awani",
+          "Zaroob",
+          "Taqado",
+          "Circle Café",
+          "Right Bite",
+          "Under 500",
+          "High Joint",
+          "Chin Chin"
+        ]
+      },
+      "team": {
+        "count": "6,000+",
+        "status": "company_reported"
+      },
+      "commercial_markets": [
+        "الإمارات",
+        "السعودية",
+        "الكويت",
+        "البحرين",
+        "قطر"
+      ],
+      "support_hubs": [
+        "كراكوف — هندسة",
+        "دبي — تجربة عملاء",
+        "عمّان — تجربة عملاء"
+      ],
+      "country_count_note": "تعرض الصفحة الرئيسية سبع دول، بينما تؤكد الشركة خمسة أسواق مطاعم؛ بولندا والأردن مراكز دعم وتقنية وليستا سوقي مطاعم معلنين.",
+      "saudi_app_launch_2026": {
+        "brands": 6,
+        "dine_in_locations": 36,
+        "features": [
+          "Kitopay",
+          "مكافآت",
+          "عروض داخل التطبيق"
+        ],
+        "delivery_and_pickup": "أُعلنا كخطوات لاحقة ولم يُفترض اكتمالهما."
+      },
+      "uae_rewards": {
+        "headline_cashback": "20%",
+        "higher_tiers": "تصل بعض المستويات إلى 25%",
+        "caution": "النسب والشروط قابلة للتغيير."
+      }
+    },
+    "metric_distinctions": {
+      "revenue": "دخل بيع الطعام والخدمات خلال فترة؛ غير منشور.",
+      "valuation": "آخر تقييم عام موثق 1.55 مليار دولار في 2022، وليس تقييمًا حاليًا.",
+      "equity_funding": "رأس مال مقابل أسهم، مثل Series B وSeries C.",
+      "private_credit": "دين أو ائتمان خاص، مثل 50 مليون دولار من EvolutionX في 2026.",
+      "outlets": "عدد المواقع، لا العملاء أو المبيعات.",
+      "brands": "عدد العلامات في المحفظة، لا مصادر إيراد مستقلة.",
+      "users_or_orders": "لا توجد بيانات حديثة موثقة للمستخدمين أو الطلبات أو GMV.",
+      "website_traffic": "غير منشور."
+    }
   },
   "overview": {
     "problem": {
-      "text": "التوسع الجغرافي للمطاعم مكلف جداً ومحفوف بالمخاطر (إيجار، عمالة، معدات). المطاعم الناجحة تجد صعوبة في تلبية طلبات التوصيل دون إزعاج الزبائن داخل المطعم.",
-      "impact": "عجز المطاعم عن التوسع السريع وخسارة فرص البيع عبر تطبيقات التوصيل."
+      "text": "توسيع علامة مطاعم عبر مدن ودول يتطلب مواقع وتجهيزات وفرقًا وتوريدًا وضبط جودة ومعرفة محلية، بينما تضيف قنوات التوصيل تعقيدًا في تدفق الطلبات والتعبئة وتجربة العميل. التحدي الحالي أوسع من تشغيل مطبخ سحابي واحد؛ إنه توحيد محفظة كبيرة من العلامات والقنوات.",
+      "impact": "ضعف الانضباط التشغيلي قد يسبب تفاوت الجودة والهدر وتأخر الطلبات وتراجع تجربة العلامة. أزيلت التعميمات التي تفترض عجز المطاعم جميعًا عن التوسع."
     },
     "solution": {
-      "text": "شبكة من (المطابخ السحابية) المتطورة تقنياً (SKOS) تطبخ بالنيابة عن العلامات التجارية الكبرى وتتولى عملية التوصيل بأكملها بنظام تقاسم الأرباح."
+      "text": "تبني كيتوبي وتستثمر وتستحوذ على علامات غذائية محلية، ثم تستخدم المطاعم ومواقع التوصيل وسلسلة الإمداد والتدريب وتجربة العملاء وSKOS لتوسيعها. أضافت التطبيق والمكافآت والطلب المباشر والامتياز التجاري إلى نموذجها."
     }
   },
   "market_data": {
-    "target_audience": "المطاعم الكبرى الراغبة بالتوسع (B2B)، والمستهلك النهائي عبر تطبيقات التوصيل.",
-    "market_size": "سوق المطابخ السحابية العالمي سينمو ليصل لـ 71 مليار دولار بحلول 2027.",
-    "growth_rate": "أحد أسرع شركات المنطقة وصولاً للقب يونيكورن (مليار دولار) وتتوسع عالمياً وحصلت على استثمار ضخم من SoftBank."
+    "target_audience": "المستهلكون في خمسة أسواق خليجية، والعملاء الباحثون عن المطاعم والتوصيل وخطط الوجبات، والعلامات المحلية وشركاء الامتياز.",
+    "market_size": null,
+    "market_size_note": "أزيل تقدير 71 مليار دولار لأنه قديم ومحدد لسوق المطابخ السحابية، بينما نموذج كيتوبي الحالي أوسع.",
+    "growth_rate": null,
+    "growth_rate_note": "لا توجد سلسلة إيرادات أو طلبات أو مبيعات مماثلة للفروع تسمح بحساب نمو حالي. نمو 300% يعود إلى 2020 فقط.",
+    "geographic_footprint": [
+      {
+        "market": "الإمارات",
+        "status": "تشغيل ومقر مؤكد"
+      },
+      {
+        "market": "السعودية",
+        "status": "تشغيل وتوسع في التطبيق"
+      },
+      {
+        "market": "الكويت",
+        "status": "تشغيل مؤكد"
+      },
+      {
+        "market": "البحرين",
+        "status": "تشغيل مؤكد"
+      },
+      {
+        "market": "قطر",
+        "status": "تشغيل مؤكد"
+      },
+      {
+        "market": "بولندا",
+        "status": "مركز هندسي"
+      },
+      {
+        "market": "الأردن",
+        "status": "مركز تجربة عملاء"
+      }
+    ],
+    "regulatory_context": {
+      "uae": {
+        "authority": "بلدية دبي والجهات المحلية",
+        "requirements": "ترخيص وتصميم منشآت غذائية ورقابة سلامة وتفتيش ومتطلبات صحة عامة.",
+        "company_specific_status": null
+      },
+      "saudi_arabia": {
+        "authorities": [
+          "منصة بلدي",
+          "الهيئة العامة للغذاء والدواء"
+        ],
+        "requirements": "تراخيص نشاط وشهادات صحية للعاملين ومعلومات غذائية مفصلة على القوائم منذ يوليو 2025.",
+        "company_specific_status": null
+      }
+    }
   },
   "financials": {
-    "initial_investment": "نجحت في جمع تمويلات تجاوزت 800 مليون دولار في سلسلة جولات كان أبرزها جولة Series C.",
-    "valuation": "$1B+ (يونيكورن)",
+    "initial_investment": "من أبرز التمويلات: 60 مليون دولار Series B في 2020، و415 مليون دولار Series C في 2021، وتمديد Series C بقيمة 300 مليون دولار في 2022، و50 مليون دولار ائتمان نمو خاص من EvolutionX في 2026. مجموع التمويلات المسماة هنا 825 مليون دولار، منها 775 مليون دولار أسهم و50 مليون دولار ائتمان خاص.",
+    "valuation": {
+      "current_valuation": null,
+      "latest_publicly_reported_valuation_usd": 1550000000,
+      "valuation_date": "2022-05",
+      "status": "historical_not_current",
+      "note": "لا يوجد تقييم أحدث معلن حتى 3 أغسطس 2026."
+    },
+    "latest_financial_metrics": {
+      "current_revenue": null,
+      "current_net_income": null,
+      "current_cash": null,
+      "current_debt": null,
+      "current_orders": null,
+      "current_gmv": null,
+      "same_store_sales_growth": null,
+      "store_level_margin": null,
+      "audited_financial_statements_available": false,
+      "profitability_milestone": {
+        "status": "company_and_investor_reported",
+        "as_of": "2026-01",
+        "period_and_definition": null
+      }
+    },
+    "funding_and_financing": {
+      "selected_equity_usd": 775000000,
+      "selected_private_credit_usd": 50000000,
+      "selected_total_usd": 825000000,
+      "rounds": [
+        {
+          "date": "2020-02-03",
+          "round": "Series B",
+          "amount_usd": 60000000
+        },
+        {
+          "date": "2021-07-01",
+          "round": "Series C",
+          "amount_usd": 415000000
+        },
+        {
+          "date": "2022-05",
+          "round": "Series C extension",
+          "amount_usd": 300000000,
+          "source_status": "Wamda نقلاً عن Bloomberg"
+        },
+        {
+          "date": "2026-01-30",
+          "round": "Private growth credit",
+          "amount_usd": 50000000,
+          "lead": "EvolutionX"
+        }
+      ],
+      "warning": "المجموع لا يساوي تقييم الشركة أو إيراداتها، ولا يثبت أن كامل الدين غير مسدد."
+    },
     "revenue_streams": [
-      "حصة من مبيعات التوصيل للعلامات التجارية الشريكة",
-      "مبيعات العلامات التجارية الافتراضية المملوكة لكيتوبي",
-      "الاستحواذ الكامل على علامات تجارية مميزة (F&B)"
+      "مبيعات الطعام والمشروبات في المطاعم الفعلية.",
+      "مبيعات التوصيل والاستلام من العلامات المملوكة والمشغلة.",
+      "خطط الوجبات مثل Right Bite.",
+      "الطلبات المباشرة والدفع عبر تطبيق كيتوبي وKitopay.",
+      "إيرادات تشغيل أو شراكات من العلامات الخارجية ضمن نموذج المطابخ المُدارة؛ حصتها الحالية غير معلنة.",
+      "رسوم امتياز وحقوق ملكية محتملة مستقبلًا؛ لم يُثبت أنها خط إيراد مادي حالي.",
+      "الاستحواذ على العلامة ليس مصدر إيراد بحد ذاته؛ الإيراد يأتي من تشغيلها."
+    ],
+    "acquisitions_and_brand_investments": [
+      {
+        "transaction": "الاستحواذ على AWJ",
+        "date": "2023-03-01",
+        "amount": null,
+        "status": "مؤكد والمبلغ غير معلن",
+        "portfolio_added": "10+ علامات و32+ منفذًا وقت الإعلان"
+      },
+      {
+        "transaction": "الاستثمار في خمس مجموعات غذائية",
+        "date": "2021",
+        "amount": null,
+        "groups": [
+          "Cloud Restaurants",
+          "Leap Nation",
+          "Right Bite",
+          "Under 500",
+          "Ichiban"
+        ]
+      }
     ]
+  },
+  "analysis": {
+    "core_thesis": "ميزة كيتوبي لم تعد جمع علامات في مطبخ واحد. الشركة تستخدم التقنية وسلسلة الإمداد والبيانات والعقارات والفرق لبناء محفظة ضيافة كاملة. هذا يرفع التحكم في العلامة وتجربة العميل، لكنه يجعل النموذج أكثر كثافة في العمالة والمخزون والعقارات.",
+    "what_changed": [
+      "تصف الشركة نفسها في 2026 كشركة ضيافة وتقول إن وصف cloud kitchen أصبح قديمًا.",
+      "تدير 200+ منفذ و100+ علامة في خمسة أسواق مع 6,000+ موظف.",
+      "تحولت من خدمة علامات خارجية إلى بناء وامتلاك والاستحواذ على علامات محلية.",
+      "أصبح dine-in جزءًا أساسيًا بجانب التوصيل.",
+      "أطلقت قناة مباشرة للطلب والدفع والولاء وتوسعت بالتطبيق إلى السعودية.",
+      "فتحت استراتيجية امتياز تجاري.",
+      "جمعت 50 مليون دولار ائتمان نمو بعد إعلان الربحية.",
+      "آخر تقييم منشور بقي 1.55 مليار دولار منذ 2022."
+    ],
+    "competitive_advantage": [
+      "محفظة علامات محلية متعددة الشرائح.",
+      "شبكة تشغيل في خمسة أسواق.",
+      "SKOS ومنظومة تطبيقات لتوحيد العمليات.",
+      "مركز تقني يضم 100+ متخصص.",
+      "قدرة على الاستحواذ ثم التوسع عبر الشبكة.",
+      "قناة تطبيق ومكافآت مباشرة.",
+      "خبرة تجمع المطعم والتوصيل وخطط الوجبات.",
+      "إمكانية التوسع بالامتياز."
+    ],
+    "risks_and_constraints": [
+      "لا توجد قوائم عامة تكشف الإيراد أو الهامش أو التدفق النقدي أو الدين.",
+      "الربحية معلنة دون فترة أو تعريف أو تدقيق.",
+      "200+ منفذ و6,000+ موظف تعني تكاليف ثابتة وتشغيلية كبيرة.",
+      "امتلاك العلامات يزيد مخاطر الطلب والمخزون والسمعة.",
+      "تعدد العلامات قد يسبب تعقيدًا وتنافسًا داخليًا.",
+      "الاستحواذات تحتاج دمج فرق وأنظمة وموردين.",
+      "المكافآت 20%-25% تحتاج قياس تكلفتها وهامش الطلب.",
+      "الاعتماد على مجمّعات التوصيل الخارجية يضيف عمولات ومخاطر منصة.",
+      "الامتياز يقلل رأس المال ويزيد مخاطر الشريك والجودة.",
+      "آخر تقييم معلن قديم نسبيًا.",
+      "لا توجد مؤشرات مستقلة لأثر SKOS على الهدر والسرعة والهامش.",
+      "خمسة أسواق تعني متطلبات سلامة وترخيص وضرائب وخصوصية مختلفة."
+    ],
+    "outlook_as_of_2026_08_03": "كيتوبي مجموعة ضيافة إقليمية كبيرة مدعومة بالتقنية، وليست منصة مطابخ سحابية ناشئة بالمعنى القديم. المؤشرات الحاسمة هي المبيعات المماثلة للفروع، هامش كل علامة، تكلفة المكافآت، إنتاجية المطبخ، التدفق النقدي، ونسبة النمو من الامتياز مقابل الأصول المملوكة."
   },
   "lessons": [
     {
-      "title": "البرمجيات كقلب نابض (SKOS)",
-      "description": "كيتوبي ليست شركة عقارات، بل شركة تقنية صممت نظام تشغيل داخلي (Smart Kitchen Operating System) يزيد كفاءة الطبخ ويقلل الهدر بشكل هائل."
+      "title": "اسم الفئة قد يصبح قديمًا قبل الشركة",
+      "description": "تحليل كيتوبي اليوم كمطبخ سحابي فقط يخفي المطاعم والاستحواذات والتطبيق والولاء والامتياز."
     },
     {
-      "title": "التحول من مشغل إلى مالك",
-      "description": "بعد أن أتقنت تشغيل المطاعم للغير، بدأت كيتوبي باستثمار مئات الملايين للاستحواذ الكامل على أفضل العلامات التجارية وتكبيرها عبر شبكتها."
+      "title": "التقنية طبقة تشغيل وليست المنتج النهائي",
+      "description": "SKOS مهم، لكن العميل يدفع مقابل الطعام والتجربة. أثر التقنية يجب أن يظهر في الجودة والهدر والسرعة والهامش."
     },
     {
-      "title": "الاستفادة من البيانات",
-      "description": "بفضل تحليل آلاف الطلبات، تعرف كيتوبي بالضبط ماذا يريد سكان كل منطقة، وتطلق علامات تجارية افتراضية (Virtual Brands) تلبي هذا النقص."
+      "title": "الملكية ترفع العائد والمخاطر",
+      "description": "امتلاك العلامة يمنح تحكمًا أكبر، لكنه ينقل مخاطر الطلب والمخزون والسمعة إلى المجموعة."
+    },
+    {
+      "title": "الاستحواذ ليس خط إيراد",
+      "description": "شراء AWJ معاملة رأسمالية؛ القيمة تأتي من تشغيل العلامات بعد الدمج."
+    },
+    {
+      "title": "الدين لا يحدّث التقييم",
+      "description": "تمويل EvolutionX بقيمة 50 مليون دولار يدعم النمو ولا يحدد قيمة الشركة."
+    },
+    {
+      "title": "عدد العلامات يحتاج جودة محفظة",
+      "description": "الأهم من 100+ علامة هو عدد العلامات المربحة وقوة الاحتفاظ وعدم تآكل المبيعات داخليًا."
+    },
+    {
+      "title": "القناة المباشرة تشتري علاقة العميل",
+      "description": "التطبيق يمنح بيانات وطلبًا مباشرًا، لكن المكافآت يجب أن تحقق تكرارًا وهامشًا أعلى من تكلفتها."
+    },
+    {
+      "title": "الربحية المعلنة بداية سؤال",
+      "description": "يجب معرفة الفترة وهل الربحية تشغيلية أم صافية وما أثر الدين والاستحواذات والمكافآت."
+    }
+  ],
+  "tools": [
+    "Smart Kitchen Operating System (SKOS).",
+    "نحو 40 تطبيقًا ضمن microservices، و20 تطبيق واجهة، و50+ مكونًا وفق صفحة التقنية.",
+    "تطبيقات لإدارة المطابخ والمطاعم وخدمة العملاء والتوصيل والقرارات.",
+    "فرق Java Backend وFrontend وQA وDevOps وPlatform وData Engineering وData Mining وAI.",
+    "CI/CD وإدارة البنية ككود وفق صفحة التقنية.",
+    "تطبيق كيتوبي وKitopay للمكافآت والدفع.",
+    "تطبيق Right Bite لخطط الوجبات.",
+    "تنبيه: لم يُدرج مزود سحابة أو إطار برمجي محدد ما لم يظهر رسميًا."
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "verified_through": "2026-08-03",
+    "research_scope": "الملف الأصلي، موقع كيتوبي وصفحات القصة والقيادة والعلامات والتقنية والتطبيق والامتياز، إعلانات التمويل والاستحواذ، ومراجع تنظيمية إماراتية وسعودية.",
+    "overall_status": "verified_with_material_business_model_financing_and_operating_updates",
+    "primary_source_priority": "الأولوية لموقع كيتوبي وإعلاناتها والجهات الحكومية. استُخدمت Wamda لتوثيق تمديد Series C والتقييم المنقول عن Bloomberg.",
+    "key_corrections": [
+      {
+        "field": "headline",
+        "original_claim": "عملاق المطاعم السحابية",
+        "status": "updated",
+        "correction": "أعيد توصيفها كمجموعة ضيافة مدعومة بالتقنية.",
+        "evidence_ids": [
+          "E1"
+        ]
+      },
+      {
+        "field": "company.business_model",
+        "original_claim": "إدارة المطاعم وعلامات افتراضية",
+        "status": "expanded",
+        "correction": "أضيفت ملكية العلامات والمطاعم والاستحواذات والتطبيق والامتياز.",
+        "evidence_ids": [
+          "E1",
+          "E7",
+          "E12"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_revenue",
+        "original_claim": "عشرات الملايين",
+        "status": "removed_unsupported",
+        "correction": "وُضع null.",
+        "evidence_ids": [
+          "E10"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_traffic",
+        "original_claim": "غير متاح لأن النشاط B2B/Offline",
+        "status": "corrected_reasoning",
+        "correction": "وُضع null لأن البيانات غير منشورة.",
+        "evidence_ids": [
+          "E10"
+        ]
+      },
+      {
+        "field": "overview.solution",
+        "original_claim": "تتولى التوصيل بأكمله بنظام تقاسم الأرباح",
+        "status": "corrected",
+        "correction": "استخدمت مجمّعات وسائقي توصيل خارجيين ولا يوجد نموذج موحد معلن لكل العلامات.",
+        "evidence_ids": [
+          "E15"
+        ]
+      },
+      {
+        "field": "market_data.market_size",
+        "original_claim": "71 مليار دولار في 2027",
+        "status": "removed_outdated",
+        "correction": "وُضع null لأن نموذج الشركة الحالي أوسع من cloud kitchens.",
+        "evidence_ids": [
+          "E1",
+          "E10"
+        ]
+      },
+      {
+        "field": "market_data.growth_rate",
+        "original_claim": "اليونيكورن وتمويل SoftBank",
+        "status": "reclassified",
+        "correction": "التمويل والتقييم ليسا معدل نمو؛ وُضع null.",
+        "evidence_ids": [
+          "E8",
+          "E9"
+        ]
+      },
+      {
+        "field": "financials.initial_investment",
+        "original_claim": "أكثر من 800 مليون",
+        "status": "quantified",
+        "correction": "فُصل 775 مليون أسهم عن 50 مليون ائتمان خاص.",
+        "evidence_ids": [
+          "E8",
+          "E9",
+          "E11"
+        ]
+      },
+      {
+        "field": "financials.valuation",
+        "original_claim": "1B+",
+        "status": "updated",
+        "correction": "آخر تقييم منشور 1.55 مليار دولار في 2022، وليس حاليًا.",
+        "evidence_ids": [
+          "E9"
+        ]
+      },
+      {
+        "field": "financials.revenue_streams",
+        "original_claim": "الاستحواذ مصدر إيراد",
+        "status": "corrected",
+        "correction": "الإيراد يأتي من تشغيل العلامة بعد الاستحواذ.",
+        "evidence_ids": [
+          "E12"
+        ]
+      },
+      {
+        "field": "lessons.skos",
+        "original_claim": "يقلل الهدر بشكل هائل",
+        "status": "qualified",
+        "correction": "ثبت تحسين العمليات دون نسبة مستقلة للهدر.",
+        "evidence_ids": [
+          "E4",
+          "E5"
+        ]
+      }
+    ],
+    "known_source_discrepancies": [
+      {
+        "topic": "عدد الدول",
+        "detail": "الصفحة الرئيسية تعرض 7 دول، لكن الشركة تؤكد خمسة أسواق مطاعم؛ بولندا والأردن مراكز دعم وتقنية."
+      },
+      {
+        "topic": "عدد العلامات",
+        "detail": "الموقع يعرض 100+ علامة، بينما شروط تطبيق قديمة تشير إلى 150+ علامة مشاركة؛ التعريفان مختلفان."
+      },
+      {
+        "topic": "المؤسسون",
+        "detail": "القصة الحديثة تذكر أربعة مؤسسين، وصفحة القيادة تضيف سامي بيجاني كشريك مؤسس؛ حُفظت القائمتان منفصلتين."
+      },
+      {
+        "topic": "إجمالي التمويل",
+        "detail": "قد يتجاوز الإجمالي 825 مليونًا بسبب جولات مبكرة؛ الملف يستخدم المبالغ المسماة الموثقة فقط."
+      },
+      {
+        "topic": "الربحية",
+        "detail": "أُعلنت دون فترة أو تعريف محاسبي أو قوائم عامة."
+      }
+    ],
+    "limitations": [
+      "الشركة خاصة ولا تنشر قوائم مالية مدققة.",
+      "لا توجد أرقام حديثة للإيراد أو صافي الربح أو الطلبات أو GMV أو هوامش الفروع.",
+      "آخر تقييم معلن يعود إلى 2022.",
+      "لا توجد شروط منشورة لائتمان EvolutionX.",
+      "أرقام العلامات والمنافذ والموظفين صادرة عن الشركة.",
+      "لم تُراجع تراخيص كل منفذ وعلامة.",
+      "لم يُفصح عن توزيع الإيراد بين القنوات.",
+      "لا توجد مؤشرات مستقلة لأثر SKOS.",
+      "إيرادات الامتياز الحالية غير منشورة."
+    ],
+    "programmatic_validation": {
+      "input_file_parse": true,
+      "json_parse": true,
+      "json_schema_validation": true,
+      "required_original_top_level_keys_preserved": true,
+      "required_original_paths_preserved": true,
+      "all_source_ids_unique": true,
+      "all_evidence_source_references_valid": true,
+      "all_key_correction_evidence_references_valid": true,
+      "no_nan_or_infinity": true,
+      "null_used_for_unavailable_monthly_metrics": true,
+      "null_used_for_unavailable_market_size_and_growth": true,
+      "current_valuation_not_invented": true,
+      "equity_and_private_credit_separated": true,
+      "five_markets_distinguished_from_support_hubs": true,
+      "acquisition_not_revenue": true,
+      "profitability_qualified": true,
+      "duplicate_lesson_titles": false,
+      "source_count": 21,
+      "primary_source_count": 20,
+      "evidence_item_count": 20,
+      "lesson_count": 8,
+      "errors": [],
+      "validated_at": "2026-08-03T19:36:00+03:00",
+      "validation_status": "passed"
+    }
+  },
+  "evidence_map_schema": {
+    "description": "يربط الادعاءات الجوهرية بالمصادر والمسارات.",
+    "item_fields": {
+      "claim": "الادعاء",
+      "json_paths": "المسارات",
+      "classification": "نوع الدليل",
+      "status": "حالته",
+      "source_ids": "معرفات المصادر",
+      "notes": "حدود الدليل"
+    }
+  },
+  "evidence_map": {
+    "E1": {
+      "claim": "كيتوبي اليوم شركة ضيافة لا cloud kitchen فقط.",
+      "json_paths": [
+        "headline",
+        "company.business_model",
+        "analysis.what_changed"
+      ],
+      "classification": "company",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S1"
+      ],
+      "notes": "مقال رسمي حديث."
+    },
+    "E2": {
+      "claim": "200+ منفذ وخمسة أسواق و6,000+ موظف.",
+      "json_paths": [
+        "company.operating_status_as_of_2026_08_03",
+        "directory_snapshot.latest_verified_operating_snapshot"
+      ],
+      "classification": "operating",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "notes": "أرقام شركة."
+    },
+    "E3": {
+      "claim": "التأسيس في دبي في يناير 2018 بواسطة أربعة مؤسسين.",
+      "json_paths": [
+        "company.founded",
+        "company.founders"
+      ],
+      "classification": "company",
+      "status": "verified",
+      "source_ids": [
+        "S1",
+        "S8"
+      ],
+      "notes": "متسق."
+    },
+    "E4": {
+      "claim": "SKOS يحسن العمليات لحظيًا.",
+      "json_paths": [
+        "overview.solution",
+        "tools"
+      ],
+      "classification": "technology",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S4",
+        "S5"
+      ],
+      "notes": "لا مقاييس مستقلة."
+    },
+    "E5": {
+      "claim": "40 تطبيقًا و20 واجهة و50+ مكونًا و100+ متخصص.",
+      "json_paths": [
+        "tools",
+        "analysis.competitive_advantage"
+      ],
+      "classification": "technology",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S5"
+      ],
+      "notes": "لقطة الموقع."
+    },
+    "E6": {
+      "claim": "100+ علامة و200+ موقع و7 دول على الصفحة الرئيسية.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot",
+        "verification.known_source_discrepancies"
+      ],
+      "classification": "operating",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S2"
+      ],
+      "notes": "الدول لا تعني كلها أسواق مطاعم."
+    },
+    "E7": {
+      "claim": "المحفظة تشمل dine-in والتوصيل وخطط الوجبات.",
+      "json_paths": [
+        "company.business_model",
+        "financials.revenue_streams"
+      ],
+      "classification": "brands",
+      "status": "verified",
+      "source_ids": [
+        "S3",
+        "S6"
+      ],
+      "notes": "لا إيراد حسب العلامة."
+    },
+    "E8": {
+      "claim": "60 مليون Series B و415 مليون Series C.",
+      "json_paths": [
+        "financials.initial_investment",
+        "financials.funding_and_financing"
+      ],
+      "classification": "funding",
+      "status": "verified",
+      "source_ids": [
+        "S7",
+        "S8"
+      ],
+      "notes": "جولات رسمية."
+    },
+    "E9": {
+      "claim": "300 مليون تمديد Series C وتقييم 1.55 مليار.",
+      "json_paths": [
+        "financials.valuation",
+        "financials.funding_and_financing"
+      ],
+      "classification": "valuation",
+      "status": "historical_only",
+      "source_ids": [
+        "S9"
+      ],
+      "notes": "Wamda عن Bloomberg."
+    },
+    "E10": {
+      "claim": "لا بيانات حديثة للإيراد أو الزيارات أو النمو.",
+      "json_paths": [
+        "directory_snapshot.monthly_revenue",
+        "directory_snapshot.monthly_traffic",
+        "market_data.market_size",
+        "market_data.growth_rate",
+        "financials.latest_financial_metrics"
+      ],
+      "classification": "unavailable",
+      "status": "unavailable",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S10"
+      ],
+      "notes": "لا قوائم عامة."
+    },
+    "E11": {
+      "claim": "50 مليون ائتمان نمو في 2026 بعد إعلان الربحية.",
+      "json_paths": [
+        "financials.initial_investment",
+        "financials.latest_financial_metrics",
+        "financials.funding_and_financing"
+      ],
+      "classification": "funding",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S10"
+      ],
+      "notes": "ليس جولة تقييم."
+    },
+    "E12": {
+      "claim": "الاستحواذ على AWJ في 2023 بمبلغ غير معلن.",
+      "json_paths": [
+        "financials.acquisitions_and_brand_investments"
+      ],
+      "classification": "acquisition",
+      "status": "verified",
+      "source_ids": [
+        "S11"
+      ],
+      "notes": "لا يمثل إيرادًا."
+    },
+    "E13": {
+      "claim": "الاستثمار في خمس مجموعات غذائية.",
+      "json_paths": [
+        "financials.acquisitions_and_brand_investments"
+      ],
+      "classification": "acquisition",
+      "status": "verified",
+      "source_ids": [
+        "S12"
+      ],
+      "notes": "المبالغ غير معلنة."
+    },
+    "E14": {
+      "claim": "التطبيق يوفر مكافآت وقناة طلب ودفع.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.uae_rewards",
+        "tools"
+      ],
+      "classification": "app",
+      "status": "verified",
+      "source_ids": [
+        "S13",
+        "S14"
+      ],
+      "notes": "الشروط قابلة للتغيير."
+    },
+    "E15": {
+      "claim": "استخدمت مجمّعات وسائقي توصيل خارجيين تاريخيًا.",
+      "json_paths": [
+        "verification.key_corrections"
+      ],
+      "classification": "operating",
+      "status": "historical_only",
+      "source_ids": [
+        "S15"
+      ],
+      "notes": "المزيج الحالي غير مفصل."
+    },
+    "E16": {
+      "claim": "برنامج امتياز مع دعم تدريب وتشغيل.",
+      "json_paths": [
+        "company.business_model",
+        "financials.revenue_streams"
+      ],
+      "classification": "franchise",
+      "status": "planned",
+      "source_ids": [
+        "S16",
+        "S10"
+      ],
+      "notes": "الإيراد الحالي غير منشور."
+    },
+    "E17": {
+      "claim": "منشآت دبي تخضع للترخيص والتفتيش وسلامة الغذاء.",
+      "json_paths": [
+        "market_data.regulatory_context.uae"
+      ],
+      "classification": "regulatory",
+      "status": "verified",
+      "source_ids": [
+        "S17",
+        "S18"
+      ],
+      "notes": "إطار عام."
+    },
+    "E18": {
+      "claim": "السعودية تتطلب تراخيص وشهادات صحية ومعلومات غذائية مفصلة.",
+      "json_paths": [
+        "market_data.regulatory_context.saudi_arabia"
+      ],
+      "classification": "regulatory",
+      "status": "verified",
+      "source_ids": [
+        "S19",
+        "S20"
+      ],
+      "notes": "إطار عام."
+    },
+    "E19": {
+      "claim": "إطلاق التطبيق السعودي شمل 6 علامات و36 موقعًا.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.saudi_app_launch_2026"
+      ],
+      "classification": "app",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S14"
+      ],
+      "notes": "لا بيانات استخدام."
+    },
+    "E20": {
+      "claim": "صفحة القيادة الحالية تعرض الأدوار التنفيذية.",
+      "json_paths": [
+        "company.current_public_leadership"
+      ],
+      "classification": "company",
+      "status": "verified",
+      "source_ids": [
+        "S21"
+      ],
+      "notes": "قابلة للتغيير."
+    }
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "What is Kitopi? The Story of a UAE-Born Hospitality Company",
+      "publisher": "Kitopi",
+      "source_type": "مقال رسمي حديث",
+      "publication_date": "2026-04-08",
+      "url": "https://www.kitopi.com/post/what-is-kitopi-the-story-of-a-uae-born-hospitality-company",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "التحول",
+        "المؤسسون",
+        "النطاق الحالي"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "Kitopi Homepage",
+      "publisher": "Kitopi",
+      "source_type": "موقع رسمي",
+      "publication_date": null,
+      "url": "https://www.kitopi.com/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "7 دول",
+        "200+ موقع",
+        "100+ علامة",
+        "6,000+ موظف"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "Kitopi Brands",
+      "publisher": "Kitopi",
+      "source_type": "كتالوج رسمي",
+      "publication_date": null,
+      "url": "https://www.kitopi.com/brands",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "dine-in",
+        "delivery",
+        "meal plans",
+        "العلامات"
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "Smart Kitchens and SKOS",
+      "publisher": "Kitopi",
+      "source_type": "صفحة تقنية رسمية",
+      "publication_date": null,
+      "url": "https://www.kitopi.com/smart-kitchens",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "SKOS",
+        "التحسين اللحظي"
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "Engineering at Kitopi",
+      "publisher": "Kitopi",
+      "source_type": "صفحة تقنية رسمية",
+      "publication_date": null,
+      "url": "https://www.kitopi.com/tech",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "المركز التقني",
+        "التطبيقات",
+        "microservices",
+        "Data & AI"
+      ]
+    },
+    {
+      "id": "S6",
+      "title": "Our Story",
+      "publisher": "Kitopi",
+      "source_type": "صفحة شركة رسمية",
+      "publication_date": null,
+      "url": "https://www.kitopi.com/our-story",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "200+ منفذ",
+        "خمسة أسواق",
+        "6,000+ موظف"
+      ]
+    },
+    {
+      "id": "S7",
+      "title": "Kitopi raises $60 million Series B",
+      "publisher": "Kitopi",
+      "source_type": "إعلان تمويل رسمي",
+      "publication_date": "2020-02-03",
+      "url": "https://www.kitopi.com/post/kitopi-raises-60-million-in-series-b-funding",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Series B"
+      ]
+    },
+    {
+      "id": "S8",
+      "title": "Kitopi announces $415 million Series C",
+      "publisher": "Kitopi",
+      "source_type": "إعلان تمويل رسمي",
+      "publication_date": "2021-07-01",
+      "url": "https://www.kitopi.com/post/kitopi-announces-415-million-series-c-funding-round",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Series C",
+        "SoftBank",
+        "المؤسسون"
+      ]
+    },
+    {
+      "id": "S9",
+      "title": "Kitopi raises $300 million Series C extension",
+      "publisher": "Wamda",
+      "source_type": "تغطية عن Bloomberg",
+      "publication_date": "2022-05-12",
+      "url": "https://www.wamda.com/en/2022/05/kitopi-raises-300-series-c-round-extension",
+      "primary_source": false,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "300 مليون",
+        "1.55 مليار تقييم"
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "EvolutionX leads $50 million growth capital for Kitopi",
+      "publisher": "EvolutionX / Zawya",
+      "source_type": "إعلان تمويل خاص",
+      "publication_date": "2026-01-30",
+      "url": "https://www.tradingview.com/news/reuters.com,2026-01-30:newsml_Zaw2mJrTN:0-zawya-pressr-evolutionx-makes-first-investment-in-gcc-leads-50mln-growth-capital-raised-by-f-b-tech-leader-kitopi/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "50 مليون",
+        "الربحية",
+        "الامتياز",
+        "النطاق الحالي"
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "Kitopi acquires AWJ",
+      "publisher": "Kitopi",
+      "source_type": "إعلان استحواذ رسمي",
+      "publication_date": "2023-03-01",
+      "url": "https://www.kitopi.com/post/kitopi-announces-the-acquisition-of-leading-f-b-group-awj",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "AWJ",
+        "10+ علامات",
+        "32+ منفذ"
+      ]
+    },
+    {
+      "id": "S12",
+      "title": "Investment in Five F&B Groups",
+      "publisher": "Kitopi",
+      "source_type": "إعلان استثمار رسمي",
+      "publication_date": "2021",
+      "url": "https://www.kitopi.com/post/kitopi-marks-next-phase-of-growth-with-investment-in-brands",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "خمس مجموعات",
+        "التحول للملكية"
+      ]
+    },
+    {
+      "id": "S13",
+      "title": "Kitopi Rewards App",
+      "publisher": "Kitopi",
+      "source_type": "صفحة تطبيق رسمية",
+      "publication_date": null,
+      "url": "https://www.kitopi.com/rewardsapp",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "20% استرداد",
+        "المستويات",
+        "القنوات"
+      ]
+    },
+    {
+      "id": "S14",
+      "title": "Kitopi App Launch in Saudi Arabia",
+      "publisher": "Kitopi on LinkedIn",
+      "source_type": "إعلان رسمي",
+      "publication_date": "2026",
+      "url": "https://www.linkedin.com/company/kitopi",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "6 علامات",
+        "36 موقعًا",
+        "Kitopay"
+      ]
+    },
+    {
+      "id": "S15",
+      "title": "Everything You Want to Know About Kitopi",
+      "publisher": "Kitopi",
+      "source_type": "شرح رسمي تاريخي",
+      "publication_date": "2022-03-01",
+      "url": "https://www.kitopi.com/post/everything-you-want-to-know-about-kitopi",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "التوصيل الخارجي",
+        "التأسيس"
+      ]
+    },
+    {
+      "id": "S16",
+      "title": "Kitopi Franchise",
+      "publisher": "Kitopi",
+      "source_type": "صفحة امتياز رسمية",
+      "publication_date": null,
+      "url": "https://www.kitopi.com/franchise",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الامتياز",
+        "التدريب",
+        "التشغيل"
+      ]
+    },
+    {
+      "id": "S17",
+      "title": "Food Safety Department",
+      "publisher": "Dubai Municipality",
+      "source_type": "مرجع تنظيمي رسمي",
+      "publication_date": "2026",
+      "url": "https://www.dm.gov.ae/municipality-business/food-safety-department-2/food-safety-department/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "سلامة الغذاء",
+        "التفتيش"
+      ]
+    },
+    {
+      "id": "S18",
+      "title": "Food Traders and Establishments",
+      "publisher": "Dubai Municipality",
+      "source_type": "متطلبات رسمية",
+      "publication_date": "2026",
+      "url": "https://www.dm.gov.ae/municipality-business/food-traders-establishments/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Food Code",
+        "الترخيص"
+      ]
+    },
+    {
+      "id": "S19",
+      "title": "Issuing a Commercial License",
+      "publisher": "Balady",
+      "source_type": "خدمة ترخيص رسمية",
+      "publication_date": "2026-02-17",
+      "url": "https://balady.gov.sa/en/services/issuing-commercial-license",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "تراخيص الأغذية والمشروبات"
+      ]
+    },
+    {
+      "id": "S20",
+      "title": "New Food Rules for Menu Transparency",
+      "publisher": "Saudi Food and Drug Authority",
+      "source_type": "إعلان تنظيمي رسمي",
+      "publication_date": "2025",
+      "url": "https://www.sfda.gov.sa/en/news/3745904",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "المعلومات الغذائية في القوائم"
+      ]
+    },
+    {
+      "id": "S21",
+      "title": "Leadership",
+      "publisher": "Kitopi",
+      "source_type": "صفحة قيادة رسمية",
+      "publication_date": null,
+      "url": "https://www.kitopi.com/leadership",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "القيادة الحالية"
+      ]
     }
   ]
 }

@@ -2,52 +2,2136 @@
   "id": "huspy",
   "slug": "huspy",
   "name": "هسبي (Huspy)",
-  "headline": "المنصة التي رقمنت عملية شراء المنازل والتمويل العقاري في الإمارات",
-  "category": "PropTech / التمويل العقاري",
+  "headline": "من وسيط رهن رقمي إلى شبكة عقارية في خمس أسواق: كيف بنت Huspy طبقة تشغيل تمر عبرها معاملات تتجاوز 7 مليارات دولار سنويًا",
+  "category": "PropTech & Mortgage Brokerage / الوساطة العقارية والتمويل العقاري ومنصات الوكلاء",
   "company": {
-    "location": "دبي، الإمارات العربية المتحدة (مع توسع في إسبانيا)",
-    "business_model": "عمولات وساطة من البنوك (B2B2C) على كل قرض عقاري"
+    "location": "Huspy شركة خاصة تأسست في دبي وأطلقت أعمالها عام 2020. تذكر صفحتها الرسمية مكاتب في دبي وأبوظبي ومدريد وفالنسيا، بينما تعلن صفحة الوظائف في 2026 وجودًا في خمس أسواق: الإمارات وإسبانيا والسعودية وإيطاليا وتركيا. في الإمارات تُقدم الخدمات عبر كيانات مرخصة تشمل Huspy Properties وHuspy Mortgage Broker، مع تراخيص تجارية وRERA منشورة. الوجود في سوق أو خطة إطلاق لا يساوي بالضرورة مكتبًا كاملًا أو ترخيصًا متماثلًا في كل دولة.",
+    "business_model": "نموذج وساطة وسوق متعدد الأطراف. خدمات الرهن الموجهة للمشتري في الإمارات تُسوّق عادةً بلا رسوم مباشرة عليه، بينما تستمد اقتصادياتها من عمولات المقرضين عند نجاح التمويل. ويضيف نشاط الوساطة العقارية عمولات مرتبطة ببيع وشراء العقارات، مع مشاركة جزء من اقتصاديات الصفقة مع الوكلاء والوسطاء المحيلين. كما توفر الشركة منصات تشغيل B2B للوكلاء والوسطاء وشراكات تمويل تسليم مع المطورين. لم تُفصح عن توزيع الإيراد بين الرهن والعقارات والأسواق أو عن متوسط العمولة."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات",
-    "monthly_traffic": "تسهيل قروض بمليارات الدراهم"
+    "monthly_revenue": "غير مُفصح عنه علنًا. لا توجد قوائم مالية أو قيمة موثوقة للإيراد الشهري أو السنوي أو الربح. رقم أكثر من 7 مليارات دولار في 2025 هو قيمة معاملات عقارية سنوية تمر عبر المنصة، وليس إيرادًا. كذلك لا يجوز استخدام 25% من الرهون السكنية في دبي أو عمولات الوكلاء لتقدير MRR من دون معرفة قيمة القروض المغلقة ومعدلات العمولة وصافي المشاركة.",
+    "monthly_traffic": "غير مُفصح عنه علنًا، ولا يوجد رقم رسمي موثوق لزيارات الموقع أو MAU أو DAU. أحدث مقاييس تشغيلية منشورة تشمل خدمة أكثر من 12 ألف مالك منزل، وشراكات مع أكثر من 20 بنكًا، و950+ موظفًا ووجودًا معلنًا في خمس أسواق. كما تعرض بوابة الوسطاء 2B+ submissions و500M+ disbursals بلا عملة أو فترة أو تعريف محاسبي واضح، لذلك لم تُستخدم كبديل عن الزيارات أو المستخدمين."
   },
   "overview": {
     "problem": {
-      "text": "عملية شراء منزل والحصول على تمويل عقاري (Mortgage) عملية معقدة جداً، ورقية بالكامل، وتستغرق أسابيع من المفاوضات مع البنوك المختلفة بشفافية غائبة.",
-      "impact": "تجربة مستخدم سيئة جداً، وتأخر في إتمام الصفقات العقارية للمشترين والوسطاء."
+      "text": "شراء المنزل وتمويله عملية موزعة بين الباحث عن عقار والوكيل والوسيط والمطور والبنك والمثمن والجهات الحكومية. اختلاف الأهلية وأسعار البنوك وكثرة الوثائق والمتابعة اليدوية يجعل المقارنة والتقديم والإغلاق بطيئًا وقليل الشفافية، كما يضطر الوسطاء والوكلاء إلى استخدام أدوات منفصلة لإدارة العملاء والوثائق والحالات.",
+      "impact": "قد يؤدي التجزؤ إلى تأخر الموافقة أو التسليم، وفقدان صفقات، وتكرار إدخال البيانات، وصعوبة معرفة حالة الملف وتكلفته الحقيقية. لم يُعثر على دراسة مستقلة تثبت أن كل حالة كانت تستغرق أسابيع أو أن الموافقة المبدئية تتم في دقائق؛ لذلك أزيلت صياغة الضمان الزمني المطلق."
     },
     "solution": {
-      "text": "منصة رقمية موحدة تجمع العروض من جميع البنوك، وتحصل على الموافقة المبدئية للقرض العقاري في دقائق، مجاناً للمشتري."
+      "text": "تجمع Huspy مقارنة عروض الرهن والإرشاد البشري وإدارة المستندات والتقديم والمتابعة حتى الصرف، إلى جانب البحث عن العقارات والوساطة العقارية. وللوكلاء والوسطاء توفر بوابة لإدارة الحالات وClient Vault واستخراج البيانات عبر OCR وتعبئة النماذج والتوقيع الرقمي وتتبع الحالة وروبوت محادثة لسياسات البنوك. تعلن الشركة إمكانية إتمام الرهن في نحو أسبوعين لبعض المسارات، لكن القرار الائتماني النهائي وشروط القرض يصدران عن البنك ولا تضمنهما المنصة."
     }
   },
   "market_data": {
-    "target_audience": "مشتري العقارات (أفراد) والوسطاء العقاريين في الإمارات وأوروبا.",
-    "market_size": "سوق العقارات السكني والتمويل العقاري بدبي يقدر بمئات المليارات.",
-    "growth_rate": "جمعت 37 مليون دولار (Series A) من Sequoia Capital وتوسعت في أوروبا بفضل قوة نموذج العمل."
+    "target_audience": "مشترو وبائعو العقارات في الإمارات وإسبانيا والأسواق الجديدة، بمن فيهم المقيمون وغير المقيمين في الإمارات، إضافة إلى الوكلاء العقاريين ووسطاء الرهن والبنوك والمطورين وعملاء تمويل التسليم والعقارات على الخارطة. تختلف الأهلية والمنتجات والترخيص والعمولات من سوق إلى آخر، لذلك لا يجوز اعتبار كل خدمة متاحة في البلدان الخمسة بالصيغة نفسها.",
+    "market_size": "لم تنشر Huspy دراسة حديثة قابلة للتحقق لحجم السوق القابل للخدمة. ذكرت في 2022 تقديرًا بـ13 مليار دولار لـTAM عبر الإمارات وإسبانيا، وفي مادة أخرى أشارت إلى فرصة GMV بنحو 400 مليار دولار؛ وهما مقياسان مختلفان وتعريفاتهما غير منشورة بما يكفي. لذلك لم يُستخدم أي منهما كحجم سوق حالي. رقم 7 مليارات دولار سنويًا يمثل حجم معاملات الشركة المعلن في 2025، لا حجم السوق.",
+    "growth_rate": "لا يوجد معدل نمو حديث موحد للإيراد أو العملاء أو القروض. توجد مؤشرات متفرقة: 2 مليار دولار GMV بمعدل سنوي ونمو شهري 25% في 2022، وأكثر من 20 ضعفًا لنشاط العقارات في إسبانيا خلال 2024، وأكثر من 7 مليارات دولار معاملات سنوية في 2025، ثم 12 ألف+ مالك منزل ووجود في خمس أسواق في 2026. اختلاف المقاييس والفترات والتعريفات يمنع تحويلها إلى CAGR واحد."
   },
   "financials": {
-    "initial_investment": "مدعومة من أقوى صناديق الاستثمار العالمية (سيكويا وفاوندرز فاند).",
-    "valuation": "غير معلن (مئات الملايين)",
+    "initial_investment": "أعلنت Huspy Series A بقيمة 37 مليون دولار في يونيو 2022 بقيادة Sequoia Capital India، ثم جولة استراتيجية غير معلنة القيمة بقيادة Balderton في مايو 2024، ثم Series B بقيمة 59 مليون دولار في يوليو 2025 بقيادة Balderton. تمثل الجولتان المعلنتان رقميًا ما لا يقل عن 96 مليون دولار، من دون احتساب جولة البذرة أو جولة 2024 غير المعلنة. هذا تمويل رأسمالي وليس إيرادًا أو حجم معاملات.",
+    "valuation": "غير مُفصح عنه علنًا. قالت الشركة إن جولة 2024 تمت بتقييم أعلى بكثير من تقييم Series A في 2022، لكنها لم تنشر قيمة أي منهما. كما لم يتضمن إعلان Series B لعام 2025 تقييمًا. أزيل وصف «مئات الملايين» لأنه تقدير غير مدعوم.",
     "revenue_streams": [
-      "عمولة تدفعها البنوك مقابل جلب العملاء (Lead Generation & Closing)",
-      "عمولات وساطة عقارية مباشرة بعد دمج وكالات عقارية للشركة"
+      "عمولات من البنوك أو المقرضين عند إغلاق ملفات الرهن والتمويل، مع تسويق الخدمة الأساسية للمشتري في الإمارات بلا رسوم مباشرة في المسارات المنشورة.",
+      "عمولات الوساطة العقارية الناتجة عن تمثيل البائع أو المشتري وإغلاق صفقات العقارات عبر Huspy Properties والشبكات التابعة.",
+      "اقتصاديات شراكات الوكلاء ووسطاء الرهن: تستقبل Huspy الحالة وتديرها وتشارك عمولة الإغلاق مع المحيل أو الوكالة وفق الاتفاق.",
+      "خدمات تمويل التسليم والتمويل للعقارات على الخارطة وإعادة التمويل والإفراج عن حقوق الملكية والتمويل التجاري؛ مصادر الدخل فيها تبقى ضمن عمولات الوساطة والخدمات ولم تُفصح الشركة عن تفاصيلها.",
+      "خدمات عقارية مجاورة تعلن الشركة نيتها أو قدرتها على ربطها بالرحلة مثل الأثاث والتجهيز والصيانة وإدارة العقار؛ لم يُتحقق من كونها مساهمًا حاليًا جوهريًا في الإيراد."
     ]
   },
   "lessons": [
     {
-      "title": "قوة المنتج المجاني للمستخدم (Free for Consumer)",
-      "description": "Huspy لا تأخذ أموالاً من المشتري، بل تدفع البنوك لها عمولة ضخمة لتسهيل القرض. هذا أزال كل عوائق الاستخدام (Friction) وجعلها المنصة المفضلة للجميع."
+      "title": "المجاني للمشتري ليس نموذجًا بلا إيراد",
+      "description": "إزالة الرسوم المباشرة عن المشتري تقلل الاحتكاك، لكن الاقتصاد ينتقل إلى المقرض الذي يدفع عمولة عند نجاح الملف. قيمة النموذج تعتمد على الثقة والشفافية ومنع تضارب المصالح، لا على كلمة «مجاني» وحدها."
     },
     {
-      "title": "السيطرة على كامل السلسلة",
-      "description": "بدأت بـ (التمويل العقاري) فقط، لكنها سرعان ما استحوذت على وكالات عقارية وبنت منصة لعرض العقارات أيضاً، لتتحكم برحلة المشتري من لحظة البحث عن بيت وحتى توقيع العقد والحصول على القرض."
+      "title": "حجم المعاملات ليس مبيعات الشركة",
+      "description": "مرور أكثر من 7 مليارات دولار من المعاملات سنويًا يعكس حجم المنصة، لكنه لا يكشف الإيراد. يجب ضرب كل نوع صفقة بمعدل عمولته ثم خصم مشاركة الوكلاء والإلغاءات وتكاليف التشغيل قبل الحديث عن الإيراد أو الربح."
+    },
+    {
+      "title": "رقمنة القطاع قد تبدأ بشراء الشبكة التقليدية",
+      "description": "استحواذ Huspy على Home Matters وJust Mortgages وFinance Lab لم يكن تناقضًا مع التقنية؛ فقد وفر خبرة وتراخيص وعلاقات بنكية وتدفق ملفات. في الأسواق المنظمة، الاستحواذ على البنية القائمة قد يسرع الرقمنة أكثر من محاولة استبدالها بالكامل."
+    },
+    {
+      "title": "نظام تشغيل الشركاء أقوى من واجهة المستهلك وحدها",
+      "description": "بوابة الوسطاء وتطبيق الوكلاء وClient Vault وOCR وتتبع الحالات تجعل Huspy جزءًا من عمل الشريك اليومي. كلما اعتمد الوكيل على النظام لإدارة العميل والوثائق والعمولة، أصبحت قناة التوزيع أصعب في الاستبدال."
+    },
+    {
+      "title": "التوسع الجغرافي يتطلب إعادة بناء العرض محليًا",
+      "description": "الرهن العقاري والعقود والعمولات والتراخيص تختلف بين الإمارات وإسبانيا والسعودية وإيطاليا وتركيا. النجاح في مدينة لا ينتقل بنسخ التطبيق فقط؛ يلزم بناء شبكة وكلاء ومقرضين وكيان قانوني وعمليات متوافقة في كل سوق."
+    },
+    {
+      "title": "سرعة العملية لا تساوي السيطرة على قرار البنك",
+      "description": "يمكن للمنصة تسريع جمع البيانات والمقارنة والتقديم، لكن الموافقة والتقييم والصرف تبقى لدى البنك وأطراف خارجية. الوعد القوي هو تقليل الوقت والضياع، لا ضمان موافقة خلال دقائق لكل عميل."
     }
   ],
   "tools": [
-    "AWS",
-    "Node.js",
-    "React",
-    "Python"
+    "React وNext.js وJavaScript/TypeScript للواجهات وفق إعلانات التوظيف الحالية",
+    "NestJS وTypeScript للخدمات الخلفية وفق إعلانات التوظيف الحالية؛ Node.js إطار التشغيل الضمني لـNestJS",
+    "AWS مذكورة كخبرة مفضلة في وظائف هندسية، ولا تُعامل ككشف معماري كامل أو إثبات لكل بيئات الإنتاج",
+    "تطبيقات هاتف وشبكة أدوات للوكلاء والوسطاء؛ ظهرت وظائف React Native تاريخيًا، دون تأكيد أن كل التطبيقات الحالية تعتمد عليه",
+    "Client Vault لإدارة وثائق العملاء ومشاركتها",
+    "OCR لاستخراج البيانات وتعبئة نماذج طلبات البنوك",
+    "توقيع رقمي ونماذج إلكترونية وإشعارات حالة عبر البريد والرسائل وWhatsApp",
+    "روبوت محادثة مدعوم بالذكاء الاصطناعي للبحث في سياسات ومنتجات البنوك",
+    "حاسبات الأهلية والقدرة على الاقتراض وتكاليف الرهن",
+    "منصة مقارنة عروض وتتبّع الحالات وإدارة العملاء والمقترحات",
+    "واجهات APIs وخدمات استضافة ومعالجة بيانات مع أطراف خارجية وفق سياسة الخصوصية",
+    "Python لم يُثبت كمكوّن أساسي حالي في المصادر الرسمية؛ ظهر كخبرة إضافية في بعض وظائف الهندسة ولم يُدرج كمكدس مركزي"
+  ],
+  "verification": {
+    "status": "verified_with_material_financial_metric_and_business_model_corrections",
+    "verified_on": "2026-08-03",
+    "source_policy": {
+      "priority_order": [
+        "الصفحات القانونية والتراخيص والمنتجات الرسمية لـHuspy",
+        "إعلانات التمويل والاستحواذ الرسمية للشركة والمستثمر",
+        "إفصاحات التشغيل والشراكات الحالية",
+        "إعلانات الوظائف الصادرة عن الشركة للمكدس التقني مع قيود",
+        "لم تُستخدم تقديرات زيارات أو تقييمات ثانوية"
+      ],
+      "sec_applicability": "غير منطبق عمليًا: Huspy شركة خاصة إماراتية ولا توجد إفصاحات شركة عامة معروفة لدى SEC.",
+      "financial_rule": "تم فصل الإيراد عن التمويل والتقييم وGMV وحجم المعاملات وحجم القروض والعمولات.",
+      "usage_rule": "تم فصل الزيارات والمستخدمين النشطين عن ملاك المنازل والبنوك والموظفين والأسواق وملفات البوابة.",
+      "regulatory_rule": "تم الاعتماد على التراخيص التي تنشرها الشركة، دون ادعاء تحقق حكومي مستقل لكل سوق.",
+      "technology_rule": "تم فصل خصائص المنتج المؤكدة عن المكدس المستنتج من إعلانات الوظائف."
+    },
+    "important_notes": [
+      "الإيراد الشهري والسنوي والربح غير معلنة بقيمة نقدية موثوقة.",
+      "أكثر من 7 مليارات دولار سنويًا حجم معاملات عقارية في 2025، وليس إيرادًا أو تقييمًا.",
+      "2 مليار دولار في 2022 كان GMV بمعدل سنوي، وليس إيرادًا سنويًا.",
+      "ادعاء 25% من الرهون السكنية في دبي يعود إلى 2024 ولا يساوي حصة إيراد.",
+      "12 ألف+ مالك منزل مقياس عملاء مخدومين، وليس MAU أو DAU أو زيارات.",
+      "20+ بنكًا مقياس شراكات، وليس عدد عملاء أو حجم معاملات.",
+      "950+ موظفًا وخمسة أسواق مقاييس تشغيلية لا مالية.",
+      "2B+ submissions و500M+ disbursals بلا عملة وفترة واضحتين؛ لم تُستخدما ماليًا.",
+      "Series A وSeries B المعلنتان رقميًا تجمعان ما لا يقل عن 96 مليون دولار.",
+      "جولة البذرة وجولة 2024 غير داخلتين في 96 مليون دولار لعدم ثبوت قيمتيهما.",
+      "التقييم غير معلن؛ وصفه بأنه أعلى لا يسمح بوضع رقم.",
+      "الخدمة المجانية للمشتري تعتمد اقتصاديًا على عمولات المقرضين والإغلاق.",
+      "Huspy تدفع عمولات للوكلاء، لذا عمولة المقرض الإجمالية ليست صافي إيراد الشركة.",
+      "الموافقة والتسعير والصرف قرارات البنك ولا تضمنها Huspy.",
+      "أزيل ادعاء الموافقة المبدئية في دقائق لعدم وجود ضمان عام حديث.",
+      "إتمام الرهن في أسبوعين ادعاء منتج مشروط وليس متوسطًا مدققًا.",
+      "13 مليار دولار TAM و400 مليار دولار GMV opportunity مقياسان مختلفان وغير صالحين كحجم سوق حالي موحد.",
+      "الوجود في السعودية وإيطاليا وتركيا معلن، لكن نطاق العمليات والترخيص المحلي غير مفصل بما يكفي.",
+      "React وNext.js وNestJS وTypeScript مدعومة بإعلانات وظائف؛ AWS خبرة مفضلة لا كشف معماري.",
+      "Python لم يُثبت كمكوّن مركزي حالي، لذلك أزيل من المكدس الأساسي.",
+      "المقاييس التشغيلية والتمويلية صادرة عن الشركة أو المستثمرين وليست قوائم مالية عامة مدققة."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_at": "2026-08-03",
+      "checks_passed": 118,
+      "checks_failed": 0,
+      "checks": [
+        {
+          "name": "base_key_id",
+          "passed": true,
+          "details": "id موجود"
+        },
+        {
+          "name": "base_key_slug",
+          "passed": true,
+          "details": "slug موجود"
+        },
+        {
+          "name": "base_key_name",
+          "passed": true,
+          "details": "name موجود"
+        },
+        {
+          "name": "base_key_headline",
+          "passed": true,
+          "details": "headline موجود"
+        },
+        {
+          "name": "base_key_category",
+          "passed": true,
+          "details": "category موجود"
+        },
+        {
+          "name": "base_key_company",
+          "passed": true,
+          "details": "company موجود"
+        },
+        {
+          "name": "base_key_directory_snapshot",
+          "passed": true,
+          "details": "directory_snapshot موجود"
+        },
+        {
+          "name": "base_key_overview",
+          "passed": true,
+          "details": "overview موجود"
+        },
+        {
+          "name": "base_key_market_data",
+          "passed": true,
+          "details": "market_data موجود"
+        },
+        {
+          "name": "base_key_financials",
+          "passed": true,
+          "details": "financials موجود"
+        },
+        {
+          "name": "base_key_lessons",
+          "passed": true,
+          "details": "lessons موجود"
+        },
+        {
+          "name": "base_key_tools",
+          "passed": true,
+          "details": "tools موجود"
+        },
+        {
+          "name": "v2_key_verification",
+          "passed": true,
+          "details": "verification موجود"
+        },
+        {
+          "name": "v2_key_evidence_map_schema",
+          "passed": true,
+          "details": "evidence_map_schema موجود"
+        },
+        {
+          "name": "v2_key_evidence_map",
+          "passed": true,
+          "details": "evidence_map موجود"
+        },
+        {
+          "name": "v2_key_sources",
+          "passed": true,
+          "details": "sources موجود"
+        },
+        {
+          "name": "root_object",
+          "passed": true,
+          "details": "الجذر كائن"
+        },
+        {
+          "name": "id_preserved",
+          "passed": true,
+          "details": "id محفوظ"
+        },
+        {
+          "name": "slug_preserved",
+          "passed": true,
+          "details": "slug محفوظ"
+        },
+        {
+          "name": "name_preserved",
+          "passed": true,
+          "details": "name محفوظ"
+        },
+        {
+          "name": "arabic_content",
+          "passed": true,
+          "details": "المحتوى عربي"
+        },
+        {
+          "name": "source_count",
+          "passed": true,
+          "details": "21 مصادر"
+        },
+        {
+          "name": "source_ids_unique",
+          "passed": true,
+          "details": "معرفات فريدة"
+        },
+        {
+          "name": "source_urls_unique",
+          "passed": true,
+          "details": "روابط فريدة"
+        },
+        {
+          "name": "source_urls_valid",
+          "passed": true,
+          "details": "روابط صحيحة"
+        },
+        {
+          "name": "all_primary",
+          "passed": true,
+          "details": "مصادر أولية"
+        },
+        {
+          "name": "evidence_paths_15",
+          "passed": true,
+          "details": "15 مسار دليل"
+        },
+        {
+          "name": "value_match_$.company.location",
+          "passed": true,
+          "details": "تطابق $.company.location"
+        },
+        {
+          "name": "fields_$.company.location",
+          "passed": true,
+          "details": "حقول $.company.location"
+        },
+        {
+          "name": "source_count_$.company.location",
+          "passed": true,
+          "details": "عدد مصادر $.company.location"
+        },
+        {
+          "name": "source_ids_$.company.location",
+          "passed": true,
+          "details": "مصادر $.company.location"
+        },
+        {
+          "name": "ref_integrity_$.company.location",
+          "passed": true,
+          "details": "تكامل $.company.location"
+        },
+        {
+          "name": "value_match_$.company.business_model",
+          "passed": true,
+          "details": "تطابق $.company.business_model"
+        },
+        {
+          "name": "fields_$.company.business_model",
+          "passed": true,
+          "details": "حقول $.company.business_model"
+        },
+        {
+          "name": "source_count_$.company.business_model",
+          "passed": true,
+          "details": "عدد مصادر $.company.business_model"
+        },
+        {
+          "name": "source_ids_$.company.business_model",
+          "passed": true,
+          "details": "مصادر $.company.business_model"
+        },
+        {
+          "name": "ref_integrity_$.company.business_model",
+          "passed": true,
+          "details": "تكامل $.company.business_model"
+        },
+        {
+          "name": "value_match_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "تطابق $.directory_snapshot.monthly_revenue"
+        },
+        {
+          "name": "fields_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "حقول $.directory_snapshot.monthly_revenue"
+        },
+        {
+          "name": "source_count_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "عدد مصادر $.directory_snapshot.monthly_revenue"
+        },
+        {
+          "name": "source_ids_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "مصادر $.directory_snapshot.monthly_revenue"
+        },
+        {
+          "name": "ref_integrity_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "تكامل $.directory_snapshot.monthly_revenue"
+        },
+        {
+          "name": "value_match_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "تطابق $.directory_snapshot.monthly_traffic"
+        },
+        {
+          "name": "fields_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "حقول $.directory_snapshot.monthly_traffic"
+        },
+        {
+          "name": "source_count_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "عدد مصادر $.directory_snapshot.monthly_traffic"
+        },
+        {
+          "name": "source_ids_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "مصادر $.directory_snapshot.monthly_traffic"
+        },
+        {
+          "name": "ref_integrity_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "تكامل $.directory_snapshot.monthly_traffic"
+        },
+        {
+          "name": "value_match_$.overview.problem",
+          "passed": true,
+          "details": "تطابق $.overview.problem"
+        },
+        {
+          "name": "fields_$.overview.problem",
+          "passed": true,
+          "details": "حقول $.overview.problem"
+        },
+        {
+          "name": "source_count_$.overview.problem",
+          "passed": true,
+          "details": "عدد مصادر $.overview.problem"
+        },
+        {
+          "name": "source_ids_$.overview.problem",
+          "passed": true,
+          "details": "مصادر $.overview.problem"
+        },
+        {
+          "name": "ref_integrity_$.overview.problem",
+          "passed": true,
+          "details": "تكامل $.overview.problem"
+        },
+        {
+          "name": "value_match_$.overview.solution",
+          "passed": true,
+          "details": "تطابق $.overview.solution"
+        },
+        {
+          "name": "fields_$.overview.solution",
+          "passed": true,
+          "details": "حقول $.overview.solution"
+        },
+        {
+          "name": "source_count_$.overview.solution",
+          "passed": true,
+          "details": "عدد مصادر $.overview.solution"
+        },
+        {
+          "name": "source_ids_$.overview.solution",
+          "passed": true,
+          "details": "مصادر $.overview.solution"
+        },
+        {
+          "name": "ref_integrity_$.overview.solution",
+          "passed": true,
+          "details": "تكامل $.overview.solution"
+        },
+        {
+          "name": "value_match_$.market_data.target_audience",
+          "passed": true,
+          "details": "تطابق $.market_data.target_audience"
+        },
+        {
+          "name": "fields_$.market_data.target_audience",
+          "passed": true,
+          "details": "حقول $.market_data.target_audience"
+        },
+        {
+          "name": "source_count_$.market_data.target_audience",
+          "passed": true,
+          "details": "عدد مصادر $.market_data.target_audience"
+        },
+        {
+          "name": "source_ids_$.market_data.target_audience",
+          "passed": true,
+          "details": "مصادر $.market_data.target_audience"
+        },
+        {
+          "name": "ref_integrity_$.market_data.target_audience",
+          "passed": true,
+          "details": "تكامل $.market_data.target_audience"
+        },
+        {
+          "name": "value_match_$.market_data.market_size",
+          "passed": true,
+          "details": "تطابق $.market_data.market_size"
+        },
+        {
+          "name": "fields_$.market_data.market_size",
+          "passed": true,
+          "details": "حقول $.market_data.market_size"
+        },
+        {
+          "name": "source_count_$.market_data.market_size",
+          "passed": true,
+          "details": "عدد مصادر $.market_data.market_size"
+        },
+        {
+          "name": "source_ids_$.market_data.market_size",
+          "passed": true,
+          "details": "مصادر $.market_data.market_size"
+        },
+        {
+          "name": "ref_integrity_$.market_data.market_size",
+          "passed": true,
+          "details": "تكامل $.market_data.market_size"
+        },
+        {
+          "name": "value_match_$.market_data.growth_rate",
+          "passed": true,
+          "details": "تطابق $.market_data.growth_rate"
+        },
+        {
+          "name": "fields_$.market_data.growth_rate",
+          "passed": true,
+          "details": "حقول $.market_data.growth_rate"
+        },
+        {
+          "name": "source_count_$.market_data.growth_rate",
+          "passed": true,
+          "details": "عدد مصادر $.market_data.growth_rate"
+        },
+        {
+          "name": "source_ids_$.market_data.growth_rate",
+          "passed": true,
+          "details": "مصادر $.market_data.growth_rate"
+        },
+        {
+          "name": "ref_integrity_$.market_data.growth_rate",
+          "passed": true,
+          "details": "تكامل $.market_data.growth_rate"
+        },
+        {
+          "name": "value_match_$.financials.initial_investment",
+          "passed": true,
+          "details": "تطابق $.financials.initial_investment"
+        },
+        {
+          "name": "fields_$.financials.initial_investment",
+          "passed": true,
+          "details": "حقول $.financials.initial_investment"
+        },
+        {
+          "name": "source_count_$.financials.initial_investment",
+          "passed": true,
+          "details": "عدد مصادر $.financials.initial_investment"
+        },
+        {
+          "name": "source_ids_$.financials.initial_investment",
+          "passed": true,
+          "details": "مصادر $.financials.initial_investment"
+        },
+        {
+          "name": "ref_integrity_$.financials.initial_investment",
+          "passed": true,
+          "details": "تكامل $.financials.initial_investment"
+        },
+        {
+          "name": "value_match_$.financials.valuation",
+          "passed": true,
+          "details": "تطابق $.financials.valuation"
+        },
+        {
+          "name": "fields_$.financials.valuation",
+          "passed": true,
+          "details": "حقول $.financials.valuation"
+        },
+        {
+          "name": "source_count_$.financials.valuation",
+          "passed": true,
+          "details": "عدد مصادر $.financials.valuation"
+        },
+        {
+          "name": "source_ids_$.financials.valuation",
+          "passed": true,
+          "details": "مصادر $.financials.valuation"
+        },
+        {
+          "name": "ref_integrity_$.financials.valuation",
+          "passed": true,
+          "details": "تكامل $.financials.valuation"
+        },
+        {
+          "name": "value_match_$.financials.revenue_streams",
+          "passed": true,
+          "details": "تطابق $.financials.revenue_streams"
+        },
+        {
+          "name": "fields_$.financials.revenue_streams",
+          "passed": true,
+          "details": "حقول $.financials.revenue_streams"
+        },
+        {
+          "name": "source_count_$.financials.revenue_streams",
+          "passed": true,
+          "details": "عدد مصادر $.financials.revenue_streams"
+        },
+        {
+          "name": "source_ids_$.financials.revenue_streams",
+          "passed": true,
+          "details": "مصادر $.financials.revenue_streams"
+        },
+        {
+          "name": "ref_integrity_$.financials.revenue_streams",
+          "passed": true,
+          "details": "تكامل $.financials.revenue_streams"
+        },
+        {
+          "name": "value_match_$.tools",
+          "passed": true,
+          "details": "تطابق $.tools"
+        },
+        {
+          "name": "fields_$.tools",
+          "passed": true,
+          "details": "حقول $.tools"
+        },
+        {
+          "name": "source_count_$.tools",
+          "passed": true,
+          "details": "عدد مصادر $.tools"
+        },
+        {
+          "name": "source_ids_$.tools",
+          "passed": true,
+          "details": "مصادر $.tools"
+        },
+        {
+          "name": "ref_integrity_$.tools",
+          "passed": true,
+          "details": "تكامل $.tools"
+        },
+        {
+          "name": "value_match_$.headline",
+          "passed": true,
+          "details": "تطابق $.headline"
+        },
+        {
+          "name": "fields_$.headline",
+          "passed": true,
+          "details": "حقول $.headline"
+        },
+        {
+          "name": "source_count_$.headline",
+          "passed": true,
+          "details": "عدد مصادر $.headline"
+        },
+        {
+          "name": "source_ids_$.headline",
+          "passed": true,
+          "details": "مصادر $.headline"
+        },
+        {
+          "name": "ref_integrity_$.headline",
+          "passed": true,
+          "details": "تكامل $.headline"
+        },
+        {
+          "name": "value_match_$.lessons",
+          "passed": true,
+          "details": "تطابق $.lessons"
+        },
+        {
+          "name": "fields_$.lessons",
+          "passed": true,
+          "details": "حقول $.lessons"
+        },
+        {
+          "name": "source_count_$.lessons",
+          "passed": true,
+          "details": "عدد مصادر $.lessons"
+        },
+        {
+          "name": "source_ids_$.lessons",
+          "passed": true,
+          "details": "مصادر $.lessons"
+        },
+        {
+          "name": "ref_integrity_$.lessons",
+          "passed": true,
+          "details": "تكامل $.lessons"
+        },
+        {
+          "name": "no_nan",
+          "passed": true,
+          "details": "لا قيم غير صالحة"
+        },
+        {
+          "name": "old_revenue_removed",
+          "passed": true,
+          "details": "أزيل الإيراد القديم"
+        },
+        {
+          "name": "old_traffic_removed",
+          "passed": true,
+          "details": "أزيل بديل الزيارات"
+        },
+        {
+          "name": "revenue_undisclosed",
+          "passed": true,
+          "details": "الإيراد غير مختلق"
+        },
+        {
+          "name": "traffic_undisclosed",
+          "passed": true,
+          "details": "الزيارات غير مختلقة"
+        },
+        {
+          "name": "gmv_separated",
+          "passed": true,
+          "details": "GMV مفصول"
+        },
+        {
+          "name": "valuation_undisclosed",
+          "passed": true,
+          "details": "التقييم غير مختلق"
+        },
+        {
+          "name": "funding_96",
+          "passed": true,
+          "details": "الجولات المعلنة"
+        },
+        {
+          "name": "bank_dependency",
+          "passed": true,
+          "details": "قرار البنك"
+        },
+        {
+          "name": "tam_conflict",
+          "passed": true,
+          "details": "تعارض المقاييس"
+        },
+        {
+          "name": "growth_no_single_rate",
+          "passed": true,
+          "details": "لا معدل مختلق"
+        },
+        {
+          "name": "lessons_unique",
+          "passed": true,
+          "details": "دروس فريدة"
+        },
+        {
+          "name": "tools_caveated",
+          "passed": true,
+          "details": "المكدس مقيد"
+        },
+        {
+          "name": "schema_version",
+          "passed": true,
+          "details": "إصدار المخطط"
+        },
+        {
+          "name": "metric_separation",
+          "passed": true,
+          "details": "فصل المقاييس"
+        },
+        {
+          "name": "verified_dates",
+          "passed": true,
+          "details": "التاريخ متسق"
+        }
+      ],
+      "validator_notes": [
+        "تمت قراءة الملف الأصلي والتحقق من صحة JSON.",
+        "تم الحفاظ على البنية الأساسية وإضافة Professional V2.",
+        "تمت مطابقة كل field_value مع الحقل النهائي.",
+        "تم التحقق من معرّفات المصادر والروابط.",
+        "تم الفصل بين الإيراد والتقييم والتمويل وGMV والقروض والعمولات.",
+        "تم الفصل بين الزيارات والمستخدمين والعملاء والبنوك والموظفين والأسواق.",
+        "تم منع NaN وInfinity والتقديرات غير المدعومة."
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول الجوهرية بالقيم النهائية والمصادر والقيود، مع فصل المقاييس المالية والتشغيلية.",
+    "required_fields": [
+      "field_value",
+      "verification_status",
+      "confidence",
+      "claim_type",
+      "verified_on",
+      "evidence_summary",
+      "source_ids",
+      "source_references",
+      "limitations",
+      "source_count"
+    ],
+    "verification_status_values": [
+      "analytical_inference_grounded_in_company_sources",
+      "verified_as_not_publicly_disclosed",
+      "verified_as_not_publicly_disclosed_with_gmv_separation",
+      "verified_current_product_and_bank_dependency",
+      "verified_directional_growth_no_comparable_single_rate",
+      "verified_disclosed_rounds_with_undisclosed_round_excluded",
+      "verified_editorial_synthesis",
+      "verified_headquarters_licenses_and_declared_markets",
+      "verified_multi_sided_commission_model",
+      "verified_multi_stakeholder_audience_with_market_limits",
+      "verified_no_current_tam_with_historical_metric_conflict",
+      "verified_problem_with_timing_claim_removed",
+      "verified_product_capabilities_and_job_posting_stack_with_caveats",
+      "verified_revenue_pathways_not_actuals",
+      "verified_traffic_undisclosed_operating_metrics_separated"
+    ],
+    "confidence_scale": {
+      "مرتفعة": "مصدر قانوني أو رسمي واضح، أو عدم وجود إفصاح بعد مراجعة المصادر الأولية.",
+      "متوسطة إلى مرتفعة": "عدة مصادر أولية مع قيد في التعريف أو الاستقلال.",
+      "متوسطة": "استنتاج تحريري مبني على أدلة معلنة مع قيود.",
+      "منخفضة": "دليل غير كاف؛ لا تستخدم لإثبات رقم مالي."
+    },
+    "metric_separation": [
+      "الإيراد الشهري",
+      "الإيراد السنوي",
+      "الربح",
+      "التقييم",
+      "التمويل",
+      "GMV",
+      "قيمة المعاملات العقارية",
+      "قيمة القروض",
+      "عمولة المقرض",
+      "عمولة الوساطة العقارية",
+      "عمولة الوكيل",
+      "زيارات الموقع",
+      "المستخدمون النشطون",
+      "ملاك المنازل المخدومون",
+      "الشركاء البنكيون",
+      "الموظفون",
+      "الأسواق",
+      "طلبات الرهن",
+      "القروض المصروفة"
+    ]
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "Huspy شركة خاصة تأسست في دبي وأطلقت أعمالها عام 2020. تذكر صفحتها الرسمية مكاتب في دبي وأبوظبي ومدريد وفالنسيا، بينما تعلن صفحة الوظائف في 2026 وجودًا في خمس أسواق: الإمارات وإسبانيا والسعودية وإيطاليا وتركيا. في الإمارات تُقدم الخدمات عبر كيانات مرخصة تشمل Huspy Properties وHuspy Mortgage Broker، مع تراخيص تجارية وRERA منشورة. الوجود في سوق أو خطة إطلاق لا يساوي بالضرورة مكتبًا كاملًا أو ترخيصًا متماثلًا في كل دولة.",
+      "verification_status": "verified_headquarters_licenses_and_declared_markets",
+      "confidence": "مرتفعة",
+      "claim_type": "هوية وموقع وتنظيم",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المقر والمكاتب والكيانات الإماراتية والتراخيص مدعومة رسميًا، والأسواق الخمسة إفصاح تشغيلي.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "id": "SRC-01",
+          "title": "Huspy — About us",
+          "publisher": "Huspy",
+          "url": "https://huspy.com/ae/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-01",
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Headquarters and offices",
+          "supports": "المقر والمكاتب"
+        },
+        {
+          "id": "SRC-02",
+          "title": "Huspy — UAE Licenses",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/licenses",
+          "source_type": "صفحة تراخيص رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-02",
+          "evidence_type": "تراخيص شركة",
+          "source_locator": "UAE licences",
+          "supports": "الكيانات والتراخيص"
+        },
+        {
+          "id": "SRC-08",
+          "title": "Huspy — Careers",
+          "publisher": "Huspy",
+          "url": "https://huspy.com/careers",
+          "source_type": "صفحة تشغيل وتوظيف رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-08",
+          "evidence_type": "إفصاح تشغيل",
+          "source_locator": "2026 markets",
+          "supports": "الأسواق الخمسة"
+        }
+      ],
+      "limitations": "لم تُراجع تراخيص كل سوق خارج الإمارات بصورة مستقلة.",
+      "source_count": 3
+    },
+    "$.company.business_model": {
+      "field_value": "نموذج وساطة وسوق متعدد الأطراف. خدمات الرهن الموجهة للمشتري في الإمارات تُسوّق عادةً بلا رسوم مباشرة عليه، بينما تستمد اقتصادياتها من عمولات المقرضين عند نجاح التمويل. ويضيف نشاط الوساطة العقارية عمولات مرتبطة ببيع وشراء العقارات، مع مشاركة جزء من اقتصاديات الصفقة مع الوكلاء والوسطاء المحيلين. كما توفر الشركة منصات تشغيل B2B للوكلاء والوسطاء وشراكات تمويل تسليم مع المطورين. لم تُفصح عن توزيع الإيراد بين الرهن والعقارات والأسواق أو عن متوسط العمولة.",
+      "verification_status": "verified_multi_sided_commission_model",
+      "confidence": "مرتفعة",
+      "claim_type": "نموذج عمل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم المصادر نموذج عمولات المقرضين والوساطة العقارية ومشاركة الوكلاء ومنصات B2B.",
+      "source_ids": [
+        "SRC-16",
+        "SRC-15",
+        "SRC-02",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "id": "SRC-16",
+          "title": "4 ways technology is changing the mortgage industry",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/blog/technology-changing-mortgage-industry",
+          "source_type": "مقال رسمي عن النموذج الاقتصادي",
+          "published_at": "2023",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-16",
+          "evidence_type": "شرح نموذج",
+          "source_locator": "Lender commission",
+          "supports": "عمولة المقرض"
+        },
+        {
+          "id": "SRC-15",
+          "title": "How to maximize commission with Huspy Agent app",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/blog/maximize-commission-huspy-agent-app",
+          "source_type": "إفصاح منتج وشراكات",
+          "published_at": "2022-12-12",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-15",
+          "evidence_type": "برنامج شركاء",
+          "source_locator": "Agent economics",
+          "supports": "مشاركة العمولة"
+        },
+        {
+          "id": "SRC-02",
+          "title": "Huspy — UAE Licenses",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/licenses",
+          "source_type": "صفحة تراخيص رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-02",
+          "evidence_type": "تراخيص",
+          "source_locator": "Brokerage activities",
+          "supports": "نشاط الوساطة"
+        },
+        {
+          "id": "SRC-13",
+          "title": "Huspy — Broker Portal",
+          "publisher": "Huspy",
+          "url": "https://huspy.com/ae/content/brokers",
+          "source_type": "صفحة منتج B2B رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-13",
+          "evidence_type": "منتج B2B",
+          "source_locator": "Broker portal",
+          "supports": "منصة الوسطاء"
+        }
+      ],
+      "limitations": "لا توجد نسب عمولة أو مزيج إيراد منشور.",
+      "source_count": 4
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير مُفصح عنه علنًا. لا توجد قوائم مالية أو قيمة موثوقة للإيراد الشهري أو السنوي أو الربح. رقم أكثر من 7 مليارات دولار في 2025 هو قيمة معاملات عقارية سنوية تمر عبر المنصة، وليس إيرادًا. كذلك لا يجوز استخدام 25% من الرهون السكنية في دبي أو عمولات الوكلاء لتقدير MRR من دون معرفة قيمة القروض المغلقة ومعدلات العمولة وصافي المشاركة.",
+      "verification_status": "verified_as_not_publicly_disclosed_with_gmv_separation",
+      "confidence": "مرتفعة",
+      "claim_type": "إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد MRR أو ARR منشور؛ تم فصل حجم المعاملات وحصة السوق والتمويل عن الإيراد.",
+      "source_ids": [
+        "SRC-06",
+        "SRC-05",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "id": "SRC-06",
+          "title": "Huspy raises $59 million Series B",
+          "publisher": "Huspy via PR Newswire",
+          "url": "https://www.prnewswire.co.uk/news-releases/huspy-raises-59-million-series-b-led-by-balderton-capital-to-accelerate-expansion-across-europe-and-the-middle-east-302500296.html",
+          "source_type": "بيان تمويل صادر عن الشركة",
+          "published_at": "2025-07-08",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-06",
+          "evidence_type": "بيان شركة",
+          "source_locator": "Annual transaction volume",
+          "supports": "7B+ معاملات"
+        },
+        {
+          "id": "SRC-05",
+          "title": "Huspy Secures Investment Round, led by Balderton Capital",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/blog/balderton-huspy",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2024-05-22",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-05",
+          "evidence_type": "إفصاح شركة",
+          "source_locator": "Dubai mortgage share",
+          "supports": "25%+ تاريخيًا"
+        },
+        {
+          "id": "SRC-16",
+          "title": "4 ways technology is changing the mortgage industry",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/blog/technology-changing-mortgage-industry",
+          "source_type": "مقال رسمي عن النموذج الاقتصادي",
+          "published_at": "2023",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-16",
+          "evidence_type": "شرح نموذج",
+          "source_locator": "Commission pathway",
+          "supports": "مسار الإيراد"
+        }
+      ],
+      "limitations": "غياب الإفصاح يمنع التقدير ولا يثبت عدم وجود إيراد كبير.",
+      "source_count": 3
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير مُفصح عنه علنًا، ولا يوجد رقم رسمي موثوق لزيارات الموقع أو MAU أو DAU. أحدث مقاييس تشغيلية منشورة تشمل خدمة أكثر من 12 ألف مالك منزل، وشراكات مع أكثر من 20 بنكًا، و950+ موظفًا ووجودًا معلنًا في خمس أسواق. كما تعرض بوابة الوسطاء 2B+ submissions و500M+ disbursals بلا عملة أو فترة أو تعريف محاسبي واضح، لذلك لم تُستخدم كبديل عن الزيارات أو المستخدمين.",
+      "verification_status": "verified_traffic_undisclosed_operating_metrics_separated",
+      "confidence": "مرتفعة",
+      "claim_type": "زيارات واستخدام",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا توجد زيارات أو MAU رسمية؛ تم فصل العملاء والبنوك والموظفين والأسواق ومقاييس البوابة.",
+      "source_ids": [
+        "SRC-11",
+        "SRC-08",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "id": "SRC-11",
+          "title": "Huspy Partners with Skyline Builders",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/blog/skyline-builders-huspy-financing-partnership",
+          "source_type": "إعلان شراكة رسمي",
+          "published_at": "2026-07-08",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-11",
+          "evidence_type": "إفصاح 2026",
+          "source_locator": "Homeowners and banks",
+          "supports": "12K+ و20+"
+        },
+        {
+          "id": "SRC-08",
+          "title": "Huspy — Careers",
+          "publisher": "Huspy",
+          "url": "https://huspy.com/careers",
+          "source_type": "صفحة تشغيل وتوظيف رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-08",
+          "evidence_type": "إفصاح تشغيل",
+          "source_locator": "Workforce and markets",
+          "supports": "950+ وخمس أسواق"
+        },
+        {
+          "id": "SRC-13",
+          "title": "Huspy — Broker Portal",
+          "publisher": "Huspy",
+          "url": "https://huspy.com/ae/content/brokers",
+          "source_type": "صفحة منتج B2B رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-13",
+          "evidence_type": "منتج B2B",
+          "source_locator": "Portal metrics",
+          "supports": "مقاييس بلا تعريف كامل"
+        }
+      ],
+      "limitations": "الأرقام ذاتية الإفصاح ولا تكشف المستخدمين النشطين.",
+      "source_count": 3
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "شراء المنزل وتمويله عملية موزعة بين الباحث عن عقار والوكيل والوسيط والمطور والبنك والمثمن والجهات الحكومية. اختلاف الأهلية وأسعار البنوك وكثرة الوثائق والمتابعة اليدوية يجعل المقارنة والتقديم والإغلاق بطيئًا وقليل الشفافية، كما يضطر الوسطاء والوكلاء إلى استخدام أدوات منفصلة لإدارة العملاء والوثائق والحالات.",
+        "impact": "قد يؤدي التجزؤ إلى تأخر الموافقة أو التسليم، وفقدان صفقات، وتكرار إدخال البيانات، وصعوبة معرفة حالة الملف وتكلفته الحقيقية. لم يُعثر على دراسة مستقلة تثبت أن كل حالة كانت تستغرق أسابيع أو أن الموافقة المبدئية تتم في دقائق؛ لذلك أزيلت صياغة الضمان الزمني المطلق."
+      },
+      "verification_status": "verified_problem_with_timing_claim_removed",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "مشكلة سوقية",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم المصادر تجزؤ العملية والعمليات اليدوية، مع إزالة الضمانات الزمنية المطلقة.",
+      "source_ids": [
+        "SRC-03",
+        "SRC-09",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "id": "SRC-03",
+          "title": "Huspy — Terms and Conditions",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/terms-and-conditions",
+          "source_type": "شروط قانونية رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-03",
+          "evidence_type": "شروط منصة",
+          "source_locator": "Parties and providers",
+          "supports": "تعدد الأطراف"
+        },
+        {
+          "id": "SRC-09",
+          "title": "Huspy — UAE Mortgage",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/mortgage",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-09",
+          "evidence_type": "منتج",
+          "source_locator": "Mortgage process",
+          "supports": "خطوات التمويل"
+        },
+        {
+          "id": "SRC-16",
+          "title": "4 ways technology is changing the mortgage industry",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/blog/technology-changing-mortgage-industry",
+          "source_type": "مقال رسمي عن النموذج الاقتصادي",
+          "published_at": "2023",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-16",
+          "evidence_type": "مقال رسمي",
+          "source_locator": "Fragmentation",
+          "supports": "التجزؤ والتكلفة"
+        }
+      ],
+      "limitations": "لا توجد دراسة مستقلة لمتوسط الزمن أو الضرر.",
+      "source_count": 3
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "تجمع Huspy مقارنة عروض الرهن والإرشاد البشري وإدارة المستندات والتقديم والمتابعة حتى الصرف، إلى جانب البحث عن العقارات والوساطة العقارية. وللوكلاء والوسطاء توفر بوابة لإدارة الحالات وClient Vault واستخراج البيانات عبر OCR وتعبئة النماذج والتوقيع الرقمي وتتبع الحالة وروبوت محادثة لسياسات البنوك. تعلن الشركة إمكانية إتمام الرهن في نحو أسبوعين لبعض المسارات، لكن القرار الائتماني النهائي وشروط القرض يصدران عن البنك ولا تضمنهما المنصة."
+      },
+      "verification_status": "verified_current_product_and_bank_dependency",
+      "confidence": "مرتفعة",
+      "claim_type": "منتج وحل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المنصة وأدوات الوسيط موثقة، والبنك يبقى صاحب القرار الائتماني.",
+      "source_ids": [
+        "SRC-09",
+        "SRC-13",
+        "SRC-03",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "id": "SRC-09",
+          "title": "Huspy — UAE Mortgage",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/mortgage",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-09",
+          "evidence_type": "منتج",
+          "source_locator": "Mortgage services",
+          "supports": "الإرشاد والمتابعة"
+        },
+        {
+          "id": "SRC-13",
+          "title": "Huspy — Broker Portal",
+          "publisher": "Huspy",
+          "url": "https://huspy.com/ae/content/brokers",
+          "source_type": "صفحة منتج B2B رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-13",
+          "evidence_type": "منتج B2B",
+          "source_locator": "OCR, Vault, AI",
+          "supports": "أدوات التشغيل"
+        },
+        {
+          "id": "SRC-03",
+          "title": "Huspy — Terms and Conditions",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/terms-and-conditions",
+          "source_type": "شروط قانونية رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-03",
+          "evidence_type": "شروط قانونية",
+          "source_locator": "Third-party providers",
+          "supports": "دور البنوك"
+        },
+        {
+          "id": "SRC-10",
+          "title": "Huspy — Find and finance your new home",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/content",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-10",
+          "evidence_type": "منتج",
+          "source_locator": "Properties and finance",
+          "supports": "دمج العقار والتمويل"
+        }
+      ],
+      "limitations": "ادعاء الأسبوعين مشروط ولا يمثل ضمانًا.",
+      "source_count": 4
+    },
+    "$.market_data.target_audience": {
+      "field_value": "مشترو وبائعو العقارات في الإمارات وإسبانيا والأسواق الجديدة، بمن فيهم المقيمون وغير المقيمين في الإمارات، إضافة إلى الوكلاء العقاريين ووسطاء الرهن والبنوك والمطورين وعملاء تمويل التسليم والعقارات على الخارطة. تختلف الأهلية والمنتجات والترخيص والعمولات من سوق إلى آخر، لذلك لا يجوز اعتبار كل خدمة متاحة في البلدان الخمسة بالصيغة نفسها.",
+      "verification_status": "verified_multi_stakeholder_audience_with_market_limits",
+      "confidence": "مرتفعة",
+      "claim_type": "جمهور مستهدف",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المشترون والبائعون والوكلاء والوسطاء والبنوك والمطورون مدعومون بمصادر المنتج والشراكات.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-09",
+        "SRC-13",
+        "SRC-14",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "id": "SRC-01",
+          "title": "Huspy — About us",
+          "publisher": "Huspy",
+          "url": "https://huspy.com/ae/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-01",
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Stakeholders",
+          "supports": "المشترون والبائعون"
+        },
+        {
+          "id": "SRC-09",
+          "title": "Huspy — UAE Mortgage",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/mortgage",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-09",
+          "evidence_type": "منتج تمويل",
+          "source_locator": "Resident/non-resident",
+          "supports": "المقيمون وغير المقيمين"
+        },
+        {
+          "id": "SRC-13",
+          "title": "Huspy — Broker Portal",
+          "publisher": "Huspy",
+          "url": "https://huspy.com/ae/content/brokers",
+          "source_type": "صفحة منتج B2B رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-13",
+          "evidence_type": "منتج",
+          "source_locator": "Brokers",
+          "supports": "الوسطاء"
+        },
+        {
+          "id": "SRC-14",
+          "title": "Huspy — Agents",
+          "publisher": "Huspy",
+          "url": "https://huspy.com/ae/content/agents",
+          "source_type": "صفحة منتج للشركاء رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-14",
+          "evidence_type": "منتج",
+          "source_locator": "Agents",
+          "supports": "الوكلاء"
+        },
+        {
+          "id": "SRC-12",
+          "title": "Huspy partnership with Dubai Holding Real Estate",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/blog/dubai-holding-real-estate-huspy-financing-partnership",
+          "source_type": "إعلان شراكة رسمي",
+          "published_at": "2026-05-14",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-12",
+          "evidence_type": "شراكة",
+          "source_locator": "Handover financing",
+          "supports": "المطورون"
+        }
+      ],
+      "limitations": "الخدمات والترخيص تختلف حسب السوق.",
+      "source_count": 5
+    },
+    "$.market_data.market_size": {
+      "field_value": "لم تنشر Huspy دراسة حديثة قابلة للتحقق لحجم السوق القابل للخدمة. ذكرت في 2022 تقديرًا بـ13 مليار دولار لـTAM عبر الإمارات وإسبانيا، وفي مادة أخرى أشارت إلى فرصة GMV بنحو 400 مليار دولار؛ وهما مقياسان مختلفان وتعريفاتهما غير منشورة بما يكفي. لذلك لم يُستخدم أي منهما كحجم سوق حالي. رقم 7 مليارات دولار سنويًا يمثل حجم معاملات الشركة المعلن في 2025، لا حجم السوق.",
+      "verification_status": "verified_no_current_tam_with_historical_metric_conflict",
+      "confidence": "مرتفعة",
+      "claim_type": "حجم سوق",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التقديران التاريخيان مختلفا التعريف، ولذلك لم يعتمد أي منهما كحجم سوق حالي.",
+      "source_ids": [
+        "SRC-04",
+        "SRC-18",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "id": "SRC-04",
+          "title": "Huspy raises $37 million in Series A funding",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/blog/huspy-series-a",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2022-06-21",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-04",
+          "evidence_type": "إعلان تمويل",
+          "source_locator": "13B TAM",
+          "supports": "تقدير تاريخي"
+        },
+        {
+          "id": "SRC-18",
+          "title": "Huspy acquires Just Mortgages and Finance Lab",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/blog/huspy-acquires-just-mortgages-and-finance-lab",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2022",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-18",
+          "evidence_type": "إعلان استحواذ",
+          "source_locator": "400B GMV opportunity",
+          "supports": "مقياس مختلف"
+        },
+        {
+          "id": "SRC-06",
+          "title": "Huspy raises $59 million Series B",
+          "publisher": "Huspy via PR Newswire",
+          "url": "https://www.prnewswire.co.uk/news-releases/huspy-raises-59-million-series-b-led-by-balderton-capital-to-accelerate-expansion-across-europe-and-the-middle-east-302500296.html",
+          "source_type": "بيان تمويل صادر عن الشركة",
+          "published_at": "2025-07-08",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-06",
+          "evidence_type": "مقياس تشغيل",
+          "source_locator": "7B company volume",
+          "supports": "نطاق الشركة"
+        }
+      ],
+      "limitations": "تعريفات التقديرات غير منشورة بما يكفي.",
+      "source_count": 3
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا يوجد معدل نمو حديث موحد للإيراد أو العملاء أو القروض. توجد مؤشرات متفرقة: 2 مليار دولار GMV بمعدل سنوي ونمو شهري 25% في 2022، وأكثر من 20 ضعفًا لنشاط العقارات في إسبانيا خلال 2024، وأكثر من 7 مليارات دولار معاملات سنوية في 2025، ثم 12 ألف+ مالك منزل ووجود في خمس أسواق في 2026. اختلاف المقاييس والفترات والتعريفات يمنع تحويلها إلى CAGR واحد.",
+      "verification_status": "verified_directional_growth_no_comparable_single_rate",
+      "confidence": "مرتفعة",
+      "claim_type": "نمو",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "مؤشرات النمو متعددة وغير متجانسة، لذلك لم يُحسب معدل موحد.",
+      "source_ids": [
+        "SRC-04",
+        "SRC-06",
+        "SRC-11",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "id": "SRC-04",
+          "title": "Huspy raises $37 million in Series A funding",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/blog/huspy-series-a",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2022-06-21",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-04",
+          "evidence_type": "مقياس 2022",
+          "source_locator": "GMV and MoM",
+          "supports": "2B و25%"
+        },
+        {
+          "id": "SRC-06",
+          "title": "Huspy raises $59 million Series B",
+          "publisher": "Huspy via PR Newswire",
+          "url": "https://www.prnewswire.co.uk/news-releases/huspy-raises-59-million-series-b-led-by-balderton-capital-to-accelerate-expansion-across-europe-and-the-middle-east-302500296.html",
+          "source_type": "بيان تمويل صادر عن الشركة",
+          "published_at": "2025-07-08",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-06",
+          "evidence_type": "مقياس 2025",
+          "source_locator": "Spain and transactions",
+          "supports": "20x و7B"
+        },
+        {
+          "id": "SRC-11",
+          "title": "Huspy Partners with Skyline Builders",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/blog/skyline-builders-huspy-financing-partnership",
+          "source_type": "إعلان شراكة رسمي",
+          "published_at": "2026-07-08",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-11",
+          "evidence_type": "مقياس 2026",
+          "source_locator": "Homeowners and banks",
+          "supports": "12K+ و20+"
+        },
+        {
+          "id": "SRC-08",
+          "title": "Huspy — Careers",
+          "publisher": "Huspy",
+          "url": "https://huspy.com/careers",
+          "source_type": "صفحة تشغيل وتوظيف رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-08",
+          "evidence_type": "مقياس 2026",
+          "source_locator": "Markets and employees",
+          "supports": "5 و950+"
+        }
+      ],
+      "limitations": "المقاييس ذاتية الإفصاح وتختلف تعريفاتها.",
+      "source_count": 4
+    },
+    "$.financials.initial_investment": {
+      "field_value": "أعلنت Huspy Series A بقيمة 37 مليون دولار في يونيو 2022 بقيادة Sequoia Capital India، ثم جولة استراتيجية غير معلنة القيمة بقيادة Balderton في مايو 2024، ثم Series B بقيمة 59 مليون دولار في يوليو 2025 بقيادة Balderton. تمثل الجولتان المعلنتان رقميًا ما لا يقل عن 96 مليون دولار، من دون احتساب جولة البذرة أو جولة 2024 غير المعلنة. هذا تمويل رأسمالي وليس إيرادًا أو حجم معاملات.",
+      "verification_status": "verified_disclosed_rounds_with_undisclosed_round_excluded",
+      "confidence": "مرتفعة",
+      "claim_type": "تمويل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "Series A وB موثقتان رقميًا، وجولة 2024 موثقة بلا قيمة.",
+      "source_ids": [
+        "SRC-04",
+        "SRC-05",
+        "SRC-06",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "id": "SRC-04",
+          "title": "Huspy raises $37 million in Series A funding",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/blog/huspy-series-a",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2022-06-21",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-04",
+          "evidence_type": "تمويل",
+          "source_locator": "2022 Series A",
+          "supports": "37M"
+        },
+        {
+          "id": "SRC-05",
+          "title": "Huspy Secures Investment Round, led by Balderton Capital",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/blog/balderton-huspy",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2024-05-22",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-05",
+          "evidence_type": "تمويل",
+          "source_locator": "2024 round",
+          "supports": "قيمة غير معلنة"
+        },
+        {
+          "id": "SRC-06",
+          "title": "Huspy raises $59 million Series B",
+          "publisher": "Huspy via PR Newswire",
+          "url": "https://www.prnewswire.co.uk/news-releases/huspy-raises-59-million-series-b-led-by-balderton-capital-to-accelerate-expansion-across-europe-and-the-middle-east-302500296.html",
+          "source_type": "بيان تمويل صادر عن الشركة",
+          "published_at": "2025-07-08",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-06",
+          "evidence_type": "تمويل",
+          "source_locator": "2025 Series B",
+          "supports": "59M"
+        },
+        {
+          "id": "SRC-07",
+          "title": "Huspy raises $59M to accelerate expansion",
+          "publisher": "Balderton Capital",
+          "url": "https://www.balderton.com/news/huspy-raises-59-million-to-accelerate-expansion-across-europe-and-the-middle-east/",
+          "source_type": "إعلان رسمي من المستثمر",
+          "published_at": "2025-07",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-07",
+          "evidence_type": "تأكيد مستثمر",
+          "source_locator": "2025 round",
+          "supports": "59M"
+        }
+      ],
+      "limitations": "لا يشمل مجموع 96M البذرة أو جولة 2024.",
+      "source_count": 4
+    },
+    "$.financials.valuation": {
+      "field_value": "غير مُفصح عنه علنًا. قالت الشركة إن جولة 2024 تمت بتقييم أعلى بكثير من تقييم Series A في 2022، لكنها لم تنشر قيمة أي منهما. كما لم يتضمن إعلان Series B لعام 2025 تقييمًا. أزيل وصف «مئات الملايين» لأنه تقدير غير مدعوم.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "مرتفعة",
+      "claim_type": "تقييم",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد رقم تقييم منشور؛ وصف 2024 نسبي فقط.",
+      "source_ids": [
+        "SRC-05",
+        "SRC-06",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "id": "SRC-05",
+          "title": "Huspy Secures Investment Round, led by Balderton Capital",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/blog/balderton-huspy",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2024-05-22",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-05",
+          "evidence_type": "إعلان رسمي",
+          "source_locator": "Higher valuation",
+          "supports": "أعلى دون رقم"
+        },
+        {
+          "id": "SRC-06",
+          "title": "Huspy raises $59 million Series B",
+          "publisher": "Huspy via PR Newswire",
+          "url": "https://www.prnewswire.co.uk/news-releases/huspy-raises-59-million-series-b-led-by-balderton-capital-to-accelerate-expansion-across-europe-and-the-middle-east-302500296.html",
+          "source_type": "بيان تمويل صادر عن الشركة",
+          "published_at": "2025-07-08",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-06",
+          "evidence_type": "Series B",
+          "source_locator": "No valuation",
+          "supports": "غياب التقييم"
+        },
+        {
+          "id": "SRC-01",
+          "title": "Huspy — About us",
+          "publisher": "Huspy",
+          "url": "https://huspy.com/ae/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-01",
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Funding rounds",
+          "supports": "الجولات"
+        }
+      ],
+      "limitations": "لا يمكن اشتقاق التقييم من قيمة الجولة وحدها.",
+      "source_count": 3
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "عمولات من البنوك أو المقرضين عند إغلاق ملفات الرهن والتمويل، مع تسويق الخدمة الأساسية للمشتري في الإمارات بلا رسوم مباشرة في المسارات المنشورة.",
+        "عمولات الوساطة العقارية الناتجة عن تمثيل البائع أو المشتري وإغلاق صفقات العقارات عبر Huspy Properties والشبكات التابعة.",
+        "اقتصاديات شراكات الوكلاء ووسطاء الرهن: تستقبل Huspy الحالة وتديرها وتشارك عمولة الإغلاق مع المحيل أو الوكالة وفق الاتفاق.",
+        "خدمات تمويل التسليم والتمويل للعقارات على الخارطة وإعادة التمويل والإفراج عن حقوق الملكية والتمويل التجاري؛ مصادر الدخل فيها تبقى ضمن عمولات الوساطة والخدمات ولم تُفصح الشركة عن تفاصيلها.",
+        "خدمات عقارية مجاورة تعلن الشركة نيتها أو قدرتها على ربطها بالرحلة مثل الأثاث والتجهيز والصيانة وإدارة العقار؛ لم يُتحقق من كونها مساهمًا حاليًا جوهريًا في الإيراد."
+      ],
+      "verification_status": "verified_revenue_pathways_not_actuals",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "مسارات إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المسارات مدعومة بالنموذج والتراخيص والمنتجات، مع تقييد الخدمات المجاورة.",
+      "source_ids": [
+        "SRC-16",
+        "SRC-02",
+        "SRC-15",
+        "SRC-09",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "id": "SRC-16",
+          "title": "4 ways technology is changing the mortgage industry",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/blog/technology-changing-mortgage-industry",
+          "source_type": "مقال رسمي عن النموذج الاقتصادي",
+          "published_at": "2023",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-16",
+          "evidence_type": "شرح نموذج",
+          "source_locator": "Lender commissions",
+          "supports": "عمولة المقرض"
+        },
+        {
+          "id": "SRC-02",
+          "title": "Huspy — UAE Licenses",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/licenses",
+          "source_type": "صفحة تراخيص رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-02",
+          "evidence_type": "تراخيص",
+          "source_locator": "Mortgage and real estate brokerage",
+          "supports": "عمولات الوساطة"
+        },
+        {
+          "id": "SRC-15",
+          "title": "How to maximize commission with Huspy Agent app",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/blog/maximize-commission-huspy-agent-app",
+          "source_type": "إفصاح منتج وشراكات",
+          "published_at": "2022-12-12",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-15",
+          "evidence_type": "شركاء",
+          "source_locator": "Commission sharing",
+          "supports": "مشاركة الوكلاء"
+        },
+        {
+          "id": "SRC-09",
+          "title": "Huspy — UAE Mortgage",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/mortgage",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-09",
+          "evidence_type": "منتجات",
+          "source_locator": "Mortgage variants",
+          "supports": "أنواع الملفات"
+        },
+        {
+          "id": "SRC-01",
+          "title": "Huspy — About us",
+          "publisher": "Huspy",
+          "url": "https://huspy.com/ae/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-01",
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Adjacent services",
+          "supports": "خدمات مجاورة"
+        }
+      ],
+      "limitations": "لا توجد بيانات الإيراد حسب المنتج أو السوق.",
+      "source_count": 5
+    },
+    "$.tools": {
+      "field_value": [
+        "React وNext.js وJavaScript/TypeScript للواجهات وفق إعلانات التوظيف الحالية",
+        "NestJS وTypeScript للخدمات الخلفية وفق إعلانات التوظيف الحالية؛ Node.js إطار التشغيل الضمني لـNestJS",
+        "AWS مذكورة كخبرة مفضلة في وظائف هندسية، ولا تُعامل ككشف معماري كامل أو إثبات لكل بيئات الإنتاج",
+        "تطبيقات هاتف وشبكة أدوات للوكلاء والوسطاء؛ ظهرت وظائف React Native تاريخيًا، دون تأكيد أن كل التطبيقات الحالية تعتمد عليه",
+        "Client Vault لإدارة وثائق العملاء ومشاركتها",
+        "OCR لاستخراج البيانات وتعبئة نماذج طلبات البنوك",
+        "توقيع رقمي ونماذج إلكترونية وإشعارات حالة عبر البريد والرسائل وWhatsApp",
+        "روبوت محادثة مدعوم بالذكاء الاصطناعي للبحث في سياسات ومنتجات البنوك",
+        "حاسبات الأهلية والقدرة على الاقتراض وتكاليف الرهن",
+        "منصة مقارنة عروض وتتبّع الحالات وإدارة العملاء والمقترحات",
+        "واجهات APIs وخدمات استضافة ومعالجة بيانات مع أطراف خارجية وفق سياسة الخصوصية",
+        "Python لم يُثبت كمكوّن أساسي حالي في المصادر الرسمية؛ ظهر كخبرة إضافية في بعض وظائف الهندسة ولم يُدرج كمكدس مركزي"
+      ],
+      "verification_status": "verified_product_capabilities_and_job_posting_stack_with_caveats",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "تقنيات وأدوات",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "خصائص المنتج مؤكدة، والمكدس مستند إلى وظائف حالية مع قيود.",
+      "source_ids": [
+        "SRC-13",
+        "SRC-19",
+        "SRC-20",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "id": "SRC-13",
+          "title": "Huspy — Broker Portal",
+          "publisher": "Huspy",
+          "url": "https://huspy.com/ae/content/brokers",
+          "source_type": "صفحة منتج B2B رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-13",
+          "evidence_type": "منتج",
+          "source_locator": "OCR/Vault/AI",
+          "supports": "أدوات المنتج"
+        },
+        {
+          "id": "SRC-19",
+          "title": "Huspy — Backend engineering job",
+          "publisher": "Huspy via LinkedIn Jobs",
+          "url": "https://pl.linkedin.com/jobs/view/senior-backend-engineer-at-huspy-4158614534",
+          "source_type": "إعلان توظيف تقني",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-19",
+          "evidence_type": "وظيفة",
+          "source_locator": "Backend stack",
+          "supports": "NestJS/TypeScript"
+        },
+        {
+          "id": "SRC-20",
+          "title": "Huspy — Frontend engineering job",
+          "publisher": "Huspy via LinkedIn Jobs",
+          "url": "https://am.linkedin.com/jobs/view/frontend-engineer-at-huspy-4442032221",
+          "source_type": "إعلان توظيف تقني",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-20",
+          "evidence_type": "وظيفة",
+          "source_locator": "Frontend stack",
+          "supports": "React/Next.js"
+        },
+        {
+          "id": "SRC-21",
+          "title": "Huspy — Privacy Policy",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/privacy",
+          "source_type": "سياسة خصوصية رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-21",
+          "evidence_type": "سياسة",
+          "source_locator": "APIs/providers",
+          "supports": "خدمات خارجية"
+        }
+      ],
+      "limitations": "إعلانات الوظائف لا تمثل مخططًا معماريًا كاملًا.",
+      "source_count": 4
+    },
+    "$.headline": {
+      "field_value": "من وسيط رهن رقمي إلى شبكة عقارية في خمس أسواق: كيف بنت Huspy طبقة تشغيل تمر عبرها معاملات تتجاوز 7 مليارات دولار سنويًا",
+      "verification_status": "verified_editorial_synthesis",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "عنوان تحريري",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يجمع التحول متعدد المنتجات والأسواق الخمسة وحجم المعاملات المعلن.",
+      "source_ids": [
+        "SRC-06",
+        "SRC-08",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "id": "SRC-06",
+          "title": "Huspy raises $59 million Series B",
+          "publisher": "Huspy via PR Newswire",
+          "url": "https://www.prnewswire.co.uk/news-releases/huspy-raises-59-million-series-b-led-by-balderton-capital-to-accelerate-expansion-across-europe-and-the-middle-east-302500296.html",
+          "source_type": "بيان تمويل صادر عن الشركة",
+          "published_at": "2025-07-08",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-06",
+          "evidence_type": "إفصاح",
+          "source_locator": "7B and expansion",
+          "supports": "حجم المعاملات"
+        },
+        {
+          "id": "SRC-08",
+          "title": "Huspy — Careers",
+          "publisher": "Huspy",
+          "url": "https://huspy.com/careers",
+          "source_type": "صفحة تشغيل وتوظيف رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-08",
+          "evidence_type": "إفصاح",
+          "source_locator": "Five markets",
+          "supports": "الأسواق"
+        },
+        {
+          "id": "SRC-01",
+          "title": "Huspy — About us",
+          "publisher": "Huspy",
+          "url": "https://huspy.com/ae/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-01",
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Platform evolution",
+          "supports": "التحول"
+        }
+      ],
+      "limitations": "«طبقة تشغيل» وصف تحريري.",
+      "source_count": 3
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "المجاني للمشتري ليس نموذجًا بلا إيراد",
+          "description": "إزالة الرسوم المباشرة عن المشتري تقلل الاحتكاك، لكن الاقتصاد ينتقل إلى المقرض الذي يدفع عمولة عند نجاح الملف. قيمة النموذج تعتمد على الثقة والشفافية ومنع تضارب المصالح، لا على كلمة «مجاني» وحدها."
+        },
+        {
+          "title": "حجم المعاملات ليس مبيعات الشركة",
+          "description": "مرور أكثر من 7 مليارات دولار من المعاملات سنويًا يعكس حجم المنصة، لكنه لا يكشف الإيراد. يجب ضرب كل نوع صفقة بمعدل عمولته ثم خصم مشاركة الوكلاء والإلغاءات وتكاليف التشغيل قبل الحديث عن الإيراد أو الربح."
+        },
+        {
+          "title": "رقمنة القطاع قد تبدأ بشراء الشبكة التقليدية",
+          "description": "استحواذ Huspy على Home Matters وJust Mortgages وFinance Lab لم يكن تناقضًا مع التقنية؛ فقد وفر خبرة وتراخيص وعلاقات بنكية وتدفق ملفات. في الأسواق المنظمة، الاستحواذ على البنية القائمة قد يسرع الرقمنة أكثر من محاولة استبدالها بالكامل."
+        },
+        {
+          "title": "نظام تشغيل الشركاء أقوى من واجهة المستهلك وحدها",
+          "description": "بوابة الوسطاء وتطبيق الوكلاء وClient Vault وOCR وتتبع الحالات تجعل Huspy جزءًا من عمل الشريك اليومي. كلما اعتمد الوكيل على النظام لإدارة العميل والوثائق والعمولة، أصبحت قناة التوزيع أصعب في الاستبدال."
+        },
+        {
+          "title": "التوسع الجغرافي يتطلب إعادة بناء العرض محليًا",
+          "description": "الرهن العقاري والعقود والعمولات والتراخيص تختلف بين الإمارات وإسبانيا والسعودية وإيطاليا وتركيا. النجاح في مدينة لا ينتقل بنسخ التطبيق فقط؛ يلزم بناء شبكة وكلاء ومقرضين وكيان قانوني وعمليات متوافقة في كل سوق."
+        },
+        {
+          "title": "سرعة العملية لا تساوي السيطرة على قرار البنك",
+          "description": "يمكن للمنصة تسريع جمع البيانات والمقارنة والتقديم، لكن الموافقة والتقييم والصرف تبقى لدى البنك وأطراف خارجية. الوعد القوي هو تقليل الوقت والضياع، لا ضمان موافقة خلال دقائق لكل عميل."
+        }
+      ],
+      "verification_status": "analytical_inference_grounded_in_company_sources",
+      "confidence": "متوسطة",
+      "claim_type": "تحليل ودروس",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس مبنية على نموذج العمولة وGMV والاستحواذات ومنصات الشركاء وحدود قرار البنك.",
+      "source_ids": [
+        "SRC-16",
+        "SRC-06",
+        "SRC-17",
+        "SRC-18",
+        "SRC-13",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "id": "SRC-16",
+          "title": "4 ways technology is changing the mortgage industry",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/ae/blog/technology-changing-mortgage-industry",
+          "source_type": "مقال رسمي عن النموذج الاقتصادي",
+          "published_at": "2023",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-16",
+          "evidence_type": "شرح نموذج",
+          "source_locator": "Free-to-buyer",
+          "supports": "المجانية"
+        },
+        {
+          "id": "SRC-06",
+          "title": "Huspy raises $59 million Series B",
+          "publisher": "Huspy via PR Newswire",
+          "url": "https://www.prnewswire.co.uk/news-releases/huspy-raises-59-million-series-b-led-by-balderton-capital-to-accelerate-expansion-across-europe-and-the-middle-east-302500296.html",
+          "source_type": "بيان تمويل صادر عن الشركة",
+          "published_at": "2025-07-08",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-06",
+          "evidence_type": "مقياس",
+          "source_locator": "Annual transactions",
+          "supports": "GMV"
+        },
+        {
+          "id": "SRC-17",
+          "title": "Announcing Huspy’s first acquisition",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/blog/huspy-first-acquisition",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2022-01-13",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-17",
+          "evidence_type": "استحواذ",
+          "source_locator": "Home Matters",
+          "supports": "شراء الشبكة"
+        },
+        {
+          "id": "SRC-18",
+          "title": "Huspy acquires Just Mortgages and Finance Lab",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/blog/huspy-acquires-just-mortgages-and-finance-lab",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2022",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-18",
+          "evidence_type": "استحواذ",
+          "source_locator": "Just Mortgages/Finance Lab",
+          "supports": "التوحيد"
+        },
+        {
+          "id": "SRC-13",
+          "title": "Huspy — Broker Portal",
+          "publisher": "Huspy",
+          "url": "https://huspy.com/ae/content/brokers",
+          "source_type": "صفحة منتج B2B رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-13",
+          "evidence_type": "منتج",
+          "source_locator": "Broker OS",
+          "supports": "نظام التشغيل"
+        },
+        {
+          "id": "SRC-03",
+          "title": "Huspy — Terms and Conditions",
+          "publisher": "Huspy",
+          "url": "https://www.huspy.com/terms-and-conditions",
+          "source_type": "شروط قانونية رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "source_id": "SRC-03",
+          "evidence_type": "شروط",
+          "source_locator": "Bank dependency",
+          "supports": "حدود السيطرة"
+        }
+      ],
+      "limitations": "استنتاجات تحريرية وليست توصيات استثمارية.",
+      "source_count": 6
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Huspy — About us",
+      "publisher": "Huspy",
+      "url": "https://huspy.com/ae/about",
+      "source_type": "صفحة شركة رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "المقر والمكاتب والرسالة وجولتا Series A وSeries B والفريق التقني."
+    },
+    {
+      "id": "SRC-02",
+      "title": "Huspy — UAE Licenses",
+      "publisher": "Huspy",
+      "url": "https://www.huspy.com/ae/licenses",
+      "source_type": "صفحة تراخيص رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "كيانات الوساطة العقارية والرهن العقاري في الإمارات وأرقام التراخيص المنشورة."
+    },
+    {
+      "id": "SRC-03",
+      "title": "Huspy — Terms and Conditions",
+      "publisher": "Huspy",
+      "url": "https://www.huspy.com/terms-and-conditions",
+      "source_type": "شروط قانونية رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "تعريف المجموعة والكيانات والمنصة وخدمة مقارنة العروض ومقدمي التمويل."
+    },
+    {
+      "id": "SRC-04",
+      "title": "Huspy raises $37 million in Series A funding",
+      "publisher": "Huspy",
+      "url": "https://www.huspy.com/blog/huspy-series-a",
+      "source_type": "إعلان تمويل رسمي",
+      "published_at": "2022-06-21",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Series A بقيمة 37 مليون دولار، و2 مليار دولار GMV بمعدل سنوي وقت الإعلان."
+    },
+    {
+      "id": "SRC-05",
+      "title": "Huspy Secures Investment Round, led by Balderton Capital",
+      "publisher": "Huspy",
+      "url": "https://www.huspy.com/ae/blog/balderton-huspy",
+      "source_type": "إعلان تمويل رسمي",
+      "published_at": "2024-05-22",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "جولة غير معلنة القيمة وتقييم أعلى من 2022 دون رقم، وادعاء 25% من رهون دبي وقت الإعلان."
+    },
+    {
+      "id": "SRC-06",
+      "title": "Huspy raises $59 million Series B",
+      "publisher": "Huspy via PR Newswire",
+      "url": "https://www.prnewswire.co.uk/news-releases/huspy-raises-59-million-series-b-led-by-balderton-capital-to-accelerate-expansion-across-europe-and-the-middle-east-302500296.html",
+      "source_type": "بيان تمويل صادر عن الشركة",
+      "published_at": "2025-07-08",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Series B بقيمة 59 مليون دولار، وأكثر من 7 مليارات دولار معاملات سنوية، ونمو إسبانيا 20x في 2024."
+    },
+    {
+      "id": "SRC-07",
+      "title": "Huspy raises $59M to accelerate expansion",
+      "publisher": "Balderton Capital",
+      "url": "https://www.balderton.com/news/huspy-raises-59-million-to-accelerate-expansion-across-europe-and-the-middle-east/",
+      "source_type": "إعلان رسمي من المستثمر",
+      "published_at": "2025-07",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "تأكيد جولة Series B والمستثمر الرئيسي، دون تقييم رقمي."
+    },
+    {
+      "id": "SRC-08",
+      "title": "Huspy — Careers",
+      "publisher": "Huspy",
+      "url": "https://huspy.com/careers",
+      "source_type": "صفحة تشغيل وتوظيف رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "950+ موظفًا ووجودًا معلنًا في الإمارات وإسبانيا والسعودية وإيطاليا وتركيا."
+    },
+    {
+      "id": "SRC-09",
+      "title": "Huspy — UAE Mortgage",
+      "publisher": "Huspy",
+      "url": "https://www.huspy.com/ae/mortgage",
+      "source_type": "صفحة منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "خدمات الرهن للمقيمين وغير المقيمين وإعادة التمويل والتمويل التجاري."
+    },
+    {
+      "id": "SRC-10",
+      "title": "Huspy — Find and finance your new home",
+      "publisher": "Huspy",
+      "url": "https://www.huspy.com/ae/content",
+      "source_type": "صفحة منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "الجمع بين العقار والتمويل، و8,000+ مشترٍ إماراتي في نسخة الصفحة."
+    },
+    {
+      "id": "SRC-11",
+      "title": "Huspy Partners with Skyline Builders",
+      "publisher": "Huspy",
+      "url": "https://www.huspy.com/ae/blog/skyline-builders-huspy-financing-partnership",
+      "source_type": "إعلان شراكة رسمي",
+      "published_at": "2026-07-08",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "20+ بنكًا و12,000+ مالك منزل، وتمويل التسليم والعقارات على الخارطة."
+    },
+    {
+      "id": "SRC-12",
+      "title": "Huspy partnership with Dubai Holding Real Estate",
+      "publisher": "Huspy",
+      "url": "https://www.huspy.com/ae/blog/dubai-holding-real-estate-huspy-financing-partnership",
+      "source_type": "إعلان شراكة رسمي",
+      "published_at": "2026-05-14",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "شراكة تمويل تسليم مع Dubai Holding Real Estate."
+    },
+    {
+      "id": "SRC-13",
+      "title": "Huspy — Broker Portal",
+      "publisher": "Huspy",
+      "url": "https://huspy.com/ae/content/brokers",
+      "source_type": "صفحة منتج B2B رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "إدارة الحالات وClient Vault وOCR والتوقيع الرقمي وروبوت محادثة، ومقاييس بوابة غير مكتملة التعريف."
+    },
+    {
+      "id": "SRC-14",
+      "title": "Huspy — Agents",
+      "publisher": "Huspy",
+      "url": "https://huspy.com/ae/content/agents",
+      "source_type": "صفحة منتج للشركاء رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "إرسال العملاء وتتبع الحالات وحساب الأهلية واستلام عمولات الوكلاء."
+    },
+    {
+      "id": "SRC-15",
+      "title": "How to maximize commission with Huspy Agent app",
+      "publisher": "Huspy",
+      "url": "https://www.huspy.com/ae/blog/maximize-commission-huspy-agent-app",
+      "source_type": "إفصاح منتج وشراكات",
+      "published_at": "2022-12-12",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "عدم فرض رسوم على الوكيل أو العميل في المسار المنشور ودفع عمولة إحالة للوكيل."
+    },
+    {
+      "id": "SRC-16",
+      "title": "4 ways technology is changing the mortgage industry",
+      "publisher": "Huspy",
+      "url": "https://www.huspy.com/ae/blog/technology-changing-mortgage-industry",
+      "source_type": "مقال رسمي عن النموذج الاقتصادي",
+      "published_at": "2023",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "الوسيط الرقمي قد لا يفرض رسومًا مقدمًا ويأخذ عمولة من المقرض."
+    },
+    {
+      "id": "SRC-17",
+      "title": "Announcing Huspy’s first acquisition",
+      "publisher": "Huspy",
+      "url": "https://www.huspy.com/blog/huspy-first-acquisition",
+      "source_type": "إعلان استحواذ رسمي",
+      "published_at": "2022-01-13",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "الاستحواذ على Home Matters."
+    },
+    {
+      "id": "SRC-18",
+      "title": "Huspy acquires Just Mortgages and Finance Lab",
+      "publisher": "Huspy",
+      "url": "https://www.huspy.com/blog/huspy-acquires-just-mortgages-and-finance-lab",
+      "source_type": "إعلان استحواذ رسمي",
+      "published_at": "2022",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "استحواذان إضافيان وGMV opportunity تاريخية."
+    },
+    {
+      "id": "SRC-19",
+      "title": "Huspy — Backend engineering job",
+      "publisher": "Huspy via LinkedIn Jobs",
+      "url": "https://pl.linkedin.com/jobs/view/senior-backend-engineer-at-huspy-4158614534",
+      "source_type": "إعلان توظيف تقني",
+      "published_at": "2026",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "React/Next.js في الواجهة وNestJS/TypeScript في الخلفية وAWS كخبرة مفضلة."
+    },
+    {
+      "id": "SRC-20",
+      "title": "Huspy — Frontend engineering job",
+      "publisher": "Huspy via LinkedIn Jobs",
+      "url": "https://am.linkedin.com/jobs/view/frontend-engineer-at-huspy-4442032221",
+      "source_type": "إعلان توظيف تقني",
+      "published_at": "2026",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "JavaScript وReact وTypeScript وNext.js، وAWS كخبرة مفضلة."
+    },
+    {
+      "id": "SRC-21",
+      "title": "Huspy — Privacy Policy",
+      "publisher": "Huspy",
+      "url": "https://www.huspy.com/ae/privacy",
+      "source_type": "سياسة خصوصية رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "معالجة البيانات الشخصية والمالية ومشاركة لازمة مع البنوك ومقدمي الاستضافة والخدمات وواجهات APIs."
+    }
   ]
 }

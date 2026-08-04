@@ -2,52 +2,1939 @@
   "id": "zr3i",
   "slug": "zr3i",
   "name": "زرعي (Zr3i)",
-  "headline": "مراقبة المزارع عبر الأقمار الصناعية والذكاء الاصطناعي",
-  "category": "AgriTech & SpaceTech / التكنولوجيا الزراعية والفضائية",
+  "headline": "من تطبيق لم يُطلق إلى خط أنابيب كربوني معلن بـ8.5 ملايين نخلة: كيف أعادت Zr3i بناء نموذجها قبل إصدار أول أرصدة",
+  "category": "ClimateTech & AgriTech / Digital MRV / مشاريع الكربون الزراعي والاستشعار عن بُعد",
   "company": {
-    "location": "القاهرة، مصر (Shark Tank Egypt)",
-    "business_model": "اشتراكات برمجية دورية للمزارعين والشركات الزراعية (B2B SaaS)"
+    "location": "Zr3i منصة مصرية مقرها المعلن في القاهرة. ظهرت نسختها التاريخية ضمن دفعة Flat6Labs في خريف 2021، بينما يسجل ملف الشركة على LinkedIn سنة التأسيس 2022. يستخدم المؤسس في بعض إفصاحات 2026 تسمية DigiWell / Zr3i، لكن الاسم القانوني المسجل وهيكل الملكية لم يُتحقق منهما من سجل شركات عام؛ ولا توجد صلة تشغيلية أو تمويلية مثبتة مع Shark Tank Egypt.",
+    "business_model": "بدأت Zr3i تاريخيًا كنموذج اشتراك لبرمجيات الزراعة الدقيقة، ثم أعيد تقديمها كمنصة لتطوير مشروعات الكربون الزراعي والقياس والإبلاغ والتحقق الرقمي. النموذج المنشور حاليًا يتيح الاستخدام الأساسي للمزارعين والمنسقين مجانًا، ويجعل عائد المنصة مشروطًا بإصدار الأرصدة وبيعها: 60% للمزارع، و5% للمنسق أو الجهة المجتمعية، و35% للمنصة افتراضيًا، مع تسعير مخصص للمنظمات والمشترين وخدمات مراقبة وتقارير احترافية محتملة. هذه مسارات تحقيق دخل معلنة، وليست إثباتًا لإيرادات محققة."
   },
   "directory_snapshot": {
-    "monthly_revenue": "مئات الآلاف من الجنيهات",
-    "monthly_traffic": "تراقب آلاف الأفدنة الزراعية دورياً"
+    "monthly_revenue": "غير مُفصح عنه علنًا. لم يُعثر على قوائم مالية أو رقم موثوق للإيراد الشهري أو السنوي. نموذج تقاسم عائدات الأرصدة ما زال مرتبطًا بإصدار أول مستهدف في الربعين الثاني والثالث من 2027؛ لذلك لا يجوز تحويل قيمة العقود أو عدد الأشجار أو دعم برامج التسريع إلى إيراد.",
+    "monthly_traffic": "غير مُفصح عنه علنًا، ولا يتوفر رقم موثوق للزيارات الشهرية أو المستخدمين النشطين. ذكرت الشركة 2,598 نخلة مسجلة ومتحققًا منها عبر 8 مزارع و18.2 هكتار في 5 أبريل 2026، ثم أعلنت لاحقًا خط أنابيب يبلغ 8.5 ملايين نخلة متعاقدًا عليها واتفاقات مع جهات متعددة؛ وهذه مقاييس تشغيلية مختلفة ولا تمثل زيارات أو مستخدمين أو أرصدة صادرة."
   },
   "overview": {
     "problem": {
-      "text": "المزارعون وأصحاب الأراضي الشاسعة لا يستطيعون متابعة صحة المحاصيل بشكل يومي. اكتشاف الآفات أو نقص المياه بالعين المجردة يحدث عادة بعد فوات الأوان، مما يؤدي لهلاك جزء كبير من المحصول.",
-      "impact": "خسائر فادحة في المحاصيل، إهدار في استخدام المياه والأسمدة الكيميائية، وانخفاض الأرباح."
+      "text": "تواجه المزارع، ولا سيما مزارع النخيل المتفرقة وصغار المنتجين، فجوة في المتابعة المستمرة والإرشاد الزراعي وجمع الأدلة القابلة للتدقيق. كما يصعب تحويل ممارسات مثل تحسين الري وإدارة التربة والتشجير إلى مشروع كربوني قابل للتمويل بسبب كلفة القياس الميداني، وتجزؤ البيانات، ومتطلبات خطوط الأساس والإضافية والمراقبة والتحقق المستقل.",
+      "impact": "تؤدي هذه الفجوة إلى تأخر اكتشاف الإجهاد والآفات، وضعف توثيق التحسينات الزراعية، وصعوبة وصول المزارعين إلى تمويل المناخ. لا توجد أدلة عامة تسمح بإسناد نسبة وفر ثابتة مثل 30% إلى Zr3i، لذا أزيل هذا الرقم من النسخة الأصلية."
     },
     "solution": {
-      "text": "منصة تعتمد على تحليل صور الأقمار الصناعية والذكاء الاصطناعي. تقوم بمسح الأراضي الزراعية وتقديم تقارير دقيقة للمزارع على هاتفه تحدد أماكن نقص المياه أو بداية ظهور الآفات، ليتمكن من معالجتها فوراً قبل انتشارها."
+      "text": "تجمع النسخة الحالية من Zr3i بين تحليل صور الأقمار الصناعية والمؤشرات النباتية، وملفات المزارع والأشجار، وصور ميدانية مؤرخة وموسومة جغرافيًا، وإعداد وثائق المشروع وتقارير القياس والإبلاغ والتحقق. تصف الشركة مسارًا يبدأ بالتسجيل وخط الأساس والتقديرات، ثم المراجعة الميدانية والتحقق بواسطة جهة مستقلة قبل إصدار أي رصيد. تركز دورة المشروع الكاملة عند الإطلاق على نخيل التمر، بينما تبقى التقديرات المعروضة قبل التحقق توقعات وليست أرصدة قابلة للبيع."
     }
   },
   "market_data": {
-    "target_audience": "أصحاب المزارع الكبرى، المستثمرون الزراعيون، والجهات الحكومية.",
-    "market_size": "القطاع الزراعي الشاسع في مصر وإفريقيا والعالم العربي.",
-    "growth_rate": "حظيت باهتمام كبير من المستثمرين لكونها تكنولوجيا متقدمة (DeepTech) قابلة للتوسع عالمياً بتكلفة منخفضة."
+    "target_audience": "مزارعو نخيل التمر والجمعيات والتعاونيات الزراعية والمنسقون الميدانيون، والشركات الزراعية ومطورو المشروعات، ومشترو الأرصدة والجهات الممولة، والمدققون وجهات التحقق المستقلة والجهات العامة المعنية بالزراعة والمناخ. تعلن المنصة نشاطًا أو اتفاقات في مصر والأردن والإمارات، مع ضرورة التمييز بين اتفاقية أو مذكرة تفاهم وبين مشروع مسجل أو عميل دافع.",
+    "market_size": "لم تنشر الشركة دراسة موثوقة لحجم سوقها القابل للخدمة أو إيراداته. كسياق قطاعي فقط، تذكر منظمة الأغذية والزراعة أن مصر تنتج أكثر من 1.8 مليون طن من التمور سنويًا بما يقارب 19% من الإنتاج العالمي، وتشير مصادرها إلى قاعدة كبيرة من أشجار النخيل. هذا يوضح اتساع القطاع الزراعي، لكنه لا يساوي حجم سوق Zr3i ولا قيمة أرصدة قابلة للإصدار.",
+    "growth_rate": "لا يوجد معدل نمو موثوق للإيراد أو المستخدمين. يمكن رصد انتقال الإفصاح من 2,598 نخلة مسجلة ومتحققًا منها في إصدار أبريل 2026 إلى 8.5 ملايين نخلة «متعاقدًا عليها» في خط الأنابيب المعلن لاحقًا، لكن المقامين غير متجانسين: الأول رصيد تشغيلي مسجل، والثاني نطاق تعاقدي مستقبلي ذاتي الإفصاح. لذلك لا يمكن اشتقاق نسبة نمو سليمة منهما."
   },
   "financials": {
-    "initial_investment": "استثمارات من ملائكة أعمال ومستثمري شارك تانك لتوسيع القدرة الحاسوبية والتسويق.",
-    "valuation": "عشرات الملايين من الجنيهات",
+    "initial_investment": "المشاركة في برنامج Flat6Labs وظهور الشركة في دفعة خريف 2021 موثقان رسميًا، إلا أن النصوص الأولية المتاحة لا تثبت مبلغ تمويل محدد. لم تدخل Zr3i صفقة Shark Tank وفق إفصاح المؤسس؛ فقد ذكر أنه رفض الدعوة وأن النسخة الأولى لم تُطلق. وفي 2026 تحدث المؤسس عن البحث عن تمويل للمشروعات، وهو احتياج تمويلي مستقبلي لا يثبت جولة مغلقة.",
+    "valuation": "غير مُفصح عنه علنًا. لا توجد جولة استثمار موثقة بشروط تسمح بحساب تقييم قبل الاستثمار أو بعده، ولا يجوز استخدام عبارة «عشرات الملايين من الجنيهات» دون مصدر أولي.",
     "revenue_streams": [
-      "اشتراكات سنوية لكل فدان (SaaS based on acreage)",
-      "خدمات تحليل بيانات متقدمة للشركات الزراعية الكبرى (Enterprise)"
+      "حصة افتراضية قدرها 35% للمنصة من صافي عائد الأرصدة التي تُصدر وتُباع مستقبلًا، مقابل 60% للمزارع و5% للمنسق أو الجهة المجتمعية؛ هذا دخل مشروط بالإصدار والبيع وليس إيرادًا حاليًا مثبتًا.",
+      "تسعير مخصص للمنظمات ومشتري الأرصدة، قد يرتبط بكل رصيد صادر أو باتفاق تجاري مخصص وفق صفحة التسعير.",
+      "ميزات احترافية محتملة للمراقبة المستمرة والتنبيهات والتقارير والتحليلات للمزارع والشركات.",
+      "خدمات تطوير المشروع وإعداد وثائق القياس والإبلاغ والتحقق والتنسيق مع المدققين والمشترين عندما تكون مشمولة في عقد تجاري؛ لم تفصح الشركة عن مساهمة كل مسار في الإيراد."
     ]
   },
   "lessons": [
     {
-      "title": "البيانات كخدمة (Data as a Service)",
-      "description": "لم تقم (زرعي) بإطلاق أقمار صناعية خاصة بها (وهو أمر مكلف جداً)، بل استخدمت بيانات الأقمار المفتوحة أو التجارية المتاحة، وبنت (الخوارزمية) التي تحلل هذه البيانات. هذا جعل نموذج عملها (Asset-light) وقابلاً للتوسع اللانهائي."
+      "title": "إغلاق النسخة الأولى قد يكون قرارًا مؤسسًا لا هزيمة",
+      "description": "قال المؤسس إن Zr3i الأولى لم تُطلق رغم دعوة Shark Tank. الدرس هنا أن الاعتراف بعدم صلاحية الصيغة الأولى، ثم إعادة تعريف المشكلة من مراقبة المحصول فقط إلى بنية تمويل كربوني كاملة، يمكن أن يكون أكثر قيمة من الاستمرار في منتج بلا طلب مثبت."
     },
     {
-      "title": "الاستدامة وتوفير التكاليف (ROI)",
-      "description": "بيع التقنية للمزارعين صعب، لكن عندما تثبت له أن اشتراكه سيوفر له 30% من تكلفة الأسمدة والمياه (بسبب التوجيه الدقيق)، يصبح البرنامج استثماراً يوفر المال، وليس مجرد تكلفة إضافية."
+      "title": "غيّر من يدفع قبل أن تغيّر التقنية",
+      "description": "النموذج التاريخي طلب اشتراكًا من المزارع؛ النموذج الحالي يجعل التسجيل الأساسي مجانيًا ويربط عائد المنصة بالأرصدة المصدرة. بذلك ينتقل المزارع من مشترٍ للبرمجيات إلى شريك في العائد، مع بقاء مخاطر التأخير والتحقق والسعر على المشروع والمنصة."
+    },
+    {
+      "title": "العقد والشجرة والتقدير والرصيد أربع وحدات مختلفة",
+      "description": "8.5 ملايين نخلة متعاقدًا عليها لا تعني 8.5 ملايين نخلة مراقبة فعليًا، ولا تعني أرصدة صادرة أو مبيعات. بناء لوحة قياس موثوقة يتطلب فصل خط الأنابيب التعاقدي عن التسجيل الميداني، والتقديرات، والتحقق، والإصدار، ثم التسوية المالية."
+    },
+    {
+      "title": "مذكرة التفاهم تفتح باب المشروع ولا تختصر دورة الاعتماد",
+      "description": "المذكرة المعلنة في الإمارات توفر إطار تعاون وشرعية وصول، لكن المؤسس نفسه أوضح أنها لا تنشئ أرصدة ولا تسجل مزارعين ولا تضمن الإصدار. القيمة الحقيقية تبدأ بعد تحديد النطاق وجمع الأدلة والتحقق والتسجيل والتمويل."
+    },
+    {
+      "title": "في أسواق الكربون، سلسلة الأدلة هي المنتج",
+      "description": "الخوارزمية وحدها لا تكفي. الصور الموسومة جغرافيًا، وخط الأساس، وسجل التغييرات، وموافقة المزارع، والمنهجية المقبولة، ومراجعة جهة تحقق مستقلة هي ما يحول التحليل إلى أصل قابل للتدقيق. اعتماد منهجية Verra لا يساوي اعتماد مشروع بعينه."
+    },
+    {
+      "title": "الثقة القانونية والتشغيلية يجب أن تنمو مع خط الأنابيب",
+      "description": "وجود سياسة خصوصية معلّمة بأنها بانتظار المراجعة القانونية وآليات خدمة ما زالت قيد الاستكمال يبرز فجوة شائعة: يمكن للعقود أن تتوسع أسرع من الحوكمة. في مشروع يحتفظ ببيانات جغرافية وحقوق عائدات طويلة الأجل، اكتمال الموافقات والعقود والخصوصية شرط تجاري لا مهمة جانبية."
     }
   ],
   "tools": [
-    "Satellite Imagery APIs",
-    "Machine Learning (Computer Vision)",
-    "Python",
-    "Cloud Computing"
+    "صور Sentinel-2 ومصادر صور عالية الدقة مثل PlanetScope وفق وصف الشركة؛ لا يُعامل ذلك كإثبات لشراكة تجارية مستقلة",
+    "الاستشعار عن بُعد ونظم المعلومات الجغرافية",
+    "أكثر من 18 مؤشرًا نباتيًا وتحليلات تغير الغطاء النباتي وفق المواد الرسمية",
+    "نماذج تحليل وذكاء اصطناعي لتقدير الحالة والكتلة الحيوية والمخاطر",
+    "صور ميدانية مؤرخة وموسومة جغرافيًا مع تدقيق منسقين",
+    "تطبيقات ويب وهاتف ومسارات عمل ميدانية يمكن أن تشمل العمل دون اتصال",
+    "سجلات رقمية للقياس والإبلاغ والتحقق وإعداد وثائق المشروع",
+    "مراجعة جهة تحقق مستقلة قبل الإصدار وفق المسار المعلن",
+    "الاسترشاد بمنهجيات مثل Verra VM0042 وVM0047؛ وجود المنهجية لا يثبت تسجيل مشروع Zr3i"
+  ],
+  "verification": {
+    "status": "verified_with_material_corrections_and_company_claim_limits",
+    "verified_on": "2026-08-03",
+    "source_policy": {
+      "priority_order": [
+        "صفحات ومنهجيات وتسعير Zr3i الرسمية",
+        "إفصاحات المؤسس المباشرة",
+        "Flat6Labs والجهات الشريكة الرسمية",
+        "Verra والمنظمات الدولية",
+        "مصادر ثانوية فقط عند الضرورة، مع عدم استخدامها لإثبات أرقام مالية"
+      ],
+      "sec_applicability": "غير منطبق عمليًا: Zr3i منصة خاصة مقرها المعلن مصر وليست جهة مُصدرة عامة معروفة لدى SEC.",
+      "financial_rule": "لم يُستخدم أي تقدير غير موثق للإيراد أو الزيارات أو التقييم، ولم تُعامل العقود أو الأشجار أو التوقعات أو الأرصدة المستقبلية كإيراد.",
+      "company_claim_rule": "الأرقام التشغيلية والشراكات وخط الأنابيب المعلنة من الشركة أو المؤسس موسومة كادعاءات ذاتية ما لم يؤكدها طرف مستقل."
+    },
+    "important_notes": [
+      "الادعاء الأصلي بوجود Zr3i في Shark Tank Egypt أو تلقي استثمار منه غير صحيح وفق إفصاح المؤسس؛ كانت هناك دعوة رُفضت.",
+      "النموذج التاريخي كان SaaS للزراعة الدقيقة، أما النموذج الحالي فهو تطوير مشروعات كربون زراعي وDigital MRV مع مشاركة في العائد.",
+      "لا يوجد إفصاح موثوق للإيراد الشهري أو السنوي أو الزيارات الشهرية أو المستخدمين النشطين أو حجم المعاملات أو التقييم.",
+      "رقم 8.5 ملايين نخلة يمثل خط أنابيب تعاقديًا معلنًا من الشركة، ولا يساوي أشجارًا مفعلة أو مراقبة أو أرصدة صادرة.",
+      "رقم 2,598 نخلة في أبريل 2026 مقياس تسجيل وتشغيل مختلف عن الأشجار المتعاقد عليها لاحقًا.",
+      "مذكرة التفاهم في الإمارات ليست تمويلًا ولا تسجيلًا للمزارعين ولا إصدارًا للأرصدة ولا ضمانًا للإصدار.",
+      "لم يُعثر على إدراج عام مؤكد لمشروع Zr3i في سجل Verra حتى تاريخ التحقق؛ الإشارة إلى منهجيات Verra لا تعني تسجيل المشروع.",
+      "أول إصدار للأرصدة مستهدف في الربعين الثاني والثالث من 2027 وفق الشركة، ولذلك لا توجد أرصدة صادرة مثبتة حتى أغسطس 2026.",
+      "مشاركة Flat6Labs موثقة، لكن قيمة التمويل غير مثبتة من مصدر أولي متاح.",
+      "الاسم القانوني وهيكل الملكية غير متحقق منهما من سجل شركات عام.",
+      "سياسة الخصوصية المنشورة كانت تحمل تنبيهًا بأنها بانتظار المراجعة القانونية، وبعض تفاصيل SLA قيد الاستكمال.",
+      "لم تُتحقق بصورة مستقلة دقة نماذج الأقمار الصناعية أو الادعاءات عن مزودي الصور أو أثر المشروع الزراعي والكربوني."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_at": "2026-08-03",
+      "checks_passed": 118,
+      "checks_failed": 0,
+      "checks": [
+        {
+          "name": "base_key_id",
+          "passed": true,
+          "details": "الحقل الأساسي id موجود."
+        },
+        {
+          "name": "base_key_slug",
+          "passed": true,
+          "details": "الحقل الأساسي slug موجود."
+        },
+        {
+          "name": "base_key_name",
+          "passed": true,
+          "details": "الحقل الأساسي name موجود."
+        },
+        {
+          "name": "base_key_headline",
+          "passed": true,
+          "details": "الحقل الأساسي headline موجود."
+        },
+        {
+          "name": "base_key_category",
+          "passed": true,
+          "details": "الحقل الأساسي category موجود."
+        },
+        {
+          "name": "base_key_company",
+          "passed": true,
+          "details": "الحقل الأساسي company موجود."
+        },
+        {
+          "name": "base_key_directory_snapshot",
+          "passed": true,
+          "details": "الحقل الأساسي directory_snapshot موجود."
+        },
+        {
+          "name": "base_key_overview",
+          "passed": true,
+          "details": "الحقل الأساسي overview موجود."
+        },
+        {
+          "name": "base_key_market_data",
+          "passed": true,
+          "details": "الحقل الأساسي market_data موجود."
+        },
+        {
+          "name": "base_key_financials",
+          "passed": true,
+          "details": "الحقل الأساسي financials موجود."
+        },
+        {
+          "name": "base_key_lessons",
+          "passed": true,
+          "details": "الحقل الأساسي lessons موجود."
+        },
+        {
+          "name": "base_key_tools",
+          "passed": true,
+          "details": "الحقل الأساسي tools موجود."
+        },
+        {
+          "name": "professional_v2_key_verification",
+          "passed": true,
+          "details": "قسم Professional V2 verification موجود."
+        },
+        {
+          "name": "professional_v2_key_evidence_map_schema",
+          "passed": true,
+          "details": "قسم Professional V2 evidence_map_schema موجود."
+        },
+        {
+          "name": "professional_v2_key_evidence_map",
+          "passed": true,
+          "details": "قسم Professional V2 evidence_map موجود."
+        },
+        {
+          "name": "professional_v2_key_sources",
+          "passed": true,
+          "details": "قسم Professional V2 sources موجود."
+        },
+        {
+          "name": "json_root_object",
+          "passed": true,
+          "details": "الجذر كائن JSON."
+        },
+        {
+          "name": "arabic_final_content",
+          "passed": true,
+          "details": "المحتوى النهائي العربي حاضر في الحقول الجوهرية."
+        },
+        {
+          "name": "original_id_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على id الأصلي."
+        },
+        {
+          "name": "original_slug_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على slug الأصلي."
+        },
+        {
+          "name": "base_structure_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على البنية الأساسية مع الإضافات."
+        },
+        {
+          "name": "source_ids_unique",
+          "passed": true,
+          "details": "كل معرّفات المصادر فريدة."
+        },
+        {
+          "name": "minimum_source_count",
+          "passed": true,
+          "details": "عدد المصادر 20."
+        },
+        {
+          "name": "official_primary_source_majority",
+          "passed": true,
+          "details": "أغلبية المصادر أولية أو رسمية."
+        },
+        {
+          "name": "source_urls_valid",
+          "passed": true,
+          "details": "كل روابط المصادر صالحة بنيويًا."
+        },
+        {
+          "name": "source_metadata_complete",
+          "passed": true,
+          "details": "بيانات كل مصدر مكتملة."
+        },
+        {
+          "name": "evidence_required_paths",
+          "passed": true,
+          "details": "خريطة الأدلة تغطي 15 مسارًا جوهريًا دون نقص أو زيادة."
+        },
+        {
+          "name": "evidence_value_match_$.company.location",
+          "passed": true,
+          "details": "قيمة evidence_map مطابقة للحقل $.company.location."
+        },
+        {
+          "name": "evidence_fields_complete_$.company.location",
+          "passed": true,
+          "details": "كل حقول الدليل المطلوبة موجودة للمسار $.company.location."
+        },
+        {
+          "name": "evidence_source_count_$.company.location",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.company.location."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.company.location",
+          "passed": true,
+          "details": "كل مراجع المصادر موجودة للمسار $.company.location."
+        },
+        {
+          "name": "evidence_reference_integrity_$.company.location",
+          "passed": true,
+          "details": "بيانات المراجع متطابقة مع سجل المصادر للمسار $.company.location."
+        },
+        {
+          "name": "evidence_value_match_$.company.business_model",
+          "passed": true,
+          "details": "قيمة evidence_map مطابقة للحقل $.company.business_model."
+        },
+        {
+          "name": "evidence_fields_complete_$.company.business_model",
+          "passed": true,
+          "details": "كل حقول الدليل المطلوبة موجودة للمسار $.company.business_model."
+        },
+        {
+          "name": "evidence_source_count_$.company.business_model",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.company.business_model."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.company.business_model",
+          "passed": true,
+          "details": "كل مراجع المصادر موجودة للمسار $.company.business_model."
+        },
+        {
+          "name": "evidence_reference_integrity_$.company.business_model",
+          "passed": true,
+          "details": "بيانات المراجع متطابقة مع سجل المصادر للمسار $.company.business_model."
+        },
+        {
+          "name": "evidence_value_match_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "قيمة evidence_map مطابقة للحقل $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_fields_complete_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "كل حقول الدليل المطلوبة موجودة للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_source_count_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "كل مراجع المصادر موجودة للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_reference_integrity_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "بيانات المراجع متطابقة مع سجل المصادر للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_value_match_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "قيمة evidence_map مطابقة للحقل $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_fields_complete_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "كل حقول الدليل المطلوبة موجودة للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_source_count_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "كل مراجع المصادر موجودة للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_reference_integrity_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "بيانات المراجع متطابقة مع سجل المصادر للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_value_match_$.overview.problem",
+          "passed": true,
+          "details": "قيمة evidence_map مطابقة للحقل $.overview.problem."
+        },
+        {
+          "name": "evidence_fields_complete_$.overview.problem",
+          "passed": true,
+          "details": "كل حقول الدليل المطلوبة موجودة للمسار $.overview.problem."
+        },
+        {
+          "name": "evidence_source_count_$.overview.problem",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.overview.problem."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.overview.problem",
+          "passed": true,
+          "details": "كل مراجع المصادر موجودة للمسار $.overview.problem."
+        },
+        {
+          "name": "evidence_reference_integrity_$.overview.problem",
+          "passed": true,
+          "details": "بيانات المراجع متطابقة مع سجل المصادر للمسار $.overview.problem."
+        },
+        {
+          "name": "evidence_value_match_$.overview.solution",
+          "passed": true,
+          "details": "قيمة evidence_map مطابقة للحقل $.overview.solution."
+        },
+        {
+          "name": "evidence_fields_complete_$.overview.solution",
+          "passed": true,
+          "details": "كل حقول الدليل المطلوبة موجودة للمسار $.overview.solution."
+        },
+        {
+          "name": "evidence_source_count_$.overview.solution",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.overview.solution."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.overview.solution",
+          "passed": true,
+          "details": "كل مراجع المصادر موجودة للمسار $.overview.solution."
+        },
+        {
+          "name": "evidence_reference_integrity_$.overview.solution",
+          "passed": true,
+          "details": "بيانات المراجع متطابقة مع سجل المصادر للمسار $.overview.solution."
+        },
+        {
+          "name": "evidence_value_match_$.market_data.target_audience",
+          "passed": true,
+          "details": "قيمة evidence_map مطابقة للحقل $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_fields_complete_$.market_data.target_audience",
+          "passed": true,
+          "details": "كل حقول الدليل المطلوبة موجودة للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_source_count_$.market_data.target_audience",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.market_data.target_audience",
+          "passed": true,
+          "details": "كل مراجع المصادر موجودة للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_reference_integrity_$.market_data.target_audience",
+          "passed": true,
+          "details": "بيانات المراجع متطابقة مع سجل المصادر للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_value_match_$.market_data.market_size",
+          "passed": true,
+          "details": "قيمة evidence_map مطابقة للحقل $.market_data.market_size."
+        },
+        {
+          "name": "evidence_fields_complete_$.market_data.market_size",
+          "passed": true,
+          "details": "كل حقول الدليل المطلوبة موجودة للمسار $.market_data.market_size."
+        },
+        {
+          "name": "evidence_source_count_$.market_data.market_size",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.market_data.market_size."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.market_data.market_size",
+          "passed": true,
+          "details": "كل مراجع المصادر موجودة للمسار $.market_data.market_size."
+        },
+        {
+          "name": "evidence_reference_integrity_$.market_data.market_size",
+          "passed": true,
+          "details": "بيانات المراجع متطابقة مع سجل المصادر للمسار $.market_data.market_size."
+        },
+        {
+          "name": "evidence_value_match_$.market_data.growth_rate",
+          "passed": true,
+          "details": "قيمة evidence_map مطابقة للحقل $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_fields_complete_$.market_data.growth_rate",
+          "passed": true,
+          "details": "كل حقول الدليل المطلوبة موجودة للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_source_count_$.market_data.growth_rate",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.market_data.growth_rate",
+          "passed": true,
+          "details": "كل مراجع المصادر موجودة للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_reference_integrity_$.market_data.growth_rate",
+          "passed": true,
+          "details": "بيانات المراجع متطابقة مع سجل المصادر للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_value_match_$.financials.initial_investment",
+          "passed": true,
+          "details": "قيمة evidence_map مطابقة للحقل $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_fields_complete_$.financials.initial_investment",
+          "passed": true,
+          "details": "كل حقول الدليل المطلوبة موجودة للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_source_count_$.financials.initial_investment",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.financials.initial_investment",
+          "passed": true,
+          "details": "كل مراجع المصادر موجودة للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_reference_integrity_$.financials.initial_investment",
+          "passed": true,
+          "details": "بيانات المراجع متطابقة مع سجل المصادر للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_value_match_$.financials.valuation",
+          "passed": true,
+          "details": "قيمة evidence_map مطابقة للحقل $.financials.valuation."
+        },
+        {
+          "name": "evidence_fields_complete_$.financials.valuation",
+          "passed": true,
+          "details": "كل حقول الدليل المطلوبة موجودة للمسار $.financials.valuation."
+        },
+        {
+          "name": "evidence_source_count_$.financials.valuation",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.financials.valuation."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.financials.valuation",
+          "passed": true,
+          "details": "كل مراجع المصادر موجودة للمسار $.financials.valuation."
+        },
+        {
+          "name": "evidence_reference_integrity_$.financials.valuation",
+          "passed": true,
+          "details": "بيانات المراجع متطابقة مع سجل المصادر للمسار $.financials.valuation."
+        },
+        {
+          "name": "evidence_value_match_$.financials.revenue_streams",
+          "passed": true,
+          "details": "قيمة evidence_map مطابقة للحقل $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_fields_complete_$.financials.revenue_streams",
+          "passed": true,
+          "details": "كل حقول الدليل المطلوبة موجودة للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_source_count_$.financials.revenue_streams",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.financials.revenue_streams",
+          "passed": true,
+          "details": "كل مراجع المصادر موجودة للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_reference_integrity_$.financials.revenue_streams",
+          "passed": true,
+          "details": "بيانات المراجع متطابقة مع سجل المصادر للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_value_match_$.tools",
+          "passed": true,
+          "details": "قيمة evidence_map مطابقة للحقل $.tools."
+        },
+        {
+          "name": "evidence_fields_complete_$.tools",
+          "passed": true,
+          "details": "كل حقول الدليل المطلوبة موجودة للمسار $.tools."
+        },
+        {
+          "name": "evidence_source_count_$.tools",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.tools."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.tools",
+          "passed": true,
+          "details": "كل مراجع المصادر موجودة للمسار $.tools."
+        },
+        {
+          "name": "evidence_reference_integrity_$.tools",
+          "passed": true,
+          "details": "بيانات المراجع متطابقة مع سجل المصادر للمسار $.tools."
+        },
+        {
+          "name": "evidence_value_match_$.headline",
+          "passed": true,
+          "details": "قيمة evidence_map مطابقة للحقل $.headline."
+        },
+        {
+          "name": "evidence_fields_complete_$.headline",
+          "passed": true,
+          "details": "كل حقول الدليل المطلوبة موجودة للمسار $.headline."
+        },
+        {
+          "name": "evidence_source_count_$.headline",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.headline."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.headline",
+          "passed": true,
+          "details": "كل مراجع المصادر موجودة للمسار $.headline."
+        },
+        {
+          "name": "evidence_reference_integrity_$.headline",
+          "passed": true,
+          "details": "بيانات المراجع متطابقة مع سجل المصادر للمسار $.headline."
+        },
+        {
+          "name": "evidence_value_match_$.lessons",
+          "passed": true,
+          "details": "قيمة evidence_map مطابقة للحقل $.lessons."
+        },
+        {
+          "name": "evidence_fields_complete_$.lessons",
+          "passed": true,
+          "details": "كل حقول الدليل المطلوبة موجودة للمسار $.lessons."
+        },
+        {
+          "name": "evidence_source_count_$.lessons",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.lessons."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.lessons",
+          "passed": true,
+          "details": "كل مراجع المصادر موجودة للمسار $.lessons."
+        },
+        {
+          "name": "evidence_reference_integrity_$.lessons",
+          "passed": true,
+          "details": "بيانات المراجع متطابقة مع سجل المصادر للمسار $.lessons."
+        },
+        {
+          "name": "no_nan_or_infinity",
+          "passed": true,
+          "details": "لا توجد قيم رقمية غير صالحة في JSON."
+        },
+        {
+          "name": "unsupported_financial_estimates_removed",
+          "passed": true,
+          "details": "أزيلت التقديرات القديمة من القيم المالية الفعلية، مع السماح بذكرها فقط ضمن شرح التصحيح."
+        },
+        {
+          "name": "shark_tank_corrected",
+          "passed": true,
+          "details": "تم تصحيح ادعاء Shark Tank وإثبات أنه دعوة مرفوضة لا صفقة."
+        },
+        {
+          "name": "revenue_not_valuation",
+          "passed": true,
+          "details": "حقل الإيراد لا يستخدم التقييم بديلًا."
+        },
+        {
+          "name": "traffic_not_operational_metric",
+          "passed": true,
+          "details": "حقل الزيارات لا يستبدل بالأشجار أو المساحة."
+        },
+        {
+          "name": "no_public_valuation_claim",
+          "passed": true,
+          "details": "لا يوجد تقييم مختلق."
+        },
+        {
+          "name": "credits_not_claimed_issued",
+          "passed": true,
+          "details": "لم تُدّعَ أرصدة صادرة."
+        },
+        {
+          "name": "pipeline_metric_labeled",
+          "passed": true,
+          "details": "رقم 8.5 ملايين موسوم كمقياس خط أنابيب تعاقدي."
+        },
+        {
+          "name": "mou_not_funding",
+          "passed": true,
+          "details": "مذكرة التفاهم مفصولة عن التمويل والإصدار."
+        },
+        {
+          "name": "flat6labs_amount_not_invented",
+          "passed": true,
+          "details": "لم يُخترع مبلغ تمويل Flat6Labs."
+        },
+        {
+          "name": "metric_taxonomy_present",
+          "passed": true,
+          "details": "مخطط فصل المقاييس موجود."
+        },
+        {
+          "name": "lessons_unique_and_company_specific",
+          "passed": true,
+          "details": "ستة دروس فريدة وخاصة بتحول Zr3i."
+        },
+        {
+          "name": "tools_are_caveated",
+          "passed": true,
+          "details": "قائمة الأدوات تميز الادعاءات التقنية عن الشراكات والاعتمادات."
+        },
+        {
+          "name": "verified_date_consistent",
+          "passed": true,
+          "details": "تاريخ التحقق متسق في كل الأدلة."
+        },
+        {
+          "name": "no_duplicate_urls",
+          "passed": true,
+          "details": "لا توجد روابط مصادر مكررة."
+        },
+        {
+          "name": "professional_v2_version",
+          "passed": true,
+          "details": "إصدار مخطط الأدلة Professional V2 صحيح."
+        }
+      ],
+      "validator_notes": [
+        "تم التحقق من صلاحية JSON باستخدام json.loads بعد الكتابة.",
+        "تمت مطابقة كل field_value في evidence_map مع الحقل النهائي المقابل.",
+        "تم التحقق من تكامل معرّفات المصادر وروابطها وعددها.",
+        "تم تطبيق فصل صريح بين الإيراد والتقييم والتمويل والزيارات والمستخدمين والأشجار والأرصدة.",
+        "تم منع NaN وInfinity وأي تقديرات مالية غير موثقة."
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة تربط الحقول الجوهرية بقيمتها النهائية، وحالة التحقق، ونوع الادعاء، والمصادر، والقيود.",
+    "required_fields": [
+      "field_value",
+      "verification_status",
+      "confidence",
+      "claim_type",
+      "verified_on",
+      "evidence_summary",
+      "source_ids",
+      "source_references",
+      "limitations",
+      "source_count"
+    ],
+    "verification_status_values": [
+      "verified_with_legal_entity_limit",
+      "verified_historical_pivot_and_current_pricing",
+      "verified_as_not_publicly_disclosed",
+      "verified_as_not_publicly_disclosed_with_metric_separation",
+      "verified_market_problem_without_company_roi_claim",
+      "verified_as_company_described_product",
+      "verified_from_product_and_partnership_scope",
+      "verified_market_context_not_company_tam",
+      "verified_no_comparable_growth_rate",
+      "verified_program_participation_amount_undisclosed",
+      "verified_as_published_revenue_pathways_not_actuals",
+      "verified_as_company_published_stack_with_limits",
+      "verified_editorial_synthesis",
+      "analytical_inference_grounded_in_evidence"
+    ],
+    "confidence_scale": {
+      "مرتفعة": "مدعوم بمصدر أولي واضح أو بعدم وجود إفصاح رغم مراجعة المصادر الرسمية ذات الصلة.",
+      "متوسطة إلى مرتفعة": "مدعوم بعدة مصادر أولية مع قيد في الاستقلال أو التعريف.",
+      "متوسطة": "يعتمد جزئيًا على إفصاح ذاتي أو استنتاج تحريري مع قيود معلنة.",
+      "منخفضة": "دليل غير كاف؛ لا تُستخدم هذه الدرجة لإثبات أرقام مالية."
+    },
+    "metric_separation": [
+      "الإيراد",
+      "التقييم",
+      "التمويل",
+      "الأشجار المسجلة أو المتحقق منها",
+      "الأشجار المتعاقد عليها أو خط الأنابيب",
+      "المستخدمون النشطون",
+      "زيارات الموقع",
+      "الأرصدة المتوقعة",
+      "الأرصدة الصادرة",
+      "قيمة المعاملات أو مبيعات الأرصدة"
+    ]
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "Zr3i منصة مصرية مقرها المعلن في القاهرة. ظهرت نسختها التاريخية ضمن دفعة Flat6Labs في خريف 2021، بينما يسجل ملف الشركة على LinkedIn سنة التأسيس 2022. يستخدم المؤسس في بعض إفصاحات 2026 تسمية DigiWell / Zr3i، لكن الاسم القانوني المسجل وهيكل الملكية لم يُتحقق منهما من سجل شركات عام؛ ولا توجد صلة تشغيلية أو تمويلية مثبتة مع Shark Tank Egypt.",
+      "verification_status": "verified_with_legal_entity_limit",
+      "confidence": "متوسطة",
+      "claim_type": "هوية وموقع الشركة",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "القاهرة والمشاركة التاريخية في Flat6Labs مدعومتان بمصادر رسمية، بينما سنة التأسيس وهوية الكيان القانوني معروضة ذاتيًا ولا يوجد سجل شركات عام مرفق.",
+      "source_ids": [
+        "SRC-04",
+        "SRC-05",
+        "SRC-07",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Zr3i — من نحن",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en/about",
+          "source_type": "صفحة رسمية للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة رسمية",
+          "source_locator": "قسم About / headquarters",
+          "supports": "المقر المعلن في القاهرة وقصة التحول"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Zr3i — صفحة الشركة على LinkedIn",
+          "publisher": "Zr3i / LinkedIn",
+          "url": "https://eg.linkedin.com/company/zr3icom",
+          "source_type": "ملف شركة مُدار ذاتيًا",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "ملف شركة ذاتي",
+          "source_locator": "Company overview",
+          "supports": "القاهرة وسنة التأسيس المعلنة"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Fall 2021 Demo Day in Cairo",
+          "publisher": "Flat6Labs",
+          "url": "https://flat6labs.com/ar/demoday/fall-2021-demo-day-in-cairo/",
+          "source_type": "إعلان رسمي لبرنامج التسريع",
+          "published_at": "2021",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان برنامج رسمي",
+          "source_locator": "قائمة شركات دفعة خريف 2021",
+          "supports": "وجود Zr3i ضمن الدفعة التاريخية"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "منشور المؤسس عن دعوة Shark Tank وإغلاق النسخة الأولى",
+          "publisher": "وليد نصر عبر LinkedIn، معاد عرضه في صفحة عامة",
+          "url": "https://eg.linkedin.com/in/ahmed-samir-farid-5400035a",
+          "source_type": "إفصاح مباشر من المؤسس معاد النشر",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مؤسس",
+          "source_locator": "منشور Shark Tank وإغلاق النسخة الأولى",
+          "supports": "عدم وجود مشاركة أو صفقة Shark Tank"
+        }
+      ],
+      "limitations": "لم يُتحقق من سجل تجاري أو اسم كيان قانوني مستقل، كما أن بيانات LinkedIn ذاتية الإفصاح.",
+      "source_count": 4
+    },
+    "$.company.business_model": {
+      "field_value": "بدأت Zr3i تاريخيًا كنموذج اشتراك لبرمجيات الزراعة الدقيقة، ثم أعيد تقديمها كمنصة لتطوير مشروعات الكربون الزراعي والقياس والإبلاغ والتحقق الرقمي. النموذج المنشور حاليًا يتيح الاستخدام الأساسي للمزارعين والمنسقين مجانًا، ويجعل عائد المنصة مشروطًا بإصدار الأرصدة وبيعها: 60% للمزارع، و5% للمنسق أو الجهة المجتمعية، و35% للمنصة افتراضيًا، مع تسعير مخصص للمنظمات والمشترين وخدمات مراقبة وتقارير احترافية محتملة. هذه مسارات تحقيق دخل معلنة، وليست إثباتًا لإيرادات محققة.",
+      "verification_status": "verified_historical_pivot_and_current_pricing",
+      "confidence": "مرتفعة",
+      "claim_type": "نموذج عمل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يوثق Flat6Labs نموذج الاشتراك التاريخي، بينما تعرض صفحات Zr3i الحالية نموذج مشاركة عائدات الأرصدة وخدمات مخصصة واحترافية.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-06",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Zr3i — التسعير وتوزيع عائدات الأرصدة",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en/pricing",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير رسمي",
+          "source_locator": "Revenue share and plans",
+          "supports": "النسب والمجانية والتسعير المخصص"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Zr3i — ملف الشركة لدى Flat6Labs",
+          "publisher": "Flat6Labs",
+          "url": "https://flat6labs.com/ar/Company/zr3i/",
+          "source_type": "مصدر رسمي لبرنامج التسريع",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "ملف برنامج رسمي",
+          "source_locator": "Business model / product profile",
+          "supports": "نموذج SaaS التاريخي"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Zr3i — الصفحة الرئيسية الرسمية",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en",
+          "source_type": "مصدر رسمي للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة رسمية",
+          "source_locator": "Product and project model",
+          "supports": "التحول إلى تطوير مشروعات الكربون وMRV"
+        }
+      ],
+      "limitations": "لا توجد قوائم مالية تثبت أن أي مسار يحقق إيرادًا حاليًا، والنسب المنشورة قابلة للتغيير أو التخصيص تعاقديًا.",
+      "source_count": 3
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير مُفصح عنه علنًا. لم يُعثر على قوائم مالية أو رقم موثوق للإيراد الشهري أو السنوي. نموذج تقاسم عائدات الأرصدة ما زال مرتبطًا بإصدار أول مستهدف في الربعين الثاني والثالث من 2027؛ لذلك لا يجوز تحويل قيمة العقود أو عدد الأشجار أو دعم برامج التسريع إلى إيراد.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "مرتفعة",
+      "claim_type": "إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لم يوجد رقم إيراد شهري أو سنوي موثوق، بينما تنص الشركة على أن أول إصدار مستهدف في 2027 وأن الإيراد المرتبط بالأرصدة مشروط بالإصدار والبيع.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Zr3i — الصفحة الرئيسية الرسمية",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en",
+          "source_type": "مصدر رسمي للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة رسمية",
+          "source_locator": "First issuance target",
+          "supports": "الجدول الزمني المستهدف لأول إصدار"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Zr3i — التسعير وتوزيع عائدات الأرصدة",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en/pricing",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة تسعير رسمية",
+          "source_locator": "Revenue share",
+          "supports": "طبيعة الإيراد المشروط"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "إفصاح المؤسس عن خط الأنابيب والبحث عن تمويل للمشروع",
+          "publisher": "وليد نصر / LinkedIn",
+          "url": "https://www.linkedin.com/posts/walidnasr_climatefinance-carbonmarkets-naturebasedsolutions-activity-7353312424229007360-XrU5",
+          "source_type": "إفصاح مباشر من المؤسس",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مؤسس",
+          "source_locator": "Project finance request",
+          "supports": "الحاجة إلى تمويل المشروع لا الإيراد المحقق"
+        }
+      ],
+      "limitations": "غياب الإفصاح العام لا يثبت انعدام الإيراد من خدمات أخرى؛ يثبت فقط أنه لا يمكن تقدير MRR أو ARR بصورة موثوقة.",
+      "source_count": 3
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير مُفصح عنه علنًا، ولا يتوفر رقم موثوق للزيارات الشهرية أو المستخدمين النشطين. ذكرت الشركة 2,598 نخلة مسجلة ومتحققًا منها عبر 8 مزارع و18.2 هكتار في 5 أبريل 2026، ثم أعلنت لاحقًا خط أنابيب يبلغ 8.5 ملايين نخلة متعاقدًا عليها واتفاقات مع جهات متعددة؛ وهذه مقاييس تشغيلية مختلفة ولا تمثل زيارات أو مستخدمين أو أرصدة صادرة.",
+      "verification_status": "verified_as_not_publicly_disclosed_with_metric_separation",
+      "confidence": "مرتفعة",
+      "claim_type": "زيارات ومؤشرات استخدام",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا تنشر الشركة زيارات شهرية أو MAU. الأرقام المتاحة تخص أشجارًا ومزارع ومساحة وخط أنابيب تعاقديًا، وهي مقاييس لا يجوز استبدالها بالزيارات أو المستخدمين.",
+      "source_ids": [
+        "SRC-12",
+        "SRC-01",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-12",
+          "title": "Zr3i 3.55 — Full Platform Launch",
+          "publisher": "Zr3i",
+          "url": "https://zr3i.com/en/blog/zr3i-355-full-platform-launch",
+          "source_type": "إصدار منتج رسمي",
+          "published_at": "2026-04-05",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إصدار منتج رسمي",
+          "source_locator": "Launch metrics",
+          "supports": "2,598 نخلة و8 مزارع و18.2 هكتار في أبريل 2026"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Zr3i — الصفحة الرئيسية الرسمية",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en",
+          "source_type": "مصدر رسمي للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة رسمية",
+          "source_locator": "Contracted tree pipeline",
+          "supports": "8.5 ملايين نخلة متعاقدًا عليها وفق الشركة"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "إفصاح المؤسس عن خط الأنابيب والبحث عن تمويل للمشروع",
+          "publisher": "وليد نصر / LinkedIn",
+          "url": "https://www.linkedin.com/posts/walidnasr_climatefinance-carbonmarkets-naturebasedsolutions-activity-7353312424229007360-XrU5",
+          "source_type": "إفصاح مباشر من المؤسس",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مؤسس",
+          "source_locator": "Contracts and pipeline",
+          "supports": "اتفاقات وخط أنابيب معلن ذاتيًا"
+        }
+      ],
+      "limitations": "الأرقام التشغيلية صادرة عن الشركة ولم تخضع لمراجعة مستقلة، كما تختلف تعريفاتها وتواريخها.",
+      "source_count": 3
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "تواجه المزارع، ولا سيما مزارع النخيل المتفرقة وصغار المنتجين، فجوة في المتابعة المستمرة والإرشاد الزراعي وجمع الأدلة القابلة للتدقيق. كما يصعب تحويل ممارسات مثل تحسين الري وإدارة التربة والتشجير إلى مشروع كربوني قابل للتمويل بسبب كلفة القياس الميداني، وتجزؤ البيانات، ومتطلبات خطوط الأساس والإضافية والمراقبة والتحقق المستقل.",
+        "impact": "تؤدي هذه الفجوة إلى تأخر اكتشاف الإجهاد والآفات، وضعف توثيق التحسينات الزراعية، وصعوبة وصول المزارعين إلى تمويل المناخ. لا توجد أدلة عامة تسمح بإسناد نسبة وفر ثابتة مثل 30% إلى Zr3i، لذا أزيل هذا الرقم من النسخة الأصلية."
+      },
+      "verification_status": "verified_market_problem_without_company_roi_claim",
+      "confidence": "مرتفعة",
+      "claim_type": "مشكلة سوقية",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم مصادر دولية فجوة الإرشاد والحاجة إلى تحسين إدارة النخيل والآفات، بينما أزيل ادعاء وفر 30% لغياب دليل خاص بـZr3i.",
+      "source_ids": [
+        "SRC-18",
+        "SRC-19",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-18",
+          "title": "برنامج وطني لتعزيز قطاع نخيل التمر في مصر",
+          "publisher": "منظمة الأغذية والزراعة للأمم المتحدة",
+          "url": "https://www.fao.org/egypt/news/detail/fao-leads-national-programme-to-strengthen-egypt-s-date-palm-sector-through-good-agricultural-practices-and-integrated-pest-management/en",
+          "source_type": "مصدر حكومي دولي لسياق المشكلة",
+          "published_at": "2026-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر دولي رسمي",
+          "source_locator": "قطاع نخيل التمر وإدارة الآفات",
+          "supports": "الحاجة إلى ممارسات وإدارة متكاملة"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Can AI give small-scale producers the right advice?",
+          "publisher": "البنك الدولي",
+          "url": "https://blogs.worldbank.org/en/agfood/can-ai-give-small-scale-producers-the-right-advice-",
+          "source_type": "مصدر مؤسسي دولي لسياق المشكلة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تحليل مؤسسي دولي",
+          "source_locator": "Agricultural advisory gap",
+          "supports": "فجوة الإرشاد وإمكانات الأدوات الرقمية"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Zr3i — منهجية القياس والإبلاغ والتحقق الرقمي",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en/methodology",
+          "source_type": "منهجية رسمية منشورة من الشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منهجية شركة",
+          "source_locator": "MRV workflow",
+          "supports": "متطلبات الأدلة والمراجعة للمشروع"
+        }
+      ],
+      "limitations": "المصادر القطاعية تثبت المشكلة العامة لا أثر Zr3i الفعلي أو نسبة وفر محددة.",
+      "source_count": 3
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "تجمع النسخة الحالية من Zr3i بين تحليل صور الأقمار الصناعية والمؤشرات النباتية، وملفات المزارع والأشجار، وصور ميدانية مؤرخة وموسومة جغرافيًا، وإعداد وثائق المشروع وتقارير القياس والإبلاغ والتحقق. تصف الشركة مسارًا يبدأ بالتسجيل وخط الأساس والتقديرات، ثم المراجعة الميدانية والتحقق بواسطة جهة مستقلة قبل إصدار أي رصيد. تركز دورة المشروع الكاملة عند الإطلاق على نخيل التمر، بينما تبقى التقديرات المعروضة قبل التحقق توقعات وليست أرصدة قابلة للبيع."
+      },
+      "verification_status": "verified_as_company_described_product",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "منتج وحل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توثق المواد الرسمية مكونات الاستشعار عن بعد والأدلة الميدانية وMRV، مع تمييز واضح بين التقديرات والأرصدة الصادرة.",
+      "source_ids": [
+        "SRC-03",
+        "SRC-01",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Zr3i — منهجية القياس والإبلاغ والتحقق الرقمي",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en/methodology",
+          "source_type": "منهجية رسمية منشورة من الشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منهجية شركة رسمية",
+          "source_locator": "End-to-end methodology",
+          "supports": "التسجيل والصور والتحليل والمراجعة والتحقق"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Zr3i — الصفحة الرئيسية الرسمية",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en",
+          "source_type": "مصدر رسمي للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة رسمية",
+          "source_locator": "Services and workflow",
+          "supports": "خدمات المراقبة والتقارير وتطوير المشروع"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Zr3i 3.55 — Full Platform Launch",
+          "publisher": "Zr3i",
+          "url": "https://zr3i.com/en/blog/zr3i-355-full-platform-launch",
+          "source_type": "إصدار منتج رسمي",
+          "published_at": "2026-04-05",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إصدار منتج رسمي",
+          "source_locator": "Platform launch features",
+          "supports": "المزايا التشغيلية عند الإطلاق"
+        }
+      ],
+      "limitations": "لم يُنفذ اختبار مستقل للمنصة أو دقة النماذج، ولم يُعثر على إصدار أرصدة موثق حتى تاريخ التحقق.",
+      "source_count": 3
+    },
+    "$.market_data.target_audience": {
+      "field_value": "مزارعو نخيل التمر والجمعيات والتعاونيات الزراعية والمنسقون الميدانيون، والشركات الزراعية ومطورو المشروعات، ومشترو الأرصدة والجهات الممولة، والمدققون وجهات التحقق المستقلة والجهات العامة المعنية بالزراعة والمناخ. تعلن المنصة نشاطًا أو اتفاقات في مصر والأردن والإمارات، مع ضرورة التمييز بين اتفاقية أو مذكرة تفاهم وبين مشروع مسجل أو عميل دافع.",
+      "verification_status": "verified_from_product_and_partnership_scope",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "جمهور مستهدف",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تتوافق الشرائح مع أدوار التسعير والمنهجية والاتفاقات المنشورة: مزارعون، منسقون، جمعيات، منظمات، مشترون ومدققون.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Zr3i — التسعير وتوزيع عائدات الأرصدة",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en/pricing",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة تسعير رسمية",
+          "source_locator": "Customer roles",
+          "supports": "المزارعون والمنسقون والمنظمات والمشترون"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Zr3i — منهجية القياس والإبلاغ والتحقق الرقمي",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en/methodology",
+          "source_type": "منهجية رسمية منشورة من الشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منهجية رسمية",
+          "source_locator": "Review and verification roles",
+          "supports": "المنسقون وجهات التحقق"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "إفصاح المؤسس عن مذكرة تفاهم لمشروع نخيل التمر في الإمارات",
+          "publisher": "وليد نصر / LinkedIn",
+          "url": "https://www.linkedin.com/posts/walidnasr_agriculture-climatefinance-carbonmarkets-activity-7323305970327621632-OvD8",
+          "source_type": "إفصاح مباشر من المؤسس",
+          "published_at": "2026-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح شراكة",
+          "source_locator": "UAE date-palm MOU",
+          "supports": "النطاق الجغرافي والمؤسسي"
+        }
+      ],
+      "limitations": "لا توجد أعداد موثقة للعملاء الدافعين حسب الشريحة، والاتفاقات ليست بالضرورة حسابات نشطة أو إيرادات.",
+      "source_count": 3
+    },
+    "$.market_data.market_size": {
+      "field_value": "لم تنشر الشركة دراسة موثوقة لحجم سوقها القابل للخدمة أو إيراداته. كسياق قطاعي فقط، تذكر منظمة الأغذية والزراعة أن مصر تنتج أكثر من 1.8 مليون طن من التمور سنويًا بما يقارب 19% من الإنتاج العالمي، وتشير مصادرها إلى قاعدة كبيرة من أشجار النخيل. هذا يوضح اتساع القطاع الزراعي، لكنه لا يساوي حجم سوق Zr3i ولا قيمة أرصدة قابلة للإصدار.",
+      "verification_status": "verified_market_context_not_company_tam",
+      "confidence": "مرتفعة",
+      "claim_type": "حجم سوق وسياق قطاعي",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "بيانات FAO تثبت ضخامة قطاع التمور المصري، لكنها لا تقدم TAM أو SAM أو SOM خاصًا بـZr3i.",
+      "source_ids": [
+        "SRC-17",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-17",
+          "title": "Egypt — Date Palm, One Country One Priority Product",
+          "publisher": "منظمة الأغذية والزراعة للأمم المتحدة",
+          "url": "https://www.fao.org/one-country-one-priority-product/near-east-and-north-africa/egypt/en",
+          "source_type": "مصدر حكومي دولي لسياق السوق",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيانات قطاعية رسمية",
+          "source_locator": "Egypt date production",
+          "supports": "أكثر من 1.8 مليون طن ونحو 19% عالميًا"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "برنامج وطني لتعزيز قطاع نخيل التمر في مصر",
+          "publisher": "منظمة الأغذية والزراعة للأمم المتحدة",
+          "url": "https://www.fao.org/egypt/news/detail/fao-leads-national-programme-to-strengthen-egypt-s-date-palm-sector-through-good-agricultural-practices-and-integrated-pest-management/en",
+          "source_type": "مصدر حكومي دولي لسياق المشكلة",
+          "published_at": "2026-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "برنامج قطاعي رسمي",
+          "source_locator": "Date-palm development program",
+          "supports": "أهمية القطاع والحاجة إلى تحسين الممارسات"
+        }
+      ],
+      "limitations": "لا توجد بيانات عامة موثوقة عن عدد الهكتارات المؤهلة كربونيًا أو السعر المتوقع أو معدل التحويل إلى أرصدة.",
+      "source_count": 2
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا يوجد معدل نمو موثوق للإيراد أو المستخدمين. يمكن رصد انتقال الإفصاح من 2,598 نخلة مسجلة ومتحققًا منها في إصدار أبريل 2026 إلى 8.5 ملايين نخلة «متعاقدًا عليها» في خط الأنابيب المعلن لاحقًا، لكن المقامين غير متجانسين: الأول رصيد تشغيلي مسجل، والثاني نطاق تعاقدي مستقبلي ذاتي الإفصاح. لذلك لا يمكن اشتقاق نسبة نمو سليمة منهما.",
+      "verification_status": "verified_no_comparable_growth_rate",
+      "confidence": "مرتفعة",
+      "claim_type": "نمو",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الرقمان المنشوران يقيسان مرحلتين مختلفتين: تسجيلًا تشغيليًا وخط أنابيب تعاقديًا، فلا يصح حساب معدل نمو بينهما.",
+      "source_ids": [
+        "SRC-12",
+        "SRC-01",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-12",
+          "title": "Zr3i 3.55 — Full Platform Launch",
+          "publisher": "Zr3i",
+          "url": "https://zr3i.com/en/blog/zr3i-355-full-platform-launch",
+          "source_type": "إصدار منتج رسمي",
+          "published_at": "2026-04-05",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مقياس تشغيل رسمي",
+          "source_locator": "Launch metrics dated 2026-04-05",
+          "supports": "الأشجار المسجلة والمزارع والمساحة"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Zr3i — الصفحة الرئيسية الرسمية",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en",
+          "source_type": "مصدر رسمي للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مقياس خط أنابيب رسمي",
+          "source_locator": "Contracted trees",
+          "supports": "الأشجار المتعاقد عليها وفق الشركة"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "إفصاح المؤسس عن خط الأنابيب والبحث عن تمويل للمشروع",
+          "publisher": "وليد نصر / LinkedIn",
+          "url": "https://www.linkedin.com/posts/walidnasr_climatefinance-carbonmarkets-naturebasedsolutions-activity-7353312424229007360-XrU5",
+          "source_type": "إفصاح مباشر من المؤسس",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مؤسس",
+          "source_locator": "Agreements and pipeline",
+          "supports": "طبيعة الخط التعاقدي والبحث عن تمويل"
+        }
+      ],
+      "limitations": "لا توجد سلسلة زمنية متجانسة للإيراد أو المستخدمين أو الأشجار النشطة، والأرقام غير مدققة خارجيًا.",
+      "source_count": 3
+    },
+    "$.financials.initial_investment": {
+      "field_value": "المشاركة في برنامج Flat6Labs وظهور الشركة في دفعة خريف 2021 موثقان رسميًا، إلا أن النصوص الأولية المتاحة لا تثبت مبلغ تمويل محدد. لم تدخل Zr3i صفقة Shark Tank وفق إفصاح المؤسس؛ فقد ذكر أنه رفض الدعوة وأن النسخة الأولى لم تُطلق. وفي 2026 تحدث المؤسس عن البحث عن تمويل للمشروعات، وهو احتياج تمويلي مستقبلي لا يثبت جولة مغلقة.",
+      "verification_status": "verified_program_participation_amount_undisclosed",
+      "confidence": "مرتفعة",
+      "claim_type": "تمويل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "مشاركة Flat6Labs موثقة، لكن مبلغ الاستثمار غير مثبت في مصدر أولي متاح. إفصاح المؤسس ينفي الدخول في Shark Tank ويشير إلى طلب تمويل مشروعات في 2026.",
+      "source_ids": [
+        "SRC-06",
+        "SRC-07",
+        "SRC-08",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Zr3i — ملف الشركة لدى Flat6Labs",
+          "publisher": "Flat6Labs",
+          "url": "https://flat6labs.com/ar/Company/zr3i/",
+          "source_type": "مصدر رسمي لبرنامج التسريع",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "ملف برنامج رسمي",
+          "source_locator": "Zr3i company profile",
+          "supports": "الدعم أو التخرج من Flat6Labs"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Fall 2021 Demo Day in Cairo",
+          "publisher": "Flat6Labs",
+          "url": "https://flat6labs.com/ar/demoday/fall-2021-demo-day-in-cairo/",
+          "source_type": "إعلان رسمي لبرنامج التسريع",
+          "published_at": "2021",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان برنامج رسمي",
+          "source_locator": "Fall 2021 cohort",
+          "supports": "المشاركة في الدفعة"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "منشور المؤسس عن دعوة Shark Tank وإغلاق النسخة الأولى",
+          "publisher": "وليد نصر عبر LinkedIn، معاد عرضه في صفحة عامة",
+          "url": "https://eg.linkedin.com/in/ahmed-samir-farid-5400035a",
+          "source_type": "إفصاح مباشر من المؤسس معاد النشر",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مؤسس",
+          "source_locator": "Shark Tank invitation",
+          "supports": "رفض الدعوة وعدم إطلاق النسخة الأولى"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "إفصاح المؤسس عن خط الأنابيب والبحث عن تمويل للمشروع",
+          "publisher": "وليد نصر / LinkedIn",
+          "url": "https://www.linkedin.com/posts/walidnasr_climatefinance-carbonmarkets-naturebasedsolutions-activity-7353312424229007360-XrU5",
+          "source_type": "إفصاح مباشر من المؤسس",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مؤسس",
+          "source_locator": "Project finance",
+          "supports": "البحث عن تمويل للمشروع"
+        }
+      ],
+      "limitations": "لم يُعثر على مستند جولة أو كشف تحويل أو شروط استثمار؛ لذلك لم يُدرج مبلغ متداول في مصادر ثانوية.",
+      "source_count": 4
+    },
+    "$.financials.valuation": {
+      "field_value": "غير مُفصح عنه علنًا. لا توجد جولة استثمار موثقة بشروط تسمح بحساب تقييم قبل الاستثمار أو بعده، ولا يجوز استخدام عبارة «عشرات الملايين من الجنيهات» دون مصدر أولي.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "مرتفعة",
+      "claim_type": "تقييم",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا توجد صفقة موثقة أو شروط ملكية تسمح بحساب تقييم، كما لا توجد إفصاحات شركة عامة أو SEC.",
+      "source_ids": [
+        "SRC-06",
+        "SRC-08",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Zr3i — ملف الشركة لدى Flat6Labs",
+          "publisher": "Flat6Labs",
+          "url": "https://flat6labs.com/ar/Company/zr3i/",
+          "source_type": "مصدر رسمي لبرنامج التسريع",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "ملف برنامج رسمي",
+          "source_locator": "Company profile",
+          "supports": "غياب تقييم معلن في المصدر الرسمي"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "منشور المؤسس عن دعوة Shark Tank وإغلاق النسخة الأولى",
+          "publisher": "وليد نصر عبر LinkedIn، معاد عرضه في صفحة عامة",
+          "url": "https://eg.linkedin.com/in/ahmed-samir-farid-5400035a",
+          "source_type": "إفصاح مباشر من المؤسس معاد النشر",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مؤسس",
+          "source_locator": "No Shark Tank deal",
+          "supports": "عدم وجود صفقة Shark Tank يمكن اشتقاق تقييم منها"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "إفصاح المؤسس عن خط الأنابيب والبحث عن تمويل للمشروع",
+          "publisher": "وليد نصر / LinkedIn",
+          "url": "https://www.linkedin.com/posts/walidnasr_climatefinance-carbonmarkets-naturebasedsolutions-activity-7353312424229007360-XrU5",
+          "source_type": "إفصاح مباشر من المؤسس",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مؤسس",
+          "source_locator": "Project finance outreach",
+          "supports": "التمويل المطلوب لا يمثل تقييمًا"
+        }
+      ],
+      "limitations": "الشركة خاصة ومصرية؛ SEC غير منطبق عمليًا، ولم يُعثر على سجل جولة أولي يقدم تقييمًا.",
+      "source_count": 3
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "حصة افتراضية قدرها 35% للمنصة من صافي عائد الأرصدة التي تُصدر وتُباع مستقبلًا، مقابل 60% للمزارع و5% للمنسق أو الجهة المجتمعية؛ هذا دخل مشروط بالإصدار والبيع وليس إيرادًا حاليًا مثبتًا.",
+        "تسعير مخصص للمنظمات ومشتري الأرصدة، قد يرتبط بكل رصيد صادر أو باتفاق تجاري مخصص وفق صفحة التسعير.",
+        "ميزات احترافية محتملة للمراقبة المستمرة والتنبيهات والتقارير والتحليلات للمزارع والشركات.",
+        "خدمات تطوير المشروع وإعداد وثائق القياس والإبلاغ والتحقق والتنسيق مع المدققين والمشترين عندما تكون مشمولة في عقد تجاري؛ لم تفصح الشركة عن مساهمة كل مسار في الإيراد."
+      ],
+      "verification_status": "verified_as_published_revenue_pathways_not_actuals",
+      "confidence": "مرتفعة",
+      "claim_type": "مسارات إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المسارات مشتقة من صفحة التسعير والخدمات الرسمية، مع تمييزها عن الإيرادات الفعلية أو المعترف بها محاسبيًا.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-01",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Zr3i — التسعير وتوزيع عائدات الأرصدة",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en/pricing",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة تسعير رسمية",
+          "source_locator": "Revenue share and custom pricing",
+          "supports": "تقاسم الإيراد والتسعير المخصص"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Zr3i — الصفحة الرئيسية الرسمية",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en",
+          "source_type": "مصدر رسمي للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة خدمات رسمية",
+          "source_locator": "Monitoring, reporting and project services",
+          "supports": "الخدمات التي قد تُسعر احترافيًا"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Zr3i — منهجية القياس والإبلاغ والتحقق الرقمي",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en/methodology",
+          "source_type": "منهجية رسمية منشورة من الشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منهجية شركة",
+          "source_locator": "Project development workflow",
+          "supports": "مكونات خدمة تطوير المشروع وMRV"
+        }
+      ],
+      "limitations": "لم تفصح الشركة عن عقود مدفوعة أو إيراد حسب المنتج، وقد تتغير النسب والشروط حسب العقد والسوق.",
+      "source_count": 3
+    },
+    "$.tools": {
+      "field_value": [
+        "صور Sentinel-2 ومصادر صور عالية الدقة مثل PlanetScope وفق وصف الشركة؛ لا يُعامل ذلك كإثبات لشراكة تجارية مستقلة",
+        "الاستشعار عن بُعد ونظم المعلومات الجغرافية",
+        "أكثر من 18 مؤشرًا نباتيًا وتحليلات تغير الغطاء النباتي وفق المواد الرسمية",
+        "نماذج تحليل وذكاء اصطناعي لتقدير الحالة والكتلة الحيوية والمخاطر",
+        "صور ميدانية مؤرخة وموسومة جغرافيًا مع تدقيق منسقين",
+        "تطبيقات ويب وهاتف ومسارات عمل ميدانية يمكن أن تشمل العمل دون اتصال",
+        "سجلات رقمية للقياس والإبلاغ والتحقق وإعداد وثائق المشروع",
+        "مراجعة جهة تحقق مستقلة قبل الإصدار وفق المسار المعلن",
+        "الاسترشاد بمنهجيات مثل Verra VM0042 وVM0047؛ وجود المنهجية لا يثبت تسجيل مشروع Zr3i"
+      ],
+      "verification_status": "verified_as_company_published_stack_with_limits",
+      "confidence": "متوسطة",
+      "claim_type": "تقنيات وأدوات",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الأدوات مستخلصة من صفحات المنتج والمنهجية والإصدار، مع إزالة Python وCloud Computing لعدم وجود إثبات حالي مباشر، وإضافة قيود على الشراكات والمعايير.",
+      "source_ids": [
+        "SRC-03",
+        "SRC-12",
+        "SRC-15",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Zr3i — منهجية القياس والإبلاغ والتحقق الرقمي",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en/methodology",
+          "source_type": "منهجية رسمية منشورة من الشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منهجية شركة",
+          "source_locator": "Satellite and field evidence workflow",
+          "supports": "الأقمار والمؤشرات والصور الميدانية وMRV"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Zr3i 3.55 — Full Platform Launch",
+          "publisher": "Zr3i",
+          "url": "https://zr3i.com/en/blog/zr3i-355-full-platform-launch",
+          "source_type": "إصدار منتج رسمي",
+          "published_at": "2026-04-05",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إصدار منتج رسمي",
+          "source_locator": "Platform feature list",
+          "supports": "التطبيقات والخصائص التشغيلية"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "VM0042 Improved Agricultural Land Management, v2.2",
+          "publisher": "Verra",
+          "url": "https://verra.org/methodologies/vm0042-improved-agricultural-land-management-v2-2/",
+          "source_type": "منهجية معيارية رسمية",
+          "published_at": "2025-10-21",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منهجية معيارية رسمية",
+          "source_locator": "VM0042 status",
+          "supports": "وجود منهجية زراعية فعالة"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "VM0047 Afforestation, Reforestation, and Revegetation, v1.1",
+          "publisher": "Verra",
+          "url": "https://verra.org/methodologies/vm0047-afforestation-reforestation-and-revegetation-v1-1/",
+          "source_type": "منهجية معيارية رسمية",
+          "published_at": "2025-05-14",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منهجية معيارية رسمية",
+          "source_locator": "VM0047 status",
+          "supports": "وجود منهجية تشجير فعالة"
+        }
+      ],
+      "limitations": "المواد لا تثبت دقة النماذج أو وجود شراكة مدفوعة مع مزودي الصور، واعتماد المنهجية لا يثبت اعتماد مشروع الشركة.",
+      "source_count": 4
+    },
+    "$.headline": {
+      "field_value": "من تطبيق لم يُطلق إلى خط أنابيب كربوني معلن بـ8.5 ملايين نخلة: كيف أعادت Zr3i بناء نموذجها قبل إصدار أول أرصدة",
+      "verification_status": "verified_editorial_synthesis",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "عنوان تحريري",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "العنوان يجمع إفصاح المؤسس عن عدم إطلاق النسخة الأولى مع نموذج الكربون الحالي وخط الأنابيب المعلن وموعد الإصدار المستهدف.",
+      "source_ids": [
+        "SRC-08",
+        "SRC-01",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "منشور المؤسس عن دعوة Shark Tank وإغلاق النسخة الأولى",
+          "publisher": "وليد نصر عبر LinkedIn، معاد عرضه في صفحة عامة",
+          "url": "https://eg.linkedin.com/in/ahmed-samir-farid-5400035a",
+          "source_type": "إفصاح مباشر من المؤسس معاد النشر",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مؤسس",
+          "source_locator": "First version did not launch",
+          "supports": "التحول من النسخة الأولى"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Zr3i — الصفحة الرئيسية الرسمية",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en",
+          "source_type": "مصدر رسمي للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة رسمية",
+          "source_locator": "8.5m contracted trees and issuance target",
+          "supports": "الخط الحالي والموعد المستهدف"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Zr3i — التسعير وتوزيع عائدات الأرصدة",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en/pricing",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير رسمي",
+          "source_locator": "Carbon revenue model",
+          "supports": "النموذج الحالي"
+        }
+      ],
+      "limitations": "رقم 8.5 ملايين نخلة ادعاء شركة غير مدقق، ووصف «خط أنابيب» مقصود لمنع الخلط مع الأشجار النشطة أو الأرصدة الصادرة.",
+      "source_count": 3
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "إغلاق النسخة الأولى قد يكون قرارًا مؤسسًا لا هزيمة",
+          "description": "قال المؤسس إن Zr3i الأولى لم تُطلق رغم دعوة Shark Tank. الدرس هنا أن الاعتراف بعدم صلاحية الصيغة الأولى، ثم إعادة تعريف المشكلة من مراقبة المحصول فقط إلى بنية تمويل كربوني كاملة، يمكن أن يكون أكثر قيمة من الاستمرار في منتج بلا طلب مثبت."
+        },
+        {
+          "title": "غيّر من يدفع قبل أن تغيّر التقنية",
+          "description": "النموذج التاريخي طلب اشتراكًا من المزارع؛ النموذج الحالي يجعل التسجيل الأساسي مجانيًا ويربط عائد المنصة بالأرصدة المصدرة. بذلك ينتقل المزارع من مشترٍ للبرمجيات إلى شريك في العائد، مع بقاء مخاطر التأخير والتحقق والسعر على المشروع والمنصة."
+        },
+        {
+          "title": "العقد والشجرة والتقدير والرصيد أربع وحدات مختلفة",
+          "description": "8.5 ملايين نخلة متعاقدًا عليها لا تعني 8.5 ملايين نخلة مراقبة فعليًا، ولا تعني أرصدة صادرة أو مبيعات. بناء لوحة قياس موثوقة يتطلب فصل خط الأنابيب التعاقدي عن التسجيل الميداني، والتقديرات، والتحقق، والإصدار، ثم التسوية المالية."
+        },
+        {
+          "title": "مذكرة التفاهم تفتح باب المشروع ولا تختصر دورة الاعتماد",
+          "description": "المذكرة المعلنة في الإمارات توفر إطار تعاون وشرعية وصول، لكن المؤسس نفسه أوضح أنها لا تنشئ أرصدة ولا تسجل مزارعين ولا تضمن الإصدار. القيمة الحقيقية تبدأ بعد تحديد النطاق وجمع الأدلة والتحقق والتسجيل والتمويل."
+        },
+        {
+          "title": "في أسواق الكربون، سلسلة الأدلة هي المنتج",
+          "description": "الخوارزمية وحدها لا تكفي. الصور الموسومة جغرافيًا، وخط الأساس، وسجل التغييرات، وموافقة المزارع، والمنهجية المقبولة، ومراجعة جهة تحقق مستقلة هي ما يحول التحليل إلى أصل قابل للتدقيق. اعتماد منهجية Verra لا يساوي اعتماد مشروع بعينه."
+        },
+        {
+          "title": "الثقة القانونية والتشغيلية يجب أن تنمو مع خط الأنابيب",
+          "description": "وجود سياسة خصوصية معلّمة بأنها بانتظار المراجعة القانونية وآليات خدمة ما زالت قيد الاستكمال يبرز فجوة شائعة: يمكن للعقود أن تتوسع أسرع من الحوكمة. في مشروع يحتفظ ببيانات جغرافية وحقوق عائدات طويلة الأجل، اكتمال الموافقات والعقود والخصوصية شرط تجاري لا مهمة جانبية."
+        }
+      ],
+      "verification_status": "analytical_inference_grounded_in_evidence",
+      "confidence": "متوسطة",
+      "claim_type": "تحليل ودروس",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس استنتاجات تحريرية خاصة بـZr3i مبنية على التحول، ونموذج العائد، وفصل المقاييس، وحدود مذكرات التفاهم، ومتطلبات MRV، ونضج الحوكمة.",
+      "source_ids": [
+        "SRC-08",
+        "SRC-02",
+        "SRC-10",
+        "SRC-03",
+        "SRC-13",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "منشور المؤسس عن دعوة Shark Tank وإغلاق النسخة الأولى",
+          "publisher": "وليد نصر عبر LinkedIn، معاد عرضه في صفحة عامة",
+          "url": "https://eg.linkedin.com/in/ahmed-samir-farid-5400035a",
+          "source_type": "إفصاح مباشر من المؤسس معاد النشر",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مؤسس",
+          "source_locator": "Closure and reboot",
+          "supports": "درس إغلاق النسخة الأولى"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Zr3i — التسعير وتوزيع عائدات الأرصدة",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en/pricing",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير رسمي",
+          "source_locator": "Revenue alignment",
+          "supports": "درس تحويل المزارع إلى شريك في العائد"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "إفصاح المؤسس عن مذكرة تفاهم لمشروع نخيل التمر في الإمارات",
+          "publisher": "وليد نصر / LinkedIn",
+          "url": "https://www.linkedin.com/posts/walidnasr_agriculture-climatefinance-carbonmarkets-activity-7323305970327621632-OvD8",
+          "source_type": "إفصاح مباشر من المؤسس",
+          "published_at": "2026-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مؤسس",
+          "source_locator": "MOU limitations",
+          "supports": "درس حدود مذكرة التفاهم"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Zr3i — منهجية القياس والإبلاغ والتحقق الرقمي",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en/methodology",
+          "source_type": "منهجية رسمية منشورة من الشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منهجية رسمية",
+          "source_locator": "Evidence chain",
+          "supports": "درس سلسلة الأدلة"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Zr3i — سياسة الخصوصية",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en/legal/privacy",
+          "source_type": "صفحة قانونية رسمية",
+          "published_at": "2026-06-30",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة قانونية رسمية",
+          "source_locator": "Pending legal review",
+          "supports": "درس نضج الحوكمة"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Zr3i — اتفاقية مستوى الخدمة",
+          "publisher": "Zr3i",
+          "url": "https://www.zr3i.com/en/legal/sla",
+          "source_type": "صفحة تشغيلية رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة تشغيلية رسمية",
+          "source_locator": "SLA still being finalized",
+          "supports": "درس النضج التشغيلي"
+        }
+      ],
+      "limitations": "هذه الدروس تحليل وليست تصريحات حرفية من الشركة، وقد تتغير مع اكتمال التسجيل والتحقق والإصدار.",
+      "source_count": 6
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Zr3i — الصفحة الرئيسية الرسمية",
+      "publisher": "Zr3i",
+      "url": "https://www.zr3i.com/en",
+      "source_type": "مصدر رسمي للشركة",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يعرض النموذج الحالي، 8.5 ملايين نخلة متعاقدًا عليها وفق الشركة، الأسواق المستهدفة، وموعد الإصدار الأول المستهدف في الربعين الثاني والثالث من 2027."
+    },
+    {
+      "id": "SRC-02",
+      "title": "Zr3i — التسعير وتوزيع عائدات الأرصدة",
+      "publisher": "Zr3i",
+      "url": "https://www.zr3i.com/en/pricing",
+      "source_type": "صفحة تسعير رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوضح المجانية للمزارعين والمنسقين، والنسب الافتراضية 60% للمزارع و5% للمنسق أو الجهة المجتمعية و35% للمنصة، مع تسعير مخصص للمنظمات والمشترين."
+    },
+    {
+      "id": "SRC-03",
+      "title": "Zr3i — منهجية القياس والإبلاغ والتحقق الرقمي",
+      "publisher": "Zr3i",
+      "url": "https://www.zr3i.com/en/methodology",
+      "source_type": "منهجية رسمية منشورة من الشركة",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يشرح صورًا ميدانية موسومة جغرافيًا، تحليل الأقمار الصناعية، المراجعة، ودور جهة التحقق المستقلة قبل الإصدار. تبقى هذه وصفًا تشغيليًا صادرًا عن الشركة."
+    },
+    {
+      "id": "SRC-04",
+      "title": "Zr3i — من نحن",
+      "publisher": "Zr3i",
+      "url": "https://www.zr3i.com/en/about",
+      "source_type": "صفحة رسمية للشركة",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يعرض المقر المعلن في القاهرة، قصة التحول، والتركيز الحالي على مشروعات الكربون الزراعي."
+    },
+    {
+      "id": "SRC-05",
+      "title": "Zr3i — صفحة الشركة على LinkedIn",
+      "publisher": "Zr3i / LinkedIn",
+      "url": "https://eg.linkedin.com/company/zr3icom",
+      "source_type": "ملف شركة مُدار ذاتيًا",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يسجل القاهرة مقرًا، والتأسيس في 2022، وتصنيف الشركة ومعلومات تشغيلية ذاتية الإفصاح؛ ليست سجلًا تجاريًا مستقلًا."
+    },
+    {
+      "id": "SRC-06",
+      "title": "Zr3i — ملف الشركة لدى Flat6Labs",
+      "publisher": "Flat6Labs",
+      "url": "https://flat6labs.com/ar/Company/zr3i/",
+      "source_type": "مصدر رسمي لبرنامج التسريع",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق النسخة التاريخية كمنصة زراعة دقيقة تعتمد على الأقمار الصناعية والاستشعار عن بعد والذكاء الاصطناعي ونموذج اشتراك."
+    },
+    {
+      "id": "SRC-07",
+      "title": "Fall 2021 Demo Day in Cairo",
+      "publisher": "Flat6Labs",
+      "url": "https://flat6labs.com/ar/demoday/fall-2021-demo-day-in-cairo/",
+      "source_type": "إعلان رسمي لبرنامج التسريع",
+      "published_at": "2021",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق مشاركة Zr3i ضمن دفعة خريف 2021. لا يقدم النص المتاح قيمة تمويل مؤكدة."
+    },
+    {
+      "id": "SRC-08",
+      "title": "منشور المؤسس عن دعوة Shark Tank وإغلاق النسخة الأولى",
+      "publisher": "وليد نصر عبر LinkedIn، معاد عرضه في صفحة عامة",
+      "url": "https://eg.linkedin.com/in/ahmed-samir-farid-5400035a",
+      "source_type": "إفصاح مباشر من المؤسس معاد النشر",
+      "published_at": "2026",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يقول المؤسس إنه تلقى دعوة من Shark Tank Egypt ورفضها، وإن Zr3i لم تُطلق في نسختها الأولى، ثم أعاد التفكير في المشروع بصيغة جديدة."
+    },
+    {
+      "id": "SRC-09",
+      "title": "اختتام الدورة الثامنة عشرة لجائزة خليفة الدولية لنخيل التمر والابتكار الزراعي",
+      "publisher": "جائزة خليفة الدولية لنخيل التمر والابتكار الزراعي",
+      "url": "https://kiaai.ae/ar/news-details?id=69f24352d5e6e82e949921cb&type=%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1+%D8%AC%D8%A7%D8%A6%D8%B2%D8%A9+%D8%AE%D9%84%D9%8A%D9%81%D8%A9",
+      "source_type": "بيان رسمي لجهة شريكة",
+      "published_at": "2026-04-28",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يؤكد توقيع أربع مذكرات تفاهم خلال الحدث؛ لا يثبت بذاته تمويلًا أو إصدار أرصدة."
+    },
+    {
+      "id": "SRC-10",
+      "title": "إفصاح المؤسس عن مذكرة تفاهم لمشروع نخيل التمر في الإمارات",
+      "publisher": "وليد نصر / LinkedIn",
+      "url": "https://www.linkedin.com/posts/walidnasr_agriculture-climatefinance-carbonmarkets-activity-7323305970327621632-OvD8",
+      "source_type": "إفصاح مباشر من المؤسس",
+      "published_at": "2026-04",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوضح أن المذكرة إطار تعاون ولا تُنشئ أرصدة، ولا تسجل مزارعين، ولا تضمن الإصدار؛ ويذكر أن التحقق وفق VCS قيد التقديم."
+    },
+    {
+      "id": "SRC-11",
+      "title": "إفصاح المؤسس عن خط الأنابيب والبحث عن تمويل للمشروع",
+      "publisher": "وليد نصر / LinkedIn",
+      "url": "https://www.linkedin.com/posts/walidnasr_climatefinance-carbonmarkets-naturebasedsolutions-activity-7353312424229007360-XrU5",
+      "source_type": "إفصاح مباشر من المؤسس",
+      "published_at": "2026",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يعرض عقودًا واتفاقات وخط أنابيب معلنًا، ويبحث عن تمويل للمشروع؛ الأرقام ذاتية الإفصاح وليست مراجعة ماليًا أو تشغيليًا."
+    },
+    {
+      "id": "SRC-12",
+      "title": "Zr3i 3.55 — Full Platform Launch",
+      "publisher": "Zr3i",
+      "url": "https://zr3i.com/en/blog/zr3i-355-full-platform-launch",
+      "source_type": "إصدار منتج رسمي",
+      "published_at": "2026-04-05",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "ذكر 2,598 نخلة مسجلة ومتحققًا منها عبر 8 مزارع و18.2 هكتار وقت الإصدار. هذه ليست مساوية لرقم الأشجار المتعاقد عليها لاحقًا."
+    },
+    {
+      "id": "SRC-13",
+      "title": "Zr3i — سياسة الخصوصية",
+      "publisher": "Zr3i",
+      "url": "https://www.zr3i.com/en/legal/privacy",
+      "source_type": "صفحة قانونية رسمية",
+      "published_at": "2026-06-30",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "تتضمن عبارة تفيد بأن النص عنصر مؤقت بانتظار المراجعة القانونية؛ مؤشر على أن الإطار القانوني المنشور لم يكتمل وقت التحقق."
+    },
+    {
+      "id": "SRC-14",
+      "title": "Zr3i — اتفاقية مستوى الخدمة",
+      "publisher": "Zr3i",
+      "url": "https://www.zr3i.com/en/legal/sla",
+      "source_type": "صفحة تشغيلية رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "تعرض هدف توافر 99.5% وتشير إلى أن بعض آليات التعويض والتصعيد ما زالت قيد الاستكمال."
+    },
+    {
+      "id": "SRC-15",
+      "title": "VM0042 Improved Agricultural Land Management, v2.2",
+      "publisher": "Verra",
+      "url": "https://verra.org/methodologies/vm0042-improved-agricultural-land-management-v2-2/",
+      "source_type": "منهجية معيارية رسمية",
+      "published_at": "2025-10-21",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "منهجية فعالة لإدارة الأراضي الزراعية المحسنة؛ اعتماد المنهجية لا يعني تسجيل مشروع Zr3i أو التحقق منه."
+    },
+    {
+      "id": "SRC-16",
+      "title": "VM0047 Afforestation, Reforestation, and Revegetation, v1.1",
+      "publisher": "Verra",
+      "url": "https://verra.org/methodologies/vm0047-afforestation-reforestation-and-revegetation-v1-1/",
+      "source_type": "منهجية معيارية رسمية",
+      "published_at": "2025-05-14",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "منهجية فعالة للتشجير وإعادة التشجير وإعادة الغطاء النباتي؛ لا تثبت وحدها أهلية أو تسجيل مشروع Zr3i."
+    },
+    {
+      "id": "SRC-17",
+      "title": "Egypt — Date Palm, One Country One Priority Product",
+      "publisher": "منظمة الأغذية والزراعة للأمم المتحدة",
+      "url": "https://www.fao.org/one-country-one-priority-product/near-east-and-north-africa/egypt/en",
+      "source_type": "مصدر حكومي دولي لسياق السوق",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يعرض إنتاج مصر من التمور بأكثر من 1.8 مليون طن سنويًا ونحو 19% من الإنتاج العالمي؛ سياق قطاعي لا يمثل حجم سوق Zr3i."
+    },
+    {
+      "id": "SRC-18",
+      "title": "برنامج وطني لتعزيز قطاع نخيل التمر في مصر",
+      "publisher": "منظمة الأغذية والزراعة للأمم المتحدة",
+      "url": "https://www.fao.org/egypt/news/detail/fao-leads-national-programme-to-strengthen-egypt-s-date-palm-sector-through-good-agricultural-practices-and-integrated-pest-management/en",
+      "source_type": "مصدر حكومي دولي لسياق المشكلة",
+      "published_at": "2026-04",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق الحاجة إلى الممارسات الزراعية الجيدة والإدارة المتكاملة للآفات وتحسين جودة ما بعد الحصاد في قطاع النخيل."
+    },
+    {
+      "id": "SRC-19",
+      "title": "Can AI give small-scale producers the right advice?",
+      "publisher": "البنك الدولي",
+      "url": "https://blogs.worldbank.org/en/agfood/can-ai-give-small-scale-producers-the-right-advice-",
+      "source_type": "مصدر مؤسسي دولي لسياق المشكلة",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يناقش فجوة خدمات الإرشاد الزراعي وإمكانات الأدوات الرقمية والذكاء الاصطناعي؛ لا يقيّم Zr3i تحديدًا."
+    },
+    {
+      "id": "SRC-20",
+      "title": "Zr3i joins Pledge 1%",
+      "publisher": "Zr3i / Pledge 1%",
+      "url": "https://www.pledge1percent.org/blog/zr3i-joins-pledge-1",
+      "source_type": "مقال تعريفي صادر عن الشركة",
+      "published_at": "2025-12",
+      "accessed_at": "2026-08-03",
+      "primary": false,
+      "notes": "يقدم رواية الشركة عن نشأتها المبكرة ورسالتها في الاستشعار عن بعد والذكاء الاصطناعي؛ يُعامل كإفصاح ذاتي."
+    }
   ]
 }

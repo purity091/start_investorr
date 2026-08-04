@@ -2,71 +2,1226 @@
   "id": "stripe",
   "slug": "stripe",
   "name": "سترايب (Stripe)",
-  "headline": "بناء البنية التحتية المالية للإنترنت (Expanding the GDP of the Internet)",
-  "category": "FinTech / تكنولوجيا المدفوعات والبنية التحتية السحابية",
+  "headline": "طبقة مالية قابلة للبرمجة تنقل الإنترنت من قبول الدفع إلى تشغيل الإيراد وحركة الأموال",
+  "category": "FinTech / البنية التحتية المالية القابلة للبرمجة والمدفوعات وإدارة الإيراد",
   "company": {
-    "location": "سان فرانسيسكو، كاليفورنيا ودبلن، أيرلندا (مقران رئيسيان)",
-    "business_model": "تسعير قائم على الاستخدام (Pay-as-you-go) بمتوسط 2.9% + 30 سنتاً للعملية، ونموذج SaaS لبرمجيات منع الاحتيال وإدارة الفواتير"
+    "location": "مقران رئيسيان في سان فرانسيسكو، كاليفورنيا، ودبلن، أيرلندا. تُظهر أحدث إفصاحات SEC المستخدمة هنا أن Stripe, Inc. شركة مسجلة في ديلاوير، وكان عنوان مكان الأعمال الرئيسي في إيداع مايو 2023 هو South San Francisco، كاليفورنيا.",
+    "business_model": "منصة بنية مالية متعددة المنتجات تجمع بين رسوم معالجة المدفوعات، وتسعير برمجيات وخدمات حسب الاستخدام أو الحجم، ورسوم منتجات إدارة الإيراد والفوترة والضرائب، ورسوم المنصات والتحويلات والحسابات عبر Connect، وخدمات مالية مثل Capital وIssuing، وخدمات تأسيس الشركات عبر Atlas. مثال 2.9% + 30 سنتًا يخص البطاقات المحلية الناجحة ضمن التسعير القياسي الأمريكي، ولا يمثل سعرًا عالميًا أو متوسط إيراد Stripe من كل معاملة."
   },
   "directory_snapshot": {
-    "monthly_revenue": "أكثر من 1.2 مليار دولار شهرياً (معالجة مدفوعات سنوية تتجاوز تريليون دولار)",
-    "monthly_traffic": "يستخدمها أكثر من 3.1 مليون موقع نشط، وتمر عبرها أكثر من 1% من الناتج المحلي الإجمالي العالمي"
+    "monthly_revenue": "غير معلن. Stripe شركة خاصة ولا تنشر إيرادًا شهريًا أو إيرادًا سنويًا موحدًا ومدققًا للعامة. رقم 1.9 تريليون دولار في 2025 هو حجم معاملات/مدفوعات الشركات على Stripe، وليس إيراد Stripe. كما أن معدل الإيراد السنوي المتوقع البالغ مليار دولار يخص Revenue suite في 2026، وليس الشركة كاملة.",
+    "monthly_traffic": "غير معلن. لا تنشر Stripe زيارات شهرية موحدة أو مستخدمين نشطين شهريًا. أحدث مقياس رسمي واسع هو أن خدماتها تشغّل أكثر من 5 ملايين شركة مباشرة أو عبر منصات؛ هذا عدد شركات/حسابات تجارية ضمن تعريف الشركة، وليس مواقع نشطة فريدة أو زوارًا أو MAU للمستهلكين."
   },
   "overview": {
     "problem": {
-      "text": "قبل سترايب (2010)، كان دمج الدفع الإلكتروني كابوساً تقنياً وتنظيمياً. كان رواد الأعمال يحتاجون لأشهر من المفاوضات مع البنوك، فتح حسابات تجارية (Merchant Accounts)، واستخدام واجهات برمجية (APIs) بدائية وغير آمنة (مثل أنظمة البنوك القديمة أو واجهات بايبال القديمة المعقدة). لم يكن التعقيد فنياً فحسب، بل كان إدارياً بشكل قاتل؛ كان يتوجب على المؤسس قضاء أسابيع في تعبئة أوراق قانونية، التفاوض مع وسطاء ماليين، ودفع رسوم تأسيس عالية جداً لمجرد استقبال أول دولار من عميل أجنبي. هذا الجدار البيروقراطي أدى لتعطل آلاف المشاريع الناشئة قبل أن تبدأ، وتحجيم قدرة الشركات الصغيرة على التوسع والبيع الدولي بسبب تعقيدات تحويل العملات وتراخيص بوابات الدفع التقليدية التي لم تُصمم لعصر الإنترنت.",
-      "impact": "تأخر شديد في إطلاق الشركات الناشئة، كلفة هندسية هائلة لدمج المدفوعات، وتعقيد في إدارة الاشتراكات الدورية والاحتيال المالي، مما حدّ من سرعة نمو الاقتصاد الرقمي عالمياً. مما أدى لتعطل آلاف المشاريع الناشئة قبل أن تبدأ، وتحجيم قدرة الشركات الصغيرة على البيع الدولي بسبب تعقيدات تحويل العملات وتراخيص بوابات الدفع التقليدية."
+      "text": "التجارة الرقمية لا تحتاج زر دفع فقط؛ فهي تواجه طبقات مترابطة من قبول وسائل الدفع، تحسين نسب الموافقة، مكافحة الاحتيال، الاشتراكات والفوترة القائمة على الاستخدام، الضرائب، التسويات والتحويلات، التحقق من الهوية، وإدارة أموال البائعين في المنصات. بناء كل طبقة منفردة يفرض على الشركات تكاملات متعددة واختلافات تنظيمية وتسعيرية بين الأسواق.",
+      "impact": "يظهر الأثر في بطء إطلاق المنتجات والأسواق الجديدة، ارتفاع كلفة الصيانة والامتثال، فقدان إيراد بسبب رفض المدفوعات والاحتيال والتعثر في التحصيل، وصعوبة توحيد البيانات والتسويات عند التوسع عبر دول ووسائل دفع ونماذج أعمال مختلفة."
     },
     "solution": {
-      "text": "قدم الأخوان (باتريك وجون كوليسون) واجهة برمجة تطبيقات (API) فائقة النقاء والبساطة. تتيح للمبرمجين دمج الدفع بسبعة أسطر من الكود فقط. تكفلت سترايب بكل التعقيدات البنكية، الامتثال الأمني (PCI)، ومكافحة الاحتيال في الخلفية. الفكرة كانت: 'يجب أن يكون الدفع كوداً برمجياً، لا ورقة بنكية'. هذا التجريد الكامل (Abstraction) للتعقيد المالي حوّل سترايب من مجرد (أداة دفع) إلى (مُسرّع أعمال عالمي). بمجرد إضافة الكود، تصبح الشركة قادرة على معالجة البطاقات الائتمانية من 130 دولة، إدارة الاشتراكات الدورية آلياً، واكتشاف الاحتيال باستخدام تعلم الآلة، كل ذلك في الخلفية دون أي تدخل يدوي من صاحب المشروع."
+      "text": "بدأت Stripe في 2010 بمنطق جعل المدفوعات قابلة للبرمجة عبر API موجهة للمطورين، ثم وسعت الطبقة نفسها إلى Payments وCheckout وBilling وTax وRadar وConnect وTerminal وCapital وAtlas وIssuing وأدوات البيانات والعملات المستقرة والتجارة الوكيلة. جوهر الحل هو إخفاء التعقيد التشغيلي خلف واجهات موحدة، مع إبقاء خيارات تخصيص وتسعير مؤسسي للشركات الكبيرة."
     }
   },
   "market_data": {
-    "target_audience": "المطورون (المستخدم الأول)، الشركات الناشئة سريعة النمو، منصات التجارة (Shopify)، وعمالقة التكنولوجيا (Amazon, Google). إضافة إلى صناع المحتوى عبر منصات الاشتراكات، والشركات العملاقة (Enterprise) التي تعتمد على البنية التحتية الآمنة لسترايب.",
-    "market_size": "سوق التجارة الإلكترونية والمدفوعات الرقمية العالمية (البالغ قيمته تريليونات الدولارات). والذي يقدر بحجم التبادل التجاري العالمي عبر الإنترنت، وهو سوق لا يزال ينمو بوتيرة جنونية مع تحول العالم للاقتصاد غير النقدي.",
-    "growth_rate": "نمو صاروخي جعلها أثمن شركة خاصة في وادي السيليكون (بتقييم وصل لـ 95 مليار دولار في 2021) بفضل تبني المطورين. بفضل تبني المطورين الأوائل للمنصة كمعيار ذهبي (Gold Standard) في صناعة البرمجيات."
+    "target_audience": "الشركات الناشئة والمطورون، شركات البرمجيات والاشتراكات والذكاء الاصطناعي، التجارة الإلكترونية والتجزئة الموحدة، الأسواق والمنصات، والمؤسسات العالمية. في إفصاح فبراير 2026 قالت Stripe إنها تشغّل أكثر من 5 ملايين شركة مباشرة أو عبر المنصات، وتخدم 90% من مكونات Dow Jones Industrial Average و80% من Nasdaq 100؛ هذه نسب انتشار داخل مؤشرات شركات وليست حصة سوقية من الإيرادات.",
+    "market_size": "لا يوجد رقم رسمي واحد منشور لسوق Stripe القابل للعنونة، لأن الشركة تعمل عبر المدفوعات والفوترة والضرائب والمنصات والتمويل والبنية المستقرة. أفضل مقياس رسمي لحجم التدفق الذي مر عبر المنصة هو 1.9 تريليون دولار في 2025، ما قالت Stripe إنه يعادل نحو 1.6% من الناتج المحلي الإجمالي العالمي. هذا حجم معاملات فعلي لعملائها، وليس تقييمًا للشركة ولا إيرادًا ولا تقديرًا لحجم السوق الكلي.",
+    "growth_rate": "نما حجم المعاملات من 1.4 تريليون دولار في 2024 إلى 1.9 تريليون دولار في 2025، أي 34% وفق Stripe. كما قالت إن شركات دفعة 2025 نمت نحو 50% أسرع من دفعة 2024، وإن Revenue suite في طريقها إلى معدل إيراد سنوي قدره مليار دولار خلال 2026. المقاييس الثلاثة مختلفة: الأول نمو حجم مدفوعات، والثاني أداء دفعة عملاء، والثالث معدل إيراد سنوي لمجموعة منتجات محددة."
   },
   "financials": {
-    "initial_investment": "استثمارات تأسيسية من Y Combinator، وإيلون ماسك وبيتر ثيل (مؤسسي بايبال، وهو أمر نادر أن يستثمروا في منافس محتمل). وهو ما وفر لهم شبكة علاقات هائلة في وادي السيليكون ومكنهم من بناء ثقة فورية مع العملاء الأوائل.",
-    "valuation": "$65B+ (التقييم الأخير في 2024) (وهو تقييم يجعلها أكبر محرك للابتكار المالي في العالم الموازي للبنوك المركزية).",
+    "initial_investment": "لا يوجد في المصادر الرسمية المستخدمة رقم موحد وموثق للاستثمار التأسيسي الأول، لذلك حُذفت رواية المستثمرين الأوائل غير المدعومة بمصدر أولي في الملف الأصلي. الموثق تنظيميًا هو أن Form D لعام 2021 سجل بيع أوراق مالية بقيمة 597,775,910 دولارًا، وأن Form D/A لعام 2023 سجل 6,869,866,984 دولارًا. وأعلنت Stripe أن Series I تجاوزت 6.5 مليارات دولار عند تقييم 50 مليار دولار، وكان هدفها الأساسي سيولة الموظفين والضرائب المرتبطة بالأسهم، لا تمويل التشغيل المعتاد.",
+    "valuation": "159 مليار دولار وفق عرض السيولة المعلن في 24 فبراير 2026. هذا تقييم معاملة خاصة/عرض أسهم للموظفين الحاليين والسابقين، وليس قيمة سوقية عامة لأن Stripe ما تزال شركة خاصة. للمقارنة، أعلنت الشركة تقييم 50 مليار دولار في Series I عام 2023.",
     "revenue_streams": [
-      "معالجة المدفوعات (Payment Processing): اقتطاع ثابت من كل عملية ناجحة.",
-      "البرمجيات كخدمة (SaaS): Stripe Billing للاشتراكات، و Stripe Radar لمكافحة الاحتيال بالذكاء الاصطناعي.",
-      "الخدمات المالية البنكية (Stripe Treasury و Stripe Issuing لإندار البطاقات).",
-      "تأسيس الشركات (Stripe Atlas): مقابل 500$ تتيح لأي شخص بالعالم فتح شركة في أمريكا وتفعيل سترايب.",
-      "رسوم التمويل السريع (Stripe Capital).",
-      "رسوم إنشاء وتأسيس الشركات (Stripe Atlas)."
+      "معالجة المدفوعات: رسوم تختلف حسب الدولة ووسيلة الدفع والقناة والعملات، مع تسعير مخصص للأحجام الكبيرة؛ 2.9% + 30 سنتًا مثال خاص بالتسعير القياسي للبطاقات المحلية في الولايات المتحدة.",
+      "إدارة الإيراد والمالية: Billing وInvoicing وTax وRevenue Recognition وSigma وData Pipeline برسوم اشتراك أو استخدام أو حجم بحسب المنتج والعقد.",
+      "المنصات والأسواق عبر Connect: رسوم مرتبطة بالحسابات النشطة والتحويلات والقدرات، مع تمكين المنصة من فرض رسوم أو مشاركة إيراد على مستخدميها.",
+      "المدفوعات الحضورية عبر Terminal: رسوم معالجة وأجهزة وقارئات وخدمات مرتبطة بالتجارة الموحدة تختلف حسب السوق.",
+      "الخدمات المالية المضمنة مثل Issuing وTreasury وFinancial Connections والحسابات والتحويلات العالمية، برسوم استخدام أو برنامج أو شبكة وفق المنتج والبلد.",
+      "Stripe Capital: رسوم تمويل ثابتة أو ترتيبات مشاركة إيراد للمنصات؛ الجهة الممولة والشروط تختلف حسب السوق ولا ينبغي وصف Stripe كبنك عالمي موحد.",
+      "Stripe Atlas: 500 دولار لتأسيس الشركة تشمل السنة الأولى للوكيل المسجل، ثم 100 دولار سنويًا للوكيل المسجل بعد السنة الأولى.",
+      "Radar وIdentity وأدوات تحسين القبول والاحتيال والبيانات والأتمتة: رسوم مستقلة أو مضمّنة بحسب الخطة والمنتج.",
+      "العملات المستقرة والبنية المشفرة والتجارة الوكيلة: منتجات دفع وتسوية وإصدار ومحافظ ناشئة، ولا تتوافر إيرادات مستقلة منشورة لها."
     ]
   },
   "lessons": [
     {
-      "title": "النمو عبر استهداف المطورين (Developer-First Go-To-Market)",
-      "description": "لم تنجح سترايب بفضل المبيعات التقليدية (B2B Sales). بدلاً من إقناع المدير المالي (CFO)، صمموا منتجاً يعشقه (المبرمجون). التوثيق البرمجي (Documentation) الخاص بهم اعتبر الأفضل في العالم. عندما يتم تكليف مبرمج بدمج الدفع، سيختار سترايب دائماً، وبذلك يخترقون الشركة من الأسفل للأعلى (Bottom-up)."
+      "title": "ابدأ بنقطة احتكاك ضيقة ثم وسّع سطح الإيراد",
+      "description": "نجاح Stripe لم يعتمد على بيع «بنك كامل» منذ البداية؛ المدخل كان واجهة دفع يفهمها المطور، ثم تحولت العلاقة إلى Billing وTax وRadar وConnect ومنتجات مالية. الدرس أن المنتج الأول يجب أن يحل ألمًا حادًا، بينما تتوسع المنصة لاحقًا حول البيانات والتدفقات التي أصبحت تملك سياقها."
     },
     {
-      "title": "المنتج كأداة لاكتساب عملاء جدد (Stripe Atlas)",
-      "description": "واجهت سترايب مشكلة أن مؤسسي الشركات خارج أمريكا لا يمكنهم استخدامها. بدلاً من تجاهلهم، أطلقت منتج (Atlas). أداة تؤسس لك شركة أمريكية قانونية وحساباً بنكياً في أيام. النتيجة؟ أصبحت سترايب المحرك الأول لآلاف الشركات الناشئة العالمية قبل أن تبدأ مبيعاتها حتى."
+      "title": "المقياس الكبير قد يكون مضللًا من دون تعريف",
+      "description": "1.9 تريليون دولار رقم ضخم، لكنه TPV وليس إيرادًا. و5 ملايين تشير إلى شركات مباشرة أو عبر المنصات، لا مستخدمين نشطين شهريًا. الانضباط في تعريف المقياس يحمي التحليل من تحويل حجم المعاملات أو العملاء إلى ربح أو حصة سوقية غير موجودة."
     },
     {
-      "title": "بناء منصة بدلاً من منتج (Platform Play)",
-      "description": "سترايب لم تتوقف عند المدفوعات. لقد أدركوا أن البيانات المالية التي تمر عبرهم ضخمة. فقدموا أدوات لمنع الاحتيال (Radar)، وتوزيع الأرباح للمنصات (Connect)، وإصدار البطاقات (Issuing). لقد أصبحوا (نظام التشغيل الاقتصادي) للشركات."
+      "title": "واجهة المطور قناة توزيع وليست ميزة تقنية فقط",
+      "description": "توثيق REST والـSDKs متعددة اللغات يقللان وقت الدمج ويجعلان قرار المطور مدخلًا لقرار المؤسسة. عندما تصبح تجربة التكامل موثوقة وقابلة للتكرار، تتحول الوثائق والإصدارات والاستقرار إلى محرك اكتساب واحتفاظ، لا إلى وظيفة دعم جانبية."
     },
     {
-      "title": "الوثائق البرمجية كأداة تسويق (Docs as Marketing)",
-      "description": "في قطاع الـ B2B، تعتبر وثائق واجهة برمجة التطبيقات (API Documentation) الخاصة بسترايب تحفة فنية. لقد أدركوا أن المبرمجين يكرهون التحدث لمندوبي المبيعات، فصمموا وثائق تفاعلية، واضحة، وجميلة جداً تجيب على كل الأسئلة. هذه الوثائق كانت أقوى أداة تسويق (Inbound Marketing) للشركة، حيث أصبحت المعيار الذي تحاول كل شركات التقنية تقليده."
+      "title": "التوسع الأفقي ينجح عندما يعيد استخدام شبكة البيانات",
+      "description": "Radar وCapital وتحسين الموافقات والفوترة القائمة على الاستخدام تستفيد من بيانات وتدفقات موجودة أصلًا داخل Stripe. هذا يجعل المنتج المجاور أقوى عندما يعتمد على إشارة فريدة تمتلكها المنصة، بدل إضافة أدوات لا علاقة لها بالنواة."
     },
     {
-      "title": "السيطرة على تدفق الأموال (Owning the Flow of Funds)",
-      "description": "الشركة التي تسيطر على تدفق الأموال تملك الاقتصاد. سترايب لم تتوقف عند اقتطاع عمولة الدفع؛ بفضل احتفاظها بأموال العملاء، أطلقت منتجات مثل (Stripe Capital) لإقراض الشركات بناءً على خوارزميات تتنبأ بمبيعاتها المستقبلية. هذا حوّل سترايب فعلياً إلى (بنك عالمي) يعمل في الظل."
+      "title": "الشركة الخاصة تحتاج شفافية مقاييس بديلة",
+      "description": "غياب إيراد عام مدقق لا يمنع التحليل، لكنه يغيّر نوع الأدلة المقبولة: حجم المعاملات، معدل إيراد مجموعة منتجات محددة، الربحية المعلنة، تقييمات المعاملات الخاصة وإفصاحات Form D. كل مؤشر يجب أن يبقى في فئته دون دمج."
+    },
+    {
+      "title": "التحولات التقنية تعيد تعريف البنية المالية",
+      "description": "إطلاقات 2025 و2026 في نماذج الدفع بالذكاء الاصطناعي والعملات المستقرة والمدفوعات المتدفقة تشير إلى أن Stripe تراهن على أن شركات الذكاء الاصطناعي ستحتاج قياسًا وفوترة وتسوية لحظية. الدرس الاستراتيجي هو بناء البنية قبل استقرار نموذج العمل النهائي، مع تجنب الادعاء أن الإيراد الجديد تحقق قبل نشر أرقام."
     }
   ],
   "tools": [
-    "Ruby (الغة الأساسية الأولى)",
-    "Go / Scala (لأنظمة معالجة البيانات عالية الأداء)",
-    "Machine Learning (للتنبؤ بالاحتيال في Stripe Radar)",
-    "AWS (بنية تحتية سحابية مرنة)",
-    "React",
-    "GraphQL",
-    "Redux"
+    "Stripe Payments وCheckout وElements وPayment Links لقبول المدفوعات وبناء تجارب الدفع.",
+    "Stripe Billing وInvoicing وTax وRevenue Recognition وSigma وData Pipeline لإدارة دورة الإيراد والبيانات.",
+    "Stripe Radar وPayments Foundation Model لمكافحة الاحتيال وتحسين قرارات الدفع؛ القدرة موثقة، لكن تفاصيل النماذج والبنية الداخلية ليست عامة بالكامل.",
+    "Stripe Connect لتهيئة الحسابات والتحقق وتوجيه الأموال والتحويلات في المنصات والأسواق.",
+    "Stripe Terminal للمدفوعات الحضورية والتجارة الموحدة.",
+    "Stripe Issuing وTreasury وFinancial Connections وCapital لقدرات مالية مضمنة تختلف حسب السوق والكيان القانوني.",
+    "Stripe Atlas لتأسيس شركات Delaware وخدمات EIN ووثائق المؤسسين والوكيل المسجل.",
+    "Bridge ومنتجات العملات المستقرة وCrypto Onramp والحسابات والمحافظ والتسوية، إضافة إلى قدرات التجارة الوكيلة والمدفوعات المتدفقة.",
+    "Stripe REST API مع استجابات JSON ومصادقة وإصدارات موثقة.",
+    "SDKs رسمية لـRuby وPython وGo وJava وNode.js وPHP و.NET، إضافة إلى Stripe.js وReact وiOS وAndroid وReact Native.",
+    "Workflows وأدوات الأتمتة وStripe Apps وواجهات المطورين؛ هذه قائمة قدرات عامة وليست كشفًا عن الحزمة التقنية الداخلية التي تشغّل Stripe."
+  ],
+  "verification": {
+    "status": "verified_from_current_stripe_annual_updates_sec_filings_pricing_and_primary_product_documentation_with_field_level_evidence",
+    "verified_on": "2026-08-03",
+    "source_policy": "أولوية لمصادر Stripe الرسمية ووثائق المطورين والتسعير الحالية وإفصاحات SEC. استُخدمت أرقام الشركة الخاصة مع نسبتها إليها وتعريفها، وحُذفت الادعاءات التي تخلط الإيراد بحجم المعاملات أو الزيارات بعدد الشركات. لم تُستخدم تقديرات إيراد أو زيارات من قواعد بيانات خارجية.",
+    "important_notes": [
+      "1.9 تريليون دولار في 2025 هو حجم معاملات/مدفوعات الشركات على Stripe وليس إيراد Stripe.",
+      "معدل الإيراد السنوي المتوقع البالغ مليار دولار يخص Revenue suite في 2026 وليس الشركة كاملة.",
+      "أكثر من 5 ملايين شركة لا يعني 5 ملايين مستخدم نشط شهريًا أو موقع مستقل.",
+      "التقييم 159 مليار دولار ناتج عن عرض سيولة خاص في 24 فبراير 2026 وليس قيمة سوقية في بورصة.",
+      "2.9% + 30 سنتًا تسعير قياسي أمريكي للبطاقات المحلية الناجحة، وليس سعرًا عالميًا ثابتًا.",
+      "إفصاحات Form D توثق عروض أوراق مالية ولا تعادل تلقائيًا تمويلًا تشغيليًا أو إيرادًا.",
+      "Stripe رفضت الإفصاح عن نطاق الإيراد في نماذج SEC المستخدمة، لذلك لم يُنشأ رقم إيراد تقديري.",
+      "تم حذف ادعاءات AWS وScala وGraphQL وRedux كحزمة داخلية حالية لأنها غير مثبتة في المصادر الأولية المستخدمة.",
+      "قائمة tools تصف المنتجات وواجهات التكامل العامة الحالية، ولا تدعي كشف البنية التقنية الداخلية الكاملة.",
+      "المعلومات متحققة حتى 3 أغسطس 2026؛ الأسعار والتوافر القانوني والمنتجات قد تختلف حسب البلد."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تفصيلية تربط كل حقل بقيمته وحالة التحقق والثقة والمصادر الأولية وما يثبته كل مصدر والقيود الضرورية للفصل بين الإيراد والتقييم وحجم المعاملات والشركات والمستخدمين.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي أو إفصاح تنظيمي.",
+      "verified_as_not_publicly_disclosed": "لم تنشر الشركة المقياس المطلوب بصورة موحدة وموثوقة، ولذلك لم يُستخدم تقدير خارجي.",
+      "verified_current_transaction_volume_not_revenue": "الرقم يمثل حجم معاملات أو مدفوعات العملاء ولا يمثل إيراد Stripe.",
+      "verified_current_business_scale_not_users": "الرقم يمثل شركات مباشرة أو عبر منصات ولا يمثل مستخدمين نشطين أو زيارات.",
+      "verified_current_private_transaction_valuation": "التقييم مستمد من معاملة أسهم خاصة أو عرض سيولة وليس قيمة سوقية عامة.",
+      "verified_historical_sec_offering": "المعلومة موثقة في Form D أو Form D/A وتتعلق بعرض أوراق مالية تاريخي.",
+      "verified_with_pricing_scope_limits": "السعر موثق لكنه خاص بسوق أو وسيلة دفع أو خطة محددة ولا يجوز تعميمه.",
+      "verified_product_capability": "القدرة موثقة في صفحة منتج أو وثائق مطورين أو إعلان رسمي حالي.",
+      "analytical_inference": "تحليل مهني مبني على حقائق موثقة وليس تصريحًا حرفيًا من الشركة."
+    },
+    "confidence_scale": {
+      "high": "إفصاح SEC أو إعلان رسمي أو وثائق وتسعير حالية مع تطابق مباشر.",
+      "medium_high": "مصدر رسمي مع استنتاج محدود أو مقياس شركة يحتاج إلى قيد تعريف.",
+      "medium": "تحليل مهني أو قدرة ناشئة لا تتوافر لها نتائج مالية مستقلة منشورة."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "مقران رئيسيان في سان فرانسيسكو، كاليفورنيا، ودبلن، أيرلندا. تُظهر أحدث إفصاحات SEC المستخدمة هنا أن Stripe, Inc. شركة مسجلة في ديلاوير، وكان عنوان مكان الأعمال الرئيسي في إيداع مايو 2023 هو South San Francisco، كاليفورنيا.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "dual_headquarters_and_sec_legal_entity_location",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت صفحة معلومات Stripe المقرين الرئيسيين، بينما تثبت نماذج SEC كيان Stripe, Inc. في ديلاوير وعناوين مكان الأعمال وقت الإيداع.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-07",
+        "SRC-03",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Stripe Newsroom information and fast facts",
+          "publisher": "Stripe",
+          "source_type": "official_company_information_page",
+          "url": "https://stripe.com/newsroom/information",
+          "evidence_type": "direct",
+          "source_locator": "About Stripe → headquarters",
+          "supports": "مقران رئيسيان في سان فرانسيسكو ودبلن."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Stripe, Inc. Form D filed March 26, 2021",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "source_type": "sec_form_d",
+          "url": "https://www.sec.gov/Archives/edgar/data/1691342/000169134221000001/xslFormDX01/primary_doc.xml",
+          "evidence_type": "direct",
+          "source_locator": "Items 1–2",
+          "supports": "Stripe, Inc. مسجلة في ديلاوير وعنوان سان فرانسيسكو في 2021.",
+          "published_on": "2021-03-26"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Stripe, Inc. Form D/A filed May 23, 2023",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "source_type": "sec_form_d_amendment",
+          "url": "https://www.sec.gov/Archives/edgar/data/1691342/000169134223000002/xslFormDX08/primary_doc.xml",
+          "evidence_type": "direct",
+          "source_locator": "Items 1–2",
+          "supports": "Stripe, Inc. وعنوان South San Francisco في إيداع 2023.",
+          "published_on": "2023-05-23"
+        }
+      ],
+      "limitations": "العناوين القانونية ومقار العمل قد تتغير؛ الحقل يميز بين وصف المقرين الحالي وعنوان SEC التاريخي."
+    },
+    "$.company.business_model": {
+      "field_value": "منصة بنية مالية متعددة المنتجات تجمع بين رسوم معالجة المدفوعات، وتسعير برمجيات وخدمات حسب الاستخدام أو الحجم، ورسوم منتجات إدارة الإيراد والفوترة والضرائب، ورسوم المنصات والتحويلات والحسابات عبر Connect، وخدمات مالية مثل Capital وIssuing، وخدمات تأسيس الشركات عبر Atlas. مثال 2.9% + 30 سنتًا يخص البطاقات المحلية الناجحة ضمن التسعير القياسي الأمريكي، ولا يمثل سعرًا عالميًا أو متوسط إيراد Stripe من كل معاملة.",
+      "verification_status": "verified_with_pricing_scope_limits",
+      "confidence": "high",
+      "claim_type": "multi_product_usage_transaction_and_software_pricing_model",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توضح صفحة التسعير تعدد الرسوم والخطط والتسعير المخصص، وتثبت صفحات Connect وCapital وAtlas نماذج الإيراد المجاورة.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-06",
+        "SRC-13",
+        "SRC-14",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Pricing & Fees",
+          "publisher": "Stripe",
+          "source_type": "official_current_pricing_page",
+          "url": "https://stripe.com/pricing",
+          "evidence_type": "direct",
+          "source_locator": "Standard and Custom pricing",
+          "supports": "الدفع حسب الاستخدام والتسعير المخصص، مع 2.9% + 30 سنتًا في السوق الأمريكي المحدد."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Stripe Connect",
+          "publisher": "Stripe",
+          "source_type": "official_product_page",
+          "url": "https://stripe.com/connect",
+          "evidence_type": "direct",
+          "source_locator": "Connect product overview",
+          "supports": "رسوم وقدرات المنصات والأسواق وتحقيق الإيراد من الخدمات المالية المضمنة."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "How Stripe Capital works",
+          "publisher": "Stripe Documentation",
+          "source_type": "official_capital_documentation",
+          "url": "https://docs.stripe.com/capital/how-stripe-capital-works",
+          "evidence_type": "direct",
+          "source_locator": "How Capital works",
+          "supports": "رسوم تمويل ثابتة وشروط تختلف حسب البلد والمزود."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "How to incorporate your company with Stripe Atlas",
+          "publisher": "Stripe Documentation",
+          "source_type": "official_atlas_documentation_and_pricing",
+          "url": "https://docs.stripe.com/atlas/signup",
+          "evidence_type": "direct",
+          "source_locator": "Atlas pricing",
+          "supports": "500 دولار للتأسيس و100 دولار سنويًا بعد السنة الأولى."
+        }
+      ],
+      "limitations": "الأسعار والتوافر والجهة المقدمة للخدمة تختلف حسب الدولة والعقد وطريقة الدفع؛ لا يمكن اشتقاق هامش Stripe الصافي من قائمة الأسعار."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. Stripe شركة خاصة ولا تنشر إيرادًا شهريًا أو إيرادًا سنويًا موحدًا ومدققًا للعامة. رقم 1.9 تريليون دولار في 2025 هو حجم معاملات/مدفوعات الشركات على Stripe، وليس إيراد Stripe. كما أن معدل الإيراد السنوي المتوقع البالغ مليار دولار يخص Revenue suite في 2026، وليس الشركة كاملة.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "private_company_total_revenue_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا تقدم الإفصاحات الرسمية إيراد Stripe الكلي، وتظهر Form D رفض الإفصاح عن نطاق الإيراد. يفصل تحديث 2026 صراحة بين TPV ومعدل إيراد Revenue suite.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Stripe publishes 2025 annual letter and announces tender offer",
+          "publisher": "Stripe",
+          "source_type": "official_company_annual_update_and_valuation_announcement",
+          "url": "https://stripe.com/newsroom/news/stripe-2025-update",
+          "evidence_type": "direct",
+          "source_locator": "2025 metrics and Revenue suite",
+          "supports": "1.9 تريليون دولار TPV ومليار دولار معدل إيراد سنوي متوقع لمجموعة Revenue فقط.",
+          "published_on": "2026-02-24"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Stripe, Inc. Form D filed March 26, 2021",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "source_type": "sec_form_d",
+          "url": "https://www.sec.gov/Archives/edgar/data/1691342/000169134221000001/xslFormDX01/primary_doc.xml",
+          "evidence_type": "direct",
+          "source_locator": "Item 5 — Issuer Size",
+          "supports": "Stripe رفضت الإفصاح عن نطاق الإيراد في 2021.",
+          "published_on": "2021-03-26"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Stripe, Inc. Form D/A filed May 23, 2023",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "source_type": "sec_form_d_amendment",
+          "url": "https://www.sec.gov/Archives/edgar/data/1691342/000169134223000002/xslFormDX08/primary_doc.xml",
+          "evidence_type": "direct",
+          "source_locator": "Item 5 — Issuer Size",
+          "supports": "Stripe رفضت الإفصاح عن نطاق الإيراد في 2023.",
+          "published_on": "2023-05-23"
+        }
+      ],
+      "limitations": "الربحية المعلنة وصف نوعي وليست رقم صافي دخل؛ لا يجوز تحويل رسوم الأسعار أو TPV إلى إيراد دون بيانات المزيج والتكلفة والعقود."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن. لا تنشر Stripe زيارات شهرية موحدة أو مستخدمين نشطين شهريًا. أحدث مقياس رسمي واسع هو أن خدماتها تشغّل أكثر من 5 ملايين شركة مباشرة أو عبر منصات؛ هذا عدد شركات/حسابات تجارية ضمن تعريف الشركة، وليس مواقع نشطة فريدة أو زوارًا أو MAU للمستهلكين.",
+      "verification_status": "verified_current_business_scale_not_users",
+      "confidence": "high",
+      "claim_type": "business_accounts_scale_not_web_traffic_or_mau",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "أحدث إعلان رسمي يذكر أكثر من 5 ملايين شركة مباشرة أو عبر المنصات ولا يقدم زيارات شهرية أو MAU.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-01",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Stripe publishes 2025 annual letter and announces tender offer",
+          "publisher": "Stripe",
+          "source_type": "official_company_annual_update_and_valuation_announcement",
+          "url": "https://stripe.com/newsroom/news/stripe-2025-update",
+          "evidence_type": "direct",
+          "source_locator": "Annual update quote",
+          "supports": "أكثر من 5 ملايين شركة مباشرة أو عبر المنصات.",
+          "published_on": "2026-02-24"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Stripe's total payment volume reaches $1.4T",
+          "publisher": "Stripe",
+          "source_type": "official_2024_annual_update",
+          "url": "https://stripe.com/newsroom/news/stripe-2024-update",
+          "evidence_type": "direct",
+          "source_locator": "Billing metrics",
+          "supports": "300 ألف+ شركة وقرابة 200 مليون اشتراك نشط لمنتج Billing، وهي مقاييس منتج لا زيارات.",
+          "published_on": "2025-02-27"
+        }
+      ],
+      "limitations": "الشركة الواحدة قد تعمل عبر منصة، والاشتراك ليس شخصًا فريدًا، ولا يوجد رقم رسمي موحد للمواقع النشطة أو الزوار."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "التجارة الرقمية لا تحتاج زر دفع فقط؛ فهي تواجه طبقات مترابطة من قبول وسائل الدفع، تحسين نسب الموافقة، مكافحة الاحتيال، الاشتراكات والفوترة القائمة على الاستخدام، الضرائب، التسويات والتحويلات، التحقق من الهوية، وإدارة أموال البائعين في المنصات. بناء كل طبقة منفردة يفرض على الشركات تكاملات متعددة واختلافات تنظيمية وتسعيرية بين الأسواق.",
+        "impact": "يظهر الأثر في بطء إطلاق المنتجات والأسواق الجديدة، ارتفاع كلفة الصيانة والامتثال، فقدان إيراد بسبب رفض المدفوعات والاحتيال والتعثر في التحصيل، وصعوبة توحيد البيانات والتسويات عند التوسع عبر دول ووسائل دفع ونماذج أعمال مختلفة."
+      },
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "financial_infrastructure_fragmentation_and_operational_friction_analysis",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التحليل يجمع المشكلات التي تعالجها صفحات Payments وConnect وCapital وRevenue وRadar، من قبول الدفع إلى الاحتيال والفوترة والتسويات.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-17",
+        "SRC-13",
+        "SRC-14",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-17",
+          "title": "Global Payment Processing Platform",
+          "publisher": "Stripe",
+          "source_type": "official_payments_product_page",
+          "url": "https://stripe.com/payments",
+          "evidence_type": "direct",
+          "source_locator": "Payments overview",
+          "supports": "قبول المدفوعات عبر الإنترنت والحضور الشخصي والأسواق العالمية."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Stripe Connect",
+          "publisher": "Stripe",
+          "source_type": "official_product_page",
+          "url": "https://stripe.com/connect",
+          "evidence_type": "direct",
+          "source_locator": "Connect overview",
+          "supports": "تهيئة الحسابات والتحقق وتوجيه الأموال للمنصات."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "How Stripe Capital works",
+          "publisher": "Stripe Documentation",
+          "source_type": "official_capital_documentation",
+          "url": "https://docs.stripe.com/capital/how-stripe-capital-works",
+          "evidence_type": "direct",
+          "source_locator": "Capital mechanics",
+          "supports": "تعقيد التمويل والسداد حسب السوق."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Stripe accelerates the utility of AI and stablecoins with major launches",
+          "publisher": "Stripe",
+          "source_type": "official_product_and_ai_announcement",
+          "url": "https://stripe.com/newsroom/news/sessions-2025",
+          "evidence_type": "direct",
+          "source_locator": "AI and fraud product launches",
+          "supports": "مكافحة الاحتيال وتحسين القبول باستخدام نماذج الدفع.",
+          "published_on": "2025-05-07"
+        }
+      ],
+      "limitations": "صياغة المشكلة تحليلية ولا تدعي أن كل عميل يواجه جميع الطبقات أو أن Stripe هي المزود الوحيد القادر على حلها."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "بدأت Stripe في 2010 بمنطق جعل المدفوعات قابلة للبرمجة عبر API موجهة للمطورين، ثم وسعت الطبقة نفسها إلى Payments وCheckout وBilling وTax وRadar وConnect وTerminal وCapital وAtlas وIssuing وأدوات البيانات والعملات المستقرة والتجارة الوكيلة. جوهر الحل هو إخفاء التعقيد التشغيلي خلف واجهات موحدة، مع إبقاء خيارات تخصيص وتسعير مؤسسي للشركات الكبيرة."
+      },
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "programmable_financial_services_platform_and_product_expansion",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت وثائق API وSDKs وتاريخ تصميم واجهات الدفع وقوائم المنتجات الحالية أن Stripe توسعت من الدفع إلى منصة مالية متعددة المنتجات.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-16",
+        "SRC-11",
+        "SRC-10",
+        "SRC-08",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-16",
+          "title": "Stripe's payments APIs: The first 10 years",
+          "publisher": "Stripe Developer Blog",
+          "source_type": "official_developer_history",
+          "url": "https://stripe.dev/blog/payment-api-design",
+          "evidence_type": "direct",
+          "source_locator": "Payments API history",
+          "supports": "تطور واجهات الدفع منذ الإطلاق المبكر والتركيز على تجربة المطور.",
+          "published_on": "2020-12-15"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Stripe API Reference",
+          "publisher": "Stripe Documentation",
+          "source_type": "official_api_reference",
+          "url": "https://docs.stripe.com/api",
+          "evidence_type": "direct",
+          "source_locator": "API architecture",
+          "supports": "REST وJSON والمصادقة وأفعال HTTP القياسية."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Stripe SDKs",
+          "publisher": "Stripe Documentation",
+          "source_type": "official_developer_documentation",
+          "url": "https://docs.stripe.com/sdks",
+          "evidence_type": "direct",
+          "source_locator": "SDK list",
+          "supports": "SDKs رسمية متعددة اللغات والمنصات."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Stripe builds out the economic infrastructure for AI with 288 launches",
+          "publisher": "Stripe",
+          "source_type": "official_current_product_announcement",
+          "url": "https://stripe.com/newsroom/news/sessions-2026",
+          "evidence_type": "direct",
+          "source_locator": "Sessions 2026 launches",
+          "supports": "توسع المنتجات إلى مدفوعات AI والعملات المستقرة والمدفوعات المتدفقة.",
+          "published_on": "2026-04-29"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Stripe Newsroom information and fast facts",
+          "publisher": "Stripe",
+          "source_type": "official_company_information_page",
+          "url": "https://stripe.com/newsroom/information",
+          "evidence_type": "direct",
+          "source_locator": "Company mission and leadership",
+          "supports": "هوية الشركة ومهمتها ومؤسساها."
+        }
+      ]
+    },
+    "$.market_data.target_audience": {
+      "field_value": "الشركات الناشئة والمطورون، شركات البرمجيات والاشتراكات والذكاء الاصطناعي، التجارة الإلكترونية والتجزئة الموحدة، الأسواق والمنصات، والمؤسسات العالمية. في إفصاح فبراير 2026 قالت Stripe إنها تشغّل أكثر من 5 ملايين شركة مباشرة أو عبر المنصات، وتخدم 90% من مكونات Dow Jones Industrial Average و80% من Nasdaq 100؛ هذه نسب انتشار داخل مؤشرات شركات وليست حصة سوقية من الإيرادات.",
+      "verification_status": "verified_current_business_scale_not_users",
+      "confidence": "high",
+      "claim_type": "customer_segments_and_enterprise_penetration",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تذكر Stripe شرائح الشركات الناشئة والمؤسسات والمنصات وشركات AI، وتنشر نسب انتشارها داخل مؤشرات شركات كبرى.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-17",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Stripe publishes 2025 annual letter and announces tender offer",
+          "publisher": "Stripe",
+          "source_type": "official_company_annual_update_and_valuation_announcement",
+          "url": "https://stripe.com/newsroom/news/stripe-2025-update",
+          "evidence_type": "direct",
+          "source_locator": "2025 customer scale",
+          "supports": "5 ملايين+ شركة و90% من Dow Jones و80% من Nasdaq 100.",
+          "published_on": "2026-02-24"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Global Payment Processing Platform",
+          "publisher": "Stripe",
+          "source_type": "official_payments_product_page",
+          "url": "https://stripe.com/payments",
+          "evidence_type": "direct",
+          "source_locator": "Payments positioning",
+          "supports": "حل للشركات الناشئة والمؤسسات والتجارة العالمية."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Stripe Connect",
+          "publisher": "Stripe",
+          "source_type": "official_product_page",
+          "url": "https://stripe.com/connect",
+          "evidence_type": "direct",
+          "source_locator": "Connect positioning",
+          "supports": "المنصات والأسواق والمستخدمون المتصلون."
+        }
+      ],
+      "limitations": "نسب المؤشرات تعني أن شركات ضمن المؤشر تستخدم Stripe في جزء من أعمالها، ولا تعني أن Stripe تعالج كل إيراداتها أو مدفوعاتها."
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا يوجد رقم رسمي واحد منشور لسوق Stripe القابل للعنونة، لأن الشركة تعمل عبر المدفوعات والفوترة والضرائب والمنصات والتمويل والبنية المستقرة. أفضل مقياس رسمي لحجم التدفق الذي مر عبر المنصة هو 1.9 تريليون دولار في 2025، ما قالت Stripe إنه يعادل نحو 1.6% من الناتج المحلي الإجمالي العالمي. هذا حجم معاملات فعلي لعملائها، وليس تقييمًا للشركة ولا إيرادًا ولا تقديرًا لحجم السوق الكلي.",
+      "verification_status": "verified_current_transaction_volume_not_revenue",
+      "confidence": "high",
+      "claim_type": "official_processed_volume_scale_not_tam",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يوثق خطاب 2025 حجم 1.9 تريليون دولار ونسبة 1.6% من GDP، مع رفض تحويل الرقم إلى TAM أو إيراد.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Stripe publishes 2025 annual letter and announces tender offer",
+          "publisher": "Stripe",
+          "source_type": "official_company_annual_update_and_valuation_announcement",
+          "url": "https://stripe.com/newsroom/news/stripe-2025-update",
+          "evidence_type": "direct",
+          "source_locator": "2025 total volume",
+          "supports": "1.9 تريليون دولار حجمًا إجماليًا و1.6% من GDP.",
+          "published_on": "2026-02-24"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Stripe’s 2025 annual letter",
+          "publisher": "Stripe",
+          "source_type": "official_annual_letter",
+          "url": "https://stripe.com/annual-updates/2025",
+          "evidence_type": "direct",
+          "source_locator": "Annual letter introduction",
+          "supports": "نفس مقياس الحجم والسياق الاقتصادي.",
+          "published_on": "2026-02-24"
+        }
+      ],
+      "limitations": "الناتج المحلي الإجمالي ليس سوق مدفوعات، وTPV ليس حجم سوق قابل للعنونة؛ المقارنة توضح المقياس فقط."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "نما حجم المعاملات من 1.4 تريليون دولار في 2024 إلى 1.9 تريليون دولار في 2025، أي 34% وفق Stripe. كما قالت إن شركات دفعة 2025 نمت نحو 50% أسرع من دفعة 2024، وإن Revenue suite في طريقها إلى معدل إيراد سنوي قدره مليار دولار خلال 2026. المقاييس الثلاثة مختلفة: الأول نمو حجم مدفوعات، والثاني أداء دفعة عملاء، والثالث معدل إيراد سنوي لمجموعة منتجات محددة.",
+      "verification_status": "verified_current_transaction_volume_not_revenue",
+      "confidence": "high",
+      "claim_type": "tpv_growth_customer_cohort_growth_and_product_arr_run_rate",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يجمع الحقل ثلاثة مؤشرات رسمية منفصلة مع تعريف كل واحد لتجنب الخلط.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-01",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Stripe publishes 2025 annual letter and announces tender offer",
+          "publisher": "Stripe",
+          "source_type": "official_company_annual_update_and_valuation_announcement",
+          "url": "https://stripe.com/newsroom/news/stripe-2025-update",
+          "evidence_type": "direct",
+          "source_locator": "2025 growth metrics",
+          "supports": "TPV +34%، دفعة 2025 أسرع نحو 50%، وRevenue suite نحو مليار دولار ARR run rate.",
+          "published_on": "2026-02-24"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Stripe's total payment volume reaches $1.4T",
+          "publisher": "Stripe",
+          "source_type": "official_2024_annual_update",
+          "url": "https://stripe.com/newsroom/news/stripe-2024-update",
+          "evidence_type": "direct",
+          "source_locator": "2024 baseline",
+          "supports": "TPV 2024 بلغ 1.4 تريليون دولار وRevenue suite تجاوز 500 مليون دولار run rate.",
+          "published_on": "2025-02-27"
+        }
+      ],
+      "limitations": "معدل الإيراد السنوي run rate ليس إيرادًا محققًا لسنة كاملة، ونمو دفعة العملاء ليس نمو إيراد Stripe."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "لا يوجد في المصادر الرسمية المستخدمة رقم موحد وموثق للاستثمار التأسيسي الأول، لذلك حُذفت رواية المستثمرين الأوائل غير المدعومة بمصدر أولي في الملف الأصلي. الموثق تنظيميًا هو أن Form D لعام 2021 سجل بيع أوراق مالية بقيمة 597,775,910 دولارًا، وأن Form D/A لعام 2023 سجل 6,869,866,984 دولارًا. وأعلنت Stripe أن Series I تجاوزت 6.5 مليارات دولار عند تقييم 50 مليار دولار، وكان هدفها الأساسي سيولة الموظفين والضرائب المرتبطة بالأسهم، لا تمويل التشغيل المعتاد.",
+      "verification_status": "verified_historical_sec_offering",
+      "confidence": "high",
+      "claim_type": "founding_seed_not_verified_and_later_sec_offerings",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لم يُثبت الاستثمار التأسيسي بمصدر أولي في مجموعة الأدلة، بينما توثق SEC عروض 2021 و2023 وتشرح Stripe غرض Series I.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-03",
+        "SRC-04",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Stripe, Inc. Form D filed March 26, 2021",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "source_type": "sec_form_d",
+          "url": "https://www.sec.gov/Archives/edgar/data/1691342/000169134221000001/xslFormDX01/primary_doc.xml",
+          "evidence_type": "direct",
+          "source_locator": "Item 13",
+          "supports": "597,775,910 دولارًا إجماليًا مباعًا في عرض 2021.",
+          "published_on": "2021-03-26"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Stripe, Inc. Form D/A filed May 23, 2023",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "source_type": "sec_form_d_amendment",
+          "url": "https://www.sec.gov/Archives/edgar/data/1691342/000169134223000002/xslFormDX08/primary_doc.xml",
+          "evidence_type": "direct",
+          "source_locator": "Items 13 and 16",
+          "supports": "6,869,866,984 دولارًا مباعًا، وما يصل إلى 4.1 مليارات دولار لإعادة شراء أسهم.",
+          "published_on": "2023-05-23"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Stripe announces Series I funding and employee liquidity plan",
+          "publisher": "Stripe",
+          "source_type": "official_financing_announcement",
+          "url": "https://stripe.com/newsroom/news/stripe-series-i-employee-liquidity",
+          "evidence_type": "direct",
+          "source_locator": "Series I announcement",
+          "supports": "أكثر من 6.5 مليارات دولار عند 50 مليار دولار وغرض سيولة الموظفين والضرائب.",
+          "published_on": "2023-03-15"
+        }
+      ],
+      "limitations": "Form D إشعار بعرض أوراق مالية ولا يشرح دائمًا التدفق النقدي الصافي أو الاستخدام النهائي لكل دولار؛ لا يمثل الاستثمار الأول عند التأسيس."
+    },
+    "$.financials.valuation": {
+      "field_value": "159 مليار دولار وفق عرض السيولة المعلن في 24 فبراير 2026. هذا تقييم معاملة خاصة/عرض أسهم للموظفين الحاليين والسابقين، وليس قيمة سوقية عامة لأن Stripe ما تزال شركة خاصة. للمقارنة، أعلنت الشركة تقييم 50 مليار دولار في Series I عام 2023.",
+      "verification_status": "verified_current_private_transaction_valuation",
+      "confidence": "high",
+      "claim_type": "latest_private_tender_offer_valuation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "أعلنت Stripe رسميًا عرض سيولة عند تقييم 159 مليار دولار في فبراير 2026، مع مقارنة بجولة 2023.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-01",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Stripe publishes 2025 annual letter and announces tender offer",
+          "publisher": "Stripe",
+          "source_type": "official_company_annual_update_and_valuation_announcement",
+          "url": "https://stripe.com/newsroom/news/stripe-2025-update",
+          "evidence_type": "direct",
+          "source_locator": "Tender offer announcement",
+          "supports": "تقييم 159 مليار دولار في 24 فبراير 2026.",
+          "published_on": "2026-02-24"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Stripe announces Series I funding and employee liquidity plan",
+          "publisher": "Stripe",
+          "source_type": "official_financing_announcement",
+          "url": "https://stripe.com/newsroom/news/stripe-series-i-employee-liquidity",
+          "evidence_type": "direct",
+          "source_locator": "Series I announcement",
+          "supports": "تقييم 50 مليار دولار في مارس 2023.",
+          "published_on": "2023-03-15"
+        }
+      ],
+      "limitations": "التقييم الخاص يعتمد على شروط المعاملة وفئة الأسهم والسيولة، ولا يساوي قيمة سوقية يومية أو إيرادًا."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "معالجة المدفوعات: رسوم تختلف حسب الدولة ووسيلة الدفع والقناة والعملات، مع تسعير مخصص للأحجام الكبيرة؛ 2.9% + 30 سنتًا مثال خاص بالتسعير القياسي للبطاقات المحلية في الولايات المتحدة.",
+        "إدارة الإيراد والمالية: Billing وInvoicing وTax وRevenue Recognition وSigma وData Pipeline برسوم اشتراك أو استخدام أو حجم بحسب المنتج والعقد.",
+        "المنصات والأسواق عبر Connect: رسوم مرتبطة بالحسابات النشطة والتحويلات والقدرات، مع تمكين المنصة من فرض رسوم أو مشاركة إيراد على مستخدميها.",
+        "المدفوعات الحضورية عبر Terminal: رسوم معالجة وأجهزة وقارئات وخدمات مرتبطة بالتجارة الموحدة تختلف حسب السوق.",
+        "الخدمات المالية المضمنة مثل Issuing وTreasury وFinancial Connections والحسابات والتحويلات العالمية، برسوم استخدام أو برنامج أو شبكة وفق المنتج والبلد.",
+        "Stripe Capital: رسوم تمويل ثابتة أو ترتيبات مشاركة إيراد للمنصات؛ الجهة الممولة والشروط تختلف حسب السوق ولا ينبغي وصف Stripe كبنك عالمي موحد.",
+        "Stripe Atlas: 500 دولار لتأسيس الشركة تشمل السنة الأولى للوكيل المسجل، ثم 100 دولار سنويًا للوكيل المسجل بعد السنة الأولى.",
+        "Radar وIdentity وأدوات تحسين القبول والاحتيال والبيانات والأتمتة: رسوم مستقلة أو مضمّنة بحسب الخطة والمنتج.",
+        "العملات المستقرة والبنية المشفرة والتجارة الوكيلة: منتجات دفع وتسوية وإصدار ومحافظ ناشئة، ولا تتوافر إيرادات مستقلة منشورة لها."
+      ],
+      "verification_status": "verified_with_pricing_scope_limits",
+      "confidence": "high",
+      "claim_type": "documented_multi_product_revenue_mechanics",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم صفحات التسعير والمنتجات والوثائق وجود رسوم معاملات وبرمجيات ومنصات وتمويل وتأسيس وأدوات بيانات، من دون الادعاء بتوزيع الإيراد.",
+      "source_count": 7,
+      "source_ids": [
+        "SRC-06",
+        "SRC-13",
+        "SRC-14",
+        "SRC-12",
+        "SRC-15",
+        "SRC-08",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Pricing & Fees",
+          "publisher": "Stripe",
+          "source_type": "official_current_pricing_page",
+          "url": "https://stripe.com/pricing",
+          "evidence_type": "direct",
+          "source_locator": "Product pricing sections",
+          "supports": "رسوم Payments وBilling ومنتجات متعددة وتسعير مخصص."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Stripe Connect",
+          "publisher": "Stripe",
+          "source_type": "official_product_page",
+          "url": "https://stripe.com/connect",
+          "evidence_type": "direct",
+          "source_locator": "Connect",
+          "supports": "نماذج رسوم المنصات والأسواق."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "How Stripe Capital works",
+          "publisher": "Stripe Documentation",
+          "source_type": "official_capital_documentation",
+          "url": "https://docs.stripe.com/capital/how-stripe-capital-works",
+          "evidence_type": "direct",
+          "source_locator": "Capital",
+          "supports": "رسوم ثابتة وتمويل مرتبط بالمبيعات."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "How to incorporate your company with Stripe Atlas",
+          "publisher": "Stripe Documentation",
+          "source_type": "official_atlas_documentation_and_pricing",
+          "url": "https://docs.stripe.com/atlas/signup",
+          "evidence_type": "direct",
+          "source_locator": "Atlas pricing",
+          "supports": "500 دولار و100 دولار سنويًا."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Stripe's total payment volume reaches $1.4T",
+          "publisher": "Stripe",
+          "source_type": "official_2024_annual_update",
+          "url": "https://stripe.com/newsroom/news/stripe-2024-update",
+          "evidence_type": "direct",
+          "source_locator": "Revenue suite metrics",
+          "supports": "وجود إيراد مستقل متنامٍ لمجموعة Revenue and Finance Automation.",
+          "published_on": "2025-02-27"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Stripe builds out the economic infrastructure for AI with 288 launches",
+          "publisher": "Stripe",
+          "source_type": "official_current_product_announcement",
+          "url": "https://stripe.com/newsroom/news/sessions-2026",
+          "evidence_type": "direct",
+          "source_locator": "Sessions 2026",
+          "supports": "منتجات AI والعملات المستقرة والمدفوعات المتدفقة.",
+          "published_on": "2026-04-29"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Stripe will help millions of Shopify merchants accept stablecoin payments",
+          "publisher": "Stripe",
+          "source_type": "official_stablecoin_product_announcement",
+          "url": "https://stripe.com/newsroom/news/shopify-stripe-stablecoin-payments",
+          "evidence_type": "direct",
+          "source_locator": "Shopify stablecoin launch",
+          "supports": "التسوية بالعملة المحلية أو USDC عبر Stripe وConnect.",
+          "published_on": "2025-06-12"
+        }
+      ],
+      "limitations": "Stripe لا تنشر توزيع الإيراد أو الهامش حسب المنتج، وبعض الرسوم تمرر تكاليف شبكات أو بنوك أو شركاء."
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "ابدأ بنقطة احتكاك ضيقة ثم وسّع سطح الإيراد",
+          "description": "نجاح Stripe لم يعتمد على بيع «بنك كامل» منذ البداية؛ المدخل كان واجهة دفع يفهمها المطور، ثم تحولت العلاقة إلى Billing وTax وRadar وConnect ومنتجات مالية. الدرس أن المنتج الأول يجب أن يحل ألمًا حادًا، بينما تتوسع المنصة لاحقًا حول البيانات والتدفقات التي أصبحت تملك سياقها."
+        },
+        {
+          "title": "المقياس الكبير قد يكون مضللًا من دون تعريف",
+          "description": "1.9 تريليون دولار رقم ضخم، لكنه TPV وليس إيرادًا. و5 ملايين تشير إلى شركات مباشرة أو عبر المنصات، لا مستخدمين نشطين شهريًا. الانضباط في تعريف المقياس يحمي التحليل من تحويل حجم المعاملات أو العملاء إلى ربح أو حصة سوقية غير موجودة."
+        },
+        {
+          "title": "واجهة المطور قناة توزيع وليست ميزة تقنية فقط",
+          "description": "توثيق REST والـSDKs متعددة اللغات يقللان وقت الدمج ويجعلان قرار المطور مدخلًا لقرار المؤسسة. عندما تصبح تجربة التكامل موثوقة وقابلة للتكرار، تتحول الوثائق والإصدارات والاستقرار إلى محرك اكتساب واحتفاظ، لا إلى وظيفة دعم جانبية."
+        },
+        {
+          "title": "التوسع الأفقي ينجح عندما يعيد استخدام شبكة البيانات",
+          "description": "Radar وCapital وتحسين الموافقات والفوترة القائمة على الاستخدام تستفيد من بيانات وتدفقات موجودة أصلًا داخل Stripe. هذا يجعل المنتج المجاور أقوى عندما يعتمد على إشارة فريدة تمتلكها المنصة، بدل إضافة أدوات لا علاقة لها بالنواة."
+        },
+        {
+          "title": "الشركة الخاصة تحتاج شفافية مقاييس بديلة",
+          "description": "غياب إيراد عام مدقق لا يمنع التحليل، لكنه يغيّر نوع الأدلة المقبولة: حجم المعاملات، معدل إيراد مجموعة منتجات محددة، الربحية المعلنة، تقييمات المعاملات الخاصة وإفصاحات Form D. كل مؤشر يجب أن يبقى في فئته دون دمج."
+        },
+        {
+          "title": "التحولات التقنية تعيد تعريف البنية المالية",
+          "description": "إطلاقات 2025 و2026 في نماذج الدفع بالذكاء الاصطناعي والعملات المستقرة والمدفوعات المتدفقة تشير إلى أن Stripe تراهن على أن شركات الذكاء الاصطناعي ستحتاج قياسًا وفوترة وتسوية لحظية. الدرس الاستراتيجي هو بناء البنية قبل استقرار نموذج العمل النهائي، مع تجنب الادعاء أن الإيراد الجديد تحقق قبل نشر أرقام."
+        }
+      ],
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "company_specific_strategy_lessons",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس تحليلية ومبنية على تطور المنتج، تعريف المقاييس، قنوات المطورين، توسع المنتجات، وإطلاقات AI والعملات المستقرة.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-01",
+        "SRC-08",
+        "SRC-09",
+        "SRC-10",
+        "SRC-16",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Stripe publishes 2025 annual letter and announces tender offer",
+          "publisher": "Stripe",
+          "source_type": "official_company_annual_update_and_valuation_announcement",
+          "url": "https://stripe.com/newsroom/news/stripe-2025-update",
+          "evidence_type": "direct",
+          "source_locator": "2025 business and product metrics",
+          "supports": "النطاق والربحية والتوسع وعدد الشركات.",
+          "published_on": "2026-02-24"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Stripe builds out the economic infrastructure for AI with 288 launches",
+          "publisher": "Stripe",
+          "source_type": "official_current_product_announcement",
+          "url": "https://stripe.com/newsroom/news/sessions-2026",
+          "evidence_type": "direct",
+          "source_locator": "Sessions 2026",
+          "supports": "التحول إلى بنية AI والمدفوعات المتدفقة.",
+          "published_on": "2026-04-29"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Stripe accelerates the utility of AI and stablecoins with major launches",
+          "publisher": "Stripe",
+          "source_type": "official_product_and_ai_announcement",
+          "url": "https://stripe.com/newsroom/news/sessions-2025",
+          "evidence_type": "direct",
+          "source_locator": "Sessions 2025",
+          "supports": "نماذج الدفع والعملات المستقرة.",
+          "published_on": "2025-05-07"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Stripe SDKs",
+          "publisher": "Stripe Documentation",
+          "source_type": "official_developer_documentation",
+          "url": "https://docs.stripe.com/sdks",
+          "evidence_type": "direct",
+          "source_locator": "SDKs",
+          "supports": "قناة المطورين متعددة اللغات والمنصات."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Stripe's payments APIs: The first 10 years",
+          "publisher": "Stripe Developer Blog",
+          "source_type": "official_developer_history",
+          "url": "https://stripe.dev/blog/payment-api-design",
+          "evidence_type": "direct",
+          "source_locator": "API design history",
+          "supports": "تطور الواجهة كمدخل للمنتج.",
+          "published_on": "2020-12-15"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Stripe's total payment volume reaches $1.4T",
+          "publisher": "Stripe",
+          "source_type": "official_2024_annual_update",
+          "url": "https://stripe.com/newsroom/news/stripe-2024-update",
+          "evidence_type": "direct",
+          "source_locator": "2024 update",
+          "supports": "الفصل بين TPV ومعدل إيراد مجموعة المنتجات.",
+          "published_on": "2025-02-27"
+        }
+      ],
+      "limitations": "هذه استنتاجات استراتيجية وليست توصيات صادرة عن Stripe أو إثباتًا سببيًا وحيدًا لنجاح الشركة."
+    },
+    "$.tools": {
+      "field_value": [
+        "Stripe Payments وCheckout وElements وPayment Links لقبول المدفوعات وبناء تجارب الدفع.",
+        "Stripe Billing وInvoicing وTax وRevenue Recognition وSigma وData Pipeline لإدارة دورة الإيراد والبيانات.",
+        "Stripe Radar وPayments Foundation Model لمكافحة الاحتيال وتحسين قرارات الدفع؛ القدرة موثقة، لكن تفاصيل النماذج والبنية الداخلية ليست عامة بالكامل.",
+        "Stripe Connect لتهيئة الحسابات والتحقق وتوجيه الأموال والتحويلات في المنصات والأسواق.",
+        "Stripe Terminal للمدفوعات الحضورية والتجارة الموحدة.",
+        "Stripe Issuing وTreasury وFinancial Connections وCapital لقدرات مالية مضمنة تختلف حسب السوق والكيان القانوني.",
+        "Stripe Atlas لتأسيس شركات Delaware وخدمات EIN ووثائق المؤسسين والوكيل المسجل.",
+        "Bridge ومنتجات العملات المستقرة وCrypto Onramp والحسابات والمحافظ والتسوية، إضافة إلى قدرات التجارة الوكيلة والمدفوعات المتدفقة.",
+        "Stripe REST API مع استجابات JSON ومصادقة وإصدارات موثقة.",
+        "SDKs رسمية لـRuby وPython وGo وJava وNode.js وPHP و.NET، إضافة إلى Stripe.js وReact وiOS وAndroid وReact Native.",
+        "Workflows وأدوات الأتمتة وStripe Apps وواجهات المطورين؛ هذه قائمة قدرات عامة وليست كشفًا عن الحزمة التقنية الداخلية التي تشغّل Stripe."
+      ],
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "current_public_products_apis_and_sdks_not_internal_stack",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "القائمة مستمدة من صفحات المنتجات وإعلانات Sessions ووثائق API وSDKs، واستبعدت تقنيات داخلية غير موثقة.",
+      "source_count": 8,
+      "source_ids": [
+        "SRC-06",
+        "SRC-08",
+        "SRC-09",
+        "SRC-10",
+        "SRC-11",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Pricing & Fees",
+          "publisher": "Stripe",
+          "source_type": "official_current_pricing_page",
+          "url": "https://stripe.com/pricing",
+          "evidence_type": "direct",
+          "source_locator": "Product pricing index",
+          "supports": "المنتجات العامة وتسعيرها."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Stripe builds out the economic infrastructure for AI with 288 launches",
+          "publisher": "Stripe",
+          "source_type": "official_current_product_announcement",
+          "url": "https://stripe.com/newsroom/news/sessions-2026",
+          "evidence_type": "direct",
+          "source_locator": "Sessions 2026 product launches",
+          "supports": "AI والعملات المستقرة والمدفوعات المتدفقة.",
+          "published_on": "2026-04-29"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Stripe accelerates the utility of AI and stablecoins with major launches",
+          "publisher": "Stripe",
+          "source_type": "official_product_and_ai_announcement",
+          "url": "https://stripe.com/newsroom/news/sessions-2025",
+          "evidence_type": "direct",
+          "source_locator": "Payments Foundation Model",
+          "supports": "قدرات الذكاء الاصطناعي في الدفع والاحتيال.",
+          "published_on": "2025-05-07"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Stripe SDKs",
+          "publisher": "Stripe Documentation",
+          "source_type": "official_developer_documentation",
+          "url": "https://docs.stripe.com/sdks",
+          "evidence_type": "direct",
+          "source_locator": "SDK catalog",
+          "supports": "لغات ومنصات SDK الرسمية."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Stripe API Reference",
+          "publisher": "Stripe Documentation",
+          "source_type": "official_api_reference",
+          "url": "https://docs.stripe.com/api",
+          "evidence_type": "direct",
+          "source_locator": "API reference",
+          "supports": "REST وJSON والمصادقة."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "How to incorporate your company with Stripe Atlas",
+          "publisher": "Stripe Documentation",
+          "source_type": "official_atlas_documentation_and_pricing",
+          "url": "https://docs.stripe.com/atlas/signup",
+          "evidence_type": "direct",
+          "source_locator": "Atlas docs",
+          "supports": "قدرات تأسيس الشركات."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Stripe Connect",
+          "publisher": "Stripe",
+          "source_type": "official_product_page",
+          "url": "https://stripe.com/connect",
+          "evidence_type": "direct",
+          "source_locator": "Connect",
+          "supports": "قدرات المنصات والأسواق."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "How Stripe Capital works",
+          "publisher": "Stripe Documentation",
+          "source_type": "official_capital_documentation",
+          "url": "https://docs.stripe.com/capital/how-stripe-capital-works",
+          "evidence_type": "direct",
+          "source_locator": "Capital",
+          "supports": "قدرات التمويل حسب السوق."
+        }
+      ],
+      "limitations": "القائمة ليست حصرًا كاملًا ولا تكشف لغات الخوادم أو قواعد البيانات أو مزودي السحابة الداخليين."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Stripe publishes 2025 annual letter and announces tender offer",
+      "publisher": "Stripe",
+      "source_type": "official_company_annual_update_and_valuation_announcement",
+      "published_on": "2026-02-24",
+      "url": "https://stripe.com/newsroom/news/stripe-2025-update",
+      "supports": [
+        "حجم معاملات/مدفوعات شركات Stripe بلغ 1.9 تريليون دولار في 2025 ونما 34%",
+        "أحدث تقييم معلن بلغ 159 مليار دولار عبر عرض سيولة",
+        "أكثر من 5 ملايين شركة تستخدم Stripe مباشرة أو عبر المنصات",
+        "Revenue suite في طريقها إلى معدل إيراد سنوي قدره مليار دولار خلال 2026",
+        "Stripe وصفت نفسها بأنها مربحة بقوة وأطلقت أكثر من 350 تحديثًا في 2025"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Stripe’s 2025 annual letter",
+      "publisher": "Stripe",
+      "source_type": "official_annual_letter",
+      "published_on": "2026-02-24",
+      "url": "https://stripe.com/annual-updates/2025",
+      "supports": [
+        "1.9 تريليون دولار حجمًا إجماليًا في 2025",
+        "ما يعادل نحو 1.6% من الناتج المحلي الإجمالي العالمي وفق تقدير الشركة",
+        "اتجاهات الشركات العالمية والذكاء الاصطناعي والتجارة الوكيلة"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Stripe, Inc. Form D filed March 26, 2021",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "source_type": "sec_form_d",
+      "published_on": "2021-03-26",
+      "url": "https://www.sec.gov/Archives/edgar/data/1691342/000169134221000001/xslFormDX01/primary_doc.xml",
+      "supports": [
+        "Stripe, Inc. شركة مسجلة في ديلاوير",
+        "المقر الرئيسي المعلن وقتها في سان فرانسيسكو",
+        "بيع أوراق مالية بقيمة 597,775,910 دولارًا في عرض 2021",
+        "الشركة رفضت الإفصاح عن نطاق الإيراد في النموذج"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Stripe, Inc. Form D/A filed May 23, 2023",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "source_type": "sec_form_d_amendment",
+      "published_on": "2023-05-23",
+      "url": "https://www.sec.gov/Archives/edgar/data/1691342/000169134223000002/xslFormDX08/primary_doc.xml",
+      "supports": [
+        "العنوان الرئيسي المعلن في South San Francisco وقت الإيداع",
+        "إجمالي عرض وبيع أوراق مالية بقيمة 6,869,866,984 دولارًا",
+        "تخصيص ما يصل إلى 4.1 مليارات دولار لإعادة شراء أسهم عبر عرض للموظفين السابقين والحاليين",
+        "الشركة رفضت الإفصاح عن نطاق الإيراد"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Stripe announces Series I funding and employee liquidity plan",
+      "publisher": "Stripe",
+      "source_type": "official_financing_announcement",
+      "published_on": "2023-03-15",
+      "url": "https://stripe.com/newsroom/news/stripe-series-i-employee-liquidity",
+      "supports": [
+        "جولة Series I تجاوزت 6.5 مليارات دولار عند تقييم 50 مليار دولار",
+        "الغرض كان سيولة الموظفين والتزامات الضرائب المرتبطة بالأسهم",
+        "Stripe قالت إنها لم تكن تحتاج رأس المال لتشغيل أعمالها"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Pricing & Fees",
+      "publisher": "Stripe",
+      "source_type": "official_current_pricing_page",
+      "url": "https://stripe.com/pricing",
+      "supports": [
+        "التسعير القياسي بنظام الدفع حسب الاستخدام",
+        "2.9% + 30 سنتًا للبطاقات المحلية الناجحة في الولايات المتحدة",
+        "توفر تسعير مخصص للأحجام الكبيرة والنماذج الخاصة",
+        "الرسوم والمنتجات تختلف حسب البلد والطريقة والمنتج"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Stripe Newsroom information and fast facts",
+      "publisher": "Stripe",
+      "source_type": "official_company_information_page",
+      "url": "https://stripe.com/newsroom/information",
+      "supports": [
+        "مهمة زيادة الناتج المحلي الإجمالي للإنترنت",
+        "مقران رئيسيان في سان فرانسيسكو ودبلن",
+        "Patrick Collison مؤسس مشارك ورئيس تنفيذي وJohn Collison مؤسس مشارك ورئيس"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Stripe builds out the economic infrastructure for AI with 288 launches",
+      "publisher": "Stripe",
+      "source_type": "official_current_product_announcement",
+      "published_on": "2026-04-29",
+      "url": "https://stripe.com/newsroom/news/sessions-2026",
+      "supports": [
+        "288 إطلاقًا وتحديثًا في Sessions 2026",
+        "المدفوعات المتدفقة وربط Metronome بمدفوعات stablecoin",
+        "توسيع البنية المالية الموجهة لشركات الذكاء الاصطناعي"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Stripe accelerates the utility of AI and stablecoins with major launches",
+      "publisher": "Stripe",
+      "source_type": "official_product_and_ai_announcement",
+      "published_on": "2025-05-07",
+      "url": "https://stripe.com/newsroom/news/sessions-2025",
+      "supports": [
+        "Payments Foundation Model مدرب على عشرات المليارات من المعاملات",
+        "استخدام الذكاء الاصطناعي لمكافحة الاحتيال وتحسين الموافقات والتجربة",
+        "توسيع الحسابات المدعومة بالعملات المستقرة"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Stripe SDKs",
+      "publisher": "Stripe Documentation",
+      "source_type": "official_developer_documentation",
+      "url": "https://docs.stripe.com/sdks",
+      "supports": [
+        "SDKs رسمية للخادم تشمل Ruby وPython وGo وJava وNode.js وPHP و.NET",
+        "SDKs للويب وiOS وAndroid وReact Native",
+        "اتباع إصدار دلالي للـSDKs وإصدارات مؤرخة للـAPI"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Stripe API Reference",
+      "publisher": "Stripe Documentation",
+      "source_type": "official_api_reference",
+      "url": "https://docs.stripe.com/api",
+      "supports": [
+        "واجهة API منظمة حول REST",
+        "روابط موارد متوقعة وطلبات form-encoded واستجابات JSON",
+        "استخدام رموز HTTP والمصادقة والأفعال القياسية"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "How to incorporate your company with Stripe Atlas",
+      "publisher": "Stripe Documentation",
+      "source_type": "official_atlas_documentation_and_pricing",
+      "url": "https://docs.stripe.com/atlas/signup",
+      "supports": [
+        "Atlas يؤسس شركة في ديلاوير ويساعد في EIN وإصدار أسهم المؤسسين و83(b)",
+        "رسوم تأسيس قدرها 500 دولار تشمل السنة الأولى للوكيل المسجل",
+        "100 دولار سنويًا للوكيل المسجل بعد السنة الأولى"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Stripe Connect",
+      "publisher": "Stripe",
+      "source_type": "official_product_page",
+      "url": "https://stripe.com/connect",
+      "supports": [
+        "تهيئة الحسابات والتحقق والمدفوعات والتحويلات للمنصات والأسواق",
+        "تمكين المنصات من تحقيق إيراد من خدمات مالية مضمنة",
+        "تعدد نماذج التسعير والقدرات"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "How Stripe Capital works",
+      "publisher": "Stripe Documentation",
+      "source_type": "official_capital_documentation",
+      "url": "https://docs.stripe.com/capital/how-stripe-capital-works",
+      "supports": [
+        "تمويل للشركات المؤهلة التي تعالج مدفوعاتها عبر Stripe",
+        "رسم ثابت وسداد مرتبط بالمبيعات في عدة أسواق",
+        "الجهة الممولة أو المزود يختلف حسب السوق"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Stripe's total payment volume reaches $1.4T",
+      "publisher": "Stripe",
+      "source_type": "official_2024_annual_update",
+      "published_on": "2025-02-27",
+      "url": "https://stripe.com/newsroom/news/stripe-2024-update",
+      "supports": [
+        "حجم مدفوعات 2024 بلغ 1.4 تريليون دولار",
+        "Stripe كانت مربحة وتتوقع استمرار الربحية",
+        "Billing استخدمته أكثر من 300 ألف شركة وأدار قرابة 200 مليون اشتراك نشط",
+        "Revenue and Finance Automation تجاوز معدل إيراد سنوي قدره 500 مليون دولار"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Stripe's payments APIs: The first 10 years",
+      "publisher": "Stripe Developer Blog",
+      "source_type": "official_developer_history",
+      "published_on": "2020-12-15",
+      "url": "https://stripe.dev/blog/payment-api-design",
+      "supports": [
+        "تطور واجهات الدفع منذ الإطلاق الأمريكي",
+        "أهمية تصميم API والتوافق مع تغير الشبكات واللوائح وطرق الدفع",
+        "تبسيط تجربة الدمج للمطورين"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Global Payment Processing Platform",
+      "publisher": "Stripe",
+      "source_type": "official_payments_product_page",
+      "url": "https://stripe.com/payments",
+      "supports": [
+        "قبول المدفوعات عبر الإنترنت والحضور الشخصي والأسواق العالمية",
+        "حل موحد للشركات الناشئة والمؤسسات",
+        "التكامل مع وسائل دفع متعددة وتحسينات القبول"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Stripe will help millions of Shopify merchants accept stablecoin payments",
+      "publisher": "Stripe",
+      "source_type": "official_stablecoin_product_announcement",
+      "published_on": "2025-06-12",
+      "url": "https://stripe.com/newsroom/news/shopify-stripe-stablecoin-payments",
+      "supports": [
+        "قبول USDC لتجار Shopify في 34 دولة عند الإطلاق",
+        "إتاحة المدفوعات المستقرة لمستخدمي Connect",
+        "إمكانية التسوية بالعملة المحلية أو USDC"
+      ]
+    }
   ]
 }

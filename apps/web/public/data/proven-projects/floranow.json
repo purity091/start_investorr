@@ -1,53 +1,997 @@
 {
   "id": "floranow",
   "slug": "floranow",
-  "name": "فلورانาว (Floranow)",
-  "headline": "المنصة التي رقمنت تجارة الزهور من مزارع كينيا إلى متاجر الخليج",
-  "category": "B2B E-commerce / سلاسل الإمداد للزهور",
+  "name": "فلوراناو (Floranow)",
+  "headline": "كيف حوّلت فلوراناو رقمنة شراء الزهور إلى بنية تشغيل واستحواذ لسلسلة توريد شديدة التلف",
+  "category": "B2B Marketplace / تجارة الزهور وسلاسل التوريد المبردة",
   "company": {
-    "location": "دبي، الإمارات العربية المتحدة (وتوسع إقليمي في السعودية)",
-    "business_model": "سوق رقمي (Marketplace) وعمولات على التوريد اللوجستي"
+    "legal_identity_note": "فلوراناو علامة ومنصة خاصة تعمل في الإمارات تحت اسم Flora Express Flowers Trading LLC وفق شروط الاستخدام ومتاجر التطبيقات. لا توجد إشارة إلى إدراج عام أو رمز تداول، ولا تتوافر لها ملفات SEC تشغيلية عامة.",
+    "location": "دبي، الإمارات العربية المتحدة، مع حضور تشغيلي مباشر في السعودية توسع إلى تسع مدن بعد الاستحواذ على Bloomax في يونيو 2023.",
+    "founded_year": 2016,
+    "founded_by": [
+      "شريف مزايك (Charif Mzayek)"
+    ],
+    "public_company": false,
+    "ticker": null,
+    "sec_filings_available": false,
+    "business_model": "سوق B2B يربط المزارع والموردين العالميين بمحلات الزهور وتجار الجملة والفنادق ومنظمي الفعاليات والسوبرماركت، مع إدارة الطلب والتجميع والشحن والتخليص والجودة والتوصيل المبرد. ذكر المؤسس أن الشركة تعمل بهيكل عمولات على الخدمات، بينما تُظهر الشروط تسعيرًا شاملًا للطلب؛ ولا تنشر الشركة معدل العمولة أو الهامش أو مزيج الإيرادات.",
+    "products": [
+      "سوق إلكتروني B2B لشراء الزهور والنباتات ومستلزمات القطاع",
+      "بوابة للمزارع والموردين لإدارة الأصناف والأسعار والتوفر والطلبات",
+      "تجميع الطلبات وإدارة الشحن الدولي والتخليص الجمركي",
+      "مراقبة الجودة والتوصيل الأخير عبر سلسلة تبريد متصلة",
+      "لوحة متابعة رقمية للطلبات والرؤية التشغيلية",
+      "تطبيق Floranow Marketplace للأجهزة المحمولة",
+      "شبكة استيراد وتوزيع محلية توسعت عبر الاستحواذات في السعودية"
+    ],
+    "technology_stack_note": "لم يثبت مصدر أولي حديث أن AWS أو PHP أو Node.js هي الحزمة الداخلية الحالية؛ لذلك يعرض الملف القدرات الرقمية واللوجستية الموثقة بدل تخمين البنية التقنية."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات",
-    "monthly_traffic": "تخدم آلاف متاجر الزهور"
+    "as_of_date": "2026-08-03",
+    "monthly_revenue": null,
+    "monthly_revenue_note": "لا تنشر فلوراناو إيرادًا شهريًا أو سنويًا فعليًا أو ARR/MRR. حُذف وصف «ملايين الدولارات» لأنه غير موثق.",
+    "monthly_traffic": null,
+    "monthly_traffic_note": "لا يوجد رقم رسمي موثق لزيارات الموقع أو التطبيق. عدد العملاء أو الطلبات أو تنزيلات التطبيق لا يساوي الزيارات.",
+    "monthly_active_users": null,
+    "monthly_active_users_note": "لا تنشر الشركة MAU أو DAU؛ نشاطها B2B ويجب عدم تحويل العملاء أو الحسابات إلى مستخدمين نشطين شهريًا.",
+    "current_company_reported_network": {
+      "business_buyers": {
+        "value": 2000,
+        "operator": "+",
+        "unit": "شركة من محلات الزهور والفعاليات والفنادق",
+        "period": "معلن على صفحة سوق الشركة عند الوصول في 2026-08-03",
+        "metric_type": "company_reported_business_network",
+        "note": "رقم تسويقي صادر عن الشركة، وليس عدد عملاء دافعين نشطين أو MAU."
+      },
+      "partner_farms": {
+        "value": 500,
+        "operator": "+",
+        "unit": "مزرعة شريكة",
+        "period": "معلن على صفحة سوق الشركة عند الوصول في 2026-08-03",
+        "metric_type": "company_reported_supply_network",
+        "note": "لم تنشر الشركة تعريف الاعتماد أو عدد المزارع النشطة خلال فترة محددة."
+      },
+      "operating_countries": {
+        "value": 6,
+        "operator": null,
+        "unit": "دول",
+        "period": "معلن على صفحة سوق الشركة عند الوصول في 2026-08-03",
+        "metric_type": "company_reported_operating_footprint",
+        "note": "لا يوضح الموقع حجم النشاط أو الإيراد في كل دولة."
+      }
+    },
+    "historical_operating_metrics": {
+      "processed_orders": {
+        "value": 150000,
+        "operator": "+",
+        "unit": "طلب",
+        "as_of": "2023-06",
+        "source_type": "تصريح المؤسس/بيان الاستحواذ",
+        "note": "مقياس تراكمي تاريخي، وليس طلبات شهرية أو حجم معاملات مالي."
+      },
+      "customers": {
+        "value": 1200,
+        "operator": "+",
+        "unit": "عميل",
+        "as_of": "2023-06",
+        "source_type": "تصريح المؤسس في Arab News",
+        "note": "لا يوضح إن كانوا جميعًا نشطين أو دافعين عند تاريخ القياس."
+      },
+      "saudi_platform_buyers_after_bloomax": {
+        "value": 1500,
+        "operator": "+",
+        "unit": "شركة في السعودية",
+        "as_of": "2023-06",
+        "source_type": "بيان الاستحواذ",
+        "note": "رقم متوقع/معلن بعد دمج قاعدة Bloomax، وليس MAU."
+      },
+      "mobile_share_of_online_transactions_in_saudi": {
+        "value": 80,
+        "operator": "+",
+        "unit": "%",
+        "as_of": "2023-06",
+        "source_type": "تصريح المؤسس",
+        "note": "حصة من المعاملات الإلكترونية في السعودية، لا من إجمالي الإيراد، ولا تنشر قيمة أو عدد المعاملات."
+      }
+    },
+    "metric_reconciliation_note": "تعرض صفحة الشركة الحالية 2,000+ شركة و500+ مزرعة، بينما صرحت الشركة في 2023 بأكثر من 1,200 عميل و1,500 شركة سعودية بعد Bloomax. تختلف النطاقات والتواريخ والتعريفات، لذلك لم تُجمع الأرقام ولم تُعامل كمقياس موحد."
   },
   "overview": {
     "problem": {
-      "text": "سلسلة توريد الزهور في المنطقة تقليدية جداً وبطيئة. متجر الزهور في دبي يشتري من وسيط محلي، الذي يشتري من مستورد، الذي يشتري من مزرعة في كينيا أو هولندا. هذا يرفع السعر ويهلك الزهور (تقلل عمرها الافتراضي).",
-      "impact": "تلف نسبة كبيرة من الزهور أثناء النقل، أسعار باهظة، وضعف الشفافية للمتاجر الصغيرة."
+      "text": "تجارة الزهور المقطوفة تعتمد على منتج سريع التلف وسلسلة دولية تتضمن مزارع ومصدرين وشحنًا وتخليصًا ومستوردين وموزعين وتجار تجزئة. تعدد الوسطاء وضعف شفافية الأسعار والتوفر يرفعان تكلفة التنسيق ويطيلان زمن الوصول ويزيدان خطر فقد الجودة.",
+      "impact": "يتحمل المزارع صعوبة الوصول إلى المشترين، بينما يواجه المشتري تشكيلة محدودة وتقلبًا في الأسعار وحاجة إلى تنسيق لوجستي معقد. وفي هذا القطاع، أي تأخير تشغيلي قد يقلل العمر التجاري للمنتج حتى قبل وصوله إلى نقطة البيع."
     },
     "solution": {
-      "text": "سوق إلكتروني B2B يربط بائعي الزهور المحليين في الخليج مباشرة مع المزارعين في هولندا، كينيا، وكولومبيا، مع توليFloranow مسؤولية الشحن المبرد والتخليص الجمركي (Cool Chain Logistics)."
+      "text": "بنت فلوراناو سوقًا رقميًا يتيح عرض التوفر والأسعار والشراء المباشر، ثم أحاطته بخدمات تشغيلية تشمل التجميع والشحن والجمارك والجودة والتوصيل المبرد. ومع الاستحواذ على أعمال توزيع Astra Farms في 2021 وBloomax في 2023، انتقلت الاستراتيجية من الوساطة الرقمية وحدها إلى دمج بنية توزيع محلية في السعودية."
     }
   },
   "market_data": {
-    "target_audience": "متاجر بيع الزهور، منظمي حفلات الزفاف، والفنادق (B2B).",
-    "market_size": "سوق تجارة الزهور في الشرق الأوسط يتجاوز مليار دولار.",
-    "growth_rate": "هيمنة سريعة على السوق وجمع جولات تمويلية متتالية آخرها Series A."
+    "target_audience": [
+      "محلات الزهور والمتاجر الإلكترونية المتخصصة",
+      "تجار الجملة والمستوردون",
+      "منظمو حفلات الزفاف والفعاليات",
+      "الفنادق وسلاسل السوبرماركت",
+      "المزارع والمصدرون الباحثون عن وصول مباشر للأسواق"
+    ],
+    "market_size": {
+      "current_verified_value": null,
+      "historical_company_estimate": {
+        "value_usd": 1150000000,
+        "region": "الشرق الأوسط وشمال أفريقيا وتركيا",
+        "as_of": "2023-06",
+        "note": "ورد الرقم في تصريح المؤسس وبيان مرتبط بالاستحواذ؛ لم يعثر البحث على منهجية عامة أو تحديث أولي حتى أغسطس 2026، لذلك لا يعامل كتقدير سوق حالي مستقل."
+      }
+    },
+    "growth_rate": {
+      "current_verified_rate": null,
+      "historical_company_estimate": {
+        "value": 6,
+        "unit": "% CAGR",
+        "market": "سوق الزهور المقطوفة في السعودية",
+        "as_of": "2023-06",
+        "note": "تقدير تاريخي ورد في بيان الاستحواذ دون نشر تقرير المنهجية."
+      },
+      "company_reported_operating_signals": [
+        "تأسيس المنصة في دبي عام 2016.",
+        "إغلاق Series A بقيمة 3 ملايين دولار في ديسمبر 2019.",
+        "الاستحواذ على أعمال توزيع الزهور التابعة لـAstra Farms في السعودية في يونيو 2021.",
+        "الاستحواذ على 100% من Bloomax في يونيو 2023 بتمويل من مزيج دين وحقوق ملكية، دون إعلان قيمة الصفقة.",
+        "توسع الحضور المباشر بعد Bloomax إلى تسع مدن سعودية.",
+        "استمرار نشاط العلامة والمنصة في 2026، بما في ذلك حملات الطلب المسبق لعيد الحب عبر الصفحة الرسمية للشركة."
+      ]
+    }
   },
   "financials": {
-    "initial_investment": "بدعم من Wamda Capital وصناديق أخرى متخصصة في الأسواق الناشئة.",
-    "valuation": "غير معلن",
+    "currency_note": "جميع القيم بالدولار الأمريكي ما لم يُذكر غير ذلك.",
+    "actual_revenue": null,
+    "actual_revenue_note": "لا توجد قوائم مالية عامة أو إيرادات فعلية مدققة منشورة.",
+    "valuation": null,
+    "valuation_note": "لم يعلن تقييم Series A أو تقييم حديث للشركة.",
+    "transaction_volume": null,
+    "transaction_volume_note": "نشرت الشركة أعداد طلبات وحصة معاملات إلكترونية تاريخية، لكنها لم تنشر GMV أو قيمة معاملات مالية.",
+    "funding_history": [
+      {
+        "date": "2017-12",
+        "round": "جولة تمويل أولى",
+        "amount_usd": null,
+        "investors": [
+          "Jabbar Internet Group",
+          "Dash Ventures",
+          "Wamda Capital"
+        ],
+        "note": "أعلنت الشركة المستثمرين ولم تعلن قيمة الجولة في المصدر الأولي المتاح."
+      },
+      {
+        "date": "2019-12-15",
+        "round": "Series A",
+        "amount_usd": 3000000,
+        "lead_investors": [
+          "Wamda Capital",
+          "Global Ventures"
+        ],
+        "other_investors": [
+          "Dash Ventures",
+          "Jabbar Internet Group",
+          "Sirocco Holdings",
+          "Adamtech Ventures",
+          "Zuaiter Holding Capital",
+          "HB Investments",
+          "مستثمرون ملائكيون"
+        ],
+        "note": "تمويل حقوق ملكية لتوسيع المنصة؛ لا يساوي إيرادًا أو تقييمًا."
+      }
+    ],
+    "total_equity_funding_reported": {
+      "value_usd": 8000000,
+      "as_of": "2023-06",
+      "source_type": "تصريح المؤسس في مقابلة صحفية",
+      "confidence": "medium",
+      "note": "يتجاوز مجموع الجولة المنشورة ذات القيمة المعروفة؛ لم تنشر الشركة تفصيلًا كاملًا للجولات التي تفسر الفرق، لذلك يعرض كإجمالي صرحت به الإدارة لا كمجموع محاسبي أعيد بناؤه."
+    },
+    "acquisitions": [
+      {
+        "target": "أعمال توزيع الزهور التابعة لـAstra Farms",
+        "date": "2021-06-15",
+        "scope": "أعمال التوزيع في السعودية",
+        "ownership": null,
+        "deal_value": null,
+        "note": "قيمة وشروط الصفقة غير معلنة."
+      },
+      {
+        "target": "Bloomax",
+        "date": "2023-06-05",
+        "scope": "موزع جملة للزهور المقطوفة في السعودية",
+        "ownership": "100%",
+        "deal_value": null,
+        "financing": "مزيج من الدين وحقوق الملكية",
+        "note": "قيمة الصفقة ومقدار الدين والأسهم غير معلنة."
+      }
+    ],
     "revenue_streams": [
-      "هوامش ربح وعمولات على بيع الزهور",
-      "رسوم خدمات التوصيل المبرد (Logistics as a Service)"
+      {
+        "stream": "عمولات على الخدمات والمعاملات",
+        "status": "مؤكد على مستوى النموذج",
+        "evidence_note": "ذكر المؤسس أن الشركة تعمل بهيكل عمولات على الخدمات، دون إعلان نسبة العمولة."
+      },
+      {
+        "stream": "التوريد واللوجستيات والتخليص والتوصيل ضمن السعر الشامل",
+        "status": "مؤكد تشغيليًا، غير مفصل محاسبيًا",
+        "evidence_note": "تُظهر صفحات الشركة أن السعر يتضمن عناصر الشحن والمناولة والجمارك والتوصيل، لكن لا يتضح هل تُسجل كرسوم منفصلة أو ضمن هامش الصفقة."
+      },
+      {
+        "stream": "الاستيراد والتوزيع المحلي عبر العمليات المستحوذ عليها",
+        "status": "مرجح ومؤهل",
+        "evidence_note": "الاستحواذات توسع نشاط التوزيع، لكن الشركة لا تنشر فصل الإيراد بين السوق الرقمي والتوزيع."
+      }
+    ],
+    "undisclosed_metrics": [
+      "الإيراد الشهري والسنوي",
+      "الربح الإجمالي وصافي الربح",
+      "ARR وMRR",
+      "GMV أو قيمة المعاملات",
+      "معدل العمولة أو Take Rate",
+      "قيمة الاستحواذات",
+      "التقييم",
+      "تكلفة اكتساب العميل والاحتفاظ"
     ]
+  },
+  "analysis": {
+    "core_thesis": "الميزة الاستراتيجية لفلوراناو ليست صفحة طلب إلكترونية وحدها؛ إنها الجمع بين اكتشاف العرض العالمي وتنفيذ الطلب عبر سلسلة تبريد واستيراد وتوزيع محلي. في سلعة سريعة التلف، تكون جودة التنفيذ جزءًا من المنتج الرقمي نفسه.",
+    "business_model_evolution": "بدأت الشركة كسوق يربط المزارع بالمشترين، ثم توسعت رأسيًا عبر السيطرة على أجزاء أكبر من التنفيذ، وأسرعت بناء الكثافة المحلية في السعودية باستحواذين. هذا يقلل اعتماد التجربة على أطراف خارجية، لكنه يزيد أيضًا رأس المال العامل والتعقيد والمخاطر التشغيلية.",
+    "growth_engine": [
+      "زيادة تنوع المزارع والأصناف تعزز قيمة المنصة للمشترين.",
+      "زيادة كثافة المشترين تحسن فرص تصريف إنتاج المزارع.",
+      "التوزيع المحلي والسلسلة المبردة يحولان الاتصال الرقمي إلى طلب قابل للتنفيذ.",
+      "الاستحواذ على موزعين قائمين يمنح وصولًا أسرع إلى العملاء والمدن والعلاقات التجارية."
+    ],
+    "defensibility": [
+      "شبكة ثنائية من مزارع عالمية ومشترين مهنيين.",
+      "خبرة متخصصة في مواصفات الزهور والجودة والمواسم.",
+      "قدرات تشغيلية في الشحن والجمارك والتبريد والتوصيل.",
+      "حضور توزيع محلي في السعودية بُني جزئيًا عبر الاستحواذ."
+    ],
+    "key_risks": [
+      "تلف المخزون وتقلب الجودة والطقس والشحن الجوي.",
+      "تقلب أسعار التوريد والعملات وتكاليف النقل.",
+      "موسمية الطلب وتركيزه حول المناسبات.",
+      "ارتفاع رأس المال العامل ومخاطر الائتمان في نموذج B2B.",
+      "تعقيد دمج عمليات الاستحواذ والتوسع عبر أسواق متعددة.",
+      "غياب الإفصاحات المالية يجعل الربحية وكفاءة الوحدة غير قابلتين للتحقق."
+    ],
+    "metric_reading": "الطلبات والعملاء والمزارع والمدن مؤشرات تشغيلية، لكنها لا تكشف الإيراد أو GMV أو الهامش. كما أن عدد الشركات على المنصة لا يساوي مستخدمين نشطين، وحصة التطبيق من المعاملات لا تساوي حصة من الإيرادات.",
+    "strategic_interpretation": "فلوراناو مثال على أن رقمنة سوق تقليدي قد تتطلب امتلاك أو تنسيق البنية المادية التي تحدد جودة النتيجة. انتقالها إلى الاستحواذ والتوزيع يجعلها أقرب إلى منصة تجارة مُدارة رأسيًا من سوق خفيف الأصول."
   },
   "lessons": [
     {
-      "title": "التركيز على قطاع ضيق وعميق (Niche B2B)",
-      "description": "الكثير من الشركات حاولت حل مشكلة التجارة الإلكترونية العامة، لكن Floranow اختارت قطاعاً محدداً وصعباً جداً (الزهور سريعة التلف)، وحلت مشكلة الشحن المبرد، مما جعل دخول منافسين جدد أمراً بالغ الصعوبة."
+      "title": "في المنتجات سريعة التلف، اللوجستيات جزء من واجهة المستخدم",
+      "description": "سهولة الطلب لا تصنع قيمة إذا وصلت الزهرة متأخرة أو بجودة متباينة. لذلك صممت فلوراناو التجربة من عرض التوفر والسعر إلى التجميع والتبريد والجمارك والتوصيل، لتصبح النتيجة المادية امتدادًا للمنتج البرمجي."
     },
     {
-      "title": "القضاء على الوسطاء يزيد الكفاءة",
-      "description": "من خلال ربط المتجر بالمزرعة مباشرة، زادت الشركة من العمر الافتراضي للزهرة (Vase Life) في متجر العميل النهائي، وهو أمر لا يقدر بثمن في هذا القطاع الحساس."
+      "title": "الاستحواذ يشتري كثافة محلية لا يستطيع الكود بناؤها سريعًا",
+      "description": "الاستحواذ على توزيع Astra Farms ثم Bloomax منح الشركة علاقات ومدنًا وعملاء وبنية تنفيذ قائمة في السعودية. الدرس هو أن السوق الرقمي قد يحتاج شراء شبكة واقعية بدل انتظار نموها عضويًا."
+    },
+    {
+      "title": "السعر الشامل يقلل تكلفة التنسيق قبل أن يقلل السعر نفسه",
+      "description": "عرض تكلفة تجمع المنتج والشحن والمناولة والجمارك والتوصيل يجعل قرار الشراء أوضح للمشتري المهني، ويزيل الحاجة إلى مقارنة عروض مجزأة من عدة أطراف."
+    },
+    {
+      "title": "السوق الرأسي يفوز بفهم المواصفات لا باتساع الفئات",
+      "description": "الأصناف والأطوال والمنشأ ووقت القطع وظروف النقل تفاصيل حاسمة في الزهور. التخصص العميق يسمح ببناء كتالوج وعمليات جودة لا توفرها أسواق B2B العامة بسهولة."
+    },
+    {
+      "title": "الرقمنة الحقيقية تُقاس بتحول المعاملة لا بتنزيل التطبيق",
+      "description": "تصريح الإدارة بأن التطبيق مثّل أكثر من 80% من المعاملات الإلكترونية في السعودية عام 2023 أهم من عدد التنزيلات وحده، لكنه يظل مؤشر قناة ولا يثبت الإيراد أو الربحية."
+    },
+    {
+      "title": "التمويل والاستحواذ والنمو ثلاثة أرقام مختلفة",
+      "description": "Series A البالغة 3 ملايين دولار وإجمالي التمويل المصرح به 8 ملايين دولار لا يمثلان إيرادًا. كذلك 150 ألف طلب لا تمثل GMV، وقيمة صفقتي Astra وBloomax بقيت غير معلنة."
+    },
+    {
+      "title": "المنصة المدارة رأسيًا تكسب السيطرة وتتحمل المخاطر",
+      "description": "إدارة السلسلة الباردة والتوزيع ترفع القدرة على ضبط الجودة، لكنها تضيف مخاطر المخزون والائتمان والعمليات ورأس المال العامل. النجاح هنا يعتمد على اقتصاديات الوحدة التي لم تُنشر."
     }
   ],
   "tools": [
-    "AWS",
-    "PHP",
-    "Node.js",
-    "Cool Chain Tracking"
+    "سوق B2B إلكتروني وكتالوج رقمي",
+    "بوابة مزارعين وموردين",
+    "لوحات متابعة الطلبات والتوفر والأسعار",
+    "تطبيقات جوال على Google Play وApp Store",
+    "إدارة الشحن والتخليص والجودة والتوصيل",
+    "سلسلة تبريد ومركبات نقل مبردة",
+    "مدفوعات وفواتير B2B متعددة الوسائل"
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "language": "ar",
+    "researched_through": "2026-08-03",
+    "generated_at": "2026-08-03T17:50:00+03:00",
+    "company_status": "شركة خاصة نشطة؛ لا توجد قوائم مالية عامة أو رمز تداول أو ملفات SEC تشغيلية باسم فلوراناو.",
+    "primary_source_priority": [
+      "الموقع الرسمي وصفحات السوق والبوابات",
+      "شروط الاستخدام ومتاجر التطبيقات الرسمية",
+      "إعلانات التمويل المنشورة من الشركة",
+      "بيانات الاستحواذ المنقولة عبر Wamda",
+      "تصريحات المؤسس في مقابلة صحفية موثوقة",
+      "الصفحة الرسمية للشركة للتحقق من النشاط في 2026"
+    ],
+    "corrections": [
+      {
+        "original_claim": "المنصة التي رقمنت تجارة الزهور من مزارع كينيا إلى متاجر الخليج",
+        "action": "موسع",
+        "replacement": "عنوان تحليلي يوضح انتقال الشركة من السوق الرقمي إلى تشغيل سلسلة التوريد والاستحواذ على موزعين في السعودية."
+      },
+      {
+        "original_claim": "سوق رقمي وعمولات على التوريد اللوجستي",
+        "action": "مصحح ومؤهل",
+        "replacement": "سوق B2B مع عمولات على الخدمات وتسعير شامل وتنفيذ لوجستي وتوزيع محلي؛ معدل العمولة ومزيج الإيراد غير معلنين."
+      },
+      {
+        "original_claim": "ملايين الدولارات إيرادًا شهريًا",
+        "action": "محذوف",
+        "replacement": "لا يوجد إيراد شهري أو سنوي فعلي منشور."
+      },
+      {
+        "original_claim": "تخدم آلاف متاجر الزهور",
+        "action": "مصحح ومفصول",
+        "replacement": "تعلن صفحة الشركة الحالية 2,000+ شركة و500+ مزرعة، دون إثبات أن جميع الشركات عملاء نشطون أو دافعون."
+      },
+      {
+        "original_claim": "سوق الزهور في الشرق الأوسط يتجاوز مليار دولار",
+        "action": "مؤهل زمنيًا",
+        "replacement": "ورد تقدير 1.15 مليار دولار لسوق MENAT في تصريح عام 2023، دون منهجية منشورة أو تحديث أولي حتى أغسطس 2026."
+      },
+      {
+        "original_claim": "آخر جولة Series A",
+        "action": "مصحح",
+        "replacement": "Series A المعلنة كانت 3 ملايين دولار في ديسمبر 2019؛ صرح المؤسس في 2023 بإجمالي 8 ملايين دولار تمويل أسهم منذ الإطلاق."
+      },
+      {
+        "original_claim": "هيمنة سريعة على السوق",
+        "action": "محذوف",
+        "replacement": "استبدلت بوقائع قابلة للقياس: استحواذان، تسع مدن سعودية، وأرقام عملاء وطلبات تاريخية معلنة."
+      },
+      {
+        "original_claim": "هوامش ربح وعمولات على بيع الزهور",
+        "action": "مؤهل",
+        "replacement": "العمولات مثبتة بتصريح المؤسس، أما الهوامش والتصنيف المحاسبي لكل خدمة فغير معلنين."
+      },
+      {
+        "original_claim": "رسوم خدمات التوصيل المبرد كمصدر إيراد منفصل",
+        "action": "مؤهل",
+        "replacement": "الخدمة مثبتة، لكن الصفحات لا تثبت أنها بند إيراد منفصل عن السعر الشامل."
+      },
+      {
+        "original_claim": "القضاء على الوسطاء يزيد العمر الافتراضي للزهرة",
+        "action": "مصحح",
+        "replacement": "تقليل الوسطاء والسلسلة المبردة قد يحسنان زمن الوصول والجودة، لكن لم تُنشر دراسة كمية مستقلة تقيس الزيادة."
+      },
+      {
+        "original_claim": "AWS وPHP وNode.js وCool Chain Tracking",
+        "action": "محذوف جزئيًا",
+        "replacement": "حذفت تقنيات البرمجيات غير المثبتة، وأبقيت قدرات السوق والبوابة والتطبيق والسلسلة المبردة المعلنة."
+      }
+    ],
+    "metric_distinctions": {
+      "revenue": "دخل محاسبي فعلي للشركة؛ غير منشور.",
+      "funding": "رأس مال من المستثمرين؛ 3 ملايين دولار في Series A و8 ملايين دولار إجمالي أسهم صرحت به الإدارة حتى يونيو 2023، وليس إيرادًا.",
+      "valuation": "قيمة الشركة في صفقة ملكية؛ غير معلنة.",
+      "transaction_volume": "القيمة النقدية الإجمالية للطلبات أو GMV؛ غير منشورة.",
+      "orders": "عدد عمليات الشراء؛ 150 ألف+ تاريخيًا حتى يونيو 2023، ولا يكشف قيمة المبيعات.",
+      "customers": "شركات أو حسابات مشتري؛ لا تساوي MAU ولا تثبت النشاط أو الدفع في فترة محددة.",
+      "partner_farms": "جهات توريد في الشبكة؛ لا تساوي أصنافًا أو طلبات أو إيرادًا.",
+      "traffic": "زيارات موقع أو تطبيق؛ غير منشورة رسميًا.",
+      "active_users": "مستخدمون فريدون نشطون في فترة محددة؛ غير منشورين.",
+      "mobile_transaction_share": "نسبة من المعاملات الإلكترونية عبر التطبيق في سوق محدد؛ لا تساوي حصة الإيراد.",
+      "market_size": "تقدير للقطاع وليس أداء الشركة؛ الرقم المتاح تاريخي ومؤهل."
+    },
+    "known_limits": [
+      "فلوراناو شركة خاصة ولا تنشر قوائم مالية مدققة أو ARR أو MRR أو الربحية.",
+      "لا يوجد رقم رسمي للإيراد الشهري أو السنوي أو GMV أو Take Rate.",
+      "قيمة جولة 2017 الأولى غير معلنة في المصدر الأولي المتاح.",
+      "إجمالي التمويل البالغ 8 ملايين دولار ورد كتقرير عن تصريح المؤسس، دون جدول كامل يفسر جميع الجولات.",
+      "قيم الاستحواذ على أعمال Astra Farms وBloomax غير معلنة.",
+      "مقدار الدين وحقوق الملكية المستخدمين في صفقة Bloomax غير معلن.",
+      "أرقام 2,000+ شركة و500+ مزرعة و6 دول صادرة عن صفحة شركة ولم تُراجع مستقلًا.",
+      "الأرقام التشغيلية لعام 2023 تاريخية، ولا يجوز تحويلها إلى أرقام شهرية أو حالية.",
+      "تقدير السوق البالغ 1.15 مليار دولار ونمو السعودية 6% يعودان إلى 2023 ومنهجيتهما غير منشورة.",
+      "لا توجد MAU أو DAU أو زيارات موثقة.",
+      "بعض صفحات الشركة القديمة تعرض نطاقات جغرافية ومنتجات تختلف عن الصفحة الحالية.",
+      "لم تُستخدم تقديرات الإيرادات أو الزيارات من قواعد بيانات تجارية.",
+      "لم يثبت مصدر أولي حديث الحزمة البرمجية الداخلية للشركة."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_at": "2026-08-03T17:50:00+03:00",
+      "parser": "Python json",
+      "checks": [
+        {
+          "name": "required_top_level_keys",
+          "passed": true,
+          "details": {
+            "missing": []
+          }
+        },
+        {
+          "name": "unique_source_ids",
+          "passed": true,
+          "details": {
+            "duplicates": []
+          }
+        },
+        {
+          "name": "unique_claim_ids",
+          "passed": true,
+          "details": {
+            "duplicates": []
+          }
+        },
+        {
+          "name": "evidence_source_references",
+          "passed": true,
+          "details": {
+            "unknown": []
+          }
+        },
+        {
+          "name": "evidence_json_paths",
+          "passed": true,
+          "details": {
+            "invalid": []
+          }
+        },
+        {
+          "name": "unverified_monthly_metrics_not_fabricated",
+          "passed": true,
+          "details": {
+            "monthly_revenue": null,
+            "monthly_traffic": null,
+            "monthly_active_users": null
+          }
+        },
+        {
+          "name": "undisclosed_financial_metrics_remain_null",
+          "passed": true,
+          "details": {
+            "actual_revenue": null,
+            "valuation": null,
+            "transaction_volume": null
+          }
+        },
+        {
+          "name": "funding_not_misclassified_as_revenue",
+          "passed": true,
+          "details": {}
+        },
+        {
+          "name": "customer_metrics_not_misclassified_as_active_users_or_traffic",
+          "passed": true,
+          "details": {}
+        },
+        {
+          "name": "acquisition_values_not_invented",
+          "passed": true,
+          "details": {}
+        },
+        {
+          "name": "unsupported_original_stack_removed_from_active_tools",
+          "passed": true,
+          "details": {
+            "matched": []
+          }
+        },
+        {
+          "name": "no_nan_or_infinity",
+          "passed": true,
+          "details": {
+            "paths": []
+          }
+        }
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "claim_id": "معرف فريد للادعاء",
+    "json_paths": "المواضع داخل JSON التي يعتمد محتواها على الدليل",
+    "claim": "صياغة عربية مختصرة للادعاء",
+    "source_ids": "معرفات المصادر الداعمة",
+    "evidence_type": "historical_fact | metric | company_claim | product_fact | funding | acquisition | legal | calculation | absence_of_disclosure",
+    "confidence": "high | medium | low",
+    "status": "verified | qualified | removed",
+    "notes": "قيود أو طريقة تصنيف أو تمييز ضروري"
+  },
+  "evidence_map": [
+    {
+      "claim_id": "C01",
+      "json_paths": [
+        "company.legal_identity_note",
+        "company.location",
+        "company.founded_year",
+        "company.founded_by"
+      ],
+      "claim": "تأسست فلوراناو عام 2016 على يد شريف مزايك، وتعمل في الإمارات تحت Flora Express Flowers Trading LLC.",
+      "source_ids": [
+        "S1",
+        "S3",
+        "S9",
+        "S10"
+      ],
+      "evidence_type": "historical_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "بعض التغطيات تستخدم 2017 كبداية تشغيل؛ اعتمد تاريخ 2016 المعلن من الشركة."
+    },
+    {
+      "claim_id": "C02",
+      "json_paths": [
+        "company.business_model",
+        "company.products",
+        "overview.solution.text"
+      ],
+      "claim": "تربط فلوراناو المزارع بالمشترين المهنيين وتدير أجزاء من الشحن والجمارك والجودة والتوصيل المبرد.",
+      "source_ids": [
+        "S1",
+        "S3",
+        "S7",
+        "S8",
+        "S12",
+        "S13"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "القدرات التشغيلية مثبتة؛ مزيج الإيراد غير معلن."
+    },
+    {
+      "claim_id": "C03",
+      "json_paths": [
+        "directory_snapshot.current_company_reported_network"
+      ],
+      "claim": "تعلن صفحة الشركة الحالية 2,000+ شركة مشتَرية و500+ مزرعة شريكة ونشاطًا في 6 دول.",
+      "source_ids": [
+        "S2"
+      ],
+      "evidence_type": "company_claim",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "مقاييس تسويقية صادرة عن الشركة دون تعريف تدقيقي للنشاط."
+    },
+    {
+      "claim_id": "C04",
+      "json_paths": [
+        "directory_snapshot.historical_operating_metrics.processed_orders",
+        "directory_snapshot.historical_operating_metrics.customers"
+      ],
+      "claim": "صرح المؤسس في يونيو 2023 بأكثر من 150 ألف طلب و1,200 عميل منذ الإطلاق.",
+      "source_ids": [
+        "S8"
+      ],
+      "evidence_type": "metric",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "أرقام تاريخية من الإدارة وليست بيانات مدققة أو شهرية."
+    },
+    {
+      "claim_id": "C05",
+      "json_paths": [
+        "directory_snapshot.historical_operating_metrics.saudi_platform_buyers_after_bloomax",
+        "company.location"
+      ],
+      "claim": "رفع الاستحواذ على Bloomax الحضور المباشر إلى تسع مدن سعودية وعدد الشركات المشترية في السعودية إلى أكثر من 1,500 وفق بيان 2023.",
+      "source_ids": [
+        "S7"
+      ],
+      "evidence_type": "acquisition",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "عدد الشركات صادر عن بيان الصفقة ولا يساوي مستخدمين نشطين."
+    },
+    {
+      "claim_id": "C06",
+      "json_paths": [
+        "directory_snapshot.historical_operating_metrics.mobile_share_of_online_transactions_in_saudi"
+      ],
+      "claim": "ذكر المؤسس أن التطبيق مثّل أكثر من 80% من المعاملات الإلكترونية في السعودية في يونيو 2023.",
+      "source_ids": [
+        "S8"
+      ],
+      "evidence_type": "company_claim",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "لا تتوافر قيمة المعاملات أو منهجية القياس."
+    },
+    {
+      "claim_id": "C07",
+      "json_paths": [
+        "financials.funding_history.0"
+      ],
+      "claim": "أغلقت فلوراناو جولة تمويل أولى في 2017 من Wamda وJabbar وDash دون إعلان القيمة.",
+      "source_ids": [
+        "S5"
+      ],
+      "evidence_type": "funding",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "بقي المبلغ null."
+    },
+    {
+      "claim_id": "C08",
+      "json_paths": [
+        "financials.funding_history.1"
+      ],
+      "claim": "أغلقت فلوراناو Series A بقيمة 3 ملايين دولار في 15 ديسمبر 2019 بقيادة Wamda وGlobal Ventures.",
+      "source_ids": [
+        "S4"
+      ],
+      "evidence_type": "funding",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "التمويل منفصل عن الإيراد والتقييم."
+    },
+    {
+      "claim_id": "C09",
+      "json_paths": [
+        "financials.total_equity_funding_reported"
+      ],
+      "claim": "صرح المؤسس في 2023 بأن فلوراناو حصلت على 8 ملايين دولار من جولات حقوق الملكية منذ الإطلاق.",
+      "source_ids": [
+        "S8"
+      ],
+      "evidence_type": "funding",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "لا يوجد تفصيل أولي كامل للجولات التي تفسر الفرق عن الجولة المعلنة بقيمة 3 ملايين دولار."
+    },
+    {
+      "claim_id": "C10",
+      "json_paths": [
+        "financials.acquisitions.0",
+        "overview.solution.text"
+      ],
+      "claim": "استحوذت فلوراناو على أعمال توزيع الزهور التابعة لـAstra Farms في السعودية في يونيو 2021 دون إعلان قيمة الصفقة.",
+      "source_ids": [
+        "S6"
+      ],
+      "evidence_type": "acquisition",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "الاستحواذ كان على أعمال التوزيع لا على الشركة كاملة وفق الصياغة المتاحة."
+    },
+    {
+      "claim_id": "C11",
+      "json_paths": [
+        "financials.acquisitions.1",
+        "overview.solution.text"
+      ],
+      "claim": "استحوذت فلوراناو على 100% من Bloomax في يونيو 2023 بتمويل من الدين وحقوق الملكية دون إعلان قيمة الصفقة.",
+      "source_ids": [
+        "S7"
+      ],
+      "evidence_type": "acquisition",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "لم تنشر مكونات التمويل أو شروط الصفقة."
+    },
+    {
+      "claim_id": "C12",
+      "json_paths": [
+        "financials.revenue_streams",
+        "company.business_model"
+      ],
+      "claim": "نموذج الشركة قائم على عمولات الخدمات وسعر شامل للتوريد واللوجستيات، لكن معدل العمولة والتصنيف المحاسبي غير معلنين.",
+      "source_ids": [
+        "S3",
+        "S8",
+        "S12"
+      ],
+      "evidence_type": "company_claim",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "تم الفصل بين وجود الخدمة وبين مساهمتها المالية."
+    },
+    {
+      "claim_id": "C13",
+      "json_paths": [
+        "directory_snapshot.monthly_revenue",
+        "financials.actual_revenue",
+        "financials.valuation",
+        "financials.transaction_volume"
+      ],
+      "claim": "لا تنشر فلوراناو إيرادًا فعليًا أو تقييمًا أو GMV.",
+      "source_ids": [
+        "S1",
+        "S4",
+        "S7",
+        "S8",
+        "S11"
+      ],
+      "evidence_type": "absence_of_disclosure",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "لم تُستخدم تقديرات خارجية."
+    },
+    {
+      "claim_id": "C14",
+      "json_paths": [
+        "directory_snapshot.monthly_traffic",
+        "directory_snapshot.monthly_active_users"
+      ],
+      "claim": "لا توجد زيارات أو MAU/DAU رسمية؛ العملاء والطلبات وتنزيلات التطبيق ليست بدائل لهذه المقاييس.",
+      "source_ids": [
+        "S2",
+        "S8",
+        "S9",
+        "S10"
+      ],
+      "evidence_type": "absence_of_disclosure",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "تم إبقاء المقاييس الشهرية null."
+    },
+    {
+      "claim_id": "C15",
+      "json_paths": [
+        "market_data.market_size",
+        "market_data.growth_rate.historical_company_estimate"
+      ],
+      "claim": "ورد في 2023 تقدير 1.15 مليار دولار لسوق MENAT و6% CAGR للسعودية، دون منهجية عامة أو تحديث حتى أغسطس 2026.",
+      "source_ids": [
+        "S7",
+        "S8"
+      ],
+      "evidence_type": "company_claim",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "تصنيف كبيانات سوق تاريخية لا أداء شركة."
+    },
+    {
+      "claim_id": "C16",
+      "json_paths": [
+        "market_data.growth_rate.company_reported_operating_signals.5"
+      ],
+      "claim": "تظهر الصفحة الرسمية للشركة نشاطًا تسويقيًا وتجاريًا مستمرًا في 2026.",
+      "source_ids": [
+        "S11"
+      ],
+      "evidence_type": "historical_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "يثبت استمرار النشاط العام ولا يثبت أداءً ماليًا."
+    },
+    {
+      "claim_id": "C17",
+      "json_paths": [
+        "company.technology_stack_note",
+        "verification.corrections.10"
+      ],
+      "claim": "لم تثبت المصادر الأولية الحديثة استخدام AWS أو PHP أو Node.js كحزمة داخلية حالية.",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S9",
+        "S10",
+        "S12"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "removed",
+      "notes": "استبدلت التخمينات بقدرات وظيفية موثقة."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title_ar": "نبذة فلوراناو الرسمية",
+      "title_original": "The Story of Floranow",
+      "publisher": "Floranow",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_company_website",
+      "url": "https://aboutus.floranow.com/aboutus",
+      "used_for": [
+        "المؤسس",
+        "المشكلة",
+        "السوق الرقمي",
+        "الشفافية",
+        "السلسلة المبردة"
+      ]
+    },
+    {
+      "id": "S2",
+      "title_ar": "صفحة سوق فلوراناو الحالية",
+      "title_original": "The B2B Floral Marketplace for the GCC",
+      "publisher": "Floranow",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_company_product_page",
+      "url": "https://customer-platform.floranow.com/",
+      "used_for": [
+        "2,000+ شركة",
+        "500+ مزرعة",
+        "6 دول",
+        "التوريد المباشر",
+        "السلسلة المبردة"
+      ]
+    },
+    {
+      "id": "S3",
+      "title_ar": "شروط استخدام وخدمة فلوراناو",
+      "title_original": "Terms and Conditions",
+      "publisher": "Floranow / Flora Express Flowers Trading LLC",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_legal_document",
+      "url": "https://aboutus.floranow.com/terms-and-conditions",
+      "used_for": [
+        "الهوية القانونية",
+        "المدفوعات",
+        "الفواتير",
+        "التوصيل",
+        "تشغيل السوق"
+      ]
+    },
+    {
+      "id": "S4",
+      "title_ar": "إعلان Series A بقيمة 3 ملايين دولار",
+      "title_original": "Floranow announces the close of its $3 million Series A round",
+      "publisher": "Floranow",
+      "date": "2019-12-15",
+      "accessed": "2026-08-03",
+      "type": "primary_funding_announcement",
+      "url": "https://aboutus.floranow.com/floranow-the-online-floral-marketplace-announ",
+      "used_for": [
+        "قيمة الجولة",
+        "المستثمرون",
+        "تاريخ التأسيس",
+        "خطة التوسع"
+      ]
+    },
+    {
+      "id": "S5",
+      "title_ar": "إعلان جولة التمويل الأولى",
+      "title_original": "Floral marketplace Floranow closes its first funding round",
+      "publisher": "Floranow",
+      "date": "2017-12",
+      "accessed": "2026-08-03",
+      "type": "primary_funding_announcement",
+      "url": "https://aboutus.floranow.com/floral-marketplace-floranow-closes-its-first-funding-round",
+      "used_for": [
+        "مستثمرو الجولة الأولى",
+        "غياب قيمة الجولة",
+        "التسعير الشامل",
+        "السلسلة المبردة"
+      ]
+    },
+    {
+      "id": "S6",
+      "title_ar": "استحواذ فلوراناو على أعمال توزيع Astra Farms",
+      "title_original": "FloraNow acquires AstraFarms' flower distribution business",
+      "publisher": "Wamda",
+      "date": "2021-06-15",
+      "accessed": "2026-08-03",
+      "type": "acquisition_press_release",
+      "url": "https://www.wamda.com/en/2021/06/floranow-acquires-astrafarms-flower-distribution-business",
+      "used_for": [
+        "الاستحواذ الأول في السعودية",
+        "نطاق الصفقة",
+        "غياب قيمة الصفقة"
+      ]
+    },
+    {
+      "id": "S7",
+      "title_ar": "استحواذ فلوراناو على Bloomax",
+      "title_original": "Floranow acquires Saudi Arabia's Bloomax",
+      "publisher": "Wamda",
+      "date": "2023-06-05",
+      "accessed": "2026-08-03",
+      "type": "acquisition_press_release",
+      "url": "https://www.wamda.com/en/2023/06/floranow-acquires-saudi-arabia-bloomax",
+      "used_for": [
+        "الاستحواذ على 100%",
+        "الدين وحقوق الملكية",
+        "تسع مدن",
+        "1,500+ شركة سعودية",
+        "150 ألف طلب",
+        "تقديرات السوق"
+      ]
+    },
+    {
+      "id": "S8",
+      "title_ar": "مقابلة المؤسس حول توسع فلوراناو في السعودية",
+      "title_original": "Floranow blossoms in the Saudi market with massive traction",
+      "publisher": "Arab News",
+      "date": "2023-06-10",
+      "accessed": "2026-08-03",
+      "type": "executive_interview_secondary",
+      "url": "https://www.arabnews.com/node/2319421/business-economy",
+      "used_for": [
+        "8 ملايين دولار تمويل أسهم",
+        "150 ألف طلب",
+        "1,200 عميل",
+        "80%+ معاملات عبر التطبيق",
+        "هيكل العمولات",
+        "20+ سوقًا"
+      ]
+    },
+    {
+      "id": "S9",
+      "title_ar": "تطبيق فلوراناو على Google Play",
+      "title_original": "Floranow - Apps on Google Play",
+      "publisher": "Google Play / Floranow",
+      "date": "2024-03-11",
+      "accessed": "2026-08-03",
+      "type": "official_app_store_listing",
+      "url": "https://play.google.com/store/apps/details?id=com.floranow.marketplace",
+      "used_for": [
+        "وجود تطبيق Android",
+        "الهوية القانونية",
+        "وصف السوق والفئات المستهدفة"
+      ]
+    },
+    {
+      "id": "S10",
+      "title_ar": "تطبيق Floranow Marketplace على App Store",
+      "title_original": "Floranow Marketplace",
+      "publisher": "Apple App Store / Flora Express Flowers Trading LLC",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "official_app_store_listing",
+      "url": "https://apps.apple.com/ae/app/floranow-marketplace/id1543664756",
+      "used_for": [
+        "وجود تطبيق iOS",
+        "اسم المطور والكيان القانوني"
+      ]
+    },
+    {
+      "id": "S11",
+      "title_ar": "الصفحة الرسمية لفلوراناو على LinkedIn",
+      "title_original": "Floranow",
+      "publisher": "Floranow on LinkedIn",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_company_social_profile",
+      "url": "https://www.linkedin.com/company/floranow",
+      "used_for": [
+        "استمرار النشاط في 2026",
+        "المقر",
+        "التأسيس",
+        "فئات العملاء",
+        "نطاق الموردين"
+      ]
+    },
+    {
+      "id": "S12",
+      "title_ar": "بوابة موردي فلوراناو",
+      "title_original": "Floranow Vendor Portal",
+      "publisher": "Floranow",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_company_product_page",
+      "url": "https://vp.floranow.com/ar",
+      "used_for": [
+        "إدارة الأصناف والأسعار والطلبات",
+        "المدفوعات",
+        "العمولة",
+        "اللوجستيات المبردة",
+        "لوحات الأداء"
+      ]
+    },
+    {
+      "id": "S13",
+      "title_ar": "الأسئلة الشائعة الرسمية لفلوراناو",
+      "title_original": "Floranow FAQs",
+      "publisher": "Floranow",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_company_website",
+      "url": "https://aboutus.floranow.com/faqs",
+      "used_for": [
+        "شروط التسجيل B2B",
+        "مصادر الزهور",
+        "طرق الدفع",
+        "نطاق العملاء",
+        "جدول الموردين"
+      ]
+    }
   ]
 }

@@ -7,6 +7,20 @@ import { Loader2, Mail, Lock, AlertCircle, ArrowLeft, User as UserIcon, Sparkles
 
 type AuthMode = 'login' | 'register' | 'forgot_password';
 
+const getSafeRedirectPath = () => {
+  if (typeof window === 'undefined') return '/workspace';
+
+  const params = new URLSearchParams(window.location.search);
+  const rawTarget = params.get('next') || params.get('redirect');
+
+  if (!rawTarget) return '/workspace';
+
+  const target = rawTarget.startsWith('/') ? rawTarget : `/${rawTarget}`;
+  if (target.startsWith('//') || target.includes('://')) return '/workspace';
+
+  return target;
+};
+
 export const AuthScreen: React.FC = () => {
   const [mode, setMode] = useState<AuthMode>('login');
   const [name, setName] = useState('');
@@ -62,7 +76,7 @@ export const AuthScreen: React.FC = () => {
           localStorage.removeItem('khotta_remember_me');
         }
 
-        window.location.href = '/workspace';
+        window.location.href = getSafeRedirectPath();
       } else if (mode === 'register') {
         const { error } = await supabase.auth.signUp({
           email,

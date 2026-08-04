@@ -1,146 +1,1502 @@
 {
   "order": 3,
+  "id": "formula-bot",
   "slug": "formula-bot",
-  "name": "Formula Bot",
+  "name": "فورمولا بوت (Formula Bot)",
   "domain": "formulabot.com",
   "website": "https://formulabot.com",
-  "category": "AI SaaS / إنتاجية الجداول",
-  "headline": "أداة ذكاء اصطناعي لإنشاء وشرح معادلات Excel و Google Sheets",
-  "summary": "بدأ Formula Bot كمشروع جانبي سريع يحول التعليمات باللغة الطبيعية إلى معادلات جداول البيانات. توسع من مجرد موقع ويب بسيط إلى إضافات (Add-ons) لـ Excel و Google Sheets ومساعد ذكاء اصطناعي شامل لجداول البيانات.",
-  "directory_snapshot": {
-    "monthly_revenue": "$23K /mo",
-    "monthly_traffic": "غير متاح",
-    "revenue_per_visitor": "غير متاح",
-    "solopreneur_score": "89.8",
-    "idea_label": "بوت مولد لمعادلات إكسل"
-  },
+  "headline": "من معادلة واحدة إلى فريق وكلاء لتحليل المؤسسة: كيف وسّع Formula Bot مشروعًا فرديًا إلى منصة بيانات",
+  "category": "AI Data Analytics, Spreadsheet Productivity & Embedded BI / تحليل البيانات وإنتاجية الجداول",
+  "summary": "منصة ذكاء اصطناعي لتحليل الجداول والملفات وقواعد البيانات ومنصات التسويق بلغة طبيعية. بدأت كمولد وشارح لمعادلات Excel وGoogle Sheets، ثم توسعت إلى تنظيف البيانات والرسوم والتقارير والعروض ولوحات المعلومات وPlaybooks المجدولة وEmbedded Analytics.",
   "company": {
-    "business_model": "SaaS مجاني محدود مع اشتراكات متكررة (Freemium)",
-    "customer_type": "مستخدمو جداول البيانات في المالية والمحاسبة والتحليلات والتسويق والعمليات",
-    "founder": "ديفيد بريسلر",
-    "founder_role": "مؤسس",
-    "founders_count": "1",
-    "employees": "0 (في تقرير مارس 2023)",
-    "started": "يوليو 2022؛ الإطلاق العام حوالي سبتمبر 2022",
-    "location": "أورلاندو، فلوريدا",
-    "funding": "تمويل ذاتي (Bootstrapped)",
-    "profitability": "لم يتم الإفصاح عنها بشكل صريح",
-    "public_revenue_claim": "أشار عنوان المقال إلى 26 ألف دولار شهرياً، بينما عرض الدليل لاحقاً 23 ألف دولار شهرياً"
+    "location": "أورلاندو، فلوريدا، الولايات المتحدة. الكيان القانوني هو Datasetmatch LLC، شركة فلوريدا ذات مسؤولية محدودة تأسست في 9 مايو 2022 وحالتها نشطة. تحدد شروط الخدمة قانون فلوريدا ومحاكم مقاطعة أورانج.",
+    "business_model": "Freemium يعتمد أساسًا على اشتراكات SaaS. تُباع Starter للأفراد، وMax وEnterprise بسعر لكل مقعد، مع AI Actions ورسائل وحوسبة وملفات وحدود مختلفة. تضيف الخطط الأعلى مساحات مشتركة وDashboards وPlaybooks وCustom Agents وEmbeds وWhite Label وDynamic Row-Level Security. قال المؤسس إن 99.9% من الإيراد جاء من الاشتراكات في أحدث مقابلة مالية متاحة.",
+    "customer_type": "أصحاب الأعمال والمحللون وفرق المالية والمبيعات والتسويق والعمليات، ومستخدمو Excel وGoogle Sheets، وفرق البيانات وBI، ومنتجات SaaS التي تريد تضمين محلل بيانات ذكي.",
+    "founder": "David Bressler",
+    "founder_role": "المؤسس والموظف البشري الوحيد المعلن",
+    "founders_count": 1,
+    "employees": "موظف بشري واحد وفق LinkedIn ودراسة Bubble ومقابلة المؤسس. قد تستخدم الشركة متعاقدين ومزودي خدمات غير معلنين.",
+    "started": "بُني MVP في يوليو 2022 وأُطلق علنًا في أواخر أغسطس أو سبتمبر 2022 تحت اسم Excel Formula Bot. توجد مادة Bubble لاحقة تذكر 2023، لكنها تتعارض مع منشورات المؤسس المؤرخة في 2022 وسجل تأسيس الكيان.",
+    "funding": "ممولة ذاتيًا؛ لم يُعثر على جولة أسهم أو دين معلن.",
+    "profitability": "أعلن المؤسس Run Rate قدره 500 ألف دولار ARR لعام 2024 تقريبًا، لكن لا توجد قوائم مدققة أو هامش ربح أو صافي ربح حالي.",
+    "public_revenue_claim": "آخر Run Rate حديث هو 500 ألف دولار ARR لعام 2024 تقريبًا، نُشر في مقابلة مايو 2025. وفي أواخر 2025 قال المؤسس إن المبيعات التراكمية تجاوزت مليون دولار؛ هذا ليس ARR أو MRR."
+  },
+  "directory_snapshot": {
+    "monthly_revenue": "غير معلن حاليًا. يعادل 500 ألف دولار ARR نحو 41.7 ألف دولار شهريًا تاريخيًا لعام 2024، وليس MRR في أغسطس 2026. أرقام 23 و26 ألف دولار في الملف الأصلي تعود إلى لقطات متعارضة من 2023.",
+    "monthly_traffic": "غير معلن. يعرض الموقع أكثر من مليون مستخدم، وذكر المؤسس نحو 1.3 مليون في أواخر 2025. هذه أرقام تراكمية وليست زيارات شهرية أو MAU.",
+    "revenue_per_visitor": "غير قابل للحساب لعدم نشر Traffic وMRR حاليين للفترة نفسها.",
+    "solopreneur_score": "مرتفع نوعيًا؛ المؤسس هو الموظف البشري الوحيد المعلن، مع اعتماد تشغيلي على مزودي النماذج والسحابة والدفع والبريد.",
+    "idea_label": "محلل بيانات ووكيل أتمتة بلغة طبيعية بدأ من معادلات الجداول."
+  },
+  "overview": {
+    "problem": {
+      "text": "يعرف كثير من العاملين النتيجة التي يريدونها من Excel أو قاعدة البيانات، لكنهم لا يعرفون الصيغة أو SQL أو Python أو طريقة بناء تقرير متكرر. وتتوزع البيانات بين ملفات وجداول سحابية ومستودعات ومنصات تسويق.",
+      "impact": "يستهلك نقل البيانات وتنظيفها وكتابة المعادلات وإعادة بناء التقارير وقتًا، وقد ينتج الذكاء الاصطناعي إجابة خاطئة إذا فُهم مخطط البيانات أو تعريف KPI بصورة غير صحيحة."
+    },
+    "solution": {
+      "text": "تتيح Formula Bot رفع الملفات أو ربط مصادر حية ثم طرح أسئلة بلغة طبيعية للحصول على إجابات ورسوم وجداول وملفات Excel وتقارير وعروض. تعرض كود Python وSQL وR، وتضيف Knowledge Bases وAI Dashboards وPlaybooks وCustom Agents وPDF to Excel وWeb Scraping وEmbeds مع Row-Level Security."
+    }
   },
   "problem_and_product": [
-    "مستخدمو جداول البيانات يعرفون النتيجة التي يحتاجونها لكنهم غالباً لا يعرفون البناء الصحيح للمعادلة.",
-    "يحول Formula Bot التعليمات بلغة بسيطة إلى معادلات ويمكنه المساعدة في شرح المعادلات الحالية.",
-    "تم توفير المنتج عبر واجهة ويب وإضافات لبرامج جداول البيانات.",
-    "يشمل الجمهور كلاً من المستخدمين العرضيين لجداول البيانات والمحترفين الذين يعملون مع Excel يومياً."
+    "بدأ المنتج من إنشاء وشرح معادلات Excel وGoogle Sheets.",
+    "توسع إلى تحليل الملفات وقواعد البيانات والمستندات والوسائط.",
+    "ينشئ رسومًا ولوحات وتقارير وجداول وملفات قابلة للتصدير.",
+    "تربط الموصلات البيانات الحية دون تصدير CSV يدوي.",
+    "Playbooks تحفظ التحليل المتكرر وتجدوله.",
+    "Embeddings تضيف محللًا أبيض العلامة داخل تطبيقات العملاء.",
+    "في 2026 أعلنت الشركة معمارية وكلاء متخصصين تعمل بالتوازي تحت وكيل منسق."
   ],
   "origin_story": [
-    "اختبر المؤسس OpenAI في توليد معادلات إكسل وقدر أن النموذج دقيق بنسبة 85% تقريباً بدون تدريب مخصص.",
-    "خلفيته في التحليلات واستخدامه المكثف لـ Excel جعلا المشكلة مألوفة شخصياً بالنسبة له.",
-    "النسخة الأولى تضمنت عمداً حقلاً للتعليمات وزراً للتوليد والمخرجات ووظيفة النسخ فقط.",
-    "بدأ المشروع كتجربة جانبية وأصبح عملاً تجارياً بعد طلب فيروسي غير متوقع."
+    "امتلك David Bressler خبرة طويلة في تحليل البيانات واستخدام Excel.",
+    "اختبر قدرة OpenAI على تحويل التعليمات إلى معادلات وبنى تجربة صغيرة على Bubble.",
+    "أطلق المنتج مجانًا دون تسجيل أو حدود، فانتشر عبر المؤثرين ومجتمعات Excel.",
+    "أدى الاستخدام الفيروسي إلى فاتورة OpenAI مرتفعة، فأضاف المصادقة والحدود والاشتراكات.",
+    "وسّع المنتج لاحقًا من Excel Formula Bot إلى منصة تحليل بيانات عامة."
   ],
   "build_and_launch": [
-    "تم بناء المنتج الأولي بسرعة باستخدام منصة Bubble بدون تطوير برمجي تقليدي.",
-    "ركزت النسخة العامة الأولى على مهمة واحدة: تحويل النص إلى معادلة.",
-    "ولدت حركة المرور الفيروسية نفقات كبيرة لاستخدام الـ API الخاص بالنموذج قبل وجود جدار دفع قوي.",
-    "أضاف المؤسس نظام المصادقة وحدود الاستخدام والتبرعات ثم الاشتراكات لاحقاً.",
-    "أول اشتراك مدفوع ورد أنه وصل في غضون دقائق من تفعيل الخطط المدفوعة."
+    "اختبار MVP أحادي الغرض في يوليو 2022.",
+    "استخدام Bubble لتقليل زمن البناء.",
+    "إطلاق مجاني منخفض الاحتكاك لإثبات الطلب.",
+    "إضافة اشتراكات وحدود استخدام عند ظهور تكلفة متغيرة.",
+    "التوزيع عبر Reddit ومجتمعات Excel وصناع محتوى TikTok وInstagram.",
+    "إطلاق إضافات Excel وGoogle Sheets وامتداد Chrome.",
+    "إضافة موصلات قواعد البيانات ومنصات التحليلات والإعلانات.",
+    "إضافة Dashboards وPlaybooks وAgents وEmbeds للفرق والمؤسسات."
   ],
   "costs_and_operations": [
-    "التكاليف المبكرة الرئيسية كانت استخدام OpenAI API واستضافة Bubble وخدمات برمجية ذات صلة.",
-    "نهج الـ No-code (بدون كود) قلل من وقت الهندسة الأولي وسمح للمؤسس بإطلاق المنتج بسرعة.",
-    "خلق الاستخدام الفيروسي مشكلة في التحكم بالتكاليف، مما جعل تسجيل الدخول وحدود الطلبات ضرورة تشغيلية.",
-    "عمل المؤسس بدون موظفين في الملف المذكور في مارس 2023."
+    "واجهات OpenAI وAnthropic وGoogle.",
+    "بنية AWS وتخزين الملفات واتصالات البيانات.",
+    "بيئات تنفيذ معزولة وقدرات CPU وRAM.",
+    "Bubble وصيانة الإضافات والامتدادات.",
+    "Stripe للفوترة وBrevo للبريد.",
+    "OCR وPDF Extraction وWeb Scraping وEnrichments.",
+    "دعم المستخدمين والمبيعات المؤسسية بواسطة المؤسس.",
+    "أمن الموصلات والتضمينات والصلاحيات والعزل.",
+    "مراجعة جودة الكود والتحليل الناتج."
   ],
   "monetization": [
-    "سمحت الخطة المجانية التاريخية بخمس طلبات معادلات شهرياً.",
-    "تم وصف الخطة غير المحدودة بسعر 6.99 دولاراً شهرياً في دراسة الحالة المذكورة.",
-    "تم تقديم الاشتراكات بعد أن جعلت حركة المرور وتكاليف الـ API الاستخدام المجاني غير المحدود غير مستدام.",
-    "معلومات التسعير تاريخية ويجب التحقق منها مقابل المنتج الرسمي الحالي."
+    "Free: 10 رسائل و25 AI Action شهريًا.",
+    "Starter: 18 دولارًا شهريًا أو 12.58 دولارًا مكافئًا عند الفوترة السنوية.",
+    "Max: 29 دولارًا لكل مقعد شهريًا أو 20.33 دولارًا سنويًا مكافئًا.",
+    "Enterprise: 149 دولارًا لكل مقعد شهريًا أو 99 دولارًا سنويًا مكافئًا.",
+    "رسوم مستخدمي Embeds بعد الحصص المجانية.",
+    "White Label وDynamic RLS وعقود Enterprise.",
+    "AI Actions للمعادلات وPDF وWeb Scraping وEnrichments.",
+    "قيمة أعلى للحوسبة ووقت التنفيذ وأحجام الملفات.",
+    "اشتراكات الفرق ومساحات العمل والفوترة المركزية.",
+    "عمولات Affiliate تاريخية ضئيلة؛ الاشتراكات هي المصدر شبه الكامل."
   ],
   "growth": [
-    "صناع محتوى جداول البيانات على TikTok و Instagram ولدوا موجات كبيرة من الوعي بالمنتج.",
-    "تواصل المؤسس بشكل استباقي مع المؤثرين بدلاً من انتظار الإشارات العضوية.",
-    "تراوحت تكاليف المؤثرين المبلغ عنها بين حوالي 200 إلى 3000 دولار، حسب صانع المحتوى.",
-    "تم وصف أقوى الأسواق الدافعة للإيرادات بأنها الولايات المتحدة والمملكة المتحدة وكندا.",
-    "المناقشات على تويتر حول Excel وجداول البيانات ساعدت في الحفاظ على الاهتمام."
+    "الانتشار الأول جاء من صناع محتوى Excel ومجتمعات الجداول.",
+    "الاسم الوصفي خدم البحث والكلام الشفهي.",
+    "المجانية دون تسجيل رفعت المشاركة ورفعت تكلفة النماذج.",
+    "موجة AI رفعت التسجيلات ثم تباطأ النمو العضوي، فبدأ المؤسس استثمارًا أكثر انتظامًا في التسويق.",
+    "وصل المنتج إلى مليون مستخدم في 2025، ثم ذكر المؤسس 1.3 مليون في أواخر العام.",
+    "التوسع من معادلات إلى Analytics وDashboards وEmbeds رفع تكرار الاستخدام وقيمة العقود."
   ],
-  "tools": [
-    "Bubble",
-    "OpenAI",
-    "Stripe",
-    "LocalizeJS",
-    "Brevo / Sendinblue",
-    "Screen Studio",
-    "YouTube",
-    "Google Workspace",
-    "Upwork",
-    "Facebook",
-    "Instagram",
-    "Twitter / X",
-    "LinkedIn",
-    "Reddit",
-    "TikTok"
-  ],
+  "market_data": {
+    "target_audience": "المحللون وأصحاب الأعمال وفرق التسويق والمبيعات والمالية والعمليات، ومستخدمو Excel وGoogle Sheets، وفرق BI وقواعد البيانات، ووكالات ومنتجات SaaS التي تحتاج Embedded Analytics.",
+    "market_size": "لا تنشر Formula Bot رقم TAM أو عدد مشتركين مدفوعين. المتاح هو 1M+ مستخدم على الموقع ونحو 1.3M بتصريح المؤسس في أواخر 2025؛ هذه ليست MAU أو قيمة سوق.",
+    "growth_rate": "بلغ Run Rate المعلن 500 ألف دولار ARR لعام 2024 تقريبًا. انتقل عدد المستخدمين من مليون في أبريل 2025 إلى 1.3 مليون في أواخر 2025، أي زيادة اسمية تقارب 30% إذا كانت التعريفات متطابقة. لا توجد سلسلة 2026 تسمح بحساب CAGR حديث."
+  },
+  "financials": {
+    "initial_investment": "رأس المال الشخصي وتكلفة MVP غير معلنين. بُني المنتج بتمويل ذاتي، ولم تُعلن جولة أسهم أو دين.",
+    "valuation": "غير معلن. الشركة خاصة وممولة ذاتيًا ولا توجد جولة أو استحواذ أو طرح عام يحدد قيمة الشركة.",
+    "revenue_streams": [
+      "اشتراكات Starter",
+      "اشتراكات Max لكل مقعد",
+      "اشتراكات Enterprise لكل مقعد",
+      "الفوترة السنوية",
+      "رسوم مستخدمي Embeds",
+      "عقود White Label",
+      "حصص وموصلات Enterprise المخصصة",
+      "قيمة AI Actions",
+      "مساحات العمل والأدوار والفوترة المركزية",
+      "Custom Agents وBrand Kits وDashboards وPlaybooks",
+      "عمولات Affiliate تاريخية ضئيلة",
+      "لا يوجد دليل على بيع البيانات أو تدريب النماذج على محتوى المستخدم"
+    ]
+  },
   "revenue_timeline": [
     {
       "date": "2022-09",
-      "amount": "إطلاق مبكر",
-      "type": "علامة فارقة",
-      "note": "تم إطلاق المنتج علناً بعد بدء التطوير في يوليو 2022."
+      "amount": "إطلاق مجاني",
+      "type": "MVP عام",
+      "note": "أُطلق دون تسجيل أو حدود ثم أضيفت المصادقة والاشتراك."
     },
     {
-      "date": "فترة مقابلة 2023",
-      "amount": "إيراد شهري يفوق $14K",
-      "type": "لمحة من المؤسس",
-      "note": "ورد في دراسة حالة Starter Story."
+      "date": "2023-03",
+      "amount": "$23K–$26K / month",
+      "type": "تعارض مصدر ثانوي",
+      "note": "Starter Story وعنوانه والدليل عرضوا قيمًا مختلفة."
     },
     {
-      "date": "2023-03-21",
-      "amount": "$26K /month",
-      "type": "عنوان مقال",
-      "note": "عنوان المقال ولقطات الدليل لا تتوافق تماماً."
+      "date": "2024",
+      "amount": "$500K ARR",
+      "type": "Run Rate منشور لاحقًا",
+      "note": "صرح المؤسس في مايو 2025 أن العمل حقق هذا المستوى في العام السابق."
     },
     {
-      "date": "لقطة الدليل",
-      "amount": "$23K /month",
-      "type": "دليل Starter Story",
-      "note": "معروض في صفحة أفكار الـ micro-SaaS."
+      "date": "2025-05",
+      "amount": ">$42K / month",
+      "type": "تحويل تقريبي للـARR",
+      "note": "وصف Indie Hackers الشركة بأنها تتجاوز 42 ألف دولار شهريًا."
+    },
+    {
+      "date": "2025-11",
+      "amount": ">$1M+ cumulative sales",
+      "type": "مبيعات تراكمية",
+      "note": "تصريح المؤسس في مقابلة Bubble؛ لا يمثل ARR أو MRR."
+    },
+    {
+      "date": "2026-08-03",
+      "amount": "غير معلن",
+      "type": "الوضع الحالي",
+      "note": "لا تنشر الشركة الإيراد الحالي أو المشتركين المدفوعين."
     }
   ],
   "lessons": [
-    "المنتج الأولي (MVP) أحادي الغرض يمكن أن يثبت الطلب قبل بناء منصة واسعة.",
-    "تكاليف الذكاء الاصطناعي القائمة على الاستخدام تتطلب حدوداً مبكرة ومصادقة وضوابط لتحقيق الدخل.",
-    "يمكن لشراكات صناع المحتوى توزيع أداة يمكن توضيح مخرجاتها بصرياً بسهولة وبسرعة."
+    {
+      "title": "المنتج الضيق يمكن أن يكون بوابة لا سقفًا",
+      "description": "مولد المعادلات أثبت الطلب، ثم فتح الطريق إلى تحليل البيانات واللوحات والأتمتة."
+    },
+    {
+      "title": "المجاني بلا حدود يختبر الطلب وقد يختبر قدرتك على تحمل الخسارة",
+      "description": "الفيروسية كشفت السوق لكنها رفعت فاتورة النماذج قبل وجود اقتصاد واضح."
+    },
+    {
+      "title": "تكلفة الذكاء الاصطناعي يجب أن تظهر في وحدة التسعير",
+      "description": "الرسائل وAI Actions والملفات والحوسبة تعكس موارد مختلفة ولا تناسبها حصة موحدة للجميع."
+    },
+    {
+      "title": "الاسم الوصفي قناة اكتساب وقد يصبح قيد تموضع",
+      "description": "Excel Formula Bot ساعد البحث، لكن التوسع احتاج إعادة تعريف المنتج كمنصة تحليل."
+    },
+    {
+      "title": "المؤثر المطابق للمشكلة يتفوق على جمهور واسع",
+      "description": "صناع محتوى Excel عرضوا قيمة المنتج خلال ثوانٍ لجمهور يحتاجها مباشرة."
+    },
+    {
+      "title": "عدد المستخدمين لا يساوي العملاء أو MAU",
+      "description": "1.3 مليون مستخدم لا يكشف النشاط أو التحويل أو الاحتفاظ أو الاشتراكات."
+    },
+    {
+      "title": "ARR والمبيعات التراكمية رقمـان مختلفان",
+      "description": "500 ألف ARR سرعة سنوية، ومليون دولار مبيعات تراكمية تجمع فترات سابقة."
+    },
+    {
+      "title": "المشروع الفردي ليس عملية بلا فريق",
+      "description": "السحابة والنماذج والدفع والبريد والمتاجر تؤدي وظائف كان سينفذها موظفون."
+    },
+    {
+      "title": "عرض الكود يبني الثقة ويكشف مسؤولية المراجعة",
+      "description": "رؤية SQL وPython وR تساعد التحقق، لكنها لا تضمن صحة الافتراضات."
+    },
+    {
+      "title": "المحادثة مع البيانات تحتاج قاموس المؤسسة",
+      "description": "Knowledge Base يمنع تفسير KPI بتعريف عام يخالف تعريف الشركة."
+    },
+    {
+      "title": "الموصل الحي يزيل التصدير ويضيف مخاطر صلاحيات",
+      "description": "OAuth وقواعد البيانات تحتاج أقل صلاحية وعزلًا ومراجعة مستمرة."
+    },
+    {
+      "title": "Playbook يحول المعرفة الفردية إلى عملية",
+      "description": "حفظ خطوات التحليل والجدولة يقلل إعادة العمل ويحتاج سجل تشغيل وتنبيهات فشل."
+    },
+    {
+      "title": "لوحة AI لا تلغي تعريف المؤشر",
+      "description": "الرسوم السريعة لا تصحح KPI أو فترة أو استثناءات خاطئة."
+    },
+    {
+      "title": "التضمين يرفع قيمة العميل ويضاعف مسؤولية العزل",
+      "description": "Dynamic RLS أهم من تخصيص اللون عندما يستخدم العملاء بيانات متعددة المؤسسات."
+    },
+    {
+      "title": "White Label يبيع ملكية التجربة",
+      "description": "المؤسسة تدفع للتحكم بالعلامة والوصول والدعم أمام مستخدميها."
+    },
+    {
+      "title": "عدة وكلاء تفصل المهام ولا تضمن الصحة",
+      "description": "المراجعة والتوازي مفيدان لكن الوكلاء قد يكررون خطأ مشتركًا."
+    },
+    {
+      "title": "عدم التدريب لا يعني عدم المعالجة الخارجية",
+      "description": "المحتوى لا يُستخدم للتدريب وفق السياسة لكنه يمر بمزودي النماذج لتنفيذ الطلب."
+    },
+    {
+      "title": "SOC 2 لدى AWS لا يساوي شهادة Formula Bot",
+      "description": "يجب فصل امتثال مزود البنية عن اعتماد المنتج نفسه."
+    },
+    {
+      "title": "الخطة المجانية تحتاج سياسة احتفاظ مختلفة",
+      "description": "الحذف بعد 60 يومًا يخفض التكلفة والمخاطر، بينما الاحتفاظ المدفوع يزيد القيمة."
+    },
+    {
+      "title": "التقييم لا يُستنتج من ARR أو المستخدمين",
+      "description": "دون جولة أو صفقة لا توجد قيمة شركة قابلة للتحقق."
+    }
   ],
+  "tools": [
+    "Formula Generator وFormula Explainer",
+    "AI Chat لتحليل البيانات",
+    "Excel, CSV, TSV, PDF, DOCX, PPTX وTXT uploads",
+    "تحليل MP3 وWAV وMP4 وMOV وWebM",
+    "Google Sheets Add-on",
+    "Microsoft Excel Add-in",
+    "Chrome Extension داخل Google Sheets",
+    "Google Sheets وGoogle Drive وDropbox وOneDrive وSharePoint connectors",
+    "Tableau Cloud connector",
+    "MySQL, PostgreSQL, MSSQL, Supabase, BigQuery وSnowflake connectors",
+    "Google Analytics 4 وSearch Console وGoogle Ads وMeta Ads connectors",
+    "الرسوم والجداول والتحليل الوصفي",
+    "تصدير Excel وCSV وPDF وPNG وSVG",
+    "AI Dashboards وقوالب وفلاتر وتحديث مجدول",
+    "Playbooks متعددة الخطوات وجدولة يومية وأسبوعية وشهرية",
+    "Knowledge Bases لتعريف المخطط والمؤشرات",
+    "Custom Agents وCustom Brand Kits",
+    "PDF to Excel: Table Extract وAI Extract وOCR وRow QA",
+    "Web Scraping وSentiment وTranslation وText Extraction",
+    "Embeddable Analytics عبر iframe",
+    "White Label وDynamic Row-Level Security",
+    "Shared Workspaces وRoles وCentralized Billing",
+    "Two-Factor Authentication",
+    "إظهار كود Python وSQL وR",
+    "Code Execution من 5 إلى 30 دقيقة حسب الخطة",
+    "موارد تصل إلى 8 CPU و8GB في Enterprise",
+    "عزل تنفيذ لكل محادثة",
+    "TLS وAES-256",
+    "AWS للبنية والتخزين",
+    "OAuth 2.0 وتشفير بيانات اعتماد الموصلات",
+    "Stripe للدفع وBrevo للبريد",
+    "OpenAI وGoogle وAnthropic",
+    "Bubble كمنصة التطبيق الأساسية المعلنة",
+    "حذف الحساب والملفات والمحادثات والموصلات",
+    "حذف بيانات الخطة المجانية غير النشطة بعد 60 يومًا",
+    "نظام متعدد الوكلاء المتخصصين"
+  ],
+  "verification": {
+    "status": "verified_from_formula_bot_legal_docs_product_docs_state_registry_marketplaces_and_direct_founder_interviews",
+    "verified_on": "2026-08-03",
+    "source_policy": "أُعطيت الأولوية لموقع Formula Bot ووثائقه وسجل فلوريدا ومتاجر الإضافات، ثم مقابلات مباشرة مع المؤسس. استُخدم Starter Story فقط لتوضيح تعارض رقم 2023.",
+    "important_notes": [
+      "23 و26 ألف دولار شهريًا رقمان متعارضان من 2023 ولا يمثلان إيراد 2026.",
+      "أحدث Run Rate منشور هو 500 ألف دولار ARR لعام 2024 تقريبًا.",
+      "500 ألف ARR يعادل 41.7 ألف دولار شهريًا حسابيًا لكنه ليس MRR حاليًا.",
+      "مليون دولار مبيعات تراكمية ليست ARR.",
+      "الإيراد الحالي والمشتركون المدفوعون وصافي الربح غير معلنين.",
+      "1M+ و1.3M مستخدم ليست MAU أو Traffic.",
+      "المؤسس هو الموظف البشري الوحيد المعلن، مع احتمال وجود متعاقدين.",
+      "تاريخ 2022 مدعوم بمنشورات المؤسس وسجل الشركة، بينما مادة Bubble ذكرت 2023 بصورة متعارضة.",
+      "الأسعار الحالية 18 و29 و149 دولارًا شهريًا للخطط المدفوعة الأساسية.",
+      "AI Actions تختلف حسب العملية وحجم البيانات.",
+      "OpenAI وGoogle وAnthropic يعالجون الطلبات ولا يُستخدم محتوى العميل للتدريب وفق السياسة.",
+      "SOC 2 المذكورة تخص AWS وليست شهادة مستقلة باسم Formula Bot.",
+      "المنتج لم يعد مجرد مولد معادلات.",
+      "تم الحفاظ على order وslug وdomain وwebsite وإضافة verification وevidence_map."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تفصل ARR عن المبيعات التراكمية، والمستخدمين عن MAU وTraffic، وامتثال AWS عن اعتماد Formula Bot.",
+    "status_values": {
+      "verified": "مدعوم بمصدر رسمي أو سجل حكومي.",
+      "verified_current_pricing_snapshot": "السعر والحدود ظاهرة وقت التحقق وقد تتغير.",
+      "verified_historical_revenue_not_current": "Run Rate تاريخي لا يمثل الإيراد الحالي.",
+      "verified_users_not_mau": "مستخدمون تراكميون لا MAU أو Traffic.",
+      "verified_as_not_publicly_disclosed": "المقياس غير منشور ولم يُقدّر.",
+      "verified_bootstrapped_no_external_round_found": "لا توجد جولة خارجية معلنة.",
+      "verified_as_not_publicly_valued": "لا توجد صفقة تثبت التقييم.",
+      "verified_product_capability": "القدرة موثقة في المنتج أو متجر رسمي.",
+      "verified_direct_founder_statement": "تصريح مؤسس غير مدقق ماليًا.",
+      "verified_source_conflict": "مصادر متعارضة مع اختيار الأكثر مباشرة.",
+      "analytical_inference": "تحليل مهني مبني على الأدلة."
+    },
+    "confidence_scale": {
+      "high": "مصدر رسمي أو حكومي.",
+      "medium_high": "مقابلة مؤسس مباشرة.",
+      "medium": "رقم شركة خاصة يحتاج قيدًا."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "أورلاندو، فلوريدا، الولايات المتحدة. الكيان القانوني هو Datasetmatch LLC، شركة فلوريدا ذات مسؤولية محدودة تأسست في 9 مايو 2022 وحالتها نشطة. تحدد شروط الخدمة قانون فلوريدا ومحاكم مقاطعة أورانج.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "florida_llc_orlando_headquarters_and_governing_law",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يثبت سجل فلوريدا الكيان والعنوان، وتؤكد LinkedIn والشروط أورلاندو وقانون فلوريدا.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-06",
+        "SRC-07",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Datasetmatch LLC Entity Record",
+          "publisher": "Florida Department of State",
+          "source_type": "official_company_registry",
+          "url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=flal-l22000217591-9907885a-fcd6-4b1d-ab27-f4f9ae4dfaa2&directionType=CurrentList&inquirytype=EntityName&listNameOrder=DATASERVICING+P970000682010&searchNameOrder=DATASETMATCH+L220002175910&searchTerm=DATA+SCIENCE+SOFTWARE+ASSOCIATES%2C+LLC",
+          "evidence_type": "direct",
+          "source_locator": "Entity record",
+          "supports": "الكيان والعنوان والتأسيس.",
+          "published_on": "2022-05-09"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Formula Bot Company Profile",
+          "publisher": "Formula Bot via LinkedIn",
+          "source_type": "company_managed_profile",
+          "url": "https://www.linkedin.com/company/formulabot-com",
+          "evidence_type": "direct",
+          "source_locator": "LinkedIn",
+          "supports": "المقر والموظف."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Terms of Service",
+          "publisher": "Formula Bot",
+          "source_type": "official_terms",
+          "url": "https://www.formulabot.com/terms-of-services",
+          "evidence_type": "direct",
+          "source_locator": "Terms",
+          "supports": "القانون والاختصاص.",
+          "published_on": "2026-06-25"
+        }
+      ]
+    },
+    "$.company.business_model": {
+      "field_value": "Freemium يعتمد أساسًا على اشتراكات SaaS. تُباع Starter للأفراد، وMax وEnterprise بسعر لكل مقعد، مع AI Actions ورسائل وحوسبة وملفات وحدود مختلفة. تضيف الخطط الأعلى مساحات مشتركة وDashboards وPlaybooks وCustom Agents وEmbeds وWhite Label وDynamic Row-Level Security. قال المؤسس إن 99.9% من الإيراد جاء من الاشتراكات في أحدث مقابلة مالية متاحة.",
+      "verification_status": "verified_current_pricing_snapshot",
+      "confidence": "high",
+      "claim_type": "freemium_per_seat_usage_and_embedded_subscription_model",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت الأسعار الخطط لكل مقعد وAI Actions وEmbeds، ويشرح المؤسس مزيج الإيراد.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-17",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Formula Bot Home and Pricing",
+          "publisher": "Formula Bot",
+          "source_type": "official_product_page",
+          "url": "https://www.formulabot.com/",
+          "evidence_type": "direct",
+          "source_locator": "Homepage",
+          "supports": "الخطط والميزات."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Pricing Plans",
+          "publisher": "Formula Bot Docs",
+          "source_type": "official_pricing_documentation",
+          "url": "https://www.formulabot.com/docs/billing/pricing-plans",
+          "evidence_type": "direct",
+          "source_locator": "Pricing docs",
+          "supports": "الأسعار والحدود."
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Embeddings Overview",
+          "publisher": "Formula Bot Docs",
+          "source_type": "official_embedding_documentation",
+          "url": "https://www.formulabot.com/docs/embeddings/overview",
+          "evidence_type": "direct",
+          "source_locator": "Embeddings",
+          "supports": "التضمين."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Getting Serious About Marketing After $500K ARR",
+          "publisher": "Indie Hackers",
+          "source_type": "direct_founder_interview",
+          "url": "https://www.indiehackers.com/post/tech/getting-serious-about-marketing-after-hitting-500k-arr-8XGnzrxG1neA3jy37x2D",
+          "evidence_type": "direct",
+          "source_locator": "Founder interview",
+          "supports": "99.9% اشتراكات.",
+          "published_on": "2025-05-17"
+        }
+      ],
+      "limitations": "لا تنشر الشركة المشتركين أو الإيراد حسب الخطة."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن حاليًا. يعادل 500 ألف دولار ARR نحو 41.7 ألف دولار شهريًا تاريخيًا لعام 2024، وليس MRR في أغسطس 2026. أرقام 23 و26 ألف دولار في الملف الأصلي تعود إلى لقطات متعارضة من 2023.",
+      "verification_status": "verified_historical_revenue_not_current",
+      "confidence": "medium_high",
+      "claim_type": "latest_public_arr_without_current_mrr",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "قال المؤسس إن العمل حقق 500 ألف دولار ARR في العام السابق لمقابلة مايو 2025.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-10",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-10",
+          "title": "Getting Serious About Marketing After $500K ARR",
+          "publisher": "Indie Hackers",
+          "source_type": "direct_founder_interview",
+          "url": "https://www.indiehackers.com/post/tech/getting-serious-about-marketing-after-hitting-500k-arr-8XGnzrxG1neA3jy37x2D",
+          "evidence_type": "direct",
+          "source_locator": "Founder interview",
+          "supports": "500K ARR واشتراكات.",
+          "published_on": "2025-05-17"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Founder Interview: 1.3M Users and $1M+ Sales",
+          "publisher": "Bubble / Emmanuel Straschnov via LinkedIn",
+          "source_type": "direct_founder_interview",
+          "url": "https://www.linkedin.com/posts/straschnov_david-bressler-founder-of-formula-bot-used-activity-7398694452434849793-W5OX",
+          "evidence_type": "direct",
+          "source_locator": "Bubble interview",
+          "supports": "1M+ cumulative sales.",
+          "published_on": "2025-11"
+        }
+      ],
+      "limitations": "ARR غير مدقق ويعود لسنة سابقة.",
+      "calculation": {
+        "latest_public_arr_usd": 500000,
+        "reference_year": 2024,
+        "formula": "500000/12",
+        "historical_monthly_run_rate_usd": 41666.67,
+        "current_mrr": "not_publicly_disclosed"
+      }
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن. يعرض الموقع أكثر من مليون مستخدم، وذكر المؤسس نحو 1.3 مليون في أواخر 2025. هذه أرقام تراكمية وليست زيارات شهرية أو MAU.",
+      "verification_status": "verified_users_not_mau",
+      "confidence": "medium_high",
+      "claim_type": "registered_user_scale_without_traffic",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يعرض الموقع 1M+ مستخدم وذكر المؤسس 1.3M دون زيارات أو MAU.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-09",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Formula Bot Home and Pricing",
+          "publisher": "Formula Bot",
+          "source_type": "official_product_page",
+          "url": "https://www.formulabot.com/",
+          "evidence_type": "direct",
+          "source_locator": "Homepage",
+          "supports": "1M+ users."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Founder Interview: 1.3M Users and $1M+ Sales",
+          "publisher": "Bubble / Emmanuel Straschnov via LinkedIn",
+          "source_type": "direct_founder_interview",
+          "url": "https://www.linkedin.com/posts/straschnov_david-bressler-founder-of-formula-bot-used-activity-7398694452434849793-W5OX",
+          "evidence_type": "direct",
+          "source_locator": "Founder interview",
+          "supports": "1.3M users.",
+          "published_on": "2025-11"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "How Formula Bot Built a One-Million-User AI Tool",
+          "publisher": "Bubble",
+          "source_type": "platform_customer_case_study",
+          "url": "https://bubble.io/blog/formula-bot/",
+          "evidence_type": "direct",
+          "source_locator": "Bubble case",
+          "supports": "1M milestone.",
+          "published_on": "2025-04-23"
+        }
+      ],
+      "limitations": "تعريف المستخدم غير مفصل."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "يعرف كثير من العاملين النتيجة التي يريدونها من Excel أو قاعدة البيانات، لكنهم لا يعرفون الصيغة أو SQL أو Python أو طريقة بناء تقرير متكرر. وتتوزع البيانات بين ملفات وجداول سحابية ومستودعات ومنصات تسويق.",
+        "impact": "يستهلك نقل البيانات وتنظيفها وكتابة المعادلات وإعادة بناء التقارير وقتًا، وقد ينتج الذكاء الاصطناعي إجابة خاطئة إذا فُهم مخطط البيانات أو تعريف KPI بصورة غير صحيحة."
+      },
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "formula_data_fragmentation_and_recurring_analysis_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت قصة المؤسس ألم المعادلات، وتوضح الموصلات تعدد المصادر.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-11",
+        "SRC-12",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "Early Founder Interview",
+          "publisher": "Indie Hackers / David Bressler",
+          "source_type": "direct_founder_launch_history",
+          "url": "https://www.indiehackers.com/post/leveraging-no-code-and-influencers-to-hit-3k-mrr-in-2-months-david-bressler-of-excelformulabot-9ffd4bc22b",
+          "evidence_type": "direct",
+          "source_locator": "Early interview",
+          "supports": "MVP وألم المعادلات.",
+          "published_on": "2022"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Formula Generator",
+          "publisher": "Formula Bot Docs",
+          "source_type": "official_tool_documentation",
+          "url": "https://www.formulabot.com/docs/tools/formula-generator",
+          "evidence_type": "direct",
+          "source_locator": "Formula docs",
+          "supports": "إنشاء وشرح المعادلات."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Data Connectors Overview",
+          "publisher": "Formula Bot Docs",
+          "source_type": "official_connector_documentation",
+          "url": "https://www.formulabot.com/docs/connectors/overview",
+          "evidence_type": "direct",
+          "source_locator": "Connectors",
+          "supports": "تعدد المصادر."
+        }
+      ]
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "تتيح Formula Bot رفع الملفات أو ربط مصادر حية ثم طرح أسئلة بلغة طبيعية للحصول على إجابات ورسوم وجداول وملفات Excel وتقارير وعروض. تعرض كود Python وSQL وR، وتضيف Knowledge Bases وAI Dashboards وPlaybooks وCustom Agents وPDF to Excel وWeb Scraping وEmbeds مع Row-Level Security."
+      },
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "natural_language_analysis_dashboards_playbooks_agents_and_embeds",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توثق المصادر التحليل والموصلات واللوحات والأتمتة والتضمين والوكلاء.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-13",
+        "SRC-14",
+        "SRC-15",
+        "SRC-16",
+        "SRC-17",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "What Is Formula Bot?",
+          "publisher": "Formula Bot Docs",
+          "source_type": "official_product_overview",
+          "url": "https://www.formulabot.com/docs/get-started/what-is-formula-bot",
+          "evidence_type": "direct",
+          "source_locator": "Overview",
+          "supports": "التحليل الأساسي."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Data Connectors Overview",
+          "publisher": "Formula Bot Docs",
+          "source_type": "official_connector_documentation",
+          "url": "https://www.formulabot.com/docs/connectors/overview",
+          "evidence_type": "direct",
+          "source_locator": "Connectors",
+          "supports": "الموصلات."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "AI Dashboards",
+          "publisher": "Formula Bot",
+          "source_type": "official_dashboard_product",
+          "url": "https://www.formulabot.com/product/dashboards",
+          "evidence_type": "direct",
+          "source_locator": "Dashboards",
+          "supports": "اللوحات."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Playbooks Overview",
+          "publisher": "Formula Bot Docs",
+          "source_type": "official_automation_documentation",
+          "url": "https://www.formulabot.com/docs/playbooks/overview",
+          "evidence_type": "direct",
+          "source_locator": "Automation",
+          "supports": "Playbooks."
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Embeddings Overview",
+          "publisher": "Formula Bot Docs",
+          "source_type": "official_embedding_documentation",
+          "url": "https://www.formulabot.com/docs/embeddings/overview",
+          "evidence_type": "direct",
+          "source_locator": "Embedding",
+          "supports": "Embeds."
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Formula Bot Multi-Agent Architecture",
+          "publisher": "Formula Bot via LinkedIn",
+          "source_type": "company_managed_product_update",
+          "url": "https://www.linkedin.com/posts/formulabot-com_weve-come-a-long-way-from-being-an-excel-activity-7437527271810236417-74xb",
+          "evidence_type": "direct",
+          "source_locator": "Update",
+          "supports": "الوكلاء.",
+          "published_on": "2026"
+        }
+      ]
+    },
+    "$.market_data.target_audience": {
+      "field_value": "المحللون وأصحاب الأعمال وفرق التسويق والمبيعات والمالية والعمليات، ومستخدمو Excel وGoogle Sheets، وفرق BI وقواعد البيانات، ووكالات ومنتجات SaaS التي تحتاج Embedded Analytics.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "analysts_business_teams_spreadsheet_users_and_saas_customers",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تعرض وثائق المنتج والموصلات والإضافات الشرائح المختلفة.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-13",
+        "SRC-14",
+        "SRC-17",
+        "SRC-23",
+        "SRC-24"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "What Is Formula Bot?",
+          "publisher": "Formula Bot Docs",
+          "source_type": "official_product_overview",
+          "url": "https://www.formulabot.com/docs/get-started/what-is-formula-bot",
+          "evidence_type": "direct",
+          "source_locator": "Overview",
+          "supports": "فرق الأعمال والتحليل."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Data Connectors Overview",
+          "publisher": "Formula Bot Docs",
+          "source_type": "official_connector_documentation",
+          "url": "https://www.formulabot.com/docs/connectors/overview",
+          "evidence_type": "direct",
+          "source_locator": "Connectors",
+          "supports": "فرق البيانات وBI."
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Embeddings Overview",
+          "publisher": "Formula Bot Docs",
+          "source_type": "official_embedding_documentation",
+          "url": "https://www.formulabot.com/docs/embeddings/overview",
+          "evidence_type": "direct",
+          "source_locator": "Embeddings",
+          "supports": "عملاء SaaS."
+        },
+        {
+          "source_id": "SRC-23",
+          "title": "Formula Bot Google Workspace Add-on",
+          "publisher": "Google Workspace Marketplace",
+          "source_type": "official_add_on_listing",
+          "url": "https://workspace.google.com/marketplace/app/formula_bot/1074378600312",
+          "evidence_type": "direct",
+          "source_locator": "Marketplace",
+          "supports": "Google Sheets.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-24",
+          "title": "Formula Bot Excel Add-in",
+          "publisher": "Microsoft AppSource",
+          "source_type": "official_add_in_listing",
+          "url": "https://appsource.microsoft.com/product/office/wa200004935",
+          "evidence_type": "direct",
+          "source_locator": "AppSource",
+          "supports": "Excel."
+        }
+      ]
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر Formula Bot رقم TAM أو عدد مشتركين مدفوعين. المتاح هو 1M+ مستخدم على الموقع ونحو 1.3M بتصريح المؤسس في أواخر 2025؛ هذه ليست MAU أو قيمة سوق.",
+      "verification_status": "verified_users_not_mau",
+      "confidence": "medium",
+      "claim_type": "user_reach_without_tam_or_paid_customers",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد TAM أو مشتركون مدفوعون؛ المتاح 1M+ و1.3M مستخدم.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-01",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Formula Bot Home and Pricing",
+          "publisher": "Formula Bot",
+          "source_type": "official_product_page",
+          "url": "https://www.formulabot.com/",
+          "evidence_type": "direct",
+          "source_locator": "Homepage",
+          "supports": "1M+ users."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Founder Interview: 1.3M Users and $1M+ Sales",
+          "publisher": "Bubble / Emmanuel Straschnov via LinkedIn",
+          "source_type": "direct_founder_interview",
+          "url": "https://www.linkedin.com/posts/straschnov_david-bressler-founder-of-formula-bot-used-activity-7398694452434849793-W5OX",
+          "evidence_type": "direct",
+          "source_locator": "Founder interview",
+          "supports": "1.3M users.",
+          "published_on": "2025-11"
+        }
+      ],
+      "limitations": "المستخدمون ليسوا قيمة سوق."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "بلغ Run Rate المعلن 500 ألف دولار ARR لعام 2024 تقريبًا. انتقل عدد المستخدمين من مليون في أبريل 2025 إلى 1.3 مليون في أواخر 2025، أي زيادة اسمية تقارب 30% إذا كانت التعريفات متطابقة. لا توجد سلسلة 2026 تسمح بحساب CAGR حديث.",
+      "verification_status": "verified_direct_founder_statement",
+      "confidence": "medium",
+      "claim_type": "historical_revenue_and_user_milestones",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تتيح المصادر مقارنة المستخدمين في 2025 وRun Rate 2024 دون سلسلة 2026.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-10",
+        "SRC-08",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-10",
+          "title": "Getting Serious About Marketing After $500K ARR",
+          "publisher": "Indie Hackers",
+          "source_type": "direct_founder_interview",
+          "url": "https://www.indiehackers.com/post/tech/getting-serious-about-marketing-after-hitting-500k-arr-8XGnzrxG1neA3jy37x2D",
+          "evidence_type": "direct",
+          "source_locator": "Interview",
+          "supports": "500K ARR و1M users.",
+          "published_on": "2025-05-17"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "How Formula Bot Built a One-Million-User AI Tool",
+          "publisher": "Bubble",
+          "source_type": "platform_customer_case_study",
+          "url": "https://bubble.io/blog/formula-bot/",
+          "evidence_type": "direct",
+          "source_locator": "Bubble",
+          "supports": "1M milestone.",
+          "published_on": "2025-04-23"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Founder Interview: 1.3M Users and $1M+ Sales",
+          "publisher": "Bubble / Emmanuel Straschnov via LinkedIn",
+          "source_type": "direct_founder_interview",
+          "url": "https://www.linkedin.com/posts/straschnov_david-bressler-founder-of-formula-bot-used-activity-7398694452434849793-W5OX",
+          "evidence_type": "direct",
+          "source_locator": "Founder interview",
+          "supports": "1.3M users.",
+          "published_on": "2025-11"
+        }
+      ],
+      "limitations": "قد تختلف تعريفات المستخدم وتوقيت اللقطات.",
+      "calculation": {
+        "users_april_2025": 1000000,
+        "users_late_2025": 1300000,
+        "nominal_growth_percent": 30,
+        "current_revenue_growth": "not_publicly_disclosed"
+      }
+    },
+    "$.financials.initial_investment": {
+      "field_value": "رأس المال الشخصي وتكلفة MVP غير معلنين. بُني المنتج بتمويل ذاتي، ولم تُعلن جولة أسهم أو دين.",
+      "verification_status": "verified_bootstrapped_no_external_round_found",
+      "confidence": "medium_high",
+      "claim_type": "founder_funded_and_zero_announced_external_capital",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تصف المقابلات المشروع بالممول ذاتيًا ولا توجد جولة معلنة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-08",
+        "SRC-10",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "How Formula Bot Built a One-Million-User AI Tool",
+          "publisher": "Bubble",
+          "source_type": "platform_customer_case_study",
+          "url": "https://bubble.io/blog/formula-bot/",
+          "evidence_type": "direct",
+          "source_locator": "Bubble",
+          "supports": "شركة فردية على Bubble.",
+          "published_on": "2025-04-23"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Getting Serious About Marketing After $500K ARR",
+          "publisher": "Indie Hackers",
+          "source_type": "direct_founder_interview",
+          "url": "https://www.indiehackers.com/post/tech/getting-serious-about-marketing-after-hitting-500k-arr-8XGnzrxG1neA3jy37x2D",
+          "evidence_type": "direct",
+          "source_locator": "Interview",
+          "supports": "قصة bootstrapped.",
+          "published_on": "2025-05-17"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Datasetmatch LLC Entity Record",
+          "publisher": "Florida Department of State",
+          "source_type": "official_company_registry",
+          "url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=flal-l22000217591-9907885a-fcd6-4b1d-ab27-f4f9ae4dfaa2&directionType=CurrentList&inquirytype=EntityName&listNameOrder=DATASERVICING+P970000682010&searchNameOrder=DATASETMATCH+L220002175910&searchTerm=DATA+SCIENCE+SOFTWARE+ASSOCIATES%2C+LLC",
+          "evidence_type": "direct",
+          "source_locator": "Registry",
+          "supports": "LLC خاصة.",
+          "published_on": "2022-05-09"
+        }
+      ],
+      "calculation": {
+        "founder_initial_capital": "not_publicly_disclosed",
+        "announced_external_equity_usd": 0,
+        "announced_external_debt_usd": 0
+      }
+    },
+    "$.financials.valuation": {
+      "field_value": "غير معلن. الشركة خاصة وممولة ذاتيًا ولا توجد جولة أو استحواذ أو طرح عام يحدد قيمة الشركة.",
+      "verification_status": "verified_as_not_publicly_valued",
+      "confidence": "high",
+      "claim_type": "private_company_without_transaction_valuation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا توجد جولة أو استحواذ أو طرح عام يحدد القيمة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-06",
+        "SRC-07",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Datasetmatch LLC Entity Record",
+          "publisher": "Florida Department of State",
+          "source_type": "official_company_registry",
+          "url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=flal-l22000217591-9907885a-fcd6-4b1d-ab27-f4f9ae4dfaa2&directionType=CurrentList&inquirytype=EntityName&listNameOrder=DATASERVICING+P970000682010&searchNameOrder=DATASETMATCH+L220002175910&searchTerm=DATA+SCIENCE+SOFTWARE+ASSOCIATES%2C+LLC",
+          "evidence_type": "direct",
+          "source_locator": "Registry",
+          "supports": "LLC خاصة.",
+          "published_on": "2022-05-09"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Formula Bot Company Profile",
+          "publisher": "Formula Bot via LinkedIn",
+          "source_type": "company_managed_profile",
+          "url": "https://www.linkedin.com/company/formulabot-com",
+          "evidence_type": "direct",
+          "source_locator": "LinkedIn",
+          "supports": "Self-employed profile."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Founder Interview: 1.3M Users and $1M+ Sales",
+          "publisher": "Bubble / Emmanuel Straschnov via LinkedIn",
+          "source_type": "direct_founder_interview",
+          "url": "https://www.linkedin.com/posts/straschnov_david-bressler-founder-of-formula-bot-used-activity-7398694452434849793-W5OX",
+          "evidence_type": "direct",
+          "source_locator": "Founder interview",
+          "supports": "مبيعات ومستخدمون بلا تقييم.",
+          "published_on": "2025-11"
+        }
+      ],
+      "limitations": "لا يجوز تطبيق مضاعف ARR وعرضه كحقيقة."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "اشتراكات Starter",
+        "اشتراكات Max لكل مقعد",
+        "اشتراكات Enterprise لكل مقعد",
+        "الفوترة السنوية",
+        "رسوم مستخدمي Embeds",
+        "عقود White Label",
+        "حصص وموصلات Enterprise المخصصة",
+        "قيمة AI Actions",
+        "مساحات العمل والأدوار والفوترة المركزية",
+        "Custom Agents وBrand Kits وDashboards وPlaybooks",
+        "عمولات Affiliate تاريخية ضئيلة",
+        "لا يوجد دليل على بيع البيانات أو تدريب النماذج على محتوى المستخدم"
+      ],
+      "verification_status": "verified_current_pricing_snapshot",
+      "confidence": "high",
+      "claim_type": "subscription_per_seat_embed_usage_and_enterprise_channels",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت الأسعار والتضمين وAI Actions القنوات الحالية.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-20",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Formula Bot Home and Pricing",
+          "publisher": "Formula Bot",
+          "source_type": "official_product_page",
+          "url": "https://www.formulabot.com/",
+          "evidence_type": "direct",
+          "source_locator": "Homepage",
+          "supports": "الخطط وEmbed fees."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Pricing Plans",
+          "publisher": "Formula Bot Docs",
+          "source_type": "official_pricing_documentation",
+          "url": "https://www.formulabot.com/docs/billing/pricing-plans",
+          "evidence_type": "direct",
+          "source_locator": "Pricing",
+          "supports": "حدود الخطط."
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "AI Actions and Usage",
+          "publisher": "Formula Bot Docs",
+          "source_type": "official_usage_documentation",
+          "url": "https://www.formulabot.com/docs/billing/credits-usage",
+          "evidence_type": "direct",
+          "source_locator": "Usage",
+          "supports": "AI Actions."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Getting Serious About Marketing After $500K ARR",
+          "publisher": "Indie Hackers",
+          "source_type": "direct_founder_interview",
+          "url": "https://www.indiehackers.com/post/tech/getting-serious-about-marketing-after-hitting-500k-arr-8XGnzrxG1neA3jy37x2D",
+          "evidence_type": "direct",
+          "source_locator": "Founder interview",
+          "supports": "الاشتراكات.",
+          "published_on": "2025-05-17"
+        }
+      ],
+      "limitations": "لا تنشر الشركة ARPU أو إيراد Enterprise."
+    },
+    "$.tools": {
+      "field_value": [
+        "Formula Generator وFormula Explainer",
+        "AI Chat لتحليل البيانات",
+        "Excel, CSV, TSV, PDF, DOCX, PPTX وTXT uploads",
+        "تحليل MP3 وWAV وMP4 وMOV وWebM",
+        "Google Sheets Add-on",
+        "Microsoft Excel Add-in",
+        "Chrome Extension داخل Google Sheets",
+        "Google Sheets وGoogle Drive وDropbox وOneDrive وSharePoint connectors",
+        "Tableau Cloud connector",
+        "MySQL, PostgreSQL, MSSQL, Supabase, BigQuery وSnowflake connectors",
+        "Google Analytics 4 وSearch Console وGoogle Ads وMeta Ads connectors",
+        "الرسوم والجداول والتحليل الوصفي",
+        "تصدير Excel وCSV وPDF وPNG وSVG",
+        "AI Dashboards وقوالب وفلاتر وتحديث مجدول",
+        "Playbooks متعددة الخطوات وجدولة يومية وأسبوعية وشهرية",
+        "Knowledge Bases لتعريف المخطط والمؤشرات",
+        "Custom Agents وCustom Brand Kits",
+        "PDF to Excel: Table Extract وAI Extract وOCR وRow QA",
+        "Web Scraping وSentiment وTranslation وText Extraction",
+        "Embeddable Analytics عبر iframe",
+        "White Label وDynamic Row-Level Security",
+        "Shared Workspaces وRoles وCentralized Billing",
+        "Two-Factor Authentication",
+        "إظهار كود Python وSQL وR",
+        "Code Execution من 5 إلى 30 دقيقة حسب الخطة",
+        "موارد تصل إلى 8 CPU و8GB في Enterprise",
+        "عزل تنفيذ لكل محادثة",
+        "TLS وAES-256",
+        "AWS للبنية والتخزين",
+        "OAuth 2.0 وتشفير بيانات اعتماد الموصلات",
+        "Stripe للدفع وBrevo للبريد",
+        "OpenAI وGoogle وAnthropic",
+        "Bubble كمنصة التطبيق الأساسية المعلنة",
+        "حذف الحساب والملفات والمحادثات والموصلات",
+        "حذف بيانات الخطة المجانية غير النشطة بعد 60 يومًا",
+        "نظام متعدد الوكلاء المتخصصين"
+      ],
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "analysis_connectors_automation_embedding_security_and_vendor_stack",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استُبدلت قائمة الأدوات القديمة بقدرات المنتج والمزودين الحاليين.",
+      "source_count": 11,
+      "source_ids": [
+        "SRC-01",
+        "SRC-05",
+        "SRC-14",
+        "SRC-15",
+        "SRC-16",
+        "SRC-17",
+        "SRC-19",
+        "SRC-21",
+        "SRC-22",
+        "SRC-23",
+        "SRC-24"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Formula Bot Home and Pricing",
+          "publisher": "Formula Bot",
+          "source_type": "official_product_page",
+          "url": "https://www.formulabot.com/",
+          "evidence_type": "direct",
+          "source_locator": "Homepage",
+          "supports": "المنصة الحالية."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Security and Privacy Overview",
+          "publisher": "Formula Bot Docs",
+          "source_type": "official_security_documentation",
+          "url": "https://www.formulabot.com/docs/security-privacy/overview",
+          "evidence_type": "direct",
+          "source_locator": "Security",
+          "supports": "الأمن والمزودون."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Data Connectors Overview",
+          "publisher": "Formula Bot Docs",
+          "source_type": "official_connector_documentation",
+          "url": "https://www.formulabot.com/docs/connectors/overview",
+          "evidence_type": "direct",
+          "source_locator": "Docs",
+          "supports": "الموصلات."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "AI Dashboards",
+          "publisher": "Formula Bot",
+          "source_type": "official_dashboard_product",
+          "url": "https://www.formulabot.com/product/dashboards",
+          "evidence_type": "direct",
+          "source_locator": "Product",
+          "supports": "اللوحات."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Playbooks Overview",
+          "publisher": "Formula Bot Docs",
+          "source_type": "official_automation_documentation",
+          "url": "https://www.formulabot.com/docs/playbooks/overview",
+          "evidence_type": "direct",
+          "source_locator": "Docs",
+          "supports": "Playbooks."
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Embeddings Overview",
+          "publisher": "Formula Bot Docs",
+          "source_type": "official_embedding_documentation",
+          "url": "https://www.formulabot.com/docs/embeddings/overview",
+          "evidence_type": "direct",
+          "source_locator": "Docs",
+          "supports": "Embeds."
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "PDF to Excel Converter",
+          "publisher": "Formula Bot Docs",
+          "source_type": "official_document_extraction_tool",
+          "url": "https://www.formulabot.com/docs/tools/pdf-to-excel",
+          "evidence_type": "direct",
+          "source_locator": "Docs",
+          "supports": "PDF."
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Formula Bot Multi-Agent Architecture",
+          "publisher": "Formula Bot via LinkedIn",
+          "source_type": "company_managed_product_update",
+          "url": "https://www.linkedin.com/posts/formulabot-com_weve-come-a-long-way-from-being-an-excel-activity-7437527271810236417-74xb",
+          "evidence_type": "direct",
+          "source_locator": "Update",
+          "supports": "الوكلاء.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Formula Bot Chrome Extension",
+          "publisher": "Chrome Web Store / Datasetmatch LLC",
+          "source_type": "official_extension_listing",
+          "url": "https://chromewebstore.google.com/detail/formula-bot-ai-data-analy/aomcphbghmgemefnpcoeilidpgdoalfn",
+          "evidence_type": "direct",
+          "source_locator": "Store",
+          "supports": "Chrome.",
+          "published_on": "2025-03-09"
+        },
+        {
+          "source_id": "SRC-23",
+          "title": "Formula Bot Google Workspace Add-on",
+          "publisher": "Google Workspace Marketplace",
+          "source_type": "official_add_on_listing",
+          "url": "https://workspace.google.com/marketplace/app/formula_bot/1074378600312",
+          "evidence_type": "direct",
+          "source_locator": "Marketplace",
+          "supports": "Sheets.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-24",
+          "title": "Formula Bot Excel Add-in",
+          "publisher": "Microsoft AppSource",
+          "source_type": "official_add_in_listing",
+          "url": "https://appsource.microsoft.com/product/office/wa200004935",
+          "evidence_type": "direct",
+          "source_locator": "AppSource",
+          "supports": "Excel."
+        }
+      ],
+      "limitations": "لا تكشف المصادر البنية الداخلية الكاملة."
+    }
+  },
   "sources": [
     {
-      "label": "دليل Starter Story",
-      "url": "https://www.starterstory.com/data/micro-saas-ideas",
-      "coverage": "مقاييس الدليل"
+      "id": "SRC-01",
+      "title": "Formula Bot Home and Pricing",
+      "publisher": "Formula Bot",
+      "source_type": "official_product_page",
+      "url": "https://www.formulabot.com/",
+      "supports": [
+        "1M+ users",
+        "current plans and platform features",
+        "dashboards, agents, embeds and security positioning"
+      ]
     },
     {
-      "label": "دراسة حالة Formula Bot",
-      "url": "https://www.starterstory.com/stories/excelformulabot",
-      "coverage": "المؤسس، أصل المنتج، البناء، الإطلاق، التسعير، النمو، الإيرادات"
+      "id": "SRC-02",
+      "title": "Pricing Plans",
+      "publisher": "Formula Bot Docs",
+      "source_type": "official_pricing_documentation",
+      "url": "https://www.formulabot.com/docs/billing/pricing-plans",
+      "supports": [
+        "Free, Starter, Max and Enterprise",
+        "monthly and annual prices",
+        "messages, AI Actions, files and compute limits"
+      ]
     },
     {
-      "label": "الموقع الرسمي",
-      "url": "https://formulabot.com",
-      "coverage": "التحقق من موقع المنتج والتسعير"
+      "id": "SRC-03",
+      "title": "Terms of Service",
+      "publisher": "Formula Bot",
+      "source_type": "official_terms",
+      "published_on": "2026-06-25",
+      "url": "https://www.formulabot.com/terms-of-services",
+      "supports": [
+        "Datasetmatch LLC",
+        "Florida law",
+        "subscriptions and Stripe",
+        "AI provider and retention terms"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Privacy Policy",
+      "publisher": "Formula Bot",
+      "source_type": "official_privacy_policy",
+      "published_on": "2026-01-02",
+      "url": "https://www.formulabot.com/privacy-policy",
+      "supports": [
+        "Datasetmatch LLC",
+        "OpenAI, Google and Anthropic",
+        "uploaded files and connectors",
+        "data rights"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Security and Privacy Overview",
+      "publisher": "Formula Bot Docs",
+      "source_type": "official_security_documentation",
+      "url": "https://www.formulabot.com/docs/security-privacy/overview",
+      "supports": [
+        "AWS",
+        "TLS and AES-256",
+        "row-level security",
+        "Stripe and Brevo",
+        "provider certifications"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Datasetmatch LLC Entity Record",
+      "publisher": "Florida Department of State",
+      "source_type": "official_company_registry",
+      "published_on": "2022-05-09",
+      "url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?aggregateId=flal-l22000217591-9907885a-fcd6-4b1d-ab27-f4f9ae4dfaa2&directionType=CurrentList&inquirytype=EntityName&listNameOrder=DATASERVICING+P970000682010&searchNameOrder=DATASETMATCH+L220002175910&searchTerm=DATA+SCIENCE+SOFTWARE+ASSOCIATES%2C+LLC",
+      "supports": [
+        "active Florida LLC",
+        "Orlando address",
+        "filing date",
+        "David Bressler as authorized member"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Formula Bot Company Profile",
+      "publisher": "Formula Bot via LinkedIn",
+      "source_type": "company_managed_profile",
+      "url": "https://www.linkedin.com/company/formulabot-com",
+      "supports": [
+        "Orlando headquarters",
+        "one employee",
+        "David Bressler",
+        "historical user scale and product updates"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "How Formula Bot Built a One-Million-User AI Tool",
+      "publisher": "Bubble",
+      "source_type": "platform_customer_case_study",
+      "published_on": "2025-04-23",
+      "url": "https://bubble.io/blog/formula-bot/",
+      "supports": [
+        "1M users",
+        "one employee",
+        "Bubble stack",
+        "product evolution"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Founder Interview: 1.3M Users and $1M+ Sales",
+      "publisher": "Bubble / Emmanuel Straschnov via LinkedIn",
+      "source_type": "direct_founder_interview",
+      "published_on": "2025-11",
+      "url": "https://www.linkedin.com/posts/straschnov_david-bressler-founder-of-formula-bot-used-activity-7398694452434849793-W5OX",
+      "supports": [
+        "1.3M users",
+        "more than $1M cumulative sales",
+        "one human employee",
+        "current analytics scope"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Getting Serious About Marketing After $500K ARR",
+      "publisher": "Indie Hackers",
+      "source_type": "direct_founder_interview",
+      "published_on": "2025-05-17",
+      "url": "https://www.indiehackers.com/post/tech/getting-serious-about-marketing-after-hitting-500k-arr-8XGnzrxG1neA3jy37x2D",
+      "supports": [
+        "$500K ARR for prior year",
+        "subscription revenue share",
+        "1M total users",
+        "early affiliate and ad revenue"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Early Founder Interview",
+      "publisher": "Indie Hackers / David Bressler",
+      "source_type": "direct_founder_launch_history",
+      "published_on": "2022",
+      "url": "https://www.indiehackers.com/post/leveraging-no-code-and-influencers-to-hit-3k-mrr-in-2-months-david-bressler-of-excelformulabot-9ffd4bc22b",
+      "supports": [
+        "MVP built in July 2022",
+        "Bubble and OpenAI",
+        "influencer distribution",
+        "early monetization"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Formula Generator",
+      "publisher": "Formula Bot Docs",
+      "source_type": "official_tool_documentation",
+      "url": "https://www.formulabot.com/docs/tools/formula-generator",
+      "supports": [
+        "generate and explain formulas",
+        "Excel and Google Sheets",
+        "AI Action usage"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "What Is Formula Bot?",
+      "publisher": "Formula Bot Docs",
+      "source_type": "official_product_overview",
+      "url": "https://www.formulabot.com/docs/get-started/what-is-formula-bot",
+      "supports": [
+        "files, databases and documents",
+        "natural-language analysis",
+        "models and playbooks",
+        "audiences"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Data Connectors Overview",
+      "publisher": "Formula Bot Docs",
+      "source_type": "official_connector_documentation",
+      "url": "https://www.formulabot.com/docs/connectors/overview",
+      "supports": [
+        "Tableau",
+        "cloud files",
+        "databases and warehouses",
+        "analytics connectors",
+        "natural-language queries"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "AI Dashboards",
+      "publisher": "Formula Bot",
+      "source_type": "official_dashboard_product",
+      "url": "https://www.formulabot.com/product/dashboards",
+      "supports": [
+        "dashboard generation",
+        "templates and filters",
+        "connectors",
+        "scheduled refreshes"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Playbooks Overview",
+      "publisher": "Formula Bot Docs",
+      "source_type": "official_automation_documentation",
+      "url": "https://www.formulabot.com/docs/playbooks/overview",
+      "supports": [
+        "multi-step workflows",
+        "connected data",
+        "run history",
+        "daily, weekly and monthly scheduling"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Embeddings Overview",
+      "publisher": "Formula Bot Docs",
+      "source_type": "official_embedding_documentation",
+      "url": "https://www.formulabot.com/docs/embeddings/overview",
+      "supports": [
+        "iframe analytics chat",
+        "branding",
+        "Max and Enterprise",
+        "shared connectors"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Dynamic User Filtering",
+      "publisher": "Formula Bot Docs",
+      "source_type": "official_row_level_security_documentation",
+      "url": "https://www.formulabot.com/docs/embeddings/dynamic-filtering",
+      "supports": [
+        "dynamic row-level security",
+        "client_id filtering",
+        "Enterprise capability"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "PDF to Excel Converter",
+      "publisher": "Formula Bot Docs",
+      "source_type": "official_document_extraction_tool",
+      "url": "https://www.formulabot.com/docs/tools/pdf-to-excel",
+      "supports": [
+        "Table Extract",
+        "AI Extract",
+        "OCR",
+        "Row QA",
+        "action costs"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "AI Actions and Usage",
+      "publisher": "Formula Bot Docs",
+      "source_type": "official_usage_documentation",
+      "url": "https://www.formulabot.com/docs/billing/credits-usage",
+      "supports": [
+        "AI Action costs",
+        "PDF and web scraping usage",
+        "enrichment costs",
+        "plan allowances"
+      ]
+    },
+    {
+      "id": "SRC-21",
+      "title": "Formula Bot Multi-Agent Architecture",
+      "publisher": "Formula Bot via LinkedIn",
+      "source_type": "company_managed_product_update",
+      "published_on": "2026",
+      "url": "https://www.linkedin.com/posts/formulabot-com_weve-come-a-long-way-from-being-an-excel-activity-7437527271810236417-74xb",
+      "supports": [
+        "multiple specialized agents",
+        "parallel work",
+        "coordinator review",
+        "data engineering and analysis tasks"
+      ]
+    },
+    {
+      "id": "SRC-22",
+      "title": "Formula Bot Chrome Extension",
+      "publisher": "Chrome Web Store / Datasetmatch LLC",
+      "source_type": "official_extension_listing",
+      "published_on": "2025-03-09",
+      "url": "https://chromewebstore.google.com/detail/formula-bot-ai-data-analy/aomcphbghmgemefnpcoeilidpgdoalfn",
+      "supports": [
+        "Google Sheets integration",
+        "Datasetmatch LLC and Orlando address",
+        "extension privacy disclosure"
+      ]
+    },
+    {
+      "id": "SRC-23",
+      "title": "Formula Bot Google Workspace Add-on",
+      "publisher": "Google Workspace Marketplace",
+      "source_type": "official_add_on_listing",
+      "published_on": "2026",
+      "url": "https://workspace.google.com/marketplace/app/formula_bot/1074378600312",
+      "supports": [
+        "Google Sheets add-on",
+        "Datasetmatch LLC",
+        "spreadsheet workflow"
+      ]
+    },
+    {
+      "id": "SRC-24",
+      "title": "Formula Bot Excel Add-in",
+      "publisher": "Microsoft AppSource",
+      "source_type": "official_add_in_listing",
+      "url": "https://appsource.microsoft.com/product/office/wa200004935",
+      "supports": [
+        "Microsoft Excel add-in",
+        "Datasetmatch LLC",
+        "AI in spreadsheets"
+      ]
     }
   ],
   "data_quality": [
-    "تحتوي دراسة الحالة على معلومات مقدمة من المؤسس.",
-    "عنوان المقال والنص والدليل تظهر لمحات إيرادات مختلفة.",
-    "لا يوجد ضمان بأن الأسعار التاريخية أو الزيارات ستبقى كما هي."
+    "فُصل ARR عن المبيعات التراكمية والإيراد الحالي.",
+    "فُصل المستخدمون عن MAU والزيارات والعملاء المدفوعين.",
+    "لم يُفترض تقييم أو Traffic أو هامش ربح.",
+    "وُسم امتثال AWS بأنه يخص المزود.",
+    "لا تتضمن البيانات معلومات خلفية خاصة."
   ],
   "research_metadata": {
-    "researched_on": "2026-07-28",
-    "scope": "المعلومات العامة فقط",
-    "source_method": "Starter Story",
+    "researched_on": "2026-08-03",
+    "scope": "المعلومات العامة الموثوقة حتى أغسطس 2026",
+    "source_method": "مصادر Formula Bot الرسمية وسجل فلوريدا ومتاجر Google وMicrosoft ومقابلات المؤسس",
     "private_backend_data_included": false,
-    "copyright_note": "ملخص مستقل"
-  },
-  "id": "formula-bot"
+    "copyright_note": "تحليل عربي مستقل"
+  }
 }

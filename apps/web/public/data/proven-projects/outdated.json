@@ -1,52 +1,836 @@
 {
   "id": "outdated",
   "slug": "outdated",
-  "name": "أوت ديتد (Outdated)",
-  "headline": "علامة الملابس الأساسية (Basics) التي أثبتت قوة التجارة المباشرة (D2C)",
-  "category": "E-commerce & D2C / التجارة الإلكترونية والموضة",
+  "name": "أوت مود (OUTMUDE، سابقًا Outdated)",
+  "headline": "من أساسيات رقمية إلى هوية قابلة للتمدد: كيف أعادت Outdated صياغة علامتها إلى OUTMUDE دون التخلي عن خطها الأصلي",
+  "category": "Fashion DTC & Local Apparel / الأزياء المحلية والتجارة المباشرة للمستهلك",
   "company": {
-    "location": "القاهرة، مصر (Shark Tank Egypt)",
-    "business_model": "البيع المباشر للمستهلك عبر المتجر الإلكتروني (D2C)"
+    "legal_name": "غير معلن في المصادر العامة التي جرى التحقق منها",
+    "current_brand_name": "OUTMUDE",
+    "former_brand_name": "Outdated",
+    "brand_transition": "النطاق القديم outdatedeg.com يعيد التوجيه إلى outmude.com، ويعرض المتجر عبارة OUTDATED IS NOW OUTMUDE، مع إبقاء Outdated Originals كخط مستقل داخل المحفظة.",
+    "founded": null,
+    "founded_status": "لم يُعثر على تاريخ تأسيس قانوني منشور. احتفلت الشركة بمرور عامين خلال 2025، ما يشير إلى إطلاق تجاري تقريبي في 2023، لكن هذا استدلال وليس تاريخ تسجيل رسميًا.",
+    "founder_and_ceo": "أنتوني عياد (Anthony Ayad)",
+    "location": "الإسكندرية، مصر؛ يذكر الملف الرسمي Green Plaza وWarehouse 31",
+    "business_model": "علامة أزياء رقمية أولًا تبيع مباشرة للمستهلك عبر متجر Shopify، مع محفظة تجمع Outdated Originals وخطوط OUTMUDE للرجال والنساء وإصدارات محدودة. لا يوجد دليل عام كافٍ على مبيعات جملة أو شبكة متاجر فعلية واسعة.",
+    "customer_segments": [
+      "مستهلكو الأزياء اليومية والقطع الأساسية في مصر",
+      "النساء الباحثات عن قطع متعددة الاستخدام ومقاسات وألوان متنوعة",
+      "الرجال عبر خط OUTMUDE MEN",
+      "عملاء يرغبون في إصدارات محدودة وقطع موسمية من الكتان والساتان والتريكو",
+      "متسوقون إقليميون محتملون في الدول الظاهرة داخل محدد البلد، دون توفر أرقام مبيعات حسب الدولة"
+    ],
+    "public_company": false,
+    "sec_status": "غير منطبق؛ العلامة شركة خاصة مصرية ولم يُعثر على كيان أمريكي عام أو إفصاحات SEC مرتبطة بها.",
+    "source_ids": [
+      "SRC-001",
+      "SRC-002",
+      "SRC-006"
+    ]
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الجنيهات",
-    "monthly_traffic": "عشرات الآلاف من الطلبات و 13 مليون جنيه مبيعات في أقل من سنة بعد البرنامج"
+    "as_of": "2026-08-03",
+    "monthly_revenue": null,
+    "monthly_revenue_status": "غير معلن. لا يجوز تحويل ادعاء مبيعات تراكمي متنازع على مدته إلى إيراد شهري.",
+    "annual_revenue": null,
+    "annual_revenue_status": "لا توجد قوائم مالية أو إيرادات سنوية حديثة وموثقة منشورة.",
+    "historical_sales_claim": {
+      "value_egp": 13000000,
+      "metric_type": "مبيعات/إيرادات منسوبة إلى المؤسس في عرض Shark Tank عام 2024",
+      "period": null,
+      "period_dispute": [
+        "اليوم السابع نقلت: أقل من 3 أشهر",
+        "Tick & Talk نقلت: 8 أشهر",
+        "مصادر لاحقة كررت أقل من 8 أشهر"
+      ],
+      "status": "رقم إجمالي متكرر لكن المدة مختلفة بين المصادر؛ غير مدقق ولا يُستخدم لحساب معدل شهري أو سنوي.",
+      "source_ids": [
+        "SRC-008",
+        "SRC-009"
+      ]
+    },
+    "monthly_traffic": null,
+    "monthly_traffic_status": "لا تنشر الشركة زيارات شهرية، ولم تُستخدم تقديرات أدوات الزيارات الخارجية.",
+    "orders": null,
+    "orders_status": "لا يوجد عدد طلبات موثق؛ عبارة عشرات الآلاف من الطلبات في الملف الأصلي حُذفت.",
+    "users": null,
+    "users_status": "لا توجد حسابات مستخدمين نشطين أو عملاء فريدين معلنة.",
+    "transactions_or_gmv": null,
+    "transactions_or_gmv_status": "لا تنشر الشركة قيمة بضائع إجمالية GMV مستقلة عن المبيعات أو عدد المعاملات.",
+    "catalog_snapshot": {
+      "outmude_collection_visible_products": 48,
+      "outdated_originals_visible_products": 139,
+      "status": "عدد عناصر ظاهر في صفحات المجموعات وقت التحقق؛ قد يتغير مع الإضافة والحذف ولا يمثل وحدات مباعة أو مخزونًا فعليًا.",
+      "source_ids": [
+        "SRC-003",
+        "SRC-004"
+      ]
+    },
+    "geographic_storefront": {
+      "countries_visible": [
+        "مصر",
+        "العراق",
+        "لبنان",
+        "السعودية",
+        "الإمارات العربية المتحدة"
+      ],
+      "status": "وجود الدول في محدد المتجر يدل على إعداد واجهة/سوق محتمل، ولا يثبت حجم المبيعات أو توافر الشحن الفعلي في كل دولة.",
+      "source_ids": [
+        "SRC-001",
+        "SRC-005"
+      ]
+    }
   },
   "overview": {
     "problem": {
-      "text": "سوق الملابس يعاني من تقلبات الموضة السريعة (Fast Fashion)، مما يترك للمستهلك خيارات رديئة الجودة، أو علامات تجارية عالمية (Basics) بأسعار مبالغ فيها جداً ولا تناسب القوة الشرائية المحلية.",
-      "impact": "صعوبة العثور على ملابس يومية (بسيطة وعالية الجودة) بأسعار معقولة، وإحباط المستهلك من الخيارات المتاحة."
+      "text": "في سوق الأزياء المحلي، يقع المستهلك بين أساسيات مستوردة مرتفعة السعر، ومنتجات محلية متفاوتة في الخامة والمقاس والثبات، وبين موضة سريعة تفرض على العلامة إنتاج مجموعات كثيرة قصيرة العمر. التحدي ليس مجرد تصميم قميص سادة، بل ضبط الخامة والقصّة والألوان والمقاسات والتوافر والمرتجعات مع إبقاء السعر قابلًا للشراء.",
+      "impact": "فشل أي عنصر من هذه السلسلة يرفع المرتجعات ويجمّد المخزون ويزيد تكلفة اكتساب العميل ويجعل العلامة الرقمية معتمدة على الخصومات والإعلانات بدل تكرار الشراء والثقة في المقاس."
     },
     "solution": {
-      "text": "علامة تجارية محلية تركز حصرياً على (الأساسيات Basics). تي-شيرتات وملابس قطنية عالية الجودة بتصميمات بسيطة لا تتأثر بصيحات الموضة، وبأسعار تنافسية، تباع مباشرة عبر متجر إلكتروني بعيداً عن تكاليف المحلات الفعلية."
+      "text": "بدأت Outdated بوعد واضح حول الأساسيات العصرية المصنوعة محليًا، ثم وسّعت المحفظة وأعادت تسمية العلامة إلى OUTMUDE. البنية الحالية تفصل بين Outdated Originals كأرشيف/خط أساسي واسع، وبين OUTMUDE Originals وخطوط الرجال والنساء والإصدارات المحدودة. هذا يسمح بالحفاظ على المنتجات المتكررة مع اختبار مواد وصيحات جديدة دون حصر الشركة في كلمة Basics.",
+      "delivery_model": [
+        "متجر Shopify مباشر للمستهلك",
+        "مجموعات دائمة نسبيًا من القطع الأساسية",
+        "إصدارات محدودة ومجموعات حسب الخامة والموسم",
+        "سياسة استبدال ومرتجعات تعتمد على الاستلام والفحص في المستودع",
+        "تسويق رقمي ومحتوى وتعاونات وإطلاقات مجتمعية"
+      ],
+      "source_ids": [
+        "SRC-001",
+        "SRC-002",
+        "SRC-003",
+        "SRC-004",
+        "SRC-005",
+        "SRC-011"
+      ]
     }
   },
   "market_data": {
-    "target_audience": "الشباب من الجنسين الباحثين عن ملابس عملية ومريحة (Gen Z & Millennials).",
-    "market_size": "سوق التجزئة والموضة والتجارة الإلكترونية في مصر.",
-    "growth_rate": "نمو صاروخي بعد ظهورهم في شارك تانك وتجاوز المبيعات 13 مليون جنيه مصري في 8 أشهر فقط."
+    "target_audience": "شريحة شابة رقمية تهتم بالراحة وتعدد الاستخدام والهوية المحلية، مع توسع فعلي في الكتالوج من قطع نسائية أساسًا إلى خطوط للرجال والنساء وإصدارات موسمية. لا توجد بيانات ديموغرافية رسمية عن عمر العملاء أو جنسهم أو دخلهم.",
+    "market_size": {
+      "value": null,
+      "status": "لم تُستخدم قيمة عامة لسوق الأزياء المصري بوصفها السوق القابل للخدمة للعلامة، لأن المصادر العامة لا تكشف الجغرافيا الفعلية للمبيعات أو شرائح السعر أو معدل الطلب المتكرر.",
+      "market_definition": "البيع الرقمي المباشر لملابس يومية محلية ومتوسطة السعر في مصر، مع احتمال توسع إقليمي عبر واجهة المتجر."
+    },
+    "growth_rate": {
+      "value": null,
+      "status": "لا تنشر الشركة معدل نمو إيرادات أو عملاء أو طلبات يمكن التحقق منه.",
+      "observable_signals": [
+        "استمرار النشاط بعد عرض Shark Tank حتى أغسطس 2026",
+        "تغيير العلامة والنطاق إلى OUTMUDE بدل إغلاق اسم Outdated بالكامل",
+        "وجود 48 منتجًا في خط OUTMUDE و139 عنصرًا ظاهرًا في Outdated Originals وقت التحقق",
+        "إطلاق خطوط للرجال والنساء ومجموعات كتان وساتان وتريكو وإصدارات محدودة",
+        "ترشيح الشركة ضمن People of Tomorrow في EEA 2025",
+        "ظهور المؤسس في فعاليات Techne 2025"
+      ],
+      "source_ids": [
+        "SRC-001",
+        "SRC-003",
+        "SRC-004",
+        "SRC-006",
+        "SRC-013"
+      ]
+    },
+    "competitive_positioning": "تتموضع العلامة بين الأساسيات المحلية الرقمية والموضة اليومية متوسطة السعر. إعادة التسمية إلى OUTMUDE توسع مساحة العلامة من منتج Evergreen فقط إلى بيت أزياء ناشئ يجمع خطوطًا أساسية وإصدارات محدودة، لكنها تزيد أيضًا عبء إدارة المخزون والهوية.",
+    "current_catalog_positioning": "المتجر الحالي لا يقتصر على التيشيرتات القطنية؛ يعرض فساتين وتنانير وبودي سوت وبناطيل وهوديز وتريكو وكتان وساتان وملابس رجالية ونسائية."
   },
   "financials": {
-    "initial_investment": "استثمار ودعم تسويقي وتوزيعي ضخم من مستثمري (شارك تانك مصر).",
-    "valuation": "عشرات الملايين من الجنيهات (مرشحة للتضاعف السريع)",
+    "founder_starting_capital": {
+      "value": null,
+      "status": "لم يُعثر على رقم موثوق لرأس المال التأسيسي."
+    },
+    "shark_tank_ask": {
+      "date": "2024-11",
+      "amount_egp": 500000,
+      "equity_percent": 5,
+      "implied_post_money_valuation_egp": 10000000,
+      "implied_pre_money_valuation_egp": 9500000,
+      "status": "شروط الطلب موثقة في تغطية متزامنة مع الحلقة؛ التقييم حساب رياضي وليس تقييمًا مستقلًا للسوق.",
+      "source_ids": [
+        "SRC-007",
+        "SRC-008"
+      ]
+    },
+    "shark_tank_deal": {
+      "broadcast_terms_reported": {
+        "amount_egp": 500000,
+        "equity_percent": 5,
+        "implied_post_money_valuation_egp": 10000000,
+        "implied_pre_money_valuation_egp": 9500000
+      },
+      "investor": null,
+      "legal_close_confirmed": false,
+      "status": "ملخص ثانوي يذكر حصول الشركة على الشروط نفسها، لكن لم يُعثر على إعلان رسمي باسم المستثمر أو مستند إغلاق أو إثبات تحويل. لذلك تُسجل كصفقة تلفزيونية مبلّغ عنها لا تمويلًا مغلقًا مؤكدًا.",
+      "source_ids": [
+        "SRC-010"
+      ]
+    },
+    "valuation": {
+      "current_valuation": null,
+      "status": "لا يوجد تقييم حديث معلن حتى أغسطس 2026.",
+      "broadcast_ask_implied_valuation": "10 ملايين جنيه بعد الاستثمار و9.5 ملايين قبله على أساس طلب 500 ألف جنيه مقابل 5%."
+    },
+    "reported_margin_claims": {
+      "value": null,
+      "conflicting_reports": [
+        "اليوم السابع نقلت نسبة أرباح تجاوزت 6%",
+        "Tick & Talk نقلت هامش ربح 64%",
+        "مصادر لاحقة وصفت هامشًا إجماليًا أعلى من 60%"
+      ],
+      "status": "تعارض جوهري قد يكون سببه خطأ نسخ أو اختلاف تعريف الربح والهامش؛ لا يعتمد أي رقم كربحية موثقة.",
+      "source_ids": [
+        "SRC-008",
+        "SRC-009"
+      ]
+    },
     "revenue_streams": [
-      "المبيعات المباشرة عبر المتجر الإلكتروني (Online Sales)",
-      "المبيعات عبر منافذ التوزيع المختارة والشراكات"
-    ]
+      "بيع الملابس مباشرة عبر متجر Shopify",
+      "مبيعات Outdated Originals من القطع الأساسية والمستمرة",
+      "مبيعات OUTMUDE Originals للرجال والنساء",
+      "الإصدارات المحدودة والمجموعات الموسمية حسب الخامة",
+      "رسوم الشحن عند عدم بلوغ حد الشحن المجاني أو في عمليات الاستبدال والمرتجعات وفق السياسة"
+    ],
+    "profitability": {
+      "value": null,
+      "status": "لا توجد قوائم مالية مدققة أو صافي ربح أو هامش إجمالي موحد أو تدفق نقدي منشور."
+    }
   },
   "lessons": [
     {
-      "title": "الأساسيات لا تموت أبداً (Evergreen Products)",
-      "description": "بخلاف الموضة التي تتغير كل موسم وتترك مخزوناً لا يباع (Deadstock)، اختارت Outdated بيع (الأساسيات) ذات الألوان السادة التي يمكن بيعها في الصيف والشتاء وكل عام، مما يقلل مخاطر التخزين لأدنى مستوى."
+      "title": "استخدم الاسم القديم كأصل لا كعبء",
+      "description": "بدل حذف Outdated بالكامل بعد إعادة التسمية، أبقت الشركة Outdated Originals داخل المتجر. هذا يحافظ على معرفة العملاء والروابط والمنتجات القديمة، بينما يتيح لـOUTMUDE بناء مساحة أوسع. إعادة العلامة الناجحة يمكن أن تكون انتقالًا طبقيًا لا قطيعة مفاجئة."
     },
     {
-      "title": "أهمية قوة الشريك (Smart Money)",
-      "description": "لم تكن Outdated تبحث عن المال فقط من (الشاركس)، بل عن (الشريك الاستراتيجي) الذي يمتلك مصانع للنسيج وشبكات توزيع لوجستية ضخمة، وهو ما ساعدهم على مضاعفة إنتاجهم ومبيعاتهم في وقت قياسي."
+      "title": "المنتج الدائم يحتاج نظام ألوان ومقاسات لا شعارًا فقط",
+      "description": "قوة الأساسيات تأتي من القدرة على إعادة الطلب والعثور على القصّة نفسها بألوان متعددة. الاتساع في الألوان والقطع يزيد الجاذبية، لكنه يحول التخطيط للمخزون إلى مسألة مصفوفة SKU معقدة يجب إدارتها بالطلب الفعلي لا بالحدس."
+    },
+    {
+      "title": "لا تجعل نجاح الإعلان يخفي اقتصاديات المرتجعات",
+      "description": "علامة DTC قد تعرض مبيعات مرتفعة بينما تتآكل مساهمتها بعد الإعلانات والشحن والاستبدال والخصومات. غياب البيانات العامة عن صافي الربح ومعدل الإرجاع يعني أن رقم المبيعات وحده لا يثبت جودة اقتصاديات الوحدة."
+    },
+    {
+      "title": "افصل خط الأساسيات عن مختبر الموضة",
+      "description": "وجود Outdated Originals إلى جانب OUTMUDE Limited Drops يسمح نظريًا بتقسيم المحفظة: خط متكرر يولد استقرارًا، وخط تجريبي يختبر الخامات والصيحات. الفصل الواضح يحمي المنتجات الدائمة من تقلبات المجموعة الموسمية."
+    },
+    {
+      "title": "إعداد متجر لدول متعددة ليس توسعًا إقليميًا بعد",
+      "description": "إظهار السعودية والإمارات ولبنان والعراق في محدد الدولة خطوة تقنية مفيدة، لكنها لا تساوي طلبًا فعليًا أو شحنًا منتظمًا أو اقتصاديات ناجحة عبر الحدود. التوسع يثبت بأرقام الطلبات وتكلفة الشحن والمرتجعات لكل سوق."
+    },
+    {
+      "title": "التسمية الجديدة يجب أن تحل قيدًا استراتيجيًا",
+      "description": "اسم Outdated كان جريئًا لكنه قد يحصر القصة أو يخلق التباسًا لغويًا. OUTMUDE يمنح مساحة لبيت أزياء أوسع. قيمة التغيير لا تُقاس بجمال الشعار، بل بقدرته على دعم فئات جديدة دون فقدان الذاكرة والثقة والتحويل العضوي."
     }
   ],
   "tools": [
-    "Shopify / E-commerce Platforms",
-    "Digital Marketing (Meta Ads)",
-    "ERP for Inventory Management"
+    {
+      "name": "Shopify",
+      "use": "تشغيل واجهة التجارة الإلكترونية والكتالوج والحسابات والسلة والدفع",
+      "verification": "موثق من تذييل المتجر ومن دراسة حالة مزود التطوير",
+      "source_ids": [
+        "SRC-001",
+        "SRC-005",
+        "SRC-011"
+      ]
+    },
+    {
+      "name": "بوابات دفع رقمية",
+      "use": "قبول American Express وApple Pay وMastercard وVisa كما تظهر في سياسة المتجر",
+      "verification": "ظهور طرق الدفع لا يكشف حجم المعاملات أو نسبة استخدام كل وسيلة",
+      "source_ids": [
+        "SRC-005"
+      ]
+    },
+    {
+      "name": "نظام كتالوج متعدد المجموعات والخصائص",
+      "use": "تنظيم المنتجات حسب الخط والخامة والفئة والجنس والمقاس واللون",
+      "verification": "مستدل مباشرة من صفحات المجموعات والفلاتر الحالية",
+      "source_ids": [
+        "SRC-003",
+        "SRC-004",
+        "SRC-012"
+      ]
+    },
+    {
+      "name": "تشغيل المستودع والمرتجعات",
+      "use": "استلام المرتجعات وفحص الحالة والملصقات والتغليف ثم إصدار المبلغ عبر InstaPay عند القبول",
+      "verification": "موثق في سياسة الاسترداد؛ اسم نظام ERP الداخلي غير معلن",
+      "source_ids": [
+        "SRC-005"
+      ]
+    },
+    {
+      "name": "التسويق الرقمي والتعاونات",
+      "use": "إطلاق المجموعات والحملات والتعاونات وبناء مجتمع العلامة",
+      "verification": "موثق كقناة نشاط عامة؛ لم تُثبت منصة إعلانات بعينها أو حجم الإنفاق",
+      "source_ids": [
+        "SRC-006",
+        "SRC-013"
+      ]
+    }
+  ],
+  "analysis": {
+    "investment_thesis": "OUTMUDE تمثل نموذج علامة أزياء مصرية رقمية تحاول الانتقال من منتج Basics واضح إلى منصة علامة أوسع. الأصل القيّم هو قاعدة كتالوج كبيرة وتجربة DTC وتشغيل محلي ومرونة إطلاق خطوط جديدة. السؤال الاستثماري الحقيقي ليس هل يمكنها بيع قطعة رائجة، بل هل تستطيع تحويل الكتالوج المتضخم إلى تكرار شراء وربحية بعد الإعلان والمرتجعات والمخزون.",
+    "core_advantages": [
+      "وعد منتج مفهوم حول الراحة والقطع اليومية المحلية",
+      "قناة بيع مباشرة تمنح بيانات أولية عن الطلب والمقاسات والألوان",
+      "استمرار العلامة ونشاط المتجر حتى أغسطس 2026",
+      "محفظة واسعة تسمح بالبيع المتقاطع بين الخطوط والخامات",
+      "إعادة تسمية تحفظ الخط القديم بدل التخلص من رصيده",
+      "قدرة ظاهرة على إطلاق مجموعات وتعاونات بسرعة"
+    ],
+    "weaknesses_and_risks": [
+      "غياب شفافية حديثة حول الإيرادات وصافي الربح والتدفق النقدي",
+      "تضارب أرقام مدة المبيعات وهامش الربح المنقولة عن العرض التلفزيوني",
+      "اتساع الكتالوج يرفع مخاطر المخزون الراكد وتشتت رأس المال العامل",
+      "الاعتماد المحتمل على الإعلانات المدفوعة دون بيانات عن CAC أو نسبة المبيعات العضوية",
+      "لا توجد بيانات عن معدل المرتجعات أو ملاءمة المقاس أو إعادة الشراء",
+      "إعادة التسمية قد تسبب فقدان بحث عضوي أو ارتباكًا إذا لم تُدار الروابط والرسالة جيدًا",
+      "اختيار عدة دول في المتجر قد يسبق الجاهزية اللوجستية الحقيقية عبر الحدود",
+      "العلامة الخاصة معرضة لمخاطر التقليد وضغط الأسعار وتغير تكلفة الخامات والعملات"
+    ],
+    "growth_opportunities": [
+      "تحويل الأساسيات الناجحة إلى برنامج إعادة شراء وألوان موسمية مع توقع طلب أدق",
+      "استخدام بيانات المقاس والمرتجعات لتحسين القصّات وتقليل تكلفة الخدمة",
+      "تطوير عضوية أو مزايا للعملاء المتكررين بدل الخصومات العامة المتكررة",
+      "اختبار سوق إقليمي واحد في كل مرة مع قياس تكلفة التسليم والاسترجاع",
+      "فصل P&L لخط Outdated Originals عن OUTMUDE Limited Drops",
+      "بناء محتوى يشرح الخامة والقصّة والعناية بالقطعة لرفع الثقة وتقليل الإرجاع",
+      "توسيع الرجال أو الأطفال فقط بعد ثبوت الطلب وربحية المخزون لا لمجرد اتساع العلامة"
+    ],
+    "unit_economics_view": "لا يمكن حساب CAC أو LTV أو هامش المساهمة أو دوران المخزون من المصادر العامة. أرقام العرض التلفزيوني لا تكفي لأنها لا تفصل تكلفة البضاعة والإعلانات والشحن والخصومات والمرتجعات والضرائب. يجب الحصول على Cohorts للشراء المتكرر، وهامش مساهمة لكل SKU، وعمر المخزون، ومعدل الإرجاع حسب المقاس.",
+    "rebrand_assessment": "إعادة التسمية تبدو محاولة للانتقال من وعد ضيق حول الأساسيات إلى هوية أزياء أوسع. إبقاء Outdated Originals قرار يحفظ الرصيد، لكن نجاحه يتطلب بنية علامة واضحة: ما الذي يبقى دائمًا، وما الذي يمثل تجربة أو Drop، ولماذا يختار العميل OUTMUDE بدل أي علامة محلية أخرى.",
+    "professional_v2_verdict": "العلامة نشطة وتملك كتالوجًا حقيقيًا ومتجرًا عاملًا وتطورًا ملحوظًا في الهوية، لكن البيانات العامة لا تثبت أن نمو المبيعات المعلن تاريخيًا تحول إلى ربحية مستدامة. ملف الاستثمار الجاد يحتاج كشوف مبيعات حسب الشهر والقناة، مصالحة المرتجعات، مخزونًا بالعمر، إنفاقًا إعلانيًا، تكرار شراء، وهامش مساهمة حسب الخط والسوق."
+  },
+  "verification": {
+    "standard": "Professional V2",
+    "language": "ar",
+    "verified_through": "2026-08-03",
+    "research_scope": "الموقع الرسمي الحالي والقديم، ملفات الشركة الرسمية، صفحات Shark Tank الرسمية، وتغطيات متزامنة أو تحليلية لعرض الشركة",
+    "primary_source_priority": true,
+    "status": "passed_with_disclosed_uncertainties",
+    "major_corrections": [
+      {
+        "original": "الاسم الحالي أوت ديتد (Outdated)",
+        "corrected": "العلامة والمتجر الحاليان يعملان باسم OUTMUDE، بينما بقي Outdated Originals خطًا داخل المتجر.",
+        "source_ids": [
+          "SRC-001",
+          "SRC-003",
+          "SRC-004"
+        ]
+      },
+      {
+        "original": "الموقع القاهرة، مصر",
+        "corrected": "المقر والموقع التشغيلي المعلنان في الملف الرسمي هما الإسكندرية وGreen Plaza / Warehouse 31.",
+        "source_ids": [
+          "SRC-006"
+        ]
+      },
+      {
+        "original": "ملايين الجنيهات إيراد شهري",
+        "corrected": "لا يوجد إيراد شهري منشور. يوجد ادعاء تاريخي بـ13 مليون جنيه مبيعات، لكن مدته متعارضة ولا يجوز تحويله إلى معدل شهري.",
+        "source_ids": [
+          "SRC-008",
+          "SRC-009"
+        ]
+      },
+      {
+        "original": "عشرات الآلاف من الطلبات",
+        "corrected": "لا يوجد عدد طلبات موثق في المصادر العامة التي جرى التحقق منها.",
+        "source_ids": []
+      },
+      {
+        "original": "تجاوزت المبيعات 13 مليون جنيه في 8 أشهر",
+        "corrected": "قيمة 13 مليون متكررة، لكن المدة وردت أقل من 3 أشهر في مصدر و8 أشهر في مصدر آخر؛ تسجل كادعاء متنازع على فترته.",
+        "source_ids": [
+          "SRC-008",
+          "SRC-009"
+        ]
+      },
+      {
+        "original": "استثمار ودعم ضخم من مستثمري Shark Tank",
+        "corrected": "الطلب كان 500 ألف جنيه مقابل 5%. مصدر ثانوي يذكر قبول الشروط نفسها، لكن لم يُعثر على تأكيد رسمي للإغلاق أو اسم المستثمر.",
+        "source_ids": [
+          "SRC-008",
+          "SRC-010"
+        ]
+      },
+      {
+        "original": "التقييم عشرات الملايين من الجنيهات",
+        "corrected": "التقييم الضمني للطلب هو 10 ملايين جنيه بعد الاستثمار و9.5 ملايين قبله؛ لا يوجد تقييم حديث معلن.",
+        "source_ids": [
+          "SRC-008"
+        ]
+      },
+      {
+        "original": "العلامة تركز حصريًا على Basics",
+        "corrected": "الكتالوج الحالي أوسع ويشمل ملابس رجالية ونسائية وفساتين وتنانير وكتانًا وساتانًا وتريكو وإصدارات محدودة.",
+        "source_ids": [
+          "SRC-001",
+          "SRC-003",
+          "SRC-004",
+          "SRC-012"
+        ]
+      },
+      {
+        "original": "Meta Ads وERP أدوات مؤكدة",
+        "corrected": "حُذفت أسماء الأدوات غير المثبتة. Shopify موثق، أما نظام ERP ومنصة الإعلان الداخلية فغير معلنين.",
+        "source_ids": [
+          "SRC-001",
+          "SRC-005",
+          "SRC-011"
+        ]
+      }
+    ],
+    "unresolved_items": [
+      {
+        "issue": "الفترة التي حققت خلالها الشركة 13 مليون جنيه",
+        "details": "التغطيات تقول أقل من 3 أشهر أو 8 أشهر أو أقل من 8 أشهر. لم يُعثر على قائمة مالية أو تسجيل نصي أولي يحسم الاختلاف.",
+        "source_ids": [
+          "SRC-008",
+          "SRC-009"
+        ]
+      },
+      {
+        "issue": "تعريف ونسبة الربح في عرض Shark Tank",
+        "details": "وردت 6% و64% وأكثر من 60%. لا يمكن تحديد ما إذا كان المقصود صافي الربح أو الهامش الإجمالي أو أن هناك خطأ نسخ.",
+        "source_ids": [
+          "SRC-008",
+          "SRC-009"
+        ]
+      },
+      {
+        "issue": "إغلاق صفقة Shark Tank",
+        "details": "يوجد تقرير ثانوي عن 500 ألف مقابل 5%، لكن لا يوجد إعلان رسمي باسم المستثمر أو مستند إغلاق أو تمويل لاحق معلن.",
+        "source_ids": [
+          "SRC-010"
+        ]
+      },
+      {
+        "issue": "تاريخ التأسيس القانوني",
+        "details": "احتفال عامين في 2025 يشير إلى إطلاق تقريبي في 2023، لكنه لا يثبت تاريخ تسجيل الشركة.",
+        "source_ids": [
+          "SRC-006",
+          "SRC-013"
+        ]
+      },
+      {
+        "issue": "التوسع الإقليمي",
+        "details": "ظهور عدة دول في محدد المتجر لا يكشف ما إذا كانت الطلبات والشحن والمرتجعات تعمل فعليًا أو بحجم جوهري في كل سوق.",
+        "source_ids": [
+          "SRC-001",
+          "SRC-005"
+        ]
+      }
+    ],
+    "automated_checks": {
+      "json_parse": "passed",
+      "required_top_level_keys": "passed",
+      "source_reference_integrity": "passed",
+      "valuation_math": "passed",
+      "unsupported_monthly_metrics_removed": "passed",
+      "duplicate_source_ids": "passed",
+      "catalog_counts_are_not_sales": "passed",
+      "brand_transition_recorded": "passed",
+      "errors": [],
+      "canonical_sha256_excluding_checksum_fields": "454cb2a697c7d1e7ca7ed05aeff68bcdd3f7215eb2551229b788181734da4053",
+      "checksum_scope": "Canonical JSON with sorted keys, excluding checksum, checksum-scope, and file-size fields",
+      "file_size_bytes": 45086
+    }
+  },
+  "evidence_map_schema": {
+    "version": "1.0",
+    "description": "خريطة تربط الادعاءات الجوهرية بمصادرها وتوضح طبيعة الدليل والثقة والقيود.",
+    "fields": {
+      "path": "مسار الحقل داخل JSON",
+      "claim": "ملخص الادعاء",
+      "source_ids": "معرفات المصادر الداعمة",
+      "evidence_type": "primary أو company_claim أو secondary أو calculation أو observation",
+      "confidence": "high أو medium أو low",
+      "status": "verified أو qualified أو disputed أو unavailable",
+      "notes": "القيود أو طريقة الحساب"
+    }
+  },
+  "evidence_map": [
+    {
+      "path": "company.current_brand_name",
+      "claim": "العلامة الحالية هي OUTMUDE مع تحويل النطاق القديم إليها",
+      "source_ids": [
+        "SRC-001"
+      ],
+      "evidence_type": "primary",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "المتجر يعلن صراحة OUTDATED IS NOW OUTMUDE"
+    },
+    {
+      "path": "company.former_brand_name",
+      "claim": "Outdated هو الاسم السابق وما زال مستخدمًا في Outdated Originals",
+      "source_ids": [
+        "SRC-001",
+        "SRC-004"
+      ],
+      "evidence_type": "primary",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "path": "company.location",
+      "claim": "المقر المعلن في الإسكندرية",
+      "source_ids": [
+        "SRC-006"
+      ],
+      "evidence_type": "company_claim",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "يعتمد الملف الرسمي على LinkedIn؛ لم يُعثر على سجل تجاري عام"
+    },
+    {
+      "path": "company.founder_and_ceo",
+      "claim": "أنتوني عياد هو المؤسس والرئيس التنفيذي",
+      "source_ids": [
+        "SRC-006",
+        "SRC-008"
+      ],
+      "evidence_type": "company_claim",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "path": "company.business_model",
+      "claim": "النموذج Digital-first DTC عبر Shopify",
+      "source_ids": [
+        "SRC-001",
+        "SRC-006",
+        "SRC-011"
+      ],
+      "evidence_type": "primary",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "path": "directory_snapshot.historical_sales_claim",
+      "claim": "ادعاء تاريخي بـ13 مليون جنيه مبيعات مع تضارب في المدة",
+      "source_ids": [
+        "SRC-008",
+        "SRC-009"
+      ],
+      "evidence_type": "secondary",
+      "confidence": "medium",
+      "status": "disputed",
+      "notes": "القيمة متكررة، لكن فترة القياس مختلفة ولا توجد قوائم مدققة"
+    },
+    {
+      "path": "directory_snapshot.monthly_revenue",
+      "claim": "لا توجد إيرادات شهرية موثقة",
+      "source_ids": [],
+      "evidence_type": "observation",
+      "confidence": "high",
+      "status": "unavailable",
+      "notes": "لم يُعثر على إفصاح رسمي؛ لم يُستخدم اشتقاق من رقم متنازع عليه"
+    },
+    {
+      "path": "directory_snapshot.monthly_traffic",
+      "claim": "لا توجد زيارات شهرية رسمية منشورة",
+      "source_ids": [],
+      "evidence_type": "observation",
+      "confidence": "high",
+      "status": "unavailable",
+      "notes": null
+    },
+    {
+      "path": "directory_snapshot.catalog_snapshot",
+      "claim": "48 منتجًا في OUTMUDE و139 في Outdated Originals وقت التحقق",
+      "source_ids": [
+        "SRC-003",
+        "SRC-004"
+      ],
+      "evidence_type": "primary",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "لقطة كتالوج ديناميكية وليست مخزونًا أو مبيعات"
+    },
+    {
+      "path": "financials.shark_tank_ask",
+      "claim": "طلب 500 ألف جنيه مقابل 5%",
+      "source_ids": [
+        "SRC-007",
+        "SRC-008"
+      ],
+      "evidence_type": "secondary",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "مدعوم بتغطية متزامنة وإدراج رسمي للعرض"
+    },
+    {
+      "path": "financials.shark_tank_ask.implied_post_money_valuation_egp",
+      "claim": "التقييم الضمني بعد الاستثمار 10 ملايين جنيه",
+      "source_ids": [
+        "SRC-008"
+      ],
+      "evidence_type": "calculation",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "500,000 ÷ 0.05"
+    },
+    {
+      "path": "financials.shark_tank_deal",
+      "claim": "صفقة تلفزيونية مبلّغ عنها بـ500 ألف مقابل 5% دون إثبات إغلاق عام",
+      "source_ids": [
+        "SRC-010"
+      ],
+      "evidence_type": "secondary",
+      "confidence": "low",
+      "status": "qualified",
+      "notes": "لا يتوفر اسم المستثمر أو مستند قانوني أو إعلان تمويل"
+    },
+    {
+      "path": "financials.reported_margin_claims",
+      "claim": "نسب الربحية المنقولة متعارضة بين 6% و64% وأكثر من 60%",
+      "source_ids": [
+        "SRC-008",
+        "SRC-009"
+      ],
+      "evidence_type": "secondary",
+      "confidence": "high",
+      "status": "disputed",
+      "notes": "لم يعتمد الملف أي نسبة"
+    },
+    {
+      "path": "market_data.current_catalog_positioning",
+      "claim": "العلامة الحالية أوسع من Basics فقط",
+      "source_ids": [
+        "SRC-001",
+        "SRC-003",
+        "SRC-004",
+        "SRC-012"
+      ],
+      "evidence_type": "primary",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "path": "tools[0]",
+      "claim": "Shopify منصة التجارة الإلكترونية الموثقة",
+      "source_ids": [
+        "SRC-001",
+        "SRC-005",
+        "SRC-011"
+      ],
+      "evidence_type": "primary",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "path": "market_data.growth_rate.observable_signals[4]",
+      "claim": "العلامة مرشحة ضمن People of Tomorrow في EEA 2025",
+      "source_ids": [
+        "SRC-006",
+        "SRC-013"
+      ],
+      "evidence_type": "company_claim",
+      "confidence": "medium",
+      "status": "verified",
+      "notes": "موثق عبر تحديث الشركة وإعادة نشر الجهة المنظمة"
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "title": "OUTDATED IS NOW OUTMUDE | Official Storefront",
+      "publisher": "OUTMUDE",
+      "type": "official_company",
+      "url": "https://outmude.com/",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "إعادة توجيه نطاق Outdated إلى علامة OUTMUDE",
+        "استمرار Outdated Originals كخط منتجات داخل المتجر",
+        "وجود مجموعات للرجال والنساء",
+        "إتاحة محدد دول يشمل مصر والعراق ولبنان والسعودية والإمارات",
+        "استخدام Shopify في واجهة المتجر"
+      ]
+    },
+    {
+      "id": "SRC-002",
+      "title": "About Us",
+      "publisher": "OUTMUDE / Outdated",
+      "type": "official_company",
+      "url": "https://outmude.com/pages/about-us",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "وصف العلامة بأنها مصرية محلية",
+        "التركيز على الملابس المريحة والأساسيات عالية الجودة",
+        "الجمع بين الراحة والأناقة والسعر المقبول"
+      ]
+    },
+    {
+      "id": "SRC-003",
+      "title": "OUTMUDE Collection",
+      "publisher": "OUTMUDE",
+      "type": "official_company",
+      "url": "https://outmude.com/collections/outmude",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "وجود 48 منتجًا ظاهرًا في مجموعة OUTMUDE وقت التحقق",
+        "اتساع التشكيلة إلى القطن والكتان والساتان والتريكو والملابس الرجالية والنسائية",
+        "أسعار التجزئة العامة الظاهرة على المتجر"
+      ]
+    },
+    {
+      "id": "SRC-004",
+      "title": "Outdated Originals Collection",
+      "publisher": "OUTMUDE",
+      "type": "official_company",
+      "url": "https://outmude.com/collections/outdated-originals",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "استمرار الاسم القديم كخط منتجات",
+        "ظهور 139 منتجًا في مجموعة Outdated Originals وقت التحقق",
+        "تنوع المقاسات والألوان والقطع الأساسية"
+      ]
+    },
+    {
+      "id": "SRC-005",
+      "title": "Refund / Exchange Policy",
+      "publisher": "Outdated / OUTMUDE",
+      "type": "official_company",
+      "url": "https://outdatedeg.com/pages/refund-exchange-policy",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "سياسة استبدال خلال 14 يومًا",
+        "وجود مستودع وفحص للمرتجعات",
+        "طرق دفع تشمل البطاقات وApple Pay",
+        "تشغيل متجر Shopify"
+      ]
+    },
+    {
+      "id": "SRC-006",
+      "title": "Outmude Company Profile",
+      "publisher": "LinkedIn",
+      "type": "official_company_profile",
+      "url": "https://eg.linkedin.com/company/outmude-eg",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "المقر الرئيسي المعلن في الإسكندرية",
+        "الموقع التشغيلي في Green Plaza بالإسكندرية",
+        "وصف النشاط بأنه Digital-first وDTC عبر Shopify",
+        "نطاق حجم الشركة المعلن 11–50 موظفًا",
+        "ذكر أنتوني عياد ضمن الفريق وظهوره كمؤسس ورئيس تنفيذي في تحديثات الشركة",
+        "إعلان مرور عامين على العلامة خلال 2025",
+        "ترشيح العلامة لجائزة People of Tomorrow في EEA 2025"
+      ]
+    },
+    {
+      "id": "SRC-007",
+      "title": "Shark Tank Egypt — Fashion Deals",
+      "publisher": "Shark Tank Egypt",
+      "type": "official_program",
+      "url": "https://sharktank-egypt.com/en/deals/fashion",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "إدراج Outdated رسميًا ضمن شركات الموضة في Shark Tank Egypt",
+        "ربط الشركة بفيديو العرض الرسمي"
+      ]
+    },
+    {
+      "id": "SRC-008",
+      "title": "صاحب Outdated يطلب من شارك تانك 500 ألف جنيه مقابل 5% من الشركة",
+      "publisher": "اليوم السابع",
+      "type": "secondary_press",
+      "url": "https://www.youm7.com/story/2024/11/6/%D8%B5%D8%A7%D8%AD%D8%A8-outdated-%D9%8A%D8%B7%D9%84%D8%A8-%D9%85%D9%86-%D8%B4%D8%A7%D8%B1%D9%83-%D8%AA%D8%A7%D9%86%D9%83-500-%D8%A3%D9%84%D9%81-%D8%AC%D9%86%D9%8A%D9%87-%D9%85%D9%82%D8%A7%D8%A8%D9%84/6768636",
+      "published_at": "2024-11-06",
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "طلب 500 ألف جنيه مقابل 5%",
+        "اسم المؤسس أنتوني عياد",
+        "ادعاء مبيعات 13 مليون جنيه",
+        "إطلاق أكثر من 35 منتجًا بأكثر من 19 لونًا وقت العرض",
+        "وجود فريق يتجاوز 15 شخصًا وقت العرض"
+      ],
+      "limitations": "تنقل عن الحلقة رقمًا زمنيًا وهامشًا يختلفان بصورة جوهرية عن مصادر أخرى؛ لا تُعامل الأرقام المتعارضة كقوائم مالية مدققة."
+    },
+    {
+      "id": "SRC-009",
+      "title": "Pitch Analysis: Into Shark Tank’s Outdated",
+      "publisher": "Tick & Talk",
+      "type": "secondary_analysis_official_casting_partner",
+      "url": "https://www.linkedin.com/pulse/pitch-analysis-shark-tanks-outdated-tickandtalk-mysbf",
+      "published_at": "2024-11-11",
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "ظهور Outdated في الموسم الثالث الحلقة الرابعة",
+        "ادعاء 13 مليون جنيه إيرادات خلال 8 أشهر",
+        "ادعاء هامش ربح 64%",
+        "رؤية المؤسس لبناء مجموعة أزياء وجمال أوسع"
+      ],
+      "limitations": "الأرقام من عرض تلفزيوني وغير مدققة، وتتعارض مع تغطية اليوم السابع في المدة ونسبة الربح."
+    },
+    {
+      "id": "SRC-010",
+      "title": "Shark Tank Egypt Season 3 Episode 4",
+      "publisher": "Virtual CFO Consulting",
+      "type": "secondary_recap",
+      "url": "https://vcfoconsulting.com/shark-tank-season-3-ep-4/",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "تلخيص نموذج Outdated المباشر للمستهلك",
+        "تقرير أن العرض التلفزيوني انتهى إلى 500 ألف جنيه مقابل 5%"
+      ],
+      "limitations": "مصدر ثانوي غير رسمي ولا يقدم مستند إغلاق أو اسم المستثمر أو إثبات تحويل الأموال؛ يستخدم فقط لوصف النتيجة التلفزيونية المبلغ عنها."
+    },
+    {
+      "id": "SRC-011",
+      "title": "Outdated — Shopify Development Case",
+      "publisher": "Rudci",
+      "type": "service_provider_case_study",
+      "url": "https://www.rudci.com/",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "بناء متجر Shopify للعلامة",
+        "ربط المتجر بتبسيط العمليات والنمو"
+      ]
+    },
+    {
+      "id": "SRC-012",
+      "title": "OUTDATED IS NOW OUTMUDE — Search Snapshot",
+      "publisher": "OUTMUDE",
+      "type": "official_company",
+      "url": "https://outmude.com/collections",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "تنوع المجموعات والمواد وخطوط الرجال والنساء",
+        "تحول العلامة من أساسيات فقط إلى مجموعات أوسع وإصدارات محدودة"
+      ]
+    },
+    {
+      "id": "SRC-013",
+      "title": "Outdated / Outmude Social and Company Updates",
+      "publisher": "Outmude on LinkedIn",
+      "type": "company_claim",
+      "url": "https://eg.linkedin.com/company/outmude-eg",
+      "published_at": "2025",
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "احتفال الشركة بمرور عامين خلال 2025",
+        "ترشيح EEA 2025",
+        "مشاركة المؤسس في Techne 2025",
+        "استمرار النشاط والحملات خلال 2025"
+      ]
+    }
   ]
 }

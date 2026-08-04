@@ -2,53 +2,1155 @@
   "id": "nymcard",
   "slug": "nymcard",
   "name": "نيم كارد (NymCard)",
-  "headline": "البنية التحتية الخفية التي تمكّن الشركات من إصدار بطاقاتها المصرفية",
-  "category": "Fintech / خدمات بنكية كخدمة (BaaS)",
+  "headline": "من بطاقة واحدة إلى قلب مالي موحّد: كيف بنت NymCard منصة nCore لتشغيل المدفوعات والإقراض",
+  "category": "Payments Infrastructure & Embedded Finance / بنية المدفوعات والتمويل المدمج",
   "company": {
-    "location": "أبوظبي، الإمارات العربية المتحدة (تأسست في لبنان)",
-    "business_model": "SaaS مالي مدفوع لكل عملية أو بطاقة يتم إصدارها (B2B)"
+    "location": "شركة بنية تحتية للمدفوعات تأسست عام 2018 على يد عمر أنسي. يقع مكتبها الإماراتي ومقرها التشغيلي المعلن حاليًا في الطابق 27 من برج السلام، الصفوح 2، مدينة دبي للإعلام، دبي. تعرض الشركة سبعة مكاتب في دبي والرياض والدوحة وبيروت والقاهرة وكراتشي ولندن، وثمانية أسواق حية هي الإمارات والسعودية وقطر ولبنان وباكستان ومصر والعراق والسودان. وجود مكتب في بيروت وخلفية المؤسس اللبنانية لا يثبت أن الشركة تأسست قانونيًا في لبنان؛ لذلك حُذف هذا الوصف من الحقل الأصلي.",
+    "business_model": "منصة بنية تحتية مالية B2B مرخّصة في الإمارات، تبيع للبنوك وشركات التقنية المالية والمؤسسات والاتصالات طبقات معيارية عبر منصة nCore: إصدار ومعالجة البطاقات، حركة الأموال، التسوية، المصالحة، الإقراض المدمج، والجرائم المالية. النموذج تعاقدي ويُرجح أن يجمع رسوم الإعداد والتكامل والترخيص أو المنصة ومعالجة البطاقات والمعاملات والخدمات التشغيلية، لكن NymCard لا تنشر جدول أسعار مؤسسيًا عامًا أو معدلات رسوم البطاقة والمعاملة أو مساهمة كل خط في الإيراد. توضح الشركة أن بنيتها تدعم الإقراض وقراراته وخدمته، لكنها لا تموّل القروض من ميزانيتها."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات",
-    "monthly_traffic": "تُصدر وتدير ملايين البطاقات الافتراضية والصلبة للشركات"
+    "monthly_revenue": "غير معلن. NymCard شركة خاصة ولا تنشر إيرادًا شهريًا أو سنويًا مدققًا أو صافي ربح أو حجم مدفوعات معالجًا. الجولات التمويلية وقيمة التحويلات الممكنة وعدد العملاء وواجهات API ليست إيرادًا. لذلك حُذف تقدير «ملايين الدولارات شهريًا» بدل تحويل مؤشرات التمويل أو الانتشار إلى مبيعات مفترضة.",
+    "monthly_traffic": "غير معلن وغير مناسب كمقياس رئيسي لشركة بنية تحتية B2B. لا تنشر الشركة زيارات الموقع أو المستخدمين النشطين شهريًا أو عدد البطاقات النشطة أو المعاملات الشهرية. أحدث مؤشر تشغيلي معلن وجدناه هو خدمة أكثر من 60 عميلًا عبر 8 أسواق وفق مادة رسمية في يونيو 2026، مقارنة بأكثر من 50 بنكًا وشركة تقنية ومؤسسة في إعلان مارس 2025. هذه أعداد عملاء مؤسسيين بحدود دنيا، وليست بطاقات أو مستخدمين نهائيين أو زيارات."
   },
   "overview": {
     "problem": {
-      "text": "إذا أرادت شركة تقنية أو تطبيق مالي إصدار (بطاقة دفع) لمستخدميها، كان عليها بناء بنية تحتية معقدة، والحصول على تراخيص بنكية، والتفاوض لأشهر مع فيزا أو ماستركارد.",
-      "impact": "تكلفة هائلة وبطء شديد (أشهر أو سنوات) يقتل الابتكار لدى شركات التقنية المالية."
+      "text": "إطلاق بطاقة أو محفظة أو منتج ائتماني أو تحويلات دولية لا يحتاج واجهة مستخدم فقط؛ بل يتطلب معالج إصدار وسجل أرصدة وتسوية ومصالحة ومكافحة احتيال و3D Secure وهوية وامتثال وربطًا بالشبكات والبنوك والجهات التنظيمية. عندما تُشترى هذه الطبقات من موردين منفصلين، تتجزأ بيانات العميل وتتعقد العقود والتكاملات، ويصبح كل منتج جديد مشروع ربط طويلًا بدل إعداد قدرة جديدة على نواة مشتركة.",
+      "impact": "تطول مدة الوصول إلى السوق، وتتكرر تكاليف الاختبار والتشغيل والمراجعة، وتظهر فروقات بين سجل المعالج والسجل المالي وبيانات المخاطر والتسوية. كما يصعب على فرق الامتثال تفسير القرار أو تتبع المعاملة عبر سلسلة موردين، وتزداد مخاطر الفشل عند التوسع إلى دولة أو شبكة أو عملة جديدة."
     },
     "solution": {
-      "text": "منصة (Banking-as-a-Service) توفر واجهة برمجة تطبيقات (API) جاهزة، تمتلك التراخيص والربط المسبق مع ماستركارد، تتيح لأي شركة إصدار بطاقات دفع لعملائها في أسابيع بدلاً من سنوات."
+      "text": "تقدم NymCard منصة nCore كنواة موحدة تملك الشركة محرك المعالجة والتحويل الخاص بها، وتجمع إصدار بطاقات الخصم والائتمان ومسبقة الدفع، وحركة الأموال المحلية والعابرة للحدود، والتسوية متعددة العملات والعملات المستقرة، والمصالحة، وقرارات الإقراض وإنشائه وخدمته، والاحتيال والمخاطر وAML والعقوبات والنزاعات والهوية. تدعم المنصة أكثر من 1,000 واجهة API ونماذج نشر سحابية أو داخل الدولة أو داخل مركز بيانات العميل، وتتكامل مع Visa وMastercard وVisa Direct وMastercard Cross-Border وغيرها. أطلقت الشركة خدمات Open Finance المرخصة في الإمارات عام 2025، وشغّلت تسوية معاملات Visa باستخدام USDC في الخليج عام 2026."
     }
   },
   "market_data": {
-    "target_audience": "شركات التقنية المالية (Fintechs)، منصات العمل الحر، وتطبيقات التوصيل والمحفظة الرقمية.",
-    "market_size": "سوق البنية التحتية المالية وإصدار البطاقات الإقليمي.",
-    "growth_rate": "جمعت أكثر من 22 مليون دولار وحصلت على رخصة Principal من ماستركارد."
+    "target_audience": "البنوك التجارية والرقمية وبنوك التجزئة، شركات التقنية المالية والمحافظ والتحويلات، جهات التمويل وشركات BNPL، شركات الاتصالات والتجزئة والأسواق والمنصات، شركات التأمين والسفر واقتصاد العمل الحر، بيوت الصرافة، المؤسسات الحكومية، والجهات التي تريد إطلاق بطاقات أو مدفوعات أو إقراض أو خدمات مالية مدمجة تحت علامتها.",
+    "market_size": "لا توجد في المصادر العامة المراجعة قيمة مستقلة ومدققة لسوق NymCard القابل للخدمة تجمع معالجة الإصدار والإقراض المدمج وحركة الأموال والتمويل المفتوح عبر أسواقها. للسياق المجاور فقط، أعلن البنك المركزي السعودي أن المدفوعات الإلكترونية بلغت 85% من مدفوعات التجزئة للأفراد في 2025، بإجمالي 14.6 مليار عملية مقابل 12.6 مليارًا في 2024. كما يصف مصرف الإمارات المركزي أنظمة المدفوعات والتسوية كبنية أساسية للأسواق ويشرف على أنظمة التجزئة والقيم الكبيرة. هذه مؤشرات لرقمنة المدفوعات وليست حجم سوق NymCard أو إيرادها أو قيمة المعاملات التي تعالجها.",
+    "growth_rate": "لا تنشر NymCard معدل نمو للإيراد أو المعاملات أو البطاقات. إعلان Series B في مارس 2025 ذكر أكثر من 50 عميلًا والعمل عبر 10+ دول أو أسواق، بينما المادة الرسمية في يونيو 2026 ذكرت أكثر من 60 عميلًا عبر 8 أسواق حية. يشير ذلك إلى توسع معلن في قاعدة العملاء، لكن الأرقام حدود دنيا والتعريف الجغرافي تغير؛ لذلك لا يُحسب منها معدل نمو دقيق. المنصة الحالية تعلن أكثر من 1,000 API ودعم 135+ عملة ووقت تشغيل 99.99%، وهي مؤشرات قدرة تقنية وليست نموًا ماليًا."
   },
   "financials": {
-    "initial_investment": "مدعومة من DisruptAD و Shorooq Partners.",
-    "valuation": "غير معلن",
+    "initial_investment": "أعلنت NymCard في مايو 2021 جولة Series A بقيمة 7.6 ملايين دولار، وقالت إن إجمالي ما جمعته حتى ذلك التاريخ بلغ 12 مليونًا. وفي يونيو 2022 جمعت 22.5 مليون دولار، رافعة إجمالي التمويل المعلن آنذاك إلى أكثر من 35 مليونًا. ثم أغلقت Series B بقيمة 33 مليون دولار في مارس 2025 بقيادة QED Investors. وبجمع الجولة الأخيرة مع الحد الأدنى الرسمي السابق، يكون التمويل التراكمي المعلن أكثر من 68 مليون دولار على الأقل. هذا حد أدنى حسابي وليس رقمًا مدققًا لإجمالي رأس المال، لأن استثمار المشرق غير المعلن وغيرها من الأدوات قد لا تكون مفصلة.",
+    "valuation": "غير معلن. لم تكشف الشركة أو المستثمرون نسبة الملكية المباعة في جولة 33 مليون دولار أو تقييم ما قبل الاستثمار أو بعده، ولذلك لا يمكن اشتقاق تقييم موثوق من حجم الجولة. الاستحواذ على Spotii في 2023 لم يُعلن مقابله المالي أيضًا. لا توجد إيداعات عامة تسمح بتحديث تقييم الشركة حتى أغسطس 2026.",
     "revenue_streams": [
-      "رسوم إعداد وتهيئة للشركات (Setup Fees)",
-      "رسوم على كل بطاقة مُصدرة (Per Card Fee)",
-      "نسبة من كل معاملة مالية تتم عبر البطاقة"
+      "رسوم تعاقدية لإعداد وتنفيذ وترخيص منصة nCore وربطها بأنظمة العميل؛ الأسعار العامة غير منشورة.",
+      "رسوم إصدار ومعالجة وإدارة برامج بطاقات الخصم والائتمان ومسبقة الدفع والبطاقات الافتراضية والرمزية.",
+      "رسوم مرتبطة بحركة الأموال والتحويلات المحلية والعابرة للحدود وFX والتحويلات المالية والوصول إلى شبكات الدفع.",
+      "رسوم بنية الإقراض المدمج: القرار الائتماني والمنشأ والخدمة والتحصيل وإدارة القروض؛ NymCard لا تموّل القرض نفسه.",
+      "رسوم التسوية والمصالحة وإدارة السجلات متعددة العملات، بما فيها قدرات التسوية باستخدام العملات المستقرة.",
+      "رسوم قدرات الجرائم المالية والاحتيال والمخاطر و3D Secure وAML والعقوبات والهوية والنزاعات.",
+      "رسوم خدمات Open Finance لمعلومات الحساب وبدء الدفع والتخصيب والتحليلات وفق العقود التنظيمية والتجارية.",
+      "خدمات تشغيل البرامج والدعم والامتثال والنشر السحابي أو داخل الدولة أو داخل مقر العميل؛ لا تُفصح الشركة عن هوامشها أو مساهمتها."
     ]
   },
   "lessons": [
     {
-      "title": "أن تكون مصنع الأدوات",
-      "description": "بدلاً من منافسة تطبيقات الدفع لجمع المستهلكين، اختارت NymCard بناء التكنولوجيا الأساسية التي تعتمد عليها جميع تطبيقات الدفع، لتصبح شريكاً للجميع بدلاً من منافس لهم."
+      "title": "العميل يشتري تقليل سلسلة الموردين لا عدد واجهات API",
+      "description": "ألف واجهة لا تصبح ميزة وحدها. القيمة تظهر عندما تحل محل عدة معالجات ومحركات مخاطر وأنظمة تسوية ومصالحة بعقد ونواة بيانات واحدة، فتقل نقاط الفشل ويصبح إطلاق المنتج التالي إعدادًا فوق منصة قائمة."
     },
     {
-      "title": "السرعة كمنتج أساسي",
-      "description": "الشركات مستعدة لدفع مبالغ طائلة إذا تمكنت من اختصار وقت وصولها للسوق (Time to Market) من سنة كاملة إلى 3 أسابيع، وهذا ما باعته NymCard تقنياً."
+      "title": "امتلاك المعالج يحول المرونة إلى خندق حماية ومسؤولية كاملة",
+      "description": "امتلاك تقنية المعالجة والتحويل يقلل الاعتماد على مورد أبيض ويمنح سرعة في تعديل المنتج، لكنه يجعل NymCard مسؤولة مباشرة عن الأداء والاستمرارية والمصالحة والامتثال. الخندق لا يأتي من الكود فقط، بل من القدرة على تشغيله بأمان في أسواق منظمة."
+    },
+    {
+      "title": "الرخصة جزء من المنتج وليست ختمًا في الهامش",
+      "description": "العميل لا يريد API يتوقف عند باب التنظيم. دمج خدمات Open Finance والبطاقات وحركة الأموال داخل إطار مرخص يختصر عدد الأطراف والموافقات، لكن كل قدرة يجب ربطها بنطاق الرخصة والدولة بدل تسويق رخصة واحدة كجواز عالمي."
+    },
+    {
+      "title": "التمويل يموّل الخندق لكنه لا يثبت الإيراد أو التقييم",
+      "description": "أكثر من 68 مليون دولار من التمويل المعلن يسمح ببناء معالج وشهادات وتراخيص وفرق محلية، لكنه لا يخبرنا بحجم المبيعات أو الربحية أو قيمة الشركة. دون نسبة ملكية أو قوائم مالية، تبقى هذه المقاييس منفصلة."
+    },
+    {
+      "title": "عدد العملاء المؤسسيين لا يساوي عدد البطاقات أو المستخدمين",
+      "description": "عميل واحد قد يكون بنكًا يصدر مئات الآلاف من البطاقات، أو شركة ناشئة ببرنامج صغير. لذلك يحتاج التحليل إلى عدد البرامج والبطاقات النشطة وحجم المعاملات والاحتفاظ والإيراد لكل عميل، ولا يجوز تحويل 60+ عميلًا إلى تقدير لملايين البطاقات."
+    },
+    {
+      "title": "الاستحواذ يشتري طبقة معرفة لا مجرد قاعدة مستخدمين",
+      "description": "استحواذ Spotii أضاف محرك مخاطر وإدارة قروض وتحصيل وخبرة BNPL إلى منصة الإصدار. القيمة الاستراتيجية كانت في تحويل الائتمان إلى مكوّن قابل للتخصيص للبنوك، لا مواصلة نموذج مستهلك منفصل فقط."
+    },
+    {
+      "title": "التسوية بالعملة المستقرة ابتكار خلفي قبل أن تكون منتجًا استهلاكيًا",
+      "description": "استخدام USDC لتسوية معاملات Visa يستهدف سرعة التسوية والسيولة ومتطلبات التمويل المسبق، ولا يعني أن حامل البطاقة يدفع بعملة مشفرة أو أن NymCard أصبحت بورصة. أفضل ابتكار مالي قد يكون غير مرئي للمستخدم."
+    },
+    {
+      "title": "التوسع الإقليمي هو مشروع تنظيم وتسوية قبل أن يكون ترجمة واجهة",
+      "description": "كل سوق يغيّر الرخصة والشريك البنكي والشبكة والعملات والتسوية وقواعد البيانات. وجود مكاتب محلية ونماذج نشر داخل الدولة يساعد، لكن وصف «10+ أسواق» يحتاج دائمًا تعريفًا: مكتب أم عميل أم برنامج حي أم رخصة."
+    },
+    {
+      "title": "الذكاء الاصطناعي البنكي يحتاج تفسيرًا وسجل مراجعة",
+      "description": "NymAI يربط الاحتيال والمخاطر والائتمان ببيانات موحدة، لكن القيمة المؤسسية تأتي من إرفاق سبب القرار وسجل تدقيق، بحيث يستطيع فريق المخاطر تفسير النموذج للعميل والمدقق والمنظم بدل الاكتفاء بدرجة غامضة."
+    },
+    {
+      "title": "مرونة النشر عامل مبيعات في الأسواق المنظمة",
+      "description": "السحابة وحدها لا تناسب كل بنك أو جهة حكومية. دعم cloud وon-soil وon-premise يسمح بتلبية سيادة البيانات ومتطلبات الأمن واستمرارية الأعمال، لكنه يفرض على الشركة الحفاظ على إصدار واحد عبر بيئات تشغيل مختلفة."
     }
   ],
   "tools": [
-    "AWS",
-    "Go",
-    "Microservices Architecture",
-    "PCI-DSS Security"
+    "nCore FullStack كنواة موحدة لإصدار البطاقات والإقراض وحركة الأموال والتسوية والجرائم المالية والمصالحة.",
+    "إصدار ومعالجة بطاقات Visa وMastercard للخصم والائتمان والدفع المسبق، افتراضية وفعلية ورمزية.",
+    "دفتر أستاذ عام وحسابات وأرصدة وواجهات تمويل داخلية وخارجية ضمن nCore.",
+    "حركة أموال محلية وعابرة للحدود وFX وتحويلات، مع Visa Direct وMastercard Cross-Border ووصلات دفع أخرى.",
+    "تسوية لحظية ومتعددة العملات، وتشغيل تسوية معاملات Visa باستخدام USDC في الخليج.",
+    "مصالحة آلية بين القدرات والشبكات والسجلات والتسويات.",
+    "بنية إقراض تشمل القرار والمنشأ والخدمة والأقساط وBNPL؛ المنصة لا تموّل القروض.",
+    "NymAI لقرارات الاحتيال والمخاطر والائتمان مع أسباب للقرار وسجل تدقيق وفق وصف الشركة.",
+    "قدرات الجرائم المالية: الاحتيال والمخاطر و3D Secure وAML والعقوبات والنزاعات والهوية.",
+    "Open Finance مرخص في الإمارات لمعلومات الحساب وبدء الدفع والتخصيب والتحليلات.",
+    "أكثر من 1,000 API وSDK، ودعم 135+ عملة، ووقت تشغيل معلن 99.99%.",
+    "نماذج نشر cloud وon-soil وon-premise وربط بالبنية المصرفية القائمة دون استبدال النواة الأساسية.",
+    "شهادات معلنة: PCI DSS Level 1 وPCI Software Security Framework وSOC 2 Type II وISO/IEC 27001."
+  ],
+  "verification": {
+    "status": "verified_from_official_company_product_funding_regulatory_network_partner_and_central_bank_sources",
+    "verified_on": "2026-08-03",
+    "source_policy": "أُعطيت الأولوية لموقع NymCard وتوثيقها وإعلانات التمويل والاستحواذ، ثم بيانات Mastercard والبنوك المركزية. قُيّدت ادعاءات الترخيص والشهادات بصيغة الإفصاح الرسمي للشركة عندما لم يتوفر سجل جهة تنظيمية قابل للربط المباشر في نتائج البحث. لم تُستخدم تقديرات مواقع الإيرادات أو الزيارات أو التقييم. NymCard شركة إماراتية خاصة وغير مدرجة في الولايات المتحدة، لذلك لا تمثل SEC/EDGAR مسار الإفصاح الطبيعي لها، ولم يظهر مُصدر عام باسمها يمكن الاعتماد عليه حتى تاريخ التحقق.",
+    "important_notes": [
+      "33 مليون دولار هي جولة Series B في مارس 2025، وليست إيرادًا أو تقييمًا.",
+      "22.5 مليون دولار هي جولة 2022 التي رفعت الإجمالي آنذاك إلى أكثر من 35 مليونًا.",
+      "بإضافة جولة 2025 إلى الحد الأدنى السابق، يصبح التمويل المعلن أكثر من 68 مليون دولار على الأقل، لا رقمًا نهائيًا مدققًا.",
+      "الإيراد الشهري والسنوي والربح وحجم المدفوعات المعالجة غير معلنة.",
+      "التقييم غير معلن لغياب نسبة الملكية وشروط التسعير في جولة 2025.",
+      "60+ عميلًا يعني عملاء مؤسسيين، ولا يساوي بطاقات أو مستخدمين نهائيين أو معاملات.",
+      "إعلان 2025 قال 10+ دول أو أسواق، بينما الموقع الحالي يسمي 8 أسواق حية؛ قد يكون الاختلاف زمنيًا أو تعريفيًا.",
+      "1,000+ API و135+ عملة و99.99% uptime مؤشرات تقنية تعلنها الشركة وليست مؤشرات إيراد.",
+      "NymCard توفر بنية الإقراض وقراراته وخدمته، وتوضح أنها لا تمول القروض.",
+      "أكثر من مليون مستخدم و1,500 تاجر أرقام تاريخية تخص Spotii قبل الاستحواذ ولا تمثل قاعدة NymCard الحالية.",
+      "تسوية USDC مع Visa قدرة خلفية للتسوية ولا تعني أن المستخدم النهائي يدفع بالعملة المشفرة.",
+      "ترخيص Open Finance في الإمارات لا يعني ترخيصًا موحدًا لكل منتجات الشركة في جميع الدول.",
+      "حُذف ادعاء إصدار وإدارة ملايين البطاقات لعدم وجود رقم رسمي حديث يثبت الحجم.",
+      "حُذفت AWS وGo وMicroservices Architecture لغياب توثيق رسمي حديث للمكدس الداخلي.",
+      "احتُفظ بـPCI DSS وغيرها كشهادات معلنة رسميًا من الشركة، مع عدم الادعاء بمراجعة ملفات الشهادات الأصلية."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول بقيمها وحالة التحقق والمصادر والقيود، مع فصل التمويل عن التقييم والإيراد، وفصل العملاء المؤسسيين عن البطاقات والمستخدمين والمعاملات والزيارات، وتمييز قدرات المنتج عن المكدس البرمجي الداخلي.",
+    "status_values": {
+      "verified_current_location_and_operating_footprint": "الموقع والتأسيس والمكاتب والأسواق مثبتة بالمصادر الحالية.",
+      "verified_capabilities_revenue_pricing_not_disclosed": "النموذج والقدرات مثبتة، لكن التسعير والمزيج المالي غير منشورين.",
+      "verified_as_not_publicly_disclosed": "المقياس غير منشور ولم يُستبدل بتقدير خارجي.",
+      "verified": "الادعاء مدعوم مباشرة بمصادر رسمية أو أولية.",
+      "verified_adjacent_market_indicators_not_company_tam": "المؤشر يصف السوق المجاور ولا يساوي حجم سوق الشركة.",
+      "verified_company_reported_scale_with_definition_changes": "المؤشرات منشورة من الشركة لكن تعريفاتها أو فتراتها تغيرت.",
+      "verified_financing_not_revenue_or_valuation": "المبلغ تمويل موثق ولا يمثل الإيراد أو التقييم.",
+      "analytical_inference_from_verified_products_pricing_undisclosed": "القناة التجارية مستنتجة من منتجات مثبتة دون اختراع سعر أو نسبة.",
+      "verified_product_and_security_capabilities_without_speculative_stack": "قدرات المنتج والأمن مثبتة دون افتراض مكدس داخلي.",
+      "analytical_inference": "تحليل مهني مبني على حقائق موثقة وليس تصريحًا حرفيًا."
+    },
+    "confidence_scale": {
+      "high": "مصدر رسمي للشركة أو الشبكة أو البنك المركزي مع دلالة مباشرة.",
+      "medium_high": "استنتاج مدعوم بمنتجات ومصادر متعددة مع قيود واضحة.",
+      "medium": "تحليل تشغيلي معقول لا يتوفر له قياس مستقل."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "شركة بنية تحتية للمدفوعات تأسست عام 2018 على يد عمر أنسي. يقع مكتبها الإماراتي ومقرها التشغيلي المعلن حاليًا في الطابق 27 من برج السلام، الصفوح 2، مدينة دبي للإعلام، دبي. تعرض الشركة سبعة مكاتب في دبي والرياض والدوحة وبيروت والقاهرة وكراتشي ولندن، وثمانية أسواق حية هي الإمارات والسعودية وقطر ولبنان وباكستان ومصر والعراق والسودان. وجود مكتب في بيروت وخلفية المؤسس اللبنانية لا يثبت أن الشركة تأسست قانونيًا في لبنان؛ لذلك حُذف هذا الوصف من الحقل الأصلي.",
+      "verification_status": "verified_current_location_and_operating_footprint",
+      "confidence": "high",
+      "claim_type": "founding_headquarters_offices_and_live_markets",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت الصفحة الحالية سنة التأسيس والمكتب الإماراتي وشبكة المكاتب والأسواق، ولا تدعم وصف التأسيس القانوني في لبنان.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-01",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About NymCard — the payments infrastructure banks and businesses build on",
+          "publisher": "NymCard",
+          "source_type": "official_company_current_about_page",
+          "url": "https://www.nymcard.com/ae/company/about",
+          "evidence_type": "direct",
+          "source_locator": "Company history, offices and live markets",
+          "supports": "التأسيس عام 2018، المكتب في دبي، 7 مكاتب و8 أسواق حية.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "What is full-stack payments infrastructure?",
+          "publisher": "NymCard",
+          "source_type": "official_company_product_and_architecture_article",
+          "url": "https://www.nymcard.com/company/blog/what-is-full-stack-payments-infrastructure",
+          "evidence_type": "direct",
+          "source_locator": "Current operating footprint",
+          "supports": "60+ عميلًا عبر 8 أسواق في يونيو 2026.",
+          "published_on": "2026-06-29"
+        }
+      ],
+      "limitations": "تستخدم بعض الملفات الصحفية وصف «لبنانية التأسيس» استنادًا إلى خلفية المؤسس أو الانطلاقة المبكرة، لكن المصدر الرسمي الحالي لا يحدده."
+    },
+    "$.company.business_model": {
+      "field_value": "منصة بنية تحتية مالية B2B مرخّصة في الإمارات، تبيع للبنوك وشركات التقنية المالية والمؤسسات والاتصالات طبقات معيارية عبر منصة nCore: إصدار ومعالجة البطاقات، حركة الأموال، التسوية، المصالحة، الإقراض المدمج، والجرائم المالية. النموذج تعاقدي ويُرجح أن يجمع رسوم الإعداد والتكامل والترخيص أو المنصة ومعالجة البطاقات والمعاملات والخدمات التشغيلية، لكن NymCard لا تنشر جدول أسعار مؤسسيًا عامًا أو معدلات رسوم البطاقة والمعاملة أو مساهمة كل خط في الإيراد. توضح الشركة أن بنيتها تدعم الإقراض وقراراته وخدمته، لكنها لا تموّل القروض من ميزانيتها.",
+      "verification_status": "verified_capabilities_revenue_pricing_not_disclosed",
+      "confidence": "high",
+      "claim_type": "b2b_full_stack_payments_infrastructure_model",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت صفحات المنتج والعقود والشراكات قدرات المنصة والعملاء، بينما لا تنشر أسعار المؤسسات أو take rates.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-12",
+        "SRC-16",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About NymCard — the payments infrastructure banks and businesses build on",
+          "publisher": "NymCard",
+          "source_type": "official_company_current_about_page",
+          "url": "https://www.nymcard.com/ae/company/about",
+          "evidence_type": "direct",
+          "source_locator": "nCore capabilities",
+          "supports": "الإصدار وحركة الأموال والتسوية والمصالحة والإقراض والجرائم المالية.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Embedded Finance on nCore",
+          "publisher": "NymCard",
+          "source_type": "official_company_product_page",
+          "url": "https://www.nymcard.com/ae/solutions/embedded-finance",
+          "evidence_type": "direct",
+          "source_locator": "Embedded finance architecture",
+          "supports": "المنصة الموحدة والمنتجات المدمجة.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "NymCard Partners with Nama United Financing in Saudi Arabia",
+          "publisher": "NymCard",
+          "source_type": "official_company_customer_partnership_release",
+          "url": "https://www.nymcard.com/company/newsroom/nymcard-partners-with-nama-united-financing-to-power-business-payment-solutions-in-saudi-arabia",
+          "evidence_type": "direct",
+          "source_locator": "Saudi customer partnership",
+          "supports": "إصدار البطاقات وإدارة البرامج لجهة تمويل.",
+          "published_on": "2025-02-05"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Key Facts Statement and legal footer",
+          "publisher": "NymCard",
+          "source_type": "official_company_legal_and_regulatory_page",
+          "url": "https://www.nymcard.com/ae/key-facts-statement",
+          "evidence_type": "direct",
+          "source_locator": "Legal footer",
+          "supports": "الكيان المرخص والشراكات مع الشبكات.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "قنوات الرسوم مستنتجة من الخدمات التعاقدية المعتادة والمثبتة، لكن قيم الرسوم ومساهماتها غير معلنة."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. NymCard شركة خاصة ولا تنشر إيرادًا شهريًا أو سنويًا مدققًا أو صافي ربح أو حجم مدفوعات معالجًا. الجولات التمويلية وقيمة التحويلات الممكنة وعدد العملاء وواجهات API ليست إيرادًا. لذلك حُذف تقدير «ملايين الدولارات شهريًا» بدل تحويل مؤشرات التمويل أو الانتشار إلى مبيعات مفترضة.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "revenue_profit_and_processed_volume_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا تتضمن الإفصاحات الرسمية أي رقم إيراد أو ربح أو حجم معالجة؛ المتاح تمويل وعملاء وقدرات.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "QED Investors Leads $33M Investment in NymCard",
+          "publisher": "NymCard",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.nymcard.com/company/newsroom/qed-investors-leads-33m-investment-in-nymcard-strengthening-menas-payments-infrastructure",
+          "evidence_type": "direct",
+          "source_locator": "Series B release",
+          "supports": "33 مليون دولار تمويل و50+ عميلًا، دون إيراد.",
+          "published_on": "2025-03-19"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "NymCard Breaks New Grounds Closing $22.5m in Funding",
+          "publisher": "NymCard",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.nymcard.com/company/newsroom/nymcard-breaks-new-grounds-closing-22-5m-in-funding",
+          "evidence_type": "direct",
+          "source_locator": "2022 funding release",
+          "supports": "22.5 مليون دولار وإجمالي تمويل، دون إيراد.",
+          "published_on": "2022-06-08"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "What is full-stack payments infrastructure?",
+          "publisher": "NymCard",
+          "source_type": "official_company_product_and_architecture_article",
+          "url": "https://www.nymcard.com/company/blog/what-is-full-stack-payments-infrastructure",
+          "evidence_type": "direct",
+          "source_locator": "Current platform scale",
+          "supports": "عملاء وأسواق وAPIs وعملات، دون إيراد.",
+          "published_on": "2026-06-29"
+        }
+      ],
+      "limitations": "غياب الإفصاح لا يعني عدم وجود إيراد؛ يعني أن التقدير الشهري الأصلي لا يمكن توثيقه."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن وغير مناسب كمقياس رئيسي لشركة بنية تحتية B2B. لا تنشر الشركة زيارات الموقع أو المستخدمين النشطين شهريًا أو عدد البطاقات النشطة أو المعاملات الشهرية. أحدث مؤشر تشغيلي معلن وجدناه هو خدمة أكثر من 60 عميلًا عبر 8 أسواق وفق مادة رسمية في يونيو 2026، مقارنة بأكثر من 50 بنكًا وشركة تقنية ومؤسسة في إعلان مارس 2025. هذه أعداد عملاء مؤسسيين بحدود دنيا، وليست بطاقات أو مستخدمين نهائيين أو زيارات.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "b2b_web_traffic_cards_transactions_and_end_users_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تنشر الشركة عدد العملاء المؤسسيين والأسواق، لكنها لا تنشر زيارات أو MAU أو بطاقات أو معاملات شهرية.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-02",
+        "SRC-11",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "QED Investors Leads $33M Investment in NymCard",
+          "publisher": "NymCard",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.nymcard.com/company/newsroom/qed-investors-leads-33m-investment-in-nymcard-strengthening-menas-payments-infrastructure",
+          "evidence_type": "direct",
+          "source_locator": "March 2025 scale statement",
+          "supports": "50+ بنكًا وفنتك ومؤسسة.",
+          "published_on": "2025-03-19"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "What is full-stack payments infrastructure?",
+          "publisher": "NymCard",
+          "source_type": "official_company_product_and_architecture_article",
+          "url": "https://www.nymcard.com/company/blog/what-is-full-stack-payments-infrastructure",
+          "evidence_type": "direct",
+          "source_locator": "June 2026 scale statement",
+          "supports": "60+ عميلًا عبر 8 أسواق.",
+          "published_on": "2026-06-29"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "NymCard acquires Spotii to offer BNPL-in-a-Box",
+          "publisher": "NymCard",
+          "source_type": "official_company_acquisition_release",
+          "url": "https://www.nymcard.com/company/newsroom/nymcard-acquires-spotii-to-offer-bnpl-in-a-box-for-banks-and-financial-institutions",
+          "evidence_type": "direct",
+          "source_locator": "Spotii historical metrics",
+          "supports": "1+ مليون مسجل و1,500+ تاجر تخص Spotii قبل الاستحواذ ولا تمثل NymCard الحالية.",
+          "published_on": "2023-06-12"
+        }
+      ],
+      "limitations": "العميل المؤسسي قد يشغل برنامجًا كبيرًا أو صغيرًا؛ لا يمكن تحويل عدد العملاء إلى عدد بطاقات أو مستخدمين."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "إطلاق بطاقة أو محفظة أو منتج ائتماني أو تحويلات دولية لا يحتاج واجهة مستخدم فقط؛ بل يتطلب معالج إصدار وسجل أرصدة وتسوية ومصالحة ومكافحة احتيال و3D Secure وهوية وامتثال وربطًا بالشبكات والبنوك والجهات التنظيمية. عندما تُشترى هذه الطبقات من موردين منفصلين، تتجزأ بيانات العميل وتتعقد العقود والتكاملات، ويصبح كل منتج جديد مشروع ربط طويلًا بدل إعداد قدرة جديدة على نواة مشتركة.",
+        "impact": "تطول مدة الوصول إلى السوق، وتتكرر تكاليف الاختبار والتشغيل والمراجعة، وتظهر فروقات بين سجل المعالج والسجل المالي وبيانات المخاطر والتسوية. كما يصعب على فرق الامتثال تفسير القرار أو تتبع المعاملة عبر سلسلة موردين، وتزداد مخاطر الفشل عند التوسع إلى دولة أو شبكة أو عملة جديدة."
+      },
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "fragmented_payments_stack_and_multi_vendor_complexity",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المشكلة مشتقة من وصف NymCard لبنية الموردين المتعددة ومن نطاق الوظائف التي توحدها nCore.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-12",
+        "SRC-11",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-12",
+          "title": "Embedded Finance on nCore",
+          "publisher": "NymCard",
+          "source_type": "official_company_product_page",
+          "url": "https://www.nymcard.com/ae/solutions/embedded-finance",
+          "evidence_type": "direct",
+          "source_locator": "Multi-provider problem statement",
+          "supports": "تجزؤ البطاقات والمدفوعات والإقراض والمخاطر والبيانات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "What is full-stack payments infrastructure?",
+          "publisher": "NymCard",
+          "source_type": "official_company_product_and_architecture_article",
+          "url": "https://www.nymcard.com/company/blog/what-is-full-stack-payments-infrastructure",
+          "evidence_type": "direct",
+          "source_locator": "Full-stack architecture definition",
+          "supports": "ست قدرات على نواة وبيانات لحظية واحدة.",
+          "published_on": "2026-06-29"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Payments and Settlements in the UAE",
+          "publisher": "Central Bank of the UAE",
+          "source_type": "official_government_regulatory_and_market_infrastructure_page",
+          "url": "https://www.centralbank.ae/en/our-operations/payments-and-settlements/",
+          "evidence_type": "contextual",
+          "source_locator": "UAE payment infrastructure context",
+          "supports": "أهمية أنظمة الدفع والتسوية والربط المؤسسي.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "صياغة الأثر تحليل مهني، ولا توجد دراسة منشورة من الشركة تقيس تكلفة التجزؤ بالمال أو الزمن لكل عميل."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "تقدم NymCard منصة nCore كنواة موحدة تملك الشركة محرك المعالجة والتحويل الخاص بها، وتجمع إصدار بطاقات الخصم والائتمان ومسبقة الدفع، وحركة الأموال المحلية والعابرة للحدود، والتسوية متعددة العملات والعملات المستقرة، والمصالحة، وقرارات الإقراض وإنشائه وخدمته، والاحتيال والمخاطر وAML والعقوبات والنزاعات والهوية. تدعم المنصة أكثر من 1,000 واجهة API ونماذج نشر سحابية أو داخل الدولة أو داخل مركز بيانات العميل، وتتكامل مع Visa وMastercard وVisa Direct وMastercard Cross-Border وغيرها. أطلقت الشركة خدمات Open Finance المرخصة في الإمارات عام 2025، وشغّلت تسوية معاملات Visa باستخدام USDC في الخليج عام 2026."
+      },
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "ncore_full_stack_open_finance_cross_border_and_stablecoin_settlement",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المصادر الرسمية مكونات nCore ونماذج النشر والتمويل المفتوح واتصالات الشبكات والتسوية بـUSDC.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-01",
+        "SRC-11",
+        "SRC-05",
+        "SRC-08",
+        "SRC-09",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About NymCard — the payments infrastructure banks and businesses build on",
+          "publisher": "NymCard",
+          "source_type": "official_company_current_about_page",
+          "url": "https://www.nymcard.com/ae/company/about",
+          "evidence_type": "direct",
+          "source_locator": "Platform components",
+          "supports": "الإصدار وحركة الأموال والتسوية والمصالحة والإقراض والجرائم المالية.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "What is full-stack payments infrastructure?",
+          "publisher": "NymCard",
+          "source_type": "official_company_product_and_architecture_article",
+          "url": "https://www.nymcard.com/company/blog/what-is-full-stack-payments-infrastructure",
+          "evidence_type": "direct",
+          "source_locator": "APIs, currencies, deployment and connections",
+          "supports": "1,000+ API و135+ عملة وثلاثة نماذج نشر.",
+          "published_on": "2026-06-29"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "NymCard Launches Open Finance Services Under CBUAE Open Finance Regulation",
+          "publisher": "NymCard",
+          "source_type": "official_company_regulatory_announcement",
+          "url": "https://www.nymcard.com/company/newsroom/nymcard-launches-open-finance-services-under-cbuae-open-finance-regulation",
+          "evidence_type": "direct",
+          "source_locator": "Open Finance license announcement",
+          "supports": "معلومات الحساب وبدء الدفع في الإمارات.",
+          "published_on": "2025-05-09"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "NymCard leverages Mastercard Move across 47 countries",
+          "publisher": "Mastercard",
+          "source_type": "primary_network_partner_release",
+          "url": "https://www.mastercard.com/news/eemea/en/newsroom/press-releases/en/2024/september/nymcard-leverages-mastercard-move-to-offer-fast-and-efficient-cross-border-payments-across-47-countries/",
+          "evidence_type": "direct",
+          "source_locator": "Mastercard Move partnership",
+          "supports": "التحويلات إلى 47 دولة.",
+          "published_on": "2024-09-11"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "NymCard Partners with Visa Direct for Cross-Border Transfers",
+          "publisher": "NymCard",
+          "source_type": "official_company_network_partnership_release",
+          "url": "https://www.nymcard.com/company/newsroom/nymcard-today-announced-a-partnership-with-visa-direct-visas-global-real-time-money-movement-network",
+          "evidence_type": "direct",
+          "source_locator": "Visa Direct partnership",
+          "supports": "الحوالات العابرة للحدود عبر API.",
+          "published_on": "2025-11-27"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "NymCard Enables Stablecoin Settlement with Visa in the GCC",
+          "publisher": "NymCard",
+          "source_type": "official_company_and_network_capability_release",
+          "url": "https://www.nymcard.com/company/newsroom/nymcard-enables-stablecoin-settlement-with-visa-in-the-gcc",
+          "evidence_type": "direct",
+          "source_locator": "USDC settlement",
+          "supports": "تشغيل تسوية Visa بالعملة المستقرة في الخليج.",
+          "published_on": "2026-02-02"
+        }
+      ],
+      "limitations": "القدرات موثقة كمنتجات الشركة؛ لا يعني ذلك أن كل عميل يستخدم جميع الوحدات أو أن الخدمة مرخصة بالطريقة نفسها في كل سوق."
+    },
+    "$.market_data.target_audience": {
+      "field_value": "البنوك التجارية والرقمية وبنوك التجزئة، شركات التقنية المالية والمحافظ والتحويلات، جهات التمويل وشركات BNPL، شركات الاتصالات والتجزئة والأسواق والمنصات، شركات التأمين والسفر واقتصاد العمل الحر، بيوت الصرافة، المؤسسات الحكومية، والجهات التي تريد إطلاق بطاقات أو مدفوعات أو إقراض أو خدمات مالية مدمجة تحت علامتها.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "banks_fintechs_enterprises_telecom_government_and_marketplace_segments",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الشرائح مستمدة من صفحات الحلول وإعلان التمويل وشراكة السعودية.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-02",
+        "SRC-12",
+        "SRC-16",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "QED Investors Leads $33M Investment in NymCard",
+          "publisher": "NymCard",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.nymcard.com/company/newsroom/qed-investors-leads-33m-investment-in-nymcard-strengthening-menas-payments-infrastructure",
+          "evidence_type": "direct",
+          "source_locator": "Target client segments",
+          "supports": "البنوك والمؤسسات والفنتك والاتصالات.",
+          "published_on": "2025-03-19"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Embedded Finance on nCore",
+          "publisher": "NymCard",
+          "source_type": "official_company_product_page",
+          "url": "https://www.nymcard.com/ae/solutions/embedded-finance",
+          "evidence_type": "direct",
+          "source_locator": "Embedded finance use cases",
+          "supports": "المنصات والتجزئة والخدمات المالية المدمجة.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "NymCard Partners with Nama United Financing in Saudi Arabia",
+          "publisher": "NymCard",
+          "source_type": "official_company_customer_partnership_release",
+          "url": "https://www.nymcard.com/company/newsroom/nymcard-partners-with-nama-united-financing-to-power-business-payment-solutions-in-saudi-arabia",
+          "evidence_type": "direct",
+          "source_locator": "Saudi SME payment program",
+          "supports": "جهات التمويل والشركات الصغيرة والمتوسطة.",
+          "published_on": "2025-02-05"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About NymCard — the payments infrastructure banks and businesses build on",
+          "publisher": "NymCard",
+          "source_type": "official_company_current_about_page",
+          "url": "https://www.nymcard.com/ae/company/about",
+          "evidence_type": "direct",
+          "source_locator": "Industry pages",
+          "supports": "الحكومة والتأمين والسفر وبيوت الصرافة والتجزئة.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا تنشر الشركة توزيع العملاء أو الإيراد حسب الصناعة أو الدولة."
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا توجد في المصادر العامة المراجعة قيمة مستقلة ومدققة لسوق NymCard القابل للخدمة تجمع معالجة الإصدار والإقراض المدمج وحركة الأموال والتمويل المفتوح عبر أسواقها. للسياق المجاور فقط، أعلن البنك المركزي السعودي أن المدفوعات الإلكترونية بلغت 85% من مدفوعات التجزئة للأفراد في 2025، بإجمالي 14.6 مليار عملية مقابل 12.6 مليارًا في 2024. كما يصف مصرف الإمارات المركزي أنظمة المدفوعات والتسوية كبنية أساسية للأسواق ويشرف على أنظمة التجزئة والقيم الكبيرة. هذه مؤشرات لرقمنة المدفوعات وليست حجم سوق NymCard أو إيرادها أو قيمة المعاملات التي تعالجها.",
+      "verification_status": "verified_adjacent_market_indicators_not_company_tam",
+      "confidence": "high",
+      "claim_type": "regional_digital_payment_infrastructure_context",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تعكس بيانات SAMA وCBUAE حجم رقمنة المدفوعات وأهمية البنية التحتية، لكنها لا تساوي TAM NymCard.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-14",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-14",
+          "title": "SAMA: E-Payments Account for 85% of Retail Payments in 2025",
+          "publisher": "Saudi Central Bank",
+          "source_type": "official_government_market_indicator",
+          "url": "https://www.sama.gov.sa/en-us/mediacenter/news/pages/news-1139.aspx",
+          "evidence_type": "direct",
+          "source_locator": "2025 Saudi electronic payment statistics",
+          "supports": "85% حصة إلكترونية و14.6 مليار عملية.",
+          "published_on": "2026-04-12"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Payments and Settlements in the UAE",
+          "publisher": "Central Bank of the UAE",
+          "source_type": "official_government_regulatory_and_market_infrastructure_page",
+          "url": "https://www.centralbank.ae/en/our-operations/payments-and-settlements/",
+          "evidence_type": "direct",
+          "source_locator": "UAE payment systems overview",
+          "supports": "أنظمة القيم الكبيرة والتجزئة والربط والتسوية.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "المدفوعات الإلكترونية أوسع من معالجة الإصدار والإقراض والتمويل المفتوح، ولا توجد حصة سوق معلنة للشركة."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا تنشر NymCard معدل نمو للإيراد أو المعاملات أو البطاقات. إعلان Series B في مارس 2025 ذكر أكثر من 50 عميلًا والعمل عبر 10+ دول أو أسواق، بينما المادة الرسمية في يونيو 2026 ذكرت أكثر من 60 عميلًا عبر 8 أسواق حية. يشير ذلك إلى توسع معلن في قاعدة العملاء، لكن الأرقام حدود دنيا والتعريف الجغرافي تغير؛ لذلك لا يُحسب منها معدل نمو دقيق. المنصة الحالية تعلن أكثر من 1,000 API ودعم 135+ عملة ووقت تشغيل 99.99%، وهي مؤشرات قدرة تقنية وليست نموًا ماليًا.",
+      "verification_status": "verified_company_reported_scale_with_definition_changes",
+      "confidence": "medium_high",
+      "claim_type": "client_market_api_currency_and_uptime_scale",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تقارن المصادر بين 50+ عميلًا في 2025 و60+ في 2026، مع توضيح اختلاف تعريف عدد الأسواق.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-02",
+        "SRC-11",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "QED Investors Leads $33M Investment in NymCard",
+          "publisher": "NymCard",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.nymcard.com/company/newsroom/qed-investors-leads-33m-investment-in-nymcard-strengthening-menas-payments-infrastructure",
+          "evidence_type": "direct",
+          "source_locator": "2025 client and market count",
+          "supports": "50+ عميلًا والعمل عبر 10+ دول أو أسواق.",
+          "published_on": "2025-03-19"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "What is full-stack payments infrastructure?",
+          "publisher": "NymCard",
+          "source_type": "official_company_product_and_architecture_article",
+          "url": "https://www.nymcard.com/company/blog/what-is-full-stack-payments-infrastructure",
+          "evidence_type": "direct",
+          "source_locator": "2026 scale metrics",
+          "supports": "60+ عميلًا و8 أسواق و1,000+ API و135+ عملة و99.99% uptime.",
+          "published_on": "2026-06-29"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About NymCard — the payments infrastructure banks and businesses build on",
+          "publisher": "NymCard",
+          "source_type": "official_company_current_about_page",
+          "url": "https://www.nymcard.com/ae/company/about",
+          "evidence_type": "direct",
+          "source_locator": "Current named live markets",
+          "supports": "قائمة ثمانية أسواق حية.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "الأرقام بصيغة + ولا توفر قيمًا دقيقة؛ كما قد يختلف «operating across» عن «live markets»، فلا يُحسب معدل نمو."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "أعلنت NymCard في مايو 2021 جولة Series A بقيمة 7.6 ملايين دولار، وقالت إن إجمالي ما جمعته حتى ذلك التاريخ بلغ 12 مليونًا. وفي يونيو 2022 جمعت 22.5 مليون دولار، رافعة إجمالي التمويل المعلن آنذاك إلى أكثر من 35 مليونًا. ثم أغلقت Series B بقيمة 33 مليون دولار في مارس 2025 بقيادة QED Investors. وبجمع الجولة الأخيرة مع الحد الأدنى الرسمي السابق، يكون التمويل التراكمي المعلن أكثر من 68 مليون دولار على الأقل. هذا حد أدنى حسابي وليس رقمًا مدققًا لإجمالي رأس المال، لأن استثمار المشرق غير المعلن وغيرها من الأدوات قد لا تكون مفصلة.",
+      "verification_status": "verified_financing_not_revenue_or_valuation",
+      "confidence": "high",
+      "claim_type": "series_a_venture_round_series_b_and_minimum_cumulative_funding",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت الإعلانات الرسمية الجولات ومجاميعها المرحلية، ويسمح الجمع بحساب حد أدنى يزيد على 68 مليون دولار.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-04",
+        "SRC-03",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "NymCard Announces $7.6 Million Series A Funding",
+          "publisher": "NymCard",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.nymcard.com/company/newsroom/nymcard-announces-7-6-million-series-a-funding",
+          "evidence_type": "direct",
+          "source_locator": "2021 Series A",
+          "supports": "7.6 ملايين دولار وإجمالي 12 مليونًا.",
+          "published_on": "2021-05-03"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "NymCard Breaks New Grounds Closing $22.5m in Funding",
+          "publisher": "NymCard",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.nymcard.com/company/newsroom/nymcard-breaks-new-grounds-closing-22-5m-in-funding",
+          "evidence_type": "direct",
+          "source_locator": "2022 venture round",
+          "supports": "22.5 مليون دولار وإجمالي أكثر من 35 مليونًا.",
+          "published_on": "2022-06-08"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "QED Investors Leads $33M Investment in NymCard",
+          "publisher": "NymCard",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.nymcard.com/company/newsroom/qed-investors-leads-33m-investment-in-nymcard-strengthening-menas-payments-infrastructure",
+          "evidence_type": "direct",
+          "source_locator": "2025 Series B",
+          "supports": "33 مليون دولار.",
+          "published_on": "2025-03-19"
+        }
+      ],
+      "limitations": "الحد الأدنى الحسابي >68 مليون دولار، وليس إجماليًا دقيقًا، بسبب استثمارات غير مفصح عن قيمتها وتعبير «أكثر من 35»."
+    },
+    "$.financials.valuation": {
+      "field_value": "غير معلن. لم تكشف الشركة أو المستثمرون نسبة الملكية المباعة في جولة 33 مليون دولار أو تقييم ما قبل الاستثمار أو بعده، ولذلك لا يمكن اشتقاق تقييم موثوق من حجم الجولة. الاستحواذ على Spotii في 2023 لم يُعلن مقابله المالي أيضًا. لا توجد إيداعات عامة تسمح بتحديث تقييم الشركة حتى أغسطس 2026.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "valuation_and_acquisition_consideration_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا تنشر جولة 2025 نسبة الحصة أو التقييم، كما لم يعلن مقابل استحواذ Spotii.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-02",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "QED Investors Leads $33M Investment in NymCard",
+          "publisher": "NymCard",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.nymcard.com/company/newsroom/qed-investors-leads-33m-investment-in-nymcard-strengthening-menas-payments-infrastructure",
+          "evidence_type": "direct",
+          "source_locator": "Series B terms",
+          "supports": "قيمة الجولة والمستثمرون دون تقييم أو نسبة ملكية.",
+          "published_on": "2025-03-19"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "NymCard acquires Spotii to offer BNPL-in-a-Box",
+          "publisher": "NymCard",
+          "source_type": "official_company_acquisition_release",
+          "url": "https://www.nymcard.com/company/newsroom/nymcard-acquires-spotii-to-offer-bnpl-in-a-box-for-banks-and-financial-institutions",
+          "evidence_type": "direct",
+          "source_locator": "Spotii acquisition",
+          "supports": "إتمام الاستحواذ دون مقابل مالي معلن.",
+          "published_on": "2023-06-12"
+        }
+      ],
+      "limitations": "لا يمكن تقدير التقييم من حجم الجولة أو عدد العملاء أو التمويل التراكمي."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "رسوم تعاقدية لإعداد وتنفيذ وترخيص منصة nCore وربطها بأنظمة العميل؛ الأسعار العامة غير منشورة.",
+        "رسوم إصدار ومعالجة وإدارة برامج بطاقات الخصم والائتمان ومسبقة الدفع والبطاقات الافتراضية والرمزية.",
+        "رسوم مرتبطة بحركة الأموال والتحويلات المحلية والعابرة للحدود وFX والتحويلات المالية والوصول إلى شبكات الدفع.",
+        "رسوم بنية الإقراض المدمج: القرار الائتماني والمنشأ والخدمة والتحصيل وإدارة القروض؛ NymCard لا تموّل القرض نفسه.",
+        "رسوم التسوية والمصالحة وإدارة السجلات متعددة العملات، بما فيها قدرات التسوية باستخدام العملات المستقرة.",
+        "رسوم قدرات الجرائم المالية والاحتيال والمخاطر و3D Secure وAML والعقوبات والهوية والنزاعات.",
+        "رسوم خدمات Open Finance لمعلومات الحساب وبدء الدفع والتخصيب والتحليلات وفق العقود التنظيمية والتجارية.",
+        "خدمات تشغيل البرامج والدعم والامتثال والنشر السحابي أو داخل الدولة أو داخل مقر العميل؛ لا تُفصح الشركة عن هوامشها أو مساهمتها."
+      ],
+      "verification_status": "analytical_inference_from_verified_products_pricing_undisclosed",
+      "confidence": "medium_high",
+      "claim_type": "implementation_processing_money_movement_lending_settlement_compliance_and_open_finance_fees",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "القنوات مشتقة من الوحدات والخدمات التي تبيعها الشركة، مع تصريح واضح بأن الأسعار والمزيج المالي غير منشورين.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-01",
+        "SRC-05",
+        "SRC-08",
+        "SRC-09",
+        "SRC-10",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About NymCard — the payments infrastructure banks and businesses build on",
+          "publisher": "NymCard",
+          "source_type": "official_company_current_about_page",
+          "url": "https://www.nymcard.com/ae/company/about",
+          "evidence_type": "direct",
+          "source_locator": "nCore modules",
+          "supports": "الوحدات الست الأساسية.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "NymCard Launches Open Finance Services Under CBUAE Open Finance Regulation",
+          "publisher": "NymCard",
+          "source_type": "official_company_regulatory_announcement",
+          "url": "https://www.nymcard.com/company/newsroom/nymcard-launches-open-finance-services-under-cbuae-open-finance-regulation",
+          "evidence_type": "direct",
+          "source_locator": "Open Finance services",
+          "supports": "معلومات الحساب وبدء الدفع.",
+          "published_on": "2025-05-09"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "NymCard leverages Mastercard Move across 47 countries",
+          "publisher": "Mastercard",
+          "source_type": "primary_network_partner_release",
+          "url": "https://www.mastercard.com/news/eemea/en/newsroom/press-releases/en/2024/september/nymcard-leverages-mastercard-move-to-offer-fast-and-efficient-cross-border-payments-across-47-countries/",
+          "evidence_type": "direct",
+          "source_locator": "Cross-border money movement",
+          "supports": "خدمات Mastercard Move.",
+          "published_on": "2024-09-11"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "NymCard Partners with Visa Direct for Cross-Border Transfers",
+          "publisher": "NymCard",
+          "source_type": "official_company_network_partnership_release",
+          "url": "https://www.nymcard.com/company/newsroom/nymcard-today-announced-a-partnership-with-visa-direct-visas-global-real-time-money-movement-network",
+          "evidence_type": "direct",
+          "source_locator": "Visa Direct use cases",
+          "supports": "تحويلات الشركات والموردين.",
+          "published_on": "2025-11-27"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "NymCard Enables Stablecoin Settlement with Visa in the GCC",
+          "publisher": "NymCard",
+          "source_type": "official_company_and_network_capability_release",
+          "url": "https://www.nymcard.com/company/newsroom/nymcard-enables-stablecoin-settlement-with-visa-in-the-gcc",
+          "evidence_type": "direct",
+          "source_locator": "Settlement capability",
+          "supports": "التسوية باستخدام USDC.",
+          "published_on": "2026-02-02"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Embedded Finance on nCore",
+          "publisher": "NymCard",
+          "source_type": "official_company_product_page",
+          "url": "https://www.nymcard.com/ae/solutions/embedded-finance",
+          "evidence_type": "direct",
+          "source_locator": "Embedded cards, lending, payments and rewards",
+          "supports": "القدرات المدمجة.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا يوجد جدول أسعار مؤسسي أو إفصاح مالي؛ لذلك لا تُعرض رسوم لكل بطاقة أو معاملة كنسب أو مبالغ محددة."
+    },
+    "$.tools": {
+      "field_value": [
+        "nCore FullStack كنواة موحدة لإصدار البطاقات والإقراض وحركة الأموال والتسوية والجرائم المالية والمصالحة.",
+        "إصدار ومعالجة بطاقات Visa وMastercard للخصم والائتمان والدفع المسبق، افتراضية وفعلية ورمزية.",
+        "دفتر أستاذ عام وحسابات وأرصدة وواجهات تمويل داخلية وخارجية ضمن nCore.",
+        "حركة أموال محلية وعابرة للحدود وFX وتحويلات، مع Visa Direct وMastercard Cross-Border ووصلات دفع أخرى.",
+        "تسوية لحظية ومتعددة العملات، وتشغيل تسوية معاملات Visa باستخدام USDC في الخليج.",
+        "مصالحة آلية بين القدرات والشبكات والسجلات والتسويات.",
+        "بنية إقراض تشمل القرار والمنشأ والخدمة والأقساط وBNPL؛ المنصة لا تموّل القروض.",
+        "NymAI لقرارات الاحتيال والمخاطر والائتمان مع أسباب للقرار وسجل تدقيق وفق وصف الشركة.",
+        "قدرات الجرائم المالية: الاحتيال والمخاطر و3D Secure وAML والعقوبات والنزاعات والهوية.",
+        "Open Finance مرخص في الإمارات لمعلومات الحساب وبدء الدفع والتخصيب والتحليلات.",
+        "أكثر من 1,000 API وSDK، ودعم 135+ عملة، ووقت تشغيل معلن 99.99%.",
+        "نماذج نشر cloud وon-soil وon-premise وربط بالبنية المصرفية القائمة دون استبدال النواة الأساسية.",
+        "شهادات معلنة: PCI DSS Level 1 وPCI Software Security Framework وSOC 2 Type II وISO/IEC 27001."
+      ],
+      "verification_status": "verified_product_and_security_capabilities_without_speculative_stack",
+      "confidence": "high",
+      "claim_type": "ncore_apis_ledger_networks_ai_open_finance_deployment_and_certifications",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استُبدلت AWS وGo وmicroservices غير الموثقة بقدرات وتقنيات معلنة في المنتج والتوثيق.",
+      "source_count": 8,
+      "source_ids": [
+        "SRC-01",
+        "SRC-11",
+        "SRC-13",
+        "SRC-05",
+        "SRC-08",
+        "SRC-09",
+        "SRC-10",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About NymCard — the payments infrastructure banks and businesses build on",
+          "publisher": "NymCard",
+          "source_type": "official_company_current_about_page",
+          "url": "https://www.nymcard.com/ae/company/about",
+          "evidence_type": "direct",
+          "source_locator": "Platform and certifications",
+          "supports": "nCore والوحدات والشهادات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "What is full-stack payments infrastructure?",
+          "publisher": "NymCard",
+          "source_type": "official_company_product_and_architecture_article",
+          "url": "https://www.nymcard.com/company/blog/what-is-full-stack-payments-infrastructure",
+          "evidence_type": "direct",
+          "source_locator": "Technical scale",
+          "supports": "APIs والعملات وuptime ونماذج النشر والاتصالات.",
+          "published_on": "2026-06-29"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Funding and transfers documentation",
+          "publisher": "NymCard Developer Documentation",
+          "source_type": "official_technical_documentation",
+          "url": "https://docs.nymcard.com/get-started/funding-and-transfers/funding",
+          "evidence_type": "direct",
+          "source_locator": "Developer documentation",
+          "supports": "دفتر الأستاذ والحسابات والتمويل.",
+          "published_on": "2025"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "NymCard Launches Open Finance Services Under CBUAE Open Finance Regulation",
+          "publisher": "NymCard",
+          "source_type": "official_company_regulatory_announcement",
+          "url": "https://www.nymcard.com/company/newsroom/nymcard-launches-open-finance-services-under-cbuae-open-finance-regulation",
+          "evidence_type": "direct",
+          "source_locator": "Open Finance",
+          "supports": "التمويل المفتوح المرخص.",
+          "published_on": "2025-05-09"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "NymCard leverages Mastercard Move across 47 countries",
+          "publisher": "Mastercard",
+          "source_type": "primary_network_partner_release",
+          "url": "https://www.mastercard.com/news/eemea/en/newsroom/press-releases/en/2024/september/nymcard-leverages-mastercard-move-to-offer-fast-and-efficient-cross-border-payments-across-47-countries/",
+          "evidence_type": "direct",
+          "source_locator": "Mastercard Move",
+          "supports": "شبكة التحويلات.",
+          "published_on": "2024-09-11"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "NymCard Partners with Visa Direct for Cross-Border Transfers",
+          "publisher": "NymCard",
+          "source_type": "official_company_network_partnership_release",
+          "url": "https://www.nymcard.com/company/newsroom/nymcard-today-announced-a-partnership-with-visa-direct-visas-global-real-time-money-movement-network",
+          "evidence_type": "direct",
+          "source_locator": "Visa Direct",
+          "supports": "شبكة Visa العابرة للحدود.",
+          "published_on": "2025-11-27"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "NymCard Enables Stablecoin Settlement with Visa in the GCC",
+          "publisher": "NymCard",
+          "source_type": "official_company_and_network_capability_release",
+          "url": "https://www.nymcard.com/company/newsroom/nymcard-enables-stablecoin-settlement-with-visa-in-the-gcc",
+          "evidence_type": "direct",
+          "source_locator": "Stablecoin settlement",
+          "supports": "USDC وتسوية Visa.",
+          "published_on": "2026-02-02"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Key Facts Statement and legal footer",
+          "publisher": "NymCard",
+          "source_type": "official_company_legal_and_regulatory_page",
+          "url": "https://www.nymcard.com/ae/key-facts-statement",
+          "evidence_type": "direct",
+          "source_locator": "Legal and certification footer",
+          "supports": "الرخصة والشهادات والشبكات.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا تثبت المصادر الرسمية الحالية استخدام AWS أو Go أو نمط microservices؛ قد تكون مستخدمة داخليًا لكنها لا تُعرض كحقيقة."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "About NymCard — the payments infrastructure banks and businesses build on",
+      "publisher": "NymCard",
+      "source_type": "official_company_current_about_page",
+      "published_on": "2026",
+      "url": "https://www.nymcard.com/ae/company/about",
+      "supports": [
+        "التأسيس في 2018 والمكتب الإماراتي في دبي",
+        "سبعة مكاتب وثمانية أسواق حية و150+ موظفًا",
+        "مكونات nCore وامتلاك محرك المعالجة",
+        "الشهادات الأمنية المعلنة"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "QED Investors Leads $33M Investment in NymCard",
+      "publisher": "NymCard",
+      "source_type": "official_company_funding_release",
+      "published_on": "2025-03-19",
+      "url": "https://www.nymcard.com/company/newsroom/qed-investors-leads-33m-investment-in-nymcard-strengthening-menas-payments-infrastructure",
+      "supports": [
+        "جولة Series B بقيمة 33 مليون دولار والمستثمرون",
+        "50+ بنكًا وشركة تقنية ومؤسسة",
+        "العمل المعلن عبر 10+ أسواق في 2025",
+        "امتلاك تقنية المعالجة والتحويل"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "NymCard Breaks New Grounds Closing $22.5m in Funding",
+      "publisher": "NymCard",
+      "source_type": "official_company_funding_release",
+      "published_on": "2022-06-08",
+      "url": "https://www.nymcard.com/company/newsroom/nymcard-breaks-new-grounds-closing-22-5m-in-funding",
+      "supports": [
+        "جولة 22.5 مليون دولار",
+        "رفع إجمالي التمويل آنذاك إلى أكثر من 35 مليون دولار",
+        "150+ API في ذلك الوقت وخدمات BIN والرعاية والإصدار والامتثال وFX والخزانة"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "NymCard Announces $7.6 Million Series A Funding",
+      "publisher": "NymCard",
+      "source_type": "official_company_funding_release",
+      "published_on": "2021-05-03",
+      "url": "https://www.nymcard.com/company/newsroom/nymcard-announces-7-6-million-series-a-funding",
+      "supports": [
+        "Series A بقيمة 7.6 ملايين دولار",
+        "إجمالي تمويل 12 مليون دولار حتى ذلك التاريخ",
+        "إطلاق برامج خلال أقل من ثمانية أسابيع وفق الشركة"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "NymCard Launches Open Finance Services Under CBUAE Open Finance Regulation",
+      "publisher": "NymCard",
+      "source_type": "official_company_regulatory_announcement",
+      "published_on": "2025-05-09",
+      "url": "https://www.nymcard.com/company/newsroom/nymcard-launches-open-finance-services-under-cbuae-open-finance-regulation",
+      "supports": [
+        "ترخيص خدمات Open Finance في الإمارات وفق إعلان الشركة",
+        "بدء الدفع والحالات المعتمدة على موافقة العميل",
+        "خدمة البنوك والشركات والمنصات وSMEs"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Key Facts Statement and legal footer",
+      "publisher": "NymCard",
+      "source_type": "official_company_legal_and_regulatory_page",
+      "published_on": "2026",
+      "url": "https://www.nymcard.com/ae/key-facts-statement",
+      "supports": [
+        "الاسم القانوني NymCard Payment Services LLC",
+        "الترخيص المعلن من مصرف الإمارات المركزي",
+        "الشراكة المعتمدة مع Visa وMastercard",
+        "الشهادات PCI وSOC وISO المعلنة"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "NymCard acquires Spotii to offer BNPL-in-a-Box",
+      "publisher": "NymCard",
+      "source_type": "official_company_acquisition_release",
+      "published_on": "2023-06-12",
+      "url": "https://www.nymcard.com/company/newsroom/nymcard-acquires-spotii-to-offer-bnpl-in-a-box-for-banks-and-financial-institutions",
+      "supports": [
+        "إتمام الاستحواذ على Spotii دون قيمة معلنة",
+        "إضافة BNPL ومحرك المخاطر وإدارة القروض والتحصيل",
+        "قاعدة Spotii التاريخية 1+ مليون مسجل و1,500+ تاجر قبل الاستحواذ"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "NymCard leverages Mastercard Move across 47 countries",
+      "publisher": "Mastercard",
+      "source_type": "primary_network_partner_release",
+      "published_on": "2024-09-11",
+      "url": "https://www.mastercard.com/news/eemea/en/newsroom/press-releases/en/2024/september/nymcard-leverages-mastercard-move-to-offer-fast-and-efficient-cross-border-payments-across-47-countries/",
+      "supports": [
+        "تحويلات من الإمارات إلى 47 دولة",
+        "الوصول إلى حسابات ومحافظ ونقد وبطاقات عبر Mastercard Move",
+        "أكثر من 150 عملة وانتشار شبكة Mastercard Move"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "NymCard Partners with Visa Direct for Cross-Border Transfers",
+      "publisher": "NymCard",
+      "source_type": "official_company_network_partnership_release",
+      "published_on": "2025-11-27",
+      "url": "https://www.nymcard.com/company/newsroom/nymcard-today-announced-a-partnership-with-visa-direct-visas-global-real-time-money-movement-network",
+      "supports": [
+        "التكامل مع Visa Direct",
+        "الوصول إلى 11+ مليار نقطة بطاقة وحساب عبر 190+ سوق وفق البيان",
+        "تحويلات B2B ومدفوعات موردين عبر API واحدة"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "NymCard Enables Stablecoin Settlement with Visa in the GCC",
+      "publisher": "NymCard",
+      "source_type": "official_company_and_network_capability_release",
+      "published_on": "2026-02-02",
+      "url": "https://www.nymcard.com/company/newsroom/nymcard-enables-stablecoin-settlement-with-visa-in-the-gcc",
+      "supports": [
+        "تشغيل التسوية باستخدام USDC مع Visa في الخليج",
+        "تسوية على مدار الساعة",
+        "الهدف التشغيلي المعلن لتقليل التمويل المسبق والضمانات"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "What is full-stack payments infrastructure?",
+      "publisher": "NymCard",
+      "source_type": "official_company_product_and_architecture_article",
+      "published_on": "2026-06-29",
+      "url": "https://www.nymcard.com/company/blog/what-is-full-stack-payments-infrastructure",
+      "supports": [
+        "60+ عميلًا عبر 8 أسواق",
+        "1,000+ API و135+ عملة و99.99% uptime",
+        "ثلاثة نماذج نشر",
+        "اتصالات Visa وMastercard وشبكات تحويل أخرى",
+        "الشهادات الأمنية المحددة"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Embedded Finance on nCore",
+      "publisher": "NymCard",
+      "source_type": "official_company_product_page",
+      "published_on": "2026",
+      "url": "https://www.nymcard.com/ae/solutions/embedded-finance",
+      "supports": [
+        "البطاقات والإقراض والمدفوعات والمكافآت المدمجة",
+        "NymAI وطبقة البيانات الموحدة",
+        "مشكلة تعدد الموردين وتجزؤ البيانات"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Funding and transfers documentation",
+      "publisher": "NymCard Developer Documentation",
+      "source_type": "official_technical_documentation",
+      "published_on": "2025",
+      "url": "https://docs.nymcard.com/get-started/funding-and-transfers/funding",
+      "supports": [
+        "دفتر الأستاذ العام والحسابات والأرصدة",
+        "مصادر التمويل الداخلية والخارجية عبر APIs"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "SAMA: E-Payments Account for 85% of Retail Payments in 2025",
+      "publisher": "Saudi Central Bank",
+      "source_type": "official_government_market_indicator",
+      "published_on": "2026-04-12",
+      "url": "https://www.sama.gov.sa/en-us/mediacenter/news/pages/news-1139.aspx",
+      "supports": [
+        "85% حصة المدفوعات الإلكترونية في مدفوعات التجزئة للأفراد في 2025",
+        "14.6 مليار عملية إلكترونية مقابل 12.6 مليارًا في 2024"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Payments and Settlements in the UAE",
+      "publisher": "Central Bank of the UAE",
+      "source_type": "official_government_regulatory_and_market_infrastructure_page",
+      "published_on": "2026",
+      "url": "https://www.centralbank.ae/en/our-operations/payments-and-settlements/",
+      "supports": [
+        "دور أنظمة المدفوعات كركيزة للبنية المالية",
+        "إشراف المصرف على أنظمة المدفوعات ذات القيم الكبيرة والتجزئة",
+        "الربط بين البنوك والصرافات والمحافظ والتسوية اللحظية"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "NymCard Partners with Nama United Financing in Saudi Arabia",
+      "publisher": "NymCard",
+      "source_type": "official_company_customer_partnership_release",
+      "published_on": "2025-02-05",
+      "url": "https://www.nymcard.com/company/newsroom/nymcard-partners-with-nama-united-financing-to-power-business-payment-solutions-in-saudi-arabia",
+      "supports": [
+        "تقديم إصدار البطاقات وإدارة البرامج في السعودية",
+        "خدمة حلول المدفوعات للشركات الصغيرة والمتوسطة",
+        "الشراكة مع جهة تمويل مرخصة من SAMA"
+      ]
+    }
   ]
 }

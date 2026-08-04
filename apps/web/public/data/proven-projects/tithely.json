@@ -4,120 +4,1492 @@
   "name": "Tithe.ly",
   "domain": "get.tithe.ly",
   "website": "https://get.tithe.ly",
-  "category": "Fintech SaaS / التبرعات للكنائس",
-  "headline": "منصة رقمية للتبرعات والمشاركة المجتمعية للكنائس",
-  "summary": "يوفر Tithe.ly أدوات تبرع عبر الإنترنت والهواتف المحمولة للكنائس، إلى جانب قدرات أوسع لإدارة الكنائس والمشاركة. تم إنشاؤه لجعل التبرع ممكناً خارج نطاق الخدمة الأسبوعية الشخصية.",
+  "category": "Church Technology, Giving & Management / تقنية الكنائس والتبرعات والإدارة",
+  "headline": "من تبرع عبر الهاتف إلى نظام تشغيل لـ53 ألف كنيسة: كيف بنت Tithely منصة رأسية للمدفوعات والإدارة",
+  "summary": "Tithely منصة أمريكية متخصصة في تقنية الكنائس، بدأت من تبرع عبر الهاتف ثم توسعت إلى منظومة تجمع معالجة التبرعات وإدارة الأعضاء والمتطوعين والخدمات والرسائل والمواقع والتطبيقات. تخدم حاليًا أكثر من 53 ألف كنيسة، وتحقق الدخل من رسوم المعالجة والاشتراكات، مع استثمار ملكية غير معلن القيمة من Accel-KKR منذ 2022. الإيراد والربحية والتقييم والزيارات غير منشورة رسميًا.",
   "directory_snapshot": {
-    "monthly_revenue": "غير متوفر في بطاقة الدليل",
-    "monthly_traffic": "250K /mo",
-    "revenue_per_visitor": "$6.00 /visitor",
-    "solopreneur_score": "48.0",
-    "idea_label": "منصة تبرعات عبر الإنترنت"
+    "monthly_revenue": "غير معلن. Tithely شركة خاصة ولا تنشر إيرادًا شهريًا أو سنويًا مدققًا أو ARR أو صافي ربح. تقدير Starter Story البالغ 1.5 مليون دولار شهريًا يتعارض حسابيًا مع عنوان يذكر 16 مليون دولار ARR؛ فالرقم الشهري يعادل 18 مليون دولار سنويًا. لم تنشر الشركة ما يثبت أيًا منهما.",
+    "monthly_traffic": "غير معلن. تعرض المصادر الرسمية أكثر من 53,000 كنيسة تستخدم المنصة، لكن هذا عدد مؤسسات تستخدم منتجات Tithely وليس زيارات get.tithe.ly أو مانحين أو مستخدمين نشطين شهريًا. تقدير 250 ألف زيارة شهريًا في الملف الأصلي صادر عن دليل خارجي دون منهجية منشورة.",
+    "revenue_per_visitor": "غير قابل للحساب؛ الإيراد والزيارات غير معلنين، كما أن دخل الشركة يأتي من رسوم معاملات واشتراكات وعقود مؤسسات وليس من زيارات الموقع فقط.",
+    "solopreneur_score": "0.0 — الشركة مدعومة باستثمار ملكية، ولديها فريق عالمي عن بُعد يقارب 200 شخص وتخدم عشرات آلاف الكنائس.",
+    "idea_label": "منصة تبرعات وإدارة ومشاركة رقمية للكنائس"
   },
   "company": {
-    "business_model": "تكنولوجيا مالية قائمة على المعاملات والمدفوعات بالإضافة إلى خدمات برمجية أوسع",
-    "customer_type": "الكنائس، المنظمات الدينية، المتبرعون، والمنظمات غير الربحية ذات الصلة",
-    "founder": "دين سويتمان",
-    "cofounder_note": "يسرد الملف ثلاثة مؤسسين؛ بنى نجل دين (بارناباس) التطبيق المبكر",
-    "founder_role": "الرئيس التنفيذي وشريك مؤسس",
-    "founders_count": "3",
-    "employees": "حوالي 180 في ملف Starter Story لشهر يونيو 2024",
-    "started": "2013",
-    "location": "الإطلاق الأولي كان في جماعة دين في أتلانتا",
-    "funding": "غير ملخص من الملف المذكور",
-    "profitability": "مصنف كمربح في ملف Starter Story",
-    "public_revenue_claim": "تقدير الملف 1.5 مليون دولار شهرياً؛ أشار عنوان المقال إلى 16 مليون دولار كإيرادات سنوية (ARR)"
+    "business_model": "منصة رأسية B2B2C تجمع المدفوعات وبرمجيات إدارة الكنائس. تقدم Giving دون اشتراك شهري، مع رسوم أمريكية معلنة قدرها 2.9% + 0.30 دولار للبطاقات، و1% + 0.30 دولار لـACH، و3.5% + 0.30 دولار لـAmerican Express. تبيع كذلك All Access بـ119 دولارًا شهريًا، وChurch Management بـ72 دولارًا، وCustom Church App بـ89 دولارًا، وWebsite بـ19 دولارًا، إضافة إلى Text-to-Give وWorship وخطط Enterprise. تحدد الشروط Stripe كمقدم معالجة حاليًا، وتُحوّل الأموال للكنيسة بعد خصم الرسوم والاستردادات والاعتراضات.",
+    "customer_type": "الكنائس والوزارات والمنظمات الدينية، والكنائس الكبيرة التي يتجاوز حضورها 2,000 شخص، وموظفو الكنيسة والمتطوعون والأعضاء والمانحون، وشركاء المحاسبة وإدارة الكنائس.",
+    "founder": "دين سويتمان، بارناباس «بارن» سويتمان، وفرانك باري؛ وتذكر صفحة القصة الرسمية ستيف كلاين ضمن فريق التوسع المبكر.",
+    "cofounder_note": "لا تستخدم المواد الرسمية تعريفًا واحدًا ثابتًا للمؤسسين: تعرض الصفحة الحالية دين سويتمان وفرانك باري بصفة مؤسسين ورئيسين تنفيذيين مشاركين، وتصف صفحة تاريخية بارناباس بأنه المؤسس التقني الذي بنى النسخة الأولى.",
+    "founder_role": "دين سويتمان وفرانك باري رئيسان تنفيذيان مشاركان ومؤسسان؛ بارناباس المؤسس التقني للنسخة الأصلية؛ وستيف كلاين من فريق التوسع المؤسس.",
+    "founders_count": "غير موحد رسميًا؛ ثلاثة مؤسسين واضحين، مع ذكر ستيف كلاين ضمن فريق التوسع المبكر.",
+    "employees": "فريق عالمي يعمل بالكامل عن بُعد ويضم قرابة 200 شخص وفق صفحة About الحالية.",
+    "started": "بدأت الفكرة عام 2012، وبنى بارناباس النسخة الأولى خلال ستة أشهر. بدأ التوسع التجاري عام 2014، بينما تستخدم بعض المواد الرسمية عام 2015 كتاريخ تأسيس أو تطوير التطبيق؛ لذلك حُفظت المراحل بدل اختيار سنة واحدة.",
+    "location": "شركة أمريكية بفريق موزع عن بُعد. العنوان القانوني في 901 Woodland Street, Suite 104, Nashville, Tennessee 37206، بينما تصف Accel-KKR المقر بأنه Remote. كان الإطلاق الأول في كنيسة المؤسس في أتلانتا.",
+    "funding": "لا تنشر Tithely إجمالي تمويل أو جولات تقليدية. تؤكد Accel-KKR استثمار ملكية عام 2022 دون إعلان القيمة أو نسبة الملكية. كما اندمجت Tithely مع Elvanto في 2018 واستحوذت على Breeze في 2021 دون نشر أسعار الصفقتين.",
+    "profitability": "غير معلنة. تصنيف Starter Story للشركة كمربحة غير مدعوم بقوائم مالية أو EBITDA أو تدفق نقدي منشور.",
+    "public_revenue_claim": "لا يوجد ادعاء إيراد رسمي حديث. المصدر الثانوي يذكر 1.5 مليون دولار شهريًا، بينما عنوانه يشير إلى 16 مليون دولار ARR؛ الرقمان متعارضان وغير موثقين."
   },
   "problem_and_product": [
-    "كانت التبرعات التقليدية للكنائس تتركز حول الخدمات الأسبوعية وطرق الجمع المادية.",
-    "يمكن أن تؤدي ظروف الطقس والسفر والعطلات والتغيرات في الحضور إلى انقطاع التبرعات.",
-    "التبرعات المتكررة وعبر الهواتف المحمولة تتيح للمانحين المساهمة في أي وقت.",
-    "توسعت المنصة لتشمل مجموعة أوسع من أدوات إدارة الكنائس والمشاركة."
+    "التبرعات المرتبطة بخدمة أسبوعية تجعل تدفق الكنيسة حساسًا للطقس والسفر والمرض والموسمية.",
+    "بعد حل الدفع، تتجزأ بيانات الأعضاء والتبرعات والتقارير والفعاليات والمتطوعين والرسائل والموقع والتطبيق بين أدوات متعددة.",
+    "توحد Tithely التبرع عبر الويب والجوال والنص والكشك وNFC مع التبرعات المتكررة، وإدارة الأشخاص والمجموعات والخدمات والتواصل."
   ],
   "origin_story": [
-    "لاحظ دين سويتمان أن الأعضاء لديهم فرص محدودة للتبرع خارج التجمعات الأسبوعية.",
-    "أراد طريقة أبسط لدعم التبرعات المتكررة وتجنب تقلب الإيرادات الناتج عن تفويت الخدمات.",
-    "أمضى نجله بارناباس حوالي 12 شهراً في بناء التطبيق المبكر.",
-    "حدث الإطلاق الأول في جماعة دين في أتلانتا في عام 2013."
+    "ولدت الفكرة في 2012 عندما استخدم دين سويتمان تطبيق Starbucks وتساءل لماذا لا يكون التبرع للكنيسة بالبساطة نفسها.",
+    "بنى ابنه بارناباس النسخة الأولى خلال ستة أشهر، واستخدمت كنيسة دين في أتلانتا كبيئة إطلاق.",
+    "انضم فرانك باري وستيف كلاين في 2014 لتوسيع المنتج إلى كنائس أكثر."
   ],
   "build_and_launch": [
-    "ركز المنتج المبكر على التبرعات الرقمية وعبر الهواتف المحمولة.",
-    "استُخدمت جماعة حقيقية كبيئة اختبار أولية.",
-    "استخدمت الشركة بنية تحتية جاهزة للمدفوعات بدلاً من محاولة بناء طبقة المدفوعات الكاملة من الصفر.",
-    "وصف الملف لاحقاً تبني المنصة من قبل أكثر من 37,000 كنيسة."
+    "بدأ المنتج بمسار متكرر وعالي الحساسية: التبرع الرقمي والمتكرر خارج الاجتماع الأسبوعي.",
+    "اعتمدت الشركة على معالج دفع متخصص بدل بناء شبكة بطاقات وبنوك كاملة؛ وتحدد الشروط Stripe كمقدم حالي.",
+    "وسع اندماج Elvanto في 2018 قدرات إدارة الكنائس، وأضاف استحواذ Breeze في 2021 منتج ChMS وقاعدة عملاء.",
+    "أصبح Breeze رسميًا Tithely Church Management في نوفمبر 2025 بعد دمج العلامة والمنتج.",
+    "تجمع الشركة بين اكتساب ذاتي مجاني لمنتج Giving وبيع اشتراكات وعقود Enterprise."
   ],
   "costs_and_operations": [
-    "لم يكشف الملف المذكور عن تفصيل كامل لتكاليف التأسيس.",
-    "تعد معالجة المدفوعات والامتثال والموثوقية وثقة المانحين متطلبات تشغيلية مركزية.",
-    "قدر ملف يونيو 2024 وجود حوالي 180 موظفاً.",
-    "أدت عمليات الاستحواذ والشراكات إلى توسيع المنصة لتتجاوز نطاقها الأولي كمنتج واحد."
+    "رسوم شبكات البطاقات وStripe والبنوك وACH والاستردادات والاعتراضات والاحتيال والتحقق.",
+    "التسويات وتحويل الأموال والاحتجاز المؤقت والدعم المالي والامتثال.",
+    "تشغيل فريق عالمي عن بُعد يقارب 200 شخص.",
+    "تطوير وصيانة Giving وChMS والتطبيقات والمواقع والرسائل والتخطيط والتكاملات.",
+    "دمج المنتجات والبيانات وتجربة المستخدم بعد Elvanto وBreeze.",
+    "أمن وخصوصية بيانات الأعضاء والمانحين والتقارير الضريبية عبر دول متعددة."
   ],
   "monetization": [
-    "ادعاء تاريخي من مصدر وصف معدل معاملة فعلي يبلغ حوالي 0.92% مع عدم وجود اشتراك شهري لمنتج التبرع.",
-    "قد تستخدم حزمة المنتجات الأوسع هياكل تسعير إضافية.",
-    "يجب التحقق من معدلات المعاملات وشروط الخطة على الموقع الرسمي لأن تسعير المدفوعات يتغير بمرور الوقت."
+    "رسوم معالجة التبرعات بالبطاقات وACH وAmerican Express، بمعدلات تختلف حسب الدولة والعقد.",
+    "All Access بسعر 119 دولارًا شهريًا.",
+    "Church Management بسعر 72 دولارًا شهريًا.",
+    "Custom Church App بسعر 89 دولارًا وWebsite بسعر 19 دولارًا شهريًا.",
+    "Text-to-Give بسعر 19 دولارًا وWorship Planning بسعر 29 دولارًا عند شرائهما منفصلين.",
+    "عقود Enterprise مع معدلات معالجة وتهيئة ودعم متفاوض عليها."
   ],
   "growth": [
-    "ساعد البحث العضوي والبحث المدفوع الكنائس في العثور على حلول التبرع الرقمي.",
-    "الإحالات والمؤتمرات الكنسية والعلاقات المذهبية خلقت ثقة في سوق متخصص.",
-    "وسعت عمليات الاستحواذ من قدرات المنتج ونطاق وصول العملاء.",
-    "الشراكات والوصول المجاني لبعض مؤسسي الكنائس الجدد دعمت التوزيع.",
-    "التركيز العمودي القوي (Vertical focus) جعل الرسائل التسويقية وشراكات الصناعة أكثر تحديداً وفاعلية."
+    "ارتفع الانتشار المعلن من أكثر من 30,000 كنيسة بعد Breeze في 2021، إلى 37,000+ في 2023، ثم 53,000+ حاليًا.",
+    "الانتقال من 37,000 إلى 53,000 يمثل زيادة اسمية تتجاوز 43%، لكنه ليس CAGR دقيقًا بسبب اختلاف التواريخ والتعريفات.",
+    "حللت الشركة مليارات الدولارات من التبرعات لأكثر من 37,000 كنيسة، وقالت إنها ساعدت الكنائس على استقبال عدة مليارات في 2022.",
+    "استثمار Accel-KKR في 2022 دعم مرحلة التوسع، مع بقاء القيمة ونسبة الملكية غير معلنتين.",
+    "أطلقت Tithely 3.0 في 2025، وأضافت في 2026 Groups وإشعارات ثنائية الاتجاه وTithely Tap."
   ],
   "tools": [
-    "Stripe",
-    "AWS",
-    "بنية تحتية لتطبيقات الهواتف المحمولة",
-    "أنظمة معالجة المدفوعات وإدارة الكنائس"
+    "Tithely Giving للتبرع عبر الويب والجوال وApple Pay وGoogle Pay والبطاقات وACH.",
+    "QuickGive والتبرعات المتكررة والحملات والتعهدات وCover the Fees.",
+    "Text-to-Give والتبرع عبر الكشك وTithely Tap بتقنية NFC.",
+    "تقارير التبرعات والإيداعات والاستردادات والاعتراضات والكشوف الضريبية.",
+    "Tithely Church Management لقاعدة الأشخاص والمجموعات والمتطوعين والتقويم والأتمتة.",
+    "Kids & Event Check-In وتخطيط الخدمات وWorship Tools.",
+    "الرسائل النصية والبريد والإشعارات الثنائية داخل التطبيق.",
+    "Custom Church App مع منشئ تطبيق تلقائي مدعوم بالذكاء الاصطناعي.",
+    "Tithely Sites لبناء مواقع الكنائس والقوالب والأحداث والبث.",
+    "Sermonly للمساعدة في البحث وإعداد العظات بالذكاء الاصطناعي مع مراجعة بشرية.",
+    "Tithely 3.0 كطبقة موحدة للأشخاص والتبرعات والمشاركة.",
+    "تكاملات QuickBooks Online وPlanning Center وCCB وMinistry Platform وRock RMS وغيرها.",
+    "واجهات API وتصدير البيانات.",
+    "Stripe Connect لمعالجة المدفوعات وJHA لبعض خدمات مسح الشيكات.",
+    "تشفير HTTPS والبيانات الساكنة ومعايير PCI DSS Level 1 لدى الشريك المصرفي."
   ],
   "revenue_timeline": [
     {
-      "date": "2013",
-      "amount": "الإطلاق الأولي للكنيسة",
-      "type": "علامة إطلاق",
-      "note": "تم إطلاق المنتج أولاً في جماعة المؤسس في أتلانتا."
+      "date": "2012",
+      "amount": "فكرة المنتج",
+      "type": "بداية",
+      "note": "بدأت الفكرة وبُنيت النسخة الأولى خلال ستة أشهر."
     },
     {
-      "date": "ملف 28-06-2024",
-      "amount": "$1.5M /month مقدرة",
-      "type": "تقدير Starter Story",
-      "note": "عنوان المقال أشار بشكل منفصل إلى 16 مليون دولار ARR."
+      "date": "2014–2015",
+      "amount": "توسع تجاري",
+      "type": "مرحلة تأسيس",
+      "note": "تختلف المواد الرسمية بين 2014 و2015."
+    },
+    {
+      "date": "2018-11",
+      "amount": "غير معلن",
+      "type": "اندماج Elvanto",
+      "note": "أضاف إدارة الكنيسة والتخطيط."
+    },
+    {
+      "date": "2021-09",
+      "amount": "غير معلن",
+      "type": "استحواذ Breeze",
+      "note": "كانت Breeze تخدم 9,000+ كنيسة."
+    },
+    {
+      "date": "2022",
+      "amount": "غير معلن",
+      "type": "استثمار Accel-KKR",
+      "note": "استثمار ملكية دون قيمة أو حصة معلنة."
+    },
+    {
+      "date": "2022",
+      "amount": "عدة مليارات دولار",
+      "type": "تبرعات معالجة",
+      "note": "حجم تبرعات الكنائس وليس إيراد Tithely."
+    },
+    {
+      "date": "2024-06",
+      "amount": "1.5M شهريًا / 16M ARR",
+      "type": "تقديران ثانويان",
+      "note": "متعارضان وغير رسميين."
+    },
+    {
+      "date": "2025-11",
+      "amount": "دمج منتج",
+      "type": "Breeze يصبح Tithely Church Management",
+      "note": "توحيد العلامة والمنتج."
+    },
+    {
+      "date": "2026-08",
+      "amount": "53,000+ كنيسة",
+      "type": "انتشار",
+      "note": "عدد مؤسسات وليس إيرادًا أو زيارات."
     }
   ],
   "lessons": [
-    "يمكن بناء الثقة في السوق العمودي (Vertical market) من خلال الخبرة الأصيلة بالمجال وشركاء إطلاق من داخل المجتمع.",
-    "يمكن للنموذج القائم على المعاملات أن يوائم الإيرادات مع نجاح العملاء وحجم المدفوعات.",
-    "البدء بسير عمل واحد عالي التكرار يمكن أن يصبح نقطة دخول إلى منصة تشغيل أوسع بكثير."
+    "أفضل نقطة دخول رأسية هي عملية متكررة ومؤلمة ومرتبطة مباشرة بالمال؛ حل التبرع فتح الباب لبقية نظام التشغيل.",
+    "المنتج المجاني شهريًا لا يعني أنه مجاني اقتصاديًا؛ الإيراد يأتي من رسوم المعاملة.",
+    "مليارات التبرعات المعالجة ليست إيراد المنصة، ويجب فصل حجم الأموال عن الرسوم المحتفظ بها.",
+    "خبرة المؤسسين داخل الكنيسة حسنت اللغة والثقة، لكنها لا تغني عن الأمن والشفافية والتسوية.",
+    "الخطة المجانية تبني توزيعًا من أسفل إلى أعلى، ثم توسع الحزمة قيمة العقد.",
+    "الاستحواذ يضيف منتجًا وعملاء بسرعة، لكن القيمة تكتمل عند دمج الهوية والبيانات والدعم.",
+    "توحيد الأدوات يقلل الاشتراكات على الكنيسة لكنه يزيد تكلفة التغيير ومسؤولية الاعتمادية.",
+    "عدد الكنائس لا يساوي عدد المانحين أو المستخدمين أو الاشتراكات المدفوعة.",
+    "أدوات الذكاء الاصطناعي الدينية تحتاج مراجعة بشرية ولاهوتية وحدود استخدام واضحة.",
+    "استثمار الملكية لا يكشف التقييم دون قيمة الصفقة ونسبة الحصة."
   ],
   "sources": [
     {
-      "label": "دليل Starter Story",
-      "url": "https://www.starterstory.com/data/micro-saas-ideas",
-      "coverage": "الزيارات، RPV، التقييم، وتسمية البطاقة"
+      "id": "SRC-01",
+      "title": "Tithely Homepage",
+      "publisher": "Tithely",
+      "source_type": "official_current_homepage",
+      "published_on": "2026",
+      "url": "https://get.tithe.ly/",
+      "supports": [
+        "53,000+ كنيسة",
+        "المنتجات",
+        "الأسعار الأساسية"
+      ]
     },
     {
-      "label": "دراسة حالة Tithe.ly",
+      "id": "SRC-02",
+      "title": "About Tithely",
+      "publisher": "Tithely",
+      "source_type": "official_about_page",
+      "published_on": "2026",
+      "url": "https://get.tithe.ly/about",
+      "supports": [
+        "قصة التأسيس",
+        "المؤسسون",
+        "قرابة 200 موظف عن بُعد"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Tithely Pricing",
+      "publisher": "Tithely",
+      "source_type": "official_pricing",
+      "published_on": "2026",
+      "url": "https://get.tithe.ly/pricing",
+      "supports": [
+        "الخطط",
+        "رسوم المعالجة",
+        "Enterprise"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Tithely Terms of Service",
+      "publisher": "Tithely / Your Giving Group",
+      "source_type": "official_legal_terms",
+      "published_on": "2025-11-17",
+      "url": "https://get.tithe.ly/legal/terms-of-service",
+      "supports": [
+        "Nashville",
+        "Stripe",
+        "الرسوم والتسويات",
+        "JHA"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Tithely Owned Entities",
+      "publisher": "Tithely",
+      "source_type": "official_legal_entities",
+      "published_on": "2026",
+      "url": "https://get.tithe.ly/legal/entities",
+      "supports": [
+        "Tithely",
+        "Elvanto",
+        "Breeze",
+        "Ascend Collective"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Tithely Privacy Policy",
+      "publisher": "Tithely",
+      "source_type": "official_privacy_policy",
+      "published_on": "2023-08-22",
+      "url": "https://get.tithe.ly/legal/privacy-policy",
+      "supports": [
+        "التشفير",
+        "العناوين",
+        "حماية البيانات"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Tithe.ly Portfolio Company",
+      "publisher": "Accel-KKR",
+      "source_type": "primary_investor_page",
+      "published_on": "2026",
+      "url": "https://www.accel-kkr.com/portfolio-company/tithe-ly/",
+      "supports": [
+        "استثمار ملكية 2022",
+        "مقر Remote"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Tithely and Breeze Join Forces",
+      "publisher": "Tithely",
+      "source_type": "official_acquisition_release",
+      "published_on": "2021-09-10",
+      "url": "https://get.tithe.ly/blog/tithely-and-breeze-join-forces",
+      "supports": [
+        "استحواذ Breeze",
+        "9,000+ كنيسة",
+        "30,000 كنيسة للمجموعة"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Breeze Is Now Tithely Church Management",
+      "publisher": "Tithely",
+      "source_type": "official_product_integration",
+      "published_on": "2025-11-11",
+      "url": "https://get.tithe.ly/blog/breezechms-is-integrated-into-tithely-church-management-heres-what-you-need-to-know",
+      "supports": [
+        "دمج Breeze"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Tithely and Elvanto Join Forces",
+      "publisher": "Tithely",
+      "source_type": "official_merger_announcement",
+      "published_on": "2018-11-15",
+      "url": "https://get.tithe.ly/blog/tithely-and-elvanto",
+      "supports": [
+        "اندماج Elvanto"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Tithely 2024 Product Recap",
+      "publisher": "Tithely",
+      "source_type": "official_operations_update",
+      "published_on": "2024-12",
+      "url": "https://get.tithe.ly/blog/2024-product-recap-tools-to-help-your-church-thrive",
+      "supports": [
+        "Automatic App Builder",
+        "99.98% uptime",
+        "17 مهندسًا"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Tithely NEXT 2025 Recap",
+      "publisher": "Tithely",
+      "source_type": "official_product_launch",
+      "published_on": "2025-08-21",
+      "url": "https://get.tithe.ly/blog/tithely-next-2025-recap-the-future-of-church-tech-is-here",
+      "supports": [
+        "Tithely 3.0",
+        "Groups",
+        "Tithely Tap"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Tithely Product Updates 2026",
+      "publisher": "Tithely",
+      "source_type": "official_current_updates",
+      "published_on": "2026",
+      "url": "https://get.tithe.ly/product-updates",
+      "supports": [
+        "Groups",
+        "إشعارات ثنائية الاتجاه"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Tithely State of Giving 2023",
+      "publisher": "Tithely",
+      "source_type": "official_transaction_dataset_summary",
+      "published_on": "2023",
+      "url": "https://get.tithe.ly/lp/survey",
+      "supports": [
+        "مليارات التبرعات",
+        "37,000 كنيسة",
+        "2022"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Giving USA 2026",
+      "publisher": "Giving USA Foundation",
+      "source_type": "primary_industry_report",
+      "published_on": "2026-06-23",
+      "url": "https://givingusa.org/giving-usa-charitable-giving-rose-to-617-20-billion-in-2025-surpassing-the-600-billion-mark-for-the-first-time/",
+      "supports": [
+        "617.20B",
+        "151.58B للدين",
+        "نمو 2.4%"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Tithely Integrations",
+      "publisher": "Tithely",
+      "source_type": "official_integrations",
+      "published_on": "2026",
+      "url": "https://get.tithe.ly/integrations",
+      "supports": [
+        "QuickBooks",
+        "Planning Center",
+        "CCB",
+        "API"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Tithely Church Giving",
+      "publisher": "Tithely",
+      "source_type": "official_giving_product",
+      "published_on": "2026",
+      "url": "https://get.tithe.ly/product/church-giving",
+      "supports": [
+        "طرق التبرع",
+        "PCI DSS",
+        "Cover the Fees"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Tithely Starter Story Breakdown",
+      "publisher": "Starter Story",
+      "source_type": "secondary_automated_estimate",
+      "published_on": "2024-06-28",
       "url": "https://www.starterstory.com/stories/tithely-breakdown",
-      "coverage": "المؤسس، الأصل، الإطلاق، تقدير الفريق، التبني، تحقيق الدخل، والنمو"
+      "supports": [
+        "1.5M شهريًا",
+        "16M ARR",
+        "ربحية غير مدققة",
+        "180 موظفًا"
+      ]
     },
     {
-      "label": "الموقع الرسمي",
-      "url": "https://get.tithe.ly",
-      "coverage": "حزمة المنتجات الحالية، الأسعار، والتحقق من الخطط"
+      "id": "SRC-19",
+      "title": "AI Resources and Sermonly",
+      "publisher": "Tithely",
+      "source_type": "official_ai_product_page",
+      "published_on": "2026",
+      "url": "https://get.tithe.ly/ai",
+      "supports": [
+        "Sermonly",
+        "الذكاء الاصطناعي للعظات"
+      ]
     }
   ],
   "data_quality": [
-    "تظهر الإيرادات كتقدير وتختلف عن الرقم السنوي المستخدم في عنوان المقال.",
-    "أسعار المدفوعات تاريخية وتعتبر حساسة جداً للتغيير بمرور الوقت.",
-    "بطاقة الدليل لم تعرض الإيرادات الشهرية.",
-    "لا توجد معلومات خاصة عن المتبرعين، أو سجلات مدفوعات، أو بيانات خلفية مضمنة."
+    "اعتمدت النسخة على المصادر الرسمية الحالية والأسعار والشروط وإعلانات الاستحواذ والمستثمر.",
+    "لا توجد قوائم مالية عامة؛ لذلك تُركت الإيرادات والربحية والتقييم غير معلنة.",
+    "أعداد الكنائس وحجم التبرعات مؤشرات تشغيلية وليست إيرادًا أو زيارات.",
+    "الأسعار لقطة بتاريخ 3 أغسطس 2026 وقد تتغير."
   ],
   "research_metadata": {
-    "researched_on": "2026-07-28",
-    "scope": "المعلومات العامة فقط",
-    "source_method": "Starter Story",
+    "researched_on": "2026-08-03",
+    "scope": "Professional V2 — company, pricing, payments, ownership, acquisitions, products and evidence validation",
+    "source_method": "Official company + legal terms + investor + Giving USA + limited secondary claim audit",
     "private_backend_data_included": false,
-    "copyright_note": "ملخص مستقل"
+    "copyright_note": "دراسة حالة تحليلية مبنية على معلومات عامة"
   },
-  "id": "tithely"
+  "id": "tithely",
+  "market_data": {
+    "target_audience": "الكنائس والوزارات والمنظمات الدينية، من الكنائس الجديدة والصغيرة إلى الكنائس الكبيرة، وموظفو الكنيسة والمتطوعون والأعضاء والمانحون.",
+    "market_size": "لا يوجد رقم مستقل لسوق Tithely القابل للخدمة عالميًا. للسياق الأمريكي، بلغ إجمالي العطاء الخيري 617.20 مليار دولار في 2025، وحصلت المؤسسات الدينية على 151.58 مليار دولار، بنمو اسمي 2.4% وتغير حقيقي -0.2%. هذه القيمة أوسع من التبرعات الرقمية ولا تمثل إيراد Tithely أو حصتها.",
+    "growth_rate": "لا تنشر الشركة نمو الإيراد. ارتفع الانتشار المعلن من 37,000+ كنيسة في 2023 إلى 53,000+ حاليًا، أي زيادة اسمية تزيد على 43%، لكنها ليست معدل نمو سنويًا دقيقًا ولا عدد حسابات مدفوعة."
+  },
+  "financials": {
+    "initial_investment": "رأس المال الأولي غير معلن. بنى بارناباس النسخة الأولى خلال ستة أشهر، لكن لا يوجد مبلغ تأسيسي منشور. استثمار Accel-KKR لعام 2022 وقيمتا Elvanto وBreeze غير معلنة، لذلك لا يمكن حساب تمويل تراكمي.",
+    "valuation": "غير معلن. لم تنشر Tithely أو Accel-KKR قيمة الاستثمار أو نسبة الملكية أو تقييم ما قبل الصفقة أو بعدها.",
+    "revenue_streams": [
+      "رسوم معالجة البطاقات وACH وAmerican Express.",
+      "اشتراك All Access.",
+      "اشتراك Church Management.",
+      "اشتراكات التطبيق والموقع وText-to-Give وWorship.",
+      "عقود Enterprise ومعدلات متفاوض عليها.",
+      "خدمات ورسائل وفحوصات وشراكات إضافية، مع عدم نشر المزيج أو الهامش."
+    ]
+  },
+  "verification": {
+    "status": "verified_from_official_company_legal_pricing_product_acquisition_investor_and_primary_philanthropy_sources",
+    "verified_on": "2026-08-03",
+    "source_policy": "أُعطيت الأولوية لموقع Tithely والأسعار والشروط والخصوصية والكيانات وإعلانات الاستحواذ والمنتجات، ثم Accel-KKR وGiving USA. استُخدم Starter Story فقط لتدقيق الادعاءات الأصلية المتعارضة. Tithely شركة خاصة ولا يوجد مُصدر عام مطابق في SEC/EDGAR.",
+    "important_notes": [
+      "الإيراد وARR والربح والتقييم غير معلنة رسميًا.",
+      "1.5M شهريًا تعادل 18M سنويًا وتتعارض مع 16M ARR في المصدر نفسه.",
+      "250K زيارة و6 دولارات لكل زائر تقديران خارجيان بلا منهجية.",
+      "53,000+ عدد كنائس وليس مانحين أو مستخدمين شهريين.",
+      "مليارات التبرعات المعالجة ليست إيراد الشركة.",
+      "Giving دون اشتراك شهري لكنه يفرض رسوم معالجة.",
+      "Accel-KKR استثمرت عام 2022 دون قيمة أو نسبة معلنة.",
+      "صفقتا Elvanto وBreeze غير معلنتي القيمة.",
+      "Breeze كان يخدم 9,000+ كنيسة وقت الاستحواذ ولا يجوز جمعها آليًا مع الرقم الحالي.",
+      "فريق الشركة يقارب 200 ويعمل عن بُعد.",
+      "تختلف المواد بين 2014 و2015 بينما بدأت الفكرة في 2012.",
+      "تعريف المؤسسين غير موحد بين المواد الرسمية.",
+      "Nashville عنوان قانوني والمقر التشغيلي Remote.",
+      "Stripe مقدم المعالجة الحالي وفق الشروط.",
+      "PCI DSS Level 1 منسوب إلى شريك المعالجة أو البنك، وليس شهادة SOC 2 مستقلة للشركة.",
+      "حُذف AWS لعدم إثباته كمكدس الاستضافة الكامل."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تفصل الإيراد عن التبرعات، والكنائس عن الزيارات، والاستثمار عن التقييم.",
+    "status_values": {
+      "verified": "مدعوم رسميًا",
+      "not_disclosed": "غير منشور",
+      "not_computable": "غير قابل للحساب",
+      "verified_not_solopreneur": "ليس مشروعًا فرديًا",
+      "verified_with_variance": "يوجد اختلاف تعريفي",
+      "company_reported": "رقم تقريبي من الشركة",
+      "verified_values_undisclosed": "الحدث مثبت والقيمة غير معلنة",
+      "unsupported_secondary_claim": "ادعاء ثانوي غير مدعوم",
+      "verified_and_analytical": "حقائق مع تحليل",
+      "adjacent_market": "سياق سوقي أوسع",
+      "company_reported_reach": "انتشار معلن بحدود",
+      "verified_products_no_speculative_stack": "قدرات مثبتة دون مكدس مفترض",
+      "verified_milestones": "محطات مثبتة"
+    },
+    "confidence_scale": {
+      "high": "مصدر رسمي أو أولي",
+      "medium_high": "معلومة مثبتة مع حدود",
+      "medium": "تحليل مهني"
+    }
+  },
+  "evidence_map": {
+    "$.summary": {
+      "field_value": "Tithely منصة أمريكية متخصصة في تقنية الكنائس، بدأت من تبرع عبر الهاتف ثم توسعت إلى منظومة تجمع معالجة التبرعات وإدارة الأعضاء والمتطوعين والخدمات والرسائل والمواقع والتطبيقات. تخدم حاليًا أكثر من 53 ألف كنيسة، وتحقق الدخل من رسوم المعالجة والاشتراكات، مع استثمار ملكية غير معلن القيمة من Accel-KKR منذ 2022. الإيراد والربحية والتقييم والزيارات غير منشورة رسميًا.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "current_profile",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "النموذج والانتشار والاستثمار مثبتة مع غياب الأرقام المالية.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Tithely Homepage",
+          "publisher": "Tithely",
+          "source_type": "official_current_homepage",
+          "url": "https://get.tithe.ly/",
+          "evidence_type": "direct",
+          "source_locator": "Current metrics",
+          "supports": "53,000+ كنيسة",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Tithely Pricing",
+          "publisher": "Tithely",
+          "source_type": "official_pricing",
+          "url": "https://get.tithe.ly/pricing",
+          "evidence_type": "direct",
+          "source_locator": "Pricing",
+          "supports": "الرسوم والاشتراكات",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Tithe.ly Portfolio Company",
+          "publisher": "Accel-KKR",
+          "source_type": "primary_investor_page",
+          "url": "https://www.accel-kkr.com/portfolio-company/tithe-ly/",
+          "evidence_type": "direct",
+          "source_locator": "Portfolio",
+          "supports": "استثمار 2022",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "الإيراد والربحية والتقييم غير منشورة."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. Tithely شركة خاصة ولا تنشر إيرادًا شهريًا أو سنويًا مدققًا أو ARR أو صافي ربح. تقدير Starter Story البالغ 1.5 مليون دولار شهريًا يتعارض حسابيًا مع عنوان يذكر 16 مليون دولار ARR؛ فالرقم الشهري يعادل 18 مليون دولار سنويًا. لم تنشر الشركة ما يثبت أيًا منهما.",
+      "verification_status": "not_disclosed",
+      "confidence": "high",
+      "claim_type": "revenue_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصدر الثانوي يعرض تقديرين متعارضين ولا يوجد إفصاح رسمي.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-18",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-18",
+          "title": "Tithely Starter Story Breakdown",
+          "publisher": "Starter Story",
+          "source_type": "secondary_automated_estimate",
+          "url": "https://www.starterstory.com/stories/tithely-breakdown",
+          "evidence_type": "secondary_unverified",
+          "source_locator": "Revenue estimate",
+          "supports": "1.5M/month و16M ARR",
+          "published_on": "2024-06-28"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Tithely Pricing",
+          "publisher": "Tithely",
+          "source_type": "official_pricing",
+          "url": "https://get.tithe.ly/pricing",
+          "evidence_type": "direct",
+          "source_locator": "Pricing",
+          "supports": "أسعار لا إيراد",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا توجد قوائم مالية."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن. تعرض المصادر الرسمية أكثر من 53,000 كنيسة تستخدم المنصة، لكن هذا عدد مؤسسات تستخدم منتجات Tithely وليس زيارات get.tithe.ly أو مانحين أو مستخدمين نشطين شهريًا. تقدير 250 ألف زيارة شهريًا في الملف الأصلي صادر عن دليل خارجي دون منهجية منشورة.",
+      "verification_status": "not_disclosed",
+      "confidence": "high",
+      "claim_type": "traffic_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "عدد الكنائس منفصل عن الزيارات والمانحين.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-01",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Tithely Homepage",
+          "publisher": "Tithely",
+          "source_type": "official_current_homepage",
+          "url": "https://get.tithe.ly/",
+          "evidence_type": "direct",
+          "source_locator": "Current reach",
+          "supports": "53,000+ كنيسة",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Tithely Starter Story Breakdown",
+          "publisher": "Starter Story",
+          "source_type": "secondary_automated_estimate",
+          "url": "https://www.starterstory.com/stories/tithely-breakdown",
+          "evidence_type": "secondary_unverified",
+          "source_locator": "Traffic estimate",
+          "supports": "250K/month",
+          "published_on": "2024-06-28"
+        }
+      ],
+      "limitations": "لا يوجد قياس رسمي للزيارات."
+    },
+    "$.directory_snapshot.revenue_per_visitor": {
+      "field_value": "غير قابل للحساب؛ الإيراد والزيارات غير معلنين، كما أن دخل الشركة يأتي من رسوم معاملات واشتراكات وعقود مؤسسات وليس من زيارات الموقع فقط.",
+      "verification_status": "not_computable",
+      "confidence": "high",
+      "claim_type": "invalid_ratio",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "كلا المدخلين غير منشورين.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-03",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Tithely Pricing",
+          "publisher": "Tithely",
+          "source_type": "official_pricing",
+          "url": "https://get.tithe.ly/pricing",
+          "evidence_type": "direct",
+          "source_locator": "Commercial model",
+          "supports": "معاملات واشتراكات",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Tithely Starter Story Breakdown",
+          "publisher": "Starter Story",
+          "source_type": "secondary_automated_estimate",
+          "url": "https://www.starterstory.com/stories/tithely-breakdown",
+          "evidence_type": "secondary_unverified",
+          "source_locator": "RPV",
+          "supports": "تقدير خارجي",
+          "published_on": "2024-06-28"
+        }
+      ],
+      "limitations": "لا يمكن حساب النسبة."
+    },
+    "$.directory_snapshot.solopreneur_score": {
+      "field_value": "0.0 — الشركة مدعومة باستثمار ملكية، ولديها فريق عالمي عن بُعد يقارب 200 شخص وتخدم عشرات آلاف الكنائس.",
+      "verification_status": "verified_not_solopreneur",
+      "confidence": "high",
+      "claim_type": "company_scale",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الفريق والاستثمار والحجم يستبعدان المشروع الفردي.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-02",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "About Tithely",
+          "publisher": "Tithely",
+          "source_type": "official_about_page",
+          "url": "https://get.tithe.ly/about",
+          "evidence_type": "direct",
+          "source_locator": "Team",
+          "supports": "قرابة 200",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Tithe.ly Portfolio Company",
+          "publisher": "Accel-KKR",
+          "source_type": "primary_investor_page",
+          "url": "https://www.accel-kkr.com/portfolio-company/tithe-ly/",
+          "evidence_type": "direct",
+          "source_locator": "Investment",
+          "supports": "Equity",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "الدرجة تحليلية."
+    },
+    "$.company.business_model": {
+      "field_value": "منصة رأسية B2B2C تجمع المدفوعات وبرمجيات إدارة الكنائس. تقدم Giving دون اشتراك شهري، مع رسوم أمريكية معلنة قدرها 2.9% + 0.30 دولار للبطاقات، و1% + 0.30 دولار لـACH، و3.5% + 0.30 دولار لـAmerican Express. تبيع كذلك All Access بـ119 دولارًا شهريًا، وChurch Management بـ72 دولارًا، وCustom Church App بـ89 دولارًا، وWebsite بـ19 دولارًا، إضافة إلى Text-to-Give وWorship وخطط Enterprise. تحدد الشروط Stripe كمقدم معالجة حاليًا، وتُحوّل الأموال للكنيسة بعد خصم الرسوم والاستردادات والاعتراضات.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "fees_and_subscriptions",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الأسعار والشروط تثبت المعالجة والاشتراكات.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-03",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Tithely Pricing",
+          "publisher": "Tithely",
+          "source_type": "official_pricing",
+          "url": "https://get.tithe.ly/pricing",
+          "evidence_type": "direct",
+          "source_locator": "Rates and plans",
+          "supports": "الأسعار",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Tithely Terms of Service",
+          "publisher": "Tithely / Your Giving Group",
+          "source_type": "official_legal_terms",
+          "url": "https://get.tithe.ly/legal/terms-of-service",
+          "evidence_type": "direct",
+          "source_locator": "Payments",
+          "supports": "Stripe والتسوية",
+          "published_on": "2025-11-17"
+        }
+      ],
+      "limitations": "المزيج والهوامش غير معلنة."
+    },
+    "$.company.founder": {
+      "field_value": "دين سويتمان، بارناباس «بارن» سويتمان، وفرانك باري؛ وتذكر صفحة القصة الرسمية ستيف كلاين ضمن فريق التوسع المبكر.",
+      "verification_status": "verified_with_variance",
+      "confidence": "medium_high",
+      "claim_type": "founding_team",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الأسماء والأدوار مثبتة لكن التعريف يختلف.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "About Tithely",
+          "publisher": "Tithely",
+          "source_type": "official_about_page",
+          "url": "https://get.tithe.ly/about",
+          "evidence_type": "direct",
+          "source_locator": "Origin and leadership",
+          "supports": "Dean/Barn/Frank/Steve",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا توجد قائمة قانونية موحدة."
+    },
+    "$.company.employees": {
+      "field_value": "فريق عالمي يعمل بالكامل عن بُعد ويضم قرابة 200 شخص وفق صفحة About الحالية.",
+      "verification_status": "company_reported",
+      "confidence": "high",
+      "claim_type": "team_size",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "صفحة About تعرض فريقًا يقارب 200 عن بُعد.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-02",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "About Tithely",
+          "publisher": "Tithely",
+          "source_type": "official_about_page",
+          "url": "https://get.tithe.ly/about",
+          "evidence_type": "direct",
+          "source_locator": "Team section",
+          "supports": "Nearly 200",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Tithely 2024 Product Recap",
+          "publisher": "Tithely",
+          "source_type": "official_operations_update",
+          "url": "https://get.tithe.ly/blog/2024-product-recap-tools-to-help-your-church-thrive",
+          "evidence_type": "direct",
+          "source_locator": "2024 engineering",
+          "supports": "17 engineers",
+          "published_on": "2024-12"
+        }
+      ],
+      "limitations": "عدد تقريبي."
+    },
+    "$.company.started": {
+      "field_value": "بدأت الفكرة عام 2012، وبنى بارناباس النسخة الأولى خلال ستة أشهر. بدأ التوسع التجاري عام 2014، بينما تستخدم بعض المواد الرسمية عام 2015 كتاريخ تأسيس أو تطوير التطبيق؛ لذلك حُفظت المراحل بدل اختيار سنة واحدة.",
+      "verification_status": "verified_with_timeline_variance",
+      "confidence": "medium_high",
+      "claim_type": "idea_and_launch",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "2012 للفكرة و2014/2015 للتوسع أو التأسيس.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-02",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "About Tithely",
+          "publisher": "Tithely",
+          "source_type": "official_about_page",
+          "url": "https://get.tithe.ly/about",
+          "evidence_type": "direct",
+          "source_locator": "Story",
+          "supports": "2012 and 2014",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Tithe.ly Portfolio Company",
+          "publisher": "Accel-KKR",
+          "source_type": "primary_investor_page",
+          "url": "https://www.accel-kkr.com/portfolio-company/tithe-ly/",
+          "evidence_type": "direct",
+          "source_locator": "Investor profile",
+          "supports": "2015",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "قد يعكس الفرق التأسيس القانوني مقابل الإطلاق."
+    },
+    "$.company.location": {
+      "field_value": "شركة أمريكية بفريق موزع عن بُعد. العنوان القانوني في 901 Woodland Street, Suite 104, Nashville, Tennessee 37206، بينما تصف Accel-KKR المقر بأنه Remote. كان الإطلاق الأول في كنيسة المؤسس في أتلانتا.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "legal_and_remote_location",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "Nashville عنوان قانوني والمقر التشغيلي Remote.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-04",
+        "SRC-06",
+        "SRC-07",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Tithely Terms of Service",
+          "publisher": "Tithely / Your Giving Group",
+          "source_type": "official_legal_terms",
+          "url": "https://get.tithe.ly/legal/terms-of-service",
+          "evidence_type": "direct",
+          "source_locator": "Legal address",
+          "supports": "Nashville",
+          "published_on": "2025-11-17"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Tithely Privacy Policy",
+          "publisher": "Tithely",
+          "source_type": "official_privacy_policy",
+          "url": "https://get.tithe.ly/legal/privacy-policy",
+          "evidence_type": "direct",
+          "source_locator": "Privacy address",
+          "supports": "Nashville",
+          "published_on": "2023-08-22"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Tithe.ly Portfolio Company",
+          "publisher": "Accel-KKR",
+          "source_type": "primary_investor_page",
+          "url": "https://www.accel-kkr.com/portfolio-company/tithe-ly/",
+          "evidence_type": "direct",
+          "source_locator": "HQ",
+          "supports": "Remote",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Tithely Owned Entities",
+          "publisher": "Tithely",
+          "source_type": "official_legal_entities",
+          "url": "https://get.tithe.ly/legal/entities",
+          "evidence_type": "direct",
+          "source_locator": "Owned entities",
+          "supports": "US entity and subsidiaries",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "أتلانتا موقع الإطلاق."
+    },
+    "$.company.funding": {
+      "field_value": "لا تنشر Tithely إجمالي تمويل أو جولات تقليدية. تؤكد Accel-KKR استثمار ملكية عام 2022 دون إعلان القيمة أو نسبة الملكية. كما اندمجت Tithely مع Elvanto في 2018 واستحوذت على Breeze في 2021 دون نشر أسعار الصفقتين.",
+      "verification_status": "verified_values_undisclosed",
+      "confidence": "high",
+      "claim_type": "equity_and_m_and_a",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الاستثمار والصفقات مثبتة وقيمها غير معلنة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-07",
+        "SRC-08",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Tithe.ly Portfolio Company",
+          "publisher": "Accel-KKR",
+          "source_type": "primary_investor_page",
+          "url": "https://www.accel-kkr.com/portfolio-company/tithe-ly/",
+          "evidence_type": "direct",
+          "source_locator": "Equity 2022",
+          "supports": "القيمة غير معلنة",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Tithely and Breeze Join Forces",
+          "publisher": "Tithely",
+          "source_type": "official_acquisition_release",
+          "url": "https://get.tithe.ly/blog/tithely-and-breeze-join-forces",
+          "evidence_type": "direct",
+          "source_locator": "Breeze",
+          "supports": "استحواذ",
+          "published_on": "2021-09-10"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Tithely and Elvanto Join Forces",
+          "publisher": "Tithely",
+          "source_type": "official_merger_announcement",
+          "url": "https://get.tithe.ly/blog/tithely-and-elvanto",
+          "evidence_type": "direct",
+          "source_locator": "Elvanto",
+          "supports": "اندماج",
+          "published_on": "2018-11-15"
+        }
+      ],
+      "limitations": "لا يمكن حساب تمويل تراكمي."
+    },
+    "$.company.profitability": {
+      "field_value": "غير معلنة. تصنيف Starter Story للشركة كمربحة غير مدعوم بقوائم مالية أو EBITDA أو تدفق نقدي منشور.",
+      "verification_status": "not_disclosed",
+      "confidence": "high",
+      "claim_type": "profitability",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الادعاء الثانوي غير مدعوم بقوائم.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-18",
+          "title": "Tithely Starter Story Breakdown",
+          "publisher": "Starter Story",
+          "source_type": "secondary_automated_estimate",
+          "url": "https://www.starterstory.com/stories/tithely-breakdown",
+          "evidence_type": "secondary_unverified",
+          "source_locator": "Profitability label",
+          "supports": "غير مدقق",
+          "published_on": "2024-06-28"
+        }
+      ],
+      "limitations": "قد تكون مربحة لكن لا يمكن التحقق."
+    },
+    "$.company.public_revenue_claim": {
+      "field_value": "لا يوجد ادعاء إيراد رسمي حديث. المصدر الثانوي يذكر 1.5 مليون دولار شهريًا، بينما عنوانه يشير إلى 16 مليون دولار ARR؛ الرقمان متعارضان وغير موثقين.",
+      "verification_status": "unsupported_secondary_claim",
+      "confidence": "high",
+      "claim_type": "revenue_claim",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التقديران متعارضان وغير رسميين.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-18",
+          "title": "Tithely Starter Story Breakdown",
+          "publisher": "Starter Story",
+          "source_type": "secondary_automated_estimate",
+          "url": "https://www.starterstory.com/stories/tithely-breakdown",
+          "evidence_type": "secondary_unverified",
+          "source_locator": "Estimate",
+          "supports": "1.5M/month vs 16M ARR",
+          "published_on": "2024-06-28"
+        }
+      ],
+      "limitations": "لا توجد قوائم."
+    },
+    "$.problem_and_product": {
+      "field_value": [
+        "التبرعات المرتبطة بخدمة أسبوعية تجعل تدفق الكنيسة حساسًا للطقس والسفر والمرض والموسمية.",
+        "بعد حل الدفع، تتجزأ بيانات الأعضاء والتبرعات والتقارير والفعاليات والمتطوعين والرسائل والموقع والتطبيق بين أدوات متعددة.",
+        "توحد Tithely التبرع عبر الويب والجوال والنص والكشك وNFC مع التبرعات المتكررة، وإدارة الأشخاص والمجموعات والخدمات والتواصل."
+      ],
+      "verification_status": "verified_and_analytical",
+      "confidence": "medium_high",
+      "claim_type": "vertical_problem_solution",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "مشكلة التبرع والتجزؤ مستمدة من قصة التأسيس والمنتجات.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-02",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "About Tithely",
+          "publisher": "Tithely",
+          "source_type": "official_about_page",
+          "url": "https://get.tithe.ly/about",
+          "evidence_type": "direct",
+          "source_locator": "Origin problem",
+          "supports": "التبرع عبر الهاتف",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Tithely Homepage",
+          "publisher": "Tithely",
+          "source_type": "official_current_homepage",
+          "url": "https://get.tithe.ly/",
+          "evidence_type": "direct",
+          "source_locator": "Current suite",
+          "supports": "Giving and admin",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "الأثر تحليل مهني."
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا يوجد رقم مستقل لسوق Tithely القابل للخدمة عالميًا. للسياق الأمريكي، بلغ إجمالي العطاء الخيري 617.20 مليار دولار في 2025، وحصلت المؤسسات الدينية على 151.58 مليار دولار، بنمو اسمي 2.4% وتغير حقيقي -0.2%. هذه القيمة أوسع من التبرعات الرقمية ولا تمثل إيراد Tithely أو حصتها.",
+      "verification_status": "adjacent_market",
+      "confidence": "high",
+      "claim_type": "religious_giving_context",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "Giving USA يصف السوق الأوسع.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-15",
+          "title": "Giving USA 2026",
+          "publisher": "Giving USA Foundation",
+          "source_type": "primary_industry_report",
+          "url": "https://givingusa.org/giving-usa-charitable-giving-rose-to-617-20-billion-in-2025-surpassing-the-600-billion-mark-for-the-first-time/",
+          "evidence_type": "direct",
+          "source_locator": "2025 giving",
+          "supports": "151.58B religion",
+          "published_on": "2026-06-23"
+        }
+      ],
+      "limitations": "لا يمثل TAM أو إيراد Tithely."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا تنشر الشركة نمو الإيراد. ارتفع الانتشار المعلن من 37,000+ كنيسة في 2023 إلى 53,000+ حاليًا، أي زيادة اسمية تزيد على 43%، لكنها ليست معدل نمو سنويًا دقيقًا ولا عدد حسابات مدفوعة.",
+      "verification_status": "company_reported_reach",
+      "confidence": "medium_high",
+      "claim_type": "church_count_growth",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الانتشار ارتفع من 37K إلى 53K+.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-14",
+        "SRC-01",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-14",
+          "title": "Tithely State of Giving 2023",
+          "publisher": "Tithely",
+          "source_type": "official_transaction_dataset_summary",
+          "url": "https://get.tithe.ly/lp/survey",
+          "evidence_type": "direct",
+          "source_locator": "2023 reach",
+          "supports": "37K",
+          "published_on": "2023"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Tithely Homepage",
+          "publisher": "Tithely",
+          "source_type": "official_current_homepage",
+          "url": "https://get.tithe.ly/",
+          "evidence_type": "direct",
+          "source_locator": "Current reach",
+          "supports": "53K+",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Tithely and Breeze Join Forces",
+          "publisher": "Tithely",
+          "source_type": "official_acquisition_release",
+          "url": "https://get.tithe.ly/blog/tithely-and-breeze-join-forces",
+          "evidence_type": "direct",
+          "source_locator": "2021 reach",
+          "supports": "30K",
+          "published_on": "2021-09-10"
+        }
+      ],
+      "limitations": "ليست CAGR أو نمو إيراد."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "رأس المال الأولي غير معلن. بنى بارناباس النسخة الأولى خلال ستة أشهر، لكن لا يوجد مبلغ تأسيسي منشور. استثمار Accel-KKR لعام 2022 وقيمتا Elvanto وBreeze غير معلنة، لذلك لا يمكن حساب تمويل تراكمي.",
+      "verification_status": "not_disclosed",
+      "confidence": "high",
+      "claim_type": "founding_capital",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد مبلغ تأسيسي أو قيم صفقات.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-02",
+        "SRC-07",
+        "SRC-08",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "About Tithely",
+          "publisher": "Tithely",
+          "source_type": "official_about_page",
+          "url": "https://get.tithe.ly/about",
+          "evidence_type": "direct",
+          "source_locator": "Prototype",
+          "supports": "لا مبلغ",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Tithe.ly Portfolio Company",
+          "publisher": "Accel-KKR",
+          "source_type": "primary_investor_page",
+          "url": "https://www.accel-kkr.com/portfolio-company/tithe-ly/",
+          "evidence_type": "direct",
+          "source_locator": "Equity",
+          "supports": "لا قيمة",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Tithely and Breeze Join Forces",
+          "publisher": "Tithely",
+          "source_type": "official_acquisition_release",
+          "url": "https://get.tithe.ly/blog/tithely-and-breeze-join-forces",
+          "evidence_type": "direct",
+          "source_locator": "Breeze",
+          "supports": "لا سعر",
+          "published_on": "2021-09-10"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Tithely and Elvanto Join Forces",
+          "publisher": "Tithely",
+          "source_type": "official_merger_announcement",
+          "url": "https://get.tithe.ly/blog/tithely-and-elvanto",
+          "evidence_type": "direct",
+          "source_locator": "Elvanto",
+          "supports": "لا سعر",
+          "published_on": "2018-11-15"
+        }
+      ],
+      "limitations": "لا يمكن جمع رقم تمويل."
+    },
+    "$.financials.valuation": {
+      "field_value": "غير معلن. لم تنشر Tithely أو Accel-KKR قيمة الاستثمار أو نسبة الملكية أو تقييم ما قبل الصفقة أو بعدها.",
+      "verification_status": "not_disclosed",
+      "confidence": "high",
+      "claim_type": "valuation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا توجد قيمة صفقة أو نسبة ملكية.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Tithe.ly Portfolio Company",
+          "publisher": "Accel-KKR",
+          "source_type": "primary_investor_page",
+          "url": "https://www.accel-kkr.com/portfolio-company/tithe-ly/",
+          "evidence_type": "direct",
+          "source_locator": "Investment",
+          "supports": "لا قيمة أو حصة",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا يمكن الاشتقاق."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "رسوم معالجة البطاقات وACH وAmerican Express.",
+        "اشتراك All Access.",
+        "اشتراك Church Management.",
+        "اشتراكات التطبيق والموقع وText-to-Give وWorship.",
+        "عقود Enterprise ومعدلات متفاوض عليها.",
+        "خدمات ورسائل وفحوصات وشراكات إضافية، مع عدم نشر المزيج أو الهامش."
+      ],
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "revenue_channels",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "قنوات الدخل مثبتة بالأسعار والشروط.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-03",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Tithely Pricing",
+          "publisher": "Tithely",
+          "source_type": "official_pricing",
+          "url": "https://get.tithe.ly/pricing",
+          "evidence_type": "direct",
+          "source_locator": "Plans",
+          "supports": "الاشتراكات والرسوم",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Tithely Terms of Service",
+          "publisher": "Tithely / Your Giving Group",
+          "source_type": "official_legal_terms",
+          "url": "https://get.tithe.ly/legal/terms-of-service",
+          "evidence_type": "direct",
+          "source_locator": "Fees",
+          "supports": "المعالجة والتسوية",
+          "published_on": "2025-11-17"
+        }
+      ],
+      "limitations": "المزيج والهوامش غير منشورة."
+    },
+    "$.tools": {
+      "field_value": [
+        "Tithely Giving للتبرع عبر الويب والجوال وApple Pay وGoogle Pay والبطاقات وACH.",
+        "QuickGive والتبرعات المتكررة والحملات والتعهدات وCover the Fees.",
+        "Text-to-Give والتبرع عبر الكشك وTithely Tap بتقنية NFC.",
+        "تقارير التبرعات والإيداعات والاستردادات والاعتراضات والكشوف الضريبية.",
+        "Tithely Church Management لقاعدة الأشخاص والمجموعات والمتطوعين والتقويم والأتمتة.",
+        "Kids & Event Check-In وتخطيط الخدمات وWorship Tools.",
+        "الرسائل النصية والبريد والإشعارات الثنائية داخل التطبيق.",
+        "Custom Church App مع منشئ تطبيق تلقائي مدعوم بالذكاء الاصطناعي.",
+        "Tithely Sites لبناء مواقع الكنائس والقوالب والأحداث والبث.",
+        "Sermonly للمساعدة في البحث وإعداد العظات بالذكاء الاصطناعي مع مراجعة بشرية.",
+        "Tithely 3.0 كطبقة موحدة للأشخاص والتبرعات والمشاركة.",
+        "تكاملات QuickBooks Online وPlanning Center وCCB وMinistry Platform وRock RMS وغيرها.",
+        "واجهات API وتصدير البيانات.",
+        "Stripe Connect لمعالجة المدفوعات وJHA لبعض خدمات مسح الشيكات.",
+        "تشفير HTTPS والبيانات الساكنة ومعايير PCI DSS Level 1 لدى الشريك المصرفي."
+      ],
+      "verification_status": "verified_products_no_speculative_stack",
+      "confidence": "high",
+      "claim_type": "product_capabilities",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "قائمة قدرات وتكاملات وأمن موثقة.",
+      "source_count": 8,
+      "source_ids": [
+        "SRC-01",
+        "SRC-12",
+        "SRC-13",
+        "SRC-16",
+        "SRC-17",
+        "SRC-19",
+        "SRC-04",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Tithely Homepage",
+          "publisher": "Tithely",
+          "source_type": "official_current_homepage",
+          "url": "https://get.tithe.ly/",
+          "evidence_type": "direct",
+          "source_locator": "Products",
+          "supports": "Giving/ChMS/apps/sites",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Tithely NEXT 2025 Recap",
+          "publisher": "Tithely",
+          "source_type": "official_product_launch",
+          "url": "https://get.tithe.ly/blog/tithely-next-2025-recap-the-future-of-church-tech-is-here",
+          "evidence_type": "direct",
+          "source_locator": "2025 launch",
+          "supports": "3.0 and Tap",
+          "published_on": "2025-08-21"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Tithely Product Updates 2026",
+          "publisher": "Tithely",
+          "source_type": "official_current_updates",
+          "url": "https://get.tithe.ly/product-updates",
+          "evidence_type": "direct",
+          "source_locator": "2026 updates",
+          "supports": "Groups and notifications",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Tithely Integrations",
+          "publisher": "Tithely",
+          "source_type": "official_integrations",
+          "url": "https://get.tithe.ly/integrations",
+          "evidence_type": "direct",
+          "source_locator": "Integrations",
+          "supports": "QuickBooks etc",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Tithely Church Giving",
+          "publisher": "Tithely",
+          "source_type": "official_giving_product",
+          "url": "https://get.tithe.ly/product/church-giving",
+          "evidence_type": "direct",
+          "source_locator": "Security",
+          "supports": "PCI and giving",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "AI Resources and Sermonly",
+          "publisher": "Tithely",
+          "source_type": "official_ai_product_page",
+          "url": "https://get.tithe.ly/ai",
+          "evidence_type": "direct",
+          "source_locator": "AI",
+          "supports": "Sermonly",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Tithely Terms of Service",
+          "publisher": "Tithely / Your Giving Group",
+          "source_type": "official_legal_terms",
+          "url": "https://get.tithe.ly/legal/terms-of-service",
+          "evidence_type": "direct",
+          "source_locator": "Processors",
+          "supports": "Stripe/JHA",
+          "published_on": "2025-11-17"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Tithely Privacy Policy",
+          "publisher": "Tithely",
+          "source_type": "official_privacy_policy",
+          "url": "https://get.tithe.ly/legal/privacy-policy",
+          "evidence_type": "direct",
+          "source_locator": "Encryption",
+          "supports": "HTTPS/rest",
+          "published_on": "2023-08-22"
+        }
+      ],
+      "limitations": "AWS لم يُثبت كمكدس كامل."
+    },
+    "$.growth": {
+      "field_value": [
+        "ارتفع الانتشار المعلن من أكثر من 30,000 كنيسة بعد Breeze في 2021، إلى 37,000+ في 2023، ثم 53,000+ حاليًا.",
+        "الانتقال من 37,000 إلى 53,000 يمثل زيادة اسمية تتجاوز 43%، لكنه ليس CAGR دقيقًا بسبب اختلاف التواريخ والتعريفات.",
+        "حللت الشركة مليارات الدولارات من التبرعات لأكثر من 37,000 كنيسة، وقالت إنها ساعدت الكنائس على استقبال عدة مليارات في 2022.",
+        "استثمار Accel-KKR في 2022 دعم مرحلة التوسع، مع بقاء القيمة ونسبة الملكية غير معلنتين.",
+        "أطلقت Tithely 3.0 في 2025، وأضافت في 2026 Groups وإشعارات ثنائية الاتجاه وTithely Tap."
+      ],
+      "verification_status": "verified_milestones",
+      "confidence": "medium_high",
+      "claim_type": "reach_and_product_growth",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المحطات التشغيلية والاستثمارية مثبتة.",
+      "source_count": 7,
+      "source_ids": [
+        "SRC-08",
+        "SRC-14",
+        "SRC-01",
+        "SRC-07",
+        "SRC-09",
+        "SRC-12",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "Tithely and Breeze Join Forces",
+          "publisher": "Tithely",
+          "source_type": "official_acquisition_release",
+          "url": "https://get.tithe.ly/blog/tithely-and-breeze-join-forces",
+          "evidence_type": "direct",
+          "source_locator": "2021",
+          "supports": "30K",
+          "published_on": "2021-09-10"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Tithely State of Giving 2023",
+          "publisher": "Tithely",
+          "source_type": "official_transaction_dataset_summary",
+          "url": "https://get.tithe.ly/lp/survey",
+          "evidence_type": "direct",
+          "source_locator": "2022/2023",
+          "supports": "billions and 37K",
+          "published_on": "2023"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Tithely Homepage",
+          "publisher": "Tithely",
+          "source_type": "official_current_homepage",
+          "url": "https://get.tithe.ly/",
+          "evidence_type": "direct",
+          "source_locator": "Current",
+          "supports": "53K+",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Tithe.ly Portfolio Company",
+          "publisher": "Accel-KKR",
+          "source_type": "primary_investor_page",
+          "url": "https://www.accel-kkr.com/portfolio-company/tithe-ly/",
+          "evidence_type": "direct",
+          "source_locator": "2022",
+          "supports": "Accel-KKR",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Breeze Is Now Tithely Church Management",
+          "publisher": "Tithely",
+          "source_type": "official_product_integration",
+          "url": "https://get.tithe.ly/blog/breezechms-is-integrated-into-tithely-church-management-heres-what-you-need-to-know",
+          "evidence_type": "direct",
+          "source_locator": "2025",
+          "supports": "Breeze integration",
+          "published_on": "2025-11-11"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Tithely NEXT 2025 Recap",
+          "publisher": "Tithely",
+          "source_type": "official_product_launch",
+          "url": "https://get.tithe.ly/blog/tithely-next-2025-recap-the-future-of-church-tech-is-here",
+          "evidence_type": "direct",
+          "source_locator": "2025",
+          "supports": "Tithely 3.0",
+          "published_on": "2025-08-21"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Tithely Product Updates 2026",
+          "publisher": "Tithely",
+          "source_type": "official_current_updates",
+          "url": "https://get.tithe.ly/product-updates",
+          "evidence_type": "direct",
+          "source_locator": "2026",
+          "supports": "Groups and notifications",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "حجم التبرعات ليس إيرادًا."
+    },
+    "$.company.founders_count": {
+      "field_value": "غير موحد رسميًا؛ ثلاثة مؤسسين واضحين، مع ذكر ستيف كلاين ضمن فريق التوسع المبكر.",
+      "verification_status": "verified_with_variance",
+      "confidence": "medium_high",
+      "claim_type": "founder_count",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التعريف يختلف بين الصفحات.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "About Tithely",
+          "publisher": "Tithely",
+          "source_type": "official_about_page",
+          "url": "https://get.tithe.ly/about",
+          "evidence_type": "direct",
+          "source_locator": "Origin and leadership",
+          "supports": "الأدوار المختلفة",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا يوجد عدد قانوني موحد."
+    }
+  }
 }

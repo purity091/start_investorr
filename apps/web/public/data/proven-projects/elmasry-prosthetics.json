@@ -1,53 +1,797 @@
 {
   "id": "elmasry-prosthetics",
   "slug": "elmasry-prosthetics",
-  "name": "عبد العزيز المصري (El Masry Prosthetics)",
-  "headline": "الشركة العريقة التي طورت الأطراف الصناعية وحصدت استثماراً استراتيجياً",
-  "category": "Healthcare & Manufacturing / الرعاية الصحية والأطراف الصناعية",
+  "name": "عبد العزيز المصري لمعدات التأهيل والحركة (Abdel Aziz El Masry)",
+  "headline": "إرث صناعي منذ 1936 بلا صفقة تلفزيونية: فرصة عبد العزيز المصري في تحويل قابلية الإصلاح إلى منصة تصنيع إقليمية",
+  "category": "تصنيع الأجهزة المساعدة والحركة / Assistive Mobility & Medical Device Manufacturing",
   "company": {
-    "location": "القاهرة، مصر (Shark Tank Egypt)",
-    "business_model": "تصنيع وبيع وتركيب الأطراف الصناعية والأجهزة التعويضية (B2B & B2C)"
+    "legal_name": null,
+    "legal_name_note": "لم يُعثر في المصادر العامة المستخدمة على الاسم القانوني الكامل للكيان أو رقم سجله التجاري؛ استُخدم اسم العلامة والمصنع كما يظهران رسميًا.",
+    "location": "40 شارع رشدي باشا، عابدين، وسط القاهرة، مصر",
+    "founded": {
+      "official_company_claim": 1936,
+      "historical_origin_claim": 1918,
+      "note": "تقول الشركة إن جذور الحرفة بدأت عام 1918 وإن «مصنع الشرق» تأسس رسميًا عام 1936. لم يُعثر على سجل تأسيس حكومي رقمي عام للتحقق المستقل من التسلسل التاريخي الكامل."
+    },
+    "current_leader": "يوسف خالد عبد العزيز المصري، الجيل الخامس بحسب الموقع الرسمي وتغطية Shark Tank Egypt",
+    "business_model": "تصنيع محلي وبيع مباشر من المصنع لمعدات الحركة، مع مبيعات للأفراد ومبيعات بالجملة وعروض أسعار للمستشفيات والجمعيات والموزعين والمناقصات، إضافة إلى التخصيص والصيانة وقطع الغيار وخدمة ما بعد البيع.",
+    "customer_segments": [
+      "الأفراد والأسر المحتاجون إلى كراسٍ متحركة ومساعدات حركة",
+      "المستشفيات ومراكز التأهيل",
+      "الجمعيات والمنظمات غير الحكومية",
+      "الموزعون وتجار الأجهزة الطبية",
+      "الجهات الحكومية ومشروعات المناقصات",
+      "جهات شراء وتوزيع خارج مصر وفق توجه التصدير المعلن"
+    ],
+    "operating_status_as_of_2026_08_03": {
+      "status": "نشط",
+      "evidence": "الموقع الرسمي كان نشطًا ويعرض منتجات ومواصفات وطلب عروض أسعار وبيانات اتصال مباشرة وقسمًا للمبيعات والتصدير.",
+      "caution": "النشاط الرقمي والكتالوج لا يثبتان الإيراد أو الربحية أو امتلاك تراخيص كل منتج."
+    }
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الجنيهات",
-    "monthly_traffic": "تخدم آلاف المرضى سنوياً"
+    "monthly_revenue": null,
+    "monthly_revenue_note": "لا توجد بيانات مالية حديثة وموثقة عن الإيراد الشهري. حُذف ادعاء «ملايين الجنيهات» لأنه غير مسند.",
+    "monthly_traffic": null,
+    "monthly_traffic_note": "لا توجد بيانات موثقة للزيارات الشهرية أو المستخدمين النشطين. عبارة «تخدم آلاف المرضى سنويًا» لم يدعمها مصدر عام موثوق.",
+    "latest_verified_operating_snapshot": {
+      "as_of": "2026-08-03",
+      "official_site_active": true,
+      "factory_address": "40 شارع رشدي باشا، عابدين، وسط القاهرة، مصر",
+      "sales_motion": [
+        "طلب عرض سعر مباشر",
+        "استفسارات شراء بالجملة",
+        "مبيعات وتوزيع للمستشفيات والجمعيات والموزعين",
+        "استفسارات تصدير ومناقصات"
+      ],
+      "visible_product_categories": [
+        "كراسي متحركة للخدمة الشاقة",
+        "كراسي حمام ونظافة شخصية",
+        "كراسي نقل بجوانب قابلة للفك أو الرفع",
+        "كراسي للشلل الدماغي والأطفال",
+        "مشايات ومدربات مشي",
+        "عكاكيز وعصي طبية",
+        "أحذية طبية وللقَدَم السكري"
+      ],
+      "company_reported_volume": {
+        "wheelchairs_delivered_last_three_years": 3000,
+        "other_mobility_products_sold": 30000,
+        "status": "company_reported_not_audited",
+        "period_note": "الموقع يحدد ثلاث سنوات للكراسي، لكنه لا يحدد بوضوح الفترة الزمنية لرقم المنتجات الأخرى."
+      },
+      "service_claims": {
+        "warranty": "6 إلى 12 شهرًا بحسب نوع المنتج وفق الموقع، بينما ذكر المؤسس ضمان سنة في الحلقة",
+        "maintenance": "صيانة ودعم فني من المصنع",
+        "spare_parts": "توافر قطع الغيار وفق ادعاء الشركة",
+        "customization": "مقاسات وألوان وشعارات ومواصفات خاصة للطلبيات والمناقصات"
+      }
+    },
+    "metric_distinctions": {
+      "revenue": "قيمة المبيعات المحاسبية خلال فترة، وهي غير منشورة حديثًا.",
+      "valuation": "لا يوجد تقييم حالي موثوق. طلب 5 ملايين جنيه مقابل 20% كان تقييم طلب تفاوضي في برنامج تلفزيوني، لا تقييمًا مستثمرًا أو صفقة مغلقة.",
+      "transaction_or_unit_volume": "3,000 كرسي و30,000 منتج آخر أرقام وحدات أعلنتها الشركة؛ لا تساوي إيرادًا أو عدد مرضى فريدين.",
+      "users_or_patients": "لا يوجد عدد موثوق للعملاء أو المستخدمين أو المرضى الفريدين.",
+      "website_traffic": "لا توجد بيانات موثوقة للزيارات الشهرية أو التحويلات الرقمية."
+    }
   },
   "overview": {
     "problem": {
-      "text": "المرضى الذين يحتاجون لأطراف صناعية يواجهون تحديين: الأطراف المستوردة باهظة الثمن جداً وغير قابلة للصيانة محلياً بسهولة، والأطراف المحلية القديمة تفتقر للتكنولوجيا الحديثة والراحة.",
-      "impact": "معاناة جسدية ونفسية لفاقدي الأطراف، وعجز الكثيرين عن تحمل تكاليف الأطراف المستوردة المتطورة."
+      "text": "سوق معدات الحركة يحتاج منتجات مناسبة للبيئة المحلية وقابلة للصيانة والتخصيص، لا مجرد منتج يصلح للشراء مرة واحدة. الكراسي والمساعدات المستوردة قد تواجه مشكلات في قطع الغيار وخدمة ما بعد البيع أو الملاءمة، بينما التصنيع المحلي يحتاج جودة موثقة وانضباطًا تنظيميًا حتى ينافس السعر المستورد ويكسب ثقة المستشفيات والمناقصات.",
+      "impact": "المنتج غير الملائم أو غير القابل للصيانة قد يرفع التكلفة الكلية ويؤثر في استقلال المستخدم وسلامته. لكن الملف لا يعمم أن جميع المستوردات رديئة أو أن جميع المنتجات المحلية قديمة؛ هذه مقارنات تحتاج بيانات اختبار مستقلة."
     },
     "solution": {
-      "text": "شركة مصرية عريقة بخبرة تمتد لعقود، تقوم بتصنيع وتركيب أطراف صناعية وأجهزة تعويضية متطورة تضاهي الجودة العالمية وبأسعار تناسب السوق المحلي، مع تقديم خدمات تأهيل وتدريب للمرضى."
+      "text": "تقدم عبد العزيز المصري نموذج مصنع محلي يركز حاليًا على الكراسي المتحركة ومساعدات الحركة والأحذية الطبية، مع تصنيع حسب الطلب وضمان وصيانة وقطع غيار وعروض شراء بالجملة. القيمة الأساسية الموثقة هي قرب المصنع وقابلية الإصلاح والتخصيص، أما ادعاءات «الجودة العالمية» و«الأفضل سعرًا» و«أول كرسي في مصر» فهي ادعاءات الشركة ولم تُعامل كاختبارات مستقلة."
     }
   },
   "market_data": {
-    "target_audience": "فاقدو الأطراف، مرضى السكري، والمستشفيات ومراكز التأهيل (B2B).",
-    "market_size": "سوق الأجهزة التعويضية والرعاية الصحية.",
-    "growth_rate": "حصلت على استثمار قوي وشراكة استراتيجية من (الشاركس) لتحديث خطوط الإنتاج والتحول الرقمي للتصدير."
+    "target_audience": "الأفراد ذوو احتياجات الحركة، والأطفال ذوو الشلل الدماغي، وكبار السن، ومستخدمو الأحذية الطبية، إلى جانب المستشفيات والجمعيات والموزعين والجهات المشترية عبر المناقصات.",
+    "market_size": null,
+    "market_size_note": "لم يُعثر على تقدير رسمي حديث ومحدد لسوق الشركة القابل للخدمة في مصر يمكن ربطه بإيراداتها؛ لذلك لم تُستخدم تقديرات تجارية عامة كحقيقة عن حجم فرصة الشركة.",
+    "growth_rate": null,
+    "growth_rate_note": "لا توجد سلسلة إيرادات أو وحدات سنوية منشورة تسمح بحساب معدل نمو الشركة. أرقام الوحدات الحالية مجمعة وغير كافية لحساب نمو سنوي.",
+    "sector_context": {
+      "global_need": "تقدّر منظمة الصحة العالمية أن أكثر من 2.5 مليار شخص يحتاجون منتجًا مساعدًا واحدًا أو أكثر، وقد يتجاوز العدد 3.5 مليار بحلول 2050.",
+      "wheelchair_need": "تقدّر منظمة الصحة العالمية أن نحو 80 مليون شخص عالميًا قد يحتاجون إلى كرسي متحرك.",
+      "interpretation": "هذه أرقام عالمية للقطاع وليست حجم سوق عبد العزيز المصري أو عدد عملائها."
+    },
+    "regulatory_context": {
+      "authority": "هيئة الدواء المصرية",
+      "latest_relevant_updates": [
+        "دليل المتطلبات الفنية لترخيص وتشغيل مصانع الأطراف الصناعية والأجهزة التقويمية ومساعدات الحركة، إصدار مارس 2026.",
+        "دليل متطلبات التعريف الفريد للأجهزة الطبية UDI، إصدار مايو 2026.",
+        "تيسير بعض متطلبات ملفات التسجيل للمصانع المحلية الحاصلة على شهادات جودة دولية، إعلان 16 أبريل 2026."
+      ],
+      "company_specific_license_status": null,
+      "license_status_note": "لم يُعثر في المصادر المستخدمة على سجل عام يثبت رقم ترخيص المصنع أو تسجيل كل منتج أو شهادات ISO/CE الخاصة بالشركة؛ لذلك لا يقرر الملف أنها موجودة أو غير موجودة."
+    }
   },
   "financials": {
-    "initial_investment": "عمل تجاري عائلي عريق (Family Business)، حصل مؤخراً على استثمار مباشر في البرنامج لتوسيع أعماله.",
-    "valuation": "عشرات الملايين من الجنيهات",
+    "initial_investment": "رأس المال التاريخي وتمويل الشركة العائلية غير معلنين. في Shark Tank Egypt طلب يوسف المصري 5 ملايين جنيه مقابل 20% لشراء آلات وتطوير الإنتاج والتسويق والتوسع، لكن المستثمرين الخمسة انسحبوا ولم تُبرم صفقة في الحلقة.",
+    "valuation": {
+      "current_valuation": null,
+      "current_valuation_note": "لا يوجد تقييم حالي موثوق أو جولة تمويل معلنة.",
+      "pitch_ask": {
+        "amount_egp": 5000000,
+        "equity_requested": "20%",
+        "simple_implied_post_money_egp": 25000000,
+        "simple_implied_pre_money_egp": 20000000,
+        "status": "founder_asking_valuation_only"
+      },
+      "warning": "الحساب النظري يعكس شروط الطلب التلفزيوني فقط؛ لم يقبله مستثمر ولم يُغلق كصفقة، ولذلك لا يمثل تقييمًا سوقيًا مثبتًا."
+    },
+    "latest_financial_metrics": {
+      "revenue": null,
+      "profit": null,
+      "cash": null,
+      "debt": null,
+      "gmv": null,
+      "average_selling_price": null,
+      "audited_financial_statements_available": false
+    },
     "revenue_streams": [
-      "بيع الأطراف الصناعية المخصصة (Custom-made) للمرضى",
-      "التعاقدات مع المستشفيات والجهات الحكومية (B2B)",
-      "خدمات الصيانة وإعادة التأهيل"
-    ]
+      "بيع الكراسي المتحركة ومساعدات الحركة للأفراد.",
+      "توريد المنتجات بالجملة للمستشفيات والجمعيات والموزعين.",
+      "تنفيذ مواصفات وتخصيصات للطلبيات والمناقصات.",
+      "بيع المشايات والعكاكيز والعصي والأحذية الطبية ومنتجات الحركة الأخرى.",
+      "خدمات الصيانة وقطع الغيار بعد البيع.",
+      "لا توجد بيانات منشورة تسمح بتحديد حصة كل مصدر أو هامشه."
+    ],
+    "shark_tank_pitch": {
+      "episode": "الموسم الثالث، الحلقة الثالثة",
+      "broadcast_date": "2024-10-30",
+      "presenter": "يوسف المصري",
+      "amount_requested_egp": 5000000,
+      "equity_requested": "20%",
+      "intended_use_of_funds": [
+        "إضافة آلات حديثة",
+        "تطوير الإنتاج",
+        "التسويق داخل مصر وخارجها",
+        "زيادة العمالة",
+        "خفض تكلفة الوحدة"
+      ],
+      "outcome": "no_deal",
+      "outcome_note": "انسحب المستثمرون الخمسة ولم يحصل المشروع على استثمار في الحلقة."
+    }
+  },
+  "analysis": {
+    "core_thesis": "عبد العزيز المصري ليست قصة تطبيق صحي ناشئ، بل مصنع عائلي يحاول إعادة تموضعه حول الكراسي المتحركة ومساعدات الحركة والتوريد المؤسسي. ميزته المحتملة ليست الادعاء بأنه «يضاهي العالمي»، وإنما امتلاك حلقة محلية للصناعة والتخصيص والإصلاح وقطع الغيار. التحول الحقيقي المطلوب هو نقل هذه الميزة من قصة عائلية إلى نظام جودة ووثائق ومنتجات بطلة واقتصاديات قابلة للتدقيق.",
+    "what_changed": [
+      "النسخة الأصلية وصفت الشركة أساسًا كشركة أطراف صناعية، بينما الكتالوج الرسمي الحالي يركز بوضوح على الكراسي المتحركة ومساعدات الحركة والأحذية الطبية.",
+      "لم تحصل الشركة على استثمار من Shark Tank؛ كانت النتيجة عدم إبرام صفقة بعد طلب 5 ملايين جنيه مقابل 20%.",
+      "أصبح الموقع الحالي موجهًا بوضوح للمستشفيات والجمعيات والموزعين والتصدير والمناقصات، لا للبيع الفردي فقط.",
+      "أعلنت الشركة حجمًا تشغيليًا قدره أكثر من 3,000 كرسي خلال ثلاث سنوات وأكثر من 30,000 منتج حركة آخر، وهي أرقام وحدات من الشركة لا قوائم مالية.",
+      "أصدرت هيئة الدواء في 2026 متطلبات أحدث تخص ترخيص مصانع الأطراف والأجهزة التقويمية ومساعدات الحركة وUDI، ما يجعل الامتثال والملف الفني جزءًا مباشرًا من استراتيجية النمو."
+    ],
+    "competitive_advantage": [
+      "تصنيع محلي مباشر يقلل زمن الوصول إلى الصيانة والتعديل.",
+      "تخصيص المقاسات والمواصفات والألوان والشعارات للطلبات المؤسسية.",
+      "خبرة عائلية طويلة وهوية صناعية متوارثة عبر خمسة أجيال وفق رواية الشركة.",
+      "عرض ضمان وصيانة وقطع غيار، وهي عناصر مهمة في التكلفة الكلية للملكية.",
+      "قدرة معلنة على تجهيز بيانات فنية وشهادات منشأ للمناقصات والشحن.",
+      "كتالوج متنوع يخدم المؤسسات والأفراد ضمن مجال الحركة والرعاية المنزلية."
+    ],
+    "risks_and_constraints": [
+      "لا توجد قوائم مالية عامة أو بيانات إيراد وربحية وتدفق نقدي؛ لا يمكن الحكم على الجدوى الاستثمارية أو كفاءة رأس المال.",
+      "لم تُعرض في المصادر المستخدمة أرقام تراخيص أو شهادات جودة دولية أو تسجيلات منتجات خاصة بالشركة.",
+      "بعض الادعاءات التاريخية والتقنية صادرة عن الشركة فقط، مثل أول كرسي متحرك مصري والعجلات المصنوعة من ألياف الكربون والجودة العالمية.",
+      "أرقام الوحدات لا تكشف متوسط السعر أو الهامش أو معدل الإرجاع أو الأعطال أو تركّز العملاء.",
+      "المنافسة السعرية مع الواردات منخفضة التكلفة قد تضغط الهوامش، خصوصًا من دون تمييز موثق في المتانة أو التكلفة العمرية.",
+      "عدم إتمام صفقة Shark Tank يشير إلى فجوة محتملة في الجاهزية الاستثمارية أو وضوح الأرقام أو استراتيجية التوسع، لكنه لا يثبت ضعف النشاط التشغيلي.",
+      "اتساع الكتالوج قد يشتت الاستثمار في القوالب والمخزون والجودة إذا لم تُحدد المنتجات الأعلى طلبًا وربحية.",
+      "البيع للمناقصات والمستشفيات يرفع متطلبات التوثيق والامتثال وخدمة ما بعد البيع ورأس المال العامل."
+    ],
+    "outlook_as_of_2026_08_03": "الشركة تبدو نشطة وتملك موقعًا وكتالوجًا وعرضًا واضحًا للتوريد المؤسسي والتصدير، لكنها تظل منخفضة الشفافية المالية والتنظيمية في المصادر العامة. أقوى مسار نمو ليس إضافة منتجات بلا نهاية، بل توثيق الجودة، نشر أرقام أداء المنتج، بناء شبكة موزعين، وتحويل الصيانة وقطع الغيار إلى ميزة تعاقدية قابلة للقياس."
   },
   "lessons": [
     {
-      "title": "الابتكار في الشركات العائلية",
-      "description": "استثمار الشاركس في شركة (عبد العزيز المصري) يثبت أن الابتكار ليس حكراً على التطبيقات الجديدة. تطوير شركة عائلية عريقة وتمويلها بأحدث التكنولوجيا والتحول الرقمي يمثل فرصة استثمارية هائلة منخفضة المخاطر."
+      "title": "الإرث لا يحل محل العناية الواجبة",
+      "description": "العمل منذ عقود يمنح ثقة أولية وقصة قوية، لكنه لا يجيب عن الإيراد والهامش والدين والتراخيص وجودة المنتج. المستثمر يحتاج تاريخًا صناعيًا وأرقامًا قابلة للتدقيق معًا."
     },
     {
-      "title": "الرعاية اللاحقة كقيمة مضافة",
-      "description": "لم تكتفِ الشركة بـ (بيع) الطرف الصناعي للمريض، بل وفرت خدمات التدريب والصيانة. هذه القيمة المضافة خلقت علاقة طويلة الأمد مع المريض وجعلتها تتفوق على المستورد الذي يفتقر لخدمة ما بعد البيع."
+      "title": "عدم الصفقة معلومة استراتيجية",
+      "description": "الخروج من Shark Tank دون تمويل يصحح الرواية بدل أن يهدمها. الدرس هو تحليل سبب عدم الاستثمار وتحويل الملاحظات إلى خطة آلات وجودة وتسويق وأرقام، لا وصف المشاركة كاستثمار ناجح."
+    },
+    {
+      "title": "تقييم الطلب ليس تقييم الشركة",
+      "description": "طلب 5 ملايين مقابل 20% ينتج حسابيًا تقييمًا بعد الاستثمار قدره 25 مليون جنيه، لكنه يظل رقمًا تفاوضيًا من المؤسس ما دام لم يقبله مستثمر."
+    },
+    {
+      "title": "قابلية الإصلاح منتج اقتصادي",
+      "description": "في معدات الحركة، قيمة المصنع المحلي تظهر بعد البيع: قطع غيار وصيانة وتعديل. هذه الخدمات يجب قياسها بزمن الإصلاح وتكلفته وتوافر القطع، لا الاكتفاء بشعار خدمة ما بعد البيع."
+    },
+    {
+      "title": "الوحدة ليست مريضًا ولا إيرادًا",
+      "description": "بيع 30 ألف منتج لا يعني خدمة 30 ألف شخص؛ قد يشتري عميل واحد أكثر من منتج وقد تختلف الأسعار جذريًا. قواعد البيانات المهنية تفصل الوحدات والعملاء والإيراد."
+    },
+    {
+      "title": "المناقصة تبدأ من الملف الفني",
+      "description": "الوصول للمستشفيات والجهات الحكومية يحتاج مواصفات واختبارات وشهادات منشأ وتسجيلات وضمانات وسجل أداء. التوثيق هنا جزء من المبيعات وليس مهمة إدارية لاحقة."
+    },
+    {
+      "title": "ركّز الهوية على ما يُباع اليوم",
+      "description": "اسم الشركة مرتبط تاريخيًا بالأطراف الصناعية، لكن الكتالوج الحالي تقوده الكراسي ومساعدات الحركة. يجب أن تعكس الرسالة التجارية المنتجات البطلة الفعلية بدل اتساع تاريخي قد يربك العميل."
+    },
+    {
+      "title": "التنظيم الحديث فرصة للمصنع الجاد",
+      "description": "متطلبات الترخيص وUDI وملفات التسجيل ترفع كلفة الامتثال، لكنها تمنح المصنع المنضبط حاجزًا تنافسيًا أمام المنتجات غير الموثقة وتفتح باب المناقصات والتصدير."
     }
   ],
   "tools": [
-    "3D Printing & Scanning",
-    "CAD/CAM Design",
-    "Advanced Materials (Carbon Fiber)"
+    "تصنيع داخلي للكراسي ومساعدات الحركة وفق ادعاء الشركة.",
+    "تصنيع وتخصيص حسب الطلب للمقاسات والألوان والشعارات والمواصفات.",
+    "هياكل فولاذية مدعمة وعجلات بألياف الكربون في بعض النماذج وفق وصف الشركة.",
+    "إعداد أوراق بيانات فنية وشهادات منشأ للمناقصات والشحن وفق الموقع.",
+    "خدمات صيانة ودعم فني وتوفير قطع غيار.",
+    "طلب عروض أسعار واستفسارات توزيع وتصدير عبر الموقع وWhatsApp والبريد الإلكتروني.",
+    "تنبيه تقني: لم تُثبت المصادر المستخدمة وجود طباعة ثلاثية الأبعاد أو مسح ثلاثي الأبعاد أو CAD/CAM؛ لذلك حُذفت الأدوات الأصلية غير الموثقة."
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "verified_through": "2026-08-03",
+    "research_scope": "مراجعة الملف الأصلي، الموقع الرسمي الحالي وصفحات المنتجات والتواصل، صفحات Shark Tank Egypt وتغطية الحلقة، وإرشادات هيئة الدواء المصرية ومنظمة الصحة العالمية حتى 3 أغسطس 2026.",
+    "overall_status": "verified_with_material_corrections_and_private_company_limitations",
+    "primary_source_priority": "أُعطيت الأولوية للموقع الرسمي للشركة وهيئة الدواء المصرية ومنظمة الصحة العالمية وصفحات البرنامج الرسمية، واستخدمت الصحافة لتوثيق تفاصيل العرض التلفزيوني.",
+    "sec_search_status": {
+      "applicable": false,
+      "reason": "الشركة مصنع عائلي مصري خاص وليست جهة مُصدرة لأوراق مالية أمريكية معروفة.",
+      "exact_name_search_result": "لم تظهر إفصاحات SEC باسم الشركة في البحث.",
+      "note": "غياب نتائج SEC لا يثبت أي وضع قانوني أو مالي خارج الولايات المتحدة."
+    },
+    "key_corrections": [
+      {
+        "field": "headline",
+        "original_claim": "حصدت استثمارًا استراتيجيًا",
+        "status": "corrected_false",
+        "correction": "لم تحصل الشركة على صفقة؛ انسحب المستثمرون الخمسة.",
+        "evidence_ids": [
+          "E7"
+        ]
+      },
+      {
+        "field": "company.location",
+        "original_claim": "القاهرة، مصر (Shark Tank Egypt)",
+        "status": "corrected",
+        "correction": "Shark Tank ليس موقعًا. أضيف عنوان المصنع الرسمي في عابدين.",
+        "evidence_ids": [
+          "E4"
+        ]
+      },
+      {
+        "field": "company.business_model",
+        "original_claim": "تصنيع وبيع وتركيب الأطراف الصناعية والأجهزة التعويضية",
+        "status": "corrected_scope",
+        "correction": "الكتالوج الحالي يركز على الكراسي ومساعدات الحركة والأحذية الطبية والتوريد المؤسسي؛ لم يثبت تركيب الأطراف أو التأهيل السريري كخدمة حالية رئيسية.",
+        "evidence_ids": [
+          "E2",
+          "E3"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_revenue",
+        "original_claim": "ملايين الجنيهات",
+        "status": "removed_unsupported",
+        "correction": "لا توجد بيانات إيراد شهري موثقة؛ وُضع null.",
+        "evidence_ids": [
+          "E8"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_traffic",
+        "original_claim": "تخدم آلاف المرضى سنويًا",
+        "status": "removed_unsupported",
+        "correction": "لا توجد بيانات زيارات أو مرضى فريدين؛ وُضع null وفُصل حجم الوحدات المعلن.",
+        "evidence_ids": [
+          "E5",
+          "E8"
+        ]
+      },
+      {
+        "field": "market_data.growth_rate",
+        "original_claim": "حصلت على استثمار وشراكة استراتيجية",
+        "status": "removed_false_and_reclassified",
+        "correction": "لا توجد صفقة أو بيانات نمو؛ وُضع معدل النمو null.",
+        "evidence_ids": [
+          "E6",
+          "E7",
+          "E8"
+        ]
+      },
+      {
+        "field": "financials.initial_investment",
+        "original_claim": "حصل مؤخرًا على استثمار مباشر",
+        "status": "corrected_false",
+        "correction": "كان طلبًا بقيمة 5 ملايين جنيه مقابل 20% وانتهى دون صفقة.",
+        "evidence_ids": [
+          "E6",
+          "E7"
+        ]
+      },
+      {
+        "field": "financials.valuation",
+        "original_claim": "عشرات الملايين من الجنيهات",
+        "status": "qualified",
+        "correction": "لا يوجد تقييم حالي؛ أضيف فقط التقييم النظري لطلب المؤسس مع تحذير بأنه غير ممول.",
+        "evidence_ids": [
+          "E6",
+          "E7"
+        ]
+      },
+      {
+        "field": "financials.revenue_streams",
+        "original_claim": "تركيب أطراف وإعادة تأهيل وتعاقدات حكومية",
+        "status": "partially_verified",
+        "correction": "ثُبت البيع والتوريد والتخصيص والصيانة؛ لم يثبت التأهيل السريري أو حجم العقود الحكومية.",
+        "evidence_ids": [
+          "E2",
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "field": "tools",
+        "original_claim": "3D Printing & Scanning وCAD/CAM",
+        "status": "removed_unverified",
+        "correction": "أُبقيت قدرات التصنيع والتخصيص والصيانة والتوثيق الظاهرة رسميًا فقط.",
+        "evidence_ids": [
+          "E2",
+          "E3"
+        ]
+      }
+    ],
+    "limitations": [
+      "الشركة خاصة ولا تنشر قوائم مالية أو إفصاحات بورصية.",
+      "لا توجد بيانات موثقة للإيراد أو الربح أو النقد أو الدين أو متوسط سعر البيع.",
+      "أرقام الوحدات والحكاية التاريخية صادرة عن الشركة ولم تُراجع ماليًا أو أرشيفيًا بشكل مستقل.",
+      "لم يُعثر على قاعدة عامة تثبت حالة ترخيص المصنع أو تسجيل كل منتج أو شهادات الجودة الخاصة بالشركة.",
+      "صفحات الموقع تثبت العرض التجاري الحالي ولا تثبت حجم الطلب أو حصة السوق.",
+      "لم يُحسب نمو الشركة لغياب بيانات سنوية قابلة للمقارنة."
+    ],
+    "programmatic_validation": {
+      "json_parse": true,
+      "json_schema_validation": true,
+      "required_original_top_level_keys_preserved": true,
+      "required_original_paths_preserved": true,
+      "all_source_ids_unique": true,
+      "all_evidence_source_references_valid": true,
+      "all_key_correction_evidence_references_valid": true,
+      "no_nan_or_infinity": true,
+      "null_used_for_unavailable_monthly_metrics": true,
+      "null_used_for_unavailable_growth_and_market_size": true,
+      "no_deal_outcome_explicit": true,
+      "pitch_valuation_not_presented_as_current": true,
+      "utf8_arabic_content_present": true,
+      "duplicate_lesson_titles": false,
+      "source_count": 13,
+      "primary_source_count": 11,
+      "evidence_item_count": 15,
+      "lesson_count": 8,
+      "top_level_key_count": 17,
+      "errors": [],
+      "validated_at": "2026-08-03T03:21:00+03:00",
+      "validation_status": "passed"
+    }
+  },
+  "evidence_map_schema": {
+    "description": "خريطة تربط الادعاءات الجوهرية بالمصادر والمسارات داخل JSON.",
+    "item_fields": {
+      "claim": "الادعاء المختصر",
+      "json_paths": "المسارات التي تعتمد على الدليل",
+      "classification": "company | operating | financial | pitch | regulatory | sector | interpretation | unavailable",
+      "status": "verified | verified_company_reported | historical_only | corrected | unavailable",
+      "source_ids": "معرفات من مصفوفة sources",
+      "notes": "حدود الدليل أو طريقة استخدامه"
+    }
+  },
+  "evidence_map": {
+    "E1": {
+      "claim": "تقول الشركة إن المصنع تأسس عام 1936 وإن جذور الحرفة تعود إلى 1918 ويقوده الجيل الخامس.",
+      "json_paths": [
+        "company.founded",
+        "company.current_leader",
+        "analysis.competitive_advantage"
+      ],
+      "classification": "company",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "notes": "رواية تاريخية رسمية للشركة وليست تحققًا مستقلاً من سجلات تأسيس."
+    },
+    "E2": {
+      "claim": "الكتالوج الحالي يركز على الكراسي ومساعدات الحركة والأحذية الطبية.",
+      "json_paths": [
+        "company.business_model",
+        "directory_snapshot.latest_verified_operating_snapshot",
+        "overview.solution",
+        "analysis.what_changed"
+      ],
+      "classification": "operating",
+      "status": "verified",
+      "source_ids": [
+        "S1",
+        "S3"
+      ],
+      "notes": "يعكس المنتجات الظاهرة على الموقع وقت الفحص."
+    },
+    "E3": {
+      "claim": "الشركة تعرض تصنيعًا مباشرًا وتخصيصًا وصيانة وقطع غيار وضمانًا وتوثيقًا للمناقصات.",
+      "json_paths": [
+        "company.business_model",
+        "directory_snapshot.latest_verified_operating_snapshot.service_claims",
+        "financials.revenue_streams",
+        "tools"
+      ],
+      "classification": "operating",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "notes": "هذه قدرات ووعود تجارية منشورة من الشركة."
+    },
+    "E4": {
+      "claim": "عنوان المصنع وقنوات المبيعات والتصدير الرسمية في عابدين بالقاهرة.",
+      "json_paths": [
+        "company.location",
+        "directory_snapshot.latest_verified_operating_snapshot",
+        "company.operating_status_as_of_2026_08_03"
+      ],
+      "classification": "operating",
+      "status": "verified",
+      "source_ids": [
+        "S4"
+      ],
+      "notes": "بيانات اتصال رسمية وقت الوصول."
+    },
+    "E5": {
+      "claim": "تعلن الشركة أكثر من 3,000 كرسي خلال ثلاث سنوات وأكثر من 30,000 منتج حركة آخر.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.company_reported_volume",
+        "analysis.what_changed"
+      ],
+      "classification": "operating",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S1"
+      ],
+      "notes": "أرقام غير مدققة؛ الفترة الزمنية للمنتجات الأخرى غير محددة بوضوح."
+    },
+    "E6": {
+      "claim": "طلب يوسف المصري 5 ملايين جنيه مقابل 20% لتطوير الآلات والإنتاج والتسويق والعمالة.",
+      "json_paths": [
+        "financials.initial_investment",
+        "financials.valuation",
+        "financials.shark_tank_pitch"
+      ],
+      "classification": "pitch",
+      "status": "historical_only",
+      "source_ids": [
+        "S5",
+        "S6"
+      ],
+      "notes": "يوثق طلب المؤسس في الحلقة ولا يثبت تقييمًا مقبولًا."
+    },
+    "E7": {
+      "claim": "انسحب المستثمرون الخمسة ولم تُبرم صفقة مع عبد العزيز المصري.",
+      "json_paths": [
+        "headline",
+        "financials.initial_investment",
+        "financials.shark_tank_pitch.outcome",
+        "analysis.what_changed",
+        "lessons"
+      ],
+      "classification": "financial",
+      "status": "corrected",
+      "source_ids": [
+        "S7"
+      ],
+      "notes": "يصّحح الادعاء الأصلي بأن الشركة حصلت على استثمار."
+    },
+    "E8": {
+      "claim": "لا توجد بيانات عامة موثقة للإيراد أو الربح أو الزيارات أو العملاء الفريدين أو النمو.",
+      "json_paths": [
+        "directory_snapshot.monthly_revenue",
+        "directory_snapshot.monthly_traffic",
+        "market_data.growth_rate",
+        "financials.latest_financial_metrics"
+      ],
+      "classification": "unavailable",
+      "status": "unavailable",
+      "source_ids": [
+        "S1",
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "notes": "المصادر المتاحة تعرض منتجات وطلب تمويل ولا تعرض قوائم مالية."
+    },
+    "E9": {
+      "claim": "أصدرت هيئة الدواء دليلًا لترخيص وتشغيل مصانع الأطراف والأجهزة التقويمية ومساعدات الحركة في مارس 2026.",
+      "json_paths": [
+        "market_data.regulatory_context",
+        "analysis.what_changed",
+        "lessons"
+      ],
+      "classification": "regulatory",
+      "status": "verified",
+      "source_ids": [
+        "S8"
+      ],
+      "notes": "إطار تنظيمي للقطاع، وليس إثباتًا لترخيص الشركة."
+    },
+    "E10": {
+      "claim": "تتضمن إرشادات 2025-2026 تسجيل الأجهزة المحلية ومتطلبات UDI.",
+      "json_paths": [
+        "market_data.regulatory_context",
+        "analysis.risks_and_constraints"
+      ],
+      "classification": "regulatory",
+      "status": "verified",
+      "source_ids": [
+        "S9"
+      ],
+      "notes": "يحدد سياق الامتثال الحالي."
+    },
+    "E11": {
+      "claim": "في أبريل 2026 يسّرت هيئة الدواء بعض متطلبات التسجيل للمصانع المحلية الحاصلة على شهادات جودة دولية.",
+      "json_paths": [
+        "market_data.regulatory_context",
+        "analysis.outlook_as_of_2026_08_03"
+      ],
+      "classification": "regulatory",
+      "status": "verified",
+      "source_ids": [
+        "S10"
+      ],
+      "notes": "لا يثبت أن الشركة حاصلة على الشهادات المطلوبة."
+    },
+    "E12": {
+      "claim": "أكثر من 2.5 مليار شخص يحتاجون منتجات مساعدة وقد يتجاوز العدد 3.5 مليار بحلول 2050.",
+      "json_paths": [
+        "market_data.sector_context"
+      ],
+      "classification": "sector",
+      "status": "verified",
+      "source_ids": [
+        "S11"
+      ],
+      "notes": "سياق عالمي وليس حجم سوق الشركة."
+    },
+    "E13": {
+      "claim": "تقدّر منظمة الصحة العالمية أن نحو 80 مليون شخص قد يحتاجون إلى كرسي متحرك.",
+      "json_paths": [
+        "market_data.sector_context"
+      ],
+      "classification": "sector",
+      "status": "verified",
+      "source_ids": [
+        "S12"
+      ],
+      "notes": "تقدير عالمي وليس عدد عملاء الشركة."
+    },
+    "E14": {
+      "claim": "أصدرت منظمة الصحة العالمية في يوليو 2026 إرشادات لإصلاح وتجديد وإعادة تدوير منتجات الحركة ومنها الكراسي اليدوية.",
+      "json_paths": [
+        "analysis.competitive_advantage",
+        "lessons"
+      ],
+      "classification": "sector",
+      "status": "verified",
+      "source_ids": [
+        "S13"
+      ],
+      "notes": "يدعم أهمية قابلية الإصلاح كاتجاه قطاعي، لا يقيّم أداء الشركة."
+    },
+    "E15": {
+      "claim": "لم تُثبت المصادر المستخدمة وجود 3D Printing أو 3D Scanning أو CAD/CAM لدى الشركة.",
+      "json_paths": [
+        "tools",
+        "verification.key_corrections"
+      ],
+      "classification": "interpretation",
+      "status": "corrected",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "notes": "حُذفت الأدوات غير الظاهرة بدل افتراضها من طبيعة القطاع."
+    }
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "الرواد في تصنيع الكراسي المتحركة وحلول التنقل منذ 1936",
+      "publisher": "عبد العزيز المصري",
+      "source_type": "الموقع الرسمي — الصفحة الرئيسية",
+      "publication_date": null,
+      "url": "https://www.aelmasry.com/ar",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الرواية التاريخية",
+        "الجيل الخامس",
+        "أرقام الوحدات المعلنة",
+        "فئات المنتجات",
+        "التصنيع والتخصيص والصيانة والضمان"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "حلول تنقل عالمية بأيادٍ مصرية — عن عبد العزيز المصري",
+      "publisher": "عبد العزيز المصري",
+      "source_type": "صفحة رسمية عن الشركة",
+      "publication_date": null,
+      "url": "https://www.aelmasry.com/ar/about",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "تاريخ 1936",
+        "التصنيع المحلي",
+        "التوريد للمستشفيات والجهات",
+        "التخصيص والدعم الفني"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "Our Products",
+      "publisher": "Abdel Aziz El Masry",
+      "source_type": "كتالوج منتجات رسمي",
+      "publication_date": null,
+      "url": "https://www.aelmasry.com/en/products",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "فئات المنتجات الحالية",
+        "المواصفات الظاهرة",
+        "الشراء بالجملة",
+        "التركيز على المؤسسات والموزعين"
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "Contact — Sales & Export Department",
+      "publisher": "Abdel Aziz El Masry",
+      "source_type": "صفحة اتصال رسمية",
+      "publication_date": null,
+      "url": "https://www.aelmasry.com/en/contact",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "عنوان المصنع",
+        "قسم المبيعات والتصدير",
+        "استهداف المستشفيات والموزعين والمنظمات",
+        "قنوات التواصل"
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "Shark Tank Egypt — Medical Deals: عبد العزيز المصري",
+      "publisher": "Shark Tank Egypt",
+      "source_type": "صفحة رسمية للبرنامج تربط إلى عرض الشركة",
+      "publication_date": null,
+      "url": "https://sharktank-egypt.com/ar/deals/medical-",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "مشاركة الشركة في البرنامج",
+        "رابط العرض الرسمي"
+      ]
+    },
+    {
+      "id": "S6",
+      "title": "صاحب شركة عبد العزيز المصري لشارك تانك: نقدم أطرافًا صناعية بجودة عالمية",
+      "publisher": "اليوم السابع",
+      "source_type": "تغطية مباشرة للحلقة",
+      "publication_date": "2024-10-30",
+      "url": "https://www.youm7.com/story/2024/10/30/صاحب-شركة-عبد-العزيز-المصري-لـ-شارك-تانك-نقدم-أطرافا/6760563",
+      "primary_source": false,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "طلب 5 ملايين جنيه مقابل 20%",
+        "استخدامات التمويل",
+        "شريحتي الأفراد والتجار",
+        "الضمان وخدمة ما بعد البيع"
+      ]
+    },
+    {
+      "id": "S7",
+      "title": "الـ5 شاركس ينسحبوا من مشروع عبد العزيز المصري",
+      "publisher": "Shark Tank عربي — محتوى من Shark Tank Egypt",
+      "source_type": "مقطع/ملخص نتيجة العرض",
+      "publication_date": "2024-12-07",
+      "url": "https://sharktankarabi.com/570/",
+      "primary_source": false,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "عدم إبرام صفقة",
+        "انسحاب المستثمرين الخمسة"
+      ]
+    },
+    {
+      "id": "S8",
+      "title": "Technical Requirements for Licensing and Operating — Prosthetics, Orthotics, and Mobility Aid Factories",
+      "publisher": "هيئة الدواء المصرية",
+      "source_type": "دليل تنظيمي رسمي",
+      "publication_date": "2026-03",
+      "url": "https://www.edaegypt.gov.eg/en/the-regulatory-reference-of-the-egyptian-drug-authority-eda/regulatory-guidelines/regulatory-guideline-central-administration-of-pharmaceutical-institutions-licensing/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الإطار الحالي لترخيص وتشغيل مصانع الأطراف والأجهزة التقويمية ومساعدات الحركة"
+      ]
+    },
+    {
+      "id": "S9",
+      "title": "Regulatory Guidelines for the Central Administration of Medical Device",
+      "publisher": "هيئة الدواء المصرية",
+      "source_type": "أدلة تنظيمية رسمية",
+      "publication_date": "2026-05",
+      "url": "https://www.edaegypt.gov.eg/en/the-regulatory-reference-of-the-egyptian-drug-authority-eda/regulatory-guidelines/regulatory-guidelines-for-the-central-administration-of-medical-device/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "تسجيل الأجهزة الطبية المحلية",
+        "متطلبات UDI الصادرة في مايو 2026"
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "Streamlining Registration Procedures for Local Factories Holding International Quality Certificates",
+      "publisher": "هيئة الدواء المصرية",
+      "source_type": "إعلان تنظيمي رسمي",
+      "publication_date": "2026-04-16",
+      "url": "https://www.edaegypt.gov.eg/en/media-center/announcements/streamlining-registration-procedures-for-local-factories-holding-international-quality-certificates/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "تيسير ملفات تسجيل المصانع المحلية الحاصلة على شهادات جودة دولية",
+        "استمرار متطلبات السلامة والفاعلية"
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "Assistive Technology — Key Facts",
+      "publisher": "World Health Organization",
+      "source_type": "صحيفة حقائق رسمية",
+      "publication_date": "2024-01-02",
+      "url": "https://www.who.int/en/news-room/fact-sheets/detail/assistive-technology",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "2.5 مليار محتاج لمنتجات مساعدة",
+        "3.5 مليار متوقعة بحلول 2050"
+      ]
+    },
+    {
+      "id": "S12",
+      "title": "WHO Releases New Wheelchair Provision Guidelines",
+      "publisher": "World Health Organization",
+      "source_type": "تحديث رسمي",
+      "publication_date": "2023-06-05",
+      "url": "https://www.who.int/news/item/05-06-2023-who-releases-new-wheelchair-provision-guidelines",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "تقدير 80 مليون شخص يحتاجون كراسي متحركة",
+        "أهمية الملاءمة والتقييم والتدريب والمتابعة"
+      ]
+    },
+    {
+      "id": "S13",
+      "title": "WHO Releases Guidance on Repair, Refurbishment and Recycling of Assistive Technology",
+      "publisher": "WHO Europe",
+      "source_type": "إرشاد رسمي حديث",
+      "publication_date": "2026-07-02",
+      "url": "https://www.who.int/europe/news/item/02-07-2026-who-releases-new-guidance-on-the-repair--refurbishment-and-recycling-of-assistive-technology",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "أهمية إصلاح وتجديد منتجات الحركة",
+        "شمول الإرشاد للكراسي اليدوية والمشايات وكراسي الحمام"
+      ]
+    }
   ]
 }

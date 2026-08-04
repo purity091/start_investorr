@@ -2,52 +2,930 @@
   "id": "classera",
   "slug": "classera",
   "name": "كلاسيرا (Classera)",
-  "headline": "عملاق التكنولوجيا التعليمية الذي يقود رقمنة المدارس من الشرق الأوسط للعالم",
-  "category": "EdTech / أنظمة إدارة التعلم (LMS)",
+  "headline": "كيف انتقلت كلاسيرا من نظام إدارة تعلم إلى طبقة تشغيل متكاملة للمؤسسة التعليمية",
+  "category": "EdTech / منصات التعلم المؤسسي وإدارة التعليم",
   "company": {
-    "location": "الولايات المتحدة (مكاتب إقليمية رئيسية في الأردن والسعودية)",
-    "business_model": "اشتراكات برمجية B2B (SaaS للمدارس والحكومات)"
+    "legal_identity_note": "كلاسيرا شركة تقنية تعليم خاصة تستخدم اسم Classera Inc. في إعلاناتها وصفحاتها. تأسست في وادي السيليكون على يد رائدي أعمال سعوديين، ولا توجد إشارة إلى إدراج عام أو رمز تداول. وصف LinkedIn لها أحيانًا بأنها «Public Company» هو تصنيف ملف تعريفي ولا يثبت أنها شركة مدرجة.",
+    "location": "المقر المعلن في سان فرانسيسكو، الولايات المتحدة، مع مكاتب في جدة وعمّان ودبي والقاهرة وماليزيا.",
+    "founded_year": 2012,
+    "founded_by": [
+      "محمد سهيل المدني (Mohammad Almadani)",
+      "محمد العشماوي (Mohammad Alashmawi)"
+    ],
+    "public_company": false,
+    "ticker": null,
+    "sec_filings_available": false,
+    "business_model": "منصة مؤسسية B2B/B2G تُباع للوزارات والمدارس والجامعات وجهات التدريب عبر تراخيص وحزم مخصصة، مع وحدات إضافية تشمل نظام إدارة التعلم والتدريب وERP والمدفوعات والسوق التعليمي وخدمات التنفيذ والدعم. لا تنشر الشركة قائمة أسعار تعاقدية كاملة أو مزيج الإيرادات.",
+    "products": [
+      "Classera LMS للتعليم المدرسي والعالي",
+      "LeadXera TMS للتدريب الحكومي والمؤسسي",
+      "Classera 16 وXsera للذكاء الاصطناعي والتعلم التكيفي",
+      "ERP للعمليات المالية والإدارية للمؤسسات التعليمية",
+      "CPay للمدفوعات التعليمية وإدارة الرسوم",
+      "Edumalls للسوق والمشتريات التعليمية",
+      "C.XSEED لبناء وتسريع شركات EdTech",
+      "خدمات الشراكات والمحتوى والتنفيذ والدعم"
+    ],
+    "technology_stack_note": "لم يُثبت مصدر أولي حديث أن AWS أو ASP.NET أو Microsoft SQL Server هي الحزمة الداخلية الحالية؛ لذلك يعرض الملف القدرات الوظيفية والمنتجات بدل تخمين البنية التقنية."
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين دولار",
-    "monthly_traffic": "أكثر من 10 ملايين مستخدم نشط يومياً"
+    "as_of_date": "2026-08-03",
+    "monthly_revenue": null,
+    "monthly_revenue_note": "لا تنشر كلاسيرا إيرادًا شهريًا أو سنويًا فعليًا أو ARR/MRR أو قوائم مالية مدققة. حُذف وصف «عشرات الملايين من الدولارات» لأنه غير موثق.",
+    "monthly_traffic": null,
+    "monthly_traffic_note": "لا تنشر الشركة رقم زيارات موقع أو تطبيق موثقًا. المستخدمون المسجلون أو الذين تصل إليهم المنصة لا يساوون الزيارات.",
+    "monthly_active_users": null,
+    "monthly_active_users_note": "لا تنشر كلاسيرا MAU أو DAU. حُذف وصف «أكثر من 10 ملايين مستخدم نشط يوميًا» لأنه يخلط بين نطاق المستخدمين والنشاط اليومي.",
+    "users_reached_or_served": {
+      "value": 30000000,
+      "operator": "+",
+      "unit": "مستخدم",
+      "period": "معلن على الصفحة الرئيسية عند الوصول في 2026-08-03",
+      "metric_type": "company_reported_user_reach",
+      "note": "لا توضح الصفحة إن كان الرقم حسابات مسجلة فريدة أو مستخدمين حاليين أو تراكميين، لذلك لا يُصنف MAU أو DAU."
+    },
+    "countries": {
+      "value": 45,
+      "operator": "+",
+      "unit": "دولة",
+      "period": "معلن على الصفحة الرئيسية عند الوصول في 2026-08-03",
+      "metric_type": "company_reported_geographic_reach"
+    },
+    "partners": {
+      "value": 200,
+      "operator": "+",
+      "unit": "شريك دولي ومحلي",
+      "period": "معلن على الموقع الرسمي عند الوصول في 2026-08-03",
+      "metric_type": "company_reported_partner_network"
+    },
+    "company_reported_platform_activity": {
+      "learning_hours_logged": {
+        "value": 9300000000,
+        "operator": "+",
+        "unit": "ساعة تعلم",
+        "scope": "تراكمي وفق صفحة Classera 16",
+        "note": "تعريف طريقة احتساب الساعة والفترة الأساسية غير منشور."
+      },
+      "interactions_processed": {
+        "value": 46800000000,
+        "operator": "+",
+        "unit": "تفاعل",
+        "scope": "تراكمي وفق صفحة Classera 16",
+        "note": "ليس عدد مستخدمين أو معاملات مالية."
+      },
+      "student_engagement_rate": {
+        "value": 70,
+        "operator": "+",
+        "unit": "%",
+        "scope": "مقياس تسويقي على صفحة Classera 16",
+        "note": "لم تنشر الشركة مقام القياس أو منهجيته أو الفترة؛ يعامل كادعاء شركة مؤهل."
+      }
+    },
+    "metric_conflict_note": "تعرض الصفحة الرئيسية الحالية 30+ مليون مستخدم و45+ دولة، بينما تعرض صفحة «من نحن» 10+ ملايين و40+ دولة، وتعرض صفحة المبادرات 10+ ملايين و44+ دولة. اعتمد الملف الصفحة الرئيسية الأحدث كصورة حالية، مع إبقاء التعارض صريحًا."
   },
   "overview": {
     "problem": {
-      "text": "المدارس الخاصة والحكومية كانت تستخدم أنظمة تقليدية أو أجنبية غير مخصصة للبيئة التعليمية العربية، وتفتقر لميزات التفاعل العصرية التي تبقي الطلاب مندمجين.",
-      "impact": "تجارب تعليمية مملة، ضعف في تتبع أداء الطلاب بدقة، وإهدار وقت المعلمين في المهام الإدارية بدلاً من التركيز على التدريس."
+      "text": "تحتاج الوزارات والمدارس والجامعات وجهات التدريب إلى ربط التعلم والتقييم والمحتوى والتواصل والعمليات المالية والإدارية في بيئة واحدة. استخدام أنظمة منفصلة يجزئ البيانات، ويزيد أعمال التكامل، ويصعّب بناء تجربة شخصية وقياس الأداء عبر دورة المتعلم.",
+      "impact": "تشتت بيانات الطالب والمعلم، عمليات يدوية متكررة، صعوبة توحيد التجربة عبر فروع أو دول متعددة، واعتماد متزايد على مورّدين وتكاملات كثيرة لإدارة المؤسسة التعليمية."
     },
     "solution": {
-      "text": "نظام إدارة تعلم شامل (LMS) يدمج التلعيب (Gamification)، الذكاء الاصطناعي، ونظام المكافآت، مع توفير تطبيق واحد يجمع الطالب، المعلم، ولي الأمر، والإدارة في منظومة متكاملة ومحفزة."
+      "text": "تقدم كلاسيرا «منصة تعلم فائقة» تتجاوز LMS إلى منظومة تشمل إدارة التعلم والتدريب، الذكاء الاصطناعي والتخصيص والتلعيب، ERP، المدفوعات، والسوق التعليمي. توسعت المنظومة عبر الشراكات والاستحواذ على Solutions Expert في 2024 لتقوية طبقة ERP، ثم عبر Classera 16 ومبادرات الذكاء الاصطناعي والشراكة مع زين السعودية في 2026."
     }
   },
   "market_data": {
-    "target_audience": "وزارات التعليم، المدارس الخاصة، والجامعات، والشركات الكبرى (للتدريب المؤسسي).",
-    "market_size": "سوق تكنولوجيا التعليم العالمي (مئات المليارات).",
-    "growth_rate": "جمعت 40 مليون دولار (Series A) في 2022، وتتوسع في أكثر من 30 دولة."
+    "target_audience": [
+      "وزارات التعليم والجهات الحكومية",
+      "المدارس الخاصة وشبكات المدارس K-12",
+      "الجامعات ومؤسسات التعليم العالي",
+      "جهات التدريب الحكومي والمؤسسي",
+      "الأكاديميات والمعاهد الافتراضية",
+      "مزودو المحتوى والتقنيات التعليمية الباحثون عن توزيع وتكامل مؤسسي"
+    ],
+    "market_size": {
+      "value": null,
+      "note": "لم يُستخدم رقم موحد لسوق EdTech لأن تعريفات LMS وERP التعليمي والتدريب والمدفوعات تختلف، ولأن تقديرات السوق لا تثبت إيراد كلاسيرا أو حصتها."
+    },
+    "growth_rate": {
+      "value": null,
+      "note": "لا تنشر الشركة نمو الإيرادات أو ARR أو CAGR داخليًا.",
+      "company_reported_operating_signals": [
+        "ارتفع نطاق الشركة المعلن من ملايين المستخدمين في أكثر من 30 دولة عند جولة 2022 إلى 30+ مليون مستخدم و45+ دولة على الصفحة الرئيسية الحالية، مع احتمال تغير تعريف المقياس.",
+        "استحوذت على Solutions Expert للـERP التعليمي في مارس 2024، ولم تُعلن قيمة الصفقة.",
+        "افتتحت مكتب عمّان رسميًا في يونيو 2025.",
+        "أعلنت أكثر من 20 اتفاقية استراتيجية خلال LEAP 2025.",
+        "أطلقت في يناير 2026 تحالف C.XSEED مع SuperCharger Ventures وFalak Group لبناء وتسريع شركات EdTech في الأسواق الناشئة.",
+        "فعّلت في أبريل 2026 تعاونًا مع ICESCO لمبادرة تعليم ذكي عبر الدول الأعضاء.",
+        "أعلنت في يوليو 2026 شراكة استراتيجية مع زين السعودية لتوسيع دمج الذكاء الاصطناعي في البيئة التعليمية."
+      ]
+    }
   },
   "financials": {
-    "initial_investment": "مدعومة من Sanabil Investments (صندوق الاستثمارات العامة السعودي) وغيرها.",
-    "valuation": "غير معلن (مئات الملايين)",
+    "actual_revenue": null,
+    "actual_revenue_note": "لا توجد قوائم مالية عامة أو إيرادات فعلية منشورة يمكن التحقق منها.",
+    "funding_history": [
+      {
+        "round": "Series A",
+        "date": "2022-10-27",
+        "amount_usd": 40000000,
+        "lead_investor": "Sanabil Investments",
+        "other_named_investors": [
+          "Global Ventures",
+          "Endeavor Catalyst",
+          "500 Global",
+          "Sukna Ventures",
+          "Seedra Ventures"
+        ],
+        "classification": "تمويل أسهم خاص وليس إيرادًا",
+        "note": "ذكر إعلان الشركة أن الجولة كانت أول تمويل خارجي لها."
+      }
+    ],
+    "total_funding_disclosed": {
+      "value_usd": 40000000,
+      "as_of": "2026-08-03",
+      "note": "إجمالي الجولات المعلنة التي أمكن توثيقها علنًا؛ لا يثبت عدم وجود تمويل غير معلن أو تسهيلات أخرى."
+    },
+    "valuation": null,
+    "valuation_note": "لم تُعلن الشركة تقييم الجولة أو تقييمًا خاصًا حديثًا. حُذف وصف «مئات الملايين».",
+    "transaction_volume": null,
+    "transaction_volume_note": "وجود CPay لا يثبت قيمة مدفوعات أو GMV؛ لا يوجد حجم معاملات مالي منشور.",
+    "acquisitions": [
+      {
+        "target": "Solutions Expert for Information Technology",
+        "announced_date": "2024-03-14",
+        "purpose": "إضافة ERP مالي وإداري متخصص للمؤسسات التعليمية إلى منصة كلاسيرا",
+        "deal_value": null,
+        "note": "قيمة الصفقة وشروطها غير معلنة."
+      }
+    ],
     "revenue_streams": [
-      "اشتراكات ترخيص سنوية للمدارس والمؤسسات بناءً على عدد الطلاب (SaaS)",
-      "رسوم إضافية لخدمات متقدمة مثل تقنية التعرف على الوجوه ونظام المكافآت"
+      {
+        "stream": "تراخيص وحزم LMS وTMS للمؤسسات والحكومات",
+        "status": "مثبت كمنتج ونموذج بيع مؤسسي؛ الأسعار والإيراد غير معلنين"
+      },
+      {
+        "stream": "وحدات ERP والخدمات المالية والإدارية",
+        "status": "مثبتة بعد الاستحواذ ومن صفحات المنتج؛ مزيج الإيراد غير معلن"
+      },
+      {
+        "stream": "حلول CPay والمدفوعات التعليمية",
+        "status": "المنتج مثبت؛ لا توجد رسوم معالجة أو حجم معاملات منشور يسمح بقياس الإيراد"
+      },
+      {
+        "stream": "Edumalls والسوق والمشتريات التعليمية",
+        "status": "المنتج مثبت؛ العمولة أو الهامش غير معلنين"
+      },
+      {
+        "stream": "التنفيذ والتخصيص والتكامل والدعم والتدريب",
+        "status": "مرجح في العقود المؤسسية وتعرض الشركة دعمًا وخدمات متكاملة، لكن الفصل المحاسبي غير منشور"
+      }
     ]
+  },
+  "analysis": {
+    "thesis": "الميزة الاستراتيجية لكلاسيرا ليست مجرد امتلاك LMS عربي؛ بل محاولة امتلاك أكبر عدد ممكن من طبقات التشغيل حول رحلة المتعلم والمؤسسة، من المحتوى والتقييم إلى ERP والدفع والسوق. هذا يوسع قيمة العقد ويزيد صعوبة الاستبدال، لكنه يرفع كذلك عبء التنفيذ والتكامل والحوكمة.",
+    "strategic_strengths": [
+      "توزيع مؤسسي عبر وزارات ومدارس وجامعات وجهات تدريب بدل الاعتماد على اكتساب أفراد واحدًا واحدًا.",
+      "منصة متعددة الوحدات تسمح بالتوسع داخل الحساب نفسه من LMS إلى TMS وERP وCPay وEdumalls.",
+      "تركيز واضح على الأسواق الناشئة والتعريب والتخصيص المحلي والشراكات الإقليمية.",
+      "شبكة 200+ شريك تمنح الشركة محتوى وتقنيات وقنوات توزيع دون بناء كل مكوّن داخليًا.",
+      "الاستحواذ على شركة ERP تعليمية يقلل فجوة العمليات الخلفية ويقرب العرض من نظام تشغيل كامل للمؤسسة.",
+      "Classera 16 يضع الذكاء الاصطناعي والتعلم التكيفي والتقارير داخل سير العمل، بدل تقديمها كأداة منفصلة."
+    ],
+    "risks_and_open_questions": [
+      "لا توجد إيرادات أو ARR أو هامش إجمالي أو احتفاظ صافٍ منشور، لذلك لا يمكن قياس جودة النمو ماليًا.",
+      "أرقام المستخدمين والدول تختلف بين صفحات الشركة، ما يضعف المقارنة التاريخية ما لم توحد التعريفات.",
+      "المنصة الواسعة قد تزيد دورات البيع والتنفيذ وتكاليف الدعم، خصوصًا في العقود الحكومية ومتعددة الدول.",
+      "إضافة ERP ومدفوعات وسوق ترفع متطلبات الأمن والامتثال والتكامل والمسؤولية التشغيلية.",
+      "وجود 30+ مليون مستخدم لا يكشف نسبة النشطين أو المدفوعين أو الإيراد لكل مستخدم.",
+      "الاعتماد على شراكات وتكاملات كثيرة يوسع العرض لكنه يخلق تبعيات على جودة الشركاء واستمرارية الاتفاقيات.",
+      "ادعاءات ساعات التعلم والتفاعلات ومعدل المشاركة غير مصحوبة بمنهجية عامة تسمح بتدقيق مستقل."
+    ],
+    "metric_reading": {
+      "revenue": "غير منشور.",
+      "funding": "40 مليون دولار Series A موثقة؛ التمويل ليس إيرادًا.",
+      "valuation": "غير معلنة.",
+      "transaction_volume": "غير معلن رغم وجود منتج دفع.",
+      "users": "30+ مليون وصول/خدمة وفق الشركة، وليس MAU أو DAU.",
+      "traffic": "غير منشور.",
+      "countries": "45+ دولة وفق الصفحة الرئيسية الحالية، وهو انتشار جغرافي لا مقياس استخدام.",
+      "platform_activity": "الساعات والتفاعلات أرقام تراكمية معلنة من الشركة وليست إيرادًا أو مستخدمين فريدين."
+    }
   },
   "lessons": [
     {
-      "title": "التركيز على المؤسسات (B2B) بدلاً من الأفراد (B2C)",
-      "description": "معظم مشاريع التعليم تفشل لأنها تحاول بيع المحتوى للطلاب مباشرة (B2C) وهو قطاع صعب ومنافس. كلاسيرا ركزت على بناء البنية التحتية للمدارس والحكومات (B2B2C)، فحصدت عقوداً ضخمة ومستدامة بفضل التبديل المكلف (High Switching Cost)."
+      "title": "بع طبقة التشغيل لا شاشة الدرس",
+      "description": "عندما يصبح LMS مدخلًا إلى ERP والدفع والسوق والتدريب، تنتقل القيمة من ميزة منفردة إلى بنية تشغيل يصعب استبدالها. الدرس هو توسيع المنتج حول سير العمل الحقيقي للعميل، لا إضافة خصائص متناثرة."
     },
     {
-      "title": "التحفيز يصنع الفارق",
-      "description": "النظام ليس مجرد رفع ملفات كـ Moodle، بل يوفر (نقاطاً ذهبية) للطلاب عند حل الواجبات، يمكن استبدالها بخصومات في متاجر وشركات شركاء (مثل المطاعم ومحلات الألعاب)، مما زاد من معدلات المشاركة بشكل خيالي."
+      "title": "العقد الحكومي يحتاج منظومة شركاء",
+      "description": "المشاريع التعليمية واسعة النطاق تحتاج محتوى واتصالات وأجهزة ومدفوعات وتنفيذًا محليًا. شبكة الشركاء ليست حملة علاقات عامة فقط؛ هي طريقة لتغطية متطلبات يصعب على شركة واحدة بناؤها بسرعة."
+    },
+    {
+      "title": "الاستحواذ أسرع من إعادة بناء المجال",
+      "description": "إضافة ERP تعليمي كامل عبر الاستحواذ على Solutions Expert تختصر سنوات من معرفة العمليات المالية والإدارية. الاستحواذ يصبح منطقيًا عندما يملأ فجوة مرتبطة مباشرة بقيمة العقد الأساسية."
+    },
+    {
+      "title": "فرّق بين الانتشار والاستخدام",
+      "description": "30 مليون مستخدم و45 دولة إشارتان إلى النطاق، لكنهما لا تكشفان التكرار أو النشاط أو الدفع. الملف الاحترافي يفصل الحسابات المسجلة والوصول التراكمي عن MAU وDAU والزيارات."
+    },
+    {
+      "title": "الذكاء الاصطناعي يجب أن يدخل سير العمل",
+      "description": "Classera 16 يربط الذكاء الاصطناعي بإنشاء الاختبارات والدروس والتخصيص والتقارير. القيمة الأقوى تظهر عندما يقلل الذكاء الاصطناعي وقت المعلم والإدارة، لا عندما يكون واجهة محادثة جانبية."
+    },
+    {
+      "title": "التوسع داخل العميل قد يسبق التوسع الجغرافي",
+      "description": "بيع وحدة ثانية أو ثالثة لمؤسسة قائمة يمكن أن يكون أكثر كفاءة من دخول سوق جديد. نجاح استراتيجية المنصة ينبغي قياسه بتبني الوحدات والإيراد لكل مؤسسة، لكن كلاسيرا لا تنشر هذه المقاييس."
+    },
+    {
+      "title": "التمويل يثبت الثقة لا اقتصاديات الوحدة",
+      "description": "جولة 40 مليون دولار تمنح موارد للتوسع والاستحواذ، لكنها لا تثبت الإيراد أو الربحية أو الاحتفاظ. يجب إبقاء التمويل منفصلًا تمامًا عن الأداء التشغيلي."
     }
   ],
   "tools": [
-    "AWS",
-    "ASP.NET",
-    "Microsoft SQL Server",
-    "Machine Learning"
+    "Classera LMS لإدارة المحتوى والواجبات والاختبارات والتواصل والتقارير",
+    "LeadXera TMS للتدريب الحكومي والمؤسسي",
+    "Classera 16 وXsera للذكاء الاصطناعي والتعلم التكيفي وإنشاء الاختبارات والدروس",
+    "التلعيب والتخصيص والتعلم الاجتماعي",
+    "ERP للموارد البشرية والمالية والقبول والمخزون والعمليات التعليمية",
+    "CPay لإدارة الرسوم والمدفوعات والتقارير المالية متعددة العملات",
+    "Edumalls للسوق والمشتريات واللوازم التعليمية",
+    "تطبيقات جوال وأدوار متعددة للطلاب والمعلمين والإداريين وأولياء الأمور",
+    "شبكة 200+ شريك وتكاملات تقنية ومحتوى وفق الشركة"
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "language": "ar",
+    "researched_through": "2026-08-03",
+    "generated_at": "2026-08-03T17:27:00+03:00",
+    "company_status": "شركة خاصة؛ لا توجد قوائم مالية عامة أو رمز تداول أو ملفات SEC تشغيلية باسم كلاسيرا.",
+    "primary_source_priority": [
+      "الموقع الرسمي وصفحات المنتجات",
+      "إعلان التمويل الصادر عن الشركة",
+      "إعلانات الاستحواذ والشراكات الرسمية",
+      "صفحات الاتصال والسياسات الرسمية",
+      "مصادر ثانوية محدودة فقط عند الحاجة إلى التحقق المتقاطع"
+    ],
+    "corrections": [
+      {
+        "original_claim": "عملاق التكنولوجيا التعليمية الذي يقود رقمنة المدارس من الشرق الأوسط للعالم",
+        "action": "مصحح",
+        "replacement": "عنوان تحليلي محدد يشرح انتقال كلاسيرا من LMS إلى طبقة تشغيل تعليمية متكاملة، دون استخدام وصف تفوق مطلق غير قابل للقياس."
+      },
+      {
+        "original_claim": "الولايات المتحدة مع مكاتب رئيسية في الأردن والسعودية",
+        "action": "محدّث",
+        "replacement": "المقر المعلن في سان فرانسيسكو، مع مكاتب في جدة وعمّان ودبي والقاهرة وماليزيا."
+      },
+      {
+        "original_claim": "اشتراكات SaaS للمدارس والحكومات فقط",
+        "action": "موسع ومؤهل",
+        "replacement": "بيع مؤسسي B2B/B2G لوحدات LMS وTMS وERP والمدفوعات والسوق والخدمات؛ الأسعار ومزيج الإيراد غير معلنين."
+      },
+      {
+        "original_claim": "عشرات الملايين من الدولارات إيرادًا شهريًا",
+        "action": "محذوف",
+        "replacement": "لا يوجد إيراد شهري أو سنوي فعلي منشور."
+      },
+      {
+        "original_claim": "أكثر من 10 ملايين مستخدم نشط يوميًا",
+        "action": "محذوف ومصحح",
+        "replacement": "تعلن الصفحة الرئيسية الحالية 30+ مليون مستخدم بوصفه نطاق وصول، دون MAU أو DAU."
+      },
+      {
+        "original_claim": "سوق تكنولوجيا التعليم بمئات المليارات",
+        "action": "محذوف",
+        "replacement": "لم يستخدم الملف رقم سوق موحدًا لأن التعريفات مختلفة ولا تثبت أداء الشركة."
+      },
+      {
+        "original_claim": "تتوسع في أكثر من 30 دولة",
+        "action": "محدّث",
+        "replacement": "تعلن الصفحة الرئيسية الحالية 45+ دولة، مع توثيق اختلاف الأرقام بين صفحات الشركة."
+      },
+      {
+        "original_claim": "Series A تجاوزت 40 مليون دولار",
+        "action": "مصحح",
+        "replacement": "Series A كانت 40 مليون دولار بالضبط في 27 أكتوبر 2022."
+      },
+      {
+        "original_claim": "التقييم مئات الملايين",
+        "action": "محذوف",
+        "replacement": "لم يُعلن تقييم الجولة أو تقييم حديث."
+      },
+      {
+        "original_claim": "رسوم التعرف على الوجوه ونظام المكافآت مصدر إيراد محدد",
+        "action": "محذوف/مؤهل",
+        "replacement": "المنتجات والميزات مثبتة، لكن التسعير ومساهمة كل ميزة في الإيراد غير معلنين."
+      },
+      {
+        "original_claim": "التلعيب زاد المشاركة بشكل خيالي",
+        "action": "محذوف",
+        "replacement": "لا توجد دراسة عامة تسمح بإسناد زيادة محددة للتلعيب؛ أدرجت أرقام المشاركة فقط كادعاءات شركة مع قيود المنهجية."
+      },
+      {
+        "original_claim": "عقود ضخمة ومستدامة وتكلفة تبديل مرتفعة",
+        "action": "حوّل إلى تحليل",
+        "replacement": "اتساع الوحدات قد يزيد صعوبة الاستبدال، لكن قيم العقود والاحتفاظ غير منشورة."
+      },
+      {
+        "original_claim": "AWS وASP.NET وMicrosoft SQL Server وMachine Learning",
+        "action": "محذوف جزئيًا",
+        "replacement": "أبقيت قدرات الذكاء الاصطناعي المعلنة، وحذفت الحزمة الداخلية غير المثبتة بمصدر أولي حديث."
+      }
+    ],
+    "metric_distinctions": {
+      "revenue": "دخل محاسبي فعلي؛ غير منشور.",
+      "funding": "رأس مال استثماري مقابل ملكية أو أداة تمويل؛ 40 مليون دولار موثقة، وليس إيرادًا.",
+      "valuation": "قيمة الشركة في صفقة أسهم؛ غير معلنة.",
+      "transaction_volume": "قيمة المدفوعات أو الرسوم التي تمر عبر CPay؛ غير منشورة.",
+      "users_reached": "حسابات أو أفراد تقول الشركة إن منصتها خدمتهم أو وصلت إليهم؛ 30+ مليون وفق الصفحة الرئيسية.",
+      "active_users": "مستخدمون فريدون نشطون خلال فترة محددة؛ غير منشورين.",
+      "traffic": "زيارات موقع أو تطبيق؛ غير منشورة رسميًا.",
+      "learning_hours": "نشاط تراكمي داخل المنصة وفق الشركة؛ لا يساوي مستخدمين أو إيرادًا.",
+      "interactions": "أحداث استخدام معالجة؛ لا تساوي مستخدمين فريدين أو معاملات مالية.",
+      "countries": "انتشار جغرافي معلن؛ لا يثبت نشاطًا متساويًا أو إيرادًا في كل دولة."
+    },
+    "known_limits": [
+      "كلاسيرا شركة خاصة ولا تنشر قوائم مالية مدققة أو ARR أو MRR أو الربحية.",
+      "أرقام 30+ مليون مستخدم و45+ دولة و200+ شريك صادرة عن الشركة ولم تُراجع مستقلًا.",
+      "صفحات الشركة غير متسقة: 10+ ملايين مقابل 30+ مليون مستخدم، و40+/44+/45+ دولة.",
+      "منهجية 9.3 مليارات ساعة تعلم و46.8 مليار تفاعل و70%+ مشاركة غير منشورة.",
+      "قيمة الاستحواذ على Solutions Expert غير معلنة.",
+      "لم يُعلن تقييم Series A أو تقييم خاص حديث.",
+      "لا توجد بيانات MAU أو DAU أو زيارات أو GMV أو حجم مدفوعات.",
+      "قائمة الأسعار العامة تعرض مستويات وميزات، لكنها لا تكشف قيم العقود المؤسسية أو الخصومات أو خدمات التنفيذ.",
+      "لم تُستخدم تقديرات الإيراد أو الزيارات من قواعد بيانات تجارية غير أولية."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_at": "2026-08-03T17:27:00+03:00",
+      "parser": "Python json",
+      "checks": [
+        {
+          "name": "required_top_level_keys",
+          "passed": true,
+          "details": {
+            "missing": []
+          }
+        },
+        {
+          "name": "unique_source_ids",
+          "passed": true,
+          "details": {
+            "duplicates": []
+          }
+        },
+        {
+          "name": "unique_claim_ids",
+          "passed": true,
+          "details": {
+            "duplicates": []
+          }
+        },
+        {
+          "name": "evidence_source_references",
+          "passed": true,
+          "details": {
+            "unknown": []
+          }
+        },
+        {
+          "name": "evidence_json_paths",
+          "passed": true,
+          "details": {
+            "invalid": []
+          }
+        },
+        {
+          "name": "unverified_monthly_metrics_not_fabricated",
+          "passed": true,
+          "details": {
+            "monthly_revenue": null,
+            "monthly_traffic": null,
+            "monthly_active_users": null
+          }
+        },
+        {
+          "name": "undisclosed_financial_metrics_remain_null",
+          "passed": true,
+          "details": {
+            "actual_revenue": null,
+            "valuation": null,
+            "transaction_volume": null
+          }
+        },
+        {
+          "name": "funding_not_misclassified_as_revenue",
+          "passed": true,
+          "details": {}
+        },
+        {
+          "name": "user_reach_not_misclassified_as_active_users",
+          "passed": true,
+          "details": {}
+        },
+        {
+          "name": "unsupported_original_stack_removed_from_active_tools",
+          "passed": true,
+          "details": {
+            "matched": []
+          }
+        },
+        {
+          "name": "no_nan_or_infinity",
+          "passed": true,
+          "details": {
+            "paths": []
+          }
+        }
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "claim_id": "معرف فريد للادعاء",
+    "json_paths": "المواضع داخل JSON التي يعتمد محتواها على الدليل",
+    "claim": "صياغة عربية مختصرة للادعاء",
+    "source_ids": "معرفات المصادر الداعمة",
+    "evidence_type": "historical_fact | metric | company_claim | product_fact | funding | acquisition | partnership | legal | calculation | absence_of_disclosure",
+    "confidence": "high | medium | low",
+    "status": "verified | qualified | removed",
+    "notes": "قيود أو طريقة تصنيف أو تمييز ضروري"
+  },
+  "evidence_map": [
+    {
+      "claim_id": "C01",
+      "json_paths": [
+        "company.location",
+        "company.founded_year",
+        "company.founded_by"
+      ],
+      "claim": "تأسست كلاسيرا عام 2012 في وادي السيليكون على يد محمد المدني ومحمد العشماوي، وتعلن مقرًا في سان فرانسيسكو ومكاتب إقليمية متعددة.",
+      "source_ids": [
+        "S3",
+        "S4",
+        "S13"
+      ],
+      "evidence_type": "historical_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "المقر والعناوين مبنية على صفحات الشركة الحالية وإعلان التمويل."
+    },
+    {
+      "claim_id": "C02",
+      "json_paths": [
+        "company.business_model",
+        "company.products",
+        "overview.solution.text"
+      ],
+      "claim": "تقدم كلاسيرا منصة مؤسسية تضم LMS وTMS وERP والمدفوعات والسوق التعليمي والذكاء الاصطناعي.",
+      "source_ids": [
+        "S1",
+        "S6",
+        "S7",
+        "S8",
+        "S9"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "وجود الوحدات مثبت؛ مزيج الإيراد غير معلن."
+    },
+    {
+      "claim_id": "C03",
+      "json_paths": [
+        "directory_snapshot.users_reached_or_served",
+        "directory_snapshot.countries",
+        "directory_snapshot.partners"
+      ],
+      "claim": "تعرض الصفحة الرئيسية الحالية 30+ مليون مستخدم و45+ دولة، ويعرض الموقع شبكة 200+ شريك.",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "evidence_type": "company_claim",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "هذه أرقام صادرة عن الشركة وليست MAU أو DAU ولا خضعت لتدقيق مستقل."
+    },
+    {
+      "claim_id": "C04",
+      "json_paths": [
+        "directory_snapshot.metric_conflict_note",
+        "verification.known_limits.2"
+      ],
+      "claim": "تختلف أرقام المستخدمين والدول بين صفحات الشركة الحالية والأقدم.",
+      "source_ids": [
+        "S1",
+        "S3",
+        "S14"
+      ],
+      "evidence_type": "company_claim",
+      "confidence": "high",
+      "status": "qualified",
+      "notes": "اعتمدت الصفحة الرئيسية كأحدث لقطة مع إظهار التعارض."
+    },
+    {
+      "claim_id": "C05",
+      "json_paths": [
+        "directory_snapshot.company_reported_platform_activity"
+      ],
+      "claim": "تعرض صفحة Classera 16 أرقامًا تراكمية تشمل 9.3+ مليارات ساعة تعلم و46.8+ مليار تفاعل ومشاركة طلاب 70%+.",
+      "source_ids": [
+        "S6"
+      ],
+      "evidence_type": "company_claim",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "التعريف والمنهجية والفترة غير منشورة."
+    },
+    {
+      "claim_id": "C06",
+      "json_paths": [
+        "financials.funding_history.0",
+        "financials.total_funding_disclosed"
+      ],
+      "claim": "أغلقت كلاسيرا Series A بقيمة 40 مليون دولار في 27 أكتوبر 2022 بقيادة Sanabil.",
+      "source_ids": [
+        "S4"
+      ],
+      "evidence_type": "funding",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "التمويل منفصل عن الإيراد والتقييم."
+    },
+    {
+      "claim_id": "C07",
+      "json_paths": [
+        "financials.acquisitions.0",
+        "overview.solution.text"
+      ],
+      "claim": "استحوذت كلاسيرا على Solutions Expert في مارس 2024 لتوسيع ERP التعليمي، دون إعلان قيمة الصفقة.",
+      "source_ids": [
+        "S5"
+      ],
+      "evidence_type": "acquisition",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "قيمة وشروط الصفقة غير معلنة."
+    },
+    {
+      "claim_id": "C08",
+      "json_paths": [
+        "market_data.growth_rate.company_reported_operating_signals.4",
+        "company.products.6"
+      ],
+      "claim": "أعلنت كلاسيرا في يناير 2026 تحالف C.XSEED مع SuperCharger Ventures وFalak Group لبناء وتسريع شركات EdTech.",
+      "source_ids": [
+        "S11"
+      ],
+      "evidence_type": "partnership",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "لا يتضمن الإعلان قيمة استثمار أو أهدافًا مالية قابلة للقياس."
+    },
+    {
+      "claim_id": "C09",
+      "json_paths": [
+        "market_data.growth_rate.company_reported_operating_signals.5",
+        "market_data.growth_rate.company_reported_operating_signals.6"
+      ],
+      "claim": "وسعت كلاسيرا شراكاتها في 2026 مع ICESCO وزين السعودية لدفع التعليم الذكي والذكاء الاصطناعي.",
+      "source_ids": [
+        "S10",
+        "S12"
+      ],
+      "evidence_type": "partnership",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "الإعلانات استراتيجية ولا تثبت إيرادًا أو عدد مستخدمين إضافيًا."
+    },
+    {
+      "claim_id": "C10",
+      "json_paths": [
+        "directory_snapshot.monthly_revenue",
+        "financials.actual_revenue",
+        "financials.valuation"
+      ],
+      "claim": "لا تنشر كلاسيرا إيرادًا فعليًا أو شهريًا أو تقييمًا خاصًا حديثًا.",
+      "source_ids": [
+        "S1",
+        "S4",
+        "S5",
+        "S10",
+        "S11",
+        "S12"
+      ],
+      "evidence_type": "absence_of_disclosure",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "لم تُستخدم تقديرات خارجية."
+    },
+    {
+      "claim_id": "C11",
+      "json_paths": [
+        "directory_snapshot.monthly_traffic",
+        "directory_snapshot.monthly_active_users",
+        "financials.transaction_volume"
+      ],
+      "claim": "لا توجد زيارات أو MAU/DAU أو حجم مدفوعات موثق؛ أرقام الوصول والنشاط التراكمي لا تستبدل هذه المقاييس.",
+      "source_ids": [
+        "S1",
+        "S6",
+        "S8"
+      ],
+      "evidence_type": "absence_of_disclosure",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "تم الفصل بين المستخدمين والنشاط والزيارات والمعاملات."
+    },
+    {
+      "claim_id": "C12",
+      "json_paths": [
+        "company.technology_stack_note",
+        "verification.corrections.12"
+      ],
+      "claim": "لم يُثبت مصدر أولي حديث أن AWS أو ASP.NET أو Microsoft SQL Server هي الحزمة الداخلية الحالية لكلاسيرا.",
+      "source_ids": [
+        "S1",
+        "S6",
+        "S7",
+        "S8",
+        "S9",
+        "S15"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "removed",
+      "notes": "أبقيت القدرات الوظيفية والذكاء الاصطناعي المعلنة وحذفت تخمينات البنية."
+    },
+    {
+      "claim_id": "C13",
+      "json_paths": [
+        "financials.revenue_streams",
+        "verification.metric_distinctions"
+      ],
+      "claim": "تثبت المصادر وجود منتجات تراخيص وERP ومدفوعات وسوق، لكنها لا تنشر أسعار العقود أو مزيج الإيراد أو حجم المعاملات.",
+      "source_ids": [
+        "S7",
+        "S8",
+        "S9",
+        "S15"
+      ],
+      "evidence_type": "absence_of_disclosure",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "وجود مسار المنتج لا يثبت قيمة الإيراد."
+    },
+    {
+      "claim_id": "C14",
+      "json_paths": [
+        "market_data.growth_rate.company_reported_operating_signals.2",
+        "company.location"
+      ],
+      "claim": "افتتحت كلاسيرا مكتبها الجديد في عمّان في يونيو 2025.",
+      "source_ids": [
+        "S13"
+      ],
+      "evidence_type": "historical_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "الإعلان رسمي من الشركة."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title_ar": "الصفحة الرئيسية الرسمية لكلاسيرا",
+      "title_original": "The Learning Super Platform for Smart, Joyful Learning",
+      "publisher": "Classera",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_company_website",
+      "url": "https://classera.com/en/",
+      "used_for": [
+        "30+ مليون مستخدم",
+        "45+ دولة",
+        "LMS وTMS وERP والمدفوعات والسوق",
+        "تموضع المنصة الحالي"
+      ]
+    },
+    {
+      "id": "S2",
+      "title_ar": "لماذا كلاسيرا — أرقام الانتشار والشراكات",
+      "title_original": "Why Classera",
+      "publisher": "Classera",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_company_website",
+      "url": "https://classera.com/en/Why_Classera/",
+      "used_for": [
+        "30+ مليون متعلم",
+        "40+ دولة",
+        "200+ شريك",
+        "200+ تكامل تقني",
+        "إظهار اختلاف بعض الأرقام بين الصفحات"
+      ]
+    },
+    {
+      "id": "S3",
+      "title_ar": "نبذة الشركة الرسمية",
+      "title_original": "About Classera",
+      "publisher": "Classera",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_company_website",
+      "url": "https://classera.com/en/company/page/about/",
+      "used_for": [
+        "التأسيس عام 2012",
+        "المقر في وادي السيليكون",
+        "10+ ملايين مستخدم و40+ دولة على الصفحة الأقدم",
+        "الرئيس التنفيذي"
+      ]
+    },
+    {
+      "id": "S4",
+      "title_ar": "إعلان جولة Series A بقيمة 40 مليون دولار",
+      "title_original": "Classera Closes One of the Largest EdTech Series A Globally, a $40M Round Led by Sanabil",
+      "publisher": "Classera via PR Newswire",
+      "date": "2022-10-27",
+      "accessed": "2026-08-03",
+      "type": "primary_funding_announcement",
+      "url": "https://www.prnewswire.com/news-releases/classera-closes-one-of-the-largest-edtech-series-a-globally--a-40m-round-led-by-sanabil-301661155.html",
+      "used_for": [
+        "قيمة الجولة وتاريخها",
+        "المستثمرون",
+        "المؤسسان",
+        "المنتجات في 2022",
+        "أكثر من 30 دولة تاريخيًا"
+      ]
+    },
+    {
+      "id": "S5",
+      "title_ar": "إعلان الاستحواذ على Solutions Expert",
+      "title_original": "Classera Acquires Largest ERP Company for Education Sector in the Middle East",
+      "publisher": "Classera",
+      "date": "2024-03-14",
+      "accessed": "2026-08-03",
+      "type": "primary_acquisition_announcement",
+      "url": "https://www.classera.com/en/company/news_details/classera-acquires-largest-erp-company-for-education-sector-in-the-middle-east/",
+      "used_for": [
+        "الاستحواذ",
+        "إضافة ERP التعليمي",
+        "عدم إعلان قيمة الصفقة",
+        "التوسع إلى منصة متكاملة"
+      ]
+    },
+    {
+      "id": "S6",
+      "title_ar": "صفحة إصدار Classera 16",
+      "title_original": "Classera 16 — AI-powered, Smarter, More Connected",
+      "publisher": "Classera",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_product_release",
+      "url": "https://www.classera.com/en/company/new_release/",
+      "used_for": [
+        "قدرات الذكاء الاصطناعي والتعلم التكيفي",
+        "9.3+ مليارات ساعة",
+        "46.8+ مليار تفاعل",
+        "70%+ مشاركة",
+        "أدوات إنشاء الاختبارات والدروس"
+      ]
+    },
+    {
+      "id": "S7",
+      "title_ar": "صفحة Classera LMS الرسمية",
+      "title_original": "Discover the Future of Education with Classera's LMS",
+      "publisher": "Classera",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_product_page",
+      "url": "https://www.classera.com/en/products/classera-lms/",
+      "used_for": [
+        "قدرات LMS",
+        "الأدوار المتعددة",
+        "الذكاء الاصطناعي والتخصيص",
+        "Classera 16"
+      ]
+    },
+    {
+      "id": "S8",
+      "title_ar": "صفحة CPay الرسمية",
+      "title_original": "C Pay — Automate All Your Educational Payment",
+      "publisher": "Classera",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_product_page",
+      "url": "https://www.classera.com/en/products/c-pay/",
+      "used_for": [
+        "إدارة الرسوم والمدفوعات",
+        "التكامل مع LMS وTMS",
+        "التقارير والعملات المتعددة"
+      ]
+    },
+    {
+      "id": "S9",
+      "title_ar": "صفحة Edumalls الرسمية",
+      "title_original": "Edumalls",
+      "publisher": "Classera",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_product_page",
+      "url": "https://classera.com/en/products/edumalls/",
+      "used_for": [
+        "السوق التعليمي",
+        "مشتريات المدارس",
+        "خيارات الدفع",
+        "التكامل مع أنظمة المؤسسة"
+      ]
+    },
+    {
+      "id": "S10",
+      "title_ar": "شراكة كلاسيرا مع زين السعودية للذكاء الاصطناعي",
+      "title_original": "Classera launches Global Initiative to integrate AI in Partnership with Zain KSA",
+      "publisher": "Classera",
+      "date": "2026-07-13",
+      "accessed": "2026-08-03",
+      "type": "primary_partnership_announcement",
+      "url": "https://www.classera.com/en/company/news_details/classera-launches-global-initiative-to-integrate-ai-in-partnership-with-zain-ksa/",
+      "used_for": [
+        "أحدث شراكة كبرى قبل تاريخ البحث",
+        "دمج الذكاء الاصطناعي في التعليم",
+        "التوسع إلى أسواق إقليمية"
+      ]
+    },
+    {
+      "id": "S11",
+      "title_ar": "تحالف C.XSEED لبناء شركات EdTech",
+      "title_original": "Classera leads a Global Alliance with SuperCharger Ventures and Falak Group via C.XSEED",
+      "publisher": "Classera",
+      "date": "2026-01-27",
+      "accessed": "2026-08-03",
+      "type": "primary_partnership_announcement",
+      "url": "https://classera.com/en/company/news_details/classera-lead-a-global-alliance-with-supercharger-ventures-and-falak-group-via-its-venture-builder-arm-cxseed-to-transform-edtech-startup/",
+      "used_for": [
+        "C.XSEED",
+        "التحالف مع SuperCharger Ventures وFalak Group",
+        "استراتيجية بناء منظومة EdTech"
+      ]
+    },
+    {
+      "id": "S12",
+      "title_ar": "شراكة كلاسيرا مع ICESCO",
+      "title_original": "Classera Strengthens Its Global Presence: A Strategic Partnership with ICESCO",
+      "publisher": "Classera",
+      "date": "2026-04-15",
+      "accessed": "2026-08-03",
+      "type": "primary_partnership_announcement",
+      "url": "https://classera.com/en/company/news_details/classera-strengthens-its-global-presence-a-strategic-partnership-with-icesco-to-transform-education-across-the-islamic-world/",
+      "used_for": [
+        "مبادرة التعليم الذكي عبر الدول الأعضاء",
+        "التوسع المؤسسي في العالم الإسلامي"
+      ]
+    },
+    {
+      "id": "S13",
+      "title_ar": "افتتاح مكتب كلاسيرا في عمّان وصفحة مواقع الشركة",
+      "title_original": "Classera Grows Regional Presence, Launching Jordan Office",
+      "publisher": "Classera",
+      "date": "2025-06-02",
+      "accessed": "2026-08-03",
+      "type": "primary_company_announcement",
+      "url": "https://classera.com/en/company/news_details/classera-grows-regional-presence-launching-jordan-office-with-minister-of-digital-economy-in-attendance/",
+      "used_for": [
+        "افتتاح مكتب عمّان",
+        "التوسع الإقليمي",
+        "هوية الرئيس التنفيذي والمؤسس"
+      ]
+    },
+    {
+      "id": "S14",
+      "title_ar": "صفحة مبادرات كلاسيرا",
+      "title_original": "Classera Initiatives",
+      "publisher": "Classera",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_company_website",
+      "url": "https://classera.com/en/company/Initiatives/",
+      "used_for": [
+        "10+ ملايين مستخدم و44+ دولة على صفحة أخرى",
+        "14+ لغة",
+        "16+ وزارة",
+        "إظهار اختلاف التعريفات والأرقام"
+      ]
+    },
+    {
+      "id": "S15",
+      "title_ar": "صفحة خطط وميزات كلاسيرا",
+      "title_original": "Classera Pricing and Feature Comparison",
+      "publisher": "Classera",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_product_pricing_page",
+      "url": "https://classera.com/en/company/pricing/",
+      "used_for": [
+        "مستويات المنتج والميزات",
+        "الاختبارات والتعلم التكيفي والمكتبات",
+        "غياب أسعار العقود العامة في الصفحة المتاحة"
+      ]
+    }
   ]
 }

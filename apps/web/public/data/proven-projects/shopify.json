@@ -2,51 +2,2183 @@
   "id": "shopify",
   "slug": "shopify",
   "name": "شوبيفاي (Shopify)",
-  "headline": "نظام التشغيل للتجارة الإلكترونية الذي سلح المتمردين ضد احتكار أمازون",
-  "category": "B2B SaaS / التجارة الإلكترونية",
+  "headline": "من متجر ألواح ثلجية إلى طبقة تنفيذ للتجارة الوكيلية: كيف فصلت Shopify بين 3.17 مليارات دولار من الإيراد و100.7 مليار دولار من GMV",
+  "category": "Commerce Infrastructure & Public SaaS / بنية التجارة الموحدة والمدفوعات والتجارة الوكيلية",
   "company": {
-    "location": "أوتاوا، كندا",
-    "business_model": "اشتراكات شهرية (SaaS) + رسوم وعمولات على المدفوعات"
+    "location": "Shopify Inc. شركة كندية عامة تأسست كمشروع في 2004 وأطلقت منصتها في 2006، ويقع مكتبها الرئيسي المعلن في أوتاوا، كندا. أسهمها مدرجة تحت الرمز SHOP في ناسداك وبورصة تورونتو، وتخدم ملايين المتاجر الدافعة في أكثر من 175 دولة. تتبع الشركة نموذج عمل موزعًا عالميًا، لذلك لا يعكس موقع أوتاوا وحده نطاق العمليات أو التجار.",
+    "business_model": "ينقسم نموذج الإيراد إلى Subscription Solutions وMerchant Solutions. في الربع الأول 2026 بلغت اشتراكات المنصة 750 مليون دولار، بينما بلغت خدمات التجار 2.420 مليار دولار، أي نحو 24% و76% من الإيراد. تشمل الاشتراكات الخطط وShopify Plus وPOS Pro والتطبيقات والقوالب والنطاقات، بينما تشمل خدمات التجار Shopify Payments وتحويل العملات والمنتجات المالية وإحالات الشركاء والشحن وأجهزة POS وإعلانات App Store وShop Campaigns. تختلف الرسوم حسب البلد والحجم والعقد."
   },
   "directory_snapshot": {
-    "monthly_revenue": "$500M+ /mo",
-    "monthly_traffic": "50M+ /mo (للمنصة الأم)"
+    "monthly_revenue": "لا تنشر Shopify إيرادًا لكل شهر تقويمي. أحدث فترة مكتملة حتى 3 أغسطس 2026 هي الربع الأول، بإيراد إجمالي 3.170 مليارات دولار. لم يُقسم الرقم على ثلاثة بوصفه MRR بسبب الموسمية واختلاف أيام الأشهر. أما MRR الرسمي البالغ 212 مليون دولار في نهاية الربع فهو مقياس اشتراكات متكرر محسوب من التجار في ذلك اليوم، وليس إجمالي الإيراد الشهري.",
+    "monthly_traffic": "غير مُفصح عنه علنًا، ولا يوجد رقم رسمي لزيارات Shopify.com الشهرية يمكن اعتماده. المقاييس الرسمية المناسبة هي ملايين المتاجر الدافعة في أكثر من 175 دولة، و21 ألف+ تطبيق في النظام البيئي، وGMV قدره 100.743 مليار دولار في Q1 2026. المتاجر والتطبيقات وGMV ومشترو التجار ليست زيارات للموقع ولا مستخدمين نشطين لمنصة واحدة."
   },
   "overview": {
     "problem": {
-      "text": "بناء متجر إلكتروني كان يتطلب خبرة برمجية معقدة، استضافة خوادم، وأنظمة دفع صعبة الربط، مما جعل التجارة الرقمية حكراً على الشركات الكبرى.",
-      "impact": "آلاف التجار الصغار وأصحاب العلامات التجارية لم يتمكنوا من البيع مباشرة للجمهور واضطروا لدفع عمولات ضخمة لمنصات مثل أمازون."
+      "text": "تشغيل التجارة الحديثة يتطلب متجرًا إلكترونيًا ودفعًا وشحنًا ومخزونًا وبيعًا حضوريًا وتسويقًا وتحليلات وأسواقًا دولية وB2B وقنوات اجتماعية ووكلاء ذكاء اصطناعي. بناء هذه الطبقات وربطها وصيانتها منفردة يرفع التكلفة ويجزئ بيانات العميل والطلب والمخزون، خصوصًا للتجار الصغار والمتوسطين.",
+      "impact": "يؤدي التجزؤ إلى إطلاق أبطأ، وتكلفة تكامل وتشغيل أعلى، وتجربة غير متسقة بين القنوات. لكن القول إن التجارة كانت «حكرًا» كاملًا على الشركات الكبرى أو أن كل تاجر اضطر إلى Amazon تعميم غير قابل للقياس؛ لذلك استُبدل بوصف تشغيلي أدق."
     },
     "solution": {
-      "text": "منصة سحابية متكاملة تتيح لأي شخص إنشاء متجر إلكتروني احترافي بضغطة زر، متضمنة الاستضافة، التصميم، وأنظمة الدفع والشحن."
+      "text": "توفر Shopify نظامًا موحدًا لإدارة المنتجات والمخزون والطلبات والعملاء والدفع وCheckout وShop Pay وPOS والأسواق الدولية وB2B والتحليلات والأتمتة عبر Flow والمساعدة عبر Sidekick. يوسع App Store الوظائف عبر أكثر من 21 ألف تطبيق. وفي 2026 أضافت Agentic Storefronts وCatalog وUCP لعرض المنتجات والشراء عبر ChatGPT وCopilot وGoogle وGemini مع بقاء التاجر merchant of record واحتفاظه بعلاقة العميل. لا يعني توحيد المنصة أن كل ميزة متاحة لكل خطة أو دولة."
     }
   },
   "market_data": {
-    "target_audience": "التجار الأفراد، العلامات التجارية المباشرة للمستهلك (DTC)، والشركات الكبرى.",
-    "market_size": "سوق التجارة الإلكترونية العالمي يتجاوز 5.8 تريليون دولار.",
-    "growth_rate": "تشغل المنصة الآن أكثر من ملايين المتاجر حول العالم وتمثل حصة ضخمة من إجمالي التجارة الإلكترونية."
+    "target_audience": "الأفراد والمشروعات الصغيرة والمتوسطة والعلامات المباشرة للمستهلك وتجار التجزئة متعددو القنوات والشركات الكبرى عبر Shopify Plus، إضافة إلى تجار B2B والمطورين والوكالات والشركاء. تسمح بعض منتجات التجارة الوكيلية للتجار غير الموجودين تاريخيًا على Shopify باستخدام طبقات محددة، لكن التوافر والأسعار والقدرات تختلف حسب الخطة والسوق.",
+    "market_size": "لم تنشر Shopify تقديرًا رسميًا حديثًا لـTAM يمكن التحقق من منهجيته. كسياق لنطاق المنصة، بلغ GMV لعام 2025 نحو 378.4 مليار دولار، وتقول الشركة إنها تمثل أكثر من 14% من التجارة الإلكترونية الأمريكية، مع نحو 1.6 تريليون دولار من GMV التراكمي عبر تاريخها. هذه أرقام حركة تجارية أو حصة منصة، وليست إيراد السوق العالمي ولا إيراد Shopify.",
+    "growth_rate": "في Q1 2026 نما الإيراد 34% سنويًا إلى 3.170 مليارات دولار، وGMV بنسبة 35% إلى 100.743 مليار دولار، وMRR بنسبة 16% إلى 212 مليون دولار. وفي 2025 نما الإيراد 30% وGMV 29%. لا يجوز اختيار نسبة واحدة بوصفها «نمو الشركة» لأن الإيراد وحجم التجارة والاشتراكات مقاييس مختلفة."
   },
   "financials": {
-    "initial_investment": "بدأت كمشروع جانبي لمؤسسها لبيع معدات التزلج عبر الإنترنت.",
-    "valuation": "$100B+",
+    "initial_investment": "بدأت البرمجية كحل بناه المؤسسون لمتجر Snowdevil لمعدات التزلج في 2004، ثم أُطلقت Shopify في 2006. لا يكشف هذا الأصل القصصي قيمة «استثمار أولي» موثقة. عند الاكتتاب في مايو 2015 باعت الشركة 8.855 ملايين سهم بسعر 17 دولارًا للسهم، بإجمالي متحصلات 150.535 مليون دولار قبل المصروفات؛ وهو تمويل اكتتاب عام لاحق وليس رأس المال الأولي.",
+    "valuation": "Shopify شركة عامة، لذلك الأنسب هو القيمة السوقية المتغيرة لا «تقييم» خاص ثابت. باستخدام سعر سهم إرشادي قدره 124.48 دولار وقت التحقق وعدد 1,300,779,030 سهمًا قائمًا كما في 31 مارس 2026، تبلغ القيمة السوقية الحسابية نحو 161.9 مليار دولار. هذا تقريب لحظي لا قيمة نهائية: سعر السهم يتغير، ونفذت الشركة إعادة شراء أسهم بعد نهاية الربع، ونتائج Q2 كانت مقررة في 5 أغسطس 2026.",
     "revenue_streams": [
-      "اشتراكات شهرية (Basic, Shopify, Advanced, Plus)",
-      "رسوم عمليات الدفع (Shopify Payments)",
-      "تطبيقات المتجر ونقطة البيع (POS) وتمويل التجار (Shopify Capital)"
+      "اشتراكات Basic وGrow وAdvanced وShopify Plus وPOS Pro، مع اختلاف الأسعار حسب البلد ودورة الفوترة والعقد.",
+      "إيرادات Shopify Payments ومعالجة البطاقات وتحويل العملات ورسوم المعاملات عند استخدام مزود دفع خارجي.",
+      "منتجات مالية للتجار مثل Shopify Capital وخدمات مالية أخرى، مع الاعتراف بالإيراد وفق طبيعة كل منتج.",
+      "إيرادات الشحن وبيع أجهزة POS وخدمات البيع الحضوري.",
+      "إحالات الشركاء ورسوم أو حصص التطبيقات والقوالب والنطاقات وإعلانات App Store وShop Campaigns.",
+      "خدمات وأسواق B2B وMarkets والقنوات الوكيلية التي توسع استخدام المنصة؛ لم تفصح Shopify عن إيراد مستقل لكل ميزة."
     ]
   },
   "lessons": [
     {
-      "title": "حل مشكلتك الخاصة أولاً",
-      "description": "المؤسس توبي لوتكي بنى المنصة لأنه لم يجد أداة جيدة لمتجره الخاص لمعدات التزلج (Snowdevil)."
+      "title": "حل مشكلتك، ثم افصل القصة عن الأرقام",
+      "description": "Snowdevil يشرح أصل المنتج، لكنه لا يثبت قيمة الاستثمار الأولي أو نجاح النموذج وحده. القصة مفيدة لتحديد الاحتكاك الحقيقي، بينما التمويل والإيراد والتقييم تحتاج إفصاحات مالية مستقلة."
     },
     {
-      "title": "تسليح المتمردين (Arm the Rebels)",
-      "description": "كانت استراتيجية شوبيفاي واضحة: إعطاء التجار الصغار نفس الأدوات التكنولوجية التي تمتلكها أمازون لكي يتمكنوا من الاستقلال."
+      "title": "استخدم قواعد لغوية صارمة للمقاييس",
+      "description": "GMV هو قيمة الطلبات التي يمر بها التجار، والإيراد ما تسجله Shopify، وMRR مؤشر اشتراك في لحظة زمنية. خلط 100.7 مليار دولار من GMV مع 3.17 مليارات من الإيراد أو 212 مليونًا من MRR يصنع شركة مالية غير موجودة."
     },
     {
-      "title": "قوة النظام البيئي (Ecosystem)",
-      "description": "فتحت شوبيفاي متجر تطبيقات للمطورين الخارجيين، مما جعل آلاف الشركات الأخرى تبني أدوات تحل مشاكل دقيقة للتجار وتزيد من ارتباطهم بالمنصة."
+      "title": "اربط جزءًا من الإيراد بنجاح التاجر",
+      "description": "كلما زاد البيع عبر Shopify Payments والشحن والتمويل وPOS ارتفعت Merchant Solutions. هذا يحاذي النمو مع التاجر، لكنه يجعل الهوامش والمخاطر مختلفة عن اشتراكات البرمجيات الخالصة ويتطلب فصل القطاعات."
+    },
+    {
+      "title": "النظام البيئي يحوّل الحالات الطرفية إلى خندق",
+      "description": "أكثر من 21 ألف تطبيق يسمح للمطورين بحل احتياجات شديدة التخصص لا يمكن لفريق مركزي بناؤها كلها. في المقابل تحتاج المنصة إلى حوكمة وأمن واكتشاف وجودة حتى لا يتحول التنوع إلى عبء على التاجر."
+    },
+    {
+      "title": "في التجارة الوكيلية، حافظ على سيادة التاجر",
+      "description": "نهج Agentic Storefronts وUCP يضع المنتج داخل واجهات الذكاء الاصطناعي مع إبقاء التاجر merchant of record وصاحب العلاقة والبيانات. هذا يحول القناة الجديدة إلى توزيع إضافي بدل تحويل التاجر إلى مورد مجهول لمنصة أخرى."
+    },
+    {
+      "title": "التراجع الاستراتيجي قد يزيد التركيز",
+      "description": "بيع معظم نشاط اللوجستيات إلى Flexport في 2023 أظهر أن امتلاك كل طبقة ليس هدفًا بحد ذاته. يمكن للمنصة أن تحتفظ بالتكامل وتجربة التاجر مع نقل الأصول الثقيلة إلى شريك أكثر تخصصًا."
+    }
+  ],
+  "tools": [
+    "Ruby وRuby on Rails في أجزاء أساسية منشورة من المنصة وShop",
+    "MySQL وVitess لتوسيع قواعد البيانات في خدمات منشورة",
+    "Redis ما زال تقنية تاريخية وعملية في أجزاء من النظام؛ نُقل عبء حجز المخزون المحدد إلى MySQL باستخدام SKIP LOCKED، ولم يُزل Redis من الشركة كلها",
+    "GraphQL ومحرك Cardinal لمعالجة الاستعلامات الكبيرة بكفاءة أعلى في طبقة البيانات",
+    "Shopify Admin وCheckout وShop Pay وPOS وMarkets وB2B وFlow",
+    "Liquid والقوالب ومكونات الواجهة ونظام التطبيقات والشركاء",
+    "App Store يضم أكثر من 21 ألف تطبيق وفق إفصاح الشركة",
+    "Catalog API وUniversal Commerce Protocol وAgentic Storefronts للقنوات الوكيلية",
+    "Sidekick مع مخطط مهام ومهارات أو نماذج متخصصة وعمليات تقييم للبيانات",
+    "نموذج Qwen3-32B مضبوط لمهمة استدعاء الأدوات في Shopify Flow؛ النتائج المنشورة تخص هذا العبء ولا تعمم على كل الذكاء الاصطناعي في Shopify",
+    "Shopify Payments وخدمات اكتشاف الاحتيال والتسوية وتحويل العملات",
+    "بنية عالمية عالية التوفر وأدوات داخلية متعددة؛ القائمة ليست كشفًا معماريًا كاملًا لكل خدمة"
+  ],
+  "verification": {
+    "status": "verified_with_material_financial_metric_valuation_and_current_product_corrections",
+    "verified_on": "2026-08-03",
+    "source_policy": {
+      "priority_order": [
+        "إفصاحات SEC: 10-Q و10-K ونشرة الاكتتاب",
+        "Shopify Investor Relations والبيانات المالية الرسمية",
+        "صفحات التسعير والمنتج والتغييرات الرسمية",
+        "Shopify Engineering للمكدس التقني"
+      ],
+      "sec_applicability": "منطبق بالكامل: Shopify شركة عامة مدرجة، واعتمدت النسخة على 10-Q و10-K ونشرة IPO.",
+      "financial_rule": "فُصل الإيراد عن GMV وMRR وShopify Payments GMV والربح والتدفق النقدي والقيمة السوقية والتمويل.",
+      "usage_rule": "فُصلت زيارات الموقع عن المتاجر الدافعة والتجار والمشترين والتطبيقات والدول وGMV.",
+      "valuation_rule": "القيمة السوقية حُسبت إرشاديًا من سعر ديناميكي وعدد أسهم تاريخي مع قيد إعادة الشراء.",
+      "latest_period_rule": "حتى 3 أغسطس 2026 كان Q1 2026 أحدث ربع مكتمل؛ إعلان Q2 مقرر في 5 أغسطس 2026."
+    },
+    "important_notes": [
+      "الإيراد الشهري التقويمي غير منشور؛ إيراد Q1 2026 بلغ 3.170 مليارات دولار.",
+      "MRR البالغ 212 مليون دولار مقياس اشتراكات في نهاية الربع، وليس إجمالي الإيراد الشهري.",
+      "GMV البالغ 100.743 مليار دولار في Q1 2026 هو قيمة الطلبات الميسرة عبر التجار وليس إيراد Shopify.",
+      "Shopify Payments عالج 67.1 مليار دولار من GMV في Q1 2026، وهذا حجم مدفوعات لا إيراد معالجة.",
+      "إيراد 2025 بلغ 11.556 مليار دولار، بينما GMV بلغ 378.4 مليار دولار؛ لم يُخلط الرقمان.",
+      "زيارات Shopify.com الشهرية غير معلنة ولم يُستخدم تقدير 50 مليونًا.",
+      "تخدم Shopify ملايين المتاجر الدافعة في أكثر من 175 دولة، لكن لا تنشر رقمًا واحدًا حديثًا دقيقًا لعدد المتاجر.",
+      "21 ألف+ تطبيق مقياس نظام بيئي وليس عدد تجار أو مستخدمين.",
+      "القيمة السوقية التقريبية 161.9 مليار دولار حساب لحظي وليست تقييمًا ثابتًا.",
+      "سعر 124.48 دولار ديناميكي وقد يتغير فورًا بعد التحقق.",
+      "عدد الأسهم 1,300,779,030 يعود إلى 31 مارس 2026 وقد انخفض بعد إعادة الشراء.",
+      "رفعت الشركة تفويض إعادة شراء الأسهم إلى 5 مليارات دولار وأعلنت شراء نحو 1.45 مليار حتى 1 يونيو 2026.",
+      "نتائج Q2 2026 لم تكن منشورة في 3 أغسطس؛ موعدها المعلن 5 أغسطس 2026.",
+      "قصة Snowdevil لا تكشف قيمة الاستثمار الأولي.",
+      "متحصلات IPO البالغة 150.535 مليون دولار ليست رأس المال الأولي ولا الإيراد.",
+      "أسعار الخطط تختلف حسب البلد ودورة الفوترة والعقد ولا تُستخدم لتقدير ARPU.",
+      "Merchant Solutions مثلت نحو 76% من إيراد Q1 2026، لكنها تضم منتجات بهوامش مختلفة.",
+      "وصف أكثر من 14% من التجارة الإلكترونية الأمريكية صادر عن الشركة ولا يمثل حصة عالمية.",
+      "نحو 1.6 تريليون دولار GMV تراكمي مقياس تاريخي للمنصة لا إيرادًا تراكميًا.",
+      "Agentic Storefronts تسمح بالبيع داخل قنوات AI مع بقاء التاجر merchant of record.",
+      "بيع اللوجستيات في 2023 لا يعني توقف Shopify عن خدمات الشحن أو التكاملات.",
+      "نقل حجز المخزون من Redis إلى MySQL يخص عبئًا محددًا ولا يعني إزالة Redis عالميًا.",
+      "نتائج نموذج Qwen3-32B تخص مهمة Flow المحددة ولا تعمم على كل Sidekick أو Shopify.",
+      "لم تُستخدم قيمة سوق عالمية قدرها 5.8 تريليون دولار لعدم تعريفها وتاريخها ومنهجيتها في الملف الأصلي."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_at": "2026-08-03",
+      "checks_passed": 135,
+      "checks_failed": 0,
+      "checks": [
+        {
+          "name": "base_id",
+          "passed": true,
+          "details": "id موجود"
+        },
+        {
+          "name": "base_slug",
+          "passed": true,
+          "details": "slug موجود"
+        },
+        {
+          "name": "base_name",
+          "passed": true,
+          "details": "name موجود"
+        },
+        {
+          "name": "base_headline",
+          "passed": true,
+          "details": "headline موجود"
+        },
+        {
+          "name": "base_category",
+          "passed": true,
+          "details": "category موجود"
+        },
+        {
+          "name": "base_company",
+          "passed": true,
+          "details": "company موجود"
+        },
+        {
+          "name": "base_directory_snapshot",
+          "passed": true,
+          "details": "directory_snapshot موجود"
+        },
+        {
+          "name": "base_overview",
+          "passed": true,
+          "details": "overview موجود"
+        },
+        {
+          "name": "base_market_data",
+          "passed": true,
+          "details": "market_data موجود"
+        },
+        {
+          "name": "base_financials",
+          "passed": true,
+          "details": "financials موجود"
+        },
+        {
+          "name": "base_lessons",
+          "passed": true,
+          "details": "lessons موجود"
+        },
+        {
+          "name": "base_tools",
+          "passed": true,
+          "details": "tools موجود"
+        },
+        {
+          "name": "v2_verification",
+          "passed": true,
+          "details": "verification موجود"
+        },
+        {
+          "name": "v2_evidence_map_schema",
+          "passed": true,
+          "details": "evidence_map_schema موجود"
+        },
+        {
+          "name": "v2_evidence_map",
+          "passed": true,
+          "details": "evidence_map موجود"
+        },
+        {
+          "name": "v2_sources",
+          "passed": true,
+          "details": "sources موجود"
+        },
+        {
+          "name": "root_object",
+          "passed": true,
+          "details": "الجذر كائن"
+        },
+        {
+          "name": "id_preserved",
+          "passed": true,
+          "details": "id محفوظ"
+        },
+        {
+          "name": "slug_preserved",
+          "passed": true,
+          "details": "slug محفوظ"
+        },
+        {
+          "name": "name_preserved",
+          "passed": true,
+          "details": "الاسم محفوظ"
+        },
+        {
+          "name": "arabic",
+          "passed": true,
+          "details": "المحتوى عربي"
+        },
+        {
+          "name": "source_unique",
+          "passed": true,
+          "details": "المعرفات فريدة"
+        },
+        {
+          "name": "source_count_min",
+          "passed": true,
+          "details": "23 مصدرًا"
+        },
+        {
+          "name": "all_primary",
+          "passed": true,
+          "details": "كل المصادر أولية"
+        },
+        {
+          "name": "urls_valid",
+          "passed": true,
+          "details": "الروابط صالحة"
+        },
+        {
+          "name": "urls_unique",
+          "passed": true,
+          "details": "الروابط فريدة"
+        },
+        {
+          "name": "source_metadata",
+          "passed": true,
+          "details": "الميتاداتا مكتملة"
+        },
+        {
+          "name": "evidence_15",
+          "passed": true,
+          "details": "15 مسارًا"
+        },
+        {
+          "name": "value_$.company.location",
+          "passed": true,
+          "details": "القيمة مطابقة $.company.location"
+        },
+        {
+          "name": "fields_$.company.location",
+          "passed": true,
+          "details": "الحقول مكتملة $.company.location"
+        },
+        {
+          "name": "count_$.company.location",
+          "passed": true,
+          "details": "عدد المصادر صحيح $.company.location"
+        },
+        {
+          "name": "ids_$.company.location",
+          "passed": true,
+          "details": "المعرفات صحيحة $.company.location"
+        },
+        {
+          "name": "refs_$.company.location",
+          "passed": true,
+          "details": "المراجع متكاملة $.company.location"
+        },
+        {
+          "name": "value_$.company.business_model",
+          "passed": true,
+          "details": "القيمة مطابقة $.company.business_model"
+        },
+        {
+          "name": "fields_$.company.business_model",
+          "passed": true,
+          "details": "الحقول مكتملة $.company.business_model"
+        },
+        {
+          "name": "count_$.company.business_model",
+          "passed": true,
+          "details": "عدد المصادر صحيح $.company.business_model"
+        },
+        {
+          "name": "ids_$.company.business_model",
+          "passed": true,
+          "details": "المعرفات صحيحة $.company.business_model"
+        },
+        {
+          "name": "refs_$.company.business_model",
+          "passed": true,
+          "details": "المراجع متكاملة $.company.business_model"
+        },
+        {
+          "name": "value_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "القيمة مطابقة $.directory_snapshot.monthly_revenue"
+        },
+        {
+          "name": "fields_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "الحقول مكتملة $.directory_snapshot.monthly_revenue"
+        },
+        {
+          "name": "count_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "عدد المصادر صحيح $.directory_snapshot.monthly_revenue"
+        },
+        {
+          "name": "ids_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "المعرفات صحيحة $.directory_snapshot.monthly_revenue"
+        },
+        {
+          "name": "refs_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "المراجع متكاملة $.directory_snapshot.monthly_revenue"
+        },
+        {
+          "name": "value_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "القيمة مطابقة $.directory_snapshot.monthly_traffic"
+        },
+        {
+          "name": "fields_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "الحقول مكتملة $.directory_snapshot.monthly_traffic"
+        },
+        {
+          "name": "count_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "عدد المصادر صحيح $.directory_snapshot.monthly_traffic"
+        },
+        {
+          "name": "ids_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "المعرفات صحيحة $.directory_snapshot.monthly_traffic"
+        },
+        {
+          "name": "refs_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "المراجع متكاملة $.directory_snapshot.monthly_traffic"
+        },
+        {
+          "name": "value_$.overview.problem",
+          "passed": true,
+          "details": "القيمة مطابقة $.overview.problem"
+        },
+        {
+          "name": "fields_$.overview.problem",
+          "passed": true,
+          "details": "الحقول مكتملة $.overview.problem"
+        },
+        {
+          "name": "count_$.overview.problem",
+          "passed": true,
+          "details": "عدد المصادر صحيح $.overview.problem"
+        },
+        {
+          "name": "ids_$.overview.problem",
+          "passed": true,
+          "details": "المعرفات صحيحة $.overview.problem"
+        },
+        {
+          "name": "refs_$.overview.problem",
+          "passed": true,
+          "details": "المراجع متكاملة $.overview.problem"
+        },
+        {
+          "name": "value_$.overview.solution",
+          "passed": true,
+          "details": "القيمة مطابقة $.overview.solution"
+        },
+        {
+          "name": "fields_$.overview.solution",
+          "passed": true,
+          "details": "الحقول مكتملة $.overview.solution"
+        },
+        {
+          "name": "count_$.overview.solution",
+          "passed": true,
+          "details": "عدد المصادر صحيح $.overview.solution"
+        },
+        {
+          "name": "ids_$.overview.solution",
+          "passed": true,
+          "details": "المعرفات صحيحة $.overview.solution"
+        },
+        {
+          "name": "refs_$.overview.solution",
+          "passed": true,
+          "details": "المراجع متكاملة $.overview.solution"
+        },
+        {
+          "name": "value_$.market_data.target_audience",
+          "passed": true,
+          "details": "القيمة مطابقة $.market_data.target_audience"
+        },
+        {
+          "name": "fields_$.market_data.target_audience",
+          "passed": true,
+          "details": "الحقول مكتملة $.market_data.target_audience"
+        },
+        {
+          "name": "count_$.market_data.target_audience",
+          "passed": true,
+          "details": "عدد المصادر صحيح $.market_data.target_audience"
+        },
+        {
+          "name": "ids_$.market_data.target_audience",
+          "passed": true,
+          "details": "المعرفات صحيحة $.market_data.target_audience"
+        },
+        {
+          "name": "refs_$.market_data.target_audience",
+          "passed": true,
+          "details": "المراجع متكاملة $.market_data.target_audience"
+        },
+        {
+          "name": "value_$.market_data.market_size",
+          "passed": true,
+          "details": "القيمة مطابقة $.market_data.market_size"
+        },
+        {
+          "name": "fields_$.market_data.market_size",
+          "passed": true,
+          "details": "الحقول مكتملة $.market_data.market_size"
+        },
+        {
+          "name": "count_$.market_data.market_size",
+          "passed": true,
+          "details": "عدد المصادر صحيح $.market_data.market_size"
+        },
+        {
+          "name": "ids_$.market_data.market_size",
+          "passed": true,
+          "details": "المعرفات صحيحة $.market_data.market_size"
+        },
+        {
+          "name": "refs_$.market_data.market_size",
+          "passed": true,
+          "details": "المراجع متكاملة $.market_data.market_size"
+        },
+        {
+          "name": "value_$.market_data.growth_rate",
+          "passed": true,
+          "details": "القيمة مطابقة $.market_data.growth_rate"
+        },
+        {
+          "name": "fields_$.market_data.growth_rate",
+          "passed": true,
+          "details": "الحقول مكتملة $.market_data.growth_rate"
+        },
+        {
+          "name": "count_$.market_data.growth_rate",
+          "passed": true,
+          "details": "عدد المصادر صحيح $.market_data.growth_rate"
+        },
+        {
+          "name": "ids_$.market_data.growth_rate",
+          "passed": true,
+          "details": "المعرفات صحيحة $.market_data.growth_rate"
+        },
+        {
+          "name": "refs_$.market_data.growth_rate",
+          "passed": true,
+          "details": "المراجع متكاملة $.market_data.growth_rate"
+        },
+        {
+          "name": "value_$.financials.initial_investment",
+          "passed": true,
+          "details": "القيمة مطابقة $.financials.initial_investment"
+        },
+        {
+          "name": "fields_$.financials.initial_investment",
+          "passed": true,
+          "details": "الحقول مكتملة $.financials.initial_investment"
+        },
+        {
+          "name": "count_$.financials.initial_investment",
+          "passed": true,
+          "details": "عدد المصادر صحيح $.financials.initial_investment"
+        },
+        {
+          "name": "ids_$.financials.initial_investment",
+          "passed": true,
+          "details": "المعرفات صحيحة $.financials.initial_investment"
+        },
+        {
+          "name": "refs_$.financials.initial_investment",
+          "passed": true,
+          "details": "المراجع متكاملة $.financials.initial_investment"
+        },
+        {
+          "name": "value_$.financials.valuation",
+          "passed": true,
+          "details": "القيمة مطابقة $.financials.valuation"
+        },
+        {
+          "name": "fields_$.financials.valuation",
+          "passed": true,
+          "details": "الحقول مكتملة $.financials.valuation"
+        },
+        {
+          "name": "count_$.financials.valuation",
+          "passed": true,
+          "details": "عدد المصادر صحيح $.financials.valuation"
+        },
+        {
+          "name": "ids_$.financials.valuation",
+          "passed": true,
+          "details": "المعرفات صحيحة $.financials.valuation"
+        },
+        {
+          "name": "refs_$.financials.valuation",
+          "passed": true,
+          "details": "المراجع متكاملة $.financials.valuation"
+        },
+        {
+          "name": "value_$.financials.revenue_streams",
+          "passed": true,
+          "details": "القيمة مطابقة $.financials.revenue_streams"
+        },
+        {
+          "name": "fields_$.financials.revenue_streams",
+          "passed": true,
+          "details": "الحقول مكتملة $.financials.revenue_streams"
+        },
+        {
+          "name": "count_$.financials.revenue_streams",
+          "passed": true,
+          "details": "عدد المصادر صحيح $.financials.revenue_streams"
+        },
+        {
+          "name": "ids_$.financials.revenue_streams",
+          "passed": true,
+          "details": "المعرفات صحيحة $.financials.revenue_streams"
+        },
+        {
+          "name": "refs_$.financials.revenue_streams",
+          "passed": true,
+          "details": "المراجع متكاملة $.financials.revenue_streams"
+        },
+        {
+          "name": "value_$.tools",
+          "passed": true,
+          "details": "القيمة مطابقة $.tools"
+        },
+        {
+          "name": "fields_$.tools",
+          "passed": true,
+          "details": "الحقول مكتملة $.tools"
+        },
+        {
+          "name": "count_$.tools",
+          "passed": true,
+          "details": "عدد المصادر صحيح $.tools"
+        },
+        {
+          "name": "ids_$.tools",
+          "passed": true,
+          "details": "المعرفات صحيحة $.tools"
+        },
+        {
+          "name": "refs_$.tools",
+          "passed": true,
+          "details": "المراجع متكاملة $.tools"
+        },
+        {
+          "name": "value_$.headline",
+          "passed": true,
+          "details": "القيمة مطابقة $.headline"
+        },
+        {
+          "name": "fields_$.headline",
+          "passed": true,
+          "details": "الحقول مكتملة $.headline"
+        },
+        {
+          "name": "count_$.headline",
+          "passed": true,
+          "details": "عدد المصادر صحيح $.headline"
+        },
+        {
+          "name": "ids_$.headline",
+          "passed": true,
+          "details": "المعرفات صحيحة $.headline"
+        },
+        {
+          "name": "refs_$.headline",
+          "passed": true,
+          "details": "المراجع متكاملة $.headline"
+        },
+        {
+          "name": "value_$.lessons",
+          "passed": true,
+          "details": "القيمة مطابقة $.lessons"
+        },
+        {
+          "name": "fields_$.lessons",
+          "passed": true,
+          "details": "الحقول مكتملة $.lessons"
+        },
+        {
+          "name": "count_$.lessons",
+          "passed": true,
+          "details": "عدد المصادر صحيح $.lessons"
+        },
+        {
+          "name": "ids_$.lessons",
+          "passed": true,
+          "details": "المعرفات صحيحة $.lessons"
+        },
+        {
+          "name": "refs_$.lessons",
+          "passed": true,
+          "details": "المراجع متكاملة $.lessons"
+        },
+        {
+          "name": "no_nan",
+          "passed": true,
+          "details": "لا NaN/Infinity"
+        },
+        {
+          "name": "old_revenue_removed",
+          "passed": true,
+          "details": "أزيل القديم"
+        },
+        {
+          "name": "old_traffic_removed",
+          "passed": true,
+          "details": "أزيل القديم"
+        },
+        {
+          "name": "old_valuation_removed",
+          "passed": true,
+          "details": "أزيل القديم"
+        },
+        {
+          "name": "q1_revenue",
+          "passed": true,
+          "details": "إيراد Q1"
+        },
+        {
+          "name": "mrr_separated",
+          "passed": true,
+          "details": "MRR منفصل"
+        },
+        {
+          "name": "gmv_separated",
+          "passed": true,
+          "details": "GMV منفصل"
+        },
+        {
+          "name": "payment_gmv_separated",
+          "passed": true,
+          "details": "Payments GMV منفصل"
+        },
+        {
+          "name": "q2_date",
+          "passed": true,
+          "details": "موعد Q2"
+        },
+        {
+          "name": "traffic_undisclosed",
+          "passed": true,
+          "details": "الزيارات غير مختلقة"
+        },
+        {
+          "name": "merchant_scale",
+          "passed": true,
+          "details": "النطاق"
+        },
+        {
+          "name": "no_tam",
+          "passed": true,
+          "details": "لا TAM مختلق"
+        },
+        {
+          "name": "us_share_caveated",
+          "passed": true,
+          "details": "الحصة مقيدة"
+        },
+        {
+          "name": "growth_separated",
+          "passed": true,
+          "details": "النمو منفصل"
+        },
+        {
+          "name": "ipo_not_initial",
+          "passed": true,
+          "details": "IPO ليس أوليًا"
+        },
+        {
+          "name": "market_cap_math",
+          "passed": true,
+          "details": "الحساب صحيح"
+        },
+        {
+          "name": "market_cap_dynamic",
+          "passed": true,
+          "details": "ديناميكي"
+        },
+        {
+          "name": "buyback",
+          "passed": true,
+          "details": "قيد إعادة الشراء"
+        },
+        {
+          "name": "streams_6",
+          "passed": true,
+          "details": "6 مسارات"
+        },
+        {
+          "name": "mix_76",
+          "passed": true,
+          "details": "مزيج القطاع"
+        },
+        {
+          "name": "merchant_of_record",
+          "passed": true,
+          "details": "سيادة التاجر"
+        },
+        {
+          "name": "apps_21k",
+          "passed": true,
+          "details": "التطبيقات"
+        },
+        {
+          "name": "lessons_unique",
+          "passed": true,
+          "details": "الدروس فريدة"
+        },
+        {
+          "name": "lessons_specific",
+          "passed": true,
+          "details": "الدروس خاصة"
+        },
+        {
+          "name": "redis_caveat",
+          "passed": true,
+          "details": "Redis مقيد"
+        },
+        {
+          "name": "qwen_caveat",
+          "passed": true,
+          "details": "Qwen مقيد"
+        },
+        {
+          "name": "stack",
+          "passed": true,
+          "details": "المكدس"
+        },
+        {
+          "name": "metrics_25",
+          "passed": true,
+          "details": "فصل المقاييس"
+        },
+        {
+          "name": "schema_v2",
+          "passed": true,
+          "details": "الإصدار"
+        },
+        {
+          "name": "date_consistent",
+          "passed": true,
+          "details": "التاريخ"
+        },
+        {
+          "name": "sec_applicable",
+          "passed": true,
+          "details": "SEC"
+        },
+        {
+          "name": "valuation_rule",
+          "passed": true,
+          "details": "قاعدة القيمة"
+        }
+      ],
+      "validator_notes": [
+        "تمت قراءة الملف الأصلي والتحقق من صحة JSON.",
+        "تم الحفاظ على الحقول الأساسية وإضافة tools وProfessional V2.",
+        "تمت مطابقة كل field_value مع الحقل النهائي.",
+        "تم التحقق من المصادر وروابطها وعددها.",
+        "تم فصل الإيراد وMRR وGMV وPayments GMV والقيمة السوقية والتمويل.",
+        "تم فصل الزيارات والمتاجر والتجار والمشترين والتطبيقات.",
+        "تم التحقق الحسابي من القيمة السوقية ووسمها كديناميكية.",
+        "تم منع NaN وInfinity والتقديرات غير المدعومة."
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول الجوهرية بالقيم النهائية والمصادر والقيود، مع فصل المقاييس المالية والتشغيلية والسوقية.",
+    "required_fields": [
+      "field_value",
+      "verification_status",
+      "confidence",
+      "claim_type",
+      "verified_on",
+      "evidence_summary",
+      "source_ids",
+      "source_references",
+      "limitations",
+      "source_count"
+    ],
+    "verification_status_values": [
+      "analytical_inference_grounded_in_sec_and_company_sources",
+      "verified_commerce_fragmentation_with_absolute_claims_removed",
+      "verified_current_unified_and_agentic_commerce_platform",
+      "verified_dynamic_market_cap_calculation_with_share_count_limit",
+      "verified_editorial_synthesis_with_current_metrics",
+      "verified_monthly_not_reported_quarterly_and_mrr_separated",
+      "verified_multi_segment_merchant_and_partner_audience",
+      "verified_multiple_growth_rates_with_metric_separation",
+      "verified_no_tam_with_platform_scale_context",
+      "verified_official_engineering_and_product_stack_with_scope_caveats",
+      "verified_origin_story_and_ipo_not_initial_capital",
+      "verified_public_company_identity_and_global_scope",
+      "verified_sec_revenue_model_and_q1_mix",
+      "verified_sec_revenue_pathways_not_feature_level_mix",
+      "verified_web_traffic_undisclosed_operating_metrics_separated"
+    ],
+    "confidence_scale": {
+      "مرتفعة": "مدعوم بإفصاح SEC أو مصدر شركة أولي واضح.",
+      "متوسطة إلى مرتفعة": "مدعوم بمصادر أولية مع قيد زمني أو حسابي.",
+      "متوسطة": "استنتاج تحريري مبني على الأدلة مع حدود معلنة.",
+      "منخفضة": "دليل غير كاف؛ لا يُستخدم لإثبات رقم مالي."
+    },
+    "metric_separation": [
+      "الإيراد الشهري",
+      "الإيراد الربع سنوي",
+      "الإيراد السنوي",
+      "MRR",
+      "Subscription Solutions revenue",
+      "Merchant Solutions revenue",
+      "GMV",
+      "Shopify Payments GMV",
+      "Payment penetration",
+      "Gross profit",
+      "Operating income",
+      "Net income or loss",
+      "Free cash flow",
+      "القيمة السوقية",
+      "سعر السهم",
+      "عدد الأسهم",
+      "تمويل الاكتتاب",
+      "زيارات الموقع",
+      "المتاجر الدافعة",
+      "التجار",
+      "المشترون",
+      "الدول",
+      "التطبيقات",
+      "حصة التجارة الإلكترونية",
+      "GMV التراكمي"
+    ]
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "Shopify Inc. شركة كندية عامة تأسست كمشروع في 2004 وأطلقت منصتها في 2006، ويقع مكتبها الرئيسي المعلن في أوتاوا، كندا. أسهمها مدرجة تحت الرمز SHOP في ناسداك وبورصة تورونتو، وتخدم ملايين المتاجر الدافعة في أكثر من 175 دولة. تتبع الشركة نموذج عمل موزعًا عالميًا، لذلك لا يعكس موقع أوتاوا وحده نطاق العمليات أو التجار.",
+      "verification_status": "verified_public_company_identity_and_global_scope",
+      "confidence": "مرتفعة",
+      "claim_type": "هوية وموقع وإدراج",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تقارير SEC وصفحة الشركة تثبت الكيان والإدراج والنطاق العالمي.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Shopify Inc. Q1 2026 Form 10-Q",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000024/shop-20260331.htm",
+          "source_type": "إفصاح مالي وتنظيمي أولي",
+          "published_at": "2026-05-07",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Cover page",
+          "supports": "الكيان والإدراج والأسهم"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Shopify Inc. 2025 Form 10-K",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000010/shop-20251231.htm",
+          "source_type": "تقرير سنوي تنظيمي أولي",
+          "published_at": "2026-02-11",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Business overview",
+          "supports": "175+ دولة وملايين التجار"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Shopify — About",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "About",
+          "supports": "الإطلاق والنطاق"
+        }
+      ],
+      "limitations": "المكتب الرئيسي لا يعكس توزيع الموظفين أو التجار عالميًا.",
+      "source_count": 3
+    },
+    "$.company.business_model": {
+      "field_value": "ينقسم نموذج الإيراد إلى Subscription Solutions وMerchant Solutions. في الربع الأول 2026 بلغت اشتراكات المنصة 750 مليون دولار، بينما بلغت خدمات التجار 2.420 مليار دولار، أي نحو 24% و76% من الإيراد. تشمل الاشتراكات الخطط وShopify Plus وPOS Pro والتطبيقات والقوالب والنطاقات، بينما تشمل خدمات التجار Shopify Payments وتحويل العملات والمنتجات المالية وإحالات الشركاء والشحن وأجهزة POS وإعلانات App Store وShop Campaigns. تختلف الرسوم حسب البلد والحجم والعقد.",
+      "verification_status": "verified_sec_revenue_model_and_q1_mix",
+      "confidence": "مرتفعة",
+      "claim_type": "نموذج عمل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تقارير SEC تفصل القطاعين وقيمهما ومكوناتهما.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Shopify Inc. Q1 2026 Form 10-Q",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000024/shop-20260331.htm",
+          "source_type": "إفصاح مالي وتنظيمي أولي",
+          "published_at": "2026-05-07",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Q1 revenue disaggregation",
+          "supports": "750M و2.420B"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Shopify Inc. 2025 Form 10-K",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000010/shop-20251231.htm",
+          "source_type": "تقرير سنوي تنظيمي أولي",
+          "published_at": "2026-02-11",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Revenue streams",
+          "supports": "مكونات القطاعين"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Shopify — Pricing",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/pricing",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Pricing",
+          "supports": "الخطط"
+        }
+      ],
+      "limitations": "النسب تخص Q1 والأسعار تختلف حسب السوق.",
+      "source_count": 3
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "لا تنشر Shopify إيرادًا لكل شهر تقويمي. أحدث فترة مكتملة حتى 3 أغسطس 2026 هي الربع الأول، بإيراد إجمالي 3.170 مليارات دولار. لم يُقسم الرقم على ثلاثة بوصفه MRR بسبب الموسمية واختلاف أيام الأشهر. أما MRR الرسمي البالغ 212 مليون دولار في نهاية الربع فهو مقياس اشتراكات متكرر محسوب من التجار في ذلك اليوم، وليس إجمالي الإيراد الشهري.",
+      "verification_status": "verified_monthly_not_reported_quarterly_and_mrr_separated",
+      "confidence": "مرتفعة",
+      "claim_type": "إيراد وMRR",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "Q1 revenue وMRR موثقان ولا يوجد إيراد شهري تقويمي منشور.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Shopify Inc. Q1 2026 Form 10-Q",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000024/shop-20260331.htm",
+          "source_type": "إفصاح مالي وتنظيمي أولي",
+          "published_at": "2026-05-07",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Revenue and MRR",
+          "supports": "3.170B و212M"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Shopify Announces First-Quarter 2026 Financial Results",
+          "publisher": "Shopify Investor Relations",
+          "url": "https://www.shopify.com/news/shopify-announces-first-quarter-2026-financial-results",
+          "source_type": "بيان نتائج رسمي",
+          "published_at": "2026-05-07",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Q1 metrics",
+          "supports": "تأكيد"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Shopify to Announce Second-Quarter 2026 Financial Results August 5, 2026",
+          "publisher": "Shopify Investor Relations",
+          "url": "https://investors.shopify.com/news-and-events/news/news-details/2026/Shopify-to-Announce-Second-Quarter-2026-Financial-Results-August-5-2026/default.aspx",
+          "source_type": "إعلان موعد نتائج رسمي",
+          "published_at": "2026-07",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Q2 date",
+          "supports": "Q1 أحدث ربع"
+        }
+      ],
+      "limitations": "قسمة إيراد الربع على ثلاثة لا تنتج MRR رسميًا.",
+      "source_count": 3
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير مُفصح عنه علنًا، ولا يوجد رقم رسمي لزيارات Shopify.com الشهرية يمكن اعتماده. المقاييس الرسمية المناسبة هي ملايين المتاجر الدافعة في أكثر من 175 دولة، و21 ألف+ تطبيق في النظام البيئي، وGMV قدره 100.743 مليار دولار في Q1 2026. المتاجر والتطبيقات وGMV ومشترو التجار ليست زيارات للموقع ولا مستخدمين نشطين لمنصة واحدة.",
+      "verification_status": "verified_web_traffic_undisclosed_operating_metrics_separated",
+      "confidence": "مرتفعة",
+      "claim_type": "زيارات ونطاق تشغيل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد رقم رسمي للزيارات؛ المتاح متاجر وتطبيقات وGMV.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-05",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Shopify Inc. 2025 Form 10-K",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000010/shop-20251231.htm",
+          "source_type": "تقرير سنوي تنظيمي أولي",
+          "published_at": "2026-02-11",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Merchant and app scale",
+          "supports": "ملايين و175+ و21K+"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Shopify — About",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "About metrics",
+          "supports": "النطاق"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Shopify Inc. Q1 2026 Form 10-Q",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000024/shop-20260331.htm",
+          "source_type": "إفصاح مالي وتنظيمي أولي",
+          "published_at": "2026-05-07",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "GMV definition",
+          "supports": "GMV لا زيارات"
+        }
+      ],
+      "limitations": "قد يدير تاجر واحد عدة متاجر ولا يوجد MAU عام موحد.",
+      "source_count": 3
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "تشغيل التجارة الحديثة يتطلب متجرًا إلكترونيًا ودفعًا وشحنًا ومخزونًا وبيعًا حضوريًا وتسويقًا وتحليلات وأسواقًا دولية وB2B وقنوات اجتماعية ووكلاء ذكاء اصطناعي. بناء هذه الطبقات وربطها وصيانتها منفردة يرفع التكلفة ويجزئ بيانات العميل والطلب والمخزون، خصوصًا للتجار الصغار والمتوسطين.",
+        "impact": "يؤدي التجزؤ إلى إطلاق أبطأ، وتكلفة تكامل وتشغيل أعلى، وتجربة غير متسقة بين القنوات. لكن القول إن التجارة كانت «حكرًا» كاملًا على الشركات الكبرى أو أن كل تاجر اضطر إلى Amazon تعميم غير قابل للقياس؛ لذلك استُبدل بوصف تشغيلي أدق."
+      },
+      "verification_status": "verified_commerce_fragmentation_with_absolute_claims_removed",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "مشكلة سوقية",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تعدد القنوات والمنتجات يدعم وصف التجزؤ مع إزالة التعميمات المطلقة.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-15",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Shopify Inc. 2025 Form 10-K",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000010/shop-20251231.htm",
+          "source_type": "تقرير سنوي تنظيمي أولي",
+          "published_at": "2026-02-11",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Platform description",
+          "supports": "تعدد القنوات"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Shopify Editions — Spring '26",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/editions/spring2026",
+          "source_type": "إعلان منتجات رسمي",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Spring 26",
+          "supports": "B2B وAI وMarkets"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Shopify Agentic Storefronts",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/news/agentic-storefronts",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2026-03-24",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "AI channels",
+          "supports": "قنوات جديدة"
+        }
+      ],
+      "limitations": "تحليل تشغيلي لا دراسة كمية مستقلة.",
+      "source_count": 3
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "توفر Shopify نظامًا موحدًا لإدارة المنتجات والمخزون والطلبات والعملاء والدفع وCheckout وShop Pay وPOS والأسواق الدولية وB2B والتحليلات والأتمتة عبر Flow والمساعدة عبر Sidekick. يوسع App Store الوظائف عبر أكثر من 21 ألف تطبيق. وفي 2026 أضافت Agentic Storefronts وCatalog وUCP لعرض المنتجات والشراء عبر ChatGPT وCopilot وGoogle وGemini مع بقاء التاجر merchant of record واحتفاظه بعلاقة العميل. لا يعني توحيد المنصة أن كل ميزة متاحة لكل خطة أو دولة."
+      },
+      "verification_status": "verified_current_unified_and_agentic_commerce_platform",
+      "confidence": "مرتفعة",
+      "claim_type": "منتج وحل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر الرسمية تدعم المنصة والنظام البيئي والتجارة الوكيلية.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-05",
+        "SRC-13",
+        "SRC-14",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Shopify Inc. 2025 Form 10-K",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000010/shop-20251231.htm",
+          "source_type": "تقرير سنوي تنظيمي أولي",
+          "published_at": "2026-02-11",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Platform capabilities",
+          "supports": "المنتجات"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Shopify — About",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Apps",
+          "supports": "النظام البيئي"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Shopify Agentic Storefronts",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/news/agentic-storefronts",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2026-03-24",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Agentic storefronts",
+          "supports": "merchant of record"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Universal Commerce Protocol",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/news/universal-commerce-protocol",
+          "source_type": "إعلان معيار ومنتج رسمي",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "UCP",
+          "supports": "المعيار"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "B2B features expand beyond Shopify Plus",
+          "publisher": "Shopify Changelog",
+          "url": "https://changelog.shopify.com/posts/b2b-features-are-now-available-on-basic-grow-and-advanced-plans",
+          "source_type": "تغيير منتج رسمي",
+          "published_at": "2026-04-02",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "B2B",
+          "supports": "قيود الخطط"
+        }
+      ],
+      "limitations": "ليست كل ميزة متاحة في كل خطة أو بلد.",
+      "source_count": 5
+    },
+    "$.market_data.target_audience": {
+      "field_value": "الأفراد والمشروعات الصغيرة والمتوسطة والعلامات المباشرة للمستهلك وتجار التجزئة متعددو القنوات والشركات الكبرى عبر Shopify Plus، إضافة إلى تجار B2B والمطورين والوكالات والشركاء. تسمح بعض منتجات التجارة الوكيلية للتجار غير الموجودين تاريخيًا على Shopify باستخدام طبقات محددة، لكن التوافر والأسعار والقدرات تختلف حسب الخطة والسوق.",
+      "verification_status": "verified_multi_segment_merchant_and_partner_audience",
+      "confidence": "مرتفعة",
+      "claim_type": "جمهور مستهدف",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التسعير والتقارير والمنتجات تدعم الشرائح المذكورة.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-06",
+        "SRC-16",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Shopify Inc. 2025 Form 10-K",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000010/shop-20251231.htm",
+          "source_type": "تقرير سنوي تنظيمي أولي",
+          "published_at": "2026-02-11",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Merchant cohorts",
+          "supports": "الشرائح"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Shopify — Pricing",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/pricing",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Plans",
+          "supports": "Basic إلى Plus"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "B2B features expand beyond Shopify Plus",
+          "publisher": "Shopify Changelog",
+          "url": "https://changelog.shopify.com/posts/b2b-features-are-now-available-on-basic-grow-and-advanced-plans",
+          "source_type": "تغيير منتج رسمي",
+          "published_at": "2026-04-02",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "B2B",
+          "supports": "B2B"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Shopify Agentic Storefronts",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/news/agentic-storefronts",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2026-03-24",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Agentic",
+          "supports": "قنوات AI"
+        }
+      ],
+      "limitations": "لا تنشر Shopify توزيع الإيراد الكامل حسب الشريحة.",
+      "source_count": 4
+    },
+    "$.market_data.market_size": {
+      "field_value": "لم تنشر Shopify تقديرًا رسميًا حديثًا لـTAM يمكن التحقق من منهجيته. كسياق لنطاق المنصة، بلغ GMV لعام 2025 نحو 378.4 مليار دولار، وتقول الشركة إنها تمثل أكثر من 14% من التجارة الإلكترونية الأمريكية، مع نحو 1.6 تريليون دولار من GMV التراكمي عبر تاريخها. هذه أرقام حركة تجارية أو حصة منصة، وليست إيراد السوق العالمي ولا إيراد Shopify.",
+      "verification_status": "verified_no_tam_with_platform_scale_context",
+      "confidence": "مرتفعة",
+      "claim_type": "حجم سوق وسياق",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد TAM منهجي حديث؛ GMV والحصة والتراكمي سياق للمنصة.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-07",
+        "SRC-22"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Shopify Inc. 2025 Form 10-K",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000010/shop-20251231.htm",
+          "source_type": "تقرير سنوي تنظيمي أولي",
+          "published_at": "2026-02-11",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "2025 GMV",
+          "supports": "378.4B"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Shopify Investor Overview",
+          "publisher": "Shopify Investor Relations",
+          "url": "https://investors.shopify.com/overview/default.aspx",
+          "source_type": "صفحة مستثمرين رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Investor metrics",
+          "supports": ">14% و1.6T"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Shopify Announces Fourth-Quarter and Full-Year 2025 Financial Results",
+          "publisher": "Shopify Investor Relations",
+          "url": "https://www.shopify.com/news/shopify-announces-fourth-quarter-and-full-year-2025-financial-results",
+          "source_type": "بيان نتائج سنوي رسمي",
+          "published_at": "2026-02-11",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "FY2025",
+          "supports": "تأكيد"
+        }
+      ],
+      "limitations": "GMV ليس إيراد سوق، والحصة الأمريكية ليست عالمية.",
+      "source_count": 3
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "في Q1 2026 نما الإيراد 34% سنويًا إلى 3.170 مليارات دولار، وGMV بنسبة 35% إلى 100.743 مليار دولار، وMRR بنسبة 16% إلى 212 مليون دولار. وفي 2025 نما الإيراد 30% وGMV 29%. لا يجوز اختيار نسبة واحدة بوصفها «نمو الشركة» لأن الإيراد وحجم التجارة والاشتراكات مقاييس مختلفة.",
+      "verification_status": "verified_multiple_growth_rates_with_metric_separation",
+      "confidence": "مرتفعة",
+      "claim_type": "نمو",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "كل معدل موثق لمقياسه.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-02",
+        "SRC-22"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Shopify Inc. Q1 2026 Form 10-Q",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000024/shop-20260331.htm",
+          "source_type": "إفصاح مالي وتنظيمي أولي",
+          "published_at": "2026-05-07",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Q1 growth",
+          "supports": "34% و35% و16%"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Shopify Announces First-Quarter 2026 Financial Results",
+          "publisher": "Shopify Investor Relations",
+          "url": "https://www.shopify.com/news/shopify-announces-first-quarter-2026-financial-results",
+          "source_type": "بيان نتائج رسمي",
+          "published_at": "2026-05-07",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Q1 results",
+          "supports": "تأكيد"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Shopify Inc. 2025 Form 10-K",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000010/shop-20251231.htm",
+          "source_type": "تقرير سنوي تنظيمي أولي",
+          "published_at": "2026-02-11",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "FY growth",
+          "supports": "30% و29%"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Shopify Announces Fourth-Quarter and Full-Year 2025 Financial Results",
+          "publisher": "Shopify Investor Relations",
+          "url": "https://www.shopify.com/news/shopify-announces-fourth-quarter-and-full-year-2025-financial-results",
+          "source_type": "بيان نتائج سنوي رسمي",
+          "published_at": "2026-02-11",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "FY results",
+          "supports": "تأكيد"
+        }
+      ],
+      "limitations": "لا يوجد معدل واحد يلخص الشركة.",
+      "source_count": 4
+    },
+    "$.financials.initial_investment": {
+      "field_value": "بدأت البرمجية كحل بناه المؤسسون لمتجر Snowdevil لمعدات التزلج في 2004، ثم أُطلقت Shopify في 2006. لا يكشف هذا الأصل القصصي قيمة «استثمار أولي» موثقة. عند الاكتتاب في مايو 2015 باعت الشركة 8.855 ملايين سهم بسعر 17 دولارًا للسهم، بإجمالي متحصلات 150.535 مليون دولار قبل المصروفات؛ وهو تمويل اكتتاب عام لاحق وليس رأس المال الأولي.",
+      "verification_status": "verified_origin_story_and_ipo_not_initial_capital",
+      "confidence": "مرتفعة",
+      "claim_type": "تاريخ وتمويل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "Snowdevil والاكتتاب موثقان مع الفصل بينهما.",
+      "source_ids": [
+        "SRC-12",
+        "SRC-10",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-12",
+          "title": "The Shopify Story: From Snowdevil to Commerce Platform",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/blog/shopify-history",
+          "source_type": "تاريخ شركة رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Origin",
+          "supports": "Snowdevil"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Shopify IPO Final Prospectus",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1594805/000119312515184945/d812484d424b4.htm",
+          "source_type": "نشرة اكتتاب رسمية",
+          "published_at": "2015-05-21",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "IPO terms",
+          "supports": "17 دولارًا"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Shopify Closes Initial Public Offering",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/news/shopify-closes-initial-public-offering",
+          "source_type": "إعلان اكتتاب رسمي",
+          "published_at": "2015-05-27",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Closing",
+          "supports": "8.855M و150.535M"
+        }
+      ],
+      "limitations": "لم يُعثر على قيمة موثقة لرأس المال الأول في 2004.",
+      "source_count": 3
+    },
+    "$.financials.valuation": {
+      "field_value": "Shopify شركة عامة، لذلك الأنسب هو القيمة السوقية المتغيرة لا «تقييم» خاص ثابت. باستخدام سعر سهم إرشادي قدره 124.48 دولار وقت التحقق وعدد 1,300,779,030 سهمًا قائمًا كما في 31 مارس 2026، تبلغ القيمة السوقية الحسابية نحو 161.9 مليار دولار. هذا تقريب لحظي لا قيمة نهائية: سعر السهم يتغير، ونفذت الشركة إعادة شراء أسهم بعد نهاية الربع، ونتائج Q2 كانت مقررة في 5 أغسطس 2026.",
+      "verification_status": "verified_dynamic_market_cap_calculation_with_share_count_limit",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "قيمة سوقية",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "القيمة حسابية من سعر ديناميكي وعدد أسهم آخر 10-Q مع قيد إعادة الشراء.",
+      "source_ids": [
+        "SRC-08",
+        "SRC-01",
+        "SRC-09",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "Shopify Stock Information",
+          "publisher": "Shopify Investor Relations",
+          "url": "https://investors.shopify.com/stock-information/default.aspx",
+          "source_type": "سعر سهم رسمي ديناميكي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Stock quote",
+          "supports": "124.48"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Shopify Inc. Q1 2026 Form 10-Q",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000024/shop-20260331.htm",
+          "source_type": "إفصاح مالي وتنظيمي أولي",
+          "published_at": "2026-05-07",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Shares outstanding",
+          "supports": "1,300,779,030"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Shopify Increases Share Repurchase Authorization to $5 Billion",
+          "publisher": "Shopify Investor Relations",
+          "url": "https://investors.shopify.com/news-and-events/news/news-details/2026/Shopify-Increases-Share-Repurchase-Authorization-to-5-Billion/default.aspx",
+          "source_type": "إعلان رأسمالي رسمي",
+          "published_at": "2026-06-02",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Buyback",
+          "supports": "1.45B و5B"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Shopify to Announce Second-Quarter 2026 Financial Results August 5, 2026",
+          "publisher": "Shopify Investor Relations",
+          "url": "https://investors.shopify.com/news-and-events/news/news-details/2026/Shopify-to-Announce-Second-Quarter-2026-Financial-Results-August-5-2026/default.aspx",
+          "source_type": "إعلان موعد نتائج رسمي",
+          "published_at": "2026-07",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Q2 pending",
+          "supports": "تحديث قريب"
+        }
+      ],
+      "limitations": "السعر وعدد الأسهم متغيران، لذلك الحساب تقريبي.",
+      "source_count": 4
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "اشتراكات Basic وGrow وAdvanced وShopify Plus وPOS Pro، مع اختلاف الأسعار حسب البلد ودورة الفوترة والعقد.",
+        "إيرادات Shopify Payments ومعالجة البطاقات وتحويل العملات ورسوم المعاملات عند استخدام مزود دفع خارجي.",
+        "منتجات مالية للتجار مثل Shopify Capital وخدمات مالية أخرى، مع الاعتراف بالإيراد وفق طبيعة كل منتج.",
+        "إيرادات الشحن وبيع أجهزة POS وخدمات البيع الحضوري.",
+        "إحالات الشركاء ورسوم أو حصص التطبيقات والقوالب والنطاقات وإعلانات App Store وShop Campaigns.",
+        "خدمات وأسواق B2B وMarkets والقنوات الوكيلية التي توسع استخدام المنصة؛ لم تفصح Shopify عن إيراد مستقل لكل ميزة."
+      ],
+      "verification_status": "verified_sec_revenue_pathways_not_feature_level_mix",
+      "confidence": "مرتفعة",
+      "claim_type": "مسارات إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المسارات مدعومة بتقرير 10-K والتسعير.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-06",
+        "SRC-16",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Shopify Inc. 2025 Form 10-K",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000010/shop-20251231.htm",
+          "source_type": "تقرير سنوي تنظيمي أولي",
+          "published_at": "2026-02-11",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Revenue components",
+          "supports": "المسارات"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Shopify — Pricing",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/pricing",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Pricing",
+          "supports": "الخطط والرسوم"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "B2B features expand beyond Shopify Plus",
+          "publisher": "Shopify Changelog",
+          "url": "https://changelog.shopify.com/posts/b2b-features-are-now-available-on-basic-grow-and-advanced-plans",
+          "source_type": "تغيير منتج رسمي",
+          "published_at": "2026-04-02",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "B2B",
+          "supports": "التوسع"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Shopify Agentic Storefronts",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/news/agentic-storefronts",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2026-03-24",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Agentic commerce",
+          "supports": "نموذج القناة"
+        }
+      ],
+      "limitations": "لا يوجد مزيج إيراد لكل منتج فرعي.",
+      "source_count": 4
+    },
+    "$.tools": {
+      "field_value": [
+        "Ruby وRuby on Rails في أجزاء أساسية منشورة من المنصة وShop",
+        "MySQL وVitess لتوسيع قواعد البيانات في خدمات منشورة",
+        "Redis ما زال تقنية تاريخية وعملية في أجزاء من النظام؛ نُقل عبء حجز المخزون المحدد إلى MySQL باستخدام SKIP LOCKED، ولم يُزل Redis من الشركة كلها",
+        "GraphQL ومحرك Cardinal لمعالجة الاستعلامات الكبيرة بكفاءة أعلى في طبقة البيانات",
+        "Shopify Admin وCheckout وShop Pay وPOS وMarkets وB2B وFlow",
+        "Liquid والقوالب ومكونات الواجهة ونظام التطبيقات والشركاء",
+        "App Store يضم أكثر من 21 ألف تطبيق وفق إفصاح الشركة",
+        "Catalog API وUniversal Commerce Protocol وAgentic Storefronts للقنوات الوكيلية",
+        "Sidekick مع مخطط مهام ومهارات أو نماذج متخصصة وعمليات تقييم للبيانات",
+        "نموذج Qwen3-32B مضبوط لمهمة استدعاء الأدوات في Shopify Flow؛ النتائج المنشورة تخص هذا العبء ولا تعمم على كل الذكاء الاصطناعي في Shopify",
+        "Shopify Payments وخدمات اكتشاف الاحتيال والتسوية وتحويل العملات",
+        "بنية عالمية عالية التوفر وأدوات داخلية متعددة؛ القائمة ليست كشفًا معماريًا كاملًا لكل خدمة"
+      ],
+      "verification_status": "verified_official_engineering_and_product_stack_with_scope_caveats",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "تقنيات وأدوات",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التقنيات مدعومة بمدونات هندسية وصفحات منتج مع قيود نطاق.",
+      "source_ids": [
+        "SRC-17",
+        "SRC-18",
+        "SRC-19",
+        "SRC-20",
+        "SRC-21",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-17",
+          "title": "Moving Inventory Reservations from Redis to MySQL",
+          "publisher": "Shopify Engineering",
+          "url": "https://shopify.engineering/moving-inventory-reservations-from-redis-to-mysql",
+          "source_type": "مدونة هندسية رسمية",
+          "published_at": "2026-05-12",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Inventory",
+          "supports": "MySQL/Redis"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Building a Faster GraphQL Data Layer with Cardinal",
+          "publisher": "Shopify Engineering",
+          "url": "https://shopify.engineering/cardinal-graphql-data-layer",
+          "source_type": "مدونة هندسية رسمية",
+          "published_at": "2026-03-12",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Cardinal",
+          "supports": "GraphQL"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "How We Curate Data for Sidekick's AI Planner",
+          "publisher": "Shopify Engineering",
+          "url": "https://shopify.engineering/sidekick-ai-planner-data",
+          "source_type": "مدونة هندسية رسمية",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Sidekick",
+          "supports": "AI planner"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Fine-Tuning Qwen3-32B for Shopify Flow",
+          "publisher": "Shopify Engineering",
+          "url": "https://shopify.engineering/fine-tuning-qwen3-32b-for-shopify-flow",
+          "source_type": "مدونة هندسية رسمية",
+          "published_at": "2026-04-22",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Flow",
+          "supports": "Qwen3-32B"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Running Shop.app on Rails, MySQL, and Vitess",
+          "publisher": "Shopify Engineering",
+          "url": "https://shopify.engineering/shop-app-rails-mysql-vitess",
+          "source_type": "مدونة هندسية رسمية",
+          "published_at": "2024",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Shop",
+          "supports": "Rails/MySQL/Vitess"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Shopify Editions — Spring '26",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/editions/spring2026",
+          "source_type": "إعلان منتجات رسمي",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Products",
+          "supports": "Catalog/UCP/Flow"
+        }
+      ],
+      "limitations": "ليست قائمة معمارية كاملة، وبعض التقنيات لعبء محدد.",
+      "source_count": 6
+    },
+    "$.headline": {
+      "field_value": "من متجر ألواح ثلجية إلى طبقة تنفيذ للتجارة الوكيلية: كيف فصلت Shopify بين 3.17 مليارات دولار من الإيراد و100.7 مليار دولار من GMV",
+      "verification_status": "verified_editorial_synthesis_with_current_metrics",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "عنوان تحريري",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يجمع أصل Snowdevil والتجارة الوكيلية وإيراد وGMV Q1.",
+      "source_ids": [
+        "SRC-12",
+        "SRC-13",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-12",
+          "title": "The Shopify Story: From Snowdevil to Commerce Platform",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/blog/shopify-history",
+          "source_type": "تاريخ شركة رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Origin",
+          "supports": "Snowdevil"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Shopify Agentic Storefronts",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/news/agentic-storefronts",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2026-03-24",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Agentic",
+          "supports": "التجارة الوكيلية"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Shopify Inc. Q1 2026 Form 10-Q",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000024/shop-20260331.htm",
+          "source_type": "إفصاح مالي وتنظيمي أولي",
+          "published_at": "2026-05-07",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Q1",
+          "supports": "3.170B و100.743B"
+        }
+      ],
+      "limitations": "«طبقة تنفيذ» وصف تحليلي لا مصطلح محاسبي.",
+      "source_count": 3
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "حل مشكلتك، ثم افصل القصة عن الأرقام",
+          "description": "Snowdevil يشرح أصل المنتج، لكنه لا يثبت قيمة الاستثمار الأولي أو نجاح النموذج وحده. القصة مفيدة لتحديد الاحتكاك الحقيقي، بينما التمويل والإيراد والتقييم تحتاج إفصاحات مالية مستقلة."
+        },
+        {
+          "title": "استخدم قواعد لغوية صارمة للمقاييس",
+          "description": "GMV هو قيمة الطلبات التي يمر بها التجار، والإيراد ما تسجله Shopify، وMRR مؤشر اشتراك في لحظة زمنية. خلط 100.7 مليار دولار من GMV مع 3.17 مليارات من الإيراد أو 212 مليونًا من MRR يصنع شركة مالية غير موجودة."
+        },
+        {
+          "title": "اربط جزءًا من الإيراد بنجاح التاجر",
+          "description": "كلما زاد البيع عبر Shopify Payments والشحن والتمويل وPOS ارتفعت Merchant Solutions. هذا يحاذي النمو مع التاجر، لكنه يجعل الهوامش والمخاطر مختلفة عن اشتراكات البرمجيات الخالصة ويتطلب فصل القطاعات."
+        },
+        {
+          "title": "النظام البيئي يحوّل الحالات الطرفية إلى خندق",
+          "description": "أكثر من 21 ألف تطبيق يسمح للمطورين بحل احتياجات شديدة التخصص لا يمكن لفريق مركزي بناؤها كلها. في المقابل تحتاج المنصة إلى حوكمة وأمن واكتشاف وجودة حتى لا يتحول التنوع إلى عبء على التاجر."
+        },
+        {
+          "title": "في التجارة الوكيلية، حافظ على سيادة التاجر",
+          "description": "نهج Agentic Storefronts وUCP يضع المنتج داخل واجهات الذكاء الاصطناعي مع إبقاء التاجر merchant of record وصاحب العلاقة والبيانات. هذا يحول القناة الجديدة إلى توزيع إضافي بدل تحويل التاجر إلى مورد مجهول لمنصة أخرى."
+        },
+        {
+          "title": "التراجع الاستراتيجي قد يزيد التركيز",
+          "description": "بيع معظم نشاط اللوجستيات إلى Flexport في 2023 أظهر أن امتلاك كل طبقة ليس هدفًا بحد ذاته. يمكن للمنصة أن تحتفظ بالتكامل وتجربة التاجر مع نقل الأصول الثقيلة إلى شريك أكثر تخصصًا."
+        }
+      ],
+      "verification_status": "analytical_inference_grounded_in_sec_and_company_sources",
+      "confidence": "متوسطة",
+      "claim_type": "تحليل ودروس",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس مبنية على الأصل والمقاييس ومزيج الإيراد والنظام البيئي والذكاء الاصطناعي وبيع اللوجستيات.",
+      "source_ids": [
+        "SRC-12",
+        "SRC-01",
+        "SRC-02",
+        "SRC-13",
+        "SRC-23"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-12",
+          "title": "The Shopify Story: From Snowdevil to Commerce Platform",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/blog/shopify-history",
+          "source_type": "تاريخ شركة رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Origin",
+          "supports": "Snowdevil"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Shopify Inc. Q1 2026 Form 10-Q",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000024/shop-20260331.htm",
+          "source_type": "إفصاح مالي وتنظيمي أولي",
+          "published_at": "2026-05-07",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Metrics",
+          "supports": "Revenue/GMV/MRR"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Shopify Inc. 2025 Form 10-K",
+          "publisher": "U.S. Securities and Exchange Commission",
+          "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000010/shop-20251231.htm",
+          "source_type": "تقرير سنوي تنظيمي أولي",
+          "published_at": "2026-02-11",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Business model",
+          "supports": "Merchant Solutions/apps"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Shopify Agentic Storefronts",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/news/agentic-storefronts",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2026-03-24",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Merchant ownership",
+          "supports": "سيادة التاجر"
+        },
+        {
+          "source_id": "SRC-23",
+          "title": "Shopify Completes Sale of Logistics Businesses",
+          "publisher": "Shopify",
+          "url": "https://www.shopify.com/news/shopify-completes-sale-of-logistics-businesses",
+          "source_type": "إعلان صفقة رسمي",
+          "published_at": "2023-06-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر أولي",
+          "source_locator": "Logistics sale",
+          "supports": "التركيز"
+        }
+      ],
+      "limitations": "استنتاجات تحريرية وليست توصيات استثمارية.",
+      "source_count": 5
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Shopify Inc. Q1 2026 Form 10-Q",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000024/shop-20260331.htm",
+      "source_type": "إفصاح مالي وتنظيمي أولي",
+      "published_at": "2026-05-07",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "المصدر الأساسي لإيرادات Q1 2026 وGMV وMRR وShopify Payments والنقد والأسهم والتعريفات."
+    },
+    {
+      "id": "SRC-02",
+      "title": "Shopify Inc. 2025 Form 10-K",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "url": "https://www.sec.gov/Archives/edgar/data/1594805/000159480526000010/shop-20251231.htm",
+      "source_type": "تقرير سنوي تنظيمي أولي",
+      "published_at": "2026-02-11",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "إيرادات وGMV 2025، تقسيم Subscription وMerchant Solutions، الدول والتجار والتطبيقات ومصادر الإيراد."
+    },
+    {
+      "id": "SRC-03",
+      "title": "Shopify Announces First-Quarter 2026 Financial Results",
+      "publisher": "Shopify Investor Relations",
+      "url": "https://www.shopify.com/news/shopify-announces-first-quarter-2026-financial-results",
+      "source_type": "بيان نتائج رسمي",
+      "published_at": "2026-05-07",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يلخص Q1 2026: revenue 3.170B وGMV 100.743B وMRR 212M وFCF 476M."
+    },
+    {
+      "id": "SRC-04",
+      "title": "Shopify to Announce Second-Quarter 2026 Financial Results August 5, 2026",
+      "publisher": "Shopify Investor Relations",
+      "url": "https://investors.shopify.com/news-and-events/news/news-details/2026/Shopify-to-Announce-Second-Quarter-2026-Financial-Results-August-5-2026/default.aspx",
+      "source_type": "إعلان موعد نتائج رسمي",
+      "published_at": "2026-07",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يثبت أن Q2 2026 لم يكن منشورًا في 3 أغسطس وأن Q1 هو أحدث ربع مكتمل."
+    },
+    {
+      "id": "SRC-05",
+      "title": "Shopify — About",
+      "publisher": "Shopify",
+      "url": "https://www.shopify.com/about",
+      "source_type": "صفحة شركة رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "الإطلاق في 2006، ملايين التجار في 175+ دولة، 21K+ تطبيق، GMV 2025 والتجارة التراكمية."
+    },
+    {
+      "id": "SRC-06",
+      "title": "Shopify — Pricing",
+      "publisher": "Shopify",
+      "url": "https://www.shopify.com/pricing",
+      "source_type": "صفحة تسعير رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "خطط Basic وGrow وAdvanced وPlus ورسوم تختلف حسب الخطة والبلد."
+    },
+    {
+      "id": "SRC-07",
+      "title": "Shopify Investor Overview",
+      "publisher": "Shopify Investor Relations",
+      "url": "https://investors.shopify.com/overview/default.aspx",
+      "source_type": "صفحة مستثمرين رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "النطاق التشغيلي والتجارة التراكمية والحصة الأمريكية كما تصفها الشركة."
+    },
+    {
+      "id": "SRC-08",
+      "title": "Shopify Stock Information",
+      "publisher": "Shopify Investor Relations",
+      "url": "https://investors.shopify.com/stock-information/default.aspx",
+      "source_type": "سعر سهم رسمي ديناميكي",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "سعر 124.48 دولار الظاهر وقت التحقق استُخدم فقط لحساب قيمة سوقية تقريبية."
+    },
+    {
+      "id": "SRC-09",
+      "title": "Shopify Increases Share Repurchase Authorization to $5 Billion",
+      "publisher": "Shopify Investor Relations",
+      "url": "https://investors.shopify.com/news-and-events/news/news-details/2026/Shopify-Increases-Share-Repurchase-Authorization-to-5-Billion/default.aspx",
+      "source_type": "إعلان رأسمالي رسمي",
+      "published_at": "2026-06-02",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "رفع التفويض إلى 5B وشراء أسهم بنحو 1.45B حتى 1 يونيو."
+    },
+    {
+      "id": "SRC-10",
+      "title": "Shopify IPO Final Prospectus",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "url": "https://www.sec.gov/Archives/edgar/data/1594805/000119312515184945/d812484d424b4.htm",
+      "source_type": "نشرة اكتتاب رسمية",
+      "published_at": "2015-05-21",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "سعر الاكتتاب 17 دولارًا والسياق المالي والتاريخي."
+    },
+    {
+      "id": "SRC-11",
+      "title": "Shopify Closes Initial Public Offering",
+      "publisher": "Shopify",
+      "url": "https://www.shopify.com/news/shopify-closes-initial-public-offering",
+      "source_type": "إعلان اكتتاب رسمي",
+      "published_at": "2015-05-27",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "بيع 8.855M سهم بسعر 17 دولارًا وإجمالي 150.535M قبل المصروفات."
+    },
+    {
+      "id": "SRC-12",
+      "title": "The Shopify Story: From Snowdevil to Commerce Platform",
+      "publisher": "Shopify",
+      "url": "https://www.shopify.com/blog/shopify-history",
+      "source_type": "تاريخ شركة رسمي",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "نشأة البرمجية من متجر Snowdevil لمعدات التزلج."
+    },
+    {
+      "id": "SRC-13",
+      "title": "Shopify Agentic Storefronts",
+      "publisher": "Shopify",
+      "url": "https://www.shopify.com/news/agentic-storefronts",
+      "source_type": "إعلان منتج رسمي",
+      "published_at": "2026-03-24",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "البيع عبر ChatGPT وCopilot وGoogle وGemini مع بقاء التاجر merchant of record."
+    },
+    {
+      "id": "SRC-14",
+      "title": "Universal Commerce Protocol",
+      "publisher": "Shopify",
+      "url": "https://www.shopify.com/news/universal-commerce-protocol",
+      "source_type": "إعلان معيار ومنتج رسمي",
+      "published_at": "2026",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "مشاركة Shopify في تطوير UCP للتجارة عبر وكلاء الذكاء الاصطناعي."
+    },
+    {
+      "id": "SRC-15",
+      "title": "Shopify Editions — Spring '26",
+      "publisher": "Shopify",
+      "url": "https://www.shopify.com/editions/spring2026",
+      "source_type": "إعلان منتجات رسمي",
+      "published_at": "2026",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Catalog وUCP وSidekick وFlow وB2B وتحديثات المنصة."
+    },
+    {
+      "id": "SRC-16",
+      "title": "B2B features expand beyond Shopify Plus",
+      "publisher": "Shopify Changelog",
+      "url": "https://changelog.shopify.com/posts/b2b-features-are-now-available-on-basic-grow-and-advanced-plans",
+      "source_type": "تغيير منتج رسمي",
+      "published_at": "2026-04-02",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "توسيع ميزات B2B إلى Basic وGrow وAdvanced مع ميزات متقدمة على Plus."
+    },
+    {
+      "id": "SRC-17",
+      "title": "Moving Inventory Reservations from Redis to MySQL",
+      "publisher": "Shopify Engineering",
+      "url": "https://shopify.engineering/moving-inventory-reservations-from-redis-to-mysql",
+      "source_type": "مدونة هندسية رسمية",
+      "published_at": "2026-05-12",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "نقل عبء حجز المخزون المحدد من Redis إلى MySQL باستخدام SKIP LOCKED."
+    },
+    {
+      "id": "SRC-18",
+      "title": "Building a Faster GraphQL Data Layer with Cardinal",
+      "publisher": "Shopify Engineering",
+      "url": "https://shopify.engineering/cardinal-graphql-data-layer",
+      "source_type": "مدونة هندسية رسمية",
+      "published_at": "2026-03-12",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "محرك Cardinal لمعالجة GraphQL ونتائج أداء لاستعلامات كبيرة."
+    },
+    {
+      "id": "SRC-19",
+      "title": "How We Curate Data for Sidekick's AI Planner",
+      "publisher": "Shopify Engineering",
+      "url": "https://shopify.engineering/sidekick-ai-planner-data",
+      "source_type": "مدونة هندسية رسمية",
+      "published_at": "2026",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "مخطط Sidekick ومهارات متخصصة وعمليات تقييم وجودة البيانات."
+    },
+    {
+      "id": "SRC-20",
+      "title": "Fine-Tuning Qwen3-32B for Shopify Flow",
+      "publisher": "Shopify Engineering",
+      "url": "https://shopify.engineering/fine-tuning-qwen3-32b-for-shopify-flow",
+      "source_type": "مدونة هندسية رسمية",
+      "published_at": "2026-04-22",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "نموذج مخصص لمهمة استدعاء الأدوات في Flow؛ النتائج خاصة بهذا العبء."
+    },
+    {
+      "id": "SRC-21",
+      "title": "Running Shop.app on Rails, MySQL, and Vitess",
+      "publisher": "Shopify Engineering",
+      "url": "https://shopify.engineering/shop-app-rails-mysql-vitess",
+      "source_type": "مدونة هندسية رسمية",
+      "published_at": "2024",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "استخدام Ruby on Rails وMySQL وVitess في أجزاء منشورة."
+    },
+    {
+      "id": "SRC-22",
+      "title": "Shopify Announces Fourth-Quarter and Full-Year 2025 Financial Results",
+      "publisher": "Shopify Investor Relations",
+      "url": "https://www.shopify.com/news/shopify-announces-fourth-quarter-and-full-year-2025-financial-results",
+      "source_type": "بيان نتائج سنوي رسمي",
+      "published_at": "2026-02-11",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "إيراد 2025 البالغ 11.556B وGMV 378.4B والنمو."
+    },
+    {
+      "id": "SRC-23",
+      "title": "Shopify Completes Sale of Logistics Businesses",
+      "publisher": "Shopify",
+      "url": "https://www.shopify.com/news/shopify-completes-sale-of-logistics-businesses",
+      "source_type": "إعلان صفقة رسمي",
+      "published_at": "2023-06-06",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "بيع معظم نشاط Shopify Logistics إلى Flexport والتركيز على منصة التجارة."
     }
   ]
 }

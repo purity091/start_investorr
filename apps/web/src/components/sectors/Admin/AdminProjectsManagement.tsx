@@ -1,6 +1,15 @@
 import React, { useState, useMemo } from 'react';
 import { supabase } from '@/lib/supabase';
 import { withSupabaseRetry } from '@/lib/supabaseRetry';
+import { Button } from '@/components/ui/Button';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
 import { 
   FileText, Search, Filter, Edit2, Trash2, Eye, 
   MoreVertical, Clock, CheckCircle2, AlertCircle, PlayCircle,
@@ -21,6 +30,27 @@ interface AdminProject {
   progress: number;
   status: ProjectStatus;
 }
+
+type AdminCanvasRow = {
+  id: string;
+  user_id: string;
+  project_title: string | null;
+  sector_label: string | null;
+  current_stage: string | null;
+  journey_progress: number | null;
+  created_at: string;
+  canvas_data?: {
+    execution?: {
+      kpis?: unknown;
+    };
+  } | null;
+};
+
+type AdminProfileRow = {
+  id: string;
+  full_name: string | null;
+  email: string | null;
+};
 
 // Mock Data
 const SECTORS: Record<ProjectSector, { label: string, icon: React.ElementType }> = {
@@ -65,6 +95,8 @@ export const AdminProjectsManagement: React.FC = () => {
   const [statusFilter, setStatusFilter] = useState<ProjectStatus | 'all'>('all');
   const [currentPage, setCurrentPage] = useState(1);
   const [totalProjects, setTotalProjects] = useState(0);
+  const [pendingDeleteProject, setPendingDeleteProject] = useState<AdminProject | null>(null);
+  const [notice, setNotice] = useState<{ title: string; description: string } | null>(null);
   const itemsPerPage = 9;
 
   React.useEffect(() => {
@@ -97,9 +129,9 @@ export const AdminProjectsManagement: React.FC = () => {
               .in('id', userIds)
           );
 
-          const profilesMap = new Map(profilesData?.map((p) => [p.id, p]) || []);
+          const profilesMap = new Map((profilesData as AdminProfileRow[] | null)?.map((p) => [p.id, p]) || []);
 
-          const mappedProjects: AdminProject[] = canvasData.map((p: any) => {
+          const mappedProjects: AdminProject[] = (canvasData as AdminCanvasRow[]).map((p) => {
             const profile = profilesMap.get(p.user_id);
             const ownerName = profile?.full_name || profile?.email?.split('@')[0] || 'مستخدم مجهول';
             const canvasPayload = p.canvas_data || {};
@@ -146,21 +178,27 @@ export const AdminProjectsManagement: React.FC = () => {
   const paginatedProjects = filteredProjects;
 
   // Actions
-  const handleDelete = async (id: string, name: string) => {
-    if(window.confirm(`هل أنت متأكد من حذف مشروع "${name}"؟ هذا الإجراء نهائي ولا يمكن التراجع عنه.`)) {
-      try {
-        await supabase.from('business_canvas').update({ deleted_at: new Date().toISOString() }).eq('id', id);
-        setProjects(projects.filter(p => p.id !== id));
-      } catch (err) {
-        console.error('Error deleting project', err);
-        alert('حدث خطأ أثناء محاولة الحذف.');
-      }
+  const handleDelete = async () => {
+    if (!pendingDeleteProject) return;
+
+    try {
+      await supabase.from('business_canvas').update({ deleted_at: new Date().toISOString() }).eq('id', pendingDeleteProject.id);
+      setProjects(projects.filter(p => p.id !== pendingDeleteProject.id));
+      setPendingDeleteProject(null);
+    } catch (err) {
+      console.error('Error deleting project', err);
+      setNotice({
+        title: 'تعذر حذف المشروع',
+        description: 'حدث خطأ أثناء محاولة الحذف. حاول مرة أخرى بعد لحظات.',
+      });
     }
   };
 
-  const handlePreview = (id: string) => {
-    // In a real app, this would open a modal with the project details
-    alert(`جاري تحميل معاينة المشروع رقم ${id}...`);
+  const handlePreview = (project: AdminProject) => {
+    setNotice({
+      title: 'معاينة المشروع',
+      description: `المعاينة التفصيلية لمشروع "${project.name}" غير متصلة بعد. يمكن فتحها لاحقاً من نفس الإجراء عند ربط شاشة التفاصيل.`,
+    });
   };
 
   return (
@@ -216,7 +254,7 @@ export const AdminProjectsManagement: React.FC = () => {
              <Filter size={14} className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400" />
              <select 
                 value={sectorFilter}
-                onChange={(e) => { setSectorFilter(e.target.value as any); setCurrentPage(1); }}
+                onChange={(e) => { setSectorFilter(e.target.value as ProjectSector | 'all'); setCurrentPage(1); }}
                 className="w-full bg-white border border-slate-200 rounded-[16px] pr-10 pl-4 py-3.5 text-xs font-bold text-slate-600 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 appearance-none cursor-pointer shadow-sm transition-all"
              >
                 <option value="all">جميع القطاعات</option>
@@ -230,7 +268,7 @@ export const AdminProjectsManagement: React.FC = () => {
              <Filter size={14} className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400" />
              <select 
                 value={statusFilter}
-                onChange={(e) => { setStatusFilter(e.target.value as any); setCurrentPage(1); }}
+                onChange={(e) => { setStatusFilter(e.target.value as ProjectStatus | 'all'); setCurrentPage(1); }}
                 className="w-full bg-white border border-slate-200 rounded-[16px] pr-10 pl-4 py-3.5 text-xs font-bold text-slate-600 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 appearance-none cursor-pointer shadow-sm transition-all"
              >
                 <option value="all">جميع الحالات</option>
@@ -306,7 +344,7 @@ export const AdminProjectsManagement: React.FC = () => {
                    {/* Action Buttons Always Visible */}
                    <div className="flex items-center gap-2">
                       <button 
-                         onClick={() => handlePreview(project.id)}
+                         onClick={() => handlePreview(project)}
                          className="w-8 h-8 rounded-[10px] bg-slate-50 text-slate-500 hover:bg-blue-50 hover:text-blue-600 flex items-center justify-center transition-colors border border-slate-100 hover:border-blue-200" 
                          title="معاينة الخطة"
                       >
@@ -319,7 +357,7 @@ export const AdminProjectsManagement: React.FC = () => {
                         <Edit2 size={14} />
                       </button>
                       <button 
-                         onClick={() => handleDelete(project.id, project.name)}
+                         onClick={() => setPendingDeleteProject(project)}
                          className="w-8 h-8 rounded-[10px] bg-slate-50 text-slate-500 hover:bg-rose-50 hover:text-rose-600 flex items-center justify-center transition-colors border border-slate-100 hover:border-rose-200" 
                          title="حذف المشروع"
                       >
@@ -394,6 +432,37 @@ export const AdminProjectsManagement: React.FC = () => {
            </div>
         </div>
       )}
+
+      <Dialog open={Boolean(pendingDeleteProject)} onOpenChange={(open) => !open && setPendingDeleteProject(null)}>
+        <DialogContent className="sm:max-w-[440px]" dir="rtl">
+          <DialogHeader className="text-right">
+            <DialogTitle>حذف المشروع</DialogTitle>
+            <DialogDescription>
+              سيتم حذف مشروع &quot;{pendingDeleteProject?.name}&quot; من المنصة. هذا الإجراء لا يمكن التراجع عنه من الواجهة.
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button variant="destructive" onClick={handleDelete}>
+              حذف المشروع
+            </Button>
+            <Button variant="outline" onClick={() => setPendingDeleteProject(null)}>
+              إلغاء
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={Boolean(notice)} onOpenChange={(open) => !open && setNotice(null)}>
+        <DialogContent className="sm:max-w-[420px]" dir="rtl">
+          <DialogHeader className="text-right">
+            <DialogTitle>{notice?.title}</DialogTitle>
+            <DialogDescription>{notice?.description}</DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button onClick={() => setNotice(null)}>حسناً</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
 
     </div>
   );

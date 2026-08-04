@@ -2,52 +2,1994 @@
   "id": "grammarly",
   "slug": "grammarly",
   "name": "جرامرلي (Grammarly)",
-  "headline": "مساعد الكتابة بالذكاء الاصطناعي الذي رافق ملايين المستخدمين في كل مكان",
-  "category": "AI SaaS / برمجيات الإنتاجية",
+  "headline": "من مدقق لغوي إلى بوابة لمنصة Superhuman: كيف حوّلت Grammarly مربع الكتابة إلى قناة توزيع يستخدمها أكثر من 40 مليون شخص يوميًا",
+  "category": "AI Productivity & Writing Assistance / مساعدات الكتابة ووكلاء الإنتاجية",
   "company": {
-    "location": "أوكرانيا / سان فرانسيسكو، الولايات المتحدة",
-    "business_model": "مجاني (Freemium) واشتراكات مدفوعة للميزات المتقدمة (Grammarly Premium)"
+    "location": "تأسست Grammarly في أوكرانيا عام 2009 على يد Max Lytvyn وAlex Shevchenko وDmytro Lider. منذ 29 أكتوبر 2025 أصبح اسم الشركة الأم Superhuman، والكيان القانوني المعلن هو Superhuman Platform Inc. في سان فرانسيسكو، بينما بقيت Grammarly علامة ومنتجًا داخل الحزمة. تعمل المجموعة بنموذج هجين وتعلن مراكز في سان فرانسيسكو ونيويورك وسياتل وفانكوفر وبرلين ووارسو وكييف.",
+    "business_model": "نموذج مجاني مع اشتراكات مدفوعة للأفراد والفرق والمؤسسات والتعليم. تُباع Grammarly كمنتج مستقل عبر Free وPro وحلول المؤسسات، كما تدخل ضمن اشتراكات حزمة Superhuman التي تضم Grammarly وGo وDocs وMail. صرحت الشركة بأنها تحقق الدخل من المنتجات المدفوعة والاشتراكات، لا من بيع محتوى المستخدمين أو الإعلانات."
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين",
-    "monthly_traffic": "أكثر من 30 مليون مستخدم نشط يومياً"
+    "monthly_revenue": "غير مُفصح عنه علنًا. أحدث رقم رسمي وجدته هو إيراد سنوي يتجاوز 700 مليون دولار، أُعلن في 29 مايو 2025 قبل إعادة تسمية الشركة الأم إلى Superhuman. لا يجوز قسمة الرقم على 12 واعتباره إيرادًا شهريًا، ولا توجد قوائم مالية عامة تفصل إيراد Grammarly عن Docs وMail وGo بعد تكوين الحزمة.",
+    "monthly_traffic": "غير مُفصح عنه علنًا، ولا يتوفر رقم رسمي موثوق لزيارات الموقع الشهرية. المقاييس الرسمية الحالية تتجاوز 40 مليون مستخدم نشط يوميًا و50 ألف مؤسسة، مع عمل المنصة عبر أكثر من مليون تطبيق وموقع وتحليل نحو 200 مليار كلمة يوميًا. هذه مقاييس استخدام وانتشار وليست زيارات ويب، كما أن رقم 30 مليون مستخدم يوميًا في الملف الأصلي يعود إلى 2021 وأصبح قديمًا."
   },
   "overview": {
     "problem": {
-      "text": "برامج التدقيق الإملائي التقليدية (مثل المدقق في Microsoft Word) كانت تكتشف الأخطاء الإملائية البسيطة فقط. لا تفهم السياق، لا تصحح القواعد المعقدة، ولا تساعد في تحسين (نبرة) الكتابة.",
-      "impact": "رسائل بريد إلكتروني غير احترافية، وأخطاء لغوية تحرج الطلاب والموظفين وحتى الكتاب المحترفين."
+      "text": "الكتابة المهنية لا تتعطل عند الإملاء والقواعد فقط؛ المشكلة تشمل الوضوح والنبرة والسياق واتساق صوت العلامة التجارية وسرعة الانتقال من الفكرة إلى نص قابل للإرسال. كما تتوزع الكتابة على البريد والمتصفح والمستندات وتطبيقات العمل، فتفقد الأداة قيمتها إذا أجبرت المستخدم على نسخ النص إلى محرر منفصل.",
+      "impact": "تؤدي الأخطاء والغموض وتبدل النبرة إلى إعادة العمل، وسوء الفهم، وعدم اتساق التواصل مع العملاء، وإبطاء الموظفين والطلاب. لا يوجد رقم عام مستقل يسمح بتحويل هذا الأثر إلى نسبة إنتاجية موحدة لكل مستخدم أو إلى إيراد مباشر."
     },
     "solution": {
-      "text": "مساعد كتابة يعتمد على الذكاء الاصطناعي (معالجة اللغات الطبيعية NLP). لا يصحح الإملاء فقط، بل يقترح إعادة صياغة الجمل لتصبح أوضح، ويحلل نبرة النص (رسمية، ودية، حازمة) ليتناسب مع الموقف."
+      "text": "بدأت Grammarly كمساعد لتصحيح الكتابة، ثم توسعت إلى اقتراحات الوضوح والنبرة وإعادة الصياغة والتوليد ووكلاء كتابة يعملون داخل التطبيقات. وفي 2025–2026 أصبحت منتجًا ضمن Superhuman Platform، بحيث تُدمج مساعدة الكتابة مع البريد والمستندات ووكلاء السياق. يعتمد المنتج على NLP وML وLLMs، ويجمع بين المعالجة السحابية ونماذج تعمل على الجهاز لبعض مهام التصحيح لتقليل الكمون وزيادة الاعتمادية."
     }
   },
   "market_data": {
-    "target_audience": "الطلاب، الأكاديميون، المحترفون، وصناع المحتوى الناطقون بالإنجليزية حول العالم.",
-    "market_size": "سوق برمجيات الإنتاجية والذكاء الاصطناعي العالمي.",
-    "growth_rate": "شركة ذات تمويل ذاتي لفترة طويلة، ثم جمعت تمويلات ضخمة لترفع تقييمها إلى 13 مليار دولار كواحدة من أقوى شركات الـ AI عالمياً."
+    "target_audience": "الأفراد والطلاب والكتّاب وصناع المحتوى والباحثون عن تحسين الكتابة، إضافة إلى الفرق المهنية والمؤسسات التعليمية والشركات التي تحتاج إلى توحيد الأسلوب وصوت العلامة التجارية والامتثال والتحليلات والإدارة المركزية. توسع المنتج في 2025 إلى خمس لغات إضافية إلى جانب الإنجليزية، ما وسّع نطاق الجمهور المعلن، مع اختلاف عمق الميزات بين اللغات والخطط.",
+    "market_size": "لم تنشر الشركة حجم سوق قابلًا للتحقق خاصًا بمساعدات الكتابة أو وكلاء الإنتاجية. الرقم الأكثر صلة من المصادر الأولية هو قاعدة الاستخدام المعلنة: أكثر من 40 مليون مستخدم نشط يوميًا و50 ألف مؤسسة وانتشار عبر أكثر من مليون تطبيق وموقع. لا تساوي هذه الأرقام حجم السوق المالي أو عدد العملاء الدافعين.",
+    "growth_rate": "لا تنشر الشركة معدل نمو حديثًا موحدًا للإيراد أو المستخدمين. ارتفع الرقم المعلن من 30 مليون مستخدم يوميًا في 2021 إلى أكثر من 40 مليون في 2025–2026، لكن استخدام صيغة «أكثر من» وتغير تعريف المؤسسة والانتقال إلى حزمة متعددة المنتجات يمنع اشتقاق معدل نمو سنوي دقيق. كما لا توجد بيانات عامة متجانسة عن العملاء الدافعين أو الاحتفاظ أو التحويل."
   },
   "financials": {
-    "initial_investment": "بدأت بتمويل ذاتي (Bootstrapped) وحققت ربحية مبكرة، ثم لاحقاً قبلت تمويلاً من General Catalyst ومستثمرين آخرين.",
-    "valuation": "$13B (يونيكورن ضخم)",
+    "initial_investment": "اعتمدت Grammarly على التمويل الذاتي والربحية في مراحلها الأولى، ثم أعلنت استثمارًا بقيمة 90 مليون دولار في 2019، وجولة تزيد على 200 مليون دولار في 2021. وفي مايو 2025 أغلقت تمويل نمو بقيمة مليار دولار من Customer Value Fund التابع لـGeneral Catalyst لتمويل المبيعات والتسويق والاستحواذات؛ هذا التمويل ليس جولة أسهم تقليدية ولا يثبت تقييمًا جديدًا.",
+    "valuation": "آخر تقييم أسهم معلن وموثق هو 13 مليار دولار في جولة نوفمبر 2021. لا يوجد تقييم عام أحدث يمكن اعتماده حتى أغسطس 2026، كما أن تمويل المليار دولار في 2025 لا ينبغي عرضه كتقييم أو إضافته إلى قيمة الشركة.",
     "revenue_streams": [
-      "اشتراكات Grammarly Premium للأفراد (شهري أو سنوي)",
-      "اشتراكات Grammarly Business للفرق والشركات بضوابط إضافية"
+      "اشتراكات Grammarly Pro للأفراد والفرق، بخيارات شهرية وربع سنوية وسنوية وفق السوق وقناة الشراء.",
+      "عقود Grammarly Enterprise والمؤسسات التعليمية، وتشمل الإدارة المركزية والأمان والضوابط والميزات المؤسسية.",
+      "اشتراكات حزمة Superhuman التي تجمع Grammarly مع Go وDocs وMail، مع استمرار إتاحة Grammarly كمنتج مستقل.",
+      "ترقيات وخطط مدفوعة مبنية على ميزات الكتابة المتقدمة والتوليد والنبرة وإعادة الصياغة والتعاون؛ لم تُفصح الشركة عن توزيع الإيراد حسب المسار."
     ]
   },
   "lessons": [
     {
-      "title": "الوجود في كل مكان (Omnipresence)",
-      "description": "لم تطلب Grammarly من المستخدم أن يكتب داخل موقعها (كما يفعل ChatGPT). بل طورت (إضافة متصفح Extension) ولوحة مفاتيح للهواتف وتطبيق سطح مكتب. أينما يكتب المستخدم (في الإيميل، تويتر، وورد)، يجد Grammarly هناك بصمت ليساعده. هذا الاحتكاك الصفري (Zero Friction) هو سر انتشارهم."
+      "title": "امتلك سطح العمل بدل أن تنتظر المستخدم في موقعك",
+      "description": "قوة Grammarly لم تأتِ من محرر أفضل فقط، بل من وجودها داخل مربع النص في البريد والمتصفح وتطبيقات سطح المكتب. عندما يصبح المنتج حاضرًا في لحظة الحاجة، تتحول كل كتابة إلى فرصة استخدام متكررة من دون مطالبة المستخدم بتغيير سلوكه."
     },
     {
-      "title": "قوة الخطة المجانية الفعالة",
-      "description": "الخطة المجانية ممتازة جداً وتصحح معظم الأخطاء الكارثية، مما جعل الملايين يحملونها. لكن التطبيق يظل يظهر لك (اقتراحات مخفية) باللون الأصفر لتعديل بنية الجملة بالكامل في النسخة المدفوعة. هذا التذكير الدائم والمفيد يقنع نسبة ممتازة من المستخدمين بالترقية (Conversion Rate)."
+      "title": "الخطة المجانية يمكن أن تكون بنية توزيع لا نسخة تجريبية",
+      "description": "قدمت Grammarly قيمة واضحة مجانًا في التصحيح الأساسي، ثم باعت طبقات أعمق مثل النبرة وإعادة الصياغة والإدارة المؤسسية. الدرس أن المجاني ينجح عندما يحل مشكلة حقيقية كاملة بما يكفي لبناء عادة، بينما تكون الترقية مرتبطة بسياق أعلى قيمة."
+    },
+    {
+      "title": "حين تتغير الشركة إلى حزمة، يجب أن تتغير لغة القياس",
+      "description": "بعد الاستحواذ على Coda وSuperhuman Mail وإطلاق Go، لم يعد كل رقم مستخدم أو إيراد قابلًا للنسب تلقائيًا إلى منتج Grammarly وحده. الشركات متعددة المنتجات تحتاج إلى فصل مستخدمي العلامة عن مستخدمي الحزمة، وإيراد المنتج عن إيراد المجموعة، وإلا أصبحت الأرقام التسويقية مضللة."
+    },
+    {
+      "title": "الاستحواذ الأفضل يضيف سطحًا جديدًا للعمل لا قائمة ميزات فقط",
+      "description": "Coda أضافت مساحة المستند والعمل التعاوني، وSuperhuman أضاف البريد، وGo أضاف طبقة الوكلاء. بهذه الطريقة توسع Grammarly من تصحيح النص إلى امتلاك السياق قبل الكتابة وأثناءها وبعدها، بدل الاكتفاء بإضافة زر توليد جديد."
+    },
+    {
+      "title": "التمويل غير المخفّض للملكية لا يعني تقييمًا أعلى تلقائيًا",
+      "description": "تمويل المليار دولار في 2025 يمنح الشركة قدرة على تمويل اكتساب العملاء والاستحواذات من دون إعلان جولة أسهم جديدة. الدرس هو فصل نوع رأس المال عن التقييم: حجم التمويل قد يكون ضخمًا بينما يبقى آخر تقييم معلن تاريخيًا من جولة سابقة."
+    },
+    {
+      "title": "في مساعدات الكتابة، الثقة والكمون جزء من المنتج",
+      "description": "العمل داخل كل تطبيق يتطلب معالجة سريعة وضوابط بيانات قوية. استثمار Grammarly في نماذج على الجهاز وRust، إلى جانب AWS والامتثال المؤسسي، يوضح أن جودة الاقتراح وحدها لا تكفي؛ سرعة الظهور وموثوقية المعالجة وسياسات التدريب تحدد قابلية التبني."
     }
   ],
   "tools": [
-    "Machine Learning (NLP/LLMs)",
-    "AWS",
-    "JavaScript / TypeScript (Extensions)",
-    "Erlang"
+    "معالجة اللغة الطبيعية والتعلم الآلي والنماذج اللغوية الكبيرة",
+    "نماذج Transformer وT5 وتصحيح الأخطاء النحوية GEC",
+    "SDK بلغة Rust لتشغيل نماذج مختارة على الجهاز عبر Mac وWindows وإضافة Chrome",
+    "AWS وEC2 وبنية متعددة المناطق، مع Terraform وKubernetes في أجزاء منشورة من البنية",
+    "React وTypeScript لواجهات المحرر الحديثة، مع إرث JavaScript وVue.js",
+    "إضافات المتصفح وتطبيقات سطح المكتب ولوحات مفاتيح الهاتف ومحرر سحابي",
+    "لغات وخدمات تاريخية منشورة تشمل Erlang وPython وGo ولغات JVM؛ لا يعني ذلك أنها جميعًا أساسية في بنية 2026",
+    "أنظمة امتثال وأمان مؤسسية تشمل SOC 2 وISO وضوابط إدارة البيانات",
+    "Superhuman Platform لدمج Grammarly مع Go وDocs وMail ووكلاء الطرف الثالث"
+  ],
+  "verification": {
+    "status": "verified_with_material_corrections_and_current_parent_update",
+    "verified_on": "2026-08-03",
+    "source_policy": {
+      "priority_order": [
+        "المواقع والبيانات القانونية والمالية الرسمية لـGrammarly وSuperhuman",
+        "إعلانات التمويل والاستحواذ الرسمية",
+        "مدونة Grammarly Engineering",
+        "Business Wire عندما ينشر بيان الشركة الأصلي",
+        "مصادر ثانوية فقط عند الحاجة، ولم تُستخدم لإثبات رقم مالي نهائي"
+      ],
+      "sec_applicability": "غير منطبق عمليًا: Superhuman Platform Inc. شركة خاصة ولم يُعثر على إفصاحات شركة عامة لدى SEC يمكن استخدامها كقوائم مالية.",
+      "financial_rule": "تم فصل الإيراد السنوي عن الشهري، والتقييم عن التمويل، والتمويل غير المخفّض للملكية عن جولات الأسهم، وعدم تحويل المستخدمين أو الكلمات أو الرسائل إلى إيراد.",
+      "usage_rule": "تم فصل زيارات الموقع عن المستخدمين النشطين والمؤسسات والتطبيقات والكلمات والرسائل، مع وسم كل رقم بتعريفه وتاريخه.",
+      "brand_rule": "تم التمييز بين Grammarly كمنتج وبين Superhuman كاسم الشركة الأم والحزمة منذ أكتوبر 2025."
+    },
+    "important_notes": [
+      "اسم الشركة الأم تغير من Grammarly إلى Superhuman في 29 أكتوبر 2025، بينما بقيت Grammarly علامة ومنتجًا.",
+      "الكيان القانوني المعلن حاليًا هو Superhuman Platform Inc.، وتظهر Grammarly Inc. كشركة تابعة في السياسة القانونية.",
+      "رقم 30 مليون مستخدم يوميًا في الملف الأصلي قديم؛ الرقم الرسمي الحالي يتجاوز 40 مليون مستخدم يوميًا.",
+      "50 ألف مؤسسة مقياس تبنٍ مؤسسي، وليس عدد مستخدمين أو زيارات أو عملاء دافعين بالضرورة.",
+      "أكثر من مليون تطبيق وموقع و200 مليار كلمة يوميًا مقاييس انتشار واستخدام، وليست زيارات شهرية أو حجم معاملات.",
+      "الإيراد الشهري غير معلن؛ الرقم الرسمي المتاح هو إيراد سنوي يتجاوز 700 مليون دولار في مايو 2025.",
+      "لم يُقسم الإيراد السنوي على 12، ولم يُقدّر إيراد Grammarly بعد دمج Docs وMail وGo.",
+      "تقييم 13 مليار دولار تاريخي ويرتبط بجولة نوفمبر 2021؛ لا يوجد تقييم عام أحدث موثوق حتى أغسطس 2026.",
+      "تمويل المليار دولار في 2025 تمويل نمو من Customer Value Fund، وليس تقييمًا جديدًا أو إيرادًا.",
+      "لا توجد بيانات عامة موحدة عن MRR أو ARR الحالي بعد إعادة التسمية، أو العملاء الدافعين، أو التحويل، أو الاحتفاظ.",
+      "استحوذت Grammarly على Coda ثم Superhuman Mail، وأصبحت المجموعة حزمة متعددة المنتجات؛ لذلك يجب الحذر عند نسبة أرقام المجموعة إلى Grammarly وحدها.",
+      "التقنيات المدرجة تستند إلى منشورات هندسية رسمية، لكن بعض اللغات والأطر تاريخية ولا يُفترض أنها ما زالت مركزية في 2026.",
+      "التوسع إلى خمس لغات إضافية موثق، لكن تكافؤ جميع الميزات والجودة عبر اللغات غير مثبت في المصادر العامة.",
+      "لم تُستخدم تقديرات سوق خارجية أو أرقام زيارات تجارية غير قابلة للتدقيق."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_at": "2026-08-03",
+      "checks_passed": 127,
+      "checks_failed": 0,
+      "checks": [
+        {
+          "name": "base_key_id",
+          "passed": true,
+          "details": "الحقل الأساسي id موجود."
+        },
+        {
+          "name": "base_key_slug",
+          "passed": true,
+          "details": "الحقل الأساسي slug موجود."
+        },
+        {
+          "name": "base_key_name",
+          "passed": true,
+          "details": "الحقل الأساسي name موجود."
+        },
+        {
+          "name": "base_key_headline",
+          "passed": true,
+          "details": "الحقل الأساسي headline موجود."
+        },
+        {
+          "name": "base_key_category",
+          "passed": true,
+          "details": "الحقل الأساسي category موجود."
+        },
+        {
+          "name": "base_key_company",
+          "passed": true,
+          "details": "الحقل الأساسي company موجود."
+        },
+        {
+          "name": "base_key_directory_snapshot",
+          "passed": true,
+          "details": "الحقل الأساسي directory_snapshot موجود."
+        },
+        {
+          "name": "base_key_overview",
+          "passed": true,
+          "details": "الحقل الأساسي overview موجود."
+        },
+        {
+          "name": "base_key_market_data",
+          "passed": true,
+          "details": "الحقل الأساسي market_data موجود."
+        },
+        {
+          "name": "base_key_financials",
+          "passed": true,
+          "details": "الحقل الأساسي financials موجود."
+        },
+        {
+          "name": "base_key_lessons",
+          "passed": true,
+          "details": "الحقل الأساسي lessons موجود."
+        },
+        {
+          "name": "base_key_tools",
+          "passed": true,
+          "details": "الحقل الأساسي tools موجود."
+        },
+        {
+          "name": "professional_v2_key_verification",
+          "passed": true,
+          "details": "قسم Professional V2 verification موجود."
+        },
+        {
+          "name": "professional_v2_key_evidence_map_schema",
+          "passed": true,
+          "details": "قسم Professional V2 evidence_map_schema موجود."
+        },
+        {
+          "name": "professional_v2_key_evidence_map",
+          "passed": true,
+          "details": "قسم Professional V2 evidence_map موجود."
+        },
+        {
+          "name": "professional_v2_key_sources",
+          "passed": true,
+          "details": "قسم Professional V2 sources موجود."
+        },
+        {
+          "name": "json_root_object",
+          "passed": true,
+          "details": "الجذر كائن JSON."
+        },
+        {
+          "name": "original_id_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على id الأصلي."
+        },
+        {
+          "name": "original_slug_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على slug الأصلي."
+        },
+        {
+          "name": "original_name_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على الاسم الأساسي."
+        },
+        {
+          "name": "base_structure_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على البنية الأساسية مع الإضافات."
+        },
+        {
+          "name": "arabic_final_content",
+          "passed": true,
+          "details": "المحتوى النهائي مكتوب بالعربية."
+        },
+        {
+          "name": "source_ids_unique",
+          "passed": true,
+          "details": "معرّفات المصادر فريدة."
+        },
+        {
+          "name": "minimum_source_count",
+          "passed": true,
+          "details": "عدد المصادر 20."
+        },
+        {
+          "name": "primary_source_majority",
+          "passed": true,
+          "details": "أغلبية المصادر أولية."
+        },
+        {
+          "name": "all_sources_primary_or_company_release",
+          "passed": true,
+          "details": "كل المصادر المستخدمة نهائيًا رسمية أو بيانات شركة."
+        },
+        {
+          "name": "source_urls_valid",
+          "passed": true,
+          "details": "روابط المصادر صالحة بنيويًا."
+        },
+        {
+          "name": "source_metadata_complete",
+          "passed": true,
+          "details": "بيانات المصادر مكتملة."
+        },
+        {
+          "name": "no_duplicate_urls",
+          "passed": true,
+          "details": "لا توجد روابط مكررة."
+        },
+        {
+          "name": "evidence_required_paths",
+          "passed": true,
+          "details": "خريطة الأدلة تغطي 15 مسارًا جوهريًا."
+        },
+        {
+          "name": "evidence_value_match_$.company.location",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.company.location."
+        },
+        {
+          "name": "evidence_fields_complete_$.company.location",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.company.location."
+        },
+        {
+          "name": "evidence_source_count_$.company.location",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.company.location."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.company.location",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.company.location."
+        },
+        {
+          "name": "evidence_reference_integrity_$.company.location",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.company.location."
+        },
+        {
+          "name": "evidence_value_match_$.company.business_model",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.company.business_model."
+        },
+        {
+          "name": "evidence_fields_complete_$.company.business_model",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.company.business_model."
+        },
+        {
+          "name": "evidence_source_count_$.company.business_model",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.company.business_model."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.company.business_model",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.company.business_model."
+        },
+        {
+          "name": "evidence_reference_integrity_$.company.business_model",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.company.business_model."
+        },
+        {
+          "name": "evidence_value_match_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_fields_complete_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_source_count_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_reference_integrity_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_value_match_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_fields_complete_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_source_count_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_reference_integrity_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_value_match_$.overview.problem",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.overview.problem."
+        },
+        {
+          "name": "evidence_fields_complete_$.overview.problem",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.overview.problem."
+        },
+        {
+          "name": "evidence_source_count_$.overview.problem",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.overview.problem."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.overview.problem",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.overview.problem."
+        },
+        {
+          "name": "evidence_reference_integrity_$.overview.problem",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.overview.problem."
+        },
+        {
+          "name": "evidence_value_match_$.overview.solution",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.overview.solution."
+        },
+        {
+          "name": "evidence_fields_complete_$.overview.solution",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.overview.solution."
+        },
+        {
+          "name": "evidence_source_count_$.overview.solution",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.overview.solution."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.overview.solution",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.overview.solution."
+        },
+        {
+          "name": "evidence_reference_integrity_$.overview.solution",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.overview.solution."
+        },
+        {
+          "name": "evidence_value_match_$.market_data.target_audience",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_fields_complete_$.market_data.target_audience",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_source_count_$.market_data.target_audience",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.market_data.target_audience",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_reference_integrity_$.market_data.target_audience",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_value_match_$.market_data.market_size",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.market_data.market_size."
+        },
+        {
+          "name": "evidence_fields_complete_$.market_data.market_size",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.market_data.market_size."
+        },
+        {
+          "name": "evidence_source_count_$.market_data.market_size",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.market_data.market_size."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.market_data.market_size",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.market_data.market_size."
+        },
+        {
+          "name": "evidence_reference_integrity_$.market_data.market_size",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.market_data.market_size."
+        },
+        {
+          "name": "evidence_value_match_$.market_data.growth_rate",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_fields_complete_$.market_data.growth_rate",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_source_count_$.market_data.growth_rate",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.market_data.growth_rate",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_reference_integrity_$.market_data.growth_rate",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_value_match_$.financials.initial_investment",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_fields_complete_$.financials.initial_investment",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_source_count_$.financials.initial_investment",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.financials.initial_investment",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_reference_integrity_$.financials.initial_investment",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_value_match_$.financials.valuation",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.financials.valuation."
+        },
+        {
+          "name": "evidence_fields_complete_$.financials.valuation",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.financials.valuation."
+        },
+        {
+          "name": "evidence_source_count_$.financials.valuation",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.financials.valuation."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.financials.valuation",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.financials.valuation."
+        },
+        {
+          "name": "evidence_reference_integrity_$.financials.valuation",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.financials.valuation."
+        },
+        {
+          "name": "evidence_value_match_$.financials.revenue_streams",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_fields_complete_$.financials.revenue_streams",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_source_count_$.financials.revenue_streams",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.financials.revenue_streams",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_reference_integrity_$.financials.revenue_streams",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_value_match_$.tools",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.tools."
+        },
+        {
+          "name": "evidence_fields_complete_$.tools",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.tools."
+        },
+        {
+          "name": "evidence_source_count_$.tools",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.tools."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.tools",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.tools."
+        },
+        {
+          "name": "evidence_reference_integrity_$.tools",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.tools."
+        },
+        {
+          "name": "evidence_value_match_$.headline",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.headline."
+        },
+        {
+          "name": "evidence_fields_complete_$.headline",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.headline."
+        },
+        {
+          "name": "evidence_source_count_$.headline",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.headline."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.headline",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.headline."
+        },
+        {
+          "name": "evidence_reference_integrity_$.headline",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.headline."
+        },
+        {
+          "name": "evidence_value_match_$.lessons",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.lessons."
+        },
+        {
+          "name": "evidence_fields_complete_$.lessons",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.lessons."
+        },
+        {
+          "name": "evidence_source_count_$.lessons",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.lessons."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.lessons",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.lessons."
+        },
+        {
+          "name": "evidence_reference_integrity_$.lessons",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.lessons."
+        },
+        {
+          "name": "no_nan_or_infinity",
+          "passed": true,
+          "details": "لا توجد قيم رقمية غير صالحة."
+        },
+        {
+          "name": "old_revenue_estimate_removed",
+          "passed": true,
+          "details": "أزيل تقدير الإيراد الشهري غير الموثق."
+        },
+        {
+          "name": "old_daily_user_metric_corrected",
+          "passed": true,
+          "details": "لم يعد الرقم القديم قيمة حالية."
+        },
+        {
+          "name": "current_user_metric_present",
+          "passed": true,
+          "details": "أضيف مقياس الاستخدام الرسمي الحالي."
+        },
+        {
+          "name": "monthly_revenue_not_derived",
+          "passed": true,
+          "details": "تم منع اشتقاق MRR من ARR."
+        },
+        {
+          "name": "traffic_not_users",
+          "passed": true,
+          "details": "الزيارات غير مستبدلة بالمستخدمين."
+        },
+        {
+          "name": "valuation_historical_labeled",
+          "passed": true,
+          "details": "التقييم موسوم كتاريخي."
+        },
+        {
+          "name": "financing_not_valuation",
+          "passed": true,
+          "details": "تم فصل تمويل 2025 عن التقييم."
+        },
+        {
+          "name": "parent_brand_updated",
+          "passed": true,
+          "details": "تم تحديث الشركة الأم مع الحفاظ على المنتج."
+        },
+        {
+          "name": "revenue_not_sold_data",
+          "passed": true,
+          "details": "تم توثيق نموذج الإيراد القانوني."
+        },
+        {
+          "name": "no_market_size_invention",
+          "passed": true,
+          "details": "لم يُخترع حجم سوق مالي."
+        },
+        {
+          "name": "no_precise_growth_rate_invention",
+          "passed": true,
+          "details": "لم يُخترع معدل نمو دقيق."
+        },
+        {
+          "name": "lessons_unique",
+          "passed": true,
+          "details": "الدروس الستة فريدة."
+        },
+        {
+          "name": "lessons_company_specific",
+          "passed": true,
+          "details": "الدروس خاصة بتحولات Grammarly."
+        },
+        {
+          "name": "tools_historical_caveat",
+          "passed": true,
+          "details": "التقنيات التاريخية موسومة بوضوح."
+        },
+        {
+          "name": "metric_taxonomy_present",
+          "passed": true,
+          "details": "مخطط فصل المقاييس شامل."
+        },
+        {
+          "name": "verified_date_consistent",
+          "passed": true,
+          "details": "تاريخ التحقق متسق."
+        },
+        {
+          "name": "schema_version",
+          "passed": true,
+          "details": "إصدار المخطط صحيح."
+        },
+        {
+          "name": "sec_scope_explained",
+          "passed": true,
+          "details": "تم توضيح عدم انطباق SEC."
+        },
+        {
+          "name": "annual_vs_monthly_note",
+          "passed": true,
+          "details": "تم توضيح الإيراد الشهري."
+        },
+        {
+          "name": "users_vs_traffic_note",
+          "passed": true,
+          "details": "تم فصل المستخدمين عن الزيارات."
+        },
+        {
+          "name": "product_vs_parent_note",
+          "passed": true,
+          "details": "تم فصل المنتج عن الشركة الأم."
+        }
+      ],
+      "validator_notes": [
+        "تمت قراءة الملف الأصلي من المسار المرفق والتحقق من صحة JSON.",
+        "تم الحفاظ على الحقول الأساسية وإضافة أقسام Professional V2.",
+        "تمت مطابقة كل field_value في evidence_map مع القيمة النهائية المقابلة.",
+        "تم التحقق من تكامل معرّفات المصادر وروابطها وعددها.",
+        "تم الفصل بين الإيراد الشهري والسنوي والتقييم وتمويل الأسهم وتمويل النمو.",
+        "تم الفصل بين زيارات الموقع والمستخدمين والمؤسسات والتطبيقات والكلمات ورسائل البريد.",
+        "تم منع NaN وInfinity والتقديرات المالية أو السوقية غير المدعومة."
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول الجوهرية بقيمتها النهائية وحالة التحقق ونوع الادعاء والمصادر والقيود، مع فصل المقاييس المالية والتشغيلية.",
+    "required_fields": [
+      "field_value",
+      "verification_status",
+      "confidence",
+      "claim_type",
+      "verified_on",
+      "evidence_summary",
+      "source_ids",
+      "source_references",
+      "limitations",
+      "source_count"
+    ],
+    "verification_status_values": [
+      "verified_current_parent_and_historical_origin",
+      "verified_current_subscription_model",
+      "verified_monthly_undisclosed_annual_reference_available",
+      "verified_traffic_undisclosed_usage_metrics_separated",
+      "verified_product_problem_with_editorial_synthesis",
+      "verified_current_product_and_architecture",
+      "verified_current_segments_and_language_expansion",
+      "verified_no_tam_with_operating_context",
+      "verified_no_precise_current_growth_rate",
+      "verified_funding_history_with_instrument_separation",
+      "verified_last_disclosed_historical_valuation",
+      "verified_published_revenue_pathways_not_segment_actuals",
+      "verified_official_engineering_stack_with_historical_labels",
+      "verified_editorial_synthesis",
+      "analytical_inference_grounded_in_evidence"
+    ],
+    "confidence_scale": {
+      "مرتفعة": "مدعوم بمصدر أولي واضح أو بعدم وجود إفصاح رغم مراجعة المصادر الرسمية ذات الصلة.",
+      "متوسطة إلى مرتفعة": "مدعوم بعدة مصادر أولية مع عنصر تحليلي محدود.",
+      "متوسطة": "استنتاج تحريري مبني على أدلة معلنة مع قيود واضحة.",
+      "منخفضة": "دليل غير كاف؛ لا تُستخدم هذه الدرجة لإثبات الأرقام المالية."
+    },
+    "metric_separation": [
+      "الإيراد الشهري",
+      "الإيراد السنوي",
+      "التقييم",
+      "التمويل بالأسهم",
+      "تمويل النمو غير المخفّض للملكية",
+      "زيارات الموقع",
+      "المستخدمون النشطون يوميًا",
+      "المؤسسات",
+      "العملاء الدافعون",
+      "التطبيقات والمواقع المدعومة",
+      "الكلمات المعالجة",
+      "رسائل البريد المراجعة",
+      "إيراد Grammarly كمنتج",
+      "إيراد Superhuman كمجموعة"
+    ]
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "تأسست Grammarly في أوكرانيا عام 2009 على يد Max Lytvyn وAlex Shevchenko وDmytro Lider. منذ 29 أكتوبر 2025 أصبح اسم الشركة الأم Superhuman، والكيان القانوني المعلن هو Superhuman Platform Inc. في سان فرانسيسكو، بينما بقيت Grammarly علامة ومنتجًا داخل الحزمة. تعمل المجموعة بنموذج هجين وتعلن مراكز في سان فرانسيسكو ونيويورك وسياتل وفانكوفر وبرلين ووارسو وكييف.",
+      "verification_status": "verified_current_parent_and_historical_origin",
+      "confidence": "مرتفعة",
+      "claim_type": "هوية وموقع الشركة",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر الرسمية تثبت الأصل الأوكراني، المؤسسين، تغيير اسم الشركة الأم إلى Superhuman، والكيان والمقر المعلنين.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03",
+        "SRC-20"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Superhuman",
+          "publisher": "Superhuman",
+          "url": "https://superhuman.com/company/about",
+          "source_type": "صفحة رسمية للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة تاريخ رسمية",
+          "source_locator": "2009 and 2025 timeline",
+          "supports": "التأسيس والتحول إلى Superhuman"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Superhuman Privacy Policy",
+          "publisher": "Superhuman Platform Inc.",
+          "url": "https://superhuman.com/legal/privacy-policy",
+          "source_type": "سياسة قانونية رسمية",
+          "published_at": "2026-07-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "سياسة قانونية",
+          "source_locator": "Data controller and subsidiaries",
+          "supports": "الكيان Superhuman Platform Inc. والشركات التابعة"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "What is Grammarly?",
+          "publisher": "Grammarly Support",
+          "url": "https://support.grammarly.com/hc/en-us/articles/115000090792-What-is-Grammarly",
+          "source_type": "مركز مساعدة رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مركز مساعدة رسمي",
+          "source_locator": "How and where we work",
+          "supports": "مراكز العمل الحالية"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "How Grammarly Is Honoring Our Commitment to Ukraine",
+          "publisher": "Grammarly",
+          "url": "https://www.grammarly.com/blog/company/support-for-ukraine/",
+          "source_type": "بيان شركة رسمي",
+          "published_at": "2022",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان شركة",
+          "source_locator": "Ukraine origin",
+          "supports": "التأسيس في أوكرانيا"
+        }
+      ],
+      "limitations": "لم يُجرَ فحص مستقل لسجلات الملكية الخاصة أو هيكل المساهمين بعد الاستحواذات.",
+      "source_count": 4
+    },
+    "$.company.business_model": {
+      "field_value": "نموذج مجاني مع اشتراكات مدفوعة للأفراد والفرق والمؤسسات والتعليم. تُباع Grammarly كمنتج مستقل عبر Free وPro وحلول المؤسسات، كما تدخل ضمن اشتراكات حزمة Superhuman التي تضم Grammarly وGo وDocs وMail. صرحت الشركة بأنها تحقق الدخل من المنتجات المدفوعة والاشتراكات، لا من بيع محتوى المستخدمين أو الإعلانات.",
+      "verification_status": "verified_current_subscription_model",
+      "confidence": "مرتفعة",
+      "claim_type": "نموذج عمل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التسعير والسياسة القانونية والمنتج الرسمي تدعم freemium والاشتراكات الفردية والمؤسسية وحزمة Superhuman.",
+      "source_ids": [
+        "SRC-09",
+        "SRC-02",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "Grammarly Prices and Plans",
+          "publisher": "Grammarly",
+          "url": "https://www.grammarly.com/plans",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة تسعير رسمية",
+          "source_locator": "Free, Pro and Enterprise plans",
+          "supports": "الخطط المجانية والمدفوعة"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Superhuman Privacy Policy",
+          "publisher": "Superhuman Platform Inc.",
+          "url": "https://superhuman.com/legal/privacy-policy",
+          "source_type": "سياسة قانونية رسمية",
+          "published_at": "2026-07-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "سياسة قانونية",
+          "source_locator": "Paid products and no content monetization",
+          "supports": "مصدر الدخل وعدم بيع محتوى المستخدم"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Grammarly — AI Writing Agents",
+          "publisher": "Superhuman",
+          "url": "https://superhuman.com/products/grammarly",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج رسمية",
+          "source_locator": "Standalone and suite positioning",
+          "supports": "Grammarly داخل حزمة Superhuman"
+        }
+      ],
+      "limitations": "لا تنشر الشركة نسبة الإيراد من الأفراد مقابل المؤسسات أو الحزمة.",
+      "source_count": 3
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير مُفصح عنه علنًا. أحدث رقم رسمي وجدته هو إيراد سنوي يتجاوز 700 مليون دولار، أُعلن في 29 مايو 2025 قبل إعادة تسمية الشركة الأم إلى Superhuman. لا يجوز قسمة الرقم على 12 واعتباره إيرادًا شهريًا، ولا توجد قوائم مالية عامة تفصل إيراد Grammarly عن Docs وMail وGo بعد تكوين الحزمة.",
+      "verification_status": "verified_monthly_undisclosed_annual_reference_available",
+      "confidence": "مرتفعة",
+      "claim_type": "إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الرقم الرسمي المتاح هو إيراد سنوي يتجاوز 700 مليون دولار في مايو 2025، ولا يوجد MRR أو تفصيل لاحق حسب المنتج.",
+      "source_ids": [
+        "SRC-04",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Grammarly Announces $1 Billion Growth Financing With General Catalyst",
+          "publisher": "Grammarly",
+          "url": "https://www.grammarly.com/blog/company/grammarly-announces-growth-financing/",
+          "source_type": "بيان تمويل رسمي",
+          "published_at": "2025-05-29",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان تمويل رسمي",
+          "source_locator": "Annual revenue statement",
+          "supports": "الإيراد السنوي >700M في 2025"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Superhuman Privacy Policy",
+          "publisher": "Superhuman Platform Inc.",
+          "url": "https://superhuman.com/legal/privacy-policy",
+          "source_type": "سياسة قانونية رسمية",
+          "published_at": "2026-07-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "سياسة قانونية",
+          "source_locator": "Business model statement",
+          "supports": "الإيراد من المنتجات المدفوعة"
+        }
+      ],
+      "limitations": "الرقم غير مدقق في قوائم عامة ولا يحدد الفترة المالية بدقة أو مساهمة المنتجات بعد تكوين الحزمة.",
+      "source_count": 2
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير مُفصح عنه علنًا، ولا يتوفر رقم رسمي موثوق لزيارات الموقع الشهرية. المقاييس الرسمية الحالية تتجاوز 40 مليون مستخدم نشط يوميًا و50 ألف مؤسسة، مع عمل المنصة عبر أكثر من مليون تطبيق وموقع وتحليل نحو 200 مليار كلمة يوميًا. هذه مقاييس استخدام وانتشار وليست زيارات ويب، كما أن رقم 30 مليون مستخدم يوميًا في الملف الأصلي يعود إلى 2021 وأصبح قديمًا.",
+      "verification_status": "verified_traffic_undisclosed_usage_metrics_separated",
+      "confidence": "مرتفعة",
+      "claim_type": "زيارات ومستخدمون",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر الرسمية توفر DAU ومؤسسات وكلمات وتغطية تطبيقات، لكنها لا توفر زيارات الموقع الشهرية.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Superhuman",
+          "publisher": "Superhuman",
+          "url": "https://superhuman.com/company/about",
+          "source_type": "صفحة رسمية للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة رسمية",
+          "source_locator": "Global operating metrics",
+          "supports": "40M+ DAU و50K+ مؤسسة و1M+ تطبيق و200B كلمة"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "What is Grammarly?",
+          "publisher": "Grammarly Support",
+          "url": "https://support.grammarly.com/hc/en-us/articles/115000090792-What-is-Grammarly",
+          "source_type": "مركز مساعدة رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مركز مساعدة رسمي",
+          "source_locator": "User and organization metrics",
+          "supports": "40M+ مستخدم و50K مؤسسة"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Security Compliances, Certifications, and Validations",
+          "publisher": "Grammarly",
+          "url": "https://www.grammarly.com/compliance",
+          "source_type": "صفحة امتثال رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة امتثال",
+          "source_locator": "Trust metrics",
+          "supports": "تأكيد أرقام الاستخدام الحالية"
+        }
+      ],
+      "limitations": "الأرقام ذاتية الإفصاح، ولا تفصل المستخدمين المجانيين عن المدفوعين أو مستخدمي Grammarly عن الحزمة في كل موضع.",
+      "source_count": 3
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "الكتابة المهنية لا تتعطل عند الإملاء والقواعد فقط؛ المشكلة تشمل الوضوح والنبرة والسياق واتساق صوت العلامة التجارية وسرعة الانتقال من الفكرة إلى نص قابل للإرسال. كما تتوزع الكتابة على البريد والمتصفح والمستندات وتطبيقات العمل، فتفقد الأداة قيمتها إذا أجبرت المستخدم على نسخ النص إلى محرر منفصل.",
+        "impact": "تؤدي الأخطاء والغموض وتبدل النبرة إلى إعادة العمل، وسوء الفهم، وعدم اتساق التواصل مع العملاء، وإبطاء الموظفين والطلاب. لا يوجد رقم عام مستقل يسمح بتحويل هذا الأثر إلى نسبة إنتاجية موحدة لكل مستخدم أو إلى إيراد مباشر."
+      },
+      "verification_status": "verified_product_problem_with_editorial_synthesis",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "مشكلة سوقية",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المشكلة مستخلصة من نطاق المنتج الحالي: التصحيح والنبرة والسياق والعمل داخل التطبيقات والمؤسسات.",
+      "source_ids": [
+        "SRC-08",
+        "SRC-03",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "Grammarly — AI Writing Agents",
+          "publisher": "Superhuman",
+          "url": "https://superhuman.com/products/grammarly",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج رسمية",
+          "source_locator": "Product use cases",
+          "supports": "النبرة وإعادة الصياغة والعمل داخل التطبيقات"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "What is Grammarly?",
+          "publisher": "Grammarly Support",
+          "url": "https://support.grammarly.com/hc/en-us/articles/115000090792-What-is-Grammarly",
+          "source_type": "مركز مساعدة رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مركز مساعدة رسمي",
+          "source_locator": "Mission and product evolution",
+          "supports": "الوضوح والإنتاجية ووكلاء المهام"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Grammarly to Acquire Superhuman to Accelerate Its AI Productivity Platform",
+          "publisher": "Business Wire / Grammarly",
+          "url": "https://www.businesswire.com/news/home/20250630889937/en/Grammarly-to-Acquire-Superhuman-to-Accelerate-Its-AI-Productivity-Platform",
+          "source_type": "بيان استحواذ للشركة موزع رسميًا",
+          "published_at": "2025-07-01",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان استحواذ رسمي",
+          "source_locator": "Email and workflow context",
+          "supports": "أهمية البريد وسياق العمل"
+        }
+      ],
+      "limitations": "الوصف تحليلي ولا يمثل دراسة مستقلة لحجم الضرر أو تكلفة الأخطاء.",
+      "source_count": 3
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "بدأت Grammarly كمساعد لتصحيح الكتابة، ثم توسعت إلى اقتراحات الوضوح والنبرة وإعادة الصياغة والتوليد ووكلاء كتابة يعملون داخل التطبيقات. وفي 2025–2026 أصبحت منتجًا ضمن Superhuman Platform، بحيث تُدمج مساعدة الكتابة مع البريد والمستندات ووكلاء السياق. يعتمد المنتج على NLP وML وLLMs، ويجمع بين المعالجة السحابية ونماذج تعمل على الجهاز لبعض مهام التصحيح لتقليل الكمون وزيادة الاعتمادية."
+      },
+      "verification_status": "verified_current_product_and_architecture",
+      "confidence": "مرتفعة",
+      "claim_type": "منتج وحل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم الصفحات الرسمية توسع المنتج إلى وكلاء وحزمة، وتوثق المدونة الهندسية NLP وLLMs والنماذج على الجهاز.",
+      "source_ids": [
+        "SRC-08",
+        "SRC-10",
+        "SRC-17",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "Grammarly — AI Writing Agents",
+          "publisher": "Superhuman",
+          "url": "https://superhuman.com/products/grammarly",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج رسمية",
+          "source_locator": "Writing agents and in-app assistance",
+          "supports": "المنتج الحالي"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Becoming Superhuman",
+          "publisher": "Superhuman",
+          "url": "https://blog.superhuman.com/introducing-new-superhuman/",
+          "source_type": "إعلان رسمي لإعادة التسمية",
+          "published_at": "2025-10-29",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان إعادة تسمية",
+          "source_locator": "Suite architecture",
+          "supports": "الانتقال إلى منصة متعددة المنتجات"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "On-Device AI at Scale",
+          "publisher": "Grammarly Engineering",
+          "url": "https://www.grammarly.com/blog/engineering/on-device-models-scale/",
+          "source_type": "مدونة هندسية رسمية",
+          "published_at": "2025-03-27",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مدونة هندسية",
+          "source_locator": "On-device GEC and Rust SDK",
+          "supports": "المعالجة على الجهاز"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "What is Grammarly?",
+          "publisher": "Grammarly Support",
+          "url": "https://support.grammarly.com/hc/en-us/articles/115000090792-What-is-Grammarly",
+          "source_type": "مركز مساعدة رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مركز مساعدة",
+          "source_locator": "Evolution to task-specific agents",
+          "supports": "التحول إلى وكلاء"
+        }
+      ],
+      "limitations": "لا تنشر الشركة قائمة كاملة بالنماذج أو نسب المعالجة السحابية مقابل المعالجة على الجهاز.",
+      "source_count": 4
+    },
+    "$.market_data.target_audience": {
+      "field_value": "الأفراد والطلاب والكتّاب وصناع المحتوى والباحثون عن تحسين الكتابة، إضافة إلى الفرق المهنية والمؤسسات التعليمية والشركات التي تحتاج إلى توحيد الأسلوب وصوت العلامة التجارية والامتثال والتحليلات والإدارة المركزية. توسع المنتج في 2025 إلى خمس لغات إضافية إلى جانب الإنجليزية، ما وسّع نطاق الجمهور المعلن، مع اختلاف عمق الميزات بين اللغات والخطط.",
+      "verification_status": "verified_current_segments_and_language_expansion",
+      "confidence": "مرتفعة",
+      "claim_type": "جمهور مستهدف",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التسعير وصفحات الأعمال والتعليم والتوسع اللغوي تدعم الأفراد والفرق والمؤسسات والطلاب والأسواق غير الإنجليزية.",
+      "source_ids": [
+        "SRC-09",
+        "SRC-08",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "Grammarly Prices and Plans",
+          "publisher": "Grammarly",
+          "url": "https://www.grammarly.com/plans",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة تسعير",
+          "source_locator": "Individual, team and enterprise plans",
+          "supports": "شرائح الخطط"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Grammarly — AI Writing Agents",
+          "publisher": "Superhuman",
+          "url": "https://superhuman.com/products/grammarly",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "Individuals and teams",
+          "supports": "حالات الاستخدام"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Grammarly Expands Beyond English With AI Writing Assistance in 5 New Languages",
+          "publisher": "Business Wire / Grammarly",
+          "url": "https://www.businesswire.com/news/home/20250910688436/en/Grammarly-Expands-Beyond-English-With-AI-Writing-Assistance-in-5-New-Languages",
+          "source_type": "بيان منتج للشركة موزع رسميًا",
+          "published_at": "2025-09-10",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان منتج",
+          "source_locator": "Five additional languages",
+          "supports": "التوسع اللغوي"
+        }
+      ],
+      "limitations": "لا توجد أرقام عامة مفصلة للمستخدمين أو الإيراد حسب الشريحة أو اللغة.",
+      "source_count": 3
+    },
+    "$.market_data.market_size": {
+      "field_value": "لم تنشر الشركة حجم سوق قابلًا للتحقق خاصًا بمساعدات الكتابة أو وكلاء الإنتاجية. الرقم الأكثر صلة من المصادر الأولية هو قاعدة الاستخدام المعلنة: أكثر من 40 مليون مستخدم نشط يوميًا و50 ألف مؤسسة وانتشار عبر أكثر من مليون تطبيق وموقع. لا تساوي هذه الأرقام حجم السوق المالي أو عدد العملاء الدافعين.",
+      "verification_status": "verified_no_tam_with_operating_context",
+      "confidence": "مرتفعة",
+      "claim_type": "حجم سوق",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لم تقدم الشركة TAM موثقًا؛ استُخدمت أرقام الانتشار فقط كسياق تشغيل مع منع مساواتها بحجم السوق المالي.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Superhuman",
+          "publisher": "Superhuman",
+          "url": "https://superhuman.com/company/about",
+          "source_type": "صفحة رسمية للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة رسمية",
+          "source_locator": "Operating reach",
+          "supports": "قاعدة المستخدمين والمؤسسات والتطبيقات"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Security Compliances, Certifications, and Validations",
+          "publisher": "Grammarly",
+          "url": "https://www.grammarly.com/compliance",
+          "source_type": "صفحة امتثال رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة امتثال",
+          "source_locator": "Current adoption metrics",
+          "supports": "تأكيد الانتشار"
+        }
+      ],
+      "limitations": "لا توجد بيانات أولية كافية لحساب TAM أو SAM أو SOM، ولا عدد العملاء الدافعين.",
+      "source_count": 2
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا تنشر الشركة معدل نمو حديثًا موحدًا للإيراد أو المستخدمين. ارتفع الرقم المعلن من 30 مليون مستخدم يوميًا في 2021 إلى أكثر من 40 مليون في 2025–2026، لكن استخدام صيغة «أكثر من» وتغير تعريف المؤسسة والانتقال إلى حزمة متعددة المنتجات يمنع اشتقاق معدل نمو سنوي دقيق. كما لا توجد بيانات عامة متجانسة عن العملاء الدافعين أو الاحتفاظ أو التحويل.",
+      "verification_status": "verified_no_precise_current_growth_rate",
+      "confidence": "مرتفعة",
+      "claim_type": "نمو",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يمكن مقارنة 30M DAU في 2021 مع >40M حاليًا اتجاهيًا فقط، دون استخراج CAGR دقيق بسبب الحدود والتغير المؤسسي.",
+      "source_ids": [
+        "SRC-05",
+        "SRC-01",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Grammarly Raises over $200 Million to Empower Effective Communication",
+          "publisher": "Grammarly",
+          "url": "https://www.grammarly.com/blog/company/third-funding-round/",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2021-11-17",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان تمويل رسمي",
+          "source_locator": "2021 user metric",
+          "supports": "30M مستخدم يوميًا"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Superhuman",
+          "publisher": "Superhuman",
+          "url": "https://superhuman.com/company/about",
+          "source_type": "صفحة رسمية للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة رسمية",
+          "source_locator": "Current user metric",
+          "supports": ">40M مستخدم نشط يوميًا"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Becoming Superhuman",
+          "publisher": "Superhuman",
+          "url": "https://blog.superhuman.com/introducing-new-superhuman/",
+          "source_type": "إعلان رسمي لإعادة التسمية",
+          "published_at": "2025-10-29",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان إعادة تسمية",
+          "source_locator": "Company became multi-product suite",
+          "supports": "تغير نطاق الشركة"
+        }
+      ],
+      "limitations": "الأرقام تقريبية بصيغة أكثر من، ولا توفر سلسلة زمنية أو تعريفًا موحدًا لكل المنتجات.",
+      "source_count": 3
+    },
+    "$.financials.initial_investment": {
+      "field_value": "اعتمدت Grammarly على التمويل الذاتي والربحية في مراحلها الأولى، ثم أعلنت استثمارًا بقيمة 90 مليون دولار في 2019، وجولة تزيد على 200 مليون دولار في 2021. وفي مايو 2025 أغلقت تمويل نمو بقيمة مليار دولار من Customer Value Fund التابع لـGeneral Catalyst لتمويل المبيعات والتسويق والاستحواذات؛ هذا التمويل ليس جولة أسهم تقليدية ولا يثبت تقييمًا جديدًا.",
+      "verification_status": "verified_funding_history_with_instrument_separation",
+      "confidence": "مرتفعة",
+      "claim_type": "تمويل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المصادر 90M في 2019 و>200M في 2021 و1B تمويل نمو في 2025، مع فصل تمويل النمو عن جولة الأسهم.",
+      "source_ids": [
+        "SRC-07",
+        "SRC-05",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Grammarly Raises $90 Million to Further Our Mission",
+          "publisher": "Grammarly",
+          "url": "https://www.grammarly.com/blog/company/90-million-funding-round-2019/",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2019-10-10",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان تمويل رسمي",
+          "source_locator": "2019 round",
+          "supports": "استثمار 90M"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Grammarly Raises over $200 Million to Empower Effective Communication",
+          "publisher": "Grammarly",
+          "url": "https://www.grammarly.com/blog/company/third-funding-round/",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2021-11-17",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان تمويل رسمي",
+          "source_locator": "2021 round",
+          "supports": "جولة >200M والربحية"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Grammarly Announces $1 Billion Growth Financing With General Catalyst",
+          "publisher": "Grammarly",
+          "url": "https://www.grammarly.com/blog/company/grammarly-announces-growth-financing/",
+          "source_type": "بيان تمويل رسمي",
+          "published_at": "2025-05-29",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان تمويل رسمي",
+          "source_locator": "2025 growth financing",
+          "supports": "تمويل 1B من Customer Value Fund"
+        }
+      ],
+      "limitations": "لم تُدرج كل جولة تاريخية أو شروط العائد التفصيلية، ولا يُعامل التمويل الإجمالي كتقييم.",
+      "source_count": 3
+    },
+    "$.financials.valuation": {
+      "field_value": "آخر تقييم أسهم معلن وموثق هو 13 مليار دولار في جولة نوفمبر 2021. لا يوجد تقييم عام أحدث يمكن اعتماده حتى أغسطس 2026، كما أن تمويل المليار دولار في 2025 لا ينبغي عرضه كتقييم أو إضافته إلى قيمة الشركة.",
+      "verification_status": "verified_last_disclosed_historical_valuation",
+      "confidence": "مرتفعة",
+      "claim_type": "تقييم",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "13B هو تقييم جولة نوفمبر 2021؛ لا يوجد تقييم أحدث معلن، وتمويل 2025 لا يثبت إعادة تسعير الأسهم.",
+      "source_ids": [
+        "SRC-06",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Grammarly Reaches $13B Valuation With New Funding Round",
+          "publisher": "Business Wire / Grammarly",
+          "url": "https://www.businesswire.com/news/home/20211118005487/en/Grammarly-Reaches-%2413B-Valuation-With-New-Funding-Round-to-Accelerate-Communication-Assistance-Market-Leadership",
+          "source_type": "بيان صحفي للشركة موزع رسميًا",
+          "published_at": "2021-11-18",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان جولة رسمي",
+          "source_locator": "2021 valuation",
+          "supports": "تقييم 13B في نوفمبر 2021"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Grammarly Announces $1 Billion Growth Financing With General Catalyst",
+          "publisher": "Grammarly",
+          "url": "https://www.grammarly.com/blog/company/grammarly-announces-growth-financing/",
+          "source_type": "بيان تمويل رسمي",
+          "published_at": "2025-05-29",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان تمويل رسمي",
+          "source_locator": "2025 financing structure",
+          "supports": "تمويل نمو لا تقييم معلن"
+        }
+      ],
+      "limitations": "القيمة الحالية للشركة الخاصة غير معروفة، وقد تختلف عن تقييم 2021.",
+      "source_count": 2
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "اشتراكات Grammarly Pro للأفراد والفرق، بخيارات شهرية وربع سنوية وسنوية وفق السوق وقناة الشراء.",
+        "عقود Grammarly Enterprise والمؤسسات التعليمية، وتشمل الإدارة المركزية والأمان والضوابط والميزات المؤسسية.",
+        "اشتراكات حزمة Superhuman التي تجمع Grammarly مع Go وDocs وMail، مع استمرار إتاحة Grammarly كمنتج مستقل.",
+        "ترقيات وخطط مدفوعة مبنية على ميزات الكتابة المتقدمة والتوليد والنبرة وإعادة الصياغة والتعاون؛ لم تُفصح الشركة عن توزيع الإيراد حسب المسار."
+      ],
+      "verification_status": "verified_published_revenue_pathways_not_segment_actuals",
+      "confidence": "مرتفعة",
+      "claim_type": "مسارات إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الخطط الرسمية والحزمة تدعم الاشتراكات الفردية والمؤسسية والتعليمية والحزمة، دون تفصيل مالي حسب المنتج.",
+      "source_ids": [
+        "SRC-09",
+        "SRC-08",
+        "SRC-10",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "Grammarly Prices and Plans",
+          "publisher": "Grammarly",
+          "url": "https://www.grammarly.com/plans",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة تسعير",
+          "source_locator": "Free, Pro and Enterprise",
+          "supports": "الاشتراكات الأساسية"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Grammarly — AI Writing Agents",
+          "publisher": "Superhuman",
+          "url": "https://superhuman.com/products/grammarly",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "Standalone Grammarly and suite",
+          "supports": "الموقع داخل الحزمة"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Becoming Superhuman",
+          "publisher": "Superhuman",
+          "url": "https://blog.superhuman.com/introducing-new-superhuman/",
+          "source_type": "إعلان رسمي لإعادة التسمية",
+          "published_at": "2025-10-29",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان الشركة",
+          "source_locator": "Superhuman suite",
+          "supports": "تعدد المنتجات"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Superhuman Privacy Policy",
+          "publisher": "Superhuman Platform Inc.",
+          "url": "https://superhuman.com/legal/privacy-policy",
+          "source_type": "سياسة قانونية رسمية",
+          "published_at": "2026-07-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "سياسة قانونية",
+          "source_locator": "Paid product model",
+          "supports": "عدم بيع محتوى المستخدم"
+        }
+      ],
+      "limitations": "لا توجد إفصاحات مالية عامة عن ARPU أو MRR أو نسب الإيراد حسب الشريحة.",
+      "source_count": 4
+    },
+    "$.tools": {
+      "field_value": [
+        "معالجة اللغة الطبيعية والتعلم الآلي والنماذج اللغوية الكبيرة",
+        "نماذج Transformer وT5 وتصحيح الأخطاء النحوية GEC",
+        "SDK بلغة Rust لتشغيل نماذج مختارة على الجهاز عبر Mac وWindows وإضافة Chrome",
+        "AWS وEC2 وبنية متعددة المناطق، مع Terraform وKubernetes في أجزاء منشورة من البنية",
+        "React وTypeScript لواجهات المحرر الحديثة، مع إرث JavaScript وVue.js",
+        "إضافات المتصفح وتطبيقات سطح المكتب ولوحات مفاتيح الهاتف ومحرر سحابي",
+        "لغات وخدمات تاريخية منشورة تشمل Erlang وPython وGo ولغات JVM؛ لا يعني ذلك أنها جميعًا أساسية في بنية 2026",
+        "أنظمة امتثال وأمان مؤسسية تشمل SOC 2 وISO وضوابط إدارة البيانات",
+        "Superhuman Platform لدمج Grammarly مع Go وDocs وMail ووكلاء الطرف الثالث"
+      ],
+      "verification_status": "verified_official_engineering_stack_with_historical_labels",
+      "confidence": "مرتفعة",
+      "claim_type": "تقنيات وأدوات",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "كل تقنية مدرجة مدعومة بمدونة هندسية أو صفحة امتثال، مع وسم اللغات التاريخية وعدم افتراض استمرارها كمكونات أساسية.",
+      "source_ids": [
+        "SRC-16",
+        "SRC-17",
+        "SRC-18",
+        "SRC-19",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-16",
+          "title": "Scaling AWS Infrastructure to Support Multiple Regions",
+          "publisher": "Grammarly Engineering",
+          "url": "https://www.grammarly.com/blog/engineering/scaling-aws-infrastructure/",
+          "source_type": "مدونة هندسية رسمية",
+          "published_at": "2021-12-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مدونة هندسية",
+          "source_locator": "AWS multi-region infrastructure",
+          "supports": "AWS والبنية متعددة المناطق"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "On-Device AI at Scale",
+          "publisher": "Grammarly Engineering",
+          "url": "https://www.grammarly.com/blog/engineering/on-device-models-scale/",
+          "source_type": "مدونة هندسية رسمية",
+          "published_at": "2025-03-27",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مدونة هندسية",
+          "source_locator": "T5, GEC and Rust SDK",
+          "supports": "النماذج على الجهاز وRust"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Introducing Embrace",
+          "publisher": "Grammarly Engineering",
+          "url": "https://www.grammarly.com/blog/engineering/introducing-embrace/",
+          "source_type": "مدونة هندسية رسمية",
+          "published_at": "2021-09-16",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مدونة هندسية",
+          "source_locator": "React and TypeScript migration",
+          "supports": "واجهة المحرر"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Running Lisp in Production",
+          "publisher": "Grammarly Engineering",
+          "url": "https://www.grammarly.com/blog/engineering/running-lisp-in-production/",
+          "source_type": "مدونة هندسية رسمية تاريخية",
+          "published_at": "2020",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مدونة هندسية تاريخية",
+          "source_locator": "Production languages",
+          "supports": "Erlang وPython وGo وJVM"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Security Compliances, Certifications, and Validations",
+          "publisher": "Grammarly",
+          "url": "https://www.grammarly.com/compliance",
+          "source_type": "صفحة امتثال رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة امتثال",
+          "source_locator": "Security certifications",
+          "supports": "ضوابط الأمان"
+        }
+      ],
+      "limitations": "القائمة ليست مخططًا معماريًا كاملًا، وبعض المصادر تاريخية ولا تثبت الاستخدام الحالي لكل تقنية.",
+      "source_count": 5
+    },
+    "$.headline": {
+      "field_value": "من مدقق لغوي إلى بوابة لمنصة Superhuman: كيف حوّلت Grammarly مربع الكتابة إلى قناة توزيع يستخدمها أكثر من 40 مليون شخص يوميًا",
+      "verification_status": "verified_editorial_synthesis",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "عنوان تحريري",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "العنوان يجمع التحول من منتج كتابة إلى منصة Superhuman مع مقياس المستخدمين الرسمي الحالي وفكرة التوزيع داخل التطبيقات.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-08",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Superhuman",
+          "publisher": "Superhuman",
+          "url": "https://superhuman.com/company/about",
+          "source_type": "صفحة رسمية للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة تاريخ ومقاييس",
+          "source_locator": "Company timeline and DAU",
+          "supports": "التحول و40M+ DAU"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Grammarly — AI Writing Agents",
+          "publisher": "Superhuman",
+          "url": "https://superhuman.com/products/grammarly",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "Works everywhere you write",
+          "supports": "الوجود داخل مربع الكتابة"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Becoming Superhuman",
+          "publisher": "Superhuman",
+          "url": "https://blog.superhuman.com/introducing-new-superhuman/",
+          "source_type": "إعلان رسمي لإعادة التسمية",
+          "published_at": "2025-10-29",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان إعادة تسمية",
+          "source_locator": "Grammarly remains a product in Superhuman",
+          "supports": "تحول الشركة الأم"
+        }
+      ],
+      "limitations": "وصف «بوابة» و«قناة توزيع» تحليل تحريري وليس اقتباسًا حرفيًا من الشركة.",
+      "source_count": 3
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "امتلك سطح العمل بدل أن تنتظر المستخدم في موقعك",
+          "description": "قوة Grammarly لم تأتِ من محرر أفضل فقط، بل من وجودها داخل مربع النص في البريد والمتصفح وتطبيقات سطح المكتب. عندما يصبح المنتج حاضرًا في لحظة الحاجة، تتحول كل كتابة إلى فرصة استخدام متكررة من دون مطالبة المستخدم بتغيير سلوكه."
+        },
+        {
+          "title": "الخطة المجانية يمكن أن تكون بنية توزيع لا نسخة تجريبية",
+          "description": "قدمت Grammarly قيمة واضحة مجانًا في التصحيح الأساسي، ثم باعت طبقات أعمق مثل النبرة وإعادة الصياغة والإدارة المؤسسية. الدرس أن المجاني ينجح عندما يحل مشكلة حقيقية كاملة بما يكفي لبناء عادة، بينما تكون الترقية مرتبطة بسياق أعلى قيمة."
+        },
+        {
+          "title": "حين تتغير الشركة إلى حزمة، يجب أن تتغير لغة القياس",
+          "description": "بعد الاستحواذ على Coda وSuperhuman Mail وإطلاق Go، لم يعد كل رقم مستخدم أو إيراد قابلًا للنسب تلقائيًا إلى منتج Grammarly وحده. الشركات متعددة المنتجات تحتاج إلى فصل مستخدمي العلامة عن مستخدمي الحزمة، وإيراد المنتج عن إيراد المجموعة، وإلا أصبحت الأرقام التسويقية مضللة."
+        },
+        {
+          "title": "الاستحواذ الأفضل يضيف سطحًا جديدًا للعمل لا قائمة ميزات فقط",
+          "description": "Coda أضافت مساحة المستند والعمل التعاوني، وSuperhuman أضاف البريد، وGo أضاف طبقة الوكلاء. بهذه الطريقة توسع Grammarly من تصحيح النص إلى امتلاك السياق قبل الكتابة وأثناءها وبعدها، بدل الاكتفاء بإضافة زر توليد جديد."
+        },
+        {
+          "title": "التمويل غير المخفّض للملكية لا يعني تقييمًا أعلى تلقائيًا",
+          "description": "تمويل المليار دولار في 2025 يمنح الشركة قدرة على تمويل اكتساب العملاء والاستحواذات من دون إعلان جولة أسهم جديدة. الدرس هو فصل نوع رأس المال عن التقييم: حجم التمويل قد يكون ضخمًا بينما يبقى آخر تقييم معلن تاريخيًا من جولة سابقة."
+        },
+        {
+          "title": "في مساعدات الكتابة، الثقة والكمون جزء من المنتج",
+          "description": "العمل داخل كل تطبيق يتطلب معالجة سريعة وضوابط بيانات قوية. استثمار Grammarly في نماذج على الجهاز وRust، إلى جانب AWS والامتثال المؤسسي، يوضح أن جودة الاقتراح وحدها لا تكفي؛ سرعة الظهور وموثوقية المعالجة وسياسات التدريب تحدد قابلية التبني."
+        }
+      ],
+      "verification_status": "analytical_inference_grounded_in_evidence",
+      "confidence": "متوسطة",
+      "claim_type": "تحليل ودروس",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس مبنية على التوزيع داخل التطبيقات، freemium، تحول الشركة إلى حزمة، الاستحواذات، نوع التمويل، والاستثمار الهندسي في الثقة والكمون.",
+      "source_ids": [
+        "SRC-08",
+        "SRC-09",
+        "SRC-10",
+        "SRC-11",
+        "SRC-04",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "Grammarly — AI Writing Agents",
+          "publisher": "Superhuman",
+          "url": "https://superhuman.com/products/grammarly",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "In-app distribution",
+          "supports": "درس سطح العمل"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Grammarly Prices and Plans",
+          "publisher": "Grammarly",
+          "url": "https://www.grammarly.com/plans",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة تسعير",
+          "source_locator": "Freemium and paid tiers",
+          "supports": "درس الخطة المجانية"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Becoming Superhuman",
+          "publisher": "Superhuman",
+          "url": "https://blog.superhuman.com/introducing-new-superhuman/",
+          "source_type": "إعلان رسمي لإعادة التسمية",
+          "published_at": "2025-10-29",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان إعادة تسمية",
+          "source_locator": "Multi-product suite",
+          "supports": "درس لغة القياس"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Superhuman is being acquired by Grammarly",
+          "publisher": "Superhuman",
+          "url": "https://blog.superhuman.com/superhuman-is-being-acquired-by-grammarly/",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2025-07-01",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان استحواذ",
+          "source_locator": "Workflow expansion",
+          "supports": "درس الاستحواذ"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Grammarly Announces $1 Billion Growth Financing With General Catalyst",
+          "publisher": "Grammarly",
+          "url": "https://www.grammarly.com/blog/company/grammarly-announces-growth-financing/",
+          "source_type": "بيان تمويل رسمي",
+          "published_at": "2025-05-29",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان تمويل",
+          "source_locator": "Growth financing",
+          "supports": "درس فصل التمويل عن التقييم"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "On-Device AI at Scale",
+          "publisher": "Grammarly Engineering",
+          "url": "https://www.grammarly.com/blog/engineering/on-device-models-scale/",
+          "source_type": "مدونة هندسية رسمية",
+          "published_at": "2025-03-27",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مدونة هندسية",
+          "source_locator": "On-device models",
+          "supports": "درس الكمون والثقة"
+        }
+      ],
+      "limitations": "الدروس استنتاجات تحريرية وليست تصريحات مباشرة أو توصيات استثمارية.",
+      "source_count": 6
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "About Superhuman",
+      "publisher": "Superhuman",
+      "url": "https://superhuman.com/company/about",
+      "source_type": "صفحة رسمية للشركة",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق تاريخ Grammarly منذ 2009، والتحول إلى Superhuman، ومقاييس 40M+ مستخدم نشط يوميًا و50K+ مؤسسة و1M+ تطبيق وموقع و200B كلمة محللة يوميًا."
+    },
+    {
+      "id": "SRC-02",
+      "title": "Superhuman Privacy Policy",
+      "publisher": "Superhuman Platform Inc.",
+      "url": "https://superhuman.com/legal/privacy-policy",
+      "source_type": "سياسة قانونية رسمية",
+      "published_at": "2026-07-06",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يحدد الكيان الأم Superhuman Platform Inc.، ويذكر Grammarly Inc. ضمن الشركات التابعة، ويؤكد أن الإيراد يأتي من المنتجات المدفوعة لا من بيع محتوى المستخدمين."
+    },
+    {
+      "id": "SRC-03",
+      "title": "What is Grammarly?",
+      "publisher": "Grammarly Support",
+      "url": "https://support.grammarly.com/hc/en-us/articles/115000090792-What-is-Grammarly",
+      "source_type": "مركز مساعدة رسمي",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يؤكد أن Grammarly منتج ضمن Superhuman، ويعرض 40M+ مستخدم و50K مؤسسة ومراكز العمل العالمية."
+    },
+    {
+      "id": "SRC-04",
+      "title": "Grammarly Announces $1 Billion Growth Financing With General Catalyst",
+      "publisher": "Grammarly",
+      "url": "https://www.grammarly.com/blog/company/grammarly-announces-growth-financing/",
+      "source_type": "بيان تمويل رسمي",
+      "published_at": "2025-05-29",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق إغلاق تمويل نمو بقيمة مليار دولار من Customer Value Fund، وإيراد سنوي يتجاوز 700 مليون دولار، وأكثر من 40 مليون مستخدم يوميًا."
+    },
+    {
+      "id": "SRC-05",
+      "title": "Grammarly Raises over $200 Million to Empower Effective Communication",
+      "publisher": "Grammarly",
+      "url": "https://www.grammarly.com/blog/company/third-funding-round/",
+      "source_type": "إعلان تمويل رسمي",
+      "published_at": "2021-11-17",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق جولة تزيد على 200 مليون دولار، والربحية والتدفق النقدي الإيجابي المبكر، ونموذج الاشتراكات بدل الإعلانات أو بيع البيانات."
+    },
+    {
+      "id": "SRC-06",
+      "title": "Grammarly Reaches $13B Valuation With New Funding Round",
+      "publisher": "Business Wire / Grammarly",
+      "url": "https://www.businesswire.com/news/home/20211118005487/en/Grammarly-Reaches-%2413B-Valuation-With-New-Funding-Round-to-Accelerate-Communication-Assistance-Market-Leadership",
+      "source_type": "بيان صحفي للشركة موزع رسميًا",
+      "published_at": "2021-11-18",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يثبت أن تقييم 13 مليار دولار مرتبط بجولة نوفمبر 2021، وليس تقييمًا حاليًا في 2026."
+    },
+    {
+      "id": "SRC-07",
+      "title": "Grammarly Raises $90 Million to Further Our Mission",
+      "publisher": "Grammarly",
+      "url": "https://www.grammarly.com/blog/company/90-million-funding-round-2019/",
+      "source_type": "إعلان تمويل رسمي",
+      "published_at": "2019-10-10",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق استثمار 90 مليون دولار بقيادة General Catalyst، مع إعلان الشركة عن الربحية في ذلك الوقت."
+    },
+    {
+      "id": "SRC-08",
+      "title": "Grammarly — AI Writing Agents",
+      "publisher": "Superhuman",
+      "url": "https://superhuman.com/products/grammarly",
+      "source_type": "صفحة منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يعرض Grammarly كمنتج مستقل داخل حزمة Superhuman، ويشرح العمل داخل التطبيقات، والوكلاء، وإعادة الصياغة والنبرة وتجربة الكتابة."
+    },
+    {
+      "id": "SRC-09",
+      "title": "Grammarly Prices and Plans",
+      "publisher": "Grammarly",
+      "url": "https://www.grammarly.com/plans",
+      "source_type": "صفحة تسعير رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق الخطة المجانية وGrammarly Pro وخيارات المؤسسات، مع انتقال ميزات Premium وBusiness إلى بنية خطط أحدث."
+    },
+    {
+      "id": "SRC-10",
+      "title": "Becoming Superhuman",
+      "publisher": "Superhuman",
+      "url": "https://blog.superhuman.com/introducing-new-superhuman/",
+      "source_type": "إعلان رسمي لإعادة التسمية",
+      "published_at": "2025-10-29",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يؤكد تغيير اسم الشركة من Grammarly إلى Superhuman، مع بقاء Grammarly اسمًا للمنتج داخل الحزمة."
+    },
+    {
+      "id": "SRC-11",
+      "title": "Superhuman is being acquired by Grammarly",
+      "publisher": "Superhuman",
+      "url": "https://blog.superhuman.com/superhuman-is-being-acquired-by-grammarly/",
+      "source_type": "إعلان استحواذ رسمي",
+      "published_at": "2025-07-01",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق استحواذ Grammarly على تطبيق البريد Superhuman، بعد استحواذها على Coda، واتجاه بناء حزمة إنتاجية متعددة المنتجات."
+    },
+    {
+      "id": "SRC-12",
+      "title": "Coda is now Superhuman Docs",
+      "publisher": "Superhuman",
+      "url": "https://blog.superhuman.com/introducing-superhuman-docs/",
+      "source_type": "إعلان منتج رسمي",
+      "published_at": "2026-07-08",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق إعادة تسمية Coda إلى Superhuman Docs واستمرار دمج Docs وMail وGo وGrammarly في حزمة واحدة."
+    },
+    {
+      "id": "SRC-13",
+      "title": "Security Compliances, Certifications, and Validations",
+      "publisher": "Grammarly",
+      "url": "https://www.grammarly.com/compliance",
+      "source_type": "صفحة امتثال رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق 40M+ مستخدم و50K مؤسسة وشهادات وضوابط أمنية، من دون اعتباره تدقيقًا ماليًا أو قياسًا للزيارات."
+    },
+    {
+      "id": "SRC-14",
+      "title": "Grammarly to Acquire Superhuman to Accelerate Its AI Productivity Platform",
+      "publisher": "Business Wire / Grammarly",
+      "url": "https://www.businesswire.com/news/home/20250630889937/en/Grammarly-to-Acquire-Superhuman-to-Accelerate-Its-AI-Productivity-Platform",
+      "source_type": "بيان استحواذ للشركة موزع رسميًا",
+      "published_at": "2025-07-01",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يذكر أن البريد هو الاستخدام الأول للمهنيين وأن Grammarly تساعد على مراجعة أكثر من 50 مليون رسالة بريد أسبوعيًا عبر أكثر من 20 مزودًا؛ مقياس استخدام لا إيراد أو زيارات."
+    },
+    {
+      "id": "SRC-15",
+      "title": "Grammarly Expands Beyond English With AI Writing Assistance in 5 New Languages",
+      "publisher": "Business Wire / Grammarly",
+      "url": "https://www.businesswire.com/news/home/20250910688436/en/Grammarly-Expands-Beyond-English-With-AI-Writing-Assistance-in-5-New-Languages",
+      "source_type": "بيان منتج للشركة موزع رسميًا",
+      "published_at": "2025-09-10",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق التوسع من الإنجليزية إلى خمس لغات إضافية، وتجارب مبكرة شملت أكثر من مليون مستخدم."
+    },
+    {
+      "id": "SRC-16",
+      "title": "Scaling AWS Infrastructure to Support Multiple Regions",
+      "publisher": "Grammarly Engineering",
+      "url": "https://www.grammarly.com/blog/engineering/scaling-aws-infrastructure/",
+      "source_type": "مدونة هندسية رسمية",
+      "published_at": "2021-12-09",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق اعتماد AWS والبنية متعددة المناطق والحسابات والبيئات."
+    },
+    {
+      "id": "SRC-17",
+      "title": "On-Device AI at Scale",
+      "publisher": "Grammarly Engineering",
+      "url": "https://www.grammarly.com/blog/engineering/on-device-models-scale/",
+      "source_type": "مدونة هندسية رسمية",
+      "published_at": "2025-03-27",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق نماذج GEC وT5 وتحسين الذاكرة والكمون، واستخدام SDK مكتوب بلغة Rust على Mac وWindows وإضافة Chrome."
+    },
+    {
+      "id": "SRC-18",
+      "title": "Introducing Embrace",
+      "publisher": "Grammarly Engineering",
+      "url": "https://www.grammarly.com/blog/engineering/introducing-embrace/",
+      "source_type": "مدونة هندسية رسمية",
+      "published_at": "2021-09-16",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق انتقال محرر Grammarly من Vue.js/JavaScript إلى React/TypeScript ضمن هندسة الواجهة."
+    },
+    {
+      "id": "SRC-19",
+      "title": "Running Lisp in Production",
+      "publisher": "Grammarly Engineering",
+      "url": "https://www.grammarly.com/blog/engineering/running-lisp-in-production/",
+      "source_type": "مدونة هندسية رسمية تاريخية",
+      "published_at": "2020",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق تاريخيًا استخدام JVM وJavaScript وErlang وPython وGo وخدمات على AWS؛ لا يثبت أن جميعها ما زالت مكونات مركزية في 2026."
+    },
+    {
+      "id": "SRC-20",
+      "title": "How Grammarly Is Honoring Our Commitment to Ukraine",
+      "publisher": "Grammarly",
+      "url": "https://www.grammarly.com/blog/company/support-for-ukraine/",
+      "source_type": "بيان شركة رسمي",
+      "published_at": "2022",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يثبت أن الشركة تأسست في أوكرانيا، مع وجود عمليات ومراكز عمل عالمية لاحقًا."
+    }
   ]
 }

@@ -2,53 +2,1561 @@
   "id": "thndr",
   "slug": "thndr",
   "name": "ثاندر (Thndr)",
-  "headline": "المنصة التي دمقرطت الاستثمار في البورصة وألغت العمولات",
-  "category": "WealthTech / منصات الاستثمار",
+  "headline": "من فتح الحساب الرقمي إلى بنية استثمار متعددة الأسواق: كيف حوّلت ثاندر الوصول إلى محفظة منتجات ورقابة ومحتوى",
+  "category": "WealthTech, Brokerage & Asset Management / الاستثمار الرقمي وإدارة الأصول",
   "company": {
-    "location": "القاهرة، مصر",
-    "business_model": "تداول بدون عمولة، إيرادات من الاشتراكات المميزة (Premium) وصناديق الاستثمار"
+    "location": "القاهرة، مصر، مع كيان مالي منظم في أبوظبي. تعمل خدمات السوق المصري عبر Thndr Securities Brokerage المرخصة من الهيئة العامة للرقابة المالية المصرية برقم 804، بينما تُقدَّم خدمات السوقين الإماراتي والأمريكي عبر Thndr Financial Ltd المرخصة من سلطة تنظيم الخدمات المالية في سوق أبوظبي العالمي. تعود ملكية المنصة والعلامة إلى Axis Markets B.V. وفق شروط ثاندر.",
+    "business_model": "منظومة WealthTech متعددة الكيانات تجمع الوساطة الرقمية، وتوزيع صناديق الاستثمار، وإدارة الأصول، والاشتراكات، والاستشارات عبر Rumble، ومنتجات الذهب والادخار. تحقق الإيراد من عمولات ورسوم تداول تختلف حسب السوق والخطة، واشتراكات مثل Thndr Trader، ورسوم شراء وبيع Thndr Gold، واقتصاديات توزيع وإدارة الصناديق والخدمات المهنية أو التنظيمية المرتبطة بالوساطة وإدارة الأصول. لا تنشر الشركة مزيج الإيرادات أو Take Rate أو متوسط الإيراد لكل حساب."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات",
-    "monthly_traffic": "مئات الآلاف من المستثمرين النشطين"
+    "monthly_revenue": "أحدث إيراد سنوي مُفصح عنه علنًا هو 8 ملايين دولار لعام 2024 وفق أرقام قدمتها الشركة إلى Financial Times، مقابل 120 ألف دولار في 2021. يعادل ذلك متوسطًا تاريخيًا حسابيًا بنحو 666.7 ألف دولار شهريًا في 2024، وليس MRR ولا مستوى الإيراد الحالي؛ لم تُنشر إيرادات 2025 أو 2026.",
+    "monthly_traffic": "لا تنشر ثاندر مستخدمين نشطين شهريًا. المؤشرات الحالية المختلفة هي أكثر من 4 ملايين مستخدم مسجل وفق الشركة، وأكثر من 5.5 ملايين تنزيل، ونحو 700 ألف حساب ممول في 2026 مقابل 500 ألف في 2025. التسجيل والتنزيل والتمويل والنشاط الشهري مقاييس مختلفة ولا يجوز دمجها."
   },
   "overview": {
     "problem": {
-      "text": "الاستثمار في البورصة كان حكراً على الأغنياء وكبار السن، بسبب الإجراءات الورقية المعقدة لفتح حساب، وعمولات شركات السمسرة المرتفعة التي تلتهم أرباح صغار المستثمرين.",
-      "impact": "عزوف الشباب تماماً عن الاستثمار في الأسهم وفقدان السوق لسيولة ضخمة."
+      "text": "كان فتح حساب استثمار فردي في مصر يتطلب احتكاكًا ورقيًا وتواصلًا مع شركة سمسرة وفهمًا لمصطلحات وأسواق لا تُصمم دائمًا للمبتدئ. وبعد فتح الحساب تبقى مشكلات التمويل، واختيار الأصل، وفهم المخاطر والرسوم، والحصول على بيانات وأدوات تناسب المستثمر العادي أو المتداول المحترف.",
+      "impact": "تؤدي الحواجز إلى بقاء عدد كبير من المدخرين خارج أسواق رأس المال أو تركيز أموالهم في فئة واحدة. لكن إزالة خطوات الفتح وحدها قد تزيد المشاركة دون رفع جودة القرار؛ لذلك تصبح الملاءمة والتثقيف والإفصاح والرقابة وإدارة مخاطر المنتج جزءًا من الحل، لا إضافات تسويقية."
     },
     "solution": {
-      "text": "تطبيق يتيح فتح حساب استثماري بالكامل عبر الهاتف في ساعات، وشراء وبيع الأسهم وصناديق الاستثمار بـ (صفر عمولة)، مع واجهة مستخدم تشبه الألعاب."
+      "text": "رقمنت ثاندر فتح الحساب والتحقق والتمويل والتداول، ثم وسعت التجربة من الأسهم المصرية إلى الأسهم الأمريكية وسوق أبوظبي وصناديق الاستثمار والذهب ومنتجات الادخار والاكتتابات والحقوق. بنت مسارًا للمبتدئ عبر Thndr Learn وVirtual Mode وThndr Alpha والأوامر الدورية، ومسارًا للمتداول عبر ThndrX وThndr Trader والبيانات اللحظية وعمق السوق. وتفصل الاستشارة في Rumble، بينما حصلت المجموعة على تراخيص إدارة أصول ومحافظ لإطلاق منتجات تديرها مباشرة."
     }
   },
   "market_data": {
-    "target_audience": "الشباب وصغار المستثمرين في مصر والمنطقة العربية.",
-    "market_size": "سوق المال والبورصات الإقليمية.",
-    "growth_rate": "استحوذت على نسبة ضخمة من إجمالي حسابات التداول الجديدة في مصر وجمعت أكثر من 20 مليون دولار."
+    "target_audience": "المستثمرون الأفراد لأول مرة وصغار المدخرين والشباب والمستخدمون خارج القاهرة والإسكندرية، والمستثمرون الذين يريدون صناديق أو ذهبًا أو ادخارًا مُدارًا، والمتداولون النشطون الذين يحتاجون أدوات احترافية، والمستخدمون المؤهلون للوصول إلى الأسهم الأمريكية وسوق أبوظبي. كما تشمل المنظومة مشتركي Rumble الباحثين عن استشارة وتحليل، ومصدري الأوراق المالية ومديري الأصول وشركاء البنية والتنفيذ.",
+    "market_size": "لا تنشر ثاندر TAM ماليًا مدققًا. سياق السوق يشمل مستثمري التجزئة في مصر، و16 سوقًا عربية تقريبًا ضمن رؤية الشركة الإقليمية، وأكثر من 1,600 ورقة وقيمة سوقية مجمعة قدرها 4.4 تريليونات دولار وفق تصور الرئيس التنفيذي، لكنها رؤية صناعية واسعة لا سوقًا قابلًا للخدمة اليوم. مؤشرات ثاندر التشغيلية تشمل 700 ألف حساب ممول، ومليار دولار أصولًا تحت الحفظ، و12.9% من قيمة التداول لدى شركات السمسرة المصرية خلال أول أربعة أشهر من 2026 وفق Financial Times.",
+    "growth_rate": "ارتفع الإيراد المعلن من 120 ألف دولار في 2021 إلى 8 ملايين دولار في 2024، أي نحو 66.7 ضعفًا ومعدل نمو سنوي مركب حسابي يقارب 305.5%. وفي 2024 نفذت ثاندر 15.6 مليون صفقة بقيمة 174 مليار جنيه وحصة 11% من تداولات التجزئة، واستقطبت 82% من المستثمرين الأفراد الجدد المُرمزين. بحلول 2026 وصلت إلى 700 ألف حساب ممول ومليار دولار أصول تحت الحفظ وحصة 12.9% من قيمة التداول خلال أول أربعة أشهر. الأرقام تجمع بين بيانات شركة وتغطية FT وليست قوائم مالية مدققة."
   },
   "financials": {
-    "initial_investment": "مدعومة من Y Combinator و Tiger Global.",
-    "valuation": "غير معلن (عشرات الملايين)",
+    "initial_investment": "رأس المال الشخصي للمؤسسين غير معلن. شاركت ثاندر في Y Combinator وبدأت تمويلات مبكرة لم تُفصل الشركة قيمها علنًا بصورة كاملة. أغلقت Series A بقيمة 20 مليون دولار في فبراير 2022 بقيادة Tiger Global وBECO Capital وProsus Ventures، ثم أغلقت جولة إضافية بقيمة 15.7 مليون دولار في مايو 2025 بقيادة Prosus Ventures. أعلنت الشركة أن إجمالي رأس المال المجموع بلغ 37.76 مليون دولار، ما يعني أن التمويلات السابقة للجولتين الكبيرتين بلغت إجمالًا نحو 2.06 مليون دولار بالحساب، دون تفصيل كل جولة أو أداة.",
+    "valuation": "غير معلن. ثاندر شركة خاصة ولم تنشر نسبة الأسهم في الجولات أو تقييمًا قبل أو بعد الاستثمار، ولا توجد صفقة استحواذ أو طرح عام تحدد قيمة سوقية. مبلغ التمويل الإجمالي البالغ 37.76 مليون دولار لا يساوي تقييم الشركة.",
     "revenue_streams": [
-      "اشتراكات Thndr Premium (لبيانات السوق اللحظية)",
-      "رسوم إدارة صناديق الاستثمار المشتركة",
-      "إيرادات الفوائد على الأرصدة النقدية غير المستثمرة"
+      "عمولات ورسوم تنفيذ صفقات الأسهم والأدوات المالية في السوق المصري حسب التسعير والخطة",
+      "عمولات ورسوم تداول في سوق أبوظبي والأسواق الأمريكية، إضافة إلى رسوم تنظيمية ومقاصة أو حفظ تابعة لأطراف أخرى",
+      "اشتراك Thndr Trader بقيمة مرجعية معلنة 245 جنيهًا شهريًا، ويشمل 50 صفقة معفاة من عمولة ثاندر في السوق المصري ومزايا احترافية",
+      "اشتراكات أو باقات بيانات وأدوات تداول تتضمن ThndrX وبيانات لحظية وعمق السوق وتنبيهات",
+      "اشتراك Rumble للاستشارات والتحليلات والمحافظ البحثية",
+      "اقتصاديات توزيع صناديق الاستثمار التابعة لمديري أصول خارجيين، دون إفصاح عن نسبة ثاندر",
+      "رسوم إدارة الأصول والمحافظ والصناديق التي تصممها Thndr Asset Management بعد الحصول على التراخيص",
+      "رسم ثابت 1% على شراء Thndr Gold و1% على البيع",
+      "رسوم أو هوامش مرتبطة بمنتجات الادخار والصناديق المدارة، حسب نشرة كل صندوق وعقد التوزيع",
+      "خدمات الاكتتابات وزيادات رأس المال والحقوق والترويج وتغطية الاكتتاب بعد الترخيص التنظيمي، مع عدم نشر قيم العقود",
+      "فروق أو رسوم تحويل وتمويل وحفظ مرتبطة بالوصول الدولي عندما تكون منصوصًا عليها، دون افتراض أنها كلها إيراد صافٍ لثاندر",
+      "رسوم اشتراك أو خدمة للخطط الموجهة لفئات مستخدمين مختلفة",
+      "لا تُعد قيمة التداول أو الأصول تحت الحفظ أو أصول الصناديق إيرادًا للشركة",
+      "لا يوجد دليل منشور على أن الفائدة على أرصدة العملاء غير المستثمرة قناة إيراد مستقلة لثاندر"
     ]
   },
   "lessons": [
     {
-      "title": "إزالة حاجز التكلفة (Zero-Commission)",
-      "description": "نموذج (روبن هود) أثبت نجاحه في المنطقة. بإلغاء العمولة، جذبت Thndr شريحة ضخمة لم تكن تفكر بالاستثمار سابقاً، ثم قامت بتحقيق الأرباح عبر الخدمات الإضافية والاشتراكات."
+      "title": "إلغاء حاجز الفتح لا يعني إلغاء تكلفة الاستثمار",
+      "description": "يمكن فتح الحساب رقميًا، لكن التداول يبقى محكومًا بعمولات ورسوم تنظيمية ومقاصة وضرائب حسب السوق. الوعد الأقوى هو الشفافية وانخفاض الاحتكاك، لا عبارة «صفر عمولة» المطلقة."
     },
     {
-      "title": "الاستثمار في التثقيف",
-      "description": "المستخدم الجديد لا يعرف كيف يستثمر. ركزت الشركة بشدة على تبسيط المصطلحات المالية وإنشاء محتوى تعليمي (رومبل) ومجتمع مستثمرين تفاعلي، مما زاد من ثقة وولاء العملاء."
+      "title": "المجاني يتحول إلى حصة محددة داخل اشتراك",
+      "description": "Thndr Trader يمنح 50 صفقة معفاة مقابل اشتراك شهري، ثم تعود الرسوم. هذا يجعل الإعفاء جزءًا من حزمة اقتصادية قابلة للقياس بدل دعم مفتوح لكل نشاط."
+    },
+    {
+      "title": "التنزيل والحساب المسجل والحساب الممول ثلاثة أقماع",
+      "description": "5.5 ملايين تنزيل لا تساوي 4 ملايين مستخدم مسجل، وكلاهما لا يساوي 700 ألف حساب ممول. النمو الحقيقي يحتاج قياس الانتقال بين التسجيل والتمويل وأول استثمار والاستمرار."
+    },
+    {
+      "title": "الأصول تحت الحفظ ليست إيرادًا ولا أصولًا مملوكة للشركة",
+      "description": "مليار دولار تحت الحفظ يثبت ثقة ونطاقًا تشغيليًا، لكنه أموال وأوراق العملاء. الإيراد يعتمد على الرسوم والخدمات، بينما الشركة تتحمل مسؤوليات حفظ وتسوية ورقابة."
+    },
+    {
+      "title": "قيمة التداول يمكن أن ترتفع دون تحسن اقتصاد العميل",
+      "description": "174 مليار جنيه تداولًا تعني نشاطًا وسيولة، لكنها قد ترتفع بسبب تكرار الصفقات. يجب موازنة النشاط بالعوائد المعدلة بالمخاطر والتكاليف والاحتفاظ طويل الأجل."
+    },
+    {
+      "title": "التثقيف قناة توزيع وحاجز مخاطر",
+      "description": "Learn وClaps وVirtual Mode يقللان رهبة السوق ويجذبان المبتدئ، لكنهما أيضًا يقللان سوء الفهم والشكاوى. المحتوى في الخدمات المالية جزء من المنتج والامتثال."
+    },
+    {
+      "title": "المحاكاة تعلّم الواجهة ولا تحاكي المشاعر بالكامل",
+      "description": "Virtual Mode يسمح بالتجربة دون خسارة، لكنه لا يعيد ضغط المال الحقيقي أو السيولة أو الانزلاق. يجب تقديمه كأداة تدريب، لا دليل استعداد كامل."
+    },
+    {
+      "title": "المنتج الموجّه يحتاج حدود ملاءمة واضحة",
+      "description": "Alpha يبني حزمة وفق الهدف والمخاطر والأفق الزمني، لكن ثلاث أسئلة لا تلخص كل وضع مالي. يجب توضيح الافتراضات ومراجعة الخطة وعدم تقديم الأداء التاريخي كضمان."
+    },
+    {
+      "title": "المبتدئ والمتداول المحترف ليسا واجهة واحدة",
+      "description": "Alpha يبسط القرار، بينما ThndrX يقدم العمق والسرعة والأوامر. تقسيم المسارات يمنع إغراق المبتدئ ويحمي المحترف من أدوات مبسطة أكثر من اللازم."
+    },
+    {
+      "title": "الأوامر الدورية تحوّل الاستثمار إلى عادة وتخفي خطر الآلية",
+      "description": "الاستثمار اليومي أو الأسبوعي أو الشهري يقلل الاعتماد على التوقيت، لكنه قد يستمر رغم تغير الدخل أو الهدف أو الأصل. يحتاج إشعارات وحدودًا وإيقافًا سهلًا."
+    },
+    {
+      "title": "الصندوق يوسّع الوصول لكنه يضيف طرفًا ومديرًا ونشرة",
+      "description": "توزيع 30 صندوقًا يتيح تنويعًا وإدارة محترفة، لكن الأداء والرسوم والسيولة تتبع كل مدير ونشرة. المنصة ليست مديرًا لكل صندوق تعرضه."
+    },
+    {
+      "title": "الانتقال من موزع إلى مدير أصول يغير تضارب المصالح",
+      "description": "عندما تصمم ثاندر صناديقها، تصبح مسؤولة عن الحوكمة والأداء والتسعير، وقد تنافس منتجات الشركاء المعروضة على المنصة. يلزم وضوح في التوصية والترتيب والإفصاح."
+    },
+    {
+      "title": "الذهب الرقمي يحتاج إثبات ملكية وحفظ وتسعير",
+      "description": "شراء 0.001 جرام يسهل الوصول، لكن المستخدم يحتاج فهم backing المادي، ومكان التخزين، وفارق سعر الشراء والبيع، ورسوم 1% في الاتجاهين، ومواعيد التنفيذ."
+    },
+    {
+      "title": "كل سوق جديد ترخيص وتسوية وشريك منفصل",
+      "description": "مصر تعمل عبر شركة سمسرة محلية، والإمارات والأمريكي عبر كيان ADGM وشركاء. إضافة علم دولة داخل التطبيق لا تعني توحيد الحماية والرسوم والحفظ والضرائب."
+    },
+    {
+      "title": "الشركة الإقليمية قد تحتاج فصل العلامة عن الكيانات المنظمة",
+      "description": "Axis Markets تملك المنصة، بينما الخدمات تقدمها كيانات مرخصة مختلفة. الفصل يساعد التوسع، لكنه يفرض وضوحًا للمستخدم حول الطرف المتعاقد ومن يحمل الأموال أو الأوراق."
+    },
+    {
+      "title": "الاستشارة والوساطة يجب أن تبقيا واضحتين",
+      "description": "Rumble يقدم تحليلًا واستشارة من فريق المجموعة، وثاندر تنفذ أو توزع المنتجات. يجب الإفصاح عن العلاقة والحوافز وعدم تحويل محتوى مدفوع إلى توصية غير مميزة."
+    },
+    {
+      "title": "النمو في أزمة العملة لا يثبت دورة طلب دائمة",
+      "description": "التضخم وخفض العملة دفعا مدخرين للذهب والأسهم. الاحتفاظ بعد استقرار الدورة يحتاج قيمة مستمرة، لا الاعتماد على خوف مؤقت من فقدان القوة الشرائية."
+    },
+    {
+      "title": "التمويل لا يساوي التقييم ولا الإيراد",
+      "description": "37.76 مليون دولار رأس مال مجموع، و8 ملايين إيراد 2024، وتقييم الشركة غير معلن. خلط الأرقام الثلاثة يصنع قصة مالية خاطئة."
     }
   ],
   "tools": [
-    "AWS",
-    "Node.js",
-    "Flutter",
-    "PostgreSQL"
+    "تطبيق Thndr للهاتف ومنصة ويب للوصول إلى الحساب والاستثمار",
+    "فتح حساب رقمي والتحقق الإلكتروني وفق تراخيص وتقنيات FinTech المعتمدة",
+    "تداول الأسهم والأدوات المدرجة في البورصة المصرية",
+    "الوصول إلى الأسهم الأمريكية عبر Thndr Financial Ltd وشريك التنفيذ Alpaca",
+    "تداول سوق أبوظبي للأوراق المالية عبر كيان ADGM",
+    "أوامر سوق وأوامر محددة وأوامر متقدمة حسب دورة التسوية",
+    "أوامر استثمار دورية يومية أو أسبوعية أو شهرية للأسهم والصناديق",
+    "تمويل عبر Instapay والتحويل البنكي والإيداع النقدي وVodafone Cash وبطاقة الخصم حسب الأهلية",
+    "Instant Deposit يمنح قوة شرائية مؤقتة لمستخدمين مؤهلين قبل اكتمال وصول التحويل",
+    "سوق لصناديق الاستثمار يشمل الدخل الثابت والأسهم والذهب واستراتيجيات قطاعية",
+    "أكثر من 30 صندوقًا متاحًا على المنصة وفق إعلان ديسمبر 2025",
+    "Savings Clouds المبني على صندوق دخل ثابت",
+    "Thndr Gold المدعوم ماديًا بذهب عيار 24 والمُدار عبر Thndr Asset Management",
+    "شراء وبيع الذهب ابتداءً من 0.001 جرام ورسوم 1% لكل اتجاه",
+    "تخزين الذهب عبر EGYCASH وفق إعلان المنتج",
+    "Thndr Alpha لبناء Starter Pack وفق الهدف وتحمل المخاطر والأفق الزمني",
+    "Bulk Orders لتوزيع مبلغ على مكونات حزمة Alpha في عملية موجهة",
+    "ThndrX كمنصة Desktop-First للمتداولين النشطين",
+    "Thndr Trader باشتراك شهري و50 صفقة معفاة وبيانات لحظية وعمق سوق وتنبيهات",
+    "دفتر الأوامر والشموع السعرية وPrice Depth",
+    "Thndr Learn للمحتوى التعليمي المالي",
+    "Thndr Claps كنشرة مالية مبسطة",
+    "Virtual Mode بمحفظة افتراضية للتدريب",
+    "Rumble للاستشارات والتحليلات والمحافظ البحثية",
+    "الوصول إلى الاكتتابات العامة وزيادات رأس المال والحقوق عبر التطبيق عند الإتاحة",
+    "حاسبة زكاة استثمارية كأداة إرشادية داخل المنظومة",
+    "حسابات محافظ منفصلة حسب السوق والعملة",
+    "تحويل محفظة الأوراق الأمريكية عبر ACATS بالتنسيق مع Alpaca",
+    "بيانات لحظية وتنبيهات أسعار وأدوات بحث وتحليل حسب الاشتراك",
+    "تراخيص إدارة أصول ومحافظ وصندوق Thndr Equities متعدد الإصدارات",
+    "خيارات استثمار متوافقة مع الشريعة بحسب الصندوق أو المنتج ولجنته",
+    "دعم داخل التطبيق ومركز مساعدة متعدد اللغات",
+    "بنية تقنية معلنة جزئيًا تشمل Self-Managed Kubernetes وتحسين Redis، دون اعتبارها كشفًا كاملًا عن المعمارية"
+  ],
+  "verification": {
+    "status": "verified_from_thndr_fra_adgm_product_support_funding_and_financial_times_sources",
+    "verified_on": "2026-08-03",
+    "source_policy": "تم إعطاء الأولوية لسجلات FRA وADGM، وموقع ثاندر ومركز المساعدة وإعلانات التمويل والمنتجات. استُخدمت Financial Times لتوثيق الإيراد التاريخي والأصول تحت الحفظ والحسابات الممولة والحصة السوقية لعام 2026، وهي أرقام نسبت الصحيفة بعضها إلى الشركة.",
+    "important_notes": [
+      "لا توجد إيرادات منشورة لعامي 2025 أو 2026؛ أحدث رقم هو 8 ملايين دولار لعام 2024 وفق Financial Times نقلًا عن الشركة.",
+      "متوسط 666.7 ألف دولار شهريًا قسمة حسابية لإيراد 2024، وليس MRR أو Run Rate حاليًا.",
+      "4 ملايين مستخدم مسجل و5.5 ملايين تنزيل و700 ألف حساب ممول ليست مقاييس قابلة للجمع.",
+      "مليار دولار أصول تحت الحفظ ليس إيرادًا ولا أصولًا مملوكة لثاندر.",
+      "8 مليارات جنيه في صناديق الاستثمار عبر المنصة حتى نوفمبر 2025 ليست إيرادًا ولا قيمة كل أصول العملاء.",
+      "نفذت الشركة 15.6 مليون صفقة بقيمة 174 مليار جنيه في 2024؛ قيمة التداول ليست إيرادًا.",
+      "عبارة Zero Commission غير صحيحة كسياسة عامة حالية؛ توجد عمولات ورسوم تختلف حسب السوق، ويمكن إعفاء عدد من الصفقات ضمن اشتراك.",
+      "السعر المعلن لخطة Thndr Trader هو 245 جنيهًا شهريًا وقت إطلاقها في 2025، وقد يتغير.",
+      "Thndr Gold يفرض 1% على الشراء و1% على البيع، إضافة إلى فارق سعر الذهب الطبيعي بين الشراء والبيع.",
+      "ثاندر وسيط وموزع ومدير أصول بحسب المنتج والكيان؛ ليست مديرًا لكل صندوق معروض.",
+      "Thndr Financial Ltd مرخصة في ADGM للتعامل كوكيل في الأسهم ووحدات الصناديق، ولا يُسمح لها بحيازة أو التحكم باستثمارات العميل وفق سجل FSRA.",
+      "السوق الإماراتي أصبح حيًا في 2025؛ أما السعودية فكانت ضمن التأسيس والتقديم التنظيمي ولم يثبت إطلاقها للمستخدمين حتى تاريخ التحقق.",
+      "وصف جولة 2025 يختلف بين «جولة إضافية» وSeries A في صفحات الشركة؛ استخدم الملف القيمة والتاريخ دون الاعتماد على تسمية المرحلة.",
+      "إجمالي التمويل 37.76 مليون دولار معلن، لكن تفصيل التمويلات المبكرة ونسب الأسهم غير منشور.",
+      "تقييم الشركة غير معلن ولا يمكن اشتقاقه من التمويل.",
+      "Rumble منصة استشارة من الفريق نفسه وليست مجرد ميزة بيانات لحظية داخل اشتراك Thndr Premium.",
+      "تم حذف AWS وNode.js وFlutter وPostgreSQL كحزمة حالية غير موثقة، مع الاحتفاظ فقط بتقنيات كشفتها مدونة الهندسة رسميًا.",
+      "الأداء التاريخي للصناديق والمحافظ لا يضمن نتائج مستقبلية، والملف لا يقدم نصيحة استثمارية."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول بالمصادر وحالة التحقق، مع فصل الإيراد عن قيمة التداول والأصول تحت الحفظ والتمويل والتنزيلات.",
+    "status_values": {
+      "verified": "الادعاء مدعوم بمصدر رسمي أو سجل تنظيمي.",
+      "verified_historical_revenue_calculation": "القيمة مشتقة من أحدث إيراد سنوي تاريخي مُفصح عنه.",
+      "verified_scale_not_mau": "الأرقام تسجيلات أو تنزيلات أو حسابات ممولة وليست MAU.",
+      "verified_company_reported_and_high_quality_press": "المقياس من الشركة أو منقول عنها عبر Financial Times.",
+      "verified_regulatory_structure": "الكيان والنشاط مثبتان في سجل الجهة المنظمة.",
+      "verified_historical_funding": "الجولات ومبالغها موثقة مع غياب نسب الملكية.",
+      "verified_as_not_publicly_valued": "لا يوجد تقييم منشور.",
+      "verified_product_capability": "القدرة موثقة في صفحة منتج أو مركز مساعدة.",
+      "verified_assets_not_revenue": "الرقم أصول أو قيمة تداول لا إيراد.",
+      "verified_launch_status": "السوق أو المنتج أطلق رسميًا.",
+      "verified_application_or_future_market": "التوسع قيد الطلب أو التأسيس وليس إطلاقًا مكتملًا.",
+      "analytical_inference": "تحليل مهني مبني على أدلة وليس تصريحًا حرفيًا."
+    },
+    "confidence_scale": {
+      "high": "FRA أو ADGM أو وثائق ومنتجات ثاندر الرسمية.",
+      "medium_high": "Financial Times مع إسناد إلى الشركة أو إعلان شركة خاص.",
+      "medium": "رقم شركة خاصة يحتاج إلى تعريف أو تدقيق مالي مستقل."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "القاهرة، مصر، مع كيان مالي منظم في أبوظبي. تعمل خدمات السوق المصري عبر Thndr Securities Brokerage المرخصة من الهيئة العامة للرقابة المالية المصرية برقم 804، بينما تُقدَّم خدمات السوقين الإماراتي والأمريكي عبر Thndr Financial Ltd المرخصة من سلطة تنظيم الخدمات المالية في سوق أبوظبي العالمي. تعود ملكية المنصة والعلامة إلى Axis Markets B.V. وفق شروط ثاندر.",
+      "verification_status": "verified_regulatory_structure",
+      "confidence": "high",
+      "claim_type": "egypt_brokerage_adgm_entity_and_platform_owner_structure",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت FRA الشركة المصرية وترخيصها، ويثبت ADGM الكيان الإماراتي ونطاق نشاطه، وتوضح شروط ثاندر ملكية المنصة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-03",
+        "SRC-04",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Thndr Securities Brokerage Register",
+          "publisher": "Egyptian Financial Regulatory Authority",
+          "source_type": "official_regulatory_register",
+          "url": "https://fra.gov.eg/en/company_records/%D8%AB%D8%A7%D9%86%D8%AF%D8%B1-%D9%84%D8%AA%D8%AF%D8%A7%D9%88%D9%84-%D8%A7%D9%84%D8%A7%D9%88%D8%B1%D8%A7%D9%82-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D9%87/",
+          "evidence_type": "direct",
+          "source_locator": "FRA register",
+          "supports": "Thndr Securities Brokerage وترخيص 804.",
+          "published_on": "2020-08-12"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Thndr Financial Ltd FSRA Register",
+          "publisher": "Abu Dhabi Global Market",
+          "source_type": "official_regulatory_register",
+          "url": "https://www.adgm.com/api/FSRAC_FirmPdf/GenerateFirmProfilePdf?FirmId=165847",
+          "evidence_type": "direct",
+          "source_locator": "FSRA register",
+          "supports": "Thndr Financial Ltd وFSP 240002.",
+          "published_on": "2026-06-27"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Thndr Fees",
+          "publisher": "Thndr Support",
+          "source_type": "official_fee_documentation",
+          "url": "https://thndr.app/support/docs/pricing/fees/",
+          "evidence_type": "direct",
+          "source_locator": "Fees disclaimer",
+          "supports": "الأسواق والكيانات المنظمة.",
+          "published_on": "2025-07-22"
+        }
+      ],
+      "limitations": "لا يعني الترخيص في ADGM أن Thndr Financial تحتفظ بأصول العملاء؛ السجل يفرض قيدًا على ذلك."
+    },
+    "$.company.business_model": {
+      "field_value": "منظومة WealthTech متعددة الكيانات تجمع الوساطة الرقمية، وتوزيع صناديق الاستثمار، وإدارة الأصول، والاشتراكات، والاستشارات عبر Rumble، ومنتجات الذهب والادخار. تحقق الإيراد من عمولات ورسوم تداول تختلف حسب السوق والخطة، واشتراكات مثل Thndr Trader، ورسوم شراء وبيع Thndr Gold، واقتصاديات توزيع وإدارة الصناديق والخدمات المهنية أو التنظيمية المرتبطة بالوساطة وإدارة الأصول. لا تنشر الشركة مزيج الإيرادات أو Take Rate أو متوسط الإيراد لكل حساب.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "brokerage_subscription_advisory_fund_distribution_asset_management_and_gold_model",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت الرسوم والاشتراكات وRumble والصناديق والذهب وتراخيص الإدارة تعدد القنوات.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-05",
+        "SRC-06",
+        "SRC-09",
+        "SRC-10",
+        "SRC-20"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Thndr Fees",
+          "publisher": "Thndr Support",
+          "source_type": "official_fee_documentation",
+          "url": "https://thndr.app/support/docs/pricing/fees/",
+          "evidence_type": "direct",
+          "source_locator": "Fees",
+          "supports": "رسوم وعمولات حسب السوق.",
+          "published_on": "2025-07-22"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Introducing Thndr Trader",
+          "publisher": "Thndr",
+          "source_type": "official_subscription_announcement",
+          "url": "https://thndr.app/blogpost/introducing-thndr-trader-built-for-those-who-see-investing-as-a-craft-not-a-game/",
+          "evidence_type": "direct",
+          "source_locator": "Subscription",
+          "supports": "Thndr Trader.",
+          "published_on": "2025-06"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Thndr Asset Management Licenses and Fund Growth",
+          "publisher": "Thndr",
+          "source_type": "official_license_and_metrics_announcement",
+          "url": "https://thndr.app/blogpost/thndr-secures-fra-asset-management-licenses-building-on-record-8-billion-egp-growth-in-retail-fund-investing/",
+          "evidence_type": "direct",
+          "source_locator": "License announcement",
+          "supports": "إدارة الأصول وتوزيع الصناديق.",
+          "published_on": "2025-12-01"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Thndr Gold",
+          "publisher": "Thndr",
+          "source_type": "official_gold_product_announcement",
+          "url": "https://thndr.app/blogpost/thndr-gold-the-easiest-way-to-buy-gold-in-egypt/",
+          "evidence_type": "direct",
+          "source_locator": "Gold",
+          "supports": "رسوم الذهب.",
+          "published_on": "2026-06-24"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Rumble Financial Advisory",
+          "publisher": "Thndr",
+          "source_type": "official_advisory_product_announcement",
+          "url": "https://thndr.app/blogpost/get-expert-financial-advice-with-rumble/",
+          "evidence_type": "direct",
+          "source_locator": "Advisory",
+          "supports": "Rumble.",
+          "published_on": "2023-11-12"
+        }
+      ],
+      "limitations": "لا تنشر الشركة مزيج الإيرادات أو عمولات الشركاء أو ARPU."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "أحدث إيراد سنوي مُفصح عنه علنًا هو 8 ملايين دولار لعام 2024 وفق أرقام قدمتها الشركة إلى Financial Times، مقابل 120 ألف دولار في 2021. يعادل ذلك متوسطًا تاريخيًا حسابيًا بنحو 666.7 ألف دولار شهريًا في 2024، وليس MRR ولا مستوى الإيراد الحالي؛ لم تُنشر إيرادات 2025 أو 2026.",
+      "verification_status": "verified_historical_revenue_calculation",
+      "confidence": "medium_high",
+      "claim_type": "latest_disclosed_annual_revenue_monthly_average",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "نقلت FT عن الشركة إيراد 8 ملايين دولار في 2024، وقُسم على 12 مع تمييزه عن الإيراد الحالي.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-21",
+          "title": "Financial Times — Thndr Growth and 2026 Operating Metrics",
+          "publisher": "Financial Times",
+          "source_type": "high_quality_business_report",
+          "url": "https://www.ft.com/content/0af662bf-1672-40c5-bbd2-e9898f6ea001",
+          "evidence_type": "direct",
+          "source_locator": "FT report",
+          "supports": "120 ألف دولار في 2021 و8 ملايين في 2024.",
+          "published_on": "2026-06-09"
+        }
+      ],
+      "limitations": "الرقم شركة خاصة منقول عبر صحيفة، وليس قائمة مالية عامة مدققة.",
+      "calculation": {
+        "latest_disclosed_revenue_year": 2024,
+        "annual_revenue_usd": 8000000,
+        "formula": "8,000,000 ÷ 12",
+        "historical_monthly_average_usd": 666666.67,
+        "rounded_display_value": "نحو 666.7 ألف دولار شهريًا",
+        "2025_revenue": "not_publicly_disclosed",
+        "2026_revenue": "not_publicly_disclosed",
+        "calculation_status": "historical_average_not_mrr"
+      }
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "لا تنشر ثاندر مستخدمين نشطين شهريًا. المؤشرات الحالية المختلفة هي أكثر من 4 ملايين مستخدم مسجل وفق الشركة، وأكثر من 5.5 ملايين تنزيل، ونحو 700 ألف حساب ممول في 2026 مقابل 500 ألف في 2025. التسجيل والتنزيل والتمويل والنشاط الشهري مقاييس مختلفة ولا يجوز دمجها.",
+      "verification_status": "verified_scale_not_mau",
+      "confidence": "medium_high",
+      "claim_type": "registered_users_downloads_and_funded_accounts_without_mau",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت الشركة التسجيلات، وتجمع FT والتنويه الرسمي التنزيلات والحسابات الممولة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-21",
+        "SRC-22"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Thndr Home",
+          "publisher": "Thndr",
+          "source_type": "official_product_page",
+          "url": "https://thndr.app/",
+          "evidence_type": "direct",
+          "source_locator": "Homepage",
+          "supports": "4 ملايين+ مستخدم."
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Financial Times — Thndr Growth and 2026 Operating Metrics",
+          "publisher": "Financial Times",
+          "source_type": "high_quality_business_report",
+          "url": "https://www.ft.com/content/0af662bf-1672-40c5-bbd2-e9898f6ea001",
+          "evidence_type": "direct",
+          "source_locator": "FT",
+          "supports": "5.5 ملايين تنزيل و700 ألف حساب ممول.",
+          "published_on": "2026-06-09"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Thndr Tops FT Africa Growth Ranking 2026",
+          "publisher": "Thndr",
+          "source_type": "official_ranking_announcement",
+          "url": "https://thndr.app/blogpost/thndr-ranks-1-as-africas-fastest-growing-companies-2026-becoming-the-first-egyptian-company-to-lead-the-statista-financial-times-ranking/",
+          "evidence_type": "direct",
+          "source_locator": "Ranking announcement",
+          "supports": "5.5 ملايين تنزيل.",
+          "published_on": "2026-05-14"
+        }
+      ],
+      "limitations": "لا توجد MAU أو عدد متداولين نشطين شهريًا أو تعريف موحد للمستخدم."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "كان فتح حساب استثمار فردي في مصر يتطلب احتكاكًا ورقيًا وتواصلًا مع شركة سمسرة وفهمًا لمصطلحات وأسواق لا تُصمم دائمًا للمبتدئ. وبعد فتح الحساب تبقى مشكلات التمويل، واختيار الأصل، وفهم المخاطر والرسوم، والحصول على بيانات وأدوات تناسب المستثمر العادي أو المتداول المحترف.",
+        "impact": "تؤدي الحواجز إلى بقاء عدد كبير من المدخرين خارج أسواق رأس المال أو تركيز أموالهم في فئة واحدة. لكن إزالة خطوات الفتح وحدها قد تزيد المشاركة دون رفع جودة القرار؛ لذلك تصبح الملاءمة والتثقيف والإفصاح والرقابة وإدارة مخاطر المنتج جزءًا من الحل، لا إضافات تسويقية."
+      },
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "account_opening_funding_selection_and_financial_literacy_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تشرح قصة التأسيس صعوبة فتح الحساب، وتعرض منتجات التعليم والتمويل والاختيار بقية الحواجز.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-02",
+        "SRC-19",
+        "SRC-11",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "About Thndr",
+          "publisher": "Thndr",
+          "source_type": "official_company_page",
+          "url": "https://thndr.app/blogpost/about-us/",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "قصة المؤسسين وصعوبة الحساب."
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Thndr 101 and Funding",
+          "publisher": "Thndr Support",
+          "source_type": "official_onboarding_documentation",
+          "url": "https://thndr.app/support/docs/my-thndr-account-en-en-en/thndr-101-how-to-get-started/",
+          "evidence_type": "direct",
+          "source_locator": "Thndr 101",
+          "supports": "قنوات التمويل.",
+          "published_on": "2025-01-30"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Thndr Alpha",
+          "publisher": "Thndr",
+          "source_type": "official_guided_investing_product",
+          "url": "https://thndr.app/blogpost/thndr-alpha-your-first-step-into-investing/",
+          "evidence_type": "direct",
+          "source_locator": "Alpha",
+          "supports": "صعوبة اختيار الاستثمار.",
+          "published_on": "2025-07-02"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Thndr Home",
+          "publisher": "Thndr",
+          "source_type": "official_product_page",
+          "url": "https://thndr.app/",
+          "evidence_type": "direct",
+          "source_locator": "Homepage",
+          "supports": "التعليم والمحاكاة."
+        }
+      ],
+      "limitations": "لا يدعي الملف أن الاستثمار كان حكرًا قانونيًا على الأغنياء أو أن الشباب عزفوا عنه تمامًا."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "رقمنت ثاندر فتح الحساب والتحقق والتمويل والتداول، ثم وسعت التجربة من الأسهم المصرية إلى الأسهم الأمريكية وسوق أبوظبي وصناديق الاستثمار والذهب ومنتجات الادخار والاكتتابات والحقوق. بنت مسارًا للمبتدئ عبر Thndr Learn وVirtual Mode وThndr Alpha والأوامر الدورية، ومسارًا للمتداول عبر ThndrX وThndr Trader والبيانات اللحظية وعمق السوق. وتفصل الاستشارة في Rumble، بينما حصلت المجموعة على تراخيص إدارة أصول ومحافظ لإطلاق منتجات تديرها مباشرة."
+      },
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "digital_onboarding_multi_asset_multi_market_guided_and_pro_trading_platform",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المصادر الرقمنة والأسواق والأصول ومساري المبتدئ والمحترف والاستشارة وإدارة الأصول.",
+      "source_count": 8,
+      "source_ids": [
+        "SRC-23",
+        "SRC-01",
+        "SRC-13",
+        "SRC-14",
+        "SRC-11",
+        "SRC-12",
+        "SRC-20",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-23",
+          "title": "FRA FinTech Approval for Thndr",
+          "publisher": "Egyptian Financial Regulatory Authority",
+          "source_type": "official_regulatory_approval",
+          "url": "https://fra.gov.eg/en/fra_news/%D8%A7%D9%84%D8%B1%D9%82%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9-%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D9%84%D9%80-3-%D8%B4%D8%B1%D9%83%D8%A7%D8%AA-%D8%B9%D9%84%D9%89-%D9%85%D8%B2%D8%A7/",
+          "evidence_type": "direct",
+          "source_locator": "FRA approval",
+          "supports": "e-KYC والعناية الواجبة.",
+          "published_on": "2025"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Thndr Home",
+          "publisher": "Thndr",
+          "source_type": "official_product_page",
+          "url": "https://thndr.app/",
+          "evidence_type": "direct",
+          "source_locator": "Homepage",
+          "supports": "الأسهم والذهب والصناديق."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "US Portfolio Transfer and Alpaca",
+          "publisher": "Thndr Support",
+          "source_type": "official_us_market_documentation",
+          "url": "https://thndr.app/support/docs/acct-us-en/transferring-your-portfolio/",
+          "evidence_type": "direct",
+          "source_locator": "US documentation",
+          "supports": "السوق الأمريكي.",
+          "published_on": "2024-12-08"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Thndr UAE and ADX Launch",
+          "publisher": "Thndr",
+          "source_type": "official_market_launch",
+          "url": "https://thndr.app/blog/celebrate-our-uae-launch-get-up-to-aed-300-with-our-promo-for-a-limited-time/",
+          "evidence_type": "direct",
+          "source_locator": "UAE launch",
+          "supports": "ADX.",
+          "published_on": "2025-08-17"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Thndr Alpha",
+          "publisher": "Thndr",
+          "source_type": "official_guided_investing_product",
+          "url": "https://thndr.app/blogpost/thndr-alpha-your-first-step-into-investing/",
+          "evidence_type": "direct",
+          "source_locator": "Guided investing",
+          "supports": "Alpha.",
+          "published_on": "2025-07-02"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Thndr Product Keynote and ThndrX",
+          "publisher": "Thndr",
+          "source_type": "official_product_keynote",
+          "url": "https://thndr.app/blogpost/thndr-hosts-egypts-first-fintech-product-keynote-announces-asset-management-plans-unveils-thndrx-platform-for-traders-15-7m-funding-round-and-more/",
+          "evidence_type": "direct",
+          "source_locator": "Keynote",
+          "supports": "ThndrX.",
+          "published_on": "2025-05-20"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Rumble Financial Advisory",
+          "publisher": "Thndr",
+          "source_type": "official_advisory_product_announcement",
+          "url": "https://thndr.app/blogpost/get-expert-financial-advice-with-rumble/",
+          "evidence_type": "direct",
+          "source_locator": "Advice",
+          "supports": "Rumble.",
+          "published_on": "2023-11-12"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Thndr Asset Management Licenses and Fund Growth",
+          "publisher": "Thndr",
+          "source_type": "official_license_and_metrics_announcement",
+          "url": "https://thndr.app/blogpost/thndr-secures-fra-asset-management-licenses-building-on-record-8-billion-egp-growth-in-retail-fund-investing/",
+          "evidence_type": "direct",
+          "source_locator": "Licenses",
+          "supports": "إدارة الأصول.",
+          "published_on": "2025-12-01"
+        }
+      ]
+    },
+    "$.market_data.target_audience": {
+      "field_value": "المستثمرون الأفراد لأول مرة وصغار المدخرين والشباب والمستخدمون خارج القاهرة والإسكندرية، والمستثمرون الذين يريدون صناديق أو ذهبًا أو ادخارًا مُدارًا، والمتداولون النشطون الذين يحتاجون أدوات احترافية، والمستخدمون المؤهلون للوصول إلى الأسهم الأمريكية وسوق أبوظبي. كما تشمل المنظومة مشتركي Rumble الباحثين عن استشارة وتحليل، ومصدري الأوراق المالية ومديري الأصول وشركاء البنية والتنفيذ.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "first_time_retail_savers_active_traders_and_advisory_clients",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت ملفات الشركة نسبة المستثمرين لأول مرة والتوزيع الجغرافي، وتثبت المنتجات الشرائح المختلفة.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-02",
+        "SRC-21",
+        "SRC-06",
+        "SRC-11",
+        "SRC-20"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "About Thndr",
+          "publisher": "Thndr",
+          "source_type": "official_company_page",
+          "url": "https://thndr.app/blogpost/about-us/",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "المستثمرون لأول مرة وخارج المدن."
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Financial Times — Thndr Growth and 2026 Operating Metrics",
+          "publisher": "Financial Times",
+          "source_type": "high_quality_business_report",
+          "url": "https://www.ft.com/content/0af662bf-1672-40c5-bbd2-e9898f6ea001",
+          "evidence_type": "direct",
+          "source_locator": "FT",
+          "supports": "العمر والحسابات الممولة والتركيبة.",
+          "published_on": "2026-06-09"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Introducing Thndr Trader",
+          "publisher": "Thndr",
+          "source_type": "official_subscription_announcement",
+          "url": "https://thndr.app/blogpost/introducing-thndr-trader-built-for-those-who-see-investing-as-a-craft-not-a-game/",
+          "evidence_type": "direct",
+          "source_locator": "Trader",
+          "supports": "المتداولون النشطون.",
+          "published_on": "2025-06"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Thndr Alpha",
+          "publisher": "Thndr",
+          "source_type": "official_guided_investing_product",
+          "url": "https://thndr.app/blogpost/thndr-alpha-your-first-step-into-investing/",
+          "evidence_type": "direct",
+          "source_locator": "Alpha",
+          "supports": "المبتدئون.",
+          "published_on": "2025-07-02"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Rumble Financial Advisory",
+          "publisher": "Thndr",
+          "source_type": "official_advisory_product_announcement",
+          "url": "https://thndr.app/blogpost/get-expert-financial-advice-with-rumble/",
+          "evidence_type": "direct",
+          "source_locator": "Rumble",
+          "supports": "عملاء الاستشارة.",
+          "published_on": "2023-11-12"
+        }
+      ]
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر ثاندر TAM ماليًا مدققًا. سياق السوق يشمل مستثمري التجزئة في مصر، و16 سوقًا عربية تقريبًا ضمن رؤية الشركة الإقليمية، وأكثر من 1,600 ورقة وقيمة سوقية مجمعة قدرها 4.4 تريليونات دولار وفق تصور الرئيس التنفيذي، لكنها رؤية صناعية واسعة لا سوقًا قابلًا للخدمة اليوم. مؤشرات ثاندر التشغيلية تشمل 700 ألف حساب ممول، ومليار دولار أصولًا تحت الحفظ، و12.9% من قيمة التداول لدى شركات السمسرة المصرية خلال أول أربعة أشهر من 2026 وفق Financial Times.",
+      "verification_status": "verified_company_reported_and_high_quality_press",
+      "confidence": "medium",
+      "claim_type": "regional_market_vision_and_current_operating_scale_without_tam",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد TAM رسمي؛ يستخدم الحقل رؤية الأسواق العربية ومقاييس ثاندر التشغيلية.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-21",
+        "SRC-09",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-21",
+          "title": "Financial Times — Thndr Growth and 2026 Operating Metrics",
+          "publisher": "Financial Times",
+          "source_type": "high_quality_business_report",
+          "url": "https://www.ft.com/content/0af662bf-1672-40c5-bbd2-e9898f6ea001",
+          "evidence_type": "direct",
+          "source_locator": "FT",
+          "supports": "1,600 ورقة و4.4 تريليونات كتصور، و700 ألف حساب و1 مليار AUC.",
+          "published_on": "2026-06-09"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Thndr Asset Management Licenses and Fund Growth",
+          "publisher": "Thndr",
+          "source_type": "official_license_and_metrics_announcement",
+          "url": "https://thndr.app/blogpost/thndr-secures-fra-asset-management-licenses-building-on-record-8-billion-egp-growth-in-retail-fund-investing/",
+          "evidence_type": "direct",
+          "source_locator": "Company",
+          "supports": "431 ألف مستثمر صناديق و4 ملايين مستخدم.",
+          "published_on": "2025-12-01"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Thndr Financial Ltd FSRA Register",
+          "publisher": "Abu Dhabi Global Market",
+          "source_type": "official_regulatory_register",
+          "url": "https://www.adgm.com/api/FSRAC_FirmPdf/GenerateFirmProfilePdf?FirmId=165847",
+          "evidence_type": "direct",
+          "source_locator": "Register",
+          "supports": "نطاق ترخيص ADGM.",
+          "published_on": "2026-06-27"
+        }
+      ],
+      "limitations": "4.4 تريليونات قيمة سوقية مجمعة وليست إيرادًا أو TAM قابلًا للخدمة حاليًا."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "ارتفع الإيراد المعلن من 120 ألف دولار في 2021 إلى 8 ملايين دولار في 2024، أي نحو 66.7 ضعفًا ومعدل نمو سنوي مركب حسابي يقارب 305.5%. وفي 2024 نفذت ثاندر 15.6 مليون صفقة بقيمة 174 مليار جنيه وحصة 11% من تداولات التجزئة، واستقطبت 82% من المستثمرين الأفراد الجدد المُرمزين. بحلول 2026 وصلت إلى 700 ألف حساب ممول ومليار دولار أصول تحت الحفظ وحصة 12.9% من قيمة التداول خلال أول أربعة أشهر. الأرقام تجمع بين بيانات شركة وتغطية FT وليست قوائم مالية مدققة.",
+      "verification_status": "verified_company_reported_and_high_quality_press",
+      "confidence": "medium_high",
+      "claim_type": "revenue_trading_assets_market_share_and_funded_account_growth",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تجمع الخريطة نمو الإيراد التاريخي مع التداول والصناديق والحصة والحسابات الممولة.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-21",
+        "SRC-09",
+        "SRC-07",
+        "SRC-22"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-21",
+          "title": "Financial Times — Thndr Growth and 2026 Operating Metrics",
+          "publisher": "Financial Times",
+          "source_type": "high_quality_business_report",
+          "url": "https://www.ft.com/content/0af662bf-1672-40c5-bbd2-e9898f6ea001",
+          "evidence_type": "direct",
+          "source_locator": "FT",
+          "supports": "الإيراد والحصة 2026 والحسابات وAUC.",
+          "published_on": "2026-06-09"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Thndr Asset Management Licenses and Fund Growth",
+          "publisher": "Thndr",
+          "source_type": "official_license_and_metrics_announcement",
+          "url": "https://thndr.app/blogpost/thndr-secures-fra-asset-management-licenses-building-on-record-8-billion-egp-growth-in-retail-fund-investing/",
+          "evidence_type": "direct",
+          "source_locator": "Company",
+          "supports": "صفقات وقيمة وحصة 2024 وأصول الصناديق.",
+          "published_on": "2025-12-01"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Thndr $15.7 Million Funding Round",
+          "publisher": "Thndr",
+          "source_type": "official_funding_announcement",
+          "url": "https://thndr.app/blogpost/empowering-millions-thndrs-15-7m-raise-sets-the-stage-for-accelerated-gcc-growth/",
+          "evidence_type": "direct",
+          "source_locator": "Funding announcement",
+          "supports": "بيانات 2024 والتمويل.",
+          "published_on": "2025-05-21"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Thndr Tops FT Africa Growth Ranking 2026",
+          "publisher": "Thndr",
+          "source_type": "official_ranking_announcement",
+          "url": "https://thndr.app/blogpost/thndr-ranks-1-as-africas-fastest-growing-companies-2026-becoming-the-first-egyptian-company-to-lead-the-statista-financial-times-ranking/",
+          "evidence_type": "direct",
+          "source_locator": "Ranking",
+          "supports": "تصنيف النمو والتنزيلات.",
+          "published_on": "2026-05-14"
+        }
+      ],
+      "limitations": "CAGR محسوب من نقطتين شركة خاصة، والحصة ومقاييس الأصول لا تمثل نمو الإيراد.",
+      "calculation": {
+        "2021_revenue_usd": 120000,
+        "2024_revenue_usd": 8000000,
+        "revenue_multiple": 66.67,
+        "period_years": 3,
+        "formula": "(8,000,000 ÷ 120,000)^(1/3) - 1",
+        "calculated_revenue_cagr_percent": 305.48,
+        "2024_trades": 15600000,
+        "2024_traded_value_egp": 174000000000,
+        "2024_retail_market_share_percent": 11,
+        "2024_new_coded_retail_investors_share_percent": 82,
+        "funded_accounts_2025": 500000,
+        "funded_accounts_2026": 700000,
+        "funded_account_growth_percent": 40,
+        "first_four_months_2026_brokerage_value_share_percent": 12.9,
+        "assets_under_custody_usd_2026": 1000000000,
+        "mutual_fund_assets_egp_nov_2025": 8000000000
+      }
+    },
+    "$.financials.initial_investment": {
+      "field_value": "رأس المال الشخصي للمؤسسين غير معلن. شاركت ثاندر في Y Combinator وبدأت تمويلات مبكرة لم تُفصل الشركة قيمها علنًا بصورة كاملة. أغلقت Series A بقيمة 20 مليون دولار في فبراير 2022 بقيادة Tiger Global وBECO Capital وProsus Ventures، ثم أغلقت جولة إضافية بقيمة 15.7 مليون دولار في مايو 2025 بقيادة Prosus Ventures. أعلنت الشركة أن إجمالي رأس المال المجموع بلغ 37.76 مليون دولار، ما يعني أن التمويلات السابقة للجولتين الكبيرتين بلغت إجمالًا نحو 2.06 مليون دولار بالحساب، دون تفصيل كل جولة أو أداة.",
+      "verification_status": "verified_historical_funding",
+      "confidence": "high",
+      "claim_type": "founder_capital_undisclosed_early_funding_and_two_major_rounds",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت الشركة الجولتين الكبيرتين والإجمالي، بينما لا تفصل التمويلات المبكرة.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-08",
+        "SRC-07",
+        "SRC-02",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "Thndr $20 Million Series A",
+          "publisher": "Thndr",
+          "source_type": "official_funding_announcement",
+          "url": "https://thndr.app/blogpost/20-million-series-a-investment/",
+          "evidence_type": "direct",
+          "source_locator": "2022 round",
+          "supports": "20 مليون Series A.",
+          "published_on": "2022-02-07"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Thndr $15.7 Million Funding Round",
+          "publisher": "Thndr",
+          "source_type": "official_funding_announcement",
+          "url": "https://thndr.app/blogpost/empowering-millions-thndrs-15-7m-raise-sets-the-stage-for-accelerated-gcc-growth/",
+          "evidence_type": "direct",
+          "source_locator": "2025 round",
+          "supports": "15.7 مليون والإجمالي 37.76 مليون.",
+          "published_on": "2025-05-21"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "About Thndr",
+          "publisher": "Thndr",
+          "source_type": "official_company_page",
+          "url": "https://thndr.app/blogpost/about-us/",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "المستثمرون."
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Financial Times — Thndr Growth and 2026 Operating Metrics",
+          "publisher": "Financial Times",
+          "source_type": "high_quality_business_report",
+          "url": "https://www.ft.com/content/0af662bf-1672-40c5-bbd2-e9898f6ea001",
+          "evidence_type": "direct",
+          "source_locator": "FT",
+          "supports": "أربع جولات وYC.",
+          "published_on": "2026-06-09"
+        }
+      ],
+      "limitations": "الاشتقاق يحدد مجموعًا حسابيًا فقط، لا عدد الجولات أو شروطها أو المبالغ الفردية.",
+      "calculation": {
+        "founder_initial_capital": "not_publicly_disclosed",
+        "2022_series_a_usd": 20000000,
+        "2025_round_usd": 15700000,
+        "announced_total_funding_usd": 37760000,
+        "formula_for_earlier_funding": "37,760,000 - 20,000,000 - 15,700,000",
+        "derived_earlier_funding_total_usd": 2060000,
+        "early_round_breakdown": "not_publicly_disclosed"
+      }
+    },
+    "$.financials.valuation": {
+      "field_value": "غير معلن. ثاندر شركة خاصة ولم تنشر نسبة الأسهم في الجولات أو تقييمًا قبل أو بعد الاستثمار، ولا توجد صفقة استحواذ أو طرح عام تحدد قيمة سوقية. مبلغ التمويل الإجمالي البالغ 37.76 مليون دولار لا يساوي تقييم الشركة.",
+      "verification_status": "verified_as_not_publicly_valued",
+      "confidence": "high",
+      "claim_type": "private_company_valuation_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا تنشر الجولات نسب الأسهم أو تقييمًا، ولا توجد قيمة سوقية عامة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-07",
+        "SRC-08",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Thndr $15.7 Million Funding Round",
+          "publisher": "Thndr",
+          "source_type": "official_funding_announcement",
+          "url": "https://thndr.app/blogpost/empowering-millions-thndrs-15-7m-raise-sets-the-stage-for-accelerated-gcc-growth/",
+          "evidence_type": "direct",
+          "source_locator": "2025 funding",
+          "supports": "مبلغ الجولة دون تقييم.",
+          "published_on": "2025-05-21"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Thndr $20 Million Series A",
+          "publisher": "Thndr",
+          "source_type": "official_funding_announcement",
+          "url": "https://thndr.app/blogpost/20-million-series-a-investment/",
+          "evidence_type": "direct",
+          "source_locator": "2022 funding",
+          "supports": "Series A دون تقييم.",
+          "published_on": "2022-02-07"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Financial Times — Thndr Growth and 2026 Operating Metrics",
+          "publisher": "Financial Times",
+          "source_type": "high_quality_business_report",
+          "url": "https://www.ft.com/content/0af662bf-1672-40c5-bbd2-e9898f6ea001",
+          "evidence_type": "direct",
+          "source_locator": "FT",
+          "supports": "إجمالي التمويل لا تقييم.",
+          "published_on": "2026-06-09"
+        }
+      ],
+      "limitations": "لا يمكن تحويل رأس المال المجموع أو الإيراد أو الأصول تحت الحفظ إلى تقييم."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "عمولات ورسوم تنفيذ صفقات الأسهم والأدوات المالية في السوق المصري حسب التسعير والخطة",
+        "عمولات ورسوم تداول في سوق أبوظبي والأسواق الأمريكية، إضافة إلى رسوم تنظيمية ومقاصة أو حفظ تابعة لأطراف أخرى",
+        "اشتراك Thndr Trader بقيمة مرجعية معلنة 245 جنيهًا شهريًا، ويشمل 50 صفقة معفاة من عمولة ثاندر في السوق المصري ومزايا احترافية",
+        "اشتراكات أو باقات بيانات وأدوات تداول تتضمن ThndrX وبيانات لحظية وعمق السوق وتنبيهات",
+        "اشتراك Rumble للاستشارات والتحليلات والمحافظ البحثية",
+        "اقتصاديات توزيع صناديق الاستثمار التابعة لمديري أصول خارجيين، دون إفصاح عن نسبة ثاندر",
+        "رسوم إدارة الأصول والمحافظ والصناديق التي تصممها Thndr Asset Management بعد الحصول على التراخيص",
+        "رسم ثابت 1% على شراء Thndr Gold و1% على البيع",
+        "رسوم أو هوامش مرتبطة بمنتجات الادخار والصناديق المدارة، حسب نشرة كل صندوق وعقد التوزيع",
+        "خدمات الاكتتابات وزيادات رأس المال والحقوق والترويج وتغطية الاكتتاب بعد الترخيص التنظيمي، مع عدم نشر قيم العقود",
+        "فروق أو رسوم تحويل وتمويل وحفظ مرتبطة بالوصول الدولي عندما تكون منصوصًا عليها، دون افتراض أنها كلها إيراد صافٍ لثاندر",
+        "رسوم اشتراك أو خدمة للخطط الموجهة لفئات مستخدمين مختلفة",
+        "لا تُعد قيمة التداول أو الأصول تحت الحفظ أو أصول الصناديق إيرادًا للشركة",
+        "لا يوجد دليل منشور على أن الفائدة على أرصدة العملاء غير المستثمرة قناة إيراد مستقلة لثاندر"
+      ],
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "brokerage_subscription_advisory_fund_distribution_management_gold_and_capital_markets_channels",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المصادر الرسوم والاشتراك والاستشارة والصناديق والذهب وتراخيص أسواق رأس المال.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-05",
+        "SRC-06",
+        "SRC-20",
+        "SRC-09",
+        "SRC-10",
+        "SRC-24"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Thndr Fees",
+          "publisher": "Thndr Support",
+          "source_type": "official_fee_documentation",
+          "url": "https://thndr.app/support/docs/pricing/fees/",
+          "evidence_type": "direct",
+          "source_locator": "Fees",
+          "supports": "العمولات والرسوم.",
+          "published_on": "2025-07-22"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Introducing Thndr Trader",
+          "publisher": "Thndr",
+          "source_type": "official_subscription_announcement",
+          "url": "https://thndr.app/blogpost/introducing-thndr-trader-built-for-those-who-see-investing-as-a-craft-not-a-game/",
+          "evidence_type": "direct",
+          "source_locator": "Subscription",
+          "supports": "Trader subscription.",
+          "published_on": "2025-06"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Rumble Financial Advisory",
+          "publisher": "Thndr",
+          "source_type": "official_advisory_product_announcement",
+          "url": "https://thndr.app/blogpost/get-expert-financial-advice-with-rumble/",
+          "evidence_type": "direct",
+          "source_locator": "Advisory",
+          "supports": "Rumble.",
+          "published_on": "2023-11-12"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Thndr Asset Management Licenses and Fund Growth",
+          "publisher": "Thndr",
+          "source_type": "official_license_and_metrics_announcement",
+          "url": "https://thndr.app/blogpost/thndr-secures-fra-asset-management-licenses-building-on-record-8-billion-egp-growth-in-retail-fund-investing/",
+          "evidence_type": "direct",
+          "source_locator": "Asset management",
+          "supports": "Fund distribution and management.",
+          "published_on": "2025-12-01"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Thndr Gold",
+          "publisher": "Thndr",
+          "source_type": "official_gold_product_announcement",
+          "url": "https://thndr.app/blogpost/thndr-gold-the-easiest-way-to-buy-gold-in-egypt/",
+          "evidence_type": "direct",
+          "source_locator": "Gold",
+          "supports": "Gold 1%.",
+          "published_on": "2026-06-24"
+        },
+        {
+          "source_id": "SRC-24",
+          "title": "FRA Promotion and Underwriting License Approval",
+          "publisher": "Egyptian Financial Regulatory Authority",
+          "source_type": "official_regulatory_approval",
+          "url": "https://fra.gov.eg/en/fra_news/%D8%A7%D9%84%D8%B1%D9%82%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9-%D8%AA%D8%B5%D8%AF%D8%B1-11-%D9%85%D9%88%D8%A7%D9%81%D9%82%D8%A9-%D9%84%D9%82%D9%8A%D8%AF-%D9%85%D8%AA%D8%B9%D8%A7/",
+          "evidence_type": "direct",
+          "source_locator": "FRA approval",
+          "supports": "Promotion and underwriting.",
+          "published_on": "2025"
+        }
+      ],
+      "limitations": "القائمة تصف قنوات مؤكدة أو مرخصة؛ لا تنشر الشركة إيراد كل قناة أو ما إذا كانت كل صلاحية ولّدت إيرادًا."
+    },
+    "$.tools": {
+      "field_value": [
+        "تطبيق Thndr للهاتف ومنصة ويب للوصول إلى الحساب والاستثمار",
+        "فتح حساب رقمي والتحقق الإلكتروني وفق تراخيص وتقنيات FinTech المعتمدة",
+        "تداول الأسهم والأدوات المدرجة في البورصة المصرية",
+        "الوصول إلى الأسهم الأمريكية عبر Thndr Financial Ltd وشريك التنفيذ Alpaca",
+        "تداول سوق أبوظبي للأوراق المالية عبر كيان ADGM",
+        "أوامر سوق وأوامر محددة وأوامر متقدمة حسب دورة التسوية",
+        "أوامر استثمار دورية يومية أو أسبوعية أو شهرية للأسهم والصناديق",
+        "تمويل عبر Instapay والتحويل البنكي والإيداع النقدي وVodafone Cash وبطاقة الخصم حسب الأهلية",
+        "Instant Deposit يمنح قوة شرائية مؤقتة لمستخدمين مؤهلين قبل اكتمال وصول التحويل",
+        "سوق لصناديق الاستثمار يشمل الدخل الثابت والأسهم والذهب واستراتيجيات قطاعية",
+        "أكثر من 30 صندوقًا متاحًا على المنصة وفق إعلان ديسمبر 2025",
+        "Savings Clouds المبني على صندوق دخل ثابت",
+        "Thndr Gold المدعوم ماديًا بذهب عيار 24 والمُدار عبر Thndr Asset Management",
+        "شراء وبيع الذهب ابتداءً من 0.001 جرام ورسوم 1% لكل اتجاه",
+        "تخزين الذهب عبر EGYCASH وفق إعلان المنتج",
+        "Thndr Alpha لبناء Starter Pack وفق الهدف وتحمل المخاطر والأفق الزمني",
+        "Bulk Orders لتوزيع مبلغ على مكونات حزمة Alpha في عملية موجهة",
+        "ThndrX كمنصة Desktop-First للمتداولين النشطين",
+        "Thndr Trader باشتراك شهري و50 صفقة معفاة وبيانات لحظية وعمق سوق وتنبيهات",
+        "دفتر الأوامر والشموع السعرية وPrice Depth",
+        "Thndr Learn للمحتوى التعليمي المالي",
+        "Thndr Claps كنشرة مالية مبسطة",
+        "Virtual Mode بمحفظة افتراضية للتدريب",
+        "Rumble للاستشارات والتحليلات والمحافظ البحثية",
+        "الوصول إلى الاكتتابات العامة وزيادات رأس المال والحقوق عبر التطبيق عند الإتاحة",
+        "حاسبة زكاة استثمارية كأداة إرشادية داخل المنظومة",
+        "حسابات محافظ منفصلة حسب السوق والعملة",
+        "تحويل محفظة الأوراق الأمريكية عبر ACATS بالتنسيق مع Alpaca",
+        "بيانات لحظية وتنبيهات أسعار وأدوات بحث وتحليل حسب الاشتراك",
+        "تراخيص إدارة أصول ومحافظ وصندوق Thndr Equities متعدد الإصدارات",
+        "خيارات استثمار متوافقة مع الشريعة بحسب الصندوق أو المنتج ولجنته",
+        "دعم داخل التطبيق ومركز مساعدة متعدد اللغات",
+        "بنية تقنية معلنة جزئيًا تشمل Self-Managed Kubernetes وتحسين Redis، دون اعتبارها كشفًا كاملًا عن المعمارية"
+      ],
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "official_brokerage_funding_multi_asset_guidance_trading_advisory_and_asset_management_capabilities",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استُبدلت حزمة تقنية غير مثبتة بوظائف المنتج والتنظيم وتقنيات هندسية معلنة جزئيًا.",
+      "source_count": 13,
+      "source_ids": [
+        "SRC-01",
+        "SRC-13",
+        "SRC-14",
+        "SRC-18",
+        "SRC-19",
+        "SRC-10",
+        "SRC-11",
+        "SRC-06",
+        "SRC-20",
+        "SRC-09",
+        "SRC-23",
+        "SRC-25",
+        "SRC-26"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Thndr Home",
+          "publisher": "Thndr",
+          "source_type": "official_product_page",
+          "url": "https://thndr.app/",
+          "evidence_type": "direct",
+          "source_locator": "Homepage",
+          "supports": "المنتجات والتعلم والتمويل."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "US Portfolio Transfer and Alpaca",
+          "publisher": "Thndr Support",
+          "source_type": "official_us_market_documentation",
+          "url": "https://thndr.app/support/docs/acct-us-en/transferring-your-portfolio/",
+          "evidence_type": "direct",
+          "source_locator": "US",
+          "supports": "US and Alpaca.",
+          "published_on": "2024-12-08"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Thndr UAE and ADX Launch",
+          "publisher": "Thndr",
+          "source_type": "official_market_launch",
+          "url": "https://thndr.app/blog/celebrate-our-uae-launch-get-up-to-aed-300-with-our-promo-for-a-limited-time/",
+          "evidence_type": "direct",
+          "source_locator": "UAE",
+          "supports": "ADX.",
+          "published_on": "2025-08-17"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Order Types and Recurring Orders",
+          "publisher": "Thndr Support",
+          "source_type": "official_trading_documentation",
+          "url": "https://thndr.app/support/docs/egyptian-exchange-listed-stocks-etfs-en-en-en/order-types-and-statuses/",
+          "evidence_type": "direct",
+          "source_locator": "Orders",
+          "supports": "الأوامر الدورية.",
+          "published_on": "2025"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Thndr 101 and Funding",
+          "publisher": "Thndr Support",
+          "source_type": "official_onboarding_documentation",
+          "url": "https://thndr.app/support/docs/my-thndr-account-en-en-en/thndr-101-how-to-get-started/",
+          "evidence_type": "direct",
+          "source_locator": "Onboarding",
+          "supports": "Funding.",
+          "published_on": "2025-01-30"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Thndr Gold",
+          "publisher": "Thndr",
+          "source_type": "official_gold_product_announcement",
+          "url": "https://thndr.app/blogpost/thndr-gold-the-easiest-way-to-buy-gold-in-egypt/",
+          "evidence_type": "direct",
+          "source_locator": "Gold",
+          "supports": "Gold.",
+          "published_on": "2026-06-24"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Thndr Alpha",
+          "publisher": "Thndr",
+          "source_type": "official_guided_investing_product",
+          "url": "https://thndr.app/blogpost/thndr-alpha-your-first-step-into-investing/",
+          "evidence_type": "direct",
+          "source_locator": "Guidance",
+          "supports": "Alpha.",
+          "published_on": "2025-07-02"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Introducing Thndr Trader",
+          "publisher": "Thndr",
+          "source_type": "official_subscription_announcement",
+          "url": "https://thndr.app/blogpost/introducing-thndr-trader-built-for-those-who-see-investing-as-a-craft-not-a-game/",
+          "evidence_type": "direct",
+          "source_locator": "Pro trading",
+          "supports": "Trader and ThndrX.",
+          "published_on": "2025-06"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Rumble Financial Advisory",
+          "publisher": "Thndr",
+          "source_type": "official_advisory_product_announcement",
+          "url": "https://thndr.app/blogpost/get-expert-financial-advice-with-rumble/",
+          "evidence_type": "direct",
+          "source_locator": "Advice",
+          "supports": "Rumble.",
+          "published_on": "2023-11-12"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Thndr Asset Management Licenses and Fund Growth",
+          "publisher": "Thndr",
+          "source_type": "official_license_and_metrics_announcement",
+          "url": "https://thndr.app/blogpost/thndr-secures-fra-asset-management-licenses-building-on-record-8-billion-egp-growth-in-retail-fund-investing/",
+          "evidence_type": "direct",
+          "source_locator": "Asset management",
+          "supports": "Funds and asset management.",
+          "published_on": "2025-12-01"
+        },
+        {
+          "source_id": "SRC-23",
+          "title": "FRA FinTech Approval for Thndr",
+          "publisher": "Egyptian Financial Regulatory Authority",
+          "source_type": "official_regulatory_approval",
+          "url": "https://fra.gov.eg/en/fra_news/%D8%A7%D9%84%D8%B1%D9%82%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9-%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D9%84%D9%80-3-%D8%B4%D8%B1%D9%83%D8%A7%D8%AA-%D8%B9%D9%84%D9%89-%D9%85%D8%B2%D8%A7/",
+          "evidence_type": "direct",
+          "source_locator": "FRA",
+          "supports": "Digital KYC.",
+          "published_on": "2025"
+        },
+        {
+          "source_id": "SRC-25",
+          "title": "Thndr Equities Fund Register",
+          "publisher": "Egyptian Financial Regulatory Authority",
+          "source_type": "official_fund_register",
+          "url": "https://fra.gov.eg/en/company_records/%D8%B5%D9%86%D8%AF%D9%88%D9%82-%D8%A7%D8%B3%D8%AA%D8%AB%D9%85%D8%A7%D8%B1-%D8%AB%D8%A7%D9%86%D8%AF%D8%B1-%D9%84%D9%84%D8%A7%D8%B3%D9%87%D9%85-%D9%85%D8%AA%D8%B9%D8%AF%D8%AF-%D8%A7%D9%84%D8%A7%D8%B5/",
+          "evidence_type": "direct",
+          "source_locator": "Fund register",
+          "supports": "Thndr Equities.",
+          "published_on": "2026-01-14"
+        },
+        {
+          "source_id": "SRC-26",
+          "title": "Thndr Engineering Blog Index",
+          "publisher": "Thndr",
+          "source_type": "official_engineering_index",
+          "url": "https://thndr.app/blogpost/",
+          "evidence_type": "direct",
+          "source_locator": "Engineering index",
+          "supports": "Kubernetes and Redis disclosures."
+        }
+      ],
+      "limitations": "لا تمثل القائمة كشفًا كاملًا عن اللغات أو قواعد البيانات أو مزودي السحابة لكل خدمة."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Thndr Home",
+      "publisher": "Thndr",
+      "source_type": "official_product_page",
+      "url": "https://thndr.app/",
+      "supports": [
+        "4 ملايين+ مستخدم",
+        "الأسهم والذهب والصناديق",
+        "فتح الحساب والتمويل",
+        "Learn وVirtual Mode"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "About Thndr",
+      "publisher": "Thndr",
+      "source_type": "official_company_page",
+      "url": "https://thndr.app/blogpost/about-us/",
+      "supports": [
+        "المؤسسون والمهمة",
+        "87% مستثمرون لأول مرة تاريخيًا",
+        "50% خارج المدن الكبرى",
+        "Learn وClaps وVirtual Mode"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Thndr Securities Brokerage Register",
+      "publisher": "Egyptian Financial Regulatory Authority",
+      "source_type": "official_regulatory_register",
+      "published_on": "2020-08-12",
+      "url": "https://fra.gov.eg/en/company_records/%D8%AB%D8%A7%D9%86%D8%AF%D8%B1-%D9%84%D8%AA%D8%AF%D8%A7%D9%88%D9%84-%D8%A7%D9%84%D8%A7%D9%88%D8%B1%D8%A7%D9%82-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D9%87/",
+      "supports": [
+        "الترخيص رقم 804",
+        "نشاط السمسرة",
+        "عنوان الشركة في القاهرة"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Thndr Financial Ltd FSRA Register",
+      "publisher": "Abu Dhabi Global Market",
+      "source_type": "official_regulatory_register",
+      "published_on": "2026-06-27",
+      "url": "https://www.adgm.com/api/FSRAC_FirmPdf/GenerateFirmProfilePdf?FirmId=165847",
+      "supports": [
+        "FSP 240002",
+        "الترخيص منذ يناير 2024",
+        "التعامل كوكيل في الأسهم ووحدات الصناديق",
+        "عدم السماح بحيازة استثمارات العميل"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Thndr Fees",
+      "publisher": "Thndr Support",
+      "source_type": "official_fee_documentation",
+      "published_on": "2025-07-22",
+      "url": "https://thndr.app/support/docs/pricing/fees/",
+      "supports": [
+        "العمولات والرسوم تختلف حسب مصر وأمريكا والإمارات",
+        "رسوم تنظيمية ومقاصة وحفظ وضرائب",
+        "إعفاءات ضمن الاشتراكات"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Introducing Thndr Trader",
+      "publisher": "Thndr",
+      "source_type": "official_subscription_announcement",
+      "published_on": "2025-06",
+      "url": "https://thndr.app/blogpost/introducing-thndr-trader-built-for-those-who-see-investing-as-a-craft-not-a-game/",
+      "supports": [
+        "245 جنيهًا شهريًا",
+        "50 صفقة معفاة",
+        "ThndrX والبيانات اللحظية وعمق السوق",
+        "إيقاف Spark"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Thndr $15.7 Million Funding Round",
+      "publisher": "Thndr",
+      "source_type": "official_funding_announcement",
+      "published_on": "2025-05-21",
+      "url": "https://thndr.app/blogpost/empowering-millions-thndrs-15-7m-raise-sets-the-stage-for-accelerated-gcc-growth/",
+      "supports": [
+        "15.7 مليون دولار",
+        "إجمالي 37.76 مليون دولار",
+        "Prosus والمستثمرون",
+        "82% من المستثمرين الجدد في 2024",
+        "التوسع الإماراتي والسعودي"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Thndr $20 Million Series A",
+      "publisher": "Thndr",
+      "source_type": "official_funding_announcement",
+      "published_on": "2022-02-07",
+      "url": "https://thndr.app/blogpost/20-million-series-a-investment/",
+      "supports": [
+        "20 مليون دولار Series A",
+        "Tiger Global وBECO وProsus",
+        "المستثمرون المشاركون"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Thndr Asset Management Licenses and Fund Growth",
+      "publisher": "Thndr",
+      "source_type": "official_license_and_metrics_announcement",
+      "published_on": "2025-12-01",
+      "url": "https://thndr.app/blogpost/thndr-secures-fra-asset-management-licenses-building-on-record-8-billion-egp-growth-in-retail-fund-investing/",
+      "supports": [
+        "تراخيص إدارة الأصول والمحافظ",
+        "431 ألف مستثمر صناديق",
+        "8 مليارات جنيه أصول صناديق",
+        "30 صندوقًا",
+        "بيانات تداول 2024 والمستخدمين والتمويل"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Thndr Gold",
+      "publisher": "Thndr",
+      "source_type": "official_gold_product_announcement",
+      "published_on": "2026-06-24",
+      "url": "https://thndr.app/blogpost/thndr-gold-the-easiest-way-to-buy-gold-in-egypt/",
+      "supports": [
+        "ذهب عيار 24 مدعوم ماديًا",
+        "رسوم 1% شراء وبيع",
+        "0.001 جرام",
+        "EGYCASH",
+        "Thndr Asset Management"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Thndr Alpha",
+      "publisher": "Thndr",
+      "source_type": "official_guided_investing_product",
+      "published_on": "2025-07-02",
+      "url": "https://thndr.app/blogpost/thndr-alpha-your-first-step-into-investing/",
+      "supports": [
+        "أسئلة الهدف والمخاطر والأفق",
+        "Starter Pack",
+        "Bulk Orders",
+        "الأسهم والذهب وصناديق الادخار"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Thndr Product Keynote and ThndrX",
+      "publisher": "Thndr",
+      "source_type": "official_product_keynote",
+      "published_on": "2025-05-20",
+      "url": "https://thndr.app/blogpost/thndr-hosts-egypts-first-fintech-product-keynote-announces-asset-management-plans-unveils-thndrx-platform-for-traders-15-7m-funding-round-and-more/",
+      "supports": [
+        "ThndrX",
+        "Alpha",
+        "خطط إدارة الأصول",
+        "الجولة التمويلية"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "US Portfolio Transfer and Alpaca",
+      "publisher": "Thndr Support",
+      "source_type": "official_us_market_documentation",
+      "published_on": "2024-12-08",
+      "url": "https://thndr.app/support/docs/acct-us-en/transferring-your-portfolio/",
+      "supports": [
+        "الوصول إلى السوق الأمريكي",
+        "Alpaca",
+        "ACATS",
+        "Thndr Financial Ltd"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Thndr UAE and ADX Launch",
+      "publisher": "Thndr",
+      "source_type": "official_market_launch",
+      "published_on": "2025-08-17",
+      "url": "https://thndr.app/blog/celebrate-our-uae-launch-get-up-to-aed-300-with-our-promo-for-a-limited-time/",
+      "supports": [
+        "إطلاق ADX",
+        "خدمة الإمارات",
+        "تنظيم FSRA"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "GCCDIV ETF on ADX",
+      "publisher": "Thndr",
+      "source_type": "official_uae_product_article",
+      "published_on": "2026-06",
+      "url": "https://thndr.app/blogpost/what-is-gccdiv-and-why-should-you-care-about-this-etf/",
+      "supports": [
+        "ETF على ADX",
+        "اشتراك أولي",
+        "التداول عبر تطبيق ثاندر"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Mutual Funds 101",
+      "publisher": "Thndr Support",
+      "source_type": "official_fund_documentation",
+      "url": "https://thndr.app/support/docs/mutual-funds-en-en-en/mutual-funds-101/",
+      "supports": [
+        "توزيع صناديق الاستثمار",
+        "الفصل بين الوسيط ومدير الصندوق",
+        "المخاطر والاشتراك"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "CI Asset Management Sectoral Funds",
+      "publisher": "Thndr Support",
+      "source_type": "official_fund_marketplace_documentation",
+      "url": "https://thndr.app/support/docs/mutual-funds-en-en-en/ci-asset-management-sectoral-funds/",
+      "supports": [
+        "توفير صناديق مديري أصول خارجيين",
+        "الاشتراك عبر تطبيق ثاندر"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Order Types and Recurring Orders",
+      "publisher": "Thndr Support",
+      "source_type": "official_trading_documentation",
+      "published_on": "2025",
+      "url": "https://thndr.app/support/docs/egyptian-exchange-listed-stocks-etfs-en-en-en/order-types-and-statuses/",
+      "supports": [
+        "أوامر السوق والمحددة",
+        "الأوامر الدورية",
+        "حالات الطلب"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "Thndr 101 and Funding",
+      "publisher": "Thndr Support",
+      "source_type": "official_onboarding_documentation",
+      "published_on": "2025-01-30",
+      "url": "https://thndr.app/support/docs/my-thndr-account-en-en-en/thndr-101-how-to-get-started/",
+      "supports": [
+        "فتح الحساب",
+        "Instapay وVodafone Cash والتحويل",
+        "بدء الاستثمار"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "Rumble Financial Advisory",
+      "publisher": "Thndr",
+      "source_type": "official_advisory_product_announcement",
+      "published_on": "2023-11-12",
+      "url": "https://thndr.app/blogpost/get-expert-financial-advice-with-rumble/",
+      "supports": [
+        "Rumble منصة استشارة",
+        "العلاقة مع Axis Markets وفريق ثاندر"
+      ]
+    },
+    {
+      "id": "SRC-21",
+      "title": "Financial Times — Thndr Growth and 2026 Operating Metrics",
+      "publisher": "Financial Times",
+      "source_type": "high_quality_business_report",
+      "published_on": "2026-06-09",
+      "url": "https://www.ft.com/content/0af662bf-1672-40c5-bbd2-e9898f6ea001",
+      "supports": [
+        "8 ملايين دولار إيراد 2024 و120 ألفًا في 2021",
+        "مليار دولار أصول تحت الحفظ",
+        "700 ألف حساب ممول",
+        "5.5 ملايين تنزيل",
+        "12.9% حصة أول أربعة أشهر 2026",
+        "خطط التوسع والتركيبة الديمغرافية"
+      ]
+    },
+    {
+      "id": "SRC-22",
+      "title": "Thndr Tops FT Africa Growth Ranking 2026",
+      "publisher": "Thndr",
+      "source_type": "official_ranking_announcement",
+      "published_on": "2026-05-14",
+      "url": "https://thndr.app/blogpost/thndr-ranks-1-as-africas-fastest-growing-companies-2026-becoming-the-first-egyptian-company-to-lead-the-statista-financial-times-ranking/",
+      "supports": [
+        "5.5 ملايين تنزيل",
+        "75–80% مستثمرون لأول مرة",
+        "تصدر منصة التجزئة لثلاث سنوات",
+        "تصنيف النمو 2021–2024"
+      ]
+    },
+    {
+      "id": "SRC-23",
+      "title": "FRA FinTech Approval for Thndr",
+      "publisher": "Egyptian Financial Regulatory Authority",
+      "source_type": "official_regulatory_approval",
+      "published_on": "2025",
+      "url": "https://fra.gov.eg/en/fra_news/%D8%A7%D9%84%D8%B1%D9%82%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9-%D8%AA%D9%88%D8%A7%D9%81%D9%82-%D9%84%D9%80-3-%D8%B4%D8%B1%D9%83%D8%A7%D8%AA-%D8%B9%D9%84%D9%89-%D9%85%D8%B2%D8%A7/",
+      "supports": [
+        "التعرف والتحقق الإلكتروني",
+        "العناية الواجبة الإلكترونية",
+        "استخدام FinTech في الوساطة"
+      ]
+    },
+    {
+      "id": "SRC-24",
+      "title": "FRA Promotion and Underwriting License Approval",
+      "publisher": "Egyptian Financial Regulatory Authority",
+      "source_type": "official_regulatory_approval",
+      "published_on": "2025",
+      "url": "https://fra.gov.eg/en/fra_news/%D8%A7%D9%84%D8%B1%D9%82%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9-%D8%AA%D8%B5%D8%AF%D8%B1-11-%D9%85%D9%88%D8%A7%D9%81%D9%82%D8%A9-%D9%84%D9%82%D9%8A%D8%AF-%D9%85%D8%AA%D8%B9%D8%A7/",
+      "supports": [
+        "ترخيص الترويج وتغطية الاكتتاب"
+      ]
+    },
+    {
+      "id": "SRC-25",
+      "title": "Thndr Equities Fund Register",
+      "publisher": "Egyptian Financial Regulatory Authority",
+      "source_type": "official_fund_register",
+      "published_on": "2026-01-14",
+      "url": "https://fra.gov.eg/en/company_records/%D8%B5%D9%86%D8%AF%D9%88%D9%82-%D8%A7%D8%B3%D8%AA%D8%AB%D9%85%D8%A7%D8%B1-%D8%AB%D8%A7%D9%86%D8%AF%D8%B1-%D9%84%D9%84%D8%A7%D8%B3%D9%87%D9%85-%D9%85%D8%AA%D8%B9%D8%AF%D8%AF-%D8%A7%D9%84%D8%A7%D8%B5/",
+      "supports": [
+        "صندوق Thndr Equities متعدد الإصدارات",
+        "توسع إدارة الأصول"
+      ]
+    },
+    {
+      "id": "SRC-26",
+      "title": "Thndr Engineering Blog Index",
+      "publisher": "Thndr",
+      "source_type": "official_engineering_index",
+      "url": "https://thndr.app/blogpost/",
+      "supports": [
+        "Self-Managed Kubernetes",
+        "Redis latency engineering",
+        "عدم الحاجة لافتراض حزمة تقنية كاملة"
+      ]
+    }
   ]
 }

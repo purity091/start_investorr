@@ -1,53 +1,1652 @@
 {
   "id": "mozn",
   "slug": "mozn",
-  "name": "مزن (Mozn)",
-  "headline": "الدرع الواقي للقطاع المالي: رائدة الذكاء الاصطناعي في مكافحة الاحتيال",
-  "category": "DeepTech & FinTech / الذكاء الاصطناعي",
+  "name": "مُزن (MOZN)",
+  "headline": "من فهم الأسماء العربية إلى تشغيل قرارات عالية الحساسية: كيف بنت مُزن منصة سيادية لمكافحة الجرائم المالية وذكاء المعرفة المؤسسية",
+  "category": "Enterprise AI, RegTech & FinTech / الذكاء الاصطناعي المؤسسي ومكافحة الجرائم المالية",
   "company": {
-    "location": "الرياض، المملكة العربية السعودية",
-    "business_model": "اشتراكات برمجية للمؤسسات B2B SaaS (Enterprise)"
+    "location": "الرياض، المملكة العربية السعودية. تأسست مُزن في 2017 وتتخذ من الرياض مقرًا لها، مع مكتب ووجود تشغيلي في دولة الإمارات العربية المتحدة. تصف الشركة منصاتها بأنها متاحة للنشر عالميًا، لكن وجودها المكتبي المعلن حاليًا يتركز في السعودية والإمارات.",
+    "business_model": "منصة ذكاء اصطناعي مؤسسية B2B تخدم المجالات عالية الحساسية عبر خطين رئيسيين: منصة FOCAL لمكافحة الجرائم المالية والاحتيال والامتثال، ومنصة OSOS لذكاء المعرفة والبيانات المؤسسية. يجمع النموذج بين تراخيص واشتراكات المؤسسات، وبيع الوحدات والقدرات حسب الاستخدام، والتنفيذ والتكامل، والخدمات المهنية والتقييمات، وفرق الهندسة الميدانية Forward-Deployed Engineering، وخيارات النشر السحابي أو الهجين أو داخل بيئة العميل. لا تنشر مُزن الأسعار أو ACV أو مزيج الإيرادات."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات",
-    "monthly_traffic": "تحلل ملايين العمليات المالية للجهات الحكومية والبنوك"
+    "monthly_revenue": "غير معلن. مُزن شركة خاصة ولا تنشر إيرادات شهرية أو سنوية أو ARR أو قيمة عقود، لذلك حُذف ادعاء «ملايين الدولارات». لا يمكن اشتقاق الإيراد من التمويل أو عدد الموظفين أو الشراكات المصرفية أو نتائج دراسات الحالة.",
+    "monthly_traffic": "غير معلن. لا تنشر مُزن زيارات موقع أو مستخدمين نشطين أو عدد معاملات موحدًا للمنصة. ذكرت الشركة تاريخيًا أن واجهات FOCAL تستطيع معالجة آلاف عمليات الفحص يوميًا، لكن ذلك وصف قدرة تقنية وليس حجم استخدام فعلي. مؤشرات النطاق الأوضح هي أكثر من 300 موظف في السعودية والإمارات بحلول 2025، وتعاقدات معلنة مع مؤسسات مثل مصرف الراجحي وSTC Bank وبنك D360 وعبداللطيف جميل للتمويل."
   },
   "overview": {
     "problem": {
-      "text": "المؤسسات المالية تواجه تحديات هائلة في الامتثال (Compliance) ومكافحة غسيل الأموال والاحتيال المالي، والأنظمة العالمية تفتقر للفهم العميق للسوق المحلي واللغة العربية وتفاصيل الأسماء العربية.",
-      "impact": "غرامات بمليارات الدولارات على البنوك بسبب ثغرات الامتثال، وخسائر ضخمة نتيجة الاحتيال."
+      "text": "تعمل المؤسسات المالية والجهات المنظمة في بيئات تجمع أسماء عربية ولاتينية، وقوائم عقوبات وPEP، ورسائل دفع متعددة الصيغ، وسلوك أجهزة وحسابات ومعاملات موزعة على أنظمة مختلفة. الأنظمة التقليدية القائمة على قواعد ثابتة أو مطابقة حرفية قد تفوّت العلاقات أو تنتج تنبيهات كاذبة كثيرة، بينما تستنزف المراجعة اليدوية فرق الامتثال والتحقيق.",
+      "impact": "النتيجة ليست غرامات محتملة فقط؛ فالتنبيه الكاذب يبطئ التسجيل والمدفوعات ويستهلك وقت المحقق، والتنبيه الفائت يرفع الخسائر والمخاطر التنظيمية والسمعة. وفي المعرفة المؤسسية، يؤدي تشتت المستندات وقواعد البيانات وخبرة الموظفين إلى إعادة العمل وتأخر القرار وفقدان المعرفة عندما يغادر أصحابها."
     },
     "solution": {
-      "text": "بناء نظام (Focal) المدعوم بالذكاء الاصطناعي لمكافحة غسيل الأموال (AML) ومراقبة الاحتيال، مع محرك لغوي عربي فائق الدقة (OSOS) لفهم النصوص والبيانات الإقليمية بشكل لا تضاهيه الشركات الأجنبية."
+      "text": "توحّد FOCAL فحص العملاء والمعاملات، ومراقبة العمليات، وتقييم مخاطر العملاء، وإدارة الحالات، وإدارة الاحتيال المؤسسي، وذكاء الأجهزة والمدفوعات، ضمن بنية FRAML مدعومة بتعلم الآلة وAgentic AI. أضافت مُزن الفحص اللحظي لرسائل ISO 20022 وISO 15022، وAI Rule Builder لإنشاء ضوابط قابلة للمراجعة باللغة الطبيعية، وتحليلات الجرائم المالية. أما OSOS فتتيح Talk to Docs وTalk to Data والوصول الحواري إلى المعرفة وقواعد البيانات، مع نماذج متخصصة بالعربية وخيارات معالجة داخل بيئة العميل. تدعم فرق FDE التكامل وضبط القواعد وتحويل التجارب إلى تشغيل إنتاجي."
     }
   },
   "market_data": {
-    "target_audience": "البنوك، شركات التقنية المالية (Fintechs)، والهيئات الحكومية.",
-    "market_size": "سوق برمجيات الامتثال ومكافحة الاحتيال العالمي المتنامي بشراسة.",
-    "growth_rate": "جمعت الشركة تمويلاً ضخماً وتوسعت لتشمل عمليات في دول مجلس التعاون الخليجي وأوروبا."
+    "target_audience": "البنوك والبنوك الرقمية وشركات التقنية المالية والمدفوعات والتمويل والإقراض والتأمين والأسواق الرأسمالية والاتصالات والتجارة الإلكترونية والجهات التنظيمية والحكومات. تستهدف OSOS كذلك المؤسسات الكبيرة وشبه الحكومية والرعاية الصحية والإعلام والتقنية التي تمتلك مستندات وقواعد بيانات وأنظمة معرفة معقدة.",
+    "market_size": "لا تنشر مُزن رقمًا رسميًا أو دراسة مستقلة لحجم سوقها القابل للاستهداف. تجمع الشركة بين RegTech وFraud Management وAML/KYC وEnterprise Knowledge Intelligence وGenAI، لذلك لا يصلح رقم سوق واحد دون منهجية واضحة. مؤشرات نطاق الطلب تشمل رقمنة المدفوعات والامتثال في الخليج، وإتاحة FOCAL عالميًا، وشراكات مع بنوك وممولين سعوديين، وتغطية قطاعات مالية وحكومية وتجارية متعددة.",
+    "growth_rate": "لا تتوفر سلسلة إيرادات أو عملاء تسمح بحساب CAGR. المؤشرات المعلنة تشمل الانتقال من أكثر من 150 موظفًا ومكاتب في ثلاث دول في أوائل 2023 إلى أكثر من 250 موظفًا في السعودية والإمارات عام 2024 ثم أكثر من 300 في 2025، وإطلاق مكتب الإمارات والتوفر العالمي عبر Google Cloud Marketplace. كما توسعت FOCAL من AML إلى مكافحة الاحتيال وDevice Intelligence وPayment Intelligence وReal-Time Transaction Screening وAgentic AI، وأعلنت شراكات مع مؤسسات مالية كبرى في 2025."
   },
   "financials": {
-    "initial_investment": "استثمارات من صناديق رائدة مثل Shorooq Partners.",
-    "valuation": "غير معلن (عشرات إلى مئات الملايين)",
+    "initial_investment": "رأس المال الشخصي للمؤسسين والتمويل الأول غير معلنين. توثق Shorooq استثمارًا سابقًا في مُزن خلال 2021 دون نشر المبلغ، ثم أغلقت الشركة Series A بقيمة 10 ملايين دولار في فبراير 2023 بقيادة Raed Ventures، وبمشاركة Shorooq Partners وVentureSouq وSukna Ventures ومستثمرين آخرين. لم يُعثر على جولة لاحقة معلنة ومكتملة حتى تاريخ التحقق.",
+    "valuation": "غير معلن. لا تنشر مُزن أو مستثمروها نسبة الأسهم أو تقييم Series A، ولا توجد صفقة استحواذ أو طرح عام تمنح قيمة سوقية. عبارة «عشرات إلى مئات الملايين» في الملف الأصلي غير مدعومة، ولا يمكن حساب تقييم الشركة من مبلغ التمويل وحده.",
     "revenue_streams": [
-      "تراخيص واشتراكات نظام Focal للبنوك والمؤسسات",
-      "خدمات تحليل البيانات المتقدمة ومعالجة اللغات الطبيعية (NLP)"
+      "تراخيص أو اشتراكات FOCAL للمؤسسات حسب الوحدات والنطاق وحجم الاستخدام",
+      "وحدات Customer Screening وTransaction Monitoring وCustomer Risk Scoring وCase Management",
+      "Real-Time Transaction Screening ورسائل الدفع المتوافقة مع ISO 20022 وISO 15022 والصيغ المحلية",
+      "Enterprise Fraud Management وDevice Intelligence وEvent Intelligence وPayment Intelligence",
+      "Fraud Analytics وFinancial Crime Analytics وAgentic AI وAI Rule Builder",
+      "Fraud Management as a Service وخدمات تشغيل أو دعم مكافحة الاحتيال",
+      "اشتراكات وتراخيص OSOS لذكاء المعرفة المؤسسية",
+      "OSOS Talk to Docs وTalk to Data والوصول الحواري إلى المستندات وقواعد البيانات",
+      "التنفيذ والتكامل وواجهات API وترحيل وربط البيانات والأنظمة القائمة",
+      "الخدمات المهنية لضبط القواعد والنماذج وتقييمات المخاطر والامتثال وتحسين الأداء",
+      "فرق Forward-Deployed Engineering التي تعمل مع العميل حتى الوصول إلى تشغيل إنتاجي",
+      "الدعم والصيانة والتحديثات والتقييمات المستمرة بحسب العقد",
+      "نشر FOCAL عبر Google Cloud Marketplace أو السحابة والهجين وداخل بيئة العميل",
+      "نشر OSOS عبر OCI أو داخل البيئة المحلية مع متطلبات سيادة وخصوصية البيانات",
+      "حلول ذكاء اصطناعي مؤسسية مخصصة للحالات عالية الحساسية، دون إفصاح عن نسب الإيراد"
     ]
   },
   "lessons": [
     {
-      "title": "السيادة التقنية (Tech Sovereignty)",
-      "description": "في قطاعات حساسة كالأمن المالي، تفضل الحكومات والبنوك المركزية الاعتماد على تقنيات مبنية ومستضافة محلياً بدلاً من تصدير بياناتها لشركات أجنبية، مما أعطى (مزن) ميزة احتكارية هائلة."
+      "title": "التوطين في الامتثال يعني فهم الكيان لا ترجمة الواجهة",
+      "description": "الاسم العربي قد يحمل تهجئات ومسافات وألقابًا وترجمات لاتينية متعددة. القيمة تأتي من مطابقة الكيان والسياق عبر الأبجديات، لا من تحويل القوائم إلى العربية فقط."
     },
     {
-      "title": "قيمة البيانات غير المهيكلة",
-      "description": "أغلب البيانات في العالم العربي (مثل الأخبار ومواقع التواصل) غير مهيكلة وباللغة العربية. استثمرت مزن في بناء أفضل محرك ذكاء اصطناعي عربي (NLP) لتحليل هذه البيانات وتحويلها لمؤشرات للمخاطر المالية."
+      "title": "التنبيه الكاذب تكلفة تشغيل وتجربة عميل",
+      "description": "رفع الحساسية بلا تمييز قد يزيد عدد التنبيهات إلى حد يعطل المحققين والتسجيل والمدفوعات. النموذج الأفضل يوازن الاكتشاف والدقة ويقيس وقت المعالجة والضرر على العملاء الشرعيين."
+    },
+    {
+      "title": "FRAML الموحد يقلل الثغرات ويزيد مسؤولية المنصة",
+      "description": "ربط AML والاحتيال والأجهزة والمدفوعات والقضايا يمنح رؤية أوسع، لكنه يجعل جودة البيانات والتكامل والصلاحيات والتوافر عناصر حرجة في منصة واحدة."
+    },
+    {
+      "title": "الفحص اللحظي ليس مجرد نموذج أسرع",
+      "description": "العمل مع ISO 20022 وMT والصيغ المحلية يحتاج استخراج جميع الكيانات وقواعد حسب نوع الدفع والممر والمخاطر، مع زمن استجابة لا يوقف التجارة وسجل قرار يمكن مراجعته."
+    },
+    {
+      "title": "الذكاء التوكيلي يحتاج حدود قرار واضحة",
+      "description": "تلخيص القضية واقتراح الإجراء وإغلاق التنبيه منخفض المخاطر يوفر الوقت، لكنه يتطلب تحديد ما يفعله الوكيل تلقائيًا وما يحتاج موافقة بشرية، مع تفسير وتدقيق وتراجع."
+    },
+    {
+      "title": "بناء القواعد باللغة الطبيعية ينقل الاختناق ولا يلغيه",
+      "description": "AI Rule Builder يختصر البرمجة، لكن القاعدة لا تزال تحتاج بيانات صحيحة واختبارًا وموافقة ومراقبة أثر وإدارة إصدارات. سرعة الإنشاء يجب ألا تختصر الحوكمة."
+    },
+    {
+      "title": "فريق الهندسة الميدانية يبيع النتيجة لا المقعد البرمجي",
+      "description": "في المؤسسات المنظمة، التحدي الأكبر هو البيانات القديمة والعمليات والموافقات. FDE يقلل فجوة التجربة والإنتاج، لكنه يجعل النموذج أكثر اعتمادًا على خبرات تنفيذية يصعب توسيعها مثل SaaS ذاتي الخدمة."
+    },
+    {
+      "title": "المرونة في النشر ميزة مبيعات وتكلفة منتج",
+      "description": "السحابة وMarketplace وHybrid وOn-Prem تفتح عملاء ذوي متطلبات سيادية مختلفة، لكنها تضاعف مصفوفة الإصدارات والمراقبة والدعم والتحديث والأمن."
+    },
+    {
+      "title": "السيادة التقنية أوسع من موقع الخادم",
+      "description": "التحكم يتضمن مكان البيانات، والمفاتيح، وسجل الوصول، والنماذج، والاعتماد على مزود خارجي، وإمكانية التدقيق والتشغيل عند انقطاع الاتصال. الاستضافة المحلية وحدها لا تكفي."
+    },
+    {
+      "title": "شهادات الأمن جزء من مسار الشراء",
+      "description": "ISO 27001 وPDPL وضوابط NCA لا تولد الإيراد مباشرة، لكنها تقلل وقت مراجعة المورد وتثبت وجود سياسات ووثائق. في B2B المنظم، الثقة بنية مبيعات."
+    },
+    {
+      "title": "دراسة حالة ناجحة ليست متوسط أداء المنصة",
+      "description": "خفض الاحتيال 90% أو خسائر الاحتيال 38% أو وقت التسجيل 99% نتائج لعملاء وحالات محددة. لا يجوز تعميمها على كل مؤسسة دون قاعدة مقارنة وبيانات وتكوين مماثل."
+    },
+    {
+      "title": "الشراكة مع بنك تثبت التبني لا الإيراد",
+      "description": "إعلان STC Bank أو الراجحي أو D360 يثبت علاقة أو نشرًا، لكنه لا يكشف قيمة العقد أو مدة الاشتراك أو ARR أو الهامش. يجب فصل شعارات العملاء عن المؤشرات المالية."
+    },
+    {
+      "title": "حجم المعاملات لا يساوي حركة الموقع أو إيراد الشركة",
+      "description": "قد تفحص المنصة معاملات أو أسماء داخل أنظمة العميل دون دخول مستخدم إلى موقع مُزن. عدد الفحوصات مقياس بنية وتشغيل، وليس Traffic أو إيرادًا إلا إذا ربطه العقد بالتسعير."
+    },
+    {
+      "title": "OSOS توسع السوق وتخلق مفاضلة تركيز",
+      "description": "الانتقال من الجرائم المالية إلى معرفة المؤسسة يفتح الحكومات والصحة والاتصالات، لكنه يحتاج مبيعات ومنتجًا ومنافسين مختلفين. مشاركة اللغة والبنية لا تعني تطابق دورة الشراء."
+    },
+    {
+      "title": "الوصول الحواري للبيانات لا يلغي طبقة المعنى",
+      "description": "تحويل السؤال إلى SQL مفيد، لكن المصطلحات التجارية والصلاحيات وجودة الجداول والتعريفات يجب أن تكون محكومة. إجابة سريعة من بيانات غير متسقة تسرع القرار الخاطئ."
+    },
+    {
+      "title": "التمويل لا يثبت التقييم أو الإيراد",
+      "description": "Series A بقيمة 10 ملايين دولار تثبت رأس مال جديدًا وثقة مستثمرين، لكنها لا تكشف نسبة الملكية أو قيمة الشركة أو الأداء المالي. يجب إبقاء الحقول الثلاثة منفصلة."
     }
   ],
   "tools": [
-    "Python",
-    "Deep Learning / AI",
-    "Arabic NLP",
-    "Big Data / Hadoop"
+    "FOCAL Financial Crime Prevention Platform ضمن بنية FRAML موحدة",
+    "Customer Screening للأسماء العربية واللاتينية وقوائم العقوبات وPEP والمراقبة المستمرة",
+    "Transaction Monitoring بقواعد وسلوك تاريخي وتنبيهات وتحقيقات",
+    "Customer Risk Scoring قابل للتهيئة حسب شهية المخاطر والسياسات",
+    "Real-Time Transaction Screening لجميع كيانات رسالة الدفع",
+    "دعم ISO 20022 MX وISO 15022 MT وصيغ دفع محلية مخصصة",
+    "Screening Templates لضوابط مختلفة حسب نوع الدفع والممر والجغرافيا",
+    "Case Management وسير عمل التحقيق والتصعيد والتوثيق",
+    "Enterprise Fraud Management عبر رحلة العميل كاملة",
+    "Device Intelligence وDevice Fingerprinting وإشارات السلوك والجغرافيا والتاريخ",
+    "Event Intelligence وPayment Intelligence لقرارات لحظية وحظر أو تعليق أو تصعيد",
+    "Fraud Analytics وFinancial Crime Analytics لاكتشاف الأنماط والعلاقات",
+    "Agentic AI لتلخيص القضايا والتوصيات وأتمتة بعض التنبيهات منخفضة المخاطر",
+    "AI Rule Builder لإنشاء قواعد الاحتيال باللغة الطبيعية مع مراجعة واعتماد وتتبع",
+    "Fraud Management as a Service وخدمات تقييم وضبط ومتابعة",
+    "واجهات API لدمج التسجيل والفحص والمراقبة مع الأنظمة الداخلية",
+    "تكامل Yakeen للتحقق من الهوية في دراسة حالة منشورة",
+    "OSOS Enterprise Knowledge Intelligence لبناء ذاكرة مؤسسية موحدة",
+    "OSOS Talk to Docs لاستخراج وتلخيص المعرفة من المستندات",
+    "OSOS Talk to Data لتحويل اللغة الطبيعية إلى استعلامات بيانات واعية بالسياق",
+    "نماذج عربية ومتخصصة بالقطاع ومعالجة محلية داخل بيئة المؤسسة",
+    "Forward-Deployed Engineering للتكامل والتخصيص ونقل النموذج إلى الإنتاج",
+    "نشر On-Premises وCloud وHybrid باستخدام تقنيات Red Hat Hybrid Cloud",
+    "FOCAL عبر Google Cloud Marketplace للتوفر والنشر العالمي",
+    "OSOS على Oracle Cloud Infrastructure وفق مذكرة التعاون",
+    "Trust Center ووثائق أمن ومراجعات مورّد متاحة للعملاء",
+    "امتثال معلن لـISO/IEC 27001 وGDPR وPDPL وضوابط NCA CCC وECC",
+    "تعلم آلي قابل للحوكمة وتفسير ومراجعة بشرية في الحالات عالية الحساسية",
+    "فرق خدمات مهنية لضبط السياسات والقواعد والتقييم المستمر",
+    "منصة تشغيل متاحة لقطاعات البنوك والتقنية المالية والتأمين والحكومة والتجارة والاتصالات"
+  ],
+  "verification": {
+    "status": "verified_from_mozn_official_product_funding_security_partner_and_case_study_sources",
+    "verified_on": "2026-08-03",
+    "source_policy": "تم إعطاء الأولوية لموقع مُزن ومنتجاتها وغرفة الأخبار ومركز الثقة، وإعلانات الشراكات والتمويل الرسمية، ثم صفحات المستثمرين المباشرين. عوملت نتائج دراسات الحالة والمقاييس التشغيلية كادعاءات شركة خاصة بحالات محددة، ولم تُستخدم كمتوسطات عامة.",
+    "important_notes": [
+      "لا تنشر مُزن إيرادات أو ARR أو MRR أو قيمة عقود، لذلك حُذف ادعاء «ملايين الدولارات».",
+      "لا تنشر الشركة حجم معاملات أو فحوصات شهريًا؛ وصف معالجة آلاف الفحوصات يوميًا يعود لقدرة API منشورة في 2022 وليس استخدامًا فعليًا موحدًا.",
+      "التمويل المؤكد هو Series A بقيمة 10 ملايين دولار في 2023، مع استثمار سابق من Shorooq غير معلن القيمة.",
+      "لم يُعثر على جولة لاحقة مكتملة ومعلنة حتى 3 أغسطس 2026.",
+      "تقييم الشركة ونسب ملكية المستثمرين غير معلنة، ولا يمكن حسابها من مبلغ الجولة وحده.",
+      "المكاتب المعلنة حاليًا في السعودية والإمارات؛ إشارة مكتب المملكة المتحدة ظهرت في مادة 2023 ولم تعد ضمن مواقع الموقع الحالي.",
+      "أكثر من 300 موظف رقم شركة معلن في 2025، وليس عدد مستخدمين أو عملاء.",
+      "مُزن تعرض FOCAL وOSOS كمنتجين رئيسيين؛ FOCAL لم يعد مجرد AML بل منصة موحدة لمكافحة الجرائم المالية والاحتيال.",
+      "OSOS تطورت من NLU عربي إلى Enterprise Knowledge Intelligence مع Talk to Docs وTalk to Data.",
+      "نتائج 90% و99% و38% تخص دراسات حالات محددة ومجهولة الاسم جزئيًا، ولا تضمن نتيجة مماثلة لكل عميل.",
+      "اتفاقيات الراجحي وSTC Bank وD360 وعبداللطيف جميل تثبت شراكات أو نشرًا، لكنها لا تكشف الإيراد.",
+      "قائمة 1,300+ عقوبات وPEP منشورة في 2022–2023، وقد تتغير مع مزود البيانات؛ لم تُستخدم كمقياس حالي ثابت في snapshot.",
+      "التعرف على الاسم العربي ميزة مهمة، لكن ادعاء «أفضل محرك عالمي» غير مثبت كمقارنة شاملة مستقلة.",
+      "تم حذف Python وHadoop كحزمة تقنية حالية؛ لم تنشر الشركة قائمة موحدة للبنية واللغات الداخلية.",
+      "Google Cloud وOCI وRed Hat خيارات أو شراكات نشر، ولا تعني أن جميع العملاء أو البيانات تعمل على مزود واحد.",
+      "شهادات وضوابط Trust Center تعكس وضعًا معلنًا وقد تتطلب طلب وثائق خاصة للتحقق من النطاق والتواريخ."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول بالقيم والمصادر وحالة التحقق، مع الفصل بين الإيراد والتمويل والتقييم والقدرة التقنية وحجم الاستخدام.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي أو مستثمر مباشر.",
+      "verified_as_not_publicly_disclosed": "لم تنشر الشركة المقياس، ولذلك لم يُستخدم تقدير.",
+      "verified_capability_not_usage_volume": "المصدر يثبت سعة أو وظيفة تقنية لا حجم تشغيل فعلي.",
+      "verified_company_reported_scale": "الرقم صادر عن الشركة الخاصة ولا يمثل بيانات مالية مدققة.",
+      "verified_historical_funding": "التمويل وتاريخه ومستثمروه موثقون.",
+      "verified_as_not_publicly_valued": "لا توجد نسبة أسهم أو صفقة تسمح بإثبات تقييم.",
+      "verified_product_capability": "القدرة موثقة في صفحة منتج أو إعلان رسمي.",
+      "verified_case_study_specific": "النتيجة تخص عميلًا أو حالة محددة ولا تُعمم.",
+      "verified_partnership_not_revenue": "العلاقة التجارية معلنة لكن قيمتها المالية غير منشورة.",
+      "verified_security_posture": "المعيار أو الوثيقة ظاهر في Trust Center مع احتمال وجود نطاق خاص.",
+      "analytical_inference": "تحليل مهني مبني على أدلة وليس تصريحًا حرفيًا من الشركة."
+    },
+    "confidence_scale": {
+      "high": "صفحة مُزن الرسمية أو Trust Center أو إعلان مستثمر مباشر.",
+      "medium_high": "دراسة حالة أو تصريح شركة واضح مع قيود تعريف.",
+      "medium": "رقم تاريخي أو قدرة تحتاج إلى تحقق من النطاق أو التحديث."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "الرياض، المملكة العربية السعودية. تأسست مُزن في 2017 وتتخذ من الرياض مقرًا لها، مع مكتب ووجود تشغيلي في دولة الإمارات العربية المتحدة. تصف الشركة منصاتها بأنها متاحة للنشر عالميًا، لكن وجودها المكتبي المعلن حاليًا يتركز في السعودية والإمارات.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "riyadh_headquarters_uae_office_and_global_deployment",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تتطابق صفحات الشركة والمستثمرين على الرياض، وتوثق مُزن مكتب الإمارات والتوفر العالمي.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-06",
+        "SRC-08",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About MOZN",
+          "publisher": "MOZN",
+          "source_type": "official_company_page",
+          "url": "https://www.mozn.ai/about",
+          "evidence_type": "direct",
+          "source_locator": "About → Locations",
+          "supports": "المواقع السعودية والإماراتية."
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Shorooq's Investment in MOZN",
+          "publisher": "Shorooq",
+          "source_type": "direct_investor_perspective",
+          "url": "https://www.shorooq.com/perspectives/startup-series-our-investment-in-saudi-arabias-mozn",
+          "evidence_type": "direct",
+          "source_locator": "Investor perspective",
+          "supports": "المقر في الرياض.",
+          "published_on": "2022-08-03"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "MOZN Launches UAE and GCC Expansion",
+          "publisher": "MOZN",
+          "source_type": "official_expansion_announcement",
+          "url": "https://www.mozn.ai/blog/saudi-arabias-ai-powerhouse-mozn-announces-gcc-expansion-as-it-launches-into-the-uae",
+          "evidence_type": "direct",
+          "source_locator": "UAE expansion",
+          "supports": "إطلاق مكتب الإمارات.",
+          "published_on": "2023-05-09"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "MOZN Intelligence Platform",
+          "publisher": "MOZN",
+          "source_type": "official_platform_page",
+          "url": "https://www.mozn.ai/",
+          "evidence_type": "direct",
+          "source_locator": "Homepage FAQ",
+          "supports": "التوفر العالمي."
+        }
+      ],
+      "limitations": "لا يثبت التوفر العالمي وجود مكاتب أو كيانات قانونية في كل سوق."
+    },
+    "$.company.business_model": {
+      "field_value": "منصة ذكاء اصطناعي مؤسسية B2B تخدم المجالات عالية الحساسية عبر خطين رئيسيين: منصة FOCAL لمكافحة الجرائم المالية والاحتيال والامتثال، ومنصة OSOS لذكاء المعرفة والبيانات المؤسسية. يجمع النموذج بين تراخيص واشتراكات المؤسسات، وبيع الوحدات والقدرات حسب الاستخدام، والتنفيذ والتكامل، والخدمات المهنية والتقييمات، وفرق الهندسة الميدانية Forward-Deployed Engineering، وخيارات النشر السحابي أو الهجين أو داخل بيئة العميل. لا تنشر مُزن الأسعار أو ACV أو مزيج الإيرادات.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "enterprise_ai_software_modules_deployment_and_forward_deployed_services",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تعرض الشركة خطي المنتجات، والخدمات المهنية، والهندسة الميدانية، وخيارات النشر.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-04",
+        "SRC-17",
+        "SRC-24"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "MOZN Intelligence Platform",
+          "publisher": "MOZN",
+          "source_type": "official_platform_page",
+          "url": "https://www.mozn.ai/",
+          "evidence_type": "direct",
+          "source_locator": "Platform page",
+          "supports": "FOCAL وOSOS وFDE وSovereign AI."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "FOCAL Financial Crime Prevention",
+          "publisher": "MOZN",
+          "source_type": "official_product_page",
+          "url": "https://www.mozn.ai/focal",
+          "evidence_type": "direct",
+          "source_locator": "Product page",
+          "supports": "FOCAL والخدمات المهنية."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "OSOS Enterprise Knowledge Intelligence",
+          "publisher": "MOZN",
+          "source_type": "official_product_page",
+          "url": "https://www.mozn.ai/osos",
+          "evidence_type": "direct",
+          "source_locator": "Product page",
+          "supports": "OSOS والتنفيذ."
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "MOZN and Red Hat Hybrid Cloud",
+          "publisher": "MOZN",
+          "source_type": "official_deployment_partnership",
+          "url": "https://www.mozn.ai/blog/mozn-joins-forces-with-red-hat-to-offer-state-of-the-art-aml-capabilities-to-regional-enterprises",
+          "evidence_type": "direct",
+          "source_locator": "Red Hat",
+          "supports": "السحابة والهجين وداخل البيئة.",
+          "published_on": "2022-10-18"
+        },
+        {
+          "source_id": "SRC-24",
+          "title": "Money Mule Detection with Forward-Deployed Teams",
+          "publisher": "MOZN",
+          "source_type": "official_customer_case_study",
+          "url": "https://www.mozn.ai/blog/rethinking-money-mule-detection-how-a-leading-bank-in-saudi-arabia-scaled-detection-through-forward-deployed-team-led-delivery",
+          "evidence_type": "direct",
+          "source_locator": "Case study",
+          "supports": "الهندسة الميدانية.",
+          "published_on": "2026-05-13"
+        }
+      ],
+      "limitations": "لا تنشر الشركة التسعير أو ACV أو نسبة البرمجيات إلى الخدمات."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. مُزن شركة خاصة ولا تنشر إيرادات شهرية أو سنوية أو ARR أو قيمة عقود، لذلك حُذف ادعاء «ملايين الدولارات». لا يمكن اشتقاق الإيراد من التمويل أو عدد الموظفين أو الشراكات المصرفية أو نتائج دراسات الحالة.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "private_company_revenue_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لم تنشر مُزن إيرادًا أو ARR، وتقتصر المصادر على التمويل والمنتجات والشراكات.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-05",
+        "SRC-03",
+        "SRC-04",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "MOZN Raises $10 Million Series A",
+          "publisher": "MOZN",
+          "source_type": "official_funding_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-raises-10-million-series-a-to-scale-saas-ai-across-mena",
+          "evidence_type": "direct",
+          "source_locator": "Series A",
+          "supports": "التمويل دون إيرادات.",
+          "published_on": "2023-02-10"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "FOCAL Financial Crime Prevention",
+          "publisher": "MOZN",
+          "source_type": "official_product_page",
+          "url": "https://www.mozn.ai/focal",
+          "evidence_type": "direct",
+          "source_locator": "FOCAL",
+          "supports": "المنتج دون تسعير."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "OSOS Enterprise Knowledge Intelligence",
+          "publisher": "MOZN",
+          "source_type": "official_product_page",
+          "url": "https://www.mozn.ai/osos",
+          "evidence_type": "direct",
+          "source_locator": "OSOS",
+          "supports": "OSOS دون تسعير."
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "STC Bank Deploys FOCAL",
+          "publisher": "MOZN",
+          "source_type": "official_customer_partnership",
+          "url": "https://www.mozn.ai/blog/stc-bank-partners-with-mozn-to-strengthen-financial-crime-prevention-with-focal-platform",
+          "evidence_type": "direct",
+          "source_locator": "STC Bank",
+          "supports": "شراكة دون قيمة عقد.",
+          "published_on": "2025-09-30"
+        }
+      ],
+      "limitations": "لا يمكن اشتقاق الإيراد من مبلغ الجولة أو الموظفين أو العملاء المعلنين."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن. لا تنشر مُزن زيارات موقع أو مستخدمين نشطين أو عدد معاملات موحدًا للمنصة. ذكرت الشركة تاريخيًا أن واجهات FOCAL تستطيع معالجة آلاف عمليات الفحص يوميًا، لكن ذلك وصف قدرة تقنية وليس حجم استخدام فعلي. مؤشرات النطاق الأوضح هي أكثر من 300 موظف في السعودية والإمارات بحلول 2025، وتعاقدات معلنة مع مؤسسات مثل مصرف الراجحي وSTC Bank وبنك D360 وعبداللطيف جميل للتمويل.",
+      "verification_status": "verified_capability_not_usage_volume",
+      "confidence": "high",
+      "claim_type": "usage_and_transaction_volume_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا توجد MAU أو Traffic أو حجم معاملات موحد؛ يتوفر فقط وصف قدرة تاريخية ومؤشرات موظفين وشراكات.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-17",
+        "SRC-14",
+        "SRC-19",
+        "SRC-20",
+        "SRC-21",
+        "SRC-22"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-17",
+          "title": "MOZN and Red Hat Hybrid Cloud",
+          "publisher": "MOZN",
+          "source_type": "official_deployment_partnership",
+          "url": "https://www.mozn.ai/blog/mozn-joins-forces-with-red-hat-to-offer-state-of-the-art-aml-capabilities-to-regional-enterprises",
+          "evidence_type": "direct",
+          "source_locator": "Red Hat announcement",
+          "supports": "آلاف الفحوصات يوميًا كقدرة API تاريخية.",
+          "published_on": "2022-10-18"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "OSOS Talk to Data",
+          "publisher": "MOZN",
+          "source_type": "official_genai_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-launches-osos-talk-to-data-at-leap-2025-advancing-genai-driven-data-accessibility",
+          "evidence_type": "direct",
+          "source_locator": "OSOS announcement",
+          "supports": "300+ موظف.",
+          "published_on": "2025-02-10"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "STC Bank Deploys FOCAL",
+          "publisher": "MOZN",
+          "source_type": "official_customer_partnership",
+          "url": "https://www.mozn.ai/blog/stc-bank-partners-with-mozn-to-strengthen-financial-crime-prevention-with-focal-platform",
+          "evidence_type": "direct",
+          "source_locator": "Partnership",
+          "supports": "STC Bank.",
+          "published_on": "2025-09-30"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "AlRajhi Bank and MOZN Fraud Partnership",
+          "publisher": "MOZN",
+          "source_type": "official_customer_partnership",
+          "url": "https://www.mozn.ai/blog/alrajhi-bank-partners-with-mozn-to-harness-ai-in-the-fight-against-fraud",
+          "evidence_type": "direct",
+          "source_locator": "Partnership",
+          "supports": "مصرف الراجحي.",
+          "published_on": "2025-10-20"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "D360 Bank and MOZN Partnership",
+          "publisher": "MOZN",
+          "source_type": "official_customer_partnership",
+          "url": "https://www.mozn.ai/ar/blog/mozn-and-d360-bank-partner-to-accelerate-digital-banking-security-compliance-in-saudi-arabia",
+          "evidence_type": "direct",
+          "source_locator": "Partnership",
+          "supports": "D360 Bank.",
+          "published_on": "2025-03-11"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Abdul Latif Jameel Finance and MOZN",
+          "publisher": "MOZN",
+          "source_type": "official_customer_partnership",
+          "url": "https://www.mozn.ai/blog/abdul-latif-jameel-finance-and-mozn-collaborate-to-revolutionize-financial-fraud-prevention",
+          "evidence_type": "direct",
+          "source_locator": "Partnership",
+          "supports": "عبداللطيف جميل للتمويل.",
+          "published_on": "2025-02-26"
+        }
+      ],
+      "limitations": "الشراكات لا تكشف عدد المستخدمين أو الفحوصات، والقدرة التقنية لا تساوي استخدامًا فعليًا."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "تعمل المؤسسات المالية والجهات المنظمة في بيئات تجمع أسماء عربية ولاتينية، وقوائم عقوبات وPEP، ورسائل دفع متعددة الصيغ، وسلوك أجهزة وحسابات ومعاملات موزعة على أنظمة مختلفة. الأنظمة التقليدية القائمة على قواعد ثابتة أو مطابقة حرفية قد تفوّت العلاقات أو تنتج تنبيهات كاذبة كثيرة، بينما تستنزف المراجعة اليدوية فرق الامتثال والتحقيق.",
+        "impact": "النتيجة ليست غرامات محتملة فقط؛ فالتنبيه الكاذب يبطئ التسجيل والمدفوعات ويستهلك وقت المحقق، والتنبيه الفائت يرفع الخسائر والمخاطر التنظيمية والسمعة. وفي المعرفة المؤسسية، يؤدي تشتت المستندات وقواعد البيانات وخبرة الموظفين إلى إعادة العمل وتأخر القرار وفقدان المعرفة عندما يغادر أصحابها."
+      },
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "fragmented_financial_crime_data_arabic_entity_matching_and_enterprise_knowledge_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تشرح منتجات مُزن الأنظمة المتفرقة والمطابقة والسلوك والتنبيهات، بينما تشرح OSOS تشتت المعرفة.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-09",
+        "SRC-08",
+        "SRC-12",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "Next-Generation Real-Time Transaction Screening",
+          "publisher": "MOZN",
+          "source_type": "official_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-unveils-next-generation-real-time-transaction-screening-technology-to-redefine-compliance-for-modern-payment-ecosystems",
+          "evidence_type": "direct",
+          "source_locator": "RTS announcement",
+          "supports": "تجزؤ أنظمة الامتثال والتنبيهات الكاذبة.",
+          "published_on": "2026-05-18"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "MOZN Launches UAE and GCC Expansion",
+          "publisher": "MOZN",
+          "source_type": "official_expansion_announcement",
+          "url": "https://www.mozn.ai/blog/saudi-arabias-ai-powerhouse-mozn-announces-gcc-expansion-as-it-launches-into-the-uae",
+          "evidence_type": "direct",
+          "source_locator": "UAE expansion",
+          "supports": "مطابقة الأسماء العربية واللاتينية.",
+          "published_on": "2023-05-09"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Payment Intelligence",
+          "publisher": "MOZN",
+          "source_type": "official_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-launches-payment-intelligence-setting-a-new-standard-for-real-time-fraud-prevention-in-mena",
+          "evidence_type": "direct",
+          "source_locator": "Payment Intelligence",
+          "supports": "إشارات الأجهزة والسلوك والمعاملات.",
+          "published_on": "2025-09-16"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "OSOS Enterprise Knowledge Intelligence",
+          "publisher": "MOZN",
+          "source_type": "official_product_page",
+          "url": "https://www.mozn.ai/osos",
+          "evidence_type": "direct",
+          "source_locator": "OSOS",
+          "supports": "تشتت المعرفة والمستندات."
+        }
+      ],
+      "limitations": "لا يستخدم الملف رقم غرامات عالميًا أو خسائر إقليمية دون مصدر أولي محدد."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "توحّد FOCAL فحص العملاء والمعاملات، ومراقبة العمليات، وتقييم مخاطر العملاء، وإدارة الحالات، وإدارة الاحتيال المؤسسي، وذكاء الأجهزة والمدفوعات، ضمن بنية FRAML مدعومة بتعلم الآلة وAgentic AI. أضافت مُزن الفحص اللحظي لرسائل ISO 20022 وISO 15022، وAI Rule Builder لإنشاء ضوابط قابلة للمراجعة باللغة الطبيعية، وتحليلات الجرائم المالية. أما OSOS فتتيح Talk to Docs وTalk to Data والوصول الحواري إلى المعرفة وقواعد البيانات، مع نماذج متخصصة بالعربية وخيارات معالجة داخل بيئة العميل. تدعم فرق FDE التكامل وضبط القواعد وتحويل التجارب إلى تشغيل إنتاجي."
+      },
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "unified_framl_agentic_ai_real_time_screening_and_enterprise_knowledge_platform",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم المصادر مكونات FOCAL وRTS وAI Rule Builder وOSOS وFDE.",
+      "source_count": 7,
+      "source_ids": [
+        "SRC-03",
+        "SRC-09",
+        "SRC-10",
+        "SRC-11",
+        "SRC-12",
+        "SRC-14",
+        "SRC-24"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "FOCAL Financial Crime Prevention",
+          "publisher": "MOZN",
+          "source_type": "official_product_page",
+          "url": "https://www.mozn.ai/focal",
+          "evidence_type": "direct",
+          "source_locator": "Product",
+          "supports": "FOCAL وAgentic AI."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Next-Generation Real-Time Transaction Screening",
+          "publisher": "MOZN",
+          "source_type": "official_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-unveils-next-generation-real-time-transaction-screening-technology-to-redefine-compliance-for-modern-payment-ecosystems",
+          "evidence_type": "direct",
+          "source_locator": "Product announcement",
+          "supports": "RTS وFRAML وISO.",
+          "published_on": "2026-05-18"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "AI Rule Builder",
+          "publisher": "MOZN",
+          "source_type": "official_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-redefines-fraud-response-from-days-to-minutes-with-ai-rule-builders",
+          "evidence_type": "direct",
+          "source_locator": "Product announcement",
+          "supports": "AI Rule Builder.",
+          "published_on": "2026-06-09"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Agentic AI for Financial Crime Prevention",
+          "publisher": "MOZN",
+          "source_type": "official_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-launches-agentic-ai-for-financial-crime-prevention-strengthening-regional-leadership-at-seamless-middle-east-2025",
+          "evidence_type": "direct",
+          "source_locator": "Product announcement",
+          "supports": "Agentic AI وFCA.",
+          "published_on": "2025-05-20"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Payment Intelligence",
+          "publisher": "MOZN",
+          "source_type": "official_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-launches-payment-intelligence-setting-a-new-standard-for-real-time-fraud-prevention-in-mena",
+          "evidence_type": "direct",
+          "source_locator": "Product announcement",
+          "supports": "Payment Intelligence.",
+          "published_on": "2025-09-16"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "OSOS Talk to Data",
+          "publisher": "MOZN",
+          "source_type": "official_genai_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-launches-osos-talk-to-data-at-leap-2025-advancing-genai-driven-data-accessibility",
+          "evidence_type": "direct",
+          "source_locator": "OSOS announcement",
+          "supports": "Talk to Data وTalk to Docs.",
+          "published_on": "2025-02-10"
+        },
+        {
+          "source_id": "SRC-24",
+          "title": "Money Mule Detection with Forward-Deployed Teams",
+          "publisher": "MOZN",
+          "source_type": "official_customer_case_study",
+          "url": "https://www.mozn.ai/blog/rethinking-money-mule-detection-how-a-leading-bank-in-saudi-arabia-scaled-detection-through-forward-deployed-team-led-delivery",
+          "evidence_type": "direct",
+          "source_locator": "Case study",
+          "supports": "FDE.",
+          "published_on": "2026-05-13"
+        }
+      ]
+    },
+    "$.market_data.target_audience": {
+      "field_value": "البنوك والبنوك الرقمية وشركات التقنية المالية والمدفوعات والتمويل والإقراض والتأمين والأسواق الرأسمالية والاتصالات والتجارة الإلكترونية والجهات التنظيمية والحكومات. تستهدف OSOS كذلك المؤسسات الكبيرة وشبه الحكومية والرعاية الصحية والإعلام والتقنية التي تمتلك مستندات وقواعد بيانات وأنظمة معرفة معقدة.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "regulated_financial_government_and_large_enterprise_segments",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تحدد صفحات المنتج قطاعات FOCAL وOSOS، وتثبت الشراكات المؤسسات المالية المستهدفة.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-03",
+        "SRC-04",
+        "SRC-19",
+        "SRC-21",
+        "SRC-22"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "FOCAL Financial Crime Prevention",
+          "publisher": "MOZN",
+          "source_type": "official_product_page",
+          "url": "https://www.mozn.ai/focal",
+          "evidence_type": "direct",
+          "source_locator": "Industries",
+          "supports": "قطاعات FOCAL."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "OSOS Enterprise Knowledge Intelligence",
+          "publisher": "MOZN",
+          "source_type": "official_product_page",
+          "url": "https://www.mozn.ai/osos",
+          "evidence_type": "direct",
+          "source_locator": "Industries",
+          "supports": "قطاعات OSOS."
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "STC Bank Deploys FOCAL",
+          "publisher": "MOZN",
+          "source_type": "official_customer_partnership",
+          "url": "https://www.mozn.ai/blog/stc-bank-partners-with-mozn-to-strengthen-financial-crime-prevention-with-focal-platform",
+          "evidence_type": "direct",
+          "source_locator": "Customer",
+          "supports": "STC Bank.",
+          "published_on": "2025-09-30"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "D360 Bank and MOZN Partnership",
+          "publisher": "MOZN",
+          "source_type": "official_customer_partnership",
+          "url": "https://www.mozn.ai/ar/blog/mozn-and-d360-bank-partner-to-accelerate-digital-banking-security-compliance-in-saudi-arabia",
+          "evidence_type": "direct",
+          "source_locator": "Customer",
+          "supports": "D360 Bank.",
+          "published_on": "2025-03-11"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Abdul Latif Jameel Finance and MOZN",
+          "publisher": "MOZN",
+          "source_type": "official_customer_partnership",
+          "url": "https://www.mozn.ai/blog/abdul-latif-jameel-finance-and-mozn-collaborate-to-revolutionize-financial-fraud-prevention",
+          "evidence_type": "direct",
+          "source_locator": "Customer",
+          "supports": "جهات التمويل.",
+          "published_on": "2025-02-26"
+        }
+      ]
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر مُزن رقمًا رسميًا أو دراسة مستقلة لحجم سوقها القابل للاستهداف. تجمع الشركة بين RegTech وFraud Management وAML/KYC وEnterprise Knowledge Intelligence وGenAI، لذلك لا يصلح رقم سوق واحد دون منهجية واضحة. مؤشرات نطاق الطلب تشمل رقمنة المدفوعات والامتثال في الخليج، وإتاحة FOCAL عالميًا، وشراكات مع بنوك وممولين سعوديين، وتغطية قطاعات مالية وحكومية وتجارية متعددة.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "multi_category_market_without_published_tam",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لم تنشر الشركة TAM موحدًا، وتغطي منتجاتها أسواقًا متعددة مختلفة.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-04",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "MOZN Intelligence Platform",
+          "publisher": "MOZN",
+          "source_type": "official_platform_page",
+          "url": "https://www.mozn.ai/",
+          "evidence_type": "direct",
+          "source_locator": "Platform",
+          "supports": "مجالان عاليَا الحساسية."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "FOCAL Financial Crime Prevention",
+          "publisher": "MOZN",
+          "source_type": "official_product_page",
+          "url": "https://www.mozn.ai/focal",
+          "evidence_type": "direct",
+          "source_locator": "FOCAL",
+          "supports": "AML والاحتيال والقطاعات."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "OSOS Enterprise Knowledge Intelligence",
+          "publisher": "MOZN",
+          "source_type": "official_product_page",
+          "url": "https://www.mozn.ai/osos",
+          "evidence_type": "direct",
+          "source_locator": "OSOS",
+          "supports": "ذكاء المعرفة والقطاعات."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Next-Generation Real-Time Transaction Screening",
+          "publisher": "MOZN",
+          "source_type": "official_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-unveils-next-generation-real-time-transaction-screening-technology-to-redefine-compliance-for-modern-payment-ecosystems",
+          "evidence_type": "direct",
+          "source_locator": "RTS",
+          "supports": "التوفر العالمي.",
+          "published_on": "2026-05-18"
+        }
+      ],
+      "limitations": "لا تمثل الشراكات أو الجوائز قيمة سوقية أو حصة سوقية."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا تتوفر سلسلة إيرادات أو عملاء تسمح بحساب CAGR. المؤشرات المعلنة تشمل الانتقال من أكثر من 150 موظفًا ومكاتب في ثلاث دول في أوائل 2023 إلى أكثر من 250 موظفًا في السعودية والإمارات عام 2024 ثم أكثر من 300 في 2025، وإطلاق مكتب الإمارات والتوفر العالمي عبر Google Cloud Marketplace. كما توسعت FOCAL من AML إلى مكافحة الاحتيال وDevice Intelligence وPayment Intelligence وReal-Time Transaction Screening وAgentic AI، وأعلنت شراكات مع مؤسسات مالية كبرى في 2025.",
+      "verification_status": "verified_company_reported_scale",
+      "confidence": "medium_high",
+      "claim_type": "employee_geographic_product_and_customer_expansion_without_revenue_cagr",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تعرض المصادر نمو الفريق والتوسع الإماراتي والعالمي وتوسع الوحدات والشراكات، دون سلسلة إيراد.",
+      "source_count": 7,
+      "source_ids": [
+        "SRC-08",
+        "SRC-16",
+        "SRC-14",
+        "SRC-13",
+        "SRC-09",
+        "SRC-19",
+        "SRC-20"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "MOZN Launches UAE and GCC Expansion",
+          "publisher": "MOZN",
+          "source_type": "official_expansion_announcement",
+          "url": "https://www.mozn.ai/blog/saudi-arabias-ai-powerhouse-mozn-announces-gcc-expansion-as-it-launches-into-the-uae",
+          "evidence_type": "direct",
+          "source_locator": "Expansion",
+          "supports": "150+ موظف ومكتب الإمارات في 2023.",
+          "published_on": "2023-05-09"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "MOZN and Google Cloud Partnership",
+          "publisher": "MOZN",
+          "source_type": "official_cloud_marketplace_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-partners-with-google-cloud-elevates-regional-ai-innovation-at-leap-2024",
+          "evidence_type": "direct",
+          "source_locator": "Google Cloud",
+          "supports": "250+ موظف في 2024 والتوفر عبر Marketplace.",
+          "published_on": "2024-03-05"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "OSOS Talk to Data",
+          "publisher": "MOZN",
+          "source_type": "official_genai_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-launches-osos-talk-to-data-at-leap-2025-advancing-genai-driven-data-accessibility",
+          "evidence_type": "direct",
+          "source_locator": "OSOS launch",
+          "supports": "300+ موظف في 2025.",
+          "published_on": "2025-02-10"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "FOCAL Fraud Prevention Suite at LEAP 2025",
+          "publisher": "MOZN",
+          "source_type": "official_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-unveils-a-new-generation-of-ai-fraud-prevention-solutions-at-leap-2025",
+          "evidence_type": "direct",
+          "source_locator": "LEAP 2025",
+          "supports": "توسع Fraud Suite.",
+          "published_on": "2025-02-12"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Next-Generation Real-Time Transaction Screening",
+          "publisher": "MOZN",
+          "source_type": "official_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-unveils-next-generation-real-time-transaction-screening-technology-to-redefine-compliance-for-modern-payment-ecosystems",
+          "evidence_type": "direct",
+          "source_locator": "RTS",
+          "supports": "توسع RTS في 2026.",
+          "published_on": "2026-05-18"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "STC Bank Deploys FOCAL",
+          "publisher": "MOZN",
+          "source_type": "official_customer_partnership",
+          "url": "https://www.mozn.ai/blog/stc-bank-partners-with-mozn-to-strengthen-financial-crime-prevention-with-focal-platform",
+          "evidence_type": "direct",
+          "source_locator": "Customer",
+          "supports": "STC Bank.",
+          "published_on": "2025-09-30"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "AlRajhi Bank and MOZN Fraud Partnership",
+          "publisher": "MOZN",
+          "source_type": "official_customer_partnership",
+          "url": "https://www.mozn.ai/blog/alrajhi-bank-partners-with-mozn-to-harness-ai-in-the-fight-against-fraud",
+          "evidence_type": "direct",
+          "source_locator": "Customer",
+          "supports": "AlRajhi Bank.",
+          "published_on": "2025-10-20"
+        }
+      ],
+      "limitations": "أرقام الموظفين تقريبية ومن مواد الشركة، ولا تثبت نموًا ماليًا.",
+      "calculation": {
+        "reported_employees_early_2023": ">150",
+        "reported_employees_2024": ">250",
+        "reported_employees_2025": ">300",
+        "minimum_employee_multiple_2023_to_2025": 2,
+        "revenue_growth_rate": "not_publicly_disclosed",
+        "customer_growth_rate": "not_publicly_disclosed"
+      }
+    },
+    "$.financials.initial_investment": {
+      "field_value": "رأس المال الشخصي للمؤسسين والتمويل الأول غير معلنين. توثق Shorooq استثمارًا سابقًا في مُزن خلال 2021 دون نشر المبلغ، ثم أغلقت الشركة Series A بقيمة 10 ملايين دولار في فبراير 2023 بقيادة Raed Ventures، وبمشاركة Shorooq Partners وVentureSouq وSukna Ventures ومستثمرين آخرين. لم يُعثر على جولة لاحقة معلنة ومكتملة حتى تاريخ التحقق.",
+      "verification_status": "verified_historical_funding",
+      "confidence": "high",
+      "claim_type": "founder_capital_undisclosed_prior_investment_and_series_a",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توثق Shorooq استثمارًا سابقًا غير معلن، ثم توثق مُزن Series A بقيمة 10 ملايين دولار.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-06",
+        "SRC-05",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Shorooq's Investment in MOZN",
+          "publisher": "Shorooq",
+          "source_type": "direct_investor_perspective",
+          "url": "https://www.shorooq.com/perspectives/startup-series-our-investment-in-saudi-arabias-mozn",
+          "evidence_type": "direct",
+          "source_locator": "Investor perspective",
+          "supports": "استثمار Shorooq السابق.",
+          "published_on": "2022-08-03"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "MOZN Raises $10 Million Series A",
+          "publisher": "MOZN",
+          "source_type": "official_funding_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-raises-10-million-series-a-to-scale-saas-ai-across-mena",
+          "evidence_type": "direct",
+          "source_locator": "Funding announcement",
+          "supports": "10 ملايين دولار Series A والمستثمرون.",
+          "published_on": "2023-02-10"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "RAED Ventures — MOZN Portfolio",
+          "publisher": "RAED Ventures",
+          "source_type": "direct_investor_portfolio",
+          "url": "https://raed.vc/portfolio/mozn/",
+          "evidence_type": "direct",
+          "source_locator": "Investor portfolio",
+          "supports": "سنة استثمار Raed ومعلومات المؤسسين."
+        }
+      ],
+      "calculation": {
+        "founder_initial_capital": "not_publicly_disclosed",
+        "prior_shorooq_investment_amount": "not_publicly_disclosed",
+        "series_a_usd": 10000000,
+        "series_a_announced_on": "2023-02-10",
+        "later_completed_round_found": false
+      }
+    },
+    "$.financials.valuation": {
+      "field_value": "غير معلن. لا تنشر مُزن أو مستثمروها نسبة الأسهم أو تقييم Series A، ولا توجد صفقة استحواذ أو طرح عام تمنح قيمة سوقية. عبارة «عشرات إلى مئات الملايين» في الملف الأصلي غير مدعومة، ولا يمكن حساب تقييم الشركة من مبلغ التمويل وحده.",
+      "verification_status": "verified_as_not_publicly_valued",
+      "confidence": "high",
+      "claim_type": "private_company_valuation_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا تنشر مصادر الجولة نسبة ملكية أو قيمة قبل أو بعد الاستثمار.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-05",
+        "SRC-06",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "MOZN Raises $10 Million Series A",
+          "publisher": "MOZN",
+          "source_type": "official_funding_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-raises-10-million-series-a-to-scale-saas-ai-across-mena",
+          "evidence_type": "direct",
+          "source_locator": "Series A",
+          "supports": "مبلغ الجولة دون تقييم.",
+          "published_on": "2023-02-10"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Shorooq's Investment in MOZN",
+          "publisher": "Shorooq",
+          "source_type": "direct_investor_perspective",
+          "url": "https://www.shorooq.com/perspectives/startup-series-our-investment-in-saudi-arabias-mozn",
+          "evidence_type": "direct",
+          "source_locator": "Shorooq",
+          "supports": "استثمار سابق دون مبلغ أو تقييم.",
+          "published_on": "2022-08-03"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "RAED Ventures — MOZN Portfolio",
+          "publisher": "RAED Ventures",
+          "source_type": "direct_investor_portfolio",
+          "url": "https://raed.vc/portfolio/mozn/",
+          "evidence_type": "direct",
+          "source_locator": "Raed",
+          "supports": "محفظة المستثمر دون قيمة."
+        }
+      ],
+      "limitations": "لا يمكن حساب التقييم من 10 ملايين دولار دون نسبة الأسهم أو شروط الأوراق."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "تراخيص أو اشتراكات FOCAL للمؤسسات حسب الوحدات والنطاق وحجم الاستخدام",
+        "وحدات Customer Screening وTransaction Monitoring وCustomer Risk Scoring وCase Management",
+        "Real-Time Transaction Screening ورسائل الدفع المتوافقة مع ISO 20022 وISO 15022 والصيغ المحلية",
+        "Enterprise Fraud Management وDevice Intelligence وEvent Intelligence وPayment Intelligence",
+        "Fraud Analytics وFinancial Crime Analytics وAgentic AI وAI Rule Builder",
+        "Fraud Management as a Service وخدمات تشغيل أو دعم مكافحة الاحتيال",
+        "اشتراكات وتراخيص OSOS لذكاء المعرفة المؤسسية",
+        "OSOS Talk to Docs وTalk to Data والوصول الحواري إلى المستندات وقواعد البيانات",
+        "التنفيذ والتكامل وواجهات API وترحيل وربط البيانات والأنظمة القائمة",
+        "الخدمات المهنية لضبط القواعد والنماذج وتقييمات المخاطر والامتثال وتحسين الأداء",
+        "فرق Forward-Deployed Engineering التي تعمل مع العميل حتى الوصول إلى تشغيل إنتاجي",
+        "الدعم والصيانة والتحديثات والتقييمات المستمرة بحسب العقد",
+        "نشر FOCAL عبر Google Cloud Marketplace أو السحابة والهجين وداخل بيئة العميل",
+        "نشر OSOS عبر OCI أو داخل البيئة المحلية مع متطلبات سيادة وخصوصية البيانات",
+        "حلول ذكاء اصطناعي مؤسسية مخصصة للحالات عالية الحساسية، دون إفصاح عن نسب الإيراد"
+      ],
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "enterprise_licenses_modules_implementation_professional_services_and_deployment",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت صفحات المنتجات الوحدات والخدمات، وتثبت الشراكات خيارات النشر والسوق.",
+      "source_count": 8,
+      "source_ids": [
+        "SRC-03",
+        "SRC-04",
+        "SRC-09",
+        "SRC-13",
+        "SRC-14",
+        "SRC-16",
+        "SRC-17",
+        "SRC-24"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "FOCAL Financial Crime Prevention",
+          "publisher": "MOZN",
+          "source_type": "official_product_page",
+          "url": "https://www.mozn.ai/focal",
+          "evidence_type": "direct",
+          "source_locator": "Product",
+          "supports": "FOCAL والخدمات المهنية."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "OSOS Enterprise Knowledge Intelligence",
+          "publisher": "MOZN",
+          "source_type": "official_product_page",
+          "url": "https://www.mozn.ai/osos",
+          "evidence_type": "direct",
+          "source_locator": "Product",
+          "supports": "OSOS والتنفيذ."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Next-Generation Real-Time Transaction Screening",
+          "publisher": "MOZN",
+          "source_type": "official_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-unveils-next-generation-real-time-transaction-screening-technology-to-redefine-compliance-for-modern-payment-ecosystems",
+          "evidence_type": "direct",
+          "source_locator": "Product announcement",
+          "supports": "وحدات FRAML وRTS.",
+          "published_on": "2026-05-18"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "FOCAL Fraud Prevention Suite at LEAP 2025",
+          "publisher": "MOZN",
+          "source_type": "official_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-unveils-a-new-generation-of-ai-fraud-prevention-solutions-at-leap-2025",
+          "evidence_type": "direct",
+          "source_locator": "LEAP",
+          "supports": "Fraud Management as a Service.",
+          "published_on": "2025-02-12"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "OSOS Talk to Data",
+          "publisher": "MOZN",
+          "source_type": "official_genai_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-launches-osos-talk-to-data-at-leap-2025-advancing-genai-driven-data-accessibility",
+          "evidence_type": "direct",
+          "source_locator": "OSOS",
+          "supports": "Talk to Data وDocs.",
+          "published_on": "2025-02-10"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "MOZN and Google Cloud Partnership",
+          "publisher": "MOZN",
+          "source_type": "official_cloud_marketplace_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-partners-with-google-cloud-elevates-regional-ai-innovation-at-leap-2024",
+          "evidence_type": "direct",
+          "source_locator": "Cloud",
+          "supports": "Google Cloud Marketplace.",
+          "published_on": "2024-03-05"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "MOZN and Red Hat Hybrid Cloud",
+          "publisher": "MOZN",
+          "source_type": "official_deployment_partnership",
+          "url": "https://www.mozn.ai/blog/mozn-joins-forces-with-red-hat-to-offer-state-of-the-art-aml-capabilities-to-regional-enterprises",
+          "evidence_type": "direct",
+          "source_locator": "Deployment",
+          "supports": "On-Prem وHybrid.",
+          "published_on": "2022-10-18"
+        },
+        {
+          "source_id": "SRC-24",
+          "title": "Money Mule Detection with Forward-Deployed Teams",
+          "publisher": "MOZN",
+          "source_type": "official_customer_case_study",
+          "url": "https://www.mozn.ai/blog/rethinking-money-mule-detection-how-a-leading-bank-in-saudi-arabia-scaled-detection-through-forward-deployed-team-led-delivery",
+          "evidence_type": "direct",
+          "source_locator": "Services",
+          "supports": "FDE.",
+          "published_on": "2026-05-13"
+        }
+      ],
+      "limitations": "القائمة تصف قنوات بيع محتملة وموثقة وظيفيًا، لكن لا يوجد تفصيل إيراد أو تسعير."
+    },
+    "$.tools": {
+      "field_value": [
+        "FOCAL Financial Crime Prevention Platform ضمن بنية FRAML موحدة",
+        "Customer Screening للأسماء العربية واللاتينية وقوائم العقوبات وPEP والمراقبة المستمرة",
+        "Transaction Monitoring بقواعد وسلوك تاريخي وتنبيهات وتحقيقات",
+        "Customer Risk Scoring قابل للتهيئة حسب شهية المخاطر والسياسات",
+        "Real-Time Transaction Screening لجميع كيانات رسالة الدفع",
+        "دعم ISO 20022 MX وISO 15022 MT وصيغ دفع محلية مخصصة",
+        "Screening Templates لضوابط مختلفة حسب نوع الدفع والممر والجغرافيا",
+        "Case Management وسير عمل التحقيق والتصعيد والتوثيق",
+        "Enterprise Fraud Management عبر رحلة العميل كاملة",
+        "Device Intelligence وDevice Fingerprinting وإشارات السلوك والجغرافيا والتاريخ",
+        "Event Intelligence وPayment Intelligence لقرارات لحظية وحظر أو تعليق أو تصعيد",
+        "Fraud Analytics وFinancial Crime Analytics لاكتشاف الأنماط والعلاقات",
+        "Agentic AI لتلخيص القضايا والتوصيات وأتمتة بعض التنبيهات منخفضة المخاطر",
+        "AI Rule Builder لإنشاء قواعد الاحتيال باللغة الطبيعية مع مراجعة واعتماد وتتبع",
+        "Fraud Management as a Service وخدمات تقييم وضبط ومتابعة",
+        "واجهات API لدمج التسجيل والفحص والمراقبة مع الأنظمة الداخلية",
+        "تكامل Yakeen للتحقق من الهوية في دراسة حالة منشورة",
+        "OSOS Enterprise Knowledge Intelligence لبناء ذاكرة مؤسسية موحدة",
+        "OSOS Talk to Docs لاستخراج وتلخيص المعرفة من المستندات",
+        "OSOS Talk to Data لتحويل اللغة الطبيعية إلى استعلامات بيانات واعية بالسياق",
+        "نماذج عربية ومتخصصة بالقطاع ومعالجة محلية داخل بيئة المؤسسة",
+        "Forward-Deployed Engineering للتكامل والتخصيص ونقل النموذج إلى الإنتاج",
+        "نشر On-Premises وCloud وHybrid باستخدام تقنيات Red Hat Hybrid Cloud",
+        "FOCAL عبر Google Cloud Marketplace للتوفر والنشر العالمي",
+        "OSOS على Oracle Cloud Infrastructure وفق مذكرة التعاون",
+        "Trust Center ووثائق أمن ومراجعات مورّد متاحة للعملاء",
+        "امتثال معلن لـISO/IEC 27001 وGDPR وPDPL وضوابط NCA CCC وECC",
+        "تعلم آلي قابل للحوكمة وتفسير ومراجعة بشرية في الحالات عالية الحساسية",
+        "فرق خدمات مهنية لضبط السياسات والقواعد والتقييم المستمر",
+        "منصة تشغيل متاحة لقطاعات البنوك والتقنية المالية والتأمين والحكومة والتجارة والاتصالات"
+      ],
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "official_financial_crime_knowledge_ai_deployment_security_and_services_capabilities",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استُبدلت قائمة تقنية عامة بوحدات المنتج وخيارات النشر والامتثال الموثقة حتى 2026.",
+      "source_count": 14,
+      "source_ids": [
+        "SRC-03",
+        "SRC-04",
+        "SRC-09",
+        "SRC-10",
+        "SRC-11",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14",
+        "SRC-15",
+        "SRC-16",
+        "SRC-17",
+        "SRC-18",
+        "SRC-23",
+        "SRC-24"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "FOCAL Financial Crime Prevention",
+          "publisher": "MOZN",
+          "source_type": "official_product_page",
+          "url": "https://www.mozn.ai/focal",
+          "evidence_type": "direct",
+          "source_locator": "Product",
+          "supports": "FOCAL."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "OSOS Enterprise Knowledge Intelligence",
+          "publisher": "MOZN",
+          "source_type": "official_product_page",
+          "url": "https://www.mozn.ai/osos",
+          "evidence_type": "direct",
+          "source_locator": "Product",
+          "supports": "OSOS."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Next-Generation Real-Time Transaction Screening",
+          "publisher": "MOZN",
+          "source_type": "official_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-unveils-next-generation-real-time-transaction-screening-technology-to-redefine-compliance-for-modern-payment-ecosystems",
+          "evidence_type": "direct",
+          "source_locator": "Product",
+          "supports": "RTS وISO.",
+          "published_on": "2026-05-18"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "AI Rule Builder",
+          "publisher": "MOZN",
+          "source_type": "official_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-redefines-fraud-response-from-days-to-minutes-with-ai-rule-builders",
+          "evidence_type": "direct",
+          "source_locator": "Product",
+          "supports": "AI Rule Builder.",
+          "published_on": "2026-06-09"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Agentic AI for Financial Crime Prevention",
+          "publisher": "MOZN",
+          "source_type": "official_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-launches-agentic-ai-for-financial-crime-prevention-strengthening-regional-leadership-at-seamless-middle-east-2025",
+          "evidence_type": "direct",
+          "source_locator": "Product",
+          "supports": "Agentic AI.",
+          "published_on": "2025-05-20"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Payment Intelligence",
+          "publisher": "MOZN",
+          "source_type": "official_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-launches-payment-intelligence-setting-a-new-standard-for-real-time-fraud-prevention-in-mena",
+          "evidence_type": "direct",
+          "source_locator": "Product",
+          "supports": "Payment Intelligence.",
+          "published_on": "2025-09-16"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "FOCAL Fraud Prevention Suite at LEAP 2025",
+          "publisher": "MOZN",
+          "source_type": "official_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-unveils-a-new-generation-of-ai-fraud-prevention-solutions-at-leap-2025",
+          "evidence_type": "direct",
+          "source_locator": "Product",
+          "supports": "Device Fingerprinting وFMaaS.",
+          "published_on": "2025-02-12"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "OSOS Talk to Data",
+          "publisher": "MOZN",
+          "source_type": "official_genai_product_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-launches-osos-talk-to-data-at-leap-2025-advancing-genai-driven-data-accessibility",
+          "evidence_type": "direct",
+          "source_locator": "Product",
+          "supports": "Talk to Data وDocs.",
+          "published_on": "2025-02-10"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "MOZN and Oracle GenAI MoU",
+          "publisher": "MOZN",
+          "source_type": "official_cloud_partnership",
+          "url": "https://www.mozn.ai/blog/mozn-and-oracle-sign-mou-to-propel-gen-ai-adoption",
+          "evidence_type": "direct",
+          "source_locator": "Cloud",
+          "supports": "OCI وOn-Prem.",
+          "published_on": "2025-02-16"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "MOZN and Google Cloud Partnership",
+          "publisher": "MOZN",
+          "source_type": "official_cloud_marketplace_announcement",
+          "url": "https://www.mozn.ai/blog/mozn-partners-with-google-cloud-elevates-regional-ai-innovation-at-leap-2024",
+          "evidence_type": "direct",
+          "source_locator": "Cloud",
+          "supports": "Google Marketplace.",
+          "published_on": "2024-03-05"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "MOZN and Red Hat Hybrid Cloud",
+          "publisher": "MOZN",
+          "source_type": "official_deployment_partnership",
+          "url": "https://www.mozn.ai/blog/mozn-joins-forces-with-red-hat-to-offer-state-of-the-art-aml-capabilities-to-regional-enterprises",
+          "evidence_type": "direct",
+          "source_locator": "Deployment",
+          "supports": "Red Hat Hybrid Cloud وAPIs.",
+          "published_on": "2022-10-18"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "MOZN Trust Center",
+          "publisher": "MOZN",
+          "source_type": "official_security_and_compliance_center",
+          "url": "https://trust.mozn.ai/",
+          "evidence_type": "direct",
+          "source_locator": "Trust Center",
+          "supports": "Security compliance."
+        },
+        {
+          "source_id": "SRC-23",
+          "title": "Digital Lender FOCAL Case Study",
+          "publisher": "MOZN",
+          "source_type": "official_customer_case_study",
+          "url": "https://www.mozn.ai/blog/leading-digital-lender-reduces-customer-screening-time-by-90-with-focal",
+          "evidence_type": "direct",
+          "source_locator": "Case study",
+          "supports": "Yakeen والتشغيل الفعلي.",
+          "published_on": "2025-04-23"
+        },
+        {
+          "source_id": "SRC-24",
+          "title": "Money Mule Detection with Forward-Deployed Teams",
+          "publisher": "MOZN",
+          "source_type": "official_customer_case_study",
+          "url": "https://www.mozn.ai/blog/rethinking-money-mule-detection-how-a-leading-bank-in-saudi-arabia-scaled-detection-through-forward-deployed-team-led-delivery",
+          "evidence_type": "direct",
+          "source_locator": "Case study",
+          "supports": "FDE.",
+          "published_on": "2026-05-13"
+        }
+      ],
+      "limitations": "لا تمثل القائمة كشفًا كاملًا عن لغات البرمجة أو قواعد البيانات أو مزودي البنية لكل عميل."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "About MOZN",
+      "publisher": "MOZN",
+      "source_type": "official_company_page",
+      "url": "https://www.mozn.ai/about",
+      "supports": [
+        "المؤسسون والقيادة",
+        "FOCAL وOSOS",
+        "المواقع السعودية والإماراتية",
+        "الذكاء المؤسسي عالي الحساسية"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "MOZN Intelligence Platform",
+      "publisher": "MOZN",
+      "source_type": "official_platform_page",
+      "url": "https://www.mozn.ai/",
+      "supports": [
+        "Financial Crime Prevention",
+        "Enterprise Knowledge Intelligence",
+        "Forward-Deployed Engineering",
+        "Sovereign AI والتوفر العالمي"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "FOCAL Financial Crime Prevention",
+      "publisher": "MOZN",
+      "source_type": "official_product_page",
+      "url": "https://www.mozn.ai/focal",
+      "supports": [
+        "Agentic AI",
+        "أتمتة التحقيق",
+        "القطاعات",
+        "الخدمات المهنية",
+        "منصة مكافحة الجرائم المالية"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "OSOS Enterprise Knowledge Intelligence",
+      "publisher": "MOZN",
+      "source_type": "official_product_page",
+      "url": "https://www.mozn.ai/osos",
+      "supports": [
+        "الذاكرة والمعرفة المؤسسية",
+        "القطاعات الحكومية والمالية والصحية والتقنية",
+        "الخدمات المهنية والتنفيذ"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "MOZN Raises $10 Million Series A",
+      "publisher": "MOZN",
+      "source_type": "official_funding_announcement",
+      "published_on": "2023-02-10",
+      "url": "https://www.mozn.ai/blog/mozn-raises-10-million-series-a-to-scale-saas-ai-across-mena",
+      "supports": [
+        "Series A بقيمة 10 ملايين دولار",
+        "Raed Ventures وShorooq وVentureSouq وSukna",
+        "التأسيس في 2017",
+        "المؤسسون ومنصة NLU والمخاطر"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Shorooq's Investment in MOZN",
+      "publisher": "Shorooq",
+      "source_type": "direct_investor_perspective",
+      "published_on": "2022-08-03",
+      "url": "https://www.shorooq.com/perspectives/startup-series-our-investment-in-saudi-arabias-mozn",
+      "supports": [
+        "استثمار سابق غير معلن المبلغ",
+        "مقر الرياض والتأسيس 2017",
+        "الذكاء اللغوي والمالي",
+        "المنتجات المؤسسية"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "RAED Ventures — MOZN Portfolio",
+      "publisher": "RAED Ventures",
+      "source_type": "direct_investor_portfolio",
+      "url": "https://raed.vc/portfolio/mozn/",
+      "supports": [
+        "المؤسسون",
+        "سنة الاستثمار 2022",
+        "SaaS وEnterprise AI",
+        "المملكة العربية السعودية"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "MOZN Launches UAE and GCC Expansion",
+      "publisher": "MOZN",
+      "source_type": "official_expansion_announcement",
+      "published_on": "2023-05-09",
+      "url": "https://www.mozn.ai/blog/saudi-arabias-ai-powerhouse-mozn-announces-gcc-expansion-as-it-launches-into-the-uae",
+      "supports": [
+        "مكتب الإمارات والتوسع الخليجي",
+        "FOCAL AML ومطابقة الأسماء",
+        "1,300+ قائمة تاريخيًا",
+        "خفض وقت التحقيق حتى 95% كادعاء شركة"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Next-Generation Real-Time Transaction Screening",
+      "publisher": "MOZN",
+      "source_type": "official_product_announcement",
+      "published_on": "2026-05-18",
+      "url": "https://www.mozn.ai/blog/mozn-unveils-next-generation-real-time-transaction-screening-technology-to-redefine-compliance-for-modern-payment-ecosystems",
+      "supports": [
+        "Real-Time Transaction Screening",
+        "FRAML architecture",
+        "ISO 20022 وISO 15022",
+        "Screening Templates",
+        "التوفر العالمي"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "AI Rule Builder",
+      "publisher": "MOZN",
+      "source_type": "official_product_announcement",
+      "published_on": "2026-06-09",
+      "url": "https://www.mozn.ai/blog/mozn-redefines-fraud-response-from-days-to-minutes-with-ai-rule-builders",
+      "supports": [
+        "إنشاء قواعد باللغة الطبيعية",
+        "المراجعة والموافقة والتتبع",
+        "Enterprise Fraud Management",
+        "فرق FDE"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Agentic AI for Financial Crime Prevention",
+      "publisher": "MOZN",
+      "source_type": "official_product_announcement",
+      "published_on": "2025-05-20",
+      "url": "https://www.mozn.ai/blog/mozn-launches-agentic-ai-for-financial-crime-prevention-strengthening-regional-leadership-at-seamless-middle-east-2025",
+      "supports": [
+        "Agentic AI",
+        "Financial Crime Analytics",
+        "تلخيص القضايا والتوصيات",
+        "تحليلات العلاقات والأنماط"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Payment Intelligence",
+      "publisher": "MOZN",
+      "source_type": "official_product_announcement",
+      "published_on": "2025-09-16",
+      "url": "https://www.mozn.ai/blog/mozn-launches-payment-intelligence-setting-a-new-standard-for-real-time-fraud-prevention-in-mena",
+      "supports": [
+        "Payment Intelligence",
+        "إشارات المعاملات والأجهزة والسلوك",
+        "الحظر والتعليق والتصعيد",
+        "Enterprise Fraud Management"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "FOCAL Fraud Prevention Suite at LEAP 2025",
+      "publisher": "MOZN",
+      "source_type": "official_product_announcement",
+      "published_on": "2025-02-12",
+      "url": "https://www.mozn.ai/blog/mozn-unveils-a-new-generation-of-ai-fraud-prevention-solutions-at-leap-2025",
+      "supports": [
+        "Device Fingerprinting",
+        "Fraud Analytics",
+        "Fraud Management as a Service",
+        "Device Risk"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "OSOS Talk to Data",
+      "publisher": "MOZN",
+      "source_type": "official_genai_product_announcement",
+      "published_on": "2025-02-10",
+      "url": "https://www.mozn.ai/blog/mozn-launches-osos-talk-to-data-at-leap-2025-advancing-genai-driven-data-accessibility",
+      "supports": [
+        "الاستعلام باللغة الطبيعية",
+        "Talk to Data",
+        "Talk to Docs",
+        "300+ موظف ومكاتب السعودية والإمارات"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "MOZN and Oracle GenAI MoU",
+      "publisher": "MOZN",
+      "source_type": "official_cloud_partnership",
+      "published_on": "2025-02-16",
+      "url": "https://www.mozn.ai/blog/mozn-and-oracle-sign-mou-to-propel-gen-ai-adoption",
+      "supports": [
+        "OCI لنشر OSOS",
+        "المعالجة داخل بيئة العميل",
+        "نماذج عربية متخصصة",
+        "Talk to Docs وTalk to Data"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "MOZN and Google Cloud Partnership",
+      "publisher": "MOZN",
+      "source_type": "official_cloud_marketplace_announcement",
+      "published_on": "2024-03-05",
+      "url": "https://www.mozn.ai/blog/mozn-partners-with-google-cloud-elevates-regional-ai-innovation-at-leap-2024",
+      "supports": [
+        "FOCAL عبر Google Cloud Marketplace",
+        "التوفر العالمي",
+        "250+ موظف في 2024",
+        "OSOS وخطط Marketplace"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "MOZN and Red Hat Hybrid Cloud",
+      "publisher": "MOZN",
+      "source_type": "official_deployment_partnership",
+      "published_on": "2022-10-18",
+      "url": "https://www.mozn.ai/blog/mozn-joins-forces-with-red-hat-to-offer-state-of-the-art-aml-capabilities-to-regional-enterprises",
+      "supports": [
+        "On-Premises وCloud",
+        "Red Hat Hybrid Cloud",
+        "APIs",
+        "آلاف الفحوصات يوميًا كقدرة تاريخية"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "MOZN Trust Center",
+      "publisher": "MOZN",
+      "source_type": "official_security_and_compliance_center",
+      "url": "https://trust.mozn.ai/",
+      "supports": [
+        "ISO/IEC 27001",
+        "GDPR وPDPL",
+        "NCA CCC وECC",
+        "سياسات أمن وتطوير واستمرارية"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "STC Bank Deploys FOCAL",
+      "publisher": "MOZN",
+      "source_type": "official_customer_partnership",
+      "published_on": "2025-09-30",
+      "url": "https://www.mozn.ai/blog/stc-bank-partners-with-mozn-to-strengthen-financial-crime-prevention-with-focal-platform",
+      "supports": [
+        "نشر FOCAL لدى STC Bank",
+        "Financial Crime Intelligence",
+        "الامتثال وأمن الخدمات الرقمية"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "AlRajhi Bank and MOZN Fraud Partnership",
+      "publisher": "MOZN",
+      "source_type": "official_customer_partnership",
+      "published_on": "2025-10-20",
+      "url": "https://www.mozn.ai/blog/alrajhi-bank-partners-with-mozn-to-harness-ai-in-the-fight-against-fraud",
+      "supports": [
+        "اتفاق مصرف الراجحي",
+        "مكافحة الاحتيال",
+        "FOCAL وقرارات المخاطر اللحظية"
+      ]
+    },
+    {
+      "id": "SRC-21",
+      "title": "D360 Bank and MOZN Partnership",
+      "publisher": "MOZN",
+      "source_type": "official_customer_partnership",
+      "published_on": "2025-03-11",
+      "url": "https://www.mozn.ai/ar/blog/mozn-and-d360-bank-partner-to-accelerate-digital-banking-security-compliance-in-saudi-arabia",
+      "supports": [
+        "الشراكة مع D360 Bank",
+        "التسجيل الرقمي",
+        "تقليل التنبيهات الكاذبة",
+        "AML والامتثال"
+      ]
+    },
+    {
+      "id": "SRC-22",
+      "title": "Abdul Latif Jameel Finance and MOZN",
+      "publisher": "MOZN",
+      "source_type": "official_customer_partnership",
+      "published_on": "2025-02-26",
+      "url": "https://www.mozn.ai/blog/abdul-latif-jameel-finance-and-mozn-collaborate-to-revolutionize-financial-fraud-prevention",
+      "supports": [
+        "تكامل FOCAL",
+        "مكافحة الاحتيال وحماية العملاء",
+        "300+ موظف"
+      ]
+    },
+    {
+      "id": "SRC-23",
+      "title": "Digital Lender FOCAL Case Study",
+      "publisher": "MOZN",
+      "source_type": "official_customer_case_study",
+      "published_on": "2025-04-23",
+      "url": "https://www.mozn.ai/blog/leading-digital-lender-reduces-customer-screening-time-by-90-with-focal",
+      "supports": [
+        "Customer Screening وRisk Scoring وTransaction Monitoring",
+        "Yakeen integration",
+        "99% خفض وقت التسجيل في الحالة",
+        "5,000+ مستخدم و2,000 ساعة موفرة"
+      ]
+    },
+    {
+      "id": "SRC-24",
+      "title": "Money Mule Detection with Forward-Deployed Teams",
+      "publisher": "MOZN",
+      "source_type": "official_customer_case_study",
+      "published_on": "2026-05-13",
+      "url": "https://www.mozn.ai/blog/rethinking-money-mule-detection-how-a-leading-bank-in-saudi-arabia-scaled-detection-through-forward-deployed-team-led-delivery",
+      "supports": [
+        "Financial Crime Intelligence",
+        "Forward-Deployed Team",
+        "حلقة تغذية راجعة مستمرة",
+        "38% خفض خسائر الاحتيال في الحالة"
+      ]
+    },
+    {
+      "id": "SRC-25",
+      "title": "MOZN Named Chartis Enterprise Fraud Leader",
+      "publisher": "MOZN",
+      "source_type": "official_analyst_recognition_announcement",
+      "published_on": "2026-06-17",
+      "url": "https://www.mozn.ai/blog/mozn-becomes-only-middle-eastern-company-named-a-global-leader-by-chartis-for-enterprise-fraud",
+      "supports": [
+        "Category Leader 2026",
+        "Enterprise Fraud capabilities",
+        "مرونة النشر",
+        "FDE والخبرة المحلية"
+      ]
+    }
   ]
 }

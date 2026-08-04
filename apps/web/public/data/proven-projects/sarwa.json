@@ -2,52 +2,2075 @@
   "id": "sarwa",
   "slug": "sarwa",
   "name": "ثروة (Sarwa)",
-  "headline": "المنصة التي جلبت المستشار الآلي (Robo-Advisor) لتسهيل الاستثمار في الخليج",
-  "category": "WealthTech / الاستثمار الآلي",
+  "headline": "من مستشار آلي إلى منصة بمليار دولار من أصول العملاء: كيف وسّعت Sarwa المحفظة من الاستثمار السلبي إلى إدارة المال متعددة المنتجات",
+  "category": "WealthTech & Brokerage / إدارة الثروات الرقمية والتداول والادخار",
   "company": {
-    "location": "دبي، الإمارات العربية المتحدة",
-    "business_model": "رسوم إدارة أصول منخفضة جداً (AUM Fee) وعمولات تحويل"
+    "location": "تأسست Sarwa في الإمارات عام 2017 على يد Mark Chahwan وJad Sayegh وNadine Mezher. بدأت رحلتها التنظيمية في بيئة DIFC، بينما الكيان التشغيلي المنظم حاليًا هو Sarwa Digital Wealth (Capital) Limited، شركة خاصة محدودة بالأسهم مسجلة في سوق أبوظبي العالمي ADGM، وعنوانها التنظيمي في جزيرة المارية بأبوظبي، وحالتها نشطة تحت تصريح FSRA رقم 190037. لذلك فإن وصفها بأنها «شركة مقرها دبي فقط» لم يعد دقيقًا تنظيميًا.",
+    "business_model": "منصة متعددة المنتجات تجمع إدارة المحافظ المؤتمتة والمشورة البشرية عبر Sarwa Invest، والتداول الذاتي للأسهم وETFs والخيارات والعملات المشفرة عبر Sarwa Trade، وإدارة السيولة عبر Sarwa Save، وخدمات الثروات الخاصة والحماية من مخاطر الذيل. تحقق الدخل من رسوم إدارة الأصول، ورسوم التداول والعقود، وفوارق العملات المشفرة، ورسوم منتجات السيولة وبعض وسائل التمويل. Sarwa ليست بنكًا، وتصرح بأنها لا تحمل اعتماد نافذة إسلامية من FSRA رغم توفير محافظ ومنتجات تحمل وصف Halal."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات",
-    "monthly_traffic": "تدير ثروات بمئات الملايين من الدولارات"
+    "monthly_revenue": "غير مُفصح عنه علنًا. أعلنت الشركة أول ربح فصلي في مايو 2024 بهامش صافي ربح 33% ونمو إيراد ربعي 124%، ثم أعلنت ربحية السنة الكاملة 2025، لكنها لم تنشر قيمة الإيراد الشهري أو السنوي. لا يجوز تقدير الإيراد بضرب مليار دولار من أصول العملاء في نسبة رسوم واحدة، لأن الأصول موزعة بين منتجات وشرائح ورسوم مختلفة، ولأن حجم التداول ليس إيرادًا.",
+    "monthly_traffic": "غير مُفصح عنه علنًا، ولا يوجد رقم رسمي حديث لزيارات الموقع أو المستخدمين النشطين شهريًا. الرقم الرسمي البارز في مايو 2026 هو مليار دولار من أصول العملاء، مقابل 880 مليون دولار من الأصول المُدارة في نهاية 2025 و3 مليارات دولار من حجم التداول خلال 2025. أما 40 ألف مستخدم مسجل فهو رقم تاريخي من جولة 2021، ولا يمثل المستخدمين الحاليين أو العملاء الممولين أو الزيارات."
   },
   "overview": {
     "problem": {
-      "text": "الاستثمار في الأسواق العالمية يتطلب خبرة مالية عميقة، وتتطلب البنوك الاستثمارية في الخليج مبالغ ضخمة كحد أدنى، مع فرض رسوم إدارة عالية تبتلع الأرباح.",
-      "impact": "بقاء مدخرات الشباب مجمدة في الحسابات الجارية وتآكلها بسبب التضخم، أو خسارتها في مضاربات عشوائية."
+      "text": "كان الوصول إلى المحافظ العالمية المتنوعة في الخليج يرتبط غالبًا بحدود دنيا مرتفعة، ورسوم غير شفافة، وإجراءات مصرفية معقدة، وحاجة إلى التنقل بين منصات منفصلة للادخار والاستثمار والتداول. كما أن المبتدئ يحتاج إلى تحديد المخاطر وبناء المحفظة وإعادة موازنتها، بينما يحتاج المتداول النشط إلى تنفيذ وأوامر وتمويل محلي مختلف.",
+      "impact": "قد يؤدي الاحتكاك وارتفاع التكلفة وتعقيد المصطلحات إلى إبقاء المدخرات نقدًا، أو دفع المستخدم إلى قرارات غير مناسبة لمخاطره، أو توزيع أمواله بين خدمات متعددة. لا تدعم المصادر ادعاء أن الاستثمار السلبي «يربح دائمًا»؛ كل استثمار ينطوي على مخاطر، والأداء السابق لا يضمن النتائج المستقبلية."
     },
     "solution": {
-      "text": "مستشار استثماري آلي (Robo-Advisor) يطرح على المستخدم أسئلة بسيطة لتحديد مستوى المخاطرة، ثم يبني له محفظة متنوعة عالمياً (ETFs) ويديرها تلقائياً بحد أدنى منخفض جداً للاستثمار."
+      "text": "توفر Sarwa حسابًا موحدًا يضم محافظ ETF مبنية على ملف المخاطر مع إعادة موازنة وتوزيعات معاد استثمارها، وتداولًا ذاتيًا لآلاف الأسهم وETFs والخيارات والعملات المشفرة، ومنتجات سيولة قائمة على صناديق سوق المال، وخدمات ثروات خاصة. تجمع المنصة بين الأتمتة ومستشارين بشريين، وتدعم تمويلًا محليًا بالدرهم وشريكًا تشغيليًا معلنًا هو Saxo Bank. تختلف الحدود الدنيا والرسوم والمخاطر حسب المنتج، والعوائد المعروضة تقديرية وليست مضمونة."
     }
   },
   "market_data": {
-    "target_audience": "المهنيون الشباب والمغتربون والمواطنون في الإمارات والسعودية.",
-    "market_size": "سوق إدارة الثروات (Wealth Management) الهائل في دول الخليج.",
-    "growth_rate": "جمعت 15 مليون دولار (Series B) وتتوسع بإطلاق خدمات تداول الأسهم المباشرة والعملات المشفرة."
+    "target_audience": "الأفراد الراغبون في الاستثمار المؤتمت، والمتداولون الذاتيون، وأصحاب السيولة قصيرة الأجل، والعملاء ذوو الثروات المرتفعة. بدأت المنصة بخدمة المهنيين في الإمارات والمنطقة، وتذكر حاليًا إتاحة الحساب عالميًا لعملاء مؤهلين باستثناء جنسيات وإقامات ضريبية مقيدة، مع قيود إضافية حسب المنتج. لذلك لا يجوز افتراض توافر كل خدمة في السعودية أو كل دولة من دون فحص الأهلية والتنظيم المحلي.",
+    "market_size": "لم تنشر Sarwa دراسة موثوقة لحجم السوق القابل للخدمة أو إيراداته. أفضل مؤشر أولي على نطاقها الفعلي هو وصول أصول العملاء إلى مليار دولار في مايو 2026. يمثل ذلك حجم أصول محتفظًا بها أو مُدارة عبر المنصة، وليس حجم سوق إدارة الثروات في الخليج، ولا الإيراد، ولا التقييم.",
+    "growth_rate": "لا تنشر الشركة معدل نمو سنوي حديثًا موحدًا للإيراد أو العملاء. أعلنت أن الوصول إلى أول 500 مليون دولار من أصول العملاء استغرق سبع سنوات، بينما استغرق الانتقال إلى المليار 18 شهرًا إضافيًا. كما ذكرت 880 مليون دولار أصولًا مُدارة و3 مليارات دولار حجم تداول في 2025. هذه إشارات نمو قوية لكنها مقاييس مختلفة، ولا تسمح باستخراج معدل واحد للمستخدمين أو الإيراد."
   },
   "financials": {
-    "initial_investment": "مدعومة من مبادلة، و 500 Startups، و DIFC.",
-    "valuation": "غير معلن (عشرات الملايين)",
+    "initial_investment": "تذكر الشركة أنها جمعت 1.3 مليون دولار في تمويل ما قبل Series A عام 2018، ثم أكثر من 8.4 ملايين دولار في Series A عام 2020، و15 مليون دولار في Series B عام 2021 بقيادة مبادلة. تمثل الجولات المسماة ما لا يقل عن 24.7 مليون دولار، ولا تشمل بالضرورة كل دعم أو استثمار أو حوافز تاريخية. في 2023 حاولت الشركة عرض أسهم في الكيان الأم على مستخدمين؛ التزم 144 مستثمرًا بنحو 2.1 مليون دولار قبل عكس الاشتراكات بعد تدخل FSRA، لذلك لا تُعامل تلك الالتزامات كجولة مغلقة.",
+    "valuation": "غير مُفصح عنه علنًا في مصدر أولي موثوق. لا تكشف جولات التمويل المنشورة عن نسب الملكية اللازمة لحساب تقييم قبل أو بعد الاستثمار، كما أن عرض 2023 أُلغي ولا يقدم أساسًا صالحًا لتقييم حالي. أزيل وصف «عشرات الملايين» لأنه تقدير بلا دليل.",
     "revenue_streams": [
-      "رسوم إدارة سنوية منخفضة (حوالي 0.85% على الأصول تحت الإدارة)",
-      "رسوم صرف العملات (FX Fees)"
+      "رسوم Sarwa Invest السنوية المتدرجة وفق الأصول: من 0.85% للحسابات القياسية إلى 0.4% للشرائح الأكبر، مع حد أدنى معلن قدره 7 دولارات شهريًا لبعض الحسابات.",
+      "رسوم Sarwa Save البالغة 0.5% سنويًا على منتجات السيولة التقليدية والحلال، بينما العائد المعلن تقديري وقبل الرسوم.",
+      "رسوم تداول الأسهم وETFs: دولار واحد أو 0.25% من قيمة الأمر وفق التسعير المنشور.",
+      "رسوم تداول الخيارات البالغة 4 دولارات لكل عقد.",
+      "فارق سعري معلن 1.5% على معاملات العملات المشفرة بدل عمولة منفصلة.",
+      "رسوم بعض وسائل التمويل السريع والبطاقات، إضافة إلى خدمات الثروات الخاصة؛ لم تنشر الشركة توزيع الإيراد حسب المنتج أو متوسط الإيراد لكل عميل."
     ]
   },
   "lessons": [
     {
-      "title": "الاستثمار السلبي (Passive Investing) يربح دائماً",
-      "description": "ركزت Sarwa على نشر ثقافة الاستثمار السلبي طويل المدى بدلاً من المضاربة السريعة، مما خلق قاعدة عملاء مستقرة تضخ أموالاً شهرية (SIP) في النظام بغض النظر عن حالة السوق."
+      "title": "الأصول تحت الإدارة ليست الإيراد",
+      "description": "وصول أصول العملاء إلى مليار دولار إنجاز في الثقة والتوزيع، لكنه لا يعني مليار دولار مبيعات. الإيراد يعتمد على نوع الحساب وشريحة الرسوم والنشاط، وحجم التداول بدوره قيمة إجمالية تمر عبر المنصة لا ما تحتفظ به الشركة."
     },
     {
-      "title": "التبسيط هو الابتكار الحقيقي",
-      "description": "لم تخترع Sarwa الأسهم، لكنها صممت واجهة مستخدم (UI/UX) مذهلة جعلت الاستثمار سهلاً كطلب سيارة أوبر، مما كسر حاجز الخوف لدى المبتدئين."
+      "title": "وسّع عمق المحفظة بعد إثبات بوابة الثقة",
+      "description": "بدأت Sarwa بمنتج واضح هو الاستثمار المؤتمت، ثم أضافت التداول والسيولة والخيارات والعملات المشفرة والثروات الخاصة. هذا التوسع يرفع عدد الاحتياجات التي تخدمها المنصة، لكنه يزيد متطلبات الملاءمة والامتثال وإدارة المخاطر."
+    },
+    {
+      "title": "الميزة الإقليمية تُبنى في مسار المال لا في الواجهة فقط",
+      "description": "التمويل المحلي بالدرهم، والتحويلات المحلية، وفهم البنوك والوثائق الإقليمية، والدعم في توقيت الإمارات تقلل احتكاكًا لا تحله منصة عالمية بمجرد ترجمة التطبيق. البنية المالية المحلية قد تكون خندقًا أقوى من التصميم وحده."
+    },
+    {
+      "title": "الأتمتة لا تلغي الحاجة إلى العنصر البشري",
+      "description": "المحفظة تُبنى وتُعاد موازنتها تقنيًا، لكن Sarwa أبقت الوصول إلى مستشارين وخدمات تخطيط للشرائح الأعلى. في المنتجات المالية، الأتمتة تخفض التكلفة بينما يزيد الدعم البشري الثقة في القرارات المعقدة."
+    },
+    {
+      "title": "الترخيص نقطة بداية وليس شهادة كمال دائمة",
+      "description": "Sarwa كيان نشط ومنظم لدى FSRA، لكن سجلها يتضمن إجراءات تنظيمية، أبرزها غرامة 2024 بسبب عرض أوراق مالية دون نشرة معتمدة. الدرس أن النمو والتجريب يجب أن يسبقهما فحص قانوني خاص بكل منتج ورسالة وعرض."
+    },
+    {
+      "title": "لا تحوّل فلسفة استثمار إلى وعد أداء",
+      "description": "الاستثمار السلبي قد يقلل التكلفة ويسهل التنويع، لكنه لا «يربح دائمًا». تحويل التعليم المالي إلى ثقة مستدامة يتطلب توضيح المخاطر والرسوم والحدود والسيناريوهات بدل تسويق استراتيجية واحدة كضمان."
     }
   ],
   "tools": [
-    "AWS",
-    "Node.js",
-    "React",
-    "Algorithms & Quantitative Models"
+    "استبيانات ملاءمة وملف مخاطر لبناء محافظ ETF",
+    "خوارزميات تخصيص أصول وإعادة موازنة آلية وإعادة استثمار التوزيعات",
+    "تطبيقات ويب وهاتف للتداول والاستثمار وإدارة السيولة",
+    "أوامر سوق وحد وأوامر إيقاف وملكية جزئية للأسهم وETFs",
+    "تكامل تشغيلي معلن مع Saxo Bank للحسابات والتنفيذ والتمويل",
+    "قنوات تمويل محلية بالدرهم والدولار وتمويل فوري وبطاقات",
+    "256-bit encryption والمصادقة الثنائية وإجراءات KYC وفق إفصاح الشركة",
+    "هياكل حفظ وفصل أصول العملاء عن أموال الشركة وفق وصف Sarwa وشروط الجهات الحافظة",
+    "محافظ ETF تقليدية وحلال ومسؤولة اجتماعيًا ومحافظ تتضمن تعرضًا محدودًا لـBitcoin",
+    "صناديق سوق المال ومنتجات الخيارات والعملات المشفرة وبرنامج حماية من مخاطر الذيل",
+    "لم تُثبت المصادر الرسمية الحالية استخدام AWS أو Node.js أو React كمكدس داخلي في أغسطس 2026، لذلك أزيلت من قائمة الأدوات بدل تكرار ادعاء غير مدعوم"
+  ],
+  "verification": {
+    "status": "verified_with_material_financial_regulatory_and_metric_corrections",
+    "verified_on": "2026-08-03",
+    "source_policy": {
+      "priority_order": [
+        "سجل وإجراءات FSRA في ADGM",
+        "صفحات المنتجات والتسعير ومركز المساعدة الرسمي لـSarwa",
+        "إفصاحات التمويل والرئيس التنفيذي المنشورة على موقع Sarwa",
+        "مصادر ثانوية عند الضرورة فقط؛ لم تُستخدم لإثبات القيم النهائية"
+      ],
+      "sec_applicability": "غير منطبق عمليًا على إفصاحات الشركة: Sarwa شركة خاصة إماراتية منظمة في ADGM وليست مُصدرًا عامًا معروفًا لدى SEC. تداول الأوراق الأمريكية لا يجعل Sarwa شركة مُبلغة لدى SEC.",
+      "financial_rule": "تم فصل الإيراد عن الربحية والأصول تحت الإدارة وأصول العملاء وحجم التداول والتمويل والتقييم.",
+      "usage_rule": "تم فصل زيارات الموقع والمستخدمين المسجلين والعملاء الممولين والأصول المُدارة وحجم التداول.",
+      "regulatory_rule": "تم عرض الحالة التنظيمية النشطة إلى جانب الإجراءات التنظيمية المسجلة، دون استخدام الترخيص كدليل على غياب المخاطر أو المخالفات."
+    },
+    "important_notes": [
+      "Sarwa ليست مجرد Robo-Advisor حاليًا؛ هي منصة متعددة المنتجات للاستثمار والتداول والسيولة والثروات الخاصة.",
+      "الكيان المنظم الحالي مسجل في ADGM بأبوظبي وحالته نشطة تحت FSP رقم 190037.",
+      "الإيراد الشهري والسنوي غير معلنين بقيمة نقدية، رغم إعلان الربحية في 2024 و2025.",
+      "أصول العملاء البالغة مليار دولار في مايو 2026 ليست إيرادًا أو تقييمًا أو حجم تداول.",
+      "880 مليون دولار AUM في نهاية 2025 تختلف تعريفًا وتاريخًا عن مليار دولار من أصول العملاء في مايو 2026.",
+      "3 مليارات دولار هو حجم التداول المعلن لعام 2025، وليس إيراد الشركة.",
+      "40 ألف مستخدم مسجل رقم تاريخي من 2021 ولا يمثل قاعدة المستخدمين الحالية.",
+      "آخر جولات مسماة رسميًا تجمع ما لا يقل عن 24.7 مليون دولار، لكن هذا ليس تقييمًا ولا بالضرورة إجمالي كل التمويل.",
+      "التقييم غير معلن؛ لم تُستخدم عبارة «عشرات الملايين» أو أي تقدير ثانوي.",
+      "عرض أسهم الكيان الأم عام 2023 نتج عنه التزامات بنحو 2.1 مليون دولار من 144 مستثمرًا، لكنها عُكست بعد تدخل FSRA ولا تُحسب تمويلًا مغلقًا.",
+      "فرضت FSRA غرامة 122,500 دولار في 2024 بسبب عرض أوراق مالية دون نشرة معتمدة، مع طلب مراجعة مستقلة للحوكمة.",
+      "يسجل سجل FSRA إجراءات إضافية مرتبطة بـCRS وFATCA في 2022 و2024 و2025؛ لم تُخفَ هذه الوقائع.",
+      "تنبيه انتحال النطاقات في يونيو 2026 يحمي Sarwa ولا يمثل مخالفة من الشركة.",
+      "Sarwa ليست بنكًا، ومنتجات Save قائمة على أصول وصناديق شريكة وليست وديعة مصرفية تقليدية.",
+      "Sarwa تصرح بأنها لا تحمل اعتماد نافذة إسلامية من FSRA رغم تقديم منتجات تحمل وصف Halal.",
+      "رسوم Invest الحالية متدرجة وليست 0.85% لجميع العملاء.",
+      "الاستثمار السلبي لا يربح دائمًا، والعوائد السابقة أو التقديرية لا تضمن المستقبل.",
+      "لم تُثبت المصادر الرسمية الحالية مكدس AWS وNode.js وReact؛ لذلك أزيلت هذه التقنيات من القيمة النهائية.",
+      "الأهلية العالمية مشروطة بالجنسية والإقامة الضريبية وتوافر المنتج، ولا تعني ترخيصًا محليًا في كل دولة.",
+      "البيانات التشغيلية والربحية صادرة عن الشركة ولم تُدعَم بقوائم مالية عامة مدققة."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_at": "2026-08-03",
+      "checks_passed": 137,
+      "checks_failed": 0,
+      "checks": [
+        {
+          "name": "base_key_id",
+          "passed": true,
+          "details": "الحقل الأساسي id موجود."
+        },
+        {
+          "name": "base_key_slug",
+          "passed": true,
+          "details": "الحقل الأساسي slug موجود."
+        },
+        {
+          "name": "base_key_name",
+          "passed": true,
+          "details": "الحقل الأساسي name موجود."
+        },
+        {
+          "name": "base_key_headline",
+          "passed": true,
+          "details": "الحقل الأساسي headline موجود."
+        },
+        {
+          "name": "base_key_category",
+          "passed": true,
+          "details": "الحقل الأساسي category موجود."
+        },
+        {
+          "name": "base_key_company",
+          "passed": true,
+          "details": "الحقل الأساسي company موجود."
+        },
+        {
+          "name": "base_key_directory_snapshot",
+          "passed": true,
+          "details": "الحقل الأساسي directory_snapshot موجود."
+        },
+        {
+          "name": "base_key_overview",
+          "passed": true,
+          "details": "الحقل الأساسي overview موجود."
+        },
+        {
+          "name": "base_key_market_data",
+          "passed": true,
+          "details": "الحقل الأساسي market_data موجود."
+        },
+        {
+          "name": "base_key_financials",
+          "passed": true,
+          "details": "الحقل الأساسي financials موجود."
+        },
+        {
+          "name": "base_key_lessons",
+          "passed": true,
+          "details": "الحقل الأساسي lessons موجود."
+        },
+        {
+          "name": "base_key_tools",
+          "passed": true,
+          "details": "الحقل الأساسي tools موجود."
+        },
+        {
+          "name": "professional_v2_key_verification",
+          "passed": true,
+          "details": "قسم Professional V2 verification موجود."
+        },
+        {
+          "name": "professional_v2_key_evidence_map_schema",
+          "passed": true,
+          "details": "قسم Professional V2 evidence_map_schema موجود."
+        },
+        {
+          "name": "professional_v2_key_evidence_map",
+          "passed": true,
+          "details": "قسم Professional V2 evidence_map موجود."
+        },
+        {
+          "name": "professional_v2_key_sources",
+          "passed": true,
+          "details": "قسم Professional V2 sources موجود."
+        },
+        {
+          "name": "json_root_object",
+          "passed": true,
+          "details": "الجذر كائن JSON."
+        },
+        {
+          "name": "original_id_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على id الأصلي."
+        },
+        {
+          "name": "original_slug_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على slug الأصلي."
+        },
+        {
+          "name": "original_name_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على الاسم الأساسي."
+        },
+        {
+          "name": "base_structure_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على البنية الأساسية مع الإضافات."
+        },
+        {
+          "name": "arabic_final_content",
+          "passed": true,
+          "details": "المحتوى النهائي مكتوب بالعربية."
+        },
+        {
+          "name": "source_ids_unique",
+          "passed": true,
+          "details": "معرّفات المصادر فريدة."
+        },
+        {
+          "name": "minimum_source_count",
+          "passed": true,
+          "details": "عدد المصادر 20."
+        },
+        {
+          "name": "primary_source_majority",
+          "passed": true,
+          "details": "أغلبية المصادر أولية."
+        },
+        {
+          "name": "all_sources_primary",
+          "passed": true,
+          "details": "كل المصادر النهائية تنظيمية أو صادرة عن الشركة."
+        },
+        {
+          "name": "source_urls_valid",
+          "passed": true,
+          "details": "روابط المصادر صالحة بنيويًا."
+        },
+        {
+          "name": "source_metadata_complete",
+          "passed": true,
+          "details": "بيانات المصادر مكتملة."
+        },
+        {
+          "name": "no_duplicate_urls",
+          "passed": true,
+          "details": "لا توجد روابط مكررة."
+        },
+        {
+          "name": "evidence_required_paths",
+          "passed": true,
+          "details": "خريطة الأدلة تغطي 15 مسارًا جوهريًا."
+        },
+        {
+          "name": "evidence_value_match_$.company.location",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.company.location."
+        },
+        {
+          "name": "evidence_fields_complete_$.company.location",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.company.location."
+        },
+        {
+          "name": "evidence_source_count_$.company.location",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.company.location."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.company.location",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.company.location."
+        },
+        {
+          "name": "evidence_reference_integrity_$.company.location",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.company.location."
+        },
+        {
+          "name": "evidence_value_match_$.company.business_model",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.company.business_model."
+        },
+        {
+          "name": "evidence_fields_complete_$.company.business_model",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.company.business_model."
+        },
+        {
+          "name": "evidence_source_count_$.company.business_model",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.company.business_model."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.company.business_model",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.company.business_model."
+        },
+        {
+          "name": "evidence_reference_integrity_$.company.business_model",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.company.business_model."
+        },
+        {
+          "name": "evidence_value_match_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_fields_complete_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_source_count_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_reference_integrity_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_value_match_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_fields_complete_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_source_count_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_reference_integrity_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_value_match_$.overview.problem",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.overview.problem."
+        },
+        {
+          "name": "evidence_fields_complete_$.overview.problem",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.overview.problem."
+        },
+        {
+          "name": "evidence_source_count_$.overview.problem",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.overview.problem."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.overview.problem",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.overview.problem."
+        },
+        {
+          "name": "evidence_reference_integrity_$.overview.problem",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.overview.problem."
+        },
+        {
+          "name": "evidence_value_match_$.overview.solution",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.overview.solution."
+        },
+        {
+          "name": "evidence_fields_complete_$.overview.solution",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.overview.solution."
+        },
+        {
+          "name": "evidence_source_count_$.overview.solution",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.overview.solution."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.overview.solution",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.overview.solution."
+        },
+        {
+          "name": "evidence_reference_integrity_$.overview.solution",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.overview.solution."
+        },
+        {
+          "name": "evidence_value_match_$.market_data.target_audience",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_fields_complete_$.market_data.target_audience",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_source_count_$.market_data.target_audience",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.market_data.target_audience",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_reference_integrity_$.market_data.target_audience",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_value_match_$.market_data.market_size",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.market_data.market_size."
+        },
+        {
+          "name": "evidence_fields_complete_$.market_data.market_size",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.market_data.market_size."
+        },
+        {
+          "name": "evidence_source_count_$.market_data.market_size",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.market_data.market_size."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.market_data.market_size",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.market_data.market_size."
+        },
+        {
+          "name": "evidence_reference_integrity_$.market_data.market_size",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.market_data.market_size."
+        },
+        {
+          "name": "evidence_value_match_$.market_data.growth_rate",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_fields_complete_$.market_data.growth_rate",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_source_count_$.market_data.growth_rate",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.market_data.growth_rate",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_reference_integrity_$.market_data.growth_rate",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_value_match_$.financials.initial_investment",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_fields_complete_$.financials.initial_investment",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_source_count_$.financials.initial_investment",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.financials.initial_investment",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_reference_integrity_$.financials.initial_investment",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_value_match_$.financials.valuation",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.financials.valuation."
+        },
+        {
+          "name": "evidence_fields_complete_$.financials.valuation",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.financials.valuation."
+        },
+        {
+          "name": "evidence_source_count_$.financials.valuation",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.financials.valuation."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.financials.valuation",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.financials.valuation."
+        },
+        {
+          "name": "evidence_reference_integrity_$.financials.valuation",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.financials.valuation."
+        },
+        {
+          "name": "evidence_value_match_$.financials.revenue_streams",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_fields_complete_$.financials.revenue_streams",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_source_count_$.financials.revenue_streams",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.financials.revenue_streams",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_reference_integrity_$.financials.revenue_streams",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_value_match_$.tools",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.tools."
+        },
+        {
+          "name": "evidence_fields_complete_$.tools",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.tools."
+        },
+        {
+          "name": "evidence_source_count_$.tools",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.tools."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.tools",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.tools."
+        },
+        {
+          "name": "evidence_reference_integrity_$.tools",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.tools."
+        },
+        {
+          "name": "evidence_value_match_$.headline",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.headline."
+        },
+        {
+          "name": "evidence_fields_complete_$.headline",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.headline."
+        },
+        {
+          "name": "evidence_source_count_$.headline",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.headline."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.headline",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.headline."
+        },
+        {
+          "name": "evidence_reference_integrity_$.headline",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.headline."
+        },
+        {
+          "name": "evidence_value_match_$.lessons",
+          "passed": true,
+          "details": "قيمة الدليل مطابقة للمسار $.lessons."
+        },
+        {
+          "name": "evidence_fields_complete_$.lessons",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.lessons."
+        },
+        {
+          "name": "evidence_source_count_$.lessons",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.lessons."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.lessons",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.lessons."
+        },
+        {
+          "name": "evidence_reference_integrity_$.lessons",
+          "passed": true,
+          "details": "المراجع متطابقة مع سجل المصادر للمسار $.lessons."
+        },
+        {
+          "name": "no_nan_or_infinity",
+          "passed": true,
+          "details": "لا توجد قيم رقمية غير صالحة."
+        },
+        {
+          "name": "old_monthly_revenue_removed",
+          "passed": true,
+          "details": "أزيل تقدير الإيراد الشهري القديم."
+        },
+        {
+          "name": "old_traffic_proxy_removed",
+          "passed": true,
+          "details": "لم تعد الأصول بديلًا عن الزيارات."
+        },
+        {
+          "name": "monthly_revenue_undisclosed",
+          "passed": true,
+          "details": "الإيراد الشهري غير مختلق."
+        },
+        {
+          "name": "traffic_undisclosed",
+          "passed": true,
+          "details": "الزيارات غير مختلقة."
+        },
+        {
+          "name": "client_assets_not_revenue",
+          "passed": true,
+          "details": "تم فصل أصول العملاء عن الإيراد."
+        },
+        {
+          "name": "trading_volume_not_revenue",
+          "passed": true,
+          "details": "تم فصل حجم التداول عن الإيراد."
+        },
+        {
+          "name": "aum_and_client_assets_separated",
+          "passed": true,
+          "details": "تم فصل AUM عن أصول العملاء."
+        },
+        {
+          "name": "historical_user_metric_labeled",
+          "passed": true,
+          "details": "رقم 40 ألف موسوم كتاريخي."
+        },
+        {
+          "name": "valuation_not_invented",
+          "passed": true,
+          "details": "لم يُخترع تقييم."
+        },
+        {
+          "name": "named_funding_total_labeled_minimum",
+          "passed": true,
+          "details": "مجموع الجولات موسوم كحد أدنى."
+        },
+        {
+          "name": "reversed_offer_not_funding",
+          "passed": true,
+          "details": "العرض المعكوس ليس تمويلًا مغلقًا."
+        },
+        {
+          "name": "regulatory_status_active",
+          "passed": true,
+          "details": "الحالة التنظيمية الحالية مثبتة."
+        },
+        {
+          "name": "regulatory_action_disclosed",
+          "passed": true,
+          "details": "غرامة 2024 مذكورة."
+        },
+        {
+          "name": "impersonation_notice_distinguished",
+          "passed": true,
+          "details": "تم فصل تنبيه الانتحال عن مخالفات الشركة."
+        },
+        {
+          "name": "not_a_bank_disclosed",
+          "passed": true,
+          "details": "تم توضيح أنها ليست بنكًا."
+        },
+        {
+          "name": "islamic_window_caveat",
+          "passed": true,
+          "details": "تم توضيح قيد النافذة الإسلامية."
+        },
+        {
+          "name": "passive_investing_guarantee_removed",
+          "passed": true,
+          "details": "تم تصحيح وعد الاستثمار السلبي."
+        },
+        {
+          "name": "fee_tiers_current",
+          "passed": true,
+          "details": "رسوم الإدارة متدرجة."
+        },
+        {
+          "name": "crypto_spread_present",
+          "passed": true,
+          "details": "فارق العملات المشفرة موثق."
+        },
+        {
+          "name": "options_fee_present",
+          "passed": true,
+          "details": "رسوم الخيارات موثقة."
+        },
+        {
+          "name": "internal_stack_removed",
+          "passed": true,
+          "details": "تم إزالة المكدس الداخلي غير المدعوم."
+        },
+        {
+          "name": "market_size_not_invented",
+          "passed": true,
+          "details": "لم يُخترع TAM."
+        },
+        {
+          "name": "growth_rate_not_invented",
+          "passed": true,
+          "details": "لم يُخترع معدل نمو واحد."
+        },
+        {
+          "name": "eligibility_not_assumed_saudi",
+          "passed": true,
+          "details": "لم يُفترض توافر كل الخدمات في السعودية."
+        },
+        {
+          "name": "lessons_unique",
+          "passed": true,
+          "details": "الدروس الستة فريدة."
+        },
+        {
+          "name": "lessons_company_specific",
+          "passed": true,
+          "details": "الدروس خاصة بـSarwa."
+        },
+        {
+          "name": "metric_taxonomy_present",
+          "passed": true,
+          "details": "مخطط فصل المقاييس شامل."
+        },
+        {
+          "name": "verified_date_consistent",
+          "passed": true,
+          "details": "تاريخ التحقق متسق."
+        },
+        {
+          "name": "schema_version",
+          "passed": true,
+          "details": "إصدار المخطط صحيح."
+        },
+        {
+          "name": "sec_scope_explained",
+          "passed": true,
+          "details": "تم توضيح عدم انطباق SEC."
+        },
+        {
+          "name": "regulatory_rule_present",
+          "passed": true,
+          "details": "قاعدة التحقق التنظيمي موجودة."
+        }
+      ],
+      "validator_notes": [
+        "تمت قراءة الملف الأصلي من المسار المرفق والتحقق من صحة JSON.",
+        "تم الحفاظ على الحقول الأساسية وإضافة أقسام Professional V2.",
+        "تمت مطابقة كل field_value في evidence_map مع القيمة النهائية المقابلة.",
+        "تم التحقق من تكامل معرّفات المصادر وروابطها وعددها.",
+        "تم الفصل بين الإيراد والربح والتقييم والتمويل وأصول العملاء وAUM وحجم التداول.",
+        "تم الفصل بين زيارات الموقع والمستخدمين المسجلين والنشطين والعملاء الممولين.",
+        "تم توثيق الحالة التنظيمية والإجراءات التنظيمية دون خلط.",
+        "تم منع NaN وInfinity والتقديرات المالية أو السوقية غير المدعومة."
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول الجوهرية بقيمتها النهائية وحالة التحقق ونوع الادعاء والمصادر والقيود، مع فصل المقاييس المالية والتشغيلية والتنظيمية.",
+    "required_fields": [
+      "field_value",
+      "verification_status",
+      "confidence",
+      "claim_type",
+      "verified_on",
+      "evidence_summary",
+      "source_ids",
+      "source_references",
+      "limitations",
+      "source_count"
+    ],
+    "verification_status_values": [
+      "verified_current_regulated_entity_and_history",
+      "verified_current_multi_product_fee_model",
+      "verified_monthly_revenue_undisclosed_profitability_reported",
+      "verified_traffic_undisclosed_metrics_separated",
+      "verified_product_problem_without_performance_guarantee",
+      "verified_current_product_suite",
+      "verified_eligibility_with_product_specific_limits",
+      "verified_no_company_tam_client_assets_context_only",
+      "verified_directional_growth_no_single_rate",
+      "verified_named_rounds_and_reversed_offer",
+      "verified_as_not_publicly_disclosed",
+      "verified_current_pricing_not_revenue_mix",
+      "verified_operational_capabilities_internal_stack_removed",
+      "verified_editorial_synthesis",
+      "analytical_inference_grounded_in_company_and_regulator_sources"
+    ],
+    "confidence_scale": {
+      "مرتفعة": "مدعوم بمصدر تنظيمي أو إفصاح رسمي واضح، أو بعدم وجود إفصاح رغم مراجعة المصادر الرسمية ذات الصلة.",
+      "متوسطة إلى مرتفعة": "مدعوم بعدة مصادر أولية مع عنصر تحليلي محدود.",
+      "متوسطة": "استنتاج تحريري مبني على أدلة معلنة مع قيود صريحة.",
+      "منخفضة": "دليل غير كاف؛ لا تُستخدم هذه الدرجة لإثبات رقم مالي."
+    },
+    "metric_separation": [
+      "الإيراد الشهري",
+      "الإيراد السنوي",
+      "الربح",
+      "هامش صافي الربح",
+      "التقييم",
+      "التمويل المغلق",
+      "الالتزامات الاستثمارية المعكوسة",
+      "الأصول تحت الإدارة AUM",
+      "أصول العملاء",
+      "حجم التداول",
+      "زيارات الموقع",
+      "المستخدمون المسجلون",
+      "المستخدمون النشطون",
+      "العملاء الممولون",
+      "رسوم الإدارة",
+      "رسوم التداول",
+      "الفارق السعري"
+    ]
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "تأسست Sarwa في الإمارات عام 2017 على يد Mark Chahwan وJad Sayegh وNadine Mezher. بدأت رحلتها التنظيمية في بيئة DIFC، بينما الكيان التشغيلي المنظم حاليًا هو Sarwa Digital Wealth (Capital) Limited، شركة خاصة محدودة بالأسهم مسجلة في سوق أبوظبي العالمي ADGM، وعنوانها التنظيمي في جزيرة المارية بأبوظبي، وحالتها نشطة تحت تصريح FSRA رقم 190037. لذلك فإن وصفها بأنها «شركة مقرها دبي فقط» لم يعد دقيقًا تنظيميًا.",
+      "verification_status": "verified_current_regulated_entity_and_history",
+      "confidence": "مرتفعة",
+      "claim_type": "هوية وموقع وتنظيم",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التأسيس والمؤسسون مدعومون بإفصاح 2026، والكيان والعنوان والحالة ورقم التصريح مدعومة بالسجل الرسمي.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "What Is Sarwa and How Does It Work? A Complete Guide",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/what-is-sarwa-and-how-does-it-work",
+          "source_type": "مقابلة وإفصاح تشغيلي رسمي للشركة",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح رسمي",
+          "source_locator": "How Sarwa started",
+          "supports": "التأسيس عام 2017 والمؤسسون والمسار التنظيمي"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Sarwa Digital Wealth (Capital) Limited — FSRA Public Register",
+          "publisher": "Abu Dhabi Global Market",
+          "url": "https://www.adgm.com/public-registers/fsra/firms/financial-firms/sarwa-digital-wealth-capital-limited-190037",
+          "source_type": "سجل تنظيمي رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "سجل تنظيمي",
+          "source_locator": "Firm status and FSP",
+          "supports": "الكيان النشط والعنوان ورقم 190037"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Sarwa — Invest, Trade and Save",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/en",
+          "source_type": "الصفحة الرئيسية الرسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح موقع",
+          "source_locator": "Regulatory footer",
+          "supports": "الترخيص والعنوان الحالي"
+        }
+      ],
+      "limitations": "لا تتوفر قوائم ملكية عامة كاملة أو سجل موحد يحدد المقر الإداري مقابل العنوان التنظيمي.",
+      "source_count": 3
+    },
+    "$.company.business_model": {
+      "field_value": "منصة متعددة المنتجات تجمع إدارة المحافظ المؤتمتة والمشورة البشرية عبر Sarwa Invest، والتداول الذاتي للأسهم وETFs والخيارات والعملات المشفرة عبر Sarwa Trade، وإدارة السيولة عبر Sarwa Save، وخدمات الثروات الخاصة والحماية من مخاطر الذيل. تحقق الدخل من رسوم إدارة الأصول، ورسوم التداول والعقود، وفوارق العملات المشفرة، ورسوم منتجات السيولة وبعض وسائل التمويل. Sarwa ليست بنكًا، وتصرح بأنها لا تحمل اعتماد نافذة إسلامية من FSRA رغم توفير محافظ ومنتجات تحمل وصف Halal.",
+      "verification_status": "verified_current_multi_product_fee_model",
+      "confidence": "مرتفعة",
+      "claim_type": "نموذج عمل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المنتجات والتسعير والإفصاحات الرسمية تدعم نموذجًا متعدد الرسوم بدل رسوم AUM وFX فقط.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-08",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "What Is Sarwa and How Does It Work? A Complete Guide",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/what-is-sarwa-and-how-does-it-work",
+          "source_type": "مقابلة وإفصاح تشغيلي رسمي للشركة",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح تشغيلي",
+          "source_locator": "Products and costs",
+          "supports": "Invest وTrade وSave وCrypto وOptions وPrivate Wealth"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Sarwa Pricing & Benefits",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/en/pricing",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير رسمي",
+          "source_locator": "Pricing table",
+          "supports": "رسوم المنتجات الأساسية"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Sarwa — Invest, Trade and Save",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/en",
+          "source_type": "الصفحة الرئيسية الرسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح قانوني",
+          "source_locator": "Bank and Islamic Window disclaimers",
+          "supports": "ليست بنكًا ولا تحمل Islamic Window endorsement"
+        }
+      ],
+      "limitations": "لم تنشر Sarwa نسبة مساهمة كل منتج في الإيراد أو الشروط التجارية لكل عميل خاص.",
+      "source_count": 3
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير مُفصح عنه علنًا. أعلنت الشركة أول ربح فصلي في مايو 2024 بهامش صافي ربح 33% ونمو إيراد ربعي 124%، ثم أعلنت ربحية السنة الكاملة 2025، لكنها لم تنشر قيمة الإيراد الشهري أو السنوي. لا يجوز تقدير الإيراد بضرب مليار دولار من أصول العملاء في نسبة رسوم واحدة، لأن الأصول موزعة بين منتجات وشرائح ورسوم مختلفة، ولأن حجم التداول ليس إيرادًا.",
+      "verification_status": "verified_monthly_revenue_undisclosed_profitability_reported",
+      "confidence": "مرتفعة",
+      "claim_type": "إيراد وربحية",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصدر الرسمي الأحدث يذكر الربحية وهوامش ونموًا نسبيًا، لكنه لا يقدم قيمة الإيراد الشهري أو السنوي.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "What Is Sarwa and How Does It Work? A Complete Guide",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/what-is-sarwa-and-how-does-it-work",
+          "source_type": "مقابلة وإفصاح تشغيلي رسمي للشركة",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح CEO رسمي",
+          "source_locator": "Profitability section",
+          "supports": "أول ربح فصلي وربحية 2025 دون قيمة الإيراد"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Sarwa Pricing & Benefits",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/en/pricing",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير رسمي",
+          "source_locator": "Product pricing",
+          "supports": "تعدد قواعد الرسوم يمنع تقدير MRR من AUM"
+        }
+      ],
+      "limitations": "الأرقام ذاتية الإفصاح ولم تُدعَم بقوائم مالية مدققة منشورة.",
+      "source_count": 2
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير مُفصح عنه علنًا، ولا يوجد رقم رسمي حديث لزيارات الموقع أو المستخدمين النشطين شهريًا. الرقم الرسمي البارز في مايو 2026 هو مليار دولار من أصول العملاء، مقابل 880 مليون دولار من الأصول المُدارة في نهاية 2025 و3 مليارات دولار من حجم التداول خلال 2025. أما 40 ألف مستخدم مسجل فهو رقم تاريخي من جولة 2021، ولا يمثل المستخدمين الحاليين أو العملاء الممولين أو الزيارات.",
+      "verification_status": "verified_traffic_undisclosed_metrics_separated",
+      "confidence": "مرتفعة",
+      "claim_type": "زيارات واستخدام وأصول",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد رقم رسمي للزيارات أو MAU؛ المتاح هو أصول العملاء وAUM وحجم التداول ورقم مستخدم تاريخي.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-01",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "We hit $1B in client assets",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/one-billion",
+          "source_type": "إفصاح رسمي من الرئيس التنفيذي",
+          "published_at": "2026-05-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح CEO",
+          "source_locator": "One billion milestone",
+          "supports": "مليار دولار أصول عملاء في مايو 2026"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "What Is Sarwa and How Does It Work? A Complete Guide",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/what-is-sarwa-and-how-does-it-work",
+          "source_type": "مقابلة وإفصاح تشغيلي رسمي للشركة",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح تشغيلي",
+          "source_locator": "2025 profitability and metrics",
+          "supports": "880M AUM و3B trading volume"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Sarwa raises $15M Series B",
+          "publisher": "Sarwa",
+          "url": "https://blog.sarwa.co/sarwa-series-b-round",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2021",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان تمويل تاريخي",
+          "source_locator": "2021 registered users",
+          "supports": "40K مستخدم مسجل تاريخيًا"
+        }
+      ],
+      "limitations": "لا تُفصح الشركة عن العملاء الممولين أو MAU أو DAU الحالي، وتعريف client assets قد يشمل منتجات مختلفة.",
+      "source_count": 3
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "كان الوصول إلى المحافظ العالمية المتنوعة في الخليج يرتبط غالبًا بحدود دنيا مرتفعة، ورسوم غير شفافة، وإجراءات مصرفية معقدة، وحاجة إلى التنقل بين منصات منفصلة للادخار والاستثمار والتداول. كما أن المبتدئ يحتاج إلى تحديد المخاطر وبناء المحفظة وإعادة موازنتها، بينما يحتاج المتداول النشط إلى تنفيذ وأوامر وتمويل محلي مختلف.",
+        "impact": "قد يؤدي الاحتكاك وارتفاع التكلفة وتعقيد المصطلحات إلى إبقاء المدخرات نقدًا، أو دفع المستخدم إلى قرارات غير مناسبة لمخاطره، أو توزيع أمواله بين خدمات متعددة. لا تدعم المصادر ادعاء أن الاستثمار السلبي «يربح دائمًا»؛ كل استثمار ينطوي على مخاطر، والأداء السابق لا يضمن النتائج المستقبلية."
+      },
+      "verification_status": "verified_product_problem_without_performance_guarantee",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "مشكلة سوقية",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المشكلة مستخلصة من رسالة الشركة ونطاق المنتجات، مع إزالة وعد أن الاستثمار السلبي يربح دائمًا.",
+      "source_ids": [
+        "SRC-06",
+        "SRC-01",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Sarwa — About",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/en/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Why we do what we do",
+          "supports": "خفض التكلفة والتعقيد وإتاحة الاستثمار"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "What Is Sarwa and How Does It Work? A Complete Guide",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/what-is-sarwa-and-how-does-it-work",
+          "source_type": "مقابلة وإفصاح تشغيلي رسمي للشركة",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مؤسس",
+          "source_locator": "Origins and product rationale",
+          "supports": "الحاجة لمنصة سهلة متعددة المنتجات"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Sarwa — current service and risk disclosures",
+          "publisher": "Sarwa Blog",
+          "url": "https://www.sarwa.co/blog",
+          "source_type": "بوابة محتوى وإفصاحات رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مخاطر",
+          "source_locator": "Past performance disclaimer",
+          "supports": "عدم ضمان النتائج"
+        }
+      ],
+      "limitations": "لا تقدم المصادر دراسة مستقلة تقيس حجم الضرر أو نسبة المدخرات غير المستثمرة بسبب المشكلة.",
+      "source_count": 3
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "توفر Sarwa حسابًا موحدًا يضم محافظ ETF مبنية على ملف المخاطر مع إعادة موازنة وتوزيعات معاد استثمارها، وتداولًا ذاتيًا لآلاف الأسهم وETFs والخيارات والعملات المشفرة، ومنتجات سيولة قائمة على صناديق سوق المال، وخدمات ثروات خاصة. تجمع المنصة بين الأتمتة ومستشارين بشريين، وتدعم تمويلًا محليًا بالدرهم وشريكًا تشغيليًا معلنًا هو Saxo Bank. تختلف الحدود الدنيا والرسوم والمخاطر حسب المنتج، والعوائد المعروضة تقديرية وليست مضمونة."
+      },
+      "verification_status": "verified_current_product_suite",
+      "confidence": "مرتفعة",
+      "claim_type": "منتج وحل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "صفحات المنتجات والمقابلة الرسمية تدعم جميع المكونات الواردة، مع وسم العوائد التقديرية والمخاطر.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-09",
+        "SRC-10",
+        "SRC-11",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "What Is Sarwa and How Does It Work? A Complete Guide",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/what-is-sarwa-and-how-does-it-work",
+          "source_type": "مقابلة وإفصاح تشغيلي رسمي للشركة",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح تشغيلي",
+          "source_locator": "Product offerings",
+          "supports": "الحزمة الكاملة وشريك Saxo"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Sarwa Invest — Hands-off investing",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/en/product/invest",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "Invest portfolios",
+          "supports": "المحافظ وإعادة الموازنة والحدود الدنيا"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Sarwa Trade — Active trading platform",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/en/product/trade",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "Trade features",
+          "supports": "الأسهم وETFs والأوامر"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Sarwa Save",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/en/product/save",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "Save products",
+          "supports": "صناديق سوق المال والعوائد التقديرية"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Options Trading in the UAE",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/en/product/trade/options",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "Options",
+          "supports": "الخيارات ورسومها"
+        }
+      ],
+      "limitations": "لا يعني توفر المنتج ملاءمته لكل عميل أو كل بلد، ولا تضمن العوائد أو الأداء.",
+      "source_count": 5
+    },
+    "$.market_data.target_audience": {
+      "field_value": "الأفراد الراغبون في الاستثمار المؤتمت، والمتداولون الذاتيون، وأصحاب السيولة قصيرة الأجل، والعملاء ذوو الثروات المرتفعة. بدأت المنصة بخدمة المهنيين في الإمارات والمنطقة، وتذكر حاليًا إتاحة الحساب عالميًا لعملاء مؤهلين باستثناء جنسيات وإقامات ضريبية مقيدة، مع قيود إضافية حسب المنتج. لذلك لا يجوز افتراض توافر كل خدمة في السعودية أو كل دولة من دون فحص الأهلية والتنظيم المحلي.",
+      "verification_status": "verified_eligibility_with_product_specific_limits",
+      "confidence": "مرتفعة",
+      "claim_type": "جمهور وأهلية",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصدر الرسمي يوسع الأهلية خارج الإمارات مع قوائم تقييد، بينما بعض المنتجات لها شروط إضافية.",
+      "source_ids": [
+        "SRC-14",
+        "SRC-19",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-14",
+          "title": "Who can open a Sarwa account?",
+          "publisher": "Sarwa Help Center",
+          "url": "https://help.sarwa.co/hc/en-us/articles/4407324496017-Who-can-open-a-Sarwa-account",
+          "source_type": "مركز مساعدة رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مركز مساعدة",
+          "source_locator": "Account eligibility",
+          "supports": "العمر والجنسية والإقامة الضريبية والقيود"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "What happens if I leave the country?",
+          "publisher": "Sarwa Help Center",
+          "url": "https://help.sarwa.co/hc/en-us/articles/4407343100177-What-happens-if-I-leave-the-country",
+          "source_type": "مركز مساعدة رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مركز مساعدة",
+          "source_locator": "Moving countries",
+          "supports": "استمرار الحساب مع مراجعة دعم البلد"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "What Is Sarwa and How Does It Work? A Complete Guide",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/what-is-sarwa-and-how-does-it-work",
+          "source_type": "مقابلة وإفصاح تشغيلي رسمي للشركة",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح المنتج",
+          "source_locator": "Customer segments",
+          "supports": "الأفراد والمتداولون والثروات الخاصة"
+        }
+      ],
+      "limitations": "قواعد الأهلية قابلة للتغيير، ولا يثبت قبول الحساب توافر كل منتج في الولاية نفسها.",
+      "source_count": 3
+    },
+    "$.market_data.market_size": {
+      "field_value": "لم تنشر Sarwa دراسة موثوقة لحجم السوق القابل للخدمة أو إيراداته. أفضل مؤشر أولي على نطاقها الفعلي هو وصول أصول العملاء إلى مليار دولار في مايو 2026. يمثل ذلك حجم أصول محتفظًا بها أو مُدارة عبر المنصة، وليس حجم سوق إدارة الثروات في الخليج، ولا الإيراد، ولا التقييم.",
+      "verification_status": "verified_no_company_tam_client_assets_context_only",
+      "confidence": "مرتفعة",
+      "claim_type": "حجم سوق وسياق",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد TAM أولي منشور؛ استُخدم مليار دولار من أصول العملاء كمقياس نطاق خاص بالشركة فقط.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "We hit $1B in client assets",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/one-billion",
+          "source_type": "إفصاح رسمي من الرئيس التنفيذي",
+          "published_at": "2026-05-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح رسمي",
+          "source_locator": "Client assets milestone",
+          "supports": "مليار دولار من أصول العملاء"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Sarwa — About",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/en/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Mission and audience",
+          "supports": "السوق الوظيفي الذي تخدمه"
+        }
+      ],
+      "limitations": "أصول العملاء ليست إيراد السوق ولا عدد العملاء ولا التقييم.",
+      "source_count": 2
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا تنشر الشركة معدل نمو سنوي حديثًا موحدًا للإيراد أو العملاء. أعلنت أن الوصول إلى أول 500 مليون دولار من أصول العملاء استغرق سبع سنوات، بينما استغرق الانتقال إلى المليار 18 شهرًا إضافيًا. كما ذكرت 880 مليون دولار أصولًا مُدارة و3 مليارات دولار حجم تداول في 2025. هذه إشارات نمو قوية لكنها مقاييس مختلفة، ولا تسمح باستخراج معدل واحد للمستخدمين أو الإيراد.",
+      "verification_status": "verified_directional_growth_no_single_rate",
+      "confidence": "مرتفعة",
+      "claim_type": "نمو",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توجد مراحل زمنية موثقة لأصول العملاء ومقاييس 2025، لكن لا يوجد معدل نمو متجانس للإيراد أو المستخدمين.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-01",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "We hit $1B in client assets",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/one-billion",
+          "source_type": "إفصاح رسمي من الرئيس التنفيذي",
+          "published_at": "2026-05-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح CEO",
+          "source_locator": "First and second $500M timing",
+          "supports": "سبع سنوات ثم 18 شهرًا"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "What Is Sarwa and How Does It Work? A Complete Guide",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/what-is-sarwa-and-how-does-it-work",
+          "source_type": "مقابلة وإفصاح تشغيلي رسمي للشركة",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح 2026",
+          "source_locator": "2025 metrics",
+          "supports": "880M AUM و3B حجم تداول وربحية"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Sarwa raises $15M Series B",
+          "publisher": "Sarwa",
+          "url": "https://blog.sarwa.co/sarwa-series-b-round",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2021",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "رقم تاريخي",
+          "source_locator": "2021 users",
+          "supports": "40K مستخدم مسجل"
+        }
+      ],
+      "limitations": "اختلاف تواريخ وتعريفات client assets وAUM والمستخدمين يمنع دمجها في CAGR واحد.",
+      "source_count": 3
+    },
+    "$.financials.initial_investment": {
+      "field_value": "تذكر الشركة أنها جمعت 1.3 مليون دولار في تمويل ما قبل Series A عام 2018، ثم أكثر من 8.4 ملايين دولار في Series A عام 2020، و15 مليون دولار في Series B عام 2021 بقيادة مبادلة. تمثل الجولات المسماة ما لا يقل عن 24.7 مليون دولار، ولا تشمل بالضرورة كل دعم أو استثمار أو حوافز تاريخية. في 2023 حاولت الشركة عرض أسهم في الكيان الأم على مستخدمين؛ التزم 144 مستثمرًا بنحو 2.1 مليون دولار قبل عكس الاشتراكات بعد تدخل FSRA، لذلك لا تُعامل تلك الالتزامات كجولة مغلقة.",
+      "verification_status": "verified_named_rounds_and_reversed_offer",
+      "confidence": "مرتفعة",
+      "claim_type": "تمويل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "إفصاحات Sarwa تؤكد الجولات الثلاث، وإجراء FSRA يؤكد أن التزامات عرض 2023 عُكست.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-16",
+        "SRC-17",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "What Is Sarwa and How Does It Work? A Complete Guide",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/what-is-sarwa-and-how-does-it-work",
+          "source_type": "مقابلة وإفصاح تشغيلي رسمي للشركة",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح تمويل رسمي",
+          "source_locator": "Funding history",
+          "supports": "1.3M و8.4M و15M"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Sarwa raises $8.4M Series A",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/press-release-uae-based-fintech-startup-sarwa-raises-84m-series-a-funding-round-led-by-kipco",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2020",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان جولة",
+          "source_locator": "Series A",
+          "supports": "أكثر من 8.4M وإجمالي >10M وقتها"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Sarwa raises $15M Series B",
+          "publisher": "Sarwa",
+          "url": "https://blog.sarwa.co/sarwa-series-b-round",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2021",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان جولة",
+          "source_locator": "Series B",
+          "supports": "15M بقيادة مبادلة"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "ADGM FSRA fines Sarwa USD 122,500 for an offer without an approved prospectus",
+          "publisher": "Abu Dhabi Global Market",
+          "url": "https://www.adgm.com/media/announcements/adgms-financial-regulator-fines-sarwa-digital-wealth-capital-limited",
+          "source_type": "إجراء إنفاذ تنظيمي رسمي",
+          "published_at": "2024-05-21",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إنفاذ تنظيمي",
+          "source_locator": "2023 parent share offer",
+          "supports": "144 مستثمرًا و2.1M ثم عكس الالتزامات"
+        }
+      ],
+      "limitations": "لا يُدّعى أن 24.7M هو إجمالي التمويل الكامل، بل مجموع الجولات المسماة علنًا.",
+      "source_count": 4
+    },
+    "$.financials.valuation": {
+      "field_value": "غير مُفصح عنه علنًا في مصدر أولي موثوق. لا تكشف جولات التمويل المنشورة عن نسب الملكية اللازمة لحساب تقييم قبل أو بعد الاستثمار، كما أن عرض 2023 أُلغي ولا يقدم أساسًا صالحًا لتقييم حالي. أزيل وصف «عشرات الملايين» لأنه تقدير بلا دليل.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "مرتفعة",
+      "claim_type": "تقييم",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا تقدم الجولات نسب ملكية، والعرض الملغى لا يصلح لاشتقاق تقييم؛ لذلك لا يوجد تقييم موثوق.",
+      "source_ids": [
+        "SRC-16",
+        "SRC-17",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-16",
+          "title": "Sarwa raises $8.4M Series A",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/press-release-uae-based-fintech-startup-sarwa-raises-84m-series-a-funding-round-led-by-kipco",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2020",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان تمويل",
+          "source_locator": "Series A terms",
+          "supports": "قيمة الجولة دون نسبة ملكية"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Sarwa raises $15M Series B",
+          "publisher": "Sarwa",
+          "url": "https://blog.sarwa.co/sarwa-series-b-round",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2021",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان تمويل",
+          "source_locator": "Series B terms",
+          "supports": "قيمة الجولة دون تقييم"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "ADGM FSRA fines Sarwa USD 122,500 for an offer without an approved prospectus",
+          "publisher": "Abu Dhabi Global Market",
+          "url": "https://www.adgm.com/media/announcements/adgms-financial-regulator-fines-sarwa-digital-wealth-capital-limited",
+          "source_type": "إجراء إنفاذ تنظيمي رسمي",
+          "published_at": "2024-05-21",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إجراء تنظيمي",
+          "source_locator": "Reversed offer",
+          "supports": "عدم صلاحية الالتزامات الملغاة كأساس للتقييم"
+        }
+      ],
+      "limitations": "الشركة خاصة ولا تنشر تقييمًا دوريًا أو أسهمًا متداولة.",
+      "source_count": 3
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "رسوم Sarwa Invest السنوية المتدرجة وفق الأصول: من 0.85% للحسابات القياسية إلى 0.4% للشرائح الأكبر، مع حد أدنى معلن قدره 7 دولارات شهريًا لبعض الحسابات.",
+        "رسوم Sarwa Save البالغة 0.5% سنويًا على منتجات السيولة التقليدية والحلال، بينما العائد المعلن تقديري وقبل الرسوم.",
+        "رسوم تداول الأسهم وETFs: دولار واحد أو 0.25% من قيمة الأمر وفق التسعير المنشور.",
+        "رسوم تداول الخيارات البالغة 4 دولارات لكل عقد.",
+        "فارق سعري معلن 1.5% على معاملات العملات المشفرة بدل عمولة منفصلة.",
+        "رسوم بعض وسائل التمويل السريع والبطاقات، إضافة إلى خدمات الثروات الخاصة؛ لم تنشر الشركة توزيع الإيراد حسب المنتج أو متوسط الإيراد لكل عميل."
+      ],
+      "verification_status": "verified_current_pricing_not_revenue_mix",
+      "confidence": "مرتفعة",
+      "claim_type": "مسارات إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "كل بند مستند إلى سعر أو رسم منشور رسميًا، مع عدم ادعاء نسب مساهمة أو إيرادات محققة.",
+      "source_ids": [
+        "SRC-08",
+        "SRC-12",
+        "SRC-13",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "Sarwa Pricing & Benefits",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/en/pricing",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة تسعير",
+          "source_locator": "Invest, Save, Trade",
+          "supports": "رسوم الإدارة والتداول"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Options Trading in the UAE",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/en/product/trade/options",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "Options pricing",
+          "supports": "4 دولارات للعقد"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "What are the fees for Sarwa Crypto?",
+          "publisher": "Sarwa Help Center",
+          "url": "https://help.sarwa.co/hc/en-us/articles/5348799962781-What-are-the-fees-for-Sarwa-Crypto",
+          "source_type": "مركز مساعدة رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مركز مساعدة",
+          "source_locator": "Crypto spread",
+          "supports": "فارق 1.5%"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "What Is Sarwa and How Does It Work? A Complete Guide",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/what-is-sarwa-and-how-does-it-work",
+          "source_type": "مقابلة وإفصاح تشغيلي رسمي للشركة",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح تشغيلي",
+          "source_locator": "Funding methods and private wealth",
+          "supports": "رسوم التمويل وخدمات الثروات"
+        }
+      ],
+      "limitations": "قد تتغير الأسعار حسب البلد والتاريخ والحساب، ولا توجد بيانات عن الإيراد الفعلي حسب المنتج.",
+      "source_count": 4
+    },
+    "$.tools": {
+      "field_value": [
+        "استبيانات ملاءمة وملف مخاطر لبناء محافظ ETF",
+        "خوارزميات تخصيص أصول وإعادة موازنة آلية وإعادة استثمار التوزيعات",
+        "تطبيقات ويب وهاتف للتداول والاستثمار وإدارة السيولة",
+        "أوامر سوق وحد وأوامر إيقاف وملكية جزئية للأسهم وETFs",
+        "تكامل تشغيلي معلن مع Saxo Bank للحسابات والتنفيذ والتمويل",
+        "قنوات تمويل محلية بالدرهم والدولار وتمويل فوري وبطاقات",
+        "256-bit encryption والمصادقة الثنائية وإجراءات KYC وفق إفصاح الشركة",
+        "هياكل حفظ وفصل أصول العملاء عن أموال الشركة وفق وصف Sarwa وشروط الجهات الحافظة",
+        "محافظ ETF تقليدية وحلال ومسؤولة اجتماعيًا ومحافظ تتضمن تعرضًا محدودًا لـBitcoin",
+        "صناديق سوق المال ومنتجات الخيارات والعملات المشفرة وبرنامج حماية من مخاطر الذيل",
+        "لم تُثبت المصادر الرسمية الحالية استخدام AWS أو Node.js أو React كمكدس داخلي في أغسطس 2026، لذلك أزيلت من قائمة الأدوات بدل تكرار ادعاء غير مدعوم"
+      ],
+      "verification_status": "verified_operational_capabilities_internal_stack_removed",
+      "confidence": "مرتفعة",
+      "claim_type": "تقنيات وأدوات تشغيلية",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الأدوات تعكس خصائص معلنة وشركاء وضوابط، بينما أزيلت لغات البرمجة والسحابة غير المثبتة حاليًا.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-09",
+        "SRC-10",
+        "SRC-15",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "What Is Sarwa and How Does It Work? A Complete Guide",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/what-is-sarwa-and-how-does-it-work",
+          "source_type": "مقابلة وإفصاح تشغيلي رسمي للشركة",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح منتج",
+          "source_locator": "Technology, funding and Saxo",
+          "supports": "الأتمتة والشريك والتمويل"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Sarwa Invest — Hands-off investing",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/en/product/invest",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "Rebalancing and portfolios",
+          "supports": "الخوارزميات والمحافظ"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Sarwa Trade — Active trading platform",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/en/product/trade",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "Order capabilities",
+          "supports": "أوامر التداول والكسور"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "How safe is my money? What happens if Sarwa disappears?",
+          "publisher": "Sarwa Help Center",
+          "url": "https://help.sarwa.co/hc/en-us/articles/4407344341521-How-safe-is-my-money-What-happens-if-Sarwa-disappears",
+          "source_type": "إفصاح حفظ أصول رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح حفظ",
+          "source_locator": "Asset segregation",
+          "supports": "فصل الأصول والحفظ"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Sarwa — Invest, Trade and Save",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/en",
+          "source_type": "الصفحة الرئيسية الرسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح أمني",
+          "source_locator": "Security",
+          "supports": "التشفير والوضع التنظيمي"
+        }
+      ],
+      "limitations": "ليست قائمة مكدس برمجي داخلي، ولا توجد مصادر رسمية كافية لإثبات AWS أو Node.js أو React في 2026.",
+      "source_count": 5
+    },
+    "$.headline": {
+      "field_value": "من مستشار آلي إلى منصة بمليار دولار من أصول العملاء: كيف وسّعت Sarwa المحفظة من الاستثمار السلبي إلى إدارة المال متعددة المنتجات",
+      "verification_status": "verified_editorial_synthesis",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "عنوان تحريري",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يجمع العنوان التحول من robo-advisor إلى منصة متعددة المنتجات مع أحدث مقياس أصول عملاء.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-20",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "We hit $1B in client assets",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/one-billion",
+          "source_type": "إفصاح رسمي من الرئيس التنفيذي",
+          "published_at": "2026-05-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح رسمي",
+          "source_locator": "One billion client assets",
+          "supports": "المليار"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Introducing the new Sarwa brand",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/new-sarwa-brand",
+          "source_type": "إعلان تحول منتج رسمي",
+          "published_at": "2023",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان تحول",
+          "source_locator": "Beyond robo-advisory",
+          "supports": "التحول إلى إدارة المال"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "What Is Sarwa and How Does It Work? A Complete Guide",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/what-is-sarwa-and-how-does-it-work",
+          "source_type": "مقابلة وإفصاح تشغيلي رسمي للشركة",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح حديث",
+          "source_locator": "Multi-asset hub",
+          "supports": "المنتجات الحالية"
+        }
+      ],
+      "limitations": "صياغة «وسّعت المحفظة» تحليل تحريري وليست اقتباسًا من الشركة.",
+      "source_count": 3
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "الأصول تحت الإدارة ليست الإيراد",
+          "description": "وصول أصول العملاء إلى مليار دولار إنجاز في الثقة والتوزيع، لكنه لا يعني مليار دولار مبيعات. الإيراد يعتمد على نوع الحساب وشريحة الرسوم والنشاط، وحجم التداول بدوره قيمة إجمالية تمر عبر المنصة لا ما تحتفظ به الشركة."
+        },
+        {
+          "title": "وسّع عمق المحفظة بعد إثبات بوابة الثقة",
+          "description": "بدأت Sarwa بمنتج واضح هو الاستثمار المؤتمت، ثم أضافت التداول والسيولة والخيارات والعملات المشفرة والثروات الخاصة. هذا التوسع يرفع عدد الاحتياجات التي تخدمها المنصة، لكنه يزيد متطلبات الملاءمة والامتثال وإدارة المخاطر."
+        },
+        {
+          "title": "الميزة الإقليمية تُبنى في مسار المال لا في الواجهة فقط",
+          "description": "التمويل المحلي بالدرهم، والتحويلات المحلية، وفهم البنوك والوثائق الإقليمية، والدعم في توقيت الإمارات تقلل احتكاكًا لا تحله منصة عالمية بمجرد ترجمة التطبيق. البنية المالية المحلية قد تكون خندقًا أقوى من التصميم وحده."
+        },
+        {
+          "title": "الأتمتة لا تلغي الحاجة إلى العنصر البشري",
+          "description": "المحفظة تُبنى وتُعاد موازنتها تقنيًا، لكن Sarwa أبقت الوصول إلى مستشارين وخدمات تخطيط للشرائح الأعلى. في المنتجات المالية، الأتمتة تخفض التكلفة بينما يزيد الدعم البشري الثقة في القرارات المعقدة."
+        },
+        {
+          "title": "الترخيص نقطة بداية وليس شهادة كمال دائمة",
+          "description": "Sarwa كيان نشط ومنظم لدى FSRA، لكن سجلها يتضمن إجراءات تنظيمية، أبرزها غرامة 2024 بسبب عرض أوراق مالية دون نشرة معتمدة. الدرس أن النمو والتجريب يجب أن يسبقهما فحص قانوني خاص بكل منتج ورسالة وعرض."
+        },
+        {
+          "title": "لا تحوّل فلسفة استثمار إلى وعد أداء",
+          "description": "الاستثمار السلبي قد يقلل التكلفة ويسهل التنويع، لكنه لا «يربح دائمًا». تحويل التعليم المالي إلى ثقة مستدامة يتطلب توضيح المخاطر والرسوم والحدود والسيناريوهات بدل تسويق استراتيجية واحدة كضمان."
+        }
+      ],
+      "verification_status": "analytical_inference_grounded_in_company_and_regulator_sources",
+      "confidence": "متوسطة",
+      "claim_type": "تحليل ودروس",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس مبنية على فصل المقاييس، وتسلسل المنتجات، والبنية الإقليمية، والعنصر البشري، والإنفاذ التنظيمي، وتحذيرات الأداء.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-20",
+        "SRC-01",
+        "SRC-04",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "We hit $1B in client assets",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/one-billion",
+          "source_type": "إفصاح رسمي من الرئيس التنفيذي",
+          "published_at": "2026-05-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مقياس رسمي",
+          "source_locator": "Client assets",
+          "supports": "فصل AUM عن الإيراد"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Introducing the new Sarwa brand",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/new-sarwa-brand",
+          "source_type": "إعلان تحول منتج رسمي",
+          "published_at": "2023",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان تحول",
+          "source_locator": "Product expansion",
+          "supports": "تسلسل التوسع"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "What Is Sarwa and How Does It Work? A Complete Guide",
+          "publisher": "Sarwa",
+          "url": "https://www.sarwa.co/blog/what-is-sarwa-and-how-does-it-work",
+          "source_type": "مقابلة وإفصاح تشغيلي رسمي للشركة",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح تشغيلي",
+          "source_locator": "Local funding and advisors",
+          "supports": "البنية الإقليمية والعنصر البشري"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "ADGM FSRA fines Sarwa USD 122,500 for an offer without an approved prospectus",
+          "publisher": "Abu Dhabi Global Market",
+          "url": "https://www.adgm.com/media/announcements/adgms-financial-regulator-fines-sarwa-digital-wealth-capital-limited",
+          "source_type": "إجراء إنفاذ تنظيمي رسمي",
+          "published_at": "2024-05-21",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إجراء تنظيمي",
+          "source_locator": "Prospectus violation",
+          "supports": "درس الامتثال"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Sarwa — current service and risk disclosures",
+          "publisher": "Sarwa Blog",
+          "url": "https://www.sarwa.co/blog",
+          "source_type": "بوابة محتوى وإفصاحات رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مخاطر",
+          "source_locator": "No performance guarantee",
+          "supports": "درس عدم ضمان الاستثمار السلبي"
+        }
+      ],
+      "limitations": "هذه استنتاجات تحريرية وليست تصريحات حرفية أو توصيات مالية.",
+      "source_count": 5
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "What Is Sarwa and How Does It Work? A Complete Guide",
+      "publisher": "Sarwa",
+      "url": "https://www.sarwa.co/blog/what-is-sarwa-and-how-does-it-work",
+      "source_type": "مقابلة وإفصاح تشغيلي رسمي للشركة",
+      "published_at": "2026-06",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "المصدر الأحدث والأشمل عن المنتجات والتأسيس والتمويل والربحية وأصول 2025 وحجم التداول والشريك التشغيلي والرسوم."
+    },
+    {
+      "id": "SRC-02",
+      "title": "We hit $1B in client assets",
+      "publisher": "Sarwa",
+      "url": "https://www.sarwa.co/blog/one-billion",
+      "source_type": "إفصاح رسمي من الرئيس التنفيذي",
+      "published_at": "2026-05-04",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق تجاوز مليار دولار من أصول العملاء، وأن أول 500 مليون استغرقت سبع سنوات، والثانية 18 شهرًا."
+    },
+    {
+      "id": "SRC-03",
+      "title": "Sarwa Digital Wealth (Capital) Limited — FSRA Public Register",
+      "publisher": "Abu Dhabi Global Market",
+      "url": "https://www.adgm.com/public-registers/fsra/firms/financial-firms/sarwa-digital-wealth-capital-limited-190037",
+      "source_type": "سجل تنظيمي رسمي",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يثبت أن الحالة نشطة، ورقم التصريح 190037، والعنوان في ADGM، والأنشطة المنظمة، ويسجل إجراءات تنظيمية في 2022 و2024 و2025."
+    },
+    {
+      "id": "SRC-04",
+      "title": "ADGM FSRA fines Sarwa USD 122,500 for an offer without an approved prospectus",
+      "publisher": "Abu Dhabi Global Market",
+      "url": "https://www.adgm.com/media/announcements/adgms-financial-regulator-fines-sarwa-digital-wealth-capital-limited",
+      "source_type": "إجراء إنفاذ تنظيمي رسمي",
+      "published_at": "2024-05-21",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق غرامة 122,500 دولار، والتزام مراجعة الحوكمة، وعرض أسهم الكيان الأم دون نشرة معتمدة؛ أُلغي التزام 144 مستثمرًا بنحو 2.1 مليون دولار."
+    },
+    {
+      "id": "SRC-05",
+      "title": "ADGM FSRA notice regarding unauthorised domains misusing Sarwa’s name",
+      "publisher": "Abu Dhabi Global Market",
+      "url": "https://www.adgm.com/media/announcements/adgms-fsra-issues-notice-regarding-unauthorised-domains-misusing-sarwas-name",
+      "source_type": "تنبيه تنظيمي رسمي",
+      "published_at": "2026-06-05",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يؤكد أن Sarwa كيان مرخص ويحذر من نطاقات تنتحل اسمها؛ لا يُعامل التنبيه كإجراء مخالف ضد الشركة."
+    },
+    {
+      "id": "SRC-06",
+      "title": "Sarwa — About",
+      "publisher": "Sarwa",
+      "url": "https://www.sarwa.co/en/about",
+      "source_type": "صفحة شركة رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يعرض رسالة الشركة وتحولها إلى منصة تجمع Invest وTrade وSave."
+    },
+    {
+      "id": "SRC-07",
+      "title": "Sarwa — Invest, Trade and Save",
+      "publisher": "Sarwa",
+      "url": "https://www.sarwa.co/en",
+      "source_type": "الصفحة الرئيسية الرسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق المنتجات الأساسية، الوضع التنظيمي، وأن Sarwa ليست بنكًا ولا تحمل اعتماد نافذة إسلامية من FSRA."
+    },
+    {
+      "id": "SRC-08",
+      "title": "Sarwa Pricing & Benefits",
+      "publisher": "Sarwa",
+      "url": "https://www.sarwa.co/en/pricing",
+      "source_type": "صفحة تسعير رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق رسوم Invest وSave وTrade والحدود الدنيا والتكاليف المستبعدة."
+    },
+    {
+      "id": "SRC-09",
+      "title": "Sarwa Invest — Hands-off investing",
+      "publisher": "Sarwa",
+      "url": "https://www.sarwa.co/en/product/invest",
+      "source_type": "صفحة منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق المحافظ التقليدية والحلال والمسؤولة اجتماعيًا ومحافظ Bitcoin والحدود الدنيا وشرائح رسوم الإدارة."
+    },
+    {
+      "id": "SRC-10",
+      "title": "Sarwa Trade — Active trading platform",
+      "publisher": "Sarwa",
+      "url": "https://www.sarwa.co/en/product/trade",
+      "source_type": "صفحة منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق تداول الأسهم وETFs والكسور والأوامر ورسوم 1 دولار أو 0.25%."
+    },
+    {
+      "id": "SRC-11",
+      "title": "Sarwa Save",
+      "publisher": "Sarwa",
+      "url": "https://www.sarwa.co/en/product/save",
+      "source_type": "صفحة منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق منتجات السيولة القائمة على صناديق سوق المال، ورسوم الإدارة 0.5%، وأن العوائد تقديرية ومتغيرة."
+    },
+    {
+      "id": "SRC-12",
+      "title": "Options Trading in the UAE",
+      "publisher": "Sarwa",
+      "url": "https://www.sarwa.co/en/product/trade/options",
+      "source_type": "صفحة منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق تداول الخيارات ورسوم 4 دولارات لكل عقد ومستوى الصلاحيات والمخاطر."
+    },
+    {
+      "id": "SRC-13",
+      "title": "What are the fees for Sarwa Crypto?",
+      "publisher": "Sarwa Help Center",
+      "url": "https://help.sarwa.co/hc/en-us/articles/5348799962781-What-are-the-fees-for-Sarwa-Crypto",
+      "source_type": "مركز مساعدة رسمي",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق عدم وجود عمولة منفصلة للعملات المشفرة ووجود فارق سعري معلن 1.5%."
+    },
+    {
+      "id": "SRC-14",
+      "title": "Who can open a Sarwa account?",
+      "publisher": "Sarwa Help Center",
+      "url": "https://help.sarwa.co/hc/en-us/articles/4407324496017-Who-can-open-a-Sarwa-account",
+      "source_type": "مركز مساعدة رسمي",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوضح الأهلية العالمية والقيود على الجنسية والإقامة الضريبية، مع قيود إضافية لبعض المنتجات."
+    },
+    {
+      "id": "SRC-15",
+      "title": "How safe is my money? What happens if Sarwa disappears?",
+      "publisher": "Sarwa Help Center",
+      "url": "https://help.sarwa.co/hc/en-us/articles/4407344341521-How-safe-is-my-money-What-happens-if-Sarwa-disappears",
+      "source_type": "إفصاح حفظ أصول رسمي",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "تذكر الشركة فصل أصول العملاء عن أموالها وحفظها لدى بنوك الحفظ؛ هذا وصف شركة لا بديل عن مراجعة العقود وشروط الحفظ."
+    },
+    {
+      "id": "SRC-16",
+      "title": "Sarwa raises $8.4M Series A",
+      "publisher": "Sarwa",
+      "url": "https://www.sarwa.co/blog/press-release-uae-based-fintech-startup-sarwa-raises-84m-series-a-funding-round-led-by-kipco",
+      "source_type": "إعلان تمويل رسمي",
+      "published_at": "2020",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق جولة تزيد على 8.4 ملايين دولار وإجمالي تمويل تجاوز 10 ملايين وقتها وخطط التوسع التاريخية."
+    },
+    {
+      "id": "SRC-17",
+      "title": "Sarwa raises $15M Series B",
+      "publisher": "Sarwa",
+      "url": "https://blog.sarwa.co/sarwa-series-b-round",
+      "source_type": "إعلان تمويل رسمي",
+      "published_at": "2021",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق Series B بقيمة 15 مليون دولار بقيادة مبادلة، و40 ألف مستخدم مسجل وقت الإعلان؛ الرقم تاريخي لا حالي."
+    },
+    {
+      "id": "SRC-18",
+      "title": "Sarwa — current service and risk disclosures",
+      "publisher": "Sarwa Blog",
+      "url": "https://www.sarwa.co/blog",
+      "source_type": "بوابة محتوى وإفصاحات رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يعيد تأكيد المنتجات الحالية والترخيص والتنبيه إلى مخاطر الاستثمار وعدم ضمان الأداء السابق."
+    },
+    {
+      "id": "SRC-19",
+      "title": "What happens if I leave the country?",
+      "publisher": "Sarwa Help Center",
+      "url": "https://help.sarwa.co/hc/en-us/articles/4407343100177-What-happens-if-I-leave-the-country",
+      "source_type": "مركز مساعدة رسمي",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوضح الطبيعة العابرة للحدود للحساب مع استمرار اشتراط التحقق من دعم بلد الإقامة الجديد."
+    },
+    {
+      "id": "SRC-20",
+      "title": "Introducing the new Sarwa brand",
+      "publisher": "Sarwa",
+      "url": "https://www.sarwa.co/blog/new-sarwa-brand",
+      "source_type": "إعلان تحول منتج رسمي",
+      "published_at": "2023",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق التخلي عن توصيف robo-advisor فقط والتحول إلى أداة شاملة لإدارة المال."
+    }
   ]
 }

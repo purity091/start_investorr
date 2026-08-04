@@ -169,7 +169,8 @@ const getStatusMeta = (status: string) => {
   }
 };
 
-const getShortRevenueDisplay = (revenueStr: string) => {
+const getShortRevenueDisplay = (value: unknown) => {
+  const revenueStr = getValuationText(value);
   if (!revenueStr) return '-';
   if (revenueStr.length < 25) return revenueStr;
 
@@ -182,7 +183,8 @@ const getShortRevenueDisplay = (revenueStr: string) => {
   return revenueStr.slice(0, 22) + '...';
 };
 
-const getShortTrafficDisplay = (trafficStr: string) => {
+const getShortTrafficDisplay = (value: unknown) => {
+  const trafficStr = getValuationText(value);
   if (!trafficStr) return '-';
   if (trafficStr.length < 25) return trafficStr;
 
@@ -194,7 +196,40 @@ const getShortTrafficDisplay = (trafficStr: string) => {
   return trafficStr.slice(0, 22) + '...';
 };
 
-const getShortValuationDisplay = (valStr: string) => {
+const getValuationText = (value: unknown): string => {
+  if (!value) return '';
+  if (typeof value === 'string') return value;
+  if (typeof value === 'number') return value.toLocaleString('en-US');
+  if (Array.isArray(value)) return value.map(getValuationText).filter(Boolean).join('، ');
+  if (typeof value !== 'object') return String(value);
+
+  const record = value as Record<string, unknown>;
+  const preferredKeys = [
+    'official_current_valuation',
+    'current_valuation',
+    'current_value_usd',
+    'current_implied_valuation_usd',
+    'current_market_cap_usd',
+    'latest_publicly_reported_valuation_usd',
+    'historical_value_usd',
+    'historical_claim',
+    'broadcast_deal_implied_valuation',
+    'broadcast_ask_implied_valuation',
+    'note',
+    'status',
+  ];
+
+  for (const key of preferredKeys) {
+    const text = getValuationText(record[key]);
+    if (text) return text;
+  }
+
+  const firstReadable = Object.values(record).map(getValuationText).find(Boolean);
+  return firstReadable || '';
+};
+
+const getShortValuationDisplay = (value: unknown) => {
+  const valStr = getValuationText(value);
   if (!valStr) return '-';
   if (valStr.length < 25) return valStr;
 
@@ -205,6 +240,44 @@ const getShortValuationDisplay = (valStr: string) => {
   if (valStr.includes('لم تكشف') || valStr.includes('غير معلن') || valStr.includes('غير متوفر')) return 'غير مفصح رسمياً';
 
   return valStr.slice(0, 22) + '...';
+};
+
+const getDisplayText = (value: unknown): string => {
+  if (!value) return '';
+  if (typeof value === 'string') return value;
+  if (typeof value === 'number' || typeof value === 'boolean') return String(value);
+  if (Array.isArray(value)) return value.map(getDisplayText).filter(Boolean).join('، ');
+  if (typeof value !== 'object') return String(value);
+
+  const record = value as Record<string, unknown>;
+  const title = getDisplayText(record.title || record.name || record.label || record.metric || record.date);
+  const description = getDisplayText(
+    record.description ||
+    record.text ||
+    record.note ||
+    record.summary ||
+    record.value ||
+    record.amount ||
+    record.examples,
+  );
+
+  if (title && description) return `${title}: ${description}`;
+  if (title) return title;
+  if (description) return description;
+
+  return Object.entries(record)
+    .map(([key, itemValue]) => {
+      const text = getDisplayText(itemValue);
+      return text ? `${key}: ${text}` : '';
+    })
+    .filter(Boolean)
+    .join('، ');
+};
+
+const toTextList = (value: unknown): string[] => {
+  if (!value) return [];
+  const values = Array.isArray(value) ? value : [value];
+  return values.map(getDisplayText).filter(Boolean);
 };
 
 export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: rawProject, onBack }) => {
@@ -228,29 +301,29 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
     company: rawProject.company || {},
     financials: rawProject.financials || {},
     directory_snapshot: rawProject.directory_snapshot || {},
-    problem_and_product: rawProject.problem_and_product || [
+    problem_and_product: toTextList(rawProject.problem_and_product || [
       rawProject.overview?.problem?.text && `المشكلة: ${rawProject.overview.problem.text}`,
       rawProject.overview?.problem?.impact && `الأثر الداعم: ${rawProject.overview.problem.impact}`,
       rawProject.overview?.solution?.text && `الحل المبتكر: ${rawProject.overview.solution.text}`
-    ].filter(Boolean),
-    origin_story: rawProject.origin_story || [
-      rawProject.financials?.initial_investment && `جولات الاستثمار والتمويل: ${rawProject.financials.initial_investment}`,
-      rawProject.market_data?.target_audience && `الجمهور المستهدف: ${rawProject.market_data.target_audience}`
-    ].filter(Boolean),
-    build_and_launch: rawProject.build_and_launch || [
-      rawProject.company?.started && `عام التأسيس: ${rawProject.company.started}`,
-      rawProject.financials?.valuation && `التقييم والتوسع: ${rawProject.financials.valuation}`
-    ].filter(Boolean),
-    costs_and_operations: rawProject.costs_and_operations || [
-      rawProject.company?.employees && `حجم القوى العاملة: ${rawProject.company.employees}`,
-      rawProject.company?.location && `المقر والانتشار: ${rawProject.company.location}`
-    ].filter(Boolean),
-    monetization: rawProject.monetization || rawProject.financials?.revenue_streams || [],
-    growth: rawProject.growth || [
-      rawProject.market_data?.growth_rate && `معدل النمو: ${rawProject.market_data.growth_rate}`,
-      rawProject.market_data?.market_size && `حجم السوق المستهدف: ${rawProject.market_data.market_size}`
-    ].filter(Boolean),
-    tools: rawProject.tools || [],
+    ].filter(Boolean)),
+    origin_story: toTextList(rawProject.origin_story || [
+      rawProject.financials?.initial_investment && `جولات الاستثمار والتمويل: ${getDisplayText(rawProject.financials.initial_investment)}`,
+      rawProject.market_data?.target_audience && `الجمهور المستهدف: ${getDisplayText(rawProject.market_data.target_audience)}`
+    ].filter(Boolean)),
+    build_and_launch: toTextList(rawProject.build_and_launch || [
+      rawProject.company?.started && `عام التأسيس: ${getDisplayText(rawProject.company.started)}`,
+      rawProject.financials?.valuation && `التقييم والتوسع: ${getValuationText(rawProject.financials.valuation)}`
+    ].filter(Boolean)),
+    costs_and_operations: toTextList(rawProject.costs_and_operations || [
+      rawProject.company?.employees && `حجم القوى العاملة: ${getDisplayText(rawProject.company.employees)}`,
+      rawProject.company?.location && `المقر والانتشار: ${getDisplayText(rawProject.company.location)}`
+    ].filter(Boolean)),
+    monetization: toTextList(rawProject.monetization || rawProject.financials?.revenue_streams || []),
+    growth: toTextList(rawProject.growth || [
+      rawProject.market_data?.growth_rate && `معدل النمو: ${getDisplayText(rawProject.market_data.growth_rate)}`,
+      rawProject.market_data?.market_size && `حجم السوق المستهدف: ${getDisplayText(rawProject.market_data.market_size)}`
+    ].filter(Boolean)),
+    tools: toTextList(rawProject.tools || []),
     revenue_timeline: rawProject.revenue_timeline || (
       rawProject.directory_snapshot?.monthly_revenue ? [
         {
@@ -270,12 +343,12 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
         };
       }
       return {
-        title: l.title || 'درس مستفاد',
-        description: l.description || ''
+        title: getDisplayText(l.title || l.name) || 'درس مستفاد',
+        description: getDisplayText(l.description || l.text || l.note || l.examples || '')
       };
     }),
     sources: rawProject.sources || [],
-    data_quality: rawProject.data_quality || (rawProject.verification?.important_notes || []),
+    data_quality: toTextList(rawProject.data_quality || (rawProject.verification?.important_notes || [])),
   };
 
   useEffect(() => {
@@ -368,12 +441,12 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
   });
 
   // Dynamic Company Details Logic
-  const foundersText = project.company.founder || project.company.founders || 'غير مذكور رسمياً';
+  const foundersText = getDisplayText(project.company.founder || project.company.founders) || 'غير مذكور رسمياً';
   const foundersCountText = project.company.founders_count
     ? `${project.company.founders_count} مؤسسين`
     : (project.company.founder || project.company.founders ? 'مؤسسو الشركة' : 'غير مذكور');
-  const employeesText = project.company.employees || 'غير مفصح عنه';
-  const locationInfo = getCountryInfo(project.company.location);
+  const employeesText = getDisplayText(project.company.employees) || 'غير مفصح عنه';
+  const locationInfo = getCountryInfo(getDisplayText(project.company.location));
 
   return (
     <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 font-sans pb-24">
@@ -443,7 +516,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                           <Badge variant="outline" className="bg-emerald-50 text-emerald-800 border-emerald-300 font-bold text-xs flex items-center gap-1.5">
                             <ShieldCheck className="size-3.5 text-emerald-600 shrink-0" />
                             <span>
-                              {rawProject.verification.verified_on ? `موثق بتاريخ ${rawProject.verification.verified_on}` : 'موثق بمصادر رسمية'}
+                              {rawProject.verification.verified_on ? `موثق بتاريخ ${getDisplayText(rawProject.verification.verified_on)}` : 'موثق بمصادر رسمية'}
                             </span>
                           </Badge>
                         )}
@@ -465,7 +538,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                         </Badge>
                         {project.company?.customer_type && (
                           <Badge variant="outline" className="font-bold text-xs bg-background">
-                            {project.company.customer_type}
+                            {getDisplayText(project.company.customer_type)}
                           </Badge>
                         )}
                         <Badge variant="outline" className="font-bold text-xs bg-background flex items-center gap-1">
@@ -495,7 +568,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                       {getShortRevenueDisplay(project.directory_snapshot?.monthly_revenue)}
                     </span>
                     <span className="text-[11px] text-emerald-700 font-medium truncate">
-                      {revenueEvidence?.confidence ? `درجة الثقة: ${revenueEvidence.confidence}` : 'بيانات إيراد موثقة'}
+                      {revenueEvidence?.confidence ? `درجة الثقة: ${getDisplayText(revenueEvidence.confidence)}` : 'بيانات إيراد موثقة'}
                     </span>
                   </div>
 
@@ -513,8 +586,8 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                   {/* Funding Card */}
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-100 flex flex-col justify-between gap-1.5">
                     <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">نموذج التمويل</span>
-                    <span className="text-base sm:text-lg font-bold text-slate-900 truncate" title={project.company?.funding || project.financials?.initial_investment}>
-                      {project.company?.funding || (project.financials?.initial_investment ? 'جولة تمويلية' : 'تمويل ذاتي')}
+                    <span className="text-base sm:text-lg font-bold text-slate-900 truncate" title={getDisplayText(project.company?.funding || project.financials?.initial_investment)}>
+                      {getDisplayText(project.company?.funding) || (project.financials?.initial_investment ? 'جولة تمويلية' : 'تمويل ذاتي')}
                     </span>
                     <span className="text-[11px] text-slate-500 font-medium truncate">
                       {project.company?.bootstrapped ? 'Bootstrapped 100%' : (project.financials?.initial_investment ? 'استثمار معلن' : 'تمويل رأس مال')}
@@ -524,11 +597,11 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                   {/* Valuation Card */}
                   <div className="p-4 rounded-xl bg-slate-50 border border-slate-100 flex flex-col justify-between gap-1.5">
                     <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">التقييم / الاستحواذ</span>
-                    <span className="text-base sm:text-lg font-bold text-slate-900 truncate" title={project.financials?.valuation}>
+                    <span className="text-base sm:text-lg font-bold text-slate-900 truncate" title={getValuationText(project.financials?.valuation)}>
                       {getShortValuationDisplay(project.financials?.valuation)}
                     </span>
                     <span className="text-[11px] text-slate-500 font-medium truncate">
-                      {valuationEvidence?.claim_type ? valuationEvidence.claim_type : 'بيانات مالية موثقة'}
+                      {getDisplayText(valuationEvidence?.claim_type) || 'بيانات مالية موثقة'}
                     </span>
                   </div>
                 </div>
@@ -562,12 +635,12 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                         المعادلة الحسابية الموثقة من التقارير الرسمية:
                       </span>
                       <p className="text-sky-800 font-medium leading-relaxed">
-                        {revenueEvidence.evidence_summary || `الإيراد المعلن يعطي متوسطاً قدره ${revenueEvidence.calculation.rounded_display_value}.`}
+                        {getDisplayText(revenueEvidence.evidence_summary) || `الإيراد المعلن يعطي متوسطاً قدره ${getDisplayText(revenueEvidence.calculation.rounded_display_value)}.`}
                       </p>
                     </div>
                     {revenueEvidence.calculation.formula && (
                       <Badge variant="outline" className="bg-sky-100 text-sky-800 border-sky-300 font-mono text-xs font-bold shrink-0 dir-ltr">
-                        {revenueEvidence.calculation.formula} = {revenueEvidence.calculation.rounded_display_value}
+                        {getDisplayText(revenueEvidence.calculation.formula)} = {getDisplayText(revenueEvidence.calculation.rounded_display_value)}
                       </Badge>
                     )}
                   </div>
@@ -602,10 +675,10 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                       )}
                     </div>
                     <dd className="font-bold text-sm text-foreground leading-snug">
-                      {project.company.customer_type || 'نموذج التشغيل والتسويق'}
+                      {getDisplayText(project.company.customer_type) || 'نموذج التشغيل والتسويق'}
                     </dd>
                     <p className="text-xs text-muted-foreground font-medium leading-relaxed bg-muted/30 p-2.5 rounded-lg border border-border/30">
-                      {project.company.business_model || 'غير مفصح عنه رسمياً'}
+                      {getDisplayText(project.company.business_model) || 'غير مفصح عنه رسمياً'}
                     </p>
                   </div>
 
@@ -623,7 +696,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                       {locationInfo.flag} {locationInfo.name}
                     </dd>
                     <p className="text-xs text-muted-foreground font-medium leading-relaxed bg-muted/30 p-2.5 rounded-lg border border-border/30">
-                      {project.company.location || 'غير مذكور'}
+                      {getDisplayText(project.company.location) || 'غير مذكور'}
                     </p>
                   </div>
                 </div>
@@ -637,7 +710,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                   </div>
                   <div className="p-4 sm:p-5 space-y-1">
                     <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">عام التأسيس</dt>
-                    <dd className="font-bold text-sm text-foreground">{project.company.started || 'غير مذكور'}</dd>
+                    <dd className="font-bold text-sm text-foreground">{getDisplayText(project.company.started) || 'غير مذكور'}</dd>
                     <span className="text-[11px] text-muted-foreground block">{locationInfo.name}</span>
                   </div>
                   <div className="p-4 sm:p-5 space-y-1">
@@ -655,7 +728,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                       تفاصيل التقييم والاستحواذ الموثقة:
                     </span>
                     <p className="text-xs text-slate-700 font-medium leading-relaxed">
-                      {valuationEvidence.evidence_summary}
+                      {getDisplayText(valuationEvidence.evidence_summary)}
                     </p>
                   </div>
                 )}
@@ -665,11 +738,11 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                   <div>
                     <dt className="text-xs font-bold text-emerald-800 uppercase tracking-wider mb-1">الربحية والإيراد المعلن</dt>
                     <dd className="font-bold text-sm sm:text-base text-emerald-950">
-                      {project.company.public_revenue_claim || project.directory_snapshot?.monthly_revenue || 'غير مفصح عنه رسمياً'}
+                      {getDisplayText(project.company.public_revenue_claim || project.directory_snapshot?.monthly_revenue) || 'غير مفصح عنه رسمياً'}
                     </dd>
                   </div>
                   <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-100 border-emerald-300 font-bold text-xs shrink-0">
-                    {project.company.funding || 'بيانات موثقة'}
+                    {getDisplayText(project.company.funding) || 'بيانات موثقة'}
                   </Badge>
                 </div>
               </CardContent>
@@ -869,16 +942,16 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                     <div className="space-y-1">
                       <div className="flex items-center gap-2">
                         <Badge variant="outline" className="bg-background text-xs font-bold border-border">
-                          {rt.date}
+                          {getDisplayText(rt.date)}
                         </Badge>
                         <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-100 border-0 font-bold text-[11px]">
-                          {rt.type}
+                          {getDisplayText(rt.type)}
                         </Badge>
                       </div>
-                      <p className="text-sm font-medium text-muted-foreground mt-2">{rt.note}</p>
+                      <p className="text-sm font-medium text-muted-foreground mt-2">{getDisplayText(rt.note)}</p>
                     </div>
                     <div className="text-xl sm:text-2xl font-black text-emerald-700 tracking-tight dir-ltr">
-                      {rt.amount}
+                      {getDisplayText(rt.amount)}
                     </div>
                   </div>
                 ))}
@@ -932,12 +1005,12 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                           سياسة التوثيق وحدود الاستدلال الدقيقة (Verified Primary Data)
                         </h3>
                         <p className="text-xs text-slate-600 font-medium mt-0.5">
-                          {rawProject.verification.source_policy}
+                          {getDisplayText(rawProject.verification.source_policy)}
                         </p>
                       </div>
                     </div>
                     <Badge variant="outline" className="bg-emerald-100 text-emerald-800 border-emerald-300 font-bold text-xs shrink-0">
-                      تم التوثيق: {rawProject.verification.verified_on || '2026'}
+                      تم التوثيق: {getDisplayText(rawProject.verification.verified_on) || '2026'}
                     </Badge>
                   </div>
                 </CardHeader>
@@ -947,7 +1020,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                       حدود الاستدلال الشفافة والملاحظات الميدانية:
                     </span>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-slate-700 font-medium">
-                      {rawProject.verification.important_notes.map((note: string, idx: number) => (
+                      {toTextList(rawProject.verification.important_notes).map((note: string, idx: number) => (
                         <div key={idx} className="flex items-start gap-2 bg-white/90 p-2.5 rounded-lg border border-emerald-200/60">
                           <div className="size-1.5 rounded-full bg-emerald-600 shrink-0 mt-1.5" />
                           <span className="leading-relaxed">{note}</span>
@@ -1005,16 +1078,16 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                           rel="noopener noreferrer"
                           className="font-bold text-primary hover:underline flex items-center justify-between gap-2 text-xs"
                         >
-                          <span className="line-clamp-1">{src.title}</span>
+                          <span className="line-clamp-1">{getDisplayText(src.title)}</span>
                           <ExternalLink className="size-3.5 shrink-0" />
                         </a>
                         {(src.publisher || src.locator) && (
                           <div className="flex items-center gap-2 text-[11px] font-medium text-muted-foreground flex-wrap">
-                            <span>{src.publisher}</span>
+                            <span>{getDisplayText(src.publisher)}</span>
                             {src.locator && (
                               <>
                                 <span>•</span>
-                                <span className="font-mono text-foreground font-bold">{src.locator}</span>
+                                <span className="font-mono text-foreground font-bold">{getDisplayText(src.locator)}</span>
                               </>
                             )}
                           </div>
@@ -1022,7 +1095,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                         {src.supports && (
                           <div className="pt-1.5 border-t border-border/40">
                             <p className="text-xs text-foreground font-medium leading-relaxed">
-                              ✓ {src.supports}
+                              ✓ {getDisplayText(src.supports)}
                             </p>
                           </div>
                         )}

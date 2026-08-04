@@ -1,53 +1,1387 @@
 {
   "id": "seavo",
   "slug": "seavo",
-  "name": "سيفو (Seavo)",
-  "headline": "المركبة المائية الكهربائية الأولى في الشرق الأوسط التي أبهرت المستثمرين",
-  "category": "CleanTech & Hardware / النقل البحري الكهربائي",
+  "name": "سيفو / سيفوس (Seavo / SEAVOS)",
+  "headline": "من سكوتر كهربائي مصري إلى نظام تشغيل بحري: كيف حاولت Seavo تحويل قطعة Hardware إلى أسطول متصل ومنصة سلامة",
+  "category": "MarineTech & CleanTech / المركبات المائية الكهربائية والأنظمة البحرية الذكية",
   "company": {
-    "location": "القاهرة، مصر (Shark Tank Egypt)",
-    "business_model": "تصنيع وبيع المركبات المائية الكهربائية (B2B & B2C)"
+    "location": "نشأت Seavo في القاهرة، مصر، وظهرت رسميًا ضمن جناح مصر في VivaTech 2022 وWeb Summit 2024. تصف مصادر 2019–2023 الشركة بأنها مصرية ومقرها القاهرة، بينما يعرض الملف الحالي للعلامة SEAVOS مقرًا في ميامي ويظهر المؤسس في دبي. لا توجد إفصاحات شركة مسجلة أو تقارير مالية عامة تكفي لتحديد المقر القانوني الحالي أو جميع الكيانات التابعة، لذلك يُعرض هذا كتطور في البصمة العامة لا كإثبات نهائي لنقل المقر.",
+    "business_model": "بدأ النموذج ببيع مركبات مائية كهربائية، خصوصًا Orca، إلى الأفراد ومشغلي الرياضات المائية والمنتجعات، مع طبقة برمجية لإدارة التأجير والتحصيل والتتبع والتسييج الجغرافي. توسع العرض المعلن لاحقًا إلى منتجات كهربائية أخرى، وإدارة أساطيل متصلة، ومحطات شحن، ومركبات سطحية غير مأهولة وحلول مراقبة وسلامة. لا تنشر الشركة مزيج الإيرادات الفعلي أو عدد العقود، لذلك يجب التمييز بين المنتجات المعروضة على الموقع وبين الإيرادات المحققة منها."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الجنيهات",
-    "monthly_traffic": "غير متاح (منتج مادي/Hardware)"
+    "monthly_revenue": "غير معلن. Seavo/SEAVOS شركة خاصة ولا تنشر إيرادًا شهريًا أو سنويًا مدققًا، ولا MRR أو ARR أو عدد الوحدات المباعة أو هامش التصنيع. أي مبالغ تمويل أو أسعار منتجات أو تقديرات لقيمة المنشأة لا تمثل إيرادًا.",
+    "monthly_traffic": "غير معلن وغير مناسب كمقياس أساسي لشركة Hardware وMarineTech. لا تنشر الشركة زيارات الموقع أو المستخدمين النشطين شهريًا أو عدد مشغلي الأساطيل. أرقام المتابعين أو المنتجات المعروضة أو الوحدات التي يدعي الموقع الحالي نشرها لا تساوي حركة شهرية أو قاعدة عملاء نشطة، ولم تُستخدم كبديل."
   },
   "overview": {
     "problem": {
-      "text": "المركبات المائية الترفيهية التقليدية (مثل الجيت سكي) باهظة الثمن جداً، تصدر ضوضاء مزعجة، وتلوث البيئة البحرية بالوقود والانبعاثات، بالإضافة لتكلفة صيانتها المرتفعة.",
-      "impact": "تلوث البيئة البحرية، وحرمان شريحة كبيرة من الاستمتاع بالرياضات المائية بسبب التكلفة."
+      "text": "تشغيل الرياضات المائية والمركبات البحرية الخفيفة يعتمد تقليديًا على محركات وقود تتطلب تعبئة وصيانة وتصدر ضوضاء وانبعاثات محلية. ولدى المنتجعات وشركات التأجير مشكلة إضافية: معرفة موقع كل مركبة، ضبط مناطق الاستخدام والسرعة، تحصيل المدفوعات، إدارة البطاريات والصيانة، والاستجابة لحوادث السلامة. المشكلة إذن ليست تصنيع محرك كهربائي فقط؛ بل بناء منظومة موثوقة للعمل في ماء مالح وحرارة مرتفعة مع رقابة تشغيلية وسلامة قابلة للتوسع.",
+      "impact": "بالنسبة للمشغل، يؤدي غياب التتبع والضوابط إلى استخدام غير مصرح به، صعوبة إدارة الأسطول وتوقفات صيانة غير مخططة ومخاطر سلامة. وبالنسبة للبيئة والضيف، تقل جاذبية التجربة عندما تقترن بضوضاء الوقود والانبعاثات أو بقيود تشغيلية معقدة. لا توجد في المصادر العامة بيانات مستقلة تقيس مقدار الخفض الفعلي للانبعاثات أو الحوادث الناتج عن منتجات Seavo، لذلك لم تُدرج وفورات رقمية غير مثبتة."
     },
     "solution": {
-      "text": "تصميم وتصنيع مركبة مائية (سكوتر بحري) كهربائية 100% محلياً (صنع في مصر). المركبة صديقة للبيئة، صامتة، سهلة الاستخدام، وسعرها أقل بكثير من البدائل المستوردة."
+      "text": "قدمت Seavo منتج Orca كسكوتر مائي كهربائي محمول، ثم ربطت المركبة بنموذج تشغيل للمشغلين يشمل التتبع والتسييج الجغرافي والتحصيل وإدارة الأسطول. وثقت KAUST أن الشركة اعتمدت أول نموذج ودخلت في شراكات مع مراسٍ وشركات تأجير، وأنها عملت على السوق السعودي. بحلول ملف ITIDA لعام 2024 أصبح الوصف يشمل مركبات كهربائية متصلة بإنترنت الأشياء وطائرات أو مركبات بحرية ذاتية. ويعرض الموقع الحالي للعلامة SEAVOS مجموعة أوسع تشمل Orca وE-Foil وE-Jet Surf وSeawatch ومنصة أساطيل؛ هذه قدرات معلنة من الشركة، ولا تعني تلقائيًا أن كل منتج دخل إنتاجًا تجاريًا واسعًا أو حقق إيرادًا."
     }
   },
   "market_data": {
-    "target_audience": "القرى السياحية والفنادق الساحلية (B2B)، وعشاق الرياضات المائية (B2C).",
-    "market_size": "سوق السياحة الشاطئية والرياضات المائية المتنامي في مصر والخليج.",
-    "growth_rate": "جذبت استثمارات ضخمة في البرنامج لتمويل الإنتاج الكمي (Mass Production) وبدء التصدير."
+    "target_audience": "الشريحة الأساسية تاريخيًا هي المنتجعات والفنادق والنوادي الشاطئية ومشغلو تأجير الرياضات المائية والمراسي، لأنهم يستطيعون شراء عدة وحدات وتحقيق إيراد من التأجير ويحتاجون إدارة مركزية للسلامة والتحصيل. تشمل الشريحة الثانوية الأفراد ذوي الإنفاق المرتفع، ومراكز الغوص والإنقاذ. أما العرض الحالي الأوسع فيستهدف جهات البحث البيئي والموانئ والاستزراع السمكي والجهات الحكومية والأمنية ومشغلي البنية البحرية، لكن لم يُنشر توزيع العملاء أو العقود بين هذه الشرائح.",
+    "market_size": "لا يوجد رقم مالي موحد وموثوق لسوق Seavo القابل للاستهداف، لأن الشركة تجمع بين معدات رياضات مائية كهربائية وبرمجيات أساطيل وروبوتات بحرية وحلول سلامة. لذلك لم يُدرج TAM من تقارير تجارية متباينة. الدليل العملي على وجود سوق هو اعتماد النموذج الأول، والشراكات مع مراسٍ وشركات تأجير، ودخول السعودية وفق KAUST، وظهور الشركة ضمن بعثات ITIDA الدولية. هذه مؤشرات تحقق سوقي مبكر وليست قياسًا لحجم السوق أو الحصة السوقية.",
+    "growth_rate": "غير معلن كمعدل نمو للإيراد أو الوحدات أو العملاء. التسلسل الموثق هو: مشاركة رسمية في VivaTech 2022، التخرج من TAQADAM واعتماد أول نموذج وشراكات تشغيلية ودخول السعودية كما نُشر في 2023، ثم ظهور ضمن Web Summit 2024 بوصف أوسع للمركبات المتصلة والأنظمة الذاتية. الموقع الحالي يعرض توسعًا كبيرًا في المنتجات والجغرافيا، لكنه يتضمن ادعاءات غير متطابقة مع مصادر مستقلة؛ لذلك لا يُستخدم لحساب CAGR أو إثبات 5,000 وحدة أو 40 دولة أو جولة Series A."
   },
   "financials": {
-    "initial_investment": "استثمار مباشر من الشاركس مقابل حصة لتوسيع خطوط التصنيع.",
-    "valuation": "عشرات الملايين من الجنيهات",
+    "initial_investment": "لا يوجد إفصاح أولي كامل عن رأس المال المؤسس أو جميع الجولات. قواعد بيانات خاصة مثل CB Insights وDealroom تذكر تمويلًا إجماليًا قدره 150 ألف دولار وجولة في أكتوبر 2022 مرتبطة بصندوق عمان للتكنولوجيا، لكن لم يُعثر على إعلان صفقة أولي من Seavo أو OTF يوضح المبلغ ونوع الأداة ونسبة الملكية والإغلاق. صفحة OTF الرسمية تثبت أن برامجه القياسية قد تمنح 50 ألف دولار في Techween وتمويلًا آخر في مسرعة الوادي، لكنها لا تكفي وحدها لإثبات المبلغ الإجمالي لـSeavo. مشاركة TAQADAM وبرامج الدعم لا تُعامل تلقائيًا كجولة ملكية.",
+    "valuation": "غير معلن. لا يوجد تقييم جولة موثق أو سعر سوقي للشركة حتى 3 أغسطس 2026. تقدير Dealroom لقيمة المنشأة نطاق خوارزمي أو قاعدة بيانات وليس تقييمًا متفقًا عليه في صفقة، ولا يجوز تحويل 150 ألف دولار إلى تقييم دون نسبة ملكية وشروط. لم يُعثر على دليل موثوق يثبت صفقة في Shark Tank Egypt، ولذلك حُذفت عبارة «عشرات الملايين من الجنيهات». لا ينطبق SEC كمرجع أساسي لأن الشركة خاصة ولم يظهر أنها مُصدر أوراق مالية أمريكي عام.",
     "revenue_streams": [
-      "مبيعات الجملة للقرى السياحية والفنادق الكبرى",
-      "المبيعات الفردية المباشرة (D2C)",
-      "خدمات ما بعد البيع وتوفير قطع الغيار"
+      "بيع مركبات Orca وغيرها من المركبات المائية الكهربائية للأفراد والمشغلين؛ الأسعار المعروضة حاليًا هي أسعار قائمة وليست دليلًا على مبيعات محققة",
+      "عقود B2B لبيع أساطيل صغيرة أو تجهيز منتجعات ومشغلي تأجير ومراسٍ",
+      "اشتراكات أو تراخيص منصة إدارة الأساطيل والتتبع والتسييج الجغرافي والتحليلات؛ وجود المنتج موثق، لكن جدول الأسعار وعدد العملاء غير معلنين",
+      "عمولات أو رسوم تشغيل ومدفوعات في نموذج مشاركة أو تأجير المركبات إذا شغلت المنصة المعاملة؛ هذا جزء من النموذج المبكر المعلن وليس نسبة إيراد مثبتة",
+      "بيع البطاريات والملحقات وقطع الغيار وخدمات الصيانة والدعم",
+      "محطات الشحن والرسو الذكية وتجهيز البنية التشغيلية للمواقع وفق العرض الحالي",
+      "مشروعات مخصصة للمركبات غير المأهولة والمراقبة البيئية والسلامة البحرية؛ لا توجد بيانات عامة تثبت قيمة العقود أو الإيراد المتحقق",
+      "لا تتوفر بيانات لتحديد حصة إيراد الأجهزة مقابل البرمجيات أو الخدمات، أو متوسط سعر البيع، أو هامش الربح الإجمالي"
     ]
   },
   "lessons": [
     {
-      "title": "صعوبة قطاع الأجهزة (Hardware is Hard)",
-      "description": "من النادر جداً أن ينجح استثمار محلي في قطاع تصنيع الأجهزة المعقدة (Hardware). نجاح سيفو اعتمد على إثبات (النموذج الأولي Working Prototype) بكفاءة عالية، مما أقنع المستثمرين بقدرة الفريق الهندسي على التنفيذ."
+      "title": "في الأجهزة البحرية، المنتج الحقيقي هو المنظومة لا الهيكل",
+      "description": "نجاح Orca لا يتوقف على دفع المستخدم في الماء؛ المشغل يحتاج بطارية وشحنًا وتتبعًا وتحصيلًا وحدودًا جغرافية وسجل صيانة ودعمًا. الجمع بين المركبة والبرمجيات يرفع قيمة العقد ويخلق تمايزًا أصعب من منافسة منتج مادي منفرد."
     },
     {
-      "title": "التركيز على عملاء الشركات (B2B First)",
-      "description": "بدلاً من بيع المركبة للأفراد قطعة بقطعة، ركزت الشركة على بيع (أساطيل) صغيرة للقرى السياحية التي تؤجرها للنزلاء، مما يضمن تدفقاً نقدياً أسرع (Cash Flow) وتسويقاً مجانياً للمركبة عبر السياح."
+      "title": "اعتماد النموذج يسبق مضاعفة الإنتاج",
+      "description": "توثيق KAUST لاعتماد أول نموذج مهم لأن الاختبار في الماء المالح والحرارة والسلامة ليس تفصيلًا تسويقيًا. في Hardware، الانتقال من نموذج يعمل مرة إلى منتج يتحمل التأجير اليومي يحتاج شهادات واختبارات وتوثيقًا قبل الإنفاق على قوالب وإنتاج كمي."
+    },
+    {
+      "title": "ابدأ بمشغل يملك اقتصاديات واضحة",
+      "description": "المنتجع أو شركة التأجير يستطيعان حساب الإيراد لكل وحدة وعدد الجولات وفترة الاسترداد، بينما الفرد يشتري منتجًا ترفيهيًا موسميًا مرتفع السعر. مدخل B2B يجعل البيع أبطأ لكنه يمنح طلبًا أكبر وبيانات استخدام متكررة وفرصة لعقد برمجي وخدمات لاحقة."
+    },
+    {
+      "title": "المحلية لا تعني أن كل مكوّن محلي",
+      "description": "مقابلة المؤسس أوضحت أن النموذج الأولي صُمم وجُمع في مصر، وأن الإنتاج الأكبر يحتاج مكونات وتقنيات مستوردة مثل البطاريات. الصياغة الدقيقة تحمي المصداقية: القيمة المحلية قد تكون في التصميم والهندسة والتجميع والبرمجيات، دون ادعاء سلسلة توريد محلية بالكامل."
+    },
+    {
+      "title": "طبقة السلامة قد تصبح منتجًا مستقلًا",
+      "description": "Seawatch وأساور إنترنت الأشياء والتسييج الجغرافي توضح أن بيانات الموقع والحالة ليست مجرد ملحق لـOrca. عندما تثبت طبقة المراقبة نفسها، يمكن بيعها للمنتجعات والمراسي والبحث والإنقاذ حتى مع أساطيل من مصنعين مختلفين."
+    },
+    {
+      "title": "البرمجيات تخفف موسمية مبيعات الأجهزة",
+      "description": "مبيعات المركبات تتأثر بالمواسم والمخزون ودورات الشراء، بينما إدارة الأسطول والدعم والصيانة يمكن أن تولد عقودًا متكررة. لكن وصف الإيراد بأنه SaaS يحتاج أرقام اشتراكات وتجديدات فعلية، لا مجرد وجود لوحة تحكم."
+    },
+    {
+      "title": "توسع خط المنتجات يرفع المخاطر بقدر ما يرفع السوق",
+      "description": "الانتقال من Orca إلى E-Foil وE-Jet Surf وUSV وROV ومحطات شحن ومنصة AI يفتح قطاعات متعددة، لكنه يضاعف الشهادات وسلاسل التوريد ودعم ما بعد البيع ورأس المال العامل. التركيز على منتج مرساة وسيناريو تشغيل واحد قد يكون أكثر دفاعية من إطلاق كتالوج واسع مبكرًا."
+    },
+    {
+      "title": "الشراكة مع المسرعات ليست إيرادًا ولا تقييمًا",
+      "description": "TAQADAM وOTF والظهور في المعارض يمنحون تمويلًا أو إرشادًا أو وصولًا للسوق، لكنهم لا يثبتون مبيعات أو تقييمًا. يجب تسجيل كل مقياس باسمه: منحة أو استثمار أو شراكة أو عميل تجريبي أو عقد مدفوع."
+    },
+    {
+      "title": "صفحة الشركة ليست بديلًا عن الإفصاح القابل للتحقق",
+      "description": "الموقع الحالي يعرض تواريخ تمويل وانتشار وفريقًا تختلف عن المصادر الرسمية والتاريخية. في تحليل الشركات الخاصة، تُستخدم الصفحة لفهم التمركز والمنتجات الحالية، بينما تحتاج الأرقام الجوهرية مثل التمويل والوحدات والعملاء إلى إعلان صفقة أو سجل أو مصدر مستقل."
+    },
+    {
+      "title": "أفضل قصة لـSeavo هي اقتصاديات المشغل، لا شعار المركبة الخضراء وحده",
+      "description": "الاستدامة تجذب الانتباه، لكن قرار الشراء B2B يعتمد على مدة التشغيل، دورات الشحن، الأعطال، تكلفة الصيانة، الإشغال، السلامة وفترة الاسترداد. الملف الاستثماري الأقوى يجب أن يربط خفض الوقود والصيانة ببيانات تشغيل حقيقية لكل موقع."
     }
   ],
   "tools": [
-    "Battery Management Systems (BMS)",
-    "CAD Design Tools",
-    "Electric Propulsion Technology"
+    "Orca: سكوتر أو مركبة مائية كهربائية محمولة للاستخدام الترفيهي والتأجير",
+    "دفع كهربائي وبطاريات قابلة للشحن بدل محرك وقود محلي أثناء التشغيل",
+    "تطبيق أو طبقة اتصال لمتابعة المركبة والرحلة وفق الوصف التاريخي والحالي",
+    "منصة إدارة أساطيل للمشغلين والمنتجعات والمراسي",
+    "تتبع الموقع والتسييج الجغرافي وتحديد مناطق السلامة",
+    "ضبط السرعة والاستخدام عن بعد وفق وصف منصة الأساطيل الحالية",
+    "مدفوعات وتشغيل تأجير المركبات وإدارة الجلسات وفق نموذج المشغل",
+    "مراقبة البطارية والتنبيهات وسجلات الاستخدام والصيانة وفق وصف الشركة",
+    "Seawatch: مفهوم أو نظام سلامة ومراقبة يرتبط بأجهزة أو أساور إنترنت الأشياء ومركبات بحرية غير مأهولة",
+    "مركبات سطحية غير مأهولة USV للمراقبة أو المسح أو التطبيقات البيئية ضمن العرض الحالي",
+    "روبوتات أو مركبات تحت الماء ROV ضمن مجموعة الحلول الحالية",
+    "Aqua Hub أو بنية شحن ورسو وإدارة طاقة للأساطيل وفق الموقع الحالي",
+    "E-Foil وE-Jet Surf كمنتجات كهربائية إضافية معروضة حاليًا",
+    "لوحة عمليات وتحليلات أسطول واتصال أجهزة وفق العرض الحالي",
+    "المواصفات وشهادات المطابقة والانتشار التجاري لكل منتج تحتاج مراجعة مستندات مستقلة قبل استخدامها في شراء أو استثمار"
+  ],
+  "verification": {
+    "status": "verified_from_egyptian_government_kaust_founder_interviews_current_company_pages_and_private_market_databases_with_conflict_flags",
+    "verified_on": "2026-08-03",
+    "research_cutoff": "2026-08-03",
+    "source_policy": "أُعطيت الأولوية لملفات ITIDA الحكومية، وقصة KAUST الرسمية، ثم مقابلات المؤسس وملف Forbes والجامعة الأمريكية بالقاهرة. استُخدم موقع الشركة وLinkedIn لتوثيق العرض الحالي فقط، مع وسم الادعاءات المتعارضة بأنها تصريحات شركة غير متحققة. استُخدمت CB Insights وDealroom وDecypha بحذر لبيانات التمويل والتأسيس عندما غاب الإفصاح الأولي، ولم تُعامل تقديراتها كتقييمات رسمية.",
+    "important_notes": [
+      "حُذف تقدير «ملايين الجنيهات شهريًا» لأن الشركة لا تنشر إيرادًا أو مبيعات وحدات أو ARR أو MRR.",
+      "حُذفت عبارة «عشرات الملايين من الجنيهات» لأن تقييم الشركة غير معلن ولا توجد نسبة ملكية تسمح بحسابه.",
+      "لم يُعثر على مصدر موثوق يثبت ظهور Seavo أو إغلاق صفقة في Shark Tank Egypt؛ لذلك أزيلت الإشارة من الموقع والتمويل.",
+      "قواعد بيانات خاصة تذكر تمويلًا إجماليًا قدره 150 ألف دولار في 2022، لكن لم يُعثر على إعلان صفقة أولي يوضح الأداة ونسبة الملكية والإغلاق؛ لذلك صُنّف الرقم كبيان ثانوي متوسط الثقة.",
+      "صفحة OTF الرسمية تثبت مبالغ برامجها القياسية، لكنها لا تثبت وحدها أن Seavo حصلت على مجموع محدد أو أن كل دعم كان استثمار ملكية.",
+      "مشاركة TAQADAM والتخرج منها واعتماد أول نموذج ودخول السعودية موثقة من KAUST، لكنها لا تساوي إيرادًا أو جولة استثمارية.",
+      "صُححت عبارة «مصنع 100% محليًا»: المقابلة تؤكد تصميم وتجميع النموذج الأولي في مصر، مع اعتماد الإنتاج الأكبر على مكونات مستوردة مثل البطاريات.",
+      "فُصلت أسعار المنتجات المعروضة حاليًا عن الإيراد؛ سعر القائمة لا يثبت عدد الوحدات المباعة أو التحصيل.",
+      "الموقع الحالي يعرض ادعاءات عن 15 مليون دولار Series A و5,000 وحدة و40 دولة وشراكات وفريق وخط زمني، لكن هذه الادعاءات تتعارض مع مصادر حكومية وجامعية وتاريخية ولم تُعثر لها على مصادقة مستقلة؛ لم تُستخدم كحقائق مالية أو تشغيلية.",
+      "توجد تناقضات علنية في سنة التأسيس والمقر: مصادر تذكر 2019 أو 2021 والقاهرة، بينما ملفات حالية تذكر 2018 أو 2024 ودبي أو ميامي. احتفظ الملف بالتناقض بدل اختيار رقم غير محسوم.",
+      "استُبدلت قائمة BMS وCAD وElectric Propulsion كـ«حزمة تقنية» بقائمة قدرات ومنتجات موثقة؛ لا توجد إفصاحات أولية كافية عن الموردين أو البرمجيات الداخلية الحالية.",
+      "لا ينطبق SEC كمرجع أساسي لأن Seavo/SEAVOS شركة خاصة ولم يظهر أنها مُصدر أوراق مالية أمريكي عام؛ لم توجد ملفات SEC مالية يمكن استخدامها.",
+      "لم تُستخدم أرقام زيارات مواقع أو متابعين أو تقديرات خوارزمية كبديل للعملاء أو المستخدمين النشطين.",
+      "جميع ادعاءات الأداء البيئي والسلامة والذكاء الاصطناعي وUSV الحالية تحتاج اختبارًا أو شهادة أو دراسة حالة مستقلة قبل استخدامها في قرار شراء أو استثمار."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_on": "2026-08-03",
+      "validator": "Python json module + jsonschema Draft 2020-12 + custom Professional V2 integrity checks",
+      "checks": [
+        "اجتياز JSON Schema Draft 2020-12 مع وجود الحقول الأساسية وحقول Professional V2",
+        "تطابق field_value في evidence_map مع القيمة الفعلية لكل JSONPath",
+        "تطابق source_count مع source_ids وsource_references",
+        "عدم وجود source_id مكرر أو مرجع دليل يشير إلى مصدر غير موجود",
+        "تطابق بيانات كل مرجع مختصر مع سجل المصدر الكامل",
+        "سلامة روابط المصادر بصيغة HTTP أو HTTPS",
+        "عدم وجود NaN أو Infinity",
+        "وجود محتوى عربي جوهري",
+        "وسم الإيراد الشهري وحركة الموقع والتقييم بأنها غير معلنة",
+        "فصل تمويل البرامج والاستثمار عن الإيراد والتقييم",
+        "فصل أسعار المنتجات المعروضة عن المبيعات والوحدات المحققة",
+        "إزالة دعوى Shark Tank Egypt غير المثبتة",
+        "تصحيح ادعاء التصنيع المحلي الكامل وإظهار المكونات المستوردة",
+        "وسم تعارضات سنة التأسيس والمقر والتمويل الحالي بدل إخفائها",
+        "عدم اعتماد ادعاءات الموقع الحالي عن Series A والوحدات والدول كشواهد مالية",
+        "استبدال حزمة تقنية داخلية غير موثقة بقدرات ومنتجات مع حدود تحقق",
+        "وجود ملاحظة واضحة بشأن عدم انطباق SEC كمصدر أساسي على الشركة الخاصة"
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول الجوهرية بقيمها الفعلية وحالة التحقق والثقة والمصادر، وتفصل الإيراد والتمويل والتقييم وأسعار المنتجات والعملاء والوحدات، وتسمح بوسم تعارضات المصادر.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي أو أولي قوي.",
+      "verified_current_product_capability": "القدرة معروضة حاليًا في صفحة شركة أو منتج، من دون افتراض مبيعات أو انتشار.",
+      "verified_as_not_publicly_disclosed": "لم يُنشر المقياس المطلوب، ولذلك لم يُستخدم تقدير غير موثوق.",
+      "verified_with_metric_definition_limits": "المعلومة منشورة لكن تعريفها لا يسمح بتحويلها إلى إيراد أو تقييم أو قاعدة عملاء.",
+      "verified_historical_milestone": "حدث تاريخي موثق مثل برنامج تسريع أو اعتماد نموذج أو دخول سوق.",
+      "secondary_financing_data_with_limits": "رقم تمويل من قاعدة بيانات خاصة لم يُدعّم بإعلان صفقة أولي كامل.",
+      "source_conflict_flag": "توجد مصادر متعارضة، لذلك عُرض نطاق الخلاف ولم يُفرض رقم واحد.",
+      "analytical_inference": "تحليل مهني مبني على حقائق موثقة وليس تصريحًا حرفيًا من الشركة."
+    },
+    "confidence_scale": {
+      "high": "مصدر حكومي أو جامعي أو أولي مباشر، أو عدة مصادر قوية متطابقة.",
+      "medium_high": "مصادر قوية مع استنتاج تشغيلي محدود ومعلن.",
+      "medium": "قاعدة بيانات خاصة أو تصريح شركة يحتاج إلى تحقق مستقل.",
+      "low_not_used": "ادعاء متعارض أو غير قابل للتحقق لم يُستخدم كحقيقة."
+    },
+    "metric_definitions": {
+      "revenue": "دخل محاسبي تعترف به الشركة من بيع أجهزة أو برمجيات أو خدمات؛ لا يساوي التمويل أو سعر القائمة أو قيمة الأسطول.",
+      "funding": "رأس مال أو منحة أو دعم يقدمه مستثمر أو برنامج؛ يجب تحديد الأداة والمبلغ ونسبة الملكية إن وجدت.",
+      "valuation": "قيمة حقوق الملكية المتفق عليها في صفقة أو جولة؛ لا تُستخرج من مبلغ تمويل بلا نسبة أو من تقدير قاعدة بيانات.",
+      "product_price": "السعر المعروض لوحدة أو خدمة؛ لا يثبت المبيعات أو التحصيل أو الهامش.",
+      "units_deployed": "وحدات تم تسليمها أو تشغيلها وفق تعريف وزمن ومصدر؛ لا تساوي وحدات مصنعة أو طلبات أو زوار.",
+      "customers": "جهات دفعت أو تعاقدت وفق تعريف معلن؛ الشركاء والبرامج والمشاركون في التجارب ليسوا بالضرورة عملاء.",
+      "website_traffic": "زيارات رقمية للموقع؛ مقياس منفصل وغير كاف لتقييم شركة أجهزة B2B.",
+      "market_entry": "نشاط أو شراكة أو تشغيل في دولة؛ لا يساوي تأسيس كيان قانوني أو تحقيق إيراد فيها."
+    }
+  },
+  "evidence_map": {
+    "$.headline": {
+      "field_value": "من سكوتر كهربائي مصري إلى نظام تشغيل بحري: كيف حاولت Seavo تحويل قطعة Hardware إلى أسطول متصل ومنصة سلامة",
+      "verification_status": "analytical_inference",
+      "confidence": "high",
+      "claim_type": "company_specific_strategy_headline",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "العنوان يلخص الانتقال الموثق من Orca كمنتج كهربائي إلى إدارة أساطيل وسلامة وأنظمة بحرية أوسع.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Egypt at VIVA Technology 2022 — Seavo company background",
+          "publisher": "هيئة تنمية صناعة تكنولوجيا المعلومات المصرية (ITIDA)",
+          "source_type": "official_government_event_profile",
+          "url": "https://itida.gov.eg/English/MediaCenter/Events/Pages/Egypt-at-VIVA-Technology.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "اختيار Seavo ضمن الشركات المصرية المشاركة في الجناح المصري في VivaTech 2022"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Egypt at Web Summit 2024 — Seavo company background",
+          "publisher": "هيئة تنمية صناعة تكنولوجيا المعلومات المصرية (ITIDA)",
+          "source_type": "official_government_event_profile",
+          "url": "https://itida.gov.eg/English/MediaCenter/Events/Pages/Web-Summit-2024.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "استمرار ظهور Seavo كشركة تكنولوجيا بحرية في 2024"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "The competitive edge of TAQADAM",
+          "publisher": "جامعة الملك عبدالله للعلوم والتقنية (KAUST Innovation)",
+          "source_type": "official_accelerator_success_story",
+          "url": "https://innovation.kaust.edu.sa/the-competitive-edge-of-taqadam/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "انضمام Seavo إلى الدفعة السادسة من مسرعة TAQADAM وتخرجها في 2022"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Fleet Management",
+          "publisher": "SEAVOS",
+          "source_type": "official_current_product_page",
+          "url": "https://seavos.com/products/fleet-management",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "إدارة الأساطيل البحرية وتتبعها"
+        }
+      ],
+      "limitations": "تظل البيانات المالية والتشغيلية الخاصة غير معلنة ما لم يذكر الحقل خلاف ذلك."
+    },
+    "$.company.location": {
+      "field_value": "نشأت Seavo في القاهرة، مصر، وظهرت رسميًا ضمن جناح مصر في VivaTech 2022 وWeb Summit 2024. تصف مصادر 2019–2023 الشركة بأنها مصرية ومقرها القاهرة، بينما يعرض الملف الحالي للعلامة SEAVOS مقرًا في ميامي ويظهر المؤسس في دبي. لا توجد إفصاحات شركة مسجلة أو تقارير مالية عامة تكفي لتحديد المقر القانوني الحالي أو جميع الكيانات التابعة، لذلك يُعرض هذا كتطور في البصمة العامة لا كإثبات نهائي لنقل المقر.",
+      "verification_status": "source_conflict_flag",
+      "confidence": "medium_high",
+      "claim_type": "company_origin_and_current_footprint",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر الرسمية والتاريخية تثبت النشأة في القاهرة، بينما الوجود الحالي يذكر دبي وميامي دون إفصاح قانوني يحسم نقل المقر.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-04",
+        "SRC-10",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Egypt at VIVA Technology 2022 — Seavo company background",
+          "publisher": "هيئة تنمية صناعة تكنولوجيا المعلومات المصرية (ITIDA)",
+          "source_type": "official_government_event_profile",
+          "url": "https://itida.gov.eg/English/MediaCenter/Events/Pages/Egypt-at-VIVA-Technology.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "اختيار Seavo ضمن الشركات المصرية المشاركة في الجناح المصري في VivaTech 2022"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Egypt at Web Summit 2024 — Seavo company background",
+          "publisher": "هيئة تنمية صناعة تكنولوجيا المعلومات المصرية (ITIDA)",
+          "source_type": "official_government_event_profile",
+          "url": "https://itida.gov.eg/English/MediaCenter/Events/Pages/Web-Summit-2024.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "استمرار ظهور Seavo كشركة تكنولوجيا بحرية في 2024"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Aly Mohamed — 30 Under 30 2023",
+          "publisher": "Forbes Middle East",
+          "source_type": "reputable_profile_based_on_company_disclosures",
+          "url": "https://www.forbesmiddleeast.com/lists/30-under-30-2023/aly-mohamed-2/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "تعريف علي محمد كمؤسس ورئيس تنفيذي لـ Seavo"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "SEAVOS company profile",
+          "publisher": "SEAVOS على LinkedIn",
+          "source_type": "official_current_company_social_profile",
+          "url": "https://www.linkedin.com/company/seavos",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "استخدام العلامة الحالية SEAVOS وربطها بالمؤسس علي محمد"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Seavo Co Profile",
+          "publisher": "Decypha",
+          "source_type": "secondary_company_registry_profile",
+          "url": "https://www.decypha.com/en/company-list/Seavo-Co-238576",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "عنوان تاريخي للشركة في القاهرة"
+        }
+      ],
+      "limitations": "لا تُحوّل تصريحات الشركة أو قواعد البيانات الخاصة إلى إيراد أو تقييم أو انتشار تجاري ما لم يوجد إفصاح أولي مستقل."
+    },
+    "$.company.business_model": {
+      "field_value": "بدأ النموذج ببيع مركبات مائية كهربائية، خصوصًا Orca، إلى الأفراد ومشغلي الرياضات المائية والمنتجعات، مع طبقة برمجية لإدارة التأجير والتحصيل والتتبع والتسييج الجغرافي. توسع العرض المعلن لاحقًا إلى منتجات كهربائية أخرى، وإدارة أساطيل متصلة، ومحطات شحن، ومركبات سطحية غير مأهولة وحلول مراقبة وسلامة. لا تنشر الشركة مزيج الإيرادات الفعلي أو عدد العقود، لذلك يجب التمييز بين المنتجات المعروضة على الموقع وبين الإيرادات المحققة منها.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "high",
+      "claim_type": "business_model",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "بيع أجهزة للمستهلكين والمشغلين مع طبقة إدارة أساطيل موثق؛ العرض الحالي أوسع لكن مزيج الإيرادات غير منشور.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-11",
+        "SRC-13",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Egypt at VIVA Technology 2022 — Seavo company background",
+          "publisher": "هيئة تنمية صناعة تكنولوجيا المعلومات المصرية (ITIDA)",
+          "source_type": "official_government_event_profile",
+          "url": "https://itida.gov.eg/English/MediaCenter/Events/Pages/Egypt-at-VIVA-Technology.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "اختيار Seavo ضمن الشركات المصرية المشاركة في الجناح المصري في VivaTech 2022"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "The competitive edge of TAQADAM",
+          "publisher": "جامعة الملك عبدالله للعلوم والتقنية (KAUST Innovation)",
+          "source_type": "official_accelerator_success_story",
+          "url": "https://innovation.kaust.edu.sa/the-competitive-edge-of-taqadam/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "انضمام Seavo إلى الدفعة السادسة من مسرعة TAQADAM وتخرجها في 2022"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Seavos — Intelligent Marine Technology",
+          "publisher": "SEAVOS",
+          "source_type": "official_current_company_website",
+          "url": "https://seavos.com/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "عرض حالي لمنتجات كهربائية وأنظمة بحرية ذاتية وبرمجيات أساطيل"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Fleet Management",
+          "publisher": "SEAVOS",
+          "source_type": "official_current_product_page",
+          "url": "https://seavos.com/products/fleet-management",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "إدارة الأساطيل البحرية وتتبعها"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Autonomous Marine Technology Solutions",
+          "publisher": "SEAVOS",
+          "source_type": "official_current_solutions_page",
+          "url": "https://seavos.com/solutions",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "توسيع العرض إلى مركبات سطحية غير مأهولة وروبوتات تحت الماء"
+        }
+      ],
+      "limitations": "تظل البيانات المالية والتشغيلية الخاصة غير معلنة ما لم يذكر الحقل خلاف ذلك."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. Seavo/SEAVOS شركة خاصة ولا تنشر إيرادًا شهريًا أو سنويًا مدققًا، ولا MRR أو ARR أو عدد الوحدات المباعة أو هامش التصنيع. أي مبالغ تمويل أو أسعار منتجات أو تقديرات لقيمة المنشأة لا تمثل إيرادًا.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "revenue",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا توجد قوائم مالية أو إفصاحات شهرية؛ التمويل والأسعار لا يحلان محل الإيراد.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-17",
+        "SRC-18",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-17",
+          "title": "Seavo company profile and funding",
+          "publisher": "CB Insights",
+          "source_type": "secondary_private_market_database",
+          "url": "https://www.cbinsights.com/company/seavo",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "تقدير قاعدة البيانات أن إجمالي التمويل المعلن 150 ألف دولار"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "SEAVO company information and funding",
+          "publisher": "Dealroom",
+          "source_type": "secondary_private_market_database",
+          "url": "https://app.dealroom.co/companies/seavo",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "إدراج دعم من Changelabs وOman Technology Fund"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Seavo Co Profile",
+          "publisher": "Decypha",
+          "source_type": "secondary_company_registry_profile",
+          "url": "https://www.decypha.com/en/company-list/Seavo-Co-238576",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "عنوان تاريخي للشركة في القاهرة"
+        }
+      ],
+      "limitations": "تظل البيانات المالية والتشغيلية الخاصة غير معلنة ما لم يذكر الحقل خلاف ذلك."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن وغير مناسب كمقياس أساسي لشركة Hardware وMarineTech. لا تنشر الشركة زيارات الموقع أو المستخدمين النشطين شهريًا أو عدد مشغلي الأساطيل. أرقام المتابعين أو المنتجات المعروضة أو الوحدات التي يدعي الموقع الحالي نشرها لا تساوي حركة شهرية أو قاعدة عملاء نشطة، ولم تُستخدم كبديل.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "website_traffic_and_active_users",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا تنشر الشركة زيارات أو MAU أو مشغلين نشطين، وحركة الموقع ليست مقياسًا تشغيليًا كافيًا لشركة أجهزة B2B.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-10",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-10",
+          "title": "SEAVOS company profile",
+          "publisher": "SEAVOS على LinkedIn",
+          "source_type": "official_current_company_social_profile",
+          "url": "https://www.linkedin.com/company/seavos",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "استخدام العلامة الحالية SEAVOS وربطها بالمؤسس علي محمد"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Seavos — Intelligent Marine Technology",
+          "publisher": "SEAVOS",
+          "source_type": "official_current_company_website",
+          "url": "https://seavos.com/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "عرض حالي لمنتجات كهربائية وأنظمة بحرية ذاتية وبرمجيات أساطيل"
+        }
+      ],
+      "limitations": "تظل البيانات المالية والتشغيلية الخاصة غير معلنة ما لم يذكر الحقل خلاف ذلك."
+    },
+    "$.overview.problem.text": {
+      "field_value": "تشغيل الرياضات المائية والمركبات البحرية الخفيفة يعتمد تقليديًا على محركات وقود تتطلب تعبئة وصيانة وتصدر ضوضاء وانبعاثات محلية. ولدى المنتجعات وشركات التأجير مشكلة إضافية: معرفة موقع كل مركبة، ضبط مناطق الاستخدام والسرعة، تحصيل المدفوعات، إدارة البطاريات والصيانة، والاستجابة لحوادث السلامة. المشكلة إذن ليست تصنيع محرك كهربائي فقط؛ بل بناء منظومة موثوقة للعمل في ماء مالح وحرارة مرتفعة مع رقابة تشغيلية وسلامة قابلة للتوسع.",
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "customer_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المشكلة تجمع الأثر المحلي لمحركات الوقود مع احتياجات التشغيل والسلامة التي تعالجها منصة الأساطيل.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-05",
+        "SRC-06",
+        "SRC-07",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Meet Egyptian Startup Seavo’s Eco-Friendly Electric Marine Vehicle",
+          "publisher": "Rasmal",
+          "source_type": "founder_interview",
+          "url": "https://www.rasmal.com/meet-egyptian-seavo-eco-friendly-electric-marine-vehicle/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "مقابلة مباشرة مع المؤسس حول نشأة الفكرة وتطوير Orca Elite"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "How Seavo is Leading the Green Transition of Egypt’s Marine Sector",
+          "publisher": "StartupScene",
+          "source_type": "founder_interview_and_company_profile",
+          "url": "https://thestartupscene.me/BehindTheStartup/How-Seavo-is-Leading-the-Green-Transition-of-Egypt-s-Marine-Sector",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "تركيز الشركة المبكر على بديل كهربائي للمركبات البحرية الترفيهية العاملة بالوقود"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "How Egyptian Startup Seavo Is Leading the Shift Towards Electric Water Vehicles",
+          "publisher": "Egyptian Streets",
+          "source_type": "founder_interview_and_company_profile",
+          "url": "https://egyptianstreets.com/2022/06/04/how-egyptian-startup-seavo-is-leading-the-shift-towards-electric-water-vehicles/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "تقديم Seavo كشركة مصرية ناشئة في التنقل البحري الكهربائي"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Fleet Management",
+          "publisher": "SEAVOS",
+          "source_type": "official_current_product_page",
+          "url": "https://seavos.com/products/fleet-management",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "إدارة الأساطيل البحرية وتتبعها"
+        }
+      ],
+      "limitations": "لا تُحوّل تصريحات الشركة أو قواعد البيانات الخاصة إلى إيراد أو تقييم أو انتشار تجاري ما لم يوجد إفصاح أولي مستقل."
+    },
+    "$.overview.solution.text": {
+      "field_value": "قدمت Seavo منتج Orca كسكوتر مائي كهربائي محمول، ثم ربطت المركبة بنموذج تشغيل للمشغلين يشمل التتبع والتسييج الجغرافي والتحصيل وإدارة الأسطول. وثقت KAUST أن الشركة اعتمدت أول نموذج ودخلت في شراكات مع مراسٍ وشركات تأجير، وأنها عملت على السوق السعودي. بحلول ملف ITIDA لعام 2024 أصبح الوصف يشمل مركبات كهربائية متصلة بإنترنت الأشياء وطائرات أو مركبات بحرية ذاتية. ويعرض الموقع الحالي للعلامة SEAVOS مجموعة أوسع تشمل Orca وE-Foil وE-Jet Surf وSeawatch ومنصة أساطيل؛ هذه قدرات معلنة من الشركة، ولا تعني تلقائيًا أن كل منتج دخل إنتاجًا تجاريًا واسعًا أو حقق إيرادًا.",
+      "verification_status": "verified_current_product_capability",
+      "confidence": "high",
+      "claim_type": "solution_and_product_evolution",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "Orca وإدارة الأساطيل واعتماد النموذج والشراكات موثقة تاريخيًا؛ المنتجات الأوسع موثقة كعرض حالي من الشركة.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-04",
+        "SRC-11",
+        "SRC-12",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Egypt at Web Summit 2024 — Seavo company background",
+          "publisher": "هيئة تنمية صناعة تكنولوجيا المعلومات المصرية (ITIDA)",
+          "source_type": "official_government_event_profile",
+          "url": "https://itida.gov.eg/English/MediaCenter/Events/Pages/Web-Summit-2024.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "استمرار ظهور Seavo كشركة تكنولوجيا بحرية في 2024"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "The competitive edge of TAQADAM",
+          "publisher": "جامعة الملك عبدالله للعلوم والتقنية (KAUST Innovation)",
+          "source_type": "official_accelerator_success_story",
+          "url": "https://innovation.kaust.edu.sa/the-competitive-edge-of-taqadam/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "انضمام Seavo إلى الدفعة السادسة من مسرعة TAQADAM وتخرجها في 2022"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Aly Mohamed — 30 Under 30 2023",
+          "publisher": "Forbes Middle East",
+          "source_type": "reputable_profile_based_on_company_disclosures",
+          "url": "https://www.forbesmiddleeast.com/lists/30-under-30-2023/aly-mohamed-2/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "تعريف علي محمد كمؤسس ورئيس تنفيذي لـ Seavo"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Seavos — Intelligent Marine Technology",
+          "publisher": "SEAVOS",
+          "source_type": "official_current_company_website",
+          "url": "https://seavos.com/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "عرض حالي لمنتجات كهربائية وأنظمة بحرية ذاتية وبرمجيات أساطيل"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Orca E-Water Scooter",
+          "publisher": "SEAVOS",
+          "source_type": "official_current_product_page",
+          "url": "https://seavos.com/products/orca",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "استمرار اسم Orca ضمن مجموعة المنتجات الحالية"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Autonomous Marine Technology Solutions",
+          "publisher": "SEAVOS",
+          "source_type": "official_current_solutions_page",
+          "url": "https://seavos.com/solutions",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "توسيع العرض إلى مركبات سطحية غير مأهولة وروبوتات تحت الماء"
+        }
+      ],
+      "limitations": "تظل البيانات المالية والتشغيلية الخاصة غير معلنة ما لم يذكر الحقل خلاف ذلك."
+    },
+    "$.market_data.target_audience": {
+      "field_value": "الشريحة الأساسية تاريخيًا هي المنتجعات والفنادق والنوادي الشاطئية ومشغلو تأجير الرياضات المائية والمراسي، لأنهم يستطيعون شراء عدة وحدات وتحقيق إيراد من التأجير ويحتاجون إدارة مركزية للسلامة والتحصيل. تشمل الشريحة الثانوية الأفراد ذوي الإنفاق المرتفع، ومراكز الغوص والإنقاذ. أما العرض الحالي الأوسع فيستهدف جهات البحث البيئي والموانئ والاستزراع السمكي والجهات الحكومية والأمنية ومشغلي البنية البحرية، لكن لم يُنشر توزيع العملاء أو العقود بين هذه الشرائح.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "high",
+      "claim_type": "target_customers",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المشغلون والمنتجعات والمراسي هم المدخل التاريخي، مع توسع معلن إلى البحث والموانئ والجهات الحكومية.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-03",
+        "SRC-05",
+        "SRC-12",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "The competitive edge of TAQADAM",
+          "publisher": "جامعة الملك عبدالله للعلوم والتقنية (KAUST Innovation)",
+          "source_type": "official_accelerator_success_story",
+          "url": "https://innovation.kaust.edu.sa/the-competitive-edge-of-taqadam/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "انضمام Seavo إلى الدفعة السادسة من مسرعة TAQADAM وتخرجها في 2022"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Meet Egyptian Startup Seavo’s Eco-Friendly Electric Marine Vehicle",
+          "publisher": "Rasmal",
+          "source_type": "founder_interview",
+          "url": "https://www.rasmal.com/meet-egyptian-seavo-eco-friendly-electric-marine-vehicle/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "مقابلة مباشرة مع المؤسس حول نشأة الفكرة وتطوير Orca Elite"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Orca E-Water Scooter",
+          "publisher": "SEAVOS",
+          "source_type": "official_current_product_page",
+          "url": "https://seavos.com/products/orca",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "استمرار اسم Orca ضمن مجموعة المنتجات الحالية"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Autonomous Marine Technology Solutions",
+          "publisher": "SEAVOS",
+          "source_type": "official_current_solutions_page",
+          "url": "https://seavos.com/solutions",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "توسيع العرض إلى مركبات سطحية غير مأهولة وروبوتات تحت الماء"
+        }
+      ],
+      "limitations": "تظل البيانات المالية والتشغيلية الخاصة غير معلنة ما لم يذكر الحقل خلاف ذلك."
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا يوجد رقم مالي موحد وموثوق لسوق Seavo القابل للاستهداف، لأن الشركة تجمع بين معدات رياضات مائية كهربائية وبرمجيات أساطيل وروبوتات بحرية وحلول سلامة. لذلك لم يُدرج TAM من تقارير تجارية متباينة. الدليل العملي على وجود سوق هو اعتماد النموذج الأول، والشراكات مع مراسٍ وشركات تأجير، ودخول السعودية وفق KAUST، وظهور الشركة ضمن بعثات ITIDA الدولية. هذه مؤشرات تحقق سوقي مبكر وليست قياسًا لحجم السوق أو الحصة السوقية.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "market_size",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد TAM موحد صالح لمنتجات الشركة المتعددة؛ استخدمت مؤشرات تحقق سوقي بدل رقم تجاري تخميني.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Egypt at VIVA Technology 2022 — Seavo company background",
+          "publisher": "هيئة تنمية صناعة تكنولوجيا المعلومات المصرية (ITIDA)",
+          "source_type": "official_government_event_profile",
+          "url": "https://itida.gov.eg/English/MediaCenter/Events/Pages/Egypt-at-VIVA-Technology.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "اختيار Seavo ضمن الشركات المصرية المشاركة في الجناح المصري في VivaTech 2022"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Egypt at Web Summit 2024 — Seavo company background",
+          "publisher": "هيئة تنمية صناعة تكنولوجيا المعلومات المصرية (ITIDA)",
+          "source_type": "official_government_event_profile",
+          "url": "https://itida.gov.eg/English/MediaCenter/Events/Pages/Web-Summit-2024.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "استمرار ظهور Seavo كشركة تكنولوجيا بحرية في 2024"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "The competitive edge of TAQADAM",
+          "publisher": "جامعة الملك عبدالله للعلوم والتقنية (KAUST Innovation)",
+          "source_type": "official_accelerator_success_story",
+          "url": "https://innovation.kaust.edu.sa/the-competitive-edge-of-taqadam/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "انضمام Seavo إلى الدفعة السادسة من مسرعة TAQADAM وتخرجها في 2022"
+        }
+      ],
+      "limitations": "تظل البيانات المالية والتشغيلية الخاصة غير معلنة ما لم يذكر الحقل خلاف ذلك."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "غير معلن كمعدل نمو للإيراد أو الوحدات أو العملاء. التسلسل الموثق هو: مشاركة رسمية في VivaTech 2022، التخرج من TAQADAM واعتماد أول نموذج وشراكات تشغيلية ودخول السعودية كما نُشر في 2023، ثم ظهور ضمن Web Summit 2024 بوصف أوسع للمركبات المتصلة والأنظمة الذاتية. الموقع الحالي يعرض توسعًا كبيرًا في المنتجات والجغرافيا، لكنه يتضمن ادعاءات غير متطابقة مع مصادر مستقلة؛ لذلك لا يُستخدم لحساب CAGR أو إثبات 5,000 وحدة أو 40 دولة أو جولة Series A.",
+      "verification_status": "verified_historical_milestone",
+      "confidence": "medium_high",
+      "claim_type": "growth_and_milestones",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توجد سلسلة معالم 2022–2024، لكن لا توجد سلسلة مالية لحساب معدل نمو.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Egypt at VIVA Technology 2022 — Seavo company background",
+          "publisher": "هيئة تنمية صناعة تكنولوجيا المعلومات المصرية (ITIDA)",
+          "source_type": "official_government_event_profile",
+          "url": "https://itida.gov.eg/English/MediaCenter/Events/Pages/Egypt-at-VIVA-Technology.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "اختيار Seavo ضمن الشركات المصرية المشاركة في الجناح المصري في VivaTech 2022"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Egypt at Web Summit 2024 — Seavo company background",
+          "publisher": "هيئة تنمية صناعة تكنولوجيا المعلومات المصرية (ITIDA)",
+          "source_type": "official_government_event_profile",
+          "url": "https://itida.gov.eg/English/MediaCenter/Events/Pages/Web-Summit-2024.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "استمرار ظهور Seavo كشركة تكنولوجيا بحرية في 2024"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "The competitive edge of TAQADAM",
+          "publisher": "جامعة الملك عبدالله للعلوم والتقنية (KAUST Innovation)",
+          "source_type": "official_accelerator_success_story",
+          "url": "https://innovation.kaust.edu.sa/the-competitive-edge-of-taqadam/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "انضمام Seavo إلى الدفعة السادسة من مسرعة TAQADAM وتخرجها في 2022"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "About Seavos / Company timeline",
+          "publisher": "SEAVOS",
+          "source_type": "official_company_claims_with_material_conflicts",
+          "url": "https://seavos.com/company",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "الخط الزمني والفريق والتمويل والانتشار التي يعرضها الموقع الحالي"
+        }
+      ],
+      "limitations": "لا تُحوّل تصريحات الشركة أو قواعد البيانات الخاصة إلى إيراد أو تقييم أو انتشار تجاري ما لم يوجد إفصاح أولي مستقل."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "لا يوجد إفصاح أولي كامل عن رأس المال المؤسس أو جميع الجولات. قواعد بيانات خاصة مثل CB Insights وDealroom تذكر تمويلًا إجماليًا قدره 150 ألف دولار وجولة في أكتوبر 2022 مرتبطة بصندوق عمان للتكنولوجيا، لكن لم يُعثر على إعلان صفقة أولي من Seavo أو OTF يوضح المبلغ ونوع الأداة ونسبة الملكية والإغلاق. صفحة OTF الرسمية تثبت أن برامجه القياسية قد تمنح 50 ألف دولار في Techween وتمويلًا آخر في مسرعة الوادي، لكنها لا تكفي وحدها لإثبات المبلغ الإجمالي لـSeavo. مشاركة TAQADAM وبرامج الدعم لا تُعامل تلقائيًا كجولة ملكية.",
+      "verification_status": "secondary_financing_data_with_limits",
+      "confidence": "medium",
+      "claim_type": "funding",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "رقم 150 ألف دولار يأتي من قواعد بيانات خاصة؛ برامج OTF الرسمية تدعم سياق التمويل لكن لا تنشر صفقة Seavo الكاملة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-16",
+        "SRC-17",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-16",
+          "title": "OTF Techween and Oman Technology Fund programs",
+          "publisher": "Oman Technology Fund",
+          "source_type": "official_investor_program_page",
+          "url": "https://www.otf.om/techween/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "طبيعة برنامج Techween كبرنامج ما قبل التأسيس"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Seavo company profile and funding",
+          "publisher": "CB Insights",
+          "source_type": "secondary_private_market_database",
+          "url": "https://www.cbinsights.com/company/seavo",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "تقدير قاعدة البيانات أن إجمالي التمويل المعلن 150 ألف دولار"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "SEAVO company information and funding",
+          "publisher": "Dealroom",
+          "source_type": "secondary_private_market_database",
+          "url": "https://app.dealroom.co/companies/seavo",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "إدراج دعم من Changelabs وOman Technology Fund"
+        }
+      ],
+      "limitations": "لا تُحوّل تصريحات الشركة أو قواعد البيانات الخاصة إلى إيراد أو تقييم أو انتشار تجاري ما لم يوجد إفصاح أولي مستقل."
+    },
+    "$.financials.valuation": {
+      "field_value": "غير معلن. لا يوجد تقييم جولة موثق أو سعر سوقي للشركة حتى 3 أغسطس 2026. تقدير Dealroom لقيمة المنشأة نطاق خوارزمي أو قاعدة بيانات وليس تقييمًا متفقًا عليه في صفقة، ولا يجوز تحويل 150 ألف دولار إلى تقييم دون نسبة ملكية وشروط. لم يُعثر على دليل موثوق يثبت صفقة في Shark Tank Egypt، ولذلك حُذفت عبارة «عشرات الملايين من الجنيهات». لا ينطبق SEC كمرجع أساسي لأن الشركة خاصة ولم يظهر أنها مُصدر أوراق مالية أمريكي عام.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "valuation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا توجد صفقة معلنة بنسبة ملكية ولا تقييم موثق، ولم يثبت ادعاء Shark Tank.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-17",
+        "SRC-18",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-17",
+          "title": "Seavo company profile and funding",
+          "publisher": "CB Insights",
+          "source_type": "secondary_private_market_database",
+          "url": "https://www.cbinsights.com/company/seavo",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "تقدير قاعدة البيانات أن إجمالي التمويل المعلن 150 ألف دولار"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "SEAVO company information and funding",
+          "publisher": "Dealroom",
+          "source_type": "secondary_private_market_database",
+          "url": "https://app.dealroom.co/companies/seavo",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "إدراج دعم من Changelabs وOman Technology Fund"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Seavo Co Profile",
+          "publisher": "Decypha",
+          "source_type": "secondary_company_registry_profile",
+          "url": "https://www.decypha.com/en/company-list/Seavo-Co-238576",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "عنوان تاريخي للشركة في القاهرة"
+        }
+      ],
+      "limitations": "تظل البيانات المالية والتشغيلية الخاصة غير معلنة ما لم يذكر الحقل خلاف ذلك."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "بيع مركبات Orca وغيرها من المركبات المائية الكهربائية للأفراد والمشغلين؛ الأسعار المعروضة حاليًا هي أسعار قائمة وليست دليلًا على مبيعات محققة",
+        "عقود B2B لبيع أساطيل صغيرة أو تجهيز منتجعات ومشغلي تأجير ومراسٍ",
+        "اشتراكات أو تراخيص منصة إدارة الأساطيل والتتبع والتسييج الجغرافي والتحليلات؛ وجود المنتج موثق، لكن جدول الأسعار وعدد العملاء غير معلنين",
+        "عمولات أو رسوم تشغيل ومدفوعات في نموذج مشاركة أو تأجير المركبات إذا شغلت المنصة المعاملة؛ هذا جزء من النموذج المبكر المعلن وليس نسبة إيراد مثبتة",
+        "بيع البطاريات والملحقات وقطع الغيار وخدمات الصيانة والدعم",
+        "محطات الشحن والرسو الذكية وتجهيز البنية التشغيلية للمواقع وفق العرض الحالي",
+        "مشروعات مخصصة للمركبات غير المأهولة والمراقبة البيئية والسلامة البحرية؛ لا توجد بيانات عامة تثبت قيمة العقود أو الإيراد المتحقق",
+        "لا تتوفر بيانات لتحديد حصة إيراد الأجهزة مقابل البرمجيات أو الخدمات، أو متوسط سعر البيع، أو هامش الربح الإجمالي"
+      ],
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "medium_high",
+      "claim_type": "revenue_model_not_revenue_amount",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "قنوات بيع الأجهزة والأساطيل والبرمجيات والخدمات مستنتجة مباشرة من المنتجات، لكن الإيراد الفعلي ومزيجه غير منشورين.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-11",
+        "SRC-13",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Egypt at VIVA Technology 2022 — Seavo company background",
+          "publisher": "هيئة تنمية صناعة تكنولوجيا المعلومات المصرية (ITIDA)",
+          "source_type": "official_government_event_profile",
+          "url": "https://itida.gov.eg/English/MediaCenter/Events/Pages/Egypt-at-VIVA-Technology.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "اختيار Seavo ضمن الشركات المصرية المشاركة في الجناح المصري في VivaTech 2022"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "The competitive edge of TAQADAM",
+          "publisher": "جامعة الملك عبدالله للعلوم والتقنية (KAUST Innovation)",
+          "source_type": "official_accelerator_success_story",
+          "url": "https://innovation.kaust.edu.sa/the-competitive-edge-of-taqadam/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "انضمام Seavo إلى الدفعة السادسة من مسرعة TAQADAM وتخرجها في 2022"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Seavos — Intelligent Marine Technology",
+          "publisher": "SEAVOS",
+          "source_type": "official_current_company_website",
+          "url": "https://seavos.com/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "عرض حالي لمنتجات كهربائية وأنظمة بحرية ذاتية وبرمجيات أساطيل"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Fleet Management",
+          "publisher": "SEAVOS",
+          "source_type": "official_current_product_page",
+          "url": "https://seavos.com/products/fleet-management",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "إدارة الأساطيل البحرية وتتبعها"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Autonomous Marine Technology Solutions",
+          "publisher": "SEAVOS",
+          "source_type": "official_current_solutions_page",
+          "url": "https://seavos.com/solutions",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "توسيع العرض إلى مركبات سطحية غير مأهولة وروبوتات تحت الماء"
+        }
+      ],
+      "limitations": "لا تُحوّل تصريحات الشركة أو قواعد البيانات الخاصة إلى إيراد أو تقييم أو انتشار تجاري ما لم يوجد إفصاح أولي مستقل."
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "في الأجهزة البحرية، المنتج الحقيقي هو المنظومة لا الهيكل",
+          "description": "نجاح Orca لا يتوقف على دفع المستخدم في الماء؛ المشغل يحتاج بطارية وشحنًا وتتبعًا وتحصيلًا وحدودًا جغرافية وسجل صيانة ودعمًا. الجمع بين المركبة والبرمجيات يرفع قيمة العقد ويخلق تمايزًا أصعب من منافسة منتج مادي منفرد."
+        },
+        {
+          "title": "اعتماد النموذج يسبق مضاعفة الإنتاج",
+          "description": "توثيق KAUST لاعتماد أول نموذج مهم لأن الاختبار في الماء المالح والحرارة والسلامة ليس تفصيلًا تسويقيًا. في Hardware، الانتقال من نموذج يعمل مرة إلى منتج يتحمل التأجير اليومي يحتاج شهادات واختبارات وتوثيقًا قبل الإنفاق على قوالب وإنتاج كمي."
+        },
+        {
+          "title": "ابدأ بمشغل يملك اقتصاديات واضحة",
+          "description": "المنتجع أو شركة التأجير يستطيعان حساب الإيراد لكل وحدة وعدد الجولات وفترة الاسترداد، بينما الفرد يشتري منتجًا ترفيهيًا موسميًا مرتفع السعر. مدخل B2B يجعل البيع أبطأ لكنه يمنح طلبًا أكبر وبيانات استخدام متكررة وفرصة لعقد برمجي وخدمات لاحقة."
+        },
+        {
+          "title": "المحلية لا تعني أن كل مكوّن محلي",
+          "description": "مقابلة المؤسس أوضحت أن النموذج الأولي صُمم وجُمع في مصر، وأن الإنتاج الأكبر يحتاج مكونات وتقنيات مستوردة مثل البطاريات. الصياغة الدقيقة تحمي المصداقية: القيمة المحلية قد تكون في التصميم والهندسة والتجميع والبرمجيات، دون ادعاء سلسلة توريد محلية بالكامل."
+        },
+        {
+          "title": "طبقة السلامة قد تصبح منتجًا مستقلًا",
+          "description": "Seawatch وأساور إنترنت الأشياء والتسييج الجغرافي توضح أن بيانات الموقع والحالة ليست مجرد ملحق لـOrca. عندما تثبت طبقة المراقبة نفسها، يمكن بيعها للمنتجعات والمراسي والبحث والإنقاذ حتى مع أساطيل من مصنعين مختلفين."
+        },
+        {
+          "title": "البرمجيات تخفف موسمية مبيعات الأجهزة",
+          "description": "مبيعات المركبات تتأثر بالمواسم والمخزون ودورات الشراء، بينما إدارة الأسطول والدعم والصيانة يمكن أن تولد عقودًا متكررة. لكن وصف الإيراد بأنه SaaS يحتاج أرقام اشتراكات وتجديدات فعلية، لا مجرد وجود لوحة تحكم."
+        },
+        {
+          "title": "توسع خط المنتجات يرفع المخاطر بقدر ما يرفع السوق",
+          "description": "الانتقال من Orca إلى E-Foil وE-Jet Surf وUSV وROV ومحطات شحن ومنصة AI يفتح قطاعات متعددة، لكنه يضاعف الشهادات وسلاسل التوريد ودعم ما بعد البيع ورأس المال العامل. التركيز على منتج مرساة وسيناريو تشغيل واحد قد يكون أكثر دفاعية من إطلاق كتالوج واسع مبكرًا."
+        },
+        {
+          "title": "الشراكة مع المسرعات ليست إيرادًا ولا تقييمًا",
+          "description": "TAQADAM وOTF والظهور في المعارض يمنحون تمويلًا أو إرشادًا أو وصولًا للسوق، لكنهم لا يثبتون مبيعات أو تقييمًا. يجب تسجيل كل مقياس باسمه: منحة أو استثمار أو شراكة أو عميل تجريبي أو عقد مدفوع."
+        },
+        {
+          "title": "صفحة الشركة ليست بديلًا عن الإفصاح القابل للتحقق",
+          "description": "الموقع الحالي يعرض تواريخ تمويل وانتشار وفريقًا تختلف عن المصادر الرسمية والتاريخية. في تحليل الشركات الخاصة، تُستخدم الصفحة لفهم التمركز والمنتجات الحالية، بينما تحتاج الأرقام الجوهرية مثل التمويل والوحدات والعملاء إلى إعلان صفقة أو سجل أو مصدر مستقل."
+        },
+        {
+          "title": "أفضل قصة لـSeavo هي اقتصاديات المشغل، لا شعار المركبة الخضراء وحده",
+          "description": "الاستدامة تجذب الانتباه، لكن قرار الشراء B2B يعتمد على مدة التشغيل، دورات الشحن، الأعطال، تكلفة الصيانة، الإشغال، السلامة وفترة الاسترداد. الملف الاستثماري الأقوى يجب أن يربط خفض الوقود والصيانة ببيانات تشغيل حقيقية لكل موقع."
+        }
+      ],
+      "verification_status": "analytical_inference",
+      "confidence": "high",
+      "claim_type": "company_specific_lessons",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس مشتقة من مسار المنتج والاعتماد والتوسع والنموذج B2B وتعارض الإفصاحات، وليست اقتباسات رسمية.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-03",
+        "SRC-05",
+        "SRC-13",
+        "SRC-15",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "The competitive edge of TAQADAM",
+          "publisher": "جامعة الملك عبدالله للعلوم والتقنية (KAUST Innovation)",
+          "source_type": "official_accelerator_success_story",
+          "url": "https://innovation.kaust.edu.sa/the-competitive-edge-of-taqadam/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "انضمام Seavo إلى الدفعة السادسة من مسرعة TAQADAM وتخرجها في 2022"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Meet Egyptian Startup Seavo’s Eco-Friendly Electric Marine Vehicle",
+          "publisher": "Rasmal",
+          "source_type": "founder_interview",
+          "url": "https://www.rasmal.com/meet-egyptian-seavo-eco-friendly-electric-marine-vehicle/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "مقابلة مباشرة مع المؤسس حول نشأة الفكرة وتطوير Orca Elite"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Fleet Management",
+          "publisher": "SEAVOS",
+          "source_type": "official_current_product_page",
+          "url": "https://seavos.com/products/fleet-management",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "إدارة الأساطيل البحرية وتتبعها"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "About Seavos / Company timeline",
+          "publisher": "SEAVOS",
+          "source_type": "official_company_claims_with_material_conflicts",
+          "url": "https://seavos.com/company",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "الخط الزمني والفريق والتمويل والانتشار التي يعرضها الموقع الحالي"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "OTF Techween and Oman Technology Fund programs",
+          "publisher": "Oman Technology Fund",
+          "source_type": "official_investor_program_page",
+          "url": "https://www.otf.om/techween/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "طبيعة برنامج Techween كبرنامج ما قبل التأسيس"
+        }
+      ],
+      "limitations": "تظل البيانات المالية والتشغيلية الخاصة غير معلنة ما لم يذكر الحقل خلاف ذلك."
+    },
+    "$.tools": {
+      "field_value": [
+        "Orca: سكوتر أو مركبة مائية كهربائية محمولة للاستخدام الترفيهي والتأجير",
+        "دفع كهربائي وبطاريات قابلة للشحن بدل محرك وقود محلي أثناء التشغيل",
+        "تطبيق أو طبقة اتصال لمتابعة المركبة والرحلة وفق الوصف التاريخي والحالي",
+        "منصة إدارة أساطيل للمشغلين والمنتجعات والمراسي",
+        "تتبع الموقع والتسييج الجغرافي وتحديد مناطق السلامة",
+        "ضبط السرعة والاستخدام عن بعد وفق وصف منصة الأساطيل الحالية",
+        "مدفوعات وتشغيل تأجير المركبات وإدارة الجلسات وفق نموذج المشغل",
+        "مراقبة البطارية والتنبيهات وسجلات الاستخدام والصيانة وفق وصف الشركة",
+        "Seawatch: مفهوم أو نظام سلامة ومراقبة يرتبط بأجهزة أو أساور إنترنت الأشياء ومركبات بحرية غير مأهولة",
+        "مركبات سطحية غير مأهولة USV للمراقبة أو المسح أو التطبيقات البيئية ضمن العرض الحالي",
+        "روبوتات أو مركبات تحت الماء ROV ضمن مجموعة الحلول الحالية",
+        "Aqua Hub أو بنية شحن ورسو وإدارة طاقة للأساطيل وفق الموقع الحالي",
+        "E-Foil وE-Jet Surf كمنتجات كهربائية إضافية معروضة حاليًا",
+        "لوحة عمليات وتحليلات أسطول واتصال أجهزة وفق العرض الحالي",
+        "المواصفات وشهادات المطابقة والانتشار التجاري لكل منتج تحتاج مراجعة مستندات مستقلة قبل استخدامها في شراء أو استثمار"
+      ],
+      "verification_status": "verified_current_product_capability",
+      "confidence": "medium_high",
+      "claim_type": "products_and_capabilities",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استبدلت القائمة التقنية الداخلية غير الموثقة بقدرات ومنتجات منشورة تاريخيًا وحاليًا، مع تحفظ على التحقق المستقل.",
+      "source_count": 7,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-04",
+        "SRC-11",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Egypt at Web Summit 2024 — Seavo company background",
+          "publisher": "هيئة تنمية صناعة تكنولوجيا المعلومات المصرية (ITIDA)",
+          "source_type": "official_government_event_profile",
+          "url": "https://itida.gov.eg/English/MediaCenter/Events/Pages/Web-Summit-2024.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "استمرار ظهور Seavo كشركة تكنولوجيا بحرية في 2024"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "The competitive edge of TAQADAM",
+          "publisher": "جامعة الملك عبدالله للعلوم والتقنية (KAUST Innovation)",
+          "source_type": "official_accelerator_success_story",
+          "url": "https://innovation.kaust.edu.sa/the-competitive-edge-of-taqadam/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "انضمام Seavo إلى الدفعة السادسة من مسرعة TAQADAM وتخرجها في 2022"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Aly Mohamed — 30 Under 30 2023",
+          "publisher": "Forbes Middle East",
+          "source_type": "reputable_profile_based_on_company_disclosures",
+          "url": "https://www.forbesmiddleeast.com/lists/30-under-30-2023/aly-mohamed-2/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "تعريف علي محمد كمؤسس ورئيس تنفيذي لـ Seavo"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Seavos — Intelligent Marine Technology",
+          "publisher": "SEAVOS",
+          "source_type": "official_current_company_website",
+          "url": "https://seavos.com/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "عرض حالي لمنتجات كهربائية وأنظمة بحرية ذاتية وبرمجيات أساطيل"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Orca E-Water Scooter",
+          "publisher": "SEAVOS",
+          "source_type": "official_current_product_page",
+          "url": "https://seavos.com/products/orca",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "استمرار اسم Orca ضمن مجموعة المنتجات الحالية"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Fleet Management",
+          "publisher": "SEAVOS",
+          "source_type": "official_current_product_page",
+          "url": "https://seavos.com/products/fleet-management",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "إدارة الأساطيل البحرية وتتبعها"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Autonomous Marine Technology Solutions",
+          "publisher": "SEAVOS",
+          "source_type": "official_current_solutions_page",
+          "url": "https://seavos.com/solutions",
+          "evidence_type": "direct",
+          "source_locator": "Relevant company profile, product, program, or funding section",
+          "supports": "توسيع العرض إلى مركبات سطحية غير مأهولة وروبوتات تحت الماء"
+        }
+      ],
+      "limitations": "لا تُحوّل تصريحات الشركة أو قواعد البيانات الخاصة إلى إيراد أو تقييم أو انتشار تجاري ما لم يوجد إفصاح أولي مستقل."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Egypt at VIVA Technology 2022 — Seavo company background",
+      "publisher": "هيئة تنمية صناعة تكنولوجيا المعلومات المصرية (ITIDA)",
+      "source_type": "official_government_event_profile",
+      "url": "https://itida.gov.eg/English/MediaCenter/Events/Pages/Egypt-at-VIVA-Technology.aspx",
+      "supports": [
+        "اختيار Seavo ضمن الشركات المصرية المشاركة في الجناح المصري في VivaTech 2022",
+        "وصف الشركة بأنها تطور سكوترات مائية كهربائية مدعومة بالذكاء الاصطناعي",
+        "الإشارة إلى منصة مشاركة أو تشغيل للسكوترات المائية الكهربائية"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Egypt at Web Summit 2024 — Seavo company background",
+      "publisher": "هيئة تنمية صناعة تكنولوجيا المعلومات المصرية (ITIDA)",
+      "source_type": "official_government_event_profile",
+      "url": "https://itida.gov.eg/English/MediaCenter/Events/Pages/Web-Summit-2024.aspx",
+      "supports": [
+        "استمرار ظهور Seavo كشركة تكنولوجيا بحرية في 2024",
+        "تطوير مركبات مائية كهربائية متصلة بإنترنت الأشياء",
+        "تطوير طائرات أو مركبات بحرية ذاتية وأنظمة إدارة أساطيل"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "The competitive edge of TAQADAM",
+      "publisher": "جامعة الملك عبدالله للعلوم والتقنية (KAUST Innovation)",
+      "source_type": "official_accelerator_success_story",
+      "url": "https://innovation.kaust.edu.sa/the-competitive-edge-of-taqadam/",
+      "supports": [
+        "انضمام Seavo إلى الدفعة السادسة من مسرعة TAQADAM وتخرجها في 2022",
+        "تطوير مركبات مائية كهربائية ونظام إدارة أساطيل",
+        "اعتماد أو تصديق أول نموذج للسكوتر المائي وفق صياغة KAUST",
+        "الشراكة مع مراسٍ وشركات تأجير رياضات مائية",
+        "دخول السوق السعودي والاستمرار في تطوير المنتج ونظام الأساطيل"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Aly Mohamed — 30 Under 30 2023",
+      "publisher": "Forbes Middle East",
+      "source_type": "reputable_profile_based_on_company_disclosures",
+      "url": "https://www.forbesmiddleeast.com/lists/30-under-30-2023/aly-mohamed-2/",
+      "supports": [
+        "تعريف علي محمد كمؤسس ورئيس تنفيذي لـ Seavo",
+        "تأسيس الشركة في 2021 وفق ملف فوربس",
+        "وجود مجموعة منتجات بحرية كهربائية وOrca المتصلة بإنترنت الأشياء",
+        "تطوير نظام Seawatch للسلامة والمراقبة",
+        "الإشارة إلى تعاون مع KAUST في تطبيقات Orca وSeawatch"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Meet Egyptian Startup Seavo’s Eco-Friendly Electric Marine Vehicle",
+      "publisher": "Rasmal",
+      "source_type": "founder_interview",
+      "url": "https://www.rasmal.com/meet-egyptian-seavo-eco-friendly-electric-marine-vehicle/",
+      "supports": [
+        "مقابلة مباشرة مع المؤسس حول نشأة الفكرة وتطوير Orca Elite",
+        "تصميم وتجميع النموذج الأولي في مصر",
+        "الاعتماد على مكونات مستوردة عند الانتقال إلى إنتاج أكبر، ومنها البطاريات",
+        "مواصفات تاريخية معلنة للنموذج الأولي تشمل السرعة وزمن الاستخدام والشحن",
+        "استهداف مصر ثم السعودية والخليج وأسواق إفريقية"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "How Seavo is Leading the Green Transition of Egypt’s Marine Sector",
+      "publisher": "StartupScene",
+      "source_type": "founder_interview_and_company_profile",
+      "url": "https://thestartupscene.me/BehindTheStartup/How-Seavo-is-Leading-the-Green-Transition-of-Egypt-s-Marine-Sector",
+      "supports": [
+        "تركيز الشركة المبكر على بديل كهربائي للمركبات البحرية الترفيهية العاملة بالوقود",
+        "الارتباط بالسياحة البحرية وحماية البيئة",
+        "خطة إطلاق Orca في 2022 والتوسع لاحقًا إلى منتجات بحرية أخرى"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "How Egyptian Startup Seavo Is Leading the Shift Towards Electric Water Vehicles",
+      "publisher": "Egyptian Streets",
+      "source_type": "founder_interview_and_company_profile",
+      "url": "https://egyptianstreets.com/2022/06/04/how-egyptian-startup-seavo-is-leading-the-shift-towards-electric-water-vehicles/",
+      "supports": [
+        "تقديم Seavo كشركة مصرية ناشئة في التنقل البحري الكهربائي",
+        "التركيز الأولي على الرياضات المائية مع طموح لتوسيع خط المنتجات",
+        "طرح المركبات الكهربائية كبديل أقل أثرًا من المنتجات المعتمدة على الوقود"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Sea-curity for Reefs",
+      "publisher": "AUC Today — الجامعة الأمريكية بالقاهرة",
+      "source_type": "university_feature",
+      "url": "https://auctoday.com/2022/11/04/sea-curity-for-reefs/",
+      "supports": [
+        "اختيار Seavo ضمن ترشيحات WSA الوطنية في فئة البيئة والطاقة الخضراء",
+        "تطوير سكوتر مائي كهربائي وتقليل المفاضلة بين السياحة وحماية البيئة",
+        "العمل في 2022 على الانتقال إلى الإنتاج الكمي"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Seavo selected as a WSA national nominee",
+      "publisher": "علي محمد — المؤسس",
+      "source_type": "founder_primary_social_announcement",
+      "url": "https://www.linkedin.com/posts/alymagdy_im-glad-to-announce-that-seavo-has-been-activity-6982320384704438272-DuVO",
+      "supports": [
+        "إعلان المؤسس ترشيح Seavo ضمن WSA في فئة البيئة والطاقة الخضراء",
+        "ربط الترشيح بمنتج Seavo Orca"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "SEAVOS company profile",
+      "publisher": "SEAVOS على LinkedIn",
+      "source_type": "official_current_company_social_profile",
+      "url": "https://www.linkedin.com/company/seavos",
+      "supports": [
+        "استخدام العلامة الحالية SEAVOS وربطها بالمؤسس علي محمد",
+        "تموضع حالي معلن حول الأنظمة البحرية الذاتية وبرمجيات إدارة الأساطيل",
+        "إظهار مقر في ميامي وحجم فريق 11–50 في النسخة الحالية للملف",
+        "وجود تناقضات في سنة التأسيس بين نسخ اللغة والملفات التاريخية"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Seavos — Intelligent Marine Technology",
+      "publisher": "SEAVOS",
+      "source_type": "official_current_company_website",
+      "url": "https://seavos.com/",
+      "supports": [
+        "عرض حالي لمنتجات كهربائية وأنظمة بحرية ذاتية وبرمجيات أساطيل",
+        "عرض Orca ومنتجات E-Foil وE-Jet Surf وSeawatch",
+        "تسعير معلن لبعض المنتجات على الموقع",
+        "ادعاءات تشغيل وشراكات وأداء منشورة من الشركة تحتاج تحققًا مستقلًا"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Orca E-Water Scooter",
+      "publisher": "SEAVOS",
+      "source_type": "official_current_product_page",
+      "url": "https://seavos.com/products/orca",
+      "supports": [
+        "استمرار اسم Orca ضمن مجموعة المنتجات الحالية",
+        "توجيه المنتج للمنتجعات والتأجير والاستخدام الترفيهي",
+        "وجود مواصفات وقدرات معلنة حاليًا من الشركة"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Fleet Management",
+      "publisher": "SEAVOS",
+      "source_type": "official_current_product_page",
+      "url": "https://seavos.com/products/fleet-management",
+      "supports": [
+        "إدارة الأساطيل البحرية وتتبعها",
+        "التسييج الجغرافي ومناطق السلامة",
+        "المدفوعات وتشغيل التأجير عن بعد",
+        "تحليلات التشغيل والصيانة وفق وصف الشركة"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Autonomous Marine Technology Solutions",
+      "publisher": "SEAVOS",
+      "source_type": "official_current_solutions_page",
+      "url": "https://seavos.com/solutions",
+      "supports": [
+        "توسيع العرض إلى مركبات سطحية غير مأهولة وروبوتات تحت الماء",
+        "منصة تشغيل وأساطيل وطبقة اتصال وأجهزة استشعار",
+        "حالات استخدام للبحث والمراقبة والموانئ والسلامة"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "About Seavos / Company timeline",
+      "publisher": "SEAVOS",
+      "source_type": "official_company_claims_with_material_conflicts",
+      "url": "https://seavos.com/company",
+      "supports": [
+        "الخط الزمني والفريق والتمويل والانتشار التي يعرضها الموقع الحالي",
+        "إظهار تعارضات جوهرية مع مصادر ITIDA وKAUST وفوربس والملف المهني للمؤسس"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "OTF Techween and Oman Technology Fund programs",
+      "publisher": "Oman Technology Fund",
+      "source_type": "official_investor_program_page",
+      "url": "https://www.otf.om/techween/",
+      "supports": [
+        "طبيعة برنامج Techween كبرنامج ما قبل التأسيس",
+        "تمويل البرنامج القياسي المعلن بقيمة 50 ألف دولار",
+        "وجود برامج أخرى للصندوق بمبالغ مختلفة، ما يمنع استنتاج جولة Seavo من اسم الصندوق وحده"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Seavo company profile and funding",
+      "publisher": "CB Insights",
+      "source_type": "secondary_private_market_database",
+      "url": "https://www.cbinsights.com/company/seavo",
+      "supports": [
+        "تقدير قاعدة البيانات أن إجمالي التمويل المعلن 150 ألف دولار",
+        "ربط الشركة بالقاهرة وقطاع المركبات المائية الكهربائية ونظام إدارة الأساطيل",
+        "بيانات المستثمرين والتأسيس مع وجود اختلافات عن قواعد بيانات أخرى"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "SEAVO company information and funding",
+      "publisher": "Dealroom",
+      "source_type": "secondary_private_market_database",
+      "url": "https://app.dealroom.co/companies/seavo",
+      "supports": [
+        "إدراج دعم من Changelabs وOman Technology Fund",
+        "عرض جولة 150 ألف دولار في أكتوبر 2022 باعتبارها تقديرًا أو بيانات قاعدة خاصة",
+        "عرض تقدير لقيمة المنشأة لا يُعامل كتقييم صفقة رسمي",
+        "اختلاف سنة التأسيس عن مصادر أخرى"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "Seavo Co Profile",
+      "publisher": "Decypha",
+      "source_type": "secondary_company_registry_profile",
+      "url": "https://www.decypha.com/en/company-list/Seavo-Co-238576",
+      "supports": [
+        "عنوان تاريخي للشركة في القاهرة",
+        "تاريخ تأسيس مدرج في مارس 2019",
+        "تصنيف الشركة ككيان خاص وعدم توفر تقارير مالية"
+      ]
+    }
   ]
 }

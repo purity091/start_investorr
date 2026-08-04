@@ -1,60 +1,848 @@
 {
   "id": "souq",
   "slug": "souq",
-  "name": "سوق.كوم (Souq.com)",
-  "headline": "أمازون الشرق الأوسط التي مهدت الطريق للتجارة الإلكترونية العربية",
-  "category": "E-commerce / التجارة الإلكترونية",
+  "name": "سوق.كوم (Souq.com) — العلامة التاريخية التي اندمجت في Amazon",
+  "headline": "من مزاد عربي إلى بوابة دخول أمازون: كيف بنى سوق.كوم أصولًا محلية اختصرت سنوات من التوسع الإقليمي",
+  "category": "E-commerce & Marketplace Infrastructure / التجارة الإلكترونية والبنية التحتية للأسواق الرقمية",
   "company": {
-    "location": "دبي، الإمارات العربية المتحدة",
-    "business_model": "عمولة من التجار (Marketplace) وبيع مباشر (Retail)"
+    "location": "دبي، الإمارات العربية المتحدة تاريخيًا. لم تعد Souq.com علامة تسوق مستقلة؛ انتقلت واجهاتها الأساسية إلى Amazon.ae في 1 مايو 2019، وAmazon.sa في 17 يونيو 2020، وAmazon.eg في 2021. ما زالت أسماء قانونية موروثة مثل Souq.com FZ LLC تظهر في بعض شروط Amazon الإقليمية.",
+    "founded": "2005",
+    "founders": [
+      "رونالدو مشحور",
+      "سميح طوقان",
+      "حسام خوري"
+    ],
+    "ownership_status": "استحوذت Amazon على Souq Group Ltd. في 12 مايو 2017، ثم دمجت العلامة الاستهلاكية تدريجيًا داخل متاجرها الإقليمية.",
+    "current_status_as_of_2026_08": "علامة استهلاكية تاريخية غير مستقلة تشغيليًا؛ الأصول والفرق والحسابات والبنية المحلية أصبحت جزءًا من منظومة Amazon في الشرق الأوسط وشمال أفريقيا.",
+    "business_model": "تاريخيًا: سوق متعدد البائعين مع بيع مباشر من المخزون، وخدمات دفع ولوجستيات وتجربة محلية عربية/إنجليزية. حاليًا لا يوجد نموذج إيراد مستقل باسم Souq منشور؛ النشاط الموروث مدمج ضمن متاجر Amazon الدولية."
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين من الدولارات",
-    "monthly_traffic": "عشرات الملايين من الزيارات الشهرية"
+    "monthly_revenue": "غير معلن. لا تنشر Amazon إيراد Souq مستقلًا، ولا يجوز استخدام مبيعات قطاع International العالمي كبديل عن إيراد Souq أو متاجر الشرق الأوسط.",
+    "monthly_traffic": "تاريخيًا: أكثر من 45 مليون زيارة شهريًا عند إعلان الاستحواذ في مارس 2017. هذا رقم زيارات، لا مستخدمين فريدين ولا مشترين ولا رقمًا حاليًا بعد انتهاء العلامة المستقلة.",
+    "annual_revenue": "غير معلن تاريخيًا أو حاليًا بصورة مستقلة قابلة للتحقق.",
+    "transaction_volume": "غير معلن؛ لا توجد بيانات عامة موثوقة عن GMV أو قيمة المدفوعات التي مرت عبر Souq.",
+    "users": "لا يوجد رقم مستخدمين نشطين حالي. ذكرت IFC تاريخيًا أكثر من 4 ملايين عميل عبر أربع دول، وهو رقم تراكمي قديم لا يساوي MAU أو عدد المشترين السنوي.",
+    "merchants": "ذكرت IFC تاريخيًا شبكة تضم 15 ألف تاجر بعد استثمارها؛ لا يمثل ذلك عدد البائعين النشطين حاليًا.",
+    "catalog_scale": "أكثر من 8.4 مليون منتج عبر 31 فئة في مارس 2017.",
+    "brand_status": "أُغلقت واجهة Souq المستقلة تدريجيًا وحلت محلها Amazon.ae وAmazon.sa وAmazon.eg."
   },
   "overview": {
     "problem": {
-      "text": "في أوائل الألفية، لم تكن هناك بنية تحتية للتجارة الإلكترونية في العالم العربي، ولا ثقة في الدفع الإلكتروني، ولا لوجستيات مهيأة للتوصيل السريع.",
-      "impact": "المستهلك العربي محروم من التسوق الرقمي وتنوع المنتجات مقارنة بالغرب، والتجار لا يملكون قناة لبيع منتجاتهم على الإنترنت."
+      "text": "عند تأسيس Souq في 2005، لم يكن بناء متجر إقليمي مجرد مسألة تصميم موقع. كانت الأسواق العربية موزعة بين قوانين وجمارك وعملات وبنى دفع وتسليم مختلفة، مع انتشار محدود للتجارة الإلكترونية وقلة المحتوى والخدمات المحلية القادرة على كسب ثقة المشتري والبائع.",
+      "impact": "كان على أي منصة إقليمية معالجة سلسلة كاملة من الاحتكاكات: اكتساب التجار، إدارة المخزون والقوائم، تحصيل المدفوعات بوسائل مناسبة، التعامل مع الدفع عند الاستلام، تنفيذ التوصيل والمرتجعات، وتقديم تجربة عربية موثوقة. الفشل في أي حلقة كان يحد من التحويل والنمو."
     },
     "solution": {
-      "text": "بناء منصة متكاملة تشمل واجهة تسوق إلكترونية، مع تأسيس بوابات دفع (PayFort) وشركة شحن لوجستية (QExpress) لحل المشاكل الجذرية للمنطقة."
+      "text": "بدأت Souq كموقع مزادات ضمن بيئة Maktoob، ثم تحولت إلى منصة تجارة إلكترونية تجمع السوق متعدد البائعين والبيع المباشر والتجربة المحلية وخدمات الدفع واللوجستيات. قبل الاستحواذ كانت قد بنت كتالوجًا واسعًا وعمليات محلية في السعودية والإمارات ومصر، وهي أصول منحت Amazon مسار دخول أسرع من بناء الشبكة الإقليمية من الصفر.",
+      "what_was_actually_acquired": [
+        "قاعدة عملاء وبائعين وحسابات محلية قائمة",
+        "معرفة تشغيلية بالقوانين والجمارك والعملات وسلوك الدفع",
+        "واجهات عربية وخبرة في تكييف تجربة التجارة الإلكترونية",
+        "شبكات تنفيذ ودفع وعلاقات تجارية إقليمية",
+        "فريق محلي ومنصة تقنية أمكن دمجهما مع قدرات Amazon العالمية"
+      ]
     }
   },
   "market_data": {
-    "target_audience": "المستهلكون في الشرق الأوسط (تحديداً الإمارات، السعودية، مصر).",
-    "market_size": "سوق التجارة الإلكترونية كان بكراً، وأصبح اليوم يتجاوز 50 مليار دولار.",
-    "growth_rate": "هيمنت على السوق لعقد كامل قبل استحواذ أمازون عليها لتصبح Amazon.ae / Amazon.sa."
+    "target_audience": "تاريخيًا: المستهلكون والبائعون والعلامات التجارية في السعودية والإمارات ومصر، مع وجود تشغيلي سابق في أسواق أخرى بدرجات مختلفة.",
+    "market_size": "لا يُستخدم رقم «أكثر من 50 مليار دولار» الوارد في الملف الأصلي لغياب تعريف وفترة ومصدر محدد. بعد دمج Souq، تنشر Amazon نتائجها الدولية مجمعة عالميًا ولا تفصل سوق التجارة الإلكترونية في الشرق الأوسط أو أداء الأصول الموروثة من Souq.",
+    "growth_rate": "لا توجد نسبة نمو مالية موثقة. المؤشرات التشغيلية التاريخية انتقلت من أكثر من 600 ألف منتج في إفصاح IFC لعام 2015 إلى أكثر من 8.4 مليون منتج و45 مليون زيارة شهرية في إعلان مارس 2017، لكن نمو الكتالوج والزيارات لا يساوي نمو الإيراد أو GMV.",
+    "historical_operating_markets": [
+      "الإمارات العربية المتحدة",
+      "المملكة العربية السعودية",
+      "مصر"
+    ],
+    "rebrand_timeline": [
+      {
+        "market": "الإمارات العربية المتحدة",
+        "new_brand": "Amazon.ae",
+        "date": "2019-05-01",
+        "status": "موثق رسميًا"
+      },
+      {
+        "market": "المملكة العربية السعودية",
+        "new_brand": "Amazon.sa",
+        "date": "2020-06-17",
+        "status": "موثق بإعلان منقول عن Amazon ومصادر صحفية موثوقة"
+      },
+      {
+        "market": "مصر",
+        "new_brand": "Amazon.eg",
+        "date": "2021",
+        "status": "موثق في نتائج Amazon للربع الثالث 2021"
+      }
+    ],
+    "competitive_position": "كانت Souq منصة إقليمية كبيرة قبل الاستحواذ، لكن عبارة «هيمنة لعقد كامل» غير قابلة للقياس دون بيانات حصة سوقية متسقة، لذلك استُبدلت بوصف ريادتها وحجمها التاريخي الموثق."
   },
   "financials": {
-    "initial_investment": "بدأت كمشروع جانبي (موقع مزادات) تحت مظلة مكتوب (Maktoob).",
-    "valuation": "$580M (قيمة الاستحواذ من قبل أمازون في 2017)",
+    "initial_investment": "تفاصيل رأس المال الأولي عند التأسيس غير منشورة بما يكفي. في 2015 ذكرت IFC تمويلًا قدره 27 مليون دولار منها ومن صندوق MENA التابع لإدارة أصول IFC، بينما يعرض سجل المشروع استثمار أسهم معتمدًا إرشاديًا قدره 30 مليون دولار ومقترحًا يصل إلى 20 مليون دولار؛ لذلك لا تُجمع هذه الأرقام أو تعامل كجولات منفصلة دون توضيح.",
+    "valuation": "لا يوجد تقييم حالي مستقل لـSouq في 2026. مبلغ 583 مليون دولار هو مقابل الاستحواذ المسجل لدى Amazon، صافي النقد المستحوذ عليه، وليس تقييمًا حاليًا ولا إيرادًا.",
+    "acquisition": {
+      "buyer": "Amazon.com, Inc.",
+      "completion_date": "2017-05-12",
+      "consideration": "نحو 583 مليون دولار صافي النقد المستحوذ عليه وفق نموذج 10-K النهائي لعام 2017",
+      "metric_type": "acquisition_consideration",
+      "not_equal_to": [
+        "الإيراد",
+        "الربح",
+        "حجم المعاملات",
+        "التقييم الحالي"
+      ]
+    },
+    "funding_history": [
+      {
+        "year": 2015,
+        "amount": "27 مليون دولار وفق قصة IFC المنشورة في 2017",
+        "investors": [
+          "IFC",
+          "MENA Fund managed by IFC Asset Management Company"
+        ],
+        "status": "تمويل تاريخي معلن",
+        "caveat": "سجل الإفصاح يعرض مبالغ مقترحة ومعتمدة إرشادية مختلفة؛ لا يُجمع تلقائيًا مع أرقام أخرى."
+      },
+      {
+        "year": 2016,
+        "amount": "275 مليون دولار",
+        "investors": [
+          "Tiger Global Management",
+          "Naspers",
+          "Standard Chartered Private Equity",
+          "IFC",
+          "Baillie Gifford",
+          "مستثمرون آخرون"
+        ],
+        "status": "جولة تمويل معلنة",
+        "caveat": "التمويل ليس إيرادًا ولا GMV، ولم يُستخدم تقرير غير رسمي عن تقييم مليار دولار كحقيقة مؤكدة."
+      }
+    ],
+    "standalone_revenue": "غير معلن",
+    "standalone_profitability": "غير معلنة",
+    "transaction_volume": "غير معلن",
     "revenue_streams": [
-      "عمولات من البائعين الخارجيين",
-      "أرباح من البيع المباشر للمنتجات",
-      "إيرادات الإعلانات داخل الموقع (Sponsored Ads)",
-      "رسوم خدمات الدفع (PayFort)"
+      "عمولات ورسوم البائعين في نموذج السوق متعدد الأطراف",
+      "هامش البيع المباشر للمنتجات التي كانت المنصة تبيعها كمخزون",
+      "خدمات تنفيذ ودفع وترويج مرتبطة بالمنظومة؛ لا توجد إفصاحات عامة موثوقة عن نسبتها أو مساهمتها في إيراد Souq",
+      "بعد الاستحواذ أصبحت الأنشطة جزءًا من Amazon، ولا يمكن فصل إيراداتها من تقارير قطاع International"
+    ]
+  },
+  "analysis": {
+    "title": "القيمة التي اشترتها Amazon كانت الزمن المحلي المختصر، لا اسم المتجر وحده",
+    "thesis": "Souq مثال على أن أصل التجارة الإلكترونية الأهم في سوق ناشئة قد يكون شبكة الثقة والتنفيذ المتراكمة أكثر من واجهة الموقع. Amazon لم تحتفظ بالعلامة الاستهلاكية إلى الأبد، لكنها أبقت الحسابات والبائعين والفرق والخبرة المحلية ودمجتها في بنيتها العالمية.",
+    "strategic_reading": [
+      "قبل الاستحواذ بنت Souq طلبًا وعرضًا محليين في آن واحد، إضافة إلى قدرات الدفع والتوصيل التي يصعب استيرادها جاهزة.",
+      "مقابل الاستحواذ يعكس قيمة الدخول السريع وتقليل مخاطر التنفيذ، لكنه لا يثبت أن Souq كانت تحقق إيرادات أو أرباحًا بحجم معين.",
+      "إلغاء اسم Souq تدريجيًا لا يعني فشل الأصل؛ قد يعني أن المشتري رأى قيمة أعلى في دمج البنية والحسابات تحت علامة عالمية واحدة.",
+      "استمرار أسماء قانونية موروثة في بعض شروط Amazon يوضح الفرق بين اختفاء العلامة التجارية وبقاء الكيانات التشغيلية أو التعاقدية.",
+      "الأرقام التاريخية يجب قراءتها بوحداتها: الزيارة ليست مستخدمًا، والعميل التراكمي ليس MAU، والكتالوج ليس مبيعات، والتمويل ليس إيرادًا."
+    ],
+    "outcome": "استحواذ استراتيجي مكتمل واندماج تدريجي للعلامة في متاجر Amazon الإقليمية؛ لا توجد شركة عامة مستقلة أو فرصة استثمار منفصلة باسم Souq في 2026.",
+    "risks_and_unknowns": [
+      "غياب القوائم المالية المستقلة يمنع قياس الإيراد والربحية وGMV قبل أو بعد الاستحواذ.",
+      "لا تتوفر حصة سوقية موحدة قابلة للمقارنة عبر الدول والفترات.",
+      "الأرقام التشغيلية المنشورة قبل الاستحواذ تاريخية ولا تمثل نشاط Amazon الإقليمي الحالي.",
+      "وجود أسماء Souq في الوثائق القانونية لا يعني استمرار العلامة كمنتج استهلاكي مستقل."
     ]
   },
   "lessons": [
     {
-      "title": "بناء البنية التحتية من الصفر",
-      "description": "لم تكتفِ (سوق) ببناء موقع إلكتروني، بل اضطرت لتأسيس شركة شحن وبوابة دفع إلكتروني لأن البنية التحتية في المنطقة لم تكن موجودة."
+      "title": "ابنِ القضبان قبل أن تطلب من السوق أن يتحرك",
+      "description": "Souq لم تتعامل مع التجارة الإلكترونية كواجهة عرض فقط. كان النجاح يتطلب ربط القوائم والدفع والتوصيل والمرتجعات وخدمة البائعين. في الأسواق الناشئة، الشركة التي تبني البنية المفقودة قد تخلق حاجزًا تنافسيًا أقوى من ميزات المنتج السطحية."
     },
     {
-      "title": "قوة الدفع عند الاستلام (COD)",
-      "description": "أدركت الشركة أن 80% من المستخدمين يرفضون الدفع بالبطاقة، فتبنت خدمة (الدفع عند الاستلام) مما أدى لانفجار المبيعات رغم تعقيداتها اللوجستية."
+      "title": "التوطين عملية تشغيلية لا ترجمة لغوية",
+      "description": "اللغة العربية جزء من التوطين، لكن القيمة الأصعب كانت فهم وسائل الدفع والجمارك والعناوين واللوجستيات وسلوك العميل في كل دولة. التوسع الإقليمي الناجح يحتاج نموذج تشغيل متعدد الدول، لا نسخة مترجمة من متجر عالمي."
     },
     {
-      "title": "المحرك المبكر (First Mover Advantage)",
-      "description": "استحوذت على السوق مبكراً وصبرت على الخسائر التشغيلية لسنوات، مما جعلها الخيار الوحيد لأمازون لدخول المنطقة."
+      "title": "الدفع عند الاستلام جسر ثقة لا رقمًا دعائيًا",
+      "description": "وفرت Souq وAmazon.ae الدفع عند الاستلام لتقليل عائق الشراء. أما ادعاء أن 80% من المستخدمين رفضوا البطاقات فلم يوجد له دليل موثوق، لذلك الدرس هو استخدام وسيلة الدفع المناسبة للسوق مع قياس تكلفتها، لا تكرار نسبة غير مثبتة."
+    },
+    {
+      "title": "افصل مقياس الجذب عن مقياس الاقتصاد",
+      "description": "أكثر من 45 مليون زيارة شهريًا يثبت حجم الوصول التاريخي، لكنه لا يكشف المشترين الفريدين أو التحويل أو متوسط الطلب أو الإيراد. المستثمر الجيد يبني لوحة مقاييس تفصل الزيارات والعملاء والطلبات وGMV والإيراد والهامش."
+    },
+    {
+      "title": "المشتري الاستراتيجي يدفع مقابل اختصار الزمن والمخاطر",
+      "description": "Amazon كان بوسعها بناء متجر جديد، لكن شراء Souq وفر فريقًا وعلاقات وبائعين وعملاء وبنية محلية جاهزة. الأصول التي تختصر سنوات من التعلم التنظيمي والتشغيلي قد تساوي أكثر من التكنولوجيا القابلة لإعادة البناء."
+    },
+    {
+      "title": "اختفاء العلامة قد يكون اكتمالًا للاستحواذ",
+      "description": "تحولت Souq إلى Amazon.ae وAmazon.sa وAmazon.eg، بينما استمرت عناصر من الكيان والبنية والحسابات. نجاح الخروج لا يُقاس ببقاء الاسم؛ أحيانًا تكون النتيجة المقصودة أن يذوب المنتج داخل منصة أكبر ويضاعف أثره."
     }
   ],
   "tools": [
-    "PHP",
-    "MySQL",
-    "Elasticsearch",
-    "AWS",
-    "Redis"
+    "منصة Marketplace متعددة البائعين مع بيع مباشر تاريخيًا",
+    "تجربة ويب وتطبيق محلية بالعربية والإنجليزية",
+    "معالجة دفع آمنة وخيارات محلية والدفع عند الاستلام",
+    "قدرات تنفيذ وشحن ومرتجعات مدمجة",
+    "PayFort، الذي كان جزءًا من Souq Group منذ 2013 وأعيدت تسميته Amazon Payment Services في 2020",
+    "AWS تاريخيًا؛ أعلنت Souq في 2017 خطة ترحيل 700 خادم وأكثر من 50 تيرابايت إلى AWS",
+    "أنظمة انتقال حسابات العملاء والبائعين والطلبات إلى متاجر Amazon الإقليمية"
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "status": "passed",
+    "research_cutoff": "2026-08-03",
+    "language": "العربية",
+    "methodology": [
+      "قراءة الملف الأصلي والحفاظ على أقسامه الأساسية مع توسيعها",
+      "تقديم إفصاحات SEC وإعلانات Amazon وIFC والمصادر الأولية على المصادر الثانوية",
+      "مقارنة أرقام الاستحواذ الأولية بالرقم النهائي في نموذج 10-K لعام 2017",
+      "التمييز بين العلامة الاستهلاكية والكيانات القانونية الموروثة",
+      "الفصل الصريح بين الإيراد والتقييم ومقابل الاستحواذ والتمويل وGMV والزيارات والعملاء والتجار",
+      "عدم استخدام أدوات تقدير الزيارات أو الإيرادات أو حصة السوق",
+      "التحقق البرمجي من JSON والمراجع والروابط والاتساق الحسابي"
+    ],
+    "key_corrections": [
+      {
+        "original_claim": "عشرات الملايين من الدولارات كإيراد شهري",
+        "correction": "حُذف؛ لا تنشر Souq أو Amazon إيرادًا شهريًا مستقلًا للعلامة أو لمتاجر الشرق الأوسط."
+      },
+      {
+        "original_claim": "عشرات الملايين من الزيارات الشهرية كرقم حالي",
+        "correction": "حُوّل إلى أكثر من 45 مليون زيارة شهريًا كتاريخ مارس 2017 فقط، مع التنبيه إلى أنها زيارات وليست مستخدمين فريدين."
+      },
+      {
+        "original_claim": "580 مليون دولار كتقييم",
+        "correction": "الرقم النهائي في 10-K هو نحو 583 مليون دولار كمقابل استحواذ صافي النقد المستحوذ عليه، وليس تقييمًا حاليًا."
+      },
+      {
+        "original_claim": "Souq أصبحت Amazon.ae وAmazon.sa فقط",
+        "correction": "أضيف Amazon.eg؛ اكتمل انتقال الأسواق الأساسية الثلاثة بحلول 2021."
+      },
+      {
+        "original_claim": "الشركة ما زالت تعمل كعلامة مستقلة",
+        "correction": "Souq علامة استهلاكية تاريخية مدمجة في Amazon، مع بقاء بعض الأسماء القانونية الموروثة."
+      },
+      {
+        "original_claim": "PayFort وQExpress أُسستا حتمًا بواسطة Souq",
+        "correction": "الموثق رسميًا أن PayFort كان جزءًا من Souq Group وتأسس في 2013؛ لم يُعتمد ادعاء تأسيس QExpress لغياب مصدر أولي كافٍ."
+      },
+      {
+        "original_claim": "80% من المستخدمين يرفضون الدفع بالبطاقة",
+        "correction": "حُذف الرقم لعدم العثور على مصدر أولي موثوق؛ ثبت فقط توفر الدفع عند الاستلام."
+      },
+      {
+        "original_claim": "سوق التجارة الإلكترونية يتجاوز 50 مليار دولار",
+        "correction": "حُذف لغياب تحديد جغرافي وزمني ومنهجي ومصدر في الملف."
+      },
+      {
+        "original_claim": "PHP وMySQL وElasticsearch وRedis",
+        "correction": "حُذفت التقنيات غير الموثقة؛ احتُفظ بـAWS لأن Souq أعلنت رسميًا استخدامها وخطة الترحيل."
+      }
+    ],
+    "unsupported_claims_removed": [
+      "إيراد شهري بعشرات الملايين",
+      "تقييم حالي بقيمة 580 مليون دولار",
+      "حصة سوقية أو هيمنة مطلقة",
+      "نسبة رفض البطاقات البالغة 80%",
+      "حجم سوق يتجاوز 50 مليار دولار بلا تعريف",
+      "تأسيس QExpress دون مصدر أولي",
+      "PHP وMySQL وElasticsearch وRedis",
+      "أرباح أو خسائر تشغيلية غير منشورة"
+    ],
+    "limitations": [
+      "Souq كانت شركة خاصة ولا توجد قوائم مالية مستقلة عامة تكشف الإيرادات أو الربحية أو GMV.",
+      "أرقام الزيارات والعملاء والتجار والكتالوج تعود إلى فترات مختلفة قبل الاستحواذ ولا يجوز جمعها كصورة آنية واحدة.",
+      "إفصاح IFC لعام 2015 يعرض مبلغًا مقترحًا وآخر معتمدًا إرشاديًا، بينما قصة IFC اللاحقة تذكر 27 مليون دولار؛ عُرض الاختلاف بدل تسويته افتراضيًا.",
+      "Amazon تجمع نتائج المتاجر الدولية في قطاع International ولا تفصل أداء الإمارات أو السعودية أو مصر.",
+      "تاريخ إطلاق Amazon.eg مثبت في 2021 من إفصاح Amazon، بينما اليوم والشهر لم يُستنتجا داخل الحقول التي تتطلب مصدرًا أوليًا مباشرًا.",
+      "لا تُعامل الأسماء القانونية الموروثة كدليل على استمرار Souq كعلامة استهلاكية مستقلة."
+    ],
+    "programmatic_checks": {
+      "valid_json": true,
+      "utf8_encoding": true,
+      "required_base_sections_present": true,
+      "source_ids_unique": true,
+      "evidence_ids_unique": true,
+      "evidence_source_ids_resolve": true,
+      "urls_well_formed": true,
+      "acquisition_consideration_label_checked": true,
+      "no_nan_or_infinity": true,
+      "no_duplicate_source_urls": true,
+      "metric_separation_fields_present": true,
+      "unsupported_80_percent_not_asserted_as_fact": true
+    }
+  },
+  "evidence_map_schema": {
+    "version": "1.0",
+    "description": "خريطة تربط الادعاءات الجوهرية بمصادرها وتمنع الخلط بين الإيراد والتقييم ومقابل الاستحواذ والتمويل وحجم المعاملات والزيارات والعملاء.",
+    "fields": {
+      "id": "معرف فريد للدليل",
+      "json_path": "المسار داخل ملف JSON",
+      "claim": "الادعاء أو القياس",
+      "metric_type": "revenue | valuation | acquisition_consideration | funding | transaction_volume | visits | users | merchants | catalog | geography | product | legal | technology | brand_status",
+      "status": "verified | company_reported | historical | derived | unavailable | corrected",
+      "confidence": "high | medium | low",
+      "as_of": "تاريخ القياس أو آخر تحقق",
+      "source_ids": "معرفات المصادر الداعمة",
+      "notes": "حدود التفسير ومنع الخلط"
+    }
+  },
+  "evidence_map": [
+    {
+      "id": "ev01",
+      "json_path": "company.founded",
+      "claim": "تأسست Souq في 2005 وبدأت كموقع مزادات صغير مرتبط ببيئة Maktoob.",
+      "metric_type": "legal",
+      "status": "verified",
+      "confidence": "high",
+      "as_of": "2005",
+      "source_ids": [
+        "src_ifc_story_2017",
+        "src_hbr_founder_2017"
+      ],
+      "notes": "وصف تاريخي من IFC ورواية مؤسس الشركة."
+    },
+    {
+      "id": "ev02",
+      "json_path": "company.location",
+      "claim": "كان مقر Souq التاريخي في دبي.",
+      "metric_type": "geography",
+      "status": "verified",
+      "confidence": "high",
+      "as_of": "2015",
+      "source_ids": [
+        "src_ifc_disclosure_2015"
+      ],
+      "notes": "المقر التاريخي، لا يعني وجود علامة مستقلة في 2026."
+    },
+    {
+      "id": "ev03",
+      "json_path": "company.ownership_status",
+      "claim": "أتمت Amazon الاستحواذ على Souq Group Ltd. في 12 مايو 2017.",
+      "metric_type": "legal",
+      "status": "verified",
+      "confidence": "high",
+      "as_of": "2017-05-12",
+      "source_ids": [
+        "src_amazon_10k_2017"
+      ],
+      "notes": "إفصاح SEC نهائي."
+    },
+    {
+      "id": "ev04",
+      "json_path": "financials.acquisition.consideration",
+      "claim": "بلغ مقابل الاستحواذ نحو 583 مليون دولار صافي النقد المستحوذ عليه.",
+      "metric_type": "acquisition_consideration",
+      "status": "verified",
+      "confidence": "high",
+      "as_of": "2017-12-31",
+      "source_ids": [
+        "src_amazon_10k_2017"
+      ],
+      "notes": "ليس إيرادًا ولا تقييمًا حاليًا ولا GMV."
+    },
+    {
+      "id": "ev05",
+      "json_path": "financials.valuation",
+      "claim": "لا يوجد تقييم مستقل حالي لـSouq في 2026.",
+      "metric_type": "valuation",
+      "status": "unavailable",
+      "confidence": "high",
+      "as_of": "2026-08-03",
+      "source_ids": [
+        "src_amazon_10k_2025",
+        "src_amazon_q1_2026_10q"
+      ],
+      "notes": "Souq مدمجة في Amazon ولا تُفصح كقطاع أو شركة مستقلة."
+    },
+    {
+      "id": "ev06",
+      "json_path": "directory_snapshot.monthly_revenue",
+      "claim": "لا يوجد إيراد شهري مستقل معلن لـSouq.",
+      "metric_type": "revenue",
+      "status": "unavailable",
+      "confidence": "high",
+      "as_of": "2026-08-03",
+      "source_ids": [
+        "src_amazon_10k_2025",
+        "src_amazon_q1_2026_10q"
+      ],
+      "notes": "نتائج International عالمية ولا يجوز نسبها إلى Souq أو MENA."
+    },
+    {
+      "id": "ev07",
+      "json_path": "directory_snapshot.monthly_traffic",
+      "claim": "جذبت Souq أكثر من 45 مليون زيارة شهريًا وقت إعلان الاستحواذ في مارس 2017.",
+      "metric_type": "visits",
+      "status": "historical",
+      "confidence": "high",
+      "as_of": "2017-03-28",
+      "source_ids": [
+        "src_amazon_acquisition_2017"
+      ],
+      "notes": "زيارات وليست مستخدمين فريدين أو مشترين، وليست رقمًا حاليًا."
+    },
+    {
+      "id": "ev08",
+      "json_path": "directory_snapshot.users",
+      "claim": "ذكرت IFC أكثر من 4 ملايين عميل عبر أربع دول.",
+      "metric_type": "users",
+      "status": "historical",
+      "confidence": "medium",
+      "as_of": "2017-05",
+      "source_ids": [
+        "src_ifc_story_2017"
+      ],
+      "notes": "رقم عملاء تراكمي تاريخي؛ لا يساوي MAU."
+    },
+    {
+      "id": "ev09",
+      "json_path": "directory_snapshot.merchants",
+      "claim": "ذكرت IFC شبكة تضم 15 ألف تاجر بعد استثمارها.",
+      "metric_type": "merchants",
+      "status": "historical",
+      "confidence": "medium",
+      "as_of": "2017-05",
+      "source_ids": [
+        "src_ifc_story_2017"
+      ],
+      "notes": "لا يثبت عدد البائعين النشطين الحالي."
+    },
+    {
+      "id": "ev10",
+      "json_path": "directory_snapshot.catalog_scale",
+      "claim": "كان الكتالوج يضم أكثر من 8.4 مليون منتج عبر 31 فئة في مارس 2017.",
+      "metric_type": "catalog",
+      "status": "historical",
+      "confidence": "high",
+      "as_of": "2017-03-28",
+      "source_ids": [
+        "src_amazon_acquisition_2017"
+      ],
+      "notes": "حجم الكتالوج ليس مبيعات ولا مخزونًا مملوكًا بالكامل."
+    },
+    {
+      "id": "ev11",
+      "json_path": "directory_snapshot.transaction_volume",
+      "claim": "لا يوجد GMV أو حجم معاملات معلن موثوق لـSouq.",
+      "metric_type": "transaction_volume",
+      "status": "unavailable",
+      "confidence": "high",
+      "as_of": "2026-08-03",
+      "source_ids": [
+        "src_amazon_10k_2025",
+        "src_amazon_q1_2026_10q"
+      ],
+      "notes": "لا يُستنتج من الزيارات أو التمويل أو قيمة الاستحواذ."
+    },
+    {
+      "id": "ev12",
+      "json_path": "financials.funding_history[0]",
+      "claim": "ذكرت IFC تمويلًا قدره 27 مليون دولار في 2015 لتطوير اللوجستيات والمدفوعات والمنتجات.",
+      "metric_type": "funding",
+      "status": "historical",
+      "confidence": "high",
+      "as_of": "2015",
+      "source_ids": [
+        "src_ifc_story_2017"
+      ],
+      "notes": "سجل المشروع يعرض أيضًا مبالغ مقترحة ومعتمدة إرشادية مختلفة."
+    },
+    {
+      "id": "ev13",
+      "json_path": "financials.initial_investment",
+      "claim": "سجل IFC يعرض استثمارًا مقترحًا حتى 20 مليون دولار واعتماد مجلس الإدارة لمبلغ إرشادي 30 مليون دولار أسهم.",
+      "metric_type": "funding",
+      "status": "historical",
+      "confidence": "high",
+      "as_of": "2015",
+      "source_ids": [
+        "src_ifc_disclosure_2015"
+      ],
+      "notes": "عُرض التعارض ولا تُجمع الأرقام كتمويلات منفصلة."
+    },
+    {
+      "id": "ev14",
+      "json_path": "financials.funding_history[1]",
+      "claim": "جمعت Souq 275 مليون دولار في فبراير 2016.",
+      "metric_type": "funding",
+      "status": "verified",
+      "confidence": "high",
+      "as_of": "2016-02-29",
+      "source_ids": [
+        "src_reuters_funding_2016"
+      ],
+      "notes": "التمويل ليس إيرادًا ولا تقييمًا ولا GMV."
+    },
+    {
+      "id": "ev15",
+      "json_path": "market_data.rebrand_timeline[0]",
+      "claim": "تحولت Souq في الإمارات إلى Amazon.ae في 1 مايو 2019.",
+      "metric_type": "brand_status",
+      "status": "verified",
+      "confidence": "high",
+      "as_of": "2019-05-01",
+      "source_ids": [
+        "src_amazon_uae_2019"
+      ],
+      "notes": "شمل الانتقال البائعين والخبرة والحسابات المحلية."
+    },
+    {
+      "id": "ev16",
+      "json_path": "market_data.rebrand_timeline[1]",
+      "claim": "أُطلق Amazon.sa في 17 يونيو 2020 اعتمادًا على استثمارات Souq في السعودية.",
+      "metric_type": "brand_status",
+      "status": "verified",
+      "confidence": "medium",
+      "as_of": "2020-06-17",
+      "source_ids": [
+        "src_saudi_gazette_2020"
+      ],
+      "notes": "مصدر صحفي موثوق ينقل إعلان Amazon."
+    },
+    {
+      "id": "ev17",
+      "json_path": "market_data.rebrand_timeline[2]",
+      "claim": "أطلقت Amazon متجر Amazon.eg في 2021، وكان المتجر معروفًا سابقًا باسم Souq.com.",
+      "metric_type": "brand_status",
+      "status": "verified",
+      "confidence": "high",
+      "as_of": "2021",
+      "source_ids": [
+        "src_amazon_q3_2021"
+      ],
+      "notes": "المصدر الرسمي يثبت السنة والتحول."
+    },
+    {
+      "id": "ev18",
+      "json_path": "company.current_status_as_of_2026_08",
+      "claim": "لا تعمل Souq كعلامة تسوق مستقلة في الأسواق الأساسية، لكنها بقيت ضمن إرث Amazon التشغيلي.",
+      "metric_type": "brand_status",
+      "status": "corrected",
+      "confidence": "high",
+      "as_of": "2026-08-03",
+      "source_ids": [
+        "src_amazon_uae_2019",
+        "src_saudi_gazette_2020",
+        "src_amazon_q3_2021"
+      ],
+      "notes": "استنتاج مباشر من اكتمال إعادة تسمية الأسواق الأساسية."
+    },
+    {
+      "id": "ev19",
+      "json_path": "company.location",
+      "claim": "يظهر اسم Souq.com FZ LLC في شروط Amazon.ae الحالية.",
+      "metric_type": "legal",
+      "status": "verified",
+      "confidence": "high",
+      "as_of": "2025",
+      "source_ids": [
+        "src_amazon_uae_legal"
+      ],
+      "notes": "بقاء الاسم القانوني لا يعني بقاء العلامة الاستهلاكية."
+    },
+    {
+      "id": "ev20",
+      "json_path": "company.location",
+      "claim": "يظهر اسم Souq.com for E-Commerce LLC في بعض شروط Amazon.eg.",
+      "metric_type": "legal",
+      "status": "verified",
+      "confidence": "high",
+      "as_of": "2026-08-03",
+      "source_ids": [
+        "src_amazon_egypt_legal"
+      ],
+      "notes": "دليل على كيان قانوني موروث لا على منصة مستقلة."
+    },
+    {
+      "id": "ev21",
+      "json_path": "tools[4]",
+      "claim": "كان PayFort جزءًا من Souq Group وتأسس في 2013.",
+      "metric_type": "product",
+      "status": "verified",
+      "confidence": "high",
+      "as_of": "2013",
+      "source_ids": [
+        "src_amazon_jobs_payfort"
+      ],
+      "notes": "مصدر Amazon رسمي؛ لا يثبت وحده بنية ملكية تفصيلية بعد الاندماج."
+    },
+    {
+      "id": "ev22",
+      "json_path": "tools[4]",
+      "claim": "أعيدت تسمية PayFort إلى Amazon Payment Services في ديسمبر 2020.",
+      "metric_type": "brand_status",
+      "status": "verified",
+      "confidence": "high",
+      "as_of": "2020-12-14",
+      "source_ids": [
+        "src_aps_rebrand_2020"
+      ],
+      "notes": "استمر النشاط تحت علامة Amazon."
+    },
+    {
+      "id": "ev23",
+      "json_path": "tools[5]",
+      "claim": "استخدمت Souq AWS وأعلنت خطة لترحيل 700 خادم وأكثر من 50 تيرابايت في 2017.",
+      "metric_type": "technology",
+      "status": "company_reported",
+      "confidence": "high",
+      "as_of": "2017-09-25",
+      "source_ids": [
+        "src_aws_souq_2017"
+      ],
+      "notes": "إثبات تاريخي لـAWS؛ لا يثبت التقنيات الأخرى في الملف الأصلي."
+    },
+    {
+      "id": "ev24",
+      "json_path": "lessons[2]",
+      "claim": "كان الدفع عند الاستلام متاحًا، لكن نسبة 80% الواردة في الملف غير موثقة.",
+      "metric_type": "product",
+      "status": "corrected",
+      "confidence": "high",
+      "as_of": "2019-05-01",
+      "source_ids": [
+        "src_amazon_uae_2019"
+      ],
+      "notes": "المصدر يثبت توفر COD فقط، لا نسبة رفض البطاقات."
+    },
+    {
+      "id": "ev25",
+      "json_path": "tools[6]",
+      "claim": "انتقلت حسابات وبائعو Souq إلى Amazon.ae واستمرت بيانات الدخول والخدمات في مسار الدمج.",
+      "metric_type": "product",
+      "status": "verified",
+      "confidence": "high",
+      "as_of": "2019-05-01",
+      "source_ids": [
+        "src_amazon_uae_2019"
+      ],
+      "notes": "يدعم فكرة أن الأصل التشغيلي استمر رغم تغيير العلامة."
+    },
+    {
+      "id": "ev26",
+      "json_path": "financials.standalone_revenue",
+      "claim": "إفصاحات Amazon الحالية تعرض North America وInternational وAWS فقط، ولا تعرض Souq أو MENA كقطاع مالي مستقل.",
+      "metric_type": "revenue",
+      "status": "verified",
+      "confidence": "high",
+      "as_of": "2026-03-31",
+      "source_ids": [
+        "src_amazon_10k_2025",
+        "src_amazon_q1_2026_10q"
+      ],
+      "notes": "لا يجوز تخصيص جزء من International إلى Souq دون إفصاح."
+    }
+  ],
+  "sources": [
+    {
+      "id": "src_amazon_acquisition_2017",
+      "title": "Amazon to Acquire SOUQ.com",
+      "publisher": "Amazon",
+      "type": "official_press_release",
+      "url": "https://press.aboutamazon.com/2017/3/amazon-to-acquire-souq-com",
+      "published_or_updated": "2017-03-28",
+      "accessed": "2026-08-03",
+      "supports": [
+        "إعلان اتفاق الاستحواذ",
+        "8.4 مليون منتج",
+        "31 فئة",
+        "أكثر من 45 مليون زيارة شهريًا",
+        "العمليات المحلية في السعودية والإمارات ومصر"
+      ]
+    },
+    {
+      "id": "src_amazon_10k_2017",
+      "title": "Amazon 2017 Form 10-K",
+      "publisher": "U.S. Securities and Exchange Commission / Amazon",
+      "type": "sec_filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872418000005/amzn-20171231x10k.htm",
+      "published_or_updated": "2018-02-02",
+      "accessed": "2026-08-03",
+      "supports": [
+        "إتمام الاستحواذ في 12 مايو 2017",
+        "مقابل استحواذ يقارب 583 مليون دولار صافي النقد المستحوذ عليه"
+      ]
+    },
+    {
+      "id": "src_amazon_uae_2019",
+      "title": "Souq Becomes Amazon.ae in the UAE",
+      "publisher": "Amazon",
+      "type": "official_press_release",
+      "url": "https://press.aboutamazon.com/2019/5/souq-becomes-amazon-ae-in-the-uae",
+      "published_or_updated": "2019-05-01",
+      "accessed": "2026-08-03",
+      "supports": [
+        "تحويل Souq في الإمارات إلى Amazon.ae",
+        "استمرار حسابات وبائعي Souq",
+        "الدفع عند الاستلام",
+        "التجربة العربية والإنجليزية"
+      ]
+    },
+    {
+      "id": "src_saudi_gazette_2020",
+      "title": "Amazon launches Amazon.sa",
+      "publisher": "Saudi Gazette",
+      "type": "reputable_secondary",
+      "url": "https://saudigazette.com.sa/article/594360/BUSINESS/Amazon-launches-Amazonsa",
+      "published_or_updated": "2020-06-17",
+      "accessed": "2026-08-03",
+      "supports": [
+        "إطلاق Amazon.sa المبني على استثمارات Souq.com في السعودية",
+        "تاريخ التحول في السوق السعودي"
+      ]
+    },
+    {
+      "id": "src_amazon_q3_2021",
+      "title": "Amazon.com Announces Third Quarter 2021 Results",
+      "publisher": "Amazon Investor Relations",
+      "type": "official_results_release",
+      "url": "https://ir.aboutamazon.com/news-release/news-release-details/2021/Amazon.com-Announces-Third-Quarter-Results/default.aspx",
+      "published_or_updated": "2021-10-28",
+      "accessed": "2026-08-03",
+      "supports": [
+        "إطلاق Amazon.eg",
+        "وصف المتجر الجديد بأنه كان معروفًا سابقًا باسم Souq.com"
+      ]
+    },
+    {
+      "id": "src_amazon_10k_2025",
+      "title": "Amazon 2025 Form 10-K",
+      "publisher": "U.S. Securities and Exchange Commission / Amazon",
+      "type": "sec_filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+      "published_or_updated": "2026-02-06",
+      "accessed": "2026-08-03",
+      "supports": [
+        "التقارير الحالية تجمع الأعمال ضمن North America وInternational وAWS",
+        "عدم نشر إيراد Souq أو متاجر الشرق الأوسط منفردة",
+        "تعريف مصادر إيراد أمازون العامة"
+      ]
+    },
+    {
+      "id": "src_amazon_q1_2026_10q",
+      "title": "Amazon Q1 2026 Form 10-Q",
+      "publisher": "U.S. Securities and Exchange Commission / Amazon",
+      "type": "sec_filing",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000014/amzn-20260331.htm",
+      "published_or_updated": "2026-04-24",
+      "accessed": "2026-08-03",
+      "supports": [
+        "أحدث تقسيم مالي متاح حتى تاريخ البحث",
+        "عدم وجود قطاع أو إفصاح مستقل باسم Souq",
+        "إدراج المتاجر الدولية ضمن International"
+      ]
+    },
+    {
+      "id": "src_ifc_story_2017",
+      "title": "How Start-ups Can Push Middle East Economies into the 21st Century",
+      "publisher": "International Finance Corporation",
+      "type": "development_finance_primary",
+      "url": "https://www.ifc.org/en/stories/2010/start-ups-pushing-middle-east-economy-into-21st-century",
+      "published_or_updated": "2017-05",
+      "accessed": "2026-08-03",
+      "supports": [
+        "التأسيس كموقع مزادات صغير في 2005",
+        "تمويل بقيمة 27 مليون دولار في 2015",
+        "أكثر من 4 ملايين عميل",
+        "شبكة 15 ألف تاجر"
+      ]
+    },
+    {
+      "id": "src_ifc_disclosure_2015",
+      "title": "ESIP Souq Project — Project 36976",
+      "publisher": "International Finance Corporation",
+      "type": "official_investment_disclosure",
+      "url": "https://disclosures.ifc.org/project-detail/SII/36976/esip-souq-project",
+      "published_or_updated": "2021-06-12",
+      "accessed": "2026-08-03",
+      "supports": [
+        "مقر دبي والعمليات في مصر والسعودية والإمارات والكويت وقت المشروع",
+        "استثمار IFC المقترح حتى 20 مليون دولار",
+        "اعتماد مجلس الإدارة لمبلغ إرشادي 30 مليون دولار أسهم"
+      ]
+    },
+    {
+      "id": "src_reuters_funding_2016",
+      "title": "Mideast online retailer Souq.com raises $275 million from investors",
+      "publisher": "Reuters (republished by Investing.com)",
+      "type": "reputable_secondary_wire",
+      "url": "https://www.investing.com/news/technology-news/mideast-online-retailer-souq.com-raises-%24275-million-from-investors-387008",
+      "published_or_updated": "2016-02-29",
+      "accessed": "2026-08-03",
+      "supports": [
+        "جولة تمويل 275 مليون دولار",
+        "المستثمرون المشاركون",
+        "استخدام التمويل للنمو"
+      ]
+    },
+    {
+      "id": "src_hbr_founder_2017",
+      "title": "Souq.com’s CEO on Building an E-Commerce Powerhouse in the Middle East",
+      "publisher": "Harvard Business Review",
+      "type": "founder_authored_primary_narrative",
+      "url": "https://hbr.org/2017/09/souq-coms-ceo-on-building-an-e-commerce-powerhouse-in-the-middle-east",
+      "published_or_updated": "2017-09",
+      "accessed": "2026-08-03",
+      "supports": [
+        "التأسيس في 2005",
+        "التحول من المزادات إلى التجارة الإلكترونية",
+        "تحديات القوانين والجمارك واللوجستيات والمدفوعات محليًا"
+      ]
+    },
+    {
+      "id": "src_aws_souq_2017",
+      "title": "Amazon Web Services Announces the Opening of Data Centers in the Middle East",
+      "publisher": "Amazon Web Services / Amazon",
+      "type": "official_press_release",
+      "url": "https://press.aboutamazon.com/2017/9/amazon-web-services-announces-the-opening-of-data-centers-in-the-middle-east-by-early-2019",
+      "published_or_updated": "2017-09-25",
+      "accessed": "2026-08-03",
+      "supports": [
+        "استخدام AWS تاريخيًا",
+        "خطة ترحيل 700 خادم وأكثر من 50 تيرابايت إلى AWS في 2017"
+      ]
+    },
+    {
+      "id": "src_amazon_jobs_payfort",
+      "title": "Software Development Engineer — Amazon Payment Services",
+      "publisher": "Amazon Jobs",
+      "type": "official_company_page",
+      "url": "https://www.amazon.jobs/en/jobs/2969797/software-development-engineer-amazon-payment-services",
+      "published_or_updated": "غير محدد",
+      "accessed": "2026-08-03",
+      "supports": [
+        "PayFort جزء من Souq Group",
+        "تأسيس PayFort في 2013",
+        "نشاط معالجة المدفوعات الإقليمي"
+      ]
+    },
+    {
+      "id": "src_aps_rebrand_2020",
+      "title": "PAYFORT is now Amazon Payment Services",
+      "publisher": "Amazon Payment Services",
+      "type": "official_company_announcement",
+      "url": "https://paymentservices.amazon.com/blog/payfort-is-now-amazon-payment-services?language=ar-AE",
+      "published_or_updated": "2020-12-14",
+      "accessed": "2026-08-03",
+      "supports": [
+        "إعادة تسمية PayFort إلى Amazon Payment Services",
+        "استمرار خدمات الدفع تحت علامة أمازون"
+      ]
+    },
+    {
+      "id": "src_amazon_uae_legal",
+      "title": "Amazon.ae Associates Program Operating Agreement",
+      "publisher": "Amazon.ae",
+      "type": "current_legal_terms",
+      "url": "https://affiliate-program.amazon.ae/help/operating/agreement",
+      "published_or_updated": "2025",
+      "accessed": "2026-08-03",
+      "supports": [
+        "استمرار اسم Souq.com FZ LLC ككيان تعاقدي مرتبط بـAmazon.ae"
+      ]
+    },
+    {
+      "id": "src_amazon_egypt_legal",
+      "title": "Amazon.eg Offer Terms — Souq is now Amazon.eg",
+      "publisher": "Amazon.eg",
+      "type": "current_legal_terms",
+      "url": "https://www.amazon.eg/-/en/b?node=203795432031",
+      "published_or_updated": "غير محدد",
+      "accessed": "2026-08-03",
+      "supports": [
+        "استمرار اسم Souq.com for E-Commerce LLC في بعض الشروط القانونية على Amazon.eg"
+      ]
+    }
   ]
 }

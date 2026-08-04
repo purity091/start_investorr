@@ -2,54 +2,1393 @@
   "id": "mnt-halan",
   "slug": "mnt-halan",
   "name": "حالا (MNT-Halan)",
-  "headline": "اليونيكورن المصري الذي بنى تطبيقاً فائقاً للتمويل الأصغر للمهمشين بنكياً",
-  "category": "Fintech & Super App / التمويل الأصغر",
+  "headline": "من تطبيق حركة إلى مؤسسة مالية عابرة للأسواق: كيف جعلت MNT‑Halan الترخيص والبيانات والتمويل محركًا واحدًا للنمو",
+  "category": "FinTech & Non-Bank Financial Services / التكنولوجيا المالية والخدمات المالية غير المصرفية",
   "company": {
-    "location": "القاهرة، مصر",
-    "business_model": "إقراض وتمويل أصغر (Microfinance) بالإضافة لخدمات التجارة والمدفوعات"
+    "location": "القاهرة/الجيزة، مصر، مع عمليات مثبتة حتى أغسطس 2026 في تركيا عبر Tam Finans، وفي باكستان عبر Halan Microfinance Bank، وفي الإمارات عبر Halan Advance. تعرض المصادر تأسيس MNT‑Halan بصيغ مختلفة: الشركة والمستثمرون يستخدمون 2018 للشركة الحالية مع جذور تمويل أصغر تعود إلى 2010، بينما بدأت Halan كمنصة حركة وخدمات عند الطلب في 2017 قبل دمج القدرات التقنية والتمويلية. لذلك يُعامل 2018 كتاريخ تأسيس الكيان الحالي، لا كبداية كل نشاط سبقه.",
+    "business_model": "مجموعة خدمات مالية غير مصرفية وتقنية مالية متعددة الدول، تجمع الإقراض للأفراد والمشروعات متناهية الصغر والصغيرة، والتمويل الاستهلاكي وBNPL وتمويل المركبات والرواتب، والمحفظة والبطاقات والمدفوعات، والاستثمار والادخار الرقمي، والتجارة الإلكترونية. يتحقق الدخل أساسًا من عوائد ورسوم التمويل والخدمات المالية وهوامش أو رسوم التجارة والمدفوعات بحسب المنتج والدولة، بينما تُموَّل محفظة الإقراض بمزيج من حقوق الملكية والتسهيلات والتوريق. لا تنشر المجموعة معدل العائد الصافي أو تكلفة التمويل أو مساهمة كل نشاط في الإيراد."
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين",
-    "monthly_traffic": "يخدم أكثر من 5 ملايين عميل"
+    "monthly_revenue": "غير معلن حاليًا. لا تنشر MNT‑Halan قوائم مالية دورية عامة أو MRR أو ARR أو إيرادًا شهريًا حديثًا. نقلت TechCrunch عن الشركة أنها حققت أكثر من 300 مليون دولار إيرادًا خلال 2022، لكن الرقم تاريخي ومنسوب للشركة وغير مدقق علنًا، ولا يجوز قسمته آليًا على 12 أو اعتباره إيراد 2026. كذلك فإن أكثر من 100 مليون دولار مرور مدفوعات شهريًا و50 مليون دولار مبيعات شهرية المعروضين في الموقع أرقام حجم تشغيل قديمة نسبيًا وليسا صافي إيراد المجموعة.",
+    "monthly_traffic": "غير معلن بوصفه زيارات موقع أو تطبيق. أحدث إفصاح منسوب للشركة في يونيو 2026 يذكر أكثر من 8 ملايين عميل عالميًا، و2.3 مليون عميل نشط ربع سنوي، و10 ملايين تنزيل للتطبيق. تعرض صفحات أخرى 2.4 مليون أو 2.5 مليون نشط ربع سنوي، ما يشير إلى اختلاف تاريخ الالتقاط أو التعريف؛ لذلك لا تُجمع الأرقام ولا تُحوّل إلى MAU أو زيارات شهرية. العملاء التراكميون والتنزيلات والبطاقات والقروض ليست حركة مرور."
   },
   "overview": {
     "problem": {
-      "text": "ملايين المصريين (الباعة الجائلون، سائقو التوك توك، الحرفيون) لا يملكون حسابات بنكية (Unbanked) ولا يستطيعون الحصول على قروض أو تمويل لنمو أعمالهم.",
-      "impact": "اللجوء إلى القروض غير الرسمية بفوائد خيالية واستحالة تحقيق الشمول المالي."
+      "text": "تستهدف MNT‑Halan فجوة الوصول إلى الائتمان والمدفوعات والادخار للأفراد والمشروعات الصغيرة الذين لا يملكون تاريخًا ائتمانيًا مصرفيًا كافيًا أو يصعب عليهم الوصول إلى الفروع والضمانات التقليدية. لكن وصف جميع العملاء بأنهم «غير متعاملين مع البنوك» غير دقيق؛ المجموعة تخدم أيضًا فئات underbanked وعملاء رواتب وتجارًا وشركات صغيرة في أسواق متعددة. المشكلة التشغيلية هي ارتفاع تكلفة التحقق والتوزيع والتحصيل وإدارة المخاطر عند تقديم قروض صغيرة بكثافة عالية.",
+      "impact": "عندما يعتمد تقييم المخاطر فقط على ملفات مصرفية تقليدية، قد يُستبعد أشخاص ومشروعات قابلة للسداد لغياب البيانات، بينما يؤدي الاعتماد على النقد والإجراءات اليدوية إلى رفع تكلفة الخدمة وتأخير الصرف والتحصيل. لا تثبت المصادر أن البديل دائمًا «قروض غير رسمية بفوائد خيالية»، لذلك أزيل هذا التعميم واستُبدل بأثر قابل للدفاع عنه: نقص الخيارات الرسمية وارتفاع تكلفة الوصول والوقت."
     },
     "solution": {
-      "text": "بدأ كتطبيق لنقل الركاب بالتوك توك والدراجات النارية، واستخدم بيانات الرحلات لبناء (تصنيف ائتماني) للمستخدمين، ليتوسع في منح القروض الصغيرة وتمويل المشتريات."
+      "text": "بنت المجموعة منظومة تجمع حضورًا ميدانيًا وتراخيص تمويلية مع تطبيق Halan ومنصة Neuron المصرفية الأساسية، ثم تستخدم بيانات المعاملات والسلوك داخل المدفوعات والتجارة والاستثمار والسداد لبناء تقييم ائتماني وتقديم منتجات متدرجة. أوضح المدير التقني في 2025 أن نماذج الذكاء الاصطناعي تستخدم بيانات المشتريات والسداد والتفاعل داخل التطبيق، وأن أكثر من 50% من قرارات القروض أصبحت آلية. لا يوجد مصدر أولي يثبت أن بيانات رحلات التوك توك كانت المحرك الأساسي للتصنيف الائتماني؛ كما أن نشاط نقل الركاب أُوقف قبل 2023، لذلك حُذفت رواية «تحويل بيانات الرحلات مباشرة إلى قروض»."
     }
   },
   "market_data": {
-    "target_audience": "أصحاب الدخل المحدود والمشاريع متناهية الصغر في مصر والأسواق الناشئة.",
-    "market_size": "سوق الشمول المالي يضم عشرات الملايين من الأفراد غير المتعاملين مع البنوك.",
-    "growth_rate": "جمعت تمويلات تتجاوز 400 مليون دولار وأصبحت أول يونيكورن مصري تقنياً."
+    "target_audience": "الأفراد محدودو أو غير المكتملين مصرفيًا، أصحاب المشروعات متناهية الصغر والصغيرة، التجار، المقترضون لشراء السلع أو المركبات، موظفو الشركات المحتاجون إلى سلفة راتب، وعملاء الادخار والاستثمار الرقمي. يختلف العميل والمنتج حسب السوق: تمويل أصغر ومصرف متخصص في باكستان، تمويل تجاري وتخصيم في تركيا، وسلفة راتب رقمية في الإمارات.",
+    "market_size": "لا تنشر MNT‑Halan رقم TAM موحدًا قابلًا للتحقق لجميع أسواقها ومنتجاتها، ولا يمكن اشتقاق حصة سوقية من عدد العملاء أو القروض المصروفة. المؤشرات المتاحة تخص حجم المجموعة لا حجم السوق: أكثر من 8 ملايين عميل عالميًا، ومحفظة قروض إجمالية تتجاوز 1.7 مليار دولار وفق صفحة المنتدى الاقتصادي العالمي، وانتشار في أربع دول. أرقام السكان غير المخدومين أو الناتج المحلي لكل دولة لا تساوي سوقًا متاحًا فعليًا للشركة دون افتراضات عن الأهلية والطلب والتنظيم.",
+    "growth_rate": "لا يوجد معدل نمو مالي موحد ومدقق منشور. يمكن تتبع توسع تشغيلي غير متجانس: نحو 4 ملايين عميل وأكثر من 1.7 مليار دولار قروض مصروفة تراكميًا في 2021؛ أكثر من 7 ملايين عميل و4.5 مليارات دولار قروض مصروفة وفق تغطية يوليو 2024؛ ثم أكثر من 8 ملايين عميل و15.5 مليار دولار قروض مصروفة تراكميًا في يونيو 2026. يشمل النمو استحواذات ودولًا ومنتجات جديدة، لذلك لا يمثل CAGR عضويًا ولا إيرادًا. التوسع إلى باكستان وتركيا والإمارات تحقق بين 2024 و2025، بينما الخطط لدول أخرى لا تُعامل كعمليات قائمة."
   },
   "financials": {
-    "initial_investment": "بدعم من مستثمرين محليين وعالميين واندماج ذكي مع شركة (MNT) للتمويل.",
-    "valuation": "$1B+ (يونيكورن)",
+    "initial_investment": "تطورت قاعدة رأس المال عبر أنواع تمويل مختلفة يجب فصلها: جولة حقوق ملكية بنحو 120 مليون دولار في سبتمبر 2021؛ ثم حزمة تصل إلى 400 مليون دولار في 2023 تضمنت 260 مليون دولار حقوق ملكية و140 مليون دولار من إصدارَي توريق، ومنها نحو 200 مليون دولار من Chimera مقابل قرابة 20%، وهو ما رفع التقييم إلى نحو مليار دولار. في يوليو 2024 جمعت الشركة 157.5 مليون دولار، منها 40 مليونًا من IFC، واستخدمت جانبًا كبيرًا منها في استحواذ Tam Finans. وفي أكتوبر 2025 نفذت Halan Consumer Finance إصدار توريق بقيمة 3.4 مليارات جنيه ضمن برنامج 8 مليارات. أما جولة يونيو 2026 بقيادة الأهلي كابيتال فمبلغها ونسبة الحصة غير معلنين، والإغلاق الثاني كان متوقعًا عند الإعلان. التوريق دين ممول بمحافظ قروض، وليس استثمار أسهم أو إيرادًا.",
+    "valuation": "1.4 مليار دولار وفق الإغلاق الأول لجولة استثمارية قادتها الأهلي كابيتال في يونيو 2026، وهو أحدث تقييم معلن عُثر عليه حتى 3 أغسطس 2026. لم تُعلن قيمة الاستثمار أو نسبة الحصة أو ما إذا كان الرقم pre-money أو post-money في النص المنشور، لذلك لا يمكن حساب الملكية الجديدة أو إجمالي النقد الداخل. تاريخيًا تجاوز التقييم مليار دولار في 2023 بعد استثمار Chimera بأكثر من 200 مليون دولار مقابل أكثر من 20% ضمن حزمة أكبر شملت دينًا؛ لا يجوز استخدام كامل 400 مليون دولار كحقوق ملكية.",
     "revenue_streams": [
-      "عائدات من القروض متناهية الصغر",
-      "رسوم خدمات الدفع والمحافظ الإلكترونية",
-      "هوامش ربح من التجارة الإلكترونية الاستهلاكية عبر التطبيق"
+      "عوائد ورسوم التمويل الأصغر وتمويل المشروعات الصغيرة والمتوسطة؛ لا تنشر المجموعة متوسط العائد أو صافي هامش الفائدة أو تكلفة المخاطر",
+      "عوائد التمويل الاستهلاكي وBNPL وتمويل الأجهزة والمركبات وخطط التقسيط؛ قيمة القروض المصروفة ليست إيرادًا",
+      "رسوم أو عوائد سلف الرواتب ومنتج Halan Advance في الإمارات وفق العقود واللوائح المحلية",
+      "دخل التخصيم والتمويل التجاري عبر Tam Finans في تركيا؛ محفظة القروض ليست إيرادًا سنويًا",
+      "دخل مصرفي وتمويلي عبر Halan Microfinance Bank في باكستان؛ الودائع أو المحفظة أو رأس المال المستثمر لا تساوي الإيراد",
+      "رسوم المحفظة والتحويلات ودفع الفواتير والسحب والإيداع وخدمات البطاقات وفق جداول الرسوم، من دون إفصاح عن صافي مساهمتها",
+      "رسوم أو عوائد قبول المدفوعات وتحصيل أقساط القروض؛ معدل مرور المدفوعات الشهري حجم معالجة وليس دخلًا محاسبيًا",
+      "هوامش أو عمولات التجارة الإلكترونية وبيع الأجهزة والسلع سريعة الدوران والتوصيل؛ إجمالي المبيعات لا يساوي الإيراد الصافي أو الربح",
+      "رسوم أو عمولات توزيع منتجات الادخار والاستثمار والذهب وصناديق سوق المال وشهادات الاستثمار، مع اختلاف الجهة القانونية للمنتج",
+      "دخل تقني أو تشغيلي محتمل من منصة Neuron واستخدامها داخل شركات المجموعة؛ لا يوجد سعر عام يثبت بيعها كـSaaS مستقل على نطاق مادي",
+      "إيراد 2022 المنقول بأكثر من 300 مليون دولار تاريخي وغير مدقق علنًا، ولا يثبت إيراد 2026 أو الإيراد الشهري الحالي",
+      "أكثر من 15.5 مليار دولار قروض مصروفة، ومحفظة 1.7 مليار دولار، و10 ملايين تنزيل، و8 ملايين عميل، والتوريق والتمويل الاستثماري ليست إيرادات"
     ]
   },
   "lessons": [
     {
-      "title": "حصان طروادة (Trojan Horse) التوك توك",
-      "description": "استخدمت Halan نقل الركاب بالتوك توك كوسيلة لاكتساب ملايين المستخدمين بأسعار زهيدة (Acquisition)، ثم قامت ببيع الخدمات المالية الأعلى ربحية لهؤلاء المستخدمين."
+      "title": "الشمول المالي يحتاج مؤسسة لا واجهة فقط",
+      "description": "التطبيق خفّض الاحتكاك، لكن القدرة على الإقراض بكثافة جاءت من الجمع بين التراخيص والفروع والتحصيل ورأس المال وإدارة المخاطر ومنصة Neuron. في الخدمات المالية المنظمة، تجربة المستخدم لا تعوض غياب البنية القانونية والتمويلية."
     },
     {
-      "title": "الاندماج الاستراتيجي (M&A)",
-      "description": "اندماج تطبيق (حالا) التقني مع شركة (MNT) التي تملك رخص وتاريخ التمويل الأصغر في مصر كان ضربة معلم، جمعت بين الابتكار التقني والقدرة المؤسسية التمويلية."
+      "title": "الاندماج قد يختصر سنوات بناء القدرة",
+      "description": "الجمع بين Halan التقنية وشبكة وخبرة MNT التمويلية صنع كيانًا يملك التوزيع والمنتج والرخص. الدرس ليس أن كل اندماج ناجح، بل أن التكامل بين أصول متباينة قد يكون أسرع من بناء كل طبقة من الصفر."
+    },
+    {
+      "title": "لا تحوّل قصة البداية إلى تفسير دائم",
+      "description": "نشاط الحركة ساعد العلامة في الوصول المبكر، لكنه أُوقف لاحقًا ولم يعد أساس المجموعة. الشركات القوية تستطيع التخلص من قناة اكتساب تاريخية عندما تصبح أقل جاذبية بدل الدفاع عنها لأنها جزء من قصة التأسيس."
+    },
+    {
+      "title": "البيانات المفيدة هي بيانات السلوك المالي المتكرر",
+      "description": "التقييم الائتماني الحالي يستفيد من الشراء والسداد والتفاعل داخل المنظومة. القيمة لا تأتي من جمع أكبر قدر من البيانات، بل من إشارات مرتبطة بالقدرة والاستعداد للسداد، مع رقابة على الإنصاف والخصوصية."
+    },
+    {
+      "title": "حقوق الملكية تموّل الشركة والتوريق يمول المحفظة",
+      "description": "حزمة 2023 أوضحت أن نمو المقرض لا يعتمد على رأس المال الجريء وحده. الأسهم تمول البنية والتوسع وتتحمل المخاطر، بينما يحول التوريق الذمم القائمة إلى سيولة جديدة. خلط النوعين يضخم التمويل ويشوّه فهم التخفيف والالتزام."
+    },
+    {
+      "title": "الاستحواذ شراء للترخيص والتوزيع والذاكرة المحلية",
+      "description": "الاستحواذ على بنك في باكستان وشركة تمويل في تركيا منح المجموعة عملاء وفروعًا ورخصًا وفرقًا تعرف السوق. في التمويل، شراء منصة مرخصة قد يقلل زمن الدخول أكثر من تصدير التطبيق ثم انتظار الموافقات."
+    },
+    {
+      "title": "المنظومة الواسعة يجب أن تعزز قرار الائتمان",
+      "description": "المدفوعات والتجارة والاستثمار والبطاقات ليست مجرد قائمة ميزات؛ يمكن أن تولد إشارات تقلل عدم اليقين وتسمح بمنتج ائتماني أفضل. إذا لم تتبادل المنتجات البيانات والقيمة، تتحول الـSuper App إلى تعقيد مكلف."
+    },
+    {
+      "title": "عرّف العميل قبل إعلان النمو",
+      "description": "العملاء المخدومون تاريخيًا، والعملاء الماليون، والمقترضون، والنشطون ربع سنويًا، وتنزيلات التطبيق، والبطاقات المصدرة مقاييس مختلفة. المقارنة الصحيحة تثبت الفترة والتعريف بدل وضعها في سلسلة نمو واحدة."
+    },
+    {
+      "title": "النمو عبر الدول يغيّر جودة الرقم",
+      "description": "القفزة في القروض والعملاء بعد 2024 تجمع مصر مع استحواذات تركيا وباكستان وإطلاق الإمارات. لذلك يجب فصل النمو العضوي عن أثر الاستحواذ والعملات واختلاف مدد القروض قبل الحكم على الكفاءة."
+    },
+    {
+      "title": "التقييم معلومة صفقة لا نتيجة قسمة",
+      "description": "التقييم المعلن 1.4 مليار دولار صالح لأنه مرتبط بجولة محددة، لكن غياب مبلغ الجولة والحصة يمنع تحليل التخفيف. ولا يمكن استنتاج التقييم من القروض المصروفة أو المحفظة أو الإيراد التاريخي دون شروط الصفقة."
     }
   ],
   "tools": [
-    "Go",
-    "Java",
-    "Flutter",
-    "PostgreSQL",
-    "AWS"
-  ]
+    "تطبيق Halan للخدمات المالية والتجارة والاستثمار",
+    "Neuron: منصة مصرفية أساسية مملوكة للمجموعة لإدارة الإقراض والمعالجة والعمليات الرقمية",
+    "نماذج تقييم ائتماني مدعومة بالذكاء الاصطناعي والبيانات السلوكية والمعاملات",
+    "تمويل متناهي الصغر وتمويل مشروعات صغيرة ومتوسطة وتمويل نانو",
+    "تمويل استهلاكي وBNPL وتمويل أجهزة ومركبات",
+    "Halan Card والبطاقات مسبقة الدفع والمحفظة الإلكترونية",
+    "تحويلات ودفع فواتير وإيداع وسحب وخدمات تحصيل وصرف القروض",
+    "منتجات الذهب وصناديق سوق المال والاشتراك والاسترداد في شهادات الاستثمار",
+    "منصة تجارة إلكترونية للأجهزة والإلكترونيات والسلع سريعة الدوران",
+    "شبكة حضور ميداني وفروع ووكلاء لدعم الصرف والتحصيل وخدمة العملاء",
+    "Tam Finans للتمويل التجاري والتخصيم في تركيا",
+    "Halan Microfinance Bank بترخيص وطني في باكستان",
+    "Halan Advance لتمويل الرواتب في الإمارات",
+    "التوريق كأداة لإعادة تمويل محافظ القروض عبر أسواق الدين المحلية",
+    "لم تثبت المصادر الأولية الحالية استخدام Go أو Java أو Flutter أو PostgreSQL أو AWS كحزمة داخلية معتمدة؛ لذلك أزيلت هذه الأسماء من قائمة الأدوات المؤكدة"
+  ],
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Al Ahly Capital leads strategic investment in MNT-Halan",
+      "publisher": "MNT-Halan / Al Ahly Capital press release republished by Zawya via TradingView",
+      "source_type": "company_and_investor_press_release_2026",
+      "url": "https://www.tradingview.com/news/reuters.com%2C2026-06-08%3Anewsml_Zaw85pDRK%3A0-zawya-al-ahly-capital-leads-strategic-investment-in-mnt-halan/",
+      "supports": [
+        "تقييم 1.4 مليار دولار في يونيو 2026 مع عدم إعلان مبلغ الجولة أو الحصة",
+        "أكثر من 8 ملايين عميل عالميًا و2.3 مليون عميل نشط ربع سنوي و10 ملايين تنزيل",
+        "أكثر من 15.5 مليار دولار قروض مصروفة تراكميًا",
+        "المنتجات والتراخيص الرئيسية"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "MNT-Halan reaches $1.4 billion valuation after investment round led by Al Ahly Capital",
+      "publisher": "Wamda",
+      "source_type": "company_press_release_republication_2026",
+      "url": "https://www.wamda.com/2026/06/mnt-halan-reaches-1-4-billion-valuation-investment-round-led-al-ahly-capital",
+      "supports": [
+        "الإغلاق الأول لجولة بقيادة الأهلي كابيتال",
+        "تقييم 1.4 مليار دولار وخطة إغلاق ثانٍ"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "MNT-Halan raises circa US$160 million from international investors",
+      "publisher": "MNT-Halan",
+      "source_type": "official_company_funding_announcement_2024",
+      "url": "https://mnt-halan.com/2024/08/08/mnt-halan-raises-circa-us-160-million-from-international-investors/",
+      "supports": [
+        "جولة 157.5 مليون دولار في يوليو 2024",
+        "مساهمة IFC بقيمة 40 مليون دولار",
+        "أكثر من 7 ملايين عميل في 2024"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "IFC Project 46427 — MNT Group",
+      "publisher": "International Finance Corporation",
+      "source_type": "official_development_finance_investment_disclosure",
+      "url": "https://disclosures.ifc.org/project-detail/SII/46427/mnt-group",
+      "supports": [
+        "استثمار IFC حتى 40 مليون دولار",
+        "وصف الأعمال والمساهمين الرئيسيين"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Egyptian fintech MNT-Halan attracts circa US$120 million from global investors",
+      "publisher": "Apis Partners",
+      "source_type": "investor_primary_funding_announcement_2021",
+      "url": "https://apis.pe/egyptian-fintech-mnt-halan-attracts-circa-us120-million-from-global-investors/",
+      "supports": [
+        "جولة 120 مليون دولار في سبتمبر 2021",
+        "4 ملايين عميل وقرابة مليون مستخدم نشط شهريًا في 2021",
+        "3.1 ملايين عميل مالي و1.8 مليون مقترض",
+        "أكثر من 1.7 مليار دولار قروض مصروفة ومرور شهري يفوق 100 مليون دولار"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Egyptian financial services provider MNT-Halan valued at $1B in $400M funding",
+      "publisher": "TechCrunch",
+      "source_type": "founder_interview_and_financing_report_2023",
+      "url": "https://techcrunch.com/2023/01/31/egyptian-financial-services-provider-mnt-halan-gets-1b-valuation-after-securing-400m/",
+      "supports": [
+        "هيكل 2023: 260 مليون دولار حقوق ملكية و140 مليون دولار توريق",
+        "Chimera نحو 200 مليون دولار مقابل 20% تقريبًا",
+        "تقييم يقارب مليار دولار",
+        "ادعاء إيراد 2022 بأكثر من 300 مليون دولار",
+        "إيقاف نشاط نقل الركاب"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "MNT-Halan attracts $400 million in largest funding in Egypt and the Middle East",
+      "publisher": "Business Wire / MNT-Halan",
+      "source_type": "company_press_release_financing_2023",
+      "url": "https://www.businesswire.com/news/home/20230131005989/en/MNT-Halan-Attracts-%24400-Million-in-Largest-Funding-in-Egypt-and-the-Middle-East-in-the-Past-12-Months",
+      "supports": [
+        "أكثر من 200 مليون دولار من Chimera مقابل أكثر من 20%",
+        "التقييم بعد الصفقة يتجاوز مليار دولار",
+        "التوريق تمويل لمحفظة القروض"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "MNT-Halan expands into Turkey with the 100% acquisition of Tam Finans",
+      "publisher": "MNT-Halan",
+      "source_type": "official_company_acquisition_announcement_2024",
+      "url": "https://mnt-halan.com/2024/08/08/mnt-halan-expands-into-turkey/",
+      "supports": [
+        "الاستحواذ على 100% من Tam Finans",
+        "محفظة تتجاوز 300 مليون دولار",
+        "عدم إعلان شروط الاستحواذ"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "MNT-Halan says Turkish acquisition to help expand consumer credit and factoring",
+      "publisher": "Reuters",
+      "source_type": "founder_interview_and_acquisition_details_2024",
+      "url": "https://www.reuters.com/business/finance/egypts-mnt-halan-says-turkish-acquisition-help-expand-consumer-credit-factoring-2024-07-31/",
+      "supports": [
+        "استخدام معظم جولة 157.5 مليون دولار في الاستحواذ",
+        "منح Actera حصة بين 5% و10%",
+        "محفظة MNT-Halan نحو 600 مليون دولار وTam نحو 300 مليون دولار"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "CCP authorizes acquisition of Pakistani Microfinance Bank by Dutch company",
+      "publisher": "Competition Commission of Pakistan",
+      "source_type": "official_competition_authority_acquisition_approval_2024",
+      "url": "https://beta.cc.gov.pk/home/viewpressreleases/452",
+      "supports": [
+        "الموافقة على استحواذ 100% من Advans Pakistan",
+        "وجود Halan Wallet وHalan Finance في باكستان"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "MNT-Halan acquires 100% of Advans Pakistan",
+      "publisher": "Halan Microfinance Bank Pakistan",
+      "source_type": "official_local_company_acquisition_announcement_2024",
+      "url": "https://halan.com.pk/mnt-halan-acquires-100-of-advans-pakistan-from-leading-international-microfinance-group/",
+      "supports": [
+        "أكثر من 62 ألف عميل و19 فرعًا عند الاستحواذ",
+        "الاستحواذ الكامل على البنك"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "SBP grants nationwide license to Halan Microfinance Bank",
+      "publisher": "Business Recorder citing State Bank of Pakistan",
+      "source_type": "regulatory_license_report_2025",
+      "url": "https://www.brecorder.com/news/40366433/sbp-grants-nationwide-license-to-halan-microfinance-bank",
+      "supports": [
+        "ترخيص وطني من 3 يونيو 2025",
+        "إعادة تسمية البنك",
+        "التزام استثماري 10 ملايين دولار في باكستان خلال 2025"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "MNT-Halan debuts in the UAE market",
+      "publisher": "MNT-Halan",
+      "source_type": "official_company_market_launch_2024",
+      "url": "https://mnt-halan.com/2024/12/11/mnt-halan-debuts-in-the-uae-market/",
+      "supports": [
+        "إطلاق Halan Advance",
+        "أكثر من 40 ألف عميل عند إعلان ديسمبر 2024",
+        "هدف 250 ألف عميل بنهاية 2025"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "MNT-Halan organization profile",
+      "publisher": "World Economic Forum",
+      "source_type": "current_organization_profile_with_company_metrics",
+      "url": "https://www.weforum.org/organizations/mnt-halan/",
+      "supports": [
+        "أكثر من 15 مليار دولار قروض مصروفة",
+        "أكثر من 2.5 مليون نشط ربع سنوي ومحفظة تتجاوز 1.7 مليار دولار",
+        "أكثر من مليون بطاقة Halan"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "How responsibly deploying AI credit scoring models can progress financial inclusion",
+      "publisher": "World Economic Forum — authored by MNT-Halan CTO",
+      "source_type": "company_executive_primary_technical_explanation_2025",
+      "url": "https://www.weforum.org/stories/financial-and-monetary-systems/how-responsibly-deploying-ai-credit-scoring-models-can-progress-financial-inclusion/",
+      "supports": [
+        "بيانات سلوكية ومعاملات للتقييم الائتماني",
+        "أتمتة أكثر من 50% من قرارات القروض",
+        "قبول 60% لفئات غير قابلة للتقييم سابقًا"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "MNT-Halan — official company homepage",
+      "publisher": "MNT-Halan",
+      "source_type": "official_company_product_and_legacy_metrics_page",
+      "url": "https://mnt-halan.com/",
+      "supports": [
+        "منتجات الإقراض والمدفوعات والتجارة",
+        "أرقام تاريخية: أكثر من 5 ملايين عميل و2.5 مليار دولار قروض",
+        "100 مليون دولار مرور مدفوعات و50 مليون دولار مبيعات شهرية كأحجام تشغيلية"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "MNT-Halan ESG and Neuron",
+      "publisher": "MNT-Halan",
+      "source_type": "official_company_technology_and_governance_page",
+      "url": "https://mnt-halan.com/esg/",
+      "supports": [
+        "إطلاق Neuron في 2021",
+        "رقمنة إجراءات القروض",
+        "الأمن السيبراني والخصوصية بحسب الشركة"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "MNT-Halan portfolio profile",
+      "publisher": "Apis Partners",
+      "source_type": "current_investor_portfolio_profile",
+      "url": "https://www.apis.pe/portfolio/our-portfolio/mnt-halan/",
+      "supports": [
+        "أكثر من 2.4 مليون نشط ربع سنوي",
+        "العمل في مصر وتركيا والإمارات وباكستان",
+        "استثمار 2021 وخروج جزئي 2023"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "CIB and CI Capital close seventh securitization for Halan Consumer Finance",
+      "publisher": "Commercial International Bank Egypt",
+      "source_type": "official_bank_debt_capital_markets_announcement_2025",
+      "url": "https://www.cibeg.com/en/newsroom/news/10-8-2025-cib-x-ci-capital",
+      "supports": [
+        "توريق 3.4 مليارات جنيه في أكتوبر 2025",
+        "الإصدار السابع ضمن برنامج 8 مليارات جنيه"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "MNT-Halan closes circa $150 million securitized bond issuance",
+      "publisher": "Business Wire / MNT-Halan",
+      "source_type": "company_debt_financing_announcement_2022",
+      "url": "https://www.businesswire.com/news/home/20220627005175/en/MNT-Halan-Closes-US-c.%24150-Million-Securitized-Bond-Issuance-as-Part-of-a-US-%24600-Million-Program",
+      "supports": [
+        "توريق نحو 150 مليون دولار",
+        "137 ألف عقد",
+        "برنامج توريق 600 مليون دولار",
+        "Neuron"
+      ]
+    },
+    {
+      "id": "SRC-21",
+      "title": "MNT-Halan launches BNPL coupled with consumer finance and delivery",
+      "publisher": "MNT-Halan",
+      "source_type": "official_company_product_launch_2022",
+      "url": "https://mnt-halan.com/2022/02/01/mnt-halans-launch-of-buy-now-pay-later-coupled-with-consumer-finance-and-delivery/",
+      "supports": [
+        "إطلاق BNPL والتمويل والتوصيل داخل تطبيق واحد"
+      ]
+    },
+    {
+      "id": "SRC-22",
+      "title": "MNT-Halan investor profile and company roots",
+      "publisher": "Apis Partners",
+      "source_type": "investor_company_profile",
+      "url": "https://www.apis.pe/news/egyptian-fintech-mnt-halan-attracts-circa-us-120-million-from-global-investors/",
+      "supports": [
+        "تأسيس 2018 مع جذور منذ 2010",
+        "المقر في القاهرة",
+        "التراخيص المصرية الأساسية"
+      ]
+    }
+  ],
+  "verification": {
+    "status": "verified_from_company_regulators_investors_banks_and_primary_interviews_with_strict_financial_metric_separation",
+    "verified_on": "2026-08-03",
+    "research_cutoff": "2026-08-03",
+    "source_policy": "أُعطيت الأولوية لبيانات MNT‑Halan وإفصاحات IFC وهيئة المنافسة الباكستانية والبنوك المرتبة للتوريق والمستثمرين، ثم Reuters وTechCrunch عند نقل مقابلات أو تفاصيل صفقة. لم تُستخدم قواعد بيانات الشركات لتقدير الإيراد أو الزيارات. لا توجد تقارير SEC دورية لأن MNT‑Halan شركة خاصة غير مدرجة، ولم يُعثر على قوائم مالية عامة مدققة للمجموعة.",
+    "important_notes": [
+      "حُذف تقدير «عشرات الملايين» من الإيراد الشهري لعدم وجود MRR أو ARR أو إيراد شهري حديث",
+      "أكثر من 300 مليون دولار إيرادًا في 2022 رقم تاريخي منسوب للشركة وغير مدقق علنًا",
+      "100 مليون دولار مرور مدفوعات و50 مليون دولار مبيعات شهرية أحجام تشغيل وليست صافي إيراد",
+      "فُصلت القروض المصروفة تراكميًا عن محفظة القروض القائمة وعن الإيراد",
+      "أكثر من 15.5 مليار دولار قروض مصروفة لا تعني إيرادًا أو أصولًا بالقيمة نفسها",
+      "محفظة القروض التي تتجاوز 1.7 مليار دولار أصل ائتماني قائم وليست إيرادًا",
+      "أكثر من 8 ملايين عميل رقم تراكمي عالمي وليس عملاء مدفوعين أو MAU",
+      "2.3 مليون نشط ربع سنوي أحدث رقم منسوب للشركة؛ تعرض مصادر أخرى 2.4 و2.5 مليون",
+      "10 ملايين تنزيل لا تساوي مستخدمين نشطين أو مقترضين",
+      "التقييم الحالي 1.4 مليار دولار، لكن مبلغ الجولة والحصة وpre/post-money غير معلنة",
+      "حزمة 400 مليون دولار في 2023 تضمنت حقوق ملكية وتوريقًا وليست كلها أسهمًا",
+      "جولة 157.5 مليون دولار في 2024 منفصلة عن قيمة استحواذ Tam Finans غير المعلنة",
+      "إصدارات التوريق تمول محافظ القروض ولا تمثل إيرادًا أو تقييمًا",
+      "هدف 250 ألف عميل في الإمارات كان هدفًا ولم يُعثر على تأكيد أولي لتحقيقه",
+      "أزيل ادعاء أن بيانات رحلات التوك توك كانت أساس التصنيف الائتماني",
+      "نشاط نقل الركاب أُوقف قبل 2023 ولا يوصف كنشاط إيرادي حالي",
+      "التوسع المثبت يشمل مصر وتركيا وباكستان والإمارات فقط",
+      "أزيلت Go وJava وFlutter وPostgreSQL وAWS لعدم وجود توثيق أولي حديث",
+      "مقاييس الشركة والمستثمرين غير مدققة علنًا وقد تختلف تعريفاتها بين الصفحات",
+      "تقارير احتمال الطرح في 2026 لم تتحول إلى قرار نهائي معلن"
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_on": "2026-08-03",
+      "validator": "Python json module + jsonschema Draft 2020-12 + custom Professional V2 integrity checks",
+      "check_count": 20,
+      "checks": [
+        "اجتياز JSON Schema Draft 2020-12",
+        "الحفاظ على مفاتيح البنية الأصلية",
+        "تطابق id وslug",
+        "عدم تكرار source_id",
+        "سلامة روابط HTTPS",
+        "عدم وجود مصادر مفقودة",
+        "تطابق source_count",
+        "تطابق field_value",
+        "عدم وجود NaN أو Infinity",
+        "وجود محتوى عربي جوهري",
+        "وسم الإيراد الشهري بأنه غير معلن",
+        "فصل القروض المصروفة عن الإيراد",
+        "فصل أحجام المدفوعات والمبيعات",
+        "فصل النشاط والتنزيلات عن الزيارات",
+        "تثبيت أحدث تقييم",
+        "فصل الأسهم عن التوريق",
+        "عدم اختلاق جولة 2026",
+        "إزالة رواية الرحلات غير المدعومة",
+        "إزالة الحزمة التقنية غير الموثقة",
+        "وجود 10 دروس و22 مصدرًا و15 دليلًا"
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول بالقيم الفعلية مع فصل الإيراد عن القروض المصروفة ومحفظة القروض وحجم المدفوعات والمبيعات، وفصل العملاء التراكميين عن النشطين والتنزيلات، وفصل حقوق الملكية عن التوريق والتقييم.",
+    "status_values": {
+      "verified": "مدعوم مباشرة بمصدر رسمي أو أولي",
+      "verified_current_product_capability": "قدرة موثقة دون افتراض الحجم أو الإيراد",
+      "verified_as_not_publicly_disclosed": "المقياس غير منشور ولم يُقدّر",
+      "verified_historical_financing": "تمويل تاريخي محدد النوع والتاريخ",
+      "verified_historical_operating_metric": "مقياس تاريخي أو تراكمي",
+      "verified_with_metric_definition_limits": "معلومة منشورة بحدود تعريفية",
+      "analytical_inference": "تحليل مهني مشتق من حقائق موثقة"
+    },
+    "confidence_scale": {
+      "high": "مصدر رسمي أو تنظيمي أو عدة مصادر متطابقة",
+      "medium_high": "استنتاج محدود بحدود واضحة",
+      "medium": "تصريح يحتاج حذرًا",
+      "low_not_used": "تقدير غير موثق لم يُستخدم"
+    },
+    "metric_definitions": {
+      "revenue": "دخل محاسبي من الفوائد والرسوم والعمولات والهوامش",
+      "loan_disbursements": "إجمالي أصل القروض المصروفة خلال فترة أو منذ التأسيس",
+      "gross_loan_book": "الرصيد القائم لمحفظة القروض قبل المخصصات",
+      "payment_throughput": "قيمة المدفوعات المارة عبر المنظومة",
+      "commerce_sales": "قيمة مبيعات التجارة عبر المنصة",
+      "customers_served": "عملاء مخدومون تراكميًا",
+      "quarterly_active_customers": "عملاء نشطون خلال ربع سنة",
+      "app_downloads": "مرات تنزيل التطبيق",
+      "borrowers": "أفراد أو منشآت حصلوا على تمويل",
+      "cards_issued": "بطاقات مصدرة تراكميًا",
+      "equity_funding": "رأس مال مقابل ملكية",
+      "securitization": "تمويل دين مدعوم بمحافظ القروض",
+      "valuation": "قيمة حقوق الملكية في جولة أو صفقة",
+      "acquisition_consideration": "مقابل شراء شركة أو أصل",
+      "market_size": "الطلب الاقتصادي القابل للخدمة",
+      "target": "هدف مستقبلي لا يُعامل كنتيجة"
+    }
+  },
+  "evidence_map": {
+    "$.headline": {
+      "field_value": "من تطبيق حركة إلى مؤسسة مالية عابرة للأسواق: كيف جعلت MNT‑Halan الترخيص والبيانات والتمويل محركًا واحدًا للنمو",
+      "verification_status": "analytical_inference",
+      "confidence": "high",
+      "claim_type": "company_specific_strategy_headline",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يلخص انتقال المجموعة من نشاط حركة مبكر إلى منظومة مالية مرخصة متعددة الدول تعتمد البيانات ورأس المال والاستحواذات",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-06",
+        "SRC-01",
+        "SRC-08",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Egyptian financial services provider MNT-Halan valued at $1B in $400M funding",
+          "publisher": "TechCrunch",
+          "source_type": "founder_interview_and_financing_report_2023",
+          "url": "https://techcrunch.com/2023/01/31/egyptian-financial-services-provider-mnt-halan-gets-1b-valuation-after-securing-400m/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "إيقاف نشاط نقل الركاب والتركيز المالي"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Al Ahly Capital leads strategic investment in MNT-Halan",
+          "publisher": "MNT-Halan / Al Ahly Capital press release republished by Zawya via TradingView",
+          "source_type": "company_and_investor_press_release_2026",
+          "url": "https://www.tradingview.com/news/reuters.com%2C2026-06-08%3Anewsml_Zaw85pDRK%3A0-zawya-al-ahly-capital-leads-strategic-investment-in-mnt-halan/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "المنظومة الحالية والتوسع"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "MNT-Halan expands into Turkey with the 100% acquisition of Tam Finans",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_acquisition_announcement_2024",
+          "url": "https://mnt-halan.com/2024/08/08/mnt-halan-expands-into-turkey/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "الاستحواذ على Tam Finans"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "How responsibly deploying AI credit scoring models can progress financial inclusion",
+          "publisher": "World Economic Forum — authored by MNT-Halan CTO",
+          "source_type": "company_executive_primary_technical_explanation_2025",
+          "url": "https://www.weforum.org/stories/financial-and-monetary-systems/how-responsibly-deploying-ai-credit-scoring-models-can-progress-financial-inclusion/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "الذكاء الاصطناعي في الائتمان"
+        }
+      ],
+      "limitations": "العنوان تحليل تحريري ولا يثبت تفوقًا أو ربحية"
+    },
+    "$.company.location": {
+      "field_value": "القاهرة/الجيزة، مصر، مع عمليات مثبتة حتى أغسطس 2026 في تركيا عبر Tam Finans، وفي باكستان عبر Halan Microfinance Bank، وفي الإمارات عبر Halan Advance. تعرض المصادر تأسيس MNT‑Halan بصيغ مختلفة: الشركة والمستثمرون يستخدمون 2018 للشركة الحالية مع جذور تمويل أصغر تعود إلى 2010، بينما بدأت Halan كمنصة حركة وخدمات عند الطلب في 2017 قبل دمج القدرات التقنية والتمويلية. لذلك يُعامل 2018 كتاريخ تأسيس الكيان الحالي، لا كبداية كل نشاط سبقه.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "company_origin_and_geographic_operations",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر تثبت المقر المصري والعمليات في تركيا وباكستان والإمارات مع اختلاف تاريخ الجذور عن الكيان الحالي",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-22",
+        "SRC-08",
+        "SRC-10",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-22",
+          "title": "MNT-Halan investor profile and company roots",
+          "publisher": "Apis Partners",
+          "source_type": "investor_company_profile",
+          "url": "https://www.apis.pe/news/egyptian-fintech-mnt-halan-attracts-circa-us-120-million-from-global-investors/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "تأسيس 2018 والجذور منذ 2010"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "MNT-Halan expands into Turkey with the 100% acquisition of Tam Finans",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_acquisition_announcement_2024",
+          "url": "https://mnt-halan.com/2024/08/08/mnt-halan-expands-into-turkey/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "تركيا"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "CCP authorizes acquisition of Pakistani Microfinance Bank by Dutch company",
+          "publisher": "Competition Commission of Pakistan",
+          "source_type": "official_competition_authority_acquisition_approval_2024",
+          "url": "https://beta.cc.gov.pk/home/viewpressreleases/452",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "باكستان"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "MNT-Halan debuts in the UAE market",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_market_launch_2024",
+          "url": "https://mnt-halan.com/2024/12/11/mnt-halan-debuts-in-the-uae-market/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "الإمارات"
+        }
+      ],
+      "limitations": "الوجود التشغيلي لا يعني توافر كل المنتجات في كل دولة"
+    },
+    "$.company.business_model": {
+      "field_value": "مجموعة خدمات مالية غير مصرفية وتقنية مالية متعددة الدول، تجمع الإقراض للأفراد والمشروعات متناهية الصغر والصغيرة، والتمويل الاستهلاكي وBNPL وتمويل المركبات والرواتب، والمحفظة والبطاقات والمدفوعات، والاستثمار والادخار الرقمي، والتجارة الإلكترونية. يتحقق الدخل أساسًا من عوائد ورسوم التمويل والخدمات المالية وهوامش أو رسوم التجارة والمدفوعات بحسب المنتج والدولة، بينما تُموَّل محفظة الإقراض بمزيج من حقوق الملكية والتسهيلات والتوريق. لا تنشر المجموعة معدل العائد الصافي أو تكلفة التمويل أو مساهمة كل نشاط في الإيراد.",
+      "verification_status": "verified_current_product_capability",
+      "confidence": "high",
+      "claim_type": "business_model_and_funding_structure",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الإقراض والمدفوعات والبطاقات والاستثمار والتجارة والتوريق موثقة، بينما مزيج الإيراد غير معلن",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-04",
+        "SRC-16",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Al Ahly Capital leads strategic investment in MNT-Halan",
+          "publisher": "MNT-Halan / Al Ahly Capital press release republished by Zawya via TradingView",
+          "source_type": "company_and_investor_press_release_2026",
+          "url": "https://www.tradingview.com/news/reuters.com%2C2026-06-08%3Anewsml_Zaw85pDRK%3A0-zawya-al-ahly-capital-leads-strategic-investment-in-mnt-halan/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "المنتجات والتراخيص"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "IFC Project 46427 — MNT Group",
+          "publisher": "International Finance Corporation",
+          "source_type": "official_development_finance_investment_disclosure",
+          "url": "https://disclosures.ifc.org/project-detail/SII/46427/mnt-group",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "وصف IFC للأعمال"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "MNT-Halan — official company homepage",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_product_and_legacy_metrics_page",
+          "url": "https://mnt-halan.com/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "المنتجات الرسمية"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "CIB and CI Capital close seventh securitization for Halan Consumer Finance",
+          "publisher": "Commercial International Bank Egypt",
+          "source_type": "official_bank_debt_capital_markets_announcement_2025",
+          "url": "https://www.cibeg.com/en/newsroom/news/10-8-2025-cib-x-ci-capital",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "التوريق"
+        }
+      ],
+      "limitations": "لا توجد قوائم مالية قطاعية أو حسب الدولة"
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن حاليًا. لا تنشر MNT‑Halan قوائم مالية دورية عامة أو MRR أو ARR أو إيرادًا شهريًا حديثًا. نقلت TechCrunch عن الشركة أنها حققت أكثر من 300 مليون دولار إيرادًا خلال 2022، لكن الرقم تاريخي ومنسوب للشركة وغير مدقق علنًا، ولا يجوز قسمته آليًا على 12 أو اعتباره إيراد 2026. كذلك فإن أكثر من 100 مليون دولار مرور مدفوعات شهريًا و50 مليون دولار مبيعات شهرية المعروضين في الموقع أرقام حجم تشغيل قديمة نسبيًا وليسا صافي إيراد المجموعة.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "revenue_and_operating_volume_separation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد إيراد شهري حالي منشور؛ رقم 2022 تاريخي، وأحجام المرور والمبيعات ليست صافي إيراد",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-06",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Egyptian financial services provider MNT-Halan valued at $1B in $400M funding",
+          "publisher": "TechCrunch",
+          "source_type": "founder_interview_and_financing_report_2023",
+          "url": "https://techcrunch.com/2023/01/31/egyptian-financial-services-provider-mnt-halan-gets-1b-valuation-after-securing-400m/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "إيراد 2022 التاريخي"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "MNT-Halan — official company homepage",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_product_and_legacy_metrics_page",
+          "url": "https://mnt-halan.com/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "مرور المدفوعات والمبيعات"
+        }
+      ],
+      "limitations": "رقم 2022 غير مدقق علنًا ولا يصف 2026"
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن بوصفه زيارات موقع أو تطبيق. أحدث إفصاح منسوب للشركة في يونيو 2026 يذكر أكثر من 8 ملايين عميل عالميًا، و2.3 مليون عميل نشط ربع سنوي، و10 ملايين تنزيل للتطبيق. تعرض صفحات أخرى 2.4 مليون أو 2.5 مليون نشط ربع سنوي، ما يشير إلى اختلاف تاريخ الالتقاط أو التعريف؛ لذلك لا تُجمع الأرقام ولا تُحوّل إلى MAU أو زيارات شهرية. العملاء التراكميون والتنزيلات والبطاقات والقروض ليست حركة مرور.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "high",
+      "claim_type": "customers_active_users_downloads_and_traffic",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الإفصاحات تخص العملاء والنشطين ربع سنويًا والتنزيلات، لا زيارات الموقع أو MAU",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-14",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Al Ahly Capital leads strategic investment in MNT-Halan",
+          "publisher": "MNT-Halan / Al Ahly Capital press release republished by Zawya via TradingView",
+          "source_type": "company_and_investor_press_release_2026",
+          "url": "https://www.tradingview.com/news/reuters.com%2C2026-06-08%3Anewsml_Zaw85pDRK%3A0-zawya-al-ahly-capital-leads-strategic-investment-in-mnt-halan/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "8 ملايين و2.3 مليون و10 ملايين تنزيل"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "MNT-Halan organization profile",
+          "publisher": "World Economic Forum",
+          "source_type": "current_organization_profile_with_company_metrics",
+          "url": "https://www.weforum.org/organizations/mnt-halan/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "2.5 مليون نشط ربع سنوي"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "MNT-Halan portfolio profile",
+          "publisher": "Apis Partners",
+          "source_type": "current_investor_portfolio_profile",
+          "url": "https://www.apis.pe/portfolio/our-portfolio/mnt-halan/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "2.4 مليون نشط ربع سنوي"
+        }
+      ],
+      "limitations": "اختلاف التعريف أو التاريخ يمنع جمع الأرقام"
+    },
+    "$.overview.problem.text": {
+      "field_value": "تستهدف MNT‑Halan فجوة الوصول إلى الائتمان والمدفوعات والادخار للأفراد والمشروعات الصغيرة الذين لا يملكون تاريخًا ائتمانيًا مصرفيًا كافيًا أو يصعب عليهم الوصول إلى الفروع والضمانات التقليدية. لكن وصف جميع العملاء بأنهم «غير متعاملين مع البنوك» غير دقيق؛ المجموعة تخدم أيضًا فئات underbanked وعملاء رواتب وتجارًا وشركات صغيرة في أسواق متعددة. المشكلة التشغيلية هي ارتفاع تكلفة التحقق والتوزيع والتحصيل وإدارة المخاطر عند تقديم قروض صغيرة بكثافة عالية.",
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "customer_problem_definition",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم المصادر استهداف غير المخدومين ومحدودي الخدمة والمشروعات الصغيرة لا تعميم انعدام الحسابات",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-04",
+        "SRC-05",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "IFC Project 46427 — MNT Group",
+          "publisher": "International Finance Corporation",
+          "source_type": "official_development_finance_investment_disclosure",
+          "url": "https://disclosures.ifc.org/project-detail/SII/46427/mnt-group",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "المشروعات الصغيرة والمستهلكون"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Egyptian fintech MNT-Halan attracts circa US$120 million from global investors",
+          "publisher": "Apis Partners",
+          "source_type": "investor_primary_funding_announcement_2021",
+          "url": "https://apis.pe/egyptian-fintech-mnt-halan-attracts-circa-us120-million-from-global-investors/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "underbanked وunbanked"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Al Ahly Capital leads strategic investment in MNT-Halan",
+          "publisher": "MNT-Halan / Al Ahly Capital press release republished by Zawya via TradingView",
+          "source_type": "company_and_investor_press_release_2026",
+          "url": "https://www.tradingview.com/news/reuters.com%2C2026-06-08%3Anewsml_Zaw85pDRK%3A0-zawya-al-ahly-capital-leads-strategic-investment-in-mnt-halan/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "أفراد وأصحاب أعمال"
+        }
+      ],
+      "limitations": "الأثر التفصيلي غير مقاس لكل شريحة"
+    },
+    "$.overview.solution.text": {
+      "field_value": "بنت المجموعة منظومة تجمع حضورًا ميدانيًا وتراخيص تمويلية مع تطبيق Halan ومنصة Neuron المصرفية الأساسية، ثم تستخدم بيانات المعاملات والسلوك داخل المدفوعات والتجارة والاستثمار والسداد لبناء تقييم ائتماني وتقديم منتجات متدرجة. أوضح المدير التقني في 2025 أن نماذج الذكاء الاصطناعي تستخدم بيانات المشتريات والسداد والتفاعل داخل التطبيق، وأن أكثر من 50% من قرارات القروض أصبحت آلية. لا يوجد مصدر أولي يثبت أن بيانات رحلات التوك توك كانت المحرك الأساسي للتصنيف الائتماني؛ كما أن نشاط نقل الركاب أُوقف قبل 2023، لذلك حُذفت رواية «تحويل بيانات الرحلات مباشرة إلى قروض».",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "high",
+      "claim_type": "solution_and_credit_scoring",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المصادر Neuron والبيانات السلوكية وأتمتة الائتمان، ولا تثبت أن الرحلات كانت أساس التصنيف",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-15",
+        "SRC-17",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-15",
+          "title": "How responsibly deploying AI credit scoring models can progress financial inclusion",
+          "publisher": "World Economic Forum — authored by MNT-Halan CTO",
+          "source_type": "company_executive_primary_technical_explanation_2025",
+          "url": "https://www.weforum.org/stories/financial-and-monetary-systems/how-responsibly-deploying-ai-credit-scoring-models-can-progress-financial-inclusion/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "نموذج التصنيف والبيانات"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "MNT-Halan ESG and Neuron",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_technology_and_governance_page",
+          "url": "https://mnt-halan.com/esg/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "Neuron"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Egyptian financial services provider MNT-Halan valued at $1B in $400M funding",
+          "publisher": "TechCrunch",
+          "source_type": "founder_interview_and_financing_report_2023",
+          "url": "https://techcrunch.com/2023/01/31/egyptian-financial-services-provider-mnt-halan-gets-1b-valuation-after-securing-400m/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "إيقاف نقل الركاب"
+        }
+      ],
+      "limitations": "مؤشرات الأتمتة من تصريح تنفيذي للشركة"
+    },
+    "$.market_data.target_audience": {
+      "field_value": "الأفراد محدودو أو غير المكتملين مصرفيًا، أصحاب المشروعات متناهية الصغر والصغيرة، التجار، المقترضون لشراء السلع أو المركبات، موظفو الشركات المحتاجون إلى سلفة راتب، وعملاء الادخار والاستثمار الرقمي. يختلف العميل والمنتج حسب السوق: تمويل أصغر ومصرف متخصص في باكستان، تمويل تجاري وتخصيم في تركيا، وسلفة راتب رقمية في الإمارات.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "target_customer_segments",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المنتجات والتراخيص تحدد شرائح الأفراد والمشروعات والتجار والموظفين",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-08",
+        "SRC-11",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Al Ahly Capital leads strategic investment in MNT-Halan",
+          "publisher": "MNT-Halan / Al Ahly Capital press release republished by Zawya via TradingView",
+          "source_type": "company_and_investor_press_release_2026",
+          "url": "https://www.tradingview.com/news/reuters.com%2C2026-06-08%3Anewsml_Zaw85pDRK%3A0-zawya-al-ahly-capital-leads-strategic-investment-in-mnt-halan/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "الشرائح والمنتجات"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "MNT-Halan expands into Turkey with the 100% acquisition of Tam Finans",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_acquisition_announcement_2024",
+          "url": "https://mnt-halan.com/2024/08/08/mnt-halan-expands-into-turkey/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "تركيا"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "MNT-Halan acquires 100% of Advans Pakistan",
+          "publisher": "Halan Microfinance Bank Pakistan",
+          "source_type": "official_local_company_acquisition_announcement_2024",
+          "url": "https://halan.com.pk/mnt-halan-acquires-100-of-advans-pakistan-from-leading-international-microfinance-group/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "باكستان"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "MNT-Halan debuts in the UAE market",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_market_launch_2024",
+          "url": "https://mnt-halan.com/2024/12/11/mnt-halan-debuts-in-the-uae-market/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "الإمارات"
+        }
+      ],
+      "limitations": "لا يوجد توزيع عملاء أو إيراد حسب الشريحة"
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر MNT‑Halan رقم TAM موحدًا قابلًا للتحقق لجميع أسواقها ومنتجاتها، ولا يمكن اشتقاق حصة سوقية من عدد العملاء أو القروض المصروفة. المؤشرات المتاحة تخص حجم المجموعة لا حجم السوق: أكثر من 8 ملايين عميل عالميًا، ومحفظة قروض إجمالية تتجاوز 1.7 مليار دولار وفق صفحة المنتدى الاقتصادي العالمي، وانتشار في أربع دول. أرقام السكان غير المخدومين أو الناتج المحلي لكل دولة لا تساوي سوقًا متاحًا فعليًا للشركة دون افتراضات عن الأهلية والطلب والتنظيم.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "medium_high",
+      "claim_type": "market_size_and_company_scale",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد TAM موحد؛ استُخدمت مقاييس المجموعة فقط مع فصلها عن السوق",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-14",
+        "SRC-08",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Al Ahly Capital leads strategic investment in MNT-Halan",
+          "publisher": "MNT-Halan / Al Ahly Capital press release republished by Zawya via TradingView",
+          "source_type": "company_and_investor_press_release_2026",
+          "url": "https://www.tradingview.com/news/reuters.com%2C2026-06-08%3Anewsml_Zaw85pDRK%3A0-zawya-al-ahly-capital-leads-strategic-investment-in-mnt-halan/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "8 ملايين عميل"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "MNT-Halan organization profile",
+          "publisher": "World Economic Forum",
+          "source_type": "current_organization_profile_with_company_metrics",
+          "url": "https://www.weforum.org/organizations/mnt-halan/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "محفظة 1.7 مليار دولار"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "MNT-Halan expands into Turkey with the 100% acquisition of Tam Finans",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_acquisition_announcement_2024",
+          "url": "https://mnt-halan.com/2024/08/08/mnt-halan-expands-into-turkey/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "تركيا"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "CCP authorizes acquisition of Pakistani Microfinance Bank by Dutch company",
+          "publisher": "Competition Commission of Pakistan",
+          "source_type": "official_competition_authority_acquisition_approval_2024",
+          "url": "https://beta.cc.gov.pk/home/viewpressreleases/452",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "باكستان"
+        }
+      ],
+      "limitations": "لا يمكن حساب الحصة السوقية"
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا يوجد معدل نمو مالي موحد ومدقق منشور. يمكن تتبع توسع تشغيلي غير متجانس: نحو 4 ملايين عميل وأكثر من 1.7 مليار دولار قروض مصروفة تراكميًا في 2021؛ أكثر من 7 ملايين عميل و4.5 مليارات دولار قروض مصروفة وفق تغطية يوليو 2024؛ ثم أكثر من 8 ملايين عميل و15.5 مليار دولار قروض مصروفة تراكميًا في يونيو 2026. يشمل النمو استحواذات ودولًا ومنتجات جديدة، لذلك لا يمثل CAGR عضويًا ولا إيرادًا. التوسع إلى باكستان وتركيا والإمارات تحقق بين 2024 و2025، بينما الخطط لدول أخرى لا تُعامل كعمليات قائمة.",
+      "verification_status": "verified_historical_operating_metric",
+      "confidence": "medium_high",
+      "claim_type": "operating_growth_milestones",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تعرض المصادر محطات للعملاء والقروض والتوسع لا CAGR ماليًا موحدًا",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-05",
+        "SRC-03",
+        "SRC-01",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Egyptian fintech MNT-Halan attracts circa US$120 million from global investors",
+          "publisher": "Apis Partners",
+          "source_type": "investor_primary_funding_announcement_2021",
+          "url": "https://apis.pe/egyptian-fintech-mnt-halan-attracts-circa-us120-million-from-global-investors/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "مقاييس 2021"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "MNT-Halan raises circa US$160 million from international investors",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_funding_announcement_2024",
+          "url": "https://mnt-halan.com/2024/08/08/mnt-halan-raises-circa-us-160-million-from-international-investors/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "مقاييس 2024"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Al Ahly Capital leads strategic investment in MNT-Halan",
+          "publisher": "MNT-Halan / Al Ahly Capital press release republished by Zawya via TradingView",
+          "source_type": "company_and_investor_press_release_2026",
+          "url": "https://www.tradingview.com/news/reuters.com%2C2026-06-08%3Anewsml_Zaw85pDRK%3A0-zawya-al-ahly-capital-leads-strategic-investment-in-mnt-halan/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "مقاييس 2026"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "MNT-Halan expands into Turkey with the 100% acquisition of Tam Finans",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_acquisition_announcement_2024",
+          "url": "https://mnt-halan.com/2024/08/08/mnt-halan-expands-into-turkey/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "الاستحواذ"
+        }
+      ],
+      "limitations": "النمو يشمل الاستحواذات واختلاف العملات والتعريفات"
+    },
+    "$.financials.initial_investment": {
+      "field_value": "تطورت قاعدة رأس المال عبر أنواع تمويل مختلفة يجب فصلها: جولة حقوق ملكية بنحو 120 مليون دولار في سبتمبر 2021؛ ثم حزمة تصل إلى 400 مليون دولار في 2023 تضمنت 260 مليون دولار حقوق ملكية و140 مليون دولار من إصدارَي توريق، ومنها نحو 200 مليون دولار من Chimera مقابل قرابة 20%، وهو ما رفع التقييم إلى نحو مليار دولار. في يوليو 2024 جمعت الشركة 157.5 مليون دولار، منها 40 مليونًا من IFC، واستخدمت جانبًا كبيرًا منها في استحواذ Tam Finans. وفي أكتوبر 2025 نفذت Halan Consumer Finance إصدار توريق بقيمة 3.4 مليارات جنيه ضمن برنامج 8 مليارات. أما جولة يونيو 2026 بقيادة الأهلي كابيتال فمبلغها ونسبة الحصة غير معلنين، والإغلاق الثاني كان متوقعًا عند الإعلان. التوريق دين ممول بمحافظ قروض، وليس استثمار أسهم أو إيرادًا.",
+      "verification_status": "verified_historical_financing",
+      "confidence": "high",
+      "claim_type": "equity_debt_securitization_and_acquisition_financing",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "فُصلت جولات الأسهم عن التوريق والدين وعن تكلفة الاستحواذ",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-05",
+        "SRC-06",
+        "SRC-03",
+        "SRC-19",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Egyptian fintech MNT-Halan attracts circa US$120 million from global investors",
+          "publisher": "Apis Partners",
+          "source_type": "investor_primary_funding_announcement_2021",
+          "url": "https://apis.pe/egyptian-fintech-mnt-halan-attracts-circa-us120-million-from-global-investors/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "120 مليون دولار"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Egyptian financial services provider MNT-Halan valued at $1B in $400M funding",
+          "publisher": "TechCrunch",
+          "source_type": "founder_interview_and_financing_report_2023",
+          "url": "https://techcrunch.com/2023/01/31/egyptian-financial-services-provider-mnt-halan-gets-1b-valuation-after-securing-400m/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "حزمة 400 مليون دولار"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "MNT-Halan raises circa US$160 million from international investors",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_funding_announcement_2024",
+          "url": "https://mnt-halan.com/2024/08/08/mnt-halan-raises-circa-us-160-million-from-international-investors/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "157.5 مليون دولار"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "CIB and CI Capital close seventh securitization for Halan Consumer Finance",
+          "publisher": "Commercial International Bank Egypt",
+          "source_type": "official_bank_debt_capital_markets_announcement_2025",
+          "url": "https://www.cibeg.com/en/newsroom/news/10-8-2025-cib-x-ci-capital",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "توريق 3.4 مليارات جنيه"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Al Ahly Capital leads strategic investment in MNT-Halan",
+          "publisher": "MNT-Halan / Al Ahly Capital press release republished by Zawya via TradingView",
+          "source_type": "company_and_investor_press_release_2026",
+          "url": "https://www.tradingview.com/news/reuters.com%2C2026-06-08%3Anewsml_Zaw85pDRK%3A0-zawya-al-ahly-capital-leads-strategic-investment-in-mnt-halan/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "جولة 2026 غير معلنة"
+        }
+      ],
+      "limitations": "لا تجمع الأرقام كإجمالي أسهم"
+    },
+    "$.financials.valuation": {
+      "field_value": "1.4 مليار دولار وفق الإغلاق الأول لجولة استثمارية قادتها الأهلي كابيتال في يونيو 2026، وهو أحدث تقييم معلن عُثر عليه حتى 3 أغسطس 2026. لم تُعلن قيمة الاستثمار أو نسبة الحصة أو ما إذا كان الرقم pre-money أو post-money في النص المنشور، لذلك لا يمكن حساب الملكية الجديدة أو إجمالي النقد الداخل. تاريخيًا تجاوز التقييم مليار دولار في 2023 بعد استثمار Chimera بأكثر من 200 مليون دولار مقابل أكثر من 20% ضمن حزمة أكبر شملت دينًا؛ لا يجوز استخدام كامل 400 مليون دولار كحقوق ملكية.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "latest_disclosed_valuation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "أحدث تقييم معلن 1.4 مليار دولار في يونيو 2026 مع عدم إعلان مبلغ الجولة أو الحصة",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Al Ahly Capital leads strategic investment in MNT-Halan",
+          "publisher": "MNT-Halan / Al Ahly Capital press release republished by Zawya via TradingView",
+          "source_type": "company_and_investor_press_release_2026",
+          "url": "https://www.tradingview.com/news/reuters.com%2C2026-06-08%3Anewsml_Zaw85pDRK%3A0-zawya-al-ahly-capital-leads-strategic-investment-in-mnt-halan/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "1.4 مليار دولار"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "MNT-Halan reaches $1.4 billion valuation after investment round led by Al Ahly Capital",
+          "publisher": "Wamda",
+          "source_type": "company_press_release_republication_2026",
+          "url": "https://www.wamda.com/2026/06/mnt-halan-reaches-1-4-billion-valuation-investment-round-led-al-ahly-capital",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "الإغلاق الأول"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Egyptian financial services provider MNT-Halan valued at $1B in $400M funding",
+          "publisher": "TechCrunch",
+          "source_type": "founder_interview_and_financing_report_2023",
+          "url": "https://techcrunch.com/2023/01/31/egyptian-financial-services-provider-mnt-halan-gets-1b-valuation-after-securing-400m/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "تقييم 2023"
+        }
+      ],
+      "limitations": "لم يحدد النص pre-money أو post-money"
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "عوائد ورسوم التمويل الأصغر وتمويل المشروعات الصغيرة والمتوسطة؛ لا تنشر المجموعة متوسط العائد أو صافي هامش الفائدة أو تكلفة المخاطر",
+        "عوائد التمويل الاستهلاكي وBNPL وتمويل الأجهزة والمركبات وخطط التقسيط؛ قيمة القروض المصروفة ليست إيرادًا",
+        "رسوم أو عوائد سلف الرواتب ومنتج Halan Advance في الإمارات وفق العقود واللوائح المحلية",
+        "دخل التخصيم والتمويل التجاري عبر Tam Finans في تركيا؛ محفظة القروض ليست إيرادًا سنويًا",
+        "دخل مصرفي وتمويلي عبر Halan Microfinance Bank في باكستان؛ الودائع أو المحفظة أو رأس المال المستثمر لا تساوي الإيراد",
+        "رسوم المحفظة والتحويلات ودفع الفواتير والسحب والإيداع وخدمات البطاقات وفق جداول الرسوم، من دون إفصاح عن صافي مساهمتها",
+        "رسوم أو عوائد قبول المدفوعات وتحصيل أقساط القروض؛ معدل مرور المدفوعات الشهري حجم معالجة وليس دخلًا محاسبيًا",
+        "هوامش أو عمولات التجارة الإلكترونية وبيع الأجهزة والسلع سريعة الدوران والتوصيل؛ إجمالي المبيعات لا يساوي الإيراد الصافي أو الربح",
+        "رسوم أو عمولات توزيع منتجات الادخار والاستثمار والذهب وصناديق سوق المال وشهادات الاستثمار، مع اختلاف الجهة القانونية للمنتج",
+        "دخل تقني أو تشغيلي محتمل من منصة Neuron واستخدامها داخل شركات المجموعة؛ لا يوجد سعر عام يثبت بيعها كـSaaS مستقل على نطاق مادي",
+        "إيراد 2022 المنقول بأكثر من 300 مليون دولار تاريخي وغير مدقق علنًا، ولا يثبت إيراد 2026 أو الإيراد الشهري الحالي",
+        "أكثر من 15.5 مليار دولار قروض مصروفة، ومحفظة 1.7 مليار دولار، و10 ملايين تنزيل، و8 ملايين عميل، والتوريق والتمويل الاستثماري ليست إيرادات"
+      ],
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "medium_high",
+      "claim_type": "revenue_streams_and_non_revenue_metrics",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "مسارات الدخل مشتقة من المنتجات الموثقة لكن الأسعار والهوامش غير منشورة",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-01",
+        "SRC-16",
+        "SRC-08",
+        "SRC-13",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Al Ahly Capital leads strategic investment in MNT-Halan",
+          "publisher": "MNT-Halan / Al Ahly Capital press release republished by Zawya via TradingView",
+          "source_type": "company_and_investor_press_release_2026",
+          "url": "https://www.tradingview.com/news/reuters.com%2C2026-06-08%3Anewsml_Zaw85pDRK%3A0-zawya-al-ahly-capital-leads-strategic-investment-in-mnt-halan/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "المنتجات الحالية"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "MNT-Halan — official company homepage",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_product_and_legacy_metrics_page",
+          "url": "https://mnt-halan.com/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "الإقراض والمدفوعات والتجارة"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "MNT-Halan expands into Turkey with the 100% acquisition of Tam Finans",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_acquisition_announcement_2024",
+          "url": "https://mnt-halan.com/2024/08/08/mnt-halan-expands-into-turkey/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "تركيا"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "MNT-Halan debuts in the UAE market",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_market_launch_2024",
+          "url": "https://mnt-halan.com/2024/12/11/mnt-halan-debuts-in-the-uae-market/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "سلفة الراتب"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "MNT-Halan launches BNPL coupled with consumer finance and delivery",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_product_launch_2022",
+          "url": "https://mnt-halan.com/2022/02/01/mnt-halans-launch-of-buy-now-pay-later-coupled-with-consumer-finance-and-delivery/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "BNPL"
+        }
+      ],
+      "limitations": "لا تنسب كامل القروض أو المبيعات أو المدفوعات للإيراد"
+    },
+    "$.tools": {
+      "field_value": [
+        "تطبيق Halan للخدمات المالية والتجارة والاستثمار",
+        "Neuron: منصة مصرفية أساسية مملوكة للمجموعة لإدارة الإقراض والمعالجة والعمليات الرقمية",
+        "نماذج تقييم ائتماني مدعومة بالذكاء الاصطناعي والبيانات السلوكية والمعاملات",
+        "تمويل متناهي الصغر وتمويل مشروعات صغيرة ومتوسطة وتمويل نانو",
+        "تمويل استهلاكي وBNPL وتمويل أجهزة ومركبات",
+        "Halan Card والبطاقات مسبقة الدفع والمحفظة الإلكترونية",
+        "تحويلات ودفع فواتير وإيداع وسحب وخدمات تحصيل وصرف القروض",
+        "منتجات الذهب وصناديق سوق المال والاشتراك والاسترداد في شهادات الاستثمار",
+        "منصة تجارة إلكترونية للأجهزة والإلكترونيات والسلع سريعة الدوران",
+        "شبكة حضور ميداني وفروع ووكلاء لدعم الصرف والتحصيل وخدمة العملاء",
+        "Tam Finans للتمويل التجاري والتخصيم في تركيا",
+        "Halan Microfinance Bank بترخيص وطني في باكستان",
+        "Halan Advance لتمويل الرواتب في الإمارات",
+        "التوريق كأداة لإعادة تمويل محافظ القروض عبر أسواق الدين المحلية",
+        "لم تثبت المصادر الأولية الحالية استخدام Go أو Java أو Flutter أو PostgreSQL أو AWS كحزمة داخلية معتمدة؛ لذلك أزيلت هذه الأسماء من قائمة الأدوات المؤكدة"
+      ],
+      "verification_status": "verified_current_product_capability",
+      "confidence": "high",
+      "claim_type": "verified_products_infrastructure_and_capabilities",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استُبدلت الحزمة البرمجية غير الموثقة بمنتجات وتراخيص وقدرات مثبتة",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-01",
+        "SRC-15",
+        "SRC-17",
+        "SRC-08",
+        "SRC-12",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Al Ahly Capital leads strategic investment in MNT-Halan",
+          "publisher": "MNT-Halan / Al Ahly Capital press release republished by Zawya via TradingView",
+          "source_type": "company_and_investor_press_release_2026",
+          "url": "https://www.tradingview.com/news/reuters.com%2C2026-06-08%3Anewsml_Zaw85pDRK%3A0-zawya-al-ahly-capital-leads-strategic-investment-in-mnt-halan/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "المنتجات والتراخيص"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "How responsibly deploying AI credit scoring models can progress financial inclusion",
+          "publisher": "World Economic Forum — authored by MNT-Halan CTO",
+          "source_type": "company_executive_primary_technical_explanation_2025",
+          "url": "https://www.weforum.org/stories/financial-and-monetary-systems/how-responsibly-deploying-ai-credit-scoring-models-can-progress-financial-inclusion/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "الذكاء الاصطناعي"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "MNT-Halan ESG and Neuron",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_technology_and_governance_page",
+          "url": "https://mnt-halan.com/esg/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "Neuron"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "MNT-Halan expands into Turkey with the 100% acquisition of Tam Finans",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_acquisition_announcement_2024",
+          "url": "https://mnt-halan.com/2024/08/08/mnt-halan-expands-into-turkey/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "Tam Finans"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "SBP grants nationwide license to Halan Microfinance Bank",
+          "publisher": "Business Recorder citing State Bank of Pakistan",
+          "source_type": "regulatory_license_report_2025",
+          "url": "https://www.brecorder.com/news/40366433/sbp-grants-nationwide-license-to-halan-microfinance-bank",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "البنك الباكستاني"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "MNT-Halan debuts in the UAE market",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_market_launch_2024",
+          "url": "https://mnt-halan.com/2024/12/11/mnt-halan-debuts-in-the-uae-market/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "Halan Advance"
+        }
+      ],
+      "limitations": "لا تثبت لغات البرمجة أو مزودي السحابة"
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "الشمول المالي يحتاج مؤسسة لا واجهة فقط",
+          "description": "التطبيق خفّض الاحتكاك، لكن القدرة على الإقراض بكثافة جاءت من الجمع بين التراخيص والفروع والتحصيل ورأس المال وإدارة المخاطر ومنصة Neuron. في الخدمات المالية المنظمة، تجربة المستخدم لا تعوض غياب البنية القانونية والتمويلية."
+        },
+        {
+          "title": "الاندماج قد يختصر سنوات بناء القدرة",
+          "description": "الجمع بين Halan التقنية وشبكة وخبرة MNT التمويلية صنع كيانًا يملك التوزيع والمنتج والرخص. الدرس ليس أن كل اندماج ناجح، بل أن التكامل بين أصول متباينة قد يكون أسرع من بناء كل طبقة من الصفر."
+        },
+        {
+          "title": "لا تحوّل قصة البداية إلى تفسير دائم",
+          "description": "نشاط الحركة ساعد العلامة في الوصول المبكر، لكنه أُوقف لاحقًا ولم يعد أساس المجموعة. الشركات القوية تستطيع التخلص من قناة اكتساب تاريخية عندما تصبح أقل جاذبية بدل الدفاع عنها لأنها جزء من قصة التأسيس."
+        },
+        {
+          "title": "البيانات المفيدة هي بيانات السلوك المالي المتكرر",
+          "description": "التقييم الائتماني الحالي يستفيد من الشراء والسداد والتفاعل داخل المنظومة. القيمة لا تأتي من جمع أكبر قدر من البيانات، بل من إشارات مرتبطة بالقدرة والاستعداد للسداد، مع رقابة على الإنصاف والخصوصية."
+        },
+        {
+          "title": "حقوق الملكية تموّل الشركة والتوريق يمول المحفظة",
+          "description": "حزمة 2023 أوضحت أن نمو المقرض لا يعتمد على رأس المال الجريء وحده. الأسهم تمول البنية والتوسع وتتحمل المخاطر، بينما يحول التوريق الذمم القائمة إلى سيولة جديدة. خلط النوعين يضخم التمويل ويشوّه فهم التخفيف والالتزام."
+        },
+        {
+          "title": "الاستحواذ شراء للترخيص والتوزيع والذاكرة المحلية",
+          "description": "الاستحواذ على بنك في باكستان وشركة تمويل في تركيا منح المجموعة عملاء وفروعًا ورخصًا وفرقًا تعرف السوق. في التمويل، شراء منصة مرخصة قد يقلل زمن الدخول أكثر من تصدير التطبيق ثم انتظار الموافقات."
+        },
+        {
+          "title": "المنظومة الواسعة يجب أن تعزز قرار الائتمان",
+          "description": "المدفوعات والتجارة والاستثمار والبطاقات ليست مجرد قائمة ميزات؛ يمكن أن تولد إشارات تقلل عدم اليقين وتسمح بمنتج ائتماني أفضل. إذا لم تتبادل المنتجات البيانات والقيمة، تتحول الـSuper App إلى تعقيد مكلف."
+        },
+        {
+          "title": "عرّف العميل قبل إعلان النمو",
+          "description": "العملاء المخدومون تاريخيًا، والعملاء الماليون، والمقترضون، والنشطون ربع سنويًا، وتنزيلات التطبيق، والبطاقات المصدرة مقاييس مختلفة. المقارنة الصحيحة تثبت الفترة والتعريف بدل وضعها في سلسلة نمو واحدة."
+        },
+        {
+          "title": "النمو عبر الدول يغيّر جودة الرقم",
+          "description": "القفزة في القروض والعملاء بعد 2024 تجمع مصر مع استحواذات تركيا وباكستان وإطلاق الإمارات. لذلك يجب فصل النمو العضوي عن أثر الاستحواذ والعملات واختلاف مدد القروض قبل الحكم على الكفاءة."
+        },
+        {
+          "title": "التقييم معلومة صفقة لا نتيجة قسمة",
+          "description": "التقييم المعلن 1.4 مليار دولار صالح لأنه مرتبط بجولة محددة، لكن غياب مبلغ الجولة والحصة يمنع تحليل التخفيف. ولا يمكن استنتاج التقييم من القروض المصروفة أو المحفظة أو الإيراد التاريخي دون شروط الصفقة."
+        }
+      ],
+      "verification_status": "analytical_inference",
+      "confidence": "high",
+      "claim_type": "company_specific_lessons",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس مشتقة من الدمج وإيقاف الحركة والتمويل والتوريق والاستحواذات والتصنيف",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-06",
+        "SRC-15",
+        "SRC-08",
+        "SRC-10",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Egyptian financial services provider MNT-Halan valued at $1B in $400M funding",
+          "publisher": "TechCrunch",
+          "source_type": "founder_interview_and_financing_report_2023",
+          "url": "https://techcrunch.com/2023/01/31/egyptian-financial-services-provider-mnt-halan-gets-1b-valuation-after-securing-400m/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "التحول والتمويل"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "How responsibly deploying AI credit scoring models can progress financial inclusion",
+          "publisher": "World Economic Forum — authored by MNT-Halan CTO",
+          "source_type": "company_executive_primary_technical_explanation_2025",
+          "url": "https://www.weforum.org/stories/financial-and-monetary-systems/how-responsibly-deploying-ai-credit-scoring-models-can-progress-financial-inclusion/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "البيانات"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "MNT-Halan expands into Turkey with the 100% acquisition of Tam Finans",
+          "publisher": "MNT-Halan",
+          "source_type": "official_company_acquisition_announcement_2024",
+          "url": "https://mnt-halan.com/2024/08/08/mnt-halan-expands-into-turkey/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "تركيا"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "CCP authorizes acquisition of Pakistani Microfinance Bank by Dutch company",
+          "publisher": "Competition Commission of Pakistan",
+          "source_type": "official_competition_authority_acquisition_approval_2024",
+          "url": "https://beta.cc.gov.pk/home/viewpressreleases/452",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "باكستان"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "CIB and CI Capital close seventh securitization for Halan Consumer Finance",
+          "publisher": "Commercial International Bank Egypt",
+          "source_type": "official_bank_debt_capital_markets_announcement_2025",
+          "url": "https://www.cibeg.com/en/newsroom/news/10-8-2025-cib-x-ci-capital",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official announcement, regulatory disclosure, investor page, product page, or cited interview section",
+          "supports": "التوريق"
+        }
+      ],
+      "limitations": "الدروس تحليل مهني وليست تصريحات حرفية"
+    }
+  }
 }

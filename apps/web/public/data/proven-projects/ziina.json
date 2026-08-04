@@ -2,52 +2,2139 @@
   "id": "ziina",
   "slug": "ziina",
   "name": "زينا (Ziina)",
-  "headline": "محفظة الدفع الاجتماعي التي أصبحت (Venmo) الشرق الأوسط",
-  "category": "Fintech / المدفوعات من نظير لنظير (P2P)",
+  "headline": "من تقسيم فاتورة إلى بنية مالية مرخّصة: كيف حوّلت Ziina تجربة الدفع إلى محفظة وبوابة وبطاقة وOpen Finance",
+  "category": "Fintech / Stored-Value Wallet & Merchant Payments / المحافظ والمدفوعات للأفراد والأعمال",
   "company": {
-    "location": "دبي، الإمارات العربية المتحدة",
-    "business_model": "مجاني للأفراد، مع خطط مدفوعة ورسوم على الأعمال (Ziina Pro B2B)"
+    "location": "شركة تقنية مالية تأسست في دبي عام 2020 وتعمل داخل الإمارات عبر الكيان المعلن Ziina Payment LLC. تعلن الشركة حصولها على ترخيص Stored Value Facility من مصرف الإمارات المركزي برقم F006737، بينما يظهر الرقم 1112672 في الشروط وسياسة الخصوصية كرقم مرتبط بالكيان أو الرخصة التجارية؛ يجب عدم الخلط بين الرقمين. لم يُعثر على إدراج SEC لأن الشركة خاصة وغير أمريكية.",
+    "business_model": "منصة مدفوعات للأفراد والأعمال تجمع محفظة قيمة مخزنة وتحويلات داخل شبكة Ziina، وروابط وQR وبوابة دفع وTap to Pay وفواتير وبطاقة رقمية. تحقق الدخل من رسوم معالجة مدفوعات الأعمال، ورسوم بعض عمليات التعبئة والإرسال بالبطاقات والعملات الدولية، واشتراك Ziina Violet. لا تقدم قروضًا حتى يونيو 2026، ولم تفصح عن توزيع الإيراد بين المسارات."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات",
-    "monthly_traffic": "عشرات الآلاف من العمليات اليومية"
+    "monthly_revenue": "غير مُفصح عنه علنًا. ادعت الشركة في سبتمبر 2024 نمو الإيراد عشرة أضعاف خلال 12 شهرًا، لكنها لم تنشر قيمة الأساس أو الإيراد المطلق أو MRR أو ARR. لذلك أزيل تقدير «ملايين الدولارات» ولم يُشتق الإيراد من حجم المدفوعات أو الرسوم المنشورة.",
+    "monthly_traffic": "غير مُفصح عنه علنًا، ولا يوجد رقم موثوق لزيارات الموقع الشهرية أو عدد العمليات اليومية. أحدث رقم استخدام عام هو خدمة أكثر من 260 ألف شركة وفرد في يونيو 2026، لكنه لا يحدد المستخدمين النشطين أو الدافعين. أما تجاوز 1.35 مليار درهم فكان حجم مدفوعات سنويًا محوّلًا إلى معدل في 2024، وليس إيرادًا أو زيارات أو عدد معاملات."
   },
   "overview": {
     "problem": {
-      "text": "لتحويل المال لصديق لتقسيم فاتورة العشاء في الإمارات، كان عليك طلب رقم الآيبان (IBAN) الطويل، إضافته كمستفيد في تطبيق البنك، والانتظار لساعات أو أيام.",
-      "impact": "تجربة مستخدم سيئة جداً، وإحراج اجتماعي، واعتماد مستمر على الكاش."
+      "text": "بدأت المشكلة من احتكاك التحويلات اليومية: مشاركة IBAN طويل وإضافة مستفيد والانتظار، ثم اتسعت لدى المستقلين والتجار والشركات الصغيرة إلى قبول المدفوعات عبر قنوات متعددة والوصول السريع إلى السيولة دون أجهزة POS أو تفعيل طويل أو تسويات بطيئة.",
+      "impact": "يؤدي الاحتكاك إلى الاعتماد على النقد والتحويلات اليدوية، وتأخر التحصيل والسحب، وتجزؤ سجلات المدفوعات. لا توجد بيانات عامة تسمح بإسناد تكلفة موحدة أو نسبة خسارة أو CAC قريب من الصفر إلى كل عملاء Ziina."
     },
     "solution": {
-      "text": "تطبيق محفظة رقمية يتيح تحويل الأموال للأصدقاء لحظياً باستخدام (رقم الهاتف فقط)، مع واجهة مستخدم مرحة تدعم الصور المتحركة (GIFs) ليكون الدفع تجربة اجتماعية ممتعة وليس معاملة بنكية جافة."
+      "text": "توفر Ziina تحويلات داخلية برقم الهاتف، ومحفظة وسحبًا إلى الحساب المصرفي، وروابط دفع وQR وبوابة وفواتير وTap to Pay، ثم أضافت بطاقة رقمية على شبكة Visa تنفق من رصيد المحفظة، وعضوية Violet، وتجارب Open Finance للتعبئة من الحسابات المصرفية. أصبح المنتج منصة لحركة الأموال للأفراد وتحصيلها وإدارتها للأعمال، لا مجرد تطبيق لتقسيم الفواتير."
     }
   },
   "market_data": {
-    "target_audience": "الشباب (Gen Z و Millennials) والمستقلين (Freelancers) في الإمارات.",
-    "market_size": "سوق المدفوعات الرقمية غير البنكية.",
-    "growth_rate": "نمو فيروسي (Viral) هائل بفضل نموذج الإحالة، وتوسعت لإطلاق Ziina Business."
+    "target_audience": "الأفراد المقيمون في الإمارات، والمستقلون ورواد الأعمال والمنشآت المتناهية الصغر والصغيرة والمتوسطة، والمتاجر والمطاعم والخدمات التي تحتاج قبول المدفوعات عن بُعد أو حضوريًا. يتطلب فتح الحساب حاليًا هوية إماراتية صالحة، وتختلف الميزات والرسوم والحدود بين الحساب الشخصي والاحترافي.",
+    "market_size": "لا تنشر Ziina حجم سوق ماليًا قابلًا للتحقق خاصًا بها. كسياق فقط، تذكر وزارة الاقتصاد الإماراتية أن المنشآت الصغيرة والمتوسطة تمثل 94% من الشركات العاملة وتساهم 63.5% من الناتج المحلي غير النفطي. هذه النسب لا تساوي عدد عملاء Ziina ولا TAM أو قيمة المدفوعات القابلة للاستحواذ.",
+    "growth_rate": "لا يوجد معدل نمو حديث ومتجانس يمكن اعتماده. في 2024 ادعت الشركة نمو العملاء 34% شهريًا ونمو الإيراد 10 أضعاف خلال عام، وذُكر 50 ألف مستخدم؛ وفي يونيو 2026 ذكر بيان شراكة أكثر من 260 ألف شركة وفرد. اختلاف التعريفات وغياب سلسلة زمنية مدققة يمنع حساب CAGR دقيق."
   },
   "financials": {
-    "initial_investment": "مدعومة من Y Combinator و Avenir Growth.",
-    "valuation": "غير معلن (عشرات الملايين)",
+    "initial_investment": "انضمت Ziina إلى Y Combinator W21، وجمعت جولة بذرة بقيمة 7.5 ملايين دولار في 2021، ثم Series A بقيمة 22 مليون دولار بقيادة Altos Ventures في سبتمبر 2024. تبلغ الجولتان 29.5 مليون دولار، بينما ذكرت تقارير الجولة أن الإجمالي تجاوز 30 مليون دولار. لا تمثل هذه الأموال إيرادًا أو حجم معاملات.",
+    "valuation": "غير مُفصح عنه علنًا في مصدر أولي موثوق حتى أغسطس 2026. لا يجوز تحويل جولة 22 مليون دولار أو إجمالي التمويل أو حجم المدفوعات إلى تقييم، وأزيل وصف «عشرات الملايين» لغياب شروط ملكية معلنة.",
     "revenue_streams": [
-      "مجاني تماماً لتحويلات الأفراد (Customer Acquisition)",
-      "رسوم عمليات واشتراكات على الحسابات التجارية (Ziina Pro) لاستقبال المدفوعات"
+      "رسوم استقبال مدفوعات الأعمال عبر الروابط وQR وNFC وTap to Pay والموقع: 2.6% + 1 درهم للمعاملة وفق تحديث يونيو 2026، مع 1.5% إضافية للبطاقات الدولية أو العملات غير الدرهم؛ تُراجع صفحة الرسوم الحية لتطبيق VAT والشروط الحالية.",
+      "رسوم بعض المدفوعات الممولة بالبطاقات إلى الحسابات الشخصية: 2.9% + 1 درهم، مقابل تحويلات مجانية في حالات محددة عند استخدام رصيد Ziina.",
+      "رسوم تعبئة المحفظة بالبطاقة للحسابات الشخصية، مع اختلاف النسبة بين Lite وViolet وحدود الاستخدام.",
+      "اشتراك Ziina Violet بقيمة 100 درهم شهريًا أو 996 درهم سنويًا شامل الضريبة وفق الصفحة المتاحة في أغسطس 2026، مقابل مزايا وحدود صرف عملات أعلى.",
+      "رسوم العملات والخدمات الإضافية والتسعير المستقبلي المعلن؛ يبدأ رسم سحب 1 درهم في 2 سبتمبر 2026، لذلك لا يُعامل كإيراد نافذ في تاريخ التحقق.",
+      "لم تفصح الشركة عن إيراد interchange من البطاقة أو دخل العائد على الأرصدة أو توزيع الإيراد حسب المنتج، ولذلك لم تُدرج أرقام غير منشورة."
     ]
   },
   "lessons": [
     {
-      "title": "النمو الفيروسي المبني على المنتج (PLG)",
-      "description": "لأن التطبيق يتطلب من المستلم أن يحمل التطبيق ليتسلم أمواله، أصبحت كل عملية تحويل هي بمثابة (إعلان مجاني). هذا النمو العضوي جعل تكلفة اكتساب العميل (CAC) قريبة من الصفر."
+      "title": "اتبع المستخدم الذي بدأ يتلقى المال لا الذي يرسله فقط",
+      "description": "بدأت Ziina بتحويلات الأصدقاء، ثم لاحظت أن أصحاب الأعمال يستخدمون الشبكة للتحصيل. التحول إلى الروابط والبوابة وTap to Pay أعاد تعريف أفضل عميل من شخص يقسم فاتورة إلى تاجر تتكرر حاجته يوميًا وتوجد حوله إيرادات معاملات."
     },
     {
-      "title": "التصميم كميزة تنافسية (Design as a Moat)",
-      "description": "واجهة البنوك كئيبة ومعقدة. Ziina صممت تطبيقها ليكون أشبه بتطبيق تواصل اجتماعي ممتع وسريع. هذا التركيز الهوّسي بتجربة المستخدم كان سبب تبني جيل الشباب لها فوراً."
+      "title": "الترخيص ليس شارة ثقة فقط؛ إنه خريطة منتجات",
+      "description": "ترخيص القيمة المخزنة فتح مساحة المحفظة والبطاقة وحفظ الرصيد وخدمات أوسع، لكنه لم يمنح حق الإقراض تلقائيًا. في التقنية المالية، كل منتج جديد يجب أن يُبنى داخل حدود الترخيص."
+    },
+    {
+      "title": "حجم المدفوعات يثبت الحركة ولا يثبت اقتصاد الوحدة",
+      "description": "1.35 مليار درهم من حجم المعالجة السنوي المحوّل إلى معدل رقم قوي للتبني، لكنه لا يكشف الإيراد أو الهامش أو الخسائر. يجب قياس TPV ومعدل الرسوم والإيراد والتكاليف كوحدات منفصلة."
+    },
+    {
+      "title": "الميزة الأكثر استخدامًا قد تكون ما يحدث بعد الدفع",
+      "description": "أوضح الرئيس التنفيذي أن السحب الفوري هو أكثر قدرات Ziina استخدامًا لدى التجار. قبول الدفع نصف المنتج فقط؛ سرعة إتاحة المال للمخزون والرواتب والموردين قد تكون سبب البقاء الحقيقي."
+    },
+    {
+      "title": "النمو الشبكي لا يعني أن CAC يساوي صفرًا",
+      "description": "الدفع لطرف جديد قد يعرّفه بالمنتج، لكن بيانات 2024 أشارت أيضًا إلى إحالات B2B وبداية توظيف مبيعات. الأدق وصف النمو بأنه Product-Led ومدعوم بالإحالات، لا مجانيًا بالكامل."
+    },
+    {
+      "title": "التوسع من تطبيق جميل إلى بنية مالية يفرض إعادة هندسة",
+      "description": "المكدس الحالي المنشور يعتمد Swift وKotlin وخدمات Node/Nest وKafka وGraphQL وKubernetes بدل اختزال المنصة في React Native. مع الأموال والتسويات تصبح الاعتمادية والعزل والمراقبة أهم."
+    },
+    {
+      "title": "تنويع الإيراد يبدأ من لحظة الاستخدام لا من إضافة رسم عشوائي",
+      "description": "رسوم المعاملات للأعمال وViolet للأفراد والتعبئة والعملات تمثل طبقات مرتبطة بسلوك مختلف. قوة المحفظة أن كل طبقة تضيف قيمة قبل أن تضيف تكلفة، مع بقاء التسعير واضحًا."
     }
   ],
   "tools": [
-    "React Native",
-    "Node.js",
-    "AWS",
-    "Fintech APIs"
+    "TypeScript وNode.js وNestJS للخدمات الخلفية الرئيسية",
+    "Swift وSwiftUI لتطبيق iOS وKotlin لتطبيق Android؛ لا يدعم المصدر الحالي اعتبار React Native المكدس الأساسي",
+    "Next.js وReact وTypeScript لتطبيقات الويب",
+    "GraphQL Federation لواجهات العملاء وKafka للتواصل بين الخدمات",
+    "PostgreSQL للتخزين وRedis للقراءة السريعة وElasticsearch للبحث",
+    "AWS للبنية السحابية وKubernetes لتنسيق أحمال العمل",
+    "Terraform للبنية ككود وGitHub Actions للتكامل والنشر المستمر",
+    "Apple Pay وGoogle Pay وVisa وMastercard وAmex ضمن قنوات الدفع",
+    "Lean/Open Finance لتجارب Pay by Bank والتعبئة المصرفية",
+    "ضوابط KYC/KYB ومراقبة الاحتيال وحماية بيانات البطاقات"
+  ],
+  "verification": {
+    "status": "verified_with_material_corrections_and_metric_separation",
+    "verified_on": "2026-08-03",
+    "source_policy": {
+      "priority_order": [
+        "صفحات Ziina القانونية والمنتج والتسعير والمساعدة",
+        "مصرف الإمارات المركزي وقواعده",
+        "إعلانات الشركاء والمستثمرين",
+        "مقابلات المؤسسين الموثوقة"
+      ],
+      "sec_applicability": "غير منطبق عمليًا: Ziina شركة خاصة إماراتية وليست مُصدرًا عامًا معروفًا لدى SEC.",
+      "financial_rule": "فصل الإيراد عن التقييم والتمويل وTPV وعدم تقدير الإيراد بضرب الحجم في الرسوم.",
+      "usage_rule": "فصل الزيارات عن المستخدمين والمعاملات وحجم المدفوعات.",
+      "regulatory_rule": "فصل F006737 التنظيمي المعلن عن 1112672 المرتبط بالكيان أو الرخصة التجارية."
+    },
+    "important_notes": [
+      "وصف «Venmo الشرق الأوسط» تشبيه تاريخي لا يعكس نطاق Ziina الحالي الكامل.",
+      "الإيراد المطلق غير معلن؛ 10x في 2024 نمو نسبي بلا قيمة أساس.",
+      "زيارات الموقع وعدد العمليات اليومية غير معلنين.",
+      "260K+ شركة وفرد رقم خدمة معلن لا MAU أو عملاء دافعين بالضرورة.",
+      "1.35B AED رقم processing volume annualized في 2024، لا إيراد أو تقييم.",
+      "تقييم الشركة غير معلن؛ 22M قيمة جولة لا تقييم.",
+      "الجولات المعلنة 7.5M بذرة و22M Series A، والإجمالي المبلغ عنه >30M.",
+      "ترخيص SVF ورقم F006737 معلنان من الشركة؛ لم تُستخرج صفحة سجل فردية من CBUAE.",
+      "1112672 لا يعرض كبديل لرقم الترخيص التنظيمي.",
+      "لا تقدم Ziina قروضًا وفق تحديث 7 يونيو 2026.",
+      "رسوم الأعمال 2.6% + 1 AED مع 1.5% إضافية في حالات دولية؛ الصفحة الحية مرجع التحديث.",
+      "رسم السحب 1 AED يبدأ 2 سبتمبر 2026 ولا يعد نافذًا في 3 أغسطس.",
+      "المكدس الحالي يستخدم Swift وKotlin؛ صُحح افتراض React Native.",
+      "بيانات النمو والإيراد وTPV ذاتية الإفصاح وغير مدققة ماليًا.",
+      "لم تستخدم تقديرات زيارات أو تقييم تجارية."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_at": "2026-08-03",
+      "checks_passed": 151,
+      "checks_failed": 0,
+      "checks": [
+        {
+          "name": "base_id",
+          "passed": true,
+          "details": "id موجود"
+        },
+        {
+          "name": "base_slug",
+          "passed": true,
+          "details": "slug موجود"
+        },
+        {
+          "name": "base_name",
+          "passed": true,
+          "details": "name موجود"
+        },
+        {
+          "name": "base_headline",
+          "passed": true,
+          "details": "headline موجود"
+        },
+        {
+          "name": "base_category",
+          "passed": true,
+          "details": "category موجود"
+        },
+        {
+          "name": "base_company",
+          "passed": true,
+          "details": "company موجود"
+        },
+        {
+          "name": "base_directory_snapshot",
+          "passed": true,
+          "details": "directory_snapshot موجود"
+        },
+        {
+          "name": "base_overview",
+          "passed": true,
+          "details": "overview موجود"
+        },
+        {
+          "name": "base_market_data",
+          "passed": true,
+          "details": "market_data موجود"
+        },
+        {
+          "name": "base_financials",
+          "passed": true,
+          "details": "financials موجود"
+        },
+        {
+          "name": "base_lessons",
+          "passed": true,
+          "details": "lessons موجود"
+        },
+        {
+          "name": "base_tools",
+          "passed": true,
+          "details": "tools موجود"
+        },
+        {
+          "name": "v2_verification",
+          "passed": true,
+          "details": "verification موجود"
+        },
+        {
+          "name": "v2_evidence_map_schema",
+          "passed": true,
+          "details": "evidence_map_schema موجود"
+        },
+        {
+          "name": "v2_evidence_map",
+          "passed": true,
+          "details": "evidence_map موجود"
+        },
+        {
+          "name": "v2_sources",
+          "passed": true,
+          "details": "sources موجود"
+        },
+        {
+          "name": "root",
+          "passed": true,
+          "details": "الجذر كائن"
+        },
+        {
+          "name": "id",
+          "passed": true,
+          "details": "id محفوظ"
+        },
+        {
+          "name": "slug",
+          "passed": true,
+          "details": "slug محفوظ"
+        },
+        {
+          "name": "name",
+          "passed": true,
+          "details": "name محفوظ"
+        },
+        {
+          "name": "arabic",
+          "passed": true,
+          "details": "المحتوى عربي"
+        },
+        {
+          "name": "source_count",
+          "passed": true,
+          "details": "21"
+        },
+        {
+          "name": "ids_unique",
+          "passed": true,
+          "details": "معرفات فريدة"
+        },
+        {
+          "name": "urls_unique",
+          "passed": true,
+          "details": "روابط فريدة"
+        },
+        {
+          "name": "urls_valid",
+          "passed": true,
+          "details": "روابط صالحة"
+        },
+        {
+          "name": "primary_majority",
+          "passed": true,
+          "details": "أغلبية أولية"
+        },
+        {
+          "name": "paths",
+          "passed": true,
+          "details": "15 مسارًا"
+        },
+        {
+          "name": "value_$.company.location",
+          "passed": true,
+          "details": "قيمة مطابقة"
+        },
+        {
+          "name": "fields_$.company.location",
+          "passed": true,
+          "details": "حقول مكتملة"
+        },
+        {
+          "name": "count_$.company.location",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.company.location",
+          "passed": true,
+          "details": "مصادر موجودة"
+        },
+        {
+          "name": "refs_$.company.location",
+          "passed": true,
+          "details": "مراجع سليمة"
+        },
+        {
+          "name": "date_$.company.location",
+          "passed": true,
+          "details": "تاريخ متسق"
+        },
+        {
+          "name": "value_$.company.business_model",
+          "passed": true,
+          "details": "قيمة مطابقة"
+        },
+        {
+          "name": "fields_$.company.business_model",
+          "passed": true,
+          "details": "حقول مكتملة"
+        },
+        {
+          "name": "count_$.company.business_model",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.company.business_model",
+          "passed": true,
+          "details": "مصادر موجودة"
+        },
+        {
+          "name": "refs_$.company.business_model",
+          "passed": true,
+          "details": "مراجع سليمة"
+        },
+        {
+          "name": "date_$.company.business_model",
+          "passed": true,
+          "details": "تاريخ متسق"
+        },
+        {
+          "name": "value_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "قيمة مطابقة"
+        },
+        {
+          "name": "fields_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "حقول مكتملة"
+        },
+        {
+          "name": "count_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "مصادر موجودة"
+        },
+        {
+          "name": "refs_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "مراجع سليمة"
+        },
+        {
+          "name": "date_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "تاريخ متسق"
+        },
+        {
+          "name": "value_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "قيمة مطابقة"
+        },
+        {
+          "name": "fields_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "حقول مكتملة"
+        },
+        {
+          "name": "count_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "مصادر موجودة"
+        },
+        {
+          "name": "refs_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "مراجع سليمة"
+        },
+        {
+          "name": "date_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "تاريخ متسق"
+        },
+        {
+          "name": "value_$.overview.problem",
+          "passed": true,
+          "details": "قيمة مطابقة"
+        },
+        {
+          "name": "fields_$.overview.problem",
+          "passed": true,
+          "details": "حقول مكتملة"
+        },
+        {
+          "name": "count_$.overview.problem",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.overview.problem",
+          "passed": true,
+          "details": "مصادر موجودة"
+        },
+        {
+          "name": "refs_$.overview.problem",
+          "passed": true,
+          "details": "مراجع سليمة"
+        },
+        {
+          "name": "date_$.overview.problem",
+          "passed": true,
+          "details": "تاريخ متسق"
+        },
+        {
+          "name": "value_$.overview.solution",
+          "passed": true,
+          "details": "قيمة مطابقة"
+        },
+        {
+          "name": "fields_$.overview.solution",
+          "passed": true,
+          "details": "حقول مكتملة"
+        },
+        {
+          "name": "count_$.overview.solution",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.overview.solution",
+          "passed": true,
+          "details": "مصادر موجودة"
+        },
+        {
+          "name": "refs_$.overview.solution",
+          "passed": true,
+          "details": "مراجع سليمة"
+        },
+        {
+          "name": "date_$.overview.solution",
+          "passed": true,
+          "details": "تاريخ متسق"
+        },
+        {
+          "name": "value_$.market_data.target_audience",
+          "passed": true,
+          "details": "قيمة مطابقة"
+        },
+        {
+          "name": "fields_$.market_data.target_audience",
+          "passed": true,
+          "details": "حقول مكتملة"
+        },
+        {
+          "name": "count_$.market_data.target_audience",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.market_data.target_audience",
+          "passed": true,
+          "details": "مصادر موجودة"
+        },
+        {
+          "name": "refs_$.market_data.target_audience",
+          "passed": true,
+          "details": "مراجع سليمة"
+        },
+        {
+          "name": "date_$.market_data.target_audience",
+          "passed": true,
+          "details": "تاريخ متسق"
+        },
+        {
+          "name": "value_$.market_data.market_size",
+          "passed": true,
+          "details": "قيمة مطابقة"
+        },
+        {
+          "name": "fields_$.market_data.market_size",
+          "passed": true,
+          "details": "حقول مكتملة"
+        },
+        {
+          "name": "count_$.market_data.market_size",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.market_data.market_size",
+          "passed": true,
+          "details": "مصادر موجودة"
+        },
+        {
+          "name": "refs_$.market_data.market_size",
+          "passed": true,
+          "details": "مراجع سليمة"
+        },
+        {
+          "name": "date_$.market_data.market_size",
+          "passed": true,
+          "details": "تاريخ متسق"
+        },
+        {
+          "name": "value_$.market_data.growth_rate",
+          "passed": true,
+          "details": "قيمة مطابقة"
+        },
+        {
+          "name": "fields_$.market_data.growth_rate",
+          "passed": true,
+          "details": "حقول مكتملة"
+        },
+        {
+          "name": "count_$.market_data.growth_rate",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.market_data.growth_rate",
+          "passed": true,
+          "details": "مصادر موجودة"
+        },
+        {
+          "name": "refs_$.market_data.growth_rate",
+          "passed": true,
+          "details": "مراجع سليمة"
+        },
+        {
+          "name": "date_$.market_data.growth_rate",
+          "passed": true,
+          "details": "تاريخ متسق"
+        },
+        {
+          "name": "value_$.financials.initial_investment",
+          "passed": true,
+          "details": "قيمة مطابقة"
+        },
+        {
+          "name": "fields_$.financials.initial_investment",
+          "passed": true,
+          "details": "حقول مكتملة"
+        },
+        {
+          "name": "count_$.financials.initial_investment",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.financials.initial_investment",
+          "passed": true,
+          "details": "مصادر موجودة"
+        },
+        {
+          "name": "refs_$.financials.initial_investment",
+          "passed": true,
+          "details": "مراجع سليمة"
+        },
+        {
+          "name": "date_$.financials.initial_investment",
+          "passed": true,
+          "details": "تاريخ متسق"
+        },
+        {
+          "name": "value_$.financials.valuation",
+          "passed": true,
+          "details": "قيمة مطابقة"
+        },
+        {
+          "name": "fields_$.financials.valuation",
+          "passed": true,
+          "details": "حقول مكتملة"
+        },
+        {
+          "name": "count_$.financials.valuation",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.financials.valuation",
+          "passed": true,
+          "details": "مصادر موجودة"
+        },
+        {
+          "name": "refs_$.financials.valuation",
+          "passed": true,
+          "details": "مراجع سليمة"
+        },
+        {
+          "name": "date_$.financials.valuation",
+          "passed": true,
+          "details": "تاريخ متسق"
+        },
+        {
+          "name": "value_$.financials.revenue_streams",
+          "passed": true,
+          "details": "قيمة مطابقة"
+        },
+        {
+          "name": "fields_$.financials.revenue_streams",
+          "passed": true,
+          "details": "حقول مكتملة"
+        },
+        {
+          "name": "count_$.financials.revenue_streams",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.financials.revenue_streams",
+          "passed": true,
+          "details": "مصادر موجودة"
+        },
+        {
+          "name": "refs_$.financials.revenue_streams",
+          "passed": true,
+          "details": "مراجع سليمة"
+        },
+        {
+          "name": "date_$.financials.revenue_streams",
+          "passed": true,
+          "details": "تاريخ متسق"
+        },
+        {
+          "name": "value_$.tools",
+          "passed": true,
+          "details": "قيمة مطابقة"
+        },
+        {
+          "name": "fields_$.tools",
+          "passed": true,
+          "details": "حقول مكتملة"
+        },
+        {
+          "name": "count_$.tools",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.tools",
+          "passed": true,
+          "details": "مصادر موجودة"
+        },
+        {
+          "name": "refs_$.tools",
+          "passed": true,
+          "details": "مراجع سليمة"
+        },
+        {
+          "name": "date_$.tools",
+          "passed": true,
+          "details": "تاريخ متسق"
+        },
+        {
+          "name": "value_$.headline",
+          "passed": true,
+          "details": "قيمة مطابقة"
+        },
+        {
+          "name": "fields_$.headline",
+          "passed": true,
+          "details": "حقول مكتملة"
+        },
+        {
+          "name": "count_$.headline",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.headline",
+          "passed": true,
+          "details": "مصادر موجودة"
+        },
+        {
+          "name": "refs_$.headline",
+          "passed": true,
+          "details": "مراجع سليمة"
+        },
+        {
+          "name": "date_$.headline",
+          "passed": true,
+          "details": "تاريخ متسق"
+        },
+        {
+          "name": "value_$.lessons",
+          "passed": true,
+          "details": "قيمة مطابقة"
+        },
+        {
+          "name": "fields_$.lessons",
+          "passed": true,
+          "details": "حقول مكتملة"
+        },
+        {
+          "name": "count_$.lessons",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.lessons",
+          "passed": true,
+          "details": "مصادر موجودة"
+        },
+        {
+          "name": "refs_$.lessons",
+          "passed": true,
+          "details": "مراجع سليمة"
+        },
+        {
+          "name": "date_$.lessons",
+          "passed": true,
+          "details": "تاريخ متسق"
+        },
+        {
+          "name": "no_nan",
+          "passed": true,
+          "details": "لا قيم غير صالحة"
+        },
+        {
+          "name": "revenue_removed",
+          "passed": true,
+          "details": "تقدير الإيراد أزيل"
+        },
+        {
+          "name": "ops_removed",
+          "passed": true,
+          "details": "تقدير العمليات أزيل"
+        },
+        {
+          "name": "traffic_separated",
+          "passed": true,
+          "details": "الزيارات مفصولة"
+        },
+        {
+          "name": "tpv_separated",
+          "passed": true,
+          "details": "TPV مفصول"
+        },
+        {
+          "name": "valuation",
+          "passed": true,
+          "details": "التقييم غير مختلق"
+        },
+        {
+          "name": "funding",
+          "passed": true,
+          "details": "التمويل مفصول"
+        },
+        {
+          "name": "users",
+          "passed": true,
+          "details": "المستخدمون موسومون"
+        },
+        {
+          "name": "annualized",
+          "passed": true,
+          "details": "annualized واضح"
+        },
+        {
+          "name": "licenses",
+          "passed": true,
+          "details": "الرقمان مفصولان"
+        },
+        {
+          "name": "loans",
+          "passed": true,
+          "details": "لا قروض"
+        },
+        {
+          "name": "future_fee",
+          "passed": true,
+          "details": "الرسم المستقبلي مؤرخ"
+        },
+        {
+          "name": "react_native",
+          "passed": true,
+          "details": "المكدس مصحح"
+        },
+        {
+          "name": "stack_NestJS",
+          "passed": true,
+          "details": "NestJS موجود"
+        },
+        {
+          "name": "stack_Swift",
+          "passed": true,
+          "details": "Swift موجود"
+        },
+        {
+          "name": "stack_Kotlin",
+          "passed": true,
+          "details": "Kotlin موجود"
+        },
+        {
+          "name": "stack_Kafka",
+          "passed": true,
+          "details": "Kafka موجود"
+        },
+        {
+          "name": "stack_PostgreSQL",
+          "passed": true,
+          "details": "PostgreSQL موجود"
+        },
+        {
+          "name": "stack_Kubernetes",
+          "passed": true,
+          "details": "Kubernetes موجود"
+        },
+        {
+          "name": "stack_Terraform",
+          "passed": true,
+          "details": "Terraform موجود"
+        },
+        {
+          "name": "lessons_unique",
+          "passed": true,
+          "details": "دروس فريدة"
+        },
+        {
+          "name": "lessons_specific",
+          "passed": true,
+          "details": "دروس خاصة"
+        },
+        {
+          "name": "metric_schema",
+          "passed": true,
+          "details": "فصل شامل"
+        },
+        {
+          "name": "sec",
+          "passed": true,
+          "details": "SEC موضح"
+        },
+        {
+          "name": "schema",
+          "passed": true,
+          "details": "نسخة صحيحة"
+        },
+        {
+          "name": "headline_no_venmo",
+          "passed": true,
+          "details": "عنوان جديد"
+        },
+        {
+          "name": "headline_محفظة",
+          "passed": true,
+          "details": "محفظة في العنوان"
+        },
+        {
+          "name": "headline_بوابة",
+          "passed": true,
+          "details": "بوابة في العنوان"
+        },
+        {
+          "name": "headline_بطاقة",
+          "passed": true,
+          "details": "بطاقة في العنوان"
+        },
+        {
+          "name": "headline_Open Finance",
+          "passed": true,
+          "details": "Open Finance في العنوان"
+        },
+        {
+          "name": "market",
+          "passed": true,
+          "details": "لا TAM مختلق"
+        },
+        {
+          "name": "growth",
+          "passed": true,
+          "details": "لا CAGR مختلق"
+        },
+        {
+          "name": "utf8",
+          "passed": true,
+          "details": "العربية محفوظة"
+        },
+        {
+          "name": "nonempty",
+          "passed": true,
+          "details": "قوائم غير فارغة"
+        }
+      ],
+      "validator_notes": [
+        "تمت قراءة الملف الأصلي والتحقق من JSON.",
+        "تم الحفاظ على البنية الأساسية وإضافة Professional V2.",
+        "تمت مطابقة field_value مع الحقول النهائية.",
+        "تم فحص معرّفات وروابط المصادر.",
+        "تم فصل الإيراد والتقييم والتمويل وTPV والعمليات والزيارات والمستخدمين.",
+        "تم تمييز السعر النافذ عن التغيير المستقبلي.",
+        "تم منع NaN وInfinity."
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول الجوهرية بقيمها ومصادرها وقيودها مع فصل المقاييس.",
+    "required_fields": [
+      "field_value",
+      "verification_status",
+      "confidence",
+      "claim_type",
+      "verified_on",
+      "evidence_summary",
+      "source_ids",
+      "source_references",
+      "limitations",
+      "source_count"
+    ],
+    "verification_status_values": [
+      "analytical_inference_grounded_in_evidence",
+      "verified_as_not_publicly_disclosed",
+      "verified_current_multi_product_model",
+      "verified_current_official_stack",
+      "verified_current_product_suite",
+      "verified_current_segments",
+      "verified_editorial_synthesis",
+      "verified_from_history_and_feedback",
+      "verified_funding_rounds",
+      "verified_market_context_not_tam",
+      "verified_no_comparable_growth_rate",
+      "verified_pricing_paths_not_actuals",
+      "verified_traffic_undisclosed_metrics_separated",
+      "verified_with_regulatory_registry_limit"
+    ],
+    "confidence_scale": {
+      "مرتفعة": "مصدر أولي واضح.",
+      "متوسطة إلى مرتفعة": "مصادر أولية مع قيد محدود.",
+      "متوسطة": "استنتاج تحريري موثق.",
+      "منخفضة": "غير كافٍ للأرقام المالية."
+    },
+    "metric_separation": [
+      "الإيراد الشهري",
+      "الإيراد السنوي",
+      "التقييم",
+      "التمويل",
+      "TPV",
+      "عدد المعاملات",
+      "زيارات الموقع",
+      "المستخدمون المسجلون",
+      "المستخدمون النشطون",
+      "العملاء الدافعون",
+      "الأفراد والشركات المخدومون",
+      "رسوم المعالجة",
+      "رسوم الاشتراك",
+      "رقم الترخيص التنظيمي",
+      "رقم الكيان التجاري"
+    ]
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "شركة تقنية مالية تأسست في دبي عام 2020 وتعمل داخل الإمارات عبر الكيان المعلن Ziina Payment LLC. تعلن الشركة حصولها على ترخيص Stored Value Facility من مصرف الإمارات المركزي برقم F006737، بينما يظهر الرقم 1112672 في الشروط وسياسة الخصوصية كرقم مرتبط بالكيان أو الرخصة التجارية؛ يجب عدم الخلط بين الرقمين. لم يُعثر على إدراج SEC لأن الشركة خاصة وغير أمريكية.",
+      "verification_status": "verified_with_regulatory_registry_limit",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "هوية وموقع وترخيص",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التأسيس والمقر والكيان مدعومة رسميًا، والترخيص ورقمه معلنان من الشركة ضمن سياق CBUAE.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-06",
+        "SRC-07",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Us | Ziina",
+          "publisher": "Ziina",
+          "url": "https://ziina.com/about",
+          "source_type": "صفحة رسمية للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "2020 and 2024 milestones",
+          "supports": "التأسيس والمقر والترخيص"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Is Ziina safe to use?",
+          "publisher": "Ziina Help Center",
+          "url": "https://ziina.com/help-center/7915275-is-ziina-safe-to-use",
+          "source_type": "إفصاح ترخيص وأمان رسمي",
+          "published_at": "2026-06-07",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح ترخيص",
+          "source_locator": "F006737",
+          "supports": "رقم الترخيص التنظيمي"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Ziina General Terms and Conditions",
+          "publisher": "Ziina Payment LLC",
+          "url": "https://ziina.com/terms",
+          "source_type": "شروط قانونية رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "شروط قانونية",
+          "source_locator": "Ziina Payment LLC and 1112672",
+          "supports": "الكيان والرقم التجاري"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "CBUAE Licensing",
+          "publisher": "Central Bank of the UAE",
+          "url": "https://www.centralbank.ae/en/licensing/",
+          "source_type": "مصدر تنظيمي رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تنظيم رسمي",
+          "source_locator": "SVF category",
+          "supports": "تعريف فئة الترخيص"
+        }
+      ],
+      "limitations": "لم يُستخرج الإدراج الفردي من سجل CBUAE الديناميكي.",
+      "source_count": 4
+    },
+    "$.company.business_model": {
+      "field_value": "منصة مدفوعات للأفراد والأعمال تجمع محفظة قيمة مخزنة وتحويلات داخل شبكة Ziina، وروابط وQR وبوابة دفع وTap to Pay وفواتير وبطاقة رقمية. تحقق الدخل من رسوم معالجة مدفوعات الأعمال، ورسوم بعض عمليات التعبئة والإرسال بالبطاقات والعملات الدولية، واشتراك Ziina Violet. لا تقدم قروضًا حتى يونيو 2026، ولم تفصح عن توزيع الإيراد بين المسارات.",
+      "verification_status": "verified_current_multi_product_model",
+      "confidence": "مرتفعة",
+      "claim_type": "نموذج عمل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التسعير والمنتجات الرسمية تدعم المحفظة والمدفوعات والاشتراك والبطاقة ونفي القروض.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-15",
+        "SRC-20"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Fees | Ziina",
+          "publisher": "Ziina",
+          "url": "https://ziina.com/fees",
+          "source_type": "صفحة تسعير رسمية حية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير",
+          "source_locator": "Lite and Violet",
+          "supports": "الاشتراك ورسوم التعبئة"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "What are the fees to use Ziina Business?",
+          "publisher": "Ziina Help Center",
+          "url": "https://ziina.com/help-center/12781259-what-are-the-fees-to-use-ziina-business",
+          "source_type": "مركز مساعدة رسمي",
+          "published_at": "2026-06-29",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مساعدة",
+          "source_locator": "Business fees",
+          "supports": "رسوم الأعمال"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "What is Ziina Card?",
+          "publisher": "Ziina Help Center",
+          "url": "https://ziina.com/help-center/12683668-what-is-zii-card",
+          "source_type": "مركز مساعدة رسمي",
+          "published_at": "2026-04-24",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مساعدة",
+          "source_locator": "Ziina Card",
+          "supports": "البطاقة"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Does Ziina offer loans?",
+          "publisher": "Ziina Help Center",
+          "url": "https://ziina.com/help-center/7998074-does-ziina-offer-loans",
+          "source_type": "مركز مساعدة رسمي",
+          "published_at": "2026-06-07",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مساعدة",
+          "source_locator": "No loans",
+          "supports": "عدم الإقراض"
+        }
+      ],
+      "limitations": "لا يوجد تفصيل للإيراد حسب المسار.",
+      "source_count": 4
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير مُفصح عنه علنًا. ادعت الشركة في سبتمبر 2024 نمو الإيراد عشرة أضعاف خلال 12 شهرًا، لكنها لم تنشر قيمة الأساس أو الإيراد المطلق أو MRR أو ARR. لذلك أزيل تقدير «ملايين الدولارات» ولم يُشتق الإيراد من حجم المدفوعات أو الرسوم المنشورة.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "مرتفعة",
+      "claim_type": "إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا توجد قيمة MRR أو ARR؛ المتاح نمو نسبي بلا قاعدة.",
+      "source_ids": [
+        "SRC-11",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "Ziina banks $22M as growth explodes",
+          "publisher": "TechCrunch",
+          "url": "https://techcrunch.com/2024/09/02/ziina-banks-22m-as-growth-explodes-for-the-uae-based-fintech-for-small-businesses/",
+          "source_type": "تقرير صحفي بمقابلة مباشرة",
+          "published_at": "2024-09-02",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "مقابلة مؤسس",
+          "source_locator": "10x revenue claim",
+          "supports": "النمو النسبي"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Fees | Ziina",
+          "publisher": "Ziina",
+          "url": "https://ziina.com/fees",
+          "source_type": "صفحة تسعير رسمية حية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير",
+          "source_locator": "Fees",
+          "supports": "مسارات إيراد محتملة"
+        }
+      ],
+      "limitations": "غياب الإفصاح لا يثبت انعدام الإيراد.",
+      "source_count": 2
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير مُفصح عنه علنًا، ولا يوجد رقم موثوق لزيارات الموقع الشهرية أو عدد العمليات اليومية. أحدث رقم استخدام عام هو خدمة أكثر من 260 ألف شركة وفرد في يونيو 2026، لكنه لا يحدد المستخدمين النشطين أو الدافعين. أما تجاوز 1.35 مليار درهم فكان حجم مدفوعات سنويًا محوّلًا إلى معدل في 2024، وليس إيرادًا أو زيارات أو عدد معاملات.",
+      "verification_status": "verified_traffic_undisclosed_metrics_separated",
+      "confidence": "مرتفعة",
+      "claim_type": "زيارات واستخدام وTPV",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "فُصلت الزيارات عن المستخدمين وعن TPV.",
+      "source_ids": [
+        "SRC-13",
+        "SRC-01",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "Lean and Ziina launch one-tap Pay by Bank",
+          "publisher": "Wamda / Lean & Ziina",
+          "url": "https://www.wamda.com/2026/06/lean-ziina-launch-uaes-tap-pay-bank-experience-open-finance",
+          "source_type": "بيان شراكة",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان شراكة",
+          "source_locator": "260K+ served",
+          "supports": "رقم الاستخدام الأحدث"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Us | Ziina",
+          "publisher": "Ziina",
+          "url": "https://ziina.com/about",
+          "source_type": "صفحة رسمية للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "1.35B annualized TPV",
+          "supports": "حجم المدفوعات"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Ziina banks $22M as growth explodes",
+          "publisher": "TechCrunch",
+          "url": "https://techcrunch.com/2024/09/02/ziina-banks-22m-as-growth-explodes-for-the-uae-based-fintech-for-small-businesses/",
+          "source_type": "تقرير صحفي بمقابلة مباشرة",
+          "published_at": "2024-09-02",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "تقرير",
+          "source_locator": "50K users 2024",
+          "supports": "مقياس تاريخي"
+        }
+      ],
+      "limitations": "260K لا يحدد MAU، و1.35B annualized وغير مدقق.",
+      "source_count": 3
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "بدأت المشكلة من احتكاك التحويلات اليومية: مشاركة IBAN طويل وإضافة مستفيد والانتظار، ثم اتسعت لدى المستقلين والتجار والشركات الصغيرة إلى قبول المدفوعات عبر قنوات متعددة والوصول السريع إلى السيولة دون أجهزة POS أو تفعيل طويل أو تسويات بطيئة.",
+        "impact": "يؤدي الاحتكاك إلى الاعتماد على النقد والتحويلات اليدوية، وتأخر التحصيل والسحب، وتجزؤ سجلات المدفوعات. لا توجد بيانات عامة تسمح بإسناد تكلفة موحدة أو نسبة خسارة أو CAC قريب من الصفر إلى كل عملاء Ziina."
+      },
+      "verification_status": "verified_from_history_and_feedback",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "مشكلة سوقية",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "قصة التأسيس ومقال CEO وصفحات الأعمال تدعم الاحتكاك والسيولة.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-17",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Us | Ziina",
+          "publisher": "Ziina",
+          "url": "https://ziina.com/about",
+          "source_type": "صفحة رسمية للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "قصة تأسيس",
+          "source_locator": "IBAN friction",
+          "supports": "المشكلة الأصلية"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "The best infrastructure is invisible",
+          "publisher": "Ziina",
+          "url": "https://ziina.com/blog/the-best-infrastructure-is-invisible",
+          "source_type": "مقال رسمي للرئيس التنفيذي",
+          "published_at": "2026-06-19",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مقال CEO",
+          "source_locator": "cash-flow question",
+          "supports": "السيولة"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Generate and Send Invoices Online | Ziina",
+          "publisher": "Ziina",
+          "url": "https://ziina.com/business/invoicing",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "invoicing",
+          "supports": "تجزؤ التحصيل"
+        }
+      ],
+      "limitations": "الأثر الاقتصادي تحليلي وغير مقاس مستقلًا.",
+      "source_count": 3
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "توفر Ziina تحويلات داخلية برقم الهاتف، ومحفظة وسحبًا إلى الحساب المصرفي، وروابط دفع وQR وبوابة وفواتير وTap to Pay، ثم أضافت بطاقة رقمية على شبكة Visa تنفق من رصيد المحفظة، وعضوية Violet، وتجارب Open Finance للتعبئة من الحسابات المصرفية. أصبح المنتج منصة لحركة الأموال للأفراد وتحصيلها وإدارتها للأعمال، لا مجرد تطبيق لتقسيم الفواتير."
+      },
+      "verification_status": "verified_current_product_suite",
+      "confidence": "مرتفعة",
+      "claim_type": "منتج وحل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التحويل والأعمال والبطاقة وOpen Finance موثقة رسميًا.",
+      "source_ids": [
+        "SRC-05",
+        "SRC-21",
+        "SRC-15",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "How can I send a payment?",
+          "publisher": "Ziina Help Center",
+          "url": "https://ziina.com/help-center/7829561-how-can-i-send-a-payment",
+          "source_type": "مركز مساعدة رسمي",
+          "published_at": "2026-05-05",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مساعدة",
+          "source_locator": "phone transfer",
+          "supports": "التحويل"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Generate and Send Invoices Online | Ziina",
+          "publisher": "Ziina",
+          "url": "https://ziina.com/business/invoicing",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منتج",
+          "source_locator": "invoices and links",
+          "supports": "أدوات الأعمال"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "What is Ziina Card?",
+          "publisher": "Ziina Help Center",
+          "url": "https://ziina.com/help-center/12683668-what-is-zii-card",
+          "source_type": "مركز مساعدة رسمي",
+          "published_at": "2026-04-24",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مساعدة",
+          "source_locator": "card",
+          "supports": "البطاقة"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Pay by Bank",
+          "publisher": "Lean Technologies",
+          "url": "https://www.leantech.me/uae/en/products/payments/pay-by-bank",
+          "source_type": "مصدر رسمي للشريك",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "شريك",
+          "source_locator": "Pay by Bank",
+          "supports": "Open Finance"
+        }
+      ],
+      "limitations": "لم تُختبر الجودة أو السرعة مستقلًا.",
+      "source_count": 4
+    },
+    "$.market_data.target_audience": {
+      "field_value": "الأفراد المقيمون في الإمارات، والمستقلون ورواد الأعمال والمنشآت المتناهية الصغر والصغيرة والمتوسطة، والمتاجر والمطاعم والخدمات التي تحتاج قبول المدفوعات عن بُعد أو حضوريًا. يتطلب فتح الحساب حاليًا هوية إماراتية صالحة، وتختلف الميزات والرسوم والحدود بين الحساب الشخصي والاحترافي.",
+      "verification_status": "verified_current_segments",
+      "confidence": "مرتفعة",
+      "claim_type": "جمهور مستهدف",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الصفحات الرسمية تفصل الشخصي والاحترافي ومتطلبات الهوية.",
+      "source_ids": [
+        "SRC-04",
+        "SRC-03",
+        "SRC-21",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Ziina Personal",
+          "publisher": "Ziina",
+          "url": "https://ziina.com/personal",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منتج",
+          "source_locator": "personal",
+          "supports": "الأفراد"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "What are the fees to use Ziina Business?",
+          "publisher": "Ziina Help Center",
+          "url": "https://ziina.com/help-center/12781259-what-are-the-fees-to-use-ziina-business",
+          "source_type": "مركز مساعدة رسمي",
+          "published_at": "2026-06-29",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مساعدة",
+          "source_locator": "business",
+          "supports": "الأعمال"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Generate and Send Invoices Online | Ziina",
+          "publisher": "Ziina",
+          "url": "https://ziina.com/business/invoicing",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منتج",
+          "source_locator": "merchant workflows",
+          "supports": "التجار"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Ziina General Terms and Conditions",
+          "publisher": "Ziina Payment LLC",
+          "url": "https://ziina.com/terms",
+          "source_type": "شروط قانونية رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "شروط",
+          "source_locator": "eligibility",
+          "supports": "متطلبات الحساب"
+        }
+      ],
+      "limitations": "لا توجد أعداد أو إيرادات حسب الشريحة.",
+      "source_count": 4
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر Ziina حجم سوق ماليًا قابلًا للتحقق خاصًا بها. كسياق فقط، تذكر وزارة الاقتصاد الإماراتية أن المنشآت الصغيرة والمتوسطة تمثل 94% من الشركات العاملة وتساهم 63.5% من الناتج المحلي غير النفطي. هذه النسب لا تساوي عدد عملاء Ziina ولا TAM أو قيمة المدفوعات القابلة للاستحواذ.",
+      "verification_status": "verified_market_context_not_tam",
+      "confidence": "مرتفعة",
+      "claim_type": "حجم سوق",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "بيانات الوزارة سياق أهمية SMEs فقط.",
+      "source_ids": [
+        "SRC-19",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-19",
+          "title": "UAE participates in ComeUp 2024",
+          "publisher": "UAE Ministry of Economy",
+          "url": "https://www.moec.gov.ae/en/-/uae-participates-in-comeup-2024-in-korea-to-enhance-growth-opportunities-for-national-smes-and-support-them-in-their-expansion-to-foreign-markets",
+          "source_type": "مصدر حكومي لسياق السوق",
+          "published_at": "2024",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر حكومي",
+          "source_locator": "94% and 63.5%",
+          "supports": "سياق SMEs"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Us | Ziina",
+          "publisher": "Ziina",
+          "url": "https://ziina.com/about",
+          "source_type": "صفحة رسمية للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "UAE focus",
+          "supports": "النطاق"
+        }
+      ],
+      "limitations": "لا توجد بيانات لحساب TAM/SAM/SOM.",
+      "source_count": 2
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا يوجد معدل نمو حديث ومتجانس يمكن اعتماده. في 2024 ادعت الشركة نمو العملاء 34% شهريًا ونمو الإيراد 10 أضعاف خلال عام، وذُكر 50 ألف مستخدم؛ وفي يونيو 2026 ذكر بيان شراكة أكثر من 260 ألف شركة وفرد. اختلاف التعريفات وغياب سلسلة زمنية مدققة يمنع حساب CAGR دقيق.",
+      "verification_status": "verified_no_comparable_growth_rate",
+      "confidence": "مرتفعة",
+      "claim_type": "نمو",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المقاييس متباعدة ومختلفة التعريف؛ لا CAGR.",
+      "source_ids": [
+        "SRC-11",
+        "SRC-13",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "Ziina banks $22M as growth explodes",
+          "publisher": "TechCrunch",
+          "url": "https://techcrunch.com/2024/09/02/ziina-banks-22m-as-growth-explodes-for-the-uae-based-fintech-for-small-businesses/",
+          "source_type": "تقرير صحفي بمقابلة مباشرة",
+          "published_at": "2024-09-02",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "مقابلة",
+          "source_locator": "2024 growth and 50K",
+          "supports": "مقياس تاريخي"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Lean and Ziina launch one-tap Pay by Bank",
+          "publisher": "Wamda / Lean & Ziina",
+          "url": "https://www.wamda.com/2026/06/lean-ziina-launch-uaes-tap-pay-bank-experience-open-finance",
+          "source_type": "بيان شراكة",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان",
+          "source_locator": "260K served",
+          "supports": "مقياس أحدث"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Us | Ziina",
+          "publisher": "Ziina",
+          "url": "https://ziina.com/about",
+          "source_type": "صفحة رسمية للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "product expansion",
+          "supports": "تغير النطاق"
+        }
+      ],
+      "limitations": "ادعاءات النمو غير مدققة ولا نعرف استمرارها.",
+      "source_count": 3
+    },
+    "$.financials.initial_investment": {
+      "field_value": "انضمت Ziina إلى Y Combinator W21، وجمعت جولة بذرة بقيمة 7.5 ملايين دولار في 2021، ثم Series A بقيمة 22 مليون دولار بقيادة Altos Ventures في سبتمبر 2024. تبلغ الجولتان 29.5 مليون دولار، بينما ذكرت تقارير الجولة أن الإجمالي تجاوز 30 مليون دولار. لا تمثل هذه الأموال إيرادًا أو حجم معاملات.",
+      "verification_status": "verified_funding_rounds",
+      "confidence": "مرتفعة",
+      "claim_type": "تمويل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "البذرة وSeries A موثقتان، والإجمالي >30M من تقرير الجولة.",
+      "source_ids": [
+        "SRC-12",
+        "SRC-01",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-12",
+          "title": "Wamda participates in Ziina’s $7.5M funding round",
+          "publisher": "Wamda",
+          "url": "https://www.wamda.com/en/2021/06/wamda-participates-ziina-latest-7-5-million-funding-round",
+          "source_type": "بيان مستثمر مشارك",
+          "published_at": "2021-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان مستثمر",
+          "source_locator": "7.5M seed",
+          "supports": "البذرة"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Us | Ziina",
+          "publisher": "Ziina",
+          "url": "https://ziina.com/about",
+          "source_type": "صفحة رسمية للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "22M Series A",
+          "supports": "Series A"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Ziina banks $22M as growth explodes",
+          "publisher": "TechCrunch",
+          "url": "https://techcrunch.com/2024/09/02/ziina-banks-22m-as-growth-explodes-for-the-uae-based-fintech-for-small-businesses/",
+          "source_type": "تقرير صحفي بمقابلة مباشرة",
+          "published_at": "2024-09-02",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "تقرير",
+          "source_locator": "total >30M",
+          "supports": "الإجمالي"
+        }
+      ],
+      "limitations": "لا توجد شروط ملكية منشورة.",
+      "source_count": 3
+    },
+    "$.financials.valuation": {
+      "field_value": "غير مُفصح عنه علنًا في مصدر أولي موثوق حتى أغسطس 2026. لا يجوز تحويل جولة 22 مليون دولار أو إجمالي التمويل أو حجم المدفوعات إلى تقييم، وأزيل وصف «عشرات الملايين» لغياب شروط ملكية معلنة.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "مرتفعة",
+      "claim_type": "تقييم",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد تقييم معلن في المصادر الأولية المتاحة.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-11",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Us | Ziina",
+          "publisher": "Ziina",
+          "url": "https://ziina.com/about",
+          "source_type": "صفحة رسمية للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "funding milestones",
+          "supports": "غياب تقييم"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Ziina banks $22M as growth explodes",
+          "publisher": "TechCrunch",
+          "url": "https://techcrunch.com/2024/09/02/ziina-banks-22m-as-growth-explodes-for-the-uae-based-fintech-for-small-businesses/",
+          "source_type": "تقرير صحفي بمقابلة مباشرة",
+          "published_at": "2024-09-02",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "تقرير الجولة",
+          "source_locator": "round amount",
+          "supports": "غياب شروط"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Wamda participates in Ziina’s $7.5M funding round",
+          "publisher": "Wamda",
+          "url": "https://www.wamda.com/en/2021/06/wamda-participates-ziina-latest-7-5-million-funding-round",
+          "source_type": "بيان مستثمر مشارك",
+          "published_at": "2021-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان بذرة",
+          "source_locator": "round amount",
+          "supports": "غياب تقييم"
+        }
+      ],
+      "limitations": "لم تستخدم تقديرات قواعد بيانات خاصة.",
+      "source_count": 3
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "رسوم استقبال مدفوعات الأعمال عبر الروابط وQR وNFC وTap to Pay والموقع: 2.6% + 1 درهم للمعاملة وفق تحديث يونيو 2026، مع 1.5% إضافية للبطاقات الدولية أو العملات غير الدرهم؛ تُراجع صفحة الرسوم الحية لتطبيق VAT والشروط الحالية.",
+        "رسوم بعض المدفوعات الممولة بالبطاقات إلى الحسابات الشخصية: 2.9% + 1 درهم، مقابل تحويلات مجانية في حالات محددة عند استخدام رصيد Ziina.",
+        "رسوم تعبئة المحفظة بالبطاقة للحسابات الشخصية، مع اختلاف النسبة بين Lite وViolet وحدود الاستخدام.",
+        "اشتراك Ziina Violet بقيمة 100 درهم شهريًا أو 996 درهم سنويًا شامل الضريبة وفق الصفحة المتاحة في أغسطس 2026، مقابل مزايا وحدود صرف عملات أعلى.",
+        "رسوم العملات والخدمات الإضافية والتسعير المستقبلي المعلن؛ يبدأ رسم سحب 1 درهم في 2 سبتمبر 2026، لذلك لا يُعامل كإيراد نافذ في تاريخ التحقق.",
+        "لم تفصح الشركة عن إيراد interchange من البطاقة أو دخل العائد على الأرصدة أو توزيع الإيراد حسب المنتج، ولذلك لم تُدرج أرقام غير منشورة."
+      ],
+      "verification_status": "verified_pricing_paths_not_actuals",
+      "confidence": "مرتفعة",
+      "claim_type": "مسارات إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المسارات من التسعير الحي ومركز المساعدة مع فصل الحالي عن المستقبلي.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Fees | Ziina",
+          "publisher": "Ziina",
+          "url": "https://ziina.com/fees",
+          "source_type": "صفحة تسعير رسمية حية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير",
+          "source_locator": "personal and Violet",
+          "supports": "الاشتراك والتعبئة"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "What are the fees to use Ziina Business?",
+          "publisher": "Ziina Help Center",
+          "url": "https://ziina.com/help-center/12781259-what-are-the-fees-to-use-ziina-business",
+          "source_type": "مركز مساعدة رسمي",
+          "published_at": "2026-06-29",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مساعدة",
+          "source_locator": "business fees",
+          "supports": "رسوم الأعمال"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "What is Ziina Card?",
+          "publisher": "Ziina Help Center",
+          "url": "https://ziina.com/help-center/12683668-what-is-zii-card",
+          "source_type": "مركز مساعدة رسمي",
+          "published_at": "2026-04-24",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مساعدة",
+          "source_locator": "card",
+          "supports": "البطاقة دون افتراض interchange"
+        }
+      ],
+      "limitations": "لا توجد إيرادات حسب المسار، وقد تتغير الرسوم.",
+      "source_count": 3
+    },
+    "$.tools": {
+      "field_value": [
+        "TypeScript وNode.js وNestJS للخدمات الخلفية الرئيسية",
+        "Swift وSwiftUI لتطبيق iOS وKotlin لتطبيق Android؛ لا يدعم المصدر الحالي اعتبار React Native المكدس الأساسي",
+        "Next.js وReact وTypeScript لتطبيقات الويب",
+        "GraphQL Federation لواجهات العملاء وKafka للتواصل بين الخدمات",
+        "PostgreSQL للتخزين وRedis للقراءة السريعة وElasticsearch للبحث",
+        "AWS للبنية السحابية وKubernetes لتنسيق أحمال العمل",
+        "Terraform للبنية ككود وGitHub Actions للتكامل والنشر المستمر",
+        "Apple Pay وGoogle Pay وVisa وMastercard وAmex ضمن قنوات الدفع",
+        "Lean/Open Finance لتجارب Pay by Bank والتعبئة المصرفية",
+        "ضوابط KYC/KYB ومراقبة الاحتيال وحماية بيانات البطاقات"
+      ],
+      "verification_status": "verified_current_official_stack",
+      "confidence": "مرتفعة",
+      "claim_type": "تقنيات وأدوات",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المكدس من إعلان توظيف رسمي والتكاملات من المنتج والشريك.",
+      "source_ids": [
+        "SRC-18",
+        "SRC-14",
+        "SRC-15",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-18",
+          "title": "Full-Stack Engineer @ Ziina",
+          "publisher": "Ziina Careers / Ashby",
+          "url": "https://jobs.ashbyhq.com/ziina/e1f0f84a-2867-45a6-967d-44462c66ce59",
+          "source_type": "إعلان توظيف رسمي للمكدس التقني",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وظيفة رسمية",
+          "source_locator": "Our tech stack",
+          "supports": "المكدس"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Pay by Bank",
+          "publisher": "Lean Technologies",
+          "url": "https://www.leantech.me/uae/en/products/payments/pay-by-bank",
+          "source_type": "مصدر رسمي للشريك",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "شريك",
+          "source_locator": "Pay by Bank",
+          "supports": "Open Finance"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "What is Ziina Card?",
+          "publisher": "Ziina Help Center",
+          "url": "https://ziina.com/help-center/12683668-what-is-zii-card",
+          "source_type": "مركز مساعدة رسمي",
+          "published_at": "2026-04-24",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منتج",
+          "source_locator": "Visa card",
+          "supports": "البطاقة"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Generate and Send Invoices Online | Ziina",
+          "publisher": "Ziina",
+          "url": "https://ziina.com/business/invoicing",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منتج",
+          "source_locator": "payment methods",
+          "supports": "القنوات"
+        }
+      ],
+      "limitations": "لا يربط الإعلان كل تقنية بكل خدمة.",
+      "source_count": 4
+    },
+    "$.headline": {
+      "field_value": "من تقسيم فاتورة إلى بنية مالية مرخّصة: كيف حوّلت Ziina تجربة الدفع إلى محفظة وبوابة وبطاقة وOpen Finance",
+      "verification_status": "verified_editorial_synthesis",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "عنوان تحريري",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يلخص الانتقال من P2P إلى منصة مرخصة متعددة المنتجات.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-14",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Us | Ziina",
+          "publisher": "Ziina",
+          "url": "https://ziina.com/about",
+          "source_type": "صفحة رسمية للشركة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تاريخ رسمي",
+          "source_locator": "journey",
+          "supports": "التحول"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Pay by Bank",
+          "publisher": "Lean Technologies",
+          "url": "https://www.leantech.me/uae/en/products/payments/pay-by-bank",
+          "source_type": "مصدر رسمي للشريك",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "شريك",
+          "source_locator": "Open Finance",
+          "supports": "Pay by Bank"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "What is Ziina Card?",
+          "publisher": "Ziina Help Center",
+          "url": "https://ziina.com/help-center/12683668-what-is-zii-card",
+          "source_type": "مركز مساعدة رسمي",
+          "published_at": "2026-04-24",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منتج",
+          "source_locator": "card",
+          "supports": "البطاقة"
+        }
+      ],
+      "limitations": "«بنية مالية» تعبير تحريري.",
+      "source_count": 3
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "اتبع المستخدم الذي بدأ يتلقى المال لا الذي يرسله فقط",
+          "description": "بدأت Ziina بتحويلات الأصدقاء، ثم لاحظت أن أصحاب الأعمال يستخدمون الشبكة للتحصيل. التحول إلى الروابط والبوابة وTap to Pay أعاد تعريف أفضل عميل من شخص يقسم فاتورة إلى تاجر تتكرر حاجته يوميًا وتوجد حوله إيرادات معاملات."
+        },
+        {
+          "title": "الترخيص ليس شارة ثقة فقط؛ إنه خريطة منتجات",
+          "description": "ترخيص القيمة المخزنة فتح مساحة المحفظة والبطاقة وحفظ الرصيد وخدمات أوسع، لكنه لم يمنح حق الإقراض تلقائيًا. في التقنية المالية، كل منتج جديد يجب أن يُبنى داخل حدود الترخيص."
+        },
+        {
+          "title": "حجم المدفوعات يثبت الحركة ولا يثبت اقتصاد الوحدة",
+          "description": "1.35 مليار درهم من حجم المعالجة السنوي المحوّل إلى معدل رقم قوي للتبني، لكنه لا يكشف الإيراد أو الهامش أو الخسائر. يجب قياس TPV ومعدل الرسوم والإيراد والتكاليف كوحدات منفصلة."
+        },
+        {
+          "title": "الميزة الأكثر استخدامًا قد تكون ما يحدث بعد الدفع",
+          "description": "أوضح الرئيس التنفيذي أن السحب الفوري هو أكثر قدرات Ziina استخدامًا لدى التجار. قبول الدفع نصف المنتج فقط؛ سرعة إتاحة المال للمخزون والرواتب والموردين قد تكون سبب البقاء الحقيقي."
+        },
+        {
+          "title": "النمو الشبكي لا يعني أن CAC يساوي صفرًا",
+          "description": "الدفع لطرف جديد قد يعرّفه بالمنتج، لكن بيانات 2024 أشارت أيضًا إلى إحالات B2B وبداية توظيف مبيعات. الأدق وصف النمو بأنه Product-Led ومدعوم بالإحالات، لا مجانيًا بالكامل."
+        },
+        {
+          "title": "التوسع من تطبيق جميل إلى بنية مالية يفرض إعادة هندسة",
+          "description": "المكدس الحالي المنشور يعتمد Swift وKotlin وخدمات Node/Nest وKafka وGraphQL وKubernetes بدل اختزال المنصة في React Native. مع الأموال والتسويات تصبح الاعتمادية والعزل والمراقبة أهم."
+        },
+        {
+          "title": "تنويع الإيراد يبدأ من لحظة الاستخدام لا من إضافة رسم عشوائي",
+          "description": "رسوم المعاملات للأعمال وViolet للأفراد والتعبئة والعملات تمثل طبقات مرتبطة بسلوك مختلف. قوة المحفظة أن كل طبقة تضيف قيمة قبل أن تضيف تكلفة، مع بقاء التسعير واضحًا."
+        }
+      ],
+      "verification_status": "analytical_inference_grounded_in_evidence",
+      "confidence": "متوسطة",
+      "claim_type": "تحليل ودروس",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "مبنية على التحول والترخيص وTPV والسحب الفوري والنمو والمكدس والتسعير.",
+      "source_ids": [
+        "SRC-11",
+        "SRC-17",
+        "SRC-18",
+        "SRC-02",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "Ziina banks $22M as growth explodes",
+          "publisher": "TechCrunch",
+          "url": "https://techcrunch.com/2024/09/02/ziina-banks-22m-as-growth-explodes-for-the-uae-based-fintech-for-small-businesses/",
+          "source_type": "تقرير صحفي بمقابلة مباشرة",
+          "published_at": "2024-09-02",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "مقابلة",
+          "source_locator": "pivot and growth",
+          "supports": "التحول"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "The best infrastructure is invisible",
+          "publisher": "Ziina",
+          "url": "https://ziina.com/blog/the-best-infrastructure-is-invisible",
+          "source_type": "مقال رسمي للرئيس التنفيذي",
+          "published_at": "2026-06-19",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "CEO article",
+          "source_locator": "instant cash out",
+          "supports": "السيولة"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Full-Stack Engineer @ Ziina",
+          "publisher": "Ziina Careers / Ashby",
+          "url": "https://jobs.ashbyhq.com/ziina/e1f0f84a-2867-45a6-967d-44462c66ce59",
+          "source_type": "إعلان توظيف رسمي للمكدس التقني",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "stack",
+          "source_locator": "architecture",
+          "supports": "الهندسة"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Fees | Ziina",
+          "publisher": "Ziina",
+          "url": "https://ziina.com/fees",
+          "source_type": "صفحة تسعير رسمية حية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "pricing",
+          "source_locator": "fee layers",
+          "supports": "الإيراد"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "CBUAE Licensing",
+          "publisher": "Central Bank of the UAE",
+          "url": "https://www.centralbank.ae/en/licensing/",
+          "source_type": "مصدر تنظيمي رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "regulation",
+          "source_locator": "SVF",
+          "supports": "الترخيص"
+        }
+      ],
+      "limitations": "استنتاجات تحريرية وليست توصيات استثمارية.",
+      "source_count": 5
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "About Us | Ziina",
+      "publisher": "Ziina",
+      "url": "https://ziina.com/about",
+      "source_type": "صفحة رسمية للشركة",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "التأسيس في دبي عام 2020، YC، بذرة 7.5M، Series A بقيمة 22M، ترخيص SVF، وحجم معالجة annualized تجاوز 1.35B AED في 2024."
+    },
+    {
+      "id": "SRC-02",
+      "title": "Fees | Ziina",
+      "publisher": "Ziina",
+      "url": "https://ziina.com/fees",
+      "source_type": "صفحة تسعير رسمية حية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Lite وViolet ورسوم التعبئة والعملات، مع تغيير مستقبلي للسحب يبدأ 2 سبتمبر 2026."
+    },
+    {
+      "id": "SRC-03",
+      "title": "What are the fees to use Ziina Business?",
+      "publisher": "Ziina Help Center",
+      "url": "https://ziina.com/help-center/12781259-what-are-the-fees-to-use-ziina-business",
+      "source_type": "مركز مساعدة رسمي",
+      "published_at": "2026-06-29",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "2.6% + 1 AED على استلام مدفوعات الأعمال و1.5% إضافية للبطاقات الدولية أو العملات غير AED."
+    },
+    {
+      "id": "SRC-04",
+      "title": "Ziina Personal",
+      "publisher": "Ziina",
+      "url": "https://ziina.com/personal",
+      "source_type": "صفحة منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "التحويل بالرصيد، الدفع عبر الهاتف، السحب المصرفي، الروابط وQR."
+    },
+    {
+      "id": "SRC-05",
+      "title": "How can I send a payment?",
+      "publisher": "Ziina Help Center",
+      "url": "https://ziina.com/help-center/7829561-how-can-i-send-a-payment",
+      "source_type": "مركز مساعدة رسمي",
+      "published_at": "2026-05-05",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "إرسال برقم الهاتف دون IBAN أو SWIFT."
+    },
+    {
+      "id": "SRC-06",
+      "title": "Is Ziina safe to use?",
+      "publisher": "Ziina Help Center",
+      "url": "https://ziina.com/help-center/7915275-is-ziina-safe-to-use",
+      "source_type": "إفصاح ترخيص وأمان رسمي",
+      "published_at": "2026-06-07",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "رقم الترخيص المعلن F006737 وترخيص Stored Value Facility."
+    },
+    {
+      "id": "SRC-07",
+      "title": "Ziina General Terms and Conditions",
+      "publisher": "Ziina Payment LLC",
+      "url": "https://ziina.com/terms",
+      "source_type": "شروط قانونية رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Ziina Payment LLC والرقم 1112672 والمحفظة وروابط الدفع وAPI."
+    },
+    {
+      "id": "SRC-08",
+      "title": "Ziina Privacy Policy",
+      "publisher": "Ziina Payment LLC",
+      "url": "https://ziina.com/privacy",
+      "source_type": "سياسة خصوصية رسمية",
+      "published_at": "2022-11-28",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "الكيان القانوني وبيانات الهوية والمعاملات والبطاقات."
+    },
+    {
+      "id": "SRC-09",
+      "title": "CBUAE Licensing",
+      "publisher": "Central Bank of the UAE",
+      "url": "https://www.centralbank.ae/en/licensing/",
+      "source_type": "مصدر تنظيمي رسمي",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "تعريف تراخيص SVF وخدمات المدفوعات وOpen Finance."
+    },
+    {
+      "id": "SRC-10",
+      "title": "Retail Payment Services and Card Schemes Regulation",
+      "publisher": "CBUAE Rulebook",
+      "url": "https://rulebook.centralbank.ae/en/rulebook/312-retail-payment-services-and-card-schemes-regulation",
+      "source_type": "تنظيم رسمي",
+      "published_at": "2022-08-01",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "متطلبات خدمات المدفوعات والامتثال ومراقبة الاحتيال."
+    },
+    {
+      "id": "SRC-11",
+      "title": "Ziina banks $22M as growth explodes",
+      "publisher": "TechCrunch",
+      "url": "https://techcrunch.com/2024/09/02/ziina-banks-22m-as-growth-explodes-for-the-uae-based-fintech-for-small-businesses/",
+      "source_type": "تقرير صحفي بمقابلة مباشرة",
+      "published_at": "2024-09-02",
+      "accessed_at": "2026-08-03",
+      "primary": false,
+      "notes": "22M Series A، 50K مستخدم في 2024، وادعاءات 34% MoM و10x للإيراد وTPV annualized."
+    },
+    {
+      "id": "SRC-12",
+      "title": "Wamda participates in Ziina’s $7.5M funding round",
+      "publisher": "Wamda",
+      "url": "https://www.wamda.com/en/2021/06/wamda-participates-ziina-latest-7-5-million-funding-round",
+      "source_type": "بيان مستثمر مشارك",
+      "published_at": "2021-06",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "جولة بذرة 7.5M وقائمة المستثمرين."
+    },
+    {
+      "id": "SRC-13",
+      "title": "Lean and Ziina launch one-tap Pay by Bank",
+      "publisher": "Wamda / Lean & Ziina",
+      "url": "https://www.wamda.com/2026/06/lean-ziina-launch-uaes-tap-pay-bank-experience-open-finance",
+      "source_type": "بيان شراكة",
+      "published_at": "2026-06",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "أكثر من 260K شركة وفرد، وإطلاق One-Tap Pay by Bank."
+    },
+    {
+      "id": "SRC-14",
+      "title": "Pay by Bank",
+      "publisher": "Lean Technologies",
+      "url": "https://www.leantech.me/uae/en/products/payments/pay-by-bank",
+      "source_type": "مصدر رسمي للشريك",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "تجربة الدفع أو التعبئة مباشرة من الحساب المصرفي."
+    },
+    {
+      "id": "SRC-15",
+      "title": "What is Ziina Card?",
+      "publisher": "Ziina Help Center",
+      "url": "https://ziina.com/help-center/12683668-what-is-zii-card",
+      "source_type": "مركز مساعدة رسمي",
+      "published_at": "2026-04-24",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "بطاقة رقمية Visa من رصيد المحفظة وليست ائتمانًا."
+    },
+    {
+      "id": "SRC-16",
+      "title": "Which banks are using Open Finance on Ziina?",
+      "publisher": "Ziina Help Center",
+      "url": "https://ziina.com/help-center/14804675-which-banks-are-using-open-finance-on-ziina",
+      "source_type": "مركز مساعدة رسمي",
+      "published_at": "2026-06-03",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Mashreq وCBD وWio وADIB وFAB وقت التحديث."
+    },
+    {
+      "id": "SRC-17",
+      "title": "The best infrastructure is invisible",
+      "publisher": "Ziina",
+      "url": "https://ziina.com/blog/the-best-infrastructure-is-invisible",
+      "source_type": "مقال رسمي للرئيس التنفيذي",
+      "published_at": "2026-06-19",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "السحب الفوري أكثر قدرة استخدامًا لدى التجار وفق CEO."
+    },
+    {
+      "id": "SRC-18",
+      "title": "Full-Stack Engineer @ Ziina",
+      "publisher": "Ziina Careers / Ashby",
+      "url": "https://jobs.ashbyhq.com/ziina/e1f0f84a-2867-45a6-967d-44462c66ce59",
+      "source_type": "إعلان توظيف رسمي للمكدس التقني",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Node/Nest، Swift، Kotlin، React/Next، GraphQL، Kafka، PostgreSQL، Redis، Elasticsearch، AWS، Kubernetes، Terraform."
+    },
+    {
+      "id": "SRC-19",
+      "title": "UAE participates in ComeUp 2024",
+      "publisher": "UAE Ministry of Economy",
+      "url": "https://www.moec.gov.ae/en/-/uae-participates-in-comeup-2024-in-korea-to-enhance-growth-opportunities-for-national-smes-and-support-them-in-their-expansion-to-foreign-markets",
+      "source_type": "مصدر حكومي لسياق السوق",
+      "published_at": "2024",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "SMEs تمثل 94% من الشركات وتساهم 63.5% من الناتج غير النفطي."
+    },
+    {
+      "id": "SRC-20",
+      "title": "Does Ziina offer loans?",
+      "publisher": "Ziina Help Center",
+      "url": "https://ziina.com/help-center/7998074-does-ziina-offer-loans",
+      "source_type": "مركز مساعدة رسمي",
+      "published_at": "2026-06-07",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "لا تقدم قروضًا شخصية أو تجارية حاليًا."
+    },
+    {
+      "id": "SRC-21",
+      "title": "Generate and Send Invoices Online | Ziina",
+      "publisher": "Ziina",
+      "url": "https://ziina.com/business/invoicing",
+      "source_type": "صفحة منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "الفواتير والروابط والبطاقات والعملات المتعددة وتصدير المعاملات."
+    }
   ]
 }

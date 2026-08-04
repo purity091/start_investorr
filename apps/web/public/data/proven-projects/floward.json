@@ -2,51 +2,1718 @@
   "id": "floward",
   "slug": "floward",
   "name": "فلاورد (Floward)",
-  "headline": "المتجر الكويتي الذي قاد رقمنة سوق الورود والهدايا في المنطقة",
-  "category": "E-Commerce / الهدايا والورود",
+  "headline": "من باقة ورد إلى بنية إهداء إقليمية: كيف جعلت فلاورد التحكم في التجربة منصةً للتوسع عبر الفئات والقنوات",
+  "category": "E-Commerce & Gifting / التجارة الإلكترونية والهدايا السريعة",
   "company": {
-    "location": "الكويت / توسع إقليمي (GCC و بريطانيا)",
-    "business_model": "تجارة إلكترونية متكاملة رأسياً (D2C)"
+    "location": "تأسست فلاورد في الكويت عام 2017، وتعرض صفحاتها المؤسسية الحالية نشاطًا في تسع دول ونحو 40 مدينة أو أكثر في الشرق الأوسط والمملكة المتحدة. تختلف بعض الصفحات العامة بين 37 و40+ مدينة بسبب توقيت تحديثها، لذلك يُستخدم «نحو 40 مدينة» كلقطة تشغيلية لا كعدد قانوني ثابت للكيانات أو الفروع.",
+    "business_model": "منصة تجارة إلكترونية مُدارة للورود والهدايا تجمع بين التوريد اليومي للزهور، التنسيق المحلي، إدارة التوصيل في اليوم نفسه عبر أسطول مبرد، وبيع منتجات علامات محلية ودولية. توسع النموذج إلى هدايا الشركات، امتلاك علامة Mubkhar للعطور، شراكات فاخرة مثل Damas، آلات بيع روبوتية، وبطاقات هدايا مسبقة الدفع عبر بنوك وشركات دفع منظمة. المزيج الدقيق بين هامش المخزون والعمولات ورسوم التوصيل واقتصاديات البطاقات غير معلن."
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين",
-    "monthly_traffic": "1M+ /mo"
+    "monthly_revenue": "غير معلن. فلاورد شركة خاصة ولم تنشر إيرادًا شهريًا أو MRR أو ARR أو قوائم مالية موحدة مدققة ضمن المصادر العامة المستخدمة حتى 3 أغسطس 2026. تصريحات نمو الإيراد التاريخية، ومبالغ التمويل، وعدد سيقان الورد، وقيمة سوق الهدايا لا تسمح باشتقاق الإيراد الحالي.",
+    "monthly_traffic": "غير معلن. لا تنشر فلاورد زيارات الموقع الشهرية أو MAU أو عدد الطلبات الشهري في المصادر الأولية المراجعة. العمل في نحو 40 مدينة، وتوصيل 50 مليون ساق ورد في 2022، والشراكة مع أكثر من 400 علامة مؤشرات تشغيلية مختلفة وليست حركة موقع أو عملاء نشطين أو طلبات شهرية."
   },
   "overview": {
     "problem": {
-      "text": "سوق الورود والهدايا في الخليج كان يعتمد بشكل شبه كلي على المتاجر التقليدية غير المنظمة (Offline)، مع غياب الثقة في الجودة وصعوبة مفاجأة شخص آخر بهدية.",
-      "impact": "تجربة مستخدم سيئة عند طلب الهدايا عن بعد، ومحدودية خيارات التوصيل الاحترافي للورود الطازجة."
+      "text": "الإهداء عن بُعد ليس مجرد عرض كتالوج. المنتج حساس للوقت والجودة والمناسبة، والعميل يشتري غالبًا لمتلَقٍ في مدينة أخرى ولا يستطيع فحص الورد أو التغليف قبل التسليم. لذلك تتجمع المخاطر في توافر الزهور الطازجة، اتساق التصميم، دقة العنوان، توقيت المفاجأة، أصالة الهدايا المرافقة، والقدرة على استيعاب قمم حادة في مناسبات مثل الأعياد ويوم الأم وفالنتاين.",
+      "impact": "أي خلل صغير قد يفسد المناسبة كلها، فيتحول التأخير أو اختلاف الترتيب إلى خسارة ثقة أعلى من تجارة يومية عادية. تشغيليًا، تحتاج الشركة إلى مخزون سريع التلف، فرق تنسيق، شبكة توصيل ومراقبة جودة محلية، بينما يبقى الطلب موسميًا ومتقلبًا. هذا يجعل التوسع الجغرافي والفئوي اختبارًا لاقتصاديات الوحدات ورأس المال العامل، لا مجرد نسخ تطبيق إلى دولة جديدة."
     },
     "solution": {
-      "text": "منصة تجارة إلكترونية تشتري الورود من المزارع مباشرة (تكامل رأسي)، وتنسقها داخل ورش خاصة، وتوصلها في سيارات مبردة بنفس اليوم."
+      "text": "بنت فلاورد نموذجًا متكاملًا يتحكم في أجزاء حرجة من الرحلة: توريد الزهور يوميًا، تنسيقها محليًا، تقديم هدايا مختارة من علامات شريكة، ثم إدارة التوصيل في اليوم نفسه عبر أسطول مبرد. استخدمت الزهور كبوابة إلى فئات أوسع مثل العطور والمجوهرات والكيك والشوكولاتة، ودعمت ذلك بالاستحواذ على Mubkhar والشراكات الفاخرة. وفي 2025–2026 أضافت قنوات فعلية مؤتمتة وبطاقات مسبقة الدفع عبر شركاء منظمين، لتوسيع معنى الهدية من منتج مادي إلى تجربة وقيمة إنفاق مرنة."
     }
   },
   "market_data": {
-    "target_audience": "الأفراد الراغبون في إرسال هدايا راقية، والشركات للمناسبات.",
-    "market_size": "سوق الهدايا والورود في الخليج يتجاوز ملياري دولار.",
-    "growth_rate": "سيطرة شبه كاملة على التجارة الإلكترونية للورود في الخليج والتوسع بنجاح إلى لندن."
+    "target_audience": "الأفراد الذين يرسلون ورودًا وهدايا داخل المدينة أو عبر الحدود، بما في ذلك المشترون في المناسبات والعلاقات العائلية والمهنية؛ والشركات التي تحتاج هدايا للعملاء والموظفين والفعاليات؛ والعلامات المحلية والدولية التي تستخدم المنصة كقناة توزيع رقمية. لا يوجد إفصاح عام يحدد عدد العملاء المدفوعين أو المشترين النشطين لكل فئة.",
+    "market_size": "لا يوجد رقم رسمي موحد للسوق في المصادر الأولية المراجعة. قدّرت STV في 2021 سوق تجزئة الزهور المقطوفة في الخليج بنحو 3 مليارات دولار سنويًا، ثم وصفت في 2023 سوق الزهور المستهدف بنحو 3 مليارات دولار وسوق الهدايا الأوسع بنحو 10 مليارات دولار. هذه تقديرات مستثمر بتعريف ومنهجية غير منشورين، وليست إيراد فلاورد أو GMV أو حصة سوقية مثبتة.",
+    "growth_rate": "لا تنشر الشركة معدل نمو مالي حاليًا. تاريخيًا قالت إن إيراد 2020 نما بأكثر من عشرة أضعاف وإن إيراد أول 100 يوم من 2021 تجاوز إيراد 2020 كاملًا، وقالت STV إن المنصة نمت سبع مرات بين استثمار 2021 وجولة فبراير 2023. توسع النطاق من 20 مدينة وسبع دول في يونيو 2021 إلى تسع دول ونحو 40 مدينة حاليًا، لكن هذه لقطات تاريخية غير متجانسة ولا تكوّن CAGR حاليًا."
   },
   "financials": {
-    "initial_investment": "بدأت بجهد المؤسس عبد العزيز اللوغاني وتمويل ذاتي قبل جمع تمويلات فاقت 150 مليون دولار للتحضير للاكتتاب العام (IPO).",
-    "valuation": "$500M+ (تقييم تقديري)",
+    "initial_investment": "تذكر دراسة London Business School أن المراحل المبكرة مُولت عبر الأصدقاء والعائلة ومكتب عائلي بعد إعادة بناء Q8 Flowers كـFloward. بلغت الجولات العامة المعلنة 34.2 مليون دولار حتى يناير 2022، متضمنة Series B بقيمة 27.5 مليون دولار، ثم أضيفت Series C بقيمة 156 مليون دولار في فبراير 2023؛ أي نحو 190.2 مليون دولار تمويلًا معلنًا تراكميًا. هذا رأس مال تاريخي وليس إيرادًا أو GMV أو نقدًا متبقيًا، كما أن قيمة استحواذ Mubkhar لم تُعلن.",
+    "valuation": "غير معلن. قالت فلاورد في فبراير 2023 إن تقييمها ارتفع 3.8 مرات منذ الجولة السابقة، لكنها لم تنشر قيمة ما قبل الاستثمار أو بعده. لذلك حُذف تقدير 500 مليون دولار أو أكثر. وصف الجولة بأنها «Pre-IPO» وإنشاء لجنة للطرح يعبّران عن استعداد أو نية تاريخية، ولا يثبتان إتمام إدراج عام أو تقييمًا سوقيًا حاليًا.",
     "revenue_streams": [
-      "مبيعات الورود والتنسيقات المباشرة",
-      "مبيعات الهدايا المرافقة المرتفعة الهامش (مجوهرات، عطور، كيك)",
-      "عقود الشركات (B2B Gifting)"
+      "هامش بيع باقات الورد والتنسيقات التي تُورّد وتُجهّز وتُسلّم ضمن شبكة فلاورد؛ الإيراد والهامش المطلقان غير معلنين.",
+      "هامش بيع أو عمولة تجارية على الهدايا المرافقة من علامات محلية ودولية، مثل الشوكولاتة والكيك والعطور والمجوهرات؛ شروط تقاسم الإيراد غير منشورة.",
+      "مبيعات وخدمات هدايا الشركات للعملاء والموظفين والفعاليات، مع حلول وتنسيقات مخصصة؛ حجم العقود غير معلن.",
+      "إيرادات علامة Mubkhar بعد الاستحواذ من العطور ومنافذ البيع المرتبطة بها؛ قيمة الصفقة ومساهمة العلامة المالية غير معلنتين.",
+      "مبيعات عبر القنوات الفعلية مثل آلات البيع الروبوتية للزهور؛ عدد الوحدات وحجم المبيعات غير منشورين.",
+      "مقابل تجاري محتمل من حزم Floward Card أو توزيع البطاقة بالتعاون مع البنوك وشركات الإصدار؛ اقتصاديات الرسوم وتقاسم الإيراد غير معلنة.",
+      "رصيد البطاقة مسبقة الدفع ليس إيرادًا كاملًا لفلاورد؛ الإيراد المحاسبي، إن وجد، هو فقط الهامش أو الرسوم أو قيمة المنتجات والخدمات المعترف بها.",
+      "رسوم التوصيل أو الخدمة عندما تُفرض ضمن عملية الشراء قد تكون مسار دخل، لكن متوسط الرسوم ومساهمتها المالية غير معلنين.",
+      "تمويل المستثمرين البالغ نحو 190.2 مليون دولار ليس إيرادًا ولا مبيعات.",
+      "50 مليون ساق ورد و400+ علامة ونحو 40 مدينة وحجم السوق مؤشرات تشغيلية أو سوقية، وليست إيرادًا أو GMV أو عملاء نشطين."
     ]
   },
   "lessons": [
     {
-      "title": "التكامل الرأسي والجودة (Vertical Integration)",
-      "description": "فلاورد ليست مجرد منصة وسيطة (Marketplace) بين الزبون وبائع الورد. إنها تشتري الورد، تخزنه، تنسقه، وتوصله لضمان تجربة عميل مثالية."
+      "title": "في الإهداء، التحكم في النتيجة أهم من اتساع الكتالوج",
+      "description": "لا يشتري العميل وردًا فقط؛ يشتري لحظة يجب أن تصل بالشكل والوقت المناسبين. لهذا صنعت فلاورد ميزتها عبر التحكم في التوريد والتنسيق والتبريد والتوصيل. كل طبقة إضافية ترفع التكلفة، لكنها تقلل احتمال أن يفسد طرف خارجي التجربة التي تحمل اسم العلامة."
     },
     {
-      "title": "الاستحواذ المتقاطع (Cross-Selling)",
-      "description": "الورود لوحدها قد لا تكون كافية للربحية العالية، لذا أضافت فلاورد منتجات مكملة كهدايا (شوكولاتة، عطور) لرفع متوسط قيمة الطلب (AOV)."
+      "title": "الفئة الضيقة قد تكون بوابة لسوق أوسع",
+      "description": "بدأت الزهور كمنتج واضح ومتكرر في المناسبات، ثم أصبحت مدخلًا إلى العطور والكيك والشوكولاتة والمجوهرات. الدرس أن التوسع الأفضل لا يبدأ بإضافة فئات عشوائية، بل بإضافة ما يكمل نية الشراء نفسها ويرفع قيمة السلة من دون إعادة بناء الطلب من الصفر."
     },
     {
-      "title": "توطين التجربة والشراكات",
-      "description": "قامت الشركة برعاية فعاليات رياضية كبرى والتعاون مع فنانين ومؤثرين محليين لتصبح جزءاً من الثقافة اليومية للمناسبات السعيدة."
+      "title": "الموسمية تتطلب تصميمًا للذروة لا للمتوسط",
+      "description": "عمليات الإهداء تواجه أيامًا يتضاعف فيها الطلب بسرعة. النجاح لا يُقاس بمتوسط يوم هادئ، بل بقدرة المخزون والفلوريست والأسطول والدعم على امتصاص الذروة مع بقاء الجودة. البنية الزائدة في معظم العام قد تكون بوليصة تأمين لأيام تصنع سمعة السنة كلها."
+    },
+    {
+      "title": "التوسع الحقيقي هو نقل نظام تشغيل محلي",
+      "description": "دخول مدينة جديدة يحتاج موردي زهور، فرق تنسيق، علامات شريكة، توصيلًا وتوافقًا ثقافيًا مع المناسبات. لذلك فإن عدد الدول وحده لا يقيس جودة التوسع؛ الأهم هو كثافة الطلب واقتصاديات الوحدة والقدرة على تكرار معايير الجودة في كل مدينة."
+    },
+    {
+      "title": "الاستحواذ يختصر بناء الثقة في فئة مجاورة",
+      "description": "شراء Mubkhar أضاف علامة عطور ذات قاعدة عملاء وهوية خاصة بدل بناء علامة جديدة من الصفر. قيمة الاستحواذ لا تأتي من جمع الشعارات، بل من الحفاظ على خصوصية الأصل وربطه بتوزيع فلاورد وبيانات المناسبات والتسويق المتقاطع."
+    },
+    {
+      "title": "الشراكة قد تكون أفضل من امتلاك كل مخزون",
+      "description": "تكامل Damas وعلامات أخرى يسمح بتوسيع العرض الفاخر من دون تصنيع المجوهرات داخليًا. النموذج الهجين يجمع تحكمًا مباشرًا في الزهور مع شراكات في الفئات الأخرى، لكنه يحتاج وضوحًا في الأصالة والمخزون وخدمة ما بعد البيع وتوزيع المسؤولية."
+    },
+    {
+      "title": "القناة الفعلية يمكن أن تكون امتدادًا للمنتج الرقمي",
+      "description": "آلات البيع الروبوتية لا تنقض نموذج التجارة الإلكترونية؛ إنها تنقل التخصيص والطباعة والحفظ إلى نقاط مرور عالية. القناة الجديدة تكون مفيدة عندما تحافظ على جودة العلامة وتلتقط طلبًا فوريًا لا يخدمه التوصيل التقليدي بكفاءة."
+    },
+    {
+      "title": "التقنية المالية تخدم المناسبة عبر شريك منظم",
+      "description": "بطاقة Floward وسّعت الهدية إلى حرية إنفاق، لكن إصدار البطاقة ومعالجة الأموال يتمان مع بنوك وشركات دفع منظمة. الدرس أن المنصة تستطيع إضافة طبقة مالية من دون التحول إلى بنك، بشرط الفصل بين تجربة العميل والمسؤوليات التنظيمية والأرصدة."
+    },
+    {
+      "title": "جولة ما قبل الطرح ليست طرحًا عامًا",
+      "description": "تسمية Series C بأنها Pre-IPO وإنشاء لجنة للطرح يوضحان النية والاستعداد، لكنهما لا يساويان نشرة إصدار أو موافقة جهة سوق أو إدراجًا. التحليل المهني يفصل بين مرحلة التمويل الخاص والسيولة العامة، ولا يستنتج تقييمًا حاليًا من لقب الجولة."
+    },
+    {
+      "title": "كل رقم يحتاج اسمًا وتعريفًا وفترة",
+      "description": "التمويل ليس إيرادًا، وسيقان الورد ليست طلبات، والعلامات الشريكة ليست عملاء، وحجم السوق ليس GMV، ونمو 7x لا يوضح قاعدة القياس وحده. جودة الملف المالي تبدأ برفض تحويل المقاييس التشغيلية المختلفة إلى قصة رقمية واحدة."
     }
-  ]
+  ],
+  "tools": [
+    "منصة ويب وتطبيقات لشراء الورود والهدايا عبر أسواق متعددة",
+    "توريد يومي للزهور من موردين ومزارعين مختارين",
+    "تصميم وتنسيق محلي للباقات والمنتجات النباتية",
+    "إدارة جودة وتغليف وتجهيز للهدايا الحساسة للمناسبة",
+    "أسطول توصيل مبرد وإدارة توصيل في اليوم نفسه",
+    "كتالوج متعدد الفئات لمنتجات علامات محلية ودولية",
+    "حلول هدايا شركات وتخصيص للمناسبات والفعاليات",
+    "إدارة شراكات العلامات التجارية والتشكيلات الحصرية",
+    "تكامل تشغيلي وتجاري مع علامة Mubkhar المملوكة",
+    "آلات بيع روبوتية مع طباعة بطاقات وترطيب آلي للزهور",
+    "بطاقات هدايا مسبقة الدفع عبر بنوك ومصدري بطاقات منظمين",
+    "دعم وسائل دفع محلية ودولية بحسب السوق",
+    "تخصيص الرسائل والعناوين وبيانات المستلم",
+    "قياس وإفصاح استدامة لعمليات السعودية ضمن تقرير 2024",
+    "لم تُدرج حزمة برمجية داخلية مثل AWS أو React لعدم وجود إفصاح أولي موثوق يسمح بنسبها إلى البنية الحالية"
+  ],
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "About us",
+      "publisher": "Floward",
+      "source_type": "official_current_company_profile",
+      "url": "https://floward.co/about-us/",
+      "published_date": null,
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "تأسست Floward في 2017 وتعمل في تسع دول ونحو أربعين مدينة",
+        "توريد الزهور يوميًا وترتيبها محليًا والتوصيل في اليوم نفسه عبر أسطول مبرد",
+        "توسيع التشكيلة إلى الشوكولاتة والعطور والكيك والمجوهرات"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Floward corporate homepage",
+      "publisher": "Floward",
+      "source_type": "official_current_corporate_homepage",
+      "url": "https://floward.co/",
+      "published_date": null,
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "التوصيل إلى أكثر من أربعين مدينة في تسع دول",
+        "استمرار النشاط والهوية التشغيلية حتى تاريخ التحقق"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Floward Cements its Leading Market Position with a Series B $27.5 Million Funding Round",
+      "publisher": "Floward",
+      "source_type": "official_historical_funding_announcement",
+      "url": "https://floward.co/floward-cements-its-leading-market-position-with-a-series-b-27-5-million-funding-round/",
+      "published_date": "2021-06-27",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "Series B بقيمة 27.5 مليون دولار",
+        "20 مدينة في سبع دول وقت الإعلان",
+        "نمو الإيراد أكثر من 10 مرات في 2020 وتجاوز أول 100 يوم من 2021 إيراد 2020 وفق الشركة"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Floward raises USD156 million in Pre-IPO Series C Round",
+      "publisher": "Floward",
+      "source_type": "official_historical_funding_announcement",
+      "url": "https://floward.co/floward-raises-usd156-million-in-pre-ipo-series-c-round/",
+      "published_date": "2023-02-07",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "Series C بقيمة 156 مليون دولار وإجمالي جولات سابقة 34.2 مليون دولار",
+        "ارتفاع التقييم 3.8 مرات دون قيمة مطلقة",
+        "50 مليون ساق ورد في 2022 وأكثر من ألف وظيفة مباشرة و400+ علامة وموهبة"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Doubling-Down on Floward: MENA’s Largest Online Flowers and Gifting Destination",
+      "publisher": "STV",
+      "source_type": "lead_investor_thesis_and_round_announcement",
+      "url": "https://stv.vc/blog/en/doubling-down-on-floward",
+      "published_date": "2023-02-07",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "المشاركة في قيادة جولة 156 مليون دولار",
+        "نمو المنصة 7 مرات منذ 2021",
+        "تقدير سوق الزهور بنحو 3 مليارات دولار والهدايا الأوسع بنحو 10 مليارات"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Investing in Floward: MENA’s Largest Flowers and Gifting Online Store",
+      "publisher": "STV",
+      "source_type": "lead_investor_series_b_thesis",
+      "url": "https://stv.vc/blog/en/investing-in-floward",
+      "published_date": "2021-06-27",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "قيادة جولة 27.5 مليون دولار",
+        "تقدير سوق تجزئة الزهور المقطوفة في الخليج بنحو 3 مليارات دولار"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Floward acquires Mubkhar",
+      "publisher": "Floward",
+      "source_type": "official_acquisition_announcement",
+      "url": "https://floward.co/floward-acquires-mubkhar/",
+      "published_date": "2022-11-14",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "الاستحواذ على Mubkhar دون إعلان قيمة الصفقة",
+        "استخدام الاستحواذ لتوسيع فئات الهدايا"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Floward is expanding its gifting offering",
+      "publisher": "Floward",
+      "source_type": "official_product_category_expansion_announcement",
+      "url": "https://floward.co/floward-is-expanding-its-gifting-offering/",
+      "published_date": "2022-10-19",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "توسيع فئات الهدايا عبر الأسواق",
+        "الاعتماد على علامات محلية ودولية مختارة"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Floward and Damas Jewellery Forge Strategic Partnership to Redefine Luxury Gifting in the GCC",
+      "publisher": "Floward",
+      "source_type": "official_strategic_brand_partnership",
+      "url": "https://floward.co/floward-and-damas-jewellery-forge-strategic-partnership-to-redefine-luxury-gifting-in-the-gcc/",
+      "published_date": "2024-12-03",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "إضافة مختارات Damas إلى المنصة ابتداء من السعودية",
+        "عدم نشر هامش أو مبيعات الشراكة"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Floward Publishes Its First Sustainability Report",
+      "publisher": "Floward",
+      "source_type": "official_sustainability_disclosure",
+      "url": "https://floward.co/floward-publishes-its-first-sustainability-report/",
+      "published_date": "2025-09-16",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "تقرير استدامة 2024 يركز كميًا على السعودية",
+        "20% من النفايات أعيد تدويرها أو تحويلها إلى سماد",
+        "2.8 مليون ريال مبادرات مجتمعية و94% موردين محليين في السعودية"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Floward 2024 Sustainability Report",
+      "publisher": "Floward",
+      "source_type": "official_report_landing_page",
+      "url": "https://floward.co/publications/floward-2024-sustainability-report/",
+      "published_date": "2025-09-08",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "وجود تقرير استدامة رسمي لعام 2024"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Floward Unveils MENA’s First Robotic Flower Vending Machine",
+      "publisher": "Floward",
+      "source_type": "official_offline_channel_innovation_announcement",
+      "url": "https://floward.co/floward-unveils-menas-first-robotic-flower-vending-machine-bridging-e-commerce-with-offline-innovation/",
+      "published_date": "2025-05-20",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "آلات بيع روبوتية في السعودية والإمارات وقطر والكويت",
+        "طباعة بطاقات وترطيب آلي وتنفيذ فوري"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Boubyan and Floward Launch the First Central Bank-Approved Floward Prepaid Card in Kuwait",
+      "publisher": "Boubyan Bank",
+      "source_type": "official_bank_product_announcement",
+      "url": "https://www.bankboubyan.com/en/news/413827",
+      "published_date": "2026-01-28",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "بطاقة مسبقة الدفع في الكويت مع Boubyan وVisa ومعتمدة من بنك الكويت المركزي",
+        "عدم نشر اقتصاديات الإيراد أو تقاسم الرسوم"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Floward Launches Floward Card in Jordan with GateToPay and Mastercard",
+      "publisher": "Floward",
+      "source_type": "official_prepaid_gift_card_launch",
+      "url": "https://floward.co/floward-launches-floward-card-in-jordan-with-gatetopay-and-mastercard/",
+      "published_date": "2026-01-21",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "بطاقة مسبقة الدفع في الأردن مع GateToPay وMastercard",
+        "Floward ليست جهة إصدار مستقلة"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Floward Introduces the Floward Card in Bahrain with SimpliFi, INFINIOS, and Mastercard",
+      "publisher": "Floward",
+      "source_type": "official_prepaid_gift_card_launch",
+      "url": "https://floward.co/floward-introduces-the-floward-card-in-bahrain-with-simplifi-infinios-and-mastercard/",
+      "published_date": "2026-01-11",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "بطاقة مسبقة الدفع في البحرين عبر شركاء إصدار ومعالجة منظمين",
+        "عدم نشر عدد البطاقات أو حجم الأرصدة أو الإيراد"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Floward’s IPO",
+      "publisher": "London Business School Publishing",
+      "source_type": "academic_business_case_summary",
+      "url": "https://publishing.london.edu/cases/flowards-ipo/",
+      "published_date": "2025-11-01",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "إعادة بناء Q8 Flowers كـFloward",
+        "تمويل مبكر عبر الأصدقاء والعائلة ومكتب عائلي",
+        "التحكم من التوريد والإنتاج إلى التوصيل ومعضلة النمو والربحية وسيولة المستثمرين"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Floward Featured in Forbes Middle East’s Top 50 Most-Funded Startups",
+      "publisher": "Floward",
+      "source_type": "official_historical_funding_and_scale_summary",
+      "url": "https://floward.co/floward-featured-in-forbes-middle-easts-top-50-most-funded-startups/",
+      "published_date": "2022-01-17",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "إجمالي تمويل 34.2 مليون دولار حتى يناير 2022",
+        "36 مدينة في تسع دول وأكثر من 650 موظفًا وقت الإعلان"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Terms and Conditions for Ordering Flowers & Gifts",
+      "publisher": "Floward",
+      "source_type": "official_current_legal_terms",
+      "url": "https://floward.com/static-pages/terms",
+      "published_date": null,
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "Floward ليست شريكًا معتمدًا لكل علامة ما لم يذكر خلاف ذلك",
+        "بطاقات Floward في بعض الأسواق تصدرها جهات منظمة",
+        "قيمة البطاقة رصيد للمتلقي وليست إيرادًا كاملًا للمنصة"
+      ]
+    }
+  ],
+  "verification": {
+    "status": "verified_with_strict_financial_and_operating_metric_separation",
+    "verified_on": "2026-08-03",
+    "research_cutoff": "2026-08-03",
+    "source_policy": "الأولوية لصفحات Floward وبياناتها الرسمية، ثم بيانات المستثمر الرئيسي STV، وإعلان Boubyan Bank، ودراسة London Business School. فلاورد شركة خاصة ولا توجد إفصاحات SEC أو قوائم مالية موحدة عامة؛ لذلك لم تُستخدم تقديرات الزيارات أو الإيراد أو التقييم من قواعد بيانات تجارية كحقائق.",
+    "important_notes": [
+      "الإيراد الشهري وMRR وARR غير معلنة ولم تُقدّر.",
+      "زيارات الموقع وMAU والطلبات الشهرية غير معلنة ولم تُقدّر.",
+      "إجمالي التمويل العام المحسوب من الإعلانات الرسمية يقارب 190.2 مليون دولار حتى فبراير 2023.",
+      "التمويل رأس مال تاريخي وليس إيرادًا أو GMV أو تقييمًا أو نقدًا حاليًا.",
+      "تقييم 500 مليون دولار أو أكثر غير مدعوم وحُذف.",
+      "زيادة التقييم 3.8 مرات لا تكشف قيمة pre-money أو post-money.",
+      "وصف الجولة بأنها Pre-IPO لا يثبت تنفيذ طرح عام.",
+      "لم يُعثر ضمن المصادر الرسمية المستخدمة حتى تاريخ التحقق على إعلان إتمام إدراج عام.",
+      "50 مليون ساق ورد في 2022 لا تساوي 50 مليون طلب أو عميل أو وحدة مباعة.",
+      "أكثر من 400 علامة وشريك لا يساوي عدد العملاء المدفوعين.",
+      "العمل في نحو 40 مدينة وتسع دول لا يساوي زيارات الموقع أو الحصة السوقية.",
+      "تقديرا 3 مليارات دولار للزهور و10 مليارات للهدايا من STV هما تقديران استثماريان لا إحصاءان رسميان.",
+      "تصريحات النمو 10x و7x تاريخية، بتعريفات وفترات مختلفة، ولا تمثل معدل نمو 2026.",
+      "قيمة استحواذ Mubkhar وشروط الصفقة غير معلنة.",
+      "شراكة Damas تثبت توفر فئة مجوهرات ولا تكشف الهامش أو المبيعات.",
+      "أرصدة Floward Card ليست إيرادًا كاملًا لفلاورد؛ اقتصاديات الرسوم والتقاسم غير معلنة.",
+      "بيانات الاستدامة الكمية المنشورة تخص عمليات السعودية في 2024 ولا يجوز تعميمها على المجموعة كلها.",
+      "تفاوت الصفحات العامة بين 37 و40+ مدينة عولج باستخدام وصف محافظ «نحو 40 مدينة».",
+      "حزمة التقنية الداخلية غير معلنة؛ لذلك استُخدمت قدرات المنتج والتشغيل بدل لغات وقواعد بيانات تخمينية."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_on": "2026-08-03",
+      "validator": "Python json module + jsonschema Draft 2020-12 + custom Professional V2 integrity checks",
+      "check_count": 22,
+      "granular_assertion_count": 254,
+      "checks": [
+        "اجتياز JSON Schema Draft 2020-12 مع وجود الحقول الأساسية وحقول Professional V2",
+        "الحفاظ على جميع مفاتيح البنية الأصلية وإضافة tools وsources وverification وevidence_map_schema وevidence_map",
+        "تطابق field_value في كل مدخل evidence_map مع القيمة الفعلية في JSONPath",
+        "تطابق source_count مع source_ids وsource_references",
+        "عدم وجود source_id مكرر أو مرجع دليل يشير إلى مصدر غير موجود",
+        "تطابق عنوان وناشر ونوع ورابط كل مرجع مختصر مع سجل المصدر الكامل",
+        "سلامة جميع روابط المصادر بصيغة HTTPS",
+        "عدم وجود NaN أو Infinity أو قيم JSON غير قياسية",
+        "وجود محتوى عربي جوهري في العنوان والتحليل والدروس",
+        "وسم الإيراد الشهري وMRR وARR بأنها غير معلنة",
+        "وسم زيارات الموقع وMAU والطلبات الشهرية بأنها غير معلنة",
+        "فصل إجمالي التمويل المعلن 190.2 مليون دولار عن الإيراد وGMV والنقد الحالي",
+        "وسم التقييم المطلق بأنه غير معلن وحذف تقدير 500 مليون دولار أو أكثر",
+        "عدم تحويل ارتفاع التقييم 3.8 مرات إلى قيمة pre-money أو post-money",
+        "فصل وصف Pre-IPO ولجنة الطرح عن إتمام إدراج عام",
+        "فصل 50 مليون ساق ورد عن عدد الطلبات والعملاء والإيراد",
+        "فصل 400+ علامة وشريك عن العملاء المدفوعين والمستخدمين النشطين",
+        "فصل نطاق تسع دول ونحو 40 مدينة عن حركة الموقع والحصة السوقية",
+        "وسم أرقام 3 و10 مليارات دولار كتقديرات سوق صادرة عن المستثمر",
+        "فصل رصيد البطاقات مسبقة الدفع عن إيراد Floward",
+        "عدم اختلاق قيمة استحواذ Mubkhar أو اقتصاديات شراكة Damas والبطاقات",
+        "استبدال أي حزمة تقنية تخمينية بقدرات منتج وتشغيل موثقة ووجود 10 دروس و18 مصدرًا و15 مدخل دليل"
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول الجوهرية بقيمها الفعلية وحالة التحقق والثقة والمصادر، وتفصل بين الإيراد والتمويل والتقييم وحجم السوق وسيقان الورد والعلامات الشريكة والمدن والزيارات والعملاء والبطاقات مسبقة الدفع.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي أو وثيقة أولية قوية.",
+      "verified_current_product_capability": "القدرة موجودة في صفحة منتج أو إعلان رسمي حديث، من دون افتراض حجم استخدامها أو إيرادها.",
+      "verified_as_not_publicly_disclosed": "لم يُنشر المقياس المطلوب، ولذلك لم يُستخدم تقدير خارجي.",
+      "verified_historical_financing": "معلومة تمويل مرتبطة بجولة وتاريخ ومبلغ محددين.",
+      "verified_historical_operating_metric": "مقياس تشغيل أو نمو نشر في تاريخ محدد ولا يُعامل كمقياس حالي.",
+      "verified_with_metric_definition_limits": "المعلومة منشورة لكن تعريفها لا يسمح بتحويلها إلى إيراد أو مستخدم نشط أو عميل مدفوع.",
+      "analytical_inference": "تحليل مهني مشتق من حقائق موثقة وليس تصريحًا حرفيًا من الشركة."
+    },
+    "confidence_scale": {
+      "high": "مصدر رسمي مباشر أو عدة وثائق أولية متطابقة.",
+      "medium_high": "استنتاج محدود مبني على مصادر رسمية مع حدود واضحة.",
+      "medium": "تصريح شركة أو مستثمر تاريخي يحتاج حذرًا عند إسقاطه على الحاضر.",
+      "low_not_used": "تقدير خارجي أو ادعاء بلا تعريف أو تاريخ كافٍ لم يُستخدم كحقيقة."
+    },
+    "metric_definitions": {
+      "revenue": "دخل محاسبي تعترف به الشركة من بيع المنتجات والخدمات؛ لا يساوي التمويل أو قيمة البطاقة أو حجم السوق.",
+      "mrr_arr": "إيراد شهري أو سنوي متكرر وفق تعريف محاسبي؛ لا يُستخرج من عدد المدن أو العلامات أو جولة التمويل.",
+      "funding": "رأس مال جمعته الشركة من المستثمرين؛ لا يمثل إيرادًا ولا تقييمًا ولا رصيدًا نقديًا حاليًا.",
+      "valuation": "قيمة حقوق الملكية في جولة محددة مع تمييز pre-money وpost-money؛ مضاعف النمو وحده لا يكشفها.",
+      "gmv": "القيمة الإجمالية للبضائع المبيعة عبر المنصة قبل تحديد الإيراد المحاسبي؛ لم تنشر فلاورد GMV في المصادر المراجعة.",
+      "flower_stems": "عدد سيقان الورد التي تم التعامل معها أو توصيلها؛ لا يساوي عدد الطلبات أو الوحدات أو الإيراد.",
+      "partner_brands": "عدد العلامات والمواهب الشريكة؛ لا يساوي عدد العملاء المدفوعين أو الموردين النشطين في فترة محددة.",
+      "active_users": "مستخدمون نشطون خلال نافذة زمنية معلنة؛ لا تنشر فلاورد رقمًا حاليًا في المصادر المراجعة.",
+      "website_traffic": "زيارات الموقع خلال فترة زمنية؛ منفصلة عن المشترين والعملاء والطلبات.",
+      "operating_cities": "مدن يتاح فيها النشاط أو التوصيل؛ لا تساوي عدد المتاجر أو الكيانات القانونية أو العملاء.",
+      "market_size": "تقدير لقيمة سوق خارجي؛ لا يمثل إيراد الشركة أو GMV أو تقييمها.",
+      "prepaid_card_value": "رصيد مالي للمستفيد تديره جهة إصدار أو شريك منظم؛ لا يُعترف بكامل الرصيد تلقائيًا كإيراد للمنصة.",
+      "pre_ipo": "وصف لمرحلة تمويل أو استعداد محتمل؛ لا يساوي نشرة إصدار أو موافقة سوق أو إدراجًا مكتملًا."
+    }
+  },
+  "evidence_map": {
+    "$.headline": {
+      "field_value": "من باقة ورد إلى بنية إهداء إقليمية: كيف جعلت فلاورد التحكم في التجربة منصةً للتوسع عبر الفئات والقنوات",
+      "verification_status": "analytical_inference",
+      "confidence": "high",
+      "claim_type": "company_specific_editorial_headline",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "العنوان يختصر انتقال فلاورد من التحكم في سلسلة الورود إلى منصة إهداء متعددة الفئات والقنوات.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-01",
+        "SRC-04",
+        "SRC-07",
+        "SRC-09",
+        "SRC-12",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About us",
+          "publisher": "Floward",
+          "source_type": "official_current_company_profile",
+          "url": "https://floward.co/about-us/",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "العنوان يختصر انتقال فلاورد من التحكم في سلسلة الورود إلى منصة إهداء متعددة الفئات والقنوات."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Floward raises USD156 million in Pre-IPO Series C Round",
+          "publisher": "Floward",
+          "source_type": "official_historical_funding_announcement",
+          "url": "https://floward.co/floward-raises-usd156-million-in-pre-ipo-series-c-round/",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "العنوان يختصر انتقال فلاورد من التحكم في سلسلة الورود إلى منصة إهداء متعددة الفئات والقنوات."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Floward acquires Mubkhar",
+          "publisher": "Floward",
+          "source_type": "official_acquisition_announcement",
+          "url": "https://floward.co/floward-acquires-mubkhar/",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "العنوان يختصر انتقال فلاورد من التحكم في سلسلة الورود إلى منصة إهداء متعددة الفئات والقنوات."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Floward and Damas Jewellery Forge Strategic Partnership to Redefine Luxury Gifting in the GCC",
+          "publisher": "Floward",
+          "source_type": "official_strategic_brand_partnership",
+          "url": "https://floward.co/floward-and-damas-jewellery-forge-strategic-partnership-to-redefine-luxury-gifting-in-the-gcc/",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "العنوان يختصر انتقال فلاورد من التحكم في سلسلة الورود إلى منصة إهداء متعددة الفئات والقنوات."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Floward Unveils MENA’s First Robotic Flower Vending Machine",
+          "publisher": "Floward",
+          "source_type": "official_offline_channel_innovation_announcement",
+          "url": "https://floward.co/floward-unveils-menas-first-robotic-flower-vending-machine-bridging-e-commerce-with-offline-innovation/",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "العنوان يختصر انتقال فلاورد من التحكم في سلسلة الورود إلى منصة إهداء متعددة الفئات والقنوات."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Floward’s IPO",
+          "publisher": "London Business School Publishing",
+          "source_type": "academic_business_case_summary",
+          "url": "https://publishing.london.edu/cases/flowards-ipo/",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "العنوان يختصر انتقال فلاورد من التحكم في سلسلة الورود إلى منصة إهداء متعددة الفئات والقنوات."
+        }
+      ],
+      "limitations": "العنوان صياغة تحريرية تحليلية ولا يمثل وصفًا حرفيًا صادرًا عن الشركة."
+    },
+    "$.company.location": {
+      "field_value": "تأسست فلاورد في الكويت عام 2017، وتعرض صفحاتها المؤسسية الحالية نشاطًا في تسع دول ونحو 40 مدينة أو أكثر في الشرق الأوسط والمملكة المتحدة. تختلف بعض الصفحات العامة بين 37 و40+ مدينة بسبب توقيت تحديثها، لذلك يُستخدم «نحو 40 مدينة» كلقطة تشغيلية لا كعدد قانوني ثابت للكيانات أو الفروع.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "high",
+      "claim_type": "company_origin_and_current_operating_footprint",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر الرسمية تحدد التأسيس في الكويت والعمل في تسع دول ونحو 40 مدينة، مع اختلاف طفيف بين الصفحات بسبب تحديثها.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About us",
+          "publisher": "Floward",
+          "source_type": "official_current_company_profile",
+          "url": "https://floward.co/about-us/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تحدد التأسيس في الكويت والعمل في تسع دول ونحو 40 مدينة، مع اختلاف طفيف بين الصفحات بسبب تحديثها."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Floward corporate homepage",
+          "publisher": "Floward",
+          "source_type": "official_current_corporate_homepage",
+          "url": "https://floward.co/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تحدد التأسيس في الكويت والعمل في تسع دول ونحو 40 مدينة، مع اختلاف طفيف بين الصفحات بسبب تحديثها."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Floward Cements its Leading Market Position with a Series B $27.5 Million Funding Round",
+          "publisher": "Floward",
+          "source_type": "official_historical_funding_announcement",
+          "url": "https://floward.co/floward-cements-its-leading-market-position-with-a-series-b-27-5-million-funding-round/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تحدد التأسيس في الكويت والعمل في تسع دول ونحو 40 مدينة، مع اختلاف طفيف بين الصفحات بسبب تحديثها."
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Floward Featured in Forbes Middle East’s Top 50 Most-Funded Startups",
+          "publisher": "Floward",
+          "source_type": "official_historical_funding_and_scale_summary",
+          "url": "https://floward.co/floward-featured-in-forbes-middle-easts-top-50-most-funded-startups/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تحدد التأسيس في الكويت والعمل في تسع دول ونحو 40 مدينة، مع اختلاف طفيف بين الصفحات بسبب تحديثها."
+        }
+      ],
+      "limitations": "عدد المدن ديناميكي، وتفاوت الصفحات العامة لا يثبت عدد الكيانات القانونية أو الفروع المسجلة."
+    },
+    "$.company.business_model": {
+      "field_value": "منصة تجارة إلكترونية مُدارة للورود والهدايا تجمع بين التوريد اليومي للزهور، التنسيق المحلي، إدارة التوصيل في اليوم نفسه عبر أسطول مبرد، وبيع منتجات علامات محلية ودولية. توسع النموذج إلى هدايا الشركات، امتلاك علامة Mubkhar للعطور، شراكات فاخرة مثل Damas، آلات بيع روبوتية، وبطاقات هدايا مسبقة الدفع عبر بنوك وشركات دفع منظمة. المزيج الدقيق بين هامش المخزون والعمولات ورسوم التوصيل واقتصاديات البطاقات غير معلن.",
+      "verification_status": "verified_current_product_capability",
+      "confidence": "high",
+      "claim_type": "business_model_and_operating_scope",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر الرسمية تثبت التوريد والتنسيق والتوصيل، توسيع فئات الهدايا، الاستحواذ، الشراكات، القنوات الآلية والبطاقات عبر شركاء منظمين.",
+      "source_count": 9,
+      "source_ids": [
+        "SRC-01",
+        "SRC-07",
+        "SRC-08",
+        "SRC-09",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14",
+        "SRC-15",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About us",
+          "publisher": "Floward",
+          "source_type": "official_current_company_profile",
+          "url": "https://floward.co/about-us/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تثبت التوريد والتنسيق والتوصيل، توسيع فئات الهدايا، الاستحواذ، الشراكات، القنوات الآلية والبطاقات عبر شركاء منظمين."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Floward acquires Mubkhar",
+          "publisher": "Floward",
+          "source_type": "official_acquisition_announcement",
+          "url": "https://floward.co/floward-acquires-mubkhar/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تثبت التوريد والتنسيق والتوصيل، توسيع فئات الهدايا، الاستحواذ، الشراكات، القنوات الآلية والبطاقات عبر شركاء منظمين."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Floward is expanding its gifting offering",
+          "publisher": "Floward",
+          "source_type": "official_product_category_expansion_announcement",
+          "url": "https://floward.co/floward-is-expanding-its-gifting-offering/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تثبت التوريد والتنسيق والتوصيل، توسيع فئات الهدايا، الاستحواذ، الشراكات، القنوات الآلية والبطاقات عبر شركاء منظمين."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Floward and Damas Jewellery Forge Strategic Partnership to Redefine Luxury Gifting in the GCC",
+          "publisher": "Floward",
+          "source_type": "official_strategic_brand_partnership",
+          "url": "https://floward.co/floward-and-damas-jewellery-forge-strategic-partnership-to-redefine-luxury-gifting-in-the-gcc/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تثبت التوريد والتنسيق والتوصيل، توسيع فئات الهدايا، الاستحواذ، الشراكات، القنوات الآلية والبطاقات عبر شركاء منظمين."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Floward Unveils MENA’s First Robotic Flower Vending Machine",
+          "publisher": "Floward",
+          "source_type": "official_offline_channel_innovation_announcement",
+          "url": "https://floward.co/floward-unveils-menas-first-robotic-flower-vending-machine-bridging-e-commerce-with-offline-innovation/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تثبت التوريد والتنسيق والتوصيل، توسيع فئات الهدايا، الاستحواذ، الشراكات، القنوات الآلية والبطاقات عبر شركاء منظمين."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Boubyan and Floward Launch the First Central Bank-Approved Floward Prepaid Card in Kuwait",
+          "publisher": "Boubyan Bank",
+          "source_type": "official_bank_product_announcement",
+          "url": "https://www.bankboubyan.com/en/news/413827",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تثبت التوريد والتنسيق والتوصيل، توسيع فئات الهدايا، الاستحواذ، الشراكات، القنوات الآلية والبطاقات عبر شركاء منظمين."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Floward Launches Floward Card in Jordan with GateToPay and Mastercard",
+          "publisher": "Floward",
+          "source_type": "official_prepaid_gift_card_launch",
+          "url": "https://floward.co/floward-launches-floward-card-in-jordan-with-gatetopay-and-mastercard/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تثبت التوريد والتنسيق والتوصيل، توسيع فئات الهدايا، الاستحواذ، الشراكات، القنوات الآلية والبطاقات عبر شركاء منظمين."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Floward Introduces the Floward Card in Bahrain with SimpliFi, INFINIOS, and Mastercard",
+          "publisher": "Floward",
+          "source_type": "official_prepaid_gift_card_launch",
+          "url": "https://floward.co/floward-introduces-the-floward-card-in-bahrain-with-simplifi-infinios-and-mastercard/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تثبت التوريد والتنسيق والتوصيل، توسيع فئات الهدايا، الاستحواذ، الشراكات، القنوات الآلية والبطاقات عبر شركاء منظمين."
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Terms and Conditions for Ordering Flowers & Gifts",
+          "publisher": "Floward",
+          "source_type": "official_current_legal_terms",
+          "url": "https://floward.com/static-pages/terms",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تثبت التوريد والتنسيق والتوصيل، توسيع فئات الهدايا، الاستحواذ، الشراكات، القنوات الآلية والبطاقات عبر شركاء منظمين."
+        }
+      ],
+      "limitations": "المصادر لا تنشر مزيج الإيراد أو نسبة المخزون المملوك إلى منتجات الشركاء أو اقتصاديات البطاقات."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. فلاورد شركة خاصة ولم تنشر إيرادًا شهريًا أو MRR أو ARR أو قوائم مالية موحدة مدققة ضمن المصادر العامة المستخدمة حتى 3 أغسطس 2026. تصريحات نمو الإيراد التاريخية، ومبالغ التمويل، وعدد سيقان الورد، وقيمة سوق الهدايا لا تسمح باشتقاق الإيراد الحالي.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "monthly_revenue_disclosure_status",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الإعلانات الرسمية تنشر نسب نمو تاريخية وتمويلًا ومقاييس تشغيلية، لكنها لا تنشر قيمة إيراد شهري أو سنوي مطلقة حاليًا.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-03",
+        "SRC-04",
+        "SRC-05",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Floward Cements its Leading Market Position with a Series B $27.5 Million Funding Round",
+          "publisher": "Floward",
+          "source_type": "official_historical_funding_announcement",
+          "url": "https://floward.co/floward-cements-its-leading-market-position-with-a-series-b-27-5-million-funding-round/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الإعلانات الرسمية تنشر نسب نمو تاريخية وتمويلًا ومقاييس تشغيلية، لكنها لا تنشر قيمة إيراد شهري أو سنوي مطلقة حاليًا."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Floward raises USD156 million in Pre-IPO Series C Round",
+          "publisher": "Floward",
+          "source_type": "official_historical_funding_announcement",
+          "url": "https://floward.co/floward-raises-usd156-million-in-pre-ipo-series-c-round/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الإعلانات الرسمية تنشر نسب نمو تاريخية وتمويلًا ومقاييس تشغيلية، لكنها لا تنشر قيمة إيراد شهري أو سنوي مطلقة حاليًا."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Doubling-Down on Floward: MENA’s Largest Online Flowers and Gifting Destination",
+          "publisher": "STV",
+          "source_type": "lead_investor_thesis_and_round_announcement",
+          "url": "https://stv.vc/blog/en/doubling-down-on-floward",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الإعلانات الرسمية تنشر نسب نمو تاريخية وتمويلًا ومقاييس تشغيلية، لكنها لا تنشر قيمة إيراد شهري أو سنوي مطلقة حاليًا."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Floward’s IPO",
+          "publisher": "London Business School Publishing",
+          "source_type": "academic_business_case_summary",
+          "url": "https://publishing.london.edu/cases/flowards-ipo/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الإعلانات الرسمية تنشر نسب نمو تاريخية وتمويلًا ومقاييس تشغيلية، لكنها لا تنشر قيمة إيراد شهري أو سنوي مطلقة حاليًا."
+        }
+      ],
+      "limitations": "عدم العثور على إفصاح عام يمنع نشر تقدير غير موثق، ولا يعني غياب القياس الداخلي."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن. لا تنشر فلاورد زيارات الموقع الشهرية أو MAU أو عدد الطلبات الشهري في المصادر الأولية المراجعة. العمل في نحو 40 مدينة، وتوصيل 50 مليون ساق ورد في 2022، والشراكة مع أكثر من 400 علامة مؤشرات تشغيلية مختلفة وليست حركة موقع أو عملاء نشطين أو طلبات شهرية.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "website_traffic_and_active_usage_disclosure_status",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الصفحات الرسمية تعرض نطاق المدن ومؤشرات تشغيلية تاريخية ولا تنشر زيارات شهرية أو MAU أو طلبات شهرية.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-04",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About us",
+          "publisher": "Floward",
+          "source_type": "official_current_company_profile",
+          "url": "https://floward.co/about-us/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الصفحات الرسمية تعرض نطاق المدن ومؤشرات تشغيلية تاريخية ولا تنشر زيارات شهرية أو MAU أو طلبات شهرية."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Floward corporate homepage",
+          "publisher": "Floward",
+          "source_type": "official_current_corporate_homepage",
+          "url": "https://floward.co/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الصفحات الرسمية تعرض نطاق المدن ومؤشرات تشغيلية تاريخية ولا تنشر زيارات شهرية أو MAU أو طلبات شهرية."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Floward raises USD156 million in Pre-IPO Series C Round",
+          "publisher": "Floward",
+          "source_type": "official_historical_funding_announcement",
+          "url": "https://floward.co/floward-raises-usd156-million-in-pre-ipo-series-c-round/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الصفحات الرسمية تعرض نطاق المدن ومؤشرات تشغيلية تاريخية ولا تنشر زيارات شهرية أو MAU أو طلبات شهرية."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Doubling-Down on Floward: MENA’s Largest Online Flowers and Gifting Destination",
+          "publisher": "STV",
+          "source_type": "lead_investor_thesis_and_round_announcement",
+          "url": "https://stv.vc/blog/en/doubling-down-on-floward",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الصفحات الرسمية تعرض نطاق المدن ومؤشرات تشغيلية تاريخية ولا تنشر زيارات شهرية أو MAU أو طلبات شهرية."
+        }
+      ],
+      "limitations": "لم تُستخدم أدوات تقدير الزيارات الخارجية لأنها ليست إفصاحًا أوليًا وقد تختلف منهجيًا."
+    },
+    "$.overview.problem.text": {
+      "field_value": "الإهداء عن بُعد ليس مجرد عرض كتالوج. المنتج حساس للوقت والجودة والمناسبة، والعميل يشتري غالبًا لمتلَقٍ في مدينة أخرى ولا يستطيع فحص الورد أو التغليف قبل التسليم. لذلك تتجمع المخاطر في توافر الزهور الطازجة، اتساق التصميم، دقة العنوان، توقيت المفاجأة، أصالة الهدايا المرافقة، والقدرة على استيعاب قمم حادة في مناسبات مثل الأعياد ويوم الأم وفالنتاين.",
+      "verification_status": "analytical_inference",
+      "confidence": "high",
+      "claim_type": "customer_and_operating_problem_analysis",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التحليل مشتق من طبيعة التحكم في الجودة والتوصيل والتوسع التي تصفها الشركة والمستثمر ودراسة LBS.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-06",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About us",
+          "publisher": "Floward",
+          "source_type": "official_current_company_profile",
+          "url": "https://floward.co/about-us/",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "التحليل مشتق من طبيعة التحكم في الجودة والتوصيل والتوسع التي تصفها الشركة والمستثمر ودراسة LBS."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Floward Cements its Leading Market Position with a Series B $27.5 Million Funding Round",
+          "publisher": "Floward",
+          "source_type": "official_historical_funding_announcement",
+          "url": "https://floward.co/floward-cements-its-leading-market-position-with-a-series-b-27-5-million-funding-round/",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "التحليل مشتق من طبيعة التحكم في الجودة والتوصيل والتوسع التي تصفها الشركة والمستثمر ودراسة LBS."
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Investing in Floward: MENA’s Largest Flowers and Gifting Online Store",
+          "publisher": "STV",
+          "source_type": "lead_investor_series_b_thesis",
+          "url": "https://stv.vc/blog/en/investing-in-floward",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "التحليل مشتق من طبيعة التحكم في الجودة والتوصيل والتوسع التي تصفها الشركة والمستثمر ودراسة LBS."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Floward’s IPO",
+          "publisher": "London Business School Publishing",
+          "source_type": "academic_business_case_summary",
+          "url": "https://publishing.london.edu/cases/flowards-ipo/",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "التحليل مشتق من طبيعة التحكم في الجودة والتوصيل والتوسع التي تصفها الشركة والمستثمر ودراسة LBS."
+        }
+      ],
+      "limitations": "وصف المشكلة تحليل تحريري ولا يثبت معدلات تلف أو إلغاء أو تأخير محددة."
+    },
+    "$.overview.solution.text": {
+      "field_value": "بنت فلاورد نموذجًا متكاملًا يتحكم في أجزاء حرجة من الرحلة: توريد الزهور يوميًا، تنسيقها محليًا، تقديم هدايا مختارة من علامات شريكة، ثم إدارة التوصيل في اليوم نفسه عبر أسطول مبرد. استخدمت الزهور كبوابة إلى فئات أوسع مثل العطور والمجوهرات والكيك والشوكولاتة، ودعمت ذلك بالاستحواذ على Mubkhar والشراكات الفاخرة. وفي 2025–2026 أضافت قنوات فعلية مؤتمتة وبطاقات مسبقة الدفع عبر شركاء منظمين، لتوسيع معنى الهدية من منتج مادي إلى تجربة وقيمة إنفاق مرنة.",
+      "verification_status": "verified_current_product_capability",
+      "confidence": "high",
+      "claim_type": "solution_and_product_evolution",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر الرسمية تدعم التوريد والتنسيق والتوصيل، التوسع إلى الهدايا والعطور والمجوهرات، والآلات والبطاقات.",
+      "source_count": 8,
+      "source_ids": [
+        "SRC-01",
+        "SRC-07",
+        "SRC-08",
+        "SRC-09",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About us",
+          "publisher": "Floward",
+          "source_type": "official_current_company_profile",
+          "url": "https://floward.co/about-us/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تدعم التوريد والتنسيق والتوصيل، التوسع إلى الهدايا والعطور والمجوهرات، والآلات والبطاقات."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Floward acquires Mubkhar",
+          "publisher": "Floward",
+          "source_type": "official_acquisition_announcement",
+          "url": "https://floward.co/floward-acquires-mubkhar/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تدعم التوريد والتنسيق والتوصيل، التوسع إلى الهدايا والعطور والمجوهرات، والآلات والبطاقات."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Floward is expanding its gifting offering",
+          "publisher": "Floward",
+          "source_type": "official_product_category_expansion_announcement",
+          "url": "https://floward.co/floward-is-expanding-its-gifting-offering/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تدعم التوريد والتنسيق والتوصيل، التوسع إلى الهدايا والعطور والمجوهرات، والآلات والبطاقات."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Floward and Damas Jewellery Forge Strategic Partnership to Redefine Luxury Gifting in the GCC",
+          "publisher": "Floward",
+          "source_type": "official_strategic_brand_partnership",
+          "url": "https://floward.co/floward-and-damas-jewellery-forge-strategic-partnership-to-redefine-luxury-gifting-in-the-gcc/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تدعم التوريد والتنسيق والتوصيل، التوسع إلى الهدايا والعطور والمجوهرات، والآلات والبطاقات."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Floward Unveils MENA’s First Robotic Flower Vending Machine",
+          "publisher": "Floward",
+          "source_type": "official_offline_channel_innovation_announcement",
+          "url": "https://floward.co/floward-unveils-menas-first-robotic-flower-vending-machine-bridging-e-commerce-with-offline-innovation/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تدعم التوريد والتنسيق والتوصيل، التوسع إلى الهدايا والعطور والمجوهرات، والآلات والبطاقات."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Boubyan and Floward Launch the First Central Bank-Approved Floward Prepaid Card in Kuwait",
+          "publisher": "Boubyan Bank",
+          "source_type": "official_bank_product_announcement",
+          "url": "https://www.bankboubyan.com/en/news/413827",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تدعم التوريد والتنسيق والتوصيل، التوسع إلى الهدايا والعطور والمجوهرات، والآلات والبطاقات."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Floward Launches Floward Card in Jordan with GateToPay and Mastercard",
+          "publisher": "Floward",
+          "source_type": "official_prepaid_gift_card_launch",
+          "url": "https://floward.co/floward-launches-floward-card-in-jordan-with-gatetopay-and-mastercard/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تدعم التوريد والتنسيق والتوصيل، التوسع إلى الهدايا والعطور والمجوهرات، والآلات والبطاقات."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Floward Introduces the Floward Card in Bahrain with SimpliFi, INFINIOS, and Mastercard",
+          "publisher": "Floward",
+          "source_type": "official_prepaid_gift_card_launch",
+          "url": "https://floward.co/floward-introduces-the-floward-card-in-bahrain-with-simplifi-infinios-and-mastercard/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية تدعم التوريد والتنسيق والتوصيل، التوسع إلى الهدايا والعطور والمجوهرات، والآلات والبطاقات."
+        }
+      ],
+      "limitations": "وجود القدرة أو المنتج لا يثبت حجم التبني أو الربحية أو مساهمته في الإيراد."
+    },
+    "$.market_data.target_audience": {
+      "field_value": "الأفراد الذين يرسلون ورودًا وهدايا داخل المدينة أو عبر الحدود، بما في ذلك المشترون في المناسبات والعلاقات العائلية والمهنية؛ والشركات التي تحتاج هدايا للعملاء والموظفين والفعاليات؛ والعلامات المحلية والدولية التي تستخدم المنصة كقناة توزيع رقمية. لا يوجد إفصاح عام يحدد عدد العملاء المدفوعين أو المشترين النشطين لكل فئة.",
+      "verification_status": "verified_current_product_capability",
+      "confidence": "high",
+      "claim_type": "customer_segments",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المنصة تخدم الأفراد والشركات وتضم علامات شريكة، مع امتدادات للبطاقات والهدايا الفاخرة.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-01",
+        "SRC-08",
+        "SRC-09",
+        "SRC-13",
+        "SRC-14",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About us",
+          "publisher": "Floward",
+          "source_type": "official_current_company_profile",
+          "url": "https://floward.co/about-us/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المنصة تخدم الأفراد والشركات وتضم علامات شريكة، مع امتدادات للبطاقات والهدايا الفاخرة."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Floward is expanding its gifting offering",
+          "publisher": "Floward",
+          "source_type": "official_product_category_expansion_announcement",
+          "url": "https://floward.co/floward-is-expanding-its-gifting-offering/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المنصة تخدم الأفراد والشركات وتضم علامات شريكة، مع امتدادات للبطاقات والهدايا الفاخرة."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Floward and Damas Jewellery Forge Strategic Partnership to Redefine Luxury Gifting in the GCC",
+          "publisher": "Floward",
+          "source_type": "official_strategic_brand_partnership",
+          "url": "https://floward.co/floward-and-damas-jewellery-forge-strategic-partnership-to-redefine-luxury-gifting-in-the-gcc/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المنصة تخدم الأفراد والشركات وتضم علامات شريكة، مع امتدادات للبطاقات والهدايا الفاخرة."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Boubyan and Floward Launch the First Central Bank-Approved Floward Prepaid Card in Kuwait",
+          "publisher": "Boubyan Bank",
+          "source_type": "official_bank_product_announcement",
+          "url": "https://www.bankboubyan.com/en/news/413827",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المنصة تخدم الأفراد والشركات وتضم علامات شريكة، مع امتدادات للبطاقات والهدايا الفاخرة."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Floward Launches Floward Card in Jordan with GateToPay and Mastercard",
+          "publisher": "Floward",
+          "source_type": "official_prepaid_gift_card_launch",
+          "url": "https://floward.co/floward-launches-floward-card-in-jordan-with-gatetopay-and-mastercard/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المنصة تخدم الأفراد والشركات وتضم علامات شريكة، مع امتدادات للبطاقات والهدايا الفاخرة."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Floward Introduces the Floward Card in Bahrain with SimpliFi, INFINIOS, and Mastercard",
+          "publisher": "Floward",
+          "source_type": "official_prepaid_gift_card_launch",
+          "url": "https://floward.co/floward-introduces-the-floward-card-in-bahrain-with-simplifi-infinios-and-mastercard/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المنصة تخدم الأفراد والشركات وتضم علامات شريكة، مع امتدادات للبطاقات والهدايا الفاخرة."
+        }
+      ],
+      "limitations": "لا يوجد عدد منشور للعملاء المدفوعين أو المشترين النشطين أو الشركات المتعاقدة."
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا يوجد رقم رسمي موحد للسوق في المصادر الأولية المراجعة. قدّرت STV في 2021 سوق تجزئة الزهور المقطوفة في الخليج بنحو 3 مليارات دولار سنويًا، ثم وصفت في 2023 سوق الزهور المستهدف بنحو 3 مليارات دولار وسوق الهدايا الأوسع بنحو 10 مليارات دولار. هذه تقديرات مستثمر بتعريف ومنهجية غير منشورين، وليست إيراد فلاورد أو GMV أو حصة سوقية مثبتة.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "medium_high",
+      "claim_type": "investor_market_estimates",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "أرقام السوق مستمدة من تقديرات STV، ويُحافظ على نسبتها للمستثمر وعدم تحويلها إلى إيراد أو حصة.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-05",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Doubling-Down on Floward: MENA’s Largest Online Flowers and Gifting Destination",
+          "publisher": "STV",
+          "source_type": "lead_investor_thesis_and_round_announcement",
+          "url": "https://stv.vc/blog/en/doubling-down-on-floward",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "أرقام السوق مستمدة من تقديرات STV، ويُحافظ على نسبتها للمستثمر وعدم تحويلها إلى إيراد أو حصة."
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Investing in Floward: MENA’s Largest Flowers and Gifting Online Store",
+          "publisher": "STV",
+          "source_type": "lead_investor_series_b_thesis",
+          "url": "https://stv.vc/blog/en/investing-in-floward",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "أرقام السوق مستمدة من تقديرات STV، ويُحافظ على نسبتها للمستثمر وعدم تحويلها إلى إيراد أو حصة."
+        }
+      ],
+      "limitations": "لا تنشر الصفحات منهجية الحساب أو السنة المرجعية التفصيلية؛ الأرقام تقديرات مستثمر وليست إحصاءً حكوميًا."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا تنشر الشركة معدل نمو مالي حاليًا. تاريخيًا قالت إن إيراد 2020 نما بأكثر من عشرة أضعاف وإن إيراد أول 100 يوم من 2021 تجاوز إيراد 2020 كاملًا، وقالت STV إن المنصة نمت سبع مرات بين استثمار 2021 وجولة فبراير 2023. توسع النطاق من 20 مدينة وسبع دول في يونيو 2021 إلى تسع دول ونحو 40 مدينة حاليًا، لكن هذه لقطات تاريخية غير متجانسة ولا تكوّن CAGR حاليًا.",
+      "verification_status": "verified_historical_operating_metric",
+      "confidence": "medium_high",
+      "claim_type": "historical_growth_and_expansion_indicators",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توجد مؤشرات نمو تاريخية للشركة والمنصة ونطاق المدن، لكن لا يوجد معدل نمو مالي حالي قابل للمقارنة.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03",
+        "SRC-05",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About us",
+          "publisher": "Floward",
+          "source_type": "official_current_company_profile",
+          "url": "https://floward.co/about-us/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "توجد مؤشرات نمو تاريخية للشركة والمنصة ونطاق المدن، لكن لا يوجد معدل نمو مالي حالي قابل للمقارنة."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Floward corporate homepage",
+          "publisher": "Floward",
+          "source_type": "official_current_corporate_homepage",
+          "url": "https://floward.co/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "توجد مؤشرات نمو تاريخية للشركة والمنصة ونطاق المدن، لكن لا يوجد معدل نمو مالي حالي قابل للمقارنة."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Floward Cements its Leading Market Position with a Series B $27.5 Million Funding Round",
+          "publisher": "Floward",
+          "source_type": "official_historical_funding_announcement",
+          "url": "https://floward.co/floward-cements-its-leading-market-position-with-a-series-b-27-5-million-funding-round/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "توجد مؤشرات نمو تاريخية للشركة والمنصة ونطاق المدن، لكن لا يوجد معدل نمو مالي حالي قابل للمقارنة."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Doubling-Down on Floward: MENA’s Largest Online Flowers and Gifting Destination",
+          "publisher": "STV",
+          "source_type": "lead_investor_thesis_and_round_announcement",
+          "url": "https://stv.vc/blog/en/doubling-down-on-floward",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "توجد مؤشرات نمو تاريخية للشركة والمنصة ونطاق المدن، لكن لا يوجد معدل نمو مالي حالي قابل للمقارنة."
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Floward Featured in Forbes Middle East’s Top 50 Most-Funded Startups",
+          "publisher": "Floward",
+          "source_type": "official_historical_funding_and_scale_summary",
+          "url": "https://floward.co/floward-featured-in-forbes-middle-easts-top-50-most-funded-startups/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "توجد مؤشرات نمو تاريخية للشركة والمنصة ونطاق المدن، لكن لا يوجد معدل نمو مالي حالي قابل للمقارنة."
+        }
+      ],
+      "limitations": "الفترات والتعاريف مختلفة؛ لا يجوز دمجها في CAGR أو إسقاطها على 2026."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "تذكر دراسة London Business School أن المراحل المبكرة مُولت عبر الأصدقاء والعائلة ومكتب عائلي بعد إعادة بناء Q8 Flowers كـFloward. بلغت الجولات العامة المعلنة 34.2 مليون دولار حتى يناير 2022، متضمنة Series B بقيمة 27.5 مليون دولار، ثم أضيفت Series C بقيمة 156 مليون دولار في فبراير 2023؛ أي نحو 190.2 مليون دولار تمويلًا معلنًا تراكميًا. هذا رأس مال تاريخي وليس إيرادًا أو GMV أو نقدًا متبقيًا، كما أن قيمة استحواذ Mubkhar لم تُعلن.",
+      "verification_status": "verified_historical_financing",
+      "confidence": "high",
+      "claim_type": "equity_funding_history",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المراحل المبكرة موصوفة في دراسة LBS، والجولات الرسمية تسمح بحساب نحو 190.2 مليون دولار تمويلًا معلنًا.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-16",
+        "SRC-03",
+        "SRC-17",
+        "SRC-04",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-16",
+          "title": "Floward’s IPO",
+          "publisher": "London Business School Publishing",
+          "source_type": "academic_business_case_summary",
+          "url": "https://publishing.london.edu/cases/flowards-ipo/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المراحل المبكرة موصوفة في دراسة LBS، والجولات الرسمية تسمح بحساب نحو 190.2 مليون دولار تمويلًا معلنًا."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Floward Cements its Leading Market Position with a Series B $27.5 Million Funding Round",
+          "publisher": "Floward",
+          "source_type": "official_historical_funding_announcement",
+          "url": "https://floward.co/floward-cements-its-leading-market-position-with-a-series-b-27-5-million-funding-round/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المراحل المبكرة موصوفة في دراسة LBS، والجولات الرسمية تسمح بحساب نحو 190.2 مليون دولار تمويلًا معلنًا."
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Floward Featured in Forbes Middle East’s Top 50 Most-Funded Startups",
+          "publisher": "Floward",
+          "source_type": "official_historical_funding_and_scale_summary",
+          "url": "https://floward.co/floward-featured-in-forbes-middle-easts-top-50-most-funded-startups/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المراحل المبكرة موصوفة في دراسة LBS، والجولات الرسمية تسمح بحساب نحو 190.2 مليون دولار تمويلًا معلنًا."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Floward raises USD156 million in Pre-IPO Series C Round",
+          "publisher": "Floward",
+          "source_type": "official_historical_funding_announcement",
+          "url": "https://floward.co/floward-raises-usd156-million-in-pre-ipo-series-c-round/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المراحل المبكرة موصوفة في دراسة LBS، والجولات الرسمية تسمح بحساب نحو 190.2 مليون دولار تمويلًا معلنًا."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Floward acquires Mubkhar",
+          "publisher": "Floward",
+          "source_type": "official_acquisition_announcement",
+          "url": "https://floward.co/floward-acquires-mubkhar/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المراحل المبكرة موصوفة في دراسة LBS، والجولات الرسمية تسمح بحساب نحو 190.2 مليون دولار تمويلًا معلنًا."
+        }
+      ],
+      "limitations": "الإجمالي يجمع مبالغ الجولات العامة المعلنة فقط؛ لا يثبت صافي النقد أو أي ديون أو استثمارات غير معلنة."
+    },
+    "$.financials.valuation": {
+      "field_value": "غير معلن. قالت فلاورد في فبراير 2023 إن تقييمها ارتفع 3.8 مرات منذ الجولة السابقة، لكنها لم تنشر قيمة ما قبل الاستثمار أو بعده. لذلك حُذف تقدير 500 مليون دولار أو أكثر. وصف الجولة بأنها «Pre-IPO» وإنشاء لجنة للطرح يعبّران عن استعداد أو نية تاريخية، ولا يثبتان إتمام إدراج عام أو تقييمًا سوقيًا حاليًا.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "valuation_and_ipo_status",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصدر الرسمي ينشر مضاعف نمو التقييم 3.8x فقط، ولا ينشر قيمة مطلقة أو إتمام إدراج.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-04",
+        "SRC-05",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Floward raises USD156 million in Pre-IPO Series C Round",
+          "publisher": "Floward",
+          "source_type": "official_historical_funding_announcement",
+          "url": "https://floward.co/floward-raises-usd156-million-in-pre-ipo-series-c-round/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصدر الرسمي ينشر مضاعف نمو التقييم 3.8x فقط، ولا ينشر قيمة مطلقة أو إتمام إدراج."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Doubling-Down on Floward: MENA’s Largest Online Flowers and Gifting Destination",
+          "publisher": "STV",
+          "source_type": "lead_investor_thesis_and_round_announcement",
+          "url": "https://stv.vc/blog/en/doubling-down-on-floward",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصدر الرسمي ينشر مضاعف نمو التقييم 3.8x فقط، ولا ينشر قيمة مطلقة أو إتمام إدراج."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Floward’s IPO",
+          "publisher": "London Business School Publishing",
+          "source_type": "academic_business_case_summary",
+          "url": "https://publishing.london.edu/cases/flowards-ipo/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصدر الرسمي ينشر مضاعف نمو التقييم 3.8x فقط، ولا ينشر قيمة مطلقة أو إتمام إدراج."
+        }
+      ],
+      "limitations": "لا يجوز استنتاج تقييم مطلق من حجم الجولة أو مضاعف النمو دون قيمة الجولة السابقة ونسبة الملكية."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "هامش بيع باقات الورد والتنسيقات التي تُورّد وتُجهّز وتُسلّم ضمن شبكة فلاورد؛ الإيراد والهامش المطلقان غير معلنين.",
+        "هامش بيع أو عمولة تجارية على الهدايا المرافقة من علامات محلية ودولية، مثل الشوكولاتة والكيك والعطور والمجوهرات؛ شروط تقاسم الإيراد غير منشورة.",
+        "مبيعات وخدمات هدايا الشركات للعملاء والموظفين والفعاليات، مع حلول وتنسيقات مخصصة؛ حجم العقود غير معلن.",
+        "إيرادات علامة Mubkhar بعد الاستحواذ من العطور ومنافذ البيع المرتبطة بها؛ قيمة الصفقة ومساهمة العلامة المالية غير معلنتين.",
+        "مبيعات عبر القنوات الفعلية مثل آلات البيع الروبوتية للزهور؛ عدد الوحدات وحجم المبيعات غير منشورين.",
+        "مقابل تجاري محتمل من حزم Floward Card أو توزيع البطاقة بالتعاون مع البنوك وشركات الإصدار؛ اقتصاديات الرسوم وتقاسم الإيراد غير معلنة.",
+        "رصيد البطاقة مسبقة الدفع ليس إيرادًا كاملًا لفلاورد؛ الإيراد المحاسبي، إن وجد، هو فقط الهامش أو الرسوم أو قيمة المنتجات والخدمات المعترف بها.",
+        "رسوم التوصيل أو الخدمة عندما تُفرض ضمن عملية الشراء قد تكون مسار دخل، لكن متوسط الرسوم ومساهمتها المالية غير معلنين.",
+        "تمويل المستثمرين البالغ نحو 190.2 مليون دولار ليس إيرادًا ولا مبيعات.",
+        "50 مليون ساق ورد و400+ علامة ونحو 40 مدينة وحجم السوق مؤشرات تشغيلية أو سوقية، وليست إيرادًا أو GMV أو عملاء نشطين."
+      ],
+      "verification_status": "verified_current_product_capability",
+      "confidence": "medium_high",
+      "claim_type": "revenue_streams_with_accounting_separation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "مصادر المنتج والشراكات والبطاقات تدعم مسارات تجارية محتملة، مع حدود صريحة حول اقتصاديات كل مسار.",
+      "source_count": 9,
+      "source_ids": [
+        "SRC-01",
+        "SRC-07",
+        "SRC-08",
+        "SRC-09",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14",
+        "SRC-15",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About us",
+          "publisher": "Floward",
+          "source_type": "official_current_company_profile",
+          "url": "https://floward.co/about-us/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "مصادر المنتج والشراكات والبطاقات تدعم مسارات تجارية محتملة، مع حدود صريحة حول اقتصاديات كل مسار."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Floward acquires Mubkhar",
+          "publisher": "Floward",
+          "source_type": "official_acquisition_announcement",
+          "url": "https://floward.co/floward-acquires-mubkhar/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "مصادر المنتج والشراكات والبطاقات تدعم مسارات تجارية محتملة، مع حدود صريحة حول اقتصاديات كل مسار."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Floward is expanding its gifting offering",
+          "publisher": "Floward",
+          "source_type": "official_product_category_expansion_announcement",
+          "url": "https://floward.co/floward-is-expanding-its-gifting-offering/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "مصادر المنتج والشراكات والبطاقات تدعم مسارات تجارية محتملة، مع حدود صريحة حول اقتصاديات كل مسار."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Floward and Damas Jewellery Forge Strategic Partnership to Redefine Luxury Gifting in the GCC",
+          "publisher": "Floward",
+          "source_type": "official_strategic_brand_partnership",
+          "url": "https://floward.co/floward-and-damas-jewellery-forge-strategic-partnership-to-redefine-luxury-gifting-in-the-gcc/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "مصادر المنتج والشراكات والبطاقات تدعم مسارات تجارية محتملة، مع حدود صريحة حول اقتصاديات كل مسار."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Floward Unveils MENA’s First Robotic Flower Vending Machine",
+          "publisher": "Floward",
+          "source_type": "official_offline_channel_innovation_announcement",
+          "url": "https://floward.co/floward-unveils-menas-first-robotic-flower-vending-machine-bridging-e-commerce-with-offline-innovation/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "مصادر المنتج والشراكات والبطاقات تدعم مسارات تجارية محتملة، مع حدود صريحة حول اقتصاديات كل مسار."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Boubyan and Floward Launch the First Central Bank-Approved Floward Prepaid Card in Kuwait",
+          "publisher": "Boubyan Bank",
+          "source_type": "official_bank_product_announcement",
+          "url": "https://www.bankboubyan.com/en/news/413827",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "مصادر المنتج والشراكات والبطاقات تدعم مسارات تجارية محتملة، مع حدود صريحة حول اقتصاديات كل مسار."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Floward Launches Floward Card in Jordan with GateToPay and Mastercard",
+          "publisher": "Floward",
+          "source_type": "official_prepaid_gift_card_launch",
+          "url": "https://floward.co/floward-launches-floward-card-in-jordan-with-gatetopay-and-mastercard/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "مصادر المنتج والشراكات والبطاقات تدعم مسارات تجارية محتملة، مع حدود صريحة حول اقتصاديات كل مسار."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Floward Introduces the Floward Card in Bahrain with SimpliFi, INFINIOS, and Mastercard",
+          "publisher": "Floward",
+          "source_type": "official_prepaid_gift_card_launch",
+          "url": "https://floward.co/floward-introduces-the-floward-card-in-bahrain-with-simplifi-infinios-and-mastercard/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "مصادر المنتج والشراكات والبطاقات تدعم مسارات تجارية محتملة، مع حدود صريحة حول اقتصاديات كل مسار."
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Terms and Conditions for Ordering Flowers & Gifts",
+          "publisher": "Floward",
+          "source_type": "official_current_legal_terms",
+          "url": "https://floward.com/static-pages/terms",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "مصادر المنتج والشراكات والبطاقات تدعم مسارات تجارية محتملة، مع حدود صريحة حول اقتصاديات كل مسار."
+        }
+      ],
+      "limitations": "القائمة تصف مصادر تجارية ممكنة وليست إفصاحًا عن مساهمة كل بند أو الاعتراف المحاسبي الفعلي."
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "في الإهداء، التحكم في النتيجة أهم من اتساع الكتالوج",
+          "description": "لا يشتري العميل وردًا فقط؛ يشتري لحظة يجب أن تصل بالشكل والوقت المناسبين. لهذا صنعت فلاورد ميزتها عبر التحكم في التوريد والتنسيق والتبريد والتوصيل. كل طبقة إضافية ترفع التكلفة، لكنها تقلل احتمال أن يفسد طرف خارجي التجربة التي تحمل اسم العلامة."
+        },
+        {
+          "title": "الفئة الضيقة قد تكون بوابة لسوق أوسع",
+          "description": "بدأت الزهور كمنتج واضح ومتكرر في المناسبات، ثم أصبحت مدخلًا إلى العطور والكيك والشوكولاتة والمجوهرات. الدرس أن التوسع الأفضل لا يبدأ بإضافة فئات عشوائية، بل بإضافة ما يكمل نية الشراء نفسها ويرفع قيمة السلة من دون إعادة بناء الطلب من الصفر."
+        },
+        {
+          "title": "الموسمية تتطلب تصميمًا للذروة لا للمتوسط",
+          "description": "عمليات الإهداء تواجه أيامًا يتضاعف فيها الطلب بسرعة. النجاح لا يُقاس بمتوسط يوم هادئ، بل بقدرة المخزون والفلوريست والأسطول والدعم على امتصاص الذروة مع بقاء الجودة. البنية الزائدة في معظم العام قد تكون بوليصة تأمين لأيام تصنع سمعة السنة كلها."
+        },
+        {
+          "title": "التوسع الحقيقي هو نقل نظام تشغيل محلي",
+          "description": "دخول مدينة جديدة يحتاج موردي زهور، فرق تنسيق، علامات شريكة، توصيلًا وتوافقًا ثقافيًا مع المناسبات. لذلك فإن عدد الدول وحده لا يقيس جودة التوسع؛ الأهم هو كثافة الطلب واقتصاديات الوحدة والقدرة على تكرار معايير الجودة في كل مدينة."
+        },
+        {
+          "title": "الاستحواذ يختصر بناء الثقة في فئة مجاورة",
+          "description": "شراء Mubkhar أضاف علامة عطور ذات قاعدة عملاء وهوية خاصة بدل بناء علامة جديدة من الصفر. قيمة الاستحواذ لا تأتي من جمع الشعارات، بل من الحفاظ على خصوصية الأصل وربطه بتوزيع فلاورد وبيانات المناسبات والتسويق المتقاطع."
+        },
+        {
+          "title": "الشراكة قد تكون أفضل من امتلاك كل مخزون",
+          "description": "تكامل Damas وعلامات أخرى يسمح بتوسيع العرض الفاخر من دون تصنيع المجوهرات داخليًا. النموذج الهجين يجمع تحكمًا مباشرًا في الزهور مع شراكات في الفئات الأخرى، لكنه يحتاج وضوحًا في الأصالة والمخزون وخدمة ما بعد البيع وتوزيع المسؤولية."
+        },
+        {
+          "title": "القناة الفعلية يمكن أن تكون امتدادًا للمنتج الرقمي",
+          "description": "آلات البيع الروبوتية لا تنقض نموذج التجارة الإلكترونية؛ إنها تنقل التخصيص والطباعة والحفظ إلى نقاط مرور عالية. القناة الجديدة تكون مفيدة عندما تحافظ على جودة العلامة وتلتقط طلبًا فوريًا لا يخدمه التوصيل التقليدي بكفاءة."
+        },
+        {
+          "title": "التقنية المالية تخدم المناسبة عبر شريك منظم",
+          "description": "بطاقة Floward وسّعت الهدية إلى حرية إنفاق، لكن إصدار البطاقة ومعالجة الأموال يتمان مع بنوك وشركات دفع منظمة. الدرس أن المنصة تستطيع إضافة طبقة مالية من دون التحول إلى بنك، بشرط الفصل بين تجربة العميل والمسؤوليات التنظيمية والأرصدة."
+        },
+        {
+          "title": "جولة ما قبل الطرح ليست طرحًا عامًا",
+          "description": "تسمية Series C بأنها Pre-IPO وإنشاء لجنة للطرح يوضحان النية والاستعداد، لكنهما لا يساويان نشرة إصدار أو موافقة جهة سوق أو إدراجًا. التحليل المهني يفصل بين مرحلة التمويل الخاص والسيولة العامة، ولا يستنتج تقييمًا حاليًا من لقب الجولة."
+        },
+        {
+          "title": "كل رقم يحتاج اسمًا وتعريفًا وفترة",
+          "description": "التمويل ليس إيرادًا، وسيقان الورد ليست طلبات، والعلامات الشريكة ليست عملاء، وحجم السوق ليس GMV، ونمو 7x لا يوضح قاعدة القياس وحده. جودة الملف المالي تبدأ برفض تحويل المقاييس التشغيلية المختلفة إلى قصة رقمية واحدة."
+        }
+      ],
+      "verification_status": "analytical_inference",
+      "confidence": "high",
+      "claim_type": "company_specific_lessons",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس مشتقة من التحكم التشغيلي، توسيع الفئات، الاستحواذ والشراكات، القنوات الآلية، البطاقات، والتمويل قبل الطرح.",
+      "source_count": 12,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-04",
+        "SRC-05",
+        "SRC-07",
+        "SRC-08",
+        "SRC-09",
+        "SRC-12",
+        "SRC-13",
+        "SRC-15",
+        "SRC-16",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About us",
+          "publisher": "Floward",
+          "source_type": "official_current_company_profile",
+          "url": "https://floward.co/about-us/",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مشتقة من التحكم التشغيلي، توسيع الفئات، الاستحواذ والشراكات، القنوات الآلية، البطاقات، والتمويل قبل الطرح."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Floward Cements its Leading Market Position with a Series B $27.5 Million Funding Round",
+          "publisher": "Floward",
+          "source_type": "official_historical_funding_announcement",
+          "url": "https://floward.co/floward-cements-its-leading-market-position-with-a-series-b-27-5-million-funding-round/",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مشتقة من التحكم التشغيلي، توسيع الفئات، الاستحواذ والشراكات، القنوات الآلية، البطاقات، والتمويل قبل الطرح."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Floward raises USD156 million in Pre-IPO Series C Round",
+          "publisher": "Floward",
+          "source_type": "official_historical_funding_announcement",
+          "url": "https://floward.co/floward-raises-usd156-million-in-pre-ipo-series-c-round/",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مشتقة من التحكم التشغيلي، توسيع الفئات، الاستحواذ والشراكات، القنوات الآلية، البطاقات، والتمويل قبل الطرح."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Doubling-Down on Floward: MENA’s Largest Online Flowers and Gifting Destination",
+          "publisher": "STV",
+          "source_type": "lead_investor_thesis_and_round_announcement",
+          "url": "https://stv.vc/blog/en/doubling-down-on-floward",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مشتقة من التحكم التشغيلي، توسيع الفئات، الاستحواذ والشراكات، القنوات الآلية، البطاقات، والتمويل قبل الطرح."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Floward acquires Mubkhar",
+          "publisher": "Floward",
+          "source_type": "official_acquisition_announcement",
+          "url": "https://floward.co/floward-acquires-mubkhar/",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مشتقة من التحكم التشغيلي، توسيع الفئات، الاستحواذ والشراكات، القنوات الآلية، البطاقات، والتمويل قبل الطرح."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Floward is expanding its gifting offering",
+          "publisher": "Floward",
+          "source_type": "official_product_category_expansion_announcement",
+          "url": "https://floward.co/floward-is-expanding-its-gifting-offering/",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مشتقة من التحكم التشغيلي، توسيع الفئات، الاستحواذ والشراكات، القنوات الآلية، البطاقات، والتمويل قبل الطرح."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Floward and Damas Jewellery Forge Strategic Partnership to Redefine Luxury Gifting in the GCC",
+          "publisher": "Floward",
+          "source_type": "official_strategic_brand_partnership",
+          "url": "https://floward.co/floward-and-damas-jewellery-forge-strategic-partnership-to-redefine-luxury-gifting-in-the-gcc/",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مشتقة من التحكم التشغيلي، توسيع الفئات، الاستحواذ والشراكات، القنوات الآلية، البطاقات، والتمويل قبل الطرح."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Floward Unveils MENA’s First Robotic Flower Vending Machine",
+          "publisher": "Floward",
+          "source_type": "official_offline_channel_innovation_announcement",
+          "url": "https://floward.co/floward-unveils-menas-first-robotic-flower-vending-machine-bridging-e-commerce-with-offline-innovation/",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مشتقة من التحكم التشغيلي، توسيع الفئات، الاستحواذ والشراكات، القنوات الآلية، البطاقات، والتمويل قبل الطرح."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Boubyan and Floward Launch the First Central Bank-Approved Floward Prepaid Card in Kuwait",
+          "publisher": "Boubyan Bank",
+          "source_type": "official_bank_product_announcement",
+          "url": "https://www.bankboubyan.com/en/news/413827",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مشتقة من التحكم التشغيلي، توسيع الفئات، الاستحواذ والشراكات، القنوات الآلية، البطاقات، والتمويل قبل الطرح."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Floward Introduces the Floward Card in Bahrain with SimpliFi, INFINIOS, and Mastercard",
+          "publisher": "Floward",
+          "source_type": "official_prepaid_gift_card_launch",
+          "url": "https://floward.co/floward-introduces-the-floward-card-in-bahrain-with-simplifi-infinios-and-mastercard/",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مشتقة من التحكم التشغيلي، توسيع الفئات، الاستحواذ والشراكات، القنوات الآلية، البطاقات، والتمويل قبل الطرح."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Floward’s IPO",
+          "publisher": "London Business School Publishing",
+          "source_type": "academic_business_case_summary",
+          "url": "https://publishing.london.edu/cases/flowards-ipo/",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مشتقة من التحكم التشغيلي، توسيع الفئات، الاستحواذ والشراكات، القنوات الآلية، البطاقات، والتمويل قبل الطرح."
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Terms and Conditions for Ordering Flowers & Gifts",
+          "publisher": "Floward",
+          "source_type": "official_current_legal_terms",
+          "url": "https://floward.com/static-pages/terms",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مشتقة من التحكم التشغيلي، توسيع الفئات، الاستحواذ والشراكات، القنوات الآلية، البطاقات، والتمويل قبل الطرح."
+        }
+      ],
+      "limitations": "الدروس تحليل تحريري وليست توصية استثمارية أو تأكيدًا سببيًا نهائيًا."
+    },
+    "$.tools": {
+      "field_value": [
+        "منصة ويب وتطبيقات لشراء الورود والهدايا عبر أسواق متعددة",
+        "توريد يومي للزهور من موردين ومزارعين مختارين",
+        "تصميم وتنسيق محلي للباقات والمنتجات النباتية",
+        "إدارة جودة وتغليف وتجهيز للهدايا الحساسة للمناسبة",
+        "أسطول توصيل مبرد وإدارة توصيل في اليوم نفسه",
+        "كتالوج متعدد الفئات لمنتجات علامات محلية ودولية",
+        "حلول هدايا شركات وتخصيص للمناسبات والفعاليات",
+        "إدارة شراكات العلامات التجارية والتشكيلات الحصرية",
+        "تكامل تشغيلي وتجاري مع علامة Mubkhar المملوكة",
+        "آلات بيع روبوتية مع طباعة بطاقات وترطيب آلي للزهور",
+        "بطاقات هدايا مسبقة الدفع عبر بنوك ومصدري بطاقات منظمين",
+        "دعم وسائل دفع محلية ودولية بحسب السوق",
+        "تخصيص الرسائل والعناوين وبيانات المستلم",
+        "قياس وإفصاح استدامة لعمليات السعودية ضمن تقرير 2024",
+        "لم تُدرج حزمة برمجية داخلية مثل AWS أو React لعدم وجود إفصاح أولي موثوق يسمح بنسبها إلى البنية الحالية"
+      ],
+      "verification_status": "verified_current_product_capability",
+      "confidence": "high",
+      "claim_type": "verified_product_and_operating_capabilities",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "القائمة تستبدل أي حزمة تقنية تخمينية بقدرات تشغيل ومنتج مثبتة في المصادر الرسمية.",
+      "source_count": 10,
+      "source_ids": [
+        "SRC-01",
+        "SRC-07",
+        "SRC-08",
+        "SRC-09",
+        "SRC-10",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14",
+        "SRC-15",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About us",
+          "publisher": "Floward",
+          "source_type": "official_current_company_profile",
+          "url": "https://floward.co/about-us/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "القائمة تستبدل أي حزمة تقنية تخمينية بقدرات تشغيل ومنتج مثبتة في المصادر الرسمية."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Floward acquires Mubkhar",
+          "publisher": "Floward",
+          "source_type": "official_acquisition_announcement",
+          "url": "https://floward.co/floward-acquires-mubkhar/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "القائمة تستبدل أي حزمة تقنية تخمينية بقدرات تشغيل ومنتج مثبتة في المصادر الرسمية."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Floward is expanding its gifting offering",
+          "publisher": "Floward",
+          "source_type": "official_product_category_expansion_announcement",
+          "url": "https://floward.co/floward-is-expanding-its-gifting-offering/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "القائمة تستبدل أي حزمة تقنية تخمينية بقدرات تشغيل ومنتج مثبتة في المصادر الرسمية."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Floward and Damas Jewellery Forge Strategic Partnership to Redefine Luxury Gifting in the GCC",
+          "publisher": "Floward",
+          "source_type": "official_strategic_brand_partnership",
+          "url": "https://floward.co/floward-and-damas-jewellery-forge-strategic-partnership-to-redefine-luxury-gifting-in-the-gcc/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "القائمة تستبدل أي حزمة تقنية تخمينية بقدرات تشغيل ومنتج مثبتة في المصادر الرسمية."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Floward Publishes Its First Sustainability Report",
+          "publisher": "Floward",
+          "source_type": "official_sustainability_disclosure",
+          "url": "https://floward.co/floward-publishes-its-first-sustainability-report/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "القائمة تستبدل أي حزمة تقنية تخمينية بقدرات تشغيل ومنتج مثبتة في المصادر الرسمية."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Floward Unveils MENA’s First Robotic Flower Vending Machine",
+          "publisher": "Floward",
+          "source_type": "official_offline_channel_innovation_announcement",
+          "url": "https://floward.co/floward-unveils-menas-first-robotic-flower-vending-machine-bridging-e-commerce-with-offline-innovation/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "القائمة تستبدل أي حزمة تقنية تخمينية بقدرات تشغيل ومنتج مثبتة في المصادر الرسمية."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Boubyan and Floward Launch the First Central Bank-Approved Floward Prepaid Card in Kuwait",
+          "publisher": "Boubyan Bank",
+          "source_type": "official_bank_product_announcement",
+          "url": "https://www.bankboubyan.com/en/news/413827",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "القائمة تستبدل أي حزمة تقنية تخمينية بقدرات تشغيل ومنتج مثبتة في المصادر الرسمية."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Floward Launches Floward Card in Jordan with GateToPay and Mastercard",
+          "publisher": "Floward",
+          "source_type": "official_prepaid_gift_card_launch",
+          "url": "https://floward.co/floward-launches-floward-card-in-jordan-with-gatetopay-and-mastercard/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "القائمة تستبدل أي حزمة تقنية تخمينية بقدرات تشغيل ومنتج مثبتة في المصادر الرسمية."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Floward Introduces the Floward Card in Bahrain with SimpliFi, INFINIOS, and Mastercard",
+          "publisher": "Floward",
+          "source_type": "official_prepaid_gift_card_launch",
+          "url": "https://floward.co/floward-introduces-the-floward-card-in-bahrain-with-simplifi-infinios-and-mastercard/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "القائمة تستبدل أي حزمة تقنية تخمينية بقدرات تشغيل ومنتج مثبتة في المصادر الرسمية."
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Terms and Conditions for Ordering Flowers & Gifts",
+          "publisher": "Floward",
+          "source_type": "official_current_legal_terms",
+          "url": "https://floward.com/static-pages/terms",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "القائمة تستبدل أي حزمة تقنية تخمينية بقدرات تشغيل ومنتج مثبتة في المصادر الرسمية."
+        }
+      ],
+      "limitations": "لا تتضمن القائمة لغات البرمجة أو قواعد البيانات لأن الشركة لم تنشر حزمة تقنية أولية موثوقة."
+    }
+  }
 }

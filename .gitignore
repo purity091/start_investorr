@@ -32,4 +32,5 @@ apps/web/.turbo
 # Local archive for unused/legacy files kept out of GitHub
 _archive_unused_not_for_git/
 data-raw/
+apps/web/public/data/new-proven/
 

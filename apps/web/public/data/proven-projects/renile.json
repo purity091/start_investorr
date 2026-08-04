@@ -2,52 +2,1090 @@
   "id": "renile",
   "slug": "renile",
   "name": "ري نايل (ReNile)",
-  "headline": "إنترنت الأشياء (IoT) يدخل المزارع لإنقاذ الأمن الغذائي",
-  "category": "AgriTech & IoT / التكنولوجيا الزراعية وإنترنت الأشياء",
+  "headline": "من حساسات المزارع إلى نظام تشغيل للحقول: اختبار ري نايل بعد التمويل هو إثبات العائد والتوسع",
+  "category": "التكنولوجيا الزراعية وإنترنت الأشياء الصناعي والبيئي / AgriTech, IoT & Environmental Monitoring",
   "company": {
-    "location": "القاهرة، مصر (Shark Tank Egypt)",
-    "business_model": "بيع الأجهزة (Hardware) واشتراكات برمجية دورية للبيانات (SaaS)"
+    "legal_name": null,
+    "legal_name_note": "لم يظهر في المصادر العامة المستخدمة اسم الكيان القانوني الكامل أو رقم تسجيله؛ استُخدم الاسم التجاري ReNile.",
+    "location": "3 شارع حسن الشريف، مدينة نصر، القاهرة، مصر",
+    "founded": 2017,
+    "founder_and_ceo": "حازم صلاح الدين الطواب",
+    "business_model": "بيع أنظمة وأجهزة مراقبة وتحكم متصلة، مع اشتراك أو وصول إلى منصة سحابية، ومشروعات تكامل وتخصيص للمزارع والمنشآت. النموذج أساسًا B2B مع إشارات إلى B2G وشراكات وموزعين، من دون إفصاح عن توزيع الإيرادات بين الأجهزة والبرمجيات والخدمات.",
+    "customer_segments": [
+      "الصوب الزراعية والمزارع المفتوحة والري المحوري",
+      "مزارع الاستزراع السمكي والمائي",
+      "مزارع الدواجن والبيئات الزراعية المتخصصة",
+      "المصانع ومحطات المياه والجهات المحتاجة إلى مراقبة بيئية وتشغيلية",
+      "الشركات الزراعية والموزعون والجهات الحكومية والتنموية"
+    ],
+    "operating_status_as_of_2026_08_03": {
+      "status": "نشطة",
+      "evidence": "الموقع الرسمي محدث ويعرض حلولًا ومنصة ومنتجات ومواصفات وطلب عروض توضيحية وبيانات اتصال، مع منشورات شراكات وتوظيف حديثة.",
+      "caution": "النشاط الرقمي لا يثبت الإيراد أو الربحية أو عدد العملاء النشطين."
+    }
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الجنيهات",
-    "monthly_traffic": "تُستخدم في مئات المزارع السمكية والزراعية"
+    "monthly_revenue": null,
+    "monthly_revenue_note": "لا توجد بيانات شهرية حديثة ومدققة. حُذف ادعاء «ملايين الجنيهات» ولم يُشتق رقم شهري من أرقام عرض تلفزيوني تاريخية.",
+    "monthly_traffic": null,
+    "monthly_traffic_note": "لا توجد بيانات موثقة للزيارات الشهرية أو المستخدمين النشطين. عدد المواقع التشغيلية ليس حركة مرور رقمية.",
+    "latest_verified_operating_snapshot": {
+      "as_of": "2026-08-03",
+      "official_site_active": true,
+      "current_solution_scope": [
+        "مراقبة الصوب والتحكم في المناخ والري والتسميد",
+        "مراقبة الحقول والري المحوري والطلمبات والآبار",
+        "مراقبة جودة المياه في الاستزراع السمكي",
+        "مراقبة التربة والمناخ والمياه",
+        "نظام إدارة المزرعة وFarm ERP وإرشادات الطقس",
+        "المراقبة الصناعية والبيئية والطاقة وصحة المعدات"
+      ],
+      "platform_layers": [
+        "حساسات",
+        "RTU أو بوابة جمع بيانات",
+        "اتصال سحابي",
+        "لوحات متابعة وتنبيهات",
+        "تحليلات وتوقعات وتحكم",
+        "إدارة تشغيل وتكاليف وتقارير"
+      ],
+      "visible_connectivity_and_protocols": [
+        "Wi-Fi",
+        "4G في منتجات محددة",
+        "Ethernet في منتجات محددة",
+        "RS485 وModbus-RTU",
+        "TCP/IP"
+      ],
+      "platform_subscription_signal": {
+        "status": "verified_on_product_pages",
+        "examples": "صفحات رسمية تعرض اشتراك منصة مطلوبًا بقيمة 75 دولارًا أو وصولًا لمدة سنة ضمن بعض الأنظمة.",
+        "caution": "لم تتضح دورية السعر أو وحدة الفوترة في جميع المنتجات؛ لم يُستخدم لحساب ARR أو MRR."
+      },
+      "current_recognition_and_partnership_signals": [
+        "اختيار حازم الطواب ضمن أفضل 100 في Africa's Business Heroes لعام 2026",
+        "شراكة معلنة مع Aquamimicry لبدء حلول الاستزراع السمكي في باكستان",
+        "شراكة معلنة مع Iconic Plus في السودان",
+        "نشاط معلن في السعودية عبر COP16 وEWAx وأرقام اتصال محلية"
+      ]
+    },
+    "historical_pitch_metrics": {
+      "as_of": "2024-12",
+      "classification": "أرقام أعلنها المؤسس أو نُقلت من عرضه في Shark Tank؛ غير مدققة وليست حالية",
+      "farms": 300,
+      "factories": 70,
+      "revenue_egp": {
+        "previous_year_as_described_in_december_2024": 16000000,
+        "current_year_as_described_in_december_2024": 12000000,
+        "period_warning": "المصدر لم يحدد إن كان «العام الحالي» سنة كاملة أو حتى تاريخ الحلقة."
+      }
+    },
+    "metric_distinctions": {
+      "revenue": "إيرادات الأجهزة والاشتراكات والخدمات خلال فترة؛ المتاح تاريخي وغير مدقق.",
+      "valuation": "طلب 15 مليون جنيه مقابل 10% تقييم تفاوضي طلبه المؤسس، لا تقييم صفقة مغلقة.",
+      "funding": "رأس مال استثماري دخل الشركة؛ الشركة أكدت جولة من ثمانية أرقام بالجنيه، ومصادر متخصصة ذكرت نحو 450 ألف دولار.",
+      "contract_value": "هدف عقود بقيمة 40 مليون جنيه في الربع الأول 2025 كان مستهدفًا معلنًا، لا إيرادًا محققًا.",
+      "sites_or_customers": "300 مزرعة و70 مصنعًا أرقام انتشار تاريخية، لا مستخدمون نشطون أو اشتراكات مدفوعة.",
+      "traffic": "زيارات الموقع أو التطبيق مقياس منفصل ولا توجد بيانات موثوقة عنه."
+    }
   },
   "overview": {
     "problem": {
-      "text": "في المزارع المائية (السمكية) والصوب الزراعية، أي تغيير طفيف في مستويات الأكسجين أو جودة المياه قد يؤدي إلى نفوق آلاف الأسماك والمحاصيل، متسبباً بخسائر فادحة تقدر بالملايين بسبب التأخر في اكتشاف المشكلة.",
-      "impact": "مخاطر استثمارية عالية للمزارعين، هدر غذائي ضخم، وعدم القدرة على التنبؤ بالمحصول."
+      "text": "المزارع والمنشآت تعتمد أحيانًا على جولات يدوية وقراءات متفرقة لا تكشف الانحرافات فور حدوثها. في الاستزراع السمكي والصوب والري، قد تؤدي تغيرات الأكسجين أو الحموضة أو الملوحة أو الرطوبة أو ضغط المياه أو تشغيل الطلمبات إلى خسائر إذا تأخر اكتشافها. التحدي الحقيقي هو تحويل بيانات الحساسات إلى قرار تشغيلي قابل للتنفيذ.",
+      "impact": "التأخر في اكتشاف المشكلة قد يرفع نفوق الأسماك أو إجهاد المحاصيل أو استهلاك المياه والطاقة أو توقف المعدات. لم يُستخدم وصف «خسائر بالملايين» كحقيقة عامة لأن المقدار يعتمد على حجم الموقع والحادث."
     },
     "solution": {
-      "text": "نظام مبني على إنترنت الأشياء (IoT). مستشعرات ذكية توضع في المياه أو التربة لتقيس جودتها لحظة بلحظة، وترسل تنبيهات عبر الهاتف للمزارع ليتدخل فوراً، كما يمكنها تشغيل مضخات الأكسجين أو المياه آلياً."
+      "text": "تربط ReNile حساسات التربة والمياه والمناخ والمعدات بوحدات جمع بيانات ومنصة سحابية تعرض القراءات والتنبيهات والتحكم والتقارير. توسع العرض إلى إدارة المزرعة وERP والتكلفة والتوقع المبكر للأمراض والمراقبة الصناعية والبيئية. هذه قدرات منتج معلنة؛ أما وفورات المياه وزيادة الإنتاجية فتحتاج تحققًا مستقلًا لكل حالة."
     }
   },
   "market_data": {
-    "target_audience": "أصحاب المزارع السمكية، الصوب الزراعية الكبرى، والمشاريع الزراعية (B2B).",
-    "market_size": "سوق الزراعة الذكية والاستزراع السمكي المتنامي في المنطقة.",
-    "growth_rate": "حصلت على استثمارات قوية من شارك تانك وتوسعت في مصر والخليج (عمان والسعودية)."
+    "target_audience": "المزارع المتوسطة والكبيرة، الصوب، مشروعات الري المحوري، الاستزراع السمكي، الشركات الزراعية، المصانع ومحطات المياه، والمشروعات الحكومية والتنموية.",
+    "market_size": null,
+    "market_size_note": "لم يظهر تقدير رسمي حديث ومحدد لسوق ReNile القابل للخدمة يمكن ربطه بإيراداتها؛ لم تُستخدم تقديرات تجارية عامة كحقيقة عن فرصة الشركة.",
+    "growth_rate": null,
+    "growth_rate_note": "لا توجد سلسلة مالية مدققة أو بيانات عملاء سنوية تسمح بحساب معدل نمو. التمويل والشراكات مؤشرات نشاط وليست معدل نمو.",
+    "sector_context": {
+      "aquaculture": "أفادت منظمة الأغذية والزراعة في تقرير 2024 بأن إنتاج الاستزراع المائي من الحيوانات المائية تجاوز المصايد الطبيعية لأول مرة عالميًا.",
+      "interpretation": "هذا اتجاه عالمي للقطاع وليس حجم سوق ReNile أو دليلًا على حصتها."
+    },
+    "geographic_expansion_status": [
+      {
+        "market": "مصر",
+        "status": "تشغيل مؤكد",
+        "evidence": "مقر وموقع ومنتجات ومشروعات منشورة."
+      },
+      {
+        "market": "السعودية",
+        "status": "نشاط ودخول سوق مرجح، لكن الكيان أو المصنع غير مثبتين",
+        "evidence": "أرقام اتصال سعودية، COP16، EWAx ومنشورات عن العمل داخل المملكة.",
+        "caution": "لم يظهر سجل أو إعلان أولي يثبت مصنعًا سعوديًا قائمًا حتى 3 أغسطس 2026."
+      },
+      {
+        "market": "الكويت",
+        "status": "خطة أو شراكة معلنة في تقارير 2025",
+        "evidence": "تقارير التمويل نقلت خطة شراكة استراتيجية.",
+        "caution": "لم يظهر تأكيد أولي لاحق على بدء التشغيل."
+      },
+      {
+        "market": "السودان",
+        "status": "شراكة معلنة",
+        "evidence": "منشور رسمي عن شراكة مع Iconic Plus."
+      },
+      {
+        "market": "باكستان",
+        "status": "شراكة تشغيلية معلنة في 2026",
+        "evidence": "منشور رسمي عن بدء الحلول مع Aquamimicry."
+      },
+      {
+        "market": "عُمان",
+        "status": "غير مثبت",
+        "evidence": null,
+        "caution": "حُذف الادعاء الأصلي لغياب دليل موثوق."
+      }
+    ],
+    "regulatory_context": {
+      "egypt": {
+        "authority": "الجهاز القومي لتنظيم الاتصالات",
+        "requirements": "اعتماد النوع إلزامي عمومًا عند تصنيع أو تجميع أو استيراد أجهزة تحتوي عناصر اتصالات، مع تحديث إجراءات اعتماد النوع في فبراير 2026 وإيقاف اعتماد أجهزة 3G-only منذ أكتوبر 2025.",
+        "company_specific_status": null,
+        "note": "لم تظهر أرقام اعتماد نوع خاصة بمنتجات ReNile."
+      },
+      "saudi_arabia": {
+        "authority": "هيئة الاتصالات والفضاء والتقنية",
+        "requirements": "تتطلب معدات الاتصالات وتقنية المعلومات التحقق من المطابقة والترخيص أو الاعتماد حسب نوع الجهاز قبل التصنيع أو الاستيراد.",
+        "company_specific_status": null
+      }
+    }
   },
   "financials": {
-    "initial_investment": "استثمار مباشر من (الشاركس) لتوسيع خطوط الإنتاج والبحث والتطوير.",
-    "valuation": "عشرات الملايين من الجنيهات",
+    "initial_investment": "لم تحصل ReNile على استثمار من Shark Tank. طلب حازم الطواب 15 مليون جنيه مقابل 10% ورفض عرض ياسين منصور المشروط بقيمة 15 مليون جنيه مقابل 30%. بعد البرنامج أغلقت الشركة جولة خارجية بقيادة صندوق كحيلان؛ أكدت الشركة أنها من ثمانية أرقام بالجنيه، بينما ذكرت مصادر متخصصة مبلغًا قدره 450 ألف دولار.",
+    "valuation": {
+      "current_valuation": null,
+      "current_valuation_note": "لم يُعلن تقييم جولة 2025 أو تقييم حالي.",
+      "shark_tank_ask": {
+        "amount_egp": 15000000,
+        "equity_requested": "10%",
+        "simple_implied_post_money_egp": 150000000,
+        "simple_implied_pre_money_egp": 135000000,
+        "status": "founder_asking_valuation_only"
+      },
+      "rejected_offer": {
+        "investor": "ياسين منصور",
+        "headline_amount_egp": 15000000,
+        "headline_equity": "30%",
+        "structure": "عرض مشروط مرتبط بالأداء مع إمكانية تعديل الحصة أو المطالبة باسترداد الأموال بحسب التغطية.",
+        "outcome": "rejected"
+      },
+      "warning": "التقييم النظري لطلب المؤسس لا يمثل سعر صفقة؛ العرض التلفزيوني لم يُبرم وتقييم الجولة اللاحقة غير معلن."
+    },
+    "latest_financial_metrics": {
+      "current_revenue": null,
+      "current_profit": null,
+      "current_cash": null,
+      "current_debt": null,
+      "current_arr": null,
+      "current_mrr": null,
+      "current_gmv": null,
+      "audited_financial_statements_available": false,
+      "historical_pitch_revenue": {
+        "previous_year_egp_reported": 16000000,
+        "current_year_egp_reported": 12000000,
+        "status": "founder_reported_via_episode_coverage",
+        "audited": false,
+        "period_definition": "غير محددة بما يكفي"
+      }
+    },
+    "funding": {
+      "shark_tank": {
+        "status": "no_deal",
+        "amount_received": 0
+      },
+      "first_closed_round": {
+        "announcement_date": "2025-01-25",
+        "official_company_description": "ثمانية أرقام بالعملة المحلية",
+        "reported_amount_usd": 450000,
+        "amount_status": "official_round_confirmed_amount_reported_by_reputable_secondary_sources",
+        "lead_investor": "Keheilan Fund / صندوق كحيلان",
+        "valuation": null,
+        "equity_sold": null
+      },
+      "new_round_plan": {
+        "target_usd": 1000000,
+        "status": "fundraising_target_announced_not_closed",
+        "note": "أعلنت الشركة نية إغلاق جولة عند مليون دولار؛ لم يظهر دليل على إغلاق الهدف حتى تاريخ التحقق."
+      },
+      "mohamed_aboulnaga_status": "مذكور رسميًا كمستشار أو مرشد. توجد تغطية عن نية الاستحواذ على حصة، لكن لا يوجد تأكيد إغلاق مستقل؛ لم يُدرج كمستثمر مؤكد."
+    },
     "revenue_streams": [
-      "بيع المستشعرات والأجهزة الصلبة (Hardware Sales)",
-      "اشتراكات شهرية (SaaS) لتحليل البيانات وتقديم لوحة التحكم للمزارع"
-    ]
+      "بيع أجهزة وحساسات ووحدات RTU وبوابات اتصال وأنظمة تحكم.",
+      "اشتراكات أو رسوم وصول إلى منصة ReNile السحابية.",
+      "تصميم وتكامل حلول مخصصة للمزارع والصوب والري والاستزراع السمكي.",
+      "حلول إدارة المزرعة وERP وإرشادات الطقس والتقارير.",
+      "حلول مراقبة صناعية وبيئية للمياه والهواء والطاقة والمعدات.",
+      "عقود مشروعات وتوريد وتوزيع وشراكات مؤسسية.",
+      "لا توجد بيانات تفصل الإيراد المتكرر عن إيراد الأجهزة أو الخدمات."
+    ],
+    "shark_tank_pitch": {
+      "season": 3,
+      "broadcast_period": "نوفمبر/ديسمبر 2024 وفق التغطيات",
+      "presenter": "حازم الطواب",
+      "amount_requested_egp": 15000000,
+      "equity_requested": "10%",
+      "offer_received": true,
+      "offer_accepted": false,
+      "outcome": "no_deal",
+      "post_show_effect": "أفاد المؤسس بأن الظهور رفع الطلب وساعد في إغلاق جولة خارج البرنامج، من دون بيانات مدققة تقيس أثره على المبيعات."
+    }
+  },
+  "analysis": {
+    "core_thesis": "ميزة ReNile ليست الحساس منفردًا؛ القيمة المحتملة في ربط الجهاز بمنصة وتشغيل وتنبيه وتحكم وتكلفة وسجل تاريخي، ثم إثبات أن النظام يقلل خسارة أو ماءً أو طاقةً بما يتجاوز سعر الجهاز والاشتراك والصيانة. بعد التمويل والتوسع القطاعي، تصبح دورة حياة الأجهزة وجودة البيانات والامتثال وشبكة الخدمة أهم من إضافة خصائص جديدة.",
+    "what_changed": [
+      "تجاوز العرض الاستزراع السمكي والصوب إلى الحقول والري المحوري وإدارة المزرعة وERP والمراقبة الصناعية والبيئية.",
+      "لم تغلق الشركة صفقة Shark Tank؛ التمويل المثبت جاء لاحقًا خارج البرنامج.",
+      "ثبت وجود اشتراك أو وصول إلى المنصة في صفحات المنتجات، لكن لا توجد مؤشرات ARR أو MRR.",
+      "أعلنت الشركة شراكات خارج مصر، وأحدث إشارة واضحة شراكة باكستان في 2026.",
+      "اختير المؤسس ضمن أفضل 100 في Africa's Business Heroes 2026؛ وهو اعتراف لا تمويل.",
+      "تعقيد المنتج التنظيمي زاد مع Wi-Fi و4G وModbus والمنصة السحابية."
+    ],
+    "competitive_advantage": [
+      "دمج الأجهزة والمنصة والتحكم والتحليلات في عرض واحد.",
+      "تصنيع معلن في مصر وخبرة تطبيقية في المياه والتربة والمناخ.",
+      "تنوع حالات الاستخدام من الزراعة إلى الصناعة والبيئة.",
+      "دعم اتصالات وبروتوكولات متعددة في منتجات محددة.",
+      "قرب جغرافي وخدمة ميدانية محتملة مقارنة بموردي أجهزة بلا دعم محلي.",
+      "تمويل مؤكد وشبكة شراكات إقليمية."
+    ],
+    "risks_and_constraints": [
+      "لا توجد قوائم مالية أو مؤشرات ARR وMRR وهوامش أجهزة وتكاليف صيانة منشورة.",
+      "تعدد القطاعات والمنتجات قد يشتت رأس المال والمبيعات وخدمة ما بعد البيع.",
+      "الأجهزة الميدانية تحتاج معايرة واستبدالًا ودعمًا مستمرًا.",
+      "الإنذارات الخاطئة أو فقد البيانات قد يضعفان ثقة العميل.",
+      "سعر الاشتراك الظاهر غير واضح الدورية ووحدة التسعير.",
+      "التوسع السعودي والكويتي يحتاج اعتماد أجهزة وخدمة محلية؛ المصنع السعودي غير مثبت.",
+      "أرقام المواقع والإيرادات من العرض قديمة وغير مدققة ولا تكشف الاحتفاظ.",
+      "ادعاءات توقع الأمراض تحتاج بيانات دقة وحالات فشل منشورة.",
+      "التوسع الصناعي يضع الشركة أمام متطلبات موثوقية وأمن سيبراني أعلى.",
+      "الاعتماد الكبير على المؤسس في السرد والعلاقات يمثل مخاطرة تنظيمية."
+    ],
+    "outlook_as_of_2026_08_03": "ReNile شركة تشغيلية ممولة وتملك عرضًا أوسع وشراكات أكثر مما يعكسه الملف الأصلي، لكن التصنيف المحافظ هو «منصة أجهزة وبرمجيات نامية بتمويل موثق وشفافية مالية محدودة». المرحلة المقبلة تُقاس بالإيراد المتكرر والاحتفاظ بالمواقع وزمن تشغيل الأجهزة وكلفة الصيانة ودراسات عائد موثقة."
   },
   "lessons": [
     {
-      "title": "حلول تقنية عميقة لمشاكل تقليدية (DeepTech in Traditional Sectors)",
-      "description": "إدخال (DeepTech) لقطاع تقليدي جداً كالزراعة هو فرصة ذهبية. ري نايل لم تبنِ تطبيقاً ترفيهياً، بل صنعت جهازاً يحمي استثمارات الناس مباشرة، مما يجعل قرار الشراء (No-brainer) للمزارع لتجنب الخسارة."
+      "title": "رفض الصفقة قد يحفظ هيكل الشركة",
+      "description": "المبلغ وحده لا يجعل العرض جيدًا؛ شروط الحصة والأداء واسترداد الأموال قد تغير المخاطر، ورفضها قد يكون عقلانيًا."
     },
     {
-      "title": "النموذج الهجين (Hardware + SaaS)",
-      "description": "بيع الأجهزة يحقق إيرادات سريعة لمرة واحدة، لكن الاشتراكات البرمجية (SaaS) تضمن إيرادات متكررة (MRR). هذا النموذج الهجين هو المفضل لدى المستثمرين لأنه يربط العميل بالشركة لسنوات طويلة."
+      "title": "التقييم المطلوب ليس تقييمًا محققًا",
+      "description": "طلب 15 مليون مقابل 10% يعطي تقييمًا نظريًا بعد الاستثمار 150 مليون جنيه، لكنه لا يصبح قيمة سوقية قبل صفقة مغلقة."
+    },
+    {
+      "title": "الأجهزة تبيع البداية والمنصة تبيع الاستمرار",
+      "description": "الإيراد المتكرر يعتمد على استمرار البيانات والتنبيهات والدعم وتجديد الاشتراك، لا عدد الوحدات فقط."
+    },
+    {
+      "title": "التوسع المعلن درجات",
+      "description": "معرض وشراكة وكيان ومصنع وإيراد مراحل مختلفة؛ يجب تسجيل كل سوق وفق مستوى الدليل."
+    },
+    {
+      "title": "عدد المواقع لا يساوي العملاء النشطين",
+      "description": "300 مزرعة و70 مصنعًا لا تكشف المواقع المدفوعة أو الأجهزة المتصلة أو الاحتفاظ أو متوسط الإيراد."
+    },
+    {
+      "title": "اعتماد الاتصال جزء من المنتج",
+      "description": "Wi-Fi و4G والبروتوكولات الصناعية تجعل اعتماد النوع والتوافق مع شبكات الدولة شرطًا للبيع والتوسع."
+    },
+    {
+      "title": "دراسة العائد أهم من كثرة الحساسات",
+      "description": "العميل يشتري تجنب خسارة أو تقليل ماء أو طاقة، لا قراءة pH لذاتها؛ كل قطاع يحتاج خط أساس وفترة قياس وتكلفة كلية."
+    },
+    {
+      "title": "التوسع الأفقي يحتاج نواة مشتركة",
+      "description": "الانتقال من المزارع إلى المصانع منطقي فقط إذا أعيد استخدام المنصة والبوابة والتنبيهات والصيانة."
+    },
+    {
+      "title": "الجولة المغلقة ليست هدف الجولة التالية",
+      "description": "نحو 450 ألف دولار جولة معلنة، أما مليون دولار فهدف تمويل لاحق؛ الخلط بينهما يضخم رأس المال المجموع."
     }
   ],
   "tools": [
-    "IoT Sensors",
-    "Embedded C++",
-    "Python / Data Analytics",
-    "Cloud Dashboards"
+    "حساسات للتربة والمياه والمناخ والطاقة والمعدات.",
+    "وحدات RTU وبوابات جمع بيانات.",
+    "Wi-Fi و4G وEthernet في منتجات محددة.",
+    "RS485 وModbus-RTU وTCP/IP في مواصفات بعض الأنظمة.",
+    "منصة سحابية ولوحات متابعة وتنبيهات وتحكم وتقارير.",
+    "تخزين مؤقت محلي ورفع البيانات إلى السحابة.",
+    "تحديثات Firmware عن بُعد وفق صفحات المنتجات.",
+    "Farm Management System وFarm ERP وإرشادات طقس.",
+    "تحليلات وتوقعات بالذكاء الاصطناعي وفق وصف الشركة.",
+    "لم تثبت المصادر لغات البرمجة الداخلية Embedded C++ أو Python؛ حُذفت كحقائق عن الـtech stack."
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "verified_through": "2026-08-03",
+    "research_scope": "الملف الأصلي، الموقع الرسمي والمنصة والمنتجات، Shark Tank Egypt وتغطيات العرض، إعلان التمويل، مصادر تمويل إقليمية، منشورات الشراكات، Africa's Business Heroes، والجهات التنظيمية في مصر والسعودية.",
+    "overall_status": "verified_with_material_corrections_and_private_company_limitations",
+    "primary_source_priority": "الأولوية لموقع ReNile ومنشورات الشركة والمؤسس وصفحة Shark Tank الرسمية وABH والجهات التنظيمية، مع مصادر متخصصة لمبلغ الجولة والأرقام التاريخية.",
+    "sec_search_status": {
+      "applicable": false,
+      "reason": "ReNile شركة مصرية خاصة وليست جهة مصدرة لأوراق مالية أمريكية معروفة.",
+      "search_result": "لم يظهر إفصاح SEC ذي صلة؛ نتائج الأسماء المتشابهة لم تُستخدم."
+    },
+    "key_corrections": [
+      {
+        "field": "company.location",
+        "original_claim": "القاهرة، مصر (Shark Tank Egypt)",
+        "status": "corrected",
+        "correction": "أضيف عنوان مدينة نصر الظاهر رسميًا.",
+        "evidence_ids": [
+          "E1"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_revenue",
+        "original_claim": "ملايين الجنيهات",
+        "status": "removed_unsupported",
+        "correction": "لا توجد بيانات شهرية حديثة؛ وُضع null.",
+        "evidence_ids": [
+          "E8"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_traffic",
+        "original_claim": "تُستخدم في مئات المزارع",
+        "status": "removed_wrong_metric",
+        "correction": "الانتشار التشغيلي ليس زيارات؛ وُضع null.",
+        "evidence_ids": [
+          "E6",
+          "E8"
+        ]
+      },
+      {
+        "field": "market_data.growth_rate",
+        "original_claim": "استثمارات من Shark Tank وتوسع في عُمان والسعودية",
+        "status": "corrected_false_and_unverified",
+        "correction": "لا صفقة في البرنامج ولا دليل موثوق على عُمان؛ وُضع النمو null وفُصلت الأسواق.",
+        "evidence_ids": [
+          "E7",
+          "E9",
+          "E10",
+          "E11"
+        ]
+      },
+      {
+        "field": "financials.initial_investment",
+        "original_claim": "استثمار مباشر من الشاركس",
+        "status": "corrected_false",
+        "correction": "رفض المؤسس العرض؛ التمويل جاء لاحقًا خارج البرنامج.",
+        "evidence_ids": [
+          "E7",
+          "E12"
+        ]
+      },
+      {
+        "field": "financials.valuation",
+        "original_claim": "عشرات الملايين من الجنيهات",
+        "status": "replaced_with_distinction",
+        "correction": "لا تقييم حالي؛ أضيف تقييم الطلب النظري فقط.",
+        "evidence_ids": [
+          "E7"
+        ]
+      },
+      {
+        "field": "financials.funding",
+        "original_claim": "استثمارات قوية غير محددة",
+        "status": "quantified_and_qualified",
+        "correction": "الجولة الرسمية من ثمانية أرقام بالجنيه، والمبلغ المتداول 450 ألف دولار.",
+        "evidence_ids": [
+          "E12",
+          "E13"
+        ]
+      },
+      {
+        "field": "financials.revenue_streams",
+        "original_claim": "اشتراكات شهرية SaaS",
+        "status": "partially_verified",
+        "correction": "ثبت الاشتراك أو الوصول للمنصة، لكن الدورية غير واضحة؛ لم يُفترض MRR.",
+        "evidence_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "field": "tools",
+        "original_claim": "Embedded C++ وPython",
+        "status": "removed_unverified_internal_stack",
+        "correction": "أُبقيت التقنيات والبروتوكولات المنشورة فقط.",
+        "evidence_ids": [
+          "E2",
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "field": "overview",
+        "original_claim": "خسائر بالملايين ونفوق آلاف الأسماك بصورة عامة",
+        "status": "qualified",
+        "correction": "أعيدت الصياغة كمخاطر محتملة دون أرقام عامة غير مسندة.",
+        "evidence_ids": [
+          "E2",
+          "E15"
+        ]
+      }
+    ],
+    "known_source_discrepancies": [
+      {
+        "topic": "مبلغ الجولة",
+        "detail": "الشركة قالت «ثمانية أرقام بالعملة المحلية» دون رقم، بينما Wamda وDisrupt Africa ذكرتا 450 ألف دولار."
+      },
+      {
+        "topic": "المستثمرون",
+        "detail": "كحيلان قائد مؤكد. محمد أبو النجا ظهر كمستشار؛ لم يتأكد إغلاق استحواذه على حصة."
+      },
+      {
+        "topic": "السعودية",
+        "detail": "تقارير 2025 تحدثت عن تأسيس أو تصنيع، بينما الأدلة اللاحقة تثبت نشاطًا وحضورًا لا مصنعًا قائمًا."
+      },
+      {
+        "topic": "نوع الشركة على LinkedIn",
+        "detail": "LinkedIn يصفها «شركة عامة» بلا دليل إدراج؛ عوملت كشركة خاصة."
+      }
+    ],
+    "limitations": [
+      "لا توجد قوائم مالية أو إفصاحات بورصية عامة.",
+      "الأرقام التاريخية في العرض غير مدققة.",
+      "لم يُعلن تقييم الجولة أو الحصة المباعة.",
+      "لا توجد بيانات حديثة للإيراد أو الربح أو ARR أو MRR أو الزيارات أو الاحتفاظ.",
+      "لم تظهر أرقام اعتماد نوع خاصة بأجهزة ReNile.",
+      "منشورات الشراكات لا تثبت الإيراد أو التنفيذ الكامل.",
+      "نتائج التوفير والإنتاجية على الموقع هي حالات أو ادعاءات الشركة ما لم يؤيدها مصدر مستقل."
+    ],
+    "programmatic_validation": {
+      "json_parse": true,
+      "json_schema_validation": true,
+      "required_original_top_level_keys_preserved": true,
+      "required_original_paths_preserved": true,
+      "all_source_ids_unique": true,
+      "all_evidence_source_references_valid": true,
+      "all_key_correction_evidence_references_valid": true,
+      "no_nan_or_infinity": true,
+      "null_used_for_unavailable_monthly_metrics": true,
+      "null_used_for_unavailable_growth_and_market_size": true,
+      "shark_tank_no_deal_explicit": true,
+      "current_valuation_not_invented": true,
+      "funding_round_separated_from_target": true,
+      "oman_not_asserted": true,
+      "utf8_arabic_content_present": true,
+      "duplicate_lesson_titles": false,
+      "source_count": 22,
+      "primary_source_count": 17,
+      "evidence_item_count": 19,
+      "lesson_count": 9,
+      "top_level_key_count": 17,
+      "errors": [],
+      "validated_at": "2026-08-03T03:34:00+03:00",
+      "validation_status": "passed"
+    }
+  },
+  "evidence_map_schema": {
+    "description": "خريطة تربط الادعاءات الجوهرية بالمصادر والمسارات داخل JSON.",
+    "item_fields": {
+      "claim": "الادعاء المختصر",
+      "json_paths": "المسارات التي تعتمد على الدليل",
+      "classification": "company | product | financial | pitch | expansion | recognition | regulatory | sector | unavailable | interpretation",
+      "status": "verified | verified_company_reported | historical_only | corrected | planned | unavailable",
+      "source_ids": "معرفات من مصفوفة sources",
+      "notes": "حدود الدليل"
+    }
+  },
+  "evidence_map": {
+    "E1": {
+      "claim": "الموقع الرسمي نشط ويعرض عنوان مدينة نصر وحلول الزراعة والصناعة والبيئة.",
+      "json_paths": [
+        "company.location",
+        "company.operating_status_as_of_2026_08_03",
+        "directory_snapshot.latest_verified_operating_snapshot"
+      ],
+      "classification": "company",
+      "status": "verified",
+      "source_ids": [
+        "S1"
+      ],
+      "notes": "يثبت النشاط والعرض الحالي لا الإيرادات."
+    },
+    "E2": {
+      "claim": "المنصة تربط الحساس والبوابة والسحابة واللوحة والتوقع والتحكم والتنبيه.",
+      "json_paths": [
+        "overview.solution",
+        "directory_snapshot.latest_verified_operating_snapshot.platform_layers",
+        "tools"
+      ],
+      "classification": "product",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S2"
+      ],
+      "notes": "وصف منتج رسمي."
+    },
+    "E3": {
+      "claim": "بعض المنتجات تتطلب اشتراك منصة 75 دولارًا وتدعم Wi-Fi و4G وModbus.",
+      "json_paths": [
+        "company.business_model",
+        "directory_snapshot.latest_verified_operating_snapshot.platform_subscription_signal",
+        "tools"
+      ],
+      "classification": "product",
+      "status": "verified",
+      "source_ids": [
+        "S3",
+        "S4"
+      ],
+      "notes": "الدورية ووحدة الفوترة غير واضحتين لكل المنتجات."
+    },
+    "E4": {
+      "claim": "بعض الأنظمة تشمل وصولًا لمدة سنة إلى منصة التحليل.",
+      "json_paths": [
+        "financials.revenue_streams",
+        "directory_snapshot.latest_verified_operating_snapshot.platform_subscription_signal"
+      ],
+      "classification": "product",
+      "status": "verified",
+      "source_ids": [
+        "S5"
+      ],
+      "notes": "يثبت عنصرًا برمجيًا لا حجم الإيراد المتكرر."
+    },
+    "E5": {
+      "claim": "تأسست ReNile في 2017 ويقودها حازم الطواب.",
+      "json_paths": [
+        "company.founded",
+        "company.founder_and_ceo"
+      ],
+      "classification": "company",
+      "status": "verified",
+      "source_ids": [
+        "S6",
+        "S8"
+      ],
+      "notes": "متسق بين المصادر."
+    },
+    "E6": {
+      "claim": "أُعلن في العرض 300 مزرعة و70 مصنعًا وإيرادات 16 و12 مليون جنيه.",
+      "json_paths": [
+        "directory_snapshot.historical_pitch_metrics",
+        "financials.latest_financial_metrics.historical_pitch_revenue"
+      ],
+      "classification": "financial",
+      "status": "historical_only",
+      "source_ids": [
+        "S7"
+      ],
+      "notes": "غير مدققة وفتراتها غير واضحة."
+    },
+    "E7": {
+      "claim": "طلب المؤسس 15 مليونًا مقابل 10% ورفض عرضًا مشروطًا 15 مليونًا مقابل 30%.",
+      "json_paths": [
+        "financials.initial_investment",
+        "financials.valuation",
+        "financials.shark_tank_pitch"
+      ],
+      "classification": "pitch",
+      "status": "verified",
+      "source_ids": [
+        "S8",
+        "S9",
+        "S10"
+      ],
+      "notes": "لم تُغلق صفقة في البرنامج."
+    },
+    "E8": {
+      "claim": "لا توجد بيانات حديثة عامة للإيراد الشهري أو الزيارات أو ARR أو MRR.",
+      "json_paths": [
+        "directory_snapshot.monthly_revenue",
+        "directory_snapshot.monthly_traffic",
+        "financials.latest_financial_metrics",
+        "market_data.growth_rate"
+      ],
+      "classification": "unavailable",
+      "status": "unavailable",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S6"
+      ],
+      "notes": "المتاح نشاط وتمويل لا بيانات مالية حديثة."
+    },
+    "E9": {
+      "claim": "توجد إشارات أولية إلى نشاط ReNile في السعودية.",
+      "json_paths": [
+        "market_data.geographic_expansion_status",
+        "analysis.what_changed"
+      ],
+      "classification": "expansion",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S11",
+        "S12"
+      ],
+      "notes": "لا يثبت مصنعًا قائمًا."
+    },
+    "E10": {
+      "claim": "أعلنت الشركة شراكة مع Iconic Plus في السودان.",
+      "json_paths": [
+        "market_data.geographic_expansion_status",
+        "directory_snapshot.latest_verified_operating_snapshot.current_recognition_and_partnership_signals"
+      ],
+      "classification": "expansion",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S13"
+      ],
+      "notes": "لا أرقام تنفيذ أو إيراد."
+    },
+    "E11": {
+      "claim": "أعلنت الشركة في 2026 شراكة مع Aquamimicry في باكستان.",
+      "json_paths": [
+        "market_data.geographic_expansion_status",
+        "directory_snapshot.latest_verified_operating_snapshot.current_recognition_and_partnership_signals"
+      ],
+      "classification": "expansion",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S14"
+      ],
+      "notes": "لا أرقام مبيعات."
+    },
+    "E12": {
+      "claim": "أكد المؤسس إغلاق الجولة الأولى من ثمانية أرقام بالجنيه بقيادة كحيلان.",
+      "json_paths": [
+        "financials.initial_investment",
+        "financials.funding",
+        "analysis.what_changed"
+      ],
+      "classification": "financial",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S15"
+      ],
+      "notes": "لا قيمة دقيقة أو حصة معلنة."
+    },
+    "E13": {
+      "claim": "ذكرت مصادر متخصصة أن الجولة بلغت 450 ألف دولار.",
+      "json_paths": [
+        "financials.funding.first_closed_round",
+        "directory_snapshot.metric_distinctions.funding"
+      ],
+      "classification": "financial",
+      "status": "verified",
+      "source_ids": [
+        "S6",
+        "S16"
+      ],
+      "notes": "مبلغ ثانوي موثوق ومتسق تقريبًا مع ثمانية أرقام بالجنيه."
+    },
+    "E14": {
+      "claim": "اختير حازم الطواب ضمن أفضل 100 في ABH لعام 2026.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.current_recognition_and_partnership_signals",
+        "analysis.what_changed"
+      ],
+      "classification": "recognition",
+      "status": "verified",
+      "source_ids": [
+        "S17"
+      ],
+      "notes": "اعتراف تنافسي لا استثمار."
+    },
+    "E15": {
+      "claim": "الموقع يصف مراقبة مؤشرات جودة المياه والتنبيه والتحكم في المضخات أو البدالات.",
+      "json_paths": [
+        "overview.problem",
+        "overview.solution",
+        "directory_snapshot.latest_verified_operating_snapshot.current_solution_scope"
+      ],
+      "classification": "product",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S1",
+        "S18"
+      ],
+      "notes": "قدرات معلنة من الشركة."
+    },
+    "E16": {
+      "claim": "اعتماد النوع مطلوب في مصر لأجهزة الاتصالات وتوجد تحديثات 2026.",
+      "json_paths": [
+        "market_data.regulatory_context.egypt",
+        "analysis.risks_and_constraints",
+        "lessons"
+      ],
+      "classification": "regulatory",
+      "status": "verified",
+      "source_ids": [
+        "S19",
+        "S20"
+      ],
+      "notes": "إطار عام لا يثبت حالة أجهزة الشركة."
+    },
+    "E17": {
+      "claim": "السعودية لديها نظام ترخيص واعتماد لمعدات الاتصالات.",
+      "json_paths": [
+        "market_data.regulatory_context.saudi_arabia",
+        "analysis.risks_and_constraints"
+      ],
+      "classification": "regulatory",
+      "status": "verified",
+      "source_ids": [
+        "S21"
+      ],
+      "notes": "إطار عام للتوسع."
+    },
+    "E18": {
+      "claim": "تجاوز الاستزراع المائي المصايد الطبيعية في إنتاج الحيوانات المائية عالميًا.",
+      "json_paths": [
+        "market_data.sector_context"
+      ],
+      "classification": "sector",
+      "status": "verified",
+      "source_ids": [
+        "S22"
+      ],
+      "notes": "سياق قطاعي لا حصة سوقية."
+    },
+    "E19": {
+      "claim": "لم تثبت المصادر Embedded C++ أو Python كلغات داخلية.",
+      "json_paths": [
+        "tools",
+        "verification.key_corrections"
+      ],
+      "classification": "interpretation",
+      "status": "corrected",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "notes": "حُذفت الأدوات الداخلية غير المنشورة."
+    }
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "ReNile — Smart Monitoring Platform",
+      "publisher": "ReNile",
+      "source_type": "الموقع الرسمي",
+      "publication_date": null,
+      "url": "https://www.renile.net/en",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "العنوان",
+        "النشاط",
+        "الحلول",
+        "حالات الاستخدام"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "ReNile Platform",
+      "publisher": "ReNile",
+      "source_type": "صفحة منصة رسمية",
+      "publication_date": null,
+      "url": "https://www.renile.net/en/platform",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "طبقات المنصة",
+        "التنبيهات",
+        "التحكم",
+        "التوقعات"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "Climate Basic Monitoring",
+      "publisher": "ReNile",
+      "source_type": "صفحة منتج رسمية",
+      "publication_date": null,
+      "url": "https://renile.net/product/climite-control-basic/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الاشتراك",
+        "الاتصال",
+        "Modbus",
+        "السحابة"
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "pH Water Monitoring",
+      "publisher": "ReNile",
+      "source_type": "صفحة منتج رسمية",
+      "publication_date": null,
+      "url": "https://renile.net/product/ph-water-monitoring/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "RTU",
+        "الاشتراك",
+        "الاتصال",
+        "Made in Egypt"
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "Climate Basic Monitoring — one-year access",
+      "publisher": "ReNile on LinkedIn",
+      "source_type": "منشور رسمي",
+      "publication_date": "2024",
+      "url": "https://ae.linkedin.com/posts/renileeg_%D8%AA%D9%83%D9%86%D9%88%D9%84%D9%88%D8%AC%D9%8A%D8%A7%D8%B2%D8%B1%D8%A7%D8%B9%D9%8A%D8%A9-%D8%A7%D9%84%D8%A5%D8%B1%D8%B4%D8%A7%D8%AF%D8%A7%D9%84%D8%B2%D8%B1%D8%A7%D8%B9%D9%8A-activity-7158020765777375233-f8bi",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "وصول سنة للمنصة",
+        "التحكم",
+        "اتصال سعودي"
+      ]
+    },
+    {
+      "id": "S6",
+      "title": "Egypt's ReNile secures $450,000 investment",
+      "publisher": "Wamda",
+      "source_type": "تغطية تمويل",
+      "publication_date": "2025-01-02",
+      "url": "https://www.wamda.com/2025/01/egypt-renile-secures-450000-investment",
+      "primary_source": false,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "التأسيس",
+        "المؤسس",
+        "الجولة",
+        "خطط التوسع"
+      ]
+    },
+    {
+      "id": "S7",
+      "title": "حازم الطواب وReNile في Shark Tank",
+      "publisher": "القاهرة 24",
+      "source_type": "تغطية العرض",
+      "publication_date": "2024-12-06",
+      "url": "https://www.cairo24.com/2126462",
+      "primary_source": false,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "300 مزرعة",
+        "70 مصنعًا",
+        "إيرادات تاريخية",
+        "طلب التمويل"
+      ]
+    },
+    {
+      "id": "S8",
+      "title": "أسباب رفض عرض ياسين منصور",
+      "publisher": "مصراوي",
+      "source_type": "مقابلة مع المؤسس",
+      "publication_date": "2024-12-13",
+      "url": "https://www.masrawy.com/news/news_egypt/details/2024/12/13/2691222/",
+      "primary_source": false,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "طلب 15 مليون مقابل 10%",
+        "عرض 15 مليون مقابل 30%",
+        "الرفض"
+      ]
+    },
+    {
+      "id": "S9",
+      "title": "حازم الطواب يشرح رفض عرض Shark Tank",
+      "publisher": "المصري اليوم",
+      "source_type": "مقابلة",
+      "publication_date": "2024-12-14",
+      "url": "https://www.almasryalyoum.com/news/details/3329289",
+      "primary_source": false,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "أسباب الرفض",
+        "تأكيد شروط الطلب"
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "Shark Tank Egypt — Services Deals / ReNile",
+      "publisher": "Shark Tank Egypt",
+      "source_type": "صفحة رسمية",
+      "publication_date": null,
+      "url": "https://sharktank-egypt.com/en/deals/services",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "المشاركة الرسمية",
+        "رابط العرض"
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "ReNile at COP16 Riyadh",
+      "publisher": "ReNile on LinkedIn",
+      "source_type": "منشور رسمي",
+      "publication_date": "2024-12",
+      "url": "https://www.linkedin.com/posts/renileeg_cop16riyadh-%D8%A7%D9%84%D8%B2%D8%B1%D8%A7%D8%B9%D8%A9%D8%A7%D9%84%D8%B0%D9%83%D9%8A%D8%A9-%D8%A7%D9%86%D8%AA%D8%B1%D9%86%D8%AA%D8%A7%D9%84%D8%A3%D8%B4%D9%8A%D8%A7%D8%A1-activity-7270821406748090370-8apA",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "حضور سعودي",
+        "عرض المنتجات",
+        "رقم تواصل سعودي"
+      ]
+    },
+    {
+      "id": "S12",
+      "title": "ReNile and EWAx in Saudi Arabia",
+      "publisher": "ReNile on LinkedIn",
+      "source_type": "منشور رسمي",
+      "publication_date": "2026",
+      "url": "https://www.linkedin.com/posts/renileeg_landspeaksrenile-renile-saudivision2030-activity-7429684203707011072-Wzp1",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "نشاط السعودية",
+        "إدارة المزارع",
+        "التحليلات"
+      ]
+    },
+    {
+      "id": "S13",
+      "title": "ReNile and Iconic partnership in Sudan",
+      "publisher": "ReNile on LinkedIn",
+      "source_type": "إعلان شراكة رسمي",
+      "publication_date": "2025",
+      "url": "https://www.linkedin.com/posts/renileeg_iot-agritech-iiot-activity-7333469294686535680-o5dM",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "شراكة السودان"
+      ]
+    },
+    {
+      "id": "S14",
+      "title": "ReNile partnership with Aquamimicry in Pakistan",
+      "publisher": "ReNile on LinkedIn",
+      "source_type": "إعلان شراكة رسمي",
+      "publication_date": "2026-07",
+      "url": "https://eg.linkedin.com/company/renileeg",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "بدء حلول الاستزراع السمكي في باكستان"
+      ]
+    },
+    {
+      "id": "S15",
+      "title": "Announcement of ReNile's first investment round",
+      "publisher": "Hazem Eltawab on LinkedIn",
+      "source_type": "إعلان رسمي من المؤسس",
+      "publication_date": "2025-01-25",
+      "url": "https://ae.linkedin.com/posts/hazem-eltawab_alhamdulillah-with-gods-grace-we-are-thrilled-activity-7289109466510204929-pzXG",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "إغلاق الجولة",
+        "ثمانية أرقام بالجنيه",
+        "كحيلان"
+      ]
+    },
+    {
+      "id": "S16",
+      "title": "Egyptian agri-tech startup ReNile raises $450k",
+      "publisher": "Disrupt Africa",
+      "source_type": "تغطية تمويل",
+      "publication_date": "2025-01-10",
+      "url": "https://disruptafrica.com/2025/01/10/egyptian-agri-tech-startup-renile-raises-450k-funding-round/",
+      "primary_source": false,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "مبلغ الجولة",
+        "خطط السعودية والكويت"
+      ]
+    },
+    {
+      "id": "S17",
+      "title": "Africa's Business Heroes — 2026 Top 100",
+      "publisher": "Africa's Business Heroes",
+      "source_type": "قائمة رسمية",
+      "publication_date": "2026",
+      "url": "https://africabusinessheroes.org/en/the-prize/finalists/all/top100?page=2",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "اختيار حازم الطواب ضمن أفضل 100"
+      ]
+    },
+    {
+      "id": "S18",
+      "title": "Aquaculture Intelligence",
+      "publisher": "ReNile",
+      "source_type": "صفحة حل رسمية",
+      "publication_date": null,
+      "url": "https://www.renile.net/en",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "مؤشرات المياه",
+        "التنبيهات",
+        "التحكم"
+      ]
+    },
+    {
+      "id": "S19",
+      "title": "Type Approval",
+      "publisher": "الجهاز القومي لتنظيم الاتصالات",
+      "source_type": "مرجع تنظيمي رسمي",
+      "publication_date": null,
+      "url": "https://www.tra.gov.eg/en/regulations/type-approval/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "إلزام اعتماد النوع",
+        "RF وEMC والسلامة"
+      ]
+    },
+    {
+      "id": "S20",
+      "title": "Type Approval Procedure — 2026 updates",
+      "publisher": "الجهاز القومي لتنظيم الاتصالات",
+      "source_type": "إجراءات تنظيمية رسمية",
+      "publication_date": "2026-02",
+      "url": "https://www.tra.gov.eg/en/regulations/type-approval/type-approval-procedure/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "تحديثات 2026",
+        "إجراءات الاعتماد"
+      ]
+    },
+    {
+      "id": "S21",
+      "title": "ICT Equipment Licensing",
+      "publisher": "هيئة الاتصالات والفضاء والتقنية",
+      "source_type": "مرجع تنظيمي رسمي",
+      "publication_date": null,
+      "url": "https://www.cst.gov.sa/en/services/equipment-licensing",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "اعتماد معدات الاتصالات في السعودية"
+      ]
+    },
+    {
+      "id": "S22",
+      "title": "Global fisheries and aquaculture production reaches a record high",
+      "publisher": "منظمة الأغذية والزراعة",
+      "source_type": "إعلان رسمي عن SOFIA 2024",
+      "publication_date": "2024-06-07",
+      "url": "https://www.fao.org/newsroom/detail/fao-report-global-fisheries-and-aquaculture-production-reaches-a-new-record-high/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "تجاوز الاستزراع المائي للمصايد الطبيعية"
+      ]
+    }
   ]
 }

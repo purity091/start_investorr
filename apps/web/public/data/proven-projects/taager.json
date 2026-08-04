@@ -2,52 +2,1048 @@
   "id": "taager",
   "slug": "taager",
   "name": "تاجر (Taager)",
-  "headline": "منصة التجارة الاجتماعية التي مكنت الآلاف من البيع بدون مخزون (Drop-shipping)",
-  "category": "E-commerce & B2B2C / التجارة الاجتماعية",
+  "headline": "من البيع بلا مخزون إلى امتلاك طبقة التوريد: كيف تحولت تاجر إلى بنية تشغيلية للتجارة العربية",
+  "category": "تمكين التجارة الاجتماعية والبنية التشغيلية للتجارة / Social Commerce Enablement & Commerce Infrastructure",
   "company": {
-    "location": "القاهرة، مصر (وتوسع في السعودية والإمارات)",
-    "business_model": "بيع المنتجات بالجملة للمسوقين بهوامش ربح (Drop-shipping Network)"
+    "legal_name": null,
+    "legal_name_note": "لم يُعثر في المصادر العامة المستخدمة على اسم قانوني موحد للكيان الأم عبر جميع الأسواق؛ استُخدم الاسم التجاري Taager.",
+    "founded": 2019,
+    "launch": "ديسمبر 2019",
+    "founders": [
+      "محمد الحريشي",
+      "عبد الرحمن شريف",
+      "أحمد إسماعيل",
+      "إسماعيل عمر"
+    ],
+    "location": "حضور معلن في القاهرة والرياض ودبي. تعرض صفحة الشركة المعادي مقرًا رئيسيًا، بينما تصف تغطيات تمويل 2025 الشركة بأنها مصرية المنشأ ومتمركزة في السعودية؛ لم يُحسم المقر القانوني بلا سجل رسمي.",
+    "business_model": "منصة B2B2C تمكّن التجار والمسوقين من بيع منتجات دون شراء مخزون مقدمًا. تدير تاجر التوريد والتخزين وتجهيز الطلبات والشحن والتحصيل وخدمة العملاء وما بعد البيع، بينما يتولى التاجر التسويق وإدخال الطلب وتحديد سعر البيع ضمن الخيارات المتاحة. توسع النموذج إلى الجملة والمنتجات الحصرية والتوريد العابر للحدود.",
+    "business_model_classification": {
+      "primary": "بنية تشغيلية لتمكين التجارة",
+      "secondary": [
+        "التجارة الاجتماعية",
+        "دروبشيبينغ مُدار",
+        "التوريد والجملة",
+        "التخزين والتنفيذ والتحصيل",
+        "التوريد العابر للحدود"
+      ],
+      "note": "وصف الشركة بالدروبشيبينغ فقط لا يعكس امتلاكها طبقات المخزون والتأكيد والتحصيل وخدمة ما بعد البيع ومكتب التوريد في الصين."
+    },
+    "customer_segments": [
+      "البائعون والمسوقون عبر منصات التواصل",
+      "التجار الإلكترونيون الصغار والمتوسطون",
+      "المؤثرون وصناع المحتوى",
+      "التجار الراغبون في اختبار أسواق عربية جديدة",
+      "الموردون والمصانع وشركاء التوريد",
+      "العلامات التي تحتاج التخزين والتنفيذ والتحصيل"
+    ],
+    "operating_status_as_of_2026_08_03": {
+      "status": "نشطة ومتوسعة",
+      "evidence": "الموقع وصفحة الشركة والتوظيف والفعاليات كانت نشطة، مع توسع معلن في العراق والمغرب وافتتاح مكتب توريد في الصين في أبريل 2026.",
+      "caution": "النشاط والتوسع لا يثبتان الإيراد أو الربحية أو عدد التجار النشطين."
+    }
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين",
-    "monthly_traffic": "يدير آلاف المتاجر المصغرة المستقلة"
+    "monthly_revenue": null,
+    "monthly_revenue_note": "لا توجد إيرادات شهرية حديثة أو قوائم مالية عامة. أزيلت عبارة «عشرات الملايين» لأنها بلا عملة أو فترة أو مصدر.",
+    "monthly_traffic": null,
+    "monthly_traffic_note": "لا توجد بيانات موثوقة للزيارات الشهرية أو المستخدمين النشطين. عدد التجار أو المتاجر ليس مقياس حركة مرور رقمية.",
+    "latest_verified_operating_snapshot": {
+      "as_of": "2026-08-03",
+      "official_site_active": true,
+      "visible_scope": [
+        "أكثر من 20 قسمًا و5,000 منتج وفق الموقع",
+        "منتجات قطاعي وجملة",
+        "تحديد سعر البيع من جانب التاجر",
+        "التخزين والشحن والتحصيل",
+        "تحويل الأرباح إلى حسابات بنكية أو محافظ إلكترونية",
+        "كتالوج وعربة منفصلان لكل دولة",
+        "منتجات حصرية في السعودية",
+        "تأكيد الطلبات وخدمة العملاء وما بعد البيع",
+        "أكاديمية وحاضنة ومجتمع للتجار"
+      ],
+      "historical_merchant_metrics": {
+        "as_of": "2025-02-11",
+        "merchants_served": 45000,
+        "end_consumers": "ملايين المستهلكين وفق الشركة دون رقم محدد",
+        "infrastructure_countries_claimed": 6,
+        "status": "company_and_investor_reported_not_audited",
+        "note": "رقم تراكمي للتجار الذين خُدموا، وليس عدد التجار النشطين شهريًا."
+      },
+      "historical_2023_metrics": {
+        "suppliers": 400,
+        "merchants": 30000,
+        "products": 5000,
+        "countries": 3,
+        "status": "company_reported_historical"
+      },
+      "order_confirmation_process_2026": {
+        "description": "ذكرت الشركة أن التأكيد يستفيد من سلوك العميل السابق داخل تاجر، مع أكثر من 9 محاولات تواصل خلال 3 أيام.",
+        "status": "company_reported",
+        "caution": "لم تُنشر نسبة التأكيد أو أثر العملية على المرتجعات."
+      },
+      "china_supply_office": {
+        "opened": true,
+        "announcement_date": "2026-04-30",
+        "classification": "supply_infrastructure_not_customer_market",
+        "purposes": [
+          "الاقتراب من المصانع",
+          "فحص الجودة عند المصدر",
+          "تقليل زمن التوريد",
+          "بناء شراكات مباشرة",
+          "دعم التجارة العابرة للحدود"
+        ]
+      }
+    },
+    "metric_distinctions": {
+      "revenue": "دخل الشركة من هوامش المنتجات والخدمات خلال فترة؛ غير منشور حاليًا.",
+      "valuation": "قيمة الشركة في جولة أو معاملة؛ غير معلنة.",
+      "funding": "رأس المال المستثمر في الشركة، وهو منفصل عن الإيراد والتقييم.",
+      "gmv": "قيمة المنتجات المباعة عبر المنظومة؛ غير معلنة حديثًا.",
+      "orders": "عدد الطلبات المسجلة أو المؤكدة أو المسلمة؛ غير معلن حديثًا.",
+      "merchants_served": "45 ألف تاجر خُدموا حتى فبراير 2025 وفق الشركة، وليسوا بالضرورة نشطين.",
+      "consumers": "وصف «ملايين» صادر عن الشركة دون رقم أو فترة.",
+      "traffic": "زيارات الموقع أو التطبيق؛ غير منشورة.",
+      "countries": "يجب الفصل بين سوق بيع وتشغيل ومكتب توريد أو دعم عن بُعد."
+    }
   },
   "overview": {
     "problem": {
-      "text": "ملايين الشباب في مصر والمنطقة يرغبون في بدء تجارة إلكترونية، لكنهم يصطدمون بعوائق هائلة: تكلفة شراء المخزون، صعوبة التعاقد مع شركات الشحن، ومخاطر الدفع عند الاستلام (COD).",
-      "impact": "عجز الأفراد عن دخول مجال التجارة الإلكترونية، وبطالة مقنعة."
+      "text": "إطلاق صفحة بيع سهل نسبيًا، لكن تحويلها إلى تجارة مستمرة يحتاج منتجًا وتمويل مخزون وتخزينًا وتسعيرًا وتأكيد طلبات وشحنًا وتحصيلًا ودعمًا وإدارة مرتجعات. في أسواق الدفع عند الاستلام لا يساوي الطلب المسجل طلبًا مؤكدًا أو مسلّمًا.",
+      "impact": "يؤدي تفكك السلسلة إلى رأس مال عالق وطلبات غير مؤكدة ومرتجعات وتكلفة إعلان مهدرة وتأخر الأرباح. أزيل تعميم «البطالة المقنعة» لأنه غير مدعوم بدليل خاص بالشركة."
     },
     "solution": {
-      "text": "منصة توفر للمسوقين المنتجات بأسعار الجملة. يقوم المسوق بعرض المنتج على صفحاته (فيسبوك/انستجرام)، وعندما يأتيه طلب، يدخله في منصة (تاجر) التي تتولى التغليف والشحن وتحصيل الأموال (COD)، ثم تحول للمسوق أرباحه (الفرق بين سعر البيع وسعر الجملة)."
+      "text": "تجمع تاجر كتالوج المنتجات والتوريد والتخزين وتجهيز الطلبات والشحن والتحصيل وتحويل الأرباح ودعم العملاء في منصة واحدة. يسوق التاجر المنتج ويحدد سعر البيع ويدخل الطلب، بينما تدير تاجر الجانب التشغيلي. أضافت الشركة أدوات بيانات وتأكيد طلبات وبرامج تدريب وتوسعًا متعدد الأسواق، ثم عمّقت التحكم في المنبع عبر مكتب توريد في الصين."
     }
   },
   "market_data": {
-    "target_audience": "الباعة عبر السوشيال ميديا (Social Sellers) والمتاجر المصغرة.",
-    "market_size": "سوق التجارة الاجتماعية (Social Commerce) الهائل في الشرق الأوسط.",
-    "growth_rate": "نمو صاروخي أدى لجمع 6.4 مليون دولار (Seed Round) للتوسع الإقليمي السريع."
+    "target_audience": "البائعون عبر السوشيال ميديا والتجار الإلكترونيون الصغار والمتوسطون والمؤثرون وأصحاب المتاجر الذين يريدون التوسع دون إدارة المخزون واللوجستيات والتحصيل بأنفسهم.",
+    "market_size": null,
+    "market_size_note": "لا يوجد تقدير رسمي حديث ومحدد لسوق تاجر القابل للخدمة يمكن ربطه بإيرادات الشركة.",
+    "growth_rate": null,
+    "growth_rate_note": "لا توجد سلسلة مالية مدققة أو أرقام سنوية للتجار النشطين والطلبات المسلمة تسمح بحساب معدل نمو حالي.",
+    "geographic_footprint": [
+      {
+        "market": "مصر",
+        "status": "سوق تشغيل مؤكد ومنشأ الشركة"
+      },
+      {
+        "market": "السعودية",
+        "status": "سوق رئيسي مؤكد ومركز إقليمي"
+      },
+      {
+        "market": "الإمارات",
+        "status": "حضور وتشغيل مؤكدان"
+      },
+      {
+        "market": "العراق",
+        "status": "توسع وتشغيل معلنان منذ 2025"
+      },
+      {
+        "market": "المغرب",
+        "status": "خدمة عن بُعد تاريخيًا ثم حضور ميداني معلن في 2025"
+      },
+      {
+        "market": "سوق سادس غير مسمى",
+        "status": "ادعاء إجمالي من الشركة لم تُسمَّ دولته؛ لم يُخترع اسم سوق"
+      },
+      {
+        "market": "الصين",
+        "status": "مكتب توريد مؤكد وليس سوقًا استهلاكيًا"
+      }
+    ],
+    "regulatory_context": {
+      "general": "يجب تحديد هوية البائع القانوني ومصدر الفاتورة والمسؤول عن الاسترجاع والضمان والبيانات في نموذج يوزع التسويق والتخزين والشحن والتحصيل بين أطراف متعددة.",
+      "saudi_arabia": {
+        "authority": "وزارة التجارة",
+        "requirements": "توثيق المتجر وسياسات الاستبدال والاسترجاع والشحن والشكاوى والخصوصية وإظهار بيانات التسجيل والتراخيص ووسائل التواصل وأمن الموقع.",
+        "company_specific_status": null
+      },
+      "egypt": {
+        "authority": "جهاز حماية المستهلك",
+        "requirements": "وضوح هوية البائع والتكلفة وسياسات الاسترجاع والتسليم والاحتفاظ بسجلات المعاملة وإصدار الفاتورة.",
+        "company_specific_status": null
+      },
+      "uae": {
+        "authority": "وزارة الاقتصاد والسياحة",
+        "requirements": "حقوق المعلومات الصحيحة والسعر والسلامة والخصوصية وتسوية النزاعات في التجارة الإلكترونية.",
+        "company_specific_status": null
+      }
+    }
   },
   "financials": {
-    "initial_investment": "مدعومة من Raed Ventures و Beco Capital.",
-    "valuation": "غير معلن (عشرات الملايين)",
+    "initial_investment": "جمعت تاجر جولة Seed بقيمة 6.4 مليون دولار في يوليو 2021 بقيادة 4DX Ventures، ثم جولة Pre-Series B بقيمة 6.75 مليون دولار في فبراير 2025 بقيادة Norrsken22 وبمشاركة Endeavor Catalyst وBeltone VC ومستثمرين حاليين.",
+    "valuation": {
+      "current_valuation": null,
+      "seed_2021_valuation": null,
+      "pre_series_b_2025_valuation": null,
+      "note": "لم تُعلن تقييمات الجولات. مبلغ التمويل لا يساوي تقييم الشركة."
+    },
+    "latest_financial_metrics": {
+      "current_revenue": null,
+      "current_profit": null,
+      "current_cash": null,
+      "current_debt": null,
+      "current_gmv": null,
+      "current_orders": null,
+      "current_take_rate": null,
+      "current_gross_margin": null,
+      "current_rto_rate": null,
+      "current_active_merchants": null,
+      "audited_financial_statements_available": false,
+      "company_reported_2025": {
+        "merchant_profitability_multiplier": "2.5x في المتوسط وفق بيان الجولة",
+        "unit_economics": "قالت الشركة إنها حسنت اقتصاديات الوحدة والكفاءة الرأسمالية",
+        "status": "not_audited"
+      }
+    },
+    "funding": {
+      "official_reconciled_total_funding_usd": null,
+      "sum_of_two_publicly_disclosed_rounds_usd": 13150000,
+      "cumulative_note": "ذكرت TechCrunch أن إجمالي الاستثمار تجاوز 7 ملايين دولار بعد جولة 2021، ما يدل على تمويل أقدم غير محدد. لذلك لا يُختلق إجمالي نهائي.",
+      "rounds": [
+        {
+          "date": "2021-07-15",
+          "round": "Seed",
+          "amount_usd": 6400000,
+          "lead": "4DX Ventures",
+          "participants": [
+            "RAED Ventures",
+            "BECO Capital",
+            "Breyer Capital"
+          ]
+        },
+        {
+          "date": "2025-02-11",
+          "round": "Pre-Series B",
+          "amount_usd": 6750000,
+          "lead": "Norrsken22",
+          "participants": [
+            "Endeavor Catalyst",
+            "Beltone VC",
+            "4DX Ventures",
+            "RAED Ventures",
+            "BECO Capital",
+            "Breyer Capital"
+          ]
+        }
+      ]
+    },
     "revenue_streams": [
-      "هامش الربح من بيع المنتجات (تستورد وتخزن تاجر المنتجات وتبيعها للمسوقين)",
-      "رسوم خدمات لوجستية وتغليف (Fulfillment)"
-    ]
+      "هامش أو فرق اقتصادي على المنتجات المباعة؛ أكدت تغطية 2021 أن تاجر تأخذ هامشًا من كل عملية بيع.",
+      "اقتصاديات التوريد والجملة والمنتجات الحصرية.",
+      "التخزين وتجهيز الطلبات والشحن والتحصيل وخدمة العملاء المدمجة في دورة البيع؛ لم يثبت أن كل خدمة تُفوَّتر منفصلة.",
+      "حلول وأدوات للتجار؛ عرضت خدمة شهبندر التاريخية اشتراكًا شهريًا، لكن استمرار المنتج أو السعر غير مثبت.",
+      "تمويل مضمّن لشراء المخزون ذُكر في بيان 2025، لكن نموذج الإيراد والجهة المرخصة والحجم غير معلنة.",
+      "لا توجد بيانات تفصل إيراد المنتجات عن اللوجستيات أو التمويل أو الاشتراكات."
+    ],
+    "capital_deployment_and_strategy": {
+      "pre_series_b_uses": [
+        "تطوير البيانات والأدوات",
+        "توسيع اختيار المنتجات",
+        "توسيع الفريق",
+        "النمو الإقليمي"
+      ],
+      "post_round_signals": [
+        "التوسع في العراق",
+        "تعزيز الحضور في المغرب",
+        "افتتاح مكتب الصين في أبريل 2026",
+        "التوظيف في التجارة وسلسلة الإمداد والحوكمة",
+        "توسيع التدريب ومجتمع التجار"
+      ]
+    }
+  },
+  "analysis": {
+    "core_thesis": "ميزة تاجر ليست أن البائع يبدأ بلا مخزون؛ هذه ميزة دخول قابلة للتقليد. الميزة الأصعب هي تحويل الطلب غير الموثوق إلى طلب مؤكد ومسلّم ومحصّل عبر دول ومنتجات وموردين. افتتاح مكتب الصين يشير إلى أن جودة المصدر وسعره وزمنه أصبحت جزءًا من المنتج نفسه.",
+    "what_changed": [
+      "أحدث جولة مؤكدة هي Pre-Series B بقيمة 6.75 مليون دولار في فبراير 2025، لا جولة 6.4 مليون لعام 2021 فقط.",
+      "وصل العدد التاريخي المعلن إلى أكثر من 45 ألف تاجر خُدموا بحلول فبراير 2025، لكنه ليس عددًا نشطًا.",
+      "توسع التشغيل إلى العراق وتعزز الحضور في المغرب.",
+      "افتتحت الشركة مكتب توريد في الصين في أبريل 2026.",
+      "تطور العرض من كتالوج وتوصيل إلى منظومة تشمل البيانات والتسعير والتأكيد والدعم والتدريب والبيع متعدد الأسواق.",
+      "ذكرت بيانات الجولة استخدام تعلم الآلة لتجميع المنتجات وتقسيم العملاء وتوقع التسليم، ووكلاء مبيعات بالذكاء الاصطناعي التوليدي.",
+      "تظل العمليات البشرية أساسية، إذ أعلنت الشركة أكثر من 9 محاولات اتصال خلال 3 أيام لتأكيد بعض الطلبات."
+    ],
+    "competitive_advantage": [
+      "بنية تشغيلية من اختيار المنتج حتى التحصيل وما بعد البيع.",
+      "بيانات تاريخية عن المنتجات والتجار والعملاء والطلبات.",
+      "بدء التاجر دون شراء مخزون مقدمًا.",
+      "كتالوج متعدد الفئات والأسواق.",
+      "شبكة تخزين وتنفيذ وتحصيل وخدمة عملاء.",
+      "إمكانية اختبار أسواق عربية جديدة دون بناء بنية كاملة.",
+      "مجتمع وبرامج تدريب وحاضنة للتجار.",
+      "تكامل رأسي في الصين قد يحسن السعر والجودة وزمن التوريد."
+    ],
+    "risks_and_constraints": [
+      "غياب بيانات عامة عن الإيراد والهامش والربحية والتدفق النقدي.",
+      "حساسية نموذج الدفع عند الاستلام لعدم الرد والإلغاء والمرتجعات وفشل التسليم.",
+      "تحمل المخزون والتوريد والمخازن والتحصيل يجعل المنصة أثقل رأسماليًا حتى لو كانت خفيفة على التاجر.",
+      "مكتب الصين يضيف مخاطر الجودة والمخزون والعملات والشحن والجمارك.",
+      "رقم 45 ألف تاجر لا يكشف الاحتفاظ أو النشاط أو تركّز المبيعات.",
+      "ادعاء زيادة ربحية التجار 2.5 مرة يحتاج منهجية وخط أساس.",
+      "توقع التسليم وتقسيم العملاء يحتاجان حوكمة للخصوصية والإنصاف والأخطاء.",
+      "غموض هوية البائع القانوني قد يخلق نزاعات في الفواتير والضمان والاسترجاع.",
+      "التوسع متعدد الأسواق يضيف اختلافات الضرائب وحماية المستهلك والمنتجات المقيدة.",
+      "تكلفة الإعلان تقع عادة على التاجر وقد تلتهم الربح إذا كان معدل التسليم منخفضًا.",
+      "اتساع الكتالوج قد يزيد المخزون البطيء والتنافس بين تجار المنصة.",
+      "رسائل «ابدأ بلا رأس مال» تحتاج ضوابط حتى لا تُفهم كضمان للربح."
+    ],
+    "outlook_as_of_2026_08_03": "تاجر شركة ممولة ونشطة تجاوزت تعريف منصة دروبشيبينغ إلى بنية تجارة وتوريد متعددة الأسواق. التصنيف المحافظ هو منصة تشغيلية واسعة بتمويل موثق وشفافية مالية محدودة. أهم مؤشرات المرحلة التالية هي نسبة الطلب المؤكد إلى المسلّم، معدل RTO، هامش المساهمة، احتفاظ التجار، دوران المخزون، وأثر مكتب الصين."
   },
   "lessons": [
     {
-      "title": "إضفاء الطابع الديمقراطي على التجارة (Democratizing E-commerce)",
-      "description": "بإزالة عوائق (رأس المال، الشحن، التخزين)، حولت Taager أي شخص يمتلك حساباً على إنستجرام إلى متجر إلكتروني محتمل، مما خلق شبكة مبيعات لامركزية ضخمة لا تتطلب من الشركة إنفاق دولار واحد على تسويق المنتجات للمستهلك النهائي."
+      "title": "الدروبشيبينغ خفيف على التاجر ثقيل على المنصة",
+      "description": "إزالة المخزون من ميزانية البائع لا تلغيه؛ تنقله إلى المنصة أو المورد. النجاح يحتاج رأس مال عامل وتنبؤ طلب ودوران مخزون."
     },
     {
-      "title": "إدارة المخاطر (COD Risk)",
-      "description": "حل مشكلة المرتجعات (RTO) في الدفع عند الاستلام كان التحدي الأكبر. استخدام الذكاء الاصطناعي لتقييم مصداقية الطلبات الواردة من المسوقين كان حجر الزاوية لنجاح هذا النموذج الصعب."
+      "title": "الطلب المسلّم هو وحدة الحقيقة",
+      "description": "في الدفع عند الاستلام لا يكفي عد الطلبات المسجلة. القياس الحقيقي يبدأ بالطلب المؤكد ثم المسلّم والمحصّل بعد خصم المرتجع والتكلفة."
+    },
+    {
+      "title": "التمويل لا يساوي التقييم ولا الإيراد",
+      "description": "6.4 ملايين و6.75 ملايين دولار جولتا تمويل، وليستا مبيعات أو قيمة الشركة. التقييم الحالي غير معلن."
+    },
+    {
+      "title": "التاجر المخدوم ليس تاجرًا نشطًا",
+      "description": "45 ألف تاجر رقم تراكمي مهم، لكنه لا يوضح من باع هذا الشهر. الأفضل قياس التاجر النشط والاحتفاظ والإيراد لكل شريحة."
+    },
+    {
+      "title": "الميزة تنتقل إلى أول السلسلة",
+      "description": "مكتب الصين يعكس أن جودة المنتج والسعر وزمن التوريد قد تكون أهم من تحسين الميل الأخير وحده."
+    },
+    {
+      "title": "الذكاء الاصطناعي لا يلغي فريق العمليات",
+      "description": "البيانات ترتب الأولويات وتتوقع التسليم، لكن تعدد محاولات الاتصال يوضح أن الاقتصاد يجمع البرمجيات والعمل البشري."
+    },
+    {
+      "title": "التوسع الجغرافي له درجات",
+      "description": "خدمة تجار عن بُعد تختلف عن فريق وعمليات محلية، ومكتب توريد يختلف عن سوق بيع. يجب تسجيل كل دولة بحسب نوع الوجود."
+    },
+    {
+      "title": "هوية البائع بند في المنتج",
+      "description": "عندما يسوق طرف ويخزن طرف ويشحن طرف ويحصّل طرف، يجب أن يعرف المستهلك من أصدر الفاتورة ومن يتحمل الاسترجاع والضمان."
+    },
+    {
+      "title": "مجتمع التجار أصل تشغيلي",
+      "description": "الأكاديمية والحاضنة واللقاءات قد تحسن اختيار المنتج والإعلانات وجودة الطلب، لكن أثرها يحتاج قياسًا بالتفعيل والاحتفاظ والربحية."
     }
   ],
   "tools": [
-    "AWS",
-    "Node.js",
-    "Vue.js",
-    "AI Fraud Detection"
+    "كتالوج منتجات متعدد الفئات والأسواق.",
+    "إدارة طلبات وأرباح وعربات منفصلة لكل دولة.",
+    "تطبيق لمتابعة الطلبات وفق الموقع.",
+    "منظومة تخزين وتجهيز وشحن وتحصيل وخدمة عملاء.",
+    "نظام إدارة مخازن ظاهر عبر نطاق تابع للشركة.",
+    "تحليل بيانات العميل السابقة لدعم تأكيد الطلب.",
+    "تعلم آلة لتجميع المنتجات ومطابقتها وتقسيم العملاء وتوقع احتمالات التسليم وفق بيان الجولة.",
+    "وكلاء مبيعات بالذكاء الاصطناعي التوليدي وفق بيان الجولة.",
+    "Taager Academy وحاضنة التجار والفعاليات المجتمعية.",
+    "مكتب توريد وفحص جودة وشراكات مصانع في الصين.",
+    "خدمة شهبندر التاريخية لإنشاء متجر مربوط بتاجر؛ ذكر AWS فيها لا يثبت البنية الحالية للمنصة الأساسية.",
+    "تنبيه تقني: لم تثبت المصادر الحالية استخدام Node.js أو Vue.js أو AWS في المنصة الأساسية، ولم يثبت نظام باسم AI Fraud Detection."
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "verified_through": "2026-08-03",
+    "research_scope": "مراجعة الملف الأصلي، موقع تاجر وصفحة الشركة ومنشورات التمويل والتوسع حتى 2026، إعلانات المستثمرين، وتوجيهات حماية المستهلك والتجارة الإلكترونية في السعودية ومصر والإمارات.",
+    "overall_status": "verified_with_material_updates_and_private_company_limitations",
+    "primary_source_priority": "أُعطيت الأولوية للموقع ومنشورات الشركة والمؤسس والمستثمرين والجهات الحكومية، واستُخدمت TechCrunch وWamda لتوثيق التمويل والتاريخ التشغيلي.",
+    "sec_search_status": {
+      "applicable": false,
+      "reason": "تاجر شركة خاصة غير مدرجة ولا تُعرف كمصدر أوراق مالية أمريكية.",
+      "result": "لم يُعثر على إفصاح SEC ذي صلة.",
+      "note": "غياب إفصاحات SEC لا يثبت الوضع القانوني أو المالي في أسواق الشركة."
+    },
+    "key_corrections": [
+      {
+        "field": "headline",
+        "original_claim": "منصة تمكّن الآلاف من البيع بدون مخزون",
+        "status": "expanded",
+        "correction": "أعيد توصيفها كبنية تشغيلية وتوريد متعددة الأسواق.",
+        "evidence_ids": [
+          "E1",
+          "E10"
+        ]
+      },
+      {
+        "field": "company.location",
+        "original_claim": "القاهرة مع توسع في السعودية والإمارات",
+        "status": "updated",
+        "correction": "أضيف تضارب توصيف المقر والحضور في العراق والمغرب ومكتب الصين.",
+        "evidence_ids": [
+          "E2",
+          "E6",
+          "E8",
+          "E9",
+          "E10"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_revenue",
+        "original_claim": "عشرات الملايين",
+        "status": "removed_unsupported",
+        "correction": "وُضع null لغياب الفترة والعملة والمصدر.",
+        "evidence_ids": [
+          "E7"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_traffic",
+        "original_claim": "يدير آلاف المتاجر المصغرة",
+        "status": "removed_wrong_metric",
+        "correction": "وُضع null وفُصل رقم التجار التاريخي.",
+        "evidence_ids": [
+          "E5",
+          "E7"
+        ]
+      },
+      {
+        "field": "market_data.growth_rate",
+        "original_claim": "نمو صاروخي أدى لجمع 6.4 مليون دولار",
+        "status": "corrected_and_reclassified",
+        "correction": "التمويل ليس معدل نمو، والجولة الأحدث 6.75 مليون دولار؛ وُضع النمو null.",
+        "evidence_ids": [
+          "E3",
+          "E4",
+          "E7"
+        ]
+      },
+      {
+        "field": "financials.initial_investment",
+        "original_claim": "مدعومة من RAED وBECO",
+        "status": "expanded",
+        "correction": "أضيفت الجولتان وجميع المستثمرين الرئيسيين.",
+        "evidence_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "field": "financials.valuation",
+        "original_claim": "عشرات الملايين",
+        "status": "removed_speculation",
+        "correction": "التقييم غير معلن؛ وُضع null.",
+        "evidence_ids": [
+          "E3",
+          "E4",
+          "E7"
+        ]
+      },
+      {
+        "field": "financials.revenue_streams",
+        "original_claim": "هامش منتجات ورسوم لوجستية",
+        "status": "qualified",
+        "correction": "ثبت هامش البيع، ولم يثبت أن الخدمات اللوجستية تُفوَّتر منفصلة.",
+        "evidence_ids": [
+          "E1",
+          "E13"
+        ]
+      },
+      {
+        "field": "lessons.cod_risk",
+        "original_claim": "AI Fraud Detection حجر الزاوية",
+        "status": "corrected",
+        "correction": "ثبت استخدام البيانات وتعلم الآلة للتقسيم وتوقع التسليم، لا نظام احتيال محدد بالاسم.",
+        "evidence_ids": [
+          "E11",
+          "E14"
+        ]
+      },
+      {
+        "field": "tools",
+        "original_claim": "AWS وNode.js وVue.js وAI Fraud Detection",
+        "status": "removed_unverified_stack",
+        "correction": "أُبقيت القدرات التشغيلية والبيانية المعلنة فقط.",
+        "evidence_ids": [
+          "E11",
+          "E14",
+          "E16"
+        ]
+      }
+    ],
+    "known_source_discrepancies": [
+      {
+        "topic": "المقر",
+        "detail": "صفحة الشركة تعرض المعادي مقرًا رئيسيًا ومواقع في دبي والرياض، بينما تغطيات 2025 تصف الشركة بأنها متمركزة في السعودية."
+      },
+      {
+        "topic": "إجمالي التمويل",
+        "detail": "الجولتان المحددتان تجمعان 13.15 مليون دولار، لكن إجمالي 2021 تجاوز 7 ملايين بعد جولة 6.4 ملايين، ما يدل على تمويل أقدم غير محدد."
+      },
+      {
+        "topic": "عدد الدول",
+        "detail": "قالت الشركة إن بنيتها تمتد عبر ست دول دون تسمية جميعها؛ لم يُخترع السوق السادس."
+      },
+      {
+        "topic": "تصنيف جولة 2025",
+        "detail": "اعتمد الملف تصنيف الشركة الرسمي Pre-Series B بدل تصنيفات قواعد بيانات مختلفة."
+      }
+    ],
+    "limitations": [
+      "الشركة خاصة ولا تنشر قوائم مالية مدققة.",
+      "لا توجد أرقام حديثة للإيراد أو الربح أو GMV أو الطلبات أو take rate أو RTO.",
+      "رقم 45 ألف تاجر تراكمي حتى فبراير 2025.",
+      "ادعاء 2.5x واقتصاديات الوحدة غير مدقق ولا تنشر منهجيته.",
+      "لم تُعلن تقييمات الجولات أو نسب الملكية.",
+      "لم تُراجع تراخيص كل كيان وتاجر ومنتج في كل سوق.",
+      "بعض الصفحات التابعة تاريخية ولا تثبت استمرار المنتجات أو الأسعار.",
+      "لا توجد مقاييس مستقلة لدقة توقع التسليم أو أثر الذكاء الاصطناعي."
+    ],
+    "programmatic_validation": {
+      "json_parse": true,
+      "json_schema_validation": true,
+      "required_original_top_level_keys_preserved": true,
+      "required_original_paths_preserved": true,
+      "all_source_ids_unique": true,
+      "all_evidence_source_references_valid": true,
+      "all_key_correction_evidence_references_valid": true,
+      "no_nan_or_infinity": true,
+      "null_used_for_unavailable_monthly_metrics": true,
+      "null_used_for_unavailable_market_size_and_growth": true,
+      "valuation_not_invented": true,
+      "funding_separated_from_revenue_and_valuation": true,
+      "merchant_metric_marked_historical_not_active": true,
+      "china_classified_as_supply_not_customer_market": true,
+      "unnamed_sixth_market_not_invented": true,
+      "unsupported_original_stack_removed": true,
+      "utf8_arabic_content_present": true,
+      "duplicate_lesson_titles": false,
+      "source_count": 16,
+      "primary_source_count": 14,
+      "evidence_item_count": 19,
+      "lesson_count": 9,
+      "top_level_key_count": 17,
+      "errors": [],
+      "validated_at": "2026-08-03T17:23:00+03:00",
+      "validation_status": "passed"
+    }
+  },
+  "evidence_map_schema": {
+    "description": "خريطة تربط كل ادعاء جوهري بمصادره ومساراته داخل JSON.",
+    "item_fields": {
+      "claim": "الادعاء المختصر",
+      "json_paths": "المسارات المعتمدة على الدليل",
+      "classification": "company | operating | funding | merchants | expansion | supply | product | regulatory | unavailable | interpretation",
+      "status": "verified | verified_company_reported | historical_only | corrected | unavailable",
+      "source_ids": "معرفات المصادر",
+      "notes": "حدود الدليل"
+    }
+  },
+  "evidence_map": {
+    "E1": {
+      "claim": "الموقع الرسمي يعرض البيع دون مخزون والتخزين والشحن والتحصيل وتحديد السعر والبيع متعدد الدول.",
+      "json_paths": [
+        "company.business_model",
+        "directory_snapshot.latest_verified_operating_snapshot.visible_scope",
+        "overview.solution"
+      ],
+      "classification": "product",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S1"
+      ],
+      "notes": "يثبت العرض الحالي لا الإيرادات."
+    },
+    "E2": {
+      "claim": "تأسست تاجر في 2019 وتعرض حضورًا في القاهرة ودبي والرياض.",
+      "json_paths": [
+        "company.founded",
+        "company.location",
+        "company.operating_status_as_of_2026_08_03"
+      ],
+      "classification": "company",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S2"
+      ],
+      "notes": "صفحة الشركة الحالية."
+    },
+    "E3": {
+      "claim": "جمعت تاجر 6.75 مليون دولار Pre-Series B بقيادة Norrsken22 في فبراير 2025.",
+      "json_paths": [
+        "financials.initial_investment",
+        "financials.funding",
+        "analysis.what_changed"
+      ],
+      "classification": "funding",
+      "status": "verified",
+      "source_ids": [
+        "S3",
+        "S4"
+      ],
+      "notes": "متسق بين الشركة وتغطية التمويل."
+    },
+    "E4": {
+      "claim": "جمعت 6.4 مليون دولار Seed في يوليو 2021 وبلغ الاستثمار آنذاك أكثر من 7 ملايين.",
+      "json_paths": [
+        "financials.initial_investment",
+        "financials.funding"
+      ],
+      "classification": "funding",
+      "status": "verified",
+      "source_ids": [
+        "S5"
+      ],
+      "notes": "يدل على تمويل أقدم غير محدد."
+    },
+    "E5": {
+      "claim": "خدمت أكثر من 45 ألف تاجر حتى فبراير 2025 وادعت بنية في ست دول.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.historical_merchant_metrics",
+        "market_data.geographic_footprint"
+      ],
+      "classification": "merchants",
+      "status": "historical_only",
+      "source_ids": [
+        "S3",
+        "S6"
+      ],
+      "notes": "رقم تراكمي غير مدقق."
+    },
+    "E6": {
+      "claim": "تعمل في مصر والسعودية والإمارات ودخلت العراق.",
+      "json_paths": [
+        "market_data.geographic_footprint",
+        "company.location"
+      ],
+      "classification": "expansion",
+      "status": "verified",
+      "source_ids": [
+        "S3",
+        "S4",
+        "S7"
+      ],
+      "notes": "لا تتوفر أرقام سوقية مفصلة."
+    },
+    "E7": {
+      "claim": "لا توجد بيانات عامة حديثة للإيراد أو التقييم أو الزيارات أو GMV أو التجار النشطين.",
+      "json_paths": [
+        "directory_snapshot.monthly_revenue",
+        "directory_snapshot.monthly_traffic",
+        "market_data.market_size",
+        "market_data.growth_rate",
+        "financials.valuation",
+        "financials.latest_financial_metrics"
+      ],
+      "classification": "unavailable",
+      "status": "unavailable",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ],
+      "notes": "الإفصاحات تعرض التمويل والخدمات دون بيانات مالية حالية."
+    },
+    "E8": {
+      "claim": "أعلنت توسعًا تشغيليًا في العراق.",
+      "json_paths": [
+        "market_data.geographic_footprint",
+        "analysis.what_changed"
+      ],
+      "classification": "expansion",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S7"
+      ],
+      "notes": "لا توجد أرقام إيراد."
+    },
+    "E9": {
+      "claim": "دعمت تجارًا مغاربة عن بُعد ثم عززت الحضور الميداني في 2025.",
+      "json_paths": [
+        "market_data.geographic_footprint",
+        "analysis.what_changed"
+      ],
+      "classification": "expansion",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S8"
+      ],
+      "notes": "لا يثبت حجم التشغيل."
+    },
+    "E10": {
+      "claim": "افتتحت أول مكتب توريد في الصين في أبريل 2026.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.china_supply_office",
+        "financials.capital_deployment_and_strategy",
+        "analysis.core_thesis"
+      ],
+      "classification": "supply",
+      "status": "verified",
+      "source_ids": [
+        "S9"
+      ],
+      "notes": "مكتب توريد وليس سوق بيع."
+    },
+    "E11": {
+      "claim": "عملية التأكيد تستخدم بيانات العميل وأكثر من 9 محاولات خلال 3 أيام.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.order_confirmation_process_2026",
+        "tools"
+      ],
+      "classification": "operating",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S2"
+      ],
+      "notes": "لا توجد نتائج أداء منشورة."
+    },
+    "E12": {
+      "claim": "مكتب الصين يعمق التكامل الرأسي في التوريد وفحص الجودة.",
+      "json_paths": [
+        "company.business_model_classification",
+        "analysis.competitive_advantage"
+      ],
+      "classification": "interpretation",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S9"
+      ],
+      "notes": "أثره المالي غير منشور."
+    },
+    "E13": {
+      "claim": "تأخذ تاجر هامشًا من كل عملية بيع وفق شرح 2021.",
+      "json_paths": [
+        "financials.revenue_streams"
+      ],
+      "classification": "funding",
+      "status": "historical_only",
+      "source_ids": [
+        "S5"
+      ],
+      "notes": "لا توجد نسبة take rate."
+    },
+    "E14": {
+      "claim": "ذكرت جولة 2025 تعلم الآلة للتجميع والتقسيم وتوقع التسليم ووكلاء مبيعات توليديين.",
+      "json_paths": [
+        "analysis.what_changed",
+        "tools"
+      ],
+      "classification": "product",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S4"
+      ],
+      "notes": "لا توجد مقاييس دقة مستقلة."
+    },
+    "E15": {
+      "claim": "تدير برامج تدريب وحاضنة وفعاليات للتجار.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.visible_scope",
+        "tools"
+      ],
+      "classification": "operating",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S10",
+        "S11"
+      ],
+      "notes": "أثرها الاقتصادي غير منشور."
+    },
+    "E16": {
+      "claim": "صفحة شهبندر القديمة عرضت متجرًا مرتبطًا بتاجر وذكرت AWS.",
+      "json_paths": [
+        "financials.revenue_streams",
+        "tools"
+      ],
+      "classification": "product",
+      "status": "historical_only",
+      "source_ids": [
+        "S12"
+      ],
+      "notes": "لا تثبت البنية الحالية للمنصة."
+    },
+    "E17": {
+      "claim": "معايير السعودية تشمل التوثيق والاسترجاع والشحن والشكاوى والخصوصية وبيانات التسجيل.",
+      "json_paths": [
+        "market_data.regulatory_context.saudi_arabia",
+        "analysis.risks_and_constraints"
+      ],
+      "classification": "regulatory",
+      "status": "verified",
+      "source_ids": [
+        "S13"
+      ],
+      "notes": "إطار عام."
+    },
+    "E18": {
+      "claim": "حماية المستهلك الإماراتية تشمل التجارة الإلكترونية والمعلومات والسعر والخصوصية.",
+      "json_paths": [
+        "market_data.regulatory_context.uae"
+      ],
+      "classification": "regulatory",
+      "status": "verified",
+      "source_ids": [
+        "S14"
+      ],
+      "notes": "إطار عام."
+    },
+    "E19": {
+      "claim": "إرشادات مصر تؤكد هوية البائع والتكلفة والاسترجاع والتسليم والفاتورة.",
+      "json_paths": [
+        "market_data.regulatory_context.egypt",
+        "analysis.risks_and_constraints"
+      ],
+      "classification": "regulatory",
+      "status": "verified",
+      "source_ids": [
+        "S15",
+        "S16"
+      ],
+      "notes": "إطار عام."
+    }
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "تاجر — منصة متكاملة لحلول التجارة الإلكترونية",
+      "publisher": "Taager",
+      "source_type": "موقع رسمي",
+      "publication_date": null,
+      "url": "https://taager.com/eg",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "نموذج العمل",
+        "المنتجات",
+        "البيع متعدد الدول",
+        "التخزين والشحن والتحصيل"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "Taager Company Page",
+      "publisher": "Taager on LinkedIn",
+      "source_type": "صفحة رسمية",
+      "publication_date": "2026",
+      "url": "https://www.linkedin.com/company/taagercom",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "التأسيس",
+        "المواقع",
+        "الخدمات",
+        "نشاط 2026",
+        "تأكيد الطلبات"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "Taager raises $6.75M Pre-Series B",
+      "publisher": "Taager on LinkedIn",
+      "source_type": "إعلان تمويل رسمي",
+      "publication_date": "2025-02-11",
+      "url": "https://www.linkedin.com/posts/taagercom_taager-fundraising-ecommerce-activity-7295125636833013760-CGyl",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الجولة",
+        "المستثمرون",
+        "45 ألف تاجر",
+        "العراق"
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "With $6.75 million pre-Series B funding round, Taager sets sights on MENA growth",
+      "publisher": "Wamda",
+      "source_type": "تغطية تمويل متخصصة",
+      "publication_date": "2025-02-11",
+      "url": "https://www.wamda.com/2025/02/67-5-million-pre-series-b-funding-round-taager-sets-sights-mena-growth",
+      "primary_source": false,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الجولة",
+        "المؤسسون",
+        "الأسواق",
+        "تعلم الآلة",
+        "اقتصاديات الوحدة"
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "Egyptian social e-commerce platform Taager raises $6.4M",
+      "publisher": "TechCrunch",
+      "source_type": "تغطية تمويل ومقابلة",
+      "publication_date": "2021-07-15",
+      "url": "https://techcrunch.com/2021/07/15/egyptian-social-e-commerce-platform-taager-raises-6-4m-led-by-4dx-ventures/",
+      "primary_source": false,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "جولة 2021",
+        "إجمالي سابق",
+        "الإطلاق",
+        "هامش المبيعات"
+      ]
+    },
+    {
+      "id": "S6",
+      "title": "Exciting Growth Ahead",
+      "publisher": "Mohammed Elhorishy and Taager on LinkedIn",
+      "source_type": "إعلان من المؤسس",
+      "publication_date": "2025-02",
+      "url": "https://www.linkedin.com/posts/taagercom_exciting-growth-ahead-activity-7295138057756803073-uIxP",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "ست دول",
+        "45 ألف تاجر",
+        "المستثمرون"
+      ]
+    },
+    {
+      "id": "S7",
+      "title": "Taager expanding into Iraq",
+      "publisher": "Taager on LinkedIn",
+      "source_type": "إعلان توسع رسمي",
+      "publication_date": "2025",
+      "url": "https://www.linkedin.com/posts/taagercom_taager-taager-behindthevision2-activity-7317139608444526593-FxOS",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "العراق",
+        "الشبكة التشغيلية",
+        "التوريد"
+      ]
+    },
+    {
+      "id": "S8",
+      "title": "Taager in Morocco",
+      "publisher": "Taager on LinkedIn",
+      "source_type": "إعلان نشاط رسمي",
+      "publication_date": "2025",
+      "url": "https://www.linkedin.com/posts/taagercom_taager-in-morocco-activity-7399831005995601920-LVL0",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "المغرب",
+        "الدعم عن بُعد",
+        "الحضور الميداني"
+      ]
+    },
+    {
+      "id": "S9",
+      "title": "Taager opens first strategic sourcing office in China",
+      "publisher": "Taager on LinkedIn",
+      "source_type": "إعلان توسع رسمي",
+      "publication_date": "2026-04-30",
+      "url": "https://www.linkedin.com/posts/taagercom_taager-moves-into-china-to-fix-sourcing-bottlenecks-activity-7455610624216080384-PdBL",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "مكتب الصين",
+        "فحص الجودة",
+        "التوريد",
+        "التكامل الرأسي"
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "Taager Incubation Program",
+      "publisher": "Taager",
+      "source_type": "برنامج رسمي",
+      "publication_date": null,
+      "url": "https://incubation.taager.com/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الحاضنة",
+        "التدريب",
+        "أسواق الخليج"
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "Taager Next 2026",
+      "publisher": "Taager on LinkedIn",
+      "source_type": "إعلان فعالية رسمي",
+      "publication_date": "2026",
+      "url": "https://www.linkedin.com/posts/taagercom_taagernext2026-taager-ecommerce-activity-7436723785623535617-9-AW",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "مجتمع التجار",
+        "نشاط 2026"
+      ]
+    },
+    {
+      "id": "S12",
+      "title": "شهبندر وتاجر",
+      "publisher": "Taager / Shahbandr",
+      "source_type": "صفحة منتج تاريخية",
+      "publication_date": "2021",
+      "url": "https://shahbandr.taager.com/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "متجر مرتبط",
+        "اشتراك تاريخي",
+        "ذكر AWS تاريخيًا"
+      ]
+    },
+    {
+      "id": "S13",
+      "title": "نتائج تقييم المتاجر الإلكترونية والمعايير العشرة",
+      "publisher": "وزارة التجارة السعودية",
+      "source_type": "مرجع تنظيمي رسمي",
+      "publication_date": "2025-08-18",
+      "url": "https://mc.gov.sa/ar/mediacenter/News/Pages/18-08-25-01.aspx",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "التوثيق",
+        "الاسترجاع",
+        "الشحن",
+        "الشكاوى",
+        "الخصوصية"
+      ]
+    },
+    {
+      "id": "S14",
+      "title": "Consumer Protection Legislations",
+      "publisher": "UAE Ministry of Economy & Tourism",
+      "source_type": "مرجع تنظيمي رسمي",
+      "publication_date": "2026",
+      "url": "https://www.moet.gov.ae/en/consumer-protection-legislations",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "التجارة الإلكترونية",
+        "السعر",
+        "المعلومات",
+        "الخصوصية"
+      ]
+    },
+    {
+      "id": "S15",
+      "title": "التسوق على الإنترنت",
+      "publisher": "جهاز حماية المستهلك — مصر",
+      "source_type": "إرشاد رسمي",
+      "publication_date": null,
+      "url": "https://cpa.gov.eg/ar-eg/الإستخدام-الآمن-للإنترنت/ArtMID/479/ArticleID/1998/التسوق-على-الإنترنت",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "هوية البائع",
+        "التكلفة",
+        "الاسترجاع",
+        "التسليم"
+      ]
+    },
+    {
+      "id": "S16",
+      "title": "إصدار التجار فاتورة للمستهلكين أمر ملزم",
+      "publisher": "جهاز حماية المستهلك — مصر",
+      "source_type": "توضيح رسمي",
+      "publication_date": null,
+      "url": "https://cpa.gov.eg/ar-eg/الجمعيات-الأهلية/ArtMID/659/ArticleID/6737",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الفاتورة",
+        "بيانات التاجر",
+        "السعر",
+        "الاستبدال والاسترجاع"
+      ]
+    }
   ]
 }

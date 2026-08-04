@@ -1,53 +1,866 @@
 {
   "id": "metadoc",
   "slug": "metadoc",
-  "name": "ميتا دوك (Metadoc)",
-  "headline": "تطبيق الطب الاتصالي الذي جلب الرعاية الصحية لهواتف الملايين",
-  "category": "HealthTech / الطب الاتصالي والصحة الرقمية",
+  "name": "ميتا دوك (MetaDoc)",
+  "headline": "كيف تحوّلت ميتا دوك من تطبيق استشارة إلى بنية تشغيل للرعاية الصحية الهجينة",
+  "category": "HealthTech / الرعاية الصحية المنزلية والافتراضية",
   "company": {
-    "location": "القاهرة، مصر (Shark Tank Egypt)",
-    "business_model": "رسوم على الاستشارات الطبية (Pay-per-consultation) واشتراكات B2B"
+    "legal_identity_note": "MetaDoc هو اسم المنتج والمنصة المرتبطة بمنظومة At Home Doc وكيانات Medihealth في أكثر من سوق. لا تعرض المصادر العامة اسمًا قانونيًا موحدًا يغطي جميع العمليات؛ لذلك جرى الفصل بين العلامة والكيانات المشغلة بدل افتراض شركة مصرية واحدة.",
+    "related_entities": [
+      "Medihealth Global Innovation Inc. (MGI) — كيان/مظلة مذكورة في تعريف الشركة",
+      "Medihealth Solutions Doha — مشغل الخدمة في قطر وفق الموقع الرسمي",
+      "Medihealth Solutions Pty Ltd — مطور تطبيقات MetaDoc وAt Home Doc",
+      "At Home Doc Egypt / MetaDoc Egypt — العمليات المرتبطة بالسوق المصري"
+    ],
+    "location": "عمليات متعددة الأسواق تشمل قطر ومصر وأستراليا؛ الموقع الرسمي يذكر تشغيل الخدمة في قطر بواسطة Medihealth Solutions Doha، بينما تعرض صفحة الشركة مواقع في الدوحة والقاهرة وبريزبن.",
+    "founded_year": 2016,
+    "founded_by": [
+      "هشام الفيشاوي (Hesham Elfeshawy)",
+      "د. حاتم الفيشاوي (Dr. Hatem Elfieshawy)"
+    ],
+    "public_company": false,
+    "sec_filings_available": false,
+    "business_model": "نموذج رعاية صحية هجين يجمع الدفع مقابل الخدمة والزيارات المنزلية والاستشارات الافتراضية، وباقات وخطط صحية، وعقود شركات وتأمين، مع طرح قدرات برمجية وبيضاء العلامة للشركاء وفق تصريحات المؤسسين.",
+    "products": [
+      "استشارات افتراضية عبر الفيديو أو الهاتف أو الدردشة",
+      "زيارات أطباء وخدمات صحية منزلية عند الطلب",
+      "مختبرات منزلية وتنسيق توصيل الأدوية",
+      "خطط وباقات صحية للأفراد والعائلات",
+      "برامج رعاية وإدارة أمراض مزمنة",
+      "حلول مزايا صحية للموظفين والشركات",
+      "عيادات افتراضية وأدوات إدارة للممارسين والشركاء"
+    ]
   },
   "directory_snapshot": {
-    "monthly_revenue": "مئات الآلاف من الجنيهات",
-    "monthly_traffic": "آلاف الاستشارات الطبية عبر الفيديو شهرياً"
+    "as_of_date": "2026-08-03",
+    "monthly_revenue": null,
+    "monthly_revenue_note": "لا تنشر MetaDoc أو At Home Doc إيرادًا شهريًا فعليًا أو قوائم مالية مدققة. حُذف وصف «مئات الآلاف من الجنيهات» لغياب مصدر أولي قابل للتحقق.",
+    "monthly_traffic": null,
+    "monthly_traffic_note": "لا تنشر الشركة رقم زيارات موقع أو تطبيق موثوقًا. التنزيلات أو المرضى أو الاستشارات ليست بديلًا مباشرًا لمقياس الزيارات.",
+    "monthly_consultations": null,
+    "monthly_consultations_note": "لم يُعثر على إفصاح رسمي حديث يثبت «آلاف الاستشارات شهريًا».",
+    "active_users": null,
+    "active_users_note": "لا توجد أرقام منشورة وموثقة للمستخدمين النشطين شهريًا أو يوميًا.",
+    "transaction_volume": null,
+    "transaction_volume_note": "لا يوجد إفصاح موثوق عن قيمة الحجوزات أو المدفوعات أو حجم المعاملات.",
+    "partnered_organizations": {
+      "value": 40,
+      "qualifier": "أكثر من",
+      "metric_type": "مؤسسات شريكة",
+      "source_nature": "ادعاء حالي في صفحة MetaDoc Egypt الرسمية على LinkedIn",
+      "note": "ليس عدد عملاء نشطين مدفوعين ولا حجم معاملات."
+    },
+    "historical_patient_reach": {
+      "value": 40000,
+      "qualifier": "أكثر من",
+      "period": "خلال ثلاث سنوات وفق تعريف الشركة، من دون تاريخ أساس واضح",
+      "metric_type": "مرضى تم الوصول إليهم تراكميًا",
+      "source_nature": "ادعاء شركة",
+      "note": "ليس MAU ولا عدد مرضى حاليًا؛ أبقي كمؤشر تاريخي مؤهل فقط."
+    },
+    "chronic_care_patient_claim": {
+      "value": 30000,
+      "qualifier": "أكثر من",
+      "program": "Alkoot at Home في قطر",
+      "reported_date": "2025-06-11",
+      "source_nature": "تصريح المؤسس في مقابلة",
+      "note": "رقم منتسبين/مرضى موكلين للبرنامج بحسب الشركة، وليس مستخدمين نشطين أو زيارات."
+    },
+    "latest_verified_product_signal": {
+      "product": "CCM By Metadoc",
+      "store": "Google Play",
+      "last_updated": "2026-05-06",
+      "description": "تطبيق لإدارة السكري والحالات المزمنة، يتضمن تتبع المؤشرات والأدوية والنتائج والمواعيد والتواصل مع فريق الرعاية.",
+      "note": "وجود تطبيق محدث يثبت نشاطًا منتجيًا، لكنه لا يثبت الإيراد أو عدد المرضى."
+    }
   },
   "overview": {
     "problem": {
-      "text": "المرضى يعانون من أوقات الانتظار الطويلة في العيادات، صعوبة الوصول للأطباء المتخصصين في المناطق النائية، وتكلفة الكشوفات المرتفعة، خاصة في الحالات التي لا تتطلب فحصاً بدنياً (كالاستشارات النفسية أو المتابعة).",
-      "impact": "تأخر في تلقي العلاج، إرهاق للمرضى، وضغط هائل على المستشفيات الحكومية والخاصة."
+      "text": "الرعاية الأولية لا تتعطل بسبب غياب الاتصال المرئي وحده؛ المشكلة تشمل رحلة كاملة مجزأة بين العثور على الطبيب، الموعد، الزيارة المنزلية أو الافتراضية، التحاليل، الدواء، المتابعة، والسجل الطبي. وتزداد صعوبة الرحلة لدى مرضى الحالات المزمنة والشركات التي تحتاج خدمة صحية مستمرة لموظفيها عبر أكثر من مقدم.",
+      "impact": "التجزؤ يرفع الاحتكاك التشغيلي ويؤخر المتابعة ويجعل تجربة المريض غير مترابطة. إلا أن الملف لا ينسب للشركة نسبًا محددة لخفض الانتظار أو التكلفة أو زيارات العيادات لأن المصادر المتاحة لا تقدم قياسًا مستقلاً لهذه النتائج."
     },
     "solution": {
-      "text": "منصة وتطبيق يتيح للمرضى حجز استشارات طبية فورية أو مجدولة (عبر الفيديو أو الدردشة) مع نخبة من الأطباء المتخصصين، مع توفير ميزة حفظ السجلات الطبية وإصدار الروشتات الإلكترونية."
+      "text": "تبني MetaDoc طبقة تنسيق بين المريض ومقدمي الرعاية: استشارة افتراضية أو زيارة منزلية، مختبر ودواء وخطط صحية، مع ملفات ومواعيد وأدوات للممارسين. وفي برامج الأمراض المزمنة، يمتد المنتج إلى تتبع المؤشرات والأدوية والنتائج والتواصل مع فريق الرعاية، ما يجعل القيمة في استمرارية المسار لا في مكالمة فيديو منفردة.",
+      "why_it_works": [
+        "الجمع بين الرعاية الرقمية والميدانية يسمح بحل حالات لا تكفي فيها الاستشارة عن بُعد.",
+        "التعاقد مع الشركات وشركات التأمين يوفر قناة توزيع جماعية بدل الاعتماد الكامل على اكتساب أفراد متفرقين.",
+        "توحيد الحجز والزيارة والمختبر والدواء والمتابعة يقلل انتقال المريض بين خدمات منفصلة.",
+        "برامج الحالات المزمنة تخلق تفاعلًا متكررًا وقيمة أطول من الزيارة العرضية.",
+        "المنصة القابلة للتخصيص للشركاء تتيح دخول أسواق أو تخصصات جديدة من دون بناء منتج مستقل بالكامل."
+      ]
     }
   },
   "market_data": {
-    "target_audience": "المرضى الباحثون عن استشارات سريعة، والمغتربون، والشركات (لتقديم رعاية طبية لموظفيها).",
-    "market_size": "سوق الرعاية الصحية الرقمية (Telemedicine) سريع النمو.",
-    "growth_rate": "حصل على دعم كبير في شارك تانك لتوسيع شبكة الأطباء والوصول لدول عربية أخرى."
+    "target_audience": "الأفراد والعائلات الباحثون عن رعاية أولية افتراضية أو منزلية، مرضى الأمراض المزمنة، الفنادق ودور الحضانة، الشركات التي تقدم مزايا صحية للموظفين، وشركات التأمين ومقدمو الرعاية الراغبون في تشغيل برامج رقمية أو بيضاء العلامة.",
+    "market_size": "لا يتضمن الملف قيمة مالية محددة لسوق الطب الاتصالي أو الرعاية المنزلية؛ تقديرات السوق الخارجية تختلف بشدة في التعريف والمنطقة، ولا تمثل إيراد MetaDoc أو حجم معاملاتها.",
+    "growth_rate": {
+      "verified_company_financial_growth": null,
+      "note": "لا توجد قوائم مالية عامة تسمح بحساب معدل نمو إيراد فعلي.",
+      "company_reported_operating_signals": [
+        "تذكر صفحة MetaDoc Egypt شراكات مع أكثر من 40 مؤسسة.",
+        "ذكر المؤسس في يونيو 2025 أن الشركة تعمل في ثلاثة بلدان.",
+        "ذكر المؤسس أكثر من 30 ألف مريض ضمن شراكة رعاية مزمنة في قطر.",
+        "ظهر تطبيق CCM By Metadoc بتحديث في مايو 2026، ما يشير إلى استمرار تطوير منتج الرعاية المزمنة."
+      ],
+      "excluded_projection": "توقع المؤسس إيرادًا قدره 6 ملايين دولار لعام 2025 في مقابلة منشورة خلال يونيو 2025؛ لم يُعثر على نتيجة فعلية مدققة تؤكد تحقق التوقع، لذلك لم يُعامل كإيراد."
+    },
+    "competitive_position": "تموضع MetaDoc المعلن أقرب إلى مشغل وبنية رعاية هجينة من كونه سوق حجز أطباء فقط: يجمع الخدمات الافتراضية والمنزلية وبرامج الحالات المزمنة وعقود المؤسسات. هذا توصيف مستند إلى المنتج وتصريحات الشركة، وليس تصنيفًا مستقلاً لحصتها السوقية."
   },
   "financials": {
-    "initial_investment": "استثمارات من (الشاركس) لدعم البنية التحتية التقنية والتوسع الإقليمي.",
-    "valuation": "عشرات الملايين من الجنيهات",
+    "initial_investment": "لا يوجد رقم موثق للاستثمار الأولي عند التأسيس؛ لم يُخترع مبلغ.",
+    "valuation": null,
+    "valuation_note": "لا يوجد تقييم خاص حديث وموثق يمكن اعتماده. صفقة Shark Tank المبلغ عنها جمعت حصة في الكيان المصري وحصة في شركة/مظلة أمريكية مقابل مبلغ واحد، لذلك لا يمكن اشتقاق تقييم موحد من دون معرفة توزيع المقابل بين الكيانين.",
+    "valuation_type": "not_publicly_verified",
+    "actual_revenue": null,
+    "actual_revenue_note": "الشركة خاصة ولا تنشر قوائم مالية مدققة أو إيرادًا فعليًا حديثًا.",
+    "funding_history": [
+      {
+        "date": "2023-01-03",
+        "round": "Pre-Series A",
+        "amount_usd": 1900000,
+        "display": "1.9 مليون دولار",
+        "investors_or_supporters": [
+          "Tawasol Holdings، الذراع الاستثمارية لمجموعة Elaj",
+          "Qatar Development Bank بصفة دعم/اعتماد كما ورد في إعلان الجولة",
+          "مستثمرون ملائكيون"
+        ],
+        "status": "reported_closed",
+        "note": "تمويل أسهم/جولة استثمارية؛ ليس إيرادًا ولا حجم معاملات."
+      },
+      {
+        "date": "2024-11",
+        "round": "Shark Tank Egypt — اتفاق استثماري معروض تلفزيونيًا",
+        "amount_egp": 15000000,
+        "display": "15 مليون جنيه مصري",
+        "reported_terms": "51% من الكيان المصري و5% من الكيان/المظلة الأمريكية وفق ملخص الحلقة؛ وذكر المؤسس لاحقًا أن استثمار Shark Tank أُغلق.",
+        "status": "deal_terms_reported; closing_company_reported",
+        "note": "لا يُستخدم المبلغ كإيراد، ولا يمكن تحويله إلى تقييم واحد بسبب شراء حصص في كيانين ضمن المقابل نفسه."
+      }
+    ],
+    "company_projection_not_actual": {
+      "metric": "إيراد 2025 المتوقع",
+      "value_usd": 6000000,
+      "reported_on": "2025-06-11",
+      "status": "forward_looking_company_claim",
+      "treatment": "مستبعد من الإيرادات الفعلية لعدم وجود إفصاح لاحق يؤكد النتيجة."
+    },
     "revenue_streams": [
-      "اقتطاع عمولة من رسوم الاستشارة المدفوعة للطبيب (Marketplace Commission)",
-      "تعاقدات مع الشركات (B2B) لتقديم استشارات طبية لموظفيها باشتراك سنوي"
-    ]
+      {
+        "name": "رسوم الخدمات الطبية",
+        "examples": [
+          "الاستشارات الافتراضية",
+          "زيارات الأطباء المنزلية",
+          "الخدمات المخبرية المنزلية"
+        ],
+        "evidence_strength": "high_for_service_availability; undisclosed_for_revenue_share"
+      },
+      {
+        "name": "الباقات والخطط والعضويات",
+        "examples": [
+          "خطط صحية للأفراد والعائلات",
+          "باقات فحوصات وخدمات",
+          "مزايا وخصومات عبر المحفظة أو النقاط"
+        ],
+        "evidence_strength": "high_for_product; undisclosed_for_revenue_share"
+      },
+      {
+        "name": "العقود المؤسسية والتأمينية",
+        "examples": [
+          "مزايا صحية للموظفين",
+          "برامج رعاية مزمنة",
+          "خدمات للفنادق والمؤسسات"
+        ],
+        "evidence_strength": "high_for_offering; contract_values_not_disclosed"
+      },
+      {
+        "name": "برمجيات ومنصات بيضاء العلامة",
+        "examples": [
+          "منصة للممارسين",
+          "حلول SaaS للشركاء ومقدمي الرعاية"
+        ],
+        "evidence_strength": "company_reported_in_2025"
+      }
+    ],
+    "revenue_mix": null,
+    "revenue_mix_note": "لا توجد نسب منشورة تسمح بتحديد مساهمة كل مسار.",
+    "transaction_volume": null,
+    "transaction_volume_note": "لا توجد قيمة حجوزات أو مدفوعات منشورة.",
+    "users": null,
+    "users_note": "أرقام المرضى التاريخية أو المسجلين في برنامج ليست مستخدمين نشطين شهريًا."
+  },
+  "analysis": {
+    "thesis": "قيمة MetaDoc الاستراتيجية ليست في رقمنة موعد الطبيب فحسب، بل في امتلاك طبقة تنسيق للرعاية: قناة طلب، شبكة مقدمي خدمة، عمليات منزلية، تكاملات مؤسسية، وبيانات متابعة. كلما انتقلت الشركة من زيارة منفردة إلى برنامج رعاية مستمر، أصبح النمو أقل اعتمادًا على المعاملات العرضية وأكثر ارتباطًا بالعقود والاحتفاظ.",
+    "unit_economics_signals": [
+      "لا تتوافر بيانات معلنة عن متوسط قيمة الطلب أو الهامش أو تكلفة الاستحواذ أو الاحتفاظ؛ لذلك لا يمكن إعلان ربحية النمو.",
+      "الخدمات المنزلية تضيف تكلفة تشغيل ميدانية، ما يجعل كثافة الطلبات داخل المنطقة والجدولة والاستفادة من مقدمي الخدمة عوامل حاسمة.",
+      "عقود الشركات والتأمين قد تخفض تكلفة التوزيع، لكنها تضيف دورات بيع أطول ومخاطر تحصيل وموافقات وتكاملات.",
+      "برامج الأمراض المزمنة قد ترفع التكرار وقيمة العميل، لكن يلزم إثبات النتائج السريرية والالتزام، لا عدد المسجلين فقط.",
+      "المنتج البرمجي الأبيض العلامة قد يحمل هامشًا أعلى من الخدمة الميدانية، لكن الشركة لم تفصح عن مزيج الإيراد."
+    ],
+    "strategic_strengths": [
+      "دمج الرعاية الافتراضية والمنزلية بدل الاكتفاء بالاستشارة المرئية.",
+      "وجود قنوات B2B وتأمين إلى جانب الطلب الفردي.",
+      "قدرات لإدارة الحالات المزمنة والمتابعة المستمرة.",
+      "بنية منتجات متعددة للمريض والممارس والشريك.",
+      "خبرة تشغيلية عبر أكثر من سوق بحسب الشركة."
+    ],
+    "risks_and_limits": [
+      "تعدد الكيانات والعلامات والمواقع قد يربك تعريف المنتج والملكية والمسؤولية التنظيمية.",
+      "كل سوق صحي يفرض تراخيص وقواعد وصف دواء وحماية بيانات وتعويضات مختلفة.",
+      "الخدمة المنزلية أصعب في التوسع من البرمجيات الخالصة بسبب التوظيف والجدولة والجودة الجغرافية.",
+      "الاعتماد على عقود كبيرة أو جهات دافعة قد يخلق تركّزًا في العملاء ودورات تحصيل طويلة.",
+      "ادعاءات الشراكات والمرضى والتوقعات المالية صادرة عن الشركة ولم تُدعّم بقوائم مدققة.",
+      "استخدام الذكاء الاصطناعي في الفرز والمتابعة يحتاج حوكمة سريرية واضحة؛ المصادر المتاحة تصف الاتجاه ولا تثبت نتائج سريرية."
+    ],
+    "professional_v2_conclusion": "MetaDoc قصة HealthTech تشغيلية أكثر منها قصة تطبيق. التمويل الموثق الأوضح هو جولة 1.9 مليون دولار في 2023، إضافة إلى صفقة Shark Tank مصر المبلغ عنها بقيمة 15 مليون جنيه ضمن هيكل حصص مختلط. لا توجد بيانات عامة تكفي لإثبات الإيراد الشهري أو التقييم أو الزيارات أو المستخدمين النشطين. لذلك تُقرأ الشركة من خلال اتساع المنتج والشراكات وبرامج الرعاية، مع إبقاء الأرقام غير المدققة في خانة ادعاءات الشركة لا الحقائق المالية."
   },
   "lessons": [
     {
-      "title": "الطب كخدمة (Healthcare as a Service)",
-      "description": "من خلال التركيز على (الرعاية الأولية والمتابعة) بدلاً من الطوارئ، استطاعت ميتا دوك بناء نموذج عمل مربح يقلل من حاجة المريض لزيارة العيادة بنسبة كبيرة، وهو ما يوفر الجهد والمال للطرفين."
+      "title": "ابنِ مسار رعاية لا مكالمة فيديو",
+      "description": "الاستشارة عن بُعد ميزة يسهل تقليدها. القيمة الأصعب تتكون عندما يستطيع المريض الانتقال من الاستشارة إلى الزيارة المنزلية والتحليل والدواء والمتابعة داخل مسار واحد."
     },
     {
-      "title": "سوق الشركات (B2B) هو محرك النمو",
-      "description": "بينما التسويق للأفراد (B2C) مكلف ويحتاج إعلانات مستمرة، كان التركيز على بيع الخدمة كـ (ميزة للموظفين Employee Benefit) للشركات الكبرى هو المحرك الذي وفر إيرادات شهرية ثابتة (MRR) للمنصة."
+      "title": "الرعاية المنزلية شركة عمليات بواجهة تقنية",
+      "description": "نجاح التطبيق لا يكفي إذا تعثرت الجدولة أو تأخر الطبيب أو اختلفت الجودة. التوسع الحقيقي يعتمد على كثافة الشبكة وإدارة المناطق ومعايير الخدمة بقدر اعتماده على الكود."
+    },
+    {
+      "title": "اجعل الجهة الدافعة قناة توزيع",
+      "description": "العقود مع الشركات والتأمين تحول الوصول من مريض فردي مكلف إلى مجموعة مؤهلة مسبقًا. المقابل هو دورة بيع أطول وحاجة إلى إثبات الاستخدام والنتائج والتكامل التنظيمي."
+    },
+    {
+      "title": "افصل التوقع عن الإيراد الفعلي",
+      "description": "توقع 6 ملايين دولار لعام 2025 يظل توقعًا حتى يظهر إفصاح بنتيجة فعلية. ملفات الشركات الناشئة تفقد مصداقيتها عندما تتحول الأهداف أو الـGMV أو التمويل إلى إيرادات معلنة."
+    },
+    {
+      "title": "الصفقة المركبة لا تنتج تقييمًا بسيطًا",
+      "description": "دفع مبلغ مقابل حصص في كيان مصري وكيان أمريكي معًا لا يسمح بقسمة المبلغ على نسبة واحدة وإعلان تقييم الشركة. يجب معرفة توزيع المقابل أو إبقاء التقييم غير متاح."
+    },
+    {
+      "title": "وضوح هوية الشركة جزء من الثقة الطبية",
+      "description": "عندما تتوزع العلامة بين MetaDoc وAt Home Doc وكيانات Medihealth، يجب توضيح من يشغل الخدمة ويحفظ البيانات ويتعاقد مع الطبيب في كل سوق؛ هذا ليس تفصيلًا تسويقيًا في قطاع منظم."
     }
   ],
   "tools": [
-    "WebRTC (Video Streaming)",
-    "HIPAA Compliant Cloud Architecture",
-    "React Native",
-    "Payment Gateways"
+    "تطبيقات هاتف ومنصة ويب للحجز والوصول إلى الخدمات",
+    "استشارات افتراضية عبر الفيديو والهاتف والدردشة",
+    "نظام جدولة وحجز وزيارات منزلية",
+    "ملفات وسجلات للمريض ومتابعة المواعيد والخدمات",
+    "تتبع مؤشرات الأمراض المزمنة والأدوية والنتائج المخبرية",
+    "أدوات تواصل بين المريض والطبيب أو منسق الرعاية",
+    "بوابة/عيادة افتراضية للممارسين لإدارة الخدمات والأسعار والمواعيد",
+    "محفظة ونظام نقاط وخطط وباقات صحية",
+    "البنية التقنية التفصيلية مثل WebRTC وReact Native ومزود السحابة غير معلنة بما يكفي في المصادر المستخدمة"
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "language": "ar",
+    "researched_through": "2026-08-03",
+    "generated_at": "2026-08-03T03:20:00+03:00",
+    "company_status": "شركة خاصة متعددة الكيانات؛ لا توجد ملفات SEC أو قوائم مالية عامة.",
+    "primary_source_priority": [
+      "الموقع الرسمي لـ At Home Doc / MetaDoc",
+      "صفحات الشركة والمؤسسين الرسمية",
+      "متاجر التطبيقات الرسمية",
+      "الموقع الرسمي لبرنامج Shark Tank Egypt",
+      "إعلانات التمويل والمقابلات المباشرة مع المؤسسين"
+    ],
+    "corrections": [
+      {
+        "original_claim": "القاهرة، مصر بوصفها الموقع الوحيد للشركة",
+        "action": "مصحح",
+        "replacement": "منظومة متعددة الأسواق والكيانات تشمل قطر ومصر وأستراليا؛ MetaDoc Egypt تمثل العمليات المصرية وليست بالضرورة كامل المجموعة."
+      },
+      {
+        "original_claim": "مئات الآلاف من الجنيهات إيرادًا شهريًا",
+        "action": "محذوف",
+        "replacement": "لا يوجد إيراد شهري فعلي أو مدقق منشور."
+      },
+      {
+        "original_claim": "آلاف الاستشارات الطبية عبر الفيديو شهريًا",
+        "action": "محذوف",
+        "replacement": "لا يوجد إفصاح حديث موثوق عن الاستشارات الشهرية، والخدمة تشمل رعاية منزلية ومختبرًا ودواءً وليست فيديو فقط."
+      },
+      {
+        "original_claim": "تطبيق طب اتصالي فقط",
+        "action": "مصحح",
+        "replacement": "منصة رعاية هجينة تجمع الافتراضي والمنزلي والمختبر والدواء والخطط وبرامج الأمراض المزمنة."
+      },
+      {
+        "original_claim": "حصل على دعم كبير في Shark Tank للتوسع",
+        "action": "محدد بدقة",
+        "replacement": "أُبلغ عن اتفاق بقيمة 15 مليون جنيه مقابل 51% من الكيان المصري و5% من المظلة/الكيان الأمريكي، مع تصريح لاحق من المؤسس بأن الاستثمار أُغلق."
+      },
+      {
+        "original_claim": "استثمارات من الشاركس بوصفها الاستثمار الأولي",
+        "action": "مصحح",
+        "replacement": "الشركة تأسست في 2016 ولديها جولة Pre-Series A بقيمة 1.9 مليون دولار في 2023؛ صفقة Shark Tank جاءت لاحقًا."
+      },
+      {
+        "original_claim": "تقييم بعشرات الملايين من الجنيهات",
+        "action": "محذوف",
+        "replacement": "لا يمكن اشتقاق تقييم موحد من صفقة اشترت حصصًا في كيانين مقابل مبلغ واحد."
+      },
+      {
+        "original_claim": "نموذج مربح يقلل زيارة العيادة بنسبة كبيرة",
+        "action": "محذوف/مؤهل",
+        "replacement": "لا توجد بيانات عامة تثبت الربحية أو نسبة خفض الزيارات."
+      },
+      {
+        "original_claim": "B2B هو محرك النمو ويوفر MRR ثابتًا",
+        "action": "مؤهل",
+        "replacement": "B2B والتأمين مساران معلنان، لكن الشركة لا تنشر مزيج الإيراد أو MRR."
+      },
+      {
+        "original_claim": "WebRTC وReact Native وHIPAA Compliant Cloud Architecture",
+        "action": "محذوف",
+        "replacement": "القدرات الوظيفية موثقة، أما البنية التقنية والامتثال لـHIPAA فلم يثبتا بمصدر أولي كافٍ للكيانات محل الملف."
+      }
+    ],
+    "metric_distinctions": {
+      "revenue": "دخل محاسبي فعلي؛ غير منشور هنا.",
+      "funding": "رأس مال استثماري يدخل الشركة مقابل حصص؛ ليس إيرادًا.",
+      "valuation": "قيمة ضمنية للشركة في صفقة أسهم؛ غير قابلة للاشتقاق من الصفقة المركبة المتاحة.",
+      "transaction_volume": "قيمة الحجوزات أو المدفوعات التي تمر عبر المنصة؛ غير منشورة.",
+      "users": "مستخدمون نشطون وفق فترة محددة؛ غير منشورين.",
+      "patients_reached": "عدد تراكمي تدعي الشركة خدمته؛ لا يساوي مستخدمين نشطين.",
+      "partnered_organizations": "عدد جهات شريكة بحسب الشركة؛ لا يساوي عملاء مدفوعين أو إيرادًا.",
+      "projection": "هدف أو توقع مستقبلي؛ لا يصبح نتيجة فعلية من دون إفصاح لاحق."
+    },
+    "known_limits": [
+      "لا توجد ملفات SEC لأن الشركة خاصة.",
+      "لا تتوفر قوائم مالية مدققة أو نتائج 2025 فعلية منشورة.",
+      "بعض مؤشرات المرضى والشراكات صادرة عن الشركة ولم تُراجع مستقلًا.",
+      "تفاصيل صفقة Shark Tank الدقيقة مأخوذة من ملخص للحلقة، بينما إغلاق الاستثمار ورد كتأكيد من المؤسس.",
+      "تعدد أسماء MetaDoc وAt Home Doc وMedihealth يفرض حذرًا عند ربط أي تطبيق أو كيان بالمجموعة.",
+      "لم تُستخدم تقديرات عامة لحجم سوق الطب الاتصالي لأنها لا تثبت أداء الشركة."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_at": "2026-08-03T03:20:00+03:00",
+      "parser": "Python json",
+      "checks": [
+        {
+          "name": "required_top_level_keys",
+          "passed": true,
+          "details": {
+            "missing": []
+          }
+        },
+        {
+          "name": "unique_source_ids",
+          "passed": true,
+          "details": {
+            "duplicates": []
+          }
+        },
+        {
+          "name": "unique_claim_ids",
+          "passed": true,
+          "details": {
+            "duplicates": []
+          }
+        },
+        {
+          "name": "evidence_source_references",
+          "passed": true,
+          "details": {
+            "unknown": []
+          }
+        },
+        {
+          "name": "evidence_json_paths",
+          "passed": true,
+          "details": {
+            "invalid": []
+          }
+        },
+        {
+          "name": "unverified_monthly_metrics_not_fabricated",
+          "passed": true,
+          "details": {
+            "monthly_revenue": null,
+            "monthly_traffic": null,
+            "monthly_consultations": null,
+            "active_users": null,
+            "transaction_volume": null
+          }
+        },
+        {
+          "name": "undisclosed_financial_metrics_remain_null",
+          "passed": true,
+          "details": {
+            "actual_revenue": null,
+            "valuation": null,
+            "transaction_volume": null,
+            "users": null,
+            "revenue_mix": null
+          }
+        },
+        {
+          "name": "unsupported_original_stack_removed_from_active_claims",
+          "passed": true,
+          "details": {
+            "matched": []
+          }
+        },
+        {
+          "name": "projection_classification",
+          "passed": true,
+          "details": {
+            "projection_status": "forward_looking_company_claim",
+            "actual_revenue": null
+          }
+        },
+        {
+          "name": "funding_not_misclassified_as_revenue",
+          "passed": true,
+          "details": {}
+        },
+        {
+          "name": "no_nan_or_infinity",
+          "passed": true,
+          "details": {}
+        }
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "claim_id": "معرف فريد للادعاء",
+    "json_paths": "المواضع داخل JSON التي يعتمد محتواها على الدليل",
+    "claim": "صياغة عربية مختصرة للادعاء",
+    "source_ids": "معرفات المصادر الداعمة",
+    "evidence_type": "historical_fact | metric | company_claim | product_fact | funding | deal_terms | calculation | forward_looking",
+    "confidence": "high | medium | low",
+    "status": "verified | qualified | removed",
+    "notes": "قيود أو طريقة تصنيف أو تمييز ضروري"
+  },
+  "evidence_map": [
+    {
+      "claim_id": "C01",
+      "json_paths": [
+        "company.legal_identity_note",
+        "company.related_entities",
+        "company.location"
+      ],
+      "claim": "MetaDoc منتج/منصة ضمن منظومة At Home Doc وMedihealth متعددة الأسواق والكيانات.",
+      "source_ids": [
+        "S1",
+        "S4",
+        "S5",
+        "S6"
+      ],
+      "evidence_type": "historical_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "تم تجنب اختزال المجموعة في شركة مصرية واحدة."
+    },
+    {
+      "claim_id": "C02",
+      "json_paths": [
+        "company.founded_year",
+        "company.founded_by"
+      ],
+      "claim": "تأسست At Home Doc في 2016 على يد هشام الفيشاوي ود. حاتم الفيشاوي.",
+      "source_ids": [
+        "S4",
+        "S10",
+        "S12"
+      ],
+      "evidence_type": "historical_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": ""
+    },
+    {
+      "claim_id": "C03",
+      "json_paths": [
+        "company.business_model",
+        "company.products",
+        "overview.solution.text"
+      ],
+      "claim": "الخدمة تجمع الرعاية الافتراضية والمنزلية والمختبر والدواء والخطط وأدوات الممارسين.",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "حُذف توصيف التطبيق كفيديو فقط."
+    },
+    {
+      "claim_id": "C04",
+      "json_paths": [
+        "directory_snapshot.partnered_organizations",
+        "market_data.growth_rate.company_reported_operating_signals.0"
+      ],
+      "claim": "تذكر MetaDoc Egypt شراكات مع أكثر من 40 مؤسسة.",
+      "source_ids": [
+        "S5"
+      ],
+      "evidence_type": "company_claim",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "لا توجد قائمة كاملة أو تدقيق مستقل."
+    },
+    {
+      "claim_id": "C05",
+      "json_paths": [
+        "directory_snapshot.historical_patient_reach"
+      ],
+      "claim": "ذكرت الشركة الوصول إلى أكثر من 40 ألف مريض خلال ثلاث سنوات.",
+      "source_ids": [
+        "S4"
+      ],
+      "evidence_type": "company_claim",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "الفترة لا تحمل تاريخ أساس واضح ولا تمثل مستخدمين نشطين."
+    },
+    {
+      "claim_id": "C06",
+      "json_paths": [
+        "directory_snapshot.chronic_care_patient_claim",
+        "market_data.growth_rate.company_reported_operating_signals.2"
+      ],
+      "claim": "ذكر المؤسس أكثر من 30 ألف مريض ضمن شراكة Alkoot at Home.",
+      "source_ids": [
+        "S12"
+      ],
+      "evidence_type": "company_claim",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "تصريح شركة في مقابلة، لا رقم مدقق."
+    },
+    {
+      "claim_id": "C07",
+      "json_paths": [
+        "directory_snapshot.latest_verified_product_signal",
+        "market_data.growth_rate.company_reported_operating_signals.3",
+        "tools.4",
+        "tools.5"
+      ],
+      "claim": "تطبيق CCM By Metadoc المحدث في مايو 2026 يدعم متابعة الحالات المزمنة والتواصل مع فريق الرعاية.",
+      "source_ids": [
+        "S7"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "لا يدل عدد تنزيلاته على حجم برنامج الرعاية الكامل."
+    },
+    {
+      "claim_id": "C08",
+      "json_paths": [
+        "financials.funding_history.0"
+      ],
+      "claim": "أغلقت At Home Doc جولة Pre-Series A بقيمة 1.9 مليون دولار في يناير 2023.",
+      "source_ids": [
+        "S4",
+        "S10",
+        "S11"
+      ],
+      "evidence_type": "funding",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "تمويل وليس إيرادًا."
+    },
+    {
+      "claim_id": "C09",
+      "json_paths": [
+        "financials.funding_history.1",
+        "financials.valuation_note",
+        "lessons.4"
+      ],
+      "claim": "صفقة Shark Tank المبلغ عنها كانت 15 مليون جنيه مقابل حصص في الكيان المصري والمظلة الأمريكية؛ لا تنتج تقييمًا موحدًا.",
+      "source_ids": [
+        "S8",
+        "S9",
+        "S12"
+      ],
+      "evidence_type": "deal_terms",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "الموقع الرسمي يؤكد الظهور؛ الشروط من ملخص الحلقة؛ الإغلاق من تصريح المؤسس."
+    },
+    {
+      "claim_id": "C10",
+      "json_paths": [
+        "financials.company_projection_not_actual",
+        "market_data.growth_rate.excluded_projection",
+        "lessons.3"
+      ],
+      "claim": "رقم 6 ملايين دولار لعام 2025 كان توقعًا معلنًا في يونيو 2025 وليس نتيجة فعلية.",
+      "source_ids": [
+        "S12"
+      ],
+      "evidence_type": "forward_looking",
+      "confidence": "high",
+      "status": "qualified",
+      "notes": "لم يُعثر على إفصاح فعلي لاحق."
+    },
+    {
+      "claim_id": "C11",
+      "json_paths": [
+        "directory_snapshot.monthly_revenue",
+        "financials.actual_revenue",
+        "financials.revenue_mix"
+      ],
+      "claim": "لا توجد إيرادات فعلية أو شهرية أو مزيج إيراد منشور يمكن التحقق منه.",
+      "source_ids": [
+        "S1",
+        "S4",
+        "S5",
+        "S12"
+      ],
+      "evidence_type": "metric",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "غياب الإفصاح بعد فحص المصادر العامة الأساسية."
+    },
+    {
+      "claim_id": "C12",
+      "json_paths": [
+        "directory_snapshot.monthly_traffic",
+        "directory_snapshot.monthly_consultations",
+        "directory_snapshot.active_users",
+        "directory_snapshot.transaction_volume"
+      ],
+      "claim": "لا تتوفر زيارات أو استشارات شهرية أو مستخدمون نشطون أو حجم معاملات موثق.",
+      "source_ids": [
+        "S1",
+        "S4",
+        "S5",
+        "S6",
+        "S7"
+      ],
+      "evidence_type": "metric",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "أرقام التنزيلات والمؤسسات والمرضى لا تستبدل هذه المقاييس."
+    },
+    {
+      "claim_id": "C13",
+      "json_paths": [
+        "financials.revenue_streams",
+        "market_data.target_audience"
+      ],
+      "claim": "توجد مسارات خدمة فردية وخطط وعقود مؤسسية وتأمينية وقدرات بيضاء العلامة.",
+      "source_ids": [
+        "S1",
+        "S3",
+        "S12"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "وجود المسارات مثبت، لكن قيم العقود ومساهمتها في الإيراد غير معلنة."
+    },
+    {
+      "claim_id": "C14",
+      "json_paths": [
+        "tools.8",
+        "verification.corrections.9"
+      ],
+      "claim": "لا يوجد دليل أولي كافٍ لإثبات React Native أو WebRTC أو بنية HIPAA كحزمة MetaDoc الحالية.",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S6",
+        "S7"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "removed",
+      "notes": "أبقيت القدرات الوظيفية وحذفت التخمين التقني."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title_ar": "الموقع الرسمي لـ At Home Doc / MetaDoc",
+      "title_original": "At-Home-Doc — Not just a healthcare App",
+      "publisher": "At Home Doc / Medihealth Solutions",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_company_website",
+      "url": "https://at-home-doc.com/en/",
+      "used_for": [
+        "الخدمات",
+        "الرعاية الافتراضية والمنزلية",
+        "الباقات",
+        "الكيان المشغل في قطر"
+      ]
+    },
+    {
+      "id": "S2",
+      "title_ar": "صفحة المريض الرسمية",
+      "title_original": "Meta Patient",
+      "publisher": "At Home Doc / MetaDoc",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_company_website",
+      "url": "https://at-home-doc.com/en/meta-patient",
+      "used_for": [
+        "الملف الطبي",
+        "الحجز",
+        "الزيارة المنزلية",
+        "الهاتف والدردشة",
+        "الخطط والمحفظة"
+      ]
+    },
+    {
+      "id": "S3",
+      "title_ar": "صفحة الممارس والعيادة الافتراضية",
+      "title_original": "Meta Doc",
+      "publisher": "At Home Doc / MetaDoc",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_company_website",
+      "url": "https://at-home-doc.com/en/meta-doc",
+      "used_for": [
+        "عيادات الممارسين",
+        "الحجوزات",
+        "السجلات",
+        "الخدمات والأسعار",
+        "المحتوى الصحي"
+      ]
+    },
+    {
+      "id": "S4",
+      "title_ar": "الصفحة الرسمية لشركة At Home Doc",
+      "title_original": "At Home Doc — LinkedIn Company Profile",
+      "publisher": "At Home Doc",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_company_profile",
+      "url": "https://qa.linkedin.com/company/at-home-doc",
+      "used_for": [
+        "الكيانات والأسواق",
+        "المؤسسون",
+        "40 ألف مريض تاريخيًا",
+        "جولة 1.9 مليون دولار"
+      ]
+    },
+    {
+      "id": "S5",
+      "title_ar": "الصفحة الرسمية لـ MetaDoc Egypt",
+      "title_original": "MetaDoc Egypt — LinkedIn Company Profile",
+      "publisher": "MetaDoc Egypt",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_company_profile",
+      "url": "https://www.linkedin.com/company/metadocegypt",
+      "used_for": [
+        "العمليات المصرية",
+        "أكثر من 40 مؤسسة شريكة",
+        "الارتباط بـ At Home Doc"
+      ]
+    },
+    {
+      "id": "S6",
+      "title_ar": "تطبيق MetaDoc الرسمي من Medihealth Solutions",
+      "title_original": "MetaDoc — App Store",
+      "publisher": "Apple App Store / Medihealth Solutions Pty Ltd",
+      "date": "2023-03-28",
+      "accessed": "2026-08-03",
+      "type": "primary_app_store",
+      "url": "https://apps.apple.com/eg/app/metadoc/id1597568648",
+      "used_for": [
+        "هوية المطور",
+        "الاستشارات المنزلية والافتراضية",
+        "الدواء والمختبر"
+      ]
+    },
+    {
+      "id": "S7",
+      "title_ar": "تطبيق إدارة الحالات المزمنة",
+      "title_original": "CCM By Metadoc — Google Play",
+      "publisher": "Google Play / Medihealth Solutions Pty Ltd",
+      "date": "2026-05-06",
+      "accessed": "2026-08-03",
+      "type": "primary_app_store",
+      "url": "https://play.google.com/store/apps/details?id=com.alkoot.patient",
+      "used_for": [
+        "استمرار التطوير في 2026",
+        "السكري والحالات المزمنة",
+        "الأدوية والنتائج والمواعيد وفريق الرعاية"
+      ]
+    },
+    {
+      "id": "S8",
+      "title_ar": "دليل صفقات الخدمات في Shark Tank Egypt",
+      "title_original": "Shark Tank Egypt — Services Deals",
+      "publisher": "Shark Tank Egypt",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "primary_program_website",
+      "url": "https://sharktank-egypt.com/en/deals/services",
+      "used_for": [
+        "تأكيد مشاركة MetaDoc في البرنامج"
+      ]
+    },
+    {
+      "id": "S9",
+      "title_ar": "ملخص الحلقة الرابعة من الموسم الثالث",
+      "title_original": "Shark Tank Egypt Season 3 Episode 4",
+      "publisher": "Virtual CFO Consulting",
+      "date": null,
+      "accessed": "2026-08-03",
+      "type": "secondary_episode_recap",
+      "url": "https://vcfoconsulting.com/shark-tank-season-3-ep-4/",
+      "used_for": [
+        "قيمة وشروط صفقة Shark Tank المبلغ عنها",
+        "تمييز الكيان المصري عن المظلة الأمريكية"
+      ]
+    },
+    {
+      "id": "S10",
+      "title_ar": "إعلان جولة ما قبل السلسلة A",
+      "title_original": "At Home Doc raises $1.9m in a pre-Series A round",
+      "publisher": "WAYA",
+      "date": "2023-01-03",
+      "accessed": "2026-08-03",
+      "type": "funding_announcement",
+      "url": "https://waya.media/at-home-doc-qatars-healthtech-platform-raises-1-9m-in-a-pre-series-a-round/",
+      "used_for": [
+        "قيمة الجولة",
+        "المستثمرون",
+        "المؤسسون",
+        "نطاق الخدمات"
+      ]
+    },
+    {
+      "id": "S11",
+      "title_ar": "تغطية جولة التمويل من Rasmal",
+      "title_original": "$1.9M Total Pre-Series A Funding for Qatar’s Healthcare Platform At Home Doc",
+      "publisher": "Rasmal",
+      "date": "2023-01",
+      "accessed": "2026-08-03",
+      "type": "funding_database_post",
+      "url": "https://qa.linkedin.com/posts/rasmalinc_19m-total-pre-series-a-funding-for-qatar-activity-7020054675127156736-8nOy",
+      "used_for": [
+        "التحقق المتقاطع من الجولة والمستثمرين"
+      ]
+    },
+    {
+      "id": "S12",
+      "title_ar": "مقابلة مع مؤسسي MetaDoc",
+      "title_original": "Interview with co-founders of MetaDoc — Hesham Elfeshawy and Dr. Hatem Elfieshawy",
+      "publisher": "DH Arab",
+      "date": "2025-06-11",
+      "accessed": "2026-08-03",
+      "type": "founder_interview",
+      "url": "https://dharab.com/interview-with-co-founder-of-metadoc-hesham-elfeshawy/",
+      "used_for": [
+        "30 ألف مريض رعاية مزمنة",
+        "ثلاثة أسواق",
+        "إغلاق استثمار Shark Tank بحسب المؤسس",
+        "توقع إيراد 2025",
+        "SaaS والذكاء الاصطناعي والشراكات"
+      ]
+    }
   ]
 }

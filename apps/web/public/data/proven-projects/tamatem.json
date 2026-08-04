@@ -2,51 +2,2235 @@
   "id": "tamatem",
   "slug": "tamatem",
   "name": "طماطم (Tamatem)",
-  "headline": "الشركة التي تصدرت تعريب ونشر ألعاب الهواتف المحمولة في العالم العربي",
-  "category": "Gaming & Media / نشر وتطوير الألعاب",
+  "headline": "من تعريب ألعاب الهواتف إلى منصة تجمع النشر والمدفوعات والإعلانات: كيف وسّعت طماطم نطاقها بعد 300 مليون تنزيل مُعلن",
+  "category": "Gaming Platform & Mobile Publishing / نشر الألعاب والتعريب والمدفوعات وتقنيات الإعلان",
   "company": {
-    "location": "عمّان، الأردن",
-    "business_model": "مجاني للعب (Free-to-Play) مع مشتريات داخل التطبيق (In-App Purchases)"
+    "location": "تأسست Tamatem عام 2013 ويقع مقرها القانوني والتشغيلي الأساسي في King Hussein Business Park بعمّان، الأردن، تحت اسم Tamatem Inc Ltd وفق شروط الخدمة. بعد الاستحواذ على Playable Factory في أبريل 2026 أعلنت المجموعة وجود 180 موظفًا عبر ستة مكاتب في عمّان والرياض وأبوظبي والقاهرة وإسطنبول وبغداد. هذه أرقام تشغيلية صادرة عن الشركة والصحافة المتخصصة، ولا تمثل كشفًا قانونيًا كاملًا عن كل شركة تابعة أو ترخيص محلي.",
+    "business_model": "بدأت طماطم كناشر يشارك مطوري الألعاب الإيراد مقابل التعريب الثقافي والنشر واكتساب المستخدمين والتشغيل الحي والدعم وتحقيق الدخل. توسع النموذج ليشمل ألعابًا مطورة داخليًا، ومنصة Tamatem Plus للمدفوعات والمتاجر والسلع الرقمية، ثم تقنيات الإعلان القابل للعب وتحليلات الأداء بعد الاستحواذ على Playable Factory. تعتمد الإيرادات المحتملة على حصص المشتريات داخل الألعاب والإعلانات والاشتراكات، ورسوم أو حصص خدمات الدفع والتوزيع، وعقود تقنيات الإعلان؛ لم تُفصح الشركة عن مزيج الإيراد أو نسب المشاركة."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات",
-    "monthly_traffic": "أكثر من 150 مليون تحميل لألعابها"
+    "monthly_revenue": "غير مُفصح عنه علنًا. لم تُنشر قوائم مالية أو قيمة موثوقة للإيراد الشهري أو السنوي الحالي. أرقام الإيراد التاريخية والتوقعات القديمة لا تصلح لتقدير 2026، كما لا يجوز تحويل التنزيلات أو المستخدمين أو قيمة التمويل أو قيمة معاملات Tamatem Plus إلى MRR.",
+    "monthly_traffic": "غير مُفصح عنه علنًا ولا يوجد رقم رسمي موثوق لزيارات الموقع. أحدث مواد الاستحواذ في أبريل 2026 نسبت إلى الشركة 70+ لعبة و300 مليون تنزيل تراكمي و3 ملايين مستخدم نشط شهريًا، بينما ما تزال صفحات رسمية أقدم تعرض 50+ لعبة و100–150 مليون تنزيل ومليونًا أو 7 ملايين MAU. لذلك تُعامل أرقام 2026 كأحدث إفصاح ذاتي مع وجود تعارض بين الصفحات؛ والتنزيلات التراكمية ليست زيارات أو مستخدمين نشطين."
   },
   "overview": {
     "problem": {
-      "text": "السوق العربي يمتلك واحداً من أعلى معدلات استخدام الهواتف الذكية عالمياً وأعلى متوسط إيرادات لكل مستخدم (ARPU) في الألعاب، لكن المحتوى والألعاب المعربة ثقافياً كانت شبه معدومة.",
-      "impact": "اللاعبون العرب يضطرون للعب بلغات أجنبية أو في بيئات لا تشبه ثقافتهم، مما يقلل من تفاعلهم وعمرهم الافتراضي داخل اللعبة."
+      "text": "دخول لعبة عالمية إلى السوق العربي لا يتطلب ترجمة النص فقط؛ بل يحتاج إلى مواءمة اللغة والواجهة والرسوم والأحداث والتسعير وخدمة المجتمع والتسويق ووسائل الدفع المحلية. كما يواجه المطور الدولي تجزؤ قنوات الدفع واكتساب المستخدمين وصعوبة قياس الإعلانات وإدارة العمليات الحية عبر دول تختلف ثقافيًا وتجاريًا.",
+      "impact": "قد يؤدي الإطلاق الحرفي إلى ضعف التحويل والاحتفاظ وتحقيق الدخل، بينما يرفع بناء فرق محلية منفصلة لكل وظيفة تكلفة دخول السوق. لا توجد دراسة عامة تسمح بإثبات أن السوق العربي كان خاليًا تمامًا من الألعاب المعربة أو أن كل لاعب خليجي يحقق ARPU الأعلى عالميًا؛ لذلك أزيلت الصياغات المطلقة."
     },
     "solution": {
-      "text": "شركة نشر واستوديو (Publisher) يتعاون مع مطورين عالميين لأخذ ألعابهم الناجحة، ثم (تعريبها ثقافياً وليس فقط لغوياً) ونشرها في السوق العربي."
+      "text": "تختار طماطم ألعابًا عالمية أو تطور عناوين محلية، ثم تدير التعريب الثقافي وواجهة المستخدم والتسويق واكتساب اللاعبين وLiveOps والمجتمع والدعم وتحليلات تحقيق الدخل. تضيف Tamatem Plus تكاملًا لوسائل دفع ومتاجر سلع رقمية محلية، بينما أضافت Playable Factory إنشاء الإعلانات التفاعلية وتحليل الانطباعات والنقرات ومدة اللعب والخرائط الحرارية. بذلك انتقلت الشركة من ناشر محلي إلى منصة تجمع المحتوى والتوزيع والمدفوعات والإعلان، مع بقاء نتائج كل لعبة وشريك غير مضمونة."
     }
   },
   "market_data": {
-    "target_audience": "اللاعبون عبر الهواتف المحمولة في الشرق الأوسط وشمال أفريقيا (خصوصاً الخليج).",
-    "market_size": "سوق الألعاب في المنطقة العربية يتجاوز 4 مليارات دولار.",
-    "growth_rate": "نمو ضخم مكنها من الاستحواذ على حصة الأسد في ألعاب السباقات والاستراتيجية باللغة العربية."
+    "target_audience": "اللاعبون الناطقون بالعربية، خصوصًا مستخدمي الهواتف في الخليج وMENA، والمطورون والناشرون العالميون الراغبون في دخول الأسواق العربية، إضافة إلى شركات الألعاب والسلع الرقمية التي تحتاج وسائل دفع محلية أو متاجر مباشرة أو حملات playable ads. بعد الاستحواذ أصبحت خدمات الإعلان تستهدف أيضًا عملاء عالميين خارج MENA.",
+    "market_size": "لم تنشر طماطم دراسة قابلة للتحقق لحجم سوقها القابل للخدمة. كسياق جزئي، قدّرت Niko Partners إيراد سوق الألعاب في MENA-3، أي السعودية والإمارات ومصر فقط، بنحو ملياري دولار في 2024. لا يمثل ذلك كامل المنطقة العربية ولا سوق ألعاب الهاتف وحده ولا TAM الخاص بطماطم، لذلك أزيل ادعاء «أكثر من 4 مليارات دولار» غير المعرّف.",
+    "growth_rate": "لا يوجد معدل نمو حديث موحد للإيراد أو المستخدمين. تغيرت المقاييس المعلنة من 120 مليون تنزيل و3.5 ملايين مستخدم يومي في أفضل الألعاب عام 2021، إلى بيانات متعارضة على صفحات 2023–2025، ثم 300 مليون تنزيل و3 ملايين MAU في مواد 2026. اختلاف تعريف DAU وMAU ونطاق أفضل الألعاب مقابل المحفظة وتراكم التنزيلات يمنع حساب CAGR موثوق."
   },
   "financials": {
-    "initial_investment": "كانت من أوائل الشركات العربية التي تخرجت من 500 Startups، وجمعت لاحقاً جولات استثمارية ضخمة كان أبرزها من Krafton (مبتكري PUBG).",
-    "valuation": "$100M+ (تقييم تقديري)",
+    "initial_investment": "تسجل صفحة الشركة Series A مغلقة بقيمة 6 ملايين دولار، ثم Series B بقيمة 11 مليون دولار في 2021 بقيادة KRAFTON، منها 6 ملايين من KRAFTON. وفي أبريل 2026 أكدت الشركة جولة جديدة بقيادة Next Ventures بمشاركة Square Enix وKRAFTON، ونقلت PocketGamer تأكيدًا مباشرًا لقيمتها عند 10 ملايين دولار. إذا عوملت الجولات الثلاث كجولات مستقلة فإن مجموعها 27 مليون دولار، بينما تستخدم مواد 2026 صياغة «أكثر من 25 مليون دولار»؛ لذلك يُعرض الرقم كتمويل معلن يتجاوز 25 مليونًا مع ملاحظة اختلاف منهجية العد.",
+    "valuation": "آخر تقييم رقمي علني وجدته هو نحو 80 مليون دولار في جولة Series B لعام 2021، وفق تصريح المؤسس المنشور على موقع الشركة. لا يوجد تقييم عام أحدث موثوق بعد جولة 2026 أو استحواذ Playable Factory، لذلك أزيل تقدير 100 مليون دولار+ بوصفه تقييمًا حاليًا.",
     "revenue_streams": [
-      "المشتريات داخل التطبيق (عملات رقمية، ملابس، سيارات)",
-      "إعلانات داخل الألعاب",
-      "الاشتراكات الشهرية لبعض الألعاب"
+      "حصة من المشتريات داخل الألعاب والعناصر والعملات الرقمية، وفق اتفاق النشر وتقاسم الإيراد مع مطور اللعبة.",
+      "إيرادات الإعلانات داخل الألعاب وAd Monetization، إضافة إلى اشتراكات أو عضويات VIP في بعض العناوين.",
+      "إيرادات ألعاب مطورة أو مملوكة داخليًا، مع اختلاف اقتصادياتها عن ألعاب الشركاء المنشورة.",
+      "رسوم أو حصة من معاملات ومتاجر السلع الرقمية وخدمات التوزيع عبر Tamatem Plus؛ لم تُنشر نسب الرسوم أو صافي TPV الحالي.",
+      "خدمات playable ads والإنتاج الإبداعي وتحليلات الأداء وتقنيات AdTech بعد الاستحواذ على Playable Factory.",
+      "خدمات B2B للمطورين تشمل التعريب وASO واكتساب المستخدمين وLiveOps والمجتمع والدعم والتوزيع؛ قد تكون ضمن حصة الإيراد أو عقد خدمة منفصل."
     ]
   },
   "lessons": [
     {
-      "title": "التعريب الثقافي (Culturalization)",
-      "description": "لم تكتفِ (طماطم) بترجمة الألعاب، بل غيرت أسماء الشخصيات، الموسيقى، أنواع السيارات، بل وحتى ملابس الشخصيات لتلائم ثقافة اللاعب الخليجي والعربي."
+      "title": "التعريب الثقافي سلسلة تشغيل لا ملف ترجمة",
+      "description": "القيمة لا تأتي من استبدال الكلمات فقط، بل من ضبط الواجهة والأحداث والرسوم والعروض وخدمة المجتمع والتسويق. كل طبقة تؤثر في الاحتفاظ والتحويل، ولذلك يصبح التعريب قدرة تشغيلية متكررة يصعب اختزالها في وكالة ترجمة."
     },
     {
-      "title": "نموذج النشر (Publishing Model)",
-      "description": "بدلاً من المخاطرة بملايين الدولارات لبناء لعبة من الصفر قد تفشل، قاموا بأخذ ألعاب أثبتت نجاحها في الصين أو أمريكا، وشاركوهم الأرباح مقابل تعريبها."
+      "title": "افصل التنزيل عن اللاعب النشط وعن الدافع",
+      "description": "300 مليون تنزيل رقم تراكمي قد يشمل إعادة التثبيت والألعاب المتوقفة، بينما MAU يقيس النشاط وARPPU يقيس المنفقين فقط. إدارة المحفظة تحتاج سلسلة واضحة من التنزيل إلى التفعيل والاحتفاظ والدفع، لا عنوانًا واحدًا ضخمًا."
     },
     {
-      "title": "اكتشاف قوة الحيتان (Whales)",
-      "description": "أدركت الشركة أن المستخدم في دول الخليج مستعد لدفع آلاف الدولارات داخل اللعبة (Whale) إذا كانت اللعبة تنافسية وتلامس كبرياءه المحلي."
+      "title": "ابنِ الطبقات التي يختنق عندها الشريك",
+      "description": "بدأ الاختناق بالتعريب والنشر، ثم ظهر في وسائل الدفع، وبعده اكتساب المستخدمين والإعلانات. إطلاق Tamatem Plus ثم شراء Playable Factory يوضح استراتيجية امتلاك نقاط الاختناق بدل الاعتماد الكامل على مزودين خارجيين."
+    },
+    {
+      "title": "الاستحواذ يشتري وقتًا وبيانات وعملاء لا تقنية فقط",
+      "description": "Playable Factory أضافت 65 موظفًا و90 ألف إعلان قابل للعب و30 مليار ظهور وعلاقات عالمية. هذه الأصول كانت ستحتاج سنوات لبنائها داخليًا، لذلك يمكن للاستحواذ أن يسرع الانتقال من شركة إقليمية إلى منصة عالمية."
+    },
+    {
+      "title": "نموذج النشر يقلل مخاطرة بناء اللعبة لكنه لا يلغيها",
+      "description": "اختيار لعبة أثبتت نجاحها في سوق آخر يقلل مخاطرة الفكرة، لكنه لا يضمن نجاحها عربيًا. تكلفة اكتساب المستخدم والملاءمة الثقافية والاقتصاد داخل اللعبة وعمق LiveOps قد تحول عنوانًا عالميًا ناجحًا إلى إطلاق محلي ضعيف."
+    },
+    {
+      "title": "لا تجعل اللاعبين مرتفعي الإنفاق استراتيجية بلا ضوابط",
+      "description": "مصطلح whales مفيد تحليليًا لفهم توزيع الإيراد، لكنه لا يبرر افتراض أن اللاعب الخليجي سيدفع آلاف الدولارات أو تصميم ضغط غير مسؤول. النمو المستدام يحتاج شفافية وعدالة وحماية القاصرين وموازنة تحقيق الدخل مع رضا المجتمع."
+    }
+  ],
+  "tools": [
+    "Unity3D وC# وGit لتطوير وتشغيل ألعاب الهاتف والعناوين متعددة اللاعبين",
+    "Python وDjango أو Flask وREST APIs وJSON وSQL لبنية Tamatem Plus وتكامل مزودي الدفع",
+    "React أو Next.js وJavaScript/TypeScript لواجهات منصة المدفوعات ولوحات التحكم",
+    "MySQL وPostgreSQL وDocker ضمن متطلبات وظائف منصة المدفوعات؛ لا يعني ذلك استخدامها في كل خدمة",
+    "HTML5 وJavaScript وTypeScript وPhaser وThree.js لتطوير الإعلانات والألعاب التفاعلية لدى Playable Factory",
+    "SQL وPython/R وTableau وPower BI وUnity Analytics لتحليل DAU وMAU والاحتفاظ وLTV وARPU وARPPU",
+    "LiveOps وA/B Testing وCohort Analysis وSegmentation وتحليل الأحداث الموسمية",
+    "App Store Optimization وUser Acquisition وGrowth Marketing وAd Monetization",
+    "أدوات تحليل playable ads: impressions وCTR وCTA clicks ومدة اللعب وheatmaps وwin/loss events",
+    "شبكة وسائل دفع محلية تشمل الفوترة عبر المشغل والمحافظ والبطاقات والنقد، مع اختلاف العدد والتغطية حسب التاريخ والسوق",
+    "AWS تظهر كخبرة مفضلة في بعض وظائف الألعاب والمدفوعات، ولا تُعامل ككشف معماري كامل",
+    "Creative AI وAI-first توجهات معلنة بعد الاستحواذ، دون نشر تفاصيل النماذج أو نتائج مستقلة"
+  ],
+  "verification": {
+    "status": "verified_with_material_current_strategy_financial_and_metric_corrections",
+    "verified_on": "2026-08-03",
+    "source_policy": {
+      "priority_order": [
+        "صفحات وشروط وإعلانات Tamatem وTamatem Plus وPlayable Factory الرسمية",
+        "إفصاحات المؤسس المباشرة",
+        "إعلانات التمويل والاستحواذ المؤكدة من الشركة",
+        "مقابلات صحفية مباشرة عند غياب بيان تفصيلي",
+        "بحث سوق أصلي للسياق فقط"
+      ],
+      "sec_applicability": "غير منطبق عمليًا: Tamatem شركة خاصة أردنية وليست مُصدرًا عامًا معروفًا لدى SEC.",
+      "financial_rule": "تم فصل الإيراد عن التمويل والتقييم وقيمة معاملات الدفع والتنزيلات والمستخدمين والانطباعات الإعلانية.",
+      "usage_rule": "تم فصل التنزيلات التراكمية وDAU وMAU وزيارات الموقع والانطباعات الإعلانية والعملاء B2B.",
+      "conflict_rule": "عند تعارض أرقام صفحات الشركة استُخدم أحدث إفصاح مؤرخ مع الإشارة إلى التعارض بدل دمج الأرقام.",
+      "technology_rule": "استخدمت الوظائف لإثبات التقنيات المطلوبة فقط، لا كمخطط معماري شامل."
+    },
+    "important_notes": [
+      "الإيراد الشهري والسنوي الحاليان غير معلنين بقيمة نقدية موثوقة.",
+      "300 مليون تنزيل رقم تراكمي معلن في مواد أبريل 2026، وليس MAU أو DAU أو زيارات أو عملاء دافعين.",
+      "3 ملايين مستخدم نشط شهريًا هو أحدث رقم معلن في مواد الاستحواذ، لكنه يتعارض مع أرقام أقدم على صفحات الشركة.",
+      "صفحة About تعرض 100 مليون تنزيل ومليون MAU، وLinkedIn يعرض 150 مليون تنزيل، وإعلان 2023 ذكر 150 مليون تنزيل و7 ملايين MAU؛ لم تُخفَ هذه التناقضات.",
+      "3.5 ملايين مستخدم يومي في 2021 كان خاصًا بأفضل الألعاب وفق المادة المنشورة، ولا يقارن مباشرة بـMAU للمحفظة.",
+      "أكثر من 70 لعبة في 2026 مقياس محفظة، وليس عدد ألعاب نشطة أو محققة للإيراد.",
+      "قيمة 1M+ لمعاملات Tamatem Plus في 2024 نُشرت دون تحديد واضح للعملة، لذلك لم تُستخدم ماليًا.",
+      "100 ألف زائر شهريًا في مادة Tamatem Plus لعام 2024 يخص المنصة الفرعية وقتها، وليس موقع Tamatem أو مستخدمي الألعاب حاليًا.",
+      "150+ وسيلة دفع في مادة 2024 و45+ وسيلة محلية في مواد 2026 قد تختلفان بالتعريف أو النطاق، فلا تُجمعان.",
+      "Series A بقيمة 6 ملايين وSeries B بقيمة 11 مليونًا والجولة الجديدة بقيمة 10 ملايين هي جولات مستقلة معلنة.",
+      "مساهمة KRAFTON البالغة 6 ملايين كانت جزءًا من Series B البالغة 11 مليونًا ولا تُضاف مرة ثانية.",
+      "مواد 2026 تستخدم إجمالي تمويل يفوق 25 مليون دولار، بينما مجموع الجولات المسماة يساوي 27 مليونًا؛ الفرق يعكس منهجية عرض أو توقيتًا.",
+      "تقييم 80 مليون دولار تاريخي من 2021 ولا يمثل القيمة الحالية بعد جولة 2026 والاستحواذ.",
+      "لم يُعلن سعر الاستحواذ على Playable Factory أو طريقة تمويله أو أثره المالي.",
+      "30 مليار ظهور و90 ألف إعلان قابل للعب هي مقاييس تراكمية لـPlayable Factory، وليست إيرادًا أو مستخدمين لطماطم.",
+      "ادعاءات رفع التحويل 8 أضعاف والاحتفاظ 40% صادرة عن مواد الشركة ولم تُستخدم كأثر عام مضمون.",
+      "مليارا دولار في MENA-3 لعام 2024 يخص السعودية والإمارات ومصر وجميع منصات الألعاب، وليس كامل MENA أو TAM طماطم.",
+      "لم تُثبت المصادر أن طماطم تملك «حصة الأسد» في ألعاب السباقات أو الاستراتيجية، فحُذف الادعاء.",
+      "لم يُستخدم وصف اللاعبين الخليجيين بأنهم مستعدون لدفع آلاف الدولارات؛ عومل whales كمفهوم تحليلي يحتاج ضوابط.",
+      "Unity وC# وPython وDjango وReact وNext.js وSQL وHTML5 وPhaser وThree.js مدعومة بوظائف ومنتجات محددة.",
+      "Creative AI وAI-first استراتيجية معلنة، لكن تفاصيل النماذج ومؤشرات الأداء المستقلة غير منشورة."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_at": "2026-08-03",
+      "checks_passed": 137,
+      "checks_failed": 0,
+      "checks": [
+        {
+          "name": "base_key_id",
+          "passed": true,
+          "details": "id موجود"
+        },
+        {
+          "name": "base_key_slug",
+          "passed": true,
+          "details": "slug موجود"
+        },
+        {
+          "name": "base_key_name",
+          "passed": true,
+          "details": "name موجود"
+        },
+        {
+          "name": "base_key_headline",
+          "passed": true,
+          "details": "headline موجود"
+        },
+        {
+          "name": "base_key_category",
+          "passed": true,
+          "details": "category موجود"
+        },
+        {
+          "name": "base_key_company",
+          "passed": true,
+          "details": "company موجود"
+        },
+        {
+          "name": "base_key_directory_snapshot",
+          "passed": true,
+          "details": "directory_snapshot موجود"
+        },
+        {
+          "name": "base_key_overview",
+          "passed": true,
+          "details": "overview موجود"
+        },
+        {
+          "name": "base_key_market_data",
+          "passed": true,
+          "details": "market_data موجود"
+        },
+        {
+          "name": "base_key_financials",
+          "passed": true,
+          "details": "financials موجود"
+        },
+        {
+          "name": "base_key_lessons",
+          "passed": true,
+          "details": "lessons موجود"
+        },
+        {
+          "name": "base_key_tools",
+          "passed": true,
+          "details": "tools موجود"
+        },
+        {
+          "name": "v2_key_verification",
+          "passed": true,
+          "details": "verification موجود"
+        },
+        {
+          "name": "v2_key_evidence_map_schema",
+          "passed": true,
+          "details": "evidence_map_schema موجود"
+        },
+        {
+          "name": "v2_key_evidence_map",
+          "passed": true,
+          "details": "evidence_map موجود"
+        },
+        {
+          "name": "v2_key_sources",
+          "passed": true,
+          "details": "sources موجود"
+        },
+        {
+          "name": "json_root",
+          "passed": true,
+          "details": "الجذر كائن"
+        },
+        {
+          "name": "id_preserved",
+          "passed": true,
+          "details": "id محفوظ"
+        },
+        {
+          "name": "slug_preserved",
+          "passed": true,
+          "details": "slug محفوظ"
+        },
+        {
+          "name": "name_preserved",
+          "passed": true,
+          "details": "name محفوظ"
+        },
+        {
+          "name": "arabic_content",
+          "passed": true,
+          "details": "المحتوى عربي"
+        },
+        {
+          "name": "source_ids_unique",
+          "passed": true,
+          "details": "معرفات المصادر فريدة"
+        },
+        {
+          "name": "source_count_min",
+          "passed": true,
+          "details": "22 مصدر"
+        },
+        {
+          "name": "primary_majority",
+          "passed": true,
+          "details": "أغلبية أولية"
+        },
+        {
+          "name": "secondary_limited",
+          "passed": true,
+          "details": "الثانوية محدودة"
+        },
+        {
+          "name": "urls_valid",
+          "passed": true,
+          "details": "الروابط صالحة"
+        },
+        {
+          "name": "source_meta_complete",
+          "passed": true,
+          "details": "بيانات المصادر مكتملة"
+        },
+        {
+          "name": "no_duplicate_urls",
+          "passed": true,
+          "details": "لا تكرار للروابط"
+        },
+        {
+          "name": "evidence_paths",
+          "passed": true,
+          "details": "15 مسارًا"
+        },
+        {
+          "name": "value_$.company.location",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "fields_$.company.location",
+          "passed": true,
+          "details": "الحقول مكتملة"
+        },
+        {
+          "name": "count_$.company.location",
+          "passed": true,
+          "details": "العدد متسق"
+        },
+        {
+          "name": "ids_$.company.location",
+          "passed": true,
+          "details": "المعرفات موجودة"
+        },
+        {
+          "name": "refs_$.company.location",
+          "passed": true,
+          "details": "المراجع متكاملة"
+        },
+        {
+          "name": "value_$.company.business_model",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "fields_$.company.business_model",
+          "passed": true,
+          "details": "الحقول مكتملة"
+        },
+        {
+          "name": "count_$.company.business_model",
+          "passed": true,
+          "details": "العدد متسق"
+        },
+        {
+          "name": "ids_$.company.business_model",
+          "passed": true,
+          "details": "المعرفات موجودة"
+        },
+        {
+          "name": "refs_$.company.business_model",
+          "passed": true,
+          "details": "المراجع متكاملة"
+        },
+        {
+          "name": "value_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "fields_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "الحقول مكتملة"
+        },
+        {
+          "name": "count_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "العدد متسق"
+        },
+        {
+          "name": "ids_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "المعرفات موجودة"
+        },
+        {
+          "name": "refs_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "المراجع متكاملة"
+        },
+        {
+          "name": "value_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "fields_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "الحقول مكتملة"
+        },
+        {
+          "name": "count_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "العدد متسق"
+        },
+        {
+          "name": "ids_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "المعرفات موجودة"
+        },
+        {
+          "name": "refs_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "المراجع متكاملة"
+        },
+        {
+          "name": "value_$.overview.problem",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "fields_$.overview.problem",
+          "passed": true,
+          "details": "الحقول مكتملة"
+        },
+        {
+          "name": "count_$.overview.problem",
+          "passed": true,
+          "details": "العدد متسق"
+        },
+        {
+          "name": "ids_$.overview.problem",
+          "passed": true,
+          "details": "المعرفات موجودة"
+        },
+        {
+          "name": "refs_$.overview.problem",
+          "passed": true,
+          "details": "المراجع متكاملة"
+        },
+        {
+          "name": "value_$.overview.solution",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "fields_$.overview.solution",
+          "passed": true,
+          "details": "الحقول مكتملة"
+        },
+        {
+          "name": "count_$.overview.solution",
+          "passed": true,
+          "details": "العدد متسق"
+        },
+        {
+          "name": "ids_$.overview.solution",
+          "passed": true,
+          "details": "المعرفات موجودة"
+        },
+        {
+          "name": "refs_$.overview.solution",
+          "passed": true,
+          "details": "المراجع متكاملة"
+        },
+        {
+          "name": "value_$.market_data.target_audience",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "fields_$.market_data.target_audience",
+          "passed": true,
+          "details": "الحقول مكتملة"
+        },
+        {
+          "name": "count_$.market_data.target_audience",
+          "passed": true,
+          "details": "العدد متسق"
+        },
+        {
+          "name": "ids_$.market_data.target_audience",
+          "passed": true,
+          "details": "المعرفات موجودة"
+        },
+        {
+          "name": "refs_$.market_data.target_audience",
+          "passed": true,
+          "details": "المراجع متكاملة"
+        },
+        {
+          "name": "value_$.market_data.market_size",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "fields_$.market_data.market_size",
+          "passed": true,
+          "details": "الحقول مكتملة"
+        },
+        {
+          "name": "count_$.market_data.market_size",
+          "passed": true,
+          "details": "العدد متسق"
+        },
+        {
+          "name": "ids_$.market_data.market_size",
+          "passed": true,
+          "details": "المعرفات موجودة"
+        },
+        {
+          "name": "refs_$.market_data.market_size",
+          "passed": true,
+          "details": "المراجع متكاملة"
+        },
+        {
+          "name": "value_$.market_data.growth_rate",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "fields_$.market_data.growth_rate",
+          "passed": true,
+          "details": "الحقول مكتملة"
+        },
+        {
+          "name": "count_$.market_data.growth_rate",
+          "passed": true,
+          "details": "العدد متسق"
+        },
+        {
+          "name": "ids_$.market_data.growth_rate",
+          "passed": true,
+          "details": "المعرفات موجودة"
+        },
+        {
+          "name": "refs_$.market_data.growth_rate",
+          "passed": true,
+          "details": "المراجع متكاملة"
+        },
+        {
+          "name": "value_$.financials.initial_investment",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "fields_$.financials.initial_investment",
+          "passed": true,
+          "details": "الحقول مكتملة"
+        },
+        {
+          "name": "count_$.financials.initial_investment",
+          "passed": true,
+          "details": "العدد متسق"
+        },
+        {
+          "name": "ids_$.financials.initial_investment",
+          "passed": true,
+          "details": "المعرفات موجودة"
+        },
+        {
+          "name": "refs_$.financials.initial_investment",
+          "passed": true,
+          "details": "المراجع متكاملة"
+        },
+        {
+          "name": "value_$.financials.valuation",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "fields_$.financials.valuation",
+          "passed": true,
+          "details": "الحقول مكتملة"
+        },
+        {
+          "name": "count_$.financials.valuation",
+          "passed": true,
+          "details": "العدد متسق"
+        },
+        {
+          "name": "ids_$.financials.valuation",
+          "passed": true,
+          "details": "المعرفات موجودة"
+        },
+        {
+          "name": "refs_$.financials.valuation",
+          "passed": true,
+          "details": "المراجع متكاملة"
+        },
+        {
+          "name": "value_$.financials.revenue_streams",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "fields_$.financials.revenue_streams",
+          "passed": true,
+          "details": "الحقول مكتملة"
+        },
+        {
+          "name": "count_$.financials.revenue_streams",
+          "passed": true,
+          "details": "العدد متسق"
+        },
+        {
+          "name": "ids_$.financials.revenue_streams",
+          "passed": true,
+          "details": "المعرفات موجودة"
+        },
+        {
+          "name": "refs_$.financials.revenue_streams",
+          "passed": true,
+          "details": "المراجع متكاملة"
+        },
+        {
+          "name": "value_$.tools",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "fields_$.tools",
+          "passed": true,
+          "details": "الحقول مكتملة"
+        },
+        {
+          "name": "count_$.tools",
+          "passed": true,
+          "details": "العدد متسق"
+        },
+        {
+          "name": "ids_$.tools",
+          "passed": true,
+          "details": "المعرفات موجودة"
+        },
+        {
+          "name": "refs_$.tools",
+          "passed": true,
+          "details": "المراجع متكاملة"
+        },
+        {
+          "name": "value_$.headline",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "fields_$.headline",
+          "passed": true,
+          "details": "الحقول مكتملة"
+        },
+        {
+          "name": "count_$.headline",
+          "passed": true,
+          "details": "العدد متسق"
+        },
+        {
+          "name": "ids_$.headline",
+          "passed": true,
+          "details": "المعرفات موجودة"
+        },
+        {
+          "name": "refs_$.headline",
+          "passed": true,
+          "details": "المراجع متكاملة"
+        },
+        {
+          "name": "value_$.lessons",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "fields_$.lessons",
+          "passed": true,
+          "details": "الحقول مكتملة"
+        },
+        {
+          "name": "count_$.lessons",
+          "passed": true,
+          "details": "العدد متسق"
+        },
+        {
+          "name": "ids_$.lessons",
+          "passed": true,
+          "details": "المعرفات موجودة"
+        },
+        {
+          "name": "refs_$.lessons",
+          "passed": true,
+          "details": "المراجع متكاملة"
+        },
+        {
+          "name": "no_nan",
+          "passed": true,
+          "details": "لا قيم غير صالحة"
+        },
+        {
+          "name": "old_revenue_removed",
+          "passed": true,
+          "details": "التقدير القديم محذوف"
+        },
+        {
+          "name": "revenue_undisclosed",
+          "passed": true,
+          "details": "MRR غير مختلق"
+        },
+        {
+          "name": "traffic_undisclosed",
+          "passed": true,
+          "details": "الزيارات غير مختلقة"
+        },
+        {
+          "name": "downloads_not_traffic",
+          "passed": true,
+          "details": "فصل التنزيلات"
+        },
+        {
+          "name": "conflicts_disclosed",
+          "passed": true,
+          "details": "التعارض موثق"
+        },
+        {
+          "name": "tpv_not_revenue",
+          "passed": true,
+          "details": "TPV ليس إيرادًا"
+        },
+        {
+          "name": "payment_counts_separated",
+          "passed": true,
+          "details": "وسائل الدفع مفصولة"
+        },
+        {
+          "name": "krafton_not_double_counted",
+          "passed": true,
+          "details": "لا ازدواج"
+        },
+        {
+          "name": "funding_over_25",
+          "passed": true,
+          "details": "التمويل موثق"
+        },
+        {
+          "name": "named_round_sum",
+          "passed": true,
+          "details": "مجموع الجولات مذكور"
+        },
+        {
+          "name": "valuation_historical",
+          "passed": true,
+          "details": "التقييم تاريخي"
+        },
+        {
+          "name": "valuation_not_current_100m",
+          "passed": true,
+          "details": "القيمة الحالية غير مختلقة"
+        },
+        {
+          "name": "acquisition_price_undisclosed",
+          "passed": true,
+          "details": "سعر الاستحواذ غير مختلق"
+        },
+        {
+          "name": "impressions_not_revenue",
+          "passed": true,
+          "details": "الانطباعات ليست إيرادًا"
+        },
+        {
+          "name": "market_size_not_invented",
+          "passed": true,
+          "details": "TAM غير مختلق"
+        },
+        {
+          "name": "growth_not_invented",
+          "passed": true,
+          "details": "CAGR غير مختلق"
+        },
+        {
+          "name": "share_claim_removed",
+          "passed": true,
+          "details": "حصة السوق غير المدعومة محذوفة"
+        },
+        {
+          "name": "whales_corrected",
+          "passed": true,
+          "details": "whales مصححة"
+        },
+        {
+          "name": "revenue_streams",
+          "passed": true,
+          "details": "6 مسارات"
+        },
+        {
+          "name": "lessons_unique",
+          "passed": true,
+          "details": "دروس فريدة"
+        },
+        {
+          "name": "company_specific_lessons",
+          "passed": true,
+          "details": "دروس خاصة"
+        },
+        {
+          "name": "game_stack",
+          "passed": true,
+          "details": "مكدس الألعاب"
+        },
+        {
+          "name": "payment_stack",
+          "passed": true,
+          "details": "مكدس الدفع"
+        },
+        {
+          "name": "adtech_stack",
+          "passed": true,
+          "details": "مكدس الإعلان"
+        },
+        {
+          "name": "aws_caveat",
+          "passed": true,
+          "details": "AWS مقيدة"
+        },
+        {
+          "name": "ai_caveat",
+          "passed": true,
+          "details": "AI مقيدة"
+        },
+        {
+          "name": "metric_taxonomy",
+          "passed": true,
+          "details": "فصل شامل"
+        },
+        {
+          "name": "schema_version",
+          "passed": true,
+          "details": "V2"
+        },
+        {
+          "name": "date_consistent",
+          "passed": true,
+          "details": "التاريخ متسق"
+        },
+        {
+          "name": "sec_explained",
+          "passed": true,
+          "details": "SEC موضح"
+        },
+        {
+          "name": "conflict_rule",
+          "passed": true,
+          "details": "قاعدة التعارض"
+        },
+        {
+          "name": "tech_rule",
+          "passed": true,
+          "details": "قاعدة التقنية"
+        }
+      ],
+      "validator_notes": [
+        "تمت قراءة الملف الأصلي والتحقق من صحة JSON.",
+        "تم الحفاظ على البنية الأساسية وإضافة أقسام Professional V2.",
+        "تمت مطابقة field_value مع الحقول النهائية.",
+        "تم التحقق من تكامل المصادر والمراجع.",
+        "تم الفصل بين الإيراد والتقييم والتمويل والتنزيلات وDAU وMAU والزيارات والمعاملات والانطباعات.",
+        "تم منع ازدواج مساهمة KRAFTON.",
+        "تم توثيق تعارض المقاييس المنشورة.",
+        "تم منع NaN وInfinity والتقديرات غير المدعومة."
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول الجوهرية بالقيم النهائية والمصادر والقيود، مع فصل الإيراد والتقييم والتمويل والتنزيلات والمستخدمين والمعاملات والانطباعات.",
+    "required_fields": [
+      "field_value",
+      "verification_status",
+      "confidence",
+      "claim_type",
+      "verified_on",
+      "evidence_summary",
+      "source_ids",
+      "source_references",
+      "limitations",
+      "source_count"
+    ],
+    "verification_status_values": [
+      "analytical_inference_grounded_in_company_and_market_evidence",
+      "verified_as_not_publicly_disclosed",
+      "verified_current_full_stack_gaming_model",
+      "verified_current_publishing_payments_and_adtech_solution",
+      "verified_editorial_synthesis",
+      "verified_last_disclosed_historical_valuation",
+      "verified_legal_hq_and_operating_footprint_with_limits",
+      "verified_multi_sided_and_post_acquisition_audience",
+      "verified_named_rounds_with_cumulative_counting_caveat",
+      "verified_no_company_tam_with_partial_market_context",
+      "verified_no_comparable_single_growth_rate",
+      "verified_operational_problem_with_absolute_claims_removed",
+      "verified_product_and_job_posting_technology_with_caveats",
+      "verified_revenue_pathways_not_actual_revenue_mix",
+      "verified_traffic_undisclosed_with_conflicting_usage_disclosures"
+    ],
+    "confidence_scale": {
+      "مرتفعة": "مدعوم بمصدر قانوني أو رسمي واضح، أو بعدم وجود إفصاح رغم مراجعة المصادر الأولية.",
+      "متوسطة إلى مرتفعة": "مدعوم بعدة مصادر مع قيد في التعريف أو تعارض بين إفصاحات الشركة.",
+      "متوسطة": "استنتاج تحريري مبني على أدلة معلنة مع قيود صريحة.",
+      "منخفضة": "دليل غير كاف؛ لا تُستخدم لإثبات رقم مالي."
+    },
+    "metric_separation": [
+      "الإيراد الشهري",
+      "الإيراد السنوي",
+      "التقييم",
+      "التمويل",
+      "قيمة الاستحواذ",
+      "التنزيلات التراكمية",
+      "DAU",
+      "MAU",
+      "زيارات Tamatem",
+      "زيارات Tamatem Plus",
+      "عدد الألعاب المنشورة",
+      "عدد الألعاب النشطة",
+      "العملاء الدافعون",
+      "ARPU",
+      "ARPPU",
+      "LTV",
+      "قيمة معاملات Tamatem Plus",
+      "رسوم الدفع",
+      "انطباعات الإعلانات",
+      "عدد الإعلانات القابلة للعب",
+      "عملاء Playable Factory",
+      "إيراد الإعلانات",
+      "المشتريات داخل الألعاب",
+      "إيراد الاشتراكات"
+    ]
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "تأسست Tamatem عام 2013 ويقع مقرها القانوني والتشغيلي الأساسي في King Hussein Business Park بعمّان، الأردن، تحت اسم Tamatem Inc Ltd وفق شروط الخدمة. بعد الاستحواذ على Playable Factory في أبريل 2026 أعلنت المجموعة وجود 180 موظفًا عبر ستة مكاتب في عمّان والرياض وأبوظبي والقاهرة وإسطنبول وبغداد. هذه أرقام تشغيلية صادرة عن الشركة والصحافة المتخصصة، ولا تمثل كشفًا قانونيًا كاملًا عن كل شركة تابعة أو ترخيص محلي.",
+      "verification_status": "verified_legal_hq_and_operating_footprint_with_limits",
+      "confidence": "مرتفعة",
+      "claim_type": "هوية وموقع وتشغيل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "العنوان القانوني في عمّان مدعوم بالشروط، بينما الموظفون والمكاتب مدعومون بإفصاحات الاستحواذ.",
+      "source_ids": [
+        "SRC-03",
+        "SRC-08",
+        "SRC-09",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Tamatem Inc — Terms of Service",
+          "publisher": "Tamatem Inc Ltd.",
+          "url": "https://terms.tamatem.co/",
+          "source_type": "شروط قانونية رسمية",
+          "published_at": "2020",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "شروط قانونية",
+          "source_locator": "Legal entity and notice address",
+          "supports": "Tamatem Inc Ltd وعنوان عمّان"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Founder announcement: acquisition and new investment round",
+          "publisher": "Hussam Hammo / LinkedIn",
+          "url": "https://www.linkedin.com/posts/hammo_big-day-for-tamatem-tamatem-has-fully-activity-7452236227266719744-CfyD",
+          "source_type": "إفصاح مباشر من المؤسس",
+          "published_at": "2026-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مؤسس",
+          "source_locator": "Acquisition and 65 team members",
+          "supports": "التوسع التشغيلي"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Tamatem acquires Playable Factory and confirms $10M round",
+          "publisher": "PocketGamer.biz",
+          "url": "https://www.pocketgamer.biz/tamatem-acquires-ad-tech-firm-playable-factory-in-ai-first-shift/",
+          "source_type": "مقابلة صحفية مباشرة مع الشركة",
+          "published_at": "2026-04-21",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "تأكيد مباشر",
+          "source_locator": "180 staff and six offices",
+          "supports": "المكاتب والموظفون"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Tamatem Games — LinkedIn Company Profile",
+          "publisher": "Tamatem Games / LinkedIn",
+          "url": "https://www.linkedin.com/company/tamatem-inc-",
+          "source_type": "ملف شركة مُدار ذاتيًا",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "ملف شركة",
+          "source_locator": "Headquarters",
+          "supports": "المقر في عمّان"
+        }
+      ],
+      "limitations": "لم تُراجع سجلات الشركات لكل مكتب أو شركة تابعة.",
+      "source_count": 4
+    },
+    "$.company.business_model": {
+      "field_value": "بدأت طماطم كناشر يشارك مطوري الألعاب الإيراد مقابل التعريب الثقافي والنشر واكتساب المستخدمين والتشغيل الحي والدعم وتحقيق الدخل. توسع النموذج ليشمل ألعابًا مطورة داخليًا، ومنصة Tamatem Plus للمدفوعات والمتاجر والسلع الرقمية، ثم تقنيات الإعلان القابل للعب وتحليلات الأداء بعد الاستحواذ على Playable Factory. تعتمد الإيرادات المحتملة على حصص المشتريات داخل الألعاب والإعلانات والاشتراكات، ورسوم أو حصص خدمات الدفع والتوزيع، وعقود تقنيات الإعلان؛ لم تُفصح الشركة عن مزيج الإيراد أو نسب المشاركة.",
+      "verification_status": "verified_current_full_stack_gaming_model",
+      "confidence": "مرتفعة",
+      "claim_type": "نموذج عمل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توثق المصادر النشر وتقاسم الإيراد والمدفوعات والإعلان والاستحواذ.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-14",
+        "SRC-07",
+        "SRC-12",
+        "SRC-22"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Tamatem Games — About Us",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/about-us/",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Publishing model",
+          "supports": "النشر والتعريب"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Tamatem launches payments and distribution platform",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/news/tamatem-games-launches-payment-and-distribution-platform-for-mobile-games/",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2023-01-17",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان منتج",
+          "source_locator": "Tamatem Plus",
+          "supports": "الدفع والتوزيع"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Tamatem acquires Playable Factory",
+          "publisher": "Tamatem Games / LinkedIn",
+          "url": "https://www.linkedin.com/posts/tamatem-inc-_tamatemgames-gamesglobal-playlocal-activity-7452251271941505024-sT3o",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2026-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان استحواذ",
+          "source_locator": "Integrated platform",
+          "supports": "المنصة المتكاملة"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Playable Factory — About Us",
+          "publisher": "Playable Factory",
+          "url": "https://playablefactory.com/about-us",
+          "source_type": "صفحة رسمية للشركة المستحوذ عليها",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة Playable Factory",
+          "source_locator": "Interactive advertising",
+          "supports": "خدمات AdTech"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Tamatem Games — Careers and Crafts",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/careers/",
+          "source_type": "صفحة تشغيل رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة تشغيل",
+          "source_locator": "Marketing and monetization",
+          "supports": "عمليات النشر"
+        }
+      ],
+      "limitations": "لا توجد نسب مشاركة أو مزيج إيراد منشور.",
+      "source_count": 5
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير مُفصح عنه علنًا. لم تُنشر قوائم مالية أو قيمة موثوقة للإيراد الشهري أو السنوي الحالي. أرقام الإيراد التاريخية والتوقعات القديمة لا تصلح لتقدير 2026، كما لا يجوز تحويل التنزيلات أو المستخدمين أو قيمة التمويل أو قيمة معاملات Tamatem Plus إلى MRR.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "مرتفعة",
+      "claim_type": "إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لم يوجد رقم حالي موثوق للإيراد الشهري أو السنوي.",
+      "source_ids": [
+        "SRC-05",
+        "SRC-09",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Tamatem raises $11M Series B led by KRAFTON",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/news/tamatem-raises-11m-series-b-led-by-pubg-maker-krafton/",
+          "source_type": "إعلان تمويل ومقابلة منشورة على موقع الشركة",
+          "published_at": "2022-03-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان تمويل تاريخي",
+          "source_locator": "Funding and valuation",
+          "supports": "تمييز التمويل عن الإيراد"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Tamatem acquires Playable Factory and confirms $10M round",
+          "publisher": "PocketGamer.biz",
+          "url": "https://www.pocketgamer.biz/tamatem-acquires-ad-tech-firm-playable-factory-in-ai-first-shift/",
+          "source_type": "مقابلة صحفية مباشرة مع الشركة",
+          "published_at": "2026-04-21",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "إفصاح تمويل حديث",
+          "source_locator": "2026 round",
+          "supports": "تمييز التمويل عن الإيراد"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Introduction to Tamatem Plus",
+          "publisher": "Tamatem Plus",
+          "url": "https://blog.tamatemplus.com/en/introduction-to-tamatem-plus-simplifying-payments-for-gamers/",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": "2024-08-07",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مقياس منتج",
+          "source_locator": "Transaction value",
+          "supports": "قيمة معاملات ليست إيرادًا"
+        }
+      ],
+      "limitations": "غياب الإفصاح يمنع تقدير MRR أو ARR لكنه لا يثبت عدم وجود إيراد.",
+      "source_count": 3
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير مُفصح عنه علنًا ولا يوجد رقم رسمي موثوق لزيارات الموقع. أحدث مواد الاستحواذ في أبريل 2026 نسبت إلى الشركة 70+ لعبة و300 مليون تنزيل تراكمي و3 ملايين مستخدم نشط شهريًا، بينما ما تزال صفحات رسمية أقدم تعرض 50+ لعبة و100–150 مليون تنزيل ومليونًا أو 7 ملايين MAU. لذلك تُعامل أرقام 2026 كأحدث إفصاح ذاتي مع وجود تعارض بين الصفحات؛ والتنزيلات التراكمية ليست زيارات أو مستخدمين نشطين.",
+      "verification_status": "verified_traffic_undisclosed_with_conflicting_usage_disclosures",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "زيارات ومقاييس استخدام",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "مواد 2026 تعرض 300M downloads و3M MAU، لكن صفحات أقدم تعرض أرقامًا متباينة؛ لا توجد زيارات موثوقة.",
+      "source_ids": [
+        "SRC-11",
+        "SRC-01",
+        "SRC-02",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "MENA gaming leader Tamatem acquires Playable Factory",
+          "publisher": "Wamda",
+          "url": "https://www.wamda.com/2026/04/mena-gaming-leader-tamatem-acquires-turkeys-playable-factory",
+          "source_type": "إعلان محفظة واستحواذ",
+          "published_at": "2026-04-21",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "إفصاح استحواذ",
+          "source_locator": "2026 portfolio metrics",
+          "supports": "70+ و300M و3M MAU"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Tamatem Games — About Us",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/about-us/",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Older metrics",
+          "supports": "50+ و100M و1M MAU"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Tamatem Games — LinkedIn Company Profile",
+          "publisher": "Tamatem Games / LinkedIn",
+          "url": "https://www.linkedin.com/company/tamatem-inc-",
+          "source_type": "ملف شركة مُدار ذاتيًا",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "ملف شركة",
+          "source_locator": "Profile metrics",
+          "supports": "50+ و150M"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Tamatem launches payments and distribution platform",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/news/tamatem-games-launches-payment-and-distribution-platform-for-mobile-games/",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2023-01-17",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان 2023",
+          "source_locator": "150M and 7M MAU",
+          "supports": "التعارض التاريخي"
+        }
+      ],
+      "limitations": "الأرقام ذاتية الإفصاح وقد تختلف بسبب التاريخ أو النطاق أو التعريف.",
+      "source_count": 4
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "دخول لعبة عالمية إلى السوق العربي لا يتطلب ترجمة النص فقط؛ بل يحتاج إلى مواءمة اللغة والواجهة والرسوم والأحداث والتسعير وخدمة المجتمع والتسويق ووسائل الدفع المحلية. كما يواجه المطور الدولي تجزؤ قنوات الدفع واكتساب المستخدمين وصعوبة قياس الإعلانات وإدارة العمليات الحية عبر دول تختلف ثقافيًا وتجاريًا.",
+        "impact": "قد يؤدي الإطلاق الحرفي إلى ضعف التحويل والاحتفاظ وتحقيق الدخل، بينما يرفع بناء فرق محلية منفصلة لكل وظيفة تكلفة دخول السوق. لا توجد دراسة عامة تسمح بإثبات أن السوق العربي كان خاليًا تمامًا من الألعاب المعربة أو أن كل لاعب خليجي يحقق ARPU الأعلى عالميًا؛ لذلك أزيلت الصياغات المطلقة."
+      },
+      "verification_status": "verified_operational_problem_with_absolute_claims_removed",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "مشكلة سوقية",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "خدمات الشركة ومنصة الدفع توضح تعقيد التعريب والنشر والدفع، مع إزالة الادعاءات المطلقة.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-14",
+        "SRC-22"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Tamatem Games — About Us",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/about-us/",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Localization mission",
+          "supports": "فجوة المحتوى والتعريب"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Tamatem launches payments and distribution platform",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/news/tamatem-games-launches-payment-and-distribution-platform-for-mobile-games/",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2023-01-17",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان منتج",
+          "source_locator": "Payments problem",
+          "supports": "تجزؤ وسائل الدفع"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Tamatem Games — Careers and Crafts",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/careers/",
+          "source_type": "صفحة تشغيل رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة تشغيل",
+          "source_locator": "Craft functions",
+          "supports": "التصميم والتسويق والجودة"
+        }
+      ],
+      "limitations": "ادعاءات أقل من 1% وأعلى ARPPU تاريخية ولم تُستخدم كحقائق حالية مطلقة.",
+      "source_count": 3
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "تختار طماطم ألعابًا عالمية أو تطور عناوين محلية، ثم تدير التعريب الثقافي وواجهة المستخدم والتسويق واكتساب اللاعبين وLiveOps والمجتمع والدعم وتحليلات تحقيق الدخل. تضيف Tamatem Plus تكاملًا لوسائل دفع ومتاجر سلع رقمية محلية، بينما أضافت Playable Factory إنشاء الإعلانات التفاعلية وتحليل الانطباعات والنقرات ومدة اللعب والخرائط الحرارية. بذلك انتقلت الشركة من ناشر محلي إلى منصة تجمع المحتوى والتوزيع والمدفوعات والإعلان، مع بقاء نتائج كل لعبة وشريك غير مضمونة."
+      },
+      "verification_status": "verified_current_publishing_payments_and_adtech_solution",
+      "confidence": "مرتفعة",
+      "claim_type": "منتج وحل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر تدعم التعريب وLiveOps والدفع والإعلانات وتحليلات الأداء.",
+      "source_ids": [
+        "SRC-22",
+        "SRC-14",
+        "SRC-07",
+        "SRC-13",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-22",
+          "title": "Tamatem Games — Careers and Crafts",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/careers/",
+          "source_type": "صفحة تشغيل رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة تشغيل",
+          "source_locator": "Design, marketing and QA",
+          "supports": "عمليات النشر"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Tamatem launches payments and distribution platform",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/news/tamatem-games-launches-payment-and-distribution-platform-for-mobile-games/",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2023-01-17",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان منتج",
+          "source_locator": "Payments and distribution",
+          "supports": "Tamatem Plus"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Tamatem acquires Playable Factory",
+          "publisher": "Tamatem Games / LinkedIn",
+          "url": "https://www.linkedin.com/posts/tamatem-inc-_tamatemgames-gamesglobal-playlocal-activity-7452251271941505024-sT3o",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2026-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان استحواذ",
+          "source_locator": "Integrated platform",
+          "supports": "التكامل"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Playable Factory — Data and Analytics",
+          "publisher": "Playable Factory",
+          "url": "https://playablefactory.com/data",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منتج تحليلي",
+          "source_locator": "Playable metrics",
+          "supports": "تحليلات الإعلان"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Tamatem Games — Games Archive",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/games/",
+          "source_type": "كتالوج منتج رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "كتالوج ألعاب",
+          "source_locator": "Current portfolio",
+          "supports": "العناوين الحالية"
+        }
+      ],
+      "limitations": "لا توجد نتائج مستقلة موحدة تثبت تأثير الحل في كل لعبة.",
+      "source_count": 5
+    },
+    "$.market_data.target_audience": {
+      "field_value": "اللاعبون الناطقون بالعربية، خصوصًا مستخدمي الهواتف في الخليج وMENA، والمطورون والناشرون العالميون الراغبون في دخول الأسواق العربية، إضافة إلى شركات الألعاب والسلع الرقمية التي تحتاج وسائل دفع محلية أو متاجر مباشرة أو حملات playable ads. بعد الاستحواذ أصبحت خدمات الإعلان تستهدف أيضًا عملاء عالميين خارج MENA.",
+      "verification_status": "verified_multi_sided_and_post_acquisition_audience",
+      "confidence": "مرتفعة",
+      "claim_type": "جمهور مستهدف",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم المصادر اللاعبين والمطورين وشركات السلع الرقمية وعملاء الإعلان.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-14",
+        "SRC-12",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Tamatem Games — About Us",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/about-us/",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Players and developers",
+          "supports": "اللاعب العربي والمطور العالمي"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Tamatem launches payments and distribution platform",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/news/tamatem-games-launches-payment-and-distribution-platform-for-mobile-games/",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2023-01-17",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منصة دفع",
+          "source_locator": "International game developers",
+          "supports": "عملاء الدفع"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Playable Factory — About Us",
+          "publisher": "Playable Factory",
+          "url": "https://playablefactory.com/about-us",
+          "source_type": "صفحة رسمية للشركة المستحوذ عليها",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منصة إعلان",
+          "source_locator": "Gaming and non-gaming brands",
+          "supports": "عملاء الإعلان"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Tamatem acquires Playable Factory",
+          "publisher": "Tamatem Games / LinkedIn",
+          "url": "https://www.linkedin.com/posts/tamatem-inc-_tamatemgames-gamesglobal-playlocal-activity-7452251271941505024-sT3o",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2026-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان استحواذ",
+          "source_locator": "Beyond MENA",
+          "supports": "التوسع العالمي"
+        }
+      ],
+      "limitations": "لا توجد بيانات عامة عن عدد العملاء B2B أو توزيع الإيراد.",
+      "source_count": 4
+    },
+    "$.market_data.market_size": {
+      "field_value": "لم تنشر طماطم دراسة قابلة للتحقق لحجم سوقها القابل للخدمة. كسياق جزئي، قدّرت Niko Partners إيراد سوق الألعاب في MENA-3، أي السعودية والإمارات ومصر فقط، بنحو ملياري دولار في 2024. لا يمثل ذلك كامل المنطقة العربية ولا سوق ألعاب الهاتف وحده ولا TAM الخاص بطماطم، لذلك أزيل ادعاء «أكثر من 4 مليارات دولار» غير المعرّف.",
+      "verification_status": "verified_no_company_tam_with_partial_market_context",
+      "confidence": "مرتفعة",
+      "claim_type": "حجم سوق",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد TAM خاص بالشركة؛ رقم Niko يخص ثلاث دول وكل منصات الألعاب.",
+      "source_ids": [
+        "SRC-21",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-21",
+          "title": "The Future of Gaming in MENA-3",
+          "publisher": "Niko Partners",
+          "url": "https://nikopartners.com/the-future-of-gaming-in-mena-3-understanding-the-opportunity",
+          "source_type": "بحث سوق أصلي",
+          "published_at": "2025",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بحث سوق أصلي",
+          "source_locator": "2024 MENA-3 revenue",
+          "supports": "نحو 2B في السعودية والإمارات ومصر"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Tamatem Games — About Us",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/about-us/",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Arabic-speaking opportunity",
+          "supports": "تعريف السوق الوظيفي"
+        }
+      ],
+      "limitations": "لا يمكن تحويل MENA-3 إلى TAM لطماطم أو إلى سوق الهاتف وحده.",
+      "source_count": 2
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا يوجد معدل نمو حديث موحد للإيراد أو المستخدمين. تغيرت المقاييس المعلنة من 120 مليون تنزيل و3.5 ملايين مستخدم يومي في أفضل الألعاب عام 2021، إلى بيانات متعارضة على صفحات 2023–2025، ثم 300 مليون تنزيل و3 ملايين MAU في مواد 2026. اختلاف تعريف DAU وMAU ونطاق أفضل الألعاب مقابل المحفظة وتراكم التنزيلات يمنع حساب CAGR موثوق.",
+      "verification_status": "verified_no_comparable_single_growth_rate",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "نمو",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر تقدم تنزيلات وDAU وMAU بتعريفات وفترات مختلفة.",
+      "source_ids": [
+        "SRC-05",
+        "SRC-14",
+        "SRC-11",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Tamatem raises $11M Series B led by KRAFTON",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/news/tamatem-raises-11m-series-b-led-by-pubg-maker-krafton/",
+          "source_type": "إعلان تمويل ومقابلة منشورة على موقع الشركة",
+          "published_at": "2022-03-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مقياس 2021",
+          "source_locator": "120M and 3.5M DAU",
+          "supports": "خط أساس تاريخي"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Tamatem launches payments and distribution platform",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/news/tamatem-games-launches-payment-and-distribution-platform-for-mobile-games/",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2023-01-17",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مقياس 2023",
+          "source_locator": "150M and 7M MAU",
+          "supports": "مقياس مختلف"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "MENA gaming leader Tamatem acquires Playable Factory",
+          "publisher": "Wamda",
+          "url": "https://www.wamda.com/2026/04/mena-gaming-leader-tamatem-acquires-turkeys-playable-factory",
+          "source_type": "إعلان محفظة واستحواذ",
+          "published_at": "2026-04-21",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "مقياس 2026",
+          "source_locator": "300M and 3M MAU",
+          "supports": "الأحدث"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Tamatem Games — About Us",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/about-us/",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة أقدم",
+          "source_locator": "100M and 1M MAU",
+          "supports": "تعارض الصفحات"
+        }
+      ],
+      "limitations": "لا توجد سلسلة موحدة أو تواريخ تحديث واضحة لكل صفحة.",
+      "source_count": 4
+    },
+    "$.financials.initial_investment": {
+      "field_value": "تسجل صفحة الشركة Series A مغلقة بقيمة 6 ملايين دولار، ثم Series B بقيمة 11 مليون دولار في 2021 بقيادة KRAFTON، منها 6 ملايين من KRAFTON. وفي أبريل 2026 أكدت الشركة جولة جديدة بقيادة Next Ventures بمشاركة Square Enix وKRAFTON، ونقلت PocketGamer تأكيدًا مباشرًا لقيمتها عند 10 ملايين دولار. إذا عوملت الجولات الثلاث كجولات مستقلة فإن مجموعها 27 مليون دولار، بينما تستخدم مواد 2026 صياغة «أكثر من 25 مليون دولار»؛ لذلك يُعرض الرقم كتمويل معلن يتجاوز 25 مليونًا مع ملاحظة اختلاف منهجية العد.",
+      "verification_status": "verified_named_rounds_with_cumulative_counting_caveat",
+      "confidence": "مرتفعة",
+      "claim_type": "تمويل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "Series A وSeries B والجولة الجديدة موثقة، مع منع ازدواج مساهمة KRAFTON.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-05",
+        "SRC-06",
+        "SRC-08",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Tamatem Games — About Us",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/about-us/",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تاريخ شركة",
+          "source_locator": "Series A 6M and Series B 11M",
+          "supports": "الجولات التاريخية"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Tamatem raises $11M Series B led by KRAFTON",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/news/tamatem-raises-11m-series-b-led-by-pubg-maker-krafton/",
+          "source_type": "إعلان تمويل ومقابلة منشورة على موقع الشركة",
+          "published_at": "2022-03-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان Series B",
+          "source_locator": "11M and total >17M",
+          "supports": "Series B"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "KRAFTON invests $6M within Tamatem's $11M round",
+          "publisher": "Tamatem Games / Korea Bizwire",
+          "url": "https://tamatem.co/news/krafton-invests-us6-mln-in-arabic-mobile-games-publisher/",
+          "source_type": "خبر استثمار منشور على موقع الشركة",
+          "published_at": "2021-12-07",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تفصيل الجولة",
+          "source_locator": "KRAFTON 6M within 11M",
+          "supports": "منع الازدواج"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Founder announcement: acquisition and new investment round",
+          "publisher": "Hussam Hammo / LinkedIn",
+          "url": "https://www.linkedin.com/posts/hammo_big-day-for-tamatem-tamatem-has-fully-activity-7452236227266719744-CfyD",
+          "source_type": "إفصاح مباشر من المؤسس",
+          "published_at": "2026-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مؤسس",
+          "source_locator": "New round investors",
+          "supports": "جولة 2026"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Tamatem acquires Playable Factory and confirms $10M round",
+          "publisher": "PocketGamer.biz",
+          "url": "https://www.pocketgamer.biz/tamatem-acquires-ad-tech-firm-playable-factory-in-ai-first-shift/",
+          "source_type": "مقابلة صحفية مباشرة مع الشركة",
+          "published_at": "2026-04-21",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "تأكيد مباشر",
+          "source_locator": "10M new round",
+          "supports": "قيمة الجولة الحديثة"
+        }
+      ],
+      "limitations": "تختلف صياغة الإجمالي بين المصادر، لذلك لا يُعرض مجموع 27M كإجمالي مدقق نهائي.",
+      "source_count": 5
+    },
+    "$.financials.valuation": {
+      "field_value": "آخر تقييم رقمي علني وجدته هو نحو 80 مليون دولار في جولة Series B لعام 2021، وفق تصريح المؤسس المنشور على موقع الشركة. لا يوجد تقييم عام أحدث موثوق بعد جولة 2026 أو استحواذ Playable Factory، لذلك أزيل تقدير 100 مليون دولار+ بوصفه تقييمًا حاليًا.",
+      "verification_status": "verified_last_disclosed_historical_valuation",
+      "confidence": "مرتفعة",
+      "claim_type": "تقييم",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "80M هو آخر تقييم رقمي معلن في 2021، ولا يوجد تقييم أحدث.",
+      "source_ids": [
+        "SRC-05",
+        "SRC-09",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Tamatem raises $11M Series B led by KRAFTON",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/news/tamatem-raises-11m-series-b-led-by-pubg-maker-krafton/",
+          "source_type": "إعلان تمويل ومقابلة منشورة على موقع الشركة",
+          "published_at": "2022-03-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تصريح مؤسس",
+          "source_locator": "2021 valuation around 80M",
+          "supports": "التقييم التاريخي"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Tamatem acquires Playable Factory and confirms $10M round",
+          "publisher": "PocketGamer.biz",
+          "url": "https://www.pocketgamer.biz/tamatem-acquires-ad-tech-firm-playable-factory-in-ai-first-shift/",
+          "source_type": "مقابلة صحفية مباشرة مع الشركة",
+          "published_at": "2026-04-21",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "إعلان تمويل حديث",
+          "source_locator": "2026 round without valuation",
+          "supports": "غياب تقييم حديث"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Founder announcement: acquisition and new investment round",
+          "publisher": "Hussam Hammo / LinkedIn",
+          "url": "https://www.linkedin.com/posts/hammo_big-day-for-tamatem-tamatem-has-fully-activity-7452236227266719744-CfyD",
+          "source_type": "إفصاح مباشر من المؤسس",
+          "published_at": "2026-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مؤسس",
+          "source_locator": "New round without terms",
+          "supports": "غياب شروط الملكية"
+        }
+      ],
+      "limitations": "القيمة الحالية للشركة الخاصة غير معروفة.",
+      "source_count": 3
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "حصة من المشتريات داخل الألعاب والعناصر والعملات الرقمية، وفق اتفاق النشر وتقاسم الإيراد مع مطور اللعبة.",
+        "إيرادات الإعلانات داخل الألعاب وAd Monetization، إضافة إلى اشتراكات أو عضويات VIP في بعض العناوين.",
+        "إيرادات ألعاب مطورة أو مملوكة داخليًا، مع اختلاف اقتصادياتها عن ألعاب الشركاء المنشورة.",
+        "رسوم أو حصة من معاملات ومتاجر السلع الرقمية وخدمات التوزيع عبر Tamatem Plus؛ لم تُنشر نسب الرسوم أو صافي TPV الحالي.",
+        "خدمات playable ads والإنتاج الإبداعي وتحليلات الأداء وتقنيات AdTech بعد الاستحواذ على Playable Factory.",
+        "خدمات B2B للمطورين تشمل التعريب وASO واكتساب المستخدمين وLiveOps والمجتمع والدعم والتوزيع؛ قد تكون ضمن حصة الإيراد أو عقد خدمة منفصل."
+      ],
+      "verification_status": "verified_revenue_pathways_not_actual_revenue_mix",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "مسارات إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المسارات مدعومة بنموذج النشر والمدفوعات والإعلانات بعد الاستحواذ.",
+      "source_ids": [
+        "SRC-03",
+        "SRC-14",
+        "SRC-15",
+        "SRC-07",
+        "SRC-22"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Tamatem Inc — Terms of Service",
+          "publisher": "Tamatem Inc Ltd.",
+          "url": "https://terms.tamatem.co/",
+          "source_type": "شروط قانونية رسمية",
+          "published_at": "2020",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "شروط خدمة",
+          "source_locator": "Games and services",
+          "supports": "المشتريات والخدمات"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Tamatem launches payments and distribution platform",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/news/tamatem-games-launches-payment-and-distribution-platform-for-mobile-games/",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2023-01-17",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منصة دفع",
+          "source_locator": "Payments and distribution",
+          "supports": "رسوم الدفع"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Introduction to Tamatem Plus",
+          "publisher": "Tamatem Plus",
+          "url": "https://blog.tamatemplus.com/en/introduction-to-tamatem-plus-simplifying-payments-for-gamers/",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": "2024-08-07",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "متاجر رقمية",
+          "source_locator": "Storefront and transactions",
+          "supports": "السلع الرقمية"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Tamatem acquires Playable Factory",
+          "publisher": "Tamatem Games / LinkedIn",
+          "url": "https://www.linkedin.com/posts/tamatem-inc-_tamatemgames-gamesglobal-playlocal-activity-7452251271941505024-sT3o",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2026-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "استحواذ",
+          "source_locator": "Advertising layer",
+          "supports": "AdTech"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Tamatem Games — Careers and Crafts",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/careers/",
+          "source_type": "صفحة تشغيل رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "عمليات",
+          "source_locator": "Ad monetization and UA",
+          "supports": "الخدمات B2B"
+        }
+      ],
+      "limitations": "لم تنشر الشركة معدلات تقاسم الإيراد أو رسوم الدفع أو الإيراد حسب لعبة.",
+      "source_count": 5
+    },
+    "$.tools": {
+      "field_value": [
+        "Unity3D وC# وGit لتطوير وتشغيل ألعاب الهاتف والعناوين متعددة اللاعبين",
+        "Python وDjango أو Flask وREST APIs وJSON وSQL لبنية Tamatem Plus وتكامل مزودي الدفع",
+        "React أو Next.js وJavaScript/TypeScript لواجهات منصة المدفوعات ولوحات التحكم",
+        "MySQL وPostgreSQL وDocker ضمن متطلبات وظائف منصة المدفوعات؛ لا يعني ذلك استخدامها في كل خدمة",
+        "HTML5 وJavaScript وTypeScript وPhaser وThree.js لتطوير الإعلانات والألعاب التفاعلية لدى Playable Factory",
+        "SQL وPython/R وTableau وPower BI وUnity Analytics لتحليل DAU وMAU والاحتفاظ وLTV وARPU وARPPU",
+        "LiveOps وA/B Testing وCohort Analysis وSegmentation وتحليل الأحداث الموسمية",
+        "App Store Optimization وUser Acquisition وGrowth Marketing وAd Monetization",
+        "أدوات تحليل playable ads: impressions وCTR وCTA clicks ومدة اللعب وheatmaps وwin/loss events",
+        "شبكة وسائل دفع محلية تشمل الفوترة عبر المشغل والمحافظ والبطاقات والنقد، مع اختلاف العدد والتغطية حسب التاريخ والسوق",
+        "AWS تظهر كخبرة مفضلة في بعض وظائف الألعاب والمدفوعات، ولا تُعامل ككشف معماري كامل",
+        "Creative AI وAI-first توجهات معلنة بعد الاستحواذ، دون نشر تفاصيل النماذج أو نتائج مستقلة"
+      ],
+      "verification_status": "verified_product_and_job_posting_technology_with_caveats",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "تقنيات وأدوات",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التقنيات مدعومة بوظائف الشركة وصفحات Playable Factory، مع قيود واضحة.",
+      "source_ids": [
+        "SRC-17",
+        "SRC-18",
+        "SRC-19",
+        "SRC-20",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-17",
+          "title": "Tamatem Games — Software Engineer for payments platform",
+          "publisher": "Tamatem Games / LinkedIn Jobs",
+          "url": "https://jo.linkedin.com/jobs/view/software-engineer-at-tamatem-games-4344687787",
+          "source_type": "إعلان توظيف تقني",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وظيفة منصة دفع",
+          "source_locator": "Payments stack",
+          "supports": "Python/Django/React/Next/SQL/Docker"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Tamatem Games — Unity Developer",
+          "publisher": "Tamatem Games / LinkedIn Jobs",
+          "url": "https://jo.linkedin.com/jobs/view/unity-developer-at-tamatem-games-4042814952",
+          "source_type": "إعلان توظيف تقني",
+          "published_at": "2025",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وظيفة ألعاب",
+          "source_locator": "Unity and C#",
+          "supports": "تطوير الألعاب"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Tamatem Games — Senior Data Analyst",
+          "publisher": "Tamatem Games / LinkedIn Jobs",
+          "url": "https://jo.linkedin.com/jobs/view/senior-data-analyst-at-tamatem-games-4300558614",
+          "source_type": "إعلان توظيف تحليلي",
+          "published_at": "2025",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وظيفة بيانات",
+          "source_locator": "Analytics stack",
+          "supports": "تحليلات الألعاب"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Playable Factory — Game Developer",
+          "publisher": "Playable Factory / LinkedIn Jobs",
+          "url": "https://tr.linkedin.com/jobs/view/junior-game-developer-at-playable-factory-2527286855",
+          "source_type": "إعلان توظيف تقني",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وظيفة Playable Factory",
+          "source_locator": "HTML5, Phaser, Three.js",
+          "supports": "الإعلانات التفاعلية"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Playable Factory — Data and Analytics",
+          "publisher": "Playable Factory",
+          "url": "https://playablefactory.com/data",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "Playable metrics",
+          "supports": "قياس الأداء"
+        }
+      ],
+      "limitations": "إعلانات الوظائف تثبت مهارات مطلوبة في فرق محددة فقط.",
+      "source_count": 5
+    },
+    "$.headline": {
+      "field_value": "من تعريب ألعاب الهواتف إلى منصة تجمع النشر والمدفوعات والإعلانات: كيف وسّعت طماطم نطاقها بعد 300 مليون تنزيل مُعلن",
+      "verification_status": "verified_editorial_synthesis",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "عنوان تحريري",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "العنوان يجمع التحول إلى منصة متكاملة مع أحدث رقم تنزيلات معلن.",
+      "source_ids": [
+        "SRC-07",
+        "SRC-11",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Tamatem acquires Playable Factory",
+          "publisher": "Tamatem Games / LinkedIn",
+          "url": "https://www.linkedin.com/posts/tamatem-inc-_tamatemgames-gamesglobal-playlocal-activity-7452251271941505024-sT3o",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2026-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان استحواذ",
+          "source_locator": "Integrated platform",
+          "supports": "النشر والمدفوعات والإعلان"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "MENA gaming leader Tamatem acquires Playable Factory",
+          "publisher": "Wamda",
+          "url": "https://www.wamda.com/2026/04/mena-gaming-leader-tamatem-acquires-turkeys-playable-factory",
+          "source_type": "إعلان محفظة واستحواذ",
+          "published_at": "2026-04-21",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "مقاييس 2026",
+          "source_locator": "300M downloads",
+          "supports": "الرقم الأحدث"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Tamatem launches payments and distribution platform",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/news/tamatem-games-launches-payment-and-distribution-platform-for-mobile-games/",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2023-01-17",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان Tamatem Plus",
+          "source_locator": "Payments layer",
+          "supports": "طبقة المدفوعات"
+        }
+      ],
+      "limitations": "300 مليون تنزيل رقم تراكمي ذاتي الإفصاح وليس تنزيلات فريدة.",
+      "source_count": 3
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "التعريب الثقافي سلسلة تشغيل لا ملف ترجمة",
+          "description": "القيمة لا تأتي من استبدال الكلمات فقط، بل من ضبط الواجهة والأحداث والرسوم والعروض وخدمة المجتمع والتسويق. كل طبقة تؤثر في الاحتفاظ والتحويل، ولذلك يصبح التعريب قدرة تشغيلية متكررة يصعب اختزالها في وكالة ترجمة."
+        },
+        {
+          "title": "افصل التنزيل عن اللاعب النشط وعن الدافع",
+          "description": "300 مليون تنزيل رقم تراكمي قد يشمل إعادة التثبيت والألعاب المتوقفة، بينما MAU يقيس النشاط وARPPU يقيس المنفقين فقط. إدارة المحفظة تحتاج سلسلة واضحة من التنزيل إلى التفعيل والاحتفاظ والدفع، لا عنوانًا واحدًا ضخمًا."
+        },
+        {
+          "title": "ابنِ الطبقات التي يختنق عندها الشريك",
+          "description": "بدأ الاختناق بالتعريب والنشر، ثم ظهر في وسائل الدفع، وبعده اكتساب المستخدمين والإعلانات. إطلاق Tamatem Plus ثم شراء Playable Factory يوضح استراتيجية امتلاك نقاط الاختناق بدل الاعتماد الكامل على مزودين خارجيين."
+        },
+        {
+          "title": "الاستحواذ يشتري وقتًا وبيانات وعملاء لا تقنية فقط",
+          "description": "Playable Factory أضافت 65 موظفًا و90 ألف إعلان قابل للعب و30 مليار ظهور وعلاقات عالمية. هذه الأصول كانت ستحتاج سنوات لبنائها داخليًا، لذلك يمكن للاستحواذ أن يسرع الانتقال من شركة إقليمية إلى منصة عالمية."
+        },
+        {
+          "title": "نموذج النشر يقلل مخاطرة بناء اللعبة لكنه لا يلغيها",
+          "description": "اختيار لعبة أثبتت نجاحها في سوق آخر يقلل مخاطرة الفكرة، لكنه لا يضمن نجاحها عربيًا. تكلفة اكتساب المستخدم والملاءمة الثقافية والاقتصاد داخل اللعبة وعمق LiveOps قد تحول عنوانًا عالميًا ناجحًا إلى إطلاق محلي ضعيف."
+        },
+        {
+          "title": "لا تجعل اللاعبين مرتفعي الإنفاق استراتيجية بلا ضوابط",
+          "description": "مصطلح whales مفيد تحليليًا لفهم توزيع الإيراد، لكنه لا يبرر افتراض أن اللاعب الخليجي سيدفع آلاف الدولارات أو تصميم ضغط غير مسؤول. النمو المستدام يحتاج شفافية وعدالة وحماية القاصرين وموازنة تحقيق الدخل مع رضا المجتمع."
+        }
+      ],
+      "verification_status": "analytical_inference_grounded_in_company_and_market_evidence",
+      "confidence": "متوسطة",
+      "claim_type": "تحليل ودروس",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس مبنية على التعريب والمقاييس والاستحواذ والدفع والإعلان ومخاطر تحقيق الدخل.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-11",
+        "SRC-14",
+        "SRC-07",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Tamatem Games — About Us",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/about-us/",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "نموذج شركة",
+          "source_locator": "Localization and publishing",
+          "supports": "درس التعريب"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "MENA gaming leader Tamatem acquires Playable Factory",
+          "publisher": "Wamda",
+          "url": "https://www.wamda.com/2026/04/mena-gaming-leader-tamatem-acquires-turkeys-playable-factory",
+          "source_type": "إعلان محفظة واستحواذ",
+          "published_at": "2026-04-21",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "مقاييس استخدام",
+          "source_locator": "Downloads and MAU",
+          "supports": "درس فصل المقاييس"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Tamatem launches payments and distribution platform",
+          "publisher": "Tamatem Games",
+          "url": "https://tamatem.co/news/tamatem-games-launches-payment-and-distribution-platform-for-mobile-games/",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2023-01-17",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إطلاق منتج",
+          "source_locator": "Payments bottleneck",
+          "supports": "درس نقاط الاختناق"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Tamatem acquires Playable Factory",
+          "publisher": "Tamatem Games / LinkedIn",
+          "url": "https://www.linkedin.com/posts/tamatem-inc-_tamatemgames-gamesglobal-playlocal-activity-7452251271941505024-sT3o",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2026-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "استحواذ",
+          "source_locator": "Playable Factory",
+          "supports": "درس التكامل"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Tamatem Games — Senior Data Analyst",
+          "publisher": "Tamatem Games / LinkedIn Jobs",
+          "url": "https://jo.linkedin.com/jobs/view/senior-data-analyst-at-tamatem-games-4300558614",
+          "source_type": "إعلان توظيف تحليلي",
+          "published_at": "2025",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تحليلات تحقيق الدخل",
+          "source_locator": "ARPPU and payer analytics",
+          "supports": "درس اللاعبين مرتفعي الإنفاق"
+        }
+      ],
+      "limitations": "هذه استنتاجات تحريرية وليست تصريحات حرفية أو توصيات استثمارية.",
+      "source_count": 5
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Tamatem Games — About Us",
+      "publisher": "Tamatem Games",
+      "url": "https://tamatem.co/about-us/",
+      "source_type": "صفحة شركة رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "التأسيس و500 Startups وSeries A بقيمة 6M وSeries B بقيمة 11M؛ الصفحة تعرض مقاييس استخدام أقدم."
+    },
+    {
+      "id": "SRC-02",
+      "title": "Tamatem Games — LinkedIn Company Profile",
+      "publisher": "Tamatem Games / LinkedIn",
+      "url": "https://www.linkedin.com/company/tamatem-inc-",
+      "source_type": "ملف شركة مُدار ذاتيًا",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "المقر والتأسيس و50+ لعبة و150M تنزيل؛ قد تكون البيانات غير متزامنة مع 2026."
+    },
+    {
+      "id": "SRC-03",
+      "title": "Tamatem Inc — Terms of Service",
+      "publisher": "Tamatem Inc Ltd.",
+      "url": "https://terms.tamatem.co/",
+      "source_type": "شروط قانونية رسمية",
+      "published_at": "2020",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "الكيان والعنوان القانوني في King Hussein Business Park بعمّان."
+    },
+    {
+      "id": "SRC-04",
+      "title": "Tamatem Games — Games Archive",
+      "publisher": "Tamatem Games",
+      "url": "https://tamatem.co/games/",
+      "source_type": "كتالوج منتج رسمي",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "محفظة الألعاب الحالية المنشورة والمطورة."
+    },
+    {
+      "id": "SRC-05",
+      "title": "Tamatem raises $11M Series B led by KRAFTON",
+      "publisher": "Tamatem Games",
+      "url": "https://tamatem.co/news/tamatem-raises-11m-series-b-led-by-pubg-maker-krafton/",
+      "source_type": "إعلان تمويل ومقابلة منشورة على موقع الشركة",
+      "published_at": "2022-03-06",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "11M Series B وإجمالي >17M وتقييم تقريبي 80M في 2021، و120M تنزيل و3.5M DAU لأفضل الألعاب."
+    },
+    {
+      "id": "SRC-06",
+      "title": "KRAFTON invests $6M within Tamatem's $11M round",
+      "publisher": "Tamatem Games / Korea Bizwire",
+      "url": "https://tamatem.co/news/krafton-invests-us6-mln-in-arabic-mobile-games-publisher/",
+      "source_type": "خبر استثمار منشور على موقع الشركة",
+      "published_at": "2021-12-07",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "6M من KRAFTON جزء من جولة 11M وليست جولة مستقلة."
+    },
+    {
+      "id": "SRC-07",
+      "title": "Tamatem acquires Playable Factory",
+      "publisher": "Tamatem Games / LinkedIn",
+      "url": "https://www.linkedin.com/posts/tamatem-inc-_tamatemgames-gamesglobal-playlocal-activity-7452251271941505024-sT3o",
+      "source_type": "إعلان استحواذ رسمي",
+      "published_at": "2026-04",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "الاستحواذ الكامل والتحول إلى منصة تجمع النشر والتوزيع والمدفوعات والإعلانات."
+    },
+    {
+      "id": "SRC-08",
+      "title": "Founder announcement: acquisition and new investment round",
+      "publisher": "Hussam Hammo / LinkedIn",
+      "url": "https://www.linkedin.com/posts/hammo_big-day-for-tamatem-tamatem-has-fully-activity-7452236227266719744-CfyD",
+      "source_type": "إفصاح مباشر من المؤسس",
+      "published_at": "2026-04",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "انضمام 65 موظفًا وجولة بقيادة Next Ventures بمشاركة Square Enix وKRAFTON."
+    },
+    {
+      "id": "SRC-09",
+      "title": "Tamatem acquires Playable Factory and confirms $10M round",
+      "publisher": "PocketGamer.biz",
+      "url": "https://www.pocketgamer.biz/tamatem-acquires-ad-tech-firm-playable-factory-in-ai-first-shift/",
+      "source_type": "مقابلة صحفية مباشرة مع الشركة",
+      "published_at": "2026-04-21",
+      "accessed_at": "2026-08-03",
+      "primary": false,
+      "notes": "10M جولة جديدة، 25M إجمالي تمويل، 180 موظفًا وستة مكاتب، و90K إعلانات و30B ظهور."
+    },
+    {
+      "id": "SRC-10",
+      "title": "Tamatem acquisition press release",
+      "publisher": "Tamatem / EIN Presswire",
+      "url": "https://www.einpresswire.com/article/906515641/tamatem-playable-factory",
+      "source_type": "بيان صحفي صادر عن الشركة",
+      "published_at": "2026-04-21",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "الاستحواذ الكامل و90K+ إعلان و30B+ ظهور وتوجه AI-first."
+    },
+    {
+      "id": "SRC-11",
+      "title": "MENA gaming leader Tamatem acquires Playable Factory",
+      "publisher": "Wamda",
+      "url": "https://www.wamda.com/2026/04/mena-gaming-leader-tamatem-acquires-turkeys-playable-factory",
+      "source_type": "إعلان محفظة واستحواذ",
+      "published_at": "2026-04-21",
+      "accessed_at": "2026-08-03",
+      "primary": false,
+      "notes": "70+ لعبة و300M تنزيل و3M MAU وتمويل >25M."
+    },
+    {
+      "id": "SRC-12",
+      "title": "Playable Factory — About Us",
+      "publisher": "Playable Factory",
+      "url": "https://playablefactory.com/about-us",
+      "source_type": "صفحة رسمية للشركة المستحوذ عليها",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "الإعلانات التفاعلية ثنائية وثلاثية الأبعاد وفيديوهات اللعب."
+    },
+    {
+      "id": "SRC-13",
+      "title": "Playable Factory — Data and Analytics",
+      "publisher": "Playable Factory",
+      "url": "https://playablefactory.com/data",
+      "source_type": "صفحة منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "CTR والانطباعات والتفاعل ومدة اللعب والخرائط الحرارية."
+    },
+    {
+      "id": "SRC-14",
+      "title": "Tamatem launches payments and distribution platform",
+      "publisher": "Tamatem Games",
+      "url": "https://tamatem.co/news/tamatem-games-launches-payment-and-distribution-platform-for-mobile-games/",
+      "source_type": "إعلان منتج رسمي",
+      "published_at": "2023-01-17",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "إطلاق Tamatem Plus؛ يذكر 150M تنزيل و7M MAU وقتها، ما يتعارض مع صفحات أخرى."
+    },
+    {
+      "id": "SRC-15",
+      "title": "Introduction to Tamatem Plus",
+      "publisher": "Tamatem Plus",
+      "url": "https://blog.tamatemplus.com/en/introduction-to-tamatem-plus-simplifying-payments-for-gamers/",
+      "source_type": "صفحة منتج رسمية",
+      "published_at": "2024-08-07",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "منصة المدفوعات والمتاجر؛ 1M+ قيمة معاملات و100K زائر شهريًا في 2024 بلا تحديد واضح للعملة."
+    },
+    {
+      "id": "SRC-16",
+      "title": "Tamatem Plus partnership with ChickMania",
+      "publisher": "Tamatem Plus",
+      "url": "https://blog.tamatemplus.com/en/jordans-tamatem-games-and-chickmania-entertainment-partner-to-boost-mena-games-ecosystem/",
+      "source_type": "إعلان شراكة رسمي",
+      "published_at": "2024-03-10",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "150+ وسيلة دفع بديلة وفق تعريف المنصة في 2024."
+    },
+    {
+      "id": "SRC-17",
+      "title": "Tamatem Games — Software Engineer for payments platform",
+      "publisher": "Tamatem Games / LinkedIn Jobs",
+      "url": "https://jo.linkedin.com/jobs/view/software-engineer-at-tamatem-games-4344687787",
+      "source_type": "إعلان توظيف تقني",
+      "published_at": "2026",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Python/Java/C++ وReact/Next.js وDjango REST وMySQL/PostgreSQL وDocker."
+    },
+    {
+      "id": "SRC-18",
+      "title": "Tamatem Games — Unity Developer",
+      "publisher": "Tamatem Games / LinkedIn Jobs",
+      "url": "https://jo.linkedin.com/jobs/view/unity-developer-at-tamatem-games-4042814952",
+      "source_type": "إعلان توظيف تقني",
+      "published_at": "2025",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Unity3D وC# وGit ومتعدد اللاعبين، مع AWS كخبرة مفضلة."
+    },
+    {
+      "id": "SRC-19",
+      "title": "Tamatem Games — Senior Data Analyst",
+      "publisher": "Tamatem Games / LinkedIn Jobs",
+      "url": "https://jo.linkedin.com/jobs/view/senior-data-analyst-at-tamatem-games-4300558614",
+      "source_type": "إعلان توظيف تحليلي",
+      "published_at": "2025",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "SQL وPython/R وTableau وPower BI وUnity Analytics ومقاييس الألعاب."
+    },
+    {
+      "id": "SRC-20",
+      "title": "Playable Factory — Game Developer",
+      "publisher": "Playable Factory / LinkedIn Jobs",
+      "url": "https://tr.linkedin.com/jobs/view/junior-game-developer-at-playable-factory-2527286855",
+      "source_type": "إعلان توظيف تقني",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "HTML5 وJavaScript وPhaser وThree.js."
+    },
+    {
+      "id": "SRC-21",
+      "title": "The Future of Gaming in MENA-3",
+      "publisher": "Niko Partners",
+      "url": "https://nikopartners.com/the-future-of-gaming-in-mena-3-understanding-the-opportunity",
+      "source_type": "بحث سوق أصلي",
+      "published_at": "2025",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "نحو 2B دولار إيراد ألعاب في السعودية والإمارات ومصر خلال 2024."
+    },
+    {
+      "id": "SRC-22",
+      "title": "Tamatem Games — Careers and Crafts",
+      "publisher": "Tamatem Games",
+      "url": "https://tamatem.co/careers/",
+      "source_type": "صفحة تشغيل رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "فرق التصميم والتسويق وUA وAd Monetization والجودة والمالية."
     }
   ]
 }

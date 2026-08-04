@@ -2,52 +2,1306 @@
   "id": "qlub",
   "slug": "qlub",
   "name": "كلوب (Qlub)",
-  "headline": "الدفع عبر مسح الكود (QR Pay) الذي قضى على طوابير الانتظار في المطاعم",
-  "category": "FinTech / المدفوعات للمطاعم",
+  "headline": "كيف حوّلت Qlub لحظة طلب الفاتورة إلى طبقة مدفوعات وتشغيل للضيافة",
+  "category": "FinTech & RestaurantTech / مدفوعات وتقنيات الضيافة",
   "company": {
-    "location": "دبي، الإمارات العربية المتحدة (وتوسع في السعودية والخليج)",
-    "business_model": "B2B2C - رسوم ثابتة أو نسبة من العمليات للمطعم ورسوم خدمة اختيارية"
+    "location": "دبي، الإمارات العربية المتحدة. يعرض الموقع الرسمي الكيان الإماراتي Fast Technology Services FZCO، وتذكر مصادر المستثمرين أن Qlub تأسست في 2021 على يد إياد القصار ومحمود فوز. توسعت المنصة خارج الإمارات عبر أسواق خليجية وآسيوية وأستراليا والبرازيل والولايات المتحدة، لكن وجود صفحة محلية أو وظيفة شاغرة لا يُعامل وحده كدليل على حجم تشغيل فعلي في كل سوق.",
+    "business_model": "نموذج B2B2C يربط المطعم بالضيف عند لحظة الطلب والدفع. تبيع Qlub للمطاعم والفنادق حلول Pay-at-Table وOrder-and-Pay والقوائم الرقمية وروابط الدفع وSoftPOS المتكامل مع نقاط البيع، بينما لا تنشر تسعير عقود التجار أو معدل الاقتطاع أو حصة الشركة من رسوم المعالجة. أضافت الشركة طبقة استهلاكية عبر qlub+ بسعر قائمة معلن قدره 15 درهمًا شهريًا في الإمارات، مع نموذج أداء للمطاعم المشاركة يدفع فيه المطعم عند جلب ضيوف وفق الصفحة الرسمية. لا يوجد دليل منشور يثبت اقتطاع Qlub نسبة من الإكراميات."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات",
-    "monthly_traffic": "يستخدم في آلاف المطاعم الفاخرة والعادية"
+    "monthly_revenue": "غير معلن. Qlub شركة خاصة ولا تنشر MRR أو ARR أو إيرادًا شهريًا أو سنويًا مدققًا، ولا تكشف معدل الاقتطاع من المدفوعات. إعلان الشركة والمستثمرين عن معالجة قيمة معاملات سنوية بالمليارات يصف حجم المدفوعات أو TPV/GMV وليس إيراد Qlub، لذلك حُذف تقدير «ملايين الدولارات شهريًا».",
+    "monthly_traffic": "غير معلن. لا تنشر Qlub زيارات الموقع أو MAU/DAU بتعريف واضح. الموقع الرسمي الحالي يذكر الثقة من أكثر من 3,000 مطعم وفندق ومنشأة ضيافة، بينما تعرض صفحات وظائف لدى مستثمرين رقمًا يتجاوز 5,000 مطعم في أكثر من 10 أسواق؛ بسبب اختلاف المصدر والتعريف والتوقيت، استُخدم 3,000+ كحد رسمي محافظ ولم يُحوّل إلى زيارات أو عملاء مدفوعين أو مستخدمين نشطين. كما أن «2M+ targeted diners» في صفحة qlub+ جمهور تسويقي قابل للوصول في الإمارات وليس عدد أعضاء مدفوعين."
   },
   "overview": {
     "problem": {
-      "text": "في أوقات الذروة، ينتظر الزبون في المطعم طويلاً لطلب الفاتورة، ثم ينتظر النادل ليجلب آلة الدفع، وتزداد المشكلة تعقيداً إذا أرادت مجموعة من الأصدقاء تقسيم الفاتورة (Split Bill).",
-      "impact": "تضييع وقت الزبون، انخفاض معدل دوران الطاولات (Table Turnover)، وفقدان الإكراميات (Tips) للنادل."
+      "text": "تنتهي تجربة الطعام غالبًا باحتكاك غير ضروري: يطلب الضيف الفاتورة، ينتظر الموظف وجهاز الدفع، ثم يحتاج فريق المطعم إلى تقسيم الفاتورة وإضافة الإكرامية ومطابقة العملية مع نظام نقاط البيع. المشكلة ليست طابورًا ماديًا فقط؛ بل فجوة بين سجل الطلب داخل POS، ورغبة الضيف في الدفع فورًا، ومهام التسوية والتقارير التي ينفذها الموظفون.",
+      "impact": "الانتظار يستهلك وقت الطاولة والموظف ويخلق أخطاء في التقسيم والتسوية، بينما يؤدي تركيب حل دفع منفصل عن POS إلى عمل يدوي جديد بدل إزالة الاحتكاك. في المقابل، يحتاج المطعم إلى تجربة سريعة تحافظ على الأمان وطرق الدفع المحلية والتوافق مع أنظمة الاستحواذ والبطاقات في كل دولة."
     },
     "solution": {
-      "text": "كود QR على كل طاولة متصل بنظام نقاط البيع (POS) للمطعم. يمسح الزبون الكود بهاتفه ليرى الفاتورة، يدفع بـ Apple Pay، ويمكنه بسهولة تقسيم الفاتورة مع أصدقائه، ودفع الإكرامية والمغادرة فوراً دون انتظار النادل."
+      "text": "تضع Qlub رمز QR مرتبطًا بالطاولة أو نقطة الخدمة، فيسترجع الضيف الفاتورة من نظام نقاط البيع دون تنزيل تطبيق، ثم يقسمها بالتساوي أو حسب الأصناف أو بمبلغ مخصص، يضيف إكرامية ويدفع بالبطاقة أو المحافظ المدعومة. توسع المنتج من Pay-at-Table إلى Order-and-Pay والقوائم الرقمية وروابط الدفع وSoftPOS وبرامج المكافآت والهدايا والتحليلات والمراجعات والإيصالات الرقمية. تدعم الشراكات مع Foodics وMashreq NEOPAY وMastercard تكامل Qlub مع أنظمة المطاعم والبنية المالية بدل محاولة استبدال كل طبقاتها."
     }
   },
   "market_data": {
-    "target_audience": "المطاعم، المقاهي، ومرتادي المطاعم (Dine-in).",
-    "market_size": "قطاع الضيافة والمطاعم في الشرق الأوسط.",
-    "growth_rate": "جمعت 25 مليون دولار بعد تحقيق نمو قياسي في تبني الخدمة من قبل كبرى سلاسل المطاعم."
+    "target_audience": "المطاعم والمقاهي والفنادق والمنتجعات ومشغلو الضيافة الذين يريدون تسريع الدفع والطلب داخل الموقع، ولا سيما المنشآت ذات كثافة الطاولات أو الفروع والحاجة إلى تكامل POS. يستفيد الضيف دون تطبيق من عرض الفاتورة وتقسيمها والدفع والإكرامية، بينما تستهدف qlub+ المستهلكين الباحثين عن مكافآت وعروض داخل شبكة المطاعم المشاركة.",
+    "market_size": "لا تنشر Qlub رقمًا رسميًا موحدًا لسوقها القابل للاستهداف، كما أن جمع أسواق معالجة المدفوعات وتقنيات المطاعم والقوائم الرقمية والولاء قد يؤدي إلى ازدواج القياس. الدليل التشغيلي المباشر هو استخدام أكثر من 3,000 مطعم وفندق ومنشأة ضيافة وفق الموقع الرسمي، مع انتشار معلن تاريخيًا في ست دول و2,000 مطعم في مارس 2023، ثم توسع الشركة إلى منتجات وأسواق إضافية. هذه المقاييس لا تساوي حصة سوقية أو عدد عقود مدفوعة.",
+    "growth_rate": "لا تنشر Qlub معدل نمو حاليًا للإيراد أو عدد التجار المدفوعين. تاريخيًا أعلنت في مارس 2023 خدمة أكثر من 2,000 مطعم عبر ست دول، ويعرض الموقع الحالي 3,000+ منشأة ضيافة. في يوليو 2025 جمعت 30 مليون دولار وذكرت أن قيمة المعاملات الإجمالية تضاعفت ثلاث مرات خلال العام السابق في مواد التوظيف، ثم دخلت في سبتمبر 2025 تعاونًا واستثمار أقلية من Mastercard لمعالجة معاملات card-not-present عبر بوابتها في أسواق خليجية. صفحات وظائف 2026 تشير إلى تضاعف عدد الموظفين خلال عام والتوسع إلى أسواق جديدة، لكنها مؤشرات شركة غير مدققة ولا تسمح بحساب CAGR مالي."
   },
   "financials": {
-    "initial_investment": "مدعومة من Cherry Ventures وصناديق عالمية أخرى.",
-    "valuation": "غير معلن (عشرات الملايين)",
+    "initial_investment": "تظهر الرحلة التمويلية المعلنة جولة بقيمة 17 مليون دولار في يناير 2022، ثم 25 مليون دولار في مارس 2023، ثم 30 مليون دولار في يوليو 2025 بقيادة مشتركة من Shorooq وCherry Ventures وبمشاركة e& ومبادلة وLegend Capital؛ وبذلك تبلغ مبالغ الجولات المعلنة 72 مليون دولار. أعلنت Mastercard في سبتمبر 2025 استثمار حصة أقلية إضافيًا من دون كشف المبلغ أو توضيح ما إذا كان جزءًا من إجمالي 72 مليونًا، لذلك لا يُضاف رقم تقديري. من المستثمرين المعلنين أيضًا Point Nine وSTV وRaed Ventures وHeartcore وFinTech Collective.",
+    "valuation": "غير معلن. لم تكشف Qlub أو المستثمرون نسبة الملكية أو تقييم pre-money أو post-money في الجولات المنشورة، ولا توجد شركة عامة أو سعر سهم أو تقارير SEC دورية تسمح بتحديث القيمة. عبارة «عشرات الملايين» في الملف الأصلي غير مدعومة وقد تكون أقل من إجمالي التمويل المعلن نفسه؛ لذلك حُذفت بالكامل.",
     "revenue_streams": [
-      "رسوم على كل عملية دفع (Transaction Fee)",
-      "اقتطاع نسبة من الإكراميات المدفوعة عبر التطبيق (في بعض النماذج)"
+      "رسوم تعاقدية أو اقتصاديات معالجة مدفوعات مرتبطة بحلول Pay-at-Table وSoftPOS وروابط الدفع وOrder-and-Pay؛ لا تنشر الشركة التسعير أو معدل الاقتطاع أو صافي الإيراد بعد رسوم الشبكات والمستحوذين",
+      "عقود برمجيات وخدمات للمطاعم والفنادق تشمل التكامل مع POS والتقارير والتحليلات والدعم؛ لا توجد قائمة أسعار عامة تسمح بحساب ARR",
+      "اشتراك qlub+ للمستهلك في الإمارات بسعر قائمة معلن 15 درهمًا شهريًا مع إمكانية الإلغاء؛ السعر لا يثبت عدد المشتركين أو الإيراد المحقق",
+      "رسوم أداء من المطاعم المشاركة في qlub+ عند جلب ضيوف وفق الوصف الرسمي «pay only when we bring you guests»؛ لم تُنشر النسبة أو شروط الاعتراف بالإيراد",
+      "منتجات إضافية مثل القوائم الرقمية وروابط الدفع وSoftPOS وبطاقات الهدايا وبرامج المكافآت قد تولد رسوم إعداد أو اشتراك أو معالجة بحسب العقد، لكن المزيج المالي غير مفصح عنه",
+      "الإكرامية قيمة يدفعها الضيف للموظفين أو المطعم؛ لم يُعثر على مصدر رسمي يثبت أن Qlub تقتطع نسبة منها، لذلك أزيل هذا الادعاء"
     ]
   },
   "lessons": [
     {
-      "title": "حل مشكلة واحدة بعمق (Niche Focus)",
-      "description": "لم تبنِ Qlub نظاماً معقداً للمطاعم (كفودكس)، بل ركزت فقط على اللحظة الأخيرة (الدفع وتقسيم الفاتورة). هذا التركيز الشديد جعل منتجها لا يُقاوم ومستقلاً يسهل دمجه مع أي نظام موجود."
+      "title": "ابدأ من آخر عشر ثوانٍ في الرحلة",
+      "description": "اختارت Qlub نقطة احتكاك واضحة بعد اكتمال الوجبة، حيث تكون نية الدفع مؤكدة والقيمة سهلة القياس. هذا المدخل أصغر من بناء نظام مطعم كامل، لكنه يلامس الإيراد ودوران الطاولات مباشرة، ما يجعل قرار التجربة أسرع."
     },
     {
-      "title": "عائد استثمار (ROI) فوري للعميل",
-      "description": "Qlub أثبتت للمطاعم أن خدمتها تزيد من سرعة إخلاء الطاولة بـ 15 دقيقة، مما يعني بيع طاولات أكثر. كما أنها ضاعفت نسبة الإكراميات للنُدّل، فأصبح النُدّل أنفسهم يروجون للخدمة للزبائن!"
+      "title": "التكامل مع النظام القائم أقوى من استبداله",
+      "description": "قيمة المنتج تعتمد على استرجاع الفاتورة وإغلاقها داخل POS بصورة صحيحة. شراكات Foodics وNEOPAY ومنتجات التكامل توضح أن الخندق الدفاعي ليس رمز QR؛ بل شبكة التكاملات والتسوية والدعم التي تجعل الدفع جزءًا طبيعيًا من تشغيل المطعم."
+    },
+    {
+      "title": "الضيف قناة استخدام بلا تكلفة تنزيل",
+      "description": "لا يحتاج الضيف إلى إنشاء حساب أو تثبيت تطبيق للدفع الأساسي، فيلتقي المنتج بالمستخدم عند لحظة الحاجة على الطاولة. هذا يقلل احتكاك B2C، بينما يظل المطعم هو قناة التوزيع والعميل التجاري."
+    },
+    {
+      "title": "حجم المدفوعات ليس إيرادًا",
+      "description": "معالجة معاملات سنوية بالمليارات قد تشير إلى انتشار قوي، لكن الإيراد يعتمد على معدل الاقتطاع ورسوم الشبكات والمستحوذ والمبالغ المردودة ومزيج المنتجات. لذلك يجب عرض TPV أو GMV منفصلًا عن صافي الإيراد وARR."
+    },
+    {
+      "title": "وسّع المنتج حول نقطة الدخول لا بعيدًا عنها",
+      "description": "بعد Pay-at-Table أضافت Qlub الطلب والدفع والقوائم وروابط الدفع وSoftPOS والمكافآت. جميعها تبقى حول دورة الطلب والتحصيل والعودة إلى المطعم، ما يزيد قيمة العقد من دون فقدان التخصص في الضيافة."
+    },
+    {
+      "title": "التوسع الدولي في المدفوعات يحتاج شركاء محليين",
+      "description": "طرق الدفع والتنظيم والاستحواذ تختلف بين الأسواق. تعاون Mastercard للبوابة في الخليج وشراكة Mashreq NEOPAY في الإمارات يوضحان أن الانتشار لا يتحقق بنسخ الواجهة وحدها؛ بل ببنية قبول وتسوية وشركاء موثوقين."
+    },
+    {
+      "title": "حوّل شبكة التجار إلى منتج استهلاكي بحذر",
+      "description": "qlub+ يستفيد من شبكة المطاعم لبناء اشتراك ومكافآت للمستهلك، ويمنح المطعم قناة اكتساب قائمة على الأداء. لكن أرقام الجمهور القابل للوصول أو المطاعم المشاركة لا تساوي أعضاء مدفوعين أو احتفاظًا أو إيراد اشتراك."
+    },
+    {
+      "title": "مقاييس العائد التسويقية تحتاج تعريفًا",
+      "description": "تعلن الشركة توفير 16 دقيقة للطاولة وزيادة الإكراميات حتى 300% والمراجعات حتى سبعة أضعاف. تصلح هذه الأرقام كأدلة مبيعات ودراسات حالة، لكنها ليست متوسطات مستقلة مدققة لكل المطاعم ويجب عرضها بعبارات «حتى» ومصدرها."
+    },
+    {
+      "title": "الأمن والامتثال جزء من المنتج المالي",
+      "description": "شهادة ISO/IEC 27001 والتكامل مع بوابات الدفع ليست إضافات تجميلية؛ فهي تقلل اعتراضات فرق التقنية والمالية وتدعم التوسع المؤسسي. في المدفوعات، الثقة والحوكمة شرط للبيع وليستا مرحلة لاحقة."
+    },
+    {
+      "title": "التمويل يشتري سرعة ولا يثبت التقييم أو الربحية",
+      "description": "جمع 72 مليون دولار يمكّن Qlub من التكامل والتوسع، لكنه لا يكشف قيمة الشركة أو هوامشها أو احتراقها النقدي. يجب إبقاء التمويل والتقييم والإيراد والتدفق النقدي أربعة مقاييس منفصلة."
     }
   ],
   "tools": [
-    "AWS",
-    "QR Tech",
-    "React / Next.js",
-    "Fintech Payment APIs"
-  ]
+    "Pay-at-Table عبر QR دون تنزيل تطبيق أو تسجيل للدفع الأساسي",
+    "استرجاع الفاتورة من نظام نقاط البيع وتحديث حالة الدفع",
+    "تقسيم الفاتورة بالتساوي أو حسب الأصناف أو بمبلغ مخصص",
+    "إضافة الإكرامية والدفع بالبطاقات والمحافظ المدعومة مثل Apple Pay وGoogle Pay بحسب السوق",
+    "Order-and-Pay لتصفح القائمة وتخصيص الطلب وإرساله والدفع من الهاتف",
+    "قوائم رقمية تُحدّث لحظيًا وتدعم الأسعار والمخزون والمعدلات",
+    "Payment Links للحجوزات والفعاليات والتموين والطلبات المسبقة مع تتبع حالة العملية",
+    "SoftPOS لقبول المدفوعات اللاتلامسية بصورة مدمجة مع POS أو مستقلة",
+    "qlub+ للمكافآت والعروض والاشتراك الاستهلاكي في الإمارات",
+    "بطاقات هدايا رقمية مرتبطة بالمطعم وآلية استرداد داخل تجربة الدفع",
+    "تحليلات تشغيلية وإشعارات دفع ومراجعات Google وتسوية ومحاسبة آلية وفق وصف المنتج",
+    "تكاملات POS وشراكة Foodics لتجربة الدفع الذاتي على الطاولة",
+    "تكامل Qlub مع محطات Mashreq NEOPAY داخل منافذ الضيافة الإماراتية",
+    "Mastercard Gateway لمعالجة معاملات card-not-present في الإمارات والسعودية وقطر والكويت والبحرين وفق تعاون 2025",
+    "شهادة ISO/IEC 27001:2022 لنظام إدارة أمن المعلومات ضمن البيئات المدارة لـQlub",
+    "كيانات وتشغيل محلي معلن، منها Fast Technology Services FZCO في الإمارات وEasy Delivery LLC في السعودية",
+    "لا توجد مصادر رسمية كافية لتأكيد أن AWS أو React أو Next.js تمثل الحزمة الداخلية الحالية؛ لذلك لم تُعرض كتقنيات مؤكدة"
+  ],
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "qlub | Contactless Payments & Digital Menus for Restaurants",
+      "publisher": "Qlub",
+      "source_type": "official_current_company_and_product_page",
+      "url": "https://qlub.io/ae/en",
+      "supports": [
+        "الكيان الإماراتي Fast Technology Services FZCO ومقر التأسيس في دبي",
+        "أكثر من 3,000 مطعم وفندق ومنشأة ضيافة",
+        "محفظة الحلول الحالية وشهادة ISO/IEC 27001:2022",
+        "مطالبات الأداء التسويقية: توفير حتى 16 دقيقة وزيادة الإكراميات حتى 300% والمراجعات حتى 7 مرات"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Pay-at-Table Solution | Scan, Split, Tip, Pay",
+      "publisher": "Qlub",
+      "source_type": "official_current_product_page",
+      "url": "https://qlub.io/ae/en/pay-at-table",
+      "supports": [
+        "استرجاع الفاتورة ومسح QR وتقسيمها والدفع في تجربة دون انتظار",
+        "خيارات التقسيم والإكرامية والمحافظ الرقمية",
+        "وصف التكامل مع POS والإيصالات الرقمية والإشعارات"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Order-and-Pay Solution for Restaurants",
+      "publisher": "Qlub",
+      "source_type": "official_current_product_page",
+      "url": "https://qlub.io/ae/en/order-and-pay",
+      "supports": [
+        "التصفح والطلب والتخصيص والدفع عبر الهاتف",
+        "إمكانية العمل مع POS أو بصورة مستقلة",
+        "إشعارات الطلبات والتحديثات الفورية ومطالبات زيادة متوسط السلة"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Payment Links, Simplified",
+      "publisher": "Qlub",
+      "source_type": "official_current_product_page",
+      "url": "https://qlub.io/ae/en/payment-link",
+      "supports": [
+        "روابط دفع للحجوزات والتموين والفعاليات والطلبات",
+        "قبول Apple Pay وGoogle Pay والبطاقات",
+        "تتبع حالة المعاملة والإشعار عند الدفع"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "qlub SoftPOS Terminal Solution for Restaurants",
+      "publisher": "Qlub",
+      "source_type": "official_current_product_page",
+      "url": "https://qlub.io/ae/en/softpos-terminal",
+      "supports": [
+        "قبول البطاقات والمحافظ وQR عبر SoftPOS",
+        "التشغيل المتكامل مع POS أو بصورة مستقلة",
+        "تقسيم الفواتير وتحصيل الإكراميات دون جهاز تقليدي منفصل"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "qlub+ | Restaurant Rewards Program & Dining Deals in UAE",
+      "publisher": "Qlub",
+      "source_type": "official_current_pricing_and_rewards_page",
+      "url": "https://qlub.io/ae/en/qlub-plus",
+      "supports": [
+        "سعر قائمة اشتراك qlub+ البالغ 15 درهمًا شهريًا",
+        "نموذج المطاعم القائم على الدفع عند جلب ضيف دون رسوم مقدمة وفق الوصف الرسمي",
+        "500+ مطعم ضمن العروض و2M+ targeted diners كجمهور تسويقي معلن"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Your journey begins here — qlub Careers",
+      "publisher": "Qlub",
+      "source_type": "official_company_careers_and_funding_timeline",
+      "url": "https://careers.qlub.io/",
+      "supports": [
+        "تأسيس Qlub في 2021",
+        "جولات 17 مليون دولار في 2022 و25 مليونًا في 2023 و30 مليونًا في 2025",
+        "إجمالي تمويل معلن 72 مليون دولار",
+        "وصف نمو قيمة المعاملات الإجمالية إلى ثلاثة أضعاف خلال عام"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Qlub announces $30 million funding round",
+      "publisher": "Qlub",
+      "source_type": "official_company_funding_announcement",
+      "url": "https://www.linkedin.com/posts/qlub-pay_wealth-fund-mubadala-backs-dubai-based-dining-activity-7353013838608281600-fc6s",
+      "supports": [
+        "جولة يوليو 2025 بقيمة 30 مليون دولار",
+        "إجمالي تمويل 72 مليون دولار",
+        "مشاركة Shorooq وCherry Ventures وe& وMubadala وLegend Capital",
+        "تصريح الشركة بمعالجة قيمة معاملات سنوية بالمليارات"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Mastercard partners with Qlub to transform digital payments in the GCC hospitality sector",
+      "publisher": "Mastercard",
+      "source_type": "official_strategic_partnership_and_minority_investment_announcement",
+      "url": "https://www.mastercard.com/news/eemea/en/newsroom/press-releases/en/2023/september/mastercard-partners-with-qlub-to-transform-digital-payments-in-the-gcc-hospitality-sector/",
+      "supports": [
+        "تعاون استراتيجي واستثمار أقلية من Mastercard أعلنا في 4 سبتمبر 2025",
+        "استخدام Mastercard Gateway لمعاملات card-not-present",
+        "الأسواق الخليجية المحددة: الإمارات والسعودية وقطر والكويت والبحرين",
+        "انضمام Qlub إلى برنامج Start Path في 2023"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Mashreq NEOPAY Partners with UAE Fintech Start-up Qlub",
+      "publisher": "Mashreq",
+      "source_type": "official_bank_partnership_announcement",
+      "url": "https://www.mashreq.com/en/uae/news/2024/october/mashreq-neopay-partners-qlub/",
+      "supports": [
+        "دمج الدفع وتقسيم الفواتير والإكراميات عبر أجهزة NEOPAY",
+        "التكامل الكامل مع نقاط بيع المطاعم في الإمارات",
+        "توسيع Qlub من QR إلى محطات الدفع"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "FOODICS Integrates With Qlub to Bring Fastest Table Self-Checkout Experience",
+      "publisher": "Foodics",
+      "source_type": "official_pos_partner_announcement",
+      "url": "https://www.foodics.com/press/foodics-partners-with-qlub-to-bring-fastest-table-self-checkout-experience-to-its-dine-in-restaurants/",
+      "supports": [
+        "تكامل Qlub مع Foodics POS",
+        "الدفع دون تطبيق أو تسجيل وتقسيم الفاتورة",
+        "تقدير شريك Foodics لتوفير متوسط 15 دقيقة لكل طاولة في إعلان 2022"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Qlub closes $30 million round backed by Shorooq, e&, and Mubadala",
+      "publisher": "Wamda",
+      "source_type": "company_press_release_republication",
+      "url": "https://www.wamda.com/2025/07/qlub-closes-30-million-round-backed-shorooq-e-mubadala",
+      "supports": [
+        "تفاصيل جولة 30 مليون دولار في يوليو 2025",
+        "تأسيس 2021 على يد إياد القصار ومحمود فوز",
+        "خطط التوسع والتحليلات والتكاملات",
+        "مطالبات العملاء عن الإكراميات وسرعة الدفع وتوفير العمالة مع نسبتها إلى الشركة"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "UAE’s fintech Qlub raises $25 million",
+      "publisher": "Wamda",
+      "source_type": "funding_news_and_company_statement",
+      "url": "https://www.wamda.com/2023/03/uae-fintech-qlub-raises-25-million",
+      "supports": [
+        "جولة 25 مليون دولار في مارس 2023",
+        "إجمالي تمويل 42 مليون دولار حينها",
+        "خدمة أكثر من 2,000 مطعم في ست دول في 2023",
+        "قائمة المستثمرين المشاركين في الجولة"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Qlub emerges with $17M seed round from Cherry and Point Nine",
+      "publisher": "TechCrunch",
+      "source_type": "independent_funding_report",
+      "url": "https://techcrunch.com/2022/01/31/sunday-competitor-qlub-emerges-with-17m-seed-round-from-cherry-and-point-nine/",
+      "supports": [
+        "جولة تمويل أولى بقيمة 17 مليون دولار في يناير 2022",
+        "قيادة Cherry Ventures وPoint Nine للجولة",
+        "مشاركة STV وRaed Ventures وHeartcore وShorooq وFinTech Collective"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Qlub — RAED Ventures Portfolio",
+      "publisher": "RAED Ventures",
+      "source_type": "official_investor_portfolio_profile",
+      "url": "https://raed.vc/portfolio/qlub/",
+      "supports": [
+        "الإمارات بلد الشركة وسنة التأسيس 2021",
+        "المؤسسان إياد القصار ومحمود فوز",
+        "الدفع في نحو عشر ثوانٍ دون تطبيق وتقسيم الفاتورة"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Qlub Saudi Arabia — Legal Entity and Contact",
+      "publisher": "Qlub",
+      "source_type": "official_local_market_page",
+      "url": "https://qlub.io/sa/en",
+      "supports": [
+        "الكيان المحلي Easy Delivery LLC في السعودية",
+        "رقم السجل التجاري والضريبة المعروضين في الصفحة",
+        "وجود دعم واتصال محلي للسوق السعودية"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Integrations | Restaurant Tech Partners",
+      "publisher": "Qlub",
+      "source_type": "official_integrations_page",
+      "url": "https://qlub.io/ae/en/integrations/pos-systems",
+      "supports": [
+        "اعتماد المنتج على تكاملات أنظمة نقاط البيع",
+        "توسيع قابلية التشغيل داخل منظومة تقنيات المطاعم"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Success Stories | How Restaurants Boost Tips & Efficiency",
+      "publisher": "Qlub",
+      "source_type": "official_customer_case_studies_page",
+      "url": "https://qlub.io/ae/en/success-stories",
+      "supports": [
+        "مطالبات الشركة بتوفير حتى 16 دقيقة لكل طاولة",
+        "زيادة الإكراميات حتى 300% والمراجعات حتى 7 مرات",
+        "ضرورة معاملة النتائج كمطالبات دراسات حالة لا كمتوسط مستقل مدقق"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "Qlub — Point Nine Job Board Company Profile",
+      "publisher": "Point Nine Job Board",
+      "source_type": "investor_hosted_current_company_profile",
+      "url": "https://jobs.pointnine.com/companies/qlub",
+      "supports": [
+        "وصف المنتج الحالي ومحفظة Pay-at-Table والقوائم وOrder-and-Pay وروابط الدفع وSoftPOS",
+        "ادعاء 5,000+ مطعم و10+ أسواق الذي يتجاوز رقم الموقع الرسمي ويحتاج وسمًا كمصدر ثانوي",
+        "تأسيس 2021 ومقر دبي وفق ملف الشركة المستضاف لدى المستثمر"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "Qlub business development role in Amman",
+      "publisher": "Point Nine Job Board",
+      "source_type": "investor_hosted_current_job_posting",
+      "url": "https://jobs.pointnine.com/companies/qlub/jobs/85778743-business-development-manager-amman",
+      "supports": [
+        "إجمالي 72 مليون دولار المعلن في يوليو 2026",
+        "تضاعف عدد الموظفين خلال العام السابق وفق وصف الشركة",
+        "التوسع التجاري المخطط في الأردن",
+        "عدم اعتبار الوظيفة وحدها دليلًا على حجم تشغيل فعلي"
+      ]
+    }
+  ],
+  "verification": {
+    "status": "verified_from_official_qlub_product_company_funding_partner_and_investor_sources_with_metric_separation",
+    "verified_on": "2026-08-03",
+    "research_cutoff": "2026-08-03",
+    "source_policy": "أُعطيت الأولوية لموقع Qlub وصفحات منتجاتها وتسعير qlub+ وصفحة الوظائف وإعلان الشركة، ثم بيانات Mastercard وMashreq وFoodics وصفحات المستثمرين. استُخدمت Wamda وTechCrunch لتثبيت الجولات التاريخية عند غياب بيان شركة مستقل سهل الوصول. لم تُستخدم تقديرات قواعد البيانات للإيراد أو الزيارات أو التقييم. لا تنطبق تقارير SEC الدورية لأن Qlub شركة خاصة ولم يُعثر على مُصدر عام تابع لها.",
+    "important_notes": [
+      "حُذف تقدير «ملايين الدولارات» من الإيراد الشهري لعدم وجود MRR أو ARR أو إيراد مدقق منشور.",
+      "فُصلت قيمة المعاملات السنوية بالمليارات عن إيراد Qlub؛ TPV أو GMV يمر عبر المنصة ولا يمثل صافي الدخل.",
+      "لم يُنشر take rate أو صافي رسوم المعالجة أو مزيج الإيراد بين التجار والمنتجات والمستهلكين.",
+      "حُذفت عبارة «عشرات الملايين» كتقييم؛ لا توجد نسبة ملكية أو قيمة pre-money أو post-money معلنة.",
+      "تبلغ مبالغ الجولات المعلنة 72 مليون دولار حتى يوليو 2025؛ مبلغ استثمار Mastercard الأقلية في سبتمبر 2025 غير معلن ولا يُضاف تقديريًا.",
+      "الموقع الرسمي يعرض 3,000+ منشأة ضيافة، بينما تعرض صفحة مستضافة لدى Point Nine رقم 5,000+؛ تم اعتماد الرقم الرسمي المحافظ وتوثيق التباين.",
+      "عدد المطاعم أو المنشآت ليس زيارات موقع ولا مستخدمين نشطين ولا عملاء مدفوعين مؤكدين.",
+      "رقم 2M+ targeted diners في qlub+ يصف جمهورًا تسويقيًا قابلًا للوصول ولا يثبت عدد الأعضاء أو MAU.",
+      "سعر qlub+ البالغ 15 درهمًا شهريًا سعر قائمة للمستهلك في الإمارات ولا يكشف عدد الاشتراكات أو الإيراد.",
+      "لم يُعثر على مصدر رسمي يثبت أن Qlub تقتطع نسبة من الإكراميات؛ لذلك أزيل مسار الإيراد هذا.",
+      "مطالبات توفير 16 دقيقة وزيادة الإكراميات 300% والمراجعات 7 مرات هي أرقام تسويقية ودراسات حالة من Qlub وشركائها وليست متوسطات مستقلة مدققة.",
+      "وجود صفحات اتصال أو وظائف في سوق جديد لا يثبت وحده إطلاقًا تجاريًا كاملًا أو حجم معاملات.",
+      "استُبدلت AWS وReact وNext.js غير الموثقة بقدرات ومنتجات وشراكات معلنة رسميًا.",
+      "لا يوجد TAM رسمي موحد يجمع معالجة المدفوعات وتقنيات المطاعم والولاء دون ازدواج قياس، لذلك لم يُختلق حجم سوق.",
+      "جميع مقاييس الانتشار والأداء غير المالية هي تصريحات شركة أو شركاء ما لم يذكر خلاف ذلك."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_on": "2026-08-03",
+      "validator": "Python json module + jsonschema Draft 2020-12 + custom Professional V2 integrity checks",
+      "check_count": 18,
+      "checks": [
+        "اجتياز JSON Schema Draft 2020-12 مع وجود الحقول الأساسية وحقول Professional V2",
+        "الحفاظ على مفاتيح البنية الأصلية وإضافة verification وevidence_map_schema وevidence_map وsources فقط",
+        "تطابق field_value في كل مدخل evidence_map مع القيمة الفعلية في JSONPath",
+        "تطابق source_count مع source_ids وsource_references",
+        "عدم وجود source_id مكرر أو مرجع دليل يشير إلى مصدر غير موجود",
+        "تطابق عنوان وناشر ونوع ورابط كل مرجع مختصر مع سجل المصدر الكامل",
+        "سلامة جميع روابط المصادر بصيغة HTTPS",
+        "عدم وجود NaN أو Infinity أو قيم JSON غير قياسية",
+        "وجود محتوى عربي جوهري في جميع الأقسام التحليلية",
+        "وسم الإيراد الشهري بأنه غير معلن وإزالة التقدير غير المدعوم",
+        "فصل TPV أو GMV السنوي بالمليارات عن إيراد Qlub",
+        "وسم التقييم بأنه غير معلن وإزالة تقدير عشرات الملايين",
+        "فصل الجولات المعلنة البالغة 72 مليون دولار عن استثمار Mastercard غير المعلن",
+        "توثيق تعارض 3,000+ و5,000+ وفصله عن زيارات الموقع والمستخدمين",
+        "فصل سعر qlub+ المعلن عن عدد المشتركين والإيراد المحقق",
+        "إزالة ادعاء اقتطاع نسبة من الإكراميات لغياب دليل رسمي",
+        "استبدال AWS وReact وNext.js غير الموثقة بقدرات منتج وشراكات رسمية",
+        "وجود 10 دروس خاصة بـQlub و20 مصدرًا و15 مدخلًا في خريطة الأدلة"
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول الجوهرية بقيمها الفعلية وحالة التحقق والثقة والمصادر، مع فصل الإيراد عن قيمة المعاملات والتمويل والتقييم، وفصل المطاعم والتجار عن المستخدمين النشطين وحركة الموقع.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي أو وثيقة أولية قوية.",
+      "verified_current_product_capability": "القدرة موجودة في صفحة منتج حديثة دون افتراض حجم الاستخدام أو الإيراد.",
+      "verified_as_not_publicly_disclosed": "لم يُنشر المقياس المطلوب، ولذلك لم يُستخدم تقدير خارجي.",
+      "verified_historical_financing": "معلومة تمويل مرتبطة بجولة وتاريخ محددين دون تحويلها إلى إيراد أو تقييم.",
+      "verified_historical_operating_metric": "مقياس تشغيل تاريخي منشور لا يُعامل تلقائيًا كمقياس حالي.",
+      "verified_with_metric_definition_limits": "المعلومة منشورة لكن تعريفها لا يسمح بتحويلها إلى مقياس مالي أو مستخدم نشط.",
+      "verified_company_claim_with_limits": "تصريح أو مطالبة أداء من الشركة أو شريكها مع توضيح غياب التدقيق المستقل.",
+      "analytical_inference": "تحليل مهني مشتق من حقائق موثقة وليس تصريحًا حرفيًا."
+    },
+    "confidence_scale": {
+      "high": "مصدر رسمي مباشر أو عدة مصادر أولية متطابقة.",
+      "medium_high": "استنتاج محدود مبني على مصادر رسمية مع حدود واضحة.",
+      "medium": "تصريح شركة أو مصدر مستثمر يحتاج حذرًا في التعريف أو التوقيت.",
+      "low_not_used": "تقدير غير موثق أو ادعاء متعارض لم يُستخدم كحقيقة."
+    },
+    "metric_definitions": {
+      "revenue": "دخل محاسبي تعترف به Qlub من الرسوم والاشتراكات والخدمات؛ لا يساوي قيمة المدفوعات المعالجة.",
+      "tpv_gmv": "القيمة الإجمالية للمدفوعات أو المعاملات التي تمر عبر المنصة قبل رسوم الشبكات والمستحوذين والرديات؛ ليست إيرادًا.",
+      "mrr_arr": "إيراد متكرر شهري أو سنوي وفق تعريف مالي؛ لا يُستخرج من أسعار قائمة أو عدد المطاعم.",
+      "funding": "رأس مال جمعته الشركة من المستثمرين؛ لا يمثل إيرادًا أو تقييمًا أو رصيدًا نقديًا حاليًا.",
+      "valuation": "قيمة حقوق الملكية في جولة محددة مع نوعها وتاريخها؛ لم تُفصح Qlub عنها.",
+      "merchant_locations": "مطاعم أو فنادق أو منشآت تستخدم أو تثق بالحل وفق تعريف المصدر؛ لا تساوي العقود المدفوعة أو المستخدمين.",
+      "active_users": "مستخدمون نشطون خلال نافذة زمنية معرفة؛ لا تنشر Qlub رقمًا حاليًا واضح التعريف.",
+      "website_traffic": "زيارات الموقع خلال فترة؛ مقياس منفصل عن المطاعم والدافعين والضيوف.",
+      "targeted_diners": "جمهور تسويقي يمكن الوصول إليه وفق Qlub، وليس أعضاء مدفوعين أو MAU.",
+      "list_price": "سعر معلن قبل الخصومات والضرائب والإلغاء؛ لا يثبت الإيراد المحقق.",
+      "tips": "إكراميات يدفعها الضيف؛ لا تُعد إيرادًا للشركة ما لم يثبت عقد أو اقتطاع معلن."
+    }
+  },
+  "evidence_map": {
+    "$.headline": {
+      "field_value": "كيف حوّلت Qlub لحظة طلب الفاتورة إلى طبقة مدفوعات وتشغيل للضيافة",
+      "verification_status": "analytical_inference",
+      "confidence": "high",
+      "claim_type": "company_specific_strategy_headline",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يلخص انتقال Qlub من حل دفع عبر QR إلى طبقة أوسع تشمل الطلب والقوائم وروابط الدفع وSoftPOS والمكافآت والتكاملات.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-05",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "qlub | Contactless Payments & Digital Menus for Restaurants",
+          "publisher": "Qlub",
+          "source_type": "official_current_company_and_product_page",
+          "url": "https://qlub.io/ae/en",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "محفظة الحلول الحالية والمنشآت المستخدمة"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Order-and-Pay Solution for Restaurants",
+          "publisher": "Qlub",
+          "source_type": "official_current_product_page",
+          "url": "https://qlub.io/ae/en/order-and-pay",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "الطلب والدفع من الهاتف"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "qlub SoftPOS Terminal Solution for Restaurants",
+          "publisher": "Qlub",
+          "source_type": "official_current_product_page",
+          "url": "https://qlub.io/ae/en/softpos-terminal",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "SoftPOS المدمج مع نقاط البيع"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Mastercard partners with Qlub to transform digital payments in the GCC hospitality sector",
+          "publisher": "Mastercard",
+          "source_type": "official_strategic_partnership_and_minority_investment_announcement",
+          "url": "https://www.mastercard.com/news/eemea/en/newsroom/press-releases/en/2023/september/mastercard-partners-with-qlub-to-transform-digital-payments-in-the-gcc-hospitality-sector/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "الربط ببنية Mastercard Gateway"
+        }
+      ],
+      "limitations": "العنوان تحليل تحريري ولا يصف تصنيفًا محاسبيًا أو تنظيميًا رسميًا."
+    },
+    "$.company.location": {
+      "field_value": "دبي، الإمارات العربية المتحدة. يعرض الموقع الرسمي الكيان الإماراتي Fast Technology Services FZCO، وتذكر مصادر المستثمرين أن Qlub تأسست في 2021 على يد إياد القصار ومحمود فوز. توسعت المنصة خارج الإمارات عبر أسواق خليجية وآسيوية وأستراليا والبرازيل والولايات المتحدة، لكن وجود صفحة محلية أو وظيفة شاغرة لا يُعامل وحده كدليل على حجم تشغيل فعلي في كل سوق.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "company_identity_location_and_expansion",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الموقع الرسمي يعرض كيان دبي، وصفحات المستثمرين تثبت سنة التأسيس والمؤسسين، بينما تظهر صفحات محلية وشراكات توسعًا دوليًا.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-15",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "qlub | Contactless Payments & Digital Menus for Restaurants",
+          "publisher": "Qlub",
+          "source_type": "official_current_company_and_product_page",
+          "url": "https://qlub.io/ae/en",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "Fast Technology Services FZCO وتأسيسها في دبي"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Qlub — RAED Ventures Portfolio",
+          "publisher": "RAED Ventures",
+          "source_type": "official_investor_portfolio_profile",
+          "url": "https://raed.vc/portfolio/qlub/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "سنة التأسيس 2021 والمؤسسان"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Qlub Saudi Arabia — Legal Entity and Contact",
+          "publisher": "Qlub",
+          "source_type": "official_local_market_page",
+          "url": "https://qlub.io/sa/en",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "الكيان المحلي في السعودية"
+        }
+      ],
+      "limitations": "صفحة محلية أو وظيفة لا تثبت وحدها حجم عمليات السوق."
+    },
+    "$.company.business_model": {
+      "field_value": "نموذج B2B2C يربط المطعم بالضيف عند لحظة الطلب والدفع. تبيع Qlub للمطاعم والفنادق حلول Pay-at-Table وOrder-and-Pay والقوائم الرقمية وروابط الدفع وSoftPOS المتكامل مع نقاط البيع، بينما لا تنشر تسعير عقود التجار أو معدل الاقتطاع أو حصة الشركة من رسوم المعالجة. أضافت الشركة طبقة استهلاكية عبر qlub+ بسعر قائمة معلن قدره 15 درهمًا شهريًا في الإمارات، مع نموذج أداء للمطاعم المشاركة يدفع فيه المطعم عند جلب ضيوف وفق الصفحة الرسمية. لا يوجد دليل منشور يثبت اقتطاع Qlub نسبة من الإكراميات.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "medium_high",
+      "claim_type": "business_model_and_pricing_limits",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المنتجات الرسمية تثبت نموذج B2B2C ومحفظة الدفع، وتثبت صفحة qlub+ اشتراك المستهلك ونموذج الأداء للمطعم؛ تسعير التجار وtake rate غير منشورين.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-06",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "qlub | Contactless Payments & Digital Menus for Restaurants",
+          "publisher": "Qlub",
+          "source_type": "official_current_company_and_product_page",
+          "url": "https://qlub.io/ae/en",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "محفظة حلول المدفوعات والضيافة"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "qlub+ | Restaurant Rewards Program & Dining Deals in UAE",
+          "publisher": "Qlub",
+          "source_type": "official_current_pricing_and_rewards_page",
+          "url": "https://qlub.io/ae/en/qlub-plus",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "اشتراك qlub+ ونموذج الأداء للمطاعم"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Mastercard partners with Qlub to transform digital payments in the GCC hospitality sector",
+          "publisher": "Mastercard",
+          "source_type": "official_strategic_partnership_and_minority_investment_announcement",
+          "url": "https://www.mastercard.com/news/eemea/en/newsroom/press-releases/en/2023/september/mastercard-partners-with-qlub-to-transform-digital-payments-in-the-gcc-hospitality-sector/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "اقتصاديات معالجة بطاقات عبر Mastercard Gateway"
+        }
+      ],
+      "limitations": "لا توجد قائمة أسعار عامة لعقود التجار أو دليل على اقتطاع الإكراميات."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. Qlub شركة خاصة ولا تنشر MRR أو ARR أو إيرادًا شهريًا أو سنويًا مدققًا، ولا تكشف معدل الاقتطاع من المدفوعات. إعلان الشركة والمستثمرين عن معالجة قيمة معاملات سنوية بالمليارات يصف حجم المدفوعات أو TPV/GMV وليس إيراد Qlub، لذلك حُذف تقدير «ملايين الدولارات شهريًا».",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "revenue_non_disclosure_and_tpv_separation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر تعلن التمويل وحجم معاملات نوعيًا، لكنها لا تنشر إيرادًا أو MRR أو ARR أو take rate.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-08",
+        "SRC-07",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "Qlub announces $30 million funding round",
+          "publisher": "Qlub",
+          "source_type": "official_company_funding_announcement",
+          "url": "https://www.linkedin.com/posts/qlub-pay_wealth-fund-mubadala-backs-dubai-based-dining-activity-7353013838608281600-fc6s",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "تصريح قيمة معاملات سنوية بالمليارات وإجمالي التمويل"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Your journey begins here — qlub Careers",
+          "publisher": "Qlub",
+          "source_type": "official_company_careers_and_funding_timeline",
+          "url": "https://careers.qlub.io/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "التمويل ومقياس GMV التشغيلي دون إيراد"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Mastercard partners with Qlub to transform digital payments in the GCC hospitality sector",
+          "publisher": "Mastercard",
+          "source_type": "official_strategic_partnership_and_minority_investment_announcement",
+          "url": "https://www.mastercard.com/news/eemea/en/newsroom/press-releases/en/2023/september/mastercard-partners-with-qlub-to-transform-digital-payments-in-the-gcc-hospitality-sector/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "بنية معالجة المدفوعات دون إفصاح الإيراد"
+        }
+      ],
+      "limitations": "عدم العثور على رقم عام لا يثبت غياب الإيراد؛ يثبت فقط عدم جواز تقديره."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن. لا تنشر Qlub زيارات الموقع أو MAU/DAU بتعريف واضح. الموقع الرسمي الحالي يذكر الثقة من أكثر من 3,000 مطعم وفندق ومنشأة ضيافة، بينما تعرض صفحات وظائف لدى مستثمرين رقمًا يتجاوز 5,000 مطعم في أكثر من 10 أسواق؛ بسبب اختلاف المصدر والتعريف والتوقيت، استُخدم 3,000+ كحد رسمي محافظ ولم يُحوّل إلى زيارات أو عملاء مدفوعين أو مستخدمين نشطين. كما أن «2M+ targeted diners» في صفحة qlub+ جمهور تسويقي قابل للوصول في الإمارات وليس عدد أعضاء مدفوعين.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "high",
+      "claim_type": "traffic_users_and_merchant_count_separation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الموقع الرسمي يذكر 3,000+ منشأة لا زيارات أو MAU، بينما يوجد رقم 5,000+ في صفحة مستثمر ورقم 2M+ كجمهور qlub+ تسويقي.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-19",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "qlub | Contactless Payments & Digital Menus for Restaurants",
+          "publisher": "Qlub",
+          "source_type": "official_current_company_and_product_page",
+          "url": "https://qlub.io/ae/en",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "3,000+ مطعم وفندق ومنشأة ضيافة"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Qlub — Point Nine Job Board Company Profile",
+          "publisher": "Point Nine Job Board",
+          "source_type": "investor_hosted_current_company_profile",
+          "url": "https://jobs.pointnine.com/companies/qlub",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "رقم 5,000+ في صفحة مستضافة لدى المستثمر"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "qlub+ | Restaurant Rewards Program & Dining Deals in UAE",
+          "publisher": "Qlub",
+          "source_type": "official_current_pricing_and_rewards_page",
+          "url": "https://qlub.io/ae/en/qlub-plus",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "2M+ targeted diners كجمهور تسويقي"
+        }
+      ],
+      "limitations": "اختلاف تعريفات المصادر يمنع دمجها أو تحويلها إلى زيارات أو مستخدمين نشطين."
+    },
+    "$.overview.problem.text": {
+      "field_value": "تنتهي تجربة الطعام غالبًا باحتكاك غير ضروري: يطلب الضيف الفاتورة، ينتظر الموظف وجهاز الدفع، ثم يحتاج فريق المطعم إلى تقسيم الفاتورة وإضافة الإكرامية ومطابقة العملية مع نظام نقاط البيع. المشكلة ليست طابورًا ماديًا فقط؛ بل فجوة بين سجل الطلب داخل POS، ورغبة الضيف في الدفع فورًا، ومهام التسوية والتقارير التي ينفذها الموظفون.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "customer_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "صفحات Qlub وشركائها تصف انتظار الفاتورة وتقسيمها والدفع والمطابقة كاحتكاكات تشغيلية.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-02",
+        "SRC-10",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Pay-at-Table Solution | Scan, Split, Tip, Pay",
+          "publisher": "Qlub",
+          "source_type": "official_current_product_page",
+          "url": "https://qlub.io/ae/en/pay-at-table",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "مسار مسح الفاتورة وتقسيمها ودفعها"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Mashreq NEOPAY Partners with UAE Fintech Start-up Qlub",
+          "publisher": "Mashreq",
+          "source_type": "official_bank_partnership_announcement",
+          "url": "https://www.mashreq.com/en/uae/news/2024/october/mashreq-neopay-partners-qlub/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "التقسيم والإكرامية والتكامل مع POS عبر NEOPAY"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "FOODICS Integrates With Qlub to Bring Fastest Table Self-Checkout Experience",
+          "publisher": "Foodics",
+          "source_type": "official_pos_partner_announcement",
+          "url": "https://www.foodics.com/press/foodics-partners-with-qlub-to-bring-fastest-table-self-checkout-experience-to-its-dine-in-restaurants/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "الدفع الذاتي المتكامل مع Foodics"
+        }
+      ],
+      "limitations": "شدة المشكلة تختلف حسب نوع المطعم وتدفق الخدمة."
+    },
+    "$.overview.problem.impact": {
+      "field_value": "الانتظار يستهلك وقت الطاولة والموظف ويخلق أخطاء في التقسيم والتسوية، بينما يؤدي تركيب حل دفع منفصل عن POS إلى عمل يدوي جديد بدل إزالة الاحتكاك. في المقابل، يحتاج المطعم إلى تجربة سريعة تحافظ على الأمان وطرق الدفع المحلية والتوافق مع أنظمة الاستحواذ والبطاقات في كل دولة.",
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "operational_impact",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توفير الوقت والتكامل مع POS يدعمان الاستنتاج بأن الانتظار والمطابقة اليدوية يؤثران في دوران الطاولات وكفاءة الموظفين.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-11",
+        "SRC-18",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "FOODICS Integrates With Qlub to Bring Fastest Table Self-Checkout Experience",
+          "publisher": "Foodics",
+          "source_type": "official_pos_partner_announcement",
+          "url": "https://www.foodics.com/press/foodics-partners-with-qlub-to-bring-fastest-table-self-checkout-experience-to-its-dine-in-restaurants/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "تقدير توفير 15 دقيقة لكل طاولة عبر تكامل Foodics"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Success Stories | How Restaurants Boost Tips & Efficiency",
+          "publisher": "Qlub",
+          "source_type": "official_customer_case_studies_page",
+          "url": "https://qlub.io/ae/en/success-stories",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "مطالبات توفير الوقت وتحسين الكفاءة"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Mastercard partners with Qlub to transform digital payments in the GCC hospitality sector",
+          "publisher": "Mastercard",
+          "source_type": "official_strategic_partnership_and_minority_investment_announcement",
+          "url": "https://www.mastercard.com/news/eemea/en/newsroom/press-releases/en/2023/september/mastercard-partners-with-qlub-to-transform-digital-payments-in-the-gcc-hospitality-sector/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "الحاجة إلى بوابة دفع محلية وآمنة في الخليج"
+        }
+      ],
+      "limitations": "لا توجد دراسة مستقلة موحدة تقيس أثر المشكلة على جميع العملاء."
+    },
+    "$.overview.solution.text": {
+      "field_value": "تضع Qlub رمز QR مرتبطًا بالطاولة أو نقطة الخدمة، فيسترجع الضيف الفاتورة من نظام نقاط البيع دون تنزيل تطبيق، ثم يقسمها بالتساوي أو حسب الأصناف أو بمبلغ مخصص، يضيف إكرامية ويدفع بالبطاقة أو المحافظ المدعومة. توسع المنتج من Pay-at-Table إلى Order-and-Pay والقوائم الرقمية وروابط الدفع وSoftPOS وبرامج المكافآت والهدايا والتحليلات والمراجعات والإيصالات الرقمية. تدعم الشراكات مع Foodics وMashreq NEOPAY وMastercard تكامل Qlub مع أنظمة المطاعم والبنية المالية بدل محاولة استبدال كل طبقاتها.",
+      "verification_status": "verified_current_product_capability",
+      "confidence": "high",
+      "claim_type": "current_product_solution",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت صفحات المنتج الرسمية كامل مسار QR والدفع والطلب والقوائم وروابط الدفع وSoftPOS والولاء والتكاملات.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-04",
+        "SRC-05",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Pay-at-Table Solution | Scan, Split, Tip, Pay",
+          "publisher": "Qlub",
+          "source_type": "official_current_product_page",
+          "url": "https://qlub.io/ae/en/pay-at-table",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "Pay-at-Table والتقسيم والإكرامية والدفع"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Order-and-Pay Solution for Restaurants",
+          "publisher": "Qlub",
+          "source_type": "official_current_product_page",
+          "url": "https://qlub.io/ae/en/order-and-pay",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "Order-and-Pay"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Payment Links, Simplified",
+          "publisher": "Qlub",
+          "source_type": "official_current_product_page",
+          "url": "https://qlub.io/ae/en/payment-link",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "Payment Links"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "qlub SoftPOS Terminal Solution for Restaurants",
+          "publisher": "Qlub",
+          "source_type": "official_current_product_page",
+          "url": "https://qlub.io/ae/en/softpos-terminal",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "SoftPOS"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "qlub+ | Restaurant Rewards Program & Dining Deals in UAE",
+          "publisher": "Qlub",
+          "source_type": "official_current_pricing_and_rewards_page",
+          "url": "https://qlub.io/ae/en/qlub-plus",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "qlub+"
+        }
+      ],
+      "limitations": "توافر كل ميزة وطريقة دفع يختلف حسب السوق والعقد والتكامل."
+    },
+    "$.market_data.target_audience": {
+      "field_value": "المطاعم والمقاهي والفنادق والمنتجعات ومشغلو الضيافة الذين يريدون تسريع الدفع والطلب داخل الموقع، ولا سيما المنشآت ذات كثافة الطاولات أو الفروع والحاجة إلى تكامل POS. يستفيد الضيف دون تطبيق من عرض الفاتورة وتقسيمها والدفع والإكرامية، بينما تستهدف qlub+ المستهلكين الباحثين عن مكافآت وعروض داخل شبكة المطاعم المشاركة.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "target_customer_segments",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الموقع والمنتجات تستهدف المطاعم والفنادق والضيافة والضيوف، مع طبقة مكافآت للمستهلك.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "qlub | Contactless Payments & Digital Menus for Restaurants",
+          "publisher": "Qlub",
+          "source_type": "official_current_company_and_product_page",
+          "url": "https://qlub.io/ae/en",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "المطاعم والفنادق ومنشآت الضيافة"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Order-and-Pay Solution for Restaurants",
+          "publisher": "Qlub",
+          "source_type": "official_current_product_page",
+          "url": "https://qlub.io/ae/en/order-and-pay",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "الطلب والدفع داخل تجارب متعددة"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "qlub+ | Restaurant Rewards Program & Dining Deals in UAE",
+          "publisher": "Qlub",
+          "source_type": "official_current_pricing_and_rewards_page",
+          "url": "https://qlub.io/ae/en/qlub-plus",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "المستهلكون والمطاعم في qlub+"
+        }
+      ],
+      "limitations": "لا تنشر الشركة توزيع الإيراد أو العملاء حسب الشريحة."
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر Qlub رقمًا رسميًا موحدًا لسوقها القابل للاستهداف، كما أن جمع أسواق معالجة المدفوعات وتقنيات المطاعم والقوائم الرقمية والولاء قد يؤدي إلى ازدواج القياس. الدليل التشغيلي المباشر هو استخدام أكثر من 3,000 مطعم وفندق ومنشأة ضيافة وفق الموقع الرسمي، مع انتشار معلن تاريخيًا في ست دول و2,000 مطعم في مارس 2023، ثم توسع الشركة إلى منتجات وأسواق إضافية. هذه المقاييس لا تساوي حصة سوقية أو عدد عقود مدفوعة.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "medium_high",
+      "claim_type": "market_scope_without_synthetic_tam",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الانتشار والمنتجات يثبتان تقاطع Qlub مع المدفوعات وتقنيات الضيافة، لكن لا يوجد TAM رسمي واحد صالح للجمع.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-13",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "qlub | Contactless Payments & Digital Menus for Restaurants",
+          "publisher": "Qlub",
+          "source_type": "official_current_company_and_product_page",
+          "url": "https://qlub.io/ae/en",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "3,000+ منشأة ومحفظة منتجات واسعة"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "UAE’s fintech Qlub raises $25 million",
+          "publisher": "Wamda",
+          "source_type": "funding_news_and_company_statement",
+          "url": "https://www.wamda.com/2023/03/uae-fintech-qlub-raises-25-million",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "2,000 مطعم عبر ست دول في 2023"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Mastercard partners with Qlub to transform digital payments in the GCC hospitality sector",
+          "publisher": "Mastercard",
+          "source_type": "official_strategic_partnership_and_minority_investment_announcement",
+          "url": "https://www.mastercard.com/news/eemea/en/newsroom/press-releases/en/2023/september/mastercard-partners-with-qlub-to-transform-digital-payments-in-the-gcc-hospitality-sector/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "توسع البنية المالية عبر دول الخليج"
+        }
+      ],
+      "limitations": "لم يُستخدم تقدير سوق خارجي لتجنب جمع أسواق متداخلة."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا تنشر Qlub معدل نمو حاليًا للإيراد أو عدد التجار المدفوعين. تاريخيًا أعلنت في مارس 2023 خدمة أكثر من 2,000 مطعم عبر ست دول، ويعرض الموقع الحالي 3,000+ منشأة ضيافة. في يوليو 2025 جمعت 30 مليون دولار وذكرت أن قيمة المعاملات الإجمالية تضاعفت ثلاث مرات خلال العام السابق في مواد التوظيف، ثم دخلت في سبتمبر 2025 تعاونًا واستثمار أقلية من Mastercard لمعالجة معاملات card-not-present عبر بوابتها في أسواق خليجية. صفحات وظائف 2026 تشير إلى تضاعف عدد الموظفين خلال عام والتوسع إلى أسواق جديدة، لكنها مؤشرات شركة غير مدققة ولا تسمح بحساب CAGR مالي.",
+      "verification_status": "verified_historical_operating_metric",
+      "confidence": "medium",
+      "claim_type": "historical_growth_indicators",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توجد نقاط تشغيل وتمويل تاريخية ومطالبات GMV وتوظيف، لكن لا يوجد معدل نمو مالي حالي قابل للتحقق.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-13",
+        "SRC-01",
+        "SRC-07",
+        "SRC-20"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "UAE’s fintech Qlub raises $25 million",
+          "publisher": "Wamda",
+          "source_type": "funding_news_and_company_statement",
+          "url": "https://www.wamda.com/2023/03/uae-fintech-qlub-raises-25-million",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "2,000+ مطعم في ست دول في مارس 2023"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "qlub | Contactless Payments & Digital Menus for Restaurants",
+          "publisher": "Qlub",
+          "source_type": "official_current_company_and_product_page",
+          "url": "https://qlub.io/ae/en",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "3,000+ منشأة حاليًا وفق الموقع"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Your journey begins here — qlub Careers",
+          "publisher": "Qlub",
+          "source_type": "official_company_careers_and_funding_timeline",
+          "url": "https://careers.qlub.io/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "GMV وصل إلى ثلاثة أضعاف وفق الشركة"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Qlub business development role in Amman",
+          "publisher": "Point Nine Job Board",
+          "source_type": "investor_hosted_current_job_posting",
+          "url": "https://jobs.pointnine.com/companies/qlub/jobs/85778743-business-development-manager-amman",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "تضاعف الموظفين والتوسع إلى الأردن وفق إعلان 2026"
+        }
+      ],
+      "limitations": "تعريف المنشأة وGMV والموظفين غير مدقق، ولا يكفي لحساب CAGR للإيراد."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "تظهر الرحلة التمويلية المعلنة جولة بقيمة 17 مليون دولار في يناير 2022، ثم 25 مليون دولار في مارس 2023، ثم 30 مليون دولار في يوليو 2025 بقيادة مشتركة من Shorooq وCherry Ventures وبمشاركة e& ومبادلة وLegend Capital؛ وبذلك تبلغ مبالغ الجولات المعلنة 72 مليون دولار. أعلنت Mastercard في سبتمبر 2025 استثمار حصة أقلية إضافيًا من دون كشف المبلغ أو توضيح ما إذا كان جزءًا من إجمالي 72 مليونًا، لذلك لا يُضاف رقم تقديري. من المستثمرين المعلنين أيضًا Point Nine وSTV وRaed Ventures وHeartcore وFinTech Collective.",
+      "verification_status": "verified_historical_financing",
+      "confidence": "high",
+      "claim_type": "funding_rounds_and_total",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الجولات المنشورة 17 و25 و30 مليون دولار تجمع إلى 72 مليونًا، مع استثمار Mastercard الأقلية غير المعلن القيمة.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-14",
+        "SRC-13",
+        "SRC-08",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-14",
+          "title": "Qlub emerges with $17M seed round from Cherry and Point Nine",
+          "publisher": "TechCrunch",
+          "source_type": "independent_funding_report",
+          "url": "https://techcrunch.com/2022/01/31/sunday-competitor-qlub-emerges-with-17m-seed-round-from-cherry-and-point-nine/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "جولة 17 مليون دولار في 2022"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "UAE’s fintech Qlub raises $25 million",
+          "publisher": "Wamda",
+          "source_type": "funding_news_and_company_statement",
+          "url": "https://www.wamda.com/2023/03/uae-fintech-qlub-raises-25-million",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "جولة 25 مليون دولار في 2023"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Qlub announces $30 million funding round",
+          "publisher": "Qlub",
+          "source_type": "official_company_funding_announcement",
+          "url": "https://www.linkedin.com/posts/qlub-pay_wealth-fund-mubadala-backs-dubai-based-dining-activity-7353013838608281600-fc6s",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "جولة 30 مليون دولار وإجمالي 72 مليونًا في 2025"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Mastercard partners with Qlub to transform digital payments in the GCC hospitality sector",
+          "publisher": "Mastercard",
+          "source_type": "official_strategic_partnership_and_minority_investment_announcement",
+          "url": "https://www.mastercard.com/news/eemea/en/newsroom/press-releases/en/2023/september/mastercard-partners-with-qlub-to-transform-digital-payments-in-the-gcc-hospitality-sector/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "استثمار Mastercard الأقلية دون مبلغ معلن"
+        }
+      ],
+      "limitations": "لا يُضاف استثمار Mastercard إلى الإجمالي دون معرفة المبلغ وما إذا كان داخل جولة سابقة."
+    },
+    "$.financials.valuation": {
+      "field_value": "غير معلن. لم تكشف Qlub أو المستثمرون نسبة الملكية أو تقييم pre-money أو post-money في الجولات المنشورة، ولا توجد شركة عامة أو سعر سهم أو تقارير SEC دورية تسمح بتحديث القيمة. عبارة «عشرات الملايين» في الملف الأصلي غير مدعومة وقد تكون أقل من إجمالي التمويل المعلن نفسه؛ لذلك حُذفت بالكامل.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "valuation_non_disclosure",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "إعلانات الجولات لا تنشر نسبة ملكية أو تقييم pre-money أو post-money.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-14",
+        "SRC-13",
+        "SRC-08",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-14",
+          "title": "Qlub emerges with $17M seed round from Cherry and Point Nine",
+          "publisher": "TechCrunch",
+          "source_type": "independent_funding_report",
+          "url": "https://techcrunch.com/2022/01/31/sunday-competitor-qlub-emerges-with-17m-seed-round-from-cherry-and-point-nine/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "مبلغ جولة 2022 دون تقييم"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "UAE’s fintech Qlub raises $25 million",
+          "publisher": "Wamda",
+          "source_type": "funding_news_and_company_statement",
+          "url": "https://www.wamda.com/2023/03/uae-fintech-qlub-raises-25-million",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "مبلغ جولة 2023 دون تقييم"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Qlub announces $30 million funding round",
+          "publisher": "Qlub",
+          "source_type": "official_company_funding_announcement",
+          "url": "https://www.linkedin.com/posts/qlub-pay_wealth-fund-mubadala-backs-dubai-based-dining-activity-7353013838608281600-fc6s",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "مبلغ جولة 2025 دون تقييم"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Mastercard partners with Qlub to transform digital payments in the GCC hospitality sector",
+          "publisher": "Mastercard",
+          "source_type": "official_strategic_partnership_and_minority_investment_announcement",
+          "url": "https://www.mastercard.com/news/eemea/en/newsroom/press-releases/en/2023/september/mastercard-partners-with-qlub-to-transform-digital-payments-in-the-gcc-hospitality-sector/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "استثمار أقلية غير معلن القيمة"
+        }
+      ],
+      "limitations": "لا يمكن اشتقاق التقييم من مبلغ التمويل وحده."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "رسوم تعاقدية أو اقتصاديات معالجة مدفوعات مرتبطة بحلول Pay-at-Table وSoftPOS وروابط الدفع وOrder-and-Pay؛ لا تنشر الشركة التسعير أو معدل الاقتطاع أو صافي الإيراد بعد رسوم الشبكات والمستحوذين",
+        "عقود برمجيات وخدمات للمطاعم والفنادق تشمل التكامل مع POS والتقارير والتحليلات والدعم؛ لا توجد قائمة أسعار عامة تسمح بحساب ARR",
+        "اشتراك qlub+ للمستهلك في الإمارات بسعر قائمة معلن 15 درهمًا شهريًا مع إمكانية الإلغاء؛ السعر لا يثبت عدد المشتركين أو الإيراد المحقق",
+        "رسوم أداء من المطاعم المشاركة في qlub+ عند جلب ضيوف وفق الوصف الرسمي «pay only when we bring you guests»؛ لم تُنشر النسبة أو شروط الاعتراف بالإيراد",
+        "منتجات إضافية مثل القوائم الرقمية وروابط الدفع وSoftPOS وبطاقات الهدايا وبرامج المكافآت قد تولد رسوم إعداد أو اشتراك أو معالجة بحسب العقد، لكن المزيج المالي غير مفصح عنه",
+        "الإكرامية قيمة يدفعها الضيف للموظفين أو المطعم؛ لم يُعثر على مصدر رسمي يثبت أن Qlub تقتطع نسبة منها، لذلك أزيل هذا الادعاء"
+      ],
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "medium_high",
+      "claim_type": "revenue_streams_without_take_rate",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المنتجات والتسعير الاستهلاكي ونموذج الأداء يثبتان مسارات اقتصادية محتملة، لكن الشركة لا تكشف معدل الاقتطاع أو مساهمة كل منتج.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-02",
+        "SRC-04",
+        "SRC-05",
+        "SRC-06",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Pay-at-Table Solution | Scan, Split, Tip, Pay",
+          "publisher": "Qlub",
+          "source_type": "official_current_product_page",
+          "url": "https://qlub.io/ae/en/pay-at-table",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "منتج Pay-at-Table"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Payment Links, Simplified",
+          "publisher": "Qlub",
+          "source_type": "official_current_product_page",
+          "url": "https://qlub.io/ae/en/payment-link",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "روابط الدفع"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "qlub SoftPOS Terminal Solution for Restaurants",
+          "publisher": "Qlub",
+          "source_type": "official_current_product_page",
+          "url": "https://qlub.io/ae/en/softpos-terminal",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "SoftPOS"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "qlub+ | Restaurant Rewards Program & Dining Deals in UAE",
+          "publisher": "Qlub",
+          "source_type": "official_current_pricing_and_rewards_page",
+          "url": "https://qlub.io/ae/en/qlub-plus",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "اشتراك qlub+ ونموذج الأداء"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Mastercard partners with Qlub to transform digital payments in the GCC hospitality sector",
+          "publisher": "Mastercard",
+          "source_type": "official_strategic_partnership_and_minority_investment_announcement",
+          "url": "https://www.mastercard.com/news/eemea/en/newsroom/press-releases/en/2023/september/mastercard-partners-with-qlub-to-transform-digital-payments-in-the-gcc-hospitality-sector/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "معالجة المدفوعات عبر Mastercard Gateway"
+        }
+      ],
+      "limitations": "لا يوجد مصدر رسمي يثبت اقتطاعًا من الإكراميات أو رسوم إعداد محددة."
+    },
+    "$.tools": {
+      "field_value": [
+        "Pay-at-Table عبر QR دون تنزيل تطبيق أو تسجيل للدفع الأساسي",
+        "استرجاع الفاتورة من نظام نقاط البيع وتحديث حالة الدفع",
+        "تقسيم الفاتورة بالتساوي أو حسب الأصناف أو بمبلغ مخصص",
+        "إضافة الإكرامية والدفع بالبطاقات والمحافظ المدعومة مثل Apple Pay وGoogle Pay بحسب السوق",
+        "Order-and-Pay لتصفح القائمة وتخصيص الطلب وإرساله والدفع من الهاتف",
+        "قوائم رقمية تُحدّث لحظيًا وتدعم الأسعار والمخزون والمعدلات",
+        "Payment Links للحجوزات والفعاليات والتموين والطلبات المسبقة مع تتبع حالة العملية",
+        "SoftPOS لقبول المدفوعات اللاتلامسية بصورة مدمجة مع POS أو مستقلة",
+        "qlub+ للمكافآت والعروض والاشتراك الاستهلاكي في الإمارات",
+        "بطاقات هدايا رقمية مرتبطة بالمطعم وآلية استرداد داخل تجربة الدفع",
+        "تحليلات تشغيلية وإشعارات دفع ومراجعات Google وتسوية ومحاسبة آلية وفق وصف المنتج",
+        "تكاملات POS وشراكة Foodics لتجربة الدفع الذاتي على الطاولة",
+        "تكامل Qlub مع محطات Mashreq NEOPAY داخل منافذ الضيافة الإماراتية",
+        "Mastercard Gateway لمعالجة معاملات card-not-present في الإمارات والسعودية وقطر والكويت والبحرين وفق تعاون 2025",
+        "شهادة ISO/IEC 27001:2022 لنظام إدارة أمن المعلومات ضمن البيئات المدارة لـQlub",
+        "كيانات وتشغيل محلي معلن، منها Fast Technology Services FZCO في الإمارات وEasy Delivery LLC في السعودية",
+        "لا توجد مصادر رسمية كافية لتأكيد أن AWS أو React أو Next.js تمثل الحزمة الداخلية الحالية؛ لذلك لم تُعرض كتقنيات مؤكدة"
+      ],
+      "verification_status": "verified_current_product_capability",
+      "confidence": "high",
+      "claim_type": "official_product_capabilities_and_partnerships",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "القائمة تستبدل حزمة تقنية داخلية غير موثقة بقدرات منتجات وشراكات وأمن معلنة رسميًا.",
+      "source_count": 8,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03",
+        "SRC-04",
+        "SRC-05",
+        "SRC-09",
+        "SRC-10",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "qlub | Contactless Payments & Digital Menus for Restaurants",
+          "publisher": "Qlub",
+          "source_type": "official_current_company_and_product_page",
+          "url": "https://qlub.io/ae/en",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "محفظة المنتج وشهادة ISO"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Pay-at-Table Solution | Scan, Split, Tip, Pay",
+          "publisher": "Qlub",
+          "source_type": "official_current_product_page",
+          "url": "https://qlub.io/ae/en/pay-at-table",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "Pay-at-Table"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Order-and-Pay Solution for Restaurants",
+          "publisher": "Qlub",
+          "source_type": "official_current_product_page",
+          "url": "https://qlub.io/ae/en/order-and-pay",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "Order-and-Pay"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Payment Links, Simplified",
+          "publisher": "Qlub",
+          "source_type": "official_current_product_page",
+          "url": "https://qlub.io/ae/en/payment-link",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "Payment Links"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "qlub SoftPOS Terminal Solution for Restaurants",
+          "publisher": "Qlub",
+          "source_type": "official_current_product_page",
+          "url": "https://qlub.io/ae/en/softpos-terminal",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "SoftPOS"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Mastercard partners with Qlub to transform digital payments in the GCC hospitality sector",
+          "publisher": "Mastercard",
+          "source_type": "official_strategic_partnership_and_minority_investment_announcement",
+          "url": "https://www.mastercard.com/news/eemea/en/newsroom/press-releases/en/2023/september/mastercard-partners-with-qlub-to-transform-digital-payments-in-the-gcc-hospitality-sector/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "Mastercard Gateway"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Mashreq NEOPAY Partners with UAE Fintech Start-up Qlub",
+          "publisher": "Mashreq",
+          "source_type": "official_bank_partnership_announcement",
+          "url": "https://www.mashreq.com/en/uae/news/2024/october/mashreq-neopay-partners-qlub/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "NEOPAY"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "FOODICS Integrates With Qlub to Bring Fastest Table Self-Checkout Experience",
+          "publisher": "Foodics",
+          "source_type": "official_pos_partner_announcement",
+          "url": "https://www.foodics.com/press/foodics-partners-with-qlub-to-bring-fastest-table-self-checkout-experience-to-its-dine-in-restaurants/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official product, company, funding, partnership, investor, or case-study section",
+          "supports": "Foodics"
+        }
+      ],
+      "limitations": "لا توجد إفصاحات رسمية كافية عن البنية البرمجية الداخلية الحالية."
+    }
+  }
 }

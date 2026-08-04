@@ -20,6 +20,14 @@ import SmartBeginnerPro from '../../../features/easy-mode/SmartBeginnerPro';
 import { Badge } from '../../ui/Badge';
 import { Button } from '../../ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../ui/Card';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '../../ui/dialog';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../../ui/table';
 import { IdeaCreation, CreationMode } from './IdeaCreation';
 import { ExampleViewer } from './ExampleViewer';
@@ -318,12 +326,6 @@ export const NewPlan: React.FC<{
   const [hasStarted, setHasStarted] = useState(initialMode === 'selection');
   const [isViewingExample, setIsViewingExample] = useState(false);
 
-  useEffect(() => {
-    setMode(initialMode);
-    setHasStarted(initialMode === 'selection');
-    setIsViewingExample(false);
-  }, [initialMode]);
-
   const isIntroMode = mode === 'family' || mode === 'easy' || mode === 'mit24' || mode === 'bmc' || mode === 'lean';
 
   if (isViewingExample && isIntroMode) {
@@ -519,6 +521,9 @@ function ModeProjectsSection({ mode }: { mode: IntroMode }) {
   const { user } = useAuth();
   const [projectsList, setProjectsList] = useState<SectionProject[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [pendingDeleteProject, setPendingDeleteProject] = useState<SectionProject | null>(null);
+  const [pendingShareProject, setPendingShareProject] = useState<SectionProject | null>(null);
+  const [notice, setNotice] = useState<{ title: string; description: string } | null>(null);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -558,8 +563,16 @@ function ModeProjectsSection({ mode }: { mode: IntroMode }) {
     fetchProjects();
   }, [mode, user]);
 
-  const handleDelete = async (id: string, name: string) => {
-    if (window.confirm(`هل أنت متأكد من رغبتك في حذف مشروع "${name}"؟`)) {
+  const handleDelete = (project: SectionProject) => {
+    setPendingDeleteProject(project);
+  };
+
+  const confirmDelete = async () => {
+    if (!pendingDeleteProject) return;
+
+    const { id } = pendingDeleteProject;
+
+    try {
       if (!id.startsWith('example')) {
         const {
           data: { user },
@@ -571,55 +584,72 @@ function ModeProjectsSection({ mode }: { mode: IntroMode }) {
           .eq('id', id)
           .eq('user_id', user?.id ?? '');
 
-        if (error) {
-          console.error('Error deleting project:', error);
-          alert('حدث خطأ أثناء حذف المشروع.');
-          return;
-        }
+        if (error) throw error;
       }
 
       setProjectsList((prev) => prev.filter((p) => p.id !== id));
       SECTION_PROJECTS[mode] = SECTION_PROJECTS[mode].filter((p) => p.id !== id);
+      setPendingDeleteProject(null);
+    } catch (err) {
+      console.error('Error deleting project:', err);
+      setNotice({
+        title: 'تعذر حذف المشروع',
+        description: 'حدث خطأ أثناء حذف المشروع. حاول مرة أخرى بعد لحظات.',
+      });
     }
   };
 
-  const handleShare = async (name: string, id: string) => {
+  const handleShare = (project: SectionProject) => {
+    if (project.id.startsWith('example')) {
+      setNotice({
+        title: 'لا يمكن مشاركة المثال التجريبي',
+        description: 'أنشئ مشروعاً حقيقياً أولاً حتى تتمكن من إنشاء رابط مشاركة عام.',
+      });
+      return;
+    }
+
+    setPendingShareProject(project);
+  };
+
+  const confirmShare = async () => {
+    if (!pendingShareProject) return;
+
     try {
-      if (id.startsWith('example')) {
-        alert('لا يمكن مشاركة المشاريع التجريبية.');
-        return;
+      const response = await fetch('/api/projects/publish', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ projectId: pendingShareProject.id, isPublic: true }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to publish project');
       }
-      
-      const makePublic = window.confirm(`هل ترغب في إنشاء رابط عام (Public Link) لمشروع "${name}" لتمكين الآخرين من مشاهدته؟`);
-      if (makePublic) {
-        const response = await fetch('/api/projects/publish', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ projectId: id, isPublic: true }),
+
+      const result = (await response.json()) as { shareToken?: string | null };
+      const shareId = result.shareToken || pendingShareProject.id;
+      const shareUrl = `${window.location.origin}/share/${shareId}`;
+
+      if (navigator.share) {
+        await navigator.share({
+          title: pendingShareProject.name,
+          text: `مشاهدة مشروع: ${pendingShareProject.name}`,
+          url: shareUrl,
         });
-
-        if (!response.ok) {
-          throw new Error('Failed to publish project');
-        }
-
-        const result = (await response.json()) as { shareToken?: string | null };
-        const shareId = result.shareToken || id;
-        
-        const shareUrl = `${window.location.origin}/share/${shareId}`;
-        if (navigator.share) {
-          navigator.share({
-            title: name,
-            text: `مشاهدة مشروع: ${name}`,
-            url: shareUrl,
-          }).catch(console.error);
-        } else {
-          navigator.clipboard.writeText(shareUrl);
-          alert(`تم تفعيل المشاركة بنجاح! رابط المشروع متاح الآن في الحافظة.`);
-        }
+      } else {
+        await navigator.clipboard.writeText(shareUrl);
       }
+
+      setPendingShareProject(null);
+      setNotice({
+        title: 'تم تجهيز رابط المشاركة',
+        description: 'تم تفعيل الرابط العام ونسخه إلى الحافظة عند توفر صلاحية النسخ.',
+      });
     } catch (err) {
       console.error('Error sharing:', err);
-      alert('حدث خطأ أثناء إعداد رابط المشاركة.');
+      setNotice({
+        title: 'تعذر إعداد رابط المشاركة',
+        description: 'حدث خطأ أثناء إنشاء الرابط العام. حاول مرة أخرى بعد لحظات.',
+      });
     }
   };
 
@@ -638,6 +668,7 @@ function ModeProjectsSection({ mode }: { mode: IntroMode }) {
   const Icon = intro.icon;
 
   return (
+    <>
     <Card className="shadow-none">
       <CardHeader className="gap-1 p-4 sm:p-6">
         <CardTitle className="text-lg">{intro.projectLabel}</CardTitle>
@@ -689,7 +720,7 @@ function ModeProjectsSection({ mode }: { mode: IntroMode }) {
                   <Button
                     variant="ghost"
                     size="icon-sm"
-                    onClick={() => handleShare(project.name, project.id)}
+                    onClick={() => handleShare(project)}
                     title="مشاركة"
                     className="text-muted-foreground hover:text-primary"
                   >
@@ -698,7 +729,7 @@ function ModeProjectsSection({ mode }: { mode: IntroMode }) {
                   <Button
                     variant="ghost"
                     size="icon-sm"
-                    onClick={() => handleDelete(project.id, project.name)}
+                    onClick={() => handleDelete(project)}
                     title="حذف"
                     className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
                   >
@@ -718,6 +749,84 @@ function ModeProjectsSection({ mode }: { mode: IntroMode }) {
         </div>
       </CardContent>
     </Card>
+    <ProjectActionDialog
+      open={Boolean(pendingDeleteProject)}
+      title="حذف المشروع"
+      description={`سيتم حذف مشروع "${pendingDeleteProject?.name ?? ''}" من قائمتك.`}
+      confirmLabel="حذف المشروع"
+      confirmVariant="destructive"
+      onClose={() => setPendingDeleteProject(null)}
+      onConfirm={confirmDelete}
+    />
+    <ProjectActionDialog
+      open={Boolean(pendingShareProject)}
+      title="إنشاء رابط مشاركة"
+      description={`سيصبح مشروع "${pendingShareProject?.name ?? ''}" متاحاً لكل من لديه الرابط.`}
+      confirmLabel="إنشاء الرابط"
+      onClose={() => setPendingShareProject(null)}
+      onConfirm={confirmShare}
+    />
+    <NoticeDialog notice={notice} onClose={() => setNotice(null)} />
+    </>
+  );
+}
+
+function ProjectActionDialog({
+  open,
+  title,
+  description,
+  confirmLabel,
+  confirmVariant = 'default',
+  onClose,
+  onConfirm,
+}: {
+  open: boolean;
+  title: string;
+  description: string;
+  confirmLabel: string;
+  confirmVariant?: React.ComponentProps<typeof Button>['variant'];
+  onClose: () => void;
+  onConfirm: () => void;
+}) {
+  return (
+    <Dialog open={open} onOpenChange={(nextOpen) => !nextOpen && onClose()}>
+      <DialogContent className="sm:max-w-[440px]" dir="rtl">
+        <DialogHeader className="text-right">
+          <DialogTitle>{title}</DialogTitle>
+          <DialogDescription>{description}</DialogDescription>
+        </DialogHeader>
+        <DialogFooter>
+          <Button variant={confirmVariant} onClick={onConfirm}>
+            {confirmLabel}
+          </Button>
+          <Button variant="outline" onClick={onClose}>
+            إلغاء
+          </Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+  );
+}
+
+function NoticeDialog({
+  notice,
+  onClose,
+}: {
+  notice: { title: string; description: string } | null;
+  onClose: () => void;
+}) {
+  return (
+    <Dialog open={Boolean(notice)} onOpenChange={(nextOpen) => !nextOpen && onClose()}>
+      <DialogContent className="sm:max-w-[420px]" dir="rtl">
+        <DialogHeader className="text-right">
+          <DialogTitle>{notice?.title}</DialogTitle>
+          <DialogDescription>{notice?.description}</DialogDescription>
+        </DialogHeader>
+        <DialogFooter>
+          <Button onClick={onClose}>حسناً</Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
   );
 }
 
@@ -728,8 +837,8 @@ function ProjectRow({
   onOpen,
 }: {
   project: SectionProject;
-  onDelete: (id: string, name: string) => void;
-  onShare: (name: string, id: string) => void;
+  onDelete: (project: SectionProject) => void;
+  onShare: (project: SectionProject) => void;
   onOpen: () => void;
 }) {
   return (
@@ -754,7 +863,7 @@ function ProjectRow({
           <Button
             variant="ghost"
             size="icon-sm"
-            onClick={() => onShare(project.name, project.id)}
+            onClick={() => onShare(project)}
             title="مشاركة"
             className="text-muted-foreground hover:text-primary"
           >
@@ -763,7 +872,7 @@ function ProjectRow({
           <Button
             variant="ghost"
             size="icon-sm"
-            onClick={() => onDelete(project.id, project.name)}
+            onClick={() => onDelete(project)}
             title="حذف"
             className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
           >

@@ -4,95 +4,2347 @@
   "name": "ميدجورني (Midjourney)",
   "domain": "midjourney.com",
   "website": "https://midjourney.com",
-  "category": "AI / توليد الصور المتقدم",
-  "headline": "مختبر الذكاء الاصطناعي المستقل الذي أحدث ثورة في الفن البصري",
-  "summary": "منصة توليد صور بالذكاء الاصطناعي بناءً على الوصف النصي، تعتبر الأفضل عالمياً في جودة التفاصيل البصرية والفنية، وتعمل بشكل فريد عبر تطبيق Discord.",
+  "category": "AI Creative Tools / توليد الصور والفيديو والبحث البصري",
+  "headline": "من بوت داخل Discord إلى مختبر صور وفيديو يطلق V8.2 ويستحوذ على Co–Star: كيف بنت Midjourney توزيعًا ممولًا من المجتمع",
+  "summary": "Midjourney مختبر بحث ومنتج إبداعي ممول ذاتيًا يبيع اشتراكات قائمة على وقت GPU لتوليد الصور والفيديو عبر موقعه وDiscord. لم تعد الخدمة تعمل حصريًا عبر Discord؛ أصبحت منصة الويب مسارًا كاملًا للإنشاء والتحرير والتنظيم والتخصيص. وحتى 3 أغسطس 2026 كان أحدث نموذج صور معلن هو V8.2، مع نموذج Image-to-Video ومشروعات أوسع تشمل الطب والعتاد وأول استحواذ على Co–Star.",
   "directory_snapshot": {
-    "monthly_revenue": "$16M+ /mo",
-    "monthly_traffic": "30M+ /mo",
-    "revenue_per_visitor": "عالي جداً",
+    "monthly_revenue": "غير مُفصح عنه رسميًا. ذكرت The Information أن الشركة كانت على مسار تجاوز 200 مليون دولار من الإيراد في 2023، وهو تقدير صحفي تاريخي وليس ARR أو MRR حاليًا. أزيل تقدير 16 مليون دولار شهريًا، ولم يُقسم الرقم السنوي التاريخي على 12 أو يُستخدم لتقدير إيراد 2026.",
+    "monthly_traffic": "غير مُفصح عنه رسميًا، ولا يوجد رقم موثوق لزيارات midjourney.com الشهرية. تقول الشركة إن أدواتها يستخدمها ملايين الأشخاص، لكن ذلك لا يساوي زيارات الموقع أو MAU أو أعضاء Discord النشطين. أزيل رقما 30 مليون زيارة شهريًا و15 مليون مستخدم Discord بوصفهما غير مناسبين كمقياس حالي موثق.",
+    "revenue_per_visitor": "غير قابل للحساب لأن الإيراد الحالي والزيارات الرسمية غير معلنين، ولأن مستخدمي الويب وDiscord لا يمثلون زوارًا فريدين بالمفهوم نفسه.",
     "solopreneur_score": "75.0",
-    "idea_label": "توليد صور بالذكاء الاصطناعي"
+    "solopreneur_score_note": "مؤشر تحريري موروث وليس مقياسًا صادرًا عن الشركة. Midjourney ليست مشروع شخص واحد؛ الصفحات الرسمية تعرض نحو 60–70 موظفًا.",
+    "idea_label": "اشتراكات توليد الصور والفيديو القائمة على وقت GPU"
   },
   "company": {
-    "business_model": "اشتراكات شهرية/سنوية لتوليد الصور (SaaS)",
-    "customer_type": "الفنانون، المصممون، والمهتمون بالذكاء الاصطناعي (B2C & B2B)",
+    "business_model": "اشتراكات شهرية وسنوية بأربع خطط: Basic وStandard وPro وMega، مع بيع وقت Fast GPU إضافي. تتدرج القيمة حسب دقائق GPU والسرعة وRelax وStealth والفيديو وHD. توجد فوترة جماعية للمنظمات الكبيرة، لكن لا توجد إدارة مقاعد أو SSO أو عقود Enterprise قابلة للتفاوض بالشكل التقليدي. لا توجد إعلانات، وتصف الشركة نفسها بأنها ممولة من المجتمع.",
+    "customer_type": "أفراد ومصممون وفنانون وفرق إبداع وتسويق واستوديوهات وشركات. الشركات التي تتجاوز إيراداتها السنوية مليون دولار مطالبة بخطة Pro أو Mega للاستخدام التجاري وفق الوثائق.",
     "founder": "David Holz",
-    "founder_role": "مؤسس",
-    "founders_count": "1",
-    "employees": "فريق صغير جداً (حوالي 40 موظف فقط)",
-    "started": "2022",
-    "location": "سان فرانسيسكو، الولايات المتحدة",
-    "funding": "Bootstrapped بالكامل (تمويل ذاتي 100%)",
-    "profitability": "مربحة للغاية وتحقق إيرادات بمئات الملايين من الدولارات سنوياً",
-    "public_revenue_claim": "تتجاوز 200 مليون دولار كإيرادات سنوية رغم صغر حجم الفريق"
+    "founder_role": "المؤسس والقائد التنفيذي والبحثي المعلن في تحديثات الشركة",
+    "founders_count": "1 مؤسس معلن على نطاق واسع؛ لم تنشر الشركة قائمة مؤسسين قانونية تفصيلية",
+    "employees": "نحو 60 موظفًا وفق الصفحة الرئيسية، بينما تعرض نسخة رسمية بديلة نحو 70؛ لذلك النطاق الأكثر أمانًا 60–70 بدل «حوالي 40».",
+    "started": "بدأت النماذج العامة في 2022؛ توثق الوثائق أن V1 كان افتراضيًا من فبراير إلى أبريل 2022.",
+    "location": "شركة موزعة تأسست عن بُعد ولديها مكاتب معلنة في سان فرانسيسكو ولندن ونيويورك. الكيان في الشروط هو Midjourney, Inc. ويظهر عنوان DMCA في South San Francisco.",
+    "funding": "ممولة ذاتيًا ومن المجتمع؛ تعرض صفحة رسمية صفر دولار تمويل خارجي وعدم وجود مستثمرين. لا توجد جولات VC معلنة حتى أغسطس 2026.",
+    "profitability": "غير مُفصح عنها رسميًا في قوائم مالية. ذكر تقرير The Information أن الشركة كانت مربحة في 2023؛ يُعامل ذلك كتقرير تاريخي لا إثبات للربحية الحالية أو الهامش.",
+    "public_revenue_claim": "لا يوجد إفصاح مالي رسمي حالي. التقدير العام الأكثر تداولًا هو أكثر من 200 مليون دولار إيرادًا في 2023 وفق The Information، وليس حقيقة مستمرة في 2026."
   },
   "problem_and_product": [
-    "توليد الصور بالذكاء الاصطناعي (مثل DALL-E) كان يعطي نتائج باهتة ومجردة تفتقر للروح الفنية الحقيقية والإضاءة السينمائية.",
-    "بناء واجهة ويب لتوليد الصور مكلف هندسياً للمطورين الأفراد.",
-    "أطلق ديفيد المنتج كـ 'بوت' على الديسكورد (Discord Bot)، يكتب المستخدم الوصف ويحصل على لوحة فنية مبهرة بجماليات تفوق الخيال."
+    "تحويل الفكرة إلى مادة بصرية متماسكة كان يحتاج مهارات وأدوات ووقتًا، بينما كانت واجهات التوليد المبكر محدودة في التحكم والتنظيم والتكرار.",
+    "تقدم Midjourney إنشاء الصور من النص والمراجع مع Personalization وMoodboards وStyle References وEditor وHD وDraft Mode، ثم أضافت Image-to-Video.",
+    "يمكن الإنشاء على midjourney.com أو Discord؛ الويب يوفر محررًا وتنظيمًا ومجلدات وتحكمًا مرئيًا لا يتوفر كله بالصيغة نفسها داخل Discord.",
+    "تعمل الخدمة على حصص GPU، وتظل الخصوصية الكاملة مرتبطة باستخدام Stealth في Pro أو Mega وتجنب القنوات العامة."
   ],
   "origin_story": [
-    "David Holz هو أحد مؤسسي Leap Motion سابقاً. أسس Midjourney كمختبر أبحاث مستقل ممول ذاتياً.",
-    "بدأ بتجربة خوارزميات التوليد وتدريبها لتركز على 'الجمال' (Aesthetics) أكثر من التركيز على 'الواقعية المطلقة' فقط.",
-    "فتح المجال للتجربة العامة عبر خوادم ديسكورد، فانتشر كالنار في الهشيم بفضل رؤية المستخدمين لإبداعات بعضهم البعض لحظياً."
+    "أسس David Holz Midjourney كمختبر مستقل موزع وممول ذاتيًا، مع قيادة مباشرة للمشروعات والاعتماد على المجتمع في ترتيب الأولويات.",
+    "تظهر وثائق المنتج أن النماذج العامة كانت تعمل منذ فبراير 2022، وأصبح Discord قناة التوزيع والاجتماع المبكرة التي جمعت الإنشاء والمشاهدة والتغذية الراجعة.",
+    "لا يدعم مصدر رسمي صياغة أن التدريب يركز على «الجمال بدل الواقعية» كقاعدة تقنية وحيدة؛ الأدق أن الشركة تصف نفسها بأنها معروفة بالتقنيات الجمالية وتستخدم التصويت والتخصيص."
   ],
   "build_and_launch": [
-    "القرار العبقري بالعمل داخل Discord بدلاً من بناء تطبيق خاص؛ هذا وفر عليهم بناء بنية تحتية للتواصل، وجعل تجربة توليد الصور تجربة 'اجتماعية' يشاهدها الجميع.",
-    "التدريب المستمر وإصدار نسخ متتالية (V1 إلى V6) كل نسخة تمثل قفزة مرعبة في الجودة والتفاصيل الدقيقة."
+    "استخدام Discord خفّض احتكاك الإطلاق ووضع التوليد أمام مجتمع يرى أعمال الآخرين ويقدم ملاحظات فورية، لكنه لم يعد الواجهة الوحيدة.",
+    "أصبح موقع Midjourney منتجًا كاملًا للإنشاء والتحرير والتنظيم والمراجع والتخصيص، مع استمرار مزامنة الحساب والإعدادات مع Discord.",
+    "تطور المنتج من V1 في 2022 إلى V8.1 الافتراضي في يونيو 2026 ثم V8.2 في 24 يوليو 2026.",
+    "أطلقت الشركة Video V1 في يونيو 2025 بوصفه Image-to-Video، وأضافت HD وخيارات حركة وloop ضمن خارطة نحو الفيديو و3D والنماذج الآنية.",
+    "في 23 يوليو 2026 أعلنت أول استحواذ لها على Co–Star لدعم المنتج والتصميم؛ لم تعلن قيمة الصفقة."
   ],
   "costs_and_operations": [
-    "التكلفة الأعظم هي الخوادم وقوة المعالجة (GPU Compute) المطلوبة لتوليد الصور والتدريب.",
-    "تكلفة الموظفين تكاد تكون لا تُذكر مقارنة بالإيرادات الهائلة.",
-    "الاستغناء الكامل عن الدعم الفني التقليدي وفرق المبيعات."
+    "الحوسبة تكلفة تشغيل جوهرية ظاهرة في تصميم الخطط حول Fast GPU Time وRelax وTurbo واختلاف تكلفة الصور والفيديو وHD.",
+    "لا توجد بيانات عامة تسمح بالقول إن تكلفة الموظفين تكاد لا تُذكر أو بحساب الهامش الإجمالي.",
+    "تعرض الشركة فريقًا صغيرًا نسبيًا يبلغ نحو 60–70 شخصًا ويشمل البحث والبنية التحتية والمنتج والطب والعتاد.",
+    "الشركة لا تعتمد حصريًا على Discord في الدعم أو المنتج؛ لديها وثائق وموقع وفوترة بريدية وقنوات مجتمع.",
+    "تواجه مخاطر حقوقية، ومنها دعوى حقوق نشر اتحادية مرفوعة من استوديوهات كبرى؛ وجود القضية لا يثبت مسؤولية أو حكمًا نهائيًا."
   ],
   "monetization": [
-    "اشتراكات مدفوعة تتراوح بين 10 دولارات إلى 120 دولار شهرياً بناءً على ساعات المعالجة السريعة المتاحة للمستخدم والميزات الخاصة."
+    "Basic بقيمة 10 دولارات شهريًا وStandard بقيمة 30 وPro بقيمة 60 وMega بقيمة 120، مع خصم سنوي معلن 20%.",
+    "بيع وقت Fast GPU إضافي للمشتركين بعد نفاد الحصة، مع انتهاء صلاحية الساعات المشتراة بعد 60 يومًا.",
+    "تمييز الخطط عبر Relax وStealth والفيديو وHD وعدد الوظائف المتزامنة وسعة GPU.",
+    "فوترة جماعية للمنظمات التي تحتاج 50 اشتراكًا سنويًا أو أكثر من Pro أو Mega، دون إدارة مقاعد وSSO.",
+    "لا يوجد دليل رسمي على إيرادات إعلانية أو API عامة مدفوعة أو ترخيص نماذج خارجي كمسار حالي جوهري."
   ],
   "growth": [
-    "نمو فيروسي لم يسبق له مثيل بدون إنفاق أي أموال على التسويق.",
-    "تجاوز عدد مستخدمي خادم الديسكورد الخاص بهم 15 مليون مستخدم ليكون الأكبر في تاريخ المنصة."
+    "تصف الشركة أدواتها بأنها مستخدمة من ملايين الأشخاص، لكنها لا تنشر MAU أو DAU أو عدد مشتركين مدفوعين حاليًا.",
+    "تغير الفريق من نحو 40 موظفًا في تقرير 2023 إلى 60 وفق الصفحة الرئيسية، مع صفحة بديلة تعرض 70؛ هذا نمو اتجاهي لا معدل موحدًا.",
+    "توسع المنتج من الصور إلى الفيديو، ومن Discord إلى الويب، ثم إلى مشروعات طبية وعتادية واستحواذ Co–Star.",
+    "لا يوجد معدل نمو رسمي حديث للإيراد أو المشتركين أو الصور أو الفيديوهات."
   ],
+  "market_data": {
+    "target_audience": "المبدعون الأفراد والمصممون والوكالات وفرق التسويق والألعاب والإنتاج المرئي والشركات، مع اختلاف احتياجات الخصوصية والحقوق والحوسبة حسب الخطة.",
+    "market_size": "لم تنشر Midjourney تقديرًا رسميًا لـTAM أو SAM أو SOM، ولم يُستخدم حجم سوق خارجي لأن تعريفاته تخلط برامج المستهلك وواجهات API والفيديو والتصميم.",
+    "growth_rate": "غير مُفصح عنه بمقياس موحد. الإشارات المتاحة هي توسع الفريق والمنتج والإصدارات والاستحواذ، لا سلسلة مالية أو استخدام تسمح بحساب CAGR."
+  },
   "tools": [
-    "Machine Learning Models (Diffusion)",
-    "Discord API",
-    "Massive GPU Clusters (GCP/AWS)"
+    "نماذج صور مغلقة المصدر؛ أحدث إصدار معلن V8.2 بتاريخ 24 يوليو 2026",
+    "V8.1 وHD 2K وDraft Mode وRaw وPersonalization وMoodboards وStyle References",
+    "محرر الويب للقص والتحريك والتوسيع وVary Region والمراجع والتنظيم والمجلدات",
+    "Video V1 لتحويل الصور إلى فيديوهات 5 ثوانٍ مع low/high motion وloop وHD",
+    "Discord Bot وDiscord API كواجهة ومجتمع، إلى جانب تطبيق الويب الكامل",
+    "بنية GPU وإدارة مراكز بيانات وعناقيد واستدلال وتحسين kernels وفق وظائف الشركة",
+    "تصويت وترتيب صور المجتمع لبناء Personalization وتحسين الجماليات واختيار Explore",
+    "Stealth Mode للخصوصية في Pro وMega مع قيود القنوات العامة",
+    "نظام فوترة اشتراكات وشراء Fast GPU Time إضافي",
+    "لم تنشر الشركة ما يثبت اعتمادًا مركزيًا على GCP أو AWS؛ صفحات الوظائف لا تسمي مزودًا حصريًا",
+    "مشروعات معلنة خارج التوليد تشمل Midjourney Medical ومشروعات برمجية وعتادية غير مكشوفة بالكامل"
   ],
   "revenue_timeline": [
     {
       "date": "2022",
-      "amount": "انطلاق",
-      "type": "إطلاق للعامة",
-      "note": "الانتشار الأولي وتفعيل النسخة المدفوعة."
+      "amount": "غير مُفصح عنه",
+      "type": "إطلاق النماذج العامة والاشتراكات",
+      "note": "توثق الوثائق تشغيل V1 منذ فبراير 2022؛ لا يوجد إيراد رسمي منشور."
     },
     {
       "date": "2023",
-      "amount": "$200M+ ARR",
-      "type": "انفجار المبيعات",
-      "note": "إيرادات استثنائية وبناء ثروة نقدية ضخمة دون أي تدخل من مستثمرين جشعين."
+      "amount": "أكثر من 200 مليون دولار — تقدير صحفي",
+      "type": "تقدير إيراد سنوي تاريخي",
+      "note": "ذكرت The Information أن الشركة كانت على مسار تجاوز الرقم وكانت مربحة؛ ليس إفصاحًا مدققًا."
+    },
+    {
+      "date": "2025",
+      "amount": "غير مُفصح عنه",
+      "type": "إطلاق الفيديو",
+      "note": "أطلقت Video V1 دون كشف أثر مالي."
+    },
+    {
+      "date": "2026",
+      "amount": "غير مُفصح عنه",
+      "type": "V8.2 وأول استحواذ",
+      "note": "أطلقت V8.2 واستحوذت على Co–Star دون نشر قيمة الصفقة أو الإيراد أو التقييم."
     }
   ],
   "lessons": [
-    "تجربة المستخدم الاجتماعية (Social UX): رؤية المستخدمين لما يكتبه الآخرون وينتجونه في Discord خلقت تغذية راجعة جماعية وإلهاماً دفع الناس للاشتراك.",
-    "التركيز على الجودة الفنية: Midjourney اختارت أن تكون صورها 'جميلة ومذهلة' وليست مجرد إجابة دقيقة على النص، مما جذب الفنانين.",
-    "لا تحتاج لفريق ضخم ولا لمستثمرين: شركة تدر مئات الملايين تدار بأقل من 50 شخصاً، إثبات حقيقي لقوة الرافعة التكنولوجية في العصر الحديث."
+    "التوزيع داخل مجتمع جاهز يسرع التعلم، لكن نجاح Midjourney الحالي لا يُختزل في Discord بعد أن أصبح الويب منتجًا كاملًا.",
+    "صمّم التسعير حول المورد النادر: ربط الخطط بوقت GPU والسرعة وRelax وHD يجعل تكلفة الحوسبة قابلة للإدارة.",
+    "افصل بين أعضاء المجتمع والمستخدمين النشطين والمشتركين والزيارات؛ كل رقم يجيب عن سؤال مختلف ولا يثبت الإيراد.",
+    "التصويت والتخصيص يحولان المجتمع من قناة تسويق إلى حلقة بيانات، لكنهما يتطلبان قواعد خصوصية وحقوق واضحة.",
+    "التمويل الذاتي يمنح حرية، لكنه لا يحول تقدير 200 مليون دولار إلى إفصاح مالي رسمي.",
+    "التوسع من الصور إلى الفيديو والطب والعتاد والاستحواذ يرفع الفرصة ويزيد مخاطر التركيز والتنفيذ والحقوق الفكرية."
   ],
   "sources": [
     {
-      "label": "مجلة Forbes ومقابلات ديفيد هولز",
-      "url": "https://midjourney.com",
-      "coverage": "قصة الشركة وأسلوب الإدارة"
+      "id": "SRC-01",
+      "title": "Midjourney — Home and About",
+      "publisher": "Midjourney",
+      "url": "https://www.midjourney.com/home",
+      "source_type": "صفحة شركة رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "تعرض المختبر كممول من المجتمع وفريقًا من 60 شخصًا ومشروعات الصور والفيديو والطب والعتاد."
+    },
+    {
+      "id": "SRC-02",
+      "title": "Midjourney Careers",
+      "publisher": "Midjourney",
+      "url": "https://www.midjourney.com/careers",
+      "source_type": "صفحة توظيف رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "توضح التأسيس عن بُعد والمكاتب في سان فرانسيسكو ولندن ونيويورك وفرق البحث والبنية والمنتج والطب."
+    },
+    {
+      "id": "SRC-03",
+      "title": "Midjourney Careers — Self-Funded Team",
+      "publisher": "Midjourney",
+      "url": "https://xam.midjourney.com/careers",
+      "source_type": "نسخة رسمية بديلة لصفحة التوظيف",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "تعرض نحو 70 شخصًا وصفر دولار تمويل خارجي وعدم وجود مستثمرين أو إعلانات."
+    },
+    {
+      "id": "SRC-04",
+      "title": "Comparing Midjourney Plans",
+      "publisher": "Midjourney Documentation",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+      "source_type": "تسعير ووثائق رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق Basic وStandard وPro وMega وأسعار 10 و30 و60 و120 دولارًا وخصم 20% سنويًا وGPU وRelax وStealth."
+    },
+    {
+      "id": "SRC-05",
+      "title": "Midjourney Terms of Service",
+      "publisher": "Midjourney",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service",
+      "source_type": "شروط قانونية رسمية",
+      "published_at": "2026-05-27",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يعرف Midjourney, Inc. ويغطي الموقع وDiscord والصور والفيديو والحقوق والدفع والحدود."
+    },
+    {
+      "id": "SRC-06",
+      "title": "Midjourney Privacy Policy",
+      "publisher": "Midjourney",
+      "url": "https://docs.midjourney.com/docs/privacy-policy",
+      "source_type": "سياسة خصوصية رسمية",
+      "published_at": "2025-06-02",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق البيانات والمدخلات والمصادر العامة والتجارية واستخدام البيانات لتحسين الخدمات والخوارزميات."
+    },
+    {
+      "id": "SRC-07",
+      "title": "Web vs Discord",
+      "publisher": "Midjourney Documentation",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/33329300781837-Web-vs-Discord",
+      "source_type": "وثائق منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يثبت أن جميع الخطط تعمل على الويب وDiscord وأن الويب يملك محررًا وتنظيمًا وأدوات إضافية."
+    },
+    {
+      "id": "SRC-08",
+      "title": "Creating on Web",
+      "publisher": "Midjourney Documentation",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/33390732264589-Creating-on-Web",
+      "source_type": "وثائق منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق إنشاء الصور مباشرة على الموقع والمجلدات والمراجع والمحرر."
+    },
+    {
+      "id": "SRC-09",
+      "title": "Version 8.2",
+      "publisher": "Midjourney",
+      "url": "https://updates.midjourney.com/version-8-2/",
+      "source_type": "إعلان نموذج رسمي",
+      "published_at": "2026-07-24",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "أحدث إصدار معلن حتى تاريخ التحقق ويركز على الجودة والجماليات والتخصيص."
+    },
+    {
+      "id": "SRC-10",
+      "title": "V8.1 Is Now the Default Model",
+      "publisher": "Midjourney",
+      "url": "https://updates.midjourney.com/v8-1-is-now-the-default-model/",
+      "source_type": "إعلان نموذج رسمي",
+      "published_at": "2026-06-11",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق جعل V8.1 افتراضيًا وسرعة SD وHD وتحسن النص والتفاصيل."
+    },
+    {
+      "id": "SRC-11",
+      "title": "Midjourney Model Versions",
+      "publisher": "Midjourney Documentation",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
+      "source_type": "وثائق تقنية رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق V8.1 وHD 2K واستهلاك GPU والإصدارات المدعومة."
+    },
+    {
+      "id": "SRC-12",
+      "title": "Introducing Our V1 Video Model",
+      "publisher": "Midjourney",
+      "url": "https://updates.midjourney.com/introducing-our-v1-video-model/",
+      "source_type": "إعلان منتج رسمي",
+      "published_at": "2025-06-18",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق Image-to-Video وخارطة الفيديو و3D والعوالم الآنية."
+    },
+    {
+      "id": "SRC-13",
+      "title": "Midjourney Video Documentation",
+      "publisher": "Midjourney Documentation",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/37460773864589-Video",
+      "source_type": "وثائق منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق فيديوهات 5 ثوانٍ وFast وRelax وHD وخيارات الحركة وloop."
+    },
+    {
+      "id": "SRC-14",
+      "title": "Purchasing Extra Fast Time",
+      "publisher": "Midjourney Documentation",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/33570952624141-Purchasing-Extra-Fast-Time",
+      "source_type": "وثائق فوترة رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يثبت بيع ساعات Fast إضافية مع انتهاء صلاحيتها."
+    },
+    {
+      "id": "SRC-15",
+      "title": "Using Images and Videos Commercially",
+      "publisher": "Midjourney Documentation",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/27870375276557-Using-Images-Videos-Commercially",
+      "source_type": "وثائق حقوق رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق الحقوق التجارية ومتطلب Pro أو Mega للشركات فوق مليون دولار إيراد سنوي."
+    },
+    {
+      "id": "SRC-16",
+      "title": "Group Plans and Corporate Billing",
+      "publisher": "Midjourney Documentation",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/27870607078285-Group-Plans-Corporate-Billing",
+      "source_type": "وثائق فوترة شركات رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق فوترة 50 اشتراكًا سنويًا أو أكثر مع غياب إدارة المقاعد وSSO والتفاوض."
+    },
+    {
+      "id": "SRC-17",
+      "title": "Legacy Features and Model Timeline",
+      "publisher": "Midjourney Documentation",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/33329788681101-Legacy-Features",
+      "source_type": "وثائق تاريخ منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق V1 منذ فبراير 2022 وتطور الإصدارات."
+    },
+    {
+      "id": "SRC-18",
+      "title": "AI Startup Midjourney Expects $200 Million in Revenue",
+      "publisher": "The Information",
+      "url": "https://www.theinformation.com/briefings/ai-startup-midjourney-expects-200-million-in-revenue",
+      "source_type": "تقرير مالي صحفي ثانوي",
+      "published_at": "2023",
+      "accessed_at": "2026-08-03",
+      "primary": false,
+      "notes": "ذكر مسارًا لتجاوز 200 مليون دولار إيرادًا في 2023 والربحية و40 موظفًا دون تمويل خارجي."
+    },
+    {
+      "id": "SRC-19",
+      "title": "Midjourney’s First Acquisition",
+      "publisher": "Midjourney",
+      "url": "https://updates.midjourney.com/midjourneys-first-acquisition/",
+      "source_type": "إعلان استحواذ رسمي",
+      "published_at": "2026-07-23",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق الاستحواذ على Co–Star وانضمام Banu وفريقها دون كشف السعر."
+    },
+    {
+      "id": "SRC-20",
+      "title": "Stealth Mode",
+      "publisher": "Midjourney Documentation",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/32019750070669-Stealth-Mode",
+      "source_type": "وثائق خصوصية منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق Stealth في Pro وMega وحدود الخصوصية داخل قنوات Discord العامة."
+    },
+    {
+      "id": "SRC-21",
+      "title": "Complete Tasks and Community Ratings",
+      "publisher": "Midjourney Documentation",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/33390759197197-Complete-Tasks",
+      "source_type": "وثائق مجتمع رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق التصويت والتخصيص وصفحة Explore ومكافآت GPU."
+    },
+    {
+      "id": "SRC-22",
+      "title": "Draft Mode for V8.1 and Feature Previews",
+      "publisher": "Midjourney",
+      "url": "https://updates.midjourney.com/draft-mode-for-v8-1-and-new-feature-previews/",
+      "source_type": "إعلان نموذج رسمي",
+      "published_at": "2026-06-16",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق إنشاء 24 صورة في Draft Mode بتكلفة GPU أقل واختبار --preview."
+    },
+    {
+      "id": "SRC-23",
+      "title": "Disney Enterprises et al. v. Midjourney Inc.",
+      "publisher": "Justia Dockets",
+      "url": "https://dockets.justia.com/docket/california/cacdce/2%3A2025cv05275/973999",
+      "source_type": "سجل قضية قضائية عام",
+      "published_at": "2025-06-11",
+      "accessed_at": "2026-08-03",
+      "primary": false,
+      "notes": "يوثق رقم القضية وطبيعتها وأطرافها ودمج Warner Bros؛ لا يثبت المسؤولية أو النتيجة."
+    },
+    {
+      "id": "SRC-24",
+      "title": "Midjourney Terms — Commercial Rights and Content License",
+      "publisher": "Midjourney Documentation",
+      "url": "https://docs.midjourney.com/docs/terms-of-service",
+      "source_type": "شروط رسمية تاريخية تفصيلية",
+      "published_at": "2025-04-17",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق ملكية الأصول والاستثناءات والترخيص الممنوح لـMidjourney ومسؤولية حقوق الأطراف الثالثة."
     }
   ],
   "data_quality": [
-    "البيانات المالية هي تقديرات موثوقة من محللي السوق بناءً على نشاط خوادم الشركة، حيث تحتفظ الشركة بسريتها التامة."
+    "الإيراد الحالي غير معلن رسميًا.",
+    "تقدير 200 مليون دولار يعود إلى تقرير صحفي لعام 2023.",
+    "الزيارات وMAU وDAU وعدد المشتركين المدفوعين غير معلنة.",
+    "عدد الموظفين متعارض بين 60 و70 في صفحات رسمية.",
+    "صفر دولار تمويل خارجي مدعوم بصفحة رسمية.",
+    "رقما 15 مليون مستخدم Discord و30 مليون زيارة أزيلا لعدم صلاحيتهما كمقاييس حالية موثوقة.",
+    "وصف «الأفضل عالميًا» حُذف لأنه حكم تفضيلي.",
+    "V8.2 هو أحدث إصدار معلن حتى 3 أغسطس 2026.",
+    "قيمة استحواذ Co–Star غير معلنة.",
+    "الدعوى القضائية موثقة كواقعة إجرائية ولا تعني ثبوت المخالفة."
   ],
   "research_metadata": {
-    "researched_on": "2026-07-29",
-    "scope": "عام",
-    "source_method": "معلومات عامة",
+    "researched_on": "2026-08-03",
+    "scope": "Professional V2 — الشركة والمنتج والإيراد والتمويل والاستخدام والتقنيات والحقوق حتى 3 أغسطس 2026",
+    "source_method": "مصادر Midjourney الرسمية أولًا، ثم تقرير مالي صحفي وسجل قضية عام عند غياب الإفصاح الأولي",
     "private_backend_data_included": false,
-    "copyright_note": "دراسة حالة"
+    "copyright_note": "دراسة حالة تحليلية؛ لا تمثل نصيحة قانونية أو مالية",
+    "cutoff_note": "أي تحديث بعد 2026-08-03 غير مشمول."
   },
-  "id": "midjourney"
+  "id": "midjourney",
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول الجوهرية بالقيم والمصادر والقيود مع فصل الإيراد والزيارات والتمويل والمنتج.",
+    "required_fields": [
+      "field_value",
+      "verification_status",
+      "confidence",
+      "claim_type",
+      "verified_on",
+      "evidence_summary",
+      "source_ids",
+      "source_references",
+      "limitations",
+      "source_count"
+    ],
+    "confidence_scale": {
+      "مرتفعة": "مصدر رسمي مباشر أو عدم إفصاح بعد مراجعة المصادر الرسمية.",
+      "متوسطة إلى مرتفعة": "عدة مصادر مع قيد زمني أو تعارض.",
+      "متوسطة": "استنتاج أو مصدر ثانوي مع قيود.",
+      "منخفضة": "غير كافٍ لإثبات رقم مالي."
+    },
+    "metric_separation": [
+      "الإيراد الشهري",
+      "الإيراد السنوي",
+      "ARR",
+      "MRR",
+      "الربحية",
+      "التمويل",
+      "التقييم",
+      "سعر الاشتراك",
+      "وقت GPU",
+      "الزيارات",
+      "MAU",
+      "DAU",
+      "أعضاء Discord",
+      "المشتركون",
+      "مستخدمو الويب",
+      "عدد الموظفين",
+      "عدد الصور",
+      "عدد الفيديوهات",
+      "قيمة الاستحواذ",
+      "حقوق الأصول",
+      "المحتوى العام",
+      "المحتوى الخاص"
+    ]
+  },
+  "evidence_map": {
+    "$.headline": {
+      "field_value": "من بوت داخل Discord إلى مختبر صور وفيديو يطلق V8.2 ويستحوذ على Co–Star: كيف بنت Midjourney توزيعًا ممولًا من المجتمع",
+      "verification_status": "verified_editorial_synthesis",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "عنوان تحريري",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يجمع التحول إلى الويب والفيديو وV8.2 والاستحواذ والتمويل المجتمعي.",
+      "source_ids": [
+        "SRC-07",
+        "SRC-09",
+        "SRC-19",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Web vs Discord",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/33329300781837-Web-vs-Discord",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق",
+          "source_locator": "Web vs Discord",
+          "supports": "التحول إلى الويب"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Version 8.2",
+          "publisher": "Midjourney",
+          "url": "https://updates.midjourney.com/version-8-2/",
+          "source_type": "إعلان نموذج رسمي",
+          "published_at": "2026-07-24",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان",
+          "source_locator": "V8.2",
+          "supports": "الإصدار"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Midjourney’s First Acquisition",
+          "publisher": "Midjourney",
+          "url": "https://updates.midjourney.com/midjourneys-first-acquisition/",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2026-07-23",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان",
+          "source_locator": "Co–Star",
+          "supports": "الاستحواذ"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Midjourney — Home and About",
+          "publisher": "Midjourney",
+          "url": "https://www.midjourney.com/home",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Community-funded",
+          "supports": "التمويل"
+        }
+      ],
+      "limitations": "صياغة تحليلية.",
+      "source_count": 4
+    },
+    "$.summary": {
+      "field_value": "Midjourney مختبر بحث ومنتج إبداعي ممول ذاتيًا يبيع اشتراكات قائمة على وقت GPU لتوليد الصور والفيديو عبر موقعه وDiscord. لم تعد الخدمة تعمل حصريًا عبر Discord؛ أصبحت منصة الويب مسارًا كاملًا للإنشاء والتحرير والتنظيم والتخصيص. وحتى 3 أغسطس 2026 كان أحدث نموذج صور معلن هو V8.2، مع نموذج Image-to-Video ومشروعات أوسع تشمل الطب والعتاد وأول استحواذ على Co–Star.",
+      "verification_status": "verified_current_company_and_product_scope",
+      "confidence": "مرتفعة",
+      "claim_type": "ملخص شركة",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم المصادر الاشتراكات والواجهات والإصدار والفيديو والمشروعات الأوسع.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-04",
+        "SRC-07",
+        "SRC-09",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Midjourney — Home and About",
+          "publisher": "Midjourney",
+          "url": "https://www.midjourney.com/home",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "About",
+          "supports": "نطاق المختبر"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Comparing Midjourney Plans",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+          "source_type": "تسعير ووثائق رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير",
+          "source_locator": "Plans",
+          "supports": "الاشتراكات"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Web vs Discord",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/33329300781837-Web-vs-Discord",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق",
+          "source_locator": "Web/Discord",
+          "supports": "الواجهات"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Version 8.2",
+          "publisher": "Midjourney",
+          "url": "https://updates.midjourney.com/version-8-2/",
+          "source_type": "إعلان نموذج رسمي",
+          "published_at": "2026-07-24",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان",
+          "source_locator": "V8.2",
+          "supports": "الإصدار"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Introducing Our V1 Video Model",
+          "publisher": "Midjourney",
+          "url": "https://updates.midjourney.com/introducing-our-v1-video-model/",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2025-06-18",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان",
+          "source_locator": "Video",
+          "supports": "الفيديو"
+        }
+      ],
+      "limitations": "لا يتضمن أرقامًا غير معلنة.",
+      "source_count": 5
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير مُفصح عنه رسميًا. ذكرت The Information أن الشركة كانت على مسار تجاوز 200 مليون دولار من الإيراد في 2023، وهو تقدير صحفي تاريخي وليس ARR أو MRR حاليًا. أزيل تقدير 16 مليون دولار شهريًا، ولم يُقسم الرقم السنوي التاريخي على 12 أو يُستخدم لتقدير إيراد 2026.",
+      "verification_status": "verified_current_undisclosed_historical_secondary_estimate_only",
+      "confidence": "مرتفعة",
+      "claim_type": "إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد إفصاح رسمي حالي؛ 200M+ تقدير صحفي لعام 2023.",
+      "source_ids": [
+        "SRC-18",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-18",
+          "title": "AI Startup Midjourney Expects $200 Million in Revenue",
+          "publisher": "The Information",
+          "url": "https://www.theinformation.com/briefings/ai-startup-midjourney-expects-200-million-in-revenue",
+          "source_type": "تقرير مالي صحفي ثانوي",
+          "published_at": "2023",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "تقرير صحفي",
+          "source_locator": "2023 estimate",
+          "supports": "الإيراد والربحية التاريخية"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Comparing Midjourney Plans",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+          "source_type": "تسعير ووثائق رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير",
+          "source_locator": "Plans",
+          "supports": "نموذج الإيراد"
+        }
+      ],
+      "limitations": "لا توجد قوائم مدققة أو قيمة 2026.",
+      "source_count": 2
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير مُفصح عنه رسميًا، ولا يوجد رقم موثوق لزيارات midjourney.com الشهرية. تقول الشركة إن أدواتها يستخدمها ملايين الأشخاص، لكن ذلك لا يساوي زيارات الموقع أو MAU أو أعضاء Discord النشطين. أزيل رقما 30 مليون زيارة شهريًا و15 مليون مستخدم Discord بوصفهما غير مناسبين كمقياس حالي موثق.",
+      "verification_status": "verified_traffic_and_active_users_undisclosed",
+      "confidence": "مرتفعة",
+      "claim_type": "زيارات واستخدام",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تقول الشركة ملايين المستخدمين دون زيارات أو MAU/DAU.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-07",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Midjourney — Home and About",
+          "publisher": "Midjourney",
+          "url": "https://www.midjourney.com/home",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Millions",
+          "supports": "النطاق"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Web vs Discord",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/33329300781837-Web-vs-Discord",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق",
+          "source_locator": "Two interfaces",
+          "supports": "الويب وDiscord"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Creating on Web",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/33390732264589-Creating-on-Web",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق",
+          "source_locator": "Web creation",
+          "supports": "الموقع كمنتج"
+        }
+      ],
+      "limitations": "أعضاء Discord ليست بديلًا عن المستخدمين النشطين.",
+      "source_count": 3
+    },
+    "$.company.business_model": {
+      "field_value": "اشتراكات شهرية وسنوية بأربع خطط: Basic وStandard وPro وMega، مع بيع وقت Fast GPU إضافي. تتدرج القيمة حسب دقائق GPU والسرعة وRelax وStealth والفيديو وHD. توجد فوترة جماعية للمنظمات الكبيرة، لكن لا توجد إدارة مقاعد أو SSO أو عقود Enterprise قابلة للتفاوض بالشكل التقليدي. لا توجد إعلانات، وتصف الشركة نفسها بأنها ممولة من المجتمع.",
+      "verification_status": "verified_subscription_gpu_and_bulk_billing_model",
+      "confidence": "مرتفعة",
+      "claim_type": "نموذج عمل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التسعير والفوترة تثبت الاشتراكات وGPU والفوترة الجماعية.",
+      "source_ids": [
+        "SRC-04",
+        "SRC-14",
+        "SRC-16",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Comparing Midjourney Plans",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+          "source_type": "تسعير ووثائق رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير",
+          "source_locator": "Plans",
+          "supports": "الخطط"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Purchasing Extra Fast Time",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/33570952624141-Purchasing-Extra-Fast-Time",
+          "source_type": "وثائق فوترة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "فوترة",
+          "source_locator": "Extra Fast",
+          "supports": "الإضافة"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Group Plans and Corporate Billing",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/27870607078285-Group-Plans-Corporate-Billing",
+          "source_type": "وثائق فوترة شركات رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "فوترة شركات",
+          "source_locator": "Bulk billing",
+          "supports": "المنظمات"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Midjourney Terms of Service",
+          "publisher": "Midjourney",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service",
+          "source_type": "شروط قانونية رسمية",
+          "published_at": "2026-05-27",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "شروط",
+          "source_locator": "Billing",
+          "supports": "العقد"
+        }
+      ],
+      "limitations": "لا يوجد مزيج إيرادات.",
+      "source_count": 4
+    },
+    "$.company.employees": {
+      "field_value": "نحو 60 موظفًا وفق الصفحة الرئيسية، بينما تعرض نسخة رسمية بديلة نحو 70؛ لذلك النطاق الأكثر أمانًا 60–70 بدل «حوالي 40».",
+      "verification_status": "verified_official_source_conflict_range",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "موظفون",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "صفحتان رسميتان تعرضان 60 و70.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Midjourney — Home and About",
+          "publisher": "Midjourney",
+          "url": "https://www.midjourney.com/home",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Team count",
+          "supports": "60"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Midjourney Careers — Self-Funded Team",
+          "publisher": "Midjourney",
+          "url": "https://xam.midjourney.com/careers",
+          "source_type": "نسخة رسمية بديلة لصفحة التوظيف",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة بديلة",
+          "source_locator": "Team metric",
+          "supports": "70"
+        }
+      ],
+      "limitations": "قد يختلف تاريخ التحديث أو تعريف الفريق.",
+      "source_count": 2
+    },
+    "$.company.location": {
+      "field_value": "شركة موزعة تأسست عن بُعد ولديها مكاتب معلنة في سان فرانسيسكو ولندن ونيويورك. الكيان في الشروط هو Midjourney, Inc. ويظهر عنوان DMCA في South San Francisco.",
+      "verification_status": "verified_distributed_company_and_offices",
+      "confidence": "مرتفعة",
+      "claim_type": "موقع وكيان",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المصادر الشركة الموزعة والمكاتب والكيان والعنوان.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-05",
+        "SRC-24"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Midjourney Careers",
+          "publisher": "Midjourney",
+          "url": "https://www.midjourney.com/careers",
+          "source_type": "صفحة توظيف رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "توظيف",
+          "source_locator": "How we work",
+          "supports": "المكاتب"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Midjourney Terms of Service",
+          "publisher": "Midjourney",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service",
+          "source_type": "شروط قانونية رسمية",
+          "published_at": "2026-05-27",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "شروط",
+          "source_locator": "Entity",
+          "supports": "الكيان"
+        },
+        {
+          "source_id": "SRC-24",
+          "title": "Midjourney Terms — Commercial Rights and Content License",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/docs/terms-of-service",
+          "source_type": "شروط رسمية تاريخية تفصيلية",
+          "published_at": "2025-04-17",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "شروط",
+          "source_locator": "DMCA address",
+          "supports": "العنوان"
+        }
+      ],
+      "limitations": "العنوان القانوني لا يساوي كل العمليات.",
+      "source_count": 3
+    },
+    "$.company.funding": {
+      "field_value": "ممولة ذاتيًا ومن المجتمع؛ تعرض صفحة رسمية صفر دولار تمويل خارجي وعدم وجود مستثمرين. لا توجد جولات VC معلنة حتى أغسطس 2026.",
+      "verification_status": "verified_self_funded_zero_external_raise_claim",
+      "confidence": "مرتفعة",
+      "claim_type": "تمويل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "صفحة رسمية تقول صفر دولار مرفوع ولا مستثمرين.",
+      "source_ids": [
+        "SRC-03",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Midjourney Careers — Self-Funded Team",
+          "publisher": "Midjourney",
+          "url": "https://xam.midjourney.com/careers",
+          "source_type": "نسخة رسمية بديلة لصفحة التوظيف",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح",
+          "source_locator": "Zero raised",
+          "supports": "التمويل"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Midjourney — Home and About",
+          "publisher": "Midjourney",
+          "url": "https://www.midjourney.com/home",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح",
+          "source_locator": "Self-funded",
+          "supports": "النموذج"
+        }
+      ],
+      "limitations": "لا توجد قوائم تكشف التسهيلات.",
+      "source_count": 2
+    },
+    "$.company.profitability": {
+      "field_value": "غير مُفصح عنها رسميًا في قوائم مالية. ذكر تقرير The Information أن الشركة كانت مربحة في 2023؛ يُعامل ذلك كتقرير تاريخي لا إثبات للربحية الحالية أو الهامش.",
+      "verification_status": "verified_only_as_historical_secondary_report",
+      "confidence": "متوسطة",
+      "claim_type": "ربحية",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الربحية وردت في تقرير 2023 فقط.",
+      "source_ids": [
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-18",
+          "title": "AI Startup Midjourney Expects $200 Million in Revenue",
+          "publisher": "The Information",
+          "url": "https://www.theinformation.com/briefings/ai-startup-midjourney-expects-200-million-in-revenue",
+          "source_type": "تقرير مالي صحفي ثانوي",
+          "published_at": "2023",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "تقرير",
+          "source_locator": "Profitable",
+          "supports": "ربحية تاريخية"
+        }
+      ],
+      "limitations": "لا توجد هوامش رسمية.",
+      "source_count": 1
+    },
+    "$.company.public_revenue_claim": {
+      "field_value": "لا يوجد إفصاح مالي رسمي حالي. التقدير العام الأكثر تداولًا هو أكثر من 200 مليون دولار إيرادًا في 2023 وفق The Information، وليس حقيقة مستمرة في 2026.",
+      "verification_status": "verified_historical_estimate_not_current_fact",
+      "confidence": "مرتفعة",
+      "claim_type": "ادعاء إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "حُوّل الادعاء إلى تقدير تاريخي منسوب.",
+      "source_ids": [
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-18",
+          "title": "AI Startup Midjourney Expects $200 Million in Revenue",
+          "publisher": "The Information",
+          "url": "https://www.theinformation.com/briefings/ai-startup-midjourney-expects-200-million-in-revenue",
+          "source_type": "تقرير مالي صحفي ثانوي",
+          "published_at": "2023",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "تقرير",
+          "source_locator": "Revenue estimate",
+          "supports": "200M+ 2023"
+        }
+      ],
+      "limitations": "لا يمكن تمديده إلى 2026.",
+      "source_count": 1
+    },
+    "$.problem_and_product": {
+      "field_value": [
+        "تحويل الفكرة إلى مادة بصرية متماسكة كان يحتاج مهارات وأدوات ووقتًا، بينما كانت واجهات التوليد المبكر محدودة في التحكم والتنظيم والتكرار.",
+        "تقدم Midjourney إنشاء الصور من النص والمراجع مع Personalization وMoodboards وStyle References وEditor وHD وDraft Mode، ثم أضافت Image-to-Video.",
+        "يمكن الإنشاء على midjourney.com أو Discord؛ الويب يوفر محررًا وتنظيمًا ومجلدات وتحكمًا مرئيًا لا يتوفر كله بالصيغة نفسها داخل Discord.",
+        "تعمل الخدمة على حصص GPU، وتظل الخصوصية الكاملة مرتبطة باستخدام Stealth في Pro أو Mega وتجنب القنوات العامة."
+      ],
+      "verification_status": "verified_current_product_without_subjective_superiority",
+      "confidence": "مرتفعة",
+      "claim_type": "مشكلة ومنتج",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم الوثائق المنتج مع حذف التفوق المطلق.",
+      "source_ids": [
+        "SRC-07",
+        "SRC-08",
+        "SRC-09",
+        "SRC-20"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Web vs Discord",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/33329300781837-Web-vs-Discord",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق",
+          "source_locator": "Web vs Discord",
+          "supports": "الواجهات"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Creating on Web",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/33390732264589-Creating-on-Web",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق",
+          "source_locator": "Web",
+          "supports": "المحرر"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Version 8.2",
+          "publisher": "Midjourney",
+          "url": "https://updates.midjourney.com/version-8-2/",
+          "source_type": "إعلان نموذج رسمي",
+          "published_at": "2026-07-24",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان",
+          "source_locator": "V8.2",
+          "supports": "النموذج"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Stealth Mode",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/32019750070669-Stealth-Mode",
+          "source_type": "وثائق خصوصية منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق",
+          "source_locator": "Stealth",
+          "supports": "الخصوصية"
+        }
+      ],
+      "limitations": "الأفضل عالميًا حكم غير قابل للإثبات.",
+      "source_count": 4
+    },
+    "$.origin_story": {
+      "field_value": [
+        "أسس David Holz Midjourney كمختبر مستقل موزع وممول ذاتيًا، مع قيادة مباشرة للمشروعات والاعتماد على المجتمع في ترتيب الأولويات.",
+        "تظهر وثائق المنتج أن النماذج العامة كانت تعمل منذ فبراير 2022، وأصبح Discord قناة التوزيع والاجتماع المبكرة التي جمعت الإنشاء والمشاهدة والتغذية الراجعة.",
+        "لا يدعم مصدر رسمي صياغة أن التدريب يركز على «الجمال بدل الواقعية» كقاعدة تقنية وحيدة؛ الأدق أن الشركة تصف نفسها بأنها معروفة بالتقنيات الجمالية وتستخدم التصويت والتخصيص."
+      ],
+      "verification_status": "verified_founder_and_2022_model_history_with_aesthetic_caveat",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "قصة تأسيس",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التأسيس المستقل وتاريخ النماذج والهوية الجمالية مدعومة.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-17",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Midjourney Careers",
+          "publisher": "Midjourney",
+          "url": "https://www.midjourney.com/careers",
+          "source_type": "صفحة توظيف رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وظائف",
+          "source_locator": "Founder-led",
+          "supports": "طريقة العمل"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Legacy Features and Model Timeline",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/33329788681101-Legacy-Features",
+          "source_type": "وثائق تاريخ منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تاريخ",
+          "source_locator": "V1–V3",
+          "supports": "2022"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Midjourney — Home and About",
+          "publisher": "Midjourney",
+          "url": "https://www.midjourney.com/home",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "شركة",
+          "source_locator": "Aesthetic technologies",
+          "supports": "الهوية"
+        }
+      ],
+      "limitations": "لا توجد ورقة تقنية شاملة.",
+      "source_count": 3
+    },
+    "$.build_and_launch": {
+      "field_value": [
+        "استخدام Discord خفّض احتكاك الإطلاق ووضع التوليد أمام مجتمع يرى أعمال الآخرين ويقدم ملاحظات فورية، لكنه لم يعد الواجهة الوحيدة.",
+        "أصبح موقع Midjourney منتجًا كاملًا للإنشاء والتحرير والتنظيم والمراجع والتخصيص، مع استمرار مزامنة الحساب والإعدادات مع Discord.",
+        "تطور المنتج من V1 في 2022 إلى V8.1 الافتراضي في يونيو 2026 ثم V8.2 في 24 يوليو 2026.",
+        "أطلقت الشركة Video V1 في يونيو 2025 بوصفه Image-to-Video، وأضافت HD وخيارات حركة وloop ضمن خارطة نحو الفيديو و3D والنماذج الآنية.",
+        "في 23 يوليو 2026 أعلنت أول استحواذ لها على Co–Star لدعم المنتج والتصميم؛ لم تعلن قيمة الصفقة."
+      ],
+      "verification_status": "verified_discord_web_model_video_and_acquisition_timeline",
+      "confidence": "مرتفعة",
+      "claim_type": "بناء وإطلاق",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توثق المصادر القنوات والإصدارات والفيديو والاستحواذ.",
+      "source_ids": [
+        "SRC-07",
+        "SRC-09",
+        "SRC-12",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Web vs Discord",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/33329300781837-Web-vs-Discord",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق",
+          "source_locator": "Web/Discord",
+          "supports": "القنوات"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Version 8.2",
+          "publisher": "Midjourney",
+          "url": "https://updates.midjourney.com/version-8-2/",
+          "source_type": "إعلان نموذج رسمي",
+          "published_at": "2026-07-24",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان",
+          "source_locator": "V8.2",
+          "supports": "الإصدار"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Introducing Our V1 Video Model",
+          "publisher": "Midjourney",
+          "url": "https://updates.midjourney.com/introducing-our-v1-video-model/",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2025-06-18",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان",
+          "source_locator": "Video",
+          "supports": "الفيديو"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Midjourney’s First Acquisition",
+          "publisher": "Midjourney",
+          "url": "https://updates.midjourney.com/midjourneys-first-acquisition/",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2026-07-23",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان",
+          "source_locator": "Co–Star",
+          "supports": "الاستحواذ"
+        }
+      ],
+      "limitations": "قيمة الاستحواذ غير معلنة.",
+      "source_count": 4
+    },
+    "$.costs_and_operations": {
+      "field_value": [
+        "الحوسبة تكلفة تشغيل جوهرية ظاهرة في تصميم الخطط حول Fast GPU Time وRelax وTurbo واختلاف تكلفة الصور والفيديو وHD.",
+        "لا توجد بيانات عامة تسمح بالقول إن تكلفة الموظفين تكاد لا تُذكر أو بحساب الهامش الإجمالي.",
+        "تعرض الشركة فريقًا صغيرًا نسبيًا يبلغ نحو 60–70 شخصًا ويشمل البحث والبنية التحتية والمنتج والطب والعتاد.",
+        "الشركة لا تعتمد حصريًا على Discord في الدعم أو المنتج؛ لديها وثائق وموقع وفوترة بريدية وقنوات مجتمع.",
+        "تواجه مخاطر حقوقية، ومنها دعوى حقوق نشر اتحادية مرفوعة من استوديوهات كبرى؛ وجود القضية لا يثبت مسؤولية أو حكمًا نهائيًا."
+      ],
+      "verification_status": "verified_compute_and_team_structure_with_financial_limits",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "تكاليف وتشغيل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تصميم GPU والوظائف يثبت أهمية الحوسبة مع غياب الهوامش.",
+      "source_ids": [
+        "SRC-04",
+        "SRC-11",
+        "SRC-02",
+        "SRC-23"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Comparing Midjourney Plans",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+          "source_type": "تسعير ووثائق رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير",
+          "source_locator": "GPU",
+          "supports": "اقتصاديات الحوسبة"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Midjourney Model Versions",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
+          "source_type": "وثائق تقنية رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق",
+          "source_locator": "HD costs",
+          "supports": "تكلفة نسبية"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Midjourney Careers",
+          "publisher": "Midjourney",
+          "url": "https://www.midjourney.com/careers",
+          "source_type": "صفحة توظيف رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وظائف",
+          "source_locator": "Clusters",
+          "supports": "البنية"
+        },
+        {
+          "source_id": "SRC-23",
+          "title": "Disney Enterprises et al. v. Midjourney Inc.",
+          "publisher": "Justia Dockets",
+          "url": "https://dockets.justia.com/docket/california/cacdce/2%3A2025cv05275/973999",
+          "source_type": "سجل قضية قضائية عام",
+          "published_at": "2025-06-11",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "سجل قضية",
+          "source_locator": "Copyright",
+          "supports": "المخاطر"
+        }
+      ],
+      "limitations": "لا توجد تكلفة مطلقة أو هامش.",
+      "source_count": 4
+    },
+    "$.monetization": {
+      "field_value": [
+        "Basic بقيمة 10 دولارات شهريًا وStandard بقيمة 30 وPro بقيمة 60 وMega بقيمة 120، مع خصم سنوي معلن 20%.",
+        "بيع وقت Fast GPU إضافي للمشتركين بعد نفاد الحصة، مع انتهاء صلاحية الساعات المشتراة بعد 60 يومًا.",
+        "تمييز الخطط عبر Relax وStealth والفيديو وHD وعدد الوظائف المتزامنة وسعة GPU.",
+        "فوترة جماعية للمنظمات التي تحتاج 50 اشتراكًا سنويًا أو أكثر من Pro أو Mega، دون إدارة مقاعد وSSO.",
+        "لا يوجد دليل رسمي على إيرادات إعلانية أو API عامة مدفوعة أو ترخيص نماذج خارجي كمسار حالي جوهري."
+      ],
+      "verification_status": "verified_current_pricing_and_revenue_pathways",
+      "confidence": "مرتفعة",
+      "claim_type": "تحقيق دخل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الخطط والوقت الإضافي والفوترة الجماعية موثقة.",
+      "source_ids": [
+        "SRC-04",
+        "SRC-14",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Comparing Midjourney Plans",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+          "source_type": "تسعير ووثائق رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير",
+          "source_locator": "Prices",
+          "supports": "الاشتراكات"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Purchasing Extra Fast Time",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/33570952624141-Purchasing-Extra-Fast-Time",
+          "source_type": "وثائق فوترة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "فوترة",
+          "source_locator": "Extra hours",
+          "supports": "الإضافة"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Group Plans and Corporate Billing",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/27870607078285-Group-Plans-Corporate-Billing",
+          "source_type": "وثائق فوترة شركات رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "فوترة شركات",
+          "source_locator": "Bulk",
+          "supports": "المنظمات"
+        }
+      ],
+      "limitations": "لا توجد actuals أو ARPU.",
+      "source_count": 3
+    },
+    "$.growth": {
+      "field_value": [
+        "تصف الشركة أدواتها بأنها مستخدمة من ملايين الأشخاص، لكنها لا تنشر MAU أو DAU أو عدد مشتركين مدفوعين حاليًا.",
+        "تغير الفريق من نحو 40 موظفًا في تقرير 2023 إلى 60 وفق الصفحة الرئيسية، مع صفحة بديلة تعرض 70؛ هذا نمو اتجاهي لا معدل موحدًا.",
+        "توسع المنتج من الصور إلى الفيديو، ومن Discord إلى الويب، ثم إلى مشروعات طبية وعتادية واستحواذ Co–Star.",
+        "لا يوجد معدل نمو رسمي حديث للإيراد أو المشتركين أو الصور أو الفيديوهات."
+      ],
+      "verification_status": "verified_directional_product_and_team_growth_no_rate",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "نمو",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توسع الفريق والمنتج والاستحواذ موثق دون معدل موحد.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-12",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Midjourney — Home and About",
+          "publisher": "Midjourney",
+          "url": "https://www.midjourney.com/home",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "شركة",
+          "source_locator": "60 people",
+          "supports": "الفريق"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Midjourney Careers — Self-Funded Team",
+          "publisher": "Midjourney",
+          "url": "https://xam.midjourney.com/careers",
+          "source_type": "نسخة رسمية بديلة لصفحة التوظيف",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة بديلة",
+          "source_locator": "70 people",
+          "supports": "الفريق"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Introducing Our V1 Video Model",
+          "publisher": "Midjourney",
+          "url": "https://updates.midjourney.com/introducing-our-v1-video-model/",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2025-06-18",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان",
+          "source_locator": "Video",
+          "supports": "المنتج"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Midjourney’s First Acquisition",
+          "publisher": "Midjourney",
+          "url": "https://updates.midjourney.com/midjourneys-first-acquisition/",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2026-07-23",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان",
+          "source_locator": "Acquisition",
+          "supports": "المؤسسة"
+        }
+      ],
+      "limitations": "لا توجد سلسلة مستخدمين أو إيراد.",
+      "source_count": 4
+    },
+    "$.tools": {
+      "field_value": [
+        "نماذج صور مغلقة المصدر؛ أحدث إصدار معلن V8.2 بتاريخ 24 يوليو 2026",
+        "V8.1 وHD 2K وDraft Mode وRaw وPersonalization وMoodboards وStyle References",
+        "محرر الويب للقص والتحريك والتوسيع وVary Region والمراجع والتنظيم والمجلدات",
+        "Video V1 لتحويل الصور إلى فيديوهات 5 ثوانٍ مع low/high motion وloop وHD",
+        "Discord Bot وDiscord API كواجهة ومجتمع، إلى جانب تطبيق الويب الكامل",
+        "بنية GPU وإدارة مراكز بيانات وعناقيد واستدلال وتحسين kernels وفق وظائف الشركة",
+        "تصويت وترتيب صور المجتمع لبناء Personalization وتحسين الجماليات واختيار Explore",
+        "Stealth Mode للخصوصية في Pro وMega مع قيود القنوات العامة",
+        "نظام فوترة اشتراكات وشراء Fast GPU Time إضافي",
+        "لم تنشر الشركة ما يثبت اعتمادًا مركزيًا على GCP أو AWS؛ صفحات الوظائف لا تسمي مزودًا حصريًا",
+        "مشروعات معلنة خارج التوليد تشمل Midjourney Medical ومشروعات برمجية وعتادية غير مكشوفة بالكامل"
+      ],
+      "verification_status": "verified_official_product_and_infrastructure_capabilities",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "تقنيات وأدوات",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم المصادر النماذج والفيديو والويب وGPU والتصويت.",
+      "source_ids": [
+        "SRC-09",
+        "SRC-11",
+        "SRC-12",
+        "SRC-07",
+        "SRC-02",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "Version 8.2",
+          "publisher": "Midjourney",
+          "url": "https://updates.midjourney.com/version-8-2/",
+          "source_type": "إعلان نموذج رسمي",
+          "published_at": "2026-07-24",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان",
+          "source_locator": "V8.2",
+          "supports": "النموذج"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Midjourney Model Versions",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
+          "source_type": "وثائق تقنية رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق",
+          "source_locator": "V8.1/HD",
+          "supports": "الدقة"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Introducing Our V1 Video Model",
+          "publisher": "Midjourney",
+          "url": "https://updates.midjourney.com/introducing-our-v1-video-model/",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2025-06-18",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان",
+          "source_locator": "Video",
+          "supports": "الفيديو"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Web vs Discord",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/33329300781837-Web-vs-Discord",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق",
+          "source_locator": "Interfaces",
+          "supports": "الواجهات"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Midjourney Careers",
+          "publisher": "Midjourney",
+          "url": "https://www.midjourney.com/careers",
+          "source_type": "صفحة توظيف رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وظائف",
+          "source_locator": "Clusters",
+          "supports": "البنية"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Complete Tasks and Community Ratings",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/33390759197197-Complete-Tasks",
+          "source_type": "وثائق مجتمع رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق",
+          "source_locator": "Ratings",
+          "supports": "البيانات"
+        }
+      ],
+      "limitations": "لا يوجد كشف معماري أو مزود حصري.",
+      "source_count": 6
+    },
+    "$.lessons": {
+      "field_value": [
+        "التوزيع داخل مجتمع جاهز يسرع التعلم، لكن نجاح Midjourney الحالي لا يُختزل في Discord بعد أن أصبح الويب منتجًا كاملًا.",
+        "صمّم التسعير حول المورد النادر: ربط الخطط بوقت GPU والسرعة وRelax وHD يجعل تكلفة الحوسبة قابلة للإدارة.",
+        "افصل بين أعضاء المجتمع والمستخدمين النشطين والمشتركين والزيارات؛ كل رقم يجيب عن سؤال مختلف ولا يثبت الإيراد.",
+        "التصويت والتخصيص يحولان المجتمع من قناة تسويق إلى حلقة بيانات، لكنهما يتطلبان قواعد خصوصية وحقوق واضحة.",
+        "التمويل الذاتي يمنح حرية، لكنه لا يحول تقدير 200 مليون دولار إلى إفصاح مالي رسمي.",
+        "التوسع من الصور إلى الفيديو والطب والعتاد والاستحواذ يرفع الفرصة ويزيد مخاطر التركيز والتنفيذ والحقوق الفكرية."
+      ],
+      "verification_status": "analytical_inference_grounded_in_company_sources",
+      "confidence": "متوسطة",
+      "claim_type": "تحليل ودروس",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس مبنية على التوزيع وGPU والمقاييس والتصويت والتمويل والتوسع.",
+      "source_ids": [
+        "SRC-07",
+        "SRC-04",
+        "SRC-21",
+        "SRC-03",
+        "SRC-12",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Web vs Discord",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/33329300781837-Web-vs-Discord",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق",
+          "source_locator": "Web/Discord",
+          "supports": "التوزيع"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Comparing Midjourney Plans",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+          "source_type": "تسعير ووثائق رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير",
+          "source_locator": "GPU",
+          "supports": "التكلفة"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Complete Tasks and Community Ratings",
+          "publisher": "Midjourney Documentation",
+          "url": "https://docs.midjourney.com/hc/en-us/articles/33390759197197-Complete-Tasks",
+          "source_type": "وثائق مجتمع رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق",
+          "source_locator": "Ratings",
+          "supports": "المجتمع"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Midjourney Careers — Self-Funded Team",
+          "publisher": "Midjourney",
+          "url": "https://xam.midjourney.com/careers",
+          "source_type": "نسخة رسمية بديلة لصفحة التوظيف",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح",
+          "source_locator": "Self-funded",
+          "supports": "التمويل"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Introducing Our V1 Video Model",
+          "publisher": "Midjourney",
+          "url": "https://updates.midjourney.com/introducing-our-v1-video-model/",
+          "source_type": "إعلان منتج رسمي",
+          "published_at": "2025-06-18",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان",
+          "source_locator": "Video",
+          "supports": "التوسع"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Midjourney’s First Acquisition",
+          "publisher": "Midjourney",
+          "url": "https://updates.midjourney.com/midjourneys-first-acquisition/",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2026-07-23",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان",
+          "source_locator": "Acquisition",
+          "supports": "النطاق"
+        }
+      ],
+      "limitations": "استنتاجات تحريرية.",
+      "source_count": 6
+    }
+  },
+  "verification": {
+    "status": "verified_with_material_revenue_traffic_team_product_and_strategy_corrections",
+    "verified_on": "2026-08-03",
+    "source_policy": {
+      "priority_order": [
+        "موقع ووثائق وشروط وتحديثات Midjourney",
+        "إعلانات الشركة وصفحات التوظيف",
+        "تقرير صحفي مالي عند غياب الإفصاح مع وسمه",
+        "سجل قضية لإثبات وجودها فقط"
+      ],
+      "sec_applicability": "غير منطبق عمليًا: Midjourney شركة خاصة وليست مُصدرًا عامًا معروفًا لدى SEC.",
+      "financial_rule": "فُصل الإيراد التاريخي عن MRR الحالي والتمويل عن الإيراد والتقييم.",
+      "usage_rule": "فُصلت الزيارات عن مستخدمي الويب وDiscord وأعضاء المجتمع والمشتركين.",
+      "product_rule": "صُحح Discord-only وأضيف الويب والفيديو وV8.2.",
+      "legal_rule": "عُرضت الدعوى كواقعة إجرائية دون استنتاج المسؤولية."
+    },
+    "important_notes": [
+      "الإيراد الحالي غير معلن رسميًا.",
+      "200 مليون دولار+ تقدير صحفي لعام 2023 وليس رقمًا حاليًا.",
+      "لم يُقسم التقدير السنوي على 12.",
+      "الزيارات وMAU وDAU والمشتركون المدفوعون غير معلنين.",
+      "عبارة ملايين المستخدمين لا تكشف تعريف النشاط.",
+      "عدد الموظفين متعارض بين 60 و70.",
+      "رقم 40 موظفًا يعود إلى 2023.",
+      "الشركة تقول إنها ممولة ذاتيًا ولم تجمع تمويلًا خارجيًا.",
+      "الربحية من تقرير صحفي تاريخي.",
+      "الخدمة تعمل على الويب وDiscord.",
+      "V8.2 أحدث إصدار في 24 يوليو 2026.",
+      "Video V1 يحول الصور إلى مقاطع 5 ثوانٍ.",
+      "الخطط 10 و30 و60 و120 دولارًا مع خصم سنوي 20%.",
+      "الشركات فوق مليون دولار إيراد سنوي تحتاج Pro أو Mega للاستخدام التجاري.",
+      "Stealth لا يخفي المحتوى داخل قناة Discord عامة.",
+      "لا توجد إدارة مقاعد أو SSO في الفوترة الجماعية.",
+      "لا توجد API عامة مدفوعة موثقة كمسار حالي.",
+      "لم يُثبت AWS أو GCP كمزود حصري.",
+      "قيمة استحواذ Co–Star غير معلنة.",
+      "وجود الدعوى لا يعني حكمًا أو مسؤولية.",
+      "حقوق الأصول تخضع للقانون وحقوق الأطراف الثالثة والشروط.",
+      "solopreneur_score مؤشر تحريري موروث."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_at": "2026-08-03",
+      "checks_passed": 136,
+      "checks_failed": 0,
+      "checks": [
+        {
+          "name": "base_order",
+          "passed": true,
+          "details": "order موجود"
+        },
+        {
+          "name": "base_slug",
+          "passed": true,
+          "details": "slug موجود"
+        },
+        {
+          "name": "base_name",
+          "passed": true,
+          "details": "name موجود"
+        },
+        {
+          "name": "base_domain",
+          "passed": true,
+          "details": "domain موجود"
+        },
+        {
+          "name": "base_website",
+          "passed": true,
+          "details": "website موجود"
+        },
+        {
+          "name": "base_category",
+          "passed": true,
+          "details": "category موجود"
+        },
+        {
+          "name": "base_headline",
+          "passed": true,
+          "details": "headline موجود"
+        },
+        {
+          "name": "base_summary",
+          "passed": true,
+          "details": "summary موجود"
+        },
+        {
+          "name": "base_directory_snapshot",
+          "passed": true,
+          "details": "directory_snapshot موجود"
+        },
+        {
+          "name": "base_company",
+          "passed": true,
+          "details": "company موجود"
+        },
+        {
+          "name": "base_problem_and_product",
+          "passed": true,
+          "details": "problem_and_product موجود"
+        },
+        {
+          "name": "base_origin_story",
+          "passed": true,
+          "details": "origin_story موجود"
+        },
+        {
+          "name": "base_build_and_launch",
+          "passed": true,
+          "details": "build_and_launch موجود"
+        },
+        {
+          "name": "base_costs_and_operations",
+          "passed": true,
+          "details": "costs_and_operations موجود"
+        },
+        {
+          "name": "base_monetization",
+          "passed": true,
+          "details": "monetization موجود"
+        },
+        {
+          "name": "base_growth",
+          "passed": true,
+          "details": "growth موجود"
+        },
+        {
+          "name": "base_tools",
+          "passed": true,
+          "details": "tools موجود"
+        },
+        {
+          "name": "base_revenue_timeline",
+          "passed": true,
+          "details": "revenue_timeline موجود"
+        },
+        {
+          "name": "base_lessons",
+          "passed": true,
+          "details": "lessons موجود"
+        },
+        {
+          "name": "base_sources",
+          "passed": true,
+          "details": "sources موجود"
+        },
+        {
+          "name": "base_data_quality",
+          "passed": true,
+          "details": "data_quality موجود"
+        },
+        {
+          "name": "base_research_metadata",
+          "passed": true,
+          "details": "research_metadata موجود"
+        },
+        {
+          "name": "base_id",
+          "passed": true,
+          "details": "id موجود"
+        },
+        {
+          "name": "v2_verification",
+          "passed": true,
+          "details": "verification موجود"
+        },
+        {
+          "name": "v2_evidence_map_schema",
+          "passed": true,
+          "details": "evidence_map_schema موجود"
+        },
+        {
+          "name": "v2_evidence_map",
+          "passed": true,
+          "details": "evidence_map موجود"
+        },
+        {
+          "name": "preserve_order",
+          "passed": true,
+          "details": "order"
+        },
+        {
+          "name": "preserve_slug",
+          "passed": true,
+          "details": "slug"
+        },
+        {
+          "name": "preserve_name",
+          "passed": true,
+          "details": "name"
+        },
+        {
+          "name": "preserve_id",
+          "passed": true,
+          "details": "id"
+        },
+        {
+          "name": "sources_24",
+          "passed": true,
+          "details": "24 مصدرًا"
+        },
+        {
+          "name": "source_ids_unique",
+          "passed": true,
+          "details": "معرفات فريدة"
+        },
+        {
+          "name": "primary_majority",
+          "passed": true,
+          "details": "أغلبية أولية"
+        },
+        {
+          "name": "urls_valid",
+          "passed": true,
+          "details": "روابط سليمة"
+        },
+        {
+          "name": "evidence_18",
+          "passed": true,
+          "details": "18 مسارًا"
+        },
+        {
+          "name": "value_$.headline",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "count_$.headline",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.headline",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "refs_$.headline",
+          "passed": true,
+          "details": "المراجع سليمة"
+        },
+        {
+          "name": "value_$.summary",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "count_$.summary",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.summary",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "refs_$.summary",
+          "passed": true,
+          "details": "المراجع سليمة"
+        },
+        {
+          "name": "value_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "count_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "refs_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "المراجع سليمة"
+        },
+        {
+          "name": "value_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "count_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "refs_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "المراجع سليمة"
+        },
+        {
+          "name": "value_$.company.business_model",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "count_$.company.business_model",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.company.business_model",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "refs_$.company.business_model",
+          "passed": true,
+          "details": "المراجع سليمة"
+        },
+        {
+          "name": "value_$.company.employees",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "count_$.company.employees",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.company.employees",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "refs_$.company.employees",
+          "passed": true,
+          "details": "المراجع سليمة"
+        },
+        {
+          "name": "value_$.company.location",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "count_$.company.location",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.company.location",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "refs_$.company.location",
+          "passed": true,
+          "details": "المراجع سليمة"
+        },
+        {
+          "name": "value_$.company.funding",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "count_$.company.funding",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.company.funding",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "refs_$.company.funding",
+          "passed": true,
+          "details": "المراجع سليمة"
+        },
+        {
+          "name": "value_$.company.profitability",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "count_$.company.profitability",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.company.profitability",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "refs_$.company.profitability",
+          "passed": true,
+          "details": "المراجع سليمة"
+        },
+        {
+          "name": "value_$.company.public_revenue_claim",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "count_$.company.public_revenue_claim",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.company.public_revenue_claim",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "refs_$.company.public_revenue_claim",
+          "passed": true,
+          "details": "المراجع سليمة"
+        },
+        {
+          "name": "value_$.problem_and_product",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "count_$.problem_and_product",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.problem_and_product",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "refs_$.problem_and_product",
+          "passed": true,
+          "details": "المراجع سليمة"
+        },
+        {
+          "name": "value_$.origin_story",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "count_$.origin_story",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.origin_story",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "refs_$.origin_story",
+          "passed": true,
+          "details": "المراجع سليمة"
+        },
+        {
+          "name": "value_$.build_and_launch",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "count_$.build_and_launch",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.build_and_launch",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "refs_$.build_and_launch",
+          "passed": true,
+          "details": "المراجع سليمة"
+        },
+        {
+          "name": "value_$.costs_and_operations",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "count_$.costs_and_operations",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.costs_and_operations",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "refs_$.costs_and_operations",
+          "passed": true,
+          "details": "المراجع سليمة"
+        },
+        {
+          "name": "value_$.monetization",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "count_$.monetization",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.monetization",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "refs_$.monetization",
+          "passed": true,
+          "details": "المراجع سليمة"
+        },
+        {
+          "name": "value_$.growth",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "count_$.growth",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.growth",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "refs_$.growth",
+          "passed": true,
+          "details": "المراجع سليمة"
+        },
+        {
+          "name": "value_$.tools",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "count_$.tools",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.tools",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "refs_$.tools",
+          "passed": true,
+          "details": "المراجع سليمة"
+        },
+        {
+          "name": "value_$.lessons",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "count_$.lessons",
+          "passed": true,
+          "details": "عدد متسق"
+        },
+        {
+          "name": "ids_$.lessons",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "refs_$.lessons",
+          "passed": true,
+          "details": "المراجع سليمة"
+        },
+        {
+          "name": "old_revenue_removed",
+          "passed": true,
+          "details": "الإيراد القديم محذوف"
+        },
+        {
+          "name": "old_traffic_removed",
+          "passed": true,
+          "details": "الزيارات القديمة محذوفة"
+        },
+        {
+          "name": "revenue_undisclosed",
+          "passed": true,
+          "details": "الإيراد غير مختلق"
+        },
+        {
+          "name": "traffic_undisclosed",
+          "passed": true,
+          "details": "الزيارات غير مختلقة"
+        },
+        {
+          "name": "no_division",
+          "passed": true,
+          "details": "لا اشتقاق شهري"
+        },
+        {
+          "name": "revenue_per_visitor",
+          "passed": true,
+          "details": "لا نسبة مختلقة"
+        },
+        {
+          "name": "web_not_discord_only",
+          "passed": true,
+          "details": "صُحح Discord"
+        },
+        {
+          "name": "v8_2",
+          "passed": true,
+          "details": "الإصدار الحالي"
+        },
+        {
+          "name": "video",
+          "passed": true,
+          "details": "الفيديو"
+        },
+        {
+          "name": "acquisition",
+          "passed": true,
+          "details": "الاستحواذ"
+        },
+        {
+          "name": "employees_range",
+          "passed": true,
+          "details": "نطاق الموظفين"
+        },
+        {
+          "name": "funding_zero",
+          "passed": true,
+          "details": "التمويل"
+        },
+        {
+          "name": "profitability_caveated",
+          "passed": true,
+          "details": "الربحية مقيدة"
+        },
+        {
+          "name": "pricing",
+          "passed": true,
+          "details": "التسعير"
+        },
+        {
+          "name": "cloud_caveat",
+          "passed": true,
+          "details": "السحابة مقيدة"
+        },
+        {
+          "name": "tam_removed",
+          "passed": true,
+          "details": "لا TAM مختلق"
+        },
+        {
+          "name": "growth_removed",
+          "passed": true,
+          "details": "لا CAGR مختلق"
+        },
+        {
+          "name": "lessons_unique",
+          "passed": true,
+          "details": "دروس فريدة"
+        },
+        {
+          "name": "timeline",
+          "passed": true,
+          "details": "الخط الزمني"
+        },
+        {
+          "name": "research_date",
+          "passed": true,
+          "details": "تاريخ صحيح"
+        },
+        {
+          "name": "private_false",
+          "passed": true,
+          "details": "لا بيانات خاصة"
+        },
+        {
+          "name": "metric_taxonomy",
+          "passed": true,
+          "details": "فصل المقاييس"
+        },
+        {
+          "name": "schema_version",
+          "passed": true,
+          "details": "الإصدار"
+        },
+        {
+          "name": "verified_dates",
+          "passed": true,
+          "details": "تاريخ الأدلة"
+        },
+        {
+          "name": "legal_caveat",
+          "passed": true,
+          "details": "الدعوى مقيدة"
+        },
+        {
+          "name": "acquisition_price",
+          "passed": true,
+          "details": "السعر غير مختلق"
+        },
+        {
+          "name": "api_not_invented",
+          "passed": true,
+          "details": "لا API مختلقة"
+        },
+        {
+          "name": "stealth_caveat",
+          "passed": true,
+          "details": "الخصوصية"
+        },
+        {
+          "name": "no_nan",
+          "passed": true,
+          "details": "JSON صالح"
+        }
+      ],
+      "validator_notes": [
+        "تم الحفاظ على جميع مفاتيح البنية الأصلية وإضافة أقسام Professional V2.",
+        "تمت مطابقة field_value مع الحقول النهائية.",
+        "تم التحقق من المصادر والروابط والمراجع.",
+        "تم الفصل بين الإيراد والزيارات والتمويل والتقييم ومقاييس المجتمع.",
+        "تم تحديث الويب والفيديو وV8.2 والاستحواذ.",
+        "تم منع NaN وInfinity والتقديرات غير المدعومة."
+      ]
+    }
+  }
 }

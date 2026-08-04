@@ -37,6 +37,15 @@ interface ManagedUser {
   registrationDate: string;
 }
 
+type ProfileRow = {
+  id: string;
+  full_name: string | null;
+  email: string | null;
+  role: UserRole;
+  status: UserStatus;
+  created_at: string;
+};
+
 const roleLabels: Record<UserRole, string> = {
   admin: 'مدير نظام',
   manager: 'مشرف',
@@ -69,6 +78,8 @@ export const UsersManagement: React.FC = () => {
   const [roleFilter, setRoleFilter] = useState<UserRole | 'all'>('all');
   const [statusFilter, setStatusFilter] = useState<UserStatus | 'all'>('all');
   const [currentPage, setCurrentPage] = useState(1);
+  const [pendingDeleteUser, setPendingDeleteUser] = useState<ManagedUser | null>(null);
+  const [notice, setNotice] = useState<{ title: string; description: string } | null>(null);
   const itemsPerPage = 10;
 
   React.useEffect(() => {
@@ -88,7 +99,7 @@ export const UsersManagement: React.FC = () => {
         if (error) throw error;
         
         if (data) {
-          setUsers(data.map((p: any) => ({
+          setUsers((data as ProfileRow[]).map((p) => ({
             id: p.id,
             name: p.full_name || p.email?.split('@')[0] || 'مستخدم',
             email: p.email || '',
@@ -125,7 +136,10 @@ export const UsersManagement: React.FC = () => {
       setUsers((prev) => prev.map((user) => (user.id === id ? { ...user, status: newStatus } : user)));
     } catch (err) {
       console.error('Error updating user status:', err);
-      alert('حدث خطأ أثناء تحديث حالة المستخدم.');
+      setNotice({
+        title: 'تعذر تحديث حالة المستخدم',
+        description: 'حدث خطأ أثناء تحديث الحالة. حاول مرة أخرى بعد لحظات.',
+      });
     }
   };
 
@@ -135,21 +149,28 @@ export const UsersManagement: React.FC = () => {
       setUsers((prev) => prev.map((user) => (user.id === id ? { ...user, role: newRole } : user)));
     } catch (err) {
       console.error('Error updating user role:', err);
-      alert('حدث خطأ أثناء تحديث صلاحية المستخدم.');
+      setNotice({
+        title: 'تعذر تحديث صلاحية المستخدم',
+        description: 'حدث خطأ أثناء تحديث الصلاحية. حاول مرة أخرى بعد لحظات.',
+      });
     }
   };
 
-  const deleteUser = async (id: string) => {
-    if (window.confirm('هل أنت متأكد من رغبتك في حذف هذا المستخدم نهائياً؟')) {
-      try {
-        // Only possible if RLS or edge functions allow auth.users deletion. 
-        // For MVP, we can just suspend or delete the profile.
-        await supabase.from('profiles').delete().eq('id', id);
-        setUsers((prev) => prev.filter((user) => user.id !== id));
-      } catch (err) {
-        console.error('Error deleting user:', err);
-        alert('حدث خطأ أثناء حذف المستخدم.');
-      }
+  const deleteUser = async () => {
+    if (!pendingDeleteUser) return;
+
+    try {
+      // Only possible if RLS or edge functions allow auth.users deletion.
+      // For MVP, we can just suspend or delete the profile.
+      await supabase.from('profiles').delete().eq('id', pendingDeleteUser.id);
+      setUsers((prev) => prev.filter((user) => user.id !== pendingDeleteUser.id));
+      setPendingDeleteUser(null);
+    } catch (err) {
+      console.error('Error deleting user:', err);
+      setNotice({
+        title: 'تعذر حذف المستخدم',
+        description: 'حدث خطأ أثناء حذف المستخدم. حاول مرة أخرى بعد لحظات.',
+      });
     }
   };
 
@@ -392,7 +413,7 @@ export const UsersManagement: React.FC = () => {
                               </>
                             )}
                           </DropdownMenuItem>
-                          <DropdownMenuItem variant="destructive" onClick={() => deleteUser(user.id)}>
+                          <DropdownMenuItem variant="destructive" onClick={() => setPendingDeleteUser(user)}>
                             <Trash2 className="size-4 ml-2" />
                             حذف الحساب
                           </DropdownMenuItem>
@@ -428,6 +449,37 @@ export const UsersManagement: React.FC = () => {
           </div>
         </CardContent>
       </Card>
+
+      <Dialog open={Boolean(pendingDeleteUser)} onOpenChange={(open) => !open && setPendingDeleteUser(null)}>
+        <DialogContent className="sm:max-w-[440px]" dir="rtl">
+          <DialogHeader className="text-right">
+            <DialogTitle>حذف المستخدم</DialogTitle>
+            <DialogDescription>
+              سيتم حذف ملف المستخدم &quot;{pendingDeleteUser?.name}&quot; من جدول الملفات. هذا الإجراء حساس ولا يمكن التراجع عنه من الواجهة.
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button variant="destructive" onClick={deleteUser}>
+              حذف المستخدم
+            </Button>
+            <Button variant="outline" onClick={() => setPendingDeleteUser(null)}>
+              إلغاء
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={Boolean(notice)} onOpenChange={(open) => !open && setNotice(null)}>
+        <DialogContent className="sm:max-w-[420px]" dir="rtl">
+          <DialogHeader className="text-right">
+            <DialogTitle>{notice?.title}</DialogTitle>
+            <DialogDescription>{notice?.description}</DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button onClick={() => setNotice(null)}>حسناً</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </main>
   );
 };

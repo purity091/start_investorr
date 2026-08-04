@@ -1,53 +1,2004 @@
 {
   "id": "redseafarms",
   "slug": "redseafarms",
-  "name": "مزارع البحر الأحمر (Red Sea Farms)",
-  "headline": "المعجزة الزراعية: زراعة المحاصيل بالمياه المالحة في قلب الصحراء",
-  "category": "AgriTech / تكنولوجيا الزراعة المستدامة",
+  "name": "مزارع البحر الأحمر سابقًا — iyris حاليًا (Red Sea Farms / iyris)",
+  "headline": "من زراعة الطماطم بالمياه المالحة إلى هندسة ضوء الشمس داخل البوليمرات: كيف تحولت Red Sea Farms إلى iyris",
+  "category": "Advanced Materials & AgriClimate Tech / المواد الضوئية والإضافات النانوية للبيئات الحارة",
   "company": {
-    "location": "جدة، المملكة العربية السعودية (جامعة الملك عبدالله للعلوم والتقنية KAUST)",
-    "business_model": "بيع تكنولوجيا الزراعة (B2B) وبيع المحاصيل (B2C)"
+    "location": "بدأ المشروع في 2018 كشركة منبثقة من منظومة جامعة الملك عبدالله للعلوم والتقنية في ثول بالمملكة العربية السعودية تحت اسم Red Sea Farms، ثم استُخدم اسم RedSea، وأعيدت تسميته إلى iyris في 2024. يعرض الموقع الحالي نشاطًا عالميًا في المواد المتقدمة، بينما يسجل Companies House كيانًا بريطانيًا نشطًا باسم IYRIS TECHNOLOGY LTD، وتعرض الشركة وجودًا في ثول والولايات المتحدة. تعدد الكيانات يعني أن السجل البريطاني لا يمثل بالضرورة المجموعة كاملة.",
+    "business_model": "كان النموذج التاريخي يجمع بين بيع المحاصيل محليًا وتطوير أنظمة زراعية للمناخ الحار. بعد الاتفاق على بيع منشأة إنتاج المحاصيل في السعودية إلى Pure Harvest أواخر 2023، انتقلت الشركة إلى نموذج B2B تقني خالص: تطوير وبيع إضافات ضوئية ووظيفية تُدمج أثناء تصنيع أفلام وشباك ومواد بوليمرية، عبر شراكات تصنيع وتوزيع وتطوير مشترك. لم يعد بيع المحاصيل للمستهلكين هو النشاط الأساسي المعلن في 2026."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات",
-    "monthly_traffic": "توسعات في الشرق الأوسط وأمريكا الشمالية"
+    "monthly_revenue": "غير مُفصح عنه علنًا. لم تُنشر قوائم مالية للمجموعة أو قيمة موثوقة للإيراد الشهري أو السنوي. نقلت TechCrunch عن الإدارة أن الربع الأول من 2024 تجاوز كامل 2023 في عدد العملاء والمنتجات المباعة أو الإيراد، لكن غياب القيمة الأساسية والتعريف الدقيق يمنع تحويل التصريح إلى MRR أو معدل نمو مالي.",
+    "monthly_traffic": "غير مُفصح عنه علنًا، ولا يوجد رقم موثوق لزيارات الموقع أو المستخدمين النشطين. يعلن الموقع الحالي 9+ شركاء تصنيع عالميين والتحقق في درجات تتجاوز 50 مئوية وأول انتشارات تجارية في 2024؛ هذه مؤشرات شراكات ونشر تقني وليست زيارات أو مستخدمين أو معاملات."
   },
   "overview": {
     "problem": {
-      "text": "الزراعة التقليدية تستهلك 70% من المياه العذبة في العالم. في المناطق الصحراوية، تعتبر المياه العذبة نادرة ومكلفة جداً (تعتمد على التحلية)، مما يجعل الزراعة المحلية شبه مستحيلة اقتصادياً وبيئياً.",
-      "impact": "الاعتماد الكامل على الاستيراد، وهدر هائل للمياه العذبة وتكاليف طاقة ضخمة."
+      "text": "في البيئات الحارة، ترفع الأشعة الشمسية — ولا سيما الطاقة القريبة من تحت الحمراء — الحمل الحراري داخل البيوت المحمية وعلى المواد المكشوفة، بينما تحتاج النباتات إلى استمرار مرور الضوء الفعال للتمثيل الضوئي. يؤدي ذلك إلى مفاضلة صعبة بين تقليل الحرارة والحفاظ على الضوء، مع ارتفاع استهلاك الري والتبريد وتدهور المواد بفعل الأشعة فوق البنفسجية. عالميًا تمثل الزراعة نحو 72% من سحوبات المياه العذبة، لكن هذه النسبة سياق قطاعي وليست ناتجة عن البيوت المحمية وحدها.",
+      "impact": "الإجهاد الحراري قد يخفض جودة المحصول ويقصر موسم الإنتاج ويرفع استهلاك الماء والطاقة وتكاليف التشغيل، كما قد يسرّع تقادم الأفلام والأسطح. في الاستزراع المائي والبنية التحتية، تؤثر الحرارة والضوء غير المنضبطين في استقرار الأنظمة والراحة وعمر المواد."
     },
     "solution": {
-      "text": "تطوير تقنيات وأنظمة بيوت محمية (Greenhouses) تتيح زراعة المحاصيل (مثل الطماطم) باستخدام المياه المالحة (من البحر الأحمر) بنسبة تصل إلى 90% وتقليل استهلاك الطاقة بشكل كبير."
+      "text": "تطور iyris إضافات نانوية وضوئية تُدمج داخل المصفوفة البوليمرية أثناء التصنيع بدل وضعها كطلاء خارجي فقط. تتحكم الإضافات في حجب جزء من الأشعة القريبة من تحت الحمراء، وانتشار الضوء، والانتقائية الطيفية، مع الحفاظ على الضوء المطلوب للتمثيل الضوئي. تُستخدم في أفلام البيوت المحمية والشباك والشاشات والبولي كربونات وتطبيقات أخرى. في دراسة حالة OASIS SecondSky المنشورة من الشركة وشريكها، تراوحت النتائج المجمعة بين خفض ذروة الحرارة 1–3 درجات، ووفر مياه حتى 20%، وتحسن محصول تقريبي 14–30%؛ وهي نتائج خاصة بتجارب وانتشارات محددة وليست ضمانًا لكل مزرعة."
     }
   },
   "market_data": {
-    "target_audience": "المزارعون والشركات الزراعية، ومستهلكي المنتجات العضوية والمستدامة.",
-    "market_size": "سوق التكنولوجيا الزراعية والأمن الغذائي العالمي (مليارات الدولارات).",
-    "growth_rate": "جمعت 18 مليون دولار في 2022 للتوسع العالمي وتطوير تقنياتها الفريدة."
+    "target_audience": "مصنعو ومحولو البوليمرات والأفلام والشباك الزراعية، وموزعو مستلزمات البيوت المحمية، والمزارعون التجاريون في المناخات الحارة، وشركات المواد والبناء التي تحتاج إلى خفض اكتساب الحرارة، ومشغلو الاستزراع المائي، إضافة إلى شركاء التطوير الصناعي الذين يدمجون الإضافات داخل منتجاتهم.",
+    "market_size": "قدرت إدارة iyris في 2024 سوق أغطية البيوت المحمية العالمي بأكثر من 6 مليارات دولار من المبيعات السنوية المتكررة. هذا تقدير صادر عن الشركة لسوق منتج محدد، وليس حجم سوق مستقلًا مدققًا ولا إيرادًا للشركة. توسع تموضع 2026 إلى البنية التحتية والاستزراع المائي والطلاءات والمواد المركبة، لكن لم يُنشر TAM موثوق للنطاق الأوسع.",
+    "growth_rate": "لا يوجد معدل نمو موثوق للإيراد أو العملاء. تصريح الإدارة بأن الربع الأول من 2024 تجاوز كامل 2023 يثبت اتجاهًا قويًا في مرحلة مبكرة، لكنه لا يوفر قيمًا مطلقة أو تعريفًا واحدًا للمقياس. كما أن 9+ شركاء تصنيع في الموقع الحالي وعدد الدول أو المنشآت المعلن في بيانات سابقة مقاييس مختلفة، فلا يجوز اشتقاق CAGR منها."
   },
   "financials": {
-    "initial_investment": "انطلقت كبحث علمي في KAUST، ثم حظيت بدعم صناديق سعودية وعالمية.",
-    "valuation": "غير معلن (عشرات الملايين)",
+    "initial_investment": "الجولات المعلنة تشمل 1.9 مليون دولار في 2019، وجولة 2021 التي بدأت بإغلاق 10 ملايين ثم أضيفت 6 ملايين ليصبح إجمالي الجولة نحو 16 مليونًا، وجولة استراتيجية بقيمة 18.5 مليون دولار في 2022، وSeries A بقيمة 16 مليون دولار في 2024. جمع هذه المبالغ غير المتداخلة يعطي نحو 52.4 مليون دولار من التمويل المعلن؛ وهو حساب تجميعي للبيانات المنشورة، لا صافي نقد مستلم ولا قيمة حالية للشركة.",
+    "valuation": "غير مُفصح عنه علنًا. لا توجد شروط ملكية منشورة تسمح بحساب تقييم قبل الاستثمار أو بعده، ولا يجوز استخدام إجمالي التمويل البالغ نحو 52.4 مليون دولار كتقييم.",
     "revenue_streams": [
-      "ترخيص وبيع أنظمة التبريد والتحلية الزراعية للشركات (B2B)",
-      "بيع المحاصيل الزراعية الفاخرة للأسواق الاستهلاكية (B2C)"
+      "بيع وتوريد الإضافات الضوئية والوظيفية إلى مصنعي الأفلام والشباك والمواد البوليمرية.",
+      "اتفاقات تطوير مشترك وتصنيع لمنتجات تجارية تستخدم تقنيات iyris، مثل OASIS SecondSky بالتعاون مع Grupo Armando Álvarez.",
+      "شراكات توزيع وتكامل صناعي لوصول التقنية إلى المزارعين والأسواق المحلية، مع اختلاف التسعير حسب المنتج والشريك والمنطقة.",
+      "خدمات تطوير واختبار وتخصيص التركيبات للمواد والقطاعات الجديدة مثل البنية التحتية والاستزراع المائي، عندما تكون مشمولة في عقد تجاري.",
+      "بيع المحاصيل كان مسارًا تاريخيًا تحت علامة Red Sea Farms، لكنه خرج من صلب النموذج الحالي بعد بيع نشاط الإنتاج الزراعي."
     ]
   },
   "lessons": [
     {
-      "title": "الاستثمار في التقنية العميقة (DeepTech)",
-      "description": "على عكس التطبيقات البرمجية السريعة، اعتمدت الشركة على سنوات من البحث العلمي (DeepTech) لإنتاج ابتكار حقيقي، مما خلق خندقاً دفاعياً (Moat) يصعب على أي منافس تقليده."
+      "title": "بيع الأصل التشغيلي قد يحمي الأصل التقني",
+      "description": "تشغيل المزارع يستهلك رأس مال وإدارة يومية كبيرة. بيع منشأة الإنتاج إلى Pure Harvest سمح للشركة بفصل إثبات التقنية عن عبء زراعة وبيع المحاصيل، والتركيز على منتج يمكن دمجه في سلاسل تصنيع عالمية."
     },
     {
-      "title": "تحويل العائق إلى ميزة تنافسية",
-      "description": "استخدمت الشركة أصعب الموارد المتوفرة في السعودية (الصحراء القاسية والمياه المالحة) وجعلتها البيئة الأساسية لنموذج عملها، مما جعل تقنيتها قابلة للتصدير لأي بيئة قاسية في العالم."
+      "title": "أفضل انتقال من DeepTech إلى السوق يحدث داخل خط إنتاج قائم",
+      "description": "بدل مطالبة المزارع بشراء نظام معقد بالكامل، تُدمج إضافة iyris أثناء بثق الفيلم لدى مصنعين قائمين. بذلك تستفيد الشركة من مصانع وموزعين وعلاقات عملاء موجودة، وتقل كلفة التبني والتوسع."
+    },
+    {
+      "title": "إعادة التسمية يجب أن تتبع تغير جوهر الشركة",
+      "description": "اسم Red Sea Farms كان مناسبًا لمنتج طازج ومزرعة، لكنه أصبح ضيقًا بعد التحول إلى مواد تستخدم في الزراعة والبنية التحتية والاستزراع المائي. الانتقال إلى RedSea ثم iyris أعاد تعريف الشركة حول الملكية الفكرية والمواد، لا حول موقع أو محصول."
+    },
+    {
+      "title": "لا تخلط أثر النظام القديم بأداء المنتج الحالي",
+      "description": "ادعاء توفير 85–90% من المياه العذبة ارتبط بالنظام التاريخي المتكامل الذي استخدم المياه المالحة في التبريد والري. أما SecondSky الحالية فلها نتائج حالة مختلفة مثل وفر مياه 10–30% بحسب المحصول والموقع. فصل النطاقين يمنع تضخيم الأداء."
+    },
+    {
+      "title": "الشريك الصناعي هو قناة البيع وشهادة قابلية التصنيع معًا",
+      "description": "الشراكات مع مصنعي البوليمرات والأفلام مثل Grupo Armando Álvarez وNapco، ومع SABIC، لا توفر توزيعًا فقط؛ بل تختبر أن الإضافة تعمل على خطوط بثق صناعية وتتحمل شروط المادة والسوق."
+    },
+    {
+      "title": "المقاييس المتجانسة أهم من عناوين النمو",
+      "description": "تجاوز الربع الأول لعام كامل يبدو مثيرًا، لكنه لا يكشف الإيراد أو عدد العملاء أو الهكتارات. شركة المواد العميقة تحتاج لوحة تفصل طن الإضافات المباعة، أمتار الفيلم المنتجة، الهكتارات المغطاة، شركاء التصنيع، الإيراد، والهامش."
     }
   ],
   "tools": [
-    "IoT / Sensors",
-    "Climate Engineering",
-    "Genetics / Plant Breeding",
-    "Solar Tech"
+    "إضافات نانوية وضوئية مسجلة الملكية للتحكم في تفاعل المواد مع الضوء والحرارة",
+    "حجب انتقائي للأشعة القريبة من تحت الحمراء مع الحفاظ على الإشعاع النشط ضوئيًا",
+    "إضافات انتشار الضوء والتحكم الانتقائي في الأطوال الموجية",
+    "دمج الإضافات في المصفوفة البوليمرية أثناء البثق للأفلام والشباك والشاشات والبولي كربونات",
+    "اختبارات بصرية وحرارية وميكانيكية واختبارات ثبات الأشعة فوق البنفسجية",
+    "تجارب ميدانية للبيوت المحمية وقياس الحرارة والمياه والمحصول وجودة الثمار",
+    "SecondSky وOASIS SecondSky كمنتجات أو خطوط تجارية مبنية على الإضافات",
+    "تقنيات تاريخية للمياه المالحة وتبريد البيوت المحمية والتهجين والتطعيم النباتي؛ لا تظهر جميعها كمنتجات أساسية في موقع iyris لعام 2026",
+    "شراكات تصنيع مواد مع شركات البوليمرات والأفلام بدل الاعتماد على امتلاك مصانع إنتاج غذائي"
+  ],
+  "verification": {
+    "status": "verified_with_material_corrections_brand_transition_and_metric_separation",
+    "verified_on": "2026-08-03",
+    "source_policy": {
+      "priority_order": [
+        "الموقع الحالي لـiyris ودراسات الحالة الرسمية",
+        "KAUST وKAUST Innovation",
+        "السجلات الحكومية مثل Companies House",
+        "إعلانات الشركاء مثل Pure Harvest وSABIC",
+        "مصادر صحفية موثوقة فقط لتفاصيل لا تنشرها الصفحات الأولية"
+      ],
+      "sec_applicability": "غير منطبق عمليًا: iyris مجموعة خاصة وليست جهة إصدار عامة معروفة لدى SEC. استُخدم Companies House للكيان البريطاني مع التنبيه إلى أنه لا يمثل بالضرورة المجموعة كاملة.",
+      "financial_rule": "لم تُقدّر الإيرادات أو الزيارات أو التقييم. تم فصل التمويل عن التقييم والإيراد، ومنع ازدواج احتساب الإغلاق الأول والتمديد في جولة 2021.",
+      "operating_metric_rule": "تم فصل شركاء التصنيع والدول والهكتارات والنتائج التجريبية عن المستخدمين والزيارات والإيراد.",
+      "performance_claim_rule": "تم تقييد كل نسبة أداء بنطاقها: النظام الملحي التاريخي، أو SecondSky، أو دراسة حالة محددة، بدل تعميم نسبة واحدة على كل المنتجات."
+    },
+    "important_notes": [
+      "Red Sea Farms هو الاسم التاريخي لنشاط المزرعة والمنتجات، وليس الاسم الحالي للشركة؛ استُخدم RedSea لاحقًا ثم iyris منذ 2024.",
+      "بيع المحاصيل للمستهلكين لم يعد النشاط الأساسي بعد الاتفاق على انتقال منشأة الإنتاج إلى Pure Harvest في يناير 2024.",
+      "الموقع الحالي في 2026 يقدم iyris كشركة مواد وإضافات ضوئية تخدم الزراعة والبنية التحتية والاستزراع المائي.",
+      "الادعاء الأصلي بأن الشركة تزرع المحاصيل بالمياه المالحة بنسبة 90% يصف نظامًا تاريخيًا متكاملًا، وليس منتج الإضافة الحالي بصورة عامة.",
+      "نتائج OASIS SecondSky مثل خفض الحرارة 1–3 درجات ووفر المياه وتحسن المحصول مرتبطة بتجارب وانتشارات محددة ومنشورة من الشركة والشريك.",
+      "الإيراد الشهري والسنوي غير معلنين علنًا، ولا توجد بيانات موثوقة لزيارات الموقع أو المستخدمين النشطين أو حجم المعاملات.",
+      "تقدير السوق بأكثر من 6 مليارات دولار تقدير شركة لسوق أغطية البيوت المحمية، وليس إيرادًا أو تقييمًا أو TAM مستقلًا مدققًا.",
+      "الجولة البالغة 18.5 مليون دولار في 2022 تمويل، وليست معدل نمو أو إيرادًا.",
+      "إجمالي 52.4 مليون دولار هو جمع حسابي للجولات المعلنة: 1.9M + 16M + 18.5M + 16M، مع عدم تكرار إغلاق 10M داخل جولة 2021.",
+      "التقييم غير معلن، ولا يجوز وصفه بعشرات الملايين اعتمادًا على إجمالي التمويل.",
+      "المصادر التاريخية تسمي Ryan Lefers وMark Tester وDerya Baran ضمن مؤسسي Red Sea Farms، بينما يعرض موقع iyris الحالي Derya Baran وDaniel Bryant كمؤسسي منصة المواد الحالية؛ يعكس ذلك تحولًا مؤسسيًا وسردًا مختلفًا لا يمكن تسويته دون سجل ملكية كامل.",
+      "IYRIS TECHNOLOGY LTD كيان بريطاني نشط، لكن توجد إشارات إلى كيانات سابقة في أبوظبي والسعودية؛ لذلك لم يُفترض أنه الكيان الأم الوحيد.",
+      "بيانات 9+ شركاء تصنيع ودرجات 50°C+ ذاتية الإفصاح من الشركة وليست تدقيقًا مستقلاً.",
+      "لم تُستخدم أدوات IoT أو AWS أو Solar Tech كتقنيات حالية أساسية لعدم وجود دليل حديث مباشر في موقع 2026.",
+      "لا توجد بيانات عامة كافية لحساب معدل نمو أو هامش أو اقتصاديات وحدة موثوقة."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_at": "2026-08-03",
+      "checks_passed": 126,
+      "checks_failed": 0,
+      "checks": [
+        {
+          "name": "base_key_id",
+          "passed": true,
+          "details": "الحقل الأساسي id موجود."
+        },
+        {
+          "name": "base_key_slug",
+          "passed": true,
+          "details": "الحقل الأساسي slug موجود."
+        },
+        {
+          "name": "base_key_name",
+          "passed": true,
+          "details": "الحقل الأساسي name موجود."
+        },
+        {
+          "name": "base_key_headline",
+          "passed": true,
+          "details": "الحقل الأساسي headline موجود."
+        },
+        {
+          "name": "base_key_category",
+          "passed": true,
+          "details": "الحقل الأساسي category موجود."
+        },
+        {
+          "name": "base_key_company",
+          "passed": true,
+          "details": "الحقل الأساسي company موجود."
+        },
+        {
+          "name": "base_key_directory_snapshot",
+          "passed": true,
+          "details": "الحقل الأساسي directory_snapshot موجود."
+        },
+        {
+          "name": "base_key_overview",
+          "passed": true,
+          "details": "الحقل الأساسي overview موجود."
+        },
+        {
+          "name": "base_key_market_data",
+          "passed": true,
+          "details": "الحقل الأساسي market_data موجود."
+        },
+        {
+          "name": "base_key_financials",
+          "passed": true,
+          "details": "الحقل الأساسي financials موجود."
+        },
+        {
+          "name": "base_key_lessons",
+          "passed": true,
+          "details": "الحقل الأساسي lessons موجود."
+        },
+        {
+          "name": "base_key_tools",
+          "passed": true,
+          "details": "الحقل الأساسي tools موجود."
+        },
+        {
+          "name": "professional_v2_key_verification",
+          "passed": true,
+          "details": "قسم Professional V2 verification موجود."
+        },
+        {
+          "name": "professional_v2_key_evidence_map_schema",
+          "passed": true,
+          "details": "قسم Professional V2 evidence_map_schema موجود."
+        },
+        {
+          "name": "professional_v2_key_evidence_map",
+          "passed": true,
+          "details": "قسم Professional V2 evidence_map موجود."
+        },
+        {
+          "name": "professional_v2_key_sources",
+          "passed": true,
+          "details": "قسم Professional V2 sources موجود."
+        },
+        {
+          "name": "json_root_object",
+          "passed": true,
+          "details": "الجذر كائن JSON."
+        },
+        {
+          "name": "original_id_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على id الأصلي."
+        },
+        {
+          "name": "original_slug_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على slug الأصلي."
+        },
+        {
+          "name": "base_structure_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على البنية الأساسية."
+        },
+        {
+          "name": "arabic_final_content",
+          "passed": true,
+          "details": "المحتوى النهائي عربي."
+        },
+        {
+          "name": "source_ids_unique",
+          "passed": true,
+          "details": "معرّفات المصادر فريدة."
+        },
+        {
+          "name": "minimum_source_count",
+          "passed": true,
+          "details": "عدد المصادر 21."
+        },
+        {
+          "name": "primary_source_majority",
+          "passed": true,
+          "details": "أكثر من 70% من المصادر أولية."
+        },
+        {
+          "name": "source_urls_valid",
+          "passed": true,
+          "details": "روابط المصادر صالحة بنيويًا."
+        },
+        {
+          "name": "source_metadata_complete",
+          "passed": true,
+          "details": "بيانات المصادر مكتملة."
+        },
+        {
+          "name": "no_duplicate_urls",
+          "passed": true,
+          "details": "لا توجد روابط مكررة."
+        },
+        {
+          "name": "evidence_required_paths",
+          "passed": true,
+          "details": "خريطة الأدلة تغطي 15 مسارًا جوهريًا."
+        },
+        {
+          "name": "evidence_value_match_$.company.location",
+          "passed": true,
+          "details": "قيمة الدليل تطابق $.company.location."
+        },
+        {
+          "name": "evidence_fields_complete_$.company.location",
+          "passed": true,
+          "details": "حقول الدليل مكتملة في $.company.location."
+        },
+        {
+          "name": "evidence_source_count_$.company.location",
+          "passed": true,
+          "details": "عدد المصادر متسق في $.company.location."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.company.location",
+          "passed": true,
+          "details": "كل المصادر موجودة في $.company.location."
+        },
+        {
+          "name": "evidence_reference_integrity_$.company.location",
+          "passed": true,
+          "details": "تكامل المراجع صحيح في $.company.location."
+        },
+        {
+          "name": "evidence_value_match_$.company.business_model",
+          "passed": true,
+          "details": "قيمة الدليل تطابق $.company.business_model."
+        },
+        {
+          "name": "evidence_fields_complete_$.company.business_model",
+          "passed": true,
+          "details": "حقول الدليل مكتملة في $.company.business_model."
+        },
+        {
+          "name": "evidence_source_count_$.company.business_model",
+          "passed": true,
+          "details": "عدد المصادر متسق في $.company.business_model."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.company.business_model",
+          "passed": true,
+          "details": "كل المصادر موجودة في $.company.business_model."
+        },
+        {
+          "name": "evidence_reference_integrity_$.company.business_model",
+          "passed": true,
+          "details": "تكامل المراجع صحيح في $.company.business_model."
+        },
+        {
+          "name": "evidence_value_match_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "قيمة الدليل تطابق $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_fields_complete_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "حقول الدليل مكتملة في $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_source_count_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "عدد المصادر متسق في $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "كل المصادر موجودة في $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_reference_integrity_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "تكامل المراجع صحيح في $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "evidence_value_match_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "قيمة الدليل تطابق $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_fields_complete_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "حقول الدليل مكتملة في $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_source_count_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "عدد المصادر متسق في $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "كل المصادر موجودة في $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_reference_integrity_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "تكامل المراجع صحيح في $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "evidence_value_match_$.overview.problem",
+          "passed": true,
+          "details": "قيمة الدليل تطابق $.overview.problem."
+        },
+        {
+          "name": "evidence_fields_complete_$.overview.problem",
+          "passed": true,
+          "details": "حقول الدليل مكتملة في $.overview.problem."
+        },
+        {
+          "name": "evidence_source_count_$.overview.problem",
+          "passed": true,
+          "details": "عدد المصادر متسق في $.overview.problem."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.overview.problem",
+          "passed": true,
+          "details": "كل المصادر موجودة في $.overview.problem."
+        },
+        {
+          "name": "evidence_reference_integrity_$.overview.problem",
+          "passed": true,
+          "details": "تكامل المراجع صحيح في $.overview.problem."
+        },
+        {
+          "name": "evidence_value_match_$.overview.solution",
+          "passed": true,
+          "details": "قيمة الدليل تطابق $.overview.solution."
+        },
+        {
+          "name": "evidence_fields_complete_$.overview.solution",
+          "passed": true,
+          "details": "حقول الدليل مكتملة في $.overview.solution."
+        },
+        {
+          "name": "evidence_source_count_$.overview.solution",
+          "passed": true,
+          "details": "عدد المصادر متسق في $.overview.solution."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.overview.solution",
+          "passed": true,
+          "details": "كل المصادر موجودة في $.overview.solution."
+        },
+        {
+          "name": "evidence_reference_integrity_$.overview.solution",
+          "passed": true,
+          "details": "تكامل المراجع صحيح في $.overview.solution."
+        },
+        {
+          "name": "evidence_value_match_$.market_data.target_audience",
+          "passed": true,
+          "details": "قيمة الدليل تطابق $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_fields_complete_$.market_data.target_audience",
+          "passed": true,
+          "details": "حقول الدليل مكتملة في $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_source_count_$.market_data.target_audience",
+          "passed": true,
+          "details": "عدد المصادر متسق في $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.market_data.target_audience",
+          "passed": true,
+          "details": "كل المصادر موجودة في $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_reference_integrity_$.market_data.target_audience",
+          "passed": true,
+          "details": "تكامل المراجع صحيح في $.market_data.target_audience."
+        },
+        {
+          "name": "evidence_value_match_$.market_data.market_size",
+          "passed": true,
+          "details": "قيمة الدليل تطابق $.market_data.market_size."
+        },
+        {
+          "name": "evidence_fields_complete_$.market_data.market_size",
+          "passed": true,
+          "details": "حقول الدليل مكتملة في $.market_data.market_size."
+        },
+        {
+          "name": "evidence_source_count_$.market_data.market_size",
+          "passed": true,
+          "details": "عدد المصادر متسق في $.market_data.market_size."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.market_data.market_size",
+          "passed": true,
+          "details": "كل المصادر موجودة في $.market_data.market_size."
+        },
+        {
+          "name": "evidence_reference_integrity_$.market_data.market_size",
+          "passed": true,
+          "details": "تكامل المراجع صحيح في $.market_data.market_size."
+        },
+        {
+          "name": "evidence_value_match_$.market_data.growth_rate",
+          "passed": true,
+          "details": "قيمة الدليل تطابق $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_fields_complete_$.market_data.growth_rate",
+          "passed": true,
+          "details": "حقول الدليل مكتملة في $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_source_count_$.market_data.growth_rate",
+          "passed": true,
+          "details": "عدد المصادر متسق في $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.market_data.growth_rate",
+          "passed": true,
+          "details": "كل المصادر موجودة في $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_reference_integrity_$.market_data.growth_rate",
+          "passed": true,
+          "details": "تكامل المراجع صحيح في $.market_data.growth_rate."
+        },
+        {
+          "name": "evidence_value_match_$.financials.initial_investment",
+          "passed": true,
+          "details": "قيمة الدليل تطابق $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_fields_complete_$.financials.initial_investment",
+          "passed": true,
+          "details": "حقول الدليل مكتملة في $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_source_count_$.financials.initial_investment",
+          "passed": true,
+          "details": "عدد المصادر متسق في $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.financials.initial_investment",
+          "passed": true,
+          "details": "كل المصادر موجودة في $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_reference_integrity_$.financials.initial_investment",
+          "passed": true,
+          "details": "تكامل المراجع صحيح في $.financials.initial_investment."
+        },
+        {
+          "name": "evidence_value_match_$.financials.valuation",
+          "passed": true,
+          "details": "قيمة الدليل تطابق $.financials.valuation."
+        },
+        {
+          "name": "evidence_fields_complete_$.financials.valuation",
+          "passed": true,
+          "details": "حقول الدليل مكتملة في $.financials.valuation."
+        },
+        {
+          "name": "evidence_source_count_$.financials.valuation",
+          "passed": true,
+          "details": "عدد المصادر متسق في $.financials.valuation."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.financials.valuation",
+          "passed": true,
+          "details": "كل المصادر موجودة في $.financials.valuation."
+        },
+        {
+          "name": "evidence_reference_integrity_$.financials.valuation",
+          "passed": true,
+          "details": "تكامل المراجع صحيح في $.financials.valuation."
+        },
+        {
+          "name": "evidence_value_match_$.financials.revenue_streams",
+          "passed": true,
+          "details": "قيمة الدليل تطابق $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_fields_complete_$.financials.revenue_streams",
+          "passed": true,
+          "details": "حقول الدليل مكتملة في $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_source_count_$.financials.revenue_streams",
+          "passed": true,
+          "details": "عدد المصادر متسق في $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.financials.revenue_streams",
+          "passed": true,
+          "details": "كل المصادر موجودة في $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_reference_integrity_$.financials.revenue_streams",
+          "passed": true,
+          "details": "تكامل المراجع صحيح في $.financials.revenue_streams."
+        },
+        {
+          "name": "evidence_value_match_$.tools",
+          "passed": true,
+          "details": "قيمة الدليل تطابق $.tools."
+        },
+        {
+          "name": "evidence_fields_complete_$.tools",
+          "passed": true,
+          "details": "حقول الدليل مكتملة في $.tools."
+        },
+        {
+          "name": "evidence_source_count_$.tools",
+          "passed": true,
+          "details": "عدد المصادر متسق في $.tools."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.tools",
+          "passed": true,
+          "details": "كل المصادر موجودة في $.tools."
+        },
+        {
+          "name": "evidence_reference_integrity_$.tools",
+          "passed": true,
+          "details": "تكامل المراجع صحيح في $.tools."
+        },
+        {
+          "name": "evidence_value_match_$.headline",
+          "passed": true,
+          "details": "قيمة الدليل تطابق $.headline."
+        },
+        {
+          "name": "evidence_fields_complete_$.headline",
+          "passed": true,
+          "details": "حقول الدليل مكتملة في $.headline."
+        },
+        {
+          "name": "evidence_source_count_$.headline",
+          "passed": true,
+          "details": "عدد المصادر متسق في $.headline."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.headline",
+          "passed": true,
+          "details": "كل المصادر موجودة في $.headline."
+        },
+        {
+          "name": "evidence_reference_integrity_$.headline",
+          "passed": true,
+          "details": "تكامل المراجع صحيح في $.headline."
+        },
+        {
+          "name": "evidence_value_match_$.lessons",
+          "passed": true,
+          "details": "قيمة الدليل تطابق $.lessons."
+        },
+        {
+          "name": "evidence_fields_complete_$.lessons",
+          "passed": true,
+          "details": "حقول الدليل مكتملة في $.lessons."
+        },
+        {
+          "name": "evidence_source_count_$.lessons",
+          "passed": true,
+          "details": "عدد المصادر متسق في $.lessons."
+        },
+        {
+          "name": "evidence_source_ids_exist_$.lessons",
+          "passed": true,
+          "details": "كل المصادر موجودة في $.lessons."
+        },
+        {
+          "name": "evidence_reference_integrity_$.lessons",
+          "passed": true,
+          "details": "تكامل المراجع صحيح في $.lessons."
+        },
+        {
+          "name": "no_nan_or_infinity",
+          "passed": true,
+          "details": "لا توجد قيم JSON غير صالحة."
+        },
+        {
+          "name": "old_revenue_estimate_removed",
+          "passed": true,
+          "details": "أزيل تقدير الإيراد القديم."
+        },
+        {
+          "name": "traffic_metric_corrected",
+          "passed": true,
+          "details": "لم تُستخدم التوسعات بدل الزيارات."
+        },
+        {
+          "name": "current_brand_identified",
+          "passed": true,
+          "details": "تم تحديث الاسم الحالي."
+        },
+        {
+          "name": "produce_business_historical",
+          "passed": true,
+          "details": "تم تمييز نشاط المحاصيل التاريخي."
+        },
+        {
+          "name": "farm_sale_present",
+          "passed": true,
+          "details": "صفقة انتقال نشاط المزرعة موضحة."
+        },
+        {
+          "name": "current_materials_model_present",
+          "passed": true,
+          "details": "النموذج الحالي موضح."
+        },
+        {
+          "name": "historical_90_percent_caveated",
+          "passed": true,
+          "details": "نسبة النظام التاريخي مقيدة."
+        },
+        {
+          "name": "case_results_caveated",
+          "passed": true,
+          "details": "نتائج الحالة غير معممة."
+        },
+        {
+          "name": "funding_total_correct",
+          "passed": true,
+          "details": "إجمالي التمويل الحسابي صحيح."
+        },
+        {
+          "name": "funding_overlap_controlled",
+          "passed": true,
+          "details": "منع ازدواج جولة 2021."
+        },
+        {
+          "name": "valuation_undisclosed",
+          "passed": true,
+          "details": "لا يوجد تقييم مختلق."
+        },
+        {
+          "name": "market_size_company_estimate",
+          "passed": true,
+          "details": "حجم السوق موسوم كتقدير شركة."
+        },
+        {
+          "name": "growth_rate_not_invented",
+          "passed": true,
+          "details": "لم يُخترع معدل نمو."
+        },
+        {
+          "name": "metric_taxonomy_present",
+          "passed": true,
+          "details": "فصل المقاييس شامل."
+        },
+        {
+          "name": "lessons_unique",
+          "passed": true,
+          "details": "الدروس فريدة."
+        },
+        {
+          "name": "lessons_company_specific",
+          "passed": true,
+          "details": "الدروس خاصة بالشركة."
+        },
+        {
+          "name": "tools_current_and_historical",
+          "passed": true,
+          "details": "التقنيات الحالية والتاريخية مفصولة."
+        },
+        {
+          "name": "founder_discrepancy_noted",
+          "passed": true,
+          "details": "اختلاف سرد المؤسسين موضح."
+        },
+        {
+          "name": "multi_entity_limit_noted",
+          "passed": true,
+          "details": "حدود الكيان القانوني موضحة."
+        },
+        {
+          "name": "sec_scope_explained",
+          "passed": true,
+          "details": "عدم انطباق SEC موضح."
+        },
+        {
+          "name": "verified_date_consistent",
+          "passed": true,
+          "details": "تاريخ التحقق متسق."
+        },
+        {
+          "name": "schema_version",
+          "passed": true,
+          "details": "إصدار المخطط صحيح."
+        }
+      ],
+      "validator_notes": [
+        "تمت قراءة الملف الأصلي من المسار المرفق والتحقق من صحة JSON.",
+        "تم الحفاظ على البنية الأساسية وإضافة verification وevidence_map_schema وevidence_map وsources.",
+        "تمت مطابقة كل field_value في evidence_map مع الحقل النهائي المقابل.",
+        "تم التحقق من تكامل معرّفات المصادر والروابط وعدد المراجع.",
+        "تم فصل Red Sea Farms التاريخية عن iyris الحالية، وبيع المحاصيل عن نموذج المواد.",
+        "تم الفصل بين الإيراد والتمويل والتقييم وحجم السوق والزيارات ومقاييس الشراكات والتجارب.",
+        "تم منع NaN وInfinity والتقديرات غير المدعومة."
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول الجوهرية بقيمتها النهائية وحالة التحقق والمصادر والقيود، مع الفصل بين هوية العلامة التاريخية والشركة الحالية والمقاييس المالية والتشغيلية.",
+    "required_fields": [
+      "field_value",
+      "verification_status",
+      "confidence",
+      "claim_type",
+      "verified_on",
+      "evidence_summary",
+      "source_ids",
+      "source_references",
+      "limitations",
+      "source_count"
+    ],
+    "verification_status_values": [
+      "verified_brand_transition_with_multi_entity_limit",
+      "verified_historical_to_current_b2b_pivot",
+      "verified_as_not_publicly_disclosed",
+      "verified_traffic_undisclosed_operating_metrics_separated",
+      "verified_market_problem_and_global_water_context",
+      "verified_current_product_with_case_specific_results",
+      "verified_current_b2b_segments",
+      "verified_company_estimate_not_independent_tam",
+      "verified_no_comparable_growth_rate",
+      "verified_announced_rounds_with_overlap_control",
+      "verified_current_pathways_and_historical_stream",
+      "verified_current_materials_stack_with_historical_caveats",
+      "verified_editorial_synthesis",
+      "analytical_inference_grounded_in_evidence"
+    ],
+    "confidence_scale": {
+      "مرتفعة": "مدعوم بمصدر أولي أو سجل حكومي واضح، أو بعدم وجود إفصاح رغم مراجعة المصادر الرسمية.",
+      "متوسطة إلى مرتفعة": "مدعوم بعدة مصادر أولية مع عنصر صياغة تحريري محدود.",
+      "متوسطة": "يعتمد على تقدير الشركة أو استنتاج تحليلي مع قيود معلنة.",
+      "منخفضة": "دليل غير كاف؛ لا تُستخدم هذه الدرجة لإثبات قيمة مالية."
+    },
+    "metric_separation": [
+      "الإيراد الشهري",
+      "الإيراد السنوي",
+      "التمويل",
+      "التقييم",
+      "حجم السوق",
+      "زيارات الموقع",
+      "المستخدمون النشطون",
+      "العملاء الدافعون",
+      "شركاء التصنيع",
+      "الدول والأسواق",
+      "الهكتارات أو المساحة المغطاة",
+      "أمتار أو أطنان المواد المباعة",
+      "نتائج التجارب",
+      "إيراد بيع المحاصيل التاريخي",
+      "إيراد الإضافات والمواد الحالي"
+    ]
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "بدأ المشروع في 2018 كشركة منبثقة من منظومة جامعة الملك عبدالله للعلوم والتقنية في ثول بالمملكة العربية السعودية تحت اسم Red Sea Farms، ثم استُخدم اسم RedSea، وأعيدت تسميته إلى iyris في 2024. يعرض الموقع الحالي نشاطًا عالميًا في المواد المتقدمة، بينما يسجل Companies House كيانًا بريطانيًا نشطًا باسم IYRIS TECHNOLOGY LTD، وتعرض الشركة وجودًا في ثول والولايات المتحدة. تعدد الكيانات يعني أن السجل البريطاني لا يمثل بالضرورة المجموعة كاملة.",
+      "verification_status": "verified_brand_transition_with_multi_entity_limit",
+      "confidence": "مرتفعة",
+      "claim_type": "هوية وموقع الشركة",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر الرسمية والحكومية تدعم النشأة في KAUST، التحول من Red Sea Farms إلى RedSea ثم iyris، ووجود كيان بريطاني نشط مع تعدد كيانات المجموعة.",
+      "source_ids": [
+        "SRC-10",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-10",
+          "title": "KAUST startup iyris poised to scale with latest $16 million Series A",
+          "publisher": "King Abdullah University of Science and Technology",
+          "url": "https://www.kaust.edu.sa/en/news/kaust-startup-iyris-poised-to-scale-its-technology-with-latest-16-million-series-a-funding",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2024-06-03",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان رسمي",
+          "source_locator": "Company formerly known as RedSea",
+          "supports": "الاسم الحالي والارتباط بـKAUST"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Innovation and Entrepreneurship — KAUST Sustainability",
+          "publisher": "King Abdullah University of Science and Technology",
+          "url": "https://sustainability.kaust.edu.sa/innovation-and-entrepreneurship/",
+          "source_type": "صفحة حاضنة رسمية حديثة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة حاضنة رسمية",
+          "source_locator": "Featured startup transition",
+          "supports": "الانتقال من المحاصيل إلى التقنية"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "IYRIS TECHNOLOGY LTD overview",
+          "publisher": "UK Companies House",
+          "url": "https://find-and-update.company-information.service.gov.uk/company/11662935",
+          "source_type": "سجل شركات حكومي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "سجل حكومي",
+          "source_locator": "Company overview",
+          "supports": "الكيان البريطاني النشط"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "IYRIS TECHNOLOGY LTD persons with significant control",
+          "publisher": "UK Companies House",
+          "url": "https://find-and-update.company-information.service.gov.uk/company/11662935/persons-with-significant-control",
+          "source_type": "سجل ملكية وسيطرة حكومي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "سجل حكومي",
+          "source_locator": "Historical control",
+          "supports": "ارتباط Red Sea Farms Ltd بالكيان البريطاني"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "RedSea rebrands as iyris and announces partnership with Magrabi Agriculture",
+          "publisher": "Global AgInvesting",
+          "url": "https://globalaginvesting.com/redsea-rebrands-as-iyris-announces-strategic-partnership-with-magrabi-agriculture/",
+          "source_type": "تقرير قطاعي عن إعادة التسمية",
+          "published_at": "2024-03-18",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "تقرير قطاعي",
+          "source_locator": "2024 rebrand",
+          "supports": "إعادة التسمية إلى iyris"
+        }
+      ],
+      "limitations": "لا توجد خريطة عامة كاملة لكل الكيانات القانونية السعودية والإماراتية والبريطانية أو ملكيتها الحالية.",
+      "source_count": 5
+    },
+    "$.company.business_model": {
+      "field_value": "كان النموذج التاريخي يجمع بين بيع المحاصيل محليًا وتطوير أنظمة زراعية للمناخ الحار. بعد الاتفاق على بيع منشأة إنتاج المحاصيل في السعودية إلى Pure Harvest أواخر 2023، انتقلت الشركة إلى نموذج B2B تقني خالص: تطوير وبيع إضافات ضوئية ووظيفية تُدمج أثناء تصنيع أفلام وشباك ومواد بوليمرية، عبر شراكات تصنيع وتوزيع وتطوير مشترك. لم يعد بيع المحاصيل للمستهلكين هو النشاط الأساسي المعلن في 2026.",
+      "verification_status": "verified_historical_to_current_b2b_pivot",
+      "confidence": "مرتفعة",
+      "claim_type": "نموذج عمل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المصادر بيع نشاط الإنتاج والتحول إلى شركة تقنية خالصة، بينما يعرض الموقع الحالي الإضافات والشراكات الصناعية والقطاعات الجديدة.",
+      "source_ids": [
+        "SRC-11",
+        "SRC-01",
+        "SRC-03",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "Pure Harvest to acquire RedSea’s Saudi farming operations",
+          "publisher": "Pure Harvest Smart Farms",
+          "url": "https://www.pureharvestfarms.com/news/pure-harvest-acquire-redseas-saudi-arabian-farming-operations-and-form-climate-technology",
+          "source_type": "إعلان صفقة رسمي من الطرف المستحوذ",
+          "published_at": "2023-12-10",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان صفقة رسمي",
+          "source_locator": "Strategic transition",
+          "supports": "بيع نشاط المزرعة والتحول إلى pure-play tech"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "iyris — Advanced Additives for Films, Coatings, and Composites",
+          "publisher": "iyris",
+          "url": "https://iyris.com/",
+          "source_type": "موقع الشركة الرسمي الحالي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "موقع رسمي",
+          "source_locator": "Current positioning",
+          "supports": "الإضافات المتقدمة للمواد"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "iyris — Advanced Optical and Functional Additives",
+          "publisher": "iyris",
+          "url": "https://iyris.com/additives",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "Additive integration",
+          "supports": "المنتجات الحالية"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Innovation and Entrepreneurship — KAUST Sustainability",
+          "publisher": "King Abdullah University of Science and Technology",
+          "url": "https://sustainability.kaust.edu.sa/innovation-and-entrepreneurship/",
+          "source_type": "صفحة حاضنة رسمية حديثة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة KAUST",
+          "source_locator": "Historical produce business",
+          "supports": "النموذج التاريخي والتحول"
+        }
+      ],
+      "limitations": "لم تُنشر عقود أو تسعيرات تفصيلية، لذا صيغت مسارات الدخل على مستوى النموذج لا على مستوى الاعتراف المحاسبي.",
+      "source_count": 4
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير مُفصح عنه علنًا. لم تُنشر قوائم مالية للمجموعة أو قيمة موثوقة للإيراد الشهري أو السنوي. نقلت TechCrunch عن الإدارة أن الربع الأول من 2024 تجاوز كامل 2023 في عدد العملاء والمنتجات المباعة أو الإيراد، لكن غياب القيمة الأساسية والتعريف الدقيق يمنع تحويل التصريح إلى MRR أو معدل نمو مالي.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "مرتفعة",
+      "claim_type": "إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد رقم إيراد شهري أو سنوي موثوق، وتصريح النمو في 2024 غير كافٍ لاشتقاق قيمة مالية.",
+      "source_ids": [
+        "SRC-18",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-18",
+          "title": "Iyris makes fresh produce easier to grow in difficult climates, raises $16M",
+          "publisher": "TechCrunch",
+          "url": "https://techcrunch.com/2024/05/30/iyris-makes-fresh-produce-easier-to-grow-in-difficult-climates-raises-16m/",
+          "source_type": "تقرير صحفي يستند إلى مقابلة الإدارة",
+          "published_at": "2024-05-30",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "مقابلة إدارة",
+          "source_locator": "Q1 2024 performance statement",
+          "supports": "اتجاه النمو دون أرقام"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "IYRIS TECHNOLOGY LTD overview",
+          "publisher": "UK Companies House",
+          "url": "https://find-and-update.company-information.service.gov.uk/company/11662935",
+          "source_type": "سجل شركات حكومي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "سجل حكومي",
+          "source_locator": "Private company status",
+          "supports": "غياب إفصاح مالي عام للمجموعة"
+        }
+      ],
+      "limitations": "قد تنشر كيانات منفردة حسابات مختصرة، لكنها لا تمثل بالضرورة المجموعة ولا توفر إيرادًا موحدًا.",
+      "source_count": 2
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير مُفصح عنه علنًا، ولا يوجد رقم موثوق لزيارات الموقع أو المستخدمين النشطين. يعلن الموقع الحالي 9+ شركاء تصنيع عالميين والتحقق في درجات تتجاوز 50 مئوية وأول انتشارات تجارية في 2024؛ هذه مؤشرات شراكات ونشر تقني وليست زيارات أو مستخدمين أو معاملات.",
+      "verification_status": "verified_traffic_undisclosed_operating_metrics_separated",
+      "confidence": "مرتفعة",
+      "claim_type": "زيارات ومقاييس تشغيل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا تنشر الشركة زيارات أو مستخدمين؛ المتاح مقاييس شركاء تصنيع ونشر واختبار تقني.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "iyris — Company",
+          "publisher": "iyris",
+          "url": "https://iyris.com/company",
+          "source_type": "صفحة الشركة الرسمية الحالية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة رسمية",
+          "source_locator": "Current operating markers",
+          "supports": "9+ شركاء تصنيع و50°C+ وأول نشر 2024"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "iyris LinkedIn company profile",
+          "publisher": "iyris / LinkedIn",
+          "url": "https://www.linkedin.com/company/iyris-group",
+          "source_type": "ملف شركة مُدار ذاتيًا",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "ملف شركة ذاتي",
+          "source_locator": "Company profile",
+          "supports": "الحضور والمجال الحالي"
+        }
+      ],
+      "limitations": "الأرقام التشغيلية ذاتية الإفصاح ولا تساوي العملاء الدافعين أو المستخدمين أو زيارات الموقع.",
+      "source_count": 2
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "في البيئات الحارة، ترفع الأشعة الشمسية — ولا سيما الطاقة القريبة من تحت الحمراء — الحمل الحراري داخل البيوت المحمية وعلى المواد المكشوفة، بينما تحتاج النباتات إلى استمرار مرور الضوء الفعال للتمثيل الضوئي. يؤدي ذلك إلى مفاضلة صعبة بين تقليل الحرارة والحفاظ على الضوء، مع ارتفاع استهلاك الري والتبريد وتدهور المواد بفعل الأشعة فوق البنفسجية. عالميًا تمثل الزراعة نحو 72% من سحوبات المياه العذبة، لكن هذه النسبة سياق قطاعي وليست ناتجة عن البيوت المحمية وحدها.",
+        "impact": "الإجهاد الحراري قد يخفض جودة المحصول ويقصر موسم الإنتاج ويرفع استهلاك الماء والطاقة وتكاليف التشغيل، كما قد يسرّع تقادم الأفلام والأسطح. في الاستزراع المائي والبنية التحتية، تؤثر الحرارة والضوء غير المنضبطين في استقرار الأنظمة والراحة وعمر المواد."
+      },
+      "verification_status": "verified_market_problem_and_global_water_context",
+      "confidence": "مرتفعة",
+      "claim_type": "مشكلة سوقية",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الموقع الحالي يوضح مشكلة الحرارة والضوء وتدهور المواد، وFAO يوفر سياق سحوبات المياه الزراعية العالمي.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-04",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "iyris — Advanced Additives for Films, Coatings, and Composites",
+          "publisher": "iyris",
+          "url": "https://iyris.com/",
+          "source_type": "موقع الشركة الرسمي الحالي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "موقع رسمي",
+          "source_locator": "Problem statement",
+          "supports": "الحرارة وإدارة الضوء وتدهور المواد"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "iyris — Industries",
+          "publisher": "iyris",
+          "url": "https://iyris.com/industries",
+          "source_type": "صفحة قطاعات رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة قطاعات",
+          "source_locator": "Agriculture and infrastructure problems",
+          "supports": "أثر الحمل الحراري والضوء"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Agricultural water management",
+          "publisher": "Food and Agriculture Organization of the United Nations",
+          "url": "https://www.fao.org/land-water/water/agricultural-water-management/water-accounting/en",
+          "source_type": "مصدر حكومي دولي لسياق المشكلة",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر دولي رسمي",
+          "source_locator": "Freshwater withdrawals",
+          "supports": "72% من السحوبات للزراعة"
+        }
+      ],
+      "limitations": "رقم FAO عالمي ولا يصف حصة البيوت المحمية أو أثر iyris تحديدًا.",
+      "source_count": 3
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "تطور iyris إضافات نانوية وضوئية تُدمج داخل المصفوفة البوليمرية أثناء التصنيع بدل وضعها كطلاء خارجي فقط. تتحكم الإضافات في حجب جزء من الأشعة القريبة من تحت الحمراء، وانتشار الضوء، والانتقائية الطيفية، مع الحفاظ على الضوء المطلوب للتمثيل الضوئي. تُستخدم في أفلام البيوت المحمية والشباك والشاشات والبولي كربونات وتطبيقات أخرى. في دراسة حالة OASIS SecondSky المنشورة من الشركة وشريكها، تراوحت النتائج المجمعة بين خفض ذروة الحرارة 1–3 درجات، ووفر مياه حتى 20%، وتحسن محصول تقريبي 14–30%؛ وهي نتائج خاصة بتجارب وانتشارات محددة وليست ضمانًا لكل مزرعة."
+      },
+      "verification_status": "verified_current_product_with_case_specific_results",
+      "confidence": "مرتفعة",
+      "claim_type": "منتج وحل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم صفحات المنتج ودراسة الحالة تقنية الإضافة داخل البوليمر والنتائج التشغيلية المحددة.",
+      "source_ids": [
+        "SRC-03",
+        "SRC-05",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "iyris — Advanced Optical and Functional Additives",
+          "publisher": "iyris",
+          "url": "https://iyris.com/additives",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج رسمية",
+          "source_locator": "Additive families and applications",
+          "supports": "الآلية والتطبيقات"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "OASIS SecondSky — Co-developed with Grupo Armando Álvarez",
+          "publisher": "iyris",
+          "url": "https://iyris.com/cases/oasis-secondsky",
+          "source_type": "دراسة حالة رسمية للشركة وشريك تصنيع",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "دراسة حالة رسمية",
+          "source_locator": "OASIS SecondSky results",
+          "supports": "النتائج الميدانية"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "SABIC teams up with iyris and Napco",
+          "publisher": "SABIC",
+          "url": "https://www.sabic.com/en/news/45345-sabic-teams-up-with-iyris-and-napco",
+          "source_type": "بيان شراكة رسمي",
+          "published_at": "2024-10-31",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان شراكة رسمي",
+          "source_locator": "Industrial film integration",
+          "supports": "التكامل مع البوليمرات والبثق"
+        }
+      ],
+      "limitations": "نتائج دراسة الحالة مجمعة من تجارب وانتشارات منشورة من الشركة والشريك وليست تجربة مستقلة محكمة أو ضمان أداء.",
+      "source_count": 3
+    },
+    "$.market_data.target_audience": {
+      "field_value": "مصنعو ومحولو البوليمرات والأفلام والشباك الزراعية، وموزعو مستلزمات البيوت المحمية، والمزارعون التجاريون في المناخات الحارة، وشركات المواد والبناء التي تحتاج إلى خفض اكتساب الحرارة، ومشغلو الاستزراع المائي، إضافة إلى شركاء التطوير الصناعي الذين يدمجون الإضافات داخل منتجاتهم.",
+      "verification_status": "verified_current_b2b_segments",
+      "confidence": "مرتفعة",
+      "claim_type": "جمهور مستهدف",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "القطاعات وصفحات الشراكة الحالية تدعم المصنعين والموزعين والمزارعين التجاريين والاستزراع المائي والبنية التحتية.",
+      "source_ids": [
+        "SRC-04",
+        "SRC-03",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "iyris — Industries",
+          "publisher": "iyris",
+          "url": "https://iyris.com/industries",
+          "source_type": "صفحة قطاعات رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة قطاعات رسمية",
+          "source_locator": "Agriculture, infrastructure, aquaculture",
+          "supports": "القطاعات النهائية"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "iyris — Advanced Optical and Functional Additives",
+          "publisher": "iyris",
+          "url": "https://iyris.com/additives",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "Films, nets, screens and polycarbonate",
+          "supports": "مصنعو المواد"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "SABIC teams up with iyris and Napco",
+          "publisher": "SABIC",
+          "url": "https://www.sabic.com/en/news/45345-sabic-teams-up-with-iyris-and-napco",
+          "source_type": "بيان شراكة رسمي",
+          "published_at": "2024-10-31",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان شراكة",
+          "source_locator": "SABIC and Napco value chain",
+          "supports": "المصنعون وشركاء التكامل"
+        }
+      ],
+      "limitations": "لا توجد أعداد عملاء أو إيراد معلن حسب الشريحة.",
+      "source_count": 3
+    },
+    "$.market_data.market_size": {
+      "field_value": "قدرت إدارة iyris في 2024 سوق أغطية البيوت المحمية العالمي بأكثر من 6 مليارات دولار من المبيعات السنوية المتكررة. هذا تقدير صادر عن الشركة لسوق منتج محدد، وليس حجم سوق مستقلًا مدققًا ولا إيرادًا للشركة. توسع تموضع 2026 إلى البنية التحتية والاستزراع المائي والطلاءات والمواد المركبة، لكن لم يُنشر TAM موثوق للنطاق الأوسع.",
+      "verification_status": "verified_company_estimate_not_independent_tam",
+      "confidence": "متوسطة",
+      "claim_type": "حجم سوق",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التقدير المنشور بأكثر من 6 مليارات دولار يخص مبيعات أغطية البيوت المحمية ويُنسب إلى الشركة، بينما لا يوجد TAM موثق للنطاق الأوسع في 2026.",
+      "source_ids": [
+        "SRC-18",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-18",
+          "title": "Iyris makes fresh produce easier to grow in difficult climates, raises $16M",
+          "publisher": "TechCrunch",
+          "url": "https://techcrunch.com/2024/05/30/iyris-makes-fresh-produce-easier-to-grow-in-difficult-climates-raises-16m/",
+          "source_type": "تقرير صحفي يستند إلى مقابلة الإدارة",
+          "published_at": "2024-05-30",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "مقابلة صحفية",
+          "source_locator": "Company market estimate",
+          "supports": "تقدير >6B لأغطية البيوت المحمية"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "iyris — Industries",
+          "publisher": "iyris",
+          "url": "https://iyris.com/industries",
+          "source_type": "صفحة قطاعات رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة قطاعات رسمية",
+          "source_locator": "Expanded industries",
+          "supports": "اتساع النطاق خارج الأغطية"
+        }
+      ],
+      "limitations": "التقدير غير مدقق مستقلًا ولا يحدد المنهجية أو الحصة القابلة للخدمة، ولا يمثل إيراد iyris.",
+      "source_count": 2
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا يوجد معدل نمو موثوق للإيراد أو العملاء. تصريح الإدارة بأن الربع الأول من 2024 تجاوز كامل 2023 يثبت اتجاهًا قويًا في مرحلة مبكرة، لكنه لا يوفر قيمًا مطلقة أو تعريفًا واحدًا للمقياس. كما أن 9+ شركاء تصنيع في الموقع الحالي وعدد الدول أو المنشآت المعلن في بيانات سابقة مقاييس مختلفة، فلا يجوز اشتقاق CAGR منها.",
+      "verification_status": "verified_no_comparable_growth_rate",
+      "confidence": "مرتفعة",
+      "claim_type": "نمو",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تصريح الربع الأول يدل على تسارع لكنه لا يقدم أساسًا كميًا، ومقاييس الشركاء والدول والهكتارات غير متجانسة.",
+      "source_ids": [
+        "SRC-18",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-18",
+          "title": "Iyris makes fresh produce easier to grow in difficult climates, raises $16M",
+          "publisher": "TechCrunch",
+          "url": "https://techcrunch.com/2024/05/30/iyris-makes-fresh-produce-easier-to-grow-in-difficult-climates-raises-16m/",
+          "source_type": "تقرير صحفي يستند إلى مقابلة الإدارة",
+          "published_at": "2024-05-30",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "مقابلة إدارة",
+          "source_locator": "Q1 vs full-year 2023",
+          "supports": "اتجاه النمو"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "iyris — Company",
+          "publisher": "iyris",
+          "url": "https://iyris.com/company",
+          "source_type": "صفحة الشركة الرسمية الحالية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "موقع رسمي",
+          "source_locator": "9+ manufacturing partners",
+          "supports": "مقياس شراكات حالي"
+        }
+      ],
+      "limitations": "لا توجد سلسلة زمنية للإيراد أو العملاء أو الأطنان أو الأمتار المربعة تسمح بحساب CAGR.",
+      "source_count": 2
+    },
+    "$.financials.initial_investment": {
+      "field_value": "الجولات المعلنة تشمل 1.9 مليون دولار في 2019، وجولة 2021 التي بدأت بإغلاق 10 ملايين ثم أضيفت 6 ملايين ليصبح إجمالي الجولة نحو 16 مليونًا، وجولة استراتيجية بقيمة 18.5 مليون دولار في 2022، وSeries A بقيمة 16 مليون دولار في 2024. جمع هذه المبالغ غير المتداخلة يعطي نحو 52.4 مليون دولار من التمويل المعلن؛ وهو حساب تجميعي للبيانات المنشورة، لا صافي نقد مستلم ولا قيمة حالية للشركة.",
+      "verification_status": "verified_announced_rounds_with_overlap_control",
+      "confidence": "مرتفعة",
+      "claim_type": "تمويل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الجولات مدعومة بإعلانات رسمية وشبه أولية، مع منع احتساب 10M و16M في 2021 مرتين.",
+      "source_ids": [
+        "SRC-06",
+        "SRC-07",
+        "SRC-08",
+        "SRC-09",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "KAUST startup spinout Red Sea Farms closes $1.9 million investment",
+          "publisher": "King Abdullah University of Science and Technology",
+          "url": "https://www.kaust.edu.sa/en/news/kaust-startup-spinout-red-sea-farms-closes-1-9-million-investment",
+          "source_type": "إعلان تمويل رسمي من الجهة الحاضنة",
+          "published_at": "2019-05-14",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان تمويل رسمي",
+          "source_locator": "2019 seed",
+          "supports": "1.9M"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Saudi-based sustainable AgTech firm receives $10m investment",
+          "publisher": "KAUST Innovation",
+          "url": "https://innovation.kaust.edu.sa/kaust-agtech-startup-receives-10m-investment/",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2021-06-07",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان تمويل رسمي",
+          "source_locator": "2021 first close",
+          "supports": "10M الأولية"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Red Sea Farms raises additional $6 million in pre-Series A round",
+          "publisher": "Wamda",
+          "url": "https://www.wamda.com/2021/08/red-sea-farms-raises-additional-6-million-pre-series-round",
+          "source_type": "إعادة نشر لبيان الشركة",
+          "published_at": "2021-08-15",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "بيان معاد النشر",
+          "source_locator": "2021 extension",
+          "supports": "إضافة 6M وإجمالي الجولة 16M"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Red Sea Farms attracts $18.5 million strategic raise",
+          "publisher": "KAUST Innovation",
+          "url": "https://innovation.kaust.edu.sa/red-sea-farms-attracts-18-5-million-strategic-raise/",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2022-04-26",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان تمويل رسمي",
+          "source_locator": "2022 strategic raise",
+          "supports": "18.5M"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "KAUST startup iyris poised to scale with latest $16 million Series A",
+          "publisher": "King Abdullah University of Science and Technology",
+          "url": "https://www.kaust.edu.sa/en/news/kaust-startup-iyris-poised-to-scale-its-technology-with-latest-16-million-series-a-funding",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2024-06-03",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان تمويل رسمي",
+          "source_locator": "2024 Series A",
+          "supports": "16M"
+        }
+      ],
+      "limitations": "52.4M هو جمع حسابي للمبالغ المعلنة غير المتداخلة، ولا يمثل صافي النقد أو التمويل القائم أو التقييم.",
+      "source_count": 5
+    },
+    "$.financials.valuation": {
+      "field_value": "غير مُفصح عنه علنًا. لا توجد شروط ملكية منشورة تسمح بحساب تقييم قبل الاستثمار أو بعده، ولا يجوز استخدام إجمالي التمويل البالغ نحو 52.4 مليون دولار كتقييم.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "مرتفعة",
+      "claim_type": "تقييم",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لم تنشر الجولات شروط ملكية أو تقييمًا يمكن التحقق منه.",
+      "source_ids": [
+        "SRC-09",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "Red Sea Farms attracts $18.5 million strategic raise",
+          "publisher": "KAUST Innovation",
+          "url": "https://innovation.kaust.edu.sa/red-sea-farms-attracts-18-5-million-strategic-raise/",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2022-04-26",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان تمويل",
+          "source_locator": "2022 round without valuation",
+          "supports": "غياب التقييم"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "KAUST startup iyris poised to scale with latest $16 million Series A",
+          "publisher": "King Abdullah University of Science and Technology",
+          "url": "https://www.kaust.edu.sa/en/news/kaust-startup-iyris-poised-to-scale-its-technology-with-latest-16-million-series-a-funding",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2024-06-03",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان تمويل",
+          "source_locator": "2024 round without valuation",
+          "supports": "غياب التقييم"
+        }
+      ],
+      "limitations": "إجمالي التمويل أو حجم السوق أو قيمة منشآت الإنتاج لا يساوي تقييم الشركة.",
+      "source_count": 2
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "بيع وتوريد الإضافات الضوئية والوظيفية إلى مصنعي الأفلام والشباك والمواد البوليمرية.",
+        "اتفاقات تطوير مشترك وتصنيع لمنتجات تجارية تستخدم تقنيات iyris، مثل OASIS SecondSky بالتعاون مع Grupo Armando Álvarez.",
+        "شراكات توزيع وتكامل صناعي لوصول التقنية إلى المزارعين والأسواق المحلية، مع اختلاف التسعير حسب المنتج والشريك والمنطقة.",
+        "خدمات تطوير واختبار وتخصيص التركيبات للمواد والقطاعات الجديدة مثل البنية التحتية والاستزراع المائي، عندما تكون مشمولة في عقد تجاري.",
+        "بيع المحاصيل كان مسارًا تاريخيًا تحت علامة Red Sea Farms، لكنه خرج من صلب النموذج الحالي بعد بيع نشاط الإنتاج الزراعي."
+      ],
+      "verification_status": "verified_current_pathways_and_historical_stream",
+      "confidence": "مرتفعة",
+      "claim_type": "مسارات إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المسارات الحالية مستخلصة من موقع الإضافات ودراسات الشراكة، مع تمييز بيع المحاصيل التاريخي.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-05",
+        "SRC-11",
+        "SRC-20"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "iyris — Advanced Additives for Films, Coatings, and Composites",
+          "publisher": "iyris",
+          "url": "https://iyris.com/",
+          "source_type": "موقع الشركة الرسمي الحالي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "موقع رسمي",
+          "source_locator": "Advanced additives positioning",
+          "supports": "بيع الإضافات"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "iyris — Advanced Optical and Functional Additives",
+          "publisher": "iyris",
+          "url": "https://iyris.com/additives",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "Industrial applications",
+          "supports": "تكامل المواد"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "OASIS SecondSky — Co-developed with Grupo Armando Álvarez",
+          "publisher": "iyris",
+          "url": "https://iyris.com/cases/oasis-secondsky",
+          "source_type": "دراسة حالة رسمية للشركة وشريك تصنيع",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "دراسة شريك",
+          "source_locator": "OASIS SecondSky commercialization",
+          "supports": "التطوير والتصنيع المشترك"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Pure Harvest to acquire RedSea’s Saudi farming operations",
+          "publisher": "Pure Harvest Smart Farms",
+          "url": "https://www.pureharvestfarms.com/news/pure-harvest-acquire-redseas-saudi-arabian-farming-operations-and-form-climate-technology",
+          "source_type": "إعلان صفقة رسمي من الطرف المستحوذ",
+          "published_at": "2023-12-10",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان صفقة",
+          "source_locator": "Sale of produce operation",
+          "supports": "خروج المحاصيل من النموذج الأساسي"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Red Sea Farms, SAUDIA sign MoU",
+          "publisher": "King Abdullah University of Science and Technology",
+          "url": "https://www.kaust.edu.sa/en/news/red-sea-farms-saudia-sign-mou-for-healthy-meals",
+          "source_type": "إعلان شراكة رسمي تاريخي",
+          "published_at": "2022-09-13",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان شراكة تاريخي",
+          "source_locator": "Produce sales stage",
+          "supports": "مسار المحاصيل التاريخي"
+        }
+      ],
+      "limitations": "لا توجد بيانات علنية عن الأسعار أو الهامش أو مساهمة كل مسار في الإيراد.",
+      "source_count": 5
+    },
+    "$.tools": {
+      "field_value": [
+        "إضافات نانوية وضوئية مسجلة الملكية للتحكم في تفاعل المواد مع الضوء والحرارة",
+        "حجب انتقائي للأشعة القريبة من تحت الحمراء مع الحفاظ على الإشعاع النشط ضوئيًا",
+        "إضافات انتشار الضوء والتحكم الانتقائي في الأطوال الموجية",
+        "دمج الإضافات في المصفوفة البوليمرية أثناء البثق للأفلام والشباك والشاشات والبولي كربونات",
+        "اختبارات بصرية وحرارية وميكانيكية واختبارات ثبات الأشعة فوق البنفسجية",
+        "تجارب ميدانية للبيوت المحمية وقياس الحرارة والمياه والمحصول وجودة الثمار",
+        "SecondSky وOASIS SecondSky كمنتجات أو خطوط تجارية مبنية على الإضافات",
+        "تقنيات تاريخية للمياه المالحة وتبريد البيوت المحمية والتهجين والتطعيم النباتي؛ لا تظهر جميعها كمنتجات أساسية في موقع iyris لعام 2026",
+        "شراكات تصنيع مواد مع شركات البوليمرات والأفلام بدل الاعتماد على امتلاك مصانع إنتاج غذائي"
+      ],
+      "verification_status": "verified_current_materials_stack_with_historical_caveats",
+      "confidence": "مرتفعة",
+      "claim_type": "تقنيات وأدوات",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "القائمة تستند إلى صفحات الإضافات ودراسة الحالة وSABIC، مع وسم تقنيات المياه المالحة والوراثة كتاريخية.",
+      "source_ids": [
+        "SRC-03",
+        "SRC-05",
+        "SRC-16",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "iyris — Advanced Optical and Functional Additives",
+          "publisher": "iyris",
+          "url": "https://iyris.com/additives",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "Optical additives",
+          "supports": "الإضافات والانتقائية الطيفية"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "OASIS SecondSky — Co-developed with Grupo Armando Álvarez",
+          "publisher": "iyris",
+          "url": "https://iyris.com/cases/oasis-secondsky",
+          "source_type": "دراسة حالة رسمية للشركة وشريك تصنيع",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "دراسة حالة",
+          "source_locator": "Embedded additive and field metrics",
+          "supports": "البثق والاختبارات"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "SABIC teams up with iyris and Napco",
+          "publisher": "SABIC",
+          "url": "https://www.sabic.com/en/news/45345-sabic-teams-up-with-iyris-and-napco",
+          "source_type": "بيان شراكة رسمي",
+          "published_at": "2024-10-31",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان شراكة",
+          "source_locator": "Polyethylene film and material testing",
+          "supports": "المواد الصناعية"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Advancing sustainable AgTech in the Middle East",
+          "publisher": "King Abdullah University of Science and Technology",
+          "url": "https://www.kaust.edu.sa/en/news/advancing-sustainable-agtech-in-the-middle-east",
+          "source_type": "مصدر رسمي تاريخي",
+          "published_at": "2021-06-16",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر تاريخي رسمي",
+          "source_locator": "Saltwater system",
+          "supports": "تقنيات المياه المالحة التاريخية"
+        }
+      ],
+      "limitations": "لا توجد خريطة كاملة لبراءات الاختراع أو الأسرار الصناعية أو أدوات المختبر، وبعض القدرات التاريخية قد لا تكون منتجات قائمة في 2026.",
+      "source_count": 4
+    },
+    "$.headline": {
+      "field_value": "من زراعة الطماطم بالمياه المالحة إلى هندسة ضوء الشمس داخل البوليمرات: كيف تحولت Red Sea Farms إلى iyris",
+      "verification_status": "verified_editorial_synthesis",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "عنوان تحريري",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "العنوان يلخص الانتقال الموثق من زراعة المحاصيل بالمياه المالحة إلى شركة مواد ضوئية مدمجة في البوليمرات.",
+      "source_ids": [
+        "SRC-19",
+        "SRC-11",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-19",
+          "title": "Advancing sustainable AgTech in the Middle East",
+          "publisher": "King Abdullah University of Science and Technology",
+          "url": "https://www.kaust.edu.sa/en/news/advancing-sustainable-agtech-in-the-middle-east",
+          "source_type": "مصدر رسمي تاريخي",
+          "published_at": "2021-06-16",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مصدر تاريخي رسمي",
+          "source_locator": "Saltwater agriculture model",
+          "supports": "مرحلة المياه المالحة"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Pure Harvest to acquire RedSea’s Saudi farming operations",
+          "publisher": "Pure Harvest Smart Farms",
+          "url": "https://www.pureharvestfarms.com/news/pure-harvest-acquire-redseas-saudi-arabian-farming-operations-and-form-climate-technology",
+          "source_type": "إعلان صفقة رسمي من الطرف المستحوذ",
+          "published_at": "2023-12-10",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان صفقة",
+          "source_locator": "Transition to pure-play tech",
+          "supports": "نقطة التحول"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "iyris — Advanced Additives for Films, Coatings, and Composites",
+          "publisher": "iyris",
+          "url": "https://iyris.com/",
+          "source_type": "موقع الشركة الرسمي الحالي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "موقع رسمي حالي",
+          "source_locator": "Advanced materials",
+          "supports": "النموذج الحالي"
+        }
+      ],
+      "limitations": "صياغة «هندسة ضوء الشمس» تلخيص تحريري مستمد من تموضع الشركة الحالي وليست اقتباسًا ماليًا.",
+      "source_count": 3
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "بيع الأصل التشغيلي قد يحمي الأصل التقني",
+          "description": "تشغيل المزارع يستهلك رأس مال وإدارة يومية كبيرة. بيع منشأة الإنتاج إلى Pure Harvest سمح للشركة بفصل إثبات التقنية عن عبء زراعة وبيع المحاصيل، والتركيز على منتج يمكن دمجه في سلاسل تصنيع عالمية."
+        },
+        {
+          "title": "أفضل انتقال من DeepTech إلى السوق يحدث داخل خط إنتاج قائم",
+          "description": "بدل مطالبة المزارع بشراء نظام معقد بالكامل، تُدمج إضافة iyris أثناء بثق الفيلم لدى مصنعين قائمين. بذلك تستفيد الشركة من مصانع وموزعين وعلاقات عملاء موجودة، وتقل كلفة التبني والتوسع."
+        },
+        {
+          "title": "إعادة التسمية يجب أن تتبع تغير جوهر الشركة",
+          "description": "اسم Red Sea Farms كان مناسبًا لمنتج طازج ومزرعة، لكنه أصبح ضيقًا بعد التحول إلى مواد تستخدم في الزراعة والبنية التحتية والاستزراع المائي. الانتقال إلى RedSea ثم iyris أعاد تعريف الشركة حول الملكية الفكرية والمواد، لا حول موقع أو محصول."
+        },
+        {
+          "title": "لا تخلط أثر النظام القديم بأداء المنتج الحالي",
+          "description": "ادعاء توفير 85–90% من المياه العذبة ارتبط بالنظام التاريخي المتكامل الذي استخدم المياه المالحة في التبريد والري. أما SecondSky الحالية فلها نتائج حالة مختلفة مثل وفر مياه 10–30% بحسب المحصول والموقع. فصل النطاقين يمنع تضخيم الأداء."
+        },
+        {
+          "title": "الشريك الصناعي هو قناة البيع وشهادة قابلية التصنيع معًا",
+          "description": "الشراكات مع مصنعي البوليمرات والأفلام مثل Grupo Armando Álvarez وNapco، ومع SABIC، لا توفر توزيعًا فقط؛ بل تختبر أن الإضافة تعمل على خطوط بثق صناعية وتتحمل شروط المادة والسوق."
+        },
+        {
+          "title": "المقاييس المتجانسة أهم من عناوين النمو",
+          "description": "تجاوز الربع الأول لعام كامل يبدو مثيرًا، لكنه لا يكشف الإيراد أو عدد العملاء أو الهكتارات. شركة المواد العميقة تحتاج لوحة تفصل طن الإضافات المباعة، أمتار الفيلم المنتجة، الهكتارات المغطاة، شركاء التصنيع، الإيراد، والهامش."
+        }
+      ],
+      "verification_status": "analytical_inference_grounded_in_evidence",
+      "confidence": "متوسطة",
+      "claim_type": "تحليل ودروس",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس مبنية على بيع نشاط الإنتاج، إعادة التسمية، التكامل في خطوط التصنيع، اختلاف مقاييس الأداء، والشراكات الصناعية.",
+      "source_ids": [
+        "SRC-11",
+        "SRC-21",
+        "SRC-05",
+        "SRC-16",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "Pure Harvest to acquire RedSea’s Saudi farming operations",
+          "publisher": "Pure Harvest Smart Farms",
+          "url": "https://www.pureharvestfarms.com/news/pure-harvest-acquire-redseas-saudi-arabian-farming-operations-and-form-climate-technology",
+          "source_type": "إعلان صفقة رسمي من الطرف المستحوذ",
+          "published_at": "2023-12-10",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان صفقة",
+          "source_locator": "Farm business sale",
+          "supports": "درس فصل التشغيل عن التقنية"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "RedSea rebrands as iyris and announces partnership with Magrabi Agriculture",
+          "publisher": "Global AgInvesting",
+          "url": "https://globalaginvesting.com/redsea-rebrands-as-iyris-announces-strategic-partnership-with-magrabi-agriculture/",
+          "source_type": "تقرير قطاعي عن إعادة التسمية",
+          "published_at": "2024-03-18",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "تقرير إعادة تسمية",
+          "source_locator": "Brand transition",
+          "supports": "درس الهوية"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "OASIS SecondSky — Co-developed with Grupo Armando Álvarez",
+          "publisher": "iyris",
+          "url": "https://iyris.com/cases/oasis-secondsky",
+          "source_type": "دراسة حالة رسمية للشركة وشريك تصنيع",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "دراسة حالة",
+          "source_locator": "Embedded additive model",
+          "supports": "درس التكامل الصناعي"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "SABIC teams up with iyris and Napco",
+          "publisher": "SABIC",
+          "url": "https://www.sabic.com/en/news/45345-sabic-teams-up-with-iyris-and-napco",
+          "source_type": "بيان شراكة رسمي",
+          "published_at": "2024-10-31",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان شراكة",
+          "source_locator": "Value chain partnership",
+          "supports": "درس الشركاء"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Iyris makes fresh produce easier to grow in difficult climates, raises $16M",
+          "publisher": "TechCrunch",
+          "url": "https://techcrunch.com/2024/05/30/iyris-makes-fresh-produce-easier-to-grow-in-difficult-climates-raises-16m/",
+          "source_type": "تقرير صحفي يستند إلى مقابلة الإدارة",
+          "published_at": "2024-05-30",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "مقابلة إدارة",
+          "source_locator": "Growth statement",
+          "supports": "درس المقاييس المتجانسة"
+        }
+      ],
+      "limitations": "هذه استنتاجات تحريرية خاصة بالشركة وليست تصريحات حرفية أو توصيات استثمارية.",
+      "source_count": 5
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "iyris — Advanced Additives for Films, Coatings, and Composites",
+      "publisher": "iyris",
+      "url": "https://iyris.com/",
+      "source_type": "موقع الشركة الرسمي الحالي",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يعرض تموضع iyris الحالي في 2026 كشركة إضافات ومواد ضوئية متقدمة تخدم الزراعة والاستزراع المائي والبنية التحتية."
+    },
+    {
+      "id": "SRC-02",
+      "title": "iyris — Company",
+      "publisher": "iyris",
+      "url": "https://iyris.com/company",
+      "source_type": "صفحة الشركة الرسمية الحالية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "تعرض السرد المؤسسي الحالي، مؤسسي منصة المواد بصيغتها الحالية، أول نشر تجاري في 2024، 9+ شركاء تصنيع عالميين، والتحقق في مناخات تتجاوز 50 درجة مئوية."
+    },
+    {
+      "id": "SRC-03",
+      "title": "iyris — Advanced Optical and Functional Additives",
+      "publisher": "iyris",
+      "url": "https://iyris.com/additives",
+      "source_type": "صفحة منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق إضافات حجب الحرارة وانتشار الضوء والتحكم الانتقائي في الأطوال الموجية وتطبيقاتها في الأفلام والشباك والشاشات والبولي كربونات والأسطح."
+    },
+    {
+      "id": "SRC-04",
+      "title": "iyris — Industries",
+      "publisher": "iyris",
+      "url": "https://iyris.com/industries",
+      "source_type": "صفحة قطاعات رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق التوسع الحالي إلى الزراعة والبنية التحتية والاستزراع المائي والفوائد التشغيلية المقصودة لكل قطاع."
+    },
+    {
+      "id": "SRC-05",
+      "title": "OASIS SecondSky — Co-developed with Grupo Armando Álvarez",
+      "publisher": "iyris",
+      "url": "https://iyris.com/cases/oasis-secondsky",
+      "source_type": "دراسة حالة رسمية للشركة وشريك تصنيع",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يعرض نتائج مجمعة من تجارب وانتشارات متعددة: انخفاض ذروة الحرارة 1–3 درجات، وفر مياه حتى 20%، تحسن محصول تقريبي 14–30%، وفترة استرداد نموذجية أقل من سنة. النتائج خاصة بالحالات وليست ضمانًا عامًا."
+    },
+    {
+      "id": "SRC-06",
+      "title": "KAUST startup spinout Red Sea Farms closes $1.9 million investment",
+      "publisher": "King Abdullah University of Science and Technology",
+      "url": "https://www.kaust.edu.sa/en/news/kaust-startup-spinout-red-sea-farms-closes-1-9-million-investment",
+      "source_type": "إعلان تمويل رسمي من الجهة الحاضنة",
+      "published_at": "2019-05-14",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق استثمار 1.9 مليون دولار من KAUST Innovation Fund وRPDC في 2019."
+    },
+    {
+      "id": "SRC-07",
+      "title": "Saudi-based sustainable AgTech firm receives $10m investment",
+      "publisher": "KAUST Innovation",
+      "url": "https://innovation.kaust.edu.sa/kaust-agtech-startup-receives-10m-investment/",
+      "source_type": "إعلان تمويل رسمي",
+      "published_at": "2021-06-07",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق الإغلاق الأول البالغ 10 ملايين دولار من جولة 2021."
+    },
+    {
+      "id": "SRC-08",
+      "title": "Red Sea Farms raises additional $6 million in pre-Series A round",
+      "publisher": "Wamda",
+      "url": "https://www.wamda.com/2021/08/red-sea-farms-raises-additional-6-million-pre-series-round",
+      "source_type": "إعادة نشر لبيان الشركة",
+      "published_at": "2021-08-15",
+      "accessed_at": "2026-08-03",
+      "primary": false,
+      "notes": "يوضح أن مبلغ 6 ملايين دولار كان امتدادًا للجولة الأولية البالغة 10 ملايين، ليصبح إجمالي جولة 2021 نحو 16 مليون دولار؛ لا ينبغي جمع 10 و16 كجولتين منفصلتين."
+    },
+    {
+      "id": "SRC-09",
+      "title": "Red Sea Farms attracts $18.5 million strategic raise",
+      "publisher": "KAUST Innovation",
+      "url": "https://innovation.kaust.edu.sa/red-sea-farms-attracts-18-5-million-strategic-raise/",
+      "source_type": "إعلان تمويل رسمي",
+      "published_at": "2022-04-26",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق جولة استراتيجية بقيمة 18.5 مليون دولار في 2022."
+    },
+    {
+      "id": "SRC-10",
+      "title": "KAUST startup iyris poised to scale with latest $16 million Series A",
+      "publisher": "King Abdullah University of Science and Technology",
+      "url": "https://www.kaust.edu.sa/en/news/kaust-startup-iyris-poised-to-scale-its-technology-with-latest-16-million-series-a-funding",
+      "source_type": "إعلان تمويل رسمي",
+      "published_at": "2024-06-03",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق جولة Series A بقيمة 16 مليون دولار في 2024 ويؤكد أن iyris كانت تُعرف سابقًا باسم RedSea."
+    },
+    {
+      "id": "SRC-11",
+      "title": "Pure Harvest to acquire RedSea’s Saudi farming operations",
+      "publisher": "Pure Harvest Smart Farms",
+      "url": "https://www.pureharvestfarms.com/news/pure-harvest-acquire-redseas-saudi-arabian-farming-operations-and-form-climate-technology",
+      "source_type": "إعلان صفقة رسمي من الطرف المستحوذ",
+      "published_at": "2023-12-10",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق خطاب النوايا للاستحواذ على منشأة إنتاج مساحتها 6 هكتارات، وانتقال RedSea إلى شركة تقنية زراعية مناخية خالصة، مع تولي Pure Harvest العمليات في يناير 2024."
+    },
+    {
+      "id": "SRC-12",
+      "title": "Innovation and Entrepreneurship — KAUST Sustainability",
+      "publisher": "King Abdullah University of Science and Technology",
+      "url": "https://sustainability.kaust.edu.sa/innovation-and-entrepreneurship/",
+      "source_type": "صفحة حاضنة رسمية حديثة",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "تصف iyris بوصفها RedSea سابقًا، وتؤكد الانتقال من بيع المنتجات الطازجة تحت علامة Red Sea Farms إلى تقنية AgriClimate خالصة."
+    },
+    {
+      "id": "SRC-13",
+      "title": "IYRIS TECHNOLOGY LTD overview",
+      "publisher": "UK Companies House",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/11662935",
+      "source_type": "سجل شركات حكومي",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق كيانًا بريطانيًا نشطًا باسم IYRIS TECHNOLOGY LTD تأسس في 6 نوفمبر 2018 ونشاطه البحث والتطوير في العلوم والهندسة. لا يثبت أنه الكيان الوحيد للمجموعة."
+    },
+    {
+      "id": "SRC-14",
+      "title": "IYRIS TECHNOLOGY LTD persons with significant control",
+      "publisher": "UK Companies House",
+      "url": "https://find-and-update.company-information.service.gov.uk/company/11662935/persons-with-significant-control",
+      "source_type": "سجل ملكية وسيطرة حكومي",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق أن Red Sea Farms Ltd في أبوظبي كانت جهة سيطرة على الكيان البريطاني من 2021 إلى 2023، قبل انتهاء ذلك الوضع؛ يبرز تعدد الكيانات وعدم جواز اختزال المجموعة في شركة واحدة."
+    },
+    {
+      "id": "SRC-15",
+      "title": "iyris LinkedIn company profile",
+      "publisher": "iyris / LinkedIn",
+      "url": "https://www.linkedin.com/company/iyris-group",
+      "source_type": "ملف شركة مُدار ذاتيًا",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يصف الشركة حاليًا كشركة أبحاث ومواد نانوية، ويعرض مواقع في الولايات المتحدة وثول بالسعودية وعدد موظفين تقديريًا 51–200؛ بيانات LinkedIn ذاتية الإفصاح."
+    },
+    {
+      "id": "SRC-16",
+      "title": "SABIC teams up with iyris and Napco",
+      "publisher": "SABIC",
+      "url": "https://www.sabic.com/en/news/45345-sabic-teams-up-with-iyris-and-napco",
+      "source_type": "بيان شراكة رسمي",
+      "published_at": "2024-10-31",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق دمج SecondSky في فيلم بيوت محمية من البولي إيثيلين بالتعاون مع SABIC وNapco، وتشغيل نموذج مزرعة بمساحة 0.75 هكتار في البدع."
+    },
+    {
+      "id": "SRC-17",
+      "title": "Agricultural water management",
+      "publisher": "Food and Agriculture Organization of the United Nations",
+      "url": "https://www.fao.org/land-water/water/agricultural-water-management/water-accounting/en",
+      "source_type": "مصدر حكومي دولي لسياق المشكلة",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق أن الزراعة تمثل نحو 72% من سحوبات المياه العذبة عالميًا؛ سياق قطاعي وليس أثرًا خاصًا بالشركة."
+    },
+    {
+      "id": "SRC-18",
+      "title": "Iyris makes fresh produce easier to grow in difficult climates, raises $16M",
+      "publisher": "TechCrunch",
+      "url": "https://techcrunch.com/2024/05/30/iyris-makes-fresh-produce-easier-to-grow-in-difficult-climates-raises-16m/",
+      "source_type": "تقرير صحفي يستند إلى مقابلة الإدارة",
+      "published_at": "2024-05-30",
+      "accessed_at": "2026-08-03",
+      "primary": false,
+      "notes": "ينقل عن الإدارة أن الربع الأول من 2024 تجاوز كامل 2023 في العملاء والمنتجات أو الإيراد، ويذكر تقدير الشركة لسوق أغطية البيوت المحمية بأكثر من 6 مليارات دولار سنويًا. لا توجد أرقام أساس تسمح بحساب معدل نمو."
+    },
+    {
+      "id": "SRC-19",
+      "title": "Advancing sustainable AgTech in the Middle East",
+      "publisher": "King Abdullah University of Science and Technology",
+      "url": "https://www.kaust.edu.sa/en/news/advancing-sustainable-agtech-in-the-middle-east",
+      "source_type": "مصدر رسمي تاريخي",
+      "published_at": "2021-06-16",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق نموذج Red Sea Farms التاريخي الذي استخدم المياه المالحة في التبريد والري وخفّض المياه العذبة المعلنة 85–90% ضمن النظام المتكامل، كما يوثق المؤسسين التاريخيين."
+    },
+    {
+      "id": "SRC-20",
+      "title": "Red Sea Farms, SAUDIA sign MoU",
+      "publisher": "King Abdullah University of Science and Technology",
+      "url": "https://www.kaust.edu.sa/en/news/red-sea-farms-saudia-sign-mou-for-healthy-meals",
+      "source_type": "إعلان شراكة رسمي تاريخي",
+      "published_at": "2022-09-13",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق مرحلة بيع المحاصيل محليًا والشراكة مع SAUDIA، ويصف النظام التاريخي والمياه العذبة الموفرة؛ لا يمثل نموذج iyris الحالي."
+    },
+    {
+      "id": "SRC-21",
+      "title": "RedSea rebrands as iyris and announces partnership with Magrabi Agriculture",
+      "publisher": "Global AgInvesting",
+      "url": "https://globalaginvesting.com/redsea-rebrands-as-iyris-announces-strategic-partnership-with-magrabi-agriculture/",
+      "source_type": "تقرير قطاعي عن إعادة التسمية",
+      "published_at": "2024-03-18",
+      "accessed_at": "2026-08-03",
+      "primary": false,
+      "notes": "يوثق إعادة تسمية RedSea إلى iyris في 2024 ويربطها ببيع منشأة الإنتاج في ديسمبر 2023 والتركيز على التقنية."
+    }
   ]
 }

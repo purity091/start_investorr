@@ -2,52 +2,1387 @@
   "id": "airtable",
   "slug": "airtable",
   "name": "إيرتيبل (Airtable)",
-  "headline": "الأداة التي دمجت سهولة الإكسل مع قوة قواعد البيانات لتخلق سوقاً جديداً",
-  "category": "B2B SaaS / تطوير بدون كود (No-Code)",
+  "headline": "من جدول ذكي إلى نظام تشغيل للأعمال: كيف حوّلت Airtable الخلايا إلى تطبيقات ووكلاء ذكاء اصطناعي",
+  "category": "B2B SaaS / منصات التطبيقات بدون كود والذكاء الاصطناعي المؤسسي",
   "company": {
-    "location": "سان فرانسيسكو، الولايات المتحدة",
-    "business_model": "مجاني للبدايات (Freemium) واشتراكات مدفوعة للمقاعد الإضافية والشركات"
+    "location": "سان فرانسيسكو، كاليفورنيا، الولايات المتحدة. تأسست Airtable في 2013، وتعرض صفحة الشركة ستة مكاتب حول العالم وأكثر من 700 موظف. الشركة خاصة، ولا تعني مواقع المكاتب وجود كيانات قانونية أو إيرادات منشورة في كل سوق.",
+    "business_model": "نموذج Product-Led Growth يجمع خطة مجانية مع اشتراكات Team وBusiness المحتسبة أساسًا على المقاعد ذات صلاحية التحرير، وعقود Enterprise Scale مخصصة عبر فريق المبيعات. منذ 2025 أضيفت ائتمانات الذكاء الاصطناعي إلى الخطط مع إمكانية شراء حزم إضافية، بينما توسع العرض إلى Omni وField Agents وتكامل ChatGPT وSuperagent. أسعار القائمة والائتمانات المتاحة لا تكشف مزيج الإيراد الفعلي أو ARR."
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين",
-    "monthly_traffic": "تُستخدم كعمود فقري لملايين المشاريع والشركات"
+    "monthly_revenue": "غير معلن. Airtable شركة خاصة ولا تنشر MRR أو ARR أو إيرادًا شهريًا مدققًا. توجد إشارات تشغيلية تاريخية من الشركة: في ديسمبر 2022 قالت إن المؤسسات تمثل غالبية الإيراد وإن إيرادات القطاع المؤسسي كانت تنمو بأكثر من 100% سنويًا مع NDR قدره 170%، وفي 2023 وصفت نفسها بأنها موجبة التدفق النقدي. هذه مؤشرات تاريخية لا تسمح باشتقاق إيراد أغسطس 2026.",
+    "monthly_traffic": "غير معلن. لا تنشر Airtable زيارات الموقع أو MAU/DAU الحاليين. الرقم الأحدث المعلن هو استخدام أكثر من 500,000 مؤسسة للمنصة ووجود 80% من Fortune 100 ضمن قاعدة الاستخدام؛ هذا عدد مؤسسات تراكمي من الشركة، وليس عدد عملاء مدفوعين أو مستخدمين نشطين أو زيارات شهرية."
   },
   "overview": {
     "problem": {
-      "text": "الشركات تدير بياناتها إما بجداول بيانات (Excel/Google Sheets) سهلة لكنها فوضوية وضعيفة، أو بقواعد بيانات حقيقية (SQL) قوية لكنها تتطلب مبرمجين ولا يستطيع الموظف العادي استخدامها.",
-      "impact": "فوضى في إدارة المشاريع، واعتماد مفرط على فرق البرمجة لإنشاء أي نظام تتبع بسيط داخل الشركة."
+      "text": "تبدأ فرق الأعمال غالبًا بجداول بيانات لأنها مألوفة وسريعة، لكنها تصبح هشة عندما تتعدد الجداول والمستخدمون والصلاحيات والعلاقات والأتمتة. وفي الطرف الآخر، تمنح قواعد البيانات ومنصات تطوير التطبيقات تحكمًا أكبر لكنها تحتاج خبرة تقنية وتكلفة تنفيذ. التحدي الذي استهدفته Airtable هو تمكين الموظف الأقرب إلى العملية من نمذجة بيانات مترابطة وبناء واجهة وسير عمل دون انتظار فريق هندسي لكل تعديل.",
+      "impact": "عندما تبقى العمليات الحرجة في ملفات منفصلة، تتكرر البيانات وتضيع الملكية وتصبح التقارير والتحديثات يدوية، بينما يؤدي الاعتماد الكامل على التطوير التقليدي إلى قوائم انتظار طويلة ونظم جامدة. ومع دخول الذكاء الاصطناعي يظهر خطر جديد: إنتاج تطبيقات سريعة لكن غير محكومة أو غير متصلة بمصدر بيانات موثوق؛ لذلك أصبحت الحوكمة والأذونات وقابلية التتبع جزءًا من المشكلة لا مجرد سهولة البناء."
     },
     "solution": {
-      "text": "برنامج يبدو كأنه جدول بيانات (Spreadsheet) سهل الاستخدام لأي شخص، لكنه في الحقيقة قاعدة بيانات علائقية (Relational Database) قوية. يمكنك ربط الجداول، وإرفاق ملفات، وعرض البيانات كتقويم أو لوحة كانبان (Kanban)."
+      "text": "بدأت Airtable بواجهة تشبه جدول البيانات فوق قاعدة بيانات علائقية تدعم السجلات المرتبطة والعلاقات والعروض المختلفة. ثم أضافت الواجهات والأتمتة والمزامنة والتكاملات وHyperDB لتشغيل تطبيقات مؤسسية فوق بيانات مشتركة. في 2025 أعادت تقديم نفسها كمنصة تطبيقات أصلية للذكاء الاصطناعي عبر Omni لبناء التطبيقات والتعامل مع البيانات باللغة الطبيعية وField Agents لتنفيذ أعمال متكررة عبر السجلات، ثم أضافت تكامل ChatGPT واستحوذت على DeepSky وأطلقت Superagent في 2026. بذلك انتقل المنتج من تنظيم البيانات إلى بناء وتشغيل تطبيقات ووكلاء، مع بقاء حدود السعة والاعتمادات والتكلفة مرتبطة بالخطة."
     }
   },
   "market_data": {
-    "target_audience": "مديرو المنتجات، فرق التسويق، والعمليات في الشركات من كل الأحجام.",
-    "market_size": "سوق برمجيات الأعمال وحركة التطوير بدون كود (No-Code) العالمية.",
-    "growth_rate": "نمو هائل، خاصة خلال جائحة كورونا، لتصل لتقييم تجاوز 11 مليار دولار."
+    "target_audience": "بدأ التبني من أفراد وفرق صغيرة تحتاج قواعد مرنة لإدارة المشاريع والمحتوى والعمليات، ثم أصبح التركيز الاستراتيجي منذ 2022 على المؤسسات الكبيرة وفرق المنتج والتسويق والعمليات والمالية والموارد البشرية والإعلام. الخطط الذاتية تخدم الفرق الصغيرة والمتوسطة، بينما تستهدف Business وEnterprise Scale الشركات التي تحتاج حوكمة وأمانًا وسعة بيانات ودعمًا مركزيًا. Superagent يوسع الجمهور إلى فرق البحث والاستراتيجية، لكنه منتج مستقل جديد ولا توجد بيانات عامة عن مساهمته في الإيراد.",
+    "market_size": "لا يوجد رقم رسمي واحد لسوق Airtable القابل للاستهداف؛ فالمنتج يتقاطع مع قواعد البيانات التعاونية، وإدارة العمل، والتطوير منخفض أو عديم الكود، والأتمتة، ومنصات التطبيقات، ووكلاء الذكاء الاصطناعي. لذلك لم يُدرج TAM تجاري قد يخلط أسواقًا مختلفة. الدليل التشغيلي الأقوى هو إعلان الشركة أن أكثر من 500,000 مؤسسة و80% من Fortune 100 تستخدم المنصة، لكن الاستخدام لا يساوي عقدًا مدفوعًا أو حصة سوقية.",
+    "growth_rate": "لا تنشر Airtable معدل نمو حاليًا للإيراد أو ARR أو العملاء المدفوعين. تاريخيًا ارتفع العدد المعلن من 250,000 مؤسسة في مارس 2021 إلى أكثر من 500,000 بحلول يناير 2026، لكن تعريف المؤسسة ومدى نشاطها أو دفعها غير منشور، لذلك لا يُحوّل الرقم إلى CAGR مالي. أعلنت الشركة نمو إيرادات المؤسسات بأكثر من 100% سنويًا وNDR قدره 170% في ديسمبر 2022، ثم قالت إنها موجبة التدفق النقدي في 2023. أحدث مرحلة نمو معلنة هي التحول إلى AI-native في 2025، والاستحواذ على DeepSky، وتكامل ChatGPT، وإطلاق Superagent في 2026؛ ولا توجد أرقام عامة تقيس أثر هذه التحولات على الإيراد."
   },
   "financials": {
-    "initial_investment": "مدعومة من Benchmark و Thrive Capital.",
-    "valuation": "$11B+ (يونيكورن ضخم)",
+    "initial_investment": "تعلن Airtable إجمالي تمويل قدره 1.36 مليار دولار حتى آخر جولة كبيرة منشورة. في مارس 2021 جمعت 270 مليون دولار في Series E عند تقييم بعد الاستثمار 5.77 مليار دولار، ثم جمعت 735 مليون دولار في Series F في ديسمبر 2021 عند تقييم قبل الاستثمار 11 مليار دولار. شارك في الجولة الأخيرة XN وFranklin Templeton وJ.P. Morgan Growth Equity Partners وMSD Capital وSalesforce Ventures وSilver Lake ومستثمرون قائمون مثل Benchmark وThrive. لا توجد جولة أولية أو إفصاح حديث منشور يحدد تقييمًا جديدًا حتى 3 أغسطس 2026.",
+    "valuation": "آخر تقييم تمويلي أولي معلن هو 11 مليار دولار قبل الاستثمار في Series F بتاريخ 13 ديسمبر 2021؛ ومع إضافة 735 مليون دولار يصبح الحساب النظري بعد الاستثمار نحو 11.735 مليار دولار فقط إذا اعتُبر المبلغ كله حقوق ملكية جديدة وبلا تعديلات، لكن الشركة لم تعرض هذا الرقم كتقييم حالي. لذلك لا يجوز كتابة «11B+» كتقييم أغسطس 2026، ولا توجد شركة عامة أو سعر سهم أو تقارير SEC دورية تسمح بتحديثه. التقييم الحالي غير معلن.",
     "revenue_streams": [
-      "اشتراكات شهرية مدفوعة لكل مستخدم (Seat-based SaaS)",
-      "خطط المؤسسات الكبرى (Enterprise) مع ميزات أمان متقدمة"
+      "اشتراكات Team المحتسبة على المقاعد ذات صلاحية التحرير؛ سعر القائمة 20 دولارًا للمستخدم شهريًا عند الدفع السنوي في أغسطس 2026",
+      "اشتراكات Business؛ سعر القائمة 45 دولارًا للمستخدم شهريًا عند الدفع السنوي، مع اختلاف الشروط في الصفقات المُدارة بالمبيعات",
+      "عقود Enterprise Scale المخصصة حسب حجم المؤسسة والسعة والحوكمة والدعم، وهي تسعير تواصلي غير منشور",
+      "حزم ائتمانات ذكاء اصطناعي إضافية فوق الائتمانات الشهرية المضمنة؛ توثق صفحة الدعم حزمة 20,000 ائتمان بسعر 40 دولارًا شهريًا أو 400 دولار سنويًا ضمن خيارات الخدمة الذاتية",
+      "ميزات وإضافات مؤسسية مثل Portals والسعة والحوكمة والخدمات أو الدعم المتعاقد عليه، بحسب الخطة والعقد؛ لا تنشر الشركة مساهمة كل بند في الإيراد",
+      "Superagent منتج مستقل أطلق في 2026 وقد يشكل مسار إيراد جديدًا، لكن التسعير والإيراد والمستخدمين المدفوعين لم تُفصح عنها الشركة في المصادر التي تمت مراجعتها",
+      "لا تتوفر بيانات عامة لفصل إيراد الخدمة الذاتية عن المبيعات المؤسسية أو الذكاء الاصطناعي أو الخدمات، ولا لحساب ARR أو متوسط الإيراد لكل عميل"
     ]
   },
   "lessons": [
     {
-      "title": "حركة الـ (No-Code)",
-      "description": "كانت Airtable في طليعة حركة التطوير بدون كود. من خلال إعطاء (قوة المبرمجين) للموظفين العاديين (كالقدرة على بناء قاعدة بيانات علائقية)، خلقت الشركة قيمة هائلة وجعلت موظفي المبيعات والتسويق قادرين على بناء أنظمتهم بأنفسهم."
+      "title": "اخفِ تعقيد قاعدة البيانات خلف استعارة مألوفة",
+      "description": "لم تطلب Airtable من المستخدم غير التقني تعلم SQL أو مخططات قواعد البيانات أولًا؛ بدأت من شبكة مألوفة ثم أدخلت السجلات المرتبطة والبحث والعروض. الدرس أن الابتكار القوي قد يكون في ترتيب التعقيد لا في إلغائه: واجهة مألوفة للاكتساب، وبنية أعمق للاحتفاظ والتوسع."
     },
     {
-      "title": "قوة النماذج الجاهزة (Templates)",
-      "description": "لأن الأداة مرنة جداً (كالورقة البيضاء)، قد يضيع المستخدم الجديد. لذا، وفرت Airtable مئات (النماذج الجاهزة) لتتبع المشاريع أو المخزون بنقرة واحدة، مما قلل وقت استيعاب القيمة (Time to Value) للعميل الجديد للصفر."
+      "title": "المنتج المجاني قناة اكتساب، والعقد المؤسسي محرك نقدي مختلف",
+      "description": "التبني التصاعدي سمح للفرق بتجربة المنتج دون دورة مبيعات، لكن Airtable أعلنت في 2022 أن المؤسسات أصبحت غالبية الإيراد. هذا يوضح أن Product-Led Growth لا يلغي المبيعات المؤسسية؛ بل يصنع دليل استخدام داخليًا يمكن لفريق المبيعات توسيعه إلى عقد حوكمة وسعة ودعم."
+    },
+    {
+      "title": "لا تخلط عدد المؤسسات بالعملاء المدفوعين",
+      "description": "رقم 500,000 مؤسسة يعكس انتشارًا مهمًا، لكنه لا يحدد النشاط أو الدفع أو عدد المقاعد أو قيمة العقود. في ملفات الشركات يجب فصل المؤسسات التي استخدمت المنتج، والعملاء المدفوعين، والمستخدمين النشطين، والمقاعد المدفوعة، لأن كل مقياس يجيب عن سؤال اقتصادي مختلف."
+    },
+    {
+      "title": "التقييم يحمل تاريخًا وشروطًا ولا يعيش إلى الأبد",
+      "description": "تقييم 11 مليار دولار يعود إلى جولة ديسمبر 2021 وكان قبل الاستثمار. بعد تغير أسعار البرمجيات الخاصة وإعادة هيكلة الشركة، لا يمكن استخدامه كتقييم حالي دون صفقة أحدث. الدرس للمؤسسين والمحللين: اذكر نوع التقييم وتاريخه والجولة، ولا تحوله إلى حقيقة دائمة عن قيمة الشركة."
+    },
+    {
+      "title": "التوسع المؤسسي يحتاج حوكمة بقدر حاجته للمرونة",
+      "description": "عندما يتحول المنتج من أداة فريق إلى نظام لعمليات حساسة، تصبح الأذونات وSSO والسجلات الإدارية والشهادات والسعة والنسخ الاحتياطي جزءًا من المنتج المدفوع. Airtable لم تبع سهولة البناء فقط؛ بنت طبقة ثقة تسمح لقسم تقنية المعلومات بقبول ما بناه مستخدمو الأعمال."
+    },
+    {
+      "title": "التركيز الاستراتيجي قد يتطلب تقليصًا رغم النمو",
+      "description": "خفضت Airtable 254 موظفًا في 2022 ثم 237 في 2023 بينما كانت تصف القطاع المؤسسي بالنمو والشركة بالتدفق النقدي الإيجابي. الرسالة أن النمو لا يعني أن كل مبادرة أو هيكل مناسب؛ الكفاءة وتركيبة الأدوار ومسار الوصول إلى السوق قد تتغير قبل نفاد السيولة."
+    },
+    {
+      "title": "منصة الذكاء الاصطناعي أقوى عندما ترتبط ببيانات وسير عمل",
+      "description": "تحول 2025 لم يقتصر على إضافة مربع كتابة؛ استخدمت Airtable الجداول والعلاقات والواجهات والأتمتة كحاوية لوكلاء يعملون على آلاف السجلات. القيمة الدفاعية هنا هي ربط النموذج بسياق منظم وصلاحيات وإجراءات متكررة، بدل تقديم محادثة منفصلة عن العمل الحقيقي."
+    },
+    {
+      "title": "اخلط التسعير بالمقاعد مع الاستهلاك بحذر",
+      "description": "أبقت Airtable الاشتراك القائم على المقاعد، وأضافت ائتمانات ذكاء اصطناعي مضمّنة وحزمًا إضافية. هذا النموذج يوازن بين قابلية توقع الاشتراك وتكلفة الاستدلال المتغيرة، لكنه يحتاج شفافية في الاستهلاك وتنبيهات وحدود حتى لا تتحول قيمة الذكاء الاصطناعي إلى فاتورة مفاجئة."
+    },
+    {
+      "title": "الاستحواذ يختصر الانتقال إلى فئة منتج جديدة",
+      "description": "بدل بناء وكيل بحث مستقل من الصفر فقط، استحوذت Airtable على DeepSky ثم أطلقت Superagent. الدرس أن الاستحواذ قد يسرع دخول فئة مجاورة عندما توجد ملاءمة واضحة بين أصول الطرفين: بيانات وتطبيقات منظمة من Airtable، وبحث متعدد الوكلاء من DeepSky."
+    },
+    {
+      "title": "النموذج الجاهز يفتح الباب، لكن القيمة في قابلية التكييف",
+      "description": "القوالب تقلل رهبة الصفحة البيضاء وتقدم مسارًا سريعًا لأول نتيجة، لكنها لا تجعل وقت الوصول إلى القيمة صفرًا ولا تضمن نجاح التنفيذ. ميزة Airtable الأعمق هي أن القالب نقطة بداية يمكن تحويلها إلى قاعدة مترابطة وواجهة وأتمتة تناسب عملية خاصة بكل فريق."
     }
   ],
   "tools": [
-    "Node.js",
-    "React",
-    "MySQL",
-    "Redis"
+    "قواعد بيانات علائقية مرئية وقواعد Bases تحتوي جداول وسجلات وحقولًا",
+    "Linked Records وLookup وRollup لتمثيل العلاقات بين الجداول",
+    "عروض Grid وKanban وCalendar وTimeline وGantt وغيرها بحسب الخطة",
+    "Interface Designer لبناء واجهات مخصصة فوق البيانات",
+    "Automations بمحفزات وإجراءات وتكاملات وسكربتات JavaScript ضمن الحدود المعلنة",
+    "Sync وربط البيانات بين التطبيقات والأنظمة الخارجية",
+    "HyperDB للأحجام الكبيرة حتى 100 مليون سجل في جدول واحد وفق صفحة المنتج",
+    "Omni لبناء التطبيقات وتعديل البيانات وتحليلها باللغة الطبيعية",
+    "Field Agents لتنفيذ البحث والتصنيف والتلخيص والمهام المتكررة على مستوى السجلات",
+    "Airtable AI مع ائتمانات شهرية ونماذج من عدة مزودين وفق إعدادات الخطة والمؤسسة",
+    "Airtable for ChatGPT للوصول إلى البيانات وتحليلها وتحديثها داخل ChatGPT",
+    "MCP ودعم التكامل مع أدوات الذكاء الاصطناعي وفق وثائق 2026",
+    "Superagent كمنتج مستقل للبحث والتحليل متعدد الوكلاء",
+    "REST API وWebhooks وExtensions وScripting لتوسيع المنصة",
+    "ميزات مؤسسية للحوكمة وSSO والأذونات والتقارير والسجلات الإدارية",
+    "امتثال معلن يشمل SOC 2 Type 2 وISO/IEC 27001 وISO/IEC 27701",
+    "لا توجد إفصاحات رسمية كافية لتأكيد أن Node.js أو React أو MySQL أو Redis تمثل الحزمة الداخلية الحالية، لذلك لم تُعرض كتقنيات مؤكدة"
+  ],
+  "verification": {
+    "status": "verified_from_official_airtable_company_funding_pricing_product_support_and_ceo_sources_with_time_bound_financial_labels",
+    "verified_on": "2026-08-03",
+    "research_cutoff": "2026-08-03",
+    "source_policy": "أُعطيت الأولوية لموقع Airtable الرسمي، وإعلانات التمويل والاستحواذ والمنتجات، وصفحات التسعير والدعم المحدثة حتى يوليو 2026، ورسائل الرئيس التنفيذي. لم تُستخدم تقديرات قواعد بيانات الشركات للإيراد أو الزيارات أو التقييم. لم تُستخدم تقارير SEC دورية لأن Airtable شركة خاصة ولا تنشر 10-K أو 10-Q.",
+    "important_notes": [
+      "حُذف تقدير «عشرات الملايين» من الإيراد الشهري لأن Airtable لا تنشر MRR أو ARR أو إيرادًا مدققًا.",
+      "حُذفت معادلة استخدام المؤسسات بحركة الموقع؛ 500,000 مؤسسة مقياس تبنٍّ تراكمي تعلنه الشركة وليس MAU أو زيارات أو عملاء مدفوعين.",
+      "صُحح التقييم إلى 11 مليار دولار قبل الاستثمار في Series F بتاريخ 13 ديسمبر 2021، وليس تقييمًا حاليًا في أغسطس 2026.",
+      "لم يُستخدم الحساب النظري البالغ نحو 11.735 مليار دولار بعد الاستثمار كتقييم معلن؛ لأنه يعتمد على افتراضات عن بنية الجولة.",
+      "فُصل إجمالي التمويل البالغ 1.36 مليار دولار عن الإيراد والتقييم والسيولة المتاحة حاليًا.",
+      "أُدرجت تصريحات نمو المؤسسات بأكثر من 100% وNDR البالغ 170% على أنها مؤشرات تاريخية منشورة في ديسمبر 2022 وليست معدلات حالية.",
+      "أُدرج وصف الشركة بأنها موجبة التدفق النقدي على أنه تصريح تاريخي من الرئيس التنفيذي في 2023، وليس تقرير تدقيق أو ضمانًا لاستمرار الحالة.",
+      "فُصل عدد المؤسسات المستخدمة عن العدد التاريخي للعملاء المدفوعين؛ رقم 13,000 عميل مدفوع صافيًا يخص السنة السابقة لمارس 2021.",
+      "أسعار Team وBusiness وحزم ائتمانات الذكاء الاصطناعي أسعار قائمة حالية، ولا تكشف الخصومات أو متوسط قيمة العقد أو الإيراد المحقق.",
+      "Superagent وتكامل ChatGPT واستحواذ DeepSky موثقة كتحولات منتج، لكن لا توجد أرقام عامة لمستخدميها أو إيراداتها.",
+      "حُذف الادعاء بأن Airtable مجرد جدول بيانات أو مجرد قاعدة علائقية؛ المنتج الحالي منصة تطبيقات وأتمتة وذكاء اصطناعي متعددة الطبقات.",
+      "لم يُدرج TAM تجاري موحد لأن Airtable تتقاطع مع عدة أسواق لا يمكن جمعها دون خطر ازدواج القياس.",
+      "استُبدلت قائمة Node.js وReact وMySQL وRedis غير الموثقة بقدرات منتج مؤكدة؛ لا تعلن Airtable حزمة البنية الداخلية الحالية كاملة.",
+      "لا تنطبق إفصاحات SEC الدورية للشركات العامة؛ مراجعة المصادر لم تجد 10-K أو 10-Q أو سعر سهم عام لـAirtable.",
+      "جميع أرقام الشركات والمؤسسات والأداء هي بيانات من Airtable نفسها ما لم يذكر خلاف ذلك، ولا تمثل تدقيقًا مستقلًا."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_on": "2026-08-03",
+      "validator": "Python json module + jsonschema Draft 2020-12 + custom Professional V2 integrity checks",
+      "check_count": 18,
+      "checks": [
+        "اجتياز JSON Schema Draft 2020-12 مع وجود الحقول الأساسية وحقول Professional V2",
+        "الحفاظ على مفاتيح البنية الأصلية وإضافة verification وevidence_map_schema وevidence_map وsources فقط",
+        "تطابق field_value في كل مدخل evidence_map مع القيمة الفعلية في JSONPath",
+        "تطابق source_count مع source_ids وsource_references",
+        "عدم وجود source_id مكرر أو مرجع دليل يشير إلى مصدر غير موجود",
+        "تطابق عنوان وناشر ونوع ورابط كل مرجع مختصر مع سجل المصدر الكامل",
+        "سلامة جميع روابط المصادر بصيغة HTTPS وعلى نطاق Airtable الرسمي أو مركز دعم Airtable",
+        "عدم وجود NaN أو Infinity أو قيم JSON غير قياسية",
+        "وجود محتوى عربي جوهري في جميع الأقسام التحليلية",
+        "وسم الإيراد الشهري وحركة الموقع والتقييم الحالي بأنها غير معلنة",
+        "فصل إجمالي التمويل 1.36 مليار دولار عن الإيراد والسيولة والتقييم",
+        "وسم تقييم 11 مليار دولار بأنه pre-money ومؤرخ بديسمبر 2021 لا كتقييم حالي",
+        "فصل 500,000 مؤسسة مستخدمة عن العملاء المدفوعين والمستخدمين النشطين وزيارات الموقع",
+        "فصل أسعار الخطط وائتمانات الذكاء الاصطناعي عن الإيراد المحقق وARR",
+        "وسم مؤشرات نمو المؤسسات وNDR والتدفق النقدي بأنها تصريحات تاريخية لا مقاييس حالية",
+        "عدم إنشاء TAM أو معدل نمو مالي أو إيراد من نقاط استخدام غير متجانسة",
+        "استبدال Node.js وReact وMySQL وRedis غير الموثقة بقدرات منتج رسمية مع تنبيه واضح",
+        "وجود 10 دروس خاصة بـAirtable و20 مصدرًا رسميًا و15 مدخلًا في خريطة الأدلة"
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول الجوهرية بقيمها الفعلية وحالة التحقق والثقة والمصادر، وتفصل بين الإيراد والتمويل والتقييم وأسعار الخطط والمؤسسات المستخدمة والعملاء المدفوعين والمستخدمين النشطين وحركة الموقع.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي أو وثيقة أولية قوية.",
+      "verified_current_product_capability": "القدرة موجودة في صفحة منتج أو وثائق حديثة، من دون افتراض حجم استخدامها أو إيرادها.",
+      "verified_as_not_publicly_disclosed": "لم يُنشر المقياس المطلوب، ولذلك لم يُستخدم تقدير خارجي.",
+      "verified_historical_financing": "معلومة جولة أو تقييم مرتبطة بتاريخ ونوع تقييم محددين.",
+      "verified_historical_operating_metric": "مقياس تشغيل أو نمو نشرته الشركة في تاريخ محدد ولا يُعامل كمقياس حالي.",
+      "verified_with_metric_definition_limits": "المعلومة منشورة لكن تعريفها لا يسمح بتحويلها إلى إيراد أو مستخدم نشط أو عميل مدفوع.",
+      "analytical_inference": "تحليل مهني مشتق من حقائق موثقة وليس تصريحًا حرفيًا من الشركة."
+    },
+    "confidence_scale": {
+      "high": "مصدر رسمي مباشر أو عدة وثائق رسمية متطابقة.",
+      "medium_high": "استنتاج محدود مبني على مصادر رسمية مع حدود واضحة.",
+      "medium": "تصريح شركة نوعي أو مقياس تاريخي يحتاج حذرًا عند إسقاطه على الحاضر.",
+      "low_not_used": "تقدير خارجي أو ادعاء بلا تعريف أو تاريخ كافٍ لم يُستخدم كحقيقة."
+    },
+    "metric_definitions": {
+      "revenue": "دخل محاسبي تعترف به الشركة من الاشتراكات والخدمات؛ لا يساوي التمويل أو التقييم أو قيمة العقود غير المحصلة.",
+      "mrr_arr": "إيراد اشتراكي شهري أو سنوي متكرر وفق تعريف محاسبي؛ لا يُستخرج من أسعار الخطط وعدد المؤسسات.",
+      "funding": "رأس مال جمعته الشركة من المستثمرين؛ لا يمثل إيرادًا ولا تقييمًا ولا رصيدًا نقديًا حاليًا.",
+      "valuation": "قيمة حقوق الملكية في جولة محددة، مع تمييز pre-money وpost-money والتاريخ؛ ليست سعرًا حاليًا دائمًا.",
+      "organizations_using": "مؤسسات استخدمت المنتج وفق تعريف الشركة؛ قد تشمل مجانية ومدفوعة ونشطة وغير نشطة.",
+      "paid_customers": "جهات لديها علاقة مدفوعة؛ لا تساوي المقاعد أو المستخدمين أو المؤسسات المستخدمة.",
+      "active_users": "مستخدمون نشطون خلال نافذة زمنية محددة؛ لا تنشر Airtable رقمًا حاليًا في المصادر المراجعة.",
+      "website_traffic": "زيارات الموقع خلال فترة؛ مقياس منفصل عن العملاء والمستخدمين.",
+      "list_price": "سعر معلن قبل الخصومات والضرائب والتفاوض؛ لا يثبت متوسط الإيراد أو التحصيل.",
+      "ai_credits": "وحدة استهلاك داخل المنتج وليست رمزًا ماليًا أو عدد استدعاءات ثابتًا؛ تكلفة الإجراء تختلف حسب المدخلات والنموذج والمخرجات."
+    }
+  },
+  "evidence_map": {
+    "$.headline": {
+      "field_value": "من جدول ذكي إلى نظام تشغيل للأعمال: كيف حوّلت Airtable الخلايا إلى تطبيقات ووكلاء ذكاء اصطناعي",
+      "verification_status": "analytical_inference",
+      "confidence": "high",
+      "claim_type": "company_specific_strategy_headline",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يلخص العنوان التحول الموثق من قاعدة مرئية تشبه الجدول إلى منصة تطبيقات وأتمتة ثم وكلاء ذكاء اصطناعي ومنتج مستقل متعدد الوكلاء.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-10",
+        "SRC-06",
+        "SRC-07",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-10",
+          "title": "The Airtable Platform",
+          "publisher": "Airtable",
+          "source_type": "official_current_product_page",
+          "url": "https://www.airtable.com/platform",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "بناء تطبيقات فوق بيانات مشتركة وقاعدة علائقية"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "The AI-Native Airtable Has Arrived: A Letter from our CEO",
+          "publisher": "Airtable",
+          "source_type": "official_strategy_and_product_announcement",
+          "url": "https://www.airtable.com/newsroom/introducing-the-ai-native-airtable",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إعادة تقديم Airtable كمنصة تطبيقات أصلية للذكاء الاصطناعي في يونيو 2025"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Airtable announces David Azose as CTO and the acquisition of DeepSky",
+          "publisher": "Airtable",
+          "source_type": "official_acquisition_announcement",
+          "url": "https://www.airtable.com/newsroom/deepsky-acquisition-new-cto",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "استحواذ Airtable على DeepSky في أكتوبر 2025"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Introducing Superagent: The Multi-Agent System That Delivers Finished Work",
+          "publisher": "Airtable",
+          "source_type": "official_product_launch",
+          "url": "https://www.airtable.com/newsroom/introducing-superagent",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إطلاق Superagent كأول منتج مستقل قائم على تنسيق عدة وكلاء في يناير 2026"
+        }
+      ],
+      "limitations": "العنوان تحليل تحريري ولا يثبت أداءً ماليًا أو تفوقًا سوقيًا."
+    },
+    "$.company.location": {
+      "field_value": "سان فرانسيسكو، كاليفورنيا، الولايات المتحدة. تأسست Airtable في 2013، وتعرض صفحة الشركة ستة مكاتب حول العالم وأكثر من 700 موظف. الشركة خاصة، ولا تعني مواقع المكاتب وجود كيانات قانونية أو إيرادات منشورة في كل سوق.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "company_identity_and_location",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "صفحة الشركة تحدد سان فرانسيسكو مقرًا رئيسيًا وتذكر تأسيس 2013 والمكاتب والموظفين.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Airtable",
+          "publisher": "Airtable",
+          "source_type": "official_company_profile",
+          "url": "https://www.airtable.com/about",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "تأسيس الشركة في 2013 ومقرها الرئيسي في سان فرانسيسكو"
+        }
+      ],
+      "limitations": "عدد الموظفين والمكاتب يتغير، وهو لقطة من صفحة الشركة عند التحقق."
+    },
+    "$.company.business_model": {
+      "field_value": "نموذج Product-Led Growth يجمع خطة مجانية مع اشتراكات Team وBusiness المحتسبة أساسًا على المقاعد ذات صلاحية التحرير، وعقود Enterprise Scale مخصصة عبر فريق المبيعات. منذ 2025 أضيفت ائتمانات الذكاء الاصطناعي إلى الخطط مع إمكانية شراء حزم إضافية، بينما توسع العرض إلى Omni وField Agents وتكامل ChatGPT وSuperagent. أسعار القائمة والائتمانات المتاحة لا تكشف مزيج الإيراد الفعلي أو ARR.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "business_model_and_pricing",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التسعير الرسمي ووثائق الفوترة والذكاء الاصطناعي تثبت الخطة المجانية والمقاعد والخطط المؤسسية والائتمانات الإضافية.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-04",
+        "SRC-05",
+        "SRC-14",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Airtable Pricing",
+          "publisher": "Airtable",
+          "source_type": "official_current_pricing",
+          "url": "https://airtable.com/pricing",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "احتساب المقاعد المدفوعة للمستخدمين ذوي صلاحيات التحرير في الخطط المدفوعة"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Airtable Billing Overview",
+          "publisher": "Airtable Support",
+          "source_type": "official_billing_documentation",
+          "url": "https://support.airtable.com/docs/airtable-billing-overview",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "وجود مسارين للبيع: الخدمة الذاتية والبيع عبر فريق المبيعات"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Airtable AI billing",
+          "publisher": "Airtable Support",
+          "source_type": "official_ai_billing_documentation",
+          "url": "https://support.airtable.com/docs/en/airtable-ai-billing",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "بيع حزم ائتمانات إضافية ابتداءً من 40 دولارًا شهريًا مقابل 20,000 ائتمان وفق وثيقة مارس 2026"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "The AI-Native Airtable Has Arrived: A Letter from our CEO",
+          "publisher": "Airtable",
+          "source_type": "official_strategy_and_product_announcement",
+          "url": "https://www.airtable.com/newsroom/introducing-the-ai-native-airtable",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إدراج قدرات الذكاء الاصطناعي وائتمانات ضمن جميع الخطط بما فيها المجانية"
+        }
+      ],
+      "limitations": "لا تنشر الشركة مزيج الإيراد أو الخصومات أو متوسط قيمة العقود."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. Airtable شركة خاصة ولا تنشر MRR أو ARR أو إيرادًا شهريًا مدققًا. توجد إشارات تشغيلية تاريخية من الشركة: في ديسمبر 2022 قالت إن المؤسسات تمثل غالبية الإيراد وإن إيرادات القطاع المؤسسي كانت تنمو بأكثر من 100% سنويًا مع NDR قدره 170%، وفي 2023 وصفت نفسها بأنها موجبة التدفق النقدي. هذه مؤشرات تاريخية لا تسمح باشتقاق إيراد أغسطس 2026.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "revenue_disclosure",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد إفصاح شهري أو سنوي رقمي مدقق؛ المتاح تصريحات تشغيلية تاريخية فقط.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-16",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-16",
+          "title": "Updates on Airtable's Strategic Focus",
+          "publisher": "Airtable",
+          "source_type": "official_ceo_operating_update",
+          "url": "https://www.airtable.com/newsroom/airtable-new-direction",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "تصريح تاريخي بأن المؤسسات مثلت غالبية الإيراد"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Message from our CEO about long-term plans",
+          "publisher": "Airtable",
+          "source_type": "official_ceo_operating_update",
+          "url": "https://www.airtable.com/newsroom/message-from-our-ceo",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "تصريح تاريخي بأن الشركة كانت موجبة التدفق النقدي ولديها احتياطي رأسمالي كبير"
+        }
+      ],
+      "limitations": "التصريحات التاريخية لا تسمح بحساب MRR أو ARR أو إيراد 2026."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن. لا تنشر Airtable زيارات الموقع أو MAU/DAU الحاليين. الرقم الأحدث المعلن هو استخدام أكثر من 500,000 مؤسسة للمنصة ووجود 80% من Fortune 100 ضمن قاعدة الاستخدام؛ هذا عدد مؤسسات تراكمي من الشركة، وليس عدد عملاء مدفوعين أو مستخدمين نشطين أو زيارات شهرية.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "high",
+      "claim_type": "adoption_vs_traffic",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الشركة تعلن أكثر من 500 ألف مؤسسة و80% من Fortune 100، لكنها لا تعلن زيارات أو MAU حاليًا.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-01",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Airtable",
+          "publisher": "Airtable",
+          "source_type": "official_company_profile",
+          "url": "https://www.airtable.com/about",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "استخدام Airtable من 500,000 مؤسسة"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Introducing Superagent: The Multi-Agent System That Delivers Finished Work",
+          "publisher": "Airtable",
+          "source_type": "official_product_launch",
+          "url": "https://www.airtable.com/newsroom/introducing-superagent",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "تصريح الشركة بأن أكثر من 500,000 مؤسسة و80% من Fortune 100 تستخدم Airtable"
+        }
+      ],
+      "limitations": "عدد المؤسسات لا يساوي العملاء المدفوعين أو المستخدمين النشطين أو حركة الموقع."
+    },
+    "$.overview.problem.text": {
+      "field_value": "تبدأ فرق الأعمال غالبًا بجداول بيانات لأنها مألوفة وسريعة، لكنها تصبح هشة عندما تتعدد الجداول والمستخدمون والصلاحيات والعلاقات والأتمتة. وفي الطرف الآخر، تمنح قواعد البيانات ومنصات تطوير التطبيقات تحكمًا أكبر لكنها تحتاج خبرة تقنية وتكلفة تنفيذ. التحدي الذي استهدفته Airtable هو تمكين الموظف الأقرب إلى العملية من نمذجة بيانات مترابطة وبناء واجهة وسير عمل دون انتظار فريق هندسي لكل تعديل.",
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "customer_problem_analysis",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المشكلة مشتقة من الفرق بين الجداول وقواعد البيانات ومن انتقال Airtable نحو تطبيقات متصلة وحوكمة مؤسسية.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-11",
+        "SRC-19",
+        "SRC-15",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "Understanding linked record relationships in Airtable",
+          "publisher": "Airtable Support",
+          "source_type": "official_product_documentation",
+          "url": "https://support.airtable.com/v1/docs/understanding-linked-record-relationships-in-airtable",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "تمثيل طبقة base كقاعدة بيانات"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Introducing the Airtable Connected Apps Platform",
+          "publisher": "Airtable",
+          "source_type": "official_product_announcement",
+          "url": "https://www.airtable.com/newsroom/introducing-the-airtable-connected-apps-platform",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إطلاق Connected Apps Platform في أكتوبر 2022"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Trust & Security",
+          "publisher": "Airtable",
+          "source_type": "official_security_and_compliance_page",
+          "url": "https://www.airtable.com/company/trust-and-security",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "وجود ميزات مؤسسية مثل SAML SSO وإدارة الوصول"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "The AI-Native Airtable Has Arrived: A Letter from our CEO",
+          "publisher": "Airtable",
+          "source_type": "official_strategy_and_product_announcement",
+          "url": "https://www.airtable.com/newsroom/introducing-the-ai-native-airtable",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إعادة تقديم Airtable كمنصة تطبيقات أصلية للذكاء الاصطناعي في يونيو 2025"
+        }
+      ],
+      "limitations": "هذا تحليل لاحتياجات السوق وليس نتيجة دراسة كمية مستقلة."
+    },
+    "$.overview.solution.text": {
+      "field_value": "بدأت Airtable بواجهة تشبه جدول البيانات فوق قاعدة بيانات علائقية تدعم السجلات المرتبطة والعلاقات والعروض المختلفة. ثم أضافت الواجهات والأتمتة والمزامنة والتكاملات وHyperDB لتشغيل تطبيقات مؤسسية فوق بيانات مشتركة. في 2025 أعادت تقديم نفسها كمنصة تطبيقات أصلية للذكاء الاصطناعي عبر Omni لبناء التطبيقات والتعامل مع البيانات باللغة الطبيعية وField Agents لتنفيذ أعمال متكررة عبر السجلات، ثم أضافت تكامل ChatGPT واستحوذت على DeepSky وأطلقت Superagent في 2026. بذلك انتقل المنتج من تنظيم البيانات إلى بناء وتشغيل تطبيقات ووكلاء، مع بقاء حدود السعة والاعتمادات والتكلفة مرتبطة بالخطة.",
+      "verification_status": "verified_current_product_capability",
+      "confidence": "high",
+      "claim_type": "product_evolution",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر الرسمية توثق العلاقات والواجهات والأتمتة وHyperDB وOmni وChatGPT وDeepSky وSuperagent.",
+      "source_count": 8,
+      "source_ids": [
+        "SRC-11",
+        "SRC-12",
+        "SRC-13",
+        "SRC-18",
+        "SRC-06",
+        "SRC-08",
+        "SRC-07",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "Understanding linked record relationships in Airtable",
+          "publisher": "Airtable Support",
+          "source_type": "official_product_documentation",
+          "url": "https://support.airtable.com/v1/docs/understanding-linked-record-relationships-in-airtable",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "دعم علاقات السجلات المرتبطة وأنماط العلاقات المختلفة"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Getting started with Airtable automations",
+          "publisher": "Airtable Support",
+          "source_type": "official_product_documentation",
+          "url": "https://support.airtable.com/getting-started-with-airtable-automations",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "بناء أتمتة من محفز وإجراء أو أكثر"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Managing and sharing Airtable interfaces",
+          "publisher": "Airtable Support",
+          "source_type": "official_product_documentation",
+          "url": "https://support.airtable.com/docs/managing-and-sharing-interfaces",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إتاحة Interface Designer عبر جميع الخطط مع اختلاف خيارات المشاركة"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Meet the New Airtable: Delivering AI to the Final Mile of Enterprise Operations",
+          "publisher": "Airtable",
+          "source_type": "official_product_announcement",
+          "url": "https://www.airtable.com/newsroom/meet-new-airtable-AI-era",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إطلاق App Library وHyperDB في سبتمبر 2024"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "The AI-Native Airtable Has Arrived: A Letter from our CEO",
+          "publisher": "Airtable",
+          "source_type": "official_strategy_and_product_announcement",
+          "url": "https://www.airtable.com/newsroom/introducing-the-ai-native-airtable",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إطلاق Omni لبناء التطبيقات والتعامل مع البيانات باللغة الطبيعية"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Introducing Airtable for ChatGPT",
+          "publisher": "Airtable",
+          "source_type": "official_integration_announcement",
+          "url": "https://www.airtable.com/newsroom/chatgpt",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إطلاق تكامل Airtable مع ChatGPT في ديسمبر 2025"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Airtable announces David Azose as CTO and the acquisition of DeepSky",
+          "publisher": "Airtable",
+          "source_type": "official_acquisition_announcement",
+          "url": "https://www.airtable.com/newsroom/deepsky-acquisition-new-cto",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "استحواذ Airtable على DeepSky في أكتوبر 2025"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Introducing Superagent: The Multi-Agent System That Delivers Finished Work",
+          "publisher": "Airtable",
+          "source_type": "official_product_launch",
+          "url": "https://www.airtable.com/newsroom/introducing-superagent",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إطلاق Superagent كأول منتج مستقل قائم على تنسيق عدة وكلاء في يناير 2026"
+        }
+      ],
+      "limitations": "وجود القدرة لا يثبت استخدامها الواسع أو مساهمتها في الإيراد."
+    },
+    "$.market_data.target_audience": {
+      "field_value": "بدأ التبني من أفراد وفرق صغيرة تحتاج قواعد مرنة لإدارة المشاريع والمحتوى والعمليات، ثم أصبح التركيز الاستراتيجي منذ 2022 على المؤسسات الكبيرة وفرق المنتج والتسويق والعمليات والمالية والموارد البشرية والإعلام. الخطط الذاتية تخدم الفرق الصغيرة والمتوسطة، بينما تستهدف Business وEnterprise Scale الشركات التي تحتاج حوكمة وأمانًا وسعة بيانات ودعمًا مركزيًا. Superagent يوسع الجمهور إلى فرق البحث والاستراتيجية، لكنه منتج مستقل جديد ولا توجد بيانات عامة عن مساهمته في الإيراد.",
+      "verification_status": "analytical_inference",
+      "confidence": "high",
+      "claim_type": "customer_segments",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التسعير وخطاب التركيز المؤسسي والمنتجات الحالية تدعم تقسيم الجمهور بين فرق ذاتية الخدمة ومؤسسات وباحثين.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-04",
+        "SRC-16",
+        "SRC-10",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Airtable Pricing",
+          "publisher": "Airtable",
+          "source_type": "official_current_pricing",
+          "url": "https://airtable.com/pricing",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "وجود خطة مجانية"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Updates on Airtable's Strategic Focus",
+          "publisher": "Airtable",
+          "source_type": "official_ceo_operating_update",
+          "url": "https://www.airtable.com/newsroom/airtable-new-direction",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "تحول التركيز في ديسمبر 2022 من التبني التصاعدي الواسع إلى المؤسسات الكبيرة"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "The Airtable Platform",
+          "publisher": "Airtable",
+          "source_type": "official_current_product_page",
+          "url": "https://www.airtable.com/platform",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "بناء تطبيقات فوق بيانات مشتركة وقاعدة علائقية"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Introducing Superagent: The Multi-Agent System That Delivers Finished Work",
+          "publisher": "Airtable",
+          "source_type": "official_product_launch",
+          "url": "https://www.airtable.com/newsroom/introducing-superagent",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إطلاق Superagent كأول منتج مستقل قائم على تنسيق عدة وكلاء في يناير 2026"
+        }
+      ],
+      "limitations": "لا تنشر Airtable توزيع العملاء أو الإيراد حسب القطاع."
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا يوجد رقم رسمي واحد لسوق Airtable القابل للاستهداف؛ فالمنتج يتقاطع مع قواعد البيانات التعاونية، وإدارة العمل، والتطوير منخفض أو عديم الكود، والأتمتة، ومنصات التطبيقات، ووكلاء الذكاء الاصطناعي. لذلك لم يُدرج TAM تجاري قد يخلط أسواقًا مختلفة. الدليل التشغيلي الأقوى هو إعلان الشركة أن أكثر من 500,000 مؤسسة و80% من Fortune 100 تستخدم المنصة، لكن الاستخدام لا يساوي عقدًا مدفوعًا أو حصة سوقية.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "high",
+      "claim_type": "market_scope_without_invented_tam",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المنتج يمتد عبر عدة فئات، واعتماد 500 ألف مؤسسة دليل انتشار لا TAM أو حصة سوقية.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-10",
+        "SRC-01",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-10",
+          "title": "The Airtable Platform",
+          "publisher": "Airtable",
+          "source_type": "official_current_product_page",
+          "url": "https://www.airtable.com/platform",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "بناء تطبيقات فوق بيانات مشتركة وقاعدة علائقية"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Airtable",
+          "publisher": "Airtable",
+          "source_type": "official_company_profile",
+          "url": "https://www.airtable.com/about",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "استخدام Airtable من 500,000 مؤسسة"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Introducing Superagent: The Multi-Agent System That Delivers Finished Work",
+          "publisher": "Airtable",
+          "source_type": "official_product_launch",
+          "url": "https://www.airtable.com/newsroom/introducing-superagent",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "تصريح الشركة بأن أكثر من 500,000 مؤسسة و80% من Fortune 100 تستخدم Airtable"
+        }
+      ],
+      "limitations": "لم يُستخدم تقرير سوق تجاري لتجنب جمع أسواق متداخلة."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا تنشر Airtable معدل نمو حاليًا للإيراد أو ARR أو العملاء المدفوعين. تاريخيًا ارتفع العدد المعلن من 250,000 مؤسسة في مارس 2021 إلى أكثر من 500,000 بحلول يناير 2026، لكن تعريف المؤسسة ومدى نشاطها أو دفعها غير منشور، لذلك لا يُحوّل الرقم إلى CAGR مالي. أعلنت الشركة نمو إيرادات المؤسسات بأكثر من 100% سنويًا وNDR قدره 170% في ديسمبر 2022، ثم قالت إنها موجبة التدفق النقدي في 2023. أحدث مرحلة نمو معلنة هي التحول إلى AI-native في 2025، والاستحواذ على DeepSky، وتكامل ChatGPT، وإطلاق Superagent في 2026؛ ولا توجد أرقام عامة تقيس أثر هذه التحولات على الإيراد.",
+      "verification_status": "verified_historical_operating_metric",
+      "confidence": "high",
+      "claim_type": "growth_timeline_and_limits",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تتوفر نقاط زمنية للاستخدام ومؤشرات مؤسسية تاريخية وتحولات منتج، لكن لا يوجد معدل نمو مالي حديث.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-03",
+        "SRC-09",
+        "SRC-16",
+        "SRC-17",
+        "SRC-06",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Airtable raises $270 million to accelerate enterprise momentum",
+          "publisher": "Airtable",
+          "source_type": "official_series_e_announcement",
+          "url": "https://www.airtable.com/newsroom/series-e-funding-announcement",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "وجود ملايين المستخدمين عبر 250,000 مؤسسة في مارس 2021"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Introducing Superagent: The Multi-Agent System That Delivers Finished Work",
+          "publisher": "Airtable",
+          "source_type": "official_product_launch",
+          "url": "https://www.airtable.com/newsroom/introducing-superagent",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "تصريح الشركة بأن أكثر من 500,000 مؤسسة و80% من Fortune 100 تستخدم Airtable"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Updates on Airtable's Strategic Focus",
+          "publisher": "Airtable",
+          "source_type": "official_ceo_operating_update",
+          "url": "https://www.airtable.com/newsroom/airtable-new-direction",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "تصريح تاريخي بنمو إيرادات المؤسسات بأكثر من 100% سنويًا وNDR قدره 170%"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Message from our CEO about long-term plans",
+          "publisher": "Airtable",
+          "source_type": "official_ceo_operating_update",
+          "url": "https://www.airtable.com/newsroom/message-from-our-ceo",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "تصريح تاريخي بأن الشركة كانت موجبة التدفق النقدي ولديها احتياطي رأسمالي كبير"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "The AI-Native Airtable Has Arrived: A Letter from our CEO",
+          "publisher": "Airtable",
+          "source_type": "official_strategy_and_product_announcement",
+          "url": "https://www.airtable.com/newsroom/introducing-the-ai-native-airtable",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إعادة تقديم Airtable كمنصة تطبيقات أصلية للذكاء الاصطناعي في يونيو 2025"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Airtable announces David Azose as CTO and the acquisition of DeepSky",
+          "publisher": "Airtable",
+          "source_type": "official_acquisition_announcement",
+          "url": "https://www.airtable.com/newsroom/deepsky-acquisition-new-cto",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "استحواذ Airtable على DeepSky في أكتوبر 2025"
+        }
+      ],
+      "limitations": "أرقام المؤسسات ليست بالضرورة قابلة للمقارنة تعريفًا، ولا تُستخدم لحساب CAGR مالي."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "تعلن Airtable إجمالي تمويل قدره 1.36 مليار دولار حتى آخر جولة كبيرة منشورة. في مارس 2021 جمعت 270 مليون دولار في Series E عند تقييم بعد الاستثمار 5.77 مليار دولار، ثم جمعت 735 مليون دولار في Series F في ديسمبر 2021 عند تقييم قبل الاستثمار 11 مليار دولار. شارك في الجولة الأخيرة XN وFranklin Templeton وJ.P. Morgan Growth Equity Partners وMSD Capital وSalesforce Ventures وSilver Lake ومستثمرون قائمون مثل Benchmark وThrive. لا توجد جولة أولية أو إفصاح حديث منشور يحدد تقييمًا جديدًا حتى 3 أغسطس 2026.",
+      "verification_status": "verified_historical_financing",
+      "confidence": "high",
+      "claim_type": "funding_history",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "إعلانات الشركة توثق Series E وSeries F والمبالغ والتقييمات والمستثمرين وإجمالي التمويل.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-03",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Airtable raises $270 million to accelerate enterprise momentum",
+          "publisher": "Airtable",
+          "source_type": "official_series_e_announcement",
+          "url": "https://www.airtable.com/newsroom/series-e-funding-announcement",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "جولة Series E بقيمة 270 مليون دولار في مارس 2021"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Airtable secures $735M to invest in its connected apps platform",
+          "publisher": "Airtable",
+          "source_type": "official_series_f_announcement",
+          "url": "https://www.airtable.com/newsroom/series-f",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "جولة Series F بقيمة 735 مليون دولار في 13 ديسمبر 2021"
+        }
+      ],
+      "limitations": "إجمالي التمويل لا يساوي النقد المتاح حاليًا ولا الإيراد."
+    },
+    "$.financials.valuation": {
+      "field_value": "آخر تقييم تمويلي أولي معلن هو 11 مليار دولار قبل الاستثمار في Series F بتاريخ 13 ديسمبر 2021؛ ومع إضافة 735 مليون دولار يصبح الحساب النظري بعد الاستثمار نحو 11.735 مليار دولار فقط إذا اعتُبر المبلغ كله حقوق ملكية جديدة وبلا تعديلات، لكن الشركة لم تعرض هذا الرقم كتقييم حالي. لذلك لا يجوز كتابة «11B+» كتقييم أغسطس 2026، ولا توجد شركة عامة أو سعر سهم أو تقارير SEC دورية تسمح بتحديثه. التقييم الحالي غير معلن.",
+      "verification_status": "verified_historical_financing",
+      "confidence": "high",
+      "claim_type": "time_bound_valuation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "آخر تقييم أولي معلن 11 مليار دولار قبل الاستثمار في ديسمبر 2021، وليس تقييمًا حاليًا.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Airtable secures $735M to invest in its connected apps platform",
+          "publisher": "Airtable",
+          "source_type": "official_series_f_announcement",
+          "url": "https://www.airtable.com/newsroom/series-f",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "تقييم قبل الاستثمار قدره 11 مليار دولار"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Airtable raises $270 million to accelerate enterprise momentum",
+          "publisher": "Airtable",
+          "source_type": "official_series_e_announcement",
+          "url": "https://www.airtable.com/newsroom/series-e-funding-announcement",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "تقييم بعد الاستثمار قدره 5.77 مليار دولار"
+        }
+      ],
+      "limitations": "لا يوجد تسعير سوق عام أو جولة أحدث منشورة لتحديث القيمة حتى تاريخ التحقق."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "اشتراكات Team المحتسبة على المقاعد ذات صلاحية التحرير؛ سعر القائمة 20 دولارًا للمستخدم شهريًا عند الدفع السنوي في أغسطس 2026",
+        "اشتراكات Business؛ سعر القائمة 45 دولارًا للمستخدم شهريًا عند الدفع السنوي، مع اختلاف الشروط في الصفقات المُدارة بالمبيعات",
+        "عقود Enterprise Scale المخصصة حسب حجم المؤسسة والسعة والحوكمة والدعم، وهي تسعير تواصلي غير منشور",
+        "حزم ائتمانات ذكاء اصطناعي إضافية فوق الائتمانات الشهرية المضمنة؛ توثق صفحة الدعم حزمة 20,000 ائتمان بسعر 40 دولارًا شهريًا أو 400 دولار سنويًا ضمن خيارات الخدمة الذاتية",
+        "ميزات وإضافات مؤسسية مثل Portals والسعة والحوكمة والخدمات أو الدعم المتعاقد عليه، بحسب الخطة والعقد؛ لا تنشر الشركة مساهمة كل بند في الإيراد",
+        "Superagent منتج مستقل أطلق في 2026 وقد يشكل مسار إيراد جديدًا، لكن التسعير والإيراد والمستخدمين المدفوعين لم تُفصح عنها الشركة في المصادر التي تمت مراجعتها",
+        "لا تتوفر بيانات عامة لفصل إيراد الخدمة الذاتية عن المبيعات المؤسسية أو الذكاء الاصطناعي أو الخدمات، ولا لحساب ARR أو متوسط الإيراد لكل عميل"
+      ],
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "revenue_model_not_revenue_amount",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التسعير والفوترة ووثائق ائتمانات الذكاء الاصطناعي تثبت مسارات التحصيل، مع بقاء المزيج والإيراد غير معلنين.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-04",
+        "SRC-14",
+        "SRC-13",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Airtable Pricing",
+          "publisher": "Airtable",
+          "source_type": "official_current_pricing",
+          "url": "https://airtable.com/pricing",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "سعر Team البالغ 20 دولارًا للمستخدم شهريًا عند الدفع السنوي"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Airtable AI billing",
+          "publisher": "Airtable Support",
+          "source_type": "official_ai_billing_documentation",
+          "url": "https://support.airtable.com/docs/en/airtable-ai-billing",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "بيع حزم ائتمانات إضافية ابتداءً من 40 دولارًا شهريًا مقابل 20,000 ائتمان وفق وثيقة مارس 2026"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Managing and sharing Airtable interfaces",
+          "publisher": "Airtable Support",
+          "source_type": "official_product_documentation",
+          "url": "https://support.airtable.com/docs/managing-and-sharing-interfaces",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إمكان مشاركة واجهات خارجية عبر Portals في الخطط المؤهلة"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Introducing Superagent: The Multi-Agent System That Delivers Finished Work",
+          "publisher": "Airtable",
+          "source_type": "official_product_launch",
+          "url": "https://www.airtable.com/newsroom/introducing-superagent",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إطلاق Superagent كأول منتج مستقل قائم على تنسيق عدة وكلاء في يناير 2026"
+        }
+      ],
+      "limitations": "أسعار القائمة والمنتجات لا تثبت الإيراد الفعلي أو ARR."
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "اخفِ تعقيد قاعدة البيانات خلف استعارة مألوفة",
+          "description": "لم تطلب Airtable من المستخدم غير التقني تعلم SQL أو مخططات قواعد البيانات أولًا؛ بدأت من شبكة مألوفة ثم أدخلت السجلات المرتبطة والبحث والعروض. الدرس أن الابتكار القوي قد يكون في ترتيب التعقيد لا في إلغائه: واجهة مألوفة للاكتساب، وبنية أعمق للاحتفاظ والتوسع."
+        },
+        {
+          "title": "المنتج المجاني قناة اكتساب، والعقد المؤسسي محرك نقدي مختلف",
+          "description": "التبني التصاعدي سمح للفرق بتجربة المنتج دون دورة مبيعات، لكن Airtable أعلنت في 2022 أن المؤسسات أصبحت غالبية الإيراد. هذا يوضح أن Product-Led Growth لا يلغي المبيعات المؤسسية؛ بل يصنع دليل استخدام داخليًا يمكن لفريق المبيعات توسيعه إلى عقد حوكمة وسعة ودعم."
+        },
+        {
+          "title": "لا تخلط عدد المؤسسات بالعملاء المدفوعين",
+          "description": "رقم 500,000 مؤسسة يعكس انتشارًا مهمًا، لكنه لا يحدد النشاط أو الدفع أو عدد المقاعد أو قيمة العقود. في ملفات الشركات يجب فصل المؤسسات التي استخدمت المنتج، والعملاء المدفوعين، والمستخدمين النشطين، والمقاعد المدفوعة، لأن كل مقياس يجيب عن سؤال اقتصادي مختلف."
+        },
+        {
+          "title": "التقييم يحمل تاريخًا وشروطًا ولا يعيش إلى الأبد",
+          "description": "تقييم 11 مليار دولار يعود إلى جولة ديسمبر 2021 وكان قبل الاستثمار. بعد تغير أسعار البرمجيات الخاصة وإعادة هيكلة الشركة، لا يمكن استخدامه كتقييم حالي دون صفقة أحدث. الدرس للمؤسسين والمحللين: اذكر نوع التقييم وتاريخه والجولة، ولا تحوله إلى حقيقة دائمة عن قيمة الشركة."
+        },
+        {
+          "title": "التوسع المؤسسي يحتاج حوكمة بقدر حاجته للمرونة",
+          "description": "عندما يتحول المنتج من أداة فريق إلى نظام لعمليات حساسة، تصبح الأذونات وSSO والسجلات الإدارية والشهادات والسعة والنسخ الاحتياطي جزءًا من المنتج المدفوع. Airtable لم تبع سهولة البناء فقط؛ بنت طبقة ثقة تسمح لقسم تقنية المعلومات بقبول ما بناه مستخدمو الأعمال."
+        },
+        {
+          "title": "التركيز الاستراتيجي قد يتطلب تقليصًا رغم النمو",
+          "description": "خفضت Airtable 254 موظفًا في 2022 ثم 237 في 2023 بينما كانت تصف القطاع المؤسسي بالنمو والشركة بالتدفق النقدي الإيجابي. الرسالة أن النمو لا يعني أن كل مبادرة أو هيكل مناسب؛ الكفاءة وتركيبة الأدوار ومسار الوصول إلى السوق قد تتغير قبل نفاد السيولة."
+        },
+        {
+          "title": "منصة الذكاء الاصطناعي أقوى عندما ترتبط ببيانات وسير عمل",
+          "description": "تحول 2025 لم يقتصر على إضافة مربع كتابة؛ استخدمت Airtable الجداول والعلاقات والواجهات والأتمتة كحاوية لوكلاء يعملون على آلاف السجلات. القيمة الدفاعية هنا هي ربط النموذج بسياق منظم وصلاحيات وإجراءات متكررة، بدل تقديم محادثة منفصلة عن العمل الحقيقي."
+        },
+        {
+          "title": "اخلط التسعير بالمقاعد مع الاستهلاك بحذر",
+          "description": "أبقت Airtable الاشتراك القائم على المقاعد، وأضافت ائتمانات ذكاء اصطناعي مضمّنة وحزمًا إضافية. هذا النموذج يوازن بين قابلية توقع الاشتراك وتكلفة الاستدلال المتغيرة، لكنه يحتاج شفافية في الاستهلاك وتنبيهات وحدود حتى لا تتحول قيمة الذكاء الاصطناعي إلى فاتورة مفاجئة."
+        },
+        {
+          "title": "الاستحواذ يختصر الانتقال إلى فئة منتج جديدة",
+          "description": "بدل بناء وكيل بحث مستقل من الصفر فقط، استحوذت Airtable على DeepSky ثم أطلقت Superagent. الدرس أن الاستحواذ قد يسرع دخول فئة مجاورة عندما توجد ملاءمة واضحة بين أصول الطرفين: بيانات وتطبيقات منظمة من Airtable، وبحث متعدد الوكلاء من DeepSky."
+        },
+        {
+          "title": "النموذج الجاهز يفتح الباب، لكن القيمة في قابلية التكييف",
+          "description": "القوالب تقلل رهبة الصفحة البيضاء وتقدم مسارًا سريعًا لأول نتيجة، لكنها لا تجعل وقت الوصول إلى القيمة صفرًا ولا تضمن نجاح التنفيذ. ميزة Airtable الأعمق هي أن القالب نقطة بداية يمكن تحويلها إلى قاعدة مترابطة وواجهة وأتمتة تناسب عملية خاصة بكل فريق."
+        }
+      ],
+      "verification_status": "analytical_inference",
+      "confidence": "high",
+      "claim_type": "company_specific_lessons",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس مشتقة من مسار المنتج والتسعير والتمويل والتركيز المؤسسي وتحول الذكاء الاصطناعي والاستحواذ.",
+      "source_count": 7,
+      "source_ids": [
+        "SRC-11",
+        "SRC-04",
+        "SRC-16",
+        "SRC-02",
+        "SRC-06",
+        "SRC-07",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "Understanding linked record relationships in Airtable",
+          "publisher": "Airtable Support",
+          "source_type": "official_product_documentation",
+          "url": "https://support.airtable.com/v1/docs/understanding-linked-record-relationships-in-airtable",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "تمثيل طبقة base كقاعدة بيانات"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Airtable Pricing",
+          "publisher": "Airtable",
+          "source_type": "official_current_pricing",
+          "url": "https://airtable.com/pricing",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "وجود خطة مجانية"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Updates on Airtable's Strategic Focus",
+          "publisher": "Airtable",
+          "source_type": "official_ceo_operating_update",
+          "url": "https://www.airtable.com/newsroom/airtable-new-direction",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "تحول التركيز في ديسمبر 2022 من التبني التصاعدي الواسع إلى المؤسسات الكبيرة"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Airtable secures $735M to invest in its connected apps platform",
+          "publisher": "Airtable",
+          "source_type": "official_series_f_announcement",
+          "url": "https://www.airtable.com/newsroom/series-f",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "تقييم قبل الاستثمار قدره 11 مليار دولار"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "The AI-Native Airtable Has Arrived: A Letter from our CEO",
+          "publisher": "Airtable",
+          "source_type": "official_strategy_and_product_announcement",
+          "url": "https://www.airtable.com/newsroom/introducing-the-ai-native-airtable",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إعادة تقديم Airtable كمنصة تطبيقات أصلية للذكاء الاصطناعي في يونيو 2025"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Airtable announces David Azose as CTO and the acquisition of DeepSky",
+          "publisher": "Airtable",
+          "source_type": "official_acquisition_announcement",
+          "url": "https://www.airtable.com/newsroom/deepsky-acquisition-new-cto",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "استحواذ Airtable على DeepSky في أكتوبر 2025"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Airtable AI billing",
+          "publisher": "Airtable Support",
+          "source_type": "official_ai_billing_documentation",
+          "url": "https://support.airtable.com/docs/en/airtable-ai-billing",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إدراج ائتمانات ذكاء اصطناعي شهرية ضمن الخطط"
+        }
+      ],
+      "limitations": "الدروس تحليل استراتيجي ولا تمثل توصية استثمارية أو وعدًا بالنتائج."
+    },
+    "$.tools": {
+      "field_value": [
+        "قواعد بيانات علائقية مرئية وقواعد Bases تحتوي جداول وسجلات وحقولًا",
+        "Linked Records وLookup وRollup لتمثيل العلاقات بين الجداول",
+        "عروض Grid وKanban وCalendar وTimeline وGantt وغيرها بحسب الخطة",
+        "Interface Designer لبناء واجهات مخصصة فوق البيانات",
+        "Automations بمحفزات وإجراءات وتكاملات وسكربتات JavaScript ضمن الحدود المعلنة",
+        "Sync وربط البيانات بين التطبيقات والأنظمة الخارجية",
+        "HyperDB للأحجام الكبيرة حتى 100 مليون سجل في جدول واحد وفق صفحة المنتج",
+        "Omni لبناء التطبيقات وتعديل البيانات وتحليلها باللغة الطبيعية",
+        "Field Agents لتنفيذ البحث والتصنيف والتلخيص والمهام المتكررة على مستوى السجلات",
+        "Airtable AI مع ائتمانات شهرية ونماذج من عدة مزودين وفق إعدادات الخطة والمؤسسة",
+        "Airtable for ChatGPT للوصول إلى البيانات وتحليلها وتحديثها داخل ChatGPT",
+        "MCP ودعم التكامل مع أدوات الذكاء الاصطناعي وفق وثائق 2026",
+        "Superagent كمنتج مستقل للبحث والتحليل متعدد الوكلاء",
+        "REST API وWebhooks وExtensions وScripting لتوسيع المنصة",
+        "ميزات مؤسسية للحوكمة وSSO والأذونات والتقارير والسجلات الإدارية",
+        "امتثال معلن يشمل SOC 2 Type 2 وISO/IEC 27001 وISO/IEC 27701",
+        "لا توجد إفصاحات رسمية كافية لتأكيد أن Node.js أو React أو MySQL أو Redis تمثل الحزمة الداخلية الحالية، لذلك لم تُعرض كتقنيات مؤكدة"
+      ],
+      "verification_status": "verified_current_product_capability",
+      "confidence": "high",
+      "claim_type": "verified_product_capabilities_not_internal_stack",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "القائمة تستبدل الحزمة البرمجية الداخلية غير الموثقة بقدرات موثقة من صفحات المنتج والدعم والأمان.",
+      "source_count": 8,
+      "source_ids": [
+        "SRC-10",
+        "SRC-11",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14",
+        "SRC-08",
+        "SRC-09",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-10",
+          "title": "The Airtable Platform",
+          "publisher": "Airtable",
+          "source_type": "official_current_product_page",
+          "url": "https://www.airtable.com/platform",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "بناء تطبيقات فوق بيانات مشتركة وقاعدة علائقية"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Understanding linked record relationships in Airtable",
+          "publisher": "Airtable Support",
+          "source_type": "official_product_documentation",
+          "url": "https://support.airtable.com/v1/docs/understanding-linked-record-relationships-in-airtable",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "دعم علاقات السجلات المرتبطة وأنماط العلاقات المختلفة"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Getting started with Airtable automations",
+          "publisher": "Airtable Support",
+          "source_type": "official_product_documentation",
+          "url": "https://support.airtable.com/getting-started-with-airtable-automations",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "بناء أتمتة من محفز وإجراء أو أكثر"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Managing and sharing Airtable interfaces",
+          "publisher": "Airtable Support",
+          "source_type": "official_product_documentation",
+          "url": "https://support.airtable.com/docs/managing-and-sharing-interfaces",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إتاحة Interface Designer عبر جميع الخطط مع اختلاف خيارات المشاركة"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Airtable AI billing",
+          "publisher": "Airtable Support",
+          "source_type": "official_ai_billing_documentation",
+          "url": "https://support.airtable.com/docs/en/airtable-ai-billing",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إدراج ائتمانات ذكاء اصطناعي شهرية ضمن الخطط"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Introducing Airtable for ChatGPT",
+          "publisher": "Airtable",
+          "source_type": "official_integration_announcement",
+          "url": "https://www.airtable.com/newsroom/chatgpt",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إطلاق تكامل Airtable مع ChatGPT في ديسمبر 2025"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Introducing Superagent: The Multi-Agent System That Delivers Finished Work",
+          "publisher": "Airtable",
+          "source_type": "official_product_launch",
+          "url": "https://www.airtable.com/newsroom/introducing-superagent",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "إطلاق Superagent كأول منتج مستقل قائم على تنسيق عدة وكلاء في يناير 2026"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Trust & Security",
+          "publisher": "Airtable",
+          "source_type": "official_security_and_compliance_page",
+          "url": "https://www.airtable.com/company/trust-and-security",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official announcement, product, pricing, support, or company facts section",
+          "supports": "حصول Airtable على SOC 2 Type 2"
+        }
+      ],
+      "limitations": "لا تؤكد القائمة لغات البرمجة أو قواعد البيانات أو البنية التحتية الداخلية الحالية."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "About Airtable",
+      "publisher": "Airtable",
+      "source_type": "official_company_profile",
+      "url": "https://www.airtable.com/about",
+      "supports": [
+        "تأسيس الشركة في 2013 ومقرها الرئيسي في سان فرانسيسكو",
+        "استخدام Airtable من 500,000 مؤسسة",
+        "إجمالي تمويل معلن قدره 1.36 مليار دولار",
+        "وجود أكثر من 700 موظف وفق صفحة الشركة"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Airtable secures $735M to invest in its connected apps platform",
+      "publisher": "Airtable",
+      "source_type": "official_series_f_announcement",
+      "url": "https://www.airtable.com/newsroom/series-f",
+      "supports": [
+        "جولة Series F بقيمة 735 مليون دولار في 13 ديسمبر 2021",
+        "تقييم قبل الاستثمار قدره 11 مليار دولار",
+        "رفع إجمالي التمويل المعلن إلى 1.36 مليار دولار",
+        "مشاركة XN وFranklin Templeton وJ.P. Morgan Growth Equity وSilver Lake ومستثمرين قائمين"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Airtable raises $270 million to accelerate enterprise momentum",
+      "publisher": "Airtable",
+      "source_type": "official_series_e_announcement",
+      "url": "https://www.airtable.com/newsroom/series-e-funding-announcement",
+      "supports": [
+        "جولة Series E بقيمة 270 مليون دولار في مارس 2021",
+        "تقييم بعد الاستثمار قدره 5.77 مليار دولار",
+        "وجود ملايين المستخدمين عبر 250,000 مؤسسة في مارس 2021",
+        "إضافة 13,000 عميل مدفوع صافيًا خلال السنة السابقة وفق إعلان الشركة"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Airtable Pricing",
+      "publisher": "Airtable",
+      "source_type": "official_current_pricing",
+      "url": "https://airtable.com/pricing",
+      "supports": [
+        "وجود خطة مجانية",
+        "سعر Team البالغ 20 دولارًا للمستخدم شهريًا عند الدفع السنوي",
+        "سعر Business البالغ 45 دولارًا للمستخدم شهريًا عند الدفع السنوي",
+        "تسعير Enterprise Scale حسب احتياجات المؤسسة",
+        "احتساب المقاعد المدفوعة للمستخدمين ذوي صلاحيات التحرير في الخطط المدفوعة"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Airtable Billing Overview",
+      "publisher": "Airtable Support",
+      "source_type": "official_billing_documentation",
+      "url": "https://support.airtable.com/docs/airtable-billing-overview",
+      "supports": [
+        "وجود مسارين للبيع: الخدمة الذاتية والبيع عبر فريق المبيعات",
+        "الفوترة الشهرية أو السنوية في الخطط المؤهلة",
+        "اختلاف بنية الفوترة بين مساحات العمل والمؤسسات والخطط المُدارة بالمبيعات"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "The AI-Native Airtable Has Arrived: A Letter from our CEO",
+      "publisher": "Airtable",
+      "source_type": "official_strategy_and_product_announcement",
+      "url": "https://www.airtable.com/newsroom/introducing-the-ai-native-airtable",
+      "supports": [
+        "إعادة تقديم Airtable كمنصة تطبيقات أصلية للذكاء الاصطناعي في يونيو 2025",
+        "إطلاق Omni لبناء التطبيقات والتعامل مع البيانات باللغة الطبيعية",
+        "إدراج قدرات الذكاء الاصطناعي وائتمانات ضمن جميع الخطط بما فيها المجانية",
+        "وصف التحول باعتباره لحظة إعادة تأسيس للمنتج والشركة"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Airtable announces David Azose as CTO and the acquisition of DeepSky",
+      "publisher": "Airtable",
+      "source_type": "official_acquisition_announcement",
+      "url": "https://www.airtable.com/newsroom/deepsky-acquisition-new-cto",
+      "supports": [
+        "استحواذ Airtable على DeepSky في أكتوبر 2025",
+        "تحول Airtable إلى شركة متعددة المنتجات وفق وصفها",
+        "تعيين David Azose رئيسًا للتكنولوجيا",
+        "توسيع العرض نحو وكلاء البحث والتحليل المستقلين"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Introducing Airtable for ChatGPT",
+      "publisher": "Airtable",
+      "source_type": "official_integration_announcement",
+      "url": "https://www.airtable.com/newsroom/chatgpt",
+      "supports": [
+        "إطلاق تكامل Airtable مع ChatGPT في ديسمبر 2025",
+        "إتاحة الرجوع إلى بيانات Airtable وتحليلها وتحديثها من داخل ChatGPT",
+        "توسيع Airtable من تطبيق مستقل إلى طبقة بيانات قابلة للاستخدام عبر مساعدين خارجيين"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Introducing Superagent: The Multi-Agent System That Delivers Finished Work",
+      "publisher": "Airtable",
+      "source_type": "official_product_launch",
+      "url": "https://www.airtable.com/newsroom/introducing-superagent",
+      "supports": [
+        "إطلاق Superagent كأول منتج مستقل قائم على تنسيق عدة وكلاء في يناير 2026",
+        "بناء المنتج على استحواذ DeepSky",
+        "تصريح الشركة بأن أكثر من 500,000 مؤسسة و80% من Fortune 100 تستخدم Airtable",
+        "الخطة المعلنة لتعميق تكامل Superagent مع Airtable"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "The Airtable Platform",
+      "publisher": "Airtable",
+      "source_type": "official_current_product_page",
+      "url": "https://www.airtable.com/platform",
+      "supports": [
+        "بناء تطبيقات فوق بيانات مشتركة وقاعدة علائقية",
+        "Omni لبناء التطبيقات وField Agents لأتمتة أعمال الذكاء الاصطناعي",
+        "HyperDB للتوسع حتى 100 مليون سجل في جدول واحد وفق صفحة المنتج",
+        "وجود الواجهات والأتمتة والمزامنة والتكاملات كقدرات أساسية"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Understanding linked record relationships in Airtable",
+      "publisher": "Airtable Support",
+      "source_type": "official_product_documentation",
+      "url": "https://support.airtable.com/v1/docs/understanding-linked-record-relationships-in-airtable",
+      "supports": [
+        "تمثيل طبقة base كقاعدة بيانات",
+        "دعم علاقات السجلات المرتبطة وأنماط العلاقات المختلفة",
+        "إمكان استخدام جداول الربط لتمثيل علاقات many-to-many"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Getting started with Airtable automations",
+      "publisher": "Airtable Support",
+      "source_type": "official_product_documentation",
+      "url": "https://support.airtable.com/getting-started-with-airtable-automations",
+      "supports": [
+        "بناء أتمتة من محفز وإجراء أو أكثر",
+        "اختلاف حدود عمليات الأتمتة حسب الخطة",
+        "حدود معلنة في 2026 تبلغ 100 للخطة المجانية و25,000 لـTeam و100,000 لـBusiness و500,000 لـEnterprise Scale شهريًا لكل مساحة عمل"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Managing and sharing Airtable interfaces",
+      "publisher": "Airtable Support",
+      "source_type": "official_product_documentation",
+      "url": "https://support.airtable.com/docs/managing-and-sharing-interfaces",
+      "supports": [
+        "إتاحة Interface Designer عبر جميع الخطط مع اختلاف خيارات المشاركة",
+        "إدارة الواجهات مؤسسيًا في Business وEnterprise Scale",
+        "إمكان مشاركة واجهات خارجية عبر Portals في الخطط المؤهلة"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Airtable AI billing",
+      "publisher": "Airtable Support",
+      "source_type": "official_ai_billing_documentation",
+      "url": "https://support.airtable.com/docs/en/airtable-ai-billing",
+      "supports": [
+        "إدراج ائتمانات ذكاء اصطناعي شهرية ضمن الخطط",
+        "تجميع الائتمانات على مستوى مساحة العمل أو المؤسسة",
+        "بيع حزم ائتمانات إضافية ابتداءً من 40 دولارًا شهريًا مقابل 20,000 ائتمان وفق وثيقة مارس 2026",
+        "عدم استهلاك بناء التطبيقات والوكلاء عبر Omni للائتمانات وفق الوثيقة"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Trust & Security",
+      "publisher": "Airtable",
+      "source_type": "official_security_and_compliance_page",
+      "url": "https://www.airtable.com/company/trust-and-security",
+      "supports": [
+        "حصول Airtable على SOC 2 Type 2",
+        "اعتماد ISO/IEC 27001",
+        "اعتماد ISO/IEC 27701",
+        "وجود ميزات مؤسسية مثل SAML SSO وإدارة الوصول"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Updates on Airtable's Strategic Focus",
+      "publisher": "Airtable",
+      "source_type": "official_ceo_operating_update",
+      "url": "https://www.airtable.com/newsroom/airtable-new-direction",
+      "supports": [
+        "تحول التركيز في ديسمبر 2022 من التبني التصاعدي الواسع إلى المؤسسات الكبيرة",
+        "خفض الفريق بمقدار 254 موظفًا",
+        "تصريح تاريخي بأن المؤسسات مثلت غالبية الإيراد",
+        "تصريح تاريخي بنمو إيرادات المؤسسات بأكثر من 100% سنويًا وNDR قدره 170%"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Message from our CEO about long-term plans",
+      "publisher": "Airtable",
+      "source_type": "official_ceo_operating_update",
+      "url": "https://www.airtable.com/newsroom/message-from-our-ceo",
+      "supports": [
+        "خفض إضافي للفريق بمقدار 237 موظفًا في 2023",
+        "تصريح تاريخي بأن الشركة كانت موجبة التدفق النقدي ولديها احتياطي رأسمالي كبير",
+        "تصريح بأن نصف Fortune 500 كانوا عملاء مدفوعين وقت الإعلان",
+        "استمرار نمو أعمال الخدمة الذاتية وفق رسالة الرئيس التنفيذي"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Meet the New Airtable: Delivering AI to the Final Mile of Enterprise Operations",
+      "publisher": "Airtable",
+      "source_type": "official_product_announcement",
+      "url": "https://www.airtable.com/newsroom/meet-new-airtable-AI-era",
+      "supports": [
+        "إطلاق App Library وHyperDB في سبتمبر 2024",
+        "توسيع المنتج نحو العمليات الرقمية واسعة النطاق",
+        "دمج الذكاء الاصطناعي في تطبيقات الأعمال والبيانات المؤسسية"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "Introducing the Airtable Connected Apps Platform",
+      "publisher": "Airtable",
+      "source_type": "official_product_announcement",
+      "url": "https://www.airtable.com/newsroom/introducing-the-airtable-connected-apps-platform",
+      "supports": [
+        "إطلاق Connected Apps Platform في أكتوبر 2022",
+        "بناء تطبيقات مخصصة فوق بيانات مشتركة وفورية",
+        "دعم واجهات وتصورات وأذونات مؤسسية لمعالجة صوامع البيانات"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "Introduction to Airtable basics",
+      "publisher": "Airtable Support",
+      "source_type": "official_product_documentation",
+      "url": "https://support.airtable.com/docs/introduction-to-airtable-basics",
+      "supports": [
+        "استخدام Omni لبناء تطبيق مخصص وتعديل بنية قاعدة وإنشاء واجهات وأتمتة",
+        "دعم Airtable للويب وتطبيقات سطح المكتب",
+        "وصف القدرات الأساسية الحالية للمنصة"
+      ]
+    }
   ]
 }

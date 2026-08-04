@@ -4,121 +4,825 @@
   "name": "Dashp",
   "domain": "dashp.io",
   "website": "https://dashp.io",
-  "category": "B2B SaaS / عمليات المبيعات",
-  "headline": "برمجية لتتبع العمولات والأداء لفرق مبيعات مكافحة الحشرات",
-  "summary": "داشب (Dashp) هو منتج SaaS B2B شديد التخصص لشركات مكافحة الحشرات التي تستخدم فرق مبيعات من الباب للباب. يساعد الملاك والمديرين ومندوبي المبيعات على حساب العمولات ومراقبة الأداء والتواصل بشأن التعويضات.",
+  "category": "B2B SaaS / عمليات المبيعات الميدانية لشركات مكافحة الحشرات",
+  "headline": "من أداة عمولات لفِرق البيع الميداني إلى منتج يصعب تأكيد حالته: لماذا تبقى لقطة 100 ألف دولار ARR تاريخية لا رقمًا حاليًا",
+  "summary": "Dashp منتج B2B SaaS متخصص بدأ لمساعدة شركات مكافحة الحشرات المعتمدة على البيع من الباب للباب في تتبع العمولات والأداء والتوظيف والتدريب وتوقع الأرباح. تثبت مقابلة المؤسس ومتاجر التطبيقات وجود منتج فعلي، لكن الإيراد المعلن يعود إلى ديسمبر 2024، وآخر تحديثات التطبيقات الموثقة تعود إلى 2025، بينما أصبح الموقع الحالي مشوبًا بمحتوى قالب وكالة غير موثوق. لذلك تُصنّف الحالة التشغيلية في أغسطس 2026 بأنها غير محسومة بدل افتراض النمو أو الإغلاق.",
   "directory_snapshot": {
-    "monthly_revenue": "$8.33K /mo",
-    "monthly_traffic": "1K /mo",
-    "revenue_per_visitor": "$8.33 /visitor",
-    "solopreneur_score": "75.0",
-    "idea_label": "برمجية تتبع العمولات"
+    "monthly_revenue": null,
+    "monthly_traffic": null,
+    "revenue_per_visitor": null,
+    "solopreneur_score": 75,
+    "idea_label": "برمجية تتبع العمولات وعمليات البيع الميداني",
+    "metric_notes": {
+      "monthly_revenue": "رقم 8.33 آلاف دولار شهريًا مأخوذ من مقابلة منشورة في 17 ديسمبر 2024 ويمثل تقريبًا أكثر من 100 ألف دولار ARR في ذلك الوقت؛ لا توجد بيانات أحدث موثوقة.",
+      "monthly_traffic": "رقم 1,000 زيارة شهريًا جاء من دليل Starter Story ولا يحمل فترة أو منهجية قابلة للتحقق، ولم يُعثر على قياس حالي.",
+      "revenue_per_visitor": "كان مشتقًا من رقمَي إيراد وحركة تاريخيين وغير متجانسين؛ لذلك وُضع null.",
+      "solopreneur_score": "مؤشر تصنيفي خاص بـStarter Story، وليس مقياسًا ماليًا أو تشغيليًا للشركة."
+    },
+    "historical_snapshot": {
+      "as_of": "2024-12-17",
+      "monthly_revenue_usd": 8333,
+      "arr_claim_usd": 100000,
+      "arr_operator": "أكثر من",
+      "founder_interview_status": "founder_reported_via_starter_story",
+      "employees_reported": 0,
+      "note": "لقطة تاريخية غير مدققة؛ لا تُستخدم كرقم حالي في 2026."
+    },
+    "latest_verified_product_snapshot": {
+      "as_of": "2026-08-03",
+      "ios": {
+        "listing_status": "مدرج في App Store",
+        "developer": "Isaac Tai",
+        "seller": "Isaac Tai",
+        "copyright": "DASHP Inc.",
+        "latest_version": "1.0.24",
+        "latest_update": "2025-03-06",
+        "ratings": 11,
+        "rating": 5,
+        "product_description": "تتبع المقاييس والتوظيف والمسابقات وشجرة الفرق وتوقع الأرباح لفرق البيع من الباب للباب."
+      },
+      "android": {
+        "listing_status": "مدرج في Google Play",
+        "developer_entity": "DASHP, INC.",
+        "latest_update": "2025-06-18",
+        "downloads_public_band": "10+",
+        "product_description": "توظيف المندوبين والاحتفاظ بهم وتدريبهم من مكان واحد.",
+        "data_safety_declared": [
+          "لا مشاركة بيانات مع أطراف ثالثة وفق تصريح المطور",
+          "قد يجمع بيانات شخصية ورسائل وأنواعًا أخرى",
+          "تشفير البيانات أثناء النقل",
+          "إمكانية طلب حذف البيانات"
+        ]
+      },
+      "current_users": null,
+      "current_customers": null,
+      "current_arr": null,
+      "current_mrr": null,
+      "current_employee_count": null
+    },
+    "current_website_integrity": {
+      "status": "misconfigured_or_template_contaminated",
+      "evidence": [
+        "تعرض الصفحة عناوين مكتب في كوبنهاغن وبيلوند لا تتسق مع بيانات المطور في يوتا.",
+        "تستخدم صفحة التواصل رسائل careers@studioagency.com وpress@studioagency.com.",
+        "تحتوي صفحات العمل على حالات ساخرة وغير مرتبطة بمنتج مكافحة الحشرات.",
+        "يعرض التذييل اسم Studio Agency Inc. بدل هوية قانونية موثقة لـDASHP."
+      ],
+      "interpretation": "لا يمكن الاعتماد على الموقع الحالي لإثبات مئات العملاء أو نتائج 40% و25% و3x أو التوسع إلى إدارة الفنيين والمخزون والبوابة والدفع.",
+      "domain_active": true
+    },
+    "metric_distinctions": {
+      "mrr": "إيراد شهري متكرر في فترة محددة؛ آخر لقطة عامة تعود إلى ديسمبر 2024.",
+      "arr": "قيمة سنوية متكررة مشتقة من العقود؛ ادعاء أكثر من 100 ألف دولار تاريخي وغير مدقق.",
+      "traffic": "زيارات الموقع أو التطبيق؛ غير منشورة حاليًا.",
+      "app_downloads": "تنزيلات المتجر لا تساوي مستخدمين نشطين أو عملاء شركات.",
+      "customers": "الشركات المتعاقدة؛ العدد الحالي غير منشور.",
+      "users": "الملاك والمديرون والمندوبون داخل حسابات العملاء؛ العدد الحالي غير منشور.",
+      "valuation": "قيمة الشركة في جولة أو معاملة؛ لا يوجد تقييم عام موثق.",
+      "funding": "رأس مال خارجي؛ قال المؤسس في 2024 إنه لم يجمع أو يقترض أموالًا."
+    }
   },
   "company": {
-    "business_model": "اشتراكات B2B متكررة تعتمد على عدد المستخدمين (Seats)",
-    "customer_type": "شركات مكافحة الحشرات ذات فرق المبيعات الميدانية",
-    "founder": "إسحاق زي تاي",
-    "founder_role": "مؤسس؛ مهندس برمجيات تحول إلى رائد أعمال",
-    "founders_count": "1",
-    "employees": "0 (حسب بيانات ديسمبر 2024)",
+    "legal_name": "DASHP, INC.",
+    "legal_name_source_note": "الاسم والعنوان ظاهران في صفحة Google Play الخاصة بالمطور؛ لم تُراجع شهادة تأسيس أو سجل ولاية مباشر.",
+    "business_model": "اشتراكات B2B متكررة حسب عدد المقاعد، مع عقود سنوية للمقاعد القياسية ومقاعد مرنة شهرية بسعر أعلى وفق نموذج العقود الموصوف في مقابلة ديسمبر 2024. التسعير الحالي غير منشور بصورة موثوقة.",
+    "customer_type": "شركات مكافحة الحشرات ذات فرق البيع الميداني، خصوصًا الشركات التي تستحوذ على العملاء عبر البيع من الباب للباب.",
+    "founder": "إسحاق زي تاي ودوموس غو وفق تغطية جامعة يوتا لعام 2024؛ ركزت مقابلة Starter Story على إسحاق وحده.",
+    "founders": [
+      {
+        "name": "Isaac Z Tai",
+        "role": "شريك مؤسس تقني ومطور التطبيق تاريخيًا",
+        "current_public_employment_2026": "Cerebras Systems"
+      },
+      {
+        "name": "Domus Go",
+        "role": "شريك مؤسس وأعمال وفق جامعة يوتا عام 2024",
+        "current_status": "لم يُتحقق من دوره التنفيذي الحالي من مصدر شركة موثوق"
+      }
+    ],
+    "founder_role": "إسحاق: هندسة وتصميم وبيع ودعم في المقابلة التاريخية؛ دوموس: خبرة المبيعات وتطوير الأعمال وفق جامعة يوتا.",
+    "founders_count": 2,
+    "founders_count_note": "Starter Story عرضت «1 founder» كبيانات ملف المقابلة، لكن جامعة يوتا سمت إسحاق ودوموس شريكين مؤسسين؛ اعتُمد العدد التاريخي 2 مع التحفظ على الهيكل الحالي.",
+    "employees": null,
+    "employees_note": "كان عدد الموظفين المعلن 0 في ديسمبر 2024، لكن لا يوجد رقم حالي. وجود شريكين مؤسسين لا يعني وجود موظفين على الرواتب.",
     "started": "أكتوبر 2022",
-    "location": "غير مذكور",
-    "funding": "تمويل ذاتي بالكامل (Bootstrapped)",
-    "profitability": "غير مفصح عنها صراحة",
-    "public_revenue_claim": "أكثر من 100 ألف دولار كإيرادات سنوية (ARR) في دراسة ديسمبر 2024"
+    "location": "Vineyard, Utah, United States",
+    "developer_address": "82 W Sycamore Ln, Vineyard, UT 84059, United States",
+    "funding": "تمويل ذاتي حتى ديسمبر 2024 وفق المؤسس؛ لم يُعثر على جولة تمويل عامة لاحقة.",
+    "profitability": null,
+    "profitability_note": "ARR لا يثبت الربحية. لم تُنشر المصروفات الكاملة أو الدخل الصافي أو التدفق النقدي.",
+    "public_revenue_claim": "أكثر من 100 ألف دولار ARR في مقابلة منشورة في ديسمبر 2024؛ غير صالح كرقم حالي دون تحديث.",
+    "operating_status_as_of_2026_08_03": {
+      "status": "غير محسوم",
+      "positive_signals": [
+        "التطبيقان ما زالا مدرجين في App Store وGoogle Play.",
+        "آخر تحديث Android موثق في يونيو 2025 وآخر تحديث iOS في مارس 2025.",
+        "الكيان وعنوان الدعم ما زالا ظاهرين في Google Play."
+      ],
+      "negative_or_uncertain_signals": [
+        "لم يُعثر على تحديث منتج أو إيراد موثوق في 2026.",
+        "الموقع الحالي يحتوي على قالب وكالة ومحتوى غير مرتبط وغير موثوق.",
+        "المؤسس إسحاق يظهر حاليًا موظفًا لدى Cerebras، ولا يثبت ذلك وحده إغلاق Dashp."
+      ],
+      "classification": "listed_apps_but_current_business_activity_unverified"
+    }
   },
   "problem_and_product": [
     "كان سير العمل الأصلي يعتمد على جداول البيانات والبريد الإلكتروني لحساب العمولات.",
-    "كان مندوبو المبيعات الذين يتقاضون عمولات فقط يفتقرون إلى الرؤية الفورية لأجورهم المتوقعة، مما تسبب في قلق مالي.",
-    "يقوم Dashp بمركزة حسابات العمولات وتتبع أداء المبيعات والتواصل بين الفريق.",
-    "هذا المجال متخصص عمداً: شركات مكافحة الحشرات التي تعتمد على الاستحواذ عبر البيع من الباب للباب."
+    "كان مندوبو المبيعات المعتمدون على العمولة يفتقرون إلى رؤية فورية لأجورهم المتوقعة.",
+    "يوفر المنتج تاريخيًا تتبع الأداء والعمولات والتوظيف والمسابقات وشجرة الفرق وتوقع الأرباح.",
+    "ذكرت جامعة يوتا أدوات للتدريب والإعداد والاحتفاظ بالمندوبين والوصول إلى موارد الشركة.",
+    "التركيز الموثق هو فرق البيع من الباب للباب في قطاع مكافحة الحشرات.",
+    "ادعاءات الموقع الحالي عن إدارة الفنيين وتحسين المسارات والمخزون وبوابة العملاء والتقارير الشاملة غير موثقة بسبب تلوث الموقع بقالب عام."
   ],
   "origin_story": [
-    "سأل صديق يعمل في مجال مكافحة الحشرات عما إذا كان من الممكن بناء أداة أفضل لحساب العمولات.",
-    "تحقق المؤسس من أن المشكلة شائعة من خلال التحدث مع أشخاص آخرين في الصناعة.",
-    "أنتج العرض الأولي المبني بدون كود (No-code) إشارة شراء مبكرة عندما طلب مديرو الصديق فوراً اسم الشركة والسعر.",
-    "فضّل المؤسس هذه المشكلة التشغيلية الملموسة على العمل في الشركات الناشئة المدفوعة بضجة الذكاء الاصطناعي التي كان يقوم بها في ذلك الوقت."
+    "بدأت الفكرة عندما طلب صديق في قطاع مكافحة الحشرات أداة أفضل لحساب عمولات الفريق.",
+    "تحقق إسحاق من المشكلة عبر محادثات مع أشخاص إضافيين في القطاع.",
+    "أنتج نموذج Retool الأولي إشارة شراء مبكرة عندما سأل مديرو الشركة عن الاسم والسعر.",
+    "فضّل المؤسس المشكلة التشغيلية الضيقة على العمل في شركات ناشئة مدفوعة بضجة الذكاء الاصطناعي.",
+    "تضيف رواية جامعة يوتا أن خبرة دوموس غو في البيع الميداني كانت جزءًا من ملاءمة المؤسسين للسوق."
   ],
   "build_and_launch": [
     "أكتوبر 2022: بناء نموذج أولي بدون كود باستخدام Retool.",
-    "نوفمبر 2022: بدأ في بناء تطبيق للهواتف المحمولة بعد طلبات متكررة من العملاء.",
-    "ديسمبر 2022: ترك وظيفته وعمل بدوام كامل على Dashp بينما كانت الإيرادات لا تزال صفراً.",
-    "يناير - مارس 2023: أكمل التطبيق وعمل من خلال محاولات مبيعات B2B المبكرة.",
+    "نوفمبر 2022: بدء تطوير تطبيق للهواتف بعد طلبات العملاء.",
+    "ديسمبر 2022: ترك إسحاق وظيفته وعمل بدوام كامل بينما كان الإيراد صفرًا.",
+    "يناير إلى مارس 2023: إكمال التطبيق ومحاولات مبيعات B2B المبكرة.",
     "أبريل 2023: توقيع العقد الأول.",
     "مايو 2023: توقيع العميل الثاني.",
-    "يونيو - أغسطس 2023: التركيز على إصلاح الأخطاء ودعم العملاء خلال موسم المبيعات الأول.",
-    "أغسطس 2023: انضم إلى مسرعة أعمال للشركات الناشئة."
+    "يونيو إلى أغسطس 2023: إصلاح الأخطاء ودعم العملاء خلال أول موسم مبيعات.",
+    "أغسطس 2023: الانضمام إلى برنامج تسريع.",
+    "مارس 2025: آخر تحديث iOS موثق.",
+    "يونيو 2025: آخر تحديث Android موثق.",
+    "أغسطس 2026: التطبيقان مدرجان، لكن الموقع العام غير موثوق والحالة التجارية الحالية غير محسومة."
   ],
   "costs_and_operations": [
-    "كان النموذج الأولي في Retool مجانياً فعلياً لأن المؤسس حصل على أرصدة للشركات الناشئة.",
-    "شملت التكاليف المبكرة المذكورة نطاقاً بـ 12 دولاراً، و Google Workspace بـ 6 دولارات شهرياً، و Supabase بـ 25 دولاراً شهرياً.",
-    "ذكر المؤسس أن Vercel و Expo بقيت ضمن الباقات المجانية.",
-    "تولى المؤسس مسؤولية التصميم والهندسة والبيع ودعم العملاء.",
-    "ساعد انخفاض عدد الموظفين وعدد قليل من عملاء B2B ذوي القيمة العالية في إبقاء تكاليف التشغيل منخفضة."
+    "استخدم النموذج الأولي Retool مع أرصدة شركات ناشئة، فكانت تكلفته المباشرة شبه صفرية وفق المؤسس.",
+    "شملت التكاليف المبكرة المعلنة نطاقًا بـ12 دولارًا، وGoogle Workspace بـ6 دولارات شهريًا، وSupabase بـ25 دولارًا شهريًا.",
+    "قال المؤسس في 2024 إن Vercel وExpo بقيتا ضمن الباقات المجانية.",
+    "تولى إسحاق تاريخيًا التصميم والهندسة والبيع ودعم العملاء.",
+    "كان نموذج الموظف الصفري وعدد قليل من عقود B2B الكبيرة وسيلة لإبقاء الحرق منخفضًا.",
+    "هذه التكاليف تعود إلى مرحلة مبكرة ولا تمثل المصروفات الحالية أو تكلفة الدعم والتأمين والضرائب والامتثال."
   ],
   "monetization": [
-    "يعتمد التسعير على عدد المستخدمين (Seats) ويوازن بين الإيرادات السنوية المتوقعة والتوظيف الموسمي.",
-    "تم وصف الحسابات القياسية بحوالي 10 إلى 30 دولاراً شهرياً مع التزام بحد أدنى 12 شهراً.",
-    "تم وصف الحسابات المرنة بضعف السعر القياسي على أساس شهري.",
-    "لا يمكن أن تتجاوز الحسابات المرنة 30% من إجمالي الحسابات في هيكل العقد المذكور.",
-    "تم وصف ترقية العملاء الحاليين إلى عقود أكبر كمصدر رئيسي للإيرادات."
+    "تسعير تاريخي حسب عدد المستخدمين Seats.",
+    "المقاعد القياسية وُصفت بنحو 10 إلى 30 دولارًا شهريًا مع التزام 12 شهرًا على الأقل.",
+    "المقاعد المرنة وُصفت بضعف سعر المقعد القياسي مع عقد شهري.",
+    "لم يكن مسموحًا للمقاعد المرنة بتجاوز 30% من إجمالي المقاعد في هيكل العقد الموصوف.",
+    "التوسع داخل الحسابات الحالية ورفع حجم العقود كان مصدرًا مهمًا للنمو التاريخي.",
+    "لا توجد صفحة تسعير حالية موثوقة؛ لا يجوز افتراض استمرار الأسعار أو الشروط نفسها."
   ],
   "growth": [
-    "حاول المؤسس في البداية الوصول إلى الملاك والمديرين ومندوبي المبيعات من خلال المكاتب وإنستغرام.",
-    "استنتج لاحقاً أن الملاك هم المشتري الضروري لأن النظام يتطلب الوصول إلى بيانات العمل الحساسة.",
-    "كانت أقوى طرق الاستحواذ هي الزيارات المباشرة للمكاتب المادية والإحالات (Referrals).",
-    "يتم التعامل مع كل حساب مؤهل كجهد تطوير أعمال طويل الأجل بدلاً من كونه عميلاً محتملاً للتسويق الرقمي.",
-    "إدارة الحسابات عالية اللمسة والدعم الفوري والوصول المباشر للمؤسس تدعم الاحتفاظ بالعملاء والتوسع."
+    "اختبر المؤسس الوصول إلى الملاك والمديرين والمندوبين عبر الزيارات المباشرة وإنستغرام.",
+    "استنتج أن مالك الشركة هو المشتري الضروري لأن المنتج يحتاج إلى بيانات CRM وتعويضات حساسة.",
+    "كانت الزيارات المباشرة للمكاتب والإحالات أقوى قنوات الاستحواذ في المقابلة التاريخية.",
+    "عومل كل حساب مؤهل كصفقة تطوير أعمال طويلة الأجل بسبب صغر السوق المستهدف.",
+    "اعتمد الاحتفاظ والتوسع على دعم عالي اللمسة ووصول مباشر إلى المؤسس.",
+    "لا توجد أرقام حديثة للاحتفاظ أو CAC أو churn أو عدد الحسابات، لذلك لم يُفترض استمرار نموذج النمو."
   ],
   "tools": [
-    "Retool",
-    "Expo",
-    "Google Workspace",
-    "Supabase",
-    "Vercel",
-    "Mobile application stack"
+    "Retool — للنموذج الأولي التاريخي.",
+    "Expo — ضمن تطبيق الهاتف والتوزيع التاريخي.",
+    "Supabase — قاعدة بيانات وخدمات خلفية وفق المقابلة التاريخية.",
+    "Vercel — استضافة أو نشر ضمن المرحلة التاريخية.",
+    "Google Workspace — عمليات مبكرة.",
+    "تطبيق iOS وiPad.",
+    "تطبيق Android بحزمة com.tamagui.dashp.",
+    "تنبيه تقني: لا توجد إفصاحات حديثة تؤكد أن الأدوات التاريخية ما زالت تمثل البنية الإنتاجية الكاملة في 2026."
   ],
   "revenue_timeline": [
     {
       "date": "2024-12-17",
       "amount": "$8.33K /month",
-      "type": "لمحة عن المؤسس",
-      "note": "وصفت دراسة الحالة الإيرادات بأنها تتجاوز 100 ألف دولار كإيرادات سنوية متكررة."
+      "amount_usd_monthly": 8333,
+      "arr_claim_usd": 100000,
+      "type": "لقطة مؤسس عبر Starter Story",
+      "note": "وُصفت الإيرادات بأنها تتجاوز 100 ألف دولار ARR؛ رقم تاريخي غير مدقق ولا يُعامل كإيراد حالي."
     }
   ],
+  "financials": {
+    "current_monthly_revenue_usd": null,
+    "current_arr_usd": null,
+    "current_profit_usd": null,
+    "current_cash_usd": null,
+    "current_debt_usd": null,
+    "current_valuation_usd": null,
+    "audited_financial_statements_available": false,
+    "historical_revenue": {
+      "as_of": "2024-12-17",
+      "monthly_revenue_usd": 8333,
+      "arr_usd": 100000,
+      "arr_operator": "أكثر من",
+      "status": "founder_reported_not_audited"
+    },
+    "funding": {
+      "status_as_of_2024_12": "bootstrapped",
+      "founder_statement": "لم يرفع أو يقترض أموالًا وفق مقابلة المؤسس.",
+      "later_public_rounds_found": false,
+      "caution": "عدم العثور على جولة عامة لا يثبت عدم وجود تمويل خاص أو ائتمان أو إيراد ممول ذاتيًا بعد المقابلة."
+    },
+    "valuation": {
+      "current_valuation": null,
+      "note": "لا توجد جولة مسعرة أو صفقة أو إفصاح يسمح بتقدير الشركة."
+    },
+    "revenue_streams": [
+      "رسوم مقاعد قياسية بعقود سنوية وفق النموذج التاريخي.",
+      "مقاعد مرنة شهرية بسعر أعلى وفق النموذج التاريخي.",
+      "توسعات العقود ورفع عدد المقاعد أو نطاق الحلول.",
+      "لا توجد أدلة على رسوم مستقلة للمدفوعات أو المسارات أو المخزون أو بوابة العملاء."
+    ]
+  },
+  "market_data": {
+    "target_audience": "شركات مكافحة الحشرات الأمريكية التي تستخدم فرق مبيعات موسمية من الباب للباب، مع الملاك والمديرين والمندوبين كمستخدمين أو أصحاب مصلحة.",
+    "market_size": null,
+    "market_size_note": "قال المؤسس إن العملاء المناسبين يُعدّون بالمئات، لكن لا توجد دراسة مستقلة أو تقدير موثق لحجم السوق أو ARR الممكن.",
+    "growth_rate": null,
+    "growth_rate_note": "لا توجد سلسلة إيرادات أو عملاء أو استخدام بعد ديسمبر 2024 تسمح بحساب نمو حالي.",
+    "competitive_context": [
+      "حلول CRM وإدارة المبيعات العامة",
+      "برمجيات إدارة خدمات مكافحة الحشرات",
+      "الجداول والعمليات اليدوية",
+      "تطبيقات البيع من الباب للباب والتوظيف والتدريب"
+    ],
+    "privacy_and_compliance_context": {
+      "sensitive_data": [
+        "بيانات الاتصال",
+        "بيانات استخدام ومقاييس أداء",
+        "بيانات CRM والتعويضات والعمولات",
+        "الموقع في تطبيق Android بحسب الأذونات المنشورة"
+      ],
+      "app_store_disclosures": "Apple وGoogle يعرضان إفصاحات المطور عن جمع البيانات، لكنها تصريحات مطور وليست تدقيقًا مستقلًا.",
+      "website_privacy_risk": "روابط سياسة الخصوصية في متاجر التطبيقات تشير إلى dashp.io، بينما الموقع الحالي غير موثوق ويبدو ملوثًا بقالب عام؛ يجب إصلاح السياسة والهوية القانونية قبل الاعتماد المؤسسي.",
+      "labor_context": "حساب العمولة يؤثر في تعويض الموظفين أو المقاولين؛ تبقى الشركة العميلة مسؤولة عن صحة القواعد والعقود والامتثال المحلي."
+    }
+  },
+  "analysis": {
+    "core_thesis": "القيمة التاريخية لـDashp جاءت من حل مشكلة مالية حساسة داخل سوق صغير بعقود مرتفعة اللمسة، لا من حركة موقع أو قاعدة مستخدمين ضخمة. لكن جودة الملف الحالي تعتمد على فصل ثلاث طبقات: المنتج التاريخي المثبت، التطبيقات التي بقيت مدرجة حتى 2026، والموقع العام الذي لا يمكن الوثوق بمحتواه الحالي.",
+    "what_changed": [
+      "ظهر دليل مؤسسي عام 2024 على وجود شريكين مؤسسين بدل مؤسس واحد فقط.",
+      "توسع وصف المنتج تاريخيًا من العمولات إلى التوظيف والتدريب والاحتفاظ وتحليلات الأداء.",
+      "تلقى تطبيق iOS تحديثًا في مارس 2025 وAndroid تحديثًا في يونيو 2025.",
+      "لا توجد لقطة إيراد أحدث من ديسمبر 2024.",
+      "يعمل إسحاق حاليًا لدى Cerebras وفق ملفه العام، ما يجعل نموذج «مؤسس متفرغ بالكامل» تاريخيًا لا حاليًا.",
+      "الموقع الحالي يعرض قالب وكالة ومحتوى تجريبيًا، لذلك لا يمكن استخدامه لإثبات التوسع إلى منصة إدارة مكافحة حشرات شاملة.",
+      "الحالة التشغيلية الحالية انتقلت من «نشطة مؤكدة» إلى «التطبيق مدرج لكن نشاط الشركة التجاري غير متحقق»."
+    ],
+    "competitive_advantage": [
+      "تركيز دقيق على اقتصاديات فرق البيع الموسمية من الباب للباب.",
+      "معرفة مباشرة بالعمولات وشجرة الفرق وتوقع الأرباح.",
+      "بيع عالي اللمسة لملاك الشركات بدل اكتساب جماهيري مكلف.",
+      "إمكانية التوسع داخل الحساب بعد بناء الثقة.",
+      "منتج محمول مناسب لسير عمل المندوب الميداني.",
+      "تكاليف تشغيل تاريخية منخفضة بفضل فريق صغير وأدوات SaaS."
+    ],
+    "risks_and_constraints": [
+      "الحالة التشغيلية والإيرادات الحالية غير معروفتين.",
+      "الموقع الحالي يضعف الثقة ويخلق مخاطر قانونية وخصوصية وعلامة تجارية.",
+      "السوق المستهدف صغير، ما يحد قنوات التسويق والتوسع الأفقي.",
+      "الاعتماد التاريخي على المؤسس في البيع والدعم والهندسة يخلق مخاطر شخص محوري.",
+      "المؤسس التقني لديه وظيفة حالية خارج الشركة، وقد يحد ذلك من الوقت المتاح دون أن يثبت الإغلاق.",
+      "المنتج يتعامل مع بيانات تعويضات وCRM وموقع، ما يتطلب أمانًا وسياسات واضحة.",
+      "العملاء الموسميون يخلقون ضغطًا على التسعير والاحتفاظ والمقاعد.",
+      "آخر تحديثات التطبيقات تعود إلى 2025، ولا توجد إشارات إصدار حديثة في 2026.",
+      "أرقام App Store وGoogle Play صغيرة ولا تكشف التبني المؤسسي لأن العقود قد توزع التطبيقات داخليًا.",
+      "لا توجد بيانات churn أو NRR أو CAC أو هامش أو ربحية.",
+      "توسيع المنتج إلى إدارة فنيين ومسارات ومخزون يضعه في منافسة مع منصات أعمق، لكن هذا التوسع غير موثق حاليًا."
+    ],
+    "outlook_as_of_2026_08_03": "التصنيف المحافظ هو «Micro-SaaS تاريخي مثبت بإيراد مؤسس وتطبيقات حقيقية، لكن نشاطه التجاري الحالي غير قابل للتحقق». قبل نشره كفرصة نشطة يجب إصلاح الموقع، توثيق الشركة والفريق الحالي، وتحديث الإيراد والعملاء والتسعير والخصوصية."
+  },
   "lessons": [
-    "يمكن أن يدعم تخصص B2B الضيق عملاً فردياً ذا مغزى مع عدد قليل نسبياً من العملاء.",
-    "الثقة والوقت والاستجابة السريعة يمكن أن تكون أكثر قيمة من الاستحواذ المدفوع القابل للتطوير في سوق صغير.",
-    "الدعم العميق لقاعدة عملاء صغيرة يمكن أن يخلق إيرادات إضافية ويخفض تكاليف البنية التحتية."
+    "حل مشكلة تعويض حساسة في سوق ضيق قد يدعم عقودًا مرتفعة القيمة بعدد عملاء صغير.",
+    "ARR التاريخي لا يصبح رقمًا حاليًا لمجرد أن دليلًا يعيد عرضه.",
+    "عدد المؤسسين في قاعدة بيانات المقابلة قد يصف الضيف لا الهيكل الحقيقي للشركة.",
+    "قنوات App Store وGoogle Play تثبت وجود منتج، لكنها لا تثبت النشاط المالي أو الاحتفاظ.",
+    "الموقع المتروك أو الملوث بقالب يمكن أن يمحو الثقة حتى لو بقي التطبيق يعمل.",
+    "التسعير الموسمي حسب Standard وFlex يعالج تقلب عدد المندوبين، لكنه يزيد تعقيد العقود.",
+    "البيع للمستخدم النهائي يختلف عن البيع لصاحب القرار الذي يمنح الوصول إلى بيانات CRM والتعويض.",
+    "الاعتماد على مؤسس واحد في الدعم والهندسة يرفع الجودة المبكرة ويخلق مخاطر استمرارية لاحقة.",
+    "في ملفات Micro-SaaS يجب تصنيف كل رقم بتاريخ ومصدر بدل تقديمه كحالة حية."
   ],
   "sources": [
     {
-      "label": "دليل Starter Story",
-      "url": "https://www.starterstory.com/data/micro-saas-ideas",
-      "coverage": "مقاييس الدليل"
-    },
-    {
-      "label": "دراسة حالة Dashp",
+      "id": "S1",
+      "label": "مقابلة مؤسس Dashp",
+      "title": "I Built A $100K ARR SaaS For Pest Control Companies",
+      "publisher": "Starter Story",
+      "source_type": "مقابلة ثانوية تتضمن تصريحات مباشرة من المؤسس",
+      "publication_date": "2024-12-17",
       "url": "https://www.starterstory.com/stories/dashp",
-      "coverage": "المؤسس، البداية، الجدول الزمني، التسعير، النمو، الإيرادات"
+      "coverage": "المؤسس، الإيراد التاريخي، الفكرة، البناء، التسعير، النمو، الأدوات والتمويل الذاتي",
+      "primary_source": false,
+      "accessed_at": "2026-08-03"
     },
     {
-      "label": "الموقع الرسمي",
-      "url": "https://dashp.io",
-      "coverage": "موقع المنتج"
+      "id": "S2",
+      "label": "تطبيق iOS",
+      "title": "DASHP App",
+      "publisher": "Apple App Store",
+      "source_type": "قائمة متجر تطبيق رسمية",
+      "publication_date": null,
+      "url": "https://apps.apple.com/us/app/dashp/id6444545738",
+      "coverage": "المطور، الوصف، التحديثات، البيانات، التقييمات وحقوق DASHP Inc.",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S3",
+      "label": "تطبيق Android",
+      "title": "DASHP — Apps on Google Play",
+      "publisher": "Google Play",
+      "source_type": "قائمة متجر تطبيق رسمية",
+      "publication_date": null,
+      "url": "https://play.google.com/store/apps/details?id=com.tamagui.dashp",
+      "coverage": "الكيان القانوني، عنوان يوتا، تحديث Android، التنزيلات، دعم وبيانات السلامة",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S4",
+      "label": "جامعة يوتا",
+      "title": "DASHP: Software for Pest Control Sales",
+      "publisher": "Lassonde Entrepreneur Institute — University of Utah",
+      "source_type": "تغطية مؤسسية",
+      "publication_date": "2024-02-13",
+      "url": "https://lassonde.utah.edu/dashp-software-for-pest-control-sales/",
+      "coverage": "الشريكان المؤسسان، التدريب والإعداد والتحليلات وخطط التوسع",
+      "primary_source": false,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S5",
+      "label": "الموقع الحالي",
+      "title": "DASHP — Pest Control Management Platform",
+      "publisher": "dashp.io",
+      "source_type": "نطاق رسمي حالي بمصداقية محتوى منخفضة",
+      "publication_date": "2026",
+      "url": "https://www.dashp.io/",
+      "coverage": "ادعاءات منصة شاملة ومؤشرات أداء غير موثقة، وتعارض هوية الموقع",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "reliability_note": "لا يعتمد الملف على ادعاءاته التشغيلية بسبب وجود قالب وكالة ومحتوى متناقض."
+    },
+    {
+      "id": "S6",
+      "label": "صفحة التواصل الحالية",
+      "title": "Contact Us — DASHP",
+      "publisher": "dashp.io",
+      "source_type": "صفحة نطاق رسمي تكشف تلوث القالب",
+      "publication_date": "2026",
+      "url": "https://www.dashp.io/contact",
+      "coverage": "عناوين الدنمارك ورسائل studioagency.com ونموذج ميزانية وكالة",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S7",
+      "label": "صفحة عمل قالبية",
+      "title": "Phobia Case Study — DASHP",
+      "publisher": "dashp.io",
+      "source_type": "صفحة نطاق رسمي غير مرتبطة بالمنتج",
+      "publication_date": null,
+      "url": "https://www.dashp.io/work/phobia",
+      "coverage": "دليل على بقايا قالب وكالة ومحتوى ساخر غير مهني",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S8",
+      "label": "الملف المهني للمؤسس",
+      "title": "Isaac Z Tai — Cerebras Systems",
+      "publisher": "LinkedIn",
+      "source_type": "ملف مهني عام",
+      "publication_date": "2026",
+      "url": "https://www.linkedin.com/in/ztai",
+      "coverage": "العمل الحالي لدى Cerebras والموقع في الولايات المتحدة",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S9",
+      "label": "مرآة بيانات Android",
+      "title": "DASHP App Metadata",
+      "publisher": "Chrome-Stats",
+      "source_type": "مصدر تطبيقات ثانوي",
+      "publication_date": "2025",
+      "url": "https://chrome-stats.com/d/com.tamagui.dashp",
+      "coverage": "الإصدار 1.0.27 وتاريخ التحديث والأذونات التاريخية",
+      "primary_source": false,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S10",
+      "label": "دليل Starter Story",
+      "title": "Micro SaaS Ideas — Dashp",
+      "publisher": "Starter Story",
+      "source_type": "دليل بيانات ثانوي",
+      "publication_date": null,
+      "url": "https://www.starterstory.com/data/micro-saas-ideas",
+      "coverage": "المقاييس التاريخية وSolopreneur Score",
+      "primary_source": false,
+      "accessed_at": "2026-08-03"
     }
   ],
   "data_quality": [
-    "تحتوي دراسة حالة المؤسس على معلومات مباشرة.",
-    "تعتبر الإيرادات لمحة تاريخية ولا ينبغي التعامل معها كرقم دقيق حالي.",
-    "لا توجد بيانات داخلية أو تفاصيل حسابات خاصة مضمنة."
+    "أقوى البيانات المالية تأتي من مقابلة المؤسس لكنها تعود إلى ديسمبر 2024 وغير مدققة.",
+    "متاجر التطبيقات تثبت وجود تطبيق وكيان وعنوان وتحديثات حتى 2025.",
+    "تغطية جامعة يوتا تكشف شريكًا مؤسسًا ثانيًا وتوسعًا في المنتج لم يظهر في بيانات Starter Story.",
+    "الموقع الحالي غير صالح كمصدر لإثبات الميزات أو العملاء بسبب تلوثه بقالب وكالة.",
+    "لا توجد بيانات حالية للإيراد أو الزيارات أو العملاء أو الموظفين أو الربحية.",
+    "لا توجد ملفات SEC ذات صلة أو جولة تقييم عامة، وهو متوقع لشركة خاصة صغيرة.",
+    "فُصلت الحقائق التاريخية عن الحالة الحالية، ووُضعت القيم غير المتاحة كـnull."
   ],
   "research_metadata": {
-    "researched_on": "2026-07-28",
-    "scope": "المعلومات العامة فقط",
-    "source_method": "Starter Story",
+    "researched_on": "2026-08-03",
+    "scope": "المعلومات العامة فقط مع التحقق من الموقع ومتاجر التطبيقات والمقابلات والمصادر المؤسسية",
+    "source_method": "Official app stores + founder interview + institutional coverage + current-domain integrity review",
     "private_backend_data_included": false,
-    "copyright_note": "ملخص مستقل"
+    "copyright_note": "ملخص وتحليل مستقلان دون نسخ مطول",
+    "standard": "Professional V2",
+    "verified_through": "2026-08-03"
+  },
+  "verification": {
+    "standard": "Professional V2",
+    "verified_through": "2026-08-03",
+    "overall_status": "historical_business_verified_current_operating_status_unresolved",
+    "key_corrections": [
+      {
+        "field": "directory_snapshot.monthly_revenue",
+        "original_claim": "$8.33K /mo",
+        "status": "reclassified_historical",
+        "correction": "وُضع null كقيمة حالية وحُفظ الرقم في لقطة ديسمبر 2024.",
+        "evidence_ids": [
+          "E1",
+          "E10"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_traffic",
+        "original_claim": "1K /mo",
+        "status": "removed_unverifiable",
+        "correction": "وُضع null لغياب فترة ومنهجية ومصدر حركة حالي.",
+        "evidence_ids": [
+          "E10"
+        ]
+      },
+      {
+        "field": "directory_snapshot.revenue_per_visitor",
+        "original_claim": "$8.33 /visitor",
+        "status": "removed_derived_metric",
+        "correction": "المقام والبسط تاريخيان وغير متجانسين؛ وُضع null.",
+        "evidence_ids": [
+          "E1",
+          "E10"
+        ]
+      },
+      {
+        "field": "company.founders_count",
+        "original_claim": "1",
+        "status": "corrected_with_source_discrepancy",
+        "correction": "جامعة يوتا سمت Domus Go وIsaac Tai شريكين مؤسسين؛ اعتُمد 2 تاريخيًا.",
+        "evidence_ids": [
+          "E2"
+        ]
+      },
+      {
+        "field": "company.employees",
+        "original_claim": "0 حسب ديسمبر 2024",
+        "status": "reclassified_historical",
+        "correction": "العدد الحالي غير معروف؛ وُضع null مع حفظ الرقم التاريخي.",
+        "evidence_ids": [
+          "E1"
+        ]
+      },
+      {
+        "field": "company.location",
+        "original_claim": "غير مذكور",
+        "status": "updated",
+        "correction": "Google Play يعرض DASHP, INC. وعنوانًا في Vineyard, Utah.",
+        "evidence_ids": [
+          "E3"
+        ]
+      },
+      {
+        "field": "company.funding",
+        "original_claim": "تمويل ذاتي بالكامل",
+        "status": "qualified",
+        "correction": "ثبت التمويل الذاتي حتى ديسمبر 2024، ولم يُفترض استمرار الحالة دون إفصاح.",
+        "evidence_ids": [
+          "E1"
+        ]
+      },
+      {
+        "field": "headline_and_summary",
+        "original_claim": "برنامج عمولات نشط بصورة ضمنية",
+        "status": "qualified",
+        "correction": "أضيف أن الحالة الحالية غير محسومة بسبب توقف التحديثات العامة وتلوث الموقع.",
+        "evidence_ids": [
+          "E4",
+          "E5",
+          "E6",
+          "E7"
+        ]
+      },
+      {
+        "field": "current_website_claims",
+        "original_claim": "الموقع الرسمي مصدر المنتج",
+        "status": "rejected_as_operating_evidence",
+        "correction": "عناوين الدنمارك ورسائل Studio Agency وصفحات ساخرة تجعل ادعاءات الموقع غير قابلة للاعتماد.",
+        "evidence_ids": [
+          "E5",
+          "E6"
+        ]
+      },
+      {
+        "field": "tools",
+        "original_claim": "الأدوات الحالية",
+        "status": "reclassified_historical",
+        "correction": "Retool وExpo وSupabase وVercel أدوات معلنة في المقابلة التاريخية، ولا تثبت stack 2026.",
+        "evidence_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "sec_search_status": {
+      "applicable": false,
+      "reason": "DASHP شركة خاصة صغيرة ولا توجد مؤشرات على عرض أوراق مالية عام.",
+      "exact_name_result": "لم يُعثر على إفصاح SEC ذي صلة باسم DASHP, INC.",
+      "note": "غياب SEC لا يثبت الحالة القانونية في يوتا أو الوضع المالي."
+    },
+    "known_source_discrepancies": [
+      {
+        "topic": "عدد المؤسسين",
+        "detail": "Starter Story يعرض مؤسسًا واحدًا في بطاقة المقابلة، بينما جامعة يوتا تسمي إسحاق ودوموس شريكين مؤسسين."
+      },
+      {
+        "topic": "الموقع",
+        "detail": "Google Play يعرض عنوان Vineyard, Utah، بينما الموقع الحالي يعرض عناوين دنماركية تخص قالب وكالة."
+      },
+      {
+        "topic": "نطاق المنتج",
+        "detail": "التطبيقات والمصادر التاريخية تركز على البيع والتوظيف والعمولات؛ الموقع الحالي يدعي منصة شاملة للفنيين والمسارات والمخزون، لكن محتواه غير موثوق."
+      },
+      {
+        "topic": "الحالة التشغيلية",
+        "detail": "التطبيقات ما زالت مدرجة، لكن لا توجد تحديثات 2026 أو بيانات تجارية حالية والموقع غير موثوق."
+      }
+    ],
+    "limitations": [
+      "لا توجد قوائم مالية أو لوحة مقاييس عامة.",
+      "لا توجد بيانات حديثة للعملاء أو المستخدمين أو MRR أو ARR.",
+      "لم يُراجع سجل ولاية يوتا مباشرة.",
+      "لا يمكن معرفة ما إذا كانت العقود مستمرة من ظهور التطبيق في المتجر.",
+      "لا توجد صفحة قانونية أو خصوصية موثوقة على الموقع الحالي.",
+      "قد تكون تحديثات التطبيق موزعة خارج المتاجر أو عبر حسابات مؤسسية دون إعلان عام.",
+      "لم يُتحقق من دور Domus Go الحالي أو ملكية الأسهم.",
+      "أرقام Starter Story قابلة لإعادة العرض في أدلته دون تحديث تاريخي واضح."
+    ],
+    "programmatic_validation": {
+      "input_file_parse": true,
+      "json_parse": true,
+      "json_schema_validation": true,
+      "all_original_top_level_keys_preserved": true,
+      "required_original_paths_preserved": true,
+      "all_source_ids_unique": true,
+      "all_evidence_source_references_valid": true,
+      "all_key_correction_evidence_references_valid": true,
+      "no_nan_or_infinity": true,
+      "current_monthly_metrics_not_invented": true,
+      "historical_revenue_preserved_with_date": true,
+      "current_revenue_and_valuation_null": true,
+      "founder_discrepancy_preserved": true,
+      "current_employee_count_not_invented": true,
+      "app_updates_distinguished_from_current_business_activity": true,
+      "current_website_marked_unreliable": true,
+      "historical_tools_qualified": true,
+      "utf8_arabic_content_present": true,
+      "source_count": 10,
+      "primary_source_count": 6,
+      "evidence_item_count": 14,
+      "lesson_count": 9,
+      "top_level_key_count": 29,
+      "errors": [],
+      "validated_at": "2026-08-03T20:34:00+03:00",
+      "validation_status": "passed"
+    }
+  },
+  "evidence_map_schema": {
+    "description": "خريطة تربط الادعاءات الجوهرية بالمصادر والمسارات في الملف.",
+    "item_fields": {
+      "claim": "الادعاء المختصر",
+      "json_paths": "المسارات التي تعتمد على الدليل",
+      "classification": "company | revenue | product | app | founders | funding | pricing | technology | website_integrity | privacy | unavailable",
+      "status": "verified | historical_only | founder_reported | corrected | unreliable_source | unavailable",
+      "source_ids": "معرفات من sources",
+      "notes": "حدود الاستدلال"
+    }
+  },
+  "evidence_map": {
+    "E1": {
+      "claim": "قال إسحاق في ديسمبر 2024 إن Dashp تجاوزت 100 ألف دولار ARR وكان يدير التصميم والهندسة والبيع والدعم دون موظفين أو تمويل خارجي.",
+      "json_paths": [
+        "directory_snapshot.historical_snapshot",
+        "company.public_revenue_claim",
+        "company.funding",
+        "costs_and_operations",
+        "revenue_timeline"
+      ],
+      "classification": "revenue",
+      "status": "founder_reported",
+      "source_ids": [
+        "S1"
+      ],
+      "notes": "لقطة غير مدققة وتاريخية."
+    },
+    "E2": {
+      "claim": "سميت جامعة يوتا Domus Go وIsaac Tai شريكين مؤسسين ووصفت المنتج بالتوظيف والاحتفاظ والتدريب والتحليلات.",
+      "json_paths": [
+        "company.founder",
+        "company.founders",
+        "company.founders_count",
+        "problem_and_product",
+        "origin_story"
+      ],
+      "classification": "founders",
+      "status": "verified",
+      "source_ids": [
+        "S4"
+      ],
+      "notes": "تغطية مؤسسية لعام 2024؛ لا تثبت الأدوار الحالية."
+    },
+    "E3": {
+      "claim": "يعرض Google Play الكيان DASHP, INC. وعنوان Vineyard, Utah وآخر تحديث Android في 18 يونيو 2025.",
+      "json_paths": [
+        "company.legal_name",
+        "company.location",
+        "company.developer_address",
+        "directory_snapshot.latest_verified_product_snapshot.android"
+      ],
+      "classification": "app",
+      "status": "verified",
+      "source_ids": [
+        "S3"
+      ],
+      "notes": "بيانات مطور المتجر وليست شهادة سجل ولاية."
+    },
+    "E4": {
+      "claim": "يعرض App Store تطبيق DASHP وآخر تحديث iOS في 6 مارس 2025 والمطور Isaac Tai.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_product_snapshot.ios",
+        "company.operating_status_as_of_2026_08_03"
+      ],
+      "classification": "app",
+      "status": "verified",
+      "source_ids": [
+        "S2"
+      ],
+      "notes": "إدراج التطبيق لا يثبت وجود عقود نشطة."
+    },
+    "E5": {
+      "claim": "الموقع الحالي يعرض هوية Studio Agency وعناوين دنماركية لا تتسق مع DASHP في يوتا.",
+      "json_paths": [
+        "directory_snapshot.current_website_integrity",
+        "company.operating_status_as_of_2026_08_03",
+        "analysis.what_changed"
+      ],
+      "classification": "website_integrity",
+      "status": "unreliable_source",
+      "source_ids": [
+        "S5",
+        "S6"
+      ],
+      "notes": "يمنع استخدام الموقع لإثبات الميزات والعملاء والنتائج."
+    },
+    "E6": {
+      "claim": "يحتوي نطاق dashp.io على صفحات حالات ساخرة وغير مرتبطة بمنتج مكافحة الحشرات.",
+      "json_paths": [
+        "directory_snapshot.current_website_integrity",
+        "verification.key_corrections"
+      ],
+      "classification": "website_integrity",
+      "status": "unreliable_source",
+      "source_ids": [
+        "S7"
+      ],
+      "notes": "دليل إضافي على تلوث القالب."
+    },
+    "E7": {
+      "claim": "يعمل إسحاق زي تاي حاليًا لدى Cerebras وفق ملفه المهني العام.",
+      "json_paths": [
+        "company.founders",
+        "company.operating_status_as_of_2026_08_03",
+        "analysis.what_changed"
+      ],
+      "classification": "company",
+      "status": "verified",
+      "source_ids": [
+        "S8"
+      ],
+      "notes": "لا يثبت إغلاق Dashp أو انتهاء ملكيته."
+    },
+    "E8": {
+      "claim": "تتضمن تطبيقات Dashp تاريخيًا تتبع الأداء والتوظيف والمسابقات وشجرة الفرق وتوقع الأرباح.",
+      "json_paths": [
+        "problem_and_product",
+        "directory_snapshot.latest_verified_product_snapshot.ios",
+        "directory_snapshot.latest_verified_product_snapshot.android"
+      ],
+      "classification": "product",
+      "status": "verified",
+      "source_ids": [
+        "S2",
+        "S3"
+      ],
+      "notes": "الوصف الحالي في متاجر التطبيقات."
+    },
+    "E9": {
+      "claim": "وصف المؤسس تسعيرًا تاريخيًا حسب المقاعد القياسية والمرنة.",
+      "json_paths": [
+        "company.business_model",
+        "monetization",
+        "financials.revenue_streams"
+      ],
+      "classification": "pricing",
+      "status": "historical_only",
+      "source_ids": [
+        "S1"
+      ],
+      "notes": "لا توجد صفحة تسعير حالية."
+    },
+    "E10": {
+      "claim": "أرقام MRR وحركة الموقع وRPV في الدليل تاريخية وغير صالحة كلقطة 2026.",
+      "json_paths": [
+        "directory_snapshot.monthly_revenue",
+        "directory_snapshot.monthly_traffic",
+        "directory_snapshot.revenue_per_visitor",
+        "directory_snapshot.metric_notes"
+      ],
+      "classification": "unavailable",
+      "status": "corrected",
+      "source_ids": [
+        "S1",
+        "S10"
+      ],
+      "notes": "وُضعت القيم الحالية null."
+    },
+    "E11": {
+      "claim": "Retool وExpo وSupabase وVercel وGoogle Workspace أدوات معلنة للمرحلة المبكرة.",
+      "json_paths": [
+        "tools",
+        "costs_and_operations",
+        "build_and_launch"
+      ],
+      "classification": "technology",
+      "status": "historical_only",
+      "source_ids": [
+        "S1"
+      ],
+      "notes": "لا تثبت البنية الحالية."
+    },
+    "E12": {
+      "claim": "تطبيق Android يعلن جمع بيانات شخصية ورسائل وأن البيانات مشفرة أثناء النقل ويمكن طلب حذفها.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_product_snapshot.android.data_safety_declared",
+        "market_data.privacy_and_compliance_context"
+      ],
+      "classification": "privacy",
+      "status": "verified",
+      "source_ids": [
+        "S3"
+      ],
+      "notes": "تصريح مطور لا تدقيق مستقل."
+    },
+    "E13": {
+      "claim": "App Store يعلن ارتباط البريد وبيانات الاستخدام بالهوية وجمع تشخيصات غير مرتبطة.",
+      "json_paths": [
+        "market_data.privacy_and_compliance_context",
+        "directory_snapshot.latest_verified_product_snapshot.ios"
+      ],
+      "classification": "privacy",
+      "status": "verified",
+      "source_ids": [
+        "S2"
+      ],
+      "notes": "تصريح مطور لم تتحقق منه Apple."
+    },
+    "E14": {
+      "claim": "لا توجد بيانات عامة حالية للإيراد أو العملاء أو الموظفين أو التقييم.",
+      "json_paths": [
+        "financials",
+        "directory_snapshot.latest_verified_product_snapshot",
+        "company.employees",
+        "company.profitability"
+      ],
+      "classification": "unavailable",
+      "status": "unavailable",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3",
+        "S8"
+      ],
+      "notes": "جرى البحث في المصادر المتاحة حتى تاريخ الملف."
+    }
   },
   "id": "dashp"
 }

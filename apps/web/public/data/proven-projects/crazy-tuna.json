@@ -2,51 +2,1117 @@
   "id": "crazy-tuna",
   "slug": "crazy-tuna",
   "name": "كريزي تونة (Crazy Tuna)",
-  "headline": "علامة بحرية غير تقليدية تكسر جمود قطاع المأكولات المحفوظة",
-  "category": "F&B / الأغذية والمشروبات",
+  "headline": "حين تصبح التونة فئة كاملة: بناء علامة حول طرق الاستهلاك لا حول السمكة الخام وحدها",
+  "category": "F&B / تجارة إلكترونية وتجزئة متخصصة في التونة والأسماك والمنتجات البحرية ذات القيمة المضافة",
   "company": {
-    "location": "القاهرة، مصر (Shark Tank Egypt)",
-    "business_model": "البيع المباشر عبر الإنترنت (D2C) والتوزيع للمتاجر الكبرى (B2B2C)"
+    "location": "القاهرة الكبرى، مصر. ذكرت الشركة في صفحة تعريف منشورة عام 2021 أنها توصل داخل القاهرة وكانت موجودة في الرحاب والتجمع الخامس والمعادي والدقي. أما صفحة التوزيع الحالية فتذكر Gourmet وSeafood Factory وGold's Gym Zayed، لكنها لا تنشر عنوان مقر إداري أو قانوني حديثًا يمكن التحقق منه بصورة مستقلة.",
+    "business_model": "علامة ومتجر متخصص في التونة والأسماك يعمل بنموذج هجين: بيع مباشر للمستهلك عبر متجر Shopify، وبيع عبر قنوات تجزئة وموزعين مثل Gourmet، مع رفع قيمة المنتج من خلال التقطيع والتعبئة والتجميد السريع وتقديم صيغ خام وساشيمي ومطهوة على البخار ومدخنة وبرجر تونة. لا يثبت الدليل المتاح وجود اشتراكات أو امتيازات أو إيراد خدمات منفصل."
   },
   "directory_snapshot": {
-    "monthly_revenue": "مئات الآلاف من الجنيهات",
-    "monthly_traffic": "طلبات متزايدة وحضور بارز في السوبر ماركت"
+    "monthly_revenue": "غير معلن. لا تنشر الشركة إيرادًا شهريًا حاليًا أو قوائم مالية مدققة. الرقم التاريخي المتاح من تغطية عرض Shark Tank هو مبيعات تقارب 960 ألف جنيه مصري خلال عام 2022 وصافي ربح يقارب 180 ألف جنيه؛ وهذه أرقام سنوية منقولة عن العرض التلفزيوني، وليست إيرادًا شهريًا ولا بيانات مدققة حتى أغسطس 2026.",
+    "monthly_traffic": "غير معلن. لا توجد بيانات رسمية موثوقة عن الزيارات الشهرية أو المستخدمين النشطين أو عدد الطلبات. استمرار المتجر ووجود منتجات متاحة وقنوات تجزئة يثبت النشاط التجاري فقط، ولا يسمح بتحويله إلى رقم زيارات أو عملاء."
   },
   "overview": {
     "problem": {
-      "text": "قطاع الأسماك المحفوظة (كالتونة) يعاني من روتين العلامات التجارية الكبرى، وضعف الابتكار في النكهات وطرق التقديم والتغليف، مما يجعله منتجاً (مملاً) للمستهلكين، خاصة فئة الشباب.",
-      "impact": "انعدام الولاء لعلامة تجارية معينة في قطاع المعلبات، وصعوبة تمييز المنتجات عن بعضها على أرفف السوبر ماركت."
+      "text": "شراء التونة الطازجة والقطع المتخصصة مثل البلوفين والساشيمي خارج المطاعم يواجه ثلاث فجوات مترابطة: صعوبة الوصول إلى تشكيلة واضحة، الحاجة إلى حفظ وتعبئة وسلسلة تبريد مناسبة، وحاجة المستهلك إلى معرفة طريقة التحضير والاستخدام. المشكلة ليست «ملل المعلبات» كما ورد في الملف الأصلي؛ كتالوج Crazy Tuna الحالي يتركز أساسًا على أسماك طازجة أو مجمدة ومنتجات جاهزة للأكل وليس على علب تونة محفوظة تقليدية.",
+      "impact": "عندما لا تُحل هذه الفجوات يبقى الطلب محصورًا في المطاعم أو في شراء سمك خام عام، وتزداد حساسية العميل تجاه الجودة والتخزين والتحضير. كما يصعب على علامة صغيرة بناء تكرار شراء إذا اعتمدت على قطعة سمك واحدة بدل خلق مناسبات استخدام متعددة ومنتجات ذات قيمة مضافة."
     },
     "solution": {
-      "text": "علامة تجارية متخصصة في منتجات التونة والأسماك المحفوظة، تقدمها بنكهات مبتكرة، تغليف عصري ملفت (باسم وشعار مجنون)، وتجربة تسوق إلكتروني مباشرة، لتخلق حالة من الولاء والإثارة حول منتج تقليدي جداً."
+      "text": "تبني Crazy Tuna عرضًا متخصصًا حول التونة: قطع خام وساشيمي وستيك، منتجات جاهزة للأكل مثل التونة المطهوة على البخار، ومنتجات مصنّعة بقيمة مضافة مثل برجر التونة، إلى جانب السلمون المدخن. تجمع العلامة بين متجر مباشر، محتوى وصفات، وتوزيع انتقائي عبر قنوات تجزئة. وتقول الشركة إنها تستخدم التقطيع والتعبئة بالتفريغ والتجميد السريع؛ هذا وصف تشغيلي صادر عنها ولم يُدعّم في المصادر العامة بشهادات تدقيق مستقلة."
     }
   },
   "market_data": {
-    "target_audience": "الشباب، العائلات، والمهتمون بالطعام السريع والصحي.",
-    "market_size": "سوق الأغذية المحفوظة الضخم في مصر والمنطقة.",
-    "growth_rate": "اقتنصت استثماراً استراتيجياً في الموسم الثاني لتوسيع التوزيع ودخول سلاسل السوبر ماركت الكبرى."
+    "target_audience": "مستهلكو القاهرة الكبرى الباحثون عن تونة وسمك عاليَي القيمة للاستخدام المنزلي، محبو الساشيمي والسوشي والستيك البحري، الأسر والمهتمون بوجبات سريعة التحضير أو جاهزة للأكل، والعملاء الذين يتسوقون من قنوات تجزئة متخصصة مثل Gourmet. لا توجد بيانات منشورة تسمح بتحديد أعمار العملاء أو حجم كل شريحة.",
+    "market_size": "غير محدد برقم موثوق خاص بالشركة أو بالفئة الدقيقة التي تخدمها. السوق القابل للعنونة هنا هو تقاطع بيع الأسماك الطازجة والمجمدة، المنتجات البحرية ذات القيمة المضافة، والتجارة الإلكترونية والتجزئة المتخصصة في مصر. لم يُستخدم تقدير تجاري عام لسوق المأكولات البحرية لأنه قد يخلط بين الصيد والاستيراد والجملة والمطاعم والتجزئة ولا يعكس فئة Crazy Tuna بدقة.",
+    "growth_rate": "غير معلن ولا يمكن حسابه من المصادر العامة. أرقام 2022 السنوية المنقولة عن عرض Shark Tank تمثل نقطة تاريخية واحدة، بينما استمرار المتجر في 2026 ووجود منتجات لدى Gourmet يثبتان بقاء النشاط والتوزيع، لا معدل نمو الإيراد أو الطلب."
   },
   "financials": {
-    "initial_investment": "استثمار من الشاركس مقابل حصة للمساعدة في الإنتاج الكمي واختراق شبكات التوزيع الكبرى (Retail Distribution).",
-    "valuation": "ملايين الجنيهات",
+    "initial_investment": "رأس المال التأسيسي ومساهمات المؤسسين غير معلنة. في عرض Shark Tank Egypt عام 2023 طلب إسلام البدري وعمر شريف 2.5 مليون جنيه مقابل 20%، ثم وافقا تلفزيونيًا على عرض 2.5 مليون جنيه مقابل 40% من أحمد السويدي ومحمد فاروق. لم يُعثر على إعلان رسمي لاحق يثبت إتمام الإغلاق القانوني أو تحويل كامل المبلغ، لذلك تُسجل هذه كشروط صفقة معلنة على الشاشة لا كتمويل مغلق مؤكد.",
+    "valuation": "لا يوجد تقييم حالي معلن حتى 3 أغسطس 2026. الطلب التلفزيوني البالغ 2.5 مليون جنيه مقابل 20% يعادل حسابيًا تقييمًا بعد الاستثمار قدره 12.5 مليون جنيه وتقييمًا قبل الاستثمار قدره 10 ملايين جنيه. العرض المقبول على الشاشة، 2.5 مليون جنيه مقابل 40%، يعادل تقييمًا بعد الاستثمار قدره 6.25 مليون جنيه وقبل الاستثمار 3.75 مليون جنيه، بافتراض أن المقابل كله استثمار أسهم مباشر ومن دون شروط إضافية. هذه قيم مشتقة من نسب العرض وليست تقييمًا تنظيميًا أو جولة مؤكدة الإغلاق.",
     "revenue_streams": [
-      "مبيعات التجزئة للمتاجر والسوبر ماركت (B2B)",
-      "المبيعات المباشرة للمستهلك عبر المنصة الخاصة (D2C)"
+      "المبيعات المباشرة للمستهلك عبر متجر Crazy Tuna الإلكتروني لمنتجات التونة والسلمون والعروض المجمعة.",
+      "مبيعات التجزئة عبر شركاء وقنوات خارجية؛ الصفحة الرسمية تذكر Gourmet وSeafood Factory وGold's Gym Zayed.",
+      "هامش المنتجات ذات القيمة المضافة مثل الساشيمي الجاهز، التونة المطهوة على البخار، برجر التونة، والسلمون المدخن.",
+      "لا توجد إفصاحات عامة تثبت إيرادات اشتراكات أو ترخيص علامة أو خدمات منفصلة."
     ]
   },
   "lessons": [
     {
-      "title": "قوة التغليف والعلامة التجارية (Disruptive Branding)",
-      "description": "في سوق لا توجد فيه فروقات كبيرة في طعم التونة، كان التميز الحقيقي لـ (كريزي تونة) هو اسم العلامة التجارية والتغليف. الاسم الجريء والتصميم العصري جعلا المنتج يصرخ على رفوف السوبر ماركت ويجبر المستهلك على تجربته."
+      "title": "التخصص الفئوي يصنع ذاكرة أسرع من متجر السمك العام",
+      "description": "اسم Crazy Tuna والكتالوج المتمحور حول التونة يمنحان العميل سببًا واضحًا لتذكر العلامة. القيمة ليست في ادعاء أنها «الأكبر»، بل في امتلاك فئة محددة وتوسيعها بعمق: بلوفين وباكور وساشيمي وستيك ومنتجات جاهزة. للشركات الصغيرة، التركيز العميق قد يبني سلطة فئوية قبل امتلاك شبكة توزيع ضخمة."
     },
     {
-      "title": "من الإنترنت للرفوف (Online to Offline - O2O)",
-      "description": "بدأت الشركة بإثبات نجاح المنتج عبر البيع المباشر للمستهلكين إلكترونياً (D2C). بمجرد إثبات الطلب وبناء قاعدة جماهيرية، أصبح من السهل إقناع كبار المستثمرين وسلاسل السوبر ماركت بوضع المنتج على أرففهم (B2B)."
+      "title": "ابتكر مناسبة الاستخدام قبل أن تبتكر مادة جديدة",
+      "description": "Crazy Tuna لا تحتاج إلى اختراع سمكة جديدة؛ توسع الطلب عبر تحويل المادة نفسها إلى ساشيمي وستيك وتونة مطهوة على البخار وبرجر. كل صيغة تخاطب وقتًا مختلفًا: طبخ منزلي، وجبة سريعة، وجبة أطفال، أو تجربة قريبة من المطاعم. هذا النوع من الابتكار يرفع عدد حالات الاستخدام المحتملة من المورد نفسه."
+    },
+    {
+      "title": "المحتوى التعليمي جزء من المنتج الغذائي",
+      "description": "مكتبة الوصفات تقلل خوف العميل من شراء قطعة لا يعرف كيف يطبخها. في المنتجات غير المألوفة، الوصفة ليست محتوى تسويقيًا جانبيًا؛ هي أداة تفعيل تقلل الاحتكاك بعد الشراء وتساعد على تكراره. كل منتج متخصص يحتاج تعليمًا يوازي جودة التغليف."
+    },
+    {
+      "title": "التوزيع الخارجي يوسع الوصول لكنه لا يثبت النمو",
+      "description": "وجود المنتج لدى Gourmet وقنوات أخرى دليل على نموذج هجين بين D2C والتجزئة، لكنه لا يكشف حجم البيع أو سرعة الدوران أو هامش كل قناة. الدرس هو قياس التوزيع بجودة الرف وإعادة الطلب والربحية، لا بعدد الشعارات الموضوعة في صفحة «أين تجدنا»."
+    },
+    {
+      "title": "فرّق بين صفقة تلفزيونية وجولة تمويل مغلقة",
+      "description": "نسب عرض Shark Tank تسمح بحساب تقييمات ضمنية، لكنها لا تثبت تحويل الأموال أو إتمام الفحص النافي للجهالة أو بقاء الشروط كما ظهرت على الشاشة. أي تحليل استثماري محترف يجب أن يسميها «شروط عرض معلنة» إلى أن يظهر توثيق لاحق للإغلاق."
+    },
+    {
+      "title": "في الغذاء، الثقة التشغيلية أهم من جرأة الاسم",
+      "description": "التعبئة بالتفريغ والتجميد السريع وسياسة التوصيل عناصر جوهرية لأن المنتج حساس للوقت والحرارة. العلامة القوية تجذب التجربة الأولى، لكن التتبع، سلامة السلسلة الباردة، وضوح المنشأ، والانضباط في الجودة هي التي تصنع التكرار. المصادر العامة المتاحة تعرض وصف الشركة لهذه العمليات ولا تعرض تدقيقًا مستقلاً، ما يجعل الشفافية فرصة تطوير أساسية."
     }
   ],
   "tools": [
-    "Shopify",
-    "Social Media Marketing",
-    "FMCG Distribution Networks"
+    "Shopify: منصة المتجر الإلكتروني، مثبتة في تذييل الموقع الرسمي.",
+    "كتالوج تجارة إلكترونية مباشر مع سلة شراء وصفحات منتجات ومخزون وأسعار.",
+    "InstaPay كخيار دفع معلن على الموقع؛ لا توجد معلومات عامة عن مزود دفع بطاقات مدمج.",
+    "Facebook وInstagram وPinterest كقنوات محتوى واتصال مرتبطة من الموقع.",
+    "مكتبة وصفات وتعليم استخدام تضم 26 وصفة أو طريقة تحضير.",
+    "التعبئة بالتفريغ والتجميد السريع بحسب الوصف التشغيلي المنشور من الشركة.",
+    "قنوات توزيع هجينة تشمل Gourmet وSeafood Factory وGold's Gym Zayed وفق الصفحة الرسمية.",
+    "منتجات ذات قيمة مضافة: ساشيمي، تونة مطهوة على البخار، برجر تونة، وسلمون مدخن.",
+    "شبكة توصيل تتواصل لتنسيق التسليم خلال ثلاثة أيام عمل وفق سياسة الموقع."
+  ],
+  "verification": {
+    "status": "verified_from_current_official_store_catalog_distribution_pages_shark_tank_official_presence_and_cautiously_labeled_pitch_reporting_with_field_level_evidence",
+    "verified_on": "2026-08-03",
+    "source_policy": "أولوية لموقع Crazy Tuna الرسمي وصفحات المنتجات والتوزيع والسياسات، ثم المصادر الرسمية لـShark Tank Egypt. استخدمت تغطية إعلامية متزامنة مع الحلقة فقط لتوثيق أرقام العرض المالي وشروط الصفقة، مع تصنيفها كأرقام منقولة عن عرض تلفزيوني وغير مدققة. لم تُستخدم تقديرات زيارات أو إيرادات من أدوات طرف ثالث، ولم يُفترض وجود إيداعات SEC لشركة مصرية خاصة.",
+    "important_notes": [
+      "الشركة ليست موثقة في المصادر المتاحة كعلامة معلبات تقليدية؛ الكتالوج الحالي يركز على التونة والأسماك الطازجة أو المجمدة والجاهزة للأكل.",
+      "رقم 960 ألف جنيه يمثل مبيعات عام 2022 كما نُقلت عن عرض Shark Tank، وليس إيرادًا شهريًا أو رقمًا حديثًا.",
+      "رقم 180 ألف جنيه يمثل صافي ربح عام 2022 منقولًا عن العرض، وليس هامشًا أو تدفقًا نقديًا مدققًا.",
+      "2.5 مليون جنيه مقابل 40% هي شروط عرض وافق عليها المؤسسان على الشاشة؛ لم يُعثر على إثبات عام لإغلاق الصفقة قانونيًا.",
+      "التقييمات 12.5 مليون و6.25 مليون جنيه هي تقييمات بعد الاستثمار مشتقة حسابيًا من شروط العرض وليست تقييمات مستقلة.",
+      "لا توجد بيانات رسمية موثوقة عن الإيراد الشهري أو الزيارات أو المستخدمين أو عدد الطلبات أو معدل النمو حتى 3 أغسطس 2026.",
+      "ادعاء «أكبر/أفضل مزود أسماك أونلاين» ورد في وصف ذاتي للشركة ولم يُستخدم كحقيقة مثبتة.",
+      "وجود المنتجات لدى موزع أو متجر لا يثبت حجم المبيعات أو الانتشار في جميع الفروع.",
+      "أسعار ومخزون صفحات المنتجات لقطة زمنية وقد تتغير؛ لم تُستخدم لحساب الإيراد.",
+      "ادعاءات المنشأ والفوائد الصحية وطرق الحفظ نُسبت إلى صفحات الشركة ولم تعامل كشهادات مختبرية أو تنظيمية مستقلة.",
+      "لم يُعثر على قوائم مالية مدققة أو سجل مساهمين أو إفصاح تنظيمي عام يتيح تأكيد الملكية أو رأس المال أو الصفقة.",
+      "المعلومات متحققة حتى 3 أغسطس 2026."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط حقول الملف بقيمها وحالة التحقق والثقة والمصادر والقيود، مع فصل الإيراد السنوي التاريخي عن الإيراد الشهري، وشروط العرض التلفزيوني عن التمويل المغلق، والتقييم المشتق عن التقييم المستقل، والنشاط الرقمي عن الزيارات والمستخدمين.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي حالي أو صفحة برنامج رسمية.",
+      "verified_current_catalog": "الادعاء يصف منتجات أو قنوات ظاهرة في الكتالوج الحالي.",
+      "verified_company_self_description": "المعلومة منشورة من الشركة عن نفسها ويجب إبقاء نسبتها إليها.",
+      "verified_as_not_publicly_disclosed": "لم يُعثر على إفصاح عام موثوق للمقياس المطلوب؛ لا يُستخدم تقدير خارجي.",
+      "verified_historical_pitch_metrics_un_audited": "أرقام تاريخية منقولة عن عرض تلفزيوني ولم تُدعّم بقوائم مالية مدققة.",
+      "verified_televised_deal_terms_close_unconfirmed": "شروط صفقة قُبلت على الشاشة لكن إغلاقها القانوني أو تحويل الأموال غير مثبت علنًا.",
+      "derived_from_announced_equity_terms": "قيمة محسوبة رياضيًا من مبلغ ونسبة العرض وليست تقييمًا مستقلاً.",
+      "verified_current_distribution_presence_not_sales": "وجود قناة توزيع موثق لكنه لا يكشف حجم البيع أو الانتشار الكامل.",
+      "verified_public_platform_or_channel": "أداة أو قناة عامة ظاهرة على الموقع ولا تكشف الحزمة التقنية الداخلية.",
+      "analytical_inference": "تحليل مهني مبني على حقائق موثقة وليس تصريحًا حرفيًا من الشركة."
+    },
+    "confidence_scale": {
+      "high": "مصدر رسمي حالي مع تطابق مباشر.",
+      "medium_high": "مصدر رسمي مع قيد زمني أو استنتاج محدود.",
+      "medium": "تغطية متزامنة مع الحدث أو تحليل مهني تدعمه عدة حقائق لكن دون إفصاح مالي أو تنظيمي مستقل."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "القاهرة الكبرى، مصر. ذكرت الشركة في صفحة تعريف منشورة عام 2021 أنها توصل داخل القاهرة وكانت موجودة في الرحاب والتجمع الخامس والمعادي والدقي. أما صفحة التوزيع الحالية فتذكر Gourmet وSeafood Factory وGold's Gym Zayed، لكنها لا تنشر عنوان مقر إداري أو قانوني حديثًا يمكن التحقق منه بصورة مستقلة.",
+      "verification_status": "verified_company_self_description",
+      "confidence": "medium_high",
+      "claim_type": "greater_cairo_operating_area_current_distribution_and_undisclosed_hq",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "صفحة التعريف القديمة تثبت نطاق القاهرة ومواقع 2021، والصفحة الحالية تثبت نقاط توزيع؛ لا يوجد عنوان مقر حديث منشور.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-03",
+        "SRC-04",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Who we are? – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_company_self_description",
+          "url": "https://crazytunaeg.com/blogs/who-are-we/who-we-are",
+          "evidence_type": "direct",
+          "source_locator": "Who we are → delivery and locations",
+          "supports": "التوصيل داخل القاهرة والوجود في الرحاب والتجمع والمعادي والدقي في 2021.",
+          "published_on": "2021-03-18"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Before You Order – Where you can find Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_distribution_locations_page",
+          "url": "https://crazytunaeg.com/pages/our-branches",
+          "evidence_type": "direct",
+          "source_locator": "Before You Order → Find us at",
+          "supports": "قنوات التوفر الحالية في Gourmet وSeafood Factory وGold's Gym Zayed."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Policies & Contacts – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_policies_contact_and_platform_page",
+          "url": "https://crazytunaeg.com/pages/contact-us",
+          "evidence_type": "direct",
+          "source_locator": "Policies & Contacts",
+          "supports": "بيانات اتصال حالية من دون عنوان مقر إداري معلن."
+        }
+      ],
+      "limitations": "مواقع 2021 قد لا تمثل فروعًا مملوكة حاليًا؛ لذلك لم تُعرض كقائمة فروع حديثة ولم يُخترع عنوان قانوني."
+    },
+    "$.company.business_model": {
+      "field_value": "علامة ومتجر متخصص في التونة والأسماك يعمل بنموذج هجين: بيع مباشر للمستهلك عبر متجر Shopify، وبيع عبر قنوات تجزئة وموزعين مثل Gourmet، مع رفع قيمة المنتج من خلال التقطيع والتعبئة والتجميد السريع وتقديم صيغ خام وساشيمي ومطهوة على البخار ومدخنة وبرجر تونة. لا يثبت الدليل المتاح وجود اشتراكات أو امتيازات أو إيراد خدمات منفصل.",
+      "verification_status": "verified_current_catalog",
+      "confidence": "high",
+      "claim_type": "hybrid_d2c_retail_value_added_seafood_model",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الكتالوج والمتجر والتوزيع الخارجي وصفحات المنتجات تثبت نموذج البيع المباشر والتجزئة والمنتجات ذات القيمة المضافة.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-04",
+        "SRC-06",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Products – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_product_catalog",
+          "url": "https://crazytunaeg.com/collections/all",
+          "evidence_type": "direct",
+          "source_locator": "Current product catalog",
+          "supports": "تنوع المنتجات والبيع المباشر عبر المتجر."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Before You Order – Where you can find Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_distribution_locations_page",
+          "url": "https://crazytunaeg.com/pages/our-branches",
+          "evidence_type": "direct",
+          "source_locator": "Find us at",
+          "supports": "قنوات التوزيع الخارجية الحالية."
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Healthy Tuna Burger – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_product_page",
+          "url": "https://crazytunaeg.com/products/tuna-burger",
+          "evidence_type": "direct",
+          "source_locator": "Healthy Tuna Burger product page",
+          "supports": "منتج مصنّع بقيمة مضافة."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Steamed Tuna – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_product_page",
+          "url": "https://crazytunaeg.com/products/copy-of-steamed-tuna-olive-oli",
+          "evidence_type": "direct",
+          "source_locator": "Steamed Tuna product page",
+          "supports": "منتج جاهز للأكل متعدد النكهات."
+        }
+      ],
+      "limitations": "لا تتوافر عقود توزيع أو هوامش أو تقسيم إيراد حسب القناة، لذلك لم يُحدد وزن D2C مقابل التجزئة."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. لا تنشر الشركة إيرادًا شهريًا حاليًا أو قوائم مالية مدققة. الرقم التاريخي المتاح من تغطية عرض Shark Tank هو مبيعات تقارب 960 ألف جنيه مصري خلال عام 2022 وصافي ربح يقارب 180 ألف جنيه؛ وهذه أرقام سنوية منقولة عن العرض التلفزيوني، وليست إيرادًا شهريًا ولا بيانات مدققة حتى أغسطس 2026.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "medium",
+      "claim_type": "current_monthly_revenue_not_disclosed_historical_2022_annual_pitch_metrics_only",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد إفصاح رسمي شهري؛ المصدران الصحفيان ينقلان رقمين سنويين تاريخيين عن حلقة 2023.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-11",
+        "SRC-12",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "في الموسم الثاني من Shark Tank Egypt.. شركتا Blooms وكريزي تونة حصدتا 10.5 ملايين جنيه",
+          "publisher": "FollowICT",
+          "source_type": "contemporaneous_media_report_of_televised_pitch",
+          "url": "https://followict.news/%D9%81%D9%8A-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%85-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A-%D9%85%D9%86-shark-tank-egypt-%D8%B4%D8%B1%D9%83%D8%AA%D8%A7-blooms-%D9%88%D9%83%D8%B1%D9%8A%D8%B2%D9%8A-%D8%AA/",
+          "evidence_type": "reported_directly_from_televised_pitch",
+          "source_locator": "Crazy Tuna section",
+          "supports": "مبيعات 2022 نحو 960 ألف جنيه وصافي ربح 180 ألف جنيه، بحسب العرض التلفزيوني.",
+          "published_on": "2023-10-25"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "نصيحة أيمن عباس لأصحاب مشروع كريزي تونة",
+          "publisher": "بصراحة",
+          "source_type": "secondary_media_report_corrobating_pitch_metrics",
+          "url": "https://besraha.com/104889",
+          "evidence_type": "corroborating_secondary_report",
+          "source_locator": "Article body",
+          "supports": "تأكيد ثانوي للأرقام التاريخية نفسها.",
+          "published_on": "2023-10-28"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Products – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_product_catalog",
+          "url": "https://crazytunaeg.com/collections/all",
+          "evidence_type": "direct",
+          "source_locator": "Current product catalog",
+          "supports": "إثبات استمرار متجر نشط من دون إفصاح مالي."
+        }
+      ],
+      "limitations": "الأرقام غير مدققة ولا يجوز قسمتها على 12 واعتبار الناتج إيرادًا شهريًا حاليًا؛ ولا تثبت أداء 2023–2026."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن. لا توجد بيانات رسمية موثوقة عن الزيارات الشهرية أو المستخدمين النشطين أو عدد الطلبات. استمرار المتجر ووجود منتجات متاحة وقنوات تجزئة يثبت النشاط التجاري فقط، ولا يسمح بتحويله إلى رقم زيارات أو عملاء.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "web_traffic_users_orders_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الموقع الحالي يثبت وجود متجر وتواصل، لكنه لا ينشر زيارات أو مستخدمين أو طلبات.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-05",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Products – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_product_catalog",
+          "url": "https://crazytunaeg.com/collections/all",
+          "evidence_type": "direct",
+          "source_locator": "Current catalog and cart",
+          "supports": "وجود متجر مباشر ومنتجات حالية، لا رقم زيارات."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Policies & Contacts – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_policies_contact_and_platform_page",
+          "url": "https://crazytunaeg.com/pages/contact-us",
+          "evidence_type": "direct",
+          "source_locator": "Policies, contact and Shopify footer",
+          "supports": "قنوات اتصال ومنصة متجر، لا MAU أو طلبات."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Before You Order – Where you can find Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_distribution_locations_page",
+          "url": "https://crazytunaeg.com/pages/our-branches",
+          "evidence_type": "direct",
+          "source_locator": "Current distribution page",
+          "supports": "وجود قنوات توزيع لا يساوي عدد مستخدمين أو زيارات."
+        }
+      ],
+      "limitations": "لم تُستخدم Similarweb أو تقديرات طرف ثالث؛ الزيارات إلى الموقع لا تساوي المشترين أو العملاء الفريدين."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "شراء التونة الطازجة والقطع المتخصصة مثل البلوفين والساشيمي خارج المطاعم يواجه ثلاث فجوات مترابطة: صعوبة الوصول إلى تشكيلة واضحة، الحاجة إلى حفظ وتعبئة وسلسلة تبريد مناسبة، وحاجة المستهلك إلى معرفة طريقة التحضير والاستخدام. المشكلة ليست «ملل المعلبات» كما ورد في الملف الأصلي؛ كتالوج Crazy Tuna الحالي يتركز أساسًا على أسماك طازجة أو مجمدة ومنتجات جاهزة للأكل وليس على علب تونة محفوظة تقليدية.",
+        "impact": "عندما لا تُحل هذه الفجوات يبقى الطلب محصورًا في المطاعم أو في شراء سمك خام عام، وتزداد حساسية العميل تجاه الجودة والتخزين والتحضير. كما يصعب على علامة صغيرة بناء تكرار شراء إذا اعتمدت على قطعة سمك واحدة بدل خلق مناسبات استخدام متعددة ومنتجات ذات قيمة مضافة."
+      },
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "specialty_seafood_access_cold_chain_and_usage_education_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التحليل مستنتج من تشكيلة القطع المتخصصة، وصف التعبئة والتجميد، ومكتبة الوصفات، ويصحح فرضية المعلبات غير المدعومة.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-02",
+        "SRC-01",
+        "SRC-14",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Tuna التونة – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_tuna_collection_and_process_description",
+          "url": "https://crazytunaeg.com/collections/tuna-collection",
+          "evidence_type": "direct",
+          "source_locator": "Tuna collection description",
+          "supports": "التقطيع والتعبئة بالتفريغ والتجميد السريع و26 وصفة."
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Products – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_product_catalog",
+          "url": "https://crazytunaeg.com/collections/all",
+          "evidence_type": "direct",
+          "source_locator": "Product catalog",
+          "supports": "تنوع قطع التونة والساشيمي والمنتجات الجاهزة."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Recipes – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_recipe_content_library",
+          "url": "https://crazytunaeg.com/blogs/who-are-we/recipes",
+          "evidence_type": "direct",
+          "source_locator": "Recipes list",
+          "supports": "التعليم حول الاستخدام والتحضير.",
+          "published_on": "2021-04-01"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Policies & Contacts – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_policies_contact_and_platform_page",
+          "url": "https://crazytunaeg.com/pages/contact-us",
+          "evidence_type": "direct",
+          "source_locator": "Delivery policy",
+          "supports": "حساسية التشغيل والتسليم للغذاء."
+        }
+      ],
+      "limitations": "المشكلة صياغة تحليلية ولا تعني أن كل عميل يواجه كل فجوة، كما لا تثبت جودة سلسلة التبريد بتدقيق مستقل."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "تبني Crazy Tuna عرضًا متخصصًا حول التونة: قطع خام وساشيمي وستيك، منتجات جاهزة للأكل مثل التونة المطهوة على البخار، ومنتجات مصنّعة بقيمة مضافة مثل برجر التونة، إلى جانب السلمون المدخن. تجمع العلامة بين متجر مباشر، محتوى وصفات، وتوزيع انتقائي عبر قنوات تجزئة. وتقول الشركة إنها تستخدم التقطيع والتعبئة بالتفريغ والتجميد السريع؛ هذا وصف تشغيلي صادر عنها ولم يُدعّم في المصادر العامة بشهادات تدقيق مستقلة."
+      },
+      "verification_status": "verified_current_catalog",
+      "confidence": "high",
+      "claim_type": "specialized_multi_format_tuna_store_content_and_retail_solution",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المنتجات الحالية والمحتوى وقنوات التوزيع تثبت حلًا قائمًا على التخصص وتعدد الصيغ والقنوات.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-04",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Products – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_product_catalog",
+          "url": "https://crazytunaeg.com/collections/all",
+          "evidence_type": "direct",
+          "source_locator": "Product catalog",
+          "supports": "الكتالوج متعدد الصيغ."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Tuna التونة – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_tuna_collection_and_process_description",
+          "url": "https://crazytunaeg.com/collections/tuna-collection",
+          "evidence_type": "direct",
+          "source_locator": "Tuna collection",
+          "supports": "آلية الحفظ المعلنة والوصفات."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Before You Order – Where you can find Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_distribution_locations_page",
+          "url": "https://crazytunaeg.com/pages/our-branches",
+          "evidence_type": "direct",
+          "source_locator": "Find us at",
+          "supports": "التوزيع خارج الموقع."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Recipes – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_recipe_content_library",
+          "url": "https://crazytunaeg.com/blogs/who-are-we/recipes",
+          "evidence_type": "direct",
+          "source_locator": "Recipes",
+          "supports": "محتوى الاستخدام والتحضير.",
+          "published_on": "2021-04-01"
+        }
+      ],
+      "limitations": "الجودة والمنشأ والتجميد السريع أو الفوائد الغذائية أوصاف صادرة عن الشركة وليست نتائج تدقيق أو اختبار مستقل."
+    },
+    "$.market_data.target_audience": {
+      "field_value": "مستهلكو القاهرة الكبرى الباحثون عن تونة وسمك عاليَي القيمة للاستخدام المنزلي، محبو الساشيمي والسوشي والستيك البحري، الأسر والمهتمون بوجبات سريعة التحضير أو جاهزة للأكل، والعملاء الذين يتسوقون من قنوات تجزئة متخصصة مثل Gourmet. لا توجد بيانات منشورة تسمح بتحديد أعمار العملاء أو حجم كل شريحة.",
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "consumer_segments_inferred_from_product_formats_channels_and_geography",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الشرائح مستنتجة من القاهرة، نوع المنتجات، الساشيمي، البرجر، المنتجات الجاهزة، وقناة Gourmet.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-03",
+        "SRC-06",
+        "SRC-07",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Who we are? – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_company_self_description",
+          "url": "https://crazytunaeg.com/blogs/who-are-we/who-we-are",
+          "evidence_type": "direct",
+          "source_locator": "Delivery area and four tuna formats",
+          "supports": "نطاق القاهرة وتعدد طرق التقديم.",
+          "published_on": "2021-03-18"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Healthy Tuna Burger – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_product_page",
+          "url": "https://crazytunaeg.com/products/tuna-burger",
+          "evidence_type": "direct",
+          "source_locator": "Healthy Tuna Burger",
+          "supports": "منتج موجّه لوجبة سهلة وأسرية."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Steamed Tuna – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_product_page",
+          "url": "https://crazytunaeg.com/products/copy-of-steamed-tuna-olive-oli",
+          "evidence_type": "direct",
+          "source_locator": "Ready-to-eat steamed tuna",
+          "supports": "منتج للوجبات السريعة التحضير."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Crazy Tuna Sashimi Bluefin Tray",
+          "publisher": "Gourmet Egypt",
+          "source_type": "current_third_party_retail_product_listing",
+          "url": "https://gourmetegypt.com/crazy-tuna-sashimi-bluefin-tray",
+          "evidence_type": "direct",
+          "source_locator": "Gourmet Egypt product listing",
+          "supports": "قناة تجزئة متخصصة ومنتج ساشيمي."
+        }
+      ],
+      "limitations": "لا توجد دراسة عملاء أو بيانات ديموغرافية منشورة؛ الشرائح ليست أعدادًا أو نسبًا مؤكدة."
+    },
+    "$.market_data.market_size": {
+      "field_value": "غير محدد برقم موثوق خاص بالشركة أو بالفئة الدقيقة التي تخدمها. السوق القابل للعنونة هنا هو تقاطع بيع الأسماك الطازجة والمجمدة، المنتجات البحرية ذات القيمة المضافة، والتجارة الإلكترونية والتجزئة المتخصصة في مصر. لم يُستخدم تقدير تجاري عام لسوق المأكولات البحرية لأنه قد يخلط بين الصيد والاستيراد والجملة والمطاعم والتجزئة ولا يعكس فئة Crazy Tuna بدقة.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "medium_high",
+      "claim_type": "precise_addressable_market_size_not_reliably_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر تثبت الفئة والقنوات ولا تقدم رقمًا دقيقًا للسوق القابل للعنونة الخاص بالشركة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-04",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Products – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_product_catalog",
+          "url": "https://crazytunaeg.com/collections/all",
+          "evidence_type": "direct",
+          "source_locator": "Product catalog",
+          "supports": "تعريف نطاق المنتجات الفعلي."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Before You Order – Where you can find Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_distribution_locations_page",
+          "url": "https://crazytunaeg.com/pages/our-branches",
+          "evidence_type": "direct",
+          "source_locator": "Distribution locations",
+          "supports": "تعريف القنوات الجغرافية والتجارية الحالية."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Crazy Tuna Sashimi Bluefin Tray",
+          "publisher": "Gourmet Egypt",
+          "source_type": "current_third_party_retail_product_listing",
+          "url": "https://gourmetegypt.com/crazy-tuna-sashimi-bluefin-tray",
+          "evidence_type": "direct",
+          "source_locator": "Retail listing",
+          "supports": "وجود سوق تجزئة خارجي لمنتج ساشيمي."
+        }
+      ],
+      "limitations": "أي رقم عام لسوق الأسماك المصري قد يشمل قطاعات لا تخدمها الشركة؛ لذلك لم يُدرج رقم تسويقي واسع على أنه حجم سوق دقيق."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "غير معلن ولا يمكن حسابه من المصادر العامة. أرقام 2022 السنوية المنقولة عن عرض Shark Tank تمثل نقطة تاريخية واحدة، بينما استمرار المتجر في 2026 ووجود منتجات لدى Gourmet يثبتان بقاء النشاط والتوزيع، لا معدل نمو الإيراد أو الطلب.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "medium",
+      "claim_type": "current_growth_rate_not_disclosed_historical_point_and_current_presence_only",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "مصادر 2023 توفر نقطة مالية تاريخية واحدة، والمصادر الحالية تثبت استمرار النشاط والتوزيع فقط.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-11",
+        "SRC-04",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "في الموسم الثاني من Shark Tank Egypt.. شركتا Blooms وكريزي تونة حصدتا 10.5 ملايين جنيه",
+          "publisher": "FollowICT",
+          "source_type": "contemporaneous_media_report_of_televised_pitch",
+          "url": "https://followict.news/%D9%81%D9%8A-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%85-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A-%D9%85%D9%86-shark-tank-egypt-%D8%B4%D8%B1%D9%83%D8%AA%D8%A7-blooms-%D9%88%D9%83%D8%B1%D9%8A%D8%B2%D9%8A-%D8%AA/",
+          "evidence_type": "direct",
+          "source_locator": "Crazy Tuna section",
+          "supports": "مبيعات وربح 2022 منقولان عن العرض.",
+          "published_on": "2023-10-25"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Before You Order – Where you can find Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_distribution_locations_page",
+          "url": "https://crazytunaeg.com/pages/our-branches",
+          "evidence_type": "direct",
+          "source_locator": "Current distribution page",
+          "supports": "استمرار وجود قنوات توزيع في 2026."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Crazy Tuna Sashimi Bluefin Tray",
+          "publisher": "Gourmet Egypt",
+          "source_type": "current_third_party_retail_product_listing",
+          "url": "https://gourmetegypt.com/crazy-tuna-sashimi-bluefin-tray",
+          "evidence_type": "direct",
+          "source_locator": "Current retail product listing",
+          "supports": "منتج حالي لدى Gourmet."
+        }
+      ],
+      "limitations": "لا توجد سلسلة زمنية للإيراد أو الطلب؛ لا يجوز استنتاج CAGR أو نمو سنوي من الوجود الحالي."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "رأس المال التأسيسي ومساهمات المؤسسين غير معلنة. في عرض Shark Tank Egypt عام 2023 طلب إسلام البدري وعمر شريف 2.5 مليون جنيه مقابل 20%، ثم وافقا تلفزيونيًا على عرض 2.5 مليون جنيه مقابل 40% من أحمد السويدي ومحمد فاروق. لم يُعثر على إعلان رسمي لاحق يثبت إتمام الإغلاق القانوني أو تحويل كامل المبلغ، لذلك تُسجل هذه كشروط صفقة معلنة على الشاشة لا كتمويل مغلق مؤكد.",
+      "verification_status": "verified_televised_deal_terms_close_unconfirmed",
+      "confidence": "medium",
+      "claim_type": "founder_capital_undisclosed_televised_offer_terms_reported",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التغطية المتزامنة تسجل الطلب والعرض المقبول على الشاشة، بينما الدليل الرسمي يثبت مشاركة المشروع في البرنامج.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-09",
+        "SRC-10",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "Shark Tank Egypt – Food & Beverage Deals",
+          "publisher": "Shark Tank Egypt",
+          "source_type": "official_program_deals_directory",
+          "url": "https://sharktank-egypt.com/en/deals/food-and-beverage",
+          "evidence_type": "direct",
+          "source_locator": "Official Food & Beverage deals directory",
+          "supports": "إدراج Crazy Tuna رسميًا ضمن صفقات البرنامج."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Shark Tank Egypt post about Crazy Tuna founders",
+          "publisher": "Shark Tank Egypt",
+          "source_type": "official_program_social_post",
+          "url": "https://ae.linkedin.com/posts/shark-tank-egypt_sharktank-sharktankegyptseason2-entrepreneur-activity-7123298420122877953--iSf",
+          "evidence_type": "direct",
+          "source_locator": "Official Shark Tank Egypt LinkedIn post",
+          "supports": "إسلام وعمر صاحبا المشروع وظهوره في الموسم الثاني."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "في الموسم الثاني من Shark Tank Egypt.. شركتا Blooms وكريزي تونة حصدتا 10.5 ملايين جنيه",
+          "publisher": "FollowICT",
+          "source_type": "contemporaneous_media_report_of_televised_pitch",
+          "url": "https://followict.news/%D9%81%D9%8A-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%85-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A-%D9%85%D9%86-shark-tank-egypt-%D8%B4%D8%B1%D9%83%D8%AA%D8%A7-blooms-%D9%88%D9%83%D8%B1%D9%8A%D8%B2%D9%8A-%D8%AA/",
+          "evidence_type": "contemporaneous_report_of_televised_terms",
+          "source_locator": "Crazy Tuna deal terms",
+          "supports": "طلب 2.5 مليون مقابل 20% وقبول 2.5 مليون مقابل 40%.",
+          "published_on": "2023-10-25"
+        }
+      ],
+      "limitations": "لا يوجد إثبات عام للإغلاق أو تفاصيل اتفاق مساهمين أو دفعات أو شروط سابقة؛ رأس المال التأسيسي غير معلوم."
+    },
+    "$.financials.valuation": {
+      "field_value": "لا يوجد تقييم حالي معلن حتى 3 أغسطس 2026. الطلب التلفزيوني البالغ 2.5 مليون جنيه مقابل 20% يعادل حسابيًا تقييمًا بعد الاستثمار قدره 12.5 مليون جنيه وتقييمًا قبل الاستثمار قدره 10 ملايين جنيه. العرض المقبول على الشاشة، 2.5 مليون جنيه مقابل 40%، يعادل تقييمًا بعد الاستثمار قدره 6.25 مليون جنيه وقبل الاستثمار 3.75 مليون جنيه، بافتراض أن المقابل كله استثمار أسهم مباشر ومن دون شروط إضافية. هذه قيم مشتقة من نسب العرض وليست تقييمًا تنظيميًا أو جولة مؤكدة الإغلاق.",
+      "verification_status": "derived_from_announced_equity_terms",
+      "confidence": "medium",
+      "claim_type": "implied_pre_and_post_money_valuations_from_televised_terms",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التقييمات ناتجة من قسمة مبلغ الاستثمار على نسبة الملكية، مع إبقاء الفصل بين الطلب والعرض المقبول.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-11",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "في الموسم الثاني من Shark Tank Egypt.. شركتا Blooms وكريزي تونة حصدتا 10.5 ملايين جنيه",
+          "publisher": "FollowICT",
+          "source_type": "contemporaneous_media_report_of_televised_pitch",
+          "url": "https://followict.news/%D9%81%D9%8A-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%85-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A-%D9%85%D9%86-shark-tank-egypt-%D8%B4%D8%B1%D9%83%D8%AA%D8%A7-blooms-%D9%88%D9%83%D8%B1%D9%8A%D8%B2%D9%8A-%D8%AA/",
+          "evidence_type": "numeric_basis_for_derivation",
+          "source_locator": "Lines reporting ask and accepted offer",
+          "supports": "2.5 مليون جنيه مقابل 20% في الطلب، و2.5 مليون مقابل 40% في العرض المقبول.",
+          "published_on": "2023-10-25"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Shark Tank Egypt – Food & Beverage Deals",
+          "publisher": "Shark Tank Egypt",
+          "source_type": "official_program_deals_directory",
+          "url": "https://sharktank-egypt.com/en/deals/food-and-beverage",
+          "evidence_type": "direct",
+          "source_locator": "Official deals directory",
+          "supports": "يثبت سياق Shark Tank الرسمي للصفقة."
+        }
+      ],
+      "limitations": "الحساب يفترض استثمار أسهم مباشرًا بالكامل ومن دون قرض أو شراء منتجات أو شروط خفية؛ الإغلاق غير مؤكد والتقييم ليس حاليًا."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "المبيعات المباشرة للمستهلك عبر متجر Crazy Tuna الإلكتروني لمنتجات التونة والسلمون والعروض المجمعة.",
+        "مبيعات التجزئة عبر شركاء وقنوات خارجية؛ الصفحة الرسمية تذكر Gourmet وSeafood Factory وGold's Gym Zayed.",
+        "هامش المنتجات ذات القيمة المضافة مثل الساشيمي الجاهز، التونة المطهوة على البخار، برجر التونة، والسلمون المدخن.",
+        "لا توجد إفصاحات عامة تثبت إيرادات اشتراكات أو ترخيص علامة أو خدمات منفصلة."
+      ],
+      "verification_status": "verified_current_catalog",
+      "confidence": "high",
+      "claim_type": "d2c_retail_and_value_added_product_sales",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المتجر وقنوات التوزيع وصفحات المنتجات تثبت مصادر إيراد قائمة على بيع المنتجات لا على المقاييس الرقمية.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-01",
+        "SRC-04",
+        "SRC-06",
+        "SRC-07",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Products – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_product_catalog",
+          "url": "https://crazytunaeg.com/collections/all",
+          "evidence_type": "direct",
+          "source_locator": "Product catalog and direct cart",
+          "supports": "المبيعات المباشرة وتنوع المنتجات."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Before You Order – Where you can find Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_distribution_locations_page",
+          "url": "https://crazytunaeg.com/pages/our-branches",
+          "evidence_type": "direct",
+          "source_locator": "Current distribution channels",
+          "supports": "المبيعات عبر شركاء التجزئة."
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Healthy Tuna Burger – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_product_page",
+          "url": "https://crazytunaeg.com/products/tuna-burger",
+          "evidence_type": "direct",
+          "source_locator": "Tuna Burger",
+          "supports": "منتج ذو قيمة مضافة."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Steamed Tuna – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_product_page",
+          "url": "https://crazytunaeg.com/products/copy-of-steamed-tuna-olive-oli",
+          "evidence_type": "direct",
+          "source_locator": "Steamed Tuna",
+          "supports": "منتج جاهز للأكل."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Smoked Salmon – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_product_page",
+          "url": "https://crazytunaeg.com/products/smoked-salmon-%D8%B3%D8%A7%D9%84%D9%85%D9%88%D9%86-%D9%85%D8%AF%D8%AE%D9%86",
+          "evidence_type": "direct",
+          "source_locator": "Smoked Salmon",
+          "supports": "توسع المنتجات خارج التونة الخام."
+        }
+      ],
+      "limitations": "لا توجد بيانات لتوزيع الإيراد أو الهوامش حسب المنتج والقناة، ولا إثبات لإيرادات اشتراك أو خدمات."
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "التخصص الفئوي يصنع ذاكرة أسرع من متجر السمك العام",
+          "description": "اسم Crazy Tuna والكتالوج المتمحور حول التونة يمنحان العميل سببًا واضحًا لتذكر العلامة. القيمة ليست في ادعاء أنها «الأكبر»، بل في امتلاك فئة محددة وتوسيعها بعمق: بلوفين وباكور وساشيمي وستيك ومنتجات جاهزة. للشركات الصغيرة، التركيز العميق قد يبني سلطة فئوية قبل امتلاك شبكة توزيع ضخمة."
+        },
+        {
+          "title": "ابتكر مناسبة الاستخدام قبل أن تبتكر مادة جديدة",
+          "description": "Crazy Tuna لا تحتاج إلى اختراع سمكة جديدة؛ توسع الطلب عبر تحويل المادة نفسها إلى ساشيمي وستيك وتونة مطهوة على البخار وبرجر. كل صيغة تخاطب وقتًا مختلفًا: طبخ منزلي، وجبة سريعة، وجبة أطفال، أو تجربة قريبة من المطاعم. هذا النوع من الابتكار يرفع عدد حالات الاستخدام المحتملة من المورد نفسه."
+        },
+        {
+          "title": "المحتوى التعليمي جزء من المنتج الغذائي",
+          "description": "مكتبة الوصفات تقلل خوف العميل من شراء قطعة لا يعرف كيف يطبخها. في المنتجات غير المألوفة، الوصفة ليست محتوى تسويقيًا جانبيًا؛ هي أداة تفعيل تقلل الاحتكاك بعد الشراء وتساعد على تكراره. كل منتج متخصص يحتاج تعليمًا يوازي جودة التغليف."
+        },
+        {
+          "title": "التوزيع الخارجي يوسع الوصول لكنه لا يثبت النمو",
+          "description": "وجود المنتج لدى Gourmet وقنوات أخرى دليل على نموذج هجين بين D2C والتجزئة، لكنه لا يكشف حجم البيع أو سرعة الدوران أو هامش كل قناة. الدرس هو قياس التوزيع بجودة الرف وإعادة الطلب والربحية، لا بعدد الشعارات الموضوعة في صفحة «أين تجدنا»."
+        },
+        {
+          "title": "فرّق بين صفقة تلفزيونية وجولة تمويل مغلقة",
+          "description": "نسب عرض Shark Tank تسمح بحساب تقييمات ضمنية، لكنها لا تثبت تحويل الأموال أو إتمام الفحص النافي للجهالة أو بقاء الشروط كما ظهرت على الشاشة. أي تحليل استثماري محترف يجب أن يسميها «شروط عرض معلنة» إلى أن يظهر توثيق لاحق للإغلاق."
+        },
+        {
+          "title": "في الغذاء، الثقة التشغيلية أهم من جرأة الاسم",
+          "description": "التعبئة بالتفريغ والتجميد السريع وسياسة التوصيل عناصر جوهرية لأن المنتج حساس للوقت والحرارة. العلامة القوية تجذب التجربة الأولى، لكن التتبع، سلامة السلسلة الباردة، وضوح المنشأ، والانضباط في الجودة هي التي تصنع التكرار. المصادر العامة المتاحة تعرض وصف الشركة لهذه العمليات ولا تعرض تدقيقًا مستقلاً، ما يجعل الشفافية فرصة تطوير أساسية."
+        }
+      ],
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "company_specific_strategy_operations_distribution_and_financing_lessons",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس مشتقة من تخصص الكتالوج، تعدد الصيغ، الوصفات، التوزيع، وسياسة التحفظ تجاه شروط الصفقة التلفزيونية.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-01",
+        "SRC-14",
+        "SRC-04",
+        "SRC-11",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Products – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_product_catalog",
+          "url": "https://crazytunaeg.com/collections/all",
+          "evidence_type": "direct",
+          "source_locator": "Current product catalog",
+          "supports": "عمق الفئة وتعدد الصيغ."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Recipes – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_recipe_content_library",
+          "url": "https://crazytunaeg.com/blogs/who-are-we/recipes",
+          "evidence_type": "direct",
+          "source_locator": "Recipe library",
+          "supports": "المحتوى التعليمي كجزء من التجربة.",
+          "published_on": "2021-04-01"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Before You Order – Where you can find Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_distribution_locations_page",
+          "url": "https://crazytunaeg.com/pages/our-branches",
+          "evidence_type": "direct",
+          "source_locator": "Distribution page",
+          "supports": "النموذج الهجين."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "في الموسم الثاني من Shark Tank Egypt.. شركتا Blooms وكريزي تونة حصدتا 10.5 ملايين جنيه",
+          "publisher": "FollowICT",
+          "source_type": "contemporaneous_media_report_of_televised_pitch",
+          "url": "https://followict.news/%D9%81%D9%8A-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%85-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A-%D9%85%D9%86-shark-tank-egypt-%D8%B4%D8%B1%D9%83%D8%AA%D8%A7-blooms-%D9%88%D9%83%D8%B1%D9%8A%D8%B2%D9%8A-%D8%AA/",
+          "evidence_type": "direct",
+          "source_locator": "Televised pitch terms",
+          "supports": "الفصل بين التقييم المعلن وإغلاق التمويل.",
+          "published_on": "2023-10-25"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Tuna التونة – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_tuna_collection_and_process_description",
+          "url": "https://crazytunaeg.com/collections/tuna-collection",
+          "evidence_type": "direct",
+          "source_locator": "Process description",
+          "supports": "أهمية الحفظ والتعبئة والتجميد."
+        }
+      ],
+      "limitations": "الدروس تحليل استراتيجي وليست تصريحات من المؤسسين أو ضمانًا لنتائج مالية."
+    },
+    "$.tools": {
+      "field_value": [
+        "Shopify: منصة المتجر الإلكتروني، مثبتة في تذييل الموقع الرسمي.",
+        "كتالوج تجارة إلكترونية مباشر مع سلة شراء وصفحات منتجات ومخزون وأسعار.",
+        "InstaPay كخيار دفع معلن على الموقع؛ لا توجد معلومات عامة عن مزود دفع بطاقات مدمج.",
+        "Facebook وInstagram وPinterest كقنوات محتوى واتصال مرتبطة من الموقع.",
+        "مكتبة وصفات وتعليم استخدام تضم 26 وصفة أو طريقة تحضير.",
+        "التعبئة بالتفريغ والتجميد السريع بحسب الوصف التشغيلي المنشور من الشركة.",
+        "قنوات توزيع هجينة تشمل Gourmet وSeafood Factory وGold's Gym Zayed وفق الصفحة الرسمية.",
+        "منتجات ذات قيمة مضافة: ساشيمي، تونة مطهوة على البخار، برجر تونة، وسلمون مدخن.",
+        "شبكة توصيل تتواصل لتنسيق التسليم خلال ثلاثة أيام عمل وفق سياسة الموقع."
+      ],
+      "verification_status": "verified_public_platform_or_channel",
+      "confidence": "high",
+      "claim_type": "public_store_payment_content_operations_and_distribution_tools",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "القائمة تقتصر على منصات وقنوات وعمليات ظاهرة علنًا ولا تدعي معرفة الحزمة التقنية الداخلية.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-05",
+        "SRC-14",
+        "SRC-02",
+        "SRC-04",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Policies & Contacts – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_policies_contact_and_platform_page",
+          "url": "https://crazytunaeg.com/pages/contact-us",
+          "evidence_type": "direct",
+          "source_locator": "Shopify footer, InstaPay and social links",
+          "supports": "Shopify وInstaPay وقنوات التواصل."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Recipes – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_recipe_content_library",
+          "url": "https://crazytunaeg.com/blogs/who-are-we/recipes",
+          "evidence_type": "direct",
+          "source_locator": "Recipes",
+          "supports": "مكتبة المحتوى التعليمي.",
+          "published_on": "2021-04-01"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Tuna التونة – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_tuna_collection_and_process_description",
+          "url": "https://crazytunaeg.com/collections/tuna-collection",
+          "evidence_type": "direct",
+          "source_locator": "Tuna process description",
+          "supports": "التعبئة بالتفريغ والتجميد السريع بحسب الشركة."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Before You Order – Where you can find Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_distribution_locations_page",
+          "url": "https://crazytunaeg.com/pages/our-branches",
+          "evidence_type": "direct",
+          "source_locator": "Find us at",
+          "supports": "قنوات التوزيع الخارجية."
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Products – Crazy Tuna",
+          "publisher": "Crazy Tuna",
+          "source_type": "official_current_product_catalog",
+          "url": "https://crazytunaeg.com/collections/all",
+          "evidence_type": "direct",
+          "source_locator": "Product catalog",
+          "supports": "المتجر والكتالوج المباشر."
+        }
+      ],
+      "limitations": "لا تتوفر أدلة عامة على ERP أو CRM أو تحليلات أو نظام مخزون أو مزود لوجستي محدد، لذلك لم تُخترع أدوات داخلية."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Products – Crazy Tuna",
+      "publisher": "Crazy Tuna",
+      "source_type": "official_current_product_catalog",
+      "url": "https://crazytunaeg.com/collections/all",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "الكتالوج الحالي يضم تونة بلوفين وباكور وساشيمي وبرجر تونة وتونة مطهية على البخار وسلمونًا مدخنًا",
+        "النشاط الحالي ليس علامة معلبات فقط، بل تشكيلة من الأسماك والمنتجات البحرية الطازجة أو المجمدة أو الجاهزة للأكل",
+        "المتجر يبيع مباشرة للمستهلك عبر سلة شراء إلكترونية"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Tuna التونة – Crazy Tuna",
+      "publisher": "Crazy Tuna",
+      "source_type": "official_current_tuna_collection_and_process_description",
+      "url": "https://crazytunaeg.com/collections/tuna-collection",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "الشركة تعرض التونة في صور متعددة تشمل الخام والساشيمي والجاهز للأكل",
+        "الشركة تقول إنها تقطع التونة وتعبئها بالتفريغ وتستخدم التجميد السريع",
+        "الشركة تربط المنتج بمحتوى يضم 26 طريقة طبخ"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Who we are? – Crazy Tuna",
+      "publisher": "Crazy Tuna",
+      "source_type": "official_company_self_description",
+      "published_on": "2021-03-18",
+      "url": "https://crazytunaeg.com/blogs/who-are-we/who-we-are",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "الشركة كانت تعلن التوصيل داخل القاهرة ووجودها في الرحاب والتجمع الخامس والمعادي والدقي في 2021",
+        "التونة كانت تقدم في أربع صور: فيليه خام ومتبل ومطهو على البخار ومدخن",
+        "ادعاء الشركة بأنها المزود الأول أو الأكبر هو وصف تسويقي ذاتي ولم يُعتمد كحقيقة مستقلة"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Before You Order – Where you can find Crazy Tuna",
+      "publisher": "Crazy Tuna",
+      "source_type": "official_current_distribution_locations_page",
+      "url": "https://crazytunaeg.com/pages/our-branches",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "الشركة تذكر التوفر عبر Gourmet في المتاجر والإنترنت",
+        "الشركة تذكر Seafood Factory في المتاجر والإنترنت وGold's Gym Zayed",
+        "الموقع يعمل عبر Shopify ويعرض وسائل التواصل وبيانات الاتصال"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Policies & Contacts – Crazy Tuna",
+      "publisher": "Crazy Tuna",
+      "source_type": "official_current_policies_contact_and_platform_page",
+      "url": "https://crazytunaeg.com/pages/contact-us",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "سياسة التوصيل تنص على التنسيق خلال ثلاثة أيام عمل بعد تأكيد الطلب",
+        "الموقع يذكر InstaPay كوسيلة دفع ويعرض أرقام الاتصال والبريد",
+        "تذييل الموقع يثبت استخدام Shopify"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Healthy Tuna Burger – Crazy Tuna",
+      "publisher": "Crazy Tuna",
+      "source_type": "official_current_product_page",
+      "url": "https://crazytunaeg.com/products/tuna-burger",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "وجود برجر تونة بدقيق الشوفان بوزن 0.25 كجم كمنتج ذي قيمة مضافة",
+        "تنويع طريقة استهلاك التونة خارج الفيليه التقليدي",
+        "الصفحة تعرض شراءً مباشرًا وسعرًا ومخزونًا وقت الرصد"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Steamed Tuna – Crazy Tuna",
+      "publisher": "Crazy Tuna",
+      "source_type": "official_current_product_page",
+      "url": "https://crazytunaeg.com/products/copy-of-steamed-tuna-olive-oli",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "وجود تونة مطهوة على البخار وجاهزة للأكل بنكهات متعددة",
+        "المنتج يوسع حالات الاستخدام إلى وجبات سريعة وسلطات وسندويتشات",
+        "الصفحة تعرض شراءً مباشرًا وسعرًا وقت الرصد"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Smoked Salmon – Crazy Tuna",
+      "publisher": "Crazy Tuna",
+      "source_type": "official_current_product_page",
+      "url": "https://crazytunaeg.com/products/smoked-salmon-%D8%B3%D8%A7%D9%84%D9%85%D9%88%D9%86-%D9%85%D8%AF%D8%AE%D9%86",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "وجود سلمون نرويجي مدخن وجاهز للأكل",
+        "النشاط الحالي يمتد إلى السلمون ولا يقتصر على التونة",
+        "الصفحة تعرض شراءً مباشرًا ومخزونًا وقت الرصد"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Shark Tank Egypt – Food & Beverage Deals",
+      "publisher": "Shark Tank Egypt",
+      "source_type": "official_program_deals_directory",
+      "url": "https://sharktank-egypt.com/en/deals/food-and-beverage",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "Crazy Tuna مدرجة رسميًا ضمن مشروعات الطعام والمشروبات في Shark Tank Egypt",
+        "الدليل الرسمي يربط المشروع بمقطع الصفقة على قناة البرنامج"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Shark Tank Egypt post about Crazy Tuna founders",
+      "publisher": "Shark Tank Egypt",
+      "source_type": "official_program_social_post",
+      "url": "https://ae.linkedin.com/posts/shark-tank-egypt_sharktank-sharktankegyptseason2-entrepreneur-activity-7123298420122877953--iSf",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "البرنامج يعرّف إسلام وعمر بأنهما صاحبا مشروع Crazy Tuna",
+        "المشروع ظهر في الموسم الثاني من Shark Tank Egypt"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "في الموسم الثاني من Shark Tank Egypt.. شركتا Blooms وكريزي تونة حصدتا 10.5 ملايين جنيه",
+      "publisher": "FollowICT",
+      "source_type": "contemporaneous_media_report_of_televised_pitch",
+      "published_on": "2023-10-25",
+      "url": "https://followict.news/%D9%81%D9%8A-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%85-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A-%D9%85%D9%86-shark-tank-egypt-%D8%B4%D8%B1%D9%83%D8%AA%D8%A7-blooms-%D9%88%D9%83%D8%B1%D9%8A%D8%B2%D9%8A-%D8%AA/",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "إسلام البدري وعمر شريف طلبا 2.5 مليون جنيه مقابل 20%",
+        "التقرير نقل مبيعات 2022 بنحو 960 ألف جنيه وصافي ربح 180 ألف جنيه",
+        "المؤسسان وافقا تلفزيونيًا على عرض أحمد السويدي ومحمد فاروق بقيمة 2.5 مليون جنيه مقابل 40%",
+        "الأرقام من عرض تلفزيوني وليست قوائم مالية مدققة أو إثباتًا على إغلاق الصفقة"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "نصيحة أيمن عباس لأصحاب مشروع كريزي تونة",
+      "publisher": "بصراحة",
+      "source_type": "secondary_media_report_corrobating_pitch_metrics",
+      "published_on": "2023-10-28",
+      "url": "https://besraha.com/104889",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "يسمي إسلام البدري وعمر شريف بوصفهما صاحبي المشروع",
+        "يكرر أن الانطلاق كان في 2018 وأن مبيعات 2022 نحو 960 ألف جنيه وصافي الربح 180 ألف جنيه",
+        "لا يقدم قوائم مالية أو توثيقًا تنظيميًا مستقلاً"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Crazy Tuna Sashimi Bluefin Tray",
+      "publisher": "Gourmet Egypt",
+      "source_type": "current_third_party_retail_product_listing",
+      "url": "https://gourmetegypt.com/crazy-tuna-sashimi-bluefin-tray",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "وجود منتج Crazy Tuna لدى قناة تجزئة مستقلة",
+        "المنتج عبارة عن شرائح ساشيمي بلوفين جاهزة للتقديم بوزن 200 جرام",
+        "الظهور لدى موزع لا يثبت حجم المبيعات أو عدد الفروع أو معدل النمو"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Recipes – Crazy Tuna",
+      "publisher": "Crazy Tuna",
+      "source_type": "official_recipe_content_library",
+      "published_on": "2021-04-01",
+      "url": "https://crazytunaeg.com/blogs/who-are-we/recipes",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "الشركة نشرت مكتبة تضم 26 وصفة أو طريقة تحضير مرتبطة بالتونة والأسماك",
+        "المحتوى التعليمي جزء من تجربة البيع وليس مجرد إعلان منتج"
+      ]
+    }
   ]
 }

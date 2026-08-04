@@ -2,54 +2,997 @@
   "id": "trella",
   "slug": "trella",
   "name": "تريلا (Trella)",
-  "headline": "رقمنة قطاع الشحن البري وربط الشاحنين بأسطول من الناقلين",
-  "category": "Logistics & Supply Chain / لوجستيات النقل",
+  "headline": "كيف حوّلت تريلا سوق الشاحنات المشتت إلى طبقة تشغيل وبيانات تربط المصانع بالموانئ والناقلين",
+  "category": "Logistics Technology / سوق الشحن البري الرقمي وإدارة النقل",
   "company": {
-    "location": "القاهرة، مصر (تنشط في السعودية وباكستان أيضاً)",
-    "business_model": "سوق إلكتروني (B2B Marketplace) بعمولات على الشحنات"
+    "legal_identity_note": "تريلا شركة خاصة غير مدرجة. يظهر اسم Trella Holding B.V. في حساب مطور تطبيقاتها، بينما تشير الشروط المحلية إلى كيانات تشغيلية محلية مثل شركة شِفت لتكنولوجيا المعلومات والاتصالات. لا تتوافر لها قوائم مالية عامة أو رمز تداول أو ملفات SEC تشغيلية عامة.",
+    "location": "المقر التشغيلي الرئيسي في القاهرة، مع تشغيل معلن حاليًا في مصر والسعودية والإمارات. كانت باكستان ضمن أسواق الشركة تاريخيًا، لكنها غير مدرجة ضمن الأسواق الثلاثة الحالية في الموقع الرسمي حتى 3 أغسطس 2026.",
+    "founded_year": 2019,
+    "founded_year_note": "تصف الشركة وY Combinator عام 2019 كسنة التأسيس أو الإطلاق، بينما تذكر بعض قواعد البيانات أواخر 2018 كبداية مبكرة. اعتُمد 2019 بوصفه سنة الإطلاق التشغيلي الموثقة.",
+    "founded_by": [
+      "عمر هجرس (Omar Hagrass)",
+      "علي الأطرش (Ali El Atrash)",
+      "بيير سعد (Pierre Saad)",
+      "محمد الجارم (Muhammad El Garem)"
+    ],
+    "public_company": false,
+    "ticker": null,
+    "sec_filings_available": false,
+    "business_model": "منصة B2B وسوق رقمي مُدار للشحن البري الثقيل. تربط الشاحنين من الشركات بناقلين مؤهلين، وتدير تسعير الحمولة والحجز والمطابقة والتتبع والمستندات وإثبات التسليم والتقارير والمدفوعات. الموقع الحالي يعتمد طلب عرض سعر ولا ينشر اشتراك SaaS أو جدول عمولات أو نسبة اقتطاع موحدة؛ لذلك لا يصح اختزال النموذج في «عمولة ثابتة على كل شحنة».",
+    "products": [
+      "طلب عروض الأسعار وحجز حمولات النقل بين المدن وتشغيل الموانئ والتأجير المباشر والشاحنات المتخصصة",
+      "مطابقة الشحنات مع ناقلين وسائقين مؤهلين",
+      "تتبع GPS لحظي وتنبيهات مراحل الرحلة",
+      "إثبات تسليم إلكتروني ePOD وإدارة مستندات الحمولة",
+      "لوحة مركزية للتكاليف والأداء في الموعد والاتجاهات والتقارير المالية",
+      "تطبيق Trella: Carrier للناقلين والسائقين",
+      "تطبيق Trella: GO لتشغيل مهام النقل",
+      "قنوات رقمية للشاحنين تشمل الويب والتطبيقات"
+    ],
+    "technology_stack_note": "لم يثبت البحث الحالي أن AWS أو Ruby on Rails أو Python أو PostgreSQL أو React Native تمثل الحزمة الإنتاجية الحالية. حُذفت أسماء التقنيات غير المدعومة، واستُبدلت بقدرات المنتج والتطبيقات الموثقة."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات",
-    "monthly_traffic": "تخدم آلاف الشحنات للشركات الكبرى يومياً"
+    "as_of_date": "2026-08-03",
+    "monthly_revenue": null,
+    "monthly_revenue_note": "لا تنشر تريلا إيرادًا شهريًا أو سنويًا فعليًا أو ARR أو MRR. حُذف وصف «ملايين الدولارات» لأنه غير موثق.",
+    "monthly_traffic": null,
+    "monthly_traffic_note": "لا يوجد رقم رسمي موثق لزيارات الموقع أو التطبيقات. تنزيلات Google Play ليست زيارات ولا مستخدمين نشطين.",
+    "monthly_active_users": null,
+    "monthly_active_users_note": "لا تنشر الشركة MAU أو DAU للشاحنين أو الناقلين أو السائقين.",
+    "shipments_per_day": null,
+    "shipments_per_day_note": "لم تعلن الشركة رقمًا حاليًا موثقًا للشحنات اليومية. كان وصف «آلاف الشحنات يوميًا» في الملف الأصلي غير مدعوم.",
+    "current_company_reported_network": {
+      "enterprise_shippers": {
+        "value": 767,
+        "operator": "+",
+        "unit": "شاحن مؤسسي",
+        "as_of": "2026-08-03",
+        "metric_type": "company_reported_enterprise_shippers",
+        "note": "رقم تعرضه الصفحة الرئيسية الحالية. لا يحدد عدد العملاء الدافعين النشطين أو معدل الاحتفاظ."
+      },
+      "carriers_primary_metric": {
+        "value": 23000,
+        "operator": "+",
+        "unit": "ناقل على الشبكة",
+        "as_of": "2026-08-03",
+        "metric_type": "company_reported_carrier_network",
+        "note": "ظهر في ملخص الصفحة الرسمية الحالية."
+      },
+      "carriers_secondary_claim": {
+        "value": 30000,
+        "operator": "+",
+        "unit": "ناقل",
+        "as_of": "2026-08-03",
+        "metric_type": "company_marketing_claim",
+        "note": "تستخدم فقرة الناقلين في الصفحة نفسها رقم 30 ألف+؛ يوجد تعارض داخلي مع رقم 23 ألف+، لذلك حُفظ الرقمان ولم يُدمجا في قيمة واحدة."
+      },
+      "operating_markets": {
+        "value": 3,
+        "unit": "أسواق",
+        "markets": [
+          "مصر",
+          "السعودية",
+          "الإمارات"
+        ],
+        "as_of": "2026-08-03",
+        "metric_type": "current_operating_footprint",
+        "note": "الموقع الرسمي الحالي يصف هذه الأسواق الثلاثة فقط. تظهر باكستان في مصادر تاريخية ومنشورات متفرقة، لكنها ليست ضمن قائمة التشغيل الحالية في الموقع."
+      },
+      "android_app_downloads": {
+        "carrier_app": {
+          "value": 10000,
+          "operator": "+",
+          "unit": "تنزيل على Google Play",
+          "updated_on": "2026-07-19"
+        },
+        "go_app": {
+          "value": 1000,
+          "operator": "+",
+          "unit": "تنزيل على Google Play",
+          "updated_on": "2026-03-17"
+        },
+        "note": "التنزيلات مؤشرات توزيع للتطبيقات وليست مستخدمين نشطين أو ناقلين متعاقدين."
+      }
+    },
+    "historical_operating_metrics": [
+      {
+        "as_of": "2021-06-21",
+        "shippers": 350,
+        "carriers": 15000,
+        "shipments": "آلاف الشحنات شهريًا",
+        "note": "مقاييس تاريخية وردت في إعلان Series A، ولا تمثل الوضع الحالي."
+      },
+      {
+        "as_of": "2022-12-12",
+        "shipper_partners": 725,
+        "carrier_partners": 30000,
+        "driver_partners": 45000,
+        "note": "أرقام تاريخية نشرتها Forbes Middle East؛ تعريف carrier partner وdriver partner مختلف ولا ينبغي جمعهما."
+      }
+    ]
   },
   "overview": {
     "problem": {
-      "text": "قطاع الشحن البري الثقيل تقليدي جداً ويعتمد على الوسطاء الورقيين، مما يتسبب في رحلات عودة فارغة للشاحنات، غياب التسعير الشفاف، وعدم موثوقية السائقين بالنسبة للشركات العالمية.",
-      "impact": "هدر هائل في كفاءة الشاحنات، تكلفة شحن مرتفعة على الشركات المصنعة، وتأخر في سلاسل الإمداد."
+      "text": "سوق الشحن البري الثقيل في المنطقة مجزأ بين شاحنين ووسطاء وأساطيل وسائقين مستقلين، ويعتمد كثيرًا على الاتصالات والمستندات اليدوية والتفاوض غير الموحد. يؤدي ذلك إلى ضعف الرؤية على الحمولة، وعدم استقرار التوافر والأسعار، ورحلات عودة منخفضة الاستغلال، وتأخر الفواتير والمدفوعات.",
+      "impact": "ترتفع تكلفة النقل على المصانع والمصدرين، ويصعب الالتزام بمواعيد الموانئ والعملاء، بينما يواجه الناقل والسائق تقلبًا في الطلب وتأخرًا في التحصيل وضعفًا في استخدام الشاحنة."
     },
     "solution": {
-      "text": "منصة رقمية تربط الشاحنين (B2B) مباشرة مع أساطيل النقل والسائقين المستقلين الموثوقين، مع توفير تتبع لحظي، تسعير آلي، وضمان لعمليات الدفع."
+      "text": "توحد تريلا دورة الحمولة من طلب السعر والحجز إلى المطابقة والتتبع وإثبات التسليم والتقارير والمدفوعات. تستفيد الشركات من شبكة ناقلين مؤهلين ورؤية تشغيلية مركزية، ويستفيد الناقلون من الوصول إلى حمولات واختيار الرحلات وتسريع التحصيل مقارنة بالعمليات غير الرقمية."
     }
   },
   "market_data": {
-    "target_audience": "الشركات المصنعة الكبرى (FMCG)، وشركات النقل وسائقي الشاحنات الثقيلة.",
-    "market_size": "سوق نقل البضائع البري في الشرق الأوسط يقدر بـ 50 مليار دولار.",
-    "growth_rate": "مدعومة من Y Combinator وجمعت أكثر من 40 مليون دولار لتتوسع نحو السعودية وأفريقيا."
+    "target_audience": [
+      "الشركات الصناعية وشركات السلع الاستهلاكية سريعة الحركة",
+      "المصدرون والمستوردون ومشغلو الموانئ",
+      "شركات التجارة الإلكترونية والأغذية والزراعة والإنشاءات",
+      "شركات النقل والأساطيل",
+      "السائقون والناقلون المستقلون"
+    ],
+    "market_size": {
+      "current_verified_value": null,
+      "historical_company_estimate": {
+        "value_usd": 50000000000,
+        "region": "MENAP",
+        "as_of": "2021-06-24",
+        "description": "فرصة سوقية إقليمية تتجاوز 50 مليار دولار وفق تقدير نشرته الشركة عند جولة Series A."
+      },
+      "note": "لم يُستخدم تقدير 50 مليار دولار كحجم سوق حالي لعام 2026؛ هو تقدير تاريخي صادر عن الشركة، وليس إيراد تريلا أو GMV."
+    },
+    "growth_rate": {
+      "current_verified_rate": null,
+      "company_operating_signals": [
+        "استمرار الموقع الرسمي والتطبيقات في العمل وتحديث تطبيق Carrier في يوليو 2026.",
+        "تشغيل معلن في مصر والسعودية والإمارات.",
+        "عرض 767+ شاحنًا مؤسسيًا وشبكة ناقلين بين 23 ألف+ و30 ألف+ وفق أرقام مختلفة داخل الموقع.",
+        "شراكة استراتيجية معلنة مع Al Dahra في 2026 لدعم سلاسل إمداد أكثر اتصالًا عبر أسواق رئيسية.",
+        "استثمار 3.5 مليون دولار من Avanz Capital Egypt في 2023 بعد جولة التمويل المختلطة عام 2021 وقرض ALMA المدعوم بضمان DFC عام 2022."
+      ],
+      "note": "هذه مؤشرات استمرار وتوسع وشراكات، وليست معدل نمو إيرادات أو شحنات."
+    }
   },
   "financials": {
-    "initial_investment": "تمويل مبكر من مستثمرين إقليميين ودوليين بارزين.",
-    "valuation": "غير معلن",
+    "currency_note": "جميع القيم بالدولار الأمريكي ما لم يُذكر غير ذلك.",
+    "actual_revenue": null,
+    "actual_revenue_note": "لا توجد قوائم مالية عامة أو إفصاحات عن الإيراد الفعلي أو ARR أو MRR أو الربحية.",
+    "revenue_composition_disclosure": {
+      "american_companies_share_percent": 15,
+      "international_ports_shipping_share_percent": 40,
+      "source_profile_year": 2025,
+      "note": "ذكرت DFC أن 15% من الإيراد يأتي مباشرة من شركات أمريكية وأن 40% يأتي من الشحن عبر الموانئ الدولية. لم تحدد الفترة المحاسبية أو ما إذا كانت الفئتان متداخلتين، لذلك لا يجوز جمعهما أو تحويلهما إلى قيمة إيراد."
+    },
+    "valuation": null,
+    "valuation_note": "لم تعلن الشركة تقييمًا حديثًا أو تقييم جولة التمويل. أي نطاق خارجي غير رسمي لم يُعتمد.",
+    "transaction_volume": null,
+    "transaction_volume_note": "لا تنشر الشركة قيمة البضائع أو قيمة الشحنات أو GMV أو إجمالي المدفوعات المعالجة.",
+    "funding_history": [
+      {
+        "date": "2019-02-26",
+        "round": "Pre-seed",
+        "amount_usd": 600000,
+        "amount_operator": ">",
+        "capital_type": "equity",
+        "lead_investors": [
+          "Algebra Ventures"
+        ],
+        "note": "وُصف التمويل بأنه تجاوز 600 ألف دولار. لا يساوي إيرادًا أو تقييمًا."
+      },
+      {
+        "date": "2019-08",
+        "round": "Y Combinator S19",
+        "amount_usd": null,
+        "capital_type": "accelerator_investment",
+        "lead_investors": [
+          "Y Combinator"
+        ],
+        "note": "المشاركة مؤكدة، لكن قيمة الاستثمار لم تُستخدم لعدم ورودها في صفحة الشركة الحالية."
+      },
+      {
+        "date": "2021-06-21",
+        "round": "Series A وتمويل دين",
+        "total_amount_usd": 42000000,
+        "equity_amount_usd": 30000000,
+        "debt_amount_usd": 12000000,
+        "lead_investors": [
+          "Maersk Growth",
+          "Raed Ventures"
+        ],
+        "other_investors": [
+          "Algebra Ventures",
+          "4DX Ventures",
+          "Vision Ventures",
+          "Next Billion Ventures",
+          "VentureSouq",
+          "Foundation Ventures",
+          "Flexport"
+        ],
+        "debt_providers": [
+          "Lendable",
+          "مؤسسات مالية محلية غير مسماة"
+        ],
+        "note": "الرقم 42 مليون دولار مزيج من حقوق ملكية ودين، وليس Series A حقوق ملكية بالكامل."
+      },
+      {
+        "date": "2022-09-30",
+        "round": "قرض نمو مدعوم بضمان جزئي",
+        "amount_usd": 6000000,
+        "capital_type": "debt",
+        "lender": "ALMA / AlmaVest",
+        "guarantee": {
+          "provider": "U.S. International Development Finance Corporation",
+          "amount_usd": 4200000,
+          "type": "partial_loan_guaranty"
+        },
+        "note": "ضمان DFC البالغ 4.2 مليون دولار لا يضاف إلى القرض البالغ 6 ملايين دولار كتمويل نقدي مستقل للشركة."
+      },
+      {
+        "date": "2023-06-12",
+        "round": "استثمار نمو / bridge",
+        "amount_usd": 3500000,
+        "capital_type": "quasi_equity_or_private_equity",
+        "investor": "Avanz Capital Egypt",
+        "note": "ذكرت تقارير الصفقة أن المبلغ جزء من جولة جسر أوسع؛ لم يُستخدم حجم الجولة غير المكتمل."
+      }
+    ],
+    "known_disclosed_capital": {
+      "minimum_usd": 52100000,
+      "calculation": "أكثر من 0.6 مليون + 42 مليون + 6 ملايين + 3.5 ملايين",
+      "includes": [
+        "حقوق ملكية",
+        "دين",
+        "استثمار نمو"
+      ],
+      "excludes": [
+        "قيمة استثمار Y Combinator غير المستخدمة",
+        "أي جولات أو تسهيلات لم تُعلن قيمتها",
+        "ضمان DFC لأنه يدعم قرض 6 ملايين ولا يمثل تدفقًا إضافيًا مستقلًا"
+      ],
+      "note": "هذا مجموع أدنى لرأس المال المعلن بقيم محددة، وليس إيرادًا ولا تقييمًا ولا سيولة حالية."
+    },
+    "acquisitions": [
+      {
+        "target": "Trukto",
+        "date": "2019-12",
+        "deal_value": null,
+        "scope": "الاستحواذ على منافس محلي في سوق النقل بالشاحنات لتعزيز الشبكة والعلاقات التشغيلية في مصر.",
+        "note": "لم تُعلن قيمة الصفقة أو شروطها."
+      }
+    ],
     "revenue_streams": [
-      "عمولة اقتطاع من قيمة الشحنة من الشاحنين",
-      "خدمات توفير التمويل اللحظي (Factoring) للناقلين",
-      "مبيعات قطع غيار وخدمات للسائقين (قيد التطوير)"
+      {
+        "stream": "عقود ورسوم ترتيب وإدارة حمولات الشاحنين المؤسسيين",
+        "status": "مؤكد كخدمة مدرة للإيراد، التسعير غير معلن",
+        "evidence_note": "تقدم الشركة عروض أسعار وتدير الحمولة من الحجز إلى التسليم، لكن لا تنشر معدل العمولة أو هامش كل شحنة."
+      },
+      {
+        "stream": "خدمات تشغيل النقل والتتبع والتقارير والمستندات ضمن علاقة الشحن",
+        "status": "مؤكد كجزء من العرض التجاري، الفصل المحاسبي غير معلن",
+        "evidence_note": "لا يوجد دليل عام على بيع هذه المزايا كاشتراك SaaS مستقل."
+      },
+      {
+        "stream": "خدمات أو تسهيلات للناقلين تشمل تسريع المدفوعات والوصول إلى أدوات مالية",
+        "status": "قدرة تشغيلية موثقة، نموذج الإيراد غير معلن",
+        "evidence_note": "تذكر DFC المدفوعات الآمنة والمحافظ الرقمية، لكن لا تنشر الشركة رسوم تمويل أو factoring أو إيرادًا منفصلًا لهذه الخدمات."
+      }
+    ],
+    "undisclosed_metrics": [
+      "الإيراد الشهري والسنوي",
+      "ARR وMRR",
+      "الهامش الإجمالي وصافي الربح",
+      "التقييم",
+      "GMV أو قيمة الشحنات",
+      "عدد الشحنات اليومي أو الشهري الحالي",
+      "عدد العملاء الدافعين النشطين",
+      "MAU وDAU",
+      "معدل العمولة أو الهامش على الحمولة",
+      "قيمة الاستحواذ على Trukto",
+      "تكلفة اكتساب العميل ومعدل الاحتفاظ"
     ]
+  },
+  "analysis": {
+    "core_thesis": "تريلا لا تبيع تطبيقًا للشاحنات فقط؛ تبني طبقة تشغيل بين طلب الشركات وقدرة آلاف الناقلين. القيمة الحقيقية تظهر عندما تتحول الحمولة من مكالمات واتفاقات متفرقة إلى مسار يمكن تسعيره وتتبعه وتوثيقه وتحليله.",
+    "business_model_evolution": "بدأت كسوق يطابق الشاحنين بالناقلين، ثم أضافت عناصر إدارة النقل: عروض السعر والحجز والمطابقة والتتبع وإثبات التسليم والتقارير والمدفوعات. هذا يجعلها أقرب إلى سوق مُدار ومنصة تشغيلية من كونها لوحة إعلانات رقمية.",
+    "growth_engine": [
+      "ضم شاحنين مؤسسيين يخلق طلبًا متكررًا وجذابًا للناقلين.",
+      "اتساع شبكة الناقلين يحسن التوافر والتسعير والقدرة على تلبية الحمولات المتخصصة.",
+      "بيانات الرحلات والأداء تساعد على تجديد العقود وزيادة حصة تريلا من إنفاق العميل على النقل.",
+      "التوسع قرب الموانئ والمراكز الصناعية يركز السيولة في ممرات مرتفعة الطلب.",
+      "تسريع الدفع للناقلين يمكن أن يحسن تفضيل الشبكة للمنصة حتى لو كان سعر الحمولة متقاربًا."
+    ],
+    "defensibility": [
+      "شبكة ناقلين مؤهلين وعلاقات مع شاحنين مؤسسيين.",
+      "خبرة تشغيلية محلية في الموانئ والممرات الصناعية ومتطلبات الشاحنات.",
+      "بيانات تاريخية عن الأسعار والأداء وأوقات التحميل والتفريغ.",
+      "تكامل العملية من الحجز إلى إثبات التسليم والتقارير.",
+      "قدرة على إدارة الاستثناءات والمشكلات ميدانيًا، لا مجرد مطابقة رقمية."
+    ],
+    "key_risks": [
+      "هوامش منخفضة محتملة في سوق الشحن التنافسي والحساس للأسعار.",
+      "الحاجة إلى رأس مال عامل بسبب الفجوة بين دفع الناقل وتحصيل العميل.",
+      "تقلب الوقود والعملات والفائدة وتكاليف التمويل.",
+      "جودة الخدمة والسلامة والاحتيال والمستندات عبر شبكة كبيرة من الأطراف.",
+      "دورات مبيعات وتحصيل طويلة لدى الشركات الكبرى.",
+      "إمكانية تعامل الشاحن والناقل خارج المنصة بعد تكوين العلاقة.",
+      "اختلاف التنظيم والضرائب والتشغيل بين مصر والسعودية والإمارات.",
+      "غياب الإفصاحات المالية يمنع تقييم اقتصاديات الوحدة والربحية."
+    ],
+    "metric_reading": "عدد الناقلين أو السائقين لا يساوي مستخدمين نشطين، وعدد الشاحنين المؤسسيين لا يساوي عملاء دافعين حاليين، وتنزيل التطبيق لا يساوي حمولة منفذة. كما أن قيمة البضائع أو الشحنات لا تساوي إيراد تريلا؛ الإيراد هو الرسوم أو الهامش الذي تعترف به الشركة.",
+    "strategic_interpretation": "أقوى مسار لتريلا ليس التوسع الجغرافي وحده، بل تعميق الكثافة في ممرات محددة وربط بيانات التشغيل بالتسعير والالتزام والمدفوعات. كلما أصبحت المنصة جزءًا من تخطيط النقل والفواتير لدى العميل، ارتفعت كلفة استبدالها."
   },
   "lessons": [
     {
-      "title": "رقمنة القطاعات غير المرئية",
-      "description": "بينما كان الجميع يركز على توصيل الطلبات للمنازل (B2C)، ركزت Trella على القطاع الثقيل والمعقد الذي لا يراه المستهلك ولكنه يحرك اقتصاد الدول."
+      "title": "السوق المُدار أقوى من لوحة المطابقة",
+      "description": "في الشحن الثقيل لا تكفي مطابقة الطرفين. من يملك التتبع والمستندات والاستثناءات والتحصيل يستطيع بناء علاقة أعمق وهوامش أكثر دفاعًا من مجرد إحالة رقمية."
     },
     {
-      "title": "توفير السيولة لحل العوائق",
-      "description": "سائقو الشاحنات يحتاجون لسيولة مالية سريعة. تقديم Trella لدفعات سريعة بدلاً من الانتظار لأشهر كان أهم ميزة لاستقطابهم."
+      "title": "السيولة التشغيلية أهم من عدد التسجيلات",
+      "description": "قيمة الشبكة تأتي من ناقل متاح في المسار والوقت المناسب ومن حمولة متكررة، لا من إجمالي الحسابات المسجلة. كثافة الممر أهم من الانتشار الاسمي."
+    },
+    {
+      "title": "افصل حقوق الملكية عن الدين في قراءة الجولات",
+      "description": "جولة 42 مليون دولار تضمنت 30 مليونًا حقوق ملكية و12 مليونًا دينًا. جمع الرقم تحت عنوان Series A فقط يضخم حجم الاستثمار الرأسمالي ويخفي التزامات التمويل."
+    },
+    {
+      "title": "الدفع السريع أداة لبناء جانب العرض",
+      "description": "الناقل قد يفضل منصة تدفع بصورة أسرع وأكثر أمانًا حتى لو كانت الأسعار متقاربة. حل دورة النقد يمكن أن يكون ميزة شبكة أهم من واجهة التطبيق."
+    },
+    {
+      "title": "الاستحواذ المبكر يشتري علاقات لا كودًا فقط",
+      "description": "استحواذ Trukto أضاف علاقات وتشغيلًا وخبرة محلية إلى تقنية تريلا. في القطاعات الميدانية، شراء شبكة موثوقة قد يختصر سنوات من بناء العرض."
+    },
+    {
+      "title": "الموانئ تصنع ممرات ذات قيمة استراتيجية",
+      "description": "إشارة DFC إلى اعتماد كبير على الشحن عبر الموانئ توضح أن التركيز على نقاط تجمع الطلب يمكن أن يرفع الاستخدام ويقلل الرحلات الفارغة أكثر من التوسع العشوائي."
+    },
+    {
+      "title": "الأرقام المتعارضة يجب أن تبقى متعارضة",
+      "description": "عرض الموقع 23 ألف+ ناقل في موضع و30 ألف+ في موضع آخر. المنهج المهني يوثق الاختلاف وتعريف كل رقم بدل اختيار الرقم الأكبر أو دمجهما."
+    },
+    {
+      "title": "التوسع المعلن لا يساوي حضورًا متساويًا",
+      "description": "وجود الشركة في ثلاث دول لا يكشف حجم الإيراد أو الشحنات في كل سوق. يجب فصل الخريطة الجغرافية عن الكثافة التشغيلية والربحية المحلية."
     }
   ],
   "tools": [
-    "AWS",
-    "Ruby on Rails",
-    "Python",
-    "PostgreSQL",
-    "React Native"
+    "منصة طلب عروض الأسعار وحجز الحمولات",
+    "مطابقة الشاحنين بالناقلين المؤهلين",
+    "تتبع GPS وتنبيهات مراحل الرحلة",
+    "إثبات التسليم الإلكتروني ePOD",
+    "لوحة أداء وتكاليف وتقارير مالية وتشغيلية",
+    "إدارة المستندات والحمولات",
+    "تطبيق Trella: Carrier",
+    "تطبيق Trella: GO",
+    "تطبيق وقنوات رقمية للشاحنين",
+    "مدفوعات رقمية ودعم تسريع تحصيل الناقلين وفق وصف DFC"
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "language": "ar",
+    "researched_through": "2026-08-03",
+    "generated_at": "2026-08-03T18:42:00+03:00",
+    "company_status": "شركة خاصة نشطة في تكنولوجيا الشحن البري. الموقع والتطبيقات الحالية يؤكدان استمرار التشغيل، ولا توجد قوائم مالية عامة أو رمز تداول أو ملفات SEC تشغيلية عامة.",
+    "primary_source_priority": [
+      "الموقع الرسمي الحالي وصفحات المنتج",
+      "إعلانات التمويل والاستحواذ الرسمية للشركة",
+      "U.S. International Development Finance Corporation",
+      "Y Combinator",
+      "متاجر التطبيقات الرسمية",
+      "مصادر إقليمية موثوقة للصفقات غير المنشورة على موقع الشركة"
+    ],
+    "corrections": [
+      {
+        "original_claim": "القاهرة، مصر وتنشط في السعودية وباكستان أيضًا",
+        "action": "محدث ومؤهل",
+        "replacement": "الموقع الحالي يعلن التشغيل في مصر والسعودية والإمارات. باكستان سوق تاريخي وغير مدرجة ضمن الأسواق الحالية الثلاثة."
+      },
+      {
+        "original_claim": "سوق إلكتروني بعمولات على الشحنات",
+        "action": "مؤهل",
+        "replacement": "سوق رقمي مُدار ومنصة تشغيل نقل بعروض أسعار وعقود غير معلنة؛ لا يوجد معدل عمولة عام موثق."
+      },
+      {
+        "original_claim": "ملايين الدولارات إيرادًا شهريًا",
+        "action": "محذوف",
+        "replacement": "لا يوجد إيراد شهري أو سنوي معلن."
+      },
+      {
+        "original_claim": "آلاف الشحنات للشركات الكبرى يوميًا",
+        "action": "محذوف",
+        "replacement": "لا يوجد رقم حالي موثق للشحنات اليومية؛ الإعلان التاريخي في 2021 ذكر آلاف الشحنات شهريًا."
+      },
+      {
+        "original_claim": "سوق إقليمي بقيمة 50 مليار دولار",
+        "action": "مؤهل زمنيًا",
+        "replacement": "تقدير تاريخي نشرته الشركة في 2021 لفرصة MENAP، وليس حجمًا حاليًا مدققًا لعام 2026."
+      },
+      {
+        "original_claim": "جمعت أكثر من 40 مليون دولار",
+        "action": "مصحح ومفصول",
+        "replacement": "جولة 2021 بلغت 42 مليون دولار: 30 مليون حقوق ملكية و12 مليون دين، ثم قرض 6 ملايين عام 2022 واستثمار 3.5 ملايين عام 2023."
+      },
+      {
+        "original_claim": "خدمات factoring للناقلين مصدر إيراد",
+        "action": "مؤهل",
+        "replacement": "توجد إشارات موثقة إلى الدفع الأسرع والمحافظ الرقمية، لكن factoring ورسومه وإيراده غير معلنة."
+      },
+      {
+        "original_claim": "مبيعات قطع غيار وخدمات للسائقين قيد التطوير",
+        "action": "محذوف",
+        "replacement": "لم يعثر البحث على عرض حالي موثق يثبت هذا المصدر."
+      },
+      {
+        "original_claim": "AWS وRuby on Rails وPython وPostgreSQL وReact Native",
+        "action": "محذوف",
+        "replacement": "لا توجد مصادر أولية حديثة كافية لإثبات الحزمة التقنية الإنتاجية الحالية."
+      }
+    ],
+    "metric_distinctions": [
+      "الإيراد لا يساوي التمويل أو الدين أو ضمان القرض.",
+      "قيمة الشحنات أو البضائع لا تساوي إيراد الشركة.",
+      "الناقلون والسائقون والشاحنون فئات مختلفة ولا تُجمع كمستخدمين.",
+      "تنزيلات التطبيقات لا تساوي MAU أو DAU.",
+      "عدد الشاحنين المؤسسيين لا يثبت عدد العملاء الدافعين النشطين.",
+      "ضمان DFC البالغ 4.2 مليون دولار ليس تمويلًا إضافيًا فوق القرض البالغ 6 ملايين دولار.",
+      "رقما 23 ألف+ و30 ألف+ للناقلين متعارضان داخل مواد الشركة الحالية ويجب عدم دمجهما."
+    ],
+    "known_limits": [
+      "لا توجد قوائم مالية عامة أو إفصاحات SEC.",
+      "لا توجد بيانات موثقة للإيراد أو الربحية أو GMV أو التقييم.",
+      "لا يوجد تعريف منشور موحد للناقلين المسجلين مقابل النشطين.",
+      "لا تتوافر بيانات حالية للشحنات حسب السوق أو القطاع.",
+      "الفترة المحاسبية الخاصة بنسب الإيراد الواردة في ملف DFC غير محددة.",
+      "لم يُتحقق من الحزمة التقنية الداخلية الحالية."
+    ],
+    "programmatic_checks": {
+      "json_parse": "passed",
+      "required_top_level_keys": "passed",
+      "source_id_uniqueness": "passed",
+      "evidence_source_references": "passed",
+      "evidence_json_paths": "passed",
+      "known_capital_calculation": "passed",
+      "undisclosed_financial_metrics_are_null": "passed",
+      "metric_type_separation": "passed"
+    }
+  },
+  "evidence_map_schema": {
+    "claim_id": "معرف فريد للادعاء",
+    "json_paths": "المواضع داخل JSON التي يعتمد محتواها على الدليل",
+    "claim": "صياغة عربية مختصرة للادعاء",
+    "source_ids": "معرفات المصادر الداعمة",
+    "evidence_type": "historical_fact | metric | company_claim | product_fact | funding | acquisition | legal | calculation | absence_of_disclosure",
+    "confidence": "high | medium | low",
+    "status": "verified | qualified | removed",
+    "notes": "قيود أو طريقة تصنيف أو تمييز ضروري"
+  },
+  "evidence_map": [
+    {
+      "claim_id": "E01",
+      "json_paths": [
+        "$.company.location",
+        "$.directory_snapshot.current_company_reported_network.operating_markets"
+      ],
+      "claim": "التشغيل الحالي المعلن يشمل مصر والسعودية والإمارات، بينما باكستان سوق تاريخي غير مدرج في الموقع الحالي.",
+      "source_ids": [
+        "S01",
+        "S13"
+      ],
+      "evidence_type": "company_claim",
+      "confidence": "high",
+      "status": "qualified",
+      "notes": "اعتمدت قائمة الموقع الرسمية الحالية، مع توثيق ظهور باكستان في مواد أقدم ومنشورات متفرقة."
+    },
+    {
+      "claim_id": "E02",
+      "json_paths": [
+        "$.company.business_model",
+        "$.company.products",
+        "$.overview.solution",
+        "$.tools"
+      ],
+      "claim": "تقدم تريلا دورة رقمية للحمولة تشمل السعر والحجز والمطابقة والتتبع والمستندات والتقارير.",
+      "source_ids": [
+        "S01",
+        "S12",
+        "S16"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "لا يوجد جدول رسوم عام يثبت عمولة موحدة أو اشتراك SaaS مستقل."
+    },
+    {
+      "claim_id": "E03",
+      "json_paths": [
+        "$.directory_snapshot.current_company_reported_network.enterprise_shippers"
+      ],
+      "claim": "يعرض الموقع 767+ شاحنًا مؤسسيًا.",
+      "source_ids": [
+        "S01"
+      ],
+      "evidence_type": "metric",
+      "confidence": "medium",
+      "status": "verified",
+      "notes": "رقم شركة غير مدقق ولا يحدد العملاء الدافعين النشطين."
+    },
+    {
+      "claim_id": "E04",
+      "json_paths": [
+        "$.directory_snapshot.current_company_reported_network.carriers_primary_metric",
+        "$.directory_snapshot.current_company_reported_network.carriers_secondary_claim"
+      ],
+      "claim": "يعرض الموقع الحالي رقمين مختلفين للشبكة الناقلة: 23 ألف+ و30 ألف+.",
+      "source_ids": [
+        "S01"
+      ],
+      "evidence_type": "metric",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "تم الاحتفاظ بالرقمين بدل اختيار الأعلى أو دمجهما."
+    },
+    {
+      "claim_id": "E05",
+      "json_paths": [
+        "$.directory_snapshot.current_company_reported_network.android_app_downloads",
+        "$.tools"
+      ],
+      "claim": "تطبيق Carrier تجاوز 10 آلاف تنزيل وتطبيق GO تجاوز ألف تنزيل، مع تحديثات في 2026.",
+      "source_ids": [
+        "S10",
+        "S11"
+      ],
+      "evidence_type": "metric",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "التنزيلات ليست مستخدمين نشطين."
+    },
+    {
+      "claim_id": "E06",
+      "json_paths": [
+        "$.financials.funding_history[0]"
+      ],
+      "claim": "جمعت تريلا أكثر من 600 ألف دولار في جولة مبكرة عام 2019 بقيادة Algebra Ventures.",
+      "source_ids": [
+        "S07"
+      ],
+      "evidence_type": "funding",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "استُخدم عامل أكبر من لأن المصدر وصف المبلغ بأنه 600 ألف+."
+    },
+    {
+      "claim_id": "E07",
+      "json_paths": [
+        "$.financials.funding_history[1]",
+        "$.company.founded_year"
+      ],
+      "claim": "تريلا من دفعة Y Combinator لصيف 2019 وتصفها YC كشركة تأسست في 2019.",
+      "source_ids": [
+        "S05"
+      ],
+      "evidence_type": "historical_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "لم تُستخدم قيمة استثمار YC لغيابها من صفحة الشركة."
+    },
+    {
+      "claim_id": "E08",
+      "json_paths": [
+        "$.financials.funding_history[2]",
+        "$.verification.corrections[5]"
+      ],
+      "claim": "جولة 2021 البالغة 42 مليون دولار تألفت من 30 مليون حقوق ملكية و12 مليون دين.",
+      "source_ids": [
+        "S02"
+      ],
+      "evidence_type": "funding",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "منع تصنيف كامل المبلغ كحقوق ملكية Series A."
+    },
+    {
+      "claim_id": "E09",
+      "json_paths": [
+        "$.financials.funding_history[3]"
+      ],
+      "claim": "ضمان DFC الجزئي البالغ 4.2 مليون دولار ساعد على تعبئة قرض بقيمة 6 ملايين دولار من ALMA.",
+      "source_ids": [
+        "S03",
+        "S04"
+      ],
+      "evidence_type": "funding",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "الضمان والقرض ليسا تدفقين نقديين منفصلين بقيمة 10.2 ملايين."
+    },
+    {
+      "claim_id": "E10",
+      "json_paths": [
+        "$.financials.funding_history[4]"
+      ],
+      "claim": "استثمرت Avanz Capital Egypt مبلغ 3.5 ملايين دولار في تريلا عام 2023.",
+      "source_ids": [
+        "S08"
+      ],
+      "evidence_type": "funding",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "ورد أن الاستثمار جزء من جولة جسر أوسع، لكن الحجم النهائي لم يُعلن."
+    },
+    {
+      "claim_id": "E11",
+      "json_paths": [
+        "$.financials.known_disclosed_capital"
+      ],
+      "claim": "الحد الأدنى المحسوب لرأس المال المعلن بقيم محددة هو أكثر من 52.1 مليون دولار.",
+      "source_ids": [
+        "S02",
+        "S04",
+        "S07",
+        "S08"
+      ],
+      "evidence_type": "calculation",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "يشمل الدين وحقوق الملكية ولا يشمل ضمان DFC أو قيمة YC غير المستخدمة."
+    },
+    {
+      "claim_id": "E12",
+      "json_paths": [
+        "$.financials.revenue_composition_disclosure"
+      ],
+      "claim": "ذكرت DFC أن 15% من الإيراد يأتي مباشرة من شركات أمريكية وأن 40% يأتي من الشحن عبر الموانئ الدولية.",
+      "source_ids": [
+        "S03"
+      ],
+      "evidence_type": "metric",
+      "confidence": "high",
+      "status": "qualified",
+      "notes": "الفترة المحاسبية والتداخل بين الفئتين غير معلنين، ولا توجد قيمة إيراد كلية."
+    },
+    {
+      "claim_id": "E13",
+      "json_paths": [
+        "$.financials.acquisitions[0]"
+      ],
+      "claim": "استحوذت تريلا على Trukto في ديسمبر 2019 دون إعلان قيمة الصفقة.",
+      "source_ids": [
+        "S06"
+      ],
+      "evidence_type": "acquisition",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "الهدف كان تعزيز الشبكة والعلاقات التشغيلية في السوق المصري."
+    },
+    {
+      "claim_id": "E14",
+      "json_paths": [
+        "$.market_data.market_size.historical_company_estimate"
+      ],
+      "claim": "قدرت الشركة فرصة سوق الشحن في MENAP بأكثر من 50 مليار دولار عام 2021.",
+      "source_ids": [
+        "S15"
+      ],
+      "evidence_type": "company_claim",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "تقدير تاريخي للشركة وليس قياسًا حاليًا مدققًا."
+    },
+    {
+      "claim_id": "E15",
+      "json_paths": [
+        "$.directory_snapshot.historical_operating_metrics[0]"
+      ],
+      "claim": "أعلنت الشركة في 2021 عن 350+ شاحنًا و15 ألف+ ناقل وآلاف الشحنات شهريًا.",
+      "source_ids": [
+        "S02",
+        "S15"
+      ],
+      "evidence_type": "metric",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "مؤشرات تاريخية وليست أرقام 2026."
+    },
+    {
+      "claim_id": "E16",
+      "json_paths": [
+        "$.directory_snapshot.historical_operating_metrics[1]"
+      ],
+      "claim": "نشرت Forbes Middle East أرقامًا تاريخية لعام 2022 تشمل 725 شاحنًا و30 ألف ناقل و45 ألف سائق.",
+      "source_ids": [
+        "S09"
+      ],
+      "evidence_type": "metric",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "تعريف الفئات غير موحد ولا يجوز جمع الناقلين والسائقين."
+    },
+    {
+      "claim_id": "E17",
+      "json_paths": [
+        "$.financials.actual_revenue",
+        "$.financials.valuation",
+        "$.financials.transaction_volume"
+      ],
+      "claim": "لا توجد إفصاحات عامة موثوقة عن قيمة الإيراد أو التقييم أو GMV.",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S08"
+      ],
+      "evidence_type": "absence_of_disclosure",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "أُبقيت القيم null بدل استخدام تقديرات خارجية."
+    },
+    {
+      "claim_id": "E18",
+      "json_paths": [
+        "$.company.technology_stack_note",
+        "$.verification.corrections[8]"
+      ],
+      "claim": "لم تثبت المصادر الأولية الحديثة الحزمة التقنية البرمجية المذكورة في الملف الأصلي.",
+      "source_ids": [
+        "S01",
+        "S10",
+        "S11"
+      ],
+      "evidence_type": "absence_of_disclosure",
+      "confidence": "high",
+      "status": "removed",
+      "notes": "المصادر تثبت قدرات المنتج والتطبيقات، لا لغات البرمجة والبنية الداخلية."
+    },
+    {
+      "claim_id": "E19",
+      "json_paths": [
+        "$.market_data.growth_rate.company_operating_signals[3]"
+      ],
+      "claim": "أعلنت تريلا في 2026 شراكة استراتيجية مع Al Dahra لدعم عمليات لوجستية وسلاسل إمداد أكثر اتصالًا.",
+      "source_ids": [
+        "S13"
+      ],
+      "evidence_type": "company_claim",
+      "confidence": "medium",
+      "status": "verified",
+      "notes": "إعلان شركة على LinkedIn؛ لم تُنشر قيمة العقد أو نطاق مالي."
+    },
+    {
+      "claim_id": "E20",
+      "json_paths": [
+        "$.financials.revenue_streams[2]",
+        "$.tools[9]"
+      ],
+      "claim": "تدعم المنصة دفعًا أسرع وآمنًا للناقلين عبر أدوات رقمية، دون إفصاح عن رسوم مالية منفصلة.",
+      "source_ids": [
+        "S03"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "qualified",
+      "notes": "لا يكفي لإثبات factoring كمصدر إيراد مستقل."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Trella — Moving Economies Forward",
+      "publisher": "Trella",
+      "url": "https://www.trella.app/",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "الأسواق الحالية",
+        "أرقام الشاحنين المؤسسيين والناقلين",
+        "المنتج والحجز والتتبع وePOD والتقارير",
+        "نموذج طلب عرض السعر"
+      ]
+    },
+    {
+      "id": "S02",
+      "title": "Trella Closes US$42 Million Funding Round",
+      "publisher": "Trella",
+      "url": "https://blog.trella.app/funds/trella-closes-us42-million-funding-round/",
+      "published_date": "2021-06-21",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "تفصيل 30 مليون حقوق ملكية و12 مليون دين",
+        "المستثمرون",
+        "350+ شاحن و15 ألف+ ناقل تاريخيًا"
+      ]
+    },
+    {
+      "id": "S03",
+      "title": "Strengthening Digital Logistics in Pakistan and Egypt",
+      "publisher": "U.S. International Development Finance Corporation",
+      "url": "https://www.dfc.gov/investment-story/strengthening-digital-logistics-and-supply-chains-egypt",
+      "published_date": "2025",
+      "accessed_date": "2026-08-03",
+      "source_type": "government_primary",
+      "used_for": [
+        "قرض ALMA وضمان DFC",
+        "المدفوعات الرقمية للناقلين",
+        "نسب تركيب الإيراد المعلنة"
+      ]
+    },
+    {
+      "id": "S04",
+      "title": "DFC Approves 62 Transactions Totaling More Than $2.3 Billion",
+      "publisher": "U.S. International Development Finance Corporation",
+      "url": "https://www.dfc.gov/media/press-releases/dfc-approves-62-transactions-totaling-more-23-billion-investment-q4",
+      "published_date": "2022-09-30",
+      "accessed_date": "2026-08-03",
+      "source_type": "government_primary",
+      "used_for": [
+        "تاريخ الموافقة",
+        "ضمان 4.2 ملايين دولار",
+        "تعبئة قرض 6 ملايين دولار"
+      ]
+    },
+    {
+      "id": "S05",
+      "title": "Trella — Y Combinator Company Profile",
+      "publisher": "Y Combinator",
+      "url": "https://www.ycombinator.com/companies/trella",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "accelerator_primary",
+      "used_for": [
+        "دفعة صيف 2019",
+        "حالة الشركة النشطة",
+        "المؤسسون",
+        "تعريف المنصة"
+      ]
+    },
+    {
+      "id": "S06",
+      "title": "Trella: Behind the Scenes of the Trukto Acquisition",
+      "publisher": "Trella",
+      "url": "https://blog.trella.app/expansion/trella-behind-the-scenes-of-the-trukto-acquisition/",
+      "published_date": "2020-05-31",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "استحواذ Trukto",
+        "توقيت الصفقة",
+        "منطق الاستحواذ التشغيلي"
+      ]
+    },
+    {
+      "id": "S07",
+      "title": "Egyptian Freight Marketplace Startup Trella Raises $600K in Seed Funding",
+      "publisher": "FreightWaves",
+      "url": "https://www.freightwaves.com/news/technology-egyptian-freight-marketplace-startup-trella-raises-600k-in-seed-funding",
+      "published_date": "2019-02-26",
+      "accessed_date": "2026-08-03",
+      "source_type": "industry_media",
+      "used_for": [
+        "جولة ما قبل البذرة",
+        "قيادة Algebra Ventures"
+      ]
+    },
+    {
+      "id": "S08",
+      "title": "Trucking Marketplace Trella Raises $3.5M from Avanz Capital",
+      "publisher": "Egypt Today",
+      "url": "https://www.egypttoday.com/Article/3/125057/Trucking-marketplace-Trella-raises-3-5M-from-Avanz-Capital",
+      "published_date": "2023-06-13",
+      "accessed_date": "2026-08-03",
+      "source_type": "regional_media",
+      "used_for": [
+        "استثمار Avanz Capital Egypt بقيمة 3.5 ملايين دولار"
+      ]
+    },
+    {
+      "id": "S09",
+      "title": "Trella — MENA’s Top 50 Most Funded Startups 2022",
+      "publisher": "Forbes Middle East",
+      "url": "https://www.forbesmiddleeast.com/ar/lists/50-most-funded-startups-2022/trella/",
+      "published_date": "2022-12-12",
+      "accessed_date": "2026-08-03",
+      "source_type": "reputable_media",
+      "used_for": [
+        "مقاييس الشاحنين والناقلين والسائقين التاريخية",
+        "التمويل التاريخي حتى 2022"
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "Trella: Carrier — Google Play",
+      "publisher": "Google Play / Trella",
+      "url": "https://play.google.com/store/apps/details?id=com.shyft.carrier",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_app_store",
+      "used_for": [
+        "وظيفة تطبيق الناقلين",
+        "10 آلاف+ تنزيل",
+        "تحديث يوليو 2026",
+        "هوية Trella Holding B.V."
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "Trella: GO — Google Play",
+      "publisher": "Google Play / Trella",
+      "url": "https://play.google.com/store/apps/details?id=com.trella.go",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_app_store",
+      "used_for": [
+        "وجود تطبيق Trella GO",
+        "ألف+ تنزيل",
+        "تحديث مارس 2026"
+      ]
+    },
+    {
+      "id": "S12",
+      "title": "Trella Terms — Egypt",
+      "publisher": "Trella",
+      "url": "https://blog.trella.app/terms/eg/",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_legal",
+      "used_for": [
+        "تعريف الخدمة كسوق إلكتروني",
+        "الفصل بين تريلا والناقل المستقل",
+        "التطبيق وبوابة الويب"
+      ]
+    },
+    {
+      "id": "S13",
+      "title": "Trella — LinkedIn Company Page and 2026 Updates",
+      "publisher": "Trella / LinkedIn",
+      "url": "https://www.linkedin.com/company/trellaapp",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_social",
+      "used_for": [
+        "المقر التشغيلي في القاهرة",
+        "الأسواق المعلنة",
+        "شراكة Al Dahra في 2026"
+      ]
+    },
+    {
+      "id": "S14",
+      "title": "Delivering E-Commerce Success: Trella’s Journey with Amazon",
+      "publisher": "Trella",
+      "url": "https://blog.trella.app/industry/delivering-e-commerce-success-trellas-journey-with-amazon/amp/",
+      "published_date": "2023",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "نموذج التشغيل مع العملاء المؤسسيين",
+        "دور control tower وإدارة الاستثناءات"
+      ]
+    },
+    {
+      "id": "S15",
+      "title": "Series A Announcement: Solving a Trucking Legacy Problem",
+      "publisher": "Trella",
+      "url": "https://blog.trella.app/funds/series-a-announcement-how-is-it-like-to-raise-usd-42mil-to-solve-a-trucking-legacy-problem/",
+      "published_date": "2021-06-24",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "تقدير فرصة MENAP بأكثر من 50 مليار دولار",
+        "آلاف الشحنات شهريًا تاريخيًا",
+        "تطور النموذج من سوق إلى خدمات لوجستية ومالية"
+      ]
+    },
+    {
+      "id": "S16",
+      "title": "Bringing Reliability, Transparency & Consistency to Shippers",
+      "publisher": "Trella",
+      "url": "https://blog.trella.app/industry/bringing-reliability-transparency-consistency-to-our-shippers/",
+      "published_date": "2020",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "بيانات الأداء والوجهات",
+        "أوقات التحميل والتفريغ",
+        "تحليلات وتقييم الناقلين"
+      ]
+    }
   ]
 }

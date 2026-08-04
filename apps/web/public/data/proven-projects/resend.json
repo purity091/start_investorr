@@ -2,50 +2,1431 @@
   "id": "resend",
   "slug": "resend",
   "name": "ريسند (Resend)",
-  "headline": "واجهة برمجة إرسال الإيميلات المصممة خصيصاً لراحة المطورين",
-  "category": "Developer Tools / واجهة برمجة الإيميلات",
+  "headline": "من مكتبة مفتوحة المصدر إلى طبقة البريد للوكلاء: كيف حوّلت Resend تجربة المطور إلى منصة اتصالات متكاملة",
+  "category": "Developer Infrastructure & Email Platform / بنية البريد للمطورين والأتمتة",
   "company": {
-    "location": "سان فرانسيسكو، الولايات المتحدة (Y Combinator)",
-    "business_model": "الدفع حسب الاستخدام (Pay as you go)"
+    "location": "سان فرانسيسكو، الولايات المتحدة. بدأت الفكرة بمشروع React Email المفتوح المصدر في 2022، وتأسست Resend رسميًا في يناير 2023 وانضمت إلى دفعة Y Combinator W23. هذا وصف للمقر والتأسيس، ولا يحدد توزيع العملاء أو الإيراد جغرافيًا.",
+    "business_model": "نموذج Freemium متعدد المنتجات: اشتراكات حجمية للبريد المعاملاتي، خطط تسويق مبنية على عدد جهات الاتصال، رسوم استخدام إضافية عند تجاوز الحصص، تسعير مستقل لتشغيل الأتمتة، إضافات مثل عناوين IP المخصصة، وعقود Enterprise مخصصة. لذلك لم تعد الشركة مجرد خدمة دفع حسب الاستخدام، ولا تنشر مساهمة كل منتج في الإيراد أو الهوامش."
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الآلاف دولار شهرياً (في نمو سريع)",
-    "monthly_traffic": "500K+ /mo"
+    "monthly_revenue": "غير معلن. أعلنت Resend أن إيرادها نما خمسة أضعاف خلال 2025 وأنها أصبحت مربحة منذ 2025، لكنها لم تنشر قيمة الإيراد المطلقة أو MRR أو ARR أو صافي الربح. أسعار الخطط وعدد المستخدمين لا يسمحان باشتقاق الإيراد الشهري بسبب الخطة المجانية، وتفاوت الاستخدام، والخصومات، والعملاء المؤسسيين.",
+    "monthly_traffic": "غير معلن. أعلنت الشركة تجاوز 3 ملايين مستخدم في 3 يونيو 2026، لكن هذا رقم تراكمي تسميه الشركة «مستخدمين» وليس زيارات شهرية أو MAU أو عملاء مدفوعين. كما أن 6.8 ملايين تنزيل أسبوعي لـReact Email مقياس تبنٍّ لحزمة مفتوحة المصدر، وليس حركة موقع Resend أو عدد حساباتها النشطة."
   },
   "overview": {
     "problem": {
-      "text": "أدوات إرسال الإيميلات القديمة (مثل SendGrid و Mailgun) أصبحت بطيئة، واجهاتها معقدة، وتجربة المطورين (DX) فيها سيئة جداً.",
-      "impact": "يستغرق المطورون وقتاً طويلاً لربط الإيميلات، وتصميم قوالب رسائل جذابة باستخدام لغة HTML القديمة."
+      "text": "بحسب رواية المؤسسين، كانت أدوات البريد الموجهة للمطورين تعاني من تجربة تكامل قديمة، وصعوبة بناء قوالب متوافقة مع عملاء البريد، وضعف الرؤية في أحداث التسليم، ومشكلات وصول الرسائل إلى البريد الوارد. المشكلة العملية لم تكن مجرد إرسال طلب API، بل تشغيل قناة حساسة للسمعة والامتثال والتوافق والاعتمادية على نطاق متزايد.",
+      "impact": "تستهلك الفرق وقتًا في بناء القوالب ومتابعة الارتدادات والأحداث وإصلاح السمعة والتكامل بين أدوات منفصلة، وقد تتحول مشكلة صغيرة في التسليم إلى فشل تسجيل الدخول أو الفوترة أو التنبيهات أو حملات الاحتفاظ. وكلما ارتفع حجم الإرسال، ازدادت متطلبات المصادقة والنظافة والرقابة والدعم."
     },
     "solution": {
-      "text": "واجهة برمجة (API) حديثة وسريعة مع مكتبة React Email لكتابة قوالب الإيميلات باستخدام تقنيات الويب الحديثة (React و Tailwind)."
+      "text": "بدأت Resend بمكتبة React Email المفتوحة المصدر لبناء القوالب، ثم بنت منصة تجمع إرسال البريد واستقباله والبث التسويقي والأتمتة في مكان واحد. توفر REST API وSMTP وSDKs وقوالب ومحررًا تعاونيًا وWebhooks وسجلات وتحليلات وصول وعناوين IP مخصصة، ثم وسعت واجهة المنتج للوكلاء عبر CLI وMCP وOAuth. القيمة الأساسية هي تقليل وقت التكامل مع إبقاء الاعتمادية والامتثال والمراقبة ضمن طبقة واحدة."
     }
   },
   "market_data": {
-    "target_audience": "المطورون، الشركات الناشئة، وبناة المنتجات الرقمية.",
-    "market_size": "سوق البنية التحتية للإيميلات ضخم جداً ويتجاوز 10 مليار دولار.",
-    "growth_rate": "نمو فيروسي داخل مجتمع تويتر التقني (Tech Twitter)."
+    "target_audience": "المطورون المستقلون والشركات الناشئة وفرق المنتجات وSaaS، وفرق النمو والتسويق ودورة حياة العميل، والشركات عالية الحجم والمؤسسات التي تحتاج دعمًا وSLA وامتثالًا، إضافة إلى بناة الوكلاء الذين يحتاجون إدارة البريد برمجيًا. لا يمثل المستخدم الفردي أو تنزيل الحزمة أو المؤسسة وحدة عملاء موحدة.",
+    "market_size": "لا تنشر Resend تقديرًا رسميًا موحدًا لحجم سوق يمكن اعتماده كـTAM. تعمل الشركة عند تقاطع البنية التحتية للبريد المعاملاتي، والبريد التسويقي، ورسائل دورة الحياة، والبريد الوارد، وأدوات المطورين والوكلاء. لذلك حُذف ادعاء تجاوز السوق 10 مليارات دولار لغياب تعريف ومنهجية ومصدر أولي في الملف.",
+    "growth_rate": "تدرجت المقاييس الرسمية من 100 ألف مستخدم موثق في أبريل 2024 إلى 400 ألف في أبريل 2025، ثم مليون في ديسمبر 2025 وثلاثة ملايين في يونيو 2026. أعلنت الشركة أيضًا نمو الإيراد خمسة أضعاف في 2025 والربحية منذ 2025، ونمو الفريق إلى 43 شخصًا وReact Email إلى 6.8 ملايين تنزيل أسبوعيًا. هذه مؤشرات منفصلة؛ لا يثبت أي منها MAU أو عدد العملاء المدفوعين الحالي أو الإيراد المطلق."
   },
   "financials": {
-    "initial_investment": "مدعومة من مسرعة الأعمال الشهيرة Y Combinator.",
-    "valuation": "$30M+",
+    "initial_investment": "الجولات المعلنة رسميًا التي أمكن توثيقها هي جولة تأسيسية بقيمة 3 ملايين دولار بعد Y Combinator، ثم Series A بقيمة 18 مليون دولار بقيادة Andreessen Horowitz في ديسمبر 2024؛ أي 21 مليون دولار إجمالًا في الجولتين المسمّاتين. لا تشمل هذه القيمة شروط YC غير المفصلة أو أي تمويل غير معلن، ولا تشمل الاستحواذين لأن مقابل Mergent وBriefer لم يُنشر.",
+    "valuation": "غير معلن. لم تنشر Resend أو Y Combinator في المصادر المراجعة تقييمًا قبل الاستثمار أو بعده لجولة 3 ملايين دولار أو جولة 18 مليون دولار. لذلك حُذف تقدير 30 مليون دولار+، ولا يجوز اشتقاق التقييم من حجم الجولة أو أسماء المستثمرين أو عدد المستخدمين.",
     "revenue_streams": [
-      "باقة مجانية حتى 3000 إيميل",
-      "الخطط المدفوعة حسب حجم الإرسال (Volume Based)"
+      "اشتراكات البريد المعاملاتي حسب الحجم: الخطة المجانية حتى 3 آلاف رسالة شهريًا، وPro يبدأ من 20 دولارًا لـ50 ألف رسالة، وScale من 90 دولارًا لـ100 ألف رسالة وفق الأسعار المراجعة في 3 أغسطس 2026.",
+      "رسوم تجاوز حصة الرسائل في الخطط المدفوعة، وتُحسب على حزم إضافية من ألف رسالة بأسعار تختلف حسب الخطة.",
+      "خطط البريد التسويقي المبنية على عدد جهات الاتصال بدل عدد الرسائل، مع مستويات مجانية ومدفوعة وتسعير مؤسسي.",
+      "رسوم تشغيل الأتمتة بعد الحصة المشمولة؛ تعرض الصفحة الحالية 10 آلاف تشغيل شهريًا ثم 0.0015 دولار لكل تشغيل إضافي للخطط المدفوعة.",
+      "إضافة عنوان IP مخصص بسعر معلن قدره 30 دولارًا شهريًا للعملاء المؤهلين ضمن خطة Scale، مع خدمات التسخين والمراقبة.",
+      "عقود Enterprise مخصصة تشمل أحجامًا وشروط دعم وSLA واحتفاظ بيانات ونطاقات وعناوين IP مرنة.",
+      "الخطة المجانية وعدد المستخدمين والتنزيلات المفتوحة المصدر ليست إيرادًا، حتى إن كانت قناة اكتساب منخفضة التكلفة.",
+      "جولتا التمويل البالغ مجموعهما 21 مليون دولار ليستا إيرادًا أو ARR، والاستحواذان لا يثبتان تقييمًا أو تدفقًا نقديًا معلنًا."
     ]
   },
   "lessons": [
     {
-      "title": "تجربة المطورين كخندق تنافسي (DX as a Moat)",
-      "description": "عندما تكون المنتجات متشابهة تقنياً (إرسال إيميل)، الفائز هو من يقدم أسهل وأجمل تجربة للمطور لربط الأداة."
+      "title": "اجعل المفتوح المصدر بوابة لا نسخة مجانية من المنتج",
+      "description": "حل React Email مشكلة القوالب قبل أن تطلب Resend من المطورين تغيير مزود الإرسال. بذلك بنت الثقة والتوزيع حول خطوة واضحة، ثم وسعت القيمة إلى الإرسال والاعتمادية والمراقبة. الأداة المفتوحة نجحت كقناة اكتساب ومعيار تقني، لا كبديل كامل للمنصة المدفوعة."
     },
     {
-      "title": "البناء في العلن (Build in Public)",
-      "description": "شارك المؤسس زين روشا كل تحديات بناء الشركة وتصاميمها على تويتر، مما بنى جمهوراً مخلصاً قبل حتى إطلاق المنتج."
+      "title": "اختبر الاستعداد للدفع بأصغر معاملة ممكنة",
+      "description": "أرسل المؤسسون لأول مستخدم إنتاجي رابط دفع بقيمة 10 دولارات. لم يكن الرقم مقياس سوق، لكنه اختبر أن الألم حقيقي وأن المستخدم سيدفع قبل بناء شركة وتمويل فريق. الدرس هو فصل الإعجاب بالمنتج عن دليل الاستعداد للدفع."
     },
     {
-      "title": "الابتكار في المكملات (React Email)",
-      "description": "لم يبنوا فقط أداة للإرسال، بل أطلقوا أداة مفتوحة المصدر لتصميم الإيميلات، مما جعل المنتج لا غنى عنه."
+      "title": "تجربة المطور ميزة تشغيلية وليست تجميلًا",
+      "description": "وضوح API والـSDKs والسجلات والأمثلة يقلل وقت الدمج ووقت حل الحوادث. في بنية حساسة مثل البريد، كل دقيقة أقل في التشخيص أو الترحيل تنعكس على اعتماد المنتج والاحتفاظ، لذلك تصبح تجربة المطور جزءًا من اقتصاديات العميل."
+    },
+    {
+      "title": "وسّع المنتج بعد أن تثبت النواة",
+      "description": "بدأت Resend بالإرسال والقوالب، ثم أضافت التسويق والبريد الوارد والأتمتة. هذا التسلسل يقلل خطر بناء حزمة واسعة بلا موثوقية، ويتيح استخدام قاعدة واحدة من النطاقات والجهات والقوالب والأحداث لبيع منتجات إضافية."
+    },
+    {
+      "title": "سعّر كل منتج بوحدة القيمة المناسبة",
+      "description": "البريد المعاملاتي يُسعّر حسب حجم الرسائل، والتسويق حسب جهات الاتصال، والأتمتة حسب مرات التشغيل، والمؤسسات بشروط مخصصة. استخدام وحدة واحدة لكل شيء كان سيظلم بعض الشرائح ويخفي تكاليف الاستخدام الحقيقي."
+    },
+    {
+      "title": "الامتثال استثمار يسبق طلب المؤسسة",
+      "description": "بدأت الشركة مسار SOC 2 وهي صغيرة، ثم أضافت GDPR قبل أن تصبح العقود المؤسسية المحرك الوحيد. الامتثال المبكر يقلل تأخير الصفقات لاحقًا، لكنه لا يضمن غياب الحوادث؛ قيمته في بناء ضوابط واستجابة قابلة للتكرار."
+    },
+    {
+      "title": "الدعم البشري يمكن أن يكون قناة توزيع",
+      "description": "تعامل Resend الدعم كجزء من المنتج لا كمركز تكلفة منفصل. في خدمة ذات تعقيد تشغيلي وسمعة بريدية، الإجابة السريعة من شخص يفهم البنية تقلل التسرب وتولد توصيات، بينما تخفض الوثائق والأدوات الجيدة حجم الأسئلة المتكررة."
+    },
+    {
+      "title": "اشترِ الاختناق لا قائمة المزايا",
+      "description": "استحواذ Mergent استهدف جدولة المهام والاعتمادية، واستحواذ Briefer استهدف معالجة البيانات والتحليل على نطاق كبير. الصفقة المفيدة تُربط بعائق واضح في مسار النمو، ولا تُستخدم وحدها كدليل على الإيراد أو التقييم."
+    },
+    {
+      "title": "وحّد العلامة والمكدس بعد التجربة",
+      "description": "أوقفت الشركة new.email بعد أن وجدت أن علامة ومكدسًا منفصلين سرّعا الإطلاق لكن زادا تكلفة الصيانة، ثم نقلت الأفكار إلى محرر Resend. الدرس أن فصل تجربة جديدة مناسب لاختبار الفرضية، لكن نجاح التعلم قد يتطلب دمجها في النواة."
+    },
+    {
+      "title": "صمّم للوكيل مثلما صممت للمطور",
+      "description": "CLI وMCP وOAuth وواجهات API تجعل الوكيل قادرًا على تنفيذ مهام البريد دون الاعتماد على لوحة تحكم بشرية. التحول هنا ليس إضافة شعار AI؛ بل توفير مصادقة وأوامر ووثائق وسطح برمجي كامل يمكن للوكيل استخدامه بأمان."
     }
-  ]
+  ],
+  "tools": [
+    "Transactional Email API وSMTP Relay للإرسال المعاملاتي",
+    "Broadcasts وAudiences للبريد التسويقي وإدارة جهات الاتصال",
+    "Inbound Emails لاستقبال الرسائل وتحويلها إلى Webhooks",
+    "Automations لتسلسلات دورة الحياة المبنية على الأحداث",
+    "Templates والمحرر التعاوني وقدرات التحرير بمساعدة الذكاء الاصطناعي",
+    "React Email المفتوحة المصدر لبناء قوالب متوافقة",
+    "Webhooks وLogs API والتصدير وتتبع الأحداث",
+    "Deliverability Insights ومصادقة DKIM وSPF وDMARC",
+    "SDKs الرسمية وCLI وMCP وOAuth وتكاملات الوكلاء",
+    "Dedicated IPs والإرسال متعدد المناطق وخيارات Enterprise"
+  ],
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "About Resend",
+      "publisher": "Resend",
+      "source_type": "official_company_history",
+      "url": "https://resend.com/about",
+      "published_date": null,
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "بدء Resend من مشروع مفتوح المصدر في 2022",
+        "إطلاق منصة إرسال البريد في 2023",
+        "الانضمام إلى دفعة Y Combinator الشتوية لعام 2023"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Resend: Email for developers",
+      "publisher": "Y Combinator",
+      "source_type": "accelerator_company_profile",
+      "url": "https://www.ycombinator.com/companies/resend",
+      "published_date": null,
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "تصنيف Resend كشركة نشطة من دفعة W23",
+        "المؤسسان Zeno Rocha وBu Kinoshita",
+        "تركيز المنتج على واجهة بريد للمطورين"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Resend raises $3M",
+      "publisher": "Resend",
+      "source_type": "official_seed_funding_announcement",
+      "url": "https://resend.com/blog/resend-raises-3m-seed-round",
+      "published_date": "2023-07-18",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "جولة تأسيسية بقيمة 3 ملايين دولار",
+        "تسجيل أكثر من 10 آلاف مطور وإرسال أكثر من 7 ملايين رسالة وقت الإعلان",
+        "مشاركة Y Combinator وSV Angel ومستثمرين أفراد"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Resend raises $18M Series A",
+      "publisher": "Resend",
+      "source_type": "official_series_a_funding_announcement",
+      "url": "https://resend.com/blog/series-a",
+      "published_date": "2024-12-04",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "جولة Series A بقيمة 18 مليون دولار بقيادة Andreessen Horowitz",
+        "أكثر من 200 ألف مطور مسجل وقت الإعلان",
+        "تشغيل ملايين الرسائل التسويقية والمعاملاتية يوميًا وقت الإعلان"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "How we got here",
+      "publisher": "Resend",
+      "source_type": "official_company_timeline",
+      "url": "https://resend.com/handbook/company/how-we-got-here",
+      "published_date": "2026-06-02",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "الخط الزمني من React Email إلى Resend",
+        "أول عميل مدفوع بقيمة 10 دولارات",
+        "ألف عميل مدفوع في ديسمبر 2023",
+        "الاستحواذ على Mergent وBriefer",
+        "تطور المنتج حتى أدوات الوكلاء في 2026"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "What's next after 100,000 users",
+      "publisher": "Resend",
+      "source_type": "official_growth_milestone",
+      "url": "https://resend.com/blog/what-is-next-after-100-000-users",
+      "published_date": "2024-04-11",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "الوصول إلى 100 ألف مستخدم موثق",
+        "ألف عميل مدفوع بنهاية 2023",
+        "استخدام React Email كمدخل مفتوح المصدر",
+        "اعتبار الدعم جزءًا من المنتج"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "400,000 users and beyond",
+      "publisher": "Resend",
+      "source_type": "official_growth_and_operations_milestone",
+      "url": "https://resend.com/blog/400-000-users-and-beyond",
+      "published_date": "2025-04-29",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "النمو من 100 ألف إلى 400 ألف مستخدم خلال عام",
+        "نمو الفريق من 6 إلى 21",
+        "421 ألف تنزيل أسبوعي لحزمة React Email وقت الإعلان",
+        "تشغيل ملايين الرسائل يوميًا"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "1,000,000 users",
+      "publisher": "Resend",
+      "source_type": "official_growth_revenue_and_product_milestone",
+      "url": "https://resend.com/blog/1-million-users",
+      "published_date": "2025-12-18",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "الوصول إلى مليون مستخدم",
+        "نمو الإيراد خمسة أضعاف خلال 2025 دون نشر القيمة المطلقة",
+        "إرسال عشرات الملايين من الرسائل يوميًا",
+        "الاستحواذ على شركتين خلال 2025"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "3,000,000 users",
+      "publisher": "Resend",
+      "source_type": "official_latest_growth_and_profitability_milestone",
+      "url": "https://resend.com/blog/3-million-users",
+      "published_date": "2026-06-03",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "الوصول إلى 3 ملايين مستخدم",
+        "نمو الفريق إلى 43 شخصًا",
+        "وصول تنزيلات React Email إلى 6.8 ملايين أسبوعيًا",
+        "إعلان الربحية منذ 2025",
+        "التحول إلى منصة إرسال واستقبال وبث وأتمتة"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Pricing",
+      "publisher": "Resend",
+      "source_type": "official_current_pricing",
+      "url": "https://resend.com/pricing/",
+      "published_date": null,
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "الخطة المجانية حتى 3 آلاف رسالة شهريًا",
+        "Pro بسعر 20 دولارًا لـ50 ألف رسالة",
+        "Scale بسعر 90 دولارًا لـ100 ألف رسالة",
+        "التسعير المخصص للمؤسسات",
+        "الرسوم الإضافية والأتمتة وعناوين IP المخصصة"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "How we make money",
+      "publisher": "Resend",
+      "source_type": "official_business_model_explanation",
+      "url": "https://resend.com/handbook/company/how-we-make-money",
+      "published_date": "2026-07-08",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "نموذج متعدد المنتجات بدل اشتراك موحد",
+        "فصل اشتراكات الرسائل المعاملاتية عن التسويقية",
+        "التسعير التدريجي حسب الحجم",
+        "الدفع مقابل التجاوزات في الخطط المدفوعة"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Top 10 new features in 2025",
+      "publisher": "Resend",
+      "source_type": "official_product_capability_recap",
+      "url": "https://resend.com/blog/new-features-in-2025",
+      "published_date": "2025-12-18",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "إطلاق البريد الوارد والقوالب والمحرر التعاوني",
+        "تطوير إدارة جهات الاتصال وموضوعات إلغاء الاشتراك",
+        "إضافة الدفع حسب التجاوزات"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Introducing Automations",
+      "publisher": "Resend",
+      "source_type": "official_automation_product_announcement",
+      "url": "https://resend.com/blog/introducing-automations",
+      "published_date": "2026-04-13",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "أتمتة الرسائل المبنية على الأحداث",
+        "الفروع والتأخيرات والانتظار والتخصيص",
+        "إدارة الأتمتة عبر API وSDK وMCP وCLI",
+        "إتاحة 10 آلاف تشغيل أتمتة ضمن الخطط"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Changelog",
+      "publisher": "Resend",
+      "source_type": "official_current_product_changelog",
+      "url": "https://resend.com/changelog",
+      "published_date": null,
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "إطلاق CLI وMCP وOAuth وتكاملات الوكلاء في 2026",
+        "تطوير API للبث والسجلات والويب هوكس",
+        "تحديثات المنتج حتى يوليو 2026"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "SOC 2",
+      "publisher": "Resend",
+      "source_type": "official_security_compliance_page",
+      "url": "https://resend.com/security/soc-2",
+      "published_date": null,
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "الامتثال لـSOC 2 Type II",
+        "إجراء عمليات تدقيق دورية",
+        "فترة التقرير من فبراير 2025 إلى فبراير 2026"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "GDPR",
+      "publisher": "Resend",
+      "source_type": "official_privacy_compliance_page",
+      "url": "https://resend.com/security/gdpr",
+      "published_date": null,
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "الامتثال للائحة GDPR",
+        "تخزين بيانات العملاء في الولايات المتحدة مع البنود التعاقدية القياسية",
+        "توفير اتفاقية معالجة البيانات"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Resend acquires Mergent",
+      "publisher": "Resend",
+      "source_type": "official_acquisition_announcement",
+      "url": "https://resend.com/blog/resend-acquires-mergent",
+      "published_date": "2025-04-23",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "الاستحواذ على Mergent",
+        "ربط الاستحواذ بالاعتمادية والقابلية للتوسع وتجربة المطور",
+        "عدم إعلان قيمة الصفقة"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Resend acquires Briefer",
+      "publisher": "Resend",
+      "source_type": "official_acquisition_announcement",
+      "url": "https://resend.com/blog/resend-acquires-briefer",
+      "published_date": "2025-08-05",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "الاستحواذ على Briefer",
+        "معالجة Resend تيرابايتات من البيانات أسبوعيًا",
+        "تركيز الصفقة على التحليل والمعالجة والتوسع",
+        "عدم إعلان قيمة الصفقة"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "Sunsetting new.email",
+      "publisher": "Resend",
+      "source_type": "official_product_sunset_and_learning_post",
+      "url": "https://resend.com/blog/sunsetting-new-email",
+      "published_date": "2026-07-08",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "إيقاف new.email في أغسطس 2026",
+        "نقل القدرات الأساسية إلى محرر Resend",
+        "تكلفة تشغيل علامة ومكدس منفصلين",
+        "التعلم من اختبار الفرضيات في السوق"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "Introducing the Scale plan",
+      "publisher": "Resend",
+      "source_type": "official_high_volume_pricing_and_compliance_explanation",
+      "url": "https://resend.com/blog/introducing-the-scale-plan",
+      "published_date": "2024-10-16",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "بدء خطة Scale من 100 ألف رسالة",
+        "ارتباط الإرسال الكثيف بمتطلبات السمعة والامتثال",
+        "إضافة دعم وخصائص موجهة للمرسلين مرتفعي الحجم"
+      ]
+    }
+  ],
+  "verification": {
+    "status": "verified_with_strict_revenue_funding_valuation_user_and_traffic_metric_separation",
+    "verified_on": "2026-08-03",
+    "research_cutoff": "2026-08-03",
+    "source_policy": "الأولوية لموقع Resend الرسمي ومدونتها ودليلها وصفحات التسعير والأمان وسجل التغييرات، مع استخدام ملف Y Combinator لتأكيد الدفعة والمؤسسين. Resend شركة خاصة ولا تنشر قوائم مالية عامة أو إفصاحات SEC؛ لذلك لم تُستخدم تقديرات خارجية للإيراد أو الزيارات أو التقييم، ولم تُعامل أعداد المستخدمين أو الرسائل أو التنزيلات أو التمويل كإيراد.",
+    "important_notes": [
+      "الإيراد الشهري وARR والإيراد المطلق الحالي غير معلنة.",
+      "نمو الإيراد خمسة أضعاف في 2025 مضاعف نمو وليس قيمة مالية مطلقة.",
+      "إعلان الربحية منذ 2025 لا يكشف صافي الربح أو الهامش.",
+      "ثلاثة ملايين مستخدم رقم تراكمي تعلنه الشركة وليس MAU أو عملاء مدفوعين.",
+      "تنزيلات React Email الأسبوعية ليست مستخدمي Resend ولا حركة موقعها.",
+      "الجولتان المعلنتان بقيمة 21 مليون دولار تمويل وليستا إيرادًا.",
+      "تقييم الشركة غير معلن ولم يُقدّر.",
+      "قيم الاستحواذ على Mergent وBriefer غير معلنة.",
+      "الأسعار تمثل القائمة العامة وقت التحقق وقد تتغير لاحقًا.",
+      "لم تُستخدم حزمة تقنية داخلية تخمينية."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_on": "2026-08-03",
+      "validator": "Python json module + jsonschema Draft 2020-12 + custom Professional V2 integrity checks",
+      "check_count": 32,
+      "granular_assertion_count": 410,
+      "checks": [
+        "اجتياز JSON Schema Draft 2020-12",
+        "الحفاظ على جميع مفاتيح البنية الأصلية",
+        "إضافة حقول Professional V2",
+        "وجود 10 دروس خاصة بالشركة",
+        "وجود 20 مصدرًا",
+        "وجود 15 مدخلًا في خريطة الأدلة",
+        "عدم تكرار معرفات المصادر",
+        "سلامة روابط المصادر بصيغة HTTPS",
+        "أولوية المصادر الرسمية والأولية",
+        "تطابق قيم evidence_map مع الحقول الفعلية",
+        "تطابق source_count مع source_ids",
+        "عدم وجود مراجع دليل لمصادر مفقودة",
+        "تطابق مراجع المصادر المختصرة مع السجل الكامل",
+        "عدم وجود قيم JSON غير قياسية",
+        "إزالة تقدير الإيراد الشهري القديم",
+        "إزالة تقدير الزيارات القديم",
+        "إزالة التقييم القديم",
+        "وسم الإيراد الشهري بأنه غير معلن",
+        "وسم زيارات الموقع الشهرية بأنها غير معلنة",
+        "فصل مضاعف نمو الإيراد عن الإيراد المطلق",
+        "فصل الربحية عن صافي الربح",
+        "فصل المستخدمين عن الزيارات وMAU",
+        "فصل تنزيلات React Email عن مستخدمي Resend",
+        "تثبيت التمويل المعلن عند 21 مليون دولار",
+        "فصل التمويل عن الإيراد",
+        "وسم التقييم بأنه غير معلن",
+        "حذف تقدير حجم السوق غير المدعوم",
+        "تثبيت الأسعار الحالية دون اشتقاق الإيراد",
+        "إضافة منتجات الإرسال والاستقبال والبث والأتمتة",
+        "توثيق التوجه نحو الوكلاء",
+        "عدم اختلاق حزمة تقنية داخلية",
+        "وجود محتوى عربي جوهري"
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول الجوهرية بقيمها الفعلية وحالة التحقق والثقة والمصادر، وتفصل بين الإيراد والتمويل والتقييم والمستخدمين والعملاء المدفوعين والرسائل المرسلة وتنزيلات الحزمة وزيارات الموقع والتسعير.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي أو مصدر أولي قوي.",
+      "verified_as_not_publicly_disclosed": "المقياس المطلوب غير منشور رسميًا، ولذلك لم يُستبدل بتقدير خارجي.",
+      "verified_with_metric_definition_limits": "المعلومة منشورة لكن تعريفها لا يسمح بتحويلها إلى مقياس آخر.",
+      "verified_historical_financing": "معلومة تمويل مرتبطة بتاريخ ومبلغ ومرحلة محددة.",
+      "verified_company_reported_growth": "مؤشر نمو معلن من الشركة مع إبقاء تعريف المقياس وحدوده.",
+      "verified_current_pricing": "سعر أو وحدة فوترة مأخوذة من صفحة التسعير الحالية وقت التحقق.",
+      "verified_current_product_capability": "القدرة مثبتة في صفحة منتج أو إعلان رسمي حديث دون افتراض حجم استخدامها أو إيرادها.",
+      "analytical_inference": "تحليل مهني مشتق من حقائق موثقة وليس تصريحًا حرفيًا من الشركة."
+    },
+    "confidence_scale": {
+      "high": "مصدر رسمي مباشر أو عدة مصادر أولية متطابقة.",
+      "medium_high": "استنتاج محدود مبني على مصادر أولية مع حدود واضحة.",
+      "medium": "تصريح تاريخي أو تعريف يحتاج حذرًا عند إسقاطه على الحاضر.",
+      "low_not_used": "تقدير خارجي أو ادعاء بلا تعريف أو تاريخ كافٍ لم يُستخدم كحقيقة."
+    },
+    "metric_definitions": {
+      "revenue": "دخل محاسبي خلال فترة؛ لا يساوي التمويل أو التقييم أو عدد المستخدمين أو حجم الرسائل.",
+      "monthly_revenue": "إيراد محقق خلال شهر بعينه؛ لم تنشر Resend رقمًا رسميًا حاليًا في المصادر المراجعة.",
+      "revenue_growth_multiple": "نسبة تغير في الإيراد مقارنة بفترة أساس؛ إعلان نمو الإيراد خمسة أضعاف لا يكشف قيمة الإيراد المطلقة.",
+      "profitability": "تصريح بأن الإيرادات تغطي التكاليف وفق الشركة؛ لا يكشف صافي الربح أو الهامش أو التدفق النقدي.",
+      "funding": "رأس مال من المستثمرين مقابل أسهم أو أدوات تمويل؛ لا يمثل مبيعات أو إيرادًا.",
+      "valuation": "قيمة حقوق الملكية قبل أو بعد جولة؛ لم تُنشر رسميًا في الجولات المراجعة.",
+      "users": "الحسابات التي تسميها الشركة مستخدمين؛ لا يعني التعريف تلقائيًا مستخدمين نشطين أو مدفوعين.",
+      "paying_customers": "عملاء يدفعون مقابل خطة أو عقد؛ الرقم التاريخي البالغ ألفًا في 2023 لا يمثل العدد الحالي.",
+      "website_traffic": "زيارات صفحات الويب خلال فترة؛ لم تنشر Resend رقمًا شهريًا رسميًا.",
+      "emails_sent": "عدد الرسائل التي تمر عبر المنصة؛ لا يساوي الإيراد لأن الخطط والأسعار والخصومات وأنواع الرسائل تختلف.",
+      "open_source_downloads": "تنزيلات حزمة React Email من npm؛ قد تتكرر ولا تساوي مستخدمي Resend أو عملاءها.",
+      "transactional_pricing": "فوترة حسب حجم الرسائل المرسلة والمستقبلة ضمن الخطة والتجاوزات.",
+      "marketing_pricing": "فوترة حسب عدد جهات الاتصال ضمن خطة التسويق.",
+      "automation_runs": "مرات تنفيذ تدفق الأتمتة؛ وحدة استخدام مستقلة عن عدد المستخدمين أو الرسائل.",
+      "acquisition": "شراء شركة أو فريق أو أصول؛ قيمة الصفقتين لم تُعلن ولا تمثل تمويلًا جديدًا تلقائيًا."
+    }
+  },
+  "evidence_map": {
+    "$.headline": {
+      "field_value": "من مكتبة مفتوحة المصدر إلى طبقة البريد للوكلاء: كيف حوّلت Resend تجربة المطور إلى منصة اتصالات متكاملة",
+      "verification_status": "analytical_inference",
+      "confidence": "high",
+      "claim_type": "company_specific_editorial_headline",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "العنوان يلخص انتقال Resend من مكتبة مفتوحة المصدر إلى منصة بريد متعددة المنتجات ومهيأة للوكلاء.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-05",
+        "SRC-09",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Resend",
+          "publisher": "Resend",
+          "source_type": "official_company_history",
+          "url": "https://resend.com/about",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "العنوان يلخص انتقال Resend من مكتبة مفتوحة المصدر إلى منصة بريد متعددة المنتجات ومهيأة للوكلاء."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "How we got here",
+          "publisher": "Resend",
+          "source_type": "official_company_timeline",
+          "url": "https://resend.com/handbook/company/how-we-got-here",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "العنوان يلخص انتقال Resend من مكتبة مفتوحة المصدر إلى منصة بريد متعددة المنتجات ومهيأة للوكلاء."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "3,000,000 users",
+          "publisher": "Resend",
+          "source_type": "official_latest_growth_and_profitability_milestone",
+          "url": "https://resend.com/blog/3-million-users",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "العنوان يلخص انتقال Resend من مكتبة مفتوحة المصدر إلى منصة بريد متعددة المنتجات ومهيأة للوكلاء."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Changelog",
+          "publisher": "Resend",
+          "source_type": "official_current_product_changelog",
+          "url": "https://resend.com/changelog",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "العنوان يلخص انتقال Resend من مكتبة مفتوحة المصدر إلى منصة بريد متعددة المنتجات ومهيأة للوكلاء."
+        }
+      ],
+      "limitations": "العنوان صياغة تحريرية تحليلية وليس وصفًا حرفيًا صادرًا عن الشركة."
+    },
+    "$.company.location": {
+      "field_value": "سان فرانسيسكو، الولايات المتحدة. بدأت الفكرة بمشروع React Email المفتوح المصدر في 2022، وتأسست Resend رسميًا في يناير 2023 وانضمت إلى دفعة Y Combinator W23. هذا وصف للمقر والتأسيس، ولا يحدد توزيع العملاء أو الإيراد جغرافيًا.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "headquarters_and_company_origin",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر الرسمية وملف YC يثبتان سان فرانسيسكو ودفعة W23 وبداية React Email في 2022 وتأسيس Resend في 2023.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Resend",
+          "publisher": "Resend",
+          "source_type": "official_company_history",
+          "url": "https://resend.com/about",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية وملف YC يثبتان سان فرانسيسكو ودفعة W23 وبداية React Email في 2022 وتأسيس Resend في 2023."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Resend: Email for developers",
+          "publisher": "Y Combinator",
+          "source_type": "accelerator_company_profile",
+          "url": "https://www.ycombinator.com/companies/resend",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية وملف YC يثبتان سان فرانسيسكو ودفعة W23 وبداية React Email في 2022 وتأسيس Resend في 2023."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "How we got here",
+          "publisher": "Resend",
+          "source_type": "official_company_timeline",
+          "url": "https://resend.com/handbook/company/how-we-got-here",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية وملف YC يثبتان سان فرانسيسكو ودفعة W23 وبداية React Email في 2022 وتأسيس Resend في 2023."
+        }
+      ],
+      "limitations": "المقر لا يحدد توزيع الإيراد أو المستخدمين جغرافيًا."
+    },
+    "$.company.business_model": {
+      "field_value": "نموذج Freemium متعدد المنتجات: اشتراكات حجمية للبريد المعاملاتي، خطط تسويق مبنية على عدد جهات الاتصال، رسوم استخدام إضافية عند تجاوز الحصص، تسعير مستقل لتشغيل الأتمتة، إضافات مثل عناوين IP المخصصة، وعقود Enterprise مخصصة. لذلك لم تعد الشركة مجرد خدمة دفع حسب الاستخدام، ولا تنشر مساهمة كل منتج في الإيراد أو الهوامش.",
+      "verification_status": "verified_current_pricing",
+      "confidence": "high",
+      "claim_type": "current_multi_product_business_model",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "صفحات الشركة تثبت نموذجًا متعدد المنتجات يجمع الاشتراك والحجم وجهات الاتصال والتجاوزات والأتمتة والإضافات والمؤسسات.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-10",
+        "SRC-11",
+        "SRC-13",
+        "SRC-20"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-10",
+          "title": "Pricing",
+          "publisher": "Resend",
+          "source_type": "official_current_pricing",
+          "url": "https://resend.com/pricing/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "صفحات الشركة تثبت نموذجًا متعدد المنتجات يجمع الاشتراك والحجم وجهات الاتصال والتجاوزات والأتمتة والإضافات والمؤسسات."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "How we make money",
+          "publisher": "Resend",
+          "source_type": "official_business_model_explanation",
+          "url": "https://resend.com/handbook/company/how-we-make-money",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "صفحات الشركة تثبت نموذجًا متعدد المنتجات يجمع الاشتراك والحجم وجهات الاتصال والتجاوزات والأتمتة والإضافات والمؤسسات."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Introducing Automations",
+          "publisher": "Resend",
+          "source_type": "official_automation_product_announcement",
+          "url": "https://resend.com/blog/introducing-automations",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "صفحات الشركة تثبت نموذجًا متعدد المنتجات يجمع الاشتراك والحجم وجهات الاتصال والتجاوزات والأتمتة والإضافات والمؤسسات."
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Introducing the Scale plan",
+          "publisher": "Resend",
+          "source_type": "official_high_volume_pricing_and_compliance_explanation",
+          "url": "https://resend.com/blog/introducing-the-scale-plan",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "صفحات الشركة تثبت نموذجًا متعدد المنتجات يجمع الاشتراك والحجم وجهات الاتصال والتجاوزات والأتمتة والإضافات والمؤسسات."
+        }
+      ],
+      "limitations": "مساهمة كل منتج في الإيراد والهوامش غير معلنة."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. أعلنت Resend أن إيرادها نما خمسة أضعاف خلال 2025 وأنها أصبحت مربحة منذ 2025، لكنها لم تنشر قيمة الإيراد المطلقة أو MRR أو ARR أو صافي الربح. أسعار الخطط وعدد المستخدمين لا يسمحان باشتقاق الإيراد الشهري بسبب الخطة المجانية، وتفاوت الاستخدام، والخصومات، والعملاء المؤسسيين.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "monthly_revenue_and_profitability_separation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الشركة نشرت مضاعف نمو الإيراد والربحية، لكنها لم تنشر قيمة شهرية أو ARR أو صافي ربح.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-08",
+        "SRC-09",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "1,000,000 users",
+          "publisher": "Resend",
+          "source_type": "official_growth_revenue_and_product_milestone",
+          "url": "https://resend.com/blog/1-million-users",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الشركة نشرت مضاعف نمو الإيراد والربحية، لكنها لم تنشر قيمة شهرية أو ARR أو صافي ربح."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "3,000,000 users",
+          "publisher": "Resend",
+          "source_type": "official_latest_growth_and_profitability_milestone",
+          "url": "https://resend.com/blog/3-million-users",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الشركة نشرت مضاعف نمو الإيراد والربحية، لكنها لم تنشر قيمة شهرية أو ARR أو صافي ربح."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "How we make money",
+          "publisher": "Resend",
+          "source_type": "official_business_model_explanation",
+          "url": "https://resend.com/handbook/company/how-we-make-money",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الشركة نشرت مضاعف نمو الإيراد والربحية، لكنها لم تنشر قيمة شهرية أو ARR أو صافي ربح."
+        }
+      ],
+      "limitations": "التصريحات صادرة عن الشركة وليست قوائم مالية مدققة منشورة."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن. أعلنت الشركة تجاوز 3 ملايين مستخدم في 3 يونيو 2026، لكن هذا رقم تراكمي تسميه الشركة «مستخدمين» وليس زيارات شهرية أو MAU أو عملاء مدفوعين. كما أن 6.8 ملايين تنزيل أسبوعي لـReact Email مقياس تبنٍّ لحزمة مفتوحة المصدر، وليس حركة موقع Resend أو عدد حساباتها النشطة.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "high",
+      "claim_type": "website_traffic_user_and_download_separation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "رقم 3 ملايين يخص مستخدمي Resend كما تسميهم الشركة، و6.8 ملايين تخص تنزيلات npm؛ لا يوجد رقم رسمي لزيارات الموقع أو MAU.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-07",
+        "SRC-08",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "400,000 users and beyond",
+          "publisher": "Resend",
+          "source_type": "official_growth_and_operations_milestone",
+          "url": "https://resend.com/blog/400-000-users-and-beyond",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "رقم 3 ملايين يخص مستخدمي Resend كما تسميهم الشركة، و6.8 ملايين تخص تنزيلات npm؛ لا يوجد رقم رسمي لزيارات الموقع أو MAU."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "1,000,000 users",
+          "publisher": "Resend",
+          "source_type": "official_growth_revenue_and_product_milestone",
+          "url": "https://resend.com/blog/1-million-users",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "رقم 3 ملايين يخص مستخدمي Resend كما تسميهم الشركة، و6.8 ملايين تخص تنزيلات npm؛ لا يوجد رقم رسمي لزيارات الموقع أو MAU."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "3,000,000 users",
+          "publisher": "Resend",
+          "source_type": "official_latest_growth_and_profitability_milestone",
+          "url": "https://resend.com/blog/3-million-users",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "رقم 3 ملايين يخص مستخدمي Resend كما تسميهم الشركة، و6.8 ملايين تخص تنزيلات npm؛ لا يوجد رقم رسمي لزيارات الموقع أو MAU."
+        }
+      ],
+      "limitations": "تعريف «المستخدم» الحالي لا يثبت النشاط الشهري أو الدفع."
+    },
+    "$.overview.problem.text": {
+      "field_value": "بحسب رواية المؤسسين، كانت أدوات البريد الموجهة للمطورين تعاني من تجربة تكامل قديمة، وصعوبة بناء قوالب متوافقة مع عملاء البريد، وضعف الرؤية في أحداث التسليم، ومشكلات وصول الرسائل إلى البريد الوارد. المشكلة العملية لم تكن مجرد إرسال طلب API، بل تشغيل قناة حساسة للسمعة والامتثال والتوافق والاعتمادية على نطاق متزايد.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "founder_reported_email_infrastructure_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "رواية الشركة تذكر قدم الأدوات وصعوبة القوالب والتسليم والمرصدية كدوافع تأسيس المنتج.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-05",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Resend",
+          "publisher": "Resend",
+          "source_type": "official_company_history",
+          "url": "https://resend.com/about",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "رواية الشركة تذكر قدم الأدوات وصعوبة القوالب والتسليم والمرصدية كدوافع تأسيس المنتج."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "How we got here",
+          "publisher": "Resend",
+          "source_type": "official_company_timeline",
+          "url": "https://resend.com/handbook/company/how-we-got-here",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "رواية الشركة تذكر قدم الأدوات وصعوبة القوالب والتسليم والمرصدية كدوافع تأسيس المنتج."
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "What's next after 100,000 users",
+          "publisher": "Resend",
+          "source_type": "official_growth_milestone",
+          "url": "https://resend.com/blog/what-is-next-after-100-000-users",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "رواية الشركة تذكر قدم الأدوات وصعوبة القوالب والتسليم والمرصدية كدوافع تأسيس المنتج."
+        }
+      ],
+      "limitations": "هذا توصيف المؤسسين للسوق وليس قياسًا مقارنًا مستقلًا لكل منافس."
+    },
+    "$.overview.solution.text": {
+      "field_value": "بدأت Resend بمكتبة React Email المفتوحة المصدر لبناء القوالب، ثم بنت منصة تجمع إرسال البريد واستقباله والبث التسويقي والأتمتة في مكان واحد. توفر REST API وSMTP وSDKs وقوالب ومحررًا تعاونيًا وWebhooks وسجلات وتحليلات وصول وعناوين IP مخصصة، ثم وسعت واجهة المنتج للوكلاء عبر CLI وMCP وOAuth. القيمة الأساسية هي تقليل وقت التكامل مع إبقاء الاعتمادية والامتثال والمراقبة ضمن طبقة واحدة.",
+      "verification_status": "verified_current_product_capability",
+      "confidence": "high",
+      "claim_type": "current_platform_solution",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المنتج الحالي يجمع الإرسال والاستقبال والبث والأتمتة مع أدوات المطور والوكلاء.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-09",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "3,000,000 users",
+          "publisher": "Resend",
+          "source_type": "official_latest_growth_and_profitability_milestone",
+          "url": "https://resend.com/blog/3-million-users",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المنتج الحالي يجمع الإرسال والاستقبال والبث والأتمتة مع أدوات المطور والوكلاء."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Top 10 new features in 2025",
+          "publisher": "Resend",
+          "source_type": "official_product_capability_recap",
+          "url": "https://resend.com/blog/new-features-in-2025",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المنتج الحالي يجمع الإرسال والاستقبال والبث والأتمتة مع أدوات المطور والوكلاء."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Introducing Automations",
+          "publisher": "Resend",
+          "source_type": "official_automation_product_announcement",
+          "url": "https://resend.com/blog/introducing-automations",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المنتج الحالي يجمع الإرسال والاستقبال والبث والأتمتة مع أدوات المطور والوكلاء."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Changelog",
+          "publisher": "Resend",
+          "source_type": "official_current_product_changelog",
+          "url": "https://resend.com/changelog",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المنتج الحالي يجمع الإرسال والاستقبال والبث والأتمتة مع أدوات المطور والوكلاء."
+        }
+      ],
+      "limitations": "وجود القدرة لا يثبت حجم استخدامها أو مساهمتها في الإيراد."
+    },
+    "$.market_data.target_audience": {
+      "field_value": "المطورون المستقلون والشركات الناشئة وفرق المنتجات وSaaS، وفرق النمو والتسويق ودورة حياة العميل، والشركات عالية الحجم والمؤسسات التي تحتاج دعمًا وSLA وامتثالًا، إضافة إلى بناة الوكلاء الذين يحتاجون إدارة البريد برمجيًا. لا يمثل المستخدم الفردي أو تنزيل الحزمة أو المؤسسة وحدة عملاء موحدة.",
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "customer_segments",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الشرائح مستنتجة من الخطط والمنتجات والخصائص المؤسسية وأدوات الوكلاء.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-02",
+        "SRC-10",
+        "SRC-13",
+        "SRC-14",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Resend: Email for developers",
+          "publisher": "Y Combinator",
+          "source_type": "accelerator_company_profile",
+          "url": "https://www.ycombinator.com/companies/resend",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الشرائح مستنتجة من الخطط والمنتجات والخصائص المؤسسية وأدوات الوكلاء."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Pricing",
+          "publisher": "Resend",
+          "source_type": "official_current_pricing",
+          "url": "https://resend.com/pricing/",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الشرائح مستنتجة من الخطط والمنتجات والخصائص المؤسسية وأدوات الوكلاء."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Introducing Automations",
+          "publisher": "Resend",
+          "source_type": "official_automation_product_announcement",
+          "url": "https://resend.com/blog/introducing-automations",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الشرائح مستنتجة من الخطط والمنتجات والخصائص المؤسسية وأدوات الوكلاء."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Changelog",
+          "publisher": "Resend",
+          "source_type": "official_current_product_changelog",
+          "url": "https://resend.com/changelog",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الشرائح مستنتجة من الخطط والمنتجات والخصائص المؤسسية وأدوات الوكلاء."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "SOC 2",
+          "publisher": "Resend",
+          "source_type": "official_security_compliance_page",
+          "url": "https://resend.com/security/soc-2",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الشرائح مستنتجة من الخطط والمنتجات والخصائص المؤسسية وأدوات الوكلاء."
+        }
+      ],
+      "limitations": "لا تنشر الشركة توزيع العملاء أو الإيراد حسب الشريحة."
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر Resend تقديرًا رسميًا موحدًا لحجم سوق يمكن اعتماده كـTAM. تعمل الشركة عند تقاطع البنية التحتية للبريد المعاملاتي، والبريد التسويقي، ورسائل دورة الحياة، والبريد الوارد، وأدوات المطورين والوكلاء. لذلك حُذف ادعاء تجاوز السوق 10 مليارات دولار لغياب تعريف ومنهجية ومصدر أولي في الملف.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "market_scope_without_unsupported_tam",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر تثبت اتساع نطاق المنتج، لكنها لا تقدم TAM رسميًا موحدًا؛ لذلك لم يُستخدم تقدير 10 مليارات دولار.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-09",
+        "SRC-11",
+        "SRC-12",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "3,000,000 users",
+          "publisher": "Resend",
+          "source_type": "official_latest_growth_and_profitability_milestone",
+          "url": "https://resend.com/blog/3-million-users",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر تثبت اتساع نطاق المنتج، لكنها لا تقدم TAM رسميًا موحدًا؛ لذلك لم يُستخدم تقدير 10 مليارات دولار."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "How we make money",
+          "publisher": "Resend",
+          "source_type": "official_business_model_explanation",
+          "url": "https://resend.com/handbook/company/how-we-make-money",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر تثبت اتساع نطاق المنتج، لكنها لا تقدم TAM رسميًا موحدًا؛ لذلك لم يُستخدم تقدير 10 مليارات دولار."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Top 10 new features in 2025",
+          "publisher": "Resend",
+          "source_type": "official_product_capability_recap",
+          "url": "https://resend.com/blog/new-features-in-2025",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر تثبت اتساع نطاق المنتج، لكنها لا تقدم TAM رسميًا موحدًا؛ لذلك لم يُستخدم تقدير 10 مليارات دولار."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Introducing Automations",
+          "publisher": "Resend",
+          "source_type": "official_automation_product_announcement",
+          "url": "https://resend.com/blog/introducing-automations",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر تثبت اتساع نطاق المنتج، لكنها لا تقدم TAM رسميًا موحدًا؛ لذلك لم يُستخدم تقدير 10 مليارات دولار."
+        }
+      ],
+      "limitations": "وصف نطاق السوق ليس تقديرًا ماليًا لحجمه."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "تدرجت المقاييس الرسمية من 100 ألف مستخدم موثق في أبريل 2024 إلى 400 ألف في أبريل 2025، ثم مليون في ديسمبر 2025 وثلاثة ملايين في يونيو 2026. أعلنت الشركة أيضًا نمو الإيراد خمسة أضعاف في 2025 والربحية منذ 2025، ونمو الفريق إلى 43 شخصًا وReact Email إلى 6.8 ملايين تنزيل أسبوعيًا. هذه مؤشرات منفصلة؛ لا يثبت أي منها MAU أو عدد العملاء المدفوعين الحالي أو الإيراد المطلق.",
+      "verification_status": "verified_company_reported_growth",
+      "confidence": "high",
+      "claim_type": "user_revenue_team_and_open_source_growth",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر الرسمية توثق محطات المستخدمين ونمو الإيراد والربحية والفريق وتنزيلات React Email مع إبقاء المقاييس منفصلة.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-06",
+        "SRC-07",
+        "SRC-08",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "What's next after 100,000 users",
+          "publisher": "Resend",
+          "source_type": "official_growth_milestone",
+          "url": "https://resend.com/blog/what-is-next-after-100-000-users",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية توثق محطات المستخدمين ونمو الإيراد والربحية والفريق وتنزيلات React Email مع إبقاء المقاييس منفصلة."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "400,000 users and beyond",
+          "publisher": "Resend",
+          "source_type": "official_growth_and_operations_milestone",
+          "url": "https://resend.com/blog/400-000-users-and-beyond",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية توثق محطات المستخدمين ونمو الإيراد والربحية والفريق وتنزيلات React Email مع إبقاء المقاييس منفصلة."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "1,000,000 users",
+          "publisher": "Resend",
+          "source_type": "official_growth_revenue_and_product_milestone",
+          "url": "https://resend.com/blog/1-million-users",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية توثق محطات المستخدمين ونمو الإيراد والربحية والفريق وتنزيلات React Email مع إبقاء المقاييس منفصلة."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "3,000,000 users",
+          "publisher": "Resend",
+          "source_type": "official_latest_growth_and_profitability_milestone",
+          "url": "https://resend.com/blog/3-million-users",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "المصادر الرسمية توثق محطات المستخدمين ونمو الإيراد والربحية والفريق وتنزيلات React Email مع إبقاء المقاييس منفصلة."
+        }
+      ],
+      "limitations": "المستخدمون ليسوا بالضرورة نشطين أو مدفوعين، ومضاعف الإيراد لا يكشف الإيراد المطلق."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "الجولات المعلنة رسميًا التي أمكن توثيقها هي جولة تأسيسية بقيمة 3 ملايين دولار بعد Y Combinator، ثم Series A بقيمة 18 مليون دولار بقيادة Andreessen Horowitz في ديسمبر 2024؛ أي 21 مليون دولار إجمالًا في الجولتين المسمّاتين. لا تشمل هذه القيمة شروط YC غير المفصلة أو أي تمويل غير معلن، ولا تشمل الاستحواذين لأن مقابل Mergent وBriefer لم يُنشر.",
+      "verification_status": "verified_historical_financing",
+      "confidence": "high",
+      "claim_type": "announced_equity_funding",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الإعلانان الرسميان يثبتان 3 ملايين دولار Seed و18 مليون دولار Series A، أي 21 مليونًا في الجولتين المسمّاتين.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-03",
+        "SRC-04",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Resend raises $3M",
+          "publisher": "Resend",
+          "source_type": "official_seed_funding_announcement",
+          "url": "https://resend.com/blog/resend-raises-3m-seed-round",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الإعلانان الرسميان يثبتان 3 ملايين دولار Seed و18 مليون دولار Series A، أي 21 مليونًا في الجولتين المسمّاتين."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Resend raises $18M Series A",
+          "publisher": "Resend",
+          "source_type": "official_series_a_funding_announcement",
+          "url": "https://resend.com/blog/series-a",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الإعلانان الرسميان يثبتان 3 ملايين دولار Seed و18 مليون دولار Series A، أي 21 مليونًا في الجولتين المسمّاتين."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "How we got here",
+          "publisher": "Resend",
+          "source_type": "official_company_timeline",
+          "url": "https://resend.com/handbook/company/how-we-got-here",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الإعلانان الرسميان يثبتان 3 ملايين دولار Seed و18 مليون دولار Series A، أي 21 مليونًا في الجولتين المسمّاتين."
+        }
+      ],
+      "limitations": "لا يشمل الرقم تمويلًا غير معلن أو شروط YC غير المفصلة، ولا تُضاف إليه قيم الاستحواذ غير المنشورة."
+    },
+    "$.financials.valuation": {
+      "field_value": "غير معلن. لم تنشر Resend أو Y Combinator في المصادر المراجعة تقييمًا قبل الاستثمار أو بعده لجولة 3 ملايين دولار أو جولة 18 مليون دولار. لذلك حُذف تقدير 30 مليون دولار+، ولا يجوز اشتقاق التقييم من حجم الجولة أو أسماء المستثمرين أو عدد المستخدمين.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "private_company_valuation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "إعلانات الجولات وملف YC لا تنشر تقييمًا قبل الاستثمار أو بعده.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Resend: Email for developers",
+          "publisher": "Y Combinator",
+          "source_type": "accelerator_company_profile",
+          "url": "https://www.ycombinator.com/companies/resend",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "إعلانات الجولات وملف YC لا تنشر تقييمًا قبل الاستثمار أو بعده."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Resend raises $3M",
+          "publisher": "Resend",
+          "source_type": "official_seed_funding_announcement",
+          "url": "https://resend.com/blog/resend-raises-3m-seed-round",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "إعلانات الجولات وملف YC لا تنشر تقييمًا قبل الاستثمار أو بعده."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Resend raises $18M Series A",
+          "publisher": "Resend",
+          "source_type": "official_series_a_funding_announcement",
+          "url": "https://resend.com/blog/series-a",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "إعلانات الجولات وملف YC لا تنشر تقييمًا قبل الاستثمار أو بعده."
+        }
+      ],
+      "limitations": "غياب التقييم المنشور يمنع اشتقاقه من مبلغ الجولة أو عدد المستخدمين."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "اشتراكات البريد المعاملاتي حسب الحجم: الخطة المجانية حتى 3 آلاف رسالة شهريًا، وPro يبدأ من 20 دولارًا لـ50 ألف رسالة، وScale من 90 دولارًا لـ100 ألف رسالة وفق الأسعار المراجعة في 3 أغسطس 2026.",
+        "رسوم تجاوز حصة الرسائل في الخطط المدفوعة، وتُحسب على حزم إضافية من ألف رسالة بأسعار تختلف حسب الخطة.",
+        "خطط البريد التسويقي المبنية على عدد جهات الاتصال بدل عدد الرسائل، مع مستويات مجانية ومدفوعة وتسعير مؤسسي.",
+        "رسوم تشغيل الأتمتة بعد الحصة المشمولة؛ تعرض الصفحة الحالية 10 آلاف تشغيل شهريًا ثم 0.0015 دولار لكل تشغيل إضافي للخطط المدفوعة.",
+        "إضافة عنوان IP مخصص بسعر معلن قدره 30 دولارًا شهريًا للعملاء المؤهلين ضمن خطة Scale، مع خدمات التسخين والمراقبة.",
+        "عقود Enterprise مخصصة تشمل أحجامًا وشروط دعم وSLA واحتفاظ بيانات ونطاقات وعناوين IP مرنة.",
+        "الخطة المجانية وعدد المستخدمين والتنزيلات المفتوحة المصدر ليست إيرادًا، حتى إن كانت قناة اكتساب منخفضة التكلفة.",
+        "جولتا التمويل البالغ مجموعهما 21 مليون دولار ليستا إيرادًا أو ARR، والاستحواذان لا يثبتان تقييمًا أو تدفقًا نقديًا معلنًا."
+      ],
+      "verification_status": "verified_current_pricing",
+      "confidence": "high",
+      "claim_type": "current_revenue_streams_and_non_revenue_items",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "صفحات التسعير ونموذج الأعمال تثبت الاشتراكات والحجم وجهات الاتصال والتجاوزات والأتمتة والإضافات والمؤسسات.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-10",
+        "SRC-11",
+        "SRC-13",
+        "SRC-20"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-10",
+          "title": "Pricing",
+          "publisher": "Resend",
+          "source_type": "official_current_pricing",
+          "url": "https://resend.com/pricing/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "صفحات التسعير ونموذج الأعمال تثبت الاشتراكات والحجم وجهات الاتصال والتجاوزات والأتمتة والإضافات والمؤسسات."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "How we make money",
+          "publisher": "Resend",
+          "source_type": "official_business_model_explanation",
+          "url": "https://resend.com/handbook/company/how-we-make-money",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "صفحات التسعير ونموذج الأعمال تثبت الاشتراكات والحجم وجهات الاتصال والتجاوزات والأتمتة والإضافات والمؤسسات."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Introducing Automations",
+          "publisher": "Resend",
+          "source_type": "official_automation_product_announcement",
+          "url": "https://resend.com/blog/introducing-automations",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "صفحات التسعير ونموذج الأعمال تثبت الاشتراكات والحجم وجهات الاتصال والتجاوزات والأتمتة والإضافات والمؤسسات."
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Introducing the Scale plan",
+          "publisher": "Resend",
+          "source_type": "official_high_volume_pricing_and_compliance_explanation",
+          "url": "https://resend.com/blog/introducing-the-scale-plan",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "صفحات التسعير ونموذج الأعمال تثبت الاشتراكات والحجم وجهات الاتصال والتجاوزات والأتمتة والإضافات والمؤسسات."
+        }
+      ],
+      "limitations": "الأسعار المعلنة لا تكشف مزيج العملاء أو الإيراد المحقق."
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "اجعل المفتوح المصدر بوابة لا نسخة مجانية من المنتج",
+          "description": "حل React Email مشكلة القوالب قبل أن تطلب Resend من المطورين تغيير مزود الإرسال. بذلك بنت الثقة والتوزيع حول خطوة واضحة، ثم وسعت القيمة إلى الإرسال والاعتمادية والمراقبة. الأداة المفتوحة نجحت كقناة اكتساب ومعيار تقني، لا كبديل كامل للمنصة المدفوعة."
+        },
+        {
+          "title": "اختبر الاستعداد للدفع بأصغر معاملة ممكنة",
+          "description": "أرسل المؤسسون لأول مستخدم إنتاجي رابط دفع بقيمة 10 دولارات. لم يكن الرقم مقياس سوق، لكنه اختبر أن الألم حقيقي وأن المستخدم سيدفع قبل بناء شركة وتمويل فريق. الدرس هو فصل الإعجاب بالمنتج عن دليل الاستعداد للدفع."
+        },
+        {
+          "title": "تجربة المطور ميزة تشغيلية وليست تجميلًا",
+          "description": "وضوح API والـSDKs والسجلات والأمثلة يقلل وقت الدمج ووقت حل الحوادث. في بنية حساسة مثل البريد، كل دقيقة أقل في التشخيص أو الترحيل تنعكس على اعتماد المنتج والاحتفاظ، لذلك تصبح تجربة المطور جزءًا من اقتصاديات العميل."
+        },
+        {
+          "title": "وسّع المنتج بعد أن تثبت النواة",
+          "description": "بدأت Resend بالإرسال والقوالب، ثم أضافت التسويق والبريد الوارد والأتمتة. هذا التسلسل يقلل خطر بناء حزمة واسعة بلا موثوقية، ويتيح استخدام قاعدة واحدة من النطاقات والجهات والقوالب والأحداث لبيع منتجات إضافية."
+        },
+        {
+          "title": "سعّر كل منتج بوحدة القيمة المناسبة",
+          "description": "البريد المعاملاتي يُسعّر حسب حجم الرسائل، والتسويق حسب جهات الاتصال، والأتمتة حسب مرات التشغيل، والمؤسسات بشروط مخصصة. استخدام وحدة واحدة لكل شيء كان سيظلم بعض الشرائح ويخفي تكاليف الاستخدام الحقيقي."
+        },
+        {
+          "title": "الامتثال استثمار يسبق طلب المؤسسة",
+          "description": "بدأت الشركة مسار SOC 2 وهي صغيرة، ثم أضافت GDPR قبل أن تصبح العقود المؤسسية المحرك الوحيد. الامتثال المبكر يقلل تأخير الصفقات لاحقًا، لكنه لا يضمن غياب الحوادث؛ قيمته في بناء ضوابط واستجابة قابلة للتكرار."
+        },
+        {
+          "title": "الدعم البشري يمكن أن يكون قناة توزيع",
+          "description": "تعامل Resend الدعم كجزء من المنتج لا كمركز تكلفة منفصل. في خدمة ذات تعقيد تشغيلي وسمعة بريدية، الإجابة السريعة من شخص يفهم البنية تقلل التسرب وتولد توصيات، بينما تخفض الوثائق والأدوات الجيدة حجم الأسئلة المتكررة."
+        },
+        {
+          "title": "اشترِ الاختناق لا قائمة المزايا",
+          "description": "استحواذ Mergent استهدف جدولة المهام والاعتمادية، واستحواذ Briefer استهدف معالجة البيانات والتحليل على نطاق كبير. الصفقة المفيدة تُربط بعائق واضح في مسار النمو، ولا تُستخدم وحدها كدليل على الإيراد أو التقييم."
+        },
+        {
+          "title": "وحّد العلامة والمكدس بعد التجربة",
+          "description": "أوقفت الشركة new.email بعد أن وجدت أن علامة ومكدسًا منفصلين سرّعا الإطلاق لكن زادا تكلفة الصيانة، ثم نقلت الأفكار إلى محرر Resend. الدرس أن فصل تجربة جديدة مناسب لاختبار الفرضية، لكن نجاح التعلم قد يتطلب دمجها في النواة."
+        },
+        {
+          "title": "صمّم للوكيل مثلما صممت للمطور",
+          "description": "CLI وMCP وOAuth وواجهات API تجعل الوكيل قادرًا على تنفيذ مهام البريد دون الاعتماد على لوحة تحكم بشرية. التحول هنا ليس إضافة شعار AI؛ بل توفير مصادقة وأوامر ووثائق وسطح برمجي كامل يمكن للوكيل استخدامه بأمان."
+        }
+      ],
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "company_specific_lessons",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس مستنبطة من الخط الزمني والنمو والتسعير والامتثال والاستحواذات وتجربة new.email.",
+      "source_count": 8,
+      "source_ids": [
+        "SRC-05",
+        "SRC-06",
+        "SRC-09",
+        "SRC-11",
+        "SRC-15",
+        "SRC-17",
+        "SRC-18",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "How we got here",
+          "publisher": "Resend",
+          "source_type": "official_company_timeline",
+          "url": "https://resend.com/handbook/company/how-we-got-here",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مستنبطة من الخط الزمني والنمو والتسعير والامتثال والاستحواذات وتجربة new.email."
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "What's next after 100,000 users",
+          "publisher": "Resend",
+          "source_type": "official_growth_milestone",
+          "url": "https://resend.com/blog/what-is-next-after-100-000-users",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مستنبطة من الخط الزمني والنمو والتسعير والامتثال والاستحواذات وتجربة new.email."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "3,000,000 users",
+          "publisher": "Resend",
+          "source_type": "official_latest_growth_and_profitability_milestone",
+          "url": "https://resend.com/blog/3-million-users",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مستنبطة من الخط الزمني والنمو والتسعير والامتثال والاستحواذات وتجربة new.email."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "How we make money",
+          "publisher": "Resend",
+          "source_type": "official_business_model_explanation",
+          "url": "https://resend.com/handbook/company/how-we-make-money",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مستنبطة من الخط الزمني والنمو والتسعير والامتثال والاستحواذات وتجربة new.email."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "SOC 2",
+          "publisher": "Resend",
+          "source_type": "official_security_compliance_page",
+          "url": "https://resend.com/security/soc-2",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مستنبطة من الخط الزمني والنمو والتسعير والامتثال والاستحواذات وتجربة new.email."
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Resend acquires Mergent",
+          "publisher": "Resend",
+          "source_type": "official_acquisition_announcement",
+          "url": "https://resend.com/blog/resend-acquires-mergent",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مستنبطة من الخط الزمني والنمو والتسعير والامتثال والاستحواذات وتجربة new.email."
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Resend acquires Briefer",
+          "publisher": "Resend",
+          "source_type": "official_acquisition_announcement",
+          "url": "https://resend.com/blog/resend-acquires-briefer",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مستنبطة من الخط الزمني والنمو والتسعير والامتثال والاستحواذات وتجربة new.email."
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Sunsetting new.email",
+          "publisher": "Resend",
+          "source_type": "official_product_sunset_and_learning_post",
+          "url": "https://resend.com/blog/sunsetting-new-email",
+          "evidence_type": "supporting",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "الدروس مستنبطة من الخط الزمني والنمو والتسعير والامتثال والاستحواذات وتجربة new.email."
+        }
+      ],
+      "limitations": "الدروس تحليل تحريري وليست توصيات رسمية من الشركة."
+    },
+    "$.tools": {
+      "field_value": [
+        "Transactional Email API وSMTP Relay للإرسال المعاملاتي",
+        "Broadcasts وAudiences للبريد التسويقي وإدارة جهات الاتصال",
+        "Inbound Emails لاستقبال الرسائل وتحويلها إلى Webhooks",
+        "Automations لتسلسلات دورة الحياة المبنية على الأحداث",
+        "Templates والمحرر التعاوني وقدرات التحرير بمساعدة الذكاء الاصطناعي",
+        "React Email المفتوحة المصدر لبناء قوالب متوافقة",
+        "Webhooks وLogs API والتصدير وتتبع الأحداث",
+        "Deliverability Insights ومصادقة DKIM وSPF وDMARC",
+        "SDKs الرسمية وCLI وMCP وOAuth وتكاملات الوكلاء",
+        "Dedicated IPs والإرسال متعدد المناطق وخيارات Enterprise"
+      ],
+      "verification_status": "verified_current_product_capability",
+      "confidence": "high",
+      "claim_type": "verified_product_capabilities_not_internal_stack",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "القائمة تعرض منتجات وقدرات رسمية بدل تخمين لغات البرمجة أو قواعد البيانات الداخلية.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-10",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14",
+        "SRC-15",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-10",
+          "title": "Pricing",
+          "publisher": "Resend",
+          "source_type": "official_current_pricing",
+          "url": "https://resend.com/pricing/",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "القائمة تعرض منتجات وقدرات رسمية بدل تخمين لغات البرمجة أو قواعد البيانات الداخلية."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Top 10 new features in 2025",
+          "publisher": "Resend",
+          "source_type": "official_product_capability_recap",
+          "url": "https://resend.com/blog/new-features-in-2025",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "القائمة تعرض منتجات وقدرات رسمية بدل تخمين لغات البرمجة أو قواعد البيانات الداخلية."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Introducing Automations",
+          "publisher": "Resend",
+          "source_type": "official_automation_product_announcement",
+          "url": "https://resend.com/blog/introducing-automations",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "القائمة تعرض منتجات وقدرات رسمية بدل تخمين لغات البرمجة أو قواعد البيانات الداخلية."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Changelog",
+          "publisher": "Resend",
+          "source_type": "official_current_product_changelog",
+          "url": "https://resend.com/changelog",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "القائمة تعرض منتجات وقدرات رسمية بدل تخمين لغات البرمجة أو قواعد البيانات الداخلية."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "SOC 2",
+          "publisher": "Resend",
+          "source_type": "official_security_compliance_page",
+          "url": "https://resend.com/security/soc-2",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "القائمة تعرض منتجات وقدرات رسمية بدل تخمين لغات البرمجة أو قواعد البيانات الداخلية."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "GDPR",
+          "publisher": "Resend",
+          "source_type": "official_privacy_compliance_page",
+          "url": "https://resend.com/security/gdpr",
+          "evidence_type": "direct_or_qualifying",
+          "source_locator": "الصفحة أو البيان أو القسم ذي الصلة كما هو موضح في سجل المصادر",
+          "supports": "القائمة تعرض منتجات وقدرات رسمية بدل تخمين لغات البرمجة أو قواعد البيانات الداخلية."
+        }
+      ],
+      "limitations": "القائمة لا تصف المكدس البرمجي الداخلي الكامل للشركة."
+    }
+  }
 }

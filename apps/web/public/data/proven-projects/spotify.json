@@ -2,70 +2,1156 @@
   "id": "spotify",
   "slug": "spotify",
   "name": "سبوتيفاي (Spotify)",
-  "headline": "المنصة التي أنقذت صناعة الموسيقى من القرصنة وأعادت تعريف نموذج الاستهلاك",
-  "category": "Media & Entertainment / بث الموسيقى والصوتيات",
+  "headline": "من بديل قانوني للقرصنة إلى منصة صوت عالمية: كيف بنت Spotify محركًا مزدوجًا للاشتراكات والاكتشاف واقتصاد المبدعين",
+  "category": "Media & Entertainment / Music, Podcasts & Audiobooks / بث الموسيقى والصوتيات",
   "company": {
-    "location": "ستوكهولم، السويد",
-    "business_model": "النموذج المجاني المدعوم بالإعلانات (Freemium) واشتراكات مدفوعة للميزات الكاملة"
+    "location": "Spotify Technology S.A. شركة عامة مسجلة ومقيمة قانونيًا في لوكسمبورغ، بينما تعود جذورها وقاعدتها التشغيلية التاريخية إلى ستوكهولم في السويد. تعمل الخدمة في 184 سوقًا.",
+    "business_model": "نموذج Freemium ثنائي القطاعات. تحقق Spotify معظم إيراداتها من اشتراكات Premium للأفراد والثنائيات والعائلات والطلاب وخطط أو إضافات أخرى بحسب السوق، بينما تحقق إيراد الخدمة المجانية من الإعلانات الصوتية والمرئية وإعلانات العرض والمزادات البرمجية ومنصات الشراء الذاتي. توسعت القيمة المقدمة إلى البودكاست والفيديو والكتب الصوتية وأدوات المبدعين، لكن الاشتراكات والإعلانات يظلان القطاعين الماليين المعلنين."
   },
   "directory_snapshot": {
-    "monthly_revenue": "أكثر من مليار دولار شهرياً",
-    "monthly_traffic": "أكثر من 600 مليون مستخدم نشط (بينهم مئات الملايين من المشتركين المدفوعين)"
+    "monthly_revenue": "نحو 1.511 مليار يورو كمتوسط شهري حسابي لأحدث ربع مالي منشور. حققت Spotify إيرادات قدرها 4.533 مليارات يورو في الربع الأول من 2026، منها 92% من Premium و8% من القطاع المدعوم بالإعلانات. هذا متوسط ربعي وليس MRR تعاقديًا.",
+    "monthly_traffic": "بلغ عدد المستخدمين النشطين شهريًا 761 مليونًا في نهاية الربع الأول من 2026، منهم 293 مليون مشترك Premium و483 مليون مستخدم نشط في الخدمة المدعومة بالإعلانات. هذه مقاييس مختلفة ولا ينبغي جمعها ببساطة."
   },
   "overview": {
     "problem": {
-      "text": "في أوائل الألفينات، دمرت القرصنة (مثل منصة Napster) إيرادات صناعة الموسيقى عالمياً. كان شراء الأغاني (عبر iTunes) مكلفاً، بينما كانت القرصنة مجانية تماماً لكنها غير قانونية ومرهقة للمستخدم الذي يضطر للبحث عن الملفات وتحميلها وتخزينها. لم تكن أبل و iTunes هو الحل الأمثل؛ فشراء أغنية واحدة بـ 99 سنتاً كان أمراً لا يستطيع الشباب أو المراهقون تحمله يومياً. وفي الوقت نفسه، كان تحميل ملفات MP3 المقرصنة أمراً معقداً، يتطلب تنزيل برامج خطيرة، وإصلاح بيانات الأغاني يدوياً، ونقلها سلكياً إلى الهواتف. كانت تجربة الاستماع للموسيقى عبارة عن (عمل لوجستي) مرهق جداً يفصل المستمع عن شغفه الحقيقي.",
-      "impact": "انهيار إيرادات شركات الإنتاج والفنانين، وتجربة مستخدم سيئة مليئة بالفيروسات والملفات المعطوبة للمستمعين. مما أدى لخسارة الفنانين لمصدر دخلهم الأساسي، وانهيار كبرى شركات الإنتاج الموسيقي التي فشلت في التكيف مع ثورة الإنترنت، ليصبح قطاع الموسيقى مهدداً بالزوال."
+      "text": "تأسست Spotify في سياق كانت فيه القرصنة توفر وصولًا واسعًا للموسيقى، لكنها غير قانونية وغير موثوقة ولا تولد نظام تعويض منظمًا لأصحاب الحقوق. في المقابل، كان شراء الملفات أو الألبومات يتطلب قرار دفع لكل عمل، ويجعل الاكتشاف وإدارة المكتبة ونقل الملفات بين الأجهزة أكثر احتكاكًا.",
+      "impact": "عندما تكون التجربة القانونية أبطأ أو أغلى أو أقل مرونة من البديل غير القانوني، يصعب تغيير السلوك. لكن تقديم مكتبة مرخصة عند الطلب يخلق التزامات ضخمة ومتغيرة لأصحاب الحقوق، ويجعل Spotify تعتمد على اتفاقيات الترخيص والتسعير والاحتفاظ والإعلانات للوصول إلى هوامش مستدامة."
     },
     "solution": {
-      "text": "لم يأتِ الحل من المحاكم أو إيقاف القراصنة، بل من السويد عبر منصة تبث الموسيقى (Streaming) فوراً وبجودة عالية. الفكرة: 'لا يمكننا محاربة القرصنة إلا ببناء منتج أسهل وأفضل من القرصنة'. واجهة ممتازة، كل الأغاني متاحة فوراً، ومجانية (مقابل إعلانات) أو باشتراك رمزي لنسخة بدون إعلانات. الفكرة الثورية لسبوتيفاي كانت (الوصول بدلاً من التملك Access over Ownership). لماذا تشتري ملفاً وتخزنه في قرصك الصلب بينما يمكنك استئجار (حق الوصول) لمكتبة موسيقى العالم بأكملها؟ وبفضل تقنيات البث السريعة جداً، كانت الأغنية تبدأ في أجزاء من الثانية بمجرد النقر عليها، مما ألغى تماماً الحاجة لانتظار التحميل."
+      "text": "قدمت Spotify وصولًا فوريًا إلى مكتبة مرخصة عبر نموذج مجاني مدعوم بالإعلانات وPremium بلا فواصل موسيقية مع الاستماع دون اتصال وجودة أعلى. ثم بنت طبقة اكتشاف وتخصيص تشمل Discover Weekly وRelease Radar وDJ وBlend وJam وميزات محادثية مثل Talk to Spotify، وتوسعت إلى البودكاست والفيديو والكتب الصوتية وبرامج تحقيق الدخل للمبدعين."
     }
   },
   "market_data": {
-    "target_audience": "عشاق الموسيقى والبودكاست من كافة الأعمار عالمياً. والمعلنين الذين يبحثون عن استهداف دقيق للمستمعين بناءً على حالتهم المزاجية وأنماط استماعهم.",
-    "market_size": "سناعة الموسيقى والترفيه الصوتي العالمية بمليارات الدولارات. والذي لا يقتصر على الموسيقى فقط، بل امتد ليشمل صناعة البودكاست والكتب الصوتية العالمية.",
-    "growth_rate": "أعادت صناعة الموسيقى العالمية للنمو لأول مرة منذ 15 عاماً، وتصدرت السوق متغلبة على Apple Music و Amazon. بفضل الخوارزميات الذكية التي تضمن إبقاء المستمع داخل المنصة لساعات طويلة يومياً."
+    "target_audience": "مستمعو الموسيقى والبودكاست والكتب الصوتية عالميًا، من مستخدمي الخطة المجانية إلى الأفراد والعائلات والطلاب والمشتركين عبر شركات الاتصالات. كما تستهدف الفنانين وشركات التسجيل والناشرين وكتاب الأغاني وصناع البودكاست والمؤلفين والمعلنين والوكالات.",
+    "market_size": "لا تنشر Spotify رقمًا رسميًا واحدًا لحجم سوقها الكلي، لأنها تعمل عبر الموسيقى والبودكاست والكتب الصوتية والإعلانات وأدوات المبدعين. المؤشرات المباشرة هي 761 مليون MAU و293 مليون مشترك مدفوع و184 سوقًا، وأكثر من 100 مليون مقطع و7 ملايين عنوان بودكاست و700 ألف كتاب صوتي.",
+    "growth_rate": "ارتفع MAU من 675 مليونًا في نهاية 2024 إلى 751 مليونًا في نهاية 2025 ثم 761 مليونًا في Q1 2026. ارتفع مشتركو Premium من 263 مليونًا إلى 290 مليونًا ثم 293 مليونًا. ارتفعت إيرادات 2025 بنسبة 10% إلى 17.186 مليار يورو، ثم ارتفعت إيرادات Q1 2026 بنسبة 8% فعليًا إلى 4.533 مليارات يورو، أو 14% على أساس ثابت للعملة."
   },
   "financials": {
-    "initial_investment": "استثمارات ضخمة من صناديق أوروبية وأمريكية لتمويل المعركة الشرسة للحصول على حقوق الملكية الفكرية من شركات الإنتاج. وهو التمويل الذي كان حاسماً في إقناع شركات الإنتاج بالرهان على نموذج البث بدلاً من شراء الأغاني المفردة.",
-    "valuation": "$50B+ (كشركة مساهمة عامة) (تعكس قوة العلامة التجارية وقدرتها على الاحتفاظ بمئات الملايين من المشتركين الدائمين).",
+    "initial_investment": "رأس المال الشخصي الأول للمؤسسين Daniel Ek وMartin Lorentzon غير مفصح عنه في المصادر الرسمية التي تمت مراجعتها. تأسست Spotify في أبريل 2006 وأُطلقت في أكتوبر 2008. قبل الإدراج اعتمدت على تمويلات أسهم وديون؛ ففي 2015 تلقت نحو 474 مليون يورو من إصدار أسهم إضافية، وفي 2016 أصدرت سندات قابلة للتحويل بقيمة اسمية مليار دولار نتج عنها نحو 861 مليون يورو صافي نقد. أُدرجت في NYSE مباشرة عام 2018 ولم تتلقَ الشركة عائدات من بيع المساهمين لأسهمهم.",
+    "valuation": "Spotify شركة عامة مدرجة في بورصة نيويورك تحت الرمز SPOT، ولذلك تتغير قيمتها السوقية يوميًا ولا يصح تثبيت رقم 50 مليار دولار كتقييم دائم. بدأ تداول السهم في 3 أبريل 2018 عبر Direct Listing، وكان السعر المرجعي 132 دولارًا، لكنه لم يكن سعر طرح أو تمويلًا جديدًا للشركة.",
     "revenue_streams": [
-      "اشتراكات Spotify Premium (تمثل أكثر من 85% من الإيرادات الكلية).",
-      "إيرادات الإعلانات من المستخدمين في الخطة المجانية.",
-      "مبيعات تذاكر الحفلات والشراكات الحديثة.",
-      "إيرادات منصة الإعلانات الصوتية للشركات (Spotify Ad Studio).",
-      "رسوم الشراكات مع شركات الاتصالات ومصنعي الأجهزة."
+      "اشتراكات Premium Individual وDuo وFamily وStudent وخطط محلية أو Basic بحسب السوق",
+      "اشتراكات Premium المباعة مباشرة أو عبر شركات اتصالات وشركاء",
+      "Audiobooks+ والإضافات المدفوعة لساعات استماع إضافية",
+      "إعلانات صوتية ومرئية وإعلانات عرض داخل الخدمة المجانية",
+      "مبيعات إعلانية مباشرة للوكالات والعلامات التجارية على أساس CPM",
+      "Spotify Ads Manager كمنصة شراء ذاتي للمعلنين",
+      "Spotify Ad Exchange والمزادات البرمجية وأسواق الإعلانات",
+      "إيرادات إعلانية مرتبطة بالبودكاست والفيديو",
+      "برامج Marketplace وترويج واكتشاف مدفوعة ضمن العلاقة مع أصحاب الحقوق",
+      "ترتيبات تجارية مع شركاء الأجهزة والاتصالات والتوزيع"
     ]
   },
   "lessons": [
     {
-      "title": "قمع الخطة المجانية (The Freemium Funnel)",
-      "description": "واجهت سبوتيفاي انتقادات واسعة لتقديمها الموسيقى مجاناً. لكن المؤسس دانيال إيك أدرك أن الخطة المجانية ليست المنتج، بل هي (أداة الاستحواذ على العملاء CAC). استخدام نسخة مجانية بإعلانات مزعجة قليلاً وقيود على تخطي الأغاني يدفع نسبة ضخمة (حوالي 40%) من المستخدمين للترقية للنسخة المدفوعة، وهو معدل تحويل تاريخي."
+      "title": "الفوز على البديل المجاني يبدأ بتجربة أفضل منه",
+      "description": "لم يكن كافيًا وصف القرصنة بأنها غير قانونية. احتاجت Spotify إلى تشغيل سريع ومكتبة واسعة واكتشاف ومزامنة بين الأجهزة بحيث يصبح المسار القانوني أقل احتكاكًا."
     },
     {
-      "title": "حروب الاستحواذ والتنوع (Podcasts as Moat)",
-      "description": "لأن سبوتيفاي تدفع 70% من إيراداتها لشركات إنتاج الموسيقى، كانت هوامش ربحها ضعيفة. لإنقاذ اقتصاديات الشركة، استثمرت أكثر من مليار دولار للاستحواذ على شركات البودكاست (مثل Joe Rogan). البودكاست يقلل اعتمادهم على شركات الموسيقى، ويحتفظ بالمستخدم داخل المنصة، ويرفع هوامش الربح الإعلانية."
+      "title": "Freemium قناة اكتساب ونشاط مستقل",
+      "description": "الخدمة المدعومة بالإعلانات تخدم من لا يريد الدفع وتولد إيرادًا بذاتها، وفي الوقت نفسه تحول جزءًا من جمهورها إلى Premium."
     },
     {
-      "title": "اكتشاف المحتوى (Discover Weekly)",
-      "description": "الميزة التنافسية لسبوتيفاي ليست توفير الأغاني (كل المنصات تملك نفس الأغاني)، بل (الخوارزمية). قدرتها الهائلة على التنبؤ بما تحبه وتقديم قائمة أسبوعية مخصصة لك (Discover Weekly) خلقت ولاءً (Lock-in Effect) يجعل من المستحيل على المستخدم الانتقال لمنصة أخرى وترك تاريخه الموسيقي."
+      "title": "نسبة المشتركين لا تساوي نسبة الإيرادات",
+      "description": "كان Premium يمثل 293 مليونًا من 761 مليون MAU في Q1 2026، لكنه ولّد 92% من الإيراد."
     },
     {
-      "title": "قوة البيانات كحاجز خروج (Data as a Moat)",
-      "description": "بعد أن تستخدم سبوتيفاي لعدة سنوات، تصبح المنصة (تعرف ذوقك الموسيقي) أفضل منك شخصياً. القوائم التي بنتها لك الخوارزمية، والأغاني التي قمت بحفظها، تشكل ما يسمى بتكلفة التخلي (Switching Cost) العالية جداً. حتى لو قدمت Apple Music اشتراكاً مجانياً، سيرفض المستخدم ترك سبوتيفاي لأنه لا يريد البدء من الصفر في تدريب خوارزمية جديدة."
+      "title": "العوائد لأصحاب الحقوق ليست دخل الفنان المباشر",
+      "description": "Spotify تدفع شركات التسجيل والموزعين والناشرين وأصحاب الحقوق، ثم توزع الأموال وفق عقود منفصلة؛ لذلك لا يوجد سعر ثابت لكل Stream يصل للفنان."
     },
     {
-      "title": "حملات نهاية العام التسويقية (Spotify Wrapped)",
-      "description": "يعتبر (Spotify Wrapped) من أعظم الحملات التسويقية الفيروسية في التاريخ. في نهاية كل عام، تعرض المنصة إحصائياتك الموسيقية بتصميم بصري مذهل وقابل للمشاركة. ملايين المستخدمين ينشرونها على إنستغرام وتويتر تفاخراً بأذواقهم، مما يولد لسبوتيفاي إعلانات مجانية بمليارات الدولارات ويثير غيرة مستخدمي المنصات المنافسة."
+      "title": "الاشتراك الشهري لا يلغي اعتماد المورد",
+      "description": "تعتمد Spotify على تراخيص المحتوى، ونمو الإيراد يرفع أيضًا تكاليف الموسيقى والكتب وبرامج المبدعين."
+    },
+    {
+      "title": "التخصيص يقلل تكلفة الاختيار",
+      "description": "في مكتبة تتجاوز 100 مليون مقطع تتحول الوفرة إلى عبء، فتقلل القوائم وDJ والبحث الحواري وقت العثور على محتوى مناسب."
+    },
+    {
+      "title": "البيانات تصنع سياقًا لا حقيقة مطلقة",
+      "description": "التخطي والحفظ والوقت والجهاز إشارات مفيدة لكنها تتأثر بالمزاج والحسابات المشتركة والاستماع العرضي."
+    },
+    {
+      "title": "البشر والخوارزميات يؤديان أدوارًا مختلفة",
+      "description": "قوائم Algotorial تجمع التحرير البشري مع ترتيب شخصي، فتضيف الثقافة والسياق مع التخصيص واسع النطاق."
+    },
+    {
+      "title": "الصوت المتعدد يوسع الاستخدام ويزيد اقتصاديات الحقوق",
+      "description": "البودكاست والفيديو والكتب الصوتية يوسعون حالات الاستخدام، لكن لكل صيغة حقوق وتكاليف واكتشاف وتحقيق دخل مختلف."
+    },
+    {
+      "title": "البودكاست ليس طريقًا مضمونًا لهامش أعلى",
+      "description": "اقتصاد البودكاست يعتمد على الإعلانات والمشاهدة والعقود ومدفوعات المبدعين، لا على غياب شركات التسجيل فقط."
+    },
+    {
+      "title": "الإعلان نشاط موسمي",
+      "description": "الطلب الإعلاني يرتفع عادةً في الربع الرابع وينخفض في الأول، لذلك يجب فصل الموسم عن جودة المنتج."
+    },
+    {
+      "title": "Wrapped يحول البيانات الخاصة إلى توزيع اجتماعي",
+      "description": "نجاحه يأتي من تحويل سجل استخدام شخصي إلى قصة يرغب المستخدم في مشاركتها مع الحفاظ على التحكم والخصوصية."
+    },
+    {
+      "title": "الاستخدام عبر أجهزة متعددة يرفع الاحتفاظ",
+      "description": "تقول Spotify إن المشترك متعدد الأجهزة يملك تفاعلًا أعلى وتسربًا أقل، ما يجعل التكامل مع السيارة والتلفزيون والسماعة أداة LTV."
+    },
+    {
+      "title": "الإدراج المباشر يحقق السيولة دون تمويل جديد",
+      "description": "سمح Direct Listing بالتداول للمساهمين وحدد سعرًا سوقيًا، لكن Spotify لم تحصل على عائدات من مبيعاتهم."
     }
   ],
   "tools": [
-    "Python / Java (لخدمات الواجهة الخلفية)",
-    "C++ (لبرمجة مشغل الصوتيات فائق السرعة)",
-    "Machine Learning (لخوارزميات التوصية واكتشاف الموسيقى)",
-    "GCP (Google Cloud Platform)",
-    "Cassandra",
-    "Hadoop",
-    "Docker"
+    "Spotify Free وPremium عبر الهاتف والويب وسطح المكتب والسيارات والسماعات والتلفزيون وأجهزة الألعاب",
+    "خطط Individual وDuo وFamily وStudent وBasic وخطط محلية",
+    "التنزيل دون اتصال وجودة صوت عالية وLossless في أسواق مختارة",
+    "Discover Weekly وRelease Radar وDaily Mix وDaylist",
+    "AI DJ وPrompted Playlist وTalk to Spotify",
+    "SongDNA وAbout the Song",
+    "Blend وJam والقوائم التعاونية والرسائل",
+    "Wrapped",
+    "استضافة وتوزيع البودكاست الصوتي والمرئي",
+    "Spotify Partner Program",
+    "Spotify for Creators وSpotify for Artists وSpotify for Authors",
+    "Audiobooks in Premium وAudiobooks+ وRecaps وPage Match",
+    "Spotify Ads Manager وSpotify Ad Exchange وGen AI Ads",
+    "أنظمة Machine Learning للتخصيص والبحث والترتيب",
+    "منصات منفصلة للتخصيص والتجارب وتشغيل آلاف الاختبارات",
+    "Voyager للبحث Approximate Nearest Neighbor",
+    "Algotorial playlists",
+    "Spotify Web API وتكامل الأجهزة والخدمات الخارجية"
+  ],
+  "verification": {
+    "status": "verified_from_spotify_sec_investor_product_creator_advertising_and_engineering_sources",
+    "verified_on": "2026-08-03",
+    "source_policy": "تم الاعتماد على تقرير Spotify السنوي ونتائج Q1 2026 لدى SEC، وعلاقات المستثمرين، وSpotify Newsroom، وصفحات المنتج والهندسة الرسمية.",
+    "important_notes": [
+      "أحدث نتائج مالية منشورة ومتاحة عند التحقق هي Q1 2026؛ لم تكن نتائج Q2 2026 منشورة رسميًا بعد.",
+      "متوسط 1.511 مليار يورو شهريًا مشتق من إيراد Q1 2026 وليس MRR تعاقديًا.",
+      "761 مليون MAU و293 مليون Premium و483 مليون Ad-Supported مقاييس مختلفة.",
+      "بلغت إيرادات 2025 نحو 17.186 مليار يورو، منها 15.350 مليار Premium و1.836 مليار Ad-Supported.",
+      "دفعت Spotify أكثر من 11 مليار دولار لصناعة الموسيقى في 2025، لكنه ليس إيراد الفنانين المباشر ولا إيراد Spotify.",
+      "أسعار Premium تختلف حسب البلد والخطة والعروض والشريك.",
+      "تقييم Spotify السوقي متغير؛ 50 مليار دولار ليس رقمًا دائمًا.",
+      "Direct Listing عام 2018 لم يولد عائدات جديدة للشركة من بيع الأسهم المسجلة.",
+      "تم حذف الادعاء بأن Spotify أنقذت صناعة الموسيقى وحدها.",
+      "تم حذف قائمة Python وJava وC++ وGCP وCassandra وHadoop وDocker كحزمة تقنية حالية."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول بالقيم والمصادر وحالة التحقق والثقة وحدود المقاييس المالية والتشغيلية.",
+    "status_values": {
+      "verified": "مدعوم بمصدر رسمي أو إفصاح تنظيمي.",
+      "verified_current_quarter_calculation": "مشتق من أحدث ربع مالي منشور.",
+      "verified_current_platform_metrics": "مقياس منشور رسميًا.",
+      "verified_with_metric_definition_limits": "صحيح مع قيود تعريفية.",
+      "verified_historical_financing": "تمويل تاريخي موثق.",
+      "verified_as_dynamic_public_market_value": "قيمة سوقية متغيرة.",
+      "verified_product_capability": "قدرة موثقة رسميًا.",
+      "analytical_inference": "تحليل مبني على حقائق موثقة."
+    },
+    "confidence_scale": {
+      "high": "إفصاح SEC أو مصدر Spotify رسمي مباشر.",
+      "medium_high": "مصدر أولي تاريخي أو استنتاج محدود.",
+      "medium": "مقياس شركة يحتاج إلى قيود تعريفية."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "Spotify Technology S.A. شركة عامة مسجلة ومقيمة قانونيًا في لوكسمبورغ، بينما تعود جذورها وقاعدتها التشغيلية التاريخية إلى ستوكهولم في السويد. تعمل الخدمة في 184 سوقًا.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "legal_domicile_operational_origin_and_market_scope",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يثبت SEC الإقامة القانونية في لوكسمبورغ، وتوثق المصادر الرسمية ستوكهولم والجذور السويدية والانتشار في 184 سوقًا.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-18",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Spotify Fiscal 2025 Form 20-F",
+          "publisher": "U.S. Securities and Exchange Commission / Spotify",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1639920/000162828026006874/ck0001639920-20251231.htm",
+          "evidence_type": "direct",
+          "source_locator": "20-F → Corporate information",
+          "supports": "الكيان المسجل و184 سوقًا",
+          "published_on": "2026-02-05"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Spotify 2018 Annual Report",
+          "publisher": "U.S. Securities and Exchange Commission / Spotify",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1639920/000156459019002688/ck0001639920-20f_20181231.htm",
+          "evidence_type": "direct",
+          "source_locator": "2018 20-F → History",
+          "supports": "المكتب التشغيلي التاريخي في ستوكهولم",
+          "published_on": "2019-02"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Spotify Contact Locations",
+          "publisher": "Spotify",
+          "source_type": "official_contact_page",
+          "url": "https://www.spotify.com/ie/about-us/contact/",
+          "evidence_type": "direct",
+          "source_locator": "Contact page",
+          "supports": "عنوان ستوكهولم"
+        }
+      ],
+      "limitations": "Spotify ليست شركة سويدية قانونيًا رغم جذورها التشغيلية السويدية."
+    },
+    "$.company.business_model": {
+      "field_value": "نموذج Freemium ثنائي القطاعات. تحقق Spotify معظم إيراداتها من اشتراكات Premium للأفراد والثنائيات والعائلات والطلاب وخطط أو إضافات أخرى بحسب السوق، بينما تحقق إيراد الخدمة المجانية من الإعلانات الصوتية والمرئية وإعلانات العرض والمزادات البرمجية ومنصات الشراء الذاتي. توسعت القيمة المقدمة إلى البودكاست والفيديو والكتب الصوتية وأدوات المبدعين، لكن الاشتراكات والإعلانات يظلان القطاعين الماليين المعلنين.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "premium_subscription_and_ad_supported_freemium_model",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تفصل تقارير SEC قطاعي Premium وAd-Supported وتوثق قنوات الإعلان.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Spotify Fiscal 2025 Form 20-F",
+          "publisher": "U.S. Securities and Exchange Commission / Spotify",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1639920/000162828026006874/ck0001639920-20251231.htm",
+          "evidence_type": "direct",
+          "source_locator": "20-F → Business Model",
+          "supports": "نموذج Premium وAd-Supported",
+          "published_on": "2026-02-05"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Spotify Q1 2026 Form 6-K",
+          "publisher": "U.S. Securities and Exchange Commission / Spotify",
+          "source_type": "sec_quarterly_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1639920/000162828026027951/spot-20260331x6xk.htm",
+          "evidence_type": "direct",
+          "source_locator": "6-K → Revenue",
+          "supports": "92% Premium و8% إعلانات",
+          "published_on": "2026-04-28"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Spotify Advertising Platform Updates",
+          "publisher": "Spotify",
+          "source_type": "official_adtech_announcement",
+          "url": "https://newsroom.spotify.com/2025-04-02/spotify-tunes-up-platform-to-make-it-easy-for-advertisers-to-buy-create-and-measure/",
+          "evidence_type": "direct",
+          "source_locator": "Advertising update",
+          "supports": "Ads Manager وAd Exchange",
+          "published_on": "2025-04-02"
+        }
+      ]
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "نحو 1.511 مليار يورو كمتوسط شهري حسابي لأحدث ربع مالي منشور. حققت Spotify إيرادات قدرها 4.533 مليارات يورو في الربع الأول من 2026، منها 92% من Premium و8% من القطاع المدعوم بالإعلانات. هذا متوسط ربعي وليس MRR تعاقديًا.",
+      "verification_status": "verified_current_quarter_calculation",
+      "confidence": "high",
+      "claim_type": "derived_monthly_average_from_latest_quarter",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تم تقسيم إيرادات Q1 2026 البالغة 4.533 مليارات يورو على ثلاثة أشهر.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Spotify Q1 2026 Form 6-K",
+          "publisher": "U.S. Securities and Exchange Commission / Spotify",
+          "source_type": "sec_quarterly_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1639920/000162828026027951/spot-20260331x6xk.htm",
+          "evidence_type": "direct",
+          "source_locator": "6-K → Segment revenue",
+          "supports": "إيرادات Q1 2026 وتقسيم القطاعين",
+          "published_on": "2026-04-28"
+        }
+      ],
+      "limitations": "الإعلان موسمي والعملات تؤثر في النتائج.",
+      "calculation": {
+        "q1_2026_revenue_eur": 4533000000,
+        "formula": "4,533,000,000 ÷ 3",
+        "monthly_average_eur": 1511000000,
+        "premium_share_percent": 92,
+        "ad_supported_share_percent": 8
+      }
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "بلغ عدد المستخدمين النشطين شهريًا 761 مليونًا في نهاية الربع الأول من 2026، منهم 293 مليون مشترك Premium و483 مليون مستخدم نشط في الخدمة المدعومة بالإعلانات. هذه مقاييس مختلفة ولا ينبغي جمعها ببساطة.",
+      "verification_status": "verified_current_platform_metrics",
+      "confidence": "high",
+      "claim_type": "mau_premium_and_ad_supported_scale",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تقدم Q1 2026 أحدث MAU ومشتركي Premium ومستخدمي الخدمة الإعلانية.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-02",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Spotify Q1 2026 Form 6-K",
+          "publisher": "U.S. Securities and Exchange Commission / Spotify",
+          "source_type": "sec_quarterly_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1639920/000162828026027951/spot-20260331x6xk.htm",
+          "evidence_type": "direct",
+          "source_locator": "6-K → Users",
+          "supports": "761 مليون MAU و293 مليون Premium و483 مليون Ad-Supported",
+          "published_on": "2026-04-28"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "About Spotify",
+          "publisher": "Spotify",
+          "source_type": "official_company_information",
+          "url": "https://newsroom.spotify.com/company-info/",
+          "evidence_type": "direct",
+          "source_locator": "Company info",
+          "supports": "الحجم الحالي والأسواق"
+        }
+      ],
+      "limitations": "Premium Subscriber قد يمثل حسابًا فرعيًا في Family أو Duo."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "تأسست Spotify في سياق كانت فيه القرصنة توفر وصولًا واسعًا للموسيقى، لكنها غير قانونية وغير موثوقة ولا تولد نظام تعويض منظمًا لأصحاب الحقوق. في المقابل، كان شراء الملفات أو الألبومات يتطلب قرار دفع لكل عمل، ويجعل الاكتشاف وإدارة المكتبة ونقل الملفات بين الأجهزة أكثر احتكاكًا.",
+        "impact": "عندما تكون التجربة القانونية أبطأ أو أغلى أو أقل مرونة من البديل غير القانوني، يصعب تغيير السلوك. لكن تقديم مكتبة مرخصة عند الطلب يخلق التزامات ضخمة ومتغيرة لأصحاب الحقوق، ويجعل Spotify تعتمد على اتفاقيات الترخيص والتسعير والاحتفاظ والإعلانات للوصول إلى هوامش مستدامة."
+      },
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "piracy_legal_access_and_rights_economics_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تصف Spotify تأسيسها كبديل قانوني للقرصنة، ويثبت SEC اعتمادها على تراخيص المحتوى.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-05",
+        "SRC-01",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Spotify: A Visual History",
+          "publisher": "Spotify",
+          "source_type": "official_company_history",
+          "url": "https://newsroom.spotify.com/spotify-timeline/",
+          "evidence_type": "direct",
+          "source_locator": "Timeline",
+          "supports": "التأسيس والترخيص والإطلاق"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Spotify Fiscal 2025 Form 20-F",
+          "publisher": "U.S. Securities and Exchange Commission / Spotify",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1639920/000162828026006874/ck0001639920-20251231.htm",
+          "evidence_type": "direct",
+          "source_locator": "20-F → Content licensing",
+          "supports": "الاعتماد على الحقوق",
+          "published_on": "2026-02-05"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Loud & Clear 2026 Highlights",
+          "publisher": "Spotify",
+          "source_type": "official_creator_economics_report",
+          "url": "https://newsroom.spotify.com/2026-03-11/loud-and-clear-music-economics-highlights/",
+          "evidence_type": "direct",
+          "source_locator": "Loud & Clear",
+          "supports": "اقتصاد الحقوق",
+          "published_on": "2026-03-11"
+        }
+      ],
+      "limitations": "تعافي الصناعة نتج عن منظومة أوسع من Spotify وحدها."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "قدمت Spotify وصولًا فوريًا إلى مكتبة مرخصة عبر نموذج مجاني مدعوم بالإعلانات وPremium بلا فواصل موسيقية مع الاستماع دون اتصال وجودة أعلى. ثم بنت طبقة اكتشاف وتخصيص تشمل Discover Weekly وRelease Radar وDJ وBlend وJam وميزات محادثية مثل Talk to Spotify، وتوسعت إلى البودكاست والفيديو والكتب الصوتية وبرامج تحقيق الدخل للمبدعين."
+      },
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "licensed_streaming_discovery_multi_format_creator_platform",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم المصادر الخدمة المرخصة والتخصيص والصيغ الجديدة وأدوات المبدعين.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-01",
+        "SRC-04",
+        "SRC-06",
+        "SRC-09",
+        "SRC-11",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Spotify Fiscal 2025 Form 20-F",
+          "publisher": "U.S. Securities and Exchange Commission / Spotify",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1639920/000162828026006874/ck0001639920-20251231.htm",
+          "evidence_type": "direct",
+          "source_locator": "20-F",
+          "supports": "Premium وFree والمحتوى",
+          "published_on": "2026-02-05"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "About Spotify",
+          "publisher": "Spotify",
+          "source_type": "official_company_information",
+          "url": "https://newsroom.spotify.com/company-info/",
+          "evidence_type": "direct",
+          "source_locator": "Company info",
+          "supports": "حجم الكتالوج"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Spotify Investor Day 2026 Remarks",
+          "publisher": "Spotify",
+          "source_type": "official_investor_day",
+          "url": "https://newsroom.spotify.com/2026-05-21/alex-norstrom-gustav-soderstrom-co-ceos-investor-day-remarks/",
+          "evidence_type": "direct",
+          "source_locator": "Investor Day",
+          "supports": "Jam والقوائم",
+          "published_on": "2026-05-21"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Spotify Partner Program",
+          "publisher": "Spotify",
+          "source_type": "official_creator_monetization_announcement",
+          "url": "https://newsroom.spotify.com/2025-01-02/the-spotify-partner-program-is-here-offering-new-ways-for-creators-to-monetize-in-the-us-uk-canada-and-australia/",
+          "evidence_type": "direct",
+          "source_locator": "Partner Program",
+          "supports": "برنامج المبدعين",
+          "published_on": "2025-01-02"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Audiobooks+",
+          "publisher": "Spotify",
+          "source_type": "official_audiobook_product",
+          "url": "https://newsroom.spotify.com/2025-07-16/audiobooks-brings-more-choice-and-flexibility-to-spotify-premium-subscribers/",
+          "evidence_type": "direct",
+          "source_locator": "Audiobooks",
+          "supports": "Audiobooks+",
+          "published_on": "2025-07-16"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Talk to Spotify",
+          "publisher": "Spotify",
+          "source_type": "official_ai_product_announcement",
+          "url": "https://newsroom.spotify.com/2026-07-14/talk-to-spotify-announcement-beta/",
+          "evidence_type": "direct",
+          "source_locator": "AI product",
+          "supports": "Talk to Spotify",
+          "published_on": "2026-07-14"
+        }
+      ]
+    },
+    "$.market_data.target_audience": {
+      "field_value": "مستمعو الموسيقى والبودكاست والكتب الصوتية عالميًا، من مستخدمي الخطة المجانية إلى الأفراد والعائلات والطلاب والمشتركين عبر شركات الاتصالات. كما تستهدف الفنانين وشركات التسجيل والناشرين وكتاب الأغاني وصناع البودكاست والمؤلفين والمعلنين والوكالات.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "listeners_creators_rightsholders_authors_and_advertisers",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توضح المصادر جمهور المستمعين والمشتركين وأصحاب الحقوق والمبدعين والمعلنين.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-09",
+        "SRC-12",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Spotify Fiscal 2025 Form 20-F",
+          "publisher": "U.S. Securities and Exchange Commission / Spotify",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1639920/000162828026006874/ck0001639920-20251231.htm",
+          "evidence_type": "direct",
+          "source_locator": "20-F",
+          "supports": "المستخدمون والمعلنون وأصحاب الحقوق",
+          "published_on": "2026-02-05"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Spotify Partner Program",
+          "publisher": "Spotify",
+          "source_type": "official_creator_monetization_announcement",
+          "url": "https://newsroom.spotify.com/2025-01-02/the-spotify-partner-program-is-here-offering-new-ways-for-creators-to-monetize-in-the-us-uk-canada-and-australia/",
+          "evidence_type": "direct",
+          "source_locator": "Partner Program",
+          "supports": "صناع البودكاست",
+          "published_on": "2025-01-02"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Books on Spotify — 2026 Updates",
+          "publisher": "Spotify",
+          "source_type": "official_audiobook_platform_update",
+          "url": "https://newsroom.spotify.com/2026-05-21/investor-day-audiobook-features-updates/",
+          "evidence_type": "direct",
+          "source_locator": "Books on Spotify",
+          "supports": "المؤلفون",
+          "published_on": "2026-05-21"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Spotify Advertising Platform Updates",
+          "publisher": "Spotify",
+          "source_type": "official_adtech_announcement",
+          "url": "https://newsroom.spotify.com/2025-04-02/spotify-tunes-up-platform-to-make-it-easy-for-advertisers-to-buy-create-and-measure/",
+          "evidence_type": "direct",
+          "source_locator": "Ad platform",
+          "supports": "المعلنون والوكالات",
+          "published_on": "2025-04-02"
+        }
+      ]
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر Spotify رقمًا رسميًا واحدًا لحجم سوقها الكلي، لأنها تعمل عبر الموسيقى والبودكاست والكتب الصوتية والإعلانات وأدوات المبدعين. المؤشرات المباشرة هي 761 مليون MAU و293 مليون مشترك مدفوع و184 سوقًا، وأكثر من 100 مليون مقطع و7 ملايين عنوان بودكاست و700 ألف كتاب صوتي.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "high",
+      "claim_type": "platform_scale_without_single_tam",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد TAM رسمي موحد؛ يستخدم الحقل المستخدمين والمشتركين والأسواق والكتالوج.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-04",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "About Spotify",
+          "publisher": "Spotify",
+          "source_type": "official_company_information",
+          "url": "https://newsroom.spotify.com/company-info/",
+          "evidence_type": "direct",
+          "source_locator": "Company info",
+          "supports": "الحجم والكتالوج والأسواق"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Spotify Investor Day 2026 Remarks",
+          "publisher": "Spotify",
+          "source_type": "official_investor_day",
+          "url": "https://newsroom.spotify.com/2026-05-21/alex-norstrom-gustav-soderstrom-co-ceos-investor-day-remarks/",
+          "evidence_type": "direct",
+          "source_locator": "Investor Day",
+          "supports": "حجم التفاعل والمجتمع",
+          "published_on": "2026-05-21"
+        }
+      ],
+      "limitations": "هذه المؤشرات لا تمثل حجم سوق ماليًا."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "ارتفع MAU من 675 مليونًا في نهاية 2024 إلى 751 مليونًا في نهاية 2025 ثم 761 مليونًا في Q1 2026. ارتفع مشتركو Premium من 263 مليونًا إلى 290 مليونًا ثم 293 مليونًا. ارتفعت إيرادات 2025 بنسبة 10% إلى 17.186 مليار يورو، ثم ارتفعت إيرادات Q1 2026 بنسبة 8% فعليًا إلى 4.533 مليارات يورو، أو 14% على أساس ثابت للعملة.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "annual_and_current_quarter_growth",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توفر SEC سلسلة 2024 و2025 وQ1 2026 للمستخدمين والمشتركين والإيرادات.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Spotify Fiscal 2025 Form 20-F",
+          "publisher": "U.S. Securities and Exchange Commission / Spotify",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1639920/000162828026006874/ck0001639920-20251231.htm",
+          "evidence_type": "direct",
+          "source_locator": "20-F",
+          "supports": "أرقام 2024 و2025",
+          "published_on": "2026-02-05"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Spotify Q1 2026 Form 6-K",
+          "publisher": "U.S. Securities and Exchange Commission / Spotify",
+          "source_type": "sec_quarterly_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1639920/000162828026027951/spot-20260331x6xk.htm",
+          "evidence_type": "direct",
+          "source_locator": "6-K",
+          "supports": "أرقام Q1 2026",
+          "published_on": "2026-04-28"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Spotify Q1 2026 Earnings",
+          "publisher": "Spotify Newsroom",
+          "source_type": "official_quarterly_results",
+          "url": "https://newsroom.spotify.com/2026-04-28/spotify-q1-2026-earnings/",
+          "evidence_type": "direct",
+          "source_locator": "Q1 earnings",
+          "supports": "النمو ثابت العملة",
+          "published_on": "2026-04-28"
+        }
+      ],
+      "limitations": "يجب عدم خلط النمو الفعلي بالنمو ثابت العملة.",
+      "calculation": {
+        "end_2024_mau": 675000000,
+        "end_2025_mau": 751000000,
+        "q1_2026_mau": 761000000,
+        "end_2024_premium": 263000000,
+        "end_2025_premium": 290000000,
+        "q1_2026_premium": 293000000,
+        "2024_revenue_eur": 15673000000,
+        "2025_revenue_eur": 17186000000,
+        "2025_growth_percent": 10,
+        "q1_2026_actual_growth_percent": 8,
+        "q1_2026_constant_currency_growth_percent": 14
+      }
+    },
+    "$.financials.initial_investment": {
+      "field_value": "رأس المال الشخصي الأول للمؤسسين Daniel Ek وMartin Lorentzon غير مفصح عنه في المصادر الرسمية التي تمت مراجعتها. تأسست Spotify في أبريل 2006 وأُطلقت في أكتوبر 2008. قبل الإدراج اعتمدت على تمويلات أسهم وديون؛ ففي 2015 تلقت نحو 474 مليون يورو من إصدار أسهم إضافية، وفي 2016 أصدرت سندات قابلة للتحويل بقيمة اسمية مليار دولار نتج عنها نحو 861 مليون يورو صافي نقد. أُدرجت في NYSE مباشرة عام 2018 ولم تتلقَ الشركة عائدات من بيع المساهمين لأسهمهم.",
+      "verification_status": "verified_historical_financing",
+      "confidence": "high",
+      "claim_type": "founder_capital_undisclosed_with_equity_and_convertible_debt",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يظهر رأس المال الأول للمؤسسين، لكن SEC يوثق تمويل 2015 و2016 وعدم تلقي عائدات من الإدراج.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-05",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Spotify: A Visual History",
+          "publisher": "Spotify",
+          "source_type": "official_company_history",
+          "url": "https://newsroom.spotify.com/spotify-timeline/",
+          "evidence_type": "direct",
+          "source_locator": "Timeline",
+          "supports": "التأسيس والإطلاق"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Spotify 2018 Direct Listing Registration",
+          "publisher": "U.S. Securities and Exchange Commission / Spotify",
+          "source_type": "sec_direct_listing_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1639920/000119312518089087/d494294df1a.htm",
+          "evidence_type": "direct",
+          "source_locator": "F-1",
+          "supports": "تمويل الأسهم والسندات وUse of Proceeds",
+          "published_on": "2018-03"
+        }
+      ],
+      "limitations": "التمويل المذكور متأخر عن التأسيس ولا يمثل رأس المال الأول.",
+      "calculation": {
+        "founder_initial_capital": "not_publicly_disclosed",
+        "2015_share_proceeds_eur": 474000000,
+        "2016_convertible_notes_face_value_usd": 1000000000,
+        "2016_net_cash_eur": 861000000,
+        "2018_direct_listing_primary_proceeds": 0
+      }
+    },
+    "$.financials.valuation": {
+      "field_value": "Spotify شركة عامة مدرجة في بورصة نيويورك تحت الرمز SPOT، ولذلك تتغير قيمتها السوقية يوميًا ولا يصح تثبيت رقم 50 مليار دولار كتقييم دائم. بدأ تداول السهم في 3 أبريل 2018 عبر Direct Listing، وكان السعر المرجعي 132 دولارًا، لكنه لم يكن سعر طرح أو تمويلًا جديدًا للشركة.",
+      "verification_status": "verified_as_dynamic_public_market_value",
+      "confidence": "high",
+      "claim_type": "public_company_direct_listing_without_fixed_valuation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت الوثائق الإدراج المباشر والرمز SPOT وعدم وجود تقييم ثابت.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-17",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-17",
+          "title": "Spotify 2018 Direct Listing Registration",
+          "publisher": "U.S. Securities and Exchange Commission / Spotify",
+          "source_type": "sec_direct_listing_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1639920/000119312518089087/d494294df1a.htm",
+          "evidence_type": "direct",
+          "source_locator": "F-1",
+          "supports": "الإدراج وعدم تلقي عائدات",
+          "published_on": "2018-03"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Spotify 2018 Annual Report",
+          "publisher": "U.S. Securities and Exchange Commission / Spotify",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1639920/000156459019002688/ck0001639920-20f_20181231.htm",
+          "evidence_type": "direct",
+          "source_locator": "2018 20-F",
+          "supports": "اكتمال الإدراج في 3 أبريل 2018",
+          "published_on": "2019-02"
+        }
+      ],
+      "limitations": "السعر المرجعي 132 دولارًا لم يكن سعر طرح أو قيمة سوقية حالية.",
+      "calculation": {
+        "listing_method": "direct_listing",
+        "listing_date": "2018-04-03",
+        "exchange": "NYSE",
+        "ticker": "SPOT",
+        "reference_price_usd": 132
+      }
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "اشتراكات Premium Individual وDuo وFamily وStudent وخطط محلية أو Basic بحسب السوق",
+        "اشتراكات Premium المباعة مباشرة أو عبر شركات اتصالات وشركاء",
+        "Audiobooks+ والإضافات المدفوعة لساعات استماع إضافية",
+        "إعلانات صوتية ومرئية وإعلانات عرض داخل الخدمة المجانية",
+        "مبيعات إعلانية مباشرة للوكالات والعلامات التجارية على أساس CPM",
+        "Spotify Ads Manager كمنصة شراء ذاتي للمعلنين",
+        "Spotify Ad Exchange والمزادات البرمجية وأسواق الإعلانات",
+        "إيرادات إعلانية مرتبطة بالبودكاست والفيديو",
+        "برامج Marketplace وترويج واكتشاف مدفوعة ضمن العلاقة مع أصحاب الحقوق",
+        "ترتيبات تجارية مع شركاء الأجهزة والاتصالات والتوزيع"
+      ],
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "subscription_advertising_audiobook_and_partner_channels",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توضح SEC الاشتراك والإعلانات، وتوثق المصادر الإضافات والإعلانات البرمجية.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-10",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Spotify Fiscal 2025 Form 20-F",
+          "publisher": "U.S. Securities and Exchange Commission / Spotify",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1639920/000162828026006874/ck0001639920-20251231.htm",
+          "evidence_type": "direct",
+          "source_locator": "20-F",
+          "supports": "Premium والشركاء والإعلانات",
+          "published_on": "2026-02-05"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Spotify Q1 2026 Form 6-K",
+          "publisher": "U.S. Securities and Exchange Commission / Spotify",
+          "source_type": "sec_quarterly_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1639920/000162828026027951/spot-20260331x6xk.htm",
+          "evidence_type": "direct",
+          "source_locator": "6-K",
+          "supports": "تقسيم الإيراد الحالي",
+          "published_on": "2026-04-28"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Spotify Advertising Platform Updates",
+          "publisher": "Spotify",
+          "source_type": "official_adtech_announcement",
+          "url": "https://newsroom.spotify.com/2025-04-02/spotify-tunes-up-platform-to-make-it-easy-for-advertisers-to-buy-create-and-measure/",
+          "evidence_type": "direct",
+          "source_locator": "Advertising",
+          "supports": "Ad Exchange وAds Manager",
+          "published_on": "2025-04-02"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Audiobooks+",
+          "publisher": "Spotify",
+          "source_type": "official_audiobook_product",
+          "url": "https://newsroom.spotify.com/2025-07-16/audiobooks-brings-more-choice-and-flexibility-to-spotify-premium-subscribers/",
+          "evidence_type": "direct",
+          "source_locator": "Audiobooks",
+          "supports": "Audiobooks+",
+          "published_on": "2025-07-16"
+        }
+      ],
+      "limitations": "لا تنشر Spotify إيرادًا مستقلًا لكل خطة أو أداة."
+    },
+    "$.tools": {
+      "field_value": [
+        "Spotify Free وPremium عبر الهاتف والويب وسطح المكتب والسيارات والسماعات والتلفزيون وأجهزة الألعاب",
+        "خطط Individual وDuo وFamily وStudent وBasic وخطط محلية",
+        "التنزيل دون اتصال وجودة صوت عالية وLossless في أسواق مختارة",
+        "Discover Weekly وRelease Radar وDaily Mix وDaylist",
+        "AI DJ وPrompted Playlist وTalk to Spotify",
+        "SongDNA وAbout the Song",
+        "Blend وJam والقوائم التعاونية والرسائل",
+        "Wrapped",
+        "استضافة وتوزيع البودكاست الصوتي والمرئي",
+        "Spotify Partner Program",
+        "Spotify for Creators وSpotify for Artists وSpotify for Authors",
+        "Audiobooks in Premium وAudiobooks+ وRecaps وPage Match",
+        "Spotify Ads Manager وSpotify Ad Exchange وGen AI Ads",
+        "أنظمة Machine Learning للتخصيص والبحث والترتيب",
+        "منصات منفصلة للتخصيص والتجارب وتشغيل آلاف الاختبارات",
+        "Voyager للبحث Approximate Nearest Neighbor",
+        "Algotorial playlists",
+        "Spotify Web API وتكامل الأجهزة والخدمات الخارجية"
+      ],
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "official_streaming_personalization_creator_adtech_audiobook_and_ai_capabilities",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استُبدلت قائمة التقنيات العامة بقدرات ومنصات موثقة رسميًا.",
+      "source_count": 10,
+      "source_ids": [
+        "SRC-04",
+        "SRC-06",
+        "SRC-09",
+        "SRC-10",
+        "SRC-11",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14",
+        "SRC-15",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "About Spotify",
+          "publisher": "Spotify",
+          "source_type": "official_company_information",
+          "url": "https://newsroom.spotify.com/company-info/",
+          "evidence_type": "direct",
+          "source_locator": "Company info",
+          "supports": "المحتوى والمنصة"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Spotify Investor Day 2026 Remarks",
+          "publisher": "Spotify",
+          "source_type": "official_investor_day",
+          "url": "https://newsroom.spotify.com/2026-05-21/alex-norstrom-gustav-soderstrom-co-ceos-investor-day-remarks/",
+          "evidence_type": "direct",
+          "source_locator": "Investor Day",
+          "supports": "Jam والقوائم",
+          "published_on": "2026-05-21"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Spotify Partner Program",
+          "publisher": "Spotify",
+          "source_type": "official_creator_monetization_announcement",
+          "url": "https://newsroom.spotify.com/2025-01-02/the-spotify-partner-program-is-here-offering-new-ways-for-creators-to-monetize-in-the-us-uk-canada-and-australia/",
+          "evidence_type": "direct",
+          "source_locator": "Creator tools",
+          "supports": "Partner Program",
+          "published_on": "2025-01-02"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Spotify Advertising Platform Updates",
+          "publisher": "Spotify",
+          "source_type": "official_adtech_announcement",
+          "url": "https://newsroom.spotify.com/2025-04-02/spotify-tunes-up-platform-to-make-it-easy-for-advertisers-to-buy-create-and-measure/",
+          "evidence_type": "direct",
+          "source_locator": "Advertising",
+          "supports": "Adtech",
+          "published_on": "2025-04-02"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Audiobooks+",
+          "publisher": "Spotify",
+          "source_type": "official_audiobook_product",
+          "url": "https://newsroom.spotify.com/2025-07-16/audiobooks-brings-more-choice-and-flexibility-to-spotify-premium-subscribers/",
+          "evidence_type": "direct",
+          "source_locator": "Audiobooks",
+          "supports": "Audiobooks+",
+          "published_on": "2025-07-16"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Books on Spotify — 2026 Updates",
+          "publisher": "Spotify",
+          "source_type": "official_audiobook_platform_update",
+          "url": "https://newsroom.spotify.com/2026-05-21/investor-day-audiobook-features-updates/",
+          "evidence_type": "direct",
+          "source_locator": "Books",
+          "supports": "Authors tools",
+          "published_on": "2026-05-21"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Talk to Spotify",
+          "publisher": "Spotify",
+          "source_type": "official_ai_product_announcement",
+          "url": "https://newsroom.spotify.com/2026-07-14/talk-to-spotify-announcement-beta/",
+          "evidence_type": "direct",
+          "source_locator": "AI",
+          "supports": "Talk to Spotify",
+          "published_on": "2026-07-14"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Personalization and Experimentation Tech Stacks",
+          "publisher": "Spotify Engineering",
+          "source_type": "official_engineering_article",
+          "url": "https://engineering.atspotify.com/2026/1/why-we-use-separate-tech-stacks-for-personalization-and-experimentation",
+          "evidence_type": "direct",
+          "source_locator": "Engineering",
+          "supports": "التخصيص والتجارب",
+          "published_on": "2026-01"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Voyager Nearest-Neighbor Search",
+          "publisher": "Spotify Engineering",
+          "source_type": "official_open_source_engineering",
+          "url": "https://engineering.atspotify.com/2023/10/introducing-voyager-spotifys-new-nearest-neighbor-search-library",
+          "evidence_type": "direct",
+          "source_locator": "Engineering",
+          "supports": "Voyager",
+          "published_on": "2023-10"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Algotorial Playlists",
+          "publisher": "Spotify Engineering",
+          "source_type": "official_recommendation_engineering",
+          "url": "https://engineering.atspotify.com/2023/04/humans-machines-a-look-behind-spotifys-algotorial-playlists",
+          "evidence_type": "direct",
+          "source_locator": "Engineering",
+          "supports": "Algotorial",
+          "published_on": "2023-04"
+        }
+      ],
+      "limitations": "القائمة ليست كشفًا كاملًا عن لغات البرمجة أو البنية الداخلية."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Spotify Fiscal 2025 Form 20-F",
+      "publisher": "U.S. Securities and Exchange Commission / Spotify",
+      "source_type": "sec_annual_filing",
+      "published_on": "2026-02-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/1639920/000162828026006874/ck0001639920-20251231.htm",
+      "supports": [
+        "إيرادات 2025",
+        "Premium وAd-Supported",
+        "MAU والمشتركون",
+        "الأسواق وتكاليف الحقوق"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Spotify Q1 2026 Form 6-K",
+      "publisher": "U.S. Securities and Exchange Commission / Spotify",
+      "source_type": "sec_quarterly_filing",
+      "published_on": "2026-04-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/1639920/000162828026027951/spot-20260331x6xk.htm",
+      "supports": [
+        "إيرادات Q1 2026",
+        "761 مليون MAU",
+        "293 مليون Premium",
+        "483 مليون Ad-Supported",
+        "تقسيم الإيراد"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Spotify Q1 2026 Earnings",
+      "publisher": "Spotify Newsroom",
+      "source_type": "official_quarterly_results",
+      "published_on": "2026-04-28",
+      "url": "https://newsroom.spotify.com/2026-04-28/spotify-q1-2026-earnings/",
+      "supports": [
+        "النمو والهامش والدخل التشغيلي"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "About Spotify",
+      "publisher": "Spotify",
+      "source_type": "official_company_information",
+      "url": "https://newsroom.spotify.com/company-info/",
+      "supports": [
+        "حجم المنصة والكتالوج والأسواق"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Spotify: A Visual History",
+      "publisher": "Spotify",
+      "source_type": "official_company_history",
+      "url": "https://newsroom.spotify.com/spotify-timeline/",
+      "supports": [
+        "التأسيس والإطلاق والتوسع"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Spotify Investor Day 2026 Remarks",
+      "publisher": "Spotify",
+      "source_type": "official_investor_day",
+      "published_on": "2026-05-21",
+      "url": "https://newsroom.spotify.com/2026-05-21/alex-norstrom-gustav-soderstrom-co-ceos-investor-day-remarks/",
+      "supports": [
+        "التفاعل والقوائم وJam وإشارات الذوق"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "2025 Music Industry Payouts",
+      "publisher": "Spotify",
+      "source_type": "official_royalty_economics_report",
+      "published_on": "2026-01-28",
+      "url": "https://newsroom.spotify.com/2026-01-28/2025-music-industry-payouts-whats-next-for-artists/",
+      "supports": [
+        "11 مليار دولار لصناعة الموسيقى"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Loud & Clear 2026 Highlights",
+      "publisher": "Spotify",
+      "source_type": "official_creator_economics_report",
+      "published_on": "2026-03-11",
+      "url": "https://newsroom.spotify.com/2026-03-11/loud-and-clear-music-economics-highlights/",
+      "supports": [
+        "الحقوق والفنانين المستقلين والناشرين"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Spotify Partner Program",
+      "publisher": "Spotify",
+      "source_type": "official_creator_monetization_announcement",
+      "published_on": "2025-01-02",
+      "url": "https://newsroom.spotify.com/2025-01-02/the-spotify-partner-program-is-here-offering-new-ways-for-creators-to-monetize-in-the-us-uk-canada-and-australia/",
+      "supports": [
+        "مدفوعات الفيديو والإعلانات للمبدعين"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Spotify Advertising Platform Updates",
+      "publisher": "Spotify",
+      "source_type": "official_adtech_announcement",
+      "published_on": "2025-04-02",
+      "url": "https://newsroom.spotify.com/2025-04-02/spotify-tunes-up-platform-to-make-it-easy-for-advertisers-to-buy-create-and-measure/",
+      "supports": [
+        "Ads Manager وAd Exchange وGen AI Ads"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Audiobooks+",
+      "publisher": "Spotify",
+      "source_type": "official_audiobook_product",
+      "published_on": "2025-07-16",
+      "url": "https://newsroom.spotify.com/2025-07-16/audiobooks-brings-more-choice-and-flexibility-to-spotify-premium-subscribers/",
+      "supports": [
+        "ساعات إضافية وخطط الكتب الصوتية"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Books on Spotify — 2026 Updates",
+      "publisher": "Spotify",
+      "source_type": "official_audiobook_platform_update",
+      "published_on": "2026-05-21",
+      "url": "https://newsroom.spotify.com/2026-05-21/investor-day-audiobook-features-updates/",
+      "supports": [
+        "Spotify for Authors وأدوات إنشاء الكتب"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Talk to Spotify",
+      "publisher": "Spotify",
+      "source_type": "official_ai_product_announcement",
+      "published_on": "2026-07-14",
+      "url": "https://newsroom.spotify.com/2026-07-14/talk-to-spotify-announcement-beta/",
+      "supports": [
+        "التفاعل النصي والصوتي والاكتشاف"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Personalization and Experimentation Tech Stacks",
+      "publisher": "Spotify Engineering",
+      "source_type": "official_engineering_article",
+      "published_on": "2026-01",
+      "url": "https://engineering.atspotify.com/2026/1/why-we-use-separate-tech-stacks-for-personalization-and-experimentation",
+      "supports": [
+        "التخصيص والتجارب والاختبارات"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Voyager Nearest-Neighbor Search",
+      "publisher": "Spotify Engineering",
+      "source_type": "official_open_source_engineering",
+      "published_on": "2023-10",
+      "url": "https://engineering.atspotify.com/2023/10/introducing-voyager-spotifys-new-nearest-neighbor-search-library",
+      "supports": [
+        "Approximate Nearest Neighbor والتوصية"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Algotorial Playlists",
+      "publisher": "Spotify Engineering",
+      "source_type": "official_recommendation_engineering",
+      "published_on": "2023-04",
+      "url": "https://engineering.atspotify.com/2023/04/humans-machines-a-look-behind-spotifys-algotorial-playlists",
+      "supports": [
+        "التحرير البشري والتخصيص"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Spotify 2018 Direct Listing Registration",
+      "publisher": "U.S. Securities and Exchange Commission / Spotify",
+      "source_type": "sec_direct_listing_filing",
+      "published_on": "2018-03",
+      "url": "https://www.sec.gov/Archives/edgar/data/1639920/000119312518089087/d494294df1a.htm",
+      "supports": [
+        "الإدراج المباشر وتمويل 2015 و2016 وعدم تلقي عائدات"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Spotify 2018 Annual Report",
+      "publisher": "U.S. Securities and Exchange Commission / Spotify",
+      "source_type": "sec_annual_filing",
+      "published_on": "2019-02",
+      "url": "https://www.sec.gov/Archives/edgar/data/1639920/000156459019002688/ck0001639920-20f_20181231.htm",
+      "supports": [
+        "الإدراج في 2018 والجذور التشغيلية في ستوكهولم"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "Spotify Contact Locations",
+      "publisher": "Spotify",
+      "source_type": "official_contact_page",
+      "url": "https://www.spotify.com/ie/about-us/contact/",
+      "supports": [
+        "عنوان ستوكهولم وكيانات Spotify"
+      ]
+    }
   ]
 }

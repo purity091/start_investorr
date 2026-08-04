@@ -4,105 +4,2521 @@
   "name": "بي هايف (beehiiv)",
   "domain": "beehiiv.com",
   "website": "https://www.beehiiv.com",
-  "category": "Creator Economy / النشرات البريدية",
-  "headline": "المنصة العصرية لإنشاء ونمو النشرات البريدية",
-  "summary": "أداة مصممة خصيصاً لمساعدة صناع المحتوى والشركات على كتابة، وتنمية، واستثمار النشرات البريدية (Newsletters) بأدوات تسويق ونمو مدمجة، وتعتبر المنافس الأشرس لـ Substack.",
+  "category": "Creator & Media Business Platform / النشرات والمواقع والبودكاست والمجتمعات وتحقيق الدخل",
+  "headline": "من أدوات Morning Brew الداخلية إلى نظام تشغيل يضم 170 ألف منشور: كيف فصلت beehiiv بين 30 مليون دولار ARR و60 مليون دولار كسبها المستخدمون",
+  "summary": "بدأت beehiiv في 2021 كمنصة متخصصة لإنشاء النشرات وتنميتها واستثمارها، ثم توسعت إلى نظام متكامل للأعمال الإعلامية يضم المواقع والبودكاست والمجتمعات والمنتجات الرقمية والإعلانات والاشتراكات والذكاء الاصطناعي. أحدث الإفصاحات تضع المنصة عند 170 ألف+ منشور و450 مليون+ قارئ فريد و75 مليار+ رسالة تاريخيًا، بينما تجاوز ARR المتكرر 30 مليون دولار في 2026. هذه المقاييس تختلف عن إيرادات Ad Network وBoosts وعن أرباح المستخدمين.",
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات سنوياً",
-    "monthly_traffic": "15M+ /mo",
-    "revenue_per_visitor": "غير محدد",
+    "monthly_revenue": "لا تنشر beehiiv قيمة إيراد محاسبي لكل شهر. أعلنت 34 مليون دولار من annualized revenue بنهاية 2025، ثم أعلنت تجاوز 30 مليون دولار ARR في منتصف 2026. annualized revenue قد يشمل SaaS وAd Network وBoosts ومسارات أخرى، بينما ARR يركز على الإيراد المتكرر؛ لذلك لا يجوز اعتبار أي منهما «إيرادًا شهريًا» أو قسمته تلقائيًا على 12.",
+    "monthly_traffic": "غير مُفصح عنه رسميًا، ولا يوجد رقم موثوق لزيارات beehiiv.com الشهرية. مقاييس Q2 2026 هي 170 ألف+ منشور و450 مليون+ قارئ فريد و75 مليار+ رسالة مرسلة تاريخيًا، مع 3 مليارات+ رسالة شهريًا في نوفمبر 2025. هذه أرقام منصة وتوزيع، وليست زيارات موقع أو MAU موحدًا.",
+    "revenue_per_visitor": "غير قابل للحساب لغياب رقم رسمي للزيارات الشهرية ولأن annualized revenue وARR لا يمثلان إيراد شهر بعينه.",
     "solopreneur_score": "85.0",
-    "idea_label": "منصة نشرات بريدية للمبدعين"
+    "solopreneur_score_note": "مؤشر تحريري موروث من الملف الأصلي، وليس مقياسًا صادرًا عن الشركة. beehiiv تضم 129 موظفًا بدوام كامل وفق صفحة About في Q2 2026.",
+    "idea_label": "نظام تشغيل للأعمال الإعلامية المبنية على الجمهور"
   },
   "company": {
-    "business_model": "اشتراكات SaaS شهرية (Flat Fee) للمبدعين بدون اقتطاع نسبة من أرباحهم",
-    "customer_type": "كتاب المحتوى، الناشرون المستقلون، العلامات التجارية",
+    "business_model": "اشتراكات SaaS متدرجة حسب عدد المشتركين والميزات عبر Launch وScale وMax وEnterprise، إلى جانب إيرادات من Ad Network وBoosts وخدمات المؤسسات. توسع المنتج ليشمل المواقع والبودكاست والمجتمع والمنتجات الرقمية والندوات والاشتراكات المدفوعة وCopilot وMCP. تأخذ beehiiv نسبة 0% من إيراد الاشتراكات والمنتجات الرقمية والبودكاست في المسارات المعلنة، لكن الشركة تستفيد من الاشتراك ومن اقتصاديات شبكات الإعلان والنمو؛ لم تنشر take rate أو مزيج الإيراد حسب المسار.",
+    "customer_type": "مبدعون وكتاب مستقلون وصحف وناشرون وشركات ناشئة وعلامات تجارية وفرق تسويق ومؤسسات إعلامية، إضافة إلى معلنين يشترون وصولًا عبر Ad Network.",
     "founder": "Tyler Denk, Benjamin Hargett, Jacob Hurd",
-    "founder_role": "مؤسسون (فريق Morning Brew سابقاً)",
+    "founder_role": "مؤسسون شاركوا مبكرًا في بناء التكنولوجيا والمنتج لدى Morning Brew؛ Tyler Denk هو المؤسس المشارك والرئيس التنفيذي.",
     "founders_count": "3",
-    "employees": "أقل من 100 موظف",
-    "started": "2021",
-    "location": "نيويورك، الولايات المتحدة",
-    "funding": "جمعت تمويلات استراتيجية ضخمة (Series B بحوالي 33 مليون دولار)",
-    "profitability": "نمو قوي ومستدام في الإيرادات السنوية",
-    "public_revenue_claim": "تجاوزت 12 مليون دولار ARR في عامها الثالث"
+    "employees": "129 موظفًا بدوام كامل موزعين على 12 دولة وفق صفحة About في Q2 2026؛ ارتفع العدد من 110 في نهاية 2025 و75 في أواخر 2024.",
+    "started": "2021؛ أُعلن التمويل الأولي في أكتوبر وأُطلقت المنصة للعامة في نوفمبر 2021.",
+    "location": "beehiiv, Inc. شركة أمريكية بدأت بوصفها شركة مقرها نيويورك، لكنها أصبحت شركة تعمل عن بُعد بالكامل وموظفوها موزعون عالميًا في 12 دولة. لذلك يُستخدم «شركة أمريكية موزعة عالميًا» بدل اعتبار نيويورك موقع جميع العمليات.",
+    "funding": "Series B بقيمة 33 مليون دولار في 2024، بعد Series A بقيمة 12.5 مليونًا، وSeed بقيمة 2.6 مليون وتمديد Seed بقيمة 1.6 مليون. بيان Series B قال إن إجمالي التمويل بلغ 46.5 مليون دولار، بينما الجمع الحسابي لعناوين الجولات يساوي 49.7 مليونًا؛ يُعرض التمويل على أنه 46.5 مليون دولار على الأقل مع توضيح اختلاف منهجية العد.",
+    "profitability": "أعلنت beehiiv تحقيق ربحية شهرية في أبريل 2023، لكن الشركة اختارت لاحقًا تسريع التوظيف والتسويق وارتفاع الحرق. لا يوجد إفصاح حديث موثوق يثبت ربحية 2025 أو 2026 أو يحدد هامش الربح.",
+    "public_revenue_claim": "أعلنت الشركة 34 مليون دولار annualized revenue بنهاية 2025، ثم تجاوز 30 مليون دولار ARR في 2026. الرقم الأول أوسع من الاشتراكات المتكررة وقد يضم Ad Network وBoosts، لذلك لا يمثل الرقمان تناقضًا مباشرًا ولا يجوز دمجهما أو معاملتهما كإيراد سنوي محقق."
   },
   "problem_and_product": [
-    "Substack كانت تستقطع نسبة قوية 10% من إيرادات الكُتاب، وكانت مخصصة فقط للاشتراكات المدفوعة ولا تدعم إعلانات جيدة.",
-    "Mailchimp وغيرها معقدة جداً ومكلفة للناشرين الصغار.",
-    "قدمت beehiiv أداة سهلة، تسعير ثابت لا يعاقبك على النجاح، وشبكة إعلانات مدمجة (Ad Network) وتوصيات للنمو المتبادل."
+    "الناشر أو المبدع كان يحتاج إلى أدوات منفصلة للكتابة وإرسال البريد وبناء الموقع والتحليلات والإحالات والإعلانات والاشتراكات والبودكاست والمجتمع، ما يجزئ بيانات الجمهور ويزيد تكاليف التشغيل.",
+    "تقدم beehiiv محررًا ونظام إرسال وموقعًا وتحليلات وsegmentation وautomations وreferrals وRecommendations وBoosts وAd Network في مساحة واحدة.",
+    "في 2025–2026 توسعت من «منصة نشرات» إلى نظام أعمال إعلامية يشمل Typedream Website Builder والبودكاست والمجتمع والمنتجات الرقمية والندوات والاشتراكات الجماعية وCopilot.",
+    "ميزة 0% revenue share تنطبق على مسارات معلنة مثل الاشتراكات والمنتجات الرقمية والبودكاست، بينما شبكات الإعلانات والنمو لها اقتصاديات منفصلة غير منشورة بالكامل.",
+    "المقارنة بأن Substack أو Mailchimp لا يدعمان الإعلانات أو النمو صيغت سابقًا بصورة مطلقة؛ التصحيح هو أن beehiiv تميزت بدمج أدوات نمو وتحقيق دخل ناشر-أول داخل المنتج."
   ],
   "origin_story": [
-    "المؤسس كان من الفريق التقني الأول خلف نشرة (Morning Brew) الإخبارية الشهيرة التي بيعت بعشرات الملايين.",
-    "أدرك أن الأدوات التي بنوها داخلياً في Morning Brew للنمو والإحالة لا توجد في أي منصة أخرى بالسوق.",
-    "أسس الشركة لتوفير هذه الأداة كـ SaaS لأي كاتب ليتمكن من النمو السريع."
+    "تأسست beehiiv على يد Tyler Denk وBenjamin Hargett وJacob Hurd، وهم من الموظفين والمهندسين الأوائل في Morning Brew.",
+    "استلهم المؤسسون المنتج من الأدوات الداخلية التي استُخدمت للنمو والإحالات والتحليلات وتشغيل نشرة واسعة النطاق.",
+    "بدأ الفريق بتمويل Seed قدره 2.6 مليون دولار، ثم أضاف 1.6 مليونًا في 2022 قبل Series A وSeries B.",
+    "القيمة لم تكن أن كل أدوات السوق غائبة، بل تجميع خبرة تشغيل ناشر سريع النمو داخل منتج متاح للجميع."
   ],
   "build_and_launch": [
-    "ركزت بشكل قوي جداً على بناء أدوات 'النمو': مثل التوصيات (Recommendations) حيث يرشح الكتاب نشرات بعضهم.",
-    "إطلاق واجهة كتابة أنيقة وسريعة جداً ومحسنة للـ SEO.",
-    "إطلاق 'شبكة الإعلانات' التي تربط الرعاة بصناع المحتوى مباشرة داخل المنصة لتمكين الكتاب من الربح دون تعب."
+    "ركزت الإصدارات المبكرة على محرر النشرات والتحليلات والإحالات والتوصيات وواجهات النمو.",
+    "أطلقت Ad Network في 2023 ثم استحوذت على Swapstack لتسريع علاقات المعلنين وتشغيل الحملات.",
+    "استحوذت على Typedream في يونيو 2024، ثم دمجت تقنيتها في Website Builder موحد للنشرات والمواقع.",
+    "بحلول 2026 أضافت podcast hosting وwebinars وCommunity وVisual Editor وmetered paywalls وpaid trials وgroup subscriptions وpremium podcasts.",
+    "أطلقت MCP ثم MCP v2 لتمكين أدوات مثل ChatGPT وClaude وGemini من قراءة بيانات الحساب وتنفيذ إجراءات، وأتبعتها بـCopilot داخل المنتج.",
+    "أُعيد بناء Recommendations وBoosts، ووصل عدد الاشتراكات المنشأة عبرهما إلى أكثر من 15 مليونًا وفق إفصاح يوليو 2026."
   ],
   "costs_and_operations": [
-    "تكاليف إرسال ملايين الإيميلات شهرياً والبنية التحتية السحابية.",
-    "فريق لتطوير الميزات الهندسية وإدارة شبكة الإعلانات."
+    "البنية التحتية لإرسال مليارات الرسائل ومراقبة التسليم والسمعة ومكافحة الإساءة والتخزين والتحليلات تمثل تكلفة تشغيل رئيسية، لكن الشركة لا تنشر تكلفة الرسالة أو الهامش الإجمالي.",
+    "Ad Network تتطلب مبيعات معلنين ومطابقة حملات وتقارير وفوترة ومدفوعات للناشرين؛ أكثر من مليون دولار شهريًا الذي تكسبه النشرات هو payout للمستخدمين وليس إيرادًا للشركة.",
+    "ارتفع الفريق إلى 129 موظفًا بدوام كامل في 12 دولة، ما يناقض وصف «أقل من 100 موظف» القديم.",
+    "عمليات الاستحواذ على Swapstack وTypedream وسعت فريق الإعلانات وبناء المواقع، لكن أسعار الصفقات غير معلنة.",
+    "إرسال 3 مليارات+ رسالة شهريًا في أواخر 2025 وأكثر من 10 مليارات خلال Q1 2026 يثبت نطاق التشغيل، ولا يكشف تكاليف AWS أو SendGrid أو مزودًا بعينه."
   ],
   "monetization": [
-    "رسوم شهرية ثابتة تعتمد على حجم قائمة المشتركين والميزات المطلوبة (من 0 إلى مئات الدولارات).",
-    "لا تأخذ عمولة على الاشتراكات المدفوعة للكاتب.",
-    "عمولة من شبكة الإعلانات (Boosts & Ad Network)."
+    "اشتراكات Launch وScale وMax وEnterprise؛ Launch مجانية، بينما تدفع الحسابات الأعلى حسب الخطة وحجم قائمة المشتركين.",
+    "عقود Enterprise بتسعير مخصص وخصائص وتكاملات ودعم مناسب للناشرين والشركات الكبيرة.",
+    "اقتصاديات Ad Network من بيع الحملات وإدارتها وتوزيع الأرباح على الناشرين؛ لا تنشر beehiiv صافي العمولة أو take rate.",
+    "اقتصاديات Boosts وPaid Recommendations، حيث يدفع ناشر لاكتساب مشترك متحقق ويكسب ناشر آخر مقابل الإحالة؛ لم يُكشف هامش beehiiv.",
+    "لا تأخذ beehiiv نسبة من إيرادات الاشتراكات المدفوعة والمنتجات الرقمية والبودكاست في المسارات المعلنة، لكنها تحقق الدخل من الخطة المدفوعة والبنية المحيطة.",
+    "الدورات كانت مسار إيراد مُعلنًا في 2023، لكنها ليست موثقة كجزء جوهري من المزيج الحالي بعد توسع المنصة.",
+    "Direct Sponsorships وwebinars وcommunity وdigital products وpremium podcasts تزيد قيمة الاشتراك والاحتفاظ، لكن توفر الميزة لا يعني إيرادًا مستقلًا معلنًا."
   ],
   "growth": [
-    "استحوذت على حصة سوقية ضخمة من Substack و ConvertKit، بانتقال كبار الناشرين إليها بسبب تسعيرها الثابت وأدوات النمو.",
-    "نمو الإيرادات السنوية (ARR) تجاوز 800% في بعض السنوات."
+    "ارتفع revenue run rate من 4 ملايين دولار في يونيو 2023 إلى قرابة 2 مليون دولار شهريًا في نوفمبر 2024، ثم 32–34 مليون دولار annualized revenue في نهاية 2025.",
+    "أعلنت الشركة تجاوز 30 مليون دولار ARR في 2026، كما قال المؤسس إنها كانت تضيف أكثر من مليون دولار ARR شهريًا في بداية العام؛ هذا نمو run-rate لا تحصيل نقدي شهري.",
+    "ارتفع حجم الإرسال من أكثر من مليار رسالة شهريًا في أبريل 2024 إلى أكثر من 2 مليار في نوفمبر 2024 وأكثر من 3 مليارات في نوفمبر 2025.",
+    "في Q2 2026 أعلنت 170 ألف+ منشور و450 مليون+ قارئ فريد و75 مليار+ رسالة تاريخيًا و60 مليون+ دولار كسبها المستخدمون.",
+    "لا يوجد رقم رسمي لزيارات الموقع أو churn أو عدد العملاء الدافعين؛ لذلك لم يُحسب معدل نمو موحد أو حصة سوقية من Substack وKit.",
+    "أرقام 800% نمو ARR وحصة سوقية ضخمة حُذفت لعدم وجود تعريف وفترة ومصدر حاليين يسمحان بالتعميم."
   ],
+  "market_data": {
+    "target_audience": "المبدعون والناشرون المستقلون والمؤسسات الإعلامية والشركات وفرق التسويق والبودكاست ومشغلو المجتمعات والمدربون وبائعو المنتجات الرقمية والمعلنون.",
+    "market_size": "لم تنشر beehiiv تقديرًا رسميًا لـTAM أو SAM أو SOM. أفضل سياق أولي هو نطاقها الخاص: 170 ألف+ منشور و450 مليون+ قارئ فريد و75 مليار+ رسالة تاريخيًا حتى Q2 2026؛ هذه ليست قيمة سوق مالية.",
+    "growth_rate": "لا يوجد معدل واحد حالي. يجب فصل نمو ARR عن annualized total revenue، ونمو الرسائل عن المنشورات والقراء، ونمو أرباح المستخدمين عن إيراد الشركة."
+  },
   "tools": [
-    "React",
-    "Node.js",
-    "PostgreSQL",
-    "AWS",
-    "SendGrid / Email Delivery APIs"
+    "محرر النشرات وVisual Editor وWebsite Builder المدمج من Typedream",
+    "Automations وsegmentation وsurveys وA/B testing وreferral program وRecommendation Network",
+    "Ad Network وOn-Demand Ads وDirect Sponsorships وBoosts وWallet",
+    "Paid subscriptions وmetered paywalls وpaid trials وgroup subscriptions",
+    "Digital Products وwebinars وpaid coaching وملفات ومنتجات وصول",
+    "Podcast hosting وتوزيع إلى Apple Podcasts وSpotify وpremium private feeds",
+    "Community مع channels ومساحات gated مرتبطة ببيانات المشترك",
+    "API v2 وSend API وwebhooks وتكاملات مخصصة",
+    "MCP وMCP v2 وCopilot للتفاعل مع بيانات الجمهور والمحتوى والأتمتة",
+    "تحليلات MRR وARR وLTV وchurn للناشرين؛ هذه مقاييس عملاء beehiiv وليست إيراد الشركة",
+    "البنية الداخلية الدقيقة غير مكشوفة رسميًا؛ لذلك أزيلت React وNode.js وPostgreSQL وAWS وSendGrid من المكدس المؤكد بدل عرضها كحقائق حالية"
   ],
   "revenue_timeline": [
     {
       "date": "2021",
-      "amount": "التأسيس",
-      "type": "فكرة وإطلاق",
-      "note": "الاعتماد على خبرة فريق Morning Brew وبناء المنتج الأساسي."
+      "amount": "2.6 مليون دولار",
+      "type": "Seed",
+      "note": "تمويل أولي لإطلاق منصة نشرات موجهة للنمو وتحقيق الدخل."
+    },
+    {
+      "date": "2022",
+      "amount": "1.6 مليون دولار",
+      "type": "Seed Extension",
+      "note": "رفع إجمالي التمويل آنذاك إلى قرابة 4.2 ملايين دولار؛ توقعت الشركة تجاوز 1M ARR بنهاية العام."
     },
     {
       "date": "2023",
-      "amount": "$10M تمويل",
+      "amount": "12.5 مليون دولار",
       "type": "Series A",
-      "note": "جولة لدعم النمو وإطلاق أدوات جديدة مثل شبكة الإعلانات."
+      "note": "كانت الشركة عند 4M revenue run rate وأعلنت ربحية شهرية في أبريل؛ الرقم تمويل وليس إيرادًا."
     },
     {
       "date": "2024",
-      "amount": "$33M تمويل",
+      "amount": "33 مليون دولار",
       "type": "Series B",
-      "note": "دعم التوسع ومنافسة الشركات العملاقة في القطاع."
+      "note": "بيان الجولة ذكر إجمالي تمويل 46.5M، بينما جمع عناوين الجولات يصل إلى 49.7M؛ وُثق اختلاف العد."
+    },
+    {
+      "date": "2025",
+      "amount": "34 مليون دولار annualized revenue",
+      "type": "معدل إيراد سنوي محول",
+      "note": "إفصاح المؤسس بنهاية 2025؛ ليس بالضرورة إيرادًا سنويًا محققًا وفق قوائم مدققة."
+    },
+    {
+      "date": "2026",
+      "amount": "30 مليون دولار+ ARR",
+      "type": "إيراد متكرر سنوي",
+      "note": "إفصاح الشركة في منتصف 2026؛ يجب فصله عن annualized revenue الأوسع وعن أرباح الناشرين."
     }
   ],
   "lessons": [
-    "تسعير يناسب العميل (Founder-friendly pricing): رفض استقطاع 10% من أرباح الكتاب كان الميزة التنافسية الأقوى لاستقطاب الحيتان (الكتاب الكبار).",
-    "تحويل الأدوات الداخلية لمنتج: استنساخ أدوات ناجحة داخلياً في شركة وبناءها كمنتج مستقل للمشاع استراتيجية قوية.",
-    "أدوات النمو المدمجة (Inbuilt Growth): ميزة توصية الكُتاب لبعضهم صنعت نمواً فيروسياً غير مسبوق في الصناعة."
+    "حوّل الخبرة التشغيلية الداخلية إلى منتج، لكن أثبت القيمة بالاحتفاظ والإيراد لا بقصة الأصل وحدها.",
+    "افصل ARR المتكرر عن annualized revenue الشامل، وافصل كليهما عن GMV أو أرباح الناشرين أو قيمة الحملات.",
+    "صمّم حلقة نمو مجانية عبر Recommendations ثم أضف طبقة مدفوعة عبر Boosts من دون إلغاء النمو العضوي.",
+    "الاستحواذ على Swapstack وTypedream اشترى خبرة وشبكات وتكنولوجيا في نقطتي اختناق: الإعلانات والمواقع.",
+    "القول «0% عمولة» قوي تسويقيًا، لكنه يحتاج تحديد المسار؛ الاشتراكات والمنتجات والبودكاست تختلف عن Ad Network وBoosts.",
+    "توسيع المنتج من newsletter tool إلى media operating system يزيد ARPU والاحتفاظ، لكنه يرفع مخاطر التعقيد وتشتت المنتج.",
+    "بيانات 170 ألف منشور و450 مليون قارئ و75 مليار رسالة تثبت التوزيع، ولا تكشف وحدها العملاء الدافعين أو الزيارات أو الربحية."
   ],
   "sources": [
     {
-      "label": "Beehiiv",
-      "url": "https://beehiiv.com",
-      "coverage": "الموقع الرسمي والمدونة"
+      "id": "SRC-01",
+      "title": "About beehiiv",
+      "publisher": "beehiiv",
+      "url": "https://www.beehiiv.com/about",
+      "source_type": "صفحة شركة رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Q2 2026: 75B+ emails, 450M+ unique readers, $60M+ user earnings, 170K+ publications, 129 employees in 12 countries."
+    },
+    {
+      "id": "SRC-02",
+      "title": "The beehiiv Story: Chapter 4",
+      "publisher": "beehiiv",
+      "url": "https://www.beehiiv.com/blog/the-beehiiv-story-chapter-4",
+      "source_type": "إفصاح تشغيلي رسمي",
+      "published_at": "2025-11-19",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "$32M annualized revenue, 110 employees, 3B+ emails/month, $45M+ user earnings."
+    },
+    {
+      "id": "SRC-03",
+      "title": "2025 was a monumental year for beehiiv",
+      "publisher": "Tyler Denk / LinkedIn",
+      "url": "https://www.linkedin.com/posts/tyler-denk_2025-was-a-monumental-year-for-beehiiv-activity-7411781321796235264-AZCY",
+      "source_type": "إفصاح مباشر من المؤسس",
+      "published_at": "2026-01",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "$34M annualized revenue at year-end 2025, 110 employees, 3B+ monthly emails, $45M+ user earnings."
+    },
+    {
+      "id": "SRC-04",
+      "title": "beehiiv crossed $30M ARR",
+      "publisher": "beehiiv / LinkedIn",
+      "url": "https://www.linkedin.com/posts/beehiiv_from-the-beehiiv-community-on-reddit-im-activity-7468011635627020289-CRJe",
+      "source_type": "إفصاح شركة مباشر",
+      "published_at": "2026-06",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Crossed $30M ARR; ARR differs from broader annualized revenue."
+    },
+    {
+      "id": "SRC-05",
+      "title": "beehiiv adding more than $1M ARR per month",
+      "publisher": "Tyler Denk / LinkedIn",
+      "url": "https://www.linkedin.com/posts/tyler-denk_were-accelerating-big-time-beehiiv-to-activity-7430257670927835136-IuvG",
+      "source_type": "إفصاح نمو مباشر",
+      "published_at": "2026-03",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Adding over $1M ARR per month in early 2026; this is run-rate growth, not monthly cash revenue."
+    },
+    {
+      "id": "SRC-06",
+      "title": "beehiiv raises $33M Series B",
+      "publisher": "beehiiv via Business Wire",
+      "url": "https://www.businesswire.com/news/home/20240429463635/en/beehiiv-raises-%2433M-Series-B-for-newsletter-and-email-platform",
+      "source_type": "بيان تمويل رسمي",
+      "published_at": "2024-04-30",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "$33M Series B, $46.5M reported total funding, monthly revenue >$1M and 1B emails/month at announcement."
+    },
+    {
+      "id": "SRC-07",
+      "title": "beehiiv Raises $12.5M Series A",
+      "publisher": "beehiiv",
+      "url": "https://www.beehiiv.com/blog/beehiiv-raises-12-5-series-a-lightspeed-venture-partners",
+      "source_type": "إعلان تمويل رسمي",
+      "published_at": "2023-06-21",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "$12.5M Series A, $4M revenue run rate and monthly profitability in April 2023."
+    },
+    {
+      "id": "SRC-08",
+      "title": "beehiiv Raises $2.6 Million Seed",
+      "publisher": "beehiiv",
+      "url": "https://www.beehiiv.com/blog/beehiiv-raises-26-million-seed",
+      "source_type": "إعلان تمويل رسمي",
+      "published_at": "2021-10-05",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "$2.6M Seed and founders' backgrounds."
+    },
+    {
+      "id": "SRC-09",
+      "title": "beehiiv Powers Expansion with $1.6M Seed Extension",
+      "publisher": "beehiiv",
+      "url": "https://www.beehiiv.com/blog/beehiiv-expands-seed-round-fundraising",
+      "source_type": "إعلان تمويل رسمي",
+      "published_at": "2022-09-12",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "$1.6M extension, nearly $4.2M total at the time, eight-person team, historical New York base."
+    },
+    {
+      "id": "SRC-10",
+      "title": "The beehiiv Story: Chapter 3",
+      "publisher": "beehiiv",
+      "url": "https://www.beehiiv.com/blog/the-beehiiv-story-chapter-3",
+      "source_type": "إفصاح تشغيلي رسمي",
+      "published_at": "2024-11-22",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Nearly $2M/month revenue, 75 employees, 2B+ emails/month, Series B and Typedream acquisition."
+    },
+    {
+      "id": "SRC-11",
+      "title": "beehiiv Pricing Plans FAQ",
+      "publisher": "beehiiv",
+      "url": "https://www.beehiiv.com/blog/pricing-faq-2024",
+      "source_type": "تسعير ودعم رسمي",
+      "published_at": "2024-04-17",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Updated July 2026; Launch, Scale, Max and Enterprise with subscriber-tier pricing."
+    },
+    {
+      "id": "SRC-12",
+      "title": "Everything beehiiv Launched at Summer Release 2026",
+      "publisher": "beehiiv",
+      "url": "https://www.beehiiv.com/blog/summer-release-event-2026",
+      "source_type": "إعلان منتجات رسمي",
+      "published_at": "2026-07-16",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Podcasts, Community, Visual Editor, Copilot, metered paywalls, paid trials, group subscriptions, premium podcasts."
+    },
+    {
+      "id": "SRC-13",
+      "title": "beehiiv MCP v2",
+      "publisher": "beehiiv Product Updates",
+      "url": "https://product.beehiiv.com/p/beehiiv-mcp-v2",
+      "source_type": "إعلان تكامل رسمي",
+      "published_at": "2026-04-30",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "MCP v2 available to all and connected to content, products, segments, automations and monetization data."
+    },
+    {
+      "id": "SRC-14",
+      "title": "Recommendations Reimagined",
+      "publisher": "beehiiv Product Updates",
+      "url": "https://product.beehiiv.com/p/recommendations-reimagined",
+      "source_type": "إعلان نمو رسمي",
+      "published_at": "2026-07-09",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "15M+ subscriptions created through Recommendations and Boosts."
+    },
+    {
+      "id": "SRC-15",
+      "title": "On-Demand Ads",
+      "publisher": "beehiiv Product Updates",
+      "url": "https://product.beehiiv.com/p/on-demand-ads",
+      "source_type": "إعلان شبكة إعلانية رسمي",
+      "published_at": "2026-03-09",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Newsletters collectively earn more than $1M per month from the Ad Network; this is publisher earnings, not beehiiv revenue."
+    },
+    {
+      "id": "SRC-16",
+      "title": "Welcome to the new beehiiv",
+      "publisher": "beehiiv Product Updates",
+      "url": "https://product.beehiiv.com/p/welcome-to-the-new-beehiiv",
+      "source_type": "إعلان منتجات رسمي",
+      "published_at": "2025-11-14",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Digital products, files, memberships and consultations with 0% creator revenue share."
+    },
+    {
+      "id": "SRC-17",
+      "title": "beehiiv Acquires Swapstack",
+      "publisher": "beehiiv",
+      "url": "https://www.beehiiv.com/blog/beehiiv-acquires-swapstack",
+      "source_type": "إعلان استحواذ رسمي",
+      "published_at": "2023-09-26",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Swapstack acquisition expanded ad operations; price undisclosed."
+    },
+    {
+      "id": "SRC-18",
+      "title": "beehiiv Acquires Typedream",
+      "publisher": "beehiiv",
+      "url": "https://www.beehiiv.com/blog/beehiiv-acquires-ai-based-website-builder-typedream",
+      "source_type": "إعلان استحواذ رسمي",
+      "published_at": "2024-06-25",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Typedream acquisition added website-builder technology; price undisclosed."
+    },
+    {
+      "id": "SRC-19",
+      "title": "Integrations and Developer APIs",
+      "publisher": "beehiiv",
+      "url": "https://www.beehiiv.com/integrations",
+      "source_type": "صفحة تكاملات رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "API, Send API and webhooks; does not disclose internal stack or delivery provider."
+    },
+    {
+      "id": "SRC-20",
+      "title": "beehiiv expands into podcasting",
+      "publisher": "TechCrunch",
+      "url": "https://techcrunch.com/2026/04/02/beehiiv-expands-into-podcasts-taking-aim-at-patreon-substack-newsletters/",
+      "source_type": "مقابلة صحفية مباشرة",
+      "published_at": "2026-04-02",
+      "accessed_at": "2026-08-03",
+      "primary": false,
+      "notes": "Q1 2026 added $4.5M ARR, sent 10B+ emails and crossed 50K active users."
+    },
+    {
+      "id": "SRC-21",
+      "title": "beehiiv Enterprise",
+      "publisher": "beehiiv",
+      "url": "https://www.beehiiv.com/enterprise",
+      "source_type": "صفحة منتج مؤسسي رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "Enterprise contracts, websites, newsletters, data, APIs and integrations."
+    },
+    {
+      "id": "SRC-22",
+      "title": "Paid Newsletters",
+      "publisher": "beehiiv Product Updates",
+      "url": "https://product.beehiiv.com/p/paid-newsletters",
+      "source_type": "إعلان تحليلات رسمي",
+      "published_at": "2024",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "MRR, ARR, LTV and paid-subscription analytics for publishers; these are customer metrics, not beehiiv revenue."
     }
   ],
   "data_quality": [
-    "الأرقام والتفاصيل من تصريحات المؤسس والمستثمرين."
+    "الإيراد الشهري الفعلي غير معلن، وأحدث الأرقام هي ARR وannualized revenue.",
+    "annualized revenue البالغ 34M في نهاية 2025 وARR البالغ 30M+ في 2026 مقياسان مختلفان.",
+    "أرباح المستخدمين البالغة 60M+ ليست إيراد beehiiv.",
+    "أكثر من 1M دولار شهريًا من Ad Network هو ما تكسبه النشرات جماعيًا، وليس صافي إيراد الشركة.",
+    "170K+ publications و450M+ unique readers و75B+ emails أرقام Q2 2026 ذاتية الإفصاح.",
+    "3B+ emails per month يعود إلى نوفمبر 2025، بينما 10B+ في Q1 2026 يخص ربعًا كاملًا.",
+    "الزيارات الشهرية للموقع غير معلنة؛ حُذف رقم 15M.",
+    "عدد الموظفين الحالي 129 لا أقل من 100.",
+    "التقييم غير معلن ولم يُشتق من قيمة الجولات.",
+    "إجمالي التمويل يحمل اختلافًا: بيان Series B يقول 46.5M، بينما جمع الجولات المسماة 49.7M.",
+    "ربحية أبريل 2023 تاريخية ولا تثبت الربحية الحالية.",
+    "قيم استحواذ Swapstack وTypedream غير معلنة.",
+    "لا توجد أدلة رسمية حالية تكفي لتأكيد React أو Node.js أو PostgreSQL أو AWS أو SendGrid كمكدس مركزي.",
+    "الادعاءات عن حصة سوقية ضخمة ونمو ARR بنسبة 800% أزيلت لغياب إطار مقارنة حديث.",
+    "كل الأرقام التشغيلية والمالية غير المدققة مصدرها الشركة أو المؤسس، ولا توجد قوائم مالية عامة."
   ],
   "research_metadata": {
-    "researched_on": "2026-07-29",
-    "scope": "عام",
-    "source_method": "معلومات عامة",
+    "researched_on": "2026-08-03",
+    "scope": "Professional V2 — الشركة والمنتج والإيراد والتمويل والاستخدام والاستحواذات والتقنيات حتى 3 أغسطس 2026",
+    "source_method": "مصادر beehiiv الرسمية وإفصاحات المؤسس أولًا، مع مصدر صحفي مباشر واحد للأرقام التشغيلية عند غياب صفحة رسمية تفصيلية",
     "private_backend_data_included": false,
-    "copyright_note": "دراسة حالة"
+    "copyright_note": "دراسة حالة تحليلية؛ لا تمثل نصيحة استثمارية أو محاسبية",
+    "cutoff_note": "تم التحقق حتى 2026-08-03؛ أي إفصاح لاحق غير مشمول."
   },
-  "id": "beehiiv"
+  "id": "beehiiv",
+  "verification": {
+    "status": "verified_with_material_revenue_traffic_funding_headcount_and_product_corrections",
+    "verified_on": "2026-08-03",
+    "source_policy": {
+      "priority_order": [
+        "مصادر beehiiv الرسمية",
+        "إفصاحات المؤسس",
+        "إعلانات التمويل والاستحواذ والتسعير",
+        "مصدر صحفي مباشر واحد عند غياب صفحة رسمية"
+      ],
+      "sec_applicability": "غير منطبق عمليًا: beehiiv شركة خاصة أمريكية وليست مُصدرًا عامًا معروفًا لدى SEC.",
+      "financial_rule": "فُصل الإيراد الشهري وARR وannualized revenue والتمويل والتقييم وأرباح المستخدمين ومدفوعات شبكة الإعلانات.",
+      "usage_rule": "فُصلت زيارات الموقع والمستخدمون والمنشورات والقراء والرسائل والاشتراكات المنشأة عبر Recommendations.",
+      "funding_rule": "أُظهر اختلاف 46.5M عن مجموع 49.7M بدل فرض رقم غير مفسر.",
+      "technology_rule": "وُثقت خصائص المنتج وواجهات API فقط، وحُذف المكدس الداخلي غير المثبت."
+    },
+    "important_notes": [
+      "لا تنشر beehiiv إيرادًا محاسبيًا شهريًا.",
+      "34M annualized revenue في نهاية 2025 يختلف عن 30M+ ARR في 2026.",
+      "ARR يقيس الإيراد المتكرر، بينما annualized revenue قد يشمل Ad Network وBoosts.",
+      "أكثر من 1M دولار شهريًا عبر Ad Network هو ما تكسبه النشرات، وليس إيراد beehiiv.",
+      "60M+ دولار earned by users ليست إيراد الشركة.",
+      "170K+ publications و450M+ unique readers و75B+ emails ليست زيارات.",
+      "الزيارات الشهرية غير معلنة؛ حُذف رقم 15M.",
+      "129 موظفًا هو الرقم الحالي المعلن.",
+      "التقييم غير معلن ولم يُشتق من Series B.",
+      "Series B بلغت 33M، وليست إجمالي التمويل.",
+      "بيان Series B ذكر 46.5M إجمالي تمويل، بينما جمع الجولات 49.7M.",
+      "ربحية أبريل 2023 تاريخية ولا تثبت ربحية 2026.",
+      "0% revenue share ينطبق على مسارات محددة.",
+      "15M subscriptions عبر Recommendations وBoosts ليست مستخدمين فريدين.",
+      "قيم استحواذ Swapstack وTypedream غير معلنة.",
+      "3B+ emails/month يعود إلى نوفمبر 2025؛ Q1 2026 تجاوز 10B خلال الربع.",
+      "50K active users من مقابلة TechCrunch، بينما 170K publications مقياس مختلف.",
+      "لم تُثبت React وNode.js وPostgreSQL وAWS وSendGrid كمكدس مركزي.",
+      "نمو 800% وحصة سوقية ضخمة أزيلا لغياب إطار موثق.",
+      "الإفصاحات غير مدققة علنًا لأن الشركة خاصة."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_at": "2026-08-03",
+      "checks_passed": 108,
+      "checks_failed": 0,
+      "checks": [
+        {
+          "name": "base_order",
+          "passed": true,
+          "details": "order موجود"
+        },
+        {
+          "name": "base_slug",
+          "passed": true,
+          "details": "slug موجود"
+        },
+        {
+          "name": "base_name",
+          "passed": true,
+          "details": "name موجود"
+        },
+        {
+          "name": "base_domain",
+          "passed": true,
+          "details": "domain موجود"
+        },
+        {
+          "name": "base_website",
+          "passed": true,
+          "details": "website موجود"
+        },
+        {
+          "name": "base_category",
+          "passed": true,
+          "details": "category موجود"
+        },
+        {
+          "name": "base_headline",
+          "passed": true,
+          "details": "headline موجود"
+        },
+        {
+          "name": "base_summary",
+          "passed": true,
+          "details": "summary موجود"
+        },
+        {
+          "name": "base_directory_snapshot",
+          "passed": true,
+          "details": "directory_snapshot موجود"
+        },
+        {
+          "name": "base_company",
+          "passed": true,
+          "details": "company موجود"
+        },
+        {
+          "name": "base_problem_and_product",
+          "passed": true,
+          "details": "problem_and_product موجود"
+        },
+        {
+          "name": "base_origin_story",
+          "passed": true,
+          "details": "origin_story موجود"
+        },
+        {
+          "name": "base_build_and_launch",
+          "passed": true,
+          "details": "build_and_launch موجود"
+        },
+        {
+          "name": "base_costs_and_operations",
+          "passed": true,
+          "details": "costs_and_operations موجود"
+        },
+        {
+          "name": "base_monetization",
+          "passed": true,
+          "details": "monetization موجود"
+        },
+        {
+          "name": "base_growth",
+          "passed": true,
+          "details": "growth موجود"
+        },
+        {
+          "name": "base_tools",
+          "passed": true,
+          "details": "tools موجود"
+        },
+        {
+          "name": "base_revenue_timeline",
+          "passed": true,
+          "details": "revenue_timeline موجود"
+        },
+        {
+          "name": "base_lessons",
+          "passed": true,
+          "details": "lessons موجود"
+        },
+        {
+          "name": "base_sources",
+          "passed": true,
+          "details": "sources موجود"
+        },
+        {
+          "name": "base_data_quality",
+          "passed": true,
+          "details": "data_quality موجود"
+        },
+        {
+          "name": "base_research_metadata",
+          "passed": true,
+          "details": "research_metadata موجود"
+        },
+        {
+          "name": "base_id",
+          "passed": true,
+          "details": "id موجود"
+        },
+        {
+          "name": "v2_verification",
+          "passed": true,
+          "details": "verification موجود"
+        },
+        {
+          "name": "v2_evidence_map_schema",
+          "passed": true,
+          "details": "evidence_map_schema موجود"
+        },
+        {
+          "name": "v2_evidence_map",
+          "passed": true,
+          "details": "evidence_map موجود"
+        },
+        {
+          "name": "identity",
+          "passed": true,
+          "details": "المعرفات محفوظة"
+        },
+        {
+          "name": "unique_ids",
+          "passed": true,
+          "details": "المصادر فريدة"
+        },
+        {
+          "name": "unique_urls",
+          "passed": true,
+          "details": "الروابط فريدة"
+        },
+        {
+          "name": "sources_count",
+          "passed": true,
+          "details": "22 مصدرًا"
+        },
+        {
+          "name": "primary_majority",
+          "passed": true,
+          "details": "أغلبية أولية"
+        },
+        {
+          "name": "match_$.headline",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.headline",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.headline",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "match_$.summary",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.summary",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.summary",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "match_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "match_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "match_$.company.business_model",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.company.business_model",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.company.business_model",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "match_$.company.employees",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.company.employees",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.company.employees",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "match_$.company.location",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.company.location",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.company.location",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "match_$.company.funding",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.company.funding",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.company.funding",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "match_$.company.profitability",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.company.profitability",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.company.profitability",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "match_$.company.public_revenue_claim",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.company.public_revenue_claim",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.company.public_revenue_claim",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "match_$.problem_and_product",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.problem_and_product",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.problem_and_product",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "match_$.origin_story",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.origin_story",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.origin_story",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "match_$.build_and_launch",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.build_and_launch",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.build_and_launch",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "match_$.costs_and_operations",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.costs_and_operations",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.costs_and_operations",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "match_$.monetization",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.monetization",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.monetization",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "match_$.growth",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.growth",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.growth",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "match_$.market_data.market_size",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.market_data.market_size",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.market_data.market_size",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "match_$.tools",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.tools",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.tools",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "match_$.revenue_timeline",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.revenue_timeline",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.revenue_timeline",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "match_$.lessons",
+          "passed": true,
+          "details": "القيمة مطابقة"
+        },
+        {
+          "name": "refs_$.lessons",
+          "passed": true,
+          "details": "المراجع متسقة"
+        },
+        {
+          "name": "src_$.lessons",
+          "passed": true,
+          "details": "المصادر موجودة"
+        },
+        {
+          "name": "no_nan",
+          "passed": true,
+          "details": "JSON صالح"
+        },
+        {
+          "name": "old_revenue_removed",
+          "passed": true,
+          "details": "أزيل الادعاء القديم"
+        },
+        {
+          "name": "old_traffic_removed",
+          "passed": true,
+          "details": "أزيلت الزيارات"
+        },
+        {
+          "name": "arr_sep",
+          "passed": true,
+          "details": "فصل المقاييس"
+        },
+        {
+          "name": "user_earnings_sep",
+          "passed": true,
+          "details": "فصل أرباح المستخدمين"
+        },
+        {
+          "name": "traffic_unknown",
+          "passed": true,
+          "details": "لا اختلاق للزيارات"
+        },
+        {
+          "name": "headcount",
+          "passed": true,
+          "details": "تحديث الموظفين"
+        },
+        {
+          "name": "funding_gap",
+          "passed": true,
+          "details": "اختلاف التمويل"
+        },
+        {
+          "name": "profit_hist",
+          "passed": true,
+          "details": "الربحية تاريخية"
+        },
+        {
+          "name": "products",
+          "passed": true,
+          "details": "منتجات 2026"
+        },
+        {
+          "name": "acq",
+          "passed": true,
+          "details": "الاستحواذات"
+        },
+        {
+          "name": "tam",
+          "passed": true,
+          "details": "لا TAM مختلق"
+        },
+        {
+          "name": "stack_removed",
+          "passed": true,
+          "details": "حذف المكدس غير المدعوم"
+        },
+        {
+          "name": "lessons",
+          "passed": true,
+          "details": "دروس فريدة"
+        },
+        {
+          "name": "timeline",
+          "passed": true,
+          "details": "خط زمني"
+        },
+        {
+          "name": "date",
+          "passed": true,
+          "details": "التاريخ"
+        },
+        {
+          "name": "private_false",
+          "passed": true,
+          "details": "لا بيانات خاصة"
+        }
+      ],
+      "validator_notes": [
+        "تم التحقق من JSON وUTF-8.",
+        "تم الحفاظ على البنية الأصلية.",
+        "تم التحقق من evidence_map والمصادر.",
+        "تم فصل ARR وannualized revenue والتمويل والتقييم وأرباح المستخدمين.",
+        "تم فصل الزيارات والمنشورات والقراء والرسائل.",
+        "تم توثيق اختلاف التمويل.",
+        "تم حذف المكدس غير المدعوم.",
+        "تم منع NaN وInfinity."
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تفصل الإيرادات والتمويل والاستخدام وأرباح المستخدمين.",
+    "required_fields": [
+      "field_value",
+      "verification_status",
+      "confidence",
+      "claim_type",
+      "verified_on",
+      "evidence_summary",
+      "source_ids",
+      "source_references",
+      "limitations",
+      "source_count"
+    ],
+    "confidence_scale": {
+      "مرتفعة": "مصدر رسمي مباشر أو غياب إفصاح بعد مراجعة المصادر الأولية.",
+      "متوسطة إلى مرتفعة": "عدة مصادر أولية مع قيد تعريف أو زمن.",
+      "متوسطة": "استنتاج تحريري مدعوم.",
+      "منخفضة": "غير كافٍ لإثبات رقم مالي."
+    },
+    "metric_separation": [
+      "الإيراد الشهري",
+      "ARR",
+      "annualized revenue",
+      "MRR",
+      "التمويل",
+      "التقييم",
+      "الربحية",
+      "أرباح المستخدمين",
+      "Ad Network payouts",
+      "Boosts payouts",
+      "take rate",
+      "زيارات الموقع",
+      "المستخدمون النشطون",
+      "المنشورات",
+      "القراء الفريدون",
+      "الرسائل الشهرية",
+      "الرسائل التراكمية",
+      "Recommendations subscriptions",
+      "العملاء الدافعون",
+      "عدد الموظفين",
+      "قيمة الاستحواذ",
+      "حجم القائمة"
+    ]
+  },
+  "evidence_map": {
+    "$.headline": {
+      "field_value": "من أدوات Morning Brew الداخلية إلى نظام تشغيل يضم 170 ألف منشور: كيف فصلت beehiiv بين 30 مليون دولار ARR و60 مليون دولار كسبها المستخدمون",
+      "verification_status": "verified_editorial_synthesis",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "عنوان تحريري",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يجمع أصل Morning Brew ونطاق Q2 2026 وفصل ARR عن أرباح المستخدمين.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-04",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About beehiiv",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Fast facts",
+          "supports": "170K publications و60M user earnings"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "beehiiv crossed $30M ARR",
+          "publisher": "beehiiv / LinkedIn",
+          "url": "https://www.linkedin.com/posts/beehiiv_from-the-beehiiv-community-on-reddit-im-activity-7468011635627020289-CRJe",
+          "source_type": "إفصاح شركة مباشر",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح شركة",
+          "source_locator": "ARR milestone",
+          "supports": "30M ARR"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "beehiiv Raises $2.6 Million Seed",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/beehiiv-raises-26-million-seed",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2021-10-05",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان Seed",
+          "source_locator": "Founders",
+          "supports": "أصل الفريق"
+        }
+      ],
+      "limitations": "نظام التشغيل توصيف تحريري مدعوم بالمنتج وليس قطاعًا محاسبيًا.",
+      "source_count": 3
+    },
+    "$.summary": {
+      "field_value": "بدأت beehiiv في 2021 كمنصة متخصصة لإنشاء النشرات وتنميتها واستثمارها، ثم توسعت إلى نظام متكامل للأعمال الإعلامية يضم المواقع والبودكاست والمجتمعات والمنتجات الرقمية والإعلانات والاشتراكات والذكاء الاصطناعي. أحدث الإفصاحات تضع المنصة عند 170 ألف+ منشور و450 مليون+ قارئ فريد و75 مليار+ رسالة تاريخيًا، بينما تجاوز ARR المتكرر 30 مليون دولار في 2026. هذه المقاييس تختلف عن إيرادات Ad Network وBoosts وعن أرباح المستخدمين.",
+      "verification_status": "verified_current_full_stack_media_platform",
+      "confidence": "مرتفعة",
+      "claim_type": "ملخص",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "النشرات والمواقع والبودكاست والمجتمع والمنتجات والذكاء الاصطناعي موثقة.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-12",
+        "SRC-13",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About beehiiv",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Q2 facts",
+          "supports": "نطاق المنصة"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Everything beehiiv Launched at Summer Release 2026",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/summer-release-event-2026",
+          "source_type": "إعلان منتجات رسمي",
+          "published_at": "2026-07-16",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان منتج",
+          "source_locator": "Summer 2026",
+          "supports": "المنتجات الحالية"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "beehiiv MCP v2",
+          "publisher": "beehiiv Product Updates",
+          "url": "https://product.beehiiv.com/p/beehiiv-mcp-v2",
+          "source_type": "إعلان تكامل رسمي",
+          "published_at": "2026-04-30",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان MCP",
+          "source_locator": "MCP v2",
+          "supports": "الذكاء الاصطناعي"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "beehiiv Acquires Typedream",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/beehiiv-acquires-ai-based-website-builder-typedream",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2024-06-25",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "استحواذ",
+          "source_locator": "Typedream",
+          "supports": "المواقع"
+        }
+      ],
+      "limitations": "الأرقام ذاتية الإفصاح.",
+      "source_count": 4
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "لا تنشر beehiiv قيمة إيراد محاسبي لكل شهر. أعلنت 34 مليون دولار من annualized revenue بنهاية 2025، ثم أعلنت تجاوز 30 مليون دولار ARR في منتصف 2026. annualized revenue قد يشمل SaaS وAd Network وBoosts ومسارات أخرى، بينما ARR يركز على الإيراد المتكرر؛ لذلك لا يجوز اعتبار أي منهما «إيرادًا شهريًا» أو قسمته تلقائيًا على 12.",
+      "verification_status": "verified_no_monthly_actual_arr_and_annualized_separated",
+      "confidence": "مرتفعة",
+      "claim_type": "إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "34M annualized revenue و30M ARR موثقان، ولا يوجد إيراد شهري فعلي منشور.",
+      "source_ids": [
+        "SRC-03",
+        "SRC-04",
+        "SRC-05",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "2025 was a monumental year for beehiiv",
+          "publisher": "Tyler Denk / LinkedIn",
+          "url": "https://www.linkedin.com/posts/tyler-denk_2025-was-a-monumental-year-for-beehiiv-activity-7411781321796235264-AZCY",
+          "source_type": "إفصاح مباشر من المؤسس",
+          "published_at": "2026-01",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مؤسس",
+          "source_locator": "2025",
+          "supports": "34M annualized"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "beehiiv crossed $30M ARR",
+          "publisher": "beehiiv / LinkedIn",
+          "url": "https://www.linkedin.com/posts/beehiiv_from-the-beehiiv-community-on-reddit-im-activity-7468011635627020289-CRJe",
+          "source_type": "إفصاح شركة مباشر",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح شركة",
+          "source_locator": "2026",
+          "supports": "30M ARR"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "beehiiv adding more than $1M ARR per month",
+          "publisher": "Tyler Denk / LinkedIn",
+          "url": "https://www.linkedin.com/posts/tyler-denk_were-accelerating-big-time-beehiiv-to-activity-7430257670927835136-IuvG",
+          "source_type": "إفصاح نمو مباشر",
+          "published_at": "2026-03",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح نمو",
+          "source_locator": "2026",
+          "supports": "ARR additions"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "The beehiiv Story: Chapter 4",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/the-beehiiv-story-chapter-4",
+          "source_type": "إفصاح تشغيلي رسمي",
+          "published_at": "2025-11-19",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح رسمي",
+          "source_locator": "2025",
+          "supports": "32M annualized"
+        }
+      ],
+      "limitations": "لا توجد قوائم مدققة أو مصالحة بين المسارات.",
+      "source_count": 4
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير مُفصح عنه رسميًا، ولا يوجد رقم موثوق لزيارات beehiiv.com الشهرية. مقاييس Q2 2026 هي 170 ألف+ منشور و450 مليون+ قارئ فريد و75 مليار+ رسالة مرسلة تاريخيًا، مع 3 مليارات+ رسالة شهريًا في نوفمبر 2025. هذه أرقام منصة وتوزيع، وليست زيارات موقع أو MAU موحدًا.",
+      "verification_status": "verified_web_traffic_undisclosed_platform_metrics_separated",
+      "confidence": "مرتفعة",
+      "claim_type": "زيارات",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا توجد زيارات رسمية؛ المقاييس التشغيلية مختلفة.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-20"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About beehiiv",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Q2 2026",
+          "supports": "170K/450M/75B"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "The beehiiv Story: Chapter 4",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/the-beehiiv-story-chapter-4",
+          "source_type": "إفصاح تشغيلي رسمي",
+          "published_at": "2025-11-19",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح 2025",
+          "source_locator": "Emails",
+          "supports": "3B monthly"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "beehiiv expands into podcasting",
+          "publisher": "TechCrunch",
+          "url": "https://techcrunch.com/2026/04/02/beehiiv-expands-into-podcasts-taking-aim-at-patreon-substack-newsletters/",
+          "source_type": "مقابلة صحفية مباشرة",
+          "published_at": "2026-04-02",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "مقابلة",
+          "source_locator": "Q1 2026",
+          "supports": "50K active users و10B emails"
+        }
+      ],
+      "limitations": "المنشورات والقراء والرسائل والمستخدمون ليست زيارات.",
+      "source_count": 3
+    },
+    "$.company.business_model": {
+      "field_value": "اشتراكات SaaS متدرجة حسب عدد المشتركين والميزات عبر Launch وScale وMax وEnterprise، إلى جانب إيرادات من Ad Network وBoosts وخدمات المؤسسات. توسع المنتج ليشمل المواقع والبودكاست والمجتمع والمنتجات الرقمية والندوات والاشتراكات المدفوعة وCopilot وMCP. تأخذ beehiiv نسبة 0% من إيراد الاشتراكات والمنتجات الرقمية والبودكاست في المسارات المعلنة، لكن الشركة تستفيد من الاشتراك ومن اقتصاديات شبكات الإعلان والنمو؛ لم تنشر take rate أو مزيج الإيراد حسب المسار.",
+      "verification_status": "verified_multi_stream_model",
+      "confidence": "مرتفعة",
+      "claim_type": "نموذج عمل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "SaaS وEnterprise وAd Network وBoosts وحدود 0% موثقة.",
+      "source_ids": [
+        "SRC-11",
+        "SRC-15",
+        "SRC-14",
+        "SRC-16",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "beehiiv Pricing Plans FAQ",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/pricing-faq-2024",
+          "source_type": "تسعير ودعم رسمي",
+          "published_at": "2024-04-17",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير",
+          "source_locator": "Plans",
+          "supports": "SaaS"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "On-Demand Ads",
+          "publisher": "beehiiv Product Updates",
+          "url": "https://product.beehiiv.com/p/on-demand-ads",
+          "source_type": "إعلان شبكة إعلانية رسمي",
+          "published_at": "2026-03-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Ad Network",
+          "source_locator": "Publisher earnings",
+          "supports": "الإعلانات"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Recommendations Reimagined",
+          "publisher": "beehiiv Product Updates",
+          "url": "https://product.beehiiv.com/p/recommendations-reimagined",
+          "source_type": "إعلان نمو رسمي",
+          "published_at": "2026-07-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Recommendations",
+          "source_locator": "Paid growth",
+          "supports": "Boosts"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Welcome to the new beehiiv",
+          "publisher": "beehiiv Product Updates",
+          "url": "https://product.beehiiv.com/p/welcome-to-the-new-beehiiv",
+          "source_type": "إعلان منتجات رسمي",
+          "published_at": "2025-11-14",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منتجات",
+          "source_locator": "0% share",
+          "supports": "الحدود"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Everything beehiiv Launched at Summer Release 2026",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/summer-release-event-2026",
+          "source_type": "إعلان منتجات رسمي",
+          "published_at": "2026-07-16",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Product",
+          "source_locator": "2026 suite",
+          "supports": "التوسع"
+        }
+      ],
+      "limitations": "take rate والمزيج المالي غير معلنين.",
+      "source_count": 5
+    },
+    "$.company.employees": {
+      "field_value": "129 موظفًا بدوام كامل موزعين على 12 دولة وفق صفحة About في Q2 2026؛ ارتفع العدد من 110 في نهاية 2025 و75 في أواخر 2024.",
+      "verification_status": "verified_current_headcount",
+      "confidence": "مرتفعة",
+      "claim_type": "عدد موظفين",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "129 حاليًا مقابل 110 و75 تاريخيًا.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About beehiiv",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Team",
+          "supports": "129"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "The beehiiv Story: Chapter 4",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/the-beehiiv-story-chapter-4",
+          "source_type": "إفصاح تشغيلي رسمي",
+          "published_at": "2025-11-19",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح 2025",
+          "source_locator": "Team",
+          "supports": "110"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "The beehiiv Story: Chapter 3",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/the-beehiiv-story-chapter-3",
+          "source_type": "إفصاح تشغيلي رسمي",
+          "published_at": "2024-11-22",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح 2024",
+          "source_locator": "Team",
+          "supports": "75"
+        }
+      ],
+      "limitations": "العدد قابل للتغير ولا يوضح المقاولين.",
+      "source_count": 3
+    },
+    "$.company.location": {
+      "field_value": "beehiiv, Inc. شركة أمريكية بدأت بوصفها شركة مقرها نيويورك، لكنها أصبحت شركة تعمل عن بُعد بالكامل وموظفوها موزعون عالميًا في 12 دولة. لذلك يُستخدم «شركة أمريكية موزعة عالميًا» بدل اعتبار نيويورك موقع جميع العمليات.",
+      "verification_status": "verified_remote_distribution",
+      "confidence": "مرتفعة",
+      "claim_type": "موقع",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "نيويورك تاريخيًا وremote في 12 دولة حاليًا.",
+      "source_ids": [
+        "SRC-09",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "beehiiv Powers Expansion with $1.6M Seed Extension",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/beehiiv-expands-seed-round-fundraising",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2022-09-12",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان 2022",
+          "source_locator": "Location",
+          "supports": "New York"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About beehiiv",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Team distribution",
+          "supports": "Remote/12 countries"
+        }
+      ],
+      "limitations": "لم تُدرج كل عناوين الكيانات القانونية.",
+      "source_count": 2
+    },
+    "$.company.funding": {
+      "field_value": "Series B بقيمة 33 مليون دولار في 2024، بعد Series A بقيمة 12.5 مليونًا، وSeed بقيمة 2.6 مليون وتمديد Seed بقيمة 1.6 مليون. بيان Series B قال إن إجمالي التمويل بلغ 46.5 مليون دولار، بينما الجمع الحسابي لعناوين الجولات يساوي 49.7 مليونًا؛ يُعرض التمويل على أنه 46.5 مليون دولار على الأقل مع توضيح اختلاف منهجية العد.",
+      "verification_status": "verified_rounds_with_discrepancy",
+      "confidence": "مرتفعة",
+      "claim_type": "تمويل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الجولات موثقة مع اختلاف 46.5M و49.7M.",
+      "source_ids": [
+        "SRC-06",
+        "SRC-07",
+        "SRC-08",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "beehiiv raises $33M Series B",
+          "publisher": "beehiiv via Business Wire",
+          "url": "https://www.businesswire.com/news/home/20240429463635/en/beehiiv-raises-%2433M-Series-B-for-newsletter-and-email-platform",
+          "source_type": "بيان تمويل رسمي",
+          "published_at": "2024-04-30",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Series B",
+          "source_locator": "Round/total",
+          "supports": "33M/46.5M"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "beehiiv Raises $12.5M Series A",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/beehiiv-raises-12-5-series-a-lightspeed-venture-partners",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2023-06-21",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Series A",
+          "source_locator": "Round",
+          "supports": "12.5M"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "beehiiv Raises $2.6 Million Seed",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/beehiiv-raises-26-million-seed",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2021-10-05",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Seed",
+          "source_locator": "Round",
+          "supports": "2.6M"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "beehiiv Powers Expansion with $1.6M Seed Extension",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/beehiiv-expands-seed-round-fundraising",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2022-09-12",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Extension",
+          "source_locator": "Round",
+          "supports": "1.6M/4.2M total"
+        }
+      ],
+      "limitations": "سبب الفرق غير مفسر علنًا.",
+      "source_count": 4
+    },
+    "$.company.profitability": {
+      "field_value": "أعلنت beehiiv تحقيق ربحية شهرية في أبريل 2023، لكن الشركة اختارت لاحقًا تسريع التوظيف والتسويق وارتفاع الحرق. لا يوجد إفصاح حديث موثوق يثبت ربحية 2025 أو 2026 أو يحدد هامش الربح.",
+      "verification_status": "verified_historical_not_current",
+      "confidence": "مرتفعة",
+      "claim_type": "ربحية",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "ربحية أبريل 2023 تاريخية ولا تثبت الوضع الحالي.",
+      "source_ids": [
+        "SRC-07",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "beehiiv Raises $12.5M Series A",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/beehiiv-raises-12-5-series-a-lightspeed-venture-partners",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2023-06-21",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان Series A",
+          "source_locator": "Profitability",
+          "supports": "April 2023"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "The beehiiv Story: Chapter 3",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/the-beehiiv-story-chapter-3",
+          "source_type": "إفصاح تشغيلي رسمي",
+          "published_at": "2024-11-22",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Story 2024",
+          "source_locator": "Burn",
+          "supports": "investment choice"
+        }
+      ],
+      "limitations": "لا توجد هوامش حديثة.",
+      "source_count": 2
+    },
+    "$.company.public_revenue_claim": {
+      "field_value": "أعلنت الشركة 34 مليون دولار annualized revenue بنهاية 2025، ثم تجاوز 30 مليون دولار ARR في 2026. الرقم الأول أوسع من الاشتراكات المتكررة وقد يضم Ad Network وBoosts، لذلك لا يمثل الرقمان تناقضًا مباشرًا ولا يجوز دمجهما أو معاملتهما كإيراد سنوي محقق.",
+      "verification_status": "verified_arr_vs_annualized",
+      "confidence": "مرتفعة",
+      "claim_type": "إيراد عام",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "فُصل 34M annualized عن 30M ARR.",
+      "source_ids": [
+        "SRC-03",
+        "SRC-04",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "2025 was a monumental year for beehiiv",
+          "publisher": "Tyler Denk / LinkedIn",
+          "url": "https://www.linkedin.com/posts/tyler-denk_2025-was-a-monumental-year-for-beehiiv-activity-7411781321796235264-AZCY",
+          "source_type": "إفصاح مباشر من المؤسس",
+          "published_at": "2026-01",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مؤسس",
+          "source_locator": "2025",
+          "supports": "34M"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "beehiiv crossed $30M ARR",
+          "publisher": "beehiiv / LinkedIn",
+          "url": "https://www.linkedin.com/posts/beehiiv_from-the-beehiiv-community-on-reddit-im-activity-7468011635627020289-CRJe",
+          "source_type": "إفصاح شركة مباشر",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح شركة",
+          "source_locator": "2026",
+          "supports": "30M ARR"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "The beehiiv Story: Chapter 4",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/the-beehiiv-story-chapter-4",
+          "source_type": "إفصاح تشغيلي رسمي",
+          "published_at": "2025-11-19",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح 2025",
+          "source_locator": "Run rate",
+          "supports": "32M"
+        }
+      ],
+      "limitations": "لا توجد مصالحة محاسبية منشورة.",
+      "source_count": 3
+    },
+    "$.problem_and_product": {
+      "field_value": [
+        "الناشر أو المبدع كان يحتاج إلى أدوات منفصلة للكتابة وإرسال البريد وبناء الموقع والتحليلات والإحالات والإعلانات والاشتراكات والبودكاست والمجتمع، ما يجزئ بيانات الجمهور ويزيد تكاليف التشغيل.",
+        "تقدم beehiiv محررًا ونظام إرسال وموقعًا وتحليلات وsegmentation وautomations وreferrals وRecommendations وBoosts وAd Network في مساحة واحدة.",
+        "في 2025–2026 توسعت من «منصة نشرات» إلى نظام أعمال إعلامية يشمل Typedream Website Builder والبودكاست والمجتمع والمنتجات الرقمية والندوات والاشتراكات الجماعية وCopilot.",
+        "ميزة 0% revenue share تنطبق على مسارات معلنة مثل الاشتراكات والمنتجات الرقمية والبودكاست، بينما شبكات الإعلانات والنمو لها اقتصاديات منفصلة غير منشورة بالكامل.",
+        "المقارنة بأن Substack أو Mailchimp لا يدعمان الإعلانات أو النمو صيغت سابقًا بصورة مطلقة؛ التصحيح هو أن beehiiv تميزت بدمج أدوات نمو وتحقيق دخل ناشر-أول داخل المنتج."
+      ],
+      "verification_status": "verified_platform_without_competitor_absolutes",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "مشكلة ومنتج",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توحيد الأدوات موثق، والادعاءات المطلقة عن المنافسين أزيلت.",
+      "source_ids": [
+        "SRC-12",
+        "SRC-14",
+        "SRC-15",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-12",
+          "title": "Everything beehiiv Launched at Summer Release 2026",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/summer-release-event-2026",
+          "source_type": "إعلان منتجات رسمي",
+          "published_at": "2026-07-16",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان منتج",
+          "source_locator": "Connected platform",
+          "supports": "توحيد الأدوات"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Recommendations Reimagined",
+          "publisher": "beehiiv Product Updates",
+          "url": "https://product.beehiiv.com/p/recommendations-reimagined",
+          "source_type": "إعلان نمو رسمي",
+          "published_at": "2026-07-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Growth",
+          "source_locator": "Recommendations",
+          "supports": "النمو"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "On-Demand Ads",
+          "publisher": "beehiiv Product Updates",
+          "url": "https://product.beehiiv.com/p/on-demand-ads",
+          "source_type": "إعلان شبكة إعلانية رسمي",
+          "published_at": "2026-03-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Ads",
+          "source_locator": "Ad Network",
+          "supports": "تحقيق الدخل"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Welcome to the new beehiiv",
+          "publisher": "beehiiv Product Updates",
+          "url": "https://product.beehiiv.com/p/welcome-to-the-new-beehiiv",
+          "source_type": "إعلان منتجات رسمي",
+          "published_at": "2025-11-14",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Products",
+          "source_locator": "Digital products",
+          "supports": "التوسع"
+        }
+      ],
+      "limitations": "لا توجد دراسة مستقلة للتفوق على جميع المنافسين.",
+      "source_count": 4
+    },
+    "$.origin_story": {
+      "field_value": [
+        "تأسست beehiiv على يد Tyler Denk وBenjamin Hargett وJacob Hurd، وهم من الموظفين والمهندسين الأوائل في Morning Brew.",
+        "استلهم المؤسسون المنتج من الأدوات الداخلية التي استُخدمت للنمو والإحالات والتحليلات وتشغيل نشرة واسعة النطاق.",
+        "بدأ الفريق بتمويل Seed قدره 2.6 مليون دولار، ثم أضاف 1.6 مليونًا في 2022 قبل Series A وSeries B.",
+        "القيمة لم تكن أن كل أدوات السوق غائبة، بل تجميع خبرة تشغيل ناشر سريع النمو داخل منتج متاح للجميع."
+      ],
+      "verification_status": "verified_morning_brew_origin",
+      "confidence": "مرتفعة",
+      "claim_type": "قصة تأسيس",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المؤسسون وخبرتهم وإطلاق 2021 موثقون.",
+      "source_ids": [
+        "SRC-08",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "beehiiv Raises $2.6 Million Seed",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/beehiiv-raises-26-million-seed",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2021-10-05",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Seed",
+          "source_locator": "Founders",
+          "supports": "الفريق"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About beehiiv",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "About",
+          "source_locator": "Origin",
+          "supports": "Morning Brew"
+        }
+      ],
+      "limitations": "لم تُستخدم تفاصيل صفقة Morning Brew.",
+      "source_count": 2
+    },
+    "$.build_and_launch": {
+      "field_value": [
+        "ركزت الإصدارات المبكرة على محرر النشرات والتحليلات والإحالات والتوصيات وواجهات النمو.",
+        "أطلقت Ad Network في 2023 ثم استحوذت على Swapstack لتسريع علاقات المعلنين وتشغيل الحملات.",
+        "استحوذت على Typedream في يونيو 2024، ثم دمجت تقنيتها في Website Builder موحد للنشرات والمواقع.",
+        "بحلول 2026 أضافت podcast hosting وwebinars وCommunity وVisual Editor وmetered paywalls وpaid trials وgroup subscriptions وpremium podcasts.",
+        "أطلقت MCP ثم MCP v2 لتمكين أدوات مثل ChatGPT وClaude وGemini من قراءة بيانات الحساب وتنفيذ إجراءات، وأتبعتها بـCopilot داخل المنتج.",
+        "أُعيد بناء Recommendations وBoosts، ووصل عدد الاشتراكات المنشأة عبرهما إلى أكثر من 15 مليونًا وفق إفصاح يوليو 2026."
+      ],
+      "verification_status": "verified_product_and_acquisition_timeline",
+      "confidence": "مرتفعة",
+      "claim_type": "تاريخ منتج",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "Swapstack وTypedream وMCP وصيف 2026 موثقة.",
+      "source_ids": [
+        "SRC-17",
+        "SRC-18",
+        "SRC-13",
+        "SRC-12",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-17",
+          "title": "beehiiv Acquires Swapstack",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/beehiiv-acquires-swapstack",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2023-09-26",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Acquisition",
+          "source_locator": "Swapstack",
+          "supports": "الإعلانات"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "beehiiv Acquires Typedream",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/beehiiv-acquires-ai-based-website-builder-typedream",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2024-06-25",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Acquisition",
+          "source_locator": "Typedream",
+          "supports": "المواقع"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "beehiiv MCP v2",
+          "publisher": "beehiiv Product Updates",
+          "url": "https://product.beehiiv.com/p/beehiiv-mcp-v2",
+          "source_type": "إعلان تكامل رسمي",
+          "published_at": "2026-04-30",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "MCP",
+          "source_locator": "v2",
+          "supports": "الذكاء الاصطناعي"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Everything beehiiv Launched at Summer Release 2026",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/summer-release-event-2026",
+          "source_type": "إعلان منتجات رسمي",
+          "published_at": "2026-07-16",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Release",
+          "source_locator": "2026",
+          "supports": "المنتجات"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Recommendations Reimagined",
+          "publisher": "beehiiv Product Updates",
+          "url": "https://product.beehiiv.com/p/recommendations-reimagined",
+          "source_type": "إعلان نمو رسمي",
+          "published_at": "2026-07-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Recommendations",
+          "source_locator": "15M subscriptions",
+          "supports": "النمو"
+        }
+      ],
+      "limitations": "قيم الاستحواذ غير معلنة.",
+      "source_count": 5
+    },
+    "$.costs_and_operations": {
+      "field_value": [
+        "البنية التحتية لإرسال مليارات الرسائل ومراقبة التسليم والسمعة ومكافحة الإساءة والتخزين والتحليلات تمثل تكلفة تشغيل رئيسية، لكن الشركة لا تنشر تكلفة الرسالة أو الهامش الإجمالي.",
+        "Ad Network تتطلب مبيعات معلنين ومطابقة حملات وتقارير وفوترة ومدفوعات للناشرين؛ أكثر من مليون دولار شهريًا الذي تكسبه النشرات هو payout للمستخدمين وليس إيرادًا للشركة.",
+        "ارتفع الفريق إلى 129 موظفًا بدوام كامل في 12 دولة، ما يناقض وصف «أقل من 100 موظف» القديم.",
+        "عمليات الاستحواذ على Swapstack وTypedream وسعت فريق الإعلانات وبناء المواقع، لكن أسعار الصفقات غير معلنة.",
+        "إرسال 3 مليارات+ رسالة شهريًا في أواخر 2025 وأكثر من 10 مليارات خلال Q1 2026 يثبت نطاق التشغيل، ولا يكشف تكاليف AWS أو SendGrid أو مزودًا بعينه."
+      ],
+      "verification_status": "verified_scale_no_cost_estimates",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "تشغيل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "حجم الإرسال والفريق وتشغيل الإعلانات موثق دون اختراع تكلفة.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-01",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "The beehiiv Story: Chapter 4",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/the-beehiiv-story-chapter-4",
+          "source_type": "إفصاح تشغيلي رسمي",
+          "published_at": "2025-11-19",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Operating",
+          "source_locator": "Scale",
+          "supports": "3B emails/110 staff"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About beehiiv",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Team",
+          "source_locator": "Current",
+          "supports": "129"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "On-Demand Ads",
+          "publisher": "beehiiv Product Updates",
+          "url": "https://product.beehiiv.com/p/on-demand-ads",
+          "source_type": "إعلان شبكة إعلانية رسمي",
+          "published_at": "2026-03-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Ads",
+          "source_locator": "Payouts",
+          "supports": "operations"
+        }
+      ],
+      "limitations": "لا توجد تكلفة رسالة أو هامش إجمالي.",
+      "source_count": 3
+    },
+    "$.monetization": {
+      "field_value": [
+        "اشتراكات Launch وScale وMax وEnterprise؛ Launch مجانية، بينما تدفع الحسابات الأعلى حسب الخطة وحجم قائمة المشتركين.",
+        "عقود Enterprise بتسعير مخصص وخصائص وتكاملات ودعم مناسب للناشرين والشركات الكبيرة.",
+        "اقتصاديات Ad Network من بيع الحملات وإدارتها وتوزيع الأرباح على الناشرين؛ لا تنشر beehiiv صافي العمولة أو take rate.",
+        "اقتصاديات Boosts وPaid Recommendations، حيث يدفع ناشر لاكتساب مشترك متحقق ويكسب ناشر آخر مقابل الإحالة؛ لم يُكشف هامش beehiiv.",
+        "لا تأخذ beehiiv نسبة من إيرادات الاشتراكات المدفوعة والمنتجات الرقمية والبودكاست في المسارات المعلنة، لكنها تحقق الدخل من الخطة المدفوعة والبنية المحيطة.",
+        "الدورات كانت مسار إيراد مُعلنًا في 2023، لكنها ليست موثقة كجزء جوهري من المزيج الحالي بعد توسع المنصة.",
+        "Direct Sponsorships وwebinars وcommunity وdigital products وpremium podcasts تزيد قيمة الاشتراك والاحتفاظ، لكن توفر الميزة لا يعني إيرادًا مستقلًا معلنًا."
+      ],
+      "verification_status": "verified_revenue_pathways",
+      "confidence": "مرتفعة",
+      "claim_type": "مسارات إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الخطط وAd Network وBoosts وحدود 0% موثقة.",
+      "source_ids": [
+        "SRC-11",
+        "SRC-21",
+        "SRC-15",
+        "SRC-14",
+        "SRC-16",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "beehiiv Pricing Plans FAQ",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/pricing-faq-2024",
+          "source_type": "تسعير ودعم رسمي",
+          "published_at": "2024-04-17",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Pricing",
+          "source_locator": "Plans",
+          "supports": "SaaS"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "beehiiv Enterprise",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/enterprise",
+          "source_type": "صفحة منتج مؤسسي رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Enterprise",
+          "source_locator": "Contracts",
+          "supports": "Enterprise"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "On-Demand Ads",
+          "publisher": "beehiiv Product Updates",
+          "url": "https://product.beehiiv.com/p/on-demand-ads",
+          "source_type": "إعلان شبكة إعلانية رسمي",
+          "published_at": "2026-03-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Ads",
+          "source_locator": "Network",
+          "supports": "Ads"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Recommendations Reimagined",
+          "publisher": "beehiiv Product Updates",
+          "url": "https://product.beehiiv.com/p/recommendations-reimagined",
+          "source_type": "إعلان نمو رسمي",
+          "published_at": "2026-07-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Recommendations",
+          "source_locator": "Paid growth",
+          "supports": "Boosts"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Welcome to the new beehiiv",
+          "publisher": "beehiiv Product Updates",
+          "url": "https://product.beehiiv.com/p/welcome-to-the-new-beehiiv",
+          "source_type": "إعلان منتجات رسمي",
+          "published_at": "2025-11-14",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Products",
+          "source_locator": "0% cut",
+          "supports": "Digital products"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "beehiiv Raises $12.5M Series A",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/beehiiv-raises-12-5-series-a-lightspeed-venture-partners",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2023-06-21",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Historical",
+          "source_locator": "Courses",
+          "supports": "2023 stream"
+        }
+      ],
+      "limitations": "لا توجد take rates أو actual mix.",
+      "source_count": 6
+    },
+    "$.growth": {
+      "field_value": [
+        "ارتفع revenue run rate من 4 ملايين دولار في يونيو 2023 إلى قرابة 2 مليون دولار شهريًا في نوفمبر 2024، ثم 32–34 مليون دولار annualized revenue في نهاية 2025.",
+        "أعلنت الشركة تجاوز 30 مليون دولار ARR في 2026، كما قال المؤسس إنها كانت تضيف أكثر من مليون دولار ARR شهريًا في بداية العام؛ هذا نمو run-rate لا تحصيل نقدي شهري.",
+        "ارتفع حجم الإرسال من أكثر من مليار رسالة شهريًا في أبريل 2024 إلى أكثر من 2 مليار في نوفمبر 2024 وأكثر من 3 مليارات في نوفمبر 2025.",
+        "في Q2 2026 أعلنت 170 ألف+ منشور و450 مليون+ قارئ فريد و75 مليار+ رسالة تاريخيًا و60 مليون+ دولار كسبها المستخدمون.",
+        "لا يوجد رقم رسمي لزيارات الموقع أو churn أو عدد العملاء الدافعين؛ لذلك لم يُحسب معدل نمو موحد أو حصة سوقية من Substack وKit.",
+        "أرقام 800% نمو ARR وحصة سوقية ضخمة حُذفت لعدم وجود تعريف وفترة ومصدر حاليين يسمحان بالتعميم."
+      ],
+      "verification_status": "verified_multi_metric_growth",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "نمو",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "run-rate والرسائل ومقاييس Q2 موثقة دون معدل واحد.",
+      "source_ids": [
+        "SRC-07",
+        "SRC-10",
+        "SRC-03",
+        "SRC-04",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "beehiiv Raises $12.5M Series A",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/beehiiv-raises-12-5-series-a-lightspeed-venture-partners",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2023-06-21",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "2023",
+          "source_locator": "Run rate",
+          "supports": "4M"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "The beehiiv Story: Chapter 3",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/the-beehiiv-story-chapter-3",
+          "source_type": "إفصاح تشغيلي رسمي",
+          "published_at": "2024-11-22",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "2024",
+          "source_locator": "Revenue/emails",
+          "supports": "~2M monthly/2B"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "2025 was a monumental year for beehiiv",
+          "publisher": "Tyler Denk / LinkedIn",
+          "url": "https://www.linkedin.com/posts/tyler-denk_2025-was-a-monumental-year-for-beehiiv-activity-7411781321796235264-AZCY",
+          "source_type": "إفصاح مباشر من المؤسس",
+          "published_at": "2026-01",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "2025",
+          "source_locator": "Annualized/emails",
+          "supports": "34M/3B"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "beehiiv crossed $30M ARR",
+          "publisher": "beehiiv / LinkedIn",
+          "url": "https://www.linkedin.com/posts/beehiiv_from-the-beehiiv-community-on-reddit-im-activity-7468011635627020289-CRJe",
+          "source_type": "إفصاح شركة مباشر",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "2026",
+          "source_locator": "ARR",
+          "supports": "30M"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About beehiiv",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Q2 2026",
+          "source_locator": "Platform",
+          "supports": "170K/450M/75B/60M"
+        }
+      ],
+      "limitations": "لا تسمح بتقدير حصة سوق أو CAGR موحد.",
+      "source_count": 5
+    },
+    "$.market_data.market_size": {
+      "field_value": "لم تنشر beehiiv تقديرًا رسميًا لـTAM أو SAM أو SOM. أفضل سياق أولي هو نطاقها الخاص: 170 ألف+ منشور و450 مليون+ قارئ فريد و75 مليار+ رسالة تاريخيًا حتى Q2 2026؛ هذه ليست قيمة سوق مالية.",
+      "verification_status": "verified_no_tam",
+      "confidence": "مرتفعة",
+      "claim_type": "حجم سوق",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد TAM؛ مقاييس المنصة سياق فقط.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About beehiiv",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "About",
+          "source_locator": "Q2 facts",
+          "supports": "نطاق الشركة"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Everything beehiiv Launched at Summer Release 2026",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/summer-release-event-2026",
+          "source_type": "إعلان منتجات رسمي",
+          "published_at": "2026-07-16",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Product",
+          "source_locator": "Media platform",
+          "supports": "نطاق الاستخدام"
+        }
+      ],
+      "limitations": "الأرقام ليست قيمة سوق مالية.",
+      "source_count": 2
+    },
+    "$.tools": {
+      "field_value": [
+        "محرر النشرات وVisual Editor وWebsite Builder المدمج من Typedream",
+        "Automations وsegmentation وsurveys وA/B testing وreferral program وRecommendation Network",
+        "Ad Network وOn-Demand Ads وDirect Sponsorships وBoosts وWallet",
+        "Paid subscriptions وmetered paywalls وpaid trials وgroup subscriptions",
+        "Digital Products وwebinars وpaid coaching وملفات ومنتجات وصول",
+        "Podcast hosting وتوزيع إلى Apple Podcasts وSpotify وpremium private feeds",
+        "Community مع channels ومساحات gated مرتبطة ببيانات المشترك",
+        "API v2 وSend API وwebhooks وتكاملات مخصصة",
+        "MCP وMCP v2 وCopilot للتفاعل مع بيانات الجمهور والمحتوى والأتمتة",
+        "تحليلات MRR وARR وLTV وchurn للناشرين؛ هذه مقاييس عملاء beehiiv وليست إيراد الشركة",
+        "البنية الداخلية الدقيقة غير مكشوفة رسميًا؛ لذلك أزيلت React وNode.js وPostgreSQL وAWS وSendGrid من المكدس المؤكد بدل عرضها كحقائق حالية"
+      ],
+      "verification_status": "verified_product_tools_internal_stack_removed",
+      "confidence": "مرتفعة",
+      "claim_type": "أدوات وتقنيات",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "قدرات المنتج موثقة والمكدس الداخلي غير المثبت أزيل.",
+      "source_ids": [
+        "SRC-12",
+        "SRC-13",
+        "SRC-14",
+        "SRC-15",
+        "SRC-19",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-12",
+          "title": "Everything beehiiv Launched at Summer Release 2026",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/summer-release-event-2026",
+          "source_type": "إعلان منتجات رسمي",
+          "published_at": "2026-07-16",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Product",
+          "source_locator": "2026",
+          "supports": "suite"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "beehiiv MCP v2",
+          "publisher": "beehiiv Product Updates",
+          "url": "https://product.beehiiv.com/p/beehiiv-mcp-v2",
+          "source_type": "إعلان تكامل رسمي",
+          "published_at": "2026-04-30",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "MCP",
+          "source_locator": "v2",
+          "supports": "AI"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Recommendations Reimagined",
+          "publisher": "beehiiv Product Updates",
+          "url": "https://product.beehiiv.com/p/recommendations-reimagined",
+          "source_type": "إعلان نمو رسمي",
+          "published_at": "2026-07-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Recommendations",
+          "source_locator": "growth",
+          "supports": "growth"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "On-Demand Ads",
+          "publisher": "beehiiv Product Updates",
+          "url": "https://product.beehiiv.com/p/on-demand-ads",
+          "source_type": "إعلان شبكة إعلانية رسمي",
+          "published_at": "2026-03-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Ads",
+          "source_locator": "network",
+          "supports": "ads"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Integrations and Developer APIs",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/integrations",
+          "source_type": "صفحة تكاملات رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Integrations",
+          "source_locator": "API",
+          "supports": "developer tools"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "beehiiv Acquires Typedream",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/beehiiv-acquires-ai-based-website-builder-typedream",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2024-06-25",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Typedream",
+          "source_locator": "Website",
+          "supports": "builder"
+        }
+      ],
+      "limitations": "لا توجد وثائق هندسية لتأكيد React/Node/Postgres/AWS/SendGrid.",
+      "source_count": 6
+    },
+    "$.revenue_timeline": {
+      "field_value": [
+        {
+          "date": "2021",
+          "amount": "2.6 مليون دولار",
+          "type": "Seed",
+          "note": "تمويل أولي لإطلاق منصة نشرات موجهة للنمو وتحقيق الدخل."
+        },
+        {
+          "date": "2022",
+          "amount": "1.6 مليون دولار",
+          "type": "Seed Extension",
+          "note": "رفع إجمالي التمويل آنذاك إلى قرابة 4.2 ملايين دولار؛ توقعت الشركة تجاوز 1M ARR بنهاية العام."
+        },
+        {
+          "date": "2023",
+          "amount": "12.5 مليون دولار",
+          "type": "Series A",
+          "note": "كانت الشركة عند 4M revenue run rate وأعلنت ربحية شهرية في أبريل؛ الرقم تمويل وليس إيرادًا."
+        },
+        {
+          "date": "2024",
+          "amount": "33 مليون دولار",
+          "type": "Series B",
+          "note": "بيان الجولة ذكر إجمالي تمويل 46.5M، بينما جمع عناوين الجولات يصل إلى 49.7M؛ وُثق اختلاف العد."
+        },
+        {
+          "date": "2025",
+          "amount": "34 مليون دولار annualized revenue",
+          "type": "معدل إيراد سنوي محول",
+          "note": "إفصاح المؤسس بنهاية 2025؛ ليس بالضرورة إيرادًا سنويًا محققًا وفق قوائم مدققة."
+        },
+        {
+          "date": "2026",
+          "amount": "30 مليون دولار+ ARR",
+          "type": "إيراد متكرر سنوي",
+          "note": "إفصاح الشركة في منتصف 2026؛ يجب فصله عن annualized revenue الأوسع وعن أرباح الناشرين."
+        }
+      ],
+      "verification_status": "verified_financing_and_revenue_timeline",
+      "confidence": "مرتفعة",
+      "claim_type": "خط زمني",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "كل محطة موثقة مع فصل التمويل والإيراد.",
+      "source_ids": [
+        "SRC-08",
+        "SRC-09",
+        "SRC-07",
+        "SRC-06",
+        "SRC-03",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "beehiiv Raises $2.6 Million Seed",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/beehiiv-raises-26-million-seed",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2021-10-05",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "2021",
+          "source_locator": "Seed",
+          "supports": "2.6M"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "beehiiv Powers Expansion with $1.6M Seed Extension",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/beehiiv-expands-seed-round-fundraising",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2022-09-12",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "2022",
+          "source_locator": "Extension",
+          "supports": "1.6M"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "beehiiv Raises $12.5M Series A",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/beehiiv-raises-12-5-series-a-lightspeed-venture-partners",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2023-06-21",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "2023",
+          "source_locator": "Series A",
+          "supports": "12.5M"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "beehiiv raises $33M Series B",
+          "publisher": "beehiiv via Business Wire",
+          "url": "https://www.businesswire.com/news/home/20240429463635/en/beehiiv-raises-%2433M-Series-B-for-newsletter-and-email-platform",
+          "source_type": "بيان تمويل رسمي",
+          "published_at": "2024-04-30",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "2024",
+          "source_locator": "Series B",
+          "supports": "33M"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "2025 was a monumental year for beehiiv",
+          "publisher": "Tyler Denk / LinkedIn",
+          "url": "https://www.linkedin.com/posts/tyler-denk_2025-was-a-monumental-year-for-beehiiv-activity-7411781321796235264-AZCY",
+          "source_type": "إفصاح مباشر من المؤسس",
+          "published_at": "2026-01",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "2025",
+          "source_locator": "Annualized",
+          "supports": "34M"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "beehiiv crossed $30M ARR",
+          "publisher": "beehiiv / LinkedIn",
+          "url": "https://www.linkedin.com/posts/beehiiv_from-the-beehiiv-community-on-reddit-im-activity-7468011635627020289-CRJe",
+          "source_type": "إفصاح شركة مباشر",
+          "published_at": "2026-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "2026",
+          "source_locator": "ARR",
+          "supports": "30M+"
+        }
+      ],
+      "limitations": "annualized revenue ليس إيرادًا سنويًا مدققًا.",
+      "source_count": 6
+    },
+    "$.lessons": {
+      "field_value": [
+        "حوّل الخبرة التشغيلية الداخلية إلى منتج، لكن أثبت القيمة بالاحتفاظ والإيراد لا بقصة الأصل وحدها.",
+        "افصل ARR المتكرر عن annualized revenue الشامل، وافصل كليهما عن GMV أو أرباح الناشرين أو قيمة الحملات.",
+        "صمّم حلقة نمو مجانية عبر Recommendations ثم أضف طبقة مدفوعة عبر Boosts من دون إلغاء النمو العضوي.",
+        "الاستحواذ على Swapstack وTypedream اشترى خبرة وشبكات وتكنولوجيا في نقطتي اختناق: الإعلانات والمواقع.",
+        "القول «0% عمولة» قوي تسويقيًا، لكنه يحتاج تحديد المسار؛ الاشتراكات والمنتجات والبودكاست تختلف عن Ad Network وBoosts.",
+        "توسيع المنتج من newsletter tool إلى media operating system يزيد ARPU والاحتفاظ، لكنه يرفع مخاطر التعقيد وتشتت المنتج.",
+        "بيانات 170 ألف منشور و450 مليون قارئ و75 مليار رسالة تثبت التوزيع، ولا تكشف وحدها العملاء الدافعين أو الزيارات أو الربحية."
+      ],
+      "verification_status": "analytical_inference",
+      "confidence": "متوسطة",
+      "claim_type": "دروس",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس مبنية على الأصل والمقاييس والنمو والاستحواذات.",
+      "source_ids": [
+        "SRC-08",
+        "SRC-03",
+        "SRC-14",
+        "SRC-17",
+        "SRC-18",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "beehiiv Raises $2.6 Million Seed",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/beehiiv-raises-26-million-seed",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2021-10-05",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Origin",
+          "source_locator": "Founders",
+          "supports": "internal tools"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "2025 was a monumental year for beehiiv",
+          "publisher": "Tyler Denk / LinkedIn",
+          "url": "https://www.linkedin.com/posts/tyler-denk_2025-was-a-monumental-year-for-beehiiv-activity-7411781321796235264-AZCY",
+          "source_type": "إفصاح مباشر من المؤسس",
+          "published_at": "2026-01",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Metrics",
+          "source_locator": "Revenue",
+          "supports": "separation"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Recommendations Reimagined",
+          "publisher": "beehiiv Product Updates",
+          "url": "https://product.beehiiv.com/p/recommendations-reimagined",
+          "source_type": "إعلان نمو رسمي",
+          "published_at": "2026-07-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Growth",
+          "source_locator": "Recommendations",
+          "supports": "flywheel"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "beehiiv Acquires Swapstack",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/beehiiv-acquires-swapstack",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2023-09-26",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Acquisition",
+          "source_locator": "Swapstack",
+          "supports": "ads"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "beehiiv Acquires Typedream",
+          "publisher": "beehiiv",
+          "url": "https://www.beehiiv.com/blog/beehiiv-acquires-ai-based-website-builder-typedream",
+          "source_type": "إعلان استحواذ رسمي",
+          "published_at": "2024-06-25",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Acquisition",
+          "source_locator": "Typedream",
+          "supports": "web"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Welcome to the new beehiiv",
+          "publisher": "beehiiv Product Updates",
+          "url": "https://product.beehiiv.com/p/welcome-to-the-new-beehiiv",
+          "source_type": "إعلان منتجات رسمي",
+          "published_at": "2025-11-14",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Monetization",
+          "source_locator": "0%",
+          "supports": "boundaries"
+        }
+      ],
+      "limitations": "استنتاجات تحريرية وليست توصيات استثمارية.",
+      "source_count": 6
+    }
+  }
 }

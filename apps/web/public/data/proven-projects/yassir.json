@@ -2,53 +2,1597 @@
   "id": "yassir",
   "slug": "yassir",
   "name": "يسير (Yassir)",
-  "headline": "التطبيق الفائق (Super App) الأكثر انتشاراً في دول المغرب العربي وأفريقيا الناطقة بالفرنسية",
-  "category": "Mobility & Delivery / التطبيقات الفائقة",
+  "headline": "من رحلة داخل المدينة إلى شبكة خدمات ومدفوعات وإعلانات: كيف بنت يسير تطبيقًا إقليميًا فوق الثقة والتوطين التشغيلي",
+  "category": "Mobility, Delivery, Payments & Retail Media / التطبيقات متعددة الخدمات",
   "company": {
-    "location": "تأسست في الجزائر، المقر الحالي في الولايات المتحدة (Y Combinator)",
-    "business_model": "عمولات على الخدمات المنجزة (نقل، توصيل، مدفوعات)"
+    "location": "نشأت فكرة يسير في بالو ألتو عام 2017 وأُطلقت لخدمة السوق الجزائرية، بينما تصنفها Y Combinator حاليًا كشركة مقرها التشغيلي في الجزائر ويظهر Yassir Inc. كمطور التطبيق. تعرض الصفحة المُدارة من الشركة على LinkedIn مقرًا في بالو ألتو. تعمل المجموعة عبر شمال أفريقيا وأسواق مختارة في أفريقيا وأوروبا وأمريكا الشمالية، لكن أحدث المصادر العامة لا تنشر قائمة موحدة متسقة لكل الأسواق النشطة.",
+    "business_model": "منصة متعددة الأطراف تجمع التنقل وتوصيل الطعام والبقالة والمدفوعات وخدمات الشركات. تحقق الدخل من عمولات ورسوم الرحلات والتوصيل، وعمولات أو هوامش التجار والمتاجر، وعقود Yassir Business، واقتصاديات Yassir Cash/Pay ووكلاء التعبئة بحسب السوق، وشراكات التوزيع الرقمي. وبعد استحواذ Kawarizmi في 2026 توسع النموذج إلى الإعلانات المبرمجة وRetail Media وشراء الوسائط للعلامات التجارية. لا تنشر الشركة نسب العمولة أو مزيج الإيرادات أو اقتصاد كل دولة."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات",
-    "monthly_traffic": "أكثر من 8 ملايين مستخدم"
+    "monthly_revenue": "غير معلن. يسير شركة خاصة ولا تنشر إيرادًا شهريًا أو سنويًا أو GMV أو قيمة معاملات موحدة، لذلك حُذف ادعاء «ملايين الدولارات». لا يمكن استنتاج الإيراد من التمويل أو عدد المستخدمين أو المدن أو الشركاء.",
+    "monthly_traffic": "غير معلن كمستخدمين نشطين شهريًا. أحدث بيان استحواذ منشور في مارس 2026 أعاد ذكر أكثر من 8 ملايين مستخدم وأكثر من 60 مدينة في ست دول، بينما يعرض App Store أكثر من 150 ألف شريك في 58 مدينة. هذه أرقام وصول وشبكة معلنة وليست MAU أو طلبات شهرية، كما توجد صفحات قديمة ما تزال تعرض 6 ملايين مستخدم و45 مدينة."
   },
   "overview": {
     "problem": {
-      "text": "دول المغرب العربي وأجزاء واسعة من أفريقيا الناطقة بالفرنسية كانت تعاني من نقص التغطية من قبل التطبيقات العالمية، وضعف وسائل النقل العام ونقص الخدمات المالية الأساسية.",
-      "impact": "صعوبة التنقل وغياب الشمول المالي لشريحة واسعة من السكان (Unbanked)."
+      "text": "تحتاج أسواق المغرب العربي وأفريقيا الفرنكوفونية إلى حلول محلية للتنقل والتوصيل والدفع تتعامل مع النقد والبطاقات المحلية والعناوين المتفاوتة واللغات العربية والفرنسية والقيود التنظيمية المختلفة. كما يحتاج السائق والتاجر وشركة الخدمات إلى أدوات تشغيل وتسوية ودعم، لا مجرد واجهة لطلب الرحلة.",
+      "impact": "يؤدي ضعف التوطين إلى فشل الدفع والالتقاط والتسليم وارتفاع الإلغاء والدعم، بينما يؤدي فصل تطبيقات النقل والطعام والبقالة والدفع إلى تكرار الحسابات والعناوين ووسائل الدفع. لكن جمع الخدمات يرفع تعقيد التسعير والتسوية والخصوصية وجودة التجربة، ولا يضمن هوامش أعلى تلقائيًا."
     },
     "solution": {
-      "text": "منصة شاملة تبدأ بخدمات النقل التشاركي، لتكتسب ثقة المستخدم، ثم تتوسع لتوصيل الطلبات والخدمات المالية المدمجة (Yassir Pay)."
+      "text": "بدأت يسير بالتنقل ثم أضافت Yassir Food وYassir Market وخدمات الشركاء والشركات. يقدم التطبيق فئات رحلات متعددة، وأسعارًا مسبقة، وتتبعًا جغرافيًا، ودردشة داخل التطبيق، وطلبات طعام وبقالة، والدفع نقدًا أو بالبطاقة أو عبر Yassir Cash/Pay. تتيح المحفظة تعبئة الرصيد عبر البطاقة أو شبكة وكلاء، وتحويل الرصيد بين المستخدمين واستخدامه داخل المنظومة واسترداده عبر الوكلاء. ويضيف Yassir Business إدارة تنقل الموظفين والوجبات والمشتريات والطرود وبطاقات الهدايا. في 2026 توسعت المنصة إلى إعادة شحن الاتصالات والإعلانات وRetail Media بعد شراكة Ooredoo والاستحواذ على Kawarizmi."
     }
   },
   "market_data": {
-    "target_audience": "سكان المدن في الجزائر، تونس، المغرب، وجنوب أفريقيا.",
-    "market_size": "سوق الخدمات اليومية لـ 150 مليون نسمة في المنطقة.",
-    "growth_rate": "جمعت الشركة مؤخراً تمويل قدره 150 مليون دولار لتسريع التوسع."
+    "target_audience": "سكان المدن الذين يحتاجون إلى التنقل والطعام والبقالة والدفع الرقمي، والعملاء الذين يعتمدون على النقد أو البطاقات المحلية، والأسر والطلاب والموظفون. ويشمل جانب العرض السائقين وسائقي نقل البضائع ومندوبي التوصيل والمطاعم والمتاجر ووكلاء Yassir Cash، إضافة إلى الشركات التي تدير تنقل ووجبات ومشتريات فرقها، والبنوك وشركات الاتصالات والعلامات والمعلنين بعد توسع Retail Media.",
+    "market_size": "لا تنشر يسير TAM ماليًا موثقًا. رقم 150 مليون نسمة الوارد في الملف الأصلي غير مرتبط بمنهجية أو سوق قابل للخدمة. تشير رؤية المستثمرين إلى فرصة واسعة في أفريقيا الفرنكوفونية، لكن مؤشرات الشركة المباشرة هي أكثر من 8 ملايين مستخدم معلن، ونحو 150 ألف شريك، و58–60+ مدينة، وست دول وفق أحدث مواد 2026، مع اختلاف التعريفات والقوائم بين المصادر.",
+    "growth_rate": "لا توجد سلسلة إيرادات أو معاملات تسمح بحساب CAGR. أعلنت الشركة في 2021 نحو 5 ملايين مستخدم و50 ألف شريك و30 مدينة، ثم 8 ملايين مستخدم و100 ألف شريك و45 مدينة في 2022. في 2023 ظهر رقم 150 ألف شريك وأكثر من 50 مدينة، وفي 2026 تراوح الرقم المنشور بين 58 و60+ مدينة مع بقاء المستخدمين المعلنين عند أكثر من 8 ملايين. يظهر النمو العام بوضوح في الشركاء والمدن وتنوع الخدمات، لكن لا يمكن إثبات نمو المستخدمين بعد 2022 من الأرقام العامة."
   },
   "financials": {
-    "initial_investment": "تخرجت من مسرعة Y Combinator، وجمعت لاحقاً جولات ضخمة (Series B).",
-    "valuation": "$500M+ (تقييم تقديري)",
+    "initial_investment": "رأس المال الشخصي للمؤسسين وتمويل Y Combinator المحدد غير معلنين. تكشف الشركة عن Seed بقيمة 13.25 مليون دولار، وSeries A بقيمة 30 مليون دولار في 2021، وSeries B بقيمة 150 مليون دولار في نوفمبر 2022 بقيادة BOND. بلغ إجمالي التمويل المعلن 193.25 مليون دولار حتى تلك الجولة. لم يُعثر على جولة أسهم أحدث مكتملة حتى تاريخ التحقق، وقيمة استحواذ Kawarizmi في 2026 غير معلنة.",
+    "valuation": "غير معلن. وصفت يسير نفسها في 2022 بأنها الشركة الناشئة الأعلى تقييمًا في شمال أفريقيا، لكن الشركة والمستثمرين لم ينشروا رقم التقييم أو نسبة الأسهم. تقدير 500 مليون دولار أو أكثر في الملف الأصلي غير موثق، ولا يمثل إجمالي التمويل البالغ 193.25 مليون دولار قيمة الشركة.",
     "revenue_streams": [
-      "عمولات من السائقين وعمال التوصيل",
-      "رسوم وتخفيضات تجارية من المطاعم والمتاجر",
-      "خدمات مالية وبوابات الدفع (مستقبلاً)"
+      "عمولات أو رسوم منصة على رحلات Yassir Go حسب السوق وفئة الرحلة",
+      "رسوم توصيل وعمولات أو ترتيبات تجارية مع المطاعم عبر Yassir Food",
+      "عمولات أو هوامش المنتجات والتوصيل عبر Yassir Market والمتاجر الشريكة",
+      "عقود Yassir Business لتنقل الموظفين مع إدارة البرامج والموازنات والتقارير",
+      "وجبات الشركات والمشتريات المركزية وتوصيل الطرود ضمن Yassir Business",
+      "بطاقات هدايا رقمية وخدمات ولاء للشركات، مع شروط تجارية غير معلنة",
+      "رسوم أو اقتصاديات تعبئة وسحب Yassir Cash عبر الوكلاء؛ يدفع العميل رسومًا محتملة ويحصل الوكيل على عمولة",
+      "اقتصاديات الدفع بالبطاقات والمحفظة داخل الرحلات والطعام والبقالة، دون إفصاح عن الرسوم الصافية",
+      "شراكات توزيع رقمي مثل بيع تعبئة Ooredoo STORM عبر التطبيق",
+      "إيرادات إعلانات مبرمجة وشراء وسائط وتحسين أداء عبر Kawarizmi",
+      "Retail Media وإعلانات داخل المنظومة أو عبر الويب المفتوح والتلفزيون المتصل والموبايل",
+      "حملات وشراكات للعلامات التجارية باستخدام بيانات الطرف الأول ضمن بنية تقول الشركة إنها تراعي الخصوصية",
+      "أدوات المتاجر لإدارة الكتالوج والمخزون والعروض وتحليل الأداء، دون دليل على رسوم اشتراك مستقلة",
+      "وجود Yassir Plus ظاهر في مركز الدعم، لكن السعر والمزايا ونموذج الإيراد لم يمكن التحقق منها علنًا",
+      "لا يوجد دليل علني كافٍ على إطلاق منتجات ادخار أو إقراض مباشرة للمستخدم رغم ورودها كطموح تاريخي"
     ]
   },
   "lessons": [
     {
-      "title": "الهيمنة الإقليمية (Regional Focus)",
-      "description": "بدلاً من منافسة العمالقة في أسواق مكتظة كالخليج، ركزت Yassir على منطقة المغرب العربي التي تجاهلها الكثيرون فسيطروا عليها تماماً."
+      "title": "التخصص الإقليمي لا يعني أن المنافسين تجاهلوا السوق",
+      "description": "ميزة يسير جاءت من بناء التشغيل والدفع والدعم واللغات محليًا، لا من غياب المنافسة تمامًا. الاستراتيجية القابلة للتكرار هي فهم احتكاكات السوق قبل توسيع العلامة."
     },
     {
-      "title": "استراتيجية (Trojan Horse)",
-      "description": "استخدموا النقل التشاركي كطريقة لبناء شبكة الثقة اللوجستية، ثم أضافوا خدمات أعلى هامش ربح مثل التوصيل والخدمات المالية."
+      "title": "التنقل يبني التكرار والثقة لكنه لا يضمن اقتصاد الخدمات التالية",
+      "description": "الرحلات تعطي استخدامًا متكررًا وشبكة شركاء، لكن الطعام والبقالة والدفع والإعلانات تملك هوامش ومخزونًا وتسوية ومخاطر مختلفة. مشاركة التطبيق لا تساوي مشاركة الوحدة الاقتصادية."
+    },
+    {
+      "title": "المحفظة المغلقة ليست بنكًا كاملًا",
+      "description": "Yassir Cash يسمح بالتعبئة والتحويل والدفع داخل المنظومة والاسترداد عبر الوكلاء. هذا يختلف عن حساب مصرفي أو منتج ادخار أو إقراض، ويجب وصف كل قدرة بما هو مطلق ومثبت فعليًا."
+    },
+    {
+      "title": "شبكة الوكلاء تحول النقد إلى رصيد وتضيف سلسلة تسوية",
+      "description": "الوكيل يفتح الوصول لمن لا يملك بطاقة، لكنه يضيف تحققًا وعمولات ونقدًا فعليًا ومطابقة أرصدة ومخاطر احتيال. الوكلاء بنية مالية وتشغيلية وليسوا مجرد قناة تسويق."
+    },
+    {
+      "title": "عدد المستخدمين المعلن لا يساوي MAU",
+      "description": "أكثر من 8 ملايين قد يشمل مستخدمين تاريخيين أو مسجلين عبر عدة دول وخدمات. قياس النشاط يحتاج مستخدمين نشطين وطلبات وتكرارًا وتحويلًا بين Ride وFood وMarket وCash."
+    },
+    {
+      "title": "عدد المدن لا يقيس عمق الخدمة",
+      "description": "قد تكون الرحلات متاحة في مدينة بينما الطعام أو المحفظة أو B2B غير متاحة بالعمق نفسه. التوسع الحقيقي يُقاس بالعرض والطلب وزمن الخدمة وتكرار الاستخدام لكل فئة."
+    },
+    {
+      "title": "التوطين المالي يتطلب Orchestration لا بوابة دفع واحدة",
+      "description": "يسير وثقت بناء منسق مدفوعات متعدد العملات ومخصصًا لكل سوق. النجاح يعتمد على البنوك والبطاقات و3D Secure والرفض والاسترداد والامتثال، لا على إضافة زر بطاقة فقط."
+    },
+    {
+      "title": "نسبة نجاح الدفع نتيجة حالة وليست ضمانًا عامًا",
+      "description": "حققت حالة منشورة 94% نجاحًا للعملاء الفريدين و84% للمعاملات بعد إصلاحات تقنية في سوق محدد. لا يجوز تحويل النتيجة إلى أداء دائم لكل بلد أو مزود أو طريقة دفع."
+    },
+    {
+      "title": "التطبيق الفائق يحتاج نظام تصميم وحوكمة مشتركة",
+      "description": "SEFAR وحد المكونات واللغات العربية والفرنسية والإنجليزية والـRTL عبر iOS وAndroid والويب. توحيد التجربة يقلل التشتت، لكنه يحتاج ملكية وإصدارات ومراجعة مستمرة."
+    },
+    {
+      "title": "الدردشة داخل التطبيق تقلل مشاركة الرقم وتغير السلامة",
+      "description": "التواصل المدمج يقلل تكلفة الاتصال ويحمي أرقام الأطراف، لكنه يحتاج حفظ رسائل وسياسة إساءة واستخدامًا آمنًا للسائق أثناء القيادة ومسارات تصعيد."
+    },
+    {
+      "title": "B2B يبيع التحكم أكثر من الرحلة",
+      "description": "الشركة لا تشتري رحلة فقط؛ تشتري برامج وموازنات ومستخدمين وتقارير وفواتير ودعمًا. هذا يغير المنتج من Marketplace لحظي إلى نظام إدارة ونفقات."
+    },
+    {
+      "title": "متجر الشريك يحتاج تشغيل كتالوج لا مجرد ظهور",
+      "description": "إدارة الطلبات والمخزون والخصومات والتحليلات والتدريب تحدد نجاح التاجر. إضافة المتجر إلى الخريطة لا تخلق عرضًا متاحًا أو تجربة توصيل موثوقة."
+    },
+    {
+      "title": "إعادة شحن الاتصالات توسع الاستخدام وتضيف اقتصاد توزيع",
+      "description": "شراكة Ooredoo تجعل التطبيق قناة لبيع التعبئة الرقمية، لكنها تتطلب تسوية وعمولة ودعمًا ومطابقة. الإعلان عن الشراكة لا يكشف الإيراد أو حجم الاستخدام."
+    },
+    {
+      "title": "الاستحواذ على AdTech يضيف قدرة ومخاطر خصوصية",
+      "description": "Kawarizmi توسع يسير نحو Retail Media والإعلانات المبرمجة. قيمة بيانات الطرف الأول تعتمد على الموافقة والتجميع والأمن وعدم تحويل الثقة في خدمة يومية إلى استهداف غير متوقع."
+    },
+    {
+      "title": "الاستحواذ لا يساوي تكاملًا فوريًا",
+      "description": "شراء شركة إعلانات يمنح فريقًا وعملاء وتقنية، لكن بناء شبكة موحدة يحتاج توحيد بيانات وهوية ومبيعات وقياس وفوترة وثقافة. قيمة الصفقة تظهر بعد الدمج لا عند الإعلان."
+    },
+    {
+      "title": "الشراكة الرياضية تبني الوعي ولا تثبت الاحتفاظ",
+      "description": "التعاون مع باريس سان جيرمان منح وصولًا عالميًا وعروضًا للمستخدمين، لكنه استثمار علامة. يجب قياسه بالمستخدم المكتسب والمتكرر وصافي المساهمة، لا مرات الظهور فقط."
+    },
+    {
+      "title": "التمويل والتقييم والإيراد ثلاثة أرقام منفصلة",
+      "description": "193.25 مليون دولار تمويل معلن، والتقييم غير معلن، والإيراد غير معلن. وصف الشركة بأنها الأعلى تقييمًا في المنطقة لا يسمح باختراع قيمة 500 مليون دولار."
+    },
+    {
+      "title": "الطموح المالي يجب فصله عن المنتج المتاح",
+      "description": "ذكرت الشركة تاريخيًا الدفع والادخار والاقتراض كاتجاه. المنتج المتحقق علنًا هو Yassir Cash/Pay والمدفوعات والتعبئة، بينما لا تتوفر أدلة كافية على منتجات ادخار وإقراض مباشرة."
     }
   ],
   "tools": [
-    "AWS",
-    "Node.js",
-    "React Native",
-    "PostgreSQL"
+    "تطبيق Yassir Super App على iOS وAndroid باللغات العربية والفرنسية والإنجليزية",
+    "Yassir Go للتنقل مع فئات Classic وComfort وSpace وChrono وWomen وPremium بحسب السوق",
+    "أسعار رحلات مسبقة وتتبع جغرافي وتفاصيل السائق والمركبة",
+    "رحلات فورية وباقات مطار وحجز مسبق أو خدمات أخرى بحسب توفر المدينة",
+    "دردشة واتصال داخل التطبيق بين السائق والراكب دون مشاركة الرقم مباشرة",
+    "اقتراحات رسائل وحالة قراءة داخل الدردشة",
+    "Yassir Food لطلب الطعام وتتبع التوصيل وعروض المطاعم",
+    "Yassir Market للبقالة والمنتجات المنزلية والاستهلاكية",
+    "Yassir Store للمتاجر مع إدارة الطلبات والمخزون والخصومات وتحليل الأداء",
+    "Yassir Driver لاستقبال الرحلات وإدارة عمل السائق",
+    "Yassir Courier لشركاء توصيل الطعام والطلبات",
+    "Yassir Cargo أو خدمات سائقي نقل البضائع",
+    "Order for Someone Else لطلب الخدمة لشخص آخر",
+    "Yassir Cash/Pay كمحفظة أو رصيد للدفع داخل الرحلات والطعام والبقالة",
+    "تعبئة المحفظة بالبطاقة البنكية أو عبر وكيل Yassir Cash",
+    "تحويل الرصيد بين المستخدمين واسترداده نقدًا عبر الوكلاء",
+    "Yassir Agent مع QR وOTP وPIN وإدارة عمليات تعبئة العملاء",
+    "الدفع نقدًا أو بالبطاقات أو بالمحفظة بحسب السوق والخدمة",
+    "منسق مدفوعات متعدد العملات ومخصص لكل سوق وفق مدونة الشركة",
+    "تكاملات 3D Secure وتوجيه معاملات CIT/MIT وتحليل رموز فشل الدفع",
+    "Yassir Business لتنقل الموظفين وبرامج الرحلات والمستخدمين والموازنات",
+    "تقارير وتحليلات وإدارة مدفوعات ولوحة تحكم للشركات",
+    "Food for Business والوجبات المكتبية وخدمات الفعاليات",
+    "شراء مستلزمات الشركات وتتبع الطلبات والمخزون",
+    "توصيل الطرود وبرامج بطاقات الهدايا الرقمية للشركات",
+    "بيع تعبئة Ooredoo STORM عبر التطبيق بموجب شراكة 2026",
+    "Retail Media وإعلانات مبرمجة وشراء وسائط عبر Kawarizmi",
+    "قنوات إعلانية تشمل الموبايل والويب المفتوح وConnected TV وفق بيان الاستحواذ",
+    "SEFAR Design System مع دعم RTL ومكونات متعددة المنصات",
+    "مكتبة تتجاوز 200 رسم توضيحي وكتابة UX متعددة اللغات وربط Lokalise",
+    "Platform Engineering وInternal Developer Platform للخدمة الذاتية",
+    "CDKTF لتصميم البنية ككود وBackstage كبوابة مطورين داخلية",
+    "Apache DevLake لقياسات DORA ومتابعة أداء التسليم",
+    "HashiCorp Vault لإدارة الأسرار وSonarQube للفحص والتحليل الثابت",
+    "PagerDuty للاستجابة للحوادث والتصعيد",
+    "التسعير الديناميكي وTrip Dispatching كمشروعات تعلم آلي معلنة في وظائف الشركة",
+    "تطبيقات منفصلة للسائقين والمندوبين والمتاجر والوكلاء إلى جانب التطبيق الرئيسي"
+  ],
+  "verification": {
+    "status": "verified_from_yassir_official_product_funding_engineering_app_store_partner_and_acquisition_sources",
+    "verified_on": "2026-08-03",
+    "source_policy": "تم إعطاء الأولوية لموقع يسير وتطبيقها ومدونتها الهندسية وY Combinator وشركاء رسميين مثل Ooredoo، ثم Wamda وTechCrunch لتغطية الاستحواذ والتمويل المتقاطعة. عوملت أرقام المستخدمين والمدن والشركاء كمقاييس شركة خاصة غير مدققة.",
+    "important_notes": [
+      "لا تنشر يسير إيرادات أو MRR أو ARR أو GMV أو عدد طلبات شهرية.",
+      "أكثر من 8 ملايين مستخدم رقم معلن إجماليًا، وليس مستخدمين نشطين شهريًا.",
+      "المصادر الحالية تختلف بين 58 مدينة في App Store وأكثر من 60 مدينة في بيان استحواذ مارس 2026.",
+      "تذكر أحدث مادة 2026 ست دول دون نشر قائمة موحدة، بينما ذكرت شراكة 2023 سبع دول؛ قد تكون بعض الأسواق تجريبية أو محدودة أو تغير وضعها.",
+      "تحتوي صفحة About الحالية على أرقام أقدم: 6 ملايين مستخدم و130 ألف شريك و45 مدينة، لذلك لم تُعامل كأحدث Snapshot.",
+      "App Store يعرض أكثر من 150 ألف شريك و58 مدينة، ولا يعرض عدد مستخدمين أو تنزيلات موحدة.",
+      "تقييم الشركة غير معلن؛ ادعاء «الأعلى تقييمًا في شمال أفريقيا» صادر عن الشركة ولا يكشف قيمة.",
+      "إجمالي التمويل المعلن 193.25 مليون دولار: 13.25 مليون Seed و30 مليون Series A و150 مليون Series B.",
+      "تحتوي بعض صفحات About على خطأ يعرض Series B بقيمة 130 مليون دولار، بينما البيان الرسمي للجولة والمستثمرون يثبتون 150 مليونًا.",
+      "Yassir عضو في دفعة Y Combinator W20؛ القول إنها انضمت في 2021 غير دقيق رغم ظهور صياغة مشابهة في صفحة الشركة.",
+      "Yassir Cash/Pay خدمة رصيد ومحفظة داخلية معلنة؛ لم يُعثر على إفصاح تنظيمي كافٍ لتوصيفها كحساب مصرفي.",
+      "الادخار والإقراض وردا كاتجاه تاريخي، ولم يُثبت إطلاق منتج مباشر لهما حتى تاريخ التحقق.",
+      "نتيجة نجاح الدفع 94% للعملاء الفريدين و84% للمعاملات تخص تحسينًا وسوقًا وحالة تقنية محددة في 2024.",
+      "استحواذ Kawarizmi مؤكد في مارس 2026، لكن قيمة الصفقة ونتائج الدمج المالية غير معلنة.",
+      "شراكة Ooredoo وتعبئة STORM أطلقت كمشروع تشغيلي، لكن الإيراد وحجم المعاملات غير معلنين.",
+      "Yassir Plus ظاهر في مركز الدعم، لكن لم يُعثر على صفحة حالية واضحة للتسعير والمزايا.",
+      "تم حذف AWS وNode.js وReact Native وPostgreSQL كحزمة تقنية مفترضة، واستبدالها بأدوات وقدرات نشرتها يسير رسميًا.",
+      "التقنيات الهندسية الموثقة تعكس حالة منشورة في 2023–2024 وقد لا تكشف كامل البنية الحالية."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول بالمصادر وحالة التحقق، مع فصل الإيراد عن التمويل والتقييم والمستخدمين والمدن والشركاء.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي أو شريك مباشر.",
+      "verified_as_not_publicly_disclosed": "لم تنشر الشركة المقياس، ولذلك لم يُستخدم تقدير.",
+      "verified_company_reported_scale_not_mau": "الأرقام وصول أو مستخدمون إجماليون وشبكة وليست MAU.",
+      "verified_with_source_conflict": "المصادر الرسمية أو شبه الرسمية تعرض أرقامًا أو قوائم غير متطابقة.",
+      "verified_historical_funding": "الجولات ومبالغها موثقة تاريخيًا.",
+      "verified_as_not_publicly_valued": "لا يوجد تقييم رقمي منشور.",
+      "verified_product_capability": "القدرة ظاهرة في المنتج أو الموقع أو متجر التطبيقات.",
+      "verified_case_specific_metric": "النتيجة تخص سوقًا أو تحسينًا محددًا ولا تعمم.",
+      "verified_acquisition_value_undisclosed": "الاستحواذ مؤكد لكن المقابل المالي غير منشور.",
+      "verified_partnership_not_revenue": "الشراكة والمنتج معلنان لكن قيمتهما المالية غير منشورة.",
+      "verified_historical_engineering_disclosure": "الأداة موثقة في مدونة الشركة في تاريخ محدد وليست كشفًا كاملًا حاليًا.",
+      "analytical_inference": "تحليل مهني مبني على أدلة وليس تصريحًا حرفيًا من الشركة."
+    },
+    "confidence_scale": {
+      "high": "موقع يسير أو App Store أو YC أو شريك رسمي مباشر.",
+      "medium_high": "Wamda أو TechCrunch مع بيان شركة أو عدة مصادر متطابقة.",
+      "medium": "مقياس تسويقي أو رقم شركة خاصة يحتاج تعريفًا وتحديثًا."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "نشأت فكرة يسير في بالو ألتو عام 2017 وأُطلقت لخدمة السوق الجزائرية، بينما تصنفها Y Combinator حاليًا كشركة مقرها التشغيلي في الجزائر ويظهر Yassir Inc. كمطور التطبيق. تعرض الصفحة المُدارة من الشركة على LinkedIn مقرًا في بالو ألتو. تعمل المجموعة عبر شمال أفريقيا وأسواق مختارة في أفريقيا وأوروبا وأمريكا الشمالية، لكن أحدث المصادر العامة لا تنشر قائمة موحدة متسقة لكل الأسواق النشطة.",
+      "verification_status": "verified_with_source_conflict",
+      "confidence": "high",
+      "claim_type": "algerian_operational_origin_palo_alto_corporate_presence_and_multi_market_group",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت الشركة نشأة الفكرة في بالو ألتو والإطلاق للجزائر، ويصنف YC الشركة في الجزائر، بينما يظهر Yassir Inc. ومقر LinkedIn في بالو ألتو.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03",
+        "SRC-22",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Yassir About Us",
+          "publisher": "Yassir",
+          "source_type": "official_company_history",
+          "url": "https://yassir.com/algeria/about-us",
+          "evidence_type": "direct",
+          "source_locator": "About → The birth",
+          "supports": "نشأة الفكرة والإطلاق الجزائري."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Yassir — Y Combinator",
+          "publisher": "Y Combinator",
+          "source_type": "direct_accelerator_profile",
+          "url": "https://www.ycombinator.com/companies/yassir",
+          "evidence_type": "direct",
+          "source_locator": "YC profile",
+          "supports": "Location: Algeria."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Yassir iOS App — Algeria",
+          "publisher": "Apple App Store / Yassir Inc.",
+          "source_type": "official_app_store_listing",
+          "url": "https://apps.apple.com/dz/app/yassir/id1239926325",
+          "evidence_type": "direct",
+          "source_locator": "App Store",
+          "supports": "Developer: Yassir Inc.",
+          "published_on": "2026-06-25"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Yassir Company Profile",
+          "publisher": "Yassir via LinkedIn",
+          "source_type": "company_managed_profile",
+          "url": "https://www.linkedin.com/company/yassir",
+          "evidence_type": "direct",
+          "source_locator": "LinkedIn profile",
+          "supports": "Headquarters: Palo Alto."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Yassir Acquires Kawarizmi",
+          "publisher": "Wamda",
+          "source_type": "acquisition_press_release_coverage",
+          "url": "https://www.wamda.com/index.php/en/2026/03/algeria-yassir-expands-adtech-kawarizmi-acquisition",
+          "evidence_type": "direct",
+          "source_locator": "Acquisition press release",
+          "supports": "ست دول و60+ مدينة في 2026.",
+          "published_on": "2026-03-18"
+        }
+      ],
+      "limitations": "لا تنشر المجموعة هيكلًا قانونيًا موحدًا أو قائمة كيانات ومكاتب حديثة كاملة."
+    },
+    "$.company.business_model": {
+      "field_value": "منصة متعددة الأطراف تجمع التنقل وتوصيل الطعام والبقالة والمدفوعات وخدمات الشركات. تحقق الدخل من عمولات ورسوم الرحلات والتوصيل، وعمولات أو هوامش التجار والمتاجر، وعقود Yassir Business، واقتصاديات Yassir Cash/Pay ووكلاء التعبئة بحسب السوق، وشراكات التوزيع الرقمي. وبعد استحواذ Kawarizmi في 2026 توسع النموذج إلى الإعلانات المبرمجة وRetail Media وشراء الوسائط للعلامات التجارية. لا تنشر الشركة نسب العمولة أو مزيج الإيرادات أو اقتصاد كل دولة.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "multi_sided_mobility_delivery_payments_b2b_and_retail_media_model",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت صفحات المنتجات والأسواق القنوات التشغيلية، ويضيف استحواذ 2026 الإعلانات المبرمجة.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-04",
+        "SRC-05",
+        "SRC-07",
+        "SRC-08",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Yassir Algeria Super App",
+          "publisher": "Yassir",
+          "source_type": "official_market_product_page",
+          "url": "https://yassir.com/algeria",
+          "evidence_type": "direct",
+          "source_locator": "Algeria homepage",
+          "supports": "Ride وFood وMarket."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Yassir Cash",
+          "publisher": "Yassir",
+          "source_type": "official_wallet_product_page",
+          "url": "https://yassir.com/en/algeria/yassir-cash",
+          "evidence_type": "direct",
+          "source_locator": "Wallet",
+          "supports": "Cash/Pay."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Yassir for Business",
+          "publisher": "Yassir",
+          "source_type": "official_b2b_product_page",
+          "url": "https://yassir.com/algeria/business",
+          "evidence_type": "direct",
+          "source_locator": "Business",
+          "supports": "B2B."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Yassir Store Partner Platform",
+          "publisher": "Yassir",
+          "source_type": "official_merchant_product_page",
+          "url": "https://yassir.com/en/algeria/stores",
+          "evidence_type": "direct",
+          "source_locator": "Stores",
+          "supports": "Merchant marketplace."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Yassir Acquires Kawarizmi",
+          "publisher": "Wamda",
+          "source_type": "acquisition_press_release_coverage",
+          "url": "https://www.wamda.com/index.php/en/2026/03/algeria-yassir-expands-adtech-kawarizmi-acquisition",
+          "evidence_type": "direct",
+          "source_locator": "Acquisition",
+          "supports": "Retail Media and programmatic ads.",
+          "published_on": "2026-03-18"
+        }
+      ],
+      "limitations": "لا تنشر يسير Take Rate أو عمولة كل خدمة أو إيرادات Kawarizmi."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. يسير شركة خاصة ولا تنشر إيرادًا شهريًا أو سنويًا أو GMV أو قيمة معاملات موحدة، لذلك حُذف ادعاء «ملايين الدولارات». لا يمكن استنتاج الإيراد من التمويل أو عدد المستخدمين أو المدن أو الشركاء.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "private_company_revenue_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تقدم المصادر تمويلًا وحجم شبكة فقط، دون إيراد أو GMV.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-10",
+        "SRC-13",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-10",
+          "title": "Yassir Raises $150 Million Series B",
+          "publisher": "Yassir",
+          "source_type": "official_funding_announcement",
+          "url": "https://yassir.com/news/yassir-raises-150-million-in-series-b-funding-from-global-investors-for-on-demand-services-marketplace",
+          "evidence_type": "direct",
+          "source_locator": "Series B",
+          "supports": "تمويل ومستخدمون دون إيراد.",
+          "published_on": "2022-11-07"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Yassir Acquires Kawarizmi",
+          "publisher": "Wamda",
+          "source_type": "acquisition_press_release_coverage",
+          "url": "https://www.wamda.com/index.php/en/2026/03/algeria-yassir-expands-adtech-kawarizmi-acquisition",
+          "evidence_type": "direct",
+          "source_locator": "Acquisition",
+          "supports": "استحواذ وشبكة دون إيراد.",
+          "published_on": "2026-03-18"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Yassir Algeria Super App",
+          "publisher": "Yassir",
+          "source_type": "official_market_product_page",
+          "url": "https://yassir.com/algeria",
+          "evidence_type": "direct",
+          "source_locator": "Product",
+          "supports": "خدمات دون تسعير مالي موحد."
+        }
+      ],
+      "limitations": "لا يجوز استخدام التمويل أو المستخدمين أو الشركاء لتقدير إيراد الشركة."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن كمستخدمين نشطين شهريًا. أحدث بيان استحواذ منشور في مارس 2026 أعاد ذكر أكثر من 8 ملايين مستخدم وأكثر من 60 مدينة في ست دول، بينما يعرض App Store أكثر من 150 ألف شريك في 58 مدينة. هذه أرقام وصول وشبكة معلنة وليست MAU أو طلبات شهرية، كما توجد صفحات قديمة ما تزال تعرض 6 ملايين مستخدم و45 مدينة.",
+      "verification_status": "verified_company_reported_scale_not_mau",
+      "confidence": "medium_high",
+      "claim_type": "reported_users_partners_and_city_footprint_without_mau",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توفر أحدث المصادر 8 ملايين مستخدم و150 ألف شريك ونطاق 58–60+ مدينة، لكن لا MAU أو طلبات شهرية.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-13",
+        "SRC-03",
+        "SRC-20",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "Yassir Acquires Kawarizmi",
+          "publisher": "Wamda",
+          "source_type": "acquisition_press_release_coverage",
+          "url": "https://www.wamda.com/index.php/en/2026/03/algeria-yassir-expands-adtech-kawarizmi-acquisition",
+          "evidence_type": "direct",
+          "source_locator": "2026 acquisition release",
+          "supports": "8M users, 60+ cities, six countries.",
+          "published_on": "2026-03-18"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Yassir iOS App — Algeria",
+          "publisher": "Apple App Store / Yassir Inc.",
+          "source_type": "official_app_store_listing",
+          "url": "https://apps.apple.com/dz/app/yassir/id1239926325",
+          "evidence_type": "direct",
+          "source_locator": "App Store",
+          "supports": "150K partners and 58 cities.",
+          "published_on": "2026-06-25"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Yassir and Paris Saint-Germain Partnership",
+          "publisher": "Yassir",
+          "source_type": "official_brand_partnership",
+          "url": "https://yassir.com/news/the-paris-saint-germain-and-yassir-have-signed-a-global-partnership",
+          "evidence_type": "direct",
+          "source_locator": "PSG partnership",
+          "supports": "8M users and 150K partners in 2023.",
+          "published_on": "2023-06-29"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Yassir About Us",
+          "publisher": "Yassir",
+          "source_type": "official_company_history",
+          "url": "https://yassir.com/algeria/about-us",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "6M users and 45 cities as stale page metric."
+        }
+      ],
+      "limitations": "الأرقام قد تكون تراكمية، وتوجد اختلافات تاريخية بين صفحات الشركة."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "تحتاج أسواق المغرب العربي وأفريقيا الفرنكوفونية إلى حلول محلية للتنقل والتوصيل والدفع تتعامل مع النقد والبطاقات المحلية والعناوين المتفاوتة واللغات العربية والفرنسية والقيود التنظيمية المختلفة. كما يحتاج السائق والتاجر وشركة الخدمات إلى أدوات تشغيل وتسوية ودعم، لا مجرد واجهة لطلب الرحلة.",
+        "impact": "يؤدي ضعف التوطين إلى فشل الدفع والالتقاط والتسليم وارتفاع الإلغاء والدعم، بينما يؤدي فصل تطبيقات النقل والطعام والبقالة والدفع إلى تكرار الحسابات والعناوين ووسائل الدفع. لكن جمع الخدمات يرفع تعقيد التسعير والتسوية والخصوصية وجودة التجربة، ولا يضمن هوامش أعلى تلقائيًا."
+      },
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "localized_mobility_delivery_payment_and_partner_operations_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المنتجات اعتماد الخدمة على التتبع والدفع والدعم والشركاء، وتوضح دراسة المدفوعات اختلاف البنية بين الأسواق.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-04",
+        "SRC-09",
+        "SRC-16",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Yassir Algeria Super App",
+          "publisher": "Yassir",
+          "source_type": "official_market_product_page",
+          "url": "https://yassir.com/algeria",
+          "evidence_type": "direct",
+          "source_locator": "Homepage",
+          "supports": "رحلات وتوصيل ودفع محلي."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Yassir Ride FAQ",
+          "publisher": "Yassir",
+          "source_type": "official_mobility_documentation",
+          "url": "https://yassir.com/en/algeria/faq",
+          "evidence_type": "direct",
+          "source_locator": "FAQ",
+          "supports": "التتبع والتواصل والأسعار."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "93% Digital Payments Success Case",
+          "publisher": "Yassir Product & Tech",
+          "source_type": "official_engineering_case_study",
+          "url": "https://yassir.com/en/blog/how-we-achieved-a-93-success-rate-in-digital-payments-and-what-it-means-for-the-rest-of-africa",
+          "evidence_type": "direct",
+          "source_locator": "Payments case",
+          "supports": "توطين المدفوعات والقيود المحلية.",
+          "published_on": "2024-05-21"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Yassir Store Partner Platform",
+          "publisher": "Yassir",
+          "source_type": "official_merchant_product_page",
+          "url": "https://yassir.com/en/algeria/stores",
+          "evidence_type": "direct",
+          "source_locator": "Merchant platform",
+          "supports": "تشغيل المتاجر."
+        }
+      ],
+      "limitations": "لا توجد دراسة مستقلة في المصادر المستخدمة تقيس ضعف النقل العام أو نسبة غير المتعاملين مع البنوك لكل سوق حالي."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "بدأت يسير بالتنقل ثم أضافت Yassir Food وYassir Market وخدمات الشركاء والشركات. يقدم التطبيق فئات رحلات متعددة، وأسعارًا مسبقة، وتتبعًا جغرافيًا، ودردشة داخل التطبيق، وطلبات طعام وبقالة، والدفع نقدًا أو بالبطاقة أو عبر Yassir Cash/Pay. تتيح المحفظة تعبئة الرصيد عبر البطاقة أو شبكة وكلاء، وتحويل الرصيد بين المستخدمين واستخدامه داخل المنظومة واسترداده عبر الوكلاء. ويضيف Yassir Business إدارة تنقل الموظفين والوجبات والمشتريات والطرود وبطاقات الهدايا. في 2026 توسعت المنصة إلى إعادة شحن الاتصالات والإعلانات وRetail Media بعد شراكة Ooredoo والاستحواذ على Kawarizmi."
+      },
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "super_app_mobility_delivery_wallet_b2b_telecom_and_adtech_solution",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المصادر خدمات المستهلك والمحفظة والشركات والاتصالات والإعلانات.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-03",
+        "SRC-04",
+        "SRC-05",
+        "SRC-07",
+        "SRC-14",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Yassir iOS App — Algeria",
+          "publisher": "Apple App Store / Yassir Inc.",
+          "source_type": "official_app_store_listing",
+          "url": "https://apps.apple.com/dz/app/yassir/id1239926325",
+          "evidence_type": "direct",
+          "source_locator": "App Store",
+          "supports": "App capabilities.",
+          "published_on": "2026-06-25"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Yassir Algeria Super App",
+          "publisher": "Yassir",
+          "source_type": "official_market_product_page",
+          "url": "https://yassir.com/algeria",
+          "evidence_type": "direct",
+          "source_locator": "Homepage",
+          "supports": "Ride/Food/Market."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Yassir Cash",
+          "publisher": "Yassir",
+          "source_type": "official_wallet_product_page",
+          "url": "https://yassir.com/en/algeria/yassir-cash",
+          "evidence_type": "direct",
+          "source_locator": "Wallet",
+          "supports": "Cash/Pay."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Yassir for Business",
+          "publisher": "Yassir",
+          "source_type": "official_b2b_product_page",
+          "url": "https://yassir.com/algeria/business",
+          "evidence_type": "direct",
+          "source_locator": "B2B",
+          "supports": "Business."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Ooredoo and Yassir Partnership",
+          "publisher": "Ooredoo Algeria",
+          "source_type": "official_partner_announcement",
+          "url": "https://www.ooredoo.dz/fr/w/tout-sur-ooredoo/communiques-de-presse/ooredoo-et-yassir-signent-un-accord-de-partenariat",
+          "evidence_type": "direct",
+          "source_locator": "Partner announcement",
+          "supports": "Ooredoo recharge.",
+          "published_on": "2026-02-04"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Yassir Acquires Kawarizmi",
+          "publisher": "Wamda",
+          "source_type": "acquisition_press_release_coverage",
+          "url": "https://www.wamda.com/index.php/en/2026/03/algeria-yassir-expands-adtech-kawarizmi-acquisition",
+          "evidence_type": "direct",
+          "source_locator": "Acquisition",
+          "supports": "Kawarizmi adtech.",
+          "published_on": "2026-03-18"
+        }
+      ]
+    },
+    "$.market_data.target_audience": {
+      "field_value": "سكان المدن الذين يحتاجون إلى التنقل والطعام والبقالة والدفع الرقمي، والعملاء الذين يعتمدون على النقد أو البطاقات المحلية، والأسر والطلاب والموظفون. ويشمل جانب العرض السائقين وسائقي نقل البضائع ومندوبي التوصيل والمطاعم والمتاجر ووكلاء Yassir Cash، إضافة إلى الشركات التي تدير تنقل ووجبات ومشتريات فرقها، والبنوك وشركات الاتصالات والعلامات والمعلنين بعد توسع Retail Media.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "urban_consumers_gig_partners_merchants_businesses_agents_telcos_and_advertisers",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تعرض صفحات العملاء والشركاء والشركات والوكلاء والاستحواذ جميع الشرائح المذكورة.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-04",
+        "SRC-24",
+        "SRC-08",
+        "SRC-06",
+        "SRC-07",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Yassir Algeria Super App",
+          "publisher": "Yassir",
+          "source_type": "official_market_product_page",
+          "url": "https://yassir.com/algeria",
+          "evidence_type": "direct",
+          "source_locator": "Homepage",
+          "supports": "مستخدمو الرحلات والطعام والبقالة."
+        },
+        {
+          "source_id": "SRC-24",
+          "title": "Yassir Delivery Partner",
+          "publisher": "Yassir",
+          "source_type": "official_supply_side_page",
+          "url": "https://yassir.com/en/algeria/delivery-men",
+          "evidence_type": "direct",
+          "source_locator": "Partner page",
+          "supports": "مندوبو التوصيل."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Yassir Store Partner Platform",
+          "publisher": "Yassir",
+          "source_type": "official_merchant_product_page",
+          "url": "https://yassir.com/en/algeria/stores",
+          "evidence_type": "direct",
+          "source_locator": "Merchant page",
+          "supports": "المتاجر."
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Yassir Agent",
+          "publisher": "Yassir",
+          "source_type": "official_agent_network_page",
+          "url": "https://yassir.com/ar/algeria/yassir-agent",
+          "evidence_type": "direct",
+          "source_locator": "Agent",
+          "supports": "الوكلاء."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Yassir for Business",
+          "publisher": "Yassir",
+          "source_type": "official_b2b_product_page",
+          "url": "https://yassir.com/algeria/business",
+          "evidence_type": "direct",
+          "source_locator": "Business",
+          "supports": "الشركات."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Yassir Acquires Kawarizmi",
+          "publisher": "Wamda",
+          "source_type": "acquisition_press_release_coverage",
+          "url": "https://www.wamda.com/index.php/en/2026/03/algeria-yassir-expands-adtech-kawarizmi-acquisition",
+          "evidence_type": "direct",
+          "source_locator": "Adtech acquisition",
+          "supports": "العلامات والمعلنون.",
+          "published_on": "2026-03-18"
+        }
+      ]
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر يسير TAM ماليًا موثقًا. رقم 150 مليون نسمة الوارد في الملف الأصلي غير مرتبط بمنهجية أو سوق قابل للخدمة. تشير رؤية المستثمرين إلى فرصة واسعة في أفريقيا الفرنكوفونية، لكن مؤشرات الشركة المباشرة هي أكثر من 8 ملايين مستخدم معلن، ونحو 150 ألف شريك، و58–60+ مدينة، وست دول وفق أحدث مواد 2026، مع اختلاف التعريفات والقوائم بين المصادر.",
+      "verification_status": "verified_company_reported_scale_not_mau",
+      "confidence": "medium",
+      "claim_type": "multi_category_network_scale_without_published_tam",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد TAM رسمي؛ تستخدم الخريطة أحدث نطاق شركة معلن مع التحفظ على التعريف.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-13",
+        "SRC-03",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "Yassir Acquires Kawarizmi",
+          "publisher": "Wamda",
+          "source_type": "acquisition_press_release_coverage",
+          "url": "https://www.wamda.com/index.php/en/2026/03/algeria-yassir-expands-adtech-kawarizmi-acquisition",
+          "evidence_type": "direct",
+          "source_locator": "Acquisition",
+          "supports": "8M users, 60+ cities, six countries.",
+          "published_on": "2026-03-18"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Yassir iOS App — Algeria",
+          "publisher": "Apple App Store / Yassir Inc.",
+          "source_type": "official_app_store_listing",
+          "url": "https://apps.apple.com/dz/app/yassir/id1239926325",
+          "evidence_type": "direct",
+          "source_locator": "App Store",
+          "supports": "150K partners and 58 cities.",
+          "published_on": "2026-06-25"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Yassir — Y Combinator",
+          "publisher": "Y Combinator",
+          "source_type": "direct_accelerator_profile",
+          "url": "https://www.ycombinator.com/companies/yassir",
+          "evidence_type": "direct",
+          "source_locator": "YC profile",
+          "supports": "Francophone Africa vision."
+        }
+      ],
+      "limitations": "عدد سكان أفريقيا الفرنكوفونية أو قيمة التجارة ليست سوقًا قابلًا للخدمة مباشرة دون تحليل لكل خدمة ودولة."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا توجد سلسلة إيرادات أو معاملات تسمح بحساب CAGR. أعلنت الشركة في 2021 نحو 5 ملايين مستخدم و50 ألف شريك و30 مدينة، ثم 8 ملايين مستخدم و100 ألف شريك و45 مدينة في 2022. في 2023 ظهر رقم 150 ألف شريك وأكثر من 50 مدينة، وفي 2026 تراوح الرقم المنشور بين 58 و60+ مدينة مع بقاء المستخدمين المعلنين عند أكثر من 8 ملايين. يظهر النمو العام بوضوح في الشركاء والمدن وتنوع الخدمات، لكن لا يمكن إثبات نمو المستخدمين بعد 2022 من الأرقام العامة.",
+      "verification_status": "verified_with_source_conflict",
+      "confidence": "medium",
+      "claim_type": "historical_user_partner_city_and_product_expansion_without_financial_growth_rate",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تتيح المصادر مقارنة نقاط تاريخية للشبكة، مع عدم وجود نمو إيراد أو تعريف ثابت للمستخدم.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-21",
+        "SRC-10",
+        "SRC-20",
+        "SRC-13",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-21",
+          "title": "Yassir Senegal Expansion",
+          "publisher": "Yassir",
+          "source_type": "official_expansion_announcement",
+          "url": "https://yassir.com/news/discover-yassir-s-strategic-move-into-africa-opening-its-first-office-in-dakar-senegal",
+          "evidence_type": "direct",
+          "source_locator": "2023 expansion article with earlier metrics",
+          "supports": "5M users, 50K partners, 30 cities.",
+          "published_on": "2023-03-22"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Yassir Raises $150 Million Series B",
+          "publisher": "Yassir",
+          "source_type": "official_funding_announcement",
+          "url": "https://yassir.com/news/yassir-raises-150-million-in-series-b-funding-from-global-investors-for-on-demand-services-marketplace",
+          "evidence_type": "direct",
+          "source_locator": "Series B",
+          "supports": "8M users, 100K partners, 45 cities in 2022.",
+          "published_on": "2022-11-07"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Yassir and Paris Saint-Germain Partnership",
+          "publisher": "Yassir",
+          "source_type": "official_brand_partnership",
+          "url": "https://yassir.com/news/the-paris-saint-germain-and-yassir-have-signed-a-global-partnership",
+          "evidence_type": "direct",
+          "source_locator": "PSG",
+          "supports": "8M users, 150K partners, 50+ cities in 2023.",
+          "published_on": "2023-06-29"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Yassir Acquires Kawarizmi",
+          "publisher": "Wamda",
+          "source_type": "acquisition_press_release_coverage",
+          "url": "https://www.wamda.com/index.php/en/2026/03/algeria-yassir-expands-adtech-kawarizmi-acquisition",
+          "evidence_type": "direct",
+          "source_locator": "Acquisition",
+          "supports": "8M users, 60+ cities in 2026.",
+          "published_on": "2026-03-18"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Yassir iOS App — Algeria",
+          "publisher": "Apple App Store / Yassir Inc.",
+          "source_type": "official_app_store_listing",
+          "url": "https://apps.apple.com/dz/app/yassir/id1239926325",
+          "evidence_type": "direct",
+          "source_locator": "App Store",
+          "supports": "150K partners, 58 cities current App Store.",
+          "published_on": "2026-06-25"
+        }
+      ],
+      "limitations": "المقاييس منشورة في تواريخ مختلفة وقد تغير تعريف user وpartner وcity.",
+      "calculation": {
+        "earlier_users": 5000000,
+        "2022_users": 8000000,
+        "publicly_reported_2026_users": 8000000,
+        "earlier_partners": 50000,
+        "latest_reported_partners": 150000,
+        "illustrative_partner_multiple": 3,
+        "earlier_cities": 30,
+        "latest_public_city_range": "58 to 60+",
+        "illustrative_city_multiple_minimum": 1.93,
+        "revenue_growth_rate": "not_publicly_disclosed",
+        "mau_growth_rate": "not_publicly_disclosed"
+      }
+    },
+    "$.financials.initial_investment": {
+      "field_value": "رأس المال الشخصي للمؤسسين وتمويل Y Combinator المحدد غير معلنين. تكشف الشركة عن Seed بقيمة 13.25 مليون دولار، وSeries A بقيمة 30 مليون دولار في 2021، وSeries B بقيمة 150 مليون دولار في نوفمبر 2022 بقيادة BOND. بلغ إجمالي التمويل المعلن 193.25 مليون دولار حتى تلك الجولة. لم يُعثر على جولة أسهم أحدث مكتملة حتى تاريخ التحقق، وقيمة استحواذ Kawarizmi في 2026 غير معلنة.",
+      "verification_status": "verified_historical_funding",
+      "confidence": "high",
+      "claim_type": "seed_series_a_series_b_and_undisclosed_acquisition_value",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تتطابق المصادر على 13.25 و30 و150 مليون دولار وإجمالي 193.25 مليونًا.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-11",
+        "SRC-12",
+        "SRC-10",
+        "SRC-13",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "Yassir $30 Million Series A",
+          "publisher": "Yassir",
+          "source_type": "official_funding_announcement",
+          "url": "https://yassir.com/fr/news/yassir-realise-une-levee-de-fonds-en-nserie-a-de-30-millions-de-dollars",
+          "evidence_type": "direct",
+          "source_locator": "Funding announcement",
+          "supports": "13.25M seed and 30M Series A.",
+          "published_on": "2021-11"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Yassir Series A Cross-Check",
+          "publisher": "TechCrunch",
+          "source_type": "high_quality_funding_report",
+          "url": "https://techcrunch.com/2021/11/29/algerias-yassir-picks-up-30m-to-build-a-super-app-in-north-africa/",
+          "evidence_type": "direct",
+          "source_locator": "TechCrunch",
+          "supports": "Series A cross-check.",
+          "published_on": "2021-11-29"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Yassir Raises $150 Million Series B",
+          "publisher": "Yassir",
+          "source_type": "official_funding_announcement",
+          "url": "https://yassir.com/news/yassir-raises-150-million-in-series-b-funding-from-global-investors-for-on-demand-services-marketplace",
+          "evidence_type": "direct",
+          "source_locator": "Official Series B",
+          "supports": "150M Series B and total 193.25M.",
+          "published_on": "2022-11-07"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Yassir Acquires Kawarizmi",
+          "publisher": "Wamda",
+          "source_type": "acquisition_press_release_coverage",
+          "url": "https://www.wamda.com/index.php/en/2026/03/algeria-yassir-expands-adtech-kawarizmi-acquisition",
+          "evidence_type": "direct",
+          "source_locator": "Acquisition",
+          "supports": "Kawarizmi acquisition value undisclosed.",
+          "published_on": "2026-03-18"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Yassir — Y Combinator",
+          "publisher": "Y Combinator",
+          "source_type": "direct_accelerator_profile",
+          "url": "https://www.ycombinator.com/companies/yassir",
+          "evidence_type": "direct",
+          "source_locator": "YC",
+          "supports": "YC W20."
+        }
+      ],
+      "calculation": {
+        "founder_initial_capital": "not_publicly_disclosed",
+        "yc_specific_investment": "not_publicly_disclosed",
+        "seed_usd": 13250000,
+        "series_a_usd": 30000000,
+        "series_b_usd": 150000000,
+        "formula": "13,250,000 + 30,000,000 + 150,000,000",
+        "total_announced_funding_usd": 193250000,
+        "kawarizmi_acquisition_value": "not_publicly_disclosed",
+        "later_equity_round_found_through_2026_08_03": false
+      }
+    },
+    "$.financials.valuation": {
+      "field_value": "غير معلن. وصفت يسير نفسها في 2022 بأنها الشركة الناشئة الأعلى تقييمًا في شمال أفريقيا، لكن الشركة والمستثمرين لم ينشروا رقم التقييم أو نسبة الأسهم. تقدير 500 مليون دولار أو أكثر في الملف الأصلي غير موثق، ولا يمثل إجمالي التمويل البالغ 193.25 مليون دولار قيمة الشركة.",
+      "verification_status": "verified_as_not_publicly_valued",
+      "confidence": "high",
+      "claim_type": "private_company_numeric_valuation_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يصف البيان الشركة بأنها الأعلى تقييمًا في شمال أفريقيا دون نشر قيمة أو نسبة أسهم.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-10",
+        "SRC-12",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-10",
+          "title": "Yassir Raises $150 Million Series B",
+          "publisher": "Yassir",
+          "source_type": "official_funding_announcement",
+          "url": "https://yassir.com/news/yassir-raises-150-million-in-series-b-funding-from-global-investors-for-on-demand-services-marketplace",
+          "evidence_type": "direct",
+          "source_locator": "Series B",
+          "supports": "Most valued startup claim and no number.",
+          "published_on": "2022-11-07"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Yassir Series A Cross-Check",
+          "publisher": "TechCrunch",
+          "source_type": "high_quality_funding_report",
+          "url": "https://techcrunch.com/2021/11/29/algerias-yassir-picks-up-30m-to-build-a-super-app-in-north-africa/",
+          "evidence_type": "direct",
+          "source_locator": "TechCrunch",
+          "supports": "Valuation remains undisclosed.",
+          "published_on": "2021-11-29"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Yassir Acquires Kawarizmi",
+          "publisher": "Wamda",
+          "source_type": "acquisition_press_release_coverage",
+          "url": "https://www.wamda.com/index.php/en/2026/03/algeria-yassir-expands-adtech-kawarizmi-acquisition",
+          "evidence_type": "direct",
+          "source_locator": "2026 acquisition",
+          "supports": "Acquisition without value.",
+          "published_on": "2026-03-18"
+        }
+      ],
+      "limitations": "لا يمكن حساب التقييم من مبلغ التمويل الإجمالي أو وصف «الأعلى تقييمًا»."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "عمولات أو رسوم منصة على رحلات Yassir Go حسب السوق وفئة الرحلة",
+        "رسوم توصيل وعمولات أو ترتيبات تجارية مع المطاعم عبر Yassir Food",
+        "عمولات أو هوامش المنتجات والتوصيل عبر Yassir Market والمتاجر الشريكة",
+        "عقود Yassir Business لتنقل الموظفين مع إدارة البرامج والموازنات والتقارير",
+        "وجبات الشركات والمشتريات المركزية وتوصيل الطرود ضمن Yassir Business",
+        "بطاقات هدايا رقمية وخدمات ولاء للشركات، مع شروط تجارية غير معلنة",
+        "رسوم أو اقتصاديات تعبئة وسحب Yassir Cash عبر الوكلاء؛ يدفع العميل رسومًا محتملة ويحصل الوكيل على عمولة",
+        "اقتصاديات الدفع بالبطاقات والمحفظة داخل الرحلات والطعام والبقالة، دون إفصاح عن الرسوم الصافية",
+        "شراكات توزيع رقمي مثل بيع تعبئة Ooredoo STORM عبر التطبيق",
+        "إيرادات إعلانات مبرمجة وشراء وسائط وتحسين أداء عبر Kawarizmi",
+        "Retail Media وإعلانات داخل المنظومة أو عبر الويب المفتوح والتلفزيون المتصل والموبايل",
+        "حملات وشراكات للعلامات التجارية باستخدام بيانات الطرف الأول ضمن بنية تقول الشركة إنها تراعي الخصوصية",
+        "أدوات المتاجر لإدارة الكتالوج والمخزون والعروض وتحليل الأداء، دون دليل على رسوم اشتراك مستقلة",
+        "وجود Yassir Plus ظاهر في مركز الدعم، لكن السعر والمزايا ونموذج الإيراد لم يمكن التحقق منها علنًا",
+        "لا يوجد دليل علني كافٍ على إطلاق منتجات ادخار أو إقراض مباشرة للمستخدم رغم ورودها كطموح تاريخي"
+      ],
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "mobility_delivery_marketplace_wallet_b2b_distribution_and_adtech_channels",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المنتجات والشركاء القنوات، مع بقاء الشروط التجارية غير معلنة.",
+      "source_count": 7,
+      "source_ids": [
+        "SRC-04",
+        "SRC-05",
+        "SRC-06",
+        "SRC-07",
+        "SRC-08",
+        "SRC-14",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Yassir Algeria Super App",
+          "publisher": "Yassir",
+          "source_type": "official_market_product_page",
+          "url": "https://yassir.com/algeria",
+          "evidence_type": "direct",
+          "source_locator": "Consumer platform",
+          "supports": "Ride, Food, Market."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Yassir Cash",
+          "publisher": "Yassir",
+          "source_type": "official_wallet_product_page",
+          "url": "https://yassir.com/en/algeria/yassir-cash",
+          "evidence_type": "direct",
+          "source_locator": "Cash",
+          "supports": "Wallet and agent fees."
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Yassir Agent",
+          "publisher": "Yassir",
+          "source_type": "official_agent_network_page",
+          "url": "https://yassir.com/ar/algeria/yassir-agent",
+          "evidence_type": "direct",
+          "source_locator": "Agent",
+          "supports": "Agent commission."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Yassir for Business",
+          "publisher": "Yassir",
+          "source_type": "official_b2b_product_page",
+          "url": "https://yassir.com/algeria/business",
+          "evidence_type": "direct",
+          "source_locator": "Business",
+          "supports": "B2B services."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Yassir Store Partner Platform",
+          "publisher": "Yassir",
+          "source_type": "official_merchant_product_page",
+          "url": "https://yassir.com/en/algeria/stores",
+          "evidence_type": "direct",
+          "source_locator": "Stores",
+          "supports": "Merchant platform."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Ooredoo and Yassir Partnership",
+          "publisher": "Ooredoo Algeria",
+          "source_type": "official_partner_announcement",
+          "url": "https://www.ooredoo.dz/fr/w/tout-sur-ooredoo/communiques-de-presse/ooredoo-et-yassir-signent-un-accord-de-partenariat",
+          "evidence_type": "direct",
+          "source_locator": "Ooredoo",
+          "supports": "Telecom recharge distribution.",
+          "published_on": "2026-02-04"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Yassir Acquires Kawarizmi",
+          "publisher": "Wamda",
+          "source_type": "acquisition_press_release_coverage",
+          "url": "https://www.wamda.com/index.php/en/2026/03/algeria-yassir-expands-adtech-kawarizmi-acquisition",
+          "evidence_type": "direct",
+          "source_locator": "Kawarizmi",
+          "supports": "Programmatic ads and retail media.",
+          "published_on": "2026-03-18"
+        }
+      ],
+      "limitations": "لا توجد take rates أو أسعار B2B أو إيراد Yassir Plus أو Kawarizmi منشور."
+    },
+    "$.tools": {
+      "field_value": [
+        "تطبيق Yassir Super App على iOS وAndroid باللغات العربية والفرنسية والإنجليزية",
+        "Yassir Go للتنقل مع فئات Classic وComfort وSpace وChrono وWomen وPremium بحسب السوق",
+        "أسعار رحلات مسبقة وتتبع جغرافي وتفاصيل السائق والمركبة",
+        "رحلات فورية وباقات مطار وحجز مسبق أو خدمات أخرى بحسب توفر المدينة",
+        "دردشة واتصال داخل التطبيق بين السائق والراكب دون مشاركة الرقم مباشرة",
+        "اقتراحات رسائل وحالة قراءة داخل الدردشة",
+        "Yassir Food لطلب الطعام وتتبع التوصيل وعروض المطاعم",
+        "Yassir Market للبقالة والمنتجات المنزلية والاستهلاكية",
+        "Yassir Store للمتاجر مع إدارة الطلبات والمخزون والخصومات وتحليل الأداء",
+        "Yassir Driver لاستقبال الرحلات وإدارة عمل السائق",
+        "Yassir Courier لشركاء توصيل الطعام والطلبات",
+        "Yassir Cargo أو خدمات سائقي نقل البضائع",
+        "Order for Someone Else لطلب الخدمة لشخص آخر",
+        "Yassir Cash/Pay كمحفظة أو رصيد للدفع داخل الرحلات والطعام والبقالة",
+        "تعبئة المحفظة بالبطاقة البنكية أو عبر وكيل Yassir Cash",
+        "تحويل الرصيد بين المستخدمين واسترداده نقدًا عبر الوكلاء",
+        "Yassir Agent مع QR وOTP وPIN وإدارة عمليات تعبئة العملاء",
+        "الدفع نقدًا أو بالبطاقات أو بالمحفظة بحسب السوق والخدمة",
+        "منسق مدفوعات متعدد العملات ومخصص لكل سوق وفق مدونة الشركة",
+        "تكاملات 3D Secure وتوجيه معاملات CIT/MIT وتحليل رموز فشل الدفع",
+        "Yassir Business لتنقل الموظفين وبرامج الرحلات والمستخدمين والموازنات",
+        "تقارير وتحليلات وإدارة مدفوعات ولوحة تحكم للشركات",
+        "Food for Business والوجبات المكتبية وخدمات الفعاليات",
+        "شراء مستلزمات الشركات وتتبع الطلبات والمخزون",
+        "توصيل الطرود وبرامج بطاقات الهدايا الرقمية للشركات",
+        "بيع تعبئة Ooredoo STORM عبر التطبيق بموجب شراكة 2026",
+        "Retail Media وإعلانات مبرمجة وشراء وسائط عبر Kawarizmi",
+        "قنوات إعلانية تشمل الموبايل والويب المفتوح وConnected TV وفق بيان الاستحواذ",
+        "SEFAR Design System مع دعم RTL ومكونات متعددة المنصات",
+        "مكتبة تتجاوز 200 رسم توضيحي وكتابة UX متعددة اللغات وربط Lokalise",
+        "Platform Engineering وInternal Developer Platform للخدمة الذاتية",
+        "CDKTF لتصميم البنية ككود وBackstage كبوابة مطورين داخلية",
+        "Apache DevLake لقياسات DORA ومتابعة أداء التسليم",
+        "HashiCorp Vault لإدارة الأسرار وSonarQube للفحص والتحليل الثابت",
+        "PagerDuty للاستجابة للحوادث والتصعيد",
+        "التسعير الديناميكي وTrip Dispatching كمشروعات تعلم آلي معلنة في وظائف الشركة",
+        "تطبيقات منفصلة للسائقين والمندوبين والمتاجر والوكلاء إلى جانب التطبيق الرئيسي"
+      ],
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "official_super_app_partner_wallet_b2b_adtech_design_and_engineering_capabilities",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استُبدلت حزمة تقنية عامة بوظائف المنتج وتقنيات منشورة رسميًا في هندسة يسير.",
+      "source_count": 12,
+      "source_ids": [
+        "SRC-03",
+        "SRC-04",
+        "SRC-05",
+        "SRC-07",
+        "SRC-08",
+        "SRC-16",
+        "SRC-17",
+        "SRC-18",
+        "SRC-19",
+        "SRC-23",
+        "SRC-13",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Yassir iOS App — Algeria",
+          "publisher": "Apple App Store / Yassir Inc.",
+          "source_type": "official_app_store_listing",
+          "url": "https://apps.apple.com/dz/app/yassir/id1239926325",
+          "evidence_type": "direct",
+          "source_locator": "App Store",
+          "supports": "App and ride categories.",
+          "published_on": "2026-06-25"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Yassir Algeria Super App",
+          "publisher": "Yassir",
+          "source_type": "official_market_product_page",
+          "url": "https://yassir.com/algeria",
+          "evidence_type": "direct",
+          "source_locator": "Homepage",
+          "supports": "Consumer services."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Yassir Cash",
+          "publisher": "Yassir",
+          "source_type": "official_wallet_product_page",
+          "url": "https://yassir.com/en/algeria/yassir-cash",
+          "evidence_type": "direct",
+          "source_locator": "Wallet",
+          "supports": "Cash."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Yassir for Business",
+          "publisher": "Yassir",
+          "source_type": "official_b2b_product_page",
+          "url": "https://yassir.com/algeria/business",
+          "evidence_type": "direct",
+          "source_locator": "B2B",
+          "supports": "Business."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Yassir Store Partner Platform",
+          "publisher": "Yassir",
+          "source_type": "official_merchant_product_page",
+          "url": "https://yassir.com/en/algeria/stores",
+          "evidence_type": "direct",
+          "source_locator": "Merchant",
+          "supports": "Store tools."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "93% Digital Payments Success Case",
+          "publisher": "Yassir Product & Tech",
+          "source_type": "official_engineering_case_study",
+          "url": "https://yassir.com/en/blog/how-we-achieved-a-93-success-rate-in-digital-payments-and-what-it-means-for-the-rest-of-africa",
+          "evidence_type": "direct",
+          "source_locator": "Engineering case",
+          "supports": "Payment orchestrator.",
+          "published_on": "2024-05-21"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Yassir Platform Engineering",
+          "publisher": "Yassir Product & Tech",
+          "source_type": "official_engineering_article",
+          "url": "https://yassir.com/en/blog/how-platform-engineering-is-transforming-the-use-of-modern-day-cloud-native-technologies",
+          "evidence_type": "direct",
+          "source_locator": "Engineering",
+          "supports": "Platform engineering tools.",
+          "published_on": "2024-03-03"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "SEFAR Design System",
+          "publisher": "Yassir Product & Tech",
+          "source_type": "official_design_system_article",
+          "url": "https://yassir.com/en/blog/from-collaboration-to-system-the-birth-of-sefar",
+          "evidence_type": "direct",
+          "source_locator": "Design system",
+          "supports": "SEFAR.",
+          "published_on": "2024-04-23"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "In-App Chat for Riders and Drivers",
+          "publisher": "Yassir Product & Tech",
+          "source_type": "official_product_engineering_article",
+          "url": "https://yassir.com/blog/hotline-bling-bringing-drivers-and-riders-closer-through-in-app-chat",
+          "evidence_type": "direct",
+          "source_locator": "Product engineering",
+          "supports": "In-app chat.",
+          "published_on": "2023-10-11"
+        },
+        {
+          "source_id": "SRC-23",
+          "title": "Dynamic Pricing Data Scientist Role",
+          "publisher": "Yassir",
+          "source_type": "official_career_posting",
+          "url": "https://yassir.com/en/career/data_scientist_%28pricing%29_9caf7e04-195a-4011-9b55-e1105615c0a2",
+          "evidence_type": "direct",
+          "source_locator": "Career",
+          "supports": "Dynamic pricing and dispatch."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Yassir Acquires Kawarizmi",
+          "publisher": "Wamda",
+          "source_type": "acquisition_press_release_coverage",
+          "url": "https://www.wamda.com/index.php/en/2026/03/algeria-yassir-expands-adtech-kawarizmi-acquisition",
+          "evidence_type": "direct",
+          "source_locator": "Acquisition",
+          "supports": "Adtech.",
+          "published_on": "2026-03-18"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Ooredoo and Yassir Partnership",
+          "publisher": "Ooredoo Algeria",
+          "source_type": "official_partner_announcement",
+          "url": "https://www.ooredoo.dz/fr/w/tout-sur-ooredoo/communiques-de-presse/ooredoo-et-yassir-signent-un-accord-de-partenariat",
+          "evidence_type": "direct",
+          "source_locator": "Partnership",
+          "supports": "Telecom recharge.",
+          "published_on": "2026-02-04"
+        }
+      ],
+      "limitations": "تقنيات 2023–2024 تعكس إفصاحًا تاريخيًا ولا تكشف كامل البنية أو كل خدمة حالية."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Yassir About Us",
+      "publisher": "Yassir",
+      "source_type": "official_company_history",
+      "url": "https://yassir.com/algeria/about-us",
+      "supports": [
+        "نشأة الفكرة في بالو ألتو وخدمة الجزائر",
+        "تاريخ الجولات",
+        "6 ملايين مستخدم و130 ألف شريك و45 مدينة كأرقام تاريخية",
+        "Yassir Cash وRide وFood وMarket وB2B"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Yassir — Y Combinator",
+      "publisher": "Y Combinator",
+      "source_type": "direct_accelerator_profile",
+      "url": "https://www.ycombinator.com/companies/yassir",
+      "supports": [
+        "دفعة W20",
+        "الموقع الجزائر",
+        "المؤسسون",
+        "التمويل التقريبي والخدمات"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Yassir iOS App — Algeria",
+      "publisher": "Apple App Store / Yassir Inc.",
+      "source_type": "official_app_store_listing",
+      "published_on": "2026-06-25",
+      "url": "https://apps.apple.com/dz/app/yassir/id1239926325",
+      "supports": [
+        "Yassir Inc.",
+        "Ride وFood وMarket وPay",
+        "فئات الرحلات",
+        "150 ألف+ شريك و58 مدينة",
+        "الدفع نقدًا وبالبطاقات والمحفظة"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Yassir Algeria Super App",
+      "publisher": "Yassir",
+      "source_type": "official_market_product_page",
+      "url": "https://yassir.com/algeria",
+      "supports": [
+        "التنقل والطعام والبقالة",
+        "السائقون والمندوبون",
+        "B2B",
+        "الأسعار المسبقة والتحقق والتتبع"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Yassir Cash",
+      "publisher": "Yassir",
+      "source_type": "official_wallet_product_page",
+      "url": "https://yassir.com/en/algeria/yassir-cash",
+      "supports": [
+        "تعبئة الرصيد بالبطاقة أو الوكيل",
+        "التحويل بين المستخدمين",
+        "الدفع للخدمات",
+        "الاسترداد عبر الوكلاء",
+        "QR وPIN والرسوم المحتملة"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Yassir Agent",
+      "publisher": "Yassir",
+      "source_type": "official_agent_network_page",
+      "url": "https://yassir.com/ar/algeria/yassir-agent",
+      "supports": [
+        "متطلبات الوكيل",
+        "عمولة عمليات التعبئة",
+        "OTP وPIN",
+        "تطبيق الوكلاء"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Yassir for Business",
+      "publisher": "Yassir",
+      "source_type": "official_b2b_product_page",
+      "url": "https://yassir.com/algeria/business",
+      "supports": [
+        "تنقل الموظفين",
+        "الوجبات والمشتريات",
+        "توصيل الطرود",
+        "بطاقات الهدايا",
+        "التقارير والموازنات"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Yassir Store Partner Platform",
+      "publisher": "Yassir",
+      "source_type": "official_merchant_product_page",
+      "url": "https://yassir.com/en/algeria/stores",
+      "supports": [
+        "إدارة الطلبات والمخزون",
+        "العروض والخصومات",
+        "لوحة التحليل",
+        "التدريب والتوثيق"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Yassir Ride FAQ",
+      "publisher": "Yassir",
+      "source_type": "official_mobility_documentation",
+      "url": "https://yassir.com/en/algeria/faq",
+      "supports": [
+        "الرحلات الفورية والحجز وباقات المطار",
+        "تفاصيل السائق والمركبة",
+        "التتبع وسجل الرحلات",
+        "العمل 24/7"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Yassir Raises $150 Million Series B",
+      "publisher": "Yassir",
+      "source_type": "official_funding_announcement",
+      "published_on": "2022-11-07",
+      "url": "https://yassir.com/news/yassir-raises-150-million-in-series-b-funding-from-global-investors-for-on-demand-services-marketplace",
+      "supports": [
+        "150 مليون دولار Series B",
+        "إجمالي 193.25 مليون دولار",
+        "BOND والمستثمرون",
+        "8 ملايين مستخدم و45 مدينة و100 ألف شريك",
+        "التقييم غير الرقمي"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Yassir $30 Million Series A",
+      "publisher": "Yassir",
+      "source_type": "official_funding_announcement",
+      "published_on": "2021-11",
+      "url": "https://yassir.com/fr/news/yassir-realise-une-levee-de-fonds-en-nserie-a-de-30-millions-de-dollars",
+      "supports": [
+        "30 مليون دولار Series A",
+        "13.25 مليون دولار Seed",
+        "المستثمرون"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Yassir Series A Cross-Check",
+      "publisher": "TechCrunch",
+      "source_type": "high_quality_funding_report",
+      "published_on": "2021-11-29",
+      "url": "https://techcrunch.com/2021/11/29/algerias-yassir-picks-up-30m-to-build-a-super-app-in-north-africa/",
+      "supports": [
+        "30 مليون دولار Series A",
+        "13.25 مليون Seed",
+        "نشأة جزائرية وبناء المواهب المحلية"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Yassir Acquires Kawarizmi",
+      "publisher": "Wamda",
+      "source_type": "acquisition_press_release_coverage",
+      "published_on": "2026-03-18",
+      "url": "https://www.wamda.com/index.php/en/2026/03/algeria-yassir-expands-adtech-kawarizmi-acquisition",
+      "supports": [
+        "استحواذ Kawarizmi",
+        "أكثر من 8 ملايين مستخدم",
+        "60+ مدينة وست دول",
+        "Retail Media والإعلانات المبرمجة",
+        "قيمة الاستحواذ غير معلنة"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Ooredoo and Yassir Partnership",
+      "publisher": "Ooredoo Algeria",
+      "source_type": "official_partner_announcement",
+      "published_on": "2026-02-04",
+      "url": "https://www.ooredoo.dz/fr/w/tout-sur-ooredoo/communiques-de-presse/ooredoo-et-yassir-signent-un-accord-de-partenariat",
+      "supports": [
+        "تعبئة STORM عبر تطبيق يسير",
+        "الدفع المحمول والتوزيع الرقمي",
+        "الشراكة التشغيلية في الجزائر"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Djezzy Student Campuce Ecosystem",
+      "publisher": "Djezzy",
+      "source_type": "official_partner_program",
+      "published_on": "2026-03",
+      "url": "https://www.djezzy.dz/djezzy/actualite-et-nouveautes/communiques-de-presse/djezzy-accelere-le-programme-student-campuce-et-federe-un-ecosysteme-au-service-des-etudiants/",
+      "supports": [
+        "انضمام يسير إلى برنامج يخدم الطلاب",
+        "شراكات خدمات رقمية محلية"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "93% Digital Payments Success Case",
+      "publisher": "Yassir Product & Tech",
+      "source_type": "official_engineering_case_study",
+      "published_on": "2024-05-21",
+      "url": "https://yassir.com/en/blog/how-we-achieved-a-93-success-rate-in-digital-payments-and-what-it-means-for-the-rest-of-africa",
+      "supports": [
+        "منسق دفع متعدد العملات",
+        "3D Secure وCIT/MIT",
+        "94% نجاح للعملاء الفريدين و84% للمعاملات في الحالة",
+        "توطين المدفوعات"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Yassir Platform Engineering",
+      "publisher": "Yassir Product & Tech",
+      "source_type": "official_engineering_article",
+      "published_on": "2024-03-03",
+      "url": "https://yassir.com/en/blog/how-platform-engineering-is-transforming-the-use-of-modern-day-cloud-native-technologies",
+      "supports": [
+        "CDKTF",
+        "Backstage",
+        "Apache DevLake",
+        "HashiCorp Vault",
+        "SonarQube",
+        "PagerDuty"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "SEFAR Design System",
+      "publisher": "Yassir Product & Tech",
+      "source_type": "official_design_system_article",
+      "published_on": "2024-04-23",
+      "url": "https://yassir.com/en/blog/from-collaboration-to-system-the-birth-of-sefar",
+      "supports": [
+        "SEFAR",
+        "RTL والعربية والفرنسية والإنجليزية",
+        "iOS وAndroid والويب",
+        "Lokalise",
+        "200+ رسم توضيحي"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "In-App Chat for Riders and Drivers",
+      "publisher": "Yassir Product & Tech",
+      "source_type": "official_product_engineering_article",
+      "published_on": "2023-10-11",
+      "url": "https://yassir.com/blog/hotline-bling-bringing-drivers-and-riders-closer-through-in-app-chat",
+      "supports": [
+        "الدردشة داخل التطبيق",
+        "عدم مشاركة رقم الهاتف",
+        "اقتراحات الرسائل",
+        "حالة قراءة الرسالة"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "Yassir and Paris Saint-Germain Partnership",
+      "publisher": "Yassir",
+      "source_type": "official_brand_partnership",
+      "published_on": "2023-06-29",
+      "url": "https://yassir.com/news/the-paris-saint-germain-and-yassir-have-signed-a-global-partnership",
+      "supports": [
+        "8 ملايين مستخدم",
+        "150 ألف شريك",
+        "أكثر من 50 مدينة وسبع دول تاريخيًا",
+        "شراكة علامة عالمية"
+      ]
+    },
+    {
+      "id": "SRC-21",
+      "title": "Yassir Senegal Expansion",
+      "publisher": "Yassir",
+      "source_type": "official_expansion_announcement",
+      "published_on": "2023-03-22",
+      "url": "https://yassir.com/news/discover-yassir-s-strategic-move-into-africa-opening-its-first-office-in-dakar-senegal",
+      "supports": [
+        "مكتب داكار",
+        "5 ملايين مستخدم و50 ألف شريك و30 مدينة كأرقام تاريخية",
+        "التوسع في غرب أفريقيا"
+      ]
+    },
+    {
+      "id": "SRC-22",
+      "title": "Yassir Company Profile",
+      "publisher": "Yassir via LinkedIn",
+      "source_type": "company_managed_profile",
+      "url": "https://www.linkedin.com/company/yassir",
+      "supports": [
+        "مقر LinkedIn في بالو ألتو",
+        "التمويل التقريبي",
+        "الخدمات والأسواق",
+        "شركة خاصة"
+      ]
+    },
+    {
+      "id": "SRC-23",
+      "title": "Dynamic Pricing Data Scientist Role",
+      "publisher": "Yassir",
+      "source_type": "official_career_posting",
+      "url": "https://yassir.com/en/career/data_scientist_%28pricing%29_9caf7e04-195a-4011-9b55-e1105615c0a2",
+      "supports": [
+        "Dynamic Pricing",
+        "Trip Dispatching",
+        "تعلم الآلة وعلم البيانات"
+      ]
+    },
+    {
+      "id": "SRC-24",
+      "title": "Yassir Delivery Partner",
+      "publisher": "Yassir",
+      "source_type": "official_supply_side_page",
+      "url": "https://yassir.com/en/algeria/delivery-men",
+      "supports": [
+        "تسجيل وتحقق وتدريب مندوبي التوصيل",
+        "تطبيق الشريك",
+        "الدعم على مدار الساعة"
+      ]
+    },
+    {
+      "id": "SRC-25",
+      "title": "Yassir Store and Restaurant Marketplace",
+      "publisher": "Yassir",
+      "source_type": "official_merchant_marketplace_page",
+      "url": "https://yassir.com/restaurant",
+      "supports": [
+        "شراكات المطاعم",
+        "الكتالوج والتوصيل",
+        "الانضمام إلى السوق"
+      ]
+    }
   ]
 }

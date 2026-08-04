@@ -2,52 +2,1438 @@
   "id": "bosta",
   "slug": "bosta",
   "name": "بوسطة (Bosta)",
-  "headline": "اللاعب اللوجستي الذي حل عقدة توصيل التجارة الإلكترونية في مصر",
-  "category": "Logistics / الشحن والتوصيل",
+  "headline": "من مندوب مستقل إلى شبكة فرز وتمويل: كيف بنت بوسطة طبقة تشغيل كاملة للتجارة الإلكترونية",
+  "category": "Logistics Tech & Commerce Enablement / تقنيات اللوجستيات وتمكين التجارة الإلكترونية",
   "company": {
-    "location": "القاهرة، مصر (توسعت إلى السعودية)",
-    "business_model": "رسوم على الشحن وتحصيل الدفع عند الاستلام (B2B)"
+    "location": "القاهرة، مصر. تأسست بوسطة في 2017 على يد محمد عزت وأحمد جابر، ثم أطلقت عملياتها في السعودية عبر مكتب الرياض في مارس 2022 بعد جولة Pre-Series B غير معلنة. حتى أغسطس 2026 تثبت المصادر المباشرة نشاطها الأساسي في مصر والسعودية. لم يُعثر على إفصاح عام يثبت إدراج الشركة في سوق مالي أو نقل مقرها القانوني خارج هذا الإطار.",
+    "business_model": "منصة لوجستيات B2B وB2B2C للتجارة الإلكترونية تعتمد تسعيرًا لكل شحنة يتغير حسب نوع الطلب والمسار والحجم والوزن وحجم أعمال التاجر. توسع المنتج من الميل الأخير إلى الاستلام والميل الأوسط والإرجاع والاستبدال وتحصيل الدفع عند الاستلام وتسويته، والتخزين والإيفاء، والشحن الدولي عبر Bosta Box، والتكاملات البرمجية، وتمويل بعض التجار عبر Bosta Capital. لا تنشر الشركة متوسط سعر الشحنة أو معدل الاقتطاع أو مساهمة كل خدمة في الإيراد."
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين",
-    "monthly_traffic": "توصيل ملايين الشحنات السنوية"
+    "monthly_revenue": "غير معلن. بوسطة شركة خاصة ولا تنشر قوائم مالية مستقلة أو MRR أو ARR أو إيرادًا شهريًا أو سنويًا مطلقًا. أعلن المؤسس أن الشركة نفذت 27 مليار جنيه من GMV خلال 2025 وحافظت على «أرباح صحية»، لكن GMV هو قيمة البضائع أو التجارة التي مرت عبر الشبكة وليس إيراد بوسطة، كما أن وصف الربحية لم يصاحبه رقم أو تدقيق منشور. لذلك حُذف تقدير «عشرات الملايين».",
+    "monthly_traffic": "غير معلن. لا تنشر بوسطة زيارات الموقع أو MAU أو DAU. المقاييس التشغيلية المتاحة منفصلة: أعلن المؤسس 37 مليون شحنة مسلمة و17 مليون عميل نهائي مخدوم و20 ألف شركة مدعومة خلال 2025، بينما تعرض صفحات الشركة الحالية أكثر من 55 مليون طرد تراكمي و50 ألف تاجر، وتعرض صفحة الشراكات متوسطًا يتجاوز 3 ملايين شحنة شهريًا. اختلاف الفترات والتعريفات يمنع جمع هذه الأرقام أو تحويلها إلى زيارات أو مستخدمين نشطين."
   },
   "overview": {
     "problem": {
-      "text": "التجارة الإلكترونية في مصر تنمو، لكن شركات الشحن التقليدية بطيئة، تضيع الشحنات، وتتأخر في تحويل أموال (الدفع عند الاستلام COD) للتجار، مما يخنق سيولتهم.",
-      "impact": "معدلات إرجاع عالية جداً (RTO) وإفلاس المتاجر الصغيرة بسبب تأخر تحصيل أموالهم."
+      "text": "المشكلة التي تعالجها بوسطة أوسع من نقل الطرد: على التاجر الإلكتروني تنسيق الاستلام والتوصيل بين المحافظات، تحديث العميل، معالجة الإرجاع والاستبدال، تحصيل النقد وتسويته، ومطابقة كل ذلك مع الطلبات والمخزون. عندما تكون هذه الوظائف موزعة بين مزودين وأدوات يدوية، تطول دورة النقد ويزداد العبء التشغيلي وخدمة العملاء. لا تنشر الشركة بيانات تثبت تعميم أن شركات الشحن التقليدية «تضيّع الشحنات» أو أن التأخر يؤدي إلى إفلاس المتاجر، لذلك أزيلت هذه الصياغات المطلقة.",
+      "impact": "الأثر القابل للدفاع عنه هو تباطؤ تحويل المبيعات النقدية إلى سيولة متاحة، ضعف الرؤية على حالة الطلبات والتحصيلات، ارتفاع العمل اليدوي في التسوية والدعم، وصعوبة الحفاظ على وعد تسليم ثابت عند نمو عدد الطلبات. لا توجد بيانات عامة موحدة من بوسطة عن معدل RTO أو خسائر التجار أو زمن التحصيل لدى المنافسين تسمح بمقارنات قطعية."
     },
     "solution": {
-      "text": "شركة لوجستيات مدعومة بالتقنية (Asset-light) تركز حصراً على التجارة الإلكترونية، تقدم تتبعاً دقيقاً، معدلات توصيل من اليوم التالي، وتحويلاً سريعاً جداً لأموال COD للتجار."
+      "text": "بنت بوسطة طبقة تشغيل تجمع إنشاء الطلبات والاستلام والميل الأوسط والميل الأخير والتتبع والإرجاع والاستبدال وإثبات التسليم ومحفظة COD والتكامل مع المتاجر، ثم أضافت التخزين والإيفاء وBosta Box وتمويل التجار. ويكشف مركز الفرز الآلي المفتتح في يناير 2026 عن انتقال النموذج من الاعتماد الكبير على المندوبين والمتعاقدين إلى بنية هجينة تشمل مراكز ومستودعات وأتمتة رأسمالية؛ بلغت استثمارات المركز 5 ملايين دولار وقدرته المعلنة 11 ألف شحنة في الساعة و250 ألفًا يوميًا. هدف 80 مليون شحنة خلال 2026 خطة تشغيلية مستقبلية عند تاريخ الإعلان وليس نتيجة محققة."
     }
   },
   "market_data": {
-    "target_audience": "المتاجر الإلكترونية، بائعو السوشيال ميديا، والشركات الصغيرة والمتوسطة.",
-    "market_size": "سوق التجارة الإلكترونية واللوجستيات في الشرق الأوسط.",
-    "growth_rate": "اكتسحت السوق المصري وجمعت ملايين الدولارات للتوسع في السعودية والخليج."
+    "target_audience": "المتاجر الإلكترونية الصغيرة والمتوسطة، بائعو التجارة الاجتماعية، العلامات والسلاسل الكبيرة التي تحتاج تكاملات وتقارير، والتجار الذين يحتاجون التخزين والإيفاء أو الاستيراد عبر Bosta Box أو تمويل رأس المال العامل. المستهلك النهائي مستفيد من التتبع والتسليم، لكنه ليس العميل التجاري الأساسي في معظم الخدمات.",
+    "market_size": "لا تنشر بوسطة TAM موحدًا وموثقًا لسوقها، ولا تسمح البيانات العامة بحساب حصة سوقية دقيقة. نطاقها القابل للتحقق هو لوجستيات التجارة الإلكترونية والإيفاء والتحصيل النقدي في مصر والسعودية. مبلغ 27 مليار جنيه GMV في 2025 يقيس قيمة التجارة التي نفذتها الشبكة وفق المؤسس، ولا يمثل حجم السوق الكلي أو إيراد بوسطة. كما أن أكثر من 40 مليار جنيه مبالغ COD المذكورة في صفحة الشراكات قيمة أموال جُمعت للتجار وليست مبيعات للشركة.",
+    "growth_rate": "لا يوجد معدل نمو مالي مدقق منشور. يمكن تتبع توسع تشغيلي متعدد المراحل: أكثر من 4 ملايين طرد و2200 شركة في مايو 2021، وتجاوز 10 ملايين شحنة مع إطلاق السعودية في مارس 2022، ثم 37 مليون شحنة خلال 2025 وفق المؤسس. في يناير 2026 افتتحت الشركة مركز فرز بقدرة 250 ألف شحنة يوميًا واستهدفت نحو 80 مليون شحنة خلال العام. هذه مؤشرات حجم وقدرة وأهداف، وليست إيرادًا أو حصة سوقية، كما أن أرقام صفحات الشركة الحالية تختلف في كونها سنوية أو تراكمية أو تخص التجار المسجلين."
   },
   "financials": {
-    "initial_investment": "مدعومة من فوري (Fawry) و Khawarizmi Ventures و Silicon Badia.",
-    "valuation": "غير معلن (عشرات الملايين)",
+    "initial_investment": "بدأت بوسطة باستثمارات مبكرة من فوري وNumu Capital وCairo Angels. أعلنت في فبراير 2020 جولة Series A سباعية الأرقام من DPDgroup وفوري؛ وقدّرت تغطية لاحقة الجولة السابقة بنحو 2.5 مليون دولار. في مايو 2021 أغلقت جولة جديدة بقيمة 6.7 ملايين دولار بقيادة Silicon Badia، ليصل إجمالي التمويل المعلن حينها إلى 9.2 ملايين دولار. أتبعتها جولة Pre-Series B غير معلنة في 2022 بقيادة Khwarizmi Ventures وبمشاركة Hassan Allam Holding، ثم تمويل غير معلن في 2024 من Axian Group، وأعلن المؤسس مشاركة Avanz Capital وBeltone أيضًا. في مايو 2026 خرج صندوق مشترك لـBeltone وCitadel من حصته بعائد داخلي 75%؛ هذا خروج ثانوي للمستثمر وليس تمويلًا جديدًا للشركة. أما استثمار 5 ملايين دولار في مركز الفرز فهو إنفاق رأسمالي على التشغيل وليس تقييمًا أو إيرادًا.",
+    "valuation": "غير معلن. لا توجد جولة منشورة تكشف تقييم pre-money أو post-money، كما لم يُعلن المشتري أو قيمة صفقة خروج Beltone وCitadel في 2026. معدل العائد الداخلي 75% للمستثمر لا يكشف تقييم بوسطة من دون معرفة تاريخ الاستثمار والتدفقات وحجم الحصة. كذلك لا يمكن اشتقاق التقييم من التمويل أو GMV أو عدد الشحنات أو استثمار مركز الفرز؛ لذلك حُذف تقدير «عشرات الملايين».",
     "revenue_streams": [
-      "رسوم توصيل الشحنات من التاجر",
-      "رسوم تحصيل الدفع عند الاستلام (COD)"
+      "رسوم توصيل الشحنات التي تتغير حسب نوع الطلب والمنطقة والحجم والوزن وحجم أعمال التاجر؛ لا تنشر بوسطة متوسط السعر أو صافي الهامش",
+      "رسوم خدمات الاستلام والميل الأوسط والميل الأخير والطلبات الخاصة مثل الاستبدال والإرجاع والتحصيل النقدي فقط، وفق العقود والخطط",
+      "رسوم مرتبطة بتحصيل الدفع عند الاستلام والتحويل أو السحب من المحفظة؛ لا تكشف الصفحات العامة ما إذا كانت كل قنوات السحب مدفوعة أو مقدار صافي الرسوم",
+      "خدمات التخزين وإدارة المخزون والالتقاط والتعبئة والشحن ضمن الإيفاء؛ هي مسار إيراد تشغيلي منفصل عن رسوم التوصيل",
+      "خدمات التغليف وطباعة بوالص الشحن أو المواد التشغيلية بحسب خطة العميل وحجم العمل",
+      "خدمات Bosta Box للاستيراد والشحن الدولي إلى مصر؛ التسعير وحجم الاستخدام غير معلنين",
+      "تكاملات المؤسسات وواجهات API ولوحات التحكم والتقارير تزيد الاحتفاظ بالعميل، لكن لا يوجد سعر عام يثبت وجود رسم برمجي مستقل",
+      "Bosta Capital يقدم تمويلًا للتجار المؤهلين، إلا أن الجهة القانونية الممولة وهيكل الفوائد أو تقاسم الإيراد غير موضحين علنًا؛ لذلك لا يُنسب كامل عائد التمويل إلى بوسطة",
+      "الشراكات التجارية والبيانات والحملات داخل شبكة الشحن قد تولد دخلًا تعاقديًا، لكن شروطها وقيمها غير منشورة",
+      "27 مليار جنيه GMV و40 مليار جنيه مبالغ COD و55 مليون طرد ليست إيرادًا محاسبيًا لبوسطة"
     ]
   },
   "lessons": [
     {
-      "title": "حل العقدة النقدية للعميل (Cash Flow)",
-      "description": "لم يكن السر فقط في سرعة التوصيل، بل في سرعة (تحويل الأموال). بوسطة كسبت ولاء التجار لأنها حولت أموال المبيعات (COD) لحساباتهم أسرع من أي منافس تقليدي."
+      "title": "دورة النقد جزء من المنتج وليست خدمة خلفية",
+      "description": "ربط الشحنة بمحفظة COD وتسوية الأموال في اليوم التالي يحول شركة الشحن إلى مكوّن في رأس المال العامل للتاجر. القيمة هنا لا تأتي من سرعة المركبة فقط، بل من تقليل الزمن بين البيع وقدرة التاجر على إعادة شراء المخزون."
     },
     {
-      "title": "نموذج الأصول الخفيفة (Asset-Light)",
-      "description": "استخدمت بوسطة التكنولوجيا لإدارة أساطيل من السائقين المستقلين بدلاً من شراء آلاف الشاحنات وتكبد تكاليف صيانتها، مما مكنها من التوسع السريع بتكلفة منخفضة."
+      "title": "نموذج الأصول الخفيفة مرحلة وليس عقيدة",
+      "description": "اعتمدت بوسطة مبكرًا على مندوبين مستقلين ومركبات مؤجرة لتقليل رأس المال المطلوب، ثم استثمرت في مستودعات ومراكز وفرز آلي عندما أصبح الحجم يبرر الأصول. الدرس أن النموذج الأمثل يتغير مع كثافة الطلب ومستوى الخدمة المطلوب."
+    },
+    {
+      "title": "الكثافة التشغيلية تسبق وعد السرعة",
+      "description": "التوصيل في اليوم التالي أو اليوم نفسه لا يتحقق بالشعار، بل بكثافة تجار وشحنات ومراكز ومسارات تسمح بتجميع الأحمال. توسع بوسطة في المراكز والفرز هو استثمار في اقتصاديات الشبكة أكثر منه إضافة تسويقية."
+    },
+    {
+      "title": "حوّل لوحة التحكم إلى نظام تشغيل للتاجر",
+      "description": "عندما يجمع التاجر الطلب والتتبع والإرجاع والتسوية والتقارير والتكاملات في مكان واحد، ترتفع تكلفة الانتقال إلى مزود آخر حتى لو كانت أسعار الشحنة متقاربة. البرمجيات هنا تبني الاحتفاظ حول الخدمة الفيزيائية."
+    },
+    {
+      "title": "GMV يثبت الأهمية ولا يثبت الربحية",
+      "description": "مرور 27 مليار جنيه من التجارة عبر الشبكة يعكس وزنًا تشغيليًا، لكنه لا يكشف معدل الرسوم أو تكلفة التوصيل أو الربح. يجب أن يُقرأ GMV مع الإيراد والهامش والتدفق النقدي، وهي أرقام غير منشورة لبوسطة."
+    },
+    {
+      "title": "عرّف كل رقم قبل الاحتفال به",
+      "description": "الشحنات السنوية والتراكمية ومتوسط الشحنات الشهري والتجار المسجلون والشركات المدعومة والعملاء النهائيون مقاييس مختلفة. عرضها بلا فترة أو تعريف قد يخلق نموًا وهميًا، بينما الخريطة الصحيحة تربط كل رقم بزمنه ووحدته."
+    },
+    {
+      "title": "الأتمتة تأتي بعد إثبات الحجم",
+      "description": "آلة فرز بقدرة 11 ألف شحنة في الساعة منطقية بعد وصول الشبكة إلى عشرات الملايين من الشحنات. شراء الأتمتة مبكرًا يخلق سعة معطلة، أما شراؤها بعد ظهور الاختناق فيحوّل الاستثمار الرأسمالي إلى تحسين في التكلفة والموثوقية."
+    },
+    {
+      "title": "بيانات اللوجستيات قد تصبح محرك ائتمان",
+      "description": "امتلاك تاريخ الشحنات والتحصيل والإرجاع يمنح بوسطة إشارات عملية عن استقرار التاجر وقدرته على السداد، وهو أساس منطقي لـBosta Capital. الميزة ليست تقديم التمويل وحده، بل تقييمه من بيانات تشغيلية يصعب على المقرض التقليدي رؤيتها."
+    },
+    {
+      "title": "التوسع الإقليمي يحتاج تشغيلًا محليًا لا نسخ التطبيق",
+      "description": "إطلاق السعودية تطلب مكتبًا وقيادة محلية وشبكة تغطية وشركاء واستثمارًا منفصلًا. التقنية قابلة لإعادة الاستخدام، لكن التسعير والتنظيم والعناوين والمدفوعات وكثافة المدن تحتاج تصميمًا محليًا."
+    },
+    {
+      "title": "سيولة المستثمر لا تساوي تقييم الشركة",
+      "description": "خروج مستثمر بعائد 75% يثبت وجود حدث سيولة ناجح له، لكنه لا يكشف سعر الشركة أو إيرادها أو قيمة الحصة من دون تفاصيل الصفقة. الفصل بين عائد الصندوق وتمويل الشركة يحمي التحليل من تضخيم الأرقام."
     }
   ],
   "tools": [
-    "AWS",
-    "Node.js",
-    "React Native",
-    "MongoDB"
-  ]
+    "لوحة تحكم لإدارة الطلبات والاستلام والإرجاع والاستبدال والتقارير",
+    "محفظة Bosta Wallet لمتابعة تحصيلات COD والتحويلات والإيصالات",
+    "تطبيق جوال لإنشاء الطلبات والتتبع وإدارة الرصيد والسحب",
+    "تكاملات Shopify وWooCommerce وMagento",
+    "واجهات API مخصصة للمتاجر والأنظمة عالية الحجم",
+    "تتبع لحظي وإشعارات وبوتات لتأكيد العناوين ومواعيد التسليم",
+    "إثبات تسليم باستخدام رمز OTP",
+    "خدمات الاستلام والميل الأوسط والميل الأخير",
+    "خدمات الاستبدال والإرجاع والتحصيل النقدي فقط",
+    "الإيفاء: التخزين وإدارة المخزون والالتقاط والتعبئة والشحن",
+    "Bosta Box للاستيراد والشحن الدولي",
+    "Bosta Capital لتمويل بعض المتاجر المؤهلة",
+    "شبكة مراكز ومستودعات ومندوبي توصيل في مصر مع تشغيل في السعودية",
+    "مركز فرز آلي افتتح في 2026 بقدرة معلنة 11 ألف شحنة في الساعة و250 ألفًا يوميًا",
+    "نموذج شراكة مع SuperJet لاستخدام محطات النقل كمراكز شحن بين المحافظات",
+    "لم تُثبت المصادر الرسمية الحالية استخدام AWS أو Node.js أو React Native أو MongoDB كحزمة تقنية داخلية؛ لذلك أزيلت من قائمة الأدوات المؤكدة"
+  ],
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Bosta Egypt — Home",
+      "publisher": "Bosta",
+      "source_type": "official_current_company_and_operating_metrics_page",
+      "url": "https://bosta.co/en-eg/home",
+      "supports": [
+        "التوصيل في اليوم التالي وتحصيل COD في اليوم التالي",
+        "خدمات الإيفاء وBosta Box",
+        "أكثر من 50 ألف تاجر و50 مركزًا و55 مليون طرد ناجح و8 آلاف مندوب وفق الصفحة الحالية"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Bosta Partnership",
+      "publisher": "Bosta",
+      "source_type": "official_current_partnership_and_operating_metrics_page",
+      "url": "https://bosta.co/ar-eg/partnership",
+      "supports": [
+        "التسلسل الزمني التشغيلي",
+        "متوسط معلن يتجاوز 3 ملايين شحنة شهريًا",
+        "أكثر من 40 مليار جنيه مبالغ تحصيل عند الاستلام",
+        "50 ألف شركة و50 فرعًا ومستودعًا وفق الصفحة"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "About Bosta Egypt",
+      "publisher": "Bosta",
+      "source_type": "official_company_profile",
+      "url": "https://bosta.co/en-eg/about",
+      "supports": [
+        "تأسيس Bosta في مصر عام 2017",
+        "المؤسسان محمد عزت وأحمد جابر",
+        "خدمة الطرود والوثائق والقطع كبيرة الحجم"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Bosta Logistics Solutions",
+      "publisher": "Bosta",
+      "source_type": "official_current_product_and_services_page",
+      "url": "https://bosta.co/en-eg/solutions",
+      "supports": [
+        "التوصيل والاستبدال والإرجاع والتحصيل النقدي",
+        "إثبات التسليم برمز OTP",
+        "التحليلات التشغيلية والمالية",
+        "Bosta Box والبوتات وخدمات الإيفاء"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Bosta E-commerce Integrations",
+      "publisher": "Bosta",
+      "source_type": "official_current_integrations_page",
+      "url": "https://bosta.co/en-eg/integrations",
+      "supports": [
+        "تكامل Shopify وWooCommerce وMagento وواجهات API",
+        "مزامنة الطلبات وجدولة الاستلام وطباعة البوالص",
+        "التتبع الفوري وتحصيل الأموال"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Bosta Business Dashboard",
+      "publisher": "Bosta",
+      "source_type": "official_current_dashboard_and_wallet_page",
+      "url": "https://bosta.co/en-eg/dashboard",
+      "supports": [
+        "إدارة الطلبات والاسترجاع والاستبدال والاسترداد",
+        "التتبع والتقارير",
+        "محفظة COD والتحويل البنكي والسحب عبر فوري",
+        "إدارة الفريق والصلاحيات"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Bosta Fulfillment Services",
+      "publisher": "Bosta",
+      "source_type": "official_current_fulfillment_page",
+      "url": "https://bosta.co/en-eg/fulfillment",
+      "supports": [
+        "التخزين والتعبئة والشحن وإدارة المخزون",
+        "تحويل الأموال خلال 24 ساعة وفق عرض الخدمة",
+        "التوصيل خلال 12 ساعة كادعاء خدمة مشروط"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Bosta Pricing",
+      "publisher": "Bosta",
+      "source_type": "official_current_pricing_model_page",
+      "url": "https://bosta.co/en-eg/pricing?lang=ar",
+      "supports": [
+        "التسعير المرن والدفع حسب الاستخدام",
+        "تغير السعر وفق نوع الطلب والموقع والحجم والحجم التشغيلي",
+        "عدم نشر تعرفة موحدة مكتملة"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Bosta Mobile App",
+      "publisher": "Bosta",
+      "source_type": "official_current_mobile_product_page",
+      "url": "https://bosta.co/en-eg/mobile",
+      "supports": [
+        "إنشاء الطلبات والتتبع عبر التطبيق",
+        "الاستلام والتعبئة للمشروعات الصغيرة",
+        "إدارة المحفظة والتحصيل والسحب"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Bosta Capital",
+      "publisher": "Bosta",
+      "source_type": "official_current_merchant_financing_page",
+      "url": "https://bosta.co/en-eg/bosta-capital",
+      "supports": [
+        "حلول تمويل للمتاجر الإلكترونية الصغيرة والمتوسطة",
+        "اشتراط نشاط لا يقل عن ستة أشهر وتدفق نقدي مستقر",
+        "مدة معالجة معلنة بين ثلاثة وخمسة أيام",
+        "أكثر من ألف عميل يثقون بالخدمة وفق الصفحة"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Bosta API Documentation",
+      "publisher": "Bosta",
+      "source_type": "official_developer_documentation",
+      "url": "https://docs.bosta.co/",
+      "supports": [
+        "وجود API Reference رسمي",
+        "دعم تكامل Shopify وWooCommerce",
+        "أتمتة عمليات الشحن والتتبع"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Minister witnesses opening of Bosta automated sorting center with $5 million investment",
+      "publisher": "Ministry of Planning, Economic Development and International Cooperation — Egypt",
+      "source_type": "official_government_operating_infrastructure_announcement",
+      "url": "https://mped.gov.eg/singlenews?id=6948&lang=en&type=previous",
+      "supports": [
+        "افتتاح مركز فرز آلي في 29 يناير 2026 باستثمارات 5 ملايين دولار",
+        "قدرة فرز 11 ألف شحنة في الساعة و250 ألف شحنة يوميًا",
+        "استهداف نحو 80 مليون شحنة خلال 2026",
+        "التعاون مع Simplex المصرية"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Bosta 2025 operating metrics",
+      "publisher": "Mohamed Ezzat — Founder and CEO of Bosta",
+      "source_type": "primary_founder_operating_metrics_statement",
+      "url": "https://www.linkedin.com/posts/mohamed-ezzat-67aba7a4_2025-bosta-executed-egp-27b-in-gmv-37-million-activity-7409880754484269056-jt6J",
+      "supports": [
+        "27 مليار جنيه GMV خلال 2025",
+        "37 مليون شحنة مسلمة خلال 2025",
+        "17 مليون عميل نهائي و20 ألف شركة خلال 2025",
+        "95% من الشحنات حققت SLA وفق تعريف Green Shipments"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Beltone Venture Capital and Citadel International Holdings’ joint fund exits Bosta",
+      "publisher": "Beltone Holding",
+      "source_type": "official_investor_secondary_exit_announcement",
+      "url": "https://www.beltoneholding.com/en/insights/beltone-venture-capital-and-citadel-international-holdings-joint-fund-exists-bosta",
+      "supports": [
+        "خروج صندوق Beltone وCitadel من Bosta في 11 مايو 2026",
+        "تحقيق معدل عائد داخلي 75%",
+        "عدم إعلان المشتري أو المقابل أو التقييم"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Bosta raises new investment from Axian Group",
+      "publisher": "Wamda",
+      "source_type": "company_sourced_funding_and_operating_announcement",
+      "url": "https://www.wamda.com/2024/01/bosta-raises-new-investment-axian-group",
+      "supports": [
+        "استثمار Axian Group في يناير 2024 دون إعلان القيمة",
+        "عمل Bosta في مصر والسعودية",
+        "نموذج المندوبين المستقلين وتأجير مركبات الميل الأوسط",
+        "تجاوز عشرة ملايين شحنة في ذلك الإفصاح"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Bosta expands to KSA after raising pre-Series B round",
+      "publisher": "Wamda",
+      "source_type": "company_press_release_republished_by_regional_primary_platform",
+      "url": "https://www.wamda.com/en/2022/03/bosta-expands-ksa-raising-pre-series-b-round",
+      "supports": [
+        "إطلاق مكتب الرياض في مارس 2022",
+        "جولة Pre-Series B غير معلنة بقيادة Khwarizmi Ventures وبمشاركة Hassan Allam Holding",
+        "تجاوز عشرة ملايين شحنة منذ التأسيس حينها",
+        "تعيين مدير لفرع السعودية"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Bosta raises $6.7 million Series A round",
+      "publisher": "Wamda",
+      "source_type": "company_press_release_republished_funding_announcement",
+      "url": "https://www.wamda.com/2021/05/bosta-raises-6-7-million-series-round",
+      "supports": [
+        "جولة 6.7 ملايين دولار في مايو 2021",
+        "قيادة Silicon Badia ومشاركة 4DX وPlug and Play وWealthwell وKhawarizmi",
+        "أكثر من أربعة ملايين طرد و2200 شركة حينها",
+        "معدل نجاح تسليم معلن 95%"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Bosta raises $6.7M to expand e-commerce delivery business",
+      "publisher": "TechCrunch",
+      "source_type": "founder_interview_and_funding_report",
+      "url": "https://techcrunch.com/2021/05/17/bosta-raises-6-7m-to-expand-e-commerce-delivery-business-across-africa-and-mena/",
+      "supports": [
+        "إجمالي التمويل المعلن بلغ 9.2 ملايين دولار بعد جولة 2021",
+        "جولة سابقة بقيمة 2.5 مليون دولار",
+        "أكثر من 300 ألف شحنة شهريًا و2200 شركة في 2021",
+        "اعتماد الميل الأخير على متعاقدين وعدم امتلاك أسطول مركبات حينها"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "Bosta raises Series A investment from DPDgroup and Fawry",
+      "publisher": "Wamda",
+      "source_type": "company_press_release_republished_historical_funding_announcement",
+      "url": "https://www.wamda.com/2020/02/bosta-raises-series-investment",
+      "supports": [
+        "جولة سباعية الأرقام من DPDgroup وفوري في فبراير 2020",
+        "استثمارات أقدم من فوري وNumu Capital وCairo Angels",
+        "عدم إعلان الرقم الدقيق في البيان الأصلي"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "Bosta lands seven-figure Series A investment from DPDgroup and Fawry",
+      "publisher": "Bosta press release hosted by Enterprise",
+      "source_type": "primary_company_press_release_pdf",
+      "url": "https://enterprise.press/wp-content/uploads/2020/02/Press-Release-Bostalands-7-figure-Series-A-investment-from-DPDgroup-and-Fawry.pdf",
+      "supports": [
+        "إعلان الشركة الأصلي عن جولة فبراير 2020",
+        "مشاركة DPDgroup وفوري",
+        "عدم نشر القيمة الدقيقة للجولة في البيان"
+      ]
+    },
+    {
+      "id": "SRC-21",
+      "title": "Bosta raises funding from Avanz Capital, Axian Group and Beltone",
+      "publisher": "Mohamed Ezzat — Founder and CEO of Bosta",
+      "source_type": "primary_founder_funding_and_profitability_statement",
+      "url": "https://www.linkedin.com/posts/mohamed-ezzat-67aba7a4_bosta-secures-strategic-investment-from-avanz-activity-7158791349222154241-mTLU",
+      "supports": [
+        "إعلان جولة 2024 من Avanz Capital وAxian Group وBeltone دون قيمة",
+        "تصريح المؤسس عن الحفاظ على أرباح صحية",
+        "غياب أرقام إيراد أو ربح مطلقة ومدققة"
+      ]
+    },
+    {
+      "id": "SRC-22",
+      "title": "Bosta and SuperJet same-day intercity logistics partnership",
+      "publisher": "Mohamed Ezzat — Founder and CEO of Bosta",
+      "source_type": "primary_founder_public_private_partnership_announcement",
+      "url": "https://www.linkedin.com/posts/mohamed-ezzat-67aba7a4_logistics-ecommerce-publicprivatepartnership-activity-7430204116565626880-KePs",
+      "supports": [
+        "شراكة مع SuperJet ووزارة النقل في فبراير 2026",
+        "استخدام محطات الحافلات كمراكز شحن بين المحافظات",
+        "استهداف قدرة تصل إلى ستة ملايين شحنة سنويًا",
+        "القدرة المستهدفة ليست حجمًا محققًا"
+      ]
+    }
+  ],
+  "verification": {
+    "status": "verified_from_official_bosta_government_investor_founder_and_primary_funding_sources_with_strict_metric_separation",
+    "verified_on": "2026-08-03",
+    "research_cutoff": "2026-08-03",
+    "source_policy": "أُعطيت الأولوية لموقع بوسطة الحالي ووثائقها الفنية وصفحات المنتجات، ثم إعلان وزارة التخطيط المصرية عن مركز الفرز، وتصريحات المؤسس المباشرة، وإعلان Beltone الرسمي عن الخروج، وبيانات التمويل المنقولة عن الشركة. استُخدمت TechCrunch لتثبيت مقابلة المؤسس وتعريف الجولة والنموذج التشغيلي التاريخي. لم تُستخدم قواعد بيانات الشركات لتقدير الإيراد أو الزيارات أو التقييم. لا توجد تقارير SEC دورية تخص بوسطة لأنها شركة خاصة مصرية، ولم يُعثر في المصادر المراجعة على نشرة طرح عامة أو إفصاح سوقي يمنح قوائم مالية مستقلة للشركة.",
+    "important_notes": [
+      "حُذف تقدير «عشرات الملايين» من الإيراد الشهري لعدم وجود إيراد مطلق أو MRR أو ARR منشور.",
+      "فُصل 27 مليار جنيه GMV خلال 2025 عن إيراد بوسطة؛ GMV قيمة تجارة منفذة عبر الشبكة.",
+      "فُصل أكثر من 40 مليار جنيه مبالغ COD عن الإيراد؛ هذه أموال جُمعت لصالح التجار.",
+      "فُصلت الشحنات السنوية عن الشحنات التراكمية ومتوسط الشحنات الشهري.",
+      "فُصل 17 مليون عميل نهائي خُدموا في 2025 عن المستخدمين النشطين وزيارات الموقع.",
+      "فُصل 20 ألف شركة مدعومة خلال 2025 عن 50 ألف تاجر معروضين على الموقع؛ التعريف والفترة مختلفان.",
+      "لا تنشر بوسطة MAU أو DAU أو زيارات الموقع أو عدد الحسابات النشطة شهريًا.",
+      "تصريح المؤسس عن «أرباح صحية» لم يصاحبه رقم أو فترة محاسبية مفصلة أو تدقيق عام.",
+      "حُذف تقييم «عشرات الملايين»؛ لا توجد جولة أو صفقة منشورة تكشف تقييم الشركة.",
+      "جولة 6.7 ملايين دولار وإجمالي 9.2 ملايين في 2021 تمويل تاريخي وليسا إيرادًا.",
+      "جولات 2022 و2024 لم تُعلن قيمها، ولذلك لم تُخمن أو تُجمع ضمن رقم تمويل كلي حديث.",
+      "خروج Beltone وCitadel بعائد داخلي 75% حدث سيولة للمستثمر ولا يكشف تقييم بوسطة أو مقابل الصفقة.",
+      "استثمار 5 ملايين دولار في مركز الفرز إنفاق رأسمالي تشغيلي وليس جولة تمويل أو تقييمًا.",
+      "هدف 80 مليون شحنة في 2026 وقدرة 250 ألف شحنة يوميًا خطط وسعة نظرية وليسا حجمًا محققًا.",
+      "وصف النموذج بأنه Asset-light صحيح تاريخيًا جزئيًا في 2021، لكنه لم يعد وصفًا كاملًا بعد بناء شبكة مراكز ومستودعات وأتمتة.",
+      "ادعاءات الصدارة أو كون الشركة رقم 1 مأخوذة من تسويق الشركة ولم تُستخدم كحصة سوقية مستقلة.",
+      "لم تُستخدم الصياغات غير المدعومة عن ضياع الشحنات أو إفلاس المتاجر أو معدلات RTO المرتفعة كحقائق.",
+      "خدمة Bosta Capital موثقة كمنتج، لكن الجهة القانونية الممولة وهيكل مشاركة الإيراد غير معلنين.",
+      "أزيلت AWS وNode.js وReact Native وMongoDB لعدم توفر توثيق رسمي حديث للحزمة الداخلية.",
+      "المقاييس التشغيلية المنشورة من الشركة والمؤسس غير مدققة علنًا وقد تتغير تعريفاتها بين الصفحات."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_on": "2026-08-03",
+      "validator": "Python json module + jsonschema Draft 2020-12 + custom Professional V2 integrity checks",
+      "check_count": 20,
+      "checks": [
+        "اجتياز JSON Schema Draft 2020-12",
+        "الحفاظ على مفاتيح البنية الأصلية وإضافة حقول Professional V2 فقط",
+        "تطابق id وslug مع الملف الأصلي",
+        "عدم وجود source_id مكرر",
+        "سلامة جميع روابط المصادر بصيغة HTTPS",
+        "عدم وجود مراجع أدلة لمصادر مفقودة",
+        "تطابق source_count مع المراجع",
+        "تطابق بيانات المراجع المختصرة مع سجل المصادر",
+        "تطابق field_value في evidence_map مع الحقول الفعلية",
+        "عدم وجود NaN أو Infinity",
+        "وجود محتوى عربي جوهري",
+        "وسم الإيراد الشهري بأنه غير معلن",
+        "فصل GMV عن الإيراد",
+        "فصل COD عن الإيراد",
+        "فصل الشحنات والتجار والعملاء عن حركة الموقع",
+        "وسم التقييم بأنه غير معلن",
+        "فصل التمويل عن الخروج الثانوي والإنفاق الرأسمالي",
+        "تمييز هدف 2026 عن النتيجة المحققة",
+        "إزالة الحزمة التقنية غير الموثقة",
+        "وجود 10 دروس و22 مصدرًا و15 مدخل دليل"
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول الجوهرية بقيمها الفعلية وحالة التحقق والثقة والمصادر، مع فصل الإيراد عن GMV ومبالغ COD والتمويل والتقييم، وفصل الشحنات عن التجار والعملاء النهائيين وحركة الموقع.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي أو بيان أولي.",
+      "verified_current_product_capability": "القدرة موجودة في صفحة منتج أو وثيقة حالية دون افتراض حجم الاستخدام أو الإيراد.",
+      "verified_as_not_publicly_disclosed": "لم يُنشر المقياس المطلوب، ولذلك لم يُستخدم تقدير خارجي.",
+      "verified_historical_financing": "معلومة تمويل مرتبطة بجولة وتاريخ محددين دون تحويلها إلى إيراد أو تقييم.",
+      "verified_historical_operating_metric": "مقياس تشغيل تاريخي أو تراكمي منشور لا يُعامل تلقائيًا كمقياس حالي أو مالي.",
+      "verified_with_metric_definition_limits": "المعلومة منشورة لكن تعريفها أو فترتها يمنعان تحويلها إلى مقياس آخر.",
+      "analytical_inference": "تحليل مهني مشتق من حقائق موثقة وليس تصريحًا حرفيًا."
+    },
+    "confidence_scale": {
+      "high": "مصدر حكومي أو رسمي أو تصريح أولي مباشر، أو عدة مصادر متطابقة.",
+      "medium_high": "استنتاج محدود مبني على مصادر مباشرة مع حدود واضحة.",
+      "medium": "تصريح شركة أو مؤسس يحتاج حذرًا في التعريف أو التدقيق.",
+      "low_not_used": "تقدير غير موثق أو ادعاء لم يُستخدم كحقيقة."
+    },
+    "metric_definitions": {
+      "revenue": "دخل محاسبي تعترف به بوسطة من رسوم وخدمات؛ لا يساوي GMV أو COD أو قيمة الشحنات.",
+      "gmv": "قيمة البضائع أو التجارة التي نُفذت عبر الشبكة؛ ليست إيرادًا أو تقييمًا.",
+      "cod_value": "أموال جُمعت من المستهلكين لصالح التجار؛ ليست ملكية لبوسطة إلا بقدر رسومها المنفصلة.",
+      "annual_parcels": "عدد الشحنات المسلمة خلال سنة محددة.",
+      "cumulative_parcels": "إجمالي الشحنات منذ التأسيس أو حتى تاريخ محدد.",
+      "monthly_parcels": "عدد أو متوسط الشحنات خلال شهر؛ لا يساوي زيارات الموقع أو المستخدمين.",
+      "merchants": "تجار أو حسابات أعمال مسجلة أو مخدومة وفق تعريف المصدر؛ لا تساوي بالضرورة العملاء النشطين المدفوعين.",
+      "end_customers_served": "مستهلكون نهائيون وصلت إليهم شحنات؛ لا يمثلون عملاء B2B أو MAU.",
+      "website_traffic": "زيارات الموقع أو التطبيق خلال فترة؛ لم تنشرها بوسطة.",
+      "funding": "رأس مال جمعته الشركة من المستثمرين؛ لا يمثل إيرادًا أو تقييمًا أو نقدًا حاليًا.",
+      "valuation": "قيمة حقوق الملكية في جولة أو صفقة محددة؛ غير معلنة.",
+      "secondary_exit": "بيع مستثمر لحصته لمشترٍ آخر؛ قد لا يضيف نقدًا إلى الشركة.",
+      "irr": "معدل عائد المستثمر عبر الزمن؛ لا يسمح وحده بحساب قيمة الشركة.",
+      "capex": "إنفاق على أصول أو بنية تشغيلية مثل مركز الفرز؛ ليس تمويلًا أو إيرادًا.",
+      "sorting_capacity": "الحد التشغيلي النظري للمعدات أو المركز؛ لا يساوي الحجم المحقق.",
+      "delivery_target": "هدف مستقبلي معلن؛ لا يُعامل كنتيجة محققة.",
+      "sla_success": "نسبة شحنات حققت مستوى خدمة معرفًا من الشركة؛ ليست بالضرورة نسبة تسليم نهائية مستقلة."
+    }
+  },
+  "evidence_map": {
+    "$.headline": {
+      "field_value": "من مندوب مستقل إلى شبكة فرز وتمويل: كيف بنت بوسطة طبقة تشغيل كاملة للتجارة الإلكترونية",
+      "verification_status": "analytical_inference",
+      "confidence": "high",
+      "claim_type": "company_specific_strategy_headline",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يلخص انتقال بوسطة من نموذج مندوبين ومتعاقدين إلى منصة تجمع التشغيل والبرمجيات والتمويل ثم تستثمر في مراكز وفرز آلي.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-18",
+        "SRC-01",
+        "SRC-10",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-18",
+          "title": "Bosta raises $6.7M to expand e-commerce delivery business",
+          "publisher": "TechCrunch",
+          "source_type": "founder_interview_and_funding_report",
+          "url": "https://techcrunch.com/2021/05/17/bosta-raises-6-7m-to-expand-e-commerce-delivery-business-across-africa-and-mena/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "النموذج التاريخي القائم على المتعاقدين"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Bosta Egypt — Home",
+          "publisher": "Bosta",
+          "source_type": "official_current_company_and_operating_metrics_page",
+          "url": "https://bosta.co/en-eg/home",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "اتساع الخدمات إلى الإيفاء والتحصيل والمراكز"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Bosta Capital",
+          "publisher": "Bosta",
+          "source_type": "official_current_merchant_financing_page",
+          "url": "https://bosta.co/en-eg/bosta-capital",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "إضافة تمويل التجار"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Minister witnesses opening of Bosta automated sorting center with $5 million investment",
+          "publisher": "Ministry of Planning, Economic Development and International Cooperation — Egypt",
+          "source_type": "official_government_operating_infrastructure_announcement",
+          "url": "https://mped.gov.eg/singlenews?id=6948&lang=en&type=previous",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "الاستثمار في مركز الفرز الآلي"
+        }
+      ],
+      "limitations": "العنوان تحليل تحريري ولا يثبت تفوقًا سوقيًا أو أداءً ماليًا."
+    },
+    "$.company.location": {
+      "field_value": "القاهرة، مصر. تأسست بوسطة في 2017 على يد محمد عزت وأحمد جابر، ثم أطلقت عملياتها في السعودية عبر مكتب الرياض في مارس 2022 بعد جولة Pre-Series B غير معلنة. حتى أغسطس 2026 تثبت المصادر المباشرة نشاطها الأساسي في مصر والسعودية. لم يُعثر على إفصاح عام يثبت إدراج الشركة في سوق مالي أو نقل مقرها القانوني خارج هذا الإطار.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "company_origin_and_geographic_operations",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر الرسمية تثبت تأسيس الشركة في مصر عام 2017 وإطلاق مكتب الرياض في 2022.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-03",
+        "SRC-16",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "About Bosta Egypt",
+          "publisher": "Bosta",
+          "source_type": "official_company_profile",
+          "url": "https://bosta.co/en-eg/about",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "التأسيس في مصر عام 2017 والمؤسسون"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Bosta expands to KSA after raising pre-Series B round",
+          "publisher": "Wamda",
+          "source_type": "company_press_release_republished_by_regional_primary_platform",
+          "url": "https://www.wamda.com/en/2022/03/bosta-expands-ksa-raising-pre-series-b-round",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "إطلاق مكتب الرياض في مارس 2022"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Bosta raises new investment from Axian Group",
+          "publisher": "Wamda",
+          "source_type": "company_sourced_funding_and_operating_announcement",
+          "url": "https://www.wamda.com/2024/01/bosta-raises-new-investment-axian-group",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "استمرار العمل في مصر والسعودية في 2024"
+        }
+      ],
+      "limitations": "لا يثبت وجود صفحة خدمة في دولة ما أن جميع المنتجات متاحة فيها أو أن المقر القانوني انتقل إليها."
+    },
+    "$.company.business_model": {
+      "field_value": "منصة لوجستيات B2B وB2B2C للتجارة الإلكترونية تعتمد تسعيرًا لكل شحنة يتغير حسب نوع الطلب والمسار والحجم والوزن وحجم أعمال التاجر. توسع المنتج من الميل الأخير إلى الاستلام والميل الأوسط والإرجاع والاستبدال وتحصيل الدفع عند الاستلام وتسويته، والتخزين والإيفاء، والشحن الدولي عبر Bosta Box، والتكاملات البرمجية، وتمويل بعض التجار عبر Bosta Capital. لا تنشر الشركة متوسط سعر الشحنة أو معدل الاقتطاع أو مساهمة كل خدمة في الإيراد.",
+      "verification_status": "verified_current_product_capability",
+      "confidence": "high",
+      "claim_type": "business_model_and_service_mix",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التسعير لكل شحنة والخدمات اللوجستية والإيفاء والتكاملات والتمويل موثقة، بينما معدل الاقتطاع ومزيج الإيراد غير معلنين.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-08",
+        "SRC-04",
+        "SRC-07",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "Bosta Pricing",
+          "publisher": "Bosta",
+          "source_type": "official_current_pricing_model_page",
+          "url": "https://bosta.co/en-eg/pricing?lang=ar",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "التسعير المتغير حسب الطلب والموقع والحجم والحجم التشغيلي"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Bosta Logistics Solutions",
+          "publisher": "Bosta",
+          "source_type": "official_current_product_and_services_page",
+          "url": "https://bosta.co/en-eg/solutions",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "التوصيل والإرجاع والاستبدال وCOD وBosta Box"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Bosta Fulfillment Services",
+          "publisher": "Bosta",
+          "source_type": "official_current_fulfillment_page",
+          "url": "https://bosta.co/en-eg/fulfillment",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "خدمات الإيفاء والتخزين"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Bosta Capital",
+          "publisher": "Bosta",
+          "source_type": "official_current_merchant_financing_page",
+          "url": "https://bosta.co/en-eg/bosta-capital",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "تمويل التجار عبر Bosta Capital"
+        }
+      ],
+      "limitations": "لا توجد قوائم مالية تفصل الإيراد حسب المنتج أو الدولة."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. بوسطة شركة خاصة ولا تنشر قوائم مالية مستقلة أو MRR أو ARR أو إيرادًا شهريًا أو سنويًا مطلقًا. أعلن المؤسس أن الشركة نفذت 27 مليار جنيه من GMV خلال 2025 وحافظت على «أرباح صحية»، لكن GMV هو قيمة البضائع أو التجارة التي مرت عبر الشبكة وليس إيراد بوسطة، كما أن وصف الربحية لم يصاحبه رقم أو تدقيق منشور. لذلك حُذف تقدير «عشرات الملايين».",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "revenue_metric_separation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لم يُنشر إيراد مطلق، وفُصل GMV والربحية الوصفية عن الإيراد المحاسبي.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-13",
+        "SRC-21",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "Bosta 2025 operating metrics",
+          "publisher": "Mohamed Ezzat — Founder and CEO of Bosta",
+          "source_type": "primary_founder_operating_metrics_statement",
+          "url": "https://www.linkedin.com/posts/mohamed-ezzat-67aba7a4_2025-bosta-executed-egp-27b-in-gmv-37-million-activity-7409880754484269056-jt6J",
+          "evidence_type": "direct_with_limits",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "27 مليار جنيه GMV في 2025 دون إيراد"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Bosta raises funding from Avanz Capital, Axian Group and Beltone",
+          "publisher": "Mohamed Ezzat — Founder and CEO of Bosta",
+          "source_type": "primary_founder_funding_and_profitability_statement",
+          "url": "https://www.linkedin.com/posts/mohamed-ezzat-67aba7a4_bosta-secures-strategic-investment-from-avanz-activity-7158791349222154241-mTLU",
+          "evidence_type": "direct_with_limits",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "تصريح أرباح صحية دون أرقام"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Bosta Pricing",
+          "publisher": "Bosta",
+          "source_type": "official_current_pricing_model_page",
+          "url": "https://bosta.co/en-eg/pricing?lang=ar",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "وجود نموذج تسعير دون إفصاح إيرادي"
+        }
+      ],
+      "limitations": "عدم العثور على إفصاح عام لا يثبت عدم وجود إيراد؛ يثبت فقط أنه غير منشور في المصادر المراجعة."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن. لا تنشر بوسطة زيارات الموقع أو MAU أو DAU. المقاييس التشغيلية المتاحة منفصلة: أعلن المؤسس 37 مليون شحنة مسلمة و17 مليون عميل نهائي مخدوم و20 ألف شركة مدعومة خلال 2025، بينما تعرض صفحات الشركة الحالية أكثر من 55 مليون طرد تراكمي و50 ألف تاجر، وتعرض صفحة الشراكات متوسطًا يتجاوز 3 ملايين شحنة شهريًا. اختلاف الفترات والتعريفات يمنع جمع هذه الأرقام أو تحويلها إلى زيارات أو مستخدمين نشطين.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "traffic_users_and_operating_metrics_separation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا توجد زيارات أو MAU منشورة، بينما توجد مقاييس شحنات وتجار وعملاء نهائيين بتعريفات وفترات مختلفة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-13",
+        "SRC-01",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "Bosta 2025 operating metrics",
+          "publisher": "Mohamed Ezzat — Founder and CEO of Bosta",
+          "source_type": "primary_founder_operating_metrics_statement",
+          "url": "https://www.linkedin.com/posts/mohamed-ezzat-67aba7a4_2025-bosta-executed-egp-27b-in-gmv-37-million-activity-7409880754484269056-jt6J",
+          "evidence_type": "direct_with_limits",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "شحنات وعملاء وشركات خلال 2025"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Bosta Egypt — Home",
+          "publisher": "Bosta",
+          "source_type": "official_current_company_and_operating_metrics_page",
+          "url": "https://bosta.co/en-eg/home",
+          "evidence_type": "direct_with_limits",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "طرود تراكمية وتجار ومراكز حاليًا"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Bosta Partnership",
+          "publisher": "Bosta",
+          "source_type": "official_current_partnership_and_operating_metrics_page",
+          "url": "https://bosta.co/ar-eg/partnership",
+          "evidence_type": "direct_with_limits",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "متوسط شحنات شهري ومبالغ COD"
+        }
+      ],
+      "limitations": "المقاييس التشغيلية تصريحات شركة غير مدققة ولا يمكن تحويلها إلى حركة موقع."
+    },
+    "$.overview.problem.text": {
+      "field_value": "المشكلة التي تعالجها بوسطة أوسع من نقل الطرد: على التاجر الإلكتروني تنسيق الاستلام والتوصيل بين المحافظات، تحديث العميل، معالجة الإرجاع والاستبدال، تحصيل النقد وتسويته، ومطابقة كل ذلك مع الطلبات والمخزون. عندما تكون هذه الوظائف موزعة بين مزودين وأدوات يدوية، تطول دورة النقد ويزداد العبء التشغيلي وخدمة العملاء. لا تنشر الشركة بيانات تثبت تعميم أن شركات الشحن التقليدية «تضيّع الشحنات» أو أن التأخر يؤدي إلى إفلاس المتاجر، لذلك أزيلت هذه الصياغات المطلقة.",
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "customer_problem_analysis",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التحليل مشتق من الوظائف التي تجمعها بوسطة: التوصيل والإرجاع والتتبع والتحصيل والتسوية والتكامل.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-04",
+        "SRC-06",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Bosta Logistics Solutions",
+          "publisher": "Bosta",
+          "source_type": "official_current_product_and_services_page",
+          "url": "https://bosta.co/en-eg/solutions",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "تعدد أنواع الطلبات والتتبع وCOD"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Bosta Business Dashboard",
+          "publisher": "Bosta",
+          "source_type": "official_current_dashboard_and_wallet_page",
+          "url": "https://bosta.co/en-eg/dashboard",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "التقارير والمحفظة وإدارة الحالات"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Bosta E-commerce Integrations",
+          "publisher": "Bosta",
+          "source_type": "official_current_integrations_page",
+          "url": "https://bosta.co/en-eg/integrations",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "التكاملات وأتمتة الطلبات"
+        }
+      ],
+      "limitations": "لا توجد بيانات عامة تثبت تعميم ضياع الشحنات أو إفلاس المتاجر؛ أزيلت الادعاءات المطلقة."
+    },
+    "$.overview.solution.text": {
+      "field_value": "بنت بوسطة طبقة تشغيل تجمع إنشاء الطلبات والاستلام والميل الأوسط والميل الأخير والتتبع والإرجاع والاستبدال وإثبات التسليم ومحفظة COD والتكامل مع المتاجر، ثم أضافت التخزين والإيفاء وBosta Box وتمويل التجار. ويكشف مركز الفرز الآلي المفتتح في يناير 2026 عن انتقال النموذج من الاعتماد الكبير على المندوبين والمتعاقدين إلى بنية هجينة تشمل مراكز ومستودعات وأتمتة رأسمالية؛ بلغت استثمارات المركز 5 ملايين دولار وقدرته المعلنة 11 ألف شحنة في الساعة و250 ألفًا يوميًا. هدف 80 مليون شحنة خلال 2026 خطة تشغيلية مستقبلية عند تاريخ الإعلان وليس نتيجة محققة.",
+      "verification_status": "verified_current_product_capability",
+      "confidence": "high",
+      "claim_type": "solution_and_operating_infrastructure",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المنصة متعددة الخدمات ومركز الفرز وقدراته موثقة، مع تمييز السعة والأهداف المستقبلية عن النتائج.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-06",
+        "SRC-12",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Bosta Egypt — Home",
+          "publisher": "Bosta",
+          "source_type": "official_current_company_and_operating_metrics_page",
+          "url": "https://bosta.co/en-eg/home",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "التوصيل والتحصيل والإيفاء وBosta Box"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Bosta Business Dashboard",
+          "publisher": "Bosta",
+          "source_type": "official_current_dashboard_and_wallet_page",
+          "url": "https://bosta.co/en-eg/dashboard",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "لوحة التحكم والمحفظة"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Minister witnesses opening of Bosta automated sorting center with $5 million investment",
+          "publisher": "Ministry of Planning, Economic Development and International Cooperation — Egypt",
+          "source_type": "official_government_operating_infrastructure_announcement",
+          "url": "https://mped.gov.eg/singlenews?id=6948&lang=en&type=previous",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "مركز الفرز واستثماره وقدرته وهدف 2026"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Bosta raises $6.7M to expand e-commerce delivery business",
+          "publisher": "TechCrunch",
+          "source_type": "founder_interview_and_funding_report",
+          "url": "https://techcrunch.com/2021/05/17/bosta-raises-6-7m-to-expand-e-commerce-delivery-business-across-africa-and-mena/",
+          "evidence_type": "historical_context",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "النموذج التاريخي القائم على المتعاقدين"
+        }
+      ],
+      "limitations": "القدرة الاسمية للمركز والهدف السنوي لا يثبتان الاستخدام الفعلي أو تحقيق الهدف."
+    },
+    "$.market_data.target_audience": {
+      "field_value": "المتاجر الإلكترونية الصغيرة والمتوسطة، بائعو التجارة الاجتماعية، العلامات والسلاسل الكبيرة التي تحتاج تكاملات وتقارير، والتجار الذين يحتاجون التخزين والإيفاء أو الاستيراد عبر Bosta Box أو تمويل رأس المال العامل. المستهلك النهائي مستفيد من التتبع والتسليم، لكنه ليس العميل التجاري الأساسي في معظم الخدمات.",
+      "verification_status": "verified_current_product_capability",
+      "confidence": "high",
+      "claim_type": "target_customer_segments",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "صفحات الأعمال والمشروعات الصغيرة والإيفاء والتمويل تثبت تنوع شرائح التجار.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-07",
+        "SRC-10",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Bosta Egypt — Home",
+          "publisher": "Bosta",
+          "source_type": "official_current_company_and_operating_metrics_page",
+          "url": "https://bosta.co/en-eg/home",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "التجار والأعمال الصغيرة والمتوسطة"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Bosta Fulfillment Services",
+          "publisher": "Bosta",
+          "source_type": "official_current_fulfillment_page",
+          "url": "https://bosta.co/en-eg/fulfillment",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "عملاء الإيفاء والتخزين"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Bosta Capital",
+          "publisher": "Bosta",
+          "source_type": "official_current_merchant_financing_page",
+          "url": "https://bosta.co/en-eg/bosta-capital",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "المتاجر المؤهلة للتمويل"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Bosta E-commerce Integrations",
+          "publisher": "Bosta",
+          "source_type": "official_current_integrations_page",
+          "url": "https://bosta.co/en-eg/integrations",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "المتاجر ذات التكاملات التقنية"
+        }
+      ],
+      "limitations": "عدد التجار في كل شريحة أو إيرادها غير معلن."
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر بوسطة TAM موحدًا وموثقًا لسوقها، ولا تسمح البيانات العامة بحساب حصة سوقية دقيقة. نطاقها القابل للتحقق هو لوجستيات التجارة الإلكترونية والإيفاء والتحصيل النقدي في مصر والسعودية. مبلغ 27 مليار جنيه GMV في 2025 يقيس قيمة التجارة التي نفذتها الشبكة وفق المؤسس، ولا يمثل حجم السوق الكلي أو إيراد بوسطة. كما أن أكثر من 40 مليار جنيه مبالغ COD المذكورة في صفحة الشراكات قيمة أموال جُمعت للتجار وليست مبيعات للشركة.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "high",
+      "claim_type": "market_scope_and_gmv_separation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "النطاق الجغرافي والخدمي مثبت، لكن لا يوجد TAM أو حصة سوقية مدققة؛ فُصل GMV وCOD عن السوق والإيراد.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-13",
+        "SRC-02",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "Bosta 2025 operating metrics",
+          "publisher": "Mohamed Ezzat — Founder and CEO of Bosta",
+          "source_type": "primary_founder_operating_metrics_statement",
+          "url": "https://www.linkedin.com/posts/mohamed-ezzat-67aba7a4_2025-bosta-executed-egp-27b-in-gmv-37-million-activity-7409880754484269056-jt6J",
+          "evidence_type": "direct_with_limits",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "27 مليار جنيه GMV لبوسطة في 2025"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Bosta Partnership",
+          "publisher": "Bosta",
+          "source_type": "official_current_partnership_and_operating_metrics_page",
+          "url": "https://bosta.co/ar-eg/partnership",
+          "evidence_type": "direct_with_limits",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "قيمة COD ضمن الشبكة"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "About Bosta Egypt",
+          "publisher": "Bosta",
+          "source_type": "official_company_profile",
+          "url": "https://bosta.co/en-eg/about",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "نطاق الخدمات والاتجاه الإقليمي"
+        }
+      ],
+      "limitations": "بيانات الشركة لا تكفي لحساب إجمالي السوق أو الحصة السوقية."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا يوجد معدل نمو مالي مدقق منشور. يمكن تتبع توسع تشغيلي متعدد المراحل: أكثر من 4 ملايين طرد و2200 شركة في مايو 2021، وتجاوز 10 ملايين شحنة مع إطلاق السعودية في مارس 2022، ثم 37 مليون شحنة خلال 2025 وفق المؤسس. في يناير 2026 افتتحت الشركة مركز فرز بقدرة 250 ألف شحنة يوميًا واستهدفت نحو 80 مليون شحنة خلال العام. هذه مؤشرات حجم وقدرة وأهداف، وليست إيرادًا أو حصة سوقية، كما أن أرقام صفحات الشركة الحالية تختلف في كونها سنوية أو تراكمية أو تخص التجار المسجلين.",
+      "verification_status": "verified_historical_operating_metric",
+      "confidence": "high",
+      "claim_type": "operating_growth_milestones",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توثق المصادر انتقال الشحنات من 4 ملايين تراكميًا في 2021 إلى 10 ملايين في 2022 ثم 37 مليونًا خلال 2025، مع توسع القدرة في 2026.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-17",
+        "SRC-16",
+        "SRC-13",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-17",
+          "title": "Bosta raises $6.7 million Series A round",
+          "publisher": "Wamda",
+          "source_type": "company_press_release_republished_funding_announcement",
+          "url": "https://www.wamda.com/2021/05/bosta-raises-6-7-million-series-round",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "4 ملايين طرد و2200 شركة في 2021"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Bosta expands to KSA after raising pre-Series B round",
+          "publisher": "Wamda",
+          "source_type": "company_press_release_republished_by_regional_primary_platform",
+          "url": "https://www.wamda.com/en/2022/03/bosta-expands-ksa-raising-pre-series-b-round",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "10 ملايين شحنة وإطلاق السعودية في 2022"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Bosta 2025 operating metrics",
+          "publisher": "Mohamed Ezzat — Founder and CEO of Bosta",
+          "source_type": "primary_founder_operating_metrics_statement",
+          "url": "https://www.linkedin.com/posts/mohamed-ezzat-67aba7a4_2025-bosta-executed-egp-27b-in-gmv-37-million-activity-7409880754484269056-jt6J",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "37 مليون شحنة خلال 2025"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Minister witnesses opening of Bosta automated sorting center with $5 million investment",
+          "publisher": "Ministry of Planning, Economic Development and International Cooperation — Egypt",
+          "source_type": "official_government_operating_infrastructure_announcement",
+          "url": "https://mped.gov.eg/singlenews?id=6948&lang=en&type=previous",
+          "evidence_type": "direct_with_limits",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "قدرة الفرز وهدف 2026"
+        }
+      ],
+      "limitations": "الفترات والتعريفات مختلفة، لذلك لم يُحسب CAGR أو معدل نمو مالي."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "بدأت بوسطة باستثمارات مبكرة من فوري وNumu Capital وCairo Angels. أعلنت في فبراير 2020 جولة Series A سباعية الأرقام من DPDgroup وفوري؛ وقدّرت تغطية لاحقة الجولة السابقة بنحو 2.5 مليون دولار. في مايو 2021 أغلقت جولة جديدة بقيمة 6.7 ملايين دولار بقيادة Silicon Badia، ليصل إجمالي التمويل المعلن حينها إلى 9.2 ملايين دولار. أتبعتها جولة Pre-Series B غير معلنة في 2022 بقيادة Khwarizmi Ventures وبمشاركة Hassan Allam Holding، ثم تمويل غير معلن في 2024 من Axian Group، وأعلن المؤسس مشاركة Avanz Capital وBeltone أيضًا. في مايو 2026 خرج صندوق مشترك لـBeltone وCitadel من حصته بعائد داخلي 75%؛ هذا خروج ثانوي للمستثمر وليس تمويلًا جديدًا للشركة. أما استثمار 5 ملايين دولار في مركز الفرز فهو إنفاق رأسمالي على التشغيل وليس تقييمًا أو إيرادًا.",
+      "verification_status": "verified_historical_financing",
+      "confidence": "high",
+      "claim_type": "funding_and_secondary_liquidity_timeline",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توثق المصادر الجولات المعلنة والقيم غير المعلنة، وتفصل التمويل الأولي عن الخروج الثانوي والإنفاق الرأسمالي.",
+      "source_count": 8,
+      "source_ids": [
+        "SRC-19",
+        "SRC-17",
+        "SRC-18",
+        "SRC-16",
+        "SRC-15",
+        "SRC-21",
+        "SRC-14",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-19",
+          "title": "Bosta raises Series A investment from DPDgroup and Fawry",
+          "publisher": "Wamda",
+          "source_type": "company_press_release_republished_historical_funding_announcement",
+          "url": "https://www.wamda.com/2020/02/bosta-raises-series-investment",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "جولة 2020 من DPDgroup وفوري"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Bosta raises $6.7 million Series A round",
+          "publisher": "Wamda",
+          "source_type": "company_press_release_republished_funding_announcement",
+          "url": "https://www.wamda.com/2021/05/bosta-raises-6-7-million-series-round",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "جولة 6.7 ملايين دولار في 2021"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Bosta raises $6.7M to expand e-commerce delivery business",
+          "publisher": "TechCrunch",
+          "source_type": "founder_interview_and_funding_report",
+          "url": "https://techcrunch.com/2021/05/17/bosta-raises-6-7m-to-expand-e-commerce-delivery-business-across-africa-and-mena/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "إجمالي 9.2 ملايين دولار حينها"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Bosta expands to KSA after raising pre-Series B round",
+          "publisher": "Wamda",
+          "source_type": "company_press_release_republished_by_regional_primary_platform",
+          "url": "https://www.wamda.com/en/2022/03/bosta-expands-ksa-raising-pre-series-b-round",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "جولة Pre-Series B غير معلنة في 2022"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Bosta raises new investment from Axian Group",
+          "publisher": "Wamda",
+          "source_type": "company_sourced_funding_and_operating_announcement",
+          "url": "https://www.wamda.com/2024/01/bosta-raises-new-investment-axian-group",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "استثمار Axian غير المعلن في 2024"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Bosta raises funding from Avanz Capital, Axian Group and Beltone",
+          "publisher": "Mohamed Ezzat — Founder and CEO of Bosta",
+          "source_type": "primary_founder_funding_and_profitability_statement",
+          "url": "https://www.linkedin.com/posts/mohamed-ezzat-67aba7a4_bosta-secures-strategic-investment-from-avanz-activity-7158791349222154241-mTLU",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "مشاركة Avanz وAxian وBeltone في 2024"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Beltone Venture Capital and Citadel International Holdings’ joint fund exits Bosta",
+          "publisher": "Beltone Holding",
+          "source_type": "official_investor_secondary_exit_announcement",
+          "url": "https://www.beltoneholding.com/en/insights/beltone-venture-capital-and-citadel-international-holdings-joint-fund-exists-bosta",
+          "evidence_type": "direct_with_limits",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "خروج مستثمرين في 2026"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Minister witnesses opening of Bosta automated sorting center with $5 million investment",
+          "publisher": "Ministry of Planning, Economic Development and International Cooperation — Egypt",
+          "source_type": "official_government_operating_infrastructure_announcement",
+          "url": "https://mped.gov.eg/singlenews?id=6948&lang=en&type=previous",
+          "evidence_type": "direct_with_limits",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "استثمار مركز الفرز كإنفاق رأسمالي"
+        }
+      ],
+      "limitations": "لا يمكن جمع الجولات غير المعلنة في إجمالي دقيق أو اعتبار الخروج تمويلًا جديدًا."
+    },
+    "$.financials.valuation": {
+      "field_value": "غير معلن. لا توجد جولة منشورة تكشف تقييم pre-money أو post-money، كما لم يُعلن المشتري أو قيمة صفقة خروج Beltone وCitadel في 2026. معدل العائد الداخلي 75% للمستثمر لا يكشف تقييم بوسطة من دون معرفة تاريخ الاستثمار والتدفقات وحجم الحصة. كذلك لا يمكن اشتقاق التقييم من التمويل أو GMV أو عدد الشحنات أو استثمار مركز الفرز؛ لذلك حُذف تقدير «عشرات الملايين».",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "valuation_and_exit_separation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لم تُنشر قيمة الشركة أو مقابل خروج 2026؛ IRR والتمويل وGMV لا تسمح باشتقاق التقييم.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-14",
+        "SRC-21",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-14",
+          "title": "Beltone Venture Capital and Citadel International Holdings’ joint fund exits Bosta",
+          "publisher": "Beltone Holding",
+          "source_type": "official_investor_secondary_exit_announcement",
+          "url": "https://www.beltoneholding.com/en/insights/beltone-venture-capital-and-citadel-international-holdings-joint-fund-exists-bosta",
+          "evidence_type": "direct_with_limits",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "إعلان عائد 75% دون سعر أو تقييم"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Bosta raises funding from Avanz Capital, Axian Group and Beltone",
+          "publisher": "Mohamed Ezzat — Founder and CEO of Bosta",
+          "source_type": "primary_founder_funding_and_profitability_statement",
+          "url": "https://www.linkedin.com/posts/mohamed-ezzat-67aba7a4_bosta-secures-strategic-investment-from-avanz-activity-7158791349222154241-mTLU",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "تمويل 2024 دون قيمة أو تقييم"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Bosta raises $6.7 million Series A round",
+          "publisher": "Wamda",
+          "source_type": "company_press_release_republished_funding_announcement",
+          "url": "https://www.wamda.com/2021/05/bosta-raises-6-7-million-series-round",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "تمويل 2021 دون تقييم"
+        }
+      ],
+      "limitations": "قد توجد تقييمات خاصة غير منشورة، لكنها لا تصلح للاستخدام العام دون مصدر."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "رسوم توصيل الشحنات التي تتغير حسب نوع الطلب والمنطقة والحجم والوزن وحجم أعمال التاجر؛ لا تنشر بوسطة متوسط السعر أو صافي الهامش",
+        "رسوم خدمات الاستلام والميل الأوسط والميل الأخير والطلبات الخاصة مثل الاستبدال والإرجاع والتحصيل النقدي فقط، وفق العقود والخطط",
+        "رسوم مرتبطة بتحصيل الدفع عند الاستلام والتحويل أو السحب من المحفظة؛ لا تكشف الصفحات العامة ما إذا كانت كل قنوات السحب مدفوعة أو مقدار صافي الرسوم",
+        "خدمات التخزين وإدارة المخزون والالتقاط والتعبئة والشحن ضمن الإيفاء؛ هي مسار إيراد تشغيلي منفصل عن رسوم التوصيل",
+        "خدمات التغليف وطباعة بوالص الشحن أو المواد التشغيلية بحسب خطة العميل وحجم العمل",
+        "خدمات Bosta Box للاستيراد والشحن الدولي إلى مصر؛ التسعير وحجم الاستخدام غير معلنين",
+        "تكاملات المؤسسات وواجهات API ولوحات التحكم والتقارير تزيد الاحتفاظ بالعميل، لكن لا يوجد سعر عام يثبت وجود رسم برمجي مستقل",
+        "Bosta Capital يقدم تمويلًا للتجار المؤهلين، إلا أن الجهة القانونية الممولة وهيكل الفوائد أو تقاسم الإيراد غير موضحين علنًا؛ لذلك لا يُنسب كامل عائد التمويل إلى بوسطة",
+        "الشراكات التجارية والبيانات والحملات داخل شبكة الشحن قد تولد دخلًا تعاقديًا، لكن شروطها وقيمها غير منشورة",
+        "27 مليار جنيه GMV و40 مليار جنيه مبالغ COD و55 مليون طرد ليست إيرادًا محاسبيًا لبوسطة"
+      ],
+      "verification_status": "verified_current_product_capability",
+      "confidence": "medium_high",
+      "claim_type": "revenue_streams_with_attribution_limits",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "مسارات الرسوم مرتبطة بخدمات معلنة، مع توضيح أن الأسعار والمزيج وصافي الهامش غير منشورة وأن GMV وCOD ليست إيرادًا.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-08",
+        "SRC-04",
+        "SRC-07",
+        "SRC-10",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "Bosta Pricing",
+          "publisher": "Bosta",
+          "source_type": "official_current_pricing_model_page",
+          "url": "https://bosta.co/en-eg/pricing?lang=ar",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "تسعير الشحن المتغير"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Bosta Logistics Solutions",
+          "publisher": "Bosta",
+          "source_type": "official_current_product_and_services_page",
+          "url": "https://bosta.co/en-eg/solutions",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "الإرجاع والاستبدال وCOD وBosta Box"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Bosta Fulfillment Services",
+          "publisher": "Bosta",
+          "source_type": "official_current_fulfillment_page",
+          "url": "https://bosta.co/en-eg/fulfillment",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "الإيفاء والتخزين والتعبئة"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Bosta Capital",
+          "publisher": "Bosta",
+          "source_type": "official_current_merchant_financing_page",
+          "url": "https://bosta.co/en-eg/bosta-capital",
+          "evidence_type": "direct_with_limits",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "تمويل التجار دون هيكل إيراد معلن"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Bosta Partnership",
+          "publisher": "Bosta",
+          "source_type": "official_current_partnership_and_operating_metrics_page",
+          "url": "https://bosta.co/ar-eg/partnership",
+          "evidence_type": "direct_with_limits",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "COD والشراكات دون اعتبارها إيرادًا كاملًا"
+        }
+      ],
+      "limitations": "بعض البنود قدرات تجارية قد تكون مضمنة في العقود وليست رسومًا منفصلة."
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "دورة النقد جزء من المنتج وليست خدمة خلفية",
+          "description": "ربط الشحنة بمحفظة COD وتسوية الأموال في اليوم التالي يحول شركة الشحن إلى مكوّن في رأس المال العامل للتاجر. القيمة هنا لا تأتي من سرعة المركبة فقط، بل من تقليل الزمن بين البيع وقدرة التاجر على إعادة شراء المخزون."
+        },
+        {
+          "title": "نموذج الأصول الخفيفة مرحلة وليس عقيدة",
+          "description": "اعتمدت بوسطة مبكرًا على مندوبين مستقلين ومركبات مؤجرة لتقليل رأس المال المطلوب، ثم استثمرت في مستودعات ومراكز وفرز آلي عندما أصبح الحجم يبرر الأصول. الدرس أن النموذج الأمثل يتغير مع كثافة الطلب ومستوى الخدمة المطلوب."
+        },
+        {
+          "title": "الكثافة التشغيلية تسبق وعد السرعة",
+          "description": "التوصيل في اليوم التالي أو اليوم نفسه لا يتحقق بالشعار، بل بكثافة تجار وشحنات ومراكز ومسارات تسمح بتجميع الأحمال. توسع بوسطة في المراكز والفرز هو استثمار في اقتصاديات الشبكة أكثر منه إضافة تسويقية."
+        },
+        {
+          "title": "حوّل لوحة التحكم إلى نظام تشغيل للتاجر",
+          "description": "عندما يجمع التاجر الطلب والتتبع والإرجاع والتسوية والتقارير والتكاملات في مكان واحد، ترتفع تكلفة الانتقال إلى مزود آخر حتى لو كانت أسعار الشحنة متقاربة. البرمجيات هنا تبني الاحتفاظ حول الخدمة الفيزيائية."
+        },
+        {
+          "title": "GMV يثبت الأهمية ولا يثبت الربحية",
+          "description": "مرور 27 مليار جنيه من التجارة عبر الشبكة يعكس وزنًا تشغيليًا، لكنه لا يكشف معدل الرسوم أو تكلفة التوصيل أو الربح. يجب أن يُقرأ GMV مع الإيراد والهامش والتدفق النقدي، وهي أرقام غير منشورة لبوسطة."
+        },
+        {
+          "title": "عرّف كل رقم قبل الاحتفال به",
+          "description": "الشحنات السنوية والتراكمية ومتوسط الشحنات الشهري والتجار المسجلون والشركات المدعومة والعملاء النهائيون مقاييس مختلفة. عرضها بلا فترة أو تعريف قد يخلق نموًا وهميًا، بينما الخريطة الصحيحة تربط كل رقم بزمنه ووحدته."
+        },
+        {
+          "title": "الأتمتة تأتي بعد إثبات الحجم",
+          "description": "آلة فرز بقدرة 11 ألف شحنة في الساعة منطقية بعد وصول الشبكة إلى عشرات الملايين من الشحنات. شراء الأتمتة مبكرًا يخلق سعة معطلة، أما شراؤها بعد ظهور الاختناق فيحوّل الاستثمار الرأسمالي إلى تحسين في التكلفة والموثوقية."
+        },
+        {
+          "title": "بيانات اللوجستيات قد تصبح محرك ائتمان",
+          "description": "امتلاك تاريخ الشحنات والتحصيل والإرجاع يمنح بوسطة إشارات عملية عن استقرار التاجر وقدرته على السداد، وهو أساس منطقي لـBosta Capital. الميزة ليست تقديم التمويل وحده، بل تقييمه من بيانات تشغيلية يصعب على المقرض التقليدي رؤيتها."
+        },
+        {
+          "title": "التوسع الإقليمي يحتاج تشغيلًا محليًا لا نسخ التطبيق",
+          "description": "إطلاق السعودية تطلب مكتبًا وقيادة محلية وشبكة تغطية وشركاء واستثمارًا منفصلًا. التقنية قابلة لإعادة الاستخدام، لكن التسعير والتنظيم والعناوين والمدفوعات وكثافة المدن تحتاج تصميمًا محليًا."
+        },
+        {
+          "title": "سيولة المستثمر لا تساوي تقييم الشركة",
+          "description": "خروج مستثمر بعائد 75% يثبت وجود حدث سيولة ناجح له، لكنه لا يكشف سعر الشركة أو إيرادها أو قيمة الحصة من دون تفاصيل الصفقة. الفصل بين عائد الصندوق وتمويل الشركة يحمي التحليل من تضخيم الأرقام."
+        }
+      ],
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "company_specific_lessons",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس مشتقة من تطور نموذج التشغيل، وفصل المقاييس، والتكامل بين اللوجستيات والبرمجيات والتمويل.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-18",
+        "SRC-06",
+        "SRC-10",
+        "SRC-12",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-18",
+          "title": "Bosta raises $6.7M to expand e-commerce delivery business",
+          "publisher": "TechCrunch",
+          "source_type": "founder_interview_and_funding_report",
+          "url": "https://techcrunch.com/2021/05/17/bosta-raises-6-7m-to-expand-e-commerce-delivery-business-across-africa-and-mena/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "النموذج التاريخي الخفيف للأصول"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Bosta Business Dashboard",
+          "publisher": "Bosta",
+          "source_type": "official_current_dashboard_and_wallet_page",
+          "url": "https://bosta.co/en-eg/dashboard",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "لوحة التحكم والمحفظة"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Bosta Capital",
+          "publisher": "Bosta",
+          "source_type": "official_current_merchant_financing_page",
+          "url": "https://bosta.co/en-eg/bosta-capital",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "تمويل التجار"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Minister witnesses opening of Bosta automated sorting center with $5 million investment",
+          "publisher": "Ministry of Planning, Economic Development and International Cooperation — Egypt",
+          "source_type": "official_government_operating_infrastructure_announcement",
+          "url": "https://mped.gov.eg/singlenews?id=6948&lang=en&type=previous",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "الانتقال إلى الأتمتة الرأسمالية"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Beltone Venture Capital and Citadel International Holdings’ joint fund exits Bosta",
+          "publisher": "Beltone Holding",
+          "source_type": "official_investor_secondary_exit_announcement",
+          "url": "https://www.beltoneholding.com/en/insights/beltone-venture-capital-and-citadel-international-holdings-joint-fund-exists-bosta",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "الخروج الثانوي للمستثمر"
+        }
+      ],
+      "limitations": "الدروس تحليل تحريري وليست توصيات استثمارية أو تصريحات رسمية."
+    },
+    "$.tools": {
+      "field_value": [
+        "لوحة تحكم لإدارة الطلبات والاستلام والإرجاع والاستبدال والتقارير",
+        "محفظة Bosta Wallet لمتابعة تحصيلات COD والتحويلات والإيصالات",
+        "تطبيق جوال لإنشاء الطلبات والتتبع وإدارة الرصيد والسحب",
+        "تكاملات Shopify وWooCommerce وMagento",
+        "واجهات API مخصصة للمتاجر والأنظمة عالية الحجم",
+        "تتبع لحظي وإشعارات وبوتات لتأكيد العناوين ومواعيد التسليم",
+        "إثبات تسليم باستخدام رمز OTP",
+        "خدمات الاستلام والميل الأوسط والميل الأخير",
+        "خدمات الاستبدال والإرجاع والتحصيل النقدي فقط",
+        "الإيفاء: التخزين وإدارة المخزون والالتقاط والتعبئة والشحن",
+        "Bosta Box للاستيراد والشحن الدولي",
+        "Bosta Capital لتمويل بعض المتاجر المؤهلة",
+        "شبكة مراكز ومستودعات ومندوبي توصيل في مصر مع تشغيل في السعودية",
+        "مركز فرز آلي افتتح في 2026 بقدرة معلنة 11 ألف شحنة في الساعة و250 ألفًا يوميًا",
+        "نموذج شراكة مع SuperJet لاستخدام محطات النقل كمراكز شحن بين المحافظات",
+        "لم تُثبت المصادر الرسمية الحالية استخدام AWS أو Node.js أو React Native أو MongoDB كحزمة تقنية داخلية؛ لذلك أزيلت من قائمة الأدوات المؤكدة"
+      ],
+      "verification_status": "verified_current_product_capability",
+      "confidence": "high",
+      "claim_type": "verified_product_and_operating_capabilities",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "القائمة تستبدل حزمة تقنية داخلية غير موثقة بمنتجات وتكاملات وقدرات تشغيلية مثبتة.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-05",
+        "SRC-06",
+        "SRC-11",
+        "SRC-04",
+        "SRC-12",
+        "SRC-22"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Bosta E-commerce Integrations",
+          "publisher": "Bosta",
+          "source_type": "official_current_integrations_page",
+          "url": "https://bosta.co/en-eg/integrations",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "تكاملات التجارة الإلكترونية"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Bosta Business Dashboard",
+          "publisher": "Bosta",
+          "source_type": "official_current_dashboard_and_wallet_page",
+          "url": "https://bosta.co/en-eg/dashboard",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "لوحة التحكم والمحفظة"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Bosta API Documentation",
+          "publisher": "Bosta",
+          "source_type": "official_developer_documentation",
+          "url": "https://docs.bosta.co/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "واجهات API"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Bosta Logistics Solutions",
+          "publisher": "Bosta",
+          "source_type": "official_current_product_and_services_page",
+          "url": "https://bosta.co/en-eg/solutions",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "التتبع والبوتات وOTP والخدمات"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Minister witnesses opening of Bosta automated sorting center with $5 million investment",
+          "publisher": "Ministry of Planning, Economic Development and International Cooperation — Egypt",
+          "source_type": "official_government_operating_infrastructure_announcement",
+          "url": "https://mped.gov.eg/singlenews?id=6948&lang=en&type=previous",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "مركز الفرز الآلي"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Bosta and SuperJet same-day intercity logistics partnership",
+          "publisher": "Mohamed Ezzat — Founder and CEO of Bosta",
+          "source_type": "primary_founder_public_private_partnership_announcement",
+          "url": "https://www.linkedin.com/posts/mohamed-ezzat-67aba7a4_logistics-ecommerce-publicprivatepartnership-activity-7430204116565626880-KePs",
+          "evidence_type": "direct_with_limits",
+          "source_locator": "Relevant official page, announcement, product, funding, operating, or investor section",
+          "supports": "نموذج الشحن بين المحافظات"
+        }
+      ],
+      "limitations": "لا تكشف صفحات المنتج عن البنية السحابية أو لغات البرمجة الحالية، لذلك لم تُدرج."
+    }
+  }
 }

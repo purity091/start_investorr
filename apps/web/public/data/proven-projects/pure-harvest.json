@@ -1,53 +1,927 @@
 {
   "id": "pure-harvest",
   "slug": "pure-harvest",
-  "name": "بيور هارفست (Pure Harvest Smart Farms)",
-  "headline": "معجزة التكنولوجيا الزراعية التي تزرع الطماطم في قلب الصحراء",
-  "category": "AgriTech / تكنولوجيا الزراعة",
+  "name": "بيور هارفست سمارت فارمز (Pure Harvest Smart Farms)",
+  "headline": "سبع مزارع و387 مليون دولار من رأس المال المعلن: اختبار بيور هارفست الحقيقي هو اقتصاديات الزراعة الصحراوية",
+  "category": "الزراعة في البيئات المتحكم بها والأعمال الزراعية / Controlled-Environment Agriculture & Agribusiness",
   "company": {
-    "location": "أبوظبي، الإمارات العربية المتحدة",
-    "business_model": "زراعة وبيع المنتجات الطازجة (B2B & B2C) باستخدام التكنولوجيا"
+    "legal_name": "Pure Harvest Smart Farms Ltd",
+    "location": "أبوظبي، الإمارات العربية المتحدة، مع عمليات زراعية مؤكدة في الإمارات والسعودية",
+    "founded": {
+      "company_profile_year": 2016,
+      "commonly_reported_year": 2017,
+      "first_commercial_production": 2018,
+      "note": "يوجد اختلاف بين سنة صفحة الشركة والمصادر الخارجية؛ حُفظ التباين بدل اختراع تاريخ قانوني موحد"
+    },
+    "founders": [
+      "سكاي كورتز",
+      "محمود عدي",
+      "روبرت كوبستاس"
+    ],
+    "leadership": {
+      "ceo": "سكاي كورتز",
+      "chairman": "ديفيد سكوت",
+      "cfo": "أندرو بولتر"
+    },
+    "business_model": "شركة أعمال زراعية متكاملة تصمم وتبني وتشغل مزارع عالية التقنية، وتبيع المنتجات الطازجة والمصنعة للتجزئة والضيافة والمستهلكين، وتوسع طاقتها عبر شراكات تشغيل وبنية تحتية ونموذج franchise farming",
+    "customer_segments": [
+      "سلاسل التجزئة",
+      "الفنادق والمطاعم والتموين",
+      "المستهلكون في الإمارات والسعودية",
+      "شركاء الأراضي والمشروعات الزراعية",
+      "جهات الأمن الغذائي"
+    ],
+    "operating_status_as_of_2026_08_03": {
+      "status": "نشطة وعلى نطاق تجاري",
+      "evidence": "الموقع الرسمي يعرض سبع مزارع ومنتجات وقنوات بيع حالية",
+      "caution": "التشغيل لا يثبت الإيراد أو الربحية"
+    }
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين",
-    "monthly_traffic": "غير متاح (منتج مادي يباع في الأسواق)"
+    "monthly_revenue": null,
+    "monthly_revenue_note": "لا توجد بيانات إيراد شهرية عامة؛ أزيلت عبارة عشرات الملايين لغياب العملة والفترة والمصدر",
+    "monthly_traffic": null,
+    "monthly_traffic_note": "لا توجد بيانات موثوقة للزيارات أو المستخدمين النشطين؛ كون النشاط ماديًا لا يجعل الزيارات غير قابلة للقياس",
+    "latest_verified_operating_snapshot": {
+      "as_of": "2026-08-03",
+      "farm_count": 7,
+      "farm_countries": [
+        "الإمارات العربية المتحدة",
+        "المملكة العربية السعودية"
+      ],
+      "listed_farms": [
+        "الخضروات الورقية - العين",
+        "التوت الأسود - أبوظبي",
+        "الواحة - أبوظبي",
+        "حرض - السعودية",
+        "الطماطم - العين",
+        "المزرعة العمودية - أبوظبي",
+        "المزاحمية - الرياض"
+      ],
+      "annual_production_capacity_tonnes": 13000,
+      "capacity_status": "company_reported_capacity_not_actual_output",
+      "production_area_hectares": 28,
+      "farmers_reported": "300+",
+      "products": [
+        "طماطم وخضروات ورقية وتوت",
+        "صلصات طماطم",
+        "مربيات ومحفوظات"
+      ],
+      "retail_markets": [
+        "الإمارات",
+        "السعودية"
+      ],
+      "recognition_2026": "المرتبة السابعة ضمن أكثر الشركات ابتكارًا في EMEA بحسب Fast Company"
+    },
+    "metric_distinctions": {
+      "revenue": "دخل محاسبي غير منشور حاليًا",
+      "valuation": "غير معلن",
+      "capital": "أكثر من 387 مليون دولار من رأس المال والالتزامات المختلطة تاريخيًا",
+      "partnership_value": "قيمة نظم أو مشروعات مستهدف نشرها وليست تمويلًا، مثل شراكة Richel بقيمة 150 مليون دولار",
+      "capacity": "13 ألف طن طاقة سنوية وليست إنتاجًا أو مبيعات",
+      "area": "28 هكتارًا لا تكشف العائد أو الاستخدام",
+      "customers": "غير معلنين",
+      "traffic": "غير معلن"
+    }
   },
   "overview": {
     "problem": {
-      "text": "دول الخليج تستورد حوالي 80% إلى 90% من غذائها بسبب البيئة الصحراوية القاسية وندرة المياه، مما يخلق أزمة أمن غذائي ويعرض المنطقة لتقلبات سلاسل الإمداد العالمية.",
-      "impact": "منتجات زراعية مستوردة بأسعار عالية، تفقد قيمتها الغذائية خلال الشحن الطويل، وهدر هائل للمياه في الزراعة التقليدية."
+      "text": "تواجه الزراعة الخليجية حرارة وندرة مياه ومحدودية أراضٍ وسلاسل توريد بعيدة. التحدي ليس إنبات المحصول فقط، بل إنتاجه طوال العام بسعر وجودة وعمر تخزيني يبرر تكلفة البيوت والتبريد والطاقة والتمويل",
+      "impact": "قد تؤدي المسافات وتقلب الإمداد إلى هدر وتذبذب أسعار، بينما تحتاج الزراعة الجافة إلى كفاءة مائية عالية. أزيل تعميم استيراد الخليج 80% إلى 90% لغياب مصدر رسمي حديث موحد"
     },
     "solution": {
-      "text": "بناء بيوت زجاجية ذكية (Smart Greenhouses) مدعومة بالذكاء الاصطناعي وإنترنت الأشياء (IoT) للتحكم الدقيق في المناخ والضوء والرطوبة، لزراعة فواكه وخضروات طازجة على مدار العام في الصحراء بأقل كمية مياه."
+      "text": "تشغل بيور هارفست بيوتًا زجاجية متحكمًا بها ومزارع مائية ومزرعة عمودية، مع معالجة مياه وتبريد سريع ومكافحة حيوية. تبيع محليًا طوال العام وتحول بعض المحاصيل إلى صلصات ومحفوظات وتوسع التشغيل عبر الشراكات"
     }
   },
   "market_data": {
-    "target_audience": "المستهلكون في الإمارات والسعودية، وأسواق التجزئة الكبرى.",
-    "market_size": "سوق الأغذية والزراعة الخليجي بمليارات الدولارات.",
-    "growth_rate": "جمعت تمويلات تجاوزت 380 مليون دولار للتوسع الإقليمي والعالمي."
+    "target_audience": "سلاسل التجزئة والضيافة والمستهلكون في الإمارات والسعودية وشركاء المشروعات الزراعية والأمن الغذائي",
+    "market_size": null,
+    "market_size_note": "لا يوجد رقم رسمي محدد لسوق الشركة القابل للخدمة",
+    "growth_rate": null,
+    "growth_rate_note": "لا توجد سلسلة مالية أو إنتاج فعلي مدقق لحساب نمو حالي",
+    "geographic_footprint": [
+      {
+        "market": "الإمارات",
+        "status": "تشغيل وإنتاج وتوزيع مؤكد"
+      },
+      {
+        "market": "السعودية",
+        "status": "تشغيل وإنتاج وتوزيع مؤكد"
+      },
+      {
+        "market": "الكويت",
+        "status": "مشروعات تاريخية غير مدرجة في شبكة المزارع الحالية"
+      },
+      {
+        "market": "سنغافورة",
+        "status": "مشروع أو هدف تاريخي غير مثبت كعملية حالية"
+      },
+      {
+        "market": "كوريا",
+        "status": "شراكة تقنية لا سوق إنتاج حالي مثبت"
+      }
+    ],
+    "sector_context": {
+      "uae_strategy": "تعزيز الإنتاج المحلي بالتقنيات الحديثة وتنويع الإمدادات",
+      "company_efficiency_claims": {
+        "field_farming": "10x",
+        "desert_greenhouses": "7x",
+        "water_into_food": "85%",
+        "status": "company_reported_not_independently_audited"
+      }
+    },
+    "regulatory_context": {
+      "uae": {
+        "authorities": [
+          "هيئة أبوظبي للزراعة والسلامة الغذائية",
+          "وزارة التغير المناخي والبيئة"
+        ],
+        "requirements": "سلامة الغذاء وتسجيل المنتجات عبر ZAD بحسب نطاق النظام",
+        "company_specific_status": null
+      },
+      "saudi_arabia": {
+        "authorities": [
+          "وزارة البيئة والمياه والزراعة",
+          "الهيئة العامة للغذاء والدواء"
+        ],
+        "requirements": "تراخيص النشاط الزراعي وتسجيل المنشآت والمنتجات عبر FIRS بحسب نطاق الخدمة",
+        "company_specific_status": null
+      }
+    }
   },
   "financials": {
-    "initial_investment": "استثمارات ضخمة في البنية التحتية من صناديق سيادية ومستثمرين عالميين.",
-    "valuation": "غير معلن (يقدر بمئات الملايين)",
+    "initial_investment": "تمويلات متعددة المراحل تشمل Series A بقيمة 20.6 مليون دولار في 2020 ضمن التزام Wafra يتجاوز 100 مليون دولار، وتمويلًا قابلًا للتحويل بقيمة 64.5 مليونًا في 2021، وتمويل نمو بقيمة 180.5 مليونًا في 2022",
+    "valuation": {
+      "current_valuation": null,
+      "note": "لم يُعلن تقييم حديث؛ حُذفت تقديرات مئات الملايين"
+    },
+    "latest_financial_metrics": {
+      "revenue": null,
+      "profit": null,
+      "cash": null,
+      "debt": null,
+      "actual_production_tonnes": null,
+      "capacity_utilization": null,
+      "gross_margin": null,
+      "audited_statements": false
+    },
+    "capital_and_funding": {
+      "reported_total_capital_2022_usd": 387100000,
+      "current_company_wording": "أكثر من 387 مليون دولار من الالتزامات الرأسمالية",
+      "capital_mix": [
+        "حقوق ملكية",
+        "تمويل قابل للتحويل",
+        "ديون وتمويل مشروعات",
+        "التزامات متعددة المراحل"
+      ],
+      "milestones": [
+        {
+          "date": "2020-04-06",
+          "amount_usd": 20600000,
+          "type": "Series A",
+          "related_commitment_usd": 100000000
+        },
+        {
+          "date": "2021-10-27",
+          "amount_usd": 64500000,
+          "type": "Convertible growth capital",
+          "reported_cumulative_usd": 271600000
+        },
+        {
+          "date": "2022-06-30",
+          "amount_usd": 180500000,
+          "type": "Growth financing",
+          "reported_cumulative_usd": 387100000
+        }
+      ],
+      "warning": "الأرقام غير قابلة للجمع البسيط بسبب اختلاف الالتزامات والأدوات وتمويل المشروعات"
+    },
+    "strategic_partnerships": [
+      {
+        "partner": "Richel Group",
+        "announced_value_usd": 150000000,
+        "classification": "قيمة نظم مستهدف نشرها",
+        "is_funding": false,
+        "is_revenue": false
+      },
+      {
+        "partner": "Nadec",
+        "scope": "أكثر من 27 هكتارًا مستهدفًا ومشروع حرض",
+        "classification": "مشروع وشراكة لا جولة تمويل"
+      },
+      {
+        "partner": "RedSea / Alajaweed",
+        "scope": "خطاب نوايا لتشغيل 6 هكتارات وبنك أرض 40 هكتارًا",
+        "classification": "معاملة تاريخية بلا قيمة معلنة"
+      }
+    ],
     "revenue_streams": [
-      "بيع الخضروات والفواكه الطازجة للمتاجر الكبرى (كارفور، سبينيس)",
-      "عقود توريد طويلة الأجل للفنادق والمطاعم"
+      "بيع المنتجات الطازجة للتجزئة",
+      "توريد للضيافة والتموين",
+      "بيع عبر منصات التوصيل",
+      "صلصات ومربيات ومحفوظات",
+      "دخل محتمل من تشغيل وتصميم المزارع والشراكات دون أرقام منشورة"
     ]
+  },
+  "analysis": {
+    "core_thesis": "بيور هارفست مشغل أصول زراعية كثيفة رأس المال يدمج الهندسة والبستنة والتبريد والتوزيع والعلامة. الميزة تظهر إذا حولت كل هكتار ودولار تمويل إلى محصول يباع بهامش إيجابي طوال العام",
+    "what_changed": [
+      "الرقم الأدق هو 387.1 مليون دولار من رأس مال وتمويلات والتزامات مختلطة لا جولات متجانسة",
+      "الشبكة الحالية سبع مزارع و13 ألف طن طاقة و28 هكتارًا",
+      "توسعت المنتجات إلى الصلصات والمربيات",
+      "ظهر نموذج franchise farming والشراكات",
+      "التشغيل الحالي المؤكد يتركز في الإمارات والسعودية",
+      "لا توجد إيرادات أو أرباح عامة تربط التوسع بالعائد"
+    ],
+    "competitive_advantage": [
+      "خبرة تشغيل في مناخ صحراوي",
+      "دمج البناء والزراعة والتعبئة والتبريد",
+      "قنوات تجزئة وعلامة استهلاكية",
+      "شركاء وممولون كبار",
+      "تحويل الفاقد إلى منتجات مصنعة",
+      "بيانات ومهارات بستانية متراكمة"
+    ],
+    "risks_and_constraints": [
+      "غياب بيانات الإيراد والربح والدين",
+      "كثافة رأس المال والطاقة",
+      "ادعاءات الكفاءة غير مدققة مستقلًا",
+      "الطاقة لا تكشف الإنتاج أو الهدر",
+      "مخاطر المحاصيل والأسعار",
+      "مخاطر الشركاء والتنفيذ",
+      "السلسلة الباردة والعمر التخزيني",
+      "متطلبات تصنيع وتسجيل المنتجات",
+      "الكويت وسنغافورة ليستا عمليات حالية مثبتة",
+      "الزراعة العمودية قد تكون أعلى استهلاكًا للطاقة",
+      "التوسع قبل إثبات اقتصاديات الوحدة قد يضاعف الخسائر"
+    ],
+    "outlook_as_of_2026_08_03": "شركة واسعة وممولة بقوة وذات تشغيل فعلي، لكن بشفافية مالية عامة محدودة. المؤشرات الحاسمة هي الإنتاج مقابل الطاقة، العائد للهكتار، تكلفة الكيلو، الهدر، الهامش والتدفق النقدي لكل مزرعة"
   },
   "lessons": [
     {
-      "title": "دمج التكنولوجيا (Hard-Tech) في قطاعات غير رقمية",
-      "description": "Pure Harvest ليست مجرد مزرعة، بل شركة تكنولوجيا حقيقية تعتمد على المستشعرات والبيانات الدقيقة لكل نبتة. هذا أثبت أن التكنولوجيا قادرة على خلق أسواق جديدة كلياً في قطاعات تقليدية."
+      "title": "رأس المال ليس إيرادًا ولا تقييمًا",
+      "description": "387.1 مليون دولار تجمع أدوات والتزامات مختلفة ولا تمثل مبيعات أو قيمة الشركة أو نقدًا متاحًا"
     },
     {
-      "title": "حل مشكلة سيادية حقيقية (الأمن الغذائي)",
-      "description": "نجاح الشركة في جذب مئات الملايين من الدولارات كان لأنها تحل مشكلة استراتيجية كبرى للحكومات الخليجية (الأمن الغذائي وندرة المياه)، وهو ما يعطيها دعماً لا محدوداً."
+      "title": "الطاقة الإنتاجية ليست إنتاجًا مباعًا",
+      "description": "13 ألف طن قدرة معلنة؛ التحليل يحتاج المحصول الفعلي والقابل للبيع والمباع والهدر"
+    },
+    {
+      "title": "الزراعة الذكية اقتصاد أصول",
+      "description": "الحساسات مهمة لكن النجاح تحدده الطاقة والصيانة والإنتاجية والعمر التشغيلي والتمويل"
+    },
+    {
+      "title": "المحلي ينافس بالتكلفة الكلية",
+      "description": "قرب المزرعة يحسن الطزاجة لكن يجب أن يتفوق على التكلفة الواصلة للوارد"
+    },
+    {
+      "title": "تحويل الفاقد يخلق قيمة",
+      "description": "الصلصات والمحـفوظات تحول جزءًا من المحصول غير المثالي إلى منتج أطول عمرًا"
+    },
+    {
+      "title": "الشراكة ليست تمويلًا",
+      "description": "150 مليون دولار في اتفاق Richel قيمة نشر أنظمة وليست أموالًا جُمعت أو إيرادًا تحقق"
+    },
+    {
+      "title": "كل سوق يحتاج درجة إثبات",
+      "description": "الخطة والشراكة والمزرعة المبنية والإنتاج التجاري مراحل مختلفة"
+    },
+    {
+      "title": "الاستدامة تحتاج مقامًا واضحًا",
+      "description": "10x تحتاج تعريف ما إذا كانت للماء أو الأرض أو الإنتاجية ومنهجية قابلة للتدقيق"
+    },
+    {
+      "title": "الميزة التقنية هي التشغيل المتكرر",
+      "description": "يمكن شراء بيت زجاجي لكن الأصعب تشغيل محصول مستقر وتوزيعه طوال العام"
     }
   ],
   "tools": [
-    "IoT Sensors",
-    "AI / Machine Learning",
-    "Hydroponics",
-    "Climate Control Systems"
+    "بيوت زجاجية متحكم بها",
+    "الزراعة المائية",
+    "التحكم المناخي والبيئي",
+    "حساسات وتحليلات بيانات وفق وصف الشركة",
+    "أتمتة الري والمناخ في مشروعات محددة",
+    "معالجة مياه في الموقع",
+    "استعادة التكثف",
+    "تبريد سريع وتعبئة",
+    "مكافحة حيوية",
+    "زراعة عمودية مع PlanTFarm",
+    "تقنية iyris SecondSky",
+    "تكامل شمسي في مشروع حرض",
+    "تنبيه: لم يُنشر stack برمجي أو نماذج AI/ML عامة؛ الذكاء الاصطناعي مرتبط بمشروعات محددة"
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "verified_through": "2026-08-03",
+    "overall_status": "verified_with_material_financing_and_operating_corrections",
+    "research_scope": "الموقع الرسمي وصفحات المزارع والمنتجات والمستثمرين والتمويل والشراكات وأحدث تكريم 2026 والمصادر الحكومية الإماراتية والسعودية",
+    "sec_search_status": {
+      "applicable": false,
+      "reason": "شركة خاصة غير مدرجة",
+      "result": "لم يُعثر على إفصاح SEC جوهري",
+      "note": "غياب SEC لا يثبت الوضع المالي المحلي"
+    },
+    "key_corrections": [
+      {
+        "field": "directory_snapshot.monthly_revenue",
+        "original_claim": "عشرات الملايين",
+        "status": "removed",
+        "correction": "null لغياب المصدر",
+        "evidence_ids": [
+          "E8"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_traffic",
+        "original_claim": "غير متاح لأن المنتج مادي",
+        "status": "corrected",
+        "correction": "null لأن البيانات غير منشورة",
+        "evidence_ids": [
+          "E8"
+        ]
+      },
+      {
+        "field": "overview.problem",
+        "original_claim": "الخليج يستورد 80% إلى 90% من غذائه",
+        "status": "removed",
+        "correction": "سياق رسمي دون نسبة موحدة",
+        "evidence_ids": [
+          "E12"
+        ]
+      },
+      {
+        "field": "market_data.growth_rate",
+        "original_claim": "جمعت أكثر من 380 مليون دولار",
+        "status": "reclassified",
+        "correction": "التمويل ليس نموًا؛ growth_rate=null",
+        "evidence_ids": [
+          "E5",
+          "E6"
+        ]
+      },
+      {
+        "field": "financials.valuation",
+        "original_claim": "مئات الملايين",
+        "status": "removed",
+        "correction": "التقييم غير معلن",
+        "evidence_ids": [
+          "E8"
+        ]
+      },
+      {
+        "field": "financials.capital",
+        "original_claim": "تمويلات متجانسة",
+        "status": "distinguished",
+        "correction": "رأس مال وديون وأدوات والتزامات مختلطة",
+        "evidence_ids": [
+          "E4",
+          "E5",
+          "E6"
+        ]
+      },
+      {
+        "field": "financials.partnerships",
+        "original_claim": "لم يميز التمويل والشراكة",
+        "status": "corrected",
+        "correction": "Richel قيمة نشر وليست تمويلًا",
+        "evidence_ids": [
+          "E9"
+        ]
+      },
+      {
+        "field": "tools",
+        "original_claim": "AI وIoT كحزمة مؤكدة",
+        "status": "qualified",
+        "correction": "ثبتت الحساسات والتحكم وقُيد AI بمشروعات محددة",
+        "evidence_ids": [
+          "E3",
+          "E10"
+        ]
+      }
+    ],
+    "known_source_discrepancies": [
+      {
+        "topic": "سنة التأسيس",
+        "detail": "صفحة الشركة 2016 ومصادر موثوقة 2017 والإنتاج 2018"
+      },
+      {
+        "topic": "التمويل التراكمي",
+        "detail": "271.6 مليونًا في 2021 ثم 387.1 مليونًا في 2022 رغم جولة 180.5 مليونًا؛ الأرقام ليست جمعًا بسيطًا"
+      },
+      {
+        "topic": "كفاءة الموارد",
+        "detail": "الصفحات الحالية تستخدم 10x و7x بينما ظهرت أرقام تاريخية مختلفة"
+      },
+      {
+        "topic": "الكويت وسنغافورة",
+        "detail": "وردتا في خطط تاريخية لا في شبكة المزارع الحالية"
+      }
+    ],
+    "limitations": [
+      "شركة خاصة بلا قوائم عامة",
+      "لا إيراد أو ربح أو دين حديث معلن",
+      "شروط التمويل غير كاملة",
+      "الطاقة ليست إنتاجًا",
+      "الكفاءة صادرة عن الشركة",
+      "لم تُراجع تراخيص كل منشأة ومنتج",
+      "لا اقتصاديات لكل مزرعة"
+    ],
+    "programmatic_validation": {
+      "input_file_parse": true,
+      "json_parse": true,
+      "json_schema_validation": true,
+      "required_original_paths_preserved": true,
+      "all_source_ids_unique": true,
+      "all_evidence_source_references_valid": true,
+      "all_key_correction_evidence_references_valid": true,
+      "no_nan_or_infinity": true,
+      "monthly_metrics_null": true,
+      "market_size_and_growth_null": true,
+      "valuation_not_invented": true,
+      "capital_separated": true,
+      "partnership_not_funding": true,
+      "capacity_not_actual_output": true,
+      "current_farms_only_uae_ksa": true,
+      "duplicate_lesson_titles": false,
+      "source_count": 18,
+      "primary_source_count": 17,
+      "evidence_count": 16,
+      "lesson_count": 9,
+      "errors": [],
+      "validated_at": "2026-08-03T18:18:00+03:00",
+      "validation_status": "passed"
+    }
+  },
+  "evidence_map_schema": {
+    "description": "خريطة تربط الادعاءات بالمصادر والمسارات",
+    "item_fields": {
+      "claim": "الادعاء",
+      "json_paths": "المسارات",
+      "classification": "الفئة",
+      "status": "الحالة",
+      "source_ids": "المصادر",
+      "notes": "الحدود"
+    }
+  },
+  "evidence_map": {
+    "E1": {
+      "claim": "الاسم القانوني الظاهر Pure Harvest Smart Farms Ltd",
+      "json_paths": [
+        "company.legal_name"
+      ],
+      "classification": "company",
+      "status": "verified",
+      "source_ids": [
+        "S1"
+      ],
+      "notes": "لا يشمل الشركات التابعة"
+    },
+    "E2": {
+      "claim": "سبع مزارع و28 هكتارًا في الإمارات والسعودية",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot"
+      ],
+      "classification": "operating",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S2"
+      ],
+      "notes": "لقطة حالية"
+    },
+    "E3": {
+      "claim": "زراعة مائية وتحكم ومعالجة وتبريد ومكافحة حيوية",
+      "json_paths": [
+        "overview.solution",
+        "tools"
+      ],
+      "classification": "technology",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S3",
+        "S4"
+      ],
+      "notes": "وصف الشركة"
+    },
+    "E4": {
+      "claim": "Series A 20.6 مليون ضمن التزام Wafra فوق 100 مليون",
+      "json_paths": [
+        "financials.initial_investment",
+        "financials.capital_and_funding"
+      ],
+      "classification": "funding",
+      "status": "verified",
+      "source_ids": [
+        "S5"
+      ],
+      "notes": "التزام متعدد المراحل"
+    },
+    "E5": {
+      "claim": "64.5 مليون تمويل قابل للتحويل و271.6 مليون تراكميًا في 2021",
+      "json_paths": [
+        "financials.capital_and_funding"
+      ],
+      "classification": "funding",
+      "status": "verified",
+      "source_ids": [
+        "S6"
+      ],
+      "notes": "غير قابل للجمع المباشر"
+    },
+    "E6": {
+      "claim": "180.5 مليون في 2022 وإجمالي 387.1 مليون",
+      "json_paths": [
+        "financials.capital_and_funding"
+      ],
+      "classification": "funding",
+      "status": "verified",
+      "source_ids": [
+        "S7"
+      ],
+      "notes": "مزيج تمويلات"
+    },
+    "E7": {
+      "claim": "13 ألف طن طاقة و300+ مزارع",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot"
+      ],
+      "classification": "capacity",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S2"
+      ],
+      "notes": "الطاقة ليست إنتاجًا"
+    },
+    "E8": {
+      "claim": "لا بيانات عامة للإيراد أو الربح أو التقييم أو الزيارات",
+      "json_paths": [
+        "directory_snapshot.monthly_revenue",
+        "directory_snapshot.monthly_traffic",
+        "financials.valuation",
+        "financials.latest_financial_metrics"
+      ],
+      "classification": "unavailable",
+      "status": "unavailable",
+      "source_ids": [
+        "S2",
+        "S7",
+        "S8"
+      ],
+      "notes": "الإفصاحات غير مالية تشغيليًا"
+    },
+    "E9": {
+      "claim": "Richel تستهدف نشر أنظمة بقيمة 150 مليون دولار",
+      "json_paths": [
+        "financials.strategic_partnerships"
+      ],
+      "classification": "partnership",
+      "status": "verified",
+      "source_ids": [
+        "S9"
+      ],
+      "notes": "ليست تمويلًا"
+    },
+    "E10": {
+      "claim": "مشروع Nadec يستخدم الزراعة المائية والأتمتة والطاقة الشمسية",
+      "json_paths": [
+        "tools",
+        "financials.strategic_partnerships"
+      ],
+      "classification": "partnership",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S10"
+      ],
+      "notes": "رقم مشروع لا إيراد"
+    },
+    "E11": {
+      "claim": "خطاب نوايا RedSea لتشغيل 6 هكتارات وبنك أرض 40 هكتارًا",
+      "json_paths": [
+        "financials.strategic_partnerships"
+      ],
+      "classification": "partnership",
+      "status": "historical_only",
+      "source_ids": [
+        "S11"
+      ],
+      "notes": "قيمة وإغلاق غير معلنين"
+    },
+    "E12": {
+      "claim": "استراتيجية الإمارات تدعم الإنتاج المحلي والتقنيات وتنويع الإمداد",
+      "json_paths": [
+        "market_data.sector_context",
+        "overview.problem"
+      ],
+      "classification": "regulatory",
+      "status": "verified",
+      "source_ids": [
+        "S12"
+      ],
+      "notes": "سياق وطني"
+    },
+    "E13": {
+      "claim": "ZAD لتسجيل الأغذية في الإمارات",
+      "json_paths": [
+        "market_data.regulatory_context.uae"
+      ],
+      "classification": "regulatory",
+      "status": "verified",
+      "source_ids": [
+        "S13"
+      ],
+      "notes": "لم تُراجع منتجات الشركة"
+    },
+    "E14": {
+      "claim": "FIRS وتراخيص النشاط الزراعي في السعودية",
+      "json_paths": [
+        "market_data.regulatory_context.saudi_arabia"
+      ],
+      "classification": "regulatory",
+      "status": "verified",
+      "source_ids": [
+        "S14",
+        "S15"
+      ],
+      "notes": "إطار عام"
+    },
+    "E15": {
+      "claim": "المرتبة السابعة في EMEA لعام 2026",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.recognition_2026"
+      ],
+      "classification": "recognition",
+      "status": "verified",
+      "source_ids": [
+        "S16"
+      ],
+      "notes": "تكريم تحريري"
+    },
+    "E16": {
+      "claim": "قنوات بيع ومنتجات طازجة ومصنعة في الإمارات والسعودية",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot",
+        "financials.revenue_streams"
+      ],
+      "classification": "product",
+      "status": "verified",
+      "source_ids": [
+        "S17",
+        "S18"
+      ],
+      "notes": "لا تثبت الحجم"
+    }
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Terms and Conditions",
+      "publisher": "Pure Harvest",
+      "source_type": "رسمي قانوني",
+      "publication_date": null,
+      "url": "https://www.pureharvestfarms.com/terms-and-conditions",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الاسم القانوني"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "Our Farms",
+      "publisher": "Pure Harvest",
+      "source_type": "تشغيل رسمي",
+      "publication_date": null,
+      "url": "https://www.pureharvestfarms.com/our-farms",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "المزارع",
+        "الطاقة",
+        "المساحة",
+        "المزارعون"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "FAQs",
+      "publisher": "Pure Harvest",
+      "source_type": "تقني رسمي",
+      "publication_date": null,
+      "url": "https://www.pureharvestfarms.com/faq",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الزراعة المائية",
+        "التحكم",
+        "المعالجة",
+        "التبريد"
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "Our Story",
+      "publisher": "Pure Harvest",
+      "source_type": "رسمي",
+      "publication_date": null,
+      "url": "https://www.pureharvestfarms.com/our-story",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "النمو طوال العام",
+        "الكفاءة"
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "Wafra $100M Commitment",
+      "publisher": "Pure Harvest / Business Wire",
+      "source_type": "تمويل رسمي",
+      "publication_date": "2020-04-06",
+      "url": "https://www.businesswire.com/news/home/20200406005275/en/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Series A",
+        "التزام Wafra"
+      ]
+    },
+    {
+      "id": "S6",
+      "title": "$64.5M Growth Capital",
+      "publisher": "Pure Harvest / Business Wire",
+      "source_type": "تمويل رسمي",
+      "publication_date": "2021-10-27",
+      "url": "https://www.businesswire.com/news/home/20211027005616/en/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "64.5 مليون",
+        "271.6 مليون",
+        "PlanTFarm"
+      ]
+    },
+    {
+      "id": "S7",
+      "title": "$180.5M Growth Financing",
+      "publisher": "Pure Harvest / Business Wire",
+      "source_type": "تمويل رسمي",
+      "publication_date": "2022-06-30",
+      "url": "https://www.businesswire.com/news/home/20220630005406/en/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "180.5 مليون",
+        "387.1 مليون"
+      ]
+    },
+    {
+      "id": "S8",
+      "title": "Company Profile",
+      "publisher": "Pure Harvest on LinkedIn",
+      "source_type": "صفحة رسمية",
+      "publication_date": "2026",
+      "url": "https://ae.linkedin.com/company/pureharvestsmartfarms",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "التزامات 387 مليون",
+        "المقر",
+        "2016"
+      ]
+    },
+    {
+      "id": "S9",
+      "title": "Richel $150M Partnership",
+      "publisher": "Pure Harvest",
+      "source_type": "شراكة رسمية",
+      "publication_date": "2023-09-18",
+      "url": "https://www.pureharvestfarms.com/news/pure-harvest-eyes-further-growth-150m-strategic-richel-group-partnership",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "قيمة الشراكة"
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "Nadec Partnership",
+      "publisher": "Pure Harvest",
+      "source_type": "شراكة رسمية",
+      "publication_date": "2023-01-31",
+      "url": "https://www.pureharvestfarms.com/news/nadec-partnership",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "حرض",
+        "الأتمتة",
+        "الطاقة الشمسية"
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "RedSea Operations LOI",
+      "publisher": "Pure Harvest",
+      "source_type": "إعلان رسمي",
+      "publication_date": "2023-12-10",
+      "url": "https://www.pureharvestfarms.com/news/pure-harvest-acquire-redseas-saudi-arabian-farming-operations-and-form-climate-technology",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "6 هكتارات",
+        "40 هكتارًا",
+        "franchise farming"
+      ]
+    },
+    {
+      "id": "S12",
+      "title": "National Food Security Strategy 2051",
+      "publisher": "UAE Government",
+      "source_type": "حكومي رسمي",
+      "publication_date": "2024-12-30",
+      "url": "https://u.ae/en/about-the-uae/strategies-initiatives-and-awards/strategies-plans-and-visions/environment-and-energy/national-food-security-strategy-2051",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الإنتاج المحلي",
+        "التقنيات",
+        "الإمداد"
+      ]
+    },
+    {
+      "id": "S13",
+      "title": "National Food Accreditation and Registration System",
+      "publisher": "UAE Government",
+      "source_type": "تنظيمي رسمي",
+      "publication_date": null,
+      "url": "https://u.ae/en/information-and-services/health-and-fitness/food-safety-and-health-tips/national-food-accreditation-and-registration-system",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "ZAD"
+      ]
+    },
+    {
+      "id": "S14",
+      "title": "Food Registration System FIRS",
+      "publisher": "SFDA",
+      "source_type": "تنظيمي رسمي",
+      "publication_date": null,
+      "url": "https://www.sfda.gov.sa/en/eservices/68709",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "تسجيل الغذاء"
+      ]
+    },
+    {
+      "id": "S15",
+      "title": "Agricultural Activity Licenses",
+      "publisher": "Saudi MEWA",
+      "source_type": "ترخيص رسمي",
+      "publication_date": null,
+      "url": "https://www.mewa.gov.sa/ar/MediaCenter/News/Pages/News12072020.aspx",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "تراخيص الأنشطة الزراعية"
+      ]
+    },
+    {
+      "id": "S16",
+      "title": "Most Innovative Companies in EMEA 2026",
+      "publisher": "Fast Company",
+      "source_type": "تصنيف مستقل",
+      "publication_date": "2026-03-24",
+      "url": "https://www.fastcompany.com/91497200/europe-middle-east-africa-most-innovative-companies-2026",
+      "primary_source": false,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "المرتبة السابعة"
+      ]
+    },
+    {
+      "id": "S17",
+      "title": "Store Locator",
+      "publisher": "Pure Harvest",
+      "source_type": "بيع رسمي",
+      "publication_date": null,
+      "url": "https://www.pureharvestfarms.com/store-locator",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "قنوات الإمارات والسعودية"
+      ]
+    },
+    {
+      "id": "S18",
+      "title": "Pure Harvest Products",
+      "publisher": "Pure Harvest",
+      "source_type": "منتجات رسمية",
+      "publication_date": null,
+      "url": "https://www.pureharvestfarms.com/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "المنتجات الطازجة والصلصات والمربيات"
+      ]
+    }
   ]
 }

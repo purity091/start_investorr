@@ -2,52 +2,1273 @@
   "id": "waffarx",
   "slug": "waffarx",
   "name": "وفر إكس (WaffarX)",
-  "headline": "منصة الكاش باك الأولى التي تدفع للمتسوقين مقابل التسوق",
-  "category": "E-commerce & Affiliate / الاسترداد النقدي (Cashback)",
+  "headline": "من رابط عمولة إلى شبكة مكافآت مدمجة: كيف حوّلت WaffarX إنفاق التسويق إلى كاش باك قابل للقياس",
+  "category": "FinTech, Affiliate Commerce & Loyalty / الكاش باك والتسويق القائم على الأداء",
   "company": {
-    "location": "القاهرة، مصر (وتوسع إقليمي في الخليج)",
-    "business_model": "التسويق بالعمولة (Affiliate) واقتسام الأرباح مع المستخدم"
+    "location": "الزمالك، القاهرة، مصر. تعرض صفحة الشركة وعنوان مطور التطبيق موقعًا في شارع حسن صبري بالزمالك، ويظهر اسم الكيان المشغّل في Google Play بوصفه ENTREPRENEUR FOR MARKETING SERVICES SAE. تعمل الخدمة رقميًا في مصر والسعودية والإمارات وأسواق أخرى، مع اختلاف العروض وطرق السحب حسب الدولة.",
+    "business_model": "شبكة كاش باك وتمويل عروض قائمة على الأداء. يدفع التاجر أو الشريك عمولة أو ميزانية عرض بعد تسجيل عملية مؤهلة، وتشارك WaffarX جزءًا منها مع المستخدم كأموال مستردة وتحتفظ بجزء لتمويل التشغيل والإيراد. توسع النموذج من الإحالة عبر الروابط إلى الكاش باك داخل المتاجر والبطاقات المرتبطة، وبرامج الولاء المدمجة للبنوك وشركات التقنية المالية، وإدارة تمويل العروض والتحقق من المشتريات والمطابقة والتسوية. لا تنشر الشركة نسبة الاحتفاظ أو شروط الإيراد لكل شريك."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات",
-    "monthly_traffic": "توجيه ملايين المشتريات للمتاجر الكبرى"
+    "monthly_revenue": "غير معلن. WaffarX شركة خاصة ولا تنشر إيرادًا شهريًا أو سنويًا مدققًا، كما لا يمكن اشتقاقه من GMV أو عدد المعاملات أو الكاش باك المدفوع لأن عمولة كل تاجر ونسبة المستخدم والمرتجعات وتكلفة المكافآت تختلف.",
+    "monthly_traffic": "تذكر الشركة في مقابلة منشورة في نوفمبر 2025 أنها تصل إلى أكثر من 3 ملايين مستهلك ونحو 100 ألف معاملة شهريًا و800+ شريك. ويعرض Google Play أكثر من مليون تنزيل للتطبيق. هذه مؤشرات شركة وتسويق ومتجر تطبيقات، وليست مستخدمين نشطين شهريًا أو زيارات موقع موحدة."
   },
   "overview": {
     "problem": {
-      "text": "المتاجر الإلكترونية تدفع مبالغ طائلة (CAC) لشبكات الإعلانات (مثل فيسبوك وجوجل) لجلب عملاء، بينما المتسوق يبحث دائماً عن التخفيضات وكوبونات الخصم التي قد تكون وهمية أو منتهية الصلاحية.",
-      "impact": "تكلفة تسويق عالية على التاجر، وعدم حصول المتسوق على تخفيض حقيقي ملموس نقداً."
+      "text": "يدفع التجار مقابل الإعلان قبل معرفة ما إذا كان الإعلان أنتج عملية بيع، بينما يواجه المتسوق كوبونات منتهية أو خصومات غير قابلة للجمع وبرامج نقاط مقيدة. وحتى بعد الشراء، يحتاج نموذج الكاش باك إلى إثبات أن WaffarX سببت العملية وأن الطلب لم يُلغَ أو يُرجع ولم يُنسب إلى قناة تسويق أخرى.",
+      "impact": "تضعف كفاءة ميزانية التاجر عندما تُشترى الزيارات دون نتيجة، ويضعف اعتماد المستخدم عندما يبقى الكاش باك معلقًا أو يُرفض بسبب التتبع أو الاستثناءات. لذلك لا تكمن المشكلة في عرض نسبة توفير فقط، بل في بناء نظام إسناد ومراجعة وتسوية يشرح للمستخدم حالة المكافأة ويعطي التاجر عائدًا قابلًا للقياس."
     },
     "solution": {
-      "text": "بدلاً من أن يدفع المتجر لفيسبوك للإعلان، يدفع عمولة لـ WaffarX عند إتمام عملية الشراء. تقوم WaffarX بأخذ هذه العمولة، وتحتفظ بجزء لنفسها، وتعيد الجزء الأكبر (كاش) لحساب المستخدم، ليتمكن من سحبه نقداً."
+      "text": "تتيح WaffarX للمستخدم اختيار متجر أو عرض ثم الانتقال إلى التاجر عبر رابط متتبع، أو ربط بطاقة واستخدام عروض In-Store، ثم تسجيل الكاش باك وإرساله بعد تأكيد التاجر وانتهاء فترة الإرجاع. تشمل التجربة موقعًا وتطبيقات وامتداد متصفح XButton، وكوبونات وعروضًا ومقارنة فئات، وسحبًا ربع سنويًا عبر تحويلات بنكية وفوري ومحافظ إلكترونية ووسائل أخرى. وتقدم للشركاء شبكة عروض ممولة من التجار، وتتولى إدارة العروض والتحقق والمطابقة والتسوية، مع تكاملات مثل WaffarX|CIB وشراكة DGTERA لنقاط البيع."
     }
   },
   "market_data": {
-    "target_audience": "المتسوقون عبر الإنترنت (B2C) الباحثون عن التوفير.",
-    "market_size": "سوق التجارة الإلكترونية والتسويق بالعمولة.",
-    "growth_rate": "جمعت الملايين وتوسعت لإطلاق تطبيق ذكي وتوسيع شبكة التجار لتشمل السوبرماركت والسفر."
+    "target_audience": "المتسوقون البالغون الباحثون عن كاش باك على التجارة الإلكترونية والمشتريات داخل المتاجر والسفر والإلكترونيات والأزياء والجمال والبقالة والوقود والتعليم والخدمات اليومية. ويشمل جانب الأعمال المتاجر والعلامات التجارية والبنوك وشركات التقنية المالية وبرامج البطاقات ومشغلي المطاعم والتجزئة الذين يريدون ولاءً ممولًا من التجار وتسويقًا يُحاسب على الأداء.",
+    "market_size": "لا تنشر WaffarX رقمًا رسميًا أو مستقلاً لحجم سوقها القابل للاستهداف. مؤشرات النطاق المباشرة هي أكثر من 3 ملايين مستهلك و800+ شريك وفق تصريح الشركة في 2025، وأكثر من مليون تنزيل Android، وأكثر من 400 متجر ظاهر في واجهة الموقع وقت الفهرسة، وانتشار عروض في مصر والسعودية والإمارات. هذه ليست قيمة سوق بالدولار ولا حصة سوقية.",
+    "growth_rate": "ارتفعت المؤشرات المعلنة من أكثر من 450 ألف عضو و260 شريك تاجر في 2021 إلى أكثر من 3 ملايين مستهلك و800+ شريك في 2025، مع تغير تعريف «عضو» إلى «مستهلك». وفي Q1 2025 قالت الشركة إنها عالجت أكثر من 150 ألف معاملة و327 مليون جنيه GMV، وزاد المستخدمون المسجلون 32%. كما ذكرت نمو قاعدة المستخدمين 38% خلال آخر 12 شهرًا ودفع أكثر من 75 مليون جنيه كاش باك منذ الإطلاق. جميعها بيانات إدارية غير مدققة."
   },
   "financials": {
-    "initial_investment": "مدعومة من صناديق عالمية كبرى مثل Lobby Capital و A15.",
-    "valuation": "غير معلن (عشرات الملايين)",
+    "initial_investment": "رأس المال الشخصي للمؤسسين والاستثمار الأول من A15 غير معلنين. في ديسمبر 2021 أغلقت WaffarX جولة تمويل متعددة الملايين بالدولار بقيادة Lobby Capital وبمشاركة المستثمر السابق A15، دون نشر المبلغ الدقيق أو نوع الأوراق أو جدول الملكية. كان الهدف المعلن توسيع المنصة واكتساب المستخدمين والدخول إلى أسواق جديدة.",
+    "valuation": "غير معلن. لم تنشر WaffarX أو Lobby Capital أو A15 تقييم الجولة، ولا توجد صفقة استحواذ أو طرح عام يمنح قيمة سوقية. عبارة «عشرات الملايين» في الملف الأصلي غير مدعومة، ولا يمكن تحويل وصف الجولة بأنها متعددة الملايين إلى تقييم للشركة.",
     "revenue_streams": [
-      "الاحتفاظ بنسبة من عمولة البيع المدفوعة من المتاجر (Affiliate Commission Spread)",
-      "إعلانات مدفوعة لظهور المتاجر في الصفحات الأولى للتطبيق"
+      "الجزء الذي تحتفظ به WaffarX من عمولة الإحالة أو ميزانية العرض التي يدفعها التاجر بعد عملية مؤهلة",
+      "إدارة حملات Merchant-Funded Cashback والعروض القائمة على الأداء للعلامات والمتاجر",
+      "حلول الكاش باك داخل المتاجر والبطاقات المرتبطة، بما يشمل التحقق والمطابقة والتسوية",
+      "برامج ولاء وكاش باك مدمجة للبنوك وشركات التقنية المالية مثل WaffarX|CIB، مع شروط تجارية غير معلنة",
+      "تكاملات B2B لدمج مكافآت الكاش باك في أنظمة المطاعم والتجزئة ونقاط البيع",
+      "حملات Double Cash Back والمكافآت والعروض المشتركة الممولة من التجار أو الشركاء",
+      "خدمات بيانات أداء على مستوى المنتج وقياس العائد المنسوب للحملات وفق تصريحات الإدارة",
+      "الكوبونات والعروض قد تدعم التحويل والإسناد، لكن لا يوجد دليل منشور على رسوم إدراج ثابتة أو إعلانات ظهور كقناة مستقلة",
+      "مبلغ الكاش باك المستحق للمستخدم ليس إيرادًا صافيًا للشركة، بل جزء من اقتصاد العمولة أو العرض",
+      "GMV وقيمة المشتريات ليست إيراد WaffarX، ولا تكشف الشركة Take Rate"
     ]
   },
   "lessons": [
     {
-      "title": "حافز نقدي لا يمكن مقاومته",
-      "description": "فكرة (تتسوق ونرد لك جزءاً من مالك نقداً) هي فكرة لا تُرفض. هذا النموذج كسر حاجز الثقة، لأن المستخدم لا يدفع شيئاً إضافياً، بل يربح بمجرد الدخول للمتجر عبر رابط WaffarX."
+      "title": "الكاش باك تسويق أداء قبل أن يكون خصمًا",
+      "description": "التاجر لا يدفع لمجرد ظهور الإعلان، بل عند عملية منسوبة ومؤهلة. هذا يربط تكلفة التسويق بالنتيجة، لكنه ينقل الخلاف إلى تعريف الإسناد والأهلية والمرتجعات."
     },
     {
-      "title": "قوة البيانات الشرائية",
-      "description": "من خلال تتبع مشتريات ملايين المستخدمين عبر منصات مختلفة (أمازون، جوميا، بوكينج)، تملك المنصة ثروة من البيانات حول السلوك الشرائي للعميل أفضل من المتاجر نفسها، مما يسهل استهدافه بعروض مخصصة."
+      "title": "التأكيد المتأخر ضرورة اقتصادية تحتاج تجربة واضحة",
+      "description": "لا يستطيع النظام تثبيت المكافأة قبل انتهاء مراجعة التاجر وفترة الإرجاع. المطلوب ليس وعدًا فوريًا زائفًا، بل حالة مفهومة وموعد متوقع وأسباب رفض قابلة للاعتراض."
+    },
+    {
+      "title": "GMV ليس إيرادًا",
+      "description": "327 مليون جنيه GMV في ربع واحد تقيس قيمة مشتريات مرّت عبر الشبكة. إيراد WaffarX هو الجزء المحتفظ به بعد الكاش باك والتسويات والتكاليف، ولا يمكن استخراجه دون نسب العقود."
+    },
+    {
+      "title": "الكاش باك المدفوع ليس مبيعات الشركة",
+      "description": "أكثر من 75 مليون جنيه أعيدت للمستخدمين هي قيمة موزعة ضمن البرنامج. الرقم يثبت نطاق المنفعة والسيولة، لكنه ليس ربحًا ولا إيرادًا ويجب عدم إضافته إلى GMV."
+    },
+    {
+      "title": "الإسناد عبر الروابط هش أمام تفاصيل صغيرة",
+      "description": "الكوكيز والجلسة ومغادرة الموقع واستخدام تطبيق التاجر أو كود خصم خارجي قد تغير صاحب العمولة. التعليمات التقنية للمستخدم جزء من المنتج المالي، وليست ملاحظة هامشية."
+    },
+    {
+      "title": "Card-Linked Cashback يزيل النقرة ويضيف المطابقة",
+      "description": "ربط البطاقة يجعل المكافأة أقرب إلى السلوك الطبيعي، لكنه يحتاج موافقة ومعالجة آمنة ومعرفات معاملات ومطابقة متجر وفئة واستبعاد المرتجعات دون تخزين بيانات أكثر من اللازم."
+    },
+    {
+      "title": "عدد المستهلكين لا يساوي MAU",
+      "description": "ثلاثة ملايين مستهلك قد تشمل مسجلين أو مستفيدين تاريخيين أو مستخدمي برامج شركاء. قياس النشاط يحتاج مستخدمين نشطين وشارين وتكرارًا منفصلًا عن الوصول التراكمي."
+    },
+    {
+      "title": "التاجر يمول العرض لكنه لا يتحكم وحده في التجربة",
+      "description": "التاجر يحدد العمولة والاستثناءات ويؤكد العملية، بينما WaffarX تدير الواجهة والتواصل. أي تأخير أو رفض من طرف واحد ينعكس على ثقة المستخدم في العلامتين."
+    },
+    {
+      "title": "تجميع السحب يحسن العمليات ويؤخر الإشباع",
+      "description": "السحب الربع سنوي يقلل دفعات صغيرة وتكاليف التحويل والمصالحة، لكنه يجعل «الكاش» أقل فورية. الحد الأدنى والتاريخ وحالة الرصيد يجب أن تظهر بوضوح."
+    },
+    {
+      "title": "الشراكة البنكية قناة توزيع ونظام تشغيل جديد",
+      "description": "WaffarX|CIB يضيف قاعدة بطاقات وسحبًا أسرع وعروضًا أعلى، لكنه يتطلب ربط البطاقة وقواعد أهلية وتسوية ومسؤوليات دعم مشتركة بين البنك والمنصة."
+    },
+    {
+      "title": "الانتقال إلى المتاجر الفعلية يوسع الاستخدام ويزيد الخصوصية",
+      "description": "In-Store Cashback يفتح البقالة والوقود والتعليم، لكن يحتاج مطابقة معاملات بطاقات أو إيصالات. كل إشارة جديدة يجب أن تُجمع بأقل قدر وأن تُشرح للمستخدم."
+    },
+    {
+      "title": "ميزة البيانات لا تعني امتلاك صورة كاملة عن العميل",
+      "description": "WaffarX ترى مشتريات منسوبة عبر شبكتها، لا كل إنفاق المستخدم. التوصية الجيدة تعترف بفجوات البيانات وتطلب الموافقة ولا تدعي معرفة أفضل من التاجر في كل حالة."
+    },
+    {
+      "title": "تنزيل التطبيق ليس نشاطًا ولا شراءً",
+      "description": "أكثر من مليون تنزيل Android يثبت انتشارًا توزيعيًا، لكنه لا يثبت الاحتفاظ أو المعاملات. يجب ربط اكتساب التطبيق بأول شراء مؤكد وتكرار الشراء وصافي المساهمة."
+    },
+    {
+      "title": "التوسع الإقليمي هو إعادة بناء شبكة عروض محلية",
+      "description": "السعودية والإمارات تحتاجان تجارًا وبنوكًا ووسائل دفع واستثناءات وسحبًا وعملات مختلفة. توفر الموقع باللغة والسوق لا يثبت وجودًا تشغيليًا متساويًا."
+    },
+    {
+      "title": "الذكاء الاصطناعي يبدأ من التحقق قبل الوكيل الشرائي",
+      "description": "استخدام OCR للإيصالات ومطابقة العروض أقرب إلى قيمة فورية قابلة للقياس. أما وكيل يختار ويشتري تلقائيًا فيحتاج صلاحيات وحدودًا وموافقة وتراجعًا وأمنًا قبل أن يصبح منتجًا موثوقًا."
     }
   ],
   "tools": [
-    "AWS",
-    "PHP",
-    "Node.js",
-    "Affiliate Tracking APIs"
+    "موقع WaffarX متعدد الأسواق واللغات للبحث عن المتاجر والعروض والكوبونات والكاش باك",
+    "تطبيقات Android وiOS مع أكثر من مليون تنزيل Android وفق Google Play",
+    "XButton أو امتداد المتصفح لتنبيه المستخدم بالكاش باك وتفعيل الإحالة أثناء التسوق",
+    "تتبع Affiliate عبر روابط النقر والكوكيز والجلسات وربط الطلب بالتاجر",
+    "حساب كاش باك بحالات Pending وConfirmed وCashOut وإمكانية تعديل المرتجعات والإلغاءات",
+    "CashOut ربع سنوي بحد أدنى معلن يبلغ 5 دولارات لمعظم الوسائل",
+    "تحويلات بنكية وفوري وVodafone Cash وOrange Cash وEtisalat Cash وWE Pay ووسائل أخرى بحسب السوق",
+    "In-Store Cash Back عبر ربط بطاقات مؤهلة ومطابقة المشتريات",
+    "WaffarX|CIB مع كاش باك إضافي وسحب ست مرات سنويًا لبطاقات CIB المؤهلة",
+    "برامج Merchant-Funded Offers مدمجة للبنوك وشركات التقنية المالية",
+    "إدارة تمويل العروض والتحقق من المشتريات والمصالحة والتسوية للشركاء",
+    "تتبع على مستوى المنتج وقياس ROI وفق تصريحات الشركة",
+    "برنامج إحالة يشترط شراءً مؤهلًا قبل تثبيت مكافأة المحيل",
+    "Double Cash Back وكوبونات ومقارنة العروض والفئات والمتاجر",
+    "كاش باك الوقود بقواعد نشاط وحدود شهرية منشورة",
+    "إشعارات بريدية وPush عند تسجيل أو تأكيد المكافآت",
+    "ضوابط الحسابات المكررة والاحتيال وإساءة استخدام المكافآت",
+    "Advanced Receipt OCR وفق تصريح الإدارة لعام 2025",
+    "Price Comparison وOffer Matching وPredictive Models ضمن قدرات حالية أو قيد التطوير حسب تصريح الإدارة",
+    "Personal AI Shopping Agent هدف مستقبلي معلن وليس منتجًا مكتملًا",
+    "تكامل DGTERA لنقاط البيع وأنظمة المطاعم والتجزئة في مصر والسعودية",
+    "بنية عرض مخصصة لمصر والسعودية والإمارات ومتاجر دولية ومحلية",
+    "منصة B2B Embedded Loyalty للشركاء الماليين مع إدارة العمليات خلف الواجهة"
+  ],
+  "verification": {
+    "status": "verified_from_waffarx_terms_apps_company_statements_bank_sources_investor_sources_and_cross_checked_business_reporting",
+    "verified_on": "2026-08-03",
+    "source_policy": "تم إعطاء الأولوية لموقع WaffarX وشروطه وأسئلته وتطبيقاته، وصفحة CIB الرسمية، ثم A15 وWamda وDisrupt Africa وتغطيات التمويل. استُخدمت مقابلة 2025 المدفوعة بوصفها مصدرًا لتصريحات الإدارة، مع وسم المقاييس بأنها غير مدققة وعدم اعتماد تقدير السوق الخارجي الوارد فيها.",
+    "important_notes": [
+      "لا تنشر WaffarX إيرادًا شهريًا أو سنويًا، ولذلك حُذف ادعاء «ملايين الدولارات».",
+      "327 مليون جنيه في Q1 2025 هو GMV معلن، وليس إيراد WaffarX.",
+      "150 ألف معاملة في Q1 2025 تعني متوسط قيمة معلن/محسوب يقارب 2,180 جنيهًا للعملية، ولا تكشف عمولة المنصة.",
+      "100 ألف معاملة شهرية و3 ملايين مستهلك و800+ شريك أرقام صادرة عن مقابلة مدفوعة مع الرئيس التنفيذي في نوفمبر 2025 وليست قوائم مالية.",
+      "أكثر من 75 مليون جنيه كاش باك مدفوع رقم تراكمي معلن من الإدارة، وليس إيرادًا أو ربحًا.",
+      "في 2021 كان الرقم المنشور 450 ألف عضو و260 شريكًا؛ المقارنة مع 2025 تقريبية لأن تعريف member وconsumer وpartner قد يكون تغير.",
+      "واجهة الموقع المفهرسة تعرض أكثر من 400 متجر، بينما الإدارة تقول 800+ شريك؛ قد يشمل الرقم الأخير بنوكًا وعلامات وعروضًا وقنوات غير ظاهرة كمتاجر.",
+      "ذكرت المقابلة 800+ شريك ثم ذكرت 79 brand partners ضمن شبكة معينة؛ عومل الرقم الأصغر كشبكة فرعية محتملة لا تناقضًا محسومًا.",
+      "الجولة متعددة الملايين في 2021 مؤكدة، لكن المبلغ والتقييم والملكية غير معلنة.",
+      "تختلف المصادر في سنة التأسيس بين 2017 و2018 وعبارة inception in 2020؛ يستخدم الملف 2018 كتاريخ الإطلاق المتكرر ويذكر عدم الاتساق.",
+      "الكاش باك يخضع لتأكيد التاجر وفترة الإرجاع والاستثناءات؛ ظهوره Pending لا يعني أن المبلغ أصبح مستحقًا نهائيًا.",
+      "استُبعد ادعاء أن WaffarX تمتلك بيانات شراء أفضل من المتاجر؛ ترى المنصة فقط العمليات المنسوبة أو المرتبطة بها.",
+      "لم يُثبت AWS أو PHP أو Node.js كحزمة تقنية حالية، ولذلك استبدلت بأدوات ووظائف ظاهرة أو مصرح بها.",
+      "Price Comparison وOffer Matching وPredictive Models والوكيل الشرائي تتفاوت بين استخدام حالي وتطوير ورؤية مستقبلية، وتم توضيح ذلك في الأدوات."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول بالقيم والمصادر وحالة التحقق، مع فصل الإيراد عن GMV والكاش باك والمستخدمين والتنزيلات.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي أو مصرفي أو مستثمر.",
+      "verified_as_not_publicly_disclosed": "لم تنشر الشركة المقياس، ولذلك لم يُستخدم تقدير.",
+      "verified_company_reported": "الرقم صادر عن إدارة الشركة دون تدقيق مستقل.",
+      "verified_company_reported_gmv_not_revenue": "الرقم قيمة معاملات وليس إيرادًا.",
+      "verified_company_reported_scale_not_mau": "الرقم وصول أو مستهلكون أو تنزيلات وليس MAU موحدة.",
+      "verified_historical_funding_amount_undisclosed": "الجولة مؤكدة ووصفها متعدد الملايين، لكن المبلغ والتقييم غير منشورين.",
+      "verified_as_not_publicly_valued": "لا يوجد تقييم موثق للشركة.",
+      "verified_product_capability": "القدرة ظاهرة في المنتج أو الشروط أو مصدر شريك رسمي.",
+      "verified_management_roadmap": "القدرة أو الهدف ورد في تصريح الإدارة وقد لا يكون منتجًا مكتملًا.",
+      "analytical_inference": "تحليل مهني مبني على حقائق موثقة وليس تصريحًا حرفيًا."
+    },
+    "confidence_scale": {
+      "high": "شروط WaffarX أو متجر تطبيق رسمي أو CIB أو مصدر مستثمر مباشر.",
+      "medium_high": "عدة تغطيات تمويل متطابقة أو مقابلة مباشرة مع الإدارة.",
+      "medium": "ادعاء تسويقي أو تشغيلي غير مدقق أو تعريفه غير كامل."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "الزمالك، القاهرة، مصر. تعرض صفحة الشركة وعنوان مطور التطبيق موقعًا في شارع حسن صبري بالزمالك، ويظهر اسم الكيان المشغّل في Google Play بوصفه ENTREPRENEUR FOR MARKETING SERVICES SAE. تعمل الخدمة رقميًا في مصر والسعودية والإمارات وأسواق أخرى، مع اختلاف العروض وطرق السحب حسب الدولة.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "cairo_headquarters_legal_app_entity_and_multi_market_service",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تتطابق صفحة الشركة ومتجر Google Play على الزمالك، ويعرض التطبيق مصر والسعودية والإمارات كأسواق.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-04",
+        "SRC-06",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "WaffarX Android App",
+          "publisher": "Google Play / WaffarX",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?id=com.waffarx",
+          "evidence_type": "direct",
+          "source_locator": "Google Play → Developer and About",
+          "supports": "اسم المطور والعنوان والأسواق.",
+          "published_on": "2026-07-02"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "WaffarX Company Profile",
+          "publisher": "WaffarX via LinkedIn",
+          "source_type": "company_managed_profile",
+          "url": "https://www.linkedin.com/company/waffarx",
+          "evidence_type": "direct",
+          "source_locator": "LinkedIn → Headquarters",
+          "supports": "المقر في الزمالك."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "WaffarX Plans to Expand in Egypt",
+          "publisher": "Ahram Online",
+          "source_type": "ceo_interview",
+          "url": "https://english.ahram.org.eg/UI/Front/Inner.aspx?NewsContentID=480093",
+          "evidence_type": "direct",
+          "source_locator": "Ahram interview",
+          "supports": "شركة مصرية أطلقت في مصر.",
+          "published_on": "2022-11-20"
+        }
+      ],
+      "limitations": "وجود عروض رقمية في سوق لا يعني مكتبًا أو كيانًا قانونيًا محليًا مكتملًا."
+    },
+    "$.company.business_model": {
+      "field_value": "شبكة كاش باك وتمويل عروض قائمة على الأداء. يدفع التاجر أو الشريك عمولة أو ميزانية عرض بعد تسجيل عملية مؤهلة، وتشارك WaffarX جزءًا منها مع المستخدم كأموال مستردة وتحتفظ بجزء لتمويل التشغيل والإيراد. توسع النموذج من الإحالة عبر الروابط إلى الكاش باك داخل المتاجر والبطاقات المرتبطة، وبرامج الولاء المدمجة للبنوك وشركات التقنية المالية، وإدارة تمويل العروض والتحقق من المشتريات والمطابقة والتسوية. لا تنشر الشركة نسبة الاحتفاظ أو شروط الإيراد لكل شريك.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "merchant_funded_performance_cashback_and_embedded_loyalty_model",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تشرح الشروط تقاسم عمولة التاجر، بينما تثبت CIB والشركة انتقال النموذج إلى البطاقات والولاء المدمج.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-11",
+        "SRC-20"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "WaffarX App and Cashback Program",
+          "publisher": "WaffarX",
+          "source_type": "official_product_and_terms_page",
+          "url": "https://www.waffarx.com/en-us/app",
+          "evidence_type": "direct",
+          "source_locator": "Terms → Cashback Shopping Program",
+          "supports": "رسوم الإحالة وتقاسمها."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "WaffarX In-Store Cash Back",
+          "publisher": "WaffarX",
+          "source_type": "official_card_linked_product",
+          "url": "https://www.waffarx.com/en-eg/instore",
+          "evidence_type": "direct",
+          "source_locator": "In-Store",
+          "supports": "In-Store card-linked cashback."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "WaffarX|CIB",
+          "publisher": "Commercial International Bank",
+          "source_type": "official_bank_partnership_page",
+          "url": "https://www.cibeg.com/en/personal/loyalty/waffarxcib",
+          "evidence_type": "direct",
+          "source_locator": "Bank partnership",
+          "supports": "WaffarX|CIB."
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "WaffarX Current Merchant-Funded Loyalty Positioning",
+          "publisher": "WaffarX via LinkedIn",
+          "source_type": "company_managed_product_update",
+          "url": "https://www.linkedin.com/company/waffarx",
+          "evidence_type": "direct",
+          "source_locator": "Company update",
+          "supports": "إدارة العروض والتحقق والمصالحة.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا تنشر الشركة نسب العمولة أو الجزء المحتفظ به أو أسعار B2B."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. WaffarX شركة خاصة ولا تنشر إيرادًا شهريًا أو سنويًا مدققًا، كما لا يمكن اشتقاقه من GMV أو عدد المعاملات أو الكاش باك المدفوع لأن عمولة كل تاجر ونسبة المستخدم والمرتجعات وتكلفة المكافآت تختلف.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "private_company_revenue_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا توفر المصادر رقم إيراد، وتوضح الشروط أن التدفق يتكون من عمولة تاجر وكاش باك متغير.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-07",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "WaffarX App and Cashback Program",
+          "publisher": "WaffarX",
+          "source_type": "official_product_and_terms_page",
+          "url": "https://www.waffarx.com/en-us/app",
+          "evidence_type": "direct",
+          "source_locator": "Terms",
+          "supports": "العمولة والكاش باك والاستثناءات."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Ezz Fayek on WaffarX’s Regional Cashback Network",
+          "publisher": "Ahram Online — Sponsored Interview",
+          "source_type": "company_management_interview",
+          "url": "https://english.ahram.org.eg/NewsContent/40/163/556746/Advertising/Sponsored/Ezz-Fayek%2C-CEO-and-Cofounder-of-WaffarX.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Management interview",
+          "supports": "GMV والمعاملات والكاش باك دون إيراد.",
+          "published_on": "2025-11-12"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "WaffarX Raises Investment from Lobby Capital",
+          "publisher": "Wamda",
+          "source_type": "funding_press_release_coverage",
+          "url": "https://www.wamda.com/en/2021/12/egypt-waffarx-raises-investment-lobby-capital",
+          "evidence_type": "direct",
+          "source_locator": "Funding release coverage",
+          "supports": "التمويل دون بيانات مالية.",
+          "published_on": "2021-12-07"
+        }
+      ],
+      "limitations": "أي ضرب لـGMV في نسبة افتراضية سيختلق Take Rate وعقودًا غير معلنة."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "تذكر الشركة في مقابلة منشورة في نوفمبر 2025 أنها تصل إلى أكثر من 3 ملايين مستهلك ونحو 100 ألف معاملة شهريًا و800+ شريك. ويعرض Google Play أكثر من مليون تنزيل للتطبيق. هذه مؤشرات شركة وتسويق ومتجر تطبيقات، وليست مستخدمين نشطين شهريًا أو زيارات موقع موحدة.",
+      "verification_status": "verified_company_reported_scale_not_mau",
+      "confidence": "medium_high",
+      "claim_type": "company_reported_consumers_transactions_partners_and_app_downloads",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توفر الإدارة المستهلكين والمعاملات والشركاء، ويقدم Google Play تنزيلات التطبيق.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-07",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Ezz Fayek on WaffarX’s Regional Cashback Network",
+          "publisher": "Ahram Online — Sponsored Interview",
+          "source_type": "company_management_interview",
+          "url": "https://english.ahram.org.eg/NewsContent/40/163/556746/Advertising/Sponsored/Ezz-Fayek%2C-CEO-and-Cofounder-of-WaffarX.aspx",
+          "evidence_type": "direct",
+          "source_locator": "2025 interview",
+          "supports": "3 ملايين مستهلك و100 ألف معاملة شهرية و800+ شريك.",
+          "published_on": "2025-11-12"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "WaffarX Android App",
+          "publisher": "Google Play / WaffarX",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?id=com.waffarx",
+          "evidence_type": "direct",
+          "source_locator": "Google Play",
+          "supports": "1M+ Android downloads.",
+          "published_on": "2026-07-02"
+        }
+      ],
+      "limitations": "لا توجد MAU أو زيارات موحدة، وconsumer قد يكون مسجلاً أو مستفيدًا عبر شريك."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "يدفع التجار مقابل الإعلان قبل معرفة ما إذا كان الإعلان أنتج عملية بيع، بينما يواجه المتسوق كوبونات منتهية أو خصومات غير قابلة للجمع وبرامج نقاط مقيدة. وحتى بعد الشراء، يحتاج نموذج الكاش باك إلى إثبات أن WaffarX سببت العملية وأن الطلب لم يُلغَ أو يُرجع ولم يُنسب إلى قناة تسويق أخرى.",
+        "impact": "تضعف كفاءة ميزانية التاجر عندما تُشترى الزيارات دون نتيجة، ويضعف اعتماد المستخدم عندما يبقى الكاش باك معلقًا أو يُرفض بسبب التتبع أو الاستثناءات. لذلك لا تكمن المشكلة في عرض نسبة توفير فقط، بل في بناء نظام إسناد ومراجعة وتسوية يشرح للمستخدم حالة المكافأة ويعطي التاجر عائدًا قابلًا للقياس."
+      },
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "performance_marketing_attribution_and_cashback_trust_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توضح مقابلات الإدارة فجوة الأداء، وتكشف الشروط تحديات الإسناد والتأكيد والإلغاء.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-14",
+        "SRC-01",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-14",
+          "title": "Filling a Cashback Void for MENA Consumers",
+          "publisher": "PYMNTS",
+          "source_type": "ceo_business_model_interview",
+          "url": "https://www.pymnts.com/news/loyalty-and-rewards-news/2022/filling-a-cash-back-void-for-consumers-businesses-across-mena/",
+          "evidence_type": "direct",
+          "source_locator": "CEO interview",
+          "supports": "إقناع التجار وقيمة نموذج الأداء.",
+          "published_on": "2022-04-08"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "WaffarX App and Cashback Program",
+          "publisher": "WaffarX",
+          "source_type": "official_product_and_terms_page",
+          "url": "https://www.waffarx.com/en-us/app",
+          "evidence_type": "direct",
+          "source_locator": "Terms",
+          "supports": "الجلسة والكوكيز والأكواد والاستثناءات."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "WaffarX Android App",
+          "publisher": "Google Play / WaffarX",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?id=com.waffarx",
+          "evidence_type": "direct",
+          "source_locator": "Developer response and app description",
+          "supports": "تأكيد التاجر بعد فترة الإرجاع.",
+          "published_on": "2026-07-02"
+        }
+      ],
+      "limitations": "لا توجد دراسة مستقلة منشورة عن CAC أو نسبة الكوبونات غير الصالحة في المنطقة."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "تتيح WaffarX للمستخدم اختيار متجر أو عرض ثم الانتقال إلى التاجر عبر رابط متتبع، أو ربط بطاقة واستخدام عروض In-Store، ثم تسجيل الكاش باك وإرساله بعد تأكيد التاجر وانتهاء فترة الإرجاع. تشمل التجربة موقعًا وتطبيقات وامتداد متصفح XButton، وكوبونات وعروضًا ومقارنة فئات، وسحبًا ربع سنويًا عبر تحويلات بنكية وفوري ومحافظ إلكترونية ووسائل أخرى. وتقدم للشركاء شبكة عروض ممولة من التجار، وتتولى إدارة العروض والتحقق والمطابقة والتسوية، مع تكاملات مثل WaffarX|CIB وشراكة DGTERA لنقاط البيع."
+      },
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "online_instore_card_linked_cashout_and_embedded_partner_network",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم المصادر كل قنوات التسوق والتتبع والسحب والشراكات المذكورة.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03",
+        "SRC-11",
+        "SRC-15",
+        "SRC-20"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "WaffarX App and Cashback Program",
+          "publisher": "WaffarX",
+          "source_type": "official_product_and_terms_page",
+          "url": "https://www.waffarx.com/en-us/app",
+          "evidence_type": "direct",
+          "source_locator": "Product and terms",
+          "supports": "التسوق الإلكتروني والامتداد."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "WaffarX FAQs and CashOut Methods",
+          "publisher": "WaffarX",
+          "source_type": "official_operating_documentation",
+          "url": "https://www.waffarx.com/en-eg/faq/1009",
+          "evidence_type": "direct",
+          "source_locator": "FAQs",
+          "supports": "CashOut والمحافظ والإحالة."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "WaffarX In-Store Cash Back",
+          "publisher": "WaffarX",
+          "source_type": "official_card_linked_product",
+          "url": "https://www.waffarx.com/en-eg/instore",
+          "evidence_type": "direct",
+          "source_locator": "Card-linked page",
+          "supports": "In-Store."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "WaffarX|CIB",
+          "publisher": "Commercial International Bank",
+          "source_type": "official_bank_partnership_page",
+          "url": "https://www.cibeg.com/en/personal/loyalty/waffarxcib",
+          "evidence_type": "direct",
+          "source_locator": "Bank page",
+          "supports": "CIB."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "WaffarX and DGTERA Partnership",
+          "publisher": "Egyptian Gazette",
+          "source_type": "partnership_announcement_coverage",
+          "url": "https://egyptian-gazette.com/business/waffarx-dgtera-launch-strategic-partnership-across-egypt-ksa/",
+          "evidence_type": "direct",
+          "source_locator": "Partnership",
+          "supports": "DGTERA POS integration.",
+          "published_on": "2025-05-27"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "WaffarX Current Merchant-Funded Loyalty Positioning",
+          "publisher": "WaffarX via LinkedIn",
+          "source_type": "company_managed_product_update",
+          "url": "https://www.linkedin.com/company/waffarx",
+          "evidence_type": "direct",
+          "source_locator": "Company update",
+          "supports": "Embedded loyalty operations.",
+          "published_on": "2026"
+        }
+      ]
+    },
+    "$.market_data.target_audience": {
+      "field_value": "المتسوقون البالغون الباحثون عن كاش باك على التجارة الإلكترونية والمشتريات داخل المتاجر والسفر والإلكترونيات والأزياء والجمال والبقالة والوقود والتعليم والخدمات اليومية. ويشمل جانب الأعمال المتاجر والعلامات التجارية والبنوك وشركات التقنية المالية وبرامج البطاقات ومشغلي المطاعم والتجزئة الذين يريدون ولاءً ممولًا من التجار وتسويقًا يُحاسب على الأداء.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "consumer_merchant_bank_fintech_and_retail_partner_segments",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تعرض التطبيقات فئات المستهلكين، بينما توضح CIB والشركة جانب البنوك والتجار.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-04",
+        "SRC-11",
+        "SRC-15",
+        "SRC-20"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "WaffarX Android App",
+          "publisher": "Google Play / WaffarX",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?id=com.waffarx",
+          "evidence_type": "direct",
+          "source_locator": "Google Play",
+          "supports": "الفئات والأسواق للمستهلك.",
+          "published_on": "2026-07-02"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "WaffarX|CIB",
+          "publisher": "Commercial International Bank",
+          "source_type": "official_bank_partnership_page",
+          "url": "https://www.cibeg.com/en/personal/loyalty/waffarxcib",
+          "evidence_type": "direct",
+          "source_locator": "CIB",
+          "supports": "عملاء البطاقات والبنك."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "WaffarX and DGTERA Partnership",
+          "publisher": "Egyptian Gazette",
+          "source_type": "partnership_announcement_coverage",
+          "url": "https://egyptian-gazette.com/business/waffarx-dgtera-launch-strategic-partnership-across-egypt-ksa/",
+          "evidence_type": "direct",
+          "source_locator": "DGTERA",
+          "supports": "المطاعم والتجزئة.",
+          "published_on": "2025-05-27"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "WaffarX Current Merchant-Funded Loyalty Positioning",
+          "publisher": "WaffarX via LinkedIn",
+          "source_type": "company_managed_product_update",
+          "url": "https://www.linkedin.com/company/waffarx",
+          "evidence_type": "direct",
+          "source_locator": "B2B positioning",
+          "supports": "البنوك والتقنية المالية والتجار.",
+          "published_on": "2026"
+        }
+      ]
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر WaffarX رقمًا رسميًا أو مستقلاً لحجم سوقها القابل للاستهداف. مؤشرات النطاق المباشرة هي أكثر من 3 ملايين مستهلك و800+ شريك وفق تصريح الشركة في 2025، وأكثر من مليون تنزيل Android، وأكثر من 400 متجر ظاهر في واجهة الموقع وقت الفهرسة، وانتشار عروض في مصر والسعودية والإمارات. هذه ليست قيمة سوق بالدولار ولا حصة سوقية.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "medium_high",
+      "claim_type": "network_scale_without_independent_tam",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا تستخدم الخريطة تقدير السوق الخارجي؛ تعتمد على مستهلكين وشركاء وتنزيلات ومتاجر.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-07",
+        "SRC-04",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Ezz Fayek on WaffarX’s Regional Cashback Network",
+          "publisher": "Ahram Online — Sponsored Interview",
+          "source_type": "company_management_interview",
+          "url": "https://english.ahram.org.eg/NewsContent/40/163/556746/Advertising/Sponsored/Ezz-Fayek%2C-CEO-and-Cofounder-of-WaffarX.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Management interview",
+          "supports": "3 ملايين مستهلك و800+ شريك.",
+          "published_on": "2025-11-12"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "WaffarX Android App",
+          "publisher": "Google Play / WaffarX",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?id=com.waffarx",
+          "evidence_type": "direct",
+          "source_locator": "Google Play",
+          "supports": "1M+ downloads and markets.",
+          "published_on": "2026-07-02"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "WaffarX App and Cashback Program",
+          "publisher": "WaffarX",
+          "source_type": "official_product_and_terms_page",
+          "url": "https://www.waffarx.com/en-us/app",
+          "evidence_type": "direct",
+          "source_locator": "Official app page",
+          "supports": "400+ stores visible."
+        }
+      ],
+      "limitations": "الوصول والتنزيلات والشركاء ليست قيمة سوق أو مستخدمين فريدين."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "ارتفعت المؤشرات المعلنة من أكثر من 450 ألف عضو و260 شريك تاجر في 2021 إلى أكثر من 3 ملايين مستهلك و800+ شريك في 2025، مع تغير تعريف «عضو» إلى «مستهلك». وفي Q1 2025 قالت الشركة إنها عالجت أكثر من 150 ألف معاملة و327 مليون جنيه GMV، وزاد المستخدمون المسجلون 32%. كما ذكرت نمو قاعدة المستخدمين 38% خلال آخر 12 شهرًا ودفع أكثر من 75 مليون جنيه كاش باك منذ الإطلاق. جميعها بيانات إدارية غير مدققة.",
+      "verification_status": "verified_company_reported",
+      "confidence": "medium",
+      "claim_type": "cross_period_members_partner_transaction_and_gmv_growth_indicators",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تقارن الخريطة أرقام 2021 و2025 مع بيان اختلاف التعريف، وتدرج Q1 2025 كمقياس تشغيل.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-09",
+        "SRC-07",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "WaffarX Multi-Million Dollar Funding Round",
+          "publisher": "Disrupt Africa",
+          "source_type": "high_quality_startup_funding_report",
+          "url": "https://disruptafrica.com/2021/12/13/egyptian-cashback-marketplaces-waffarx-raises-multi-million-dollar-funding-round/",
+          "evidence_type": "direct",
+          "source_locator": "Funding report",
+          "supports": "450 ألف عضو و260 شريكًا في 2021.",
+          "published_on": "2021-12-13"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Ezz Fayek on WaffarX’s Regional Cashback Network",
+          "publisher": "Ahram Online — Sponsored Interview",
+          "source_type": "company_management_interview",
+          "url": "https://english.ahram.org.eg/NewsContent/40/163/556746/Advertising/Sponsored/Ezz-Fayek%2C-CEO-and-Cofounder-of-WaffarX.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Management interview",
+          "supports": "2025 scale, Q1 metrics and growth rates.",
+          "published_on": "2025-11-12"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "WaffarX Expands Platform and In-Store Cashback",
+          "publisher": "Egypt Today",
+          "source_type": "company_announcement_coverage",
+          "url": "https://www.egypttoday.com/Article/6/120782/WAFFARX-expands-platform-with-customer-centric-offerings-to-maximize-savings",
+          "evidence_type": "direct",
+          "source_locator": "Platform update",
+          "supports": "25 مليون كاش باك حتى 2022.",
+          "published_on": "2022-11"
+        }
+      ],
+      "limitations": "member وconsumer وpartner قد لا يحملون التعريف نفسه، والأرقام غير مدققة.",
+      "calculation": {
+        "2021_members": 450000,
+        "2021_merchant_partners": 260,
+        "2025_consumers": 3000000,
+        "2025_partners": 800,
+        "illustrative_consumer_to_member_multiple": 6.67,
+        "illustrative_partner_multiple": 3.08,
+        "q1_2025_transactions": 150000,
+        "q1_2025_gmv_egp": 327000000,
+        "calculated_average_gmv_per_transaction_egp": 2180,
+        "q1_2025_registered_user_growth_percent": 32,
+        "last_12_month_user_base_growth_percent": 38,
+        "current_monthly_transactions_company_reported": 100000
+      }
+    },
+    "$.financials.initial_investment": {
+      "field_value": "رأس المال الشخصي للمؤسسين والاستثمار الأول من A15 غير معلنين. في ديسمبر 2021 أغلقت WaffarX جولة تمويل متعددة الملايين بالدولار بقيادة Lobby Capital وبمشاركة المستثمر السابق A15، دون نشر المبلغ الدقيق أو نوع الأوراق أو جدول الملكية. كان الهدف المعلن توسيع المنصة واكتساب المستخدمين والدخول إلى أسواق جديدة.",
+      "verification_status": "verified_historical_funding_amount_undisclosed",
+      "confidence": "high",
+      "claim_type": "founder_capital_undisclosed_and_multi_million_round",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تتطابق Wamda وDisrupt Africa وA15 على Lobby Capital وA15، دون مبلغ دقيق.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-08",
+        "SRC-09",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "WaffarX Raises Investment from Lobby Capital",
+          "publisher": "Wamda",
+          "source_type": "funding_press_release_coverage",
+          "url": "https://www.wamda.com/en/2021/12/egypt-waffarx-raises-investment-lobby-capital",
+          "evidence_type": "direct",
+          "source_locator": "Funding coverage",
+          "supports": "الجولة والمؤسسون والمستثمرون.",
+          "published_on": "2021-12-07"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "WaffarX Multi-Million Dollar Funding Round",
+          "publisher": "Disrupt Africa",
+          "source_type": "high_quality_startup_funding_report",
+          "url": "https://disruptafrica.com/2021/12/13/egyptian-cashback-marketplaces-waffarx-raises-multi-million-dollar-funding-round/",
+          "evidence_type": "direct",
+          "source_locator": "Disrupt Africa",
+          "supports": "وصف multi-million واستخدام التمويل.",
+          "published_on": "2021-12-13"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "A15 News — WaffarX Seed Round and Board",
+          "publisher": "A15",
+          "source_type": "direct_investor_news_index",
+          "url": "https://www.a15.com/news",
+          "evidence_type": "direct",
+          "source_locator": "Investor news",
+          "supports": "تسجيل الجولة لدى المستثمر A15.",
+          "published_on": "2022-03"
+        }
+      ],
+      "limitations": "لا يُعرف مبلغ A15 المبكر أو حجم جولة 2021 أو نوع الأوراق أو رأس مال المؤسسين."
+    },
+    "$.financials.valuation": {
+      "field_value": "غير معلن. لم تنشر WaffarX أو Lobby Capital أو A15 تقييم الجولة، ولا توجد صفقة استحواذ أو طرح عام يمنح قيمة سوقية. عبارة «عشرات الملايين» في الملف الأصلي غير مدعومة، ولا يمكن تحويل وصف الجولة بأنها متعددة الملايين إلى تقييم للشركة.",
+      "verification_status": "verified_as_not_publicly_valued",
+      "confidence": "high",
+      "claim_type": "private_company_valuation_undisclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تصف المصادر مبلغ الجولة بصورة عامة لكنها لا تنشر نسبة أسهم أو تقييمًا.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-08",
+        "SRC-09",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "WaffarX Raises Investment from Lobby Capital",
+          "publisher": "Wamda",
+          "source_type": "funding_press_release_coverage",
+          "url": "https://www.wamda.com/en/2021/12/egypt-waffarx-raises-investment-lobby-capital",
+          "evidence_type": "direct",
+          "source_locator": "Wamda",
+          "supports": "مبلغ غير محدد وجولة متعددة الملايين.",
+          "published_on": "2021-12-07"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "WaffarX Multi-Million Dollar Funding Round",
+          "publisher": "Disrupt Africa",
+          "source_type": "high_quality_startup_funding_report",
+          "url": "https://disruptafrica.com/2021/12/13/egyptian-cashback-marketplaces-waffarx-raises-multi-million-dollar-funding-round/",
+          "evidence_type": "direct",
+          "source_locator": "Disrupt Africa",
+          "supports": "لا تقييم منشور.",
+          "published_on": "2021-12-13"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "WaffarX Funding and Expansion",
+          "publisher": "StartupScene",
+          "source_type": "regional_funding_report",
+          "url": "https://thestartupscene.me/INVESTMENTS/Egypt-s-Cashback-Marketplace-WaffarX-Raises-Multi-Million-Dollar-Round",
+          "evidence_type": "direct",
+          "source_locator": "StartupScene",
+          "supports": "تمويل دون قيمة شركة.",
+          "published_on": "2021-12-15"
+        }
+      ],
+      "limitations": "لا يمكن حساب pre-money أو post-money دون مبلغ دقيق ونسبة ملكية."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "الجزء الذي تحتفظ به WaffarX من عمولة الإحالة أو ميزانية العرض التي يدفعها التاجر بعد عملية مؤهلة",
+        "إدارة حملات Merchant-Funded Cashback والعروض القائمة على الأداء للعلامات والمتاجر",
+        "حلول الكاش باك داخل المتاجر والبطاقات المرتبطة، بما يشمل التحقق والمطابقة والتسوية",
+        "برامج ولاء وكاش باك مدمجة للبنوك وشركات التقنية المالية مثل WaffarX|CIB، مع شروط تجارية غير معلنة",
+        "تكاملات B2B لدمج مكافآت الكاش باك في أنظمة المطاعم والتجزئة ونقاط البيع",
+        "حملات Double Cash Back والمكافآت والعروض المشتركة الممولة من التجار أو الشركاء",
+        "خدمات بيانات أداء على مستوى المنتج وقياس العائد المنسوب للحملات وفق تصريحات الإدارة",
+        "الكوبونات والعروض قد تدعم التحويل والإسناد، لكن لا يوجد دليل منشور على رسوم إدراج ثابتة أو إعلانات ظهور كقناة مستقلة",
+        "مبلغ الكاش باك المستحق للمستخدم ليس إيرادًا صافيًا للشركة، بل جزء من اقتصاد العمولة أو العرض",
+        "GMV وقيمة المشتريات ليست إيراد WaffarX، ولا تكشف الشركة Take Rate"
+      ],
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "merchant_commission_performance_campaign_card_linked_and_embedded_loyalty_channels",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المصادر عمولة الإحالة وبرامج البطاقات والشراكات وتفصلها عن GMV والكاش باك.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-11",
+        "SRC-15",
+        "SRC-20",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "WaffarX App and Cashback Program",
+          "publisher": "WaffarX",
+          "source_type": "official_product_and_terms_page",
+          "url": "https://www.waffarx.com/en-us/app",
+          "evidence_type": "direct",
+          "source_locator": "Terms",
+          "supports": "Merchant commission spread."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "WaffarX In-Store Cash Back",
+          "publisher": "WaffarX",
+          "source_type": "official_card_linked_product",
+          "url": "https://www.waffarx.com/en-eg/instore",
+          "evidence_type": "direct",
+          "source_locator": "Product",
+          "supports": "In-store/card-linked."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "WaffarX|CIB",
+          "publisher": "Commercial International Bank",
+          "source_type": "official_bank_partnership_page",
+          "url": "https://www.cibeg.com/en/personal/loyalty/waffarxcib",
+          "evidence_type": "direct",
+          "source_locator": "CIB",
+          "supports": "Bank program."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "WaffarX and DGTERA Partnership",
+          "publisher": "Egyptian Gazette",
+          "source_type": "partnership_announcement_coverage",
+          "url": "https://egyptian-gazette.com/business/waffarx-dgtera-launch-strategic-partnership-across-egypt-ksa/",
+          "evidence_type": "direct",
+          "source_locator": "DGTERA",
+          "supports": "POS integration.",
+          "published_on": "2025-05-27"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "WaffarX Current Merchant-Funded Loyalty Positioning",
+          "publisher": "WaffarX via LinkedIn",
+          "source_type": "company_managed_product_update",
+          "url": "https://www.linkedin.com/company/waffarx",
+          "evidence_type": "direct",
+          "source_locator": "Company update",
+          "supports": "Embedded loyalty and reconciliation.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Ezz Fayek on WaffarX’s Regional Cashback Network",
+          "publisher": "Ahram Online — Sponsored Interview",
+          "source_type": "company_management_interview",
+          "url": "https://english.ahram.org.eg/NewsContent/40/163/556746/Advertising/Sponsored/Ezz-Fayek%2C-CEO-and-Cofounder-of-WaffarX.aspx",
+          "evidence_type": "direct",
+          "source_locator": "CEO interview",
+          "supports": "Item-level tracking and performance model.",
+          "published_on": "2025-11-12"
+        }
+      ],
+      "limitations": "الإعلانات المدفوعة للظهور لم تُثبت كقناة، ولا تنشر الشركة إيراد كل منتج."
+    },
+    "$.tools": {
+      "field_value": [
+        "موقع WaffarX متعدد الأسواق واللغات للبحث عن المتاجر والعروض والكوبونات والكاش باك",
+        "تطبيقات Android وiOS مع أكثر من مليون تنزيل Android وفق Google Play",
+        "XButton أو امتداد المتصفح لتنبيه المستخدم بالكاش باك وتفعيل الإحالة أثناء التسوق",
+        "تتبع Affiliate عبر روابط النقر والكوكيز والجلسات وربط الطلب بالتاجر",
+        "حساب كاش باك بحالات Pending وConfirmed وCashOut وإمكانية تعديل المرتجعات والإلغاءات",
+        "CashOut ربع سنوي بحد أدنى معلن يبلغ 5 دولارات لمعظم الوسائل",
+        "تحويلات بنكية وفوري وVodafone Cash وOrange Cash وEtisalat Cash وWE Pay ووسائل أخرى بحسب السوق",
+        "In-Store Cash Back عبر ربط بطاقات مؤهلة ومطابقة المشتريات",
+        "WaffarX|CIB مع كاش باك إضافي وسحب ست مرات سنويًا لبطاقات CIB المؤهلة",
+        "برامج Merchant-Funded Offers مدمجة للبنوك وشركات التقنية المالية",
+        "إدارة تمويل العروض والتحقق من المشتريات والمصالحة والتسوية للشركاء",
+        "تتبع على مستوى المنتج وقياس ROI وفق تصريحات الشركة",
+        "برنامج إحالة يشترط شراءً مؤهلًا قبل تثبيت مكافأة المحيل",
+        "Double Cash Back وكوبونات ومقارنة العروض والفئات والمتاجر",
+        "كاش باك الوقود بقواعد نشاط وحدود شهرية منشورة",
+        "إشعارات بريدية وPush عند تسجيل أو تأكيد المكافآت",
+        "ضوابط الحسابات المكررة والاحتيال وإساءة استخدام المكافآت",
+        "Advanced Receipt OCR وفق تصريح الإدارة لعام 2025",
+        "Price Comparison وOffer Matching وPredictive Models ضمن قدرات حالية أو قيد التطوير حسب تصريح الإدارة",
+        "Personal AI Shopping Agent هدف مستقبلي معلن وليس منتجًا مكتملًا",
+        "تكامل DGTERA لنقاط البيع وأنظمة المطاعم والتجزئة في مصر والسعودية",
+        "بنية عرض مخصصة لمصر والسعودية والإمارات ومتاجر دولية ومحلية",
+        "منصة B2B Embedded Loyalty للشركاء الماليين مع إدارة العمليات خلف الواجهة"
+      ],
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "official_consumer_cashback_tracking_cashout_card_linked_b2b_and_management_roadmap_capabilities",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استُبدلت حزمة تقنية مفترضة بقدرات المنتج والشريك، مع تمييز أدوات AI الحالية عن الرؤية المستقبلية.",
+      "source_count": 8,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03",
+        "SRC-04",
+        "SRC-11",
+        "SRC-15",
+        "SRC-20",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "WaffarX App and Cashback Program",
+          "publisher": "WaffarX",
+          "source_type": "official_product_and_terms_page",
+          "url": "https://www.waffarx.com/en-us/app",
+          "evidence_type": "direct",
+          "source_locator": "Official product",
+          "supports": "الموقع والتتبع والامتداد والعروض."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "WaffarX FAQs and CashOut Methods",
+          "publisher": "WaffarX",
+          "source_type": "official_operating_documentation",
+          "url": "https://www.waffarx.com/en-eg/faq/1009",
+          "evidence_type": "direct",
+          "source_locator": "FAQs",
+          "supports": "CashOut والوقود والإحالة."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "WaffarX In-Store Cash Back",
+          "publisher": "WaffarX",
+          "source_type": "official_card_linked_product",
+          "url": "https://www.waffarx.com/en-eg/instore",
+          "evidence_type": "direct",
+          "source_locator": "Card-linked",
+          "supports": "In-store."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "WaffarX Android App",
+          "publisher": "Google Play / WaffarX",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?id=com.waffarx",
+          "evidence_type": "direct",
+          "source_locator": "Google Play",
+          "supports": "Mobile apps and markets.",
+          "published_on": "2026-07-02"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "WaffarX|CIB",
+          "publisher": "Commercial International Bank",
+          "source_type": "official_bank_partnership_page",
+          "url": "https://www.cibeg.com/en/personal/loyalty/waffarxcib",
+          "evidence_type": "direct",
+          "source_locator": "Bank",
+          "supports": "CIB integration."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "WaffarX and DGTERA Partnership",
+          "publisher": "Egyptian Gazette",
+          "source_type": "partnership_announcement_coverage",
+          "url": "https://egyptian-gazette.com/business/waffarx-dgtera-launch-strategic-partnership-across-egypt-ksa/",
+          "evidence_type": "direct",
+          "source_locator": "Partner",
+          "supports": "DGTERA integration.",
+          "published_on": "2025-05-27"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "WaffarX Current Merchant-Funded Loyalty Positioning",
+          "publisher": "WaffarX via LinkedIn",
+          "source_type": "company_managed_product_update",
+          "url": "https://www.linkedin.com/company/waffarx",
+          "evidence_type": "direct",
+          "source_locator": "Company update",
+          "supports": "B2B loyalty operations.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Ezz Fayek on WaffarX’s Regional Cashback Network",
+          "publisher": "Ahram Online — Sponsored Interview",
+          "source_type": "company_management_interview",
+          "url": "https://english.ahram.org.eg/NewsContent/40/163/556746/Advertising/Sponsored/Ezz-Fayek%2C-CEO-and-Cofounder-of-WaffarX.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Management interview",
+          "supports": "OCR, matching, predictive tools and AI agent roadmap.",
+          "published_on": "2025-11-12"
+        }
+      ],
+      "limitations": "لا تكشف المصادر لغات البرمجة أو السحابة الداخلية، وبعض أدوات AI لا تزال قيد التطوير."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "WaffarX App and Cashback Program",
+      "publisher": "WaffarX",
+      "source_type": "official_product_and_terms_page",
+      "url": "https://www.waffarx.com/en-us/app",
+      "supports": [
+        "عمولة التاجر وتقاسمها مع المستخدم",
+        "400+ متجر ظاهر",
+        "الموقع والتطبيق وامتداد المتصفح",
+        "السحب الربع سنوي",
+        "التتبع والاستثناءات والمرتجعات"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "WaffarX FAQs and CashOut Methods",
+      "publisher": "WaffarX",
+      "source_type": "official_operating_documentation",
+      "url": "https://www.waffarx.com/en-eg/faq/1009",
+      "supports": [
+        "حالات الكاش باك",
+        "حد السحب 5 دولارات",
+        "تواريخ السحب الربع سنوية",
+        "المحافظ والبنوك ووسائل CashOut",
+        "قواعد الوقود والإحالة"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "WaffarX In-Store Cash Back",
+      "publisher": "WaffarX",
+      "source_type": "official_card_linked_product",
+      "url": "https://www.waffarx.com/en-eg/instore",
+      "supports": [
+        "ربط البطاقة",
+        "الكاش باك داخل المتاجر",
+        "عدم تخزين معلومات البطاقة وفق الشركة",
+        "تأكيد المشتريات والإشعارات"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "WaffarX Android App",
+      "publisher": "Google Play / WaffarX",
+      "source_type": "official_app_store_listing",
+      "published_on": "2026-07-02",
+      "url": "https://play.google.com/store/apps/details?id=com.waffarx",
+      "supports": [
+        "1M+ تنزيل",
+        "مصر والإمارات والسعودية",
+        "السحب البنكي وفوري والمحافظ",
+        "اسم الكيان وعنوان الزمالك",
+        "تأكيد التاجر بعد فترة الإرجاع"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "WaffarX iOS App",
+      "publisher": "Apple App Store / WaffarX",
+      "source_type": "official_app_store_listing",
+      "url": "https://apps.apple.com/eg/app/waffarx/id1540493266",
+      "supports": [
+        "تطبيق iOS",
+        "الشراء أونلاين وداخل المتاجر",
+        "فئات التجار وطرق السحب"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "WaffarX Company Profile",
+      "publisher": "WaffarX via LinkedIn",
+      "source_type": "company_managed_profile",
+      "url": "https://www.linkedin.com/company/waffarx",
+      "supports": [
+        "المقر في الزمالك",
+        "شركة خاصة",
+        "الخدمات والكاش باك داخل المتاجر",
+        "Embedded merchant-funded cashback",
+        "إدارة تمويل العروض والتحقق والتسوية"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Ezz Fayek on WaffarX’s Regional Cashback Network",
+      "publisher": "Ahram Online — Sponsored Interview",
+      "source_type": "company_management_interview",
+      "published_on": "2025-11-12",
+      "url": "https://english.ahram.org.eg/NewsContent/40/163/556746/Advertising/Sponsored/Ezz-Fayek%2C-CEO-and-Cofounder-of-WaffarX.aspx",
+      "supports": [
+        "3 ملايين مستهلك و800+ شريك",
+        "100 ألف معاملة شهرية",
+        "75 مليون جنيه كاش باك تراكمي",
+        "Q1 2025: 150 ألف معاملة و327 مليون جنيه GMV",
+        "نمو المستخدمين والإحالات",
+        "OCR والذكاء الاصطناعي وخطط التوسع"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "WaffarX Raises Investment from Lobby Capital",
+      "publisher": "Wamda",
+      "source_type": "funding_press_release_coverage",
+      "published_on": "2021-12-07",
+      "url": "https://www.wamda.com/en/2021/12/egypt-waffarx-raises-investment-lobby-capital",
+      "supports": [
+        "تأسيس 2018 والمؤسسون",
+        "جولة متعددة الملايين",
+        "Lobby Capital وA15",
+        "استخدام التمويل للتوسع"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "WaffarX Multi-Million Dollar Funding Round",
+      "publisher": "Disrupt Africa",
+      "source_type": "high_quality_startup_funding_report",
+      "published_on": "2021-12-13",
+      "url": "https://disruptafrica.com/2021/12/13/egyptian-cashback-marketplaces-waffarx-raises-multi-million-dollar-funding-round/",
+      "supports": [
+        "450 ألف عضو و260 شريكًا في 2021",
+        "المؤسسون",
+        "وصف الجولة واستخدامها"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "A15 News — WaffarX Seed Round and Board",
+      "publisher": "A15",
+      "source_type": "direct_investor_news_index",
+      "published_on": "2022-03",
+      "url": "https://www.a15.com/news",
+      "supports": [
+        "جولة WaffarX بقيادة Lobby Capital",
+        "انضمام رئيس تنفيذي سابق لـEbates إلى مجلس الإدارة"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "WaffarX|CIB",
+      "publisher": "Commercial International Bank",
+      "source_type": "official_bank_partnership_page",
+      "url": "https://www.cibeg.com/en/personal/loyalty/waffarxcib",
+      "supports": [
+        "الكاش باك الإضافي لبطاقات CIB",
+        "20% زيادة في معدل الكاش باك وفق الصفحة",
+        "ست دورات سحب سنويًا",
+        "ربط البطاقة وحد السحب"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "WaffarX Plans to Expand in Egypt",
+      "publisher": "Ahram Online",
+      "source_type": "ceo_interview",
+      "published_on": "2022-11-20",
+      "url": "https://english.ahram.org.eg/UI/Front/Inner.aspx?NewsContentID=480093",
+      "supports": [
+        "الإطلاق في 2018",
+        "280+ شريك تاجر وقتها",
+        "In-Store Cash Back",
+        "التعاون مع CIB",
+        "الخطط البنكية والمحلية"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "WaffarX Expands Platform and In-Store Cashback",
+      "publisher": "Egypt Today",
+      "source_type": "company_announcement_coverage",
+      "published_on": "2022-11",
+      "url": "https://www.egypttoday.com/Article/6/120782/WAFFARX-expands-platform-with-customer-centric-offerings-to-maximize-savings",
+      "supports": [
+        "25 مليون جنيه كاش باك مدفوع حتى 2022",
+        "إطلاق In-Store Cashback",
+        "CIB",
+        "الجولة الاستثمارية"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Filling a Cashback Void for MENA Consumers",
+      "publisher": "PYMNTS",
+      "source_type": "ceo_business_model_interview",
+      "published_on": "2022-04-08",
+      "url": "https://www.pymnts.com/news/loyalty-and-rewards-news/2022/filling-a-cash-back-void-for-consumers-businesses-across-mena/",
+      "supports": [
+        "تبني نموذج الكاش باك في المنطقة",
+        "قيمة النموذج للتاجر والمستهلك",
+        "تحديات إقناع التجار"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "WaffarX and DGTERA Partnership",
+      "publisher": "Egyptian Gazette",
+      "source_type": "partnership_announcement_coverage",
+      "published_on": "2025-05-27",
+      "url": "https://egyptian-gazette.com/business/waffarx-dgtera-launch-strategic-partnership-across-egypt-ksa/",
+      "supports": [
+        "دمج الكاش باك في أنظمة المطاعم والتجزئة",
+        "مصر والسعودية",
+        "نقاط الشراء والاحتفاظ وقيمة المعاملة"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "XButton Powered by WaffarX",
+      "publisher": "WaffarX",
+      "source_type": "official_browser_extension_page",
+      "url": "https://www.waffarx.com/en-eg/xbutton",
+      "supports": [
+        "امتداد المتصفح",
+        "تفعيل الكاش باك أثناء التسوق"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "WaffarX Privacy Policy",
+      "publisher": "WaffarX",
+      "source_type": "official_privacy_document",
+      "published_on": "2019-11",
+      "url": "https://www.waffarx.com/en-us/elogin?redirecturl=%2Fen-us%2Feclick%2Fpromotionproduct%2F6%2F9041%2F8793%3Fx_source%3Dstore",
+      "supports": [
+        "عدم بيع المعلومات الشخصية وفق السياسة",
+        "البيانات اللازمة للحساب والدفع",
+        "برامج الإحالة"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "WaffarX FinTech Interview",
+      "publisher": "Ahram Online",
+      "source_type": "ceo_interview",
+      "published_on": "2022-02-06",
+      "url": "https://english.ahram.org.eg/UI/Front/Inner.aspx?NewsContentID=460568",
+      "supports": [
+        "التركيز على السوق المصري",
+        "280+ شريكًا",
+        "سياق التقنية المالية والكاش باك"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "WaffarX Funding and Expansion",
+      "publisher": "StartupScene",
+      "source_type": "regional_funding_report",
+      "published_on": "2021-12-15",
+      "url": "https://thestartupscene.me/INVESTMENTS/Egypt-s-Cashback-Marketplace-WaffarX-Raises-Multi-Million-Dollar-Round",
+      "supports": [
+        "Lobby Capital وA15",
+        "450 ألف عضو و260 شريكًا",
+        "التوسع الإقليمي"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "WaffarX Current Merchant-Funded Loyalty Positioning",
+      "publisher": "WaffarX via LinkedIn",
+      "source_type": "company_managed_product_update",
+      "published_on": "2026",
+      "url": "https://www.linkedin.com/company/waffarx",
+      "supports": [
+        "Embedded loyalty للبنوك والتقنية المالية",
+        "إدارة تمويل عروض التجار",
+        "التحقق والمصالحة",
+        "التفعيل والاستخدام والاحتفاظ"
+      ]
+    }
   ]
 }

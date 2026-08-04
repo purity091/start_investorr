@@ -2,51 +2,933 @@
   "id": "libas",
   "slug": "libas",
   "name": "لباس (Libas)",
-  "headline": "منصة الأزياء الفاخرة المستعملة التي خطفت 1.2 مليون درهم",
-  "category": "E-commerce & Circular Economy / التجارة الإلكترونية والأزياء",
+  "headline": "من خزانة راكدة إلى سوق عالمي موثّق: كيف تحوّل لباس الأصالة إلى بنية للتجارة الدائرية",
+  "category": "سوق إعادة بيع السلع الفاخرة والتجارة الدائرية",
   "company": {
-    "location": "دبي، الإمارات العربية المتحدة (Shark Tank Dubai)",
-    "business_model": "سوق إلكتروني (Marketplace) واقتطاع عمولات من المبيعات"
+    "location": "تأسست لباس في لبنان عام 2022 ثم توسعت إلى الإمارات. المشغّل الحالي المعلن في الشروط هو LIBAS COLLECTIVE TRADING CO. L.L.C S.O.C، ومقره المسجل في Business Bay بدبي. أعلن المؤسس باولو خياط في 3 فبراير 2025 استحواذ رائد الأعمال المقيم في دبي إيفان تودوروف على الشركة، مع بقاء خياط مستشارًا؛ ولم يُعلن سعر الاستحواذ أو هيكل الملكية اللاحق.",
+    "business_model": "سوق إلكتروني خفيف الأصول لبيع وشراء الأزياء والحقائب والساعات والمجوهرات الفاخرة المستعملة. الإدراج مجاني، ويحتفظ البائع بالقطعة حتى تنفيذ الطلب. وفق شروط 13 يونيو 2026، تفرض المنصة على البائع عمولة 10% للقطع دون 20,000 دولار أو 2,000 دولار ثابتة للقطع عند 20,000 دولار فأكثر، إضافة إلى 3% لمعالجة الدفع، وتفرض على المشتري رسوم خدمة بين 3% و13%. قد تُضاف رسوم تحويل عملة تصل إلى 5% عند اختلاف عملة العرض عن عملة البائع."
   },
   "directory_snapshot": {
-    "monthly_revenue": "مئات الآلاف من الدراهم",
-    "monthly_traffic": "آلاف المتسوقين والمهتمين بالماركات الفاخرة"
+    "monthly_revenue": "غير معلن. لا تنشر الشركة إيرادًا شهريًا أو سنويًا مدققًا أو صافي ربح. مبالغ التمويل، وقيمة البضائع المباعة عبر المنصة (GMV)، ورسوم العمولة المعلنة لا تساوي إيرادًا محققًا ما لم تفصح الشركة عنه.",
+    "monthly_traffic": "غير معلن. لا توجد بيانات رسمية عن زيارات الموقع الشهرية أو المستخدمين النشطين شهريًا. يعرض Google Play أكثر من 10 آلاف تنزيل تراكمي لتطبيق أندرويد، وتعرض صفحة الحقائب الرسمية أكثر من 15 ألف حقيبة مدرجة في يوليو 2026؛ وهذان مؤشران مختلفان عن الزيارات والعملاء النشطين والطلبات والمبيعات."
   },
   "overview": {
     "problem": {
-      "text": "أسعار الأزياء الفاخرة (Luxury Brands) في ارتفاع مستمر. في المقابل، يمتلك الكثيرون قطعاً فاخرة في خزائنهم لا يستخدمونها، ولكنهم يخشون بيعها عبر منصات غير موثوقة خوفاً من الاحتيال أو البخس.",
-      "impact": "تكدس الأزياء غير المستخدمة، وحرمان شريحة كبيرة من شراء الماركات العالمية بسبب التكلفة العالية، وتزايد معدلات التلوث من الموضة السريعة."
+      "text": "سوق إعادة بيع السلع الفاخرة يعاني ثلاثة احتكاكات مترابطة: صعوبة إثبات الأصالة والحالة، تشتت العرض بين أفراد وبائعين محترفين ودول متعددة، وعدم تماثل المعلومات عند التسعير والتفاوض. البائع يخشى التخفيض المفرط أو الاحتيال، والمشتري يخشى القطع المقلدة أو الوصف غير الدقيق، بينما تجعل المدفوعات والشحن والجمارك العابرة للحدود الصفقة أكثر تعقيدًا من بيع منتج تجزئة عادي.",
+      "impact": "تبقى قيمة مرتفعة مجمدة في الخزائن، ويضيق وصول المشترين إلى القطع الأصلية بأسعار أقل من الجديد، وتزداد كلفة بناء الثقة في كل صفقة. كما أن ضعف السيولة يجعل كثرة القوائم وحدها غير كافية؛ فالمنصة تحتاج عرضًا موثوقًا، وطلبًا مناسبًا، وسعرًا قابلًا للتنفيذ، ومسار تحقق وتسوية وشحن يعمل كوحدة واحدة."
     },
     "solution": {
-      "text": "منصة رقمية موثوقة لبيع وشراء الأزياء الفاخرة المستعملة (Pre-owned). تتولى المنصة فحص أصالة المنتجات (Authentication) لضمان عدم وجود قطع مقلدة، وتوفر بيئة آمنة للمشتري والبائع."
+      "text": "توفر لباس سوقًا رقميًا يربط البائعين والمشترين في الإمارات والسعودية ودوليًا، مع إدراج القطع وإرسال العروض والتفاوض والمراسلة وتتبع الطلبات عبر الويب وتطبيقات iOS وAndroid. يحتفظ البائع بالقطعة حتى البيع، ثم تمر القطع الخاضعة للتحقق عبر عملية متعددة الطبقات تستخدم تقنيات حالية وخدمة خارجية واحدة على الأقل، وأحيانًا خدمتين، مع إنشاء بصمة للقطعة قبل الشحن. تدعم المنصة البطاقات وApple Pay وتمارا وتابي، وتوفر محفظة وتسويات بنكية وشحنًا دوليًا، كما حسّنت التطبيق للغة العربية واتجاه RTL خلال 2026."
     }
   },
   "market_data": {
-    "target_audience": "عشاق الموضة الفاخرة (Luxury Consumers) الباحثين عن أسعار مخفضة، والأشخاص الراغبين في تسييل خزائنهم.",
-    "market_size": "سوق الأزياء المستعملة الفاخرة (Resale Market) وهو من أسرع الأسواق نمواً عالمياً.",
-    "growth_rate": "اقتنص تمويلاً بـ 1.2 مليون درهم لتوسيع العمليات وبناء مراكز فحص الجودة والأصالة."
+    "target_audience": "الأفراد الراغبون في تسييل قطع فاخرة أصلية لا يستخدمونها، والمشترون الباحثون عن قيمة أو قطع نادرة ومتوقفة، وهواة الجمع، والبائعون المحترفون وتجار إعادة البيع، والعملاء في الإمارات والسعودية والأسواق الدولية القادرون على التعامل مع الشحن والجمارك.",
+    "market_size": "لا تتوفر في المصادر العامة المراجعة قيمة سوق مدققة ومحددة لإعادة بيع الأزياء الفاخرة في الإمارات أو الخليج يمكن نسبها مباشرة إلى لباس. للسياق الأوسع فقط، قدّرت Bain وAltagamma سوق السلع الفاخرة الشخصية عالميًا بنحو 358 مليار يورو في 2025، وتوقعت 365–373 مليار يورو في السيناريو الأساسي لعام 2026. كما أفادت بأن نحو نصف متسوقي الفخامة يرجعون إلى سوق المستعمل قبل شراء الجديد. هذه أرقام للسوق العالمي الأوسع وليست حجم سوق لباس ولا إيرادها ولا GMV المنصة.",
+    "growth_rate": "لا تنشر لباس معدل نمو حديثًا ومدققًا للإيراد أو GMV أو الطلبات أو العملاء. ذكر ملف Forbes Middle East لعام 2023 أن GMV كان ينمو بمتوسط 37% شهريًا؛ وهو مقياس تاريخي منسوب للشركة، لا معدل إيراد ولا دليلًا على استمرار الوتيرة في 2026. أما 10 آلاف+ تنزيل أندرويد و15 ألف+ حقيبة مدرجة في يوليو 2026 فهما لقطتا انتشار ومخزون، وليستا معدل نمو."
   },
   "financials": {
-    "initial_investment": "استثمار من الشاركس مقابل حصة في الشركة لتسريع النمو التسويقي في الخليج.",
-    "valuation": "ملايين الدراهم",
+    "initial_investment": "أفاد Forbes Middle East في 2023 بأن الشركة جمعت 500 ألف دولار من مستثمرين ملائكيين. وأعلنت دبي للإعلام حصول مشروع لباس على تمويل قدره 1.2 مليون درهم عبر Shark Tank Dubai؛ وتذكر تغطية الحلقة أن العرض المعلن كان 1.2 مليون درهم مقابل 20%. لا يوجد إفصاح عام يثبت إتمام إجراءات الفحص والإغلاق وتحويل الأموال. وفي 3 فبراير 2025 أعلن المؤسس استحواذ إيفان تودوروف على الشركة دون كشف قيمة الصفقة.",
+    "valuation": "التقييم الحالي غير معلن. العرض التلفزيوني المعلن بقيمة 1.2 مليون درهم مقابل 20% يعني حسابيًا تقييمًا بعد الاستثمار قدره 6 ملايين درهم وتقييمًا قبل الاستثمار قدره 4.8 ملايين درهم، فقط إذا أُغلقت الصفقة بالشروط ذاتها. هذا التقييم الضمني ليس تقييمًا حاليًا، ولا يثبت قيمة الشركة عند الاستحواذ الذي لم يُعلن مقابله المالي.",
     "revenue_streams": [
-      "عمولة على كل عملية بيع ناجحة تتم عبر المنصة (Transaction Commission)",
-      "رسوم خدمات التوثيق والفحص (Authentication Fees)"
+      "عمولة بائع قدرها 10% من سعر البيع للقطع دون 20,000 دولار، أو رسم ثابت 2,000 دولار للقطع عند 20,000 دولار فأكثر.",
+      "رسم معالجة دفع قدره 3% من كامل سعر القطعة يُضاف إلى عمولة البائع.",
+      "رسم خدمة على المشتري يتراوح بين 3% و13% ويظهر قبل الدفع.",
+      "رسم تحويل عملة يصل إلى 5% عندما يعرض المشتري السعر بعملة تختلف عن العملة التي حددها البائع.",
+      "رسوم أو تكاليف مرتبطة بالتحقق والشحن والجمارك قد يتحملها المستخدم بحسب الحالة؛ لا تفصح الشروط عن الهامش الذي تحتفظ به المنصة منها، لذلك لا تُعامل تلقائيًا كإيراد صافٍ."
     ]
   },
   "lessons": [
     {
-      "title": "الثقة هي المنتج الحقيقي (Trust as a Service)",
-      "description": "في سوق السلع المستعملة الفاخرة، يخشى المشتري من البضائع المقلدة (Fake). القيمة الأساسية التي تبيعها منصة (لباس) ليست الملابس، بل (الثقة والتأكد من الأصالة). هذا ما جعلهم يتفوقون على أسواق مبوبة مثل دوبيزل."
+      "title": "الثقة ليست شارة؛ إنها سلسلة عمليات قابلة للإثبات",
+      "description": "في السلع الفاخرة، عبارة «أصلي» لا تكفي. القيمة تنشأ من مراجعة القائمة، والتحقق المادي، والاستعانة بخدمات مستقلة، وبصمة القطعة، وسجل يمكن الرجوع إليه عند النزاع. كل خطوة تقلل عدم تماثل المعلومات وتحوّل الثقة من وعد تسويقي إلى بنية تشغيلية."
     },
     {
-      "title": "الاقتصاد الدائري الفاخر (Circular Luxury)",
-      "description": "الاستدامة لم تعد مقتصرة على إعادة تدوير البلاستيك، بل وصلت للأزياء. الشاركس يدركون أن الجيل الجديد (Gen Z والميلينيالز) يفضلون شراء (ماركة مستعملة أصلية) على شراء (علامة سريعة رخيصة جديدة)، وهو تحول سلوكي هائل."
+      "title": "السوق الخفيف بالأصول يحافظ على رأس المال ويزيد عبء التنسيق",
+      "description": "إبقاء القطعة لدى البائع يقلل الحاجة إلى شراء مخزون وتمويل مستودعات ضخمة، لكنه يرفع مخاطر عدم التطابق والتأخير وانقطاع التوفر. لذلك يصبح ضبط زمن الشحن، ومراجعة القوائم، وإلغاء الطلبات غير المنفذة جزءًا أساسيًا من المنتج."
+    },
+    {
+      "title": "كثرة القوائم لا تعني وجود سيولة",
+      "description": "وجود آلاف القطع يوسّع الاختيار، لكنه لا يضمن البيع. السيولة الحقيقية تعني أن القطعة المناسبة تقابل المشتري المناسب بسعر وحالة وموقع وزمن شحن مقبول. لهذا يجب قياس سرعة البيع ونسبة العروض المقبولة وتكرار الشراء، لا عدد القوائم منفردًا."
+    },
+    {
+      "title": "العمولة من طرفي الصفقة تحتاج شفافية مضاعفة",
+      "description": "تحصيل رسوم من البائع والمشتري يرفع قدرة السوق على تمويل التحقق والدعم، لكنه قد يخلق صدمة سعرية عند الدفع. إظهار الرسوم بوضوح قبل الإتمام وربطها بخدمة مفهومة يحمي التحويل والثقة ويقلل النزاعات."
+    },
+    {
+      "title": "الصفقة التلفزيونية إشارة تفاوض وليست حقيقة مالية نهائية",
+      "description": "العرض المعلن في برنامج استثماري يسمح بحساب تقييم ضمني للحظة التفاوض فقط. بعد التصوير قد تتغير الشروط أو تفشل إجراءات الفحص. التحليل المهني يفصل دائمًا بين العرض، والإغلاق، والتمويل المحول، والتقييم الحالي."
+    },
+    {
+      "title": "الاستحواذ يختبر قابلية الشركة للاستمرار بعيدًا عن المؤسس",
+      "description": "انتقال الملكية مع بقاء المؤسس مستشارًا يوضح أهمية فصل العلامة والعمليات والعلاقات والبيانات عن الحضور اليومي للمؤسس. القيمة المستدامة تظهر عندما تستمر السوق في تحسين الخدمة والتوسع بعد تغير القيادة."
+    },
+    {
+      "title": "التوطين العربي طبقة تحويل لا مجرد ترجمة",
+      "description": "تحسين العربية واتجاه RTL، والفواتير، وتقارير التحقق، والمحفظة والدفع المحلي يقلل الاحتكاك في رحلة عالية القيمة. في التجارة الفاخرة، أي غموض لغوي أو مالي قد يوقف صفقة كبيرة، لذلك يصبح التوطين جزءًا من الثقة والامتثال."
+    },
+    {
+      "title": "الخدمات اللوجستية والجمارك جزء من الخندق التنافسي",
+      "description": "بيع حقيبة أو ساعة بين دولتين يتطلب شحنًا متتبعًا ووثائق جمركية وتقدير رسوم ومعالجة مواد قد تخضع لقيود. المنصة التي توحّد هذه الخطوات تقلل احتمالات فشل الصفقة وتبني خبرة يصعب تكرارها بمجرد إنشاء واجهة سوق."
+    },
+    {
+      "title": "المحتوى المتخصص يحوّل البحث إلى طلب عالي النية",
+      "description": "أدلة الأسعار والمقاسات والموديلات والأصالة تجذب مستخدمًا يبحث قبل شراء مرتفع القيمة. هذا المحتوى لا يروّج فقط؛ بل يقلل فجوة المعرفة، ويحسن جودة المشتري، ويخلق مسارًا عضويًا نحو القوائم المتاحة."
+    },
+    {
+      "title": "بيانات الحالة والسعر والعروض يمكن أن تصبح الأصل الأهم",
+      "description": "مع كل قائمة وعرض ونتيجة تحقق، تتكون قاعدة بيانات عن السعر القابل للتنفيذ وتأثير الحالة والندرة والموقع. استخدام هذه البيانات لتوجيه التسعير وكشف الشذوذ وترتيب القوائم قد يصبح ميزة أقوى من عدد المنتجات نفسه، مع ضرورة عدم الادعاء بأن نظام ذكاء اصطناعي معين يعمل حاليًا دون إفصاح موثق."
     }
   ],
   "tools": [
-    "AI Authentication Tools (لفحص الصور والأنسجة)",
-    "Magento / Custom E-commerce",
-    "Secure Escrow Payments"
+    "سوق ويب لعرض القطع وإدارة القوائم والشراء والبيع.",
+    "تطبيقات رسمية على iOS وAndroid، مع أكثر من 10 آلاف تنزيل تراكمي ظاهر على Google Play وقت التحقق.",
+    "العروض والتفاوض والمراسلة والإشعارات وتتبع الطلبات داخل التطبيق.",
+    "تحقق متعدد الطبقات باستخدام تقنيات حالية وخدمة تحقق خارجية واحدة على الأقل وأحيانًا خدمتين.",
+    "إنشاء بصمة للقطعة قبل الشحن وربط نتائج التحقق والتقارير بالطلب.",
+    "محفظة داخلية وتسويات أرباح البائعين عبر التحويل البنكي.",
+    "بطاقات ائتمان وخصم وApple Pay وTabby وTamara، ومدفوعات عملات مشفرة عبر شركاء مخصصين وفق الشروط.",
+    "شحن دولي مع تتبع، وإدارة تكاليف الشحن والجمارك بحسب الوجهة.",
+    "دعم العربية وتخطيط RTL وتحسينات للفواتير وتقارير التحقق والدفع خلال تحديثات 2026.",
+    "محتوى تحريري وأدلة أسعار وشراء وأصالة ضمن The Crypt لدعم الاكتشاف والقرار الشرائي."
+  ],
+  "verification": {
+    "status": "verified_from_official_company_legal_app_broadcaster_founder_market_and_government_sources",
+    "verified_on": "2026-08-03",
+    "source_policy": "أُعطيت الأولوية لشروط لباس الرسمية المحدثة في 13 يونيو 2026، وصفحات الشركة والتطبيقات الرسمية، ثم إعلان المؤسس ودبي للإعلام، وتقرير Bain وAltagamma، والمصادر الحكومية الإماراتية. استُخدمت تغطية SharkTankArabi كمصدر ثانوي محدود لشروط العرض التلفزيوني، لا كدليل إغلاق. لم تُستخدم تقديرات مواقع الزيارات أو الإيرادات. وبما أن لباس شركة خاصة إماراتية، لا تُعد إيداعات SEC مسار إفصاح طبيعيًا لها؛ لم يظهر في البحث العام عن EDGAR ملف مُصدر باسم Libas Collective حتى تاريخ التحقق.",
+    "important_notes": [
+      "1.2 مليون درهم هو تمويل معلن في Shark Tank Dubai، وليس إيرادًا ولا ربحًا.",
+      "العرض المعلن 1.2 مليون درهم مقابل 20% يعطي تقييمًا ضمنيًا بعد الاستثمار قدره 6 ملايين درهم فقط إذا أُغلقت الصفقة بالشروط نفسها.",
+      "لا يوجد إفصاح عام يثبت إغلاق صفقة Shark Tank أو تحويل الأموال أو هيكل الحصص النهائي.",
+      "500 ألف دولار تمويل ملائكي تاريخي ورد في Forbes Middle East لعام 2023؛ لا يمثل الإيراد أو التقييم.",
+      "معدل 37% شهريًا يخص نمو GMV التاريخي المعلن في سياق 2023، وليس نمو الإيراد ولا معدلًا حاليًا لعام 2026.",
+      "الإيراد الشهري والسنوي وصافي الربح والتقييم الحالي وحجم GMV الحالي غير معلنة في المصادر العامة الموثوقة.",
+      "زيارات الموقع الشهرية والمستخدمون النشطون غير معلنين؛ 10K+ تنزيلات Google Play رقم تراكمي لأندرويد وليس MAU.",
+      "15,000+ حقيبة في صفحة يوليو 2026 تمثل قوائم معروضة في فئة الحقائب، وليست مبيعات أو مستخدمين أو GMV.",
+      "أعلن المؤسس الاستحواذ في 3 فبراير 2025 دون كشف سعر الصفقة أو هيكل الملكية الحالي.",
+      "حُذفت ادعاءات «مئات الآلاف من الدراهم إيرادًا شهريًا» و«ملايين الدراهم تقييمًا» لعدم وجود سند قابل للتحقق.",
+      "حُذفت Magento وSecure Escrow Payments وأداة AI حالية محددة من قائمة الأدوات؛ المتاح علنًا يثبت قدرات تحقق ومدفوعات ومحفظة، لا هذه البنية التقنية بعينها.",
+      "أرقام السوق العالمي من Bain سياق للقطاع الأوسع، ولا تمثل TAM خليجيًا خاصًا بلباس أو إيراد الشركة."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تفصيلية تربط كل حقل بقيمته وحالة التحقق ودرجة الثقة والمصادر المباشرة وما يثبته كل مصدر والقيود اللازمة للفصل بين الإيراد والتقييم والتمويل وGMV والمستخدمين والتنزيلات والقوائم.",
+    "status_values": {
+      "verified": "الادعاء مدعوم بمصدر رسمي مباشر أو بمصادر أولية متقاطعة.",
+      "verified_company_reported_metric_with_definition_limits": "المقياس منشور من الشركة أو في ملف موثق عنها، لكن تعريفه أو فترته أو نطاقه يحد من المقارنة.",
+      "verified_as_not_publicly_disclosed": "لم تنشر الشركة المقياس المطلوب، ولذلك لم يُستخدم تقدير بديل غير موثوق.",
+      "verified_official_pricing_current": "المعلومة مأخوذة من شروط أو أسعار رسمية كما ظهرت في تاريخ التحقق وقد تتغير لاحقًا.",
+      "verified_financing_not_valuation": "المبلغ تمويل أو عرض استثماري معلن، مع التنبيه إلى أنه لا يمثل الإيراد أو التقييم تلقائيًا.",
+      "verified_regulatory_market_indicator": "المعلومة سياق سوق أو سياسة صادر عن جهة رسمية وليست رقمًا ماليًا للشركة.",
+      "analytical_inference": "تحليل مهني أو حساب مبني على حقائق موثقة وليس تصريحًا حرفيًا من الشركة."
+    },
+    "confidence_scale": {
+      "high": "مصدر رسمي مباشر أو شروط قانونية أو متجر تطبيقات رسمي واضح.",
+      "medium_high": "معلومة موثقة مع حدود تعريف، أو استنتاج مدعوم بمصادر متعددة.",
+      "medium": "استنتاج تشغيلي معقول لا يتوفر له إفصاح كمي مستقل."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "تأسست لباس في لبنان عام 2022 ثم توسعت إلى الإمارات. المشغّل الحالي المعلن في الشروط هو LIBAS COLLECTIVE TRADING CO. L.L.C S.O.C، ومقره المسجل في Business Bay بدبي. أعلن المؤسس باولو خياط في 3 فبراير 2025 استحواذ رائد الأعمال المقيم في دبي إيفان تودوروف على الشركة، مع بقاء خياط مستشارًا؛ ولم يُعلن سعر الاستحواذ أو هيكل الملكية اللاحق.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "founding_current_legal_location_and_acquisition_timeline",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تتقاطع صفحة Forbes التاريخية مع الشروط القانونية الحالية وإعلان المؤسس لتحديد النشأة والمقر الحالي وتغير الملكية المعلن.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-06",
+        "SRC-02",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Paolo Khayat — 30 Under 30 2023",
+          "publisher": "Forbes Middle East",
+          "source_type": "editorial_profile_with_company_reported_metrics",
+          "url": "https://www.forbesmiddleeast.com/lists/30-under-30-2023/paolo-khayat/",
+          "evidence_type": "direct",
+          "source_locator": "Company profile",
+          "supports": "التأسيس في لبنان عام 2022 ثم التوسع إلى الإمارات.",
+          "published_on": "2023-11-17"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Terms & Conditions",
+          "publisher": "Libas Collective",
+          "source_type": "official_company_legal_terms",
+          "url": "https://www.libascollective.com/terms-and-conditions",
+          "evidence_type": "direct",
+          "source_locator": "Introduction & Definitions",
+          "supports": "الاسم القانوني الحالي والعنوان المسجل في Business Bay بدبي.",
+          "published_on": "2026-06-13"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "A New Chapter Begins — Libas acquisition announcement",
+          "publisher": "Paolo Khayat on LinkedIn",
+          "source_type": "founder_primary_announcement",
+          "url": "https://www.linkedin.com/posts/paolo-khayat_a-new-chapter-begins-after-35-years-of-activity-7292126437946355713-9Ujx",
+          "evidence_type": "direct",
+          "source_locator": "Founder announcement",
+          "supports": "إعلان الاستحواذ وبقاء المؤسس مستشارًا.",
+          "published_on": "2025-02-03"
+        }
+      ],
+      "limitations": "لم يُنشر سعر الاستحواذ أو سجل مساهمين حديث؛ لذلك لا يُستنتج هيكل الملكية الكامل."
+    },
+    "$.company.business_model": {
+      "field_value": "سوق إلكتروني خفيف الأصول لبيع وشراء الأزياء والحقائب والساعات والمجوهرات الفاخرة المستعملة. الإدراج مجاني، ويحتفظ البائع بالقطعة حتى تنفيذ الطلب. وفق شروط 13 يونيو 2026، تفرض المنصة على البائع عمولة 10% للقطع دون 20,000 دولار أو 2,000 دولار ثابتة للقطع عند 20,000 دولار فأكثر، إضافة إلى 3% لمعالجة الدفع، وتفرض على المشتري رسوم خدمة بين 3% و13%. قد تُضاف رسوم تحويل عملة تصل إلى 5% عند اختلاف عملة العرض عن عملة البائع.",
+      "verification_status": "verified_official_pricing_current",
+      "confidence": "high",
+      "claim_type": "asset_light_marketplace_and_current_fee_model",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تشرح الشروط الرسمية الحالية دور المنصة، واحتفاظ البائع بالقطعة، وتسعير الرسوم على طرفي الصفقة.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-02",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Terms & Conditions",
+          "publisher": "Libas Collective",
+          "source_type": "official_company_legal_terms",
+          "url": "https://www.libascollective.com/terms-and-conditions",
+          "evidence_type": "direct",
+          "source_locator": "Sections 4, 5 and 14",
+          "supports": "الإدراج المجاني والعمولات ورسوم الدفع والمشتري وتحويل العملة وتسعير البائع.",
+          "published_on": "2026-06-13"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Libas Collective — Pre-Owned Luxury Marketplace in Dubai",
+          "publisher": "Libas Collective",
+          "source_type": "official_company_website",
+          "url": "https://www.libascollective.com/about-us",
+          "evidence_type": "direct",
+          "source_locator": "About section",
+          "supports": "السوق الذي يربط المشترين والبائعين في عدة أسواق."
+        }
+      ],
+      "limitations": "الرسوم لقطة سارية وفق تحديث 13 يونيو 2026 وقد تتغير. لا تكشف الشروط نسبة مساهمة كل مسار في الإيراد."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. لا تنشر الشركة إيرادًا شهريًا أو سنويًا مدققًا أو صافي ربح. مبالغ التمويل، وقيمة البضائع المباعة عبر المنصة (GMV)، ورسوم العمولة المعلنة لا تساوي إيرادًا محققًا ما لم تفصح الشركة عنه.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "revenue_not_disclosed_and_financing_gmv_fees_separated",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تنشر المصادر رسومًا وتمويلًا ومقياس GMV تاريخيًا، لكنها لا تنشر إيرادًا شهريًا أو سنويًا مدققًا.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-02",
+        "SRC-06",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Terms & Conditions",
+          "publisher": "Libas Collective",
+          "source_type": "official_company_legal_terms",
+          "url": "https://www.libascollective.com/terms-and-conditions",
+          "evidence_type": "direct",
+          "source_locator": "Commission & fees",
+          "supports": "أسعار الرسوم الحالية، وهي تسعير وليست إفصاح إيراد.",
+          "published_on": "2026-06-13"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Paolo Khayat — 30 Under 30 2023",
+          "publisher": "Forbes Middle East",
+          "source_type": "editorial_profile_with_company_reported_metrics",
+          "url": "https://www.forbesmiddleeast.com/lists/30-under-30-2023/paolo-khayat/",
+          "evidence_type": "direct",
+          "source_locator": "Funding and GMV profile",
+          "supports": "تمويل ملائكي ونمو GMV تاريخي، لا إيراد.",
+          "published_on": "2023-11-17"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Dubai Media Incorporated — Shark Tank Dubai funding recap",
+          "publisher": "Dubai Media Incorporated",
+          "source_type": "official_broadcaster_primary_recap",
+          "url": "https://www.dubaitv.ae/content/corporate/en-ae/programs/41/2507283.html",
+          "evidence_type": "direct",
+          "source_locator": "Funding recap",
+          "supports": "1.2 مليون درهم تمويل معلن، لا إيراد.",
+          "published_on": "2025"
+        }
+      ],
+      "limitations": "غياب الإفصاح العام لا يثبت أن الشركة بلا إيراد؛ يعني فقط أن الرقم غير متاح للتحقق."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن. لا توجد بيانات رسمية عن زيارات الموقع الشهرية أو المستخدمين النشطين شهريًا. يعرض Google Play أكثر من 10 آلاف تنزيل تراكمي لتطبيق أندرويد، وتعرض صفحة الحقائب الرسمية أكثر من 15 ألف حقيبة مدرجة في يوليو 2026؛ وهذان مؤشران مختلفان عن الزيارات والعملاء النشطين والطلبات والمبيعات.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "traffic_not_disclosed_and_downloads_inventory_separated",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا تنشر الشركة زيارات شهرية أو MAU؛ المتاح هو تنزيلات أندرويد التراكمية وحجم قوائم فئة الحقائب.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-04",
+        "SRC-10",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Libas Collective — Apps on Google Play",
+          "publisher": "Google Play / Libas Collective Trading LLC",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?id=com.libas.libas",
+          "evidence_type": "direct",
+          "source_locator": "Google Play listing",
+          "supports": "10K+ تنزيلات تراكمية لتطبيق أندرويد.",
+          "published_on": "2026-06-28"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Buy Luxury Bags for Men & Women",
+          "publisher": "Libas Collective",
+          "source_type": "official_company_inventory_page",
+          "url": "https://www.libascollective.com/bags",
+          "evidence_type": "direct",
+          "source_locator": "July 2026 inventory snapshot",
+          "supports": "15,000+ حقيبة مدرجة.",
+          "published_on": "2026-07"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Libas Collective App",
+          "publisher": "Apple App Store / LIBAS COLLECTIVE TRADING CO. L.L.C S.O.C",
+          "source_type": "official_app_store_listing",
+          "url": "https://apps.apple.com/ae/app/libas-collective/id1605637445",
+          "evidence_type": "direct",
+          "source_locator": "App Store listing",
+          "supports": "وجود تطبيق iOS وتحديثاته دون رقم مستخدمين نشطين.",
+          "published_on": "2026-08"
+        }
+      ],
+      "limitations": "التنزيلات لا تساوي المستخدمين النشطين، وعدد القوائم لا يساوي العملاء أو الزيارات أو الطلبات."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "سوق إعادة بيع السلع الفاخرة يعاني ثلاثة احتكاكات مترابطة: صعوبة إثبات الأصالة والحالة، تشتت العرض بين أفراد وبائعين محترفين ودول متعددة، وعدم تماثل المعلومات عند التسعير والتفاوض. البائع يخشى التخفيض المفرط أو الاحتيال، والمشتري يخشى القطع المقلدة أو الوصف غير الدقيق، بينما تجعل المدفوعات والشحن والجمارك العابرة للحدود الصفقة أكثر تعقيدًا من بيع منتج تجزئة عادي.",
+        "impact": "تبقى قيمة مرتفعة مجمدة في الخزائن، ويضيق وصول المشترين إلى القطع الأصلية بأسعار أقل من الجديد، وتزداد كلفة بناء الثقة في كل صفقة. كما أن ضعف السيولة يجعل كثرة القوائم وحدها غير كافية؛ فالمنصة تحتاج عرضًا موثوقًا، وطلبًا مناسبًا، وسعرًا قابلًا للتنفيذ، ومسار تحقق وتسوية وشحن يعمل كوحدة واحدة."
+      },
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "luxury_resale_trust_liquidity_and_cross_border_friction",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التحليل يجمع بين قواعد المنصة بشأن الأصالة والوصف والشحن والجمارك وبين اتجاه المستهلك إلى سوق المستعمل.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-02",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Terms & Conditions",
+          "publisher": "Libas Collective",
+          "source_type": "official_company_legal_terms",
+          "url": "https://www.libascollective.com/terms-and-conditions",
+          "evidence_type": "direct",
+          "source_locator": "Listings, authentication, customs and delivery",
+          "supports": "المخاطر العملية المتعلقة بالوصف والأصالة والشحن والجمارك.",
+          "published_on": "2026-06-13"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "2026 Luxury Goods Worldwide Market Study — Spring Update",
+          "publisher": "Bain & Company in partnership with Altagamma",
+          "source_type": "primary_market_research_release",
+          "url": "https://www.bain.cn/news_info.php?id=2150",
+          "evidence_type": "direct",
+          "source_locator": "Consumer and resale findings",
+          "supports": "اعتماد المستهلك المتزايد على سوق المستعمل قبل شراء الجديد.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "صياغة المشكلة تحليل مهني وليست اقتباسًا حرفيًا أو قياسًا كميًا لخسائر السوق."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "توفر لباس سوقًا رقميًا يربط البائعين والمشترين في الإمارات والسعودية ودوليًا، مع إدراج القطع وإرسال العروض والتفاوض والمراسلة وتتبع الطلبات عبر الويب وتطبيقات iOS وAndroid. يحتفظ البائع بالقطعة حتى البيع، ثم تمر القطع الخاضعة للتحقق عبر عملية متعددة الطبقات تستخدم تقنيات حالية وخدمة خارجية واحدة على الأقل، وأحيانًا خدمتين، مع إنشاء بصمة للقطعة قبل الشحن. تدعم المنصة البطاقات وApple Pay وتمارا وتابي، وتوفر محفظة وتسويات بنكية وشحنًا دوليًا، كما حسّنت التطبيق للغة العربية واتجاه RTL خلال 2026."
+      },
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "marketplace_authentication_payments_logistics_and_localization",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت الصفحات الرسمية خصائص السوق والتحقق والمدفوعات والمحفظة والشحن وتطبيقات الهاتف والتوطين العربي.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Libas Collective — Pre-Owned Luxury Marketplace in Dubai",
+          "publisher": "Libas Collective",
+          "source_type": "official_company_website",
+          "url": "https://www.libascollective.com/about-us",
+          "evidence_type": "direct",
+          "source_locator": "About section",
+          "supports": "النطاق الجغرافي والفئات والتحقق والشحن الدولي."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Terms & Conditions",
+          "publisher": "Libas Collective",
+          "source_type": "official_company_legal_terms",
+          "url": "https://www.libascollective.com/terms-and-conditions",
+          "evidence_type": "direct",
+          "source_locator": "Sections 4–9",
+          "supports": "دورة البيع والتحقق وبصمة القطعة والمحفظة والمدفوعات.",
+          "published_on": "2026-06-13"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Download Our App — iPhone & Android",
+          "publisher": "Libas Collective",
+          "source_type": "official_company_product_page",
+          "url": "https://www.libascollective.com/mobile-apps",
+          "evidence_type": "direct",
+          "source_locator": "App capabilities",
+          "supports": "الإدراج والتفاوض والإشعارات وتتبع الشحن."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Libas Collective App",
+          "publisher": "Apple App Store / LIBAS COLLECTIVE TRADING CO. L.L.C S.O.C",
+          "source_type": "official_app_store_listing",
+          "url": "https://apps.apple.com/ae/app/libas-collective/id1605637445",
+          "evidence_type": "direct",
+          "source_locator": "2026 release notes",
+          "supports": "تحسينات العربية وRTL وتقارير التحقق والفواتير والمحفظة.",
+          "published_on": "2026-08"
+        }
+      ],
+      "limitations": "لا تفصح المصادر عن مزودي التقنية أو خوارزمية تحقق مملوكة؛ لذلك لم تُنسب بنية تقنية محددة إلى الشركة."
+    },
+    "$.market_data.target_audience": {
+      "field_value": "الأفراد الراغبون في تسييل قطع فاخرة أصلية لا يستخدمونها، والمشترون الباحثون عن قيمة أو قطع نادرة ومتوقفة، وهواة الجمع، والبائعون المحترفون وتجار إعادة البيع، والعملاء في الإمارات والسعودية والأسواق الدولية القادرون على التعامل مع الشحن والجمارك.",
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "consumer_professional_seller_and_cross_border_segments",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "فئات المنتجات وقواعد البيع والنطاق الدولي تدعم شرائح البائعين والمشترين المذكورة.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Libas Collective — Pre-Owned Luxury Marketplace in Dubai",
+          "publisher": "Libas Collective",
+          "source_type": "official_company_website",
+          "url": "https://www.libascollective.com/about-us",
+          "evidence_type": "direct",
+          "source_locator": "Marketplace description",
+          "supports": "المشترون والبائعون في الإمارات والسعودية ودوليًا."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Terms & Conditions",
+          "publisher": "Libas Collective",
+          "source_type": "official_company_legal_terms",
+          "url": "https://www.libascollective.com/terms-and-conditions",
+          "evidence_type": "direct",
+          "source_locator": "Seller and Buyer terms",
+          "supports": "الأفراد والبائعون وشروط البيع والشراء العابرة للحدود.",
+          "published_on": "2026-06-13"
+        }
+      ],
+      "limitations": "لا تنشر الشركة توزيع العملاء بين الأفراد والتجار المحترفين أو الدول."
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تتوفر في المصادر العامة المراجعة قيمة سوق مدققة ومحددة لإعادة بيع الأزياء الفاخرة في الإمارات أو الخليج يمكن نسبها مباشرة إلى لباس. للسياق الأوسع فقط، قدّرت Bain وAltagamma سوق السلع الفاخرة الشخصية عالميًا بنحو 358 مليار يورو في 2025، وتوقعت 365–373 مليار يورو في السيناريو الأساسي لعام 2026. كما أفادت بأن نحو نصف متسوقي الفخامة يرجعون إلى سوق المستعمل قبل شراء الجديد. هذه أرقام للسوق العالمي الأوسع وليست حجم سوق لباس ولا إيرادها ولا GMV المنصة.",
+      "verification_status": "verified_company_reported_metric_with_definition_limits",
+      "confidence": "high",
+      "claim_type": "global_luxury_context_not_company_tam",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يوفر تقرير Bain وAltagamma سياقًا عالميًا للسلع الفاخرة وسلوك المستعمل، مع رفض تحويله إلى TAM إقليمي أو إيراد للشركة.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-11",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "2026 Luxury Goods Worldwide Market Study — Spring Update",
+          "publisher": "Bain & Company in partnership with Altagamma",
+          "source_type": "primary_market_research_release",
+          "url": "https://www.bain.cn/news_info.php?id=2150",
+          "evidence_type": "direct",
+          "source_locator": "Key report highlights and personal luxury goods section",
+          "supports": "حجم سوق السلع الفاخرة الشخصية في 2025 وتوقع 2026 وسلوك الرجوع للمستعمل.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "UAE Circular Economy Council holds first meeting of 2025",
+          "publisher": "UAE Ministry of Economy and Tourism",
+          "source_type": "official_government_policy_update",
+          "url": "https://www.moec.gov.ae/en/-/uae-circular-economy-council-holds-first-meeting-of-2025-to-discuss-implementation-of-new-circular-economy-policies",
+          "evidence_type": "contextual",
+          "source_locator": "Circular economy policy update",
+          "supports": "السياق الإماراتي للاقتصاد الدائري والمنسوجات.",
+          "published_on": "2025-03-12"
+        }
+      ],
+      "limitations": "السوق العالمي للسلع الفاخرة الشخصية أوسع من سوق إعادة البيع وأوسع من نطاق لباس؛ لا توجد حصة سوق موثقة للشركة."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا تنشر لباس معدل نمو حديثًا ومدققًا للإيراد أو GMV أو الطلبات أو العملاء. ذكر ملف Forbes Middle East لعام 2023 أن GMV كان ينمو بمتوسط 37% شهريًا؛ وهو مقياس تاريخي منسوب للشركة، لا معدل إيراد ولا دليلًا على استمرار الوتيرة في 2026. أما 10 آلاف+ تنزيل أندرويد و15 ألف+ حقيبة مدرجة في يوليو 2026 فهما لقطتا انتشار ومخزون، وليستا معدل نمو.",
+      "verification_status": "verified_company_reported_metric_with_definition_limits",
+      "confidence": "medium_high",
+      "claim_type": "historical_gmv_growth_not_current_revenue_growth",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "معدل 37% هو GMV تاريخي في ملف 2023، بينما التنزيلات والقوائم الحالية مؤشرات انتشار لا معدلات نمو.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-06",
+        "SRC-04",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Paolo Khayat — 30 Under 30 2023",
+          "publisher": "Forbes Middle East",
+          "source_type": "editorial_profile_with_company_reported_metrics",
+          "url": "https://www.forbesmiddleeast.com/lists/30-under-30-2023/paolo-khayat/",
+          "evidence_type": "direct",
+          "source_locator": "2023 company profile",
+          "supports": "متوسط نمو GMV الشهري 37% في السياق التاريخي.",
+          "published_on": "2023-11-17"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Libas Collective — Apps on Google Play",
+          "publisher": "Google Play / Libas Collective Trading LLC",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?id=com.libas.libas",
+          "evidence_type": "direct",
+          "source_locator": "Google Play listing",
+          "supports": "10K+ تنزيلات تراكمية.",
+          "published_on": "2026-06-28"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Buy Luxury Bags for Men & Women",
+          "publisher": "Libas Collective",
+          "source_type": "official_company_inventory_page",
+          "url": "https://www.libascollective.com/bags",
+          "evidence_type": "direct",
+          "source_locator": "July 2026 bags page",
+          "supports": "15,000+ حقيبة مدرجة.",
+          "published_on": "2026-07"
+        }
+      ],
+      "limitations": "لا تتوفر سلسلة زمنية حديثة أو تعريف موحد يسمح بحساب نمو 2026 أو مقارنة المؤشرات مباشرة."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "أفاد Forbes Middle East في 2023 بأن الشركة جمعت 500 ألف دولار من مستثمرين ملائكيين. وأعلنت دبي للإعلام حصول مشروع لباس على تمويل قدره 1.2 مليون درهم عبر Shark Tank Dubai؛ وتذكر تغطية الحلقة أن العرض المعلن كان 1.2 مليون درهم مقابل 20%. لا يوجد إفصاح عام يثبت إتمام إجراءات الفحص والإغلاق وتحويل الأموال. وفي 3 فبراير 2025 أعلن المؤسس استحواذ إيفان تودوروف على الشركة دون كشف قيمة الصفقة.",
+      "verification_status": "verified_financing_not_valuation",
+      "confidence": "medium_high",
+      "claim_type": "angel_funding_shark_tank_offer_and_acquisition_timeline",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المصادر التمويل الملائكي التاريخي، وإعلان تمويل Shark Tank، ثم إعلان الاستحواذ، مع فصل كل حدث عن الإيراد والتقييم.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-06",
+        "SRC-07",
+        "SRC-08",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Paolo Khayat — 30 Under 30 2023",
+          "publisher": "Forbes Middle East",
+          "source_type": "editorial_profile_with_company_reported_metrics",
+          "url": "https://www.forbesmiddleeast.com/lists/30-under-30-2023/paolo-khayat/",
+          "evidence_type": "direct",
+          "source_locator": "Funding statement",
+          "supports": "500 ألف دولار تمويل ملائكي بحلول 2023.",
+          "published_on": "2023-11-17"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Dubai Media Incorporated — Shark Tank Dubai funding recap",
+          "publisher": "Dubai Media Incorporated",
+          "source_type": "official_broadcaster_primary_recap",
+          "url": "https://www.dubaitv.ae/content/corporate/en-ae/programs/41/2507283.html",
+          "evidence_type": "direct",
+          "source_locator": "Official broadcaster recap",
+          "supports": "1.2 مليون درهم تمويل معلن عبر البرنامج.",
+          "published_on": "2025"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "شارك تانك دبي — تطبيق لبيع وشراء العلامات التجارية الفاخرة والتحقق من أصالتها",
+          "publisher": "SharkTankArabi",
+          "source_type": "secondary_episode_transcript_and_recap",
+          "url": "https://sharktankarabi.com/2908/",
+          "evidence_type": "secondary",
+          "source_locator": "Episode recap",
+          "supports": "الشروط التلفزيونية المعلنة 1.2 مليون درهم مقابل 20%.",
+          "published_on": "2025-07-22"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "A New Chapter Begins — Libas acquisition announcement",
+          "publisher": "Paolo Khayat on LinkedIn",
+          "source_type": "founder_primary_announcement",
+          "url": "https://www.linkedin.com/posts/paolo-khayat_a-new-chapter-begins-after-35-years-of-activity-7292126437946355713-9Ujx",
+          "evidence_type": "direct",
+          "source_locator": "Founder acquisition announcement",
+          "supports": "استحواذ معلن في فبراير 2025 دون قيمة.",
+          "published_on": "2025-02-03"
+        }
+      ],
+      "limitations": "لم يُعثر على مستند إغلاق أو سجل ملكية أو إفصاح بتحويل مبلغ صفقة Shark Tank؛ لذا توصف بأنها صفقة معلنة."
+    },
+    "$.financials.valuation": {
+      "field_value": "التقييم الحالي غير معلن. العرض التلفزيوني المعلن بقيمة 1.2 مليون درهم مقابل 20% يعني حسابيًا تقييمًا بعد الاستثمار قدره 6 ملايين درهم وتقييمًا قبل الاستثمار قدره 4.8 ملايين درهم، فقط إذا أُغلقت الصفقة بالشروط ذاتها. هذا التقييم الضمني ليس تقييمًا حاليًا، ولا يثبت قيمة الشركة عند الاستحواذ الذي لم يُعلن مقابله المالي.",
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "implied_tv_deal_valuation_not_current_valuation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "حُسب التقييم الضمني من العرض التلفزيوني، مع توضيح أنه مشروط بالإغلاق ولا يمثل التقييم الحالي أو سعر الاستحواذ.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-08",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "شارك تانك دبي — تطبيق لبيع وشراء العلامات التجارية الفاخرة والتحقق من أصالتها",
+          "publisher": "SharkTankArabi",
+          "source_type": "secondary_episode_transcript_and_recap",
+          "url": "https://sharktankarabi.com/2908/",
+          "evidence_type": "secondary",
+          "source_locator": "Announced final offer",
+          "supports": "1.2 مليون درهم مقابل 20% كأساس الحساب.",
+          "published_on": "2025-07-22"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "A New Chapter Begins — Libas acquisition announcement",
+          "publisher": "Paolo Khayat on LinkedIn",
+          "source_type": "founder_primary_announcement",
+          "url": "https://www.linkedin.com/posts/paolo-khayat_a-new-chapter-begins-after-35-years-of-activity-7292126437946355713-9Ujx",
+          "evidence_type": "direct",
+          "source_locator": "Acquisition announcement",
+          "supports": "وجود استحواذ لاحق دون كشف المقابل.",
+          "published_on": "2025-02-03"
+        }
+      ],
+      "limitations": "الحساب الرياضي صحيح للشروط المعلنة فقط: 1.2 ÷ 20% = 6 ملايين درهم بعد الاستثمار، و4.8 ملايين قبل الاستثمار."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "عمولة بائع قدرها 10% من سعر البيع للقطع دون 20,000 دولار، أو رسم ثابت 2,000 دولار للقطع عند 20,000 دولار فأكثر.",
+        "رسم معالجة دفع قدره 3% من كامل سعر القطعة يُضاف إلى عمولة البائع.",
+        "رسم خدمة على المشتري يتراوح بين 3% و13% ويظهر قبل الدفع.",
+        "رسم تحويل عملة يصل إلى 5% عندما يعرض المشتري السعر بعملة تختلف عن العملة التي حددها البائع.",
+        "رسوم أو تكاليف مرتبطة بالتحقق والشحن والجمارك قد يتحملها المستخدم بحسب الحالة؛ لا تفصح الشروط عن الهامش الذي تحتفظ به المنصة منها، لذلك لا تُعامل تلقائيًا كإيراد صافٍ."
+      ],
+      "verification_status": "verified_official_pricing_current",
+      "confidence": "high",
+      "claim_type": "current_transaction_fee_and_service_fee_paths",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "جميع مسارات الرسوم الأساسية مأخوذة من الشروط الرسمية الحالية، مع تقييد بنود التحقق والشحن لعدم وضوح الهامش.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Terms & Conditions",
+          "publisher": "Libas Collective",
+          "source_type": "official_company_legal_terms",
+          "url": "https://www.libascollective.com/terms-and-conditions",
+          "evidence_type": "direct",
+          "source_locator": "Sections 4.1, 5.1, 5.3 and 5.5",
+          "supports": "عمولة البائع ومعالجة الدفع وخدمة المشتري وتحويل العملة وتكاليف الشحن والتحقق.",
+          "published_on": "2026-06-13"
+        }
+      ],
+      "limitations": "وجود رسم في الشروط لا يثبت حجم الإيراد أو الهامش أو نسبة مساهمته. قد تتغير الرسوم بعد تاريخ التحقق."
+    },
+    "$.tools": {
+      "field_value": [
+        "سوق ويب لعرض القطع وإدارة القوائم والشراء والبيع.",
+        "تطبيقات رسمية على iOS وAndroid، مع أكثر من 10 آلاف تنزيل تراكمي ظاهر على Google Play وقت التحقق.",
+        "العروض والتفاوض والمراسلة والإشعارات وتتبع الطلبات داخل التطبيق.",
+        "تحقق متعدد الطبقات باستخدام تقنيات حالية وخدمة تحقق خارجية واحدة على الأقل وأحيانًا خدمتين.",
+        "إنشاء بصمة للقطعة قبل الشحن وربط نتائج التحقق والتقارير بالطلب.",
+        "محفظة داخلية وتسويات أرباح البائعين عبر التحويل البنكي.",
+        "بطاقات ائتمان وخصم وApple Pay وTabby وTamara، ومدفوعات عملات مشفرة عبر شركاء مخصصين وفق الشروط.",
+        "شحن دولي مع تتبع، وإدارة تكاليف الشحن والجمارك بحسب الوجهة.",
+        "دعم العربية وتخطيط RTL وتحسينات للفواتير وتقارير التحقق والدفع خلال تحديثات 2026.",
+        "محتوى تحريري وأدلة أسعار وشراء وأصالة ضمن The Crypt لدعم الاكتشاف والقرار الشرائي."
+      ],
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "verified_product_capabilities_without_speculative_technology_stack",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استُبدلت أسماء تقنيات غير موثقة بقدرات منتج وتشغيل مثبتة في الشروط وصفحات التطبيقات.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-04",
+        "SRC-05",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Terms & Conditions",
+          "publisher": "Libas Collective",
+          "source_type": "official_company_legal_terms",
+          "url": "https://www.libascollective.com/terms-and-conditions",
+          "evidence_type": "direct",
+          "source_locator": "Authentication, wallet, payments and delivery",
+          "supports": "التحقق والبصمة والمحفظة والمدفوعات والشحن.",
+          "published_on": "2026-06-13"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Download Our App — iPhone & Android",
+          "publisher": "Libas Collective",
+          "source_type": "official_company_product_page",
+          "url": "https://www.libascollective.com/mobile-apps",
+          "evidence_type": "direct",
+          "source_locator": "Mobile app capabilities",
+          "supports": "الإدراج والتفاوض والإشعارات والتتبع."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Libas Collective — Apps on Google Play",
+          "publisher": "Google Play / Libas Collective Trading LLC",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?id=com.libas.libas",
+          "evidence_type": "direct",
+          "source_locator": "Android listing",
+          "supports": "تطبيق أندرويد وهوية المشغل والتنزيلات.",
+          "published_on": "2026-06-28"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Libas Collective App",
+          "publisher": "Apple App Store / LIBAS COLLECTIVE TRADING CO. L.L.C S.O.C",
+          "source_type": "official_app_store_listing",
+          "url": "https://apps.apple.com/ae/app/libas-collective/id1605637445",
+          "evidence_type": "direct",
+          "source_locator": "iOS listing and release notes",
+          "supports": "تطبيق iOS والعربية وRTL والتقارير والفواتير.",
+          "published_on": "2026-08"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Buy Luxury Bags for Men & Women",
+          "publisher": "Libas Collective",
+          "source_type": "official_company_inventory_page",
+          "url": "https://www.libascollective.com/bags",
+          "evidence_type": "direct",
+          "source_locator": "Marketplace category page",
+          "supports": "قوائم الحقائب ومحتوى السوق الحالي.",
+          "published_on": "2026-07"
+        }
+      ],
+      "limitations": "لم يُعثر على توثيق رسمي حديث يثبت Magento أو مزود سحابة أو قاعدة بيانات أو نموذج AI مملوك؛ لذلك لم تُذكر كحقيقة."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "About Libas Collective — Pre-Owned Luxury Marketplace in Dubai",
+      "publisher": "Libas Collective",
+      "source_type": "official_company_website",
+      "published_on": null,
+      "url": "https://www.libascollective.com/about-us",
+      "supports": [
+        "المقر في Business Bay بدبي",
+        "ربط المشترين والبائعين في الإمارات والسعودية ودوليًا",
+        "فئات المنتجات والتحقق من الجودة والأصالة والشحن الدولي"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Terms & Conditions",
+      "publisher": "Libas Collective",
+      "source_type": "official_company_legal_terms",
+      "published_on": "2026-06-13",
+      "url": "https://www.libascollective.com/terms-and-conditions",
+      "supports": [
+        "الاسم القانوني والمقر المسجل",
+        "الإدراج المجاني وعمولة البائع ورسوم الدفع وخدمة المشتري وتحويل العملة",
+        "احتفاظ البائع بالقطعة حتى الطلب ومهلة الشحن",
+        "التحقق متعدد الطبقات والخدمات الخارجية وبصمة القطعة",
+        "المحفظة والتسويات ووسائل الدفع والشحن والجمارك"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Download Our App — iPhone & Android",
+      "publisher": "Libas Collective",
+      "source_type": "official_company_product_page",
+      "published_on": null,
+      "url": "https://www.libascollective.com/mobile-apps",
+      "supports": [
+        "تطبيقات iOS وAndroid",
+        "الإدراج والتفاوض والإشعارات وتتبع الشحن ووسائل الدفع"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Libas Collective — Apps on Google Play",
+      "publisher": "Google Play / Libas Collective Trading LLC",
+      "source_type": "official_app_store_listing",
+      "published_on": "2026-06-28",
+      "url": "https://play.google.com/store/apps/details?id=com.libas.libas",
+      "supports": [
+        "هوية مشغل تطبيق أندرويد",
+        "أكثر من 10 آلاف تنزيل تراكمي",
+        "وصف التطبيق كسوق للأزياء الفاخرة المستعملة الموثقة"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Libas Collective App",
+      "publisher": "Apple App Store / LIBAS COLLECTIVE TRADING CO. L.L.C S.O.C",
+      "source_type": "official_app_store_listing",
+      "published_on": "2026-08",
+      "url": "https://apps.apple.com/ae/app/libas-collective/id1605637445",
+      "supports": [
+        "هوية مزود تطبيق iOS",
+        "تحسينات العربية وRTL",
+        "التفاوض والمحادثة وتقارير التحقق والفواتير والمحفظة"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Paolo Khayat — 30 Under 30 2023",
+      "publisher": "Forbes Middle East",
+      "source_type": "editorial_profile_with_company_reported_metrics",
+      "published_on": "2023-11-17",
+      "url": "https://www.forbesmiddleeast.com/lists/30-under-30-2023/paolo-khayat/",
+      "supports": [
+        "تأسيس لباس في لبنان عام 2022 ثم التوسع إلى الإمارات",
+        "500 ألف دولار تمويل ملائكي",
+        "نمو تاريخي معلن لـGMV بمتوسط 37% شهريًا في سياق 2023",
+        "خطة تاريخية لأداة ذكاء اصطناعي للمساعدة في اكتشاف الحقائب المقلدة"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Dubai Media Incorporated — Shark Tank Dubai funding recap",
+      "publisher": "Dubai Media Incorporated",
+      "source_type": "official_broadcaster_primary_recap",
+      "published_on": "2025",
+      "url": "https://www.dubaitv.ae/content/corporate/en-ae/programs/41/2507283.html",
+      "supports": [
+        "إعلان حصول مشروع لباس على تمويل قدره 1.2 مليون درهم",
+        "وصف لباس كمنصة لبيع وشراء الأزياء الفاخرة المستعملة"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "شارك تانك دبي — تطبيق لبيع وشراء العلامات التجارية الفاخرة والتحقق من أصالتها",
+      "publisher": "SharkTankArabi",
+      "source_type": "secondary_episode_transcript_and_recap",
+      "published_on": "2025-07-22",
+      "url": "https://sharktankarabi.com/2908/",
+      "supports": [
+        "طلب 1.2 مليون درهم مقابل 10%",
+        "إعلان قبول 1.2 مليون درهم مقابل 20%",
+        "تفاصيل الحلقة التاريخية مع ضرورة عدم اعتبارها دليل إغلاق قانوني أو مالي"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "A New Chapter Begins — Libas acquisition announcement",
+      "publisher": "Paolo Khayat on LinkedIn",
+      "source_type": "founder_primary_announcement",
+      "published_on": "2025-02-03",
+      "url": "https://www.linkedin.com/posts/paolo-khayat_a-new-chapter-begins-after-35-years-of-activity-7292126437946355713-9Ujx",
+      "supports": [
+        "إعلان استحواذ إيفان تودوروف على لباس",
+        "بقاء باولو خياط مستشارًا",
+        "عدم كشف قيمة الاستحواذ في الإعلان"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Buy Luxury Bags for Men & Women",
+      "publisher": "Libas Collective",
+      "source_type": "official_company_inventory_page",
+      "published_on": "2026-07",
+      "url": "https://www.libascollective.com/bags",
+      "supports": [
+        "أكثر من 15 ألف حقيبة فاخرة مستعملة موثقة مدرجة في يوليو 2026",
+        "المقياس يمثل قوائم أو مخزونًا معروضًا وليس مستخدمين أو مبيعات أو GMV"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "2026 Luxury Goods Worldwide Market Study — Spring Update",
+      "publisher": "Bain & Company in partnership with Altagamma",
+      "source_type": "primary_market_research_release",
+      "published_on": "2026",
+      "url": "https://www.bain.cn/news_info.php?id=2150",
+      "supports": [
+        "358 مليار يورو لسوق السلع الفاخرة الشخصية في 2025",
+        "توقع 365–373 مليار يورو في 2026 ضمن السيناريو الأساسي",
+        "نحو نصف متسوقي الفخامة يستشيرون سوق المستعمل قبل شراء الجديد",
+        "تضاعف عمليات البحث عن الحقائب القديمة بأكثر من الضعف سنويًا"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "UAE Circular Economy Council holds first meeting of 2025",
+      "publisher": "UAE Ministry of Economy and Tourism",
+      "source_type": "official_government_policy_update",
+      "published_on": "2025-03-12",
+      "url": "https://www.moec.gov.ae/en/-/uae-circular-economy-council-holds-first-meeting-of-2025-to-discuss-implementation-of-new-circular-economy-policies",
+      "supports": [
+        "توجه السياسة الإماراتية نحو الاقتصاد الدائري",
+        "إدراج إعادة تدوير المنسوجات ضمن مجالات العمل"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Consumer Protection in the UAE",
+      "publisher": "UAE Ministry of Economy and Tourism",
+      "source_type": "official_government_regulatory_guidance",
+      "published_on": "2025-06-26",
+      "url": "https://www.moec.gov.ae/web/guest/654",
+      "supports": [
+        "انطباق إطار حماية المستهلك الإماراتي على التجارة الإلكترونية لمزود مسجل في الدولة",
+        "السياق التنظيمي العام للمعاملات الرقمية"
+      ]
+    }
   ]
 }

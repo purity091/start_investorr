@@ -2,53 +2,1243 @@
   "id": "the-baby-garage",
   "slug": "the-baby-garage",
   "name": "ذا بيبي جراج (The Baby Garage)",
-  "headline": "الاقتصاد الدائري: المنصة الأولى لتداول مستلزمات الأطفال المستعملة والجديدة",
-  "category": "E-commerce & Circular Economy / التجارة الإلكترونية",
+  "headline": "من مجتمع أمهات إلى بنية تجارة دائرية: كيف حوّلت The Baby Garage الثقة والمحتوى إلى سوق للمنتجات الجديدة والمستعملة",
+  "category": "E-commerce, Social Commerce & Circular Economy / منتجات الأطفال والأسرة",
   "company": {
-    "location": "القاهرة، مصر (Shark Tank Egypt)",
-    "business_model": "عمولات على المبيعات (Marketplace) واشتراكات للتجار"
+    "location": "مدينة السادس من أكتوبر، الجيزة، مصر. يعرض الموقع الحالي مكتبًا إداريًا في The GrEEK Campus داخل مول العرب، بينما بدأت الفكرة كمجتمع للأمهات عام 2015 وتأسست الشركة رسميًا في يناير 2020 وفق مقابلة المؤسِّسة.",
+    "business_model": "منصة تجارة متعددة الأطراف لمنتجات الأطفال الجديدة والمستعملة، تخدم المشترين والبائعين الأفراد والتجار والعلامات التجارية. تشمل قنوات تحقيق الدخل المعلنة اشتراكات البائعين، ورسوم المعاملات، وهوامش الشحن، والإعلانات والشراكات التسويقية، وبطاقات الخصم أو العضوية، إضافة إلى هوامش بيع بعض المنتجات والخدمات المرتبطة بالفحص والتنظيف والتوصيل. لا تنشر الشركة نسب الرسوم أو مساهمة كل قناة حاليًا."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الجنيهات",
-    "monthly_traffic": "مئات الآلاف من الأمهات في مصر"
+    "monthly_revenue": "غير معلن. ذكرت المؤسِّسة في عرض Shark Tank أن المنصة حققت مبيعات تراكمية تجاوزت 4 ملايين جنيه بعد إطلاق الموقع في 2022، لكن لم يُحدد طول الفترة المحاسبية بدقة، ولم تُنشر إيرادات شهرية أو سنوية أو صافي أرباح. لذلك لا يجوز وصف الإيراد الحالي بأنه «ملايين الجنيهات شهريًا».",
+    "monthly_traffic": "غير معلن كمستخدمين نشطين شهريًا أو زيارات أو طلبات. تتحدث الشركة عن مجتمع يزيد على مليون أم، وصفحة المؤسِّسة أشارت لاحقًا إلى أكثر من 1.2 مليون أم، بينما يذكر ملف البائعين أكثر من 900 ألف والد ووالدة نشطين عبر منصات الشركة. هذه مقاييس مجتمع وعلاقات عبر قنوات متعددة، وليست MAU موحدة أو مستخدمين فريدين."
   },
   "overview": {
     "problem": {
-      "text": "الأطفال ينمون بسرعة كبيرة، وتصبح ملابسهم وعرباتهم وألعابهم غير قابلة للاستخدام خلال أشهر معدودة، مما يخلق هدراً هائلاً. في المقابل، تعاني الأمهات الجديدات من التكلفة المرتفعة لشراء هذه المستلزمات جديدة.",
-      "impact": "تكاليف باهظة على العائلات، وإهدار كبير للموارد والمنتجات شبه الجديدة."
+      "text": "تنمو احتياجات الطفل وتتغير بسرعة، فتتوقف الأسرة عن استخدام عربات ومقاعد وألعاب وملابس ما تزال صالحة، بينما تواجه أسر أخرى تكلفة مرتفعة وصعوبة في تقييم الجودة والسلامة والمقارنة بين آلاف المنتجات. مجموعات التواصل الاجتماعي توفر عرضًا واسعًا، لكنها لا تقدم دائمًا فحصًا أو دفعًا أو شحنًا أو مرتجعات أو تنظيمًا موحدًا للتجار والأفراد.",
+      "impact": "يؤدي ذلك إلى تجميد قيمة مالية في منتجات غير مستخدمة، وزيادة المخلفات، وشراء متكرر لمنتجات قصيرة العمر، ومخاطر مرتبطة بالحالة والوصف والسلامة. وعلى جانب البائعين، يصعب الوصول إلى جمهور متخصص وإدارة الكتالوج والمخزون والتوصيل وخدمة ما بعد البيع عبر منشورات متفرقة."
     },
     "solution": {
-      "text": "منصة وتطبيق يربط الأمهات ببعضهن البعض لبيع وشراء مستلزمات الأطفال المستعملة بحالة جيدة (C2C)، بالإضافة لفتح المجال للعلامات التجارية والمتاجر لبيع منتجاتهم الجديدة (B2C) في نفس المنصة."
+      "text": "تحولت The Baby Garage من مجتمع مساعدة تطوعي إلى سوق يتيح شراء منتجات جديدة وPreloved وOpen Box، وبيع أو التبرع بمستلزمات الأطفال. يجمع الموقع بين كتالوج كبير، وتجار وعلامات موثقة، ونموذج تقديم منتج مستعمل بالصور والسعر والحالة، وفحص جودة وتنظيف لبعض المنتجات، وشحن ودعم ومرتجعات. كما تضيف محتوى إرشاديًا ومراجعات وعروض تمويل ودفع لاحق وشراكات تسويقية، وأطلقت تطبيقًا للهاتف لبيع وشراء والتبرع."
     }
   },
   "market_data": {
-    "target_audience": "الأمهات، العائلات الشابة، وتجار منتجات الأطفال.",
-    "market_size": "سوق منتجات الأطفال واقتصاد إعادة البيع (Re-commerce).",
-    "growth_rate": "نجاح مبهر في برنامج (شارك تانك مصر) ونمو قاعدة مستخدمين ضخمة تعتمد على مجتمع الأمهات."
+    "target_audience": "الأمهات والآباء والأسر التي لديها أطفال حتى نحو 12–14 عامًا، والمقبلون على الإنجاب، ومشترو المنتجات الجديدة والمستعملة، والأفراد الراغبون في بيع أو التبرع بمستلزمات أطفالهم، والتجار والموزعون والعلامات التجارية والصالونات والخدمات التي تستهدف الأسرة، إضافة إلى شركاء الدفع والتمويل والتوصيل والمعلنين.",
+    "market_size": "لا تنشر الشركة أو جهة رسمية رقمًا ماليًا موحدًا لسوقها القابل للاستهداف. تعمل المنصة عبر تجارة منتجات الأطفال الجديدة، وإعادة البيع، والإعلانات، والخدمات والشحن، وهي أسواق مختلفة. مؤشرات النطاق المعلنة تشمل أكثر من مليون أم في المجتمع، وأكثر من 100 ألف SKU، وأكثر من 3,000 بائع اجتماعي وتاجر رسمي وفق صفحات الشركة، لكن هذه الأرقام لا تمثل قيمة السوق أو حصة المنصة.",
+    "growth_rate": "لا توجد سلسلة مالية عامة تسمح بحساب CAGR. وفق Flat6Labs، خدمت المنصة 550 ألف والد ووالدة وحققت قفزة إيرادات معلنة قدرها 70% في مرحلة 2021. وفي نهاية 2024 ذكرت المؤسِّسة وصول المجتمع إلى مليون أم وتحقيق أكثر من 4 ملايين جنيه مبيعات بعد إطلاق الموقع عام 2022. وفي تحديثات لاحقة أشارت إلى مجتمع يزيد على 1.2 مليون أم وتوسع إلى السعودية عبر مشروع مشترك محلي. هذه مؤشرات متباعدة زمنيًا ومختلفة التعريف."
   },
   "financials": {
-    "initial_investment": "استثمارات من (الشاركس) لتطوير الجانب التقني وتسريع الاستحواذ على العملاء.",
-    "valuation": "عشرات الملايين من الجنيهات",
+    "initial_investment": "رأس المال الشخصي الأول للمؤسِّسة غير معلن. بدأت المبادرة تطوعيًا في 2015، وتطورت تحت TIEC في 2019، ثم حصلت على دعم وتمويل من Flat6Labs وفق ملفات الشركة والمسرعة. في Shark Tank Egypt طلبت فرح أحمد 9 ملايين جنيه مقابل 10%، وخرجت من الحلقة باتفاق استثماري على الهواء، لكن مبلغ وشروط العرض النهائي ومستندات الإغلاق وجدول الملكية الحالي لم تُنشر بوضوح في مصادر موثوقة مفتوحة.",
+    "valuation": "طلب 9 ملايين جنيه مقابل 10% يعني تقييمًا ضمنيًا بعد الاستثمار قدره 90 مليون جنيه، وقبل الاستثمار 81 مليون جنيه. هذا تقييم الطلب في Shark Tank، وليس تقييمًا حاليًا أو دليلًا على إغلاق الصفقة بالشروط نفسها. لم يُعلن تقييم أحدث موثوق للشركة.",
     "revenue_streams": [
-      "عمولة ثابتة أو نسبة من مبيعات المنتجات المستعملة (C2C)",
-      "رسوم إدراج وعمولات من المتاجر الرسمية (B2C)",
-      "إيرادات إعلانية من العلامات التجارية التي تستهدف الأمهات"
+      "اشتراكات شهرية أو خطط إدراج للبائعين والتجار وفق نموذج Flat6Labs التاريخي",
+      "رسوم معاملات أو عمولات على المنتجات التي تُسوّق وتباع عبر المنصة",
+      "هوامش شحن وتوصيل وتنفيذ الطلبات",
+      "هوامش بيع على المنتجات الجديدة أو Open Box التي تديرها المنصة أو شركاؤها",
+      "عمولات أو رسوم على بيع المنتجات المستعملة وخدمة Buy-back أو إدارة إعادة البيع",
+      "رسوم اختيارية للفحص أو التنظيف الكيميائي أو الخدمات التشغيلية للمنتج المستعمل",
+      "إيرادات إعلانية وشراكات تسويقية ومحتوى للعلامات التجارية التي تستهدف الأمهات",
+      "اشتراكات عضوية أو بطاقات خصم تمنح مزايا في التجزئة والتجارة",
+      "مبيعات Gift Certificates والعروض والحملات المشتركة",
+      "شراكات تمويل وتقسيط مع Halan وvalU وغيرها، دون إفصاح عن العائد التجاري",
+      "خدمات تمكين العلامات الأجنبية والمحلية في الوعي والتوطين والتحويل والتوسع الإقليمي",
+      "قنوات FinCommerce معلنة كاتجاه تطوير، دون دليل على إيراد فعلي منشور حتى تاريخ التحقق"
     ]
   },
   "lessons": [
     {
-      "title": "قوة المجتمعات (Community-Led Growth)",
-      "description": "بدأت المنصة في الأساس كمجموعة (جروب) على فيسبوك لتتبادل الأمهات النصائح والمنتجات. تحويل هذا المجتمع المخلص والمتفاعل إلى (منصة تجارية) كان سر النجاح وتخفيض تكلفة الاستحواذ على العملاء (CAC)."
+      "title": "المجتمع يمكن أن يثبت المشكلة قبل بناء السوق",
+      "description": "بدأت المبادرة كمجموعة تطوعية، فتعلمت من الأسئلة والمنتجات المتكررة وسلوك الأمهات قبل الاستثمار في كتالوج ودفع وشحن. المجتمع هنا مختبر طلب، وليس بديلًا دائمًا عن البنية التجارية."
     },
     {
-      "title": "الاقتصاد الدائري (Circular Economy)",
-      "description": "التوجه نحو الاستدامة وإعادة الاستخدام ليس مجرد (تريند) عالمي، بل هو حل عملي واقتصادي فعال جداً في أوقات التضخم وانخفاض القوة الشرائية، وهو ما راهن عليه المستثمرون."
+      "title": "الانتقال من Group إلى Marketplace يغير المسؤولية",
+      "description": "في المجموعة يتواصل البائع والمشتري مباشرة، أما المنصة فتدخل في الوصف والدفع والشحن والمرتجعات والنزاع. كل خطوة تضيف ثقة، لكنها تضيف تكلفة ومسؤولية قانونية وتشغيلية."
+    },
+    {
+      "title": "الاقتصاد الدائري يحتاج فحصًا لا مجرد إعادة نشر",
+      "description": "العربة أو مقعد السيارة المستعمل قد يحمل مخاطر لا تظهر في الصورة. الفحص والحالة والتنظيف وحق المعاينة والاستثناءات من الإرجاع هي ما يحول إعادة البيع إلى خدمة موثوقة."
+    },
+    {
+      "title": "ليست كل فئات الأطفال مناسبة لإعادة البيع",
+      "description": "الملابس والألعاب وبعض المعدات تختلف عن الغذاء والنظافة والمنتجات ذات العمر أو الصلاحية أو مخاطر الحوادث. السوق يحتاج قواعد أهلية منفصلة لكل فئة بدل شعار عام عن إعادة الاستخدام."
+    },
+    {
+      "title": "الكتالوج الكبير قيمة فقط إذا بقي نظيفًا ومتوافرًا",
+      "description": "أكثر من 100 ألف SKU يوسع الاختيار، لكنه يضاعف تكرار المنتجات والبيانات الناقصة والمخزون المنتهي. إدارة الكتالوج وجودة السمات والصور والمخزون قد تكون أصعب من جذب بائع جديد."
+    },
+    {
+      "title": "عدد أعضاء المجتمع لا يساوي المستخدمين النشطين",
+      "description": "قد يكون الشخص عضوًا في مجموعة ومتابعًا ومشتريًا في الوقت نفسه، وقد يبقى في المجتمع سنوات دون طلب. يجب فصل Community Reach وMAU والعملاء والطلبات والتجار."
+    },
+    {
+      "title": "المبيعات ليست إيراد المنصة",
+      "description": "أربعة ملايين جنيه مبيعات قد تشمل قيمة المنتجات التي تذهب إلى التجار والبائعين. إيراد المنصة هو العمولة والهامش والرسوم المحتفظ بها، ولا يمكن استخراجه دون Take Rate ومزيج القنوات."
+    },
+    {
+      "title": "التجار والأمهات يحتاجون تجربتي بيع مختلفتين",
+      "description": "التاجر يدير مئات المنتجات ومخزونًا وفواتير وتسويات، بينما الأم تعرض قطعة أو قطعتين وتحتاج تصويرًا وتسعيرًا واستلامًا مبسطًا. إجبار الطرفين على نفس التدفق يرفع التسرب."
+    },
+    {
+      "title": "المحتوى يقلل تكلفة القرار في فئة عالية الحساسية",
+      "description": "الأهل لا يشترون بناءً على السعر فقط؛ يحتاجون العمر والمقاس والسلامة والتوافق والضمان. المدونة والمراجعات والمقارنات قد ترفع التحويل وتقلل المرتجعات عندما تكون مستقلة ودقيقة."
+    },
+    {
+      "title": "Open Box يلتقط قيمة وسطًا بين الجديد والمستعمل",
+      "description": "العبوة المخدوشة مع منتج غير مستخدم تخدم عميلًا يريد ضمانًا أفضل من المستعمل وسعرًا أقل من الجديد. هذه فئة تحتاج وصفًا واضحًا لما تضرر وما بقي تحت الضمان."
+    },
+    {
+      "title": "Buy-back يحتاج معادلة مخاطر لا وعد سيولة",
+      "description": "إعادة شراء منتج خلال فترة محددة قد تشجع الشراء الأول، لكنها تعرض المنصة لمخاطر الحالة والطلب المستقبلي والنقل والتنظيف. يجب تسعير الضمان وفق الفئة والاستهلاك وسرعة إعادة البيع."
+    },
+    {
+      "title": "الإعلانات تستفيد من المجتمع وقد تضعف ثقته",
+      "description": "جمهور الأمهات جذاب للعلامات، لكن خلط النصيحة بالإعلان دون إفصاح أو مراجعة قد يضر المرجعية التي بنت المجتمع. يجب فصل المحتوى التحريري عن الحملات المدفوعة."
+    },
+    {
+      "title": "البيانات تصبح أصلًا فقط مع الموافقة والجودة والاستخدام",
+      "description": "معرفة مراحل الطفل والمنتجات والسلوك قد تحسن التوصية والمخزون، لكنها بيانات أسرية حساسة. القيمة لا تأتي من جمعها وحده، بل من موافقة واضحة وحماية وربطها بنتائج قابلة للقياس."
+    },
+    {
+      "title": "التوسع الإقليمي يحتاج شبكة توريد محلية",
+      "description": "إطلاق السعودية لا يعني نسخ كتالوج مصر. العلامات والتسعير والضرائب واللوجستيات والعادات وأنظمة حماية المستهلك مختلفة، ولذلك اختارت الشركة مشروعًا مشتركًا وقيادة محلية."
+    },
+    {
+      "title": "التقييم المرتفع يحتاج قصة وحدة اقتصادية",
+      "description": "طلب 90 مليون جنيه بعد الاستثمار قد يستند إلى المجتمع والبيانات والكتالوج والتوسع، لكن المستثمر يحتاج GMV وTake Rate والهامش وتكرار الشراء وتكلفة خدمة المستعمل. الأصول غير الملموسة لا تستبدل الاقتصاد التشغيلي."
     }
   ],
   "tools": [
-    "React Native",
-    "Node.js",
-    "AWS",
-    "Payment & Logistics APIs"
+    "متجر إلكتروني متعدد البائعين للمنتجات الجديدة والمستعملة وOpen Box",
+    "تطبيق Android لشراء وبيع والتبرع بمستلزمات الأطفال",
+    "نموذج Sell Your Preloved لرفع الصور والحالة والسعر والعنوان وبيانات الاستلام",
+    "عمليات فحص جودة وتنظيف لبعض المنتجات المستعملة قبل عرضها",
+    "Buy-back لبعض فئات المعدات المؤهلة والمشتراة خلال فترة محددة وفق الأسئلة الشائعة",
+    "كتالوج يتجاوز 100 ألف SKU وفق ملفات الشركة",
+    "حسابات للبائعين والتجار وإدارة المنتجات والمخزون",
+    "خدمات لوجستية وشحن وتسليم وإدارة مرتجعات",
+    "الدفع عند الاستلام وبطاقات الدفع ومحافظ أو وسائل دفع متعددة بحسب السوق",
+    "عروض تقسيط وتمويل عبر Halan وvalU",
+    "مراجعات منتجات ومدونة إرشادية ومقارنة أسعار وعروض",
+    "Marketplace Service Agreement للبائعين والمشترين والتجار",
+    "سياسات إرجاع منفصلة للمنتجات الجديدة والمستعملة والاستثناءات الصحية",
+    "عضوية أو بطاقة خصم وبرامج توفير وفق نموذج الشركة المعلن",
+    "Gift Certificates وعروض ترويجية وكوبونات ونشرة بريدية",
+    "خدمات إعلانات وشراكات تواصل وتسويق للعلامات التجارية",
+    "منظومة مجتمع عبر Facebook وInstagram والقنوات الاجتماعية",
+    "برامج تمكين البائعين الاجتماعيين والتجار الرسميين",
+    "مشروع مشترك وتوسع تشغيلي معلن في السعودية",
+    "تطوير FinCommerce معلن لربط التجارة بالقيمة المالية المستقبلية، دون توثيق إطلاق مالي كامل",
+    "بنية متجر حالية تعرض خصائص Marketplace متعددة البائعين؛ لم يُثبت رسميًا استخدام React Native أو Node.js أو AWS كحزمة تقنية حالية"
+  ],
+  "verification": {
+    "status": "verified_from_company_website_marketplace_terms_flat6labs_tiec_itida_shark_tank_and_founder_sources",
+    "verified_on": "2026-08-03",
+    "source_policy": "تم إعطاء الأولوية لموقع The Baby Garage الحالي واتفاقية السوق والأسئلة الشائعة وصفحات البيع، ثم Flat6Labs وTIEC وITIDA وIFC وتصريحات المؤسِّسة. استُخدمت تغطيات Shark Tank لتوثيق الطلب والأرقام المقدمة في الحلقة، مع عدم افتراض شروط إغلاق غير منشورة.",
+    "important_notes": [
+      "لا توجد إيرادات شهرية أو سنوية منشورة، ولذلك حُذف ادعاء «ملايين الجنيهات شهريًا».",
+      "أربعة ملايين جنيه هي مبيعات تراكمية معلنة في Shark Tank، وليست إيراد المنصة أو صافي الربح.",
+      "مليون أو 1.2 مليون أم يمثلان حجم مجتمع عبر قنوات متعددة، وليس MAU موحدة.",
+      "الملف التاريخي لـFlat6Labs ذكر 550 ألف والد ووالدة، بينما الصفحة الحالية للبائعين تذكر أكثر من 900 ألف والد ووالدة نشطين، وLinkedIn يذكر أكثر من مليون أم؛ اختلاف التعريف والتاريخ يمنع بناء سلسلة نمو دقيقة.",
+      "طلب Shark Tank كان 9 ملايين جنيه مقابل 10%، ما ينتج تقييمًا ضمنيًا 90 مليون جنيه بعد الاستثمار.",
+      "ظهرت المؤسِّسة بعد الحلقة باعتبارها خرجت باتفاق، لكن مبلغ وشروط العرض النهائي وجدول الملكية والإغلاق لم تُنشر بوضوح.",
+      "بدأت الفكرة في 2015، وتطورت رسميًا تحت TIEC في 2019، وتأسست الشركة قانونيًا في يناير 2020، وأُطلق الموقع التجاري الحالي في 2022 وفق المؤسِّسة.",
+      "100 ألف SKU مقياس كتالوج، ولا يعني عدد منتجات متاحة لحظيًا أو مبيعات.",
+      "التطبيق على Google Play أظهر أكثر من 100 تنزيل في لقطة الفهرسة، ولذلك لا يُستخدم كدليل على حجم العملاء.",
+      "صفحة التطبيق تعلن مستخدمين موثقين ومعاملات آمنة، لكن آليات التحقق الكاملة لم تُنشر تفصيليًا.",
+      "تم حذف React Native وNode.js وAWS وPayment APIs لعدم وجود مصدر رسمي يثبت حزمة التقنية الحالية.",
+      "FinCommerce اتجاه معلن من الشركة؛ لم يُعثر على منتج مالي مرخص أو إيراد منشور منه حتى تاريخ التحقق."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط كل حقل بقيمته وحالة التحقق والثقة والمصادر والقيود الخاصة بأسواق التجارة المجتمعية والشركات الخاصة.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي أو مؤسسي.",
+      "verified_as_not_publicly_disclosed": "لم تنشر الشركة المقياس، ولذلك لم يُستخدم تقدير.",
+      "verified_company_reported_sales_not_revenue": "الرقم يمثل مبيعات أو GMV معلنة لا إيراد المنصة.",
+      "verified_community_scale_not_mau": "الرقم يمثل مجتمعًا أو وصولًا عبر قنوات متعددة وليس مستخدمين نشطين شهريًا.",
+      "verified_historical_company_metrics": "المقياس منشور لفترة تاريخية ولا يمثل الوضع الحالي تلقائيًا.",
+      "verified_on_air_ask_final_terms_undisclosed": "طلب Shark Tank موثق، لكن شروط الاتفاق النهائي والإغلاق غير معلنة.",
+      "verified_historical_calculation": "القيمة مشتقة حسابيًا من مبلغ ونسبة معلنين.",
+      "verified_product_capability": "القدرة ظاهرة في الموقع أو التطبيق أو الاتفاقية الرسمية.",
+      "verified_announced_not_fully_launched": "المبادرة معلنة لكن إطلاقها أو إيرادها الكامل غير موثق.",
+      "analytical_inference": "تحليل مهني مبني على حقائق موثقة وليس تصريحًا حرفيًا من الشركة."
+    },
+    "confidence_scale": {
+      "high": "موقع الشركة أو Flat6Labs أو جهة حكومية أو وثيقة قانونية مباشرة.",
+      "medium_high": "تصريح مؤسِّسة أو تغطية Shark Tank متقاطعة.",
+      "medium": "مقياس تسويقي للشركة يحتاج تعريفًا أو تدقيقًا إضافيًا."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "مدينة السادس من أكتوبر، الجيزة، مصر. يعرض الموقع الحالي مكتبًا إداريًا في The GrEEK Campus داخل مول العرب، بينما بدأت الفكرة كمجتمع للأمهات عام 2015 وتأسست الشركة رسميًا في يناير 2020 وفق مقابلة المؤسِّسة.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "current_operating_office_and_company_origin",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت صفحات الشركة المكتب الحالي، بينما توثق مقابلة المؤسِّسة تاريخ البداية والتأسيس الرسمي.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-08",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "The Baby Garage Marketplace",
+          "publisher": "The Baby Garage",
+          "source_type": "official_ecommerce_website",
+          "url": "https://thebabygarage.com/",
+          "evidence_type": "direct",
+          "source_locator": "Homepage → Contact",
+          "supports": "المكتب في The GrEEK Campus بمول العرب."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "The Baby Garage Company Profile",
+          "publisher": "The Baby Garage via LinkedIn",
+          "source_type": "company_managed_profile",
+          "url": "https://www.linkedin.com/company/the-baby-garage",
+          "evidence_type": "direct",
+          "source_locator": "LinkedIn profile",
+          "supports": "المقر في السادس من أكتوبر."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Founder Oral History",
+          "publisher": "Women and Memory Forum",
+          "source_type": "founder_interview_archive",
+          "url": "https://wmf.org.eg/en/narrators/farah-ahmed/",
+          "evidence_type": "direct",
+          "source_locator": "Founder interview",
+          "supports": "الفكرة 2015 والتأسيس الرسمي يناير 2020.",
+          "published_on": "2021-12-19"
+        }
+      ]
+    },
+    "$.company.business_model": {
+      "field_value": "منصة تجارة متعددة الأطراف لمنتجات الأطفال الجديدة والمستعملة، تخدم المشترين والبائعين الأفراد والتجار والعلامات التجارية. تشمل قنوات تحقيق الدخل المعلنة اشتراكات البائعين، ورسوم المعاملات، وهوامش الشحن، والإعلانات والشراكات التسويقية، وبطاقات الخصم أو العضوية، إضافة إلى هوامش بيع بعض المنتجات والخدمات المرتبطة بالفحص والتنظيف والتوصيل. لا تنشر الشركة نسب الرسوم أو مساهمة كل قناة حاليًا.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "multi_sided_new_preloved_retail_social_commerce_model",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت اتفاقية السوق نموذج الأفراد والتجار، ويحدد Flat6Labs خطط الدخل التاريخية، بينما تعرض المنصة القنوات الحالية.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-02",
+        "SRC-11",
+        "SRC-03",
+        "SRC-07",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Marketplace Service Agreement",
+          "publisher": "The Baby Garage",
+          "source_type": "official_legal_document",
+          "url": "https://thebabygarage.com/marketplace-service-agreement/",
+          "evidence_type": "direct",
+          "source_locator": "Agreement → Services",
+          "supports": "السوق للأفراد والتجار والموردين."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "The Baby Garage — Flat6Labs Portfolio",
+          "publisher": "Flat6Labs",
+          "source_type": "direct_investor_portfolio",
+          "url": "https://flat6labs.com/ar/Company/the-baby-garage/",
+          "evidence_type": "direct",
+          "source_locator": "Business model",
+          "supports": "الاشتراكات والعمولات والشحن والإعلانات والبطاقات."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Sell Your Preloved",
+          "publisher": "The Baby Garage",
+          "source_type": "official_c2c_seller_flow",
+          "url": "https://thebabygarage.com/submit-product-for-sale/",
+          "evidence_type": "direct",
+          "source_locator": "Submission flow",
+          "supports": "بيع Preloved."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Active Promotions",
+          "publisher": "The Baby Garage",
+          "source_type": "official_commerce_promotions",
+          "url": "https://thebabygarage.com/promotions/",
+          "evidence_type": "direct",
+          "source_locator": "Promotions",
+          "supports": "Open Box والتمويل."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "The Baby Garage Company Profile",
+          "publisher": "The Baby Garage via LinkedIn",
+          "source_type": "company_managed_profile",
+          "url": "https://www.linkedin.com/company/the-baby-garage",
+          "evidence_type": "direct",
+          "source_locator": "Company profile",
+          "supports": "العضوية والشراكات التسويقية."
+        }
+      ],
+      "limitations": "لا تنشر الشركة رسومها الحالية أو توزيع إيراداتها حسب القناة."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. ذكرت المؤسِّسة في عرض Shark Tank أن المنصة حققت مبيعات تراكمية تجاوزت 4 ملايين جنيه بعد إطلاق الموقع في 2022، لكن لم يُحدد طول الفترة المحاسبية بدقة، ولم تُنشر إيرادات شهرية أو سنوية أو صافي أرباح. لذلك لا يجوز وصف الإيراد الحالي بأنه «ملايين الجنيهات شهريًا».",
+      "verification_status": "verified_company_reported_sales_not_revenue",
+      "confidence": "medium_high",
+      "claim_type": "cumulative_sales_without_period_or_take_rate",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "عرضت المؤسِّسة أكثر من 4 ملايين جنيه مبيعات بعد إطلاق الموقع، لكن لا يوجد إيراد شهري أو Take Rate.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-17",
+          "title": "The Baby Garage Shark Tank Pitch",
+          "publisher": "Youm7",
+          "source_type": "shark_tank_pitch_coverage",
+          "url": "https://www.youm7.com/story/2024/12/25/صاحبة-مشروع-THE-BABY-GARAGE-منصة-لتداول-مستلزمات-الأطفال/6824383",
+          "evidence_type": "direct",
+          "source_locator": "Shark Tank pitch coverage",
+          "supports": "4 ملايين جنيه مبيعات وإطلاق الموقع في 2022.",
+          "published_on": "2024-12-25"
+        }
+      ],
+      "limitations": "لا يُعرف طول الفترة الدقيقة أو نسبة المبيعات التي احتفظت بها المنصة أو صافي الربح."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن كمستخدمين نشطين شهريًا أو زيارات أو طلبات. تتحدث الشركة عن مجتمع يزيد على مليون أم، وصفحة المؤسِّسة أشارت لاحقًا إلى أكثر من 1.2 مليون أم، بينما يذكر ملف البائعين أكثر من 900 ألف والد ووالدة نشطين عبر منصات الشركة. هذه مقاييس مجتمع وعلاقات عبر قنوات متعددة، وليست MAU موحدة أو مستخدمين فريدين.",
+      "verification_status": "verified_community_scale_not_mau",
+      "confidence": "medium_high",
+      "claim_type": "cross_channel_community_metrics_without_unique_mau",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تقدم الشركة أرقامًا متعددة للمجتمع والبائعين، لكنها لا تنشر MAU موحدة.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-08",
+        "SRC-09",
+        "SRC-06",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "The Baby Garage Company Profile",
+          "publisher": "The Baby Garage via LinkedIn",
+          "source_type": "company_managed_profile",
+          "url": "https://www.linkedin.com/company/the-baby-garage",
+          "evidence_type": "direct",
+          "source_locator": "Company profile",
+          "supports": "مليون+ أم."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Founder Updates and Saudi Expansion",
+          "publisher": "Farah Ahmed Farag",
+          "source_type": "founder_public_statements",
+          "url": "https://eg.linkedin.com/in/farahahmedfarag",
+          "evidence_type": "direct",
+          "source_locator": "Founder updates",
+          "supports": "1.2 مليون+ أم وفق المؤسِّسة."
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Seller FAQs",
+          "publisher": "The Baby Garage",
+          "source_type": "official_b2b_seller_documentation",
+          "url": "https://firstmall.thebabygarage.com/sellers-frequently-asked-questions-en/",
+          "evidence_type": "direct",
+          "source_locator": "Seller FAQs",
+          "supports": "900 ألف+ والد ووالدة نشطين عبر المنصات."
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "The Baby Garage Shark Tank Pitch",
+          "publisher": "Youm7",
+          "source_type": "shark_tank_pitch_coverage",
+          "url": "https://www.youm7.com/story/2024/12/25/صاحبة-مشروع-THE-BABY-GARAGE-منصة-لتداول-مستلزمات-الأطفال/6824383",
+          "evidence_type": "direct",
+          "source_locator": "Pitch coverage",
+          "supports": "مليون أم في الحلقة.",
+          "published_on": "2024-12-25"
+        }
+      ],
+      "limitations": "قد يتداخل الأشخاص بين Facebook والموقع والتطبيق والبريد، ولا توجد طريقة معلنة لإزالة التكرار."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "تنمو احتياجات الطفل وتتغير بسرعة، فتتوقف الأسرة عن استخدام عربات ومقاعد وألعاب وملابس ما تزال صالحة، بينما تواجه أسر أخرى تكلفة مرتفعة وصعوبة في تقييم الجودة والسلامة والمقارنة بين آلاف المنتجات. مجموعات التواصل الاجتماعي توفر عرضًا واسعًا، لكنها لا تقدم دائمًا فحصًا أو دفعًا أو شحنًا أو مرتجعات أو تنظيمًا موحدًا للتجار والأفراد.",
+        "impact": "يؤدي ذلك إلى تجميد قيمة مالية في منتجات غير مستخدمة، وزيادة المخلفات، وشراء متكرر لمنتجات قصيرة العمر، ومخاطر مرتبطة بالحالة والوصف والسلامة. وعلى جانب البائعين، يصعب الوصول إلى جمهور متخصص وإدارة الكتالوج والمخزون والتوصيل وخدمة ما بعد البيع عبر منشورات متفرقة."
+      },
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "underused_assets_affordability_trust_and_fragmented_seller_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم قصة الشركة إعادة استخدام منتجات الأطفال، وتوضح سياسات السوق الحاجة إلى فحص وحماية ومرتجعات.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-13",
+        "SRC-04",
+        "SRC-05",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "TIEC Monthly Startup Talk — Farah Ahmed",
+          "publisher": "Technology Innovation and Entrepreneurship Center",
+          "source_type": "official_government_startup_profile",
+          "url": "https://tiec.gov.eg/English/Events/Pages/Monthly-Startup-Talk-10th.aspx",
+          "evidence_type": "direct",
+          "source_locator": "TIEC profile",
+          "supports": "تدوير المنتجات الجديدة والمستعملة.",
+          "published_on": "2023-10-31"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Buyer FAQs and Preloved Program",
+          "publisher": "The Baby Garage",
+          "source_type": "official_marketplace_operations_document",
+          "url": "https://firstmall.thebabygarage.com/buyers-frequently-asked-questions/",
+          "evidence_type": "direct",
+          "source_locator": "Buyer FAQs",
+          "supports": "الجودة والسلامة والفحص."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Returns and Exchanges",
+          "publisher": "The Baby Garage",
+          "source_type": "official_return_policy",
+          "url": "https://thebabygarage.com/returns-and-exchanges/",
+          "evidence_type": "direct",
+          "source_locator": "Returns",
+          "supports": "حالات الإرجاع والمنتجات المستعملة."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Marketplace Service Agreement",
+          "publisher": "The Baby Garage",
+          "source_type": "official_legal_document",
+          "url": "https://thebabygarage.com/marketplace-service-agreement/",
+          "evidence_type": "direct",
+          "source_locator": "Agreement",
+          "supports": "علاقة المشترين والبائعين والتجار."
+        }
+      ],
+      "limitations": "لم تُنشر دراسة كمية عن حجم الهدر أو التوفير الأسري الناتج عن المنصة."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "تحولت The Baby Garage من مجتمع مساعدة تطوعي إلى سوق يتيح شراء منتجات جديدة وPreloved وOpen Box، وبيع أو التبرع بمستلزمات الأطفال. يجمع الموقع بين كتالوج كبير، وتجار وعلامات موثقة، ونموذج تقديم منتج مستعمل بالصور والسعر والحالة، وفحص جودة وتنظيف لبعض المنتجات، وشحن ودعم ومرتجعات. كما تضيف محتوى إرشاديًا ومراجعات وعروض تمويل ودفع لاحق وشراكات تسويقية، وأطلقت تطبيقًا للهاتف لبيع وشراء والتبرع."
+      },
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "new_preloved_open_box_marketplace_with_operations_content_and_app",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المنصة والتطبيق والفحص والعروض مكونات الحل الحالية.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-04",
+        "SRC-07",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "The Baby Garage Marketplace",
+          "publisher": "The Baby Garage",
+          "source_type": "official_ecommerce_website",
+          "url": "https://thebabygarage.com/",
+          "evidence_type": "direct",
+          "source_locator": "Marketplace",
+          "supports": "المنتجات والفئات والمجتمع."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Sell Your Preloved",
+          "publisher": "The Baby Garage",
+          "source_type": "official_c2c_seller_flow",
+          "url": "https://thebabygarage.com/submit-product-for-sale/",
+          "evidence_type": "direct",
+          "source_locator": "Sell flow",
+          "supports": "تقديم المنتج المستعمل."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Buyer FAQs and Preloved Program",
+          "publisher": "The Baby Garage",
+          "source_type": "official_marketplace_operations_document",
+          "url": "https://firstmall.thebabygarage.com/buyers-frequently-asked-questions/",
+          "evidence_type": "direct",
+          "source_locator": "FAQs",
+          "supports": "فحص وتنظيف ومراجعات وBuy-back."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Active Promotions",
+          "publisher": "The Baby Garage",
+          "source_type": "official_commerce_promotions",
+          "url": "https://thebabygarage.com/promotions/",
+          "evidence_type": "direct",
+          "source_locator": "Promotions",
+          "supports": "Open Box والتمويل."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "The Baby Garage App",
+          "publisher": "Google Play / The Baby Garage",
+          "source_type": "official_mobile_app_listing",
+          "url": "https://play.google.com/store/apps/details?id=com.babygarage.app",
+          "evidence_type": "direct",
+          "source_locator": "Google Play",
+          "supports": "التطبيق والبيع والشراء والتبرع.",
+          "published_on": "2025-06-04"
+        }
+      ]
+    },
+    "$.market_data.target_audience": {
+      "field_value": "الأمهات والآباء والأسر التي لديها أطفال حتى نحو 12–14 عامًا، والمقبلون على الإنجاب، ومشترو المنتجات الجديدة والمستعملة، والأفراد الراغبون في بيع أو التبرع بمستلزمات أطفالهم، والتجار والموزعون والعلامات التجارية والصالونات والخدمات التي تستهدف الأسرة، إضافة إلى شركاء الدفع والتمويل والتوصيل والمعلنين.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "parents_individual_sellers_merchants_brands_and_service_partners",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تحدد ملفات الشركة الأسر والتجار والعلامات والبائعين الأفراد والفئات العمرية.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-11",
+        "SRC-04",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "The Baby Garage — Flat6Labs Portfolio",
+          "publisher": "Flat6Labs",
+          "source_type": "direct_investor_portfolio",
+          "url": "https://flat6labs.com/ar/Company/the-baby-garage/",
+          "evidence_type": "direct",
+          "source_locator": "Target market",
+          "supports": "آباء الأطفال حتى 12 عامًا والتجار والعلامات."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Buyer FAQs and Preloved Program",
+          "publisher": "The Baby Garage",
+          "source_type": "official_marketplace_operations_document",
+          "url": "https://firstmall.thebabygarage.com/buyers-frequently-asked-questions/",
+          "evidence_type": "direct",
+          "source_locator": "Buyer FAQs",
+          "supports": "منتجات حتى 14 عامًا والبائعون الأفراد."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Marketplace Service Agreement",
+          "publisher": "The Baby Garage",
+          "source_type": "official_legal_document",
+          "url": "https://thebabygarage.com/marketplace-service-agreement/",
+          "evidence_type": "direct",
+          "source_locator": "Agreement",
+          "supports": "المشترون والبائعون والتجار والشركاء."
+        }
+      ]
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر الشركة أو جهة رسمية رقمًا ماليًا موحدًا لسوقها القابل للاستهداف. تعمل المنصة عبر تجارة منتجات الأطفال الجديدة، وإعادة البيع، والإعلانات، والخدمات والشحن، وهي أسواق مختلفة. مؤشرات النطاق المعلنة تشمل أكثر من مليون أم في المجتمع، وأكثر من 100 ألف SKU، وأكثر من 3,000 بائع اجتماعي وتاجر رسمي وفق صفحات الشركة، لكن هذه الأرقام لا تمثل قيمة السوق أو حصة المنصة.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "medium_high",
+      "claim_type": "platform_scale_without_published_financial_tam",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد TAM رسمي؛ تُستخدم مقاييس المجتمع والكتالوج والبائعين كمؤشرات فقط.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-08",
+        "SRC-06",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "The Baby Garage Company Profile",
+          "publisher": "The Baby Garage via LinkedIn",
+          "source_type": "company_managed_profile",
+          "url": "https://www.linkedin.com/company/the-baby-garage",
+          "evidence_type": "direct",
+          "source_locator": "Company profile",
+          "supports": "مليون+ أم و100 ألف+ SKU."
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Seller FAQs",
+          "publisher": "The Baby Garage",
+          "source_type": "official_b2b_seller_documentation",
+          "url": "https://firstmall.thebabygarage.com/sellers-frequently-asked-questions-en/",
+          "evidence_type": "direct",
+          "source_locator": "Seller FAQs",
+          "supports": "3,000+ بائع وتاجر."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "ITIDA Web Summit 2023 Company Profile",
+          "publisher": "ITIDA",
+          "source_type": "official_government_company_profile",
+          "url": "https://itida.gov.eg/English/MediaCenter/Events/Pages/websummit-2023.aspx",
+          "evidence_type": "direct",
+          "source_locator": "ITIDA profile",
+          "supports": "المنصة متعددة الوحدات.",
+          "published_on": "2023"
+        }
+      ],
+      "limitations": "لا تمثل هذه الأرقام قيمة السوق أو حجم GMV السنوي أو الحصة السوقية."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا توجد سلسلة مالية عامة تسمح بحساب CAGR. وفق Flat6Labs، خدمت المنصة 550 ألف والد ووالدة وحققت قفزة إيرادات معلنة قدرها 70% في مرحلة 2021. وفي نهاية 2024 ذكرت المؤسِّسة وصول المجتمع إلى مليون أم وتحقيق أكثر من 4 ملايين جنيه مبيعات بعد إطلاق الموقع عام 2022. وفي تحديثات لاحقة أشارت إلى مجتمع يزيد على 1.2 مليون أم وتوسع إلى السعودية عبر مشروع مشترك محلي. هذه مؤشرات متباعدة زمنيًا ومختلفة التعريف.",
+      "verification_status": "verified_historical_company_metrics",
+      "confidence": "medium",
+      "claim_type": "historical_revenue_community_sales_and_expansion_indicators",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توجد نقاط زمنية تاريخية مختلفة، لكنها لا تشكل سلسلة موحدة قابلة لحساب CAGR.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-12",
+        "SRC-17",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-12",
+          "title": "Flat6Labs Historical Growth Note",
+          "publisher": "Flat6Labs",
+          "source_type": "direct_investor_company_update",
+          "url": "https://flat6labs.com/ar/author/omar/page/4/",
+          "evidence_type": "direct",
+          "source_locator": "Flat6Labs update",
+          "supports": "قفزة إيراد 70% و550 ألف والد ووالدة."
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "The Baby Garage Shark Tank Pitch",
+          "publisher": "Youm7",
+          "source_type": "shark_tank_pitch_coverage",
+          "url": "https://www.youm7.com/story/2024/12/25/صاحبة-مشروع-THE-BABY-GARAGE-منصة-لتداول-مستلزمات-الأطفال/6824383",
+          "evidence_type": "direct",
+          "source_locator": "Shark Tank pitch",
+          "supports": "مليون أم و4 ملايين مبيعات.",
+          "published_on": "2024-12-25"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Founder Updates and Saudi Expansion",
+          "publisher": "Farah Ahmed Farag",
+          "source_type": "founder_public_statements",
+          "url": "https://eg.linkedin.com/in/farahahmedfarag",
+          "evidence_type": "direct",
+          "source_locator": "Founder update",
+          "supports": "1.2 مليون+ أم والتوسع السعودي."
+        }
+      ],
+      "limitations": "الأرقام تختلف في التاريخ والتعريف، و70% نمو تاريخي دون قاعدة أو فترة مفصلة."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "رأس المال الشخصي الأول للمؤسِّسة غير معلن. بدأت المبادرة تطوعيًا في 2015، وتطورت تحت TIEC في 2019، ثم حصلت على دعم وتمويل من Flat6Labs وفق ملفات الشركة والمسرعة. في Shark Tank Egypt طلبت فرح أحمد 9 ملايين جنيه مقابل 10%، وخرجت من الحلقة باتفاق استثماري على الهواء، لكن مبلغ وشروط العرض النهائي ومستندات الإغلاق وجدول الملكية الحالي لم تُنشر بوضوح في مصادر موثوقة مفتوحة.",
+      "verification_status": "verified_on_air_ask_final_terms_undisclosed",
+      "confidence": "medium_high",
+      "claim_type": "accelerator_backed_origin_and_shark_tank_deal_without_public_terms",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المصادر دعم TIEC وFlat6Labs، وطلب Shark Tank والخروج باتفاق، دون شروط نهائية معلنة.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-11",
+        "SRC-13",
+        "SRC-09",
+        "SRC-18",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "The Baby Garage — Flat6Labs Portfolio",
+          "publisher": "Flat6Labs",
+          "source_type": "direct_investor_portfolio",
+          "url": "https://flat6labs.com/ar/Company/the-baby-garage/",
+          "evidence_type": "direct",
+          "source_locator": "Portfolio",
+          "supports": "Flat6Labs ممول ومسرع."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "TIEC Monthly Startup Talk — Farah Ahmed",
+          "publisher": "Technology Innovation and Entrepreneurship Center",
+          "source_type": "official_government_startup_profile",
+          "url": "https://tiec.gov.eg/English/Events/Pages/Monthly-Startup-Talk-10th.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Government profile",
+          "supports": "TIEC.",
+          "published_on": "2023-10-31"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Founder Updates and Saudi Expansion",
+          "publisher": "Farah Ahmed Farag",
+          "source_type": "founder_public_statements",
+          "url": "https://eg.linkedin.com/in/farahahmedfarag",
+          "evidence_type": "direct",
+          "source_locator": "Founder update",
+          "supports": "Flat6Labs كأول مستثمر وفق المؤسِّسة."
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "The Baby Garage Shark Tank Introduction",
+          "publisher": "Shark Tank Egypt / Shark Tank Arabi",
+          "source_type": "official_program_clip_index",
+          "url": "https://sharktankarabi.com/1613/",
+          "evidence_type": "direct",
+          "source_locator": "Pitch clip",
+          "supports": "طلب 9 ملايين مقابل 10%.",
+          "published_on": "2024-12-26"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "The Baby Garage Leaves the Tank with a Deal",
+          "publisher": "Shark Tank Egypt / Shark Tank Arabi",
+          "source_type": "official_program_clip_index",
+          "url": "https://sharktankarabi.com/1698/",
+          "evidence_type": "direct",
+          "source_locator": "Post-deal clip",
+          "supports": "الخروج باتفاق.",
+          "published_on": "2024-12-30"
+        }
+      ],
+      "calculation": {
+        "founder_personal_capital": "not_publicly_disclosed",
+        "shark_tank_ask_egp": 9000000,
+        "shark_tank_ask_equity_percent": 10,
+        "final_on_air_offer_terms": "not_publicly_disclosed_in_accessible_sources",
+        "legal_closing_status": "not_publicly_disclosed",
+        "current_cap_table": "not_publicly_disclosed"
+      }
+    },
+    "$.financials.valuation": {
+      "field_value": "طلب 9 ملايين جنيه مقابل 10% يعني تقييمًا ضمنيًا بعد الاستثمار قدره 90 مليون جنيه، وقبل الاستثمار 81 مليون جنيه. هذا تقييم الطلب في Shark Tank، وليس تقييمًا حاليًا أو دليلًا على إغلاق الصفقة بالشروط نفسها. لم يُعلن تقييم أحدث موثوق للشركة.",
+      "verification_status": "verified_historical_calculation",
+      "confidence": "high",
+      "claim_type": "shark_tank_ask_implied_valuation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يُحسب تقييم الطلب من 9 ملايين جنيه مقابل 10%، دون اعتباره تقييمًا حاليًا.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-17",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-17",
+          "title": "The Baby Garage Shark Tank Pitch",
+          "publisher": "Youm7",
+          "source_type": "shark_tank_pitch_coverage",
+          "url": "https://www.youm7.com/story/2024/12/25/صاحبة-مشروع-THE-BABY-GARAGE-منصة-لتداول-مستلزمات-الأطفال/6824383",
+          "evidence_type": "direct",
+          "source_locator": "Pitch coverage",
+          "supports": "9 ملايين مقابل 10%.",
+          "published_on": "2024-12-25"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "The Baby Garage Shark Tank Introduction",
+          "publisher": "Shark Tank Egypt / Shark Tank Arabi",
+          "source_type": "official_program_clip_index",
+          "url": "https://sharktankarabi.com/1613/",
+          "evidence_type": "direct",
+          "source_locator": "Official clip index",
+          "supports": "تأكيد الطلب.",
+          "published_on": "2024-12-26"
+        }
+      ],
+      "limitations": "لا يعكس تقييم الطلب الشروط النهائية أو تقييمًا بعد الفحص أو قيمة حالية.",
+      "calculation": {
+        "ask_post_money_formula": "9,000,000 ÷ 0.10",
+        "ask_post_money_egp": 90000000,
+        "ask_pre_money_formula": "90,000,000 - 9,000,000",
+        "ask_pre_money_egp": 81000000,
+        "current_valuation": "not_publicly_disclosed"
+      }
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "اشتراكات شهرية أو خطط إدراج للبائعين والتجار وفق نموذج Flat6Labs التاريخي",
+        "رسوم معاملات أو عمولات على المنتجات التي تُسوّق وتباع عبر المنصة",
+        "هوامش شحن وتوصيل وتنفيذ الطلبات",
+        "هوامش بيع على المنتجات الجديدة أو Open Box التي تديرها المنصة أو شركاؤها",
+        "عمولات أو رسوم على بيع المنتجات المستعملة وخدمة Buy-back أو إدارة إعادة البيع",
+        "رسوم اختيارية للفحص أو التنظيف الكيميائي أو الخدمات التشغيلية للمنتج المستعمل",
+        "إيرادات إعلانية وشراكات تسويقية ومحتوى للعلامات التجارية التي تستهدف الأمهات",
+        "اشتراكات عضوية أو بطاقات خصم تمنح مزايا في التجزئة والتجارة",
+        "مبيعات Gift Certificates والعروض والحملات المشتركة",
+        "شراكات تمويل وتقسيط مع Halan وvalU وغيرها، دون إفصاح عن العائد التجاري",
+        "خدمات تمكين العلامات الأجنبية والمحلية في الوعي والتوطين والتحويل والتوسع الإقليمي",
+        "قنوات FinCommerce معلنة كاتجاه تطوير، دون دليل على إيراد فعلي منشور حتى تاريخ التحقق"
+      ],
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "subscriptions_transactions_shipping_ads_membership_retail_and_services",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت Flat6Labs القنوات التاريخية، وتثبت المنصة القنوات التشغيلية الحالية والاتجاهات المعلنة.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-11",
+        "SRC-01",
+        "SRC-05",
+        "SRC-07",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "The Baby Garage — Flat6Labs Portfolio",
+          "publisher": "Flat6Labs",
+          "source_type": "direct_investor_portfolio",
+          "url": "https://flat6labs.com/ar/Company/the-baby-garage/",
+          "evidence_type": "direct",
+          "source_locator": "Business model",
+          "supports": "الاشتراكات والمعاملات والشحن والإعلانات والبطاقات."
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "The Baby Garage Marketplace",
+          "publisher": "The Baby Garage",
+          "source_type": "official_ecommerce_website",
+          "url": "https://thebabygarage.com/",
+          "evidence_type": "direct",
+          "source_locator": "Marketplace",
+          "supports": "البيع الجديد والمستعمل والعروض."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Returns and Exchanges",
+          "publisher": "The Baby Garage",
+          "source_type": "official_return_policy",
+          "url": "https://thebabygarage.com/returns-and-exchanges/",
+          "evidence_type": "direct",
+          "source_locator": "Returns",
+          "supports": "التنظيف والتحويل للبائع."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Active Promotions",
+          "publisher": "The Baby Garage",
+          "source_type": "official_commerce_promotions",
+          "url": "https://thebabygarage.com/promotions/",
+          "evidence_type": "direct",
+          "source_locator": "Promotions",
+          "supports": "Open Box والتمويل."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "The Baby Garage Company Profile",
+          "publisher": "The Baby Garage via LinkedIn",
+          "source_type": "company_managed_profile",
+          "url": "https://www.linkedin.com/company/the-baby-garage",
+          "evidence_type": "direct",
+          "source_locator": "Company profile",
+          "supports": "العضوية والتسويق وFinCommerce."
+        }
+      ],
+      "limitations": "بعض القنوات تاريخية أو معلنة، ولا يوجد إفصاح مالي يثبت مساهمتها الحالية."
+    },
+    "$.tools": {
+      "field_value": [
+        "متجر إلكتروني متعدد البائعين للمنتجات الجديدة والمستعملة وOpen Box",
+        "تطبيق Android لشراء وبيع والتبرع بمستلزمات الأطفال",
+        "نموذج Sell Your Preloved لرفع الصور والحالة والسعر والعنوان وبيانات الاستلام",
+        "عمليات فحص جودة وتنظيف لبعض المنتجات المستعملة قبل عرضها",
+        "Buy-back لبعض فئات المعدات المؤهلة والمشتراة خلال فترة محددة وفق الأسئلة الشائعة",
+        "كتالوج يتجاوز 100 ألف SKU وفق ملفات الشركة",
+        "حسابات للبائعين والتجار وإدارة المنتجات والمخزون",
+        "خدمات لوجستية وشحن وتسليم وإدارة مرتجعات",
+        "الدفع عند الاستلام وبطاقات الدفع ومحافظ أو وسائل دفع متعددة بحسب السوق",
+        "عروض تقسيط وتمويل عبر Halan وvalU",
+        "مراجعات منتجات ومدونة إرشادية ومقارنة أسعار وعروض",
+        "Marketplace Service Agreement للبائعين والمشترين والتجار",
+        "سياسات إرجاع منفصلة للمنتجات الجديدة والمستعملة والاستثناءات الصحية",
+        "عضوية أو بطاقة خصم وبرامج توفير وفق نموذج الشركة المعلن",
+        "Gift Certificates وعروض ترويجية وكوبونات ونشرة بريدية",
+        "خدمات إعلانات وشراكات تواصل وتسويق للعلامات التجارية",
+        "منظومة مجتمع عبر Facebook وInstagram والقنوات الاجتماعية",
+        "برامج تمكين البائعين الاجتماعيين والتجار الرسميين",
+        "مشروع مشترك وتوسع تشغيلي معلن في السعودية",
+        "تطوير FinCommerce معلن لربط التجارة بالقيمة المالية المستقبلية، دون توثيق إطلاق مالي كامل",
+        "بنية متجر حالية تعرض خصائص Marketplace متعددة البائعين؛ لم يُثبت رسميًا استخدام React Native أو Node.js أو AWS كحزمة تقنية حالية"
+      ],
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "official_marketplace_app_seller_operations_financing_content_and_regional_capabilities",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استُبدلت حزمة تقنية غير مثبتة بوظائف موثقة في الموقع والتطبيق والوثائق.",
+      "source_count": 8,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03",
+        "SRC-04",
+        "SRC-05",
+        "SRC-07",
+        "SRC-10",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "The Baby Garage Marketplace",
+          "publisher": "The Baby Garage",
+          "source_type": "official_ecommerce_website",
+          "url": "https://thebabygarage.com/",
+          "evidence_type": "direct",
+          "source_locator": "Homepage",
+          "supports": "السوق والكتالوج والعروض."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Marketplace Service Agreement",
+          "publisher": "The Baby Garage",
+          "source_type": "official_legal_document",
+          "url": "https://thebabygarage.com/marketplace-service-agreement/",
+          "evidence_type": "direct",
+          "source_locator": "Agreement",
+          "supports": "منصة متعددة البائعين."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Sell Your Preloved",
+          "publisher": "The Baby Garage",
+          "source_type": "official_c2c_seller_flow",
+          "url": "https://thebabygarage.com/submit-product-for-sale/",
+          "evidence_type": "direct",
+          "source_locator": "Seller flow",
+          "supports": "بيع Preloved."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Buyer FAQs and Preloved Program",
+          "publisher": "The Baby Garage",
+          "source_type": "official_marketplace_operations_document",
+          "url": "https://firstmall.thebabygarage.com/buyers-frequently-asked-questions/",
+          "evidence_type": "direct",
+          "source_locator": "FAQs",
+          "supports": "Buy-back والفحص."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Returns and Exchanges",
+          "publisher": "The Baby Garage",
+          "source_type": "official_return_policy",
+          "url": "https://thebabygarage.com/returns-and-exchanges/",
+          "evidence_type": "direct",
+          "source_locator": "Returns",
+          "supports": "الإرجاع والتنظيف."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Active Promotions",
+          "publisher": "The Baby Garage",
+          "source_type": "official_commerce_promotions",
+          "url": "https://thebabygarage.com/promotions/",
+          "evidence_type": "direct",
+          "source_locator": "Promotions",
+          "supports": "التمويل وOpen Box."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "The Baby Garage App",
+          "publisher": "Google Play / The Baby Garage",
+          "source_type": "official_mobile_app_listing",
+          "url": "https://play.google.com/store/apps/details?id=com.babygarage.app",
+          "evidence_type": "direct",
+          "source_locator": "Google Play",
+          "supports": "التطبيق.",
+          "published_on": "2025-06-04"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Founder Updates and Saudi Expansion",
+          "publisher": "Farah Ahmed Farag",
+          "source_type": "founder_public_statements",
+          "url": "https://eg.linkedin.com/in/farahahmedfarag",
+          "evidence_type": "direct",
+          "source_locator": "Founder update",
+          "supports": "التوسع السعودي."
+        }
+      ],
+      "limitations": "لا يوجد مصدر رسمي يثبت React Native أو Node.js أو AWS أو مزودي Payment APIs الحاليين."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "The Baby Garage Marketplace",
+      "publisher": "The Baby Garage",
+      "source_type": "official_ecommerce_website",
+      "url": "https://thebabygarage.com/",
+      "supports": [
+        "الفئات والمنتجات الجديدة والمستعملة والعروض",
+        "عنوان المكتب الحالي",
+        "البيع والتواصل والمجتمع"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Marketplace Service Agreement",
+      "publisher": "The Baby Garage",
+      "source_type": "official_legal_document",
+      "url": "https://thebabygarage.com/marketplace-service-agreement/",
+      "supports": [
+        "The Baby Garage شركة ذات مسؤولية محدودة مصرية",
+        "المشترون والبائعون والتجار",
+        "السوق الإلكتروني والتطبيق",
+        "الإرجاع والخصوصية والضرائب"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Sell Your Preloved",
+      "publisher": "The Baby Garage",
+      "source_type": "official_c2c_seller_flow",
+      "url": "https://thebabygarage.com/submit-product-for-sale/",
+      "supports": [
+        "الفئات المؤهلة",
+        "رفع الصور والسعر والحالة",
+        "العنوان وبيانات الاستلام"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Buyer FAQs and Preloved Program",
+      "publisher": "The Baby Garage",
+      "source_type": "official_marketplace_operations_document",
+      "url": "https://firstmall.thebabygarage.com/buyers-frequently-asked-questions/",
+      "supports": [
+        "Buy-back",
+        "فحص وتنظيف المنتجات المستعملة",
+        "المراجعات والدفع والدعم",
+        "الأطفال حتى 14 عامًا"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Returns and Exchanges",
+      "publisher": "The Baby Garage",
+      "source_type": "official_return_policy",
+      "url": "https://thebabygarage.com/returns-and-exchanges/",
+      "supports": [
+        "المرتجعات والاستثناءات",
+        "قواعد منتجات Preloved",
+        "التنظيف الاختياري",
+        "التحويل للبائع وحق المعاينة"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Seller FAQs",
+      "publisher": "The Baby Garage",
+      "source_type": "official_b2b_seller_documentation",
+      "url": "https://firstmall.thebabygarage.com/sellers-frequently-asked-questions-en/",
+      "supports": [
+        "أكثر من 3,000 بائع وتاجر",
+        "أكثر من 900 ألف والد ووالدة نشطين وفق الشركة",
+        "إدارة الكتالوج والمخزون",
+        "خدمات اللوجستيات"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Active Promotions",
+      "publisher": "The Baby Garage",
+      "source_type": "official_commerce_promotions",
+      "url": "https://thebabygarage.com/promotions/",
+      "supports": [
+        "Halan وvalU",
+        "Open Box",
+        "خصومات المنتجات ذات العبوات المتضررة"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "The Baby Garage Company Profile",
+      "publisher": "The Baby Garage via LinkedIn",
+      "source_type": "company_managed_profile",
+      "url": "https://www.linkedin.com/company/the-baby-garage",
+      "supports": [
+        "المقر في السادس من أكتوبر",
+        "100 ألف+ SKU",
+        "مليون+ أم",
+        "العضوية والإعلانات",
+        "FinCommerce",
+        "التأسيس في 2015"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Founder Updates and Saudi Expansion",
+      "publisher": "Farah Ahmed Farag",
+      "source_type": "founder_public_statements",
+      "url": "https://eg.linkedin.com/in/farahahmedfarag",
+      "supports": [
+        "1.2 مليون+ أم وفق تحديث المؤسِّسة",
+        "Flat6Labs كأول مستثمر",
+        "التوسع السعودي والمشروع المشترك",
+        "التوسع الإقليمي"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "The Baby Garage App",
+      "publisher": "Google Play / The Baby Garage",
+      "source_type": "official_mobile_app_listing",
+      "published_on": "2025-06-04",
+      "url": "https://play.google.com/store/apps/details?id=com.babygarage.app",
+      "supports": [
+        "شراء وبيع وتبرع",
+        "المنتجات الجديدة والمستعملة",
+        "التطبيق ودعم الحسابات",
+        "عنوان المطور"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "The Baby Garage — Flat6Labs Portfolio",
+      "publisher": "Flat6Labs",
+      "source_type": "direct_investor_portfolio",
+      "url": "https://flat6labs.com/ar/Company/the-baby-garage/",
+      "supports": [
+        "550 ألف والد ووالدة تاريخيًا",
+        "الفريق ووحدات الأعمال",
+        "الاشتراكات ورسوم المعاملات والشحن والإعلانات وبطاقات الخصم",
+        "التطوير تحت TIEC"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Flat6Labs Historical Growth Note",
+      "publisher": "Flat6Labs",
+      "source_type": "direct_investor_company_update",
+      "url": "https://flat6labs.com/ar/author/omar/page/4/",
+      "supports": [
+        "قفزة إيراد تاريخية 70%",
+        "550 ألف والد ووالدة",
+        "المحتوى والسوق والبطاقات والفعاليات"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "TIEC Monthly Startup Talk — Farah Ahmed",
+      "publisher": "Technology Innovation and Entrepreneurship Center",
+      "source_type": "official_government_startup_profile",
+      "published_on": "2023-10-31",
+      "url": "https://tiec.gov.eg/English/Events/Pages/Monthly-Startup-Talk-10th.aspx",
+      "supports": [
+        "Farah Ahmed المؤسِّسة والرئيسة التنفيذية",
+        "السوق الدائري للمنتجات الجديدة والمستعملة",
+        "دعم TIEC"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "ITIDA Web Summit 2023 Company Profile",
+      "publisher": "ITIDA",
+      "source_type": "official_government_company_profile",
+      "published_on": "2023",
+      "url": "https://itida.gov.eg/English/MediaCenter/Events/Pages/websummit-2023.aspx",
+      "supports": [
+        "Circular economy marketplace",
+        "المشترون والبائعون والتجار",
+        "360 social commerce",
+        "المنتجات الجديدة والمستعملة"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "IFC She WINS Arabia",
+      "publisher": "International Finance Corporation",
+      "source_type": "official_accelerator_profile",
+      "published_on": "2022",
+      "url": "https://www.ifc.org/en/stories/2022/creating-opportunities-for-women-led-startups",
+      "supports": [
+        "Farah Ahmed وThe Baby Garage",
+        "السوق الإلكتروني لمنتجات الأطفال",
+        "المشاركة في She WINS Arabia"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Founder Oral History",
+      "publisher": "Women and Memory Forum",
+      "source_type": "founder_interview_archive",
+      "published_on": "2021-12-19",
+      "url": "https://wmf.org.eg/en/narrators/farah-ahmed/",
+      "supports": [
+        "بداية الفكرة في 2015",
+        "التأسيس الرسمي في يناير 2020",
+        "العمل التطوعي قبل الربح",
+        "التفرغ الكامل في مارس 2021"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "The Baby Garage Shark Tank Pitch",
+      "publisher": "Youm7",
+      "source_type": "shark_tank_pitch_coverage",
+      "published_on": "2024-12-25",
+      "url": "https://www.youm7.com/story/2024/12/25/صاحبة-مشروع-THE-BABY-GARAGE-منصة-لتداول-مستلزمات-الأطفال/6824383",
+      "supports": [
+        "طلب 9 ملايين جنيه مقابل 10%",
+        "مليون أم",
+        "100 ألف منتج",
+        "4 ملايين جنيه مبيعات",
+        "21 شخصًا وإطلاق الموقع في 2022"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "The Baby Garage Shark Tank Introduction",
+      "publisher": "Shark Tank Egypt / Shark Tank Arabi",
+      "source_type": "official_program_clip_index",
+      "published_on": "2024-12-26",
+      "url": "https://sharktankarabi.com/1613/",
+      "supports": [
+        "طلب 9 ملايين جنيه مقابل 10%",
+        "الموسم الثالث الحلقة 11",
+        "المنتجات الجديدة والمستعملة"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "The Baby Garage Leaves the Tank with a Deal",
+      "publisher": "Shark Tank Egypt / Shark Tank Arabi",
+      "source_type": "official_program_clip_index",
+      "published_on": "2024-12-30",
+      "url": "https://sharktankarabi.com/1698/",
+      "supports": [
+        "الخروج من الحلقة باتفاق استثماري على الهواء",
+        "الحلقة 11 من الموسم الثالث"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "Yasseen Mansour Withdraws from The Baby Garage",
+      "publisher": "Shark Tank Egypt / Shark Tank Arabi",
+      "source_type": "official_program_clip_index",
+      "published_on": "2024-12-28",
+      "url": "https://sharktankarabi.com/1680/",
+      "supports": [
+        "اعتراض على نموذج يحتاج إلى حرق نقدي",
+        "انسحاب ياسين منصور من العرض"
+      ]
+    }
   ]
 }

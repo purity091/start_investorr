@@ -2,70 +2,1447 @@
   "id": "canva",
   "slug": "canva",
   "name": "كانفا (Canva)",
-  "headline": "دمقرطة التصميم: كيف هزمت معلمة أسترالية إمبراطورية أدوبي",
-  "category": "SaaS & Design / برمجيات التصميم السحابية",
+  "headline": "من قوالب تسهّل البداية إلى نظام تشغيل إبداعي: كيف وسّعت Canva التصميم من مهمة متخصصة إلى تدفق عمل جماعي",
+  "category": "SaaS, Design & Creative AI / Visual Communication Platform / التصميم والتواصل المرئي",
   "company": {
-    "location": "سيدني، أستراليا (مقر عالمي)",
-    "business_model": "النموذج المجاني (Freemium) مع اشتراكات شهرية/سنوية للأفراد (Canva Pro) والفرق (Canva for Teams)"
+    "location": "سيدني، أستراليا. تأسست Canva وأطلقت من سيدني، وتدير اليوم فريقًا موزعًا ومكاتب ومنشآت في عدة دول. Canva Pty Ltd هي الجهة المتعاقدة في معظم الأسواق خارج الولايات المتحدة والمملكة المتحدة، مع كيانات محلية منفصلة في بعض المناطق.",
+    "business_model": "نموذج Freemium متعدد الطبقات. تقدم Canva خطة Free، وخطة Pro للأفراد، وCanva Business للأفراد والفرق الصغيرة، وCanva Enterprise للمؤسسات، مع بقاء بعض عملاء Teams القدامى على خططهم الحالية. تشمل القنوات الأخرى Canva Print، وتراخيص بعض عناصر Pro للمستخدم المجاني، وبرامج السوق والمبدعين، وحلول المؤسسات والتكاملات. لا تنشر الشركة توزيع الإيرادات حسب القناة."
   },
   "directory_snapshot": {
-    "monthly_revenue": "أكثر من 2 مليار دولار إيرادات سنوية متكررة (ARR)",
-    "monthly_traffic": "أكثر من 170 مليون مستخدم نشط شهرياً من 190 دولة"
+    "monthly_revenue": "نحو 291.7 مليون دولار كمتوسط شهري حسابي، استنادًا إلى إعلان Canva أن إيرادات 2025 بلغت نحو 3.5 مليارات دولار. الرقم صادر عن شركة خاصة ولم يُنشر ضمن قوائم مالية عامة مدققة، كما تصف بعض صفحات الشركة الرقم بأنه إيراد سنوي وبعضها بأنه Annualized Revenue؛ لذلك لا يُعامل كـMRR تعاقدي.",
+    "monthly_traffic": "نحو 260 مليون مستخدم شهريًا وفق مراجعة Canva لعام 2025، مع أكثر من 28 مليون عميل مدفوع وفق تحديث رسمي لاحق. المستخدم الشهري ليس حسابًا مدفوعًا، والعميل المدفوع قد يكون فردًا أو مقعدًا أو عضوًا ضمن فريق بحسب تعريف الشركة."
   },
   "overview": {
     "problem": {
-      "text": "في الماضي، كان التصميم الجرافيكي حكراً على المحترفين. برامج مثل Adobe Photoshop أو Illustrator كانت باهظة الثمن، معقدة جداً، وتتطلب شهوراً لتعلمها. لم يكن لدى أصحاب المشاريع الصغيرة، المسوقين، أو الطلاب أداة بسيطة وسريعة لإنشاء تصاميم احترافية يومية. لم تكن المشكلة تقتصر على السعر والتعقيد فحسب، بل كانت دورة حياة إنتاج المحتوى الرقمي بطيئة ومحبطة للغاية؛ فإذا أراد مسوق تعديل نص بسيط في صورة، كان عليه العودة للمصمم المحترف والانتظار لأيام. هذا الاحتكار التقني أدى لاستنزاف ميزانيات الشركات الناشئة والصغيرة على وكالات التصميم، وهمّش شريحة ضخمة من المبدعين الذين يمتلكون الذوق الفني ولكنهم يفتقرون للمهارة التقنية في التعامل مع واجهات معقدة تعتمد على الطبقات (Layers). كما أن البرامج التقليدية كانت تعمل بشكل منعزل على أجهزة سطح المكتب (Offline)، مما جعل التعاون بين فرق العمل كابوساً يتطلب إرسال ملفات ضخمة عبر الإيميل بشكل متكرر، مما يؤدي لضياع النسخ النهائية.",
-      "impact": "احتكار صناعة التصميم، بطء شديد في إنتاج المحتوى الرقمي، واعتماد الشركات الصغيرة على وكالات تصميم مكلفة جداً لأبسط المهام. مما أدى إلى خنق الإبداع المؤسسي، حيث أصبحت الحملات التسويقية حبيسة انتظار الموافقات وتعديلات المصممين، وتأخر إطلاق المنتجات في أسواق تتطلب سرعة استجابة هائلة."
+      "text": "بدأت الفكرة من ملاحظة Melanie Perkins لصعوبة تعلم أدوات التصميم التقليدية أثناء تدريسها. كان المستخدم غير المتخصص يبدأ غالبًا من لوحة فارغة وواجهة مليئة بالأدوات والطبقات، بينما تحتاج الشركات والمدارس إلى إنتاج عروض ومنشورات ومواد تسويقية بسرعة وتناسق، ثم مشاركة الملفات ومراجعتها واعتمادها بين أشخاص لا يعملون بالضرورة كمصممين.",
+      "impact": "يؤدي التعقيد إلى بطء الوصول لأول نتيجة مفيدة، وكثرة الاعتماد على خبراء التصميم في المهام المتكررة، وتشتت الملفات والإصدارات، وضعف اتساق العلامة عند توسع عدد من ينشئون المحتوى. لكن تبسيط التصميم قد يخلق بدوره مخاطر جديدة: إنتاج محتوى متشابه، استخدام أصول بترخيص غير مفهوم، أو نشر مواد خارج ضوابط العلامة والجودة."
     },
     "solution": {
-      "text": "منصة سحابية تعتمد على تقنية (السحب والإفلات Drag & Drop) وتوفر مئات الآلاف من القوالب الجاهزة (Templates). جعلت كانفا عملية التصميم بديهية لدرجة أن أي شخص (بدون أي خبرة سابقة) يمكنه تصميم عرض تقديمي، منشور سوشيال ميديا، أو سيرة ذاتية خلال 5 دقائق مجاناً. هذا المنهج لم يلغِ دور المصممين المحترفين، بل حررهم من المهام الروتينية المملة ليركزوا على الإبداع الاستراتيجي، بينما أعطى الأفراد العاديين (العصا السحرية) لإنتاج محتوى يومي مبهر. المنصة اعتمدت كلياً على السحابة (Cloud-based)، مما يعني أن التعديلات تُحفظ لحظياً، ويمكن لفريق كامل في دول مختلفة العمل على نفس العرض التقديمي في وقت واحد ورؤية مؤشرات الماوس لبعضهم البعض، وهو ما أحدث ثورة حقيقية في مفهوم (التصميم التعاوني Collaborative Design)."
+      "text": "قدمت Canva محررًا سحابيًا قائمًا على القوالب والسحب والإفلات، مع مكتبة محتوى وتعاون وتعليقات وحفظ ومشاركة ونشر وطباعة. توسعت إلى Visual Suite وDocs وWhiteboards وPresentations وVideo وWebsites وSheets وData Visualization، ثم إلى Brand Kits والموافقات وإدارة الفرق وEnterprise. وفي 2025–2026 أعادت بناء المنصة حول Creative Operating System وCanva AI 2.0 وCanva Design Model، مع مخرجات طبقية قابلة للتحرير، وذاكرة وأتمتة ووصلات بيانات وبحث ويب وجدولة، إلى جانب Affinity للمحترفين وLeonardo.Ai وFlourish ومنصة مطورين."
     }
   },
   "market_data": {
-    "target_audience": "غير المصممين (Non-designers)، المعلمون والطلاب (مجاناً)، المسوقون، أصحاب المشاريع الصغيرة، والشركات الكبرى لإدارة علامتها التجارية. إضافة إلى المعلمين والطلاب في المؤسسات التعليمية العالمية الذين يستفيدون من المنصة مجاناً لبناء مهارات القرن الحادي والعشرين، والمسوقين وصناع المحتوى المستقلين.",
-    "market_size": "سوق برمجيات التصميم والنشر المكتبي العالمي (يتجاوز 45 مليار دولار). والذي يشهد تحولاً جذرياً بفضل انتقال الشركات من البرمجيات المكتبية إلى الحلول السحابية التعاونية، مع توقعات بنمو سنوي مركب يتجاوز 15%.",
-    "growth_rate": "واحدة من أسرع شركات البرمجيات نمواً في التاريخ، بتقييم بلغ 39 مليار دولار في 2023. مدفوعة باستراتيجية نمو فيروسي تعتمد على دعوة المستخدمين لبعضهم البعض، وشراكات استراتيجية مع قطاعات التعليم حول العالم."
+    "target_audience": "الأفراد وغير المصممين وصناع المحتوى والمستقلون والمسوقون وأصحاب المشاريع الصغيرة والفرق الإبداعية والمصممون المحترفون والمؤسسات الكبيرة. وتشمل القاعدة المعلمين والطلاب والمؤسسات التعليمية، والمنظمات غير الربحية، والمطورين الذين يبنون تطبيقات وتكاملات، والمبدعين الذين يساهمون بقوالب وعناصر ويحصلون على عوائد.",
+    "market_size": "لا تنشر Canva رقمًا رسميًا واحدًا لحجم سوقها القابل للاستهداف؛ فهي تنافس عبر التصميم والنشر والعروض والمستندات والفيديو والذكاء الاصطناعي والتسويق والتعاون والطباعة وأدوات المحترفين. المؤشرات المباشرة هي 260 مليون مستخدم شهريًا، وأكثر من 28 مليون عميل مدفوع، واستخدام لدى 95% من Fortune 500، وأكثر من 35 مليون معلم وطالب، و935 ألف منظمة غير ربحية تستفيد من برامجها.",
+    "growth_rate": "ارتفع المستخدمون الشهريون من 220 مليونًا في نهاية 2024 إلى 260 مليونًا في 2025، أي نمو لا يقل عن 18.2%. وارتفع الإيراد أو الإيراد السنوي المعلن من نحو 2.5 مليار دولار في تحديث التوسع الدولي السابق إلى 3.5 مليارات في 2025، بينما تجاوز عدد العملاء المدفوعين 28 مليونًا. لا تنشر Canva سلسلة ربع سنوية أو قوائم مالية تسمح بحساب CAGR مدقق."
   },
   "financials": {
-    "initial_investment": "واجهت المؤسسة ميلاني بيركنز الرفض من أكثر من 100 مستثمر وادي سيليكون قبل أن تؤمن تمويلها الأول، بدعم من نجوم مثل بيل تاي و وودي هارلسون. وهو ما يعكس صعوبة إقناع مستثمري وادي السيليكون بالشركات الناشئة خارج الولايات المتحدة في ذلك الوقت، قبل أن تكسر كانفا هذه القاعدة.",
-    "valuation": "$39B (يونيكورن عالمي ضخم) (مما يجعلها من أكبر الشركات التقنية الخاصة التي تقودها امرأة في تاريخ التكنولوجيا).",
+    "initial_investment": "رأس المال الشخصي الذي وضعه المؤسسون في Canva غير معلن. قبل Canva بنى Melanie Perkins وCliff Obrecht شركة Fusion Books بالتمويل الذاتي، ثم أعلنت Canva في مارس 2013 جولة Seed بقيمة 3 ملايين دولار من مستثمرين أستراليين وأمريكيين وبرنامج Commercialisation Australia. تلتها جولات رسمية منها 6 ملايين دولار مرتبطة بإطلاق Canva for Work، و15 مليون دولار، و40 مليونًا عند تقييم مليار دولار، ثم 200 مليون دولار عند تقييم 40 مليارًا في 2021.",
+    "valuation": "Canva شركة خاصة ولا توجد لها قيمة سوقية يومية. آخر مرجع صفقة واسع التوثيق هو برنامج بيع أسهم للموظفين أطلق في أغسطس 2025 عند تقييم 42 مليار دولار، بعد تقييم 32 مليارًا في 2024. هذا تقييم لصفقة ثانوية خاصة وليس تقييمًا دائمًا أو قيمة طرح عام. لم يُعثر على صفقة أحدث مكتملة وموثقة رسميًا حتى تاريخ التحقق.",
     "revenue_streams": [
-      "اشتراكات Canva Pro (ميزات متقدمة، خلفيات شفافة، ومكتبة صور ضخمة).",
-      "اشتراكات Canva for Enterprise/Teams (أدوات تعاونية وتحكم في هوية الشركة).",
-      "إيرادات من طباعة التصاميم وتوصيلها للمنازل (Canva Print).",
-      "مبيعات المحتوى الرقمي من صور أيقونات وخطوط (Stock Media).",
-      "شراكات تكامل واجهات برمجة التطبيقات (API Integrations) مع منصات كبرى."
+      "اشتراك Canva Pro للأفراد، بسعر مرجعي أمريكي معلن قدره 144 دولارًا سنويًا وقت التحقق",
+      "اشتراك Canva Business للأفراد والفرق الصغيرة، بسعر مرجعي أمريكي 20 دولارًا شهريًا أو 250 دولارًا سنويًا لكل شخص",
+      "عقود Canva Enterprise بتسعير مخصص وإدارة وأمان وتكاملات ودعم للمؤسسات",
+      "إيرادات خطط Canva Teams القديمة لدى العملاء المؤهلين الذين احتفظوا بخططهم",
+      "Canva Print لبيع وطباعة وتوصيل المنتجات والمواد التسويقية والملابس والهدايا",
+      "رسوم ترخيص لمرة واحدة لبعض عناصر Pro للمستخدمين غير المشتركين حيث تكون متاحة",
+      "اشتراكات ومزايا الذكاء الاصطناعي الإضافية مثل AI Pass وحدود استخدام أعلى بحسب الخطة",
+      "تراخيص المحتوى المدفوع والموسيقى والأصول ضمن الخطط أو الاستخدامات المؤهلة",
+      "حلول المؤسسات والتطبيقات الخاصة والتكاملات المبنية عبر Apps SDK وConnect APIs",
+      "Affinity مجاني حاليًا ويعمل كامتداد للمنصة المهنية؛ تحقيق الدخل يرتبط بخدمات Canva والذكاء الاصطناعي والتكامل وليس برسوم شراء Affinity الأساسية",
+      "Canva Creators سوق محتوى تدفع فيه Canva عوائد للمساهمين؛ لم يُفصح عن صافي الإيراد الذي تحتفظ به Canva من هذه القناة",
+      "شراكات تصميم إلى طباعة وتوزيع مع مزودي طباعة وتجزئة في أسواق متعددة"
     ]
   },
   "lessons": [
     {
-      "title": "النمو الموجه بالمنتج (Product-Led Growth PLG)",
-      "description": "لم توظف كانفا جيشاً من مندوبي المبيعات. اعتمدوا على جعل المنتج المجاني خارقاً لدرجة أن المستخدمين يقومون بدعوة زملائهم للعمل على نفس التصميم (Collaboration). هذا التبني الفيروسي من الأسفل للأعلى (Bottom-up) أجبر الشركات لاحقاً على شراء نسخ المؤسسات لتنظيم عمل موظفيها."
+      "title": "القالب يحل مشكلة البداية قبل مشكلة التحرير",
+      "description": "أكبر عائق للمستخدم غير المصمم ليس اختيار لون الزر، بل معرفة من أين يبدأ. القالب يحول لوحة فارغة إلى قرار تعديل، فيخفض الوقت للوصول إلى أول نتيجة ويعطي المستخدم معيارًا بصريًا مبدئيًا."
     },
     {
-      "title": "تقليل وقت الوصول للقيمة (Time-to-Value)",
-      "description": "في فوتوشوب، يبدأ المستخدم بـ (لوحة قماشية بيضاء Blank Canvas) مخيفة. في كانفا، يبدأ بـ (قالب جاهز احترافي). هذا قلل وقت وصول العميل للقيمة (TTV) من أسابيع تعلم إلى 3 دقائق، وهو ما حسم المعركة لصالحهم."
+      "title": "تبسيط الأداة يوسّع عدد المنتجين ويزيد حاجة الحوكمة",
+      "description": "عندما يستطيع كل موظف إنشاء محتوى، ترتفع السرعة ويقل الاختناق عند فريق التصميم. في المقابل، تصبح Brand Kits والموافقات والقوالب المقفلة والصلاحيات ضرورية لمنع تشتت الهوية."
     },
     {
-      "title": "قوة المثابرة والرفض (The Power of Resilience)",
-      "description": "رفض أكثر من 100 مستثمر (VC) فكرة كانفا في بداياتها بحجة أن فريقاً من أستراليا لا يمكنه منافسة عمالقة أمريكا. المؤسسة (ميلاني بيركنز) تعلمت رياضة ركوب الأمواج الشراعية فقط لتتمكن من لقاء مستثمر على الشاطئ. الإصرار الأسطوري كان وقود الشركة."
+      "title": "التعاون داخل الملف يغير من يملك عملية التصميم",
+      "description": "التعليقات والتحرير المشترك والموافقات تجعل التصميم تدفق عمل بين التسويق والمبيعات والموارد والتعليم، لا ملفًا ينتقل ذهابًا وإيابًا إلى المصمم. القيمة تتحول من أداة رسم إلى نظام تنسيق."
     },
     {
-      "title": "استراتيجية التوسع عبر القوالب المحلية (Hyper-Localized Templates)",
-      "description": "لم تكتفِ كانفا بتوفير قوالب عامة، بل قامت بتوظيف مصممين محليين في كل دولة لإنشاء قوالب تناسب الثقافة المحلية (مثل قوالب رمضان، واليوم الوطني السعودي، واحتفالات ديوالي). هذا التخصيص الثقافي العميق جعل المستخدم في أي دولة يشعر أن المنصة صُممت خصيصاً له، مما ضاعف من معدلات التبني العالمية بشكل غير مسبوق في صناعة البرمجيات."
+      "title": "المجاني الفعال يبني عادة قبل قرار الشراء",
+      "description": "Canva Free يقدم قيمة حقيقية وقوالب ومحتوى وتخزينًا وAI محدودًا. الترقية تنجح عندما يحتاج المستخدم مزيدًا من الأصول والهوية والتخزين والذكاء الاصطناعي والتعاون، لا لأن النسخة المجانية معطلة عمدًا."
     },
     {
-      "title": "التكامل مع الأنظمة البيئية (Ecosystem Integration)",
-      "description": "لتجنب العزلة، قامت كانفا بفتح واجهاتها البرمجية (APIs) لتتكامل مع منصات السوشيال ميديا، ومزودي الصور، وحتى أدوات الذكاء الاصطناعي. المستخدم ليس بحاجة لمغادرة كانفا لنشر تغريدة أو طباعة قميص أو توليد صورة بالذكاء الاصطناعي؛ كل شيء يحدث داخل المنصة، مما جعلها (نظام تشغيل) كامل للمحتوى المرئي وليس مجرد أداة تصميم، وهو ما يرفع تكلفة التخلي عن المنصة (Switching Cost) لأقصى حد."
+      "title": "المستخدم الشهري والعميل المدفوع ليسا مقياسًا واحدًا",
+      "description": "260 مليون MAU يصفون الوصول، وأكثر من 28 مليون عميل مدفوع يصفون التحويل النقدي. لا يمكن استخراج معدل تحويل دقيق دون معرفة تعريف الحسابات والمقاعد والفرق والتداخل بين المستخدمين."
+    },
+    {
+      "title": "الإيراد السنوي وARR والإيراد السنوي المحسوب مصطلحات مختلفة",
+      "description": "وصف Canva الرقم 3.5 مليارات دولار أحيانًا كإيراد وأحيانًا كإيراد سنوي محسوب. في الشركات الخاصة يجب تثبيت صياغة المصدر وعدم تحويل الرقم تلقائيًا إلى إيراد محقق أو MRR."
+    },
+    {
+      "title": "الذكاء الاصطناعي المفيد ينتج ملفًا قابلًا للتحرير",
+      "description": "ميزة Canva Design Model ليست توليد صورة نهائية فقط؛ الوعد هو فهم التخطيط والهرمية وإنتاج عناصر وطبقات يمكن للمستخدم تعديلها. قابلية التحرير تربط السرعة الآلية بالتحكم البشري."
+    },
+    {
+      "title": "دمج المحترفين لا يعني التخلي عن غير المصممين",
+      "description": "الاستحواذ على Affinity وإتاحته مجانًا يوسع Canva نحو المصمم المحترف، بينما تبقى Canva الأساسية مبنية حول سهولة الاستخدام. النجاح يتطلب ربط المسارين دون فرض تعقيد أدوات المحترفين على كل مستخدم."
+    },
+    {
+      "title": "الاستحواذ يخلق قيمة عندما يصبح جزءًا من التدفق",
+      "description": "Flourish وLeonardo.Ai وAffinity وMagicBrief لا تكفي كقائمة شركات مستحوذ عليها. القيمة تظهر عندما تدخل الرسوم البيانية والتوليد والتحرير الاحترافي وبيانات أداء الإعلانات في تجربة متصلة."
+    },
+    {
+      "title": "السوق المحلي يحتاج محتوى محليًا لا واجهة مترجمة فقط",
+      "description": "دعوة المبدعين لنشر قوالب بلغاتهم وثقافاتهم توسع العرض بما يناسب المناسبات والأساليب المحلية. التوطين هنا شبكة توريد محتوى وليست ترجمة أزرار."
+    },
+    {
+      "title": "برنامج التعليم يبني توزيعًا طويل الأجل لكنه ليس إيرادًا مباشرًا",
+      "description": "إتاحة Canva Education مجانًا لعشرات الملايين تخلق اعتيادًا ومهارات وانتشارًا مؤسسيًا، لكنها تكلفة أو تبرع منتج لا ينبغي احتسابه كاشتراك مدفوع."
+    },
+    {
+      "title": "الطباعة تحول التصميم الرقمي إلى سلسلة توريد",
+      "description": "Canva Print يضيف مواد ومقاسات وجودة وموردين وشحنًا وإعادة طباعة. المنتج ينتقل من هامش برمجي خالص إلى اقتصاد تصنيع ولوجستيات يختلف حسب الدولة."
+    },
+    {
+      "title": "منصة المطورين توسع حالات الاستخدام وتفتح مخاطر جديدة",
+      "description": "Apps SDK وConnect APIs يسمحان بإدخال البيانات والأصول وتصدير التصاميم وأتمتة العمل. لكن كل تكامل يضيف مراجعة صلاحيات وأمنًا واعتمادية وتغييرات API يجب إدارتها."
+    },
+    {
+      "title": "التقييم الثانوي يمنح السيولة ولا يساوي تمويلًا تشغيليًا",
+      "description": "بيع الموظفين لأسهمهم عند تقييم 42 مليار دولار يحدد سعرًا مرجعيًا ويوفر سيولة للمساهمين، لكنه لا يعني أن Canva تلقت القيمة نفسها نقدًا أو أن التقييم بقي ثابتًا في 2026."
     }
   ],
   "tools": [
-    "JavaScript / React (للواجهة الأمامية المعقدة فائقة السلاسة)",
-    "Java / Node.js (للخوادم)",
-    "WebGL (لتقديم الرسومات الجرافيكية في المتصفح)",
-    "AI (لأدوات مثل Magic Studio وتوليد الصور)",
-    "Figma (للتصميم الداخلي للشركة)",
-    "Snowflake (لتحليل البيانات الضخمة)",
-    "Kubernetes"
+    "Canva Visual Suite للتصاميم والعروض والفيديو والمستندات والمواقع والسبورات",
+    "Canva Sheets وMagic Charts وFlourish للبيانات والتحليل والسرد البصري",
+    "Canva AI 2.0 كمساعد محادثي وAgentic للتوليد والتحرير والتخطيط",
+    "Canva Design Model لفهم البنية والهرمية وإنتاج تصاميم طبقية قابلة للتحرير",
+    "Magic Studio وMagic Media وDream Lab وتوليد الصور والفيديو والنص",
+    "Canva Code وCanva Code 2.0 لبناء تجارب ومكونات تفاعلية من التعليمات",
+    "Canva Grow وAd Insights وأدوات إنشاء الإعلانات وتحليل أدائها",
+    "Brand Kits والقوالب المقفلة والموافقات وإدارة العلامات المتعددة",
+    "Canva Enterprise مع SSO وSCIM وMFA وسجلات التدقيق وإدارة فرق متعددة",
+    "Canva Business مع تعاون وإدارة فرق و100 Brand Kit وحدود AI أعلى",
+    "Canva Print للطباعة والتوصيل والاستلام من نقاط شريكة في أسواق مؤهلة",
+    "Affinity لتحرير الصور والمتجهات وتخطيط الصفحات بمستوى احترافي",
+    "Leonardo.Ai وPhoenix وDream Lab لقدرات الذكاء الاصطناعي البصري",
+    "Flourish للرسوم البيانية التفاعلية وعروض البيانات",
+    "Canva Creators وقوالب وعناصر وصور وموسيقى مع نظام عوائد",
+    "Apps Marketplace وتطبيقات تعمل داخل محرر Canva",
+    "Canva Apps SDK باستخدام تقنيات ويب وواجهات TypeScript لإضافة قدرات للمحرر",
+    "Canva Connect APIs لإنشاء التصاميم ومزامنة الأصول والتعليقات والتصدير",
+    "SCIM API وسجلات التدقيق والتطبيقات الخاصة لعملاء Enterprise",
+    "تكاملات مع Slack وMicrosoft وGoogle Drive وDropbox وSharePoint وAsana وغيرها",
+    "Canva Offline وميزات نشر وجدولة وتصدير متعددة بحسب المنصة والخطة"
+  ],
+  "verification": {
+    "status": "verified_from_canva_company_pricing_developer_legal_and_high_quality_private_transaction_sources",
+    "verified_on": "2026-08-03",
+    "source_policy": "تم إعطاء الأولوية لموقع Canva الرسمي وغرفة الأخبار وصفحات التسعير ووثائق المطورين والسياسات. استُخدمت Reuters وFinancial Times فقط لتوثيق صفقة الأسهم الثانوية وتقييم 42 مليار دولار الذي لم يظهر في صفحة تمويل رسمية مفصلة.",
+    "important_notes": [
+      "Canva شركة خاصة، ولا تنشر قوائم مالية عامة مدققة أو تقارير فصلية.",
+      "رقم 3.5 مليارات دولار و260 مليون مستخدم شهريًا صادران عن مراجعة Canva لعام 2025.",
+      "تصف Canva الرقم 3.5 مليارات في بعض المواضع بأنه Revenue وفي مواضع أحدث بأنه Annualized Revenue؛ لذلك لم يُعرض كإيراد محقق مدقق أو ARR تعاقدي مؤكد.",
+      "متوسط 291.7 مليون دولار شهريًا مجرد قسمة رقم سنوي مُعلن على 12، وليس MRR.",
+      "أكثر من 28 مليون عميل مدفوع لا يساوي بالضرورة أشخاصًا فريدين؛ قد يشمل مقاعد أو حسابات ضمن فرق.",
+      "تقييم 42 مليار دولار يتعلق ببيع أسهم موظفين في أغسطس 2025، وهو سعر مرجعي لصفقة خاصة لا قيمة سوقية حالية.",
+      "لم يُعثر على IPO مكتمل أو تقييم ثانوي أحدث موثق حتى 3 أغسطس 2026.",
+      "Canva Business أصبح الخطة الجديدة للاشتراكات والفرق الصغيرة، بينما يحتفظ عملاء Teams الحاليون بخططهم وفق سياسة الانتقال.",
+      "Affinity أصبح مجانيًا، لذلك لا ينبغي اعتباره قناة اشتراك مستقلة حاليًا.",
+      "Canva Creators يتلقى عوائد من استخدام المحتوى؛ هذه مدفوعات للمبدعين وليست دليلًا على صافي إيراد Canva من السوق.",
+      "تم حذف الادعاء بأن Canva «هزمت Adobe» لأنه حكم تنافسي غير قابل للإثبات كمعلومة مالية أو سوقية مطلقة.",
+      "تم حذف Java وNode.js وSnowflake وKubernetes وFigma كحزمة داخلية لعدم توثيقها كمجموعة تقنية حالية موحدة، واستُبدلت بقدرات ومنصات معلنة."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط كل حقل بقيمته وحالة التحقق والثقة والمصادر وحدود أرقام الشركات الخاصة.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر Canva رسمي.",
+      "verified_company_reported_private_metric": "الرقم معلن من شركة خاصة دون قوائم مالية عامة مدققة.",
+      "verified_derived_monthly_average": "القيمة مشتقة حسابيًا من رقم سنوي معلن وليست MRR.",
+      "verified_with_metric_definition_limits": "المقياس رسمي لكن تعريف المستخدم والعميل والمقعد يحتاج تحفظًا.",
+      "verified_historical_financing": "المعلومة تتعلق بجولة تمويل تاريخية موثقة.",
+      "verified_private_secondary_valuation": "التقييم مرتبط بصفقة أسهم خاصة وليس قيمة سوقية يومية.",
+      "verified_product_capability": "القدرة موثقة في صفحة منتج أو مطورين رسمية.",
+      "verified_with_revenue_definition_limits": "المصدر يستخدم Revenue أو Annualized Revenue بصيغ تحتاج إلى عدم الخلط.",
+      "analytical_inference": "تحليل مهني مبني على حقائق موثقة وليس تصريحًا حرفيًا من الشركة."
+    },
+    "confidence_scale": {
+      "high": "مصدر Canva رسمي واضح أو وثائق قانونية/تسعير مباشرة.",
+      "medium_high": "Reuters أو Financial Times أو أكثر من مصدر موثوق متطابق.",
+      "medium": "رقم شركة خاصة يحتاج إلى تدقيق أو تعريف مالي إضافي."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "سيدني، أستراليا. تأسست Canva وأطلقت من سيدني، وتدير اليوم فريقًا موزعًا ومكاتب ومنشآت في عدة دول. Canva Pty Ltd هي الجهة المتعاقدة في معظم الأسواق خارج الولايات المتحدة والمملكة المتحدة، مع كيانات محلية منفصلة في بعض المناطق.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "sydney_origin_and_multi_entity_global_operations",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت Canva مقرها ومنشأها في سيدني، بينما توضح الشروط وجود كيانات إقليمية منفصلة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-11",
+        "SRC-08",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "Canva $3 Million Seed Round",
+          "publisher": "Canva",
+          "source_type": "official_seed_announcement",
+          "url": "https://www.canva.com/newsroom/news/aussie-startup-canva-announces-3-million-seed-round-world-class-investors/",
+          "evidence_type": "direct",
+          "source_locator": "Seed announcement",
+          "supports": "المقر في سيدني والتأسيس.",
+          "published_on": "2013-03-20"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Canva 2024 Year in Review",
+          "publisher": "Canva",
+          "source_type": "official_annual_company_review",
+          "url": "https://www.canva.com/newsroom/news/canva-2024-wrap/",
+          "evidence_type": "direct",
+          "source_locator": "2024 review",
+          "supports": "الفريق العالمي والمقر الأول في سيدني.",
+          "published_on": "2024-12"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Introducing Canva Enterprise",
+          "publisher": "Canva",
+          "source_type": "official_enterprise_product_announcement",
+          "url": "https://www.canva.com/newsroom/news/canva-enterprise/",
+          "evidence_type": "direct",
+          "source_locator": "Enterprise announcement",
+          "supports": "توسع المؤسسات عالميًا.",
+          "published_on": "2024"
+        }
+      ],
+      "limitations": "لا تدعي Canva وجود مقر عالمي واحد حصري، وتصف ثقافتها بأنها موزعة."
+    },
+    "$.company.business_model": {
+      "field_value": "نموذج Freemium متعدد الطبقات. تقدم Canva خطة Free، وخطة Pro للأفراد، وCanva Business للأفراد والفرق الصغيرة، وCanva Enterprise للمؤسسات، مع بقاء بعض عملاء Teams القدامى على خططهم الحالية. تشمل القنوات الأخرى Canva Print، وتراخيص بعض عناصر Pro للمستخدم المجاني، وبرامج السوق والمبدعين، وحلول المؤسسات والتكاملات. لا تنشر الشركة توزيع الإيرادات حسب القناة.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "freemium_subscription_enterprise_print_content_and_platform_model",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توضح صفحات التسعير والخطط والمنتجات قنوات الاستخدام المجاني والمدفوع والطباعة والتراخيص.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-03",
+        "SRC-04",
+        "SRC-05",
+        "SRC-22",
+        "SRC-23"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Canva Plans and Pricing",
+          "publisher": "Canva",
+          "source_type": "official_pricing_page",
+          "url": "https://www.canva.com/pricing/",
+          "evidence_type": "direct",
+          "source_locator": "Pricing",
+          "supports": "Free وPro وBusiness وEnterprise."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Introducing Canva Business",
+          "publisher": "Canva",
+          "source_type": "official_subscription_announcement",
+          "url": "https://www.canva.com/newsroom/news/introducing-canva-business/",
+          "evidence_type": "direct",
+          "source_locator": "Plan announcement",
+          "supports": "Business وانتقال Teams.",
+          "published_on": "2025"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Introducing Canva Enterprise",
+          "publisher": "Canva",
+          "source_type": "official_enterprise_product_announcement",
+          "url": "https://www.canva.com/newsroom/news/canva-enterprise/",
+          "evidence_type": "direct",
+          "source_locator": "Enterprise",
+          "supports": "Enterprise والتكاملات.",
+          "published_on": "2024"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Canva Content Licensing Explained",
+          "publisher": "Canva",
+          "source_type": "official_licensing_documentation",
+          "url": "https://www.canva.com/licensing-explained/",
+          "evidence_type": "direct",
+          "source_locator": "Licensing",
+          "supports": "تراخيص المحتوى."
+        },
+        {
+          "source_id": "SRC-23",
+          "title": "Canva Print",
+          "publisher": "Canva",
+          "source_type": "official_print_product_page",
+          "url": "https://www.canva.com/print/promotional-products/",
+          "evidence_type": "direct",
+          "source_locator": "Print product",
+          "supports": "Print."
+        }
+      ],
+      "limitations": "لا تفصح الشركة عن مزيج الإيرادات أو هامش كل قناة."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "نحو 291.7 مليون دولار كمتوسط شهري حسابي، استنادًا إلى إعلان Canva أن إيرادات 2025 بلغت نحو 3.5 مليارات دولار. الرقم صادر عن شركة خاصة ولم يُنشر ضمن قوائم مالية عامة مدققة، كما تصف بعض صفحات الشركة الرقم بأنه إيراد سنوي وبعضها بأنه Annualized Revenue؛ لذلك لا يُعامل كـMRR تعاقدي.",
+      "verification_status": "verified_derived_monthly_average",
+      "confidence": "medium_high",
+      "claim_type": "derived_average_from_company_reported_private_revenue",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "أعلنت Canva 3.5 مليارات دولار لعام 2025، وقُسم الرقم على 12 مع إبراز اختلاف وصف Revenue وAnnualized Revenue.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "A Transformative Year for Canva: 2025 in Review",
+          "publisher": "Canva",
+          "source_type": "official_annual_company_review",
+          "url": "https://www.canva.com/newsroom/news/canva-2025-wrap/",
+          "evidence_type": "direct",
+          "source_locator": "2025 review",
+          "supports": "3.5 مليارات دولار Revenue.",
+          "published_on": "2025-12"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Why We Made Affinity Free",
+          "publisher": "Canva",
+          "source_type": "official_business_model_update",
+          "url": "https://www.canva.com/newsroom/news/affinity-free/",
+          "evidence_type": "direct",
+          "source_locator": "Affinity business model update",
+          "supports": "3.5 مليارات Annualized Revenue.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لم تنشر Canva قوائم مدققة تحدد ما إذا كان الرقم إيراد السنة المحقق أم معدلًا سنويًا محسوبًا بالكامل.",
+      "calculation": {
+        "company_reported_2025_value_usd": 3500000000,
+        "formula": "3,500,000,000 ÷ 12",
+        "monthly_average_usd": 291666666.67,
+        "rounded_display_value": "نحو 291.7 مليون دولار شهريًا",
+        "calculation_status": "private_company_reported_average_not_mrr",
+        "definition_conflict": [
+          "revenue",
+          "annualized revenue"
+        ]
+      }
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "نحو 260 مليون مستخدم شهريًا وفق مراجعة Canva لعام 2025، مع أكثر من 28 مليون عميل مدفوع وفق تحديث رسمي لاحق. المستخدم الشهري ليس حسابًا مدفوعًا، والعميل المدفوع قد يكون فردًا أو مقعدًا أو عضوًا ضمن فريق بحسب تعريف الشركة.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "high",
+      "claim_type": "monthly_users_and_paying_customers",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تعرض Canva 260 مليون مستخدم شهريًا وأكثر من 28 مليون عميل مدفوع.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "A Transformative Year for Canva: 2025 in Review",
+          "publisher": "Canva",
+          "source_type": "official_annual_company_review",
+          "url": "https://www.canva.com/newsroom/news/canva-2025-wrap/",
+          "evidence_type": "direct",
+          "source_locator": "2025 review",
+          "supports": "260 مليون مستخدم شهريًا.",
+          "published_on": "2025-12"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Why We Made Affinity Free",
+          "publisher": "Canva",
+          "source_type": "official_business_model_update",
+          "url": "https://www.canva.com/newsroom/news/affinity-free/",
+          "evidence_type": "direct",
+          "source_locator": "Affinity update",
+          "supports": "28 مليون+ عميل مدفوع.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا تنشر الشركة تعريفًا عامًا مفصلًا يوضح تحويل العملاء المدفوعين إلى أشخاص أو مقاعد فريدة."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "بدأت الفكرة من ملاحظة Melanie Perkins لصعوبة تعلم أدوات التصميم التقليدية أثناء تدريسها. كان المستخدم غير المتخصص يبدأ غالبًا من لوحة فارغة وواجهة مليئة بالأدوات والطبقات، بينما تحتاج الشركات والمدارس إلى إنتاج عروض ومنشورات ومواد تسويقية بسرعة وتناسق، ثم مشاركة الملفات ومراجعتها واعتمادها بين أشخاص لا يعملون بالضرورة كمصممين.",
+        "impact": "يؤدي التعقيد إلى بطء الوصول لأول نتيجة مفيدة، وكثرة الاعتماد على خبراء التصميم في المهام المتكررة، وتشتت الملفات والإصدارات، وضعف اتساق العلامة عند توسع عدد من ينشئون المحتوى. لكن تبسيط التصميم قد يخلق بدوره مخاطر جديدة: إنتاج محتوى متشابه، استخدام أصول بترخيص غير مفهوم، أو نشر مواد خارج ضوابط العلامة والجودة."
+      },
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "design_learning_and_collaborative_content_workflow_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم قصة المؤسسين صعوبة تعلم التصميم، وتوضح منتجات العمل حاجة الفرق إلى التعاون والحوكمة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-11",
+        "SRC-13",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "Canva $3 Million Seed Round",
+          "publisher": "Canva",
+          "source_type": "official_seed_announcement",
+          "url": "https://www.canva.com/newsroom/news/aussie-startup-canva-announces-3-million-seed-round-world-class-investors/",
+          "evidence_type": "direct",
+          "source_locator": "Seed announcement",
+          "supports": "Fusion Books وخلفية المشكلة.",
+          "published_on": "2013-03-20"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Canva $15 Million Series A",
+          "publisher": "Canva",
+          "source_type": "official_funding_announcement",
+          "url": "https://www.canva.com/newsroom/news/exciting-news-here-at-canva/",
+          "evidence_type": "direct",
+          "source_locator": "Series A",
+          "supports": "تبسيط التصميم والنمو المبكر."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Introducing Canva Enterprise",
+          "publisher": "Canva",
+          "source_type": "official_enterprise_product_announcement",
+          "url": "https://www.canva.com/newsroom/news/canva-enterprise/",
+          "evidence_type": "direct",
+          "source_locator": "Enterprise",
+          "supports": "التعاون والأمان وإدارة العلامة.",
+          "published_on": "2024"
+        }
+      ],
+      "limitations": "الآثار الاقتصادية على الوكالات وسرعة إطلاق الحملات تحليل مهني لا دراسة كمية من Canva."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "قدمت Canva محررًا سحابيًا قائمًا على القوالب والسحب والإفلات، مع مكتبة محتوى وتعاون وتعليقات وحفظ ومشاركة ونشر وطباعة. توسعت إلى Visual Suite وDocs وWhiteboards وPresentations وVideo وWebsites وSheets وData Visualization، ثم إلى Brand Kits والموافقات وإدارة الفرق وEnterprise. وفي 2025–2026 أعادت بناء المنصة حول Creative Operating System وCanva AI 2.0 وCanva Design Model، مع مخرجات طبقية قابلة للتحرير، وذاكرة وأتمتة ووصلات بيانات وبحث ويب وجدولة، إلى جانب Affinity للمحترفين وLeonardo.Ai وFlourish ومنصة مطورين."
+      },
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "visual_suite_ai_professional_design_data_and_developer_platform",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم المصادر الرسمية Visual Suite وAI 2.0 وEnterprise وAffinity وFlourish ومنصة المطورين.",
+      "source_count": 7,
+      "source_ids": [
+        "SRC-01",
+        "SRC-06",
+        "SRC-05",
+        "SRC-24",
+        "SRC-25",
+        "SRC-18",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "A Transformative Year for Canva: 2025 in Review",
+          "publisher": "Canva",
+          "source_type": "official_annual_company_review",
+          "url": "https://www.canva.com/newsroom/news/canva-2025-wrap/",
+          "evidence_type": "direct",
+          "source_locator": "2025 review",
+          "supports": "Creative OS وDesign Model.",
+          "published_on": "2025-12"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Introducing Canva AI 2.0",
+          "publisher": "Canva",
+          "source_type": "official_ai_product_announcement",
+          "url": "https://www.canva.com/newsroom/news/canva-create-2026-ai/",
+          "evidence_type": "direct",
+          "source_locator": "AI announcement",
+          "supports": "AI 2.0 والوكلاء والطبقات.",
+          "published_on": "2026-04"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Introducing Canva Enterprise",
+          "publisher": "Canva",
+          "source_type": "official_enterprise_product_announcement",
+          "url": "https://www.canva.com/newsroom/news/canva-enterprise/",
+          "evidence_type": "direct",
+          "source_locator": "Enterprise",
+          "supports": "Enterprise.",
+          "published_on": "2024"
+        },
+        {
+          "source_id": "SRC-24",
+          "title": "Welcome to Canva, Affinity",
+          "publisher": "Canva",
+          "source_type": "official_acquisition_announcement",
+          "url": "https://www.canva.com/newsroom/news/affinity/",
+          "evidence_type": "direct",
+          "source_locator": "Acquisition",
+          "supports": "Affinity.",
+          "published_on": "2024-03-26"
+        },
+        {
+          "source_id": "SRC-25",
+          "title": "Flourish Integration",
+          "publisher": "Canva",
+          "source_type": "official_product_integration",
+          "url": "https://www.canva.com/newsroom/news/flourish-integration/",
+          "evidence_type": "direct",
+          "source_locator": "Integration",
+          "supports": "Flourish."
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Canva Connect APIs",
+          "publisher": "Canva Developers",
+          "source_type": "official_developer_documentation",
+          "url": "https://www.canva.dev/docs/connect/",
+          "evidence_type": "direct",
+          "source_locator": "Developer docs",
+          "supports": "Connect APIs."
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Canva Apps SDK",
+          "publisher": "Canva Developers",
+          "source_type": "official_developer_documentation",
+          "url": "https://www.canva.dev/docs/apps/",
+          "evidence_type": "direct",
+          "source_locator": "Developer docs",
+          "supports": "Apps SDK."
+        }
+      ]
+    },
+    "$.market_data.target_audience": {
+      "field_value": "الأفراد وغير المصممين وصناع المحتوى والمستقلون والمسوقون وأصحاب المشاريع الصغيرة والفرق الإبداعية والمصممون المحترفون والمؤسسات الكبيرة. وتشمل القاعدة المعلمين والطلاب والمؤسسات التعليمية، والمنظمات غير الربحية، والمطورين الذين يبنون تطبيقات وتكاملات، والمبدعين الذين يساهمون بقوالب وعناصر ويحصلون على عوائد.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "individual_smb_enterprise_education_nonprofit_professional_and_developer_segments",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تغطي الخطط وبرامج التعليم والمبدعين والمطورين جميع الشرائح المذكورة.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-03",
+        "SRC-10",
+        "SRC-21",
+        "SRC-20",
+        "SRC-24"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Canva Plans and Pricing",
+          "publisher": "Canva",
+          "source_type": "official_pricing_page",
+          "url": "https://www.canva.com/pricing/",
+          "evidence_type": "direct",
+          "source_locator": "Pricing",
+          "supports": "الأفراد والأعمال والمؤسسات والتعليم."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Inside Canva’s 2025 Impact Wrap",
+          "publisher": "Canva",
+          "source_type": "official_impact_report",
+          "url": "https://www.canva.com/newsroom/news/2025-impact-wrap/",
+          "evidence_type": "direct",
+          "source_locator": "Impact",
+          "supports": "التعليم والمنظمات غير الربحية.",
+          "published_on": "2025"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Canva Creators",
+          "publisher": "Canva",
+          "source_type": "official_creator_marketplace",
+          "url": "https://www.canva.com/creators/",
+          "evidence_type": "direct",
+          "source_locator": "Creators",
+          "supports": "المبدعون."
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Canva Developers Platform",
+          "publisher": "Canva Developers",
+          "source_type": "official_developer_platform",
+          "url": "https://www.canva.dev/docs/",
+          "evidence_type": "direct",
+          "source_locator": "Developer platform",
+          "supports": "المطورون."
+        },
+        {
+          "source_id": "SRC-24",
+          "title": "Welcome to Canva, Affinity",
+          "publisher": "Canva",
+          "source_type": "official_acquisition_announcement",
+          "url": "https://www.canva.com/newsroom/news/affinity/",
+          "evidence_type": "direct",
+          "source_locator": "Affinity",
+          "supports": "المصممون المحترفون.",
+          "published_on": "2024-03-26"
+        }
+      ]
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر Canva رقمًا رسميًا واحدًا لحجم سوقها القابل للاستهداف؛ فهي تنافس عبر التصميم والنشر والعروض والمستندات والفيديو والذكاء الاصطناعي والتسويق والتعاون والطباعة وأدوات المحترفين. المؤشرات المباشرة هي 260 مليون مستخدم شهريًا، وأكثر من 28 مليون عميل مدفوع، واستخدام لدى 95% من Fortune 500، وأكثر من 35 مليون معلم وطالب، و935 ألف منظمة غير ربحية تستفيد من برامجها.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "high",
+      "claim_type": "multi_category_platform_scale_without_single_tam",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا تنشر Canva TAM موحدًا؛ يستخدم الحقل المستخدمين والعملاء والمؤسسات والتعليم والمنظمات كمؤشرات.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "A Transformative Year for Canva: 2025 in Review",
+          "publisher": "Canva",
+          "source_type": "official_annual_company_review",
+          "url": "https://www.canva.com/newsroom/news/canva-2025-wrap/",
+          "evidence_type": "direct",
+          "source_locator": "2025 review",
+          "supports": "260 مليون مستخدم و95% من Fortune 500.",
+          "published_on": "2025-12"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Why We Made Affinity Free",
+          "publisher": "Canva",
+          "source_type": "official_business_model_update",
+          "url": "https://www.canva.com/newsroom/news/affinity-free/",
+          "evidence_type": "direct",
+          "source_locator": "Affinity update",
+          "supports": "28 مليون عميل مدفوع.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Inside Canva’s 2025 Impact Wrap",
+          "publisher": "Canva",
+          "source_type": "official_impact_report",
+          "url": "https://www.canva.com/newsroom/news/2025-impact-wrap/",
+          "evidence_type": "direct",
+          "source_locator": "Impact",
+          "supports": "35 مليون طالب ومعلم و935 ألف منظمة.",
+          "published_on": "2025"
+        }
+      ],
+      "limitations": "هذه الأرقام لا تمثل حجم السوق بالدولار أو حصة Canva من كل فئة."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "ارتفع المستخدمون الشهريون من 220 مليونًا في نهاية 2024 إلى 260 مليونًا في 2025، أي نمو لا يقل عن 18.2%. وارتفع الإيراد أو الإيراد السنوي المعلن من نحو 2.5 مليار دولار في تحديث التوسع الدولي السابق إلى 3.5 مليارات في 2025، بينما تجاوز عدد العملاء المدفوعين 28 مليونًا. لا تنشر Canva سلسلة ربع سنوية أو قوائم مالية تسمح بحساب CAGR مدقق.",
+      "verification_status": "verified_with_revenue_definition_limits",
+      "confidence": "medium_high",
+      "claim_type": "user_and_company_reported_revenue_growth",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تتيح المراجعات الرسمية مقارنة المستخدمين والإيراد المعلن بين 2024 و2025.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-08",
+        "SRC-01",
+        "SRC-09",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "Canva 2024 Year in Review",
+          "publisher": "Canva",
+          "source_type": "official_annual_company_review",
+          "url": "https://www.canva.com/newsroom/news/canva-2024-wrap/",
+          "evidence_type": "direct",
+          "source_locator": "2024 review",
+          "supports": "220 مليون مستخدم في 2024.",
+          "published_on": "2024-12"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "A Transformative Year for Canva: 2025 in Review",
+          "publisher": "Canva",
+          "source_type": "official_annual_company_review",
+          "url": "https://www.canva.com/newsroom/news/canva-2025-wrap/",
+          "evidence_type": "direct",
+          "source_locator": "2025 review",
+          "supports": "260 مليون مستخدم و3.5 مليارات في 2025.",
+          "published_on": "2025-12"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Canva’s International Expansion",
+          "publisher": "Canva",
+          "source_type": "official_growth_update",
+          "url": "https://www.canva.com/newsroom/news/international-expansion/",
+          "evidence_type": "direct",
+          "source_locator": "International expansion",
+          "supports": "2.5 مليار Annualized Revenue في مرحلة سابقة."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Why We Made Affinity Free",
+          "publisher": "Canva",
+          "source_type": "official_business_model_update",
+          "url": "https://www.canva.com/newsroom/news/affinity-free/",
+          "evidence_type": "direct",
+          "source_locator": "Affinity update",
+          "supports": "28 مليون عميل مدفوع.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا يُعد نمو 40% مدققًا لأن مصدري الإيراد قد يستخدمان توقيتًا وتعريفًا مختلفين.",
+      "calculation": {
+        "mau_end_2024": 220000000,
+        "mau_2025": 260000000,
+        "minimum_mau_growth_percent": 18.18,
+        "earlier_annualized_revenue_usd": 2500000000,
+        "2025_reported_value_usd": 3500000000,
+        "illustrative_growth_percent_if_comparable": 40,
+        "paying_customers_current": ">28,000,000"
+      }
+    },
+    "$.financials.initial_investment": {
+      "field_value": "رأس المال الشخصي الذي وضعه المؤسسون في Canva غير معلن. قبل Canva بنى Melanie Perkins وCliff Obrecht شركة Fusion Books بالتمويل الذاتي، ثم أعلنت Canva في مارس 2013 جولة Seed بقيمة 3 ملايين دولار من مستثمرين أستراليين وأمريكيين وبرنامج Commercialisation Australia. تلتها جولات رسمية منها 6 ملايين دولار مرتبطة بإطلاق Canva for Work، و15 مليون دولار، و40 مليونًا عند تقييم مليار دولار، ثم 200 مليون دولار عند تقييم 40 مليارًا في 2021.",
+      "verification_status": "verified_historical_financing",
+      "confidence": "high",
+      "claim_type": "founder_capital_undisclosed_and_official_funding_milestones",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت Canva الجولات المبكرة واللاحقة، بينما لا تنشر مساهمة المؤسسين الشخصية.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-11",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "Canva $3 Million Seed Round",
+          "publisher": "Canva",
+          "source_type": "official_seed_announcement",
+          "url": "https://www.canva.com/newsroom/news/aussie-startup-canva-announces-3-million-seed-round-world-class-investors/",
+          "evidence_type": "direct",
+          "source_locator": "2013 announcement",
+          "supports": "3 ملايين Seed.",
+          "published_on": "2013-03-20"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Canva Raises $6 Million and Announces Canva for Work",
+          "publisher": "Canva",
+          "source_type": "official_funding_announcement",
+          "url": "https://www.canva.com/newsroom/news/announcing-canva-for-work/",
+          "evidence_type": "direct",
+          "source_locator": "Canva for Work",
+          "supports": "6 ملايين."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Canva $15 Million Series A",
+          "publisher": "Canva",
+          "source_type": "official_funding_announcement",
+          "url": "https://www.canva.com/newsroom/news/exciting-news-here-at-canva/",
+          "evidence_type": "direct",
+          "source_locator": "Series A",
+          "supports": "15 مليونًا."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Canva Reaches $1 Billion Valuation",
+          "publisher": "Canva",
+          "source_type": "official_funding_announcement",
+          "url": "https://www.canva.com/newsroom/news/canva-raises-40m-round-earn-unicorn-title/",
+          "evidence_type": "direct",
+          "source_locator": "Unicorn round",
+          "supports": "40 مليونًا.",
+          "published_on": "2018"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Canva $40 Billion Valuation",
+          "publisher": "Canva",
+          "source_type": "official_funding_announcement",
+          "url": "https://www.canva.com/newsroom/news/canva-announces-usd-40-billion-valuation-fueled-global-demand-visual-communication/",
+          "evidence_type": "direct",
+          "source_locator": "2021 round",
+          "supports": "200 مليون.",
+          "published_on": "2021-09-15"
+        }
+      ],
+      "calculation": {
+        "founder_initial_capital": "not_publicly_disclosed",
+        "2013_seed_usd": 3000000,
+        "canva_for_work_round_usd": 6000000,
+        "series_a_usd": 15000000,
+        "2018_round_usd": 40000000,
+        "2021_round_usd": 200000000
+      }
+    },
+    "$.financials.valuation": {
+      "field_value": "Canva شركة خاصة ولا توجد لها قيمة سوقية يومية. آخر مرجع صفقة واسع التوثيق هو برنامج بيع أسهم للموظفين أطلق في أغسطس 2025 عند تقييم 42 مليار دولار، بعد تقييم 32 مليارًا في 2024. هذا تقييم لصفقة ثانوية خاصة وليس تقييمًا دائمًا أو قيمة طرح عام. لم يُعثر على صفقة أحدث مكتملة وموثقة رسميًا حتى تاريخ التحقق.",
+      "verification_status": "verified_private_secondary_valuation",
+      "confidence": "medium_high",
+      "claim_type": "private_company_secondary_share_sale_reference",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تتطابق Reuters وFinancial Times على تقييم 42 مليار دولار لبيع أسهم موظفين في أغسطس 2025.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-16",
+        "SRC-17",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-16",
+          "title": "Canva Employee Share Sale at $42 Billion Valuation",
+          "publisher": "Reuters",
+          "source_type": "high_quality_private_transaction_report",
+          "url": "https://tech.yahoo.com/business/articles/canva-begins-employee-stock-sale-034229094.html",
+          "evidence_type": "high_quality_secondary",
+          "source_locator": "Reuters report",
+          "supports": "42 مليارًا وبيع الموظفين.",
+          "published_on": "2025-08-20"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Canva Valued at $42 Billion",
+          "publisher": "Financial Times",
+          "source_type": "high_quality_private_market_report",
+          "url": "https://www.ft.com/content/fbf2c84c-81bd-4349-88ca-efbff5fb3c89",
+          "evidence_type": "high_quality_secondary",
+          "source_locator": "FT report",
+          "supports": "42 مليارًا وارتفاعه من 32 مليارًا.",
+          "published_on": "2025-08-20"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Canva $40 Billion Valuation",
+          "publisher": "Canva",
+          "source_type": "official_funding_announcement",
+          "url": "https://www.canva.com/newsroom/news/canva-announces-usd-40-billion-valuation-fueled-global-demand-visual-communication/",
+          "evidence_type": "direct",
+          "source_locator": "Official historical valuation",
+          "supports": "40 مليارًا في جولة 2021.",
+          "published_on": "2021-09-15"
+        }
+      ],
+      "limitations": "لم يُثبت المصدر اكتمال بيع جميع الأسهم المعروضة، ولا يوجد تقييم سوقي مستمر أو تقييم أحدث مؤكد.",
+      "calculation": {
+        "2021_funding_valuation_usd": 40000000000,
+        "2024_secondary_reference_usd": 32000000000,
+        "2025_employee_share_sale_valuation_usd": 42000000000,
+        "public_market_status": "private",
+        "current_daily_market_cap": "not_applicable"
+      }
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "اشتراك Canva Pro للأفراد، بسعر مرجعي أمريكي معلن قدره 144 دولارًا سنويًا وقت التحقق",
+        "اشتراك Canva Business للأفراد والفرق الصغيرة، بسعر مرجعي أمريكي 20 دولارًا شهريًا أو 250 دولارًا سنويًا لكل شخص",
+        "عقود Canva Enterprise بتسعير مخصص وإدارة وأمان وتكاملات ودعم للمؤسسات",
+        "إيرادات خطط Canva Teams القديمة لدى العملاء المؤهلين الذين احتفظوا بخططهم",
+        "Canva Print لبيع وطباعة وتوصيل المنتجات والمواد التسويقية والملابس والهدايا",
+        "رسوم ترخيص لمرة واحدة لبعض عناصر Pro للمستخدمين غير المشتركين حيث تكون متاحة",
+        "اشتراكات ومزايا الذكاء الاصطناعي الإضافية مثل AI Pass وحدود استخدام أعلى بحسب الخطة",
+        "تراخيص المحتوى المدفوع والموسيقى والأصول ضمن الخطط أو الاستخدامات المؤهلة",
+        "حلول المؤسسات والتطبيقات الخاصة والتكاملات المبنية عبر Apps SDK وConnect APIs",
+        "Affinity مجاني حاليًا ويعمل كامتداد للمنصة المهنية؛ تحقيق الدخل يرتبط بخدمات Canva والذكاء الاصطناعي والتكامل وليس برسوم شراء Affinity الأساسية",
+        "Canva Creators سوق محتوى تدفع فيه Canva عوائد للمساهمين؛ لم يُفصح عن صافي الإيراد الذي تحتفظ به Canva من هذه القناة",
+        "شراكات تصميم إلى طباعة وتوزيع مع مزودي طباعة وتجزئة في أسواق متعددة"
+      ],
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "subscription_enterprise_print_content_ai_and_platform_channels",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توثق Canva الخطط والطباعة والتراخيص والسوق والمنصة، دون تفصيل مالي للقنوات.",
+      "source_count": 7,
+      "source_ids": [
+        "SRC-03",
+        "SRC-04",
+        "SRC-05",
+        "SRC-22",
+        "SRC-23",
+        "SRC-21",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Canva Plans and Pricing",
+          "publisher": "Canva",
+          "source_type": "official_pricing_page",
+          "url": "https://www.canva.com/pricing/",
+          "evidence_type": "direct",
+          "source_locator": "Pricing",
+          "supports": "خطط الاشتراك."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Introducing Canva Business",
+          "publisher": "Canva",
+          "source_type": "official_subscription_announcement",
+          "url": "https://www.canva.com/newsroom/news/introducing-canva-business/",
+          "evidence_type": "direct",
+          "source_locator": "Plan",
+          "supports": "Business.",
+          "published_on": "2025"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Introducing Canva Enterprise",
+          "publisher": "Canva",
+          "source_type": "official_enterprise_product_announcement",
+          "url": "https://www.canva.com/newsroom/news/canva-enterprise/",
+          "evidence_type": "direct",
+          "source_locator": "Enterprise",
+          "supports": "Enterprise.",
+          "published_on": "2024"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Canva Content Licensing Explained",
+          "publisher": "Canva",
+          "source_type": "official_licensing_documentation",
+          "url": "https://www.canva.com/licensing-explained/",
+          "evidence_type": "direct",
+          "source_locator": "Licensing",
+          "supports": "التراخيص."
+        },
+        {
+          "source_id": "SRC-23",
+          "title": "Canva Print",
+          "publisher": "Canva",
+          "source_type": "official_print_product_page",
+          "url": "https://www.canva.com/print/promotional-products/",
+          "evidence_type": "direct",
+          "source_locator": "Print",
+          "supports": "Print."
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Canva Creators",
+          "publisher": "Canva",
+          "source_type": "official_creator_marketplace",
+          "url": "https://www.canva.com/creators/",
+          "evidence_type": "direct",
+          "source_locator": "Creators",
+          "supports": "Creators marketplace."
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Canva Connect APIs",
+          "publisher": "Canva Developers",
+          "source_type": "official_developer_documentation",
+          "url": "https://www.canva.dev/docs/connect/",
+          "evidence_type": "direct",
+          "source_locator": "Platform",
+          "supports": "Connect APIs."
+        }
+      ],
+      "limitations": "بعض البنود قدرات مدفوعة أو قنوات بيع موثقة، لكن Canva لا تنشر مساهمة كل قناة أو take rate."
+    },
+    "$.tools": {
+      "field_value": [
+        "Canva Visual Suite للتصاميم والعروض والفيديو والمستندات والمواقع والسبورات",
+        "Canva Sheets وMagic Charts وFlourish للبيانات والتحليل والسرد البصري",
+        "Canva AI 2.0 كمساعد محادثي وAgentic للتوليد والتحرير والتخطيط",
+        "Canva Design Model لفهم البنية والهرمية وإنتاج تصاميم طبقية قابلة للتحرير",
+        "Magic Studio وMagic Media وDream Lab وتوليد الصور والفيديو والنص",
+        "Canva Code وCanva Code 2.0 لبناء تجارب ومكونات تفاعلية من التعليمات",
+        "Canva Grow وAd Insights وأدوات إنشاء الإعلانات وتحليل أدائها",
+        "Brand Kits والقوالب المقفلة والموافقات وإدارة العلامات المتعددة",
+        "Canva Enterprise مع SSO وSCIM وMFA وسجلات التدقيق وإدارة فرق متعددة",
+        "Canva Business مع تعاون وإدارة فرق و100 Brand Kit وحدود AI أعلى",
+        "Canva Print للطباعة والتوصيل والاستلام من نقاط شريكة في أسواق مؤهلة",
+        "Affinity لتحرير الصور والمتجهات وتخطيط الصفحات بمستوى احترافي",
+        "Leonardo.Ai وPhoenix وDream Lab لقدرات الذكاء الاصطناعي البصري",
+        "Flourish للرسوم البيانية التفاعلية وعروض البيانات",
+        "Canva Creators وقوالب وعناصر وصور وموسيقى مع نظام عوائد",
+        "Apps Marketplace وتطبيقات تعمل داخل محرر Canva",
+        "Canva Apps SDK باستخدام تقنيات ويب وواجهات TypeScript لإضافة قدرات للمحرر",
+        "Canva Connect APIs لإنشاء التصاميم ومزامنة الأصول والتعليقات والتصدير",
+        "SCIM API وسجلات التدقيق والتطبيقات الخاصة لعملاء Enterprise",
+        "تكاملات مع Slack وMicrosoft وGoogle Drive وDropbox وSharePoint وAsana وغيرها",
+        "Canva Offline وميزات نشر وجدولة وتصدير متعددة بحسب المنصة والخطة"
+      ],
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "official_visual_suite_ai_enterprise_professional_data_print_and_developer_capabilities",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استُبدلت حزمة تقنية مفترضة بقدرات ومنصات رسمية حتى 2026.",
+      "source_count": 11,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-05",
+        "SRC-06",
+        "SRC-18",
+        "SRC-19",
+        "SRC-20",
+        "SRC-21",
+        "SRC-23",
+        "SRC-24",
+        "SRC-25"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "A Transformative Year for Canva: 2025 in Review",
+          "publisher": "Canva",
+          "source_type": "official_annual_company_review",
+          "url": "https://www.canva.com/newsroom/news/canva-2025-wrap/",
+          "evidence_type": "direct",
+          "source_locator": "2025 review",
+          "supports": "Creative OS وDesign Model.",
+          "published_on": "2025-12"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Canva Plans and Pricing",
+          "publisher": "Canva",
+          "source_type": "official_pricing_page",
+          "url": "https://www.canva.com/pricing/",
+          "evidence_type": "direct",
+          "source_locator": "Pricing",
+          "supports": "الخطط والميزات."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Introducing Canva Enterprise",
+          "publisher": "Canva",
+          "source_type": "official_enterprise_product_announcement",
+          "url": "https://www.canva.com/newsroom/news/canva-enterprise/",
+          "evidence_type": "direct",
+          "source_locator": "Enterprise",
+          "supports": "Enterprise.",
+          "published_on": "2024"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Introducing Canva AI 2.0",
+          "publisher": "Canva",
+          "source_type": "official_ai_product_announcement",
+          "url": "https://www.canva.com/newsroom/news/canva-create-2026-ai/",
+          "evidence_type": "direct",
+          "source_locator": "AI",
+          "supports": "AI 2.0.",
+          "published_on": "2026-04"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Canva Connect APIs",
+          "publisher": "Canva Developers",
+          "source_type": "official_developer_documentation",
+          "url": "https://www.canva.dev/docs/connect/",
+          "evidence_type": "direct",
+          "source_locator": "Developer",
+          "supports": "Connect APIs."
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Canva Apps SDK",
+          "publisher": "Canva Developers",
+          "source_type": "official_developer_documentation",
+          "url": "https://www.canva.dev/docs/apps/",
+          "evidence_type": "direct",
+          "source_locator": "Developer",
+          "supports": "Apps SDK."
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Canva Developers Platform",
+          "publisher": "Canva Developers",
+          "source_type": "official_developer_platform",
+          "url": "https://www.canva.dev/docs/",
+          "evidence_type": "direct",
+          "source_locator": "Developer platform",
+          "supports": "SCIM وAudit logs."
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Canva Creators",
+          "publisher": "Canva",
+          "source_type": "official_creator_marketplace",
+          "url": "https://www.canva.com/creators/",
+          "evidence_type": "direct",
+          "source_locator": "Marketplace",
+          "supports": "Creators."
+        },
+        {
+          "source_id": "SRC-23",
+          "title": "Canva Print",
+          "publisher": "Canva",
+          "source_type": "official_print_product_page",
+          "url": "https://www.canva.com/print/promotional-products/",
+          "evidence_type": "direct",
+          "source_locator": "Print",
+          "supports": "Print."
+        },
+        {
+          "source_id": "SRC-24",
+          "title": "Welcome to Canva, Affinity",
+          "publisher": "Canva",
+          "source_type": "official_acquisition_announcement",
+          "url": "https://www.canva.com/newsroom/news/affinity/",
+          "evidence_type": "direct",
+          "source_locator": "Professional design",
+          "supports": "Affinity.",
+          "published_on": "2024-03-26"
+        },
+        {
+          "source_id": "SRC-25",
+          "title": "Flourish Integration",
+          "publisher": "Canva",
+          "source_type": "official_product_integration",
+          "url": "https://www.canva.com/newsroom/news/flourish-integration/",
+          "evidence_type": "direct",
+          "source_locator": "Data visualization",
+          "supports": "Flourish."
+        }
+      ],
+      "limitations": "القائمة لا تكشف كامل البنية الداخلية أو جميع اللغات والخدمات السحابية المستخدمة."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "A Transformative Year for Canva: 2025 in Review",
+      "publisher": "Canva",
+      "source_type": "official_annual_company_review",
+      "published_on": "2025-12",
+      "url": "https://www.canva.com/newsroom/news/canva-2025-wrap/",
+      "supports": [
+        "260 مليون مستخدم شهريًا",
+        "3.5 مليارات دولار Revenue",
+        "Creative Operating System",
+        "Canva Design Model",
+        "95% من Fortune 500",
+        "إطلاق Canva Business"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Why We Made Affinity Free",
+      "publisher": "Canva",
+      "source_type": "official_business_model_update",
+      "published_on": "2026",
+      "url": "https://www.canva.com/newsroom/news/affinity-free/",
+      "supports": [
+        "28 مليون+ عميل مدفوع",
+        "3.5 مليارات دولار Annualized Revenue",
+        "ربحية Canva",
+        "جعل Affinity مجانيًا"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Canva Plans and Pricing",
+      "publisher": "Canva",
+      "source_type": "official_pricing_page",
+      "url": "https://www.canva.com/pricing/",
+      "supports": [
+        "Free وPro وBusiness وEnterprise",
+        "أسعار الولايات المتحدة",
+        "حدود AI والتخزين والقوالب وBrand Kits",
+        "انتقال الاشتراكات الجديدة من Teams إلى Business"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Introducing Canva Business",
+      "publisher": "Canva",
+      "source_type": "official_subscription_announcement",
+      "published_on": "2025",
+      "url": "https://www.canva.com/newsroom/news/introducing-canva-business/",
+      "supports": [
+        "20 دولارًا شهريًا للشخص",
+        "الفئة المستهدفة",
+        "Leonardo.Ai وFlourish",
+        "استمرار خطط Teams القديمة"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Introducing Canva Enterprise",
+      "publisher": "Canva",
+      "source_type": "official_enterprise_product_announcement",
+      "published_on": "2024",
+      "url": "https://www.canva.com/newsroom/news/canva-enterprise/",
+      "supports": [
+        "المؤسسات الكبيرة",
+        "SSO وSCIM وMFA",
+        "إدارة العلامة والصلاحيات",
+        "Apps SDK وConnect APIs"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Introducing Canva AI 2.0",
+      "publisher": "Canva",
+      "source_type": "official_ai_product_announcement",
+      "published_on": "2026-04",
+      "url": "https://www.canva.com/newsroom/news/canva-create-2026-ai/",
+      "supports": [
+        "Canva AI 2.0",
+        "Canva Design Model",
+        "التصميم الطبقي القابل للتحرير",
+        "الذاكرة والوكلاء والوصلات والجدولة والبحث"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "What’s New — May 2026",
+      "publisher": "Canva",
+      "source_type": "official_product_update",
+      "published_on": "2026-05",
+      "url": "https://www.canva.com/newsroom/news/whats-new-may-2026/",
+      "supports": [
+        "أدوات AI والنشر والتكاملات",
+        "تطور تدفق الإنشاء إلى المشاركة"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Canva 2024 Year in Review",
+      "publisher": "Canva",
+      "source_type": "official_annual_company_review",
+      "published_on": "2024-12",
+      "url": "https://www.canva.com/newsroom/news/canva-2024-wrap/",
+      "supports": [
+        "220 مليون مستخدم شهريًا",
+        "30 مليار تصميم",
+        "Affinity وLeonardo.Ai وDream Lab",
+        "أكثر من 5,000 موظف"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Canva’s International Expansion",
+      "publisher": "Canva",
+      "source_type": "official_growth_update",
+      "url": "https://www.canva.com/newsroom/news/international-expansion/",
+      "supports": [
+        "إيراد سنوي محسوب 2.5 مليار دولار",
+        "سبع سنوات من الربحية",
+        "25 مليار تصميم",
+        "التوطين العالمي"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Inside Canva’s 2025 Impact Wrap",
+      "publisher": "Canva",
+      "source_type": "official_impact_report",
+      "published_on": "2025",
+      "url": "https://www.canva.com/newsroom/news/2025-impact-wrap/",
+      "supports": [
+        "35 مليون+ طالب ومعلم",
+        "935 ألف منظمة غير ربحية",
+        "2.5 مليار دولار قيمة منتجات متبرع بها"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Canva $3 Million Seed Round",
+      "publisher": "Canva",
+      "source_type": "official_seed_announcement",
+      "published_on": "2013-03-20",
+      "url": "https://www.canva.com/newsroom/news/aussie-startup-canva-announces-3-million-seed-round-world-class-investors/",
+      "supports": [
+        "3 ملايين دولار Seed",
+        "المقر في سيدني",
+        "Fusion Books",
+        "المستثمرون الأوائل"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Canva Raises $6 Million and Announces Canva for Work",
+      "publisher": "Canva",
+      "source_type": "official_funding_announcement",
+      "url": "https://www.canva.com/newsroom/news/announcing-canva-for-work/",
+      "supports": [
+        "جولة 6 ملايين دولار",
+        "200 ألف مؤسسة",
+        "بداية خطط العمل والفرق"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Canva $15 Million Series A",
+      "publisher": "Canva",
+      "source_type": "official_funding_announcement",
+      "url": "https://www.canva.com/newsroom/news/exciting-news-here-at-canva/",
+      "supports": [
+        "15 مليون دولار",
+        "5 ملايين مستخدم",
+        "35 مليون تصميم تاريخيًا"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Canva Reaches $1 Billion Valuation",
+      "publisher": "Canva",
+      "source_type": "official_funding_announcement",
+      "published_on": "2018",
+      "url": "https://www.canva.com/newsroom/news/canva-raises-40m-round-earn-unicorn-title/",
+      "supports": [
+        "40 مليون دولار",
+        "تقييم مليار دولار",
+        "الربحية وقت الجولة"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Canva $40 Billion Valuation",
+      "publisher": "Canva",
+      "source_type": "official_funding_announcement",
+      "published_on": "2021-09-15",
+      "url": "https://www.canva.com/newsroom/news/canva-announces-usd-40-billion-valuation-fueled-global-demand-visual-communication/",
+      "supports": [
+        "200 مليون دولار",
+        "تقييم 40 مليار دولار",
+        "60 مليون MAU",
+        "500 ألف فريق مدفوع"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Canva Employee Share Sale at $42 Billion Valuation",
+      "publisher": "Reuters",
+      "source_type": "high_quality_private_transaction_report",
+      "published_on": "2025-08-20",
+      "url": "https://tech.yahoo.com/business/articles/canva-begins-employee-stock-sale-034229094.html",
+      "supports": [
+        "تقييم 42 مليار دولار",
+        "بيع أسهم للموظفين",
+        "Fidelity وJPMorgan",
+        "كون Canva شركة خاصة"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Canva Valued at $42 Billion",
+      "publisher": "Financial Times",
+      "source_type": "high_quality_private_market_report",
+      "published_on": "2025-08-20",
+      "url": "https://www.ft.com/content/fbf2c84c-81bd-4349-88ca-efbff5fb3c89",
+      "supports": [
+        "تقييم 42 مليار دولار",
+        "ارتفاعه من 32 مليارًا",
+        "240 مليون مستخدم و3.3 مليارات Annualized Revenue وقتها",
+        "غياب جدول IPO مؤكد"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Canva Connect APIs",
+      "publisher": "Canva Developers",
+      "source_type": "official_developer_documentation",
+      "url": "https://www.canva.dev/docs/connect/",
+      "supports": [
+        "إنشاء ومزامنة الأصول والتصاميم والتعليقات",
+        "التكاملات العامة والخاصة",
+        "OpenAPI"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "Canva Apps SDK",
+      "publisher": "Canva Developers",
+      "source_type": "official_developer_documentation",
+      "url": "https://www.canva.dev/docs/apps/",
+      "supports": [
+        "تطبيقات داخل المحرر",
+        "Apps Marketplace",
+        "تقنيات الويب وJavaScript"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "Canva Developers Platform",
+      "publisher": "Canva Developers",
+      "source_type": "official_developer_platform",
+      "url": "https://www.canva.dev/docs/",
+      "supports": [
+        "Apps SDK وConnect APIs",
+        "SCIM وسجلات التدقيق",
+        "Flourish charts"
+      ]
+    },
+    {
+      "id": "SRC-21",
+      "title": "Canva Creators",
+      "publisher": "Canva",
+      "source_type": "official_creator_marketplace",
+      "url": "https://www.canva.com/creators/",
+      "supports": [
+        "Template وElement وEducation Creators",
+        "العوائد",
+        "المحتوى المحلي",
+        "مراجعة المحتوى"
+      ]
+    },
+    {
+      "id": "SRC-22",
+      "title": "Canva Content Licensing Explained",
+      "publisher": "Canva",
+      "source_type": "official_licensing_documentation",
+      "url": "https://www.canva.com/licensing-explained/",
+      "supports": [
+        "ترخيص Pro داخل الاشتراك",
+        "الشراء لمرة واحدة للمستخدم المجاني",
+        "دعم صناع المحتوى"
+      ]
+    },
+    {
+      "id": "SRC-23",
+      "title": "Canva Print",
+      "publisher": "Canva",
+      "source_type": "official_print_product_page",
+      "url": "https://www.canva.com/print/promotional-products/",
+      "supports": [
+        "بيع المنتجات المطبوعة",
+        "الفئات والأسعار المرجعية",
+        "التوصيل والاستلام"
+      ]
+    },
+    {
+      "id": "SRC-24",
+      "title": "Welcome to Canva, Affinity",
+      "publisher": "Canva",
+      "source_type": "official_acquisition_announcement",
+      "published_on": "2024-03-26",
+      "url": "https://www.canva.com/newsroom/news/affinity/",
+      "supports": [
+        "الاستحواذ على Affinity",
+        "التوسع نحو المصممين المحترفين",
+        "3 ملايين مستخدم تاريخيًا"
+      ]
+    },
+    {
+      "id": "SRC-25",
+      "title": "Flourish Integration",
+      "publisher": "Canva",
+      "source_type": "official_product_integration",
+      "url": "https://www.canva.com/newsroom/news/flourish-integration/",
+      "supports": [
+        "الاستحواذ على Flourish",
+        "الرسوم البيانية التفاعلية",
+        "1.5 مليون مستخدم تاريخيًا"
+      ]
+    }
   ]
 }

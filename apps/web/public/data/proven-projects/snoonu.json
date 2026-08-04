@@ -2,53 +2,1156 @@
   "id": "snoonu",
   "slug": "snoonu",
   "name": "سنونو (Snoonu)",
-  "headline": "التطبيق الفائق (Super App) الذي سيطر على السوق القطري بميزة التوطين",
-  "category": "Super App / توصيل وخدمات",
+  "headline": "من منصة قطرية إلى محرك توسع خليجي: كيف حوّلت سنونو الكثافة اللوجستية إلى شركة بتقييم 1.165 مليار ريال",
+  "category": "Super App & On-Demand Commerce Infrastructure / تطبيق فائق وبنية التجارة والتوصيل عند الطلب",
   "company": {
-    "location": "الدوحة، قطر",
-    "business_model": "عمولات ورسوم توصيل (B2C & B2B)"
+    "location": "شركة تقنية ولوجستية قطرية تأسست عام 2019، ويقع مقرها التشغيلي المعلن حاليًا في برج The Eighteen بمدينة لوسيل، قطر. منذ إتمام الصفقة في 23 أكتوبر 2025، تمتلك شركة جاهز الدولية المدرجة في السوق السعودية 76.56% من رأس مال Snoonu Corporation Holding LLC، بينما يحتفظ المؤسس حمد مبارك الهاجري بنسبة 23.44%. في 2026 أصبحت سنونو المنصة التشغيلية الأساسية لتوسع مجموعة جاهز الدولي، وبدأت تشغيلها المرحلي في الكويت، مع إعلان خطط لإطلاقها في البحرين بعد استكمال الإجراءات النظامية.",
+    "business_model": "منصة متعددة القطاعات B2C وB2B2C تجمع التجارة الإلكترونية والتوصيل عند الطلب واللوجستيات والتجزئة الرقمية. تشمل القنوات المثبتة: عمولات التجار ورسوم التوصيل والخدمة، بيع السلع والخدمات عبر القطاعات المملوكة مثل Snoomart، الإعلانات ونتائج البحث المدفوعة عبر Snoonu Ads، خدمات التوصيل واللوجستيات للشركات، وترخيص منصة S-Cloud ذات العلامة البيضاء برسوم إعداد واشتراك شهري ونسبة منخفضة من المعاملات حسب الخطة. لا تنشر الشركة جدولًا موحدًا لعمولات التجار أو هامش كل قطاع أو مساهمة كل قناة في الإيراد."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات",
-    "monthly_traffic": "مئات الآلاف من الطلبات شهرياً في قطر"
+    "monthly_revenue": "لا يوجد إفصاح عن إيراد شهري. وفق التقرير السنوي لمجموعة جاهز لعام 2025، حققت سنونو خلال السنة الكاملة إجمالي قيمة بضائع (GMV) قدره 2.3 مليار ريال سعودي بنمو 66% سنويًا، وإجمالي إيراد إجمالي (gross revenue) قدره 904.8 مليون ريال سعودي بنمو 72%. هذا رقم سنوي بإجمالي الإيراد كما عرّفه التقرير، ولا يجوز تقسيمه على 12 واعتبار الناتج إيرادًا شهريًا فعليًا، كما أن GMV لا يساوي الإيراد.",
+    "monthly_traffic": "زيارات الموقع والطلبات الشهرية والمستخدمون النشطون شهريًا غير معلنة. تعرض Snoonu Ads أكثر من 1.8 مليون «مشتري عالي النية» وأكثر من 4 ملايين ظهور يومي في شاشة تتبع الطلب، من دون تعريف نافذة النشاط أو منهج العد. يعرض Google Play أكثر من 500 ألف تنزيل تراكمي لتطبيق أندرويد، ويعرض التطبيق أكثر من 4,000 متجر وخدمة، بينما تعرض صفحة App Store القطرية نحو 46 ألف تقييم. هذه مؤشرات مختلفة عن MAU والزيارات والطلبات والعملاء الدافعين."
   },
   "overview": {
     "problem": {
-      "text": "السوق القطري كان يعتمد على تطبيقات توصيل عالمية أو إقليمية (مثل طلبات وديلفرو)، التي لم تكن تقدم خدمات مخصصة لاحتياجات المواطن القطري وثقافته، ولم تتوسع خارج توصيل الطعام.",
-      "impact": "تجربة مستخدم نمطية وافتقار لخدمات التوصيل السريع للمقاضي والهدايا والوثائق."
+      "text": "الطلب المحلي على الطعام والبقالة والتجزئة والهدايا والخدمات والطرود موزع عادةً بين تطبيقات ومتاجر وقنوات اتصال متعددة، بينما يحتاج التاجر إلى اكتساب العملاء وإدارة الطلبات والدفع والتوصيل والدعم دون بناء شبكة لوجستية كاملة. كلما اتسعت الفئات، زادت صعوبة موازنة السائقين والمخزون والتجار ومناطق الطلب وزمن التسليم في الوقت الحقيقي.",
+      "impact": "يؤدي التجزؤ إلى تكرار التطبيقات وتكاليف اكتساب مرتفعة وتجربة دفع وتتبع غير موحدة، كما يرفع الطلب المتذبذب والمسافات والطلبات متعددة الالتقاط كلفة التوصيل واحتمال التأخير أو الإلغاء. بالنسبة للتجار الصغار، قد تصبح اللوجستيات وخدمة العملاء والإعلانات عوائق أكبر من عرض المنتج نفسه."
     },
     "solution": {
-      "text": "تطبيق محلي بامتياز، بدأ بتوصيل الطعام وتوسع بسرعة ليشمل البقالة (Snoomart)، الصيدليات، الهدايا، بل وحتى الخدمات اللوجستية للشركات، ليصبح تطبيقاً فائقاً (Super App) لا غنى عنه."
+      "text": "بنت سنونو تطبيقًا متعدد الخدمات يغطي قطر ويجمع الطعام والبقالة والتجزئة والهدايا والغسيل والخدمات والطرود والتذاكر وغيرها، مع أكثر من 4,000 متجر وخدمة وفق متجر Google Play. تدير المنظومة تطبيق المستهلك، وبوابة التاجر، وتطبيق السائق، والتوجيه والتوزيع اللحظي وتتبع الطلبات والمحفظة ووسائل دفع متعددة. كما تضيف طبقة B2B للتوصيل السريع والمجدول، ومنصة إعلانات تعتمد بيانات الشراء، ومنصة S-Cloud لترخيص بنية التطبيق الفائق للحكومات والمؤسسات والمشغلين في أسواق أخرى. في 2026 دعمت قطر مشروعًا لسنونو في الروبوتات والذكاء الاصطناعي، وبدأت الشركة تشغيل خدماتها مرحليًا في الكويت."
     }
   },
   "market_data": {
-    "target_audience": "المواطنون والمقيمون في دولة قطر.",
-    "market_size": "سوق التجارة السريعة والخدمات اللوجستية القطري.",
-    "growth_rate": "جمع أكثر من 12 مليون دولار (Series B) واستحوذ على منافسه (Akeed) في عمان للتوسع."
+    "target_audience": "الأفراد والأسر في قطر والكويت الباحثون عن خدمات يومية موحدة؛ المطاعم ومتاجر التجزئة والبقالة والصيدليات والعلامات التجارية؛ الشركات التي تحتاج توصيل طرود ومستندات وطلبات مجدولة أو فورية؛ المعلنون الذين يريدون استهدافًا مبنيًا على سلوك الشراء؛ والحكومات والمؤسسات والمشغلون الإقليميون الراغبون في إطلاق منصة توصيل متعددة القطاعات بعلامتهم عبر S-Cloud.",
+    "market_size": "لا يوجد رقم رسمي منشور يساوي سوق سنونو القابل للخدمة في قطر والخليج بجميع قطاعاته. للسياق القطري المجاور، أعلن مصرف قطر المركزي أن التجارة الإلكترونية سجلت في مارس 2025 نحو 9.6 ملايين معاملة بقيمة 4.4 مليارات ريال قطري، ضمن 13.8 مليار ريال لمعاملات نقاط البيع والتجارة الإلكترونية معًا. هذا مقياس شهري لكل التجارة الإلكترونية التي تمر عبر البطاقات في قطر، وليس حجم سوق توصيل الطعام، ولا GMV سنونو، ولا إيراد الشركة. كما أصدرت وزارة التجارة والصناعة في أبريل 2026 دليلًا خاصًا بخدمات التوصيل والمنصات الرقمية.",
+    "growth_rate": "أفصحت جاهز عن أن GMV سنونو ارتفع 66% سنويًا في 2025 إلى 2.3 مليار ريال سعودي، وأن إجمالي الإيراد الإجمالي ارتفع 72% إلى 904.8 مليون ريال سعودي. وعند إعلان صفقة الاستحواذ في يوليو 2025، ذكرت الشركة أن GMV بلغ 1.37 مليار ريال قطري في 2024، وأن الإيراد نما من 146 مليون ريال قطري في 2022 إلى 511 مليونًا في 2024، مع صافي ربح 27 مليون ريال قطري وEBITDA قدره 54 مليونًا في 2024. هذه مقاييس مالية وتشغيلية سنوية، وليست عدد مستخدمين أو زيارات أو معدل نمو شهري."
   },
   "financials": {
-    "initial_investment": "تمويل قوي من مستثمرين قطريين (Qatar Development Bank).",
-    "valuation": "غير معلن (عشرات الملايين)",
+    "initial_investment": "أغلقت سنونو جولة Series A بقيمة 5 ملايين دولار في أبريل 2021 بقيادة بنك قطر للتنمية، ثم أغلقت Series B بقيمة 12 مليون دولار في مايو 2023 بقيادة البنك نفسه وبمشاركة مستثمرين آخرين؛ وبذلك يبلغ مجموع الجولتين المعلنتين 17 مليون دولار، دون الجزم بأنه إجمالي التمويل التاريخي الكامل. في 2022 استحوذت سنونو على منصة Akeed العُمانية؛ وصفت تغطية Wamda المقابل بأنه غير معلن، بينما ذكرت صحف عُمانية محلية قيمة 10 ملايين دولار، لذلك لا يُعامل الرقم كإفصاح مالي أولي موحد. وفي صفقة جاهز لعام 2025، كان 20 مليون دولار من إجمالي المقابل اكتتابًا نقديًا في أسهم جديدة داخل سنونو، أما بقية المقابل فارتبط بشراء أسهم قائمة من المساهمين.",
+    "valuation": "قيّمت صفقة جاهز المعلنة في يوليو 2025 سنونو عند 1.165 مليار ريال قطري، أي نحو 320 مليون دولار، وشملت ضخًا رأسماليًا بقيمة 20 مليون دولار. دفعت جاهز مقابلًا إجماليًا قدره 245 مليون دولار للحصول على 76.56%: 225 مليون دولار لشراء 75% من الأسهم القائمة عبر النقد وأسهم خزينة جاهز، و20 مليون دولار للاكتتاب في حصة إضافية قدرها 1.56%. اكتملت المرحلتان في أكتوبر 2025. هذا تقييم الصفقة في 2025، وليس تقييمًا سوقيًا متجددًا أو ضمانًا لقيمة الشركة في أغسطس 2026.",
     "revenue_streams": [
-      "عمولة على المبيعات من المطاعم والمتاجر",
-      "رسوم توصيل من العملاء",
-      "خدمات الإعلانات وتخزين وتوصيل المنتجات للتجار (Dark Stores)"
+      "عمولات على الطلبات والمبيعات المنفذة عبر المطاعم والمتاجر والأسواق داخل التطبيق.",
+      "رسوم توصيل وخدمة يدفعها المستخدم بحسب الطلب والموقع والعرض والاشتراك أو البرنامج المستخدم.",
+      "مبيعات سلع وخدمات من القطاعات التي تديرها سنونو مباشرة، ومنها Snoomart ومنصات التجزئة المتخصصة.",
+      "إعلانات داخل التطبيق تشمل البنرات ونتائج البحث والقوائم المروجة والإشعارات وحملات المؤثرين ووسائط خارج التطبيق.",
+      "خدمات توصيل ولوجستيات B2B مجدولة وفورية وسريعة، مع تسعير مرن بحسب الحجم ومتطلبات مستوى الخدمة.",
+      "ترخيص S-Cloud بعلامة بيضاء: رسوم إعداد، واشتراك شهري، ونسبة منخفضة من المعاملات في خطة Growth، وتسعير مؤسسي مخصص.",
+      "برامج ولاء وعضوية ومحفظة وعروض شراكات قد تدعم التكرار والتحويل؛ لم تنشر الشركة فصلًا مستقلًا يثبت مقدار الإيراد المباشر منها."
     ]
   },
   "lessons": [
     {
-      "title": "السيطرة على المعقل (Win the Home Ground)",
-      "description": "بدلاً من تشتيت الجهود بالتوسع الإقليمي المبكر، ركزت سنونو على السيطرة التامة على (قطر). فهمهم العميق للثقافة المحلية ودعم المنتجات الوطنية جعلهم التطبيق المفضل محلياً وتفوقوا على العمالقة الأجانب."
+      "title": "التطبيق الفائق ينجح عندما يشترك كل قطاع في محرك تشغيلي واحد",
+      "description": "إضافة الطعام والبقالة والهدايا والغسيل والخدمات لا تصنع تطبيقًا فائقًا وحدها. الميزة تنشأ عندما تعيد القطاعات استخدام الحساب والدفع والمحفظة والسائقين والتتبع والدعم والولاء، فتنخفض كلفة إطلاق الفئة التالية وترتفع مرات استخدام العميل للمنصة."
     },
     {
-      "title": "استراتيجية التطبيق الفائق (Super App)",
-      "description": "بمجرد امتلاكهم لثقة العميل وبنية التوصيل التحتية، أضافوا خدمات أعلى هامش ربح (كالمقاضي السريعة وتوصيل الورد)، مما ضاعف القيمة الدائمة للعميل (LTV) بشكل هائل."
+      "title": "السوق المحلي الصغير يمكن أن يكون مختبرًا لبنية إقليمية كبيرة",
+      "description": "سمح التركيز على قطر لسنونو بتحسين الكثافة التشغيلية وتجربة المستخدم قبل التوسع. بعد إثبات النمو والربحية، تحولت الخبرة المحلية إلى أصل يمكن نقله إلى الكويت والبحرين وترخيصه عبر S-Cloud."
+    },
+    {
+      "title": "الربحية قبل الاستحواذ تعيد تعريف قوة التفاوض",
+      "description": "إعلان صافي ربح وEBITDA موجبَين في 2024 جعل سنونو أصلًا تشغيليًا لا مجرد وعد نمو. المنصة التي تثبت اقتصاديات الوحدة تستطيع مناقشة الصفقة على أساس الأداء والتدفقات، لا عدد التنزيلات أو الشهرة فقط."
+    },
+    {
+      "title": "التقييم يحتاج تفكيكًا إلى شراء ثانوي وضخ أولي",
+      "description": "صفقة 245 مليون دولار لم تدخل بالكامل خزينة سنونو؛ 20 مليونًا فقط كانت اكتتابًا في أسهم جديدة، بينما ارتبط 225 مليونًا بشراء أسهم قائمة. الفصل بين المسارين يوضح من حصل على النقد وما الذي موّل نمو الشركة."
+    },
+    {
+      "title": "GMV والإيراد والربح ثلاثة مستويات لا يجوز دمجها",
+      "description": "في 2025 بلغ GMV 2.3 مليار ريال سعودي، بينما بلغ gross revenue 904.8 مليونًا. الفارق يمثل قيمة تمر عبر المنصة ولا تتحول كلها إلى إيراد، ثم تخصم التكاليف والمصروفات للوصول إلى الربح. أي لوحة قياس أو قصة استثمار يجب أن تعرض المستويات الثلاثة منفصلة."
+    },
+    {
+      "title": "الكثافة اللوجستية خندق حماية أهم من عدد الفئات",
+      "description": "كلما زادت الطلبات المتقاربة جغرافيًا، أمكن تحسين تجميع الرحلات واستغلال السائق وتقليل زمن الانتظار. لذلك يكون ترتيب العرض، والتنبؤ بالطلب، والانتشار المحلي للتجار عوامل دفاعية يصعب نسخها بمجرد إطلاق تطبيق مشابه."
+    },
+    {
+      "title": "الإعلانات تصبح نشاطًا مستقلًا عندما تمتلك المنصة نية الشراء",
+      "description": "Snoonu Ads لا تبيع الوصول فقط؛ تربط الإعلان بالبحث والسلة والطلب الفعلي. هذه البيانات تسمح بقياس المبيعات بعد التعرض وتحويل مساحة التطبيق إلى شبكة تجارة إعلامية، مع ضرورة ضبط الخصوصية وعدم الخلط بين عدد مرات الظهور وعدد المشترين الفريدين."
+    },
+    {
+      "title": "ترخيص البنية يحول الخبرة التشغيلية إلى برمجيات قابلة للتصدير",
+      "description": "S-Cloud يفصل المحرك التقني عن علامة سنونو الاستهلاكية، فيتيح للحكومات والمؤسسات إطلاق تطبيقاتها الخاصة. هذا يضيف إيرادًا متكررًا أقل اعتمادًا على تشغيل أسطول في كل دولة، لكنه يتطلب دعمًا وموثوقية وتخصيصًا على مستوى المؤسسات."
+    },
+    {
+      "title": "الاستحواذ الناجح يحافظ على المؤسس ويعيد توزيع نطاق القيادة",
+      "description": "احتفاظ المؤسس بـ23.44% وتوليه قيادة الأعمال الدولية في مجموعة جاهز يربطان خبرته المحلية بنجاح التكامل. هذه البنية تقلل خطر فقدان المعرفة بعد الصفقة وتحول الحافز من بيع الشركة إلى توسيع المنصة إقليميًا."
+    },
+    {
+      "title": "التوسع الإقليمي يحتاج توطين العمليات لا نسخ واجهة قطر",
+      "description": "إطلاق الكويت بدأ بخدمات محددة وقيادة محلية وفريق محلي ثم توسع مرحليًا. هذا النهج يعترف بأن التاجر والسائق والتنظيم والدفع والعادات تختلف بين الأسواق، وأن التقنية المشتركة يجب أن تدعم نموذج تشغيل محليًا لا أن تفرض نسخة واحدة."
     }
   ],
   "tools": [
-    "AWS",
-    "Flutter",
-    "Go",
-    "PostgreSQL"
+    "تطبيق مستهلك رسمي على iOS وAndroid يجمع 11 خدمة، مع أكثر من 500 ألف تنزيل أندرويد و4,000 متجر وخدمة وقت التحقق.",
+    "بوابة إدارة للتجار وعمليات إدراج المنتجات والطلبات والعروض والتحليلات.",
+    "تطبيق للسائق وإدارة أسطول لحظية وتوزيع ذكي للطلبات ومسارات محسنة وتتبع مباشر.",
+    "محفظة ووسائل دفع متعددة تشمل البطاقات وApple Pay وOoredoo Money والنقد بحسب السوق.",
+    "Snoonu Ads للإعلانات داخل التطبيق والبحث والقوائم المروجة والاستهداف السلوكي وقياس المبيعات المغلق.",
+    "خدمات Snoosend واللوجستيات B2B للتوصيل الفوري والمجدول والسريع وتتبع مستوى الخدمة.",
+    "S-Cloud كمنصة بيضاء تشمل تطبيق المستهلك وبوابة التاجر وتطبيق السائق وإدارة الأسطول والتحليلات وواجهات REST.",
+    "Royal Club ومحركات الولاء والمهام والمستويات والمكافآت داخل منظومة الاستخدام.",
+    "قطاعات مملوكة أو مُدارة مثل Snoomart وSnooPharma وSnooBeauty إلى جانب سوق التجار الخارجيين.",
+    "مشروع روبوتات وذكاء اصطناعي مدعوم من مجلس قطر للبحث والتطوير والابتكار في 2026.",
+    "بنية سحابية آمنة معلنة بوقت تشغيل 99.9% في S-Cloud؛ لم يُعلن مزود السحابة في الصفحة العامة.",
+    "واجهات API ودعم تقني مؤسسي وتشغيل متعدد الدول ضمن استراتيجية جاهز الدولية."
+  ],
+  "verification": {
+    "status": "verified_from_saudi_exchange_listed_parent_annual_report_company_products_app_stores_and_qatar_primary_sources",
+    "verified_on": "2026-08-03",
+    "source_policy": "أُعطيت الأولوية لإفصاحات السوق السعودية الصادرة عن شركة جاهز المدرجة، وتقريرها السنوي لعام 2025، ثم إعلانات سنونو الرسمية وصفحات المنتجات ومتاجر التطبيقات، ومصرف قطر المركزي ووزارة التجارة ومجلس البحث والابتكار. استخدمت المصادر الصحفية فقط لتوثيق إطلاق الكويت أو إعادة نشر بيان الصفقة أو بيان Akeed مع توضيح حدودها. سنونو ليست مُصدرًا أمريكيًا ولا شركة مدرجة في الولايات المتحدة؛ لذلك لا تمثل SEC/EDGAR مسار الإفصاح المناسب لها. بدلًا من ذلك، أصبحت إفصاحات تداول والقوائم المدققة للشركة الأم جاهز المصدر المالي الأولي الأهم منذ أكتوبر 2025.",
+    "important_notes": [
+      "904.8 مليون ريال سعودي هو gross revenue سنوي لسنونو في 2025 وفق تقرير جاهز، وليس إيرادًا شهريًا.",
+      "2.3 مليار ريال سعودي هو GMV سنوي في 2025، وليس إيراد سنونو ولا قيمة صفقة الاستحواذ.",
+      "قيمة 1.165 مليار ريال قطري أو 320 مليون دولار هي تقييم صفقة يوليو 2025، وليست تقييمًا سوقيًا لحظيًا في أغسطس 2026.",
+      "المقابل الإجمالي 245 مليون دولار اشترى 76.56%؛ منه 20 مليون دولار اكتتاب في أسهم جديدة و225 مليونًا لشراء أسهم قائمة.",
+      "أكملت جاهز الملكية البالغة 76.56% في أكتوبر 2025، واحتفظ المؤسس بنسبة 23.44%.",
+      "5 ملايين دولار Series A و12 مليونًا Series B تمويلان للشركة؛ شراء Akeed واكتساب جاهز للحصة أحداث مختلفة عن التمويل التشغيلي.",
+      "رقم 1.8 مليون مشترٍ عالي النية صادر عن منتج الإعلانات ولا يتضمن تعريف MAU أو الفترة.",
+      "500 ألف+ تنزيل أندرويد رقم تراكمي، و46 ألف تقييم iOS ليسا مستخدمين نشطين أو طلبات.",
+      "4 ملايين+ ظهور يومي في شاشة تتبع الطلب يمثل impressions لا أفرادًا فريدين ولا طلبات مكتملة.",
+      "4,000+ متجر وخدمة رقم عرض داخل التطبيق، وليس عدد تجار نشطين أو فروع متعاقدة وفق تعريف مالي.",
+      "إحصاء 4.4 مليارات ريال قطري للتجارة الإلكترونية في مارس 2025 يخص السوق القطري كله ولا يمثل GMV سنونو.",
+      "خطة البحرين معلنة وخاضعة للإجراءات النظامية؛ الكويت بدأت التشغيل المرحلي في أبريل/مايو 2026.",
+      "حُذفت AWS وFlutter وGo وPostgreSQL من الأدوات لغياب توثيق رسمي حديث للمكدس الداخلي.",
+      "حُذف ادعاء السيطرة على السوق والتفوق المطلق على المنافسين؛ تقرير جاهز يصف سنونو بمنصة ذات حصة كبيرة، لكنه لا ينشر نسبة سوق مستقلة.",
+      "حُذف تقدير «ملايين الدولارات شهريًا» و«عشرات الملايين تقييمًا» لأن الإفصاحات الحالية توفر أرقامًا سنوية وصفقة تقييم أدق."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط كل حقل بقيمته وحالة التحقق ودرجة الثقة والمصادر والقيود، مع فصل الإيراد الإجمالي عن GMV والربح والتقييم والتمويل ومقابل شراء الأسهم، وفصل المستخدمين والتنزيلات ومرات الظهور والمتاجر عن الزيارات والطلبات.",
+    "status_values": {
+      "verified_current_ownership_and_location": "المقر والملكية الحالية مثبتان بإفصاحات رسمية ومصادر الشركة.",
+      "verified_multi_stream_model_with_undisclosed_unit_rates": "قنوات النموذج مثبتة، لكن أسعار الوحدة وهوامشها غير معلنة.",
+      "verified_annual_revenue_monthly_not_disclosed": "الإيراد السنوي منشور، بينما الإيراد الشهري غير مفصح عنه.",
+      "verified_as_not_publicly_disclosed": "المقياس المطلوب غير منشور ولم يُستبدل بتقدير خارجي.",
+      "verified": "الادعاء مدعوم مباشرة بمصادر رسمية.",
+      "verified_adjacent_market_indicator_not_company_tam": "المؤشر الرسمي يصف السوق المجاور ولا يساوي سوق الشركة أو أداءها.",
+      "verified_audited_parent_report_and_transaction_disclosure": "المقياس مدعوم بتقرير الشركة الأم المدرجة وإفصاحات الصفقة.",
+      "verified_financing_and_acquisition_cash_flow_separated": "تم فصل التمويل الأولي عن الاستحواذ وشراء الأسهم وضخ رأس المال.",
+      "verified_transaction_valuation_not_current_market_value": "التقييم موثق ضمن صفقة محددة ولا يمثل قيمة سوقية متجددة.",
+      "verified_revenue_channels_rates_partly_undisclosed": "قنوات الإيراد مثبتة لكن النسب والأسعار التفصيلية غير منشورة.",
+      "verified_product_capabilities_without_speculative_internal_stack": "قدرات المنتج مثبتة دون افتراض تقنيات داخلية غير معلنة.",
+      "analytical_inference": "تحليل مهني مبني على حقائق موثقة وليس تصريحًا حرفيًا من الشركة."
+    },
+    "confidence_scale": {
+      "high": "إفصاح سوق رسمي أو تقرير سنوي أو صفحة منتج ومتجر تطبيقات رسمي.",
+      "medium_high": "استنتاج مدعوم بمصادر متعددة مع حدود معلنة.",
+      "medium": "تحليل تشغيلي معقول دون قياس كمي مستقل."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "شركة تقنية ولوجستية قطرية تأسست عام 2019، ويقع مقرها التشغيلي المعلن حاليًا في برج The Eighteen بمدينة لوسيل، قطر. منذ إتمام الصفقة في 23 أكتوبر 2025، تمتلك شركة جاهز الدولية المدرجة في السوق السعودية 76.56% من رأس مال Snoonu Corporation Holding LLC، بينما يحتفظ المؤسس حمد مبارك الهاجري بنسبة 23.44%. في 2026 أصبحت سنونو المنصة التشغيلية الأساسية لتوسع مجموعة جاهز الدولي، وبدأت تشغيلها المرحلي في الكويت، مع إعلان خطط لإطلاقها في البحرين بعد استكمال الإجراءات النظامية.",
+      "verification_status": "verified_current_ownership_and_location",
+      "confidence": "high",
+      "claim_type": "headquarters_founding_ownership_and_regional_role",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت مصادر الشركة وإفصاحات تداول المقر وسنة التأسيس والملكية بعد إتمام الصفقة والدور الدولي في 2026.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-18",
+        "SRC-02",
+        "SRC-03",
+        "SRC-13",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-18",
+          "title": "Snoonu company profile",
+          "publisher": "Snoonu on LinkedIn",
+          "source_type": "official_company_profile",
+          "url": "https://www.linkedin.com/company/snoonu-qatar",
+          "evidence_type": "direct",
+          "source_locator": "Company profile and location",
+          "supports": "التأسيس عام 2019 والمقر في The Eighteen Tower بلوسيل.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Completion of the first phase of the Snoonu transaction",
+          "publisher": "Saudi Exchange (Tadawul)",
+          "source_type": "primary_listed_company_exchange_disclosure",
+          "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=1&anId=90548&cs=6017&locale=en",
+          "evidence_type": "direct",
+          "source_locator": "First-phase completion",
+          "supports": "إتمام شراء 75% في أكتوبر 2025.",
+          "published_on": "2025-10-06"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Completion of the second phase of the Snoonu transaction",
+          "publisher": "Saudi Exchange (Tadawul)",
+          "source_type": "primary_listed_company_exchange_disclosure",
+          "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=1&anId=90906&cs=6017&locale=en",
+          "evidence_type": "direct",
+          "source_locator": "Second-phase completion",
+          "supports": "الملكية النهائية 76.56% واحتفاظ المؤسس بـ23.44%.",
+          "published_on": "2025-10-26"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Jahez Group to launch Snoonu in Kuwait and Bahrain",
+          "publisher": "Saudi Exchange disclosure reproduced by Mubasher",
+          "source_type": "listed_company_exchange_announcement",
+          "url": "https://english.mubasher.info/news/4566480/Jahez-International-Company-for-Information-System-Technology-Jahez-announces-plans-to-launch-Snoonu-in-Kuwait-and-Bahrain/",
+          "evidence_type": "direct",
+          "source_locator": "International strategy announcement",
+          "supports": "اعتماد سنونو منصة التوسع الدولي وخطط الكويت والبحرين.",
+          "published_on": "2026-02-12"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Snoonu arrives in Kuwait",
+          "publisher": "Kuwait Times",
+          "source_type": "current_market_launch_report",
+          "url": "https://kuwaittimes.com/article/43491/business/snoonu-arrives-in-kuwait-a-new-era-of-everyday-technology/",
+          "evidence_type": "direct",
+          "source_locator": "Kuwait launch report",
+          "supports": "بدء التشغيل المرحلي في الكويت في 2026.",
+          "published_on": "2026-05-11"
+        }
+      ],
+      "limitations": "إطلاق البحرين كان خطة معلنة خاضعة للإجراءات النظامية وقت التحقق؛ لم يُعامل كتشغيل مكتمل."
+    },
+    "$.company.business_model": {
+      "field_value": "منصة متعددة القطاعات B2C وB2B2C تجمع التجارة الإلكترونية والتوصيل عند الطلب واللوجستيات والتجزئة الرقمية. تشمل القنوات المثبتة: عمولات التجار ورسوم التوصيل والخدمة، بيع السلع والخدمات عبر القطاعات المملوكة مثل Snoomart، الإعلانات ونتائج البحث المدفوعة عبر Snoonu Ads، خدمات التوصيل واللوجستيات للشركات، وترخيص منصة S-Cloud ذات العلامة البيضاء برسوم إعداد واشتراك شهري ونسبة منخفضة من المعاملات حسب الخطة. لا تنشر الشركة جدولًا موحدًا لعمولات التجار أو هامش كل قطاع أو مساهمة كل قناة في الإيراد.",
+      "verification_status": "verified_multi_stream_model_with_undisclosed_unit_rates",
+      "confidence": "high",
+      "claim_type": "marketplace_logistics_retail_media_and_software_licensing_model",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تتقاطع إفصاحات جاهز وصفحات المنتجات الرسمية لإثبات القنوات، مع بقاء معدلات العمولة وهوامش القطاعات غير منشورة.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-04",
+        "SRC-11",
+        "SRC-12",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Jahez Group Annual Report 2025 — CFO Review",
+          "publisher": "Jahez Group",
+          "source_type": "primary_listed_company_annual_report",
+          "url": "https://jahezgroup.com/jahez-ar/2025/leadership/cfo/",
+          "evidence_type": "direct",
+          "source_locator": "Revenue diversification and Snoonu performance",
+          "supports": "العمولات والسلع والخدمات والإعلانات ضمن نموذج المجموعة والمنصة.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Snoonu Ads — Qatar Retail Media Platform",
+          "publisher": "Snoonu",
+          "source_type": "official_company_advertising_product_page",
+          "url": "https://ads.snoonu.com/en/",
+          "evidence_type": "direct",
+          "source_locator": "Advertising products",
+          "supports": "الإعلانات والبحث والقوائم المروجة والاستهداف.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "S-Cloud — Launch Your Own Super-App",
+          "publisher": "Snoonu",
+          "source_type": "official_company_b2b_software_product_page",
+          "url": "https://cloud.snoonu.com/en/",
+          "evidence_type": "direct",
+          "source_locator": "Pricing and platform modules",
+          "supports": "ترخيص S-Cloud ورسوم الإعداد والاشتراك والمعاملات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Snoonu Food & Grocery Delivery",
+          "publisher": "Google Play / Snoonu Trading and Services",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?hl=en-US&id=com.snoonu.customerapp",
+          "evidence_type": "direct",
+          "source_locator": "Consumer app description",
+          "supports": "التجارة والتوصيل ووسائل الدفع وتعدد الخدمات.",
+          "published_on": "2026-06-27"
+        }
+      ],
+      "limitations": "لا تنشر سنونو take rate أو جدولًا عامًا موحدًا للعمولات ورسوم المستخدم أو الإيراد حسب القطاع."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "لا يوجد إفصاح عن إيراد شهري. وفق التقرير السنوي لمجموعة جاهز لعام 2025، حققت سنونو خلال السنة الكاملة إجمالي قيمة بضائع (GMV) قدره 2.3 مليار ريال سعودي بنمو 66% سنويًا، وإجمالي إيراد إجمالي (gross revenue) قدره 904.8 مليون ريال سعودي بنمو 72%. هذا رقم سنوي بإجمالي الإيراد كما عرّفه التقرير، ولا يجوز تقسيمه على 12 واعتبار الناتج إيرادًا شهريًا فعليًا، كما أن GMV لا يساوي الإيراد.",
+      "verification_status": "verified_annual_revenue_monthly_not_disclosed",
+      "confidence": "high",
+      "claim_type": "annual_gross_revenue_and_gmv_separated_from_monthly_revenue",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يكشف تقرير جاهز السنوي أرقام 2025 السنوية الكاملة ويصفها بوضوح كـGMV وgross revenue، ولا ينشر سلسلة شهرية.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-04",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Jahez Group Annual Report 2025 — CFO Review",
+          "publisher": "Jahez Group",
+          "source_type": "primary_listed_company_annual_report",
+          "url": "https://jahezgroup.com/jahez-ar/2025/leadership/cfo/",
+          "evidence_type": "direct",
+          "source_locator": "Strategic expansion through Snoonu acquisition",
+          "supports": "GMV 2.3 مليار ريال سعودي وgross revenue 904.8 مليونًا لعام 2025.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Jahez–Snoonu transaction release",
+          "publisher": "Jahez Group release reproduced by Zawya",
+          "source_type": "company_transaction_press_release",
+          "url": "https://www.sahmcapital.com/news/content/pressr-jahez-signs-agreement-to-acquire-majority-stake-in-leading-qatari-tech-company-snoonu-2025-07-09",
+          "evidence_type": "direct",
+          "source_locator": "2022–2024 financial trajectory",
+          "supports": "إيراد 2024 وGMV والأرباح التاريخية للمقارنة.",
+          "published_on": "2025-07-09"
+        }
+      ],
+      "limitations": "gross revenue قد يختلف عن net revenue المحاسبي. لا يجوز اشتقاق إيراد شهري فعلي من المتوسط الحسابي السنوي."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "زيارات الموقع والطلبات الشهرية والمستخدمون النشطون شهريًا غير معلنة. تعرض Snoonu Ads أكثر من 1.8 مليون «مشتري عالي النية» وأكثر من 4 ملايين ظهور يومي في شاشة تتبع الطلب، من دون تعريف نافذة النشاط أو منهج العد. يعرض Google Play أكثر من 500 ألف تنزيل تراكمي لتطبيق أندرويد، ويعرض التطبيق أكثر من 4,000 متجر وخدمة، بينما تعرض صفحة App Store القطرية نحو 46 ألف تقييم. هذه مؤشرات مختلفة عن MAU والزيارات والطلبات والعملاء الدافعين.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "web_traffic_and_mau_not_disclosed_platform_reach_metrics_separated",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا توجد زيارات أو MAU منشورة؛ المتاح تنزيلات ومتاجر وتقييمات ومقاييس إعلانية ذات تعريفات مختلفة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-11",
+        "SRC-09",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "Snoonu Ads — Qatar Retail Media Platform",
+          "publisher": "Snoonu",
+          "source_type": "official_company_advertising_product_page",
+          "url": "https://ads.snoonu.com/en/",
+          "evidence_type": "direct",
+          "source_locator": "Audience and ad inventory metrics",
+          "supports": "1.8M+ مشترٍ عالي النية و4M+ ظهور يومي وفق الشركة.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Snoonu Food & Grocery Delivery",
+          "publisher": "Google Play / Snoonu Trading and Services",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?hl=en-US&id=com.snoonu.customerapp",
+          "evidence_type": "direct",
+          "source_locator": "Google Play listing",
+          "supports": "500K+ تنزيلات و4,000+ متجر وخدمة.",
+          "published_on": "2026-06-27"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Snoonu: Food Delivery and Shopping",
+          "publisher": "Apple App Store / Oryxnet",
+          "source_type": "official_app_store_listing",
+          "url": "https://apps.apple.com/qa/app/snoonu-food-delivery-shopping/id1457458384",
+          "evidence_type": "direct",
+          "source_locator": "Qatar App Store listing",
+          "supports": "نحو 46 ألف تقييم ووجود تطبيق iOS.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "مشترو الإعلانات والتنزيلات والتقييمات ومرات الظهور لا تساوي المستخدمين النشطين شهريًا أو الطلبات الشهرية."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "الطلب المحلي على الطعام والبقالة والتجزئة والهدايا والخدمات والطرود موزع عادةً بين تطبيقات ومتاجر وقنوات اتصال متعددة، بينما يحتاج التاجر إلى اكتساب العملاء وإدارة الطلبات والدفع والتوصيل والدعم دون بناء شبكة لوجستية كاملة. كلما اتسعت الفئات، زادت صعوبة موازنة السائقين والمخزون والتجار ومناطق الطلب وزمن التسليم في الوقت الحقيقي.",
+        "impact": "يؤدي التجزؤ إلى تكرار التطبيقات وتكاليف اكتساب مرتفعة وتجربة دفع وتتبع غير موحدة، كما يرفع الطلب المتذبذب والمسافات والطلبات متعددة الالتقاط كلفة التوصيل واحتمال التأخير أو الإلغاء. بالنسبة للتجار الصغار، قد تصبح اللوجستيات وخدمة العملاء والإعلانات عوائق أكبر من عرض المنتج نفسه."
+      },
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "fragmented_daily_services_and_last_mile_orchestration_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التحليل مبني على نطاق الخدمات وتعقيد اللوجستيات الذي تعرضه منتجات سنونو وتحديات هاكاثونها التشغيلية.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-09",
+        "SRC-12",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "Snoonu Food & Grocery Delivery",
+          "publisher": "Google Play / Snoonu Trading and Services",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?hl=en-US&id=com.snoonu.customerapp",
+          "evidence_type": "direct",
+          "source_locator": "App categories and coverage",
+          "supports": "تعدد احتياجات المستهلك والمتاجر والخدمات.",
+          "published_on": "2026-06-27"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "S-Cloud — Launch Your Own Super-App",
+          "publisher": "Snoonu",
+          "source_type": "official_company_b2b_software_product_page",
+          "url": "https://cloud.snoonu.com/en/",
+          "evidence_type": "direct",
+          "source_locator": "Operations engine modules",
+          "supports": "إدارة الأسطول والتوجيه والتتبع والتاجر والسائق.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Qatar issues guidelines regulating delivery services and digital platforms",
+          "publisher": "Qatar News Agency citing Ministry of Commerce and Industry",
+          "source_type": "official_government_regulatory_update",
+          "url": "https://qna.org.qa/en/news/news-details?date=27%2F04%2F2026&id=ministry-of-commerce-issues-new-guidelines-regulating-delivery-services-and-digital-platforms",
+          "evidence_type": "contextual",
+          "source_locator": "Regulatory guideline context",
+          "supports": "العلاقات المعقدة بين المنصات ومقدمي الخدمة والمستهلكين.",
+          "published_on": "2026-04-27"
+        }
+      ],
+      "limitations": "صياغة المشكلة تحليل مهني وليست قياسًا منشورًا لتكلفة التأخير أو الهدر."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "بنت سنونو تطبيقًا متعدد الخدمات يغطي قطر ويجمع الطعام والبقالة والتجزئة والهدايا والغسيل والخدمات والطرود والتذاكر وغيرها، مع أكثر من 4,000 متجر وخدمة وفق متجر Google Play. تدير المنظومة تطبيق المستهلك، وبوابة التاجر، وتطبيق السائق، والتوجيه والتوزيع اللحظي وتتبع الطلبات والمحفظة ووسائل دفع متعددة. كما تضيف طبقة B2B للتوصيل السريع والمجدول، ومنصة إعلانات تعتمد بيانات الشراء، ومنصة S-Cloud لترخيص بنية التطبيق الفائق للحكومات والمؤسسات والمشغلين في أسواق أخرى. في 2026 دعمت قطر مشروعًا لسنونو في الروبوتات والذكاء الاصطناعي، وبدأت الشركة تشغيل خدماتها مرحليًا في الكويت."
+      },
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "consumer_super_app_b2b_logistics_ads_cloud_and_robotics_stack",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المتاجر الرسمية وصفحات سنونو ومصادر قطر محفظة الحلول الحالية والتوسع والروبوتات.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-09",
+        "SRC-11",
+        "SRC-12",
+        "SRC-15",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "Snoonu Food & Grocery Delivery",
+          "publisher": "Google Play / Snoonu Trading and Services",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?hl=en-US&id=com.snoonu.customerapp",
+          "evidence_type": "direct",
+          "source_locator": "Consumer app features",
+          "supports": "11 خدمة و4,000+ متجر وتغطية قطر ووسائل الدفع.",
+          "published_on": "2026-06-27"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Snoonu Ads — Qatar Retail Media Platform",
+          "publisher": "Snoonu",
+          "source_type": "official_company_advertising_product_page",
+          "url": "https://ads.snoonu.com/en/",
+          "evidence_type": "direct",
+          "source_locator": "Retail media platform",
+          "supports": "منصة الإعلانات والقطاعات المملوكة.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "S-Cloud — Launch Your Own Super-App",
+          "publisher": "Snoonu",
+          "source_type": "official_company_b2b_software_product_page",
+          "url": "https://cloud.snoonu.com/en/",
+          "evidence_type": "direct",
+          "source_locator": "White-label platform modules",
+          "supports": "تطبيق المستهلك والتاجر والسائق والتوجيه والتحليلات وAPI.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "QRDI backs Snoonu robotics project",
+          "publisher": "Qatar News Agency",
+          "source_type": "official_state_news_primary_innovation_announcement",
+          "url": "https://qna.org.qa/en/news-bulletins-details?date=3%2F02%2F2026&id=0076-web-summit-qatar-2026-qrdi-backs-snoonu-robotics-project-to-boost-ai-and-innovation-capabilities",
+          "evidence_type": "direct",
+          "source_locator": "2026 robotics project",
+          "supports": "مشروع الروبوتات والذكاء الاصطناعي المدعوم رسميًا.",
+          "published_on": "2026-02-03"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Snoonu arrives in Kuwait",
+          "publisher": "Kuwait Times",
+          "source_type": "current_market_launch_report",
+          "url": "https://kuwaittimes.com/article/43491/business/snoonu-arrives-in-kuwait-a-new-era-of-everyday-technology/",
+          "evidence_type": "direct",
+          "source_locator": "Kuwait phased launch",
+          "supports": "التشغيل المرحلي في الكويت.",
+          "published_on": "2026-05-11"
+        }
+      ],
+      "limitations": "لا تثبت المصادر العامة أسماء قواعد البيانات أو لغات البرمجة أو مزود السحابة الداخلي."
+    },
+    "$.market_data.target_audience": {
+      "field_value": "الأفراد والأسر في قطر والكويت الباحثون عن خدمات يومية موحدة؛ المطاعم ومتاجر التجزئة والبقالة والصيدليات والعلامات التجارية؛ الشركات التي تحتاج توصيل طرود ومستندات وطلبات مجدولة أو فورية؛ المعلنون الذين يريدون استهدافًا مبنيًا على سلوك الشراء؛ والحكومات والمؤسسات والمشغلون الإقليميون الراغبون في إطلاق منصة توصيل متعددة القطاعات بعلامتهم عبر S-Cloud.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "consumer_merchant_enterprise_advertiser_and_platform_licensee_segments",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الشرائح مستخلصة مباشرة من التطبيقات وصفحات الإعلانات واللوجستيات والمنصة البيضاء والتوسع.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-09",
+        "SRC-11",
+        "SRC-12",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "Snoonu Food & Grocery Delivery",
+          "publisher": "Google Play / Snoonu Trading and Services",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?hl=en-US&id=com.snoonu.customerapp",
+          "evidence_type": "direct",
+          "source_locator": "Consumer and merchant categories",
+          "supports": "الأفراد والمتاجر والمطاعم والقطاعات اليومية.",
+          "published_on": "2026-06-27"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Snoonu Ads — Qatar Retail Media Platform",
+          "publisher": "Snoonu",
+          "source_type": "official_company_advertising_product_page",
+          "url": "https://ads.snoonu.com/en/",
+          "evidence_type": "direct",
+          "source_locator": "Advertiser proposition",
+          "supports": "العلامات والمعلنين والتجار.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "S-Cloud — Launch Your Own Super-App",
+          "publisher": "Snoonu",
+          "source_type": "official_company_b2b_software_product_page",
+          "url": "https://cloud.snoonu.com/en/",
+          "evidence_type": "direct",
+          "source_locator": "Enterprise and government plans",
+          "supports": "الحكومات والمؤسسات والمشغلون الإقليميون.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Snoonu arrives in Kuwait",
+          "publisher": "Kuwait Times",
+          "source_type": "current_market_launch_report",
+          "url": "https://kuwaittimes.com/article/43491/business/snoonu-arrives-in-kuwait-a-new-era-of-everyday-technology/",
+          "evidence_type": "direct",
+          "source_locator": "Kuwait services",
+          "supports": "المستخدمون المحليون والخدمات المنزلية والطرود والبقالة.",
+          "published_on": "2026-05-11"
+        }
+      ],
+      "limitations": "لا تنشر الشركة توزيع المستخدمين أو الإيرادات بين هذه الشرائح."
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا يوجد رقم رسمي منشور يساوي سوق سنونو القابل للخدمة في قطر والخليج بجميع قطاعاته. للسياق القطري المجاور، أعلن مصرف قطر المركزي أن التجارة الإلكترونية سجلت في مارس 2025 نحو 9.6 ملايين معاملة بقيمة 4.4 مليارات ريال قطري، ضمن 13.8 مليار ريال لمعاملات نقاط البيع والتجارة الإلكترونية معًا. هذا مقياس شهري لكل التجارة الإلكترونية التي تمر عبر البطاقات في قطر، وليس حجم سوق توصيل الطعام، ولا GMV سنونو، ولا إيراد الشركة. كما أصدرت وزارة التجارة والصناعة في أبريل 2026 دليلًا خاصًا بخدمات التوصيل والمنصات الرقمية.",
+      "verification_status": "verified_adjacent_market_indicator_not_company_tam",
+      "confidence": "high",
+      "claim_type": "qatar_ecommerce_payment_context_and_delivery_regulation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يوفر مصرف قطر المركزي رقمًا رسميًا للتجارة الإلكترونية الشهرية، ويحدد الدليل الحكومي سياق قطاع المنصات والتوصيل.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-16",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-16",
+          "title": "QCB: POS and e-Commerce transactions in March 2025",
+          "publisher": "Qatar News Agency citing Qatar Central Bank",
+          "source_type": "official_central_bank_market_indicator",
+          "url": "https://qna.org.qa/en/news/news-details?date=21%2F04%2F2025&id=qcb-pos-and-e-commerce-transactions-hit-qr138-billion-in-march-2025",
+          "evidence_type": "direct",
+          "source_locator": "March 2025 card payment statistics",
+          "supports": "4.4 مليارات ريال و9.6 ملايين معاملة تجارة إلكترونية.",
+          "published_on": "2025-04-21"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Qatar issues guidelines regulating delivery services and digital platforms",
+          "publisher": "Qatar News Agency citing Ministry of Commerce and Industry",
+          "source_type": "official_government_regulatory_update",
+          "url": "https://qna.org.qa/en/news/news-details?date=27%2F04%2F2026&id=ministry-of-commerce-issues-new-guidelines-regulating-delivery-services-and-digital-platforms",
+          "evidence_type": "direct",
+          "source_locator": "2026 delivery platform guideline",
+          "supports": "الإطار التنظيمي لخدمات التوصيل والمنصات الرقمية.",
+          "published_on": "2026-04-27"
+        }
+      ],
+      "limitations": "إحصاءات البطاقات تشمل التجارة الإلكترونية القطرية كلها، وتتجاوز نطاق سنونو والطعام والتوصيل؛ لا تمثل TAM الشركة."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "أفصحت جاهز عن أن GMV سنونو ارتفع 66% سنويًا في 2025 إلى 2.3 مليار ريال سعودي، وأن إجمالي الإيراد الإجمالي ارتفع 72% إلى 904.8 مليون ريال سعودي. وعند إعلان صفقة الاستحواذ في يوليو 2025، ذكرت الشركة أن GMV بلغ 1.37 مليار ريال قطري في 2024، وأن الإيراد نما من 146 مليون ريال قطري في 2022 إلى 511 مليونًا في 2024، مع صافي ربح 27 مليون ريال قطري وEBITDA قدره 54 مليونًا في 2024. هذه مقاييس مالية وتشغيلية سنوية، وليست عدد مستخدمين أو زيارات أو معدل نمو شهري.",
+      "verification_status": "verified_audited_parent_report_and_transaction_disclosure",
+      "confidence": "high",
+      "claim_type": "annual_gmv_revenue_ebitda_and_net_profit_growth",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يجمع السجل بين التقرير السنوي لجاهز لعام 2025 وبيانات الصفقة عن 2022–2024 مع فصل كل مقياس وعملته وفترته.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-04",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Jahez Group Annual Report 2025 — CFO Review",
+          "publisher": "Jahez Group",
+          "source_type": "primary_listed_company_annual_report",
+          "url": "https://jahezgroup.com/jahez-ar/2025/leadership/cfo/",
+          "evidence_type": "direct",
+          "source_locator": "FY2025 Snoonu performance",
+          "supports": "GMV 2.3 مليار ريال سعودي +66% وgross revenue 904.8 مليونًا +72%.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Jahez–Snoonu transaction release",
+          "publisher": "Jahez Group release reproduced by Zawya",
+          "source_type": "company_transaction_press_release",
+          "url": "https://www.sahmcapital.com/news/content/pressr-jahez-signs-agreement-to-acquire-majority-stake-in-leading-qatari-tech-company-snoonu-2025-07-09",
+          "evidence_type": "direct",
+          "source_locator": "Transaction financial highlights",
+          "supports": "GMV وإيراد وEBITDA وصافي ربح 2024 ومسار الإيراد منذ 2022.",
+          "published_on": "2025-07-09"
+        }
+      ],
+      "limitations": "أرقام 2025 معروضة بالريال السعودي في تقرير المجموعة، وأرقام 2022–2024 بالريال القطري في بيان الصفقة؛ لا تُدمج دون تحويل عملات."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "أغلقت سنونو جولة Series A بقيمة 5 ملايين دولار في أبريل 2021 بقيادة بنك قطر للتنمية، ثم أغلقت Series B بقيمة 12 مليون دولار في مايو 2023 بقيادة البنك نفسه وبمشاركة مستثمرين آخرين؛ وبذلك يبلغ مجموع الجولتين المعلنتين 17 مليون دولار، دون الجزم بأنه إجمالي التمويل التاريخي الكامل. في 2022 استحوذت سنونو على منصة Akeed العُمانية؛ وصفت تغطية Wamda المقابل بأنه غير معلن، بينما ذكرت صحف عُمانية محلية قيمة 10 ملايين دولار، لذلك لا يُعامل الرقم كإفصاح مالي أولي موحد. وفي صفقة جاهز لعام 2025، كان 20 مليون دولار من إجمالي المقابل اكتتابًا نقديًا في أسهم جديدة داخل سنونو، أما بقية المقابل فارتبط بشراء أسهم قائمة من المساهمين.",
+      "verification_status": "verified_financing_and_acquisition_cash_flow_separated",
+      "confidence": "high",
+      "claim_type": "series_a_series_b_akeed_acquisition_and_primary_injection",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت إعلانات الشركة الجولتين، وتوضح إفصاحات الصفقة الفرق بين شراء الأسهم وضخ رأس مال جديد.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-06",
+        "SRC-07",
+        "SRC-08",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Closing of Snoonu Series A",
+          "publisher": "Snoonu on LinkedIn",
+          "source_type": "official_company_primary_announcement",
+          "url": "https://ae.linkedin.com/posts/snoonu-qatar_closing-of-series-a-activity-6787820400727343105-XVpG",
+          "evidence_type": "direct",
+          "source_locator": "Series A announcement",
+          "supports": "5 ملايين دولار في 2021 بقيادة QDB.",
+          "published_on": "2021-04"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Snoonu closes $12 million Series B",
+          "publisher": "Snoonu on LinkedIn",
+          "source_type": "official_company_primary_announcement",
+          "url": "https://www.linkedin.com/posts/snoonu-qatar_snoonu-qatardevelopmentbank-unicorn-activity-7059532900454572033-fZYc",
+          "evidence_type": "direct",
+          "source_locator": "Series B announcement",
+          "supports": "12 مليون دولار في 2023 بقيادة QDB.",
+          "published_on": "2023-05"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Snoonu acquires Oman’s Akeed",
+          "publisher": "Wamda",
+          "source_type": "startup_news_based_on_press_release",
+          "url": "https://www.wamda.com/index.php/en/2022/05/snoonu-acquires-omans-akeed",
+          "evidence_type": "direct",
+          "source_locator": "Akeed acquisition press release coverage",
+          "supports": "إتمام الاستحواذ ومقابل غير معلن في تغطية Wamda.",
+          "published_on": "2022-05-30"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Jahez signs Share Purchase and Subscription Agreement to acquire 76.56% of Snoonu",
+          "publisher": "Saudi Exchange (Tadawul)",
+          "source_type": "primary_listed_company_exchange_disclosure",
+          "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=1&anId=88683&cs=6017&locale=en",
+          "evidence_type": "direct",
+          "source_locator": "Transaction amount",
+          "supports": "20 مليون دولار اكتتاب جديد مقابل شراء أسهم قائمة.",
+          "published_on": "2025-07-09"
+        }
+      ],
+      "limitations": "17 مليون دولار مجموع جولتين معلنتين فقط، وليس إجماليًا مدققًا لكل تمويل منذ التأسيس."
+    },
+    "$.financials.valuation": {
+      "field_value": "قيّمت صفقة جاهز المعلنة في يوليو 2025 سنونو عند 1.165 مليار ريال قطري، أي نحو 320 مليون دولار، وشملت ضخًا رأسماليًا بقيمة 20 مليون دولار. دفعت جاهز مقابلًا إجماليًا قدره 245 مليون دولار للحصول على 76.56%: 225 مليون دولار لشراء 75% من الأسهم القائمة عبر النقد وأسهم خزينة جاهز، و20 مليون دولار للاكتتاب في حصة إضافية قدرها 1.56%. اكتملت المرحلتان في أكتوبر 2025. هذا تقييم الصفقة في 2025، وليس تقييمًا سوقيًا متجددًا أو ضمانًا لقيمة الشركة في أغسطس 2026.",
+      "verification_status": "verified_transaction_valuation_not_current_market_value",
+      "confidence": "high",
+      "claim_type": "2025_majority_transaction_valuation_and_ownership",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "بيان الصفقة يحدد قيمة الشركة والمقابل، وتؤكد تداول اكتمال مرحلتي الملكية في أكتوبر 2025.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-05",
+        "SRC-01",
+        "SRC-02",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Jahez–Snoonu transaction release",
+          "publisher": "Jahez Group release reproduced by Zawya",
+          "source_type": "company_transaction_press_release",
+          "url": "https://www.sahmcapital.com/news/content/pressr-jahez-signs-agreement-to-acquire-majority-stake-in-leading-qatari-tech-company-snoonu-2025-07-09",
+          "evidence_type": "direct",
+          "source_locator": "Valuation and transaction release",
+          "supports": "1.165 مليار ريال قطري أو 320 مليون دولار.",
+          "published_on": "2025-07-09"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Jahez signs Share Purchase and Subscription Agreement to acquire 76.56% of Snoonu",
+          "publisher": "Saudi Exchange (Tadawul)",
+          "source_type": "primary_listed_company_exchange_disclosure",
+          "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=1&anId=88683&cs=6017&locale=en",
+          "evidence_type": "direct",
+          "source_locator": "Signed transaction amount and structure",
+          "supports": "مكونات المقابل ونسب الأسهم.",
+          "published_on": "2025-07-09"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Completion of the first phase of the Snoonu transaction",
+          "publisher": "Saudi Exchange (Tadawul)",
+          "source_type": "primary_listed_company_exchange_disclosure",
+          "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=1&anId=90548&cs=6017&locale=en",
+          "evidence_type": "direct",
+          "source_locator": "First-phase completion",
+          "supports": "اكتمال شراء 75%.",
+          "published_on": "2025-10-06"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Completion of the second phase of the Snoonu transaction",
+          "publisher": "Saudi Exchange (Tadawul)",
+          "source_type": "primary_listed_company_exchange_disclosure",
+          "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=1&anId=90906&cs=6017&locale=en",
+          "evidence_type": "direct",
+          "source_locator": "Second-phase completion",
+          "supports": "اكتمال 1.56% والملكية النهائية.",
+          "published_on": "2025-10-26"
+        }
+      ],
+      "limitations": "التقييم يعود إلى شروط صفقة 2025 ويشمل ضخًا رأسماليًا؛ لا يمثل سعرًا متداولًا أو تقييم أغسطس 2026."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "عمولات على الطلبات والمبيعات المنفذة عبر المطاعم والمتاجر والأسواق داخل التطبيق.",
+        "رسوم توصيل وخدمة يدفعها المستخدم بحسب الطلب والموقع والعرض والاشتراك أو البرنامج المستخدم.",
+        "مبيعات سلع وخدمات من القطاعات التي تديرها سنونو مباشرة، ومنها Snoomart ومنصات التجزئة المتخصصة.",
+        "إعلانات داخل التطبيق تشمل البنرات ونتائج البحث والقوائم المروجة والإشعارات وحملات المؤثرين ووسائط خارج التطبيق.",
+        "خدمات توصيل ولوجستيات B2B مجدولة وفورية وسريعة، مع تسعير مرن بحسب الحجم ومتطلبات مستوى الخدمة.",
+        "ترخيص S-Cloud بعلامة بيضاء: رسوم إعداد، واشتراك شهري، ونسبة منخفضة من المعاملات في خطة Growth، وتسعير مؤسسي مخصص.",
+        "برامج ولاء وعضوية ومحفظة وعروض شراكات قد تدعم التكرار والتحويل؛ لم تنشر الشركة فصلًا مستقلًا يثبت مقدار الإيراد المباشر منها."
+      ],
+      "verification_status": "verified_revenue_channels_rates_partly_undisclosed",
+      "confidence": "high",
+      "claim_type": "commission_delivery_owned_retail_ads_logistics_and_saas_channels",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت تقارير جاهز وصفحات سنونو القنوات الأساسية، مع تجنب اختراع take rate أو هوامش القطاعات.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-04",
+        "SRC-11",
+        "SRC-12",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Jahez Group Annual Report 2025 — CFO Review",
+          "publisher": "Jahez Group",
+          "source_type": "primary_listed_company_annual_report",
+          "url": "https://jahezgroup.com/jahez-ar/2025/leadership/cfo/",
+          "evidence_type": "direct",
+          "source_locator": "Revenue stream discussion",
+          "supports": "العمولات والسلع والخدمات والإعلانات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Snoonu Ads — Qatar Retail Media Platform",
+          "publisher": "Snoonu",
+          "source_type": "official_company_advertising_product_page",
+          "url": "https://ads.snoonu.com/en/",
+          "evidence_type": "direct",
+          "source_locator": "Ad formats and commercial offering",
+          "supports": "البحث والقوائم والبنرات والحملات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "S-Cloud — Launch Your Own Super-App",
+          "publisher": "Snoonu",
+          "source_type": "official_company_b2b_software_product_page",
+          "url": "https://cloud.snoonu.com/en/",
+          "evidence_type": "direct",
+          "source_locator": "S-Cloud pricing models",
+          "supports": "الإعداد والاشتراك والمعاملات والخطة المؤسسية.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Snoonu Food & Grocery Delivery",
+          "publisher": "Google Play / Snoonu Trading and Services",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?hl=en-US&id=com.snoonu.customerapp",
+          "evidence_type": "direct",
+          "source_locator": "Marketplace and payment experience",
+          "supports": "التوصيل والتجزئة والخدمات داخل التطبيق.",
+          "published_on": "2026-06-27"
+        }
+      ],
+      "limitations": "لم تنشر سنونو فصلًا قطاعيًا للإيراد أو العمولات أو هامش التوصيل والإعلانات وS-Cloud."
+    },
+    "$.tools": {
+      "field_value": [
+        "تطبيق مستهلك رسمي على iOS وAndroid يجمع 11 خدمة، مع أكثر من 500 ألف تنزيل أندرويد و4,000 متجر وخدمة وقت التحقق.",
+        "بوابة إدارة للتجار وعمليات إدراج المنتجات والطلبات والعروض والتحليلات.",
+        "تطبيق للسائق وإدارة أسطول لحظية وتوزيع ذكي للطلبات ومسارات محسنة وتتبع مباشر.",
+        "محفظة ووسائل دفع متعددة تشمل البطاقات وApple Pay وOoredoo Money والنقد بحسب السوق.",
+        "Snoonu Ads للإعلانات داخل التطبيق والبحث والقوائم المروجة والاستهداف السلوكي وقياس المبيعات المغلق.",
+        "خدمات Snoosend واللوجستيات B2B للتوصيل الفوري والمجدول والسريع وتتبع مستوى الخدمة.",
+        "S-Cloud كمنصة بيضاء تشمل تطبيق المستهلك وبوابة التاجر وتطبيق السائق وإدارة الأسطول والتحليلات وواجهات REST.",
+        "Royal Club ومحركات الولاء والمهام والمستويات والمكافآت داخل منظومة الاستخدام.",
+        "قطاعات مملوكة أو مُدارة مثل Snoomart وSnooPharma وSnooBeauty إلى جانب سوق التجار الخارجيين.",
+        "مشروع روبوتات وذكاء اصطناعي مدعوم من مجلس قطر للبحث والتطوير والابتكار في 2026.",
+        "بنية سحابية آمنة معلنة بوقت تشغيل 99.9% في S-Cloud؛ لم يُعلن مزود السحابة في الصفحة العامة.",
+        "واجهات API ودعم تقني مؤسسي وتشغيل متعدد الدول ضمن استراتيجية جاهز الدولية."
+      ],
+      "verification_status": "verified_product_capabilities_without_speculative_internal_stack",
+      "confidence": "high",
+      "claim_type": "consumer_merchant_driver_ads_cloud_api_loyalty_and_robotics_capabilities",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استُبدلت أسماء AWS وFlutter وGo وPostgreSQL غير الموثقة علنًا بقدرات منتجات وتشغيل مثبتة في مصادر رسمية.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-09",
+        "SRC-11",
+        "SRC-12",
+        "SRC-15",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "Snoonu Food & Grocery Delivery",
+          "publisher": "Google Play / Snoonu Trading and Services",
+          "source_type": "official_app_store_listing",
+          "url": "https://play.google.com/store/apps/details?hl=en-US&id=com.snoonu.customerapp",
+          "evidence_type": "direct",
+          "source_locator": "Consumer application",
+          "supports": "التطبيق والخدمات والمتاجر والدفع.",
+          "published_on": "2026-06-27"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Snoonu Ads — Qatar Retail Media Platform",
+          "publisher": "Snoonu",
+          "source_type": "official_company_advertising_product_page",
+          "url": "https://ads.snoonu.com/en/",
+          "evidence_type": "direct",
+          "source_locator": "Advertising technology",
+          "supports": "الإعلانات والاستهداف وقياس الطلبات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "S-Cloud — Launch Your Own Super-App",
+          "publisher": "Snoonu",
+          "source_type": "official_company_b2b_software_product_page",
+          "url": "https://cloud.snoonu.com/en/",
+          "evidence_type": "direct",
+          "source_locator": "Platform modules and uptime",
+          "supports": "بوابات التاجر والسائق والأسطول والتوجيه والتحليلات وAPI والاستضافة.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "QRDI backs Snoonu robotics project",
+          "publisher": "Qatar News Agency",
+          "source_type": "official_state_news_primary_innovation_announcement",
+          "url": "https://qna.org.qa/en/news-bulletins-details?date=3%2F02%2F2026&id=0076-web-summit-qatar-2026-qrdi-backs-snoonu-robotics-project-to-boost-ai-and-innovation-capabilities",
+          "evidence_type": "direct",
+          "source_locator": "Robotics initiative",
+          "supports": "الروبوتات والذكاء الاصطناعي.",
+          "published_on": "2026-02-03"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Jahez Group to launch Snoonu in Kuwait and Bahrain",
+          "publisher": "Saudi Exchange disclosure reproduced by Mubasher",
+          "source_type": "listed_company_exchange_announcement",
+          "url": "https://english.mubasher.info/news/4566480/Jahez-International-Company-for-Information-System-Technology-Jahez-announces-plans-to-launch-Snoonu-in-Kuwait-and-Bahrain/",
+          "evidence_type": "direct",
+          "source_locator": "International platform strategy",
+          "supports": "المكدس المتقدم والتشغيل متعدد الدول وفق إفصاح جاهز.",
+          "published_on": "2026-02-12"
+        }
+      ],
+      "limitations": "لم يُعثر على إفصاح رسمي حديث يؤكد AWS أو Flutter أو Go أو PostgreSQL كمكدس حالي؛ قد تستخدمها الشركة لكن لا تُعرض كحقيقة."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Jahez signs Share Purchase and Subscription Agreement to acquire 76.56% of Snoonu",
+      "publisher": "Saudi Exchange (Tadawul)",
+      "source_type": "primary_listed_company_exchange_disclosure",
+      "published_on": "2025-07-09",
+      "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=1&anId=88683&cs=6017&locale=en",
+      "supports": [
+        "هيكل صفقة الاستحواذ ونسبة 76.56%",
+        "214 مليون دولار نقدًا و1,538,460 سهم جاهز لشراء الأسهم القائمة",
+        "20 مليون دولار اكتتابًا في أسهم جديدة",
+        "احتفاظ المؤسس بنسبة 23.44%"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Completion of the first phase of the Snoonu transaction",
+      "publisher": "Saudi Exchange (Tadawul)",
+      "source_type": "primary_listed_company_exchange_disclosure",
+      "published_on": "2025-10-06",
+      "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=1&anId=90548&cs=6017&locale=en",
+      "supports": [
+        "إتمام شراء 75% من سنونو",
+        "تمويل المقابل بالنقد وأسهم خزينة جاهز",
+        "استمرار خطة الاكتتاب في 1.56%"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Completion of the second phase of the Snoonu transaction",
+      "publisher": "Saudi Exchange (Tadawul)",
+      "source_type": "primary_listed_company_exchange_disclosure",
+      "published_on": "2025-10-26",
+      "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/issuer-news/issuer-announcements/issuer-announcements-details/?anCat=1&anId=90906&cs=6017&locale=en",
+      "supports": [
+        "إتمام الاكتتاب في 1.56% بتاريخ 23 أكتوبر 2025",
+        "الملكية النهائية 76.56% لجاهز و23.44% للمؤسس"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Jahez Group Annual Report 2025 — CFO Review",
+      "publisher": "Jahez Group",
+      "source_type": "primary_listed_company_annual_report",
+      "published_on": "2026",
+      "url": "https://jahezgroup.com/jahez-ar/2025/leadership/cfo/",
+      "supports": [
+        "إجمالي مقابل الاستحواذ 245 مليون دولار",
+        "توحيد نتائج سنونو منذ الربع الرابع 2025",
+        "GMV سنونو 2.3 مليار ريال سعودي في 2025 ونموه 66%",
+        "gross revenue سنونو 904.8 مليون ريال سعودي في 2025 ونموه 72%",
+        "قنوات الإيراد العامة: العمولات والسلع والخدمات والإعلانات"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Jahez–Snoonu transaction release",
+      "publisher": "Jahez Group release reproduced by Zawya",
+      "source_type": "company_transaction_press_release",
+      "published_on": "2025-07-09",
+      "url": "https://www.sahmcapital.com/news/content/pressr-jahez-signs-agreement-to-acquire-majority-stake-in-leading-qatari-tech-company-snoonu-2025-07-09",
+      "supports": [
+        "تقييم سنونو عند 1.165 مليار ريال قطري أو 320 مليون دولار",
+        "GMV 2024 البالغ 1.37 مليار ريال قطري",
+        "الإيراد من 146 مليون ريال قطري في 2022 إلى 511 مليونًا في 2024",
+        "صافي ربح 27 مليون ريال قطري وEBITDA بقيمة 54 مليونًا في 2024"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Closing of Snoonu Series A",
+      "publisher": "Snoonu on LinkedIn",
+      "source_type": "official_company_primary_announcement",
+      "published_on": "2021-04",
+      "url": "https://ae.linkedin.com/posts/snoonu-qatar_closing-of-series-a-activity-6787820400727343105-XVpG",
+      "supports": [
+        "جولة Series A بقيمة 5 ملايين دولار",
+        "قيادة بنك قطر للتنمية للجولة",
+        "استخدام التمويل للتوسع وتطوير الخدمات"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Snoonu closes $12 million Series B",
+      "publisher": "Snoonu on LinkedIn",
+      "source_type": "official_company_primary_announcement",
+      "published_on": "2023-05",
+      "url": "https://www.linkedin.com/posts/snoonu-qatar_snoonu-qatardevelopmentbank-unicorn-activity-7059532900454572033-fZYc",
+      "supports": [
+        "جولة Series B بقيمة 12 مليون دولار",
+        "قيادة بنك قطر للتنمية ومشاركة مستثمرين آخرين"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Snoonu acquires Oman’s Akeed",
+      "publisher": "Wamda",
+      "source_type": "startup_news_based_on_press_release",
+      "published_on": "2022-05-30",
+      "url": "https://www.wamda.com/index.php/en/2022/05/snoonu-acquires-omans-akeed",
+      "supports": [
+        "استحواذ سنونو على Akeed في عُمان",
+        "وصف المقابل في التغطية بأنه غير معلن",
+        "امتلاك Akeed شبكة تتجاوز 1,000 مطعم ومتجر بقالة وقت الصفقة"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Snoonu Food & Grocery Delivery",
+      "publisher": "Google Play / Snoonu Trading and Services",
+      "source_type": "official_app_store_listing",
+      "published_on": "2026-06-27",
+      "url": "https://play.google.com/store/apps/details?hl=en-US&id=com.snoonu.customerapp",
+      "supports": [
+        "500K+ تنزيلات أندرويد",
+        "أكثر من 4,000 متجر وخدمة",
+        "11 خدمة وتغطية قطر ووسائل الدفع"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Snoonu: Food Delivery and Shopping",
+      "publisher": "Apple App Store / Oryxnet",
+      "source_type": "official_app_store_listing",
+      "published_on": "2026",
+      "url": "https://apps.apple.com/qa/app/snoonu-food-delivery-shopping/id1457458384",
+      "supports": [
+        "وجود تطبيق iOS الرسمي",
+        "نحو 46 ألف تقييم في المتجر القطري وقت التحقق",
+        "الطعام والبقالة والتجزئة وخدمات التوصيل"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Snoonu Ads — Qatar Retail Media Platform",
+      "publisher": "Snoonu",
+      "source_type": "official_company_advertising_product_page",
+      "published_on": "2026",
+      "url": "https://ads.snoonu.com/en/",
+      "supports": [
+        "1.8M+ مشترٍ عالي النية و4M+ ظهور يومي في التتبع وفق الشركة",
+        "إعلانات البحث والقوائم المروجة والبنرات والإشعارات",
+        "الاستهداف السلوكي وبيانات الشراء وقياس المبيعات",
+        "القطاعات المملوكة مثل Snoomart وSnooPharma وSnooBeauty"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "S-Cloud — Launch Your Own Super-App",
+      "publisher": "Snoonu",
+      "source_type": "official_company_b2b_software_product_page",
+      "published_on": "2026",
+      "url": "https://cloud.snoonu.com/en/",
+      "supports": [
+        "منصة تطبيق فائق بعلامة بيضاء",
+        "تطبيق المستهلك وبوابة التاجر وتطبيق السائق وإدارة الأسطول",
+        "التوجيه الذكي والتتبع والتحليلات وREST APIs",
+        "رسوم إعداد واشتراك شهري ونسبة معاملات وخطة مؤسسية",
+        "استضافة آمنة و99.9% uptime وفق الشركة"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Jahez Group to launch Snoonu in Kuwait and Bahrain",
+      "publisher": "Saudi Exchange disclosure reproduced by Mubasher",
+      "source_type": "listed_company_exchange_announcement",
+      "published_on": "2026-02-12",
+      "url": "https://english.mubasher.info/news/4566480/Jahez-International-Company-for-Information-System-Technology-Jahez-announces-plans-to-launch-Snoonu-in-Kuwait-and-Bahrain/",
+      "supports": [
+        "اعتماد سنونو منصة جاهز الأساسية للتوسع الدولي",
+        "خطط الإطلاق في الكويت والبحرين",
+        "الاستفادة من المكدس المتقدم والنموذج متعدد القطاعات"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Snoonu arrives in Kuwait",
+      "publisher": "Kuwait Times",
+      "source_type": "current_market_launch_report",
+      "published_on": "2026-05-11",
+      "url": "https://kuwaittimes.com/article/43491/business/snoonu-arrives-in-kuwait-a-new-era-of-everyday-technology/",
+      "supports": [
+        "بدء التشغيل الرسمي المرحلي في الكويت",
+        "الخدمات الأولى: البقالة وSnoosend والهدايا والخدمات المنزلية",
+        "ارتباط التوسع بملكية جاهز"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "QRDI backs Snoonu robotics project",
+      "publisher": "Qatar News Agency",
+      "source_type": "official_state_news_primary_innovation_announcement",
+      "published_on": "2026-02-03",
+      "url": "https://qna.org.qa/en/news-bulletins-details?date=3%2F02%2F2026&id=0076-web-summit-qatar-2026-qrdi-backs-snoonu-robotics-project-to-boost-ai-and-innovation-capabilities",
+      "supports": [
+        "دعم مجلس قطر للبحث والتطوير والابتكار لمشروع روبوتات سنونو",
+        "تركيز المشروع على الذكاء الاصطناعي والروبوتات المتقدمة"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "QCB: POS and e-Commerce transactions in March 2025",
+      "publisher": "Qatar News Agency citing Qatar Central Bank",
+      "source_type": "official_central_bank_market_indicator",
+      "published_on": "2025-04-21",
+      "url": "https://qna.org.qa/en/news/news-details?date=21%2F04%2F2025&id=qcb-pos-and-e-commerce-transactions-hit-qr138-billion-in-march-2025",
+      "supports": [
+        "4.4 مليارات ريال قطري قيمة التجارة الإلكترونية في مارس 2025",
+        "9.6 ملايين معاملة تجارة إلكترونية",
+        "13.8 مليار ريال لمعاملات نقاط البيع والتجارة الإلكترونية معًا"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Qatar issues guidelines regulating delivery services and digital platforms",
+      "publisher": "Qatar News Agency citing Ministry of Commerce and Industry",
+      "source_type": "official_government_regulatory_update",
+      "published_on": "2026-04-27",
+      "url": "https://qna.org.qa/en/news/news-details?date=27%2F04%2F2026&id=ministry-of-commerce-issues-new-guidelines-regulating-delivery-services-and-digital-platforms",
+      "supports": [
+        "إصدار دليل لتنظيم خدمات التوصيل والمنصات الرقمية",
+        "حقوق والتزامات المنصات ومقدمي الخدمات والمستهلكين",
+        "السياق التنظيمي للمنافسة وحماية المستهلك والمنشآت الصغيرة"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Snoonu company profile",
+      "publisher": "Snoonu on LinkedIn",
+      "source_type": "official_company_profile",
+      "published_on": "2026",
+      "url": "https://www.linkedin.com/company/snoonu-qatar",
+      "supports": [
+        "التأسيس في 2019",
+        "المقر في لوسيل وعنوان The Eighteen Tower",
+        "القطاعات الحالية من الطعام والتجزئة إلى الغسيل والتذاكر واللوجستيات"
+      ]
+    }
   ]
 }

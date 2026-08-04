@@ -2,70 +2,786 @@
   "id": "swvl",
   "slug": "swvl",
   "name": "سويفل (Swvl)",
-  "headline": "الشركة التي رقمنت فوضى النقل الجماعي ووصلت إلى بورصة ناسداك",
-  "category": "Mobility & Mass Transit / النقل الجماعي الذكي",
+  "headline": "من تطبيق لحجز الحافلات إلى منصة تنقّل مؤسسي: كيف أعادت سويفل بناء نموذجها بعد الإدراج",
+  "category": "التنقل المؤسسي الذكي وإدارة النقل الجماعي / Enterprise Mobility & Mass Transit Technology",
   "company": {
-    "location": "دبي، الإمارات العربية المتحدة (انطلقت من القاهرة، مصر)",
-    "business_model": "حجز مقاعد مسبق الدفع (B2C) وعقود نقل موظفين وطلاب للشركات والجامعات (B2B)"
+    "legal_name": "Swvl Holdings Corp",
+    "ticker": "NASDAQ: SWVL",
+    "location": "دبي، الإمارات العربية المتحدة؛ تأسست العمليات الأصلية في القاهرة عام 2017",
+    "business_model": "نموذج هجين تقوده المؤسسات: نقل مُدار كخدمة (MaaS/TaaS) للمؤسسات والحكومات، وبرمجيات إدارة نقل كخدمة (SaaS)، مع نشاط معاملات/أفراد أصغر من النشاط المؤسسي",
+    "customer_segments": [
+      "الشركات والمصانع ومشغلو الخدمات اللوجستية",
+      "المدارس والجامعات",
+      "الجهات الحكومية والبلديات",
+      "مقدمو الرعاية الصحية",
+      "المؤسسات المالية",
+      "الأفراد في الخدمات المتاحة للمستهلكين وبين المدن"
+    ],
+    "operating_footprint_as_of_2026_08_03": {
+      "confirmed_core_revenue_markets": [
+        "مصر",
+        "دول مجلس التعاون الخليجي، وبالأخص السعودية والإمارات والكويت"
+      ],
+      "company_reported_additional_presence": [
+        "قطر",
+        "المملكة المتحدة",
+        "الولايات المتحدة"
+      ],
+      "caution": "إفصاح نتائج الربع الأول 2026 قال إن الشركة تعمل عبر مصر والسعودية والإمارات والكويت وقطر والمملكة المتحدة والولايات المتحدة، بينما وصف الشركة في إعلان 7 يوليو 2026 أدرج مصر والسعودية والإمارات والكويت والمملكة المتحدة فقط؛ لذلك لا يُفترض أن جميع الأسواق تحمل الحجم التشغيلي نفسه."
+    }
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين من الدولارات",
-    "monthly_traffic": "تخدم ملايين الركاب يومياً عبر عشرات المدن في إفريقيا وآسيا وأوروبا"
+    "monthly_revenue": null,
+    "monthly_revenue_note": "غير مُفصح عنه. لا يجوز تحويل إيراد سنوي أو ربع سنوي إلى رقم شهري على أنه رقم مُعلن.",
+    "monthly_traffic": null,
+    "monthly_traffic_note": "لا تنشر Swvl في أحدث إفصاحاتها رقمًا موثوقًا للزيارات الشهرية للموقع أو المستخدمين النشطين شهريًا أو الركاب يوميًا.",
+    "latest_reported_revenue": {
+      "fy_2025_usd": 24167888,
+      "fy_2025_display": "24.2 مليون دولار",
+      "fy_2025_growth_yoy": "41%",
+      "q1_2026_usd": 8200000,
+      "q1_2026_display": "8.2 مليون دولار",
+      "q1_2026_growth_yoy": "68%",
+      "q1_2026_status": "نتائج مرحلية غير مدققة"
+    },
+    "revenue_mix": {
+      "fy_2025_b2b_usd": 20300000,
+      "fy_2025_b2b_share": "84%",
+      "fy_2025_b2c_usd": 3900000,
+      "fy_2025_b2c_share": "16%",
+      "q1_2026_recurring_share": "88%",
+      "q1_2026_transactional_share": "12%"
+    },
+    "usage_metrics": {
+      "latest_users_or_rides": null,
+      "latest_note": "لا يوجد في المصادر الأولية الأحدث رقم حديث قابل للمقارنة لعدد المستخدمين أو الرحلات.",
+      "historical_sec_snapshot": {
+        "as_of": "2021-12-31",
+        "users_who_booked": "أكثر من 2.1 مليون",
+        "rides_booked": "أكثر من 73.3 مليون",
+        "classification": "مؤشرات استخدام تاريخية وليست إيرادًا أو تقييمًا أو حجم معاملات ماليًا"
+      }
+    },
+    "valuation_and_transaction_volume_distinction": {
+      "valuation": "تقييم صفقة SPAC التاريخي المعلن عند إعلان الاندماج في 2021 كان نحو 1.5 مليار دولار؛ هذا تقييم للصفقة في ذلك الوقت وليس إيرادًا ولا قيمة سوقية حالية.",
+      "revenue": "إيراد محاسبي وفق IFRS: 24.2 مليون دولار في 2025 و8.2 مليون دولار في الربع الأول 2026.",
+      "transaction_volume": "عدد الرحلات/الحجوزات مقياس استخدام؛ لا يوجد GMV حديث مُفصح عنه في المصادر المستخدمة.",
+      "users": "عدد المستخدمين مقياس وصول؛ أحدث رقم SEC محدد مستخدم هنا يعود إلى نهاية 2021، لذلك لم يُقدَّم كرقم حالي."
+    }
   },
   "overview": {
     "problem": {
-      "text": "في الدول الناشئة (مثل مصر، كينيا، باكستان)، وسائل النقل العام مدعومة لكنها مزدحمة ومتهالكة ولا تلتزم بمواعيد. في المقابل، سيارات الأجرة وتطبيقات النقل (مثل أوبر) مريحة لكنها باهظة التكلفة للاستخدام اليومي للطبقة المتوسطة. لم تكن هذه مجرد مشكلة إزعاج، بل كانت أزمة اقتصادية خانقة تعوق التنمية. فالموظف الذي يضطر لتغيير ثلاثة خطوط مواصلات عشوائية للوصول لعمله سيصل منهكاً وغير منتج. والأسرة التي تضطر لاستخدام سيارات الأجرة يومياً لحماية أطفالها تستنزف ربع دخلها الشهري. هذا الفشل الهيكلي في النقل الجماعي جعل المدن النامية عبارة عن جزر معزولة، لا يستطيع سكان أطرافها الوصول لفرص العمل في مراكزها.",
-      "impact": "إهدار ملايين الساعات يومياً في الزحام، استنزاف دخل الموظفين والطلاب في المواصلات، وضغط هائل على البنية التحتية للمدن الكبرى. مما أدى لتلوث بيئي كارثي، انخفاض في إنتاجية الموظفين نتيجة الإرهاق اليومي، وتكبيد ميزانيات الأسر في الدول النامية أعباء اقتصادية لا تُحتمل."
+      "text": "تواجه المؤسسات التي تنقل أعدادًا كبيرة من الموظفين أو الطلاب أو المستفيدين مشكلة تشغيلية متكررة: تخطيط مسارات معقد، تفاوت الطلب بين المواقع والمناوبات، ضعف الرؤية اللحظية، وتعدد الموردين والسائقين والمركبات. وفي جانب الأفراد، تظل الفجوة بين النقل العام منخفض التكلفة والنقل الفردي الأعلى سعرًا فرصة لخدمة جماعية أكثر قابلية للحجز والتتبع.",
+      "impact": "بالنسبة للمؤسسات، ضعف إدارة النقل يترجم إلى تأخير، استخدام غير كفؤ للمركبات، تكلفة يصعب التنبؤ بها، وتجربة أضعف للموظفين أو الطلاب. لا يتضمن هذا الملف تقديرات رقمية عامة للتكلفة أو الإنتاجية لأن الملف الأصلي لم يقدم لها مصادر أولية قابلة للتحقق."
     },
     "solution": {
-      "text": "ابتكار فئة جديدة (Category Creation): النقل الجماعي الخاص المعتمد على التكنولوجيا. منصة تتيح حجز مقعد في حافلات صغيرة (مكيفة ومريحة) تعمل على مسارات ثابتة ومواعيد دقيقة، بتكلفة أعلى قليلاً من النقل العام وأقل بكثير من أوبر وكريم. عبر خوارزميات التوجيه الديناميكي (Dynamic Routing)، تقوم سويفل بضبط مسارات الحافلات بناءً على الطلب الحقيقي، وليس جداول حكومية ثابتة أكل عليها الدهر. التطبيق يحدد للراكب أقرب (محطة افتراضية) بناءً على موقعه، ويضمن له مقعداً في حافلة مكيفة تصله في وقت دقيق. هذا حوّل تجربة ركوب المواصلات العامة من رحلة شقاء يومية إلى تجربة مريحة ومحترمة تليق بالطبقة المتوسطة."
+      "text": "تقدم Swvl طبقة تشغيل وتقنية لإدارة النقل: تصميم وتحسين المسارات، توقع الطلب، التوزيع والجدولة، التتبع اللحظي، وتطبيقات للراكب والكابتن ولوحات تحكم للمؤسسة والشركاء. في نموذج النقل المُدار يمكن أن تشمل الخدمة الأسطول والسائقين والتقنية، بينما يتيح نموذج SaaS للعميل أو المشغل استخدام المنصة لإدارة عملياته. تطور الشركة الأهم حتى 2026 هو انتقال مركز الثقل من تطبيق استهلاكي لحجز المقاعد إلى عقود مؤسسية أطول وأكثر تكرارًا."
     }
   },
   "market_data": {
-    "target_audience": "الموظفون والطلاب (الطبقة المتوسطة) الباحثون عن تنقل يومي موثوق ورخيص، والشركات الكبرى (B2B). إضافة للشركات والمصانع التي تعاني يومياً من تأخر موظفيها وتبحث عن حلول نقل مؤسسية موثوقة وآمنة.",
-    "market_size": "سوق النقل الجماعي الهائل في الدول الناشئة (يقدر بـ 1 تريليون دولار عالمياً). والذي يمثل شريان الحياة الاقتصادي للدول الناشئة التي تفتقر للبنية التحتية الحديثة.",
-    "growth_rate": "أول شركة يونيكورن (مليارية) في الشرق الأوسط تُدرج في بورصة ناسداك (NASDAQ) عبر اندماج SPAC. محققة اختراقات في أسواق صعبة جداً (من باكستان إلى كينيا) بفضل مرونة نموذجها التشغيلي الخالي من الأصول."
+    "target_audience": "المؤسسات والجهات الحكومية والمدارس والجامعات ومقدمو الرعاية الصحية والخدمات اللوجستية والمصانع والبنوك التي تحتاج نقلًا متكررًا واسع النطاق، إضافة إلى شرائح الأفراد في الخدمات المتاحة للمستهلكين وبين المدن.",
+    "market_size": null,
+    "market_size_note": "أزيل ادعاء «سوق بقيمة تريليون دولار» من المتن التحليلي لأنه تقدير سوقي تاريخي ترويجي ولم يُعامل هنا كحقيقة حديثة مستقلة. لا يقدم أحدث 20-F رقم TAM واحدًا مناسبًا للمقارنة المباشرة مع إيرادات الشركة.",
+    "growth_rate": {
+      "company_revenue_fy_2025": "نمو 41% إلى 24.2 مليون دولار",
+      "company_revenue_q1_2026": "نمو 68% إلى 8.2 مليون دولار",
+      "gcc_revenue_fy_2025": "نمو 122% إلى 8.0 ملايين دولار",
+      "gcc_revenue_q1_2026": "نمو 111% إلى 3.6 ملايين دولار",
+      "egypt_revenue_fy_2025": "نمو 20% إلى 16.2 مليون دولار",
+      "egypt_revenue_q1_2026": "نمو 45% إلى 4.6 ملايين دولار",
+      "interpretation": "هذه معدلات نمو لإيرادات Swvl وليست معدل نمو سوق النقل العالمي."
+    },
+    "recent_contract_signals": [
+      {
+        "date": "2026-01-27",
+        "market": "الكويت",
+        "value": "2.2 مليون دولار",
+        "term": "متعدد السنوات",
+        "status": "قيمة عقد معلنة؛ لا تساوي إيرادًا محققًا فورًا"
+      },
+      {
+        "date": "2026-02-02",
+        "market": "الإمارات",
+        "value": "حتى 5.5 ملايين دولار",
+        "term": "خمس سنوات",
+        "status": "حد أقصى لقيمة العقد؛ الاعتراف بالإيراد يتم عبر فترة التنفيذ وفق المحاسبة"
+      },
+      {
+        "date": "2026-07-07",
+        "market": "السعودية",
+        "client": "بنك البلاد",
+        "value": null,
+        "term": null,
+        "status": "عقد معلن بلا قيمة مالية منشورة"
+      }
+    ]
   },
   "financials": {
-    "initial_investment": "بدأت باستثمار مبدئي من Careem (الشركة التي كان يعمل بها المؤسس مصطفى قنديل)، ثم استثمارات ضخمة من VCs عالميين. مما أتاح لهم إطلاق الخدمة بسرعة قياسية واختبار نموذج العمل قبل دخول المستثمرين العالميين.",
-    "valuation": "$1.5B (تقييم الإدراج في ناسداك 2022، قبل تحديات السوق لاحقاً) (إنجاز تاريخي كأول شركة تخرج من الشرق الأوسط لتُدرج عبر SPAC في البورصة الأمريكية).",
+    "initial_investment": "غير متاح كرقم واحد موثق في أحدث المصادر الأولية المستخدمة. لذلك حُذف الادعاء بأن Careem قدمت «الاستثمار المبدئي» بوصفه حقيقة نهائية في هذا الملف، مع الإبقاء فقط على أن المؤسس عمل سابقًا لدى Careem ضمن السرد التاريخي عند الحاجة.",
+    "valuation": "نحو 1.5 مليار دولار كتقييم تاريخي مُعلن لصفقة اندماج SPAC عند إعلانها في 2021. لا يمثل هذا الرقم القيمة السوقية في أغسطس 2026، ولا الإيراد، ولا حجم المعاملات، ولا النقد الذي دخل الشركة.",
+    "latest_financial_metrics": {
+      "fy_2025": {
+        "revenue_usd": 24167888,
+        "gross_profit_usd": 4359393,
+        "net_income_usd": 1312722,
+        "operating_loss_usd": 490874,
+        "cash_and_cash_equivalents_usd": 4410000,
+        "total_equity_usd": 2900000,
+        "b2b_revenue_usd_approx": 20300000,
+        "b2c_revenue_usd_approx": 3900000,
+        "recurring_revenue_share": "84%",
+        "dollar_pegged_revenue_share": "33%",
+        "net_dollar_retention": "128%",
+        "sales_backlog_usd": 38200000,
+        "sales_backlog_note": "يتكون من 18.4 مليون دولار قيمة تعاقدية متبقية و19.8 مليون دولار تجديدات متوقعة؛ الجزء المتوقع ليس إيرادًا مضمونًا."
+      },
+      "q1_2026": {
+        "revenue_usd": 8200000,
+        "gross_profit_usd": 1600000,
+        "gross_margin": "19.4%",
+        "operating_loss_usd": 170000,
+        "loss_before_tax_usd": 90000,
+        "recurring_revenue_usd": 7200000,
+        "recurring_revenue_share": "88%",
+        "transactional_revenue_usd": 1000000,
+        "transactional_revenue_share": "12%",
+        "dollar_pegged_revenue_usd": 3600000,
+        "dollar_pegged_revenue_share": "44%",
+        "net_dollar_retention": "114%",
+        "status": "غير مدقق"
+      }
+    },
     "revenue_streams": [
-      "مبيعات تذاكر النقل الجماعي المباشرة للأفراد (B2C) على خطوط ثابتة أو ديناميكية.",
-      "خدمة (Swvl Business): توفير أساطيل نقل متكاملة للشركات والمدارس بنظام الاشتراكات الثابتة (B2B SaaS/TaaS).",
-      "خدمة التنقل بين المحافظات والمدن (Intercity Travel).",
-      "إيرادات إعلانات على الحافلات وفي التطبيق.",
-      "رسوم ترخيص التقنية لمشغلي النقل الخارجيين (SaaS for Transit)."
+      "النقل المُدار للمؤسسات والجهات الحكومية والمدارس والجامعات ومقدمي الرعاية الصحية، ويشمل بحسب العقد التقنية والتشغيل والأسطول والسائقين.",
+      "برمجيات إدارة النقل كخدمة SaaS للمشغلين والعملاء الذين يديرون أساطيلهم أو شبكاتهم.",
+      "الخدمات الموجهة للأفراد والمعاملات، بما فيها بعض خدمات التنقل داخل المدن أو بين المدن حيث تكون متاحة.",
+      "لم يُثبت في المصادر الأولية المستخدمة أن «إعلانات الحافلات والتطبيق» مصدر إيراد جوهري، لذلك أزيل هذا الادعاء.",
+      "ترخيص التقنية ممكن ضمن SaaS، لكن لا يُفترض حجم إيراد مستقل له ما لم تفصح الشركة عنه."
     ]
+  },
+  "analysis": {
+    "core_thesis": "قصة Swvl في 2026 ليست قصة توسع استهلاكي عبر أكبر عدد من المدن؛ إنها قصة إعادة هندسة جودة الإيراد. انتقلت الشركة إلى نموذج تقوده عقود المؤسسات، مع نسبة أعلى من الإيراد المتكرر والمربوط بعملات مستقرة نسبيًا، وحاولت تحويل منصة التوجيه والتشغيل من أداة داخلية إلى منتج MaaS/SaaS.",
+    "what_changed": [
+      "في 2025 مثّل B2B نحو 84% من الإيراد، مقابل نشاط B2C أصغر بلغ نحو 3.9 ملايين دولار.",
+      "ارتفعت حصة الإيراد المتكرر إلى 84% في 2025 ثم 88% في الربع الأول 2026.",
+      "ارتفعت حصة الإيراد المرتبط بالدولار من 33% في 2025 إلى 44% في الربع الأول 2026 مع نمو الخليج.",
+      "قلصت الشركة الخسارة التشغيلية إلى 0.5 مليون دولار في 2025 وإلى 0.17 مليون دولار في الربع الأول 2026، لكنها لم تحقق بعد ربحًا تشغيليًا ربع سنويًا في ذلك الربع."
+    ],
+    "competitive_advantage": [
+      "دمج البرمجيات مع التنفيذ التشغيلي، بدل بيع تطبيق حجز فقط.",
+      "القدرة على تصميم مسارات متكيفة مع الطلب ومراقبة التشغيل لحظيًا.",
+      "إمكانية بيع المنصة بطريقتين: خدمة نقل مُدارة كاملة أو SaaS للعميل/المشغل.",
+      "علاقات مؤسسية طويلة قد توسع الإنفاق داخل العميل، كما يظهر في NDR فوق 100%."
+    ],
+    "risks_and_constraints": [
+      "التقييم التاريخي للـSPAC لا يعكس الأداء الحالي؛ الحكم يجب أن يستند إلى الإيراد والهوامش والسيولة والقيمة السوقية المتغيرة.",
+      "رصيد المبيعات المتراكم ليس كله إيرادًا متعاقدًا؛ أكثر من نصفه تقريبًا تجديدات متوقعة.",
+      "النقد البالغ 4.4 ملايين دولار في نهاية 2025 يظل محدودًا مقارنة بطموحات التوسع، ما يجعل إدارة رأس المال العامل والتحصيل عاملين حاسمين.",
+      "استعادت الشركة امتثال ناسداك في أبريل 2026 بعد إشعار عدم امتثال سابق؛ هذا يوضح أن مخاطر الإدراج والسيولة لم تكن نظرية.",
+      "نتائج الربع الأول 2026 غير مدققة، وصافي الخسارة/الربح قد يتأثر ببنود تقييم عادلة غير نقدية.",
+      "الوصف الجغرافي يختلف بين بعض الإفصاحات؛ وجود عقد أو إطلاق سوق لا يعني مساهمة إيرادية كبيرة أو دائمة."
+    ],
+    "outlook_as_of_2026_08_03": "الإشارات التشغيلية إيجابية: نمو سريع في الخليج، عقود متعددة السنوات، وارتفاع الإيراد المتكرر. لكن الاستنتاج المحافظ هو أن Swvl اقتربت من التعادل التشغيلي ولم تثبت بعد استدامة ربح تشغيلي وتدفق نقدي حر موجب عبر عدة فترات. أحدث تطور مادي وجد حتى 3 أغسطس 2026 هو إعلان 7 يوليو عن عقد بنك البلاد في السعودية."
   },
   "lessons": [
     {
-      "title": "النموذج خفيف الأصول (Asset-Light Model)",
-      "description": "لم تشترِ (سويفل) حافلة واحدة! استعانت الشركة بمشغلي حافلات سياحية متوقفة، ووفرت لهم المنصة التقنية والطلب المستمر (الركاب). هذا النموذج الخالي من الأصول (Asset-light) جعل قدرتها على التوسع لمدن ودول جديدة سريعة جداً وبدون تكلفة رأسمالية ضخمة (CapEx)."
+      "title": "غيّر جودة الإيراد قبل أن تطارد حجمه",
+      "description": "التحول الحاسم لم يكن إضافة مدن جديدة، بل رفع مساهمة B2B والإيراد المتكرر. وصول B2B إلى 84% من إيراد 2025 جعل الإيراد أكثر قابلية للتنبؤ من نموذج يعتمد أساسًا على رحلات الأفراد المتقلبة."
     },
     {
-      "title": "حل مشكلة هيكلية وليست رفاهية",
-      "description": "نجاح الشركة الأولي في مصر اعتمد على أنها لم تكن تبيع (خدمة رفاهية)، بل تبيع (حل لمشكلة هيكلية قاتلة) وهي الزحام وانعدام المواصلات الآدمية. عندما يحل المنتج مشكلة تمس عصب الحياة اليومية، يصبح التسويق الشفهي (Word of Mouth) هو محرك النمو الأساسي."
+      "title": "حوّل التقنية الداخلية إلى منتج مستقل",
+      "description": "منصة التوجيه والتتبع التي تدعم التشغيل يمكن بيعها كخدمة مُدارة أو كـSaaS. هذا يوسع السوق الممكن دون افتراض أن الشركة يجب أن تدير كل مركبة وكل رحلة بنفسها."
     },
     {
-      "title": "التحصين عبر الـ (B2B) في أوقات الأزمات",
-      "description": "عندما جاءت جائحة كورونا وأُغلقت المدن، انهار قطاع النقل للأفراد (B2C). ما أنقذ سويفل هو تعاقداتها المسبقة مع الشركات والمصانع (B2B) التي كان لزاماً عليها نقل عمالها بأمان. نموذج (Swvl Business) أثبت أن تنويع مصادر الدخل هو طوق النجاة للشركات الكبرى."
+      "title": "هيكل العملة جزء من استراتيجية المنتج",
+      "description": "نمو الخليج رفع الإيراد المرتبط بالدولار إلى 44% في الربع الأول 2026. بالنسبة لشركة تنفق وتُقاس بالدولار بينما تحقق جزءًا كبيرًا من إيرادها بعملات محلية، اختيار الأسواق والعقود أداة لإدارة مخاطر الصرف، لا قرار مبيعات فقط."
     },
     {
-      "title": "صنع سوق جديد كلياً (Category Creation)",
-      "description": "لم تحاول سويفل منافسة أوبر في النقل الفردي المريح والمكلف، ولم تحاول منافسة الحكومة في النقل العام الرخيص والسيء. بدلاً من ذلك، (خلقت فئة جديدة تماماً) في المنتصف؛ نقل جماعي مريح ومقبول التكلفة. عندما تخلق فئة جديدة، فإنك تصبح المحتكر الوحيد لها (Monopoly) وتتفادى حرب الأسعار الدموية مع العمالقة."
+      "title": "العقد المرساة أفضل من إطلاق سوق بلا طلب مثبت",
+      "description": "دخول الكويت ارتبط بعقد 2.2 مليون دولار، والتوسع في الإمارات بعقد يصل إلى 5.5 ملايين دولار. هذا يقلل مخاطر فتح سوق ثم البحث عن طلب، لكنه لا يحول قيمة العقد كاملة إلى إيراد فوري."
     },
     {
-      "title": "التحصين عبر تعاقدات الـ B2B طويلة الأجل",
-      "description": "النقل الموجه للأفراد (B2C) متذبذب جداً وتأثر بشدة بالإغلاقات. لكن ما أعطى سويفل استقراراً استثمارياً كبيراً هو تركيزها الموازي على عقود (B2B). الشركات الكبيرة، المدارس، والمصانع تدفع اشتراكات سنوية لسويفل لإدارة أساطيل نقل موظفيها. هذه الإيرادات المتكررة (SaaS Model) هي التي أغرت بورصة ناسداك وأثبتت أن الشركة ليست مجرد تطبيق لحجز باص."
+      "title": "افصل الربح التشغيلي عن مكاسب التقييم غير النقدية",
+      "description": "سجلت Swvl صافي دخل في 2025، لكن الخسارة التشغيلية بقيت قائمة وإن تقلصت بشدة. وفي الربع الأول 2026 أوضحت الشركة أن المقارنة قبل الضريبة تأثرت بتغيرات القيمة العادلة. قراءة الأداء تحتاج فصل النشاط الأساسي عن البنود المحاسبية غير التشغيلية."
+    },
+    {
+      "title": "رصيد المبيعات ليس كله مضمونًا",
+      "description": "بلغ backlog المعلن 38.2 مليون دولار، لكنه جمع قيمة تعاقدية متبقية مع تجديدات متوقعة. الدرس: قسّم خط المبيعات إلى متعاقد، مرجح، ومتوقع بدل عرض رقم واحد يوحي بدرجة يقين أعلى من الواقع."
+    },
+    {
+      "title": "الإدراج ليس خاتمة القصة",
+      "description": "الانتقال إلى ناسداك منح Swvl وصولًا إلى أسواق المال، لكنه لم يلغ تحديات الربحية والسيولة والامتثال. استعادة الامتثال في 2026 تؤكد أن جودة التشغيل والميزانية أهم من لقب «يونيكورن» أو تقييم الصفقة التاريخي."
     }
   ],
   "tools": [
-    "Machine Learning (للتوجيه الديناميكي Dynamic Routing)",
-    "Geospatial Data Processing (لتحديد أفضل مسارات الحافلات)",
-    "Microservices Architecture",
-    "Real-time GPS Tracking",
-    "PostgreSQL",
-    "Node.js",
-    "Redis"
+    "منصة Swvl Mobility Platform",
+    "Rider App — تطبيق الراكب",
+    "Captain App — تطبيق السائق/الكابتن",
+    "Admin Dashboard — لوحة الإدارة",
+    "Partner Portal — بوابة الشركاء",
+    "Dynamic Route Planning — تخطيط المسارات الديناميكي",
+    "Demand Forecasting — توقع الطلب",
+    "Real-time Dispatching and Tracking — التوزيع والتتبع اللحظي",
+    "Fleet and Scheduling Optimization — تحسين الأسطول والجدولة",
+    "تنبيه تقني: لم تُثبت المصادر الأولية المستخدمة اعتماد PostgreSQL أو Node.js أو Redis حاليًا، لذلك أزيلت أسماء التقنيات البرمجية غير الموثقة."
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "verified_through": "2026-08-03",
+    "research_scope": "مراجعة الملف الأصلي، أحدث 20-F متاح، إفصاحات 6-K حتى 7 يوليو 2026، صفحات المنتج الرسمية، ووثائق SEC التاريخية اللازمة للفصل بين المقاييس.",
+    "overall_status": "verified_with_material_corrections",
+    "primary_source_priority": "SEC ثم موقع الشركة الرسمي؛ لم تُستخدم تقديرات مواقع الزيارات أو قواعد بيانات التقييم كحقائق.",
+    "key_corrections": [
+      {
+        "field": "directory_snapshot.monthly_revenue",
+        "original_claim": "عشرات الملايين من الدولارات شهريًا",
+        "status": "removed_unsupported",
+        "correction": "لا يوجد إيراد شهري مُفصح عنه؛ إيراد 2025 الكامل كان 24.2 مليون دولار.",
+        "evidence_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_traffic",
+        "original_claim": "ملايين الركاب يوميًا عبر عشرات المدن",
+        "status": "removed_outdated_or_unsupported",
+        "correction": "لا يوجد رقم حديث موثق للركاب يوميًا أو MAU؛ أُدرج فقط رقم الاستخدام التاريخي حتى نهاية 2021 مع وسمه كتاريخي.",
+        "evidence_ids": [
+          "E7"
+        ]
+      },
+      {
+        "field": "market_data.market_size",
+        "original_claim": "سوق بقيمة 1 تريليون دولار",
+        "status": "demoted_to_unverified_market_estimate",
+        "correction": "حُوّل إلى null لأن الرقم ليس مقياسًا ماليًا للشركة ولا تقديرًا حديثًا مستقلاً مثبتًا في أحدث الإفصاحات.",
+        "evidence_ids": [
+          "E13"
+        ]
+      },
+      {
+        "field": "financials.valuation",
+        "original_claim": "1.5 مليار دولار كتقييم الإدراج",
+        "status": "corrected_context",
+        "correction": "هو تقييم تاريخي معلن لصفقة SPAC، وليس إيرادًا ولا قيمة سوقية حالية ولا نقدًا محصلًا.",
+        "evidence_ids": [
+          "E8"
+        ]
+      },
+      {
+        "field": "financials.revenue_streams",
+        "original_claim": "إعلانات على الحافلات والتطبيق كمصدر إيراد",
+        "status": "removed_unsupported",
+        "correction": "لا يوجد إثبات أولي حديث بأنه مصدر إيراد جوهري؛ أُبقيت MaaS/TaaS وSaaS ونشاط الأفراد/المعاملات.",
+        "evidence_ids": [
+          "E4",
+          "E10"
+        ]
+      },
+      {
+        "field": "lessons",
+        "original_claim": "الشركة لم تشترِ حافلة واحدة وأصبحت محتكرًا للفئة",
+        "status": "rewritten_overclaim",
+        "correction": "استُبدلت بصياغة تتحدث عن نموذج مُدار يعتمد على شبكة مشغلين/مركبات وتقنية، دون ادعاء مطلق بعدم امتلاك أي أصل أو احتكار السوق.",
+        "evidence_ids": [
+          "E10",
+          "E11"
+        ]
+      },
+      {
+        "field": "tools",
+        "original_claim": "PostgreSQL وNode.js وRedis",
+        "status": "removed_unverified_tech_stack",
+        "correction": "أُدرجت فقط مكونات وقدرات المنتج المعلنة رسميًا.",
+        "evidence_ids": [
+          "E11",
+          "E12"
+        ]
+      },
+      {
+        "field": "company.business_model",
+        "original_claim": "نموذج حجز مقاعد B2C وعقود B2B",
+        "status": "updated",
+        "correction": "النموذج في 2026 تقوده المؤسسات ويشمل MaaS/TaaS وSaaS، مع بقاء نشاط معاملات/B2C أصغر.",
+        "evidence_ids": [
+          "E3",
+          "E4",
+          "E10"
+        ]
+      }
+    ],
+    "known_source_discrepancies": [
+      {
+        "topic": "التدفق النقدي التشغيلي لعام 2025",
+        "detail": "إعلان النتائج يورد أرقامًا غير متطابقة في مواضع مختلفة بشأن النقد المستخدم في العمليات؛ لذلك لم يُستخدم هذا الرقم في الملخص الرقمي الأساسي، وأُعطيت الأولوية للبيانات المالية المدققة عند الحاجة."
+      },
+      {
+        "topic": "النطاق الجغرافي",
+        "detail": "إفصاح يونيو 2026 أدرج قطر والولايات المتحدة ضمن نطاق التشغيل، بينما وصف يوليو 2026 لم يذكرهما. عوملت هذه الأسواق كحضور مُعلن يحتاج فصلًا عن الأسواق الأساسية المولدة للإيراد."
+      }
+    ],
+    "limitations": [
+      "لا توجد بيانات حديثة موثقة للزيارات الشهرية أو المستخدمين النشطين شهريًا أو الرحلات اليومية.",
+      "لا يوجد GMV حديث مُفصح عنه.",
+      "القيمة السوقية متغيرة لحظيًا ولم تُثبت داخل الملف كقيمة دائمة.",
+      "نتائج الربع الأول 2026 غير مدققة.",
+      "قيم العقود «حتى» سقوف تعاقدية وليست إيرادًا محققًا مقدمًا."
+    ],
+    "programmatic_validation": {
+      "json_parse": true,
+      "required_original_top_level_keys_preserved": true,
+      "all_source_ids_unique": true,
+      "all_evidence_source_references_valid": true,
+      "all_key_correction_evidence_references_valid": true,
+      "no_nan_or_infinity": true,
+      "null_used_for_unavailable_monthly_metrics": true,
+      "utf8_arabic_content_present": true,
+      "duplicate_lesson_titles": false,
+      "errors": [],
+      "validation_status": "passed",
+      "validated_at": "2026-08-03T03:00:00+03:00",
+      "top_level_key_count": 17,
+      "source_count": 13,
+      "evidence_item_count": 15,
+      "lesson_count": 7,
+      "required_original_paths_preserved": true,
+      "json_schema_validation": true
+    }
+  },
+  "evidence_map_schema": {
+    "description": "خريطة تربط كل ادعاء جوهري بالمصدر الأولي وبالمسارات داخل JSON.",
+    "item_fields": {
+      "claim": "الادعاء المختصر",
+      "json_paths": "المسارات التي يعتمد محتواها على الدليل",
+      "classification": "financial | operating | contract | historical | product | listing | interpretation",
+      "status": "verified | verified_company_reported | historical_only | corrected | unavailable",
+      "source_ids": "معرفات من مصفوفة sources",
+      "notes": "حدود الدليل أو طريقة تفسيره"
+    }
+  },
+  "evidence_map": {
+    "E1": {
+      "claim": "إيرادات FY2025 بلغت 24.2 مليون دولار بنمو 41%.",
+      "json_paths": [
+        "directory_snapshot.latest_reported_revenue",
+        "financials.latest_financial_metrics.fy_2025",
+        "market_data.growth_rate"
+      ],
+      "classification": "financial",
+      "status": "verified",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "notes": "الرقم السنوي مدقق ضمن 20-F؛ التقريب 24.2 مليون في البيان."
+    },
+    "E2": {
+      "claim": "إيرادات Q1 2026 بلغت 8.2 مليون دولار بنمو 68%.",
+      "json_paths": [
+        "directory_snapshot.latest_reported_revenue",
+        "financials.latest_financial_metrics.q1_2026",
+        "market_data.growth_rate"
+      ],
+      "classification": "financial",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S3"
+      ],
+      "notes": "نتائج مرحلية غير مدققة."
+    },
+    "E3": {
+      "claim": "B2B بلغ 20.3 مليون دولار و84% من إيراد 2025؛ B2C نحو 3.9 ملايين دولار.",
+      "json_paths": [
+        "directory_snapshot.revenue_mix",
+        "financials.latest_financial_metrics.fy_2025",
+        "analysis.what_changed"
+      ],
+      "classification": "financial",
+      "status": "verified",
+      "source_ids": [
+        "S2"
+      ],
+      "notes": "الأرقام منشورة من الشركة عبر SEC."
+    },
+    "E4": {
+      "claim": "الإيراد المتكرر 84% في 2025 و88% في Q1 2026.",
+      "json_paths": [
+        "directory_snapshot.revenue_mix",
+        "financials.latest_financial_metrics",
+        "analysis.what_changed",
+        "lessons"
+      ],
+      "classification": "financial",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S2",
+        "S3"
+      ],
+      "notes": "تعريف الشركة للإيراد المتكرر."
+    },
+    "E5": {
+      "claim": "الخليج نما 122% في 2025 و111% في Q1 2026؛ مصر نمت 20% و45% على التوالي.",
+      "json_paths": [
+        "market_data.growth_rate",
+        "analysis.what_changed"
+      ],
+      "classification": "financial",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S2",
+        "S3"
+      ],
+      "notes": "معدلات نمو إيرادات الشركة، لا نمو السوق."
+    },
+    "E6": {
+      "claim": "رصيد المبيعات 38.2 مليون دولار ويشمل 18.4 مليون متعاقدة و19.8 مليون تجديدات متوقعة.",
+      "json_paths": [
+        "financials.latest_financial_metrics.fy_2025.sales_backlog_usd",
+        "financials.latest_financial_metrics.fy_2025.sales_backlog_note",
+        "lessons"
+      ],
+      "classification": "financial",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S2",
+        "S13"
+      ],
+      "notes": "التجديدات المتوقعة ليست إيرادًا مضمونًا."
+    },
+    "E7": {
+      "claim": "حتى 31 ديسمبر 2021 تجاوز المستخدمون الذين حجزوا 2.1 مليون والرحلات المحجوزة 73.3 مليون.",
+      "json_paths": [
+        "directory_snapshot.usage_metrics"
+      ],
+      "classification": "historical",
+      "status": "historical_only",
+      "source_ids": [
+        "S11"
+      ],
+      "notes": "لا يُعرض كرقم حالي."
+    },
+    "E8": {
+      "claim": "تقييم 1.5 مليار دولار هو تقييم صفقة SPAC تاريخي وليس قيمة حالية أو إيرادًا.",
+      "json_paths": [
+        "directory_snapshot.valuation_and_transaction_volume_distinction",
+        "financials.valuation",
+        "analysis.risks_and_constraints"
+      ],
+      "classification": "historical",
+      "status": "corrected",
+      "source_ids": [
+        "S12"
+      ],
+      "notes": "القيمة السوقية الحالية متغيرة ولم تُدرج."
+    },
+    "E9": {
+      "claim": "استعادت Swvl امتثالها لبعض متطلبات الإدراج في ناسداك في 20 أبريل 2026 بعد إشعار أكتوبر 2025.",
+      "json_paths": [
+        "analysis.risks_and_constraints",
+        "lessons"
+      ],
+      "classification": "listing",
+      "status": "verified",
+      "source_ids": [
+        "S4"
+      ],
+      "notes": "الإفصاح يخص معايير حقوق المساهمين وصافي الدخل."
+    },
+    "E10": {
+      "claim": "نموذج الشركة يشمل نقلًا مُدارًا للمؤسسات وSaaS، مع نشاط أفراد أصغر.",
+      "json_paths": [
+        "company.business_model",
+        "overview.solution",
+        "financials.revenue_streams",
+        "analysis.core_thesis"
+      ],
+      "classification": "operating",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S9",
+        "S10"
+      ],
+      "notes": "التوصيف يعكس التحول المؤسسي حتى 2026."
+    },
+    "E11": {
+      "claim": "المنصة تدعم تحسين المسارات وتوقع الطلب والتوزيع والتتبع اللحظي.",
+      "json_paths": [
+        "overview.solution",
+        "analysis.competitive_advantage",
+        "tools"
+      ],
+      "classification": "product",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S5",
+        "S6",
+        "S8",
+        "S9",
+        "S10"
+      ],
+      "notes": "قدرات موصوفة في الإفصاحات وصفحات المنتج الرسمية."
+    },
+    "E12": {
+      "claim": "مكونات المنتج تشمل تطبيق الراكب وتطبيق الكابتن ولوحة الإدارة وبوابة الشركاء.",
+      "json_paths": [
+        "tools"
+      ],
+      "classification": "product",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S8",
+        "S10"
+      ],
+      "notes": "لا يثبت أسماء قواعد البيانات أو أطر البرمجة الداخلية."
+    },
+    "E13": {
+      "claim": "لا يوجد رقم TAM حديث واحد مناسب للاستخدام كحقيقة مؤكدة في الملف.",
+      "json_paths": [
+        "market_data.market_size",
+        "market_data.market_size_note"
+      ],
+      "classification": "interpretation",
+      "status": "unavailable",
+      "source_ids": [
+        "S1"
+      ],
+      "notes": "أزيل رقم ترويجي تاريخي بدل تقديمه كحقيقة حديثة."
+    },
+    "E14": {
+      "claim": "عقود الكويت والإمارات وبنك البلاد تدعم استراتيجية التوسع عبر عقود مؤسسية.",
+      "json_paths": [
+        "market_data.recent_contract_signals",
+        "analysis.core_thesis",
+        "lessons"
+      ],
+      "classification": "contract",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S5",
+        "S6",
+        "S7"
+      ],
+      "notes": "قيمة العقد لا تساوي الإيراد المحقق فورًا."
+    },
+    "E15": {
+      "claim": "Q1 2026 بقي قريبًا من التعادل التشغيلي لكنه سجل خسارة تشغيلية 0.17 مليون دولار.",
+      "json_paths": [
+        "financials.latest_financial_metrics.q1_2026",
+        "analysis.what_changed",
+        "analysis.outlook_as_of_2026_08_03"
+      ],
+      "classification": "financial",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S3"
+      ],
+      "notes": "النتائج غير مدققة."
+    }
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Swvl Holdings Corp — Annual Report on Form 20-F for FY 2025",
+      "publisher": "U.S. Securities and Exchange Commission (SEC)",
+      "source_type": "SEC Form 20-F / audited annual filing",
+      "publication_date": "2026-04-20",
+      "url": "https://www.sec.gov/Archives/edgar/data/1875609/000110465926045255/swvl-20251231x20f.htm",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "البيانات المالية المدققة للسنة المنتهية في 31 ديسمبر 2025",
+        "وصف الأعمال والأسواق والمخاطر",
+        "توقيع أول عقد SaaS في المملكة المتحدة في 3 يونيو 2025",
+        "معلومات الإدراج والكيان القانوني"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "Swvl Announces FY 2025 Results; Revenue Up 41% to $24.2 million",
+      "publisher": "Swvl Holdings Corp via SEC",
+      "source_type": "SEC Form 6-K exhibit / company results release",
+      "publication_date": "2026-04-20",
+      "url": "https://www.sec.gov/Archives/edgar/data/1875609/000110465926045256/swvl-20260420xex99d1.htm",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "إيرادات 2025 البالغة 24.2 مليون دولار",
+        "صافي دخل 1.3 مليون دولار",
+        "إيرادات B2B البالغة 20.3 مليون دولار ونسبتها 84%",
+        "الإيراد المتكرر ونسبة الإيراد المرتبط بالدولار",
+        "التوزيع الجغرافي للإيرادات",
+        "رصيد المبيعات المتراكم 38.2 مليون دولار",
+        "النقد وحقوق المساهمين"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "Swvl Announces Q1 2026 Results; Revenue Up 68%",
+      "publisher": "Swvl Holdings Corp via SEC",
+      "source_type": "SEC Form 6-K exhibit / unaudited quarterly results",
+      "publication_date": "2026-06-16",
+      "url": "https://www.sec.gov/Archives/edgar/data/1875609/000110465926074309/swvl-20260616xex99d1.htm",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "إيرادات الربع الأول 2026 البالغة 8.2 مليون دولار",
+        "نمو إيرادات الخليج ومصر",
+        "الإيراد المتكرر 88%",
+        "الإيراد المرتبط بالدولار 44%",
+        "الخسارة التشغيلية 0.17 مليون دولار",
+        "صافي الاحتفاظ بالدولار 114%"
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "Swvl Regains Compliance with Nasdaq Continued Listing Requirements",
+      "publisher": "Swvl Holdings Corp via SEC",
+      "source_type": "SEC Form 6-K exhibit / listing compliance notice",
+      "publication_date": "2026-04-20",
+      "url": "https://www.sec.gov/Archives/edgar/data/1875609/000110465926045517/swvl-20260420xex99d1.htm",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "استعادة الامتثال لمتطلبات ناسداك المتعلقة بحقوق المساهمين وصافي الدخل",
+        "الإفصاح عن إشعار عدم الامتثال السابق في 31 أكتوبر 2025"
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "Swvl Expands into Saudi Arabia’s Banking Sector with Bank Albilad",
+      "publisher": "Swvl Holdings Corp via SEC",
+      "source_type": "SEC Form 6-K exhibit / contract announcement",
+      "publication_date": "2026-07-07",
+      "url": "https://www.sec.gov/Archives/edgar/data/1875609/000110465926080973/swvl-20260707xex99d1.htm",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "عقد بنك البلاد في السعودية",
+        "التخطيط الديناميكي للمسارات والتوزيع اللحظي والتحسين التشغيلي",
+        "التوسع في القطاعات المؤسسية ذات القيمة العالية"
+      ]
+    },
+    {
+      "id": "S6",
+      "title": "Swvl Secures a New Five-Year Contract of Up To $5.5 Million in the UAE",
+      "publisher": "Swvl Holdings Corp via SEC",
+      "source_type": "SEC Form 6-K exhibit / contract announcement",
+      "publication_date": "2026-02-02",
+      "url": "https://www.sec.gov/Archives/edgar/data/1875609/000110465926009204/swvl-20260202xex99d1.htm",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "عقد إماراتي لخمس سنوات بقيمة تصل إلى 5.5 مليون دولار",
+        "حلول النقل المؤسسي الشاملة",
+        "تحسين استخدام الأسطول والرؤية التشغيلية اللحظية"
+      ]
+    },
+    {
+      "id": "S7",
+      "title": "Swvl Launches Operations in Kuwait, Securing a $2.2 Million Contract",
+      "publisher": "Swvl Holdings Corp via SEC",
+      "source_type": "SEC Form 6-K / contract and market launch announcement",
+      "publication_date": "2026-01-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/1875609/000110465926006981/swvl-20260127x6k.htm",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "إطلاق العمليات في الكويت",
+        "عقد متعدد السنوات بقيمة 2.2 مليون دولار"
+      ]
+    },
+    {
+      "id": "S8",
+      "title": "Swvl Intelligent Mobility Platform",
+      "publisher": "Swvl",
+      "source_type": "Official product page",
+      "publication_date": null,
+      "url": "https://www.swvl.com/products/platform",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "مكونات المنصة: تطبيق الراكب وتطبيق الكابتن ولوحة الإدارة",
+        "تخطيط المسارات وتوقع الطلب وتوزيع المركبات",
+        "المراقبة اللحظية للعمليات"
+      ]
+    },
+    {
+      "id": "S9",
+      "title": "Mobility as a Service Platform for Enterprise",
+      "publisher": "Swvl",
+      "source_type": "Official service page",
+      "publication_date": null,
+      "url": "https://www.swvl.com/services/mobility-as-a-service",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "النقل المُدار للمؤسسات والمدارس والجامعات والبلديات",
+        "توفير الأسطول والسائقين والتقنية ضمن خدمة مُدارة",
+        "التتبع المباشر والتحسين والجدولة"
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "SaaS Transportation Management System",
+      "publisher": "Swvl",
+      "source_type": "Official service page",
+      "publication_date": null,
+      "url": "https://www.swvl.com/services/software-as-a-service",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "نموذج SaaS لإدارة النقل",
+        "المسارات الديناميكية وبوابة الشركاء وأتمتة المهام",
+        "إدارة الطلب والأسطول والجدولة"
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "Swvl Form F-1/A — Historical Operating Metrics and Product Description",
+      "publisher": "U.S. Securities and Exchange Commission (SEC)",
+      "source_type": "SEC registration statement",
+      "publication_date": "2022-05-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/1875609/000119312522162151/d265849df1a.htm",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "أكثر من 2.1 مليون مستخدم و73.3 مليون رحلة محجوزة حتى 31 ديسمبر 2021",
+        "الوصف التاريخي لخدمات Retail وTravel وTaaS",
+        "الحجز عبر نقاط ركوب محددة والتقنية الخاصة بالتوجيه وتوقع الطلب"
+      ]
+    },
+    {
+      "id": "S12",
+      "title": "Swvl / Queen’s Gambit Business Combination — Form F-4/A",
+      "publisher": "U.S. Securities and Exchange Commission (SEC)",
+      "source_type": "SEC merger registration statement",
+      "publication_date": "2021-12-22",
+      "url": "https://www.sec.gov/Archives/edgar/data/1875609/000119312521366366/d191504df4a.htm",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "هيكل اندماج SPAC",
+        "التقييم التاريخي المعلن للصفقة عند الإعلان",
+        "الفصل بين تقييم الصفقة والبيانات التشغيلية"
+      ]
+    },
+    {
+      "id": "S13",
+      "title": "Swvl FY 2025 Investor Presentation",
+      "publisher": "Swvl Holdings Corp via SEC",
+      "source_type": "SEC Form 6-K exhibit / investor presentation",
+      "publication_date": "2026-04-20",
+      "url": "https://www.sec.gov/Archives/edgar/data/1875609/000110465926045256/swvl-20260420xex99d2.htm",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "تفصيل رصيد المبيعات المتراكم",
+        "مقاييس جودة الإيراد",
+        "التوزيع الإقليمي ومؤشرات الاحتفاظ"
+      ]
+    }
   ]
 }

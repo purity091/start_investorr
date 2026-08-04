@@ -2,53 +2,2228 @@
   "id": "paymob",
   "slug": "paymob",
   "name": "باي موب (Paymob)",
-  "headline": "بوابة الدفع الشاملة التي تقود التحول الرقمي في الشرق الأوسط وأفريقيا",
-  "category": "Fintech / بوابات الدفع الإلكتروني",
+  "headline": "من بنية محافظ رقمية في القاهرة إلى شبكة لـ390 ألف تاجر: كيف جعلت Paymob الترخيص المحلي محركًا للتوسع في خمس أسواق",
+  "category": "Fintech Infrastructure & Merchant Payments / قبول المدفوعات متعددة القنوات والخدمات المالية للتجار",
   "company": {
-    "location": "القاهرة، مصر (مع توسع إقليمي واسع)",
-    "business_model": "رسوم وعمولات على كل عملية دفع معالجة (B2B)"
+    "location": "تأسست Paymob في القاهرة عام 2015 على يد إسلام شوقي وآلان الحاج ومصطفى منيسي. تعلن الشركة حاليًا مكاتب وعمليات في مصر والسعودية والإمارات وعُمان وباكستان، مع 1,100 موظف وفق ملفها المُدار ذاتيًا. في الإمارات يظهر كيان Paymob Technologies L.L.C في سجل مصرف الإمارات المركزي لشهر مايو 2026 ضمن الفئة الثالثة لخدمات الدفع بالتجزئة برقم 08.01.03.023.2024.02. أما ترخيص ميسّر المدفوعات في مصر وشهادة PTSP السعودية وترخيص PSP العُماني فتستند في النسخة العامة المتاحة إلى إفصاحات الشركة، ولم يتوفر سجل رسمي قابل للبحث يؤكد كل رقم وترخيص بالتفصيل نفسه.",
+    "business_model": "منصة B2B لقبول المدفوعات وخدمات التجار. تحصل Paymob أساسًا على رسوم مرتبطة بالمعاملات عبر الدفع الإلكتروني وPOS وTap to Pay، مع تسعير مخصص للتجار ذوي الحجم الكبير. وتوسع العرض إلى خدمات مثل التسوية المتقدمة والتسجيل الرقمي ومسك الدفاتر كخدمة، إضافة إلى أدوات الاشتراكات والدفعات المقسمة وإدارة المدفوعات. تختلف الرسوم وطرق الدفع والخدمات حسب البلد والعقد، ولم تنشر الشركة مزيج الإيرادات حسب المنتج أو السوق."
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين دولار",
-    "monthly_traffic": "تخدم ملايين العمليات لآلاف التجار"
+    "monthly_revenue": "غير مُفصح عنه علنًا. أعلنت الشركة في سبتمبر 2024 أن أعمالها الأساسية في مصر أصبحت مربحة وأن الإيراد نما ستة أضعاف منذ الربع الثاني من 2022، لكنها لم تنشر قيمة الإيراد الشهري أو السنوي أو الربح. لا يجوز تحويل عدد التجار أو المعاملات أو قيمة جولة التمويل أو رسوم سوق واحد إلى تقدير MRR للمجموعة.",
+    "monthly_traffic": "غير مُفصح عنه علنًا، ولا يوجد رقم رسمي موثوق لزيارات الموقع أو MAU أو DAU. أحدث رقم تبنٍ معلن هو أكثر من 390 ألف تاجر عبر الأسواق التي تعمل فيها الشركة، مع تشغيل «ملايين المعاملات» دون فترة زمنية أو قيمة إجمالية منشورة. هذه مقاييس شبكة ومعالجة وليست زيارات أو مستخدمين نهائيين أو حجم معاملات ماليًا مدققًا."
   },
   "overview": {
     "problem": {
-      "text": "التجار والشركات في الأسواق الناشئة يواجهون صعوبة كبيرة في قبول المدفوعات الرقمية بسبب تعدد طرق الدفع (محافظ إلكترونية، بطاقات محلية ودولية) وضعف البنية التحتية البنكية.",
-      "impact": "خسارة مبيعات ضخمة للتجار والاعتماد المفرط على الدفع النقدي (الكاش) المليء بالمخاطر."
+      "text": "يواجه التاجر في أسواق MENA-P مزيجًا مختلفًا من البطاقات والمحافظ المحلية وBNPL والتقسيط والدفع النقدي عبر الأكشاك والدفع الحضوري، إلى جانب متطلبات تنظيمية وتسوية وتحقق تختلف من بلد إلى آخر. ويصعب على الشركات الصغيرة دمج كل قناة ومقرض وشبكة محلية منفردة، بينما قد تكون تكلفة خدمة التاجر الصغير أعلى من عائد مزود الدفع إذا بقيت المعاملات قليلة.",
+      "impact": "يؤدي التجزؤ إلى تكاملات متعددة وتأخر الإطلاق وضعف معدلات قبول الدفع وتكرار التسويات والتقارير، وقد يبقى التاجر معتمدًا على النقد. لا توجد بيانات عامة تسمح بنسب «مبيعات ضخمة مفقودة» إلى Paymob أو بقياس أثر موحد على كل تاجر، لذلك أزيلت الصياغة المطلقة."
     },
     "solution": {
-      "text": "بنية تحتية موحدة للدفع (API) ونقاط بيع ذكية (POS) تُمكّن التجار من قبول أي وسيلة دفع تقريباً (أكثر من 40 طريقة) من خلال واجهة واحدة سهلة التكامل."
+      "text": "توفر Paymob طبقة قبول متعددة القنوات تشمل Hosted وEmbedded Checkout وروابط الدفع والإضافات وSDKs وPOS وTap to Pay. تبدأ العملية بإنشاء Payment Intention وتحديد الطرق المتاحة حسب السوق، ثم تتولى Paymob بيانات الدفع والمصادقة وترسل النتيجة عبر Webhooks موقعة بـHMAC. تشمل القدرات البطاقات والمحافظ والدفع السريع والتقسيط وBNPL والكشك والاشتراكات والبطاقات المحفوظة والتفويض والتحصيل وتقسيم الدفعات، مع اختلاف الإتاحة حسب حساب التاجر والبلد."
     }
   },
   "market_data": {
-    "target_audience": "الشركات الناشئة، المتاجر الإلكترونية، وتجار التجزئة التقليديين.",
-    "market_size": "سوق المدفوعات الرقمية في الشرق الأوسط وشمال أفريقيا ينمو بسرعة الصاروخ ليتجاوز مئات المليارات.",
-    "growth_rate": "جمعت تمويلات تتجاوز 50 مليون دولار وتوسعت بقوة في باكستان والإمارات والسعودية وعمان."
+    "target_audience": "الشركات الصغيرة والمتوسطة، والمتاجر الإلكترونية والاجتماعية، وتجار التجزئة والمطاعم والخدمات، والمنصات والتطبيقات التي تحتاج API أو SDK، إضافة إلى المؤسسات الكبيرة التي تتطلب تسعيرًا وربطًا مخصصين. تعمل المنتجات في مصر والسعودية والإمارات وعُمان وباكستان وفق إفصاح الشركة، لكن طرق الدفع والتسعير والتراخيص لا تتطابق بين الأسواق.",
+    "market_size": "لم تنشر Paymob دراسة أولية موثوقة لحجم TAM أو SAM أو SOM. كسياق لسوق واحد فقط، أعلن البنك المركزي السعودي أن المدفوعات الإلكترونية مثلت 85% من مدفوعات التجزئة في 2025 وأن عدد المعاملات الإلكترونية بلغ 14.6 مليارًا. هذه بيانات السوق السعودي كله، ولا تمثل حجم سوق Paymob أو حصتها أو قيمة المدفوعات التي عالجتها.",
+    "growth_rate": "لا يوجد معدل نمو حديث موحد للإيراد أو التجار أو المعاملات. ارتفع عدد التجار المعلن من 150 ألفًا في نهاية 2022 إلى أكثر من 350 ألفًا في سبتمبر 2024 ثم أكثر من 390 ألفًا في 2025–2026، بينما قالت الشركة إن إيراد مصر نما ستة أضعاف منذ Q2 2022. اختلاف التواريخ وصيغة «أكثر من» ونطاق المجموعة مقابل مصر يمنع اشتقاق CAGR واحد موثوق."
   },
   "financials": {
-    "initial_investment": "تمويل أولي بسيط من مسرعات أعمال محلية (مثل A15) ثم جولات ضخمة (Series B).",
-    "valuation": "غير معلن بدقة (يقدر بمئات الملايين)",
+    "initial_investment": "يوثق المستثمرون Series A بقيمة 18.5 مليون دولار في 2021، وSeries B أولية بقيمة 50 مليون دولار في مايو 2022، وتمديدًا بقيمة 22 مليون دولار في 2024 رفع إجمالي Series B إلى 72 مليونًا. وبذلك تجاوز التمويل المعلن تراكميًا 90 مليون دولار، مع استثمارات مبكرة من A15 وFMO ومستثمرين آخرين. هذا تمويل رأسمالي وليس إيرادًا أو حجم مدفوعات.",
+    "valuation": "غير مُفصح عنه علنًا في مصدر أولي موثوق. لم تنشر جولات 2021 أو 2022 أو 2024 نسب الملكية أو تقييم ما قبل الاستثمار أو بعده، لذلك أزيل وصف «مئات الملايين» بوصفه تقديرًا غير مدعوم.",
     "revenue_streams": [
-      "عمولة مقتطعة على كل معاملة مالية (Transaction Fee)",
-      "رسوم إيجار أجهزة الدفع (POS)",
-      "خدمات القيمة المضافة (التقسيط، التحليل المالي)"
+      "رسوم لكل معاملة دفع إلكتروني؛ مثال التسعير السعودي المنشور يفرض 1% + 1 ريال على mada و2.7% + 1 ريال على Visa وMastercard ضمن الخطة القياسية.",
+      "تسعير مؤسسي مخصص للتجار ذوي الحجم الكبير أو النماذج التشغيلية الخاصة، بدل سعر عام موحد.",
+      "رسوم تجارية مرتبطة بالقبول الحضوري وأجهزة POS وTap to Pay والخدمات الملحقة، من دون إفصاح عام موحد عن سعر الجهاز أو الإيجار في كل سوق.",
+      "خدمات قيمة مضافة مثل التسوية المتقدمة والتسجيل الرقمي ومسك الدفاتر SaaS، وفق وصف EBRD لعرض الشركة.",
+      "ميزات الاشتراكات والبطاقات المحفوظة وتقسيم الدفعات والتفويض والتحصيل والتسويات؛ توفر الميزة لا يثبت رسمًا مستقلًا أو مساهمة محددة في الإيراد."
     ]
   },
   "lessons": [
     {
-      "title": "التركيز على الشمول المالي",
-      "description": "نجاح Paymob جاء من دعمها لوسائل الدفع البديلة (كالمحافظ الإلكترونية لكبار مشغلي الاتصالات) وليس فقط بطاقات الائتمان."
+      "title": "الترخيص ليس قسم امتثال فقط؛ إنه خريطة المنتج",
+      "description": "انتقال Paymob من مصر إلى السعودية والإمارات وعُمان تطلب شهادات وتراخيص محلية قبل تقديم المجموعة الكاملة. في المدفوعات، الحصول على الإذن يحدد الخدمات الممكنة والشركاء والتسوية، ولذلك يصبح الترخيص جزءًا من استراتيجية المنتج والتوسع."
     },
     {
-      "title": "قوة البنية التحتية كخدمة (Fintech as a Service)",
-      "description": "لأنها بنية تحتية، أصبحت مكوناً أساسياً تعمل في صمت خلف كبرى الشركات الناشئة الأخرى (مثل سويفل وغيرها)."
+      "title": "عدد التجار لا يكشف اقتصاديات المنصة",
+      "description": "390 ألف تاجر يثبت اتساع التوزيع، لكنه لا يوضح عدد التجار النشطين أو متوسط حجم الدفع أو معدل الرسوم أو تكلفة المخاطر والدعم. القياس الصحي يفصل التاجر المسجل عن النشط، والمعاملة عن حجم المدفوعات، وحجم المدفوعات عن صافي الإيراد."
+    },
+    {
+      "title": "وسيلة الدفع المحلية قد تكون خندقًا أقوى من واجهة أجمل",
+      "description": "قيمة Paymob تأتي من جمع mada وOmanNet والمحافظ المصرية وSTC Pay وBNPL والتقسيط والبطاقات في تكامل واحد. كل سوق يضيف شبكة وقواعد وتسوية جديدة، فتزداد صعوبة تقليد التغطية المحلية بمجرد بناء Checkout عام."
+    },
+    {
+      "title": "اجعل القبول بوابة لمنتجات التاجر الأخرى",
+      "description": "القبول هو نقطة الدخول المتكررة إلى بيانات المبيعات والتسوية. من هذه العلاقة تستطيع الشركة تقديم تسوية أسرع ومسك دفاتر وأدوات إدارة وتمويل عند توافره. قوة التوسع تأتي من بيع خدمات إضافية إلى تاجر تمت خدمته أصلًا، لا من اكتساب عميل جديد لكل منتج."
+    },
+    {
+      "title": "ربحية السوق الأساسي تموّل التوسع المنضبط",
+      "description": "قبل تمديد Series B في 2024 أعلنت Paymob ربحية أعمالها الأساسية في مصر ونمو الإيراد ستة أضعاف منذ 2022. الدرس أن السوق الأساسي القادر على تمويل جزء من النمو يمنح الشركة مساحة أكبر لتجربة أسواق خليجية مكلفة تنظيميًا وتشغيليًا."
+    },
+    {
+      "title": "واجهة واحدة للتاجر تحتاج منتجًا مختلفًا خلفها في كل بلد",
+      "description": "قد يرى المطور Payment Intention وWebhook متشابهين، لكن وسائل الدفع والعملة وBNPL والتقسيط ومتطلبات التفعيل تختلف. نجاح المنصة الإقليمية يتطلب توحيد تجربة الدمج مع إبقاء التهيئة والامتثال والتسوية واعية بالسوق."
     }
   ],
   "tools": [
-    "AWS",
-    "Python",
-    "PostgreSQL",
-    "Redis"
+    "Payment Intention APIs وHosted Checkout وEmbedded Pixel",
+    "Payment Links وإضافات Shopify وWooCommerce وMagento وWHMCS وBagisto",
+    "SDKs لتطبيقات iOS وAndroid وFlutter وReact Native",
+    "Webhooks وHMAC للتحقق من مصدر callbacks واعتبار الخادم مصدر الحقيقة لحالة الدفع",
+    "بطاقات ومحافظ رقمية وApple Pay وGoogle Pay وmada وOmanNet وSTC Pay حسب السوق",
+    "BNPL والتقسيط والدفع عبر الأكشاك والاشتراكات والبطاقات المحفوظة وتقسيم الدفعات",
+    "POS وTap to Pay وقبول الدفع الحضوري",
+    "Python مع Django أو Flask للخدمات الخلفية وفق إعلانات التوظيف الحالية",
+    "PostgreSQL وMySQL وMongoDB كخبرات قواعد بيانات مطلوبة؛ لا يعني ذلك أن جميعها مستخدمة في كل خدمة",
+    "React وNext.js وJavaScript للواجهات وفق إعلانات التوظيف الحالية",
+    "بنى سحابية قد تشمل AWS أو Azure أو OCI، مع Docker وKubernetes وTerraform أو CloudFormation وفق وظائف DevOps؛ ليست كشفًا معماريًا كاملًا",
+    "تطبيقات أصلية لـiOS وAndroid",
+    "PCI-compliant checkout وكشف احتيال مدمج تعلن الشركة أنه يستخدم خوارزميات تعلم آلي وذكاء اصطناعي",
+    "Redis أزيل من المكدس الأساسي لأن المصادر الحديثة المستخدمة لم تثبته كمكون مركزي حالي"
+  ],
+  "verification": {
+    "status": "verified_with_material_financial_regulatory_metric_and_product_corrections",
+    "verified_on": "2026-08-03",
+    "source_policy": {
+      "priority_order": [
+        "سجلات البنوك المركزية والأطر التنظيمية",
+        "إعلانات المستثمرين التنمويين وإفصاحات التمويل الرسمية",
+        "وثائق Paymob التقنية والتسعير وصفحات المنتج",
+        "إفصاحات الشركة المُدارة ذاتيًا مع وسمها",
+        "المقابلات الصحفية المباشرة للمقاييس غير المنشورة رسميًا"
+      ],
+      "sec_applicability": "غير منطبق عمليًا: Paymob شركة خاصة مصرية ذات كيان استثماري دولي، وليست مُصدرًا عامًا معروفًا لدى SEC.",
+      "financial_rule": "تم الفصل بين الإيراد والربحية والنمو النسبي والتمويل والتقييم وعدد التجار وعدد المعاملات وحجم المدفوعات.",
+      "usage_rule": "تم الفصل بين زيارات الموقع والمستخدمين النهائيين والتجار المسجلين أو النشطين والمعاملات والوكلاء ومستخدمي البنية التحتية.",
+      "regulatory_rule": "تم التحقق المستقل من سجل الإمارات، بينما وُسمت تراخيص مصر والسعودية وعُمان كإفصاحات شركة عندما تعذر العثور على سجل عام مباشر.",
+      "technology_rule": "وثائق المنتج تثبت واجهات الدمج، بينما إعلانات الوظائف تستخدم فقط لإثبات تقنيات مطلوبة مع عدم معاملتها كمخطط معماري كامل."
+    },
+    "important_notes": [
+      "الإيراد الشهري والسنوي بقيمة نقدية غير معلنين.",
+      "إعلان نمو الإيراد ستة أضعاف منذ Q2 2022 لا يكشف قيمة الأساس أو الإيراد الحالي.",
+      "الربحية المعلنة تخص أعمال Paymob الأساسية في مصر وفق تصريح سبتمبر 2024، ولا تثبت ربحية المجموعة كلها.",
+      "390 ألف+ تاجر مقياس شبكة إقليمي ذاتي الإفصاح، وليس MAU أو عدد تجار دافعين مؤكدًا.",
+      "عبارة «ملايين المعاملات» لا تتضمن فترة أو قيمة أو تعريفًا منشورًا، ولذلك لم تُستخدم لحساب حجم المدفوعات.",
+      "الزيارات الشهرية للموقع والمستخدمون النشطون النهائيون غير معلنين.",
+      "Series A البالغة 18.5 مليون دولار وSeries B البالغة 72 مليونًا ترفعان التمويل المعلن إلى أكثر من 90 مليون دولار، وليس إلى تقييم مماثل.",
+      "التقييم غير معلن ولم يُستخدم تقدير «مئات الملايين».",
+      "سجل مصرف الإمارات المركزي لشهر مايو 2026 يدرج Paymob Technologies L.L.C ضمن الفئة الثالثة برقم 08.01.03.023.2024.02.",
+      "نطاق الترخيص الإماراتي المعلن من الشركة يشمل تحصيل التجار وتجميع المدفوعات والتحويلات المحلية.",
+      "ترخيص ميسّر المدفوعات المصري لعام 2018 وشهادة PTSP السعودية لعام 2023 وترخيص PSP العُماني لعام 2023 تستند إلى إفصاح الشركة في المصادر العامة المستخدمة.",
+      "وجود مكتب أو إطلاق سوق لا يعني توافر جميع المنتجات أو الطرق أو الأسعار في ذلك البلد.",
+      "التسعير السعودي مثال سوقي ولا يجوز استخدامه لتقدير take rate المجموعة.",
+      "خدمات التسوية المتقدمة والتسجيل الرقمي ومسك الدفاتر موثقة في وصف EBRD، لكن مساهمتها في الإيراد غير معلنة.",
+      "الدعم لأكثر من طريقة دفع يختلف حسب إعداد حساب التاجر والسوق ولا يُفعّل كله افتراضيًا.",
+      "رقم 12 مليون مستخدم و150 ألف وكيل و6 مليارات درهم و120 مليون معاملة الظاهر في صفحة قديمة لم يُستخدم، لغياب تاريخ وتعريفات واضحة وتعارضه مع المقاييس الأحدث.",
+      "بيانات 85% و14.6 مليار معاملة تخص السوق السعودي بالكامل ولا تخص Paymob.",
+      "بروتوكول UnionPay في 2025 يثبت شراكة قبول في مصر، ولا يكشف قيمة معاملات أو إيرادًا.",
+      "Python وReact وNext.js والسحابة والحاويات مدعومة بوظائف حديثة، لكن لا تمثل كشفًا كاملًا عن البنية الداخلية.",
+      "Redis أزيل من القيمة النهائية لعدم العثور على مصدر حديث مستخدم يثبته كمكون مركزي.",
+      "كل أرقام التجار والربحية والنمو صادرة عن الشركة أو مقابلات مؤسسيها ولم تُدعَم بقوائم مالية عامة مدققة."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_at": "2026-08-03",
+      "checks_passed": 135,
+      "checks_failed": 0,
+      "checks": [
+        {
+          "name": "base_key_id",
+          "passed": true,
+          "details": "الحقل الأساسي id موجود."
+        },
+        {
+          "name": "base_key_slug",
+          "passed": true,
+          "details": "الحقل الأساسي slug موجود."
+        },
+        {
+          "name": "base_key_name",
+          "passed": true,
+          "details": "الحقل الأساسي name موجود."
+        },
+        {
+          "name": "base_key_headline",
+          "passed": true,
+          "details": "الحقل الأساسي headline موجود."
+        },
+        {
+          "name": "base_key_category",
+          "passed": true,
+          "details": "الحقل الأساسي category موجود."
+        },
+        {
+          "name": "base_key_company",
+          "passed": true,
+          "details": "الحقل الأساسي company موجود."
+        },
+        {
+          "name": "base_key_directory_snapshot",
+          "passed": true,
+          "details": "الحقل الأساسي directory_snapshot موجود."
+        },
+        {
+          "name": "base_key_overview",
+          "passed": true,
+          "details": "الحقل الأساسي overview موجود."
+        },
+        {
+          "name": "base_key_market_data",
+          "passed": true,
+          "details": "الحقل الأساسي market_data موجود."
+        },
+        {
+          "name": "base_key_financials",
+          "passed": true,
+          "details": "الحقل الأساسي financials موجود."
+        },
+        {
+          "name": "base_key_lessons",
+          "passed": true,
+          "details": "الحقل الأساسي lessons موجود."
+        },
+        {
+          "name": "base_key_tools",
+          "passed": true,
+          "details": "الحقل الأساسي tools موجود."
+        },
+        {
+          "name": "professional_v2_key_verification",
+          "passed": true,
+          "details": "قسم Professional V2 verification موجود."
+        },
+        {
+          "name": "professional_v2_key_evidence_map_schema",
+          "passed": true,
+          "details": "قسم Professional V2 evidence_map_schema موجود."
+        },
+        {
+          "name": "professional_v2_key_evidence_map",
+          "passed": true,
+          "details": "قسم Professional V2 evidence_map موجود."
+        },
+        {
+          "name": "professional_v2_key_sources",
+          "passed": true,
+          "details": "قسم Professional V2 sources موجود."
+        },
+        {
+          "name": "json_root_object",
+          "passed": true,
+          "details": "الجذر كائن JSON."
+        },
+        {
+          "name": "original_id_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على id الأصلي."
+        },
+        {
+          "name": "original_slug_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على slug الأصلي."
+        },
+        {
+          "name": "original_name_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على الاسم."
+        },
+        {
+          "name": "base_structure_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على البنية الأساسية."
+        },
+        {
+          "name": "arabic_content",
+          "passed": true,
+          "details": "المحتوى النهائي عربي."
+        },
+        {
+          "name": "source_ids_unique",
+          "passed": true,
+          "details": "معرّفات المصادر فريدة."
+        },
+        {
+          "name": "minimum_sources",
+          "passed": true,
+          "details": "عدد المصادر 25."
+        },
+        {
+          "name": "primary_majority",
+          "passed": true,
+          "details": "أغلبية المصادر أولية."
+        },
+        {
+          "name": "only_one_secondary",
+          "passed": true,
+          "details": "الاعتماد على مصدر ثانوي واحد فقط للمقابلة المباشرة."
+        },
+        {
+          "name": "source_urls_valid",
+          "passed": true,
+          "details": "كل الروابط صالحة بنيويًا."
+        },
+        {
+          "name": "source_metadata_complete",
+          "passed": true,
+          "details": "بيانات المصادر مكتملة."
+        },
+        {
+          "name": "no_duplicate_urls",
+          "passed": true,
+          "details": "لا توجد روابط مكررة."
+        },
+        {
+          "name": "evidence_paths_complete",
+          "passed": true,
+          "details": "خريطة الأدلة تغطي 15 مسارًا."
+        },
+        {
+          "name": "value_match_$.company.location",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.company.location."
+        },
+        {
+          "name": "fields_complete_$.company.location",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.company.location."
+        },
+        {
+          "name": "source_count_$.company.location",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.company.location."
+        },
+        {
+          "name": "source_ids_exist_$.company.location",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.company.location."
+        },
+        {
+          "name": "reference_integrity_$.company.location",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.company.location."
+        },
+        {
+          "name": "value_match_$.company.business_model",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.company.business_model."
+        },
+        {
+          "name": "fields_complete_$.company.business_model",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.company.business_model."
+        },
+        {
+          "name": "source_count_$.company.business_model",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.company.business_model."
+        },
+        {
+          "name": "source_ids_exist_$.company.business_model",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.company.business_model."
+        },
+        {
+          "name": "reference_integrity_$.company.business_model",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.company.business_model."
+        },
+        {
+          "name": "value_match_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "fields_complete_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "source_count_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "source_ids_exist_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "reference_integrity_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "value_match_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "fields_complete_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "source_count_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "source_ids_exist_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "reference_integrity_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "value_match_$.overview.problem",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.overview.problem."
+        },
+        {
+          "name": "fields_complete_$.overview.problem",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.overview.problem."
+        },
+        {
+          "name": "source_count_$.overview.problem",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.overview.problem."
+        },
+        {
+          "name": "source_ids_exist_$.overview.problem",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.overview.problem."
+        },
+        {
+          "name": "reference_integrity_$.overview.problem",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.overview.problem."
+        },
+        {
+          "name": "value_match_$.overview.solution",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.overview.solution."
+        },
+        {
+          "name": "fields_complete_$.overview.solution",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.overview.solution."
+        },
+        {
+          "name": "source_count_$.overview.solution",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.overview.solution."
+        },
+        {
+          "name": "source_ids_exist_$.overview.solution",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.overview.solution."
+        },
+        {
+          "name": "reference_integrity_$.overview.solution",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.overview.solution."
+        },
+        {
+          "name": "value_match_$.market_data.target_audience",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "fields_complete_$.market_data.target_audience",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "source_count_$.market_data.target_audience",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "source_ids_exist_$.market_data.target_audience",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "reference_integrity_$.market_data.target_audience",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "value_match_$.market_data.market_size",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.market_data.market_size."
+        },
+        {
+          "name": "fields_complete_$.market_data.market_size",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.market_data.market_size."
+        },
+        {
+          "name": "source_count_$.market_data.market_size",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.market_data.market_size."
+        },
+        {
+          "name": "source_ids_exist_$.market_data.market_size",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.market_data.market_size."
+        },
+        {
+          "name": "reference_integrity_$.market_data.market_size",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.market_data.market_size."
+        },
+        {
+          "name": "value_match_$.market_data.growth_rate",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "fields_complete_$.market_data.growth_rate",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "source_count_$.market_data.growth_rate",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "source_ids_exist_$.market_data.growth_rate",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "reference_integrity_$.market_data.growth_rate",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "value_match_$.financials.initial_investment",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "fields_complete_$.financials.initial_investment",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "source_count_$.financials.initial_investment",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "source_ids_exist_$.financials.initial_investment",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "reference_integrity_$.financials.initial_investment",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "value_match_$.financials.valuation",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.financials.valuation."
+        },
+        {
+          "name": "fields_complete_$.financials.valuation",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.financials.valuation."
+        },
+        {
+          "name": "source_count_$.financials.valuation",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.financials.valuation."
+        },
+        {
+          "name": "source_ids_exist_$.financials.valuation",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.financials.valuation."
+        },
+        {
+          "name": "reference_integrity_$.financials.valuation",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.financials.valuation."
+        },
+        {
+          "name": "value_match_$.financials.revenue_streams",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "fields_complete_$.financials.revenue_streams",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "source_count_$.financials.revenue_streams",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "source_ids_exist_$.financials.revenue_streams",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "reference_integrity_$.financials.revenue_streams",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "value_match_$.tools",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.tools."
+        },
+        {
+          "name": "fields_complete_$.tools",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.tools."
+        },
+        {
+          "name": "source_count_$.tools",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.tools."
+        },
+        {
+          "name": "source_ids_exist_$.tools",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.tools."
+        },
+        {
+          "name": "reference_integrity_$.tools",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.tools."
+        },
+        {
+          "name": "value_match_$.headline",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.headline."
+        },
+        {
+          "name": "fields_complete_$.headline",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.headline."
+        },
+        {
+          "name": "source_count_$.headline",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.headline."
+        },
+        {
+          "name": "source_ids_exist_$.headline",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.headline."
+        },
+        {
+          "name": "reference_integrity_$.headline",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.headline."
+        },
+        {
+          "name": "value_match_$.lessons",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.lessons."
+        },
+        {
+          "name": "fields_complete_$.lessons",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.lessons."
+        },
+        {
+          "name": "source_count_$.lessons",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.lessons."
+        },
+        {
+          "name": "source_ids_exist_$.lessons",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.lessons."
+        },
+        {
+          "name": "reference_integrity_$.lessons",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.lessons."
+        },
+        {
+          "name": "no_nan_infinity",
+          "passed": true,
+          "details": "لا توجد أرقام JSON غير صالحة."
+        },
+        {
+          "name": "old_revenue_removed",
+          "passed": true,
+          "details": "أزيل تقدير الإيراد غير الموثق."
+        },
+        {
+          "name": "monthly_revenue_undisclosed",
+          "passed": true,
+          "details": "لم يُخترع MRR."
+        },
+        {
+          "name": "traffic_undisclosed",
+          "passed": true,
+          "details": "لم تُخترع الزيارات."
+        },
+        {
+          "name": "merchant_count_not_traffic",
+          "passed": true,
+          "details": "تم فصل التجار عن الزيارات."
+        },
+        {
+          "name": "transactions_not_tpv",
+          "passed": true,
+          "details": "لم تُعامل المعاملات كحجم مدفوعات."
+        },
+        {
+          "name": "profitability_scope_caveat",
+          "passed": true,
+          "details": "تم تقييد نطاق الربحية."
+        },
+        {
+          "name": "six_x_not_revenue_value",
+          "passed": true,
+          "details": "لم يتحول النمو النسبي إلى إيراد."
+        },
+        {
+          "name": "funding_over_90",
+          "passed": true,
+          "details": "إجمالي التمويل مصنف بدقة."
+        },
+        {
+          "name": "funding_not_revenue",
+          "passed": true,
+          "details": "تم فصل التمويل عن الإيراد."
+        },
+        {
+          "name": "valuation_undisclosed",
+          "passed": true,
+          "details": "لم يُخترع تقييم."
+        },
+        {
+          "name": "uae_register_number",
+          "passed": true,
+          "details": "رقم السجل الإماراتي موجود."
+        },
+        {
+          "name": "license_limits",
+          "passed": true,
+          "details": "تم وسم حدود تحقق التراخيص الأخرى."
+        },
+        {
+          "name": "pricing_example_caveat",
+          "passed": true,
+          "details": "لم يُعمم سعر السعودية."
+        },
+        {
+          "name": "tam_not_invented",
+          "passed": true,
+          "details": "لم يُخترع حجم سوق."
+        },
+        {
+          "name": "sama_context_not_share",
+          "passed": true,
+          "details": "بيانات السوق مفصولة عن حصة الشركة."
+        },
+        {
+          "name": "growth_rate_not_invented",
+          "passed": true,
+          "details": "لم يُخترع CAGR."
+        },
+        {
+          "name": "methods_market_specific",
+          "passed": true,
+          "details": "طرق الدفع موسومة حسب السوق."
+        },
+        {
+          "name": "revenue_streams_supported",
+          "passed": true,
+          "details": "مسارات الإيراد منظمة."
+        },
+        {
+          "name": "lessons_unique",
+          "passed": true,
+          "details": "الدروس الستة فريدة."
+        },
+        {
+          "name": "lessons_company_specific",
+          "passed": true,
+          "details": "الدروس خاصة بـPaymob."
+        },
+        {
+          "name": "current_tech_present",
+          "passed": true,
+          "details": "المكدس الحالي مدعوم."
+        },
+        {
+          "name": "cloud_caveated",
+          "passed": true,
+          "details": "السحابة مقيدة."
+        },
+        {
+          "name": "redis_removed",
+          "passed": true,
+          "details": "تم تصحيح Redis."
+        },
+        {
+          "name": "metric_taxonomy",
+          "passed": true,
+          "details": "فصل المقاييس شامل."
+        },
+        {
+          "name": "schema_version",
+          "passed": true,
+          "details": "إصدار Professional V2 صحيح."
+        },
+        {
+          "name": "verified_date_consistent",
+          "passed": true,
+          "details": "تاريخ التحقق متسق."
+        },
+        {
+          "name": "sec_note",
+          "passed": true,
+          "details": "تم توضيح SEC."
+        },
+        {
+          "name": "regulatory_rule",
+          "passed": true,
+          "details": "قاعدة تنظيمية موجودة."
+        },
+        {
+          "name": "technology_rule",
+          "passed": true,
+          "details": "قاعدة تقنية موجودة."
+        }
+      ],
+      "validator_notes": [
+        "تمت قراءة الملف الأصلي من المسار المرفق والتحقق من صحة JSON.",
+        "تم الحفاظ على الحقول الأساسية وإضافة verification وevidence_map_schema وevidence_map وsources.",
+        "تمت مطابقة كل field_value مع الحقل النهائي المقابل.",
+        "تم التحقق من تكامل معرّفات المصادر وروابطها وعددها.",
+        "تم الفصل بين الإيراد والربحية والتمويل والتقييم والتجار والمعاملات وحجم المدفوعات والزيارات.",
+        "تم تقييد التراخيص غير المتحقق منها بسجل مستقل ووسمها كإفصاحات شركة.",
+        "تم تقييد المكدس التقني وفق طبيعة وثائق المنتج وإعلانات التوظيف.",
+        "تم منع NaN وInfinity والتقديرات المالية أو السوقية غير المدعومة."
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول الجوهرية بقيمها النهائية والمصادر والقيود، مع فصل المقاييس المالية والتشغيلية والتنظيمية.",
+    "required_fields": [
+      "field_value",
+      "verification_status",
+      "confidence",
+      "claim_type",
+      "verified_on",
+      "evidence_summary",
+      "source_ids",
+      "source_references",
+      "limitations",
+      "source_count"
+    ],
+    "verification_status_values": [
+      "verified_headquarters_current_markets_and_uae_register_with_license_limits",
+      "verified_transaction_fee_and_value_added_model",
+      "verified_monthly_revenue_undisclosed_profitability_and_growth_only",
+      "verified_traffic_undisclosed_merchant_and_transaction_metrics_separated",
+      "verified_market_fragmentation_with_impact_caveat",
+      "verified_current_omnichannel_product_and_integration_flow",
+      "verified_merchant_segments_and_country_specific_availability",
+      "verified_no_company_tam_with_one_market_context",
+      "verified_directional_growth_no_single_comparable_rate",
+      "verified_named_rounds_and_total_over_90m",
+      "verified_as_not_publicly_disclosed",
+      "verified_published_pricing_and_service_pathways_not_revenue_mix",
+      "verified_product_stack_and_job_posting_technology_with_caveats",
+      "verified_editorial_synthesis",
+      "analytical_inference_grounded_in_company_regulator_and_investor_sources"
+    ],
+    "confidence_scale": {
+      "مرتفعة": "مدعوم بسجل تنظيمي أو مصدر أولي واضح، أو بعدم وجود إفصاح رغم مراجعة المصادر الأولية ذات الصلة.",
+      "متوسطة إلى مرتفعة": "مدعوم بعدة مصادر مع قيد في التعريف أو اعتماد جزئي على إفصاح الشركة.",
+      "متوسطة": "استنتاج تحريري مبني على أدلة معلنة مع قيود صريحة.",
+      "منخفضة": "دليل غير كاف؛ لا تُستخدم هذه الدرجة لإثبات رقم مالي."
+    },
+    "metric_separation": [
+      "الإيراد الشهري",
+      "الإيراد السنوي",
+      "نمو الإيراد",
+      "الربحية",
+      "التمويل",
+      "التقييم",
+      "عدد التجار المسجلين",
+      "التجار النشطون",
+      "التجار الدافعون",
+      "عدد المعاملات",
+      "حجم المدفوعات TPV",
+      "قيمة المعاملات GMV",
+      "زيارات الموقع",
+      "المستخدمون النشطون",
+      "مستخدمو البنية التحتية",
+      "الوكلاء",
+      "رسوم المعاملة",
+      "Take Rate",
+      "رسوم الأجهزة",
+      "إيرادات الخدمات ذات القيمة المضافة"
+    ]
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "تأسست Paymob في القاهرة عام 2015 على يد إسلام شوقي وآلان الحاج ومصطفى منيسي. تعلن الشركة حاليًا مكاتب وعمليات في مصر والسعودية والإمارات وعُمان وباكستان، مع 1,100 موظف وفق ملفها المُدار ذاتيًا. في الإمارات يظهر كيان Paymob Technologies L.L.C في سجل مصرف الإمارات المركزي لشهر مايو 2026 ضمن الفئة الثالثة لخدمات الدفع بالتجزئة برقم 08.01.03.023.2024.02. أما ترخيص ميسّر المدفوعات في مصر وشهادة PTSP السعودية وترخيص PSP العُماني فتستند في النسخة العامة المتاحة إلى إفصاحات الشركة، ولم يتوفر سجل رسمي قابل للبحث يؤكد كل رقم وترخيص بالتفصيل نفسه.",
+      "verification_status": "verified_headquarters_current_markets_and_uae_register_with_license_limits",
+      "confidence": "مرتفعة",
+      "claim_type": "هوية وموقع وتنظيم",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المقر والأسواق والموظفون من ملف الشركة، والترخيص الإماراتي من سجل البنك المركزي؛ بقية التراخيص موسومة كإفصاح شركة.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Paymob — Company Profile",
+          "publisher": "Paymob / LinkedIn",
+          "url": "https://www.linkedin.com/company/paymobcompany",
+          "source_type": "ملف شركة مُدار ذاتيًا",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "ملف شركة",
+          "source_locator": "About and locations",
+          "supports": "التأسيس والأسواق والموظفون وتسلسل التراخيص المعلن"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Register of Retail Payment Services — May 2026",
+          "publisher": "Central Bank of the UAE",
+          "url": "https://www.centralbank.ae/media/5smlotxp/cb-register-may-2026.pdf",
+          "source_type": "سجل تنظيمي رسمي",
+          "published_at": "2026-05",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "سجل تنظيمي",
+          "source_locator": "Retail payment providers page 23",
+          "supports": "كيان الإمارات والفئة والرقم"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Retail Payment Services and Card Schemes Regulation",
+          "publisher": "Central Bank of the UAE Rulebook",
+          "url": "https://rulebook.centralbank.ae/en/entiresection/1589",
+          "source_type": "إطار تنظيمي رسمي",
+          "published_at": "2021-06-06",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إطار تنظيمي",
+          "source_locator": "License categories",
+          "supports": "تفسير نطاق فئة خدمات الدفع"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Paymob secures UAE Central Bank retail payment services licence",
+          "publisher": "Paymob via Wamda Press Release",
+          "url": "https://www.wamda.com/2025/01/paymob-secures-uae-central-bank-retail-payment-services-licence",
+          "source_type": "بيان شركة",
+          "published_at": "2025-01-22",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان شركة",
+          "source_locator": "UAE licence scope",
+          "supports": "الخدمات التي تقول الشركة إن الترخيص يجيزها"
+        }
+      ],
+      "limitations": "لم يتوفر سجل عام قابل للبحث يؤكد أرقام ترخيص مصر والسعودية وعُمان بالتفصيل نفسه، ولم تُراجع سجلات باكستان.",
+      "source_count": 4
+    },
+    "$.company.business_model": {
+      "field_value": "منصة B2B لقبول المدفوعات وخدمات التجار. تحصل Paymob أساسًا على رسوم مرتبطة بالمعاملات عبر الدفع الإلكتروني وPOS وTap to Pay، مع تسعير مخصص للتجار ذوي الحجم الكبير. وتوسع العرض إلى خدمات مثل التسوية المتقدمة والتسجيل الرقمي ومسك الدفاتر كخدمة، إضافة إلى أدوات الاشتراكات والدفعات المقسمة وإدارة المدفوعات. تختلف الرسوم وطرق الدفع والخدمات حسب البلد والعقد، ولم تنشر الشركة مزيج الإيرادات حسب المنتج أو السوق.",
+      "verification_status": "verified_transaction_fee_and_value_added_model",
+      "confidence": "مرتفعة",
+      "claim_type": "نموذج عمل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التسعير والوثائق وإفصاح EBRD تدعم رسوم المعاملات والتسعير المؤسسي وخدمات القيمة المضافة.",
+      "source_ids": [
+        "SRC-17",
+        "SRC-06",
+        "SRC-13",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-17",
+          "title": "Paymob Saudi Arabia Pricing",
+          "publisher": "Paymob",
+          "url": "https://www.paymob.sa/en/pricing.html",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير رسمي",
+          "source_locator": "Saudi standard and enterprise plans",
+          "supports": "رسوم المعاملة والتسعير المخصص"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "EBRD promotes digital transition in Egypt",
+          "publisher": "European Bank for Reconstruction and Development",
+          "url": "https://www.ebrd.com/home/news-and-events/news/2024/ebrd-promotes-digital-transition-in-egypt.html",
+          "source_type": "إعلان استثمار رسمي",
+          "published_at": "2024-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وصف مستثمر",
+          "source_locator": "Value-added services",
+          "supports": "التسوية المتقدمة والتسجيل الرقمي ومسك الدفاتر"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Paymob Developer Documentation — Overview",
+          "publisher": "Paymob",
+          "url": "https://developers.paymob.com/paymob-docs/developers/quicklink-apis/overview",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق منتج",
+          "source_locator": "Acceptance channels",
+          "supports": "الدفع الإلكتروني والحضوري"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Paymob Documentation — Payments and Features",
+          "publisher": "Paymob",
+          "url": "https://developers.paymob.com/paymob-docs/payments-and-features",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق خصائص",
+          "source_locator": "Subscriptions and split features",
+          "supports": "الخدمات الإضافية"
+        }
+      ],
+      "limitations": "لا توجد بيانات عن مزيج الإيراد أو صافي take rate أو أسعار موحدة لكل سوق.",
+      "source_count": 4
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير مُفصح عنه علنًا. أعلنت الشركة في سبتمبر 2024 أن أعمالها الأساسية في مصر أصبحت مربحة وأن الإيراد نما ستة أضعاف منذ الربع الثاني من 2022، لكنها لم تنشر قيمة الإيراد الشهري أو السنوي أو الربح. لا يجوز تحويل عدد التجار أو المعاملات أو قيمة جولة التمويل أو رسوم سوق واحد إلى تقدير MRR للمجموعة.",
+      "verification_status": "verified_monthly_revenue_undisclosed_profitability_and_growth_only",
+      "confidence": "مرتفعة",
+      "claim_type": "إيراد وربحية",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصدر المباشر ينقل ربحية مصر ونمو الإيراد 6x، لكن لا يقدم قيمة MRR أو ARR.",
+      "source_ids": [
+        "SRC-12",
+        "SRC-08",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-12",
+          "title": "Paymob raises another $22M and is profitable in Egypt",
+          "publisher": "TechCrunch",
+          "url": "https://techcrunch.com/2024/09/11/paymob-lands-another-22-million-and-is-profitable-in-egypt/",
+          "source_type": "مقابلة صحفية مباشرة مع المؤسس",
+          "published_at": "2024-09-11",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "مقابلة CEO",
+          "source_locator": "Profitability and 6x revenue growth",
+          "supports": "الربحية والنمو النسبي"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Paymob Series B extension",
+          "publisher": "Paymob / LinkedIn",
+          "url": "https://www.linkedin.com/posts/paymobcompany_smes-egypt-gcc-activity-7239556293932335104-BkUl",
+          "source_type": "إفصاح تمويل مباشر من الشركة",
+          "published_at": "2024-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح تمويل",
+          "source_locator": "Series B extension",
+          "supports": "التمويل لا الإيراد"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Paymob Saudi Arabia Pricing",
+          "publisher": "Paymob",
+          "url": "https://www.paymob.sa/en/pricing.html",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير رسمي",
+          "source_locator": "Country pricing example",
+          "supports": "عدم صلاحية سعر سوق واحد لتقدير إيراد المجموعة"
+        }
+      ],
+      "limitations": "الربحية تخص السوق الأساسي في مصر وفق تصريح 2024، ولا تثبت ربحية المجموعة أو الأسواق الجديدة.",
+      "source_count": 3
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير مُفصح عنه علنًا، ولا يوجد رقم رسمي موثوق لزيارات الموقع أو MAU أو DAU. أحدث رقم تبنٍ معلن هو أكثر من 390 ألف تاجر عبر الأسواق التي تعمل فيها الشركة، مع تشغيل «ملايين المعاملات» دون فترة زمنية أو قيمة إجمالية منشورة. هذه مقاييس شبكة ومعالجة وليست زيارات أو مستخدمين نهائيين أو حجم معاملات ماليًا مدققًا.",
+      "verification_status": "verified_traffic_undisclosed_merchant_and_transaction_metrics_separated",
+      "confidence": "مرتفعة",
+      "claim_type": "زيارات واستخدام",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "390 ألف تاجر وملايين المعاملات مقاييس شركة، ولا يوجد رقم رسمي للزيارات أو MAU.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-04",
+        "SRC-18",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Paymob — Company Profile",
+          "publisher": "Paymob / LinkedIn",
+          "url": "https://www.linkedin.com/company/paymobcompany",
+          "source_type": "ملف شركة مُدار ذاتيًا",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "ملف شركة",
+          "source_locator": "Merchant and transaction metrics",
+          "supports": "390K+ merchants وmillions of transactions"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Paymob secures UAE Central Bank retail payment services licence",
+          "publisher": "Paymob via Wamda Press Release",
+          "url": "https://www.wamda.com/2025/01/paymob-secures-uae-central-bank-retail-payment-services-licence",
+          "source_type": "بيان شركة",
+          "published_at": "2025-01-22",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان ترخيص",
+          "source_locator": "Merchant count",
+          "supports": "390K+ merchants"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Paymob UAE POS",
+          "publisher": "Paymob",
+          "url": "https://www.pos.paymob.ae/pos",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "Merchant reach",
+          "supports": "390K+ merchants"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Paymob UAE Checkout",
+          "publisher": "Paymob",
+          "url": "https://www.checkout.paymob.ae/checkout",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "Merchant reach",
+          "supports": "390K+ merchants"
+        }
+      ],
+      "limitations": "لا تُفصل الحسابات المسجلة عن النشطة أو التجار الدافعين، ولا توجد فترة زمنية محددة لملايين المعاملات.",
+      "source_count": 4
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "يواجه التاجر في أسواق MENA-P مزيجًا مختلفًا من البطاقات والمحافظ المحلية وBNPL والتقسيط والدفع النقدي عبر الأكشاك والدفع الحضوري، إلى جانب متطلبات تنظيمية وتسوية وتحقق تختلف من بلد إلى آخر. ويصعب على الشركات الصغيرة دمج كل قناة ومقرض وشبكة محلية منفردة، بينما قد تكون تكلفة خدمة التاجر الصغير أعلى من عائد مزود الدفع إذا بقيت المعاملات قليلة.",
+        "impact": "يؤدي التجزؤ إلى تكاملات متعددة وتأخر الإطلاق وضعف معدلات قبول الدفع وتكرار التسويات والتقارير، وقد يبقى التاجر معتمدًا على النقد. لا توجد بيانات عامة تسمح بنسب «مبيعات ضخمة مفقودة» إلى Paymob أو بقياس أثر موحد على كل تاجر، لذلك أزيلت الصياغة المطلقة."
+      },
+      "verification_status": "verified_market_fragmentation_with_impact_caveat",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "مشكلة سوقية",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الوثائق تثبت اختلاف الطرق حسب السوق، والبنك الدولي يشرح صعوبة اقتصاديات قبول صغار التجار.",
+      "source_ids": [
+        "SRC-13",
+        "SRC-14",
+        "SRC-22"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "Paymob Developer Documentation — Overview",
+          "publisher": "Paymob",
+          "url": "https://developers.paymob.com/paymob-docs/developers/quicklink-apis/overview",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق رسمية",
+          "source_locator": "Region-specific payment methods",
+          "supports": "اختلاف طرق الدفع حسب السوق"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Paymob Documentation — Payments and Features",
+          "publisher": "Paymob",
+          "url": "https://developers.paymob.com/paymob-docs/payments-and-features",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق رسمية",
+          "source_locator": "Payment method categories",
+          "supports": "تعدد القنوات"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Why digital payments still stop at the small shop",
+          "publisher": "World Bank",
+          "url": "https://blogs.worldbank.org/en/psd/why-digital-payments-still-stop-at-small-shop-how-to-fix-it",
+          "source_type": "تحليل مؤسسي دولي",
+          "published_at": "2026-03-17",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تحليل مؤسسي",
+          "source_locator": "Small merchant acceptance economics",
+          "supports": "تكلفة خدمة التاجر الصغير ومحدودية نشر الأجهزة فقط"
+        }
+      ],
+      "limitations": "لا توجد دراسة خاصة بـPaymob تقيس المبيعات المفقودة أو الأثر المالي لكل تاجر.",
+      "source_count": 3
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "توفر Paymob طبقة قبول متعددة القنوات تشمل Hosted وEmbedded Checkout وروابط الدفع والإضافات وSDKs وPOS وTap to Pay. تبدأ العملية بإنشاء Payment Intention وتحديد الطرق المتاحة حسب السوق، ثم تتولى Paymob بيانات الدفع والمصادقة وترسل النتيجة عبر Webhooks موقعة بـHMAC. تشمل القدرات البطاقات والمحافظ والدفع السريع والتقسيط وBNPL والكشك والاشتراكات والبطاقات المحفوظة والتفويض والتحصيل وتقسيم الدفعات، مع اختلاف الإتاحة حسب حساب التاجر والبلد."
+      },
+      "verification_status": "verified_current_omnichannel_product_and_integration_flow",
+      "confidence": "مرتفعة",
+      "claim_type": "منتج وحل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "كل مكونات الحل مدعومة بوثائق Paymob الحالية، مع وسم اختلاف الإتاحة حسب البلد والحساب.",
+      "source_ids": [
+        "SRC-13",
+        "SRC-14",
+        "SRC-15",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "Paymob Developer Documentation — Overview",
+          "publisher": "Paymob",
+          "url": "https://developers.paymob.com/paymob-docs/developers/quicklink-apis/overview",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق منتج",
+          "source_locator": "Integration paths and methods",
+          "supports": "قنوات الدمج وطرق الدفع"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Paymob Documentation — Payments and Features",
+          "publisher": "Paymob",
+          "url": "https://developers.paymob.com/paymob-docs/payments-and-features",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق خصائص",
+          "source_locator": "Payment methods and core features",
+          "supports": "الخصائص"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Paymob Documentation — APIs",
+          "publisher": "Paymob",
+          "url": "https://developers.paymob.com/paymob-docs/integration-paths/apis",
+          "source_type": "وثائق تقنية رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق API",
+          "source_locator": "Intentions, checkout and webhooks",
+          "supports": "تدفق API"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Paymob Documentation — Mobile SDKs",
+          "publisher": "Paymob",
+          "url": "https://developers.paymob.com/paymob-docs/integration-paths/mobile-sdks",
+          "source_type": "وثائق تقنية رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق SDK",
+          "source_locator": "Mobile flow and HMAC",
+          "supports": "تطبيقات الهاتف والتحقق"
+        }
+      ],
+      "limitations": "توفر الخاصية في الوثائق لا يعني تفعيلها تلقائيًا لكل تاجر أو بلد.",
+      "source_count": 4
+    },
+    "$.market_data.target_audience": {
+      "field_value": "الشركات الصغيرة والمتوسطة، والمتاجر الإلكترونية والاجتماعية، وتجار التجزئة والمطاعم والخدمات، والمنصات والتطبيقات التي تحتاج API أو SDK، إضافة إلى المؤسسات الكبيرة التي تتطلب تسعيرًا وربطًا مخصصين. تعمل المنتجات في مصر والسعودية والإمارات وعُمان وباكستان وفق إفصاح الشركة، لكن طرق الدفع والتسعير والتراخيص لا تتطابق بين الأسواق.",
+      "verification_status": "verified_merchant_segments_and_country_specific_availability",
+      "confidence": "مرتفعة",
+      "claim_type": "جمهور مستهدف",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الوثائق والتسعير توضح صغار التجار والمؤسسات والمطورين والمتاجر والمنصات في الأسواق المعلنة.",
+      "source_ids": [
+        "SRC-13",
+        "SRC-17",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "Paymob Developer Documentation — Overview",
+          "publisher": "Paymob",
+          "url": "https://developers.paymob.com/paymob-docs/developers/quicklink-apis/overview",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق منتج",
+          "source_locator": "Who is this for and integration options",
+          "supports": "الشركات والمطورون والتجارة الإلكترونية"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Paymob Saudi Arabia Pricing",
+          "publisher": "Paymob",
+          "url": "https://www.paymob.sa/en/pricing.html",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير",
+          "source_locator": "SME and enterprise plans",
+          "supports": "الشركات الصغيرة والمؤسسات"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Paymob — Company Profile",
+          "publisher": "Paymob / LinkedIn",
+          "url": "https://www.linkedin.com/company/paymobcompany",
+          "source_type": "ملف شركة مُدار ذاتيًا",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "ملف شركة",
+          "source_locator": "Markets and merchant mission",
+          "supports": "الأسواق والتركيز على SMEs"
+        }
+      ],
+      "limitations": "لا يوجد توزيع عام لعدد العملاء أو الإيراد حسب الشريحة أو البلد.",
+      "source_count": 3
+    },
+    "$.market_data.market_size": {
+      "field_value": "لم تنشر Paymob دراسة أولية موثوقة لحجم TAM أو SAM أو SOM. كسياق لسوق واحد فقط، أعلن البنك المركزي السعودي أن المدفوعات الإلكترونية مثلت 85% من مدفوعات التجزئة في 2025 وأن عدد المعاملات الإلكترونية بلغ 14.6 مليارًا. هذه بيانات السوق السعودي كله، ولا تمثل حجم سوق Paymob أو حصتها أو قيمة المدفوعات التي عالجتها.",
+      "verification_status": "verified_no_company_tam_with_one_market_context",
+      "confidence": "مرتفعة",
+      "claim_type": "حجم سوق",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لم يُعثر على TAM أولي من Paymob؛ استُخدمت بيانات SAMA كسياق سعودي فقط.",
+      "source_ids": [
+        "SRC-21",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-21",
+          "title": "SAMA: E-Payments Account for 85% of Total Retail Payments in 2025",
+          "publisher": "Saudi Central Bank",
+          "url": "https://www.sama.gov.sa/en-us/mediacenter/news/pages/news-1139.aspx",
+          "source_type": "بيانات سوق رسمية",
+          "published_at": "2026-04-12",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيانات بنك مركزي",
+          "source_locator": "2025 Saudi retail payments",
+          "supports": "85% و14.6B transactions"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Paymob Developer Documentation — Overview",
+          "publisher": "Paymob",
+          "url": "https://developers.paymob.com/paymob-docs/developers/quicklink-apis/overview",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق شركة",
+          "source_locator": "Country availability",
+          "supports": "وجود المنتج في السعودية ضمن عدة أسواق"
+        }
+      ],
+      "limitations": "بيانات السعودية لا تمثل MENA-P ولا حصة Paymob أو إيرادها.",
+      "source_count": 2
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا يوجد معدل نمو حديث موحد للإيراد أو التجار أو المعاملات. ارتفع عدد التجار المعلن من 150 ألفًا في نهاية 2022 إلى أكثر من 350 ألفًا في سبتمبر 2024 ثم أكثر من 390 ألفًا في 2025–2026، بينما قالت الشركة إن إيراد مصر نما ستة أضعاف منذ Q2 2022. اختلاف التواريخ وصيغة «أكثر من» ونطاق المجموعة مقابل مصر يمنع اشتقاق CAGR واحد موثوق.",
+      "verification_status": "verified_directional_growth_no_single_comparable_rate",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "نمو",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توجد نقاط 150K و350K و390K+ للتجار ونمو 6x لإيراد مصر، لكنها غير متجانسة.",
+      "source_ids": [
+        "SRC-12",
+        "SRC-01",
+        "SRC-05",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-12",
+          "title": "Paymob raises another $22M and is profitable in Egypt",
+          "publisher": "TechCrunch",
+          "url": "https://techcrunch.com/2024/09/11/paymob-lands-another-22-million-and-is-profitable-in-egypt/",
+          "source_type": "مقابلة صحفية مباشرة مع المؤسس",
+          "published_at": "2024-09-11",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "مقابلة CEO",
+          "source_locator": "350K merchants and 6x revenue",
+          "supports": "مقاييس 2024"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Paymob — Company Profile",
+          "publisher": "Paymob / LinkedIn",
+          "url": "https://www.linkedin.com/company/paymobcompany",
+          "source_type": "ملف شركة مُدار ذاتيًا",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "ملف شركة",
+          "source_locator": "390K+ current merchants",
+          "supports": "المقياس الحالي"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "PayPal Ventures Invests in Paymob",
+          "publisher": "PayPal Newsroom",
+          "url": "https://newsroom.paypal-corp.com/2022-05-09-PayPal-Ventures-Invests-in-Paymob",
+          "source_type": "بيان رسمي من مستثمر",
+          "published_at": "2022-05-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان 2022",
+          "source_locator": "Series B operating context",
+          "supports": "سياق النمو السابق"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Paymob secures UAE Central Bank retail payment services licence",
+          "publisher": "Paymob via Wamda Press Release",
+          "url": "https://www.wamda.com/2025/01/paymob-secures-uae-central-bank-retail-payment-services-licence",
+          "source_type": "بيان شركة",
+          "published_at": "2025-01-22",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان 2025",
+          "source_locator": "390K merchants",
+          "supports": "تأكيد الرقم الأحدث"
+        }
+      ],
+      "limitations": "الأرقام تقريبية وذاتية الإفصاح، والإيراد يخص مصر بينما عدد التجار إقليمي.",
+      "source_count": 4
+    },
+    "$.financials.initial_investment": {
+      "field_value": "يوثق المستثمرون Series A بقيمة 18.5 مليون دولار في 2021، وSeries B أولية بقيمة 50 مليون دولار في مايو 2022، وتمديدًا بقيمة 22 مليون دولار في 2024 رفع إجمالي Series B إلى 72 مليونًا. وبذلك تجاوز التمويل المعلن تراكميًا 90 مليون دولار، مع استثمارات مبكرة من A15 وFMO ومستثمرين آخرين. هذا تمويل رأسمالي وليس إيرادًا أو حجم مدفوعات.",
+      "verification_status": "verified_named_rounds_and_total_over_90m",
+      "confidence": "مرتفعة",
+      "claim_type": "تمويل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المستثمرون والشركة يثبتون 18.5M Series A و50M Series B و22M extension، وإجماليًا يتجاوز 90M.",
+      "source_ids": [
+        "SRC-10",
+        "SRC-05",
+        "SRC-06",
+        "SRC-08",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-10",
+          "title": "FMO supports Paymob Series A",
+          "publisher": "FMO",
+          "url": "https://www.fmo.nl/news-detail/85a918b3-bfd7-4810-a79d-7f0732756eeb/monthly-transaction-overview-april",
+          "source_type": "إفصاح مستثمر تنموي رسمي",
+          "published_at": "2021",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح مستثمر",
+          "source_locator": "Series A total",
+          "supports": "18.5M"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "PayPal Ventures Invests in Paymob",
+          "publisher": "PayPal Newsroom",
+          "url": "https://newsroom.paypal-corp.com/2022-05-09-PayPal-Ventures-Invests-in-Paymob",
+          "source_type": "بيان رسمي من مستثمر",
+          "published_at": "2022-05-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان مستثمر",
+          "source_locator": "2022 Series B",
+          "supports": "50M وإجمالي >68.5M"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "EBRD promotes digital transition in Egypt",
+          "publisher": "European Bank for Reconstruction and Development",
+          "url": "https://www.ebrd.com/home/news-and-events/news/2024/ebrd-promotes-digital-transition-in-egypt.html",
+          "source_type": "إعلان استثمار رسمي",
+          "published_at": "2024-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان مستثمر",
+          "source_locator": "2024 round",
+          "supports": "22M"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Paymob Series B extension",
+          "publisher": "Paymob / LinkedIn",
+          "url": "https://www.linkedin.com/posts/paymobcompany_smes-egypt-gcc-activity-7239556293932335104-BkUl",
+          "source_type": "إفصاح تمويل مباشر من الشركة",
+          "published_at": "2024-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح شركة",
+          "source_locator": "Series B total",
+          "supports": "72M Series B"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Paymob International B.V. — Investment 02",
+          "publisher": "British International Investment",
+          "url": "https://www.bii.co.uk/en/our-impact/investment/paymob-international-b-v-investment-02/",
+          "source_type": "سجل استثمار رسمي",
+          "published_at": "2024-12",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "سجل مستثمر",
+          "source_locator": "BII commitments",
+          "supports": "مساهمات BII"
+        }
+      ],
+      "limitations": "لا يعرض المجموع شروط الأوراق أو كل التمويل المبكر، ولا يمثل تقييمًا أو إيرادًا.",
+      "source_count": 5
+    },
+    "$.financials.valuation": {
+      "field_value": "غير مُفصح عنه علنًا في مصدر أولي موثوق. لم تنشر جولات 2021 أو 2022 أو 2024 نسب الملكية أو تقييم ما قبل الاستثمار أو بعده، لذلك أزيل وصف «مئات الملايين» بوصفه تقديرًا غير مدعوم.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "مرتفعة",
+      "claim_type": "تقييم",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا تكشف المصادر الأولية نسب الملكية أو تقييم الجولات، وسجل EBRD يثبت الاستثمار فقط.",
+      "source_ids": [
+        "SRC-07",
+        "SRC-05",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "VCIP III — Paymob",
+          "publisher": "European Bank for Reconstruction and Development",
+          "url": "https://www.ebrd.com/home/work-with-us/projects/psd/55356.html",
+          "source_type": "سجل مشروع استثماري رسمي",
+          "published_at": "2024",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "سجل استثمار",
+          "source_locator": "Signed equity investment",
+          "supports": "وجود الاستثمار دون تقييم"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "PayPal Ventures Invests in Paymob",
+          "publisher": "PayPal Newsroom",
+          "url": "https://newsroom.paypal-corp.com/2022-05-09-PayPal-Ventures-Invests-in-Paymob",
+          "source_type": "بيان رسمي من مستثمر",
+          "published_at": "2022-05-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان جولة",
+          "source_locator": "Round amount and investors",
+          "supports": "قيمة التمويل لا التقييم"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Paymob Series B extension",
+          "publisher": "Paymob / LinkedIn",
+          "url": "https://www.linkedin.com/posts/paymobcompany_smes-egypt-gcc-activity-7239556293932335104-BkUl",
+          "source_type": "إفصاح تمويل مباشر من الشركة",
+          "published_at": "2024-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح شركة",
+          "source_locator": "Extension amount",
+          "supports": "غياب التقييم"
+        }
+      ],
+      "limitations": "أي تقدير خارجي لمئات الملايين لم يُستخدم لعدم وجود سند أولي.",
+      "source_count": 3
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "رسوم لكل معاملة دفع إلكتروني؛ مثال التسعير السعودي المنشور يفرض 1% + 1 ريال على mada و2.7% + 1 ريال على Visa وMastercard ضمن الخطة القياسية.",
+        "تسعير مؤسسي مخصص للتجار ذوي الحجم الكبير أو النماذج التشغيلية الخاصة، بدل سعر عام موحد.",
+        "رسوم تجارية مرتبطة بالقبول الحضوري وأجهزة POS وTap to Pay والخدمات الملحقة، من دون إفصاح عام موحد عن سعر الجهاز أو الإيجار في كل سوق.",
+        "خدمات قيمة مضافة مثل التسوية المتقدمة والتسجيل الرقمي ومسك الدفاتر SaaS، وفق وصف EBRD لعرض الشركة.",
+        "ميزات الاشتراكات والبطاقات المحفوظة وتقسيم الدفعات والتفويض والتحصيل والتسويات؛ توفر الميزة لا يثبت رسمًا مستقلًا أو مساهمة محددة في الإيراد."
+      ],
+      "verification_status": "verified_published_pricing_and_service_pathways_not_revenue_mix",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "مسارات إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الرسوم العامة السعودية وخدمات EBRD ووثائق الخصائص تدعم المسارات، دون إثبات نسب مساهمة.",
+      "source_ids": [
+        "SRC-17",
+        "SRC-18",
+        "SRC-06",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-17",
+          "title": "Paymob Saudi Arabia Pricing",
+          "publisher": "Paymob",
+          "url": "https://www.paymob.sa/en/pricing.html",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير رسمي",
+          "source_locator": "Transaction pricing",
+          "supports": "رسوم المعاملات والتسعير المؤسسي"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Paymob UAE POS",
+          "publisher": "Paymob",
+          "url": "https://www.pos.paymob.ae/pos",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "منتج POS",
+          "source_locator": "In-person acceptance",
+          "supports": "مسار القبول الحضوري"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "EBRD promotes digital transition in Egypt",
+          "publisher": "European Bank for Reconstruction and Development",
+          "url": "https://www.ebrd.com/home/news-and-events/news/2024/ebrd-promotes-digital-transition-in-egypt.html",
+          "source_type": "إعلان استثمار رسمي",
+          "published_at": "2024-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وصف مستثمر",
+          "source_locator": "Value-added products",
+          "supports": "التسوية والتسجيل والمحاسبة"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Paymob Documentation — Payments and Features",
+          "publisher": "Paymob",
+          "url": "https://developers.paymob.com/paymob-docs/payments-and-features",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق منتج",
+          "source_locator": "Recurring and split features",
+          "supports": "الميزات الإضافية"
+        }
+      ],
+      "limitations": "الأسعار قد تتغير حسب السوق والحجم والعقد، ولا يوجد تفصيل للإيراد الفعلي.",
+      "source_count": 4
+    },
+    "$.tools": {
+      "field_value": [
+        "Payment Intention APIs وHosted Checkout وEmbedded Pixel",
+        "Payment Links وإضافات Shopify وWooCommerce وMagento وWHMCS وBagisto",
+        "SDKs لتطبيقات iOS وAndroid وFlutter وReact Native",
+        "Webhooks وHMAC للتحقق من مصدر callbacks واعتبار الخادم مصدر الحقيقة لحالة الدفع",
+        "بطاقات ومحافظ رقمية وApple Pay وGoogle Pay وmada وOmanNet وSTC Pay حسب السوق",
+        "BNPL والتقسيط والدفع عبر الأكشاك والاشتراكات والبطاقات المحفوظة وتقسيم الدفعات",
+        "POS وTap to Pay وقبول الدفع الحضوري",
+        "Python مع Django أو Flask للخدمات الخلفية وفق إعلانات التوظيف الحالية",
+        "PostgreSQL وMySQL وMongoDB كخبرات قواعد بيانات مطلوبة؛ لا يعني ذلك أن جميعها مستخدمة في كل خدمة",
+        "React وNext.js وJavaScript للواجهات وفق إعلانات التوظيف الحالية",
+        "بنى سحابية قد تشمل AWS أو Azure أو OCI، مع Docker وKubernetes وTerraform أو CloudFormation وفق وظائف DevOps؛ ليست كشفًا معماريًا كاملًا",
+        "تطبيقات أصلية لـiOS وAndroid",
+        "PCI-compliant checkout وكشف احتيال مدمج تعلن الشركة أنه يستخدم خوارزميات تعلم آلي وذكاء اصطناعي",
+        "Redis أزيل من المكدس الأساسي لأن المصادر الحديثة المستخدمة لم تثبته كمكون مركزي حالي"
+      ],
+      "verification_status": "verified_product_stack_and_job_posting_technology_with_caveats",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "تقنيات وأدوات",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "قدرات المنتج من الوثائق، والمكدس الداخلي من إعلانات وظائف حالية مع قيود واضحة.",
+      "source_ids": [
+        "SRC-13",
+        "SRC-15",
+        "SRC-23",
+        "SRC-24",
+        "SRC-25",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "Paymob Developer Documentation — Overview",
+          "publisher": "Paymob",
+          "url": "https://developers.paymob.com/paymob-docs/developers/quicklink-apis/overview",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق منتج",
+          "source_locator": "Integrations and SDKs",
+          "supports": "API وSDK وplugins وTap to Pay"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Paymob Documentation — APIs",
+          "publisher": "Paymob",
+          "url": "https://developers.paymob.com/paymob-docs/integration-paths/apis",
+          "source_type": "وثائق تقنية رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق تقنية",
+          "source_locator": "Webhooks and HMAC",
+          "supports": "تدفق الأمان"
+        },
+        {
+          "source_id": "SRC-23",
+          "title": "Paymob Backend Engineer",
+          "publisher": "Paymob via LinkedIn Jobs",
+          "url": "https://eg.linkedin.com/jobs/view/backend-engineer-at-paymob-4291132661",
+          "source_type": "إعلان توظيف تقني صادر عن الشركة",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وظيفة تقنية",
+          "source_locator": "Backend requirements",
+          "supports": "Python وDjango/Flask وقواعد البيانات"
+        },
+        {
+          "source_id": "SRC-24",
+          "title": "Paymob DevOps Engineer",
+          "publisher": "Paymob via LinkedIn Jobs",
+          "url": "https://eg.linkedin.com/jobs/view/devops-engineer-at-paymob-4121032836",
+          "source_type": "إعلان توظيف تقني صادر عن الشركة",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وظيفة DevOps",
+          "source_locator": "Cloud and infrastructure",
+          "supports": "السحابة والحاويات وIaC"
+        },
+        {
+          "source_id": "SRC-25",
+          "title": "Paymob Senior Frontend Engineer",
+          "publisher": "Paymob via LinkedIn Jobs",
+          "url": "https://eg.linkedin.com/jobs/view/senior-frontend-engineer-at-paymob-4061443300",
+          "source_type": "إعلان توظيف تقني صادر عن الشركة",
+          "published_at": "2026",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وظيفة واجهة",
+          "source_locator": "Frontend technologies",
+          "supports": "React وNext.js"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Paymob UAE Checkout",
+          "publisher": "Paymob",
+          "url": "https://www.checkout.paymob.ae/checkout",
+          "source_type": "صفحة منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "PCI and fraud detection",
+          "supports": "الامتثال وكشف الاحتيال"
+        }
+      ],
+      "limitations": "إعلانات الوظائف لا تكشف المعمارية الكاملة، وبعض التقنيات أمثلة خبرة وليست تأكيدًا لاستخدام شامل.",
+      "source_count": 6
+    },
+    "$.headline": {
+      "field_value": "من بنية محافظ رقمية في القاهرة إلى شبكة لـ390 ألف تاجر: كيف جعلت Paymob الترخيص المحلي محركًا للتوسع في خمس أسواق",
+      "verification_status": "verified_editorial_synthesis",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "عنوان تحريري",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "العنوان يجمع الأصل المصري و390K+ تاجر والأسواق الخمسة ودور التراخيص في التوسع.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Paymob — Company Profile",
+          "publisher": "Paymob / LinkedIn",
+          "url": "https://www.linkedin.com/company/paymobcompany",
+          "source_type": "ملف شركة مُدار ذاتيًا",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "ملف شركة",
+          "source_locator": "History, merchants and markets",
+          "supports": "الأصل والنطاق الحالي"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Register of Retail Payment Services — May 2026",
+          "publisher": "Central Bank of the UAE",
+          "url": "https://www.centralbank.ae/media/5smlotxp/cb-register-may-2026.pdf",
+          "source_type": "سجل تنظيمي رسمي",
+          "published_at": "2026-05",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "سجل تنظيمي",
+          "source_locator": "UAE licence",
+          "supports": "الترخيص المحلي"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "PayPal Ventures Invests in Paymob",
+          "publisher": "PayPal Newsroom",
+          "url": "https://newsroom.paypal-corp.com/2022-05-09-PayPal-Ventures-Invests-in-Paymob",
+          "source_type": "بيان رسمي من مستثمر",
+          "published_at": "2022-05-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "بيان تمويل",
+          "source_locator": "Regional expansion",
+          "supports": "التوسع الإقليمي"
+        }
+      ],
+      "limitations": "عبارة «محركًا للتوسع» تحليل تحريري وليست اقتباسًا حرفيًا.",
+      "source_count": 3
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "الترخيص ليس قسم امتثال فقط؛ إنه خريطة المنتج",
+          "description": "انتقال Paymob من مصر إلى السعودية والإمارات وعُمان تطلب شهادات وتراخيص محلية قبل تقديم المجموعة الكاملة. في المدفوعات، الحصول على الإذن يحدد الخدمات الممكنة والشركاء والتسوية، ولذلك يصبح الترخيص جزءًا من استراتيجية المنتج والتوسع."
+        },
+        {
+          "title": "عدد التجار لا يكشف اقتصاديات المنصة",
+          "description": "390 ألف تاجر يثبت اتساع التوزيع، لكنه لا يوضح عدد التجار النشطين أو متوسط حجم الدفع أو معدل الرسوم أو تكلفة المخاطر والدعم. القياس الصحي يفصل التاجر المسجل عن النشط، والمعاملة عن حجم المدفوعات، وحجم المدفوعات عن صافي الإيراد."
+        },
+        {
+          "title": "وسيلة الدفع المحلية قد تكون خندقًا أقوى من واجهة أجمل",
+          "description": "قيمة Paymob تأتي من جمع mada وOmanNet والمحافظ المصرية وSTC Pay وBNPL والتقسيط والبطاقات في تكامل واحد. كل سوق يضيف شبكة وقواعد وتسوية جديدة، فتزداد صعوبة تقليد التغطية المحلية بمجرد بناء Checkout عام."
+        },
+        {
+          "title": "اجعل القبول بوابة لمنتجات التاجر الأخرى",
+          "description": "القبول هو نقطة الدخول المتكررة إلى بيانات المبيعات والتسوية. من هذه العلاقة تستطيع الشركة تقديم تسوية أسرع ومسك دفاتر وأدوات إدارة وتمويل عند توافره. قوة التوسع تأتي من بيع خدمات إضافية إلى تاجر تمت خدمته أصلًا، لا من اكتساب عميل جديد لكل منتج."
+        },
+        {
+          "title": "ربحية السوق الأساسي تموّل التوسع المنضبط",
+          "description": "قبل تمديد Series B في 2024 أعلنت Paymob ربحية أعمالها الأساسية في مصر ونمو الإيراد ستة أضعاف منذ 2022. الدرس أن السوق الأساسي القادر على تمويل جزء من النمو يمنح الشركة مساحة أكبر لتجربة أسواق خليجية مكلفة تنظيميًا وتشغيليًا."
+        },
+        {
+          "title": "واجهة واحدة للتاجر تحتاج منتجًا مختلفًا خلفها في كل بلد",
+          "description": "قد يرى المطور Payment Intention وWebhook متشابهين، لكن وسائل الدفع والعملة وBNPL والتقسيط ومتطلبات التفعيل تختلف. نجاح المنصة الإقليمية يتطلب توحيد تجربة الدمج مع إبقاء التهيئة والامتثال والتسوية واعية بالسوق."
+        }
+      ],
+      "verification_status": "analytical_inference_grounded_in_company_regulator_and_investor_sources",
+      "confidence": "متوسطة",
+      "claim_type": "تحليل ودروس",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس مبنية على التراخيص والمقاييس وطرق الدفع المحلية وخدمات القيمة المضافة وربحية مصر وبنية API الإقليمية.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-01",
+        "SRC-13",
+        "SRC-06",
+        "SRC-12",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Register of Retail Payment Services — May 2026",
+          "publisher": "Central Bank of the UAE",
+          "url": "https://www.centralbank.ae/media/5smlotxp/cb-register-may-2026.pdf",
+          "source_type": "سجل تنظيمي رسمي",
+          "published_at": "2026-05",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "سجل تنظيمي",
+          "source_locator": "UAE license",
+          "supports": "درس الترخيص"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Paymob — Company Profile",
+          "publisher": "Paymob / LinkedIn",
+          "url": "https://www.linkedin.com/company/paymobcompany",
+          "source_type": "ملف شركة مُدار ذاتيًا",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مقياس شركة",
+          "source_locator": "Merchant count",
+          "supports": "درس فصل المقاييس"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Paymob Developer Documentation — Overview",
+          "publisher": "Paymob",
+          "url": "https://developers.paymob.com/paymob-docs/developers/quicklink-apis/overview",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق منتج",
+          "source_locator": "Local methods by market",
+          "supports": "درس التغطية المحلية"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "EBRD promotes digital transition in Egypt",
+          "publisher": "European Bank for Reconstruction and Development",
+          "url": "https://www.ebrd.com/home/news-and-events/news/2024/ebrd-promotes-digital-transition-in-egypt.html",
+          "source_type": "إعلان استثمار رسمي",
+          "published_at": "2024-09",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وصف مستثمر",
+          "source_locator": "Value-added services",
+          "supports": "درس cross-sell"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Paymob raises another $22M and is profitable in Egypt",
+          "publisher": "TechCrunch",
+          "url": "https://techcrunch.com/2024/09/11/paymob-lands-another-22-million-and-is-profitable-in-egypt/",
+          "source_type": "مقابلة صحفية مباشرة مع المؤسس",
+          "published_at": "2024-09-11",
+          "accessed_at": "2026-08-03",
+          "primary": false,
+          "evidence_type": "مقابلة CEO",
+          "source_locator": "Egypt profitability",
+          "supports": "درس السوق الأساسي"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Paymob Documentation — APIs",
+          "publisher": "Paymob",
+          "url": "https://developers.paymob.com/paymob-docs/integration-paths/apis",
+          "source_type": "وثائق تقنية رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق API",
+          "source_locator": "Unified flow",
+          "supports": "درس الواجهة الموحدة"
+        }
+      ],
+      "limitations": "الدروس استنتاجات تحريرية وليست تصريحات حرفية أو توصيات استثمارية.",
+      "source_count": 6
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Paymob — Company Profile",
+      "publisher": "Paymob / LinkedIn",
+      "url": "https://www.linkedin.com/company/paymobcompany",
+      "source_type": "ملف شركة مُدار ذاتيًا",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يعرض 390 ألف+ تاجر و1,100 موظف ومكاتب في مصر والسعودية والإمارات وعُمان وباكستان، إلى جانب تسلسل التراخيص المعلن ذاتيًا."
+    },
+    {
+      "id": "SRC-02",
+      "title": "Register of Retail Payment Services — May 2026",
+      "publisher": "Central Bank of the UAE",
+      "url": "https://www.centralbank.ae/media/5smlotxp/cb-register-may-2026.pdf",
+      "source_type": "سجل تنظيمي رسمي",
+      "published_at": "2026-05",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يسجل Paymob Technologies L.L.C في دبي ضمن مزودي خدمات الدفع بالتجزئة، الفئة 3، برقم 08.01.03.023.2024.02."
+    },
+    {
+      "id": "SRC-03",
+      "title": "Retail Payment Services and Card Schemes Regulation",
+      "publisher": "Central Bank of the UAE Rulebook",
+      "url": "https://rulebook.centralbank.ae/en/entiresection/1589",
+      "source_type": "إطار تنظيمي رسمي",
+      "published_at": "2021-06-06",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يشرح فئات التراخيص وخدمات تحصيل التجار وتجميع المدفوعات والتحويلات وغيرها؛ يستخدم لتفسير نطاق الترخيص لا لإثبات إيراد."
+    },
+    {
+      "id": "SRC-04",
+      "title": "Paymob secures UAE Central Bank retail payment services licence",
+      "publisher": "Paymob via Wamda Press Release",
+      "url": "https://www.wamda.com/2025/01/paymob-secures-uae-central-bank-retail-payment-services-licence",
+      "source_type": "بيان شركة",
+      "published_at": "2025-01-22",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يذكر أن الترخيص يجيز تحصيل التجار وتجميع المدفوعات والتحويلات المحلية في الإمارات، ويورد 390 ألف+ تاجر."
+    },
+    {
+      "id": "SRC-05",
+      "title": "PayPal Ventures Invests in Paymob",
+      "publisher": "PayPal Newsroom",
+      "url": "https://newsroom.paypal-corp.com/2022-05-09-PayPal-Ventures-Invests-in-Paymob",
+      "source_type": "بيان رسمي من مستثمر",
+      "published_at": "2022-05-09",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق Series B بقيمة 50 مليون دولار وإجمالي تمويل يتجاوز 68.5 مليون دولار، ومنتجات القبول متعددة القنوات."
+    },
+    {
+      "id": "SRC-06",
+      "title": "EBRD promotes digital transition in Egypt",
+      "publisher": "European Bank for Reconstruction and Development",
+      "url": "https://www.ebrd.com/home/news-and-events/news/2024/ebrd-promotes-digital-transition-in-egypt.html",
+      "source_type": "إعلان استثمار رسمي",
+      "published_at": "2024-09",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق جولة 22 مليون دولار بقيادة EBRD وخدمات Paymob ذات القيمة المضافة مثل التسوية المتقدمة والتسجيل الرقمي ومسك الدفاتر كخدمة."
+    },
+    {
+      "id": "SRC-07",
+      "title": "VCIP III — Paymob",
+      "publisher": "European Bank for Reconstruction and Development",
+      "url": "https://www.ebrd.com/home/work-with-us/projects/psd/55356.html",
+      "source_type": "سجل مشروع استثماري رسمي",
+      "published_at": "2024",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يثبت توقيع استثمار أسهم ضمن تمديد Series B، من دون كشف تقييم الشركة."
+    },
+    {
+      "id": "SRC-08",
+      "title": "Paymob Series B extension",
+      "publisher": "Paymob / LinkedIn",
+      "url": "https://www.linkedin.com/posts/paymobcompany_smes-egypt-gcc-activity-7239556293932335104-BkUl",
+      "source_type": "إفصاح تمويل مباشر من الشركة",
+      "published_at": "2024-09",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يعلن تمديد Series B بقيمة 22 مليون دولار وارتفاع إجمالي Series B إلى 72 مليون دولار."
+    },
+    {
+      "id": "SRC-09",
+      "title": "Paymob International B.V. — Investment 02",
+      "publisher": "British International Investment",
+      "url": "https://www.bii.co.uk/en/our-impact/investment/paymob-international-b-v-investment-02/",
+      "source_type": "سجل استثمار رسمي",
+      "published_at": "2024-12",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يثبت استثمارات BII النشطة وقيمة 2.8 مليون دولار في أغسطس 2024 و5 ملايين في أبريل 2022، ويصف التركيز على رقمنة مدفوعات SMEs."
+    },
+    {
+      "id": "SRC-10",
+      "title": "FMO supports Paymob Series A",
+      "publisher": "FMO",
+      "url": "https://www.fmo.nl/news-detail/85a918b3-bfd7-4810-a79d-7f0732756eeb/monthly-transaction-overview-april",
+      "source_type": "إفصاح مستثمر تنموي رسمي",
+      "published_at": "2021",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق Series A بقيمة إجمالية 18.5 مليون دولار ومساهمة FMO البالغة 3 ملايين دولار."
+    },
+    {
+      "id": "SRC-11",
+      "title": "Paymob International B.V. project detail",
+      "publisher": "FMO",
+      "url": "https://www.fmo.nl/project-detail/61406",
+      "source_type": "سجل استثمارات رسمي",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يعرض استثمارات FMO المتعددة في 2020 و2021 و2022 و2024؛ يساعد على توثيق التمويل المبكر دون تحويل مساهمات المستثمر إلى تقييم."
+    },
+    {
+      "id": "SRC-12",
+      "title": "Paymob raises another $22M and is profitable in Egypt",
+      "publisher": "TechCrunch",
+      "url": "https://techcrunch.com/2024/09/11/paymob-lands-another-22-million-and-is-profitable-in-egypt/",
+      "source_type": "مقابلة صحفية مباشرة مع المؤسس",
+      "published_at": "2024-09-11",
+      "accessed_at": "2026-08-03",
+      "primary": false,
+      "notes": "ينقل عن CEO ربحية السوق المصري ونمو الإيراد ستة أضعاف منذ Q2 2022، و350 ألف+ تاجر آنذاك، وإجمالي تمويل يتجاوز 90 مليون دولار."
+    },
+    {
+      "id": "SRC-13",
+      "title": "Paymob Developer Documentation — Overview",
+      "publisher": "Paymob",
+      "url": "https://developers.paymob.com/paymob-docs/developers/quicklink-apis/overview",
+      "source_type": "وثائق منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق مسارات الدمج والدول وطرق الدفع والروابط والإضافات وHosted Checkout وPixel وSDKs وTap to Pay."
+    },
+    {
+      "id": "SRC-14",
+      "title": "Paymob Documentation — Payments and Features",
+      "publisher": "Paymob",
+      "url": "https://developers.paymob.com/paymob-docs/payments-and-features",
+      "source_type": "وثائق منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق البطاقات والمحافظ والتقسيط وBNPL والكشك والاشتراكات والبطاقات المحفوظة والتفويض والتحصيل وتقسيم الدفعات."
+    },
+    {
+      "id": "SRC-15",
+      "title": "Paymob Documentation — APIs",
+      "publisher": "Paymob",
+      "url": "https://developers.paymob.com/paymob-docs/integration-paths/apis",
+      "source_type": "وثائق تقنية رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق Payment Intentions والـHosted والـEmbedded Checkout والـWebhooks والتحقق باستخدام HMAC."
+    },
+    {
+      "id": "SRC-16",
+      "title": "Paymob Documentation — Mobile SDKs",
+      "publisher": "Paymob",
+      "url": "https://developers.paymob.com/paymob-docs/integration-paths/mobile-sdks",
+      "source_type": "وثائق تقنية رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق SDKs المحمولة وتدفق الدفع والتعامل مع البيانات الحساسة واعتبار callback الخلفي مصدر الحقيقة."
+    },
+    {
+      "id": "SRC-17",
+      "title": "Paymob Saudi Arabia Pricing",
+      "publisher": "Paymob",
+      "url": "https://www.paymob.sa/en/pricing.html",
+      "source_type": "صفحة تسعير رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يعرض مثالًا علنيًا لنموذج رسوم المعاملة في السعودية: 1% + 1 ريال لـmada و2.7% + 1 ريال لـVisa/Mastercard، مع تسعير مخصص للمؤسسات."
+    },
+    {
+      "id": "SRC-18",
+      "title": "Paymob UAE POS",
+      "publisher": "Paymob",
+      "url": "https://www.pos.paymob.ae/pos",
+      "source_type": "صفحة منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق POS في الإمارات و390 ألف+ تاجر عبر MENA والترخيص الإماراتي وBNPL وتقسيم الفواتير والإكراميات."
+    },
+    {
+      "id": "SRC-19",
+      "title": "Paymob UAE Checkout",
+      "publisher": "Paymob",
+      "url": "https://www.checkout.paymob.ae/checkout",
+      "source_type": "صفحة منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق القبول الإلكتروني و390 ألف+ تاجر وPCI compliance وكشف الاحتيال المدمج المعلن."
+    },
+    {
+      "id": "SRC-20",
+      "title": "CBE witnesses UnionPay protocol with Paymob",
+      "publisher": "Central Bank of Egypt",
+      "url": "https://www.cbe.org.eg/en/news-publications/news/2025/07/10/08/48/governor-of-cbe-hosts-governor-of-the-peoples-bank-of-china",
+      "source_type": "بيان بنك مركزي رسمي",
+      "published_at": "2025-07-10",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق بروتوكولًا لتوسيع قبول UnionPay لدى التجار والمواقع المرتبطة بـPaymob في مصر؛ لا يثبت قيمة معاملات أو إيراد."
+    },
+    {
+      "id": "SRC-21",
+      "title": "SAMA: E-Payments Account for 85% of Total Retail Payments in 2025",
+      "publisher": "Saudi Central Bank",
+      "url": "https://www.sama.gov.sa/en-us/mediacenter/news/pages/news-1139.aspx",
+      "source_type": "بيانات سوق رسمية",
+      "published_at": "2026-04-12",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يعرض 85% مدفوعات إلكترونية و14.6 مليار معاملة تجزئة إلكترونية في السعودية خلال 2025؛ سياق سوق وليس حصة Paymob."
+    },
+    {
+      "id": "SRC-22",
+      "title": "Why digital payments still stop at the small shop",
+      "publisher": "World Bank",
+      "url": "https://blogs.worldbank.org/en/psd/why-digital-payments-still-stop-at-small-shop-how-to-fix-it",
+      "source_type": "تحليل مؤسسي دولي",
+      "published_at": "2026-03-17",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يشرح اقتصاديات قبول المدفوعات لدى صغار التجار وأن نشر الأجهزة وحده لا يضمن الاستخدام؛ يستخدم لسياق المشكلة."
+    },
+    {
+      "id": "SRC-23",
+      "title": "Paymob Backend Engineer",
+      "publisher": "Paymob via LinkedIn Jobs",
+      "url": "https://eg.linkedin.com/jobs/view/backend-engineer-at-paymob-4291132661",
+      "source_type": "إعلان توظيف تقني صادر عن الشركة",
+      "published_at": "2026",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يدعم Python وDjango/Flask وقواعد PostgreSQL وMySQL وMongoDB؛ إعلان وظيفة وليس مخطط بنية كاملًا."
+    },
+    {
+      "id": "SRC-24",
+      "title": "Paymob DevOps Engineer",
+      "publisher": "Paymob via LinkedIn Jobs",
+      "url": "https://eg.linkedin.com/jobs/view/devops-engineer-at-paymob-4121032836",
+      "source_type": "إعلان توظيف تقني صادر عن الشركة",
+      "published_at": "2026",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يدعم خبرة في AWS/Azure/OCI وDocker وKubernetes وTerraform/CloudFormation وCI/CD؛ لا يثبت الاستخدام الموحد لكل خدمة."
+    },
+    {
+      "id": "SRC-25",
+      "title": "Paymob Senior Frontend Engineer",
+      "publisher": "Paymob via LinkedIn Jobs",
+      "url": "https://eg.linkedin.com/jobs/view/senior-frontend-engineer-at-paymob-4061443300",
+      "source_type": "إعلان توظيف تقني صادر عن الشركة",
+      "published_at": "2026",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يدعم React وNext.js وJavaScript للواجهات الحالية."
+    }
   ]
 }

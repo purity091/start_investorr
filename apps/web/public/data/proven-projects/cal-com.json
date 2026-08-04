@@ -2,51 +2,2256 @@
   "id": "cal-com",
   "slug": "cal-com",
   "name": "كال دوت كوم (Cal.com)",
-  "headline": "البديل مفتوح المصدر لجدولة المواعيد الذي تفوق على المنافسين",
-  "category": "Open Source SaaS / جدولة المواعيد",
+  "headline": "من «Calendly مفتوح المصدر» إلى مسارين منفصلين: كيف أبقت Cal.com المجتمع في Cal.diy وحوّلت المنتج التجاري إلى بنية جدولة خاصة",
+  "category": "Scheduling Infrastructure & SaaS / بنية الجدولة والمنصات المضمنة ووكلاء الوقت",
   "company": {
-    "location": "العمل عن بعد (Remote)",
-    "business_model": "مجاني للأفراد + اشتراكات للفرق والمؤسسات (Open Core)"
+    "location": "Cal.com, Inc. شركة أمريكية موزعة بالكامل تعمل عن بُعد وتقول صراحة إنها لا تملك مقرًا تشغيليًا فعليًا ولا تخطط لإنشائه. تعرض سياسة الخصوصية عنوان مراسلات قانونيًا في 2261 Market Street #4382، سان فرانسيسكو، كاليفورنيا، بينما بدأ المشروع باسم Calendso ثم أعيدت تسميته إلى Cal.com. لذلك فإن وصف الموقع الصحيح هو «شركة موزعة عالميًا بكيان وعنوان مراسلات أمريكي»، لا مقر واحد تقليدي.",
+    "business_model": "لم يعد وصف Open Core وحده دقيقًا بعد أبريل 2026. المنتج التجاري Cal.com أصبح مغلق المصدر ويحقق الدخل من SaaS للأفراد والفرق والمنظمات والمؤسسات، ومن Platform APIs وCal Atoms حسب عدد الحجوزات، ومن Enterprise/on-premise والدعم، ومن استخدامات مدفوعة مثل Cal.ai بالدقيقة. في المقابل أصبح Cal.diy إصدارًا مجتمعيًا منفصلًا بترخيص MIT للاستضافة الذاتية على مسؤولية المستخدم، ومن دون ميزات Teams وOrganizations وInsights وWorkflows وSSO/SAML التجارية."
   },
   "directory_snapshot": {
-    "monthly_revenue": "~$150K+ /mo",
-    "monthly_traffic": "2M+ /mo"
+    "monthly_revenue": "غير مُفصح عنه علنًا بصورة حديثة وموثوقة. أقدم رقم رسمي واضح وجدته هو ARR بقيمة مليون دولار في نوفمبر 2023، وهو مقياس تاريخي لا يصلح لتقدير إيراد أغسطس 2026. لا يوجد MRR حالي ظاهر نصيًا في صفحة Open Startup، لذلك أزيل تقدير 150 ألف دولار شهريًا ولم تُستخدم أسعار الخطط أو التمويل لاشتقاق الإيراد.",
+    "monthly_traffic": "غير مُفصح عنه علنًا، ولا يوجد رقم موثوق لزيارات cal.com الشهرية. يمكن رصد مؤشرات مختلفة: مستودع Cal.diy يعرض نحو 44.8 ألف نجمة و14.7 ألف fork وقت التحقق، بينما كان الإفصاح الرسمي في نوفمبر 2023 يتحدث عن 13,667 مستخدمًا نشطًا شهريًا و113,503 حجوزات شهرية. النجوم والفروع والحجوزات والمستخدمون ليست زيارات ويب، كما أن مقاييس 2023 قديمة ولا تمثل الوضع الحالي."
   },
   "overview": {
     "problem": {
-      "text": "أدوات جدولة المواعيد (مثل Calendly) مغلقة المصدر، صعبة التخصيص، ولا تحافظ على الخصوصية للشركات الحساسة كالمستشفيات والبنوك.",
-      "impact": "عدم قدرة الشركات على دمج الجدولة بعمق في منتجاتها الخاصة (White-label) أو استضافتها على سيرفراتها الخاصة للامتثال الأمني."
+      "text": "أدوات الجدولة البسيطة تحل إرسال رابط اجتماع فردي، لكنها قد تتعثر عندما تصبح الجدولة جزءًا من منتج أو marketplace أو telehealth أو فرق مبيعات ودعم متعددة. تحتاج هذه الحالات إلى توجيه الطلبات، وتوزيع round-robin، وأحداث جماعية، وواجهات APIs ومكونات مدمجة، وتحكم في البيانات والإقامة والهوية والصلاحيات.",
+      "impact": "يؤدي نقص القابلية للبرمجة والتحكم إلى تكاملات هشة، وتجربة white-label غير مكتملة، واعتماد أكبر على مزود واحد، وصعوبة تلبية متطلبات بعض المؤسسات. لكن الملف الأصلي عمّم أن المنافسين لا يحافظون على الخصوصية أو يرفضون APIs؛ لم يُعثر على دليل يسمح بهذا الحكم المطلق، لذلك أزيلت المقارنة الاتهامية."
     },
     "solution": {
-      "text": "منصة جدولة مفتوحة المصدر يمكن استضافتها ذاتياً، أو استخدام السحابة الخاصة بها، مع واجهة برمجية (API) قوية للتخصيص الكامل."
+      "text": "توفر Cal.com روابط جدولة للأفراد، وميزات Teams وOrganizations مثل round-robin وrouting forms وmanaged events وSSO/SCIM، ومنصة للمطورين تشمل APIs وCal Atoms وembeds وwebhooks. أضافت في 2026 وكلاء لإدارة المواعيد من Slack وTelegram والبريد وCLI، وCal.ai للمكالمات، وCal Pay، وملخصات اجتماعات Cal Video تدريجيًا. من يحتاج كودًا مفتوحًا للاستضافة الذاتية يمكنه استخدام Cal.diy MIT، لكن النسخة المجتمعية لا تعادل المنتج التجاري في الميزات أو الدعم أو الجاهزية المؤسسية."
     }
   },
   "market_data": {
-    "target_audience": "المطورون، الشركات الناشئة، المؤسسات الصحية، ومنصات الويب.",
-    "market_size": "سوق برمجيات الجدولة يقدر بـ 1.5 مليار دولار.",
-    "growth_rate": "معدل تبني عالي جداً في مجتمعات المطورين وعلى GitHub."
+    "target_audience": "الأفراد والمستقلون، وفرق المبيعات والتوظيف والدعم، والمنظمات والمؤسسات، والقطاع الصحي والتعليم والخدمات العامة، والمطورون والمنصات والأسواق الثنائية التي تحتاج جدولة مدمجة أو white-label. تختلف الحاجة بين رابط بسيط وخطة SaaS تعاونية وPlatform مبنية على عدد الحجوزات أو Enterprise مخصص.",
+    "market_size": "لم تنشر Cal.com دراسة حديثة قابلة للتحقق لحجم سوق برمجيات الجدولة أو TAM الخاص بها. هدف «ربط مليار شخص بحلول 2031» رسالة طموح وليس حجم سوق ماليًا، كما أن عدد مستخدمي التقويم أو الاجتماعات عالميًا لا يتحول تلقائيًا إلى سوق قابل للدفع. لذلك أزيل رقم 1.5 مليار دولار غير المعرّف.",
+    "growth_rate": "لا يوجد معدل نمو حالي موحد وموثق للإيراد أو المستخدمين أو الحجوزات. الإفصاح الرسمي لعام 2023 سجل ARR بقيمة مليون دولار و13,667 MAU و113,503 حجوزات شهرية و25,500 نجمة GitHub، بينما يعرض المستودع في أغسطس 2026 نحو 44.8 ألف نجمة. تغير الترخيص وفصل Cal.diy عن المنتج التجاري يجعل النجوم الجديدة مقياس مجتمع، لا دليلًا مباشرًا على نمو SaaS أو الإيراد."
   },
   "financials": {
-    "initial_investment": "حصلت على تمويل جولة تأسيسية قوي بدعم من مجتمع المصادر المفتوحة.",
-    "valuation": "$100M+",
+    "initial_investment": "بدأ المشروع كعمل جانبي باسم Calendso، ثم جمع Seed بقيمة 7.4 ملايين دولار، وتبعها Series A بقيمة 25 مليون دولار في 2022. تعلن الشركة أن إجمالي التمويل بلغ 32.4 مليون دولار. هذا تمويل رأسمالي يمنح runway ولا يمثل إيرادًا أو تقييمًا أو قيمة سوقية.",
+    "valuation": "غير مُفصح عنه في مصدر أولي موثوق. لم تنشر إعلانات Seed أو Series A نسبة الملكية أو التقييم قبل الاستثمار أو بعده. ظهرت تقديرات خارجية تتجاوز 100 مليون دولار، لكنها لم تُستخدم لأن الشركة لم تؤكدها.",
     "revenue_streams": [
-      "اشتراكات الفرق (SaaS)",
-      "تراخيص الاستضافة الذاتية للشركات (Enterprise)",
-      "البنية التحتية كخدمة للجدولة (Platform API)"
+      "اشتراكات Teams بسعر معلن 12 دولارًا لكل مستخدم شهريًا عند الفوترة السنوية، وOrganizations بسعر 28 دولارًا، وEnterprise بتسعير مخصص.",
+      "Platform Starter مجانًا حتى 25 حجزًا شهريًا ثم رسوم تجاوز، وEssentials من 299 دولارًا شهريًا وScale من 2,499 دولارًا، إضافة إلى Enterprise مخصص.",
+      "عقود Enterprise تشمل onboarding ودعمًا هندسيًا وSLA وتكاملات الدليل وDedicated Database، وقد تشمل استضافة أو نشرًا مؤسسيًا خاصًا.",
+      "Cal.ai بسعر 0.29 دولار للدقيقة مع أرصدة مضمنة لبعض الخطط وشراء أرصدة إضافية.",
+      "رسوم أو اقتصاديات مرتبطة بخدمات الدفع والحجوزات المدفوعة مثل Cal Pay وStripe وPayPal؛ توفر الخدمة لا يكشف صافي إيراد Cal.com أو نسبة العمولة.",
+      "Cal.diy MIT مجاني ومجتمعي ولا يولد اشتراكًا تلقائيًا؛ قد يقود إلى تبني أو خدمات تجارية منفصلة، لكن لا يجوز احتساب النجوم أو التنزيلات كإيراد."
     ]
   },
   "lessons": [
     {
-      "title": "المصادر المفتوحة كأداة تسويق",
-      "description": "كون المنتج مفتوح المصدر (Open Source) جعله ينتشر كالنار في الهشيم بين المطورين الذين أصبحوا سفراء للمنتج داخل شركاتهم."
+      "title": "المصدر المفتوح ليس حالة دائمة بل عقد ثقة يجب تحديثه",
+      "description": "بنت Cal.com توزيعها الأولي على الشفافية والكود المفتوح، ثم فصلت في 2026 المنتج التجاري الخاص عن Cal.diy المفتوح. الدرس أن تغيير الترخيص قد يكون قرارًا استراتيجيًا مشروعًا، لكنه يحتاج إلى لغة صريحة تمنع العملاء من افتراض أن النسختين متكافئتان."
     },
     {
-      "title": "استهداف نقطة ضعف المنافس",
-      "description": "كان Calendly يرفض توفير واجهة برمجية متقدمة وتخصيص عميق، فدخلت Cal.com لملء هذا الفراغ تحديداً."
+      "title": "افصل مقياس المجتمع عن مقياس الشركة",
+      "description": "44.8 ألف نجمة على GitHub تثبت اهتمام المطورين وتاريخ المشروع، لكنها لا تكشف العملاء الدافعين أو MRR أو الحجوزات السحابية. كل لوحة قياس تحتاج فصل النجوم والفروع عن المستخدمين النشطين والحجوزات والإيراد."
     },
     {
-      "title": "بناء علامة تجارية قوية",
-      "description": "استثمروا في شراء النطاق القصير Cal.com مما أعطاهم مصداقية عالية ومظهر شركة عالمية منذ اليوم الأول."
+      "title": "ابدأ بالرابط ثم اصعد إلى البنية التحتية",
+      "description": "الرابط الفردي يجذب المستخدم بسرعة، بينما القيمة الأعلى تأتي من routing وround-robin وSSO وAPIs وAtoms والـwhite-label. هذا يسمح للمنتج بالتوسع من أداة شخصية إلى طبقة داخل منتج أو مؤسسة."
+    },
+    {
+      "title": "السعر لكل مستخدم والسعر لكل حجز يخدمان وظيفتين مختلفتين",
+      "description": "الفرق والمنظمات تدفع حسب المقاعد لأن القيمة تعاونية وإدارية، بينما Platform تدفع حسب حجم الحجوزات لأنها تبني الجدولة داخل منتجها. اختيار وحدة التسعير الصحيحة يجعل الفاتورة أقرب إلى القيمة التي يتلقاها العميل."
+    },
+    {
+      "title": "الامتثال لا يأتي تلقائيًا من الاستضافة الذاتية",
+      "description": "امتلاك الخادم والكود يمنح تحكمًا، لكنه ينقل مسؤولية التحديث والأسرار وقاعدة البيانات والمراقبة إلى المستخدم. تحذير Cal.diy من الاستخدام الإنتاجي يوضح أن self-hosting خيار هندسي، لا شهادة أمن أو HIPAA تلقائية."
+    },
+    {
+      "title": "وكلاء الذكاء الاصطناعي يوسعون الواجهة ولا يلغون محرك الجدولة",
+      "description": "Agents وCal.ai وملخصات الاجتماعات تضيف قنوات جديدة للأوامر والمكالمات والمعلومات، لكن القيمة الأساسية تبقى في availability وrouting والتقويم والصلاحيات والwebhooks. الوكيل الجيد يعتمد على بنية وقت موثوقة تحته."
+    }
+  ],
+  "tools": [
+    "Cal.com SaaS: booking links وround-robin وcollective events وmanaged events وrouting forms وworkflows",
+    "Platform APIs وCal Atoms المبنية بمكونات React للجدولة المضمنة وwhite-label",
+    "Webhooks وOAuth وAPI v2 مع حدود استخدام تختلف حسب طريقة المصادقة والخطة",
+    "Cal.com Agents عبر Slack وTelegram والبريد وCLI ومهارات لوكلاء مستضافين",
+    "Cal.ai للمكالمات الآلية والنصوص والتحليلات داخل Workflows",
+    "Cal Video وCal.com Notes وCal Pay المدعوم من Whop؛ بعض الميزات تُطرح تدريجيًا",
+    "Cal Companion: تطبيقات iOS وAndroid وإضافات Chrome وFirefox وSafari",
+    "Cal.diy MIT: Next.js وReact وtRPC وTailwind CSS وPrisma وPostgreSQL وNode.js وYarn",
+    "Docker وDocker Compose متاحان لـCal.diy، مع مسؤولية المستخدم عن الأسرار والتحديث والأمن",
+    "Cal.diy لا يتضمن Teams وOrganizations وInsights وWorkflows وSSO/SAML وميزات Enterprise الأخرى",
+    "SOC 2 Type II وISO 27001 وHIPAA وGDPR وCCPA مذكورة في صفحة أمن Cal.com التجارية؛ لا تُنقل تلقائيًا إلى تثبيت Cal.diy ذاتي",
+    "المكدس الداخلي للمنتج التجاري أصبح خاصًا بعد أبريل 2026، لذلك لا يجوز اعتبار مستودع Cal.diy كشفًا كاملًا لبنية Cal.com الإنتاجية"
+  ],
+  "verification": {
+    "status": "verified_with_material_licensing_revenue_traffic_funding_and_product_corrections",
+    "verified_on": "2026-08-03",
+    "source_policy": {
+      "priority_order": [
+        "صفحات Cal.com القانونية والتسعير والمنتج والوثائق",
+        "إعلانات التمويل والترخيص والإصدارات الرسمية",
+        "المستودع الرسمي Cal.diy ومقاييس GitHub",
+        "إفصاحات Open Startup التاريخية والحالية",
+        "لم تُستخدم تقديرات إيراد أو زيارات أو تقييم من قواعد بيانات تجارية"
+      ],
+      "sec_applicability": "غير منطبق عمليًا: Cal.com, Inc. شركة خاصة أمريكية وليست مُصدرًا عامًا معروفًا لدى SEC.",
+      "financial_rule": "تم فصل الإيراد وARR وMRR والتمويل والتقييم وأسعار الخطط وقيمة الحجوزات والمدفوعات.",
+      "usage_rule": "تم فصل زيارات الموقع وMAU والحجوزات وGitHub stars وforks والعملاء الدافعين.",
+      "license_rule": "تم فصل Cal.com التجاري المغلق المصدر عن Cal.diy MIT، وعدم استخدام مصطلح Open Core بوصفه توصيفًا حاليًا شاملًا.",
+      "technology_rule": "المكدس المفتوح يخص Cal.diy؛ لا يُعرض بوصفه كشفًا كاملًا للمنتج التجاري الخاص."
+    },
+    "important_notes": [
+      "منذ أبريل 2026 أصبح كود Cal.com التجاري مغلق المصدر، واستمر Cal.diy كإصدار مجتمعي MIT.",
+      "Cal.diy لا يحتوي على Teams وOrganizations وInsights وWorkflows وSSO/SAML وميزات Enterprise الأخرى.",
+      "مستودع Cal.diy يحذر من استخدامه الإنتاجي دون خبرة في الخوادم وقواعد البيانات والأمن.",
+      "الإيراد الشهري وARR الحاليان غير معلنين نصيًا بصورة يمكن التحقق منها.",
+      "ARR البالغ مليون دولار يعود إلى نوفمبر 2023 ولا يمثل إيراد 2026.",
+      "التقدير الأصلي 150 ألف دولار شهريًا أزيل لعدم وجود مصدر حديث موثوق.",
+      "زيارات cal.com الشهرية غير معلنة، لذلك أزيل رقم مليوني زيارة.",
+      "نحو 44.8 ألف GitHub star و14.7 ألف fork مقاييس مجتمع تراكمية وليست مستخدمين أو زيارات أو عملاء.",
+      "13,667 MAU و113,503 حجوزات شهرية أرقام تاريخية من نوفمبر 2023.",
+      "Seed بقيمة 7.4 ملايين دولار وSeries A بقيمة 25 مليونًا يساويان إجمالي التمويل المعلن 32.4 مليون دولار.",
+      "التمويل ليس إيرادًا أو تقييمًا.",
+      "التقييم غير معلن؛ لم يُستخدم رقم 100 مليون دولار+ أو تقدير 150 مليونًا.",
+      "خطة Individuals مجانية مع حجوزات وأنواع أحداث غير محدودة وفق صفحة التسعير الحالية.",
+      "Teams بسعر 12 دولارًا لكل مستخدم شهريًا وOrganizations بسعر 28 دولارًا عند الفوترة السنوية؛ الأسعار قابلة للتغيير.",
+      "Platform Starter يشمل 25 حجزًا ثم 0.99 دولار للحجز الزائد، بينما الخطط الأعلى لها حدود ورسوم مختلفة.",
+      "Cal.ai يسعر 0.29 دولار للدقيقة، مع أرصدة مضمنة في بعض الخطط.",
+      "Cal Pay مدعوم من Whop وفق إصدار يوليو 2026؛ لم يُعلن صافي حصة Cal.com من المدفوعات.",
+      "Cal.com Notes كان يُطرح تدريجيًا في يوليو 2026 ولا يجوز اعتباره متاحًا لجميع الحسابات فورًا.",
+      "SOC 2 Type II وISO 27001 وHIPAA وغيرها تخص ضوابط Cal.com التجارية المعلنة، ولا تمنح تثبيت Cal.diy امتثالًا تلقائيًا.",
+      "عنوان سان فرانسيسكو في سياسة الخصوصية عنوان مراسلات؛ الشركة تقول إنها موزعة ولا تملك مقرًا فعليًا.",
+      "هدف ربط مليار شخص بحلول 2031 رسالة ورسالة نمو وليس TAM أو عدد مستخدمين حاليًا.",
+      "رقم سوق الجدولة 1.5 مليار دولار حُذف لغياب تعريف وتاريخ ومصدر أولي.",
+      "المقارنة بأن Calendly يرفض API أو لا يحافظ على الخصوصية حُذفت لأنها تعميم غير موثق.",
+      "مكدس Next.js وReact وtRPC وPrisma وPostgreSQL يخص Cal.diy المنشور، وليس بالضرورة كل بنية Cal.com الخاصة."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_at": "2026-08-03",
+      "checks_passed": 138,
+      "checks_failed": 0,
+      "checks": [
+        {
+          "name": "base_key_id",
+          "passed": true,
+          "details": "الحقل الأساسي id موجود."
+        },
+        {
+          "name": "base_key_slug",
+          "passed": true,
+          "details": "الحقل الأساسي slug موجود."
+        },
+        {
+          "name": "base_key_name",
+          "passed": true,
+          "details": "الحقل الأساسي name موجود."
+        },
+        {
+          "name": "base_key_headline",
+          "passed": true,
+          "details": "الحقل الأساسي headline موجود."
+        },
+        {
+          "name": "base_key_category",
+          "passed": true,
+          "details": "الحقل الأساسي category موجود."
+        },
+        {
+          "name": "base_key_company",
+          "passed": true,
+          "details": "الحقل الأساسي company موجود."
+        },
+        {
+          "name": "base_key_directory_snapshot",
+          "passed": true,
+          "details": "الحقل الأساسي directory_snapshot موجود."
+        },
+        {
+          "name": "base_key_overview",
+          "passed": true,
+          "details": "الحقل الأساسي overview موجود."
+        },
+        {
+          "name": "base_key_market_data",
+          "passed": true,
+          "details": "الحقل الأساسي market_data موجود."
+        },
+        {
+          "name": "base_key_financials",
+          "passed": true,
+          "details": "الحقل الأساسي financials موجود."
+        },
+        {
+          "name": "base_key_lessons",
+          "passed": true,
+          "details": "الحقل الأساسي lessons موجود."
+        },
+        {
+          "name": "professional_v2_key_tools",
+          "passed": true,
+          "details": "قسم Professional V2 tools موجود."
+        },
+        {
+          "name": "professional_v2_key_verification",
+          "passed": true,
+          "details": "قسم Professional V2 verification موجود."
+        },
+        {
+          "name": "professional_v2_key_evidence_map_schema",
+          "passed": true,
+          "details": "قسم Professional V2 evidence_map_schema موجود."
+        },
+        {
+          "name": "professional_v2_key_evidence_map",
+          "passed": true,
+          "details": "قسم Professional V2 evidence_map موجود."
+        },
+        {
+          "name": "professional_v2_key_sources",
+          "passed": true,
+          "details": "قسم Professional V2 sources موجود."
+        },
+        {
+          "name": "json_root_object",
+          "passed": true,
+          "details": "الجذر كائن JSON."
+        },
+        {
+          "name": "original_id_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على id الأصلي."
+        },
+        {
+          "name": "original_slug_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على slug الأصلي."
+        },
+        {
+          "name": "original_name_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على الاسم."
+        },
+        {
+          "name": "base_structure_preserved",
+          "passed": true,
+          "details": "تم الحفاظ على البنية الأساسية."
+        },
+        {
+          "name": "arabic_content",
+          "passed": true,
+          "details": "المحتوى النهائي عربي."
+        },
+        {
+          "name": "source_ids_unique",
+          "passed": true,
+          "details": "معرّفات المصادر فريدة."
+        },
+        {
+          "name": "minimum_sources",
+          "passed": true,
+          "details": "عدد المصادر 22."
+        },
+        {
+          "name": "all_sources_primary",
+          "passed": true,
+          "details": "كل المصادر صادرة عن الشركة أو مستودعها الرسمي."
+        },
+        {
+          "name": "source_urls_valid",
+          "passed": true,
+          "details": "كل الروابط صالحة بنيويًا."
+        },
+        {
+          "name": "source_metadata_complete",
+          "passed": true,
+          "details": "بيانات المصادر مكتملة."
+        },
+        {
+          "name": "no_duplicate_urls",
+          "passed": true,
+          "details": "لا توجد روابط مكررة."
+        },
+        {
+          "name": "evidence_paths_complete",
+          "passed": true,
+          "details": "خريطة الأدلة تغطي 15 مسارًا."
+        },
+        {
+          "name": "value_match_$.company.location",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.company.location."
+        },
+        {
+          "name": "fields_complete_$.company.location",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.company.location."
+        },
+        {
+          "name": "source_count_$.company.location",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.company.location."
+        },
+        {
+          "name": "source_ids_exist_$.company.location",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.company.location."
+        },
+        {
+          "name": "reference_integrity_$.company.location",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.company.location."
+        },
+        {
+          "name": "value_match_$.company.business_model",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.company.business_model."
+        },
+        {
+          "name": "fields_complete_$.company.business_model",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.company.business_model."
+        },
+        {
+          "name": "source_count_$.company.business_model",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.company.business_model."
+        },
+        {
+          "name": "source_ids_exist_$.company.business_model",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.company.business_model."
+        },
+        {
+          "name": "reference_integrity_$.company.business_model",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.company.business_model."
+        },
+        {
+          "name": "value_match_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "fields_complete_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "source_count_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "source_ids_exist_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "reference_integrity_$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.directory_snapshot.monthly_revenue."
+        },
+        {
+          "name": "value_match_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "fields_complete_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "source_count_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "source_ids_exist_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "reference_integrity_$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.directory_snapshot.monthly_traffic."
+        },
+        {
+          "name": "value_match_$.overview.problem",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.overview.problem."
+        },
+        {
+          "name": "fields_complete_$.overview.problem",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.overview.problem."
+        },
+        {
+          "name": "source_count_$.overview.problem",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.overview.problem."
+        },
+        {
+          "name": "source_ids_exist_$.overview.problem",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.overview.problem."
+        },
+        {
+          "name": "reference_integrity_$.overview.problem",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.overview.problem."
+        },
+        {
+          "name": "value_match_$.overview.solution",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.overview.solution."
+        },
+        {
+          "name": "fields_complete_$.overview.solution",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.overview.solution."
+        },
+        {
+          "name": "source_count_$.overview.solution",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.overview.solution."
+        },
+        {
+          "name": "source_ids_exist_$.overview.solution",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.overview.solution."
+        },
+        {
+          "name": "reference_integrity_$.overview.solution",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.overview.solution."
+        },
+        {
+          "name": "value_match_$.market_data.target_audience",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "fields_complete_$.market_data.target_audience",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "source_count_$.market_data.target_audience",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "source_ids_exist_$.market_data.target_audience",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "reference_integrity_$.market_data.target_audience",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.market_data.target_audience."
+        },
+        {
+          "name": "value_match_$.market_data.market_size",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.market_data.market_size."
+        },
+        {
+          "name": "fields_complete_$.market_data.market_size",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.market_data.market_size."
+        },
+        {
+          "name": "source_count_$.market_data.market_size",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.market_data.market_size."
+        },
+        {
+          "name": "source_ids_exist_$.market_data.market_size",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.market_data.market_size."
+        },
+        {
+          "name": "reference_integrity_$.market_data.market_size",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.market_data.market_size."
+        },
+        {
+          "name": "value_match_$.market_data.growth_rate",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "fields_complete_$.market_data.growth_rate",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "source_count_$.market_data.growth_rate",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "source_ids_exist_$.market_data.growth_rate",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "reference_integrity_$.market_data.growth_rate",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.market_data.growth_rate."
+        },
+        {
+          "name": "value_match_$.financials.initial_investment",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "fields_complete_$.financials.initial_investment",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "source_count_$.financials.initial_investment",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "source_ids_exist_$.financials.initial_investment",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "reference_integrity_$.financials.initial_investment",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.financials.initial_investment."
+        },
+        {
+          "name": "value_match_$.financials.valuation",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.financials.valuation."
+        },
+        {
+          "name": "fields_complete_$.financials.valuation",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.financials.valuation."
+        },
+        {
+          "name": "source_count_$.financials.valuation",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.financials.valuation."
+        },
+        {
+          "name": "source_ids_exist_$.financials.valuation",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.financials.valuation."
+        },
+        {
+          "name": "reference_integrity_$.financials.valuation",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.financials.valuation."
+        },
+        {
+          "name": "value_match_$.financials.revenue_streams",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "fields_complete_$.financials.revenue_streams",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "source_count_$.financials.revenue_streams",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "source_ids_exist_$.financials.revenue_streams",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "reference_integrity_$.financials.revenue_streams",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.financials.revenue_streams."
+        },
+        {
+          "name": "value_match_$.tools",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.tools."
+        },
+        {
+          "name": "fields_complete_$.tools",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.tools."
+        },
+        {
+          "name": "source_count_$.tools",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.tools."
+        },
+        {
+          "name": "source_ids_exist_$.tools",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.tools."
+        },
+        {
+          "name": "reference_integrity_$.tools",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.tools."
+        },
+        {
+          "name": "value_match_$.headline",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.headline."
+        },
+        {
+          "name": "fields_complete_$.headline",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.headline."
+        },
+        {
+          "name": "source_count_$.headline",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.headline."
+        },
+        {
+          "name": "source_ids_exist_$.headline",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.headline."
+        },
+        {
+          "name": "reference_integrity_$.headline",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.headline."
+        },
+        {
+          "name": "value_match_$.lessons",
+          "passed": true,
+          "details": "القيمة مطابقة للمسار $.lessons."
+        },
+        {
+          "name": "fields_complete_$.lessons",
+          "passed": true,
+          "details": "حقول الدليل مكتملة للمسار $.lessons."
+        },
+        {
+          "name": "source_count_$.lessons",
+          "passed": true,
+          "details": "عدد المصادر متسق للمسار $.lessons."
+        },
+        {
+          "name": "source_ids_exist_$.lessons",
+          "passed": true,
+          "details": "معرّفات المصادر صحيحة للمسار $.lessons."
+        },
+        {
+          "name": "reference_integrity_$.lessons",
+          "passed": true,
+          "details": "المراجع متطابقة للمسار $.lessons."
+        },
+        {
+          "name": "no_nan_infinity",
+          "passed": true,
+          "details": "لا توجد قيم JSON غير صالحة."
+        },
+        {
+          "name": "old_monthly_revenue_removed",
+          "passed": true,
+          "details": "أزيل تقدير الإيراد الأصلي."
+        },
+        {
+          "name": "monthly_revenue_undisclosed",
+          "passed": true,
+          "details": "لم يُخترع الإيراد الحالي."
+        },
+        {
+          "name": "historical_arr_labeled",
+          "passed": true,
+          "details": "ARR التاريخي موسوم بالتاريخ."
+        },
+        {
+          "name": "old_traffic_removed",
+          "passed": true,
+          "details": "أزيل تقدير الزيارات الأصلي."
+        },
+        {
+          "name": "traffic_undisclosed",
+          "passed": true,
+          "details": "لم تُخترع الزيارات."
+        },
+        {
+          "name": "stars_not_traffic",
+          "passed": true,
+          "details": "تم فصل GitHub عن الزيارات."
+        },
+        {
+          "name": "open_core_corrected",
+          "passed": true,
+          "details": "تم تحديث النموذج بعد أبريل 2026."
+        },
+        {
+          "name": "closed_source_present",
+          "passed": true,
+          "details": "تم توثيق المنتج التجاري الخاص."
+        },
+        {
+          "name": "cal_diy_mit_present",
+          "passed": true,
+          "details": "تم توثيق Cal.diy."
+        },
+        {
+          "name": "enterprise_features_separated",
+          "passed": true,
+          "details": "تم فصل الميزات التجارية."
+        },
+        {
+          "name": "funding_total_correct",
+          "passed": true,
+          "details": "إجمالي التمويل صحيح."
+        },
+        {
+          "name": "funding_not_revenue",
+          "passed": true,
+          "details": "تم فصل التمويل."
+        },
+        {
+          "name": "valuation_undisclosed",
+          "passed": true,
+          "details": "لم يُخترع تقييم."
+        },
+        {
+          "name": "old_valuation_removed",
+          "passed": true,
+          "details": "أزيل التقييم الأصلي."
+        },
+        {
+          "name": "market_size_removed",
+          "passed": true,
+          "details": "لم يُخترع TAM."
+        },
+        {
+          "name": "one_billion_not_tam",
+          "passed": true,
+          "details": "تم فصل الرسالة عن TAM."
+        },
+        {
+          "name": "growth_rate_not_invented",
+          "passed": true,
+          "details": "لم يُخترع معدل نمو."
+        },
+        {
+          "name": "pricing_current",
+          "passed": true,
+          "details": "تسعير SaaS الحالي موجود."
+        },
+        {
+          "name": "platform_pricing_current",
+          "passed": true,
+          "details": "تسعير Platform موجود."
+        },
+        {
+          "name": "cal_ai_pricing",
+          "passed": true,
+          "details": "تسعير Cal.ai موجود."
+        },
+        {
+          "name": "payment_take_rate_not_invented",
+          "passed": true,
+          "details": "لم تُخترع عمولة الدفع."
+        },
+        {
+          "name": "security_self_host_caveat",
+          "passed": true,
+          "details": "تم فصل امتثال SaaS عن self-hosting."
+        },
+        {
+          "name": "private_stack_boundary",
+          "passed": true,
+          "details": "المكدس التجاري مقيد."
+        },
+        {
+          "name": "latest_product_features",
+          "passed": true,
+          "details": "ميزات يوليو 2026 موجودة."
+        },
+        {
+          "name": "agents_present",
+          "passed": true,
+          "details": "الوكلاء موجودون."
+        },
+        {
+          "name": "lessons_unique",
+          "passed": true,
+          "details": "الدروس فريدة."
+        },
+        {
+          "name": "lessons_company_specific",
+          "passed": true,
+          "details": "الدروس خاصة بـCal.com."
+        },
+        {
+          "name": "metric_taxonomy",
+          "passed": true,
+          "details": "فصل المقاييس شامل."
+        },
+        {
+          "name": "schema_version",
+          "passed": true,
+          "details": "إصدار Professional V2 صحيح."
+        },
+        {
+          "name": "verified_date_consistent",
+          "passed": true,
+          "details": "تاريخ التحقق متسق."
+        },
+        {
+          "name": "sec_note",
+          "passed": true,
+          "details": "تم توضيح SEC."
+        },
+        {
+          "name": "license_rule",
+          "passed": true,
+          "details": "قاعدة الترخيص موجودة."
+        },
+        {
+          "name": "technology_rule",
+          "passed": true,
+          "details": "قاعدة التقنية موجودة."
+        }
+      ],
+      "validator_notes": [
+        "تمت قراءة الملف الأصلي من المسار المرفق والتحقق من صحة JSON.",
+        "تم الحفاظ على الحقول الأساسية وإضافة tools وverification وevidence_map_schema وevidence_map وsources.",
+        "تمت مطابقة كل field_value مع الحقل النهائي المقابل.",
+        "تم التحقق من تكامل معرّفات المصادر وروابطها وعددها.",
+        "تم الفصل بين الإيراد وARR وMRR والتمويل والتقييم والأسعار والمدفوعات.",
+        "تم الفصل بين الزيارات وMAU والحجوزات وGitHub stars وforks.",
+        "تم تصحيح Open Core إلى فصل Cal.com التجاري وCal.diy المجتمعي بعد أبريل 2026.",
+        "تم تقييد مكدس Cal.diy وعدم عرضه كمكدس المنتج التجاري الخاص.",
+        "تم منع NaN وInfinity والتقديرات المالية أو السوقية غير المدعومة."
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول الجوهرية بالقيم النهائية والمصادر والقيود، مع فصل الترخيص والإيراد والتمويل والاستخدام والتقنيات.",
+    "required_fields": [
+      "field_value",
+      "verification_status",
+      "confidence",
+      "claim_type",
+      "verified_on",
+      "evidence_summary",
+      "source_ids",
+      "source_references",
+      "limitations",
+      "source_count"
+    ],
+    "verification_status_values": [
+      "verified_remote_company_with_us_legal_contact",
+      "verified_post_2026_closed_source_and_cal_diy_split",
+      "verified_current_revenue_undisclosed_historical_arr_only",
+      "verified_web_traffic_undisclosed_with_community_and_historical_metrics",
+      "verified_complex_scheduling_problem_without_competitor_absolutes",
+      "verified_current_commercial_product_and_cal_diy_scope",
+      "verified_multi_segment_and_platform_audience",
+      "verified_no_company_tam",
+      "verified_no_current_comparable_growth_rate",
+      "verified_seed_series_a_and_total_funding",
+      "verified_as_not_publicly_disclosed",
+      "verified_current_pricing_and_product_pathways_not_revenue_mix",
+      "verified_commercial_features_and_cal_diy_stack_with_boundary",
+      "verified_editorial_synthesis_of_2026_strategy",
+      "analytical_inference_grounded_in_company_strategy_and_product"
+    ],
+    "confidence_scale": {
+      "مرتفعة": "مدعوم بمصدر قانوني أو رسمي أو مستودع الشركة، أو بعدم وجود إفصاح رغم مراجعة المصادر الأولية.",
+      "متوسطة إلى مرتفعة": "مدعوم بعدة مصادر أولية مع عنصر تحليلي أو قيد زمني.",
+      "متوسطة": "استنتاج تحريري مبني على أدلة معلنة مع حدود صريحة.",
+      "منخفضة": "دليل غير كاف؛ لا تُستخدم الدرجة لإثبات رقم مالي."
+    },
+    "metric_separation": [
+      "الإيراد الشهري",
+      "ARR",
+      "MRR",
+      "التمويل",
+      "التقييم",
+      "سعر الخطة",
+      "رسوم الحجز",
+      "إيراد Enterprise",
+      "إيراد Cal.ai",
+      "حجم المدفوعات",
+      "زيارات الموقع",
+      "المستخدمون النشطون شهريًا",
+      "الحجوزات الشهرية",
+      "GitHub stars",
+      "GitHub forks",
+      "العملاء الدافعون",
+      "المستخدمون المجانيون",
+      "Cal.com التجاري",
+      "Cal.diy المجتمعي",
+      "ميزات Enterprise",
+      "المكدس المفتوح",
+      "المكدس التجاري الخاص"
+    ]
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "Cal.com, Inc. شركة أمريكية موزعة بالكامل تعمل عن بُعد وتقول صراحة إنها لا تملك مقرًا تشغيليًا فعليًا ولا تخطط لإنشائه. تعرض سياسة الخصوصية عنوان مراسلات قانونيًا في 2261 Market Street #4382، سان فرانسيسكو، كاليفورنيا، بينما بدأ المشروع باسم Calendso ثم أعيدت تسميته إلى Cal.com. لذلك فإن وصف الموقع الصحيح هو «شركة موزعة عالميًا بكيان وعنوان مراسلات أمريكي»، لا مقر واحد تقليدي.",
+      "verification_status": "verified_remote_company_with_us_legal_contact",
+      "confidence": "مرتفعة",
+      "claim_type": "هوية وموقع",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "صفحة الشركة تؤكد العمل الموزع دون مقر فعلي، بينما سياسة الخصوصية تعرض عنوان المراسلات الأمريكي والكيان.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-13",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Cal.com, Inc.",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Global salaries and remote organization",
+          "supports": "عدم وجود مقر فعلي والعمل عن بُعد"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Cal.com Privacy Policy",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/privacy",
+          "source_type": "سياسة قانونية رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "سياسة قانونية",
+          "source_locator": "DPO and contact address",
+          "supports": "Cal.com, Inc. وعنوان سان فرانسيسكو"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Cal.com Terms of Service",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/terms",
+          "source_type": "شروط قانونية رسمية",
+          "published_at": "2021-04-14",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "شروط قانونية",
+          "source_locator": "Company identity",
+          "supports": "اسم الكيان"
+        }
+      ],
+      "limitations": "عنوان المراسلات لا يثبت مقرًا تشغيليًا، ولا توجد قائمة عامة كاملة بالكيانات التابعة أو أماكن الموظفين.",
+      "source_count": 3
+    },
+    "$.company.business_model": {
+      "field_value": "لم يعد وصف Open Core وحده دقيقًا بعد أبريل 2026. المنتج التجاري Cal.com أصبح مغلق المصدر ويحقق الدخل من SaaS للأفراد والفرق والمنظمات والمؤسسات، ومن Platform APIs وCal Atoms حسب عدد الحجوزات، ومن Enterprise/on-premise والدعم، ومن استخدامات مدفوعة مثل Cal.ai بالدقيقة. في المقابل أصبح Cal.diy إصدارًا مجتمعيًا منفصلًا بترخيص MIT للاستضافة الذاتية على مسؤولية المستخدم، ومن دون ميزات Teams وOrganizations وInsights وWorkflows وSSO/SAML التجارية.",
+      "verification_status": "verified_post_2026_closed_source_and_cal_diy_split",
+      "confidence": "مرتفعة",
+      "claim_type": "نموذج عمل وترخيص",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "إعلانات أبريل 2026 والمستودع والتسعير تثبت فصل المنتج التجاري الخاص عن Cal.diy MIT ومسارات SaaS وPlatform وAI.",
+      "source_ids": [
+        "SRC-07",
+        "SRC-08",
+        "SRC-09",
+        "SRC-02",
+        "SRC-03",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Cal.com is going closed source. Here's why.",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/cal-com-goes-closed-source-why",
+          "source_type": "إعلان استراتيجية وترخيص رسمي",
+          "published_at": "2026-04-14",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان استراتيجية",
+          "source_locator": "Closed-source transition",
+          "supports": "انتقال المنتج التجاري إلى كود خاص"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Cal.com v6.4 — License Changes",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/calcom-v6-4",
+          "source_type": "إعلان إصدار رسمي",
+          "published_at": "2026-04-15",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان إصدار",
+          "source_locator": "Cal.diy MIT launch",
+          "supports": "الإصدار المجتمعي"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "calcom/cal.diy Repository",
+          "publisher": "Cal.com / GitHub",
+          "url": "https://github.com/calcom/cal.diy",
+          "source_type": "مستودع برمجي رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مستودع رسمي",
+          "source_locator": "Differences from Cal.com",
+          "supports": "الميزات المحذوفة وتحذير self-hosting"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Cal.com Pricing",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/pricing",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير SaaS",
+          "source_locator": "Plans",
+          "supports": "اشتراكات الفرق والمنظمات والمؤسسات"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Cal.com Platform Pricing",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/ar/platform/pricing",
+          "source_type": "صفحة تسعير منصة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير Platform",
+          "source_locator": "Bookings-based pricing",
+          "supports": "تسعير البنية التحتية"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Cal.ai — AI-Powered Phone Calls",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/ai",
+          "source_type": "صفحة منتج وتسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير AI",
+          "source_locator": "Per-minute pricing",
+          "supports": "Cal.ai"
+        }
+      ],
+      "limitations": "لم تنشر الشركة مزيج الإيرادات أو نسبة الدخل من كل مسار.",
+      "source_count": 6
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير مُفصح عنه علنًا بصورة حديثة وموثوقة. أقدم رقم رسمي واضح وجدته هو ARR بقيمة مليون دولار في نوفمبر 2023، وهو مقياس تاريخي لا يصلح لتقدير إيراد أغسطس 2026. لا يوجد MRR حالي ظاهر نصيًا في صفحة Open Startup، لذلك أزيل تقدير 150 ألف دولار شهريًا ولم تُستخدم أسعار الخطط أو التمويل لاشتقاق الإيراد.",
+      "verification_status": "verified_current_revenue_undisclosed_historical_arr_only",
+      "confidence": "مرتفعة",
+      "claim_type": "إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الرقم الرسمي الواضح هو ARR تاريخي بقيمة 1M في 2023، ولا يظهر رقم حديث نصيًا في صفحة Open Startup.",
+      "source_ids": [
+        "SRC-11",
+        "SRC-10",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "Cal.com v3.6 — The Year in Numbers",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/v-3-6",
+          "source_type": "إفصاح تشغيلي رسمي تاريخي",
+          "published_at": "2023-11-15",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح تشغيلي تاريخي",
+          "source_locator": "Year in numbers",
+          "supports": "ARR بقيمة 1M في نوفمبر 2023"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "The Most Public Private Company",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/open",
+          "source_type": "صفحة مؤشرات وشفافية رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شفافية حالية",
+          "source_locator": "Embedded metrics",
+          "supports": "استمرار صفحة المؤشرات دون قيمة نصية قابلة للتحقق"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Cal.com Pricing",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/pricing",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير رسمي",
+          "source_locator": "Current plans",
+          "supports": "الأسعار لا تساوي الإيراد"
+        }
+      ],
+      "limitations": "قد توجد بيانات داخل لوحة مضمنة لا يمكن استخراجها من النص العام؛ لذلك لا يُستنتج MRR أو ARR حالي.",
+      "source_count": 3
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير مُفصح عنه علنًا، ولا يوجد رقم موثوق لزيارات cal.com الشهرية. يمكن رصد مؤشرات مختلفة: مستودع Cal.diy يعرض نحو 44.8 ألف نجمة و14.7 ألف fork وقت التحقق، بينما كان الإفصاح الرسمي في نوفمبر 2023 يتحدث عن 13,667 مستخدمًا نشطًا شهريًا و113,503 حجوزات شهرية. النجوم والفروع والحجوزات والمستخدمون ليست زيارات ويب، كما أن مقاييس 2023 قديمة ولا تمثل الوضع الحالي.",
+      "verification_status": "verified_web_traffic_undisclosed_with_community_and_historical_metrics",
+      "confidence": "مرتفعة",
+      "claim_type": "زيارات ومقاييس مجتمع",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا توجد زيارات رسمية؛ GitHub يعرض نجومًا وفروعًا، وإفصاح 2023 يوفر MAU وحجوزات تاريخية.",
+      "source_ids": [
+        "SRC-09",
+        "SRC-11",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "calcom/cal.diy Repository",
+          "publisher": "Cal.com / GitHub",
+          "url": "https://github.com/calcom/cal.diy",
+          "source_type": "مستودع برمجي رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مستودع رسمي",
+          "source_locator": "Repository counters",
+          "supports": "نحو 44.8K stars و14.7K forks"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Cal.com v3.6 — The Year in Numbers",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/v-3-6",
+          "source_type": "إفصاح تشغيلي رسمي تاريخي",
+          "published_at": "2023-11-15",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح تاريخي",
+          "source_locator": "MAU and monthly bookings",
+          "supports": "13,667 MAU و113,503 حجوزات في 2023"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "The Most Public Private Company",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/open",
+          "source_type": "صفحة مؤشرات وشفافية رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة مؤشرات",
+          "source_locator": "Open startup page",
+          "supports": "نوع المقاييس التي تتابعها الشركة"
+        }
+      ],
+      "limitations": "نجوم GitHub تراكمية وقد تشمل تاريخ المستودع قبل تغيير الترخيص، ولا تكشف زيارات الموقع أو العملاء الدافعين.",
+      "source_count": 3
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "أدوات الجدولة البسيطة تحل إرسال رابط اجتماع فردي، لكنها قد تتعثر عندما تصبح الجدولة جزءًا من منتج أو marketplace أو telehealth أو فرق مبيعات ودعم متعددة. تحتاج هذه الحالات إلى توجيه الطلبات، وتوزيع round-robin، وأحداث جماعية، وواجهات APIs ومكونات مدمجة، وتحكم في البيانات والإقامة والهوية والصلاحيات.",
+        "impact": "يؤدي نقص القابلية للبرمجة والتحكم إلى تكاملات هشة، وتجربة white-label غير مكتملة، واعتماد أكبر على مزود واحد، وصعوبة تلبية متطلبات بعض المؤسسات. لكن الملف الأصلي عمّم أن المنافسين لا يحافظون على الخصوصية أو يرفضون APIs؛ لم يُعثر على دليل يسمح بهذا الحكم المطلق، لذلك أزيلت المقارنة الاتهامية."
+      },
+      "verification_status": "verified_complex_scheduling_problem_without_competitor_absolutes",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "مشكلة سوقية",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "صفحات الشركة والمقال التاريخي يشرحان حالات marketplaces وtelehealth والفرق والبنية المضمنة، مع إزالة اتهامات الخصوصية العامة.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-22",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Cal.com, Inc.",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Scheduling as infrastructure",
+          "supports": "الحالات المعقدة"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Open Source: What Do We Think?",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/open-source",
+          "source_type": "مقال استراتيجية رسمي تاريخي",
+          "published_at": "2022",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مقال استراتيجية",
+          "source_locator": "Marketplaces and telehealth",
+          "supports": "سبب بناء المنتج"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Cal.com Platform Introduction",
+          "publisher": "Cal.com Docs",
+          "url": "https://cal.com/docs/platform/introduction",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق Platform",
+          "source_locator": "Embedded scheduling",
+          "supports": "الحاجة إلى البنية المضمنة"
+        }
+      ],
+      "limitations": "المشكلة وصف تحليلي ولا توجد دراسة مستقلة تقيس تكلفة كل فشل أو قصور المنافسين.",
+      "source_count": 3
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "توفر Cal.com روابط جدولة للأفراد، وميزات Teams وOrganizations مثل round-robin وrouting forms وmanaged events وSSO/SCIM، ومنصة للمطورين تشمل APIs وCal Atoms وembeds وwebhooks. أضافت في 2026 وكلاء لإدارة المواعيد من Slack وTelegram والبريد وCLI، وCal.ai للمكالمات، وCal Pay، وملخصات اجتماعات Cal Video تدريجيًا. من يحتاج كودًا مفتوحًا للاستضافة الذاتية يمكنه استخدام Cal.diy MIT، لكن النسخة المجتمعية لا تعادل المنتج التجاري في الميزات أو الدعم أو الجاهزية المؤسسية."
+      },
+      "verification_status": "verified_current_commercial_product_and_cal_diy_scope",
+      "confidence": "مرتفعة",
+      "claim_type": "منتج وحل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التسعير والوثائق وإصدارات 2026 تدعم ميزات الفرق والمنصة والوكلاء والAI والدفع، والمستودع يحدد حدود Cal.diy.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-15",
+        "SRC-18",
+        "SRC-17",
+        "SRC-19",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Cal.com Pricing",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/pricing",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير SaaS",
+          "source_locator": "Feature matrix",
+          "supports": "Teams وOrganizations وEnterprise"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Cal.com Platform Introduction",
+          "publisher": "Cal.com Docs",
+          "url": "https://cal.com/docs/platform/introduction",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق Platform",
+          "source_locator": "APIs and Atoms",
+          "supports": "الجدولة المضمنة"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Cal.com v6.3 — Agents Launch",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/calcom-v6-3",
+          "source_type": "إعلان إصدار رسمي",
+          "published_at": "2026-03-15",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان إصدار",
+          "source_locator": "Agents",
+          "supports": "الوكلاء والقنوات"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Cal.ai — AI-Powered Phone Calls",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/ai",
+          "source_type": "صفحة منتج وتسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة منتج",
+          "source_locator": "Cal.ai",
+          "supports": "المكالمات"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Cal.com v6.7 — Notes, Cal Pay and Private Notes",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/calcom-v6-7",
+          "source_type": "إعلان إصدار رسمي",
+          "published_at": "2026-07-15",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان إصدار",
+          "source_locator": "Notes and Cal Pay",
+          "supports": "الميزات الجديدة"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "calcom/cal.diy Repository",
+          "publisher": "Cal.com / GitHub",
+          "url": "https://github.com/calcom/cal.diy",
+          "source_type": "مستودع برمجي رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مستودع رسمي",
+          "source_locator": "Cal.diy limitations",
+          "supports": "الفصل عن المنتج التجاري"
+        }
+      ],
+      "limitations": "بعض الميزات تدريجية أو مرتبطة بخطط وسوق وأهلية، ولا يعني الإعلان توافرًا عامًا متساويًا.",
+      "source_count": 6
+    },
+    "$.market_data.target_audience": {
+      "field_value": "الأفراد والمستقلون، وفرق المبيعات والتوظيف والدعم، والمنظمات والمؤسسات، والقطاع الصحي والتعليم والخدمات العامة، والمطورون والمنصات والأسواق الثنائية التي تحتاج جدولة مدمجة أو white-label. تختلف الحاجة بين رابط بسيط وخطة SaaS تعاونية وPlatform مبنية على عدد الحجوزات أو Enterprise مخصص.",
+      "verification_status": "verified_multi_segment_and_platform_audience",
+      "confidence": "مرتفعة",
+      "claim_type": "جمهور مستهدف",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "صفحات About والتسعير وPlatform تدعم الأفراد والفرق والمؤسسات والقطاعات المنظمة والمنصات.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-15",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Cal.com, Inc.",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Who we serve",
+          "supports": "الفرق والأسواق والصحة والخدمات"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Cal.com Pricing",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/pricing",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير",
+          "source_locator": "Individual through enterprise",
+          "supports": "الشرائح"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Cal.com Platform Introduction",
+          "publisher": "Cal.com Docs",
+          "url": "https://cal.com/docs/platform/introduction",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق Platform",
+          "source_locator": "Scheduling businesses",
+          "supports": "المطورون والمنصات"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Cal.com Security",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/security",
+          "source_type": "صفحة أمن وامتثال رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة أمن",
+          "source_locator": "Compliance use cases",
+          "supports": "القطاعات المنظمة"
+        }
+      ],
+      "limitations": "لا توجد أرقام عامة حديثة للعملاء أو الإيراد حسب الشريحة.",
+      "source_count": 4
+    },
+    "$.market_data.market_size": {
+      "field_value": "لم تنشر Cal.com دراسة حديثة قابلة للتحقق لحجم سوق برمجيات الجدولة أو TAM الخاص بها. هدف «ربط مليار شخص بحلول 2031» رسالة طموح وليس حجم سوق ماليًا، كما أن عدد مستخدمي التقويم أو الاجتماعات عالميًا لا يتحول تلقائيًا إلى سوق قابل للدفع. لذلك أزيل رقم 1.5 مليار دولار غير المعرّف.",
+      "verification_status": "verified_no_company_tam",
+      "confidence": "مرتفعة",
+      "claim_type": "حجم سوق",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر الرسمية تقدم رسالة وطموحًا لا دراسة TAM مالية، لذلك لم يُستخدم رقم السوق الأصلي.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Cal.com, Inc.",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/about",
+          "source_type": "صفحة شركة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Mission and market framing",
+          "supports": "هدف مليار شخص"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Cal.com Open Letter — $32.4M Funding",
+          "publisher": "Cal.com",
+          "url": "https://website.cal.com/about",
+          "source_type": "صفحة شركة رسمية تاريخية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "خطاب شركة",
+          "source_locator": "Market still in infancy",
+          "supports": "سرد فرصة السوق"
+        }
+      ],
+      "limitations": "لا توجد منهجية أو رقم سوق مالي قابل للتحقق من مصدر أولي للشركة.",
+      "source_count": 2
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا يوجد معدل نمو حالي موحد وموثق للإيراد أو المستخدمين أو الحجوزات. الإفصاح الرسمي لعام 2023 سجل ARR بقيمة مليون دولار و13,667 MAU و113,503 حجوزات شهرية و25,500 نجمة GitHub، بينما يعرض المستودع في أغسطس 2026 نحو 44.8 ألف نجمة. تغير الترخيص وفصل Cal.diy عن المنتج التجاري يجعل النجوم الجديدة مقياس مجتمع، لا دليلًا مباشرًا على نمو SaaS أو الإيراد.",
+      "verification_status": "verified_no_current_comparable_growth_rate",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "نمو",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توجد مقاييس تاريخية في 2023 ومقياس مجتمع حالي، لكنها لا تكوّن سلسلة متجانسة بعد تغيير الترخيص.",
+      "source_ids": [
+        "SRC-11",
+        "SRC-09",
+        "SRC-07",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "Cal.com v3.6 — The Year in Numbers",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/v-3-6",
+          "source_type": "إفصاح تشغيلي رسمي تاريخي",
+          "published_at": "2023-11-15",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إفصاح 2023",
+          "source_locator": "ARR, MAU, bookings and stars",
+          "supports": "خط الأساس التاريخي"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "calcom/cal.diy Repository",
+          "publisher": "Cal.com / GitHub",
+          "url": "https://github.com/calcom/cal.diy",
+          "source_type": "مستودع برمجي رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "GitHub الحالي",
+          "source_locator": "Stars and forks",
+          "supports": "مقياس المجتمع الحالي"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Cal.com is going closed source. Here's why.",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/cal-com-goes-closed-source-why",
+          "source_type": "إعلان استراتيجية وترخيص رسمي",
+          "published_at": "2026-04-14",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تغير استراتيجي",
+          "source_locator": "Closed-source transition",
+          "supports": "انقطاع قابلية المقارنة"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Cal.com v6.4 — License Changes",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/calcom-v6-4",
+          "source_type": "إعلان إصدار رسمي",
+          "published_at": "2026-04-15",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تغير ترخيص",
+          "source_locator": "Cal.diy split",
+          "supports": "تغير نطاق المستودع"
+        }
+      ],
+      "limitations": "لا يجوز حساب نمو SaaS من GitHub stars، ولا توجد سلسلة حديثة للإيراد أو MAU أو الحجوزات.",
+      "source_count": 4
+    },
+    "$.financials.initial_investment": {
+      "field_value": "بدأ المشروع كعمل جانبي باسم Calendso، ثم جمع Seed بقيمة 7.4 ملايين دولار، وتبعها Series A بقيمة 25 مليون دولار في 2022. تعلن الشركة أن إجمالي التمويل بلغ 32.4 مليون دولار. هذا تمويل رأسمالي يمنح runway ولا يمثل إيرادًا أو تقييمًا أو قيمة سوقية.",
+      "verification_status": "verified_seed_series_a_and_total_funding",
+      "confidence": "مرتفعة",
+      "claim_type": "تمويل",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "إعلانات الشركة تؤكد 7.4M Seed و25M Series A وإجمالي 32.4M.",
+      "source_ids": [
+        "SRC-04",
+        "SRC-05",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Cal.com, Inc. raises $7.4m Seed",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/seed",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2021",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان تمويل",
+          "source_locator": "Seed round",
+          "supports": "7.4M"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Series A and v1.5",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/cal-v-1-5",
+          "source_type": "إعلان تمويل ومنتج رسمي",
+          "published_at": "2022-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان تمويل",
+          "source_locator": "Series A",
+          "supports": "25M"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Cal.com Open Letter — $32.4M Funding",
+          "publisher": "Cal.com",
+          "url": "https://website.cal.com/about",
+          "source_type": "صفحة شركة رسمية تاريخية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "صفحة شركة",
+          "source_locator": "Total funding",
+          "supports": "32.4M"
+        }
+      ],
+      "limitations": "لا تُعرض شروط الملكية أو أدوات التمويل بالتفصيل، وقد لا تشمل أي تمويل غير معلن لاحق.",
+      "source_count": 3
+    },
+    "$.financials.valuation": {
+      "field_value": "غير مُفصح عنه في مصدر أولي موثوق. لم تنشر إعلانات Seed أو Series A نسبة الملكية أو التقييم قبل الاستثمار أو بعده. ظهرت تقديرات خارجية تتجاوز 100 مليون دولار، لكنها لم تُستخدم لأن الشركة لم تؤكدها.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "مرتفعة",
+      "claim_type": "تقييم",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الإعلانات الأولية تكشف مبالغ الجولات ولا تكشف تقييمًا أو نسبة ملكية.",
+      "source_ids": [
+        "SRC-04",
+        "SRC-05",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Cal.com, Inc. raises $7.4m Seed",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/seed",
+          "source_type": "إعلان تمويل رسمي",
+          "published_at": "2021",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان Seed",
+          "source_locator": "Round amount and investors",
+          "supports": "لا يوجد تقييم"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Series A and v1.5",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/cal-v-1-5",
+          "source_type": "إعلان تمويل ومنتج رسمي",
+          "published_at": "2022-04",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان Series A",
+          "source_locator": "Round amount and investors",
+          "supports": "لا يوجد تقييم"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Cal.com Open Letter — $32.4M Funding",
+          "publisher": "Cal.com",
+          "url": "https://website.cal.com/about",
+          "source_type": "صفحة شركة رسمية تاريخية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إجمالي تمويل",
+          "source_locator": "Total raised",
+          "supports": "التمويل لا التقييم"
+        }
+      ],
+      "limitations": "أي تقييم خارجي لم يُستخدم لغياب تأكيد من الشركة أو شروط ملكية تسمح بالحساب.",
+      "source_count": 3
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "اشتراكات Teams بسعر معلن 12 دولارًا لكل مستخدم شهريًا عند الفوترة السنوية، وOrganizations بسعر 28 دولارًا، وEnterprise بتسعير مخصص.",
+        "Platform Starter مجانًا حتى 25 حجزًا شهريًا ثم رسوم تجاوز، وEssentials من 299 دولارًا شهريًا وScale من 2,499 دولارًا، إضافة إلى Enterprise مخصص.",
+        "عقود Enterprise تشمل onboarding ودعمًا هندسيًا وSLA وتكاملات الدليل وDedicated Database، وقد تشمل استضافة أو نشرًا مؤسسيًا خاصًا.",
+        "Cal.ai بسعر 0.29 دولار للدقيقة مع أرصدة مضمنة لبعض الخطط وشراء أرصدة إضافية.",
+        "رسوم أو اقتصاديات مرتبطة بخدمات الدفع والحجوزات المدفوعة مثل Cal Pay وStripe وPayPal؛ توفر الخدمة لا يكشف صافي إيراد Cal.com أو نسبة العمولة.",
+        "Cal.diy MIT مجاني ومجتمعي ولا يولد اشتراكًا تلقائيًا؛ قد يقود إلى تبني أو خدمات تجارية منفصلة، لكن لا يجوز احتساب النجوم أو التنزيلات كإيراد."
+      ],
+      "verification_status": "verified_current_pricing_and_product_pathways_not_revenue_mix",
+      "confidence": "مرتفعة",
+      "claim_type": "مسارات إيراد",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الأسعار الحالية تثبت SaaS وPlatform وCal.ai، بينما Enterprise والدفع موثقان وظيفيًا دون مزيج مالي.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-17",
+        "SRC-14",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Cal.com Pricing",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/pricing",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير SaaS",
+          "source_locator": "Teams, Organizations, Enterprise",
+          "supports": "الاشتراكات"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Cal.com Platform Pricing",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/ar/platform/pricing",
+          "source_type": "صفحة تسعير منصة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير Platform",
+          "source_locator": "Booking tiers and overages",
+          "supports": "API والبنية التحتية"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Cal.ai — AI-Powered Phone Calls",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/ai",
+          "source_type": "صفحة منتج وتسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير AI",
+          "source_locator": "Per-minute and credits",
+          "supports": "Cal.ai"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Cal.com Terms of Service",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/terms",
+          "source_type": "شروط قانونية رسمية",
+          "published_at": "2021-04-14",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "شروط",
+          "source_locator": "Purchases and subscriptions",
+          "supports": "الاشتراكات والمدفوعات"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Cal.com v6.7 — Notes, Cal Pay and Private Notes",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/calcom-v6-7",
+          "source_type": "إعلان إصدار رسمي",
+          "published_at": "2026-07-15",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان منتج",
+          "source_locator": "Cal Pay",
+          "supports": "الحجوزات المدفوعة"
+        }
+      ],
+      "limitations": "لا توجد بيانات عن الإيراد الفعلي أو take rate أو نسبة كل مسار.",
+      "source_count": 5
+    },
+    "$.tools": {
+      "field_value": [
+        "Cal.com SaaS: booking links وround-robin وcollective events وmanaged events وrouting forms وworkflows",
+        "Platform APIs وCal Atoms المبنية بمكونات React للجدولة المضمنة وwhite-label",
+        "Webhooks وOAuth وAPI v2 مع حدود استخدام تختلف حسب طريقة المصادقة والخطة",
+        "Cal.com Agents عبر Slack وTelegram والبريد وCLI ومهارات لوكلاء مستضافين",
+        "Cal.ai للمكالمات الآلية والنصوص والتحليلات داخل Workflows",
+        "Cal Video وCal.com Notes وCal Pay المدعوم من Whop؛ بعض الميزات تُطرح تدريجيًا",
+        "Cal Companion: تطبيقات iOS وAndroid وإضافات Chrome وFirefox وSafari",
+        "Cal.diy MIT: Next.js وReact وtRPC وTailwind CSS وPrisma وPostgreSQL وNode.js وYarn",
+        "Docker وDocker Compose متاحان لـCal.diy، مع مسؤولية المستخدم عن الأسرار والتحديث والأمن",
+        "Cal.diy لا يتضمن Teams وOrganizations وInsights وWorkflows وSSO/SAML وميزات Enterprise الأخرى",
+        "SOC 2 Type II وISO 27001 وHIPAA وGDPR وCCPA مذكورة في صفحة أمن Cal.com التجارية؛ لا تُنقل تلقائيًا إلى تثبيت Cal.diy ذاتي",
+        "المكدس الداخلي للمنتج التجاري أصبح خاصًا بعد أبريل 2026، لذلك لا يجوز اعتبار مستودع Cal.diy كشفًا كاملًا لبنية Cal.com الإنتاجية"
+      ],
+      "verification_status": "verified_commercial_features_and_cal_diy_stack_with_boundary",
+      "confidence": "مرتفعة",
+      "claim_type": "تقنيات وأدوات",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المنتجات والوثائق والمستودع تثبت الأدوات، مع فصل واضح بين Cal.com الخاص وCal.diy المفتوح.",
+      "source_ids": [
+        "SRC-09",
+        "SRC-15",
+        "SRC-16",
+        "SRC-18",
+        "SRC-17",
+        "SRC-19",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "calcom/cal.diy Repository",
+          "publisher": "Cal.com / GitHub",
+          "url": "https://github.com/calcom/cal.diy",
+          "source_type": "مستودع برمجي رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مستودع رسمي",
+          "source_locator": "Built with and limitations",
+          "supports": "مكدس Cal.diy وحدوده"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Cal.com Platform Introduction",
+          "publisher": "Cal.com Docs",
+          "url": "https://cal.com/docs/platform/introduction",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق Platform",
+          "source_locator": "APIs and Atoms",
+          "supports": "منصة المطورين"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Cal.com API v2 Introduction",
+          "publisher": "Cal.com Docs",
+          "url": "https://cal.com/docs/api-reference/v2/introduction",
+          "source_type": "وثائق API رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق API",
+          "source_locator": "Auth and rate limits",
+          "supports": "API v2"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Cal.com v6.3 — Agents Launch",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/calcom-v6-3",
+          "source_type": "إعلان إصدار رسمي",
+          "published_at": "2026-03-15",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إصدار Agents",
+          "source_locator": "Agent channels",
+          "supports": "الوكلاء"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Cal.ai — AI-Powered Phone Calls",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/ai",
+          "source_type": "صفحة منتج وتسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Cal.ai",
+          "source_locator": "Calls and analytics",
+          "supports": "الذكاء الاصطناعي"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Cal.com v6.7 — Notes, Cal Pay and Private Notes",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/calcom-v6-7",
+          "source_type": "إعلان إصدار رسمي",
+          "published_at": "2026-07-15",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إصدار v6.7",
+          "source_locator": "Notes and Pay",
+          "supports": "الميزات الحالية"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Cal.com Security",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/security",
+          "source_type": "صفحة أمن وامتثال رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "أمن",
+          "source_locator": "Compliance controls",
+          "supports": "الامتثال للمنتج التجاري"
+        }
+      ],
+      "limitations": "مستودع Cal.diy ليس كشفًا للبنية الخاصة لـCal.com، وبعض ميزات SaaS لا توجد في النسخة المجتمعية.",
+      "source_count": 7
+    },
+    "$.headline": {
+      "field_value": "من «Calendly مفتوح المصدر» إلى مسارين منفصلين: كيف أبقت Cal.com المجتمع في Cal.diy وحوّلت المنتج التجاري إلى بنية جدولة خاصة",
+      "verification_status": "verified_editorial_synthesis_of_2026_strategy",
+      "confidence": "متوسطة إلى مرتفعة",
+      "claim_type": "عنوان تحريري",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "العنوان يلخص التحول الرسمي في أبريل 2026 وفصل المجتمع عن المنتج التجاري.",
+      "source_ids": [
+        "SRC-07",
+        "SRC-08",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Cal.com is going closed source. Here's why.",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/cal-com-goes-closed-source-why",
+          "source_type": "إعلان استراتيجية وترخيص رسمي",
+          "published_at": "2026-04-14",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان استراتيجية",
+          "source_locator": "Commercial code goes private",
+          "supports": "المسار التجاري"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Cal.com v6.4 — License Changes",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/calcom-v6-4",
+          "source_type": "إعلان إصدار رسمي",
+          "published_at": "2026-04-15",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "إعلان ترخيص",
+          "source_locator": "Cal.diy MIT",
+          "supports": "المسار المجتمعي"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "calcom/cal.diy Repository",
+          "publisher": "Cal.com / GitHub",
+          "url": "https://github.com/calcom/cal.diy",
+          "source_type": "مستودع برمجي رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مستودع",
+          "source_locator": "Feature separation",
+          "supports": "حدود النسختين"
+        }
+      ],
+      "limitations": "عبارة «مسارين منفصلين» تركيب تحريري، لكنها مدعومة بفصل المستودع والميزات والترخيص.",
+      "source_count": 3
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "المصدر المفتوح ليس حالة دائمة بل عقد ثقة يجب تحديثه",
+          "description": "بنت Cal.com توزيعها الأولي على الشفافية والكود المفتوح، ثم فصلت في 2026 المنتج التجاري الخاص عن Cal.diy المفتوح. الدرس أن تغيير الترخيص قد يكون قرارًا استراتيجيًا مشروعًا، لكنه يحتاج إلى لغة صريحة تمنع العملاء من افتراض أن النسختين متكافئتان."
+        },
+        {
+          "title": "افصل مقياس المجتمع عن مقياس الشركة",
+          "description": "44.8 ألف نجمة على GitHub تثبت اهتمام المطورين وتاريخ المشروع، لكنها لا تكشف العملاء الدافعين أو MRR أو الحجوزات السحابية. كل لوحة قياس تحتاج فصل النجوم والفروع عن المستخدمين النشطين والحجوزات والإيراد."
+        },
+        {
+          "title": "ابدأ بالرابط ثم اصعد إلى البنية التحتية",
+          "description": "الرابط الفردي يجذب المستخدم بسرعة، بينما القيمة الأعلى تأتي من routing وround-robin وSSO وAPIs وAtoms والـwhite-label. هذا يسمح للمنتج بالتوسع من أداة شخصية إلى طبقة داخل منتج أو مؤسسة."
+        },
+        {
+          "title": "السعر لكل مستخدم والسعر لكل حجز يخدمان وظيفتين مختلفتين",
+          "description": "الفرق والمنظمات تدفع حسب المقاعد لأن القيمة تعاونية وإدارية، بينما Platform تدفع حسب حجم الحجوزات لأنها تبني الجدولة داخل منتجها. اختيار وحدة التسعير الصحيحة يجعل الفاتورة أقرب إلى القيمة التي يتلقاها العميل."
+        },
+        {
+          "title": "الامتثال لا يأتي تلقائيًا من الاستضافة الذاتية",
+          "description": "امتلاك الخادم والكود يمنح تحكمًا، لكنه ينقل مسؤولية التحديث والأسرار وقاعدة البيانات والمراقبة إلى المستخدم. تحذير Cal.diy من الاستخدام الإنتاجي يوضح أن self-hosting خيار هندسي، لا شهادة أمن أو HIPAA تلقائية."
+        },
+        {
+          "title": "وكلاء الذكاء الاصطناعي يوسعون الواجهة ولا يلغون محرك الجدولة",
+          "description": "Agents وCal.ai وملخصات الاجتماعات تضيف قنوات جديدة للأوامر والمكالمات والمعلومات، لكن القيمة الأساسية تبقى في availability وrouting والتقويم والصلاحيات والwebhooks. الوكيل الجيد يعتمد على بنية وقت موثوقة تحته."
+        }
+      ],
+      "verification_status": "analytical_inference_grounded_in_company_strategy_and_product",
+      "confidence": "متوسطة",
+      "claim_type": "تحليل ودروس",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس مبنية على تغيير الترخيص وفصل المقاييس ووحدات التسعير وPlatform وself-hosting والوكلاء.",
+      "source_ids": [
+        "SRC-07",
+        "SRC-09",
+        "SRC-02",
+        "SRC-03",
+        "SRC-15",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Cal.com is going closed source. Here's why.",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/cal-com-goes-closed-source-why",
+          "source_type": "إعلان استراتيجية وترخيص رسمي",
+          "published_at": "2026-04-14",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "قرار استراتيجي",
+          "source_locator": "Closed source",
+          "supports": "درس عقد الثقة"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "calcom/cal.diy Repository",
+          "publisher": "Cal.com / GitHub",
+          "url": "https://github.com/calcom/cal.diy",
+          "source_type": "مستودع برمجي رسمي",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "مقياس ومستودع",
+          "source_locator": "Stars and limitations",
+          "supports": "درس المجتمع والامتثال"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Cal.com Pricing",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/pricing",
+          "source_type": "صفحة تسعير رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير",
+          "source_locator": "Per-seat plans",
+          "supports": "درس وحدة التسعير"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Cal.com Platform Pricing",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/ar/platform/pricing",
+          "source_type": "صفحة تسعير منصة رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "تسعير Platform",
+          "source_locator": "Per-booking model",
+          "supports": "درس البنية"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Cal.com Platform Introduction",
+          "publisher": "Cal.com Docs",
+          "url": "https://cal.com/docs/platform/introduction",
+          "source_type": "وثائق منتج رسمية",
+          "published_at": null,
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "وثائق",
+          "source_locator": "Atoms and APIs",
+          "supports": "درس الصعود إلى البنية"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Cal.com v6.3 — Agents Launch",
+          "publisher": "Cal.com",
+          "url": "https://cal.com/blog/calcom-v6-3",
+          "source_type": "إعلان إصدار رسمي",
+          "published_at": "2026-03-15",
+          "accessed_at": "2026-08-03",
+          "primary": true,
+          "evidence_type": "Agents",
+          "source_locator": "AI interfaces",
+          "supports": "درس الوكلاء"
+        }
+      ],
+      "limitations": "هذه استنتاجات تحريرية وليست تصريحات حرفية أو توصيات استثمارية.",
+      "source_count": 6
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "About Cal.com, Inc.",
+      "publisher": "Cal.com",
+      "url": "https://cal.com/about",
+      "source_type": "صفحة شركة رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق قصة التأسيس من Calendso، والمؤسسين، والعمل عن بُعد دون مقر فعلي، ورسالة بناء بنية تحتية للجدولة."
+    },
+    {
+      "id": "SRC-02",
+      "title": "Cal.com Pricing",
+      "publisher": "Cal.com",
+      "url": "https://cal.com/pricing",
+      "source_type": "صفحة تسعير رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق الخطط الحالية: Individuals المجانية، Teams بسعر 12 دولارًا لكل مستخدم شهريًا عند الفوترة السنوية، Organizations بسعر 28 دولارًا، وEnterprise بتسعير مخصص."
+    },
+    {
+      "id": "SRC-03",
+      "title": "Cal.com Platform Pricing",
+      "publisher": "Cal.com",
+      "url": "https://cal.com/ar/platform/pricing",
+      "source_type": "صفحة تسعير منصة رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق Starter المجاني حتى 25 حجزًا شهريًا، وEssentials من 299 دولارًا، وScale من 2,499 دولارًا، ورسوم التجاوز والتسعير المؤسسي."
+    },
+    {
+      "id": "SRC-04",
+      "title": "Cal.com, Inc. raises $7.4m Seed",
+      "publisher": "Cal.com",
+      "url": "https://cal.com/blog/seed",
+      "source_type": "إعلان تمويل رسمي",
+      "published_at": "2021",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق جولة Seed بقيمة 7.4 ملايين دولار والمستثمر الرئيسي OSS Capital والمقاييس التشغيلية المبكرة."
+    },
+    {
+      "id": "SRC-05",
+      "title": "Series A and v1.5",
+      "publisher": "Cal.com",
+      "url": "https://cal.com/blog/cal-v-1-5",
+      "source_type": "إعلان تمويل ومنتج رسمي",
+      "published_at": "2022-04",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق Series A بقيمة 25 مليون دولار بقيادة Seven Seven Six، وإطلاق App Store وAPI."
+    },
+    {
+      "id": "SRC-06",
+      "title": "Cal.com Open Letter — $32.4M Funding",
+      "publisher": "Cal.com",
+      "url": "https://website.cal.com/about",
+      "source_type": "صفحة شركة رسمية تاريخية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "تصرح الشركة بأنها جمعت إجمالي 32.4 مليون دولار، وتشرح فلسفة خلق القيمة قبل تعظيم التقاطها."
+    },
+    {
+      "id": "SRC-07",
+      "title": "Cal.com is going closed source. Here's why.",
+      "publisher": "Cal.com",
+      "url": "https://cal.com/blog/cal-com-goes-closed-source-why",
+      "source_type": "إعلان استراتيجية وترخيص رسمي",
+      "published_at": "2026-04-14",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق انتقال كود المنتج التجاري إلى مستودع خاص واستمرار Cal.diy كخيار مجتمعي مفتوح."
+    },
+    {
+      "id": "SRC-08",
+      "title": "Cal.com v6.4 — License Changes",
+      "publisher": "Cal.com",
+      "url": "https://cal.com/blog/calcom-v6-4",
+      "source_type": "إعلان إصدار رسمي",
+      "published_at": "2026-04-15",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق إطلاق Cal.diy بترخيص MIT بوصفه إصدارًا مجانيًا مفتوح المصدر للاستضافة الذاتية وعلى مسؤولية المستخدم."
+    },
+    {
+      "id": "SRC-09",
+      "title": "calcom/cal.diy Repository",
+      "publisher": "Cal.com / GitHub",
+      "url": "https://github.com/calcom/cal.diy",
+      "source_type": "مستودع برمجي رسمي",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق MIT، وفصل ميزات Enterprise، والتحذير من الاستخدام الإنتاجي، والمكدس المعلن، ونحو 44.8 ألف نجمة و14.7 ألف fork وقت التحقق."
+    },
+    {
+      "id": "SRC-10",
+      "title": "The Most Public Private Company",
+      "publisher": "Cal.com",
+      "url": "https://cal.com/open",
+      "source_type": "صفحة مؤشرات وشفافية رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "تؤكد استمرار وصف الشركة لنفسها Open Startup، لكن لوحة المقاييس المضمنة لم توفر نصًا عامًا كافيًا لاستخراج إيراد أو زيارات حديثة."
+    },
+    {
+      "id": "SRC-11",
+      "title": "Cal.com v3.6 — The Year in Numbers",
+      "publisher": "Cal.com",
+      "url": "https://cal.com/blog/v-3-6",
+      "source_type": "إفصاح تشغيلي رسمي تاريخي",
+      "published_at": "2023-11-15",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق تاريخيًا ARR بقيمة مليون دولار، و13,667 MAU، و148,380 مستخدمًا، و113,503 حجوزات شهرية، و25,500 نجمة GitHub."
+    },
+    {
+      "id": "SRC-12",
+      "title": "Cal.com Security",
+      "publisher": "Cal.com",
+      "url": "https://cal.com/security",
+      "source_type": "صفحة أمن وامتثال رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يعرض SOC 2 Type II وISO 27001 وHIPAA وGDPR وCCPA وإجراءات الأمن والاختبارات، وفق إفصاح الشركة."
+    },
+    {
+      "id": "SRC-13",
+      "title": "Cal.com Privacy Policy",
+      "publisher": "Cal.com",
+      "url": "https://cal.com/privacy",
+      "source_type": "سياسة قانونية رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يعرف Cal.com, Inc. ويعرض عنوان مراسلات في 2261 Market Street #4382، سان فرانسيسكو، من دون أن يناقض إعلان الشركة عدم وجود مقر تشغيلي فعلي."
+    },
+    {
+      "id": "SRC-14",
+      "title": "Cal.com Terms of Service",
+      "publisher": "Cal.com",
+      "url": "https://cal.com/terms",
+      "source_type": "شروط قانونية رسمية",
+      "published_at": "2021-04-14",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق الكيان Cal.com, Inc. والاشتراكات والمدفوعات والتجارب وتغييرات الرسوم."
+    },
+    {
+      "id": "SRC-15",
+      "title": "Cal.com Platform Introduction",
+      "publisher": "Cal.com Docs",
+      "url": "https://cal.com/docs/platform/introduction",
+      "source_type": "وثائق منتج رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق Platform APIs وCal Atoms والجدولة المضمنة والقابلة للتخصيص والـwhite-label."
+    },
+    {
+      "id": "SRC-16",
+      "title": "Cal.com API v2 Introduction",
+      "publisher": "Cal.com Docs",
+      "url": "https://cal.com/docs/api-reference/v2/introduction",
+      "source_type": "وثائق API رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق حدود API ومجموعات endpoints، ويشير إلى إعادة هيكلة عرض Platform منذ 15 ديسمبر 2025."
+    },
+    {
+      "id": "SRC-17",
+      "title": "Cal.ai — AI-Powered Phone Calls",
+      "publisher": "Cal.com",
+      "url": "https://cal.com/ai",
+      "source_type": "صفحة منتج وتسعير رسمية",
+      "published_at": null,
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق المكالمات الآلية المدمجة في Workflows، والتحليلات والنصوص، وتسعير 0.29 دولار للدقيقة والائتمانات حسب الخطة."
+    },
+    {
+      "id": "SRC-18",
+      "title": "Cal.com v6.3 — Agents Launch",
+      "publisher": "Cal.com",
+      "url": "https://cal.com/blog/calcom-v6-3",
+      "source_type": "إعلان إصدار رسمي",
+      "published_at": "2026-03-15",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق وكلاء Cal.com عبر Slack وTelegram والبريد وCLI ومهارات لربط وكلاء مستضافين بالـAPI."
+    },
+    {
+      "id": "SRC-19",
+      "title": "Cal.com v6.7 — Notes, Cal Pay and Private Notes",
+      "publisher": "Cal.com",
+      "url": "https://cal.com/blog/calcom-v6-7",
+      "source_type": "إعلان إصدار رسمي",
+      "published_at": "2026-07-15",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق Cal.com Notes التجريبي، وCal Pay المدعوم من Whop، والملاحظات الخاصة وتحسينات المدفوعات والأمان."
+    },
+    {
+      "id": "SRC-20",
+      "title": "Cal.com v6.1 — Companion",
+      "publisher": "Cal.com",
+      "url": "https://cal.com/blog/calcom-v6-1",
+      "source_type": "إعلان إصدار رسمي",
+      "published_at": "2026-01-15",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق تطبيقات iOS وAndroid وإضافات Chrome وFirefox وSafari ضمن Cal Companion."
+    },
+    {
+      "id": "SRC-21",
+      "title": "Why Being an Open Startup Matters",
+      "publisher": "Cal.com",
+      "url": "https://cal.com/blog/open-startup",
+      "source_type": "مقال استراتيجية وقياس رسمي",
+      "published_at": "2022",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يوثق فلسفة الشفافية ومقاييس الاستخدام والحجوزات والحرق والنجوم، والأدوات التاريخية المستخدمة في القياس."
+    },
+    {
+      "id": "SRC-22",
+      "title": "Open Source: What Do We Think?",
+      "publisher": "Cal.com",
+      "url": "https://cal.com/blog/open-source",
+      "source_type": "مقال استراتيجية رسمي تاريخي",
+      "published_at": "2022",
+      "accessed_at": "2026-08-03",
+      "primary": true,
+      "notes": "يشرح سبب بناء Cal.com أصلًا لحالات marketplaces وtelehealth والبنية التحتية بدل رابط جدولة فردي فقط."
     }
   ]
 }

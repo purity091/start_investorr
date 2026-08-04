@@ -91,6 +91,14 @@ const hasTabShape = (segment: string) =>
   segment.endsWith('-dashboard') ||
   segment.startsWith('admin-');
 
+export const isKnownTabPath = (pathname: string) => {
+  const segments = getSegments(pathname);
+  if (!segments.length) return true;
+
+  const lastSegment = segments[segments.length - 1];
+  return isIndexFile(lastSegment) || hasTabShape(lastSegment);
+};
+
 const isIndexFile = (segment: string) =>
   segment === 'index.html' || segment === 'index.php';
 
@@ -103,7 +111,7 @@ export const getTabFromPathname = (pathname: string) => {
 
   const lastSegment = segments[segments.length - 1];
   if (isIndexFile(lastSegment)) return 'home';
-  return hasTabShape(lastSegment) ? lastSegment : 'home';
+  return hasTabShape(lastSegment) ? lastSegment : null;
 };
 
 const getBasePath = (pathname: string) => {

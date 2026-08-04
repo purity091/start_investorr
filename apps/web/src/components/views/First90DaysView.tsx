@@ -222,6 +222,7 @@ export const First90DaysView: React.FC<{ setActiveTab: (tab: string) => void }> 
   const [activeMonthFilter, setActiveMonthFilter] = useState<number>(0);
   const [editingTask, setEditingTask] = useState<TaskItem | null>(null);
   const [isAddDialogOpen, setIsAddDialogOpen] = useState<boolean>(false);
+  const [isResetConfirmOpen, setIsResetConfirmOpen] = useState(false);
 
   // New task form state
   const [newTaskTitle, setNewTaskTitle] = useState('');
@@ -277,10 +278,13 @@ export const First90DaysView: React.FC<{ setActiveTab: (tab: string) => void }> 
   };
 
   const resetToInitialTasks = () => {
-    if (window.confirm('هل أنت تأكد من إعادة ضبط قائمة المهام إلى الحالة الافتراضية؟')) {
-      setTasks(INITIAL_TASKS);
-      localStorage.removeItem('first_90_days_tasks');
-    }
+    setIsResetConfirmOpen(true);
+  };
+
+  const confirmResetToInitialTasks = () => {
+    setTasks(INITIAL_TASKS);
+    localStorage.removeItem('first_90_days_tasks');
+    setIsResetConfirmOpen(false);
   };
 
   const handleAddNewTask = (e: React.FormEvent) => {
@@ -538,7 +542,7 @@ export const First90DaysView: React.FC<{ setActiveTab: (tab: string) => void }> 
               <Sparkles className="size-5" />
             </div>
             <h3 className="text-base font-bold text-foreground">
-              "كل شركة ناجحة بدأت بأول 90 يوماً من الانضباط والتنفيذ المبكر"
+              &quot;كل شركة ناجحة بدأت بأول 90 يوماً من الانضباط والتنفيذ المبكر&quot;
             </h3>
             <p className="max-w-md mx-auto text-xs leading-relaxed text-muted-foreground">
               استمر في إغلاق مهامك أسبوعاً بعد أسبوع لتحويل الفكرة إلى قصة نجاح حقيقية.
@@ -604,7 +608,7 @@ export const First90DaysView: React.FC<{ setActiveTab: (tab: string) => void }> 
                 <label className="text-[11px] font-semibold text-foreground">التصنيف</label>
                 <select
                   value={newTaskCategory}
-                  onChange={(e) => setNewTaskCategory(e.target.value as any)}
+                  onChange={(e) => setNewTaskCategory(e.target.value as TaskItem['category'])}
                   className="w-full h-9 rounded-md border border-input bg-background px-2 text-xs font-medium text-foreground focus:outline-none focus:ring-1 focus:ring-primary"
                 >
                   <option value="validation">تحقق وسوق</option>
@@ -646,6 +650,24 @@ export const First90DaysView: React.FC<{ setActiveTab: (tab: string) => void }> 
               </Button>
             </DialogFooter>
           </form>
+        </DialogContent>
+      </Dialog>
+      <Dialog open={isResetConfirmOpen} onOpenChange={setIsResetConfirmOpen}>
+        <DialogContent className="sm:max-w-[440px]" dir="rtl">
+          <DialogHeader className="text-right">
+            <DialogTitle>إعادة ضبط قائمة المهام</DialogTitle>
+          </DialogHeader>
+          <p className="text-sm leading-7 text-muted-foreground">
+            سيتم حذف التعديلات الحالية وإرجاع قائمة المهام إلى الحالة الافتراضية.
+          </p>
+          <DialogFooter>
+            <Button variant="destructive" onClick={confirmResetToInitialTasks}>
+              إعادة الضبط
+            </Button>
+            <Button variant="outline" onClick={() => setIsResetConfirmOpen(false)}>
+              إلغاء
+            </Button>
+          </DialogFooter>
         </DialogContent>
       </Dialog>
     </main>
@@ -1028,7 +1050,7 @@ const TaskEditDialog: React.FC<{
             <label className="text-xs font-semibold text-foreground">التصنيف الإستراتيجي</label>
             <select
               value={category}
-              onChange={(e) => setCategory(e.target.value as any)}
+              onChange={(e) => setCategory(e.target.value as TaskItem['category'])}
               className="w-full h-9 rounded-md border border-input bg-background px-3 text-xs font-medium text-foreground focus:outline-none focus:ring-1 focus:ring-primary"
             >
               <option value="validation">تحقق وسوق</option>

@@ -1,52 +1,1269 @@
 {
   "id": "curl",
   "slug": "curl",
-  "name": "كيرل (Curl)",
-  "headline": "قصة نجاح مبهرة في استهداف الشريحة المتخصصة (Niche) في عالم التجميل",
-  "category": "Cosmetics & D2C / العناية بالشعر",
+  "name": "كرلت (Curlit)",
+  "headline": "من ثلاث تركيبات إلى علامة متخصصة قائمة على الاختبار والبيانات: كيف تبني Curlit فئة محلية للشعر الكيرلي والويفي",
+  "category": "Beauty & Personal Care / Textured Hair D2C & Retail / العناية بالشعر الكيرلي والمموج",
   "company": {
-    "location": "القاهرة، مصر (Shark Tank Egypt)",
-    "business_model": "البيع المباشر للمستهلك (D2C) والتوزيع للتجار والصالونات"
+    "location": "القاهرة، مصر. تستخدم Curlit عنوانًا مسجلًا في 24 شارع النزهة، أرض الجولف، القاهرة، وتبيع عبر متجرها المباشر ومنافذ تجزئة معتمدة داخل القاهرة والإسكندرية ودهب، مع توسع معلن إلى الخليج وكندا.",
+    "business_model": "علامة عناية بالشعر تبيع مباشرة للمستهلك عبر متجر إلكتروني، وتوزع عبر الصيدليات والمتاجر والاستوديوهات والمنصات الإلكترونية، وتقبل طلبات الجملة والتصدير، وتستخدم برنامج ولاء وتسويق بالعمولة ومحتوى تعليميًا لدعم الاكتساب والاحتفاظ. تصمم الشركة تركيباتها وتتعامل مع التصنيع والجودة عبر شركاء، لكن لا تنشر تكاليف التصنيع أو هوامش القنوات أو نسبة المبيعات المباشرة مقابل التجزئة."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الجنيهات",
-    "monthly_traffic": "عشرات الآلاف من العملاء الأوفياء والطلبات الشهرية"
+    "monthly_revenue": "نحو 625 ألف جنيه مصري كمتوسط تاريخي تقريبي، استنادًا إلى تصريح المؤسِّسة بأن Curlit حققت مبيعات بقيمة 15 مليون جنيه خلال عامين. هذا متوسط مبيعات إجمالية، وليس إيرادًا شهريًا متكررًا أو مستوى المبيعات الحالي، ولم تُنشر قوائم مالية أو صافي أرباح مدققة.",
+    "monthly_traffic": "غير معلن. لا تنشر Curlit زيارات الموقع أو عدد العملاء النشطين أو الطلبات الشهرية. المؤشرات العامة المتاحة تشمل أكثر من 6,000 ملف شعر وفق المؤسِّسة، ووجودًا في 14 منفذ تجزئة معتمدًا ظاهرًا في دليل الموقع، إضافة إلى البيع عبر Noon وAmazon وشركاء آخرين؛ وهذه ليست مقاييس حركة شهرية."
   },
   "overview": {
     "problem": {
-      "text": "معظم منتجات العناية بالشعر في السوق مصممة لتنعيم الشعر (فرده) بالمواد الكيميائية، بينما تعاني الفتيات ذوات (الشعر المجعد - الكيرلي) من نقص حاد في المنتجات الطبيعية المتخصصة التي تحافظ على طبيعة شعرهن بأسعار معقولة.",
-      "impact": "تلف الشعر بسبب الكيماويات، واضطرار المستهلكات لشراء منتجات أجنبية متخصصة بأسعار خيالية."
+      "text": "رأت المؤسِّسة فجوة بين احتياجات الشعر الكيرلي والمموج في مناخ مصر والمنطقة وبين منتجات عامة أو مستوردة لا تميز بما يكفي بين نمط الويف والكيرل أو ظروف الحرارة والرطوبة. ويواجه المستهلك كذلك صعوبة في فهم نوع الشعر، ترتيب المنتجات، كمية الاستخدام، ومعنى ادعاءات مثل «طبيعي» أو «خالي من المواد الكيميائية».",
+      "impact": "قد يؤدي اختيار تركيبة أو كمية غير مناسبة إلى ثقل الشعر أو تراكم أو هيشان أو ضعف ثبات التصفيف، بينما ترفع المنتجات المستوردة تكاليف التجربة والخطأ. كما أن الادعاءات غير الدقيقة تضعف الثقة؛ فكل مستحضر تجميلي يتكون من مواد كيميائية، والمهم هو التركيبة والسلامة والاستخدام والاختبار بدل وصف المنتج بأنه «بلا كيميائيات»."
     },
     "solution": {
-      "text": "تأسيس علامة تجارية محلية تنتج مستحضرات طبيعية خالية من الكيماويات الضارة (السلفات والسيليكون) مخصصة حصرياً للعناية بـ (الشعر المجعد - Curly Hair)، مما يعزز ثقة الفتيات بجمالهن الطبيعي."
+      "text": "طورت Curlit تركيبات منفصلة للشعر الكيرلي والمموج، وبدأت ببلسم Leave-In وجل تصفيف وحزم تجمعهما. تعرض المكونات وتعليمات الاستخدام، وتذكر أن المنتجات خالية من السيليكون والبارابين والكحوليات المجففة وفق صفحاتها، وتستخدم اختبار نوع الشعر ومحتوى روتينيًا وتعليميًا. كما تنشر نتائج اختبارات طرف ثالث لسهولة التمشيط وثبات التصفيف والحماية من الهيشان في الرطوبة، مع ملاحظة أن التقارير المختبرية الكاملة ومنهجيات جميع الادعاءات ليست منشورة بصورة مستقلة كاملة."
     }
   },
   "market_data": {
-    "target_audience": "الفتيات والنساء ذوات الشعر المجعد الباحثات عن منتجات آمنة وطبيعية.",
-    "market_size": "سوق العناية الشخصية والتجميل (فئة الـ Niche).",
-    "growth_rate": "نمو هائل مدفوع بتوجه الفتيات لتقبل طبيعة شعرهن، وتوجت بشراكة استراتيجية مع الشاركس ضاعفت مبيعاتها."
+    "target_audience": "الأطفال من عمر 3 سنوات والبالغون من أصحاب الشعر الكيرلي والمموج بمختلف الأجناس، والأسر التي تبحث عن روتين محلي أبسط، وصالونات واستوديوهات الشعر والصيدليات والمتاجر ومنصات التجارة الإلكترونية، إضافة إلى موزعين ومصدّرين ومبدعي محتوى ومسوقين بالعمولة.",
+    "market_size": "لا توجد دراسة حكومية أو مستقلة منشورة تحدد سوق Curlit القابل للاستهداف. ذكرت المؤسِّسة أن مصر تضم أكثر من 15 مليون سيدة بشعر كيرلي أو مموج، وأن حجم الفئة يقارب 190 مليون دولار مع نمو سنوي 8%. تُعامل هذه الأرقام كتقديرات إدارية منشورة في مقابلة، لا كقياس سوق مستقل. المؤشرات المؤكدة الأقرب هي توسع العلامة من مصر إلى الخليج وكندا ووجود قنوات مباشرة وتجزيئية متعددة.",
+    "growth_rate": "لا تنشر Curlit سلسلة سنوية للإيراد أو العملاء. وفق مقابلة المؤسِّسة، حققت الشركة 15 مليون جنيه من المبيعات خلال عامين، وبنت أكثر من 6,000 Hair Profile، ووقعت اتفاقات للتوسع في ستة أسواق، وكانت تستهدف زيادة المنتجات من 3 إلى 8 وتحسين Gross Margin بنسبة 20%. هذه نتائج وخطط صادرة عن الإدارة، وليست معدل نمو مدققًا."
   },
   "financials": {
-    "initial_investment": "استثمارات وشراكة استراتيجية من (الشاركس) لتوسيع خطوط الإنتاج ودخول أسواق الخليج.",
-    "valuation": "عشرات الملايين من الجنيهات",
+    "initial_investment": "رأس المال الشخصي المستخدم في البحث والتطوير والإطلاق غير معلن. في Shark Tank Egypt طلبت Alya Othman مبلغ 2 مليون جنيه مقابل 20%، بما يعني تقييمًا ضمنيًا بعد الاستثمار قدره 10 ملايين جنيه. قبلت على الهواء عرضًا بقيمة 5 ملايين جنيه مقابل 50% من Dina Ghabbour وMohamed Farouk، مع خفض الحصة إلى 30% بعد استرداد رأس المال وفق التغطيات. تختلف المصادر الثانوية في وصف الرسوم الإضافية، ولم تُنشر مستندات الإغلاق أو جدول الملكية الحالي.",
+    "valuation": "طلب 2 مليون جنيه مقابل 20% يعني تقييمًا ضمنيًا بعد الاستثمار 10 ملايين جنيه وقبل الاستثمار 8 ملايين. العرض التلفزيوني البالغ 5 ملايين مقابل 50% يعني تقييمًا أوليًا بعد الاستثمار 10 ملايين وقبل الاستثمار 5 ملايين. وإذا انخفضت الحصة إلى 30% بعد استرداد رأس المال، فلا يصح تحويل ذلك تلقائيًا إلى تقييم حالي؛ فهو هيكل صفقة مشروط وليس قيمة سوقية. لم يُعلن تقييم حديث للشركة.",
     "revenue_streams": [
-      "المبيعات المباشرة عبر المتجر الإلكتروني والسوشيال ميديا (D2C)",
-      "المبيعات للصالونات المتخصصة والصيدليات (B2B)"
+      "مبيعات المنتجات المنفردة مباشرة عبر متجر Curlit الإلكتروني",
+      "مبيعات حزم التصفيف للشعر الكيرلي والويفي بخصم عن شراء المنتجات منفصلة",
+      "مبيعات التجزئة عبر الصيدليات والمتاجر واستوديوهات الشعر والمنصات الإلكترونية",
+      "مبيعات الجملة للصالونات والمتاجر والموزعين المحليين",
+      "مبيعات التصدير والتوزيع في الخليج وكندا والأسواق الإقليمية المعلنة",
+      "إيرادات محتملة من توسيع خط المنتجات من التصفيف إلى الغسل والعلاج والعناية المتخصصة",
+      "برنامج الولاء يحفز إعادة الشراء لكنه ليس قناة إيراد مستقلة",
+      "برنامج Affiliate يدفع عمولة 10% على المبيعات المحالة؛ هو تكلفة اكتساب مرتبطة بالإيراد وليس إيرادًا جديدًا",
+      "المحتوى التعليمي واختبار الشعر وقاعدة Hair Profiles أدوات اكتساب وبحث وتطوير، ولم يثبت أنها خدمات مدفوعة",
+      "لا يوجد دليل منشور على رسوم اشتراك أو ترخيص بيانات أو خدمات صالونات مملوكة للشركة"
     ]
   },
   "lessons": [
     {
-      "title": "قوة الشريحة الضيقة (The Power of Niche)",
-      "description": "لو أطلقت (كيرل) شامبو (لكل أنواع الشعر) لفشلت أمام عمالقة مثل لوريال وبانتين. لكن بتضييق الشريحة لتستهدف (الشعر المجعد فقط)، أصبحت هي العلامة التجارية الأولى والخبيرة في نظر هذه الفئة، مما خلق ولاءً منقطع النظير."
+      "title": "اختيار الفئة يبدأ من اختلاف وظيفي لا من شعار",
+      "description": "فصل تركيبة الشعر المموج عن الكيرلي يعطي سببًا منتجيًا لوجود العلامة. التخصص المقنع يحتاج اختلافًا في الوزن والترطيب والثبات وطريقة الاستخدام، لا مجرد كتابة «للشعر الكيرلي» على عبوة عامة."
     },
     {
-      "title": "التسويق عبر التوعية (Educational Marketing)",
-      "description": "لم تكتفِ الشركة ببيع المنتجات، بل قامت بتعليم الفتيات كيفية العناية بشعرهن (The Curly Girl Method) عبر محتوى مجاني، مما جعلها مرجعية (Authority) في هذا المجال وسهل عملية البيع."
+      "title": "المنتج المحلي ينافس بالملاءمة لا بمهاجمة المستورد",
+      "description": "ميزة Curlit المحتملة هي التصميم للرطوبة والعادات والسعر والتوفر المحلي. المقارنة الناجحة تُبنى على أداء قابل للقياس وتجربة أسهل، لا على افتراض أن المحلي أفضل تلقائيًا."
+    },
+    {
+      "title": "كلمة طبيعي أضعف من قائمة مكونات واضحة",
+      "description": "Curlit نفسها تشرح أن مصطلح «طبيعي» غير منضبط. نشر المكونات وتحديد ما هو مستبعد وشرح وظيفة التركيبة أكثر ثقة من ادعاء أن المنتج خالٍ من الكيميائيات."
+    },
+    {
+      "title": "الاختبار المستقل يحتاج نشر السياق لا النسبة فقط",
+      "description": "قول «86.8% أسهل في التمشيط» مفيد، لكن القرار الأقوى يوضح العينة والمنتج الضابط وطريقة القياس والجرعة والظروف. الادعاء العلمي يصبح أصلًا تسويقيًا مستدامًا عندما يستطيع المشتري فهمه ومراجعته."
+    },
+    {
+      "title": "التعليم يقلل سوء الاستخدام ويحمي تقييم المنتج",
+      "description": "الجل الجيد قد يبدو لزجًا عند الإفراط، والويف قد يثقل بكمية تناسب الكيرل. المحتوى الذي يشرح الكمية والترتيب والتجفيف يقلل مراجعات سببها التطبيق الخاطئ ويحسن النتائج الفعلية."
+    },
+    {
+      "title": "اختبار نوع الشعر هو أداة اكتساب وبحث في آن واحد",
+      "description": "الاختبار يساعد العميل على اختيار المسار، ويولد بيانات عن النمط والمشكلات والرطوبة والعادات. قيمته تزيد فقط مع موافقة واضحة، وتعريف جودة البيانات، وربطها بقرارات منتجات قابلة للقياس."
+    },
+    {
+      "title": "قاعدة البيانات ليست ميزة دفاعية بمجرد عد السجلات",
+      "description": "ستة آلاف Hair Profile رقم بداية، لكن الحاجز الحقيقي يأتي من دقة البيانات وتنوعها وتحديثها وربطها بالشراء والنتائج والخصوصية. الحجم دون جودة أو استخدام لا ينتج نموذجًا أفضل."
+    },
+    {
+      "title": "ثلاثة منتجات تكشف الطلب وتزيد خطر التركّز",
+      "description": "خط صغير يبسط المخزون والرسالة والتعلم، لكنه يجعل الإيراد حساسًا لمشكلة توريد أو تقييم سلبي في منتج واحد. التوسع إلى ثمانية منتجات يجب أن يُدار حسب تكرار الاستخدام والهامش والتوافق، لا عدد SKU فقط."
+    },
+    {
+      "title": "الحزمة تبيع روتينًا وتبسط القرار",
+      "description": "جمع Leave-In والجل يوضح ترتيب الاستخدام ويزيد متوسط السلة ويمنح خصمًا بسيطًا. نجاح الحزمة يُقاس بنسبة إتمام الروتين وإعادة شراء كل مكون، لا ببيع قطعتين مرة واحدة فقط."
+    },
+    {
+      "title": "التجزئة تمنح الثقة لكنها تسحب جزءًا من الهامش",
+      "description": "وجود المنتج في الصيدلية أو الاستوديو يسمح بالتجربة والنصيحة والوصول الفوري، لكنه يضيف هامش التاجر وشروط السداد والمخزون. يجب مقارنة صافي المساهمة لكل قناة بدل مقارنة المبيعات الإجمالية."
+    },
+    {
+      "title": "برنامج العمولة يحول المجتمع إلى قناة قابلة للقياس",
+      "description": "عمولة 10% ورمز فريد يسمحان بربط كل إحالة بمبيعات. لكن يجب حساب المرتجعات والخصومات والهدايا وتكرار العميل، والتأكد من الإفصاح الواضح عن العلاقة الإعلانية."
+    },
+    {
+      "title": "التصدير في التجميل يبدأ بالامتثال قبل التسويق",
+      "description": "الدخول إلى الخليج أو كندا يحتاج تسجيلًا وملصقات وملف سلامة وادعاءات وتتبّعًا وشريكًا مسؤولًا وشروط تخزين. الطلب الدولي لا يتحول إلى توسع مستدام دون بنية امتثال وسلسلة توريد."
+    },
+    {
+      "title": "تحسين الهامش ليس مساويًا لرفع السعر",
+      "description": "هدف تحسين Gross Margin بنسبة 20% قد يأتي من عبوات أو توريد أو حجم إنتاج أو مزيج قنوات أو سعر. كل خيار يؤثر في الجودة والسيولة والطلب، ويجب قياسه على مستوى SKU والقناة."
+    },
+    {
+      "title": "صفقة Shark Tank هي شروط تفاوض وليست قيمة نهائية",
+      "description": "الطلب والعرض أعطيا القيمة نفسها تقريبًا بعد الاستثمار، لكن الاختلاف كان في الحصة والهيكل المشروط والرسوم. التقييم وحده لا يشرح تكلفة رأس المال أو السيطرة أو الحوافز بعد استرداد الاستثمار."
     }
   ],
   "tools": [
-    "Shopify",
-    "Social Media Marketing",
-    "CRM & Email Marketing"
+    "متجر إلكتروني مباشر للمنتجات والحزم والحسابات والطلبات",
+    "دفع بالبطاقات والدفع عند الاستلام بحسب الخيارات المعروضة",
+    "منتجان أساسيان بتركيبتين للـLeave-In مخصصتين للكيرلي والويفي وجل تصفيف مشترك",
+    "حزم Styling Kit توضح روتين الترطيب ثم التثبيت",
+    "Hair Quiz لتوجيه المستخدم بين الشعر المموج والكيرلي وجمع ملف اختياري",
+    "صفحات مكونات وفوائد وتعليمات استخدام وأسئلة شائعة لكل منتج",
+    "نتائج اختبارات طرف ثالث لسهولة التمشيط وتعريف النمط ومقاومة الرطوبة وفق ادعاءات الشركة",
+    "دليل منافذ تجزئة معتمدة في القاهرة والإسكندرية ودهب",
+    "نموذج طلبات جملة للصالونات والمتاجر والمصدّرين والمنصات",
+    "قنوات بيع عبر Noon وAmazon وشركاء تجزئة محليين وفق الشركة",
+    "برنامج Affiliate بعمولة 10% ورمز خصم وتتبع ومدفوعات شهرية",
+    "برنامج Loyalty بالنقاط لتحفيز التسجيل وإعادة الشراء",
+    "مراجعات عملاء ومحتوى UGC وصور وفيديوهات ضمن شروط استخدام معلنة",
+    "Curlit Journal لمحتوى التطبيق والروتين والرطوبة والتصفيف",
+    "نشرات بريدية وعروض وقياس إعلاني على Meta وفق سياسة الخصوصية",
+    "قاعدة Hair Profiles مبلّغ عنها لاستخدامها في تطوير المنتجات",
+    "برنامج MINT by EGBANK للتوجيه والاستعداد للاستثمار",
+    "تصنيع بتركيبات مملوكة للشركة وفق وصفها، مع عمليات جودة متوافقة مع مبادئ GMP المعلنة",
+    "تصدير معلن إلى الخليج وكندا واتفاقات للتوسع في أسواق إضافية",
+    "سياسات خصوصية وشروط بيع ومرتجعات وحماية بيانات وفق القانون المصري"
+  ],
+  "verification": {
+    "status": "verified_from_curlit_official_site_company_statements_shark_tank_and_cross_checked_business_sources",
+    "verified_on": "2026-08-03",
+    "source_policy": "أُعطيت الأولوية لموقع Curlit الرسمي وصفحات المنتجات والمنافذ والسياسات وبرامج الجملة والعمولة، ثم صفحة Shark Tank Egypt الرسمية وتصريحات المؤسِّسة. استُخدمت التغطيات المتقاطعة لتوثيق شروط العرض التلفزيوني، مع عدم افتراض إغلاق قانوني غير معلن.",
+    "important_notes": [
+      "الاسم الصحيح للعلامة هو Curlit، وليس Curl.",
+      "تأسست العلامة تجاريًا في 2022–2023 وفق اختلاف تعريف «جاءت للحياة» و«تأسست» في مصادر الشركة؛ يستخدم الملف 2023 كبدء الشركة المعلن في صفحة الأعمال.",
+      "رقم 15 مليون جنيه يمثل مبيعات معلنة خلال عامين وفق المؤسِّسة، وليس إيرادًا شهريًا أو صافي ربح.",
+      "متوسط 625 ألف جنيه شهريًا حساب تاريخي فقط، ولا يثبت مستوى المبيعات الحالي أو الموسمية.",
+      "لا توجد بيانات موثوقة للزيارات أو الطلبات أو العملاء النشطين شهريًا.",
+      "أرقام 15 مليون سيدة و190 مليون دولار و8% نمو و6,000 Hair Profile صادرة عن المؤسِّسة في مقابلة ولم تُراجع مستقلًا.",
+      "صفقة Shark Tank موثقة كعرض مقبول على الهواء، لكن مستندات الإغلاق وجدول الملكية الحالي غير منشورين.",
+      "تختلف المصادر الثانوية في وصف 5% الإضافية كرسوم إدارة أو أرباح/royalty؛ لذلك لم تُعرض الصياغة المختلف عليها كحقيقة قانونية نهائية.",
+      "المنتجات ليست «خالية من المواد الكيميائية»؛ صفحاتها تنشر مكونات تجميلية كاملة وتحدد خلوًا من مكونات بعينها فقط.",
+      "نتائج Croda والاختبارات المستقلة منشورة كادعاءات الشركة وصفحات المنتج، لكن تقارير الاختبار الكاملة ليست متاحة للعامة في المصادر المستخدمة.",
+      "تم حذف Shopify وCRM باعتبارهما تقنيات غير موثقة رسميًا، واستبدالهما بقدرات تشغيل وتجارية ظاهرة مباشرة.",
+      "برنامج Affiliate والولاء والمحتوى أدوات اكتساب واحتفاظ، وليست مصادر إيراد مستقلة."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط كل حقل بقيمته وحالة التحقق والثقة والمصادر والقيود الخاصة بالشركات الخاصة والادعاءات التجميلية.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي.",
+      "verified_company_reported": "الرقم أو القدرة منشوران من الشركة أو المؤسِّسة دون تدقيق مستقل.",
+      "verified_historical_average_from_company_reported_sales": "القيمة مشتقة من مبيعات تاريخية معلنة وليست MRR.",
+      "verified_as_not_publicly_disclosed": "لم تنشر الشركة المقياس المطلوب، ولذلك لم يُستخدم تقدير غير موثوق.",
+      "verified_on_air_terms_closing_undisclosed": "شروط العرض التلفزيوني موثقة، لكن الإغلاق القانوني غير منشور.",
+      "verified_historical_calculation": "القيمة مشتقة حسابيًا من مبلغ ونسبة معلنين.",
+      "verified_product_claim_with_test_disclosure_limits": "الادعاء مدعوم بصفحة منتج أو بيان شركة، لكن التقرير الكامل غير منشور.",
+      "verified_product_capability": "القدرة ظاهرة في المنتج أو الموقع الرسمي.",
+      "analytical_inference": "تحليل مهني مبني على حقائق موثقة وليس تصريحًا حرفيًا من الشركة."
+    },
+    "confidence_scale": {
+      "high": "موقع الشركة أو صفحة Shark Tank الرسمية أو شروط قانونية مباشرة.",
+      "medium_high": "مقابلة مباشرة مع المؤسِّسة أو عدة تغطيات متقاطعة.",
+      "medium": "رقم سوق أو نتيجة اختبار منشورة من الشركة دون تقرير مستقل كامل."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "القاهرة، مصر. تستخدم Curlit عنوانًا مسجلًا في 24 شارع النزهة، أرض الجولف، القاهرة، وتبيع عبر متجرها المباشر ومنافذ تجزئة معتمدة داخل القاهرة والإسكندرية ودهب، مع توسع معلن إلى الخليج وكندا.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "registered_cairo_location_and_sales_footprint",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت سياسة الخصوصية والشروط العنوان المسجل، ويثبت دليل المنافذ والتاريخ نطاق البيع المحلي والتصدير.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-11",
+        "SRC-12",
+        "SRC-08",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "Curlit Privacy Policy",
+          "publisher": "Curlit",
+          "source_type": "official_privacy_document",
+          "url": "https://curlit.shop/privacy-policy/",
+          "evidence_type": "direct",
+          "source_locator": "Privacy Policy → Who We Are",
+          "supports": "العنوان المسجل في القاهرة."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Curlit Terms of Use and Service",
+          "publisher": "Curlit",
+          "source_type": "official_legal_document",
+          "url": "https://curlit.shop/terms-and-conditions-affliate/",
+          "evidence_type": "direct",
+          "source_locator": "Terms → Definitions and Contact",
+          "supports": "العنوان والقانون المصري."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Curlit Authorised Retailers",
+          "publisher": "Curlit",
+          "source_type": "official_store_locator",
+          "url": "https://curlit.shop/find-us/",
+          "evidence_type": "direct",
+          "source_locator": "Store Locator",
+          "supports": "منافذ القاهرة والإسكندرية ودهب."
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Curlit",
+          "publisher": "Curlit",
+          "source_type": "official_company_history",
+          "url": "https://curlit.shop/about-curlit/",
+          "evidence_type": "direct",
+          "source_locator": "Timeline",
+          "supports": "التصدير للخليج وكندا."
+        }
+      ]
+    },
+    "$.company.business_model": {
+      "field_value": "علامة عناية بالشعر تبيع مباشرة للمستهلك عبر متجر إلكتروني، وتوزع عبر الصيدليات والمتاجر والاستوديوهات والمنصات الإلكترونية، وتقبل طلبات الجملة والتصدير، وتستخدم برنامج ولاء وتسويق بالعمولة ومحتوى تعليميًا لدعم الاكتساب والاحتفاظ. تصمم الشركة تركيباتها وتتعامل مع التصنيع والجودة عبر شركاء، لكن لا تنشر تكاليف التصنيع أو هوامش القنوات أو نسبة المبيعات المباشرة مقابل التجزئة.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "d2c_retail_wholesale_export_and_affiliate_haircare_brand",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت صفحات المتجر والجملة والمنافذ والعمولة قنوات البيع والاكتساب المتعددة.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-02",
+        "SRC-08",
+        "SRC-09",
+        "SRC-10",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Curlit Online Store",
+          "publisher": "Curlit",
+          "source_type": "official_ecommerce_store",
+          "url": "https://curlit.shop/",
+          "evidence_type": "direct",
+          "source_locator": "Homepage",
+          "supports": "المتجر المباشر والولاء والجملة والعمولة."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Curlit Authorised Retailers",
+          "publisher": "Curlit",
+          "source_type": "official_store_locator",
+          "url": "https://curlit.shop/find-us/",
+          "evidence_type": "direct",
+          "source_locator": "Store locator",
+          "supports": "التجزئة."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Curlit Wholesale Program",
+          "publisher": "Curlit",
+          "source_type": "official_wholesale_page",
+          "url": "https://curlit.shop/about-curlit/become-wholesaler/",
+          "evidence_type": "direct",
+          "source_locator": "Wholesale form",
+          "supports": "الجملة والتصدير."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Curlit Affiliate Program",
+          "publisher": "Curlit",
+          "source_type": "official_affiliate_program",
+          "url": "https://curlit.shop/affiliate-registration/",
+          "evidence_type": "direct",
+          "source_locator": "Affiliate program",
+          "supports": "التسويق بالعمولة."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Curlit Company Profile",
+          "publisher": "Curlit via LinkedIn",
+          "source_type": "company_managed_profile",
+          "url": "https://www.linkedin.com/company/curlithq",
+          "evidence_type": "direct",
+          "source_locator": "Company profile",
+          "supports": "Noon وAmazon والتوسع."
+        }
+      ],
+      "limitations": "لا تنشر الشركة مزيج القنوات أو هوامشها أو كيان التصنيع المتعاقد."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "نحو 625 ألف جنيه مصري كمتوسط تاريخي تقريبي، استنادًا إلى تصريح المؤسِّسة بأن Curlit حققت مبيعات بقيمة 15 مليون جنيه خلال عامين. هذا متوسط مبيعات إجمالية، وليس إيرادًا شهريًا متكررًا أو مستوى المبيعات الحالي، ولم تُنشر قوائم مالية أو صافي أرباح مدققة.",
+      "verification_status": "verified_historical_average_from_company_reported_sales",
+      "confidence": "medium_high",
+      "claim_type": "derived_average_from_founder_reported_two_year_sales",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "ذكرت المؤسِّسة 15 مليون جنيه مبيعات خلال عامين، وقُسمت على 24 شهرًا لإظهار متوسط تاريخي فقط.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-14",
+          "title": "Curlit Funding and Growth Interview",
+          "publisher": "FinTech Gate",
+          "source_type": "founder_interview",
+          "url": "https://fintechgate.net/2025/09/25/%D9%85%D9%86%D8%B5%D8%A9-curlit-%D8%A7%D9%84%D9%86%D8%A7%D8%B4%D8%A6%D8%A9-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D8%A9-%D8%AA%D8%B3%D8%AA%D9%87%D8%AF%D9%81-%D8%AC%D9%85%D8%B9-5-%D9%85%D9%84/",
+          "evidence_type": "direct",
+          "source_locator": "Founder interview → sales and traction",
+          "supports": "15 مليون جنيه مبيعات خلال عامين.",
+          "published_on": "2025-09-25"
+        }
+      ],
+      "limitations": "لا تتوفر تواريخ بداية ونهاية دقيقة أو اعتراف محاسبي أو مرتجعات أو صافي إيراد أو ربح.",
+      "calculation": {
+        "reported_two_year_sales_egp": 15000000,
+        "period_months": 24,
+        "formula": "15,000,000 ÷ 24",
+        "historical_monthly_average_egp": 625000,
+        "calculation_status": "gross_sales_average_not_mrr_or_current_run_rate"
+      }
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن. لا تنشر Curlit زيارات الموقع أو عدد العملاء النشطين أو الطلبات الشهرية. المؤشرات العامة المتاحة تشمل أكثر من 6,000 ملف شعر وفق المؤسِّسة، ووجودًا في 14 منفذ تجزئة معتمدًا ظاهرًا في دليل الموقع، إضافة إلى البيع عبر Noon وAmazon وشركاء آخرين؛ وهذه ليست مقاييس حركة شهرية.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "monthly_users_orders_and_web_traffic_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا توجد أرقام للزيارات أو الطلبات الشهرية؛ تستخدم المؤشرات العامة فقط دون تحويلها إلى حركة شهرية.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-14",
+        "SRC-08",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-14",
+          "title": "Curlit Funding and Growth Interview",
+          "publisher": "FinTech Gate",
+          "source_type": "founder_interview",
+          "url": "https://fintechgate.net/2025/09/25/%D9%85%D9%86%D8%B5%D8%A9-curlit-%D8%A7%D9%84%D9%86%D8%A7%D8%B4%D8%A6%D8%A9-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D8%A9-%D8%AA%D8%B3%D8%AA%D9%87%D8%AF%D9%81-%D8%AC%D9%85%D8%B9-5-%D9%85%D9%84/",
+          "evidence_type": "direct",
+          "source_locator": "Founder interview",
+          "supports": "6,000 Hair Profile وليس مستخدمين شهريين.",
+          "published_on": "2025-09-25"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Curlit Authorised Retailers",
+          "publisher": "Curlit",
+          "source_type": "official_store_locator",
+          "url": "https://curlit.shop/find-us/",
+          "evidence_type": "direct",
+          "source_locator": "Store locator",
+          "supports": "14 منفذًا ظاهرًا."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Curlit Company Profile",
+          "publisher": "Curlit via LinkedIn",
+          "source_type": "company_managed_profile",
+          "url": "https://www.linkedin.com/company/curlithq",
+          "evidence_type": "direct",
+          "source_locator": "Company profile",
+          "supports": "قنوات Noon وAmazon والتجزئة."
+        }
+      ],
+      "limitations": "المنافذ والملفات وقنوات البيع لا تساوي زيارات أو طلبات أو عملاء نشطين."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "رأت المؤسِّسة فجوة بين احتياجات الشعر الكيرلي والمموج في مناخ مصر والمنطقة وبين منتجات عامة أو مستوردة لا تميز بما يكفي بين نمط الويف والكيرل أو ظروف الحرارة والرطوبة. ويواجه المستهلك كذلك صعوبة في فهم نوع الشعر، ترتيب المنتجات، كمية الاستخدام، ومعنى ادعاءات مثل «طبيعي» أو «خالي من المواد الكيميائية».",
+        "impact": "قد يؤدي اختيار تركيبة أو كمية غير مناسبة إلى ثقل الشعر أو تراكم أو هيشان أو ضعف ثبات التصفيف، بينما ترفع المنتجات المستوردة تكاليف التجربة والخطأ. كما أن الادعاءات غير الدقيقة تضعف الثقة؛ فكل مستحضر تجميلي يتكون من مواد كيميائية، والمهم هو التركيبة والسلامة والاستخدام والاختبار بدل وصف المنتج بأنه «بلا كيميائيات»."
+      },
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "texture_climate_product_fit_and_claim_transparency_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم قصة المؤسِّسة فجوة المنتجات، وتدعم المقالة الرسمية ضرورة الدقة في ادعاءات الطبيعي والمكونات.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-13",
+        "SRC-20",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Curlit",
+          "publisher": "Curlit",
+          "source_type": "official_company_history",
+          "url": "https://curlit.shop/about-curlit/",
+          "evidence_type": "direct",
+          "source_locator": "About story",
+          "supports": "تجربة المؤسِّسة وتطوير تركيبة مخصصة."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Curlit Company Profile",
+          "publisher": "Curlit via LinkedIn",
+          "source_type": "company_managed_profile",
+          "url": "https://www.linkedin.com/company/curlithq",
+          "evidence_type": "direct",
+          "source_locator": "About us",
+          "supports": "الحرارة والرطوبة والويفي."
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Curlit’s Approach to the Natural Claim",
+          "publisher": "Curlit",
+          "source_type": "official_educational_article",
+          "url": "https://curlit.shop/curlit-journal/navigating-the-natural-buzz-curlits-commitment-to-transparency/",
+          "evidence_type": "direct",
+          "source_locator": "Educational article",
+          "supports": "حدود ادعاء الطبيعي."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Your Biggest Flex — Wavy Leave-In Conditioner",
+          "publisher": "Curlit",
+          "source_type": "official_product_page",
+          "url": "https://curlit.shop/product/leave-in-conditioner-wavy/",
+          "evidence_type": "direct",
+          "source_locator": "Product page",
+          "supports": "اختلاف تركيبة الويفي."
+        }
+      ],
+      "limitations": "لا توجد دراسة مستقلة تقيس نسبة الضرر أو عدم الملاءمة في السوق المصري."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "طورت Curlit تركيبات منفصلة للشعر الكيرلي والمموج، وبدأت ببلسم Leave-In وجل تصفيف وحزم تجمعهما. تعرض المكونات وتعليمات الاستخدام، وتذكر أن المنتجات خالية من السيليكون والبارابين والكحوليات المجففة وفق صفحاتها، وتستخدم اختبار نوع الشعر ومحتوى روتينيًا وتعليميًا. كما تنشر نتائج اختبارات طرف ثالث لسهولة التمشيط وثبات التصفيف والحماية من الهيشان في الرطوبة، مع ملاحظة أن التقارير المختبرية الكاملة ومنهجيات جميع الادعاءات ليست منشورة بصورة مستقلة كاملة."
+      },
+      "verification_status": "verified_product_claim_with_test_disclosure_limits",
+      "confidence": "medium_high",
+      "claim_type": "texture_specific_formulas_education_and_company_reported_testing",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المنتجات تركيبتين منفصلتين وجلًا وحزمًا ومكونات وتعليمات؛ وتعرض الشركة نتائج اختبار طرف ثالث.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-04",
+        "SRC-05",
+        "SRC-06",
+        "SRC-07",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Your Biggest Flex — Curly Leave-In Conditioner",
+          "publisher": "Curlit",
+          "source_type": "official_product_page",
+          "url": "https://curlit.shop/product/curly-leave-in-conditioner/",
+          "evidence_type": "direct",
+          "source_locator": "Product page",
+          "supports": "Leave-In كيرلي واختبار التمشيط."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Your Biggest Flex — Wavy Leave-In Conditioner",
+          "publisher": "Curlit",
+          "source_type": "official_product_page",
+          "url": "https://curlit.shop/product/leave-in-conditioner-wavy/",
+          "evidence_type": "direct",
+          "source_locator": "Product page",
+          "supports": "Leave-In ويفي ومكوناته."
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Holdin’ You Tight Hair Styling Gel",
+          "publisher": "Curlit",
+          "source_type": "official_product_page",
+          "url": "https://curlit.shop/product/holdin-you-tight-hair-gel-curly-wavy/",
+          "evidence_type": "direct",
+          "source_locator": "Product page",
+          "supports": "الجل والمكونات."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Wavy Hair Styling Kit",
+          "publisher": "Curlit",
+          "source_type": "official_bundle_page",
+          "url": "https://curlit.shop/product/curlit-wavy-hair-routine/",
+          "evidence_type": "direct",
+          "source_locator": "Bundle page",
+          "supports": "الحزمة والروتين."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Curlit Company Profile",
+          "publisher": "Curlit via LinkedIn",
+          "source_type": "company_managed_profile",
+          "url": "https://www.linkedin.com/company/curlithq",
+          "evidence_type": "direct",
+          "source_locator": "Company updates",
+          "supports": "Croda testing."
+        }
+      ],
+      "limitations": "لم تُنشر ملفات تقارير الاختبار الكاملة أو تفاصيل العينة لجميع الادعاءات."
+    },
+    "$.market_data.target_audience": {
+      "field_value": "الأطفال من عمر 3 سنوات والبالغون من أصحاب الشعر الكيرلي والمموج بمختلف الأجناس، والأسر التي تبحث عن روتين محلي أبسط، وصالونات واستوديوهات الشعر والصيدليات والمتاجر ومنصات التجارة الإلكترونية، إضافة إلى موزعين ومصدّرين ومبدعي محتوى ومسوقين بالعمولة.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "curly_wavy_consumers_families_retailers_salons_and_channel_partners",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المنتجات الأعمار والأنماط، وتثبت الجملة والمنافذ والعمولة شرائح الشركاء.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-04",
+        "SRC-05",
+        "SRC-09",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Your Biggest Flex — Curly Leave-In Conditioner",
+          "publisher": "Curlit",
+          "source_type": "official_product_page",
+          "url": "https://curlit.shop/product/curly-leave-in-conditioner/",
+          "evidence_type": "direct",
+          "source_locator": "Product page",
+          "supports": "الشعر الكيرلي وعمر 3+."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Your Biggest Flex — Wavy Leave-In Conditioner",
+          "publisher": "Curlit",
+          "source_type": "official_product_page",
+          "url": "https://curlit.shop/product/leave-in-conditioner-wavy/",
+          "evidence_type": "direct",
+          "source_locator": "Product page",
+          "supports": "الشعر المموج وعمر 3+."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Curlit Wholesale Program",
+          "publisher": "Curlit",
+          "source_type": "official_wholesale_page",
+          "url": "https://curlit.shop/about-curlit/become-wholesaler/",
+          "evidence_type": "direct",
+          "source_locator": "Wholesale",
+          "supports": "صالون وتجزئة وتصدير ومنصة."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Curlit Affiliate Program",
+          "publisher": "Curlit",
+          "source_type": "official_affiliate_program",
+          "url": "https://curlit.shop/affiliate-registration/",
+          "evidence_type": "direct",
+          "source_locator": "Affiliate",
+          "supports": "عملاء ومبدعو UGC."
+        }
+      ]
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا توجد دراسة حكومية أو مستقلة منشورة تحدد سوق Curlit القابل للاستهداف. ذكرت المؤسِّسة أن مصر تضم أكثر من 15 مليون سيدة بشعر كيرلي أو مموج، وأن حجم الفئة يقارب 190 مليون دولار مع نمو سنوي 8%. تُعامل هذه الأرقام كتقديرات إدارية منشورة في مقابلة، لا كقياس سوق مستقل. المؤشرات المؤكدة الأقرب هي توسع العلامة من مصر إلى الخليج وكندا ووجود قنوات مباشرة وتجزيئية متعددة.",
+      "verification_status": "verified_company_reported",
+      "confidence": "medium",
+      "claim_type": "founder_estimated_niche_market_without_independent_tam",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تقدم مقابلة المؤسِّسة تقديرات الفئة، بينما تثبت الشركة وجود قنوات دولية؛ لا يوجد TAM مستقل.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-14",
+        "SRC-01",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-14",
+          "title": "Curlit Funding and Growth Interview",
+          "publisher": "FinTech Gate",
+          "source_type": "founder_interview",
+          "url": "https://fintechgate.net/2025/09/25/%D9%85%D9%86%D8%B5%D8%A9-curlit-%D8%A7%D9%84%D9%86%D8%A7%D8%B4%D8%A6%D8%A9-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D8%A9-%D8%AA%D8%B3%D8%AA%D9%87%D8%AF%D9%81-%D8%AC%D9%85%D8%B9-5-%D9%85%D9%84/",
+          "evidence_type": "direct",
+          "source_locator": "Founder interview → market",
+          "supports": "15 مليون سيدة و190 مليون دولار و8% نمو وفق المؤسِّسة.",
+          "published_on": "2025-09-25"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Curlit",
+          "publisher": "Curlit",
+          "source_type": "official_company_history",
+          "url": "https://curlit.shop/about-curlit/",
+          "evidence_type": "direct",
+          "source_locator": "Timeline",
+          "supports": "التصدير للخليج وكندا."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Curlit Company Profile",
+          "publisher": "Curlit via LinkedIn",
+          "source_type": "company_managed_profile",
+          "url": "https://www.linkedin.com/company/curlithq",
+          "evidence_type": "direct",
+          "source_locator": "Company profile",
+          "supports": "الوجود الإقليمي والدولي."
+        }
+      ],
+      "limitations": "أرقام السوق تقديرات الإدارة ولم يُعثر على منهجية أو دراسة أصلية منشورة."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا تنشر Curlit سلسلة سنوية للإيراد أو العملاء. وفق مقابلة المؤسِّسة، حققت الشركة 15 مليون جنيه من المبيعات خلال عامين، وبنت أكثر من 6,000 Hair Profile، ووقعت اتفاقات للتوسع في ستة أسواق، وكانت تستهدف زيادة المنتجات من 3 إلى 8 وتحسين Gross Margin بنسبة 20%. هذه نتائج وخطط صادرة عن الإدارة، وليست معدل نمو مدققًا.",
+      "verification_status": "verified_company_reported",
+      "confidence": "medium",
+      "claim_type": "founder_reported_sales_data_profiles_and_expansion_targets",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تقدم المقابلة نتائج تراكمية وخططًا، لكنها لا تسمح بحساب CAGR أو نمو سنوي مدقق.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-14",
+        "SRC-13",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-14",
+          "title": "Curlit Funding and Growth Interview",
+          "publisher": "FinTech Gate",
+          "source_type": "founder_interview",
+          "url": "https://fintechgate.net/2025/09/25/%D9%85%D9%86%D8%B5%D8%A9-curlit-%D8%A7%D9%84%D9%86%D8%A7%D8%B4%D8%A6%D8%A9-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D8%A9-%D8%AA%D8%B3%D8%AA%D9%87%D8%AF%D9%81-%D8%AC%D9%85%D8%B9-5-%D9%85%D9%84/",
+          "evidence_type": "direct",
+          "source_locator": "Founder interview",
+          "supports": "المبيعات والملفات والأسواق وخطة المنتجات والهامش.",
+          "published_on": "2025-09-25"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Curlit Company Profile",
+          "publisher": "Curlit via LinkedIn",
+          "source_type": "company_managed_profile",
+          "url": "https://www.linkedin.com/company/curlithq",
+          "evidence_type": "direct",
+          "source_locator": "Company profile",
+          "supports": "التجزئة والتوسع والاختبارات."
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "MINT Incubator Cohort 14 Graduation",
+          "publisher": "FinTech Gate / EGBANK program coverage",
+          "source_type": "incubator_program_coverage",
+          "url": "https://fintechgate.net/2025/09/23/%D8%AD%D8%A7%D8%B6%D9%86%D8%A9-%D8%A3%D8%B9%D9%85%D8%A7%D9%84-mint-%D9%85%D9%86-egbank-%D8%AA%D8%AD%D8%AA%D9%81%D9%84-%D8%A8%D8%AA%D8%AE%D8%B1%D9%8A%D8%AC-17-%D8%B4%D8%B1%D9%83/",
+          "evidence_type": "direct",
+          "source_locator": "Incubator coverage",
+          "supports": "التخرج من MINT.",
+          "published_on": "2025-09-23"
+        }
+      ],
+      "limitations": "الأهداف المستقبلية ليست نتائج محققة، ولا تتوفر مقارنة سنة بسنة."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "رأس المال الشخصي المستخدم في البحث والتطوير والإطلاق غير معلن. في Shark Tank Egypt طلبت Alya Othman مبلغ 2 مليون جنيه مقابل 20%، بما يعني تقييمًا ضمنيًا بعد الاستثمار قدره 10 ملايين جنيه. قبلت على الهواء عرضًا بقيمة 5 ملايين جنيه مقابل 50% من Dina Ghabbour وMohamed Farouk، مع خفض الحصة إلى 30% بعد استرداد رأس المال وفق التغطيات. تختلف المصادر الثانوية في وصف الرسوم الإضافية، ولم تُنشر مستندات الإغلاق أو جدول الملكية الحالي.",
+      "verification_status": "verified_on_air_terms_closing_undisclosed",
+      "confidence": "medium_high",
+      "claim_type": "founder_capital_undisclosed_and_on_air_shark_tank_offer",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تتفق التغطيات على الطلب والعرض والحصة المشروطة، مع اختلاف وصف الرسوم وعدم نشر الإغلاق.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-15",
+        "SRC-16",
+        "SRC-17",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-15",
+          "title": "Shark Tank Egypt Health and Beauty Deals",
+          "publisher": "Shark Tank Egypt",
+          "source_type": "official_program_directory",
+          "url": "https://sharktank-egypt.com/en/deals/health-and-beauty",
+          "evidence_type": "direct",
+          "source_locator": "Health and Beauty deals",
+          "supports": "Curlit ضمن صفقات Shark Tank الرسمية."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Curlit Shark Tank Deal Coverage",
+          "publisher": "Arab Founders",
+          "source_type": "secondary_deal_coverage",
+          "url": "https://arabfounders.net/en/shark-tank-egypt-investments-2024/",
+          "evidence_type": "direct",
+          "source_locator": "Deal coverage",
+          "supports": "الطلب والعرض والحصة ورسوم الإدارة.",
+          "published_on": "2024"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Shark Tank Egypt Season 3 Episode 1 — Curl It",
+          "publisher": "Virtual CFO Consulting",
+          "source_type": "secondary_deal_and_market_analysis",
+          "url": "https://vcfoconsulting.com/shark-tank-season-3-ep-1/",
+          "evidence_type": "direct",
+          "source_locator": "Episode analysis",
+          "supports": "الطلب والعرض والهيكل ورسوم إضافية بصياغة مختلفة."
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Alya Othman Presents Curlit on Shark Tank Egypt",
+          "publisher": "Youm7",
+          "source_type": "founder_pitch_coverage",
+          "url": "https://www.youm7.com/story/2024/10/16/%D8%B9%D8%A7%D9%84%D9%8A%D8%A9-%D8%B9%D8%AB%D9%85%D8%A7%D9%86-%D8%AA%D8%B1%D9%81%D8%B9-%D8%B4%D8%B9%D8%A7%D8%B1-%D8%B5%D9%86%D8%B9-%D9%81%D9%8A-%D9%85%D8%B5%D8%B1-%D9%81%D9%8A-%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%D9%87%D8%A7-%D8%A8%D9%80/6744174",
+          "evidence_type": "direct",
+          "source_locator": "Pitch coverage",
+          "supports": "المؤسِّسة والمشاركة والمنتج.",
+          "published_on": "2024-10-16"
+        }
+      ],
+      "limitations": "تختلف المصادر في وصف 5% الإضافية، لذلك يجب الرجوع إلى العقود القانونية لإثباتها.",
+      "calculation": {
+        "founder_ask_egp": 2000000,
+        "founder_equity_percent": 20,
+        "accepted_on_air_amount_egp": 5000000,
+        "initial_equity_percent": 50,
+        "conditional_equity_after_recovery_percent": 30,
+        "legal_closing_status": "not_publicly_disclosed",
+        "current_cap_table": "not_publicly_disclosed"
+      }
+    },
+    "$.financials.valuation": {
+      "field_value": "طلب 2 مليون جنيه مقابل 20% يعني تقييمًا ضمنيًا بعد الاستثمار 10 ملايين جنيه وقبل الاستثمار 8 ملايين. العرض التلفزيوني البالغ 5 ملايين مقابل 50% يعني تقييمًا أوليًا بعد الاستثمار 10 ملايين وقبل الاستثمار 5 ملايين. وإذا انخفضت الحصة إلى 30% بعد استرداد رأس المال، فلا يصح تحويل ذلك تلقائيًا إلى تقييم حالي؛ فهو هيكل صفقة مشروط وليس قيمة سوقية. لم يُعلن تقييم حديث للشركة.",
+      "verification_status": "verified_historical_calculation",
+      "confidence": "high",
+      "claim_type": "on_air_ask_and_initial_offer_valuation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "حُسبت القيم من مبلغ التمويل ونسبة الأسهم قبل تطبيق الهيكل المشروط.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-16",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-16",
+          "title": "Curlit Shark Tank Deal Coverage",
+          "publisher": "Arab Founders",
+          "source_type": "secondary_deal_coverage",
+          "url": "https://arabfounders.net/en/shark-tank-egypt-investments-2024/",
+          "evidence_type": "direct",
+          "source_locator": "Deal coverage",
+          "supports": "2 مليون مقابل 20% و5 ملايين مقابل 50%.",
+          "published_on": "2024"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Shark Tank Egypt Season 3 Episode 1 — Curl It",
+          "publisher": "Virtual CFO Consulting",
+          "source_type": "secondary_deal_and_market_analysis",
+          "url": "https://vcfoconsulting.com/shark-tank-season-3-ep-1/",
+          "evidence_type": "direct",
+          "source_locator": "Episode analysis",
+          "supports": "تأكيد الشروط الأساسية."
+        }
+      ],
+      "limitations": "التقييم تاريخي وتلفزيوني ولا يثبت تقييمًا حاليًا أو إغلاقًا.",
+      "calculation": {
+        "ask_post_money_formula": "2,000,000 ÷ 0.20",
+        "ask_post_money_egp": 10000000,
+        "ask_pre_money_egp": 8000000,
+        "initial_offer_post_money_formula": "5,000,000 ÷ 0.50",
+        "initial_offer_post_money_egp": 10000000,
+        "initial_offer_pre_money_egp": 5000000,
+        "conditional_30_percent_structure": "not_equivalent_to_a_current_valuation_without_contract_terms"
+      }
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "مبيعات المنتجات المنفردة مباشرة عبر متجر Curlit الإلكتروني",
+        "مبيعات حزم التصفيف للشعر الكيرلي والويفي بخصم عن شراء المنتجات منفصلة",
+        "مبيعات التجزئة عبر الصيدليات والمتاجر واستوديوهات الشعر والمنصات الإلكترونية",
+        "مبيعات الجملة للصالونات والمتاجر والموزعين المحليين",
+        "مبيعات التصدير والتوزيع في الخليج وكندا والأسواق الإقليمية المعلنة",
+        "إيرادات محتملة من توسيع خط المنتجات من التصفيف إلى الغسل والعلاج والعناية المتخصصة",
+        "برنامج الولاء يحفز إعادة الشراء لكنه ليس قناة إيراد مستقلة",
+        "برنامج Affiliate يدفع عمولة 10% على المبيعات المحالة؛ هو تكلفة اكتساب مرتبطة بالإيراد وليس إيرادًا جديدًا",
+        "المحتوى التعليمي واختبار الشعر وقاعدة Hair Profiles أدوات اكتساب وبحث وتطوير، ولم يثبت أنها خدمات مدفوعة",
+        "لا يوجد دليل منشور على رسوم اشتراك أو ترخيص بيانات أو خدمات صالونات مملوكة للشركة"
+      ],
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "documented_d2c_bundle_retail_wholesale_export_and_future_product_sales",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت صفحات الشركة البيع المباشر والحزم والتجزئة والجملة والتصدير، بينما تميز الأدوات التسويقية عن الإيراد.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-08",
+        "SRC-09",
+        "SRC-10",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Curlit Online Store",
+          "publisher": "Curlit",
+          "source_type": "official_ecommerce_store",
+          "url": "https://curlit.shop/",
+          "evidence_type": "direct",
+          "source_locator": "Homepage",
+          "supports": "المتجر المباشر."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Curlit Shop Catalog",
+          "publisher": "Curlit",
+          "source_type": "official_product_catalog",
+          "url": "https://curlit.shop/shop/",
+          "evidence_type": "direct",
+          "source_locator": "Catalog",
+          "supports": "المنتجات والحزم."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Curlit Authorised Retailers",
+          "publisher": "Curlit",
+          "source_type": "official_store_locator",
+          "url": "https://curlit.shop/find-us/",
+          "evidence_type": "direct",
+          "source_locator": "Retailers",
+          "supports": "التجزئة."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Curlit Wholesale Program",
+          "publisher": "Curlit",
+          "source_type": "official_wholesale_page",
+          "url": "https://curlit.shop/about-curlit/become-wholesaler/",
+          "evidence_type": "direct",
+          "source_locator": "Wholesale",
+          "supports": "الجملة والتصدير."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Curlit Affiliate Program",
+          "publisher": "Curlit",
+          "source_type": "official_affiliate_program",
+          "url": "https://curlit.shop/affiliate-registration/",
+          "evidence_type": "direct",
+          "source_locator": "Affiliate",
+          "supports": "العمولة كتكلفة إحالة."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Curlit Funding and Growth Interview",
+          "publisher": "FinTech Gate",
+          "source_type": "founder_interview",
+          "url": "https://fintechgate.net/2025/09/25/%D9%85%D9%86%D8%B5%D8%A9-curlit-%D8%A7%D9%84%D9%86%D8%A7%D8%B4%D8%A6%D8%A9-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D8%A9-%D8%AA%D8%B3%D8%AA%D9%87%D8%AF%D9%81-%D8%AC%D9%85%D8%B9-5-%D9%85%D9%84/",
+          "evidence_type": "direct",
+          "source_locator": "Founder interview",
+          "supports": "التوسع إلى 8 منتجات.",
+          "published_on": "2025-09-25"
+        }
+      ],
+      "limitations": "لا توجد نسب عمولة للموزعين أو هوامش أو بيانات إيراد حسب القناة."
+    },
+    "$.tools": {
+      "field_value": [
+        "متجر إلكتروني مباشر للمنتجات والحزم والحسابات والطلبات",
+        "دفع بالبطاقات والدفع عند الاستلام بحسب الخيارات المعروضة",
+        "منتجان أساسيان بتركيبتين للـLeave-In مخصصتين للكيرلي والويفي وجل تصفيف مشترك",
+        "حزم Styling Kit توضح روتين الترطيب ثم التثبيت",
+        "Hair Quiz لتوجيه المستخدم بين الشعر المموج والكيرلي وجمع ملف اختياري",
+        "صفحات مكونات وفوائد وتعليمات استخدام وأسئلة شائعة لكل منتج",
+        "نتائج اختبارات طرف ثالث لسهولة التمشيط وتعريف النمط ومقاومة الرطوبة وفق ادعاءات الشركة",
+        "دليل منافذ تجزئة معتمدة في القاهرة والإسكندرية ودهب",
+        "نموذج طلبات جملة للصالونات والمتاجر والمصدّرين والمنصات",
+        "قنوات بيع عبر Noon وAmazon وشركاء تجزئة محليين وفق الشركة",
+        "برنامج Affiliate بعمولة 10% ورمز خصم وتتبع ومدفوعات شهرية",
+        "برنامج Loyalty بالنقاط لتحفيز التسجيل وإعادة الشراء",
+        "مراجعات عملاء ومحتوى UGC وصور وفيديوهات ضمن شروط استخدام معلنة",
+        "Curlit Journal لمحتوى التطبيق والروتين والرطوبة والتصفيف",
+        "نشرات بريدية وعروض وقياس إعلاني على Meta وفق سياسة الخصوصية",
+        "قاعدة Hair Profiles مبلّغ عنها لاستخدامها في تطوير المنتجات",
+        "برنامج MINT by EGBANK للتوجيه والاستعداد للاستثمار",
+        "تصنيع بتركيبات مملوكة للشركة وفق وصفها، مع عمليات جودة متوافقة مع مبادئ GMP المعلنة",
+        "تصدير معلن إلى الخليج وكندا واتفاقات للتوسع في أسواق إضافية",
+        "سياسات خصوصية وشروط بيع ومرتجعات وحماية بيانات وفق القانون المصري"
+      ],
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "official_ecommerce_product_testing_retail_wholesale_affiliate_loyalty_and_data_capabilities",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استُبدلت أسماء تقنيات غير مثبتة بقدرات تشغيلية وتجارية ظاهرة مباشرة.",
+      "source_count": 10,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-04",
+        "SRC-07",
+        "SRC-08",
+        "SRC-09",
+        "SRC-10",
+        "SRC-11",
+        "SRC-13",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Curlit Online Store",
+          "publisher": "Curlit",
+          "source_type": "official_ecommerce_store",
+          "url": "https://curlit.shop/",
+          "evidence_type": "direct",
+          "source_locator": "Homepage",
+          "supports": "المتجر والحساب والنشرة."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Curlit Shop Catalog",
+          "publisher": "Curlit",
+          "source_type": "official_product_catalog",
+          "url": "https://curlit.shop/shop/",
+          "evidence_type": "direct",
+          "source_locator": "Shop",
+          "supports": "الكتالوج والحزم والولاء."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Your Biggest Flex — Curly Leave-In Conditioner",
+          "publisher": "Curlit",
+          "source_type": "official_product_page",
+          "url": "https://curlit.shop/product/curly-leave-in-conditioner/",
+          "evidence_type": "direct",
+          "source_locator": "Curly product",
+          "supports": "المكونات والاختبارات."
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Wavy Hair Styling Kit",
+          "publisher": "Curlit",
+          "source_type": "official_bundle_page",
+          "url": "https://curlit.shop/product/curlit-wavy-hair-routine/",
+          "evidence_type": "direct",
+          "source_locator": "Wavy kit",
+          "supports": "الروتين والحزمة."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Curlit Authorised Retailers",
+          "publisher": "Curlit",
+          "source_type": "official_store_locator",
+          "url": "https://curlit.shop/find-us/",
+          "evidence_type": "direct",
+          "source_locator": "Store locator",
+          "supports": "المنافذ."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Curlit Wholesale Program",
+          "publisher": "Curlit",
+          "source_type": "official_wholesale_page",
+          "url": "https://curlit.shop/about-curlit/become-wholesaler/",
+          "evidence_type": "direct",
+          "source_locator": "Wholesale",
+          "supports": "الجملة."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Curlit Affiliate Program",
+          "publisher": "Curlit",
+          "source_type": "official_affiliate_program",
+          "url": "https://curlit.shop/affiliate-registration/",
+          "evidence_type": "direct",
+          "source_locator": "Program",
+          "supports": "Affiliate."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Curlit Privacy Policy",
+          "publisher": "Curlit",
+          "source_type": "official_privacy_document",
+          "url": "https://curlit.shop/privacy-policy/",
+          "evidence_type": "direct",
+          "source_locator": "Privacy",
+          "supports": "Hair profile والبيانات."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Curlit Company Profile",
+          "publisher": "Curlit via LinkedIn",
+          "source_type": "company_managed_profile",
+          "url": "https://www.linkedin.com/company/curlithq",
+          "evidence_type": "direct",
+          "source_locator": "Company profile",
+          "supports": "Croda وNoon وAmazon وGMP."
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "MINT Incubator Cohort 14 Graduation",
+          "publisher": "FinTech Gate / EGBANK program coverage",
+          "source_type": "incubator_program_coverage",
+          "url": "https://fintechgate.net/2025/09/23/%D8%AD%D8%A7%D8%B6%D9%86%D8%A9-%D8%A3%D8%B9%D9%85%D8%A7%D9%84-mint-%D9%85%D9%86-egbank-%D8%AA%D8%AD%D8%AA%D9%81%D9%84-%D8%A8%D8%AA%D8%AE%D8%B1%D9%8A%D8%AC-17-%D8%B4%D8%B1%D9%83/",
+          "evidence_type": "direct",
+          "source_locator": "Incubator",
+          "supports": "MINT.",
+          "published_on": "2025-09-23"
+        }
+      ],
+      "limitations": "لا تكشف القائمة نظام التجارة الإلكتروني أو CRM أو مزود التصنيع كحقائق تقنية مؤكدة."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "About Curlit",
+      "publisher": "Curlit",
+      "source_type": "official_company_history",
+      "url": "https://curlit.shop/about-curlit/",
+      "supports": [
+        "قصة Alya Othman ودراسة التركيبات",
+        "تطور العلامة من 2019 إلى 2024",
+        "إطلاق المنتجات والتصدير للخليج وكندا",
+        "الفئة المستهدفة والرسالة"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Curlit Online Store",
+      "publisher": "Curlit",
+      "source_type": "official_ecommerce_store",
+      "url": "https://curlit.shop/",
+      "supports": [
+        "المنتجات والأسعار والحزم",
+        "الشحن المجاني وحده",
+        "الحسابات والنشرة والولاء والجملة والعمولة"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Curlit Shop Catalog",
+      "publisher": "Curlit",
+      "source_type": "official_product_catalog",
+      "url": "https://curlit.shop/shop/",
+      "supports": [
+        "Leave-In للكيرلي والويفي",
+        "جل التصفيف",
+        "الحزم والأسعار والنقاط"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Your Biggest Flex — Curly Leave-In Conditioner",
+      "publisher": "Curlit",
+      "source_type": "official_product_page",
+      "url": "https://curlit.shop/product/curly-leave-in-conditioner/",
+      "supports": [
+        "المكونات والفئة العمرية",
+        "خلو المنتج من السيليكون والبارابين والكحوليات المجففة",
+        "86.8% تقليل جهد التمشيط وفق اختبار مستقل",
+        "تعريف نمط الكيرل"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Your Biggest Flex — Wavy Leave-In Conditioner",
+      "publisher": "Curlit",
+      "source_type": "official_product_page",
+      "url": "https://curlit.shop/product/leave-in-conditioner-wavy/",
+      "supports": [
+        "تركيبة منفصلة للشعر المموج",
+        "المكونات والمزايا والفئة العمرية",
+        "خلو محدد من السيليكون والبارابين والكحوليات المجففة"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Holdin’ You Tight Hair Styling Gel",
+      "publisher": "Curlit",
+      "source_type": "official_product_page",
+      "url": "https://curlit.shop/product/holdin-you-tight-hair-gel-curly-wavy/",
+      "supports": [
+        "المكونات",
+        "الاستخدام للشعر الكيرلي والويفي",
+        "الثبات ومقاومة الرطوبة وفق الشركة",
+        "عدم وجود كحوليات مجففة"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Wavy Hair Styling Kit",
+      "publisher": "Curlit",
+      "source_type": "official_bundle_page",
+      "url": "https://curlit.shop/product/curlit-wavy-hair-routine/",
+      "supports": [
+        "الحزمة والسعر وترتيب الروتين",
+        "85.5% تقليل جهد التمشيط وفق الشركة",
+        "مدة استخدام تقديرية"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Curlit Authorised Retailers",
+      "publisher": "Curlit",
+      "source_type": "official_store_locator",
+      "url": "https://curlit.shop/find-us/",
+      "supports": [
+        "منافذ القاهرة والإسكندرية ودهب",
+        "14 منفذًا ظاهرًا في القائمة",
+        "الصيدليات والمتاجر والاستوديوهات"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Curlit Wholesale Program",
+      "publisher": "Curlit",
+      "source_type": "official_wholesale_page",
+      "url": "https://curlit.shop/about-curlit/become-wholesaler/",
+      "supports": [
+        "الصالونات والتجزئة والتصدير والمنصات",
+        "طلبات الجملة والمراجعة"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Curlit Affiliate Program",
+      "publisher": "Curlit",
+      "source_type": "official_affiliate_program",
+      "url": "https://curlit.shop/affiliate-registration/",
+      "supports": [
+        "عمولة 10%",
+        "رموز الخصم",
+        "الدفع الشهري والحوافز",
+        "المسوقون والعملاء ومبدعو UGC"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Curlit Privacy Policy",
+      "publisher": "Curlit",
+      "source_type": "official_privacy_document",
+      "url": "https://curlit.shop/privacy-policy/",
+      "supports": [
+        "العنوان المسجل في القاهرة",
+        "Hair Profile الاختياري",
+        "بيانات الطلبات والولاء والتسويق",
+        "بوابات الدفع وشركات الشحن والتحليلات"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Curlit Terms of Use and Service",
+      "publisher": "Curlit",
+      "source_type": "official_legal_document",
+      "url": "https://curlit.shop/terms-and-conditions-affliate/",
+      "supports": [
+        "العنوان والجهة المتعاقدة",
+        "المنتجات والمحتوى الرقمي",
+        "UGC والقانون المصري",
+        "المدفوعات والبيع عبر الموقع"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Curlit Company Profile",
+      "publisher": "Curlit via LinkedIn",
+      "source_type": "company_managed_profile",
+      "url": "https://www.linkedin.com/company/curlithq",
+      "supports": [
+        "التأسيس المعلن في 2023",
+        "التركيز على الكيرلي والويفي والرطوبة",
+        "منافذ التجزئة وNoon وAmazon",
+        "التوسع للخليج وكندا",
+        "Croda testing وMINT"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Curlit Funding and Growth Interview",
+      "publisher": "FinTech Gate",
+      "source_type": "founder_interview",
+      "published_on": "2025-09-25",
+      "url": "https://fintechgate.net/2025/09/25/%D9%85%D9%86%D8%B5%D8%A9-curlit-%D8%A7%D9%84%D9%86%D8%A7%D8%B4%D8%A6%D8%A9-%D8%A7%D9%84%D9%85%D8%B5%D8%B1%D9%8A%D8%A9-%D8%AA%D8%B3%D8%AA%D9%87%D8%AF%D9%81-%D8%AC%D9%85%D8%B9-5-%D9%85%D9%84/",
+      "supports": [
+        "15 مليون جنيه مبيعات خلال عامين",
+        "6,000 Hair Profile",
+        "هدف تمويل 5 ملايين جنيه",
+        "التوسع من 3 إلى 8 منتجات",
+        "تقديرات السوق والنمو الصادرة عن المؤسِّسة",
+        "اتفاقات ستة أسواق"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Shark Tank Egypt Health and Beauty Deals",
+      "publisher": "Shark Tank Egypt",
+      "source_type": "official_program_directory",
+      "url": "https://sharktank-egypt.com/en/deals/health-and-beauty",
+      "supports": [
+        "إدراج Curlit ضمن صفقات Health and Beauty",
+        "رابط العرض الرسمي للعلامة"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Curlit Shark Tank Deal Coverage",
+      "publisher": "Arab Founders",
+      "source_type": "secondary_deal_coverage",
+      "published_on": "2024",
+      "url": "https://arabfounders.net/en/shark-tank-egypt-investments-2024/",
+      "supports": [
+        "طلب 2 مليون مقابل 20%",
+        "عرض 5 ملايين مقابل 50%",
+        "خفض الحصة إلى 30% بعد استرداد رأس المال",
+        "5% رسوم إدارة وفق المصدر"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Shark Tank Egypt Season 3 Episode 1 — Curl It",
+      "publisher": "Virtual CFO Consulting",
+      "source_type": "secondary_deal_and_market_analysis",
+      "url": "https://vcfoconsulting.com/shark-tank-season-3-ep-1/",
+      "supports": [
+        "طلب 2 مليون مقابل 20%",
+        "عرض 5 ملايين وهيكل الحصة المشروط",
+        "وصف رسوم إضافية مختلف",
+        "قطاع الشعر الكيرلي والويفي"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Alya Othman Presents Curlit on Shark Tank Egypt",
+      "publisher": "Youm7",
+      "source_type": "founder_pitch_coverage",
+      "published_on": "2024-10-16",
+      "url": "https://www.youm7.com/story/2024/10/16/%D8%B9%D8%A7%D9%84%D9%8A%D8%A9-%D8%B9%D8%AB%D9%85%D8%A7%D9%86-%D8%AA%D8%B1%D9%81%D8%B9-%D8%B4%D8%B9%D8%A7%D8%B1-%D8%B5%D9%86%D8%B9-%D9%81%D9%8A-%D9%85%D8%B5%D8%B1-%D9%81%D9%8A-%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA%D9%87%D8%A7-%D8%A8%D9%80/6744174",
+      "supports": [
+        "Alya Othman كمؤسِّسة",
+        "دبلومة تصنيع مستحضرات التجميل",
+        "تصنيع محلي ومنتج للشعر المموج",
+        "المشاركة في الحلقة الأولى"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "MINT Incubator Cohort 14 Graduation",
+      "publisher": "FinTech Gate / EGBANK program coverage",
+      "source_type": "incubator_program_coverage",
+      "published_on": "2025-09-23",
+      "url": "https://fintechgate.net/2025/09/23/%D8%AD%D8%A7%D8%B6%D9%86%D8%A9-%D8%A3%D8%B9%D9%85%D8%A7%D9%84-mint-%D9%85%D9%86-egbank-%D8%AA%D8%AD%D8%AA%D9%81%D9%84-%D8%A8%D8%AA%D8%AE%D8%B1%D9%8A%D8%AC-17-%D8%B4%D8%B1%D9%83/",
+      "supports": [
+        "مشاركة Curlit في الدفعة 14 من MINT",
+        "التوجيه المالي والقانوني والتسويقي والاستثماري"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "Curlit’s Approach to the Natural Claim",
+      "publisher": "Curlit",
+      "source_type": "official_educational_article",
+      "url": "https://curlit.shop/curlit-journal/navigating-the-natural-buzz-curlits-commitment-to-transparency/",
+      "supports": [
+        "عدم الاعتماد على ادعاء طبيعي العام",
+        "أهمية الشفافية والمكونات",
+        "حدود المصطلحات التسويقية"
+      ]
+    }
   ]
 }

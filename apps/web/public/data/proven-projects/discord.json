@@ -2,51 +2,1276 @@
   "id": "discord",
   "slug": "discord",
   "name": "ديسكورد (Discord)",
-  "headline": "منصة الدردشة الصوتية التي بدأت للاعبين وأصبحت مقراً لكل المجتمعات",
-  "category": "Social & Communities / الدردشة والمجتمعات",
+  "headline": "كيف تحوّل ديسكورد من أداة صوت للاعبين إلى الطبقة الاجتماعية والتجارية المحيطة بالألعاب",
+  "category": "Social Platform & Gaming Infrastructure / التواصل والمجتمعات والبنية الاجتماعية للألعاب",
   "company": {
-    "location": "سان فرانسيسكو، الولايات المتحدة",
-    "business_model": "Freemium + اشتراكات (Nitro) للمميزات الإضافية"
+    "legal_name": "Discord Inc.",
+    "location": "سان فرانسيسكو، كاليفورنيا، الولايات المتحدة",
+    "headquarters_address": "444 De Haro Street, Suite 200, San Francisco, CA 94107, United States",
+    "founded_year": 2015,
+    "founders": [
+      "جيسون سيترون (Jason Citron)",
+      "ستانيسلاف فيشنفسكي (Stanislav Vishnevskiy)"
+    ],
+    "leadership": {
+      "chief_executive_officer": "همام سخنيني (Humam Sakhnini)",
+      "ceo_effective_date": "2025-04-28",
+      "cofounder_jason_citron_role": "عضو مجلس إدارة ومستشار للرئيس التنفيذي",
+      "cofounder_stanislav_vishnevskiy_role": "المؤسس المشارك والرئيس التنفيذي للتقنية"
+    },
+    "company_status": "شركة خاصة غير مدرجة حتى 3 أغسطس 2026",
+    "ticker": null,
+    "public_sec_registration_available": false,
+    "ipo_status": {
+      "status": "reported_confidential_filing",
+      "reported_date": "2026-01-06",
+      "description": "أفادت بلومبرغ ورويترز بأن ديسكورد قدمت مسودة تسجيل سرية لطرح عام أمريكي. لم تنشر الشركة تأكيدًا تفصيليًا، ولم يكن تسجيل S-1 علني متاحًا على EDGAR حتى تاريخ البحث. الإيداع السري لا يضمن تنفيذ الطرح.",
+      "public_filing_url": null
+    },
+    "business_model": "منصة مجانية للتواصل النصي والصوتي والمرئي تتمحور مجددًا حول الألعاب، وتحقق الدخل من اشتراكات Nitro وNitro Basic، وتعزيزات الخوادم، وبيع العناصر الرقمية والتجميلية والهدايا، وإعلانات Quests القائمة على المكافآت، ورسوم المنصة على اشتراكات المجتمعات والتطبيقات المدفوعة، وتجارب التجارة داخل مجتمعات الألعاب. لا تبيع ديسكورد المعلومات الشخصية وفق سياستها، لكن وجود الإعلانات أصبح جزءًا فعليًا من النموذج.",
+    "products": [
+      "المحادثات النصية والصوتية والمرئية والمراسلات المباشرة",
+      "الخوادم والقنوات والأدوار وأدوات إدارة المجتمعات",
+      "مشاركة الشاشة والبث منخفض التأخير",
+      "Discord Nitro وNitro Basic",
+      "Server Boosts",
+      "Discord Shop للعناصر التجميلية والهدايا",
+      "Quests وOrbs للإعلانات القائمة على المكافآت",
+      "Activities والتطبيقات المضمنة داخل المحادثات",
+      "Premium Apps والاشتراكات والمشتريات داخل التطبيقات",
+      "Discord Social SDK لدمج الصوت والمراسلة والطبقة الاجتماعية داخل الألعاب",
+      "Game Shops والتجارة والهدايا لعناصر الألعاب الرقمية",
+      "أدوات الأمان العائلي وتجربة المراهقين وضمان العمر"
+    ],
+    "technology_stack_note": "لم يُحوّل حقل tools إلى قائمة لغات أو بنية داخلية، لأن الملف الأصلي لم يقدم حزمة تقنية ولأن الحزمة الإنتاجية الكاملة لا تُفصح عنها الشركة. أدرجت قدرات المنتج والمنصة الموثقة فقط."
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين",
-    "monthly_traffic": "150M+ مستخدم نشط شهرياً"
+    "as_of_date": "2026-08-03",
+    "monthly_revenue": null,
+    "monthly_revenue_note": "لا تنشر ديسكورد إيرادًا شهريًا أو إيرادًا سنويًا فعليًا حديثًا أو ARR أو MRR. حُذف وصف «عشرات الملايين» لأنه غير محدد وغير موثق كرقم حالي.",
+    "monthly_traffic": null,
+    "monthly_traffic_note": "زيارات الموقع لا تعكس استخدام تطبيقات سطح المكتب والجوال والمنصات والأجهزة؛ لذلك لا تُستبدل MAU بمقياس traffic.",
+    "monthly_active_users": {
+      "value": 200000000,
+      "operator": "+",
+      "unit": "مستخدم نشط شهريًا",
+      "as_of": "2026-02-09",
+      "metric_type": "company_reported_MAU",
+      "note": "رقم رسمي متكرر في بيانات ديسكورد، لكنه مقرب بصيغة 200 مليون+ وليس قيمة دقيقة."
+    },
+    "daily_active_users": {
+      "value": 90000000,
+      "operator": "+",
+      "unit": "مستخدم نشط يوميًا",
+      "as_of": "2026-05-11",
+      "metric_type": "company_reported_DAU",
+      "note": "ورد صراحة في بيانات ديسكورد لعام 2026. لا يساوي عدد المشتركين أو العملاء الدافعين."
+    },
+    "monthly_gaming_engagement": {
+      "value_hours": 1900000000,
+      "operator": "+",
+      "scope": "ساعات لعب شهرية أثناء استخدام المنصة عبر آلاف الألعاب",
+      "as_of": "2025-12-02",
+      "metric_type": "company_reported_engagement",
+      "note": "مقياس تفاعل لا إيراد ولا حجم معاملات. استخدمت بعض بيانات الشركة قيمة 2 مليار ساعة بالتقريب، لذا اعتُمد الرقم الأكثر تحديدًا 1.9 مليار+."
+    },
+    "eu_dsa_active_recipients": {
+      "value": 45000000,
+      "operator": "<<",
+      "period": "2025-07-01 إلى 2025-12-31",
+      "scope": "متوسط المتلقين النشطين شهريًا لعناصر الخدمة المصنفة منصات إلكترونية داخل الاتحاد الأوروبي وفق DSA",
+      "metric_type": "regulatory_specific_metric",
+      "note": "ذكرت الشركة أن الرقم أقل بكثير من 45 مليونًا وحذرت من استخدامه بدل مقاييس المستخدمين العالمية."
+    },
+    "paying_subscribers": null,
+    "paying_subscribers_note": "تقول الشركة إن ملايين الأعضاء يستخدمون Nitro، لكنها لا تنشر عددًا دقيقًا حديثًا للمشتركين الدافعين أو نسبة التحويل.",
+    "servers": null,
+    "servers_note": "ظهرت أرقام تاريخية مثل 19 مليون خادم نشط عام 2021، لكن لم يُعثر على رقم حالي متوافق حتى أغسطس 2026."
   },
   "overview": {
     "problem": {
-      "text": "اللاعبون كانوا يعانون من برامج محادثة صوتية معقدة وثقيلة (مثل TeamSpeak أو Skype) تستهلك موارد الحاسب وتبطئ الألعاب، مع واجهات غير عصرية ومشاكل في الانقطاع المستمر.",
-      "impact": "تشتت فرق الألعاب وضعف التواصل بين اللاعبين أثناء اللحظات الحرجة في الألعاب التنافسية."
+      "text": "كان التواصل أثناء اللعب موزعًا بين أدوات صوت ثقيلة أو معقدة، ومحادثات نصية منفصلة، ومنتديات لا تتزامن مع جلسة اللعب. كما لم يكن لدى مجموعات الأصدقاء مكان دائم يحفظ هويتها ومحادثاتها ويتيح الانضمام إلى الصوت دون بدء مكالمة رسمية كل مرة.",
+      "impact": "احتكاك مرتفع قبل اللعب وأثناءه، تشتت العلاقات بين أدوات متعددة، ضعف استمرارية المجموعات بعد انتهاء المباراة، وصعوبة بناء مجتمعات قابلة للإدارة حول الألعاب وصناع المحتوى."
     },
     "solution": {
-      "text": "منصة دردشة صوتية ونصية سريعة جداً، خفيفة على موارد النظام، يمكن تشغيلها مباشرة من المتصفح أو التطبيق، وتتيح إنشاء (سيرفرات) مجانية بضغطة زر."
+      "text": "بنى ديسكورد مساحة دائمة قائمة على الخوادم والقنوات، يستطيع الأصدقاء دخولها والخروج منها بصورة غير متزامنة، ثم أضاف الصوت والفيديو والبث والتطبيقات والأنشطة. تطور المنتج لاحقًا إلى طبقة اجتماعية للألعاب تشمل اكتشاف اللعبة وتشغيلها مع الأصدقاء والإعلانات القائمة على المكافآت والشراء والهدايا ودمج تواصل ديسكورد داخل الألعاب نفسها."
     }
   },
   "market_data": {
-    "target_audience": "اللاعبون (أولاً)، مطورو الويب3، صناع المحتوى، فرق العمل العصرية، والمجتمعات التعليمية.",
-    "market_size": "سوق منصات التواصل والمجتمعات الرقمية بمئات المليارات.",
-    "growth_rate": "انتشرت كالنار في الهشيم بفضل قوة التسويق الفيروسي بين اللاعبين."
+    "target_audience": [
+      "اللاعبون ومجموعات الأصدقاء",
+      "مطورو وناشرو الألعاب",
+      "صناع المحتوى والبث",
+      "المجتمعات والهوايات والمجموعات التعليمية",
+      "العلامات التجارية والمعلنون في الألعاب والترفيه",
+      "مطورو التطبيقات والبوتات والأنشطة",
+      "مديرو المجتمعات والخوادم المدفوعة"
+    ],
+    "market_size": {
+      "current_verified_value": null,
+      "note": "حُذف وصف السوق بأنه «مئات المليارات» لعدم وجود تعريف أو مصدر في الملف الأصلي. تعمل ديسكورد عند تقاطع عدة أسواق مختلفة: التواصل الاجتماعي والألعاب والإعلانات والبنية البرمجية والتجارة الرقمية، ولا يصح جمعها في رقم واحد دون منهجية."
+    },
+    "growth_rate": {
+      "current_verified_rate": null,
+      "historical_user_milestones": [
+        {
+          "date": "2020-06",
+          "monthly_active_users": 100000000
+        },
+        {
+          "date": "2020-12",
+          "monthly_active_users": 140000000
+        },
+        {
+          "date": "2021-09",
+          "monthly_active_users": 150000000
+        },
+        {
+          "date": "2024-05",
+          "monthly_active_users": 200000000
+        },
+        {
+          "date": "2026-02",
+          "monthly_active_users": 200000000,
+          "operator": "+"
+        }
+      ],
+      "interpretation": "الأرقام تثبت انتقال المنصة إلى نطاق يتجاوز 200 مليون مستخدم شهريًا، لكنها لا تسمح بحساب معدل نمو حالي دقيق لأن الشركة استمرت في استخدام صيغة 200 مليون+ دون كشف قيمة أكثر تحديدًا.",
+      "current_operating_signals": [
+        "90 مليون+ مستخدم نشط يوميًا في بيانات 2026.",
+        "إطلاق Instant Play Quests في مارس 2026 لتجربة الألعاب سحابيًا من الإعلان.",
+        "توسيع Nitro إلى Nitro Rewards في مايو 2026 مع مزايا شركاء و250 Orb شهريًا لبعض الأعضاء المؤهلين.",
+        "استمرار تجارب Game Shops وشراء وهدايا عناصر الألعاب داخل ديسكورد حتى يوليو 2026.",
+        "توسيع ضوابط الأمان وضمان العمر واختبار طرق تحقق إضافية خلال يونيو ويوليو 2026.",
+        "تقارير عن تقديم سري للطرح العام في يناير 2026 دون تسجيل علني متاح حتى تاريخ البحث."
+      ]
+    }
   },
   "financials": {
-    "initial_investment": "المؤسس جیسون سيترون باع شركته الأولى (OpenFeint) وأسس ديسكورد بعد فشل لعبة كان يطورها فريقه.",
-    "valuation": "$15B+",
+    "currency_note": "جميع القيم بالدولار الأمريكي ما لم يُذكر غير ذلك.",
+    "actual_revenue": null,
+    "actual_revenue_note": "لا توجد قوائم مالية عامة أو إفصاحات حديثة بقيمة الإيراد السنوي أو الشهري.",
+    "historical_third_party_revenue_estimate": {
+      "annualized_revenue_usd": 600000000,
+      "reported_date": "2024-03",
+      "source_description": "تقدير سنوي مُشغّل نقله The Wall Street Journal عن شخص مطلع.",
+      "status": "third_party_estimate_not_company_filing",
+      "note": "ليس إيراد سنة مالية مدققًا، ولا يمثل بالضرورة إيراد 2025 أو 2026، ولم يُستخدم لحساب monthly_revenue."
+    },
+    "profitability_signal": {
+      "metric": "positive_adjusted_EBITDA",
+      "periods": 5,
+      "unit": "أرباع متتالية",
+      "as_of": "2025-04-23",
+      "source_type": "official_company_statement",
+      "note": "Adjusted EBITDA مقياس غير محاسبي ولا يثبت صافي الربح أو التدفق النقدي الحر، ولا يكشف قيمته."
+    },
+    "current_valuation": null,
+    "current_valuation_note": "لا يوجد تقييم رسمي حالي معلن حتى أغسطس 2026. أسعار الأسواق الثانوية أو النماذج الخاصة ليست تقييمًا رسميًا للشركة.",
+    "historical_valuation": {
+      "value_usd": 15000000000,
+      "as_of": "2021-09-15",
+      "round": "Series I",
+      "status": "reported_by_bloomberg_and_reuters",
+      "company_confirmation": "رفضت ديسكورد التعليق على قيمة التقييم",
+      "note": "هذا تقييم تاريخي لجولة 2021، وليس تقييمًا حاليًا ولا قيمة سوقية متداولة."
+    },
+    "selected_publicly_confirmed_funding_rounds": [
+      {
+        "date": "2020-06-30",
+        "amount_usd": 100000000,
+        "capital_type": "equity_funding",
+        "note": "أعلنت الشركة تمويلًا إضافيًا بقيمة 100 مليون دولار ضمن توسعها إلى استخدامات أوسع من الألعاب."
+      },
+      {
+        "date": "2020-12-22",
+        "amount_usd": 100000000,
+        "capital_type": "equity_funding",
+        "note": "أعلنت الشركة جولة إضافية مستقلة بقيمة 100 مليون دولار."
+      },
+      {
+        "date": "2021-09-15",
+        "amount_usd": 500000000,
+        "capital_type": "equity_funding",
+        "round": "Series I",
+        "lead_investor": "Dragoneer Investment Group",
+        "note": "أكد متحدث باسم الشركة قيمة الجولة لرويترز؛ التقييم البالغ نحو 15 مليار دولار جاء من بلومبرغ ولم تؤكده الشركة."
+      }
+    ],
+    "selected_announced_capital_since_june_2020": {
+      "value_usd": 700000000,
+      "calculation": "100 مليون + 100 مليون + 500 مليون",
+      "note": "مجموع الجولات الثلاث المختارة والمؤكدة علنًا منذ يونيو 2020، وليس إجمالي التمويل منذ تأسيس الشركة."
+    },
+    "transaction_volume": null,
+    "transaction_volume_note": "لا تنشر ديسكورد قيمة مشتريات المتجر أو الإعلانات أو المبيعات داخل الألعاب أو إجمالي المدفوعات المعالجة.",
     "revenue_streams": [
-      "اشتراكات Discord Nitro (تخصيص ملف شخصي، رفع ملفات أكبر)",
-      "تعزيز السيرفرات (Server Boosts)",
-      "مبيعات داخل التطبيق (أفاتار وتأثيرات)"
+      {
+        "stream": "Discord Nitro وNitro Basic",
+        "model": "اشتراكات شهرية أو سنوية بأسعار محلية وتجارب تسعير حسب المنطقة",
+        "status": "مؤكد",
+        "evidence_note": "يشمل التخصيص والبث عالي الدقة ورفع الملفات ومزايا المتجر، ويشمل Nitro الكامل تعزيزين للخادم."
+      },
+      {
+        "stream": "Server Boosts",
+        "model": "اشتراكات شهرية منفصلة لدعم الخوادم وفتح مزايا جماعية",
+        "status": "مؤكد",
+        "evidence_note": "يحصل مشتركو Nitro على تعزيزين وخصم على التعزيزات الإضافية."
+      },
+      {
+        "stream": "Discord Shop والهدايا والعناصر التجميلية",
+        "model": "مشتريات رقمية لمرة واحدة مثل زخارف الصور وتأثيرات الملفات الشخصية ولوحات الأسماء",
+        "status": "مؤكد",
+        "evidence_note": "أعلنت الشركة أن قرابة 20% من مشتريات المتجر كانت هدايا وترتفع إلى قرابة 30% موسميًا؛ هذه نسب مشتريات وليست إيرادًا."
+      },
+      {
+        "stream": "Quests",
+        "model": "إعلانات قائمة على المكافآت تشمل Video وPlay وArena وInstant Play Quests",
+        "status": "مؤكد",
+        "evidence_note": "المشاركة اختيارية، ويمكن تعطيل تخصيص Quests. لا تنشر الشركة أسعار الحملات أو إيراد الإعلانات."
+      },
+      {
+        "stream": "رسوم تحقيق الدخل للخوادم",
+        "model": "رسوم منصة بنسبة 10% على Server Subscriptions، إضافة إلى رسوم معالجة ومعاملات بحسب القناة",
+        "status": "مؤكد وفق شروط تحقيق الدخل",
+        "evidence_note": "إجمالي المدفوعات للمبدعين لا يساوي إيراد ديسكورد؛ الإيراد المحتمل هو رسوم المنصة وما تعترف به محاسبيًا."
+      },
+      {
+        "stream": "Premium Apps وActivities",
+        "model": "رسوم منصة 15% ضمن Growth Tier حتى أول مليون دولار من مدفوعات فريق المطور، ثم 30% ضمن Standard Tier على سطح المكتب والمتصفح، وفق الشروط المنشورة",
+        "status": "مؤكد وفق شروط يونيو 2024",
+        "evidence_note": "تضاف رسوم معالجة 6% على سطح المكتب والمتصفح؛ قد تتغير الشروط لاحقًا."
+      },
+      {
+        "stream": "التجارة داخل مجتمعات الألعاب",
+        "model": "شراء وهدايا عناصر الألعاب من المحادثات والملفات الشخصية والخوادم الرسمية",
+        "status": "منتج نشط وتجريبي بحسب اللعبة والسوق",
+        "evidence_note": "لم تُعلن حصة ديسكورد أو قيمة المبيعات، لذلك لم تُفترض عمولة."
+      },
+      {
+        "stream": "الشراكات ومزايا Nitro Rewards",
+        "model": "مزايا مشتركة مع علامات ألعاب وتقنية ونمط حياة",
+        "status": "مؤكد كبرنامج منتج",
+        "evidence_note": "لم تكشف الشركة إن كانت الشراكات تولد رسومًا أو دعمًا تسويقيًا أو تقاسم إيرادات."
+      }
+    ],
+    "undisclosed_metrics": [
+      "الإيراد الفعلي لعامي 2025 و2026",
+      "MRR وARR",
+      "صافي الربح والتدفق النقدي الحر",
+      "قيمة Adjusted EBITDA",
+      "التقييم الحالي",
+      "عدد مشتركي Nitro الدافعين الدقيق",
+      "نسبة التحويل إلى الدفع",
+      "إيراد Quests",
+      "حجم مشتريات Discord Shop",
+      "حجم التجارة داخل الألعاب",
+      "تفاصيل مسودة الطرح العام السرية",
+      "عدد الأسهم وسعر الطرح وتاريخ الإدراج"
     ]
+  },
+  "analysis": {
+    "core_thesis": "ميزة ديسكورد الأساسية ليست الدردشة وحدها، بل تحويل مجموعة الأصدقاء إلى مساحة رقمية دائمة تبقى قبل جلسة اللعب وأثناءها وبعدها. من هذا الحضور المستمر بنت الشركة طبقات الاشتراك والهوية والإعلان والتجارة والبنية البرمجية.",
+    "business_model_evolution": "بدأ تحقيق الدخل بدعم اختياري عبر Nitro دون إغلاق الوظائف الأساسية، ثم أضيفت Server Boosts والمتجر والعناصر التجميلية. منذ 2024 توسع النموذج إلى Quests الإعلانية، ورسوم التطبيقات والمجتمعات، ثم التجارة داخل الألعاب وSocial SDK، ما ينقل ديسكورد من تطبيق اتصال إلى منصة توزيع واكتشاف وتجارية للألعاب.",
+    "growth_engine": [
+      "يدعو الأصدقاء بعضهم إلى خوادم ومجموعات قائمة، ما يخفض احتكاك الاستحواذ.",
+      "الحضور وحالة اللعب والبث يخلقان اكتشافًا اجتماعيًا للألعاب دون بحث مباشر.",
+      "الألعاب والمطورون يجلبون مجتمعاتهم، والمجتمعات تزيد قيمة التكامل للمطورين.",
+      "Quests تحوّل التفاعل مع العلامة إلى تجربة ومكافأة بدل إعلان عرضي فقط.",
+      "Nitro والمتجر يحولان الهوية والتعبير الشخصي إلى إنفاق اختياري متكرر أو لمرة واحدة.",
+      "Social SDK والتجارة داخل اللعبة يمدان ديسكورد خارج التطبيق إلى دورة حياة اللعبة نفسها."
+    ],
+    "defensibility": [
+      "رسم اجتماعي كثيف لمجموعات الأصدقاء حول الألعاب.",
+      "سجل محادثات وهوية وأدوار وروابط مجتمعية يصعب نقلها بالكامل.",
+      "تكامل عميق بين الصوت والنص والفيديو والحضور والبث.",
+      "منظومة تطبيقات وبوتات وActivities ومطورين.",
+      "علاقات مع ناشري الألعاب ومنصات الأجهزة والعلامات التجارية.",
+      "قدرة توزيع عالمية تتجاوز 200 مليون MAU و90 مليون DAU وفق الشركة."
+    ],
+    "key_risks": [
+      "تكلفة تشغيل الصوت والفيديو والبث والبنية العالمية لمستخدمين مجانيين.",
+      "موازنة تحقيق الدخل مع حساسية المجتمع تجاه الإعلانات واستغلال العلاقات الاجتماعية.",
+      "سلامة القاصرين وضمان العمر والامتثال المتغير بين الدول.",
+      "الإساءة والاحتيال والمحتوى غير القانوني داخل الخوادم الخاصة والعامة.",
+      "الاعتماد على متاجر التطبيقات وأنظمة الدفع وشركاء القياس والإعلانات.",
+      "منافسة منصات الألعاب ووحدات التحكم وتطبيقات المراسلة التي تضيف مزايا اجتماعية مشابهة.",
+      "تحويل الاستخدام المرتفع إلى إيراد مستدام دون إضعاف المنتج المجاني.",
+      "متطلبات الإفصاح والحوكمة والتدقيق في حال الانتقال إلى شركة عامة."
+    ],
+    "metric_reading": "MAU وDAU مستخدمون نشطون وليسا زيارات. ساعات اللعب تفاعل لا إيراد. عدد مشاهدات أو إكمال Quests لا يساوي إيراد الإعلانات. إجمالي مدفوعات المبدعين أو الألعاب لا يساوي إيراد ديسكورد؛ رسوم المنصة فقط جزء محتمل من الإيراد. تقييم 2021 لا يمثل تقييم 2026.",
+    "privacy_and_ads_interpretation": "الادعاء القديم بأن ديسكورد ترفض الإعلانات أصبح غير صحيح. السياسة الحالية تقول إن الشركة لا تبيع المعلومات الشخصية، لكنها تستخدم Quests ومحتوى ممولًا ويمكنها تخصيصه اعتمادًا على نشاط ديسكورد وبعض بيانات الأطراف الثالثة بحسب الإعدادات. يجب الفصل بين «عدم بيع البيانات» و«عدم وجود إعلانات».",
+    "ipo_interpretation": "التقديم السري المبلغ عنه يشير إلى استعداد مؤسسي محتمل، لكنه لا يوفر للمستخدم أو المستثمر قوائم مالية عامة ولا يضمن الإدراج. حتى نشر S-1 علني، تبقى أرقام الإيراد والربحية والتقييم الحالي غير قابلة للتحقق من SEC."
   },
   "lessons": [
     {
-      "title": "التحول الذكي (Pivot)",
-      "description": "كان الفريق يبني لعبة آيباد (Fates Forever) وفشلت تجارياً. لكن أداة الدردشة التي بنوها للعبة كانت مذهلة، فقرروا ترك اللعبة وتأسيس ديسكورد كأداة تواصل مستقلة."
+      "title": "ابنِ مكانًا دائمًا لا أداة اتصال عابرة",
+      "description": "المكالمة تنتهي بانتهاء الجلسة، بينما الخادم يحتفظ بالأعضاء والهوية والقنوات والذكريات. الاستمرارية حولت الاستخدام من وظيفة صوت إلى عادة اجتماعية يومية."
     },
     {
-      "title": "الرفض التام لبيع بيانات المستخدمين",
-      "description": "رفضت ديسكورد وضع إعلانات أو بيع بيانات المستخدمين، واختارت نموذجاً يعتمد على ترقية التجربة الجمالية (Nitro) مما رفع ولاء مجتمعهم بشكل خرافي."
+      "title": "اجعل الحضور نفسه قناة اكتشاف",
+      "description": "رؤية ما يلعبه الأصدقاء ومشاهدة بثهم تقلل تكلفة اكتشاف الألعاب. ديسكورد لا يحتاج دائمًا إلى توصية خوارزمية عندما يقوم الأصدقاء بالتوصية بالسلوك."
     },
     {
-      "title": "التوسع خارج الشريحة الأولى (The Pivot 2.0)",
-      "description": "بعد أن سيطروا على سوق الألعاب، غيروا شعارهم إلى (Your Place to Talk) ليجذبوا فرق العمل، مجموعات الدراسة، ومجتمعات التشفير (Crypto)."
+      "title": "حقق الدخل من التعبير قبل إغلاق الوظيفة الأساسية",
+      "description": "Nitro والمتجر يبيعان التخصيص والجودة والهوية، بينما تظل المحادثة الأساسية مجانية. هذا وسّع الشبكة قبل زيادة طبقات الإيراد."
+    },
+    {
+      "title": "المبدأ القديم قد يتغير لكن يجب تحديث الرواية",
+      "description": "ديسكورد بنت سمعتها على غياب الإعلانات، ثم أطلقت Quests. الدرس ليس التمسك الدائم بالشعار، وإنما تغيير النموذج بطريقة تناسب سياق المستخدم مع توضيح ما تغير."
+    },
+    {
+      "title": "حوّل الإعلان إلى فعل داخل تجربة المنتج",
+      "description": "بدل الاكتفاء بصورة أو فيديو، تربط Quests المكافأة بالمشاهدة أو اللعب أو التجربة الفورية. الإعلان يصبح جزءًا من حلقة اكتشاف اللعبة لا مقاطعة منفصلة."
+    },
+    {
+      "title": "المنصة تبدأ عندما يربح الآخرون فوقها",
+      "description": "البوتات والأنشطة والاشتراكات والمشتريات وSocial SDK تسمح للمطورين والمجتمعات ببناء منتجات وأعمال داخل ديسكورد، فتتجاوز قيمة الشركة ما تطوره بنفسها."
+    },
+    {
+      "title": "السلامة ليست فريق دعم جانبيًا",
+      "description": "عند 90 مليون+ DAU، تصبح حماية المراهقين وضمان العمر والإشراف على التطبيقات والإعلانات جزءًا من هندسة المنتج والتوسع الجغرافي، وليست سياسة مكتوبة فقط."
+    },
+    {
+      "title": "افصل القيمة التاريخية عن السعر الحالي",
+      "description": "تقييم 15 مليار دولار يعود إلى جولة 2021. استخدامه كأنه تقييم حالي يتجاهل تغير أسواق الشركات الخاصة واحتمال الطرح وشروط الأسهم الثانوية."
+    }
+  ],
+  "tools": [
+    "خوادم وقنوات نصية وصوتية ومرئية",
+    "المراسلات المباشرة والمحادثات الجماعية",
+    "مشاركة الشاشة والبث منخفض التأخير",
+    "الأدوار والصلاحيات وأدوات إدارة المجتمعات",
+    "Discord Nitro وNitro Basic",
+    "Server Boosts",
+    "Discord Shop والهدايا والعناصر التجميلية",
+    "Quests وOrbs وInstant Play Quests",
+    "Activities وEmbedded App SDK",
+    "Premium Apps وواجهات SKU وEntitlements والاشتراكات",
+    "Discord Social SDK للصوت والمراسلة والأصدقاء داخل الألعاب",
+    "Game Shops والتجارة والهدايا داخل مجتمعات الألعاب",
+    "Developer API والبوتات وApp Directory",
+    "Family Center وتجربة المراهقين وضمان العمر",
+    "ضوابط استخدام البيانات وتخصيص المحتوى الممول"
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "language": "ar",
+    "researched_through": "2026-08-03",
+    "generated_at": "2026-08-03T19:13:00+03:00",
+    "source_priority": [
+      "الموقع الرسمي وغرفة أخبار ديسكورد",
+      "مركز الدعم والسياسات والخصوصية الرسمي",
+      "وثائق المطورين وشروط تحقيق الدخل",
+      "SEC EDGAR للتحقق من غياب تسجيل علني متاح",
+      "رويترز وبلومبرغ وThe Wall Street Journal للتمويل والتقييم والتقديرات غير المفصح عنها رسميًا"
+    ],
+    "corrections": [
+      {
+        "original_claim": "150M+ مستخدم نشط شهريًا",
+        "action": "محدث",
+        "replacement": "200 مليون+ MAU و90 مليون+ DAU وفق بيانات رسمية في 2026."
+      },
+      {
+        "original_claim": "monthly_traffic يساوي مستخدمين نشطين",
+        "action": "صحح التصنيف",
+        "replacement": "فُصلت MAU وDAU عن زيارات الموقع، وأُبقي traffic بقيمة null."
+      },
+      {
+        "original_claim": "عشرات الملايين إيرادًا شهريًا",
+        "action": "محذوف",
+        "replacement": "لا يوجد إيراد شهري فعلي معلن. أُدرج فقط تقدير سنوي مُشغّل تاريخي بقيمة 600 مليون دولار من WSJ مع تأهيل واضح."
+      },
+      {
+        "original_claim": "التقييم 15B+",
+        "action": "مؤهل زمنيًا",
+        "replacement": "نحو 15 مليار دولار هو تقييم تاريخي مُبلغ عنه لجولة سبتمبر 2021؛ التقييم الحالي غير معلن."
+      },
+      {
+        "original_claim": "رفضت ديسكورد وضع إعلانات",
+        "action": "مصحح",
+        "replacement": "تشغّل ديسكورد Quests كإعلانات قائمة على المكافآت، مع ضوابط تخصيص واختيار المشاركة."
+      },
+      {
+        "original_claim": "رفض بيع البيانات يعني عدم استخدام بيانات للإعلانات",
+        "action": "فصل المفهومين",
+        "replacement": "تقول ديسكورد إنها لا تبيع المعلومات الشخصية، لكنها قد تستخدم نشاط المنصة وبيانات من أطراف ثالثة لتخصيص المحتوى الممول وفق الإعدادات."
+      },
+      {
+        "original_claim": "مصادر الإيراد تقتصر على Nitro وBoosts ومبيعات داخل التطبيق",
+        "action": "محدث",
+        "replacement": "أضيفت Quests ورسوم Server Subscriptions وPremium Apps والمتجر والتجارة داخل الألعاب وبرامج الشراكات."
+      },
+      {
+        "original_claim": "بدأت بعد فشل لعبة وكان مجرد تحويل لأداة الدردشة الداخلية",
+        "action": "دقق",
+        "replacement": "بنت Hammer & Chisel لعبة Fates Forever وميزات تواصل ساعدت في تأسيس الخبرة، ثم أطلق المؤسسان ديسكورد كمشروع مستقل في مايو 2015. لا تصف الشركة الأمر رسميًا بأنه نسخ مباشر لأداة داخلية ناجحة."
+      },
+      {
+        "original_claim": "التوسع الرئيسي خارج الألعاب إلى فرق العمل والعملات المشفرة",
+        "action": "محدث استراتيجيًا",
+        "replacement": "بعد توسع 2020 خارج الألعاب، أعادت ديسكورد منذ 2024 تركيز الاستراتيجية على الألعاب والطبقة الاجتماعية للمطورين والناشرين."
+      },
+      {
+        "original_claim": "لا توجد حالة طرح عام",
+        "action": "محدث ومؤهل",
+        "replacement": "تقارير يناير 2026 قالت إن الشركة قدمت سرًا للطرح، لكن لا يوجد S-1 علني متاح ولا ضمان للإدراج."
+      }
+    ],
+    "metric_distinctions": [
+      "MAU لا يساوي DAU ولا زيارات الموقع.",
+      "المستخدم النشط لا يساوي مشترك Nitro مدفوعًا.",
+      "ساعات اللعب لا تساوي الإيراد أو GMV.",
+      "إكمال Quests والمكافآت لا يساوي قيمة الحملات الإعلانية.",
+      "إجمالي مدفوعات المطورين والمجتمعات لا يساوي إيراد ديسكورد.",
+      "التمويل لا يساوي الإيراد.",
+      "التقييم التاريخي لا يساوي القيمة السوقية الحالية.",
+      "Adjusted EBITDA الإيجابي لا يساوي صافي ربح موجبًا.",
+      "الإيداع السري للطرح لا يساوي شركة مدرجة أو تسجيل S-1 متاحًا للعامة."
+    ],
+    "known_limits": [
+      "لا توجد قوائم مالية عامة حتى تاريخ البحث.",
+      "لا يوجد رقم رسمي دقيق للإيراد الحالي أو مشتركي Nitro.",
+      "لا توجد قيمة حالية رسمية للتقييم.",
+      "لا تتوفر تفاصيل مسودة الطرح السرية في EDGAR.",
+      "معظم مؤشرات الإعلانات والتفاعل صادرة عن بيانات داخلية للشركة وغير مدققة خارجيًا.",
+      "شروط ورسوم تحقيق الدخل قد تتغير بعد تاريخ البحث.",
+      "لا تتوافر حزمة تقنية داخلية كاملة ومحدثة من مصدر أولي واحد."
+    ],
+    "programmatic_checks": {
+      "json_parse": "passed",
+      "required_top_level_keys": "passed",
+      "source_id_uniqueness": "passed",
+      "evidence_source_references": "passed",
+      "evidence_json_paths": "passed",
+      "selected_funding_calculation": "passed",
+      "undisclosed_financial_metrics_are_null": "passed",
+      "user_metric_separation": "passed"
+    }
+  },
+  "evidence_map_schema": {
+    "claim_id": "معرف فريد للادعاء",
+    "json_paths": "المواضع داخل JSON التي تعتمد على الدليل",
+    "claim": "ملخص الادعاء",
+    "source_ids": "معرفات المصادر الداعمة",
+    "evidence_type": "company_fact | metric | product_fact | funding | valuation | policy | regulatory | reported_event | calculation | absence_of_disclosure",
+    "confidence": "high | medium | low",
+    "status": "verified | qualified | removed",
+    "notes": "قيود الدليل أو طريقة تفسيره"
+  },
+  "evidence_map": [
+    {
+      "claim_id": "E01",
+      "json_paths": [
+        "$.company.legal_name",
+        "$.company.location",
+        "$.company.headquarters_address"
+      ],
+      "claim": "Discord Inc. هي مزود الخدمة ومقرها في سان فرانسيسكو.",
+      "source_ids": [
+        "S01"
+      ],
+      "evidence_type": "company_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "العنوان منشور ضمن إفصاحات الشراء الرسمية."
+    },
+    {
+      "claim_id": "E02",
+      "json_paths": [
+        "$.company.founded_year",
+        "$.company.founders",
+        "$.verification.corrections[7]"
+      ],
+      "claim": "أطلق جيسون سيترون وستانيسلاف فيشنفسكي ديسكورد في مايو 2015 بعد خبرتهما في Fates Forever.",
+      "source_ids": [
+        "S02"
+      ],
+      "evidence_type": "company_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "المصدر الرسمي يصف التسلسل ولا يصف المنتج بأنه أداة داخلية نُقلت حرفيًا."
+    },
+    {
+      "claim_id": "E03",
+      "json_paths": [
+        "$.company.leadership"
+      ],
+      "claim": "أصبح همام سخنيني الرئيس التنفيذي في 28 أبريل 2025 مع بقاء جيسون مستشارًا وستانيسلاف CTO.",
+      "source_ids": [
+        "S03"
+      ],
+      "evidence_type": "company_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "claim_id": "E04",
+      "json_paths": [
+        "$.directory_snapshot.monthly_active_users"
+      ],
+      "claim": "لدى ديسكورد أكثر من 200 مليون مستخدم نشط شهريًا.",
+      "source_ids": [
+        "S04",
+        "S05"
+      ],
+      "evidence_type": "metric",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "رقم مقرب ومعلن من الشركة."
+    },
+    {
+      "claim_id": "E05",
+      "json_paths": [
+        "$.directory_snapshot.daily_active_users"
+      ],
+      "claim": "أعلنت ديسكورد أكثر من 90 مليون مستخدم نشط يوميًا في 2026.",
+      "source_ids": [
+        "S06",
+        "S07"
+      ],
+      "evidence_type": "metric",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "لا يمثل عدد المشتركين الدافعين."
+    },
+    {
+      "claim_id": "E06",
+      "json_paths": [
+        "$.directory_snapshot.monthly_gaming_engagement"
+      ],
+      "claim": "يقضي المستخدمون 1.9 مليار+ ساعة شهريًا في اللعب أثناء استخدام ديسكورد.",
+      "source_ids": [
+        "S05",
+        "S08"
+      ],
+      "evidence_type": "metric",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "مقياس شركة داخلي، واستخدمت بيانات أخرى تقريب 2 مليار."
+    },
+    {
+      "claim_id": "E07",
+      "json_paths": [
+        "$.directory_snapshot.eu_dsa_active_recipients"
+      ],
+      "claim": "متوسط المتلقين النشطين شهريًا للعناصر المشمولة في الاتحاد الأوروبي أقل بكثير من 45 مليونًا للنصف الثاني من 2025.",
+      "source_ids": [
+        "S09"
+      ],
+      "evidence_type": "regulatory",
+      "confidence": "high",
+      "status": "qualified",
+      "notes": "مقياس خاص بقانون DSA ولا يحل محل MAU العالمي."
+    },
+    {
+      "claim_id": "E08",
+      "json_paths": [
+        "$.company.business_model",
+        "$.financials.revenue_streams[0]",
+        "$.financials.revenue_streams[1]",
+        "$.financials.revenue_streams[2]"
+      ],
+      "claim": "تبيع ديسكورد Nitro وBoosts والعناصر الرقمية والتجميلية.",
+      "source_ids": [
+        "S01",
+        "S10",
+        "S11"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "الأسعار تختلف حسب المنطقة والمنصة."
+    },
+    {
+      "claim_id": "E09",
+      "json_paths": [
+        "$.company.business_model",
+        "$.financials.revenue_streams[3]",
+        "$.analysis.privacy_and_ads_interpretation"
+      ],
+      "claim": "Quests منتج إعلاني قائم على المكافآت ومشاركة المستخدم فيه اختيارية.",
+      "source_ids": [
+        "S12",
+        "S13"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "وجود الإعلانات يصحح الرواية التاريخية عن منصة بلا إعلانات."
+    },
+    {
+      "claim_id": "E10",
+      "json_paths": [
+        "$.analysis.privacy_and_ads_interpretation",
+        "$.verification.corrections[5]"
+      ],
+      "claim": "لا تبيع ديسكورد المعلومات الشخصية، لكنها تستخدم بيانات لتخصيص المحتوى الممول وفق الضوابط.",
+      "source_ids": [
+        "S14",
+        "S15",
+        "S16"
+      ],
+      "evidence_type": "policy",
+      "confidence": "high",
+      "status": "qualified",
+      "notes": "عدم بيع البيانات لا يعني غياب الإعلانات أو التخصيص."
+    },
+    {
+      "claim_id": "E11",
+      "json_paths": [
+        "$.financials.revenue_streams[4]",
+        "$.financials.revenue_streams[5]"
+      ],
+      "claim": "تفرض ديسكورد رسوم منصة 10% على اشتراكات الخوادم و15% أو 30% على Premium Apps بحسب الشريحة.",
+      "source_ids": [
+        "S17"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "النسب منفصلة عن رسوم المعالجة والمعاملات وتخضع لشروط قابلة للتحديث."
+    },
+    {
+      "claim_id": "E12",
+      "json_paths": [
+        "$.financials.revenue_streams[6]",
+        "$.company.products[9]"
+      ],
+      "claim": "أطلقت ديسكورد شراء وهدايا عناصر الألعاب داخل المجتمعات الرسمية.",
+      "source_ids": [
+        "S08",
+        "S18"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "لم تُعلن حصة ديسكورد المالية."
+    },
+    {
+      "claim_id": "E13",
+      "json_paths": [
+        "$.company.products[8]",
+        "$.company.products[9]",
+        "$.tools"
+      ],
+      "claim": "تتيح المنصة Activities وPremium Apps وSocial SDK للمطورين.",
+      "source_ids": [
+        "S19",
+        "S20",
+        "S21"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "claim_id": "E14",
+      "json_paths": [
+        "$.market_data.growth_rate.current_operating_signals[1]"
+      ],
+      "claim": "أعلنت ديسكورد Instant Play Quests في مارس 2026.",
+      "source_ids": [
+        "S06"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "أرقام الأداء المصاحبة صادرة عن بيانات داخلية."
+    },
+    {
+      "claim_id": "E15",
+      "json_paths": [
+        "$.market_data.growth_rate.current_operating_signals[2]",
+        "$.financials.revenue_streams[7]"
+      ],
+      "claim": "أطلقت ديسكورد Nitro Rewards في مايو 2026.",
+      "source_ids": [
+        "S07"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "لم تكشف الشروط المالية للشراكات."
+    },
+    {
+      "claim_id": "E16",
+      "json_paths": [
+        "$.market_data.growth_rate.current_operating_signals[3]"
+      ],
+      "claim": "استمرت تجربة Game Shops واستبدال Orbs بعناصر Marvel Rivals حتى يوليو 2026.",
+      "source_ids": [
+        "S22"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "تجربة محددة بالمنتج والفترة وليست انتشارًا عالميًا لكل الألعاب."
+    },
+    {
+      "claim_id": "E17",
+      "json_paths": [
+        "$.market_data.growth_rate.current_operating_signals[4]",
+        "$.company.products[10]"
+      ],
+      "claim": "وسعت ديسكورد ضمان العمر واختبرت طرق تحقق إضافية في يونيو ويوليو 2026.",
+      "source_ids": [
+        "S23",
+        "S24"
+      ],
+      "evidence_type": "regulatory",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "أُجل التوسع العالمي الأوسع إلى النصف الثاني من 2026."
+    },
+    {
+      "claim_id": "E18",
+      "json_paths": [
+        "$.financials.profitability_signal"
+      ],
+      "claim": "قالت ديسكورد في أبريل 2025 إن Adjusted EBITDA كان موجبًا لخمسة أرباع متتالية.",
+      "source_ids": [
+        "S03"
+      ],
+      "evidence_type": "metric",
+      "confidence": "high",
+      "status": "qualified",
+      "notes": "لا يكشف القيمة ولا يثبت صافي الربح."
+    },
+    {
+      "claim_id": "E19",
+      "json_paths": [
+        "$.financials.historical_third_party_revenue_estimate"
+      ],
+      "claim": "نقلت WSJ تقديرًا بإيراد سنوي مُشغّل قدره 600 مليون دولار في 2024.",
+      "source_ids": [
+        "S25"
+      ],
+      "evidence_type": "metric",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "تقدير طرف ثالث وليس سنة مالية مدققة أو رقمًا حاليًا."
+    },
+    {
+      "claim_id": "E20",
+      "json_paths": [
+        "$.financials.selected_publicly_confirmed_funding_rounds",
+        "$.financials.selected_announced_capital_since_june_2020"
+      ],
+      "claim": "أعلنت ديسكورد جولتين بقيمة 100 مليون دولار في 2020 وجولة بقيمة 500 مليون دولار في 2021.",
+      "source_ids": [
+        "S26",
+        "S27",
+        "S28"
+      ],
+      "evidence_type": "funding",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "مجموع 700 مليون يخص الجولات المختارة وليس إجمالي التمويل التاريخي."
+    },
+    {
+      "claim_id": "E21",
+      "json_paths": [
+        "$.financials.historical_valuation",
+        "$.financials.current_valuation"
+      ],
+      "claim": "بلغ التقييم المُبلغ عنه نحو 15 مليار دولار في جولة 2021، ولا يوجد تقييم رسمي حالي.",
+      "source_ids": [
+        "S28"
+      ],
+      "evidence_type": "valuation",
+      "confidence": "high",
+      "status": "qualified",
+      "notes": "رفضت الشركة التعليق على التقييم."
+    },
+    {
+      "claim_id": "E22",
+      "json_paths": [
+        "$.company.ipo_status",
+        "$.analysis.ipo_interpretation"
+      ],
+      "claim": "أفادت تقارير يناير 2026 بإيداع سري للطرح دون S-1 علني متاح حتى تاريخ البحث.",
+      "source_ids": [
+        "S29",
+        "S30"
+      ],
+      "evidence_type": "reported_event",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "الخبر من مصادر مطلعة، والإيداع السري بطبيعته غير ظاهر للعامة."
+    },
+    {
+      "claim_id": "E23",
+      "json_paths": [
+        "$.financials.actual_revenue",
+        "$.financials.current_valuation",
+        "$.financials.transaction_volume"
+      ],
+      "claim": "لا توجد إفصاحات عامة موثقة عن الإيراد الفعلي الحالي أو التقييم الحالي أو حجم المعاملات.",
+      "source_ids": [
+        "S03",
+        "S05",
+        "S29",
+        "S30"
+      ],
+      "evidence_type": "absence_of_disclosure",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "أُبقيت القيم null."
+    },
+    {
+      "claim_id": "E24",
+      "json_paths": [
+        "$.market_data.growth_rate.historical_user_milestones"
+      ],
+      "claim": "ارتفع MAU المعلن من 100 مليون في يونيو 2020 إلى 150 مليون في سبتمبر 2021 ثم 200 مليون في 2024.",
+      "source_ids": [
+        "S26",
+        "S31",
+        "S32",
+        "S33"
+      ],
+      "evidence_type": "metric",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "لا يمكن اشتقاق معدل نمو حالي من تكرار قيمة 200 مليون+."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Service and Purchase Disclosures",
+      "publisher": "Discord",
+      "url": "https://support.discord.com/hc/en-us/articles/32902912176279-Service-and-Purchase-Disclosures",
+      "published_date": "2025-06-18",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_legal",
+      "used_for": [
+        "الاسم القانوني والمقر والرئيس التنفيذي",
+        "الخدمات المدفوعة"
+      ]
+    },
+    {
+      "id": "S02",
+      "title": "About Discord — Our Mission and Story",
+      "publisher": "Discord",
+      "url": "https://discord.com/company",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "التأسيس والمؤسسون",
+        "Fates Forever",
+        "تطور المنتج"
+      ]
+    },
+    {
+      "id": "S03",
+      "title": "Discord Appoints Humam Sakhnini as Chief Executive Officer",
+      "publisher": "Discord",
+      "url": "https://discord.com/press-releases/discord-appoints-new-ceo-humam-sakhnini",
+      "published_date": "2025-04-23",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "القيادة",
+        "200 مليون+ MAU",
+        "Adjusted EBITDA",
+        "توسع نموذج الإيراد"
+      ]
+    },
+    {
+      "id": "S04",
+      "title": "Discord Launches Teen Default Experience Globally",
+      "publisher": "Discord",
+      "url": "https://discord.com/press-releases/discord-launches-teen-by-default-settings-globally",
+      "published_date": "2026-02-09",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "200 مليون+ MAU",
+        "سلامة المراهقين"
+      ]
+    },
+    {
+      "id": "S05",
+      "title": "Discord Introduces a New Commerce Experience for Gaming Communities",
+      "publisher": "Discord",
+      "url": "https://discord.com/press-releases/discord-introduces-a-new-commerce-experience-for-gaming-communities",
+      "published_date": "2025-12-02",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "200 مليون+ MAU",
+        "1.9 مليار ساعة",
+        "التجارة والهدايا",
+        "نسب هدايا المتجر"
+      ]
+    },
+    {
+      "id": "S06",
+      "title": "Discord Deepens Its Ability to Drive Growth for Games",
+      "publisher": "Discord",
+      "url": "https://discord.com/press-releases/discord-deepens-its-ability-to-drive-growth-for-games",
+      "published_date": "2026-03-09",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "90 مليون+ DAU",
+        "Instant Play Quests",
+        "استراتيجية النمو للألعاب"
+      ]
+    },
+    {
+      "id": "S07",
+      "title": "Discord Launches Nitro Rewards",
+      "publisher": "Discord",
+      "url": "https://discord.com/press-releases/discord-launches-nitro-rewards",
+      "published_date": "2026-05-11",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "90 مليون+ DAU",
+        "Nitro Rewards",
+        "Orbs ومزايا الشركاء"
+      ]
+    },
+    {
+      "id": "S08",
+      "title": "Discord Opens its Social SDK Communication Features",
+      "publisher": "Discord",
+      "url": "https://discord.com/press-releases/social-sdk-ingame-communications",
+      "published_date": "2025",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "Social SDK",
+        "1.9 مليار ساعة",
+        "دمج التواصل داخل الألعاب"
+      ]
+    },
+    {
+      "id": "S09",
+      "title": "Digital Services Act — Average Monthly Active Recipients in the EU",
+      "publisher": "Discord",
+      "url": "https://support.discord.com/hc/en-us/articles/12477677109143-Digital-Services-Act-Information-on-Average-Monthly-Active-Recipients-in-the-European-Union",
+      "published_date": "2026-02-12",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_regulatory",
+      "used_for": [
+        "مقياس المتلقين النشطين في الاتحاد الأوروبي"
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "What are Nitro & Nitro Basic?",
+      "publisher": "Discord",
+      "url": "https://support.discord.com/hc/en-us/articles/115000435108-What-are-Nitro-Nitro-Basic",
+      "published_date": "2026-07-01",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_product",
+      "used_for": [
+        "خطط Nitro",
+        "المزايا",
+        "التسعير المحلي"
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "Server Boosting FAQ",
+      "publisher": "Discord",
+      "url": "https://support.discord.com/hc/en-us/articles/360028038352-Server-Boosting-FAQ",
+      "published_date": "2026-07-01",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_product",
+      "used_for": [
+        "Server Boosts",
+        "تعزيزات Nitro والخصم"
+      ]
+    },
+    {
+      "id": "S12",
+      "title": "Discord Quests FAQ",
+      "publisher": "Discord",
+      "url": "https://support.discord.com/hc/en-us/articles/22225719947543-Discord-Quests-FAQ",
+      "published_date": "2026-04-08",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_product",
+      "used_for": [
+        "تعريف Quests",
+        "الاختيار والتخصيص والمكافآت"
+      ]
+    },
+    {
+      "id": "S13",
+      "title": "Discord Launches Newest Ad Format and Measurement Partnerships",
+      "publisher": "Discord",
+      "url": "https://discord.com/press-releases/discord-launches-newest-ad-format-and-partners-with-appsflyer-gamesight-for-ads-measurement",
+      "published_date": "2025-10-02",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "Arena وVideo وPlay Quests",
+        "توسع نشاط الإعلانات"
+      ]
+    },
+    {
+      "id": "S14",
+      "title": "Discord Privacy Hub",
+      "publisher": "Discord",
+      "url": "https://discord.com/safety-privacy",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_policy",
+      "used_for": [
+        "عدم بيع المعلومات الشخصية",
+        "مبادئ الخصوصية"
+      ]
+    },
+    {
+      "id": "S15",
+      "title": "Discord Policy Updates August 2025",
+      "publisher": "Discord",
+      "url": "https://discord.com/safety/important-policy-updates",
+      "published_date": "2025-08",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_policy",
+      "used_for": [
+        "Quests والقياس",
+        "عدم بيع البيانات"
+      ]
+    },
+    {
+      "id": "S16",
+      "title": "Data Used for Sponsored Content on Discord",
+      "publisher": "Discord",
+      "url": "https://support.discord.com/hc/en-us/articles/22225542459415-Data-Used-for-Sponsored-Content-on-Discord",
+      "published_date": "2025",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_policy",
+      "used_for": [
+        "بيانات تخصيص المحتوى الممول",
+        "ضوابط المستخدم"
+      ]
+    },
+    {
+      "id": "S17",
+      "title": "Monetization Terms",
+      "publisher": "Discord",
+      "url": "https://support.discord.com/hc/en-us/articles/5330075836311-Monetization-Terms",
+      "published_date": "2024-06-06",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_legal",
+      "used_for": [
+        "رسوم اشتراكات الخوادم",
+        "رسوم Premium Apps",
+        "رسوم المعالجة"
+      ]
+    },
+    {
+      "id": "S18",
+      "title": "Game Shops FAQ",
+      "publisher": "Discord",
+      "url": "https://support.discord.com/hc/en-us/articles/40102783004311-Game-Shops-FAQ",
+      "published_date": "2026-07-24",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_product",
+      "used_for": [
+        "تجربة متجر Marvel Rivals",
+        "استبدال Orbs بعناصر اللعبة"
+      ]
+    },
+    {
+      "id": "S19",
+      "title": "Premium Apps & Activities",
+      "publisher": "Discord Developer Documentation",
+      "url": "https://docs.discord.com/developers/platform/app-monetization",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_developer_docs",
+      "used_for": [
+        "الاشتراكات والمشتريات داخل التطبيقات",
+        "الفوترة الأصلية"
+      ]
+    },
+    {
+      "id": "S20",
+      "title": "Monetizing Your Discord App",
+      "publisher": "Discord Developer Documentation",
+      "url": "https://docs.discord.com/developers/monetization/overview",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_developer_docs",
+      "used_for": [
+        "SKU وEntitlements والاشتراكات والمشتريات"
+      ]
+    },
+    {
+      "id": "S21",
+      "title": "Discord Social SDK",
+      "publisher": "Discord",
+      "url": "https://discord.com/developers/social-sdk",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_developer_product",
+      "used_for": [
+        "البنية الاجتماعية داخل الألعاب"
+      ]
+    },
+    {
+      "id": "S22",
+      "title": "Game Shops FAQ — July 2026 Update",
+      "publisher": "Discord",
+      "url": "https://support.discord.com/hc/en-us/articles/40102783004311-Game-Shops-FAQ",
+      "published_date": "2026-07-24",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_product",
+      "used_for": [
+        "أحدث تجربة Game Shops حتى يوليو 2026"
+      ]
+    },
+    {
+      "id": "S23",
+      "title": "Getting Global Age Assurance Right",
+      "publisher": "Discord",
+      "url": "https://discord.com/blog/getting-global-age-assurance-right-what-we-got-wrong-and-whats-changing",
+      "published_date": "2026-02-24",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_policy",
+      "used_for": [
+        "تأجيل التوسع العالمي لضمان العمر",
+        "التعديلات بعد ملاحظات المستخدمين"
+      ]
+    },
+    {
+      "id": "S24",
+      "title": "How to Complete Age Assurance on Discord",
+      "publisher": "Discord",
+      "url": "https://support.discord.com/hc/en-us/articles/30326565624343-How-to-Complete-Age-Assurance-on-Discord",
+      "published_date": "2026-07",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_product_policy",
+      "used_for": [
+        "اختبارات Google Wallet وبطاقات الدفع",
+        "النصف الثاني من 2026"
+      ]
+    },
+    {
+      "id": "S25",
+      "title": "Discord to Start Showing Ads for Gamers to Boost Revenue",
+      "publisher": "The Wall Street Journal",
+      "url": "https://www.wsj.com/tech/discord-to-start-showing-ads-for-gamers-to-boost-revenue-bf5848b9",
+      "published_date": "2024-03",
+      "accessed_date": "2026-08-03",
+      "source_type": "reputable_media",
+      "used_for": [
+        "تقدير الإيراد السنوي المشغل",
+        "إطلاق الإعلانات تاريخيًا"
+      ]
+    },
+    {
+      "id": "S26",
+      "title": "Your Place to Talk",
+      "publisher": "Discord",
+      "url": "https://discord.com/blog/your-place-to-talk",
+      "published_date": "2020-06-30",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "جولة 100 مليون دولار",
+        "100 مليون MAU",
+        "التوسع خارج الألعاب"
+      ]
+    },
+    {
+      "id": "S27",
+      "title": "Building On Our Momentum",
+      "publisher": "Discord",
+      "url": "https://discord.com/blog/building-on-our-momentum",
+      "published_date": "2020-12-22",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "جولة إضافية بقيمة 100 مليون دولار"
+      ]
+    },
+    {
+      "id": "S28",
+      "title": "Chat App Discord Raises $500 Million in New Funding",
+      "publisher": "Reuters",
+      "url": "https://www.reuters.com/technology/chat-app-discord-raises-500-million-new-funding-2021-09-15/",
+      "published_date": "2021-09-15",
+      "accessed_date": "2026-08-03",
+      "source_type": "reputable_newswire",
+      "used_for": [
+        "جولة 500 مليون دولار",
+        "التقييم التاريخي 15 مليار دولار"
+      ]
+    },
+    {
+      "id": "S29",
+      "title": "Chat Platform Discord Files Confidentially for US IPO",
+      "publisher": "Reuters",
+      "url": "https://www.reuters.com/business/chat-platform-discord-confidentially-file-us-ipo-bloomberg-news-reports-2026-01-06/",
+      "published_date": "2026-01-06",
+      "accessed_date": "2026-08-03",
+      "source_type": "reputable_newswire",
+      "used_for": [
+        "الإيداع السري المبلغ عنه",
+        "عدم ضمان تنفيذ الطرح"
+      ]
+    },
+    {
+      "id": "S30",
+      "title": "EDGAR Full Text Search",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "url": "https://www.sec.gov/edgar/search/",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "government_primary",
+      "used_for": [
+        "التحقق من عدم وجود تسجيل S-1 علني متاح باسم Discord حتى تاريخ البحث"
+      ]
+    },
+    {
+      "id": "S31",
+      "title": "Discord Transparency Report: Jan–June 2020",
+      "publisher": "Discord",
+      "url": "https://discord.com/blog/discord-transparency-report-jan-june-2020",
+      "published_date": "2020",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "100 مليون MAU في يونيو 2020"
+      ]
+    },
+    {
+      "id": "S32",
+      "title": "Discord Transparency Report: July–December 2020",
+      "publisher": "Discord",
+      "url": "https://discord.com/blog/discord-transparency-report-july-dec-2020",
+      "published_date": "2021",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "140 مليون MAU في ديسمبر 2020"
+      ]
+    },
+    {
+      "id": "S33",
+      "title": "An Update on Our Business",
+      "publisher": "Discord",
+      "url": "https://discord.com/blog/an-update-on-our-business",
+      "published_date": "2021-09-15",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "150 مليون MAU",
+        "Series I",
+        "نمو الإيراد التاريخي دون قيمة"
+      ]
     }
   ]
 }

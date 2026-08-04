@@ -2,53 +2,1348 @@
   "id": "bitoasis",
   "slug": "bitoasis",
   "name": "بت أوايسس (BitOasis)",
-  "headline": "المنصة الرائدة والأولى التي نظمت تداول العملات المشفرة في الشرق الأوسط",
-  "category": "FinTech / العملات المشفرة (Crypto Exchange)",
+  "headline": "كيف حوّلت BitOasis الوصول المحلي إلى الأصول المشفّرة من ميزة دفع إلى خندق تنظيمي",
+  "category": "FinTech & Virtual Assets / الوساطة وتداول الأصول المشفّرة",
   "company": {
-    "location": "دبي، الإمارات العربية المتحدة",
-    "business_model": "رسوم وعمولات على التداول (Trading Fees)"
+    "location": "دبي، الإمارات العربية المتحدة. تأسست BitOasis في 2015، بينما تصف بعض بياناتها التاريخية إطلاق المنصة في 2016؛ لذلك يُفصل بين سنة تأسيس الشركة وسنة بدء التشغيل التجاري. استحوذت CoinDCX على الشركة في 3 يوليو 2024 بعد استثمار استراتيجي في أغسطس 2023، وأصبحت BitOasis جزءًا من DCX Group مع استمرار علامتها وعملياتها الإقليمية. تمتلك كيانًا مرخصًا في دبي، وأعلنت توسعها التشغيلي إلى البحرين ضمن المجموعة.",
+    "business_model": "منصة B2C وB2B تعمل في دبي بترخيص وسيط-تاجر للأصول الافتراضية. تقدم BitOasis Lite للشراء والبيع المبسط، وBitOasis Pro للتداول بدفتر أوامر ورسوم Maker/Taker، إضافة إلى الإرسال والاستقبال والحفظ والتحويل إلى العملات الورقية وخدمات VIP وOTC. تعتمد الإيرادات المحتملة على رسوم التداول وبعض رسوم السحب والخدمات، لكن الشركة لا تنشر معدل الاقتطاع أو الإيراد حسب المنتج. رسوم معالجة البطاقات البالغة 3.99% موصوفة رسميًا بأنها رسوم طرف ثالث، لذلك لا تُعامل كإيراد مؤكد لـBitOasis."
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين",
-    "monthly_traffic": "حجم تداول تجاوز المليارات من الدولارات"
+    "monthly_revenue": "غير معلن. BitOasis شركة خاصة مملوكة لـCoinDCX ولا تنشر MRR أو ARR أو إيرادًا شهريًا أو سنويًا مطلقًا. ذكرت CoinDCX نمو إيراد BitOasis بنسبة 50% منذ الاستحواذ، لكن هذا مقياس نمو نسبي بلا فترة محاسبية مفصلة أو قيمة أساس. كما أن 7.4 مليارات دولار معاملات تراكمية، و252 مليون دولار أصول تحت الحفظ، و840 ألف تسجيل لا تمثل إيرادًا؛ لذلك حُذف تقدير «عشرات الملايين».",
+    "monthly_traffic": "غير معلن. لا تنشر BitOasis زيارات الموقع أو MAU أو DAU. أحدث مقياس تشغيلي منشور من المجموعة يذكر أكثر من 840 ألف تسجيل، وهو إجمالي حسابات مسجلة لا يساوي مستخدمين نشطين أو عملاء ممولين أو زوارًا شهريين. تدعم المنصة أكثر من 68 أصلًا، وتعرض خدمات في عشر دول وفق تحديث مايو 2026، لكن عدد الأصول والدول لا يكشف حجم الاستخدام."
   },
   "overview": {
     "problem": {
-      "text": "قبل بضع سنوات، كان شراء العملات المشفرة (كالبيتكوين) في العالم العربي يتطلب التعامل مع منصات أجنبية غير موثوقة، ولا تقبل الحوالات من البنوك المحلية أو العملات النقدية العربية (الدرهم/الريال).",
-      "impact": "مخاطر احتيال عالية، حظر بنكي للحوالات الخارجية، وفقدان فرص استثمارية."
+      "text": "واجه المستخدم الخليجي والعربي المبكر للأصول المشفّرة فجوة بين الأسواق العالمية وواقعه المحلي: لغة مختلفة، عملات ورقية محلية، تحويلات مصرفية غير موحدة، متطلبات KYC وAML متغيرة، ومنصات قد لا تحمل ترخيصًا محليًا أو توفر قنوات سحب واضحة. بالنسبة للمؤسسات، تصبح المشكلة أوسع وتشمل الحفظ، مصدر السيولة، مسؤولية الامتثال، والتعامل مع جهة يمكن للمنظم المحلي الإشراف عليها.",
+      "impact": "تزيد هذه الفجوة تكلفة الدخول والمخاطر التشغيلية والتنظيمية، وتدفع بعض المستخدمين إلى تحويلات غير مباشرة أو منصات أجنبية لا تقدم دعمًا محليًا. كما أن اختلاف توافر الإيداع والسحب بين الدول يعني أن وجود المنصة في سوق ما لا يساوي بالضرورة توافر Fiat On-Ramp وOff-Ramp كاملين."
     },
     "solution": {
-      "text": "تأسيس أول منصة تداول عملات مشفرة (Crypto Exchange) موجهة للشرق الأوسط، تدعم اللغتين العربية والإنجليزية، وتسمح بربط الحسابات البنكية المحلية للإيداع المباشر بالعملات المحلية (Fiat On-Ramp)."
+      "text": "بنت BitOasis منصة عربية وإنجليزية تربط الأصول المشفّرة بالعملات المحلية، مع مسارين للمستخدم: Lite للشراء والبيع المبسط وPro للتداول المتقدم بأكثر من 60 أصلًا و200 زوج وفق صفحات 2026. تشمل القدرات الإرسال والاستقبال والحفظ والتحويل إلى عملات ورقية وخدمات VIP وOTC. في دبي تعمل تحت ترخيص VASP نشط لخدمات الوسيط-التاجر يسمح بخدمة الأفراد والمؤهلين والمؤسسات، مع توسع مرخص في البحرين. تبقى وظائف الإيداع والسحب مختلفة حسب الدولة، لذلك لا يصح وصف كل سوق مدعوم بأنه يملك البنية المصرفية نفسها."
     }
   },
   "market_data": {
-    "target_audience": "المستثمرون الأفراد والمؤسسات في دول مجلس التعاون الخليجي والمنطقة.",
-    "market_size": "سوق تداول الأصول المشفرة السريع النمو في MENA.",
-    "growth_rate": "جمعت 30 مليون دولار (Series B) وتجاوز حجم تداولها التراكمي 4 مليارات دولار، لتستحوذ عليها لاحقاً CoinDCX الهندية للتوسع عالمياً."
+    "target_audience": "المستثمرون الأفراد في دول مجلس التعاون والأسواق العربية المدعومة، والمتداولون المحترفون الذين يحتاجون دفتر أوامر، والعملاء ذوو الملاءة العالية، والشركات والمؤسسات المؤهلة في نطاق التراخيص المحلية. في مايو 2026 عرضت الشركة أهلية التسجيل في الإمارات والسعودية والبحرين وعمان وقطر والأردن وتونس والمغرب والعراق وليبيا، مع اختلاف فعلي في الإيداع والسحب بين الأسواق.",
+    "market_size": "لا تنشر BitOasis رقم TAM رسميًا خاصًا بها. وفق Chainalysis، تجاوز نشاط الأصول المشفّرة في MENA نصف تريليون دولار في دورة تقرير 2025 مع نمو 33%، وبلغت القيمة السنوية المستلمة في الإمارات نحو 53 مليار دولار. هذه أرقام نشاط على السلسلة للمنطقة والسوق، وليست حجم تداول BitOasis ولا إيرادها ولا سوقًا متاحًا بالكامل للمنصة بسبب اختلاف التنظيم والمنافسة وقنوات العملات الورقية.",
+    "growth_rate": "المؤشرات المنشورة تصف مسارًا تراكميًا لا معدل نمو سنويًا مدققًا: تجاوز حجم التداول 3 مليارات دولار في أغسطس 2021، ثم 4 مليارات في مايو 2022، وأكثر من 5 مليارات في 2023. أحدث إفصاح للمجموعة ذكر أكثر من 7.4 مليارات دولار معاملات منذ التأسيس، ونحو 252 مليون دولار أصولًا تحت الحفظ، وأكثر من 840 ألف تسجيل. كما ذكرت CoinDCX بعد الاستحواذ نموًا بنسبة 30% في الصفقات و40% في الحجم و50% في الإيراد، وهي نسب شركة غير مدققة لا تكشف القيم المطلقة أو هامش الربح. تنظيميًا، مرت BitOasis بتعليق حالة MVP في 2023، أعادت فتح التسجيل في أبريل 2024، ثم حصلت على ترخيص VASP كامل في نوفمبر 2024 وتوسعت إلى البحرين في 2025."
   },
   "financials": {
-    "initial_investment": "مدعومة من Wamda Capital و Jump Capital ومستثمرين في وادي السيليكون.",
-    "valuation": "غير معلن (استحواذ بمئات الملايين تقديراً)",
+    "initial_investment": "أغلقت BitOasis جولة Series B بقيمة 30 مليون دولار في أكتوبر 2021 بقيادة Jump Capital وWamda، مع مشاركة Global Founders Capital وAlameda Research ومستثمرين سابقين منهم Pantera Capital وDigital Currency Group وNXMH. وفي أغسطس 2023 أعلنت استثمارًا استراتيجيًا من CoinDCX من دون كشف المبلغ، وقالت آنذاك إنها جمعت أكثر من 35 مليون دولار إجمالًا. استحوذت CoinDCX على BitOasis في يوليو 2024، لكن قيمة الصفقة وهيكل المقابل ونسب الملكية لم تُنشر؛ لذلك لا تُجمع أرقام تقديرية مع التمويل المعلن.",
+    "valuation": "غير معلن. لا توجد جولة منشورة تكشف تقييم pre-money أو post-money، ولم يعلن CoinDCX مقابل الاستحواذ في 2024. رقم الأصول تحت الحفظ وحجم المعاملات والتمويل التاريخي لا يسمح بحساب قيمة الشركة، كما أن وصف «استحواذ بمئات الملايين» في الملف الأصلي غير مدعوم وحُذف.",
     "revenue_streams": [
-      "عمولات التداول (نسبة مئوية من كل عملية بيع وشراء)",
-      "رسوم السحب والإيداع",
-      "خدمات التداول للمؤسسات الكبرى (OTC Trading)"
+      "رسوم الصانع والآخذ على BitOasis Pro، مع شرائح تعتمد على حجم التداول؛ لا تنشر الشركة صافي take rate أو الإيراد الناتج",
+      "رسوم أو فروق تنفيذ مرتبطة بالشراء والبيع المبسط عبر BitOasis Lite وفق هيكل الرسوم المتغير؛ لم يُنشر مزيج الإيراد بين Lite وPro",
+      "رسوم السحب النقدي المعلنة للمستخدم في الإمارات، ومنها 25 درهمًا حتى 25 ألف درهم و65 درهمًا لما فوق ذلك؛ لا تُعرف تكاليف التحويل أو صافي الهامش",
+      "رسوم إرسال الأصول المشفّرة أو رسوم الشبكة وأي رسوم خدمة مطبقة بحسب الأصل؛ رسوم الشبكة ليست بالضرورة إيرادًا كاملًا للمنصة",
+      "خدمات VIP وOTC للعملاء ذوي الملاءة والمؤسسات؛ التسعير والحجم والإيراد غير معلنة",
+      "خدمات الحفظ والمحافظ والتحويل إلى العملات الورقية ضمن نطاق المنتج؛ لا يوجد إفصاح يثبت رسومًا مستقلة لكل خدمة",
+      "رسوم معالجة إيداعات البطاقات البالغة 3.99% موصوفة رسميًا كرسوم معالج دفع خارجي، لذلك لم تُحتسب كمسار إيراد مؤكد لـBitOasis",
+      "حجم التداول التراكمي والأصول تحت الحفظ وأموال العملاء ليست إيرادًا ولا نقدًا مملوكًا للشركة"
     ]
   },
   "lessons": [
     {
-      "title": "ميزة المحرك الأول (First Mover Advantage)",
-      "description": "انطلقت BitOasis مبكراً جداً (في 2015) عندما كانت البنوك والمشرعون يحاربون العملات المشفرة. صمودها وبناء البنية التحتية المحلية جعلها المنصة الأكثر موثوقية عندما انفجر الطلب على الكريبتو لاحقاً."
+      "title": "ابنِ الجسر النقدي قبل توسيع قائمة العملات",
+      "description": "الميزة المحلية الأولى لم تكن عدد الرموز، بل القدرة على إيداع وسحب العملات الورقية ضمن تجربة عربية وقنوات مصرفية إقليمية. في الأسواق المالية، الوصول إلى الأصل أهم من اتساع الكتالوج إذا بقيت حركة المال معقدة."
     },
     {
-      "title": "العمل مع المشرّعين (Compliance Moat)",
-      "description": "أكبر ميزة تنافسية لـ BitOasis لم تكن التقنية، بل حصولها على التراخيص التشغيلية (مثل ترخيص MVP من VARA في دبي والتسجيل في البحرين). هذا الامتثال التنظيمي هو ما يحميها من المنافسين غير المرخصين ويزيد ثقة المستثمرين الكبار."
+      "title": "الامتثال نظام تشغيل وليس شارة تسويق",
+      "description": "مسار BitOasis يوضح أن الترخيص يتطلب استمرارًا في الضوابط والتقارير والمعالجة. إنذار VARA وتعليق حالة MVP في 2023 ثم إعادة الفتح والترخيص الكامل يبرهنان أن الامتثال عملية يومية يمكن أن توقف النمو إذا لم تُنفذ تشغيليًا."
+    },
+    {
+      "title": "التعافي التنظيمي يمكن أن يعيد بناء القيمة",
+      "description": "بدل إخفاء التعثر، عالجت الشركة الشروط وأعادت قبول العملاء في أبريل 2024 ثم وصلت إلى ترخيص VASP كامل. للشركات المنظمة، القدرة على الإصلاح الموثق قد تكون أصلًا استراتيجيًا يسبق التوسع والصفقات."
+    },
+    {
+      "title": "الاستثمار الاستراتيجي قد يكون اختبارًا قبل الاستحواذ",
+      "description": "بدأت علاقة CoinDCX باستثمار في أغسطس 2023 ثم تحولت إلى استحواذ في يوليو 2024. هذا التسلسل يمنح المشتري وقتًا لاختبار الفريق والتنظيم والسوق قبل دمج أعمق، ويقلل مخاطرة دخول منطقة جديدة دفعة واحدة."
+    },
+    {
+      "title": "افصل أربعة أرقام تبدو متشابهة",
+      "description": "7.4 مليارات دولار معاملات، و252 مليون دولار أصول تحت الحفظ، و840 ألف تسجيل، ونمو إيراد 50% تقيس أشياء مختلفة. الجمع بينها في قصة واحدة يضخم الأداء ويشوّه الاقتصاد الحقيقي للمنصة."
+    },
+    {
+      "title": "التوطين يعني توافر الخدمة لا ترجمة الواجهة",
+      "description": "قد تكون الدولة ضمن قائمة التسجيل بينما تكون قنوات الإيداع أو السحب غير متاحة مؤقتًا. التوسع الحقيقي يحتاج شريكًا مصرفيًا وترخيصًا وتسوية ودعمًا محليًا، وليس صفحة عربية أو قبول رقم هاتف فقط."
+    },
+    {
+      "title": "صمّم سلمًا للمستخدم من المبتدئ إلى المؤسسة",
+      "description": "Lite يقلل تعقيد أول عملية، وPro يخدم المتداول النشط، بينما VIP وOTC والحفظ يخدمان شرائح أكبر. هذا السلم يسمح بزيادة قيمة العميل من دون إجباره على مغادرة المنصة عند تطور احتياجاته."
+    },
+    {
+      "title": "الحفظ مسؤولية مستقلة عن التداول",
+      "description": "الأصول تحت الحفظ لا تمثل إيرادًا أو ملكية للشركة، لكنها ترفع متطلبات الأمن والفصل والحوكمة. كلما كبر هذا الرصيد، أصبحت جودة الضوابط والحفظ وإدارة المفاتيح جزءًا أساسيًا من الثقة والقيمة."
+    },
+    {
+      "title": "نمو الحجم لا يثبت الربحية",
+      "description": "ارتفاع الصفقات والحجم قد يحدث مع انخفاض الرسوم أو ارتفاع تكاليف الامتثال والسيولة والتسويق. لذلك لا يمكن استنتاج الربحية من نمو التداول، حتى عندما تعلن الشركة نمو الإيراد نسبيًا."
+    },
+    {
+      "title": "توسع الأصول الافتراضية يُبنى ولايةً بعد ولاية",
+      "description": "ترخيص دبي لا يحل محل ترخيص البحرين، وقائمة الدول لا تعني صلاحية تقديم المنتج نفسه في كل مكان. الخندق الإقليمي يتكون من تراخيص متعددة وعلاقات مصرفية وقدرة على تشغيل نسخ محلية متوافقة."
     }
   ],
   "tools": [
-    "AWS",
-    "Node.js",
-    "High-Frequency Trading Engines",
-    "Blockchain Nodes"
-  ]
+    "BitOasis Lite للشراء والبيع المبسط",
+    "BitOasis Pro بدفتر أوامر ونموذج رسوم Maker/Taker يعتمد على حجم التداول",
+    "دعم أكثر من 68 أصلًا مشفّرًا وفق صفحة الشركة المحدثة في مايو 2026",
+    "أكثر من 200 زوج تداول على Pro وفق صفحة الرسوم المحدثة في مايو 2026",
+    "إرسال واستقبال الأصول المشفّرة",
+    "حفظ أصول العملاء عبر ترتيبات محافظ وحفظ رقمية",
+    "عناوين إيداع ومحافظ تعتمد Fireblocks وBitGo وفق الشروط الحالية",
+    "تحويل الأصول المشفّرة إلى عملات ورقية مدعومة",
+    "إيداع وسحب مصرفي يختلف حسب الدولة والشريك المصرفي",
+    "خدمات VIP وOTC للأفراد ذوي الملاءة والمؤسسات",
+    "إجراءات KYC وCDD والتحقق من الهوية والأهلية",
+    "ترخيص VASP نشط من VARA لخدمات الوسيط-التاجر في دبي",
+    "ترخيص فئة 2 لخدمات الأصول المشفّرة في البحرين وفق إعلان الشركة",
+    "دعم العملاء الأفراد والمؤهلين والمؤسسات ضمن حدود الترخيص",
+    "لا توجد مصادر رسمية كافية لتأكيد AWS أو Node.js أو محركات تداول عالية التردد كحزمة تقنية داخلية حالية؛ لذلك أزيلت من قائمة التقنيات المؤكدة"
+  ],
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "BitOasis | About Us",
+      "publisher": "BitOasis",
+      "source_type": "official_current_company_and_regulatory_page",
+      "url": "https://bitoasis.net/en/about-us",
+      "supports": [
+        "تأسيس BitOasis في 2015 ومقرها في الإمارات",
+        "خدمة المستثمرين الأفراد والمؤسسات في المنطقة",
+        "الحصول على ترخيص VASP كامل من VARA في ديسمبر 2024",
+        "التسجيل السابق لدى وحدة المعلومات المالية الإماراتية"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "About us",
+      "publisher": "BitOasis Support",
+      "source_type": "official_current_company_profile_updated_2026",
+      "url": "https://support.bitoasis.net/en/support/solutions/articles/29000033072-about-us",
+      "supports": [
+        "تأسيس الشركة في 2015 ومقرها الإمارات",
+        "التركيز الحالي على عملاء التجزئة في دول مجلس التعاون",
+        "دعم أكثر من 68 أصلًا مشفرًا وفق صفحة مايو 2026"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "BitOasis Technologies FZE — Public Register",
+      "publisher": "Dubai Virtual Assets Regulatory Authority (VARA)",
+      "source_type": "official_regulator_public_register",
+      "url": "https://www.vara.ae/en/licenses-and-register/public-register/bitoasis-technologies-fze/",
+      "supports": [
+        "ترخيص VASP نشط برقم VL/2024/11/001",
+        "تاريخ إصدار الترخيص 29 نوفمبر 2024",
+        "النشاط المرخص: خدمات الوسيط-التاجر",
+        "السماح بخدمة المستثمرين الأفراد والمؤهلين والمؤسسات"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "CoinDCX Acquires MENA Region’s Crypto Leader BitOasis",
+      "publisher": "CoinDCX",
+      "source_type": "official_acquirer_announcement",
+      "url": "https://coindcx.com/blog/announcements/coindcx-acquires-mena-regions-crypto-leader-bitoasis/",
+      "supports": [
+        "استحواذ CoinDCX على BitOasis في 3 يوليو 2024",
+        "وجود استثمار استراتيجي سابق من CoinDCX في أغسطس 2023",
+        "الحصول على عدم ممانعة من VARA للاستحواذ",
+        "عدم نشر قيمة الصفقة أو التقييم"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "CoinDCX and BitOasis Join Forces in a First-of-its-Kind Deal in MENA Region",
+      "publisher": "BitOasis",
+      "source_type": "official_target_company_acquisition_announcement",
+      "url": "https://blog.bitoasis.net/coindcx-and-bitoasis-join-forces-in-a-first-of-its-kind-deal-in-mena-region/",
+      "supports": [
+        "إتمام الاستحواذ من جانب CoinDCX في يوليو 2024",
+        "استمرار علامة BitOasis وفريقها وخدماتها بعد الصفقة",
+        "الترخيص البحريني السابق للاستحواذ",
+        "عدم إعلان مقابل الاستحواذ"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "CoinDCX's 7-Year Journey: 7 Milestones and Sailing Through the Tides of Progress",
+      "publisher": "CoinDCX",
+      "source_type": "official_parent_group_operating_metrics",
+      "url": "https://coindcx.com/blog/announcements/coindcxs-7-year-journey-7-milestones-and-sailing-through-the-tides-of-progress/",
+      "supports": [
+        "أكثر من 7.4 مليارات دولار معاملات منذ التأسيس",
+        "نحو 252 مليون دولار أصولًا تحت الحفظ",
+        "أكثر من 840 ألف تسجيل",
+        "نمو ما بعد الاستحواذ: 30% في الصفقات و40% في الحجم و50% في الإيراد وفق تصريح المجموعة"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "CoinDCX H1 2026 Report",
+      "publisher": "CoinDCX",
+      "source_type": "official_parent_group_current_report",
+      "url": "https://coindcx.com/blog/announcements/coindcx-h1-2026-report/",
+      "supports": [
+        "اعتبار BitOasis جزءًا من DCX Group بعد استحواذ 2024",
+        "توسع BitOasis إلى البحرين في 2025",
+        "استمرار النشاط الإقليمي حتى النصف الأول من 2026"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "BitOasis closes $30 Million in Series B Funding",
+      "publisher": "BitOasis",
+      "source_type": "official_historical_funding_announcement",
+      "url": "https://blog.bitoasis.net/series-b-funding/",
+      "supports": [
+        "جولة Series B بقيمة 30 مليون دولار في أكتوبر 2021",
+        "قيادة الجولة من Jump Capital وWamda",
+        "مشاركة Alameda Research وGlobal Founders Capital ومستثمرين سابقين",
+        "استخدام التمويل للتوسع والامتثال"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "BitOasis secures new investment from CoinDCX",
+      "publisher": "BitOasis",
+      "source_type": "official_strategic_investment_and_historical_metrics",
+      "url": "https://blog.bitoasis.net/bitoasis-secures-new-investment-from-coindcx-indias-preferred-and-most-valued-crypto-exchange/",
+      "supports": [
+        "استثمار CoinDCX الاستراتيجي في أغسطس 2023 من دون مبلغ معلن",
+        "إعلان الشركة أنها جمعت أكثر من 35 مليون دولار حتى ذلك الوقت",
+        "معالجة أكثر من 5 مليارات دولار حجم تداول منذ الإطلاق",
+        "دعم أكثر من 60 أصلًا في 15 دولة وفق تعريف 2023"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Here's how much our trading volume exceeded this time",
+      "publisher": "BitOasis",
+      "source_type": "official_historical_operating_metrics",
+      "url": "https://blog.bitoasis.net/trading-volume-exceeds-3-billion-usd-on-bitoasis/",
+      "supports": [
+        "تجاوز حجم التداول التراكمي 3 مليارات دولار بحلول أغسطس 2021",
+        "تجاوز نصف الحجم في النصف الأول من 2021",
+        "تضاعف قاعدة المستخدمين خلال الفترة وفق الشركة"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "MBC GROUP and BitOasis announce strategic partnership",
+      "publisher": "BitOasis",
+      "source_type": "official_historical_operating_metric_and_partnership",
+      "url": "https://blog.bitoasis.net/mbc-group-bitoasis-launch-crypto-education-initiatives/",
+      "supports": [
+        "تجاوز حجم التداول التراكمي 4 مليارات دولار بحلول مايو 2022",
+        "الشراكة الإقليمية للتوعية بالعملات المشفرة",
+        "وصف المنصة كمزود إقليمي مبكر للخدمات"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "BitOasis Granted Full Virtual Asset Service Provider License by Dubai’s VARA",
+      "publisher": "BitOasis",
+      "source_type": "official_full_license_announcement",
+      "url": "https://blog.bitoasis.net/bitoasis-granted-full-virtual-asset-service-provider-license-by-dubais-virtual-assets-regulatory-authority/",
+      "supports": [
+        "الانتقال إلى ترخيص VASP الكامل في ديسمبر 2024",
+        "استيفاء الشروط والمتطلبات التنظيمية المتعلقة بالأنشطة الحالية",
+        "بدء العمل بموجب الترخيص الجديد"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "MARKET NOTIFICATION: ALERT — BitOasis Technologies FZE",
+      "publisher": "Dubai Virtual Assets Regulatory Authority (VARA)",
+      "source_type": "official_regulatory_enforcement_notice",
+      "url": "https://www.vara.ae/en/regulations/regulatory-notices/market-alert-bitoasis-technologies-fze-bitoasis/",
+      "supports": [
+        "إخضاع ترخيص MVP للمراجعة في يوليو 2023",
+        "اعتبار حالة الترخيص غير تشغيلية أثناء إجراءات المعالجة",
+        "إثبات أن مسار الامتثال تضمن تعثرًا وإجراءات تصحيحية وليس تقدمًا خطيًا"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "BitOasis welcomes new retail and institutional customers",
+      "publisher": "BitOasis",
+      "source_type": "official_regulatory_remediation_and_reopening_announcement",
+      "url": "https://blog.bitoasis.net/bitoasis-welcomes-new-retail-and-corporate-customers/",
+      "supports": [
+        "استئناف التسجيل للعملاء الجدد في 12 أبريل 2024",
+        "تحقيق تقدم في الالتزامات التنظيمية بعد التعليق السابق",
+        "تقديم أكثر من 60 أصلًا بعملات متعددة في تلك المرحلة"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "BitOasis Announces Expansion in GCC With New License and Office in Bahrain",
+      "publisher": "BitOasis",
+      "source_type": "official_bahrain_license_announcement",
+      "url": "https://blog.bitoasis.net/bitoasis-announces-expansion-in-gcc-with-new-license-and-office-in-bahrain/",
+      "supports": [
+        "الحصول على ترخيص فئة 2 لخدمات الأصول المشفرة من مصرف البحرين المركزي في 2024",
+        "إنشاء مكتب وكيان محلي في البحرين",
+        "التركيز على خدمات الوسيط-التاجر للعملاء الأفراد والشركات والمؤسسات",
+        "رفع VARA للتعليق السابق في أبريل 2024"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "BitOasis Features",
+      "publisher": "BitOasis Support",
+      "source_type": "official_current_product_capabilities_updated_2026",
+      "url": "https://support.bitoasis.net/en/support/solutions/articles/29000033076-bitoasis-features",
+      "supports": [
+        "BitOasis Lite وBitOasis Pro",
+        "الإرسال والاستقبال والحفظ والتحويل إلى عملات ورقية",
+        "خدمات VIP وOTC",
+        "اختلاف توافر التداول والإيداع والسحب حسب الدولة"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Countries we support",
+      "publisher": "BitOasis Support",
+      "source_type": "official_current_geographic_availability_updated_2026",
+      "url": "https://support.bitoasis.net/en/support/solutions/articles/29000048991-countries-we-support",
+      "supports": [
+        "توفر التسجيل أو الخدمات في عشر دول في مايو 2026",
+        "الإمارات والسعودية والبحرين وعمان وقطر والأردن وتونس والمغرب والعراق وليبيا",
+        "عدم مساواة قائمة الدول بتوافر جميع قنوات الإيداع والسحب"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Maker & Taker Fees on BitOasis Pro",
+      "publisher": "BitOasis Support",
+      "source_type": "official_current_trading_fee_model_updated_2026",
+      "url": "https://support.bitoasis.net/en/support/solutions/articles/29000047465-maker-taker-fees-on-pro",
+      "supports": [
+        "نموذج رسوم الصانع والآخذ على BitOasis Pro",
+        "تسعير يعتمد على حجم التداول",
+        "أكثر من 60 أصلًا و200 زوج تداول وفق صفحة مايو 2026"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "Are There Any Fees for Deposits at BitOasis?",
+      "publisher": "BitOasis Support",
+      "source_type": "official_current_deposit_fee_disclosure_updated_2026",
+      "url": "https://support.bitoasis.net/en/support/solutions/articles/29000048200-are-there-any-fees-for-deposits-at-bitoasis-",
+      "supports": [
+        "عدم فرض BitOasis رسومًا على التحويل البنكي والتمويل السهل وفق الصفحة",
+        "رسوم معالجة البطاقة 3.99% تفرضها جهات معالجة خارجية",
+        "منع احتساب رسوم الطرف الثالث كإيراد مؤكد لـBitOasis"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "Cash Withdrawal Guide",
+      "publisher": "BitOasis Support",
+      "source_type": "official_current_fiat_withdrawal_fee_page_updated_2026",
+      "url": "https://support.bitoasis.net/en/support/solutions/articles/29000033124-cash-withdrawal-guide",
+      "supports": [
+        "رسوم سحب نقدي معلنة بقيمة 25 درهمًا حتى 25 ألف درهم و65 درهمًا لما فوق ذلك",
+        "الحد الأدنى وإجراءات السحب إلى حساب شخصي",
+        "وجود مسار رسوم سحب مع عدم كشف صافي الهامش"
+      ]
+    },
+    {
+      "id": "SRC-21",
+      "title": "Broker-Dealer Services Terms & Conditions",
+      "publisher": "BitOasis",
+      "source_type": "official_current_legal_terms_and_service_scope",
+      "url": "https://blog.bitoasis.net/terms-of-service-en/",
+      "supports": [
+        "النطاق القانوني لخدمات الوسيط-التاجر بموجب VARA",
+        "ترتيب الأوامر وقبول العملات الورقية أو الأصول الافتراضية",
+        "خدمات المحافظ وعناوين الإيداع عبر Fireblocks وBitGo",
+        "متطلبات KYC وCDD والأهلية"
+      ]
+    },
+    {
+      "id": "SRC-22",
+      "title": "Crypto Adoption in MENA 2025: Crisis, Adaptation, and Growth",
+      "publisher": "Chainalysis",
+      "source_type": "primary_market_data_and_methodology",
+      "url": "https://www.chainalysis.com/blog/middle-east-north-africa-crypto-adoption-2025/",
+      "supports": [
+        "نمو نشاط MENA بنسبة 33% في دورة التقرير",
+        "تجاوز النشاط الإقليمي نصف تريليون دولار وفق تقرير 2025",
+        "نحو 53 مليار دولار قيمة سنوية مستلمة في الإمارات",
+        "فصل قيمة النشاط على السلسلة عن إيراد المنصات"
+      ]
+    }
+  ],
+  "verification": {
+    "status": "verified_from_official_bitoasis_coindcx_vara_product_legal_and_primary_market_sources_with_strict_metric_separation",
+    "verified_on": "2026-08-03",
+    "research_cutoff": "2026-08-03",
+    "source_policy": "أُعطيت الأولوية لسجل VARA الرسمي وصفحات BitOasis الحالية وشروطها القانونية وإعلانات CoinDCX بصفتها الشركة المستحوذة، ثم إعلانات التمويل والتشغيل التاريخية الرسمية. استُخدمت Chainalysis لبيانات السوق الإقليمية بمنهجيتها المباشرة. لم تُستخدم تقديرات قواعد البيانات للإيراد أو الزيارات أو التقييم. لا تنطبق تقارير SEC الدورية لأن BitOasis وCoinDCX شركتان خاصتان ولم يُعثر على مُصدر عام أمريكي يقدم إفصاحات دورية تخص BitOasis.",
+    "important_notes": [
+      "حُذف تقدير «عشرات الملايين» من الإيراد الشهري لعدم وجود MRR أو ARR أو قيمة إيراد مطلقة منشورة.",
+      "نمو الإيراد بنسبة 50% بعد الاستحواذ مقياس نسبي صادر عن المجموعة ولا يكشف قيمة الأساس أو الإيراد الحالي.",
+      "فُصلت 7.4 مليارات دولار معاملات تراكمية عن الإيراد؛ حجم التداول أو المعاملات لا يساوي دخل المنصة.",
+      "فُصلت 252 مليون دولار أصولًا تحت الحفظ عن الإيراد والتقييم والنقد المملوك للشركة.",
+      "فُصلت 840 ألف تسجيل عن المستخدمين النشطين والعملاء الممولين وزيارات الموقع.",
+      "حُذف تقدير الاستحواذ بمئات الملايين؛ لم تُعلن قيمة صفقة CoinDCX أو تقييم BitOasis.",
+      "جولة Series B البالغة 30 مليون دولار تمويل تاريخي وليست إيرادًا أو تقييمًا.",
+      "إعلان أكثر من 35 مليون دولار تمويل في 2023 لا يسمح بتحديد مبلغ استثمار CoinDCX منفردًا.",
+      "تجاوز الحجم 3 ثم 4 ثم 5 ثم 7.4 مليارات دولار مقاييس تراكمية في تواريخ مختلفة ولا تمثل نموًا سنويًا ثابتًا.",
+      "سجل VARA الحالي يثبت ترخيص VASP نشطًا لخدمات الوسيط-التاجر منذ 29 نوفمبر 2024.",
+      "وُثق إنذار VARA وتعليق حالة MVP في يوليو 2023 ثم إعادة فتح التسجيل في أبريل 2024؛ لم يُعرض مسار الامتثال كنجاح خطي بلا تعثر.",
+      "ترخيص البحرين والتوسع التشغيلي منفصلان عن ترخيص دبي ولا يعنيان توافر المنتج نفسه في كل دولة.",
+      "قائمة عشر دول مدعومة في مايو 2026 لا تعني توافر الإيداع والسحب الكامل في جميعها.",
+      "رسوم إيداع البطاقة 3.99% موصوفة كرسوم معالج خارجي ولم تُعامل كإيراد BitOasis.",
+      "رسوم الشبكة ورسوم السحب للمستخدم لا تكشف صافي هامش المنصة.",
+      "أزيلت AWS وNode.js ومحركات التداول عالية التردد من قائمة الأدوات لعدم وجود توثيق رسمي حديث للحزمة الداخلية.",
+      "بيانات Chainalysis عن MENA والإمارات تقيس نشاط السوق على السلسلة ولا تمثل حصة BitOasis أو إيرادها.",
+      "جميع أرقام النمو التشغيلي بعد الاستحواذ تصريحات شركة/مجموعة وغير مدققة علنًا."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_on": "2026-08-03",
+      "validator": "Python json module + jsonschema Draft 2020-12 + custom Professional V2 integrity checks",
+      "check_count": 19,
+      "checks": [
+        "اجتياز JSON Schema Draft 2020-12 مع وجود الحقول الأساسية وحقول Professional V2",
+        "الحفاظ على مفاتيح البنية الأصلية وإضافة sources وverification وevidence_map_schema وevidence_map فقط",
+        "تطابق field_value في كل مدخل evidence_map مع القيمة الفعلية في JSONPath",
+        "تطابق source_count مع source_ids وsource_references",
+        "عدم وجود source_id مكرر أو مرجع دليل يشير إلى مصدر غير موجود",
+        "تطابق عنوان وناشر ونوع ورابط كل مرجع مختصر مع سجل المصدر الكامل",
+        "سلامة جميع روابط المصادر بصيغة HTTPS",
+        "عدم وجود NaN أو Infinity أو قيم JSON غير قياسية",
+        "وجود محتوى عربي جوهري في الأقسام التحليلية",
+        "وسم الإيراد الشهري بأنه غير معلن وإزالة تقدير عشرات الملايين",
+        "فصل 7.4 مليارات دولار معاملات تراكمية عن الإيراد",
+        "فصل 252 مليون دولار أصولًا تحت الحفظ عن الإيراد والتقييم",
+        "فصل 840 ألف تسجيل عن المستخدمين النشطين وزيارات الموقع",
+        "وسم التقييم ومقابل الاستحواذ بأنهما غير معلنين",
+        "فصل جولة Series B بقيمة 30 مليون دولار عن الاستثمار والاستحواذ غير المعلنين",
+        "توثيق التعليق التنظيمي في 2023 وإعادة الفتح في 2024 والترخيص الكامل النشط",
+        "عدم احتساب رسوم معالجة البطاقة الخارجية كإيراد مؤكد لـBitOasis",
+        "استبدال الحزمة التقنية غير الموثقة بقدرات منتج وتراخيص موثقة",
+        "وجود 10 دروس خاصة بـBitOasis و22 مصدرًا و15 مدخلًا في خريطة الأدلة"
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول الجوهرية بقيمها الفعلية وحالة التحقق والثقة والمصادر، مع فصل الإيراد عن حجم التداول والأصول تحت الحفظ والتمويل والتقييم، وفصل التسجيلات عن المستخدمين النشطين وحركة الموقع.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي أو وثيقة تنظيمية أولية.",
+      "verified_current_product_capability": "القدرة موجودة في صفحة منتج أو شروط حديثة دون افتراض حجم الاستخدام أو الإيراد.",
+      "verified_as_not_publicly_disclosed": "لم يُنشر المقياس المطلوب، ولذلك لم يُستخدم تقدير خارجي.",
+      "verified_historical_financing": "معلومة تمويل مرتبطة بجولة وتاريخ محددين دون تحويلها إلى إيراد أو تقييم.",
+      "verified_historical_operating_metric": "مقياس تشغيل تاريخي أو تراكمي منشور لا يُعامل تلقائيًا كمقياس حالي أو مالي.",
+      "verified_with_metric_definition_limits": "المعلومة منشورة لكن تعريفها لا يسمح بتحويلها إلى مقياس مالي أو مستخدم نشط.",
+      "analytical_inference": "تحليل مهني مشتق من حقائق موثقة وليس تصريحًا حرفيًا."
+    },
+    "confidence_scale": {
+      "high": "مصدر تنظيمي أو رسمي مباشر، أو عدة مصادر أولية متطابقة.",
+      "medium_high": "استنتاج محدود مبني على مصادر رسمية مع حدود واضحة.",
+      "medium": "تصريح شركة يحتاج حذرًا في التعريف أو التوقيت.",
+      "low_not_used": "تقدير غير موثق أو ادعاء لم يُستخدم كحقيقة."
+    },
+    "metric_definitions": {
+      "revenue": "دخل محاسبي تعترف به BitOasis من الرسوم والخدمات؛ لا يساوي قيمة التداول أو أموال العملاء.",
+      "trading_volume": "القيمة الإجمالية للصفقات أو المعاملات التي مرت عبر المنصة خلال فترة أو منذ التأسيس؛ ليست إيرادًا.",
+      "assets_under_custody": "قيمة أصول العملاء المحفوظة أو المدارة ضمن ترتيبات المنصة؛ ليست ملكية للشركة ولا تقييمًا لها.",
+      "mrr_arr": "إيراد متكرر شهري أو سنوي وفق تعريف مالي؛ لم تنشره BitOasis.",
+      "funding": "رأس مال جمعته الشركة من المستثمرين؛ لا يمثل إيرادًا أو تقييمًا أو رصيدًا نقديًا حاليًا.",
+      "valuation": "قيمة حقوق الملكية في جولة أو صفقة محددة؛ لم تُفصح BitOasis أو CoinDCX عنها.",
+      "acquisition_consideration": "المقابل المدفوع للاستحواذ نقدًا أو أسهمًا أو كليهما؛ لم يُعلن.",
+      "registered_signups": "حسابات أو تسجيلات تراكمية؛ لا تساوي المستخدمين النشطين أو العملاء الممولين.",
+      "active_users": "مستخدمون نشطون خلال نافذة زمنية معرفة؛ لا تنشر BitOasis رقمًا حاليًا واضح التعريف.",
+      "website_traffic": "زيارات الموقع أو التطبيق خلال فترة؛ منفصلة عن التسجيلات وحجم التداول.",
+      "market_onchain_value": "قيمة نشاط مقدرة على السلسلة في منطقة أو دولة؛ لا تمثل إيراد منصة واحدة أو TAM متاحًا بالكامل.",
+      "third_party_processing_fee": "رسم يفرضه معالج أو بنك خارجي وقد لا يدخل إيراد BitOasis.",
+      "network_fee": "تكلفة شبكة بلوكتشين قد تمرر إلى المستخدم ولا تمثل بالضرورة هامشًا للمنصة."
+    }
+  },
+  "evidence_map": {
+    "$.headline": {
+      "field_value": "كيف حوّلت BitOasis الوصول المحلي إلى الأصول المشفّرة من ميزة دفع إلى خندق تنظيمي",
+      "verification_status": "analytical_inference",
+      "confidence": "high",
+      "claim_type": "company_specific_strategy_headline",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يلخص انتقال BitOasis من حل وصول محلي بالعملات الورقية إلى بنية مرخصة للوساطة والتداول بعد مسار تنظيمي واستحواذ إقليمي.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-04",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "BitOasis | About Us",
+          "publisher": "BitOasis",
+          "source_type": "official_current_company_and_regulatory_page",
+          "url": "https://bitoasis.net/en/about-us",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "التأسيس المحلي والرسالة التنظيمية"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "BitOasis Technologies FZE — Public Register",
+          "publisher": "Dubai Virtual Assets Regulatory Authority (VARA)",
+          "source_type": "official_regulator_public_register",
+          "url": "https://www.vara.ae/en/licenses-and-register/public-register/bitoasis-technologies-fze/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "الترخيص الحالي لخدمات الوسيط-التاجر"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "CoinDCX Acquires MENA Region’s Crypto Leader BitOasis",
+          "publisher": "CoinDCX",
+          "source_type": "official_acquirer_announcement",
+          "url": "https://coindcx.com/blog/announcements/coindcx-acquires-mena-regions-crypto-leader-bitoasis/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "الاستحواذ من CoinDCX"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "BitOasis Features",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_product_capabilities_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000033076-bitoasis-features",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "محفظة المنتجات الحالية"
+        }
+      ],
+      "limitations": "العنوان تحليل تحريري وليس وصفًا قانونيًا أو ماليًا رسميًا."
+    },
+    "$.company.location": {
+      "field_value": "دبي، الإمارات العربية المتحدة. تأسست BitOasis في 2015، بينما تصف بعض بياناتها التاريخية إطلاق المنصة في 2016؛ لذلك يُفصل بين سنة تأسيس الشركة وسنة بدء التشغيل التجاري. استحوذت CoinDCX على الشركة في 3 يوليو 2024 بعد استثمار استراتيجي في أغسطس 2023، وأصبحت BitOasis جزءًا من DCX Group مع استمرار علامتها وعملياتها الإقليمية. تمتلك كيانًا مرخصًا في دبي، وأعلنت توسعها التشغيلي إلى البحرين ضمن المجموعة.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "company_identity_location_and_ownership",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المصادر مقر الإمارات والتأسيس في 2015 والاستحواذ في 2024 واستمرار BitOasis ضمن DCX Group والتوسع البحريني.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-04",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "BitOasis | About Us",
+          "publisher": "BitOasis",
+          "source_type": "official_current_company_and_regulatory_page",
+          "url": "https://bitoasis.net/en/about-us",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "المقر الإماراتي وسنة التأسيس"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "CoinDCX Acquires MENA Region’s Crypto Leader BitOasis",
+          "publisher": "CoinDCX",
+          "source_type": "official_acquirer_announcement",
+          "url": "https://coindcx.com/blog/announcements/coindcx-acquires-mena-regions-crypto-leader-bitoasis/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "الاستحواذ في 3 يوليو 2024"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "CoinDCX H1 2026 Report",
+          "publisher": "CoinDCX",
+          "source_type": "official_parent_group_current_report",
+          "url": "https://coindcx.com/blog/announcements/coindcx-h1-2026-report/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "BitOasis ضمن DCX Group والتوسع إلى البحرين"
+        }
+      ],
+      "limitations": "تستخدم بعض البيانات التاريخية 2016 كسنة إطلاق؛ لذلك لم تُدمج سنة التأسيس وسنة التشغيل."
+    },
+    "$.company.business_model": {
+      "field_value": "منصة B2C وB2B تعمل في دبي بترخيص وسيط-تاجر للأصول الافتراضية. تقدم BitOasis Lite للشراء والبيع المبسط، وBitOasis Pro للتداول بدفتر أوامر ورسوم Maker/Taker، إضافة إلى الإرسال والاستقبال والحفظ والتحويل إلى العملات الورقية وخدمات VIP وOTC. تعتمد الإيرادات المحتملة على رسوم التداول وبعض رسوم السحب والخدمات، لكن الشركة لا تنشر معدل الاقتطاع أو الإيراد حسب المنتج. رسوم معالجة البطاقات البالغة 3.99% موصوفة رسميًا بأنها رسوم طرف ثالث، لذلك لا تُعامل كإيراد مؤكد لـBitOasis.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "high",
+      "claim_type": "regulated_business_model_and_fee_limits",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت صفحات الترخيص والمنتج نموذج الوسيط-التاجر ومنتجات Lite وPro والحفظ وVIP وOTC، بينما لا يوجد إفصاح عن take rate أو الإيراد حسب المنتج.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-03",
+        "SRC-16",
+        "SRC-18",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "BitOasis Technologies FZE — Public Register",
+          "publisher": "Dubai Virtual Assets Regulatory Authority (VARA)",
+          "source_type": "official_regulator_public_register",
+          "url": "https://www.vara.ae/en/licenses-and-register/public-register/bitoasis-technologies-fze/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "النشاط المرخص والفئات المسموح بخدمتها"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "BitOasis Features",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_product_capabilities_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000033076-bitoasis-features",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "محفظة المنتجات الحالية"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Maker & Taker Fees on BitOasis Pro",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_trading_fee_model_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000047465-maker-taker-fees-on-pro",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "نموذج Maker/Taker المعتمد على الحجم"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Are There Any Fees for Deposits at BitOasis?",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_deposit_fee_disclosure_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000048200-are-there-any-fees-for-deposits-at-bitoasis-",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "رسوم البطاقة تذهب لمعالج خارجي"
+        }
+      ],
+      "limitations": "لا تنشر الشركة الاقتصاديات الصافية أو هوامش كل خدمة."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. BitOasis شركة خاصة مملوكة لـCoinDCX ولا تنشر MRR أو ARR أو إيرادًا شهريًا أو سنويًا مطلقًا. ذكرت CoinDCX نمو إيراد BitOasis بنسبة 50% منذ الاستحواذ، لكن هذا مقياس نمو نسبي بلا فترة محاسبية مفصلة أو قيمة أساس. كما أن 7.4 مليارات دولار معاملات تراكمية، و252 مليون دولار أصول تحت الحفظ، و840 ألف تسجيل لا تمثل إيرادًا؛ لذلك حُذف تقدير «عشرات الملايين».",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "revenue_non_disclosure_and_metric_separation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا توجد قيمة إيراد مطلقة منشورة؛ نسب النمو ومقاييس المعاملات والحفظ والتسجيل لا تسمح بحساب الإيراد.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-06",
+        "SRC-08",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "CoinDCX's 7-Year Journey: 7 Milestones and Sailing Through the Tides of Progress",
+          "publisher": "CoinDCX",
+          "source_type": "official_parent_group_operating_metrics",
+          "url": "https://coindcx.com/blog/announcements/coindcxs-7-year-journey-7-milestones-and-sailing-through-the-tides-of-progress/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "نمو الإيراد 50% نسبيًا مع حجم المعاملات والحفظ والتسجيل"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "BitOasis closes $30 Million in Series B Funding",
+          "publisher": "BitOasis",
+          "source_type": "official_historical_funding_announcement",
+          "url": "https://blog.bitoasis.net/series-b-funding/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "تمويل Series B لا إيراد"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "CoinDCX Acquires MENA Region’s Crypto Leader BitOasis",
+          "publisher": "CoinDCX",
+          "source_type": "official_acquirer_announcement",
+          "url": "https://coindcx.com/blog/announcements/coindcx-acquires-mena-regions-crypto-leader-bitoasis/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "استحواذ بلا مقابل معلن"
+        }
+      ],
+      "limitations": "عدم وجود إفصاح عام لا يعني غياب الإيراد؛ يعني فقط عدم جواز تقديره."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن. لا تنشر BitOasis زيارات الموقع أو MAU أو DAU. أحدث مقياس تشغيلي منشور من المجموعة يذكر أكثر من 840 ألف تسجيل، وهو إجمالي حسابات مسجلة لا يساوي مستخدمين نشطين أو عملاء ممولين أو زوارًا شهريين. تدعم المنصة أكثر من 68 أصلًا، وتعرض خدمات في عشر دول وفق تحديث مايو 2026، لكن عدد الأصول والدول لا يكشف حجم الاستخدام.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "high",
+      "claim_type": "traffic_active_users_and_signups_separation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "840 ألف تسجيل مقياس تراكمي للحسابات وليس MAU أو زيارات موقع، ولا يوجد مقياس شهري معلن.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-06",
+        "SRC-02",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "CoinDCX's 7-Year Journey: 7 Milestones and Sailing Through the Tides of Progress",
+          "publisher": "CoinDCX",
+          "source_type": "official_parent_group_operating_metrics",
+          "url": "https://coindcx.com/blog/announcements/coindcxs-7-year-journey-7-milestones-and-sailing-through-the-tides-of-progress/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "أكثر من 840 ألف تسجيل"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "About us",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_company_profile_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000033072-about-us",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "68+ أصلًا لا مستخدمين"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Countries we support",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_geographic_availability_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000048991-countries-we-support",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "عشر دول مدعومة لا زيارات"
+        }
+      ],
+      "limitations": "لا يتوفر تعريف منشور للمستخدم النشط أو العميل الممول."
+    },
+    "$.overview.problem.text": {
+      "field_value": "واجه المستخدم الخليجي والعربي المبكر للأصول المشفّرة فجوة بين الأسواق العالمية وواقعه المحلي: لغة مختلفة، عملات ورقية محلية، تحويلات مصرفية غير موحدة، متطلبات KYC وAML متغيرة، ومنصات قد لا تحمل ترخيصًا محليًا أو توفر قنوات سحب واضحة. بالنسبة للمؤسسات، تصبح المشكلة أوسع وتشمل الحفظ، مصدر السيولة، مسؤولية الامتثال، والتعامل مع جهة يمكن للمنظم المحلي الإشراف عليها.",
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "regional_customer_and_compliance_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تُستنتج المشكلة من تعدد قنوات العملات الورقية ومتطلبات KYC والاختلاف الجغرافي في توافر الإيداع والسحب والحاجة إلى جهة مرخصة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-16",
+        "SRC-17",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-16",
+          "title": "BitOasis Features",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_product_capabilities_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000033076-bitoasis-features",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "اختلاف الخدمات حسب الدولة"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Countries we support",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_geographic_availability_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000048991-countries-we-support",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "النطاق الجغرافي الحالي"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Broker-Dealer Services Terms & Conditions",
+          "publisher": "BitOasis",
+          "source_type": "official_current_legal_terms_and_service_scope",
+          "url": "https://blog.bitoasis.net/terms-of-service-en/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "KYC وCDD ونطاق الوسيط-التاجر"
+        }
+      ],
+      "limitations": "صياغة المشكلة تحليلية ولا تدعي قياسًا مستقلًا لحجم الاحتكاك."
+    },
+    "$.overview.solution.text": {
+      "field_value": "بنت BitOasis منصة عربية وإنجليزية تربط الأصول المشفّرة بالعملات المحلية، مع مسارين للمستخدم: Lite للشراء والبيع المبسط وPro للتداول المتقدم بأكثر من 60 أصلًا و200 زوج وفق صفحات 2026. تشمل القدرات الإرسال والاستقبال والحفظ والتحويل إلى عملات ورقية وخدمات VIP وOTC. في دبي تعمل تحت ترخيص VASP نشط لخدمات الوسيط-التاجر يسمح بخدمة الأفراد والمؤهلين والمؤسسات، مع توسع مرخص في البحرين. تبقى وظائف الإيداع والسحب مختلفة حسب الدولة، لذلك لا يصح وصف كل سوق مدعوم بأنه يملك البنية المصرفية نفسها.",
+      "verification_status": "verified_current_product_capability",
+      "confidence": "high",
+      "claim_type": "current_product_and_regulatory_solution",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المصادر منتجات Lite وPro والتحويل والحفظ وVIP وOTC والترخيص الحالي والنطاق الجغرافي المتفاوت.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-03",
+        "SRC-16",
+        "SRC-18",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "BitOasis Technologies FZE — Public Register",
+          "publisher": "Dubai Virtual Assets Regulatory Authority (VARA)",
+          "source_type": "official_regulator_public_register",
+          "url": "https://www.vara.ae/en/licenses-and-register/public-register/bitoasis-technologies-fze/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "ترخيص VASP النشط"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "BitOasis Features",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_product_capabilities_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000033076-bitoasis-features",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "القدرات الحالية"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Maker & Taker Fees on BitOasis Pro",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_trading_fee_model_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000047465-maker-taker-fees-on-pro",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "60+ أصلًا و200+ زوج على Pro"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Countries we support",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_geographic_availability_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000048991-countries-we-support",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "الدول المدعومة"
+        }
+      ],
+      "limitations": "توافر التسجيل لا يعني توافر كل قنوات الإيداع والسحب في كل دولة."
+    },
+    "$.market_data.target_audience": {
+      "field_value": "المستثمرون الأفراد في دول مجلس التعاون والأسواق العربية المدعومة، والمتداولون المحترفون الذين يحتاجون دفتر أوامر، والعملاء ذوو الملاءة العالية، والشركات والمؤسسات المؤهلة في نطاق التراخيص المحلية. في مايو 2026 عرضت الشركة أهلية التسجيل في الإمارات والسعودية والبحرين وعمان وقطر والأردن وتونس والمغرب والعراق وليبيا، مع اختلاف فعلي في الإيداع والسحب بين الأسواق.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "customer_segments_and_geographic_scope",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "السجل التنظيمي يسمح بخدمة الأفراد والمؤهلين والمؤسسات، وصفحات 2026 تعرض الدول المدعومة مع خدمات متباينة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-03",
+        "SRC-16",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "BitOasis Technologies FZE — Public Register",
+          "publisher": "Dubai Virtual Assets Regulatory Authority (VARA)",
+          "source_type": "official_regulator_public_register",
+          "url": "https://www.vara.ae/en/licenses-and-register/public-register/bitoasis-technologies-fze/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "الفئات الاستثمارية المسموح بخدمتها"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "BitOasis Features",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_product_capabilities_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000033076-bitoasis-features",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "VIP وOTC والمنتجات"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Countries we support",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_geographic_availability_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000048991-countries-we-support",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "الدول المدعومة في مايو 2026"
+        }
+      ],
+      "limitations": "لا تكشف المصادر عدد العملاء في كل شريحة أو سوق."
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر BitOasis رقم TAM رسميًا خاصًا بها. وفق Chainalysis، تجاوز نشاط الأصول المشفّرة في MENA نصف تريليون دولار في دورة تقرير 2025 مع نمو 33%، وبلغت القيمة السنوية المستلمة في الإمارات نحو 53 مليار دولار. هذه أرقام نشاط على السلسلة للمنطقة والسوق، وليست حجم تداول BitOasis ولا إيرادها ولا سوقًا متاحًا بالكامل للمنصة بسبب اختلاف التنظيم والمنافسة وقنوات العملات الورقية.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "high",
+      "claim_type": "regional_onchain_market_activity",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تقدم Chainalysis تقديرًا لنشاط MENA والإمارات على السلسلة، لكنه ليس TAM محاسبيًا لمنصة BitOasis.",
+      "source_count": 1,
+      "source_ids": [
+        "SRC-22"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-22",
+          "title": "Crypto Adoption in MENA 2025: Crisis, Adaptation, and Growth",
+          "publisher": "Chainalysis",
+          "source_type": "primary_market_data_and_methodology",
+          "url": "https://www.chainalysis.com/blog/middle-east-north-africa-crypto-adoption-2025/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "أكثر من نصف تريليون دولار ونمو 33% ونحو 53 مليارًا في الإمارات"
+        }
+      ],
+      "limitations": "القيمة المستلمة على السلسلة تشمل أطرافًا ومنصات وأنشطة لا يمكن لـBitOasis الوصول إليها كلها."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "المؤشرات المنشورة تصف مسارًا تراكميًا لا معدل نمو سنويًا مدققًا: تجاوز حجم التداول 3 مليارات دولار في أغسطس 2021، ثم 4 مليارات في مايو 2022، وأكثر من 5 مليارات في 2023. أحدث إفصاح للمجموعة ذكر أكثر من 7.4 مليارات دولار معاملات منذ التأسيس، ونحو 252 مليون دولار أصولًا تحت الحفظ، وأكثر من 840 ألف تسجيل. كما ذكرت CoinDCX بعد الاستحواذ نموًا بنسبة 30% في الصفقات و40% في الحجم و50% في الإيراد، وهي نسب شركة غير مدققة لا تكشف القيم المطلقة أو هامش الربح. تنظيميًا، مرت BitOasis بتعليق حالة MVP في 2023، أعادت فتح التسجيل في أبريل 2024، ثم حصلت على ترخيص VASP كامل في نوفمبر 2024 وتوسعت إلى البحرين في 2025.",
+      "verification_status": "verified_historical_operating_metric",
+      "confidence": "medium_high",
+      "claim_type": "historical_volume_custody_signups_and_regulatory_progression",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المصادر تطور الحجم من 3 إلى 4 إلى 5 ثم 7.4 مليارات دولار، مع 252 مليونًا تحت الحفظ و840 ألف تسجيل ونسب نمو ما بعد الاستحواذ ومسار الترخيص.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-10",
+        "SRC-11",
+        "SRC-09",
+        "SRC-06",
+        "SRC-13",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-10",
+          "title": "Here's how much our trading volume exceeded this time",
+          "publisher": "BitOasis",
+          "source_type": "official_historical_operating_metrics",
+          "url": "https://blog.bitoasis.net/trading-volume-exceeds-3-billion-usd-on-bitoasis/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "3 مليارات دولار بحلول أغسطس 2021"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "MBC GROUP and BitOasis announce strategic partnership",
+          "publisher": "BitOasis",
+          "source_type": "official_historical_operating_metric_and_partnership",
+          "url": "https://blog.bitoasis.net/mbc-group-bitoasis-launch-crypto-education-initiatives/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "4 مليارات دولار بحلول مايو 2022"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "BitOasis secures new investment from CoinDCX",
+          "publisher": "BitOasis",
+          "source_type": "official_strategic_investment_and_historical_metrics",
+          "url": "https://blog.bitoasis.net/bitoasis-secures-new-investment-from-coindcx-indias-preferred-and-most-valued-crypto-exchange/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "أكثر من 5 مليارات دولار بحلول 2023"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "CoinDCX's 7-Year Journey: 7 Milestones and Sailing Through the Tides of Progress",
+          "publisher": "CoinDCX",
+          "source_type": "official_parent_group_operating_metrics",
+          "url": "https://coindcx.com/blog/announcements/coindcxs-7-year-journey-7-milestones-and-sailing-through-the-tides-of-progress/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "7.4 مليارات و252 مليونًا و840 ألفًا ونسب النمو"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "MARKET NOTIFICATION: ALERT — BitOasis Technologies FZE",
+          "publisher": "Dubai Virtual Assets Regulatory Authority (VARA)",
+          "source_type": "official_regulatory_enforcement_notice",
+          "url": "https://www.vara.ae/en/regulations/regulatory-notices/market-alert-bitoasis-technologies-fze-bitoasis/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "التعليق التنظيمي في 2023"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "BitOasis Technologies FZE — Public Register",
+          "publisher": "Dubai Virtual Assets Regulatory Authority (VARA)",
+          "source_type": "official_regulator_public_register",
+          "url": "https://www.vara.ae/en/licenses-and-register/public-register/bitoasis-technologies-fze/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "الترخيص النشط الكامل"
+        }
+      ],
+      "limitations": "المقاييس تراكمية أو نسب شركة ولا تشكل CAGR ماليًا أو بيانات مدققة."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "أغلقت BitOasis جولة Series B بقيمة 30 مليون دولار في أكتوبر 2021 بقيادة Jump Capital وWamda، مع مشاركة Global Founders Capital وAlameda Research ومستثمرين سابقين منهم Pantera Capital وDigital Currency Group وNXMH. وفي أغسطس 2023 أعلنت استثمارًا استراتيجيًا من CoinDCX من دون كشف المبلغ، وقالت آنذاك إنها جمعت أكثر من 35 مليون دولار إجمالًا. استحوذت CoinDCX على BitOasis في يوليو 2024، لكن قيمة الصفقة وهيكل المقابل ونسب الملكية لم تُنشر؛ لذلك لا تُجمع أرقام تقديرية مع التمويل المعلن.",
+      "verification_status": "verified_historical_financing",
+      "confidence": "high",
+      "claim_type": "funding_and_acquisition_terms",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المصادر جولة 30 مليون دولار، وإجماليًا معلنًا يزيد على 35 مليونًا في 2023، واستثمار CoinDCX ثم الاستحواذ دون كشف المقابل.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-08",
+        "SRC-09",
+        "SRC-04"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "BitOasis closes $30 Million in Series B Funding",
+          "publisher": "BitOasis",
+          "source_type": "official_historical_funding_announcement",
+          "url": "https://blog.bitoasis.net/series-b-funding/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "Series B بقيمة 30 مليون دولار والمستثمرون"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "BitOasis secures new investment from CoinDCX",
+          "publisher": "BitOasis",
+          "source_type": "official_strategic_investment_and_historical_metrics",
+          "url": "https://blog.bitoasis.net/bitoasis-secures-new-investment-from-coindcx-indias-preferred-and-most-valued-crypto-exchange/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "استثمار CoinDCX وإجمالي تمويل أكثر من 35 مليونًا"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "CoinDCX Acquires MENA Region’s Crypto Leader BitOasis",
+          "publisher": "CoinDCX",
+          "source_type": "official_acquirer_announcement",
+          "url": "https://coindcx.com/blog/announcements/coindcx-acquires-mena-regions-crypto-leader-bitoasis/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "الاستحواذ في 2024 من دون قيمة معلنة"
+        }
+      ],
+      "limitations": "لا يجوز جمع مبلغ افتراضي للاستثمار أو الاستحواذ مع الجولات المنشورة."
+    },
+    "$.financials.valuation": {
+      "field_value": "غير معلن. لا توجد جولة منشورة تكشف تقييم pre-money أو post-money، ولم يعلن CoinDCX مقابل الاستحواذ في 2024. رقم الأصول تحت الحفظ وحجم المعاملات والتمويل التاريخي لا يسمح بحساب قيمة الشركة، كما أن وصف «استحواذ بمئات الملايين» في الملف الأصلي غير مدعوم وحُذف.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "valuation_non_disclosure",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا تكشف بيانات التمويل أو الاستحواذ تقييمًا قبل أو بعد الاستثمار أو مقابل الصفقة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-08",
+        "SRC-04",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "BitOasis closes $30 Million in Series B Funding",
+          "publisher": "BitOasis",
+          "source_type": "official_historical_funding_announcement",
+          "url": "https://blog.bitoasis.net/series-b-funding/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "قيمة الجولة دون تقييم"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "CoinDCX Acquires MENA Region’s Crypto Leader BitOasis",
+          "publisher": "CoinDCX",
+          "source_type": "official_acquirer_announcement",
+          "url": "https://coindcx.com/blog/announcements/coindcx-acquires-mena-regions-crypto-leader-bitoasis/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "الاستحواذ دون مقابل معلن"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "CoinDCX and BitOasis Join Forces in a First-of-its-Kind Deal in MENA Region",
+          "publisher": "BitOasis",
+          "source_type": "official_target_company_acquisition_announcement",
+          "url": "https://blog.bitoasis.net/coindcx-and-bitoasis-join-forces-in-a-first-of-its-kind-deal-in-mena-region/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "تأكيد الصفقة من الشركة دون قيمة"
+        }
+      ],
+      "limitations": "التمويل والحجم والأصول تحت الحفظ لا تصلح بدائل للتقييم."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "رسوم الصانع والآخذ على BitOasis Pro، مع شرائح تعتمد على حجم التداول؛ لا تنشر الشركة صافي take rate أو الإيراد الناتج",
+        "رسوم أو فروق تنفيذ مرتبطة بالشراء والبيع المبسط عبر BitOasis Lite وفق هيكل الرسوم المتغير؛ لم يُنشر مزيج الإيراد بين Lite وPro",
+        "رسوم السحب النقدي المعلنة للمستخدم في الإمارات، ومنها 25 درهمًا حتى 25 ألف درهم و65 درهمًا لما فوق ذلك؛ لا تُعرف تكاليف التحويل أو صافي الهامش",
+        "رسوم إرسال الأصول المشفّرة أو رسوم الشبكة وأي رسوم خدمة مطبقة بحسب الأصل؛ رسوم الشبكة ليست بالضرورة إيرادًا كاملًا للمنصة",
+        "خدمات VIP وOTC للعملاء ذوي الملاءة والمؤسسات؛ التسعير والحجم والإيراد غير معلنة",
+        "خدمات الحفظ والمحافظ والتحويل إلى العملات الورقية ضمن نطاق المنتج؛ لا يوجد إفصاح يثبت رسومًا مستقلة لكل خدمة",
+        "رسوم معالجة إيداعات البطاقات البالغة 3.99% موصوفة رسميًا كرسوم معالج دفع خارجي، لذلك لم تُحتسب كمسار إيراد مؤكد لـBitOasis",
+        "حجم التداول التراكمي والأصول تحت الحفظ وأموال العملاء ليست إيرادًا ولا نقدًا مملوكًا للشركة"
+      ],
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "medium_high",
+      "claim_type": "revenue_streams_and_pass_through_fees",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المصادر رسوم Maker/Taker ورسوم السحب والخدمات، وتوضح أن رسوم البطاقة لطرف ثالث وأن رسوم الشبكة قد تكون تمريرية.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-18",
+        "SRC-20",
+        "SRC-16",
+        "SRC-19",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-18",
+          "title": "Maker & Taker Fees on BitOasis Pro",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_trading_fee_model_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000047465-maker-taker-fees-on-pro",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "رسوم Maker/Taker والشرائح"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Cash Withdrawal Guide",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_fiat_withdrawal_fee_page_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000033124-cash-withdrawal-guide",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "رسوم السحب النقدي"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "BitOasis Features",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_product_capabilities_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000033076-bitoasis-features",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "VIP وOTC والحفظ والتحويل"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Are There Any Fees for Deposits at BitOasis?",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_deposit_fee_disclosure_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000048200-are-there-any-fees-for-deposits-at-bitoasis-",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "رسوم البطاقة لطرف ثالث"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Broker-Dealer Services Terms & Conditions",
+          "publisher": "BitOasis",
+          "source_type": "official_current_legal_terms_and_service_scope",
+          "url": "https://blog.bitoasis.net/terms-of-service-en/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "نطاق الخدمات القانونية والمحافظ"
+        }
+      ],
+      "limitations": "وجود رسم للمستخدم لا يكشف صافي الإيراد بعد تكاليف الشبكات والبنوك والحفظ."
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "ابنِ الجسر النقدي قبل توسيع قائمة العملات",
+          "description": "الميزة المحلية الأولى لم تكن عدد الرموز، بل القدرة على إيداع وسحب العملات الورقية ضمن تجربة عربية وقنوات مصرفية إقليمية. في الأسواق المالية، الوصول إلى الأصل أهم من اتساع الكتالوج إذا بقيت حركة المال معقدة."
+        },
+        {
+          "title": "الامتثال نظام تشغيل وليس شارة تسويق",
+          "description": "مسار BitOasis يوضح أن الترخيص يتطلب استمرارًا في الضوابط والتقارير والمعالجة. إنذار VARA وتعليق حالة MVP في 2023 ثم إعادة الفتح والترخيص الكامل يبرهنان أن الامتثال عملية يومية يمكن أن توقف النمو إذا لم تُنفذ تشغيليًا."
+        },
+        {
+          "title": "التعافي التنظيمي يمكن أن يعيد بناء القيمة",
+          "description": "بدل إخفاء التعثر، عالجت الشركة الشروط وأعادت قبول العملاء في أبريل 2024 ثم وصلت إلى ترخيص VASP كامل. للشركات المنظمة، القدرة على الإصلاح الموثق قد تكون أصلًا استراتيجيًا يسبق التوسع والصفقات."
+        },
+        {
+          "title": "الاستثمار الاستراتيجي قد يكون اختبارًا قبل الاستحواذ",
+          "description": "بدأت علاقة CoinDCX باستثمار في أغسطس 2023 ثم تحولت إلى استحواذ في يوليو 2024. هذا التسلسل يمنح المشتري وقتًا لاختبار الفريق والتنظيم والسوق قبل دمج أعمق، ويقلل مخاطرة دخول منطقة جديدة دفعة واحدة."
+        },
+        {
+          "title": "افصل أربعة أرقام تبدو متشابهة",
+          "description": "7.4 مليارات دولار معاملات، و252 مليون دولار أصول تحت الحفظ، و840 ألف تسجيل، ونمو إيراد 50% تقيس أشياء مختلفة. الجمع بينها في قصة واحدة يضخم الأداء ويشوّه الاقتصاد الحقيقي للمنصة."
+        },
+        {
+          "title": "التوطين يعني توافر الخدمة لا ترجمة الواجهة",
+          "description": "قد تكون الدولة ضمن قائمة التسجيل بينما تكون قنوات الإيداع أو السحب غير متاحة مؤقتًا. التوسع الحقيقي يحتاج شريكًا مصرفيًا وترخيصًا وتسوية ودعمًا محليًا، وليس صفحة عربية أو قبول رقم هاتف فقط."
+        },
+        {
+          "title": "صمّم سلمًا للمستخدم من المبتدئ إلى المؤسسة",
+          "description": "Lite يقلل تعقيد أول عملية، وPro يخدم المتداول النشط، بينما VIP وOTC والحفظ يخدمان شرائح أكبر. هذا السلم يسمح بزيادة قيمة العميل من دون إجباره على مغادرة المنصة عند تطور احتياجاته."
+        },
+        {
+          "title": "الحفظ مسؤولية مستقلة عن التداول",
+          "description": "الأصول تحت الحفظ لا تمثل إيرادًا أو ملكية للشركة، لكنها ترفع متطلبات الأمن والفصل والحوكمة. كلما كبر هذا الرصيد، أصبحت جودة الضوابط والحفظ وإدارة المفاتيح جزءًا أساسيًا من الثقة والقيمة."
+        },
+        {
+          "title": "نمو الحجم لا يثبت الربحية",
+          "description": "ارتفاع الصفقات والحجم قد يحدث مع انخفاض الرسوم أو ارتفاع تكاليف الامتثال والسيولة والتسويق. لذلك لا يمكن استنتاج الربحية من نمو التداول، حتى عندما تعلن الشركة نمو الإيراد نسبيًا."
+        },
+        {
+          "title": "توسع الأصول الافتراضية يُبنى ولايةً بعد ولاية",
+          "description": "ترخيص دبي لا يحل محل ترخيص البحرين، وقائمة الدول لا تعني صلاحية تقديم المنتج نفسه في كل مكان. الخندق الإقليمي يتكون من تراخيص متعددة وعلاقات مصرفية وقدرة على تشغيل نسخ محلية متوافقة."
+        }
+      ],
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "company_specific_lessons",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس مشتقة من التمويل والاستحواذ ومسار الترخيص والمنتجات وتباين المقاييس، وليست تصريحات حرفية من الشركة.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-04",
+        "SRC-13",
+        "SRC-03",
+        "SRC-06",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "CoinDCX Acquires MENA Region’s Crypto Leader BitOasis",
+          "publisher": "CoinDCX",
+          "source_type": "official_acquirer_announcement",
+          "url": "https://coindcx.com/blog/announcements/coindcx-acquires-mena-regions-crypto-leader-bitoasis/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "الاستثمار ثم الاستحواذ"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "MARKET NOTIFICATION: ALERT — BitOasis Technologies FZE",
+          "publisher": "Dubai Virtual Assets Regulatory Authority (VARA)",
+          "source_type": "official_regulatory_enforcement_notice",
+          "url": "https://www.vara.ae/en/regulations/regulatory-notices/market-alert-bitoasis-technologies-fze-bitoasis/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "التعثر التنظيمي"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "BitOasis Technologies FZE — Public Register",
+          "publisher": "Dubai Virtual Assets Regulatory Authority (VARA)",
+          "source_type": "official_regulator_public_register",
+          "url": "https://www.vara.ae/en/licenses-and-register/public-register/bitoasis-technologies-fze/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "الترخيص الكامل الحالي"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "CoinDCX's 7-Year Journey: 7 Milestones and Sailing Through the Tides of Progress",
+          "publisher": "CoinDCX",
+          "source_type": "official_parent_group_operating_metrics",
+          "url": "https://coindcx.com/blog/announcements/coindcxs-7-year-journey-7-milestones-and-sailing-through-the-tides-of-progress/",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "المقاييس التشغيلية المنفصلة"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "BitOasis Features",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_product_capabilities_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000033076-bitoasis-features",
+          "evidence_type": "supporting",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "سلم المنتجات"
+        }
+      ],
+      "limitations": "الدروس تحليل استراتيجي قابل للنقاش وليست نتائج سببية مدققة."
+    },
+    "$.tools": {
+      "field_value": [
+        "BitOasis Lite للشراء والبيع المبسط",
+        "BitOasis Pro بدفتر أوامر ونموذج رسوم Maker/Taker يعتمد على حجم التداول",
+        "دعم أكثر من 68 أصلًا مشفّرًا وفق صفحة الشركة المحدثة في مايو 2026",
+        "أكثر من 200 زوج تداول على Pro وفق صفحة الرسوم المحدثة في مايو 2026",
+        "إرسال واستقبال الأصول المشفّرة",
+        "حفظ أصول العملاء عبر ترتيبات محافظ وحفظ رقمية",
+        "عناوين إيداع ومحافظ تعتمد Fireblocks وBitGo وفق الشروط الحالية",
+        "تحويل الأصول المشفّرة إلى عملات ورقية مدعومة",
+        "إيداع وسحب مصرفي يختلف حسب الدولة والشريك المصرفي",
+        "خدمات VIP وOTC للأفراد ذوي الملاءة والمؤسسات",
+        "إجراءات KYC وCDD والتحقق من الهوية والأهلية",
+        "ترخيص VASP نشط من VARA لخدمات الوسيط-التاجر في دبي",
+        "ترخيص فئة 2 لخدمات الأصول المشفّرة في البحرين وفق إعلان الشركة",
+        "دعم العملاء الأفراد والمؤهلين والمؤسسات ضمن حدود الترخيص",
+        "لا توجد مصادر رسمية كافية لتأكيد AWS أو Node.js أو محركات تداول عالية التردد كحزمة تقنية داخلية حالية؛ لذلك أزيلت من قائمة التقنيات المؤكدة"
+      ],
+      "verification_status": "verified_current_product_capability",
+      "confidence": "high",
+      "claim_type": "current_capabilities_not_internal_tech_stack",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استُبدلت الحزمة التقنية غير الموثقة بقدرات المنتج والتراخيص والحفظ والتكاملات المذكورة في صفحات رسمية حديثة.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-16",
+        "SRC-18",
+        "SRC-21",
+        "SRC-03",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-16",
+          "title": "BitOasis Features",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_product_capabilities_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000033076-bitoasis-features",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "Lite وPro والإرسال والحفظ والتحويل وVIP وOTC"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Maker & Taker Fees on BitOasis Pro",
+          "publisher": "BitOasis Support",
+          "source_type": "official_current_trading_fee_model_updated_2026",
+          "url": "https://support.bitoasis.net/en/support/solutions/articles/29000047465-maker-taker-fees-on-pro",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "Maker/Taker و200+ زوج"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Broker-Dealer Services Terms & Conditions",
+          "publisher": "BitOasis",
+          "source_type": "official_current_legal_terms_and_service_scope",
+          "url": "https://blog.bitoasis.net/terms-of-service-en/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "Fireblocks وBitGo وKYC ونطاق الوسيط-التاجر"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "BitOasis Technologies FZE — Public Register",
+          "publisher": "Dubai Virtual Assets Regulatory Authority (VARA)",
+          "source_type": "official_regulator_public_register",
+          "url": "https://www.vara.ae/en/licenses-and-register/public-register/bitoasis-technologies-fze/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "ترخيص VARA الحالي"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "BitOasis Announces Expansion in GCC With New License and Office in Bahrain",
+          "publisher": "BitOasis",
+          "source_type": "official_bahrain_license_announcement",
+          "url": "https://blog.bitoasis.net/bitoasis-announces-expansion-in-gcc-with-new-license-and-office-in-bahrain/",
+          "evidence_type": "direct",
+          "source_locator": "Relevant official company, regulator, acquirer, product, funding, market-data, or legal section",
+          "supports": "الترخيص البحريني"
+        }
+      ],
+      "limitations": "لا تُعرض AWS أو Node.js أو محركات التداول كحقائق لأنها غير مثبتة بمصدر رسمي حديث."
+    }
+  }
 }

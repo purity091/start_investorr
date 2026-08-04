@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   Trophy,
@@ -26,6 +26,9 @@ interface HackathonIntroProps {
 }
 
 export const HackathonIntro: React.FC<HackathonIntroProps> = ({ onStart }) => {
+  const [hasAcceptedPledge, setHasAcceptedPledge] = useState(false);
+  const [showPledgeError, setShowPledgeError] = useState(false);
+
   const steps = [
     { day: 1, title: 'استخبارات السوق', icon: Target, desc: 'التحقق من الألم السوقي وحجم الفرصة الحقيقية.', color: '#3b82f6' },
     { day: 2, title: 'هندسة الحل', icon: Zap, desc: 'بناء القيمة المضافة والميزة التنافسية غير العادلة.', color: '#8b5cf6' },
@@ -178,7 +181,7 @@ export const HackathonIntro: React.FC<HackathonIntroProps> = ({ onStart }) => {
 
               <div className="max-w-xl mx-auto mb-12 bg-white/5 border border-white/10 rounded-3xl p-8 text-right backdrop-blur-md">
                 <h4 className="text-white font-black mb-4 flex items-center gap-2">
-                  <ShieldCheck size={20} className="text-indigo-400" /> ميثاق الالتزام (Founder's Pledge)
+                  <ShieldCheck size={20} className="text-indigo-400" /> ميثاق الالتزام (Founder&apos;s Pledge)
                 </h4>
                 <p className="text-slate-400 text-sm leading-relaxed mb-6 font-medium">
                   أتعهد بصفتي مؤسساً بالالتزام الكامل بالجدول الزمني للهاكثون، والبحث عن الحقيقة السوقية بصدق، وتنفيذ المهام بمعايير احترافية عالية، مع إدراكي أن الفكرة بلا تنفيذ هي مجرد وهم.
@@ -187,6 +190,11 @@ export const HackathonIntro: React.FC<HackathonIntroProps> = ({ onStart }) => {
                   <input
                     type="checkbox"
                     id="commitment-check"
+                    checked={hasAcceptedPledge}
+                    onChange={(event) => {
+                      setHasAcceptedPledge(event.target.checked);
+                      if (event.target.checked) setShowPledgeError(false);
+                    }}
                     className="w-6 h-6 rounded-lg bg-white/10 border-white/20 text-indigo-500 focus:ring-indigo-500 focus:ring-offset-slate-900"
                   />
                   <span className="text-white text-sm font-bold group-hover:text-indigo-300 transition-colors">أوافق على ميثاق الالتزام وأتعهد بالتنفيذ</span>
@@ -195,17 +203,21 @@ export const HackathonIntro: React.FC<HackathonIntroProps> = ({ onStart }) => {
 
               <button
                 onClick={() => {
-                  const check = document.getElementById('commitment-check') as HTMLInputElement;
-                  if (check?.checked) {
+                  if (hasAcceptedPledge) {
                     onStart();
                   } else {
-                    alert('يرجى الموافقة على ميثاق الالتزام قبل البدء.');
+                    setShowPledgeError(true);
                   }
                 }}
                 className="px-16 py-6 bg-white text-slate-900 rounded-2xl text-xl font-black shadow-2xl hover:bg-indigo-50 hover:scale-105 transition-all active:scale-95"
               >
                 ابدأ الهاكثون الآن
               </button>
+              {showPledgeError ? (
+                <p className="text-sm font-bold text-rose-200">
+                  يرجى الموافقة على ميثاق الالتزام قبل البدء.
+                </p>
+              ) : null}
             </div>
           </div>
         </div>

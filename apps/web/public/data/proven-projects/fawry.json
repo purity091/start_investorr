@@ -4,103 +4,1110 @@
   "name": "فوري (Fawry)",
   "domain": "fawry.com",
   "website": "https://fawry.com",
-  "category": "Fintech / المدفوعات",
-  "headline": "شبكة الدفع الإلكتروني الأكبر في مصر وتجربة الشمول المالي",
-  "summary": "منصة المدفوعات الإلكترونية الرائدة في مصر، تتيح للمستخدمين سداد الفواتير وتحويل الأموال عبر شبكة هائلة من نقاط البيع والمحافظ الرقمية.",
+  "category": "Fintech / المدفوعات والخدمات المالية الرقمية",
+  "headline": "كيف حوّلت فوري شبكة تحصيل نقدية إلى نظام تشغيل مالي يجمع المدفوعات والقبول والتمويل والتأمين",
+  "summary": "فوري شركة مصرية مدرجة في البورصة تبني شبكة هجينة تربط نقاط البيع والتطبيقات والبنوك والتجار ومقدمي الخدمات. تطورت من دفع الفواتير إلى منظومة تشمل قبول المدفوعات، الوكالة المصرفية، تمويل المشروعات والتمويل الاستهلاكي، البطاقات مسبقة الدفع، التأمين، الاستثمار والادخار، وحلول سلاسل الإمداد. أحدث النتائج المتاحة حتى 3 أغسطس 2026 هي نتائج الربع الأول المنتهي في 31 مارس 2026.",
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين من الدولارات",
-    "monthly_traffic": "10M+ /mo",
-    "revenue_per_visitor": "غير محدد",
-    "solopreneur_score": "10.0",
-    "idea_label": "شبكة مدفوعات إلكترونية وشمول مالي"
+    "as_of_date": "2026-08-03",
+    "monthly_revenue": null,
+    "monthly_revenue_note": "لا تفصح فوري عن MRR. متوسط إيراد 2025 المحسوب بقسمة الإيراد السنوي على 12 بلغ 720.96 مليون جنيه شهريًا، لكنه متوسط حسابي وليس إيرادًا متكررًا شهريًا أو نتيجة شهر بعينه.",
+    "average_monthly_revenue_calculated": {
+      "period": "FY2025",
+      "value_egp": 720956500,
+      "calculation": "8,651,478,000 / 12",
+      "metric_type": "calculated_average_not_MRR"
+    },
+    "latest_quarter_average_monthly_revenue_calculated": {
+      "period": "Q1 2026",
+      "value_egp": 803566666.6666666,
+      "calculation": "2,410,700,000 / 3",
+      "metric_type": "calculated_quarterly_average_not_MRR",
+      "note": "لا يعكس الموسمية ولا يُستخدم بدل MRR."
+    },
+    "monthly_traffic": null,
+    "monthly_traffic_note": "لا يوجد رقم رسمي حديث لزيارات الموقع. استخدام 10 ملايين زيارة شهريًا كان غير موثق، كما أن حركة الموقع لا تقيس المعاملات عبر نقاط البيع أو المحافظ أو تطبيق myFawry.",
+    "revenue_per_visitor": null,
+    "revenue_per_visitor_note": "غير قابل للحساب من دون مرور رسمي متزامن، كما أن زوار الموقع ليسوا وحدة الاستخدام الرئيسية لمنظومة فوري.",
+    "solopreneur_score": null,
+    "solopreneur_score_note": "درجة 10.0 كانت تصنيفًا خاصًا بدليل خارجي ولا تمثل مقياسًا ماليًا أو تشغيليًا للشركة.",
+    "latest_full_year": {
+      "period": "FY2025",
+      "audit_status": "audited",
+      "revenue_egp": 8651478000,
+      "ebitda_egp": 4968100000,
+      "net_profit_attributable_to_parent_egp": 2889200000,
+      "total_consolidated_net_profit_egp": 3100654415,
+      "throughput_value_egp": 943600000000,
+      "transactions": 2078000000,
+      "revenue_growth_yoy_percent": 57,
+      "throughput_growth_yoy_percent": 56.8,
+      "transaction_growth_yoy_percent": 7.7,
+      "ebitda_margin_percent": 57.4,
+      "net_profit_margin_attributable_percent": 33.4,
+      "note": "صافي الربح المنسوب للمساهمين يختلف عن إجمالي الربح المجمع بسبب حقوق الحصص غير المسيطرة."
+    },
+    "latest_quarter": {
+      "period": "Q1 2026",
+      "period_end": "2026-03-31",
+      "review_status": "reviewed",
+      "revenue_egp": 2410700000,
+      "ebitda_egp": 1351500000,
+      "net_profit_attributable_to_parent_egp": 749338000,
+      "total_consolidated_net_profit_egp": 792755706,
+      "non_controlling_interests_profit_egp_calculated": 43417706,
+      "throughput_value_egp": 253200000000,
+      "transactions": 516000000,
+      "revenue_growth_yoy_percent": 34.3,
+      "throughput_growth_yoy_percent": 34.3,
+      "transaction_growth_yoy_percent": 6.4,
+      "ebitda_margin_percent": 56.1,
+      "net_profit_margin_attributable_percent": 31.1
+    },
+    "operating_scale": {
+      "estimated_monthly_customer_base": {
+        "value": 54800000,
+        "as_of": "2026-04-29",
+        "metric_type": "company_estimated_monthly_users",
+        "note": "تقدير شركة لقاعدة المستخدمين الشهرية، وليس عدد حسابات myFawry النشطة أو العملاء الدافعين."
+      },
+      "daily_transactions_marketing_claim": {
+        "value": 6000000,
+        "operator": ">",
+        "metric_type": "company_marketing_claim",
+        "note": "يتجاوز المتوسط الحسابي لمعاملات FY2025 البالغ نحو 5.69 ملايين يوميًا؛ قد يعكس وتيرة أحدث أو تقريبًا أو اختلافًا في النطاق."
+      },
+      "fy2025_average_daily_transactions_calculated": {
+        "value": 5693150.684931506,
+        "metric_type": "calculated_average",
+        "calculation": "2,078,000,000 / 365"
+      },
+      "q1_2026_average_daily_transactions_calculated": {
+        "value": 5733333.333333333,
+        "metric_type": "calculated_average",
+        "calculation": "516,000,000 / 90"
+      },
+      "retail_pos_terminals_fy2025": 377000,
+      "acceptance_enabled_pos_fy2025": 354000,
+      "myfawry_downloads_fy2025": 24200000,
+      "myfawry_downloads_q1_2026": 26200000,
+      "prepaid_cards_issued_fy2025": 2700000,
+      "prepaid_cards_issued_q1_2026": 3200000,
+      "member_banks": 36,
+      "note": "التنزيلات ليست مستخدمين نشطين، والبطاقات الصادرة ليست بطاقات نشطة أو أرصدة."
+    },
+    "market_cap_snapshot": {
+      "value_egp": 64450000000,
+      "as_of": "2026-07-27",
+      "share_price_egp": 18.92,
+      "source_type": "third_party_market_data",
+      "metric_type": "market_capitalization",
+      "note": "القيمة السوقية تتغير يوميًا، وهي سعر السهم مضروبًا في الأسهم القائمة؛ ليست تقييم جولة تمويل ولا إيرادًا."
+    }
   },
   "company": {
-    "business_model": "عمولات على العمليات المالية والخدمات المصرفية المفتوحة (B2B & B2C)",
-    "customer_type": "الأفراد، الشركات، القطاع الحكومي، والبنوك",
+    "legal_name": "فوري لتكنولوجيا البنوك والمدفوعات الإلكترونية ش.م.م.",
+    "english_legal_name": "Fawry for Banking Technology and Electronic Payments S.A.E.",
+    "founded_year": 2008,
     "founder": "أشرف صبري",
-    "founder_role": "مؤسس ومدير تنفيذي",
-    "founders_count": "1 (مع فريق تأسيسي)",
-    "employees": "أكثر من 1000 موظف",
-    "started": "2008",
-    "location": "القاهرة، مصر",
-    "funding": "استثمارات ضخمة، وتم طرحها في البورصة المصرية (EGX)",
-    "profitability": "مربحة وذات تدفقات نقدية قوية",
-    "public_revenue_claim": "تنفذ ملايين العمليات يومياً بمليارات الجنيهات"
+    "founder_role": "المؤسس والرئيس التنفيذي والعضو المنتدب",
+    "founders_count": "أشرف صبري هو المؤسس المعلن؛ شارك فريق تنفيذي واستثماري في البناء المبكر، لكن لم تعتمد المصادر الرسمية قائمة مؤسسين إضافية.",
+    "employees": null,
+    "employees_note": "لم يُعثر على عدد موظفين حديث ومدقق في المصادر المستخدمة؛ حُذف وصف أكثر من 1000 موظف من اللقطة الحالية.",
+    "location": "القرية الذكية، الجيزة، مصر",
+    "headquarters_address": "Building 221 – F12 – Financial District – Smart Village, Egypt",
+    "public_company": true,
+    "exchange": "البورصة المصرية EGX",
+    "ticker": "FWRY",
+    "reuters_code": "FWRY.CA",
+    "isin": "EGS745L1C014",
+    "listed_since": "2019-08-08",
+    "sec_filings_available": false,
+    "disclosure_regime": "إفصاحات البورصة المصرية والهيئة العامة للرقابة المالية والقوائم وفق المعايير المصرية للمحاسبة، وليست ملفات SEC أمريكية.",
+    "business_model": "منظومة متعددة القطاعات تحقق الإيراد من رسوم وعمولات خدمات الدفع والتحصيل والقبول والوكالة المصرفية، وإيرادات التمويل متناهي الصغر وتمويل المشروعات والتمويل الاستهلاكي، ووساطة ومنتجات التأمين والبطاقات والاستثمار، إضافة إلى حلول سلاسل الإمداد والخدمات التقنية. لا يصح وصف النموذج بأنه «خدمات مصرفية مفتوحة» فقط.",
+    "customer_type": [
+      "الأفراد المتعاملون وغير المتعاملين مع البنوك",
+      "التجار ونقاط البيع",
+      "الشركات الصغيرة والمتوسطة",
+      "الشركات الكبرى ومقدمو الفواتير",
+      "البنوك والمؤسسات المالية",
+      "الجهات الحكومية",
+      "شركات التجارة الإلكترونية وسلاسل الإمداد"
+    ],
+    "subsidiaries_and_business_lines": [
+      "Fawry Plus للوكالة المصرفية والفروع",
+      "Fawry Accept لقبول المدفوعات",
+      "Fawry MSME / Microfinance للتمويل",
+      "Fawry Consumer Finance للتمويل الاستهلاكي وBNPL",
+      "Fawry Insurance Brokerage ومنتجات التأمين",
+      "Treemed TPA / Fawry Healthcare",
+      "Fawry FMCG وحلول سلاسل الإمداد",
+      "myFawry وYellow Card",
+      "Fawry Yawmy للاستثمار والادخار",
+      "Fawry Business للحلول المؤسسية"
+    ]
   },
   "problem_and_product": [
-    "في 2008، كان أغلب سكان مصر غير متعاملين مع البنوك (Unbanked)، وكان دفع فواتير الخدمات يدوياً يتطلب الوقوف في طوابير طويلة.",
-    "قدمت فوري حلاً مبتكراً بربط نقاط البيع في البقالات والصيدليات بشبكة دفع مركزية تتيح للعميل دفع فواتيره نقداً للبائع، وتتم التسوية إلكترونياً."
+    "بدأت فوري بحل مشكلة سداد الفواتير في اقتصاد يعتمد على النقد، حيث كانت الرحلة إلى فرع مقدم الخدمة والطوابير والتسوية اليدوية ترفع تكلفة الدفع على المستهلك والشركة.",
+    "بدل مطالبة المستخدم بامتلاك حساب مصرفي أو هاتف ذكي، حولت البقالات والصيدليات والمنافذ إلى نقاط وصول مالية مرتبطة بشبكة مركزية.",
+    "أضافت لاحقًا القبول الإلكتروني والتطبيق والبطاقات والتمويل والتأمين والاستثمار، فانتقلت من تمرير معاملة واحدة إلى إدارة علاقة مالية أوسع مع العميل والتاجر.",
+    "تستخدم شبكة المعاملات والتجار لتوزيع منتجات مالية أعلى قيمة، لكن محافظ القروض والبطاقات والمستخدمين تظل مقاييس مختلفة عن الإيراد وقيمة المدفوعات."
   ],
   "origin_story": [
-    "أدرك أشرف صبري بحكم خبرته التقنية في القطاع المصرفي ضرورة بناء بنية تحتية رقمية تدمج الخدمات الحكومية وشركات الاتصالات.",
-    "أقنع البنوك وشركات الاتصالات بالدخول كشركاء/مستثمرين منذ البداية لضمان الثقة والسيولة التشغيلية."
+    "أسس أشرف صبري فوري عام 2008 بعد خبرة في التكنولوجيا والخدمات المالية وإدارة راية.",
+    "كانت الفكرة بناء بوابة موحدة تربط مقدمي الفواتير والبنوك وقنوات التجزئة، بما يسمح للعميل بالدفع نقدًا محليًا مع تسوية المعاملة إلكترونيًا.",
+    "وصلت الشبكة إلى نحو 5,000 جهاز نقطة بيع بحلول 2010، ثم توسعت إلى قنوات البنوك وأجهزة الصراف والإنترنت والمحافظ والتطبيقات.",
+    "في 2015 استحوذ تحالف مستثمرين على حصة أغلبية في صفقة قيّمت الشركة بنحو 773 مليون جنيه، أي قرابة 100 مليون دولار؛ كانت صفقة ملكية ثانوية وليست إيرادًا.",
+    "أُدرجت فوري في البورصة المصرية وبدأ تداول السهم في 8 أغسطس 2019."
   ],
   "build_and_launch": [
-    "بدأت بشبكة أجهزة POS موزعة على المحلات، مع ربط تقني معكب (Integration) مع الأنظمة الحكومية والشركات.",
-    "أطلقت لاحقاً تطبيق الهاتف (myFawry) لتسهيل الدفع بالبطاقات البنكية دون وسيط مادي.",
-    "توسعت لتوفير القروض متناهية الصغر، وخدمات التوصيل (Fawry FMCG)."
+    "بدأت الشركة ببناء تكاملات مع شركات الاتصالات والمرافق والبنوك ومقدمي الخدمات قبل أن تصبح الشبكة مفيدة للمستهلك.",
+    "استخدمت أجهزة POS لدى التجار كطبقة وصول وتحصيل بدل بناء شبكة فروع مكلفة من الصفر.",
+    "دعمت معاملة نقدية في الواجهة وتسوية رقمية في الخلفية، ما خفض حاجز التبني في سوق نقدي.",
+    "أضافت myFawry والقبول عبر الإنترنت والبطاقات لتوسيع الاستخدام خارج نقطة البيع المادية.",
+    "استثمرت في شركات ووحدات مالية ولوجستية لتوسيع الإيراد من المعاملة إلى التمويل والتأمين وسلاسل الإمداد."
   ],
   "costs_and_operations": [
-    "بنية تحتية تقنية قوية جداً ونظام أمان وتشفير لضمان عدم اختراق المعاملات المالية.",
-    "فريق مبيعات ودعم فني ضخم لإدارة مئات الآلاف من نقاط البيع وتزويدهم بالرولات والدعم."
+    "تشغيل وصيانة شبكة مئات الآلاف من نقاط البيع والفروع والتكاملات مع البنوك ومقدمي الخدمات.",
+    "تكاليف البنية التقنية والأمن السيبراني والامتثال والتسوية والمصالحة المالية.",
+    "رأس المال والتمويل اللازمان لمحافظ القروض والتمويل الاستهلاكي ومتطلبات المخصصات والخسائر الائتمانية.",
+    "تكلفة خدمة النقد عبر الوكلاء والفروع ونقل السيولة ودعم التجار.",
+    "متطلبات تراخيص متعددة من البنك المركزي والهيئة العامة للرقابة المالية والجهات المنظمة للتأمين.",
+    "تكاليف اكتساب المستخدم وتفعيل البطاقات والتطبيق لا تُقاس بعدد التنزيلات وحده."
   ],
   "monetization": [
-    "عمولة ثابتة أو نسبة على كل معاملة دفع (يتحملها المستهلك أو المزود).",
-    "رسوم إعداد وربط للشركات التي تدرج خدماتها في شبكة فوري.",
-    "فوائد وعوائد من خدمات التمويل والإقراض للشركات متناهية الصغر."
+    {
+      "stream": "الخدمات المصرفية",
+      "components": [
+        "الوكالة المصرفية",
+        "قبول المدفوعات"
+      ],
+      "fy2025_revenue_egp": 3514670000,
+      "fy2025_share_percent": 40.6,
+      "q1_2026_revenue_egp": 924100000,
+      "q1_2026_share_percent": 38.3,
+      "note": "تشمل رسوم وعمولات مرتبطة بالخدمات والمعاملات، لكن throughput ليس إيرادًا."
+    },
+    {
+      "stream": "الخدمات المالية",
+      "components": [
+        "تمويل MSME",
+        "التمويل متناهي الصغر",
+        "التمويل الاستهلاكي وBNPL",
+        "وساطة التأمين",
+        "البطاقات مسبقة الدفع",
+        "صندوق سوق النقد"
+      ],
+      "fy2025_revenue_egp": 2382000000,
+      "fy2025_share_percent": 27.5,
+      "q1_2026_revenue_egp": 800500000,
+      "q1_2026_share_percent": 33.2,
+      "note": "تشمل فوائد وعوائد ورسومًا تختلف محاسبيًا عن عمولات الدفع."
+    },
+    {
+      "stream": "المدفوعات الرقمية البديلة ADP",
+      "fy2025_revenue_egp": 2008300000,
+      "fy2025_share_percent": 23.2,
+      "q1_2026_revenue_egp": 472400000,
+      "q1_2026_share_percent": 19.6
+    },
+    {
+      "stream": "حلول سلاسل الإمداد",
+      "fy2025_revenue_egp": 496100000,
+      "fy2025_share_percent": 5.7,
+      "q1_2026_revenue_egp": 145000000,
+      "q1_2026_share_percent": 6
+    },
+    {
+      "stream": "التكنولوجيا وأعمال أخرى",
+      "fy2025_revenue_egp_calculated_residual": 250408000,
+      "fy2025_share_percent_reported": 2.9,
+      "note": "القيمة المتبقية محسوبة من إجمالي الإيراد والأرقام المنشورة للقطاعات؛ النسب قد لا تتطابق تمامًا بسبب التقريب وإعادة التصنيف."
+    }
   ],
   "growth": [
-    "الطرح العام الأولي (IPO) في البورصة المصرية عام 2019 حيث تمت تغطية الاكتتاب بمرات مضاعفة.",
-    "وصول قيمتها السوقية لمستويات مليارية، وتعتبر من أقوى قصص النجاح في الشمول المالي الإقليمي."
+    "نمت إيرادات 2025 بنسبة 57% إلى 8.65 مليارات جنيه، بينما نمت قيمة المدفوعات 56.8% إلى 943.6 مليار جنيه.",
+    "زاد عدد المعاملات 7.7% فقط في 2025، ما يشير إلى نمو قيمة المعاملة والمزيج والخدمات أعلى من نمو عدد العمليات.",
+    "ارتفعت حصة الخدمات المالية من الإيراد إلى 27.5% في 2025 ثم 33.2% في Q1 2026، ما يقلل الاعتماد النسبي على المدفوعات الرقمية البديلة.",
+    "بلغت قيمة المعاملات عبر المحافظ 835 مليار جنيه في 2025، بينما بلغت 393 مليون معاملة؛ هذه قيمة تدفقات وليست إيرادًا.",
+    "ارتفعت تنزيلات myFawry إلى 26.2 مليون والبطاقات الصادرة إلى 3.2 ملايين في Q1 2026، لكن الشركة لم تفصح عن MAU للتطبيق أو نسبة البطاقات النشطة.",
+    "حصلت فوري في 2026 على رخصة تأمين متناهي الصغر ورخصة TPA عبر Treemed لإطلاق Fawry Healthcare.",
+    "حصل نشاط تمويل المشروعات على تسهيل 250 مليون جنيه من EBRD وتسهيل 550 مليون جنيه من MSMEDA؛ هذه مصادر تمويل للمحفظة وليست إيرادات."
   ],
   "tools": [
-    "Java / Enterprise Backend",
-    "Oracle",
-    "Secure Payment Gateways",
-    "Microservices",
-    "Hardware POS integration"
+    "شبكة POS ووكلاء وفروع Fawry Plus",
+    "myFawry App",
+    "FawryPay reference codes",
+    "بوابات قبول المدفوعات للتجارة الإلكترونية",
+    "الوكالة المصرفية وCash-In/Cash-Out",
+    "المحافظ الرقمية",
+    "Yellow Card والبطاقات مسبقة الدفع",
+    "تمويل MSME والتمويل متناهي الصغر",
+    "التمويل الاستهلاكي وBNPL",
+    "وساطة التأمين والتأمين متناهي الصغر",
+    "Fawry Healthcare وTPA",
+    "Fawry Yawmy للاستثمار والادخار",
+    "Fawry FMCG وحلول الطلب والتحصيل وسلاسل الإمداد",
+    "Payout Portal وFawry Business",
+    "تكاملات API ولوحات التقارير والمصالحة",
+    "PCI DSS 4.0 وفق موقع الشركة"
   ],
   "revenue_timeline": [
     {
-      "date": "2008",
-      "amount": "التأسيس",
-      "type": "الفكرة",
-      "note": "تطوير الفكرة وإقناع الشركاء الاستراتيجيين."
+      "date": "2015-11",
+      "amount": "EGP 773M / نحو USD 100M",
+      "type": "تقييم صفقة استحواذ على حصة أغلبية",
+      "note": "يمثل قيمة الشركة في صفقة ملكية تاريخية، وليس إيرادًا أو تمويلًا تشغيليًا جديدًا بالضرورة."
     },
     {
-      "date": "2015",
-      "amount": "استحواذ جزئي",
-      "type": "استثمار",
-      "note": "تحالف دولي يستحوذ على حصة أغلبية بحوالي 100 مليون دولار."
+      "date": "2019-08-08",
+      "amount": "EGP 6.46 للسهم؛ عرض 36% من رأس المال بقيمة تقارب EGP 1.6B",
+      "type": "طرح وإدراج",
+      "note": "قيمة عرض أسهم من مساهمين وليست إيرادًا. بدأ التداول في البورصة المصرية."
     },
     {
-      "date": "2019",
-      "amount": "IPO",
-      "type": "إدراج",
-      "note": "طرح عام ناجح جداً في البورصة المصرية."
+      "date": "2024",
+      "amount": "EGP 5.511B revenue",
+      "type": "إيراد سنوي مجمع",
+      "note": "رقم المقارنة المدقق لنتائج 2025."
+    },
+    {
+      "date": "2025",
+      "amount": "EGP 8.651B revenue / EGP 943.6B throughput",
+      "type": "نتائج سنوية مدققة",
+      "note": "الإيراد وقيمة المدفوعات مقياسان منفصلان."
+    },
+    {
+      "date": "2026-Q1",
+      "amount": "EGP 2.411B revenue / EGP 253.2B throughput",
+      "type": "نتائج ربع سنوية مراجعة",
+      "note": "أحدث نتائج منشورة حتى 3 أغسطس 2026."
     }
   ],
+  "financials": {
+    "currency": "EGP",
+    "latest_full_year": {
+      "period": "FY2025",
+      "revenue_egp": 8651478000,
+      "gross_profit_egp": 5959800000,
+      "ebitda_egp": 4968100000,
+      "net_profit_attributable_to_parent_egp": 2889200000,
+      "total_consolidated_net_profit_egp": 3100654415,
+      "throughput_value_egp": 943600000000,
+      "transactions": 2078000000
+    },
+    "latest_quarter": {
+      "period": "Q1 2026",
+      "revenue_egp": 2410700000,
+      "ebitda_egp": 1351500000,
+      "net_profit_attributable_to_parent_egp": 749338000,
+      "total_consolidated_net_profit_egp": 792755706,
+      "throughput_value_egp": 253200000000,
+      "transactions": 516000000,
+      "gross_loan_portfolio_egp": 6185000000,
+      "msme_and_microfinance_portfolio_egp": 3144000000,
+      "consumer_finance_portfolio_egp": 3041000000
+    },
+    "market_capitalization": {
+      "value_egp": 64450000000,
+      "as_of": "2026-07-27",
+      "dynamic": true,
+      "note": "بيانات سوق خارجية متأخرة؛ ليست تقييمًا ثابتًا."
+    },
+    "historical_private_valuation": {
+      "value_egp": 773000000,
+      "value_usd_approx": 100000000,
+      "as_of": "2015-11",
+      "transaction": "استحواذ تحالف على حصة أغلبية"
+    },
+    "financing_and_debt_events": [
+      {
+        "date": "2025",
+        "instrument": "أول إصدار سندات توريق",
+        "amount_egp": 497500000,
+        "status": "company_announced",
+        "note": "أداة تمويل وليست إيرادًا."
+      },
+      {
+        "date": "2026",
+        "instrument": "تسهيل EBRD لنشاط Fawry MSME Finance",
+        "amount_egp": 250000000,
+        "status": "company_announced",
+        "note": "تمويل لدعم نمو مشروعات يقودها الشباب."
+      },
+      {
+        "date": "2026-07-19",
+        "instrument": "تسهيل من MSMEDA",
+        "amount_egp": 550000000,
+        "status": "EGX disclosed",
+        "note": "تمويل للمشروعات الصغيرة والمتوسطة ومتناهية الصغر، وليس إيرادًا."
+      }
+    ],
+    "revenue_to_throughput_ratio": {
+      "fy2025_percent_calculated": 0.9168586265366682,
+      "q1_2026_percent_calculated": 0.9520932069510268,
+      "note": "نسبة حسابية وليست take rate محاسبية؛ الإيراد يشمل خدمات مالية وتمويلية، بينما throughput يمثل قيمة تدفقات محددة."
+    },
+    "undisclosed_or_not_applicable": [
+      "MRR وARR",
+      "إيراد شهري فعلي",
+      "زيارات الموقع الرسمية",
+      "MAU وDAU لتطبيق myFawry",
+      "عدد العملاء الدافعين",
+      "نسبة البطاقات النشطة",
+      "القيمة السوقية الدقيقة في 3 أغسطس 2026",
+      "قيمة الإيراد الناتج عن كل مستخدم شهري",
+      "الحزمة التقنية الداخلية الكاملة"
+    ]
+  },
+  "analysis": {
+    "core_thesis": "فوري لا تبيع وسيلة دفع واحدة؛ تملك شبكة توزيع وثقة وتسوية يمكن إعادة استخدامها لإطلاق خدمات مالية متعددة. كل نقطة بيع أو تطبيق أو تكامل بنكي يمثل قناة لاكتساب معاملة، ثم فرصة لبيع قبول أو تمويل أو بطاقة أو تأمين أو استثمار.",
+    "business_model_evolution": "بدأت الشركة كبنية لتحصيل الفواتير، ثم بنت القبول والوكالة المصرفية والتطبيق. بعد ذلك استثمرت في التمويل والتأمين والبطاقات وسلاسل الإمداد. نتائج 2025 وQ1 2026 تظهر أن الخدمات المالية أصبحت محركًا رئيسيًا للإيراد بدل الاعتماد على ADP وحده.",
+    "network_effect": [
+      "زيادة مقدمي الخدمات تجعل الشبكة أكثر فائدة للمستهلك والتاجر.",
+      "زيادة التجار ترفع التغطية الجغرافية وقدرة cash-in/cash-out والتحصيل.",
+      "المعاملات المتكررة تولد بيانات تساعد في تقييم مخاطر تمويل التاجر.",
+      "إضافة التمويل والبطاقات والتأمين تزيد قيمة كل علاقة دون بناء قناة توزيع جديدة.",
+      "تكامل 36 بنكًا وشبكة نقاط واسعة يرفع تكلفة بناء بديل مماثل."
+    ],
+    "defensibility": [
+      "كثافة نقاط الوصول المادية والرقمية.",
+      "تكاملات مع البنوك ومقدمي الخدمات والجهات الحكومية.",
+      "علامة موثوقة لدى المستهلك في المدفوعات النقدية والرقمية.",
+      "بيانات تشغيل تاريخية عن التجار والمعاملات.",
+      "تراخيص متعددة في الدفع والتمويل والتأمين.",
+      "قدرة على الجمع بين التوزيع والائتمان والقبول والتسوية."
+    ],
+    "key_risks": [
+      "مخاطر الائتمان مع نمو محافظ MSME وBNPL.",
+      "الاعتماد على التنظيم والتراخيص في المدفوعات والتمويل والتأمين.",
+      "الأمن السيبراني والاحتيال وتعطل الشبكة.",
+      "تكلفة النقد والوكلاء والتسوية مقارنة بالقنوات الرقمية.",
+      "المنافسة من البنوك والمحافظ وشركات القبول والتمويل.",
+      "مخاطر السيولة والتمويل عند توسيع القروض.",
+      "تضخم عدد التنزيلات أو البطاقات دون نشاط متكرر فعلي.",
+      "تقلب سعر السهم والقيمة السوقية بعيدًا عن الأداء التشغيلي قصير الأجل."
+    ],
+    "metric_reading": "إيراد 8.65 مليارات جنيه لا يساوي throughput البالغ 943.6 مليارًا. المعاملات البالغة 2.078 مليار لا تساوي المستخدمين البالغ تقديرهم 54.8 مليونًا. تنزيلات myFawry لا تساوي MAU، والبطاقات الصادرة لا تساوي البطاقات النشطة. القيمة السوقية ليست إيرادًا ولا تقييمًا ثابتًا.",
+    "profit_interpretation": "إجمالي الربح المجمع يشمل حصة غير مسيطرة، بينما صافي الربح المنسوب لمساهمي الشركة الأم أقل. يجب تحديد أي رقم يُستخدم بدل نشر «صافي الربح» بلا تعريف.",
+    "strategic_interpretation": "أهم تحول في فوري هو انتقال مركز النمو من رسوم المدفوعات منخفضة العائد نسبيًا إلى خدمات مالية أعلى قيمة. هذا يزيد الإيراد لكل علاقة، لكنه يضيف مخاطر ائتمان وتمويل وتنظيم لم تكن جوهر نموذج تحصيل الفواتير."
+  },
   "lessons": [
-    "فهم الواقع المحلي: الاعتماد على (النقد / الكاش) ودمجه بالتقنية بدلاً من محاربته كان سر القبول الشعبي الواسع.",
-    "تأثير الشبكة القوي (Network Effect): كلما زاد عدد مقدمي الخدمات، زاد المستخدمون، مما جذب التجار لنقاط البيع، وهكذا.",
-    "B2B2C: خدمة المستهلك عن طريق منافذ التجزئة (البقالة) كانت حركة ذكية للانتشار بدون الحاجة لإنشاء فروع خاصة."
+    {
+      "title": "كيّف التقنية مع سلوك السوق بدل انتظار تغيره",
+      "description": "فوري لم تبدأ بمحاربة النقد؛ جعلت النقد مدخلًا إلى شبكة رقمية. هذا خلق تبنيًا قبل انتشار الحسابات والتطبيقات المالية."
+    },
+    {
+      "title": "التوزيع يمكن أن يصبح منتجًا ماليًا",
+      "description": "شبكة التجار لم تعد فقط قناة دفع، بل أصبحت قناة لتمويل التاجر وبيع التأمين والبطاقات والخدمات المؤسسية."
+    },
+    {
+      "title": "لا تخلط قيمة التدفقات مع إيراد المنصة",
+      "description": "مرور 943.6 مليار جنيه عبر الشبكة لا يعني أن فوري حققت هذا المبلغ. الإيراد هو الرسوم والفوائد والعوائد المعترف بها محاسبيًا."
+    },
+    {
+      "title": "نمو القيمة أسرع من العدد قد يكشف تحسن المزيج",
+      "description": "في 2025 نمت قيمة المدفوعات 56.8% بينما نمت المعاملات 7.7%. هذا يعني أن قراءة الحجم وحده تفوّت أثر قيمة العملية والمزيج والمنتجات."
+    },
+    {
+      "title": "تنويع الإيراد يغير المخاطر أيضًا",
+      "description": "التمويل والتأمين يرفعان قيمة العميل ويقللان الاعتماد على رسوم الدفع، لكنهما يجلبان مخاطر ائتمان ومخصصات ورأس مال وتنظيم."
+    },
+    {
+      "title": "رقم المستخدم يحتاج تعريفًا قبل الاحتفال به",
+      "description": "قاعدة شهرية مقدرة وتنزيلات التطبيق والبطاقات الصادرة ثلاث وحدات مختلفة. القرار الجيد يحتاج MAU والنشاط والتكرار لا الرقم الأكبر."
+    },
+    {
+      "title": "الطرح والتقييم والتمويل أحداث مختلفة",
+      "description": "صفقة 2015 قيّمت الشركة، وطرح 2019 نقل ملكية أسهم، والتسهيلات تمول محافظ القروض. لا يمثل أي منها إيراد التشغيل."
+    },
+    {
+      "title": "الشبكة تصبح أقوى عندما تتضاعف حالات الاستخدام",
+      "description": "الفاتورة تجلب العميل، والقبول يبقي التاجر، والتمويل يزيد قيمة العلاقة، والتأمين والاستثمار يضيفان أسبابًا للعودة."
+    }
   ],
   "sources": [
     {
-      "label": "موقع فوري",
-      "url": "https://fawry.com",
-      "coverage": "معلومات الشركة وخدماتها"
+      "id": "S01",
+      "title": "Financials and Earnings Releases",
+      "publisher": "Fawry",
+      "url": "https://www.fawry.com/financials-and-earning-releases/",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_investor_relations",
+      "coverage": "قوائم ونتائج 2025 وQ1 2026"
+    },
+    {
+      "id": "S02",
+      "title": "Disclosures",
+      "publisher": "Fawry / Egyptian Exchange disclosures",
+      "url": "https://www.fawry.com/investor-relations/disclosures/",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_regulatory_disclosure",
+      "coverage": "صافي الربح المجمع والمستقل، الإدراج، التسهيلات والتراخيص"
+    },
+    {
+      "id": "S03",
+      "title": "Fawry releases FY2025 results",
+      "publisher": "Fawry press release syndicated by Zawya/Reuters via TradingView",
+      "url": "https://www.tradingview.com/news/reuters.com%2C2026-03-05%3Anewsml_Zawc8qH7q%3A0-zawya-fawry-releases-fy2025-results/",
+      "published_date": "2026-03-05",
+      "accessed_date": "2026-08-03",
+      "source_type": "company_earnings_release_syndication",
+      "coverage": "إيرادات 2025، EBITDA، الأرباح، القطاعات، throughput، المعاملات، POS، التطبيق والبطاقات"
+    },
+    {
+      "id": "S04",
+      "title": "Fawry Q1 2026 results",
+      "publisher": "Fawry IR Director / LinkedIn",
+      "url": "https://www.linkedin.com/posts/hassan-abdelgelil-cfa-78a57063_fawry-earnings-release-1q-2026-ugcPost-7461742375456083968-4CqM",
+      "published_date": "2026-05-17",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_executive_release",
+      "coverage": "إيراد وEBITDA وربح Q1 2026"
+    },
+    {
+      "id": "S05",
+      "title": "Fawry posts strong Q1 2026 growth",
+      "publisher": "Businessmen EG",
+      "url": "https://www.businessmen-eg.com/en/5088/fawry-posts-strong-q1-2026-growth-driven-by-digital-expansion",
+      "published_date": "2026-05-17",
+      "accessed_date": "2026-08-03",
+      "source_type": "secondary_reporting_from_company_release",
+      "coverage": "مؤشرات Q1 2026 التشغيلية والقطاعات والمحافظ والتنزيلات والبطاقات"
+    },
+    {
+      "id": "S06",
+      "title": "Fawry Q1 2026 consolidated filing summary",
+      "publisher": "Arab Finance",
+      "url": "https://www.arabfinance.com/en/news/newdetails/fawry-consolidated-profits-soar-in-q1-2026",
+      "published_date": "2026-05-17",
+      "accessed_date": "2026-08-03",
+      "source_type": "financial_media_based_on_filing",
+      "coverage": "الإيراد المجمع والمستقل والربح المنسوب للمساهمين"
+    },
+    {
+      "id": "S07",
+      "title": "Who We Are",
+      "publisher": "Fawry",
+      "url": "https://www.fawry.com/about/who-we-are/",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "coverage": "التأسيس والقصة ونقاط البيع المبكرة"
+    },
+    {
+      "id": "S08",
+      "title": "Ashraf Sabry",
+      "publisher": "Fawry",
+      "url": "https://www.fawry.com/ashraf-sabry/",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "coverage": "المؤسس ودوره الحالي"
+    },
+    {
+      "id": "S09",
+      "title": "What We Do",
+      "publisher": "Fawry",
+      "url": "https://www.fawry.com/about/what-we-do/",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_product",
+      "coverage": "الشركات التابعة والخدمات"
+    },
+    {
+      "id": "S10",
+      "title": "Fawry introduces instant loan installment payment",
+      "publisher": "Fawry",
+      "url": "https://www.fawry.com/2026/04/29/fawry-introduces-instant-loan-installment-payment-service-for-banque-misr-customers-across-its-nationwide-network/",
+      "published_date": "2026-04-29",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "coverage": "36 بنكًا، 377 ألف وكيل، 6 ملايين+ معاملة يومية، 54.8 مليون مستخدم شهريًا"
+    },
+    {
+      "id": "S11",
+      "title": "Press Releases",
+      "publisher": "Fawry",
+      "url": "https://www.fawry.com/investor-relations/press-releases/",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_investor_relations",
+      "coverage": "رخص التأمين وTPA وتمويل EBRD وMSMEDA والتوريق"
+    },
+    {
+      "id": "S12",
+      "title": "Fawry listing announcement",
+      "publisher": "Fawry / Egyptian Exchange",
+      "url": "https://www.fawry.com/ar/disclosures/",
+      "published_date": "2019-07-22",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_regulatory_disclosure",
+      "coverage": "قيد الأسهم وISIN ورأس المال عند الإدراج"
+    },
+    {
+      "id": "S13",
+      "title": "Trading of Fawry shares to start on 8 August at EGP 6.46",
+      "publisher": "Daily News Egypt",
+      "url": "https://www.dailynewsegypt.com/2019/07/28/trading-of-fawry-shares-on-egx-to-start-on-8-august-at-egp-6-46/",
+      "published_date": "2019-07-28",
+      "accessed_date": "2026-08-03",
+      "source_type": "reputable_media",
+      "coverage": "سعر الطرح ونسبة الأسهم وتاريخ بدء التداول"
+    },
+    {
+      "id": "S14",
+      "title": "Fawry investment history",
+      "publisher": "Helios Investment Partners",
+      "url": "https://www.heliosinvestment.com/investments/fawry",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "investor_primary",
+      "coverage": "صفقة الأغلبية بقيمة قرابة 100 مليون دولار عام 2015"
+    },
+    {
+      "id": "S15",
+      "title": "Helios invests in Fawry",
+      "publisher": "Helios Investment Partners",
+      "url": "https://www.heliosinvestment.com/news/helios-invests-in-fawry-egypt-s-leading-electronic-bill-presentment-and-payment-platform",
+      "published_date": "2015-11-12",
+      "accessed_date": "2026-08-03",
+      "source_type": "investor_primary",
+      "coverage": "تقييم 773 مليون جنيه وصفقة الحصة الأغلبية"
+    },
+    {
+      "id": "S16",
+      "title": "Fawry market capitalization",
+      "publisher": "Mansa Markets",
+      "url": "https://www.mansamarkets.com/egypt/fwry",
+      "published_date": "2026-07-27",
+      "accessed_date": "2026-08-03",
+      "source_type": "market_data_secondary",
+      "coverage": "سعر السهم والقيمة السوقية الديناميكية"
+    },
+    {
+      "id": "S17",
+      "title": "Investor Relations share price",
+      "publisher": "Fawry",
+      "url": "https://www.fawry.com/ar/investor-relations-2/",
+      "published_date": "2026-07-27",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_market_widget",
+      "coverage": "آخر سعر ظاهر رسميًا في صفحة علاقات المستثمرين"
+    },
+    {
+      "id": "S18",
+      "title": "Contact Us",
+      "publisher": "Fawry",
+      "url": "https://www.fawry.com/contact-us/",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "coverage": "عنوان المقر"
+    },
+    {
+      "id": "S19",
+      "title": "Fawry Banking Services Q1 2026",
+      "publisher": "Techno Time",
+      "url": "https://www.technotime.net/14116",
+      "published_date": "2026-05-17",
+      "accessed_date": "2026-08-03",
+      "source_type": "secondary_reporting_from_company_release",
+      "coverage": "إيراد الخدمات المصرفية وthroughput الخاص بها"
+    },
+    {
+      "id": "S20",
+      "title": "Fawry Financial Services Q1 2026",
+      "publisher": "Business Tech News",
+      "url": "https://www.businesstec.news/22462",
+      "published_date": "2026-05-17",
+      "accessed_date": "2026-08-03",
+      "source_type": "secondary_reporting_from_company_release",
+      "coverage": "إيراد الخدمات المالية ومحافظ القروض"
     }
   ],
   "data_quality": [
-    "البيانات مستقاة من القوائم المالية العامة نظراً لكون الشركة مدرجة في البورصة."
+    "اعتمدت أرقام الإيراد والأرباح السنوية على نتائج 2025 المدققة وأرقام Q1 2026 المراجعة.",
+    "فُصل صافي الربح الإجمالي المجمع عن الربح المنسوب لمساهمي الشركة الأم.",
+    "فُصل throughput عن الإيراد وعدد المعاملات والمستخدمين.",
+    "فُصلت القيمة السوقية المتغيرة عن تقييم 2015 التاريخي.",
+    "لم تُستخدم زيارات تقديرية أو حزمة تقنية داخلية غير موثقة.",
+    "تم تسجيل المقاييس التسويقية للشركة بوصفها تقديرات أو ادعاءات شركة عند غياب تعريف مدقق."
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "language": "ar",
+    "researched_through": "2026-08-03",
+    "latest_available_financial_period": "Q1 2026 ended 2026-03-31",
+    "latest_full_year": "FY2025 audited",
+    "corrections": [
+      {
+        "original_claim": "عشرات الملايين من الدولارات شهريًا",
+        "action": "استبدل",
+        "replacement": "إيراد FY2025 بلغ 8.651 مليارات جنيه، وإيراد Q1 2026 بلغ 2.411 مليار جنيه. لا يوجد MRR معلن."
+      },
+      {
+        "original_claim": "10M+ monthly traffic",
+        "action": "حذف",
+        "replacement": "لا توجد زيارات رسمية حديثة؛ فُصل المستخدمون والمعاملات والتنزيلات عن traffic."
+      },
+      {
+        "original_claim": "عمولات على العمليات والخدمات المصرفية المفتوحة",
+        "action": "وسع وصحح",
+        "replacement": "النموذج يشمل الخدمات المصرفية والقبول وADP والتمويل والتأمين والبطاقات والاستثمار وسلاسل الإمداد."
+      },
+      {
+        "original_claim": "أكثر من 1000 موظف",
+        "action": "حذف من اللقطة الحالية",
+        "replacement": "لا يوجد عدد حديث مدقق في المصادر المستخدمة."
+      },
+      {
+        "original_claim": "مربحة وذات تدفقات نقدية قوية",
+        "action": "استبدل بأرقام",
+        "replacement": "أرباح FY2025 وQ1 2026 موثقة؛ لم يُستخدم وصف للتدفقات النقدية دون رقم."
+      },
+      {
+        "original_claim": "مليارات الجنيهات كإشارة للإيراد",
+        "action": "فصل",
+        "replacement": "throughput FY2025 بلغ 943.6 مليار جنيه، بينما الإيراد 8.651 مليارات جنيه."
+      },
+      {
+        "original_claim": "استحواذ جزئي بحوالي 100 مليون دولار",
+        "action": "دقق",
+        "replacement": "تحالف استحوذ على حصة أغلبية في صفقة قيّمت الشركة بنحو 773 مليون جنيه/100 مليون دولار."
+      },
+      {
+        "original_claim": "IPO ناجح جدًا بلا تفاصيل",
+        "action": "دقق",
+        "replacement": "عرض 36% بسعر 6.46 جنيه وبدأ التداول في 8 أغسطس 2019؛ قيمة العرض ليست إيرادًا."
+      },
+      {
+        "original_claim": "Java وOracle وMicroservices كحزمة حالية",
+        "action": "حذف",
+        "replacement": "لا توجد مصادر أولية حديثة كافية لإثبات الحزمة الداخلية الحالية؛ أُدرجت القدرات والمنتجات الموثقة."
+      }
+    ],
+    "metric_distinctions": [
+      "الإيراد لا يساوي throughput أو قيمة المدفوعات.",
+      "عدد المعاملات لا يساوي عدد المستخدمين.",
+      "التنزيلات لا تساوي MAU أو DAU.",
+      "البطاقات الصادرة لا تساوي البطاقات النشطة.",
+      "محفظة القروض رصيد أصول ائتمانية وليست إيرادًا.",
+      "إجمالي الربح المجمع لا يساوي الربح المنسوب لمساهمي الشركة الأم.",
+      "القيمة السوقية لا تساوي تقييمًا ثابتًا ولا إيرادًا.",
+      "التسهيلات والتوريق تمويل وليست إيرادًا.",
+      "متوسط الإيراد الشهري المحسوب لا يساوي MRR."
+    ],
+    "known_limits": [
+      "نتائج Q2 2026 لم تكن منشورة حتى تاريخ البحث.",
+      "لا يوجد MAU أو DAU رسمي لتطبيق myFawry.",
+      "لا يوجد رقم رسمي حديث لزيارات الموقع.",
+      "لا يوجد عدد موظفين حديث مدقق ضمن المصادر المستخدمة.",
+      "القيمة السوقية تتغير مع التداول، وآخر لقطة متاحة تسبق 3 أغسطس بعدة أيام.",
+      "بعض المؤشرات التشغيلية مصدرها بيان الشركة وغير مدقق بصورة مستقلة.",
+      "الحزمة التقنية الداخلية الكاملة غير معلنة."
+    ],
+    "programmatic_checks": {
+      "source_file_read": "passed",
+      "json_parse": "passed",
+      "required_top_level_keys": "passed",
+      "source_id_uniqueness": "passed",
+      "evidence_source_references": "passed",
+      "evidence_json_paths": "passed",
+      "financial_calculations": "passed",
+      "segment_residual_calculation": "passed",
+      "loan_portfolio_sum": "passed",
+      "undisclosed_metrics_null": "passed",
+      "legacy_id_slug_order_preserved": "passed"
+    }
+  },
+  "evidence_map_schema": {
+    "claim_id": "معرف فريد",
+    "json_paths": "المسارات داخل JSON",
+    "claim": "الادعاء",
+    "source_ids": "معرفات المصادر",
+    "evidence_type": "financial | operational | company_fact | product | market_data | transaction | regulatory | calculation | absence_of_disclosure",
+    "confidence": "high | medium | low",
+    "status": "verified | qualified | removed",
+    "notes": "القيود أو تعريف المقياس"
+  },
+  "evidence_map": [
+    {
+      "claim_id": "E01",
+      "json_paths": [
+        "$.company.founded_year",
+        "$.company.founder",
+        "$.origin_story"
+      ],
+      "claim": "أسس أشرف صبري فوري عام 2008.",
+      "source_ids": [
+        "S07",
+        "S08"
+      ],
+      "evidence_type": "company_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "claim_id": "E02",
+      "json_paths": [
+        "$.company.public_company",
+        "$.company.exchange",
+        "$.company.ticker",
+        "$.company.isin",
+        "$.company.listed_since"
+      ],
+      "claim": "فوري مدرجة في EGX منذ أغسطس 2019 تحت الرمز FWRY وISIN EGS745L1C014.",
+      "source_ids": [
+        "S02",
+        "S12",
+        "S13"
+      ],
+      "evidence_type": "regulatory",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "claim_id": "E03",
+      "json_paths": [
+        "$.directory_snapshot.latest_full_year",
+        "$.financials.latest_full_year"
+      ],
+      "claim": "بلغ إيراد FY2025 نحو 8.651 مليارات جنيه وthroughput 943.6 مليار جنيه و2.078 مليار معاملة.",
+      "source_ids": [
+        "S03",
+        "S01",
+        "S02"
+      ],
+      "evidence_type": "financial",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "الإيراد وthroughput والمعاملات مقاييس مختلفة."
+    },
+    {
+      "claim_id": "E04",
+      "json_paths": [
+        "$.directory_snapshot.latest_quarter",
+        "$.financials.latest_quarter"
+      ],
+      "claim": "بلغ إيراد Q1 2026 نحو 2.411 مليار جنيه وthroughput 253.2 مليار جنيه و516 مليون معاملة.",
+      "source_ids": [
+        "S04",
+        "S05",
+        "S06"
+      ],
+      "evidence_type": "financial",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "claim_id": "E05",
+      "json_paths": [
+        "$.directory_snapshot.latest_full_year.net_profit_attributable_to_parent_egp",
+        "$.directory_snapshot.latest_full_year.total_consolidated_net_profit_egp"
+      ],
+      "claim": "ربح FY2025 المنسوب للمساهمين 2.889 مليار جنيه، بينما إجمالي الربح المجمع 3.101 مليارات.",
+      "source_ids": [
+        "S03",
+        "S02"
+      ],
+      "evidence_type": "financial",
+      "confidence": "high",
+      "status": "qualified",
+      "notes": "الفرق يعود إلى حقوق الحصص غير المسيطرة وتعريف الرقم."
+    },
+    {
+      "claim_id": "E06",
+      "json_paths": [
+        "$.directory_snapshot.latest_quarter.net_profit_attributable_to_parent_egp",
+        "$.directory_snapshot.latest_quarter.total_consolidated_net_profit_egp",
+        "$.directory_snapshot.latest_quarter.non_controlling_interests_profit_egp_calculated"
+      ],
+      "claim": "ربح Q1 2026 المنسوب للمساهمين 749.338 مليون جنيه وإجمالي الربح المجمع 792.756 مليونًا.",
+      "source_ids": [
+        "S02",
+        "S06"
+      ],
+      "evidence_type": "financial",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "حصة غير المسيطرين محسوبة بالطرح."
+    },
+    {
+      "claim_id": "E07",
+      "json_paths": [
+        "$.directory_snapshot.average_monthly_revenue_calculated",
+        "$.directory_snapshot.latest_quarter_average_monthly_revenue_calculated"
+      ],
+      "claim": "المتوسط الشهري المحسوب 720.96 مليون جنيه في FY2025 و803.57 مليونًا في Q1 2026.",
+      "source_ids": [
+        "S03",
+        "S04"
+      ],
+      "evidence_type": "calculation",
+      "confidence": "high",
+      "status": "qualified",
+      "notes": "متوسط حسابي وليس MRR."
+    },
+    {
+      "claim_id": "E08",
+      "json_paths": [
+        "$.directory_snapshot.operating_scale.estimated_monthly_customer_base",
+        "$.directory_snapshot.operating_scale.daily_transactions_marketing_claim",
+        "$.directory_snapshot.operating_scale.member_banks"
+      ],
+      "claim": "تذكر فوري 36 بنكًا و54.8 مليون مستخدم شهري مقدر وأكثر من 6 ملايين معاملة يومية.",
+      "source_ids": [
+        "S10"
+      ],
+      "evidence_type": "operational",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "مقاييس تسويقية للشركة وتعريف المستخدم غير مفصل."
+    },
+    {
+      "claim_id": "E09",
+      "json_paths": [
+        "$.directory_snapshot.operating_scale.fy2025_average_daily_transactions_calculated",
+        "$.directory_snapshot.operating_scale.q1_2026_average_daily_transactions_calculated"
+      ],
+      "claim": "المتوسط الحسابي للمعاملات اليومية نحو 5.69 ملايين في FY2025 و5.73 ملايين في Q1 2026.",
+      "source_ids": [
+        "S03",
+        "S05"
+      ],
+      "evidence_type": "calculation",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "لا يطابق بالضرورة الوتيرة اليومية الحالية أو تعريف البيان التسويقي."
+    },
+    {
+      "claim_id": "E10",
+      "json_paths": [
+        "$.directory_snapshot.operating_scale.retail_pos_terminals_fy2025",
+        "$.directory_snapshot.operating_scale.acceptance_enabled_pos_fy2025"
+      ],
+      "claim": "بلغت شبكة FY2025 نحو 377 ألف POS، منها 354 ألفًا مفعلة للقبول.",
+      "source_ids": [
+        "S03"
+      ],
+      "evidence_type": "operational",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "claim_id": "E11",
+      "json_paths": [
+        "$.directory_snapshot.operating_scale.myfawry_downloads_fy2025",
+        "$.directory_snapshot.operating_scale.myfawry_downloads_q1_2026",
+        "$.directory_snapshot.operating_scale.prepaid_cards_issued_fy2025",
+        "$.directory_snapshot.operating_scale.prepaid_cards_issued_q1_2026"
+      ],
+      "claim": "وصلت تنزيلات myFawry إلى 24.2 مليون في FY2025 و26.2 مليون في Q1 2026، والبطاقات الصادرة إلى 2.7 و3.2 ملايين.",
+      "source_ids": [
+        "S03",
+        "S05"
+      ],
+      "evidence_type": "operational",
+      "confidence": "high",
+      "status": "qualified",
+      "notes": "التنزيلات والبطاقات الصادرة لا تساوي النشاط."
+    },
+    {
+      "claim_id": "E12",
+      "json_paths": [
+        "$.monetization"
+      ],
+      "claim": "يتوزع الإيراد بين الخدمات المصرفية والمالية وADP وسلاسل الإمداد والتكنولوجيا وأعمال أخرى.",
+      "source_ids": [
+        "S03",
+        "S05",
+        "S19",
+        "S20"
+      ],
+      "evidence_type": "financial",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "إعادة تصنيف 2025 مذكورة في بيان النتائج."
+    },
+    {
+      "claim_id": "E13",
+      "json_paths": [
+        "$.financials.latest_quarter.gross_loan_portfolio_egp",
+        "$.financials.latest_quarter.msme_and_microfinance_portfolio_egp",
+        "$.financials.latest_quarter.consumer_finance_portfolio_egp"
+      ],
+      "claim": "بلغ إجمالي محافظ MSME والتمويل الاستهلاكي 6.185 مليارات جنيه في Q1 2026.",
+      "source_ids": [
+        "S05",
+        "S20"
+      ],
+      "evidence_type": "operational",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "رصيد محفظة وليس إيرادًا."
+    },
+    {
+      "claim_id": "E14",
+      "json_paths": [
+        "$.financials.market_capitalization",
+        "$.directory_snapshot.market_cap_snapshot"
+      ],
+      "claim": "بلغت القيمة السوقية نحو 64.45 مليار جنيه في 27 يوليو 2026.",
+      "source_ids": [
+        "S16",
+        "S17"
+      ],
+      "evidence_type": "market_data",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "قيمة ديناميكية وبيانات سوق قد تكون متأخرة."
+    },
+    {
+      "claim_id": "E15",
+      "json_paths": [
+        "$.financials.historical_private_valuation",
+        "$.revenue_timeline[0]"
+      ],
+      "claim": "قيّمت صفقة الأغلبية عام 2015 فوري بنحو 773 مليون جنيه أو 100 مليون دولار.",
+      "source_ids": [
+        "S14",
+        "S15"
+      ],
+      "evidence_type": "transaction",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "تقييم تاريخي لا قيمة سوقية حالية."
+    },
+    {
+      "claim_id": "E16",
+      "json_paths": [
+        "$.revenue_timeline[1]",
+        "$.origin_story[4]"
+      ],
+      "claim": "بدأ تداول فوري في 8 أغسطس 2019 بعد عرض 36% بسعر 6.46 جنيه للسهم.",
+      "source_ids": [
+        "S12",
+        "S13"
+      ],
+      "evidence_type": "transaction",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "العرض نقل ملكية أسهم ولا يُصنف إيرادًا."
+    },
+    {
+      "claim_id": "E17",
+      "json_paths": [
+        "$.growth[5]",
+        "$.company.subsidiaries_and_business_lines"
+      ],
+      "claim": "حصلت فوري في 2026 على رخصة تأمين متناهي الصغر ورخصة TPA لإطلاق Fawry Healthcare.",
+      "source_ids": [
+        "S11",
+        "S02"
+      ],
+      "evidence_type": "regulatory",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "claim_id": "E18",
+      "json_paths": [
+        "$.financials.financing_and_debt_events",
+        "$.growth[6]"
+      ],
+      "claim": "أعلنت فوري توريقًا 497.5 مليون جنيه وتسهيلات 250 و550 مليون جنيه.",
+      "source_ids": [
+        "S11",
+        "S02"
+      ],
+      "evidence_type": "financial",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "أدوات تمويل وليست إيرادات."
+    },
+    {
+      "claim_id": "E19",
+      "json_paths": [
+        "$.financials.revenue_to_throughput_ratio"
+      ],
+      "claim": "نسبة الإيراد إلى throughput تقارب 0.917% في FY2025 و0.952% في Q1 2026.",
+      "source_ids": [
+        "S03",
+        "S04",
+        "S05"
+      ],
+      "evidence_type": "calculation",
+      "confidence": "high",
+      "status": "qualified",
+      "notes": "ليست take rate بسبب اختلاف مكونات الإيراد والنطاق."
+    },
+    {
+      "claim_id": "E20",
+      "json_paths": [
+        "$.directory_snapshot.monthly_traffic",
+        "$.directory_snapshot.revenue_per_visitor",
+        "$.directory_snapshot.solopreneur_score"
+      ],
+      "claim": "لا توجد بيانات رسمية تدعم traffic أو revenue per visitor أو solopreneur score.",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S07"
+      ],
+      "evidence_type": "absence_of_disclosure",
+      "confidence": "high",
+      "status": "removed",
+      "notes": "أُبقيت الحقول null."
+    },
+    {
+      "claim_id": "E21",
+      "json_paths": [
+        "$.company.employees",
+        "$.company.employees_note"
+      ],
+      "claim": "لا يوجد عدد موظفين حديث ومدقق ضمن المصادر المستخدمة.",
+      "source_ids": [
+        "S07",
+        "S18"
+      ],
+      "evidence_type": "absence_of_disclosure",
+      "confidence": "high",
+      "status": "removed",
+      "notes": "حُذف الادعاء القديم أكثر من 1000 موظف."
+    },
+    {
+      "claim_id": "E22",
+      "json_paths": [
+        "$.tools",
+        "$.verification.corrections[8]"
+      ],
+      "claim": "لا توجد أدلة أولية حديثة كافية لإثبات Java وOracle وMicroservices كالحزمة الحالية.",
+      "source_ids": [
+        "S07",
+        "S09",
+        "S01"
+      ],
+      "evidence_type": "absence_of_disclosure",
+      "confidence": "high",
+      "status": "removed",
+      "notes": "استُبدلت بقدرات المنتج الموثقة."
+    }
   ],
   "research_metadata": {
-    "researched_on": "2026-07-29",
-    "scope": "عام",
-    "source_method": "معلومات عامة مالية",
+    "original_researched_on": "2026-07-29",
+    "professional_v2_researched_on": "2026-08-03",
+    "scope": "مصادر عامة، إفصاحات مالية وتنظيمية، ومصادر الشركة والسوق",
+    "source_method": "Official Fawry IR + EGX disclosures + primary company sources + reputable market data",
     "private_backend_data_included": false,
-    "copyright_note": "دراسة حالة"
+    "copyright_note": "تحليل وملخص عربي مستقل",
+    "id_preserved": true
   },
   "id": "fawry"
 }

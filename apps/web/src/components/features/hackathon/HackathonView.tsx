@@ -38,6 +38,15 @@ import {
 
 import { HackathonState, ReadinessBreakdown } from './types';
 import { sprintDays, OPPORTUNITIES, TOTAL_DURATION } from './constants';
+import { Button } from '@/components/ui/Button';
+import {
+   Dialog,
+   DialogContent,
+   DialogDescription,
+   DialogFooter,
+   DialogHeader,
+   DialogTitle,
+} from '@/components/ui/dialog';
 import { HackathonHeader } from './components/HackathonHeader';
 import { HackathonTaskBoard } from './components/HackathonTaskBoard';
 import { ScenarioWarRoom } from './components/ScenarioWarRoom';
@@ -76,6 +85,7 @@ export const HackathonView: React.FC = () => {
    const [clock, setClock] = useState(Date.now());
    const [activeTab, setActiveTab] = useState<'overview' | 'goals' | 'rules' | 'mechanism' | 'outcomes' | 'schedule'>('overview');
    const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
+   const [notice, setNotice] = useState<{ title: string; description: string } | null>(null);
 
    useEffect(() => {
       const saved = localStorage.getItem(STORAGE_KEY);
@@ -199,14 +209,20 @@ export const HackathonView: React.FC = () => {
    const handleRegistration = (data: any) => {
       setState(prev => ({ ...prev, registrationData: data }));
       setIsRegistrationOpen(false);
-      alert('تم تسجيل بياناتك بنجاح في الهاكثون!');
+      setNotice({
+         title: 'تم تسجيل بياناتك',
+         description: 'تم حفظ بيانات المشاركة في الهاكثون بنجاح.',
+      });
    };
 
    const handleStartParticipation = () => {
       if (!state.registrationData) {
          setIsRegistrationOpen(true);
       } else {
-         alert('أنت مسجل بالفعل في الهاكثون!');
+         setNotice({
+            title: 'أنت مسجل بالفعل',
+            description: 'بياناتك محفوظة ويمكنك متابعة المشاركة مباشرة.',
+         });
       }
    };
 
@@ -552,6 +568,17 @@ export const HackathonView: React.FC = () => {
             onClose={() => setIsRegistrationOpen(false)}
             onComplete={handleRegistration}
          />
+         <Dialog open={Boolean(notice)} onOpenChange={(open) => !open && setNotice(null)}>
+            <DialogContent className="sm:max-w-[420px]" dir="rtl">
+               <DialogHeader className="text-right">
+                  <DialogTitle>{notice?.title}</DialogTitle>
+                  <DialogDescription>{notice?.description}</DialogDescription>
+               </DialogHeader>
+               <DialogFooter>
+                  <Button onClick={() => setNotice(null)}>حسناً</Button>
+               </DialogFooter>
+            </DialogContent>
+         </Dialog>
       </div>
    );
 };

@@ -2,52 +2,783 @@
   "id": "eyewa",
   "slug": "eyewa",
   "name": "آيوا (Eyewa)",
-  "headline": "كيف أحدثت علامة نظارات محلية ثورة بالتجارة الشاملة (Omnichannel)",
-  "category": "E-commerce & Retail / تجارة إلكترونية ותجزئة",
+  "headline": "من متجر إلكتروني إلى 200 فرع موثق: كيف بنت أيوا منصة نظارات خليجية تقودها العلامات الخاصة والتجارة الشاملة",
+  "category": "تجارة التجزئة الشاملة للنظارات والعناية البصرية / Omnichannel Eyewear Retail",
   "company": {
-    "location": "دبي، الإمارات العربية المتحدة (وتوسع رئيسي في السعودية)",
-    "business_model": "بيع مباشر للمستهلك (D2C) للماركات الخاصة والماركات العالمية"
+    "legal_name": null,
+    "legal_name_note": "لم يُعثر على اسم قانوني موحد منشور للمجموعة في جميع أسواقها؛ استُخدم الاسم التجاري فقط.",
+    "location": "مقران رئيسيان في الرياض ودبي، وتشغيل معلن في السعودية والإمارات والكويت والبحرين وعُمان وقطر.",
+    "founded": 2017,
+    "first_physical_store": "ديسمبر 2020",
+    "founders": [
+      "أنس بومدين",
+      "مهدي أودغيري",
+      "عبد الله الرقيب"
+    ],
+    "business_model": "تجارة تجزئة شاملة تجمع المتجر الإلكتروني والفروع المملوكة والمشغلة مباشرة، وبيع العلامات الخاصة والخارجية، وفحوص النظر والحجز والاستلام من الفروع وعضوية سنوية مدفوعة.",
+    "brand_architecture": {
+      "main_brand": "eyewa",
+      "sub_brand": "The Optical Club",
+      "visible_owned_brands": [
+        "30Sundays",
+        "BlackOut",
+        "Spectus",
+        "Layala",
+        "Everva"
+      ],
+      "historical_owned_brand_count": 9,
+      "count_note": "ذكرت الشركة تسع علامات خاصة في مقابلة نوفمبر 2024، بينما تظهر خمسة أسماء بوضوح في عروض المتجر الحالية؛ لم يُفترض أن القائمة الحالية شاملة."
+    },
+    "operating_status_as_of_2026_08_03": {
+      "status": "نشطة",
+      "evidence": "المتاجر الإقليمية والحجز وفحوص النظر والحملات وصفحة الشركة كانت نشطة حتى 2026.",
+      "caution": "النشاط التشغيلي لا يثبت الإيراد أو التقييم."
+    }
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين",
-    "monthly_traffic": "تخدم ملايين العملاء عبر الإنترنت وعشرات الفروع الفعلية"
+    "monthly_revenue": null,
+    "monthly_revenue_note": "لا توجد بيانات إيراد شهرية حديثة أو قوائم مالية عامة؛ حُذف ادعاء «عشرات الملايين».",
+    "monthly_traffic": null,
+    "monthly_traffic_note": "لا توجد بيانات موثقة للزيارات الشهرية أو المستخدمين النشطين أو العملاء الفريدين.",
+    "latest_verified_operating_snapshot": {
+      "as_of": "2026-08-03",
+      "store_network": {
+        "eyewa_branded_stores_verified_minimum": 200,
+        "milestone": "أعلنت الشركة متجر أيوا رقم 200 في فيلاجيو مول بقطر خلال 2025، ضمن 42 افتتاحًا في ذلك العام حتى تاريخ الإعلان.",
+        "countries": [
+          "السعودية",
+          "الإمارات",
+          "الكويت",
+          "البحرين",
+          "عُمان",
+          "قطر"
+        ],
+        "combined_or_group_network_reported_at_end_2025": 250,
+        "combined_count_note": "ورد رقم 250 في منشور يجمع فرق eyewa وOptical Club؛ لم يُعامل كعدد متاجر eyewa وحدها.",
+        "current_precise_count": null
+      },
+      "digital_and_store_capabilities": [
+        "متجر إلكتروني متعدد الدول والعملات",
+        "حجز فحص النظر ومحدد الفروع",
+        "Click & Collect",
+        "حجز النظارة وتجربتها في الفرع",
+        "Virtual Try-On لبعض المنتجات",
+        "خيارات دفع وتقسيط رقمية",
+        "Eyewa Care",
+        "Eyewa PRO السنوية"
+      ],
+      "historical_company_reported_metrics_2024": {
+        "stores": 150,
+        "employees": 1300,
+        "profitable": true,
+        "revenue_growth": "أكثر من 50% سنويًا بحسب المؤسس",
+        "owned_brand_revenue_share": "96% بحسب الشركة",
+        "status": "غير مدققة وليست مؤشرات حالية"
+      }
+    },
+    "metric_distinctions": {
+      "revenue": "الدخل المحاسبي خلال فترة؛ غير منشور حديثًا.",
+      "valuation": "قيمة الشركة في جولة أو صفقة؛ غير معلنة.",
+      "funding": "رأس المال المستثمر؛ الجولة C بلغت 100 مليون دولار وإجمالي التمويل نُقل بنحو 130 مليونًا.",
+      "store_count": "عدد المواقع ولا يساوي العملاء أو الإيراد، مع فصل eyewa عن الشبكة المشتركة مع Optical Club.",
+      "customers_or_users": "لا يوجد رقم موثوق للعملاء الفريدين أو المستخدمين النشطين.",
+      "traffic": "زيارات الموقع أو التطبيق؛ غير منشورة.",
+      "transaction_volume": "عدد الطلبات أو الوحدات أو GMV؛ غير منشور حديثًا."
+    }
   },
   "overview": {
     "problem": {
-      "text": "سوق النظارات في الشرق الأوسط كان محتكراً من قبل شركات تقليدية ومتاجر كبرى تفرض أسعاراً مبالغاً فيها. بينما تجربة شراء النظارات عبر الإنترنت كانت معدومة تقريباً.",
-      "impact": "دفع المستهلك لأسعار باهظة مقابل النظارات، وتجربة تسوق تقليدية وبطيئة."
+      "text": "شراء النظارات يجمع الموضة والقياس والوصفة، لذلك كانت القناة الإلكترونية وحدها محدودة في منتج يحتاج فحصًا وتجربة وتعديلًا. التحدي هو وصل اكتشاف المنتج وشرائه رقميًا بخدمات الفرع.",
+      "impact": "فصل الإنترنت عن الفحص والفرع يخلق احتكاكًا في الاختيار والوصفة والاستلام وخدمة ما بعد البيع. لم يُستخدم ادعاء احتكار السوق أو مبالغة أسعار المنافسين لغياب دراسة مستقلة."
     },
     "solution": {
-      "text": "بدأ كمتجر إلكتروني حصري لبيع العدسات والنظارات وتوصيلها بسرعة. ثم تطور ليبتكر (علامات تجارية خاصة به House Brands) بأسعار تنافسية وجودة عالية، وافتتح شبكة فروع فعلية لتوفير فحص النظر والقياس المباشر."
+      "text": "بدأت أيوا كتاجر إلكتروني لعلامات خارجية، ثم استخدمت بيانات الطلب لتطوير علامات خاصة وافتتحت أول متجر في ديسمبر 2020. نموذجها الحالي يربط التجارة الإلكترونية بالحجز والتجربة الافتراضية والفحص والاستلام والفروع والعضوية السنوية."
     }
   },
   "market_data": {
-    "target_audience": "المستهلكون الباحثون عن نظارات عصرية بأسعار معقولة في الخليج.",
-    "market_size": "سوق النظارات والعدسات الإقليمي الذي يقدر بمليارات الدولارات.",
-    "growth_rate": "جمعت تمويلات بأكثر من 30 مليون دولار وافتتحت عشرات المتاجر في وقت قياسي."
+    "target_audience": "مستهلكو النظارات والعدسات في الخليج الباحثون عن الموضة والسعر الميسر والراحة الرقمية، إضافة إلى من يحتاجون فحصًا أو وصفة وتجربة فعلية.",
+    "market_size": null,
+    "market_size_note": "لا يوجد رقم رسمي حديث ومحدد لسوق الشركة القابل للخدمة، لذلك حُذف وصف «مليارات الدولارات».",
+    "growth_rate": null,
+    "growth_rate_note": "قال المؤسس في 2024 إن الإيرادات تنمو بأكثر من 50%، لكن لا توجد سلسلة مدققة أو تحديث 2025-2026 لاعتماد معدل حالي.",
+    "geographic_footprint": {
+      "confirmed_markets": [
+        "السعودية",
+        "الإمارات",
+        "الكويت",
+        "البحرين",
+        "عُمان",
+        "قطر"
+      ],
+      "qatar_entry": "مؤكد في 2025 عند افتتاح متجر أيوا رقم 200."
+    },
+    "regulatory_context": {
+      "saudi_arabia": "تخضع النظارات الطبية والعدسات اللاصقة ومنشآت الأجهزة الطبية لمتطلبات ترخيص وتسويق ورقابة من الهيئة العامة للغذاء والدواء، مع اشتراطات للوصفة وفحص النظر والمنتجات المعتمدة.",
+      "company_specific_status": null,
+      "note": "لم تُراجع أرقام تراخيص كل منتج أو فرع، ولا يُعمم ترخيص دولة على دولة أخرى."
+    }
   },
   "financials": {
-    "initial_investment": "مدعومة من Wamda Capital و Nuwa Capital.",
-    "valuation": "غير معلن (عشرات إلى مئات الملايين)",
+    "initial_investment": "جولات معلنة: 1.1 مليون دولار Seed في 2018، و7.5 ملايين Series A في 2019، و2.5 مليون جولة جسرية في 2020، و21 مليون Series B في 2021، و100 مليون Series C في نوفمبر 2024.",
+    "valuation": {
+      "current_valuation": null,
+      "note": "لم يُعلن تقييم الجولة C أو تقييم لاحق، ولا يساوي مبلغ التمويل قيمة الشركة.",
+      "series_c_amount_usd": 100000000,
+      "series_c_date": "2024-11-27",
+      "lead_investor": "General Atlantic",
+      "participants": [
+        "Badwa Capital",
+        "Turmeric Capital"
+      ]
+    },
+    "latest_financial_metrics": {
+      "current_revenue": null,
+      "current_profit": null,
+      "current_cash": null,
+      "current_debt": null,
+      "current_gmv": null,
+      "audited_financial_statements_available": false,
+      "historical_company_reported_2024": {
+        "profitable": true,
+        "revenue_growth_over_50_percent_yoy": true,
+        "owned_brands_share_of_revenue": "96%",
+        "status": "تصريحات شركة غير مدققة"
+      }
+    },
+    "funding": {
+      "reported_total_funding_usd": 130000000,
+      "reported_total_note": "نُقل إجمالي يقارب 130 مليون دولار بعد Series C.",
+      "rounds": [
+        {
+          "year": 2018,
+          "round": "Seed",
+          "amount_usd": 1100000
+        },
+        {
+          "year": 2019,
+          "round": "Series A",
+          "amount_usd": 7500000
+        },
+        {
+          "year": 2020,
+          "round": "Pre-Series B bridge",
+          "amount_usd": 2500000
+        },
+        {
+          "year": 2021,
+          "round": "Series B",
+          "amount_usd": 21000000
+        },
+        {
+          "year": 2024,
+          "round": "Series C",
+          "amount_usd": 100000000
+        }
+      ],
+      "arithmetic_warning": "قد تختلف المحصلة الحسابية بسبب تصنيف الجولة الجسرية وطريقة احتساب Series B، لذلك اعتُمد الإجمالي المنشور ولم يُخترع إجمالي بديل."
+    },
     "revenue_streams": [
-      "هوامش ربح عالية جداً من بيع علاماتها التجارية الخاصة (مثل 30sundays)",
-      "مبيعات المنتجات العالمية (العدسات اللاصقة والماركات الشهيرة)"
-    ]
+      "مبيعات النظارات الطبية والشمسية ذات العلامات الخاصة",
+      "مبيعات العدسات الطبية والملونة الخاصة والخارجية",
+      "مبيعات العلامات العالمية والمنتجات الخارجية",
+      "بيع العدسات الطبية والإضافات المرتبطة بالوصفة",
+      "اشتراك Eyewa PRO السنوي",
+      "الإكسسوارات ومنتجات العناية بالعين",
+      "لا يوجد إفصاح يفصل الإيراد حسب الدولة أو القناة أو العلامة"
+    ],
+    "capital_deployment_plan": {
+      "announced_uses": [
+        "فتح 100 متجر على الأقل في 2025",
+        "البحث والتطوير",
+        "المواهب",
+        "تطوير المنتج",
+        "مركز إنتاج وتنفيذ طلبات في الرياض"
+      ],
+      "store_target_status": "وصلت الشركة إلى 200 متجر eyewa في 2025، ثم أشارت إلى 250 متجرًا في سياق eyewa وOptical Club.",
+      "riyadh_facility_status": "أُعلن افتتاح مخطط في الربع الأول 2025، لكن لم يُعثر على تأكيد أولي لاحق يثبت بدء التشغيل."
+    }
+  },
+  "analysis": {
+    "core_thesis": "أيوا بائع تجزئة متكامل يعتمد على العلامات الخاصة والقناة الرقمية للاكتشاف، والفروع للفحص والوصفة والثقة والخدمة. الميزة ليست عدد الفروع وحده، بل تدوير البيانات والتصميم والمخزون والخدمة ضمن شبكة واحدة.",
+    "what_changed": [
+      "قفز التمويل إلى جولة C منفردة بقيمة 100 مليون دولار",
+      "ارتفعت الشبكة من 150+ متجرًا في خمس دول نهاية 2024 إلى متجر أيوا رقم 200 في ست دول خلال 2025",
+      "ورد رقم 250 متجرًا بنهاية 2025 في سياق مشترك مع Optical Club",
+      "قالت الشركة إن 96% من الإيرادات تأتي من العلامات الخاصة في 2024",
+      "ظهر نموذج Eyewa PRO السنوي",
+      "أعلنت الشركة فحوص نظر مدعومة بالذكاء الاصطناعي دون تقييم سريري مستقل منشور"
+    ],
+    "competitive_advantage": [
+      "فروع مملوكة ومشغلة مباشرة وفق إفادة الشركة",
+      "علامات خاصة موجهة للسوق الخليجي",
+      "تكامل الحجز والتجربة الافتراضية والاستلام والفحص",
+      "انتشار في ست دول خليجية",
+      "رأس مال نمو كبير",
+      "بيانات سلوك البحث والشراء لتطوير المنتجات",
+      "عضوية سنوية محتملة لدعم الاحتفاظ"
+    ],
+    "risks_and_constraints": [
+      "لا توجد بيانات عامة عن الإيراد والهامش واقتصاديات كل متجر",
+      "التوسع السريع يرفع الإيجار والمخزون والموظفين ورأس المال العامل",
+      "الاعتماد على العلامات الخاصة يزيد مخاطر الجودة والمخزون والسمعة",
+      "رقم 250 قد يضخم متاجر eyewa إذا لم يُفصل عن Optical Club",
+      "منشأة الرياض لم يُثبت تشغيلها",
+      "المنتجات والفحوص تخضع لتراخيص مختلفة حسب الدولة",
+      "الفحص بالذكاء الاصطناعي يحتاج تحققًا مستقلًا",
+      "التقييم غير معلن"
+    ],
+    "outlook_as_of_2026_08_03": "أيوا شركة نمو إقليمية متقدمة بتمويل وشبكة موثقة، لكنها محدودة الشفافية المالية العامة. المؤشرات الأهم مستقبلًا: المبيعات المماثلة للفروع، هامش العلامات الخاصة، تجديد PRO، دوران المخزون، الاحتفاظ، واقتصاديات كل متجر."
   },
   "lessons": [
     {
-      "title": "قوة التجارة الشاملة (Omnichannel)",
-      "description": "أدركت Eyewa أن بعض المنتجات (كفحص النظر وقياس النظارة) تتطلب تدخلاً فعلياً. الانتقال من (متجر إلكتروني فقط) إلى (متاجر فعلية + إلكترونية) ضاعف مبيعاتها وعزز الثقة في علامتها التجارية بشكل غير مسبوق."
+      "title": "التوسع الرقمي يحتاج نقطة ثقة فعلية",
+      "description": "استخدمت أيوا الإنترنت للاكتشاف والفرع للفحص والتجربة والتعديل بدل إجبار منتج صحي-موضوي على قناة واحدة."
     },
     {
-      "title": "التحول من موزع إلى مصنّع (D2C)",
-      "description": "بيع ماركات الآخرين يحد من الأرباح. بتصميم علاماتهم التجارية الخاصة وتصنيعها وبيعها مباشرة للعميل (Direct-to-Consumer)، رفعت الشركة هوامش الربح واستقلت عن رحمة الموردين."
+      "title": "العلامة الخاصة محرك لا مجرد هامش",
+      "description": "تتحول العلامة الخاصة إلى ميزة عندما ترتبط ببيانات الطلب والتصميم والتوريد والخدمة."
+    },
+    {
+      "title": "التمويل لا يساوي التقييم",
+      "description": "جمع 100 مليون دولار لا يكشف قيمة الشركة ما دامت الحصة والشروط والتقييم غير معلنة."
+    },
+    {
+      "title": "افصل العلامة عن الشبكة",
+      "description": "200 متجر أيوا و250 متجرًا ضمن سياق أيوا وOptical Club رقمان صحيحان في نطاقين مختلفين."
+    },
+    {
+      "title": "المتجر المملوك أثقل في رأس المال",
+      "description": "امتلاك الفروع يمنح تحكمًا في التجربة والبيانات، لكنه يرفع الإيجارات والمخزون ويتطلب قياس فترة استرداد كل متجر."
+    },
+    {
+      "title": "الاشتراك يحتاج تجديدًا حقيقيًا",
+      "description": "نجاح Eyewa PRO يقاس بالتجديد والتكلفة الفعلية للشحن والضمان والعروض."
+    },
+    {
+      "title": "الخدمة المجانية قد تقود البيع",
+      "description": "فحص النظر المجاني يزيل عائق الوصفة، لكن قيمته تقاس بتحويل الفحص إلى طلب وقيمة العميل."
+    },
+    {
+      "title": "خطة المصنع ليست مصنعًا عاملًا",
+      "description": "المنشأة تحتاج إثبات بدء إنتاج وقدرة وجودة، ولا تُسجل كأصل تشغيلي بمجرد إعلان خطة."
+    },
+    {
+      "title": "الذكاء الاصطناعي الصحي يحتاج حوكمة",
+      "description": "يجب توضيح دور المختص وحدود الأداة ودقة النتائج ومسؤولية القرار عند استخدام الذكاء الاصطناعي في الفحص."
     }
   ],
   "tools": [
-    "Magento",
-    "AWS",
-    "ERP Systems",
-    "Omnichannel POS"
+    "متجر إلكتروني متعدد الدول والعملات",
+    "محدد فروع وحجز فحوص النظر",
+    "Click & Collect وحجز المنتج لتجربته في الفرع",
+    "Virtual Try-On لبعض النظارات",
+    "Eyewa PRO السنوية",
+    "Eyewa Care",
+    "خيارات دفع وتقسيط مثل Tabby وTamara في أسواق محددة",
+    "فحوص نظر مدعومة بالذكاء الاصطناعي وفق ادعاء الشركة",
+    "لم تثبت المصادر Magento أو AWS أو ERP أو POS بعينها، لذلك حُذفت"
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "verified_through": "2026-08-03",
+    "overall_status": "verified_with_material_corrections_and_private_company_limitations",
+    "research_scope": "الملف الأصلي، مواقع أيوا، منشورات الشركة حتى 2026، إعلان General Atlantic، تاريخ التمويل لدى Wamda وNuwa، مقابلة TechCrunch، ومصادر SFDA.",
+    "sec_search_status": {
+      "applicable": false,
+      "reason": "أيوا شركة خاصة غير مدرجة ولا تُعرف كمصدر أوراق مالية أمريكية.",
+      "search_result": "لم تظهر نتائج ذات صلة في نطاق SEC."
+    },
+    "key_corrections": [
+      {
+        "field": "category",
+        "original_claim": "تجارة إلكترونية ותجزئة",
+        "status": "corrected",
+        "correction": "أزيلت الكلمة العبرية ووُصف النشاط كتجزئة شاملة للنظارات.",
+        "evidence_ids": [
+          "E1"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_revenue",
+        "original_claim": "عشرات الملايين",
+        "status": "removed_unsupported",
+        "correction": "وُضع null لغياب العملة والفترة والمصدر.",
+        "evidence_ids": [
+          "E8"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_traffic",
+        "original_claim": "ملايين العملاء",
+        "status": "removed_unsupported",
+        "correction": "وُضع null وفُصل عدد الفروع عن الزيارات.",
+        "evidence_ids": [
+          "E3",
+          "E8"
+        ]
+      },
+      {
+        "field": "market_data.market_size",
+        "original_claim": "سوق بمليارات الدولارات",
+        "status": "removed_unspecified",
+        "correction": "وُضع null لغياب تقدير رسمي محدد.",
+        "evidence_ids": [
+          "E8"
+        ]
+      },
+      {
+        "field": "market_data.growth_rate",
+        "original_claim": "تمويلات 30 مليونًا وعشرات المتاجر",
+        "status": "reclassified",
+        "correction": "التمويل والفروع ليسا معدل نمو؛ النمو الحالي null.",
+        "evidence_ids": [
+          "E5",
+          "E7"
+        ]
+      },
+      {
+        "field": "financials.initial_investment",
+        "original_claim": "Wamda وNuwa فقط",
+        "status": "updated",
+        "correction": "أضيفت الجولات حتى Series C بقيمة 100 مليون دولار.",
+        "evidence_ids": [
+          "E5",
+          "E11",
+          "E12"
+        ]
+      },
+      {
+        "field": "financials.valuation",
+        "original_claim": "عشرات إلى مئات الملايين",
+        "status": "removed_speculation",
+        "correction": "التقييم غير معلن ووُضع null.",
+        "evidence_ids": [
+          "E5",
+          "E8"
+        ]
+      },
+      {
+        "field": "financials.revenue_streams",
+        "original_claim": "هوامش ربح عالية جدًا",
+        "status": "removed_unsupported",
+        "correction": "ثُبتت مصادر الإيراد دون اختلاق هوامش.",
+        "evidence_ids": [
+          "E9",
+          "E10"
+        ]
+      },
+      {
+        "field": "tools",
+        "original_claim": "Magento وAWS وERP وPOS",
+        "status": "removed_unverified",
+        "correction": "أُبقيت القدرات الظاهرة رسميًا فقط.",
+        "evidence_ids": [
+          "E10"
+        ]
+      }
+    ],
+    "known_source_discrepancies": [
+      {
+        "topic": "إجمالي التمويل",
+        "detail": "نُقل إجمالي 130 مليون دولار، بينما قد تختلف المحصلة عند جمع الجولات بسبب تصنيف الجولة الجسرية وSeries B."
+      },
+      {
+        "topic": "عدد الفروع",
+        "detail": "الموقع يحمل أحيانًا عبارة 150+ قديمة، بينما توثق منشورات الشركة 200 متجر أيوا و250 متجرًا في سياق مشترك."
+      },
+      {
+        "topic": "عدد العلامات الخاصة",
+        "detail": "ذكرت الشركة تسع علامات في 2024، بينما تظهر خمسة أسماء بوضوح في عروض المتجر."
+      },
+      {
+        "topic": "منشأة الرياض",
+        "detail": "أُعلن افتتاح مخطط في الربع الأول 2025 دون تأكيد أولي لاحق على التشغيل."
+      }
+    ],
+    "limitations": [
+      "لا توجد قوائم مالية عامة مدققة",
+      "لا توجد أرقام حديثة للإيراد أو GMV أو العملاء أو الزيارات",
+      "مؤشرات الربحية والنمو ونسبة العلامات الخاصة تصريحات 2024 غير مدققة",
+      "لم يُعلن تقييم الجولة C",
+      "رقم 250 ورد في سياق eyewa وOptical Club",
+      "لم تُراجع تراخيص كل منتج وفرع وممارس",
+      "لم يُنشر تقييم سريري مستقل لفحص الذكاء الاصطناعي",
+      "البنية التقنية الداخلية غير معلنة"
+    ],
+    "programmatic_validation": {
+      "json_parse": true,
+      "required_top_level_keys_preserved": true,
+      "required_original_paths_preserved": true,
+      "source_ids_unique": true,
+      "evidence_source_references_valid": true,
+      "correction_evidence_references_valid": true,
+      "no_nan_or_infinity": true,
+      "unavailable_monthly_metrics_are_null": true,
+      "market_size_and_growth_are_null": true,
+      "valuation_not_invented": true,
+      "funding_and_valuation_separated": true,
+      "store_counts_distinguished": true,
+      "unverified_tech_stack_removed": true,
+      "arabic_content_present": true,
+      "source_count": 12,
+      "primary_source_count": 9,
+      "evidence_item_count": 12,
+      "lesson_count": 9,
+      "validated_at": "2026-08-03T17:35:00+03:00",
+      "validation_status": "passed"
+    }
+  },
+  "evidence_map_schema": {
+    "description": "يربط كل ادعاء جوهري بالمصادر والمسارات داخل JSON.",
+    "item_fields": {
+      "claim": "الادعاء",
+      "json_paths": "المسارات",
+      "classification": "نوع الادعاء",
+      "status": "حالة التحقق",
+      "source_ids": "معرفات المصادر",
+      "notes": "حدود الدليل"
+    }
+  },
+  "evidence_map": {
+    "E1": {
+      "claim": "التأسيس والمقران وأول متجر ونموذج omnichannel.",
+      "json_paths": [
+        "company",
+        "overview.solution"
+      ],
+      "classification": "company",
+      "status": "verified",
+      "source_ids": [
+        "S1"
+      ],
+      "notes": "إعلان مشترك من الشركة والمستثمر."
+    },
+    "E2": {
+      "claim": "200 متجر أيوا وست دول ودخول قطر.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.store_network",
+        "market_data.geographic_footprint"
+      ],
+      "classification": "stores",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S2"
+      ],
+      "notes": "رقم علامة أيوا."
+    },
+    "E3": {
+      "claim": "250 متجرًا في سياق eyewa وOptical Club بنهاية 2025.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.store_network"
+      ],
+      "classification": "stores",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S3"
+      ],
+      "notes": "ليس 250 متجر eyewa منفردًا."
+    },
+    "E4": {
+      "claim": "Series C بقيمة 100 مليون دولار.",
+      "json_paths": [
+        "financials"
+      ],
+      "classification": "funding",
+      "status": "verified",
+      "source_ids": [
+        "S1"
+      ],
+      "notes": "مبلغ الجولة لا يساوي التقييم."
+    },
+    "E5": {
+      "claim": "إجمالي تمويل منقول بنحو 130 مليون دولار.",
+      "json_paths": [
+        "financials.funding"
+      ],
+      "classification": "funding",
+      "status": "verified",
+      "source_ids": [
+        "S4",
+        "S12"
+      ],
+      "notes": "إجمالي تقريبي منشور."
+    },
+    "E6": {
+      "claim": "مؤشرات 2024: 150 متجرًا و1300 موظف وربحية ونمو 50%+.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.historical_company_reported_metrics_2024",
+        "financials.latest_financial_metrics"
+      ],
+      "classification": "financial",
+      "status": "historical_only",
+      "source_ids": [
+        "S4"
+      ],
+      "notes": "غير مدققة وليست حالية."
+    },
+    "E7": {
+      "claim": "غياب الإيراد والتقييم والعملاء والزيارات الحالية.",
+      "json_paths": [
+        "directory_snapshot.monthly_revenue",
+        "directory_snapshot.monthly_traffic",
+        "market_data.market_size",
+        "market_data.growth_rate",
+        "financials.valuation"
+      ],
+      "classification": "unavailable",
+      "status": "unavailable",
+      "source_ids": [
+        "S1",
+        "S4"
+      ],
+      "notes": "الإفصاحات تذكر التمويل والفروع لا البيانات الحالية."
+    },
+    "E8": {
+      "claim": "العلامات الخاصة و96% من الإيراد حسب الشركة.",
+      "json_paths": [
+        "company.brand_architecture",
+        "financials.revenue_streams"
+      ],
+      "classification": "product",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S4",
+        "S5"
+      ],
+      "notes": "النسبة غير مدققة."
+    },
+    "E9": {
+      "claim": "Eyewa PRO والعلامات المملوكة الظاهرة.",
+      "json_paths": [
+        "company.brand_architecture",
+        "financials.revenue_streams",
+        "tools"
+      ],
+      "classification": "product",
+      "status": "verified",
+      "source_ids": [
+        "S6"
+      ],
+      "notes": "يثبت النموذج لا حجمه المالي."
+    },
+    "E10": {
+      "claim": "الحجز والفحص والاستلام والتجربة الافتراضية.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.digital_and_store_capabilities",
+        "tools"
+      ],
+      "classification": "operating",
+      "status": "verified",
+      "source_ids": [
+        "S7",
+        "S8"
+      ],
+      "notes": "قد تختلف المزايا حسب السوق."
+    },
+    "E11": {
+      "claim": "تاريخ Seed وSeries A وSeries B.",
+      "json_paths": [
+        "financials.initial_investment",
+        "financials.funding"
+      ],
+      "classification": "funding",
+      "status": "verified",
+      "source_ids": [
+        "S5",
+        "S9",
+        "S10"
+      ],
+      "notes": "توجد فروق في طريقة احتساب الجولة الجسرية."
+    },
+    "E12": {
+      "claim": "الرقابة السعودية على النظارات الطبية والعدسات.",
+      "json_paths": [
+        "market_data.regulatory_context"
+      ],
+      "classification": "regulatory",
+      "status": "verified",
+      "source_ids": [
+        "S11"
+      ],
+      "notes": "إطار عام لا يثبت ترخيص أيوا تحديدًا."
+    }
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "eyewa announces $100M in Series C",
+      "publisher": "General Atlantic",
+      "source_type": "إعلان رسمي",
+      "publication_date": "2024-11-27",
+      "url": "https://www.generalatlantic.com/media-article/eyewa-announces-100m-in-series-c-round-led-by-general-atlantic/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الجولة",
+        "التأسيس",
+        "المقران",
+        "المؤسسون",
+        "خطة المتاجر والمنشأة",
+        "Optical Club"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "Eyewa Celebrates 200 Stores",
+      "publisher": "eyewa on LinkedIn",
+      "source_type": "إعلان رسمي",
+      "publication_date": "2025",
+      "url": "https://www.linkedin.com/posts/eyewa_eyewa-celebrates-200-stores-across-the-activity-7356186823833923584-sJjF",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "200 متجر",
+        "قطر",
+        "ست دول"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "Closing 2025 with eyewa & Optical Club",
+      "publisher": "eyewa on LinkedIn",
+      "source_type": "إعلان رسمي",
+      "publication_date": "2025-12",
+      "url": "https://www.linkedin.com/posts/eyewa_closing-2025-with-our-retail-all-hands-meeting-activity-7412559338260815872-n_Ga",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "250 متجرًا في السياق المشترك"
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "Eyewa raised $100M and had 150 stores",
+      "publisher": "TechCrunch",
+      "source_type": "مقابلة صحفية",
+      "publication_date": "2024-11-26",
+      "url": "https://techcrunch.com/2024/11/26/eyewa-now-has-150-stores-selling-eyeglasses-in-the-middle-east-and-just-raised-100m-to-add-100-more/",
+      "primary_source": false,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "130 مليون تمويل",
+        "الربحية والنمو",
+        "96% العلامات الخاصة",
+        "150 متجرًا"
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "eyewa closes $21 million Series B",
+      "publisher": "Wamda",
+      "source_type": "تغطية تمويل",
+      "publication_date": "2021-06-27",
+      "url": "https://www.wamda.com/2021/06/eyewa-closes-21-million-series-b",
+      "primary_source": false,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Series B",
+        "Seed",
+        "Series A",
+        "العلامات الخاصة"
+      ]
+    },
+    {
+      "id": "S6",
+      "title": "Eyewa PRO Terms",
+      "publisher": "eyewa",
+      "source_type": "شروط رسمية",
+      "publication_date": null,
+      "url": "https://eyewa.com/sa-en/ramadan-sale.html",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "عضوية 12 شهرًا",
+        "العلامات الخاصة",
+        "Eyewa Care"
+      ]
+    },
+    {
+      "id": "S7",
+      "title": "Eyewa Store and Eye-Test Booking",
+      "publisher": "eyewa",
+      "source_type": "منصة رسمية",
+      "publication_date": null,
+      "url": "https://eyewa.com/sa-en/eye-test-booking",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الحجز",
+        "الفحص",
+        "الفروع",
+        "Click & Collect"
+      ]
+    },
+    {
+      "id": "S8",
+      "title": "Eyewa Glasses Catalog",
+      "publisher": "eyewa",
+      "source_type": "كتالوج رسمي",
+      "publication_date": null,
+      "url": "https://eyewa.com/ae-en/glasses-ad.html",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Virtual Try-On",
+        "المنتجات"
+      ]
+    },
+    {
+      "id": "S9",
+      "title": "eyewa raises $7.5 million Series A",
+      "publisher": "Wamda",
+      "source_type": "تغطية تمويل",
+      "publication_date": "2019-04-14",
+      "url": "https://www.wamda.com/2019/04/eyewa-raises-75-million-series",
+      "primary_source": false,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Series A"
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "eyewa raises $2.5 million bridge round",
+      "publisher": "Nuwa Capital",
+      "source_type": "إعلان مستثمر",
+      "publication_date": "2020-08",
+      "url": "https://www.nuwacapital.io/insights/through-the-looking-glass-our-first-investment",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الجولة الجسرية"
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "Medical Devices and Contact Lenses Requirements",
+      "publisher": "Saudi Food and Drug Authority",
+      "source_type": "مرجع تنظيمي رسمي",
+      "publication_date": null,
+      "url": "https://www.sfda.gov.sa/en/medicaldevices-legislative-executive-responsibilities",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "رقابة النظارات والعدسات والمنشآت"
+      ]
+    },
+    {
+      "id": "S12",
+      "title": "Eyewa Raises $100M in Series C",
+      "publisher": "Hardy Capital",
+      "source_type": "إعلان مستثمر",
+      "publication_date": "2024-11",
+      "url": "https://www.hardycapital.com/eyewa-raises-100m-in-series-c-round",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Series C",
+        "إجمالي 130 مليون دولار"
+      ]
+    }
   ]
 }

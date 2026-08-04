@@ -2,51 +2,1336 @@
   "id": "mawdoo3",
   "slug": "mawdoo3",
   "name": "موضوع (Mawdoo3)",
-  "headline": "الموسوعة العربية الأولى وأكبر منتج للمحتوى العربي على الإنترنت",
-  "category": "Media & Publishing / المحتوى الرقمي",
+  "headline": "من موسوعة تعتمد على البحث إلى مصنع للبيانات العربية: كيف أعادت موضوع بناء أصولها لعصر الذكاء الاصطناعي",
+  "category": "Arabic Digital Content, Advertising & AI Data / المحتوى العربي والإعلانات وبيانات الذكاء الاصطناعي",
   "company": {
-    "location": "عمّان، الأردن",
-    "business_model": "إعلانات برمجية (Programmatic Ads) + بيانات + ذكاء اصطناعي (B2B)"
+    "location": "شركة أردنية تأسست في عمّان عام 2010 على يد رامي القواسمي ومحمد جابر، وما يزال مقرها المعلن في عمّان. تعرّف اتفاقية الاستخدام وسياسة الخصوصية الشركة المالكة والمشغلة للموقع باسم Mawdoo3 Limited و/أو شركاتها التابعة. في نوفمبر 2024 استحوذت شركة نايف الراجحي الاستثمارية السعودية على حصة استراتيجية في موضوع بقيمة ونسبة غير معلنتين، بهدف دعم توسع أعمال الذكاء الاصطناعي والبيانات في السعودية. لا يكشف الإعلان هيكل الملكية الكامل بعد الصفقة.",
+    "business_model": "مجموعة محتوى وتقنية متعددة المسارات: شبكة مواقع عربية مجانية ممولة بالإعلانات المرئية والبرمجية والمحتوى المدفوع والرعاية الإعلامية؛ خدمات B2B لبناء المواقع وإنتاج المحتوى وتحسين محركات البحث عبر Al-Web؛ خدمات بيانات عربية لتنظيف البيانات وتصنيفها والتحقق منها وكتابتها عبر Waraqa؛ واشتراكات وخدمات مؤسسية للذكاء الاصطناعي عبر Qalam وSalma، تشمل التدقيق وإعادة الصياغة والترجمة وOCR وAPI/SDK والنشر السحابي أو داخل خوادم العميل والمساعدات الافتراضية ومعالجة المستندات والأتمتة. لا تنشر المجموعة أسعارًا موحدة لكل العقود أو مزيج الإيرادات بين الإعلام والبرمجيات والخدمات."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات",
-    "monthly_traffic": "50M+ /mo"
+    "monthly_revenue": "غير معلن. موضوع شركة خاصة ولا تنشر إيرادًا شهريًا أو سنويًا مدققًا أو ARR أو صافي ربح. التمويل الجريء المعلن البالغ 25 مليون دولار، والاستثمار الاستراتيجي غير المعلن في 2024، وأعداد الزوار والصفحات والكلمات التي عالجها قلم لا تمثل إيرادًا. لذلك حُذف تقدير «ملايين الدولارات شهريًا» بدل اشتقاق مبيعات من مؤشرات الجمهور أو حجم المحتوى.",
+    "monthly_traffic": "لا يوجد رقم موحد ومستقل ومراجع لزيارات mawdoo3.com وحده في أغسطس 2026. تعرض صفحة «عن موضوع» الحالية أكثر من 100 مليون زائر فريد شهريًا لموضوع وشركائها، و3 مليارات مشاهدة صفحة سنويًا، بينما يعرض الملف الرسمي للشركة على LinkedIn أكثر من 50 مليون مستخدم شهريًا عبر أكثر من 200 منصة، وتعرض صفحة mawdoo3.io رقم 50 مليون مستخدم شهريًا. اختلاف النطاق والتعريف والتحديث يمنع دمج الأرقام أو اعتبارها زيارات شهرية مدققة للموقع الرئيسي وحده. كما أن 20 مليون متابع اجتماعي و400 ألف مستخدم لقلم مؤشرات منفصلة."
   },
   "overview": {
     "problem": {
-      "text": "المحتوى العربي على الإنترنت كان يمثل أقل من 1% من إجمالي المحتوى العالمي، رغم أن العرب يمثلون نسبة كبيرة من مستخدمي الإنترنت، مما شكل فجوة هائلة في المعلومات الموثوقة.",
-      "impact": "الباحث العربي كان يضطر للاعتماد على لغات أخرى أو يواجه محتوى رديئاً غير منظم في المنتديات القديمة."
+      "text": "عند تأسيس موضوع كان الويب العربي يعاني نقصًا كبيرًا في المحتوى المنظم مقارنة بعدد الناطقين بالعربية؛ وقد استخدمت الشركة والمصادر التاريخية تقديرًا يقل عن 1% من محتوى الويب في ذلك الوقت. لا يصلح هذا التقدير القديم كوصف كمي مؤكد لعام 2026. المشكلة الحالية أوسع: تفاوت جودة المحتوى، صعوبة التحقق والتحرير على نطاق كبير، ضعف البيانات العربية المنظمة لتدريب وتقييم النماذج، واعتماد الناشرين على محركات البحث والمنصات الإعلانية التي تتغير خوارزمياتها باستمرار.",
+      "impact": "قد يصل الباحث العربي إلى إجابات متضاربة أو ضعيفة المصدر، بينما تتحمل مؤسسات الإعلام والقطاعين العام والخاص تكلفة عالية لإنتاج محتوى عربي متسق وتنظيف البيانات وضبط المصطلحات. وبالنسبة للناشر، يمكن أن يؤدي الاعتماد المفرط على البحث والإعلانات إلى تقلب الزيارات والعوائد، فيما تحتاج منتجات الذكاء الاصطناعي إلى بيانات بشرية موثوقة وحقوق استخدام واضحة قبل تحويل المحتوى إلى أصل تقني."
     },
     "solution": {
-      "text": "منصة موسوعية (مثل ويكيبيديا ولكن بمحتوى أصلي مأجور) تعتمد على كتاب ومحررين محترفين لتغطية كافة مجالات المعرفة باللغة العربية."
+      "text": "بنت موضوع خط إنتاج تحريريًا يبدأ باختيار الموضوع والبحث والكتابة المتخصصة ثم التدقيق والتحقق والمراجعة، وتستخدم أدوات تقنية وذكاء اصطناعي للمساعدة في التحرير. توسعت المجموعة من موقع موسوعي إلى شبكة تتجاوز 200 منصة وتضم موضوع وويب طب ومنتجات محتوى أخرى، مع أصول تعلن الشركة أنها تتجاوز مليون مقال وفيديو عبر الشبكة. حوّلت الخبرة إلى منتجات B2B: قلم للكتابة العربية والتدقيق والترجمة وOCR وواجهات API والنشر داخل المؤسسة؛ ورقة لإعداد بيانات عالية الجودة للنماذج عبر خبراء؛ الويب لبناء المواقع والمحتوى وSEO؛ وسلمى للمساعدات الافتراضية ومعالجة المستندات وتحليل صوت العميل والأتمتة المؤسسية."
     }
   },
   "market_data": {
-    "target_audience": "جميع الناطقين باللغة العربية الباحثين عن المعرفة على جوجل.",
-    "market_size": "سوق الإعلانات الرقمية في العالم العربي يبلغ مليارات الدولارات.",
-    "growth_rate": "أصبح الموقع العربي الأول عالمياً من حيث عدد الزيارات العضوية (Organic Traffic)."
+    "target_audience": "القراء والباحثون الناطقون بالعربية، والمعلنون والعلامات التي تريد الوصول إلى جماهير المحتوى، والناشرون والمؤسسات التي تحتاج إنتاج محتوى عربي أو بناء مواقع وتحسين SEO، والوزارات والشركات وفرق التحرير التي تحتاج أدوات كتابة وتدقيق وAPI أو نشرًا داخل خوادمها، والبنوك والجهات الحكومية والمؤسسات التي تحتاج مساعدين افتراضيين وأتمتة ومعالجة مستندات، ومطورو النماذج الذين يحتاجون بيانات عربية منظفة ومصنفة ومراجعة بشريًا.",
+    "market_size": "لا توجد في المصادر العامة المراجعة قيمة مستقلة ومدققة للسوق القابل للخدمة لموضوع تجمع الإعلانات العربية والمحتوى وSEO والبيانات والذكاء الاصطناعي المؤسسي. للسياق الإعلاني المجاور، قدّر IAB MENA الإنفاق الإعلاني الرقمي في الشرق الأوسط وشمال أفريقيا بنحو 6.95 مليارات دولار في 2024، بنمو 19.8%، ونما البحث 24.7%. وللسياق الجماهيري، قدّر الاتحاد الدولي للاتصالات استخدام الإنترنت في الدول العربية عند 69.5% من الأفراد في 2025. هذه أرقام للسوق الإقليمي الأوسع وليست إيراد موضوع أو حصتها السوقية أو حجم سوق منتجاتها منفردة.",
+    "growth_rate": "لا تنشر موضوع معدل نمو حديثًا ومدققًا للإيراد أو الربح. تاريخيًا ارتفع الجمهور المعلن من 45 مليون مستخدم فريد شهريًا في 2018 إلى أرقام حالية تتراوح بين 50 و100 مليون حسب الصفحة والنطاق، لكن اختلاف القياس بين الموقع والشبكة والشركاء يمنع حساب معدل نمو موحد. في 2024 أضافت المجموعة شريكًا استراتيجيًا سعوديًا، ويعرض قلم حاليًا أكثر من 400 ألف مستخدم و18 مليار كلمة مدققة وأكثر من 100 جهة شريكة؛ وهي مؤشرات استخدام منتج لا معدل نمو مالي للمجموعة."
   },
   "financials": {
-    "initial_investment": "بدأ بميزانية صغيرة جداً من المؤسسين (طبيب وشريكه) قبل جمع استثمارات تقارب 30 مليون دولار.",
-    "valuation": "$100M+ (تقييم تقديري)",
+    "initial_investment": "بدأ المؤسسان المشروع بأموالهما وأموال العائلة والأصدقاء، وفاز مشروع موضوع في فئة الجامعات بمسابقة الملكة رانيا الوطنية لريادة الأعمال عام 2011. أغلقت الشركة Series A بقيمة 1.5 مليون دولار في أغسطس 2015، ثم جمعت 13.5 مليون دولار كإغلاق أول لـSeries B في يوليو 2018، وأضافت 10 ملايين دولار في مايو 2019 ليبلغ إجمالي Series B مقدار 23.5 مليون دولار. مجموع الجولات النقدية المعلنة يساوي 25 مليون دولار. في نوفمبر 2024 استحوذت نايف الراجحي الاستثمارية على حصة استراتيجية بقيمة غير معلنة؛ لذلك لا تُضاف الصفقة إلى التمويل التراكمي برقم مفترض.",
+    "valuation": "غير معلن. لم تُنشر نسب الملكية في جولات 2015 و2018 و2019، ولم تُعلن قيمة أو نسبة حصة نايف الراجحي الاستثمارية في 2024. لا توجد قوائم عامة أو معاملة معلنة تسمح باشتقاق تقييم حالي؛ ولذلك حُذف تقدير 100 مليون دولار أو أكثر.",
     "revenue_streams": [
-      "الإعلانات الرقمية عبر شبكات Google ووكالات الإعلان",
-      "أدوات الذكاء الاصطناعي ومعالجة اللغات الطبيعية (قلم)",
-      "تسويق المحتوى للشركات الكبرى"
+      "إعلانات العرض والإعلانات البرمجية عبر مواقع المجموعة وشبكة المحتوى.",
+      "محتوى العلامات التجارية والمحتوى المدفوع والرعاية الإعلامية والحملات المصممة حسب الجمهور.",
+      "خدمات Al-Web لإنتاج المحتوى والترجمة والتدقيق وبناء المواقع والاستضافة والصيانة وتحسين محركات البحث والتحليلات.",
+      "اشتراكات قلم الفردية المدفوعة ضمن حدود استخدام، مع تجربة مجانية وميزات تدقيق وإعادة صياغة وتشكيل وOCR وكشف اقتباس وترجمة.",
+      "عقود قلم للأعمال والمؤسسات: إدارة الفرق والتقارير وSSO وAPI/SDK والنشر السحابي الخاص أو داخل خوادم العميل والدعم.",
+      "خدمات Waraqa لتنظيف البيانات وتصنيفها وإزالة التكرار وتوحيد الصيغ والتحقق والكتابة المتخصصة وإعداد بيانات النماذج.",
+      "عقود Salma.ai للمساعدات الافتراضية المؤسسية ومعالجة المستندات وصوت العميل والأتمتة الرقمية وتطوير الويب والتطبيقات والأمن.",
+      "تطوير وترخيص حلول عربية مخصصة في NLP ونماذج اللغة والمساعدات القطاعية والتكاملات؛ أسعار العقود ومساهمتها غير معلنة.",
+      "شراكات المحتوى والتوزيع وتشغيل أو تطوير منصات ضمن شبكة المجموعة؛ لم يُنشر نموذج العائد لكل منصة أو شريك."
     ]
   },
   "lessons": [
     {
-      "title": "هندسة الـ SEO (تحسين محركات البحث)",
-      "description": "لم يكتبوا المقالات عشوائياً، بل استخدموا بيانات جوجل لمعرفة (ماذا يبحث العرب؟) وكتبوا مقالات تجيب على هذه الأسئلة تحديداً."
+      "title": "الأصل الذي يبدأ كمقال يمكن أن يتحول إلى بيانات ثم منتج برمجي",
+      "description": "استثمرت موضوع أولًا في الكتاب والمحررين والمصادر، ثم استخدمت المعرفة اللغوية لبناء قلم وورقة وسلمى. التحول لا يحدث بمجرد امتلاك أرشيف؛ يحتاج حقوقًا واضحة وبيانات نظيفة وتصنيفات وتقييمًا بشريًا ومنتجًا يحل مشكلة قابلة للدفع."
     },
     {
-      "title": "اغتنام الفجوة اللغوية",
-      "description": "استثمروا في منطقة كان يتجاهلها العمالقة الغربيون، وهي المحتوى العربي، مما منحهم احتكاراً شبه كامل للصفحة الأولى في جوجل العربي."
+      "title": "حجم الجمهور يحتاج نطاقًا وتعريفًا قبل استخدامه",
+      "description": "100 مليون زائر لموضوع وشركائها يختلف عن 50 مليون مستخدم عبر شبكة 200 منصة، وكلاهما يختلف عن زيارات mawdoo3.com وحده. قوة الرقم لا تعفي الشركة من توضيح المصدر والفترة والتكرار والنطاق."
     },
     {
-      "title": "التطور التكنولوجي (Pivot to AI)",
-      "description": "لم يتوقفوا عند نشر المقالات، بل استغلوا ملايين الكلمات العربية لتدريب نماذج ذكاء اصطناعي (NLP) وتطوير منتجات تقنية للشركات."
+      "title": "SEO محرك توزيع قوي لكنه ليس خندقًا مستقلًا",
+      "description": "بناء محتوى يجيب عن نية البحث خلق وصولًا ضخمًا، لكنه يعرّض الناشر لتغيرات الخوارزميات وصفحات الإجابة والذكاء الاصطناعي. الخندق الأقوى هو العلامة والثقة والجمهور المباشر والمنتجات المدفوعة والبيانات التي تحتفظ بقيمتها خارج صفحة النتائج."
+    },
+    {
+      "title": "شبكة المواقع توزع المخاطر وتضاعف تعقيد الحوكمة",
+      "description": "تشغيل أكثر من 200 منصة يسمح بتغطية قطاعات وجماهير متعددة، لكنه يفرض معايير تحرير وخصوصية وإعلانات وأمن وهوية قياس موحدة. من دون حوكمة مركزية قد تتحول الشبكة إلى أصول متفرقة يصعب معرفة ربحيتها وجودتها."
+    },
+    {
+      "title": "الإعلانات تمول المحتوى المفتوح لكنها تجعل الإيراد حساسًا للمنصات",
+      "description": "الإعلانات تسمح بوصول مجاني واسع، إلا أن العائد يتأثر بالطلب الإعلاني والحجب وسياسات المتصفح والمنصات. تطوير SaaS وخدمات B2B ينوّع الدخل، لكنه يحتاج فرق مبيعات ودعم وأمن مختلفة عن نموذج النشر."
+    },
+    {
+      "title": "التدقيق البشري والذكاء الاصطناعي يجب أن يعملا كسلسلة واحدة",
+      "description": "استخدام الذكاء الاصطناعي لتسريع التحرير مفيد، لكن المحتوى الصحي أو المالي أو الديني يحتاج مسؤولية ومصدرًا ومراجعًا. الميزة ليست استبدال المحرر، بل توجيه وقته إلى التحقق والسياق والحالات التي لا يكفي فيها التصحيح الآلي."
+    },
+    {
+      "title": "البيانات العربية عالية الجودة سوق مختلف عن نشر المقالات",
+      "description": "Waraqa تبيع التنظيف والتصنيف والتحقق للجهات التي تطور نماذج، وليس الوصول الإعلاني للقارئ. هذا المسار يتطلب اتفاقات سرية وجودة قابلة للقياس وتعليمات وملكية بيانات، ويجب فصل مقاييسه وهوامشه عن الإعلام."
+    },
+    {
+      "title": "النشر داخل خوادم العميل يحول الخصوصية إلى ميزة منتج",
+      "description": "قلم يتيح النشر السحابي الخاص أو on-premise للمؤسسات، ما يفتح الوزارات والقطاعات الحساسة. هذه المرونة تزيد قيمة العقد، لكنها تفرض دعم نسخ متعددة وتحديثات أمنية والتزامًا بعدم استخدام البيانات خارج النطاق المتفق."
+    },
+    {
+      "title": "الاستثمار الاستراتيجي قد يكون بوابة سوق لا مجرد رأس مال",
+      "description": "حصة نايف الراجحي غير المعلنة لا تسمح بحساب تقييم أو تمويل جديد، لكن أهميتها التشغيلية في فتح السوق السعودي وجذب عقود وبيانات وكفاءات. يجب قياس نجاحها بالإيراد والشراكات والمنتجات الناتجة لا بعنوان الصفقة وحده."
+    },
+    {
+      "title": "الانتقال من الإجابة إلى التنفيذ يرفع قيمة الذكاء الاصطناعي ومخاطره",
+      "description": "سلمى لم تعد مجرد بحث صوتي؛ تعرض مساعدين بنكيين ومعالجة مستندات وأتمتة إجراءات. كلما انتقل النظام من الرد إلى تنفيذ معاملة أو قرار، زادت الحاجة إلى الصلاحيات والتدقيق والاختبار والتصعيد البشري."
+    }
+  ],
+  "tools": [
+    "Mawdoo3.com وشبكة محتوى تعلن المجموعة أنها تتجاوز 200 موقع ومنصة، بينها WebTeb ومنتجات محتوى متخصصة.",
+    "خط إنتاج تحريري يشمل البحث والكتابة المتخصصة والتحقق والمراجعة وأدوات تقنية للمساعدة في التحرير.",
+    "Qalam للتدقيق الإملائي والنحوي وإعادة الصياغة والتشكيل والتفقيط والترجمة وOCR وكشف الاقتباس.",
+    "إضافات قلم للمتصفحات وGoogle Docs وGoogle Slides وMicrosoft Word وOutlook وWordPress.",
+    "Qalam API/SDK وإدارة الفرق والتقارير وSSO والنشر السحابي الخاص أو داخل خوادم العميل.",
+    "Waraqa لتنظيف البيانات وإصلاح الأخطاء وإزالة التكرار وتوحيد الصيغ وتصنيف البيانات والتحقق البشري.",
+    "Al-Web لإنتاج المحتوى وتطوير واستضافة وصيانة المواقع وCMS وتحسين SEO وتحليل الأداء.",
+    "Salma.ai للمساعدات الافتراضية البنكية والمؤسسية ومعالجة المستندات وصوت العميل والأتمتة والتطبيقات والأمن.",
+    "البحث الصوتي والاستماع إلى المقالات والتخصيص الاجتماعي في منتجات المحتوى وفق صفحات المجموعة.",
+    "خدمات الإعلان المرئي والمحتوى المدفوع والرعاية الإعلامية والاستهداف حسب شرائح الجمهور.",
+    "نماذج وأبحاث NLP عربية تاريخية تشمل التعرف إلى اللهجات، مع عدم افتراض أن كل نموذج بحثي هو منتج تجاري حالي.",
+    "تطبيقات قلم الرسمية وواجهاته على الويب والأجهزة، مع 400 ألف+ مستخدم و18 مليار+ كلمة مدققة وفق مؤشرات المنتج."
+  ],
+  "verification": {
+    "status": "verified_from_official_company_legal_product_investor_funding_industry_and_intergovernmental_sources",
+    "verified_on": "2026-08-03",
+    "source_policy": "أُعطيت الأولوية لموقع موضوع وصفحاتها القانونية وصفحات المنتجات الرسمية وإعلان المستثمر الاستراتيجي، ثم تقارير التمويل التي نقلت بيانات الشركة، وIAB MENA والاتحاد الدولي للاتصالات للسياق. لم تُستخدم تقديرات مواقع الزيارات أو الإيرادات أو التقييم. موضوع شركة خاصة وغير مدرجة في الولايات المتحدة، لذلك لا تمثل SEC/EDGAR مسار الإفصاح الطبيعي لها، ولم يظهر مُصدر عام باسمها يمكن الاعتماد عليه حتى تاريخ التحقق.",
+    "important_notes": [
+      "25 مليون دولار هو مجموع الجولات المعلنة: 1.5 مليون Series A و23.5 مليون Series B.",
+      "23.5 مليون دولار هو إجمالي Series B بعد إغلاقَي 2018 و2019، وليس إجمالي التمويل الكامل إذا أضيفت Series A.",
+      "الحصة الاستراتيجية التي اشترتها نايف الراجحي الاستثمارية في 2024 غير معلنة القيمة والنسبة.",
+      "الإيراد وARR وصافي الربح والتقييم الحالي غير معلنة.",
+      "100M+ زائر شهريًا يخص موضوع وشركاءها وفق صفحة About، ولا يثبت زيارات mawdoo3.com وحده.",
+      "50M+ مستخدم شهريًا في LinkedIn يخص شبكة 200+ منصة؛ لا يجوز جمعه مع 100M.",
+      "3B+ مشاهدة صفحة سنويًا و20M+ متابع اجتماعي مؤشرات جمهور مختلفة عن الزوار الفريدين.",
+      "400K+ مستخدم و18B+ كلمة يخصان قلم، لا مستخدمي المجموعة أو إيرادها.",
+      "مليون+ مقال وفيديو يخص شبكة المواقع، بينما صفحة موضوع تعرض 300K+ مقال؛ اختلاف النطاق يفسر جزءًا من الفرق.",
+      "تقدير أن العربية أقل من 1% من محتوى الويب استُخدم تاريخيًا في 2018 ولم يُعامل كحقيقة محدثة لعام 2026.",
+      "6.95 مليارات دولار هو الإنفاق الإعلاني الرقمي الإقليمي كله في 2024، وليس سوق موضوع أو إيرادها.",
+      "69.5% هو استخدام الإنترنت في الدول العربية عام 2025، وليس نسبة جمهور موضوع.",
+      "Al-Web يعلن 200+ شريك و100M+ مستخدم شهري لشركائه؛ هذه مقاييس منتج وليست عملاء موضوع أو زياراتها.",
+      "Qalam Business وWaraqa وSalma وAl-Web قنوات B2B مثبتة، لكن أسعار العقود ومساهمتها في الإيراد غير معلنة.",
+      "حُذف تقييم 100M+ لعدم وجود معاملة أو نسبة ملكية أو إفصاح يدعمه.",
+      "حُذف ادعاء الاحتكار أو السيطرة المطلقة على نتائج البحث؛ توجد ادعاءات ترتيب تاريخية لكن لا توجد حصة سوق مستقلة حالية.",
+      "لم تُضف تقنيات برمجية داخلية غير موثقة إلى الملف."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط كل حقل بقيمته وحالة التحقق والمصادر والقيود، مع فصل الإيراد عن التمويل والتقييم، وفصل زيارات الموقع عن جمهور الشبكة والشركاء ومستخدمي المنتجات، وتمييز نشاط المحتوى والإعلانات عن SaaS والبيانات والذكاء الاصطناعي.",
+    "status_values": {
+      "verified_current_headquarters_legal_operator_and_strategic_stake": "المقر والكيان وصفقة الحصة الاستراتيجية مثبتة مع حدود الملكية.",
+      "verified_multi_stream_media_ai_data_and_services_model": "قنوات النموذج مثبتة عبر المنتجات الرسمية.",
+      "verified_as_not_publicly_disclosed": "المقياس غير منشور ولم يُستبدل بتقدير خارجي.",
+      "verified_conflicting_company_reported_audience_metrics": "تنشر الشركة أرقامًا مختلفة باختلاف النطاق ولم تُدمج.",
+      "analytical_inference_with_historical_metric_limit": "التحليل مدعوم بسياق تاريخي مع رفض تحويل الرقم القديم إلى حقيقة حالية.",
+      "verified": "الادعاء مدعوم مباشرة بمصادر رسمية.",
+      "verified_adjacent_advertising_and_connectivity_context_not_company_tam": "المؤشر يصف السوق المجاور ولا يمثل سوق الشركة.",
+      "verified_company_reported_scale_with_non_comparable_metrics": "مؤشرات الاستخدام منشورة لكن لا تقبل المقارنة المباشرة.",
+      "verified_public_funding_and_undisclosed_strategic_stake": "الجولات موثقة وصفقة الحصة غير معلنة القيمة.",
+      "verified_and_inferred_commercial_channels_prices_and_mix_undisclosed": "قنوات الدخل مدعومة، بينما الأسعار والمزيج غير معلنين.",
+      "verified_product_and_editorial_capabilities_without_speculative_internal_stack": "المنتجات والقدرات مثبتة دون افتراض مكدس داخلي."
+    },
+    "confidence_scale": {
+      "high": "مصدر رسمي مباشر أو قانوني أو إعلان مستثمر أو جهة دولية.",
+      "medium_high": "معلومة منشورة مع اختلاف تعريف أو استنتاج مدعوم بمصادر متعددة.",
+      "medium": "تحليل تشغيلي معقول دون قياس مستقل."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "شركة أردنية تأسست في عمّان عام 2010 على يد رامي القواسمي ومحمد جابر، وما يزال مقرها المعلن في عمّان. تعرّف اتفاقية الاستخدام وسياسة الخصوصية الشركة المالكة والمشغلة للموقع باسم Mawdoo3 Limited و/أو شركاتها التابعة. في نوفمبر 2024 استحوذت شركة نايف الراجحي الاستثمارية السعودية على حصة استراتيجية في موضوع بقيمة ونسبة غير معلنتين، بهدف دعم توسع أعمال الذكاء الاصطناعي والبيانات في السعودية. لا يكشف الإعلان هيكل الملكية الكامل بعد الصفقة.",
+      "verification_status": "verified_current_headquarters_legal_operator_and_strategic_stake",
+      "confidence": "high",
+      "claim_type": "founding_headquarters_legal_entity_and_2024_ownership_event",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تتقاطع صفحات الشركة القانونية والملف الرسمي وإعلان المستثمر لإثبات التأسيس والمقر والحصة الاستراتيجية غير المفصح عنها.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-02",
+        "SRC-04",
+        "SRC-05",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Mawdoo3.com Company Profile",
+          "publisher": "Mawdoo3 on LinkedIn",
+          "source_type": "official_company_current_profile",
+          "url": "https://www.linkedin.com/company/mawdoo3-com",
+          "evidence_type": "direct",
+          "source_locator": "Company profile",
+          "supports": "التأسيس والمقر في عمّان.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Mawdoo3 Terms of Use",
+          "publisher": "Mawdoo3",
+          "source_type": "official_company_legal_terms",
+          "url": "https://mawdoo3.com/%D8%A7%D8%AA%D9%81%D8%A7%D9%82%D9%8A%D8%A9_%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85",
+          "evidence_type": "direct",
+          "source_locator": "Trademark and ownership clauses",
+          "supports": "Mawdoo3 Limited مالكة العلامات والمحتوى.",
+          "published_on": "2023"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Mawdoo3 Privacy Policy",
+          "publisher": "Mawdoo3",
+          "source_type": "official_company_privacy_policy",
+          "url": "https://mawdoo3.com/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9_%D8%A7%D9%84%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9",
+          "evidence_type": "direct",
+          "source_locator": "Privacy introduction",
+          "supports": "تشغيل الموقع بواسطة Mawdoo3 Limited والشركات التابعة.",
+          "published_on": "2023-07-11"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Naif Alrajhi Investment Acquires Strategic Stake in Mawdoo3",
+          "publisher": "Naif Alrajhi Investment",
+          "source_type": "primary_investor_announcement",
+          "url": "https://www.linkedin.com/posts/naif-alrajhi-investment-co_naif-alrajhi-investment-acquired-a-strategic-activity-7267468276954222592-L-qc",
+          "evidence_type": "direct",
+          "source_locator": "Investor announcement",
+          "supports": "الحصة الاستراتيجية والتوسع السعودي.",
+          "published_on": "2024-11-26"
+        }
+      ],
+      "limitations": "لم تُعلن نسبة حصة نايف الراجحي أو هيكل المساهمين الكامل أو قيمة الصفقة."
+    },
+    "$.company.business_model": {
+      "field_value": "مجموعة محتوى وتقنية متعددة المسارات: شبكة مواقع عربية مجانية ممولة بالإعلانات المرئية والبرمجية والمحتوى المدفوع والرعاية الإعلامية؛ خدمات B2B لبناء المواقع وإنتاج المحتوى وتحسين محركات البحث عبر Al-Web؛ خدمات بيانات عربية لتنظيف البيانات وتصنيفها والتحقق منها وكتابتها عبر Waraqa؛ واشتراكات وخدمات مؤسسية للذكاء الاصطناعي عبر Qalam وSalma، تشمل التدقيق وإعادة الصياغة والترجمة وOCR وAPI/SDK والنشر السحابي أو داخل خوادم العميل والمساعدات الافتراضية ومعالجة المستندات والأتمتة. لا تنشر المجموعة أسعارًا موحدة لكل العقود أو مزيج الإيرادات بين الإعلام والبرمجيات والخدمات.",
+      "verification_status": "verified_multi_stream_media_ai_data_and_services_model",
+      "confidence": "high",
+      "claim_type": "advertising_content_seo_ai_saas_data_and_enterprise_services",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت الصفحات الرسمية قنوات الإعلان والخدمات ومنتجات قلم وورقة والويب وسلمى، مع بقاء المزيج المالي غير معلن.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-01",
+        "SRC-12",
+        "SRC-13",
+        "SRC-15",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Us — Mawdoo3",
+          "publisher": "Mawdoo3",
+          "source_type": "official_company_current_about_and_editorial_page",
+          "url": "https://mawdoo3.com/About_Us",
+          "evidence_type": "direct",
+          "source_locator": "Advertising services",
+          "supports": "الإعلانات والمحتوى المدفوع والرعاية.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Qalam Pricing and Business Plans",
+          "publisher": "Qalam",
+          "source_type": "official_product_pricing_page",
+          "url": "https://qalam.ai/en/pricing",
+          "evidence_type": "direct",
+          "source_locator": "Qalam business plan",
+          "supports": "الاشتراك وAPI وSSO والنشر المؤسسي.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Waraqa — Arabic AI Data Services",
+          "publisher": "Waraqa / Mawdoo3",
+          "source_type": "official_product_current_page",
+          "url": "https://www.waraqa.com/en",
+          "evidence_type": "direct",
+          "source_locator": "Waraqa services",
+          "supports": "خدمات البيانات والكتابة.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Al-Web Solutions",
+          "publisher": "Al-Web / Mawdoo3",
+          "source_type": "official_product_services_page",
+          "url": "https://alweb.com/en/f/alweb-solutions",
+          "evidence_type": "direct",
+          "source_locator": "Al-Web solutions",
+          "supports": "المحتوى والمواقع وSEO.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Salma.ai — AI-Powered Business Transformation",
+          "publisher": "Salma.ai",
+          "source_type": "official_product_current_page",
+          "url": "https://salma.ai/",
+          "evidence_type": "direct",
+          "source_locator": "Salma services",
+          "supports": "الذكاء الاصطناعي والأتمتة المؤسسية.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا توجد قائمة أسعار موحدة أو إفصاح عن الإيراد حسب المنتج أو القطاع."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. موضوع شركة خاصة ولا تنشر إيرادًا شهريًا أو سنويًا مدققًا أو ARR أو صافي ربح. التمويل الجريء المعلن البالغ 25 مليون دولار، والاستثمار الاستراتيجي غير المعلن في 2024، وأعداد الزوار والصفحات والكلمات التي عالجها قلم لا تمثل إيرادًا. لذلك حُذف تقدير «ملايين الدولارات شهريًا» بدل اشتقاق مبيعات من مؤشرات الجمهور أو حجم المحتوى.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "revenue_arr_profit_not_disclosed_financing_and_usage_separated",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المصادر تنشر تمويلًا واستخدامًا وعقودًا دون أي قوائم إيراد أو ربح.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-06",
+        "SRC-07",
+        "SRC-08",
+        "SRC-09",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Mawdoo3 Raises $1.5M Series A",
+          "publisher": "Wamda",
+          "source_type": "startup_news_with_founder_interview",
+          "url": "https://www.wamda.com/2015/08/jordans-mawdoo3-1-5m-series-a-funding",
+          "evidence_type": "direct",
+          "source_locator": "Series A",
+          "supports": "1.5 مليون دولار تمويل لا إيراد.",
+          "published_on": "2015-08-19"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Mawdoo3 Raises $13.5M First Series B Close",
+          "publisher": "Wamda",
+          "source_type": "startup_funding_news",
+          "url": "https://www.wamda.com/en/2018/07/arabic-content-platform-mawdoo3-raises-135m-british-american-vcs",
+          "evidence_type": "direct",
+          "source_locator": "First Series B close",
+          "supports": "13.5 مليون دولار تمويل.",
+          "published_on": "2018-07-30"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Mawdoo3 Closes Series B at $23.5M",
+          "publisher": "The Jordan Times",
+          "source_type": "company_statement_republished_by_national_press",
+          "url": "https://jordantimes.com/news/local/mawdoo3com-tops-its-series-b-round-10m-totalling-235m-launch-its-%E2%80%98ujeeb%E2%80%99-platform",
+          "evidence_type": "direct",
+          "source_locator": "Final Series B close",
+          "supports": "10 ملايين وإجمالي 23.5 مليون Series B.",
+          "published_on": "2019-05-27"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Naif Alrajhi Investment Acquires Strategic Stake in Mawdoo3",
+          "publisher": "Naif Alrajhi Investment",
+          "source_type": "primary_investor_announcement",
+          "url": "https://www.linkedin.com/posts/naif-alrajhi-investment-co_naif-alrajhi-investment-acquired-a-strategic-activity-7267468276954222592-L-qc",
+          "evidence_type": "direct",
+          "source_locator": "Strategic stake",
+          "supports": "قيمة الاستثمار غير معلنة.",
+          "published_on": "2024-11-26"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Qalam AI Writing Assistant",
+          "publisher": "Qalam",
+          "source_type": "official_product_current_page",
+          "url": "https://qalam.ai/en/welcome",
+          "evidence_type": "direct",
+          "source_locator": "Qalam usage metrics",
+          "supports": "مستخدمون وكلمات وجهات لا إيراد.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "غياب الإفصاح لا يعني عدم وجود إيراد؛ يعني أن التقدير الشهري غير قابل للتحقق."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "لا يوجد رقم موحد ومستقل ومراجع لزيارات mawdoo3.com وحده في أغسطس 2026. تعرض صفحة «عن موضوع» الحالية أكثر من 100 مليون زائر فريد شهريًا لموضوع وشركائها، و3 مليارات مشاهدة صفحة سنويًا، بينما يعرض الملف الرسمي للشركة على LinkedIn أكثر من 50 مليون مستخدم شهريًا عبر أكثر من 200 منصة، وتعرض صفحة mawdoo3.io رقم 50 مليون مستخدم شهريًا. اختلاف النطاق والتعريف والتحديث يمنع دمج الأرقام أو اعتبارها زيارات شهرية مدققة للموقع الرئيسي وحده. كما أن 20 مليون متابع اجتماعي و400 ألف مستخدم لقلم مؤشرات منفصلة.",
+      "verification_status": "verified_conflicting_company_reported_audience_metrics",
+      "confidence": "medium_high",
+      "claim_type": "site_network_partner_and_product_audience_metrics_not_harmonized",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تنشر صفحات رسمية أرقامًا مختلفة لنطاقات مختلفة، لذلك حُفظت مع تعريفها بدل اختيار رقم واحد تعسفيًا.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Us — Mawdoo3",
+          "publisher": "Mawdoo3",
+          "source_type": "official_company_current_about_and_editorial_page",
+          "url": "https://mawdoo3.com/About_Us",
+          "evidence_type": "direct",
+          "source_locator": "Current group metrics",
+          "supports": "100M+ زائر فريد شهريًا لموضوع وشركائها و3B مشاهدات سنوية.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Mawdoo3.com Company Profile",
+          "publisher": "Mawdoo3 on LinkedIn",
+          "source_type": "official_company_current_profile",
+          "url": "https://www.linkedin.com/company/mawdoo3-com",
+          "evidence_type": "direct",
+          "source_locator": "Corporate network profile",
+          "supports": "50M+ مستخدم شهريًا عبر 200+ منصة.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Mawdoo3 About — Legacy Corporate Page",
+          "publisher": "Mawdoo3",
+          "source_type": "official_company_alternate_about_page",
+          "url": "https://mawdoo3.io/about-en",
+          "evidence_type": "direct",
+          "source_locator": "Alternate about page",
+          "supports": "50M مستخدم شهريًا للمحتوى.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Qalam AI Writing Assistant",
+          "publisher": "Qalam",
+          "source_type": "official_product_current_page",
+          "url": "https://qalam.ai/en/welcome",
+          "evidence_type": "direct",
+          "source_locator": "Qalam metrics",
+          "supports": "400K+ مستخدم و18B+ كلمة كمنتج منفصل.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا تتوفر منهجية مستقلة موحدة أو رقم محدث خاص بـmawdoo3.com وحده؛ الأرقام لا تُجمع."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "عند تأسيس موضوع كان الويب العربي يعاني نقصًا كبيرًا في المحتوى المنظم مقارنة بعدد الناطقين بالعربية؛ وقد استخدمت الشركة والمصادر التاريخية تقديرًا يقل عن 1% من محتوى الويب في ذلك الوقت. لا يصلح هذا التقدير القديم كوصف كمي مؤكد لعام 2026. المشكلة الحالية أوسع: تفاوت جودة المحتوى، صعوبة التحقق والتحرير على نطاق كبير، ضعف البيانات العربية المنظمة لتدريب وتقييم النماذج، واعتماد الناشرين على محركات البحث والمنصات الإعلانية التي تتغير خوارزمياتها باستمرار.",
+        "impact": "قد يصل الباحث العربي إلى إجابات متضاربة أو ضعيفة المصدر، بينما تتحمل مؤسسات الإعلام والقطاعين العام والخاص تكلفة عالية لإنتاج محتوى عربي متسق وتنظيف البيانات وضبط المصطلحات. وبالنسبة للناشر، يمكن أن يؤدي الاعتماد المفرط على البحث والإعلانات إلى تقلب الزيارات والعوائد، فيما تحتاج منتجات الذكاء الاصطناعي إلى بيانات بشرية موثوقة وحقوق استخدام واضحة قبل تحويل المحتوى إلى أصل تقني."
+      },
+      "verification_status": "analytical_inference_with_historical_metric_limit",
+      "confidence": "medium_high",
+      "claim_type": "historical_arabic_content_gap_and_current_quality_data_distribution_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التقدير القديم لفجوة المحتوى موثق تاريخيًا، بينما صياغة مشكلة 2026 تحليل مبني على نشاط التحرير والبيانات والمنتجات.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-07",
+        "SRC-01",
+        "SRC-13",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Mawdoo3 Raises $13.5M First Series B Close",
+          "publisher": "Wamda",
+          "source_type": "startup_funding_news",
+          "url": "https://www.wamda.com/en/2018/07/arabic-content-platform-mawdoo3-raises-135m-british-american-vcs",
+          "evidence_type": "direct",
+          "source_locator": "2018 founding context",
+          "supports": "أقل من 1% كتقدير تاريخي لا حالي.",
+          "published_on": "2018-07-30"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Us — Mawdoo3",
+          "publisher": "Mawdoo3",
+          "source_type": "official_company_current_about_and_editorial_page",
+          "url": "https://mawdoo3.com/About_Us",
+          "evidence_type": "direct",
+          "source_locator": "Editorial process",
+          "supports": "الحاجة للبحث والتحقق والمراجعة.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Waraqa — Arabic AI Data Services",
+          "publisher": "Waraqa / Mawdoo3",
+          "source_type": "official_product_current_page",
+          "url": "https://www.waraqa.com/en",
+          "evidence_type": "direct",
+          "source_locator": "Data quality services",
+          "supports": "التنظيف والتحقق وإعداد البيانات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Al-Web Solutions",
+          "publisher": "Al-Web / Mawdoo3",
+          "source_type": "official_product_services_page",
+          "url": "https://alweb.com/en/f/alweb-solutions",
+          "evidence_type": "direct",
+          "source_locator": "SEO and website services",
+          "supports": "تحديات الاكتشاف والأداء.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لم يُعثر على قياس رسمي محدث لحصة العربية من محتوى الويب في 2026؛ لذلك لم يُكرر رقم 1% كحقيقة حالية."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "بنت موضوع خط إنتاج تحريريًا يبدأ باختيار الموضوع والبحث والكتابة المتخصصة ثم التدقيق والتحقق والمراجعة، وتستخدم أدوات تقنية وذكاء اصطناعي للمساعدة في التحرير. توسعت المجموعة من موقع موسوعي إلى شبكة تتجاوز 200 منصة وتضم موضوع وويب طب ومنتجات محتوى أخرى، مع أصول تعلن الشركة أنها تتجاوز مليون مقال وفيديو عبر الشبكة. حوّلت الخبرة إلى منتجات B2B: قلم للكتابة العربية والتدقيق والترجمة وOCR وواجهات API والنشر داخل المؤسسة؛ ورقة لإعداد بيانات عالية الجودة للنماذج عبر خبراء؛ الويب لبناء المواقع والمحتوى وSEO؛ وسلمى للمساعدات الافتراضية ومعالجة المستندات وتحليل صوت العميل والأتمتة المؤسسية."
+      },
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "editorial_network_and_b2b_ai_data_product_portfolio",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت صفحات المجموعة والمنتجات خط التحرير والشبكة ومحفظة المنتجات B2B.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-11",
+        "SRC-13",
+        "SRC-15",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Us — Mawdoo3",
+          "publisher": "Mawdoo3",
+          "source_type": "official_company_current_about_and_editorial_page",
+          "url": "https://mawdoo3.com/About_Us",
+          "evidence_type": "direct",
+          "source_locator": "Editorial policy and metrics",
+          "supports": "المراحل التحريرية والمقالات والمساهمون.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Mawdoo3.com Company Profile",
+          "publisher": "Mawdoo3 on LinkedIn",
+          "source_type": "official_company_current_profile",
+          "url": "https://www.linkedin.com/company/mawdoo3-com",
+          "evidence_type": "direct",
+          "source_locator": "Network and products",
+          "supports": "200+ منصة ومليون+ أصل وQalam وSalma وWaraqa وAl-Web.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Qalam AI Writing Assistant",
+          "publisher": "Qalam",
+          "source_type": "official_product_current_page",
+          "url": "https://qalam.ai/en/welcome",
+          "evidence_type": "direct",
+          "source_locator": "Qalam capabilities",
+          "supports": "الكتابة والترجمة وOCR والتكاملات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Waraqa — Arabic AI Data Services",
+          "publisher": "Waraqa / Mawdoo3",
+          "source_type": "official_product_current_page",
+          "url": "https://www.waraqa.com/en",
+          "evidence_type": "direct",
+          "source_locator": "Waraqa",
+          "supports": "إعداد البيانات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Al-Web Solutions",
+          "publisher": "Al-Web / Mawdoo3",
+          "source_type": "official_product_services_page",
+          "url": "https://alweb.com/en/f/alweb-solutions",
+          "evidence_type": "direct",
+          "source_locator": "Al-Web",
+          "supports": "المواقع والمحتوى وSEO.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Salma.ai — AI-Powered Business Transformation",
+          "publisher": "Salma.ai",
+          "source_type": "official_product_current_page",
+          "url": "https://salma.ai/",
+          "evidence_type": "direct",
+          "source_locator": "Salma",
+          "supports": "المساعدات والأتمتة والمستندات.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "الأرقام على مستوى المجموعة والشركاء لا تعني ملكية كاملة لكل موقع أو أن جميع المنتجات تحقق إيرادًا ماديًا."
+    },
+    "$.market_data.target_audience": {
+      "field_value": "القراء والباحثون الناطقون بالعربية، والمعلنون والعلامات التي تريد الوصول إلى جماهير المحتوى، والناشرون والمؤسسات التي تحتاج إنتاج محتوى عربي أو بناء مواقع وتحسين SEO، والوزارات والشركات وفرق التحرير التي تحتاج أدوات كتابة وتدقيق وAPI أو نشرًا داخل خوادمها، والبنوك والجهات الحكومية والمؤسسات التي تحتاج مساعدين افتراضيين وأتمتة ومعالجة مستندات، ومطورو النماذج الذين يحتاجون بيانات عربية منظفة ومصنفة ومراجعة بشريًا.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "consumer_advertiser_publisher_enterprise_government_bank_and_llm_segments",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تحدد المنتجات الحالية بوضوح القراء والمعلنين والمؤسسات ومطوري البيانات والنماذج.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-01",
+        "SRC-12",
+        "SRC-13",
+        "SRC-15",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Us — Mawdoo3",
+          "publisher": "Mawdoo3",
+          "source_type": "official_company_current_about_and_editorial_page",
+          "url": "https://mawdoo3.com/About_Us",
+          "evidence_type": "direct",
+          "source_locator": "Audience and ads",
+          "supports": "القراء والمعلنون.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Qalam Pricing and Business Plans",
+          "publisher": "Qalam",
+          "source_type": "official_product_pricing_page",
+          "url": "https://qalam.ai/en/pricing",
+          "evidence_type": "direct",
+          "source_locator": "Business customers",
+          "supports": "الشركات والمؤسسات والوزارات والمواقع.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Waraqa — Arabic AI Data Services",
+          "publisher": "Waraqa / Mawdoo3",
+          "source_type": "official_product_current_page",
+          "url": "https://www.waraqa.com/en",
+          "evidence_type": "direct",
+          "source_locator": "LLM data users",
+          "supports": "مزودو النماذج وخبراء البيانات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Al-Web Solutions",
+          "publisher": "Al-Web / Mawdoo3",
+          "source_type": "official_product_services_page",
+          "url": "https://alweb.com/en/f/alweb-solutions",
+          "evidence_type": "direct",
+          "source_locator": "Website and SEO customers",
+          "supports": "الناشرون والأعمال.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Salma.ai — AI-Powered Business Transformation",
+          "publisher": "Salma.ai",
+          "source_type": "official_product_current_page",
+          "url": "https://salma.ai/",
+          "evidence_type": "direct",
+          "source_locator": "Enterprise verticals",
+          "supports": "البنوك والحكومة والمؤسسات.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا تنشر المجموعة توزيع الإيرادات أو العملاء حسب القطاع أو المنتج."
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا توجد في المصادر العامة المراجعة قيمة مستقلة ومدققة للسوق القابل للخدمة لموضوع تجمع الإعلانات العربية والمحتوى وSEO والبيانات والذكاء الاصطناعي المؤسسي. للسياق الإعلاني المجاور، قدّر IAB MENA الإنفاق الإعلاني الرقمي في الشرق الأوسط وشمال أفريقيا بنحو 6.95 مليارات دولار في 2024، بنمو 19.8%، ونما البحث 24.7%. وللسياق الجماهيري، قدّر الاتحاد الدولي للاتصالات استخدام الإنترنت في الدول العربية عند 69.5% من الأفراد في 2025. هذه أرقام للسوق الإقليمي الأوسع وليست إيراد موضوع أو حصتها السوقية أو حجم سوق منتجاتها منفردة.",
+      "verification_status": "verified_adjacent_advertising_and_connectivity_context_not_company_tam",
+      "confidence": "high",
+      "claim_type": "mena_digital_advertising_and_arab_internet_use_context",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يوفر IAB MENA وITU سياقًا رسميًا أو مؤسسيًا للسوق والجمهور دون اعتباره TAM موضوع.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-17",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-17",
+          "title": "MENA Digital Ad Spend Reaches $6.95B in 2024",
+          "publisher": "IAB MENA",
+          "source_type": "industry_body_market_research",
+          "url": "https://iabmena.com/mena-digital-adspend-reaches-usd-6-95-billion-in-2024/",
+          "evidence_type": "direct",
+          "source_locator": "2024 ad spend results",
+          "supports": "6.95B دولار ونمو 19.8% والبحث 24.7%.",
+          "published_on": "2025-06-12"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Individuals Using the Internet — Arab States",
+          "publisher": "International Telecommunication Union",
+          "source_type": "official_intergovernmental_data",
+          "url": "https://datahub.itu.int/data/?c=&e=3&i=11624&v=chart",
+          "evidence_type": "direct",
+          "source_locator": "2025 Arab States indicator",
+          "supports": "69.5% استخدام الإنترنت.",
+          "published_on": "2025"
+        }
+      ],
+      "limitations": "الإعلانات الرقمية تشمل منصات عالمية وقنوات متعددة، واستخدام الإنترنت لا يقيس الطلب على المحتوى العربي أو SaaS."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا تنشر موضوع معدل نمو حديثًا ومدققًا للإيراد أو الربح. تاريخيًا ارتفع الجمهور المعلن من 45 مليون مستخدم فريد شهريًا في 2018 إلى أرقام حالية تتراوح بين 50 و100 مليون حسب الصفحة والنطاق، لكن اختلاف القياس بين الموقع والشبكة والشركاء يمنع حساب معدل نمو موحد. في 2024 أضافت المجموعة شريكًا استراتيجيًا سعوديًا، ويعرض قلم حاليًا أكثر من 400 ألف مستخدم و18 مليار كلمة مدققة وأكثر من 100 جهة شريكة؛ وهي مؤشرات استخدام منتج لا معدل نمو مالي للمجموعة.",
+      "verification_status": "verified_company_reported_scale_with_non_comparable_metrics",
+      "confidence": "medium_high",
+      "claim_type": "historical_audience_current_network_and_qalam_scale",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تقارن السجلات الجمهور التاريخي والحالي ومؤشرات قلم مع توضيح عدم توحيد النطاق.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-07",
+        "SRC-01",
+        "SRC-02",
+        "SRC-09",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Mawdoo3 Raises $13.5M First Series B Close",
+          "publisher": "Wamda",
+          "source_type": "startup_funding_news",
+          "url": "https://www.wamda.com/en/2018/07/arabic-content-platform-mawdoo3-raises-135m-british-american-vcs",
+          "evidence_type": "direct",
+          "source_locator": "2018 audience",
+          "supports": "45M مستخدم فريد شهريًا.",
+          "published_on": "2018-07-30"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Us — Mawdoo3",
+          "publisher": "Mawdoo3",
+          "source_type": "official_company_current_about_and_editorial_page",
+          "url": "https://mawdoo3.com/About_Us",
+          "evidence_type": "direct",
+          "source_locator": "Current partner metric",
+          "supports": "100M+ زائر شهريًا.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Mawdoo3.com Company Profile",
+          "publisher": "Mawdoo3 on LinkedIn",
+          "source_type": "official_company_current_profile",
+          "url": "https://www.linkedin.com/company/mawdoo3-com",
+          "evidence_type": "direct",
+          "source_locator": "Current network metric",
+          "supports": "50M+ مستخدم عبر 200+ منصة.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Naif Alrajhi Investment Acquires Strategic Stake in Mawdoo3",
+          "publisher": "Naif Alrajhi Investment",
+          "source_type": "primary_investor_announcement",
+          "url": "https://www.linkedin.com/posts/naif-alrajhi-investment-co_naif-alrajhi-investment-acquired-a-strategic-activity-7267468276954222592-L-qc",
+          "evidence_type": "direct",
+          "source_locator": "2024 strategic expansion",
+          "supports": "دخول شريك سعودي.",
+          "published_on": "2024-11-26"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Qalam AI Writing Assistant",
+          "publisher": "Qalam",
+          "source_type": "official_product_current_page",
+          "url": "https://qalam.ai/en/welcome",
+          "evidence_type": "direct",
+          "source_locator": "Qalam scale",
+          "supports": "400K+ مستخدم و18B+ كلمة.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا توجد سلسلة زمنية متجانسة أو قيم إيراد تسمح بحساب CAGR أو نمو مالي."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "بدأ المؤسسان المشروع بأموالهما وأموال العائلة والأصدقاء، وفاز مشروع موضوع في فئة الجامعات بمسابقة الملكة رانيا الوطنية لريادة الأعمال عام 2011. أغلقت الشركة Series A بقيمة 1.5 مليون دولار في أغسطس 2015، ثم جمعت 13.5 مليون دولار كإغلاق أول لـSeries B في يوليو 2018، وأضافت 10 ملايين دولار في مايو 2019 ليبلغ إجمالي Series B مقدار 23.5 مليون دولار. مجموع الجولات النقدية المعلنة يساوي 25 مليون دولار. في نوفمبر 2024 استحوذت نايف الراجحي الاستثمارية على حصة استراتيجية بقيمة غير معلنة؛ لذلك لا تُضاف الصفقة إلى التمويل التراكمي برقم مفترض.",
+      "verification_status": "verified_public_funding_and_undisclosed_strategic_stake",
+      "confidence": "high",
+      "claim_type": "bootstrapping_series_a_series_b_and_2024_stake",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت المصادر الجولات الثلاث ويعطي جمعها 25 مليون دولار، مع فصل صفقة 2024 غير المعلنة.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-06",
+        "SRC-07",
+        "SRC-08",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Mawdoo3 Raises $1.5M Series A",
+          "publisher": "Wamda",
+          "source_type": "startup_news_with_founder_interview",
+          "url": "https://www.wamda.com/2015/08/jordans-mawdoo3-1-5m-series-a-funding",
+          "evidence_type": "direct",
+          "source_locator": "2015 round",
+          "supports": "1.5 مليون دولار والتمويل الذاتي.",
+          "published_on": "2015-08-19"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Mawdoo3 Raises $13.5M First Series B Close",
+          "publisher": "Wamda",
+          "source_type": "startup_funding_news",
+          "url": "https://www.wamda.com/en/2018/07/arabic-content-platform-mawdoo3-raises-135m-british-american-vcs",
+          "evidence_type": "direct",
+          "source_locator": "2018 first close",
+          "supports": "13.5 مليون دولار.",
+          "published_on": "2018-07-30"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Mawdoo3 Closes Series B at $23.5M",
+          "publisher": "The Jordan Times",
+          "source_type": "company_statement_republished_by_national_press",
+          "url": "https://jordantimes.com/news/local/mawdoo3com-tops-its-series-b-round-10m-totalling-235m-launch-its-%E2%80%98ujeeb%E2%80%99-platform",
+          "evidence_type": "direct",
+          "source_locator": "2019 final close",
+          "supports": "10 ملايين وإجمالي Series B 23.5 مليونًا.",
+          "published_on": "2019-05-27"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Naif Alrajhi Investment Acquires Strategic Stake in Mawdoo3",
+          "publisher": "Naif Alrajhi Investment",
+          "source_type": "primary_investor_announcement",
+          "url": "https://www.linkedin.com/posts/naif-alrajhi-investment-co_naif-alrajhi-investment-acquired-a-strategic-activity-7267468276954222592-L-qc",
+          "evidence_type": "direct",
+          "source_locator": "2024 strategic stake",
+          "supports": "قيمة ونسبة غير معلنتين.",
+          "published_on": "2024-11-26"
+        }
+      ],
+      "limitations": "25 مليون دولار مجموع الجولات المعلنة فقط؛ لا تشمل قيمة صفقة 2024 أو جوائز صغيرة غير محددة للشركة."
+    },
+    "$.financials.valuation": {
+      "field_value": "غير معلن. لم تُنشر نسب الملكية في جولات 2015 و2018 و2019، ولم تُعلن قيمة أو نسبة حصة نايف الراجحي الاستثمارية في 2024. لا توجد قوائم عامة أو معاملة معلنة تسمح باشتقاق تقييم حالي؛ ولذلك حُذف تقدير 100 مليون دولار أو أكثر.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "valuation_not_disclosed_no_equity_percentage_or_transaction_value",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا تنشر جولات التمويل أو الصفقة الاستراتيجية نسب ملكية أو تقييمات.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-06",
+        "SRC-07",
+        "SRC-08",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "Mawdoo3 Raises $1.5M Series A",
+          "publisher": "Wamda",
+          "source_type": "startup_news_with_founder_interview",
+          "url": "https://www.wamda.com/2015/08/jordans-mawdoo3-1-5m-series-a-funding",
+          "evidence_type": "direct",
+          "source_locator": "Series A terms",
+          "supports": "المبلغ دون تقييم.",
+          "published_on": "2015-08-19"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Mawdoo3 Raises $13.5M First Series B Close",
+          "publisher": "Wamda",
+          "source_type": "startup_funding_news",
+          "url": "https://www.wamda.com/en/2018/07/arabic-content-platform-mawdoo3-raises-135m-british-american-vcs",
+          "evidence_type": "direct",
+          "source_locator": "Series B first close",
+          "supports": "المبلغ دون تقييم.",
+          "published_on": "2018-07-30"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Mawdoo3 Closes Series B at $23.5M",
+          "publisher": "The Jordan Times",
+          "source_type": "company_statement_republished_by_national_press",
+          "url": "https://jordantimes.com/news/local/mawdoo3com-tops-its-series-b-round-10m-totalling-235m-launch-its-%E2%80%98ujeeb%E2%80%99-platform",
+          "evidence_type": "direct",
+          "source_locator": "Series B final close",
+          "supports": "المبلغ دون تقييم.",
+          "published_on": "2019-05-27"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Naif Alrajhi Investment Acquires Strategic Stake in Mawdoo3",
+          "publisher": "Naif Alrajhi Investment",
+          "source_type": "primary_investor_announcement",
+          "url": "https://www.linkedin.com/posts/naif-alrajhi-investment-co_naif-alrajhi-investment-acquired-a-strategic-activity-7267468276954222592-L-qc",
+          "evidence_type": "direct",
+          "source_locator": "Strategic stake",
+          "supports": "القيمة والنسبة غير معلنتين.",
+          "published_on": "2024-11-26"
+        }
+      ],
+      "limitations": "لا يمكن اشتقاق التقييم من التمويل أو الجمهور أو حجم شبكة المواقع."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "إعلانات العرض والإعلانات البرمجية عبر مواقع المجموعة وشبكة المحتوى.",
+        "محتوى العلامات التجارية والمحتوى المدفوع والرعاية الإعلامية والحملات المصممة حسب الجمهور.",
+        "خدمات Al-Web لإنتاج المحتوى والترجمة والتدقيق وبناء المواقع والاستضافة والصيانة وتحسين محركات البحث والتحليلات.",
+        "اشتراكات قلم الفردية المدفوعة ضمن حدود استخدام، مع تجربة مجانية وميزات تدقيق وإعادة صياغة وتشكيل وOCR وكشف اقتباس وترجمة.",
+        "عقود قلم للأعمال والمؤسسات: إدارة الفرق والتقارير وSSO وAPI/SDK والنشر السحابي الخاص أو داخل خوادم العميل والدعم.",
+        "خدمات Waraqa لتنظيف البيانات وتصنيفها وإزالة التكرار وتوحيد الصيغ والتحقق والكتابة المتخصصة وإعداد بيانات النماذج.",
+        "عقود Salma.ai للمساعدات الافتراضية المؤسسية ومعالجة المستندات وصوت العميل والأتمتة الرقمية وتطوير الويب والتطبيقات والأمن.",
+        "تطوير وترخيص حلول عربية مخصصة في NLP ونماذج اللغة والمساعدات القطاعية والتكاملات؛ أسعار العقود ومساهمتها غير معلنة.",
+        "شراكات المحتوى والتوزيع وتشغيل أو تطوير منصات ضمن شبكة المجموعة؛ لم يُنشر نموذج العائد لكل منصة أو شريك."
+      ],
+      "verification_status": "verified_and_inferred_commercial_channels_prices_and_mix_undisclosed",
+      "confidence": "medium_high",
+      "claim_type": "advertising_branded_content_seo_qalam_data_ai_and_platform_services",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "القنوات مدعومة بصفحات المنتجات والعقود، مع عدم نشر الأسعار أو الإيراد لكل قناة.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-01",
+        "SRC-12",
+        "SRC-13",
+        "SRC-15",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Us — Mawdoo3",
+          "publisher": "Mawdoo3",
+          "source_type": "official_company_current_about_and_editorial_page",
+          "url": "https://mawdoo3.com/About_Us",
+          "evidence_type": "direct",
+          "source_locator": "Advertising services",
+          "supports": "الإعلانات والمحتوى المدفوع.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Qalam Pricing and Business Plans",
+          "publisher": "Qalam",
+          "source_type": "official_product_pricing_page",
+          "url": "https://qalam.ai/en/pricing",
+          "evidence_type": "direct",
+          "source_locator": "Qalam plans",
+          "supports": "اشتراكات فردية وعقود أعمال وAPI ونشر محلي.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Waraqa — Arabic AI Data Services",
+          "publisher": "Waraqa / Mawdoo3",
+          "source_type": "official_product_current_page",
+          "url": "https://www.waraqa.com/en",
+          "evidence_type": "direct",
+          "source_locator": "Waraqa services",
+          "supports": "البيانات والمحتوى.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Al-Web Solutions",
+          "publisher": "Al-Web / Mawdoo3",
+          "source_type": "official_product_services_page",
+          "url": "https://alweb.com/en/f/alweb-solutions",
+          "evidence_type": "direct",
+          "source_locator": "Al-Web services",
+          "supports": "المحتوى والمواقع والاستضافة وSEO.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Salma.ai — AI-Powered Business Transformation",
+          "publisher": "Salma.ai",
+          "source_type": "official_product_current_page",
+          "url": "https://salma.ai/",
+          "evidence_type": "direct",
+          "source_locator": "Salma services",
+          "supports": "المساعدات والمستندات والأتمتة والأمن.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "وجود الخدمة يثبت قناة تجارية محتملة أو فعلية، لكنه لا يكشف حجم الإيراد أو الهامش أو طريقة التسعير."
+    },
+    "$.tools": {
+      "field_value": [
+        "Mawdoo3.com وشبكة محتوى تعلن المجموعة أنها تتجاوز 200 موقع ومنصة، بينها WebTeb ومنتجات محتوى متخصصة.",
+        "خط إنتاج تحريري يشمل البحث والكتابة المتخصصة والتحقق والمراجعة وأدوات تقنية للمساعدة في التحرير.",
+        "Qalam للتدقيق الإملائي والنحوي وإعادة الصياغة والتشكيل والتفقيط والترجمة وOCR وكشف الاقتباس.",
+        "إضافات قلم للمتصفحات وGoogle Docs وGoogle Slides وMicrosoft Word وOutlook وWordPress.",
+        "Qalam API/SDK وإدارة الفرق والتقارير وSSO والنشر السحابي الخاص أو داخل خوادم العميل.",
+        "Waraqa لتنظيف البيانات وإصلاح الأخطاء وإزالة التكرار وتوحيد الصيغ وتصنيف البيانات والتحقق البشري.",
+        "Al-Web لإنتاج المحتوى وتطوير واستضافة وصيانة المواقع وCMS وتحسين SEO وتحليل الأداء.",
+        "Salma.ai للمساعدات الافتراضية البنكية والمؤسسية ومعالجة المستندات وصوت العميل والأتمتة والتطبيقات والأمن.",
+        "البحث الصوتي والاستماع إلى المقالات والتخصيص الاجتماعي في منتجات المحتوى وفق صفحات المجموعة.",
+        "خدمات الإعلان المرئي والمحتوى المدفوع والرعاية الإعلامية والاستهداف حسب شرائح الجمهور.",
+        "نماذج وأبحاث NLP عربية تاريخية تشمل التعرف إلى اللهجات، مع عدم افتراض أن كل نموذج بحثي هو منتج تجاري حالي.",
+        "تطبيقات قلم الرسمية وواجهاته على الويب والأجهزة، مع 400 ألف+ مستخدم و18 مليار+ كلمة مدققة وفق مؤشرات المنتج."
+      ],
+      "verification_status": "verified_product_and_editorial_capabilities_without_speculative_internal_stack",
+      "confidence": "high",
+      "claim_type": "content_network_editorial_qalam_waraqa_alweb_salma_and_distribution_capabilities",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "القائمة تحصر الأدوات والمنتجات المنشورة رسميًا ولا تفترض لغات برمجة أو سحابة أو قواعد بيانات غير معلنة.",
+      "source_count": 9,
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-10",
+        "SRC-11",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14",
+        "SRC-15",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Us — Mawdoo3",
+          "publisher": "Mawdoo3",
+          "source_type": "official_company_current_about_and_editorial_page",
+          "url": "https://mawdoo3.com/About_Us",
+          "evidence_type": "direct",
+          "source_locator": "Editorial and group capabilities",
+          "supports": "التحرير والإعلانات والبحث الصوتي.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Mawdoo3.com Company Profile",
+          "publisher": "Mawdoo3 on LinkedIn",
+          "source_type": "official_company_current_profile",
+          "url": "https://www.linkedin.com/company/mawdoo3-com",
+          "evidence_type": "direct",
+          "source_locator": "Group products",
+          "supports": "الشبكة والمنتجات الرئيسية.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Qalam Terms and Conditions",
+          "publisher": "Qalam / Mawdoo3 Limited",
+          "source_type": "official_product_legal_terms",
+          "url": "https://qalam.ai/en/terms-and-conditions",
+          "evidence_type": "direct",
+          "source_locator": "Qalam legal service definition",
+          "supports": "خدمات الكتابة وAPI.",
+          "published_on": "2024-02-29"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Qalam AI Writing Assistant",
+          "publisher": "Qalam",
+          "source_type": "official_product_current_page",
+          "url": "https://qalam.ai/en/welcome",
+          "evidence_type": "direct",
+          "source_locator": "Qalam current features",
+          "supports": "التدقيق والترجمة وOCR والإضافات والمقاييس.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Qalam Pricing and Business Plans",
+          "publisher": "Qalam",
+          "source_type": "official_product_pricing_page",
+          "url": "https://qalam.ai/en/pricing",
+          "evidence_type": "direct",
+          "source_locator": "Qalam business deployment",
+          "supports": "SSO وAPI والنشر المحلي.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Waraqa — Arabic AI Data Services",
+          "publisher": "Waraqa / Mawdoo3",
+          "source_type": "official_product_current_page",
+          "url": "https://www.waraqa.com/en",
+          "evidence_type": "direct",
+          "source_locator": "Waraqa",
+          "supports": "إعداد البيانات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Al-Web Services and Metrics",
+          "publisher": "Al-Web / Mawdoo3",
+          "source_type": "official_product_current_page",
+          "url": "https://alweb.com/en",
+          "evidence_type": "direct",
+          "source_locator": "Al-Web metrics",
+          "supports": "الشركاء والوصول المعلن.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Al-Web Solutions",
+          "publisher": "Al-Web / Mawdoo3",
+          "source_type": "official_product_services_page",
+          "url": "https://alweb.com/en/f/alweb-solutions",
+          "evidence_type": "direct",
+          "source_locator": "Al-Web solutions",
+          "supports": "المحتوى والتقنية وSEO.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Salma.ai — AI-Powered Business Transformation",
+          "publisher": "Salma.ai",
+          "source_type": "official_product_current_page",
+          "url": "https://salma.ai/",
+          "evidence_type": "direct",
+          "source_locator": "Salma services",
+          "supports": "الذكاء الاصطناعي والأتمتة.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لم تُنشر بنية تقنية داخلية موحدة للمجموعة؛ لذلك لم تُذكر AWS أو Python أو قواعد بيانات كحقائق."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "About Us — Mawdoo3",
+      "publisher": "Mawdoo3",
+      "source_type": "official_company_current_about_and_editorial_page",
+      "published_on": "2026",
+      "url": "https://mawdoo3.com/About_Us",
+      "supports": [
+        "التأسيس عام 2010 والمؤسسان",
+        "100M+ زائر فريد شهريًا لموضوع وشركائها و3B+ مشاهدة صفحة سنويًا",
+        "300K+ مقال و10K+ مساهم و20M+ متابع",
+        "خدمات الإعلان والمحتوى المدفوع",
+        "مراحل البحث والكتابة والتحقق والمراجعة",
+        "الإشارة إلى إغلاق Series B عند 23.5 مليون دولار"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Mawdoo3.com Company Profile",
+      "publisher": "Mawdoo3 on LinkedIn",
+      "source_type": "official_company_current_profile",
+      "published_on": "2026",
+      "url": "https://www.linkedin.com/company/mawdoo3-com",
+      "supports": [
+        "المقر في عمّان والتأسيس في 2010",
+        "أكثر من 200 منصة و50M+ مستخدم شهريًا",
+        "أكثر من مليون مقال وفيديو عبر الشبكة",
+        "Qalam وSalma وWaraqa وAl-Web"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Mawdoo3 About — Legacy Corporate Page",
+      "publisher": "Mawdoo3",
+      "source_type": "official_company_alternate_about_page",
+      "published_on": "2026",
+      "url": "https://mawdoo3.io/about-en",
+      "supports": [
+        "50 مليون مستخدم شهريًا و150 ألف مقال و6,000 مساهم في تعريف مختلف",
+        "الإعلانات والمحتوى المدفوع والرعاية",
+        "خصائص الاستماع والبحث الصوتي والتخصيص"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Mawdoo3 Terms of Use",
+      "publisher": "Mawdoo3",
+      "source_type": "official_company_legal_terms",
+      "published_on": "2023",
+      "url": "https://mawdoo3.com/%D8%A7%D8%AA%D9%81%D8%A7%D9%82%D9%8A%D8%A9_%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85",
+      "supports": [
+        "ملكية العلامات والمحتوى لشركة Mawdoo3 Limited",
+        "حدود إعادة استخدام المحتوى وترخيص الاستخدام الشخصي"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Mawdoo3 Privacy Policy",
+      "publisher": "Mawdoo3",
+      "source_type": "official_company_privacy_policy",
+      "published_on": "2023-07-11",
+      "url": "https://mawdoo3.com/%D8%B3%D9%8A%D8%A7%D8%B3%D8%A9_%D8%A7%D9%84%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9",
+      "supports": [
+        "تشغيل الموقع بواسطة Mawdoo3 Limited والشركات التابعة",
+        "إطار جمع واستخدام البيانات للموقع"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Mawdoo3 Raises $1.5M Series A",
+      "publisher": "Wamda",
+      "source_type": "startup_news_with_founder_interview",
+      "published_on": "2015-08-19",
+      "url": "https://www.wamda.com/2015/08/jordans-mawdoo3-1-5m-series-a-funding",
+      "supports": [
+        "Series A بقيمة 1.5 مليون دولار",
+        "التمويل الذاتي والعائلة والأصدقاء",
+        "جائزة مسابقة الملكة رانيا"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Mawdoo3 Raises $13.5M First Series B Close",
+      "publisher": "Wamda",
+      "source_type": "startup_funding_news",
+      "published_on": "2018-07-30",
+      "url": "https://www.wamda.com/en/2018/07/arabic-content-platform-mawdoo3-raises-135m-british-american-vcs",
+      "supports": [
+        "13.5 مليون دولار في 2018",
+        "45 مليون مستخدم فريد شهريًا و150 ألف مقال تاريخيًا",
+        "التقدير التاريخي لفجوة المحتوى العربي"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Mawdoo3 Closes Series B at $23.5M",
+      "publisher": "The Jordan Times",
+      "source_type": "company_statement_republished_by_national_press",
+      "published_on": "2019-05-27",
+      "url": "https://jordantimes.com/news/local/mawdoo3com-tops-its-series-b-round-10m-totalling-235m-launch-its-%E2%80%98ujeeb%E2%80%99-platform",
+      "supports": [
+        "إضافة 10 ملايين دولار",
+        "إجمالي Series B البالغ 23.5 مليون دولار",
+        "المستثمرون في الإغلاق النهائي"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Naif Alrajhi Investment Acquires Strategic Stake in Mawdoo3",
+      "publisher": "Naif Alrajhi Investment",
+      "source_type": "primary_investor_announcement",
+      "published_on": "2024-11-26",
+      "url": "https://www.linkedin.com/posts/naif-alrajhi-investment-co_naif-alrajhi-investment-acquired-a-strategic-activity-7267468276954222592-L-qc",
+      "supports": [
+        "الاستحواذ على حصة استراتيجية بقيمة غير معلنة",
+        "أكثر من 200 موقع ومليون+ مقال",
+        "التوسع في السعودية ومنتجات Qalam وSalma وWaraqa"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Qalam Terms and Conditions",
+      "publisher": "Qalam / Mawdoo3 Limited",
+      "source_type": "official_product_legal_terms",
+      "published_on": "2024-02-29",
+      "url": "https://qalam.ai/en/terms-and-conditions",
+      "supports": [
+        "ملكية وتشغيل قلم بواسطة Mawdoo3 Limited",
+        "خدمات التدقيق والتشكيل وتحسين الصياغة وAPI/SDK"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Qalam AI Writing Assistant",
+      "publisher": "Qalam",
+      "source_type": "official_product_current_page",
+      "published_on": "2026",
+      "url": "https://qalam.ai/en/welcome",
+      "supports": [
+        "التدقيق والترجمة وOCR وكشف الاقتباس والتشكيل والتفقيط",
+        "الإضافات والتكاملات",
+        "400K+ مستخدم و18B+ كلمة و100+ جهة",
+        "LLM in a box والنشر المحلي"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Qalam Pricing and Business Plans",
+      "publisher": "Qalam",
+      "source_type": "official_product_pricing_page",
+      "published_on": "2026",
+      "url": "https://qalam.ai/en/pricing",
+      "supports": [
+        "الخطة المدفوعة وخطة الأعمال",
+        "API/SDK وSSO وإدارة الفرق والتقارير",
+        "النشر السحابي الخاص وon-premise",
+        "غياب سعر عام صالح للخطة المؤسسية"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Waraqa — Arabic AI Data Services",
+      "publisher": "Waraqa / Mawdoo3",
+      "source_type": "official_product_current_page",
+      "published_on": "2026",
+      "url": "https://www.waraqa.com/en",
+      "supports": [
+        "تنظيف البيانات وإصلاح الأخطاء وإزالة التكرار وتوحيد الصيغ",
+        "التحقق عبر خبراء وكتابة محتوى وبيانات للنماذج"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Al-Web Services and Metrics",
+      "publisher": "Al-Web / Mawdoo3",
+      "source_type": "official_product_current_page",
+      "published_on": "2026",
+      "url": "https://alweb.com/en",
+      "supports": [
+        "المحتوى وتطوير المواقع وSEO",
+        "200+ شريك و100M+ مستخدم شهري لشركاء Al-Web وفق المنتج"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Al-Web Solutions",
+      "publisher": "Al-Web / Mawdoo3",
+      "source_type": "official_product_services_page",
+      "published_on": "2026",
+      "url": "https://alweb.com/en/f/alweb-solutions",
+      "supports": [
+        "إنتاج المحتوى والترجمة والتدقيق",
+        "تصميم وتطوير واستضافة وصيانة المواقع وCMS",
+        "تدقيق SEO والكلمات وتحليل المنافسين والتقارير"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Salma.ai — AI-Powered Business Transformation",
+      "publisher": "Salma.ai",
+      "source_type": "official_product_current_page",
+      "published_on": "2026",
+      "url": "https://salma.ai/",
+      "supports": [
+        "المساعد الافتراضي ومعالجة المستندات وصوت العميل",
+        "الأتمتة الرقمية والتطوير والأمن",
+        "التركيز على البنوك والحكومة والمؤسسات"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "MENA Digital Ad Spend Reaches $6.95B in 2024",
+      "publisher": "IAB MENA",
+      "source_type": "industry_body_market_research",
+      "published_on": "2025-06-12",
+      "url": "https://iabmena.com/mena-digital-adspend-reaches-usd-6-95-billion-in-2024/",
+      "supports": [
+        "6.95 مليارات دولار إنفاق رقمي في 2024",
+        "نمو 19.8% ونمو البحث 24.7%"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Individuals Using the Internet — Arab States",
+      "publisher": "International Telecommunication Union",
+      "source_type": "official_intergovernmental_data",
+      "published_on": "2025",
+      "url": "https://datahub.itu.int/data/?c=&e=3&i=11624&v=chart",
+      "supports": [
+        "69.5% نسبة استخدام الإنترنت في الدول العربية في 2025",
+        "تعريف المؤشر بأنه الاستخدام خلال الأشهر الثلاثة السابقة"
+      ]
     }
   ]
 }

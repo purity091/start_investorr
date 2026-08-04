@@ -2,52 +2,1223 @@
   "id": "notion",
   "slug": "notion",
   "name": "نوشن (Notion)",
-  "headline": "مساحة العمل المتكاملة التي غيرت طريقة عمل الفرق والأفراد",
-  "category": "B2B & B2C SaaS / الإنتاجية ومساحات العمل",
+  "headline": "من مساحة عمل قائمة على الكتل إلى منصة للوكلاء والبرمجة: كيف حافظت نوشن على تقييم 11 مليار دولار دون أن يصبح العرض الثانوي تمويلًا للشركة",
+  "category": "برمجيات الإنتاجية وإدارة المعرفة ووكلاء الذكاء الاصطناعي / Productivity, Knowledge Management & AI Agents",
   "company": {
-    "location": "سان فرانسيسكو، الولايات المتحدة",
-    "business_model": "Freemium + اشتراكات شهرية للفرق والشركات"
+    "legal_name": "Notion Labs, Inc.",
+    "jurisdiction": "Delaware, United States",
+    "sec_cik": "0001781814",
+    "location": "سان فرانسيسكو، كاليفورنيا، الولايات المتحدة، مع قاعدة مستخدمين وعمليات عالمية وخيارات إقامة بيانات إقليمية للمؤسسات.",
+    "founded": 2013,
+    "founding_and_rebuild_history": {
+      "started": "بدأت الشركة عام 2013 وفق رواية المؤسس الرسمية.",
+      "near_failure": "فشل الإصدار الأول تقريبًا، وانتقل الفريق إلى كيوتو عام 2015 لإعادة البناء.",
+      "traction": "بدأت إشارات الجذب القوية بعد إطلاق Notion 2.0 على Product Hunt عام 2018."
+    },
+    "founders_and_public_cofounders": {
+      "ivan_zhao": "شريك مؤسس ورئيس تنفيذي؛ يظهر قانونيًا باسم Huan Zhao في إفصاحات Form D.",
+      "simon_last": "شريك مؤسس ومهندس مبكر.",
+      "akshay_kothari": "يُعرّف رسميًا كشريك مؤسس في منشورات الشركة ويقود منتجات الذكاء الاصطناعي ووكلاء العمل.",
+      "note": "فُصلت الأدوار العامة الحالية عن القائمة التاريخية الضيقة للمؤسسين لأن المصادر الرسمية تستخدم لقب co-founder لأكثر من مرحلة."
+    },
+    "business_model": "نموذج Freemium واشتراكات SaaS على مستوى مساحة العمل والمقاعد عبر Free وPlus وBusiness وEnterprise. تتضمن Business وEnterprise ميزات Notion AI الأساسية، بينما تعمل Custom Agents بأرصدة استخدام مدفوعة، وتدخل Workers في نموذج الأرصدة بعد انتهاء الفترة التجريبية. توجد إضافات مدفوعة للنطاقات المخصصة، كما تدير نوشن Marketplace للقوالب والخدمات وقد تحتفظ برسوم وفق شروطه.",
+    "current_product_scope": [
+      "Docs وWikis وقواعد البيانات والمشروعات والمهام",
+      "Notion AI وNotion Agent وResearch Mode",
+      "Custom Agents",
+      "AI Meeting Notes وEnterprise Search",
+      "Forms وSites وCharts وDashboards",
+      "Notion Calendar",
+      "Notion Mail — نشط حاليًا لكن إغلاقه معلن في 22 سبتمبر 2026",
+      "Developer Platform وCLI وWorkers وWebhooks",
+      "Marketplace للقوالب والخدمات"
+    ],
+    "customer_segments": [
+      "الأفراد والطلاب والمعلمون",
+      "المستقلون وصناع المحتوى",
+      "الفرق الصغيرة والشركات الناشئة",
+      "فرق المعرفة والمنتج والهندسة والتسويق والعمليات",
+      "المؤسسات الكبرى والقطاعات المنظمة",
+      "المطورون وبناة التكاملات والوكلاء",
+      "صناع القوالب وشركاء الاستشارات والتنفيذ"
+    ],
+    "private_company_status_as_of_2026_08_03": {
+      "status": "شركة خاصة",
+      "latest_liquidity_event": "عرض ثانوي خاص أُغلق في يناير 2026.",
+      "public_filing_status": "لديها إفصاحات Form D لعروض أوراق مالية معفاة، لكنها لا تقدم 10-K أو 10-Q كشركة عامة.",
+      "ipo_status": "لم يُعثر على نشرة اكتتاب عامة أو تسجيل طرح عام حتى تاريخ التحقق."
+    },
+    "operating_status_as_of_2026_08_03": {
+      "status": "نشطة وتتوسع من مساحة عمل إلى منصة للوكلاء والمطورين",
+      "evidence": "أطلقت Custom Agents ومنصة المطورين وWorkers وتحديثات للوكلاء والتقويم خلال 2026، مع استمرار الخطط المدفوعة ومنتجات المؤسسات.",
+      "caution": "التوسع في المنتجات وعدد المستخدمين لا يكشفان الإيرادات المدققة أو الربحية أو الاحتفاظ."
+    }
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين",
-    "monthly_traffic": "150M+ /mo"
+    "monthly_revenue": null,
+    "monthly_revenue_note": "لا تنشر نوشن إيرادات شهرية مدققة. نُشر تقدير صحفي بأنها تجاوزت 600 مليون دولار ARR في أواخر 2025، لكن ARR ليس إيرادًا شهريًا محققًا؛ لذلك أزيلت عبارة «عشرات الملايين» ووُضع null.",
+    "monthly_traffic": null,
+    "monthly_traffic_note": "لا توجد زيارات شهرية موثقة بقيمة 150 مليون. تجاوزت نوشن 100 مليون مستخدم إجماليًا في أغسطس 2024، لكن المستخدمين التراكميين ليسوا زيارات أو مستخدمين نشطين شهريًا.",
+    "latest_verified_operating_snapshot": {
+      "as_of": "2026-08-03",
+      "users": {
+        "public_milestone": 100000000,
+        "milestone_period": "2024-08",
+        "publication_date": "2024-09-03",
+        "status": "cumulative_user_milestone",
+        "current_active_users": null,
+        "note": "لم يُعثر على تحديث رسمي أحدث لعدد المستخدمين أو MAU."
+      },
+      "valuation_and_liquidity": {
+        "implied_valuation_usd": 11000000000,
+        "tender_amount_usd": 270000000,
+        "date": "2026-01-26",
+        "classification": "secondary_employee_liquidity",
+        "company_primary_proceeds_usd": 0,
+        "buyers": [
+          "GIC",
+          "Sequoia Capital",
+          "Index Ventures"
+        ]
+      },
+      "reported_business_metrics": {
+        "arr_usd": 600000000,
+        "arr_operator": "أكثر من",
+        "as_of": "2025-12",
+        "ai_share_of_arr": "نحو النصف وفق تقرير Forbes",
+        "cash_flow_positive": "نعم وفق التقرير الصحفي",
+        "status": "reputable_secondary_reporting_not_company_audited",
+        "note": "لم تنشر نوشن قوائم مالية أو تعريفًا تفصيليًا لـARR وتقسيم AI."
+      },
+      "product_and_pricing_status": {
+        "plans": [
+          "Free",
+          "Plus",
+          "Business",
+          "Enterprise"
+        ],
+        "core_ai": "مدمج في Business وEnterprise، وتجربة محدودة في Free وPlus.",
+        "custom_agents": "تعمل بأرصدة منذ 4 مايو 2026 على Business وEnterprise.",
+        "notion_credits_price": "$10 لكل 1,000 رصيد شهري وفق صفحة التسعير الحالية.",
+        "workers": "نسخة Beta مجانية حتى 10 أغسطس 2026؛ يبدأ استخدام الأرصدة في 11 أغسطس 2026 وفق الإعلان.",
+        "custom_site_domain": "$8 شهريًا للنطاق عند الدفع السنوي أو $10 عند الدفع الشهري، حسب صفحة التسعير.",
+        "mail": "مجاني ومتصل بـGmail، لكن إغلاقه معلن في 22 سبتمبر 2026."
+      },
+      "developer_platform_2026": [
+        "CLI باسم ntn",
+        "Workers لاستضافة كود مخصص داخل بنية نوشن",
+        "External Agents API",
+        "Webhook triggers ثنائية الاتجاه",
+        "أدوات مخصصة للوكلاء",
+        "MCP وتكاملات وكلاء خارجية"
+      ]
+    },
+    "metric_distinctions": {
+      "revenue": "الإيراد المحاسبي خلال فترة؛ غير منشور علنًا.",
+      "arr": "القيمة السنوية المتكررة للعقود أو الاشتراكات وفق تعريف الشركة الداخلي؛ رقم 600 مليون دولار من تقرير صحفي وليس قوائم مدققة.",
+      "valuation": "قيمة ضمنية للأسهم في معاملة خاصة؛ 11 مليار دولار في عرض ثانوي يناير 2026.",
+      "primary_funding": "أموال تدخل الشركة مقابل أوراق مالية جديدة، مثل جولات 2020 و2021.",
+      "secondary_tender": "شراء أسهم من موظفين ومساهمين حاليين؛ لا تدخل عائداته إلى الشركة.",
+      "users": "100 مليون مستخدم تراكمي عند المحطة المعلنة، وليسوا MAU أو عملاء مدفوعين.",
+      "traffic": "زيارات أو جلسات الموقع والتطبيق؛ غير منشورة بصورة موثقة.",
+      "credits": "وحدة استخدام للوكلاء وWorkers، وليست مقعدًا أو اشتراكًا أساسيًا.",
+      "marketplace_sales": "قيمة مبيعات قوالب صناع المحتوى؛ لا توجد بيانات منشورة عن حجمها أو إيراد نوشن منها."
+    }
   },
   "overview": {
     "problem": {
-      "text": "تشتت العمل بين أدوات مختلفة (مستندات، جداول بيانات، إدارة مهام، وقواعد بيانات).",
-      "impact": "فقدان المعرفة المؤسسية وضعف الإنتاجية، حيث يقضي الموظفون وقتاً طويلاً في البحث عن المعلومات والتنقل بين التطبيقات."
+      "text": "يتوزع العمل بين المستندات وقواعد البيانات والمشروعات والبحث والاجتماعات والتقويم والبريد والتطبيقات المتخصصة، ما يجعل السياق المؤسسي مجزأً ويصعب على الإنسان أو الوكيل تنفيذ العمل من مصدر موحد.",
+      "impact": "يزيد التشتت زمن البحث وتكرار المعلومات وتضارب النسخ وفقدان المعرفة. لكن لم تُستخدم أرقام عامة عن ساعات الهدر أو ضعف الإنتاجية من دون دراسة محددة مرتبطة بمستخدمي نوشن."
     },
     "solution": {
-      "text": "منصة واحدة تدمج بين كل هذه الأدوات بطريقة مرنة تعتمد على الكتل (Blocks) القابلة للتخصيص."
+      "text": "تعتمد نوشن على نموذج الكتل الذي يجعل النصوص والصفحات والصفوف وقواعد البيانات وحدات قابلة للتركيب والتحويل. توسعت المنصة من المستندات والويكي والمشروعات إلى البحث المؤسسي والاجتماعات والتقويم والوكلاء الآليين ومنصة مطورين تستضيف كودًا مخصصًا وتربط البيانات والأدوات."
     }
   },
   "market_data": {
-    "target_audience": "الأفراد، الطلاب، الشركات الناشئة، والشركات الكبرى (B2B & B2C).",
-    "market_size": "سوق برمجيات التعاون يقدر بـ 45 مليار دولار.",
-    "growth_rate": "نمو جنوني عبر التسويق الشفهي وتكوين مجتمعات صانعي المحتوى."
+    "target_audience": "الأفراد والطلاب والفرق والشركات والمؤسسات وصناع القوالب والمطورون الذين يحتاجون مساحة معرفة وعمل ووكلاء متصلين بالسياق.",
+    "market_size": null,
+    "market_size_note": "أزيل تقدير 45 مليار دولار لأنه لا يحدد سنة أو تعريفًا ثابتًا للسوق. نوشن تنافس الآن في المستندات وإدارة المعرفة والمشروعات والبحث المؤسسي والتقويم والوكلاء والمنصات البرمجية، ما يجعل رقم سوق واحد مضللًا.",
+    "growth_rate": null,
+    "growth_rate_note": "قالت الشركة إن نمو 2025 تسارع بفضل تبني الذكاء الاصطناعي، وتحدث تقرير صحفي عن تجاوز 600 مليون دولار ARR، لكن لا توجد سلسلة مالية مدققة أو نسبة نمو رسمية تسمح بحساب معدل حالي.",
+    "adoption_context": {
+      "100m_users": "تجاوزت نوشن 100 مليون مستخدم في أغسطس 2024.",
+      "startup_program_2023": "ذكرت نوشن أن أكثر من 80 ألف شركة ناشئة استخدمت برنامجها في 2023.",
+      "internationalization": "استثمرت في لغات وأسواق وإقامة بيانات إقليمية، مع خيارات اليابان وكوريا للمؤسسات بدءًا من مايو 2026.",
+      "note": "هذه مؤشرات انتشار وليست حصة سوق أو عملاء مدفوعين."
+    },
+    "competitive_context": [
+      "Microsoft 365 وCopilot",
+      "Google Workspace وGemini",
+      "Atlassian Confluence وJira",
+      "Slack وSalesforce",
+      "Coda",
+      "ClickUp وAsana وMonday.com",
+      "Airtable",
+      "Obsidian وEvernote",
+      "Glean والبحث المؤسسي",
+      "منصات الوكلاء والأتمتة مثل Zapier وMicrosoft Copilot Studio"
+    ],
+    "regulatory_and_security_context": {
+      "sec": "Notion Labs, Inc. قدمت Form D لعروض خاصة معفاة، لكنها ليست شركة تقارير عامة.",
+      "privacy": "تعالج محتوى وبيانات عمل عالمية، ما يخلق التزامات GDPR وCCPA ونقل البيانات والعقود مع مزودي الذكاء الاصطناعي.",
+      "security": "تعلن نوشن امتثالًا أو شهادات تشمل SOC 2 Type II وISO 27001 وISO 27701 وISO 27017 وISO 27018 وBSI C5 وفق صفحاتها.",
+      "data_residency": "أعلنت إقامة بيانات للمؤسسات في اليابان وكوريا على بنية AWS بدءًا من مايو 2026، إضافة إلى خيارات إقليمية أخرى.",
+      "ai_governance": "تشغيل وكلاء مجدولين بصلاحيات على البريد والتقويم والملفات يرفع أهمية سجلات التشغيل والصلاحيات والإيقاف وحدود الإنفاق."
+    }
   },
   "financials": {
-    "initial_investment": "بدأت بتمويل ملائكي صغير وكادت أن تفلس في عام 2015.",
-    "valuation": "$10B+",
+    "initial_investment": "اعتمدت نوشن على تمويل خاص وجسور مبكرة خلال إعادة البناء. من الجولات العامة البارزة: 50 مليون دولار في أبريل 2020 عند تقييم 2 مليار دولار، ثم 275 مليون دولار في أكتوبر 2021 عند تقييم 10 مليارات دولار. سبقتها جولة خاصة في 2019 موثقة بإفصاح Form D، لكن قيمة الجولة لم تُستخدم هنا لعدم ظهور رقم متسق في المصادر الأساسية.",
+    "valuation": {
+      "current_implied_valuation_usd": 11000000000,
+      "valuation_date": "2026-01-26",
+      "valuation_basis": "عرض ثانوي خاص لأسهم موظفين حاليين وسابقين",
+      "company_proceeds_usd": 0,
+      "new_primary_shares_issued": false,
+      "previous_primary_round_valuation_usd": 10000000000,
+      "previous_primary_round_date": "2021-10",
+      "previous_primary_round_amount_usd": 275000000,
+      "historical_2020_valuation_usd": 2000000000,
+      "note": "تقييم 11 مليار دولار يحدد سعر العرض الثانوي ولا يمثل جولة نقد جديدة أو قيمة سوقية عامة."
+    },
+    "latest_financial_metrics": {
+      "current_revenue": null,
+      "current_net_income": null,
+      "current_cash": null,
+      "current_debt": null,
+      "current_free_cash_flow": null,
+      "current_paid_customers": null,
+      "current_mau": null,
+      "audited_financial_statements_available": false,
+      "reported_arr_2025": {
+        "amount_usd": 600000000,
+        "operator": "أكثر من",
+        "ai_share": "نحو 50%",
+        "cash_flow_positive": true,
+        "status": "Forbes_reported_from_people_familiar_not_audited"
+      }
+    },
+    "funding_and_liquidity": {
+      "selected_primary_rounds": [
+        {
+          "date": "2020-04",
+          "amount_usd": 50000000,
+          "valuation_usd": 2000000000,
+          "classification": "primary_equity"
+        },
+        {
+          "date": "2021-10",
+          "amount_usd": 275000000,
+          "valuation_usd": 10000000000,
+          "classification": "primary_equity",
+          "lead_investors": [
+            "Coatue Management",
+            "Sequoia Capital"
+          ]
+        }
+      ],
+      "selected_primary_total_usd": 325000000,
+      "secondary_tender_2026": {
+        "amount_usd": 270000000,
+        "valuation_usd": 11000000000,
+        "company_funding": false
+      },
+      "total_funding_note": "ذكرت Forbes أن إجمالي رأس المال المجموع يقارب 330 مليون دولار؛ لم يُستخدم العرض الثانوي ضمن إجمالي التمويل لأنه سيولة للمساهمين."
+    },
     "revenue_streams": [
-      "اشتراكات بلس وبرو (للأفراد)",
-      "اشتراكات فرق العمل (Team)",
-      "اشتراكات الشركات (Enterprise)",
-      "Notion AI (إضافة مدفوعة)"
+      "اشتراكات Plus على مستوى أعضاء مساحة العمل.",
+      "اشتراكات Business التي تتضمن Notion AI والبحث والاجتماعات والتكاملات المتقدمة.",
+      "عقود Enterprise المخصصة مع ضوابط الأمان والإدارة وإقامة البيانات والدعم.",
+      "أرصدة Custom Agents بسعر معلن قدره 10 دولارات لكل 1,000 رصيد شهري.",
+      "أرصدة Workers بعد بدء الفوترة المعلن في 11 أغسطس 2026؛ لم تُفترض إيرادات قبل بدء التطبيق.",
+      "إضافات النطاقات المخصصة لمواقع Notion.",
+      "رسوم Marketplace المحتملة على القوالب المدفوعة والخدمات؛ الشروط تسمح بالرسوم لكن لم يُنشر حجم الإيراد أو معدل موحد في المصادر المستخدمة.",
+      "Notion Calendar وNotion Mail يقدمان مجانًا في العرض الحالي، ولا يُعاملان كخطي إيراد مستقلين."
+    ],
+    "product_sunset_and_pricing_events": [
+      {
+        "product": "Notion Mail",
+        "event": "إغلاق معلن",
+        "date": "2026-09-22",
+        "status_as_of_file": "ما زال متاحًا قبل موعد الإغلاق",
+        "financial_interpretation": "ليس أصلًا دائمًا يمكن استخدامه لتبرير توسع الإيراد."
+      },
+      {
+        "product": "Custom Agents",
+        "event": "بدء استخدام الأرصدة",
+        "date": "2026-05-04",
+        "status_as_of_file": "مدفوع بالاستخدام"
+      },
+      {
+        "product": "Workers",
+        "event": "بدء استخدام الأرصدة المعلن",
+        "date": "2026-08-11",
+        "status_as_of_file": "Beta مجانية في تاريخ الملف"
+      }
     ]
+  },
+  "analysis": {
+    "core_thesis": "ميزة نوشن لم تعد جمع المستندات وقواعد البيانات في صفحة جميلة. القيمة المحتملة هي أن نموذج الكتل والصلاحيات والروابط يخزن سياق العمل في شكل يستطيع الإنسان والوكيل والكود قراءته والتصرف فيه. الرهان الحالي هو تحويل هذا السياق إلى وكلاء مدفوعي الاستخدام دون أن تتضخم التكلفة أو التعقيد أو مخاطر الصلاحيات.",
+    "what_changed": [
+      "تجاوزت نوشن 100 مليون مستخدم في 2024، لكن لم تنشر رقمًا أحدث للنشاط الشهري.",
+      "ارتفع التقييم من 10 مليارات في جولة 2021 إلى 11 مليارًا في عرض ثانوي عام 2026.",
+      "العرض الثانوي البالغ 270 مليون دولار لم يدخل أموالًا للشركة.",
+      "تحولت Notion AI من إضافة كتابة إلى Agent قادر على تنفيذ مهام متعددة الخطوات.",
+      "أطلقت Custom Agents المجدولة ورسوم الاستخدام عبر Notion credits.",
+      "أطلقت منصة مطورين وWorkers لاستضافة كود وتوسيع الوكلاء والتكاملات.",
+      "أصبح التسعير الأساسي AI-inclusive في Business وEnterprise مع إيراد استخدام إضافي للوكلاء.",
+      "توسعت المنصة إلى Calendar وMail، لكن إغلاق Mail أُعلن بعد نحو 17 شهرًا من الإطلاق.",
+      "أفاد تقرير صحفي بتجاوز 600 مليون دولار ARR وأن نحو نصفه مرتبط بمنتجات AI، دون قوائم مدققة.",
+      "أصبحت إقامة البيانات والأمان المؤسسي جزءًا مهمًا من التوسع الدولي."
+    ],
+    "competitive_advantage": [
+      "نموذج كتل مرن يجمع النص والبيانات والمشروعات.",
+      "قاعدة مستخدمين تراكمية تجاوزت 100 مليون.",
+      "توزيع يقوده المنتج والمشاركة والقوالب.",
+      "Marketplace ومجتمع صناع القوالب والاستشاريين.",
+      "تكامل المستندات والبحث والاجتماعات والتقويم والوكلاء في سياق واحد.",
+      "Custom Agents بصلاحيات وسجلات تشغيل وتحكم مؤسسي.",
+      "منصة مطورين تستضيف Workers وتسمح بإدخال وكلاء خارجيين.",
+      "تاريخ استحواذات يدعم التقويم والتكاملات والبريد.",
+      "خيارات أمان وإقامة بيانات وشهادات للمؤسسات.",
+      "تعدد نماذج الذكاء الاصطناعي والتكامل مع أدوات خارجية."
+    ],
+    "risks_and_constraints": [
+      "لا توجد قوائم مالية عامة تكشف الإيراد أو الربحية أو التدفق النقدي أو التركيز.",
+      "ARR البالغ 600 مليون دولار وتوزيع AI وردا من تقرير صحفي لا إفصاح مدقق.",
+      "100 مليون مستخدم رقم تراكمي قد يخفي نشاطًا منخفضًا أو حسابات مجانية.",
+      "وكلاء يعملون 24/7 قد يخلقون فواتير غير متوقعة أو أفعالًا خاطئة إذا ساءت الصلاحيات أو التعليمات.",
+      "التسعير بالأرصدة يضيف تعقيدًا إلى نموذج المقعد وقد يبطئ التبني.",
+      "إغلاق Notion Mail يوضح أن التوسع الأفقي لا يضمن استدامة كل منتج.",
+      "الاعتماد على مزودي نماذج وAWS يخلق مخاطر تكلفة وتوافر وتفاوض.",
+      "الوكلاء والبحث عبر أدوات متعددة يرفعان مخاطر الخصوصية وتسرب البيانات والامتثال.",
+      "Microsoft وGoogle وAtlassian يملكون توزيعًا مؤسسيًا وحزمًا أوسع.",
+      "منصة Workers تنافس أدوات أتمتة ومطورين ناضجة وتحتاج أمان sandbox ومراقبة صارمة.",
+      "العرض الثانوي يمنح سيولة لكنه قد يُفهم خطأ كتمويل نمو جديد.",
+      "الاستمرار كشركة خاصة يحد من شفافية الأرقام ويجعل التقييم أقل سيولة من السوق العامة."
+    ],
+    "outlook_as_of_2026_08_03": "نوشن منصة إنتاجية وذكاء اصطناعي خاصة ذات قاعدة مستخدمين واسعة وتقييم ضمني 11 مليار دولار. التصنيف المحافظ هو «منصة عمل ووكلاء عالية الانتشار مع ARR قوي مُبلغ صحفيًا وشفافية مالية محدودة». المؤشرات الحاسمة هي نمو ARR الفعلي، نسبة AI المتكررة، هامش الأرصدة، احتفاظ المؤسسات، نشاط المستخدمين، ودقة وأمان الوكلاء."
   },
   "lessons": [
     {
-      "title": "العودة للأساسيات عند الفشل",
-      "description": "عندما كاد التطبيق الأول أن يفشل، قام المؤسسون بنقل الفريق إلى اليابان لتقليل التكاليف وإعادة بناء التطبيق من الصفر."
+      "title": "العرض الثانوي ليس تمويلًا",
+      "description": "الـ270 مليون دولار ذهبت لشراء أسهم موظفين ومساهمين، ولم تدخل خزينة نوشن. التقييم والسيولة والتمويل مقاييس منفصلة."
     },
     {
-      "title": "قوة المجتمع (Community-Led Growth)",
-      "description": "سمحت نوشن للمستخدمين بإنشاء وبيع قوالب (Templates) مما خلق جيشاً من المسوقين المجانيين للمنصة."
+      "title": "المستخدم التراكمي ليس حركة شهرية",
+      "description": "تجاوز 100 مليون مستخدم يثبت الانتشار، لكنه لا يدعم ادعاء 150 مليون زيارة أو يوضح النشاط والاحتفاظ والدفع."
     },
     {
-      "title": "المرونة القصوى (Lego-like)",
-      "description": "بناء أداة تتشكل حسب رغبة المستخدم (Blocks) أفضل من فرض طريقة عمل واحدة على الجميع."
+      "title": "المرونة تأتي من نموذج البيانات",
+      "description": "فكرة Lego-like ليست شكل الصفحة فقط؛ الكتلة كوحدة بيانات تسمح بتحويل النص إلى مهمة أو صف أو صفحة وربطه بالصلاحيات والوكلاء."
+    },
+    {
+      "title": "المجتمع قناة توزيع لا عمالة مجانية",
+      "description": "القوالب وصناع المحتوى يوسعون الاستخدام، لكنهم يملكون أعمالهم ويحتاجون دعمًا واقتصاديات Marketplace عادلة، فلا يصح وصفهم بجيش مسوقين مجانيين."
+    },
+    {
+      "title": "الذكاء الاصطناعي يحتاج وحدة استخدام",
+      "description": "إدراج AI في المقعد يسرع التبني، بينما أرصدة Custom Agents تحول العمل المستمر والمتفاوت التكلفة إلى إيراد قابل للقياس."
+    },
+    {
+      "title": "إطلاق المنتج لا يثبت بقاءه",
+      "description": "إغلاق Notion Mail المعلن يوضح أن اتساع الحزمة يحتاج استخدامًا واحتفاظًا واقتصاديات، لا مجرد إطلاق ناجح."
+    },
+    {
+      "title": "الوكلاء يحتاجون حوكمة قبل السرعة",
+      "description": "الصلاحيات والسجلات والحدود والإيقاف التلقائي ليست ميزات إدارية هامشية؛ هي جزء من المنتج عندما ينفذ الوكيل أعمالًا حقيقية."
+    },
+    {
+      "title": "المنصة تصبح أقوى عندما تستضيف الكود",
+      "description": "Workers وCLI ينقلان نوشن من أداة قابلة للتكامل إلى بيئة تشغيل، لكن ذلك يضيف مسؤولية أمان واعتمادية شبيهة بالبنية السحابية."
+    },
+    {
+      "title": "إعادة البناء قد تكون استراتيجية",
+      "description": "الانتقال إلى كيوتو وإعادة المنتج من الصفر نجح لأن الفريق أعاد تعريف النموذج والمنتج، لا لأن خفض التكلفة وحده يصنع التحول."
+    }
+  ],
+  "tools": [
+    "نموذج بيانات قائم على Blocks.",
+    "قواعد بيانات مترابطة وعروض وخصائص وصلاحيات.",
+    "Notion Agent وCustom Agents.",
+    "Enterprise Search وResearch Mode وAI Meeting Notes.",
+    "Connectors إلى Slack وGoogle Drive وMicrosoft وGitHub وأدوات أخرى.",
+    "Notion Calendar المتكامل مع Google وOutlook وiCloud.",
+    "Public API وWebhooks وMCP.",
+    "Notion CLI باسم ntn.",
+    "Workers كبيئة تشغيل مستضافة للكود داخل sandbox.",
+    "External Agents API وAgent SDK المخطط.",
+    "Forms وSites وCharts وDashboards.",
+    "Marketplace للقوالب والخدمات.",
+    "بحث متجهي داخلي لدعم Notion AI.",
+    "إقامة بيانات على AWS في مناطق معلنة مثل اليابان وكوريا.",
+    "تنبيه تقني: لا توجد قائمة عامة كاملة للبنية الداخلية أو لغات البرمجة ومزودي النماذج لكل ميزة؛ لم تُخترع stack شاملة."
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "verified_through": "2026-08-03",
+    "research_scope": "مراجعة الملف الأصلي، موقع نوشن والتسعير والإصدارات وصفحات AI وDeveloper Platform وMarketplace، إعلان العرض الثانوي، تقارير التمويل والإيراد، وإفصاحات Form D لدى SEC.",
+    "overall_status": "verified_with_material_valuation_revenue_model_and_product_lifecycle_updates",
+    "primary_source_priority": "أُعطيت الأولوية لنوشن وSEC. استُخدمت Forbes وAxios للأرقام المالية غير المنشورة رسميًا مع تصنيفها كمصادر ثانوية.",
+    "sec_search_status": {
+      "applicable": true,
+      "company": "Notion Labs, Inc.",
+      "cik": "0001781814",
+      "filings_found": [
+        "Form D 2019",
+        "Form D 2020",
+        "Form D 2021"
+      ],
+      "public_company_reports": false,
+      "note": "Form D إشعار بعرض معفى ولا يقدم قوائم مالية أو يجعل الشركة عامة."
+    },
+    "key_corrections": [
+      {
+        "field": "headline",
+        "original_claim": "مساحة العمل التي غيرت طريقة العمل",
+        "status": "updated",
+        "correction": "أعيدت الصياغة لتعكس منصة الوكلاء والمطورين والتقييم الثانوي.",
+        "evidence_ids": [
+          "E2",
+          "E6",
+          "E9"
+        ]
+      },
+      {
+        "field": "company.business_model",
+        "original_claim": "Freemium واشتراكات شهرية للفرق والشركات",
+        "status": "expanded",
+        "correction": "أضيفت الخطط الحالية وAI المدمج وأرصدة Agents وWorkers والنطاقات وMarketplace.",
+        "evidence_ids": [
+          "E3",
+          "E4",
+          "E5",
+          "E12"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_revenue",
+        "original_claim": "عشرات الملايين",
+        "status": "removed_unsupported",
+        "correction": "وُضع null وسُجل ARR الصحفي منفصلًا.",
+        "evidence_ids": [
+          "E7",
+          "E13"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_traffic",
+        "original_claim": "150M+ شهريًا",
+        "status": "removed_unsupported",
+        "correction": "وُضع null وفُصل إنجاز 100 مليون مستخدم تراكمي.",
+        "evidence_ids": [
+          "E1"
+        ]
+      },
+      {
+        "field": "market_data.market_size",
+        "original_claim": "45 مليار دولار",
+        "status": "removed_unspecified",
+        "correction": "وُضع null لأن تعريف السوق توسع ولا توجد سنة أو منهجية.",
+        "evidence_ids": [
+          "E2",
+          "E6"
+        ]
+      },
+      {
+        "field": "market_data.growth_rate",
+        "original_claim": "نمو جنوني",
+        "status": "removed_non_metric",
+        "correction": "وُضع null مع ذكر تسارع 2025 وARR المبلغ صحفيًا بتحفظ.",
+        "evidence_ids": [
+          "E7",
+          "E9"
+        ]
+      },
+      {
+        "field": "financials.initial_investment",
+        "original_claim": "تمويل ملائكي صغير وكادت أن تفلس",
+        "status": "expanded_and_qualified",
+        "correction": "أضيفت جولات 2020 و2021 وForm D، مع حفظ قصة إعادة البناء منفصلة عن التمويل.",
+        "evidence_ids": [
+          "E8",
+          "E10",
+          "E11"
+        ]
+      },
+      {
+        "field": "financials.valuation",
+        "original_claim": "10B+",
+        "status": "updated",
+        "correction": "التقييم الأحدث 11 مليار دولار من عرض ثانوي لا جولة أولية.",
+        "evidence_ids": [
+          "E9"
+        ]
+      },
+      {
+        "field": "financials.revenue_streams",
+        "original_claim": "Plus وPro وTeam وEnterprise وAI إضافة",
+        "status": "corrected",
+        "correction": "أزيلت أسماء Pro وTeam القديمة وأضيف Business وAI المدمج والأرصدة.",
+        "evidence_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "field": "lessons.community",
+        "original_claim": "جيش من المسوقين المجانيين",
+        "status": "rewritten",
+        "correction": "وُصف المجتمع كقناة توزيع لها ملكية واقتصاديات ودعم، دون تقليل دور صناع القوالب.",
+        "evidence_ids": [
+          "E12"
+        ]
+      },
+      {
+        "field": "company.product_scope",
+        "original_claim": "مساحة واحدة للمستندات والجداول والمهام",
+        "status": "expanded",
+        "correction": "أضيف Calendar وAgents وSearch وMeeting Notes وDeveloper Platform، مع توثيق إغلاق Mail.",
+        "evidence_ids": [
+          "E2",
+          "E5",
+          "E6",
+          "E14"
+        ]
+      }
+    ],
+    "known_source_discrepancies": [
+      {
+        "topic": "سنة التأسيس",
+        "detail": "تستخدم قواعد بيانات خارجية 2013 غالبًا، وهو متسق مع رواية المؤسس الرسمية. بعض السجلات تشير إلى تاريخ كيان أو منتج مختلف؛ اعتمد 2013 مع فصل إعادة البناء 2015."
+      },
+      {
+        "topic": "المؤسسون",
+        "detail": "تظهر الرواية المبكرة Ivan Zhao وSimon Last، بينما تصف نوشن Akshay Kothari رسميًا كشريك مؤسس. حُفظت الأدوار منفصلة بدل فرض قائمة قانونية واحدة."
+      },
+      {
+        "topic": "ARR والإيراد",
+        "detail": "Forbes ذكر أكثر من 600 مليون دولار ARR ونحو نصفه من AI؛ لا توجد قوائم منشورة للتحقق أو تعريف التقسيم."
+      },
+      {
+        "topic": "التقييم",
+        "detail": "10 مليارات كانت قيمة جولة أولية 2021؛ 11 مليارًا سعر عرض ثانوي 2026. النوعان ليسا متطابقين."
+      },
+      {
+        "topic": "Notion Mail",
+        "detail": "تظل صفحات المنتج والتسعير تعرض Mail، بينما صفحات المساعدة تعلن إغلاقه في 22 سبتمبر 2026. صُنّف كمنتج نشط مؤقتًا مع sunset معلن."
+      }
+    ],
+    "limitations": [
+      "نوشن شركة خاصة ولا تنشر قوائم مالية مدققة.",
+      "ARR والربحية النقدية من تقارير صحفية لا إفصاح رسمي.",
+      "لا يوجد رقم حديث للمستخدمين النشطين أو العملاء المدفوعين.",
+      "لا توجد بيانات موثقة للزيارات الشهرية أو الاحتفاظ.",
+      "العرض الثانوي لا يكشف شروط الأسهم أو حقوق الفئات المختلفة.",
+      "لا توجد بيانات عن إيراد كل خطة أو AI credits أو Marketplace.",
+      "أسعار الخطط تختلف حسب المنطقة والفوترة وقد تتغير.",
+      "Workers كان لا يزال Beta مجانيًا في تاريخ الملف، وفوترته تبدأ بعده.",
+      "Notion Mail معلن الإغلاق بعد تاريخ الملف.",
+      "لم تُراجع عقود العملاء أو سجلات الامتثال لكل منطقة."
+    ],
+    "programmatic_validation": {
+      "input_file_parse": true,
+      "json_parse": true,
+      "json_schema_validation": true,
+      "required_original_top_level_keys_preserved": true,
+      "required_original_paths_preserved": true,
+      "all_source_ids_unique": true,
+      "all_evidence_source_references_valid": true,
+      "all_key_correction_evidence_references_valid": true,
+      "no_nan_or_infinity": true,
+      "monthly_metrics_not_invented": true,
+      "market_metrics_not_invented": true,
+      "secondary_tender_not_classified_as_company_funding": true,
+      "arr_not_classified_as_revenue": true,
+      "users_not_classified_as_traffic": true,
+      "mail_sunset_preserved": true,
+      "workers_future_pricing_not_marked_current_revenue": true,
+      "sec_private_status_distinguished": true,
+      "old_plan_names_removed": true,
+      "utf8_arabic_content_present": true,
+      "duplicate_lesson_titles": false,
+      "source_count": 24,
+      "primary_source_count": 21,
+      "evidence_item_count": 20,
+      "lesson_count": 9,
+      "top_level_key_count": 17,
+      "errors": [],
+      "validated_at": "2026-08-03T20:17:00+03:00",
+      "validation_status": "passed"
+    }
+  },
+  "evidence_map_schema": {
+    "description": "خريطة تربط الادعاءات الجوهرية بالمصادر والمسارات داخل JSON.",
+    "item_fields": {
+      "claim": "الادعاء المختصر",
+      "json_paths": "المسارات المعتمدة على الدليل",
+      "classification": "company | users | valuation | funding | pricing | product | developer | financial | security | marketplace | acquisition | regulatory | unavailable",
+      "status": "verified | verified_company_reported | reputable_secondary_report | historical_only | corrected | planned | unavailable",
+      "source_ids": "معرفات المصادر",
+      "notes": "حدود الدليل"
+    }
+  },
+  "evidence_map": {
+    "E1": {
+      "claim": "تجاوزت نوشن 100 مليون مستخدم في أغسطس 2024 وبدأت عام 2013 وأعادت البناء في كيوتو.",
+      "json_paths": [
+        "company.founded",
+        "company.founding_and_rebuild_history",
+        "directory_snapshot.latest_verified_operating_snapshot.users"
+      ],
+      "classification": "users",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S1"
+      ],
+      "notes": "رقم تراكمي لا MAU."
+    },
+    "E2": {
+      "claim": "تطورت نوشن إلى منصة AI Agents تنفذ أعمالًا متعددة الخطوات.",
+      "json_paths": [
+        "company.current_product_scope",
+        "analysis.what_changed",
+        "overview.solution"
+      ],
+      "classification": "product",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S2",
+        "S3"
+      ],
+      "notes": "وصف وقدرات رسمية."
+    },
+    "E3": {
+      "claim": "الخطط الحالية Free وPlus وBusiness وEnterprise، وAI الأساسي مدمج في Business وEnterprise.",
+      "json_paths": [
+        "company.business_model",
+        "directory_snapshot.latest_verified_operating_snapshot.product_and_pricing_status",
+        "financials.revenue_streams"
+      ],
+      "classification": "pricing",
+      "status": "verified",
+      "source_ids": [
+        "S4"
+      ],
+      "notes": "قد تختلف الأسعار حسب المنطقة."
+    },
+    "E4": {
+      "claim": "Custom Agents تستخدم Notion credits منذ 4 مايو 2026 بسعر 10 دولارات لكل 1,000 رصيد.",
+      "json_paths": [
+        "company.business_model",
+        "financials.revenue_streams",
+        "financials.product_sunset_and_pricing_events"
+      ],
+      "classification": "pricing",
+      "status": "verified",
+      "source_ids": [
+        "S3",
+        "S4",
+        "S5"
+      ],
+      "notes": "التكلفة الفعلية تعتمد على العمل والنموذج والتكرار."
+    },
+    "E5": {
+      "claim": "أطلقت نوشن Developer Platform وWorkers وCLI وواجهات للوكلاء في مايو 2026.",
+      "json_paths": [
+        "company.current_product_scope",
+        "directory_snapshot.latest_verified_operating_snapshot.developer_platform_2026",
+        "tools"
+      ],
+      "classification": "developer",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S6",
+        "S7"
+      ],
+      "notes": "بعض القدرات Beta أو Alpha."
+    },
+    "E6": {
+      "claim": "أطلقت Custom Agents كزملاء آليين مجدولين ومتصلين بالأدوات.",
+      "json_paths": [
+        "company.operating_status_as_of_2026_08_03",
+        "analysis.what_changed",
+        "tools"
+      ],
+      "classification": "product",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S5"
+      ],
+      "notes": "تحتاج صلاحيات وحوكمة واستهلاك أرصدة."
+    },
+    "E7": {
+      "claim": "تجاوزت ARR المبلغ عنها صحفيًا 600 مليون دولار وكان نحو نصفها مرتبطًا بـAI.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.reported_business_metrics",
+        "financials.latest_financial_metrics",
+        "analysis.what_changed"
+      ],
+      "classification": "financial",
+      "status": "reputable_secondary_report",
+      "source_ids": [
+        "S8"
+      ],
+      "notes": "غير مدقق ولم تنشر نوشن تعريفًا تفصيليًا."
+    },
+    "E8": {
+      "claim": "جمعت 50 مليون دولار عند تقييم ملياري دولار في 2020.",
+      "json_paths": [
+        "financials.initial_investment",
+        "financials.valuation",
+        "financials.funding_and_liquidity"
+      ],
+      "classification": "funding",
+      "status": "verified",
+      "source_ids": [
+        "S9",
+        "S10"
+      ],
+      "notes": "Form D لا يذكر التقييم؛ المصدر الصحفي يوفر المبلغ والتقييم."
+    },
+    "E9": {
+      "claim": "بلغ عرض 2026 الثانوي 270 مليون دولار عند تقييم 11 مليارًا ولم يكن تمويلًا أوليًا.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.valuation_and_liquidity",
+        "financials.valuation",
+        "financials.funding_and_liquidity"
+      ],
+      "classification": "valuation",
+      "status": "verified",
+      "source_ids": [
+        "S11"
+      ],
+      "notes": "شراء مباشر من الموظفين الحاليين والسابقين."
+    },
+    "E10": {
+      "claim": "قدمت Notion Labs Form D في 2019.",
+      "json_paths": [
+        "company.legal_name",
+        "company.sec_cik",
+        "financials.initial_investment",
+        "verification.sec_search_status"
+      ],
+      "classification": "regulatory",
+      "status": "verified",
+      "source_ids": [
+        "S12"
+      ],
+      "notes": "Form D لا يعرض قوائم مالية."
+    },
+    "E11": {
+      "claim": "جمعت 275 مليون دولار عند تقييم 10 مليارات في 2021.",
+      "json_paths": [
+        "financials.initial_investment",
+        "financials.valuation",
+        "financials.funding_and_liquidity"
+      ],
+      "classification": "funding",
+      "status": "verified",
+      "source_ids": [
+        "S13",
+        "S14"
+      ],
+      "notes": "Form D يثبت عرض الأسهم والمصدر الصحفي يثبت المبلغ والتقييم."
+    },
+    "E12": {
+      "claim": "يوفر Marketplace قوالب مدفوعة وخدمات ويسمح لنوشن بفرض رسوم.",
+      "json_paths": [
+        "company.business_model",
+        "financials.revenue_streams",
+        "analysis.competitive_advantage"
+      ],
+      "classification": "marketplace",
+      "status": "verified",
+      "source_ids": [
+        "S15",
+        "S16"
+      ],
+      "notes": "لا توجد بيانات عن حجم المبيعات أو معدل رسوم موحد."
+    },
+    "E13": {
+      "claim": "لا توجد إيرادات شهرية أو زيارات أو قوائم مالية عامة موثقة.",
+      "json_paths": [
+        "directory_snapshot.monthly_revenue",
+        "directory_snapshot.monthly_traffic",
+        "market_data.growth_rate",
+        "financials.latest_financial_metrics"
+      ],
+      "classification": "unavailable",
+      "status": "unavailable",
+      "source_ids": [
+        "S11",
+        "S8",
+        "S4"
+      ],
+      "notes": "المصادر تكشف تقييمًا وتسعيرًا ومقاييس مختارة لا قوائم."
+    },
+    "E14": {
+      "claim": "Notion Mail سيغلق في 22 سبتمبر 2026.",
+      "json_paths": [
+        "company.current_product_scope",
+        "financials.product_sunset_and_pricing_events",
+        "analysis.risks_and_constraints"
+      ],
+      "classification": "product",
+      "status": "planned",
+      "source_ids": [
+        "S17"
+      ],
+      "notes": "كان المنتج لا يزال متاحًا في 3 أغسطس."
+    },
+    "E15": {
+      "claim": "استحوذت نوشن على Cron وحولته إلى Notion Calendar.",
+      "json_paths": [
+        "company.current_product_scope",
+        "tools",
+        "analysis.competitive_advantage"
+      ],
+      "classification": "acquisition",
+      "status": "verified",
+      "source_ids": [
+        "S18",
+        "S19"
+      ],
+      "notes": "Calendar مجاني في التسعير الحالي."
+    },
+    "E16": {
+      "claim": "استحوذت نوشن على Skiff في 2024، وهو سياق لتوسع أدوات الاتصال.",
+      "json_paths": [
+        "analysis.competitive_advantage",
+        "verification.known_source_discrepancies"
+      ],
+      "classification": "acquisition",
+      "status": "verified",
+      "source_ids": [
+        "S20"
+      ],
+      "notes": "لا يثبت أن Notion Mail سيستمر بعد موعد الإغلاق."
+    },
+    "E17": {
+      "claim": "استحوذت نوشن على Automate.io لتوسيع التكاملات.",
+      "json_paths": [
+        "analysis.competitive_advantage",
+        "tools"
+      ],
+      "classification": "acquisition",
+      "status": "verified",
+      "source_ids": [
+        "S21"
+      ],
+      "notes": "لا تُعامل كإيراد."
+    },
+    "E18": {
+      "claim": "يعتمد نموذج نوشن على Blocks كوحدات بيانات مرنة.",
+      "json_paths": [
+        "overview.solution",
+        "lessons",
+        "tools"
+      ],
+      "classification": "product",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S22"
+      ],
+      "notes": "شرح هندسي من الشركة."
+    },
+    "E19": {
+      "claim": "أعلنت نوشن إقامة بيانات اليابان وكوريا على AWS وشهادات أمن متعددة.",
+      "json_paths": [
+        "market_data.regulatory_and_security_context",
+        "tools",
+        "analysis.competitive_advantage"
+      ],
+      "classification": "security",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S23",
+        "S24"
+      ],
+      "notes": "لا يغطي كل خطة أو منطقة بنفس الشروط."
+    },
+    "E20": {
+      "claim": "Workers تبدأ استخدام الأرصدة في 11 أغسطس 2026.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.product_and_pricing_status",
+        "financials.product_sunset_and_pricing_events"
+      ],
+      "classification": "pricing",
+      "status": "planned",
+      "source_ids": [
+        "S4",
+        "S7"
+      ],
+      "notes": "الموعد بعد تاريخ الملف بثمانية أيام."
+    }
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "100 Million of You",
+      "publisher": "Notion",
+      "source_type": "إعلان مستخدمين وتاريخ رسمي",
+      "publication_date": "2024-09-03",
+      "url": "https://www.notion.com/blog/100-million-of-you",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "100 مليون مستخدم",
+        "2013",
+        "إعادة البناء",
+        "جذب 2018"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "Introducing Notion 3.0",
+      "publisher": "Notion",
+      "source_type": "إعلان منتج رسمي",
+      "publication_date": "2025-09-18",
+      "url": "https://www.notion.com/blog/introducing-notion-3-0",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Notion Agent",
+        "العمل متعدد الخطوات",
+        "توسع AI"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "Meet your AI team",
+      "publisher": "Notion",
+      "source_type": "صفحة منتج رسمية",
+      "publication_date": "2026",
+      "url": "https://www.notion.com/product/ai",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "AI في Business وEnterprise",
+        "Custom Agents",
+        "الأرصدة"
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "Notion Pricing Plans",
+      "publisher": "Notion",
+      "source_type": "صفحة تسعير رسمية",
+      "publication_date": "2026",
+      "url": "https://www.notion.com/pricing",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Free/Plus/Business/Enterprise",
+        "10 دولارات لكل 1000 رصيد",
+        "Workers",
+        "النطاقات",
+        "AI"
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "Introducing Custom Agents",
+      "publisher": "Notion",
+      "source_type": "إعلان منتج رسمي",
+      "publication_date": "2026-02-24",
+      "url": "https://www.notion.com/blog/introducing-custom-agents",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "وكلاء مجدولون",
+        "الصلاحيات",
+        "السجلات",
+        "4 مايو 2026"
+      ]
+    },
+    {
+      "id": "S6",
+      "title": "Introducing Notion's Developer Platform",
+      "publisher": "Notion",
+      "source_type": "إعلان منصة رسمي",
+      "publication_date": "2026-05-13",
+      "url": "https://www.notion.com/blog/introducing-developer-platform",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Workers",
+        "CLI",
+        "External Agents",
+        "Webhooks",
+        "sandbox"
+      ]
+    },
+    {
+      "id": "S7",
+      "title": "Notion 3.5: Developer Platform",
+      "publisher": "Notion",
+      "source_type": "سجل إصدار رسمي",
+      "publication_date": "2026-05-13",
+      "url": "https://www.notion.com/releases/2026-05-13",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "بدء أرصدة Workers في 11 أغسطس",
+        "منصة المطورين"
+      ]
+    },
+    {
+      "id": "S8",
+      "title": "Notion Kicks Off Employee Share Sale at $11 Billion Valuation",
+      "publisher": "Forbes",
+      "source_type": "تقرير مالي ثانوي",
+      "publication_date": "2025-12-15",
+      "url": "https://www.forbes.com/sites/annatong/2025/12/15/notion-kicks-off-employee-share-sale-at-11-billion-valuation-as-ai-accelerates-its-growth/",
+      "primary_source": false,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "600 مليون ARR",
+        "نصف ARR من AI",
+        "التدفق النقدي الإيجابي"
+      ]
+    },
+    {
+      "id": "S9",
+      "title": "Notes app Notion raises money at $2 billion valuation",
+      "publisher": "Axios",
+      "source_type": "تغطية تمويل",
+      "publication_date": "2020-04-02",
+      "url": "https://www.axios.com/2020/04/02/notes-app-notion-raises-money-at-2-billion-valuation",
+      "primary_source": false,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "50 مليون دولار",
+        "تقييم ملياري دولار"
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "Notion Labs, Inc. Form D — 2020",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "source_type": "إفصاح أوراق مالية أولي",
+      "publication_date": "2020-04-10",
+      "url": "https://www.sec.gov/Archives/edgar/data/1781814/000178181420000001/xslFormDX01/primary_doc.xml",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الكيان",
+        "ديلاوير",
+        "عرض أسهم 2020",
+        "CIK"
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "GIC, Sequoia, Index purchase Notion shares in private tender offer",
+      "publisher": "Notion",
+      "source_type": "إعلان معاملة رسمي",
+      "publication_date": "2026-01-26",
+      "url": "https://www.notion.com/blog/gic-sequoia-index-purchase-notion-shares",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "270 مليون دولار",
+        "11 مليارًا",
+        "عرض ثانوي",
+        "المشترون",
+        "تسارع 2025"
+      ]
+    },
+    {
+      "id": "S12",
+      "title": "Notion Labs, Inc. Form D — 2019",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "source_type": "إفصاح أوراق مالية أولي",
+      "publication_date": "2019-07-08",
+      "url": "https://www.sec.gov/Archives/edgar/data/1781814/000156761919014543/xslFormDX01/primary_doc.xml",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الكيان",
+        "الأشخاص المرتبطون",
+        "عرض أسهم 2019"
+      ]
+    },
+    {
+      "id": "S13",
+      "title": "Notion Reaches $10 Billion Valuation",
+      "publisher": "Forbes",
+      "source_type": "تغطية تمويل ومقابلة",
+      "publication_date": "2021-10-08",
+      "url": "https://www.forbes.com/sites/alexkonrad/2021/10/08/notion-raises-at-10-billion-valuation-boosted-by-remote-work-tiktok/",
+      "primary_source": false,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "275 مليون دولار",
+        "تقييم 10 مليارات",
+        "Coatue وSequoia"
+      ]
+    },
+    {
+      "id": "S14",
+      "title": "Notion Labs, Inc. Form D — 2021",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "source_type": "إفصاح أوراق مالية أولي",
+      "publication_date": "2021-10-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/1781814/000178181421000002/xslFormDX01/primary_doc.xml",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "عرض الأسهم 2021",
+        "الكيان",
+        "الأشخاص المرتبطون"
+      ]
+    },
+    {
+      "id": "S15",
+      "title": "Notion Marketplace guidelines and terms",
+      "publisher": "Notion",
+      "source_type": "شروط Marketplace رسمية",
+      "publication_date": "2026",
+      "url": "https://www.notion.com/help/template-gallery-guidelines-and-terms",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "القوالب المدفوعة",
+        "دور merchant of record",
+        "إمكانية الرسوم"
+      ]
+    },
+    {
+      "id": "S16",
+      "title": "Notion Marketplace",
+      "publisher": "Notion",
+      "source_type": "منصة رسمية",
+      "publication_date": "2026",
+      "url": "https://www.notion.com/templates",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "القوالب والمجتمع والبيع"
+      ]
+    },
+    {
+      "id": "S17",
+      "title": "Get started with Notion Mail",
+      "publisher": "Notion",
+      "source_type": "صفحة مساعدة رسمية",
+      "publication_date": "2026",
+      "url": "https://www.notion.com/help/get-started-with-notion-mail",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Mail مجاني",
+        "Gmail",
+        "إغلاق 22 سبتمبر 2026"
+      ]
+    },
+    {
+      "id": "S18",
+      "title": "Notion acquires Cron",
+      "publisher": "Notion",
+      "source_type": "إعلان استحواذ رسمي",
+      "publication_date": "2022-06-09",
+      "url": "https://www.notion.com/blog/notion-acquires-cron",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الاستحواذ على Cron"
+      ]
+    },
+    {
+      "id": "S19",
+      "title": "Introducing Notion Calendar",
+      "publisher": "Notion",
+      "source_type": "إعلان منتج رسمي",
+      "publication_date": "2024-01-17",
+      "url": "https://www.notion.com/blog/introducing-notion-calendar",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "تحويل Cron إلى Notion Calendar",
+        "التكامل"
+      ]
+    },
+    {
+      "id": "S20",
+      "title": "Welcome to Notion, Skiff",
+      "publisher": "Notion",
+      "source_type": "إعلان استحواذ رسمي",
+      "publication_date": "2024-02-09",
+      "url": "https://www.notion.com/blog/meet-skiff-the-newest-member-of-the-notion-family",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "استحواذ Skiff",
+        "توسع أدوات الاتصال"
+      ]
+    },
+    {
+      "id": "S21",
+      "title": "Welcome, Automate.io",
+      "publisher": "Notion",
+      "source_type": "إعلان استحواذ رسمي",
+      "publication_date": "2021-09-08",
+      "url": "https://www.notion.com/blog/taking-building-blocks-beyond-the-workspace-welcome-automate-io",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "استحواذ Automate.io",
+        "التكاملات",
+        "API"
+      ]
+    },
+    {
+      "id": "S22",
+      "title": "The data model behind Notion's flexibility",
+      "publisher": "Notion",
+      "source_type": "مقال هندسي رسمي",
+      "publication_date": "2021-05-18",
+      "url": "https://www.notion.com/blog/data-model-behind-notion",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Blocks",
+        "نموذج البيانات",
+        "المرونة"
+      ]
+    },
+    {
+      "id": "S23",
+      "title": "Notion expands data residency to Japan and South Korea",
+      "publisher": "Notion",
+      "source_type": "إعلان أمان وبنية رسمي",
+      "publication_date": "2026-03",
+      "url": "https://www.notion.com/blog/notion-expands-data-residency-to-japan-south-korea",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "AWS",
+        "إقامة البيانات",
+        "اليابان وكوريا",
+        "الشهادات"
+      ]
+    },
+    {
+      "id": "S24",
+      "title": "Notion Enterprise Security and Compliance",
+      "publisher": "Notion",
+      "source_type": "صفحة أمان رسمية",
+      "publication_date": "2026",
+      "url": "https://www.notion.com/enterprise",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "SOC 2",
+        "ISO",
+        "BSI C5",
+        "إقامة البيانات",
+        "ضوابط المؤسسات"
+      ]
     }
   ]
 }

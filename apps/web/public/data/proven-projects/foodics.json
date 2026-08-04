@@ -2,59 +2,1251 @@
   "id": "foodics",
   "slug": "foodics",
   "name": "فودكس (Foodics)",
-  "headline": "نظام إدارة المطاعم والمدفوعات الشامل في الشرق الأوسط",
-  "category": "B2B SaaS / نقاط البيع للمطاعم",
+  "headline": "من شاشة الكاشير إلى نظام تشغيل للمطعم: كيف جمعت فودكس العمليات والمدفوعات والذكاء الاصطناعي",
+  "category": "Restaurant Operating System & Embedded Payments / نظام تشغيل المطاعم والمدفوعات المدمجة",
   "company": {
-    "location": "الرياض، المملكة العربية السعودية",
-    "business_model": "اشتراكات برمجية (SaaS) ورسوم على المدفوعات (Fintech)"
+    "location": "شركة سعودية لتقنية المطاعم والمدفوعات تأسست عام 2014، ومقرها التشغيلي المعلن في الرياض. تعرض صفحة التواصل الحالية مكاتب في الرياض وجدة والخبر ودبي وحولي والقاهرة وعمّان. وتعرّف سياسة الخصوصية السارية منذ 1 ديسمبر 2025 الكيان المشغّل لخدمات Foodics RMS باسم Al-Saheb Al-Mutqadma for Information Technology. توجد أسماء قانونية أقدم أو مختلفة في بعض الصفحات التاريخية، لذلك لم يُستخدم اسم واحد لتفسير كامل هيكل المجموعة أو الشركات التابعة دون سجل شركات موحد منشور.",
+    "business_model": "منصة B2B2C تجمع برمجيات إدارة المطاعم السحابية والمدفوعات والأجهزة وقنوات الطلب والتحليلات. تعرض في أغسطس 2026 باقات Starter وBasic وAdvanced بأسعار تختلف حسب نوع المنشأة والدفع الشهري أو السنوي، مع عقود Enterprise وعروض أسعار مخصصة للأجهزة والبرمجيات. تحصل Foodics Pay على رسوم شهرية ورسوم معاملات تختلف حسب الطرفية ونوع البطاقة، وتباع تراخيص وإضافات وأجهزة مثل الكاشير والشاشات والأكشاك والطابعات. كما توسع المنظومة عبر الطلب المباشر والمحاسبة وذكاء الأعمال وسوق التطبيقات وخدمات التوريد والتمويل المرن. لا تنشر الشركة مزيج الإيرادات أو هامش كل منتج أو معدل الاحتفاظ أو متوسط قيمة العقد."
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين",
-    "monthly_traffic": "يستخدم في عشرات الآلاف من المطاعم"
+    "monthly_revenue": "غير معلن. فودكس شركة خاصة ولا تنشر إيرادًا شهريًا أو سنويًا مدققًا أو ARR أو صافي ربح. أسعار الباقات ورسوم Foodics Pay لا تسمح بحساب الإيراد دون عدد التراخيص والأجهزة والطرفيات النشطة ومزيج الخطط والخصومات والاستردادات. كما أن التمويل الجريء، وقيمة الطلبات التي تمر عبر النظام، وأموال تسويات المدفوعات للتجار ليست إيرادًا للشركة.",
+    "monthly_traffic": "زيارات الموقع والمستخدمون النشطون والطلبات الشهرية غير معلنة. تعرض الصفحة الحالية أكثر من 30,000 مطعم يستخدم المنظومة، بينما ذكر إعلان فبراير 2025 تمكين أكثر من 30,000 صاحب منشأة أغذية ومشروبات عبر 30 دولة؛ ولا توضح الشركة عدد الحسابات المدفوعة أو المطاعم النشطة شهريًا أو الفروع والطرفيات ضمن هذا الرقم. كما تستخدم بيانات صحفية رقم «6 مليارات طلب» بصورة غير متسقة مع إفصاح أقدم عن أكثر من 5 مليارات دولار من قيمة الطلبات؛ لذلك لم يُستخدم هذا الرقم كعدد طلبات قابل للتحقق."
   },
   "overview": {
     "problem": {
-      "text": "المطاعم كانت تعتمد على أنظمة (كاشير) قديمة ومكلفة جداً، لا تتصل بالإنترنت، ولا توفر تقارير لحظية، وتتعطل باستمرار، مما يمنع أصحاب المطاعم من تتبع مخزونهم ومبيعاتهم بكفاءة.",
-      "impact": "سرقات في المخزون، قرارات عمل سيئة بسبب غياب البيانات، وصعوبة بالغة في إدارة سلاسل المطاعم المتعددة الفروع."
+      "text": "تشغيل المطعم يتوزع بين نقطة البيع والمطبخ والمخزون والموردين والموظفين والطلبات المباشرة ومنصات التوصيل والمدفوعات والمحاسبة والولاء. عندما تعمل هذه الوظائف على أنظمة منفصلة، يصعب مطابقة ما بيع بما استُهلك وما حُصّل وما سُوّي في البنك، وتزداد المشكلة مع تعدد الفروع وقنوات الطلب.",
+      "impact": "ينتج عن التجزؤ أخطاء في الطلبات والمخزون والتسويات، وتأخر اكتشاف الهدر أو التلاعب، وتكرار إدخال البيانات، وصعوبة معرفة ربحية الصنف والفرع والقناة. كما يستهلك دمج الأنظمة وقت الإدارة ويجعل الامتثال للفوترة الإلكترونية والمدفوعات أكثر كلفة على المنشآت الصغيرة."
     },
     "solution": {
-      "text": "نظام نقاط بيع (POS) سحابي يعمل على أجهزة آيباد (iPad)، متصل بالإنترنت ويوفر إدارة للمخزون، الموظفين، وتقارير المبيعات اللحظية، بالإضافة للمدفوعات الرقمية."
+      "text": "تبني فودكس نظام تشغيل للمطعم يبدأ بنقطة بيع وإدارة سحابية للطلبات والقوائم والمخزون والعملاء والفروع، ويربط المطبخ وشاشة العميل وتطبيق النادل والطلب الذاتي والطلب عبر الموقع والتطبيق والدفع عند الطاولة. تضيف Foodics Pay مدفوعات مدمجة وتسويات وتقارير، بينما توفر Foodics Accounting وFoodics AI تحليلات مالية وتشغيلية على مستوى الطلب والمنتج والفرع. تضم المنظومة سوق تطبيقات وواجهات تكامل وحلول Enterprise وFoodics One والتوريد. بعد الاستحواذ الكامل على Norma في يونيو 2026، دُمج تطبيق ذكاء الأعمال والمساعد التحليلي ضمن قسم الذكاء الاصطناعي في فودكس."
     }
   },
   "market_data": {
-    "target_audience": "المطاعم، المقاهي، عربات الطعام (Food Trucks)، والمخابز.",
-    "market_size": "سوق المطاعم في المنطقة بمئات المليارات، والتحول الرقمي فيه كان حتمياً.",
-    "growth_rate": "هيمنت على سوق نقاط البيع السحابية للمطاعم في السعودية وتوسعت إلى الإمارات ومصر وأوروبا."
+    "target_audience": "المطاعم المستقلة وسلاسل المطاعم، والمقاهي والمخابز والحلويات، ومطاعم الخدمة السريعة والقيادة عبر السيارة، والمطابخ السحابية وعربات الطعام والأكشاك، ومشغلو الامتياز والفروع المتعددة، إضافة إلى منشآت التجزئة الصغيرة والخدمات التي تستفيد من Foodics One ونقطة البيع والمدفوعات.",
+    "market_size": "لا يوجد في المصادر العامة المراجعة رقم رسمي مستقل يجمع سوق برمجيات المطاعم والمدفوعات والأجهزة والتوريد في الدول التي تعمل بها فودكس. للسياق السعودي الأوسع، بلغت مساهمة أنشطة تجارة الجملة والتجزئة والمطاعم والفنادق 12.3% من الناتج المحلي الإجمالي الجاري في 2025، وسجلت نموًا حقيقيًا سنويًا 5.4% في الربع الرابع. كما تواصل هيئة الزكاة والضريبة والجمارك توسيع المرحلة الثانية من الفوترة الإلكترونية؛ وشملت الموجة الخامسة والعشرون المكلفين الذين تجاوزت إيراداتهم الخاضعة للضريبة 187,500 ريال في أي من 2022–2025. هذه مؤشرات سوق وامتثال عامة وليست حجم سوق فودكس أو إيرادها أو حصتها.",
+    "growth_rate": "لا تنشر فودكس معدل نمو حديثًا ومدققًا للإيراد أو ARR أو حجم المدفوعات. في فبراير 2021 ذكرت أكثر من 10,000 علامة أغذية ومشروبات و50,000+ طرفية، وفي 2022 ذكرت أكثر من 21,000 مطعم ومقهى، بينما تعرض الصفحة الحالية 30,000+ مطعم، وذكر إعلان 2025 أكثر من 30,000 صاحب منشأة عبر 30 دولة. تشير هذه اللقطات إلى توسع معلن، لكن اختلاف «العلامة» و«المطعم» و«صاحب المنشأة» والفترة يمنع حساب CAGR دقيق. توسع المنتج أيضًا عبر الاستحواذ على POSRocket وSolo ثم Norma، دون نشر إيرادات تلك الشركات أو أثرها العضوي منفصلًا."
   },
   "financials": {
-    "initial_investment": "بدأت في الخبر، وجمعت لاحقاً جولات استثمارية ضخمة تجاوزت 170 مليون دولار بقيادة سنابل وسيكويا.",
-    "valuation": "$500M+ (تقييم تقديري)",
+    "initial_investment": "أعلنت فودكس في فبراير 2021 جولة Series B بقيمة 20 مليون دولار، وقالت إن إجمالي التمويل المعلن حتى ذلك التاريخ بلغ 28 مليونًا. وفي أبريل 2022 أغلقت Series C بقيمة 170 مليون دولار بقيادة Prosus وسنابل للاستثمار، وبمشاركة Sequoia Capital India ومستثمرين قائمين. ينتج عن الجمع حد أدنى معلن يقارب 198 مليون دولار من التمويل الجريء. لا يشمل هذا الرقم 100 مليون دولار أعلنت شركة معالم للاستثمار تخصيصها لتمويل التجار، ولا برنامج 100 مليون دولار الذي أعلنت فودكس تخصيصه للاستحواذات والاستثمارات خلال ثلاث سنوات؛ فهذان التزامان أو برامج استخدام رأسمال وليسا جولتين دخلتا خزينة الشركة بالقيمة نفسها.",
+    "valuation": "غير معلن. لم تنشر فودكس أو المستثمرون نسبة الملكية المباعة في Series C أو تقييم ما قبل الاستثمار أو بعده، ولا توجد صفقة ثانوية أو إدراج عام يسمح بتحديد تقييم أغسطس 2026. تقدير 500 مليون دولار أو أكثر في الملف الأصلي غير مدعوم بمصدر أولي علني، ولا يجوز استنتاج التقييم من جولة 170 مليون دولار أو عدد المطاعم أو حجم الطلبات.",
     "revenue_streams": [
-      "اشتراكات شهرية/سنوية للنظام (SaaS)",
-      "رسوم على عمليات الدفع الإلكتروني (Foodics Pay)",
-      "قروض وتمويل للمطاعم (Foodics Capital)",
-      "مبيعات الأجهزة الصلبة (Hardware)"
+      "اشتراكات SaaS شهرية وسنوية في حزم Starter وBasic وAdvanced، وعقود Enterprise مخصصة للسلاسل والمنشآت الكبيرة.",
+      "تراخيص وإضافات مستقلة مثل المخزون وFoodics Online والتطبيق والولاء وذكاء الأعمال وAPI وشاشات المطبخ والعميل وتطبيق النادل.",
+      "رسوم Foodics Pay الشهرية ورسوم معاملات البطاقات والمحافظ، وتختلف حسب الطرفية ونوع البطاقة والعقد.",
+      "بيع أو تأجير وتوريد الأجهزة مثل أجهزة الكاشير والآيباد والحامل والطابعة ودرج النقد وشاشات العرض والأكشاك وطرفيات الدفع.",
+      "رسوم تنفيذ وتهيئة وربط ودعم وحسابات Enterprise وخدمات متعددة الفروع بحسب عرض السعر والعقد.",
+      "اشتراكات أو خدمات الطلب المباشر عبر المواقع والتطبيقات والأكشاك والدفع عند الطاولة؛ بعض العروض تكون مجانية أو دون عمولة لفترة محددة.",
+      "Foodics Accounting وFoodics AI والتحليلات المتقدمة كمكونات داخل الباقات أو إضافات مدفوعة وفق السوق والعقد.",
+      "سوق التطبيقات والتكاملات والشراكات؛ توجد منظومة تجارية مثبتة لكن حصة فودكس أو عمولتها من الشركاء غير منشورة.",
+      "Foodics Supply يتيح شراء مواد خام بحد ائتماني مؤهل يصل إلى 25,000 ريال والسداد اليومي من Foodics Pay؛ لم يُنشر مصدر عائد فودكس أو الجهة الممولة بوضوح.",
+      "FLEX يتيح تقسيط الاشتراكات والأجهزة دون فائدة ورسوم مخفية وفق الإعلان؛ وظيفته دعم بيع المنتجات وتدفق النقد، وليس مسار فائدة مباشر معلن."
     ]
   },
   "lessons": [
     {
-      "title": "السيطرة على نقطة البيع",
-      "description": "من يتحكم بنظام الـ (الكاشير) يتحكم ببيانات المطعم كاملة. فودكس أصبحت العقل المدبر للمطعم، مما سمح لها ببيع خدمات إضافية بسهولة."
+      "title": "نقطة البيع تصبح خندقًا عندما تتحول إلى سجل تشغيل موحد",
+      "description": "الكاشير وحده قابل للاستبدال، لكن ربط الطلب بالمخزون والمطبخ والموظف والدفع والعميل والمحاسبة يجعل النظام مصدر الحقيقة اليومي. كل وظيفة إضافية تزيد قيمة المنصة وتكلفة الانتقال، لكنها ترفع أثر أي انقطاع أو خطأ."
     },
     {
-      "title": "التطور إلى شركة تقنية مالية (Fintech)",
-      "description": "بعد السيطرة على البرنامج، أدركوا أن الأموال الحقيقية في المدفوعات، فأطلقوا (Foodics Pay) والتمويل، ليتحولوا من شركة SaaS إلى Fintech."
+      "title": "المدفوعات توسع الإيراد وتغيّر طبيعة المخاطر",
+      "description": "Foodics Pay يضيف رسومًا متكررة وبيانات تسوية أقرب إلى العملية، لكنه ينقل الشركة إلى مسؤوليات الترخيص والاحتيال والاسترداد والتوفر والتسوية. الانتقال من SaaS إلى Fintech ليس مجرد منتج إضافي، بل نموذج رقابة وتشغيل مختلف."
     },
     {
-      "title": "البناء للتشريعات",
-      "description": "استفادت الشركة من التشريعات الحكومية (مثل الفوترة الإلكترونية في السعودية) لتسريع تبني منتجاتها كضرورة وليس كخيار."
+      "title": "30 ألف مطعم لا تعني 30 ألف اشتراك نشط",
+      "description": "قد يشمل الرقم علامات وفروعًا وحسابات تاريخية وأسواقًا مختلفة. لتقييم الجودة الاقتصادية يجب معرفة المواقع النشطة والتراخيص المدفوعة والطرفيات وحجم المدفوعات والاحتفاظ والتوسع داخل العميل، لا الاكتفاء برقم الوصول."
+    },
+    {
+      "title": "التوسع بالاستحواذ يشتري وقتًا ومعرفة محلية",
+      "description": "POSRocket أضاف أسواقًا وعملاء وخبرة إقليمية، وSolo أضاف الطلب الذاتي والواجهات البيضاء، وNorma أضافت ذكاء البيانات. القيمة تتحقق عندما تندمج الهوية والبيانات والفوترة والدعم، لا بمجرد جمع شعارات تحت المجموعة."
+    },
+    {
+      "title": "الذكاء الاصطناعي الأقوى يبدأ من بيانات تشغيل منظمة",
+      "description": "قدرة Foodics AI على تحليل صافي المبيعات والخصومات والمرتجعات والمنتجات والفروع تعتمد أولًا على جودة تسجيل الطلبات. الاستحواذ على Norma يعزز واجهة السؤال والتنبؤ، لكن جودة القرار تظل مرتبطة بتعريف البيانات واكتمالها."
+    },
+    {
+      "title": "التسعير بالحزم يحتاج ضبط تعقيد المنتج",
+      "description": "الحزم ترفع قيمة العقد وتبسط الشراء، لكنها قد تجعل العميل يدفع لقدرات لا يستخدمها أو يصعب عليه فهم تكلفة التوسع. يجب ربط كل مستوى بنوع مطعم وحالة تشغيل واضحة، مع إبقاء الإضافات والتكلفة الكلية قابلة للتوقع."
+    },
+    {
+      "title": "القنوات المباشرة تحمي هامش المطعم ولا تلغي اقتصاديات التوصيل",
+      "description": "Foodics Online والأكشاك والدفع عند الطاولة تخفض الاعتماد على وسطاء الطلب وتزيد ملكية بيانات العميل، لكن المطعم يظل مسؤولًا عن التسويق والتنفيذ والتوصيل وخدمة العميل. التقنية تنقل القناة ولا تزيل تكلفتها."
+    },
+    {
+      "title": "التمويل المضمن يعمل أفضل عندما يرتبط بتدفق نقد يمكن قياسه",
+      "description": "تقسيط FLEX وخصم مشتريات Supply من Foodics Pay يستفيدان من تدفق مبيعات ظاهر للمنصة. هذا قد يحسن القدرة على التقييم والتحصيل، لكنه يتطلب فصل دور مزود التقنية عن الممول وتوضيح التكلفة والالتزامات."
+    },
+    {
+      "title": "الفوترة الإلكترونية تحول الامتثال إلى مسار تحديث مستمر",
+      "description": "التوافق مع ZATCA لا يكتمل بشارة واحدة؛ الموجات والحقول والربط تتغير مع الوقت. المنصة التي تتابع المتطلبات وتحدث الحل مركزيًا تمنح التاجر قيمة تشغيلية، لكن يجب تجنب تسويق الامتثال كضمان ضريبي شامل."
+    },
+    {
+      "title": "مؤشرات الطلب تحتاج تعريفًا قبل استخدامها في القصة الاستثمارية",
+      "description": "استخدمت مواد فودكس أرقامًا مثل 5 مليارات دولار من قيمة الطلبات و6 مليارات «طلب» بصياغات متعارضة. الدرس أن كل مقياس يجب أن يحمل العملة والفترة والوحدة والتعريف: عدد طلبات، قيمة طلبات، TPV، أو GMV، قبل المقارنة أو الاستنتاج."
     }
   ],
   "tools": [
-    "AWS",
-    "PHP (Laravel)",
-    "Vue.js",
-    "Swift",
-    "PostgreSQL"
+    "Foodics RMS كنظام نقاط بيع وإدارة مطاعم سحابي للطلبات والقوائم والمخزون والعملاء والفروع والتقارير.",
+    "Foodics Pay كخدمة مدفوعات مرخصة في السعودية، مع طرفيات ودفع إلكتروني وروابط دفع ودفع عند الطاولة وتسويات وتقارير.",
+    "Foodics Online لإنشاء موقع وتطبيق للطلب المباشر والمزامنة مع نقطة البيع والمطبخ.",
+    "أكشاك الطلب الذاتي وشاشات العميل وتطبيق النادل وشاشة المطبخ وإدارة الطاولات.",
+    "Foodics Enterprise لإدارة السلاسل والفروع المتعددة مع دعم وتقارير متقدمة وحلول مخصصة.",
+    "Foodics Accounting للمحاسبة والإدارة المالية المخصصة للمطاعم.",
+    "Foodics AI وBusiness Intelligence للتحليلات التشغيلية والمالية والتنبؤ والاستعلام باللغة الطبيعية.",
+    "Foodics One كجهاز متكامل لنقطة البيع والدفع والطباعة للمنشآت الصغيرة والتجزئة المصغرة.",
+    "سوق تطبيقات وتكاملات في المحاسبة والتوصيل والموارد البشرية والتسويق والحجوزات وغيرها.",
+    "واجهات API وربط خدمات التوصيل والطلب والقنوات الخارجية ضمن الخطط المتقدمة.",
+    "Foodics Supply لتوريد المواد للمؤهلين بائتمان يصل إلى 25,000 ريال وسداد يومي على 30 يومًا وفق صفحة المساعدة.",
+    "FLEX لتقسيط اشتراكات وأجهزة فودكس من إيرادات Foodics Pay دون دفعة أولى أو فائدة وفق إعلان 2023.",
+    "توافق معلن مع متطلبات ZATCA للفوترة الإلكترونية في منتجات نقاط البيع.",
+    "دعم سحابي وعمل دون اتصال لبعض سيناريوهات نقطة البيع؛ لم يُثبت مزود السحابة أو المكدس البرمجي الداخلي في المصادر الحالية."
+  ],
+  "verification": {
+    "status": "verified_from_official_company_pricing_legal_funding_acquisition_product_help_regulator_and_government_sources",
+    "verified_on": "2026-08-03",
+    "source_policy": "أُعطيت الأولوية لموقع فودكس الرسمي وصفحات الأسعار والخصوصية والشروط وإعلانات التمويل والاستحواذ وتوثيق المنتجات، ثم البنك المركزي السعودي وهيئة الإحصاء وZATCA. لم تُستخدم تقديرات مواقع الزيارات أو الإيرادات أو التقييم. فودكس شركة خاصة غير مدرجة في الولايات المتحدة، لذلك لا تمثل SEC/EDGAR مسار الإفصاح الطبيعي لها؛ المصدر المالي الأولي المتاح هو إعلانات الشركة والمستثمرين والمنظم.",
+    "important_notes": [
+      "170 مليون دولار هي جولة Series C في أبريل 2022، وليست إيرادًا أو تقييمًا.",
+      "Series B بقيمة 20 مليون دولار رفعت إجمالي التمويل المعلن حينها إلى 28 مليونًا.",
+      "جمع 28 و170 يعطي نحو 198 مليون دولار كحد أدنى معلن للتمويل الجريء.",
+      "100 مليون دولار من معالم خُصصت لتمويل التجار، وليست جولة استثمار في فودكس.",
+      "100 مليون دولار المعلنة في 2025 هي مخصص استحواذات واستثمارات لثلاث سنوات، وليست تمويلًا جديدًا معلنًا للشركة.",
+      "الإيراد وARR والربح والتقييم وحجم المدفوعات المعالجة غير معلنة.",
+      "30,000+ مطعم مؤشر انتشار، ولا يثبت عدد الاشتراكات المدفوعة أو المطاعم النشطة شهريًا.",
+      "30,000+ صاحب منشأة عبر 30 دولة في إعلان 2025 ليس بالضرورة مطابقًا لتعريف 30,000+ مطعم في الصفحة الحالية.",
+      "50,000+ طرفية و10,000+ علامة أرقام تاريخية من 2021 ولا تمثل الوضع الحالي.",
+      "مواد الشركة تستخدم «6 مليارات طلب» بصورة غير متسقة مع إفصاح أقدم عن 5 مليارات دولار قيمة طلبات؛ لم يُستخدم الرقم كحجم طلبات موثوق.",
+      "رسوم Foodics Pay تختلف حسب الطرفية ونوع البطاقة ولا يوجد جدول عام موحد يسمح بحساب الإيراد.",
+      "Foodics Supply يقدم حدًا ائتمانيًا مؤهلًا، لكن الجهة الممولة ومصدر عائد فودكس غير واضحين في الصفحة العامة.",
+      "FLEX معلن دون فائدة أو رسوم مخفية، لذا لم يُسجل كدخل فائدة.",
+      "الاستحواذات على POSRocket وSolo وNorma مثبتة، لكن أسعار الاستحواذات غير معلنة.",
+      "إحصاءات GASTAT تشمل التجزئة والفنادق والمطاعم معًا، ولا تمثل TAM فودكس.",
+      "حُذف تقييم 500M+ وادعاء الهيمنة المطلقة لعدم وجود تقييم أو حصة سوق مستقلة منشورة.",
+      "حُذفت AWS وPHP/Laravel وVue.js وSwift وPostgreSQL لغياب توثيق رسمي حديث للمكدس الداخلي."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط كل حقل بقيمته وحالة التحقق والمصادر والقيود، مع فصل الإيراد عن التمويل والتقييم وقيمة الطلبات وتسويات التجار، وفصل المطاعم والعلامات والطرفيات والدول عن الزيارات والمستخدمين والطلبات الشهرية.",
+    "status_values": {
+      "verified_current_headquarters_offices_and_legal_entity_with_naming_limits": "المقر والمكاتب والكيان الحالي مثبتة مع توضيح اختلاف الأسماء التاريخية.",
+      "verified_multi_stream_model_pricing_and_mix_partly_undisclosed": "النموذج والأسعار الأساسية مثبتة، والمزيج والهوامش غير معلنين.",
+      "verified_as_not_publicly_disclosed": "المقياس غير منشور ولم يُستبدل بتقدير خارجي.",
+      "verified": "الادعاء مدعوم مباشرة بمصادر رسمية.",
+      "verified_adjacent_economic_and_regulatory_context_not_company_tam": "السياق رسمي لكنه لا يمثل سوق الشركة القابل للخدمة.",
+      "verified_company_reported_scale_snapshots_with_definition_limits": "اللقطات منشورة من الشركة مع اختلاف الوحدات والفترات.",
+      "verified_venture_funding_and_separate_capital_programs": "تم فصل تمويل الشركة عن برامج تمويل التجار والاستحواذات.",
+      "verified_and_inferred_channels_rates_and_margins_partly_undisclosed": "قنوات الدخل مدعومة، بينما بعض الأسعار والهوامش غير منشورة.",
+      "verified_product_capabilities_without_speculative_internal_stack": "قدرات المنتج مثبتة دون افتراض مكدس داخلي.",
+      "analytical_inference": "تحليل مهني مبني على حقائق موثقة وليس تصريحًا حرفيًا."
+    },
+    "confidence_scale": {
+      "high": "مصدر رسمي مباشر أو قانوني أو منظم أو حكومي.",
+      "medium_high": "استنتاج مدعوم بمصادر متعددة مع قيود واضحة.",
+      "medium": "تحليل تشغيلي معقول دون قياس كمي مستقل."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "شركة سعودية لتقنية المطاعم والمدفوعات تأسست عام 2014، ومقرها التشغيلي المعلن في الرياض. تعرض صفحة التواصل الحالية مكاتب في الرياض وجدة والخبر ودبي وحولي والقاهرة وعمّان. وتعرّف سياسة الخصوصية السارية منذ 1 ديسمبر 2025 الكيان المشغّل لخدمات Foodics RMS باسم Al-Saheb Al-Mutqadma for Information Technology. توجد أسماء قانونية أقدم أو مختلفة في بعض الصفحات التاريخية، لذلك لم يُستخدم اسم واحد لتفسير كامل هيكل المجموعة أو الشركات التابعة دون سجل شركات موحد منشور.",
+      "verification_status": "verified_current_headquarters_offices_and_legal_entity_with_naming_limits",
+      "confidence": "high",
+      "claim_type": "founding_headquarters_offices_and_legal_operator",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت صفحات التواصل والخصوصية الموقع التشغيلي والمكاتب والكيان الحالي، مع اختلاف أسماء تاريخية في بعض الشروط.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-04",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Contact Foodics",
+          "publisher": "Foodics",
+          "source_type": "official_company_current_contact_page",
+          "url": "https://www.foodics.com/contact-us/",
+          "evidence_type": "direct",
+          "source_locator": "Current locations",
+          "supports": "مقر الرياض والمكاتب الإقليمية.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Foodics Privacy Policy — RMS",
+          "publisher": "Foodics",
+          "source_type": "official_company_current_privacy_policy",
+          "url": "https://www.foodics.com/privacy-policy/",
+          "evidence_type": "direct",
+          "source_locator": "Current privacy controller",
+          "supports": "الكيان المشغل في سياسة 2025.",
+          "published_on": "2025-12-01"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Foodics Terms of Service",
+          "publisher": "Foodics",
+          "source_type": "official_company_legal_terms",
+          "url": "https://www.foodics.com/terms-of-service/",
+          "evidence_type": "direct",
+          "source_locator": "Terms overview",
+          "supports": "الخدمات ووجود تسمية قانونية مختلفة في صفحة أقدم."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Foodics Raises $170M Series C",
+          "publisher": "Foodics",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.foodics.com/press/saas-series-c-funding/",
+          "evidence_type": "direct",
+          "source_locator": "Company description",
+          "supports": "التأسيس عام 2014 والمقر السعودي.",
+          "published_on": "2022-04-20"
+        }
+      ],
+      "limitations": "لم يُعثر على سجل موحد منشور يشرح العلاقة بين جميع الأسماء القانونية؛ لذلك لم يُفترض هيكل شركات محدد."
+    },
+    "$.company.business_model": {
+      "field_value": "منصة B2B2C تجمع برمجيات إدارة المطاعم السحابية والمدفوعات والأجهزة وقنوات الطلب والتحليلات. تعرض في أغسطس 2026 باقات Starter وBasic وAdvanced بأسعار تختلف حسب نوع المنشأة والدفع الشهري أو السنوي، مع عقود Enterprise وعروض أسعار مخصصة للأجهزة والبرمجيات. تحصل Foodics Pay على رسوم شهرية ورسوم معاملات تختلف حسب الطرفية ونوع البطاقة، وتباع تراخيص وإضافات وأجهزة مثل الكاشير والشاشات والأكشاك والطابعات. كما توسع المنظومة عبر الطلب المباشر والمحاسبة وذكاء الأعمال وسوق التطبيقات وخدمات التوريد والتمويل المرن. لا تنشر الشركة مزيج الإيرادات أو هامش كل منتج أو معدل الاحتفاظ أو متوسط قيمة العقد.",
+      "verification_status": "verified_multi_stream_model_pricing_and_mix_partly_undisclosed",
+      "confidence": "high",
+      "claim_type": "saas_payments_hardware_online_ai_and_enterprise_model",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت الأسعار والمنتجات والترخيص قنوات النموذج، مع عدم توفر مزيج الإيراد أو الهوامش.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-05",
+        "SRC-06",
+        "SRC-13",
+        "SRC-14",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Foodics Pricing Plans",
+          "publisher": "Foodics",
+          "source_type": "official_company_current_pricing_page",
+          "url": "https://www.foodics.com/pricing/",
+          "evidence_type": "direct",
+          "source_locator": "Current plans",
+          "supports": "الحزم والأسعار والتراخيص والإضافات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "SAMA Licenses Foodics as a Payment Institution",
+          "publisher": "Saudi Central Bank",
+          "source_type": "official_regulator_licensing_announcement",
+          "url": "https://www.sama.gov.sa/en-us/mediacenter/news/pages/news-627.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Payment institution license",
+          "supports": "النشاط المرخص في الدفع.",
+          "published_on": "2020-11-24"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Foodics Pay and Its Fees",
+          "publisher": "Foodics",
+          "source_type": "official_company_payment_product_and_help_pages",
+          "url": "https://help.foodics.com/hc/en-us/articles/9466604830876-Foodics-Pay-Fees-and-Rates",
+          "evidence_type": "direct",
+          "source_locator": "Pay fees",
+          "supports": "الرسوم الشهرية ورسوم البطاقات.",
+          "published_on": "2025-03-23"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Foodics Pay Product",
+          "publisher": "Foodics",
+          "source_type": "official_company_payment_product_page",
+          "url": "https://www.foodics.com/pay/",
+          "evidence_type": "direct",
+          "source_locator": "Pay capabilities",
+          "supports": "الطرفيات والتسويات والوسائل.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Foodics Enterprise",
+          "publisher": "Foodics",
+          "source_type": "official_company_enterprise_product_page",
+          "url": "https://www.foodics.com/enterprise/",
+          "evidence_type": "direct",
+          "source_locator": "Enterprise package",
+          "supports": "عقود السلاسل والحلول المخصصة.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "أسعار الموقع قد تختلف بالسوق والعرض، ولا تكشف عدد العملاء أو التكلفة أو هامش كل منتج."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. فودكس شركة خاصة ولا تنشر إيرادًا شهريًا أو سنويًا مدققًا أو ARR أو صافي ربح. أسعار الباقات ورسوم Foodics Pay لا تسمح بحساب الإيراد دون عدد التراخيص والأجهزة والطرفيات النشطة ومزيج الخطط والخصومات والاستردادات. كما أن التمويل الجريء، وقيمة الطلبات التي تمر عبر النظام، وأموال تسويات المدفوعات للتجار ليست إيرادًا للشركة.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "revenue_arr_profit_and_payment_volume_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا تنشر الشركة قوائم مالية أو إيرادًا، بينما تنشر الأسعار والتمويل والمؤشرات التشغيلية فقط.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-05",
+        "SRC-07",
+        "SRC-08",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Foodics Pricing Plans",
+          "publisher": "Foodics",
+          "source_type": "official_company_current_pricing_page",
+          "url": "https://www.foodics.com/pricing/",
+          "evidence_type": "direct",
+          "source_locator": "Plan prices",
+          "supports": "أسعار قائمة وليست إيرادًا محققًا.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Foodics Raises $20M Series B",
+          "publisher": "Foodics",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.foodics.com/press/startup-foodics-raises-us20-million-sar75mil-in-series-b-funding-round-led-by-sanabil-investments/",
+          "evidence_type": "direct",
+          "source_locator": "Series B financing",
+          "supports": "تمويل وإجمالي جمع لا إيراد.",
+          "published_on": "2021-02-01"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Foodics Raises $170M Series C",
+          "publisher": "Foodics",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.foodics.com/press/saas-series-c-funding/",
+          "evidence_type": "direct",
+          "source_locator": "Series C financing",
+          "supports": "170 مليون دولار تمويل لا إيراد.",
+          "published_on": "2022-04-20"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Foodics Pay and Its Fees",
+          "publisher": "Foodics",
+          "source_type": "official_company_payment_product_and_help_pages",
+          "url": "https://help.foodics.com/hc/en-us/articles/9466604830876-Foodics-Pay-Fees-and-Rates",
+          "evidence_type": "direct",
+          "source_locator": "Pay fee access",
+          "supports": "رسوم طرفيات متغيرة لا تكشف الإيراد.",
+          "published_on": "2025-03-23"
+        }
+      ],
+      "limitations": "غياب الإفصاح لا يعني عدم وجود إيراد؛ يعني أن تقدير «عشرات الملايين» غير قابل للتحقق."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "زيارات الموقع والمستخدمون النشطون والطلبات الشهرية غير معلنة. تعرض الصفحة الحالية أكثر من 30,000 مطعم يستخدم المنظومة، بينما ذكر إعلان فبراير 2025 تمكين أكثر من 30,000 صاحب منشأة أغذية ومشروبات عبر 30 دولة؛ ولا توضح الشركة عدد الحسابات المدفوعة أو المطاعم النشطة شهريًا أو الفروع والطرفيات ضمن هذا الرقم. كما تستخدم بيانات صحفية رقم «6 مليارات طلب» بصورة غير متسقة مع إفصاح أقدم عن أكثر من 5 مليارات دولار من قيمة الطلبات؛ لذلك لم يُستخدم هذا الرقم كعدد طلبات قابل للتحقق.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "traffic_mau_monthly_orders_and_active_subscription_count_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تنشر فودكس مطاعم وأصحاب منشآت ودولًا، لكن لا تنشر زيارات أو MAU أو اشتراكات نشطة أو طلبات شهرية.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-10",
+        "SRC-07",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Foodics — Cloud POS and Restaurant Management System",
+          "publisher": "Foodics",
+          "source_type": "official_company_current_homepage",
+          "url": "https://www.foodics.com/",
+          "evidence_type": "direct",
+          "source_locator": "Current homepage",
+          "supports": "30,000+ مطعم.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Foodics Acquires Solo Venture and Invests in Restaurant-Tech Startups",
+          "publisher": "Foodics",
+          "source_type": "official_company_acquisition_and_investment_release",
+          "url": "https://www.foodics.com/press/foodics-acquires-solo-venture-and-leads-investment-rounds-in-3-pioneering-startups-to-drive-next-gen-restaurant-success/",
+          "evidence_type": "direct",
+          "source_locator": "Ten-year scale statement",
+          "supports": "30,000+ صاحب منشأة عبر 30 دولة.",
+          "published_on": "2025-02-11"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "Foodics Raises $20M Series B",
+          "publisher": "Foodics",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.foodics.com/press/startup-foodics-raises-us20-million-sar75mil-in-series-b-funding-round-led-by-sanabil-investments/",
+          "evidence_type": "direct",
+          "source_locator": "2021 scale snapshot",
+          "supports": "10,000+ علامة و50,000+ طرفية.",
+          "published_on": "2021-02-01"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Foodics Acquires POSRocket",
+          "publisher": "Foodics",
+          "source_type": "official_company_acquisition_release",
+          "url": "https://www.foodics.com/press/foodics-acquires-posrocket-and-becomes-the-dominant-restaurant-tech-provider-in-mena/",
+          "evidence_type": "direct",
+          "source_locator": "Historical transaction wording",
+          "supports": "5 مليارات دولار قيمة طلبات في إفصاح 2022.",
+          "published_on": "2022-01-09"
+        }
+      ],
+      "limitations": "تختلف وحدات المطعم والعلامة وصاحب المنشأة والطرفية، كما أن صياغة «6 مليارات طلب» غير متسقة مع الإفصاح التاريخي بالقيمة."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "تشغيل المطعم يتوزع بين نقطة البيع والمطبخ والمخزون والموردين والموظفين والطلبات المباشرة ومنصات التوصيل والمدفوعات والمحاسبة والولاء. عندما تعمل هذه الوظائف على أنظمة منفصلة، يصعب مطابقة ما بيع بما استُهلك وما حُصّل وما سُوّي في البنك، وتزداد المشكلة مع تعدد الفروع وقنوات الطلب.",
+        "impact": "ينتج عن التجزؤ أخطاء في الطلبات والمخزون والتسويات، وتأخر اكتشاف الهدر أو التلاعب، وتكرار إدخال البيانات، وصعوبة معرفة ربحية الصنف والفرع والقناة. كما يستهلك دمج الأنظمة وقت الإدارة ويجعل الامتثال للفوترة الإلكترونية والمدفوعات أكثر كلفة على المنشآت الصغيرة."
+      },
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "fragmented_restaurant_operations_and_financial_reconciliation_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "التحليل مبني على مجموعة الوظائف التي توحدها منتجات فودكس والتحديات الحالية للمشغلين.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-19",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Foodics — Cloud POS and Restaurant Management System",
+          "publisher": "Foodics",
+          "source_type": "official_company_current_homepage",
+          "url": "https://www.foodics.com/",
+          "evidence_type": "direct",
+          "source_locator": "Current product portfolio",
+          "supports": "الطلبات والمخزون والمطبخ والمدفوعات والمحاسبة.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Foodics Enterprise",
+          "publisher": "Foodics",
+          "source_type": "official_company_enterprise_product_page",
+          "url": "https://www.foodics.com/enterprise/",
+          "evidence_type": "direct",
+          "source_locator": "Multi-branch operations",
+          "supports": "تعقيد السلاسل والتقارير وإدارة الفروع.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "GASTAT — Saudi GDP 2025",
+          "publisher": "General Authority for Statistics",
+          "source_type": "official_government_market_indicator",
+          "url": "https://stats.gov.sa/en/w/news/171",
+          "evidence_type": "contextual",
+          "source_locator": "Economic activity context",
+          "supports": "أهمية القطاع في الاقتصاد.",
+          "published_on": "2026-03-09"
+        }
+      ],
+      "limitations": "صياغة الأثر تحليل مهني وليست دراسة كمية للخسائر أو الهدر لدى عملاء فودكس."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "تبني فودكس نظام تشغيل للمطعم يبدأ بنقطة بيع وإدارة سحابية للطلبات والقوائم والمخزون والعملاء والفروع، ويربط المطبخ وشاشة العميل وتطبيق النادل والطلب الذاتي والطلب عبر الموقع والتطبيق والدفع عند الطاولة. تضيف Foodics Pay مدفوعات مدمجة وتسويات وتقارير، بينما توفر Foodics Accounting وFoodics AI تحليلات مالية وتشغيلية على مستوى الطلب والمنتج والفرع. تضم المنظومة سوق تطبيقات وواجهات تكامل وحلول Enterprise وFoodics One والتوريد. بعد الاستحواذ الكامل على Norma في يونيو 2026، دُمج تطبيق ذكاء الأعمال والمساعد التحليلي ضمن قسم الذكاء الاصطناعي في فودكس."
+      },
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "integrated_rms_payments_ordering_accounting_ai_and_ecosystem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت صفحات المنتجات والاستحواذات المنظومة الحالية وتوسع ذكاء الأعمال.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-01",
+        "SRC-12",
+        "SRC-14",
+        "SRC-19",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Foodics — Cloud POS and Restaurant Management System",
+          "publisher": "Foodics",
+          "source_type": "official_company_current_homepage",
+          "url": "https://www.foodics.com/",
+          "evidence_type": "direct",
+          "source_locator": "Current products",
+          "supports": "RMS وPay وOnline والأكشاك والمحاسبة وBI.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "What is Foodics AI?",
+          "publisher": "Foodics Help Center",
+          "source_type": "official_company_product_documentation",
+          "url": "https://help.foodics.com/hc/en-us/articles/17190003861276-What-is-Foodics-AI",
+          "evidence_type": "direct",
+          "source_locator": "Foodics AI",
+          "supports": "التحليلات عبر الويب والجوال.",
+          "published_on": "2026-05-06"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Foodics Pay Product",
+          "publisher": "Foodics",
+          "source_type": "official_company_payment_product_page",
+          "url": "https://www.foodics.com/pay/",
+          "evidence_type": "direct",
+          "source_locator": "Foodics Pay",
+          "supports": "المدفوعات والتسويات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Foodics Enterprise",
+          "publisher": "Foodics",
+          "source_type": "official_company_enterprise_product_page",
+          "url": "https://www.foodics.com/enterprise/",
+          "evidence_type": "direct",
+          "source_locator": "Enterprise",
+          "supports": "الفروع وCRM والتقارير.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Foodics Completes Full Acquisition of Norma",
+          "publisher": "Foodics",
+          "source_type": "official_company_acquisition_release",
+          "url": "https://www.foodics.com/ar/press/%D9%81%D9%88%D8%AF%D9%83%D8%B3-%D8%AA%D9%8F%D9%83%D9%85%D9%84-%D8%A7%D8%B3%D8%AA%D8%AD%D9%88%D8%A7%D8%B0%D9%87%D8%A7-%D8%B9%D9%84%D9%89-%D8%B4%D8%B1%D9%83%D8%A9-norma-%D8%A7%D9%84%D9%8A%D9%88/",
+          "evidence_type": "direct",
+          "source_locator": "Norma acquisition",
+          "supports": "دمج BI والمساعد التحليلي.",
+          "published_on": "2026-06-22"
+        }
+      ],
+      "limitations": "لا يعني توفر المنتج أن كل ميزة أو وسيلة دفع متاحة بالشروط نفسها في كل سوق."
+    },
+    "$.market_data.target_audience": {
+      "field_value": "المطاعم المستقلة وسلاسل المطاعم، والمقاهي والمخابز والحلويات، ومطاعم الخدمة السريعة والقيادة عبر السيارة، والمطابخ السحابية وعربات الطعام والأكشاك، ومشغلو الامتياز والفروع المتعددة، إضافة إلى منشآت التجزئة الصغيرة والخدمات التي تستفيد من Foodics One ونقطة البيع والمدفوعات.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "independent_restaurant_chain_cafe_bakery_cloud_kitchen_food_truck_and_micro_retail_segments",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الشرائح مثبتة في صفحات أنواع الأعمال والمنتجات والشراكة مع قطاع التجزئة المصغرة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-04",
+        "SRC-01",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Foodics Terms of Service",
+          "publisher": "Foodics",
+          "source_type": "official_company_legal_terms",
+          "url": "https://www.foodics.com/terms-of-service/",
+          "evidence_type": "direct",
+          "source_locator": "Account registration scope",
+          "supports": "المطاعم والمقاهي وعربات الطعام والتجزئة."
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Foodics — Cloud POS and Restaurant Management System",
+          "publisher": "Foodics",
+          "source_type": "official_company_current_homepage",
+          "url": "https://www.foodics.com/",
+          "evidence_type": "direct",
+          "source_locator": "Homepage and products",
+          "supports": "المنشآت المختلفة والسلاسل.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Foodics Enterprise",
+          "publisher": "Foodics",
+          "source_type": "official_company_enterprise_product_page",
+          "url": "https://www.foodics.com/enterprise/",
+          "evidence_type": "direct",
+          "source_locator": "Enterprise",
+          "supports": "السلاسل متعددة الفروع.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا تنشر الشركة توزيع العملاء أو الإيراد حسب الفئة أو الدولة."
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا يوجد في المصادر العامة المراجعة رقم رسمي مستقل يجمع سوق برمجيات المطاعم والمدفوعات والأجهزة والتوريد في الدول التي تعمل بها فودكس. للسياق السعودي الأوسع، بلغت مساهمة أنشطة تجارة الجملة والتجزئة والمطاعم والفنادق 12.3% من الناتج المحلي الإجمالي الجاري في 2025، وسجلت نموًا حقيقيًا سنويًا 5.4% في الربع الرابع. كما تواصل هيئة الزكاة والضريبة والجمارك توسيع المرحلة الثانية من الفوترة الإلكترونية؛ وشملت الموجة الخامسة والعشرون المكلفين الذين تجاوزت إيراداتهم الخاضعة للضريبة 187,500 ريال في أي من 2022–2025. هذه مؤشرات سوق وامتثال عامة وليست حجم سوق فودكس أو إيرادها أو حصتها.",
+      "verification_status": "verified_adjacent_economic_and_regulatory_context_not_company_tam",
+      "confidence": "high",
+      "claim_type": "saudi_restaurant_economic_activity_and_einvoicing_context",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يوفر GASTAT وZATCA سياقًا رسميًا للقطاع والامتثال دون اعتباره حجم سوق فودكس.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-17",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-17",
+          "title": "GASTAT — Saudi GDP 2025",
+          "publisher": "General Authority for Statistics",
+          "source_type": "official_government_market_indicator",
+          "url": "https://stats.gov.sa/en/w/news/171",
+          "evidence_type": "direct",
+          "source_locator": "2025 GDP results",
+          "supports": "12.3% مساهمة ونمو النشاط 5.4% في Q4.",
+          "published_on": "2026-03-09"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "ZATCA Wave 25 for E-Invoicing Integration",
+          "publisher": "Zakat, Tax and Customs Authority",
+          "source_type": "official_government_regulatory_update",
+          "url": "https://zatca.gov.sa/en/MediaCenter/News/Pages/Wave25-E-invoicing.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Wave 25",
+          "supports": "استمرار توسيع الربط الإلكتروني ومعيار الإيراد.",
+          "published_on": "2026-07-24"
+        }
+      ],
+      "limitations": "فئة GASTAT تضم تجارة الجملة والتجزئة والفنادق والمطاعم، وهي أوسع من سوق برمجيات المطاعم."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا تنشر فودكس معدل نمو حديثًا ومدققًا للإيراد أو ARR أو حجم المدفوعات. في فبراير 2021 ذكرت أكثر من 10,000 علامة أغذية ومشروبات و50,000+ طرفية، وفي 2022 ذكرت أكثر من 21,000 مطعم ومقهى، بينما تعرض الصفحة الحالية 30,000+ مطعم، وذكر إعلان 2025 أكثر من 30,000 صاحب منشأة عبر 30 دولة. تشير هذه اللقطات إلى توسع معلن، لكن اختلاف «العلامة» و«المطعم» و«صاحب المنشأة» والفترة يمنع حساب CAGR دقيق. توسع المنتج أيضًا عبر الاستحواذ على POSRocket وSolo ثم Norma، دون نشر إيرادات تلك الشركات أو أثرها العضوي منفصلًا.",
+      "verification_status": "verified_company_reported_scale_snapshots_with_definition_limits",
+      "confidence": "medium_high",
+      "claim_type": "restaurant_brand_terminal_country_and_acquisition_expansion",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تقارن الأدلة لقطات 2021 و2022 و2025–2026 والاستحواذات مع توضيح اختلاف الوحدات.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-07",
+        "SRC-08",
+        "SRC-10",
+        "SRC-01",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Foodics Raises $20M Series B",
+          "publisher": "Foodics",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.foodics.com/press/startup-foodics-raises-us20-million-sar75mil-in-series-b-funding-round-led-by-sanabil-investments/",
+          "evidence_type": "direct",
+          "source_locator": "2021 scale",
+          "supports": "10,000+ علامة و50,000+ طرفية.",
+          "published_on": "2021-02-01"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Foodics Raises $170M Series C",
+          "publisher": "Foodics",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.foodics.com/press/saas-series-c-funding/",
+          "evidence_type": "direct",
+          "source_locator": "2022 company context",
+          "supports": "التوسع الدولي وخطة M&A.",
+          "published_on": "2022-04-20"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Foodics Acquires Solo Venture and Invests in Restaurant-Tech Startups",
+          "publisher": "Foodics",
+          "source_type": "official_company_acquisition_and_investment_release",
+          "url": "https://www.foodics.com/press/foodics-acquires-solo-venture-and-leads-investment-rounds-in-3-pioneering-startups-to-drive-next-gen-restaurant-success/",
+          "evidence_type": "direct",
+          "source_locator": "2025 scale and Solo",
+          "supports": "30,000+ صاحب منشأة و30 دولة.",
+          "published_on": "2025-02-11"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Foodics — Cloud POS and Restaurant Management System",
+          "publisher": "Foodics",
+          "source_type": "official_company_current_homepage",
+          "url": "https://www.foodics.com/",
+          "evidence_type": "direct",
+          "source_locator": "Current scale",
+          "supports": "30,000+ مطعم.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Foodics Completes Full Acquisition of Norma",
+          "publisher": "Foodics",
+          "source_type": "official_company_acquisition_release",
+          "url": "https://www.foodics.com/ar/press/%D9%81%D9%88%D8%AF%D9%83%D8%B3-%D8%AA%D9%8F%D9%83%D9%85%D9%84-%D8%A7%D8%B3%D8%AA%D8%AD%D9%88%D8%A7%D8%B0%D9%87%D8%A7-%D8%B9%D9%84%D9%89-%D8%B4%D8%B1%D9%83%D8%A9-norma-%D8%A7%D9%84%D9%8A%D9%88/",
+          "evidence_type": "direct",
+          "source_locator": "2026 Norma",
+          "supports": "توسع قسم الذكاء الاصطناعي.",
+          "published_on": "2026-06-22"
+        }
+      ],
+      "limitations": "لا توجد سلسلة زمنية موحدة أو إيرادات مطلقة تسمح بحساب معدل نمو مالي أو عضوي دقيق."
+    },
+    "$.financials.initial_investment": {
+      "field_value": "أعلنت فودكس في فبراير 2021 جولة Series B بقيمة 20 مليون دولار، وقالت إن إجمالي التمويل المعلن حتى ذلك التاريخ بلغ 28 مليونًا. وفي أبريل 2022 أغلقت Series C بقيمة 170 مليون دولار بقيادة Prosus وسنابل للاستثمار، وبمشاركة Sequoia Capital India ومستثمرين قائمين. ينتج عن الجمع حد أدنى معلن يقارب 198 مليون دولار من التمويل الجريء. لا يشمل هذا الرقم 100 مليون دولار أعلنت شركة معالم للاستثمار تخصيصها لتمويل التجار، ولا برنامج 100 مليون دولار الذي أعلنت فودكس تخصيصه للاستحواذات والاستثمارات خلال ثلاث سنوات؛ فهذان التزامان أو برامج استخدام رأسمال وليسا جولتين دخلتا خزينة الشركة بالقيمة نفسها.",
+      "verification_status": "verified_venture_funding_and_separate_capital_programs",
+      "confidence": "high",
+      "claim_type": "series_b_total_to_date_series_c_and_non_equity_programs",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت الإعلانات إجمالي 28 مليونًا حتى Series B ثم 170 مليونًا Series C، مع فصل برامج تمويل التجار والاستحواذات.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-07",
+        "SRC-08",
+        "SRC-10"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Foodics Raises $20M Series B",
+          "publisher": "Foodics",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.foodics.com/press/startup-foodics-raises-us20-million-sar75mil-in-series-b-funding-round-led-by-sanabil-investments/",
+          "evidence_type": "direct",
+          "source_locator": "Series B and cumulative total",
+          "supports": "20 مليونًا وإجمالي 28 مليونًا حتى 2021، وبرنامج معالم.",
+          "published_on": "2021-02-01"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Foodics Raises $170M Series C",
+          "publisher": "Foodics",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.foodics.com/press/saas-series-c-funding/",
+          "evidence_type": "direct",
+          "source_locator": "Series C",
+          "supports": "170 مليون دولار والمستثمرون.",
+          "published_on": "2022-04-20"
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Foodics Acquires Solo Venture and Invests in Restaurant-Tech Startups",
+          "publisher": "Foodics",
+          "source_type": "official_company_acquisition_and_investment_release",
+          "url": "https://www.foodics.com/press/foodics-acquires-solo-venture-and-leads-investment-rounds-in-3-pioneering-startups-to-drive-next-gen-restaurant-success/",
+          "evidence_type": "direct",
+          "source_locator": "Strategic capital allocation",
+          "supports": "100 مليون دولار للاستحواذات والاستثمارات.",
+          "published_on": "2025-02-11"
+        }
+      ],
+      "limitations": "198 مليون دولار حد أدنى مشتق من إجماليين معلنين؛ قد توجد أدوات دين أو معاملات غير معلنة."
+    },
+    "$.financials.valuation": {
+      "field_value": "غير معلن. لم تنشر فودكس أو المستثمرون نسبة الملكية المباعة في Series C أو تقييم ما قبل الاستثمار أو بعده، ولا توجد صفقة ثانوية أو إدراج عام يسمح بتحديد تقييم أغسطس 2026. تقدير 500 مليون دولار أو أكثر في الملف الأصلي غير مدعوم بمصدر أولي علني، ولا يجوز استنتاج التقييم من جولة 170 مليون دولار أو عدد المطاعم أو حجم الطلبات.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "valuation_not_disclosed_no_equity_percentage",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "إعلانات التمويل تكشف قيمة الجولات دون نسب الملكية أو تقييمات.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-07",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-07",
+          "title": "Foodics Raises $20M Series B",
+          "publisher": "Foodics",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.foodics.com/press/startup-foodics-raises-us20-million-sar75mil-in-series-b-funding-round-led-by-sanabil-investments/",
+          "evidence_type": "direct",
+          "source_locator": "Series B terms",
+          "supports": "قيمة الجولة دون تقييم.",
+          "published_on": "2021-02-01"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Foodics Raises $170M Series C",
+          "publisher": "Foodics",
+          "source_type": "official_company_funding_release",
+          "url": "https://www.foodics.com/press/saas-series-c-funding/",
+          "evidence_type": "direct",
+          "source_locator": "Series C terms",
+          "supports": "قيمة الجولة دون حصة أو تقييم.",
+          "published_on": "2022-04-20"
+        }
+      ],
+      "limitations": "لا يمكن حساب التقييم من مبلغ الجولة أو عدد العملاء؛ حُذف تقدير 500M+."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "اشتراكات SaaS شهرية وسنوية في حزم Starter وBasic وAdvanced، وعقود Enterprise مخصصة للسلاسل والمنشآت الكبيرة.",
+        "تراخيص وإضافات مستقلة مثل المخزون وFoodics Online والتطبيق والولاء وذكاء الأعمال وAPI وشاشات المطبخ والعميل وتطبيق النادل.",
+        "رسوم Foodics Pay الشهرية ورسوم معاملات البطاقات والمحافظ، وتختلف حسب الطرفية ونوع البطاقة والعقد.",
+        "بيع أو تأجير وتوريد الأجهزة مثل أجهزة الكاشير والآيباد والحامل والطابعة ودرج النقد وشاشات العرض والأكشاك وطرفيات الدفع.",
+        "رسوم تنفيذ وتهيئة وربط ودعم وحسابات Enterprise وخدمات متعددة الفروع بحسب عرض السعر والعقد.",
+        "اشتراكات أو خدمات الطلب المباشر عبر المواقع والتطبيقات والأكشاك والدفع عند الطاولة؛ بعض العروض تكون مجانية أو دون عمولة لفترة محددة.",
+        "Foodics Accounting وFoodics AI والتحليلات المتقدمة كمكونات داخل الباقات أو إضافات مدفوعة وفق السوق والعقد.",
+        "سوق التطبيقات والتكاملات والشراكات؛ توجد منظومة تجارية مثبتة لكن حصة فودكس أو عمولتها من الشركاء غير منشورة.",
+        "Foodics Supply يتيح شراء مواد خام بحد ائتماني مؤهل يصل إلى 25,000 ريال والسداد اليومي من Foodics Pay؛ لم يُنشر مصدر عائد فودكس أو الجهة الممولة بوضوح.",
+        "FLEX يتيح تقسيط الاشتراكات والأجهزة دون فائدة ورسوم مخفية وفق الإعلان؛ وظيفته دعم بيع المنتجات وتدفق النقد، وليس مسار فائدة مباشر معلن."
+      ],
+      "verification_status": "verified_and_inferred_channels_rates_and_margins_partly_undisclosed",
+      "confidence": "medium_high",
+      "claim_type": "subscriptions_addons_payments_hardware_enterprise_online_ai_marketplace_supply_and_flex",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "القنوات مدعومة بالأسعار والمنتجات والوثائق، مع توضيح القنوات التي لا ينشر عائدها.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-05",
+        "SRC-13",
+        "SRC-14",
+        "SRC-15",
+        "SRC-16",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Foodics Pricing Plans",
+          "publisher": "Foodics",
+          "source_type": "official_company_current_pricing_page",
+          "url": "https://www.foodics.com/pricing/",
+          "evidence_type": "direct",
+          "source_locator": "Plans and add-ons",
+          "supports": "الاشتراكات والتراخيص والأجهزة.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Foodics Pay and Its Fees",
+          "publisher": "Foodics",
+          "source_type": "official_company_payment_product_and_help_pages",
+          "url": "https://help.foodics.com/hc/en-us/articles/9466604830876-Foodics-Pay-Fees-and-Rates",
+          "evidence_type": "direct",
+          "source_locator": "Pay fee types",
+          "supports": "الرسوم الشهرية ورسوم المعاملات.",
+          "published_on": "2025-03-23"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Foodics Pay Product",
+          "publisher": "Foodics",
+          "source_type": "official_company_payment_product_page",
+          "url": "https://www.foodics.com/pay/",
+          "evidence_type": "direct",
+          "source_locator": "Pay product",
+          "supports": "المدفوعات والتسويات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Foodics Supply FAQ",
+          "publisher": "Foodics Help Center",
+          "source_type": "official_company_supply_and_credit_documentation",
+          "url": "https://help.foodics.com/hc/en-us/articles/17190306638876-Foodics-Supply-FAQ",
+          "evidence_type": "direct",
+          "source_locator": "Supply model",
+          "supports": "الائتمان والتوريد والسداد.",
+          "published_on": "2025-09-03"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Foodics FLEX Program",
+          "publisher": "Foodics",
+          "source_type": "official_company_fintech_product_release",
+          "url": "https://www.foodics.com/press/foodics-launches-flex-program/",
+          "evidence_type": "direct",
+          "source_locator": "FLEX",
+          "supports": "التقسيط دون فائدة لدعم شراء التقنية.",
+          "published_on": "2023-10-15"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Foodics Enterprise",
+          "publisher": "Foodics",
+          "source_type": "official_company_enterprise_product_page",
+          "url": "https://www.foodics.com/enterprise/",
+          "evidence_type": "direct",
+          "source_locator": "Enterprise",
+          "supports": "العقود والحلول المخصصة.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لا تنشر الشركة مزيج الإيراد أو الهامش، وبعض المنتجات مجانية أو مروجة ضمن مبادرات مؤقتة."
+    },
+    "$.tools": {
+      "field_value": [
+        "Foodics RMS كنظام نقاط بيع وإدارة مطاعم سحابي للطلبات والقوائم والمخزون والعملاء والفروع والتقارير.",
+        "Foodics Pay كخدمة مدفوعات مرخصة في السعودية، مع طرفيات ودفع إلكتروني وروابط دفع ودفع عند الطاولة وتسويات وتقارير.",
+        "Foodics Online لإنشاء موقع وتطبيق للطلب المباشر والمزامنة مع نقطة البيع والمطبخ.",
+        "أكشاك الطلب الذاتي وشاشات العميل وتطبيق النادل وشاشة المطبخ وإدارة الطاولات.",
+        "Foodics Enterprise لإدارة السلاسل والفروع المتعددة مع دعم وتقارير متقدمة وحلول مخصصة.",
+        "Foodics Accounting للمحاسبة والإدارة المالية المخصصة للمطاعم.",
+        "Foodics AI وBusiness Intelligence للتحليلات التشغيلية والمالية والتنبؤ والاستعلام باللغة الطبيعية.",
+        "Foodics One كجهاز متكامل لنقطة البيع والدفع والطباعة للمنشآت الصغيرة والتجزئة المصغرة.",
+        "سوق تطبيقات وتكاملات في المحاسبة والتوصيل والموارد البشرية والتسويق والحجوزات وغيرها.",
+        "واجهات API وربط خدمات التوصيل والطلب والقنوات الخارجية ضمن الخطط المتقدمة.",
+        "Foodics Supply لتوريد المواد للمؤهلين بائتمان يصل إلى 25,000 ريال وسداد يومي على 30 يومًا وفق صفحة المساعدة.",
+        "FLEX لتقسيط اشتراكات وأجهزة فودكس من إيرادات Foodics Pay دون دفعة أولى أو فائدة وفق إعلان 2023.",
+        "توافق معلن مع متطلبات ZATCA للفوترة الإلكترونية في منتجات نقاط البيع.",
+        "دعم سحابي وعمل دون اتصال لبعض سيناريوهات نقطة البيع؛ لم يُثبت مزود السحابة أو المكدس البرمجي الداخلي في المصادر الحالية."
+      ],
+      "verification_status": "verified_product_capabilities_without_speculative_internal_stack",
+      "confidence": "high",
+      "claim_type": "rms_pay_online_kiosk_ai_accounting_enterprise_supply_and_integrations",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استُبدلت أسماء AWS وLaravel وVue وSwift وPostgreSQL بقدرات منتجات مثبتة رسميًا.",
+      "source_count": 8,
+      "source_ids": [
+        "SRC-01",
+        "SRC-05",
+        "SRC-12",
+        "SRC-14",
+        "SRC-15",
+        "SRC-16",
+        "SRC-18",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Foodics — Cloud POS and Restaurant Management System",
+          "publisher": "Foodics",
+          "source_type": "official_company_current_homepage",
+          "url": "https://www.foodics.com/",
+          "evidence_type": "direct",
+          "source_locator": "Current products",
+          "supports": "RMS وOnline والأكشاك والمحاسبة وBI.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Foodics Pricing Plans",
+          "publisher": "Foodics",
+          "source_type": "official_company_current_pricing_page",
+          "url": "https://www.foodics.com/pricing/",
+          "evidence_type": "direct",
+          "source_locator": "Plan features",
+          "supports": "المخزون وAPI والشاشات والولاء.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "What is Foodics AI?",
+          "publisher": "Foodics Help Center",
+          "source_type": "official_company_product_documentation",
+          "url": "https://help.foodics.com/hc/en-us/articles/17190003861276-What-is-Foodics-AI",
+          "evidence_type": "direct",
+          "source_locator": "Foodics AI",
+          "supports": "التحليلات الذكية.",
+          "published_on": "2026-05-06"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Foodics Pay Product",
+          "publisher": "Foodics",
+          "source_type": "official_company_payment_product_page",
+          "url": "https://www.foodics.com/pay/",
+          "evidence_type": "direct",
+          "source_locator": "Foodics Pay",
+          "supports": "المدفوعات والطرفيات والتسويات.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Foodics Supply FAQ",
+          "publisher": "Foodics Help Center",
+          "source_type": "official_company_supply_and_credit_documentation",
+          "url": "https://help.foodics.com/hc/en-us/articles/17190306638876-Foodics-Supply-FAQ",
+          "evidence_type": "direct",
+          "source_locator": "Supply",
+          "supports": "التوريد والائتمان.",
+          "published_on": "2025-09-03"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Foodics FLEX Program",
+          "publisher": "Foodics",
+          "source_type": "official_company_fintech_product_release",
+          "url": "https://www.foodics.com/press/foodics-launches-flex-program/",
+          "evidence_type": "direct",
+          "source_locator": "FLEX",
+          "supports": "تمويل شراء التقنية.",
+          "published_on": "2023-10-15"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "ZATCA Wave 25 for E-Invoicing Integration",
+          "publisher": "Zakat, Tax and Customs Authority",
+          "source_type": "official_government_regulatory_update",
+          "url": "https://zatca.gov.sa/en/MediaCenter/News/Pages/Wave25-E-invoicing.aspx",
+          "evidence_type": "direct",
+          "source_locator": "E-invoicing requirements",
+          "supports": "السياق التنظيمي للتوافق.",
+          "published_on": "2026-07-24"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Foodics Enterprise",
+          "publisher": "Foodics",
+          "source_type": "official_company_enterprise_product_page",
+          "url": "https://www.foodics.com/enterprise/",
+          "evidence_type": "direct",
+          "source_locator": "Enterprise",
+          "supports": "الفروع وCRM والدعم.",
+          "published_on": "2026"
+        }
+      ],
+      "limitations": "لم يُعثر على توثيق رسمي حديث للمكدس البرمجي الداخلي؛ قد تستخدم الشركة هذه التقنيات لكنها لا تُعرض كحقائق."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Foodics — Cloud POS and Restaurant Management System",
+      "publisher": "Foodics",
+      "source_type": "official_company_current_homepage",
+      "published_on": "2026",
+      "url": "https://www.foodics.com/",
+      "supports": [
+        "30,000+ مطعم",
+        "محفظة المنتجات الحالية",
+        "نقطة البيع والمدفوعات والطلب الذاتي والمحاسبة وذكاء الأعمال"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Contact Foodics",
+      "publisher": "Foodics",
+      "source_type": "official_company_current_contact_page",
+      "published_on": "2026",
+      "url": "https://www.foodics.com/contact-us/",
+      "supports": [
+        "المقر في الرياض",
+        "المكاتب في السعودية والإمارات والكويت ومصر والأردن",
+        "الإشراف والترخيص من SAMA وفق تذييل الموقع"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Foodics Privacy Policy — RMS",
+      "publisher": "Foodics",
+      "source_type": "official_company_current_privacy_policy",
+      "published_on": "2025-12-01",
+      "url": "https://www.foodics.com/privacy-policy/",
+      "supports": [
+        "الكيان المشغل Al-Saheb Al-Mutqadma for Information Technology",
+        "الإطار الحالي لمعالجة البيانات في RMS"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Foodics Terms of Service",
+      "publisher": "Foodics",
+      "source_type": "official_company_legal_terms",
+      "published_on": null,
+      "url": "https://www.foodics.com/terms-of-service/",
+      "supports": [
+        "الخدمات السحابية والبرمجيات والأجهزة",
+        "المطاعم والمقاهي وعربات الطعام ومتاجر التجزئة",
+        "وجود اختلافات في أسماء الكيانات القانونية عبر الصفحات"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Foodics Pricing Plans",
+      "publisher": "Foodics",
+      "source_type": "official_company_current_pricing_page",
+      "published_on": "2026",
+      "url": "https://www.foodics.com/pricing/",
+      "supports": [
+        "حزم Starter وBasic وAdvanced والأسعار الشهرية والسنوية",
+        "المخزون وOnline والمحاسبة وBI وAPI والشاشات والدفع",
+        "عروض الأسعار المخصصة للأجهزة والبرمجيات"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "SAMA Licenses Foodics as a Payment Institution",
+      "publisher": "Saudi Central Bank",
+      "source_type": "official_regulator_licensing_announcement",
+      "published_on": "2020-11-24",
+      "url": "https://www.sama.gov.sa/en-us/mediacenter/news/pages/news-627.aspx",
+      "supports": [
+        "ترخيص فودكس كمؤسسة مدفوعات عبر خدمات نقاط البيع",
+        "الإطار الرقابي لخدمات الدفع"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Foodics Raises $20M Series B",
+      "publisher": "Foodics",
+      "source_type": "official_company_funding_release",
+      "published_on": "2021-02-01",
+      "url": "https://www.foodics.com/press/startup-foodics-raises-us20-million-sar75mil-in-series-b-funding-round-led-by-sanabil-investments/",
+      "supports": [
+        "Series B بقيمة 20 مليون دولار",
+        "إجمالي تمويل 28 مليون دولار حتى 2021",
+        "10,000+ علامة و50,000+ طرفية في لقطة 2021",
+        "100 مليون دولار من معالم لتمويل التجار وليست جولة فودكس"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Foodics Raises $170M Series C",
+      "publisher": "Foodics",
+      "source_type": "official_company_funding_release",
+      "published_on": "2022-04-20",
+      "url": "https://www.foodics.com/press/saas-series-c-funding/",
+      "supports": [
+        "Series C بقيمة 170 مليون دولار",
+        "المستثمرون وأهداف الجولة",
+        "التوسع في التقنية المالية والإقراض وسلسلة الإمداد"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Foodics Acquires POSRocket",
+      "publisher": "Foodics",
+      "source_type": "official_company_acquisition_release",
+      "published_on": "2022-01-09",
+      "url": "https://www.foodics.com/press/foodics-acquires-posrocket-and-becomes-the-dominant-restaurant-tech-provider-in-mena/",
+      "supports": [
+        "الاستحواذ الكامل على POSRocket",
+        "التوسع في الأردن ومصر والكويت وعُمان",
+        "الإفصاح التاريخي عن 5 مليارات دولار من قيمة الطلبات"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Foodics Acquires Solo Venture and Invests in Restaurant-Tech Startups",
+      "publisher": "Foodics",
+      "source_type": "official_company_acquisition_and_investment_release",
+      "published_on": "2025-02-11",
+      "url": "https://www.foodics.com/press/foodics-acquires-solo-venture-and-leads-investment-rounds-in-3-pioneering-startups-to-drive-next-gen-restaurant-success/",
+      "supports": [
+        "الاستحواذ الكامل على Solo",
+        "تكنولوجيا الأكشاك والمواقع والتطبيقات البيضاء",
+        "30,000+ صاحب منشأة عبر 30 دولة",
+        "تخصيص 100 مليون دولار للاستحواذات والاستثمارات خلال ثلاث سنوات"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Foodics Completes Full Acquisition of Norma",
+      "publisher": "Foodics",
+      "source_type": "official_company_acquisition_release",
+      "published_on": "2026-06-22",
+      "url": "https://www.foodics.com/ar/press/%D9%81%D9%88%D8%AF%D9%83%D8%B3-%D8%AA%D9%8F%D9%83%D9%85%D9%84-%D8%A7%D8%B3%D8%AA%D8%AD%D9%88%D8%A7%D8%B0%D9%87%D8%A7-%D8%B9%D9%84%D9%89-%D8%B4%D8%B1%D9%83%D8%A9-norma-%D8%A7%D9%84%D9%8A%D9%88/",
+      "supports": [
+        "الاستحواذ الكامل على Norma",
+        "دمج فريق Norma وتطبيق BI والمساعد التحليلي في منصة فودكس"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "What is Foodics AI?",
+      "publisher": "Foodics Help Center",
+      "source_type": "official_company_product_documentation",
+      "published_on": "2026-05-06",
+      "url": "https://help.foodics.com/hc/en-us/articles/17190003861276-What-is-Foodics-AI",
+      "supports": [
+        "Foodics AI كتطبيق ويب وجوال للتحليلات",
+        "الفئات المستهدفة من المديرين والملاك والإدارة"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Foodics Pay and Its Fees",
+      "publisher": "Foodics",
+      "source_type": "official_company_payment_product_and_help_pages",
+      "published_on": "2025-03-23",
+      "url": "https://help.foodics.com/hc/en-us/articles/9466604830876-Foodics-Pay-Fees-and-Rates",
+      "supports": [
+        "وجود رسوم شهرية ورسوم معاملات حسب نوع البطاقة",
+        "عدم نشر جدول موحد عام للأسعار"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Foodics Pay Product",
+      "publisher": "Foodics",
+      "source_type": "official_company_payment_product_page",
+      "published_on": "2026",
+      "url": "https://www.foodics.com/pay/",
+      "supports": [
+        "الطرفيات والدفع الإلكتروني وروابط الدفع والدفع عند الطاولة",
+        "التسويات والتقارير ووسائل الدفع"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Foodics Supply FAQ",
+      "publisher": "Foodics Help Center",
+      "source_type": "official_company_supply_and_credit_documentation",
+      "published_on": "2025-09-03",
+      "url": "https://help.foodics.com/hc/en-us/articles/17190306638876-Foodics-Supply-FAQ",
+      "supports": [
+        "حد ائتماني مؤهل يصل إلى 25,000 ريال",
+        "السداد اليومي لمدة 30 يومًا من Foodics Pay",
+        "توريد المواد الخام للمطاعم والمقاهي"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Foodics FLEX Program",
+      "publisher": "Foodics",
+      "source_type": "official_company_fintech_product_release",
+      "published_on": "2023-10-15",
+      "url": "https://www.foodics.com/press/foodics-launches-flex-program/",
+      "supports": [
+        "تقسيط الاشتراكات والأجهزة",
+        "دون دفعة أولى أو فائدة أو رسوم مخفية وفق الإعلان",
+        "الخصم من الإيرادات المحصلة عبر Foodics Pay"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "GASTAT — Saudi GDP 2025",
+      "publisher": "General Authority for Statistics",
+      "source_type": "official_government_market_indicator",
+      "published_on": "2026-03-09",
+      "url": "https://stats.gov.sa/en/w/news/171",
+      "supports": [
+        "12.3% مساهمة تجارة الجملة والتجزئة والمطاعم والفنادق في الناتج الجاري",
+        "5.4% نمو سنوي للنشاط في الربع الرابع 2025"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "ZATCA Wave 25 for E-Invoicing Integration",
+      "publisher": "Zakat, Tax and Customs Authority",
+      "source_type": "official_government_regulatory_update",
+      "published_on": "2026-07-24",
+      "url": "https://zatca.gov.sa/en/MediaCenter/News/Pages/Wave25-E-invoicing.aspx",
+      "supports": [
+        "الموجة الخامسة والعشرون ومعيار 187,500 ريال",
+        "متطلبات الربط مع منصة فاتورة",
+        "استمرار التطبيق المرحلي للفوترة الإلكترونية"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "Foodics Enterprise",
+      "publisher": "Foodics",
+      "source_type": "official_company_enterprise_product_page",
+      "published_on": "2026",
+      "url": "https://www.foodics.com/enterprise/",
+      "supports": [
+        "إدارة الفروع المتعددة والدعم المتخصص",
+        "RMS وCRM والتقارير المتقدمة للسلاسل"
+      ]
+    }
   ]
 }

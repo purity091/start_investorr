@@ -2,52 +2,1031 @@
   "id": "figma",
   "slug": "figma",
   "name": "فيجما (Figma)",
-  "headline": "أداة التصميم التعاوني التي قضت على العزلة بين المصممين والمطورين",
-  "category": "B2B SaaS / تصميم واجهات المستخدم",
+  "headline": "من أداة تصميم داخل المتصفح إلى منصة عامة للتصميم والكود والذكاء الاصطناعي: اختبار فيجما بعد الاكتتاب هو تحويل الانتشار إلى نمو مربح",
+  "category": "برمجيات التصميم وتطوير المنتجات والذكاء الاصطناعي / Design & Product Development SaaS",
   "company": {
-    "location": "سان فرانسيسكو، الولايات المتحدة",
-    "business_model": "Freemium + اشتراكات SaaS للمحترفين والفرق (Per Seat)"
+    "legal_name": "Figma, Inc.",
+    "incorporation": "ديلاوير، أكتوبر 2012",
+    "headquarters": "760 Market Street, Floor 10, San Francisco, California 94102, United States",
+    "location": "سان فرانسيسكو، الولايات المتحدة، مع عمليات ومكاتب دولية وإيرادات تتجاوز نصف الإجمالي من خارج الولايات المتحدة.",
+    "founded": 2012,
+    "founders": [
+      "ديلان فيلد",
+      "إيفان والاس"
+    ],
+    "public_status": {
+      "status": "شركة عامة",
+      "exchange": "New York Stock Exchange",
+      "ticker": "FIG",
+      "trading_start": "2025-07-31",
+      "ipo_completion": "2025-08-01"
+    },
+    "business_model": "نموذج Freemium واشتراكات SaaS حسب الخطة ونوع المقعد، مع عقود شهرية وسنوية وخطط Professional وOrganization وEnterprise. تعتمد الإيرادات أساسًا على Full وDev وCollab seats، مع إضافات مدفوعة مثل أرصدة الذكاء الاصطناعي وGovernance+. لا تُباع المنتجات الرئيسية منفردة في النموذج الحالي؛ تحدد الخطة ونوع المقعد مستوى الوصول.",
+    "current_platform_scope": [
+      "Figma Design",
+      "Dev Mode",
+      "Figma Make",
+      "Figma Weave",
+      "Figma Motion",
+      "Figma Sites",
+      "Figma Draw",
+      "Figma Buzz",
+      "FigJam",
+      "Figma Slides"
+    ],
+    "customer_segments": [
+      "المصممون ومصممو المنتجات والواجهات",
+      "المطورون وفرق الهندسة",
+      "مديرو المنتجات والباحثون والكتّاب",
+      "فرق التسويق والعلامات التجارية",
+      "المستقلون والفرق الصغيرة",
+      "المؤسسات الكبرى والجهات الحكومية والتعليمية",
+      "فرق الذكاء الاصطناعي ووكلاء البرمجة المتصلون عبر MCP"
+    ],
+    "operating_status_as_of_2026_08_03": {
+      "status": "نشطة وعامة وسريعة النمو",
+      "latest_completed_reporting_period": "الربع الأول المنتهي في 31 مارس 2026",
+      "next_results_date": "2026-08-05",
+      "note": "نتائج الربع الثاني 2026 لم تكن قد صدرت في تاريخ التحقق؛ لم يُستخدم أي تقدير محل نتائج فعلية."
+    }
   },
   "directory_snapshot": {
-    "monthly_revenue": "$50M+ /mo",
-    "monthly_traffic": "100M+ /mo"
+    "monthly_revenue": null,
+    "monthly_revenue_note": "فيجما تفصح سنويًا وربعيًا لا شهريًا. لم يُقسّم إيراد الربع على ثلاثة بوصفه إيرادًا شهريًا فعليًا، لذلك أزيل ادعاء 50+ مليون دولار شهريًا ووُضع null.",
+    "monthly_traffic": null,
+    "monthly_traffic_note": "أفصحت الشركة عن أكثر من 13 مليون مستخدم نشط شهريًا في الربع الأول 2025، لكنها لم تنشر عددًا أحدث مطابقًا حتى 3 أغسطس 2026. المستخدمون النشطون ليسوا زيارات موقع؛ أزيل ادعاء 100 مليون زيارة شهريًا ووُضع null.",
+    "latest_verified_operating_snapshot": {
+      "as_of": "2026-03-31",
+      "paid_customers": 690000,
+      "paid_customers_growth_yoy": "54%",
+      "paid_customers_over_10000_arr": 15218,
+      "paid_customers_over_100000_arr": 1525,
+      "net_dollar_retention_rate": "139%",
+      "enterprise_make_adoption": "نحو 60% من العملاء ذوي ARR يتجاوز 100 ألف دولار استخدموا Figma Make أسبوعيًا في الربع الأول 2026",
+      "mcp_growth": "نما مستخدمو MCP الأسبوعيون في Figma Design خمسة أضعاف ربعيًا",
+      "non_designer_share_of_mau": "نحو الثلثين في الربع الرابع 2025",
+      "historical_user_snapshot": {
+        "monthly_active_users": "أكثر من 13 مليونًا",
+        "as_of": "2025-Q1",
+        "outside_us_share": "نحو 85%",
+        "non_designer_share": "نحو الثلثين",
+        "status": "historical_disclosed_metric_not_current"
+      },
+      "global_business": {
+        "2025_us_revenue_usd": 491548000,
+        "2025_international_revenue_usd": 564240000,
+        "international_share_calculated": "53.4%",
+        "note": "حُسبت النسبة من أرقام SEC؛ لم يحقق أي بلد منفرد خارج الولايات المتحدة أكثر من 10% من الإيراد."
+      }
+    },
+    "market_snapshot": {
+      "share_price_usd": 22.44,
+      "market_cap_usd": 11825000000,
+      "timestamp": "2026-08-03T13:00:23-04:00",
+      "status": "third_party_intraday_snapshot",
+      "source_note": "لقطة سوقية ديناميكية من Yahoo Finance وليست إفصاحًا من الشركة. تتغير القيمة خلال التداول ولا تمثل تقييمًا ثابتًا.",
+      "next_earnings": "2026-08-05"
+    },
+    "metric_distinctions": {
+      "revenue": "إيراد الاشتراكات والإضافات المعترف به محاسبيًا خلال فترة.",
+      "arr": "القيمة السنوية للعقود النشطة بافتراض التجديد بالشروط الحالية؛ ليست توقعًا مضمونًا للإيراد.",
+      "monthly_active_users": "أفراد فريدون يصلون إلى منتج واحد على الأقل خلال الشهر؛ لا تساوي زيارات الويب.",
+      "paid_customers": "حسابات عملاء مفوترة منفصلة؛ قد تضم المؤسسة أكثر من حساب وتضم كل حساب عدة مستخدمين.",
+      "market_cap": "سعر السهم مضروبًا في الأسهم القائمة ويتغير يوميًا.",
+      "ipo_offering_value": "قيمة الأسهم المباعة في الطرح، وتشمل أسهم الشركة وأسهم مساهمين بائعين؛ لا تساوي صافي عائد الشركة.",
+      "acquisition_offer": "عرض Adobe البالغ 20 مليار دولار كان قيمة صفقة استحواذ لم تُغلق، لا تقييمًا حاليًا.",
+      "traffic": "زيارات الموقع أو التطبيق، ولم تنشر الشركة رقمًا حديثًا موثقًا لها."
+    }
   },
   "overview": {
     "problem": {
-      "text": "كان المصممون يعملون في أدوات محلية (Local Apps) مثل فوتوشوب وسكيتش، ويحتاجون لإرسال ملفات ضخمة للمراجعين، مما أدى لبطء هائل وفقدان لنسخ التصاميم.",
-      "impact": "انفصال بين فرق التصميم والمطورين، وصعوبة العمل التعاوني في الوقت الفعلي."
+      "text": "قبل فيجما كانت أدوات التصميم الاحترافية تعمل غالبًا كتطبيقات محلية وملفات منفصلة، ما جعل مشاركة النسخ والتعليقات وتسليم العمل للمطورين عملية مجزأة. ومع توسع فرق المنتجات، أصبح التحدي يشمل ربط التفكير والتصميم والبرمجة والمحتوى والذكاء الاصطناعي داخل مصدر مشترك للحقيقة.",
+      "impact": "ينتج عن تشتت الأدوات تضارب النسخ وتأخر المراجعات وانفصال التصميم عن التنفيذ. أزيلت صياغة أن فيجما «قضت» على العزلة أو هيمنت بالكامل، لأن المنافسة والتجزؤ لم يختفيا."
     },
     "solution": {
-      "text": "أداة تصميم متكاملة تعمل بالكامل داخل المتصفح (Browser-based)، تتيح العمل التعاوني في نفس اللحظة (Multiplayer) تماماً مثل Google Docs."
+      "text": "بدأت فيجما بأداة رسومات متجهية تعاونية مبنية للويب، ثم توسعت إلى منصة تربط التصميم والعصف الذهني والعروض وتسليم المطورين والنشر وبناء النماذج والتطبيقات بالذكاء الاصطناعي. تسمح الروابط والعمل الجماعي الفوري والمكونات وأنظمة التصميم وDev Mode وMCP للفرق والأدوات البرمجية بالعمل على سياق مشترك."
     }
   },
   "market_data": {
-    "target_audience": "مصممو الواجهات (UI/UX)، المطورون، مديرو المنتجات، وفرق التسويق.",
-    "market_size": "سوق برمجيات التصميم والتطوير التعاوني.",
-    "growth_rate": "هيمنت على حصة السوق وأصبحت المعيار الأول لتصميم المنتجات الرقمية عالمياً."
+    "target_audience": "الأفراد والفرق والمؤسسات التي تصمم وتبني وتسوق منتجات وتجارب رقمية، من المصمم والمطور إلى مدير المنتج والمسوق والوكيل البرمجي.",
+    "market_size": null,
+    "market_size_note": "لم يُدرج تقدير TAM من الشركة أو طرف ثالث لأن تعريف السوق توسع من تصميم الواجهات إلى التصميم والتطوير والمحتوى والذكاء الاصطناعي، وأي رقم واحد يتطلب افتراضات واسعة.",
+    "growth_rate": {
+      "fy_2025_revenue_growth_yoy": "41%",
+      "q1_2026_revenue_growth_yoy": "46%",
+      "q1_2026_paid_customer_growth_yoy": "54%",
+      "q1_2026_ndr": "139%",
+      "note": "هذه معدلات تشغيل ومالية فعلية، وليست ادعاء «هيمنة على السوق»."
+    },
+    "adoption_context": {
+      "fortune_500_usage_march_2025": "95%",
+      "forbes_global_2000_usage_march_2025": "78%",
+      "note": "تعني أن مؤسسة استخدمت فيجما في الشهر وفق إفصاح الاكتتاب، ولا تعني التوحيد الكامل على فيجما أو أنها عميل مدفوع موحد."
+    },
+    "competitive_context": [
+      "Adobe Creative Cloud وAdobe XD تاريخيًا",
+      "Sketch",
+      "Canva",
+      "Miro وأدوات السبورات",
+      "Webflow وFramer وأدوات بناء المواقع",
+      "منصات prompt-to-code ووكلاء البرمجة",
+      "أدوات العروض والمحتوى التسويقي"
+    ],
+    "regulatory_context": {
+      "public_company": "تخضع فيجما لإفصاحات SEC وقواعد NYSE منذ 2025.",
+      "privacy_and_data": "تعالج بيانات مستخدمين عالميين وتخضع لمتطلبات الخصوصية ونقل البيانات الدولية.",
+      "ai": "يزيد استخدام نماذج الذكاء الاصطناعي من مخاطر الملكية الفكرية والخصوصية والمحتوى والتكاليف التنظيمية.",
+      "competition": "انهيار صفقة Adobe يوضح أن المنافسة ومراجعة الاندماجات عاملان استراتيجيان في القطاع."
+    }
   },
   "financials": {
-    "initial_investment": "استغرق بناء التقنية (WebGL) داخل المتصفح 4 سنوات قبل إطلاق المنتج للجمهور.",
-    "valuation": "$20B+",
+    "initial_investment": "بدأ ديلان فيلد وإيفان والاس الشركة عام 2012 بعد رهان تقني على WebGL. أعلنت فيجما في معاينة 2015 أنها جمعت 18 مليون دولار حتى ذلك الوقت، ثم 25 مليون دولار Series B في 2018، و40 مليون دولار Series C في 2019، و50 مليون دولار Series D في 2020، وجولة Series E خاصة في 2021. تحولت إلى شركة عامة في 2025.",
+    "valuation": {
+      "current_market_cap_usd": 11825000000,
+      "current_market_cap_timestamp": "2026-08-03T13:00:23-04:00",
+      "current_market_cap_status": "intraday_third_party_snapshot",
+      "ipo_price_usd": 33,
+      "ipo_implied_fully_diluted_value_usd": 19300000000,
+      "ipo_date": "2025-07-31",
+      "first_day_close_usd": 115.5,
+      "historical_adobe_offer_usd": 20000000000,
+      "historical_adobe_offer_status": "terminated_without_closing",
+      "historical_2024_tender_valuation_usd": 12500000000,
+      "warning": "القيمة السوقية تتغير لحظيًا؛ عرض Adobe والتقييم الخاص والطرح والقيمة السوقية مقاييس مختلفة ولا تُقارن بلا سياق."
+    },
+    "latest_financial_metrics": {
+      "q1_2026": {
+        "revenue_usd": 333439000,
+        "revenue_growth_yoy": "46%",
+        "gaap_operating_loss_usd": -137400000,
+        "gaap_net_loss_usd": -142400000,
+        "non_gaap_operating_income_usd": 52100000,
+        "non_gaap_net_income_usd": 56500000,
+        "operating_cash_flow_usd": 97300000,
+        "free_cash_flow_usd": 88600000,
+        "cash_cash_equivalents_and_marketable_securities_usd": 1600000000
+      },
+      "fy_2025": {
+        "revenue_usd": 1055788000,
+        "revenue_growth_yoy": "41%",
+        "gross_profit_usd": 870261000,
+        "gross_margin_calculated": "82.4%",
+        "gaap_net_loss_usd": -1250463000,
+        "free_cash_flow_usd": 242684000,
+        "free_cash_flow_margin": "23%",
+        "note": "الخسارة الصافية تأثرت بدرجة كبيرة بمصروفات تعويضات أسهم غير نقدية مرتبطة بالاكتتاب."
+      },
+      "guidance_as_of_2026_05_14": {
+        "fy_2026_revenue_low_usd": 1422000000,
+        "fy_2026_revenue_high_usd": 1428000000,
+        "fy_2026_midpoint_growth": "نحو 35%",
+        "status": "company_guidance_not_actual_results"
+      }
+    },
+    "ipo": {
+      "total_shares_offered": 36937080,
+      "price_per_share_usd": 33,
+      "gross_offering_value_calculated_usd": 1218923640,
+      "primary_shares_offered_by_figma": 12472657,
+      "secondary_shares_offered_by_stockholders": 24464423,
+      "net_proceeds_to_figma_usd": 393100000,
+      "note": "القيمة الإجمالية للطرح شملت أسهم مساهمين بائعين؛ لم تحصل فيجما على عائدات مبيعاتهم."
+    },
+    "adobe_transaction": {
+      "announced_purchase_price_usd": 20000000000,
+      "termination_date": "2023-12-17",
+      "termination_fee_received_usd": 1000000000,
+      "reason": "عدم وجود مسار واضح للحصول على الموافقات التنظيمية",
+      "note": "رسم الإنهاء دخل عام 2023 كدخل آخر غير متكرر، وليس إيراد اشتراكات."
+    },
     "revenue_streams": [
-      "Figma Professional (اشتراك أفراد وفرق صغيرة)",
-      "Figma Organization (للمؤسسات)",
-      "Figma Enterprise (أمان متقدم)",
-      "FigJam (منتج العصف الذهني)"
+      "اشتراكات Full seats في خطط Professional وOrganization وEnterprise.",
+      "اشتراكات Dev seats للمطورين وDev Mode.",
+      "اشتراكات Collab seats للتعاون في FigJam وSlides ومنتجات محددة.",
+      "إضافات أرصدة الذكاء الاصطناعي المدفوعة والاستخدام الإضافي.",
+      "Governance+ كإضافة للمؤسسات ذات متطلبات الحوكمة والأمان المتقدمة.",
+      "عقود المؤسسات والدعم والخدمات المرتبطة بالمنصة ضمن ترتيبات الاشتراك.",
+      "لا تُباع Figma Design وMake وDraw وبقية المنتجات كاشتراكات منفصلة في التسعير الحالي؛ الإيراد مبني على الخطة والمقعد والإضافات."
     ]
+  },
+  "analysis": {
+    "core_thesis": "قوة فيجما لم تعد مجرد تشغيل التصميم في المتصفح. المنصة أصبحت نظام عمل مشتركًا بين البشر والوكلاء والكود، ونموها يعتمد على توسيع المقاعد والمنتجات داخل العميل نفسه. التحدي هو الحفاظ على مرونة الأداة وجودة الحرفة بينما تزيد تكاليف استدلال الذكاء الاصطناعي واتساع المنافسة.",
+    "what_changed": [
+      "أصبحت فيجما شركة عامة مدرجة تحت FIG بدل شركة خاصة بتقييم 20 مليار دولار.",
+      "تجاوز إيراد 2025 مليار دولار، ونما إيراد الربع الأول 2026 بنسبة 46%.",
+      "وصل العملاء المدفوعون إلى نحو 690 ألفًا، وارتفع NDR إلى 139%.",
+      "توسع المنتج من Design وFigJam إلى Make وSites وBuzz وDraw وSlides وMotion وWeave وDev Mode.",
+      "أصبح نحو ثلثي المستخدمين النشطين من غير المصممين، ما يوسع السوق إلى فرق المنتج والتسويق والتطوير.",
+      "تحولت الذكاء الاصطناعي من ميزة مجانية تجريبية إلى أرصدة وحدود وإضافات مدفوعة.",
+      "استحوذت فيجما على Weavy وحولتها إلى Figma Weave للصور والفيديو والموشن والـVFX.",
+      "انتقل محرك الرسم من الرهان التاريخي على WebGL إلى WebGPU مع إبقاء التوافق.",
+      "تراجعت القيمة السوقية من حماس اليوم الأول للاكتتاب إلى لقطة تقارب 11.8 مليار دولار في 3 أغسطس 2026، ما يؤكد أن سعر السوق ليس تقييمًا ثابتًا."
+    ],
+    "competitive_advantage": [
+      "منصة ويب متعددة اللاعبين ومصدر موحد للحقيقة.",
+      "شبكة مستخدمين عالمية واسعة ونمو ذاتي قوي.",
+      "انتشار عميق داخل المؤسسات وNDR مرتفع.",
+      "ربط التصميم بالكود عبر Dev Mode وMCP وCode to Canvas.",
+      "نظام مكونات ومتغيرات ومكتبات وتصميم مؤسسي.",
+      "محفظة منتجات تغطي التفكير والتصميم والبناء والنشر والتسويق.",
+      "قدرة على إدخال الذكاء الاصطناعي في سياق التصميم القابل للتحرير.",
+      "مجتمع وقوالب وإضافات ونظام بيئي للمطورين.",
+      "أكثر من نصف الإيراد من خارج الولايات المتحدة."
+    ],
+    "risks_and_constraints": [
+      "التقييم السوقي متقلب بدرجة كبيرة بعد الاكتتاب.",
+      "تكلفة استدلال وتدريب الذكاء الاصطناعي قد تضغط الهامش الإجمالي والتشغيلي.",
+      "الخسائر GAAP مرتفعة بسبب تعويضات الأسهم، حتى مع تدفق نقدي حر موجب.",
+      "وكلاء البرمجة وprompt-to-code قد يقللون بعض الحاجة إلى أدوات التصميم التقليدية أو يعيدون توزيع القيمة.",
+      "اتساع المنتجات قد يربك التسعير والتجربة ويرفع تكلفة التطوير.",
+      "نموذج المقاعد يواجه مقاومة العملاء إذا تعقدت الموافقات والفوترة.",
+      "اعتماد المؤسسات على منصة واحدة يرفع متطلبات التوافر والأمان والامتثال.",
+      "استخدام بيانات التصميم والذكاء الاصطناعي يخلق مخاطر خصوصية وملكية فكرية.",
+      "صفقة Adobe المنهارة توضح حساسية القطاع للتنظيم والمنافسة.",
+      "السيطرة التصويتية المركزة لدى المؤسس تقلل تأثير مساهمي الفئة A.",
+      "الاعتماد على العملاء الكبار يجعل NDR ومقاعد المؤسسات مؤشرات حاسمة.",
+      "نتائج الربع الثاني كانت مقررة بعد يومين من تاريخ الملف، ما يجعل أحدث التوقعات عرضة للتحديث القريب."
+    ],
+    "outlook_as_of_2026_08_03": "فيجما شركة SaaS عامة سريعة النمو ذات تدفق نقدي قوي ومنصة تتوسع نحو الذكاء الاصطناعي والكود والمحتوى. التصنيف المحافظ هو «منصة تصميم وتطوير عامة ذات نمو مؤسسي مرتفع وهوامش نقدية جيدة، مع خسائر GAAP كبيرة واستثمار AI مكلف». المؤشرات الحاسمة هي نمو الإيراد بعد Q1، معدل تحويل AI إلى إيراد، NDR، الهامش الإجمالي، نمو المقاعد، والتدفق النقدي الحر."
   },
   "lessons": [
     {
-      "title": "الرهان على التكنولوجيا المتقدمة",
-      "description": "كان الجميع يعتقد أن بناء أداة تصميم ثقيلة في المتصفح أمر مستحيل. استغرق فريق فيجما سنوات لإتقان تقنية WebGL ليثبتوا العكس."
+      "title": "المتصفح كان استراتيجية توزيع لا مجرد تقنية",
+      "description": "WebGL جعل الأداء ممكنًا، لكن الرابط والمشاركة الفورية ومصدر الحقيقة الواحد هي التي صنعت الانتشار داخل الفرق."
     },
     {
-      "title": "النمو بقيادة المنتج (PLG)",
-      "description": "نظراً لأنها تعمل في المتصفح، كل ما تحتاجه لمشاركة تصميم هو إرسال رابط. هذا أدى إلى انتشار فيروسي داخل الشركات بمجرد أن يستخدمها شخص واحد."
+      "title": "المستخدم المجاني يفتح باب المؤسسة",
+      "description": "الخطة المجانية تسمح بالتجربة والمشاركة، ثم تتحول الحاجة إلى إدارة وأمان ومكتبات ومقاعد إلى عقود مدفوعة."
     },
     {
-      "title": "التركيز على المطورين، ليس المصممين فقط",
-      "description": "أدركت فيجما أن المطور يجب أن يحب الأداة بقدر المصمم، فقدمت ميزات قوية تصدر الأكواد مباشرة وتسهل عملية التسليم (Handoff)."
+      "title": "الإيراد الشهري لا يُختلق من الربع",
+      "description": "يمكن حساب متوسط نظري، لكنه لا يعكس الموسمية أو الاعتراف المحاسبي. الأفضل حفظ الإيراد الربعي والسنوي كما أفصحت الشركة."
+    },
+    {
+      "title": "التقييم العام لحظة متحركة",
+      "description": "20 مليار عرض استحواذ و19.3 مليار عند تسعير الاكتتاب و56 مليارًا في يوم التداول و11.8 مليارًا لاحقًا أرقام صحيحة في سياقات مختلفة."
+    },
+    {
+      "title": "عدد المستخدمين لا يساوي الزيارات",
+      "description": "13 مليون مستخدم نشط شهريًا مقياس أفراد فريدين داخل المنتج، وليس 13 مليون زيارة أو 100 مليون جلسة."
+    },
+    {
+      "title": "المنتج الأفقي يوسع من يدفع",
+      "description": "دخول المطور والمسوق ومدير المنتج جعل فيجما تبيع أنواع مقاعد ومنتجات أكثر من أداة UI للمصمم فقط."
+    },
+    {
+      "title": "الذكاء الاصطناعي يحتاج وحدة تسعير",
+      "description": "الميزات المجانية ترفع الاستخدام، لكن أرصدة AI والإضافات تحول التكلفة المتغيرة إلى نموذج يمكن قياسه وتحقيق إيراد منه."
+    },
+    {
+      "title": "الخسارة المحاسبية تحتاج تفكيكًا",
+      "description": "خسارة 2025 تجاوزت مليار دولار، لكن التدفق النقدي الحر كان موجبًا لأن جزءًا كبيرًا من المصروف تعويضات أسهم غير نقدية."
+    },
+    {
+      "title": "التسليم للمطور أصبح حلقة وكلاء",
+      "description": "القيمة لم تعد نسخ CSS فقط؛ MCP وCode to Canvas يسمحان للوكلاء بقراءة التصميم وتعديله وإعادة الكود إلى لوحة مشتركة."
+    }
+  ],
+  "tools": [
+    "محرك رسم تاريخي مبني من الصفر على WebGL، مع انتقال حديث إلى WebGPU.",
+    "تعاون لحظي متعدد المستخدمين ومؤشرات وتعليقات وصوت.",
+    "مكونات ومتغيرات ومكتبات وأنظمة تصميم.",
+    "Dev Mode وفحص القياسات والأصول والكود.",
+    "REST API وPlugin API وWebhooks.",
+    "Model Context Protocol server للوكلاء البرمجيين.",
+    "Code to Canvas وتكاملات مع Claude Code وCodex وCursor وVS Code وWarp.",
+    "Figma Make للبناء من النص أو التصميم إلى نموذج أو تطبيق.",
+    "Figma Sites للنشر، وBuzz للمحتوى التسويقي، وSlides للعروض، وDraw للرسم.",
+    "Figma Weave لتوليد وتحرير الصور والفيديو والموشن والـVFX.",
+    "Figma Motion للرسوم المتحركة.",
+    "أرصدة AI ونظام إضافات مدفوعة للاستخدام.",
+    "تنبيه تقني: لا يثبت الإفصاح العام جميع لغات البرمجة أو مزودي السحابة أو بنية كل منتج؛ لم تُخترع قائمة stack داخلية."
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "verified_through": "2026-08-03",
+    "research_scope": "مراجعة الملف الأصلي، 10-K لعام 2025، 10-Q ونتائج Q1 2026، نشرة الاكتتاب وإعلاناته، التسعير الحالي، صفحات المنتجات والهندسة والتاريخ، وإعلانات الاستحواذ والتمويل.",
+    "overall_status": "verified_with_material_public_company_financial_and_product_updates",
+    "primary_source_priority": "اعتمد الملف أساسًا على SEC وعلاقات المستثمرين وموقع فيجما. استخدم مصدر سوق خارجي فقط للقطة السعر والقيمة السوقية اللحظية.",
+    "sec_search_status": {
+      "applicable": true,
+      "cik": "0001579878",
+      "ticker": "FIG",
+      "filings_used": [
+        "S-1 و424B4 لعام 2025",
+        "10-K للسنة المنتهية في 31 ديسمبر 2025",
+        "10-Q للربع المنتهي في 31 مارس 2026",
+        "Proxy Statement لعام 2026"
+      ]
+    },
+    "key_corrections": [
+      {
+        "field": "headline",
+        "original_claim": "أداة قضت على العزلة",
+        "status": "rewritten",
+        "correction": "وُصفت كمنصة عامة للتصميم والكود والذكاء الاصطناعي دون ادعاء القضاء الكامل على المشكلة.",
+        "evidence_ids": [
+          "E1",
+          "E2",
+          "E11"
+        ]
+      },
+      {
+        "field": "company.business_model",
+        "original_claim": "Freemium وSaaS per seat للمحترفين والفرق",
+        "status": "expanded",
+        "correction": "أضيفت أنواع المقاعد وأرصدة AI وGovernance+ وعدم بيع المنتجات منفردة.",
+        "evidence_ids": [
+          "E12"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_revenue",
+        "original_claim": "50M+ شهريًا",
+        "status": "removed_unsupported_period",
+        "correction": "وُضع null مع حفظ الإيرادات الربعية والسنوية الفعلية.",
+        "evidence_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_traffic",
+        "original_claim": "100M+ شهريًا",
+        "status": "removed_unsupported",
+        "correction": "لا توجد زيارات موثقة؛ فُصل تاريخيًا أكثر من 13 مليون MAU.",
+        "evidence_ids": [
+          "E5"
+        ]
+      },
+      {
+        "field": "market_data.growth_rate",
+        "original_claim": "هيمنت وأصبحت المعيار الأول",
+        "status": "replaced_with_actual_metrics",
+        "correction": "أضيف نمو إيراد 41% في 2025 و46% في Q1 2026 وNDR 139%.",
+        "evidence_ids": [
+          "E3",
+          "E4",
+          "E6"
+        ]
+      },
+      {
+        "field": "financials.initial_investment",
+        "original_claim": "استغرق بناء WebGL أربع سنوات",
+        "status": "reclassified",
+        "correction": "البناء التقني ليس استثمارًا ماليًا؛ أضيفت الجولات والاكتتاب مع حفظ تاريخ التطوير منفصلًا.",
+        "evidence_ids": [
+          "E7",
+          "E8",
+          "E9",
+          "E10"
+        ]
+      },
+      {
+        "field": "financials.valuation",
+        "original_claim": "20B+",
+        "status": "corrected",
+        "correction": "20 مليار كانت صفقة Adobe الملغاة. أضيفت قيمة الاكتتاب والقيمة السوقية المتغيرة.",
+        "evidence_ids": [
+          "E7",
+          "E13",
+          "E14"
+        ]
+      },
+      {
+        "field": "financials.revenue_streams",
+        "original_claim": "كل منتج وخطة خط إيراد مستقل",
+        "status": "updated",
+        "correction": "التسعير الحالي يعتمد الخطة ونوع المقعد والإضافات، ولا يبيع المنتجات منفردة.",
+        "evidence_ids": [
+          "E12"
+        ]
+      },
+      {
+        "field": "lessons.developer_handoff",
+        "original_claim": "تصدير الأكواد مباشرة",
+        "status": "qualified_and_updated",
+        "correction": "أضيف Dev Mode وMCP وCode to Canvas؛ المخرجات ليست ضمانًا لكود إنتاج جاهز.",
+        "evidence_ids": [
+          "E6",
+          "E15"
+        ]
+      }
+    ],
+    "known_source_discrepancies": [
+      {
+        "topic": "تاريخ الإطلاق",
+        "detail": "معاينة فيجما أُعلنت في ديسمبر 2015، بينما أصبح التسجيل العام متاحًا في سبتمبر 2016. حُفظ التمييز بين preview/public release."
+      },
+      {
+        "topic": "التقييم",
+        "detail": "توجد قيم 10 مليارات و12.5 مليار في أسواق خاصة، و20 مليارًا في صفقة Adobe الملغاة، و19.3 مليارًا عند تسعير الاكتتاب، وقيم سوقية متغيرة بعد التداول."
+      },
+      {
+        "topic": "عدد المستخدمين",
+        "detail": "أحدث رقم MAU مطلق منشور في المصادر المستخدمة يعود إلى Q1 2025؛ الإفصاحات اللاحقة تنشر التركيبة لا عددًا أحدث."
+      },
+      {
+        "topic": "الربحية",
+        "detail": "GAAP يظهر خسائر كبيرة بسبب تعويضات الأسهم، بينما التدفق النقدي الحر وغير GAAP موجبان؛ لا يجوز استخدام مقياس واحد وحده."
+      }
+    ],
+    "limitations": [
+      "لقطة القيمة السوقية لحظية ومن مصدر خارجي وقد تتغير بعد إنشاء الملف.",
+      "نتائج Q2 2026 كانت مقررة بعد تاريخ التحقق بيومين.",
+      "لا يوجد إفصاح حديث بعدد MAU المطلق مطابق لعام 2026.",
+      "لا يفصل الإفصاح الإيراد حسب كل منتج مثل Make أو Dev Mode أو FigJam.",
+      "مقاييس non-GAAP لا تستبدل GAAP وقد تختلف عن شركات أخرى.",
+      "لم تُدرج تقديرات حصة سوق أو TAM غير قابلة للمقارنة.",
+      "قد تتغير أسعار المقاعد وأرصدة AI والمنتجات التجريبية.",
+      "لا تفصح الشركة عن البنية التقنية الداخلية الكاملة."
+    ],
+    "programmatic_validation": {
+      "input_file_parse": true,
+      "json_parse": true,
+      "json_schema_validation": true,
+      "required_original_top_level_keys_preserved": true,
+      "required_original_paths_preserved": true,
+      "all_source_ids_unique": true,
+      "all_evidence_source_references_valid": true,
+      "all_key_correction_evidence_references_valid": true,
+      "no_nan_or_infinity": true,
+      "monthly_metrics_not_invented": true,
+      "market_size_not_invented": true,
+      "actual_growth_metrics_used": true,
+      "public_company_status_current": true,
+      "adobe_offer_not_current_valuation": true,
+      "ipo_primary_secondary_separated": true,
+      "revenue_and_mau_not_confused": true,
+      "latest_reporting_period_respected": true,
+      "intraday_market_snapshot_qualified": true,
+      "utf8_arabic_content_present": true,
+      "duplicate_lesson_titles": false,
+      "source_count": 17,
+      "primary_source_count": 16,
+      "evidence_item_count": 20,
+      "lesson_count": 9,
+      "top_level_key_count": 17,
+      "errors": [],
+      "validated_at": "2026-08-03T19:56:00+03:00",
+      "validation_status": "passed"
+    }
+  },
+  "evidence_map_schema": {
+    "description": "خريطة تربط الادعاءات الجوهرية بالمصادر والمسارات داخل JSON.",
+    "item_fields": {
+      "claim": "الادعاء المختصر",
+      "json_paths": "المسارات المعتمدة على الدليل",
+      "classification": "company | operating | financial | valuation | ipo | users | product | pricing | technology | acquisition | regulatory | market | unavailable",
+      "status": "verified | verified_company_reported | historical_only | corrected | unavailable",
+      "source_ids": "معرفات المصادر",
+      "notes": "حدود الدليل"
+    }
+  },
+  "evidence_map": {
+    "E1": {
+      "claim": "فيجما شركة ديلاوير تأسست عام 2012 ومقرها سان فرانسيسكو ومدرجة تحت FIG.",
+      "json_paths": [
+        "company.legal_name",
+        "company.incorporation",
+        "company.headquarters",
+        "company.public_status"
+      ],
+      "classification": "company",
+      "status": "verified",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "notes": "من 10-K و10-Q."
+    },
+    "E2": {
+      "claim": "تطورت فيجما إلى منصة متصلة ومدعومة بالذكاء الاصطناعي تتجاوز تصميم الواجهات.",
+      "json_paths": [
+        "headline",
+        "company.current_platform_scope",
+        "analysis.what_changed"
+      ],
+      "classification": "product",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S3",
+        "S4"
+      ],
+      "notes": "تعريف الشركة ومنتجاتها الحالية."
+    },
+    "E3": {
+      "claim": "بلغ إيراد 2025 نحو 1.056 مليار دولار بنمو 41%.",
+      "json_paths": [
+        "financials.latest_financial_metrics.fy_2025",
+        "market_data.growth_rate"
+      ],
+      "classification": "financial",
+      "status": "verified",
+      "source_ids": [
+        "S1"
+      ],
+      "notes": "قوائم GAAP مدققة."
+    },
+    "E4": {
+      "claim": "بلغ إيراد Q1 2026 نحو 333.4 مليون دولار بنمو 46%.",
+      "json_paths": [
+        "financials.latest_financial_metrics.q1_2026",
+        "market_data.growth_rate"
+      ],
+      "classification": "financial",
+      "status": "verified",
+      "source_ids": [
+        "S5"
+      ],
+      "notes": "نتائج ربع سنوية غير مدققة."
+    },
+    "E5": {
+      "claim": "كان لدى فيجما أكثر من 13 مليون MAU في Q1 2025، 85% منهم خارج الولايات المتحدة والثلثان غير مصممين.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.historical_user_snapshot",
+        "directory_snapshot.monthly_traffic"
+      ],
+      "classification": "users",
+      "status": "historical_only",
+      "source_ids": [
+        "S6"
+      ],
+      "notes": "لا يوجد عدد مطلق أحدث في الإفصاحات المستخدمة."
+    },
+    "E6": {
+      "claim": "في Q1 2026 بلغ NDR 139% والعملاء المدفوعون 690 ألفًا و1,525 عميلًا فوق 100 ألف ARR.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot",
+        "market_data.growth_rate",
+        "analysis.what_changed"
+      ],
+      "classification": "operating",
+      "status": "verified",
+      "source_ids": [
+        "S5"
+      ],
+      "notes": "تعريف العميل قد يعد أقسام المؤسسة المفوترة منفصلًا."
+    },
+    "E7": {
+      "claim": "سُعر الاكتتاب عند 33 دولارًا وبدأ التداول في 31 يوليو 2025.",
+      "json_paths": [
+        "company.public_status",
+        "financials.valuation",
+        "financials.ipo"
+      ],
+      "classification": "ipo",
+      "status": "verified",
+      "source_ids": [
+        "S7",
+        "S2"
+      ],
+      "notes": "الطرح اكتمل في 1 أغسطس 2025."
+    },
+    "E8": {
+      "claim": "أعلنت الشركة جمع 18 مليون دولار حتى 2015 قبل المعاينة.",
+      "json_paths": [
+        "financials.initial_investment"
+      ],
+      "classification": "financial",
+      "status": "historical_only",
+      "source_ids": [
+        "S8"
+      ],
+      "notes": "رقم تراكمي مبكر."
+    },
+    "E9": {
+      "claim": "جمعت 25 مليون Series B و40 مليون Series C و50 مليون Series D.",
+      "json_paths": [
+        "financials.initial_investment"
+      ],
+      "classification": "financial",
+      "status": "verified",
+      "source_ids": [
+        "S9",
+        "S10",
+        "S11"
+      ],
+      "notes": "جولات خاصة تاريخية."
+    },
+    "E10": {
+      "claim": "بُني المنتج ثلاث سنوات على WebGL قبل المعاينة ثم أصبح عامًا في 2016.",
+      "json_paths": [
+        "financials.initial_investment",
+        "lessons",
+        "tools"
+      ],
+      "classification": "technology",
+      "status": "verified",
+      "source_ids": [
+        "S6",
+        "S8",
+        "S12"
+      ],
+      "notes": "يفصل التطوير التقني عن الاستثمار المالي."
+    },
+    "E11": {
+      "claim": "تشمل المنصة الحالية Make وSites وBuzz وDraw وSlides وMotion وWeave إلى جانب Design وDev Mode وFigJam.",
+      "json_paths": [
+        "company.current_platform_scope",
+        "analysis.what_changed",
+        "tools"
+      ],
+      "classification": "product",
+      "status": "verified",
+      "source_ids": [
+        "S3",
+        "S4",
+        "S13"
+      ],
+      "notes": "قد تكون بعض المنتجات في beta."
+    },
+    "E12": {
+      "claim": "التسعير حسب Starter/Professional/Organization/Enterprise وأنواع Full/Dev/Collab مع AI credits.",
+      "json_paths": [
+        "company.business_model",
+        "financials.revenue_streams"
+      ],
+      "classification": "pricing",
+      "status": "verified",
+      "source_ids": [
+        "S14"
+      ],
+      "notes": "الأسعار والشروط قابلة للتغيير."
+    },
+    "E13": {
+      "claim": "صفقة Adobe بقيمة 20 مليار دولار أُلغيت وحصلت فيجما على رسم إنهاء مليار دولار.",
+      "json_paths": [
+        "financials.valuation",
+        "financials.adobe_transaction",
+        "analysis.what_changed"
+      ],
+      "classification": "valuation",
+      "status": "verified",
+      "source_ids": [
+        "S1"
+      ],
+      "notes": "ليست إيراد اشتراكات ولا تقييمًا حاليًا."
+    },
+    "E14": {
+      "claim": "كانت لقطة السهم 22.44 دولارًا والقيمة السوقية 11.825 مليار دولار ظهر 3 أغسطس 2026.",
+      "json_paths": [
+        "directory_snapshot.market_snapshot",
+        "financials.valuation"
+      ],
+      "classification": "market",
+      "status": "verified",
+      "source_ids": [
+        "S15"
+      ],
+      "notes": "مصدر خارجي ولقطة لحظية."
+    },
+    "E15": {
+      "claim": "توسع الربط بين التصميم والكود عبر MCP وCode to Canvas.",
+      "json_paths": [
+        "tools",
+        "analysis.competitive_advantage",
+        "lessons"
+      ],
+      "classification": "technology",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S5"
+      ],
+      "notes": "لا يضمن كود إنتاج جاهزًا بلا مراجعة."
+    },
+    "E16": {
+      "claim": "انتقل محرك الرسم إلى WebGPU في 2025 مع دعم WebGL.",
+      "json_paths": [
+        "tools",
+        "analysis.what_changed"
+      ],
+      "classification": "technology",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S16"
+      ],
+      "notes": "تحديث هندسي من الشركة."
+    },
+    "E17": {
+      "claim": "استحوذت فيجما على Weavy وأطلقتها كـFigma Weave.",
+      "json_paths": [
+        "company.current_platform_scope",
+        "analysis.what_changed",
+        "tools"
+      ],
+      "classification": "acquisition",
+      "status": "verified",
+      "source_ids": [
+        "S13",
+        "S1"
+      ],
+      "notes": "أفصح 10-K عن مقابل شراء 85.3 مليون دولار."
+    },
+    "E18": {
+      "claim": "بلغ التدفق النقدي الحر في 2025 نحو 242.7 مليون دولار رغم خسارة GAAP بقيمة 1.25 مليار.",
+      "json_paths": [
+        "financials.latest_financial_metrics.fy_2025",
+        "analysis.risks_and_constraints",
+        "lessons"
+      ],
+      "classification": "financial",
+      "status": "verified",
+      "source_ids": [
+        "S1"
+      ],
+      "notes": "تأثرت الخسارة بتعويضات الأسهم غير النقدية."
+    },
+    "E19": {
+      "claim": "أكثر من نصف إيراد 2025 جاء من خارج الولايات المتحدة.",
+      "json_paths": [
+        "company.location",
+        "directory_snapshot.latest_verified_operating_snapshot.global_business",
+        "analysis.competitive_advantage"
+      ],
+      "classification": "financial",
+      "status": "verified",
+      "source_ids": [
+        "S1"
+      ],
+      "notes": "النسبة محسوبة من أرقام الإيراد الجغرافي في 10-K."
+    },
+    "E20": {
+      "claim": "نتائج Q2 2026 كانت مقررة في 5 أغسطس ولم تكن متاحة في تاريخ الملف.",
+      "json_paths": [
+        "company.operating_status_as_of_2026_08_03",
+        "analysis.risks_and_constraints",
+        "verification.limitations"
+      ],
+      "classification": "unavailable",
+      "status": "unavailable",
+      "source_ids": [
+        "S17"
+      ],
+      "notes": "يمنع استخدام توقعات أو نتائج مستقبلية."
+    }
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Figma, Inc. Annual Report on Form 10-K for 2025",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "source_type": "إفصاح مالي وتنظيمي أولي",
+      "publication_date": "2026-03",
+      "url": "https://www.sec.gov/Archives/edgar/data/1579878/000162828026009228/fig-20251231.htm",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الإيرادات",
+        "الخسارة",
+        "التدفق النقدي",
+        "العملاء",
+        "NDR",
+        "Adobe",
+        "IPO",
+        "المقر",
+        "Weavy"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "Figma Q1 2026 Form 10-Q cover and share data",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "source_type": "إفصاح ربع سنوي أولي",
+      "publication_date": "2026-05-14",
+      "url": "https://www.sec.gov/Archives/edgar/data/1579878/000162828026035209/R1.htm",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "FIG",
+        "NYSE",
+        "المقر",
+        "الأسهم القائمة"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "Figma Newsroom and Product Portfolio",
+      "publisher": "Figma",
+      "source_type": "صفحة رسمية",
+      "publication_date": "2026",
+      "url": "https://www.figma.com/newsroom/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "تعريف المنصة",
+        "المنتجات الحالية",
+        "التوسع بالذكاء الاصطناعي"
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "Figma Homepage — design, code and AI platform",
+      "publisher": "Figma",
+      "source_type": "موقع رسمي",
+      "publication_date": null,
+      "url": "https://www.figma.com/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "المنتجات والمنصة الحالية"
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "Figma Announces First Quarter 2026 Financial Results",
+      "publisher": "Figma Investor Relations",
+      "source_type": "نتائج مالية رسمية",
+      "publication_date": "2026-05-14",
+      "url": "https://investor.figma.com/news-events/news/news-details/2026/Figma-Announces-First-Quarter-2026-Financial-Results/default.aspx",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Q1 revenue",
+        "customers",
+        "NDR",
+        "cash flow",
+        "guidance",
+        "Make",
+        "MCP"
+      ]
+    },
+    {
+      "id": "S6",
+      "title": "Figma Registration Statement on Form S-1",
+      "publisher": "U.S. Securities and Exchange Commission",
+      "source_type": "نشرة اكتتاب أولية",
+      "publication_date": "2025-07-01",
+      "url": "https://www.sec.gov/Archives/edgar/data/1579878/000162828025033742/figma-sx1.htm",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "13 مليون MAU",
+        "85% خارج أمريكا",
+        "ثلثا المستخدمين غير مصممين",
+        "Fortune 500",
+        "تاريخ الشركة"
+      ]
+    },
+    {
+      "id": "S7",
+      "title": "Figma Announces Pricing of Initial Public Offering",
+      "publisher": "Figma",
+      "source_type": "إعلان طرح رسمي",
+      "publication_date": "2025-07-30",
+      "url": "https://www.figma.com/blog/ipo-pricing/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "33 دولارًا",
+        "عدد الأسهم",
+        "الأسهم الأولية والثانوية",
+        "FIG"
+      ]
+    },
+    {
+      "id": "S8",
+      "title": "Design: Meet the Internet",
+      "publisher": "Figma",
+      "source_type": "إعلان إطلاق وتمويل تاريخي رسمي",
+      "publication_date": "2015-12-03",
+      "url": "https://www.figma.com/blog/design-meet-the-internet/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "ثلاث سنوات تطوير",
+        "WebGL",
+        "18 مليون دولار",
+        "Preview Release"
+      ]
+    },
+    {
+      "id": "S9",
+      "title": "Figma raises $25MM Series B",
+      "publisher": "Figma",
+      "source_type": "إعلان تمويل رسمي",
+      "publication_date": "2018-02-01",
+      "url": "https://www.figma.com/blog/figma-raises-usd25mm-series-b/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Series B"
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "Figma raises $40MM Series C",
+      "publisher": "Figma",
+      "source_type": "إعلان تمويل رسمي",
+      "publication_date": "2019-02-14",
+      "url": "https://www.figma.com/blog/figma-series-c/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Series C",
+        "النمو العالمي",
+        "المنتج المؤسسي"
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "Figma's Series D round",
+      "publisher": "Figma",
+      "source_type": "إعلان تمويل رسمي",
+      "publication_date": "2020-04-30",
+      "url": "https://www.figma.com/blog/figmas-series-d-round/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Series D",
+        "التوسع إلى استخدامات غير التصميم"
+      ]
+    },
+    {
+      "id": "S12",
+      "title": "Multiplayer Editing in Figma",
+      "publisher": "Figma",
+      "source_type": "إعلان إصدار عام رسمي",
+      "publication_date": "2016-09-28",
+      "url": "https://www.figma.com/blog/multiplayer-editing-in-figma/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الإصدار العام",
+        "multiplayer"
+      ]
+    },
+    {
+      "id": "S13",
+      "title": "Introducing Figma Weave",
+      "publisher": "Figma",
+      "source_type": "إعلان استحواذ ومنتج رسمي",
+      "publication_date": "2025-10-30",
+      "url": "https://www.figma.com/blog/welcome-weavy-to-figma/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الاستحواذ على Weavy",
+        "Figma Weave",
+        "الصور والفيديو والموشن"
+      ]
+    },
+    {
+      "id": "S14",
+      "title": "Figma Plans and Pricing",
+      "publisher": "Figma",
+      "source_type": "صفحة تسعير رسمية",
+      "publication_date": "2026",
+      "url": "https://www.figma.com/pricing/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الخطط",
+        "أنواع المقاعد",
+        "AI credits",
+        "Governance+",
+        "عدم بيع المنتجات منفردة"
+      ]
+    },
+    {
+      "id": "S15",
+      "title": "Figma, Inc. Stock Quote",
+      "publisher": "Yahoo Finance",
+      "source_type": "بيانات سوق خارجية لحظية",
+      "publication_date": "2026-08-03",
+      "url": "https://uk.finance.yahoo.com/quote/FIG/",
+      "primary_source": false,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "سعر السهم والقيمة السوقية اللحظية"
+      ]
+    },
+    {
+      "id": "S16",
+      "title": "Figma Rendering: Powered by WebGPU",
+      "publisher": "Figma",
+      "source_type": "مقال هندسي رسمي",
+      "publication_date": "2025-09-18",
+      "url": "https://www.figma.com/blog/figma-rendering-powered-by-webgpu/",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "الانتقال من WebGL إلى WebGPU",
+        "المحرك الرسومي"
+      ]
+    },
+    {
+      "id": "S17",
+      "title": "Figma to Announce Second Quarter 2026 Financial Results",
+      "publisher": "Figma Investor Relations",
+      "source_type": "إعلان تقويم مالي رسمي",
+      "publication_date": "2026-07-15",
+      "url": "https://investor.figma.com/news-events/news/news-details/2026/Figma-to-Announce-Second-Quarter-2026-Financial-Results-on-August-5-2026/default.aspx",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "موعد نتائج Q2 2026 وعدم توفرها بعد"
+      ]
     }
   ]
 }

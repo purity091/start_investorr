@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MessageSquareWarning, RefreshCw } from 'lucide-react';
 import { SprintDay, HackathonState } from '../types';
 import { HackathonTaskItem } from './HackathonTaskItem';
+import { Button } from '@/components/ui/Button';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
 
 interface HackathonTaskBoardProps {
   currentDay: SprintDay;
   state: HackathonState;
   mentorMessage: string;
-  onUpdateAnswer: (id: any, val: any) => void;
+  onUpdateAnswer: (id: string, val: string) => void;
   onCompleteDossier: () => void;
   canCompleteDossier: boolean;
   onReset: () => void;
@@ -21,7 +30,10 @@ export const HackathonTaskBoard: React.FC<HackathonTaskBoardProps> = ({
   onCompleteDossier,
   canCompleteDossier,
   onReset,
-}) => (
+}) => {
+  const [isResetOpen, setIsResetOpen] = useState(false);
+
+  return (
   <section className="bg-white border border-slate-200 shadow-sm rounded-[2.5rem] p-6 sm:p-10">
     <div className="mb-8 flex flex-col justify-between gap-6 sm:mb-12 md:flex-row md:items-center md:gap-8">
       <div>
@@ -66,14 +78,37 @@ export const HackathonTaskBoard: React.FC<HackathonTaskBoardProps> = ({
         ))}
       </div>
       <button
-        onClick={() => {
-          if (confirm('هل أنت متأكد؟ سيتم حذف كل التقدم المنجز.')) onReset();
-        }}
+        onClick={() => setIsResetOpen(true)}
         className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-slate-400 transition-colors hover:text-rose-500"
       >
         <RefreshCw size={14} />
         Reset Operation
       </button>
     </div>
+    <Dialog open={isResetOpen} onOpenChange={setIsResetOpen}>
+      <DialogContent className="sm:max-w-[440px]" dir="rtl">
+        <DialogHeader className="text-right">
+          <DialogTitle>إعادة ضبط التقدم</DialogTitle>
+          <DialogDescription>
+            سيتم حذف كل التقدم المنجز في الهاكثون والعودة إلى البداية.
+          </DialogDescription>
+        </DialogHeader>
+        <DialogFooter>
+          <Button
+            variant="destructive"
+            onClick={() => {
+              onReset();
+              setIsResetOpen(false);
+            }}
+          >
+            إعادة الضبط
+          </Button>
+          <Button variant="outline" onClick={() => setIsResetOpen(false)}>
+            إلغاء
+          </Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
   </section>
-);
+  );
+};

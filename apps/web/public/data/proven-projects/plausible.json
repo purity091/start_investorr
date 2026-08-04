@@ -1,107 +1,1609 @@
 {
   "order": 21,
+  "id": "plausible",
   "slug": "plausible",
   "name": "بلاوسبل (Plausible Analytics)",
   "domain": "plausible.io",
   "website": "https://plausible.io",
-  "category": "B2B SaaS / تحليلات الويب",
-  "headline": "البديل الخفيف الذي يحترم الخصوصية لـ Google Analytics",
-  "summary": "منصة تحليلات ويب مفتوحة المصدر (Open Source) وخفيفة الوزن، توفر إحصائيات مبسطة ولا تنتهك خصوصية الزوار ولا تستخدم ملفات تعريف الارتباط (Cookies).",
-  "directory_snapshot": {
-    "monthly_revenue": "$100K+ /mo",
-    "monthly_traffic": "1M+ /mo",
-    "revenue_per_visitor": "غير محدد",
-    "solopreneur_score": "100.0",
-    "idea_label": "أداة تحليلات ويب متوافقة مع الخصوصية"
-  },
+  "headline": "من لوحة تحليلات بسيطة إلى بنية أوروبية للقياس دون مراقبة: كيف موّلت Plausible منتجًا مفتوح المصدر من الاشتراكات وحدها",
+  "category": "B2B SaaS, Privacy-Tech & Open Source Web Analytics / تحليلات الويب والخصوصية",
+  "summary": "منصة تحليلات ويب أوروبية مستقلة تقدم خدمة سحابية مدفوعة ونسخة Community Edition مجانية للاستضافة الذاتية. تركز على الإحصاءات المجمعة دون ملفات تعريف ارتباط أو معرفات دائمة، مع خطط تبدأ حسب حجم Pageviews وCustom Events وتختلف في المواقع والفرق والميزات المؤسسية.",
   "company": {
-    "business_model": "اشتراكات شهرية مدفوعة حسب عدد زيارات المواقع + التبرعات",
-    "customer_type": "مطورون، مدونون، وشركات تهتم بخصوصية عملائها (B2B/B2C)",
-    "founder": "Uku Täht, Marko Saric",
-    "founder_role": "مؤسسان",
-    "founders_count": "2",
-    "employees": "فريق صغير جداً",
-    "started": "2019",
-    "location": "العمل عن بعد (Remote)",
-    "funding": "مستقلة بالكامل وتمويل ذاتي (Bootstrapped)",
-    "profitability": "مربحة جداً وتغطي تكاليفها بمراحل (Open Startup)",
-    "public_revenue_claim": "تنشر أرقام إيراداتها وعدد المشتركين بشفافية تامة على موقعها"
+    "location": "الكيان القانوني Plausible Insights OÜ مسجل في مدينة تارتو، إستونيا. تعمل الشركة بفريق موزع داخل الاتحاد الأوروبي، وتستضيف بيانات زوار العملاء على بنية أوروبية مملوكة لشركات أوروبية. بلغ حجم الفريق المعلن 10 أشخاص في 2026.",
+    "business_model": "نموذج SaaS ممول بالكامل من المشتركين. يدفع عملاء Plausible Analytics Cloud اشتراكًا شهريًا أو سنويًا حسب إجمالي Pageviews وCustom Events، ثم يختارون Starter أو Growth أو Business وفق عدد المواقع وأعضاء الفريق والميزات، أو Enterprise بتسعير وحدود مخصصة. تبقى Plausible Community Edition مجانية للاستضافة الذاتية تحت AGPLv3 مع دعم مجتمعي، بينما تمول اشتراكات الخدمة السحابية التطوير والتشغيل والدعم.",
+    "customer_type": "أصحاب المواقع والمطورون والشركات الناشئة وفرق التسويق والوكالات ومنتجات SaaS والتجارة الإلكترونية والناشرون والمؤسسات التي تريد تحليلات مجمعة وخصوصية أعلى أو استضافة أوروبية.",
+    "founders": [
+      {
+        "name": "Uku Täht",
+        "role": "المؤسس وممثل الكيان القانوني؛ بدأ بناء المنتج منفردًا"
+      },
+      {
+        "name": "Marko Saric",
+        "role": "انضم في 2020 لقيادة التسويق والاتصال والمجتمع، ويُوصف شريكًا مؤسسًا في قصة نمو الشركة"
+      }
+    ],
+    "founders_count": 2,
+    "employees": "فريق معلن من 10 أشخاص في 2026، وليس مشروع Solopreneur حاليًا.",
+    "started": "كتب Uku أول سطر من المنتج في ديسمبر 2018، وأطلق النسخة التجريبية العامة في بداية 2019، ثم أطلق الاشتراكات المدفوعة في مايو 2019.",
+    "funding": "تمويل ذاتي بالكامل؛ لم تجمع الشركة أي استثمار خارجي وتعلن أنها لا تخطط لقبول مستثمرين أو بيع الشركة.",
+    "profitability": "تصف الشركة نفسها بأنها مربحة بصورة مستدامة، لكن لا تنشر قوائم مالية مدققة أو هامش ربح أو صافي ربح حديثًا.",
+    "public_revenue_claim": "آخر محطة إيراد صريحة ومحددة هي تجاوز مليون دولار ARR في يونيو 2022. لا تنشر الشركة رقم الإيراد الحالي أو MRR الحالي في صفحة رسمية ثابتة، رغم استمرارها في نشر بعض مقاييس العملاء والنمو."
   },
-  "problem_and_product": [
-    "إحصائيات Google Analytics معقدة جداً ومزدحمة بالمميزات التي لا يحتاجها أغلب الناس.",
-    "المنصات الكبرى تنتهك الخصوصية وتتطلب إضافة لافتة مزعجة لملفات تعريف الارتباط (Cookie Banner) في الموقع لتتوافق مع قوانين GDPR.",
-    "سكريبت جوجل يثقل سرعة تحميل الصفحة.",
-    "Plausible تقدم سكريبت خفيف جداً (< 1KB)، لا يستخدم الكوكيز، يعطي إحصائيات نظيفة وسهلة القراءة، ومطابق لقوانين الخصوصية العالمية."
-  ],
+  "directory_snapshot": {
+    "monthly_revenue": "غير معلن حاليًا. آخر محطة مالية موثقة هي مليون دولار ARR في يونيو 2022، ما يعادل نحو 83.3 ألف دولار MRR تاريخيًا وقتها. لا يثبت ذلك إيراد 2026، ولا يمكن اشتقاق الإيراد الحالي من 19 ألف مشترك بسبب اختلاف الخطط والترافيك والفوترة السنوية والخصومات والأسعار القديمة.",
+    "monthly_traffic": "غير مثبت برقم شهري ثابت وقت التحقق. تتيح Plausible لوحة Live Demo عامة لحركة موقعها، لكن القيمة تتغير يوميًا ولم تُنشر في مصدر ثابت يمكن حفظه كـSnapshot موثوق. رقم 19 ألف+ يمثل مشتركين مدفوعين، وليس زيارات موقع أو مستخدمين نشطين شهريًا.",
+    "revenue_per_visitor": "غير قابل للحساب لغياب إيراد حالي موحد ولقطة ثابتة لزيارات plausible.io في الفترة نفسها.",
+    "solopreneur_score": "غير قابل للتطبيق حاليًا؛ بدأ المشروع فرديًا لكنه أصبح فريقًا من 10 أشخاص.",
+    "idea_label": "تحليلات ويب بسيطة ومفتوحة المصدر وممولة بالاشتراكات دون نموذج إعلانات أو بيع بيانات."
+  },
+  "overview": {
+    "problem": {
+      "text": "تمنح أدوات التحليلات التقليدية فرق المواقع كمية كبيرة من التقارير والخصائص، لكنها قد تتطلب إعدادًا وتدريبًا وإدارة موافقات وملفات تعريف ارتباط وتكاملات متعددة. كما أن نماذج الأعمال المرتبطة بالإعلانات أو التتبع عبر المواقع تخلق تعارضًا بين حاجة صاحب الموقع لفهم الاتجاهات وحق الزائر في عدم بناء ملف دائم عنه.",
+      "impact": "يدفع الفريق تكلفة في وقت التعلم والتنفيذ والمراجعة القانونية وصيانة أدوات الموافقة، وقد تتأثر سرعة الصفحة أو جودة البيانات بالحظر. وفي المقابل، فإن حذف التتبع الفردي يحد من التحليلات السلوكية الدقيقة والإسناد متعدد الأجهزة، لذلك لا تناسب Plausible كل استخدام يحتاج تعريف الفرد أو التسلسل طويل الأمد."
+    },
+    "solution": {
+      "text": "تقدم Plausible سكربتًا خفيفًا ولوحة موحدة للإحصاءات الأساسية والأهداف والأحداث والحملات والصفحات والمصادر والأجهزة والمواقع الجغرافية. لا تستخدم ملفات تعريف ارتباط ولا تنشئ معرفًا دائمًا؛ تُنشئ معرفًا يوميًا من Salt يتغير كل 24 ساعة مع النطاق وIP وUser-Agent ثم لا تخزن IP أو User-Agent الخام. توسعت الخدمة إلى Funnels وUser Journeys وRevenue Attribution وCustom Properties وStats API وLooker Studio وWhite Label وEnterprise، مع نسخة CE قابلة للاستضافة الذاتية."
+    }
+  },
   "origin_story": [
-    "أراد Uku بناء أداة إحصائيات لمدونته لا تبطئ الصفحة ولا تتجسس على القراء.",
-    "أطلق الأداة مفتوحة المصدر، ولاحقاً انضم إليه Marko ليتولى التسويق والمحتوى.",
-    "استفادوا بقوة من الغضب التقني المتزايد ضد احتكار جوجل وتطفلها على البيانات."
+    "بدأ Uku Täht كتابة Plausible في ديسمبر 2018 بعد انزعاجه من دمج Google Analytics في صفحة عمل، ورغبته في أداة أبسط وأكثر احترامًا للخصوصية.",
+    "أطلق نسخة تجريبية عامة في بداية 2019 ثم بدأ تحصيل الاشتراكات في مايو 2019 لاختبار استعداد السوق للدفع مقابل تحليلات مستقلة.",
+    "نُشر المشروع مفتوح المصدر في سبتمبر 2019 لتمكين مراجعة الكود والتحقق من طريقة التعامل مع البيانات.",
+    "انضم Marko Saric في 2020 ليتولى التسويق والمحتوى والمجتمع، بينما ركز Uku على المنتج والهندسة.",
+    "اعتمد النمو المبكر على البناء العلني والمقالات والانتشار العضوي وIndie Hackers وHacker News بدل الإعلانات المدفوعة."
   ],
   "build_and_launch": [
-    "التركيز على التسويق المعتمد على المحتوى (Content Marketing) عبر مقالات تنتقد ممارسات شركات الإعلانات.",
-    "إتاحة الأداة كـ Open Source لتمكين التقنيين من استضافتها بأنفسهم (Self-hosted) مجاناً، أو الدفع مقابل الخدمة السحابية السهلة (SaaS).",
-    "سياسة الشفافية التامة (Open Startup): لوحة تحكمهم الخاصة بإحصائيات موقعهم وأرباحهم متاحة للعموم."
+    "إطلاق نسخة تجريبية صغيرة قبل اكتمال كل الميزات، ثم استخدام ملاحظات المستخدمين لتحديد خارطة الطريق.",
+    "إطلاق الاشتراك بسعر منخفض نسبيًا لمنافسة بديل مجاني مثل Google Analytics وتقليل حاجز الدفع.",
+    "فتح الكود وبناء الثقة عبر GitHub وسياسة بيانات قابلة للمراجعة.",
+    "استخدام التسويق بالمحتوى والتموضع حول البساطة والخصوصية بدل الإنفاق الإعلاني.",
+    "الانتقال من MIT إلى AGPL في 2020 لحماية المشروع من إعادة البيع المغلق دون مساهمة.",
+    "إطلاق Plausible Community Edition في 2024 للفصل الواضح بين النسخة المجتمعية والعلامة والخدمة السحابية.",
+    "بناء مزايا Growth وBusiness وEnterprise وWhite Label بدل الاعتماد على لوحة بسيطة واحدة لكل العملاء."
   ],
   "costs_and_operations": [
-    "تكاليف سيرفرات استضافة البيانات (التي تنمو بازدياد قاعدة العملاء).",
-    "لأنهم لا يمتلكون فريقاً كبيراً أو مستثمرين، فإن هوامش الربح ممتازة وتوزع كأرباح."
+    "استضافة ومعالجة بيانات التحليلات على Hetzner وUpCloud واستخدام Bunny في CDN وDNS وحماية DDoS.",
+    "تخزين بيانات الحسابات والتطبيق في PostgreSQL، ومعالجة بيانات التحليلات عالية الحجم في ClickHouse.",
+    "تكلفة فريق صغير متعدد التخصصات ودعم بشري للعملاء المدفوعين.",
+    "معالجة الدفع عبر Paddle وإرسال البريد التشغيلي والتقارير عبر Postmark.",
+    "صيانة مستمرة للخدمة السحابية وإصدارات CE طويلة الأجل مرتين سنويًا.",
+    "تكاليف الأمان والنسخ الاحتياطي والتوافر والمراقبة والامتثال القانوني وإدارة الموردين.",
+    "دعم Enterprise والتكاملات والحدود المخصصة وعمليات Raw Data Export وManaged Proxy.",
+    "الاستضافة الذاتية تنقل تكلفة الخادم والنسخ الاحتياطي والتحديث والأمان والدعم إلى مستخدم CE."
   ],
   "monetization": [
-    "نسخة سحابية مدفوعة تعتمد على حجم الترافيك (الزيارات) التي يستقبلها موقع العميل (تبدأ من 9 دولارات شهرياً)."
+    "Starter بسعر ظاهر يبدأ من 9 دولارات شهريًا عند حد 10 آلاف Pageview، لموقع واحد واستخدام فردي.",
+    "Growth بسعر ظاهر يبدأ من 14 دولارًا شهريًا عند الحد الأساسي، مع مواقع وفريق ومشاركة ولوحات مدمجة.",
+    "Business بسعر ظاهر يبدأ من 19 دولارًا شهريًا عند الحد الأساسي، ويضيف Funnels وUser Journeys وRevenue Tracking وCustom Properties وStats API وLooker Studio.",
+    "Enterprise بتسعير مخصص للحدود العالية وSSO وSites API وManaged Proxy وRaw Data Exports واحتفاظ أو API مخصص.",
+    "الفوترة الشهرية أو السنوية، مع تجربة مجانية 30 يومًا دون بطاقة.",
+    "التسعير يرتفع مع مجموع Pageviews وCustom Events عبر جميع مواقع الفريق.",
+    "White Label وOEM وEmbedded Analytics للوكالات ومنتجات SaaS ضمن خطط وقدرات الأعمال والمؤسسات.",
+    "لا توجد خطة Cloud مجانية دائمة؛ النسخة المجانية هي Plausible CE المستضافة ذاتيًا.",
+    "لا تبيع الشركة بيانات الزوار ولا تمول المنتج بالإعلانات أو بناء ملفات المستخدمين.",
+    "ذكرت الشركة تاريخيًا نحو 300 دولار شهريًا من تبرعات مستخدمي الاستضافة الذاتية في 2024، لكنها تصف الخدمة السحابية حاليًا بأنها مصدر التمويل الوحيد."
   ],
-  "growth": [
-    "نمو بطيء ومستقر (Slow & Steady) تحول لنمو قوي مع تشديد قوانين الخصوصية في أوروبا.",
-    "تخطى حاجز المليون دولار إيرادات سنوية كنموذج يدرس لنجاح المشاريع المستقلة المستدامة."
-  ],
-  "tools": [
-    "Elixir",
-    "Phoenix Framework",
-    "PostgreSQL",
-    "ClickHouse (for fast analytics)",
-    "Tailwind CSS"
-  ],
+  "market_data": {
+    "target_audience": "المواقع الصغيرة والمدونات والشركات الناشئة، وفرق التسويق والمنتجات، والوكالات التي تدير عدة مواقع، ومتاجر التجارة الإلكترونية وSaaS والناشرون، والمؤسسات التي تحتاج SSO وRaw Exports وحدودًا مخصصة، والمطورون والمؤسسات التي تفضل الاستضافة الذاتية والتحكم المباشر في البيانات.",
+    "market_size": "لا تنشر Plausible رقم TAM رسميًا. المؤشرات المباشرة هي أكثر من 19 ألف مشترك مدفوع في 2026، واستخدام لدى أسماء مثل Basecamp وGhost وHugging Face وMongoDB وPython Software Foundation وHarvard. في يونيو 2022 كانت تخدم أكثر من 7 آلاف مشترك و50 ألف موقع وتعالج أكثر من مليار Pageview شهريًا؛ هذه أرقام تاريخية للمنصة وليست قيمة سوق.",
+    "growth_rate": "ارتفع ARR المعلن من 500 ألف دولار في أكتوبر 2021 إلى مليون دولار في يونيو 2022، أي تضاعف خلال نحو ثمانية أشهر. ارتفع عدد المشتركين من أكثر من 7 آلاف في 2022 إلى نحو 14 ألفًا في نوفمبر 2024 ثم أكثر من 19 ألفًا في 2026، أي نمو تراكمي لا يقل عن 35.7% من نوفمبر 2024 إلى 2026. وفي فبراير ومارس وأبريل 2026 أضافت 652 و953 و1,156 مشتركًا مدفوعًا جديدًا على الترتيب، مع بقاء Churn مستقرًا بصورة عامة وفق الشركة."
+  },
+  "financials": {
+    "initial_investment": "رأس المال الشخصي الأول وتكلفة الأشهر الأولى غير معلنين. بدأ Uku المشروع منفردًا، ثم موّلت الاشتراكات الرواتب والبنية والتوسع. لم تجمع Plausible أي جولة خارجية أو دينًا معلنًا، وتؤكد في 2026 أنها لم تقبل دولارًا واحدًا من المستثمرين.",
+    "valuation": "غير معلن وغير قابل للاشتقاق. Plausible شركة خاصة ممولة ذاتيًا ولا توجد جولة أسهم أو استحواذ أو طرح عام يحدد تقييمًا. الربحية وعدد المشتركين وARR التاريخي لا تكفي لحساب قيمة الشركة دون صفقة أو مضاعف متفق عليه.",
+    "revenue_streams": [
+      "اشتراكات Starter للخدمة السحابية المدارة",
+      "اشتراكات Growth للمواقع والفرق والمشاركة واللوحات المدمجة",
+      "اشتراكات Business للميزات المتقدمة وواجهات البيانات والإسناد",
+      "عقود Enterprise بحدود ودعم وSSO وProxy وRaw Data Export مخصصة",
+      "رسوم مرتبطة بارتفاع Pageviews وCustom Events ضمن كل خطة",
+      "فروقات الفوترة الشهرية والسنوية والترقيات التناسبية",
+      "White Label وOEM وEmbedded Analytics للوكالات ومنتجات SaaS",
+      "حدود API والمواقع والاحتفاظ المخصصة ضمن العقود المؤسسية",
+      "الخدمة السحابية الرسمية هي مصدر التمويل الأساسي والمعلن",
+      "Plausible CE مجانية ولا تدفع رسوم ترخيص للشركة",
+      "التبرعات التاريخية للاستضافة الذاتية ضئيلة ولا تمثل نموذج الإيراد الأساسي",
+      "لا توجد إيرادات من الإعلانات أو بيع البيانات أو Data Brokerage"
+    ]
+  },
   "revenue_timeline": [
     {
-      "date": "2019",
-      "amount": "الفكرة",
-      "type": "إطلاق",
-      "note": "كتابة الأسطر الأولى وإطلاق النسخة المفتوحة المصدر."
+      "date": "2018-12",
+      "amount": "غير مدفوع",
+      "type": "بداية التطوير",
+      "note": "كتابة أول سطر من الكود."
     },
     {
-      "date": "2021",
-      "amount": "$400K ARR",
-      "type": "نمو العضوي",
-      "note": "تحقيق دخل مريح للمؤسسين بفضل مقالاتهم المنتشرة."
+      "date": "2019-05",
+      "amount": "$64 MRR",
+      "type": "إطلاق الاشتراكات",
+      "note": "أول شهر للاشتراكات المدفوعة."
     },
     {
-      "date": "2022",
-      "amount": "$1M+ ARR",
-      "type": "استدامة",
-      "note": "الوصول لحاجز المليون دولار مع ثبات تام."
+      "date": "2020-07",
+      "amount": "$2,750 MRR",
+      "type": "نمو عضوي",
+      "note": "427 مشتركًا مدفوعًا بعد نمو المحتوى والانتشار العضوي."
+    },
+    {
+      "date": "2020-10",
+      "amount": "$6,226 MRR",
+      "type": "توسع مبكر",
+      "note": "أكثر من ألف مشترك مدفوع."
+    },
+    {
+      "date": "2021-10",
+      "amount": "$500K ARR",
+      "type": "مرحلة الاستدامة",
+      "note": "نحو 4,802 عميل مدفوع وقت المقالة."
+    },
+    {
+      "date": "2022-06",
+      "amount": "$1M ARR",
+      "type": "محطة مالية موثقة",
+      "note": "أكثر من 7,000 مشترك و50,000 موقع وأكثر من مليار Pageview شهريًا."
+    },
+    {
+      "date": "2024-11",
+      "amount": "الإيراد غير معلن",
+      "type": "توسع العملاء",
+      "note": "نحو 14 ألف مشترك مدفوع وفق تدوينة المنتج."
+    },
+    {
+      "date": "2026",
+      "amount": "الإيراد الحالي غير معلن",
+      "type": "النطاق الحالي",
+      "note": "19 ألف+ مشترك مدفوع وفريق من 10 أشخاص؛ أبريل 2026 سجل 1,156 مشتركًا مدفوعًا جديدًا."
     }
   ],
   "lessons": [
-    "التموضع ضد العمالقة (Positioning against Goliaths): تحديد جوجل كعدو للخصوصية ومقارنة منتجهم الخفيف بمنتج جوجل الثقيل كان أفضل تسويق.",
-    "الشفافية تبيع (Transparency Sells): كونها Open Startup تنشر أرباحها وإحصائياتها خلق ثقة وشعوراً بالانتماء لدى العملاء والمطورين.",
-    "المشاريع مفتوحة المصدر يمكن أن تدر أرباحاً: المطورون يقدرون الكود المفتوح، لكن الشركات تفضل الدفع مقابل الراحة السحابية."
-  ],
-  "sources": [
     {
-      "label": "Plausible Blog / Open Startup Dashboard",
-      "url": "https://plausible.io",
-      "coverage": "معلومات الشركة وتفاصيل الإيرادات الدقيقة"
+      "title": "منافسة المجاني تحتاج قيمة مفهومة في دقائق",
+      "description": "لم تحاول Plausible مطابقة كل تقارير Google Analytics، بل جعلت البساطة والخصوصية والوقت الموفر أسبابًا مباشرة للدفع."
+    },
+    {
+      "title": "التموضع الحاد يفتح الباب والمنتج يحتفظ بالعميل",
+      "description": "رسالة الخصوصية جذبت الاهتمام، لكن استمرار الاشتراك يعتمد على دقة البيانات وسرعة اللوحة والتكاملات والدعم."
+    },
+    {
+      "title": "المفتوح المصدر لا يعني أن الخدمة المدارة يجب أن تكون مجانية",
+      "description": "الكود مجاني للاستضافة الذاتية، بينما يدفع العميل مقابل التوافر والنسخ الاحتياطي والتحديث والأمان والدعم والراحة التشغيلية."
+    },
+    {
+      "title": "الفصل بين Cloud وCE يحمي العلامة والتوقعات",
+      "description": "تسمية النسخة المجتمعية وشعارها ودعمها المختلف يمنع خلط الاستضافة الذاتية بالخدمة الرسمية ويحدد مسؤولية التشغيل."
+    },
+    {
+      "title": "الرخصة جزء من استراتيجية السوق",
+      "description": "الانتقال إلى AGPL حد من إعادة بيع الكود داخل خدمات مغلقة دون مساهمة، وربط الاستدامة بقواعد المنتج المفتوح."
+    },
+    {
+      "title": "الخصوصية تقلل البيانات وتفرض وضوح حدود المنتج",
+      "description": "المعرف اليومي يمنع تتبع الفرد عبر الأيام والأجهزة، لكنه يعني أن Cohorts الفردية والإسناد الطويل غير متاحين بالطريقة نفسها."
+    },
+    {
+      "title": "لا تستخدم عبارة متوافق قانونيًا دون شروط",
+      "description": "Plausible مصممة دون Cookies وPII وتوفر تقييمًا قانونيًا، لكن العميل يظل مسؤولًا عن عدم إرسال بيانات شخصية وعن بقية أدوات الموقع والقانون المحلي."
+    },
+    {
+      "title": "السكريبت الخفيف مقياس يتغير مع الميزات",
+      "description": "الادعاء التاريخي أقل من 1KB لم يعد مناسبًا لكل نسخة؛ أداة الشركة في 2026 تعرض نحو 2.5KB مضغوطة، وما تزال أخف بكثير من GA4."
+    },
+    {
+      "title": "التسعير بالحجم يربط الإيراد بنجاح العميل ويزيد تقلبه",
+      "description": "ارتفاع Pageviews وEvents يرفع الخطة، لكن القفزات الموسمية قد تسبب اعتراضًا. فترات السماح والترقية التناسبية تقلل الاحتكاك."
+    },
+    {
+      "title": "Pageviews وCustom Events يجب أن يدخلا معادلة الاستخدام",
+      "description": "تسعير الأحداث يمنع تحميل المنصة مجانًا بتتبع كثيف، لكنه يحتاج شرحًا لأن العميل قد يظن أن الخطة تعتمد على الزيارات فقط."
+    },
+    {
+      "title": "البساطة تحتاج طبقات بدل رفض الاحتياجات المتقدمة",
+      "description": "أبقت Plausible اللوحة الأساسية بسيطة، وأضافت Funnels وAPI وLooker Studio وRaw Exports في خطط أعلى بدل تحويل الصفحة الرئيسية إلى نظام معقد للجميع."
+    },
+    {
+      "title": "المؤسسات تشتري الحوكمة بقدر ما تشتري التحليلات",
+      "description": "SSO وDPA وSites API وManaged Proxy وحدود الاحتفاظ والتصدير تحل مراجعات الأمن والإدارة، لا مجرد قراءة عدد الزيارات."
+    },
+    {
+      "title": "إتاحة البيانات لا تعني إتاحة كل حدث في الخطة الأساسية",
+      "description": "اللوحة وCSV وStats API تخدم البيانات المجمعة، بينما Raw Event Exports قدرة مؤسسية أو استضافة ذاتية؛ يجب توضيح مستوى الوصول قبل الشراء."
+    },
+    {
+      "title": "الفريق الصغير يحتاج حدود دعم صريحة",
+      "description": "عملاء Cloud يحصلون على دعم الفريق، بينما CE مجتمعية. دعم كل تثبيت ذاتي كان سيحوّل المنتج المجاني إلى تكلفة غير قابلة للاستمرار."
+    },
+    {
+      "title": "المحتوى العضوي يعمل عندما يشرح مشكلة يملك المنتج حلها",
+      "description": "مقالات الخصوصية وGA جذبت جمهورًا يعاني المشكلة نفسها، فكانت الزيارات أقرب إلى نية شراء من محتوى عام واسع."
+    },
+    {
+      "title": "تحسين صفحة واحدة قد يتفوق على إطلاق ميزة",
+      "description": "تبسيط الصفحة الرئيسية في 2026 رفع التسجيلات التجريبية وحقق أرقامًا قياسية للمشتركين الجدد دون حملة أو ميزة جديدة."
+    },
+    {
+      "title": "المشترك المدفوع لا يكشف الإيراد",
+      "description": "19 ألف عميل موزعون بين خطط وأسعار وحجوم وفوترة وخصومات مختلفة؛ ضرب العدد في أرخص خطة يعطي تقديرًا مضللًا."
+    },
+    {
+      "title": "الشفافية ليست لوحة مالية دائمة تلقائيًا",
+      "description": "نشرت الشركة تاريخيًا MRR وARR وحركة الموقع، لكنها لا تعرض اليوم رقم إيراد حالي ثابتًا. يجب تحديث وصف Open Startup بدل تكرار ادعاء قديم."
+    },
+    {
+      "title": "الاستقلال المالي يخلق حوكمة مختلفة لا غيابًا للضغوط",
+      "description": "غياب المستثمر يمنح حرية في السرعة والخصوصية، لكن الشركة تبقى مسؤولة أمام Churn والتكاليف ودعم العملاء واستدامة الفريق."
+    },
+    {
+      "title": "الهندسة البسيطة للمستخدم قد تكون معقدة في الخلفية",
+      "description": "لوحة واحدة تخفي ClickHouse وPostgreSQL وCDN وتوافرًا ونسخًا احتياطية وتحديثات مستمرة؛ سهولة المنتج نتيجة استثمار تشغيلي لا غياب التعقيد."
     }
   ],
-  "data_quality": [
-    "بيانات عالية الدقة موثقة يومياً على موقع الشركة."
+  "tools": [
+    "Plausible Analytics Cloud كخدمة مدارة",
+    "Plausible Community Edition للاستضافة الذاتية تحت AGPLv3",
+    "لوحة واحدة للزوار والزيارات وPageviews وBounce Rate وVisit Duration",
+    "تقارير المصادر وUTM والحملات والصفحات والدول والمدن والأجهزة والمتصفحات",
+    "Goals وCustom Events",
+    "تتبع الروابط الخارجية والتنزيلات والنماذج وصفحات 404",
+    "Saved Segments وShared Segments",
+    "Funnels وUser Journeys",
+    "Ecommerce Revenue Attribution",
+    "Custom Properties",
+    "Realtime Dashboard",
+    "Google Analytics Import",
+    "Google Search Console Integration",
+    "CSV Export",
+    "Stats API",
+    "Sites API للمؤسسات",
+    "Looker Studio Connector",
+    "Scheduled Raw Event Exports",
+    "Embedded Dashboards",
+    "Shared Links مع حماية أو تحديد Segment",
+    "White Label وOEM Analytics",
+    "SSO للمؤسسات",
+    "Managed Proxy لتقليل الحظر وتحسين جمع البيانات",
+    "Email وSlack Reports",
+    "WordPress Plugin",
+    "WooCommerce Integration",
+    "إرشادات تثبيت Shopify وWebflow وSquarespace وWix وNext.js وGhost وHugo",
+    "30-day Free Trial دون بطاقة",
+    "Starter وGrowth وBusiness وEnterprise",
+    "فوترة حسب Pageviews وCustom Events",
+    "معرف يومي متغير دون Cookies أو Persistent Identifiers",
+    "معالجة IP وUser-Agent مؤقتًا ثم عدم تخزينهما خامًا",
+    "استضافة بيانات الزوار داخل الاتحاد الأوروبي",
+    "Hetzner للبنية الأساسية في ألمانيا",
+    "UpCloud لقواعد البيانات وتخزين Data Exports",
+    "Bunny للشبكة وCDN وDNS وحماية DDoS",
+    "Elixir وPhoenix للـBackend",
+    "PostgreSQL لبيانات التطبيق العامة",
+    "ClickHouse لبيانات التحليلات",
+    "React وTailwind CSS للواجهة",
+    "Docker Compose لتشغيل Community Edition",
+    "GitHub Roadmap وIssue Tracker وإصدارات مفتوحة",
+    "إصدارات Cloud متكررة وإصدارات CE طويلة الأجل مرتين سنويًا",
+    "DPA وسياسات بيانات وأمن وامتثال منشورة",
+    "Paddle للدفع وPostmark للبريد التشغيلي",
+    "إصدار CE 3.2.1 منشور في مايو 2026"
   ],
-  "research_metadata": {
-    "researched_on": "2026-07-29",
-    "scope": "عام",
-    "source_method": "معلومات عامة",
-    "private_backend_data_included": false,
-    "copyright_note": "دراسة حالة"
+  "verification": {
+    "status": "verified_from_plausible_official_product_docs_github_legal_pricing_and_company_history_sources",
+    "verified_on": "2026-08-03",
+    "source_policy": "تم إعطاء الأولوية لموقع Plausible الرسمي ووثائقها وسياساتها ومستودع GitHub. استُخدمت أرقام الإيراد فقط عندما نشرتها الشركة في تدوينات تاريخية صريحة، ولم يُقدَّر الإيراد الحالي من عدد المشتركين.",
+    "important_notes": [
+      "رقم 100 ألف دولار شهريًا في الملف الأصلي غير محدث وغير موثق كإيراد 2026.",
+      "آخر محطة مالية محددة منشورة هي مليون دولار ARR في يونيو 2022، أي نحو 83.3 ألف دولار MRR وقتها.",
+      "تصف الشركة نفسها حاليًا بأنها مربحة وممولة من المشتركين، لكنها لا تنشر صافي الربح أو الهامش أو الإيراد الحالي.",
+      "أكثر من 19 ألف مشترك مدفوع لا يساوي مستخدمين نشطين أو مواقع أو زيارات.",
+      "رقم مليون زيارة شهريًا لموقع plausible.io لم يُثبت كلقطة مستقرة؛ Live Demo يتغير مع الوقت.",
+      "الفريق الحالي 10 أشخاص، ولذلك تصنيف المشروع Solopreneur بنسبة 100% غير صحيح.",
+      "بدأ المنتج في ديسمبر 2018، وبدأت الاشتراكات في مايو 2019؛ وصف «بدأ 2019» صحيح تجاريًا لكنه يغفل مرحلة البناء.",
+      "Plausible Cloud ليست مجانية بعد التجربة؛ Plausible CE هي النسخة المجانية للاستضافة الذاتية.",
+      "Community Edition تحت AGPLv3، لكن بعض الميزات التجارية والمؤسسية ليست ضمن توزيع CE.",
+      "النسخة السحابية والنسخة المجتمعية لا تتلقيان الميزات بالتوقيت نفسه؛ CE تصدر كنسخة طويلة الأجل مرتين سنويًا.",
+      "صفحات الشركة تقول إن اشتراكات Cloud هي مصدر التمويل الوحيد؛ التبرعات التاريخية كانت نحو 300 دولار شهريًا في 2024 وغير جوهرية.",
+      "الادعاء التاريخي بأن السكربت أقل من 1KB لا يعكس كل نسخة حالية؛ أداة الشركة لعام 2026 تعرض 2.5KB مضغوطة للسكريبت القياسي.",
+      "لا تستخدم Plausible Cookies أو معرفات دائمة لزوار المواقع، لكنها تستخدم Cookie ضروريًا لتسجيل دخول صاحب الحساب إلى التطبيق.",
+      "تقول الشركة إن أدواتها لا تجمع بيانات شخصية للزوار ولا تتطلب Consent Banner للتحليلات؛ يظل العميل مسؤولًا عن تكوين الأحداث والخصائص وعدم إرسال PII وعن بقية أدوات موقعه.",
+      "تستخدم المنصة IP وUser-Agent لحظيًا لصنع معرف يومي، ثم لا تخزن القيم الخام وتدوّر Salt كل 24 ساعة.",
+      "بيانات الزوار مستضافة في الاتحاد الأوروبي، لكن بعض خدمات الحساب والدفع والدعم قد تستخدم Subprocessors عالميين مع ضمانات تعاقدية.",
+      "Plausible Insights OÜ هي الجهة القانونية المسجلة في تارتو، إستونيا.",
+      "لا يوجد تمويل خارجي أو تقييم منشور أو خطة بيع معلنة.",
+      "أرقام 2026 القياسية للمشتركين الجدد تخص تدفق العملاء الجدد ولا تكشف Net MRR الحالي.",
+      "تم الحفاظ على order وslug وdomain وwebsite والحقول السردية الأساسية من الملف الأصلي مع إعادة هيكلتها وإضافة طبقات التحقق."
+    ]
   },
-  "id": "plausible"
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط الحقول بالقيم والمصادر وحالة التحقق، مع فصل ARR التاريخي عن الإيراد الحالي، والمشتركين عن Traffic، وCloud عن Community Edition.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي أو مستودع رسمي.",
+      "verified_historical_revenue_not_current": "الرقم محطة ARR/MRR تاريخية ولا يمثل الوضع الحالي.",
+      "verified_as_not_publicly_disclosed": "لم تنشر الشركة المقياس الحالي، ولذلك لم يُستخدم تقدير.",
+      "verified_subscribers_not_traffic": "الرقم مشتركين أو فرق وليس زيارات أو MAU.",
+      "verified_product_capability": "القدرة موثقة في المنتج أو الوثائق.",
+      "verified_open_source_distribution_limit": "القدرة أو الترخيص يختلف بين Cloud وCE.",
+      "verified_company_reported_profitability": "الربحية معلنة من الشركة دون قوائم مدققة.",
+      "verified_privacy_design_with_implementation_limits": "التصميم والادعاء القانوني موثقان مع بقاء مسؤولية تكوين العميل.",
+      "verified_current_pricing_snapshot": "السعر ظاهر وقت التحقق وقد يتغير.",
+      "verified_technical_stack": "التقنية موثقة في مستودع الشركة.",
+      "verified_historical_growth": "معدل أو محطة نمو تاريخية موثقة.",
+      "verified_as_not_publicly_valued": "لا توجد صفقة أو جولة تثبت تقييمًا.",
+      "analytical_inference": "تحليل مهني مبني على أدلة وليس تصريحًا حرفيًا."
+    },
+    "confidence_scale": {
+      "high": "موقع Plausible أو وثائقها أو GitHub الرسمي.",
+      "medium_high": "رقم شركة صريح لكن غير مدقق ماليًا.",
+      "medium": "تحليل مشتق من نقاط تاريخية أو تعريف يحتاج قيدًا."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "الكيان القانوني Plausible Insights OÜ مسجل في مدينة تارتو، إستونيا. تعمل الشركة بفريق موزع داخل الاتحاد الأوروبي، وتستضيف بيانات زوار العملاء على بنية أوروبية مملوكة لشركات أوروبية. بلغ حجم الفريق المعلن 10 أشخاص في 2026.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "estonian_legal_entity_eu_remote_team_and_european_infrastructure",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يثبت Imprint الكيان وعنوان تارتو، وتثبت صفحات الشركة فريق الاتحاد الأوروبي والبنية الأوروبية.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-12",
+        "SRC-01",
+        "SRC-11",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-12",
+          "title": "Plausible Imprint",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_legal_imprint",
+          "url": "https://plausible.io/imprint",
+          "evidence_type": "direct",
+          "source_locator": "Imprint",
+          "supports": "Plausible Insights OÜ وعنوان تارتو."
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Plausible Analytics",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_company_page",
+          "url": "https://plausible.io/about",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "فريق 10 وشركة أوروبية."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "EU-Hosted Web Analytics",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_infrastructure_page",
+          "url": "https://plausible.io/eu-hosted-web-analytics",
+          "evidence_type": "direct",
+          "source_locator": "EU hosting",
+          "supports": "EU-owned infrastructure."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Plausible Privacy Policy",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_privacy_policy",
+          "url": "https://plausible.io/privacy",
+          "evidence_type": "direct",
+          "source_locator": "Privacy Policy",
+          "supports": "Data controller and hosting.",
+          "published_on": "2026-05"
+        }
+      ]
+    },
+    "$.company.business_model": {
+      "field_value": "نموذج SaaS ممول بالكامل من المشتركين. يدفع عملاء Plausible Analytics Cloud اشتراكًا شهريًا أو سنويًا حسب إجمالي Pageviews وCustom Events، ثم يختارون Starter أو Growth أو Business وفق عدد المواقع وأعضاء الفريق والميزات، أو Enterprise بتسعير وحدود مخصصة. تبقى Plausible Community Edition مجانية للاستضافة الذاتية تحت AGPLv3 مع دعم مجتمعي، بينما تمول اشتراكات الخدمة السحابية التطوير والتشغيل والدعم.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "subscriber_funded_cloud_saas_with_free_agpl_community_edition",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت التسعير والوثائق الاشتراكات حسب الاستخدام، وتثبت CE الفصل بين الخدمة المدفوعة والاستضافة الذاتية.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-04",
+        "SRC-05",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Plausible Pricing",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_pricing_page",
+          "url": "https://plausible.io/",
+          "evidence_type": "direct",
+          "source_locator": "Pricing",
+          "supports": "الخطط والأسعار."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Plausible Subscription Plans",
+          "publisher": "Plausible Docs",
+          "source_type": "official_billing_documentation",
+          "url": "https://plausible.io/docs/subscription-plans",
+          "evidence_type": "direct",
+          "source_locator": "Subscription plans",
+          "supports": "Pageviews وEvents والفوترة.",
+          "published_on": "2026-06-23"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Introducing Plausible Community Edition",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_open_source_strategy",
+          "url": "https://plausible.io/blog/community-edition",
+          "evidence_type": "direct",
+          "source_locator": "Community Edition",
+          "supports": "CE وAGPL والفصل التجاري.",
+          "published_on": "2024-02-23"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Self-Hosted Plausible Analytics",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_self_hosting_page",
+          "url": "https://plausible.io/self-hosted-web-analytics",
+          "evidence_type": "direct",
+          "source_locator": "Self-hosted",
+          "supports": "Cloud تمول التطوير."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Why Plausible Says No to Investors",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_funding_statement",
+          "url": "https://plausible.io/blog/customers-not-investors",
+          "evidence_type": "direct",
+          "source_locator": "Funding statement",
+          "supports": "تمويل من المشتركين دون مستثمرين.",
+          "published_on": "2026-01-15"
+        }
+      ],
+      "limitations": "لا تنشر الشركة توزيع الإيراد حسب الخطة أو حجم العقود المؤسسية."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن حاليًا. آخر محطة مالية موثقة هي مليون دولار ARR في يونيو 2022، ما يعادل نحو 83.3 ألف دولار MRR تاريخيًا وقتها. لا يثبت ذلك إيراد 2026، ولا يمكن اشتقاق الإيراد الحالي من 19 ألف مشترك بسبب اختلاف الخطط والترافيك والفوترة السنوية والخصومات والأسعار القديمة.",
+      "verification_status": "verified_historical_revenue_not_current",
+      "confidence": "high",
+      "claim_type": "historical_arr_milestone_without_current_revenue",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "آخر رقم محدد هو مليون دولار ARR في 2022؛ حُسب MRR التاريخي فقط مع منع استخدامه كلقطة 2026.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-14",
+        "SRC-01",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-14",
+          "title": "How We Built a $1M ARR Open Source SaaS",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_revenue_history",
+          "url": "https://plausible.io/blog/open-source-saas",
+          "evidence_type": "direct",
+          "source_locator": "Revenue milestone",
+          "supports": "1M ARR in June 2022.",
+          "published_on": "2022-06-22"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Plausible Analytics",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_company_page",
+          "url": "https://plausible.io/about",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "Continued profitable growth without current revenue."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Homepage Changes and 2026 Subscriber Growth",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_growth_experiment",
+          "url": "https://plausible.io/blog/homepage-edits-conversion-lift",
+          "evidence_type": "direct",
+          "source_locator": "2026 growth experiment",
+          "supports": "Record new MRR without amount.",
+          "published_on": "2026-05-12"
+        }
+      ],
+      "limitations": "لا يمكن اشتقاق الإيراد من المشتركين بسبب اختلاف الخطط والفوترة والخصومات.",
+      "calculation": {
+        "historical_arr_usd": 1000000,
+        "historical_arr_date": "2022-06-22",
+        "formula": "1,000,000 ÷ 12",
+        "historical_mrr_usd": 83333.33,
+        "current_2026_mrr": "not_publicly_disclosed",
+        "calculation_status": "historical_not_current"
+      }
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير مثبت برقم شهري ثابت وقت التحقق. تتيح Plausible لوحة Live Demo عامة لحركة موقعها، لكن القيمة تتغير يوميًا ولم تُنشر في مصدر ثابت يمكن حفظه كـSnapshot موثوق. رقم 19 ألف+ يمثل مشتركين مدفوعين، وليس زيارات موقع أو مستخدمين نشطين شهريًا.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "dynamic_public_dashboard_without_fixed_monthly_snapshot",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت الوثائق وجود Live Demo ولوحات عامة، لكن لا يوجد رقم ثابت موثق للشهر وقت إعداد الملف.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-20",
+        "SRC-21",
+        "SRC-26",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-20",
+          "title": "Plausible Documentation",
+          "publisher": "Plausible Docs",
+          "source_type": "official_documentation_index",
+          "url": "https://plausible.io/docs",
+          "evidence_type": "direct",
+          "source_locator": "Docs index",
+          "supports": "Live Demo.",
+          "published_on": "2026-06-12"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Plausible Dashboard Overview",
+          "publisher": "Plausible Docs",
+          "source_type": "official_product_documentation",
+          "url": "https://plausible.io/docs/guided-tour",
+          "evidence_type": "direct",
+          "source_locator": "Dashboard overview",
+          "supports": "Actual website traffic in live demo.",
+          "published_on": "2026-06"
+        },
+        {
+          "source_id": "SRC-26",
+          "title": "Public Dashboard Visibility",
+          "publisher": "Plausible Docs",
+          "source_type": "official_sharing_documentation",
+          "url": "https://plausible.io/docs/visibility",
+          "evidence_type": "direct",
+          "source_locator": "Visibility docs",
+          "supports": "Public dashboards are dynamic.",
+          "published_on": "2026-05-26"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Plausible Analytics",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_company_page",
+          "url": "https://plausible.io/about",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "19K paying subscribers are customers, not traffic."
+        }
+      ],
+      "limitations": "رقم 1M+ في الملف الأصلي لا يحمل تاريخًا أو فترة أو لقطة قابلة لإعادة التحقق."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "تمنح أدوات التحليلات التقليدية فرق المواقع كمية كبيرة من التقارير والخصائص، لكنها قد تتطلب إعدادًا وتدريبًا وإدارة موافقات وملفات تعريف ارتباط وتكاملات متعددة. كما أن نماذج الأعمال المرتبطة بالإعلانات أو التتبع عبر المواقع تخلق تعارضًا بين حاجة صاحب الموقع لفهم الاتجاهات وحق الزائر في عدم بناء ملف دائم عنه.",
+        "impact": "يدفع الفريق تكلفة في وقت التعلم والتنفيذ والمراجعة القانونية وصيانة أدوات الموافقة، وقد تتأثر سرعة الصفحة أو جودة البيانات بالحظر. وفي المقابل، فإن حذف التتبع الفردي يحد من التحليلات السلوكية الدقيقة والإسناد متعدد الأجهزة، لذلك لا تناسب Plausible كل استخدام يحتاج تعريف الفرد أو التسلسل طويل الأمد."
+      },
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "analytics_complexity_privacy_compliance_and_tracking_incentive_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تشرح الشركة تعقيد GA وتعارض نموذج البيانات، وتوضح سياسات البيانات حدود الخصوصية.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-08",
+        "SRC-13",
+        "SRC-18"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Plausible Analytics",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_company_page",
+          "url": "https://plausible.io/about",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "سبب بناء المنتج."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Plausible Data Policy",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_data_policy",
+          "url": "https://plausible.io/data-policy",
+          "evidence_type": "direct",
+          "source_locator": "Data Policy",
+          "supports": "Cookies, identifiers and personal data.",
+          "published_on": "2026-03"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Why Plausible Says No to Investors",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_funding_statement",
+          "url": "https://plausible.io/blog/customers-not-investors",
+          "evidence_type": "direct",
+          "source_locator": "Customers not investors",
+          "supports": "Incentive alignment.",
+          "published_on": "2026-01-15"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "How Much JavaScript Does Google Analytics Add?",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_script_size_tool",
+          "url": "https://plausible.io/google-analytics-script-size",
+          "evidence_type": "direct",
+          "source_locator": "Script calculator",
+          "supports": "Script size and performance."
+        }
+      ],
+      "limitations": "بعض المقارنات مع Google هي تموضع تسويقي من Plausible وليست دراسة مستقلة شاملة."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "تقدم Plausible سكربتًا خفيفًا ولوحة موحدة للإحصاءات الأساسية والأهداف والأحداث والحملات والصفحات والمصادر والأجهزة والمواقع الجغرافية. لا تستخدم ملفات تعريف ارتباط ولا تنشئ معرفًا دائمًا؛ تُنشئ معرفًا يوميًا من Salt يتغير كل 24 ساعة مع النطاق وIP وUser-Agent ثم لا تخزن IP أو User-Agent الخام. توسعت الخدمة إلى Funnels وUser Journeys وRevenue Attribution وCustom Properties وStats API وLooker Studio وWhite Label وEnterprise، مع نسخة CE قابلة للاستضافة الذاتية."
+      },
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "cookieless_aggregate_analytics_with_advanced_business_and_self_hosted_options",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت الوثائق طريقة القياس واللوحة والمزايا المتقدمة وCE.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-08",
+        "SRC-21",
+        "SRC-03",
+        "SRC-19",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "Plausible Data Policy",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_data_policy",
+          "url": "https://plausible.io/data-policy",
+          "evidence_type": "direct",
+          "source_locator": "Data Policy",
+          "supports": "Daily identifier and aggregate collection.",
+          "published_on": "2026-03"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Plausible Dashboard Overview",
+          "publisher": "Plausible Docs",
+          "source_type": "official_product_documentation",
+          "url": "https://plausible.io/docs/guided-tour",
+          "evidence_type": "direct",
+          "source_locator": "Guided tour",
+          "supports": "Dashboard metrics.",
+          "published_on": "2026-06"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Plausible Subscription Plans",
+          "publisher": "Plausible Docs",
+          "source_type": "official_billing_documentation",
+          "url": "https://plausible.io/docs/subscription-plans",
+          "evidence_type": "direct",
+          "source_locator": "Plans",
+          "supports": "Business and Enterprise features.",
+          "published_on": "2026-06-23"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "White Label Web Analytics",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_white_label_product",
+          "url": "https://plausible.io/white-label-web-analytics",
+          "evidence_type": "direct",
+          "source_locator": "Product page",
+          "supports": "White label."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Self-Hosted Plausible Analytics",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_self_hosting_page",
+          "url": "https://plausible.io/self-hosted-web-analytics",
+          "evidence_type": "direct",
+          "source_locator": "Self-hosted page",
+          "supports": "Self-hosting."
+        }
+      ],
+      "limitations": "عدم استخدام Cookies لا يجعل كل إعداد للعميل متوافقًا تلقائيًا إذا أرسل PII في URLs أو Custom Properties."
+    },
+    "$.market_data.target_audience": {
+      "field_value": "المواقع الصغيرة والمدونات والشركات الناشئة، وفرق التسويق والمنتجات، والوكالات التي تدير عدة مواقع، ومتاجر التجارة الإلكترونية وSaaS والناشرون، والمؤسسات التي تحتاج SSO وRaw Exports وحدودًا مخصصة، والمطورون والمؤسسات التي تفضل الاستضافة الذاتية والتحكم المباشر في البيانات.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "small_sites_marketers_agencies_saas_ecommerce_publishers_enterprise_and_self_hosters",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تغطي صفحات الخطط والمنتجات الشرائح المختلفة.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-03",
+        "SRC-19",
+        "SRC-20",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Plausible Subscription Plans",
+          "publisher": "Plausible Docs",
+          "source_type": "official_billing_documentation",
+          "url": "https://plausible.io/docs/subscription-plans",
+          "evidence_type": "direct",
+          "source_locator": "Plans",
+          "supports": "Starter/Growth/Business/Enterprise.",
+          "published_on": "2026-06-23"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "White Label Web Analytics",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_white_label_product",
+          "url": "https://plausible.io/white-label-web-analytics",
+          "evidence_type": "direct",
+          "source_locator": "White label",
+          "supports": "Agencies and SaaS."
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Plausible Documentation",
+          "publisher": "Plausible Docs",
+          "source_type": "official_documentation_index",
+          "url": "https://plausible.io/docs",
+          "evidence_type": "direct",
+          "source_locator": "Docs",
+          "supports": "Integrations and website types.",
+          "published_on": "2026-06-12"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Self-Hosted Plausible Analytics",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_self_hosting_page",
+          "url": "https://plausible.io/self-hosted-web-analytics",
+          "evidence_type": "direct",
+          "source_locator": "Self-hosted",
+          "supports": "Self-hosters."
+        }
+      ]
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر Plausible رقم TAM رسميًا. المؤشرات المباشرة هي أكثر من 19 ألف مشترك مدفوع في 2026، واستخدام لدى أسماء مثل Basecamp وGhost وHugging Face وMongoDB وPython Software Foundation وHarvard. في يونيو 2022 كانت تخدم أكثر من 7 آلاف مشترك و50 ألف موقع وتعالج أكثر من مليار Pageview شهريًا؛ هذه أرقام تاريخية للمنصة وليست قيمة سوق.",
+      "verification_status": "verified_subscribers_not_traffic",
+      "confidence": "medium_high",
+      "claim_type": "subscriber_and_historical_site_scale_without_tam",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد TAM رسمي؛ تستخدم الخريطة المشتركين الحاليين والمواقع والصفحات التاريخية كمقاييس نطاق منفصلة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-01",
+        "SRC-14",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Plausible Analytics",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_company_page",
+          "url": "https://plausible.io/about",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "19K subscribers and named customers."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "How We Built a $1M ARR Open Source SaaS",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_revenue_history",
+          "url": "https://plausible.io/blog/open-source-saas",
+          "evidence_type": "direct",
+          "source_locator": "1M ARR post",
+          "supports": "7K subscribers, 50K sites, 1B monthly pageviews in 2022.",
+          "published_on": "2022-06-22"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "White Label Web Analytics",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_white_label_product",
+          "url": "https://plausible.io/white-label-web-analytics",
+          "evidence_type": "direct",
+          "source_locator": "White label",
+          "supports": "19K trusted subscribers."
+        }
+      ],
+      "limitations": "المشتركون والمواقع والصفحات ليست قيمة سوق أو حصة سوقية."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "ارتفع ARR المعلن من 500 ألف دولار في أكتوبر 2021 إلى مليون دولار في يونيو 2022، أي تضاعف خلال نحو ثمانية أشهر. ارتفع عدد المشتركين من أكثر من 7 آلاف في 2022 إلى نحو 14 ألفًا في نوفمبر 2024 ثم أكثر من 19 ألفًا في 2026، أي نمو تراكمي لا يقل عن 35.7% من نوفمبر 2024 إلى 2026. وفي فبراير ومارس وأبريل 2026 أضافت 652 و953 و1,156 مشتركًا مدفوعًا جديدًا على الترتيب، مع بقاء Churn مستقرًا بصورة عامة وفق الشركة.",
+      "verification_status": "verified_historical_growth",
+      "confidence": "medium_high",
+      "claim_type": "arr_subscriber_and_new_customer_growth_milestones",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تسمح المصادر بقياس تضاعف ARR تاريخيًا ونمو المشتركين، دون حساب إيراد حالي.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-15",
+        "SRC-14",
+        "SRC-01",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-15",
+          "title": "Bootstrapping Plausible to $500K ARR",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_revenue_history",
+          "url": "https://plausible.io/blog/bootstrapping-saas",
+          "evidence_type": "direct",
+          "source_locator": "Bootstrapping post",
+          "supports": "500K ARR and 4,802 customers in 2021.",
+          "published_on": "2021-10-25"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "How We Built a $1M ARR Open Source SaaS",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_revenue_history",
+          "url": "https://plausible.io/blog/open-source-saas",
+          "evidence_type": "direct",
+          "source_locator": "ARR milestone",
+          "supports": "1M ARR and 7K subscribers in 2022.",
+          "published_on": "2022-06-22"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Plausible Analytics",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_company_page",
+          "url": "https://plausible.io/about",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "19K subscribers in 2026."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "Homepage Changes and 2026 Subscriber Growth",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_growth_experiment",
+          "url": "https://plausible.io/blog/homepage-edits-conversion-lift",
+          "evidence_type": "direct",
+          "source_locator": "Growth experiment",
+          "supports": "2026 monthly new paying subscribers.",
+          "published_on": "2026-05-12"
+        }
+      ],
+      "limitations": "لا تتوفر MRR أو Churn أو قاعدة شهرية كاملة تسمح بحساب CAGR مالي حديث.",
+      "calculation": {
+        "arr_2021_10_usd": 500000,
+        "arr_2022_06_usd": 1000000,
+        "arr_growth_percent_over_approximately_8_months": 100,
+        "subscribers_2022": 7000,
+        "subscribers_2024_11_approx": 14000,
+        "subscribers_2026": 19000,
+        "minimum_growth_from_2024_11_to_2026_percent": 35.71,
+        "new_paying_customers_2026_02": 652,
+        "new_paying_customers_2026_03": 953,
+        "new_paying_customers_2026_04": 1156
+      }
+    },
+    "$.financials.initial_investment": {
+      "field_value": "رأس المال الشخصي الأول وتكلفة الأشهر الأولى غير معلنين. بدأ Uku المشروع منفردًا، ثم موّلت الاشتراكات الرواتب والبنية والتوسع. لم تجمع Plausible أي جولة خارجية أو دينًا معلنًا، وتؤكد في 2026 أنها لم تقبل دولارًا واحدًا من المستثمرين.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "founder_capital_undisclosed_zero_external_funding",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت الشركة عدم جمع أي استثمار، بينما لا تنشر رأس المال الشخصي.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-13",
+        "SRC-01",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "Why Plausible Says No to Investors",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_funding_statement",
+          "url": "https://plausible.io/blog/customers-not-investors",
+          "evidence_type": "direct",
+          "source_locator": "Funding statement",
+          "supports": "Never raised a dollar.",
+          "published_on": "2026-01-15"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Plausible Analytics",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_company_page",
+          "url": "https://plausible.io/about",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "Self-funded and profitable."
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Launching Plausible",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_launch_history",
+          "url": "https://plausible.io/blog/launching-plausible",
+          "evidence_type": "direct",
+          "source_locator": "Launch history",
+          "supports": "Early launch and pricing.",
+          "published_on": "2019-04-29"
+        }
+      ],
+      "calculation": {
+        "outside_equity_funding_usd": 0,
+        "outside_debt_disclosed_usd": 0,
+        "founder_initial_capital": "not_publicly_disclosed",
+        "current_primary_funding_source": "subscriber fees"
+      }
+    },
+    "$.financials.valuation": {
+      "field_value": "غير معلن وغير قابل للاشتقاق. Plausible شركة خاصة ممولة ذاتيًا ولا توجد جولة أسهم أو استحواذ أو طرح عام يحدد تقييمًا. الربحية وعدد المشتركين وARR التاريخي لا تكفي لحساب قيمة الشركة دون صفقة أو مضاعف متفق عليه.",
+      "verification_status": "verified_as_not_publicly_valued",
+      "confidence": "high",
+      "claim_type": "private_bootstrapped_company_without_transaction_valuation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا توجد جولة أو بيع أو طرح يمنح تقييمًا رقميًا.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-13",
+        "SRC-01",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "Why Plausible Says No to Investors",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_funding_statement",
+          "url": "https://plausible.io/blog/customers-not-investors",
+          "evidence_type": "direct",
+          "source_locator": "Funding statement",
+          "supports": "No investors and no sale plan.",
+          "published_on": "2026-01-15"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Plausible Analytics",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_company_page",
+          "url": "https://plausible.io/about",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "Independent company."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Plausible Imprint",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_legal_imprint",
+          "url": "https://plausible.io/imprint",
+          "evidence_type": "direct",
+          "source_locator": "Imprint",
+          "supports": "Private Estonian entity."
+        }
+      ],
+      "limitations": "لا يجوز استخدام مضاعف SaaS مفترض لبناء تقييم دون طلب صريح ومنهجية."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "اشتراكات Starter للخدمة السحابية المدارة",
+        "اشتراكات Growth للمواقع والفرق والمشاركة واللوحات المدمجة",
+        "اشتراكات Business للميزات المتقدمة وواجهات البيانات والإسناد",
+        "عقود Enterprise بحدود ودعم وSSO وProxy وRaw Data Export مخصصة",
+        "رسوم مرتبطة بارتفاع Pageviews وCustom Events ضمن كل خطة",
+        "فروقات الفوترة الشهرية والسنوية والترقيات التناسبية",
+        "White Label وOEM وEmbedded Analytics للوكالات ومنتجات SaaS",
+        "حدود API والمواقع والاحتفاظ المخصصة ضمن العقود المؤسسية",
+        "الخدمة السحابية الرسمية هي مصدر التمويل الأساسي والمعلن",
+        "Plausible CE مجانية ولا تدفع رسوم ترخيص للشركة",
+        "التبرعات التاريخية للاستضافة الذاتية ضئيلة ولا تمثل نموذج الإيراد الأساسي",
+        "لا توجد إيرادات من الإعلانات أو بيع البيانات أو Data Brokerage"
+      ],
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "cloud_subscription_usage_tiers_enterprise_and_white_label_revenue",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت الأسعار والوثائق قنوات الاشتراك، وتثبت CE غياب رسوم الترخيص للاستضافة الذاتية.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-19",
+        "SRC-04",
+        "SRC-22"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Plausible Pricing",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_pricing_page",
+          "url": "https://plausible.io/",
+          "evidence_type": "direct",
+          "source_locator": "Pricing",
+          "supports": "Plan prices."
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Plausible Subscription Plans",
+          "publisher": "Plausible Docs",
+          "source_type": "official_billing_documentation",
+          "url": "https://plausible.io/docs/subscription-plans",
+          "evidence_type": "direct",
+          "source_locator": "Plans",
+          "supports": "Usage tiers and Enterprise.",
+          "published_on": "2026-06-23"
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "White Label Web Analytics",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_white_label_product",
+          "url": "https://plausible.io/white-label-web-analytics",
+          "evidence_type": "direct",
+          "source_locator": "Product",
+          "supports": "White label and embedded."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Introducing Plausible Community Edition",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_open_source_strategy",
+          "url": "https://plausible.io/blog/community-edition",
+          "evidence_type": "direct",
+          "source_locator": "CE announcement",
+          "supports": "CE and historical donations.",
+          "published_on": "2024-02-23"
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Plausible Contact and Billing FAQ",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_billing_faq",
+          "url": "https://plausible.io/contact",
+          "evidence_type": "direct",
+          "source_locator": "FAQ",
+          "supports": "No free cloud and subscriber funding."
+        }
+      ],
+      "limitations": "لا تنشر الشركة نسبة العملاء أو الإيراد في كل خطة أو عقد."
+    },
+    "$.tools": {
+      "field_value": [
+        "Plausible Analytics Cloud كخدمة مدارة",
+        "Plausible Community Edition للاستضافة الذاتية تحت AGPLv3",
+        "لوحة واحدة للزوار والزيارات وPageviews وBounce Rate وVisit Duration",
+        "تقارير المصادر وUTM والحملات والصفحات والدول والمدن والأجهزة والمتصفحات",
+        "Goals وCustom Events",
+        "تتبع الروابط الخارجية والتنزيلات والنماذج وصفحات 404",
+        "Saved Segments وShared Segments",
+        "Funnels وUser Journeys",
+        "Ecommerce Revenue Attribution",
+        "Custom Properties",
+        "Realtime Dashboard",
+        "Google Analytics Import",
+        "Google Search Console Integration",
+        "CSV Export",
+        "Stats API",
+        "Sites API للمؤسسات",
+        "Looker Studio Connector",
+        "Scheduled Raw Event Exports",
+        "Embedded Dashboards",
+        "Shared Links مع حماية أو تحديد Segment",
+        "White Label وOEM Analytics",
+        "SSO للمؤسسات",
+        "Managed Proxy لتقليل الحظر وتحسين جمع البيانات",
+        "Email وSlack Reports",
+        "WordPress Plugin",
+        "WooCommerce Integration",
+        "إرشادات تثبيت Shopify وWebflow وSquarespace وWix وNext.js وGhost وHugo",
+        "30-day Free Trial دون بطاقة",
+        "Starter وGrowth وBusiness وEnterprise",
+        "فوترة حسب Pageviews وCustom Events",
+        "معرف يومي متغير دون Cookies أو Persistent Identifiers",
+        "معالجة IP وUser-Agent مؤقتًا ثم عدم تخزينهما خامًا",
+        "استضافة بيانات الزوار داخل الاتحاد الأوروبي",
+        "Hetzner للبنية الأساسية في ألمانيا",
+        "UpCloud لقواعد البيانات وتخزين Data Exports",
+        "Bunny للشبكة وCDN وDNS وحماية DDoS",
+        "Elixir وPhoenix للـBackend",
+        "PostgreSQL لبيانات التطبيق العامة",
+        "ClickHouse لبيانات التحليلات",
+        "React وTailwind CSS للواجهة",
+        "Docker Compose لتشغيل Community Edition",
+        "GitHub Roadmap وIssue Tracker وإصدارات مفتوحة",
+        "إصدارات Cloud متكررة وإصدارات CE طويلة الأجل مرتين سنويًا",
+        "DPA وسياسات بيانات وأمن وامتثال منشورة",
+        "Paddle للدفع وPostmark للبريد التشغيلي",
+        "إصدار CE 3.2.1 منشور في مايو 2026"
+      ],
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "official_analytics_privacy_integration_enterprise_open_source_and_technical_stack_capabilities",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "استُبدلت القائمة القديمة المحدودة بقدرات المنتج والبنية الحالية الموثقة حتى 2026.",
+      "source_count": 8,
+      "source_ids": [
+        "SRC-03",
+        "SRC-20",
+        "SRC-21",
+        "SRC-06",
+        "SRC-08",
+        "SRC-11",
+        "SRC-19",
+        "SRC-24"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-03",
+          "title": "Plausible Subscription Plans",
+          "publisher": "Plausible Docs",
+          "source_type": "official_billing_documentation",
+          "url": "https://plausible.io/docs/subscription-plans",
+          "evidence_type": "direct",
+          "source_locator": "Docs",
+          "supports": "Plans and enterprise features.",
+          "published_on": "2026-06-23"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Plausible Documentation",
+          "publisher": "Plausible Docs",
+          "source_type": "official_documentation_index",
+          "url": "https://plausible.io/docs",
+          "evidence_type": "direct",
+          "source_locator": "Docs index",
+          "supports": "Integrations.",
+          "published_on": "2026-06-12"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Plausible Dashboard Overview",
+          "publisher": "Plausible Docs",
+          "source_type": "official_product_documentation",
+          "url": "https://plausible.io/docs/guided-tour",
+          "evidence_type": "direct",
+          "source_locator": "Tour",
+          "supports": "Dashboard.",
+          "published_on": "2026-06"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Plausible Analytics GitHub Repository",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_source_repository",
+          "url": "https://github.com/plausible/analytics",
+          "evidence_type": "direct",
+          "source_locator": "GitHub",
+          "supports": "Technology stack.",
+          "published_on": "2026-05"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Plausible Data Policy",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_data_policy",
+          "url": "https://plausible.io/data-policy",
+          "evidence_type": "direct",
+          "source_locator": "Data Policy",
+          "supports": "Privacy mechanism.",
+          "published_on": "2026-03"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "EU-Hosted Web Analytics",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_infrastructure_page",
+          "url": "https://plausible.io/eu-hosted-web-analytics",
+          "evidence_type": "direct",
+          "source_locator": "Hosting",
+          "supports": "EU infrastructure."
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "White Label Web Analytics",
+          "publisher": "Plausible Analytics",
+          "source_type": "official_white_label_product",
+          "url": "https://plausible.io/white-label-web-analytics",
+          "evidence_type": "direct",
+          "source_locator": "Product",
+          "supports": "White label."
+        },
+        {
+          "source_id": "SRC-24",
+          "title": "Plausible Analytics Releases",
+          "publisher": "Plausible Analytics / GitHub",
+          "source_type": "official_release_history",
+          "url": "https://github.com/plausible/analytics/releases",
+          "evidence_type": "direct",
+          "source_locator": "Releases",
+          "supports": "Current CE release.",
+          "published_on": "2026-05-15"
+        }
+      ],
+      "limitations": "القائمة لا تمثل كل خدمة تشغيلية داخلية أو كل Integration خارجي."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "About Plausible Analytics",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_company_page",
+      "url": "https://plausible.io/about",
+      "supports": [
+        "19 ألف+ مشترك مدفوع",
+        "فريق من 10 أشخاص",
+        "القصة والمؤسسون",
+        "مليون دولار ARR في 2022",
+        "الربحية والتمويل الذاتي"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Plausible Pricing",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_pricing_page",
+      "url": "https://plausible.io/",
+      "supports": [
+        "Starter وGrowth وBusiness",
+        "أسعار البداية 9 و14 و19 دولارًا",
+        "ميزات الخطط",
+        "Enterprise"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Plausible Subscription Plans",
+      "publisher": "Plausible Docs",
+      "source_type": "official_billing_documentation",
+      "published_on": "2026-06-23",
+      "url": "https://plausible.io/docs/subscription-plans",
+      "supports": [
+        "الفوترة حسب Pageviews وCustom Events",
+        "الخطط والفرق والمواقع",
+        "Enterprise limits",
+        "الترقية والتخفيض"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Introducing Plausible Community Edition",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_open_source_strategy",
+      "published_on": "2024-02-23",
+      "url": "https://plausible.io/blog/community-edition",
+      "supports": [
+        "Plausible CE",
+        "AGPL",
+        "12 ألف+ مشترك في 2024",
+        "8 أشخاص وقتها",
+        "300 دولار تبرعات شهرية تاريخيًا",
+        "الفرق بين الميزات التجارية وCE"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Self-Hosted Plausible Analytics",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_self_hosting_page",
+      "url": "https://plausible.io/self-hosted-web-analytics",
+      "supports": [
+        "Cloud وCE",
+        "الدعم والبنية والتحديثات",
+        "تمويل التطوير من Cloud",
+        "إصدارات CE مرتين سنويًا"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Plausible Analytics GitHub Repository",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_source_repository",
+      "published_on": "2026-05",
+      "url": "https://github.com/plausible/analytics",
+      "supports": [
+        "Elixir وPhoenix",
+        "PostgreSQL وClickHouse",
+        "React وTailwind CSS",
+        "Cloud وCE",
+        "الترخيص والميزات"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Plausible GitHub Organization",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_open_source_organization",
+      "url": "https://github.com/plausible",
+      "supports": [
+        "المستودعات الرسمية",
+        "WordPress",
+        "ClickHouse libraries",
+        "وصف أقل من 1KB التاريخي"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Plausible Data Policy",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_data_policy",
+      "published_on": "2026-03",
+      "url": "https://plausible.io/data-policy",
+      "supports": [
+        "البيانات المجموعة",
+        "المعرف اليومي",
+        "عدم تخزين IP وUser-Agent",
+        "عدم استخدام Cookies",
+        "GDPR وCCPA وPECR"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Plausible Privacy Policy",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_privacy_policy",
+      "published_on": "2026-05",
+      "url": "https://plausible.io/privacy",
+      "supports": [
+        "Plausible Insights OÜ",
+        "Cookie تسجيل دخول ضروري",
+        "Subprocessors",
+        "بيانات الحساب والاحتفاظ"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Plausible Security and Compliance",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_security_and_compliance_page",
+      "published_on": "2026-05-29",
+      "url": "https://plausible.io/compliance",
+      "supports": [
+        "DPA",
+        "المراجعة القانونية",
+        "عدم التتبع الفردي",
+        "الاستضافة الأوروبية",
+        "وثائق الأمن"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "EU-Hosted Web Analytics",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_infrastructure_page",
+      "url": "https://plausible.io/eu-hosted-web-analytics",
+      "supports": [
+        "الاستضافة والمعالجة في الاتحاد الأوروبي",
+        "البنية الأوروبية",
+        "وثائق المشتريات والامتثال"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Plausible Imprint",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_legal_imprint",
+      "url": "https://plausible.io/imprint",
+      "supports": [
+        "Plausible Insights OÜ",
+        "عنوان تارتو",
+        "رقم التسجيل والضريبة",
+        "Uku Täht"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Why Plausible Says No to Investors",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_funding_statement",
+      "published_on": "2026-01-15",
+      "url": "https://plausible.io/blog/customers-not-investors",
+      "supports": [
+        "عدم جمع تمويل",
+        "التمويل من المشتركين",
+        "الربحية المستدامة",
+        "استراتيجية الفريق الصغير"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "How We Built a $1M ARR Open Source SaaS",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_revenue_history",
+      "published_on": "2022-06-22",
+      "url": "https://plausible.io/blog/open-source-saas",
+      "supports": [
+        "مليون دولار ARR",
+        "7 آلاف+ مشترك",
+        "50 ألف موقع",
+        "مليار Pageview شهريًا",
+        "خط زمني للإيراد"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Bootstrapping Plausible to $500K ARR",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_revenue_history",
+      "published_on": "2021-10-25",
+      "url": "https://plausible.io/blog/bootstrapping-saas",
+      "supports": [
+        "500 ألف دولار ARR",
+        "4,802 عميل",
+        "النمو العضوي",
+        "عدم الإعلانات المدفوعة"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "Homepage Changes and 2026 Subscriber Growth",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_growth_experiment",
+      "published_on": "2026-05-12",
+      "url": "https://plausible.io/blog/homepage-edits-conversion-lift",
+      "supports": [
+        "652 مشتركًا جديدًا في فبراير",
+        "953 في مارس",
+        "1,156 في أبريل",
+        "أفضل أشهر تاريخية",
+        "استقرار Churn"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Launching Plausible",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_launch_history",
+      "published_on": "2019-04-29",
+      "url": "https://plausible.io/blog/launching-plausible",
+      "supports": [
+        "النسخة التجريبية",
+        "بدء البيع",
+        "الأسعار الأولى",
+        "60 مستخدمًا تجريبيًا"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "How Much JavaScript Does Google Analytics Add?",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_script_size_tool",
+      "url": "https://plausible.io/google-analytics-script-size",
+      "supports": [
+        "Plausible 2.5KB مضغوط",
+        "GA4 135KB مضغوط",
+        "مقارنة حجم السكربت"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "White Label Web Analytics",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_white_label_product",
+      "url": "https://plausible.io/white-label-web-analytics",
+      "supports": [
+        "White Label",
+        "Embedded Analytics",
+        "وكالات وSaaS",
+        "19 ألف مشترك"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "Plausible Documentation",
+      "publisher": "Plausible Docs",
+      "source_type": "official_documentation_index",
+      "published_on": "2026-06-12",
+      "url": "https://plausible.io/docs",
+      "supports": [
+        "19 ألف+ فريق",
+        "التثبيت والتكاملات",
+        "GA Import وSearch Console",
+        "Live Demo"
+      ]
+    },
+    {
+      "id": "SRC-21",
+      "title": "Plausible Dashboard Overview",
+      "publisher": "Plausible Docs",
+      "source_type": "official_product_documentation",
+      "published_on": "2026-06",
+      "url": "https://plausible.io/docs/guided-tour",
+      "supports": [
+        "الزوار والزيارات والصفحات",
+        "Bounce Rate وVisit Duration",
+        "تقارير اللوحة",
+        "Live Demo"
+      ]
+    },
+    {
+      "id": "SRC-22",
+      "title": "Plausible Contact and Billing FAQ",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_billing_faq",
+      "url": "https://plausible.io/contact",
+      "supports": [
+        "لا توجد خطة Cloud مجانية",
+        "التجربة المجانية",
+        "Overages",
+        "تمويل الشركة من الاشتراكات"
+      ]
+    },
+    {
+      "id": "SRC-23",
+      "title": "Plausible Terms of Service",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_terms",
+      "published_on": "2026-03",
+      "url": "https://plausible.io/terms",
+      "supports": [
+        "Cloud مقابل Self-Hosted license",
+        "عدم إرسال بيانات حساسة",
+        "قانون إستونيا",
+        "حدود الخدمة والدعم"
+      ]
+    },
+    {
+      "id": "SRC-24",
+      "title": "Plausible Analytics Releases",
+      "publisher": "Plausible Analytics / GitHub",
+      "source_type": "official_release_history",
+      "published_on": "2026-05-15",
+      "url": "https://github.com/plausible/analytics/releases",
+      "supports": [
+        "إصدار 3.2.1",
+        "تحديثات CE",
+        "ClickHouse وميزات Segments"
+      ]
+    },
+    {
+      "id": "SRC-25",
+      "title": "How Plausible Measures Its Own Startup",
+      "publisher": "Plausible Analytics",
+      "source_type": "official_open_metrics_practice",
+      "published_on": "2020-08-12",
+      "url": "https://plausible.io/blog/analytics-metrics-definitions",
+      "supports": [
+        "استخدام المنتج داخليًا",
+        "Public Stats",
+        "مقاييس التسجيل والترقية",
+        "الاستخدام داخل المنتج"
+      ]
+    },
+    {
+      "id": "SRC-26",
+      "title": "Public Dashboard Visibility",
+      "publisher": "Plausible Docs",
+      "source_type": "official_sharing_documentation",
+      "published_on": "2026-05-26",
+      "url": "https://plausible.io/docs/visibility",
+      "supports": [
+        "إتاحة لوحة الإحصاءات للعامة",
+        "Shared Links",
+        "إلغاء الإتاحة العامة"
+      ]
+    }
+  ]
 }

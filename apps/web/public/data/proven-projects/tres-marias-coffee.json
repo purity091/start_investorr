@@ -2,52 +2,1442 @@
   "id": "tres-marias-coffee",
   "slug": "tres-marias-coffee",
   "name": "تريس مارياس كوفي (Tres Marias Coffee)",
-  "headline": "قهوة مختصة بنكهة الاستدامة حصدت تمويلاً بـ 3.5 مليون درهم",
-  "category": "F&B & Sustainability / القهوة المختصة والاستدامة",
+  "headline": "من مركز دبي للقهوة إلى علامة متعددة الفئات: كيف جمعت Três Marias بين الحبوب والحليب النباتي والكبسولات وصفقة معلنة بـ3.5 ملايين درهم",
+  "category": "Specialty Coffee & FMCG / Plant-Based Beverages / D2C & B2B / القهوة المختصة والمشروبات النباتية والسلع الاستهلاكية",
   "company": {
-    "location": "دبي، الإمارات العربية المتحدة (Shark Tank Dubai)",
-    "business_model": "بيع حبوب القهوة، الكبسولات، ومشروبات القهوة الجاهزة (D2C & B2B)"
+    "location": "تعمل العلامة من دبي عبر كيان منشور باسم Três Marias Coffee Company L.L.C-FZ. تعرض صفحة الاتصال عنوانها في DMCC Coffee Center، Office 3، Jebel Ali Free Zone، دبي، بينما تصف صفحات العلامة نفسها بأنها تأسست في DMCC عام 2019. استخدمت الشركة مرافق مركز دبي للقهوة في التخزين والتحميص والتوزيع؛ ولا يعني ذلك أنها تملك كامل البنية الصناعية للمركز.",
+    "business_model": "نموذج هجين يجمع البيع المباشر للمستهلك عبر متجر إلكتروني، والبيع بالجملة للشركات، ومحفظة منتجات تشمل حبوب القهوة المحمصة والحليب النباتي المخصص للباريستا والكبسولات المتوافقة مع Nespresso ومعدات التحضير. وتذكر صفحة الشركة كذلك برامج العلامة الخاصة، وتدريب SCA، واستيراد البن الأخضر وتخزينه وتحميصه وتوزيعه. لذلك فالشركة ليست متجر كبسولات فقط، وإنما علامة FMCG وقهوة مختصة متعددة القنوات، مع اعتماد تشغيلي جزئي على بنية DMCC Coffee Centre."
   },
   "directory_snapshot": {
-    "monthly_revenue": "مئات الآلاف من الدراهم",
-    "monthly_traffic": "نمو قوي في قطاع التجزئة والمقاهي الشريكة"
+    "monthly_revenue": "لا تنشر الشركة رقمًا موثقًا للإيراد الشهري أو الإيراد السنوي الفعلي لعامي 2025 أو 2026. خلال عرض Shark Tank Dubai قالت الإدارة إنها تتوقع إنهاء 2024 عند 9 ملايين درهم و2025 عند 20 مليون درهم؛ وهما توقعان إداريان وردا في العرض، لا نتائج مالية مدققة أو مؤكدة. لذلك حُذف ادعاء «مئات الآلاف من الدراهم شهريًا» ولم يُحوَّل أي توقع إلى MRR.",
+    "monthly_traffic": "لا تنشر الشركة عدد الزيارات الشهرية للموقع أو المستخدمين النشطين أو العملاء أو حجم المعاملات. نشاط المتجر وقائمة المنتجات والمراجعات الظاهرة لا تكفي لحساب الزيارات أو المبيعات، كما أن أرقام متابعي الشبكات الاجتماعية لا تمثل مستخدمين أو عملاء. لم تُستخدم تقديرات خارجية للزيارات لسد هذا الفراغ."
   },
   "overview": {
     "problem": {
-      "text": "سوق القهوة في المنطقة ينمو بجنون، لكن كبسولات القهوة التقليدية بلاستيكية غير قابلة للتحلل وتسبب ضرراً بيئياً هائلاً. كما أن أسعار القهوة المختصة (Specialty Coffee) مرتفعة جداً وتجربة تحضيرها في المنزل معقدة.",
-      "impact": "تلوث بيئي ضخم من كبسولات القهوة، وابتعاد شريحة كبيرة من المستهلكين عن القهوة المختصة لتعقيدها."
+      "text": "تتعامل العلامة مع أكثر من احتكاك في تجربة القهوة: إتاحة القهوة المختصة خارج المقاهي المتخصصة، وتوفير بدائل نباتية مصممة للاستخدام مع القهوة، وإتاحة تحضير سريع عبر الكبسولات، وخدمة العملاء الأفراد والشركات ضمن سلسلة توريد تحتاج استيرادًا وتخزينًا وتحميصًا وتعبئة وتوزيعًا. النسخة الأصلية اختزلت المشكلة في ضرر الكبسولات البلاستيكية وغلاء القهوة وتعقيد التحضير، لكنها لم تقدم أدلة كمية على حجم الضرر أو أن السعر هو المشكلة المركزية للشركة.",
+      "impact": "تعدد المنتجات والقنوات يرفع متطلبات المخزون ورأس المال العامل والتنبؤ بالطلب، خصوصًا عند الجمع بين مواد خام مستوردة ومنتجات غذائية سريعة الدوران وعقود B2B ومتجر مباشر. تؤكد دراسة حالة Beehive لعام 2023 أن تحديات التدفق النقدي كانت عائقًا أمام استغلال فرصة تجارية؛ وهذا يوضح أن النمو في السلع الاستهلاكية قد يسبق تحصيل النقد ويحتاج تمويل دورة التشغيل."
     },
     "solution": {
-      "text": "علامة تجارية متكاملة تقدم القهوة المختصة بطريقة سهلة ومستدامة. الابتكار الأكبر هو (كبسولات قهوة قابلة للتحلل كلياً Compostable Capsules) تتوافق مع ماكينات نسبريسو، بالإضافة لمنتجات مبتكرة كالقهوة المثلجة الجاهزة وعصائر القهوة."
+      "text": "بنت Três Marias محفظة حول «لحظة القهوة» بدل الاعتماد على منتج واحد: حبوب محمصة، وحليب نباتي للباريستا، وكبسولات متوافقة مع Nespresso، ومعدات تحضير، وقنوات جملة وعلامة خاصة وتدريب. وتستفيد عملياتها من مرافق DMCC Coffee Centre للتخزين والمعالجة والتحميص والتعبئة واللوجستيات. تسوّق الشركة كبسولاتها بوصفها قابلة للتحلل والتحويل إلى سماد، لكن المصادر العامة التي تمت مراجعتها لا تعرض شهادة مستقلة أو شروط التحلل والسماد؛ لذلك عومل الوصف كادعاء منتج رسمي لا كحقيقة بيئية مطلقة."
     }
   },
   "market_data": {
-    "target_audience": "عشاق القهوة (Coffee Lovers)، المستهلكون المهتمون بالبيئة (Eco-conscious)، والمكاتب والفنادق (B2B).",
-    "market_size": "سوق القهوة والكبسولات المتنامي بقوة في الخليج والشرق الأوسط.",
-    "growth_rate": "جذبت الأنظار بقوة في شارك تانك لتحصل على استثمار بقيمة 3.5 مليون درهم بهدف السيطرة على سوق القهوة المستدامة."
+    "target_audience": "المستهلكون الباحثون عن قهوة مختصة للاستخدام المنزلي، ومستخدمو بدائل الحليب النباتي، ومستخدمو أجهزة Nespresso المتوافقة، إضافة إلى المقاهي وتجار التجزئة والعملاء الراغبين في التوريد بالجملة أو برامج العلامة الخاصة، والمتدربين في مهارات القهوة. لا توجد أعداد منشورة لكل شريحة أو توزيع موثق بين D2C وB2B.",
+    "market_size": "كسياق سوقي لا كتقدير رسمي لسوق الشركة، ذكر DMCC في 2025 أن تجارة البن العالمية تتجاوز 26 مليار دولار وأن إيرادات قطاع القهوة عالميًا تتجاوز 200 مليار دولار، وقدّر سوق القهوة في الشرق الأوسط وشمال أفريقيا بنحو 11.5 مليار دولار. هذه الأرقام تشمل فئات ومناطق أوسع بكثير من السوق القابل للخدمة لدى Três Marias، فلا يجوز تقديمها كـTAM مباشر للشركة.",
+    "growth_rate": "لا تتوفر سلسلة عامة موثقة للإيرادات الفعلية أو الوحدات المباعة أو العملاء تسمح بحساب معدل نمو الشركة. توقع العرض التلفزيوني 9 ملايين درهم في 2024 و20 مليونًا في 2025، لكن غياب النتائج الفعلية يمنع استخدامهما لحساب نمو محقق. وبصورة منفصلة، تعامل DMCC Coffee Centre مع أكثر من 8,200 طن متري في 2025 وضم أكثر من 300 عضو نشط؛ وهذه مؤشرات على نمو المنظومة التي تعمل الشركة داخلها وليست نموًا خاصًا بالشركة."
   },
   "financials": {
-    "initial_investment": "تمويل استراتيجي ضخم من الشاركس للتوسع في منافذ البيع ودخول أسواق السوبر ماركت والفنادق الكبرى.",
-    "valuation": "عشرات الملايين من الدراهم",
+    "initial_investment": "لا يوجد إفصاح عام موثوق عن رأس المال الأولي الذي موّل تأسيس الشركة. تكشف دراسة Beehive عن Business Funding في 2023 دون إعلان المبلغ. وفي Shark Tank Dubai أُعلنت صفقة بقيمة 3.5 ملايين درهم مقابل 15% من الشركة؛ وصفقة البرنامج استثمار أسهم معلن ضمن الحلقة وليست «تمويلًا أوليًا» بالضرورة. لم يُعثر على إفصاح عام يثبت اكتمال الإغلاق القانوني بعد الفحص النافي للجهالة، لذلك حُفظت الصياغة كصفقة معلنة تلفزيونيًا.",
+    "valuation": "طلبت المؤسِّسة 3.5 ملايين درهم مقابل 10%، بما يعكس تقييمًا ضمنيًا بعد الاستثمار قدره 35 مليون درهم. الصفقة المعلنة المقبولة كانت 3.5 ملايين درهم مقابل 15%، ما يعكس حسابيًا نحو 23.33 مليون درهم بعد الاستثمار ونحو 19.83 مليون درهم قبل الاستثمار. هذه تقييمات ضمنية للعرض التلفزيوني، وليست تقييمًا حاليًا مؤكدًا في أغسطس 2026، ولا دليل عام على جولة لاحقة تعيد تسعير الشركة.",
     "revenue_streams": [
-      "مبيعات التجزئة للمستهلكين المباشرين عبر المنصة الإلكترونية (D2C)",
-      "عقود توريد القهوة والكبسولات المستدامة للفنادق والمقاهي (B2B)",
-      "مبيعات الأغذية والمشروبات الجاهزة في منافذ السوبر ماركت"
+      "مبيعات مباشرة للمستهلك عبر المتجر الإلكتروني لحبوب القهوة والحليب النباتي والكبسولات ومعدات التحضير.",
+      "مبيعات الجملة والتوريد التجاري لعملاء B2B.",
+      "برامج القهوة ذات العلامة الخاصة بحسب صفحة الشركة.",
+      "خدمات مرتبطة باستيراد البن الأخضر وتخزينه وتحميصه وتوزيعه وفق وصف الشركة.",
+      "برامج تدريب في مهارات القهوة مع الإشارة إلى SCA؛ مع ملاحظة أن مجموعة الدورات الظاهرة على المتجر كانت فارغة عند المراجعة، لذلك لا يمكن إثبات حجم إيرادها الحالي."
     ]
   },
   "lessons": [
     {
-      "title": "دمج الاستدامة في المنتج الأساسي (Built-in Sustainability)",
-      "description": "لم تستخدم (Tres Marias) الاستدامة كمجرد شعار تسويقي، بل صممت منتجها الأساسي (الكبسولات القابلة للتحلل) ليكون هو الحل للمشكلة البيئية. هذا جعل المنتج مفضلاً لدى الفنادق الكبرى التي تبحث عن تقليل بصمتها الكربونية."
+      "title": "ابنِ محفظة حول المناسبة الاستهلاكية لا حول SKU واحد",
+      "description": "وسّعت Três Marias عرضها من الحبوب إلى الحليب النباتي والكبسولات والمعدات. المنطق الأقوى هنا هو امتلاك نسبة أكبر من «لحظة تحضير القهوة» عبر منتجات متكاملة، ما يفتح فرص البيع المتقاطع ويقلل اعتماد العلامة على فئة واحدة؛ لكنه يزيد في المقابل تعقيد المخزون والجودة."
     },
     {
-      "title": "تبسيط المنتجات المعقدة (Democratizing Specialty Coffee)",
-      "description": "القهوة المختصة غالباً ما ترتبط بأدوات معقدة ووقت طويل للتحضير. بتعبئتها في (كبسولات) سهلة الاستخدام، أتاحت الشركة للجميع الاستمتاع بجودة القهوة المختصة بضغطة زر واحدة."
+      "title": "استأجر البنية الثقيلة قبل أن تملكها",
+      "description": "العمل من DMCC Coffee Centre أتاح الوصول إلى التخزين والتحميص والتعبئة واللوجستيات والتدريب دون بناء منشأة كاملة من الصفر. هذا النموذج يقلل الإنفاق الرأسمالي المبكر ويحوّل جزءًا من التكلفة إلى استخدام مرن، مع بقاء الاعتماد التشغيلي على طرف خارجي مخاطرة يجب إدارتها."
+    },
+    {
+      "title": "افصل بين عرض الاستثمار وإغلاق الصفقة",
+      "description": "الظهور التلفزيوني صنع دليل طلب استثماري قوي، لكن الرقم المعلن لا يصبح تلقائيًا نقدًا داخل الحساب البنكي. يجب الفصل بين مبلغ الطلب، ونسبة الملكية، والتقييم الضمني، والصفقة المعلنة، والإغلاق القانوني بعد الفحص؛ وهي مراحل خلطتها النسخة الأصلية في رقم واحد."
+    },
+    {
+      "title": "نمو السلع الاستهلاكية يحتاج رأس مال عامل قبل أن يظهر كربح",
+      "description": "تعدد المنتجات وقنوات الجملة والتجزئة يعني دفع تكاليف المواد والتصنيع والمخزون قبل التحصيل. دراسة Beehive تكشف أن التدفق النقدي كان تحديًا رغم وجود نمو وفرصة سوقية؛ فالطلب لا يساوي سيولة، والإيراد لا يساوي ربحًا، والتمويل التشغيلي لا يساوي تقييمًا."
+    },
+    {
+      "title": "حوّل الاستدامة من وصف تسويقي إلى مواصفة قابلة للإثبات",
+      "description": "وصف الكبسولات بأنها قابلة للتحلل والتحويل إلى سماد يميز المنتج، لكن قوة الادعاء تعتمد على المادة والمعيار وبيئة المعالجة والمدة والشهادة. العلامات التي تنشر هذه التفاصيل تقلل مخاطر الغموض الأخضر وتمنح عملاء B2B أساسًا أفضل لاتخاذ قرار الشراء."
     }
   ],
   "tools": [
-    "Shopify",
-    "Compostable Materials Tech",
-    "FMCG Distribution Channels"
+    "Shopify لتشغيل المتجر الإلكتروني، كما يظهر في تذييل الموقع الرسمي.",
+    "مرافق DMCC Coffee Centre للتخزين المكيّف والمعالجة والتحميص والتعبئة والخدمات اللوجستية.",
+    "منظومة منتجات حليب نباتي مخصص للباريستا تشمل الشوفان وجوز الهند واللوز والصويا.",
+    "كبسولات قهوة متوافقة مع Nespresso تسوّقها الشركة بوصفها قابلة للتحلل والتحويل إلى سماد.",
+    "قنوات Wholesale وPrivate Label لخدمة العملاء التجاريين.",
+    "مرافق ومناهج تدريب مرتبطة بمهارات القهوة وSCA وفق صفحات الشركة ومركز DMCC."
+  ],
+  "verification": {
+    "status": "verified_from_official_company_dmcc_primary_participant_and_limited_reputable_secondary_sources_with_field_level_evidence",
+    "verified_on": "2026-08-03",
+    "source_policy": "أُعطيت الأولوية لموقع Três Marias القانوني والتجاري وصفحات المنتجات، ثم DMCC بوصفه جهة حكومية ومشغل مركز القهوة، ثم منشورات المؤسِّسة والمشاركة المباشرة في Shark Tank. استُخدمت Emirates 24|7 وBeehive وKhaleej Times بصورة محدودة لتأكيد سياق الصفقة والتمويل التشغيلي وخلفية التشغيل. لم تُستخدم قواعد بيانات تقدير الإيرادات أو الزيارات.",
+    "important_notes": [
+      "لا تنشر الشركة MRR أو إيرادًا سنويًا فعليًا حديثًا؛ أرقام 9 و20 مليون درهم في العرض كانت توقعات إدارية وليست نتائج مؤكدة.",
+      "3.5 ملايين درهم مبلغ صفقة استثمار أسهم معلنة في Shark Tank Dubai، وليس إيرادًا ولا حجم معاملات.",
+      "الطلب عند 10% يعكس 35 مليون درهم بعد الاستثمار، بينما الصفقة المعلنة عند 15% تعكس نحو 23.33 مليون درهم بعد الاستثمار و19.83 مليونًا قبل الاستثمار.",
+      "لم يظهر إفصاح عام يثبت الإغلاق القانوني النهائي لصفقة البرنامج؛ لذلك لم تُعامل كجولة مكتملة دون تحفظ.",
+      "تمويل Beehive موثق لكن قيمته غير معلنة، ولا يجوز جمعه مع صفقة الأسهم أو وصفه كرأس مال تأسيسي.",
+      "لا توجد أرقام رسمية للزيارات الشهرية أو المستخدمين أو العملاء أو حجم المعاملات.",
+      "أرقام سوق DMCC وسعة المركز وأطنانه تخص منظومة القهوة أو السوق الأوسع، لا إيرادات Três Marias ولا حجم عملياتها.",
+      "وصف الكبسولات بأنها biodegradable وcompostable صادر عن الشركة؛ لم تُعثر على شهادة مستقلة تحدد المعيار أو ظروف التحلل.",
+      "الموقع يعرض Shopify في التذييل، لكن بقية البنية التقنية الداخلية غير مفصح عنها.",
+      "لا تنطبق مراجعة SEC بصورة عملية على هذا الكيان الإماراتي الخاص، ولم يُعثر على ملف SEC عام يخص الشركة.",
+      "حُذفت ادعاءات «مئات الآلاف شهريًا» و«عشرات الملايين تقييمًا حاليًا» و«تمويل استراتيجي ضخم» بصيغتها المطلقة لغياب الإفصاح الكافي.",
+      "قائمة المنتجات والمخزون والأسعار ديناميكية؛ استُخدمت لإثبات الفئات وقنوات البيع لا لاستخراج مبيعات أو حصة سوقية."
+    ],
+    "programmatic_validation": {
+      "status": "passed",
+      "validated_on": "2026-08-03",
+      "validator": "Python json + custom Professional V2 integrity checks",
+      "checks_passed": 42,
+      "checks_failed": 0,
+      "checks": [
+        {
+          "name": "valid_json_utf8",
+          "passed": true,
+          "details": "تم إنشاء وتحليل كائن JSON صالح بترميز UTF-8."
+        },
+        {
+          "name": "base_structure_preserved",
+          "passed": true,
+          "details": "جميع مفاتيح البنية الأساسية للملف الأصلي موجودة."
+        },
+        {
+          "name": "professional_v2_sections_present",
+          "passed": true,
+          "details": "أقسام Professional V2 موجودة."
+        },
+        {
+          "name": "unique_source_ids",
+          "passed": true,
+          "details": "15 مصدرًا بمعرّفات فريدة."
+        },
+        {
+          "name": "source_count:$.company.location",
+          "passed": true,
+          "details": "source_count=3 متطابق."
+        },
+        {
+          "name": "field_value_match:$.company.location",
+          "passed": true,
+          "details": "field_value يطابق القيمة الفعلية في المسار."
+        },
+        {
+          "name": "source_count:$.company.business_model",
+          "passed": true,
+          "details": "source_count=4 متطابق."
+        },
+        {
+          "name": "field_value_match:$.company.business_model",
+          "passed": true,
+          "details": "field_value يطابق القيمة الفعلية في المسار."
+        },
+        {
+          "name": "source_count:$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "source_count=2 متطابق."
+        },
+        {
+          "name": "field_value_match:$.directory_snapshot.monthly_revenue",
+          "passed": true,
+          "details": "field_value يطابق القيمة الفعلية في المسار."
+        },
+        {
+          "name": "source_count:$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "source_count=1 متطابق."
+        },
+        {
+          "name": "field_value_match:$.directory_snapshot.monthly_traffic",
+          "passed": true,
+          "details": "field_value يطابق القيمة الفعلية في المسار."
+        },
+        {
+          "name": "source_count:$.overview.problem",
+          "passed": true,
+          "details": "source_count=4 متطابق."
+        },
+        {
+          "name": "field_value_match:$.overview.problem",
+          "passed": true,
+          "details": "field_value يطابق القيمة الفعلية في المسار."
+        },
+        {
+          "name": "source_count:$.overview.solution",
+          "passed": true,
+          "details": "source_count=5 متطابق."
+        },
+        {
+          "name": "field_value_match:$.overview.solution",
+          "passed": true,
+          "details": "field_value يطابق القيمة الفعلية في المسار."
+        },
+        {
+          "name": "source_count:$.market_data.target_audience",
+          "passed": true,
+          "details": "source_count=4 متطابق."
+        },
+        {
+          "name": "field_value_match:$.market_data.target_audience",
+          "passed": true,
+          "details": "field_value يطابق القيمة الفعلية في المسار."
+        },
+        {
+          "name": "source_count:$.market_data.market_size",
+          "passed": true,
+          "details": "source_count=2 متطابق."
+        },
+        {
+          "name": "field_value_match:$.market_data.market_size",
+          "passed": true,
+          "details": "field_value يطابق القيمة الفعلية في المسار."
+        },
+        {
+          "name": "source_count:$.market_data.growth_rate",
+          "passed": true,
+          "details": "source_count=2 متطابق."
+        },
+        {
+          "name": "field_value_match:$.market_data.growth_rate",
+          "passed": true,
+          "details": "field_value يطابق القيمة الفعلية في المسار."
+        },
+        {
+          "name": "source_count:$.financials.initial_investment",
+          "passed": true,
+          "details": "source_count=4 متطابق."
+        },
+        {
+          "name": "field_value_match:$.financials.initial_investment",
+          "passed": true,
+          "details": "field_value يطابق القيمة الفعلية في المسار."
+        },
+        {
+          "name": "source_count:$.financials.valuation",
+          "passed": true,
+          "details": "source_count=2 متطابق."
+        },
+        {
+          "name": "field_value_match:$.financials.valuation",
+          "passed": true,
+          "details": "field_value يطابق القيمة الفعلية في المسار."
+        },
+        {
+          "name": "source_count:$.financials.revenue_streams",
+          "passed": true,
+          "details": "source_count=4 متطابق."
+        },
+        {
+          "name": "field_value_match:$.financials.revenue_streams",
+          "passed": true,
+          "details": "field_value يطابق القيمة الفعلية في المسار."
+        },
+        {
+          "name": "source_count:$.tools",
+          "passed": true,
+          "details": "source_count=4 متطابق."
+        },
+        {
+          "name": "field_value_match:$.tools",
+          "passed": true,
+          "details": "field_value يطابق القيمة الفعلية في المسار."
+        },
+        {
+          "name": "source_count:$.headline",
+          "passed": true,
+          "details": "source_count=4 متطابق."
+        },
+        {
+          "name": "field_value_match:$.headline",
+          "passed": true,
+          "details": "field_value يطابق القيمة الفعلية في المسار."
+        },
+        {
+          "name": "source_count:$.lessons",
+          "passed": true,
+          "details": "source_count=7 متطابق."
+        },
+        {
+          "name": "field_value_match:$.lessons",
+          "passed": true,
+          "details": "field_value يطابق القيمة الفعلية في المسار."
+        },
+        {
+          "name": "all_evidence_source_ids_exist",
+          "passed": true,
+          "details": "كل مراجع الأدلة تشير إلى مصادر معرفة."
+        },
+        {
+          "name": "source_urls_valid",
+          "passed": true,
+          "details": "كل روابط المصادر تستخدم HTTP/HTTPS ولها نطاق."
+        },
+        {
+          "name": "required_evidence_paths_covered",
+          "passed": true,
+          "details": "تمت تغطية 15 مسارًا أساسيًا."
+        },
+        {
+          "name": "metric_hygiene_notes_present",
+          "passed": true,
+          "details": "توجد تنبيهات تفصل الإيراد والتقييم والمعاملات والمستخدمين والزيارات."
+        },
+        {
+          "name": "no_nan_or_infinity",
+          "passed": true,
+          "details": "لا توجد قيم JSON غير قياسية."
+        },
+        {
+          "name": "unsupported_monthly_revenue_removed",
+          "passed": true,
+          "details": "أزيل تقدير «مئات الآلاف من الدراهم» كقيمة إيراد شهرية، ولم يُستخدم إلا لشرح سبب الحذف."
+        },
+        {
+          "name": "source_metadata_cross_reference_consistency",
+          "passed": true,
+          "details": "عناوين وروابط وناشرو المصادر متطابقون بين sources وsource_references."
+        },
+        {
+          "name": "nonempty_output_file",
+          "passed": true,
+          "details": "حجم الملف النهائي 95,976 بايت."
+        }
+      ]
+    }
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط كل حقل بقيمته وحالة التحقق ودرجة الثقة والمصادر وما يثبته كل مصدر والقيود التي تمنع الخلط بين الإيراد والتقييم والاستثمار وحجم السوق والمستخدمين والزيارات.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر أولي أو رسمي.",
+      "verified_with_current_catalog_and_company_claim_limits": "نموذج العمل مدعوم بكتالوج حالي وتصريحات الشركة مع حدود على النشاط غير المفصح عنه.",
+      "verified_as_not_publicly_disclosed": "المقياس غير متاح علنًا بصورة موثوقة، ولذلك لم يُملأ بتقدير غير رسمي.",
+      "verified_with_analytical_inference": "الحقائق الأساسية موثقة والتحليل الناتج معلن بوضوح.",
+      "verified_with_company_claim_limits": "الادعاء صادر عن الشركة لكن لا توجد شهادة مستقلة كافية لبعض تفاصيله.",
+      "verified_with_segment_inference": "الشرائح مستنتجة بصورة محدودة من المنتجات والقنوات الموثقة.",
+      "verified_market_context_not_company_tam": "الأرقام موثقة كسياق سوقي ولا تمثل TAM أو إيراد الشركة.",
+      "verified_with_metric_definition_limits": "المقاييس صحيحة لكن اختلاف تعريفاتها يمنع حساب معدل موحد.",
+      "verified_announced_financing_with_closing_limit": "التمويل أو الصفقة معلنان، مع عدم توافر إثبات عام كافٍ للإغلاق أو الشروط النهائية.",
+      "verified_historical_calculation": "القيمة مشتقة حسابيًا من نسبة ومبلغ موثقين مع إظهار المعادلة.",
+      "verified_with_current_activity_limits": "مسارات الإيراد موثقة من النشاط الظاهر ووصف الشركة، دون إفصاح عن مساهمتها الفعلية.",
+      "verified_operational_stack_not_complete_technology_inventory": "القائمة تصف أدوات وقدرات تشغيلية ظاهرة وليست كشفًا كاملًا عن البنية التقنية.",
+      "analytical_inference": "صياغة تحليلية مبنية على حقائق موثقة وليست تصريحًا حرفيًا."
+    },
+    "confidence_scale": {
+      "high": "مصدر رسمي أو أولي مباشر مع تطابق واضح.",
+      "medium_high": "مصادر أولية مع استنتاج محدود أو مصدر موثوق لقيمة لم تُنشر في قوائم مالية.",
+      "medium": "ادعاء تسويقي أو سياق يحتاج تحققًا إضافيًا."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "تعمل العلامة من دبي عبر كيان منشور باسم Três Marias Coffee Company L.L.C-FZ. تعرض صفحة الاتصال عنوانها في DMCC Coffee Center، Office 3، Jebel Ali Free Zone، دبي، بينما تصف صفحات العلامة نفسها بأنها تأسست في DMCC عام 2019. استخدمت الشركة مرافق مركز دبي للقهوة في التخزين والتحميص والتوزيع؛ ولا يعني ذلك أنها تملك كامل البنية الصناعية للمركز.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "current_published_entity_location_and_operating_base",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت صفحة الاتصال الاسم والعنوان المنشورين، وتثبت صفحات الشركة وDMCC التأسيس والعمل من منظومة مركز دبي للقهوة.",
+      "source_ids": [
+        "SRC-04",
+        "SRC-02",
+        "SRC-07"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Contact Us",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_company_contact_page",
+          "url": "https://www.tresmariascoffee.com/pages/contact-us",
+          "evidence_type": "direct",
+          "source_locator": "Contact Us → company name and address",
+          "supports": "الاسم والعنوان المنشوران.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "About Três Marias",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_company_about_page",
+          "url": "https://www.tresmariascoffee.com/pages/about-tres-marias",
+          "evidence_type": "direct_company_statement",
+          "source_locator": "About Três Marias → establishment paragraph",
+          "supports": "التأسيس في DMCC بدبي عام 2019.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "DMCC to Expand its Coffee and Tea Centres with Target to Triple Output and Boost Dubai Trade",
+          "publisher": "Dubai Multi Commodities Centre (DMCC)",
+          "source_type": "official_government_authority_news_release",
+          "url": "https://dmcc.ae/latest-news/dmcc-expand-its-coffee-and-tea-centres-target-triple-ouput-and-boost-dubai-trade",
+          "evidence_type": "direct_third_party_primary",
+          "source_locator": "DMCC release → Maria Pavani quote and company description",
+          "supports": "تشغيل الشركة داخل DMCC Coffee Centre.",
+          "published_on": "2022-12-14",
+          "accessed_on": "2026-08-03"
+        }
+      ],
+      "limitations": "لم يُستخدم مستخرج سجل شركات عام يبيّن المساهمين أو تاريخ الترخيص؛ الموقع يخلط أحيانًا بين وصف DMCC وL.L.C-FZ، لذلك اعتمد النص القانوني المنشور دون استنتاج هيكل ملكية.",
+      "source_count": 3
+    },
+    "$.company.business_model": {
+      "field_value": "نموذج هجين يجمع البيع المباشر للمستهلك عبر متجر إلكتروني، والبيع بالجملة للشركات، ومحفظة منتجات تشمل حبوب القهوة المحمصة والحليب النباتي المخصص للباريستا والكبسولات المتوافقة مع Nespresso ومعدات التحضير. وتذكر صفحة الشركة كذلك برامج العلامة الخاصة، وتدريب SCA، واستيراد البن الأخضر وتخزينه وتحميصه وتوزيعه. لذلك فالشركة ليست متجر كبسولات فقط، وإنما علامة FMCG وقهوة مختصة متعددة القنوات، مع اعتماد تشغيلي جزئي على بنية DMCC Coffee Centre.",
+      "verification_status": "verified_with_current_catalog_and_company_claim_limits",
+      "confidence": "high",
+      "claim_type": "hybrid_d2c_b2b_multi_category_coffee_fmcg_model",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يعرض المتجر فئات المنتجات وقناة الجملة، بينما تعرض صفحة القدرات العلامة الخاصة والتدريب وسلسلة البن الأخضر.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-05",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Tres Marias Coffee Company L.L.C-FZ – Official Store",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_company_store",
+          "url": "https://www.tresmariascoffee.com/",
+          "evidence_type": "direct",
+          "source_locator": "Homepage navigation and product sections",
+          "supports": "البيع المباشر وفئات الحليب النباتي والحبوب والكبسولات والجملة وShopify.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "About Us",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_company_capabilities_page",
+          "url": "https://www.tresmariascoffee.com/pages/about-us",
+          "evidence_type": "direct_company_statement",
+          "source_locator": "About Us → capability statement",
+          "supports": "معدات التحضير والعلامة الخاصة والتدريب واستيراد البن الأخضر وتخزينه وتحميصه وتوزيعه.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Terms and Conditions",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_legal_page",
+          "url": "https://www.tresmariascoffee.com/pages/terms-and-conditions",
+          "evidence_type": "direct_legal",
+          "source_locator": "Terms → purchases and payment provisions",
+          "supports": "وجود معاملات تجارة إلكترونية ببطاقات وبالدرهم.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "DMCC Coffee Ecosystem",
+          "publisher": "Dubai Multi Commodities Centre (DMCC)",
+          "source_type": "official_government_authority_ecosystem_page",
+          "url": "https://dmcc.ae/ecosystems/coffee",
+          "evidence_type": "direct_primary_context",
+          "source_locator": "DMCC Coffee Centre facilities",
+          "supports": "البنية التشغيلية المتاحة للأعضاء.",
+          "accessed_on": "2026-08-03"
+        }
+      ],
+      "limitations": "لا تنشر الشركة مزيج الإيرادات بين D2C وB2B أو نسبة مساهمة كل فئة، وبعض الخدمات المذكورة قد تتغير بمرور الوقت.",
+      "source_count": 4
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "لا تنشر الشركة رقمًا موثقًا للإيراد الشهري أو الإيراد السنوي الفعلي لعامي 2025 أو 2026. خلال عرض Shark Tank Dubai قالت الإدارة إنها تتوقع إنهاء 2024 عند 9 ملايين درهم و2025 عند 20 مليون درهم؛ وهما توقعان إداريان وردا في العرض، لا نتائج مالية مدققة أو مؤكدة. لذلك حُذف ادعاء «مئات الآلاف من الدراهم شهريًا» ولم يُحوَّل أي توقع إلى MRR.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "medium_high",
+      "claim_type": "current_mrr_not_disclosed_with_management_forecast_context",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا تعرض المصادر الرسمية نتائج مالية حالية. يعرض نص الحلقة توقعات إدارية فقط، فتم منع تحويلها إلى إيراد فعلي أو شهري.",
+      "source_ids": [
+        "SRC-12",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-12",
+          "title": "Shark Tank Dubai pitch recap by Três Marias strategic adviser",
+          "publisher": "Fernanda Giuntini",
+          "source_type": "participant_primary_social_post_with_pitch_transcript",
+          "url": "https://www.linkedin.com/posts/fernandagiuntini_sharktankdubai-strategy-boardadvisor-activity-7308767672446410752-dBwF",
+          "evidence_type": "primary_participant_transcript",
+          "source_locator": "Pitch transcript → 2024 and 2025 projections",
+          "supports": "توقع 9 ملايين درهم في 2024 و20 مليونًا في 2025، بوصفهما توقعين.",
+          "published_on": "2025-03-21",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Shark Tank Dubai 2 Concludes with Massive Investments Supporting Entrepreneurs",
+          "publisher": "Emirates 24|7",
+          "source_type": "government_affiliated_news_report",
+          "url": "https://www.emirates247.com/lifestyle/shark-tank-dubai-2-concludes-with-massive-investments-supporting-entrepreneurs-2025-01-13-1.736152",
+          "evidence_type": "secondary_reported",
+          "source_locator": "Season investment summary",
+          "supports": "تصنيف 3.5 ملايين درهم كاستثمار في البرنامج لا كإيراد.",
+          "published_on": "2025-01-13",
+          "accessed_on": "2026-08-03"
+        }
+      ],
+      "limitations": "لا توجد قوائم مدققة أو إفصاح ضريبي عام أو تقرير سنوي للشركة؛ لذلك لا يمكن إثبات الإيراد الفعلي أو MRR أو الربحية.",
+      "source_count": 2
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "لا تنشر الشركة عدد الزيارات الشهرية للموقع أو المستخدمين النشطين أو العملاء أو حجم المعاملات. نشاط المتجر وقائمة المنتجات والمراجعات الظاهرة لا تكفي لحساب الزيارات أو المبيعات، كما أن أرقام متابعي الشبكات الاجتماعية لا تمثل مستخدمين أو عملاء. لم تُستخدم تقديرات خارجية للزيارات لسد هذا الفراغ.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "website_traffic_users_customers_and_transaction_volume_not_disclosed",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الموقع يثبت وجود متجر ومنتجات فقط ولا ينشر مقاييس زيارات أو مستخدمين أو معاملات.",
+      "source_ids": [
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Tres Marias Coffee Company L.L.C-FZ – Official Store",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_company_store",
+          "url": "https://www.tresmariascoffee.com/",
+          "evidence_type": "direct_absence_check",
+          "source_locator": "Official store pages and footer",
+          "supports": "وجود متجر نشط دون نشر زيارات شهرية أو مستخدمين أو حجم معاملات.",
+          "accessed_on": "2026-08-03"
+        }
+      ],
+      "limitations": "عدم وجود الرقم على الموقع لا يثبت أنه غير متاح داخليًا؛ بل يعني فقط أنه غير مفصح عنه علنًا في المصادر التي تمت مراجعتها.",
+      "source_count": 1
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "تتعامل العلامة مع أكثر من احتكاك في تجربة القهوة: إتاحة القهوة المختصة خارج المقاهي المتخصصة، وتوفير بدائل نباتية مصممة للاستخدام مع القهوة، وإتاحة تحضير سريع عبر الكبسولات، وخدمة العملاء الأفراد والشركات ضمن سلسلة توريد تحتاج استيرادًا وتخزينًا وتحميصًا وتعبئة وتوزيعًا. النسخة الأصلية اختزلت المشكلة في ضرر الكبسولات البلاستيكية وغلاء القهوة وتعقيد التحضير، لكنها لم تقدم أدلة كمية على حجم الضرر أو أن السعر هو المشكلة المركزية للشركة.",
+        "impact": "تعدد المنتجات والقنوات يرفع متطلبات المخزون ورأس المال العامل والتنبؤ بالطلب، خصوصًا عند الجمع بين مواد خام مستوردة ومنتجات غذائية سريعة الدوران وعقود B2B ومتجر مباشر. تؤكد دراسة حالة Beehive لعام 2023 أن تحديات التدفق النقدي كانت عائقًا أمام استغلال فرصة تجارية؛ وهذا يوضح أن النمو في السلع الاستهلاكية قد يسبق تحصيل النقد ويحتاج تمويل دورة التشغيل."
+      },
+      "verification_status": "verified_with_analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "consumer_accessibility_product_fit_and_working_capital_problem",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "مهمة الإتاحة وفئات المنتجات موثقة رسميًا، وتحدي التدفق النقدي موثق في دراسة Beehive؛ أما الربط بين تعدد القنوات وتعقيد رأس المال العامل فهو تحليل مهني.",
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-14",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "About Três Marias",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_company_about_page",
+          "url": "https://www.tresmariascoffee.com/pages/about-tres-marias",
+          "evidence_type": "direct_company_statement",
+          "source_locator": "About → mission and plant-based milk",
+          "supports": "مهمة إتاحة القهوة المختصة وتطوير بديل نباتي للباريستا.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "About Us",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_company_capabilities_page",
+          "url": "https://www.tresmariascoffee.com/pages/about-us",
+          "evidence_type": "direct_company_statement",
+          "source_locator": "About Us → operational capabilities",
+          "supports": "سلسلة الاستيراد والتخزين والتحميص والتوزيع.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Três Marias Coffee – Beehive Case Study",
+          "publisher": "Beehive",
+          "source_type": "regulated_finance_provider_case_study",
+          "url": "https://www.beehive.ae/case-studies/tres-marias-coffee",
+          "evidence_type": "direct_case_study",
+          "source_locator": "Challenge and result sections",
+          "supports": "وجود عائق تدفق نقدي وتمويل تشغيلي.",
+          "published_on": "2023-10-27",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "DMCC Coffee Ecosystem",
+          "publisher": "Dubai Multi Commodities Centre (DMCC)",
+          "source_type": "official_government_authority_ecosystem_page",
+          "url": "https://dmcc.ae/ecosystems/coffee",
+          "evidence_type": "direct_primary_context",
+          "source_locator": "Coffee Centre facilities",
+          "supports": "طبيعة البنية التشغيلية المطلوبة للقطاع.",
+          "accessed_on": "2026-08-03"
+        }
+      ],
+      "limitations": "لم يُثبت ادعاء كمي عن حجم تلوث الكبسولات أو أن ارتفاع السعر هو المشكلة الرئيسية، لذلك أزيلت الصياغات المطلقة من النسخة الأصلية.",
+      "source_count": 4
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "بنت Três Marias محفظة حول «لحظة القهوة» بدل الاعتماد على منتج واحد: حبوب محمصة، وحليب نباتي للباريستا، وكبسولات متوافقة مع Nespresso، ومعدات تحضير، وقنوات جملة وعلامة خاصة وتدريب. وتستفيد عملياتها من مرافق DMCC Coffee Centre للتخزين والمعالجة والتحميص والتعبئة واللوجستيات. تسوّق الشركة كبسولاتها بوصفها قابلة للتحلل والتحويل إلى سماد، لكن المصادر العامة التي تمت مراجعتها لا تعرض شهادة مستقلة أو شروط التحلل والسماد؛ لذلك عومل الوصف كادعاء منتج رسمي لا كحقيقة بيئية مطلقة."
+      },
+      "verification_status": "verified_with_company_claim_limits",
+      "confidence": "high",
+      "claim_type": "multi_product_coffee_platform_using_shared_infrastructure",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "المحفظة والبنية التشغيلية موثقتان، ووصف الكبسولات البيئي موثق بوصفه ادعاءً صادرًا عن الشركة لا كشهادة مستقلة.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-06",
+        "SRC-07",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Tres Marias Coffee Company L.L.C-FZ – Official Store",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_company_store",
+          "url": "https://www.tresmariascoffee.com/",
+          "evidence_type": "direct",
+          "source_locator": "Homepage product sections",
+          "supports": "الحليب النباتي والحبوب والكبسولات والجملة.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "About Us",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_company_capabilities_page",
+          "url": "https://www.tresmariascoffee.com/pages/about-us",
+          "evidence_type": "direct_company_statement",
+          "source_locator": "About Us",
+          "supports": "المعدات والعلامة الخاصة والتدريب والبن الأخضر.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Speciality Coffee Capsules – Nespresso Compatible",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_product_page",
+          "url": "https://www.tresmariascoffee.com/products/single-origin-brazil-primavera-speciality-coffee-capsules",
+          "evidence_type": "direct_company_product_claim",
+          "source_locator": "Capsule product description",
+          "supports": "التوافق مع Nespresso ووصف biodegradable & compostable.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "DMCC to Expand its Coffee and Tea Centres with Target to Triple Output and Boost Dubai Trade",
+          "publisher": "Dubai Multi Commodities Centre (DMCC)",
+          "source_type": "official_government_authority_news_release",
+          "url": "https://dmcc.ae/latest-news/dmcc-expand-its-coffee-and-tea-centres-target-triple-ouput-and-boost-dubai-trade",
+          "evidence_type": "direct_third_party_primary",
+          "source_locator": "DMCC release",
+          "supports": "استخدام الشركة لبنية المركز.",
+          "published_on": "2022-12-14",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "DMCC Coffee Ecosystem",
+          "publisher": "Dubai Multi Commodities Centre (DMCC)",
+          "source_type": "official_government_authority_ecosystem_page",
+          "url": "https://dmcc.ae/ecosystems/coffee",
+          "evidence_type": "direct_primary_context",
+          "source_locator": "Facilities and member benefits",
+          "supports": "التخزين والتحميص والتعبئة واللوجستيات والتدريب.",
+          "accessed_on": "2026-08-03"
+        }
+      ],
+      "limitations": "لم تظهر شهادة طرف ثالث تحدد معيار التحلل أو السماد الصناعي/المنزلي، لذلك لم تُستخدم عبارة «قابلة للتحلل كليًا» كحقيقة مستقلة.",
+      "source_count": 5
+    },
+    "$.market_data.target_audience": {
+      "field_value": "المستهلكون الباحثون عن قهوة مختصة للاستخدام المنزلي، ومستخدمو بدائل الحليب النباتي، ومستخدمو أجهزة Nespresso المتوافقة، إضافة إلى المقاهي وتجار التجزئة والعملاء الراغبين في التوريد بالجملة أو برامج العلامة الخاصة، والمتدربين في مهارات القهوة. لا توجد أعداد منشورة لكل شريحة أو توزيع موثق بين D2C وB2B.",
+      "verification_status": "verified_with_segment_inference",
+      "confidence": "medium_high",
+      "claim_type": "consumer_and_business_customer_segments",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم فئات المتجر وصفحات الجملة والعلامة الخاصة والتدريب تقسيم الجمهور، مع استنتاج محدود لطبيعة المستخدمين من المنتجات.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-02",
+        "SRC-03",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Tres Marias Coffee Company L.L.C-FZ – Official Store",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_company_store",
+          "url": "https://www.tresmariascoffee.com/",
+          "evidence_type": "direct",
+          "source_locator": "Store categories and wholesale navigation",
+          "supports": "مستهلكو الحليب النباتي والحبوب والعملاء التجاريون.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "About Três Marias",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_company_about_page",
+          "url": "https://www.tresmariascoffee.com/pages/about-tres-marias",
+          "evidence_type": "direct_company_statement",
+          "source_locator": "About → solutions for businesses and individuals",
+          "supports": "وجود شرائح أفراد وشركات.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "About Us",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_company_capabilities_page",
+          "url": "https://www.tresmariascoffee.com/pages/about-us",
+          "evidence_type": "direct_company_statement",
+          "source_locator": "Private label and training",
+          "supports": "عملاء العلامة الخاصة والمتدربون.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Speciality Coffee Capsules – Nespresso Compatible",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_product_page",
+          "url": "https://www.tresmariascoffee.com/products/single-origin-brazil-primavera-speciality-coffee-capsules",
+          "evidence_type": "direct",
+          "source_locator": "Nespresso-compatible capsules",
+          "supports": "مستخدمو آلات Nespresso المتوافقة.",
+          "accessed_on": "2026-08-03"
+        }
+      ],
+      "limitations": "لا توجد أعداد عملاء أو حصة كل شريحة أو تعريف رسمي دقيق لحجم المؤسسات المستهدفة.",
+      "source_count": 4
+    },
+    "$.market_data.market_size": {
+      "field_value": "كسياق سوقي لا كتقدير رسمي لسوق الشركة، ذكر DMCC في 2025 أن تجارة البن العالمية تتجاوز 26 مليار دولار وأن إيرادات قطاع القهوة عالميًا تتجاوز 200 مليار دولار، وقدّر سوق القهوة في الشرق الأوسط وشمال أفريقيا بنحو 11.5 مليار دولار. هذه الأرقام تشمل فئات ومناطق أوسع بكثير من السوق القابل للخدمة لدى Três Marias، فلا يجوز تقديمها كـTAM مباشر للشركة.",
+      "verification_status": "verified_market_context_not_company_tam",
+      "confidence": "high",
+      "claim_type": "regional_and_global_market_context",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تقدم DMCC أرقامًا حديثة للسوق والتجارة، لكن جرى تقييد استخدامها كسياق لا كتقدير مباشر لسوق الشركة.",
+      "source_ids": [
+        "SRC-10",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-10",
+          "title": "DMCC Coffee Centre Expands as Report Positions Dubai at Centre of USD 26 Billion Coffee Trade",
+          "publisher": "Dubai Multi Commodities Centre (DMCC)",
+          "source_type": "official_government_authority_market_release",
+          "url": "https://dmcc.ae/latest-news/dmcc-coffee-centre-expands-with-premium-member-space-as-new-report-positions-dubai-at-centre-of-usd-26-billion-coffee-trade",
+          "evidence_type": "direct_primary_market_context",
+          "source_locator": "DMCC 2025 coffee report release",
+          "supports": "أكثر من 26 مليار دولار تجارة عالمية، وأكثر من 200 مليار دولار إيرادات قطاعية، ونحو 11.5 مليار دولار لسوق MENA.",
+          "published_on": "2025-09-15",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "DMCC Annual Report 2025",
+          "publisher": "Dubai Multi Commodities Centre (DMCC)",
+          "source_type": "official_annual_report",
+          "url": "https://dmcc.ae/annual-report-2025",
+          "evidence_type": "direct_primary_ecosystem_metric",
+          "source_locator": "Annual Report 2025 → Coffee",
+          "supports": "8,200 طن متري وأكثر من 300 عضو نشط في مركز القهوة.",
+          "accessed_on": "2026-08-03"
+        }
+      ],
+      "limitations": "الأرقام تشمل أسواقًا وفئات أوسع من نطاق الشركة ولا تمثل الإيراد أو الحصة السوقية أو TAM القابل للتحصيل لديها.",
+      "source_count": 2
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا تتوفر سلسلة عامة موثقة للإيرادات الفعلية أو الوحدات المباعة أو العملاء تسمح بحساب معدل نمو الشركة. توقع العرض التلفزيوني 9 ملايين درهم في 2024 و20 مليونًا في 2025، لكن غياب النتائج الفعلية يمنع استخدامهما لحساب نمو محقق. وبصورة منفصلة، تعامل DMCC Coffee Centre مع أكثر من 8,200 طن متري في 2025 وضم أكثر من 300 عضو نشط؛ وهذه مؤشرات على نمو المنظومة التي تعمل الشركة داخلها وليست نموًا خاصًا بالشركة.",
+      "verification_status": "verified_with_metric_definition_limits",
+      "confidence": "high",
+      "claim_type": "company_growth_not_calculable_from_public_actuals",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توقعات الإدارة منفصلة عن نتائج الشركة، ومقاييس DMCC تخص المنظومة لا Três Marias.",
+      "source_ids": [
+        "SRC-12",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-12",
+          "title": "Shark Tank Dubai pitch recap by Três Marias strategic adviser",
+          "publisher": "Fernanda Giuntini",
+          "source_type": "participant_primary_social_post_with_pitch_transcript",
+          "url": "https://www.linkedin.com/posts/fernandagiuntini_sharktankdubai-strategy-boardadvisor-activity-7308767672446410752-dBwF",
+          "evidence_type": "primary_participant_transcript",
+          "source_locator": "Pitch transcript → management projections",
+          "supports": "توقعات 2024 و2025 وليست نتائج فعلية.",
+          "published_on": "2025-03-21",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "DMCC Annual Report 2025",
+          "publisher": "Dubai Multi Commodities Centre (DMCC)",
+          "source_type": "official_annual_report",
+          "url": "https://dmcc.ae/annual-report-2025",
+          "evidence_type": "direct_primary_ecosystem_metric",
+          "source_locator": "Annual Report 2025 → Coffee",
+          "supports": "مؤشرات حجم ونشاط منظومة DMCC.",
+          "accessed_on": "2026-08-03"
+        }
+      ],
+      "limitations": "لا يجوز حساب CAGR فعلي من توقعات غير مؤكدة، ولا نسبة نمو الشركة من أطنان يعالجها مركز يخدم أكثر من 300 عضو.",
+      "source_count": 2
+    },
+    "$.financials.initial_investment": {
+      "field_value": "لا يوجد إفصاح عام موثوق عن رأس المال الأولي الذي موّل تأسيس الشركة. تكشف دراسة Beehive عن Business Funding في 2023 دون إعلان المبلغ. وفي Shark Tank Dubai أُعلنت صفقة بقيمة 3.5 ملايين درهم مقابل 15% من الشركة؛ وصفقة البرنامج استثمار أسهم معلن ضمن الحلقة وليست «تمويلًا أوليًا» بالضرورة. لم يُعثر على إفصاح عام يثبت اكتمال الإغلاق القانوني بعد الفحص النافي للجهالة، لذلك حُفظت الصياغة كصفقة معلنة تلفزيونيًا.",
+      "verification_status": "verified_announced_financing_with_closing_limit",
+      "confidence": "medium_high",
+      "claim_type": "founder_capital_undisclosed_business_funding_and_announced_tv_equity_deal",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "Beehive يثبت تمويلًا تشغيليًا غير معلن القيمة، ومصادر الحلقة تثبت صفقة معلنة بقيمة 3.5 ملايين درهم؛ لا يوجد دليل عام على رأس المال الأولي أو إغلاق الصفقة قانونيًا.",
+      "source_ids": [
+        "SRC-14",
+        "SRC-11",
+        "SRC-12",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-14",
+          "title": "Três Marias Coffee – Beehive Case Study",
+          "publisher": "Beehive",
+          "source_type": "regulated_finance_provider_case_study",
+          "url": "https://www.beehive.ae/case-studies/tres-marias-coffee",
+          "evidence_type": "direct_financing_provider_case_study",
+          "source_locator": "What Beehive did",
+          "supports": "Business Funding دون مبلغ منشور.",
+          "published_on": "2023-10-27",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Founder post about Três Marias on Shark Tank Dubai Season 2 Episode 10",
+          "publisher": "Maria Eduarda Becker Pavani",
+          "source_type": "founder_primary_social_post_with_episode_transcript",
+          "url": "https://www.linkedin.com/posts/maria-eduarda-becker-pavani-654635a2_i-was-thrilled-to-present-tr%C3%AAs-marias-coffee-activity-7273585004725555200-DHFS",
+          "evidence_type": "founder_primary",
+          "source_locator": "Founder post and transcript",
+          "supports": "طلب وقبول صفقة داخل الحلقة.",
+          "published_on": "2024-12-14",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Shark Tank Dubai pitch recap by Três Marias strategic adviser",
+          "publisher": "Fernanda Giuntini",
+          "source_type": "participant_primary_social_post_with_pitch_transcript",
+          "url": "https://www.linkedin.com/posts/fernandagiuntini_sharktankdubai-strategy-boardadvisor-activity-7308767672446410752-dBwF",
+          "evidence_type": "participant_primary",
+          "source_locator": "Pitch recap transcript",
+          "supports": "3.5 ملايين درهم مقابل 15%.",
+          "published_on": "2025-03-21",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Shark Tank Dubai 2 Concludes with Massive Investments Supporting Entrepreneurs",
+          "publisher": "Emirates 24|7",
+          "source_type": "government_affiliated_news_report",
+          "url": "https://www.emirates247.com/lifestyle/shark-tank-dubai-2-concludes-with-massive-investments-supporting-entrepreneurs-2025-01-13-1.736152",
+          "evidence_type": "secondary_reported",
+          "source_locator": "Season summary",
+          "supports": "الإبلاغ عن حصول الشركة على 3.5 ملايين درهم.",
+          "published_on": "2025-01-13",
+          "accessed_on": "2026-08-03"
+        }
+      ],
+      "limitations": "صفقات Shark Tank تخضع عادةً للفحص والشروط؛ لم يظهر في المصادر العامة عقد إغلاق أو تاريخ تحويل الأموال أو جدول ملكية محدث.",
+      "source_count": 4
+    },
+    "$.financials.valuation": {
+      "field_value": "طلبت المؤسِّسة 3.5 ملايين درهم مقابل 10%، بما يعكس تقييمًا ضمنيًا بعد الاستثمار قدره 35 مليون درهم. الصفقة المعلنة المقبولة كانت 3.5 ملايين درهم مقابل 15%، ما يعكس حسابيًا نحو 23.33 مليون درهم بعد الاستثمار ونحو 19.83 مليون درهم قبل الاستثمار. هذه تقييمات ضمنية للعرض التلفزيوني، وليست تقييمًا حاليًا مؤكدًا في أغسطس 2026، ولا دليل عام على جولة لاحقة تعيد تسعير الشركة.",
+      "verification_status": "verified_historical_calculation",
+      "confidence": "high",
+      "claim_type": "implied_on_air_pre_money_and_post_money_valuation",
+      "verified_on": "2026-08-03",
+      "calculation": {
+        "ask_post_money_aed": "3,500,000 ÷ 0.10 = 35,000,000",
+        "accepted_post_money_aed": "3,500,000 ÷ 0.15 = 23,333,333.33",
+        "accepted_pre_money_aed": "23,333,333.33 - 3,500,000 = 19,833,333.33"
+      },
+      "evidence_summary": "نسبة الطلب والصفقة المعلنة تسمحان بحساب تقييمات ضمنية تاريخية، لا تقييم حالي.",
+      "source_ids": [
+        "SRC-11",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-11",
+          "title": "Founder post about Três Marias on Shark Tank Dubai Season 2 Episode 10",
+          "publisher": "Maria Eduarda Becker Pavani",
+          "source_type": "founder_primary_social_post_with_episode_transcript",
+          "url": "https://www.linkedin.com/posts/maria-eduarda-becker-pavani-654635a2_i-was-thrilled-to-present-tr%C3%AAs-marias-coffee-activity-7273585004725555200-DHFS",
+          "evidence_type": "founder_primary",
+          "source_locator": "Episode transcript",
+          "supports": "الطلب 3.5 ملايين مقابل 10% والقبول عند 15%.",
+          "published_on": "2024-12-14",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Shark Tank Dubai pitch recap by Três Marias strategic adviser",
+          "publisher": "Fernanda Giuntini",
+          "source_type": "participant_primary_social_post_with_pitch_transcript",
+          "url": "https://www.linkedin.com/posts/fernandagiuntini_sharktankdubai-strategy-boardadvisor-activity-7308767672446410752-dBwF",
+          "evidence_type": "participant_primary",
+          "source_locator": "Pitch recap transcript",
+          "supports": "تأكيد نسب العرض والصفقة وسياق تقييم 35 مليون درهم.",
+          "published_on": "2025-03-21",
+          "accessed_on": "2026-08-03"
+        }
+      ],
+      "limitations": "الحساب لا يثبت إغلاق الصفقة أو تقييم أغسطس 2026، ولا يأخذ في الحسبان شروطًا خاصة أو أدوات قابلة للتحويل قد لا تظهر في البث.",
+      "source_count": 2
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "مبيعات مباشرة للمستهلك عبر المتجر الإلكتروني لحبوب القهوة والحليب النباتي والكبسولات ومعدات التحضير.",
+        "مبيعات الجملة والتوريد التجاري لعملاء B2B.",
+        "برامج القهوة ذات العلامة الخاصة بحسب صفحة الشركة.",
+        "خدمات مرتبطة باستيراد البن الأخضر وتخزينه وتحميصه وتوزيعه وفق وصف الشركة.",
+        "برامج تدريب في مهارات القهوة مع الإشارة إلى SCA؛ مع ملاحظة أن مجموعة الدورات الظاهرة على المتجر كانت فارغة عند المراجعة، لذلك لا يمكن إثبات حجم إيرادها الحالي."
+      ],
+      "verification_status": "verified_with_current_activity_limits",
+      "confidence": "high",
+      "claim_type": "observable_and_company_described_revenue_channels",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تظهر المبيعات المباشرة والجملة في المتجر، وتذكر صفحة الشركة العلامة الخاصة والتدريب والبن الأخضر.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-03",
+        "SRC-05",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Tres Marias Coffee Company L.L.C-FZ – Official Store",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_company_store",
+          "url": "https://www.tresmariascoffee.com/",
+          "evidence_type": "direct",
+          "source_locator": "Current store and wholesale navigation",
+          "supports": "فئات المنتجات وقنوات D2C والجملة.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "About Us",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_company_capabilities_page",
+          "url": "https://www.tresmariascoffee.com/pages/about-us",
+          "evidence_type": "direct_company_statement",
+          "source_locator": "About Us",
+          "supports": "العلامة الخاصة والتدريب والبن الأخضر.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Terms and Conditions",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_legal_page",
+          "url": "https://www.tresmariascoffee.com/pages/terms-and-conditions",
+          "evidence_type": "direct_legal",
+          "source_locator": "Purchases section",
+          "supports": "معاملات التجارة الإلكترونية.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Três Marias Coffee – Beehive Case Study",
+          "publisher": "Beehive",
+          "source_type": "regulated_finance_provider_case_study",
+          "url": "https://www.beehive.ae/case-studies/tres-marias-coffee",
+          "evidence_type": "direct_case_study",
+          "source_locator": "Product portfolio",
+          "supports": "اتساع محفظة المنتجات في 2023.",
+          "published_on": "2023-10-27",
+          "accessed_on": "2026-08-03"
+        }
+      ],
+      "limitations": "لا توجد بيانات عن مساهمة كل مسار في الإيراد، كما أن ظهور خدمة على صفحة الشركة لا يثبت حجم نشاطها الحالي.",
+      "source_count": 4
+    },
+    "$.tools": {
+      "field_value": [
+        "Shopify لتشغيل المتجر الإلكتروني، كما يظهر في تذييل الموقع الرسمي.",
+        "مرافق DMCC Coffee Centre للتخزين المكيّف والمعالجة والتحميص والتعبئة والخدمات اللوجستية.",
+        "منظومة منتجات حليب نباتي مخصص للباريستا تشمل الشوفان وجوز الهند واللوز والصويا.",
+        "كبسولات قهوة متوافقة مع Nespresso تسوّقها الشركة بوصفها قابلة للتحلل والتحويل إلى سماد.",
+        "قنوات Wholesale وPrivate Label لخدمة العملاء التجاريين.",
+        "مرافق ومناهج تدريب مرتبطة بمهارات القهوة وSCA وفق صفحات الشركة ومركز DMCC."
+      ],
+      "verification_status": "verified_operational_stack_not_complete_technology_inventory",
+      "confidence": "high",
+      "claim_type": "observable_commerce_and_operating_capabilities",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الموقع يثبت Shopify وفئات المنتجات، وDMCC يثبت البنية المادية والتدريبية المتاحة.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-06",
+        "SRC-08",
+        "SRC-03"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Tres Marias Coffee Company L.L.C-FZ – Official Store",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_company_store",
+          "url": "https://www.tresmariascoffee.com/",
+          "evidence_type": "direct",
+          "source_locator": "Footer and product navigation",
+          "supports": "Shopify وفئات الحليب والحبوب والكبسولات والجملة.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Speciality Coffee Capsules – Nespresso Compatible",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_product_page",
+          "url": "https://www.tresmariascoffee.com/products/single-origin-brazil-primavera-speciality-coffee-capsules",
+          "evidence_type": "direct_company_product_claim",
+          "source_locator": "Capsule product page",
+          "supports": "تقنية/منتج الكبسولات المتوافقة.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "DMCC Coffee Ecosystem",
+          "publisher": "Dubai Multi Commodities Centre (DMCC)",
+          "source_type": "official_government_authority_ecosystem_page",
+          "url": "https://dmcc.ae/ecosystems/coffee",
+          "evidence_type": "direct_primary_context",
+          "source_locator": "DMCC facility descriptions",
+          "supports": "التخزين والمعالجة والتحميص والتعبئة واللوجستيات والتدريب.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "About Us",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_company_capabilities_page",
+          "url": "https://www.tresmariascoffee.com/pages/about-us",
+          "evidence_type": "direct_company_statement",
+          "source_locator": "About Us",
+          "supports": "Private Label والتدريب وسلسلة البن الأخضر.",
+          "accessed_on": "2026-08-03"
+        }
+      ],
+      "limitations": "القائمة ليست كشفًا كاملًا عن البرمجيات الداخلية أو موردي التصنيع أو تركيبة المنتجات، ولا تفترض أن الشركة تملك معدات DMCC.",
+      "source_count": 4
+    },
+    "$.headline": {
+      "field_value": "من مركز دبي للقهوة إلى علامة متعددة الفئات: كيف جمعت Três Marias بين الحبوب والحليب النباتي والكبسولات وصفقة معلنة بـ3.5 ملايين درهم",
+      "verification_status": "analytical_inference",
+      "confidence": "high",
+      "claim_type": "editorial_synthesis_of_verified_company_model_and_announced_deal",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "العنوان يركب بين موقع التشغيل ومحفظة المنتجات والصفقة المعلنة، دون تحويل الصفقة إلى إيراد أو الادعاء بأنها أغلقت نهائيًا.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-07",
+        "SRC-11",
+        "SRC-12"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Tres Marias Coffee Company L.L.C-FZ – Official Store",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_company_store",
+          "url": "https://www.tresmariascoffee.com/",
+          "evidence_type": "direct",
+          "source_locator": "Store catalog",
+          "supports": "محفظة الحبوب والحليب النباتي والكبسولات.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "DMCC to Expand its Coffee and Tea Centres with Target to Triple Output and Boost Dubai Trade",
+          "publisher": "Dubai Multi Commodities Centre (DMCC)",
+          "source_type": "official_government_authority_news_release",
+          "url": "https://dmcc.ae/latest-news/dmcc-expand-its-coffee-and-tea-centres-target-triple-ouput-and-boost-dubai-trade",
+          "evidence_type": "direct_primary",
+          "source_locator": "DMCC release",
+          "supports": "العمل داخل مركز دبي للقهوة.",
+          "published_on": "2022-12-14",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Founder post about Três Marias on Shark Tank Dubai Season 2 Episode 10",
+          "publisher": "Maria Eduarda Becker Pavani",
+          "source_type": "founder_primary_social_post_with_episode_transcript",
+          "url": "https://www.linkedin.com/posts/maria-eduarda-becker-pavani-654635a2_i-was-thrilled-to-present-tr%C3%AAs-marias-coffee-activity-7273585004725555200-DHFS",
+          "evidence_type": "founder_primary",
+          "source_locator": "Shark Tank post",
+          "supports": "الصفقة المعلنة بقيمة 3.5 ملايين درهم.",
+          "published_on": "2024-12-14",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Shark Tank Dubai pitch recap by Três Marias strategic adviser",
+          "publisher": "Fernanda Giuntini",
+          "source_type": "participant_primary_social_post_with_pitch_transcript",
+          "url": "https://www.linkedin.com/posts/fernandagiuntini_sharktankdubai-strategy-boardadvisor-activity-7308767672446410752-dBwF",
+          "evidence_type": "participant_primary",
+          "source_locator": "Pitch recap",
+          "supports": "نسبة 15% وسياق العرض.",
+          "published_on": "2025-03-21",
+          "accessed_on": "2026-08-03"
+        }
+      ],
+      "limitations": "العنوان تحليلي وتحريري؛ عبارة «صفقة معلنة» مقصودة لتجنب الجزم بالإغلاق النهائي.",
+      "source_count": 4
+    },
+    "$.lessons": {
+      "field_value": [
+        {
+          "title": "ابنِ محفظة حول المناسبة الاستهلاكية لا حول SKU واحد",
+          "description": "وسّعت Três Marias عرضها من الحبوب إلى الحليب النباتي والكبسولات والمعدات. المنطق الأقوى هنا هو امتلاك نسبة أكبر من «لحظة تحضير القهوة» عبر منتجات متكاملة، ما يفتح فرص البيع المتقاطع ويقلل اعتماد العلامة على فئة واحدة؛ لكنه يزيد في المقابل تعقيد المخزون والجودة."
+        },
+        {
+          "title": "استأجر البنية الثقيلة قبل أن تملكها",
+          "description": "العمل من DMCC Coffee Centre أتاح الوصول إلى التخزين والتحميص والتعبئة واللوجستيات والتدريب دون بناء منشأة كاملة من الصفر. هذا النموذج يقلل الإنفاق الرأسمالي المبكر ويحوّل جزءًا من التكلفة إلى استخدام مرن، مع بقاء الاعتماد التشغيلي على طرف خارجي مخاطرة يجب إدارتها."
+        },
+        {
+          "title": "افصل بين عرض الاستثمار وإغلاق الصفقة",
+          "description": "الظهور التلفزيوني صنع دليل طلب استثماري قوي، لكن الرقم المعلن لا يصبح تلقائيًا نقدًا داخل الحساب البنكي. يجب الفصل بين مبلغ الطلب، ونسبة الملكية، والتقييم الضمني، والصفقة المعلنة، والإغلاق القانوني بعد الفحص؛ وهي مراحل خلطتها النسخة الأصلية في رقم واحد."
+        },
+        {
+          "title": "نمو السلع الاستهلاكية يحتاج رأس مال عامل قبل أن يظهر كربح",
+          "description": "تعدد المنتجات وقنوات الجملة والتجزئة يعني دفع تكاليف المواد والتصنيع والمخزون قبل التحصيل. دراسة Beehive تكشف أن التدفق النقدي كان تحديًا رغم وجود نمو وفرصة سوقية؛ فالطلب لا يساوي سيولة، والإيراد لا يساوي ربحًا، والتمويل التشغيلي لا يساوي تقييمًا."
+        },
+        {
+          "title": "حوّل الاستدامة من وصف تسويقي إلى مواصفة قابلة للإثبات",
+          "description": "وصف الكبسولات بأنها قابلة للتحلل والتحويل إلى سماد يميز المنتج، لكن قوة الادعاء تعتمد على المادة والمعيار وبيئة المعالجة والمدة والشهادة. العلامات التي تنشر هذه التفاصيل تقلل مخاطر الغموض الأخضر وتمنح عملاء B2B أساسًا أفضل لاتخاذ قرار الشراء."
+        }
+      ],
+      "verification_status": "analytical_inference",
+      "confidence": "medium_high",
+      "claim_type": "company_specific_strategic_lessons",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "الدروس مبنية على محفظة المنتجات، استخدام بنية DMCC، تمويل Beehive، وتفاصيل عرض Shark Tank مع قيود الاستدامة.",
+      "source_ids": [
+        "SRC-01",
+        "SRC-06",
+        "SRC-07",
+        "SRC-08",
+        "SRC-11",
+        "SRC-12",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Tres Marias Coffee Company L.L.C-FZ – Official Store",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_company_store",
+          "url": "https://www.tresmariascoffee.com/",
+          "evidence_type": "direct",
+          "source_locator": "Current catalog",
+          "supports": "تنويع الفئات وقنوات البيع.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Speciality Coffee Capsules – Nespresso Compatible",
+          "publisher": "Três Marias Coffee Company L.L.C-FZ",
+          "source_type": "official_product_page",
+          "url": "https://www.tresmariascoffee.com/products/single-origin-brazil-primavera-speciality-coffee-capsules",
+          "evidence_type": "company_claim",
+          "source_locator": "Capsule sustainability description",
+          "supports": "الحاجة إلى ضبط ادعاءات الاستدامة.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-07",
+          "title": "DMCC to Expand its Coffee and Tea Centres with Target to Triple Output and Boost Dubai Trade",
+          "publisher": "Dubai Multi Commodities Centre (DMCC)",
+          "source_type": "official_government_authority_news_release",
+          "url": "https://dmcc.ae/latest-news/dmcc-expand-its-coffee-and-tea-centres-target-triple-ouput-and-boost-dubai-trade",
+          "evidence_type": "direct_primary",
+          "source_locator": "DMCC company quote",
+          "supports": "الاستفادة من بنية مشتركة.",
+          "published_on": "2022-12-14",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "DMCC Coffee Ecosystem",
+          "publisher": "Dubai Multi Commodities Centre (DMCC)",
+          "source_type": "official_government_authority_ecosystem_page",
+          "url": "https://dmcc.ae/ecosystems/coffee",
+          "evidence_type": "direct_primary",
+          "source_locator": "DMCC facilities",
+          "supports": "نطاق البنية المتاحة بدل امتلاكها.",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "Founder post about Três Marias on Shark Tank Dubai Season 2 Episode 10",
+          "publisher": "Maria Eduarda Becker Pavani",
+          "source_type": "founder_primary_social_post_with_episode_transcript",
+          "url": "https://www.linkedin.com/posts/maria-eduarda-becker-pavani-654635a2_i-was-thrilled-to-present-tr%C3%AAs-marias-coffee-activity-7273585004725555200-DHFS",
+          "evidence_type": "founder_primary",
+          "source_locator": "Shark Tank transcript",
+          "supports": "الفرق بين الطلب والصفقة.",
+          "published_on": "2024-12-14",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Shark Tank Dubai pitch recap by Três Marias strategic adviser",
+          "publisher": "Fernanda Giuntini",
+          "source_type": "participant_primary_social_post_with_pitch_transcript",
+          "url": "https://www.linkedin.com/posts/fernandagiuntini_sharktankdubai-strategy-boardadvisor-activity-7308767672446410752-dBwF",
+          "evidence_type": "participant_primary",
+          "source_locator": "Pitch recap",
+          "supports": "التوقعات والتقييمات الضمنية.",
+          "published_on": "2025-03-21",
+          "accessed_on": "2026-08-03"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Três Marias Coffee – Beehive Case Study",
+          "publisher": "Beehive",
+          "source_type": "regulated_finance_provider_case_study",
+          "url": "https://www.beehive.ae/case-studies/tres-marias-coffee",
+          "evidence_type": "direct_case_study",
+          "source_locator": "Cash-flow challenge",
+          "supports": "أهمية رأس المال العامل.",
+          "published_on": "2023-10-27",
+          "accessed_on": "2026-08-03"
+        }
+      ],
+      "limitations": "الدروس استنتاجات استراتيجية وليست تصريحات حرفية من الشركة أو المستثمرين.",
+      "source_count": 7
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "Tres Marias Coffee Company L.L.C-FZ – Official Store",
+      "publisher": "Três Marias Coffee Company L.L.C-FZ",
+      "source_type": "official_company_store",
+      "url": "https://www.tresmariascoffee.com/",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "استمرار متجر الشركة الإلكتروني في عرض الحليب النباتي وحبوب القهوة والكبسولات",
+        "وجود قناة بيع مباشرة للمستهلك وصفحات جملة",
+        "تشغيل المتجر بواسطة Shopify",
+        "تعريف العلامة بأنها تأسست في دبي عام 2019"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "About Três Marias",
+      "publisher": "Três Marias Coffee Company L.L.C-FZ",
+      "source_type": "official_company_about_page",
+      "url": "https://www.tresmariascoffee.com/pages/about-tres-marias",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "التأسيس في DMCC بدبي عام 2019",
+        "مهمة جعل القهوة المختصة متاحة لشريحة أوسع",
+        "ادعاء الشركة بأنها قدمت أول حليب نباتي مخصص للباريستا في الشرق الأوسط",
+        "تقديم حلول للأفراد والشركات"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "About Us",
+      "publisher": "Três Marias Coffee Company L.L.C-FZ",
+      "source_type": "official_company_capabilities_page",
+      "url": "https://www.tresmariascoffee.com/pages/about-us",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "بيع القهوة المختصة ومعدات التحضير",
+        "برامج العلامة الخاصة",
+        "التدريب المعتمد من SCA وفق وصف الشركة",
+        "استيراد وتخزين وتحميص وتوزيع البن الأخضر",
+        "ادعاء الشراكة الحصرية مع Ally Coffee في منطقة الشرق الأوسط وشمال أفريقيا"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Contact Us",
+      "publisher": "Três Marias Coffee Company L.L.C-FZ",
+      "source_type": "official_company_contact_page",
+      "url": "https://www.tresmariascoffee.com/pages/contact-us",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "الاسم المنشور Três Marias Coffee Company L.L.C-FZ",
+        "العنوان: DMCC Coffee Center، Office 3، Jebel Ali Free Zone، دبي"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Terms and Conditions",
+      "publisher": "Três Marias Coffee Company L.L.C-FZ",
+      "source_type": "official_legal_page",
+      "url": "https://www.tresmariascoffee.com/pages/terms-and-conditions",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "الكيان المنشور الذي يدير الموقع",
+        "الإمارات دولة موطن وتشغيل الموقع",
+        "قبول معاملات إلكترونية ببطاقات Visa وMasterCard وبالدرهم"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Speciality Coffee Capsules – Nespresso Compatible",
+      "publisher": "Três Marias Coffee Company L.L.C-FZ",
+      "source_type": "official_product_page",
+      "url": "https://www.tresmariascoffee.com/products/single-origin-brazil-primavera-speciality-coffee-capsules",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "بيع كبسولات متوافقة مع Nespresso",
+        "تسويق الكبسولات بوصفها قابلة للتحلل والتحويل إلى سماد",
+        "بيع صندوق اكتشاف يضم 30 كبسولة"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "DMCC to Expand its Coffee and Tea Centres with Target to Triple Output and Boost Dubai Trade",
+      "publisher": "Dubai Multi Commodities Centre (DMCC)",
+      "source_type": "official_government_authority_news_release",
+      "published_on": "2022-12-14",
+      "url": "https://dmcc.ae/latest-news/dmcc-expand-its-coffee-and-tea-centres-target-triple-ouput-and-boost-dubai-trade",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "تشغيل Três Marias داخل DMCC Coffee Centre",
+        "تصريح المؤسِّسة بأن البنية والخدمات والاتصال بالأسواق كانت أسبابًا لاختيار المركز",
+        "خدمات المركز في التخزين والمعالجة والتحميص والتعبئة والتسليم والتدريب"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "DMCC Coffee Ecosystem",
+      "publisher": "Dubai Multi Commodities Centre (DMCC)",
+      "source_type": "official_government_authority_ecosystem_page",
+      "url": "https://dmcc.ae/ecosystems/coffee",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "مرافق التخزين والمعالجة والتحميص والتعبئة والخدمات اللوجستية",
+        "سعة تخزين 9,500 طن متري ومساحة منشأة 15,000 متر مربع",
+        "برامج تدريب SCA ومختبرات التذوق والجودة",
+        "تمكين تجارة أكثر من 100 صنف قهوة من مناطق إنتاج متعددة"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "DMCC Annual Report 2025",
+      "publisher": "Dubai Multi Commodities Centre (DMCC)",
+      "source_type": "official_annual_report",
+      "url": "https://dmcc.ae/annual-report-2025",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "تعامل مركز القهوة مع أكثر من 8,200 طن متري في 2025",
+        "نمو عضوية مركز القهوة إلى أكثر من 300 عضو نشط"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "DMCC Coffee Centre Expands as Report Positions Dubai at Centre of USD 26 Billion Coffee Trade",
+      "publisher": "Dubai Multi Commodities Centre (DMCC)",
+      "source_type": "official_government_authority_market_release",
+      "published_on": "2025-09-15",
+      "url": "https://dmcc.ae/latest-news/dmcc-coffee-centre-expands-with-premium-member-space-as-new-report-positions-dubai-at-centre-of-usd-26-billion-coffee-trade",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "تجارة بن عالمية تتجاوز 26 مليار دولار وفق تقرير DMCC",
+        "إيرادات قطاع القهوة العالمي تتجاوز 200 مليار دولار وفق التقرير",
+        "تقدير سوق القهوة في الشرق الأوسط وشمال أفريقيا بنحو 11.5 مليار دولار",
+        "اتجاهات الاستدامة والتتبع والقنوات المباشرة للمستهلك"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Founder post about Três Marias on Shark Tank Dubai Season 2 Episode 10",
+      "publisher": "Maria Eduarda Becker Pavani",
+      "source_type": "founder_primary_social_post_with_episode_transcript",
+      "published_on": "2024-12-14",
+      "url": "https://www.linkedin.com/posts/maria-eduarda-becker-pavani-654635a2_i-was-thrilled-to-present-tr%C3%AAs-marias-coffee-activity-7273585004725555200-DHFS",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "ظهور المؤسِّسة في الموسم الثاني الحلقة العاشرة من Shark Tank Dubai",
+        "طلب 3.5 ملايين درهم مقابل 10%",
+        "إعلان قبول صفقة بقيمة 3.5 ملايين درهم مقابل 15% ضمن الحلقة"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Shark Tank Dubai pitch recap by Três Marias strategic adviser",
+      "publisher": "Fernanda Giuntini",
+      "source_type": "participant_primary_social_post_with_pitch_transcript",
+      "published_on": "2025-03-21",
+      "url": "https://www.linkedin.com/posts/fernandagiuntini_sharktankdubai-strategy-boardadvisor-activity-7308767672446410752-dBwF",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "طلب 3.5 ملايين درهم مقابل 10% وتقييم طلب ضمني 35 مليون درهم",
+        "توقع الإدارة إيراد 2024 عند 9 ملايين درهم وإيراد 2025 عند 20 مليون درهم",
+        "إعلان الصفقة داخل الحلقة بقيمة 3.5 ملايين درهم مقابل 15%",
+        "الإشارة إلى المستثمرين Noor Sweid وToufic Kreidieh ضمن منشور المشاركة"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Shark Tank Dubai 2 Concludes with Massive Investments Supporting Entrepreneurs",
+      "publisher": "Emirates 24|7",
+      "source_type": "government_affiliated_news_report",
+      "published_on": "2025-01-13",
+      "url": "https://www.emirates247.com/lifestyle/shark-tank-dubai-2-concludes-with-massive-investments-supporting-entrepreneurs-2025-01-13-1.736152",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "الإبلاغ عن حصول Três Marias Coffee على 3.5 ملايين درهم ضمن الموسم الثاني",
+        "وضع المبلغ ضمن استثمارات البرنامج لا ضمن إيرادات الشركة"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Três Marias Coffee – Beehive Case Study",
+      "publisher": "Beehive",
+      "source_type": "regulated_finance_provider_case_study",
+      "published_on": "2023-10-27",
+      "url": "https://www.beehive.ae/case-studies/tres-marias-coffee",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "الحصول على Business Funding بمبلغ غير معلن",
+        "وجود تحديات في التدفق النقدي ورأس المال العامل",
+        "محفظة تشمل الحبوب المحمصة والحليب النباتي والكبسولات والقهوة الفورية ومنتجات أخرى",
+        "تعريف Maria Pavani بأنها المؤسِّسة والرئيسة التنفيذية"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Meet Dubai's Brazilian coffee queen",
+      "publisher": "Khaleej Times",
+      "source_type": "reputable_local_press_profile",
+      "published_on": "2021-02-17",
+      "updated_on": "2023-01-05",
+      "url": "https://www.khaleejtimes.com/entertainment/meet-dubais-brazilian-coffee-queen",
+      "accessed_on": "2026-08-03",
+      "supports": [
+        "خلفية المؤسِّسة المهنية في القهوة المختصة",
+        "تشغيل العلامة من مركز DMCC Coffee Centre",
+        "تحميص المنتجات في الإمارات وتوزيعها من جبل علي"
+      ]
+    }
   ]
 }

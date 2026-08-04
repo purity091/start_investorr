@@ -4,127 +4,1122 @@
   "name": "Customer.io",
   "domain": "customer.io",
   "website": "https://customer.io",
-  "category": "B2B SaaS / أتمتة رسائل العملاء",
-  "headline": "الرسائل القائمة على السلوك وأتمتة رحلة العميل للمنتجات الرقمية",
-  "summary": "يساعد Customer.io الشركات على إرسال رسائل بريد إلكتروني مخصصة ورسائل أخرى بناءً على سلوك العميل وبياناته. تطور منتجهم المبكر من كونه مجرد فكرة تحليلية إلى منصة شاملة لتواصل العملاء.",
+  "category": "B2B SaaS / منصة تفاعل العملاء والبيانات والذكاء الاصطناعي",
+  "headline": "من الرسائل السلوكية إلى منصة تتجاوز 100 مليون دولار ARR: كيف جمعت Customer.io البيانات والقنوات والوكلاء دون اختلاق إيراد شهري",
+  "summary": "Customer.io منصة B2B SaaS خاصة تساعد المؤسسات على توحيد بيانات العملاء وبناء رحلات واتصالات مخصصة عبر البريد والإشعارات داخل التطبيق والدفع وSMS وWhatsApp وLINE والويب هوكس. توسعت من أتمتة الرسائل السلوكية إلى منصة تجمع Journeys وData Pipelines وتصميم المحتوى والتحليلات وAI Agent وLLM Actions وMCP وCLI. أعلنت الشركة تجاوز 100 مليون دولار ARR في سبتمبر 2025، لكن لا توجد قوائم مالية أو إيرادات شهرية حالية منشورة.",
   "directory_snapshot": {
-    "monthly_revenue": "غير متوفر في بطاقة الدليل",
-    "monthly_traffic": "336K /mo",
-    "revenue_per_visitor": "$17.37 /visitor",
-    "solopreneur_score": "66.3",
-    "idea_label": "أتمتة تفاعل العملاء"
+    "monthly_revenue": null,
+    "monthly_traffic": null,
+    "revenue_per_visitor": null,
+    "solopreneur_score": 66.3,
+    "idea_label": "أتمتة تفاعل العملاء المبنية على البيانات",
+    "metric_notes": {
+      "monthly_revenue": "تجاوزت الشركة 100 مليون دولار ARR في سبتمبر 2025، لكن ARR ليس إيرادًا شهريًا محاسبيًا؛ لذلك وُضع null.",
+      "monthly_traffic": "لا يوجد مصدر أولي أو منهجية حديثة تدعم 336 ألف زيارة شهريًا.",
+      "revenue_per_visitor": "المقياس مشتق من تقدير إيراد ورقم حركة غير موثقين؛ لذلك أزيل.",
+      "solopreneur_score": "درجة تصنيفية خاصة بـStarter Story ولا تصف شركة تضم أكثر من 300 موظف."
+    },
+    "latest_verified_operating_snapshot": {
+      "as_of": "2026-08-03",
+      "arr": {
+        "amount_usd": 100000000,
+        "operator": "أكثر من",
+        "crossed_in": "2025-09",
+        "status": "company_reported",
+        "note": "ARR مقياس تعاقدي متكرر وليس إيرادًا محاسبيًا مدققًا."
+      },
+      "brands": {
+        "current_marketing_claim": "9,000+",
+        "historical_milestone_claim": "8,000+ عند إعلان تجاوز 100 مليون دولار ARR",
+        "note": "قد تختلف كلمة brands عن companies أو billing accounts."
+      },
+      "messages_past_12_months_at_milestone": 64000000000,
+      "team": {
+        "count": "300+",
+        "countries": "30+",
+        "status": "company_reported"
+      },
+      "plans": {
+        "essentials": {
+          "starting_price_usd_monthly": 100,
+          "included_profiles": 5000,
+          "included_email_sends_monthly": 1000000
+        },
+        "premium": {
+          "starting_price_usd_monthly": 1000,
+          "billing": "سنوي",
+          "volume": "مخصص"
+        },
+        "enterprise": {
+          "price": "مخصص"
+        },
+        "builder": {
+          "subscription": false,
+          "setup_and_testing": "مجاني",
+          "go_live_price_usd": 10
+        }
+      },
+      "ai_and_agent_products": [
+        "AI Agent beta",
+        "LLM Actions",
+        "Goals",
+        "Universal Search",
+        "MCP server",
+        "Customer.io CLI",
+        "Routines"
+      ],
+      "channels": [
+        "Email",
+        "Push",
+        "In-app",
+        "SMS",
+        "WhatsApp",
+        "LINE",
+        "Webhooks",
+        "Transactional messages",
+        "Notification inbox"
+      ]
+    },
+    "metric_distinctions": {
+      "revenue": "إيراد محاسبي خلال فترة؛ غير منشور حاليًا.",
+      "arr": "قيمة الاشتراكات المتكررة السنوية؛ تجاوزت 100 مليون دولار في سبتمبر 2025.",
+      "mrr": "لا يجوز اشتقاقه آليًا من ARR بوصفه رقمًا فعليًا.",
+      "brands_or_companies": "عدد المؤسسات التي تستخدم المنصة؛ لا يساوي المستخدمين أو العقود النشطة.",
+      "messages": "حجم إرسال تقني؛ لا يساوي إيرادًا.",
+      "traffic": "زيارات الموقع والتطبيق؛ غير منشورة.",
+      "valuation": "لا يوجد تقييم حالي رسمي معلن.",
+      "funding": "رأس مال خارجي منفصل عن ARR والربحية."
+    }
   },
   "company": {
-    "business_model": "اشتراكات SaaS B2B متكررة",
-    "customer_type": "الشركات الرقمية وتلك التي تقودها المنتجات والتي تحتاج إلى مراسلات سلوكية للعملاء",
+    "legal_name": "Peaberry Software, Inc. d/b/a Customer.io",
+    "legal_address": "9450 SW Gemini Dr., Suite 43920, Beaverton, Oregon 97008-7105, United States",
+    "jurisdiction": "Delaware, United States",
+    "sec_cik": "0001619078",
+    "business_model": "اشتراكات B2B SaaS وخطط استخدام تجمع رسومًا حسب الخطة وحجم الملفات والرسائل وأرصدة الذكاء الاصطناعي، مع Builder بنظام الدفع عند بدء الإرسال وعقود مؤسسية مخصصة.",
+    "customer_type": "شركات رقمية ومؤسسات تستخدم بيانات الطرف الأول لتشغيل رسائل ورحلات متعددة القنوات.",
     "founder": "كولين نيدركورن",
     "cofounder": "جون أليسون",
-    "founder_role": "شريك مؤسس",
-    "founders_count": "2",
-    "employees": "غير ملخص كرقم دقيق موثوق في هذا الملف",
+    "founder_role": "كولين نيدركورن مؤسس ورئيس تنفيذي؛ جون أليسون شريك مؤسس تاريخيًا ولا يظهر ضمن القيادة الحالية المنشورة.",
+    "founders_count": 2,
+    "current_leadership": {
+      "colin_nederkoorn": "Founder and Chief Executive Officer",
+      "john_schoenstein": "Chief Revenue Officer",
+      "jennifer_fong": "Chief People Officer",
+      "meenakshi_sharma": "Chief of Staff",
+      "matthew_newhook": "Chief Technology Officer",
+      "jason_lyman": "Chief Marketing Officer",
+      "zhi_li": "Chief Financial Officer"
+    },
+    "employees": "300+",
+    "employees_note": "ذكرت الشركة اجتماع أكثر من 300 موظف عن بُعد من أكثر من 30 دولة في Summit 2026؛ LinkedIn يعرض نطاق 201-500.",
     "started": "2012",
-    "location": "شملت خلفية المؤسس سنغافورة ومعهد رينسيلار؛ موقع الشركة لم يؤكد هنا",
-    "funding": "غير ملخص من الأسطر العامة المتاحة",
-    "profitability": "مصنف كمربح في ملف Starter Story",
-    "public_revenue_claim": "حوالي 5.83 مليون دولار شهرياً (ما يعادل 70 مليون دولار سنوياً) في ملف فبراير 2025"
+    "location": "بورتلاند، أوريغون، الولايات المتحدة بوصفها المقر العام، مع شركة موزعة عالميًا تعمل عن بُعد.",
+    "funding": "نمت الشركة بنموذج fundstrapping قبل Series A من Spectrum Equity بمشاركة Oregon Venture Fund عام 2022. لم يُعلن المبلغ رسميًا. يوجد Form D تاريخي بقيمة 776,498.77 دولارًا عام 2014 وتمويل جماعي عام 2021.",
+    "profitability": null,
+    "profitability_note": "أنهت الشركة 2021 رابحة وفق إعلانها؛ لا توجد حالة ربحية حالية منشورة.",
+    "public_revenue_claim": "تجاوزت 100 مليون دولار ARR في سبتمبر 2025؛ لا يساوي إيرادًا شهريًا.",
+    "private_company_status_as_of_2026_08_03": {
+      "status": "شركة خاصة",
+      "public_reporting": false,
+      "sec_filings": "Form D لعروض خاصة معفاة، وليس 10-K أو 10-Q.",
+      "current_valuation": null
+    },
+    "operating_status_as_of_2026_08_03": {
+      "status": "نشطة ومتوسعة",
+      "evidence": "المنصة والتسعير والوثائق وتحديثات يوليو 2026 والوظائف وإطلاقات AI وMCP وWhatsApp نشطة.",
+      "caution": "لا توجد قوائم مالية عامة أو NRR أو هامش أو صافي ربح."
+    }
   },
   "problem_and_product": [
-    "المنتجات الرقمية تحتاج إلى التواصل بشكل مختلف مع المستخدمين بناءً على أفعالهم وسماتهم ومرحلة دورة حياتهم.",
-    "يتيح Customer.io إرسال رسائل مخصصة ومبنية على الأحداث (Triggers) بدلاً من حملات تسويق مقاس واحد يناسب الجميع.",
-    "أصبحت المنصة نظاماً لأتمتة التسويق ورحلة العميل بالكامل.",
-    "العميل الأساسي هو منظمة B2B تدمج بيانات المنتج في تواصلها مع العملاء."
+    "تحتاج المنتجات الرقمية إلى التواصل حسب السلوك والسمات ومرحلة دورة الحياة بدل حملات موحدة.",
+    "تتوزع بيانات العميل بين التطبيق والمستودعات وCRM والتحليلات والإعلانات.",
+    "توحد Customer.io بيانات الطرف الأول وتفعّلها في شرائح ورحلات ورسائل متعددة القنوات.",
+    "تشمل المنصة Journeys وأدوات البيانات والتكاملات وDesign Studio والتحليلات وAI Agent.",
+    "تدعم البريد والدفع وداخل التطبيق وSMS وWhatsApp وLINE والويب هوكس والمعاملات.",
+    "توسع المنتج من تنفيذ الحملات إلى أن يساعد الوكيل في بنائها وتحليلها وتنفيذ مهام داخل مساحة العمل.",
+    "لا يزيل المنتج مسؤولية العميل عن الموافقة والخصوصية وجودة البيانات."
   ],
   "origin_story": [
-    "التقى المؤسسان وطورا المفهوم المبكر من خلال مشروع في فعالية Startup Weekend.",
-    "كانت الفكرة الأولى تشبه منتجاً أكثر تطوراً للتحليلات (Analytics).",
-    "دفعت محادثات العملاء المفهوم نحو التركيز على أتمتة الاتصال.",
-    "ساعدت الخبرة التكنولوجية والتجارية السابقة للمؤسس في سد الفجوة بين تطوير المنتج والمبيعات."
+    "بدأ كولين نيدركورن وجون أليسون الشركة عام 2012 بفكرة إرسال رسائل بناءً على ما فعله المستخدم أو لم يفعله داخل التطبيق.",
+    "كان المفهوم المبكر أقرب إلى التحليلات قبل أن تدفع محادثات العملاء نحو أتمتة التواصل.",
+    "انضم أول خمسة عملاء بناءً على الرؤية.",
+    "تبنت الشركة fundstrapping ونمت سنوات قبل رأس المال المؤسسي.",
+    "أصبحت موزعة بالكامل منذ 2014.",
+    "وصلت إلى نحو 20 مليون دولار ARR عند تمويل جماعي 2021 ثم 29.9 مليونًا في نهاية العام."
   ],
   "build_and_launch": [
-    "تم تقديم المنتج الأولي (MVP) لخمس شركات بسعر حوالي 10 دولارات شهرياً.",
-    "استخدمت البنية التحتية الأولية خدمات AWS و Google Cloud.",
-    "انتقل الفريق بعيداً عن البنية التحتية الفيزيائية المستضافة في كيبيك.",
-    "استخدمت بنية معمارية مبكرة قاعدة بيانات MySQL منفصلة لكل عميل.",
-    "ورد أن الشركة استغرقت حوالي عامين للوصول إلى أول مليون دولار كإيرادات سنوية (ARR)."
+    "2012: أول خمسة عملاء والرؤية الأساسية للرسائل المبنية على السلوك.",
+    "2014: فريق موزع بالكامل وForm D بقيمة 776,498.77 دولارًا.",
+    "2016: 1,000 شركة والتوسع إلى push وSMS وSlack والويب هوكس.",
+    "2018: Premium ودعم HIPAA.",
+    "2020: Visual Workflow Builder.",
+    "2021: تمويل جماعي عند نحو 20 مليون ARR وإنهاء العام عند 29.9 مليون بنمو 78%.",
+    "2022: Series A واستحواذا Gist وParcel وتوسيع SDKs وin-app.",
+    "2023: Data Pipelines متاح بصورة عامة.",
+    "2024: تحسينات الاستقرار والحصول على ISO 27001.",
+    "2025: تجاوز 100 مليون دولار ARR.",
+    "2026: AI Agent وLLM Actions وGoals وWhatsApp وLINE وMCP وCLI وBuilder."
   ],
   "costs_and_operations": [
-    "الملف المذكور لا يقدم دفتراً تفصيلياً موثوقاً لتكاليف التأسيس.",
-    "أعطت خيارات البنية التحتية المبكرة الأولوية لفصل بيانات العملاء ولكنها زادت من التعقيد التشغيلي.",
-    "الانتقال من البنية التحتية الفيزيائية المدارة ذاتياً نحو الخدمات السحابية دعم التوسع والنمو.",
-    "نمت الشركة من منتج أولي مدفوع صغير إلى منظمة B2B SaaS ضخمة."
+    "اعتمدت الشركة تاريخيًا على نمو ممول من الإيرادات قبل Series A.",
+    "تحتاج المنصة إلى بنية إرسال وتخزين واستعلام تعالج مليارات الرسائل وأحداث العملاء.",
+    "تستخدم بنية تخزين معلنة تجمع MySQL للبيانات الحديثة وGoogle Cloud Storage للأرشيف.",
+    "توفر مناطق بيانات منفصلة في الولايات المتحدة والاتحاد الأوروبي، مع مركز EU في بلجيكا.",
+    "تزيد قنوات SMS وWhatsApp والنماذج اللغوية تكاليف متغيرة.",
+    "تضم الشركة أكثر من 300 موظف موزعين عبر أكثر من 30 دولة.",
+    "لا توجد بيانات عامة عن تكلفة الإيراد أو هامش الربح الحالي."
   ],
   "monetization": [
-    "يحقق Customer.io أرباحاً من خلال خطط متكررة تعتمد على احتياجات العميل، الحجم، وقدرات المنصة.",
-    "كان تسعير المنتج الأولي (MVP) منخفضاً عمداً بحوالي 10 دولارات شهرياً لكل من الشركات الخمس المبكرة.",
-    "يجب التحقق من التسعير الرسمي الحالي مباشرة لأن نطاق العمل والمنتج توسع بشكل كبير."
+    "Essentials يبدأ من 100 دولار شهريًا ويشمل 5,000 ملف ومليون بريد شهريًا.",
+    "Premium يبدأ من 1,000 دولار شهريًا مع فوترة سنوية.",
+    "Enterprise بتسعير مخصص.",
+    "تجاوزات: 0.009 دولار لكل ملف إضافي و0.12 دولار لكل 1,000 بريد إضافي.",
+    "أرصدة AI إضافية بقيمة 10 دولارات لكل 100 ألف رصيد.",
+    "Builder مجاني للبناء والاختبار ويبدأ الإرسال مقابل 10 دولارات دون اشتراك شهري.",
+    "SMS وWhatsApp قد تحمل تكاليف Meta أو Twilio أو مزودي الاتصالات.",
+    "لا توجد بيانات تفصل الإيراد حسب المنتج أو القناة."
   ],
   "growth": [
-    "أظهر التثقيف عبر البريد الإلكتروني ودراسات حالة العملاء استخدامات عملية واضحة.",
-    "جذب الـ SEO والتسويق بالمحتوى الفرق التي تبحث عن حلول للرسائل السلوكية ودورة حياة العميل.",
-    "ساعدت الشراكات والتشبيك في بناء المصداقية داخل بيئة الشركات الناشئة وبرمجيات الـ SaaS.",
-    "أصبح نجاح العملاء والاحتفاظ بهم أمراً مهماً مع ترسيخ التكاملات وتعميق سير عمل الرسائل."
+    "أنهت الشركة 2021 عند 29.9 مليون دولار ARR بنمو 78% وربحية سنوية معلنة.",
+    "تجاوزت 100 مليون دولار ARR في سبتمبر 2025.",
+    "ارتفع عدد المؤسسات من 3,800+ في 2022 إلى 8,000+ عند محطة ARR، ثم 9,000+ علامة في التسعير الحالي.",
+    "عالج العملاء 64 مليار رسالة خلال الاثني عشر شهرًا السابقة لمحطة ARR.",
+    "نما التوزيع عبر self-serve والمبيعات المساعدة والشركاء والمحتوى.",
+    "لا توجد نسبة نمو ARR حديثة بعد 100 مليون أو بيانات churn وNRR منشورة."
   ],
   "tools": [
-    "AWS",
-    "Google Cloud",
-    "MySQL",
-    "البنية التحتية للأحداث السلوكية والرسائل",
-    "أنظمة أتمتة البريد الإلكتروني"
+    "Visual Workflow Builder وJourneys.",
+    "Data Pipelines وPipelines API وTrack API وApp API.",
+    "SDKs للويب وiOS وAndroid وReact Native وExpo وخوادم متعددة.",
+    "Email وPush وIn-app وSMS وWhatsApp وLINE وWebhooks.",
+    "Design Studio مع تقنيات Parcel المدمجة.",
+    "AI Agent وLLM Actions وAI credits وGoals وUniversal Search.",
+    "MCP server وCustomer.io CLI.",
+    "MySQL للبيانات الحديثة وGCS للأرشيف في النظام المعلن.",
+    "مناطق بيانات US وEU ومركز أوروبي في بلجيكا.",
+    "Reverse ETL وتكاملات مستودعات وCRM.",
+    "ISO 27001 وSOC 2 Type II وHIPAA-ready و2FA وSSO.",
+    "تنبيه تقني: الإشارات التاريخية إلى AWS وGoogle Cloud وMySQL لا تثبت بنية سحابية موحدة كاملة لكل المنصة في 2026."
   ],
   "revenue_timeline": [
     {
-      "date": "2012 (المنتج الأولي MVP)",
-      "amount": "$10 /month للشركات المبكرة",
-      "type": "تجربة تسعير أولية",
-      "note": "تم تقديم المنتج الأولي لمجموعة صغيرة من خمس شركات."
+      "date": "2012",
+      "amount": "$10 /month تقريبًا لخمس شركات مبكرة",
+      "type": "MVP تاريخي",
+      "note": "من دراسة حالة ثانوية."
     },
     {
-      "date": "بعد عامين تقريباً من الإطلاق",
+      "date": "بعد نحو عامين",
       "amount": "$1M ARR",
-      "type": "علامة نمو فارقة",
-      "note": "وصف الملف الوصول لهذا الإنجاز بعد حوالي عامين."
+      "type": "محطة تاريخية",
+      "note": "التاريخ الدقيق غير موثق رسميًا."
     },
     {
-      "date": "ملف 22-02-2025",
-      "amount": "$5.83M /month (مقدرة)",
-      "type": "تقدير Starter Story",
-      "note": "ما يعادل تقريباً عنوان المقال الذي يشير إلى 70 مليون دولار سنوياً."
+      "date": "2021-12-31",
+      "amount": "$29.9M ARR",
+      "type": "إعلان رسمي",
+      "note": "نمو 78% وربحية سنوية معلنة."
+    },
+    {
+      "date": "2025-09",
+      "amount": "$100M+ ARR",
+      "type": "إعلان رسمي",
+      "note": "لا يتحول إلى MRR أو إيراد محاسبي."
     }
   ],
   "lessons": [
-    "يمكن أن تكشف محادثات العملاء المبكرة أن المنتج ذو القيمة يختلف عن المفهوم الأولي.",
-    "توليد الطيارين المدفوعين بأسعار منخفضة (Paid pilots) يمكن أن يعطي تحققاً (Validation) أقوى من الاستخدام المجاني.",
-    "يجب إعادة تقييم معمارية البنية التحتية التي تناسب خمسة عملاء قبل أن يجعل التوسع عملية الهجرة أكثر صعوبة."
-  ],
-  "sources": [
-    {
-      "label": "دليل Starter Story",
-      "url": "https://www.starterstory.com/data/micro-saas-ideas",
-      "coverage": "الزيارات، الإيراد لكل زائر، التقييم، وتسمية البطاقة"
-    },
-    {
-      "label": "دراسة حالة Customer.io",
-      "url": "https://www.starterstory.com/customer-io-breakdown",
-      "coverage": "المؤسس، الأصل، MVP، البنية التحتية، تقدير الإيرادات، والنمو"
-    },
-    {
-      "label": "الموقع الرسمي",
-      "url": "https://customer.io",
-      "coverage": "المنتج والتحقق من التسعير الحالي"
-    }
+    "ARR ليس إيرادًا شهريًا؛ يجب حفظه بتاريخ وتعريف منفصلين.",
+    "محادثات العملاء قد تنقل المنتج من التحليلات إلى أتمتة تواصل ذات قيمة أوضح.",
+    "النمو الممول من الإيراد يمكن أن يؤخر التمويل المؤسسي حتى تنضج اقتصاديات المنتج.",
+    "النموذج الهجين بين self-serve والمبيعات يسمح بخدمة شركة ناشئة ومؤسسة كبيرة.",
+    "بنية مناسبة لخمسة عملاء قد تحتاج إعادة تصميم عند مليارات الرسائل.",
+    "الاستحواذ على أدوات متخصصة مثل Gist وParcel يسرع جودة المنتج.",
+    "توحيد البيانات والرسائل يزيد مسؤولية المنصة عن الأمان والتوافر.",
+    "إضافة AI تحتاج وحدة تسعير وحدود صلاحيات.",
+    "عدد العلامات وحجم الرسائل يثبتان النطاق ولا يكشفان الاحتفاظ أو الربحية."
   ],
   "data_quality": [
-    "الإيرادات هي تقدير ملف شخصي بدلاً من بيان مالي مدقق.",
-    "المعمارية الأولية والتسعير يصفان مراحل تاريخية للشركة.",
-    "بطاقة الدليل لم تظهر الإيرادات الشهرية.",
-    "لا يوجد أحداث عملاء خاصة، أو بيانات رسائل، أو بيانات تسجيل دخول مضمنة."
+    "أقوى مقياس مالي حديث هو إعلان الشركة تجاوز 100 مليون دولار ARR؛ لا توجد قوائم مالية مدققة.",
+    "أرقام الزيارات وRevenue per Visitor في الدليل لم تُستخدم لغياب المنهجية.",
+    "صفحة التسعير الحالية هي المرجع الأقوى للخطط والأسعار.",
+    "يوجد اختلاف بين 8,000+ شركة و9,000+ علامة و7,300+ في Boilerplate أقدم؛ تختلف التواريخ والتعريفات.",
+    "Series A مؤكدة رسميًا لكن مبلغها وتقييمها غير معلنين.",
+    "Form D يثبت عرضًا خاصًا تاريخيًا فقط.",
+    "البنية التقنية المنشورة جزئية.",
+    "الربحية مؤكدة لعام 2021 فقط."
   ],
   "research_metadata": {
-    "researched_on": "2026-07-28",
-    "scope": "المعلومات العامة فقط",
-    "source_method": "Starter Story",
+    "researched_on": "2026-08-03",
+    "scope": "المعلومات العامة فقط مع أولوية للموقع والوثائق وSEC والمستثمر",
+    "source_method": "Official company + official docs + SEC + investor + limited secondary history",
     "private_backend_data_included": false,
-    "copyright_note": "ملخص مستقل"
+    "copyright_note": "ملخص وتحليل مستقلان",
+    "standard": "Professional V2",
+    "verified_through": "2026-08-03"
   },
-  "id": "customer-io"
+  "id": "customer-io",
+  "financials": {
+    "current_monthly_revenue_usd": null,
+    "current_accounting_revenue_usd": null,
+    "current_arr_usd": 100000000,
+    "current_arr_operator": "أكثر من",
+    "arr_as_of": "2025-09",
+    "current_profit_usd": null,
+    "current_cash_usd": null,
+    "current_debt_usd": null,
+    "current_valuation_usd": null,
+    "audited_financial_statements_available": false,
+    "historical_financial_metrics": [
+      {
+        "period": "2021",
+        "arr_usd": 29900000,
+        "arr_growth_yoy": "78%",
+        "profitability": "ربحية سنوية وفق الشركة"
+      },
+      {
+        "period": "2025-09",
+        "arr_usd": 100000000,
+        "operator": "أكثر من",
+        "profitability": null
+      }
+    ],
+    "funding": {
+      "form_d_2014": {
+        "amount_sold_usd": 776498.77,
+        "investors": 23,
+        "security": "Equity",
+        "classification": "exempt_private_offering"
+      },
+      "crowdfunding_2021": {
+        "investors": "نحو 2,500",
+        "arr_at_time_usd": 20000000,
+        "amount_raised_usd": null,
+        "classification": "crowdfunding described by company"
+      },
+      "series_a_2022": {
+        "lead": "Spectrum Equity",
+        "participant": "Oregon Venture Fund",
+        "official_amount_usd": null,
+        "official_valuation_usd": null,
+        "classification": "primary financing",
+        "note": "لم يعلن بيان الشركة أو المستثمر مبلغ الجولة أو التقييم؛ لم تُستخدم تقديرات أسواق خاصة."
+      }
+    },
+    "valuation": {
+      "current_valuation": null,
+      "note": "لا توجد جولة مسعرة أو معاملة رسمية حديثة تعلن تقييمًا حاليًا. ARR ليس تقييمًا."
+    },
+    "revenue_streams": [
+      "اشتراكات Essentials وPremium وEnterprise.",
+      "رسوم حسب حجم الملفات والرسائل والتجاوزات.",
+      "أرصدة AI لـLLM Actions واستخدامات الذكاء الاصطناعي.",
+      "Builder بنموذج الدفع عند بدء الإرسال.",
+      "عقود بنية مخصصة ودعم وHIPAA وخدمات تنفيذ حسب الاتفاق.",
+      "لا توجد بيانات تفصل إيراد كل قناة أو منتج."
+    ]
+  },
+  "market_data": {
+    "target_audience": "فرق دورة حياة العميل والنمو والمنتج والتسويق والبيانات والهندسة في الشركات الرقمية والمؤسسات التي تستخدم بيانات الطرف الأول لتخصيص الاتصال.",
+    "market_size": null,
+    "market_size_note": "لم يُدرج تقدير عام لسوق marketing automation أو CDP لأن المنصة تنافس عبر الرسائل والبيانات والتصميم والتحليلات والوكلاء.",
+    "growth_rate": null,
+    "growth_rate_note": "أحدث معدل رسمي محدد هو نمو ARR بنسبة 78% في 2021. لا توجد نسبة نمو حالية بعد محطة 100 مليون دولار ARR.",
+    "competitive_context": [
+      "Braze",
+      "Iterable",
+      "Klaviyo",
+      "HubSpot",
+      "Salesforce Marketing Cloud",
+      "Adobe Journey Optimizer",
+      "Twilio Segment وEngage",
+      "OneSignal",
+      "Mailchimp",
+      "RudderStack",
+      "أدوات AI-native لأتمتة التسويق"
+    ],
+    "regulatory_and_security_context": {
+      "privacy_roles": "تعمل Customer.io عادة كمعالج أو مزود خدمة، بينما يبقى العميل مسؤولًا عن الأساس القانوني والموافقة والمحتوى والجمهور.",
+      "data_residency": "مناطق حساب US وEU؛ مركز بيانات الاتحاد الأوروبي في بلجيكا.",
+      "certifications": [
+        "ISO 27001 حتى سبتمبر 2027 وفق الشهادة المنشورة",
+        "SOC 2 Type II للأمن والتوافر",
+        "HIPAA-ready مع BAA للخطط المؤهلة",
+        "EU-US Data Privacy Framework"
+      ],
+      "messaging_compliance": [
+        "قواعد البريد ومكافحة الرسائل المزعجة",
+        "موافقات SMS وWhatsApp والقوالب المعتمدة",
+        "GDPR وحقوق الحذف والكبت",
+        "قوانين خصوصية الولايات الأمريكية"
+      ],
+      "ai_risk": "يسمح MCP وCLI وAI Agent بالوصول إلى بيانات الملفات وتعديل الحملات والشرائح؛ تتطلب الأدوات صلاحيات دقيقة وموافقات على الكتابة والحذف.",
+      "customer_responsibility": "توفر المنصة أدوات للخصوصية والأمان لكنها لا تستبدل الاستشارة القانونية أو إدارة الموافقات."
+    }
+  },
+  "analysis": {
+    "core_thesis": "القيمة الأساسية لـCustomer.io ليست إرسال البريد، بل تحويل بيانات الطرف الأول والأحداث إلى قرارات واتصالات قابلة للتنفيذ عبر قنوات متعددة. انتقالها إلى AI Agent وMCP وCLI يجعلها طبقة تشغيل للبشر والوكلاء، لكنه يرفع مخاطر الصلاحيات والخصوصية وتكاليف الاستدلال.",
+    "what_changed": [
+      "تجاوزت ARR الرسمي 100 مليون دولار، متجاوزة تقدير 70 مليونًا في الملف الأصلي.",
+      "تعرض صفحة التسعير الحالية 9,000+ علامة بدل أرقام الشركات الأقدم.",
+      "أصبح المنتج منصة موحدة بدل فصل Journeys وData Pipelines كمنتجين مستقلين بالكامل.",
+      "أضافت AI Agent وLLM Actions وGoals وUniversal Search وأرصدة AI.",
+      "أطلقت MCP وCLI للوكلاء والبرامج النصية.",
+      "أضافت WhatsApp الأصلي وLINE وNotification Inbox.",
+      "أضافت Builder بنموذج لا يعتمد على اشتراك شهري.",
+      "توسع الفريق إلى أكثر من 300 موظف في أكثر من 30 دولة.",
+      "بقيت الشركة خاصة ولا تنشر تقييمًا أو قوائم مالية حالية."
+    ],
+    "competitive_advantage": [
+      "تاريخ طويل في الرسائل المبنية على الأحداث والسلوك.",
+      "جمع الرسائل وCDP والتصميم والتحليلات في منصة واحدة.",
+      "قدرة على التعامل مع أحجام رسائل وبيانات كبيرة.",
+      "تسعير يبدأ ذاتيًا ويتدرج إلى بنية مؤسسية.",
+      "بيانات US وEU وخيارات HIPAA والحوكمة.",
+      "قنوات واسعة تشمل البريد والدفع وداخل التطبيق وSMS وWhatsApp.",
+      "MCP وCLI وواجهات API تجعل المنصة قابلة للوكلاء والمطورين.",
+      "نمو ممول من الإيراد لسنوات قبل رأس المال المؤسسي.",
+      "قاعدة 9,000+ علامة وخبرة في دورة حياة العميل."
+    ],
+    "risks_and_constraints": [
+      "لا توجد شفافية عامة عن الإيراد المحاسبي أو الهامش أو صافي الربح أو التدفق النقدي.",
+      "ARR لا يكشف الخصومات أو الخدمات أو مدة العقود أو التحصيل.",
+      "الرسائل وملفات العملاء تحمل بيانات شخصية وحساسة.",
+      "AI Agent وMCP قد ينفذان تغييرات واسعة إذا أُعطيت صلاحيات غير مناسبة.",
+      "تكاليف النماذج اللغوية والقنوات الخارجية قد تضغط الهامش.",
+      "التسعير حسب الملفات والرسائل والأرصدة قد يصعب التنبؤ به.",
+      "المنافسون الكبار يجمعون CRM وبيانات وإعلانات ومبيعات ضمن حزم أوسع.",
+      "قابلية التسليم تعتمد على سمعة العميل والمحتوى والمجال.",
+      "WhatsApp وSMS يعتمدان على قواعد وأسعار جهات خارجية.",
+      "جودة التخصيص رهينة جودة التتبع والهوية والمخططات.",
+      "التكاملات قد تنقل البيانات خارج منطقة الحساب باختيار العميل.",
+      "الشركة الخاصة لا توفر تقارير ربع سنوية قابلة للمقارنة."
+    ],
+    "outlook_as_of_2026_08_03": "Customer.io شركة SaaS خاصة واسعة النطاق تجاوزت 100 مليون دولار ARR وتتحول إلى منصة تفاعل مبنية للبشر والوكلاء. التصنيف المحافظ: منصة Customer Engagement مربحة تاريخيًا وعالية النمو مع ARR رسمي قوي وشفافية مالية محدودة."
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "label": "إعلان 100 مليون ARR",
+      "title": "Customer.io crossed $100M: A note from the CEO",
+      "publisher": "Customer.io",
+      "source_type": "إعلان رسمي",
+      "publication_date": "2025",
+      "url": "https://customer.io/learn/announcements/customerio-crossed-100m-note-from-ceo",
+      "coverage": "ARR والعملاء والرسائل والمؤسسون والتسلسل التاريخي",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S2",
+      "label": "التسعير الحالي",
+      "title": "Pricing + Plans",
+      "publisher": "Customer.io",
+      "source_type": "صفحة تسعير رسمية",
+      "publication_date": "2026",
+      "url": "https://customer.io/pricing",
+      "coverage": "الخطط والأسعار والملفات والرسائل والأرصدة و9,000+ علامة",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S3",
+      "label": "خطة Builder",
+      "title": "Builder plan: pay-as-you-go",
+      "publisher": "Customer.io Docs",
+      "source_type": "وثائق تسعير رسمية",
+      "publication_date": "2026-07-15",
+      "url": "https://docs.customer.io/accounts/billing/builder-plan/",
+      "coverage": "البناء المجاني والبدء مقابل 10 دولارات",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S4",
+      "label": "القيادة",
+      "title": "About Customer.io",
+      "publisher": "Customer.io",
+      "source_type": "صفحة شركة رسمية",
+      "publication_date": "2026",
+      "url": "https://customer.io/about",
+      "coverage": "القيادة الحالية ونطاق المنصة",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S5",
+      "label": "الكيان القانوني",
+      "title": "Terms of Service",
+      "publisher": "Customer.io",
+      "source_type": "شروط قانونية رسمية",
+      "publication_date": "2026-04",
+      "url": "https://customer.io/legal/terms-of-service",
+      "coverage": "Peaberry Software والعنوان القانوني",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S6",
+      "label": "صفحة الشركة",
+      "title": "Customer.io Company Page",
+      "publisher": "LinkedIn",
+      "source_type": "صفحة شركة رسمية على منصة مهنية",
+      "publication_date": "2026",
+      "url": "https://www.linkedin.com/company/customer-io",
+      "coverage": "بورتلاند و201-500 موظف وشركة خاصة و2012",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S7",
+      "label": "Series A",
+      "title": "Customer.io Raised our Series A",
+      "publisher": "Customer.io",
+      "source_type": "إعلان تمويل رسمي",
+      "publication_date": "2022-03",
+      "url": "https://customer.io/learn/announcements/series-a",
+      "coverage": "Spectrum وOregon Venture Fund وARR وربحية 2021",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S8",
+      "label": "SEC 2014",
+      "title": "Peaberry Software Inc. Form D",
+      "publisher": "U.S. SEC",
+      "source_type": "إفصاح أوراق مالية رسمي",
+      "publication_date": "2014-09-12",
+      "url": "https://www.sec.gov/Archives/edgar/data/1619078/000161907814000001/xslFormDX01/primary_doc.xml",
+      "coverage": "الكيان وديلاوير والمبلغ والمستثمرون وCIK",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S9",
+      "label": "Data Pipelines",
+      "title": "Data Pipelines is now open for all",
+      "publisher": "Customer.io",
+      "source_type": "إعلان منتج رسمي",
+      "publication_date": "2023-07",
+      "url": "https://customer.io/learn/announcements/data-pipelines-general-availability",
+      "coverage": "CDP والتكاملات",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S10",
+      "label": "إطلاقات AI",
+      "title": "Customer.io's biggest product release: AI Agent and more",
+      "publisher": "Customer.io",
+      "source_type": "إعلان منتج رسمي",
+      "publication_date": "2026",
+      "url": "https://customer.io/learn/announcements/biggest-ai-marketing-release",
+      "coverage": "AI Agent وLLM Actions وGoals وWhatsApp وLINE",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S11",
+      "label": "MCP",
+      "title": "Get started with the Customer.io MCP server",
+      "publisher": "Customer.io Docs",
+      "source_type": "وثائق تقنية رسمية",
+      "publication_date": "2026-07-15",
+      "url": "https://docs.customer.io/ai/mcp/get-started/",
+      "coverage": "MCP والوصول للحملات والشرائح والملفات",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S12",
+      "label": "CLI",
+      "title": "Get started with the Customer.io CLI",
+      "publisher": "Customer.io Docs",
+      "source_type": "وثائق تقنية رسمية",
+      "publication_date": "2026-07-15",
+      "url": "https://docs.customer.io/ai/cli/get-started/",
+      "coverage": "CLI والوكلاء والوصول البرمجي",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S13",
+      "label": "الأمان",
+      "title": "Customer.io Security Qualifications",
+      "publisher": "Customer.io Docs",
+      "source_type": "وثائق امتثال رسمية",
+      "publication_date": "2026-07-10",
+      "url": "https://docs.customer.io/accounts/security/certifications/",
+      "coverage": "ISO 27001 وSOC 2 وHIPAA",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S14",
+      "label": "مناطق البيانات",
+      "title": "Account Regions (US and EU)",
+      "publisher": "Customer.io Docs",
+      "source_type": "وثائق بيانات رسمية",
+      "publication_date": "2026-07-15",
+      "url": "https://docs.customer.io/accounts/settings/data-centers/",
+      "coverage": "US وEU وبلجيكا وDPF",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S15",
+      "label": "البنية الهندسية",
+      "title": "Evolving Data Storage and Querying at Customer.io",
+      "publisher": "Customer.io",
+      "source_type": "مقال هندسي رسمي",
+      "publication_date": "2025",
+      "url": "https://customer.io/learn/how-we-work/evolving-data-storage-querying",
+      "coverage": "MySQL وGCS والتخزين متعدد المستويات",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S16",
+      "label": "استحواذ Gist",
+      "title": "Welcoming Gist to Customer.io",
+      "publisher": "Customer.io",
+      "source_type": "إعلان استحواذ رسمي",
+      "publication_date": "2022",
+      "url": "https://customer.io/learn/announcements/welcoming-gist",
+      "coverage": "الرسائل داخل التطبيق",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S17",
+      "label": "استحواذ Parcel",
+      "title": "Welcoming Parcel",
+      "publisher": "Customer.io",
+      "source_type": "إعلان استحواذ رسمي",
+      "publication_date": "2022",
+      "url": "https://customer.io/learn/announcements/welcoming-parcel",
+      "coverage": "محرر كود البريد ودمجه",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S18",
+      "label": "الفريق الموزع",
+      "title": "Summit 2026: 300+ teammates in Lisbon",
+      "publisher": "Customer.io",
+      "source_type": "إعلان تشغيل رسمي",
+      "publication_date": "2026",
+      "url": "https://customer.io/learn/how-we-work/summit-lisbon-2026",
+      "coverage": "300+ موظف و30+ دولة",
+      "primary_source": true,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S19",
+      "label": "دراسة Starter Story",
+      "title": "Customer.io Breakdown",
+      "publisher": "Starter Story",
+      "source_type": "دراسة حالة ثانوية",
+      "publication_date": "2025-02-22",
+      "url": "https://www.starterstory.com/customer-io-breakdown",
+      "coverage": "MVP والتسعير المبكر والبنية التاريخية وتقدير الإيراد",
+      "primary_source": false,
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S20",
+      "label": "دليل Starter Story",
+      "title": "Micro SaaS Ideas — Customer.io",
+      "publisher": "Starter Story",
+      "source_type": "دليل بيانات ثانوي",
+      "publication_date": null,
+      "url": "https://www.starterstory.com/data/micro-saas-ideas",
+      "coverage": "الحركة المقدرة وRPV وSolopreneur Score",
+      "primary_source": false,
+      "accessed_at": "2026-08-03"
+    }
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "verified_through": "2026-08-03",
+    "overall_status": "verified_with_material_arr_pricing_product_and_company_updates",
+    "key_corrections": [
+      {
+        "field": "headline_and_summary",
+        "original_claim": "منصة رسائل وأتمتة رحلة العميل",
+        "status": "expanded",
+        "correction": "أضيفت البيانات والتحليلات وAI Agent وMCP وCLI والقنوات الجديدة.",
+        "evidence_ids": [
+          "E1",
+          "E5",
+          "E8"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_revenue",
+        "original_claim": "تقدير 5.83M شهريًا",
+        "status": "corrected",
+        "correction": "وُضع null وسُجل 100M+ ARR الرسمي كمقياس منفصل.",
+        "evidence_ids": [
+          "E1",
+          "E2"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_traffic",
+        "original_claim": "336K /mo",
+        "status": "removed_unverified",
+        "correction": "وُضع null لغياب منهجية أو مصدر أولي.",
+        "evidence_ids": [
+          "E16"
+        ]
+      },
+      {
+        "field": "directory_snapshot.revenue_per_visitor",
+        "original_claim": "$17.37 /visitor",
+        "status": "removed_invalid_derivation",
+        "correction": "مشتق من تقديرات غير متزامنة؛ وُضع null.",
+        "evidence_ids": [
+          "E16"
+        ]
+      },
+      {
+        "field": "company.location",
+        "original_claim": "غير مؤكد",
+        "status": "updated",
+        "correction": "المقر العام Portland وعنوان قانوني في Beaverton مع تشغيل remote-first.",
+        "evidence_ids": [
+          "E3",
+          "E4"
+        ]
+      },
+      {
+        "field": "company.employees",
+        "original_claim": "غير ملخص",
+        "status": "updated",
+        "correction": "300+ موظف في 30+ دولة وفق إعلان 2026.",
+        "evidence_ids": [
+          "E6"
+        ]
+      },
+      {
+        "field": "company.funding",
+        "original_claim": "غير ملخص",
+        "status": "expanded",
+        "correction": "أضيف Form D 2014 والتمويل الجماعي 2021 وSeries A 2022 دون اختلاق مبلغ الأخيرة.",
+        "evidence_ids": [
+          "E11",
+          "E12"
+        ]
+      },
+      {
+        "field": "company.profitability",
+        "original_claim": "مصنف كمربح",
+        "status": "qualified",
+        "correction": "ثبتت ربحية 2021 فقط؛ الحالة الحالية null.",
+        "evidence_ids": [
+          "E2"
+        ]
+      },
+      {
+        "field": "monetization",
+        "original_claim": "اشتراكات حسب الحجم فقط",
+        "status": "updated",
+        "correction": "أضيفت الخطط الحالية والتجاوزات وAI credits وBuilder.",
+        "evidence_ids": [
+          "E7",
+          "E10"
+        ]
+      },
+      {
+        "field": "tools",
+        "original_claim": "AWS وGoogle Cloud وMySQL كبنية حالية",
+        "status": "qualified",
+        "correction": "أُبقي MySQL وGCS حيث وثقتهما الشركة، وصُنفت الإشارات الأخرى تاريخية أو جزئية.",
+        "evidence_ids": [
+          "E13",
+          "E14"
+        ]
+      },
+      {
+        "field": "public_revenue_claim",
+        "original_claim": "70M سنويًا في فبراير 2025",
+        "status": "superseded",
+        "correction": "الإعلان الرسمي الأحدث يتجاوز 100M ARR منذ سبتمبر 2025.",
+        "evidence_ids": [
+          "E1"
+        ]
+      }
+    ],
+    "sec_search_status": {
+      "applicable": true,
+      "company": "Peaberry Software Inc.",
+      "cik": "0001619078",
+      "filings_found": [
+        "Form D filed 2014-09-12"
+      ],
+      "public_company_reports": false,
+      "note": "Form D إشعار بعرض خاص معفى ولا يقدم قوائم مالية."
+    },
+    "known_source_discrepancies": [
+      {
+        "topic": "عدد العملاء",
+        "detail": "إعلان ARR يذكر 8,000+ شركة، التسعير الحالي 9,000+ علامة، وBoilerplate أقدم 7,300+ علامة."
+      },
+      {
+        "topic": "Series A",
+        "detail": "الإعلان الرسمي يؤكد المستثمرين دون مبلغ أو تقييم؛ لم تُستخدم تقديرات أسواق خاصة."
+      },
+      {
+        "topic": "الإيراد",
+        "detail": "Starter Story قدّر 70 مليونًا سنويًا قبل إعلان الشركة 100 مليون ARR."
+      },
+      {
+        "topic": "البنية التقنية",
+        "detail": "المصادر التاريخية تذكر AWS وGoogle Cloud وMySQL، والمقال الحديث يصف MySQL وGCS لنظام محدد."
+      },
+      {
+        "topic": "الربحية",
+        "detail": "إعلان 2022 يثبت ربحية 2021 فقط."
+      }
+    ],
+    "limitations": [
+      "الشركة خاصة ولا تنشر قوائم مالية مدققة أو تقارير ربع سنوية.",
+      "ARR لا يكشف الإيراد المحاسبي أو الهامش أو التحصيل.",
+      "لا توجد بيانات حديثة لـNRR أو churn أو CAC أو صافي الربح.",
+      "لا يوجد تقييم رسمي حالي.",
+      "مبلغ Series A غير معلن رسميًا.",
+      "9,000+ علامة لا تكشف عدد الحسابات المدفوعة أو النشاط.",
+      "لا توجد بيانات زيارات شهرية موثقة.",
+      "بعض ميزات AI في beta أو إطلاق حديث.",
+      "تكاليف SMS وWhatsApp تعتمد على أطراف خارجية.",
+      "الإفصاحات التقنية تغطي أجزاء من البنية فقط."
+    ],
+    "programmatic_validation": {
+      "input_file_parse": true,
+      "json_parse": true,
+      "json_schema_validation": true,
+      "all_original_top_level_keys_preserved": true,
+      "required_original_paths_preserved": true,
+      "all_source_ids_unique": true,
+      "all_evidence_source_references_valid": true,
+      "all_key_correction_evidence_references_valid": true,
+      "no_nan_or_infinity": true,
+      "monthly_metrics_not_invented": true,
+      "arr_separated_from_accounting_revenue": true,
+      "current_valuation_not_invented": true,
+      "series_a_amount_not_invented": true,
+      "historical_profitability_qualified": true,
+      "customer_count_discrepancy_preserved": true,
+      "current_plans_and_builder_preserved": true,
+      "sec_private_status_distinguished": true,
+      "historical_and_current_tech_qualified": true,
+      "utf8_arabic_content_present": true,
+      "source_count": 20,
+      "primary_source_count": 18,
+      "evidence_item_count": 20,
+      "lesson_count": 9,
+      "top_level_key_count": 29,
+      "errors": [],
+      "validated_at": "2026-08-03T21:03:00+03:00",
+      "validation_status": "passed"
+    }
+  },
+  "evidence_map_schema": {
+    "description": "خريطة تربط الادعاءات الجوهرية بالمصادر والمسارات.",
+    "item_fields": {
+      "claim": "الادعاء المختصر",
+      "json_paths": "المسارات المعتمدة على الدليل",
+      "classification": "company | arr | customers | pricing | funding | product | ai | technology | security | acquisition | traffic | unavailable",
+      "status": "verified | verified_company_reported | historical_only | corrected | unavailable",
+      "source_ids": "معرفات المصادر",
+      "notes": "حدود الدليل"
+    }
+  },
+  "evidence_map": {
+    "E1": {
+      "claim": "تجاوزت Customer.io 100M ARR في سبتمبر 2025 وخدمت 8,000+ شركة وعالجت 64B رسالة.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.arr",
+        "financials.current_arr_usd",
+        "growth",
+        "revenue_timeline"
+      ],
+      "classification": "arr",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S1"
+      ],
+      "notes": "ARR ورسائل وأعداد شركة، لا قوائم مدققة."
+    },
+    "E2": {
+      "claim": "أنهت 2021 عند 29.9M ARR بنمو 78% وربحية سنوية.",
+      "json_paths": [
+        "company.profitability",
+        "financials.historical_financial_metrics",
+        "growth"
+      ],
+      "classification": "arr",
+      "status": "historical_only",
+      "source_ids": [
+        "S7"
+      ],
+      "notes": "لا يثبت ربحية 2026."
+    },
+    "E3": {
+      "claim": "الاسم القانوني Peaberry Software وعنوان Beaverton.",
+      "json_paths": [
+        "company.legal_name",
+        "company.legal_address"
+      ],
+      "classification": "company",
+      "status": "verified",
+      "source_ids": [
+        "S5"
+      ],
+      "notes": "عنوان قانوني لا مكتب فعلي بالضرورة."
+    },
+    "E4": {
+      "claim": "بورتلاند مقر عام والشركة خاصة ومؤسسة عام 2012.",
+      "json_paths": [
+        "company.location",
+        "company.started",
+        "company.private_company_status_as_of_2026_08_03"
+      ],
+      "classification": "company",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S6"
+      ],
+      "notes": "الشركة remote-first."
+    },
+    "E5": {
+      "claim": "تشمل المنصة البيانات والرسائل وAI Agent والقنوات المتعددة.",
+      "json_paths": [
+        "summary",
+        "problem_and_product",
+        "analysis.what_changed"
+      ],
+      "classification": "product",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S2",
+        "S9",
+        "S10"
+      ],
+      "notes": "بعض AI في beta."
+    },
+    "E6": {
+      "claim": "تضم الشركة 300+ موظف عبر 30+ دولة.",
+      "json_paths": [
+        "company.employees",
+        "directory_snapshot.latest_verified_operating_snapshot.team",
+        "costs_and_operations"
+      ],
+      "classification": "company",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S18"
+      ],
+      "notes": "ليس عدد FTE مدققًا."
+    },
+    "E7": {
+      "claim": "Essentials من $100 وPremium من $1,000 وEnterprise مخصص.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.plans",
+        "monetization",
+        "financials.revenue_streams"
+      ],
+      "classification": "pricing",
+      "status": "verified",
+      "source_ids": [
+        "S2"
+      ],
+      "notes": "قابلة للتغيير."
+    },
+    "E8": {
+      "claim": "أطلقت AI Agent وLLM Actions وGoals وWhatsApp وLINE.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.ai_and_agent_products",
+        "analysis.what_changed"
+      ],
+      "classification": "ai",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S10"
+      ],
+      "notes": "تكاليف خارجية لبعض القنوات."
+    },
+    "E9": {
+      "claim": "يوفر MCP وCLI وصولًا برمجيًا لمساحات العمل.",
+      "json_paths": [
+        "tools",
+        "analysis.risks_and_constraints",
+        "market_data.regulatory_and_security_context.ai_risk"
+      ],
+      "classification": "ai",
+      "status": "verified",
+      "source_ids": [
+        "S11",
+        "S12"
+      ],
+      "notes": "تحتاج صلاحيات دقيقة."
+    },
+    "E10": {
+      "claim": "Builder مجاني للبناء والاختبار ويبدأ التشغيل مقابل $10.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.plans.builder",
+        "monetization"
+      ],
+      "classification": "pricing",
+      "status": "verified",
+      "source_ids": [
+        "S3"
+      ],
+      "notes": "تكاليف القنوات منفصلة."
+    },
+    "E11": {
+      "claim": "Form D 2014 باع $776,498.77 إلى 23 مستثمرًا.",
+      "json_paths": [
+        "company.jurisdiction",
+        "company.sec_cik",
+        "financials.funding.form_d_2014"
+      ],
+      "classification": "funding",
+      "status": "verified",
+      "source_ids": [
+        "S8"
+      ],
+      "notes": "عرض تاريخي معفى."
+    },
+    "E12": {
+      "claim": "Series A بقيادة Spectrum وبمشاركة Oregon Venture Fund دون مبلغ رسمي.",
+      "json_paths": [
+        "company.funding",
+        "financials.funding.series_a_2022"
+      ],
+      "classification": "funding",
+      "status": "verified",
+      "source_ids": [
+        "S7"
+      ],
+      "notes": "لا تقييم رسمي."
+    },
+    "E13": {
+      "claim": "يستخدم نظام التسليم المعلن MySQL للحديث وGCS للأرشيف.",
+      "json_paths": [
+        "costs_and_operations",
+        "tools"
+      ],
+      "classification": "technology",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S15"
+      ],
+      "notes": "لا يصف البنية الكاملة."
+    },
+    "E14": {
+      "claim": "توفر مناطق US وEU ومركز EU في بلجيكا.",
+      "json_paths": [
+        "costs_and_operations",
+        "tools",
+        "market_data.regulatory_and_security_context.data_residency"
+      ],
+      "classification": "security",
+      "status": "verified",
+      "source_ids": [
+        "S14"
+      ],
+      "notes": "قد تنقل التكاملات البيانات حسب اختيار العميل."
+    },
+    "E15": {
+      "claim": "تحمل ISO 27001 وSOC2 Type II وتقدم HIPAA-ready.",
+      "json_paths": [
+        "tools",
+        "market_data.regulatory_and_security_context.certifications"
+      ],
+      "classification": "security",
+      "status": "verified",
+      "source_ids": [
+        "S13"
+      ],
+      "notes": "HIPAA يتطلب BAA."
+    },
+    "E16": {
+      "claim": "لا توجد بيانات موثقة للزيارات أو RPV.",
+      "json_paths": [
+        "directory_snapshot.monthly_traffic",
+        "directory_snapshot.revenue_per_visitor"
+      ],
+      "classification": "traffic",
+      "status": "corrected",
+      "source_ids": [
+        "S19",
+        "S20"
+      ],
+      "notes": "أرقام الدليل بلا منهجية حديثة."
+    },
+    "E17": {
+      "claim": "استحوذت على Gist وParcel في 2022.",
+      "json_paths": [
+        "build_and_launch",
+        "analysis.competitive_advantage",
+        "lessons"
+      ],
+      "classification": "acquisition",
+      "status": "verified",
+      "source_ids": [
+        "S16",
+        "S17"
+      ],
+      "notes": "القيم غير معلنة."
+    },
+    "E18": {
+      "claim": "تعرض صفحة التسعير 9,000+ علامة.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.brands",
+        "company.operating_status_as_of_2026_08_03"
+      ],
+      "classification": "customers",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S2"
+      ],
+      "notes": "تعريف العلامة غير مفصل."
+    },
+    "E19": {
+      "claim": "لا يوجد تقييم حالي أو قوائم مالية أو ربحية حالية منشورة.",
+      "json_paths": [
+        "financials.current_valuation_usd",
+        "financials.current_accounting_revenue_usd",
+        "company.profitability"
+      ],
+      "classification": "unavailable",
+      "status": "unavailable",
+      "source_ids": [
+        "S1",
+        "S5",
+        "S7",
+        "S8"
+      ],
+      "notes": "الشركة خاصة."
+    },
+    "E20": {
+      "claim": "المؤسسان التاريخيان كولين وجون، والقيادة الحالية منشورة.",
+      "json_paths": [
+        "company.founder",
+        "company.cofounder",
+        "company.current_leadership",
+        "origin_story"
+      ],
+      "classification": "company",
+      "status": "verified",
+      "source_ids": [
+        "S1",
+        "S4",
+        "S8"
+      ],
+      "notes": "جون لا يظهر ضمن القيادة الحالية."
+    }
+  }
 }

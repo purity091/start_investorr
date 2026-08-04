@@ -66,8 +66,23 @@ export interface SavedItemRow {
   scoreLabel: string;
   scoreValue: number;
   savedDate: string;
-  rawPayload?: any;
+  rawPayload?: { id?: string; isProject?: boolean };
 }
+
+type SavedCanvasRow = {
+  id: string;
+  project_title: string | null;
+  sector_label: string | null;
+  project_summary: string | null;
+  readiness_score: number | null;
+  profile?: { sectorLabel?: string | null; summary?: string | null } | null;
+  metrics?: { readinessScore?: number | null } | null;
+  canvas_data?: {
+    profile?: { sectorLabel?: string | null; summary?: string | null } | null;
+    metrics?: { readinessScore?: number | null } | null;
+  } | null;
+  updated_at: string;
+};
 
 const SOURCE_PAGES_META: Record<SourcePageId, { label: string; icon: React.ComponentType<{ className?: string }>; tone: string }> = {
   all: {
@@ -110,6 +125,7 @@ export const SavedMarketItems: React.FC<SavedMarketItemsProps> = ({ setActiveTab
   const [selectedSourcePage, setSelectedSourcePage] = useState<SourcePageId>('all');
   const [sorting, setSorting] = useState<SortingState>([{ id: 'savedDate', desc: true }]);
   const [{ pageIndex, pageSize }, setPagination] = useState({ pageIndex: 0, pageSize: 10 });
+  const [copiedItemId, setCopiedItemId] = useState<string | null>(null);
 
   // Load saved items strictly from saved records (no fake/unbookmarked items injected)
   useEffect(() => {
@@ -146,7 +162,7 @@ export const SavedMarketItems: React.FC<SavedMarketItemsProps> = ({ setActiveTab
             .in('id', bookmarkedProjectIds);
 
           if (!error && data) {
-            data.forEach((row: any) => {
+            (data as SavedCanvasRow[]).forEach((row) => {
               const profile = row.profile || row.canvas_data?.profile;
               const metrics = row.metrics || row.canvas_data?.metrics;
               unifiedList.push({
@@ -374,13 +390,17 @@ export const SavedMarketItems: React.FC<SavedMarketItemsProps> = ({ setActiveTab
                 variant="ghost"
                 onClick={() => {
                   navigator.clipboard.writeText(`${window.location.origin}/share/${item.id}`);
-                  alert('تم نسخ رابط العنصر إلى الحافظة.');
+                  setCopiedItemId(item.id);
+                  setTimeout(() => setCopiedItemId(null), 2000);
                 }}
                 className="h-8 w-8 text-muted-foreground hover:text-foreground"
                 title="مشاركة"
               >
                 <Share2 className="size-3.5" />
               </Button>
+              {copiedItemId === item.id ? (
+                <span className="text-[11px] font-semibold text-emerald-600">تم النسخ</span>
+              ) : null}
               <Button
                 type="button"
                 size="icon-sm"
@@ -399,7 +419,7 @@ export const SavedMarketItems: React.FC<SavedMarketItemsProps> = ({ setActiveTab
         },
       },
     ],
-    []
+    [copiedItemId]
   );
 
   const paginationState = useMemo(() => ({ pageIndex, pageSize }), [pageIndex, pageSize]);

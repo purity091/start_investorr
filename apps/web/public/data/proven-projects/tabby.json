@@ -2,53 +2,946 @@
   "id": "tabby",
   "slug": "tabby",
   "name": "تابي (Tabby)",
-  "headline": "يونيكورن التقنية المالية الذي قاد ثورة (اشترِ الآن وادفع لاحقاً) في الخليج",
-  "category": "Fintech / اشترِ الآن وادفع لاحقاً (BNPL)",
+  "headline": "من «ادفع على 4» إلى تطبيق مالي مرخّص: كيف بنت تابي تقييمًا ضمنيًا قدره 4.5 مليارات دولار دون الخلط بين الائتمان وحجم المعاملات",
+  "category": "التقنية المالية والائتمان الاستهلاكي والمدفوعات / Fintech, Consumer Finance & Payments",
   "company": {
-    "location": "دبي، الإمارات (مع تواجد قوي جداً في السعودية)",
-    "business_model": "تحصيل رسوم وعمولات من التجار، وليس فوائد من العملاء"
+    "location": "الرياض، المملكة العربية السعودية، بوصفها المقر الرئيسي المعلن حاليًا، مع مكاتب وفرق في دبي والقاهرة ومراكز تقنية دولية.",
+    "founded": 2019,
+    "founders": [
+      "حسام عرب",
+      "دانييل باركالوف"
+    ],
+    "business_model": "منصة خدمات مالية متعددة المنتجات تخدم المستهلك والتاجر. تشمل الدفع المرن، وتمويلًا أطول قائمًا على المرابحة في السعودية، وبطاقة واشتراكًا مدفوعًا، وتمويل رأس مال عامل للتجار، ومنصة تسوق، وحساب قيمة مخزنة وبطاقة نقدية في الإمارات. لذلك لم يعد وصفها بأنها تعتمد فقط على عمولات التجار دقيقًا.",
+    "legal_entities_note": "تظهر رسميًا كيانات مختلفة بحسب المنتج والسوق، منها Tabby LLC وTabby Payments LLC في الإمارات وTabby Finance في السعودية؛ لم يُفترض اسم قانوني موحد للمجموعة.",
+    "markets": {
+      "current_consumer_markets": [
+        "المملكة العربية السعودية",
+        "الإمارات العربية المتحدة",
+        "الكويت"
+      ],
+      "egypt_status": "مصر ليست ضمن أسواق التشغيل الاستهلاكي الحالية المعلنة، رغم وجود مكتب أو فرق عمل."
+    },
+    "operating_status_as_of_2026_08_03": {
+      "status": "نشطة ومتوسعة من BNPL إلى خدمات مالية أوسع",
+      "evidence": "حصلت على تراخيص تمويل الأفراد والمنشآت في السعودية في يونيو 2026، وترخيص قيمة مخزنة في الإمارات في أبريل 2026، وأطلقت Tabby Cash في يوليو 2026.",
+      "caution": "النشاط وعدد المستخدمين وحجم المعاملات لا يكشفان الإيراد أو الربحية أو جودة المحفظة الائتمانية."
+    }
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين دولار",
-    "monthly_traffic": "يستخدمها ملايين المتسوقين"
+    "monthly_revenue": null,
+    "monthly_revenue_note": "لا توجد إيرادات شهرية حديثة أو قوائم مالية عامة. أزيل ادعاء «عشرات الملايين من الدولارات» لأنه بلا فترة أو إفصاح مالي.",
+    "monthly_traffic": null,
+    "monthly_traffic_note": "لا توجد بيانات حديثة موثقة للزيارات الشهرية. عدد المستخدمين المسجلين ليس مقياس حركة مرور رقميًا.",
+    "latest_verified_operating_snapshot": {
+      "as_of": "2026-08-03",
+      "registered_users": {
+        "count": 25000000,
+        "as_of": "2026-06-29",
+        "status": "company_reported",
+        "note": "مسجلون، وليسوا بالضرورة نشطين أو مقترضين حاليين."
+      },
+      "businesses": {
+        "count": 65000,
+        "as_of": "2026-06-29",
+        "status": "company_reported",
+        "note": "شركات وعلامات تستخدم تابي، وليس عددًا شهريًا نشطًا."
+      },
+      "annualized_transaction_volume": {
+        "amount_usd": 10000000000,
+        "operator": "أكثر من",
+        "as_of": "2025-02-12",
+        "status": "company_reported_run_rate",
+        "note": "حجم معاملات سنوي بالمعدل المعلن، وليس إيرادًا ولا سنة مالية مدققة."
+      },
+      "tabby_cash": {
+        "early_users": 150000,
+        "as_of": "2026-07-13",
+        "market": "الإمارات",
+        "status": "company_reported"
+      },
+      "products": [
+        "Pay in 4",
+        "خطط حتى 12 شهرًا حسب السوق والأهلية",
+        "Tabby Card",
+        "Tabby Plus",
+        "Tabby Shop",
+        "Tabby Capital",
+        "Tabby Cash",
+        "تمويل التعليم عبر zenda",
+        "Tabby Care"
+      ],
+      "merchant_marketing_metrics": {
+        "basket_size_increase": "33%+",
+        "conversion_increase": "18%+",
+        "spend_per_customer_increase": "31%+",
+        "status": "company_marketing_metrics",
+        "note": "ليست ضمانًا لتاجر بعينه ولم تُنشر منهجية مستقلة."
+      }
+    },
+    "metric_distinctions": {
+      "revenue": "إيراد الشركة من الرسوم والعمولات والتمويل والاشتراكات؛ غير منشور حاليًا.",
+      "valuation": "4.5 مليارات دولار تقييم ضمني من بيع ثانوي في أكتوبر 2025؛ ليس إيرادًا ولا تمويلًا دخل الشركة.",
+      "equity_funding": "160 مليون دولار في Series E عام 2025 مقابل أسهم جديدة.",
+      "debt_facility": "تسهيل توريق يصل إلى 700 مليون دولار لتمويل الذمم؛ ليس أسهمًا ولا يعني سحب الحد كاملًا.",
+      "transaction_volume": "أكثر من 10 مليارات دولار سنويًا بالمعدل المعلن في فبراير 2025؛ ليست إيرادات.",
+      "registered_users": "25 مليون حساب مسجل؛ ليسوا مستخدمين نشطين أو عملاء دافعين جميعًا.",
+      "businesses": "65 ألف شركة وعلامة؛ ليست عدد معاملات أو زيارات.",
+      "website_traffic": "غير منشور حديثًا."
+    }
   },
   "overview": {
     "problem": {
-      "text": "انتشار بطاقات الائتمان في المنطقة أقل بكثير من الغرب، والمستهلك يرغب في تقسيط مشترياته دون دفع فوائد ربوية أو الدخول في تعقيدات بنكية.",
-      "impact": "تردد المستهلكين في إتمام عمليات الشراء (تخلي عن السلة) مما يقلل من حجم المبيعات الإجمالي للمتاجر."
+      "text": "يواجه المستهلكون فجوة بين الدفع الكامل الفوري والائتمان التقليدي، بينما يحتاج التجار إلى رفع التحويل وقيمة السلة دون تحمل مخاطر التحصيل. ومع توسع تابي، أصبحت المشكلة تشمل الوصول المنظم إلى الائتمان وإدارة المال ورأس المال العامل، لا مجرد تقسيط شراء إلكتروني.",
+      "impact": "غياب خيارات مرنة وشفافة قد يؤدي إلى تأجيل الشراء أو الاعتماد على ائتمان مرتفع التكلفة، لكن التمويل المرن نفسه قد يسبب تراكم التزامات إذا لم تُقاس القدرة على السداد. أزيلت التعميمات غير المسندة عن البطاقات والربا والتخلي عن السلة."
     },
     "solution": {
-      "text": "خدمة تتيح للعميل تقسيط مشترياته على 4 دفعات بدون أي فوائد (متوافقة مع الشريعة)، بينما يتم محاسبة المتجر الذي يحقق زيادة فورية في المبيعات."
+      "text": "تقدم تابي الدفع على أربع دفعات دون فوائد أو رسوم عند السداد في الموعد، وتدفع للتاجر مقدمًا وفق نموذجها التجاري. أضافت بطاقات وخططًا أطول وتمويلًا للمنشآت ومنصة تسوق، ثم حصلت على تراخيص للحسابات والقيمة المخزنة والتحويلات. في السعودية، الخطط الأطول حتى 12 شهرًا مبنية على المرابحة بتكلفة ثابتة معلومة مقدمًا؛ لذلك لا يجوز وصف جميع المنتجات بأنها مجانية."
     }
   },
   "market_data": {
-    "target_audience": "المتسوقون عبر الإنترنت والمتاجر الإلكترونية في الخليج ومصر.",
-    "market_size": "سوق التجارة الإلكترونية وتسهيلات الدفع الاستهلاكي.",
-    "growth_rate": "وصلت لتقييم (يونيكورن) 1.5 مليار دولار بعد نمو استثنائي وتوسعات ضخمة."
+    "target_audience": "المستهلكون والتجار والمنشآت في السعودية والإمارات والكويت، مع اختلاف المنتجات والتراخيص حسب السوق.",
+    "market_size": null,
+    "market_size_note": "لم يُعثر على رقم رسمي حديث ومحدد لسوق تابي القابل للخدمة يمكن ربطه بإيراداتها.",
+    "growth_rate": null,
+    "growth_rate_note": "لا توجد سلسلة إيرادات مدققة حتى 2026 تسمح بحساب معدل نمو حالي. تضاعف حجم المعاملات السنوي تقريبًا إلى أكثر من 10 مليارات دولار بين 2023 و2025، وهو نمو في الحجم لا الإيراد.",
+    "geographic_footprint": [
+      {
+        "market": "السعودية",
+        "status": "السوق الرئيسي والمقر والتشغيل المرخص",
+        "products": [
+          "BNPL",
+          "تمويل استهلاكي حتى 12 شهرًا وحدود تصل إلى 50 ألف ريال لبعض المؤهلين",
+          "تمويل منشآت ورأس مال عامل",
+          "منظومة طويق"
+        ]
+      },
+      {
+        "market": "الإمارات",
+        "status": "تشغيل مرخص للائتمان قصير الأجل والقيمة المخزنة",
+        "products": [
+          "Pay Later",
+          "Tabby Card وPlus",
+          "Tabby Cash",
+          "تمويل التعليم"
+        ]
+      },
+      {
+        "market": "الكويت",
+        "status": "سوق BNPL مؤكد"
+      },
+      {
+        "market": "مصر",
+        "status": "ليست ضمن الأسواق الاستهلاكية الحالية المعلنة"
+      }
+    ],
+    "regulatory_context": {
+      "saudi_arabia": {
+        "authority": "البنك المركزي السعودي (ساما)",
+        "licenses": [
+          "BNPL مرخّص في نوفمبر 2025",
+          "تمويل استهلاكي معلن في يونيو 2026",
+          "تمويل منشآت صغيرة ومتوسطة معلن في يونيو 2026"
+        ],
+        "note": "قواعد BNPL تتطلب ترخيصًا ورأس مال وحوكمة وإدارة مخاطر وحماية عملاء."
+      },
+      "uae": {
+        "authority": "مصرف الإمارات العربية المتحدة المركزي",
+        "license": "ترخيص تسهيلات القيم المخزنة لـTabby Payments LLC في أبريل 2026",
+        "scope": "الاحتفاظ بأموال العملاء وتقديم حسابات إنفاق وبطاقات وأدوات إدارة أموال ضمن نطاق الترخيص."
+      },
+      "ipo_status": {
+        "status": "استعداد معلن دون طرح عام مثبت",
+        "note": "لم يُعثر حتى 3 أغسطس 2026 على موافقة طرح أو نشرة إصدار عامة باسم تابي في السعودية."
+      }
+    }
   },
   "financials": {
-    "initial_investment": "جمع تمويلات بـ مئات الملايين من الدولارات عبر جولات متعددة (أسهم وديون).",
-    "valuation": "$1.5B (يونيكورن)",
+    "initial_investment": "جمعت تابي جولات أسهم وتسهيلات دين متعددة. من أبرزها 54 مليون دولار في تمديد Series B عام 2022؛ وSeries D أُغلق عند 250 مليون دولار في 2023؛ وSeries E بقيمة 160 مليون دولار عند تقييم 3.3 مليارات في فبراير 2025. كما حصلت على تسهيل توريق يصل إلى 700 مليون دولار من J.P. Morgan في ديسمبر 2023.",
+    "valuation": {
+      "current_implied_valuation_usd": 4500000000,
+      "valuation_date": "2025-10-28",
+      "valuation_basis": "بيع ثانوي لأسهم مملوكة لمساهمين حاليين",
+      "company_proceeds_usd": 0,
+      "new_shares_issued": false,
+      "previous_primary_round_valuation_usd": 3300000000,
+      "previous_primary_round_date": "2025-02-12",
+      "historical_series_d_valuation_usd": 1500000000,
+      "note": "التقييم الحالي ضمني من سوق ثانوي خاص، لا قيمة سوقية بورصية ولا نتيجة جولة نقدية للشركة."
+    },
+    "latest_financial_metrics": {
+      "current_revenue": null,
+      "current_net_income": null,
+      "current_cash": null,
+      "current_debt_drawn": null,
+      "current_credit_losses": null,
+      "current_delinquency_rate": null,
+      "current_active_users": null,
+      "audited_financial_statements_available": false,
+      "historical_company_reported": {
+        "annualized_transaction_volume_usd": 10000000000,
+        "as_of": "2025-02-12",
+        "profitability_trend": "قالت الشركة إنها كانت تنمي الربحية",
+        "status": "not_audited"
+      }
+    },
+    "funding_and_financing": {
+      "equity_rounds_selected": [
+        {
+          "date": "2022-03-07",
+          "round": "Series B extension",
+          "amount_usd": 54000000
+        },
+        {
+          "date": "2023-12-21",
+          "round": "Series D final close",
+          "amount_usd": 250000000,
+          "valuation_usd": 1500000000
+        },
+        {
+          "date": "2025-02-12",
+          "round": "Series E",
+          "amount_usd": 160000000,
+          "valuation_usd": 3300000000
+        }
+      ],
+      "debt_facilities_selected": [
+        {
+          "date": "2022-08-02",
+          "type": "Credit facility",
+          "amount_usd": 150000000
+        },
+        {
+          "date": "2023-05-31",
+          "type": "Warehouse debt facility",
+          "amount_usd": 350000000
+        },
+        {
+          "date": "2023-12-21",
+          "type": "Receivables securitization facility",
+          "amount_usd": 700000000,
+          "operator": "up to"
+        }
+      ],
+      "non_additivity_warning": "التسهيلات قد تكون توسعات أو بدائل لحدود سابقة وقد لا تكون مسحوبة بالكامل؛ لا تُجمع مع الأسهم كإجمالي نقد تلقائي.",
+      "secondary_sale_2025": {
+        "classification": "سيولة لمساهمين حاليين",
+        "company_funding": false,
+        "implied_valuation_usd": 4500000000
+      }
+    },
     "revenue_streams": [
-      "عمولة اقتطاع من التاجر (MDR) على كل عملية بيع",
-      "رسوم تأخير من العملاء في حال عدم السداد (ضمن الشروط)",
-      "إيرادات من التسويق والإعلانات داخل تطبيق Tabby"
-    ]
+      "عمولة متغيرة من التاجر ورسوم ثابتة لكل طلب ناجح.",
+      "اشتراك Tabby Plus في الإمارات بقيمة معلنة 49 درهمًا شهريًا بعد الشهر التجريبي.",
+      "ربح مرابحة ثابت ومتفق عليه مقدمًا في الخطط الأطول المؤهلة في السعودية.",
+      "رسم ثابت على تمويل Tabby Capital للتجار.",
+      "اقتصاديات البطاقة والائتمان حسب الخطة والسوق؛ لم تُفصح الشركة عن التفصيل.",
+      "قد تُطبق رسوم تحصيل على بعض حالات التأخر في منتجات إماراتية؛ لم تُعامل كخط إيراد عام.",
+      "Tabby Cash مجاني عند الإطلاق من حيث الحساب والبطاقة والتحويل المحلي؛ لم يُفصح عن نموذج إيراده، فلم يُخترع.",
+      "لم يُثبت وجود إيرادات إعلانات داخل التطبيق كخط مستقل، فحُذف الادعاء الأصلي."
+    ],
+    "fees_and_customer_cost_context": {
+      "pay_in_4": "دون فوائد أو رسوم مخفية عند السداد في الموعد.",
+      "saudi_pay_in_4_late_fees": "ألغيت رسوم التأخير منذ ديسمبر 2023.",
+      "saudi_longer_finance": "مرابحة بتكلفة ثابتة معلومة مقدمًا، دون تراكم أو رسوم تأخير.",
+      "uae_overdue_context": "قد تُضاف رسوم تحصيل لبعض المدفوعات المتأخرة وفق صفحات المساعدة.",
+      "merchant_pricing": "عمولة متغيرة ورسوم ثابتة لكل معاملة ناجحة.",
+      "tabby_plus": "49 درهمًا إماراتيًا شهريًا.",
+      "capital": "رسم ثابت بلا فائدة متراكمة أو رسوم مخفية."
+    }
+  },
+  "analysis": {
+    "core_thesis": "تابي لم تعد مجرد زر تقسيط عند الدفع. أصبحت تجمع شبكة تجار وبيانات مخاطر وتمويل ذمم وبطاقات واشتراكات ومحفظة وتمويل منشآت. الميزة المحتملة هي حلقة مالية تبدأ من اكتشاف المنتج وتنتهي بالدفع وإدارة المال؛ لكن كل طبقة جديدة تزيد المتطلبات التنظيمية ومخاطر الائتمان والسيولة وحماية أموال العملاء.",
+    "what_changed": [
+      "ارتفع التقييم من 1.5 مليار دولار في Series D إلى 3.3 مليارات في Series E، ثم إلى 4.5 مليارات ضمنيًا في بيع ثانوي.",
+      "البيع الثانوي لم يدخل أموالًا للشركة ولم يصدر أسهمًا جديدة.",
+      "وصلت القاعدة المعلنة إلى أكثر من 25 مليون مستخدم مسجل و65 ألف شركة.",
+      "بلغ حجم المعاملات السنوي بالمعدل المعلن أكثر من 10 مليارات دولار في فبراير 2025.",
+      "حصلت على ترخيص BNPL سعودي في 2025 ثم تراخيص تمويل الأفراد والمنشآت في 2026.",
+      "حصلت في الإمارات على ترخيص قيمة مخزنة وأطلقت Tabby Cash لأكثر من 150 ألف مستخدم مبكر.",
+      "انتقلت من أربع دفعات إلى تمويل يصل إلى 12 شهرًا وحدود تصل إلى 50 ألف ريال لبعض العملاء.",
+      "أصبحت إيرادات المستهلك المحتملة تشمل الاشتراك وتمويل المرابحة، فلا يصح القول إن التاجر هو المصدر الوحيد.",
+      "استثمرت في بنية NVIDIA HGX محلية لتطوير الدعم وكشف الاحتيال وتقييم المخاطر."
+    ],
+    "competitive_advantage": [
+      "شبكة كبيرة من المستخدمين والتجار في ثلاثة أسواق خليجية.",
+      "بيانات تاريخية للشراء والسداد تدعم الأهلية والمخاطر.",
+      "تمويل التاجر مقدمًا وتحمل تابي مخاطر التحصيل وفق نموذجها.",
+      "تراخيص مباشرة متعددة توسع المنتجات وتبني حاجز امتثال.",
+      "تغطية القنوات الإلكترونية والفروع والبطاقات والتسوق.",
+      "رأس مال أسهم وتسهيلات تمويل ذمم كبيرة.",
+      "منتجات للمستهلك والتاجر قد تخلق حلقة احتفاظ متبادلة."
+    ],
+    "risks_and_constraints": [
+      "لا توجد قوائم مالية عامة تكشف الإيرادات أو الأرباح أو الخسائر الائتمانية أو تكلفة التمويل.",
+      "النمو في حجم المعاملات يحتاج تمويل ذمم وسيولة مستمرة.",
+      "ارتفاع المستخدمين المسجلين لا يوضح المستخدمين النشطين أو التكرار.",
+      "تمويل أطول وبمبالغ أكبر يرفع مخاطر التعثر والاحتيال والمدة.",
+      "حساب القيمة المخزنة يضيف مسؤولية حماية أموال العملاء والامتثال ومكافحة غسل الأموال.",
+      "تمويل المنشآت يضيف مخاطر مختلفة عن الائتمان الاستهلاكي.",
+      "مؤشرات التاجر التسويقية تحتاج منهجية وخط أساس.",
+      "التقييم الثانوي 4.5 مليارات قد يعكس صفقة خاصة محدودة.",
+      "الاستعداد للاكتتاب لا يعني موافقة أو نشرة إصدار.",
+      "وصف «دون رسوم» يختلف حسب المنتج والسوق والتأخر.",
+      "الذكاء الاصطناعي في المخاطر يحتاج حوكمة للإنصاف والتفسير والخصوصية."
+    ],
+    "outlook_as_of_2026_08_03": "تابي منصة مالية خليجية خاصة ذات تقييم ضمني مرتفع وتراخيص ومنتجات متعددة، لكن شفافية الإيرادات والمخاطر محدودة. المؤشرات الحاسمة قبل أي طرح عام هي صافي الإيراد، تكلفة التمويل، الخسائر الائتمانية، المستخدمون النشطون، اقتصاديات كل منتج، كفاية رأس المال، وحماية أموال Tabby Cash."
   },
   "lessons": [
     {
-      "title": "حل يرضي جميع الأطراف",
-      "description": "المستهلك يفرح بالتقسيط المجاني، والتاجر يفرح بزيادة قيمة سلة المشتريات (AOV) بنسبة 30% وتحمل Tabby لمخاطر عدم السداد، مما جعلها خدمة لا يمكن رفضها."
+      "title": "البيع الثانوي ليس جولة تمويل",
+      "description": "تقييم 4.5 مليارات دولار نتج عن انتقال أسهم بين مساهمين ومستثمرين، ولم تدخل عائداته إلى الشركة."
     },
     {
-      "title": "من وسيلة دفع إلى منصة تسوق",
-      "description": "تطبيق Tabby نفسه أصبح وجهة تسوق بحد ذاته يوجه الزيارات للمتاجر، مما حوّل الشركة من مجرد (بوابة دفع) إلى أداة تسويق واكتساب عملاء (Acquisition Tool) للتجار."
+      "title": "حجم المعاملات ليس إيرادًا",
+      "description": "أكثر من 10 مليارات دولار سنويًا هو قيمة تمر عبر المنظومة، بينما إيراد تابي جزء تحدده الرسوم والعمولات والتمويل."
+    },
+    {
+      "title": "المستخدم المسجل ليس مقترضًا نشطًا",
+      "description": "25 مليون مستخدم رقم توزيع قوي، لكنه لا يكشف النشاط أو الرصيد أو السداد أو الإيراد لكل مستخدم."
+    },
+    {
+      "title": "الترخيص يفتح منتجًا ويضيف التزامًا",
+      "description": "ترخيص التمويل أو القيمة المخزنة يسمح بمنتجات أوسع ويضيف متطلبات رأس المال والحوكمة وحماية العميل."
+    },
+    {
+      "title": "إلغاء رسوم التأخير لا يعني مجانية كل المنتج",
+      "description": "Pay in 4 قد يكون بلا تكلفة عند السداد في الوقت، بينما توجد اشتراكات وخطط مرابحة ورسوم تحصيل محتملة."
+    },
+    {
+      "title": "الدين يمول الذمم ولا يقيّم الشركة",
+      "description": "تسهيل 700 مليون دولار يدعم تمويل المشتريات، لكنه ليس جولة أسهم ولا تقييمًا وقد لا يكون مسحوبًا بالكامل."
+    },
+    {
+      "title": "الانتقال إلى تطبيق مالي يضاعف التعقيد",
+      "description": "البطاقة والحساب والتحويل والتمويل والتسوق ترفع الاحتفاظ، لكنها تربط مخاطر الائتمان والسيولة والبيانات."
+    },
+    {
+      "title": "مؤشرات التاجر تحتاج خط أساس",
+      "description": "رفع السلة والتحويل مفيد للتسويق، لكن القرار يحتاج بيانات حسب الفئة والهامش والمرتجعات وتكلفة العمولة."
+    },
+    {
+      "title": "الاستعداد للاكتتاب ليس اكتتابًا",
+      "description": "ذكر IPO إشارة استراتيجية، لكن الشركة تبقى خاصة حتى ظهور موافقة ونشرة إصدار وطرح مكتمل."
     }
   ],
   "tools": [
-    "AWS",
-    "Node.js",
-    "React Native",
-    "Python"
+    "واجهات API وتكاملات مخصصة للمتاجر الإلكترونية والفروع.",
+    "Webhooks وإدارة authorize وcapture وrefund ضمن وثائق المطورين.",
+    "إضافات لـShopify وSalla وZid وWooCommerce وMagento 2 وOpenCart وMatjrah وSalesforce وExpandCart.",
+    "تكاملات نقاط البيع وروابط الدفع ورموز QR.",
+    "Merchant Dashboard وتطبيق Tabby Business وتقارير التسوية والرسوم.",
+    "Tabby Card وCash Card وشبكات Visa حسب المنتج والسوق.",
+    "أنظمة NVIDIA HGX محلية لتدريب واستضافة نماذج الدعم والأمن وكشف الاحتيال وتقييم المخاطر.",
+    "تنبيه تقني: لم تثبت المصادر الحالية أن AWS أو Node.js أو React Native أو Python تمثل البنية الداخلية الحالية كاملة؛ لذلك حُذفت كحقائق عن الـtech stack."
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "verified_through": "2026-08-03",
+    "research_scope": "الملف الأصلي، مركز تابي الإعلامي ووثائق المنتجات والتجار والمطورين، إعلانات التمويل والبيع الثانوي والاستحواذ، وسجلات وقواعد البنك المركزي السعودي ومصرف الإمارات المركزي.",
+    "overall_status": "verified_with_material_valuation_regulatory_and_business_model_updates",
+    "primary_source_priority": "اعتمد الملف أساسًا على تابي والبنك المركزي السعودي ومصرف الإمارات المركزي، ولم يستخدم تقديرات إيراد أو زيارات خارجية.",
+    "sec_search_status": {
+      "applicable": false,
+      "reason": "تابي شركة خاصة ولم تطرح أوراقًا مالية مسجلة للجمهور في الولايات المتحدة.",
+      "result": "لم يُعثر على إفصاح SEC تشغيلي أو مالي للشركة.",
+      "note": "غياب SEC لا يثبت حالة طرح محتمل في السعودية."
+    },
+    "key_corrections": [
+      {
+        "field": "headline",
+        "original_claim": "يونيكورن قاد ثورة BNPL",
+        "status": "updated",
+        "correction": "أعيدت الصياغة لتعكس التحول إلى تطبيق مالي مرخص والتقييم الضمني 4.5 مليارات.",
+        "evidence_ids": [
+          "E2",
+          "E3",
+          "E5",
+          "E6"
+        ]
+      },
+      {
+        "field": "company.location",
+        "original_claim": "دبي مع وجود قوي في السعودية",
+        "status": "corrected",
+        "correction": "المقر الحالي المعلن في الرياض، مع تشغيل في السعودية والإمارات والكويت.",
+        "evidence_ids": [
+          "E1",
+          "E6"
+        ]
+      },
+      {
+        "field": "company.business_model",
+        "original_claim": "عمولات من التجار فقط",
+        "status": "expanded",
+        "correction": "أضيفت الاشتراكات وتمويل المرابحة ورسوم Capital ومنتجات الحساب والبطاقة.",
+        "evidence_ids": [
+          "E7",
+          "E8",
+          "E9",
+          "E10"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_revenue",
+        "original_claim": "عشرات الملايين دولار",
+        "status": "removed_unsupported",
+        "correction": "وُضع null لغياب إفصاح مالي زمني.",
+        "evidence_ids": [
+          "E12"
+        ]
+      },
+      {
+        "field": "directory_snapshot.monthly_traffic",
+        "original_claim": "يستخدمها ملايين المتسوقين",
+        "status": "removed_wrong_metric",
+        "correction": "المستخدمون ليسوا زيارات؛ وُضع null وفُصل عدد المستخدمين.",
+        "evidence_ids": [
+          "E1",
+          "E12"
+        ]
+      },
+      {
+        "field": "market_data.target_audience",
+        "original_claim": "الخليج ومصر",
+        "status": "corrected",
+        "correction": "الأسواق الاستهلاكية الحالية السعودية والإمارات والكويت.",
+        "evidence_ids": [
+          "E1",
+          "E6"
+        ]
+      },
+      {
+        "field": "market_data.growth_rate",
+        "original_claim": "تقييم 1.5 مليار بعد نمو استثنائي",
+        "status": "reclassified_and_updated",
+        "correction": "التقييم ليس معدل نمو؛ وُضع النمو null وسجل 3.3 ثم 4.5 مليارات حسب نوع المعاملة.",
+        "evidence_ids": [
+          "E2",
+          "E3",
+          "E12"
+        ]
+      },
+      {
+        "field": "financials.valuation",
+        "original_claim": "1.5 مليار دولار",
+        "status": "updated",
+        "correction": "الأحدث 4.5 مليارات ضمنيًا من بيع ثانوي بلا عائد للشركة.",
+        "evidence_ids": [
+          "E2"
+        ]
+      },
+      {
+        "field": "financials.revenue_streams.late_fees",
+        "original_claim": "رسوم تأخير عامة",
+        "status": "qualified",
+        "correction": "ألغيت رسوم Pay in 4 بالسعودية، وقد توجد رسوم تحصيل في منتجات إماراتية.",
+        "evidence_ids": [
+          "E10",
+          "E11"
+        ]
+      },
+      {
+        "field": "financials.revenue_streams.advertising",
+        "original_claim": "إعلانات داخل التطبيق",
+        "status": "removed_unverified",
+        "correction": "لم يثبت كخط إيراد مستقل.",
+        "evidence_ids": [
+          "E7",
+          "E12"
+        ]
+      },
+      {
+        "field": "tools",
+        "original_claim": "AWS وNode.js وReact Native وPython",
+        "status": "removed_unverified_stack",
+        "correction": "أُبقيت التكاملات والبنية المعلنة مثل API وNVIDIA HGX.",
+        "evidence_ids": [
+          "E13",
+          "E14"
+        ]
+      }
+    ],
+    "known_source_discrepancies": [
+      {
+        "topic": "عدد المستخدمين والشركات",
+        "detail": "صفحات أقدم تعرض 20 مليون مستخدم و40 ألف شركة، بينما إعلان يونيو 2026 الأحدث يعرض 25 مليونًا و65 ألفًا."
+      },
+      {
+        "topic": "رسوم التأخر",
+        "detail": "ألغيت رسوم Pay in 4 في السعودية، لكن صفحات إماراتية تذكر رسوم تحصيل في بعض المنتجات."
+      },
+      {
+        "topic": "الإيرادات والربحية",
+        "detail": "تذكر الشركة نموًا وربحية دون نشر قوائم أو فترة موحدة؛ لم تُحوّل إلى أرقام مالية."
+      },
+      {
+        "topic": "الاكتتاب",
+        "detail": "إعلان Series E ذكر الاستعداد للاكتتاب، لكن لم يظهر طرح عام أو نشرة إصدار حتى تاريخ التحقق."
+      }
+    ],
+    "limitations": [
+      "تابي شركة خاصة ولا تنشر قوائم مالية مدققة للعامة.",
+      "لا توجد بيانات حديثة للإيراد أو صافي الربح أو خسائر الائتمان أو تكلفة التمويل.",
+      "حجم المعاملات رقم تشغيلي بالمعدل المعلن وليس سنة مالية مدققة.",
+      "عدد المستخدمين مسجل ولا يكشف النشاط أو التكرار.",
+      "التقييم 4.5 مليارات ضمني من صفقة خاصة وليس سعرًا بورصيًا.",
+      "حدود الدين لا تكشف المسحوب أو المتبقي أو التكلفة.",
+      "لم تُراجع شروط ورسوم كل منتج في كل سوق وحالة أهلية.",
+      "لم يظهر ملف طرح عام حتى 3 أغسطس 2026."
+    ],
+    "programmatic_validation": {
+      "input_file_parse": true,
+      "json_parse": true,
+      "required_original_top_level_keys_preserved": true,
+      "required_original_paths_preserved": true,
+      "all_source_ids_unique": true,
+      "all_evidence_source_references_valid": true,
+      "all_key_correction_evidence_references_valid": true,
+      "no_nan_or_infinity": true,
+      "null_used_for_unavailable_monthly_metrics": true,
+      "null_used_for_unavailable_market_size_and_growth": true,
+      "valuation_updated_and_secondary_type_preserved": true,
+      "transaction_volume_separated_from_revenue": true,
+      "registered_users_not_used_as_traffic": true,
+      "current_consumer_markets_exclude_egypt": true,
+      "debt_not_added_as_equity": true,
+      "duplicate_lesson_titles": false,
+      "source_count": 15,
+      "primary_source_count": 15,
+      "evidence_item_count": 14,
+      "lesson_count": 9,
+      "validated_at": "2026-08-03T18:42:00+03:00",
+      "validation_status": "passed"
+    }
+  },
+  "evidence_map_schema": {
+    "description": "خريطة تربط الادعاءات الجوهرية بالمصادر والمسارات داخل JSON.",
+    "item_fields": {
+      "claim": "الادعاء المختصر",
+      "json_paths": "المسارات المعتمدة على الدليل",
+      "classification": "نوع الادعاء",
+      "status": "حالة التحقق",
+      "source_ids": "معرفات المصادر",
+      "notes": "حدود الدليل"
+    }
+  },
+  "evidence_map": {
+    "E1": {
+      "claim": "25 مليون مستخدم مسجل و65 ألف شركة ومقر الرياض والأسواق الثلاثة.",
+      "json_paths": [
+        "company.location",
+        "company.markets",
+        "directory_snapshot.latest_verified_operating_snapshot"
+      ],
+      "classification": "users",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S1"
+      ],
+      "notes": "لا يساوي نشاطًا شهريًا."
+    },
+    "E2": {
+      "claim": "بيع ثانوي أدى إلى تقييم ضمني 4.5 مليارات دون عائد للشركة.",
+      "json_paths": [
+        "financials.valuation",
+        "financials.funding_and_financing.secondary_sale_2025"
+      ],
+      "classification": "valuation",
+      "status": "verified",
+      "source_ids": [
+        "S2"
+      ],
+      "notes": "سيولة للمساهمين الحاليين."
+    },
+    "E3": {
+      "claim": "Series E بقيمة 160 مليون دولار عند تقييم 3.3 مليارات.",
+      "json_paths": [
+        "financials.initial_investment",
+        "financials.valuation",
+        "financials.funding_and_financing"
+      ],
+      "classification": "equity",
+      "status": "verified",
+      "source_ids": [
+        "S3"
+      ],
+      "notes": "جولة أسهم أولية."
+    },
+    "E4": {
+      "claim": "حجم معاملات سنوي بالمعدل المعلن أكثر من 10 مليارات دولار.",
+      "json_paths": [
+        "directory_snapshot.latest_verified_operating_snapshot.annualized_transaction_volume",
+        "financials.latest_financial_metrics"
+      ],
+      "classification": "transaction_volume",
+      "status": "historical_only",
+      "source_ids": [
+        "S3"
+      ],
+      "notes": "ليس إيرادًا."
+    },
+    "E5": {
+      "claim": "ترخيص قيمة مخزنة في الإمارات وإطلاق Tabby Cash.",
+      "json_paths": [
+        "market_data.regulatory_context.uae",
+        "directory_snapshot.latest_verified_operating_snapshot.tabby_cash"
+      ],
+      "classification": "regulatory",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S4",
+        "S5"
+      ],
+      "notes": "Tabby Cash جزء من قاعدة المستخدمين."
+    },
+    "E6": {
+      "claim": "تراخيص السعودية لBNPL وتمويل الأفراد والمنشآت.",
+      "json_paths": [
+        "market_data.regulatory_context.saudi_arabia",
+        "analysis.what_changed"
+      ],
+      "classification": "regulatory",
+      "status": "verified",
+      "source_ids": [
+        "S1",
+        "S6"
+      ],
+      "notes": "تراخيص متعددة بحسب النشاط."
+    },
+    "E7": {
+      "claim": "تسعير التاجر يجمع عمولة متغيرة ورسمًا ثابتًا.",
+      "json_paths": [
+        "financials.revenue_streams",
+        "financials.fees_and_customer_cost_context"
+      ],
+      "classification": "revenue_model",
+      "status": "verified",
+      "source_ids": [
+        "S7"
+      ],
+      "notes": "النسب تعاقدية."
+    },
+    "E8": {
+      "claim": "Pay in 4 بلا فوائد أو رسوم مخفية عند السداد في الموعد.",
+      "json_paths": [
+        "overview.solution",
+        "financials.fees_and_customer_cost_context"
+      ],
+      "classification": "product",
+      "status": "verified",
+      "source_ids": [
+        "S8"
+      ],
+      "notes": "لا يصف كل المنتجات."
+    },
+    "E9": {
+      "claim": "Tabby Plus بقيمة 49 درهمًا شهريًا.",
+      "json_paths": [
+        "financials.revenue_streams",
+        "financials.fees_and_customer_cost_context"
+      ],
+      "classification": "revenue_model",
+      "status": "verified",
+      "source_ids": [
+        "S9"
+      ],
+      "notes": "السعر قابل للتغيير."
+    },
+    "E10": {
+      "claim": "ألغيت رسوم تأخير Pay in 4 في السعودية.",
+      "json_paths": [
+        "financials.fees_and_customer_cost_context",
+        "verification.key_corrections"
+      ],
+      "classification": "product",
+      "status": "verified",
+      "source_ids": [
+        "S10"
+      ],
+      "notes": "خاص بالسعودية وPay in 4."
+    },
+    "E11": {
+      "claim": "قد تطبق رسوم تحصيل في بعض المنتجات الإماراتية.",
+      "json_paths": [
+        "financials.revenue_streams",
+        "financials.fees_and_customer_cost_context"
+      ],
+      "classification": "product",
+      "status": "verified",
+      "source_ids": [
+        "S11"
+      ],
+      "notes": "ليست خط إيراد موحدًا."
+    },
+    "E12": {
+      "claim": "لا توجد قوائم مالية عامة أو إيراد شهري أو زيارات حديثة.",
+      "json_paths": [
+        "directory_snapshot.monthly_revenue",
+        "directory_snapshot.monthly_traffic",
+        "market_data.market_size",
+        "market_data.growth_rate",
+        "financials.latest_financial_metrics"
+      ],
+      "classification": "unavailable",
+      "status": "unavailable",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "notes": "المصادر تعرض تشغيلًا وتمويلًا لا قوائم."
+    },
+    "E13": {
+      "claim": "توفر تابي API وWebhooks وتكاملات منصات وفروع.",
+      "json_paths": [
+        "tools"
+      ],
+      "classification": "technology",
+      "status": "verified",
+      "source_ids": [
+        "S12",
+        "S13"
+      ],
+      "notes": "تختلف حسب السوق."
+    },
+    "E14": {
+      "claim": "تنشر NVIDIA HGX محليًا للدعم والأمن والاحتيال وتقييم المخاطر.",
+      "json_paths": [
+        "tools",
+        "analysis.what_changed",
+        "analysis.risks_and_constraints"
+      ],
+      "classification": "technology",
+      "status": "verified_company_reported",
+      "source_ids": [
+        "S14"
+      ],
+      "notes": "لا يثبت لغات البرمجة."
+    }
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Tabby secures finance licences from the Saudi Central Bank",
+      "publisher": "Tabby",
+      "source_type": "إعلان رسمي",
+      "publication_date": "2026-06-29",
+      "url": "https://tabby.ai/en-AE/newsroom/finance-licences-ksa",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "25 مليون مستخدم",
+        "65 ألف شركة",
+        "المقر",
+        "تراخيص التمويل"
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "Tabby announces completion of secondary share sale",
+      "publisher": "Tabby",
+      "source_type": "إعلان معاملة رسمي",
+      "publication_date": "2025-10-28",
+      "url": "https://tabby.ai/en-AE/newsroom/secondary-share-sale",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "4.5 مليارات",
+        "بيع ثانوي",
+        "لا عائد للشركة"
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "Tabby raises $160M Series E at $3.3B valuation",
+      "publisher": "Tabby",
+      "source_type": "إعلان تمويل رسمي",
+      "publication_date": "2025-02-12",
+      "url": "https://tabby.ai/en-AE/newsroom/series-e-funding",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Series E",
+        "3.3 مليارات",
+        "10 مليارات حجم معاملات",
+        "الاستعداد للاكتتاب"
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "Tabby secures wallet licence in the UAE",
+      "publisher": "Tabby",
+      "source_type": "إعلان ترخيص رسمي",
+      "publication_date": "2026-04-16",
+      "url": "https://tabby.ai/en-AE/newsroom/wallet-licence",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "ترخيص SVF",
+        "الحسابات والبطاقات"
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "Tabby puts money back in its place",
+      "publisher": "Tabby",
+      "source_type": "إعلان إطلاق رسمي",
+      "publication_date": "2026-07-13",
+      "url": "https://tabby.ai/en-AE/newsroom/money-app",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Tabby Cash",
+        "150 ألف مستخدم",
+        "حساب وبطاقة بلا رسوم"
+      ]
+    },
+    {
+      "id": "S6",
+      "title": "SAMA licensed entities — Tabby Finance",
+      "publisher": "البنك المركزي السعودي",
+      "source_type": "سجل ترخيص رسمي",
+      "publication_date": "2025-11-10",
+      "url": "https://sama.gov.sa/en-US/Supervision/LicenseEntities/pages/financelicencedentities.aspx",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "ترخيص BNPL"
+      ]
+    },
+    {
+      "id": "S7",
+      "title": "How does pricing work for Tabby?",
+      "publisher": "Tabby",
+      "source_type": "صفحة تسعير رسمية",
+      "publication_date": null,
+      "url": "https://tabby.ai/en-AE/help-business/about-tabby/pricing",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "عمولة متغيرة",
+        "رسم ثابت"
+      ]
+    },
+    {
+      "id": "S8",
+      "title": "Pay in 4",
+      "publisher": "Tabby",
+      "source_type": "صفحة منتج رسمية",
+      "publication_date": null,
+      "url": "https://tabby.ai/en-AE/pay-in-4",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "أربع دفعات",
+        "لا فوائد أو رسوم عند السداد في الموعد"
+      ]
+    },
+    {
+      "id": "S9",
+      "title": "ما هي باقة تابي+؟",
+      "publisher": "Tabby",
+      "source_type": "صفحة مساعدة رسمية",
+      "publication_date": null,
+      "url": "https://tabby.ai/ar-AE/help/help-tabby-card/what-is-tabby-plus",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "49 درهمًا",
+        "Tabby Plus"
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "Tabby removes late fees on Pay in 4 in Saudi Arabia",
+      "publisher": "Tabby",
+      "source_type": "إعلان منتج رسمي",
+      "publication_date": "2023-12-19",
+      "url": "https://tabby.ai/en-AE/newsroom/no-late-fees",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "إلغاء رسوم التأخير بالسعودية"
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "What happens if I do not pay my bill on time?",
+      "publisher": "Tabby",
+      "source_type": "صفحة مساعدة رسمية",
+      "publication_date": null,
+      "url": "https://tabby.ai/en-AE/help/help-pay-later/what-happens-if-i-dont-pay-my-bill-on-time",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "رسوم تحصيل محتملة",
+        "تقييد المنتجات"
+      ]
+    },
+    {
+      "id": "S12",
+      "title": "Quick Start — Integrations",
+      "publisher": "Tabby Developer Documentation",
+      "source_type": "وثائق تقنية رسمية",
+      "publication_date": null,
+      "url": "https://docs.tabby.ai/introduction/quick-start",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "API",
+        "POS",
+        "روابط الدفع",
+        "التكاملات"
+      ]
+    },
+    {
+      "id": "S13",
+      "title": "Supported ecommerce platforms",
+      "publisher": "Tabby",
+      "source_type": "دعم تقني رسمي",
+      "publication_date": null,
+      "url": "https://tabby.ai/en-AE/help-business/selling-with-tabby/supported-ecommerce-platforms",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "Shopify",
+        "Salla",
+        "Zid",
+        "WooCommerce",
+        "Magento",
+        "منصات أخرى"
+      ]
+    },
+    {
+      "id": "S14",
+      "title": "Tabby invests in NVIDIA HGX systems",
+      "publisher": "Tabby",
+      "source_type": "إعلان بنية تقنية رسمي",
+      "publication_date": "2025-10-13",
+      "url": "https://tabby.ai/en-AE/newsroom/nvidia",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "NVIDIA HGX",
+        "الدعم",
+        "الاحتيال",
+        "المخاطر"
+      ]
+    },
+    {
+      "id": "S15",
+      "title": "Tabby secures up to $700M debt and closes Series D at $250M",
+      "publisher": "Tabby",
+      "source_type": "إعلان تمويل رسمي",
+      "publication_date": "2023-12-21",
+      "url": "https://tabby.ai/en-AE/press/jpmorgan-series-d-extension",
+      "primary_source": true,
+      "accessed_at": "2026-08-03",
+      "supports": [
+        "700 مليون توريق",
+        "250 مليون Series D",
+        "1.5 مليار تقييم"
+      ]
+    }
   ]
 }

@@ -1,52 +1,1170 @@
 {
   "id": "instabug",
   "slug": "instabug",
-  "name": "إنستاباج (Instabug)",
-  "headline": "الأداة التي تستخدمها كبرى شركات العالم لاكتشاف أخطاء التطبيقات",
-  "category": "B2B SaaS / أدوات المطورين",
+  "name": "لوسِك (Luciq، إنستاباج سابقًا)",
+  "headline": "كيف تجاوزت إنستاباج «هزّ الهاتف» لتبني لوسِك: طبقة ذكاء وكشف وإصلاح للتطبيقات المحمولة",
+  "category": "Developer Tools / Agentic Mobile Observability / مراقبة التطبيقات المحمولة بالذكاء الاصطناعي",
   "company": {
-    "location": "القاهرة، مصر (مدعومة من Y Combinator)",
-    "business_model": "اشتراكات SaaS B2B تعتمد على حجم الاستخدام والميزات"
+    "legal_name": "Instabug, Inc. d/b/a Luciq",
+    "brand_name": "Luciq",
+    "former_brand_name": "Instabug",
+    "rebrand_date": "2025-09-24",
+    "rebrand_note": "أعلنت الشركة رسميًا انتقال العلامة من Instabug إلى Luciq لتقديم نفسها كمنصة Agentic Mobile Observability. أُبقي id وslug باسم instabug حفاظًا على توافق الدليل والروابط القديمة.",
+    "location": "شركة أمريكية قانونيًا في كاليفورنيا، مع جذور وفريق هندسي وتشغيلي رئيسي في القاهرة. يسجل Y Combinator موقع الشركة في القاهرة، بينما تسجل الاتفاقيات القانونية الكيان الأمريكي في كاليفورنيا.",
+    "founded_year": 2012,
+    "founded_year_note": "ترجع الشركة بداية المنتج إلى 2012، بينما تذكر قواعد بيانات أخرى 2013 أو 2014 بحسب تعريف تأسيس الكيان أو الإطلاق التجاري.",
+    "founders": [
+      "عمر جبر (Omar Gabr)",
+      "معتز سليمان (Moataz Soliman)"
+    ],
+    "leadership": {
+      "chief_executive_officer": "جيم دوغلاس (Jim Douglas)",
+      "ceo_since": "2025-02-25",
+      "cofounder_and_president": "عمر جبر (Omar Gabr)",
+      "cofounder": "معتز سليمان (Moataz Soliman)",
+      "note": "اعتُمد إعلان الشركة الرسمي الأحدث؛ بعض ملفات قواعد البيانات تعرض مسميات أقدم أو مختلفة."
+    },
+    "public_company": false,
+    "ticker": null,
+    "sec_filings_available": false,
+    "business_model": "منصة SaaS مؤسسية لمراقبة التطبيقات المحمولة، تعتمد حاليًا على خطة مخصصة السعر وفق شرائح المستخدمين النشطين يوميًا DAU وعدد مقاعد أعضاء الفريق. أوقفت الشركة الخطط ذاتية الخدمة للعملاء الجدد، مع دعم Premier اختياري للمؤسسات.",
+    "products": [
+      "Signals",
+      "Companion",
+      "Autopilot",
+      "Crash Reporting وANR وApp Hangs",
+      "Bug Reporting",
+      "App Performance Monitoring",
+      "Session Replay",
+      "In-App Surveys وIn-App Chat",
+      "App Ratings & Reviews",
+      "Release وRollout Management",
+      "MCP وCLI وAPI",
+      "تكاملات إدارة التطوير والدعم"
+    ],
+    "supported_platforms": [
+      "iOS",
+      "Android",
+      "React Native",
+      "Flutter"
+    ],
+    "technology_stack_note": "لم تُدرج لغات برمجة أو قواعد بيانات داخلية غير موثقة؛ أدرجت واجهات وقدرات المنتج المعلنة فقط."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات شهرياً",
-    "monthly_traffic": "مثبتة على مليارات الأجهزة عالمياً"
+    "as_of_date": "2026-08-03",
+    "monthly_revenue": null,
+    "monthly_revenue_note": "لا تنشر الشركة إيرادًا شهريًا أو سنويًا فعليًا أو ARR أو MRR. حُذف ادعاء «ملايين الدولارات شهريًا».",
+    "monthly_traffic": null,
+    "monthly_traffic_note": "انتشار SDK على الأجهزة ليس زيارات للموقع ولا مستخدمين نشطين.",
+    "monthly_active_users": null,
+    "daily_active_users": null,
+    "paying_customers": null,
+    "usage_note": "DAU في التسعير يعني الأجهزة الفريدة التي تشغّل تطبيق العميل خلال 24 ساعة، وليس DAU لمنتج Luciq نفسه.",
+    "company_reported_scale": {
+      "mobile_teams": {
+        "value": 25000,
+        "operator": "+",
+        "unit": "فريق تطبيقات محمولة",
+        "as_of": "2026-08-03",
+        "metric_type": "company_reported_teams",
+        "note": "ادعاء شركة غير مدقق ولا يساوي العملاء الدافعين."
+      },
+      "companies_claim": {
+        "value": 25000,
+        "operator": "+",
+        "unit": "شركة",
+        "as_of": "2026-08-03",
+        "metric_type": "company_marketing_claim",
+        "note": "صفحة الوظائف تستخدم «شركة» بينما صفحة العملاء تستخدم «فريق»؛ لم يُفترض أنهما مقياس واحد."
+      },
+      "device_reach": {
+        "value": 4000000000,
+        "operator": "+",
+        "unit": "جهاز",
+        "as_of": "2025",
+        "metric_type": "company_reported_sdk_reach",
+        "note": "انتشار SDK، وليس مستخدمين فريدين أو تنزيلات تطبيق Luciq."
+      }
+    },
+    "third_party_2026_sdk_signal": {
+      "source": "AppGoblin كما أعادت Luciq نشره",
+      "date": "2026-06-08",
+      "quarter_over_quarter_sdk_growth_percent": 500,
+      "installs_last_30_days": 362000000,
+      "sample_scope": "1,000 شركة و15 مليون تطبيق وفق الملخص المنشور",
+      "metric_type": "third_party_sdk_detection_estimate",
+      "note": "تقدير طرف ثالث، لا يمثل الإيراد أو العملاء أو MAU."
+    },
+    "historical_scale_metrics": [
+      {
+        "as_of": "2016-06",
+        "apps": 12000,
+        "devices": 300000000,
+        "note": "مؤشرات تاريخية نقلتها TechCrunch عن الشركة."
+      },
+      {
+        "as_of": "2019-08",
+        "companies": 25000,
+        "reported_issues_and_feedback": 400000000,
+        "devices": 2000000000,
+        "note": "مؤشرات تاريخية رسمية."
+      },
+      {
+        "as_of": "2021-12-31",
+        "devices_reached": 2700000000,
+        "mobile_sessions_processed": 110000000000,
+        "issues_processed": 4200000000,
+        "mobile_teams": 25000,
+        "note": "وردت في إعلان Series B ولا تمثل بالضرورة 2026."
+      }
+    ]
   },
   "overview": {
     "problem": {
-      "text": "عندما يواجه المستخدم خطأً (Crash) في تطبيق موبايل، كان من الصعب جداً على المطورين معرفة سبب الخطأ والظروف التي أدت إليه (جهاز المستخدم، الشبكة، الشاشة).",
-      "impact": "تجربة مستخدم سيئة، صعوبة في إصلاح الأخطاء، وانخفاض تقييم التطبيقات في المتاجر."
+      "text": "تعمل تطبيقات الهاتف على تركيبات كثيرة من الأجهزة والأنظمة والشبكات. عند حدوث انهيار أو تعليق أو بطء أو خلل بصري، يصل إلى الفريق غالبًا كتقييم متجر غامض أو رسالة بلا خطوات إعادة إنتاج أو سياق الجلسة.",
+      "impact": "تضيع ساعات هندسية في إعادة المشكلة، وتتراكم تنبيهات بلا ترتيب حسب الأثر، وقد تتضرر التحويلات والاحتفاظ والتقييمات قبل معرفة السبب."
     },
     "solution": {
-      "text": "حزمة برمجية (SDK) يتم زرعها داخل التطبيقات تتيح للمستخدم التبليغ عن الأخطاء بمجرد (هز الهاتف)، وترسل تقريراً مفصلاً ودقيقاً للمطورين."
+      "text": "تدمج Luciq حزمة SDK داخل تطبيق العميل لالتقاط الانهيارات والأداء والشبكة وخطوات المستخدم وإعادة الجلسة والتعليقات، ثم تنظّم الإشارات وتحدد الأولوية والسبب الجذري وتربطها بوكلاء التطوير وصولًا إلى اقتراح إصلاح أو Pull Request ومراقبة الإطلاق."
     }
   },
   "market_data": {
-    "target_audience": "مطورو تطبيقات الهواتف الذكية، مدراء المنتجات، وفرق ضمان الجودة (QA).",
-    "market_size": "سوق أدوات مراقبة أداء التطبيقات (APM) العالمي.",
-    "growth_rate": "تستخدم من قبل آلاف الشركات الكبرى مثل Yahoo و PayPal و Twitch."
+    "target_audience": [
+      "فرق هندسة تطبيقات الهاتف",
+      "فرق الجودة والاختبار",
+      "مديرو المنتجات وتجربة المستخدم",
+      "فرق SRE وDevOps",
+      "الشركات ذات التطبيقات واسعة الاستخدام",
+      "المؤسسات التي تستخدم وكلاء البرمجة"
+    ],
+    "market_size": {
+      "current_verified_value": null,
+      "note": "لم يُستخدم رقم عام لسوق APM أو DevOps لأن Luciq تعمل عند تقاطع مراقبة التطبيقات وتجربة المستخدم والاختبار والأتمتة."
+    },
+    "growth_rate": {
+      "current_verified_revenue_growth": null,
+      "current_verified_customer_growth": null,
+      "operating_signals": [
+        "إعادة التسمية إلى Luciq في سبتمبر 2025",
+        "الانتقال إلى Enterprise بتسعير حسب DAU والمقاعد",
+        "إطلاق Signals وCompanion وAutopilot",
+        "تحديثات 2026 مثل Crash Insights وSession Replay 2.0 وAgentic Instrumentation",
+        "استمرار ادعاء 25 ألف+ فريق أو شركة و4+ مليارات جهاز",
+        "إشارة AppGoblin الخارجية عن نمو SDK بنسبة 500% ربعيًا"
+      ],
+      "note": "إشارات منتج وانتشار وليست نموًا ماليًا مدققًا."
+    }
   },
   "financials": {
-    "initial_investment": "انطلقت من مصر ثم قبلت في مسرعة Y Combinator وحصلت على استثمارات تجاوزت 40 مليون دولار.",
-    "valuation": "مئات الملايين من الدولارات",
+    "currency_note": "جميع القيم بالدولار الأمريكي ما لم يُذكر خلاف ذلك.",
+    "actual_revenue": null,
+    "actual_revenue_note": "لا توجد قوائم مالية عامة أو إفصاحات عن الإيراد أو ARR أو الربحية.",
+    "valuation": null,
+    "valuation_note": "رفضت الشركة الإفصاح عن تقييم Series B ولم يُعثر على تقييم رسمي لاحق.",
+    "transaction_volume": null,
+    "transaction_volume_note": "الجلسات والأجهزة والمشكلات المعالجة ليست GMV أو معاملات مالية.",
+    "funding_history": [
+      {
+        "date": "2013",
+        "round": "تمويل ملائكي مبكر",
+        "amount_usd": 300000,
+        "capital_type": "equity",
+        "source_status": "reported_by_techcrunch"
+      },
+      {
+        "date": "2016-06-06",
+        "round": "Seed",
+        "amount_usd": 1700000,
+        "capital_type": "equity",
+        "lead_investor": "Accel",
+        "other_investors": [
+          "Amr Awadallah",
+          "Jim Payne"
+        ]
+      },
+      {
+        "date": "2020-05-04",
+        "round": "Series A",
+        "amount_usd": 5000000,
+        "capital_type": "equity",
+        "lead_investor": "Accel",
+        "other_investors": [
+          "Amr Awadallah",
+          "Jim Payne"
+        ]
+      },
+      {
+        "date": "2022-05-17",
+        "round": "Series B",
+        "amount_usd": 46000000,
+        "capital_type": "equity",
+        "lead_investor": "Insight Partners",
+        "other_investors": [
+          "Accel",
+          "Forgepoint Capital",
+          "Endeavor Catalyst"
+        ]
+      }
+    ],
+    "funding_totals": {
+      "named_rounds_calculated_usd": 53000000,
+      "calculation": "0.3 مليون + 1.7 مليون + 5 ملايين + 46 مليونًا",
+      "reported_total_equity_at_series_b_usd": 54000000,
+      "official_rounded_claim_as_of_2025": "أكثر من 50 مليون دولار",
+      "reconciliation_note": "يختلف مجموع الجولات المسماة عن إجمالي TechCrunch بنحو مليون دولار؛ لم يُخترع رقم لتسوية الفرق.",
+      "classification_note": "تمويلات ملكية وليست إيرادًا أو تقييمًا أو رصيدًا نقديًا حاليًا."
+    },
     "revenue_streams": [
-      "الباقة الأساسية للشركات الناشئة",
-      "باقة Pro للميزات المتقدمة (Crash Reporting & APM)",
-      "باقة Enterprise للشركات الكبرى بخوادم مخصصة"
+      {
+        "stream": "اشتراك Enterprise",
+        "pricing_basis": [
+          "شرائح DAU لتطبيق العميل",
+          "عدد مقاعد الفريق"
+        ],
+        "public_price": null,
+        "status": "مؤكد"
+      },
+      {
+        "stream": "Premier Support",
+        "pricing_basis": [
+          "دعم 24/7",
+          "مهندس L2",
+          "Slack مخصص",
+          "SLA مخصص"
+        ],
+        "public_price": null,
+        "status": "إضافة مؤسسية"
+      },
+      {
+        "stream": "توسع العقود مع ارتفاع DAU أو المقاعد أو متطلبات الاستضافة والاحتفاظ",
+        "public_price": null,
+        "status": "منطق توسع موثق"
+      }
+    ],
+    "undisclosed_metrics": [
+      "الإيراد السنوي والشهري",
+      "ARR وMRR",
+      "الهامش وصافي الربح",
+      "التقييم",
+      "عدد العملاء الدافعين",
+      "متوسط قيمة العقد",
+      "Net Revenue Retention",
+      "تكلفة اكتساب العميل"
     ]
+  },
+  "analysis": {
+    "core_thesis": "قيمة Luciq ليست في جمع تقارير أخطاء أكثر، بل في امتلاك سياق الجهاز والجلسة الذي لا تراه أدوات الخوادم وحدها، ثم تحويله إلى قرار وإصلاح وإطلاق.",
+    "business_model_evolution": "بدأ المنتج بحركة «هز الهاتف»، ثم توسع إلى Crash Reporting وAPM وSession Replay، وأعاد بناء العرض حول Signals وCompanion وAutopilot. بالتوازي انتقل من Self-Serve إلى Enterprise.",
+    "growth_engine": [
+      "SDK داخل تطبيق العميل يرفع تكلفة الاستبدال",
+      "التوسع من QA إلى الهندسة والمنتج والدعم يزيد المقاعد",
+      "زيادة مستخدمي تطبيق العميل ترفع شريحة DAU",
+      "التكامل مع Jira وGitHub وMCP يجعل البيانات جزءًا من سير العمل",
+      "العملاء المؤسسيون يرفعون الثقة"
+    ],
+    "defensibility": [
+      "سياق على الجهاز لا تراه مراقبة الخوادم",
+      "SDK متعدد المنصات",
+      "تكاملات عميقة مع أدوات التطوير",
+      "تخصص في ANR وUI hangs والشبكات",
+      "سياق منظم للوكلاء عبر MCP وAPI",
+      "ضوابط مؤسسية مثل SOC 2 Type II وISO 27001:2022"
+    ],
+    "key_risks": [
+      "منافسة منصات Observability الكبيرة",
+      "حساسية SDK للأداء والخصوصية",
+      "تكلفة تخزين وتحليل 100% من الجلسات",
+      "دقة الإصلاحات الآلية",
+      "دورات مبيعات مؤسسية أطول",
+      "حماية بيانات وكود العملاء",
+      "مبالغة لغة Agentic مقارنة بالتنفيذ",
+      "غياب الإفصاحات المالية"
+    ],
+    "metric_reading": "أجهزة SDK ليست زيارات ولا مستخدمي Luciq. الفرق أو الشركات لا تساوي العملاء الدافعين. الجلسات والمشكلات بيانات تشغيلية لا إيراد. DAU في التسعير يخص تطبيق العميل.",
+    "rebrand_interpretation": "التحول إلى Luciq يهدف إلى تجاوز انطباع أداة Bug Reporting. نجاحه يقاس ببيع نتائج أوسع مثل تقليل زمن الإصلاح وحماية التحويل وتغذية وكلاء التطوير بسياق موثوق.",
+    "ai_interpretation": "بعض صفحات المنتج تؤكد وجود الإنسان في الحلقة لمراجعة الحلول، لذلك لا ينبغي وصف المنصة بأنها تستبدل المهندس بالكامل."
   },
   "lessons": [
     {
-      "title": "حل مشكلة تقنية عالمية من مكان محلي",
-      "description": "لم يبنوا تطبيقاً يخدم السوق المصري فقط، بل بنوا أداة للمطورين (Developer Tool) يحتاجها أي مبرمج في العالم."
+      "title": "المدخل الصغير يمكن أن يفتح منصة كاملة",
+      "description": "ميزة هز الهاتف خفضت الاحتكاك وجمعت سياقًا غنيًا، ثم توسع المنتج حول البيانات التي ولّدتها."
     },
     {
-      "title": "تجربة المستخدم السحرية (Shake to report)",
-      "description": "فكرة (هز الهاتف) لعمل لقطة شاشة وإرسال تقرير خطأ جعلت الإبلاغ عن المشاكل ممتعاً وسهلاً للمستخدم العادي."
+      "title": "امتلك السياق الذي لا يراه المنافس",
+      "description": "أدوات الخوادم ترى الطلبات، بينما Luciq ترى الجهاز والشاشة وخطوات المستخدم والشبكة."
     },
     {
-      "title": "التركيز على النيش (Niche Focus)",
-      "description": "بدلاً من حل كل مشاكل المطورين، ركزوا فقط على الإبلاغ عن الأخطاء (Bug Reporting) حتى أصبحوا الأفضل فيها عالمياً."
+      "title": "لا تجعل الاسم القديم يقيّد السوق الجديد",
+      "description": "اسم Instabug حصر الانطباع في الأخطاء، فجاءت Luciq لتعيد تعريف الشركة حول الذكاء والسياق والنتائج."
+    },
+    {
+      "title": "اربط التسعير بنجاح العميل",
+      "description": "DAU يربط التوسع باتساع تطبيق العميل، والمقاعد تربطه باتساع التبني داخل المؤسسة."
+    },
+    {
+      "title": "إيقاف Self-Serve قرار نموذج",
+      "description": "Enterprise يرفع قيمة العقود لكنه يطيل دورة المبيعات ويزيد الاعتماد على فرق البيع والدعم."
+    },
+    {
+      "title": "الوكلاء يحتاجون سياقًا قبل نموذج أقوى",
+      "description": "الذكاء الاصطناعي لا يصلح مشكلة من stack trace معزول؛ يحتاج الجلسة والجهاز والشبكة والإصدار والكود."
+    },
+    {
+      "title": "لا تخلط انتشار SDK بعدد العملاء",
+      "description": "أربعة مليارات جهاز لا تكشف عدد العقود أو الإيراد أو المستخدمين الفريدين."
+    },
+    {
+      "title": "الأتمتة الموثوقة تحتاج حواجز إطلاق",
+      "description": "القيمة لا تنتهي عند كتابة الإصلاح، بل عند اختباره وإطلاقه تدريجيًا وإيقافه عند التدهور."
+    }
+  ],
+  "tools": [
+    "Luciq SDK",
+    "Signals",
+    "Companion",
+    "Autopilot",
+    "Crash Reporting وANR Monitoring",
+    "Bug Reporting",
+    "App Performance Monitoring",
+    "Session Replay",
+    "In-App Surveys وChat",
+    "App Ratings & Reviews",
+    "Release وRollout Management",
+    "Crash Insights",
+    "MCP Server",
+    "CLI وAPI",
+    "تكاملات Jira وGitHub وZendesk وInstana",
+    "SSO وSAML وSCIM وRBAC وAudit Logs",
+    "إخفاء PII على الجهاز واستضافة إقليمية"
+  ],
+  "verification": {
+    "standard": "Professional V2",
+    "language": "ar",
+    "researched_through": "2026-08-03",
+    "generated_at": "2026-08-03T19:56:00+03:00",
+    "source_priority": [
+      "موقع Luciq الرسمي",
+      "وثائق Luciq والاتفاقيات القانونية",
+      "إعلانات الشركة",
+      "Y Combinator",
+      "TechCrunch وBusiness Wire",
+      "غرفة الأخبار للمؤشرات الخارجية المؤهلة"
+    ],
+    "corrections": [
+      {
+        "original_claim": "اسم الشركة إنستاباج",
+        "action": "محدث",
+        "replacement": "العلامة الحالية Luciq منذ 24 سبتمبر 2025، مع بقاء الكيان Instabug, Inc. d/b/a Luciq."
+      },
+      {
+        "original_claim": "الموقع القاهرة فقط",
+        "action": "مؤهل",
+        "replacement": "كيان أمريكي في كاليفورنيا مع جذور وفريق رئيسي في القاهرة."
+      },
+      {
+        "original_claim": "اشتراكات تعتمد على الاستخدام والميزات",
+        "action": "محدد",
+        "replacement": "Enterprise مخصص السعر حسب DAU والمقاعد، مع إيقاف Self-Serve للعملاء الجدد."
+      },
+      {
+        "original_claim": "ملايين الدولارات شهريًا",
+        "action": "محذوف",
+        "replacement": "لا يوجد إيراد شهري أو سنوي معلن."
+      },
+      {
+        "original_claim": "مليارات الأجهزة كـ monthly_traffic",
+        "action": "صحح التصنيف",
+        "replacement": "انتشار SDK على 4+ مليارات جهاز، وليس زيارات أو MAU أو عملاء."
+      },
+      {
+        "original_claim": "المنتج مجرد هز الهاتف",
+        "action": "محدث",
+        "replacement": "منصة مراقبة وتشخيص وإصلاح وإطلاق متكاملة."
+      },
+      {
+        "original_claim": "عملاء قدامى مثل Yahoo وPayPal وTwitch",
+        "action": "محدث",
+        "replacement": "تعرض المواد الحالية أسماء مثل DoorDash وT-Mobile وFigma وVerizon وDisney وGM وAB InBev وDecathlon."
+      },
+      {
+        "original_claim": "استثمارات تجاوزت 40 مليون دولار",
+        "action": "مصحح",
+        "replacement": "Series B وحدها 46 مليونًا؛ الجولات المسماة 53 مليونًا، وإجمالي TechCrunch 54 مليونًا."
+      },
+      {
+        "original_claim": "التقييم مئات الملايين",
+        "action": "محذوف",
+        "replacement": "التقييم غير معلن."
+      },
+      {
+        "original_claim": "Basic وPro وEnterprise الحالية",
+        "action": "محدث",
+        "replacement": "الخطط الجديدة Enterprise مع دعم Premier اختياري."
+      },
+      {
+        "original_claim": "التركيز ما زال Bug Reporting فقط",
+        "action": "محدث",
+        "replacement": "دورة مراقبة محمولة كاملة ووكلاء للكشف والتشخيص والإصلاح والإطلاق."
+      },
+      {
+        "original_claim": "الإصلاح آلي بالكامل",
+        "action": "مؤهل",
+        "replacement": "تذكر صفحة Resolve وجود Man-in-the-Loop لمراجعة الحلول."
+      }
+    ],
+    "metric_distinctions": [
+      "الإيراد لا يساوي التمويل أو التقييم",
+      "أجهزة SDK لا تساوي المستخدمين أو العملاء",
+      "25 ألف فريق أو شركة لا يساوي العقود النشطة",
+      "الجلسات لا تساوي زيارات الموقع",
+      "DAU في التسعير يخص تطبيق العميل",
+      "التقارير ليست معاملات مالية",
+      "نمو SDK لا يساوي نمو الإيراد"
+    ],
+    "known_limits": [
+      "لا توجد قوائم مالية أو SEC",
+      "لا يوجد إيراد أو تقييم موثق",
+      "لا يوجد تعريف موحد للفرق والشركات والعملاء",
+      "4+ مليارات جهاز ادعاء شركة",
+      "مؤشر AppGoblin طرف ثالث",
+      "لا توجد قيم عقود أو توزيع إيراد",
+      "أسماء المنتجات تتغير بسرعة",
+      "الحزمة التقنية الداخلية غير معلنة"
+    ],
+    "programmatic_checks": {
+      "json_parse": "passed",
+      "required_top_level_keys": "passed",
+      "source_id_uniqueness": "passed",
+      "evidence_source_references": "passed",
+      "evidence_json_paths": "passed",
+      "named_funding_calculation": "passed",
+      "undisclosed_financial_metrics_are_null": "passed",
+      "metric_type_separation": "passed",
+      "legacy_id_and_slug_preserved": "passed"
+    }
+  },
+  "evidence_map_schema": {
+    "claim_id": "معرف فريد",
+    "json_paths": "مسارات JSON",
+    "claim": "الادعاء",
+    "source_ids": "المصادر",
+    "evidence_type": "company_fact | product_fact | metric | pricing | funding | legal | policy | calculation | third_party_metric | absence_of_disclosure",
+    "confidence": "high | medium | low",
+    "status": "verified | qualified | removed",
+    "notes": "القيود"
+  },
+  "evidence_map": [
+    {
+      "claim_id": "E01",
+      "json_paths": [
+        "$.company.brand_name",
+        "$.company.rebrand_date",
+        "$.company.rebrand_note"
+      ],
+      "claim": "تحولت Instabug إلى Luciq في 24 سبتمبر 2025.",
+      "source_ids": [
+        "S01",
+        "S02"
+      ],
+      "evidence_type": "company_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "حُفظ id القديم للتوافق."
+    },
+    {
+      "claim_id": "E02",
+      "json_paths": [
+        "$.company.legal_name",
+        "$.company.location"
+      ],
+      "claim": "الكيان القانوني Instabug, Inc. d/b/a Luciq مع وجود قانوني في كاليفورنيا وفريق في القاهرة.",
+      "source_ids": [
+        "S03",
+        "S04"
+      ],
+      "evidence_type": "legal",
+      "confidence": "high",
+      "status": "qualified",
+      "notes": "المقر القانوني وموقع الفريق مختلفان."
+    },
+    {
+      "claim_id": "E03",
+      "json_paths": [
+        "$.company.founded_year",
+        "$.company.founders"
+      ],
+      "claim": "بدأ المنتج في مصر عام 2012 على يد عمر جبر ومعتز سليمان.",
+      "source_ids": [
+        "S05",
+        "S06"
+      ],
+      "evidence_type": "company_fact",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "تختلف سنة الكيان عن بداية المنتج."
+    },
+    {
+      "claim_id": "E04",
+      "json_paths": [
+        "$.company.leadership"
+      ],
+      "claim": "أصبح جيم دوغلاس CEO في فبراير 2025 وأصبح عمر جبر President.",
+      "source_ids": [
+        "S07",
+        "S01"
+      ],
+      "evidence_type": "company_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "claim_id": "E05",
+      "json_paths": [
+        "$.company.business_model",
+        "$.financials.revenue_streams[0]",
+        "$.directory_snapshot.usage_note"
+      ],
+      "claim": "التسعير الحالي حسب DAU والمقاعد.",
+      "source_ids": [
+        "S08",
+        "S09"
+      ],
+      "evidence_type": "pricing",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "DAU يخص أجهزة مستخدمي تطبيق العميل."
+    },
+    {
+      "claim_id": "E06",
+      "json_paths": [
+        "$.company.business_model",
+        "$.financials.revenue_streams[1]"
+      ],
+      "claim": "أوقفت Luciq Self-Serve للعملاء الجدد وتركز على Enterprise.",
+      "source_ids": [
+        "S08",
+        "S10"
+      ],
+      "evidence_type": "pricing",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "لا توجد أسعار عامة."
+    },
+    {
+      "claim_id": "E07",
+      "json_paths": [
+        "$.company.products",
+        "$.overview.solution",
+        "$.tools"
+      ],
+      "claim": "تشمل المنصة الالتقاط والتشخيص والإصلاح والإطلاق إلى جانب أدوات المراقبة التقليدية.",
+      "source_ids": [
+        "S11",
+        "S12",
+        "S13",
+        "S14"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "أسماء الوحدات قابلة للتغير."
+    },
+    {
+      "claim_id": "E08",
+      "json_paths": [
+        "$.company.supported_platforms"
+      ],
+      "claim": "تدعم Luciq iOS وAndroid وReact Native وFlutter.",
+      "source_ids": [
+        "S12",
+        "S15"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "claim_id": "E09",
+      "json_paths": [
+        "$.directory_snapshot.company_reported_scale.mobile_teams"
+      ],
+      "claim": "تقول صفحة العملاء إن 25 ألف+ فريق يستخدم Luciq.",
+      "source_ids": [
+        "S16"
+      ],
+      "evidence_type": "metric",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "لا يساوي العملاء الدافعين."
+    },
+    {
+      "claim_id": "E10",
+      "json_paths": [
+        "$.directory_snapshot.company_reported_scale.companies_claim"
+      ],
+      "claim": "تستخدم صفحة الوظائف تعبير 25 ألف+ شركة.",
+      "source_ids": [
+        "S17"
+      ],
+      "evidence_type": "metric",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "لا تعريف موحد مع «فريق»."
+    },
+    {
+      "claim_id": "E11",
+      "json_paths": [
+        "$.directory_snapshot.company_reported_scale.device_reach"
+      ],
+      "claim": "تصف الشركة وجود تقنيتها على 4+ مليارات جهاز.",
+      "source_ids": [
+        "S18"
+      ],
+      "evidence_type": "metric",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "انتشار SDK لا مستخدمون فريدون."
+    },
+    {
+      "claim_id": "E12",
+      "json_paths": [
+        "$.directory_snapshot.third_party_2026_sdk_signal",
+        "$.market_data.growth_rate.operating_signals[5]"
+      ],
+      "claim": "أعادت غرفة الأخبار نشر تقدير نمو SDK بنسبة 500% و362 مليون تثبيت خلال 30 يومًا.",
+      "source_ids": [
+        "S19"
+      ],
+      "evidence_type": "third_party_metric",
+      "confidence": "medium",
+      "status": "qualified",
+      "notes": "ليس مقياسًا ماليًا."
+    },
+    {
+      "claim_id": "E13",
+      "json_paths": [
+        "$.directory_snapshot.historical_scale_metrics[0]"
+      ],
+      "claim": "في 2016 كان SDK في 12 ألف تطبيق ونحو 300 مليون جهاز.",
+      "source_ids": [
+        "S20"
+      ],
+      "evidence_type": "metric",
+      "confidence": "medium",
+      "status": "verified",
+      "notes": "تاريخي."
+    },
+    {
+      "claim_id": "E14",
+      "json_paths": [
+        "$.directory_snapshot.historical_scale_metrics[1]"
+      ],
+      "claim": "في 2019 أعلنت الشركة 25 ألف شركة و400 مليون تقرير وملياري جهاز.",
+      "source_ids": [
+        "S21"
+      ],
+      "evidence_type": "metric",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "تاريخي."
+    },
+    {
+      "claim_id": "E15",
+      "json_paths": [
+        "$.directory_snapshot.historical_scale_metrics[2]"
+      ],
+      "claim": "في 2021 أعلنت 2.7 مليار جهاز و110 مليارات جلسة و4.2 مليارات مشكلة.",
+      "source_ids": [
+        "S22"
+      ],
+      "evidence_type": "metric",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "تاريخي."
+    },
+    {
+      "claim_id": "E16",
+      "json_paths": [
+        "$.financials.funding_history[0]",
+        "$.financials.funding_history[1]"
+      ],
+      "claim": "تمويل مبكر 300 ألف دولار وSeed بقيمة 1.7 مليون.",
+      "source_ids": [
+        "S20",
+        "S23"
+      ],
+      "evidence_type": "funding",
+      "confidence": "medium",
+      "status": "verified",
+      "notes": "تمويل لا إيراد."
+    },
+    {
+      "claim_id": "E17",
+      "json_paths": [
+        "$.financials.funding_history[2]"
+      ],
+      "claim": "Series A بقيمة 5 ملايين دولار في 2020.",
+      "source_ids": [
+        "S24"
+      ],
+      "evidence_type": "funding",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "claim_id": "E18",
+      "json_paths": [
+        "$.financials.funding_history[3]"
+      ],
+      "claim": "Series B بقيمة 46 مليون دولار في 2022.",
+      "source_ids": [
+        "S22",
+        "S25"
+      ],
+      "evidence_type": "funding",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "claim_id": "E19",
+      "json_paths": [
+        "$.financials.funding_totals"
+      ],
+      "claim": "الجولات المسماة 53 مليونًا، بينما نقلت TechCrunch إجمالي 54 مليونًا والشركة تقول أكثر من 50 مليونًا.",
+      "source_ids": [
+        "S01",
+        "S20",
+        "S23",
+        "S24",
+        "S25"
+      ],
+      "evidence_type": "calculation",
+      "confidence": "high",
+      "status": "qualified",
+      "notes": "لم يُسوّ الفرق بالافتراض."
+    },
+    {
+      "claim_id": "E20",
+      "json_paths": [
+        "$.financials.valuation",
+        "$.financials.actual_revenue",
+        "$.directory_snapshot.monthly_revenue"
+      ],
+      "claim": "لا يوجد تقييم أو إيراد فعلي معلن.",
+      "source_ids": [
+        "S01",
+        "S08",
+        "S22",
+        "S25"
+      ],
+      "evidence_type": "absence_of_disclosure",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "القيم null."
+    },
+    {
+      "claim_id": "E21",
+      "json_paths": [
+        "$.analysis.defensibility[5]",
+        "$.tools[15]"
+      ],
+      "claim": "تعلن الشركة SOC 2 Type II وISO 27001:2022 وضوابط مؤسسية وإخفاء PII.",
+      "source_ids": [
+        "S11",
+        "S08"
+      ],
+      "evidence_type": "policy",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "إفصاحات شركة."
+    },
+    {
+      "claim_id": "E22",
+      "json_paths": [
+        "$.analysis.ai_interpretation",
+        "$.verification.corrections[11]"
+      ],
+      "claim": "تذكر صفحة Resolve وجود الإنسان في الحلقة لمراجعة الحلول.",
+      "source_ids": [
+        "S14",
+        "S13"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "qualified",
+      "notes": "لا استبدال كامل للمهندس."
+    },
+    {
+      "claim_id": "E23",
+      "json_paths": [
+        "$.market_data.growth_rate.operating_signals[3]"
+      ],
+      "claim": "تشمل تحديثات 2026 Agentic Instrumentation وSession Replay 2.0 وCrash Insights.",
+      "source_ids": [
+        "S26"
+      ],
+      "evidence_type": "product_fact",
+      "confidence": "high",
+      "status": "verified",
+      "notes": null
+    },
+    {
+      "claim_id": "E24",
+      "json_paths": [
+        "$.company.technology_stack_note",
+        "$.verification.known_limits[7]"
+      ],
+      "claim": "الحزمة التقنية الداخلية الكاملة غير معلنة.",
+      "source_ids": [
+        "S11",
+        "S12",
+        "S15"
+      ],
+      "evidence_type": "absence_of_disclosure",
+      "confidence": "high",
+      "status": "verified",
+      "notes": "أدرجت الواجهات فقط."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Instabug Becomes Luciq.ai, Pioneers New Category: Agentic Mobile Observability",
+      "publisher": "Luciq",
+      "url": "https://www.luciq.ai/blog/instabug-becomes-luciq",
+      "published_date": "2025-09-24",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "إعادة التسمية",
+        "الفئة الجديدة",
+        "التمويل المدوّر"
+      ]
+    },
+    {
+      "id": "S02",
+      "title": "Today We Are Luciq",
+      "publisher": "Luciq",
+      "url": "https://www.luciq.ai/blog/today-we-are-luciq-the-future-of-mobile-observability-starts-now",
+      "published_date": "2025-09-29",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "تأكيد التسمية",
+        "منطق العلامة"
+      ]
+    },
+    {
+      "id": "S03",
+      "title": "Privacy Policy",
+      "publisher": "Luciq",
+      "url": "https://www.luciq.ai/privacy",
+      "published_date": "2023-06-06",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_legal",
+      "used_for": [
+        "الاسم القانوني"
+      ]
+    },
+    {
+      "id": "S04",
+      "title": "Luciq — Y Combinator Company Profile",
+      "publisher": "Y Combinator",
+      "url": "https://www.ycombinator.com/companies/luciq",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "accelerator_primary",
+      "used_for": [
+        "W16",
+        "المؤسسون",
+        "القاهرة"
+      ]
+    },
+    {
+      "id": "S05",
+      "title": "Meet the New Luciq",
+      "publisher": "Luciq",
+      "url": "https://www.luciq.ai/blog/meet-the-new-instabug",
+      "published_date": "2019-08-17",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "بداية المنتج",
+        "تطور المنتج",
+        "مقاييس 2019"
+      ]
+    },
+    {
+      "id": "S06",
+      "title": "Instabug W16 Helps App Developers Find and Fix Bugs",
+      "publisher": "Y Combinator",
+      "url": "https://www.ycombinator.com/blog/instabug-w16-helps-app-developers-find-and-fix-bugs",
+      "published_date": "2016-02-04",
+      "accessed_date": "2026-08-03",
+      "source_type": "accelerator_primary",
+      "used_for": [
+        "قصة النشأة",
+        "هز الهاتف"
+      ]
+    },
+    {
+      "id": "S07",
+      "title": "Luciq Welcomes Jim Douglas as CEO",
+      "publisher": "Luciq",
+      "url": "https://www.luciq.ai/blog/instabug-welcomes-jim-douglas-as-ceo-to-lead-the-future-of-ai-powered-mobile-observability",
+      "published_date": "2025-02-25",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "القيادة"
+      ]
+    },
+    {
+      "id": "S08",
+      "title": "Luciq Pricing",
+      "publisher": "Luciq",
+      "url": "https://www.luciq.ai/pricing",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_product",
+      "used_for": [
+        "DAU والمقاعد",
+        "Premier Support",
+        "الامتثال"
+      ]
+    },
+    {
+      "id": "S09",
+      "title": "License Entitlements and Restrictions",
+      "publisher": "Luciq Docs",
+      "url": "https://docs.luciq.ai/organization-settings/billing/license-entitlements-and-restrictions",
+      "published_date": "2025-11-05",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_documentation",
+      "used_for": [
+        "تعريف DAU والجلسة"
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "Enterprise Plans",
+      "publisher": "Luciq Docs",
+      "url": "https://docs.luciq.ai/organization-settings/billing/enterprise-plans",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_documentation",
+      "used_for": [
+        "إيقاف Self-Serve"
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "Luciq — Everything Mobile AI Builders Need",
+      "publisher": "Luciq",
+      "url": "https://www.luciq.ai/",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_product",
+      "used_for": [
+        "المنصة",
+        "الأمان",
+        "Signals وCompanion وAutopilot"
+      ]
+    },
+    {
+      "id": "S12",
+      "title": "Luciq Platform",
+      "publisher": "Luciq",
+      "url": "https://www.luciq.ai/platform",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_product",
+      "used_for": [
+        "المنصة",
+        "MCP وCLI وAPI",
+        "المنصات المدعومة"
+      ]
+    },
+    {
+      "id": "S13",
+      "title": "Luciq Companion",
+      "publisher": "Luciq",
+      "url": "https://www.luciq.ai/platform/companion",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_product",
+      "used_for": [
+        "الأولوية والسبب الجذري"
+      ]
+    },
+    {
+      "id": "S14",
+      "title": "Luciq Autonomous Resolution",
+      "publisher": "Luciq",
+      "url": "https://www.luciq.ai/platform/resolution",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_product",
+      "used_for": [
+        "Resolve Agent",
+        "Man-in-the-Loop"
+      ]
+    },
+    {
+      "id": "S15",
+      "title": "Welcome to Luciq Docs",
+      "publisher": "Luciq Docs",
+      "url": "https://docs.luciq.ai/",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_documentation",
+      "used_for": [
+        "SDK",
+        "هجرة APIs"
+      ]
+    },
+    {
+      "id": "S16",
+      "title": "Luciq Customers",
+      "publisher": "Luciq",
+      "url": "https://www.luciq.ai/customers",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "25 ألف فريق"
+      ]
+    },
+    {
+      "id": "S17",
+      "title": "Careers at Luciq",
+      "publisher": "Luciq",
+      "url": "https://www.luciq.ai/careers",
+      "published_date": null,
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "25 ألف شركة"
+      ]
+    },
+    {
+      "id": "S18",
+      "title": "AI Observability Explained",
+      "publisher": "Luciq",
+      "url": "https://www.luciq.ai/blog/ai-observability-explained",
+      "published_date": "2025",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "4+ مليارات جهاز"
+      ]
+    },
+    {
+      "id": "S19",
+      "title": "Luciq Newsroom",
+      "publisher": "Luciq",
+      "url": "https://www.luciq.ai/newsroom",
+      "published_date": "2026-06-08",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_newsroom_republishing_third_party_metric",
+      "used_for": [
+        "AppGoblin 2026"
+      ]
+    },
+    {
+      "id": "S20",
+      "title": "YC’s Instabug Raises $1.7M Seed",
+      "publisher": "TechCrunch",
+      "url": "https://techcrunch.com/2016/06/06/ycs-instabug-raises-1-7m-seed-round-led-by-accel-to-grow-beyond-bugs/",
+      "published_date": "2016-06-06",
+      "accessed_date": "2026-08-03",
+      "source_type": "reputable_technology_media",
+      "used_for": [
+        "Seed",
+        "2013 funding",
+        "2016 metrics"
+      ]
+    },
+    {
+      "id": "S21",
+      "title": "Meet the New Instabug / Real-Time Contextual Insights",
+      "publisher": "Luciq",
+      "url": "https://www.luciq.ai/blog/meet-the-new-instabug",
+      "published_date": "2019-08-17",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "مقاييس 2019"
+      ]
+    },
+    {
+      "id": "S22",
+      "title": "Instabug Raises $46M Series B",
+      "publisher": "Luciq",
+      "url": "https://www.luciq.ai/blog/instabug-raises-46m-series-b",
+      "published_date": "2022-05-17",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "Series B",
+        "مقاييس 2021"
+      ]
+    },
+    {
+      "id": "S23",
+      "title": "Instabug Raises $1.7M Seed Round",
+      "publisher": "TechCrunch",
+      "url": "https://techcrunch.com/2016/06/06/ycs-instabug-raises-1-7m-seed-round-led-by-accel-to-grow-beyond-bugs/",
+      "published_date": "2016-06-06",
+      "accessed_date": "2026-08-03",
+      "source_type": "reputable_technology_media",
+      "used_for": [
+        "Seed investors"
+      ]
+    },
+    {
+      "id": "S24",
+      "title": "Instabug Raises $5M Series A",
+      "publisher": "TechCrunch",
+      "url": "https://techcrunch.com/2020/05/04/instabug-raises-5m-series-a-round-led-by-accel-as-mobile-app-usage-surges/",
+      "published_date": "2020-05-04",
+      "accessed_date": "2026-08-03",
+      "source_type": "reputable_technology_media",
+      "used_for": [
+        "Series A"
+      ]
+    },
+    {
+      "id": "S25",
+      "title": "With a Fresh $46M, Instabug Aims to Do More Than Fix Bugs",
+      "publisher": "TechCrunch",
+      "url": "https://techcrunch.com/2022/05/17/instabug-lands-46m-to-help-keep-your-apps-from-crashing/",
+      "published_date": "2022-05-17",
+      "accessed_date": "2026-08-03",
+      "source_type": "reputable_technology_media",
+      "used_for": [
+        "Series B",
+        "54 مليون",
+        "التقييم غير معلن"
+      ]
+    },
+    {
+      "id": "S26",
+      "title": "Mobile Observability Updates to Help You Build Boldly in 2026",
+      "publisher": "Luciq",
+      "url": "https://www.luciq.ai/blog/mobile-observability-updates-build-boldly-in-2026",
+      "published_date": "2025-12-22",
+      "accessed_date": "2026-08-03",
+      "source_type": "official_company",
+      "used_for": [
+        "Agentic Instrumentation",
+        "Session Replay 2.0",
+        "Crash Insights"
+      ]
     }
   ]
 }

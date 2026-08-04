@@ -2,51 +2,804 @@
   "id": "vercel",
   "slug": "vercel",
   "name": "فيرسيل (Vercel)",
-  "headline": "سحابة المطورين التي جعلت نشر المواقع أسهل من نشر تغريدة",
-  "category": "Cloud Infrastructure / استضافة وتجربة المطورين",
+  "headline": "من زر النشر إلى البنية الوكيلة: كيف تحوّلت Vercel من سحابة للواجهات إلى منصة تشغّل التطبيقات والوكلاء",
+  "category": "Cloud Infrastructure & Developer Tools / البنية السحابية وأدوات المطورين والذكاء الاصطناعي",
   "company": {
-    "location": "سان فرانسيسكو، الولايات المتحدة",
-    "business_model": "Freemium + خطط مدفوعة للفرق والشركات الكبرى"
+    "location": "سان فرانسيسكو، كاليفورنيا، الولايات المتحدة، مع مكاتب وفرق في نيويورك ولندن وبرلين وحضور توظيف عالمي",
+    "founded": "2015؛ بدأ المنتج العام تحت اسم ZEIT في 2016، وأعيدت تسمية الشركة إلى Vercel في أبريل 2020",
+    "founder": "غييرمو راوخ (Guillermo Rauch)",
+    "legal_status": "شركة خاصة ممولة برأس مال مخاطر",
+    "current_positioning": "تصف نفسها في 2026 بأنها شركة «بنية تحتية وكيلة» (Agentic Infrastructure) لبناء التطبيقات والوكلاء ونشرهم وتشغيلهم ومراقبتهم",
+    "business_model": "نموذج هجين يجمع خطة مجانية، واشتراكات للفرق، وعقود Enterprise، وفوترة قائمة على استهلاك الشبكة والحوسبة والتخزين والبناء والمراقبة، إضافة إلى منتجات ذكاء اصطناعي باشتراكات أو تسعير حسب الاستخدام"
   },
   "directory_snapshot": {
-    "monthly_revenue": "عشرات الملايين",
-    "monthly_traffic": "25M+ /mo"
+    "monthly_revenue": "غير معلن. آخر رقم مطلق منشور هو تجاوز 100 مليون دولار من الإيراد السنوي الموحّد على أساس سنوي (annualized revenue) في مايو 2024؛ لا يمثل إيراداً شهرياً ولا إيراد سنة مالية مدققاً.",
+    "monthly_traffic": "غير معلن. حُذف رقم 25 مليون شهرياً لعدم وجود مصدر أولي يعرّفه كزيارات للموقع أو مستخدمين فريدين.",
+    "historical_revenue_signals": {
+      "annualized_revenue_may_2024": {
+        "value": "أكثر من 100 مليون دولار",
+        "definition": "معدل إيراد سنوي موحّد معلن وقت Series E، وليس إيراداً شهرياً أو قوائم مالية مدققة"
+      },
+      "top_line_growth_sep_2025": {
+        "value": "82% على أساس سنوي",
+        "definition": "نمو الخط الأعلى المعلن وقت Series F من دون نشر قيمة الإيراد المطلقة أو فترة السنة المالية بالتفصيل"
+      }
+    },
+    "current_operating_indicators": {
+      "developers": "ملايين المطورين حول العالم وفق وصف الشركة الحالي؛ لا يتوفر عدد دقيق أو تعريف للنشاط الشهري.",
+      "deployments": "أكثر من 6 ملايين عملية نشر يومياً وفق إعلان وظيفي رسمي في 2026.",
+      "platform_requests": "نحو تريليون طلب شهرياً عبر البنية التحتية وفق الإعلان الوظيفي نفسه؛ هذا حمل تشغيلي وليس زيارات موقع Vercel.",
+      "sandboxes": "أكثر من مليوني بيئة Sandbox في المؤشر التشغيلي المنشور؛ لم تحدد الصفحة فترة القياس بوضوح، لذلك لا يُحوّل إلى معدل يومي أو شهري.",
+      "v0_unique_users_sep_2025": "أكثر من 3.5 ملايين مستخدم فريد؛ رقم تراكمي/منتجي لـv0 وليس مستخدمين نشطين شهرياً لمنصة Vercel.",
+      "ai_sdk_weekly_downloads_sep_2025": "أكثر من 3 ملايين تنزيل أسبوعياً؛ التنزيلات ليست مستخدمين فريدين.",
+      "nextjs_downloads_trailing_12_months_sep_2025": "أكثر من 500 مليون تنزيل خلال 12 شهراً؛ رقم حزم برمجية وليس مواقع أو عملاء.",
+      "agent_initiated_deployments_apr_2026": "أكثر من 30% من عمليات النشر كانت تبدأها أدوات برمجية وكيلة وقت الإفصاح، بعد تضاعف النشر الأسبوعي خلال ثلاثة أشهر."
+    }
   },
   "overview": {
     "problem": {
-      "text": "عملية نشر المواقع وتجهيز السيرفرات (Deployment) كانت معقدة وتتطلب مهندسي عمليات (DevOps) للتعامل مع خوادم AWS.",
-      "impact": "بطء في إطلاق المنتجات، أخطاء متكررة في بيئة الإنتاج، وإحباط مستمر لمطوري الواجهات (Frontend Developers)."
+      "text": "كان تحويل الكود إلى تطبيق إنتاجي سريع وآمن يتطلب تركيب سلسلة طويلة من خدمات البناء وCI/CD والحوسبة والشبكات وCDN والشهادات والمراقبة والحماية. ومع انتقال البرمجيات إلى تطبيقات الذكاء الاصطناعي والوكلاء، أضيفت مشكلات توجيه النماذج، والتنفيذ طويل المدة، وتشغيل كود غير موثوق، وتتبع السلوك والتكاليف، وربط الوكلاء بالأنظمة الخارجية.",
+      "impact": "تبطؤ دورات الإطلاق، وتزداد كلفة فرق DevOps والمنصات، وتتكرر فروق الإعداد بين المعاينة والإنتاج، بينما تصبح مراقبة التطبيقات الوكيلة وتصحيحها أصعب بسبب تشتت الكود والسجلات والنماذج والبنية التحتية بين مزودين متعددين."
     },
     "solution": {
-      "text": "منصة تتيح للمطورين رفع الكود إلى GitHub ليتم نشره تلقائياً على خوادم عالمية سريعة بضغطة زر واحدة، مع دعم مثالي لإطار العمل Next.js."
+      "text": "تربط Vercel مستودع الكود بعمليات بناء ونشر غير قابلة للتغيير، وروابط معاينة لكل تغيير، وشبكة توصيل عالمية، وحوسبة مرنة، ومراقبة وأمن وفوترة موحدة. توسعت المنصة من استضافة الواجهات وNext.js إلى تطبيقات كاملة ووكلاء عبر AI SDK وAI Gateway وSandbox وWorkflows وQueues وVercel Agent، بحيث يستطيع الإنسان أو وكيل البرمجة الانتقال من الفكرة إلى بيئة قابلة للاختبار ثم الإنتاج، مع استخدام بيانات التشغيل للتحقيق واقتراح الإصلاحات."
     }
   },
   "market_data": {
-    "target_audience": "مطورو الواجهات الأمامية، الشركات الناشئة، ومواقع التجارة الإلكترونية الكبرى.",
-    "market_size": "سوق استضافة الويب والبنية التحتية السحابية (مئات المليارات).",
-    "growth_rate": "أصبحت المعيار الصناعي (Industry Standard) لمطوري React."
+    "target_audience": "المطورون المستقلون وفرق المنتجات والهندسة، الشركات الناشئة، المؤسسات الكبرى، فرق المنصات، شركات التجارة والمحتوى، ومطورو تطبيقات ووكلاء الذكاء الاصطناعي.",
+    "market_scope": "تقاطع منصات المطورين، وPaaS والحوسبة عديمة الخوادم، وCDN والأمن والمراقبة، وأدوات إنشاء التطبيقات بالذكاء الاصطناعي، والبنية اللازمة لتشغيل الوكلاء.",
+    "market_size": "لا يعتمد الملف رقماً واحداً؛ لأن تعريف السوق قد يشمل الاستضافة أو PaaS أو DevTools أو AI infrastructure، وهي أسواق متداخلة لا يمكن جمع تقديراتها من دون ازدواجية.",
+    "current_presence": "منصة عالمية ذات انتشار ذاتي بين المطورين وعقود للمؤسسات، وتعرض الشركة عملاء مثل OpenAI وPayPal وRamp وSupreme، بينما تستخدم علامات عالمية Next.js حتى عندما لا تكون عميلة استضافة مباشرة.",
+    "growth_signals": [
+      "تضاعفت قاعدة المستخدمين خلال الاثني عشر شهراً السابقة لإعلان Series F في سبتمبر 2025، مع نمو الخط الأعلى 82% على أساس سنوي.",
+      "تجاوز v0 حاجز 3.5 ملايين مستخدم فريد، وأصبحت حسابات Teams وEnterprise تمثل أكثر من نصف إيراد v0 وقت إعلان Series F.",
+      "تضاعف النشر الأسبوعي خلال ثلاثة أشهر حتى أبريل 2026، وكانت الوكلاء البرمجية تبدأ أكثر من 30% من عمليات النشر.",
+      "تحولت الرسالة التسويقية والمنتج من Frontend Cloud إلى AI Cloud ثم Agentic Infrastructure، مع إضافة تشغيل كامل للتطبيقات والوكلاء.",
+      "انضمام NuxtLabs في 2025 والاستحواذ على Better Auth في يوليو 2026 وسّعا نفوذ الشركة خارج Next.js إلى أطر متعددة وهوية الوكلاء."
+    ]
   },
   "financials": {
-    "initial_investment": "حصلت على جولات تمويل ضخمة من كبرى صناديق الاستثمار.",
-    "valuation": "$2.5B+",
+    "initial_investment": "بدأت ZEIT بتمويلات مبكرة غير مفصلة بالكامل في المصادر المستخدمة، ثم أعلنت Series A بقيمة 21 مليون دولار في 2020. كان إجمالي التمويل 313 مليون دولار بعد Series D في 2021.",
+    "valuation": "9.3 مليارات دولار بعد الاستثمار في Series F المعلنة في 30 سبتمبر 2025؛ هذا أحدث تقييم عام موثق حتى 3 أغسطس 2026.",
+    "funding_history": [
+      {
+        "date": "2020-04-21",
+        "round": "Series A",
+        "amount_usd": 21000000,
+        "valuation": "غير معلن في البيان",
+        "status": "معلن رسمياً",
+        "notes": "تزامنت الجولة مع إعادة تسمية ZEIT إلى Vercel."
+      },
+      {
+        "date": "2020-12-16",
+        "round": "Series B",
+        "amount_usd": 40000000,
+        "valuation": "غير معلن في البيان",
+        "status": "معلن رسمياً",
+        "notes": "رفع التمويل التراكمي المعلن آنذاك إلى 61 مليون دولار."
+      },
+      {
+        "date": "2021-06-23",
+        "round": "Series C",
+        "amount_usd": 102000000,
+        "valuation": "أكثر من مليار دولار",
+        "status": "معلن رسمياً",
+        "notes": "رفع التمويل التراكمي إلى 163 مليون دولار حسابياً."
+      },
+      {
+        "date": "2021-11-23",
+        "round": "Series D",
+        "amount_usd": 150000000,
+        "valuation": "أكثر من 2.5 مليار دولار",
+        "status": "معلن رسمياً",
+        "notes": "أعلنت الشركة أن إجمالي ما جمعته بلغ 313 مليون دولار."
+      },
+      {
+        "date": "2024-05-16",
+        "round": "Series E",
+        "amount_usd": 250000000,
+        "valuation": "3.25 مليارات دولار",
+        "status": "معلن رسمياً",
+        "notes": "أعلنت الشركة بالتزامن تجاوز 100 مليون دولار من الإيراد السنوي الموحّد."
+      },
+      {
+        "date": "2025-09-30",
+        "round": "Series F",
+        "amount_usd": 300000000,
+        "valuation": "9.3 مليارات دولار بعد الاستثمار",
+        "status": "معلن رسمياً",
+        "notes": "شارك في قيادة الجولة Accel وGIC."
+      }
+    ],
+    "disclosed_primary_capital_through_series_f": {
+      "amount_usd": 863000000,
+      "calculation": "313 مليون دولار معلنة حتى Series D + 250 مليون Series E + 300 مليون Series F",
+      "definition": "رأس مال أولي دخل الشركة وفق الجولات المعلنة، وليس إيراداً أو قيمة معاملات."
+    },
+    "series_f_secondary_tender": {
+      "amount_usd_approx": 300000000,
+      "definition": "عرض سيولة ثانوي لموظفين ومستثمرين حاليين وسابقين؛ لا يدخل في رأس المال الأولي الذي جمعته الشركة.",
+      "status": "أُعلن إطلاقه مع توقع إغلاقه في نوفمبر 2025"
+    },
     "revenue_streams": [
-      "باقة مجانية للهواة (Hobby)",
-      "باقة Pro للفرق والمستقلين ($20 للمستخدم)",
-      "باقة Enterprise للشركات الضخمة ذات الزيارات العالية"
-    ]
+      "اشتراك Pro بقيمة أساسية معلنة قدرها 20 دولاراً شهرياً لمقعد المطور، مع رصيد استخدام مشمول ثم فوترة إضافية حسب الاستهلاك.",
+      "عقود Enterprise مخصصة تشمل مستوى خدمة يصل إلى 99.99% وخيارات أمن وتحكم ودعم ومناطق متعددة.",
+      "فوترة البنية المدارة حسب الطلبات ونقل البيانات ووقت الحوسبة والذاكرة والبناء والتخزين والتحليلات والمراقبة والميزات الإضافية.",
+      "اشتراكات v0: خطط مجانية وTeam وBusiness وEnterprise، مع رصيد استخدام وأسعار مقاعد مختلفة؛ خطة Premium القديمة في طور الإيقاف للمستخدمين الجدد.",
+      "استخدام Vercel Agent وفق تسعير رمزي: 0.25 دولار لكل مليون رمز قابل للفوترة، إضافة إلى تكلفة الاستدلال لدى مزود النموذج.",
+      "منتجات ومنشآت مؤسسية إضافية مثل Observability Plus وWAF وميزات الامتثال والدعم والتشغيل متعدد المناطق."
+    ],
+    "metric_separation": {
+      "monthly_revenue": "غير معلن.",
+      "annualized_revenue": "تجاوز 100 مليون دولار في مايو 2024؛ ليس إيراد سنة مالية مدققاً.",
+      "revenue_growth": "82% على أساس سنوي وقت Series F، من دون قاعدة إيراد مطلقة منشورة.",
+      "valuation": "9.3 مليارات دولار بعد الاستثمار في سبتمبر 2025.",
+      "primary_funding": "نحو 863 مليون دولار محسوبة من إجمالي 313 مليوناً حتى Series D ثم Series E وSeries F.",
+      "secondary_liquidity": "نحو 300 مليون دولار؛ أسهم ثانوية لا تمول الشركة مباشرة.",
+      "users": "أكثر من 3.5 ملايين مستخدم فريد لـv0 وقت سبتمبر 2025؛ ليس MAU لمنصة Vercel.",
+      "downloads": "تنزيلات Next.js وAI SDK مقاييس توزيع برمجي وليست مستخدمين أو عملاء.",
+      "traffic": "زيارات Vercel.com غير معلنة.",
+      "infrastructure_volume": "عمليات النشر والطلبات والسندبوكسات أحمال تشغيلية لا تساوي الإيراد."
+    }
   },
   "lessons": [
     {
-      "title": "امتلاك الإطار (Own the Framework)",
-      "description": "قامت فيرسيل ببناء إطار عمل Next.js مفتوح المصدر ودعمته، مما جعل منصتها المكان البديهي والأفضل لاستضافته."
+      "title": "امتلك مسار العمل لا خطوة واحدة",
+      "description": "بدأت Vercel بتبسيط النشر، ثم أحاطت تلك الخطوة بالمعاينة والتعاون والشبكة والحوسبة والأمن والمراقبة. عندما يملك المنتج المسار من الكود إلى الإنتاج، يصبح أكثر تكراراً وأصعب استبدالاً من أداة تؤدي وظيفة منفصلة."
     },
     {
-      "title": "هوس تجربة المطورين",
-      "description": "جعلوا عملية النشر سحرية (Zero Config)، لا تحتاج لأي إعدادات، فقط اربط المستودع وانتهى الأمر."
+      "title": "المصدر المفتوح قناة توزيع تحتاج إلى ثقة",
+      "description": "منحت Next.js ثم AI SDK وNuxt وBetter Auth الشركة وصولاً إلى المطور قبل قرار الشراء. قوة هذا النموذج تأتي من بقاء الأدوات مفتوحة وقابلة للنقل؛ لأن تحويل المجتمع إلى قفل مصطنع قد يهدم الثقة التي صنعت التوزيع."
     },
     {
-      "title": "التركيز على الواجهات الأمامية (Frontend Focus)",
-      "description": "بينما كانت شركات السحابة تركز على البنية التحتية المعقدة (Backend)، ركزت فيرسيل على مطوري الواجهات الذين يصنعون تجربة المستخدم."
+      "title": "رابط المعاينة وحدة تعاون جديدة",
+      "description": "لم تكن Preview Deployments مجرد ميزة استضافة؛ جعلت كل تغيير منتجاً قابلاً للمشاركة مع المصمم ومدير المنتج والعميل قبل الدمج. إعادة تعريف وحدة التعاون قد تكون أقوى من تحسين سرعة الخادم وحدها."
+    },
+    {
+      "title": "غيّر الفئة قبل أن تتغير ضدك",
+      "description": "انتقلت الشركة من Jamstack إلى Frontend Cloud ثم AI Cloud وAgentic Infrastructure. التوسع الناجح لم يكن إضافة شعارات ذكاء اصطناعي، بل بناء primitives جديدة للحوسبة الطويلة والتوجيه والسندبوكسات والتتبع والوكلاء."
+    },
+    {
+      "title": "السياق التشغيلي يصنع وكيلاً يصعب تقليده",
+      "description": "يمتلك Vercel Agent وصولاً إلى الكود والبناء والنشر والسجلات والمقاييس وبيئات الاختبار. هذا السياق المتكامل يسمح له بالتحقيق والتحقق من الإصلاحات، ويخلق ميزة لا يحصل عليها مساعد برمجي منفصل عن البنية التي تشغّل التطبيق."
+    },
+    {
+      "title": "الحجم التشغيلي لا يساوي جودة الاقتصاد",
+      "description": "ملايين عمليات النشر وتريليون طلب وتنزيلات الحزم تثبت الانتشار والطلب على البنية، لكنها لا تكشف الهامش الإجمالي أو الاحتفاظ أو تكلفة الحوسبة. تقييم شركة سحابية يتطلب الفصل بين النشاط والإيراد والتمويل والتقييم."
+    }
+  ],
+  "tools": [
+    "Vercel CI/CD وPreview Deployments وعمليات الرجوع الفوري",
+    "Vercel Delivery Network وCDN والتوجيه والشهادات",
+    "Fluid Compute وVercel Functions وVercel Services والحاويات",
+    "Next.js وTurborepo ودعم أطر متعددة منها Nuxt وSvelteKit",
+    "v0 لإنشاء التطبيقات بالوصف الطبيعي",
+    "AI SDK وAI Gateway للربط بالنماذج وتوجيهها ومراقبتها",
+    "Vercel Sandbox لتشغيل الكود غير الموثوق في بيئات معزولة",
+    "Workflows وQueues لتنفيذ الوكلاء والمهام طويلة المدة",
+    "Vercel Agent لمراجعة الكود والتحقيق في الإنتاج واقتراح إصلاحات مختبرة",
+    "Observability وWeb Analytics وSpeed Insights والسجلات والتتبّع",
+    "Vercel Firewall وBot Management وDDoS Mitigation وضوابط المؤسسات",
+    "Better Auth وهوية الوكلاء ضمن التوسع المعلن في 2026"
+  ],
+  "analysis": {
+    "title": "Vercel بعد الواجهة الأمامية: رهان على امتلاك دورة حياة الوكيل من توليد الكود إلى تشغيله وإصلاحه",
+    "strategic_thesis": "الخندق الحقيقي لـVercel ليس استضافة Next.js وحدها. الشركة تجمع توزيعاً مفتوح المصدر، وتجربة نشر ذاتية، وبنية حوسبة وشبكة، وبيانات تشغيل، وأدوات ذكاء اصطناعي. كل طبقة تغذي الأخرى: الأطر تجلب المطورين، والمنصة تحول بعضهم إلى استخدام مدفوع، وبيانات الإنتاج تجعل Vercel Agent أكثر فائدة، والوكيل يزيد الاعتماد على الحوسبة والمراقبة.",
+    "business_model_evolution": [
+      "مرحلة ZEIT: نشر تطبيقات المطورين بأقل إعداد.",
+      "مرحلة Vercel/Frontend Cloud: ربط الأطر والمعاينات والتعاون بالشبكة والحوسبة.",
+      "مرحلة AI Cloud: إضافة AI SDK وGateway وFluid Compute وSandbox للأحمال الوكيلة.",
+      "مرحلة Agentic Infrastructure: تمكين وكلاء البرمجة من النشر، وتشغيل وكلاء العملاء، وجعل البنية نفسها تحقق وتقترح إجراءات."
+    ],
+    "competitive_moat": [
+      "توزيع عضوي عبر Next.js وAI SDK ومشروعات مفتوحة المصدر واسعة الانتشار.",
+      "تكامل رأسي بين الكود والبناء والنشر والشبكة والحوسبة والمراقبة والأمن.",
+      "حجم تشغيلي يمنح بيانات وأحمالاً لتحسين التوجيه والكفاءة والحماية.",
+      "انتقال سلس من Hobby المجاني إلى Pro ذاتي الخدمة ثم Enterprise.",
+      "السياق الإنتاجي الذي يستطيع Vercel Agent استخدامه للتحقيق وتشغيل الإصلاحات في Sandbox.",
+      "اعتمادات وضوابط مؤسسية تشمل SOC 2 Type 2 وISO 27001 وPCI DSS ودعم HIPAA."
+    ],
+    "key_risks": [
+      "منافسة مزودي السحابة الكبار ومنصات مثل Cloudflare وNetlify ومنتجات بناء التطبيقات بالذكاء الاصطناعي.",
+      "احتمال تعارض مصالح المنصة التجارية مع توقعات الحياد وقابلية النقل لدى مجتمعات المصدر المفتوح.",
+      "تقلب تكلفة الحوسبة والاستدلال والأمن مع أحمال الوكلاء طويلة المدة وكثيفة الرموز.",
+      "تعقيد الفوترة القائمة على الاستخدام واحتمال صدمة الفواتير أو انتقال العملاء إلى بنية أرخص.",
+      "ارتفاع التقييم إلى 9.3 مليارات دولار مع غياب نشر إيراد مطلق حديث وربحية وهوامش واحتفاظ صافي.",
+      "سرعة تغير أدوات البرمجة الوكيلة قد تقلل قوة إطار أو قناة توزيع بعينها."
+    ],
+    "what_to_watch": [
+      "الإيراد السنوي الفعلي بعد 2024، ومعدل النمو والربحية والهامش الإجمالي والاحتفاظ الصافي.",
+      "تحول مستخدمي v0 إلى خطط Teams وBusiness وEnterprise وتداخل إيراد v0 مع استهلاك Vercel.",
+      "تبني Agent Stack وVercel Agent خارج التجارب، واقتصاديات الرموز والسندبوكسات.",
+      "تطور نسبة عمليات النشر التي تبدأها الوكلاء وقدرتها على خلق استخدام مدفوع مستدام.",
+      "كيفية دمج Better Auth وهوية الوكلاء، ونتائج انضمام NuxtLabs في استراتيجية الأطر المتعددة.",
+      "قدرة Vercel على تشغيل تطبيقات كاملة وحاويات وخدمات طويلة المدة من دون فقدان بساطة تجربة المطور."
+    ],
+    "bottom_line": "Vercel لم تعد قصة «استضافة سهلة لـNext.js». إنها تحاول أن تصبح طبقة التشغيل التي يختارها المطور والوكيل معاً، ثم تستخدم رؤيتها الكاملة للإنتاج كي تتحول البنية من مورد صامت إلى نظام يراقب ويحقق ويقترح الإصلاح. الانتشار والتقييم قويان، لكن الحكم المالي الكامل يظل محدوداً ما دامت الشركة لا تنشر إيراداً حديثاً مطلقاً أو هوامش وربحية."
+  },
+  "verification": {
+    "standard": "Professional V2",
+    "verified_until": "2026-08-03",
+    "result": "passed",
+    "research_scope": "موقع Vercel ومدونتها ووثائقها وصفحات الأسعار والأمن وإعلانات الجولات الرسمية وبياناتها الصحفية، مع استخدام إفصاحات الشركة الأولية قدر الإمكان. Vercel شركة خاصة ولا تقدم نموذج 10-K أو إفصاحات SEC مالية عامة.",
+    "primary_corrections": [
+      "حذف الإيراد الشهري «عشرات الملايين» لعدم وجود إفصاح يدعمه.",
+      "حذف 25 مليون زيارة شهرية لغياب تعريف ومصدر أولي.",
+      "تحديث التقييم من 2.5 مليار دولار إلى 9.3 مليارات دولار بعد الاستثمار في سبتمبر 2025.",
+      "الفصل بين 863 مليون دولار من رأس المال الأولي ونحو 300 مليون دولار من السيولة الثانوية.",
+      "تصحيح سعر Pro: 20 دولاراً شهرياً للمقعد مع رصيد استخدام وفوترة إضافية، وليس اشتراكاً ثابتاً يغطي كل الاستهلاك.",
+      "تحديث وصف الشركة من استضافة الواجهات إلى منصة كاملة للتطبيقات والوكلاء.",
+      "الفصل بين الإيراد والمستخدمين والتنزيلات وعمليات النشر والطلبات الشبكية.",
+      "استبدال ادعاء «المعيار الصناعي لمطوري React» بمؤشرات انتشار محددة وقابلة للتفسير."
+    ],
+    "programmatic_checks": {
+      "json_parse": "passed",
+      "required_base_keys": "passed",
+      "source_id_integrity": "passed",
+      "evidence_map_paths": "passed",
+      "funding_arithmetic": "passed",
+      "metric_type_separation": "passed",
+      "unsupported_monthly_revenue_removed": "passed",
+      "unsupported_monthly_traffic_removed": "passed"
+    },
+    "limitations": [
+      "الشركة خاصة ولا تنشر قوائم مالية مدققة للعامة أو إيراداً وربحية وهوامش مفصلة.",
+      "رقم 100 مليون دولار في 2024 هو annualized revenue وفق بيان تمويل، وليس إيراد سنة مالية مدققاً.",
+      "نمو الخط الأعلى 82% في 2025 لا يتيح حساب الإيراد من دون معرفة قاعدة المقارنة الدقيقة.",
+      "مؤشرات التشغيل الحالية تأتي من صفحات الشركة وإعلانات الوظائف وليست تدقيقاً مستقلاً.",
+      "لم تُعلن قيم انضمام NuxtLabs أو الاستحواذ على Better Auth.",
+      "أعداد تنزيلات الحزم قد تشمل التنزيل الآلي والمتكرر ولا تساوي المطورين الفريدين."
+    ]
+  },
+  "evidence_map_schema": {
+    "description": "خريطة تربط الادعاءات الأساسية بالمصادر، وتفصل أنواع المقاييس وتوضح مستوى الثقة والقيود.",
+    "fields": {
+      "path": "مسار الحقل داخل JSON",
+      "claim": "الادعاء المختصر",
+      "metric_type": "نوع المقياس: ملف شركة، إيراد، تمويل، تقييم، استخدام، حركة، منتج، سعر، استحواذ أو امتثال",
+      "status": "verified أو corrected أو unavailable أو qualified",
+      "confidence": "high أو medium أو low",
+      "source_ids": "معرفات المصادر الداعمة",
+      "caveat": "قيد يمنع سوء تفسير الرقم أو الادعاء"
+    }
+  },
+  "evidence_map": [
+    {
+      "path": "company.founded",
+      "claim": "تأسست الشركة في 2015، وبدأ منتجها العام تحت ZEIT في 2016 ثم أعيدت تسميتها في 2020.",
+      "metric_type": "company_profile",
+      "status": "qualified",
+      "confidence": "high",
+      "source_ids": [
+        "S4",
+        "S10"
+      ],
+      "caveat": "تستخدم المصادر سنة 2015 لعمر الشركة و2016 لبداية المنتج؛ عوملتا كمرحلتين لا كتعارض."
+    },
+    {
+      "path": "company.current_positioning",
+      "claim": "تصف Vercel نفسها في 2026 بأنها منصة Agentic Infrastructure.",
+      "metric_type": "company_profile",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S1",
+        "S11",
+        "S13",
+        "S14"
+      ],
+      "caveat": "وصف استراتيجي للشركة وليس فئة معيارية مستقلة."
+    },
+    {
+      "path": "directory_snapshot.monthly_revenue",
+      "claim": "لا يوجد إيراد شهري معلن.",
+      "metric_type": "revenue",
+      "status": "unavailable",
+      "confidence": "high",
+      "source_ids": [
+        "S4",
+        "S6"
+      ],
+      "caveat": "وجود معدل إيراد سنوي تاريخي لا يسمح باختلاق إيراد شهري حالي."
+    },
+    {
+      "path": "directory_snapshot.monthly_traffic",
+      "claim": "لا توجد زيارات شهرية رسمية منشورة لـVercel.com.",
+      "metric_type": "traffic",
+      "status": "corrected",
+      "confidence": "high",
+      "source_ids": [
+        "S1",
+        "S11"
+      ],
+      "caveat": "طلبات البنية التحتية وعمليات النشر ليست زيارات الموقع."
+    },
+    {
+      "path": "directory_snapshot.historical_revenue_signals.annualized_revenue_may_2024",
+      "claim": "تجاوزت Vercel 100 مليون دولار من الإيراد السنوي الموحّد في مايو 2024.",
+      "metric_type": "revenue",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S6"
+      ],
+      "caveat": "Annualized revenue وليس إيراد سنة مالية أو إيراداً شهرياً."
+    },
+    {
+      "path": "directory_snapshot.historical_revenue_signals.top_line_growth_sep_2025",
+      "claim": "نما الخط الأعلى 82% على أساس سنوي وقت Series F.",
+      "metric_type": "revenue_growth",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S5"
+      ],
+      "caveat": "لم تُنشر قيمة الإيراد المطلقة أو قاعدة المقارنة."
+    },
+    {
+      "path": "directory_snapshot.current_operating_indicators.deployments",
+      "claim": "تعالج المنصة أكثر من 6 ملايين عملية نشر يومياً.",
+      "metric_type": "platform_usage",
+      "status": "verified",
+      "confidence": "medium",
+      "source_ids": [
+        "S12"
+      ],
+      "caveat": "إفصاح في إعلان وظيفي رسمي وليس تقرير تشغيل مدقق."
+    },
+    {
+      "path": "directory_snapshot.current_operating_indicators.platform_requests",
+      "claim": "تخدم البنية نحو تريليون طلب شهرياً.",
+      "metric_type": "infrastructure_volume",
+      "status": "verified",
+      "confidence": "medium",
+      "source_ids": [
+        "S12"
+      ],
+      "caveat": "طلبات بنية العملاء وليست زيارات Vercel.com أو معاملات مالية."
+    },
+    {
+      "path": "directory_snapshot.current_operating_indicators.sandboxes",
+      "claim": "أكثر من مليوني Sandbox ضمن مؤشر التشغيل المنشور.",
+      "metric_type": "compute_usage",
+      "status": "qualified",
+      "confidence": "medium",
+      "source_ids": [
+        "S12"
+      ],
+      "caveat": "فترة القياس غير محددة بوضوح، لذلك لم يُذكر معدل زمني."
+    },
+    {
+      "path": "directory_snapshot.current_operating_indicators.v0_unique_users_sep_2025",
+      "claim": "وصل v0 إلى أكثر من 3.5 ملايين مستخدم فريد.",
+      "metric_type": "product_users",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S5"
+      ],
+      "caveat": "رقم منتج v0 وليس MAU لمنصة Vercel كلها."
+    },
+    {
+      "path": "directory_snapshot.current_operating_indicators.ai_sdk_weekly_downloads_sep_2025",
+      "claim": "تجاوز AI SDK ثلاثة ملايين تنزيل أسبوعياً.",
+      "metric_type": "software_downloads",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S4",
+        "S5"
+      ],
+      "caveat": "التنزيلات لا تساوي مستخدمين فريدين."
+    },
+    {
+      "path": "directory_snapshot.current_operating_indicators.nextjs_downloads_trailing_12_months_sep_2025",
+      "claim": "تجاوزت تنزيلات Next.js 500 مليون خلال 12 شهراً.",
+      "metric_type": "software_downloads",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S4"
+      ],
+      "caveat": "تشمل تنزيلات الحزم المتكررة والآلية."
+    },
+    {
+      "path": "directory_snapshot.current_operating_indicators.agent_initiated_deployments_apr_2026",
+      "claim": "كانت الوكلاء تبدأ أكثر من 30% من عمليات النشر في أبريل 2026.",
+      "metric_type": "platform_usage",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S13"
+      ],
+      "caveat": "لقطة زمنية قد تتغير سريعاً."
+    },
+    {
+      "path": "financials.valuation",
+      "claim": "بلغ أحدث تقييم معلن 9.3 مليارات دولار بعد الاستثمار في سبتمبر 2025.",
+      "metric_type": "valuation",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S4",
+        "S5"
+      ],
+      "caveat": "تقييم جولة خاصة وليس قيمة سوقية عامة لحظية."
+    },
+    {
+      "path": "financials.disclosed_primary_capital_through_series_f",
+      "claim": "بلغ رأس المال الأولي المعلن حسابياً 863 مليون دولار حتى Series F.",
+      "metric_type": "funding",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S4",
+        "S6",
+        "S7"
+      ],
+      "caveat": "الحساب يبدأ من إجمالي 313 مليون دولار المعلن بعد Series D ثم يضيف الجولتين اللاحقتين."
+    },
+    {
+      "path": "financials.series_f_secondary_tender",
+      "claim": "أُعلن عرض سيولة ثانوي بنحو 300 مليون دولار.",
+      "metric_type": "secondary_liquidity",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S4",
+        "S5"
+      ],
+      "caveat": "لا يدخل في تمويل الشركة الأولي."
+    },
+    {
+      "path": "financials.funding_history[0]",
+      "claim": "Series A بقيمة 21 مليون دولار في أبريل 2020.",
+      "metric_type": "funding",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S10"
+      ],
+      "caveat": "لم يعلن البيان التقييم."
+    },
+    {
+      "path": "financials.funding_history[1]",
+      "claim": "Series B بقيمة 40 مليون دولار في ديسمبر 2020.",
+      "metric_type": "funding",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S9"
+      ],
+      "caveat": "رفع الإجمالي آنذاك إلى 61 مليون دولار."
+    },
+    {
+      "path": "financials.funding_history[2]",
+      "claim": "Series C بقيمة 102 مليون دولار وتقييم يزيد على مليار دولار.",
+      "metric_type": "funding_and_valuation",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S8"
+      ],
+      "caveat": "تقييم الجولة تاريخي."
+    },
+    {
+      "path": "financials.funding_history[3]",
+      "claim": "Series D بقيمة 150 مليون دولار وتقييم يزيد على 2.5 مليار دولار.",
+      "metric_type": "funding_and_valuation",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S7"
+      ],
+      "caveat": "ليس أحدث تقييم."
+    },
+    {
+      "path": "financials.funding_history[4]",
+      "claim": "Series E بقيمة 250 مليون دولار وتقييم 3.25 مليارات دولار.",
+      "metric_type": "funding_and_valuation",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S6"
+      ],
+      "caveat": "ليس أحدث تقييم."
+    },
+    {
+      "path": "financials.funding_history[5]",
+      "claim": "Series F بقيمة 300 مليون دولار وتقييم 9.3 مليارات دولار.",
+      "metric_type": "funding_and_valuation",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S4",
+        "S5"
+      ],
+      "caveat": "لا يشمل العرض الثانوي."
+    },
+    {
+      "path": "financials.revenue_streams[0]",
+      "claim": "خطة Pro تبدأ من 20 دولاراً شهرياً مع ائتمان استخدام وفوترة حسب الاستهلاك.",
+      "metric_type": "pricing",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S2",
+        "S3"
+      ],
+      "caveat": "الفاتورة النهائية قد تتجاوز الاشتراك الأساسي."
+    },
+    {
+      "path": "financials.revenue_streams[3]",
+      "claim": "يحقق v0 إيراداً من خطط Team وBusiness وEnterprise القائمة على المقاعد والائتمانات.",
+      "metric_type": "pricing",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S19"
+      ],
+      "caveat": "خطة Premium القديمة في طور الإيقاف للمستخدمين الجدد."
+    },
+    {
+      "path": "financials.revenue_streams[4]",
+      "claim": "أصبح Vercel Agent يُسعّر بـ0.25 دولار لكل مليون رمز إضافة إلى تكلفة المزود.",
+      "metric_type": "pricing",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S20"
+      ],
+      "caveat": "حل هذا التسعير محل رسم ثابت سابق لكل طلب."
+    },
+    {
+      "path": "market_data.growth_signals[1]",
+      "claim": "تمثل حسابات Teams وEnterprise أكثر من 50% من إيراد v0.",
+      "metric_type": "product_revenue_mix",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S5"
+      ],
+      "caveat": "نسبة من إيراد v0 فقط، لا من إيراد Vercel الكلي."
+    },
+    {
+      "path": "market_data.growth_signals[4]",
+      "claim": "انضمت NuxtLabs في 2025 واستحوذت Vercel على Better Auth في 2026.",
+      "metric_type": "acquisitions",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S16",
+        "S17"
+      ],
+      "caveat": "لم تُعلن قيم الصفقتين."
+    },
+    {
+      "path": "analysis.competitive_moat[5]",
+      "claim": "تدعم Vercel SOC 2 Type 2 وISO 27001 وPCI DSS وHIPAA.",
+      "metric_type": "compliance",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S18"
+      ],
+      "caveat": "امتثال العميل مسؤولية مشتركة وقد تتطلب بعض الميزات خطة أو اتفاقية مناسبة."
+    },
+    {
+      "path": "tools",
+      "claim": "المحفظة الحالية تشمل البنية الأساسية وNext.js وv0 وAI SDK وGateway وSandbox وAgent وWorkflows وأدوات الأمن والمراقبة.",
+      "metric_type": "product_portfolio",
+      "status": "verified",
+      "confidence": "high",
+      "source_ids": [
+        "S11",
+        "S14",
+        "S15",
+        "S21",
+        "S22"
+      ],
+      "caveat": "بعض المنتجات أو المزايا ما تزال Beta أو لها توافر حسب الخطة."
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "About Vercel — Agentic Infrastructure",
+      "publisher": "Vercel",
+      "type": "official_company",
+      "date": "2026",
+      "url": "https://vercel.com/about",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S2",
+      "title": "Vercel Pricing — Hobby, Pro and Enterprise",
+      "publisher": "Vercel",
+      "type": "official_pricing",
+      "date": "2026",
+      "url": "https://vercel.com/pricing",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S3",
+      "title": "Pricing on Vercel — managed infrastructure usage",
+      "publisher": "Vercel",
+      "type": "official_documentation",
+      "date": "2025-11-13",
+      "url": "https://vercel.com/docs/pricing",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S4",
+      "title": "Towards the AI Cloud: Our Series F",
+      "publisher": "Vercel",
+      "type": "official_funding_announcement",
+      "date": "2025-09-30",
+      "url": "https://vercel.com/blog/series-f",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S5",
+      "title": "Vercel closes Series F at a $9.3B valuation",
+      "publisher": "Vercel via Business Wire",
+      "type": "official_press_release",
+      "date": "2025-09-30",
+      "url": "https://www.businesswire.com/news/home/20250930898216/en/Vercel-Closes-Series-F-at-%249.3B-Valuation-to-Scale-the-AI-Cloud",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S6",
+      "title": "Vercel raises $250M Series E at $3.25B valuation",
+      "publisher": "Vercel via Business Wire",
+      "type": "official_press_release",
+      "date": "2024-05-16",
+      "url": "https://www.businesswire.com/news/home/20240516704768/en/Vercel-Raises-%24250M-to-Accelerate-AI-and-Security-Innovation-and-Deliver-Next-Generation-Web-Experiences-and-Applications",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S7",
+      "title": "Series D — $150M at more than $2.5B valuation",
+      "publisher": "Vercel",
+      "type": "official_funding_announcement",
+      "date": "2021-11-23",
+      "url": "https://vercel.com/blog/vercel-funding-series-d-and-valuation",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S8",
+      "title": "Series C — $102M to continue building the next web",
+      "publisher": "Vercel",
+      "type": "official_funding_announcement",
+      "date": "2021-06-23",
+      "url": "https://vercel.com/blog/series-c-102m-continue-building-the-next-web",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S9",
+      "title": "Series B — $40M to build the next web",
+      "publisher": "Vercel",
+      "type": "official_funding_announcement",
+      "date": "2020-12-16",
+      "url": "https://vercel.com/blog/series-b-40m-to-build-the-next-web",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S10",
+      "title": "ZEIT is now Vercel and Series A announcement",
+      "publisher": "Vercel",
+      "type": "official_company_and_funding_announcement",
+      "date": "2020-04-21",
+      "url": "https://vercel.com/blog/zeit-is-now-vercel",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S11",
+      "title": "Vercel homepage — current agentic infrastructure portfolio",
+      "publisher": "Vercel",
+      "type": "official_company",
+      "date": "2026",
+      "url": "https://vercel.com/",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S12",
+      "title": "Software Engineer, Compute — current infrastructure scale",
+      "publisher": "Vercel",
+      "type": "official_careers_disclosure",
+      "date": "2026",
+      "url": "https://vercel.com/careers/software-engineer-compute-6113157004",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S13",
+      "title": "Agentic Infrastructure — deployment share initiated by agents",
+      "publisher": "Vercel",
+      "type": "official_product_strategy",
+      "date": "2026-04-09",
+      "url": "https://vercel.com/blog/agentic-infrastructure",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S14",
+      "title": "Vercel Ship 2026 recap",
+      "publisher": "Vercel",
+      "type": "official_product_announcement",
+      "date": "2026-06-30",
+      "url": "https://vercel.com/blog/vercel-ship-2026-recap",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S15",
+      "title": "Introducing the new Vercel Agent",
+      "publisher": "Vercel",
+      "type": "official_product_announcement",
+      "date": "2026-07-08",
+      "url": "https://vercel.com/blog/vercel-agent",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S16",
+      "title": "Vercel acquires Better Auth",
+      "publisher": "Vercel",
+      "type": "official_acquisition_announcement",
+      "date": "2026-07-07",
+      "url": "https://vercel.com/blog/vercel-acquires-better-auth",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S17",
+      "title": "NuxtLabs joins Vercel",
+      "publisher": "Vercel",
+      "type": "official_company_announcement",
+      "date": "2025-07-08",
+      "url": "https://vercel.com/blog/nuxtlabs-joins-vercel",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S18",
+      "title": "Security and Compliance Measures",
+      "publisher": "Vercel",
+      "type": "official_documentation",
+      "date": "2026-01-21",
+      "url": "https://vercel.com/docs/security/compliance",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S19",
+      "title": "v0 plans and pricing",
+      "publisher": "Vercel / v0",
+      "type": "official_pricing",
+      "date": "2026",
+      "url": "https://v0.app/docs/pricing",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S20",
+      "title": "Vercel Agent updated token-based pricing",
+      "publisher": "Vercel",
+      "type": "official_pricing_changelog",
+      "date": "2026-06-30",
+      "url": "https://vercel.com/changelog/vercel-agent-has-updated-pricing",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S21",
+      "title": "Getting started with the Vercel platform",
+      "publisher": "Vercel",
+      "type": "official_documentation",
+      "date": "2025-05-23",
+      "url": "https://vercel.com/docs/vercel-platform/",
+      "accessed_at": "2026-08-03"
+    },
+    {
+      "id": "S22",
+      "title": "The AI Cloud — unified platform for AI workloads",
+      "publisher": "Vercel",
+      "type": "official_product_strategy",
+      "date": "2025-07-10",
+      "url": "https://vercel.com/blog/the-ai-cloud-a-unified-platform-for-ai-workloads",
+      "accessed_at": "2026-08-03"
     }
   ]
 }

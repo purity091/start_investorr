@@ -1,132 +1,1743 @@
 {
   "order": 8,
+  "id": "bannerbear",
   "slug": "bannerbear",
   "name": "Bannerbear",
   "domain": "bannerbear.com",
-  "website": "https://bannerbear.com",
-  "category": "Developer SaaS / واجهة برمجة تطبيقات للأتمتة",
-  "headline": "واجهة برمجة تطبيقات (API) لإنشاء الصور والفيديو تلقائياً من القوالب",
-  "summary": "يسمح Bannerbear للمطورين وفرق العمل بدون كود (no-code) بإنشاء الصور والفيديوهات برمجياً. القوالب القابلة لإعادة الاستخدام، استدعاءات API، وتكاملات الأتمتة تحول الإنتاج الإبداعي المتكرر إلى سير عمل منظم.",
-  "directory_snapshot": {
-    "monthly_revenue": "$50K /mo",
-    "monthly_traffic": "غير متاح",
-    "revenue_per_visitor": "غير متاح",
-    "solopreneur_score": "80.4",
-    "idea_label": "واجهة API لإنشاء الصور تلقائياً"
-  },
+  "website": "https://www.bannerbear.com",
+  "headline": "من قالب قابل للتعديل إلى مصنع وسائط عبر API: كيف حوّل Bannerbear التصميم المتكرر إلى بنية إنتاج للمطورين وفرق الأتمتة",
+  "category": "Developer SaaS, Creative Automation & Media APIs / أتمتة إنتاج الصور والفيديو",
+  "summary": "خدمة SaaS سنغافورية ممولة ذاتيًا تولّد الصور والفيديو وملفات PDF وGIF ولقطات المواقع من قوالب قابلة لإعادة الاستخدام. تخدم المطورين وفرق التسويق والمستخدمين غير التقنيين عبر REST API وروابط فورية وتكاملات no-code، وتبيع اشتراكات متدرجة حسب أرصدة التوليد وعرض النطاق والميزات المؤسسية.",
   "company": {
-    "business_model": "اشتراكات متكررة، خطط حسب استخدام API، وعروض الدفع لمرة واحدة تاريخياً",
-    "customer_type": "المطورون، المسوقون، الوكالات، والفرق التي تركز على الأتمتة",
-    "founder": "جون يونغفوك كوكيل",
-    "founder_role": "مؤسس",
+    "location": "الشركة القانونية Twenty Four Twelve Systems Pte. Ltd. مسجلة في سنغافورة برقم UEN 201227867K وعنوانها في People's Park Centre. Bannerbear شركة تعمل عن بُعد بالكامل، بينما تعرض صفحة الفريق الحالية سبعة أعضاء موزعين عالميًا.",
+    "business_model": "اشتراكات SaaS متكررة مدفوعة مقدمًا. الخطط الحالية هي Automate بسعر يبدأ من 49 دولارًا شهريًا، وScale من 149 دولارًا، وEnterprise من 299 دولارًا، مع حدود API Credits وعرض نطاق ومزايا مختلفة. يُستهلك الرصيد عند إنشاء أصل: الصورة العادية رصيد واحد، بينما PDF والصور عالية الدقة والفيديو والـGIF والأفلام تستهلك أرصدة أكثر. تضيف الخطط الأعلى الروابط البسيطة والموقعة، وأعضاء الفريق والأدوار، والدعم ذي الأولوية، وBYO Storage للمؤسسات. لا تنشر الشركة متوسط الإيراد لكل عميل أو توزيع العملاء بين الخطط.",
+    "customer_type": "المطورون وفرق المنتجات وSaaS والتجارة الإلكترونية وفرق التسويق والوكالات والناشرون ومنظمو الفعاليات والفرق التي تريد إنشاء وسائط ديناميكية أو مخصصة بكميات كبيرة.",
+    "founder": "Jon Yongfook Cockle، المعروف مهنيًا باسم Jon Yongfook",
+    "founder_role": "المؤسس؛ مصمم ومبرمج قاد التحول إلى منتج API",
     "founder_social": "@yongfook",
-    "founders_count": "مملوكة للمؤسس؛ هيكل الملكية الحالي الدقيق غير مصرح به",
-    "employees": "أشار ادعاء من مصدر في 2022 إلى فريق من حوالي سبعة أشخاص",
-    "started": "تقريباً 2019",
-    "location": "غير مذكور في النظرة العامة",
-    "funding": "يصف الملف العام الشركة بأنها ذاتية التمويل (Bootstrapped)",
-    "profitability": "لم يتم تدقيقها بشكل مستقل في النظرة العامة",
-    "public_revenue_claim": "حوالي 50 ألف دولار شهرياً اعتباراً من 2025"
+    "founders_count": 1,
+    "employees": "سبعة أعضاء ظاهرون في صفحة الفريق الرسمية الحالية؛ LinkedIn يصنف الشركة ضمن فئة 2–10 موظفين.",
+    "started": "بدأت الجذور كمنتج Previewmojo في 2019، وأُعيدت تسميته إلى Bannerbear في يناير 2020، ثم أُطلق التحول الأساسي إلى REST API ومحرر القوالب في مارس–أبريل 2020.",
+    "funding": "ممولة ذاتيًا. صرح المؤسس في 2022 بأن الشركة لم تجمع تمويلًا خارجيًا وأنه اختار الحفاظ على الملكية والسيطرة؛ لم يُعثر على جولة استثمار لاحقة معلنة حتى تاريخ التحقق.",
+    "profitability": "بلغت الشركة مرحلة Ramen Profitability في أغسطس 2020 وفق سجل المؤسس، ثم نمت إلى 45 ألف دولار MRR مع فريق من سبعة أشخاص وأكثر من 500 عميل في أغسطس 2022. لا تنشر قوائم مالية مدققة أو هامش ربح حاليًا.",
+    "public_revenue_claim": "آخر رقم إيراد صريح منشور رسميًا هو 50 ألف دولار MRR في يوليو 2023. صفحة Open Startup توضح أن الشركة كانت تنشر المقاييس كاملة ثم توقفت وأصبحت تشارك مقاييس مختارة فقط؛ لذلك لا يوجد رقم رسمي حالي لعام 2026."
+  },
+  "directory_snapshot": {
+    "monthly_revenue": "غير معلن حاليًا. آخر محطة رسمية هي 50 ألف دولار MRR في يوليو 2023، بما يعادل 600 ألف دولار ARR حسابيًا وقتها. لا يدعم المصدر وصف الرقم بأنه إيراد 2025 أو 2026.",
+    "monthly_traffic": "غير معلن. لا تنشر الشركة زيارات شهرية حالية أو مستخدمين نشطين، كما أن صفحة Open Startup الحالية لا تعرض أرقامًا موثوقة قابلة للاستخراج للحركة.",
+    "revenue_per_visitor": "غير قابل للحساب لغياب إيراد وTraffic متزامنين وحديثين.",
+    "solopreneur_score": "غير قابل للتطبيق حاليًا؛ بدأ المنتج كمشروع مؤسس واحد لكنه أصبح شركة بفريق من سبعة أشخاص.",
+    "idea_label": "واجهة برمجة تطبيقات وقوالب لإنتاج الوسائط الديناميكية آليًا."
+  },
+  "overview": {
+    "problem": {
+      "text": "تنتج الفرق صورًا اجتماعية ولافتات وصور منتجات وشهادات ومقاطع قصيرة تتكرر فيها البنية البصرية وتتغير البيانات فقط. التنفيذ اليدوي يستهلك وقت المصمم، بينما بناء محرك Rendering داخلي يتطلب محرر قوالب ومعالجة خطوط وصور وفيديو وتخزينًا وتزامنًا وWebhooks ومراقبة أخطاء.",
+      "impact": "تتحول الحملات واسعة النطاق والتخصيص لكل مستخدم أو منتج إلى عنق زجاجة، وقد تفقد العلامة اتساقها عندما تنشأ النسخ يدويًا. وفي المقابل، الاعتماد على API خارجي يضيف تكلفة استخدام وحدود أرصدة واعتمادًا تشغيليًا على توفر المزود وسياسات الاحتفاظ والتخزين."
+    },
+    "solution": {
+      "text": "يفصل Bannerbear التصميم عن البيانات: يبني المصمم قالبًا بطبقات مسماة، ثم يرسل المطور أو مسار no-code نصوصًا وصورًا وألوانًا وتعديلات لتوليد أصول جاهزة. يدعم API غير المتزامن والمتزامن، وWebhooks، وروابط Instant/Signed، والصور والفيديو وPDF وGIF وMovie ولقطات المواقع. أعادت V5 في يونيو 2026 بناء المحرر ومحرك القوالب والـAPI، وأضافت Adaptive Templates وخصائص AI للخلفيات وإزالة الخلفية واكتشاف الوجه والموضوع، مع استمرار دعم V3."
+    }
   },
   "problem_and_product": [
-    "تُنشئ الفرق بشكل متكرر صوراً اجتماعية، لافتات، شهادات، صوراً مصغرة، ومقاطع فيديو شبه متطابقة.",
-    "يفصل Bannerbear القالب المرئي القابل لإعادة الاستخدام عن النصوص والصور والبيانات الديناميكية المدخلة.",
-    "يمكن للمطورين إنشاء الوسائط عبر API، بينما يمكن لمستخدمي أدوات بدون كود ربط مسارات العمل عبر التكاملات.",
-    "المنتج هو بنية تحتية للإنتاج الإبداعي المؤتمت بدلاً من كونه محرر تصميم يدوي تقليدي."
+    "المشكلة الأساسية هي تكرار التصميم نفسه مع بيانات متغيرة عبر منتجات أو مستخدمين أو حملات كثيرة.",
+    "القالب المرئي يحتوي طبقات مسماة يمكن تعديل النص والصورة واللون وخصائصها عبر API.",
+    "تتيح الخدمة إنشاء صور وفيديو وPDF وGIF وMovies وScreenshots بدل بناء محرك وسائط داخلي.",
+    "تخدم المطورين عبر REST API وOpenAPI ومكتبات عملاء، وغير المطورين عبر Zapier وMake وAirtable وForms.",
+    "V5 أضافت قوالب مرنة تتكيف مع الأحجام، وقدرات AI أثناء الـRendering، ومفاتيح API محددة الصلاحيات والقوالب."
   ],
   "origin_story": [
-    "صفحة Starter Story المتاحة هي ملف بحثي من مصادر عامة.",
-    "تم تحديد المؤسس على أنه جون يونغفوك كوكيل.",
-    "نما المنتج من خلال البناء العلني الشفاف وعرض قيمة الأتمتة الموجه للمطورين."
+    "قضى Jon قرابة عام في تحدي بناء عدة شركات ناشئة، وأحرق جزءًا من مدخراته دون إيراد مباشر.",
+    "ركز في 2019 على Previewmojo لتوليد صور Open Graph، ثم رفع السعر الأساسي من 9 إلى 49 دولارًا لتحسين اقتصاد المنتج.",
+    "أعاد تسمية المنتج إلى Bannerbear في بداية 2020، لكن إعادة العلامة وحدها لم تُحدث تحولًا قويًا.",
+    "في مارس–أبريل 2020 حوّل المنتج إلى API عام مع محرر قوالب، ما وسع الاستخدام من حالة ضيقة إلى بنية قابلة للدمج.",
+    "استخدم دورة عمل 50% برمجة و50% تسويق، مع محتوى ودروس وتحديثات علنية حول الإيراد.",
+    "وصل إلى 10,455 دولار MRR بحلول يناير 2021 بعد إعادة التموضع حول وظيفتي Automate وScale."
   ],
   "build_and_launch": [
-    "يشير الملف البحثي إلى أن الإطلاق كان في عام 2019 تقريباً.",
-    "سمحت وظيفية الـ API أولاً للمنتج بأن يصبح جزءاً من تطبيقات ومسارات عمل تجارية أخرى.",
-    "جعلت تكاملات Zapier وما شابهها الخدمة في متناول غير المطورين.",
-    "يدعم التوليد القائم على القوالب المخرجات القابلة للتكرار مع الحفاظ على اتساق العلامة التجارية."
+    "استخدام تقنية يعرفها المؤسس جيدًا لتقليل وقت التعلم وتسريع الشحن.",
+    "إعادة تموضع المنتج من أداة Open Graph ضيقة إلى API عام لإنتاج الصور.",
+    "بناء محرر Drag-and-Drop يجعل المصمم ينشئ القالب بينما يستخدم المطور معرفه عبر API.",
+    "إضافة تكاملات no-code حتى لا يبقى المنتج محصورًا في المطورين.",
+    "الاستثمار في API Docs وأمثلة Payloads وQuick Start لتقليل الدعم ورفع التحويل.",
+    "إنشاء أدوات مجانية وديمو تفاعلي يوضح النتيجة قبل التسجيل.",
+    "استخدام المحتوى التقني حول Puppeteer وFFmpeg لجذب المطورين الذين يحاولون حل المشكلة داخليًا.",
+    "التوسع من الصور إلى الفيديو وPDF وGIF وScreenshots وMovies.",
+    "إعادة بناء المحرر والمحرك والـAPI في V5 عام 2026 مع إبقاء V3 فعالًا لتقليل كسر التكاملات.",
+    "تقديم 30 API Credit للتجربة المجانية دون بطاقة."
   ],
   "costs_and_operations": [
-    "لم يتوفر تفصيل موثق لتكاليف التأسيس في النظرة العامة المذكورة.",
-    "تخلق معالجة الوسائط (Rendering) تكاليف استخدام وبنية تحتية تدعم طبيعياً تسعير API المتدرج.",
-    "وصف ادعاء من مصدر عام في 2022 أكثر من 500 عميل وفريق من حوالي سبعة أشخاص.",
-    "تم وصف الشركة بأنها ذاتية التمويل."
+    "تكلفة الحوسبة الخاصة بتصيير الصور والفيديو وPDF والـGIF والأفلام.",
+    "تكلفة عرض النطاق والتخزين وتقديم الأصول عبر CDN عالمي.",
+    "تكلفة معالجة الفيديو باستخدام تقنيات مثل FFmpeg وقدرات Rendering للمتصفح.",
+    "قواعد البيانات وطوابير المهام والمراقبة وإعادة المحاولة للعمليات غير المتزامنة.",
+    "الدعم البشري والبريد وZoom للعملاء ذوي الخطط الأعلى.",
+    "صيانة نسختي V3 وV5 أثناء مرحلة الانتقال.",
+    "أمن مفاتيح API و2FA والأدوار وWebhooks والتوقيعات.",
+    "الامتثال وDPA وسياسات حذف البيانات ومراجعات فرق Infosec.",
+    "تكاليف فريق موزع من الدعم والتصميم والتسويق والإدارة والهندسة.",
+    "توفير BYO S3 Storage للمؤسسات يزيد التكامل والدعم لكنه يقلل بقاء الأصول داخل بنية Bannerbear."
   ],
   "monetization": [
-    "الخطط المتكررة منظمة حول استخدام الـ API وحدود المنتج.",
-    "تم تقديم الفواتير الشهرية والسنوية، مع خصومات للخطط السنوية.",
-    "يشير الملف البحثي أيضاً إلى تجارب الدفع لمرة واحدة أو الوصول مدى الحياة.",
-    "يجب التحقق من حدود الاستخدام والأسعار الحالية على الموقع الرسمي."
+    "خطة Automate بسعر يبدأ من 49 دولارًا شهريًا وتتضمن 1,000 API Credit و10GB Bandwidth.",
+    "خطة Scale بسعر يبدأ من 149 دولارًا شهريًا وتضيف Simple URLs وSigned URLs والفريق والأدوار والدعم ذي الأولوية.",
+    "خطة Enterprise بسعر يبدأ من 299 دولارًا شهريًا وتضيف BYO Storage ودعم Zoom و100GB Bandwidth عند مستوى البداية الظاهر.",
+    "مستويات فرعية داخل Scale وEnterprise لزيادة الرصيد الشهري.",
+    "استهلاك API Credits حسب نوع الأصل وحجمه وطول الفيديو.",
+    "رسوم تجاوز محتملة لعرض النطاق، بينما لا يمكن تجاوز رصيد التوليد دون ترقية أو انتظار إعادة الضبط.",
+    "ترقية الخطة بصورة تناسبية عند الحاجة إلى رصيد أعلى.",
+    "خيار Freeze بقيمة 9 دولارات شهريًا للحفاظ على البيانات مع إيقاف حصة التوليد.",
+    "عقود مؤسسية تستفيد من DPA وBYO Storage وZoom والحدود الأعلى.",
+    "الفوترة المتكررة عبر Stripe.",
+    "لا توجد خطة مجانية دائمة؛ التجربة محدودة بـ30 رصيدًا.",
+    "عروض الدفع مدى الحياة كانت تاريخية وليست جزءًا من التسعير الحالي المنشور."
   ],
+  "market_data": {
+    "target_audience": "فرق المنتجات التي تحتاج صورًا ديناميكية داخل التطبيقات، وSaaS والتجارة الإلكترونية والأسواق والناشرون ومنظمو الفعاليات والعقارات والموارد البشرية، ووكالات التسويق، وفرق no-code التي تستخدم Zapier وMake وAirtable.",
+    "market_size": "لا تنشر Bannerbear رقم TAM أو عدد عملاء حاليًا. آخر رقم عملاء صريح هو أكثر من 500 عميل في أغسطس 2022، حين كان MRR نحو 45 ألف دولار والفريق سبعة أشخاص. تعرض صفحة الشركة الحالية فريقًا من سبعة أعضاء، لكن هذا لا يثبت ثبات عدد العملاء أو الإيراد.",
+    "growth_rate": "ارتفع MRR من 472 دولارًا بعد إعادة التسمية في بداية 2020 إلى 10,455 دولارًا في يناير 2021، ثم 27 ألفًا في ديسمبر 2021، و40 ألفًا في يونيو 2022، و45 ألفًا في أغسطس 2022، و50 ألفًا في يوليو 2023. يمثل الانتقال من 10 آلاف إلى 50 ألفًا نموًا يقارب خمسة أضعاف خلال نحو 30 شهرًا؛ لم تُنشر سلسلة حديثة بعد 2023."
+  },
+  "financials": {
+    "initial_investment": "اعتمد المؤسس على مدخراته الشخصية خلال مرحلة التجارب والبناء، لكنه لم ينشر مبلغًا محددًا لرأس المال الأول. لم تجمع Bannerbear استثمارًا خارجيًا معلنًا. أشار المؤسس إلى وصول المشروع إلى Ramen Profitability عند نحو 3,771 دولار MRR في أغسطس 2020، ما خفف الحاجة إلى تمويل.",
+    "valuation": "غير معلن. الشركة خاصة وممولة ذاتيًا ولا توجد جولة أسهم أو استحواذ أو طرح عام يحدد تقييمًا. لا يمكن اشتقاق القيمة من MRR التاريخي أو عدد العملاء أو الفريق باستخدام مضاعف مفترض.",
+    "revenue_streams": [
+      "اشتراكات Automate",
+      "اشتراكات Scale ومستوياتها الفرعية",
+      "اشتراكات Enterprise ومستوياتها الفرعية",
+      "القيمة الإضافية الناتجة عن زيادة API Credits",
+      "القيمة الإضافية الناتجة عن حدود Bandwidth الأعلى أو رسوم تجاوزه",
+      "ميزات الفريق والأدوار وSimple URLs وSigned URLs ضمن الخطط الأعلى",
+      "BYO Storage والدعم عبر Zoom ضمن Enterprise",
+      "خيار Freeze منخفض السعر للاحتفاظ بالبيانات دون توليد",
+      "استهلاك الصور والفيديو وPDF وGIF وMovie داخل اقتصاد الرصيد",
+      "لا يوجد دليل على إيراد إعلانات أو بيع بيانات أو خدمات تصميم بشرية مخصصة كقناة أساسية",
+      "العروض التاريخية ذات الدفع لمرة واحدة ليست قناة حالية موثقة"
+    ]
+  },
   "growth": [
-    "عرّض تكامل Zapier المنتج لمستخدمي الأتمتة.",
-    "أظهرت الدروس والمحتوى التعليمي حالات استخدام ملموسة للوسائط المؤتمتة.",
-    "شارك المطورون علناً تكاملات Bannerbear الخاصة بهم، مما خلق تسويقاً شفهياً.",
-    "خلق نشاط المؤسس في (البناء علناً) على Twitter/X شفافية ووصولاً للمجتمع.",
-    "تم ذكر الـ SEO والتسويق عبر البريد الإلكتروني أيضاً في البحث المجمع."
-  ],
-  "tools": [
-    "Stripe",
-    "Zapier",
-    "Notion",
-    "Airtable",
-    "Cloudflare",
-    "Heroku",
-    "Make"
+    "التحول إلى API وسع حالات الاستخدام أكثر من إعادة التسمية وحدها.",
+    "التموضع حول Automate وScale جعل الرسالة متطابقة مع وظيفتين واضحتين للعملاء.",
+    "تكامل Zapier وMake وAirtable وسّع السوق إلى مستخدمي no-code.",
+    "الدروس وأمثلة API خفضت تكلفة فهم منتج قابل للبرمجة.",
+    "المحتوى التقني حول Puppeteer وFFmpeg جذب زيارات عالية النية.",
+    "الأدوات المجانية ولدت روابط خارجية وحركة بحث حتى عندما لم تتحول مباشرة إلى عملاء.",
+    "رفع السعر الأساسي من 9 إلى 49 دولارًا حسن اقتصاد الوحدة وسمح بدعم وتطوير أكبر.",
+    "الانتقال إلى عملاء أكبر وخطط أعلى خفض أثر Churn للعملاء منخفضي السعر.",
+    "الشفافية حول MRR صنعت محتوى قابلًا للمشاركة، ثم قللت الشركة الإفصاح مع نضجها.",
+    "إطلاق V5 أعاد الاستثمار في محرك القالب والـAPI بدل إضافة ترقيعات متراكمة."
   ],
   "revenue_timeline": [
     {
-      "date": "2022-08-10",
-      "amount": "$45K /month",
-      "type": "ادعاء مصدر عام",
-      "note": "مرتبط بشركة ذاتية التمويل وفريق صغير."
+      "date": "2020-01",
+      "amount": "$472 MRR",
+      "type": "إعادة التسمية",
+      "note": "إعادة تسمية Previewmojo إلى Bannerbear قبل اكتمال التحول إلى API."
     },
     {
-      "date": "2025",
-      "amount": "$53K /month",
-      "type": "ادعاء مصدر عام",
-      "note": "تم الاحتفاظ برقم واحد من الجدول الزمني للإيرادات الذي تم البحث فيه."
+      "date": "2020-04",
+      "amount": "$488 MRR",
+      "type": "إطلاق API",
+      "note": "إطلاق محرر القوالب وREST API."
     },
     {
-      "date": "2025-09-03",
-      "amount": "$50K /month",
-      "type": "ادعاء مصدر عام / تقدير ملف",
-      "note": "يطابق رقم الـ 50 ألف دولار الشهري في الدليل."
+      "date": "2020-08",
+      "amount": "$3,771 MRR",
+      "type": "Ramen Profitability",
+      "note": "أشار المؤسس إلى أن المشروع أصبح قادرًا على تغطية معيشته."
+    },
+    {
+      "date": "2020-10",
+      "amount": "$6,109 MRR",
+      "type": "نمو عضوي",
+      "note": "دورة ثابتة من البرمجة والتسويق والمحتوى."
+    },
+    {
+      "date": "2021-01",
+      "amount": "$10,455 MRR",
+      "type": "محطة 10K",
+      "note": "إعادة التموضع حول Automate وScale."
+    },
+    {
+      "date": "2021-12",
+      "amount": "$27K MRR",
+      "type": "توسع الفريق والتسويق",
+      "note": "المحطة الواردة في تدوينة عام من التسويق."
+    },
+    {
+      "date": "2022-06",
+      "amount": "$40K MRR",
+      "type": "توسع تقني",
+      "note": "موثق في تدوينة الأخطاء التقنية."
+    },
+    {
+      "date": "2022-08",
+      "amount": "$45K MRR",
+      "type": "Bootstrapped Team",
+      "note": "أكثر من 500 عميل وفريق من سبعة أشخاص وفق المؤسس."
+    },
+    {
+      "date": "2023-07",
+      "amount": "$50K MRR",
+      "type": "آخر محطة رسمية محددة",
+      "note": "آخر رقم إيراد صريح وجد في مصدر Bannerbear الرسمي."
+    },
+    {
+      "date": "2026-08-03",
+      "amount": "غير معلن",
+      "type": "الوضع الحالي",
+      "note": "صفحة Open Startup تقول إن المقاييس الكاملة لم تعد عامة."
     }
   ],
   "lessons": [
-    "يمكن لمنتج الـ API توسيع سوقه من خلال تكاملات الـ no-code.",
-    "يعمل المحتوى التعليمي بشكل جيد بشكل خاص عندما يحتاج العملاء إلى أمثلة قبل فهم منتج قابل للبرمجة.",
-    "يمكن مواءمة تكاليف البنية التحتية القائمة على الاستخدام وقيمة العميل من خلال حدود المستويات (Tiers)."
+    {
+      "title": "وسع المشكلة لا مجرد الشريحة",
+      "description": "كان Previewmojo يحل حالة Open Graph ضيقة. التحول إلى API حافظ على تخصص العملاء التقنيين لكنه وسع المهمة إلى كل وسائط القوالب الديناميكية."
+    },
+    {
+      "title": "القالب هو العقد بين المصمم والمطور",
+      "description": "المصمم يملك الطبقات والهوية، والمطور يملك البيانات والتوقيت. تسمية العناصر واستقرارها أهم من شكل المحرر وحده لأن تغييرها قد يكسر التكامل."
+    },
+    {
+      "title": "منتج API يحتاج تجربة تسويق مرئية",
+      "description": "الطلب البرمجي مجرد JSON، لكن العميل يشتري النتيجة البصرية. الديمو والقوالب والأمثلة تحول بنية غير مرئية إلى قيمة مفهومة."
+    },
+    {
+      "title": "No-code يوسع السوق ولا يلغي مسؤولية API",
+      "description": "Zapier وMake يجلبان مستخدمين جدد، لكن الأعطال والحدود وWebhooks والتوثيق لا تزال مبنية على نفس الخدمة الخلفية."
+    },
+    {
+      "title": "التسعير حسب الرصيد يوائم التكلفة ويحتاج شرحًا",
+      "description": "الصورة والفيديو لا يستهلكان موارد متساوية. تحويل الأنواع إلى Credits يبسط الفوترة، لكنه يحتاج آلة حاسبة وأمثلة حتى لا يفاجأ العميل."
+    },
+    {
+      "title": "الحد الصلب يمنع فاتورة صادمة ويوقف الإنتاج",
+      "description": "عند نفاد الرصيد تتوقف الطلبات بدل استمرارها تلقائيًا. هذا يحمي الميزانية لكنه قد يعطل حملة؛ التنبيهات والترقية المسبقة ضرورية."
+    },
+    {
+      "title": "عرض النطاق والتوليد وحدتان اقتصاديتان منفصلتان",
+      "description": "قد يولد العميل عددًا قليلًا من الصور ثم تعرض ملايين المرات. فصل Bandwidth عن API Credits يمنع دعم توزيع ضخم ضمن تكلفة Rendering صغيرة."
+    },
+    {
+      "title": "المزامن أسهل والتشغيل غير المتزامن أكثر أمانًا للتوسع",
+      "description": "الصور البسيطة قد تنتهي خلال ثوانٍ، لكن الفيديو لا يناسب اتصالًا مفتوحًا دائمًا. Polling وWebhooks يجعل الإنتاج أكثر تحملًا."
+    },
+    {
+      "title": "Signed URLs تحول القالب إلى منتج داخل منتج",
+      "description": "يمكن لتطبيق العميل توليد صورة دون كشف API Key، لكن التوقيع وإدارة المفاتيح والتحكم بالمدخلات تصبح جزءًا من أمن المنتج."
+    },
+    {
+      "title": "إبقاء النسخة القديمة يقلل كلفة الهجرة ويضاعف التشغيل",
+      "description": "استمرار V3 مع إطلاق V5 يحمي العملاء، لكنه يفرض صيانة وتوثيقًا واختبارًا مزدوجًا حتى تنتهي مرحلة الانتقال."
+    },
+    {
+      "title": "إعادة بناء القدرة الجوهرية أفضل من ترقيع اعتماد خارجي",
+      "description": "تخلى المؤسس عن FabricJS لمحرر داخلي عندما أصبحت القوالب ميزة تنافسية. القرار مكلف لكنه خفف قيود خارطة الطريق."
+    },
+    {
+      "title": "AI يجب أن يعمل داخل نظام القالب",
+      "description": "إزالة الخلفية أو توليدها واكتشاف الموضوع مفيد عندما يحافظ على موضع النص والهوية. صورة جميلة منفردة لا تكفي لأتمتة متكررة."
+    },
+    {
+      "title": "الفريق الصغير يحتاج حدود منتج ودعم واضحة",
+      "description": "سبعة أشخاص يديرون Rendering وAPI وتسويقًا ودعمًا. الخطط والأرصدة والدعم المتدرج تمنع كل عميل من استهلاك الخدمة البشرية نفسها."
+    },
+    {
+      "title": "الشفافية قناة اكتساب وليست التزامًا دائمًا",
+      "description": "سجل MRR جذب مجتمع المؤسسين وروابط ومحتوى، ثم انتقلت الشركة إلى إفصاح مختار. يجب عدم إعادة نشر آخر رقم كأنه الحالي."
+    },
+    {
+      "title": "رفع السعر قد يكون قرار استدامة لا تحسينًا تجميليًا",
+      "description": "الانتقال من 9 إلى 49 دولارًا قلل العملاء منخفضي القيمة وموّل دعمًا وبنية أغلى؛ الأداة التي تنفذ عملًا إنتاجيًا لا تسعر كإضافة بسيطة."
+    },
+    {
+      "title": "العميل الكبير يشتري التحكم إلى جانب السعة",
+      "description": "BYO Storage وDPA والأدوار و2FA والحذف السريع قد تكون أهم من عدد الصور لفرق الأمن والمشتريات."
+    },
+    {
+      "title": "التخزين داخل حساب العميل يقلل المخاطر ويزيد التكامل",
+      "description": "S3 الخاص بالمؤسسة يحسن سيادة الأصل، لكنه يحتاج صلاحيات وإعدادًا وتشخيصًا مختلفًا عن CDN المدار."
+    },
+    {
+      "title": "الزيارات والعملاء وMRR مقاييس لا تُستبدل",
+      "description": "500 عميل تاريخيًا لا يكشف عدد المستخدمين أو حجم الوسائط، و50 ألف MRR لا يثبت Traffic. كل رقم يحتاج فترة وتعريفًا."
+    },
+    {
+      "title": "المحتوى التقني يعمل عندما يكشف تكلفة البناء الداخلي",
+      "description": "شرح مشاكل FFmpeg وPuppeteer يجذب المطور الذي يواجهها، ثم يوضح له لماذا قد يكون شراء API أقل تكلفة من صيانة المحرك."
+    },
+    {
+      "title": "التمويل الذاتي لا يعني غياب رأس المال",
+      "description": "استخدم المؤسس مدخراته ووقتًا دون دخل قبل الربحية. Bootstrapped يعني عدم بيع أسهم خارجية، لا أن المشروع بدأ بلا تكلفة أو مخاطرة."
+    }
   ],
+  "tools": [
+    "Bannerbear V5 REST API",
+    "دعم مستمر لنقاط نهاية V3 أثناء الانتقال",
+    "OpenAPI Schema لـV5",
+    "مكتبات عملاء رسمية أو موثقة لـRuby وNode وPHP وPython",
+    "Template Editor بطبقات نص وصور وعناصر قابلة للتعديل",
+    "Adaptive Templates لتوليد أحجام متعددة من قالب واحد",
+    "Image Generation بصيغ PNG وJPG وPDF عند الطلب",
+    "Video Generation مع نصوص وصور وشعارات وترجمات",
+    "Animated GIF Generation",
+    "Movie API لدمج مقاطع وانتقالات",
+    "Website Screenshot API",
+    "PDF Rendering",
+    "Collections لتوليد مجموعة أصول مترابطة",
+    "Webhooks لكل عملية توليد",
+    "Project-level Event Webhooks",
+    "Polling للعمليات غير المتزامنة",
+    "Synchronous API Endpoint",
+    "Instant URLs في V5",
+    "Simple URLs",
+    "Signed URLs بتوقيع HMAC",
+    "Forms لإنشاء وسائط عبر واجهة دون كود",
+    "Zapier Integration",
+    "Make.com Integration",
+    "Airtable Integration",
+    "Crawler Integrations لجلب بيانات صفحات عامة",
+    "Scoped API Keys حسب القالب أو المشروع وصلاحيات Read/Write",
+    "Projects بمفاتيح API مستقلة",
+    "Team Members وRoles",
+    "Two-Factor Authentication",
+    "Data Processing Agreement",
+    "Data Expiry قابل للضبط حتى 10 ثوانٍ بعد التوليد",
+    "Bring Your Own AWS S3 Storage",
+    "Global CDN للأصول",
+    "Custom Fonts بصيغ OTF وWOFF وWOFF2",
+    "دعم العربية واللغات المتعددة عند استخدام خط متوافق",
+    "قوالب حتى 5000×5000 بكسل",
+    "Face Detection وSubject Detection",
+    "AI Background Generation أثناء الـRendering",
+    "AI Background Removal أثناء الـRendering",
+    "Anchor وGap Controls بين الطبقات",
+    "Blend Modes وPNG Stroke وPNG Shadow",
+    "Template Version Pinning للروابط الفورية",
+    "API Credits Calculator وسجل استهلاك",
+    "Stripe Billing",
+    "Ruby on Rails كإفصاح هندسي تاريخي",
+    "Heroku Postgres كإفصاح هندسي تاريخي لعام 2022",
+    "Puppeteer وFFmpeg كتقنيات معالجة معلنة تاريخيًا",
+    "AWS Serverless كعبارة بنية منشورة على صفحات المنتج",
+    "Cloudflare كتقنية حماية مستخدمة تاريخيًا أثناء حادث DDoS",
+    "مكتبة قوالب وأمثلة API ودروس تقنية"
+  ],
+  "verification": {
+    "status": "verified_from_bannerbear_official_pricing_api_docs_help_legal_team_product_and_founder_revenue_history",
+    "verified_on": "2026-08-03",
+    "source_policy": "تم إعطاء الأولوية لصفحات Bannerbear الرسمية: التسعير وAPI Reference وHelp Center وصفحة الفريق والشروط والخصوصية ومدونة المؤسس. استُخدم LinkedIn فقط لمطابقة نطاق حجم الفريق، ولم تُستخدم تقديرات Starter Story كحقيقة مالية.",
+    "important_notes": [
+      "رقم 50 ألف دولار MRR صحيح كمحطة رسمية في يوليو 2023، وليس كإيراد 2025 أو 2026.",
+      "رقم 53 ألف دولار شهريًا في الملف الأصلي صادر عن مصدر تجميعي ولم يُعثر على تأكيد رسمي له.",
+      "صفحة Open Startup تقول إن Bannerbear كانت تنشر المقاييس كاملة ثم توقفت وتشارك الآن مقاييس مختارة.",
+      "الإيراد الحالي وARR الحالي وصافي الربح والهامش غير معلنة.",
+      "Traffic الحالي وعدد المستخدمين النشطين وعدد العملاء الحالي غير معلن.",
+      "آخر رقم عملاء رسمي واضح هو 500+ في أغسطس 2022.",
+      "صفحة الفريق الحالية تعرض سبعة أعضاء، وLinkedIn يصنف الشركة ضمن 2–10 موظفين.",
+      "الكيان القانوني Twenty Four Twelve Systems Pte. Ltd. مسجل في سنغافورة.",
+      "بدأت جذور المنتج في 2019، وأعيدت تسميته في 2020، ثم أصبح API-first في ربيع 2020.",
+      "الخطط الحالية تبدأ من 49 و149 و299 دولارًا شهريًا، وقد تتغير الأسعار أو مستويات الرصيد بعد تاريخ التحقق.",
+      "خطة Automate تعرض 1,000 Credit في المستوى الأساسي؛ Scale وEnterprise تحتويان مستويات فرعية متغيرة.",
+      "الصورة العادية حتى 3000×3000 تستهلك رصيدًا واحدًا، والصورة عالية الدقة وPDF يستهلكان ثلاثة أرصدة وفق جدول المساعدة.",
+      "تتوقف عمليات التوليد عند نفاد الرصيد؛ لا يمكن شراء Credits منفصلة، ويمكن الترقية أو انتظار إعادة الضبط.",
+      "إعادة ضبط الرصيد تتم في الأول من كل شهر ولا تُرحل الأرصدة غير المستخدمة.",
+      "الـBandwidth مستقل عن رصيد التوليد وقد يسبب رسوم تجاوز.",
+      "V5 أطلقت في يونيو 2026 مع إعادة بناء المحرك والمحرر والـAPI، بينما تستمر V3.",
+      "بعض التقنيات مثل Rails وHeroku Postgres وPuppeteer وFFmpeg إفصاحات تاريخية ولا تمثل قائمة كاملة مؤكدة للبنية الحالية.",
+      "الشركة ممولة ذاتيًا، لكن جدول الملكية الحالي الدقيق غير منشور؛ تصريح الملكية الكاملة يعود إلى 2022.",
+      "لا يوجد تقييم معلن ولا تمويل خارجي موثق.",
+      "عروض Lifetime أو الدفع لمرة واحدة كانت تاريخية وليست جزءًا من صفحة التسعير الحالية.",
+      "تم الحفاظ على order وslug وdomain وwebsite وبنية الحقول السردية الأساسية مع إضافة verification وevidence_map والحقول التحليلية."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط كل حقل بالمصادر وحالة التحقق، مع فصل MRR التاريخي عن الإيراد الحالي، والعملاء عن Traffic، واستهلاك الرصيد عن سعر الخطة.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر Bannerbear رسمي.",
+      "verified_historical_revenue_not_current": "الرقم محطة MRR تاريخية ولا يمثل الوضع الحالي.",
+      "verified_as_not_publicly_disclosed": "لم تنشر الشركة المقياس الحالي ولذلك لم يُستخدم تقدير.",
+      "verified_company_scale_not_mau": "الرقم فريق أو عملاء تاريخيون وليس MAU أو Traffic.",
+      "verified_current_pricing_snapshot": "السعر والحدود ظاهرة وقت التحقق وقد تتغير.",
+      "verified_product_capability": "القدرة موثقة في API أو Help أو صفحة منتج.",
+      "verified_historical_technical_disclosure": "التقنية منشورة تاريخيًا ولا تثبت البنية الحالية كاملة.",
+      "verified_bootstrapped_no_external_round_found": "لم تُعلن جولة خارجية وتصف الشركة نفسها بالممولة ذاتيًا.",
+      "verified_as_not_publicly_valued": "لا توجد صفقة أو جولة تثبت تقييمًا.",
+      "verified_current_team_page": "العدد مستنتج من قائمة أعضاء الفريق الرسمية الحالية.",
+      "analytical_inference": "تحليل مهني مبني على الأدلة وليس تصريحًا حرفيًا."
+    },
+    "confidence_scale": {
+      "high": "صفحة رسمية أو API Reference أو Help Center أو وثيقة قانونية.",
+      "medium_high": "تدوينة مؤسس رسمية بتاريخ واضح.",
+      "medium": "إفصاح تاريخي أو رقم شركة خاصة يحتاج قيدًا زمنيًا."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "الشركة القانونية Twenty Four Twelve Systems Pte. Ltd. مسجلة في سنغافورة برقم UEN 201227867K وعنوانها في People's Park Centre. Bannerbear شركة تعمل عن بُعد بالكامل، بينما تعرض صفحة الفريق الحالية سبعة أعضاء موزعين عالميًا.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "singapore_legal_entity_and_remote_team",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت صفحات الشركة والوثائق القانونية الكيان والعنوان وطبيعة العمل عن بُعد والفريق.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-05",
+        "SRC-04",
+        "SRC-06",
+        "SRC-29"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-05",
+          "title": "Where Is Bannerbear Based?",
+          "publisher": "Bannerbear",
+          "source_type": "official_legal_entity_help_page",
+          "url": "https://www.bannerbear.com/help/articles/185-where-is-bannerbear-based/",
+          "evidence_type": "direct",
+          "source_locator": "Help article",
+          "supports": "الكيان وUEN والعنوان."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Bannerbear About and Team",
+          "publisher": "Bannerbear",
+          "source_type": "official_company_team_page",
+          "url": "https://www.bannerbear.com/about/",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "Remote team and seven members."
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Bannerbear Terms and Conditions",
+          "publisher": "Bannerbear",
+          "source_type": "official_terms",
+          "url": "https://www.bannerbear.com/terms/",
+          "evidence_type": "direct",
+          "source_locator": "Definitions",
+          "supports": "Singapore company in Terms.",
+          "published_on": "2021-06-29"
+        },
+        {
+          "source_id": "SRC-29",
+          "title": "Bannerbear LinkedIn Profile",
+          "publisher": "Bannerbear via LinkedIn",
+          "source_type": "company_managed_profile",
+          "url": "https://www.linkedin.com/company/bannerbear",
+          "evidence_type": "direct",
+          "source_locator": "LinkedIn profile",
+          "supports": "Headquarters and size."
+        }
+      ]
+    },
+    "$.company.business_model": {
+      "field_value": "اشتراكات SaaS متكررة مدفوعة مقدمًا. الخطط الحالية هي Automate بسعر يبدأ من 49 دولارًا شهريًا، وScale من 149 دولارًا، وEnterprise من 299 دولارًا، مع حدود API Credits وعرض نطاق ومزايا مختلفة. يُستهلك الرصيد عند إنشاء أصل: الصورة العادية رصيد واحد، بينما PDF والصور عالية الدقة والفيديو والـGIF والأفلام تستهلك أرصدة أكثر. تضيف الخطط الأعلى الروابط البسيطة والموقعة، وأعضاء الفريق والأدوار، والدعم ذي الأولوية، وBYO Storage للمؤسسات. لا تنشر الشركة متوسط الإيراد لكل عميل أو توزيع العملاء بين الخطط.",
+      "verification_status": "verified_current_pricing_snapshot",
+      "confidence": "high",
+      "claim_type": "recurring_credit_based_media_api_subscription",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت التسعير والشروط الاشتراك المتكرر والرصيد والخصائص المتدرجة.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-06",
+        "SRC-16",
+        "SRC-19"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Bannerbear Pricing",
+          "publisher": "Bannerbear",
+          "source_type": "official_pricing_page",
+          "url": "https://www.bannerbear.com/pricing/",
+          "evidence_type": "direct",
+          "source_locator": "Pricing",
+          "supports": "Plans, prices, quotas and features."
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "Bannerbear Terms and Conditions",
+          "publisher": "Bannerbear",
+          "source_type": "official_terms",
+          "url": "https://www.bannerbear.com/terms/",
+          "evidence_type": "direct",
+          "source_locator": "Subscriptions",
+          "supports": "Recurring prepaid subscriptions.",
+          "published_on": "2021-06-29"
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "API Credits",
+          "publisher": "Bannerbear",
+          "source_type": "official_usage_documentation",
+          "url": "https://www.bannerbear.com/help/articles/203-what-are-api-credits/",
+          "evidence_type": "direct",
+          "source_locator": "API credits",
+          "supports": "Credit consumption."
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Freeze and Cancellation",
+          "publisher": "Bannerbear",
+          "source_type": "official_subscription_documentation",
+          "url": "https://www.bannerbear.com/help/articles/13-cancel-my-paid-plan/",
+          "evidence_type": "direct",
+          "source_locator": "Subscription help",
+          "supports": "Freeze and cancellation."
+        }
+      ],
+      "limitations": "الأسعار ومستويات الرصيد قابلة للتغيير، ولا تُنشر الخطة الفعلية لكل عميل."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن حاليًا. آخر محطة رسمية هي 50 ألف دولار MRR في يوليو 2023، بما يعادل 600 ألف دولار ARR حسابيًا وقتها. لا يدعم المصدر وصف الرقم بأنه إيراد 2025 أو 2026.",
+      "verification_status": "verified_historical_revenue_not_current",
+      "confidence": "high",
+      "claim_type": "last_official_mrr_milestone_without_current_revenue",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "آخر محطة MRR صريحة هي 50K في يوليو 2023، بينما توضح صفحة Open توقف الإفصاح الكامل.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-14",
+        "SRC-08",
+        "SRC-15"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-14",
+          "title": "Lessons at $50K MRR",
+          "publisher": "Bannerbear",
+          "source_type": "official_founder_revenue_milestone",
+          "url": "https://www.bannerbear.com/blog/7-lessons-growing-a-bootstrapped-saas-to-50k-mrr/",
+          "evidence_type": "direct",
+          "source_locator": "Official milestone",
+          "supports": "50K MRR.",
+          "published_on": "2023-07"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Bannerbear Open Startup",
+          "publisher": "Bannerbear",
+          "source_type": "official_metrics_policy_page",
+          "url": "https://www.bannerbear.com/open/",
+          "evidence_type": "direct",
+          "source_locator": "Open Startup",
+          "supports": "Metrics no longer fully public."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Journey to $1 Million ARR Index",
+          "publisher": "Bannerbear",
+          "source_type": "official_revenue_history_index",
+          "url": "https://www.bannerbear.com/journey-to-1-million-arr/",
+          "evidence_type": "direct",
+          "source_locator": "Journey index",
+          "supports": "No newer explicit milestone in official journey index."
+        }
+      ],
+      "limitations": "لا يمثل الرقم مستوى 2025 أو 2026، ولا توجد قوائم مدققة.",
+      "calculation": {
+        "last_official_mrr_usd": 50000,
+        "last_official_mrr_date": "2023-07",
+        "formula": "50,000 × 12",
+        "historical_arr_run_rate_usd": 600000,
+        "current_2026_mrr": "not_publicly_disclosed"
+      }
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن. لا تنشر الشركة زيارات شهرية حالية أو مستخدمين نشطين، كما أن صفحة Open Startup الحالية لا تعرض أرقامًا موثوقة قابلة للاستخراج للحركة.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "website_traffic_and_mau_not_published",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا تقدم صفحات الشركة لقطة حديثة قابلة للتثبت للحركة أو MAU.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-08",
+        "SRC-04",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-08",
+          "title": "Bannerbear Open Startup",
+          "publisher": "Bannerbear",
+          "source_type": "official_metrics_policy_page",
+          "url": "https://www.bannerbear.com/open/",
+          "evidence_type": "direct",
+          "source_locator": "Open Startup",
+          "supports": "Selected metrics only."
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Bannerbear About and Team",
+          "publisher": "Bannerbear",
+          "source_type": "official_company_team_page",
+          "url": "https://www.bannerbear.com/about/",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "Team page without traffic."
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Bannerbear Pricing",
+          "publisher": "Bannerbear",
+          "source_type": "official_pricing_page",
+          "url": "https://www.bannerbear.com/pricing/",
+          "evidence_type": "direct",
+          "source_locator": "Pricing",
+          "supports": "Product usage quotas, not website traffic."
+        }
+      ],
+      "limitations": "أي رقم من أدوات تقدير الزيارات سيكون تقدير طرف ثالث لا بيانات الشركة."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "تنتج الفرق صورًا اجتماعية ولافتات وصور منتجات وشهادات ومقاطع قصيرة تتكرر فيها البنية البصرية وتتغير البيانات فقط. التنفيذ اليدوي يستهلك وقت المصمم، بينما بناء محرك Rendering داخلي يتطلب محرر قوالب ومعالجة خطوط وصور وفيديو وتخزينًا وتزامنًا وWebhooks ومراقبة أخطاء.",
+        "impact": "تتحول الحملات واسعة النطاق والتخصيص لكل مستخدم أو منتج إلى عنق زجاجة، وقد تفقد العلامة اتساقها عندما تنشأ النسخ يدويًا. وفي المقابل، الاعتماد على API خارجي يضيف تكلفة استخدام وحدود أرصدة واعتمادًا تشغيليًا على توفر المزود وسياسات الاحتفاظ والتخزين."
+      },
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "repetitive_media_production_and_internal_rendering_complexity",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تشرح صفحات المنتج والتحول إلى API الحاجة إلى القوالب والتوليد والتكامل.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-30",
+        "SRC-21",
+        "SRC-22",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-30",
+          "title": "Introducing the Bannerbear REST API",
+          "publisher": "Bannerbear",
+          "source_type": "official_product_pivot_history",
+          "url": "https://www.bannerbear.com/blog/introducing-the-bannerbear-api/",
+          "evidence_type": "direct",
+          "source_locator": "Product pivot",
+          "supports": "API pivot and template editor.",
+          "published_on": "2020"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Image Generation API",
+          "publisher": "Bannerbear",
+          "source_type": "official_product_page",
+          "url": "https://www.bannerbear.com/product/image-generation-api/",
+          "evidence_type": "direct",
+          "source_locator": "Image API",
+          "supports": "Automated image generation."
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Video Generation API",
+          "publisher": "Bannerbear",
+          "source_type": "official_product_page",
+          "url": "https://www.bannerbear.com/product/video-generation-api/",
+          "evidence_type": "direct",
+          "source_locator": "Video API",
+          "supports": "Automated video generation."
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "One Year from $10K to $27K MRR",
+          "publisher": "Bannerbear",
+          "source_type": "official_founder_marketing_history",
+          "url": "https://www.bannerbear.com/blog/one-year-of-marketing-a-saas-from-10k-to-20k-mrr/",
+          "evidence_type": "direct",
+          "source_locator": "Marketing and technical content",
+          "supports": "Puppeteer and FFmpeg complexity.",
+          "published_on": "2021-12"
+        }
+      ],
+      "limitations": "وصف تكلفة العمل اليدوي تحليل مهني؛ لا تنشر الشركة دراسة كمية لوقت المصمم."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "يفصل Bannerbear التصميم عن البيانات: يبني المصمم قالبًا بطبقات مسماة، ثم يرسل المطور أو مسار no-code نصوصًا وصورًا وألوانًا وتعديلات لتوليد أصول جاهزة. يدعم API غير المتزامن والمتزامن، وWebhooks، وروابط Instant/Signed، والصور والفيديو وPDF وGIF وMovie ولقطات المواقع. أعادت V5 في يونيو 2026 بناء المحرر ومحرك القوالب والـAPI، وأضافت Adaptive Templates وخصائص AI للخلفيات وإزالة الخلفية واكتشاف الوجه والموضوع، مع استمرار دعم V3."
+      },
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "template_driven_multimedia_api_with_nocode_and_v5_ai",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تدعم المراجع API والقوالب والوسائط وWebhooks وV5.",
+      "source_count": 7,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-21",
+        "SRC-22",
+        "SRC-24",
+        "SRC-25",
+        "SRC-23"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Bannerbear API V5 Reference",
+          "publisher": "Bannerbear",
+          "source_type": "official_api_reference",
+          "url": "https://developers.bannerbear.com/v5/",
+          "evidence_type": "direct",
+          "source_locator": "API Reference",
+          "supports": "V5 API and templates.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Bannerbear V5 Features",
+          "publisher": "Bannerbear",
+          "source_type": "official_product_release",
+          "url": "https://www.bannerbear.com/blog/bannerbear-v5-new-features-list/",
+          "evidence_type": "direct",
+          "source_locator": "Release",
+          "supports": "V5 AI and adaptive features.",
+          "published_on": "2026-06"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Image Generation API",
+          "publisher": "Bannerbear",
+          "source_type": "official_product_page",
+          "url": "https://www.bannerbear.com/product/image-generation-api/",
+          "evidence_type": "direct",
+          "source_locator": "Product",
+          "supports": "Images."
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Video Generation API",
+          "publisher": "Bannerbear",
+          "source_type": "official_product_page",
+          "url": "https://www.bannerbear.com/product/video-generation-api/",
+          "evidence_type": "direct",
+          "source_locator": "Product",
+          "supports": "Videos."
+        },
+        {
+          "source_id": "SRC-24",
+          "title": "Screenshot API",
+          "publisher": "Bannerbear",
+          "source_type": "official_product_documentation",
+          "url": "https://www.bannerbear.com/help/articles/155-create-a-screenshot-via-api/",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "Screenshots and sync."
+        },
+        {
+          "source_id": "SRC-25",
+          "title": "Event Webhooks",
+          "publisher": "Bannerbear",
+          "source_type": "official_webhook_documentation",
+          "url": "https://www.bannerbear.com/help/articles/291-what-is-an-event-webhook/",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "Webhooks."
+        },
+        {
+          "source_id": "SRC-23",
+          "title": "Bannerbear Integrations",
+          "publisher": "Bannerbear",
+          "source_type": "official_integrations_index",
+          "url": "https://www.bannerbear.com/help/integrations/",
+          "evidence_type": "direct",
+          "source_locator": "Integrations",
+          "supports": "No-code integrations."
+        }
+      ]
+    },
+    "$.market_data.target_audience": {
+      "field_value": "فرق المنتجات التي تحتاج صورًا ديناميكية داخل التطبيقات، وSaaS والتجارة الإلكترونية والأسواق والناشرون ومنظمو الفعاليات والعقارات والموارد البشرية، ووكالات التسويق، وفرق no-code التي تستخدم Zapier وMake وAirtable.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "developers_marketers_agencies_saas_ecommerce_and_nocode_teams",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تحدد صفحات المنتج والتكاملات حالات الاستخدام والفرق المستهدفة.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-01",
+        "SRC-21",
+        "SRC-22",
+        "SRC-23",
+        "SRC-26"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Bannerbear Pricing",
+          "publisher": "Bannerbear",
+          "source_type": "official_pricing_page",
+          "url": "https://www.bannerbear.com/pricing/",
+          "evidence_type": "direct",
+          "source_locator": "Pricing FAQ",
+          "supports": "Marketing automation use cases."
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Image Generation API",
+          "publisher": "Bannerbear",
+          "source_type": "official_product_page",
+          "url": "https://www.bannerbear.com/product/image-generation-api/",
+          "evidence_type": "direct",
+          "source_locator": "Image API",
+          "supports": "Social and ecommerce images."
+        },
+        {
+          "source_id": "SRC-22",
+          "title": "Video Generation API",
+          "publisher": "Bannerbear",
+          "source_type": "official_product_page",
+          "url": "https://www.bannerbear.com/product/video-generation-api/",
+          "evidence_type": "direct",
+          "source_locator": "Video API",
+          "supports": "Video use cases."
+        },
+        {
+          "source_id": "SRC-23",
+          "title": "Bannerbear Integrations",
+          "publisher": "Bannerbear",
+          "source_type": "official_integrations_index",
+          "url": "https://www.bannerbear.com/help/integrations/",
+          "evidence_type": "direct",
+          "source_locator": "Integrations",
+          "supports": "No-code audiences."
+        },
+        {
+          "source_id": "SRC-26",
+          "title": "Signed URLs",
+          "publisher": "Bannerbear",
+          "source_type": "official_security_and_generation_documentation",
+          "url": "https://www.bannerbear.com/help/articles/177-what-are-signed-urls/",
+          "evidence_type": "direct",
+          "source_locator": "Signed URLs",
+          "supports": "In-app dynamic images."
+        }
+      ]
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر Bannerbear رقم TAM أو عدد عملاء حاليًا. آخر رقم عملاء صريح هو أكثر من 500 عميل في أغسطس 2022، حين كان MRR نحو 45 ألف دولار والفريق سبعة أشخاص. تعرض صفحة الشركة الحالية فريقًا من سبعة أعضاء، لكن هذا لا يثبت ثبات عدد العملاء أو الإيراد.",
+      "verification_status": "verified_company_scale_not_mau",
+      "confidence": "medium",
+      "claim_type": "historical_customer_count_without_tam",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا يوجد TAM أو عدد عملاء حديث؛ آخر رقم موثق 500+ في 2022.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-13",
+        "SRC-04",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "Why Bannerbear Bootstrapped",
+          "publisher": "Bannerbear",
+          "source_type": "official_founder_funding_statement",
+          "url": "https://www.bannerbear.com/blog/7-reasons-i-chose-to-bootstrap-bannerbear/",
+          "evidence_type": "direct",
+          "source_locator": "Bootstrapping post",
+          "supports": "500+ customers and team of seven.",
+          "published_on": "2022-08"
+        },
+        {
+          "source_id": "SRC-04",
+          "title": "Bannerbear About and Team",
+          "publisher": "Bannerbear",
+          "source_type": "official_company_team_page",
+          "url": "https://www.bannerbear.com/about/",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "Current team of seven."
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Bannerbear Pricing",
+          "publisher": "Bannerbear",
+          "source_type": "official_pricing_page",
+          "url": "https://www.bannerbear.com/pricing/",
+          "evidence_type": "direct",
+          "source_locator": "Pricing",
+          "supports": "Current plan segmentation."
+        }
+      ],
+      "limitations": "لا يُعرف عدد العملاء الحالي أو حجم الوسائط أو السوق بالدولار."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "ارتفع MRR من 472 دولارًا بعد إعادة التسمية في بداية 2020 إلى 10,455 دولارًا في يناير 2021، ثم 27 ألفًا في ديسمبر 2021، و40 ألفًا في يونيو 2022، و45 ألفًا في أغسطس 2022، و50 ألفًا في يوليو 2023. يمثل الانتقال من 10 آلاف إلى 50 ألفًا نموًا يقارب خمسة أضعاف خلال نحو 30 شهرًا؛ لم تُنشر سلسلة حديثة بعد 2023.",
+      "verification_status": "verified_historical_revenue_not_current",
+      "confidence": "medium_high",
+      "claim_type": "historical_mrr_growth_without_post_2023_series",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "توثق تدوينات المؤسس مسار MRR حتى 50K فقط.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-09",
+        "SRC-11",
+        "SRC-12",
+        "SRC-13",
+        "SRC-14"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "Journey to $10K MRR",
+          "publisher": "Bannerbear",
+          "source_type": "official_founder_revenue_history",
+          "url": "https://www.bannerbear.com/journey-to-10k-mrr/",
+          "evidence_type": "direct",
+          "source_locator": "Journey",
+          "supports": "472 to 10,455 MRR.",
+          "published_on": "2021"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "One Year from $10K to $27K MRR",
+          "publisher": "Bannerbear",
+          "source_type": "official_founder_marketing_history",
+          "url": "https://www.bannerbear.com/blog/one-year-of-marketing-a-saas-from-10k-to-20k-mrr/",
+          "evidence_type": "direct",
+          "source_locator": "2021 post",
+          "supports": "27K MRR.",
+          "published_on": "2021-12"
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Technical Mistakes at $40K MRR",
+          "publisher": "Bannerbear",
+          "source_type": "official_founder_technical_history",
+          "url": "https://www.bannerbear.com/blog/technical-mistakes-i-made-growing-a-saas-to-k-mrr/",
+          "evidence_type": "direct",
+          "source_locator": "2022 post",
+          "supports": "40K MRR.",
+          "published_on": "2022-06"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Why Bannerbear Bootstrapped",
+          "publisher": "Bannerbear",
+          "source_type": "official_founder_funding_statement",
+          "url": "https://www.bannerbear.com/blog/7-reasons-i-chose-to-bootstrap-bannerbear/",
+          "evidence_type": "direct",
+          "source_locator": "2022 post",
+          "supports": "45K MRR.",
+          "published_on": "2022-08"
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Lessons at $50K MRR",
+          "publisher": "Bannerbear",
+          "source_type": "official_founder_revenue_milestone",
+          "url": "https://www.bannerbear.com/blog/7-lessons-growing-a-bootstrapped-saas-to-50k-mrr/",
+          "evidence_type": "direct",
+          "source_locator": "2023 post",
+          "supports": "50K MRR.",
+          "published_on": "2023-07"
+        }
+      ],
+      "limitations": "لا يجوز تمديد الاتجاه التاريخي إلى 2026 أو اعتبار النمو منتظمًا.",
+      "calculation": {
+        "mrr_2021_01_usd": 10455,
+        "mrr_2023_07_usd": 50000,
+        "formula": "50,000 ÷ 10,455",
+        "mrr_multiple_approximately": 4.78,
+        "approximate_period_months": 30,
+        "post_2023_growth_rate": "not_publicly_disclosed"
+      }
+    },
+    "$.financials.initial_investment": {
+      "field_value": "اعتمد المؤسس على مدخراته الشخصية خلال مرحلة التجارب والبناء، لكنه لم ينشر مبلغًا محددًا لرأس المال الأول. لم تجمع Bannerbear استثمارًا خارجيًا معلنًا. أشار المؤسس إلى وصول المشروع إلى Ramen Profitability عند نحو 3,771 دولار MRR في أغسطس 2020، ما خفف الحاجة إلى تمويل.",
+      "verification_status": "verified_bootstrapped_no_external_round_found",
+      "confidence": "medium_high",
+      "claim_type": "founder_savings_undisclosed_and_no_announced_external_funding",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "يوثق المؤسس الاعتماد على المدخرات والتمويل الذاتي دون رقم لرأس المال.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-09",
+        "SRC-13",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-09",
+          "title": "Journey to $10K MRR",
+          "publisher": "Bannerbear",
+          "source_type": "official_founder_revenue_history",
+          "url": "https://www.bannerbear.com/journey-to-10k-mrr/",
+          "evidence_type": "direct",
+          "source_locator": "Journey",
+          "supports": "Burning savings and bootstrapping.",
+          "published_on": "2021"
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Why Bannerbear Bootstrapped",
+          "publisher": "Bannerbear",
+          "source_type": "official_founder_funding_statement",
+          "url": "https://www.bannerbear.com/blog/7-reasons-i-chose-to-bootstrap-bannerbear/",
+          "evidence_type": "direct",
+          "source_locator": "Bootstrapping",
+          "supports": "No funding and self-funded choice.",
+          "published_on": "2022-08"
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Bannerbear Open Startup",
+          "publisher": "Bannerbear",
+          "source_type": "official_metrics_policy_page",
+          "url": "https://www.bannerbear.com/open/",
+          "evidence_type": "direct",
+          "source_locator": "Open",
+          "supports": "Open startup history."
+        }
+      ],
+      "limitations": "عدم العثور على جولة معلنة لا يثبت جدول الملكية الحالي أو غياب كل التسهيلات الخاصة.",
+      "calculation": {
+        "founder_initial_capital": "not_publicly_disclosed",
+        "announced_external_equity_funding_usd": 0,
+        "announced_external_debt_usd": 0,
+        "ramen_profitability_mrr_usd": 3771,
+        "ramen_profitability_date": "2020-08"
+      }
+    },
+    "$.financials.valuation": {
+      "field_value": "غير معلن. الشركة خاصة وممولة ذاتيًا ولا توجد جولة أسهم أو استحواذ أو طرح عام يحدد تقييمًا. لا يمكن اشتقاق القيمة من MRR التاريخي أو عدد العملاء أو الفريق باستخدام مضاعف مفترض.",
+      "verification_status": "verified_as_not_publicly_valued",
+      "confidence": "high",
+      "claim_type": "private_bootstrapped_company_without_transaction_valuation",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "لا توجد جولة أو صفقة أو إدراج يثبت قيمة الشركة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-13",
+        "SRC-05",
+        "SRC-29"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "Why Bannerbear Bootstrapped",
+          "publisher": "Bannerbear",
+          "source_type": "official_founder_funding_statement",
+          "url": "https://www.bannerbear.com/blog/7-reasons-i-chose-to-bootstrap-bannerbear/",
+          "evidence_type": "direct",
+          "source_locator": "Founder post",
+          "supports": "Bootstrapped and ownership statement in 2022.",
+          "published_on": "2022-08"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "Where Is Bannerbear Based?",
+          "publisher": "Bannerbear",
+          "source_type": "official_legal_entity_help_page",
+          "url": "https://www.bannerbear.com/help/articles/185-where-is-bannerbear-based/",
+          "evidence_type": "direct",
+          "source_locator": "Legal help",
+          "supports": "Private Singapore entity."
+        },
+        {
+          "source_id": "SRC-29",
+          "title": "Bannerbear LinkedIn Profile",
+          "publisher": "Bannerbear via LinkedIn",
+          "source_type": "company_managed_profile",
+          "url": "https://www.linkedin.com/company/bannerbear",
+          "evidence_type": "direct",
+          "source_locator": "LinkedIn",
+          "supports": "Privately held."
+        }
+      ],
+      "limitations": "MRR التاريخي لا يكفي لبناء تقييم دون صفقة أو منهجية تقدير صريحة."
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "اشتراكات Automate",
+        "اشتراكات Scale ومستوياتها الفرعية",
+        "اشتراكات Enterprise ومستوياتها الفرعية",
+        "القيمة الإضافية الناتجة عن زيادة API Credits",
+        "القيمة الإضافية الناتجة عن حدود Bandwidth الأعلى أو رسوم تجاوزه",
+        "ميزات الفريق والأدوار وSimple URLs وSigned URLs ضمن الخطط الأعلى",
+        "BYO Storage والدعم عبر Zoom ضمن Enterprise",
+        "خيار Freeze منخفض السعر للاحتفاظ بالبيانات دون توليد",
+        "استهلاك الصور والفيديو وPDF وGIF وMovie داخل اقتصاد الرصيد",
+        "لا يوجد دليل على إيراد إعلانات أو بيع بيانات أو خدمات تصميم بشرية مخصصة كقناة أساسية",
+        "العروض التاريخية ذات الدفع لمرة واحدة ليست قناة حالية موثقة"
+      ],
+      "verification_status": "verified_current_pricing_snapshot",
+      "confidence": "high",
+      "claim_type": "tiered_subscription_credit_bandwidth_and_enterprise_feature_revenue",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تثبت الأسعار والرصيد وFreeze وStripe القنوات الحالية.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-01",
+        "SRC-16",
+        "SRC-19",
+        "SRC-20",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "Bannerbear Pricing",
+          "publisher": "Bannerbear",
+          "source_type": "official_pricing_page",
+          "url": "https://www.bannerbear.com/pricing/",
+          "evidence_type": "direct",
+          "source_locator": "Pricing",
+          "supports": "Plans and enterprise features."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "API Credits",
+          "publisher": "Bannerbear",
+          "source_type": "official_usage_documentation",
+          "url": "https://www.bannerbear.com/help/articles/203-what-are-api-credits/",
+          "evidence_type": "direct",
+          "source_locator": "Credits",
+          "supports": "Credits by media type."
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Freeze and Cancellation",
+          "publisher": "Bannerbear",
+          "source_type": "official_subscription_documentation",
+          "url": "https://www.bannerbear.com/help/articles/13-cancel-my-paid-plan/",
+          "evidence_type": "direct",
+          "source_locator": "Cancellation",
+          "supports": "Freeze."
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Stripe Billing",
+          "publisher": "Bannerbear",
+          "source_type": "official_billing_documentation",
+          "url": "https://www.bannerbear.com/help/articles/149-which-payment-processing-platform-do-you-use/",
+          "evidence_type": "direct",
+          "source_locator": "Billing",
+          "supports": "Stripe."
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Monthly Credit Limits",
+          "publisher": "Bannerbear",
+          "source_type": "official_quota_documentation",
+          "url": "https://www.bannerbear.com/help/articles/224-what-is-the-maximum-quota-limit/",
+          "evidence_type": "direct",
+          "source_locator": "Quota",
+          "supports": "No separate credit purchases."
+        }
+      ],
+      "limitations": "لا تنشر الشركة إيراد كل قناة أو رسوم Bandwidth الفعلية أو العقود المخصصة."
+    },
+    "$.tools": {
+      "field_value": [
+        "Bannerbear V5 REST API",
+        "دعم مستمر لنقاط نهاية V3 أثناء الانتقال",
+        "OpenAPI Schema لـV5",
+        "مكتبات عملاء رسمية أو موثقة لـRuby وNode وPHP وPython",
+        "Template Editor بطبقات نص وصور وعناصر قابلة للتعديل",
+        "Adaptive Templates لتوليد أحجام متعددة من قالب واحد",
+        "Image Generation بصيغ PNG وJPG وPDF عند الطلب",
+        "Video Generation مع نصوص وصور وشعارات وترجمات",
+        "Animated GIF Generation",
+        "Movie API لدمج مقاطع وانتقالات",
+        "Website Screenshot API",
+        "PDF Rendering",
+        "Collections لتوليد مجموعة أصول مترابطة",
+        "Webhooks لكل عملية توليد",
+        "Project-level Event Webhooks",
+        "Polling للعمليات غير المتزامنة",
+        "Synchronous API Endpoint",
+        "Instant URLs في V5",
+        "Simple URLs",
+        "Signed URLs بتوقيع HMAC",
+        "Forms لإنشاء وسائط عبر واجهة دون كود",
+        "Zapier Integration",
+        "Make.com Integration",
+        "Airtable Integration",
+        "Crawler Integrations لجلب بيانات صفحات عامة",
+        "Scoped API Keys حسب القالب أو المشروع وصلاحيات Read/Write",
+        "Projects بمفاتيح API مستقلة",
+        "Team Members وRoles",
+        "Two-Factor Authentication",
+        "Data Processing Agreement",
+        "Data Expiry قابل للضبط حتى 10 ثوانٍ بعد التوليد",
+        "Bring Your Own AWS S3 Storage",
+        "Global CDN للأصول",
+        "Custom Fonts بصيغ OTF وWOFF وWOFF2",
+        "دعم العربية واللغات المتعددة عند استخدام خط متوافق",
+        "قوالب حتى 5000×5000 بكسل",
+        "Face Detection وSubject Detection",
+        "AI Background Generation أثناء الـRendering",
+        "AI Background Removal أثناء الـRendering",
+        "Anchor وGap Controls بين الطبقات",
+        "Blend Modes وPNG Stroke وPNG Shadow",
+        "Template Version Pinning للروابط الفورية",
+        "API Credits Calculator وسجل استهلاك",
+        "Stripe Billing",
+        "Ruby on Rails كإفصاح هندسي تاريخي",
+        "Heroku Postgres كإفصاح هندسي تاريخي لعام 2022",
+        "Puppeteer وFFmpeg كتقنيات معالجة معلنة تاريخيًا",
+        "AWS Serverless كعبارة بنية منشورة على صفحات المنتج",
+        "Cloudflare كتقنية حماية مستخدمة تاريخيًا أثناء حادث DDoS",
+        "مكتبة قوالب وأمثلة API ودروس تقنية"
+      ],
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "current_multimedia_api_v5_integrations_security_and_historical_stack_disclosures",
+      "verified_on": "2026-08-03",
+      "evidence_summary": "تغطي القائمة القدرات الحالية وتفصل التقنيات التاريخية.",
+      "source_count": 12,
+      "source_ids": [
+        "SRC-02",
+        "SRC-03",
+        "SRC-01",
+        "SRC-16",
+        "SRC-23",
+        "SRC-24",
+        "SRC-25",
+        "SRC-26",
+        "SRC-27",
+        "SRC-28",
+        "SRC-12",
+        "SRC-11"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Bannerbear API V5 Reference",
+          "publisher": "Bannerbear",
+          "source_type": "official_api_reference",
+          "url": "https://developers.bannerbear.com/v5/",
+          "evidence_type": "direct",
+          "source_locator": "Reference",
+          "supports": "V5 API.",
+          "published_on": "2026"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Bannerbear V5 Features",
+          "publisher": "Bannerbear",
+          "source_type": "official_product_release",
+          "url": "https://www.bannerbear.com/blog/bannerbear-v5-new-features-list/",
+          "evidence_type": "direct",
+          "source_locator": "Release",
+          "supports": "V5 editor and AI.",
+          "published_on": "2026-06"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "Bannerbear Pricing",
+          "publisher": "Bannerbear",
+          "source_type": "official_pricing_page",
+          "url": "https://www.bannerbear.com/pricing/",
+          "evidence_type": "direct",
+          "source_locator": "Pricing",
+          "supports": "Plans, security and storage."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "API Credits",
+          "publisher": "Bannerbear",
+          "source_type": "official_usage_documentation",
+          "url": "https://www.bannerbear.com/help/articles/203-what-are-api-credits/",
+          "evidence_type": "direct",
+          "source_locator": "Credits",
+          "supports": "Media credit types."
+        },
+        {
+          "source_id": "SRC-23",
+          "title": "Bannerbear Integrations",
+          "publisher": "Bannerbear",
+          "source_type": "official_integrations_index",
+          "url": "https://www.bannerbear.com/help/integrations/",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "Integrations."
+        },
+        {
+          "source_id": "SRC-24",
+          "title": "Screenshot API",
+          "publisher": "Bannerbear",
+          "source_type": "official_product_documentation",
+          "url": "https://www.bannerbear.com/help/articles/155-create-a-screenshot-via-api/",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "Screenshots."
+        },
+        {
+          "source_id": "SRC-25",
+          "title": "Event Webhooks",
+          "publisher": "Bannerbear",
+          "source_type": "official_webhook_documentation",
+          "url": "https://www.bannerbear.com/help/articles/291-what-is-an-event-webhook/",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "Webhooks."
+        },
+        {
+          "source_id": "SRC-26",
+          "title": "Signed URLs",
+          "publisher": "Bannerbear",
+          "source_type": "official_security_and_generation_documentation",
+          "url": "https://www.bannerbear.com/help/articles/177-what-are-signed-urls/",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "Signed URLs."
+        },
+        {
+          "source_id": "SRC-27",
+          "title": "Animated GIF API",
+          "publisher": "Bannerbear",
+          "source_type": "official_product_documentation",
+          "url": "https://www.bannerbear.com/help/articles/126-how-do-i-create-an-animated-gif-via-api/",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "GIF."
+        },
+        {
+          "source_id": "SRC-28",
+          "title": "Movie API",
+          "publisher": "Bannerbear",
+          "source_type": "official_product_documentation",
+          "url": "https://www.bannerbear.com/help/articles/169-create-a-movie-via-api/",
+          "evidence_type": "direct",
+          "source_locator": "Help",
+          "supports": "Movies."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "Technical Mistakes at $40K MRR",
+          "publisher": "Bannerbear",
+          "source_type": "official_founder_technical_history",
+          "url": "https://www.bannerbear.com/blog/technical-mistakes-i-made-growing-a-saas-to-k-mrr/",
+          "evidence_type": "direct",
+          "source_locator": "Technical post",
+          "supports": "Historical Rails/Postgres/editor.",
+          "published_on": "2022-06"
+        },
+        {
+          "source_id": "SRC-11",
+          "title": "One Year from $10K to $27K MRR",
+          "publisher": "Bannerbear",
+          "source_type": "official_founder_marketing_history",
+          "url": "https://www.bannerbear.com/blog/one-year-of-marketing-a-saas-from-10k-to-20k-mrr/",
+          "evidence_type": "direct",
+          "source_locator": "Marketing post",
+          "supports": "Historical Puppeteer/FFmpeg.",
+          "published_on": "2021-12"
+        }
+      ],
+      "limitations": "لا تمثل التقنيات التاريخية كشفًا كاملًا للبنية الحالية بعد إعادة بناء V5."
+    }
+  },
   "sources": [
     {
-      "label": "دليل Starter Story",
-      "url": "https://www.starterstory.com/data/micro-saas-ideas",
-      "coverage": "إيرادات الدليل، التقييم، وتسمية الإدخال"
+      "id": "SRC-01",
+      "title": "Bannerbear Pricing",
+      "publisher": "Bannerbear",
+      "source_type": "official_pricing_page",
+      "url": "https://www.bannerbear.com/pricing/",
+      "supports": [
+        "49 و149 و299 دولارًا",
+        "API Credits وBandwidth",
+        "التجربة المجانية",
+        "التكاملات والأدوار وDPA وBYO Storage",
+        "حذف البيانات والدعم"
+      ]
     },
     {
-      "label": "الملف البحثي لـ Bannerbear",
-      "url": "https://www.starterstory.com/businesses/bannerbear",
-      "coverage": "النظرة العامة، المؤسس، جدول الإيرادات الزمني، تحقيق الدخل، النمو، والأدوات"
+      "id": "SRC-02",
+      "title": "Bannerbear API V5 Reference",
+      "publisher": "Bannerbear",
+      "source_type": "official_api_reference",
+      "published_on": "2026",
+      "url": "https://developers.bannerbear.com/v5/",
+      "supports": [
+        "REST API وAuthentication",
+        "OpenAPI",
+        "Images وTemplates",
+        "Scoped Keys",
+        "Instant URLs",
+        "مكتبات العملاء"
+      ]
     },
     {
-      "label": "الموقع الرسمي",
-      "url": "https://bannerbear.com",
-      "coverage": "الـ API الحالي، الخطط، والتحقق من التكاملات"
+      "id": "SRC-03",
+      "title": "Bannerbear V5 Features",
+      "publisher": "Bannerbear",
+      "source_type": "official_product_release",
+      "published_on": "2026-06",
+      "url": "https://www.bannerbear.com/blog/bannerbear-v5-new-features-list/",
+      "supports": [
+        "إعادة بناء المحرك والمحرر والـAPI",
+        "استمرار V3",
+        "AI Background وRemoval",
+        "Face وSubject Detection",
+        "Adaptive Templates وخصائص الطبقات"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Bannerbear About and Team",
+      "publisher": "Bannerbear",
+      "source_type": "official_company_team_page",
+      "url": "https://www.bannerbear.com/about/",
+      "supports": [
+        "المقر في سنغافورة",
+        "الفريق عن بُعد",
+        "سبعة أعضاء",
+        "المهمة"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "Where Is Bannerbear Based?",
+      "publisher": "Bannerbear",
+      "source_type": "official_legal_entity_help_page",
+      "url": "https://www.bannerbear.com/help/articles/185-where-is-bannerbear-based/",
+      "supports": [
+        "Twenty Four Twelve Systems Pte. Ltd.",
+        "UEN",
+        "عنوان سنغافورة",
+        "شركة Remote"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "Bannerbear Terms and Conditions",
+      "publisher": "Bannerbear",
+      "source_type": "official_terms",
+      "published_on": "2021-06-29",
+      "url": "https://www.bannerbear.com/terms/",
+      "supports": [
+        "الاشتراكات المتكررة",
+        "التجربة المجانية",
+        "الإلغاء",
+        "الكيان السنغافوري"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Bannerbear Privacy Policy",
+      "publisher": "Bannerbear",
+      "source_type": "official_privacy_policy",
+      "published_on": "2021-06-29",
+      "url": "https://www.bannerbear.com/privacy/",
+      "supports": [
+        "الكيان والعنوان",
+        "بيانات الحساب والاستخدام",
+        "النقل والاحتفاظ",
+        "مقدمو الخدمة"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Bannerbear Open Startup",
+      "publisher": "Bannerbear",
+      "source_type": "official_metrics_policy_page",
+      "url": "https://www.bannerbear.com/open/",
+      "supports": [
+        "كانت Open Startup",
+        "المقاييس الكاملة لم تعد عامة",
+        "المحطات التاريخية"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Journey to $10K MRR",
+      "publisher": "Bannerbear",
+      "source_type": "official_founder_revenue_history",
+      "published_on": "2021",
+      "url": "https://www.bannerbear.com/journey-to-10k-mrr/",
+      "supports": [
+        "قصة 2019–2021",
+        "472 و488 و3,771 و6,109 و10,455 MRR",
+        "إطلاق API",
+        "التموضع Automate وScale"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "From $10K to $20K MRR",
+      "publisher": "Bannerbear",
+      "source_type": "official_founder_growth_history",
+      "published_on": "2021",
+      "url": "https://www.bannerbear.com/saas-10k-mrr-to-20k-mrr/",
+      "supports": [
+        "ستة أشهر من 10K إلى 20K",
+        "أول التعيينات",
+        "الدروس وAPI Docs",
+        "Face Detect و2FA"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "One Year from $10K to $27K MRR",
+      "publisher": "Bannerbear",
+      "source_type": "official_founder_marketing_history",
+      "published_on": "2021-12",
+      "url": "https://www.bannerbear.com/blog/one-year-of-marketing-a-saas-from-10k-to-20k-mrr/",
+      "supports": [
+        "27K MRR",
+        "Puppeteer وFFmpeg",
+        "المحتوى والديمو",
+        "Free Tools",
+        "التوظيف"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "Technical Mistakes at $40K MRR",
+      "publisher": "Bannerbear",
+      "source_type": "official_founder_technical_history",
+      "published_on": "2022-06",
+      "url": "https://www.bannerbear.com/blog/technical-mistakes-i-made-growing-a-saas-to-k-mrr/",
+      "supports": [
+        "40K MRR",
+        "Ruby on Rails",
+        "Heroku Postgres",
+        "FabricJS ثم محرر داخلي",
+        "مشكلات التوسع"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Why Bannerbear Bootstrapped",
+      "publisher": "Bannerbear",
+      "source_type": "official_founder_funding_statement",
+      "published_on": "2022-08",
+      "url": "https://www.bannerbear.com/blog/7-reasons-i-chose-to-bootstrap-bannerbear/",
+      "supports": [
+        "45K MRR",
+        "فريق سبعة",
+        "500+ عميل",
+        "عدم التمويل الخارجي",
+        "Ramen Profitability"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Lessons at $50K MRR",
+      "publisher": "Bannerbear",
+      "source_type": "official_founder_revenue_milestone",
+      "published_on": "2023-07",
+      "url": "https://www.bannerbear.com/blog/7-lessons-growing-a-bootstrapped-saas-to-50k-mrr/",
+      "supports": [
+        "50K MRR",
+        "Product-Founder Fit",
+        "المحتوى والأدوات المجانية",
+        "التسويق المستمر"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Journey to $1 Million ARR Index",
+      "publisher": "Bannerbear",
+      "source_type": "official_revenue_history_index",
+      "url": "https://www.bannerbear.com/journey-to-1-million-arr/",
+      "supports": [
+        "36K و40K و50K milestones",
+        "خط زمني للمحتوى",
+        "عدم ظهور محطة إيراد أحدث"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "API Credits",
+      "publisher": "Bannerbear",
+      "source_type": "official_usage_documentation",
+      "url": "https://www.bannerbear.com/help/articles/203-what-are-api-credits/",
+      "supports": [
+        "تكلفة الصور وPDF والفيديو وGIF",
+        "فصل Bandwidth عن Credits",
+        "حساب الفيديو"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Monthly Credit Limits",
+      "publisher": "Bannerbear",
+      "source_type": "official_quota_documentation",
+      "url": "https://www.bannerbear.com/help/articles/224-what-is-the-maximum-quota-limit/",
+      "supports": [
+        "30 Credit للتجربة",
+        "لا شراء Credits إضافية",
+        "عدم ترحيل الأرصدة",
+        "الترقية أو انتظار إعادة الضبط"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Quota Reset",
+      "publisher": "Bannerbear",
+      "source_type": "official_quota_documentation",
+      "url": "https://www.bannerbear.com/help/articles/221-when-does-my-monthly-quota-reset/",
+      "supports": [
+        "إعادة الضبط في الأول من الشهر"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "Freeze and Cancellation",
+      "publisher": "Bannerbear",
+      "source_type": "official_subscription_documentation",
+      "url": "https://www.bannerbear.com/help/articles/13-cancel-my-paid-plan/",
+      "supports": [
+        "الإلغاء",
+        "حذف البيانات",
+        "Freeze بسعر 9 دولارات"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "Stripe Billing",
+      "publisher": "Bannerbear",
+      "source_type": "official_billing_documentation",
+      "url": "https://www.bannerbear.com/help/articles/149-which-payment-processing-platform-do-you-use/",
+      "supports": [
+        "Stripe"
+      ]
+    },
+    {
+      "id": "SRC-21",
+      "title": "Image Generation API",
+      "publisher": "Bannerbear",
+      "source_type": "official_product_page",
+      "url": "https://www.bannerbear.com/product/image-generation-api/",
+      "supports": [
+        "Template layers عبر API",
+        "صور ديناميكية",
+        "AWS Serverless",
+        "قوالب وأمثلة"
+      ]
+    },
+    {
+      "id": "SRC-22",
+      "title": "Video Generation API",
+      "publisher": "Bannerbear",
+      "source_type": "official_product_page",
+      "url": "https://www.bannerbear.com/product/video-generation-api/",
+      "supports": [
+        "الفيديو والعلامات والترجمات",
+        "القوالب والتوليد",
+        "AWS Serverless"
+      ]
+    },
+    {
+      "id": "SRC-23",
+      "title": "Bannerbear Integrations",
+      "publisher": "Bannerbear",
+      "source_type": "official_integrations_index",
+      "url": "https://www.bannerbear.com/help/integrations/",
+      "supports": [
+        "Airtable",
+        "Zapier",
+        "Make",
+        "Forms"
+      ]
+    },
+    {
+      "id": "SRC-24",
+      "title": "Screenshot API",
+      "publisher": "Bannerbear",
+      "source_type": "official_product_documentation",
+      "url": "https://www.bannerbear.com/help/articles/155-create-a-screenshot-via-api/",
+      "supports": [
+        "Screenshots",
+        "Polling",
+        "Webhook",
+        "Synchronous endpoint"
+      ]
+    },
+    {
+      "id": "SRC-25",
+      "title": "Event Webhooks",
+      "publisher": "Bannerbear",
+      "source_type": "official_webhook_documentation",
+      "url": "https://www.bannerbear.com/help/articles/291-what-is-an-event-webhook/",
+      "supports": [
+        "Template وImage وVideo وGIF وMovie وScreenshot events",
+        "Project-level webhooks"
+      ]
+    },
+    {
+      "id": "SRC-26",
+      "title": "Signed URLs",
+      "publisher": "Bannerbear",
+      "source_type": "official_security_and_generation_documentation",
+      "url": "https://www.bannerbear.com/help/articles/177-what-are-signed-urls/",
+      "supports": [
+        "التوليد حسب URL",
+        "عدم كشف API Key",
+        "التوقيع المشفر"
+      ]
+    },
+    {
+      "id": "SRC-27",
+      "title": "Animated GIF API",
+      "publisher": "Bannerbear",
+      "source_type": "official_product_documentation",
+      "url": "https://www.bannerbear.com/help/articles/126-how-do-i-create-an-animated-gif-via-api/",
+      "supports": [
+        "GIF API",
+        "Polling وWebhook"
+      ]
+    },
+    {
+      "id": "SRC-28",
+      "title": "Movie API",
+      "publisher": "Bannerbear",
+      "source_type": "official_product_documentation",
+      "url": "https://www.bannerbear.com/help/articles/169-create-a-movie-via-api/",
+      "supports": [
+        "دمج المقاطع",
+        "Polling وWebhook"
+      ]
+    },
+    {
+      "id": "SRC-29",
+      "title": "Bannerbear LinkedIn Profile",
+      "publisher": "Bannerbear via LinkedIn",
+      "source_type": "company_managed_profile",
+      "url": "https://www.linkedin.com/company/bannerbear",
+      "supports": [
+        "حجم 2–10",
+        "المقر سنغافورة",
+        "شركة خاصة",
+        "Jon Yongfook Cockle"
+      ]
+    },
+    {
+      "id": "SRC-30",
+      "title": "Introducing the Bannerbear REST API",
+      "publisher": "Bannerbear",
+      "source_type": "official_product_pivot_history",
+      "published_on": "2020",
+      "url": "https://www.bannerbear.com/blog/introducing-the-bannerbear-api/",
+      "supports": [
+        "التحول إلى API",
+        "محرر Drag-and-Drop",
+        "القوالب",
+        "إغلاق التركيز السابق"
+      ]
     }
   ],
   "data_quality": [
-    "تصنف Starter Story الملف على أنه بحث آلي من مصادر عامة.",
-    "نقاط الإيرادات هي ادعاءات عامة مؤرخة وليست بيانات مالية مدققة.",
-    "لم يقدم الدليل قيماً للزيارات أو الإيرادات لكل زائر.",
-    "لا يتم تضمين أي مفاتيح API داخلية أو قوالب عملاء أو خلفية معالجة خاصة."
+    "أعطي المصدر الرسمي الأولوية على Starter Story وأدلة الإيرادات التجميعية.",
+    "الإيراد الحالي وTraffic والعملاء الحاليون غير منشورة؛ لم تُستخدم تقديرات.",
+    "كل رقم MRR يحمل تاريخًا واضحًا ولا يُعرض باعتباره وضع 2026.",
+    "الأسعار والخصائص لقطة وقت التحقق وقد تتغير.",
+    "التقنيات الداخلية القديمة موسومة كإفصاحات تاريخية، لا كحزمة حالية كاملة.",
+    "لم تُدرج مفاتيح API أو بيانات عملاء أو معلومات خلفية خاصة."
   ],
   "research_metadata": {
-    "researched_on": "2026-07-28",
-    "scope": "المعلومات العامة فقط",
-    "source_method": "Starter Story",
+    "researched_on": "2026-08-03",
+    "scope": "معلومات عامة رسمية وحديثة حتى أغسطس 2026",
+    "source_method": "مصادر Bannerbear الرسمية وAPI Reference وHelp Center ومدونة المؤسس، مع تقاطع محدود مع صفحة الشركة على LinkedIn",
     "private_backend_data_included": false,
-    "copyright_note": "ملخص مستقل"
-  },
-  "id": "bannerbear"
+    "copyright_note": "تحليل مستقل مع تلخيص للمصادر"
+  }
 }

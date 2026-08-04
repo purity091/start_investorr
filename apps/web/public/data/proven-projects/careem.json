@@ -2,70 +2,1412 @@
   "id": "careem",
   "slug": "careem",
   "name": "كريم (Careem)",
-  "headline": "قصة الاستحواذ الأسطوري الذي أثبت قوة التوطين (Hyper-Localization) ضد العمالقة",
-  "category": "Mobility & Super App / النقل التشاركي والتطبيق الخارق",
+  "headline": "من حجز سيارات للشركات إلى تطبيق يومي متعدد الخدمات: كيف حوّلت Careem التوطين إلى بنية تشغيل إقليمية",
+  "category": "Mobility, Delivery & FinTech / Everything App / التنقل والتوصيل والخدمات المالية",
   "company": {
-    "location": "دبي، الإمارات العربية المتحدة (يغطي الشرق الأوسط وباكستان)",
-    "business_model": "اقتطاع عمولة من كل رحلة وتوصيلة، وتطوير نموذج التطبيق الخارق (Super App) للخدمات اليومية"
+    "location": "دبي، الإمارات العربية المتحدة. بدأت Careem في دبي عام 2012 وتعمل حاليًا في أكثر من 70 مدينة عبر 10 دول في الشرق الأوسط وشمال أفريقيا وباكستان.",
+    "business_model": "هيكل متعدد الشركات والخدمات: أعمال Careem Rides مملوكة بالكامل لـUber، بينما تعمل خدمات Food وQuik وPlus وPay وبقية خدمات Everything App داخل Careem Technologies. أغلقت e& في ديسمبر 2023 استثمارًا بقيمة 400 مليون دولار مقابل 50.03% من Careem Technologies، واحتفظت Uber بحصة تقارب 42%. وفي يونيو 2026 وقعت e& اتفاقًا لبيع 12.5% إلى Uber مقابل 100 مليون دولار؛ ظل الإغلاق خاضعًا للموافقات عند تاريخ التحقق. الإيرادات تأتي من رسوم وعمولات المعاملات، وهوامش التجزئة، والاشتراك، والخدمات المالية والتجارية، مع اختلاف الأسعار والكيانات حسب السوق والخدمة."
   },
   "directory_snapshot": {
-    "monthly_revenue": "ملايين الدولارات (كجزء من مجموعة أوبر وتطبيقاتها الخاصة)",
-    "monthly_traffic": "ملايين الرحلات والطلبات شهرياً في أكثر من 100 مدينة"
+    "monthly_revenue": "غير معلن. لا تفصل Uber أو e& أو Careem الإيرادات الشهرية أو السنوية لـCareem Rides أو Careem Technologies بصورة مستقلة، لذلك حُذف وصف «ملايين الدولارات». أعلنت e& فقط أن Careem Technologies سرّعت نمو الإيرادات وأن GTV للخدمات الأساسية نما قرابة خمسة أضعاف خلال عامين.",
+    "monthly_traffic": "غير معلن كمستخدمين نشطين شهريًا أو طلبات شهرية. تنشر Careem مؤشرات تراكمية ونطاقية: أكثر من 50 مليون عميل، وأكثر من 2.5 مليون Captain، وأكثر من مليار رحلة، والعمل في أكثر من 70 مدينة و10 دول. هذه الأرقام لا تساوي MAU ولا حجم المعاملات الشهرية."
   },
   "overview": {
     "problem": {
-      "text": "في عام 2012، كانت المواصلات العامة في معظم دول الشرق الأوسط غير موثوقة، وسيارات الأجرة التقليدية تفتقر للأمان ومعايير الجودة. ومع دخول Uber للسوق، كانت الشركة الأمريكية تفتقر لفهم الثقافة المحلية، وضعف تغطية الخرائط، والاعتماد الكلي على البطاقات الائتمانية غير المنتشرة. لم تكن أوبر تفهم هذه التعقيدات الاجتماعية والثقافية. ففي المنطقة، كان الدفع بالبطاقة الائتمانية نادراً جداً، وثقة العائلات في السماح للنساء بالركوب مع غريب كانت شبه معدومة. كما أن الخرائط كانت مأساوية؛ لا يوجد عناوين واضحة أو أرقام للمنازل، بل وصف معتمد على (بجوار البقالة الفلانية). تطبيق مستورد من سان فرانسيسكو لن يتمكن من التعامل مع هذه الفوضى المنظمة للمدن العربية.",
-      "impact": "معاناة يومية للمواطنين في التنقل، وانعدام الثقة في خدمات النقل، وصعوبة استخدام التطبيقات الأجنبية لمن لا يملك بطاقة بنكية. مما أدى لإعاقة تنقل فئات كاملة من المجتمع كالنساء والطلاب، وتسبب في فقدان الشعور بالأمان، وخنق الحركة التجارية والنمو الاقتصادي في عواصم المنطقة."
+      "text": "بدأت Careem لمعالجة ضعف موثوقية النقل والحجز للشركات في المنطقة، ثم واجهت تحديات تشغيلية محلية لم تكن تُحل بترجمة تطبيق عالمي فقط: انتشار الدفع النقدي، وتفاوت جودة العناوين والخرائط، والحاجة إلى نقاط التقاط ووصف محلي، وتدريب ودعم للسائقين والعملاء. لاحقًا ظهرت مشكلة ثانية: احتياجات يومية مثل التنقل والطعام والبقالة والتحويلات والخدمات المنزلية موزعة بين تطبيقات وتجارب دفع ودعم مختلفة.",
+      "impact": "غياب التوطين يرفع فشل الالتقاط والإلغاء والدعم وتحصيل النقد، ويضعف الثقة لدى العميل والكابتن. أما جمع الخدمات داخل تطبيق واحد فيقلل تبديل التطبيقات، لكنه يضيف تعقيدًا في التوصيل والمخزون والمدفوعات والامتثال وتجربة المستخدم؛ وقد تتحول كثرة الخدمات إلى فوضى إذا لم تتشارك هوية ودفعًا ودعمًا وتنقلًا واضحًا."
     },
     "solution": {
-      "text": "بدأت (كريم) كخدمة حجز سيارات للشركات، ثم توسعت للأفراد. بنت ميزتها التنافسية على (التوطين الدقيق): الاعتماد على الدفع النقدي (Cash)، تسمية السائق بـ (كابتن) لاحترامه، وبناء خرائط مخصصة للمناطق العشوائية غير المسجلة في خرائط جوجل. لم تبنِ كريم تطبيقاً فحسب، بل بنت بنية تحتية محلية كاملة؛ أضافت خاصية إخفاء رقم هاتف العميل للحفاظ على الخصوصية، وقامت بمسح الخرائط محلياً لإنشاء نقاط ارتكاز (POIs) تناسب الطريقة التي يصف بها العرب عناوينهم. كما أنشأت مراكز اتصال (Call Centers) للرد على شكاوى العملاء والسائقين فوراً، وهو شيء كانت أوبر ترفض القيام به عالمياً."
+      "text": "بنت Careem سوق تنقل يدعم الحجز الفوري والمجدول والدفع النقدي والبطاقات وCareem Pay، مع فئات سيارات متعددة وHala Taxi وBike وCar Rental وSchool Rides. توسعت إلى Food وDineOut وQuik وShops وBox والخدمات المنزلية والزهور والصيدليات، وأضافت Careem Plus كمظلة مزايا، وCareem Pay للمحفظة والفواتير والتحويل المحلي والدولي، وCareem for Business للتحكم في إنفاق الشركات. في 2026 أعادت تنظيم التنقل داخل التطبيق إلى Home وActivities وCarts وProfile وأضافت جدولة الطعام والمفضلة والفلاتر وحجز رحلة لشخص آخر."
     }
   },
   "market_data": {
-    "target_audience": "المتنقلون يومياً، النساء الباحثات عن تنقل آمن، والباحثون عن خدمات يومية متكاملة (Super App). والشركات التي تبحث عن حلول نقل آمنة لموظفيها (Careem for Business)، وصولاً إلى العملاء الباحثين عن خدمات الدفع الإلكتروني.",
-    "market_size": "سوق النقل وتوصيل الطلبات والمدفوعات في الشرق الأوسط (عشرات المليارات). والذي توسع بشكل هائل من مجرد نقل الركاب إلى سوق الخدمات المتكاملة (توصيل طعام، بقالة، ومدفوعات).",
-    "growth_rate": "نمو أسطوري أجبر عملاق النقل العالمي (أوبر) على الاستحواذ عليها مقابل 3.1 مليار دولار في 2019. معتمدة على الفهم العميق للثقافة المحلية، مما جعلها تتوسع لمئات المدن الثانوية التي تجاهلها المنافسون العالميون."
+    "target_audience": "الأفراد والأسر والموظفون والمسافرون الذين يحتاجون إلى التنقل والطعام والبقالة والخدمات والمدفوعات، والعملاء الذين يفضلون النقد أو المحفظة الرقمية، والمغتربون في الإمارات الذين يرسلون الأموال، والشركات التي تدير رحلات وطلبات فرقها، والمطاعم والمتاجر والموردون، والكباتن ومقدمو الخدمات.",
+    "market_size": "لا تنشر Careem رقمًا رسميًا بالدولار لسوقها الكلي؛ فهي تعمل في أسواق منفصلة تشمل التنقل وتوصيل الطعام والبقالة والتجارة المحلية والمدفوعات والتحويلات والخدمات المنزلية. مؤشرات النطاق المباشرة هي أكثر من 50 مليون عميل و2.5 مليون Captain ومليار رحلة وأكثر من 70 مدينة في 10 دول، مع أكثر من اثنتي عشرة خدمة داخل Everything App.",
+    "growth_rate": "لا توجد سلسلة عامة موحدة للإيرادات أو المستخدمين. في يونيو 2026 قالت e& إن GTV للخدمات الأساسية في Careem Technologies نما قرابة خمسة أضعاف خلال العامين السابقين، مدفوعًا بـFood وQuik وPlus وPay، مع تسارع الإيراد وحصة السوق في الإمارات. هذا مقياس قيمة معاملات للخدمات غير المرتبطة بالرحلات، وليس نمو إيراد Careem بالكامل. ويظل رقم 50 مليون عميل ومليار رحلة تراكميًا."
   },
   "financials": {
-    "initial_investment": "استثمارات من STC Ventures ومجموعة أبراج والوليد بن طلال وراكوتين. مما وفر السيولة اللازمة لخوض حرب أسعار طاحنة وحملات تسويقية ضخمة لترسيخ العلامة التجارية.",
-    "valuation": "$3.1B (قيمة الاستحواذ الأكبر من نوعه في المنطقة آنذاك) (كأول وأعظم قصة تخارج إقليمية أثبتت قوة العقول المحلية).",
+    "initial_investment": "المساهمة الشخصية الأولى للمؤسسين غير معلنة. ساعد عرض Careem المبكر في جمع 1.7 مليون دولار، ثم جمعت الشركة 10 ملايين دولار في 2014، و350 مليون دولار في 2016 كأول شريحة من جولة أكبر، و200 مليون دولار في 2018 ضمن جولة توسع. في 2019 اتفقت Uber على شراء Careem مقابل 3.1 مليارات دولار، وأغلقت الصفقة في يناير 2020. وفي ديسمبر 2023 استثمرت e& مبلغ 400 مليون دولار في Careem Technologies غير المرتبطة بالرحلات.",
+    "valuation": "وصل تقييم Careem الخاص إلى نحو مليار دولار في جولة 2016. بلغت قيمة الاستحواذ على Careem بالكامل 3.1 مليارات دولار، مكونة من 1.4 مليار دولار نقدًا و1.7 مليار دولار في سندات قابلة للتحويل من Uber. أما استثمار 400 مليون دولار مقابل 50.03% من Careem Technologies فيعني تقييمًا ضمنيًا بعد الاستثمار يقارب 799.5 مليون دولار. واتفاق يونيو 2026 المعلق لبيع 12.5% مقابل 100 مليون دولار يعني قيمة ضمنية تقارب 800 مليون دولار. لا يوجد تقييم موحد حالي يجمع Careem Rides وCareem Technologies بعد الفصل.",
     "revenue_streams": [
-      "عمولات اقتطاع من كل رحلة نقل أفراد (Ride-hailing).",
-      "عمولات من طلبات توصيل الطعام والبقالة عبر تطبيقها الخارق.",
-      "رسوم خدمات الدفع الإلكتروني (Careem Pay).",
-      "عمولات اشتراكات باقات التوفير (Careem Plus).",
-      "رسوم الإعلانات داخل التطبيق للشركات والمطاعم."
+      "حصة أو رسوم من أجور رحلات Careem Rides وفئات السيارات والتاكسي، مع رسوم تشغيل وPeak ومكونات سعر تختلف حسب المدينة",
+      "رسوم توصيل وخدمة وعمولات تجارية من طلبات Food والمطاعم الشريكة",
+      "هوامش بيع ورسوم توصيل وخدمة من Quik وShops والسوبرماركت والزهور والصيدليات",
+      "اشتراك Careem Plus الشهري؛ يبلغ السعر المنشور في الإمارات 19 درهمًا مع مزايا عبر الرحلات والطعام والبقالة والتحويلات والخدمات",
+      "رسوم وفروق وشراكات Careem Pay للمحفظة والفواتير والتحويل الدولي، مع اختلاف الرسوم حسب البلد والاشتراك والوجهة",
+      "رسوم Bike من فتح الدراجة والوقت وباقات اليوم والأسبوع والشهر",
+      "عمولات أو رسوم من Car Rental وDineOut وHome Services وBox والخدمات الشريكة",
+      "حلول Careem for Business للرحلات والطعام والبقالة وBox وإدارة الإنفاق؛ لا تفرض الصفحة الحالية اشتراكًا شهريًا قياسيًا",
+      "إيرادات عروض وترويج ومزايا مدفوعة للمطاعم والتجار والشركاء، دون إفصاح عن مساهمتها",
+      "شراكات B2B delivery وحلول دفع التجار والموردين ضمن المنصة"
     ]
   },
   "lessons": [
     {
-      "title": "التوطين كدرع واقٍ (Hyper-Localization)",
-      "description": "لم تكتفِ كريم بنسخ نموذج أوبر. لقد أدركت أن 80% من المنطقة لا تملك بطاقات ائتمان، فكانت أول من أتاح الدفع بـ (الكاش). وأدركت أن الخرائط ضعيفة في مدن كالقاهرة والرياض، فقامت بإضافة (نقاط علام مميزة - POIs) ليختار العميل الركوب من أمام (صيدلية كذا) بدلاً من إدخال عنوان دقيق غير موجود. هذا التفوق المحلي قهر أوبر ودفعها للاستحواذ."
+      "title": "التوطين الحقيقي يغير التدفق النقدي لا اللغة فقط",
+      "description": "دعم النقد والعناوين الوصفية ومراكز المساندة لم يكن تعريبًا للواجهة؛ كان إعادة تصميم للتحصيل والتسوية والالتقاط وخدمة الطرفين. المنتج المحلي القوي يعكس كيف يعيش السوق فعليًا."
     },
     {
-      "title": "إعادة هيكلة الثقافة (The Captain Concept)",
-      "description": "مهنة السائق في بعض الدول العربية كانت تعاني من وصمة اجتماعية. بذكاء بالغ، أطلقت كريم على سائقيها لقب (كابتن). هذا التغيير اللفظي البسيط رفع من معنويات السائقين، حسن خدمتهم، وجذب شريحة من الموظفين والطلاب للعمل ككباتن بدوام جزئي بدون حرج."
+      "title": "النقد يفتح الطلب ويضيف دفتر عمليات كاملًا",
+      "description": "قبول الكاش يوسع الوصول، لكنه يحتاج تحصيلًا من الكابتن وتسوية وأرصدة ومحاضر نزاع وإدارة تغيير النقد. كل طريقة دفع جديدة ميزة اكتساب وتكلفة تشغيل ومخاطرة في الوقت نفسه."
     },
     {
-      "title": "التحول لتطبيق خارق (Super App Pivot)",
-      "description": "بعد الاستحواذ، لم تتوقف كريم. أدركت أن كلفة الاستحواذ على العميل (CAC) تمت، والعميل يستخدم تطبيقهم يومياً ويثق به. فقررت تقديم كل الخدمات (طعام، بقالة، تنظيف، دفع) داخل تطبيق واحد. هذا التوسع الأفقي ضاعف القيمة العمرية للعميل (LTV) بشكل هائل."
+      "title": "العنوان المحلي أصل بيانات",
+      "description": "تفاصيل الالتقاط والمعالم والمداخل ليست مجرد ملاحظات نصية؛ تتحول مع الاستخدام إلى بيانات تحسن التوجيه ووقت الوصول وفشل الحجز. الأسواق ضعيفة العنونة تحتاج منتج مواقع يراكم المعرفة محليًا."
     },
     {
-      "title": "التغلب على عملاق تقني بالفهم الثقافي (Beating Goliaths with Empathy)",
-      "description": "أوبر كانت تملك التمويل اللامحدود والتقنية الأفضل. لكن كريم هزمتهم بالتعاطف والفهم العميق للمستخدم. أدركت كريم أن السائقين يحتاجون لتدريب اجتماعي وليس فقط تفعيل التطبيق، وأن العميل يريد التحدث لموظف عند فقدان غرضه. هذا الفهم الثقافي حول (كريم) من تطبيق أجنبي بارد إلى (علامة تجارية وطنية) محبوبة يدافع عنها الناس."
+      "title": "إعادة تسمية المورد تساعد الثقافة ولا تستبدل الاقتصاد",
+      "description": "لقب Captain يبني هوية واحترامًا، لكن الاحتفاظ يعتمد أيضًا على صافي الدخل والانتظار والحوافز والسلامة والدعم. العلامة تقوي العلاقة عندما يدعمها نموذج اقتصادي عادل وقابل للفهم."
     },
     {
-      "title": "نموذج الـ Super App لتوسيع الهوامش",
-      "description": "الاستحواذ على عميل جديد لتحميل التطبيق وإدخال بطاقته البنكية يكلف الكثير (CAC المرتفع). بمجرد أن حققت كريم ذلك لرحلات السيارات، استخدمت نفس التطبيق ونفس البطاقة البنكية المحفوظة لبيع الطعام، والبقالة، وتحويل الأموال (Careem Pay). هذا التوسع الأفقي يُعظم القيمة المستخرجة من كل عميل (LTV) ويجعل التطبيق ضرورة يومية لا غنى عنها."
+      "title": "سيولة التنقل تُقاس بالاستفادة من وقت الكابتن",
+      "description": "زيادة العملاء وحدها لا تضمن سوقًا صحيًا. يجب تقليل زمن الوصول والانتظار والمسافات الفارغة والإلغاءات، لأن جودة الخدمة ودخل الكابتن وهامش المنصة مرتبطة بالاستفادة من الوقت نفسه."
+    },
+    {
+      "title": "التطبيق الخارق يحتاج طبقات مشتركة",
+      "description": "Food وQuik وPay وRides لها رحلات استخدام مختلفة. تصبح Super App عندما تتشارك الهوية والعناوين والدفع والدعم والعضوية والتنقل والسلة حيث يلزم، لا عندما تُجمع أيقوناتها على شاشة واحدة."
+    },
+    {
+      "title": "الاشتراك متعدد الخدمات يعمل مع تكرار الاستخدام",
+      "description": "Careem Plus يربط استرداد الرحلات والتوصيل المجاني والعروض والتحويلات والخدمات. هذا يحسن الاحتفاظ فقط عندما يستخدم العميل عدة فئات بما يكفي لتجاوز سعر الاشتراك وتكلفة المزايا."
+    },
+    {
+      "title": "كل قطاع جديد يحمل وحدة اقتصادية مختلفة",
+      "description": "الرحلة تربط وقت كابتن بمسافة، والطعام يعتمد على مطعم وتجهيز وتوصيل، وQuik يضيف مخزونًا ومراكز تجهيز، وPay يضيف امتثالًا وشركاء ماليين. مشاركة التطبيق لا تعني مشاركة الهوامش والمخاطر."
+    },
+    {
+      "title": "الفنتك داخل تطبيق يومي يستفيد من الثقة والتكرار",
+      "description": "المحفظة والتحويلات تستخدم هوية العميل ووسائل الدفع والعادة اليومية الموجودة. لكن الانتقال من رصيد داخل التطبيق إلى تحويل دولي يضيف تحققًا وتنظيمًا وشريك صرف ومسؤولية أعلى."
+    },
+    {
+      "title": "الدعم البشري جزء من المنتج في الأسواق المعقدة",
+      "description": "عند وجود كاش وعناوين مرنة وطرفين مستقلين وخدمات زمنية، لا تكفي صفحة مساعدة. الدعم السريع يحل النزاعات ويحفظ الثقة ويعيد البيانات إلى تحسين المنتج والعمليات."
+    },
+    {
+      "title": "قيمة المعاملة ليست إيرادًا",
+      "description": "نمو GTV قرابة خمسة أضعاف يعني أن قيمة الطلبات ارتفعت، لكنه لا يكشف take rate أو الخصومات أو تكلفة الكباتن والمخزون أو الربح. يجب فصل حجم النشاط عن اقتصاد المنصة."
+    },
+    {
+      "title": "الفصل القانوني قد يسبق التكامل في الواجهة",
+      "description": "Rides مملوكة بالكامل لـUber، بينما الخدمات الأخرى داخل Careem Technologies بملكية مختلفة، ومع ذلك تظهر في تطبيق واحد. يحتاج ذلك عقودًا وخصوصية وفوترة وحوكمة واضحة خلف تجربة تبدو موحدة."
+    },
+    {
+      "title": "قيمة استحواذ الشركة لا تساوي قيمة الجزء المنفصل",
+      "description": "3.1 مليارات دولار كانت قيمة Careem قبل فصل Super App، بينما نحو 800 مليون دولار قيمة ضمنية لـCareem Technologies في صفقات لاحقة. اختلاف الأصول والتوقيت والملكية يجعل المقارنة المباشرة مضللة."
+    },
+    {
+      "title": "الاتفاق الموقّع لا يغير الملكية قبل الإغلاق",
+      "description": "اتفاق يونيو 2026 سيخفض حصة e& إلى 37.53% ويزيد نفوذ Uber إذا اكتمل، لكنه ظل خاضعًا للموافقات عند التحقق. يجب التمييز بين التوقيع والإغلاق عند وصف المالك الحالي."
     }
   ],
   "tools": [
-    "Java / Kotlin / Swift (للتطبيقات)",
-    "Machine Learning (لتوجيه السائقين والتسعير الديناميكي)",
-    "Microservices Architecture",
-    "AWS",
-    "Redis",
-    "Elasticsearch",
-    "Spring Boot"
+    "Careem Everything App على iOS وAndroid والويب مع Home وActivities وCarts وProfile",
+    "Rides وHala Taxi والحجز الفوري والمجدول وBook For A Friend وفئات سيارات متعددة",
+    "الدفع النقدي والبطاقات وApple Pay وCareem Pay credit والفواتير للشركات",
+    "Food مع الطلب المجدول والمفضلة والفلاتر والطلبات الجماعية وتتبع التوصيل",
+    "Quik Groceries وQuik Electronics وShops والسوبرماركت مع مخزون وتوصيل ورسوم خدمة",
+    "Box وHome Services وFlowers وPharmacy وخدمات يومية عبر شركاء",
+    "DineOut للعروض والدفع والخصومات في المطاعم",
+    "Careem Plus باشتراك شهري ومزايا مشتركة عبر Rides وFood وQuik وDineOut وBike وPay",
+    "Careem Pay للمحفظة وإرسال وطلب المال والفواتير والتحويل إلى أكثر من 30 دولة من الإمارات",
+    "تكامل Lulu Exchange للتحويلات الدولية المرخصة من مصرف الإمارات المركزي",
+    "Careem for Business مع ضوابط إنفاق ورؤية فورية ودفع مرن دون اشتراك شهري قياسي",
+    "Bike مع فتح بالدفع حسب الاستخدام وباقات يومية وأسبوعية وشهرية",
+    "Captain platform للتسجيل والتدريب والمكافآت والدعم والأرباح اليومية أو الأسبوعية",
+    "واجهة Careem Rides مستضافة على Careem Technologies مع فصل قانوني بين مقدم الرحلات ومقدم المنصة",
+    "بنية سحابية على AWS تخدم الرحلات والتوصيل والمدفوعات",
+    "Amazon RDS for MySQL وAWS DMS Serverless وEC2 وCloudWatch في مشاريع البيانات المعلنة",
+    "Go لوظائف حذف البيانات المتوازية في مشروع تحسين قاعدة البيانات المنشور",
+    "Server-driven UI لتحديث تجارب التطبيق بصورة موحدة وقابلة للتوسع",
+    "Facial recognition وLiveness لكشف حسابات Captains المكررة وفق مشروع مكافحة الاحتيال",
+    "Kafka وتحسين ضغط الرسائل ضمن بنية تدفق البيانات المعلنة في مدونة الهندسة",
+    "خمسة مواقع تقنية في أوروبا ومنطقة MENAP وفق صفحة الشركة"
+  ],
+  "verification": {
+    "status": "verified_from_careem_uber_eand_sec_product_help_and_engineering_sources_with_field_level_evidence",
+    "verified_on": "2026-08-02",
+    "source_policy": "تم إعطاء الأولوية لموقع Careem ومركز المساعدة ومدونة الهندسة، وإفصاحات Uber لدى SEC، وإعلانات e& وتقاريرها السنوية. استُخدمت Wamda وReuters/Arab News ومصادر المستثمرين فقط لتاريخ الجولات الذي لا يتوفر كاملًا في مصدر رسمي واحد.",
+    "important_notes": [
+      "لا تنشر Careem إيرادات مستقلة، لذلك لم يُستخدم تقدير شهري.",
+      "أكثر من 50 مليون عميل و2.5 مليون Captain ومليار رحلة أرقام نطاق أو تراكم، وليست مستخدمين أو معاملات شهرية.",
+      "Careem Rides مملوكة بالكامل لـUber، بينما Careem Technologies كيان منفصل يستضيف الخدمات غير المرتبطة بالرحلات والمنصة.",
+      "في ديسمبر 2023 امتلكت e& نسبة 50.03% من Careem Technologies واحتفظت Uber بنحو 42%.",
+      "اتفاق بيع 12.5% من e& إلى Uber في يونيو 2026 كان خاضعًا للموافقات ولم يظهر إعلان إغلاق حتى تاريخ التحقق؛ لذلك لم تُعدّل الملكية الحالية كما لو أن الصفقة اكتملت.",
+      "قيمة 3.1 مليارات دولار تخص استحواذ Uber على Careem قبل فصل Careem Technologies.",
+      "التقييم الضمني البالغ نحو 800 مليون دولار يخص Careem Technologies وفق معاملات 2023 و2026، وليس Careem Rides أو العلامة مجتمعة.",
+      "GTV ليس إيرادًا أو ربحًا؛ إعلان نموه خمسة أضعاف لا يكشف عمولة أو هامش الخدمات.",
+      "Careem Plus والأسعار والرسوم والمزايا تختلف حسب المدينة والسوق وقد تتغير داخل التطبيق.",
+      "تم حذف Redis وElasticsearch وSpring Boot وJava/Kotlin/Swift كقائمة عامة، والإبقاء فقط على تقنيات موثقة حاليًا في مصادر هندسية رسمية."
+    ]
+  },
+  "evidence_map_schema": {
+    "version": "2.0",
+    "description": "خريطة أدلة تربط كل حقل بالقيمة وحالة التحقق والثقة والمصادر وحدود الملكية والمقاييس.",
+    "status_values": {
+      "verified": "الادعاء مدعوم مباشرة بمصدر رسمي أو إفصاح تنظيمي.",
+      "verified_as_not_publicly_disclosed": "لم يُنشر المقياس بصورة مستقلة، ولذلك لم يُستخدم تقدير.",
+      "verified_platform_scale_not_mau": "الرقم يقيس العملاء أو الرحلات أو الكباتن تراكميًا وليس MAU.",
+      "verified_with_split_ownership": "المعلومة تتطلب فصل Careem Rides عن Careem Technologies.",
+      "verified_pending_transaction": "الاتفاق موقع لكنه لم يُعلن إغلاقه عند تاريخ التحقق.",
+      "verified_historical_financing": "المعلومة تتعلق بجولة أو استحواذ تاريخي موثق.",
+      "verified_historical_calculation": "القيمة مشتقة حسابيًا من مبلغ ونسبة معلنين.",
+      "verified_product_capability": "القدرة موثقة في صفحة منتج أو مساعدة أو هندسة رسمية.",
+      "verified_gttv_not_revenue": "النمو المعلن يخص قيمة المعاملات لا الإيرادات.",
+      "analytical_inference": "تحليل مهني مبني على حقائق موثقة وليس تصريحًا حرفيًا من الشركة."
+    },
+    "confidence_scale": {
+      "high": "SEC أو إعلان شركة/مستثمر رسمي أو وثيقة منتج واضحة.",
+      "medium_high": "مصدر تمويل مباشر أو تغطية Reuters متقاطعة.",
+      "medium": "ادعاء تشغيلي للشركة يحتاج إلى تعريف أو تدقيق مالي إضافي."
+    }
+  },
+  "evidence_map": {
+    "$.company.location": {
+      "field_value": "دبي، الإمارات العربية المتحدة. بدأت Careem في دبي عام 2012 وتعمل حاليًا في أكثر من 70 مدينة عبر 10 دول في الشرق الأوسط وشمال أفريقيا وباكستان.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "dubai_origin_and_current_regional_footprint",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تثبت صفحة Careem الرسمية أصل الشركة في دبي وحجم انتشارها الحالي.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-01",
+        "SRC-08"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Careem",
+          "publisher": "Careem",
+          "source_type": "official_company_page",
+          "url": "https://www.careem.com/en-AE/about-us/",
+          "evidence_type": "direct",
+          "source_locator": "About Us",
+          "supports": "دبي هي منشأ Careem والعمل الحالي في 70+ مدينة و10 دول."
+        },
+        {
+          "source_id": "SRC-08",
+          "title": "Careem Rides Locations",
+          "publisher": "Careem Help Center",
+          "source_type": "official_location_documentation",
+          "url": "https://help.careem.com/hc/en-us/articles/1500010067882-Locations-and-availability",
+          "evidence_type": "direct",
+          "source_locator": "Locations and availability",
+          "supports": "الدول الحالية لخدمة Rides."
+        }
+      ]
+    },
+    "$.company.business_model": {
+      "field_value": "هيكل متعدد الشركات والخدمات: أعمال Careem Rides مملوكة بالكامل لـUber، بينما تعمل خدمات Food وQuik وPlus وPay وبقية خدمات Everything App داخل Careem Technologies. أغلقت e& في ديسمبر 2023 استثمارًا بقيمة 400 مليون دولار مقابل 50.03% من Careem Technologies، واحتفظت Uber بحصة تقارب 42%. وفي يونيو 2026 وقعت e& اتفاقًا لبيع 12.5% إلى Uber مقابل 100 مليون دولار؛ ظل الإغلاق خاضعًا للموافقات عند تاريخ التحقق. الإيرادات تأتي من رسوم وعمولات المعاملات، وهوامش التجزئة، والاشتراك، والخدمات المالية والتجارية، مع اختلاف الأسعار والكيانات حسب السوق والخدمة.",
+      "verification_status": "verified_with_split_ownership",
+      "confidence": "high",
+      "claim_type": "split_rides_and_everything_app_ownership_with_multi_vertical_revenue",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تثبت إفصاحات Uber وe& الفصل بين Rides وCareem Technologies والملكية، وتثبت المنتجات تنوع الخدمات والرسوم.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-04",
+        "SRC-05",
+        "SRC-06",
+        "SRC-17",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Uber Fiscal 2025 Form 10-K — Careem Technologies",
+          "publisher": "U.S. Securities and Exchange Commission / Uber",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+          "evidence_type": "direct",
+          "source_locator": "10-K → Careem Technologies Investment",
+          "supports": "Uber تملك Rides بالكامل وتحتفظ بحصة أقلية في Technologies.",
+          "published_on": "2026-02"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "e& Integrated Report 2023 — Careem Transaction",
+          "publisher": "e&",
+          "source_type": "official_annual_report",
+          "url": "https://eandannualreport.com/2023/year-in-review.html",
+          "evidence_type": "direct",
+          "source_locator": "2023 year in review",
+          "supports": "e& اشترت 50.03%.",
+          "published_on": "2024"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "e& Divests 12.5% Stake in Careem Technologies to Uber",
+          "publisher": "e&",
+          "source_type": "official_stock_market_announcement",
+          "url": "https://www.eand.com/content/dam/eand/assets/docs/latest-announcements/2026/adx-announcement-divest-partial-stake-in-careem-en-01-june-26.pdf",
+          "evidence_type": "direct",
+          "source_locator": "Corporate announcement",
+          "supports": "اتفاق البيع الجزئي المعلق.",
+          "published_on": "2026-06-01"
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Careem Rides Terms — Platform Separation",
+          "publisher": "Careem",
+          "source_type": "official_legal_document",
+          "url": "https://www.careem.com/en-AE/user-terms-jo-rides/",
+          "evidence_type": "direct",
+          "source_locator": "Ride terms",
+          "supports": "فصل مقدم الرحلات عن مقدم المنصة."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Careem Everything App",
+          "publisher": "Careem",
+          "source_type": "official_product_page",
+          "url": "https://www.careem.com/?lang=en",
+          "evidence_type": "direct",
+          "source_locator": "Everything App",
+          "supports": "الخدمات المتعددة."
+        }
+      ],
+      "limitations": "تختلف رسوم وعقود وكيانات كل خدمة حسب السوق؛ لم تُنشر take rates الكاملة."
+    },
+    "$.directory_snapshot.monthly_revenue": {
+      "field_value": "غير معلن. لا تفصل Uber أو e& أو Careem الإيرادات الشهرية أو السنوية لـCareem Rides أو Careem Technologies بصورة مستقلة، لذلك حُذف وصف «ملايين الدولارات». أعلنت e& فقط أن Careem Technologies سرّعت نمو الإيرادات وأن GTV للخدمات الأساسية نما قرابة خمسة أضعاف خلال عامين.",
+      "verification_status": "verified_as_not_publicly_disclosed",
+      "confidence": "high",
+      "claim_type": "standalone_revenue_not_disclosed",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "لا تنشر الأطراف إيرادات Careem مستقلة، بينما يكشف إعلان e& اتجاه نمو GTV فقط.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-04",
+        "SRC-06",
+        "SRC-01"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-04",
+          "title": "Uber Fiscal 2025 Form 10-K — Careem Technologies",
+          "publisher": "U.S. Securities and Exchange Commission / Uber",
+          "source_type": "sec_annual_filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+          "evidence_type": "direct",
+          "source_locator": "10-K",
+          "supports": "لا يفصل Uber إيراد Careem ويعرض الاستثمار فقط.",
+          "published_on": "2026-02"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "e& Divests 12.5% Stake in Careem Technologies to Uber",
+          "publisher": "e&",
+          "source_type": "official_stock_market_announcement",
+          "url": "https://www.eand.com/content/dam/eand/assets/docs/latest-announcements/2026/adx-announcement-divest-partial-stake-in-careem-en-01-june-26.pdf",
+          "evidence_type": "direct",
+          "source_locator": "June 2026 announcement",
+          "supports": "تسارع الإيراد وGTV قرابة 5x دون رقم إيراد.",
+          "published_on": "2026-06-01"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Careem",
+          "publisher": "Careem",
+          "source_type": "official_company_page",
+          "url": "https://www.careem.com/en-AE/about-us/",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "حجم المنصة دون إيرادات."
+        }
+      ],
+      "limitations": "لا يمكن استخدام قيمة الاستحواذ أو الاستثمار لاشتقاق MRR."
+    },
+    "$.directory_snapshot.monthly_traffic": {
+      "field_value": "غير معلن كمستخدمين نشطين شهريًا أو طلبات شهرية. تنشر Careem مؤشرات تراكمية ونطاقية: أكثر من 50 مليون عميل، وأكثر من 2.5 مليون Captain، وأكثر من مليار رحلة، والعمل في أكثر من 70 مدينة و10 دول. هذه الأرقام لا تساوي MAU ولا حجم المعاملات الشهرية.",
+      "verification_status": "verified_platform_scale_not_mau",
+      "confidence": "high",
+      "claim_type": "customer_captain_ride_and_city_scale",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تعرض Careem العملاء والكباتن والرحلات والمدن دون MAU أو طلبات شهرية.",
+      "source_count": 2,
+      "source_ids": [
+        "SRC-01",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Careem",
+          "publisher": "Careem",
+          "source_type": "official_company_page",
+          "url": "https://www.careem.com/en-AE/about-us/",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "50 مليون+ عميل و2.5 مليون+ Captain و70+ مدينة."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Become a Captain",
+          "publisher": "Careem",
+          "source_type": "official_supply_side_page",
+          "url": "https://www.careem.com/en-AE/captains/",
+          "evidence_type": "direct",
+          "source_locator": "Captain page",
+          "supports": "مليار رحلة."
+        }
+      ],
+      "limitations": "العملاء والرحلات أرقام تراكمية وقد تشمل مستخدمين غير نشطين حاليًا."
+    },
+    "$.overview.problem": {
+      "field_value": {
+        "text": "بدأت Careem لمعالجة ضعف موثوقية النقل والحجز للشركات في المنطقة، ثم واجهت تحديات تشغيلية محلية لم تكن تُحل بترجمة تطبيق عالمي فقط: انتشار الدفع النقدي، وتفاوت جودة العناوين والخرائط، والحاجة إلى نقاط التقاط ووصف محلي، وتدريب ودعم للسائقين والعملاء. لاحقًا ظهرت مشكلة ثانية: احتياجات يومية مثل التنقل والطعام والبقالة والتحويلات والخدمات المنزلية موزعة بين تطبيقات وتجارب دفع ودعم مختلفة.",
+        "impact": "غياب التوطين يرفع فشل الالتقاط والإلغاء والدعم وتحصيل النقد، ويضعف الثقة لدى العميل والكابتن. أما جمع الخدمات داخل تطبيق واحد فيقلل تبديل التطبيقات، لكنه يضيف تعقيدًا في التوصيل والمخزون والمدفوعات والامتثال وتجربة المستخدم؛ وقد تتحول كثرة الخدمات إلى فوضى إذا لم تتشارك هوية ودفعًا ودعمًا وتنقلًا واضحًا."
+      },
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "regional_mobility_localization_and_service_fragmentation_problem",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تدعم قصة Careem بداية النقل، وتثبت وثائق الدفع والمواقع والمنتجات الحاجة إلى أنماط محلية وتوحيد خدمات يومية.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-17",
+        "SRC-09",
+        "SRC-02"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Careem",
+          "publisher": "Careem",
+          "source_type": "official_company_page",
+          "url": "https://www.careem.com/en-AE/about-us/",
+          "evidence_type": "direct",
+          "source_locator": "Founding story",
+          "supports": "البدء لحل النقل غير الموثوق."
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Careem Rides Terms — Platform Separation",
+          "publisher": "Careem",
+          "source_type": "official_legal_document",
+          "url": "https://www.careem.com/en-AE/user-terms-jo-rides/",
+          "evidence_type": "direct",
+          "source_locator": "Terms",
+          "supports": "فصل الأدوار القانونية في الرحلات."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Become a Captain",
+          "publisher": "Careem",
+          "source_type": "official_supply_side_page",
+          "url": "https://www.careem.com/en-AE/captains/",
+          "evidence_type": "direct",
+          "source_locator": "Captain page",
+          "supports": "الكباتن والدعم والتدريب."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Careem Everything App",
+          "publisher": "Careem",
+          "source_type": "official_product_page",
+          "url": "https://www.careem.com/?lang=en",
+          "evidence_type": "direct",
+          "source_locator": "Everything App",
+          "supports": "الخدمات اليومية المتعددة."
+        }
+      ],
+      "limitations": "بعض وصف الخرائط والدفع والثقافة تحليل تشغيلي؛ لم تستخدم أرقامًا غير موثقة مثل نسبة من لا يملكون بطاقات."
+    },
+    "$.overview.solution": {
+      "field_value": {
+        "text": "بنت Careem سوق تنقل يدعم الحجز الفوري والمجدول والدفع النقدي والبطاقات وCareem Pay، مع فئات سيارات متعددة وHala Taxi وBike وCar Rental وSchool Rides. توسعت إلى Food وDineOut وQuik وShops وBox والخدمات المنزلية والزهور والصيدليات، وأضافت Careem Plus كمظلة مزايا، وCareem Pay للمحفظة والفواتير والتحويل المحلي والدولي، وCareem for Business للتحكم في إنفاق الشركات. في 2026 أعادت تنظيم التنقل داخل التطبيق إلى Home وActivities وCarts وProfile وأضافت جدولة الطعام والمفضلة والفلاتر وحجز رحلة لشخص آخر."
+      },
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "mobility_delivery_commerce_payments_subscription_and_business_platform",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تثبت المصادر الحالية خدمات التطبيق والدفع والاشتراك والأعمال وتحسينات 2026.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-02",
+        "SRC-10",
+        "SRC-12",
+        "SRC-15",
+        "SRC-16"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Careem Everything App",
+          "publisher": "Careem",
+          "source_type": "official_product_page",
+          "url": "https://www.careem.com/?lang=en",
+          "evidence_type": "direct",
+          "source_locator": "Homepage",
+          "supports": "Go وEat وGet وPay."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Careem Pay",
+          "publisher": "Careem",
+          "source_type": "official_fintech_product_page",
+          "url": "https://www.careem.com/en-AE/pay/",
+          "evidence_type": "direct",
+          "source_locator": "Fintech product",
+          "supports": "Pay."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "What Is Careem Plus?",
+          "publisher": "Careem Help Center",
+          "source_type": "official_subscription_pricing",
+          "url": "https://help.careem.com/hc/en-us/articles/1500005969762-What-is-Careem-Plus",
+          "evidence_type": "direct",
+          "source_locator": "Subscription",
+          "supports": "Plus."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Careem for Business",
+          "publisher": "Careem",
+          "source_type": "official_b2b_product_page",
+          "url": "https://www.careem.com/en-AE/careem-for-business/",
+          "evidence_type": "direct",
+          "source_locator": "B2B",
+          "supports": "Careem for Business."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "A Smoother Experience — 2026 Product Updates",
+          "publisher": "Careem",
+          "source_type": "official_product_update",
+          "url": "https://engineering.careem.com/tech/posts/a-smoother-experience-built-for-you-%E2%9C%A8",
+          "evidence_type": "direct",
+          "source_locator": "Product update",
+          "supports": "تحديثات 2026.",
+          "published_on": "2026-06-22"
+        }
+      ]
+    },
+    "$.market_data.target_audience": {
+      "field_value": "الأفراد والأسر والموظفون والمسافرون الذين يحتاجون إلى التنقل والطعام والبقالة والخدمات والمدفوعات، والعملاء الذين يفضلون النقد أو المحفظة الرقمية، والمغتربون في الإمارات الذين يرسلون الأموال، والشركات التي تدير رحلات وطلبات فرقها، والمطاعم والمتاجر والموردون، والكباتن ومقدمو الخدمات.",
+      "verification_status": "verified",
+      "confidence": "high",
+      "claim_type": "consumer_captain_merchant_remittance_and_business_segments",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تظهر الخدمات شرائح العملاء والكباتن والمطاعم والمتاجر والشركات ومستخدمي التحويلات.",
+      "source_count": 5,
+      "source_ids": [
+        "SRC-02",
+        "SRC-09",
+        "SRC-10",
+        "SRC-15",
+        "SRC-13"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Careem Everything App",
+          "publisher": "Careem",
+          "source_type": "official_product_page",
+          "url": "https://www.careem.com/?lang=en",
+          "evidence_type": "direct",
+          "source_locator": "Everything App",
+          "supports": "الخدمات والعملاء والشركاء."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Become a Captain",
+          "publisher": "Careem",
+          "source_type": "official_supply_side_page",
+          "url": "https://www.careem.com/en-AE/captains/",
+          "evidence_type": "direct",
+          "source_locator": "Captain page",
+          "supports": "Captains."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Careem Pay",
+          "publisher": "Careem",
+          "source_type": "official_fintech_product_page",
+          "url": "https://www.careem.com/en-AE/pay/",
+          "evidence_type": "direct",
+          "source_locator": "Pay",
+          "supports": "التحويلات والمدفوعات."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Careem for Business",
+          "publisher": "Careem",
+          "source_type": "official_b2b_product_page",
+          "url": "https://www.careem.com/en-AE/careem-for-business/",
+          "evidence_type": "direct",
+          "source_locator": "C4B",
+          "supports": "الشركات."
+        },
+        {
+          "source_id": "SRC-13",
+          "title": "Careem Food Pricing and Fees",
+          "publisher": "Careem Help Center",
+          "source_type": "official_food_fee_documentation",
+          "url": "https://help.careem.com/hc/en-us/articles/8675020815251-Pricing-and-fees",
+          "evidence_type": "direct",
+          "source_locator": "Food fees",
+          "supports": "المطاعم والتوصيل."
+        }
+      ]
+    },
+    "$.market_data.market_size": {
+      "field_value": "لا تنشر Careem رقمًا رسميًا بالدولار لسوقها الكلي؛ فهي تعمل في أسواق منفصلة تشمل التنقل وتوصيل الطعام والبقالة والتجارة المحلية والمدفوعات والتحويلات والخدمات المنزلية. مؤشرات النطاق المباشرة هي أكثر من 50 مليون عميل و2.5 مليون Captain ومليار رحلة وأكثر من 70 مدينة في 10 دول، مع أكثر من اثنتي عشرة خدمة داخل Everything App.",
+      "verification_status": "verified_platform_scale_not_mau",
+      "confidence": "high",
+      "claim_type": "multi_market_platform_scale_without_single_tam",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "لا يوجد TAM واحد، لذلك يستخدم الحقل حجم الشبكة والانتشار وتعدد الخدمات.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-01",
+        "SRC-09",
+        "SRC-02",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-01",
+          "title": "About Careem",
+          "publisher": "Careem",
+          "source_type": "official_company_page",
+          "url": "https://www.careem.com/en-AE/about-us/",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "العملاء والكباتن والمدن والدول."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Become a Captain",
+          "publisher": "Careem",
+          "source_type": "official_supply_side_page",
+          "url": "https://www.careem.com/en-AE/captains/",
+          "evidence_type": "direct",
+          "source_locator": "Captains",
+          "supports": "الرحلات."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Careem Everything App",
+          "publisher": "Careem",
+          "source_type": "official_product_page",
+          "url": "https://www.careem.com/?lang=en",
+          "evidence_type": "direct",
+          "source_locator": "Everything App",
+          "supports": "نطاق الخدمات."
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "e& Integrated Report 2023 — Careem Transaction",
+          "publisher": "e&",
+          "source_type": "official_annual_report",
+          "url": "https://eandannualreport.com/2023/year-in-review.html",
+          "evidence_type": "direct",
+          "source_locator": "e& transaction",
+          "supports": "أكثر من اثنتي عشرة خدمة في Super App.",
+          "published_on": "2024"
+        }
+      ],
+      "limitations": "المؤشرات لا تمثل قيمة السوق أو حصة Careem من كل فئة."
+    },
+    "$.market_data.growth_rate": {
+      "field_value": "لا توجد سلسلة عامة موحدة للإيرادات أو المستخدمين. في يونيو 2026 قالت e& إن GTV للخدمات الأساسية في Careem Technologies نما قرابة خمسة أضعاف خلال العامين السابقين، مدفوعًا بـFood وQuik وPlus وPay، مع تسارع الإيراد وحصة السوق في الإمارات. هذا مقياس قيمة معاملات للخدمات غير المرتبطة بالرحلات، وليس نمو إيراد Careem بالكامل. ويظل رقم 50 مليون عميل ومليار رحلة تراكميًا.",
+      "verification_status": "verified_gttv_not_revenue",
+      "confidence": "medium_high",
+      "claim_type": "company_transaction_value_growth_without_revenue_series",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تقدم e& مقياسًا مباشرًا لنمو GTV في الخدمات الأساسية، لكن لا توجد سلسلة إيراد مستقلة.",
+      "source_count": 3,
+      "source_ids": [
+        "SRC-06",
+        "SRC-01",
+        "SRC-09"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-06",
+          "title": "e& Divests 12.5% Stake in Careem Technologies to Uber",
+          "publisher": "e&",
+          "source_type": "official_stock_market_announcement",
+          "url": "https://www.eand.com/content/dam/eand/assets/docs/latest-announcements/2026/adx-announcement-divest-partial-stake-in-careem-en-01-june-26.pdf",
+          "evidence_type": "direct",
+          "source_locator": "June 2026 announcement",
+          "supports": "GTV قرابة 5x وتسارع الإيراد والحصة.",
+          "published_on": "2026-06-01"
+        },
+        {
+          "source_id": "SRC-01",
+          "title": "About Careem",
+          "publisher": "Careem",
+          "source_type": "official_company_page",
+          "url": "https://www.careem.com/en-AE/about-us/",
+          "evidence_type": "direct",
+          "source_locator": "About",
+          "supports": "النطاق الحالي."
+        },
+        {
+          "source_id": "SRC-09",
+          "title": "Become a Captain",
+          "publisher": "Careem",
+          "source_type": "official_supply_side_page",
+          "url": "https://www.careem.com/en-AE/captains/",
+          "evidence_type": "direct",
+          "source_locator": "Captain page",
+          "supports": "مليار رحلة تراكمي."
+        }
+      ],
+      "limitations": "لا يمكن تحويل نمو GTV إلى نمو الإيراد أو الربح دون take rate والتكاليف.",
+      "calculation": {
+        "core_services_gtv_growth_over_two_years": "almost 5x",
+        "core_services_named": [
+          "Food",
+          "Quik",
+          "Plus",
+          "Pay"
+        ],
+        "metric_type": "gross transaction value",
+        "revenue_growth_rate": "not_publicly_disclosed"
+      }
+    },
+    "$.financials.initial_investment": {
+      "field_value": "المساهمة الشخصية الأولى للمؤسسين غير معلنة. ساعد عرض Careem المبكر في جمع 1.7 مليون دولار، ثم جمعت الشركة 10 ملايين دولار في 2014، و350 مليون دولار في 2016 كأول شريحة من جولة أكبر، و200 مليون دولار في 2018 ضمن جولة توسع. في 2019 اتفقت Uber على شراء Careem مقابل 3.1 مليارات دولار، وأغلقت الصفقة في يناير 2020. وفي ديسمبر 2023 استثمرت e& مبلغ 400 مليون دولار في Careem Technologies غير المرتبطة بالرحلات.",
+      "verification_status": "verified_historical_financing",
+      "confidence": "medium_high",
+      "claim_type": "early_funding_growth_rounds_acquisition_and_super_app_investment",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تدعم Careem ومصادر التمويل التسلسل من 1.7 مليون إلى الجولات الكبرى ثم Uber وe&.",
+      "source_count": 6,
+      "source_ids": [
+        "SRC-22",
+        "SRC-23",
+        "SRC-24",
+        "SRC-25",
+        "SRC-03",
+        "SRC-05"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-22",
+          "title": "Careem's Pitch Deck That Returned 100X",
+          "publisher": "Careem",
+          "source_type": "official_company_history",
+          "url": "https://engineering.careem.com/posts/careems-pitch-deck-that-returned-100x-for-investors",
+          "evidence_type": "direct",
+          "source_locator": "Pitch deck history",
+          "supports": "1.7 مليون دولار.",
+          "published_on": "2019-06-26"
+        },
+        {
+          "source_id": "SRC-23",
+          "title": "Careem Raises $10 Million",
+          "publisher": "Wamda",
+          "source_type": "regional_funding_report",
+          "url": "https://www.wamda.com/en/2014/12/careem-raises-usd-10m-led-saudi-fund-al-tayyar-group",
+          "evidence_type": "direct",
+          "source_locator": "Wamda",
+          "supports": "10 ملايين دولار في 2014.",
+          "published_on": "2014-12-04"
+        },
+        {
+          "source_id": "SRC-24",
+          "title": "Careem Raises $350 Million",
+          "publisher": "Global Private Capital Association",
+          "source_type": "investor_industry_release",
+          "url": "https://www.globalprivatecapital.org/newsroom/careem-raises-us350-million-from-rakuten-saudi-telecom-abraaj-wamda-capital-and-others-mena/",
+          "evidence_type": "direct",
+          "source_locator": "GPCA",
+          "supports": "350 مليون دولار في 2016.",
+          "published_on": "2016-12-19"
+        },
+        {
+          "source_id": "SRC-25",
+          "title": "Careem Secures $200 Million",
+          "publisher": "Reuters via Arab News",
+          "source_type": "high_quality_funding_report",
+          "url": "https://www.arabnews.com/node/1389791/business-economy",
+          "evidence_type": "direct",
+          "source_locator": "Reuters report",
+          "supports": "200 مليون دولار في 2018.",
+          "published_on": "2018-10-18"
+        },
+        {
+          "source_id": "SRC-03",
+          "title": "Uber Completes Acquisition of Careem",
+          "publisher": "Uber Investor Relations",
+          "source_type": "official_acquisition_close",
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2020/Uber-Completes-Acquisition-of-Careem/default.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Acquisition close",
+          "supports": "إغلاق استحواذ Uber.",
+          "published_on": "2020-01-02"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "e& Integrated Report 2023 — Careem Transaction",
+          "publisher": "e&",
+          "source_type": "official_annual_report",
+          "url": "https://eandannualreport.com/2023/year-in-review.html",
+          "evidence_type": "direct",
+          "source_locator": "Annual report",
+          "supports": "400 مليون دولار من e&.",
+          "published_on": "2024"
+        }
+      ],
+      "limitations": "لا تمثل كل الأموال رأس مال أوليًا، ولم يُنشر رأس المال الشخصي للمؤسسين."
+    },
+    "$.financials.valuation": {
+      "field_value": "وصل تقييم Careem الخاص إلى نحو مليار دولار في جولة 2016. بلغت قيمة الاستحواذ على Careem بالكامل 3.1 مليارات دولار، مكونة من 1.4 مليار دولار نقدًا و1.7 مليار دولار في سندات قابلة للتحويل من Uber. أما استثمار 400 مليون دولار مقابل 50.03% من Careem Technologies فيعني تقييمًا ضمنيًا بعد الاستثمار يقارب 799.5 مليون دولار. واتفاق يونيو 2026 المعلق لبيع 12.5% مقابل 100 مليون دولار يعني قيمة ضمنية تقارب 800 مليون دولار. لا يوجد تقييم موحد حالي يجمع Careem Rides وCareem Technologies بعد الفصل.",
+      "verification_status": "verified_historical_calculation",
+      "confidence": "high",
+      "claim_type": "private_round_acquisition_and_split_entity_transaction_values",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "يفصل الحقل بين تقييم 2016 وقيمة الاستحواذ الكاملة والقيمة الضمنية لكيان Technologies.",
+      "source_count": 4,
+      "source_ids": [
+        "SRC-24",
+        "SRC-26",
+        "SRC-05",
+        "SRC-06"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-24",
+          "title": "Careem Raises $350 Million",
+          "publisher": "Global Private Capital Association",
+          "source_type": "investor_industry_release",
+          "url": "https://www.globalprivatecapital.org/newsroom/careem-raises-us350-million-from-rakuten-saudi-telecom-abraaj-wamda-capital-and-others-mena/",
+          "evidence_type": "direct",
+          "source_locator": "Funding release",
+          "supports": "جولة 2016 وسياق تقييم المليار.",
+          "published_on": "2016-12-19"
+        },
+        {
+          "source_id": "SRC-26",
+          "title": "Uber Announces Careem Acquisition Structure",
+          "publisher": "Uber Investor Relations",
+          "source_type": "official_acquisition_terms",
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2019/Uber-Q1-2019-Earnings/default.aspx",
+          "evidence_type": "direct",
+          "source_locator": "Uber acquisition terms",
+          "supports": "3.1 مليارات ومكونات المقابل.",
+          "published_on": "2019-05"
+        },
+        {
+          "source_id": "SRC-05",
+          "title": "e& Integrated Report 2023 — Careem Transaction",
+          "publisher": "e&",
+          "source_type": "official_annual_report",
+          "url": "https://eandannualreport.com/2023/year-in-review.html",
+          "evidence_type": "direct",
+          "source_locator": "e& report",
+          "supports": "400 مليون مقابل 50.03%.",
+          "published_on": "2024"
+        },
+        {
+          "source_id": "SRC-06",
+          "title": "e& Divests 12.5% Stake in Careem Technologies to Uber",
+          "publisher": "e&",
+          "source_type": "official_stock_market_announcement",
+          "url": "https://www.eand.com/content/dam/eand/assets/docs/latest-announcements/2026/adx-announcement-divest-partial-stake-in-careem-en-01-june-26.pdf",
+          "evidence_type": "direct",
+          "source_locator": "2026 agreement",
+          "supports": "100 مليون مقابل 12.5% مع إغلاق معلق.",
+          "published_on": "2026-06-01"
+        }
+      ],
+      "limitations": "قيمة 2026 ضمنية لصفقة لم تُغلق، والقيم الخاصة بـTechnologies لا تشمل Rides.",
+      "calculation": {
+        "2016_private_valuation_usd": 1000000000,
+        "2019_total_acquisition_value_usd": 3100000000,
+        "2019_cash_consideration_usd": 1400000000,
+        "2019_convertible_notes_usd": 1700000000,
+        "2023_investment_usd": 400000000,
+        "2023_equity_percent": 50.03,
+        "2023_implied_post_money_value_usd": 799520287.83,
+        "2026_pending_sale_usd": 100000000,
+        "2026_pending_equity_percent": 12.5,
+        "2026_pending_implied_value_usd": 800000000,
+        "current_combined_careem_valuation": "not_available_after_entity_split"
+      }
+    },
+    "$.financials.revenue_streams": {
+      "field_value": [
+        "حصة أو رسوم من أجور رحلات Careem Rides وفئات السيارات والتاكسي، مع رسوم تشغيل وPeak ومكونات سعر تختلف حسب المدينة",
+        "رسوم توصيل وخدمة وعمولات تجارية من طلبات Food والمطاعم الشريكة",
+        "هوامش بيع ورسوم توصيل وخدمة من Quik وShops والسوبرماركت والزهور والصيدليات",
+        "اشتراك Careem Plus الشهري؛ يبلغ السعر المنشور في الإمارات 19 درهمًا مع مزايا عبر الرحلات والطعام والبقالة والتحويلات والخدمات",
+        "رسوم وفروق وشراكات Careem Pay للمحفظة والفواتير والتحويل الدولي، مع اختلاف الرسوم حسب البلد والاشتراك والوجهة",
+        "رسوم Bike من فتح الدراجة والوقت وباقات اليوم والأسبوع والشهر",
+        "عمولات أو رسوم من Car Rental وDineOut وHome Services وBox والخدمات الشريكة",
+        "حلول Careem for Business للرحلات والطعام والبقالة وBox وإدارة الإنفاق؛ لا تفرض الصفحة الحالية اشتراكًا شهريًا قياسيًا",
+        "إيرادات عروض وترويج ومزايا مدفوعة للمطاعم والتجار والشركاء، دون إفصاح عن مساهمتها",
+        "شراكات B2B delivery وحلول دفع التجار والموردين ضمن المنصة"
+      ],
+      "verification_status": "verified",
+      "confidence": "medium_high",
+      "claim_type": "documented_fares_delivery_service_retail_subscription_fintech_and_b2b_channels",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "تثبت المصادر أنواع الرسوم والخدمات الحالية، مع بقاء عمولات الشركاء غير معلنة.",
+      "source_count": 7,
+      "source_ids": [
+        "SRC-13",
+        "SRC-14",
+        "SRC-12",
+        "SRC-10",
+        "SRC-15",
+        "SRC-02",
+        "SRC-17"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-13",
+          "title": "Careem Food Pricing and Fees",
+          "publisher": "Careem Help Center",
+          "source_type": "official_food_fee_documentation",
+          "url": "https://help.careem.com/hc/en-us/articles/8675020815251-Pricing-and-fees",
+          "evidence_type": "direct",
+          "source_locator": "Food fees",
+          "supports": "رسوم Food."
+        },
+        {
+          "source_id": "SRC-14",
+          "title": "Quik and Shops Fees",
+          "publisher": "Careem Help Center",
+          "source_type": "official_grocery_fee_documentation",
+          "url": "https://help.careem.com/hc/en-us/articles/18216822652819-Fees-and-Pricing",
+          "evidence_type": "direct",
+          "source_locator": "Grocery fees",
+          "supports": "Quik وShops."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "What Is Careem Plus?",
+          "publisher": "Careem Help Center",
+          "source_type": "official_subscription_pricing",
+          "url": "https://help.careem.com/hc/en-us/articles/1500005969762-What-is-Careem-Plus",
+          "evidence_type": "direct",
+          "source_locator": "Subscription",
+          "supports": "Plus وسعره."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Careem Pay",
+          "publisher": "Careem",
+          "source_type": "official_fintech_product_page",
+          "url": "https://www.careem.com/en-AE/pay/",
+          "evidence_type": "direct",
+          "source_locator": "Payments",
+          "supports": "Pay والتحويلات."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Careem for Business",
+          "publisher": "Careem",
+          "source_type": "official_b2b_product_page",
+          "url": "https://www.careem.com/en-AE/careem-for-business/",
+          "evidence_type": "direct",
+          "source_locator": "Business",
+          "supports": "C4B."
+        },
+        {
+          "source_id": "SRC-02",
+          "title": "Careem Everything App",
+          "publisher": "Careem",
+          "source_type": "official_product_page",
+          "url": "https://www.careem.com/?lang=en",
+          "evidence_type": "direct",
+          "source_locator": "Everything App",
+          "supports": "الخدمات الأخرى."
+        },
+        {
+          "source_id": "SRC-17",
+          "title": "Careem Rides Terms — Platform Separation",
+          "publisher": "Careem",
+          "source_type": "official_legal_document",
+          "url": "https://www.careem.com/en-AE/user-terms-jo-rides/",
+          "evidence_type": "direct",
+          "source_locator": "Terms",
+          "supports": "Rides والكيان."
+        }
+      ],
+      "limitations": "لم تنشر الشركة نسب عمولات الرحلات والمطاعم والتجار أو توزيع الإيراد حسب القطاع."
+    },
+    "$.tools": {
+      "field_value": [
+        "Careem Everything App على iOS وAndroid والويب مع Home وActivities وCarts وProfile",
+        "Rides وHala Taxi والحجز الفوري والمجدول وBook For A Friend وفئات سيارات متعددة",
+        "الدفع النقدي والبطاقات وApple Pay وCareem Pay credit والفواتير للشركات",
+        "Food مع الطلب المجدول والمفضلة والفلاتر والطلبات الجماعية وتتبع التوصيل",
+        "Quik Groceries وQuik Electronics وShops والسوبرماركت مع مخزون وتوصيل ورسوم خدمة",
+        "Box وHome Services وFlowers وPharmacy وخدمات يومية عبر شركاء",
+        "DineOut للعروض والدفع والخصومات في المطاعم",
+        "Careem Plus باشتراك شهري ومزايا مشتركة عبر Rides وFood وQuik وDineOut وBike وPay",
+        "Careem Pay للمحفظة وإرسال وطلب المال والفواتير والتحويل إلى أكثر من 30 دولة من الإمارات",
+        "تكامل Lulu Exchange للتحويلات الدولية المرخصة من مصرف الإمارات المركزي",
+        "Careem for Business مع ضوابط إنفاق ورؤية فورية ودفع مرن دون اشتراك شهري قياسي",
+        "Bike مع فتح بالدفع حسب الاستخدام وباقات يومية وأسبوعية وشهرية",
+        "Captain platform للتسجيل والتدريب والمكافآت والدعم والأرباح اليومية أو الأسبوعية",
+        "واجهة Careem Rides مستضافة على Careem Technologies مع فصل قانوني بين مقدم الرحلات ومقدم المنصة",
+        "بنية سحابية على AWS تخدم الرحلات والتوصيل والمدفوعات",
+        "Amazon RDS for MySQL وAWS DMS Serverless وEC2 وCloudWatch في مشاريع البيانات المعلنة",
+        "Go لوظائف حذف البيانات المتوازية في مشروع تحسين قاعدة البيانات المنشور",
+        "Server-driven UI لتحديث تجارب التطبيق بصورة موحدة وقابلة للتوسع",
+        "Facial recognition وLiveness لكشف حسابات Captains المكررة وفق مشروع مكافحة الاحتيال",
+        "Kafka وتحسين ضغط الرسائل ضمن بنية تدفق البيانات المعلنة في مدونة الهندسة",
+        "خمسة مواقع تقنية في أوروبا ومنطقة MENAP وفق صفحة الشركة"
+      ],
+      "verification_status": "verified_product_capability",
+      "confidence": "high",
+      "claim_type": "official_everything_app_fintech_business_supply_and_engineering_capabilities",
+      "verified_on": "2026-08-02",
+      "evidence_summary": "استُبدلت القائمة العامة بتقنيات وقدرات موثقة في المنتج ومدونة الهندسة.",
+      "source_count": 9,
+      "source_ids": [
+        "SRC-02",
+        "SRC-10",
+        "SRC-12",
+        "SRC-15",
+        "SRC-16",
+        "SRC-18",
+        "SRC-19",
+        "SRC-20",
+        "SRC-21"
+      ],
+      "source_references": [
+        {
+          "source_id": "SRC-02",
+          "title": "Careem Everything App",
+          "publisher": "Careem",
+          "source_type": "official_product_page",
+          "url": "https://www.careem.com/?lang=en",
+          "evidence_type": "direct",
+          "source_locator": "Homepage",
+          "supports": "خدمات التطبيق."
+        },
+        {
+          "source_id": "SRC-10",
+          "title": "Careem Pay",
+          "publisher": "Careem",
+          "source_type": "official_fintech_product_page",
+          "url": "https://www.careem.com/en-AE/pay/",
+          "evidence_type": "direct",
+          "source_locator": "Fintech",
+          "supports": "Pay."
+        },
+        {
+          "source_id": "SRC-12",
+          "title": "What Is Careem Plus?",
+          "publisher": "Careem Help Center",
+          "source_type": "official_subscription_pricing",
+          "url": "https://help.careem.com/hc/en-us/articles/1500005969762-What-is-Careem-Plus",
+          "evidence_type": "direct",
+          "source_locator": "Subscription",
+          "supports": "Plus."
+        },
+        {
+          "source_id": "SRC-15",
+          "title": "Careem for Business",
+          "publisher": "Careem",
+          "source_type": "official_b2b_product_page",
+          "url": "https://www.careem.com/en-AE/careem-for-business/",
+          "evidence_type": "direct",
+          "source_locator": "C4B",
+          "supports": "Business."
+        },
+        {
+          "source_id": "SRC-16",
+          "title": "A Smoother Experience — 2026 Product Updates",
+          "publisher": "Careem",
+          "source_type": "official_product_update",
+          "url": "https://engineering.careem.com/tech/posts/a-smoother-experience-built-for-you-%E2%9C%A8",
+          "evidence_type": "direct",
+          "source_locator": "2026 update",
+          "supports": "واجهة وتحديثات المنتج.",
+          "published_on": "2026-06-22"
+        },
+        {
+          "source_id": "SRC-18",
+          "title": "Careem Engineering",
+          "publisher": "Careem",
+          "source_type": "official_engineering_index",
+          "url": "https://blog.careem.com/tech/blogs",
+          "evidence_type": "direct",
+          "source_locator": "Engineering index",
+          "supports": "Kafka وRDS وUI والتعرف على الوجه."
+        },
+        {
+          "source_id": "SRC-19",
+          "title": "Scaling Amazon RDS for MySQL on AWS",
+          "publisher": "Careem Engineering / AWS",
+          "source_type": "official_engineering_case_study",
+          "url": "https://engineering.careem.com/tech/posts/scaling-amazon-rds-for-mysql-performance-on-aws",
+          "evidence_type": "direct",
+          "source_locator": "Database case study",
+          "supports": "AWS وRDS وDMS وGo.",
+          "published_on": "2025-05-16"
+        },
+        {
+          "source_id": "SRC-20",
+          "title": "Server-Driven UI at Careem",
+          "publisher": "Careem Engineering",
+          "source_type": "official_engineering_article",
+          "url": "https://engineering.careem.com/tech/posts/app-engine-server-driven-ui",
+          "evidence_type": "direct",
+          "source_locator": "Engineering article",
+          "supports": "Server-driven UI.",
+          "published_on": "2025-03-22"
+        },
+        {
+          "source_id": "SRC-21",
+          "title": "Facial Recognition for Duplicate Captain Accounts",
+          "publisher": "Careem Engineering",
+          "source_type": "official_fraud_engineering_article",
+          "url": "https://engineering.careem.com/tech/posts/using-facial-recognition-technology-fraud-detection",
+          "evidence_type": "direct",
+          "source_locator": "Fraud article",
+          "supports": "Facial recognition.",
+          "published_on": "2024-07-16"
+        }
+      ],
+      "limitations": "القائمة لا تمثل كشفًا كاملًا عن جميع لغات البرمجة أو الخدمات الداخلية، وقد تخص بعض البنية Careem Technologies أو المنصة المشتركة."
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC-01",
+      "title": "About Careem",
+      "publisher": "Careem",
+      "source_type": "official_company_page",
+      "url": "https://www.careem.com/en-AE/about-us/",
+      "supports": [
+        "التأسيس في دبي عام 2012",
+        "50 مليون+ عميل و2.5 مليون+ Captain",
+        "70+ مدينة و10 دول",
+        "استحواذ Uber واستثمار e&",
+        "المؤسسون والقيادة"
+      ]
+    },
+    {
+      "id": "SRC-02",
+      "title": "Careem Everything App",
+      "publisher": "Careem",
+      "source_type": "official_product_page",
+      "url": "https://www.careem.com/?lang=en",
+      "supports": [
+        "خدمات Go وEat وGet وPay",
+        "Rides وFood وQuik وBox وHome Services وPay",
+        "الشركاء والأعمال"
+      ]
+    },
+    {
+      "id": "SRC-03",
+      "title": "Uber Completes Acquisition of Careem",
+      "publisher": "Uber Investor Relations",
+      "source_type": "official_acquisition_close",
+      "published_on": "2020-01-02",
+      "url": "https://investor.uber.com/news-events/news/press-release-details/2020/Uber-Completes-Acquisition-of-Careem/default.aspx",
+      "supports": [
+        "إغلاق الاستحواذ بقيمة 3.1 مليارات دولار",
+        "Careem شركة تابعة مملوكة لـUber",
+        "استمرار العلامة والقيادة"
+      ]
+    },
+    {
+      "id": "SRC-04",
+      "title": "Uber Fiscal 2025 Form 10-K — Careem Technologies",
+      "publisher": "U.S. Securities and Exchange Commission / Uber",
+      "source_type": "sec_annual_filing",
+      "published_on": "2026-02",
+      "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/uber-20251231.htm",
+      "supports": [
+        "Uber تملك Careem Rides بالكامل",
+        "e& حصلت على الأغلبية في Careem Technologies",
+        "Uber احتفظت بحصة أقلية تقارب 42%",
+        "القيمة الدفترية للاستثمار"
+      ]
+    },
+    {
+      "id": "SRC-05",
+      "title": "e& Integrated Report 2023 — Careem Transaction",
+      "publisher": "e&",
+      "source_type": "official_annual_report",
+      "published_on": "2024",
+      "url": "https://eandannualreport.com/2023/year-in-review.html",
+      "supports": [
+        "إغلاق شراء 50.03% من Careem Technologies",
+        "استثمار 400 مليون دولار"
+      ]
+    },
+    {
+      "id": "SRC-06",
+      "title": "e& Divests 12.5% Stake in Careem Technologies to Uber",
+      "publisher": "e&",
+      "source_type": "official_stock_market_announcement",
+      "published_on": "2026-06-01",
+      "url": "https://www.eand.com/content/dam/eand/assets/docs/latest-announcements/2026/adx-announcement-divest-partial-stake-in-careem-en-01-june-26.pdf",
+      "supports": [
+        "اتفاق بيع 12.5% مقابل 100 مليون دولار",
+        "الحصة المتبقية 37.53% بعد الإغلاق",
+        "خضوع الإغلاق للموافقات",
+        "نمو GTV قرابة خمسة أضعاف",
+        "تسارع Food وQuik وPlus وPay"
+      ]
+    },
+    {
+      "id": "SRC-07",
+      "title": "Careem Chapter 3",
+      "publisher": "Careem",
+      "source_type": "official_founder_announcement",
+      "published_on": "2023-04-10",
+      "url": "https://blog.careem.com/posts/careem-chapter-3",
+      "supports": [
+        "استثمار e& بقيمة 400 مليون دولار",
+        "فصل Super App وإعادة إطلاق الرحلة الريادية",
+        "Uber وe& كشريكين"
+      ]
+    },
+    {
+      "id": "SRC-08",
+      "title": "Careem Rides Locations",
+      "publisher": "Careem Help Center",
+      "source_type": "official_location_documentation",
+      "url": "https://help.careem.com/hc/en-us/articles/1500010067882-Locations-and-availability",
+      "supports": [
+        "الدول الحالية لخدمات Rides"
+      ]
+    },
+    {
+      "id": "SRC-09",
+      "title": "Become a Captain",
+      "publisher": "Careem",
+      "source_type": "official_supply_side_page",
+      "url": "https://www.careem.com/en-AE/captains/",
+      "supports": [
+        "مليار رحلة و2.5 مليون Captain و70+ مدينة",
+        "التدريب والمكافآت والمرونة والدفع"
+      ]
+    },
+    {
+      "id": "SRC-10",
+      "title": "Careem Pay",
+      "publisher": "Careem",
+      "source_type": "official_fintech_product_page",
+      "url": "https://www.careem.com/en-AE/pay/",
+      "supports": [
+        "المحفظة والتحويل المحلي والدولي والفواتير",
+        "30+ دولة",
+        "شراكة Lulu Exchange",
+        "اعتماد مصرف الإمارات المركزي"
+      ]
+    },
+    {
+      "id": "SRC-11",
+      "title": "Careem Pay Transfer Countries",
+      "publisher": "Careem Help Center",
+      "source_type": "official_remittance_documentation",
+      "url": "https://help.careem.com/hc/en-us/articles/12202826389651-Which-countries-can-I-send-money-to",
+      "supports": [
+        "قائمة دول التحويل الدولي",
+        "قنوات التحويل المتاحة"
+      ]
+    },
+    {
+      "id": "SRC-12",
+      "title": "What Is Careem Plus?",
+      "publisher": "Careem Help Center",
+      "source_type": "official_subscription_pricing",
+      "url": "https://help.careem.com/hc/en-us/articles/1500005969762-What-is-Careem-Plus",
+      "supports": [
+        "اشتراك 19 درهمًا في الإمارات",
+        "مزايا الرحلات والطعام والبقالة والتحويلات والخدمات"
+      ]
+    },
+    {
+      "id": "SRC-13",
+      "title": "Careem Food Pricing and Fees",
+      "publisher": "Careem Help Center",
+      "source_type": "official_food_fee_documentation",
+      "url": "https://help.careem.com/hc/en-us/articles/8675020815251-Pricing-and-fees",
+      "supports": [
+        "رسوم التوصيل والخدمة",
+        "اختلاف الرسوم بين الإمارات والأردن",
+        "ربط Careem Plus بالتوصيل المجاني"
+      ]
+    },
+    {
+      "id": "SRC-14",
+      "title": "Quik and Shops Fees",
+      "publisher": "Careem Help Center",
+      "source_type": "official_grocery_fee_documentation",
+      "url": "https://help.careem.com/hc/en-us/articles/18216822652819-Fees-and-Pricing",
+      "supports": [
+        "الحد الأدنى للطلب",
+        "رسوم التوصيل",
+        "رسوم الخدمة في دبي وأبوظبي"
+      ]
+    },
+    {
+      "id": "SRC-15",
+      "title": "Careem for Business",
+      "publisher": "Careem",
+      "source_type": "official_b2b_product_page",
+      "url": "https://www.careem.com/en-AE/careem-for-business/",
+      "supports": [
+        "الرحلات والطعام والبقالة وBox للشركات",
+        "ضوابط الإنفاق والرؤية",
+        "عدم وجود اشتراك شهري قياسي",
+        "شروط دفع مرنة"
+      ]
+    },
+    {
+      "id": "SRC-16",
+      "title": "A Smoother Experience — 2026 Product Updates",
+      "publisher": "Careem",
+      "source_type": "official_product_update",
+      "published_on": "2026-06-22",
+      "url": "https://engineering.careem.com/tech/posts/a-smoother-experience-built-for-you-%E2%9C%A8",
+      "supports": [
+        "Home وActivities وCarts وProfile",
+        "جدولة الطعام والمفضلة والفلاتر",
+        "Book For A Friend",
+        "مزايا تحويلات Plus"
+      ]
+    },
+    {
+      "id": "SRC-17",
+      "title": "Careem Rides Terms — Platform Separation",
+      "publisher": "Careem",
+      "source_type": "official_legal_document",
+      "url": "https://www.careem.com/en-AE/user-terms-jo-rides/",
+      "supports": [
+        "Careem Rides تابعة لـUber",
+        "Careem Technologies تستضيف منصة Rides",
+        "Careem Technologies ليست جزءًا من Uber Group"
+      ]
+    },
+    {
+      "id": "SRC-18",
+      "title": "Careem Engineering",
+      "publisher": "Careem",
+      "source_type": "official_engineering_index",
+      "url": "https://blog.careem.com/tech/blogs",
+      "supports": [
+        "Kafka compression",
+        "AWS وRDS for MySQL",
+        "Server-driven UI",
+        "Facial recognition",
+        "المنتجات التقنية للرحلات والتوصيل والمدفوعات"
+      ]
+    },
+    {
+      "id": "SRC-19",
+      "title": "Scaling Amazon RDS for MySQL on AWS",
+      "publisher": "Careem Engineering / AWS",
+      "source_type": "official_engineering_case_study",
+      "published_on": "2025-05-16",
+      "url": "https://engineering.careem.com/tech/posts/scaling-amazon-rds-for-mysql-performance-on-aws",
+      "supports": [
+        "AWS cloud infrastructure",
+        "RDS for MySQL وDMS Serverless وEC2 وCloudWatch",
+        "Go jobs",
+        "خدمة 50 مليون مستخدم",
+        "خفض قاعدة البيانات من 270 إلى 78 تيرابايت"
+      ]
+    },
+    {
+      "id": "SRC-20",
+      "title": "Server-Driven UI at Careem",
+      "publisher": "Careem Engineering",
+      "source_type": "official_engineering_article",
+      "published_on": "2025-03-22",
+      "url": "https://engineering.careem.com/tech/posts/app-engine-server-driven-ui",
+      "supports": [
+        "Server-driven UI",
+        "توحيد وتحديث تجارب تطبيق متعدد الخدمات"
+      ]
+    },
+    {
+      "id": "SRC-21",
+      "title": "Facial Recognition for Duplicate Captain Accounts",
+      "publisher": "Careem Engineering",
+      "source_type": "official_fraud_engineering_article",
+      "published_on": "2024-07-16",
+      "url": "https://engineering.careem.com/tech/posts/using-facial-recognition-technology-fraud-detection",
+      "supports": [
+        "التعرف على الوجه",
+        "Liveness",
+        "كشف حسابات Captains المكررة ومكافحة الاحتيال"
+      ]
+    },
+    {
+      "id": "SRC-22",
+      "title": "Careem's Pitch Deck That Returned 100X",
+      "publisher": "Careem",
+      "source_type": "official_company_history",
+      "published_on": "2019-06-26",
+      "url": "https://engineering.careem.com/posts/careems-pitch-deck-that-returned-100x-for-investors",
+      "supports": [
+        "جمع 1.7 مليون دولار مبكرًا",
+        "العملاء من الشركات والأفراد",
+        "نمو 60% شهريًا في المرحلة المبكرة"
+      ]
+    },
+    {
+      "id": "SRC-23",
+      "title": "Careem Raises $10 Million",
+      "publisher": "Wamda",
+      "source_type": "regional_funding_report",
+      "published_on": "2014-12-04",
+      "url": "https://www.wamda.com/en/2014/12/careem-raises-usd-10m-led-saudi-fund-al-tayyar-group",
+      "supports": [
+        "جولة 10 ملايين دولار",
+        "جولة 1.7 مليون دولار في 2013",
+        "STC Ventures وAl Tayyar"
+      ]
+    },
+    {
+      "id": "SRC-24",
+      "title": "Careem Raises $350 Million",
+      "publisher": "Global Private Capital Association",
+      "source_type": "investor_industry_release",
+      "published_on": "2016-12-19",
+      "url": "https://www.globalprivatecapital.org/newsroom/careem-raises-us350-million-from-rakuten-saudi-telecom-abraaj-wamda-capital-and-others-mena/",
+      "supports": [
+        "350 مليون دولار",
+        "قيادة Rakuten وSTC",
+        "أول شريحة من جولة 500 مليون دولار",
+        "التوسع والابتكار"
+      ]
+    },
+    {
+      "id": "SRC-25",
+      "title": "Careem Secures $200 Million",
+      "publisher": "Reuters via Arab News",
+      "source_type": "high_quality_funding_report",
+      "published_on": "2018-10-18",
+      "url": "https://www.arabnews.com/node/1389791/business-economy",
+      "supports": [
+        "جولة 200 مليون دولار",
+        "المستثمرون",
+        "30 مليون مستخدم و120 مدينة تاريخيًا",
+        "التوسع في Food"
+      ]
+    },
+    {
+      "id": "SRC-26",
+      "title": "Uber Announces Careem Acquisition Structure",
+      "publisher": "Uber Investor Relations",
+      "source_type": "official_acquisition_terms",
+      "published_on": "2019-05",
+      "url": "https://investor.uber.com/news-events/news/press-release-details/2019/Uber-Q1-2019-Earnings/default.aspx",
+      "supports": [
+        "قيمة 3.1 مليارات دولار",
+        "1.4 مليار نقدًا",
+        "1.7 مليار سندات قابلة للتحويل"
+      ]
+    }
   ]
 }
