@@ -180,11 +180,22 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   useEffect(() => {
     let mounted = true;
 
-    supabase.auth.getSession().then(async ({ data: { session } }) => {
-      if (!mounted) return;
-      await applySession(session);
-      if (mounted) setLoading(false);
-    });
+    supabase.auth
+      .getSession()
+      .then(async ({ data: { session } }) => {
+        if (!mounted) return;
+        await applySession(session);
+      })
+      .catch((error) => {
+        console.warn('Initial auth session lookup failed.', describeProfileError(error));
+        if (!mounted) return;
+        setSession(null);
+        setUser(null);
+        setProfile(null);
+      })
+      .finally(() => {
+        if (mounted) setLoading(false);
+      });
 
     const {
       data: { subscription },

@@ -19,11 +19,16 @@ export default function LoginPage() {
     const searchParams = new URLSearchParams(window.location.search);
     const redirectPath = getSafeRedirectPath(searchParams.get('next') || searchParams.get('redirect'));
 
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (mounted && session) {
-        router.replace(redirectPath);
-      }
-    });
+    supabase.auth
+      .getSession()
+      .then(({ data: { session } }) => {
+        if (mounted && session) {
+          router.replace(redirectPath);
+        }
+      })
+      .catch((error) => {
+        console.warn('Login session lookup failed.', error);
+      });
 
     return () => {
       mounted = false;

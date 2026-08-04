@@ -3,6 +3,7 @@ import {
   Activity,
   Bookmark,
   BookOpen,
+  Calculator,
   Calendar,
   ChevronDown,
   ChevronLeft,
@@ -172,6 +173,7 @@ const KNOWLEDGE_CENTER: NavItemConfig[] = [
 ];
 
 const PROJECT_ATTACHMENTS: NavItemConfig[] = [
+  { tab: 'financial-calculator', label: 'حاسبة الأرباح والمؤشرات', icon: Calculator, badge: 'جديد', id: 'tour-calculator' },
   { tab: 'first-90-days', label: 'أول 90 يوم للمشروع', icon: Calendar, badge: 'جديد', id: 'tour-first-90-days' },
   { tab: 'unicorn-benchmark', label: 'رادار اليونيكورن', icon: Globe, id: 'tour-unicorn' },
   { tab: 'brand-identity', label: 'الهوية البصرية', icon: Palette, id: 'tour-brand' },

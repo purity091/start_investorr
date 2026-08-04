@@ -3,6 +3,7 @@ import {
   Activity,
   AreaChart,
   Briefcase,
+  Calculator,
   ChevronDown,
   Compass,
   CreditCard,
@@ -63,6 +64,7 @@ const discoveryItems: NavItem[] = [
 ];
 
 const addOnItems: NavItem[] = [
+  { icon: Calculator, label: 'حاسبة الأرباح والمؤشرات', tab: 'financial-calculator', badge: 'جديد' },
   { icon: Globe, label: 'رادار اليونيكورن', tab: 'unicorn-benchmark' },
   { icon: Palette, label: 'الهوية البصرية', tab: 'brand-identity' },
 ];

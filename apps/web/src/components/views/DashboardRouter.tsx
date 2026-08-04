@@ -24,34 +24,54 @@ import { FeatureErrorBoundary } from '@/components/common/FeatureErrorBoundary';
 
 import { User, PlanSection } from '../../types';
 
-const lazyPage = <T extends React.ComponentType<any>>(
-  loader: () => Promise<{ default: T }>
+type LazyPageProps = Record<string, unknown>;
+
+const lazyPage = <TProps extends LazyPageProps = LazyPageProps>(
+  loader: () => Promise<{ default: React.ComponentType<TProps> }>
 ) => React.lazy(() => loadWithChunkRecovery(loader));
 
-const lazyNamedPage = <T extends React.ComponentType<any>>(
+const lazyNamedPage = <TProps extends LazyPageProps = LazyPageProps>(
   loader: () => Promise<Record<string, unknown>>,
   exportName: string
 ) =>
   React.lazy(async () => {
-    const module = await loadWithChunkRecovery(loader);
-    return { default: module[exportName] as T };
+    const loadedPage = await loadWithChunkRecovery(loader);
+    const Component = loadedPage[exportName];
+
+    if (!Component) {
+      throw new Error(`Lazy page export "${exportName}" was not found.`);
+    }
+
+    return { default: Component as React.ComponentType<TProps> };
   });
 
 const CHUNK_RELOAD_KEY = 'khotta_chunk_reload_attempted';
 
+const toRuntimeError = (error: unknown, fallbackMessage: string) => {
+  if (error instanceof Error) return error;
+  if (typeof error === 'string' && error.trim()) return new Error(error);
+
+  try {
+    return new Error(JSON.stringify(error) || fallbackMessage);
+  } catch {
+    return new Error(fallbackMessage);
+  }
+};
+
 async function loadWithChunkRecovery<T>(loader: () => Promise<T>): Promise<T> {
   try {
-    const module = await loader();
+    const loadedPage = await loader();
 
     if (typeof window !== 'undefined') {
       sessionStorage.removeItem(CHUNK_RELOAD_KEY);
     }
 
-    return module;
+    return loadedPage;
   } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
+    const runtimeError = toRuntimeError(error, 'Failed to load application section.');
+    const message = runtimeError.message;
     const isChunkLoadError =
-      error instanceof Error && error.name === 'ChunkLoadError'
+      runtimeError.name === 'ChunkLoadError'
       || /failed to load chunk|loading chunk|chunkloaderror/i.test(message);
 
     if (
@@ -63,7 +83,7 @@ async function loadWithChunkRecovery<T>(loader: () => Promise<T>): Promise<T> {
       window.location.reload();
     }
 
-    throw error;
+    throw runtimeError;
   }
 }
 
@@ -82,6 +102,7 @@ const ProblemDeepDive = lazyNamedPage(() => import('../features/discovery/Proble
 const SavedMarketItems = lazyNamedPage(() => import('../features/discovery/SavedMarketItems'), 'SavedMarketItems');
 const First90DaysView = lazyNamedPage(() => import('./First90DaysView'), 'First90DaysView');
 const PlatformAcademyView = lazyNamedPage(() => import('./PlatformAcademyView'), 'PlatformAcademyView');
+const RevenueCalculatorView = lazyNamedPage(() => import('./RevenueCalculatorView'), 'RevenueCalculatorView');
 
 const AdvertisingDashboard = lazyPage(() => import('../sectors/AdvertisingMarketing/AdvertisingDashboard'));
 const MarketingDashboard = lazyPage(() => import('../sectors/AdvertisingMarketing/MarketingDashboard'));
@@ -305,7 +326,7 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
     }
   }, [activeTab]);
 
-  const containerClass = ['home', 'editor', 'strategic-dashboard', 'contact-us', 'market-discovery', 'problem-engine', 'problem-detail', 'saved-market-items', 'hackathon', 'workspace', 'first-90-days', 'platform-academy', 'company-deep-dive', 'site-map', 'discovery-center', 'subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-subscription', 'customer-usage', 'customer-activity', 'customer-account', 'customer-support', 'proven-projects', 'failed-projects', 'saas-ideas', 'micro-saas-ideas', 'project-ideas'].includes(activeTab) || activeTab.endsWith('-dashboard') 
+  const containerClass = ['home', 'editor', 'strategic-dashboard', 'contact-us', 'market-discovery', 'problem-engine', 'problem-detail', 'saved-market-items', 'hackathon', 'workspace', 'first-90-days', 'platform-academy', 'financial-calculator', 'company-deep-dive', 'site-map', 'discovery-center', 'subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-subscription', 'customer-usage', 'customer-activity', 'customer-account', 'customer-support', 'proven-projects', 'failed-projects', 'saas-ideas', 'micro-saas-ideas', 'project-ideas'].includes(activeTab) || activeTab.endsWith('-dashboard') 
     ? 'w-full' 
     : 'app-page-shell-wide py-6 sm:py-8 lg:py-10 pb-20 lg:pb-10';
 
@@ -325,6 +346,8 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
 
   const renderContent = () => {
     switch (activeTab) {
+      case 'financial-calculator':
+        return <RevenueCalculatorView setActiveTab={setActiveTab} />;
       case 'platform-academy':
         return <PlatformAcademyView setActiveTab={setActiveTab} />;
       case 'first-90-days':

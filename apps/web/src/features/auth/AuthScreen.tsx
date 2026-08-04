@@ -1,11 +1,55 @@
-import React, { useState } from 'react';
-import { supabase } from '@/lib/supabase';
+import React, { useEffect, useId, useRef, useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Badge } from '@/components/ui/Badge';
 import { Loader2, Mail, Lock, AlertCircle, ArrowLeft, User as UserIcon, Sparkles, Eye, EyeOff, CheckSquare, Square } from 'lucide-react';
 
 type AuthMode = 'login' | 'register' | 'forgot_password';
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (
+        container: string | HTMLElement,
+        options: {
+          sitekey: string;
+          callback?: (token: string) => void;
+          'expired-callback'?: () => void;
+          'error-callback'?: (errorCode?: string) => boolean;
+          theme?: 'light' | 'dark' | 'auto';
+          language?: string;
+          size?: 'normal' | 'compact' | 'flexible';
+        }
+      ) => string;
+      reset: (widgetId?: string) => void;
+      remove: (widgetId: string) => void;
+    };
+  }
+}
+
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+const TURNSTILE_SCRIPT_ID = 'cloudflare-turnstile-script';
+
+const getErrorMessage = (error: unknown) => {
+  if (error instanceof Error) return error.message;
+  if (typeof error === 'string') return error;
+  return '';
+};
+
+const postAuthAction = async (url: string, body: Record<string, unknown>) => {
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+
+  const payload = (await response.json().catch(() => null)) as { error?: unknown } | null;
+  if (!response.ok) {
+    throw new Error(typeof payload?.error === 'string' ? payload.error : 'AUTH_REQUEST_FAILED');
+  }
+
+  return payload;
+};
 
 const getSafeRedirectPath = () => {
   if (typeof window === 'undefined') return '/workspace';
@@ -21,6 +65,132 @@ const getSafeRedirectPath = () => {
   return target;
 };
 
+const loadTurnstileScript = () => {
+  if (typeof window === 'undefined') return Promise.reject(new Error('Turnstile requires a browser.'));
+  if (window.turnstile) return Promise.resolve();
+
+  return new Promise<void>((resolve, reject) => {
+    const existingScript = document.getElementById(TURNSTILE_SCRIPT_ID) as HTMLScriptElement | null;
+    if (existingScript) {
+      existingScript.addEventListener('load', () => resolve(), { once: true });
+      existingScript.addEventListener('error', () => reject(new Error('Failed to load Turnstile.')), { once: true });
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.id = TURNSTILE_SCRIPT_ID;
+    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+    script.async = true;
+    script.defer = true;
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error('Failed to load Turnstile.'));
+    document.head.appendChild(script);
+  });
+};
+
+const TurnstileField: React.FC<{
+  actionKey: string;
+  onTokenChange: (token: string | null) => void;
+  onError: (message: string | null) => void;
+}> = ({ actionKey, onTokenChange, onError }) => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const widgetIdRef = useRef<string | null>(null);
+  const [status, setStatus] = useState<'loading' | 'ready' | 'verified' | 'error'>('loading');
+  const [statusMessage, setStatusMessage] = useState<string | null>(null);
+  const generatedId = useId().replace(/:/g, '');
+  const containerId = `turnstile-${generatedId}`;
+
+  useEffect(() => {
+    if (!TURNSTILE_SITE_KEY) return;
+
+    let cancelled = false;
+    onTokenChange(null);
+    onError(null);
+
+    loadTurnstileScript()
+      .then(() => {
+        if (cancelled || !containerRef.current || !window.turnstile) return;
+
+        if (widgetIdRef.current) {
+          window.turnstile.remove(widgetIdRef.current);
+          widgetIdRef.current = null;
+        }
+
+        widgetIdRef.current = window.turnstile.render(containerRef.current, {
+          sitekey: TURNSTILE_SITE_KEY,
+          theme: 'light',
+          language: 'ar',
+          size: 'normal',
+          callback: (token) => {
+            setStatus('verified');
+            onError(null);
+            onTokenChange(token);
+          },
+          'expired-callback': () => {
+            setStatus('ready');
+            onTokenChange(null);
+            onError('انتهت صلاحية التحقق الأمني. أعد التحقق ثم حاول مرة أخرى.');
+          },
+          'error-callback': (errorCode) => {
+            const message =
+              errorCode === '110200'
+                ? 'نطاق الموقع الحالي غير مسموح في Cloudflare Turnstile. أضف هذا النطاق في Hostname Management ثم أعد تحميل الصفحة.'
+                : errorCode
+                  ? `تعذر تحميل التحقق الأمني. كود Cloudflare: ${errorCode}`
+                  : 'تعذر تحميل التحقق الأمني. حدّث الصفحة أو حاول لاحقاً.';
+            setStatus('error');
+            setStatusMessage(message);
+            onTokenChange(null);
+            onError(message);
+            return true;
+          },
+        });
+        setStatus('ready');
+      })
+      .catch(() => {
+        if (!cancelled) {
+          const message = 'تعذر تحميل التحقق الأمني. تأكد من الاتصال ثم حاول مرة أخرى.';
+          setStatus('error');
+          setStatusMessage(message);
+          onTokenChange(null);
+          onError(message);
+        }
+      });
+
+    return () => {
+      cancelled = true;
+      if (widgetIdRef.current && window.turnstile) {
+        window.turnstile.remove(widgetIdRef.current);
+        widgetIdRef.current = null;
+      }
+    };
+  }, [actionKey, onError, onTokenChange]);
+
+  if (!TURNSTILE_SITE_KEY) return null;
+
+  return (
+    <div className="space-y-2 text-right">
+      <label className="text-sm font-bold text-slate-700">التحقق الأمني</label>
+      <div className="flex min-h-[76px] items-center justify-center rounded-xl border border-slate-200 bg-white p-2">
+        <div className="flex flex-col items-center gap-2">
+          {status === 'loading' && (
+            <div className="flex items-center gap-2 text-xs font-semibold text-slate-500">
+              <Loader2 className="size-4 animate-spin" />
+              جاري تحميل التحقق الأمني...
+            </div>
+          )}
+          {status === 'error' && (
+            <p className="max-w-xs text-center text-xs font-semibold leading-6 text-red-600">
+              {statusMessage || 'تعذر عرض التحقق الأمني. حدّث الصفحة أو تأكد أن Cloudflare Turnstile يسمح بهذا النطاق.'}
+            </p>
+          )}
+          <div id={containerId} ref={containerRef} className={status === 'error' ? 'hidden' : ''} />
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export const AuthScreen: React.FC = () => {
   const [mode, setMode] = useState<AuthMode>('login');
   const [name, setName] = useState('');
@@ -31,6 +201,8 @@ export const AuthScreen: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [turnstileError, setTurnstileError] = useState<string | null>(null);
 
   const resetState = () => {
     setError(null);
@@ -41,6 +213,8 @@ export const AuthScreen: React.FC = () => {
 
   const switchMode = (newMode: AuthMode) => {
     setMode(newMode);
+    setCaptchaToken(null);
+    setTurnstileError(null);
     resetState();
   };
 
@@ -51,6 +225,12 @@ export const AuthScreen: React.FC = () => {
 
     if (mode !== 'forgot_password' && password.length < 6) {
       setError('كلمة المرور بسيطة جداً، يجب أن تتكون من 6 أرقام أو أحرف على الأقل.');
+      setIsLoading(false);
+      return;
+    }
+
+    if (TURNSTILE_SITE_KEY && !captchaToken) {
+      setError(turnstileError || 'أكمل التحقق الأمني قبل المتابعة.');
       setIsLoading(false);
       return;
     }
@@ -67,8 +247,11 @@ export const AuthScreen: React.FC = () => {
       }
 
       if (mode === 'login') {
-        const { error } = await supabase.auth.signInWithPassword({ email, password });
-        if (error) throw error;
+        await postAuthAction('/api/auth/login', {
+          email,
+          password,
+          turnstileToken: captchaToken,
+        });
 
         if (rememberMe) {
           localStorage.setItem('khotta_remember_me', 'true');
@@ -78,44 +261,47 @@ export const AuthScreen: React.FC = () => {
 
         window.location.href = getSafeRedirectPath();
       } else if (mode === 'register') {
-        const { error } = await supabase.auth.signUp({
+        await postAuthAction('/api/auth/register', {
+          name,
           email,
           password,
-          options: {
-            data: { full_name: name },
-            emailRedirectTo: window.location.origin,
-          }
+          turnstileToken: captchaToken,
         });
-        if (error) throw error;
         setMessage('تم إنشاء الحساب بنجاح! إذا كانت المصادقة تتطلب تفعيلاً، مراجعة البريد الإلكتروني.');
       } else if (mode === 'forgot_password') {
-        const { error } = await supabase.auth.resetPasswordForEmail(email, {
-          redirectTo: `${window.location.origin}/reset-password`,
+        await postAuthAction('/api/auth/forgot-password', {
+          email,
+          turnstileToken: captchaToken,
         });
-        if (error) throw error;
         setMessage('تم إرسال تعليمات استعادة كلمة المرور إلى بريدك الإلكتروني.');
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error(err);
-      if (err.message === 'RATE_LIMITED') {
+      const errorMessage = getErrorMessage(err);
+
+      if (errorMessage === 'RATE_LIMITED') {
         setError('تم تجاوز عدد المحاولات المسموح. حاول لاحقاً.');
-      } else if (err.message === 'Invalid login credentials') {
+      } else if (errorMessage === 'Invalid login credentials') {
         setError('بيانات الدخول غير صحيحة، تأكد من البريد وكلمة المرور.');
-      } else if (err.message.includes('User already registered')) {
+      } else if (errorMessage.includes('User already registered')) {
         setError('البريد الإلكتروني مسجل مسبقاً، يمكنك تسجيل الدخول مباشرة.');
-      } else if (err.message.includes('Password should be at least')) {
+      } else if (errorMessage.includes('Password should be at least')) {
         setError('كلمة المرور يجب أن تكون 6 أرقام أو أحرف على الأقل.');
       } else {
         setError('حدث خطأ غير متوقع. يرجى المحاولة لاحقاً.');
       }
     } finally {
       setIsLoading(false);
+      setCaptchaToken(null);
+      if (window.turnstile) {
+        window.turnstile.reset();
+      }
     }
   };
 
   return (
     <div dir="rtl" className="min-h-screen w-full flex flex-col md:flex-row bg-slate-50 overflow-hidden font-['IBM_Plex_Sans_Arabic'] text-right">
-      
+
       {/* Visual / Branding Side */}
       <div className="hidden md:flex md:w-1/2 relative bg-slate-900 overflow-hidden flex-col justify-between p-12 text-right">
         {/* Animated Background */}
@@ -152,7 +338,7 @@ export const AuthScreen: React.FC = () => {
 
       {/* Form Side */}
       <div className="flex-1 flex items-center justify-center p-6 md:p-12 relative animate-in fade-in slide-in-from-left-8 duration-1000">
-        
+
         {/* Mobile Logo */}
         <div className="absolute top-6 right-6 md:hidden flex items-center gap-2">
           <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-blue-600 text-white font-black text-xl shadow-lg shadow-blue-600/20">
@@ -164,14 +350,14 @@ export const AuthScreen: React.FC = () => {
         <div className="w-full max-w-[420px]">
           <div className="mb-8 text-right">
             <h2 className="text-3xl font-black text-slate-900 mb-2">
-              {mode === 'login' ? 'مرحباً بعودتك 👋' : 
-               mode === 'register' ? 'ابدأ رحلتك الآن 🚀' : 
-               'استعادة كلمة المرور 🔐'}
+              {mode === 'login' ? 'مرحباً بعودتك 👋' :
+                mode === 'register' ? 'ابدأ رحلتك الآن 🚀' :
+                  'استعادة كلمة المرور 🔐'}
             </h2>
             <p className="text-slate-500 text-sm font-medium">
-              {mode === 'login' ? 'سجل دخولك لمتابعة العمل على مشاريعك الطموحة.' : 
-               mode === 'register' ? 'أنشئ حسابك بسهولة للوصول إلى أدوات الذكاء الاصطناعي.' : 
-               'أدخل بريدك الإلكتروني وسنرسل لك رابطاً لتعيين كلمة مرور جديدة.'}
+              {mode === 'login' ? 'سجل دخولك لمتابعة العمل على مشاريعك الطموحة.' :
+                mode === 'register' ? 'أنشئ حسابك بسهولة للوصول إلى أدوات الذكاء الاصطناعي.' :
+                  'أدخل بريدك الإلكتروني وسنرسل لك رابطاً لتعيين كلمة مرور جديدة.'}
             </p>
           </div>
 
@@ -182,13 +368,20 @@ export const AuthScreen: React.FC = () => {
                 <p className="font-medium text-sm leading-relaxed">{error}</p>
               </div>
             )}
-            
+
             {message && (
               <div className="flex items-start gap-3 rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-emerald-700 animate-in zoom-in-95 duration-300 text-right">
                 <AlertCircle className="h-5 w-5 shrink-0 mt-0.5" />
                 <p className="font-medium text-sm leading-relaxed">{message}</p>
               </div>
             )}
+
+            <TurnstileField
+              key={mode}
+              actionKey={mode}
+              onTokenChange={setCaptchaToken}
+              onError={setTurnstileError}
+            />
 
             {mode === 'register' && (
               <div className="space-y-2 text-right">
@@ -222,7 +415,7 @@ export const AuthScreen: React.FC = () => {
                 />
               </div>
             </div>
-            
+
             {mode !== 'forgot_password' && (
               <div className="space-y-2 text-right">
                 <div className="flex items-center justify-between">
@@ -230,8 +423,8 @@ export const AuthScreen: React.FC = () => {
                     كلمة المرور <span className="text-xs font-normal text-slate-400">(6 أرقام/أحرف أو أكثر)</span>
                   </label>
                   {mode === 'login' && (
-                    <button 
-                      type="button" 
+                    <button
+                      type="button"
                       onClick={() => switchMode('forgot_password')}
                       className="text-xs font-bold text-blue-600 hover:text-blue-700 transition-colors"
                     >
@@ -277,13 +470,13 @@ export const AuthScreen: React.FC = () => {
                   ) : (
                     <Square className="h-5 w-5 text-slate-300 shrink-0" />
                   )}
-                  <span>حفظ تسجيل الدخول (تذكرني على هذا الجهاز)</span>
+                  <span>تذكرني</span>
                 </button>
               </div>
             )}
 
-            <Button 
-              type="submit" 
+            <Button
+              type="submit"
               className="w-full py-6 bg-slate-900 hover:bg-slate-800 text-white font-bold text-base mt-4 shadow-xl shadow-slate-900/10 rounded-xl group transition-all"
               disabled={isLoading}
             >
@@ -291,9 +484,9 @@ export const AuthScreen: React.FC = () => {
                 <Loader2 className="ml-2 h-5 w-5 animate-spin" />
               ) : (
                 <span className="flex items-center justify-center gap-2">
-                  {mode === 'login' ? 'تسجيل الدخول' : 
-                   mode === 'register' ? 'إنشاء حساب جديد' : 
-                   'إرسال رابط الاستعادة'}
+                  {mode === 'login' ? 'تسجيل الدخول' :
+                    mode === 'register' ? 'إنشاء حساب جديد' :
+                      'إرسال رابط الاستعادة'}
                   <ArrowLeft className="h-5 w-5 transition-transform group-hover:-translate-x-1" />
                 </span>
               )}
@@ -302,10 +495,10 @@ export const AuthScreen: React.FC = () => {
 
           <div className="mt-8 text-center border-t border-slate-100 pt-8">
             <p className="text-sm font-medium text-slate-500">
-              {mode === 'login' ? 'ليس لديك حساب؟ ' : 
-               mode === 'register' ? 'لديك حساب بالفعل؟ ' : 
-               'تذكرت كلمة المرور؟ '}
-              
+              {mode === 'login' ? 'ليس لديك حساب؟ ' :
+                mode === 'register' ? 'لديك حساب بالفعل؟ ' :
+                  'تذكرت كلمة المرور؟ '}
+
               <button
                 type="button"
                 onClick={() => switchMode(mode === 'login' ? 'register' : 'login')}
