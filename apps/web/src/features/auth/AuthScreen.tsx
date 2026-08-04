@@ -27,7 +27,6 @@ declare global {
   }
 }
 
-const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 const TURNSTILE_SCRIPT_ID = 'cloudflare-turnstile-script';
 
 const getErrorMessage = (error: unknown) => {
@@ -49,6 +48,27 @@ const postAuthAction = async (url: string, body: Record<string, unknown>) => {
   }
 
   return payload;
+};
+
+const loadTurnstileConfig = async () => {
+  const response = await fetch('/api/auth/turnstile-config', { cache: 'no-store' });
+  const payload = (await response.json().catch(() => null)) as {
+    enabled?: unknown;
+    siteKey?: unknown;
+    siteKeyConfigured?: unknown;
+    secretConfigured?: unknown;
+  } | null;
+
+  if (!response.ok || !payload) {
+    throw new Error('TURNSTILE_CONFIG_FAILED');
+  }
+
+  return {
+    enabled: payload.enabled === true,
+    siteKey: typeof payload.siteKey === 'string' ? payload.siteKey : '',
+    siteKeyConfigured: payload.siteKeyConfigured === true,
+    secretConfigured: payload.secretConfigured === true,
+  };
 };
 
 const getSafeRedirectPath = () => {
@@ -90,9 +110,12 @@ const loadTurnstileScript = () => {
 
 const TurnstileField: React.FC<{
   actionKey: string;
+  siteKey: string | null;
+  configLoading: boolean;
+  configError: string | null;
   onTokenChange: (token: string | null) => void;
   onError: (message: string | null) => void;
-}> = ({ actionKey, onTokenChange, onError }) => {
+}> = ({ actionKey, siteKey, configLoading, configError, onTokenChange, onError }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const widgetIdRef = useRef<string | null>(null);
   const [status, setStatus] = useState<'loading' | 'ready' | 'verified' | 'error'>('loading');
@@ -101,7 +124,7 @@ const TurnstileField: React.FC<{
   const containerId = `turnstile-${generatedId}`;
 
   useEffect(() => {
-    if (!TURNSTILE_SITE_KEY) return;
+    if (!siteKey) return;
 
     let cancelled = false;
     onTokenChange(null);
@@ -117,7 +140,7 @@ const TurnstileField: React.FC<{
         }
 
         widgetIdRef.current = window.turnstile.render(containerRef.current, {
-          sitekey: TURNSTILE_SITE_KEY,
+          sitekey: siteKey,
           theme: 'light',
           language: 'ar',
           size: 'normal',
@@ -164,9 +187,34 @@ const TurnstileField: React.FC<{
         widgetIdRef.current = null;
       }
     };
-  }, [actionKey, onError, onTokenChange]);
+  }, [actionKey, onError, onTokenChange, siteKey]);
 
-  if (!TURNSTILE_SITE_KEY) return null;
+  if (configLoading) {
+    return (
+      <div className="space-y-2 text-right">
+        <label className="text-sm font-bold text-slate-700">التحقق الأمني</label>
+        <div className="flex min-h-[76px] items-center justify-center rounded-xl border border-slate-200 bg-white p-2">
+          <div className="flex items-center gap-2 text-xs font-semibold text-slate-500">
+            <Loader2 className="size-4 animate-spin" />
+            جاري تجهيز التحقق الأمني...
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (!siteKey) {
+    return (
+      <div className="space-y-2 text-right">
+        <label className="text-sm font-bold text-slate-700">التحقق الأمني</label>
+        <div className="flex min-h-[76px] items-center justify-center rounded-xl border border-red-200 bg-red-50 p-3">
+          <p className="max-w-xs text-center text-xs font-semibold leading-6 text-red-700">
+            {configError || 'التحقق الأمني غير مهيأ حالياً.'}
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-2 text-right">
@@ -203,6 +251,53 @@ export const AuthScreen: React.FC = () => {
   const [message, setMessage] = useState<string | null>(null);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [turnstileError, setTurnstileError] = useState<string | null>(null);
+  const [turnstileSiteKey, setTurnstileSiteKey] = useState<string | null>(null);
+  const [isTurnstileConfigLoading, setIsTurnstileConfigLoading] = useState(true);
+  const [turnstileConfigError, setTurnstileConfigError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    loadTurnstileConfig()
+      .then((config) => {
+        if (cancelled) return;
+
+        if (!config.siteKeyConfigured) {
+          setTurnstileSiteKey(null);
+          setTurnstileConfigError('لم يتم ضبط NEXT_PUBLIC_TURNSTILE_SITE_KEY في بيئة الإنتاج.');
+          return;
+        }
+
+        if (!config.secretConfigured) {
+          setTurnstileSiteKey(null);
+          setTurnstileConfigError('لم يتم ضبط TURNSTILE_SECRET في بيئة الإنتاج.');
+          return;
+        }
+
+        if (!config.enabled || !config.siteKey) {
+          setTurnstileSiteKey(null);
+          setTurnstileConfigError('التحقق الأمني غير مهيأ حالياً.');
+          return;
+        }
+
+        setTurnstileSiteKey(config.siteKey);
+        setTurnstileConfigError(null);
+      })
+      .catch(() => {
+        if (cancelled) return;
+        setTurnstileSiteKey(null);
+        setTurnstileConfigError('تعذر قراءة إعدادات Turnstile من الخادم.');
+      })
+      .finally(() => {
+        if (!cancelled) {
+          setIsTurnstileConfigLoading(false);
+        }
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const resetState = () => {
     setError(null);
@@ -229,7 +324,13 @@ export const AuthScreen: React.FC = () => {
       return;
     }
 
-    if (TURNSTILE_SITE_KEY && !captchaToken) {
+    if (!turnstileSiteKey) {
+      setError(turnstileConfigError || 'التحقق الأمني غير مهيأ حالياً.');
+      setIsLoading(false);
+      return;
+    }
+
+    if (!captchaToken) {
       setError(turnstileError || 'أكمل التحقق الأمني قبل المتابعة.');
       setIsLoading(false);
       return;
@@ -276,11 +377,14 @@ export const AuthScreen: React.FC = () => {
         setMessage('تم إرسال تعليمات استعادة كلمة المرور إلى بريدك الإلكتروني.');
       }
     } catch (err: unknown) {
-      console.error(err);
       const errorMessage = getErrorMessage(err);
 
       if (errorMessage === 'RATE_LIMITED') {
         setError('تم تجاوز عدد المحاولات المسموح. حاول لاحقاً.');
+      } else if (errorMessage === 'Security verification is not configured.') {
+        setError('لم يتم ضبط TURNSTILE_SECRET في بيئة الإنتاج.');
+      } else if (errorMessage === 'Security verification failed.') {
+        setError('فشل التحقق الأمني. أعد التحقق ثم حاول مرة أخرى.');
       } else if (errorMessage === 'Invalid login credentials') {
         setError('بيانات الدخول غير صحيحة، تأكد من البريد وكلمة المرور.');
       } else if (errorMessage.includes('User already registered')) {
@@ -379,6 +483,9 @@ export const AuthScreen: React.FC = () => {
             <TurnstileField
               key={mode}
               actionKey={mode}
+              siteKey={turnstileSiteKey}
+              configLoading={isTurnstileConfigLoading}
+              configError={turnstileConfigError}
               onTokenChange={setCaptchaToken}
               onError={setTurnstileError}
             />
