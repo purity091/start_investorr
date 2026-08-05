@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import {
   ColumnDef,
   flexRender,
@@ -209,13 +209,20 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   const [globalFilter, setGlobalFilter] = useState('');
   const [rowSelection, setRowSelection] = useState({});
-  const [savedProjects, setSavedProjects] = useState<Record<string, boolean>>(() => {
+  // Keep the server render and the first client render identical. Reading
+  // localStorage in a state initializer makes hydration browser-dependent.
+  const [savedProjects, setSavedProjects] = useState<Record<string, boolean>>({});
+
+  useEffect(() => {
     try {
-      return JSON.parse(localStorage.getItem('saved_proven_projects') || '{}');
+      const saved = JSON.parse(localStorage.getItem('saved_proven_projects') || '{}');
+      if (saved && typeof saved === 'object' && !Array.isArray(saved)) {
+        setSavedProjects(saved as Record<string, boolean>);
+      }
     } catch {
-      return {};
+      // Ignore malformed or unavailable browser storage.
     }
-  });
+  }, []);
 
   // Ensure table only contains successful companies (filter out failed ones) and shows newest added first
   const provenData = useMemo(() => {
