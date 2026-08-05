@@ -331,18 +331,6 @@ export const AuthScreen: React.FC = () => {
       return;
     }
 
-    if (!turnstileSiteKey) {
-      setError(turnstileConfigError || 'التحقق الأمني غير مهيأ حالياً.');
-      setIsLoading(false);
-      return;
-    }
-
-    if (!captchaToken) {
-      setError(turnstileError || 'أكمل التحقق الأمني قبل المتابعة.');
-      setIsLoading(false);
-      return;
-    }
-
     try {
       const limitResponse = await fetch('/api/auth/rate-limit', {
         method: 'POST',
@@ -358,7 +346,6 @@ export const AuthScreen: React.FC = () => {
         await postAuthAction('/api/auth/login', {
           email,
           password,
-          turnstileToken: captchaToken,
         });
 
         if (rememberMe) {
@@ -373,13 +360,11 @@ export const AuthScreen: React.FC = () => {
           name,
           email,
           password,
-          turnstileToken: captchaToken,
         });
         setMessage('تم إنشاء الحساب بنجاح! إذا كانت المصادقة تتطلب تفعيلاً، مراجعة البريد الإلكتروني.');
       } else if (mode === 'forgot_password') {
         await postAuthAction('/api/auth/forgot-password', {
           email,
-          turnstileToken: captchaToken,
         });
         setMessage('تم إرسال تعليمات استعادة كلمة المرور إلى بريدك الإلكتروني.');
       }
@@ -491,16 +476,6 @@ export const AuthScreen: React.FC = () => {
                 <p className="font-medium text-sm leading-relaxed">{message}</p>
               </div>
             )}
-
-            <TurnstileField
-              key={mode}
-              actionKey={mode}
-              siteKey={turnstileSiteKey}
-              configLoading={isTurnstileConfigLoading}
-              configError={turnstileConfigError}
-              onTokenChange={setCaptchaToken}
-              onError={setTurnstileError}
-            />
 
             {mode === 'register' && (
               <div className="space-y-2 text-right">

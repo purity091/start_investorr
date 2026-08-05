@@ -55,6 +55,7 @@ import {
   Menu,
   FileText
 } from 'lucide-react';
+import { useAuthModal } from '@/features/auth/AuthModalContext';
 
 const INITIAL_PREVIEW_PROJECTS = [
   {
@@ -132,6 +133,7 @@ const INITIAL_PREVIEW_PROJECTS = [
 ];
 
 export default function LandingPage() {
+  const { openAuthModal } = useAuthModal();
   const [projectsList, setProjectsList] = useState<any[]>(INITIAL_PREVIEW_PROJECTS);
   const [activeTableTab, setActiveTableTab] = useState<'all' | 'saas' | 'micro-saas'>('all');
   
@@ -143,18 +145,17 @@ export default function LandingPage() {
   // FAQ Accordion State
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
+  // Fetch real public data asynchronously for initial preview
   useEffect(() => {
-    const loadRealProjects = async () => {
-      try {
-        const fetched = await fetchPublicJson<any[]>('/api/public-data/proven-projects');
-        if (Array.isArray(fetched) && fetched.length > 0) {
-          setProjectsList(fetched);
+    fetchPublicJson<any[]>('/api/public-data/proven-projects')
+      .then((data) => {
+        if (data && Array.isArray(data) && data.length > 0) {
+          setProjectsList(data);
         }
-      } catch (err) {
-        console.warn("Using initial preview projects dataset", err);
-      }
-    };
-    loadRealProjects();
+      })
+      .catch((err) => {
+        console.warn('Failed to load initial preview data:', err);
+      });
   }, []);
 
   // Filtered dataset for Table preview based on active tab
@@ -191,7 +192,7 @@ export default function LandingPage() {
   };
 
   const handleRowClick = () => {
-    window.location.href = '/login';
+    openAuthModal('register');
   };
 
   return (
@@ -207,11 +208,6 @@ export default function LandingPage() {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
           
           <div className="container relative mx-auto px-4 text-center max-w-5xl">
-            <Badge variant="secondary" className="mb-6 px-4 py-1.5 text-xs font-bold text-primary bg-primary/10 border-primary/20 gap-2 rounded-full">
-              <Sparkles className="size-3.5 text-amber-500" />
-              الجيل الجديد من منصات دراسة وبناء المشاريع
-            </Badge>
-
             <h1 className="mx-auto text-3xl font-black tracking-tight text-foreground sm:text-5xl md:text-6xl leading-[1.2]">
               حوّل فكرتك الطموحة إلى <span className="text-primary">مشروع حقيقي</span> قابل للنمو والاستثمار
             </h1>
@@ -221,12 +217,10 @@ export default function LandingPage() {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link href="/login">
-                <Button size="lg" className="w-full sm:w-auto text-sm font-bold px-8 h-12 gap-2 shadow-2xs">
-                  ابدأ بناء مشروعك مجاناً
-                  <Rocket className="size-4" />
-                </Button>
-              </Link>
+              <Button onClick={() => openAuthModal('register')} size="lg" className="w-full sm:w-auto text-sm font-bold px-8 h-12 gap-2 shadow-2xs cursor-pointer">
+                ابدأ بناء مشروعك مجاناً
+                <Rocket className="size-4" />
+              </Button>
               <a href="#table-preview">
                 <Button size="lg" variant="outline" className="w-full sm:w-auto text-sm font-bold px-8 h-12 gap-2">
                   <Compass className="size-4 text-primary" />
@@ -260,14 +254,14 @@ export default function LandingPage() {
         {/* SECTION 1: Table Preview with Segmented Category Filter & Locked Overlay */}
         <section id="table-preview" className="container mx-auto px-4 max-w-7xl">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-6 space-y-2">
-            <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 text-xs font-bold px-3 py-1 rounded-full gap-1.5">
+            <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 text-xs font-bold px-3 py-1 rounded-full gap-1.5 mx-auto">
               <Building2 className="size-3.5" />
               قواعد البيانات الميدانية
             </Badge>
-            <h2 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight text-center mx-auto">
               جدول المشاريع والشركات الناجحة
             </h2>
-            <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed">
+            <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed text-center mx-auto">
               جدول تفاعلي مباشر من داخل المنصة. اختر التصنيف لمعاينة المشاريع، بينما تظل بقية الصفوف مغلقة لتسجيل المستخدمين الجدد.
             </p>
           </div>
@@ -333,12 +327,10 @@ export default function LandingPage() {
                   </p>
                 </div>
                 <div className="pt-2">
-                  <Link href="/login">
-                    <Button size="lg" className="w-full sm:w-auto font-bold text-xs sm:text-sm h-11 px-8 gap-2 shadow-2xs bg-primary hover:bg-primary/90">
-                      تسجيل الدخول / إنشاء حساب مجاني لفتح كافة الصفوف
-                      <ArrowLeft className="size-4" />
-                    </Button>
-                  </Link>
+                  <Button onClick={() => openAuthModal('register')} size="lg" className="w-full sm:w-auto font-bold text-xs sm:text-sm h-11 px-8 gap-2 shadow-2xs bg-primary hover:bg-primary/90 cursor-pointer">
+                    تسجيل الدخول / إنشاء حساب مجاني لفتح كافة الصفوف
+                    <ArrowLeft className="size-4" />
+                  </Button>
                 </div>
               </div>
             </div>
@@ -349,14 +341,14 @@ export default function LandingPage() {
         {/* SECTION 2: Featured SaaS Business Models & Revenue Strategy Cards */}
         <section id="saas-models" className="container mx-auto px-4 max-w-7xl">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-10 space-y-2">
-            <Badge variant="outline" className="bg-blue-500/10 text-blue-700 border-blue-500/20 text-xs font-bold px-3 py-1 rounded-full gap-1.5">
+            <Badge variant="outline" className="bg-blue-500/10 text-blue-700 border-blue-500/20 text-xs font-bold px-3 py-1 rounded-full gap-1.5 mx-auto">
               <Laptop className="size-3.5" />
               نماذج مشاريع SaaS البرمجية
             </Badge>
-            <h2 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight text-center mx-auto">
               نماذج عمل وتحليلات نمو لشركات SaaS ناجحة
             </h2>
-            <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed">
+            <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed text-center mx-auto">
               استكشف كيف تبني وتصيغ نماذج التسعير، الاشتراكات المتكررة (MRR)، وشريحة العملاء المستهدفة في مشاريع البرمجيات.
             </p>
           </div>
@@ -542,14 +534,14 @@ export default function LandingPage() {
         <section id="calculator" className="bg-muted/40 py-16 border-y border-border/50">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-10 space-y-2">
-              <Badge variant="outline" className="bg-emerald-500/10 text-emerald-700 border-emerald-500/20 text-xs font-bold px-3 py-1 rounded-full gap-1.5">
+              <Badge variant="outline" className="bg-emerald-500/10 text-emerald-700 border-emerald-500/20 text-xs font-bold px-3 py-1 rounded-full gap-1.5 mx-auto">
                 <Calculator className="size-3.5" />
                 حاسبة الأرباح والمؤشرات
               </Badge>
-              <h2 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight">
+              <h2 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight text-center mx-auto">
                 قدر إيرادات ومؤشرات نمو مشروعك القادم
               </h2>
-              <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed">
+              <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed text-center mx-auto">
                 جرب الحاسبة التفاعلية لتقدير الإيرادات المتكررة (MRR / ARR) ومتوسط قيمة العميل (LTV).
               </p>
             </div>
@@ -659,14 +651,14 @@ export default function LandingPage() {
         {/* SECTION 4: Core Platform Features */}
         <section id="features" className="container mx-auto px-4 max-w-7xl">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12 space-y-2">
-            <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 text-xs font-bold px-3 py-1 rounded-full gap-1.5">
+            <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 text-xs font-bold px-3 py-1 rounded-full gap-1.5 mx-auto">
               <Zap className="size-3.5" />
               أدوات المنصة المتكاملة
             </Badge>
-            <h2 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight text-center mx-auto">
               كل ما تحتاجه لإطلاق مشروعك وتوثيقه
             </h2>
-            <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed">
+            <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed text-center mx-auto">
               أدوات تفاعلية ترافقك في كل مرحلة من مراحل التفكير والتحليل وحتى كتابة خطة التنفيذ.
             </p>
           </div>
@@ -735,21 +727,21 @@ export default function LandingPage() {
         {/* SECTION 5: Platform Academy Showcase */}
         <section id="academy" className="container mx-auto px-4 max-w-7xl">
           <div className="bg-card border border-border rounded-3xl p-6 sm:p-10 shadow-2xs">
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-10 pb-6 border-b border-border/80 text-center lg:text-right">
-              <div className="space-y-2 flex flex-col items-center lg:items-start text-center lg:text-right">
-                <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 text-xs font-bold px-3 py-1 rounded-full gap-1.5">
+            <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-10 pb-6 border-b border-border/80 space-y-4">
+              <div className="space-y-2 flex flex-col items-center text-center mx-auto">
+                <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 text-xs font-bold px-3 py-1 rounded-full gap-1.5 mx-auto">
                   <GraduationCap className="size-3.5" />
                   أكاديمية المنصة والمفاهيم
                 </Badge>
-                <h2 className="text-2xl sm:text-3xl font-black text-foreground tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-black text-foreground tracking-tight text-center mx-auto">
                   دليل المفاهيم والمصطلحات الميدانية للخطة
                 </h2>
-                <p className="text-xs sm:text-sm text-muted-foreground font-medium max-w-2xl leading-relaxed">
+                <p className="text-xs sm:text-sm text-muted-foreground font-medium max-w-2xl leading-relaxed text-center mx-auto">
                   مقالات وتحليلات تعليمية مركزة تشرح لك كيفية تقييم الأفكار، وحساب مقاييس النمو، وإعداد دراسة الجدوى.
                 </p>
               </div>
 
-              <Link href="/platform-academy" className="shrink-0 mx-auto lg:mx-0">
+              <Link href="/platform-academy" className="shrink-0 mx-auto">
                 <Button variant="outline" className="font-bold text-xs h-11 px-5 gap-2">
                   <BookOpen className="size-4 text-primary" />
                   تصفح الأكاديمية كاملة (18 مقال)
@@ -807,14 +799,14 @@ export default function LandingPage() {
         {/* SECTION 6: FAQ Accordion */}
         <section id="faq" className="container mx-auto px-4 max-w-4xl">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-10 space-y-2">
-            <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 text-xs font-bold px-3 py-1 rounded-full gap-1.5">
+            <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 text-xs font-bold px-3 py-1 rounded-full gap-1.5 mx-auto">
               <HelpCircle className="size-3.5" />
               الأسئلة الشائعة
             </Badge>
-            <h2 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight text-center mx-auto">
               إجابات عن المنصة وقواعد البيانات
             </h2>
-            <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed">
+            <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed text-center mx-auto">
               كل ما تحتاج معرفته حول إنشاء الحساب، أمان البيانات، وفتح المشاريع المغلقة.
             </p>
           </div>
@@ -877,12 +869,10 @@ export default function LandingPage() {
               انضم إلى آلاف المبتكرين ورواد الأعمال الذين يستكشفون الفرص ويبنون نماذج أعمالهم بثقة عبر منصة خطة.
             </p>
             <div className="pt-2">
-              <Link href="/login">
-                <Button size="lg" variant="secondary" className="font-extrabold text-sm px-8 h-12 gap-2 shadow-sm">
-                  انشئ حسابك المجاني الآن
-                  <ArrowLeft className="size-4" />
-                </Button>
-              </Link>
+              <Button onClick={() => openAuthModal('register')} size="lg" variant="secondary" className="font-extrabold text-sm px-8 h-12 gap-2 shadow-sm cursor-pointer">
+                انشئ حسابك المجاني الآن
+                <ArrowLeft className="size-4" />
+              </Button>
             </div>
           </div>
         </section>

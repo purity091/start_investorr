@@ -30,11 +30,6 @@ const PUBLIC_TABS = new Set([
   'about',
   'terms',
   'privacy',
-  'proven-projects',
-  'failed-projects',
-  'saas-ideas',
-  'micro-saas-ideas',
-  'project-ideas',
 ]);
 
 const isPublicTab = (tab: string) => PUBLIC_TABS.has(tab) || tab.endsWith('-dashboard');

@@ -44,9 +44,11 @@ import {
   Layers,
   ChevronLeft
 } from 'lucide-react';
+import { useAuthModal } from '@/features/auth/AuthModalContext';
 import { cn } from '@/lib/utils';
 
-export function LandingNavbar() {
+export const LandingNavbar: React.FC = () => {
+  const { openAuthModal } = useAuthModal();
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [showBanner, setShowBanner] = useState(true);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -72,7 +74,8 @@ export function LandingNavbar() {
     { title: 'استكشاف قطاعات السوق', category: 'التحليلات', href: '/market-discovery', icon: Compass },
     { title: 'دراسات حالة الشركات الناجحة', category: 'الفرص الميدانية', href: '/proven-projects', icon: Building2 },
     { title: 'حاسبة الإيرادات (MRR / ARR)', category: 'الأدوات', href: '/#calculator', icon: Calculator },
-    { title: 'أكاديمية خطة والمفاهيم', category: 'المصادر', href: '/platform-academy', icon: BookOpen },
+    {title: 'أكاديمية خطة والمفاهيم', category: 'المصادر', href: '/platform-academy', icon: BookOpen },
+    { title: 'سجل التحديثات والإصدارات', category: 'المصادر', href: '/changelog', icon: Sparkles },
     { title: 'الشركات المتعثرة (Post-Mortem)', category: 'الدروس', href: '/failed-projects', icon: TrendingDown },
     { title: 'خطط الأسعار والتراخيص', category: 'الحساب', href: '/pricing-plans', icon: DollarSign },
   ].filter((item) => item.title.includes(searchQuery) || item.category.includes(searchQuery));
@@ -112,11 +115,8 @@ export function LandingNavbar() {
               خ
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-black tracking-tight text-foreground flex items-center gap-1">
+              <span className="text-xl font-black tracking-tight text-foreground">
                 خطة<span className="text-primary">.</span>
-                <Badge variant="outline" className="text-[10px] font-bold text-primary bg-primary/10 border-primary/20 px-1.5 py-0 rounded">
-                  PRO
-                </Badge>
               </span>
             </div>
           </Link>
@@ -133,8 +133,8 @@ export function LandingNavbar() {
           >
             <button 
               className={cn(
-                "flex items-center gap-1 px-3 py-2 rounded-lg transition-all cursor-pointer",
-                activeDropdown === 'features' ? "bg-muted text-foreground font-extrabold" : "hover:text-foreground hover:bg-muted/50"
+                "flex items-center gap-1.5 px-3 py-2 rounded-xl transition-all cursor-pointer",
+                activeDropdown === 'features' ? "bg-primary/10 text-primary font-black" : "hover:text-foreground hover:bg-muted/60"
               )}
             >
               <span>الأدوات والمميزات</span>
@@ -142,69 +142,123 @@ export function LandingNavbar() {
             </button>
 
             {activeDropdown === 'features' && (
-              <div dir="rtl" className="absolute top-full right-0 pt-2 w-[760px] animate-in fade-in slide-in-from-top-2 duration-150 z-50">
-                <div className="p-5 rounded-2xl bg-card border border-border shadow-xl backdrop-blur-md grid grid-cols-12 gap-5 text-right">
+              <div dir="rtl" className="absolute top-full right-0 pt-2 w-[920px] animate-in fade-in slide-in-from-top-2 duration-150 z-50">
+                <div className="p-7 rounded-3xl bg-card/98 border border-border/80 shadow-2xl backdrop-blur-xl space-y-5 text-right">
                   
-                  {/* Highlight AI Spotlight Card */}
-                  <div className="col-span-4 p-4 rounded-xl bg-gradient-to-b from-primary/10 via-primary/5 to-muted border border-primary/20 flex flex-col justify-between">
-                    <div className="space-y-2">
-                      <Badge className="bg-primary text-primary-foreground text-[10px] font-bold gap-1 px-2">
-                        <Sparkles className="size-3" />
-                        الذكاء الاصطناعي
-                      </Badge>
-                      <h4 className="text-sm font-black text-foreground">مولد واستوديو دراسات الجدوى</h4>
-                      <p className="text-[11px] text-muted-foreground leading-relaxed font-medium">
-                        صمم نماذج أعمالك وقيم خطتك استراتيجياً بنقرة واحدة وفق معايير MIT.
-                      </p>
+                  <div className="grid grid-cols-12 gap-6">
+                    {/* Highlight AI Spotlight Card */}
+                    <div className="col-span-4 p-6 rounded-2xl bg-gradient-to-br from-primary/15 via-primary/5 to-muted/80 border border-primary/25 flex flex-col justify-between shadow-2xs relative overflow-hidden group">
+                      <div className="space-y-3.5 relative z-10">
+                        <Badge className="bg-primary text-primary-foreground text-[10px] font-extrabold gap-1 px-3 py-0.5 rounded-full shadow-2xs">
+                          <Sparkles className="size-3" />
+                          محرك الذكاء الاصطناعي
+                        </Badge>
+                        <h4 className="text-base font-black text-foreground group-hover:text-primary transition-colors leading-snug">
+                          مولد ودراسة نموذج العمل (BMC Studio)
+                        </h4>
+                        <p className="text-xs text-muted-foreground leading-relaxed font-medium">
+                          صمم نموذج عملك التجاري تفاعلياً واحصل على تقييم فوري لمستوى الجاهزية الاستثمارية وتوليد خطط المخاطر وفق منهجية MIT.
+                        </p>
+                        <ul className="space-y-1.5 pt-1 text-[11px] text-foreground font-semibold">
+                          <li className="flex items-center gap-1.5">
+                            <span className="size-1.5 rounded-full bg-emerald-500"></span>
+                            صياغة العناصر الـ 9 بنقرة واحدة
+                          </li>
+                          <li className="flex items-center gap-1.5">
+                            <span className="size-1.5 rounded-full bg-blue-500"></span>
+                            تحديد شرائح العملاء وعرض القيمة
+                          </li>
+                          <li className="flex items-center gap-1.5">
+                            <span className="size-1.5 rounded-full bg-amber-500"></span>
+                            تقييم الجدوى وتوقع المخاطر
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="pt-5 relative z-10">
+                        <Button
+                          onClick={() => openAuthModal('register')}
+                          size="sm"
+                          className="w-full text-xs font-extrabold gap-1.5 h-9 shadow-2xs cursor-pointer"
+                        >
+                          ابدأ بناء نموذج مشروعك مجاناً
+                          <ArrowLeft className="size-3.5" />
+                        </Button>
+                      </div>
                     </div>
-                    <Link href="/login" className="pt-4">
-                      <Button size="sm" className="w-full text-xs font-bold gap-1.5 h-8">
-                        ابدأ الدراسة مجاناً
-                        <ArrowLeft className="size-3" />
-                      </Button>
-                    </Link>
+
+                    {/* Tools Grid */}
+                    <div className="col-span-8 grid grid-cols-2 gap-4">
+                      <Link href="/#features" className="p-4 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3.5 group">
+                        <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
+                          <Layers className="size-5" />
+                        </div>
+                        <div className="space-y-1">
+                          <h5 className="text-xs font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                            نموذج العمل التجاري (BMC)
+                            <ChevronLeft className="size-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                          </h5>
+                          <p className="text-[11px] text-muted-foreground font-medium leading-relaxed">
+                            بناء وتفصيل عناصر مشروعك الـ 9 بدءاً من قنوات التوزيع، أنشطة التكلفة، وحتى مصادر الإيرادات بشكل منظري ومفهوم.
+                          </p>
+                        </div>
+                      </Link>
+
+                      <Link href="/#calculator" className="p-4 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3.5 group">
+                        <div className="p-3 rounded-xl bg-blue-500/10 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
+                          <Calculator className="size-5" />
+                        </div>
+                        <div className="space-y-1">
+                          <h5 className="text-xs font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                            حاسبة الإيرادات (MRR / ARR)
+                            <ChevronLeft className="size-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                          </h5>
+                          <p className="text-[11px] text-muted-foreground font-medium leading-relaxed">
+                            أداة تفاعلية لتقدير الإيرادات الشهرية والسنوية المتكررة لشركات الـ SaaS، وحساب متوسط قيمة العميل (LTV) ومعدل التخلي (Churn).
+                          </p>
+                        </div>
+                      </Link>
+
+                      <Link href="/#features" className="p-4 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3.5 group">
+                        <div className="p-3 rounded-xl bg-amber-500/10 text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
+                          <Target className="size-5" />
+                        </div>
+                        <div className="space-y-1">
+                          <h5 className="text-xs font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                            محرك آلام وفرص السوق
+                            <ChevronLeft className="size-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                          </h5>
+                          <p className="text-[11px] text-muted-foreground font-medium leading-relaxed">
+                            استخرج المشكلات الواقعية في السوق العربي وتحليل احتياجات العملاء غير المخدومة لتحويلها إلى فرص تجارية مربحة وقابلة للنمو.
+                          </p>
+                        </div>
+                      </Link>
+
+                      <Link href="/#features" className="p-4 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3.5 group">
+                        <div className="p-3 rounded-xl bg-purple-500/10 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
+                          <Palette className="size-5" />
+                        </div>
+                        <div className="space-y-1">
+                          <h5 className="text-xs font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                            استوديو الهوية البصرية
+                            <ChevronLeft className="size-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                          </h5>
+                          <p className="text-[11px] text-muted-foreground font-medium leading-relaxed">
+                            صيغ القيم الجوهرية لمشروعك، نبرة الصوت والمخاطبة الرسمية، والتنسيق البصري للتقدم به بثقة إلى المستثمرين والمستخدمين.
+                          </p>
+                        </div>
+                      </Link>
+                    </div>
                   </div>
 
-                  {/* Tools Grid */}
-                  <div className="col-span-8 grid grid-cols-2 gap-3">
-                    <Link href="/#features" className="p-2.5 rounded-xl hover:bg-muted/60 transition-colors flex items-start gap-3 group">
-                      <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors shrink-0">
-                        <Layers className="size-4" />
-                      </div>
-                      <div>
-                        <h5 className="text-xs font-bold text-foreground group-hover:text-primary transition-colors">نموذج العمل (BMC)</h5>
-                        <p className="text-[11px] text-muted-foreground font-medium">بناء وتفاعل مع العناصر التسعة.</p>
-                      </div>
-                    </Link>
-
-                    <Link href="/#calculator" className="p-2.5 rounded-xl hover:bg-muted/60 transition-colors flex items-start gap-3 group">
-                      <div className="p-2 rounded-lg bg-blue-500/10 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors shrink-0">
-                        <Calculator className="size-4" />
-                      </div>
-                      <div>
-                        <h5 className="text-xs font-bold text-foreground group-hover:text-primary transition-colors">حاسبة MRR / ARR</h5>
-                        <p className="text-[11px] text-muted-foreground font-medium">تقدير أرباح ومؤشرات الـ SaaS.</p>
-                      </div>
-                    </Link>
-
-                    <Link href="/#features" className="p-2.5 rounded-xl hover:bg-muted/60 transition-colors flex items-start gap-3 group">
-                      <div className="p-2 rounded-lg bg-amber-500/10 text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-colors shrink-0">
-                        <Target className="size-4" />
-                      </div>
-                      <div>
-                        <h5 className="text-xs font-bold text-foreground group-hover:text-primary transition-colors">محرك آلام السوق</h5>
-                        <p className="text-[11px] text-muted-foreground font-medium">تحويل المشكلات لفرص مربحة.</p>
-                      </div>
-                    </Link>
-
-                    <Link href="/#features" className="p-2.5 rounded-xl hover:bg-muted/60 transition-colors flex items-start gap-3 group">
-                      <div className="p-2 rounded-lg bg-purple-500/10 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors shrink-0">
-                        <Palette className="size-4" />
-                      </div>
-                      <div>
-                        <h5 className="text-xs font-bold text-foreground group-hover:text-primary transition-colors">استوديو الهوية</h5>
-                        <p className="text-[11px] text-muted-foreground font-medium">صياغة نبرة الصوت ودليل الهوية.</p>
-                      </div>
+                  {/* Mega Menu Footer Bar */}
+                  <div className="pt-4 border-t border-border/60 flex items-center justify-between text-xs font-bold text-muted-foreground">
+                    <span className="flex items-center gap-2 text-emerald-600">
+                      <ShieldCheck className="size-4" />
+                      أدوات مصممة ومختبرة وفق منهجية الـ 24 خطوة المعتمدة من جامعات ريادة الأعمال العالمية (MIT)
+                    </span>
+                    <Link href="/#features" className="text-primary hover:underline flex items-center gap-1.5 font-black">
+                      استكشف كافة المميزات والأدوات
+                      <ArrowLeft className="size-3.5" />
                     </Link>
                   </div>
 
@@ -221,8 +275,8 @@ export function LandingNavbar() {
           >
             <button 
               className={cn(
-                "flex items-center gap-1 px-3 py-2 rounded-lg transition-all cursor-pointer",
-                activeDropdown === 'databases' ? "bg-muted text-foreground font-extrabold" : "hover:text-foreground hover:bg-muted/50"
+                "flex items-center gap-1.5 px-3 py-2 rounded-xl transition-all cursor-pointer",
+                activeDropdown === 'databases' ? "bg-primary/10 text-primary font-black" : "hover:text-foreground hover:bg-muted/60"
               )}
             >
               <span>الشركات والقطاعات</span>
@@ -230,48 +284,80 @@ export function LandingNavbar() {
             </button>
 
             {activeDropdown === 'databases' && (
-              <div dir="rtl" className="absolute top-full right-0 pt-2 w-[540px] animate-in fade-in slide-in-from-top-2 duration-150 z-50">
-                <div className="p-4 rounded-2xl bg-card border border-border shadow-xl backdrop-blur-md grid grid-cols-2 gap-3 text-right">
+              <div dir="rtl" className="absolute top-full right-0 pt-2 w-[840px] animate-in fade-in slide-in-from-top-2 duration-150 z-50">
+                <div className="p-7 rounded-3xl bg-card/98 border border-border/80 shadow-2xl backdrop-blur-xl text-right space-y-5">
                   
-                  <Link href="/saas-ideas" className="p-3 rounded-xl hover:bg-muted/60 transition-colors flex items-start gap-3 group">
-                    <div className="p-2 rounded-lg bg-blue-500/10 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors shrink-0">
-                      <Laptop className="size-4" />
-                    </div>
-                    <div>
-                      <h5 className="text-xs font-bold text-foreground group-hover:text-primary transition-colors">أفكار مشاريع SaaS</h5>
-                      <p className="text-[11px] text-muted-foreground font-medium">نماذج برمجيات بالاشتراكات الدوري.</p>
-                    </div>
-                  </Link>
+                  <div className="grid grid-cols-2 gap-4">
+                    <Link href="/saas-ideas" className="p-4 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3.5 group">
+                      <div className="p-3 rounded-xl bg-blue-500/10 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
+                        <Laptop className="size-5" />
+                      </div>
+                      <div className="space-y-1">
+                        <h5 className="text-xs font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                          أفكار مشاريع SaaS البرمجية
+                          <ChevronLeft className="size-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                        </h5>
+                        <p className="text-[11px] text-muted-foreground font-medium leading-relaxed">
+                          قاعدة بيانات تضم مئات أفكار البرمجيات بالاشتراكات الدورية الموجهة للشركات والشرائح المختلفة مع تحليلات التكلفة والتسعير.
+                        </p>
+                      </div>
+                    </Link>
 
-                  <Link href="/micro-saas-ideas" className="p-3 rounded-xl hover:bg-muted/60 transition-colors flex items-start gap-3 group">
-                    <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors shrink-0">
-                      <Cpu className="size-4" />
-                    </div>
-                    <div>
-                      <h5 className="text-xs font-bold text-foreground group-hover:text-primary transition-colors">أفكار Micro-SaaS</h5>
-                      <p className="text-[11px] text-muted-foreground font-medium">أدوات مصغرة سريعة البناء والإطلاق.</p>
-                    </div>
-                  </Link>
+                    <Link href="/micro-saas-ideas" className="p-4 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3.5 group">
+                      <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
+                        <Cpu className="size-5" />
+                      </div>
+                      <div className="space-y-1">
+                        <h5 className="text-xs font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                          أفكار Micro-SaaS للمطورين المستقلين
+                          <ChevronLeft className="size-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                        </h5>
+                        <p className="text-[11px] text-muted-foreground font-medium leading-relaxed">
+                          حلول وأدوات مصغرة يمكنك بناؤها وإطلاقها خلال 2-4 أسابيع بمفردك لتوفير تدفقات إيرادات متكررة مستقرة.
+                        </p>
+                      </div>
+                    </Link>
 
-                  <Link href="/market-discovery" className="p-3 rounded-xl hover:bg-muted/60 transition-colors flex items-start gap-3 group">
-                    <div className="p-2 rounded-lg bg-amber-500/10 text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-colors shrink-0">
-                      <Compass className="size-4" />
-                    </div>
-                    <div>
-                      <h5 className="text-xs font-bold text-foreground group-hover:text-primary transition-colors">قطاعات السوق الميدانية</h5>
-                      <p className="text-[11px] text-muted-foreground font-medium">+100 قطاع استثماري محلي وعالمي.</p>
-                    </div>
-                  </Link>
+                    <Link href="/market-discovery" className="p-4 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3.5 group">
+                      <div className="p-3 rounded-xl bg-amber-500/10 text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
+                        <Compass className="size-5" />
+                      </div>
+                      <div className="space-y-1">
+                        <h5 className="text-xs font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                          رادار وقطاعات السوق الميدانية
+                          <ChevronLeft className="size-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                        </h5>
+                        <p className="text-[11px] text-muted-foreground font-medium leading-relaxed">
+                          استكشف أكثر من +100 قطاع استثماري (تجارة إلكترونية، صحة رقمية، تعليم، تقنية مالية) واعرف حجوم الفرص ومعدلات التوسع.
+                        </p>
+                      </div>
+                    </Link>
 
-                  <Link href="/failed-projects" className="p-3 rounded-xl hover:bg-muted/60 transition-colors flex items-start gap-3 group">
-                    <div className="p-2 rounded-lg bg-red-500/10 text-red-600 group-hover:bg-red-600 group-hover:text-white transition-colors shrink-0">
-                      <TrendingDown className="size-4" />
-                    </div>
-                    <div>
-                      <h5 className="text-xs font-bold text-foreground group-hover:text-primary transition-colors">دروس الشركات المتعثرة</h5>
-                      <p className="text-[11px] text-muted-foreground font-medium">تحليل أسباب الفشل لتجنب الأخطاء.</p>
-                    </div>
-                  </Link>
+                    <Link href="/failed-projects" className="p-4 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3.5 group">
+                      <div className="p-3 rounded-xl bg-red-500/10 text-red-600 group-hover:bg-red-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
+                        <TrendingDown className="size-5" />
+                      </div>
+                      <div className="space-y-1">
+                        <h5 className="text-xs font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                          تحليلات دروس الشركات المتعثرة (Post-Mortem)
+                          <ChevronLeft className="size-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                        </h5>
+                        <p className="text-[11px] text-muted-foreground font-medium leading-relaxed">
+                          دراسات حالة نقدية تشرح أسباب تعثر وفشل بعض المشاريع الناشئة لمساعدتك على تجنب الأخطاء الشائعة وحماية رأس مالك.
+                        </p>
+                      </div>
+                    </Link>
+                  </div>
+
+                  <div className="pt-4 border-t border-border/60 flex items-center justify-between text-xs font-bold text-muted-foreground">
+                    <span className="text-foreground flex items-center gap-2">
+                      <span className="size-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                      قاعدة بيانات محدثة أسبوعياً بأكثر من +500 شركة ورائدة أعمال محلية وعالمية
+                    </span>
+                    <Link href="/proven-projects" className="text-primary hover:underline flex items-center gap-1 font-black">
+                      معاينة جدول المشاريع الناجحة ←
+                    </Link>
+                  </div>
 
                 </div>
               </div>
@@ -286,8 +372,8 @@ export function LandingNavbar() {
           >
             <button 
               className={cn(
-                "flex items-center gap-1 px-3 py-2 rounded-lg transition-all cursor-pointer",
-                activeDropdown === 'academy' ? "bg-muted text-foreground font-extrabold" : "hover:text-foreground hover:bg-muted/50"
+                "flex items-center gap-1.5 px-3 py-2 rounded-xl transition-all cursor-pointer",
+                activeDropdown === 'academy' ? "bg-primary/10 text-primary font-black" : "hover:text-foreground hover:bg-muted/60"
               )}
             >
               <span>المصادر والأكاديمية</span>
@@ -295,26 +381,51 @@ export function LandingNavbar() {
             </button>
 
             {activeDropdown === 'academy' && (
-              <div dir="rtl" className="absolute top-full right-0 pt-2 w-[480px] animate-in fade-in slide-in-from-top-2 duration-150 z-50">
-                <div className="p-4 rounded-2xl bg-card border border-border shadow-xl backdrop-blur-md grid grid-cols-1 gap-2 text-right">
+              <div dir="rtl" className="absolute top-full right-0 pt-2 w-[760px] animate-in fade-in slide-in-from-top-2 duration-150 z-50">
+                <div className="p-7 rounded-3xl bg-card/98 border border-border/80 shadow-2xl backdrop-blur-xl grid grid-cols-1 gap-3 text-right space-y-1">
                   
-                  <Link href="/platform-academy" className="p-3 rounded-xl hover:bg-muted/60 transition-colors flex items-start gap-3 group">
-                    <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors shrink-0">
-                      <BookOpen className="size-4" />
+                  <Link href="/platform-academy" className="p-4 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-4 group">
+                    <div className="p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all shrink-0 shadow-2xs">
+                      <BookOpen className="size-5" />
                     </div>
-                    <div>
-                      <h5 className="text-xs font-bold text-foreground group-hover:text-primary transition-colors">أكاديمية خطة والمفاهيم الريادية</h5>
-                      <p className="text-[11px] text-muted-foreground font-medium">18 مقال وحقيبة تعليمية لشرح مؤشرات SaaS و الـ BMC.</p>
+                    <div className="space-y-1">
+                      <h5 className="text-xs font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                        أكاديمية خطة والمفاهيم الريادية
+                        <ChevronLeft className="size-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                      </h5>
+                      <p className="text-[11px] text-muted-foreground font-medium leading-relaxed">
+                        مكتبة وحقيبة تعليمية متكاملة تضم 18 مقالاً وحالة دراسية تفاعلية تشرح لك كيفية حساب المقاييس المالية المتقدمة (CAC, LTV, Churn, ARR, Payback Period) وإعداد دراسات الجدوى المعتمدة لدى البنوك والمستثمرين.
+                      </p>
                     </div>
                   </Link>
 
-                  <Link href="/#faq" className="p-3 rounded-xl hover:bg-muted/60 transition-colors flex items-start gap-3 group">
-                    <div className="p-2 rounded-lg bg-blue-500/10 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors shrink-0">
-                      <HelpCircle className="size-4" />
+                  <Link href="/changelog" className="p-4 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-4 group">
+                    <div className="p-3 rounded-xl bg-amber-500/10 text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
+                      <Sparkles className="size-5" />
                     </div>
-                    <div>
-                      <h5 className="text-xs font-bold text-foreground group-hover:text-primary transition-colors">الأسئلة الشائعة والأمان</h5>
-                      <p className="text-[11px] text-muted-foreground font-medium">إجابات عن حماية البيانات بتقنية RLS والتسجيل المجاني.</p>
+                    <div className="space-y-1">
+                      <h5 className="text-xs font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                        سجل التحديثات والإصدارات (Changelog)
+                        <ChevronLeft className="size-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                      </h5>
+                      <p className="text-[11px] text-muted-foreground font-medium leading-relaxed">
+                        تابع كافة التحديثات التقنية الصادرة أسبوعياً للمنصة، الميزات الجديدة، إصلاحات الأداء السريعة، وتوثيق المجموعات البرمجية الصادرة بالنسخ الفعالة (v2.4.0).
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link href="/#faq" className="p-4 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-4 group">
+                    <div className="p-3 rounded-xl bg-blue-500/10 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
+                      <HelpCircle className="size-5" />
+                    </div>
+                    <div className="space-y-1">
+                      <h5 className="text-xs font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                        الأسئلة الشائعة ومعايير أمان وحفظ البيانات
+                        <ChevronLeft className="size-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                      </h5>
+                      <p className="text-[11px] text-muted-foreground font-medium leading-relaxed">
+                        إجابات كاملة وشفافة حول آليات حفظ البيانات سحابياً بتقنية Row Level Security (RLS)، التسجيل المجاني، وإلغاء الاشتراك أو الترقية بسهولة بدون أي التزامات.
+                      </p>
                     </div>
                   </Link>
 
@@ -333,33 +444,37 @@ export function LandingNavbar() {
         {/* Right Section: Search Command & Auth Buttons */}
         <div className="flex items-center gap-2.5">
           
-          {/* Quick Search Dialog Trigger */}
+          {/* Quick Search Icon Button Trigger */}
           <Button
             variant="outline"
-            size="sm"
+            size="icon"
             onClick={() => setIsSearchOpen(true)}
-            className="hidden md:flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground h-9 px-3 border-border/80 bg-muted/30"
+            className="size-9 border-border/80 bg-muted/30 text-muted-foreground hover:text-foreground hover:bg-muted/60"
+            title="بحث سريع (Ctrl+K)"
+            aria-label="ابحث في المنصة"
           >
-            <Search className="size-3.5 text-muted-foreground" />
-            <span>بحث سريع...</span>
-            <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-0.5 rounded border border-border bg-muted px-1.5 font-mono text-[10px] font-bold text-muted-foreground opacity-100">
-              Ctrl K
-            </kbd>
+            <Search className="size-4" />
           </Button>
 
-          {/* Auth CTA Buttons */}
-          <Link href="/login" className="hidden sm:inline-flex">
-            <Button variant="ghost" size="sm" className="font-bold text-xs h-9">
+          <div className="hidden sm:flex items-center gap-1.5">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => openAuthModal('login')}
+              className="font-bold text-xs h-9 cursor-pointer hover:bg-muted/70"
+            >
               تسجيل الدخول
             </Button>
-          </Link>
 
-          <Link href="/login">
-            <Button size="sm" className="gap-1.5 font-bold text-xs h-9 shadow-2xs bg-primary hover:bg-primary/90">
-              ابدأ رحلتك مجاناً
+            <Button
+              size="sm"
+              onClick={() => openAuthModal('register')}
+              className="gap-1.5 font-bold text-xs h-9 shadow-2xs bg-primary hover:bg-primary/90 cursor-pointer"
+            >
+              ابدأ مجاناً
               <ArrowLeft className="size-3.5" />
             </Button>
-          </Link>
+          </div>
 
           {/* Mobile Drawer Trigger (Sheet) */}
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
@@ -485,17 +600,26 @@ export function LandingNavbar() {
 
               {/* Mobile Sheet Footer CTA Buttons */}
               <div className="p-5 border-t border-border bg-muted/30 space-y-2">
-                <Link href="/login" onClick={() => setMobileMenuOpen(false)} className="w-full block">
-                  <Button variant="outline" className="w-full font-bold text-xs h-10">
-                    تسجيل الدخول
-                  </Button>
-                </Link>
-                <Link href="/login" onClick={() => setMobileMenuOpen(false)} className="w-full block">
-                  <Button className="w-full font-bold text-xs h-10 gap-1.5 shadow-2xs">
-                    إنشاء حساب مجاني
-                    <ArrowLeft className="size-4" />
-                  </Button>
-                </Link>
+                <Button
+                  variant="outline"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    openAuthModal('login');
+                  }}
+                  className="w-full font-bold text-xs h-10 cursor-pointer"
+                >
+                  تسجيل الدخول
+                </Button>
+                <Button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    openAuthModal('register');
+                  }}
+                  className="w-full font-bold text-xs h-10 gap-1.5 shadow-2xs cursor-pointer"
+                >
+                  إنشاء حساب مجاني
+                  <ArrowLeft className="size-4" />
+                </Button>
               </div>
 
             </SheetContent>
