@@ -165,6 +165,25 @@ export interface WorkspaceMetrics {
   executionScore: number;
 }
 
+export interface WorkspaceFinancialEstimate {
+  id: string;
+  modelType: 'saas' | 'sales';
+  modelTitle: string;
+  mrr: number;
+  arr: number;
+  ltv: number;
+  cac: number;
+  ltvCacRatio: number;
+  paybackMonths: number;
+  monthlyExpense: number;
+  annualOpEx: number;
+  netProfitAnnual: number;
+  netMargin: number;
+  feasibilityGrade: string;
+  savedAt: string;
+  notes?: string;
+}
+
 export interface ProjectWorkspace {
   id: string;
   updatedAt: string;
@@ -176,6 +195,7 @@ export interface ProjectWorkspace {
   brand: WorkspaceBrandProfile;
   decision: WorkspaceDecisionState;
   execution: WorkspaceExecutionState;
+  financialEstimates?: WorkspaceFinancialEstimate[];
   metrics: WorkspaceMetrics;
   recommendations: WorkspaceRecommendation[];
 }

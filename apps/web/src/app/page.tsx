@@ -7,6 +7,22 @@ import { Badge } from '@/components/ui/Badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/Card';
 import { ProvenProjectsTable } from '@/components/features/business/ProvenProjectsTable';
 import { fetchPublicJson } from '@/lib/publicData';
+import { LandingNavbar } from '@/components/layout/LandingNavbar';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuSeparator,
+  DropdownMenuLabel,
+} from '@/components/ui/dropdown-menu';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 import { 
   ArrowLeft, 
   BarChart3, 
@@ -35,7 +51,9 @@ import {
   Laptop,
   Cpu,
   Globe,
-  Users
+  Users,
+  Menu,
+  FileText
 } from 'lucide-react';
 
 const INITIAL_PREVIEW_PROJECTS = [
@@ -179,38 +197,8 @@ export default function LandingPage() {
   return (
     <div dir="rtl" className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/20">
       
-      {/* Header Navigation */}
-      <header className="sticky top-0 z-50 w-full border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="flex items-center justify-center size-9 rounded-xl bg-primary text-primary-foreground font-black text-lg shadow-2xs">
-              خ
-            </div>
-            <span className="text-2xl font-black text-foreground tracking-tight">خطة<span className="text-primary">.</span></span>
-          </div>
-
-          <nav className="hidden lg:flex items-center gap-7 text-xs font-bold text-muted-foreground">
-            <a href="#table-preview" className="hover:text-foreground transition-colors">جدول المشاريع والفرص</a>
-            <a href="#saas-models" className="hover:text-foreground transition-colors">نماذج مشاريع SaaS</a>
-            <a href="#features" className="hover:text-foreground transition-colors">المميزات</a>
-            <a href="#calculator" className="hover:text-foreground transition-colors">حاسبة الإيرادات</a>
-            <a href="#academy" className="hover:text-foreground transition-colors">الأكاديمية</a>
-            <a href="#faq" className="hover:text-foreground transition-colors">الأسئلة الشائعة</a>
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <Link href="/login">
-              <Button variant="ghost" size="sm" className="font-bold text-xs">تسجيل الدخول</Button>
-            </Link>
-            <Link href="/login">
-              <Button size="sm" className="gap-1.5 font-bold text-xs shadow-2xs">
-                ابدأ رحلتك مجاناً
-                <ArrowLeft className="size-3.5" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </header>
+      {/* Landing Navbar Component */}
+      <LandingNavbar />
 
       <main className="flex flex-col gap-20 pb-20">
         
@@ -376,24 +364,24 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             
             {/* SaaS Model Card 1: Enterprise B2B SaaS */}
-            <Card className="border-border shadow-2xs hover:shadow-md transition-all flex flex-col justify-between bg-card relative overflow-hidden">
+            <Card className="border-border shadow-2xs hover:shadow-md transition-all flex flex-col justify-between bg-card relative overflow-hidden text-center">
               <div className="h-1.5 bg-blue-600 w-full"></div>
-              <CardHeader className="p-5 pb-3">
-                <div className="flex items-center justify-between gap-2 mb-2">
+              <CardHeader className="p-5 pb-3 flex flex-col items-center">
+                <div className="flex items-center justify-between gap-2 mb-2 w-full">
                   <Badge variant="secondary" className="bg-blue-50 text-blue-700 border-0 text-[10px] font-bold">
                     B2B Enterprise SaaS
                   </Badge>
                   <span className="text-xs font-black text-blue-700">$14.2M ARR</span>
                 </div>
-                <CardTitle className="text-base font-bold text-foreground">
+                <CardTitle className="text-base font-bold text-foreground text-center">
                   فودكس (Foodics SaaS)
                 </CardTitle>
-                <CardDescription className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                <CardDescription className="text-xs text-muted-foreground mt-1 leading-relaxed text-center">
                   منصة إدارة المطاعم والمقاهي ونقاط البيع السحابية.
                 </CardDescription>
               </CardHeader>
-              <CardContent className="p-5 pt-0 space-y-3 text-xs">
-                <div className="space-y-1.5 p-3 rounded-xl bg-muted/40 border border-border/50 font-medium">
+              <CardContent className="p-5 pt-0 space-y-3 text-xs flex flex-col items-center">
+                <div className="space-y-1.5 p-3 rounded-xl bg-muted/40 border border-border/50 font-medium w-full text-center">
                   <div className="flex justify-between text-[11px]">
                     <span className="text-muted-foreground">نموذج التسعير:</span>
                     <span className="font-bold text-foreground">اشتراك سنوي + رسوم جهاز</span>
@@ -408,9 +396,9 @@ export default function LandingPage() {
                   </div>
                 </div>
               </CardContent>
-              <CardFooter className="p-5 pt-0">
+              <CardFooter className="p-5 pt-0 flex justify-center">
                 <Link href="/login" className="w-full">
-                  <Button variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5">
+                  <Button variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center">
                     تصفح تحليل الـ SaaS الكامل
                     <ArrowLeft className="size-3" />
                   </Button>
@@ -419,24 +407,24 @@ export default function LandingPage() {
             </Card>
 
             {/* SaaS Model Card 2: Creator Economy SaaS */}
-            <Card className="border-border shadow-2xs hover:shadow-md transition-all flex flex-col justify-between bg-card relative overflow-hidden">
+            <Card className="border-border shadow-2xs hover:shadow-md transition-all flex flex-col justify-between bg-card relative overflow-hidden text-center">
               <div className="h-1.5 bg-purple-600 w-full"></div>
-              <CardHeader className="p-5 pb-3">
-                <div className="flex items-center justify-between gap-2 mb-2">
+              <CardHeader className="p-5 pb-3 flex flex-col items-center">
+                <div className="flex items-center justify-between gap-2 mb-2 w-full">
                   <Badge variant="secondary" className="bg-purple-50 text-purple-700 border-0 text-[10px] font-bold">
                     Creator SaaS
                   </Badge>
                   <span className="text-xs font-black text-purple-700">$2.4M MRR</span>
                 </div>
-                <CardTitle className="text-base font-bold text-foreground">
+                <CardTitle className="text-base font-bold text-foreground text-center">
                   ConvertKit / Beehiiv
                 </CardTitle>
-                <CardDescription className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                <CardDescription className="text-xs text-muted-foreground mt-1 leading-relaxed text-center">
                   منصات النشرات البريدية وتسويق صناع المحتوى.
                 </CardDescription>
               </CardHeader>
-              <CardContent className="p-5 pt-0 space-y-3 text-xs">
-                <div className="space-y-1.5 p-3 rounded-xl bg-muted/40 border border-border/50 font-medium">
+              <CardContent className="p-5 pt-0 space-y-3 text-xs flex flex-col items-center">
+                <div className="space-y-1.5 p-3 rounded-xl bg-muted/40 border border-border/50 font-medium w-full text-center">
                   <div className="flex justify-between text-[11px]">
                     <span className="text-muted-foreground">نموذج التسعير:</span>
                     <span className="font-bold text-foreground">تدرج حسب عدد المشتركين</span>
@@ -451,9 +439,9 @@ export default function LandingPage() {
                   </div>
                 </div>
               </CardContent>
-              <CardFooter className="p-5 pt-0">
+              <CardFooter className="p-5 pt-0 flex justify-center">
                 <Link href="/login" className="w-full">
-                  <Button variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5">
+                  <Button variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center">
                     تصفح تحليل الـ SaaS الكامل
                     <ArrowLeft className="size-3" />
                   </Button>
@@ -462,24 +450,24 @@ export default function LandingPage() {
             </Card>
 
             {/* SaaS Model Card 3: Micro-SaaS Boilerplate */}
-            <Card className="border-border shadow-2xs hover:shadow-md transition-all flex flex-col justify-between bg-card relative overflow-hidden">
+            <Card className="border-border shadow-2xs hover:shadow-md transition-all flex flex-col justify-between bg-card relative overflow-hidden text-center">
               <div className="h-1.5 bg-emerald-600 w-full"></div>
-              <CardHeader className="p-5 pb-3">
-                <div className="flex items-center justify-between gap-2 mb-2">
+              <CardHeader className="p-5 pb-3 flex flex-col items-center">
+                <div className="flex items-center justify-between gap-2 mb-2 w-full">
                   <Badge variant="secondary" className="bg-emerald-50 text-emerald-700 border-0 text-[10px] font-bold">
                     Micro-SaaS Tool
                   </Badge>
                   <span className="text-xs font-black text-emerald-700">$45K / mo</span>
                 </div>
-                <CardTitle className="text-base font-bold text-foreground">
+                <CardTitle className="text-base font-bold text-foreground text-center">
                   ShipFast / Plausible
                 </CardTitle>
-                <CardDescription className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                <CardDescription className="text-xs text-muted-foreground mt-1 leading-relaxed text-center">
                   أدوات برمجية مخصصة ومصغرة لإطلاق التطبيقات بسرعة.
                 </CardDescription>
               </CardHeader>
-              <CardContent className="p-5 pt-0 space-y-3 text-xs">
-                <div className="space-y-1.5 p-3 rounded-xl bg-muted/40 border border-border/50 font-medium">
+              <CardContent className="p-5 pt-0 space-y-3 text-xs flex flex-col items-center">
+                <div className="space-y-1.5 p-3 rounded-xl bg-muted/40 border border-border/50 font-medium w-full text-center">
                   <div className="flex justify-between text-[11px]">
                     <span className="text-muted-foreground">نموذج التسعير:</span>
                     <span className="font-bold text-foreground">شراء لمرة واحدة أو اشتراك</span>
@@ -494,9 +482,9 @@ export default function LandingPage() {
                   </div>
                 </div>
               </CardContent>
-              <CardFooter className="p-5 pt-0">
+              <CardFooter className="p-5 pt-0 flex justify-center">
                 <Link href="/login" className="w-full">
-                  <Button variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5">
+                  <Button variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center">
                     تصفح تحليل الـ SaaS الكامل
                     <ArrowLeft className="size-3" />
                   </Button>
@@ -505,24 +493,24 @@ export default function LandingPage() {
             </Card>
 
             {/* SaaS Model Card 4: Developer Infrastructure SaaS */}
-            <Card className="border-border shadow-2xs hover:shadow-md transition-all flex flex-col justify-between bg-card relative overflow-hidden">
+            <Card className="border-border shadow-2xs hover:shadow-md transition-all flex flex-col justify-between bg-card relative overflow-hidden text-center">
               <div className="h-1.5 bg-amber-600 w-full"></div>
-              <CardHeader className="p-5 pb-3">
-                <div className="flex items-center justify-between gap-2 mb-2">
+              <CardHeader className="p-5 pb-3 flex flex-col items-center">
+                <div className="flex items-center justify-between gap-2 mb-2 w-full">
                   <Badge variant="secondary" className="bg-amber-50 text-amber-700 border-0 text-[10px] font-bold">
                     Dev SaaS Infrastructure
                   </Badge>
                   <span className="text-xs font-black text-amber-700">$850K MRR</span>
                 </div>
-                <CardTitle className="text-base font-bold text-foreground">
+                <CardTitle className="text-base font-bold text-foreground text-center">
                   Vercel / Resend
                 </CardTitle>
-                <CardDescription className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                <CardDescription className="text-xs text-muted-foreground mt-1 leading-relaxed text-center">
                   بنية تحتية سحابية للمطورين والشركات التقنية.
                 </CardDescription>
               </CardHeader>
-              <CardContent className="p-5 pt-0 space-y-3 text-xs">
-                <div className="space-y-1.5 p-3 rounded-xl bg-muted/40 border border-border/50 font-medium">
+              <CardContent className="p-5 pt-0 space-y-3 text-xs flex flex-col items-center">
+                <div className="space-y-1.5 p-3 rounded-xl bg-muted/40 border border-border/50 font-medium w-full text-center">
                   <div className="flex justify-between text-[11px]">
                     <span className="text-muted-foreground">نموذج التسعير:</span>
                     <span className="font-bold text-foreground">حسب الاستهلاك (Pay as you go)</span>
@@ -537,9 +525,9 @@ export default function LandingPage() {
                   </div>
                 </div>
               </CardContent>
-              <CardFooter className="p-5 pt-0">
+              <CardFooter className="p-5 pt-0 flex justify-center">
                 <Link href="/login" className="w-full">
-                  <Button variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5">
+                  <Button variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center">
                     تصفح تحليل الـ SaaS الكامل
                     <ArrowLeft className="size-3" />
                   </Button>
@@ -730,13 +718,13 @@ export default function LandingPage() {
             ].map((feature, i) => {
               const Icon = feature.icon;
               return (
-                <Card key={i} className="border-border shadow-2xs hover:shadow-md transition-all bg-card">
-                  <CardContent className="p-6">
-                    <div className={`size-11 rounded-xl flex items-center justify-center mb-5 ${feature.bg}`}>
+                <Card key={i} className="border-border shadow-2xs hover:shadow-md transition-all bg-card text-center">
+                  <CardContent className="p-6 flex flex-col items-center">
+                    <div className={`size-11 rounded-xl flex items-center justify-center mb-5 mx-auto ${feature.bg}`}>
                       <Icon className={`size-5 ${feature.color}`} />
                     </div>
-                    <h3 className="text-base font-extrabold text-foreground mb-2">{feature.title}</h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed font-medium">{feature.description}</p>
+                    <h3 className="text-base font-extrabold text-foreground mb-2 text-center">{feature.title}</h3>
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed font-medium text-center">{feature.description}</p>
                   </CardContent>
                 </Card>
               );
@@ -747,8 +735,8 @@ export default function LandingPage() {
         {/* SECTION 5: Platform Academy Showcase */}
         <section id="academy" className="container mx-auto px-4 max-w-7xl">
           <div className="bg-card border border-border rounded-3xl p-6 sm:p-10 shadow-2xs">
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-10 pb-6 border-b border-border/80">
-              <div className="space-y-2">
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-10 pb-6 border-b border-border/80 text-center lg:text-right">
+              <div className="space-y-2 flex flex-col items-center lg:items-start text-center lg:text-right">
                 <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 text-xs font-bold px-3 py-1 rounded-full gap-1.5">
                   <GraduationCap className="size-3.5" />
                   أكاديمية المنصة والمفاهيم
@@ -761,7 +749,7 @@ export default function LandingPage() {
                 </p>
               </div>
 
-              <Link href="/platform-academy" className="shrink-0">
+              <Link href="/platform-academy" className="shrink-0 mx-auto lg:mx-0">
                 <Button variant="outline" className="font-bold text-xs h-11 px-5 gap-2">
                   <BookOpen className="size-4 text-primary" />
                   تصفح الأكاديمية كاملة (18 مقال)
@@ -794,18 +782,18 @@ export default function LandingPage() {
                   slug: 'market-gaps-analysis'
                 }
               ].map((art, i) => (
-                <div key={i} className="p-5 rounded-2xl bg-muted/30 border border-border/60 flex flex-col justify-between gap-4">
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between text-[11px] font-bold text-muted-foreground">
+                <div key={i} className="p-5 rounded-2xl bg-muted/30 border border-border/60 flex flex-col justify-between gap-4 text-center">
+                  <div className="space-y-2 flex flex-col items-center">
+                    <div className="flex items-center justify-between text-[11px] font-bold text-muted-foreground w-full">
                       <span className="text-primary">{art.category}</span>
                       <Badge variant="secondary" className="text-[10px] font-bold">{art.level}</Badge>
                     </div>
-                    <h3 className="text-sm font-extrabold text-foreground leading-snug">{art.title}</h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed">{art.summary}</p>
+                    <h3 className="text-sm font-extrabold text-foreground leading-snug text-center">{art.title}</h3>
+                    <p className="text-xs text-muted-foreground leading-relaxed text-center">{art.summary}</p>
                   </div>
 
                   <Link href={`/platform-academy?article=${art.slug}`}>
-                    <Button variant="ghost" size="sm" className="w-full text-xs font-bold justify-between p-0 hover:bg-transparent text-primary hover:text-primary/80">
+                    <Button variant="ghost" size="sm" className="w-full text-xs font-bold justify-center p-0 hover:bg-transparent text-primary hover:text-primary/80 gap-1.5">
                       <span>قراءة المقال التعليمي</span>
                       <ArrowLeft className="size-3.5" />
                     </Button>

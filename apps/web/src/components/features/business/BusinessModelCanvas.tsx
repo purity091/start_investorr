@@ -614,24 +614,23 @@ export const BusinessModelCanvas: React.FC<{
     <div dir="rtl" className="min-h-screen bg-background px-3 pb-10 pt-4 sm:px-4 lg:px-5 2xl:px-6">
       <div className="mx-auto flex w-full max-w-[1880px] flex-col gap-4">
         <TooltipProvider>
-          <section className="rounded-xl border border-border bg-card p-3 sm:p-4 shadow-sm">
-            <div className="flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between">
+          <section className="bg-background px-0 py-1">
+            <div className="flex flex-col gap-2.5 xl:flex-row xl:items-center xl:justify-between">
               <div className="min-w-0 text-right">
                 <div className="flex items-center gap-2">
-                  <Badge variant="outline">Canvas</Badge>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <Button variant="ghost" size="icon" className="size-7">
-                        <HelpCircle size={15} />
+                      <Button variant="ghost" size="icon" className="size-6">
+                        <HelpCircle size={14} />
                       </Button>
                     </TooltipTrigger>
-                    <TooltipContent side="bottom" className="max-w-sm text-right leading-6">
+                    <TooltipContent side="bottom" className="max-w-sm text-right leading-5 text-xs">
                       كل قسم في المخطط يفتح أسئلته داخل نافذة منظمة. استخدم الصفحة لتعديل المخطط، وليس لقراءة شرح طويل قبل الوصول إليه.
                     </TooltipContent>
                   </Tooltip>
+                  <h1 className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">بناء نموذج العمل BMC</h1>
                 </div>
-                <h1 className="mt-2 text-xl font-semibold tracking-tight text-foreground">بناء نموذج العمل BMC</h1>
-                <p className="mt-1 text-sm text-muted-foreground">
+                <p className="mt-0.5 text-xs sm:text-sm text-muted-foreground">
                   {activeProject?.brief.name || 'مشروع بدون اسم'} · {answeredQuestions}/{totalQuestions} إجابة · الجاهزية {readiness}%
                 </p>
               </div>

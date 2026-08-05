@@ -334,11 +334,10 @@ function ProjectDashboard({
         <Card className="border-0 bg-background shadow-none">
           <CardHeader className="px-0 pt-0">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-              <div className="space-y-3 text-right">
-                <Badge variant="secondary" className="w-fit rounded-md">النموذج الاحترافي</Badge>
-                <div className="space-y-2">
-                  <CardTitle className="text-2xl sm:text-3xl">لوحة المشروع الاحترافية</CardTitle>
-                  <CardDescription className="max-w-3xl text-sm leading-7">
+              <div className="space-y-2 text-right">
+                <div className="space-y-1">
+                  <CardTitle className="text-xl sm:text-2xl">لوحة المشروع الاحترافية</CardTitle>
+                  <CardDescription className="max-w-3xl text-xs sm:text-sm leading-6">
                     تعرض هذه اللوحة كل إدخالات دراسة الجدوى كما أدخلها المستخدم، مقسمة حسب أقسام احترافية يمكن البناء عليها في نموذج مالي أو ملف مستثمر أو مرحلة MVP.
                   </CardDescription>
                 </div>

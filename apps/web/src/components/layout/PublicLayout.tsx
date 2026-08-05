@@ -2,37 +2,13 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { ArrowLeft, Sparkles } from 'lucide-react';
-import { FeaturesMegaMenu } from '@/components/layout/FeaturesMegaMenu';
+import { LandingNavbar } from '@/components/layout/LandingNavbar';
 
 export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div dir="rtl" className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/20 flex flex-col">
       {/* Header Navigation */}
-      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/" className="text-2xl font-black text-primary tracking-tight">
-            خطة<span className="text-foreground">.</span>
-          </Link>
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-            <FeaturesMegaMenu />
-            <Link href="/pricing-plans" className="text-muted-foreground hover:text-foreground transition-colors font-semibold">الأسعار والخطط</Link>
-            <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors font-semibold">من نحن</Link>
-            <Link href="/faq" className="text-muted-foreground hover:text-foreground transition-colors font-semibold">الأسئلة الشائعة</Link>
-            <Link href="/contact-us" className="text-muted-foreground hover:text-foreground transition-colors font-semibold">اتصل بنا</Link>
-          </nav>
-          <div className="flex items-center gap-3">
-            <Link href="/login">
-              <Button variant="ghost" size="sm" className="hidden sm:inline-flex">تسجيل الدخول</Button>
-            </Link>
-            <Link href="/login">
-              <Button size="sm" className="gap-2 shadow-sm">
-                <Sparkles className="size-4" />
-                ابدأ رحلتك مجاناً
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </header>
+      <LandingNavbar />
 
       <main className="flex-1">
         {children}

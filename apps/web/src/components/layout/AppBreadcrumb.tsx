@@ -48,7 +48,7 @@ const TAB_LABELS: Record<string, string> = {
   'brand-identity': 'الهوية البصرية',
   workspace: 'مساحة المشروع',
   editor: 'محرر خطة العمل',
-  'strategic-dashboard': 'لوحة القرار',
+  'strategic-dashboard': 'النموذج الاحترافي',
   pricing: 'اشتراكي',
   profile: 'ملف التعريف',
   settings: 'ملف التعريف',

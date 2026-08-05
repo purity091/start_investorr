@@ -174,73 +174,7 @@ const STATUS_OPTIONS: Array<{ id: StatusFilter; label: string }> = [
   { id: 'draft', label: STATUS_META.draft.label },
 ];
 
-const MOCK_PROJECTS: Project[] = [
-  {
-    id: 'mock-p1',
-    name: 'أكاديمية الذكاء الاصطناعي (مثال)',
-    sector: 'EdTech',
-    type: 'pro',
-    status: 'ready',
-    progress: { market: 100, product: 90, financial: 95 },
-    aiScore: 94,
-    lastEdited: 'منذ ساعتين',
-    marketCap: '$1.4M',
-    isFavorite: false,
-    isMockExample: true,
-  },
-  {
-    id: 'mock-easy',
-    name: 'منصة الحصاد الذكي (مثال)',
-    sector: 'AgriTech',
-    type: 'easy',
-    status: 'review',
-    progress: { market: 85, product: 70, financial: 40 },
-    aiScore: 78,
-    lastEdited: 'منذ يومين',
-    marketCap: '$800K',
-    isFavorite: false,
-    isMockExample: true,
-  },
-  {
-    id: 'mock-p3',
-    name: 'بوابة الدفع الإقليمية (مثال)',
-    sector: 'FinTech',
-    type: 'mit24',
-    status: 'draft',
-    progress: { market: 40, product: 20, financial: 10 },
-    aiScore: 45,
-    lastEdited: 'منذ 4 أيام',
-    marketCap: '$5.2M',
-    isFavorite: false,
-    isMockExample: true,
-  },
-  {
-    id: 'mock-bmc',
-    name: 'عقارات افتراضية (مثال)',
-    sector: 'Property',
-    type: 'bmc',
-    status: 'ready',
-    progress: { market: 100, product: 100, financial: 90 },
-    aiScore: 91,
-    lastEdited: 'منذ أسبوع',
-    marketCap: '$12M',
-    isFavorite: false,
-    isMockExample: true,
-  },
-  {
-    id: 'mock-p5',
-    name: 'استوديو محتوى عربي (مثال)',
-    sector: 'Media',
-    type: 'easy',
-    status: 'draft',
-    progress: { market: 55, product: 45, financial: 25 },
-    aiScore: 59,
-    lastEdited: '18/07/2026',
-    marketCap: '$420K',
-    isFavorite: false,
-    isMockExample: true,
-  }
-];
+const MOCK_PROJECTS: Project[] = [];
 
 const PROJECTS_CACHE_TTL_MS = 60 * 1000;
 
@@ -345,12 +279,12 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
             share_token: row.share_token,
           };
         });
-        const nextProjects = [...realProjects, ...MOCK_PROJECTS];
+        const nextProjects = realProjects;
         setProjectsList(nextProjects);
         writeProjectsCache(user.id, nextProjects);
       } else {
-        setProjectsList(MOCK_PROJECTS);
-        writeProjectsCache(user.id, MOCK_PROJECTS);
+        setProjectsList([]);
+        writeProjectsCache(user.id, []);
       }
     } catch (err) {
       console.error('Error fetching projects:', err);
@@ -398,15 +332,8 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
 
   const handleDelete = async (id: string, name: string) => {
     const project = projectsList.find((item) => item.id === id);
-    if (project?.isMockExample || MOCK_PROJECTS.some((p) => p.id === id)) {
-      setNotice({
-        title: 'لا يمكن حذف المثال التجريبي',
-        description: 'الأمثلة التجريبية موجودة لمساعدتك على فهم شكل المشاريع. يمكنك إنشاء مشروع جديد أو تجاهل المثال.',
-      });
-      return;
-    }
-
-    setPendingDeleteProject(project ?? { ...MOCK_PROJECTS[0], id, name, isMockExample: false });
+    if (!project) return;
+    setPendingDeleteProject(project);
   };
 
   const confirmDelete = async () => {
@@ -508,10 +435,7 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
             <div className="space-y-1 text-right">
               <CardTitle className="text-xl">مشاريعي</CardTitle>
               <CardDescription>
-                {projectsList.filter(p => !MOCK_PROJECTS.some(m => m.id === p.id)).length} مشروع حقيقي
-                {MOCK_PROJECTS.length > 0 && (
-                  <span className="text-muted-foreground/60"> + {MOCK_PROJECTS.length} مثال تجريبي</span>
-                )}
+                {projectsList.length} مشروع خاص
               </CardDescription>
             </div>
 

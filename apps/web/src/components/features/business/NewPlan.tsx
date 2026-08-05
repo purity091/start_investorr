@@ -14,6 +14,8 @@ import {
   Zap,
   RefreshCcw,
   Target,
+  BookOpen,
+  Plus,
 } from 'lucide-react';
 
 import SmartBeginnerPro from '../../../features/easy-mode/SmartBeginnerPro';
@@ -35,6 +37,7 @@ import LeanStartupWizard from '@/features/business/LeanStartupWizard';
 import { useAuth } from '@/features/auth/AuthContext';
 import { supabase } from '@/lib/supabase';
 import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
+import { cn } from '@/lib/utils';
 
 type ToolMode = 'selection' | 'easy' | 'ai' | 'family' | 'bmc' | 'mit24' | 'lean';
 type IntroMode = Exclude<ToolMode, 'selection' | 'ai'>;
@@ -70,6 +73,7 @@ interface SectionProject {
   status: ProjectStatus;
   progress: number;
   updated: string;
+  description?: string;
 }
 
 const TOOL_INTROS: Record<IntroMode, ToolIntro> = {
@@ -232,19 +236,59 @@ const TOOL_INTROS: Record<IntroMode, ToolIntro> = {
 
 const SECTION_PROJECTS: Record<IntroMode, SectionProject[]> = {
   family: [
-    { id: 'example-family-1', name: 'منصة الحصاد الذكي (مثال)', sector: 'AgriTech', status: 'review', progress: 65, updated: 'منذ 5 ساعات' },
+    {
+      id: 'example-family-linksync',
+      name: 'LinkSync - أداة ربط الحسابات',
+      sector: 'Micro SaaS - أدوات مطورين',
+      status: 'ready',
+      progress: 100,
+      updated: 'مثال توضيحي',
+      description: 'أداة سحابية خفيفة تربط بين منصات الدفع وخدمات البريد الإلكتروني للمتاجر الصغيرة دون الحاجة لأي كود.'
+    },
   ],
   easy: [
-    { id: 'example-easy-1', name: 'أكاديمية الذكاء الاصطناعي (مثال)', sector: 'EdTech', status: 'ready', progress: 95, updated: 'منذ ساعتين' },
+    {
+      id: 'example-easy-formai',
+      name: 'FormAI - صانع نماذج ذكي',
+      sector: 'Micro SaaS - إنتاجية وتسويق',
+      status: 'ready',
+      progress: 95,
+      updated: 'مثال توضيحي',
+      description: 'منصة لإنشاء نماذج جمع البيانات باستخدام الذكاء الاصطناعي مع تحليلات متقدمة ودعم كامل للغة العربية.'
+    },
   ],
   mit24: [
-    { id: 'example-mit-1', name: 'بوابة الدفع الإقليمية (مثال)', sector: 'FinTech', status: 'draft', progress: 23, updated: 'أمس' },
+    {
+      id: 'example-mit-clinicsync',
+      name: 'ClinicSync - حجز العيادات السحابي',
+      sector: 'Micro SaaS - تقنية صحية',
+      status: 'ready',
+      progress: 88,
+      updated: 'مثال توضيحي',
+      description: 'نظام حجز وإدارة مبسط جداً لعيادات الأسنان المستقلة للحد من تغيب المرضى عبر رسائل واتساب آلية.'
+    },
   ],
   bmc: [
-    { id: 'example-bmc-1', name: 'عقارات افتراضية (مثال)', sector: 'Property', status: 'ready', progress: 97, updated: 'منذ يومين' },
+    {
+      id: 'example-bmc-menuqr',
+      name: 'MenuQR - منيو المطاعم التفاعلي',
+      sector: 'Micro SaaS - ضيافة ومطاعم',
+      status: 'ready',
+      progress: 92,
+      updated: 'مثال توضيحي',
+      description: 'خدمة سريعة لتحويل قوائم الطعام التقليدية إلى قوائم رقمية تفاعلية بمسح الـ QR للمقاهي والمطاعم.'
+    },
   ],
   lean: [
-    { id: 'example-lean-1', name: 'تطبيق مناديب (مثال)', sector: 'Logistics', status: 'review', progress: 40, updated: 'قبل ساعة' },
+    {
+      id: 'example-lean-delivernow',
+      name: 'DeliverNow - توصيل سريع',
+      sector: 'Logistics - خدمات لوجستية',
+      status: 'review',
+      progress: 60,
+      updated: 'مثال توضيحي',
+      description: 'نموذج لاختبار ما إذا كانت المطاعم مستعدة للدفع مقابل نظام إدارة أسطول المناديب المستقلين.'
+    },
   ],
 };
 
@@ -273,43 +317,48 @@ const ToolIntroPanel: React.FC<{ mode: IntroMode; onStart: () => void; onBack?: 
   const IntroIcon = intro.icon;
 
   return (
-    <div dir="rtl" className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 py-6 sm:py-8 sm:px-6 lg:px-8">
-      {/* Header Info */}
-      <div className="flex flex-col gap-6 text-right">
-        <div className="flex items-start gap-4">
-          <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary shadow-sm ring-1 ring-primary/20">
-            <IntroIcon className="size-6" />
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-3 py-2 sm:px-4 lg:px-5 text-right">
+      {/* Header Info - Borderless and clean matching SmartBeginnerPro */}
+      <div className="flex flex-col gap-2 bg-background px-0 py-1">
+        <div className="flex items-start gap-3">
+          <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary ring-1 ring-primary/20 mt-0.5">
+            <IntroIcon className="size-4.5" />
           </div>
-          <div className="space-y-2">
-            <div className="flex items-center gap-3">
-              <h1 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">{intro.title}</h1>
-              <Badge variant="secondary" className="bg-muted/50 text-xs sm:text-sm">{intro.badge}</Badge>
+          <div className="space-y-1 flex-1 min-w-0">
+            <div className="flex items-center gap-2.5 flex-wrap">
+              <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground">{intro.title}</h1>
+              {onBack && (
+                <Button type="button" size="sm" variant="ghost" className="mr-auto font-medium text-xs h-7 text-muted-foreground hover:text-foreground" onClick={onBack}>
+                  العودة للخيارات
+                </Button>
+              )}
             </div>
-            <p className="max-w-4xl text-sm leading-8 text-muted-foreground sm:text-base sm:leading-8">
+            <p className="max-w-4xl text-xs sm:text-sm leading-6 text-muted-foreground">
               {intro.summary}
             </p>
           </div>
         </div>
-        <div className="flex flex-wrap items-center gap-3">
-          <Button type="button" size="lg" className="px-8 font-semibold shadow-sm" onClick={onStart}>
-            إنشاء دراسة عبر {intro.title}
-          </Button>
-          {onBack && (
-            <Button type="button" size="lg" variant="outline" className="px-8 shadow-sm" onClick={onBack}>
-              العودة للخيارات
-            </Button>
-          )}
+      </div>
+
+      {/* HERO INTERACTIVE CONTAINER: TABLE WITH INLINE "CREATE STUDY" ACTION */}
+      <div className="space-y-2">
+        <ModeProjectsSection mode={mode} onStart={onStart} onViewExample={onViewExample} />
+      </div>
+
+      {/* EXPLANATORY CARDS (الشروحات والتوضيحات) */}
+      <div className="space-y-4 pt-2">
+        <div className="flex items-center justify-between border-b border-border/60 pb-3">
+          <h2 className="text-base font-bold text-foreground flex items-center gap-2">
+            <BookOpen className="size-4.5 text-primary" />
+            دليل وشرح مسار العمل في {intro.title}
+          </h2>
+          <span className="text-xs text-muted-foreground">مرجع إرشادي لتوضيح خطوات ومخرجات بناء الفكرة</span>
         </div>
-      </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <ExplanationCard title="كيف تبني الدراسة بهذا المسار؟" items={intro.steps} />
-        <ExplanationCard title="ماذا ستحصل في النهاية؟" items={intro.outcomes} />
-        <ExampleCard example={intro.example} onViewExample={onViewExample} />
-      </div>
-
-      <div className="pt-4">
-        <ModeProjectsSection mode={mode} />
+        <div className="grid gap-6 md:grid-cols-2">
+          <ExplanationCard title="كيف تبني الدراسة بهذا المسار؟" items={intro.steps} />
+          <ExplanationCard title="ماذا ستحصل في النهاية؟" items={intro.outcomes} />
+        </div>
       </div>
     </div>
   );
@@ -366,14 +415,11 @@ export const NewPlan: React.FC<{
   }
 
   return (
-    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 sm:py-8 sm:px-6 lg:px-8">
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
       {/* Header */}
-      <div className="flex flex-col gap-3 mb-2">
-        <div className="flex items-center gap-3">
-          <Badge variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/10 border-0">بناء دراسة جدوى مشروع</Badge>
-        </div>
-        <h1 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">اختر أداة بناء الدراسة المناسبة</h1>
-        <p className="max-w-3xl text-sm leading-7 text-muted-foreground sm:text-base">
+      <div className="flex flex-col gap-2 mb-1">
+        <h1 className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">اختر أداة بناء الدراسة المناسبة</h1>
+        <p className="max-w-3xl text-xs sm:text-sm leading-6 text-muted-foreground">
           اختر المسار الأقرب لمرحلة مشروعك الحالية. كل أداة تبدأ بشرح واضح لما ستفعله، ثم تنتقل إلى التنفيذ داخل نفس الصفحة.
         </p>
       </div>
@@ -496,27 +542,36 @@ export const NewPlan: React.FC<{
 
 function ExplanationCard({ title, items }: { title: string; items: string[] }) {
   return (
-    <Card className="h-full border-border/60 shadow-sm bg-card">
-      <CardHeader className="border-b border-border/40 bg-muted/20 px-4 sm:px-5 py-4">
-        <CardTitle className="text-base text-foreground font-semibold">{title}</CardTitle>
+    <Card className="h-full border border-border bg-card shadow-sm">
+      <CardHeader className="border-b border-border/50 bg-muted/20 px-5 py-4">
+        <CardTitle className="text-base font-bold text-foreground flex items-center gap-2">
+          <Sparkles className="size-4 text-primary" />
+          {title}
+        </CardTitle>
       </CardHeader>
-      <CardContent className="p-4 sm:p-5">
-        <div className="space-y-4">
-          {items.map((item, index) => (
-            <div key={item} className="flex items-start gap-3 text-right">
-              <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-[11px] font-bold text-primary ring-1 ring-primary/20">
-                {index + 1}
-              </span>
-              <p className="text-sm leading-6 text-muted-foreground">{item}</p>
-            </div>
-          ))}
-        </div>
+      <CardContent className="p-5 space-y-4">
+        {items.map((item, index) => (
+          <div key={item} className="flex items-start gap-3 text-right">
+            <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs font-bold text-primary border border-primary/20">
+              {index + 1}
+            </span>
+            <p className="text-sm leading-relaxed text-muted-foreground font-medium">{item}</p>
+          </div>
+        ))}
       </CardContent>
     </Card>
   );
 }
 
-function ModeProjectsSection({ mode }: { mode: IntroMode }) {
+function ModeProjectsSection({
+  mode,
+  onStart,
+  onViewExample,
+}: {
+  mode: IntroMode;
+  onStart: () => void;
+  onViewExample: () => void;
+}) {
   const intro = TOOL_INTROS[mode];
   const { user } = useAuth();
   const [projectsList, setProjectsList] = useState<SectionProject[]>([]);
@@ -669,23 +724,32 @@ function ModeProjectsSection({ mode }: { mode: IntroMode }) {
 
   return (
     <>
-    <Card className="shadow-none">
-      <CardHeader className="gap-1 p-4 sm:p-6">
-        <CardTitle className="text-lg">{intro.projectLabel}</CardTitle>
-        <CardDescription>
-          تظهر هنا فقط المشاريع التي تم إنشاؤها من هذا المسار، بنفس أسلوب جدول مشاريعي.
-        </CardDescription>
+    <Card className="shadow-none border border-border">
+      <CardHeader className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between p-5 sm:p-6 border-b border-border/50">
+        <div className="space-y-1 text-right">
+          <CardTitle className="text-xl font-bold text-foreground">{intro.projectLabel}</CardTitle>
+          <CardDescription className="text-sm text-muted-foreground">
+            تظهر هنا مشاريعك المنشأة عبر هذا المسار، بالإضافة للمثال التوضيحي للنتيجة.
+          </CardDescription>
+        </div>
+
+        <div className="flex items-center gap-3 shrink-0">
+          <Button type="button" size="lg" className="px-6 font-bold text-sm shadow-sm gap-2" onClick={onStart}>
+            <Plus className="size-5" />
+            إنشاء دراسة عبر {intro.title}
+          </Button>
+        </div>
       </CardHeader>
       <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
         <div className="hidden overflow-hidden rounded-md lg:block">
           <Table dir="rtl">
             <TableHeader>
               <TableRow>
-                <TableHead className="min-w-[260px]">المشروع</TableHead>
-                <TableHead className="w-[125px]">إجراءات</TableHead>
-                <TableHead className="w-[100px]">التقدم</TableHead>
-                <TableHead className="min-w-[130px]">الحالة</TableHead>
-                <TableHead className="min-w-[130px]">آخر تعديل</TableHead>
+                <TableHead className="min-w-[260px] text-right font-bold text-foreground">المشروع</TableHead>
+                <TableHead className="w-[140px] text-right font-bold text-foreground">إجراءات</TableHead>
+                <TableHead className="w-[100px] text-right font-bold text-foreground">التقدم</TableHead>
+                <TableHead className="min-w-[130px] text-right font-bold text-foreground">الحالة</TableHead>
+                <TableHead className="min-w-[130px] text-right font-bold text-foreground">آخر تعديل</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -696,6 +760,7 @@ function ModeProjectsSection({ mode }: { mode: IntroMode }) {
                   onDelete={handleDelete}
                   onShare={handleShare}
                   onOpen={() => handleOpenProject(project)}
+                  onViewExample={onViewExample}
                 />
               ))}
             </TableBody>
@@ -835,49 +900,74 @@ function ProjectRow({
   onDelete,
   onShare,
   onOpen,
+  onViewExample,
 }: {
   project: SectionProject;
   onDelete: (project: SectionProject) => void;
   onShare: (project: SectionProject) => void;
   onOpen: () => void;
+  onViewExample: () => void;
 }) {
+  const isExample = project.id.startsWith('example');
+
   return (
-    <TableRow>
-      <TableCell>
-        <div className="min-w-0 text-right">
-          <p className="max-w-[260px] truncate text-sm font-medium leading-5 text-foreground">{project.name}</p>
-          <p className="truncate text-xs leading-5 text-muted-foreground">{project.sector}</p>
+    <TableRow className={cn("transition-colors hover:bg-muted/50", isExample && "bg-primary/5 hover:bg-primary/10")}>
+      <TableCell className="py-4">
+        <div className="min-w-0 text-right space-y-1">
+          <div className="flex items-center gap-2">
+            <p className="text-base font-bold text-foreground">{project.name}</p>
+            {isExample && (
+              <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 font-bold text-xs">
+                مثال توضيحي للنتيجة
+              </Badge>
+            )}
+          </div>
+          <p className="text-sm text-muted-foreground font-medium">{project.sector}</p>
+          {project.description && (
+            <p className="text-xs leading-relaxed text-muted-foreground/90 max-w-2xl mt-1">
+              {project.description}
+            </p>
+          )}
         </div>
       </TableCell>
       <TableCell>
         <div className="flex items-center gap-1">
-          <Button
-            variant="ghost"
-            size="icon-sm"
-            onClick={onOpen}
-            title="تعديل"
-            className="text-muted-foreground hover:text-primary"
-          >
-            <Pencil className="size-4" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon-sm"
-            onClick={() => onShare(project)}
-            title="مشاركة"
-            className="text-muted-foreground hover:text-primary"
-          >
-            <Share2 className="size-4" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon-sm"
-            onClick={() => onDelete(project)}
-            title="حذف"
-            className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
-          >
-            <Trash2 className="size-4" />
-          </Button>
+          {isExample ? (
+            <Button variant="outline" size="sm" onClick={onViewExample} className="gap-1.5 font-bold text-xs bg-background hover:bg-primary hover:text-primary-foreground border-primary/30">
+              <Sparkles className="size-3.5" />
+              عرض المثال
+            </Button>
+          ) : (
+            <>
+              <Button
+                variant="ghost"
+                size="icon-sm"
+                onClick={onOpen}
+                title="تعديل"
+                className="text-muted-foreground hover:text-primary"
+              >
+                <Pencil className="size-4" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon-sm"
+                onClick={() => onShare(project)}
+                title="مشاركة"
+                className="text-muted-foreground hover:text-primary"
+              >
+                <Share2 className="size-4" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon-sm"
+                onClick={() => onDelete(project)}
+                title="حذف"
+                className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+              >
+                <Trash2 className="size-4" />
+              </Button>
+            </>
+          )}
         </div>
       </TableCell>
       <TableCell>
@@ -887,7 +977,7 @@ function ProjectRow({
         <ProjectStatusBadge status={project.status} />
       </TableCell>
       <TableCell>
-        <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground">
+        <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground font-medium">
           <Clock className="size-4" />
           {project.updated}
         </span>

@@ -33,6 +33,13 @@ import {
 } from '../ui/dropdown-menu';
 import { Separator } from '../ui/separator';
 import { SidebarTrigger } from '../ui/sidebar';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '../ui/breadcrumb';
 import { PlatformFeedbackModal } from './PlatformFeedbackModal';
 
 interface HeaderProps {
@@ -49,6 +56,7 @@ const TAB_LABELS: Record<string, string> = {
   'my-plans': 'مشاريعي',
   'new-plan-family': 'النموذج السهل',
   'new-plan-pro': 'النموذج الاحترافي',
+  'strategic-dashboard': 'النموذج الاحترافي',
   'new-plan-mit24': 'MIT 24 Steps',
   'new-plan-bmc': 'بناء نموذج العمل BMC',
   'market-discovery': 'استكشاف قطاعات السوق',
@@ -79,6 +87,32 @@ const TAB_LABELS: Record<string, string> = {
   'saas-ideas': 'أفكار SaaS',
   'micro-saas-ideas': 'أفكار Micro-SaaS',
   'project-ideas': 'أفكار مشاريع',
+};
+
+const SECTION_NAMES: Record<string, string> = {
+  home: 'الوصول السريع',
+  'my-plans': 'الوصول السريع',
+  'saved-market-items': 'الوصول السريع',
+  'new-plan-family': 'بناء دراسة جدوى مشروع',
+  'strategic-dashboard': 'بناء دراسة جدوى مشروع',
+  'new-plan-pro': 'بناء دراسة جدوى مشروع',
+  'new-plan-mit24': 'بناء دراسة جدوى مشروع',
+  'new-plan-bmc': 'بناء دراسة جدوى مشروع',
+  'new-plan-lean': 'بناء دراسة جدوى مشروع',
+  'proven-projects': 'أفكار مشاريع',
+  'failed-projects': 'أفكار مشاريع',
+  'saas-ideas': 'أفكار مشاريع',
+  'micro-saas-ideas': 'أفكار مشاريع',
+  'market-discovery': 'أفكار مشاريع',
+  'problem-engine': 'أفكار مشاريع',
+  'platform-academy': 'المركز المعرفي',
+  'financial-calculator': 'ملحقات المشروع',
+  'first-90-days': 'ملحقات المشروع',
+  'unicorn-benchmark': 'ملحقات المشروع',
+  'brand-identity': 'ملحقات المشروع',
+  'customer-dashboard': 'إدارة المستخدم',
+  profile: 'إدارة المستخدم',
+  pricing: 'إدارة المستخدم',
 };
 
 const notifications = [
@@ -133,6 +167,7 @@ export const Header: React.FC<HeaderProps> = ({
   const { signOut } = useAuth();
   const { isSaving, syncStatus, activeProjectId, flushWorkspace } = useProjectWorkspace();
   const title = TAB_LABELS[activeTab] || subTabLabel || 'لوحة العمل';
+  const sectionName = SECTION_NAMES[activeTab] || null;
   const contextBadge = getContextBadge(activeTab);
   const [isFeedbackOpen, setIsFeedbackOpen] = React.useState(false);
   const [showSaved, setShowSaved] = React.useState(false);

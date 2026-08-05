@@ -59,6 +59,7 @@ const loadWorkspace = (planSections: PlanSection[]) => {
         kpis: parsed.execution?.kpis || initial.execution.kpis,
       },
       metrics: { ...initial.metrics, ...parsed.metrics },
+      financialEstimates: parsed.financialEstimates || [],
       planSections: parsed.planSections?.length ? parsed.planSections : planSections,
     });
   } catch {

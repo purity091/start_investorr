@@ -29,6 +29,13 @@ import {
   CloudCog,
   Settings2,
 } from 'lucide-react';
+import { cn } from '../../lib/utils';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '../ui/tooltip';
 
 import type { User } from '../../types';
 import { getTabPath } from '../../utils/routes';
@@ -115,6 +122,10 @@ type NavItemConfig = {
   icon: React.ElementType;
   id?: string;
   badge?: string | number;
+  badgeClassName?: string;
+  iconColor?: string;
+  disabled?: boolean;
+  tooltipText?: string;
   active?: (activeTab: string) => boolean;
 };
 
@@ -127,56 +138,69 @@ const ADMIN_TABS = [
 ];
 
 const QUICK_ACCESS: NavItemConfig[] = [
-  { tab: 'home', label: 'الرئيسية', icon: Home, id: 'tour-home' },
-  { tab: 'my-plans', label: 'مشاريعي', icon: Layers, id: 'tour-projects' },
-  { tab: 'saved-market-items', label: 'المحفوظات', icon: Bookmark },
+  { tab: 'home', label: 'الرئيسية', icon: Home, id: 'tour-home', iconColor: 'text-sky-500' },
+  { tab: 'my-plans', label: 'مشاريعي', icon: Layers, id: 'tour-projects', iconColor: 'text-indigo-500' },
+  { tab: 'saved-market-items', label: 'المحفوظات', icon: Bookmark, iconColor: 'text-amber-500' },
 ];
 
 const PROJECT_BUILD: NavItemConfig[] = [
-  { tab: 'new-plan-family', label: 'النموذج السهل', icon: Heart, id: 'tour-new-plan', badge: 2 },
+  { tab: 'new-plan-family', label: 'النموذج السهل', icon: Heart, id: 'tour-new-plan', badge: 2, iconColor: 'text-rose-500' },
   {
     tab: 'strategic-dashboard',
     label: 'النموذج الاحترافي',
     icon: Zap,
     badge: 2,
+    iconColor: 'text-amber-500',
     active: (tab) => tab === 'new-plan-pro' || tab === 'strategic-dashboard',
   },
-  { tab: 'new-plan-mit24', label: 'MIT 24 Steps', icon: Rocket, badge: 1 },
+  { tab: 'new-plan-mit24', label: 'MIT 24 Steps', icon: Rocket, badge: 1, iconColor: 'text-purple-500' },
   {
     tab: 'new-plan-bmc',
     label: 'بناء نموذج العمل BMC',
     icon: LayoutGrid,
     id: 'tour-bmc',
     badge: 1,
+    iconColor: 'text-blue-500',
     active: (tab) => tab === 'new-plan-bmc' || tab === 'bmc',
   },
-  { tab: 'new-plan-lean', label: 'منهجية Lean Startup', icon: Activity, badge: 'جديد' },
+  { tab: 'new-plan-lean', label: 'منهجية Lean Startup', icon: Activity, badge: 'جديد', iconColor: 'text-emerald-500' },
 ];
 
 const PROJECT_IDEAS: NavItemConfig[] = [
-  { tab: 'proven-projects', label: 'أفكار شركات ناجحة', icon: Sparkles },
-  { tab: 'failed-projects', label: 'شركات فشلت', icon: TrendingDown },
-  { tab: 'saas-ideas', label: 'أفكار SaaS', icon: CloudCog },
-  { tab: 'micro-saas-ideas', label: 'أفكار Micro-SaaS', icon: Settings2 },
+  { tab: 'proven-projects', label: 'أفكار شركات ناجحة', icon: Sparkles, iconColor: 'text-amber-400' },
+  { tab: 'failed-projects', label: 'شركات فشلت', icon: TrendingDown, iconColor: 'text-rose-400' },
+  { tab: 'saas-ideas', label: 'أفكار SaaS', icon: CloudCog, iconColor: 'text-cyan-500' },
+  { tab: 'micro-saas-ideas', label: 'أفكار Micro-SaaS', icon: Settings2, iconColor: 'text-teal-500' },
   {
     tab: 'market-discovery',
     label: 'استكشاف قطاعات السوق',
     icon: Compass,
     id: 'tour-market-discovery',
+    iconColor: 'text-blue-600',
     active: (tab) => tab === 'market-discovery' || MARKET_DISCOVERY_DASHBOARDS.includes(tab),
   },
-  { tab: 'problem-engine', label: 'المشكلات والفرص', icon: Activity, id: 'tour-problem-engine' },
+  { tab: 'problem-engine', label: 'المشكلات والفرص', icon: Activity, id: 'tour-problem-engine', iconColor: 'text-orange-500' },
 ];
 
 const KNOWLEDGE_CENTER: NavItemConfig[] = [
-  { tab: 'platform-academy', label: 'أكاديمية المنصة', icon: BookOpen, badge: 'جديد', id: 'tour-academy' },
+  { tab: 'platform-academy', label: 'أكاديمية المنصة', icon: BookOpen, badge: 'جديد', id: 'tour-academy', iconColor: 'text-indigo-500' },
 ];
 
 const PROJECT_ATTACHMENTS: NavItemConfig[] = [
-  { tab: 'financial-calculator', label: 'حاسبة الأرباح والمؤشرات', icon: Calculator, badge: 'جديد', id: 'tour-calculator' },
-  { tab: 'first-90-days', label: 'أول 90 يوم للمشروع', icon: Calendar, badge: 'جديد', id: 'tour-first-90-days' },
-  { tab: 'unicorn-benchmark', label: 'رادار اليونيكورن', icon: Globe, id: 'tour-unicorn' },
-  { tab: 'brand-identity', label: 'الهوية البصرية', icon: Palette, id: 'tour-brand' },
+  { tab: 'financial-calculator', label: 'حاسبة الأرباح والمؤشرات', icon: Calculator, badge: 'جديد', id: 'tour-calculator', iconColor: 'text-emerald-500' },
+  { tab: 'first-90-days', label: 'أول 90 يوم للمشروع', icon: Calendar, badge: 'جديد', id: 'tour-first-90-days', iconColor: 'text-sky-500' },
+  {
+    tab: 'unicorn-benchmark',
+    label: 'رادار اليونيكورن',
+    icon: Globe,
+    id: 'tour-unicorn',
+    badge: 'قريباً',
+    badgeClassName: 'bg-amber-500/15 text-amber-600 dark:text-amber-400 font-bold border border-amber-500/30',
+    iconColor: 'text-purple-500 opacity-75',
+    disabled: true,
+    tooltipText: 'مقيم ومستشار جاهزية اليونيكورن للمشاريع الواعدة — قريباً في المنصة لتوفير المقارنات المتقدمة والتنبؤات الاستثمارية.',
+  },
+  { tab: 'brand-identity', label: 'الهوية البصرية', icon: Palette, id: 'tour-brand', iconColor: 'text-pink-500' },
 ];
 
 const ACCOUNT_ITEMS: NavItemConfig[] = [
@@ -184,6 +208,7 @@ const ACCOUNT_ITEMS: NavItemConfig[] = [
     tab: 'customer-dashboard',
     label: 'حسابي الشخصي',
     icon: Crown,
+    iconColor: 'text-amber-500',
     active: (tab) =>
       ['subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-activity', 'customer-support'].includes(tab),
   },
@@ -191,12 +216,14 @@ const ACCOUNT_ITEMS: NavItemConfig[] = [
     tab: 'profile',
     label: 'ملف التعريف',
     icon: Settings,
+    iconColor: 'text-slate-500',
     active: (tab) => ['profile', 'settings', 'customer-account'].includes(tab),
   },
   {
     tab: 'pricing',
     label: 'اشتراكي',
     icon: CreditCard,
+    iconColor: 'text-emerald-500',
     active: (tab) => ['pricing', 'customer-subscription', 'customer-usage'].includes(tab),
   },
 ];
@@ -243,17 +270,31 @@ function SidebarLink({
         asChild
         isActive={isActive}
         tooltip={item.label}
-        className="h-auto py-1.5 min-h-8 justify-start gap-2 px-2 text-right text-[13px] leading-relaxed"
+        className={cn(
+          "h-auto py-2 min-h-9.5 justify-start gap-2.5 px-3 text-right text-sm leading-relaxed transition-all rounded-xl",
+          isActive
+            ? "!bg-black !text-white font-bold shadow-md hover:!bg-black hover:!text-white dark:!bg-white dark:!text-black dark:hover:!bg-white"
+            : "text-slate-700 dark:text-slate-300 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800/60"
+        )}
       >
         <a
           id={item.id}
           href={getTabPath(item.tab)}
           onClick={(event) => goToTab(event, item.tab, setActiveTab)}
         >
-          <Icon />
-          <span className="min-w-0 flex-1">{item.label}</span>
+          <Icon className={cn("size-4.5 shrink-0 transition-transform group-hover:scale-105", isActive ? "!text-white dark:!text-black" : item.iconColor || "text-slate-600 dark:text-slate-400")} />
+          <span className={cn("min-w-0 flex-1", isActive ? "!text-white dark:!text-black font-bold" : "font-semibold")}>
+            {item.label}
+          </span>
           {item.badge ? (
-            <span className="ms-auto flex h-5 min-w-5 shrink-0 items-center justify-center rounded-md bg-sidebar-accent px-1.5 text-[11px] font-medium tabular-nums text-sidebar-foreground group-data-[collapsible=icon]:hidden">
+            <span
+              className={cn(
+                "ms-auto flex h-5 min-w-5 shrink-0 items-center justify-center rounded-md px-1.5 text-[11px] font-bold tabular-nums group-data-[collapsible=icon]:hidden",
+                isActive
+                  ? "!bg-white/20 !text-white dark:!bg-black/20 dark:!text-black font-bold"
+                  : item.badgeClassName || "bg-sidebar-accent text-sidebar-foreground"
+              )}
+            >
               {item.badge}
             </span>
           ) : null}
@@ -276,13 +317,17 @@ function SidebarSection({
   activeTab: string;
   setActiveTab?: (tab: string) => void;
 }) {
+  const isAnyActive = items.some((item) => isItemActive(item, activeTab));
+
   return (
-    <Collapsible defaultOpen className="group/collapsible">
+    <Collapsible defaultOpen={true} className="group/collapsible">
       <SidebarGroup>
-        <SidebarGroupLabel asChild className="bg-transparent font-semibold text-sidebar-foreground/70 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground cursor-pointer transition-colors w-full flex items-center justify-between">
+        <SidebarGroupLabel asChild className="bg-transparent font-bold text-[11px] uppercase tracking-wider text-slate-400 dark:text-slate-500 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground cursor-pointer transition-colors w-full flex items-center justify-between py-1">
           <CollapsibleTrigger>
-            <span>{title}</span>
-            <ChevronDown className="ms-auto size-4 transition-transform group-data-[state=open]/collapsible:rotate-180" />
+            <span className={cn("flex items-center gap-1.5 transition-colors", isAnyActive && "text-black dark:text-white font-bold")}>
+              {title}
+            </span>
+            <ChevronDown className="ms-auto size-3.5 transition-transform group-data-[state=open]/collapsible:rotate-180" />
           </CollapsibleTrigger>
         </SidebarGroupLabel>
         <CollapsibleContent>
@@ -291,28 +336,86 @@ function SidebarSection({
               {items.map((item) => {
                 const SubIcon = item.icon;
                 const isActive = isItemActive(item, activeTab);
+                const isDisabled = Boolean(item.disabled);
+
+                const linkElement = (
+                  <a
+                    id={item.id}
+                    href={isDisabled ? '#' : getTabPath(item.tab)}
+                    onClick={(event) => {
+                      if (isDisabled) {
+                        event.preventDefault();
+                        return;
+                      }
+                      goToTab(event, item.tab, setActiveTab);
+                    }}
+                    className={cn(
+                      "flex w-full items-center gap-2.5 rounded-xl transition-colors",
+                      isDisabled && "opacity-75 cursor-not-allowed"
+                    )}
+                  >
+                    <SubIcon className={cn("size-4.5 shrink-0 transition-transform group-hover:scale-105", isActive ? "!text-white dark:!text-black" : item.iconColor || "text-slate-600 dark:text-slate-400")} />
+
+                    <span className={cn("min-w-0 flex-1", isActive ? "font-bold !text-white dark:!text-black text-sm" : "font-semibold text-sm text-slate-700 dark:text-slate-300")}>
+                      {item.label}
+                    </span>
+
+                    {item.badge ? (
+                      <span
+                        className={cn(
+                          "ms-auto flex h-5 min-w-5 shrink-0 items-center justify-center rounded-md px-1.5 text-[11px] font-bold tabular-nums group-data-[collapsible=icon]:hidden",
+                          isActive
+                            ? "!bg-white/20 !text-white dark:!bg-black/20 dark:!text-black font-bold"
+                            : item.badgeClassName || "bg-sidebar-accent text-sidebar-foreground"
+                        )}
+                      >
+                        {item.badge}
+                      </span>
+                    ) : null}
+                  </a>
+                );
+
                 return (
                   <SidebarMenuItem key={`${title}-${item.tab}-${item.label}`}>
-                    <SidebarMenuButton 
-                      asChild 
-                      isActive={isActive} 
-                      tooltip={item.label}
-                      className="h-auto py-1.5 min-h-8 justify-start gap-2 px-2 text-right text-[13px] leading-relaxed"
-                    >
-                      <a
-                        id={item.id}
-                        href={getTabPath(item.tab)}
-                        onClick={(event) => goToTab(event, item.tab, setActiveTab)}
+                    {item.tooltipText ? (
+                      <TooltipProvider delayDuration={100}>
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <SidebarMenuButton
+                              asChild
+                              isActive={isActive}
+                              disabled={isDisabled}
+                              className={cn(
+                                "h-auto py-2 min-h-9.5 justify-start gap-2.5 px-3 text-right text-sm leading-relaxed transition-all rounded-xl",
+                                isActive
+                                  ? "!bg-black !text-white font-bold shadow-md hover:!bg-black hover:!text-white dark:!bg-white dark:!text-black dark:hover:!bg-white"
+                                  : "text-slate-700 dark:text-slate-300 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800/60",
+                                isDisabled && "hover:bg-amber-500/10 cursor-not-allowed"
+                              )}
+                            >
+                              {linkElement}
+                            </SidebarMenuButton>
+                          </TooltipTrigger>
+                          <TooltipContent side="left" dir="rtl" className="max-w-xs text-xs p-3 leading-relaxed shadow-md bg-popover text-popover-foreground border border-border">
+                            {item.tooltipText}
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    ) : (
+                      <SidebarMenuButton
+                        asChild
+                        isActive={isActive}
+                        disabled={isDisabled}
+                        className={cn(
+                          "h-auto py-2 min-h-9.5 justify-start gap-2.5 px-3 text-right text-sm leading-relaxed transition-all rounded-xl",
+                          isActive
+                            ? "!bg-black !text-white font-bold shadow-md hover:!bg-black hover:!text-white dark:!bg-white dark:!text-black dark:hover:!bg-white"
+                            : "text-slate-700 dark:text-slate-300 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800/60"
+                        )}
                       >
-                        <SubIcon />
-                        <span className="min-w-0 flex-1">{item.label}</span>
-                        {item.badge ? (
-                          <span className="ms-auto flex h-5 min-w-5 shrink-0 items-center justify-center rounded-md bg-sidebar-accent px-1.5 text-[11px] font-medium tabular-nums text-sidebar-foreground group-data-[collapsible=icon]:hidden">
-                            {item.badge}
-                          </span>
-                        ) : null}
-                      </a>
-                    </SidebarMenuButton>
+                        {linkElement}
+                      </SidebarMenuButton>
+                    )}
                   </SidebarMenuItem>
                 );
               })}

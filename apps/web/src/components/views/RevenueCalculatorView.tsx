@@ -30,11 +30,21 @@ import {
   ShieldCheck
 } from 'lucide-react';
 
+import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
+import { WorkspaceFinancialEstimate } from '@/types';
+
 interface RevenueCalculatorViewProps {
   setActiveTab?: (tab: string) => void;
 }
 
 export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ setActiveTab }) => {
+  let projectWorkspaceContext: ReturnType<typeof useProjectWorkspace> | null = null;
+  try {
+    projectWorkspaceContext = useProjectWorkspace();
+  } catch {
+    projectWorkspaceContext = null;
+  }
+
   // Calculator Model Type
   const [modelType, setModelType] = useState<'saas' | 'sales'>('saas');
 
@@ -98,7 +108,62 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
 
   const handleSaveToWorkspace = () => {
     setIsSaved(true);
-    setTimeout(() => setIsSaved(false), 3000);
+
+    if (projectWorkspaceContext) {
+      const { workspace, updateWorkspace } = projectWorkspaceContext;
+      const existingEstimates = workspace.financialEstimates || [];
+
+      const newEstimate: WorkspaceFinancialEstimate = {
+        id: `est-${Date.now()}`,
+        modelType,
+        modelTitle: modelType === 'saas' ? 'نموذج اشتراكات SaaS المتكررة' : 'نموذج المبيعات والخدمات المباشرة',
+        mrr: metrics.mrr,
+        arr: metrics.arr,
+        ltv: metrics.ltv,
+        cac: modelType === 'saas' ? cac : 0,
+        ltvCacRatio: metrics.ltvCacRatio,
+        paybackMonths: metrics.paybackMonths,
+        monthlyExpense,
+        annualOpEx: metrics.annualOpEx,
+        netProfitAnnual: metrics.netProfitAnnual,
+        netMargin: metrics.netMargin,
+        feasibilityGrade: metrics.ltvCacRatio >= 3.0 ? 'ممتازة (3x+)' : 'تستدعي التحسين',
+        savedAt: new Date().toISOString(),
+      };
+
+      // Replace estimate of same modelType or append
+      const filtered = existingEstimates.filter((est) => est.modelType !== modelType);
+      const updatedEstimates = [newEstimate, ...filtered];
+
+      // Update workspace KPIs
+      const updatedKpis = [...(workspace.execution.kpis || [])];
+      const mrrKpiIndex = updatedKpis.findIndex((k) => k.id === 'fin-kpi-mrr' || k.label.includes('الإيراد الشهري'));
+      if (mrrKpiIndex >= 0) {
+        updatedKpis[mrrKpiIndex] = {
+          ...updatedKpis[mrrKpiIndex],
+          value: `$${metrics.mrr.toLocaleString()}`,
+          insight: `محدث بحسب تقديرات ${newEstimate.modelTitle}`,
+        };
+      } else {
+        updatedKpis.push({
+          id: 'fin-kpi-mrr',
+          label: 'الإيراد الشهري (MRR)',
+          value: `$${metrics.mrr.toLocaleString()}`,
+          target: `$${(metrics.mrr * 1.5).toLocaleString()}`,
+          insight: `تقدير حي مأخوذ من حاسبة الأرباح والمؤشرات.`,
+        });
+      }
+
+      updateWorkspace({
+        financialEstimates: updatedEstimates,
+        execution: {
+          ...workspace.execution,
+          kpis: updatedKpis,
+        },
+      });
+    }
+
+    setTimeout(() => setIsSaved(false), 4000);
   };
 
   return (
