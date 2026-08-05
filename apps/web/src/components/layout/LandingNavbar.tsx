@@ -88,14 +88,14 @@ export const LandingNavbar: React.FC = () => {
             <Badge variant="secondary" className="bg-white/20 text-white hover:bg-white/30 text-[10px] font-bold px-2 py-0.5 border-none">
               جديد v2.5 🎉
             </Badge>
-            <span>تم إطلاق +100 فكرة مشروع Micro-SaaS وحاسبة الإيرادات التفاعلية</span>
-            <Link href="#calculator" className="font-extrabold underline underline-offset-4 hover:opacity-90 transition-opacity">
-              جرب الحاسبة الآن ←
+            <span>تم إطلاق ميزة مشاركة الخطط ونماذج العمل آمنياً + بناء 10 دراسات جدوى بـ 0$!</span>
+            <Link href="/changelog" className="font-extrabold underline underline-offset-4 hover:opacity-90 transition-opacity">
+              استكشف سجل التغييرات والميزات الجديدة ←
             </Link>
           </div>
           <button 
             onClick={() => setShowBanner(false)} 
-            className="text-primary-foreground/70 hover:text-primary-foreground p-1 transition-colors rounded-sm"
+            className="text-primary-foreground/70 hover:text-primary-foreground p-1 transition-colors rounded-sm cursor-pointer"
             aria-label="إغلاق التنبيه"
           >
             <X className="size-3.5" />

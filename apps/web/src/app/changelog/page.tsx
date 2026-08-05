@@ -1,391 +1,309 @@
 'use client';
 
-import React from 'react';
-import Link from 'next/link';
+import React, { useState, useMemo } from 'react';
 import { PublicLayout } from '@/components/layout/PublicLayout';
-import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { Card } from '@/components/ui/Card';
 import { Input } from '@/components/ui/Input';
 import {
   Sparkles,
-  Rocket,
+  Wrench,
+  Zap,
   Search,
   CheckCircle2,
   Clock,
-  Laptop,
-  BrainCircuit,
-  Database,
-  Zap,
-  Wrench,
-  ChevronLeft,
-  ArrowLeft,
-  Rss,
-  Mail,
-  Filter,
   Check,
   ShieldCheck,
-  Star
+  Layers,
+  Radio,
+  Tag,
+  ArrowUpRight
 } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
-type CategoryFilter = 'all' | 'feature' | 'ai' | 'data' | 'enhancement' | 'fix';
+type CategoryFilter = 'all' | 'feature' | 'fix' | 'improvement';
 
-interface ChangelogItem {
+interface ReleaseItem {
+  id: string;
   version: string;
   date: string;
   title: string;
   category: CategoryFilter;
-  categoryLabel: string;
-  status: 'live' | 'upcoming' | 'beta';
   statusLabel: string;
-  description: string;
-  highlights: string[];
-  badges: string[];
+  summary: string;
+  features: string[];
+  fixes: string[];
+  improvements: string[];
+  tags: string[];
 }
 
-const changelogData: ChangelogItem[] = [
+const releasesData: ReleaseItem[] = [
   {
-    version: 'v2.4.0',
-    date: 'أغسطس 2026',
-    title: 'إطلاق الهيدر المطور، شريط البحث السريع (Ctrl+K)، وحاسبة MRR/ARR التفاعلية',
-    category: 'feature',
-    categoryLabel: 'مميزات جديدة ✨',
-    status: 'live',
-    statusLabel: 'مباشر 🟢',
-    description: 'تحديث شامل لتجربة التصفح والبحث واستكشاف الفرص في منصة خطة بمظهر احترافي يعتمد معايير Shadcn UI.',
-    highlights: [
-      'قوائم منسدلة عملاقة (Mega Menus) لاستكشاف الأدوات وقواعد البيانات والمصادر بلمسة واحدة.',
-      'شريط ومودال البحث السريع لدعم اختصار لوحة المفاتيح Ctrl+K للوصول الفوري لكافة أقسام المنصة.',
-      'حاسبة الإيرادات والمؤشرات المالية التفاعلية (MRR, ARR, Churn, LTV) مع تحليل جاهزية الاستثمار.',
-      'شريط إعلاني علوي ذكي للتنبيه بأحدث الميزات والإصدارات القادمة.'
-    ],
-    badges: ['Shadcn UI', 'Mega Menu', 'Command Palette', 'SaaS Calculator']
-  },
-  {
-    version: 'v2.3.0',
-    date: 'يوليو 2026',
-    title: 'قاعدة بيانات أفكار Micro-SaaS وأدوات الإطلاق السريع',
-    category: 'data',
-    categoryLabel: 'قواعد البيانات 📊',
-    status: 'live',
-    statusLabel: 'مباشر 🟢',
-    description: 'تمت إضافة قسم مخصص لأفكار المشاريع البرمجية المصغرة المناسبة للمطورين المستقلين ورواد الأعمال الفرديين.',
-    highlights: [
-      'توفير +100 فكرة Micro-SaaS جاهزة للتنفيذ مع دراسة متطلبات التقنية والهيكل المالي.',
-      'تحديد متطلبات زمن الإطلاق المتوقع (2 إلى 4 أسابيع) وتكلفة البنية التحتية الأولية.',
-      'إمكانية التصفية حسب نماذج الاشتراك (Freemium, One-Time, Tiered Subscriptions).'
-    ],
-    badges: ['Micro-SaaS', 'Solopreneurs', 'Market Database']
-  },
-  {
-    version: 'v2.2.0',
-    date: 'يوليو 2026',
-    title: 'محرك تقييم الاستراتيجية ونموذج العمل التجاري (BMC) بالذكاء الاصطناعي',
-    category: 'ai',
-    categoryLabel: 'الذكاء الاصطناعي 🤖',
-    status: 'live',
-    statusLabel: 'مباشر 🟢',
-    description: 'دمج تقنيات التقييم الذكي لمساعدة رواد الأعمال على اكتشاف الفجوات في نماذج أعمالهم وتدعيم القيمة الفريدة.',
-    highlights: [
-      'تحليل فوري وتوليد مؤشرات جاهزية لكل عنصر من العناصر التسعة لنموذج الـ BMC.',
-      'توليد سيناريوهات المخاطر وتوصيات مخصصة لتقوية نقاط الضعف قبل تقديم الدراسة للمستثمرين.',
-      'صياغة مقترحات آلية لشريحة العملاء المستهدفة وقنوات التوزيع.'
-    ],
-    badges: ['AI Engine', 'BMC Evaluator', 'Risk Scenarios']
-  },
-  {
-    version: 'v2.1.0',
-    date: 'يونيو 2026',
-    title: 'إطلاق أكاديمية المنصة وتوثيق منهجية الـ 24 خطوة (MIT Framework)',
-    category: 'enhancement',
-    categoryLabel: 'تحسينات ومصادر 🚀',
-    status: 'live',
-    statusLabel: 'مباشر 🟢',
-    description: 'توفير مركز معرفي متكامل يحتوي على المقالات والحالات الدراسية لتعزيز الفهم الميداني لمؤشرات نمو الشركات.',
-    highlights: [
-      'إطلاق 18 مقال وحالة دراسية تفاعلية تشرح المقاييس المالية المتقدمة (CAC, LTV, Churn, Payback Period).',
-      'دعم وضع القراءة المريح والنظيف وتصنيف الموضوعات حسب مستويات الخبرة (مبتدئ / متوسط / متقدم).',
-      'ربط مقالات الأكاديمية بالأدوات التفاعلية داخل المنصة لتطبيق المفاهيم فورياً.'
-    ],
-    badges: ['Platform Academy', 'MIT 24 Steps', 'SaaS Knowledge']
-  },
-  {
-    version: 'v2.0.0',
-    date: 'مايو 2026',
-    title: 'إعادة هيكلة جدول المشاريع الميدانية وتحليلات الشركات المتعثرة',
-    category: 'data',
-    categoryLabel: 'قواعد البيانات 📊',
-    status: 'live',
-    statusLabel: 'مباشر 🟢',
-    description: 'تحديث المحرك الأساسي لجدول المشاريع والشركات الناجحة والمتعثرة لتوفير تجربة تصفح سريعة وموثوقة.',
-    highlights: [
-      'إضافة قسم "دراسة أسباب فشل الشركات الناشئة" لتوثيق الدروس المستفادة وتجنب الأخطاء المكلفة.',
-      'بطاقات تفاعلية لنماذج عمل SaaS في مجالات B2B, Creator Economy, Dev Infrastructure.',
-      'تسريع زمن تحميل البيانات المالية والمنافسين بنسبة 45%.'
-    ],
-    badges: ['Proven Projects', 'Failed Startups', 'Fast Performance']
-  },
-  {
+    id: 'v2.5.0',
     version: 'v2.5.0',
-    date: 'قريباً في سبتمبر 2026',
-    title: 'تصدير التقارير التفاعلية بصيغة PDF وتكامل مساحات العمل الجماعية (Team Workspaces)',
+    date: '05 أغسطس 2026',
+    title: 'مشاركة الخطط ونماذج العمل + بناء 10 دراسات مجاناً وتسهيل تسجيل الدخول',
     category: 'feature',
-    categoryLabel: 'قريباً 🔮',
-    status: 'upcoming',
-    statusLabel: 'قريباً 🟡',
-    description: 'نعمل حالياً على تطوير ميزات تصدير التقارير الاحترافية المجهزة للعرض على المستثمرين ومشاركة الفريق.',
-    highlights: [
-      'تصدير نموذج العمل التجاري والدراسة المالية بنقرة واحدة كملف PDF عالي الجودة بهوية مشروعك.',
-      'دعوة أعضاء الفريق والاستشاريين للتعاون الحاد والتعليق المباشر على عناصر الدراسة.',
-      'مزامنة التعديلات سحابياً فوراً مع تنبيهات البريد الإلكتروني.'
+    statusLabel: 'الإصدار الحالي',
+    summary: 'تحديث رئيسي لتمكين مشاركة النماذج والدراسات عبر روابط آمنة، بناء 10 دراسات مجانية عبر باني المنصة، وتسهيل عملية التسجيل.',
+    features: [
+      'مشاركة الخطط ونماذج العمل (BMC) عبر روابط تفاعلية آمنة في الباقات المدفوعة.',
+      'إتاحة بناء حتى 10 دراسات جدوى ونماذج عمل مجاناً عبر باني المنصة الخاص.',
+      'فتح مودال التسجيل والدخول التفاعلي السريع دون مغادرة الصفحة الحالية.'
     ],
-    badges: ['PDF Export', 'Team Workspaces', 'Live Collaboration']
+    fixes: [
+      'إلغاء حقل التحقق الأمني المعقد في التسجيل لتقليل زمن الدخول وتسهيل التجربة.',
+      'توحيد أحجام الخطوط واستقرار الهيكل البصري في صفحات تفاصيل الشركات الناجحة.',
+      'إصلاح التباين البصري وتناسق الهوامش في الواجهات العربية (RTL).'
+    ],
+    improvements: [
+      'تبسيط شريط التنقل (Navbar) والتخلص من القوائم العملاقة المعقدة لصالح روابط مباشرة وأسرع.',
+      'إعادة هيكلة صفحة الأسعار وتوضيح الباقات الأساسية ($0، $9، $19) مع جدول مقارنة شامل.'
+    ],
+    tags: ['Sharing Links', 'BMC Builder', 'Auth Modal', 'Clean UX']
+  },
+  {
+    id: 'v2.4.0',
+    version: 'v2.4.0',
+    date: '20 يوليو 2026',
+    title: 'استوديو نموذج العمل التجاري (BMC Studio) وحاسبة الإيرادات المالية',
+    category: 'feature',
+    statusLabel: 'إصدار سابق',
+    summary: 'إطلاق أدوات النمذجة الهيكلية للشركات وحاسبة مؤشرات النمو المالي.',
+    features: [
+      'استوديو بناء نموذج العمل التجاري (BMC Studio) التفاعلي المنظم.',
+      'حاسبة الإيرادات والمؤشرات المالية التفاعلية (MRR, ARR, Churn, LTV).',
+      'نموذج تقييم الجاهزية الاستثمارية والفرضيات المعتمد من منهجية MIT.'
+    ],
+    fixes: [
+      'معالجة البطء في تصفح جداول المشاريع وتحديث استعلامات الأداء.',
+      'إصلاح خطأ تكرار المعرفات في المكونات التفاعلية.'
+    ],
+    improvements: [
+      'تطبيق ألوان Shadcn UI القياسية على كافة المكونات وإلغاء التعتيم القسري.'
+    ],
+    tags: ['BMC Studio', 'Financial Calculator', 'MIT Framework']
+  },
+  {
+    id: 'v2.3.0',
+    version: 'v2.3.0',
+    date: '02 يوليو 2026',
+    title: 'مكتبة أفكار Micro-SaaS ودراسات أسباب تعثر الشركات',
+    category: 'improvement',
+    statusLabel: 'إصدار سابق',
+    summary: 'تحديث قواعد البيانات الميدانية بالدراسات الواقعية وأفكار المشاريع البرمجية المصغرة.',
+    features: [
+      'دليل أفكار Micro-SaaS وشرح نماذج التسعير والنمو الميداني لكل فكرة.',
+      'قسم تحليل أسباب تعثر وفشل الشركات لتوثيق الدروس المستفادة.'
+    ],
+    fixes: [
+      'إصلاح استجابة الشاشات الصغيرة والمتوسطة على جداول القطاعات.',
+      'تعديل المسافات والهوامش الزائدة في بطاقات التصفح.'
+    ],
+    improvements: [
+      'تسريع زمن تحميل وتصفح مقالات الأكاديمية والمصادر التعليمية.'
+    ],
+    tags: ['Micro-SaaS', 'Market Discovery', 'Performance']
   }
 ];
 
 export default function ChangelogPage() {
-  const [selectedCategory, setSelectedCategory] = React.useState<CategoryFilter>('all');
-  const [searchQuery, setSearchQuery] = React.useState('');
+  const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>('all');
+  const [searchQuery, setSearchQuery] = useState('');
 
-  const filteredItems = React.useMemo(() => {
-    return changelogData.filter((item) => {
+  const filteredReleases = useMemo(() => {
+    return releasesData.filter((item) => {
       const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
       const matchesSearch =
         searchQuery === '' ||
         item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.badges.some((b) => b.toLowerCase().includes(searchQuery.toLowerCase()));
+        item.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.tags.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()));
       return matchesCategory && matchesSearch;
     });
   }, [selectedCategory, searchQuery]);
 
   return (
     <PublicLayout>
-      {/* Header & Hero Section */}
-      <section className="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-24 border-b border-border/50 bg-muted/20">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+      <div dir="rtl" className="w-full bg-background text-foreground font-sans min-h-screen">
+        
+        {/* World-Class Minimal Header */}
+        <section className="border-b border-border/60 bg-muted/20 py-8">
+          <div className="container mx-auto px-4 max-w-5xl space-y-4">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <Badge variant="default" className="text-xs font-bold gap-1.5 px-2.5 py-0.5 rounded-full">
+                    <Radio className="size-3 text-emerald-400 animate-pulse" />
+                    <span>سجل التغييرات والإصدارات</span>
+                  </Badge>
+                  <span className="text-xs text-muted-foreground font-mono">Linear / Vercel Style</span>
+                </div>
+                <h1 className="text-2xl sm:text-3xl font-black text-foreground tracking-tight">
+                  تحديثات وإصدارات المنصة
+                </h1>
+                <p className="text-xs sm:text-sm text-muted-foreground font-normal max-w-xl">
+                  تغطية شفافة لكافة الميزات الجديدة، الإصلاحات، والتحسينات المطبقة على منصة خطة.
+                </p>
+              </div>
 
-        <div className="container relative mx-auto px-4 text-center max-w-4xl space-y-6">
-          <Badge
-            variant="outline"
-            className="px-4 py-1.5 text-xs font-bold text-primary bg-primary/10 border-primary/20 gap-2 rounded-full mx-auto"
-          >
-            <Sparkles className="size-3.5 text-amber-500" />
-            تحديثات وإصدارات مستمرة 🚀
-          </Badge>
-
-          <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-foreground leading-[1.2] text-center mx-auto">
-            سجل التحديثات <span className="text-primary">والميزات الجديدة</span>
-          </h1>
-
-          <p className="text-sm sm:text-base text-muted-foreground font-medium max-w-2xl leading-relaxed text-center mx-auto">
-            نعمل باستمرار على تحسين وتطوير منصة خطة لزودك بأفضل أدوات نمذجة المشاريع، وقواعد البيانات الميدانية، ومؤشرات الأداء العالمية.
-          </p>
-
-          {/* Quick Metrics Bar */}
-          <div className="pt-4 flex flex-wrap items-center justify-center gap-3 text-xs font-bold text-muted-foreground">
-            <div className="px-3.5 py-1.5 rounded-full bg-card border border-border flex items-center gap-2 shadow-2xs">
-              <span className="size-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>الإصدار الحالي: <strong className="text-foreground">v2.4.0</strong></span>
-            </div>
-            <div className="px-3.5 py-1.5 rounded-full bg-card border border-border flex items-center gap-2 shadow-2xs">
-              <Clock className="size-3.5 text-primary" />
-              <span>آخر تحديث: <strong className="text-foreground">أغسطس 2026</strong></span>
-            </div>
-            <div className="px-3.5 py-1.5 rounded-full bg-card border border-border flex items-center gap-2 shadow-2xs">
-              <Star className="size-3.5 text-amber-500" />
-              <span>تحديثات عام 2026: <strong className="text-foreground">+12 إصدار</strong></span>
+              {/* Filter Tabs */}
+              <div className="flex flex-wrap items-center gap-1.5">
+                {[
+                  { id: 'all', label: 'الكل', icon: Layers },
+                  { id: 'feature', label: 'مميزات', icon: Sparkles },
+                  { id: 'fix', label: 'إصلاحات', icon: Wrench },
+                  { id: 'improvement', label: 'تحسينات', icon: Zap },
+                ].map((tab) => {
+                  const Icon = tab.icon;
+                  const active = selectedCategory === tab.id;
+                  return (
+                    <button
+                      key={tab.id}
+                      onClick={() => setSelectedCategory(tab.id as CategoryFilter)}
+                      className={cn(
+                        "px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer border",
+                        active
+                          ? "bg-primary text-primary-foreground border-primary shadow-2xs"
+                          : "bg-card text-muted-foreground border-border/80 hover:text-foreground hover:bg-muted/60"
+                      )}
+                    >
+                      <Icon className="size-3.5" />
+                      <span>{tab.label}</span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Main Content Area */}
-      <section className="py-16 container mx-auto px-4 max-w-5xl">
-        {/* Search & Filter Bar */}
-        <div className="mb-12 space-y-6">
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
-            {/* Category Filter Pills */}
-            <div className="flex flex-wrap gap-2 justify-center sm:justify-start w-full sm:w-auto">
-              {[
-                { id: 'all', label: 'الكل' },
-                { id: 'feature', label: 'مميزات جديدة ✨' },
-                { id: 'ai', label: 'ذكاء اصطناعي 🤖' },
-                { id: 'data', label: 'قواعد بيانات 📊' },
-                { id: 'enhancement', label: 'تحسينات 🚀' }
-              ].map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setSelectedCategory(tab.id as CategoryFilter)}
-                  className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                    selectedCategory === tab.id
-                      ? 'bg-primary text-primary-foreground shadow-2xs'
-                      : 'bg-muted/70 text-muted-foreground hover:text-foreground hover:bg-muted'
-                  }`}
-                >
-                  {tab.label}
-                </button>
+        {/* Global Timeline Layout */}
+        <section className="container mx-auto px-4 max-w-5xl py-8">
+          {filteredReleases.length === 0 ? (
+            <Card className="p-8 text-center border-border/60 shadow-2xs">
+              <Search className="size-8 text-muted-foreground mx-auto mb-2" />
+              <p className="text-sm font-bold text-foreground">لم نجد نتائج تطابق بحثك</p>
+            </Card>
+          ) : (
+            <div className="relative border-r border-border/60 pr-6 sm:pr-8 space-y-10">
+              {filteredReleases.map((release) => (
+                <div key={release.id} className="relative group">
+                  
+                  {/* Timeline Point */}
+                  <div className="absolute -right-[31px] sm:-right-[39px] top-1.5 size-4 rounded-full bg-primary border-4 border-background shadow-2xs group-hover:scale-125 transition-transform" />
+
+                  {/* Two-Column Grid Release Item */}
+                  <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+                    
+                    {/* Left Sticky Sidebar (Version & Meta) */}
+                    <div className="md:col-span-3 space-y-1.5 md:sticky md:top-24">
+                      <div className="flex items-center gap-2">
+                        <span className="text-lg font-black text-primary font-mono tracking-tight">
+                          {release.version}
+                        </span>
+                        <Badge variant="secondary" className="text-[10px] font-bold px-2 py-0.2">
+                          {release.statusLabel}
+                        </Badge>
+                      </div>
+                      <div className="text-xs text-muted-foreground font-medium flex items-center gap-1">
+                        <Clock className="size-3.5" />
+                        <span>{release.date}</span>
+                      </div>
+                    </div>
+
+                    {/* Right Main Body Content */}
+                    <div className="md:col-span-9 bg-card border border-border/70 rounded-2xl p-5 shadow-2xs space-y-4 text-right">
+                      
+                      {/* Release Title & Summary */}
+                      <div className="space-y-1.5 border-b border-border/40 pb-3">
+                        <h2 className="text-base sm:text-lg font-bold text-foreground leading-snug">
+                          {release.title}
+                        </h2>
+                        <p className="text-xs text-muted-foreground font-normal leading-relaxed">
+                          {release.summary}
+                        </p>
+                      </div>
+
+                      {/* Release Categorized Updates List */}
+                      <div className="space-y-3">
+                        {/* New Features */}
+                        {release.features.length > 0 && (
+                          <div className="space-y-2">
+                            <h3 className="text-xs font-bold text-foreground flex items-center gap-1.5">
+                              <Sparkles className="size-3.5 text-amber-500" />
+                              <span>مميزات جديدة</span>
+                            </h3>
+                            <ul className="space-y-1.5 text-xs text-muted-foreground font-normal pr-2">
+                              {release.features.map((feat, idx) => (
+                                <li key={idx} className="flex items-start gap-2">
+                                  <CheckCircle2 className="size-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                                  <span className="text-foreground leading-relaxed">{feat}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+
+                        {/* Bug Fixes */}
+                        {release.fixes.length > 0 && (
+                          <div className="space-y-2 pt-1">
+                            <h3 className="text-xs font-bold text-foreground flex items-center gap-1.5">
+                              <Wrench className="size-3.5 text-blue-500" />
+                              <span>إصلاحات وملاحظات</span>
+                            </h3>
+                            <ul className="space-y-1.5 text-xs text-muted-foreground font-normal pr-2">
+                              {release.fixes.map((fix, idx) => (
+                                <li key={idx} className="flex items-start gap-2">
+                                  <Check className="size-3.5 text-blue-600 shrink-0 mt-0.5" />
+                                  <span className="text-foreground leading-relaxed">{fix}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+
+                        {/* Improvements */}
+                        {release.improvements.length > 0 && (
+                          <div className="space-y-2 pt-1">
+                            <h3 className="text-xs font-bold text-foreground flex items-center gap-1.5">
+                              <Zap className="size-3.5 text-emerald-500" />
+                              <span>تحسينات الأداء والواجهة</span>
+                            </h3>
+                            <ul className="space-y-1.5 text-xs text-muted-foreground font-normal pr-2">
+                              {release.improvements.map((imp, idx) => (
+                                <li key={idx} className="flex items-start gap-2">
+                                  <CheckCircle2 className="size-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                                  <span className="text-foreground leading-relaxed">{imp}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Tech Tags */}
+                      <div className="flex flex-wrap gap-1.5 pt-2 border-t border-border/40">
+                        {release.tags.map((tag, tIdx) => (
+                          <span
+                            key={tIdx}
+                            className="px-2 py-0.5 rounded-md bg-muted text-muted-foreground text-[10px] font-semibold border border-border/50"
+                          >
+                            #{tag}
+                          </span>
+                        ))}
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
               ))}
             </div>
+          )}
+        </section>
 
-            {/* Search Input Box */}
-            <div className="relative w-full sm:w-72 shrink-0">
-              <Search className="size-4 text-muted-foreground absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
-              <Input
-                type="text"
-                placeholder="ابحث في سجل التحديثات..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pr-9 pl-3 text-xs font-medium rounded-xl h-10 border-border bg-card shadow-2xs focus:ring-2 focus:ring-primary/20"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Timeline View Feed */}
-        {filteredItems.length === 0 ? (
-          <div className="py-16 text-center space-y-3 bg-card rounded-2xl border border-border p-8">
-            <Search className="size-10 text-muted-foreground mx-auto" />
-            <h3 className="text-base font-bold text-foreground">لم نجد نتائج تطابق بحثك</h3>
-            <p className="text-xs text-muted-foreground max-w-sm mx-auto">
-              جرب تغيير كلمات البحث أو إعادة ضبط تصنيفات التحديثات.
-            </p>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => {
-                setSelectedCategory('all');
-                setSearchQuery('');
-              }}
-              className="text-xs font-bold mt-2"
-            >
-              عرض كافة التحديثات
-            </Button>
-          </div>
-        ) : (
-          <div className="relative border-r-2 border-border/80 pr-6 sm:pr-8 space-y-12">
-            {filteredItems.map((item, idx) => (
-              <div key={idx} className="relative group">
-                {/* Timeline Dot Icon */}
-                <div
-                  className={`absolute -right-[31px] sm:-right-[39px] top-1.5 size-7 rounded-full flex items-center justify-center border-2 border-background shadow-2xs transition-transform group-hover:scale-110 ${
-                    item.status === 'upcoming'
-                      ? 'bg-amber-500 text-white'
-                      : 'bg-primary text-primary-foreground'
-                  }`}
-                >
-                  {item.status === 'upcoming' ? (
-                    <Clock className="size-3.5" />
-                  ) : (
-                    <Check className="size-3.5 stroke-[3]" />
-                  )}
-                </div>
-
-                {/* Card Container */}
-                <Card className="p-6 sm:p-7 border-border shadow-2xs hover:shadow-md transition-all bg-card rounded-2xl space-y-5">
-                  {/* Header Row */}
-                  <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border/60 pb-4">
-                    <div className="flex items-center gap-3">
-                      <span className="text-lg sm:text-xl font-black text-primary tracking-tight">
-                        {item.version}
-                      </span>
-                      <Badge
-                        variant="secondary"
-                        className={`text-[11px] font-bold px-2.5 py-0.5 rounded-md ${
-                          item.status === 'upcoming'
-                            ? 'bg-amber-500/10 text-amber-700 border border-amber-500/20'
-                            : 'bg-primary/10 text-primary border border-primary/20'
-                        }`}
-                      >
-                        {item.statusLabel}
-                      </Badge>
-                    </div>
-
-                    <div className="flex items-center gap-2 text-xs font-bold text-muted-foreground">
-                      <Clock className="size-3.5 text-muted-foreground" />
-                      <span>{item.date}</span>
-                    </div>
-                  </div>
-
-                  {/* Body Title & Description */}
-                  <div className="space-y-2">
-                    <h2 className="text-base sm:text-lg font-black text-foreground leading-snug">
-                      {item.title}
-                    </h2>
-                    <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
-
-                  {/* Feature Highlights List */}
-                  <div className="space-y-2.5 bg-muted/30 p-4 rounded-xl border border-border/50">
-                    <h4 className="text-xs font-black text-foreground uppercase tracking-wider">
-                      أبرز ما يتضمنه التحديث:
-                    </h4>
-                    <ul className="space-y-2 text-xs text-foreground font-medium">
-                      {item.highlights.map((highlight, hIdx) => (
-                        <li key={hIdx} className="flex items-start gap-2.5">
-                          <CheckCircle2 className="size-4 text-emerald-600 shrink-0 mt-0.5" />
-                          <span className="leading-relaxed">{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Badges / Tech Tags */}
-                  <div className="flex flex-wrap gap-1.5 pt-1">
-                    {item.badges.map((b, bIdx) => (
-                      <span
-                        key={bIdx}
-                        className="px-2.5 py-1 rounded-lg bg-muted text-muted-foreground text-[10px] font-extrabold border border-border/40"
-                      >
-                        #{b}
-                      </span>
-                    ))}
-                  </div>
-                </Card>
-              </div>
-            ))}
-          </div>
-        )}
-      </section>
-
-      {/* Subscribe to Changelog Updates CTA */}
-      <section className="py-16 bg-muted/40 border-t border-border/60">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="bg-card border border-border rounded-3xl p-8 sm:p-12 shadow-sm flex flex-col items-center text-center space-y-6">
-            <div className="size-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center shadow-2xs">
-              <Rss className="size-7" />
-            </div>
-
-            <div className="space-y-2 max-w-xl mx-auto">
-              <h2 className="text-2xl sm:text-3xl font-black text-foreground tracking-tight">
-                لا تفوت أي تحديث قادم للمنصة
-              </h2>
-              <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed">
-                اشترك في النشرة البريدية ليصلك ملخص أسبوعي بأحدث أدوات نمذجة المشاريع، أفكار الـ SaaS، والتحديثات التقنية فور إطلاقها.
-              </p>
-            </div>
-
-            <div className="w-full max-w-md flex flex-col sm:flex-row gap-2 pt-2">
-              <Input
-                type="email"
-                placeholder="أدخل بريدك الإلكتروني..."
-                className="h-11 text-xs font-medium rounded-xl border-border bg-background shadow-2xs text-right"
-              />
-              <Button size="lg" className="h-11 text-xs font-bold px-6 shrink-0 gap-2">
-                <span>اشترك الآن</span>
-                <Mail className="size-4" />
-              </Button>
-            </div>
-
-            <p className="text-[11px] text-muted-foreground flex items-center gap-1.5">
-              <ShieldCheck className="size-3.5 text-emerald-600 inline" />
-              نحن نحترم خصوصيتك. يمكنك إلغاء الاشتراك في أي وقت بنقرة واحدة.
-            </p>
-          </div>
-        </div>
-      </section>
+      </div>
     </PublicLayout>
   );
 }
