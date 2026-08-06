@@ -3,7 +3,8 @@
 import React, { useState, useMemo } from 'react';
 import { PublicLayout } from '@/components/layout/PublicLayout';
 import { Badge } from '@/components/ui/Badge';
-import { Card } from '@/components/ui/Card';
+import { Button } from '@/components/ui/Button';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/Card';
 import { Input } from '@/components/ui/Input';
 import {
   Sparkles,
@@ -16,71 +17,128 @@ import {
   ShieldCheck,
   Layers,
   Radio,
+  Share2,
+  FileText,
+  Lock,
+  ArrowUpRight,
+  Filter,
+  History,
   Tag,
-  ArrowUpRight
+  ChevronLeft,
+  ChevronRight,
+  Rss,
+  Mail,
+  Activity,
+  CheckCircle
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 type CategoryFilter = 'all' | 'feature' | 'fix' | 'improvement';
 
-interface ReleaseItem {
+interface ReleaseHighlight {
+  title: string;
+  items: string[];
+  icon: any;
+  color: string;
+  bgColor: string;
+  borderColor: string;
+}
+
+interface ReleaseUpdate {
   id: string;
   version: string;
   date: string;
+  isLatest?: boolean;
   title: string;
-  category: CategoryFilter;
-  statusLabel: string;
   summary: string;
-  features: string[];
-  fixes: string[];
-  improvements: string[];
+  category: CategoryFilter;
+  badgeText: string;
+  highlights: ReleaseHighlight[];
   tags: string[];
 }
 
-const releasesData: ReleaseItem[] = [
+const releases: ReleaseUpdate[] = [
   {
     id: 'v2.5.0',
     version: 'v2.5.0',
     date: '05 أغسطس 2026',
-    title: 'مشاركة الخطط ونماذج العمل + بناء 10 دراسات مجاناً وتسهيل تسجيل الدخول',
+    isLatest: true,
+    title: 'تحديث المحرك الأساسي: مشاركة الخطط، بناء 10 دراسات مجانية، وتسهيل تسجيل الدخول',
+    summary: 'إصدار رئيسي يركز على إتاحة مشاركة الخطط ونماذج الأعمال عبر روابط آمنة، تمكين بناء 10 دراسات جدوى عبر الباني الخاص، وإزالة تعقيدات صفحة الدخول.',
     category: 'feature',
-    statusLabel: 'الإصدار الحالي',
-    summary: 'تحديث رئيسي لتمكين مشاركة النماذج والدراسات عبر روابط آمنة، بناء 10 دراسات مجانية عبر باني المنصة، وتسهيل عملية التسجيل.',
-    features: [
-      'مشاركة الخطط ونماذج العمل (BMC) عبر روابط تفاعلية آمنة في الباقات المدفوعة.',
-      'إتاحة بناء حتى 10 دراسات جدوى ونماذج عمل مجاناً عبر باني المنصة الخاص.',
-      'فتح مودال التسجيل والدخول التفاعلي السريع دون مغادرة الصفحة الحالية.'
+    badgeText: 'الإصدار الحالي v2.5.0',
+    highlights: [
+      {
+        title: 'المميزات الرئيسية والجديدة',
+        icon: Sparkles,
+        color: 'text-amber-500',
+        bgColor: 'bg-amber-500/10',
+        borderColor: 'border-amber-500/20',
+        items: [
+          'إمكانية مشاركة الخطط ونماذج العمل (BMC) عبر روابط تفاعلية آمنة في الباقات المدفوعة.',
+          'تمكين بناء حتى 10 دراسات جدوى ونماذج عمل مجاناً عبر باني المنصة الخاص.',
+          'تفعيل نافذة التسجيل والدخول المرنة (Modal Auth) دون الحاجة لمغادرة الصفحة الحالية.'
+        ]
+      },
+      {
+        title: 'الإصلاحات وحل المشكلات',
+        icon: Wrench,
+        color: 'text-blue-500',
+        bgColor: 'bg-blue-500/10',
+        borderColor: 'border-blue-500/20',
+        items: [
+          'حذف حقل التحقق الأمني المعقد في صفحة تسجيل الدخول لتقليل زمن الدخول.',
+          'توحيد مقاسات الخطوط وتثبيت واجهة التصفح لصفحات الشركات الناجحة والمتعثرة.',
+          'إصلاح التباين المحاذي في القوائم والواجهات العربية (RTL).'
+        ]
+      },
+      {
+        title: 'تحسينات التجربة والأداء',
+        icon: Zap,
+        color: 'text-emerald-500',
+        bgColor: 'bg-emerald-500/10',
+        borderColor: 'border-emerald-500/20',
+        items: [
+          'إزالة القوائم العملاقة (Mega Menu) المعقدة من شريط التنقل واستبدالها بروابط مباشرة أسرع.',
+          'تعديل جدول مقارنة الباقات والأسعار وتوضيح الأسعار الأساسية ($0، $9، $19).'
+        ]
+      }
     ],
-    fixes: [
-      'إلغاء حقل التحقق الأمني المعقد في التسجيل لتقليل زمن الدخول وتسهيل التجربة.',
-      'توحيد أحجام الخطوط واستقرار الهيكل البصري في صفحات تفاصيل الشركات الناجحة.',
-      'إصلاح التباين البصري وتناسق الهوامش في الواجهات العربية (RTL).'
-    ],
-    improvements: [
-      'تبسيط شريط التنقل (Navbar) والتخلص من القوائم العملاقة المعقدة لصالح روابط مباشرة وأسرع.',
-      'إعادة هيكلة صفحة الأسعار وتوضيح الباقات الأساسية ($0، $9، $19) مع جدول مقارنة شامل.'
-    ],
-    tags: ['Sharing Links', 'BMC Builder', 'Auth Modal', 'Clean UX']
+    tags: ['Sharing Links', 'BMC Builder', 'Auth Modal', 'Navbar Upgrade', 'RTL Fixes']
   },
   {
     id: 'v2.4.0',
     version: 'v2.4.0',
     date: '20 يوليو 2026',
-    title: 'استوديو نموذج العمل التجاري (BMC Studio) وحاسبة الإيرادات المالية',
+    isLatest: false,
+    title: 'إطلاق استوديو نموذج العمل التجاري (BMC Studio) وحاسبة الإيرادات',
+    summary: 'توفير محرك النمذجة الهيكلية للشركات وحاسبة الإيرادات والمؤشرات المالية التفاعلية.',
     category: 'feature',
-    statusLabel: 'إصدار سابق',
-    summary: 'إطلاق أدوات النمذجة الهيكلية للشركات وحاسبة مؤشرات النمو المالي.',
-    features: [
-      'استوديو بناء نموذج العمل التجاري (BMC Studio) التفاعلي المنظم.',
-      'حاسبة الإيرادات والمؤشرات المالية التفاعلية (MRR, ARR, Churn, LTV).',
-      'نموذج تقييم الجاهزية الاستثمارية والفرضيات المعتمد من منهجية MIT.'
-    ],
-    fixes: [
-      'معالجة البطء في تصفح جداول المشاريع وتحديث استعلامات الأداء.',
-      'إصلاح خطأ تكرار المعرفات في المكونات التفاعلية.'
-    ],
-    improvements: [
-      'تطبيق ألوان Shadcn UI القياسية على كافة المكونات وإلغاء التعتيم القسري.'
+    badgeText: 'إصدار سابق v2.4.0',
+    highlights: [
+      {
+        title: 'المميزات الرئيسية',
+        icon: Sparkles,
+        color: 'text-amber-500',
+        bgColor: 'bg-amber-500/10',
+        borderColor: 'border-amber-500/20',
+        items: [
+          'استوديو بناء نموذج العمل التجاري (BMC Studio) التفاعلي المنظم.',
+          'حاسبة الإيرادات والمؤشرات المالية التفاعلية (MRR, ARR, Churn, LTV).',
+          'تقييم الجاهزية الاستثمارية والفرضيات المعتمد من منهجية MIT.'
+        ]
+      },
+      {
+        title: 'الإصلاحات والتحسينات',
+        icon: Wrench,
+        color: 'text-blue-500',
+        bgColor: 'bg-blue-500/10',
+        borderColor: 'border-blue-500/20',
+        items: [
+          'معالجة بطء تصفح جداول المشاريع وحل أخطاء التكرار في المعرفات.',
+          'تثبيت متغيرات ألوان Shadcn UI القياسية على كافة الواجهات.'
+        ]
+      }
     ],
     tags: ['BMC Studio', 'Financial Calculator', 'MIT Framework']
   },
@@ -88,20 +146,34 @@ const releasesData: ReleaseItem[] = [
     id: 'v2.3.0',
     version: 'v2.3.0',
     date: '02 يوليو 2026',
-    title: 'مكتبة أفكار Micro-SaaS ودراسات أسباب تعثر الشركات',
+    isLatest: false,
+    title: 'قاعدة أفكار Micro-SaaS ودراسات تعثر الشركات الناشئة',
+    summary: 'إثراء المحتوى الميداني وتوثيق الدروس المستفادة من الشركات المتعثرة.',
     category: 'improvement',
-    statusLabel: 'إصدار سابق',
-    summary: 'تحديث قواعد البيانات الميدانية بالدراسات الواقعية وأفكار المشاريع البرمجية المصغرة.',
-    features: [
-      'دليل أفكار Micro-SaaS وشرح نماذج التسعير والنمو الميداني لكل فكرة.',
-      'قسم تحليل أسباب تعثر وفشل الشركات لتوثيق الدروس المستفادة.'
-    ],
-    fixes: [
-      'إصلاح استجابة الشاشات الصغيرة والمتوسطة على جداول القطاعات.',
-      'تعديل المسافات والهوامش الزائدة في بطاقات التصفح.'
-    ],
-    improvements: [
-      'تسريع زمن تحميل وتصفح مقالات الأكاديمية والمصادر التعليمية.'
+    badgeText: 'إصدار سابق v2.3.0',
+    highlights: [
+      {
+        title: 'المميزات والتحديثات',
+        icon: Sparkles,
+        color: 'text-amber-500',
+        bgColor: 'bg-amber-500/10',
+        borderColor: 'border-amber-500/20',
+        items: [
+          'دليل أفكار Micro-SaaS وشرح نماذج التسعير والنمو الميداني لكل فكرة.',
+          'قسم تحليل أسباب تعثر وفشل الشركات لتوثيق الدروس المستفادة.'
+        ]
+      },
+      {
+        title: 'التحسينات والأداء',
+        icon: Zap,
+        color: 'text-emerald-500',
+        bgColor: 'bg-emerald-500/10',
+        borderColor: 'border-emerald-500/20',
+        items: [
+          'إصلاح استجابة الشاشات الصغيرة وتعديل الهوامش الزائدة.',
+          'تسريع استعلامات تصفح مقالات الأكاديمية والمصادر.'
+        ]
+      }
     ],
     tags: ['Micro-SaaS', 'Market Discovery', 'Performance']
   }
@@ -112,196 +184,280 @@ export default function ChangelogPage() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredReleases = useMemo(() => {
-    return releasesData.filter((item) => {
-      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+    return releases.filter((rel) => {
+      const matchesCategory = selectedCategory === 'all' || rel.category === selectedCategory;
       const matchesSearch =
         searchQuery === '' ||
-        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.tags.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()));
+        rel.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        rel.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        rel.tags.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()));
       return matchesCategory && matchesSearch;
     });
   }, [selectedCategory, searchQuery]);
 
   return (
     <PublicLayout>
-      <div dir="rtl" className="w-full bg-background text-foreground font-sans min-h-screen">
+      <div dir="rtl" className="w-full bg-background text-foreground font-sans min-h-screen pb-16">
         
-        {/* World-Class Minimal Header */}
-        <section className="border-b border-border/60 bg-muted/20 py-8">
-          <div className="container mx-auto px-4 max-w-5xl space-y-4">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-              <div className="space-y-1">
-                <div className="flex items-center gap-2">
-                  <Badge variant="default" className="text-xs font-bold gap-1.5 px-2.5 py-0.5 rounded-full">
-                    <Radio className="size-3 text-emerald-400 animate-pulse" />
-                    <span>سجل التغييرات والإصدارات</span>
-                  </Badge>
-                  <span className="text-xs text-muted-foreground font-mono">Linear / Vercel Style</span>
-                </div>
-                <h1 className="text-2xl sm:text-3xl font-black text-foreground tracking-tight">
-                  تحديثات وإصدارات المنصة
-                </h1>
-                <p className="text-xs sm:text-sm text-muted-foreground font-normal max-w-xl">
-                  تغطية شفافة لكافة الميزات الجديدة، الإصلاحات، والتحسينات المطبقة على منصة خطة.
-                </p>
-              </div>
-
-              {/* Filter Tabs */}
-              <div className="flex flex-wrap items-center gap-1.5">
-                {[
-                  { id: 'all', label: 'الكل', icon: Layers },
-                  { id: 'feature', label: 'مميزات', icon: Sparkles },
-                  { id: 'fix', label: 'إصلاحات', icon: Wrench },
-                  { id: 'improvement', label: 'تحسينات', icon: Zap },
-                ].map((tab) => {
-                  const Icon = tab.icon;
-                  const active = selectedCategory === tab.id;
-                  return (
-                    <button
-                      key={tab.id}
-                      onClick={() => setSelectedCategory(tab.id as CategoryFilter)}
-                      className={cn(
-                        "px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer border",
-                        active
-                          ? "bg-primary text-primary-foreground border-primary shadow-2xs"
-                          : "bg-card text-muted-foreground border-border/80 hover:text-foreground hover:bg-muted/60"
-                      )}
-                    >
-                      <Icon className="size-3.5" />
-                      <span>{tab.label}</span>
-                    </button>
-                  );
-                })}
-              </div>
+        {/* Compact Header */}
+        <header className="border-b border-border/70 bg-gradient-to-b from-muted/30 via-muted/10 to-background py-8">
+          <div className="container mx-auto px-4 max-w-6xl space-y-3">
+            <div className="flex items-center gap-2">
+              <Badge variant="default" className="text-xs font-bold gap-1.5 px-3 py-1 rounded-full shadow-2xs">
+                <Radio className="size-3.5 text-emerald-400 animate-pulse" />
+                <span>سجل التغييرات المباشر</span>
+              </Badge>
+              <Badge variant="outline" className="text-xs font-mono font-bold px-2.5 py-0.5">
+                v2.5.0
+              </Badge>
             </div>
+            
+            <h1 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight leading-tight">
+              سجل التحديثات <span className="text-primary">والميزات الجديدة</span>
+            </h1>
+            <p className="text-xs sm:text-sm text-muted-foreground font-normal max-w-2xl leading-relaxed">
+              عرض تفصيلي شفاف لجميع التحديثات المباشرة، الإصلاحات، والتحسينات المطبقة في المنصة.
+            </p>
           </div>
-        </section>
+        </header>
 
-        {/* Global Timeline Layout */}
-        <section className="container mx-auto px-4 max-w-5xl py-8">
-          {filteredReleases.length === 0 ? (
-            <Card className="p-8 text-center border-border/60 shadow-2xs">
-              <Search className="size-8 text-muted-foreground mx-auto mb-2" />
-              <p className="text-sm font-bold text-foreground">لم نجد نتائج تطابق بحثك</p>
-            </Card>
-          ) : (
-            <div className="relative border-r border-border/60 pr-6 sm:pr-8 space-y-10">
-              {filteredReleases.map((release) => (
-                <div key={release.id} className="relative group">
-                  
-                  {/* Timeline Point */}
-                  <div className="absolute -right-[31px] sm:-right-[39px] top-1.5 size-4 rounded-full bg-primary border-4 border-background shadow-2xs group-hover:scale-125 transition-transform" />
-
-                  {/* Two-Column Grid Release Item */}
-                  <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
-                    
-                    {/* Left Sticky Sidebar (Version & Meta) */}
-                    <div className="md:col-span-3 space-y-1.5 md:sticky md:top-24">
-                      <div className="flex items-center gap-2">
-                        <span className="text-lg font-black text-primary font-mono tracking-tight">
-                          {release.version}
-                        </span>
-                        <Badge variant="secondary" className="text-[10px] font-bold px-2 py-0.2">
-                          {release.statusLabel}
-                        </Badge>
-                      </div>
-                      <div className="text-xs text-muted-foreground font-medium flex items-center gap-1">
-                        <Clock className="size-3.5" />
-                        <span>{release.date}</span>
-                      </div>
-                    </div>
-
-                    {/* Right Main Body Content */}
-                    <div className="md:col-span-9 bg-card border border-border/70 rounded-2xl p-5 shadow-2xs space-y-4 text-right">
-                      
-                      {/* Release Title & Summary */}
-                      <div className="space-y-1.5 border-b border-border/40 pb-3">
-                        <h2 className="text-base sm:text-lg font-bold text-foreground leading-snug">
-                          {release.title}
-                        </h2>
-                        <p className="text-xs text-muted-foreground font-normal leading-relaxed">
-                          {release.summary}
-                        </p>
-                      </div>
-
-                      {/* Release Categorized Updates List */}
-                      <div className="space-y-3">
-                        {/* New Features */}
-                        {release.features.length > 0 && (
-                          <div className="space-y-2">
-                            <h3 className="text-xs font-bold text-foreground flex items-center gap-1.5">
-                              <Sparkles className="size-3.5 text-amber-500" />
-                              <span>مميزات جديدة</span>
-                            </h3>
-                            <ul className="space-y-1.5 text-xs text-muted-foreground font-normal pr-2">
-                              {release.features.map((feat, idx) => (
-                                <li key={idx} className="flex items-start gap-2">
-                                  <CheckCircle2 className="size-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                                  <span className="text-foreground leading-relaxed">{feat}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-
-                        {/* Bug Fixes */}
-                        {release.fixes.length > 0 && (
-                          <div className="space-y-2 pt-1">
-                            <h3 className="text-xs font-bold text-foreground flex items-center gap-1.5">
-                              <Wrench className="size-3.5 text-blue-500" />
-                              <span>إصلاحات وملاحظات</span>
-                            </h3>
-                            <ul className="space-y-1.5 text-xs text-muted-foreground font-normal pr-2">
-                              {release.fixes.map((fix, idx) => (
-                                <li key={idx} className="flex items-start gap-2">
-                                  <Check className="size-3.5 text-blue-600 shrink-0 mt-0.5" />
-                                  <span className="text-foreground leading-relaxed">{fix}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-
-                        {/* Improvements */}
-                        {release.improvements.length > 0 && (
-                          <div className="space-y-2 pt-1">
-                            <h3 className="text-xs font-bold text-foreground flex items-center gap-1.5">
-                              <Zap className="size-3.5 text-emerald-500" />
-                              <span>تحسينات الأداء والواجهة</span>
-                            </h3>
-                            <ul className="space-y-1.5 text-xs text-muted-foreground font-normal pr-2">
-                              {release.improvements.map((imp, idx) => (
-                                <li key={idx} className="flex items-start gap-2">
-                                  <CheckCircle2 className="size-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                                  <span className="text-foreground leading-relaxed">{imp}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-                      </div>
-
-                      {/* Tech Tags */}
-                      <div className="flex flex-wrap gap-1.5 pt-2 border-t border-border/40">
-                        {release.tags.map((tag, tIdx) => (
-                          <span
-                            key={tIdx}
-                            className="px-2 py-0.5 rounded-md bg-muted text-muted-foreground text-[10px] font-semibold border border-border/50"
-                          >
-                            #{tag}
+        {/* Main Layout 70-30 Split */}
+        <main className="container mx-auto px-4 max-w-6xl py-8">
+          <div className="grid grid-cols-1 lg:grid-cols-10 gap-8 items-start">
+            
+            {/* Main Content Area (70% - 7 Columns) */}
+            <div className="lg:col-span-7 space-y-8">
+              {filteredReleases.length === 0 ? (
+                <Card className="p-8 text-center border-border/60 shadow-2xs">
+                  <Search className="size-8 text-muted-foreground mx-auto mb-2" />
+                  <p className="text-sm font-bold text-foreground">لم نجد نتائج تطابق بحثك</p>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => {
+                      setSelectedCategory('all');
+                      setSearchQuery('');
+                    }}
+                    className="mt-3 text-xs font-bold"
+                  >
+                    عرض كل التحديثات
+                  </Button>
+                </Card>
+              ) : (
+                filteredReleases.map((rel) => (
+                  <article key={rel.id} className="relative group">
+                    <Card className={cn(
+                      "border shadow-2xs rounded-2xl overflow-hidden transition-all bg-card",
+                      rel.isLatest ? "border-primary/40 shadow-xs" : "border-border/80"
+                    )}>
+                      {/* Release Card Header */}
+                      <div className={cn(
+                        "p-4 sm:p-5 border-b flex flex-wrap items-center justify-between gap-3 text-right",
+                        rel.isLatest ? "bg-primary/5 border-primary/20" : "bg-muted/30 border-border/60"
+                      )}>
+                        <div className="flex items-center gap-3">
+                          <span className="text-xl font-black text-primary font-mono tracking-tight">
+                            {rel.version}
                           </span>
-                        ))}
+                          <Badge
+                            variant={rel.isLatest ? 'default' : 'secondary'}
+                            className="text-xs font-bold px-2.5 py-0.5 rounded-md"
+                          >
+                            {rel.badgeText}
+                          </Badge>
+                        </div>
+
+                        <div className="flex items-center gap-2 text-xs font-semibold text-muted-foreground">
+                          <Clock className="size-3.5" />
+                          <span>{rel.date}</span>
+                        </div>
                       </div>
 
-                    </div>
+                      {/* Release Card Body */}
+                      <div className="p-5 sm:p-6 space-y-5 text-right">
+                        
+                        {/* Title & Summary */}
+                        <div className="space-y-1.5">
+                          <h2 className="text-lg sm:text-xl font-bold text-foreground leading-snug">
+                            {rel.title}
+                          </h2>
+                          <p className="text-xs sm:text-sm text-muted-foreground font-normal leading-relaxed">
+                            {rel.summary}
+                          </p>
+                        </div>
 
+                        {/* Highlights Grid Breakdown */}
+                        <div className="grid grid-cols-1 gap-3.5 pt-1">
+                          {rel.highlights.map((group, gIdx) => {
+                            const Icon = group.icon;
+                            return (
+                              <div
+                                key={gIdx}
+                                className={cn(
+                                  "p-4 rounded-xl border space-y-3 bg-muted/20",
+                                  group.borderColor
+                                )}
+                              >
+                                <div className="flex items-center gap-2">
+                                  <div className={cn("p-1.5 rounded-lg shrink-0", group.bgColor, group.color)}>
+                                    <Icon className="size-4" />
+                                  </div>
+                                  <h3 className="text-xs font-bold text-foreground">
+                                    {group.title}
+                                  </h3>
+                                </div>
+
+                                <ul className="space-y-2 text-xs text-foreground font-normal pr-1">
+                                  {group.items.map((item, iIdx) => (
+                                    <li key={iIdx} className="flex items-start gap-2">
+                                      <CheckCircle2 className="size-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                                      <span className="leading-relaxed">{item}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            );
+                          })}
+                        </div>
+
+                        {/* Tags Footer */}
+                        <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-border/40 text-xs">
+                          <div className="flex flex-wrap gap-1.5">
+                            {rel.tags.map((tag, tIdx) => (
+                              <Badge
+                                key={tIdx}
+                                variant="outline"
+                                className="text-[10px] font-semibold py-0.5 px-2 bg-muted/50 border-border/60"
+                              >
+                                #{tag}
+                              </Badge>
+                            ))}
+                          </div>
+
+                          <span className="text-[11px] text-muted-foreground font-semibold flex items-center gap-1">
+                            <ShieldCheck className="size-3.5 text-emerald-600 inline" />
+                            مستقر ومعتمد
+                          </span>
+                        </div>
+
+                      </div>
+                    </Card>
+                  </article>
+                ))
+              )}
+            </div>
+
+            {/* Sidebar Controls Area (30% - 3 Columns Sticky) */}
+            <aside className="lg:col-span-3 space-y-5 lg:sticky lg:top-20">
+              
+              {/* Search Box Card */}
+              <Card className="p-4 border-border/80 shadow-2xs space-y-3">
+                <h3 className="text-xs font-bold text-foreground flex items-center gap-2">
+                  <Search className="size-4 text-primary" />
+                  <span>البحث في التحديثات</span>
+                </h3>
+                <div className="relative w-full">
+                  <Input
+                    type="text"
+                    placeholder="ابحث بالاسم أو الوسم..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="text-xs font-medium rounded-xl h-9 border-border/80 bg-background text-right"
+                  />
+                </div>
+              </Card>
+
+              {/* Categories Filter Card */}
+              <Card className="p-4 border-border/80 shadow-2xs space-y-3">
+                <h3 className="text-xs font-bold text-foreground flex items-center gap-2">
+                  <Filter className="size-4 text-primary" />
+                  <span>تصنيفات التحديثات</span>
+                </h3>
+                <div className="space-y-1.5">
+                  {[
+                    { id: 'all', label: 'كافة التحديثات', count: releases.length, icon: Layers },
+                    { id: 'feature', label: 'مميزات جديدة', count: 2, icon: Sparkles },
+                    { id: 'fix', label: 'إصلاحات وحلول', count: 1, icon: Wrench },
+                    { id: 'improvement', label: 'تحسينات الواجهة', count: 1, icon: Zap },
+                  ].map((cat) => {
+                    const Icon = cat.icon;
+                    const active = selectedCategory === cat.id;
+                    return (
+                      <button
+                        key={cat.id}
+                        onClick={() => setSelectedCategory(cat.id as CategoryFilter)}
+                        className={cn(
+                          "w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer border",
+                          active
+                            ? "bg-primary text-primary-foreground border-primary shadow-2xs"
+                            : "bg-muted/40 text-muted-foreground border-transparent hover:bg-muted hover:text-foreground"
+                        )}
+                      >
+                        <span className="flex items-center gap-2">
+                          <Icon className="size-3.5" />
+                          <span>{cat.label}</span>
+                        </span>
+                        <Badge
+                          variant={active ? 'secondary' : 'outline'}
+                          className="text-[10px] px-2 py-0.2"
+                        >
+                          {cat.count}
+                        </Badge>
+                      </button>
+                    );
+                  })}
+                </div>
+              </Card>
+
+              {/* Version Jump Index */}
+              <Card className="p-4 border-border/80 shadow-2xs space-y-3">
+                <h3 className="text-xs font-bold text-foreground flex items-center gap-2">
+                  <History className="size-4 text-primary" />
+                  <span>فهرس الإصدارات</span>
+                </h3>
+                <div className="space-y-1 text-xs">
+                  {releases.map((r) => (
+                    <a
+                      key={r.id}
+                      href={`#${r.id}`}
+                      className="flex items-center justify-between p-2 rounded-lg hover:bg-muted/60 text-muted-foreground hover:text-foreground transition-all"
+                    >
+                      <span className="font-mono font-bold text-primary">{r.version}</span>
+                      <span className="text-[11px] font-normal">{r.date}</span>
+                    </a>
+                  ))}
+                </div>
+              </Card>
+
+              {/* System Quick Stats Card */}
+              <Card className="p-4 border-border/80 shadow-2xs space-y-3 bg-muted/20">
+                <h3 className="text-xs font-bold text-foreground flex items-center gap-2">
+                  <Activity className="size-4 text-emerald-600" />
+                  <span>حالة النظام والبيانات</span>
+                </h3>
+                <div className="space-y-2 text-xs">
+                  <div className="flex justify-between items-center py-1 border-b border-border/40">
+                    <span className="text-muted-foreground">الإصدار النشط:</span>
+                    <strong className="font-mono text-foreground">v2.5.0</strong>
+                  </div>
+                  <div className="flex justify-between items-center py-1 border-b border-border/40">
+                    <span className="text-muted-foreground">حالة الخوادم:</span>
+                    <strong className="text-emerald-600 flex items-center gap-1">
+                      <CheckCircle className="size-3" />
+                      مستقر
+                    </strong>
+                  </div>
+                  <div className="flex justify-between items-center py-1">
+                    <span className="text-muted-foreground">التغييرات هذا الشهر:</span>
+                    <strong className="text-foreground">+12 تحسين</strong>
                   </div>
                 </div>
-              ))}
-            </div>
-          )}
-        </section>
+              </Card>
+
+            </aside>
+
+          </div>
+        </main>
 
       </div>
     </PublicLayout>

@@ -138,22 +138,23 @@ const ADMIN_TABS = [
 ];
 
 const QUICK_ACCESS: NavItemConfig[] = [
-  { tab: 'home', label: 'الرئيسية', icon: Home, id: 'tour-home', iconColor: 'text-sky-500' },
-  { tab: 'my-plans', label: 'مشاريعي', icon: Layers, id: 'tour-projects', iconColor: 'text-indigo-500' },
-  { tab: 'saved-market-items', label: 'المحفوظات', icon: Bookmark, iconColor: 'text-amber-500' },
+  { tab: 'home', label: 'الرئيسية', icon: Home, id: 'tour-home', iconColor: 'text-sky-500', tooltipText: 'اللوحة الرئيسية ونظرة عامة على نشاطك ومشاريعك الحالية' },
+  { tab: 'my-plans', label: 'مشاريعي', icon: Layers, id: 'tour-projects', iconColor: 'text-indigo-500', tooltipText: 'استعراض كافة دراسات الجدوى ونماذج الأعمال المحفوظة في حسابك' },
+  { tab: 'saved-market-items', label: 'المحفوظات', icon: Bookmark, iconColor: 'text-amber-500', tooltipText: 'مكتبة الأفكار والفرص التي قمت بتفضيلها وحفظها' },
 ];
 
 const PROJECT_BUILD: NavItemConfig[] = [
-  { tab: 'new-plan-family', label: 'النموذج السهل', icon: Heart, id: 'tour-new-plan', badge: 2, iconColor: 'text-rose-500' },
+  { tab: 'new-plan-family', label: 'النموذج السهل', icon: Heart, id: 'tour-new-plan', badge: 2, iconColor: 'text-rose-500', tooltipText: 'بناء خطة عمل سريعة ومبسطة للمشاريع الناشئة والعائلية' },
   {
     tab: 'strategic-dashboard',
     label: 'النموذج الاحترافي',
     icon: Zap,
     badge: 2,
     iconColor: 'text-amber-500',
+    tooltipText: 'دراسة جدوى شمولية ودقيقة مع تحليلات استراتيجية ومالية متقدمة',
     active: (tab) => tab === 'new-plan-pro' || tab === 'strategic-dashboard',
   },
-  { tab: 'new-plan-mit24', label: 'MIT 24 Steps', icon: Rocket, badge: 1, iconColor: 'text-purple-500' },
+  { tab: 'new-plan-mit24', label: 'MIT 24 Steps', icon: Rocket, badge: 1, iconColor: 'text-purple-500', tooltipText: 'تطبيق منهجية معهد MIT الـ 24 خطوة لبناء المشاريع سريعة النمو' },
   {
     tab: 'new-plan-bmc',
     label: 'بناء نموذج العمل BMC',
@@ -161,34 +162,36 @@ const PROJECT_BUILD: NavItemConfig[] = [
     id: 'tour-bmc',
     badge: 1,
     iconColor: 'text-blue-500',
+    tooltipText: 'استوديو بناء نموذج العمل التجاري تفاعلياً وتحديد العناصر التسعة',
     active: (tab) => tab === 'new-plan-bmc' || tab === 'bmc',
   },
-  { tab: 'new-plan-lean', label: 'منهجية Lean Startup', icon: Activity, badge: 'جديد', iconColor: 'text-emerald-500' },
+  { tab: 'new-plan-lean', label: 'منهجية Lean Startup', icon: Activity, badge: 'جديد', iconColor: 'text-emerald-500', tooltipText: 'منهجية اختبار الفرضيات وتقليل المخاطر قبل إطلاق المنتج' },
 ];
 
 const PROJECT_IDEAS: NavItemConfig[] = [
-  { tab: 'proven-projects', label: 'أفكار شركات ناجحة', icon: Sparkles, iconColor: 'text-amber-400' },
-  { tab: 'failed-projects', label: 'شركات فشلت', icon: TrendingDown, iconColor: 'text-rose-400' },
-  { tab: 'saas-ideas', label: 'أفكار SaaS', icon: CloudCog, iconColor: 'text-cyan-500' },
-  { tab: 'micro-saas-ideas', label: 'أفكار Micro-SaaS', icon: Settings2, iconColor: 'text-teal-500' },
+  { tab: 'proven-projects', label: 'أفكار شركات ناجحة', icon: Sparkles, iconColor: 'text-amber-400', tooltipText: 'تحليل +500 شركة ناجحة واكتشاف نماذج إيراداتها واستراتيجيات نموها' },
+  { tab: 'failed-projects', label: 'شركات فشلت', icon: TrendingDown, iconColor: 'text-rose-400', tooltipText: 'دراسة أسباب تعثر وفشل الشركات لتوثيق الدروس وتجنب الأخطاء المكلفة' },
+  { tab: 'saas-ideas', label: 'أفكار SaaS', icon: CloudCog, iconColor: 'text-cyan-500', tooltipText: 'استكشاف أفكار المشاريع السحابية ونماذج الاشتراك الأكثر ربحية عالمياً' },
+  { tab: 'micro-saas-ideas', label: 'أفكار Micro-SaaS', icon: Settings2, iconColor: 'text-teal-500', tooltipText: 'أفكار مشاريع برمجية مصغرة مناسبة للمطورين المستقلين ورواد الأعمال' },
   {
     tab: 'market-discovery',
     label: 'استكشاف قطاعات السوق',
     icon: Compass,
     id: 'tour-market-discovery',
     iconColor: 'text-blue-600',
+    tooltipText: 'تحليل ميداني واستثماري لأكثر من 100 قطاع وسوق تجاري',
     active: (tab) => tab === 'market-discovery' || MARKET_DISCOVERY_DASHBOARDS.includes(tab),
   },
-  { tab: 'problem-engine', label: 'المشكلات والفرص', icon: Activity, id: 'tour-problem-engine', iconColor: 'text-orange-500' },
+  { tab: 'problem-engine', label: 'المشكلات والفرص', icon: Activity, id: 'tour-problem-engine', iconColor: 'text-orange-500', tooltipText: 'رادار اكتشاف الفرص والمشاكل الميدانية لبناء حلول مبتكرة' },
 ];
 
 const KNOWLEDGE_CENTER: NavItemConfig[] = [
-  { tab: 'platform-academy', label: 'أكاديمية المنصة', icon: BookOpen, badge: 'جديد', id: 'tour-academy', iconColor: 'text-indigo-500' },
+  { tab: 'platform-academy', label: 'أكاديمية المنصة', icon: BookOpen, badge: 'جديد', id: 'tour-academy', iconColor: 'text-indigo-500', tooltipText: 'مركز المقالات والأدلة التعليمية لفهم المؤشرات المالية واستراتيجيات النمو' },
 ];
 
 const PROJECT_ATTACHMENTS: NavItemConfig[] = [
-  { tab: 'financial-calculator', label: 'حاسبة الأرباح والمؤشرات', icon: Calculator, badge: 'جديد', id: 'tour-calculator', iconColor: 'text-emerald-500' },
-  { tab: 'first-90-days', label: 'أول 90 يوم للمشروع', icon: Calendar, badge: 'جديد', id: 'tour-first-90-days', iconColor: 'text-sky-500' },
+  { tab: 'financial-calculator', label: 'حاسبة الأرباح والمؤشرات', icon: Calculator, badge: 'جديد', id: 'tour-calculator', iconColor: 'text-emerald-500', tooltipText: 'حساب مؤشرات الإيرادات المتكررة والأرباح (MRR, ARR, LTV, Churn)' },
+  { tab: 'first-90-days', label: 'أول 90 يوم للمشروع', icon: Calendar, badge: 'جديد', id: 'tour-first-90-days', iconColor: 'text-sky-500', tooltipText: 'خطة عمل تنفذية وجدول زمني لأهم خطوات إطلاق المشروع في أول 3 أشهر' },
   {
     tab: 'unicorn-benchmark',
     label: 'رادار اليونيكورن',
@@ -200,7 +203,7 @@ const PROJECT_ATTACHMENTS: NavItemConfig[] = [
     disabled: true,
     tooltipText: 'مقيم ومستشار جاهزية اليونيكورن للمشاريع الواعدة — قريباً في المنصة لتوفير المقارنات المتقدمة والتنبؤات الاستثمارية.',
   },
-  { tab: 'brand-identity', label: 'الهوية البصرية', icon: Palette, id: 'tour-brand', iconColor: 'text-pink-500' },
+  { tab: 'brand-identity', label: 'الهوية البصرية', icon: Palette, id: 'tour-brand', iconColor: 'text-pink-500', tooltipText: 'استوديو تصميم الهوية التجارية وتنسيق شعار وألوان تقارير الدراسة' },
 ];
 
 const ACCOUNT_ITEMS: NavItemConfig[] = [
@@ -209,6 +212,7 @@ const ACCOUNT_ITEMS: NavItemConfig[] = [
     label: 'حسابي الشخصي',
     icon: Crown,
     iconColor: 'text-amber-500',
+    tooltipText: 'إدارة الاشتراك والتفضيلات والأنشطة الخاصة بحسابك',
     active: (tab) =>
       ['subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-activity', 'customer-support'].includes(tab),
   },
@@ -217,6 +221,7 @@ const ACCOUNT_ITEMS: NavItemConfig[] = [
     label: 'ملف التعريف',
     icon: Settings,
     iconColor: 'text-slate-500',
+    tooltipText: 'تعديل البيانات الشخصية، كلمة المرور، وتفضيلات الحساب',
     active: (tab) => ['profile', 'settings', 'customer-account'].includes(tab),
   },
   {
@@ -224,19 +229,20 @@ const ACCOUNT_ITEMS: NavItemConfig[] = [
     label: 'اشتراكي',
     icon: CreditCard,
     iconColor: 'text-emerald-500',
+    tooltipText: 'استعراض وترقية باقة الاشتراك وتفاصيل الفوترة',
     active: (tab) => ['pricing', 'customer-subscription', 'customer-usage'].includes(tab),
   },
 ];
 
 const ADMIN_CORE: NavItemConfig[] = [
-  { tab: 'admin-dashboard', label: 'الرئيسية', icon: LayoutDashboard },
-  { tab: 'admin-analytics', label: 'تحليلات المنصة', icon: Activity },
+  { tab: 'admin-dashboard', label: 'الرئيسية', icon: LayoutDashboard, tooltipText: 'لوحة القيادة الرئيسية لمشرفي المنصة' },
+  { tab: 'admin-analytics', label: 'تحليلات المنصة', icon: Activity, tooltipText: 'إحصائيات استخدام الأدوات وتحليلات الأداء' },
 ];
 
 const ADMIN_MANAGEMENT: NavItemConfig[] = [
-  { tab: 'users-management', label: 'المستخدمون', icon: Users, badge: 248 },
-  { tab: 'admin-plans', label: 'أرشيف الخطط', icon: Layers },
-  { tab: 'admin-security', label: 'الأمان', icon: Shield },
+  { tab: 'users-management', label: 'المستخدمون', icon: Users, badge: 248, tooltipText: 'إدارة حسابات وصلاحيات المستخدمين والاشتراكات' },
+  { tab: 'admin-plans', label: 'أرشيف الخطط', icon: Layers, tooltipText: 'أرشيف واستعراض دراسات الجدوى المنشورة' },
+  { tab: 'admin-security', label: 'الأمان', icon: Shield, tooltipText: 'سجلات الأمان وحماية بيانات النظام' },
 ];
 
 function isItemActive(item: NavItemConfig, activeTab: string) {

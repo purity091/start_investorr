@@ -1,8 +1,12 @@
-import React from 'react';
-import { Calendar, CheckCircle2, History, Sparkles, Wrench, Zap, Check, Radio } from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import { Calendar, CheckCircle2, History, Sparkles, Wrench, Zap, Check, Radio, Search, Filter, Activity, Layers } from 'lucide-react';
 
 import { Badge } from '../ui/Badge';
 import { Card } from '../ui/Card';
+import { Input } from '../ui/Input';
+import { cn } from '@/lib/utils';
+
+type CategoryFilter = 'all' | 'feature' | 'fix' | 'improvement';
 
 interface ReleaseItem {
   id: string;
@@ -10,6 +14,7 @@ interface ReleaseItem {
   date: string;
   title: string;
   summary: string;
+  category: CategoryFilter;
   features: string[];
   fixes: string[];
   improvements: string[];
@@ -23,6 +28,7 @@ const RELEASES: ReleaseItem[] = [
     date: '05 أغسطس 2026',
     title: 'مشاركة الخطط ونماذج العمل + بناء 10 دراسات مجاناً وتسهيل الدخول',
     summary: 'تحديث رئيسي لتبسيط الوصول، تحسين الأمان، وإتاحة مشاركة النماذج والدراسات.',
+    category: 'feature',
     features: [
       'مشاركة الخطط ونماذج العمل عبر روابط آمنة بالباقات المدفوعة',
       'بناء حتى 10 دراسات جدوى بـ $0 في الباقة المجانية عبر باني المنصة',
@@ -45,6 +51,7 @@ const RELEASES: ReleaseItem[] = [
     date: '20 يوليو 2026',
     title: 'استوديو نموذج العمل التجاري (BMC Studio) وحاسبة الإيرادات',
     summary: 'إضافة محرك النمذجة الهيكلية للمشاريع وحاسبة المؤشرات المالية.',
+    category: 'feature',
     features: [
       'استوديو نموذج العمل التجاري (BMC Studio)',
       'حاسبة الإيرادات المالية التفاعلية (MRR, ARR, LTV)',
@@ -61,16 +68,32 @@ const RELEASES: ReleaseItem[] = [
 ];
 
 export const Changelog: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>('all');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const filteredReleases = useMemo(() => {
+    return RELEASES.filter((rel) => {
+      const matchesCategory = selectedCategory === 'all' || rel.category === selectedCategory;
+      const matchesSearch =
+        searchQuery === '' ||
+        rel.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        rel.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        rel.tags.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()));
+      return matchesCategory && matchesSearch;
+    });
+  }, [selectedCategory, searchQuery]);
+
   return (
     <div className="w-full space-y-6 py-4" dir="rtl">
-      {/* Header Bar */}
+      
+      {/* Top Header Card */}
       <Card className="border-border/60 shadow-2xs bg-card p-4 sm:p-5">
         <div className="flex items-center justify-between gap-3">
-          <div className="space-y-1">
+          <div className="space-y-1 text-right">
             <div className="flex items-center gap-2">
               <Badge variant="default" className="text-xs font-bold gap-1.5 rounded-full">
                 <Radio className="size-3 text-emerald-400 animate-pulse" />
-                <span>سجل التغييرات والإصدارات</span>
+                <span>سجل التحديثات والإصدارات</span>
               </Badge>
               <span className="text-xs text-muted-foreground font-mono">v2.5.0</span>
             </div>
@@ -82,44 +105,38 @@ export const Changelog: React.FC = () => {
         </div>
       </Card>
 
-      {/* World-class Linear style timeline */}
-      <div className="relative border-r border-border/60 pr-6 space-y-8">
-        {RELEASES.map((release) => (
-          <div key={release.id} className="relative group">
-            
-            {/* Timeline Point */}
-            <div className="absolute -right-[31px] top-1.5 size-3.5 rounded-full bg-primary border-4 border-background shadow-2xs group-hover:scale-125 transition-transform" />
-
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
-              
-              {/* Left Version Info */}
-              <div className="md:col-span-3 space-y-1">
+      {/* 70-30 Split View Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-10 gap-6 items-start">
+        
+        {/* 70% Left Main Feed Column */}
+        <div className="lg:col-span-7 space-y-4">
+          {filteredReleases.map((release) => (
+            <Card key={release.id} className="border-border/70 shadow-2xs bg-card overflow-hidden text-right">
+              <div className="p-4 bg-muted/20 border-b border-border/40 flex flex-row items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <span className="text-base font-black text-primary font-mono tracking-tight">{release.version}</span>
-                  <Badge variant="secondary" className="text-[9px] font-bold">مباشر</Badge>
+                  <span className="text-sm font-bold text-primary font-mono">{release.version}</span>
+                  <Badge variant="secondary" className="text-[10px]">مباشر</Badge>
                 </div>
-                <div className="text-[11px] text-muted-foreground font-medium flex items-center gap-1">
-                  <Calendar className="size-3" />
-                  <span>{release.date}</span>
-                </div>
+                <span className="text-xs text-muted-foreground font-medium flex items-center gap-1">
+                  <Calendar className="size-3.5" />
+                  {release.date}
+                </span>
               </div>
 
-              {/* Right Content Box */}
-              <div className="md:col-span-9 bg-card border border-border/70 rounded-xl p-4 shadow-2xs space-y-3 text-right">
-                
-                <div className="border-b border-border/40 pb-2.5">
+              <div className="p-4 space-y-3">
+                <div>
                   <h3 className="text-sm font-bold text-foreground">{release.title}</h3>
                   <p className="text-xs text-muted-foreground font-normal mt-0.5">{release.summary}</p>
                 </div>
 
-                <div className="space-y-2.5">
+                <div className="space-y-2 pt-1">
                   {release.features.length > 0 && (
-                    <div className="space-y-1">
-                      <h4 className="text-[11px] font-bold text-foreground flex items-center gap-1">
+                    <div className="bg-muted/30 p-2.5 rounded-lg border border-border/40 space-y-1">
+                      <span className="text-[11px] font-bold text-foreground flex items-center gap-1">
                         <Sparkles className="size-3 text-amber-500" />
                         <span>مميزات جديدة</span>
-                      </h4>
-                      <ul className="space-y-1 text-xs text-muted-foreground font-normal pr-2">
+                      </span>
+                      <ul className="space-y-1 text-xs text-muted-foreground font-normal pr-1">
                         {release.features.map((f, i) => (
                           <li key={i} className="flex items-start gap-1.5">
                             <CheckCircle2 className="size-3 text-emerald-600 shrink-0 mt-0.5" />
@@ -131,12 +148,12 @@ export const Changelog: React.FC = () => {
                   )}
 
                   {release.fixes.length > 0 && (
-                    <div className="space-y-1">
-                      <h4 className="text-[11px] font-bold text-foreground flex items-center gap-1">
+                    <div className="bg-muted/30 p-2.5 rounded-lg border border-border/40 space-y-1">
+                      <span className="text-[11px] font-bold text-foreground flex items-center gap-1">
                         <Wrench className="size-3 text-blue-500" />
-                        <span>إصلاحات</span>
-                      </h4>
-                      <ul className="space-y-1 text-xs text-muted-foreground font-normal pr-2">
+                        <span>إصلاحات وملاحظات</span>
+                      </span>
+                      <ul className="space-y-1 text-xs text-muted-foreground font-normal pr-1">
                         {release.fixes.map((fx, i) => (
                           <li key={i} className="flex items-start gap-1.5">
                             <Check className="size-3 text-blue-600 shrink-0 mt-0.5" />
@@ -148,12 +165,12 @@ export const Changelog: React.FC = () => {
                   )}
 
                   {release.improvements.length > 0 && (
-                    <div className="space-y-1">
-                      <h4 className="text-[11px] font-bold text-foreground flex items-center gap-1">
+                    <div className="bg-muted/30 p-2.5 rounded-lg border border-border/40 space-y-1">
+                      <span className="text-[11px] font-bold text-foreground flex items-center gap-1">
                         <Zap className="size-3 text-emerald-500" />
-                        <span>تحسينات</span>
-                      </h4>
-                      <ul className="space-y-1 text-xs text-muted-foreground font-normal pr-2">
+                        <span>تحسينات الأداء</span>
+                      </span>
+                      <ul className="space-y-1 text-xs text-muted-foreground font-normal pr-1">
                         {release.improvements.map((imp, i) => (
                           <li key={i} className="flex items-start gap-1.5">
                             <CheckCircle2 className="size-3 text-emerald-600 shrink-0 mt-0.5" />
@@ -174,12 +191,67 @@ export const Changelog: React.FC = () => {
                 </div>
 
               </div>
+            </Card>
+          ))}
+        </div>
 
+        {/* 30% Right Sidebar Controls Column */}
+        <div className="lg:col-span-3 space-y-4 lg:sticky lg:top-20 text-right">
+          <Card className="p-4 border-border/80 shadow-2xs space-y-3">
+            <h3 className="text-xs font-bold text-foreground flex items-center gap-2">
+              <Search className="size-4 text-primary" />
+              <span>البحث</span>
+            </h3>
+            <Input
+              type="text"
+              placeholder="بحث بالاسم أو الوسم..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="text-xs font-medium rounded-xl h-9 border-border/80 bg-background text-right"
+            />
+          </Card>
+
+          <Card className="p-4 border-border/80 shadow-2xs space-y-3">
+            <h3 className="text-xs font-bold text-foreground flex items-center gap-2">
+              <Filter className="size-4 text-primary" />
+              <span>التصنيفات</span>
+            </h3>
+            <div className="space-y-1">
+              {[
+                { id: 'all', label: 'الكل', count: RELEASES.length, icon: Layers },
+                { id: 'feature', label: 'مميزات جديدة', count: 2, icon: Sparkles },
+                { id: 'fix', label: 'إصلاحات', count: 1, icon: Wrench },
+                { id: 'improvement', label: 'تحسينات', count: 1, icon: Zap },
+              ].map((cat) => {
+                const Icon = cat.icon;
+                const active = selectedCategory === cat.id;
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => setSelectedCategory(cat.id as CategoryFilter)}
+                    className={cn(
+                      "w-full flex items-center justify-between px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer border",
+                      active
+                        ? "bg-primary text-primary-foreground border-primary shadow-2xs"
+                        : "bg-muted/40 text-muted-foreground border-transparent hover:bg-muted"
+                    )}
+                  >
+                    <span className="flex items-center gap-1.5">
+                      <Icon className="size-3.5" />
+                      <span>{cat.label}</span>
+                    </span>
+                    <Badge variant={active ? 'secondary' : 'outline'} className="text-[9px]">
+                      {cat.count}
+                    </Badge>
+                  </button>
+                );
+              })}
             </div>
+          </Card>
+        </div>
 
-          </div>
-        ))}
       </div>
+
     </div>
   );
 };
