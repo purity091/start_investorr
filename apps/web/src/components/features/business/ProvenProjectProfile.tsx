@@ -32,13 +32,26 @@ import {
   Fingerprint,
   ChevronDown,
   ChevronUp,
-  Users
+  ChevronLeft,
+  PanelRightOpen,
+  Users,
+  Layers,
+  Briefcase,
+  MapPin,
+  Calendar,
+  Bookmark,
+  Sparkles,
+  Compass,
+  Store,
+  Loader2
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { fetchPublicJson } from '@/lib/publicData';
 
 interface ProvenProjectProps {
   project: any;
   onBack: () => void;
+  onSelectProject?: (project: any) => void;
 }
 
 const getCountryInfo = (location: string) => {
@@ -171,29 +184,49 @@ const getStatusMeta = (status: string) => {
 
 const getShortRevenueDisplay = (value: unknown) => {
   const revenueStr = getValuationText(value);
-  if (!revenueStr) return '-';
-  if (revenueStr.length < 25) return revenueStr;
+  if (!revenueStr) return 'غير مفصح رسمياً';
+
+  if (
+    revenueStr.includes('غير') ||
+    revenueStr.includes('لا تنشر') ||
+    revenueStr.includes('لا تفصح') ||
+    revenueStr.includes('لا تكشف') ||
+    revenueStr.includes('لم تعلن') ||
+    revenueStr.includes('لم تكشف') ||
+    revenueStr.includes('مغلق')
+  ) {
+    return 'غير مفصح رسمياً';
+  }
+
+  if (revenueStr.length < 20) return revenueStr;
 
   const amountMatch = revenueStr.match(/(\$\d+(?:\.\d+)?\s*(?:B|M|K)?|نحو \d+(?:\.\d+)?\s*(?:مليار|ملايين|مليون|ألف)\s*(?:دولار|درهم|جنيه)?)/i);
   if (amountMatch) return amountMatch[0];
 
-  if (revenueStr.includes('غير معلن') || revenueStr.includes('غير متوفر')) return 'غير مفصح رسمياً';
-  if (revenueStr.includes('مغلق')) return 'مغلق';
-
-  return revenueStr.slice(0, 22) + '...';
+  return 'غير مفصح رسمياً';
 };
 
 const getShortTrafficDisplay = (value: unknown) => {
   const trafficStr = getValuationText(value);
-  if (!trafficStr) return '-';
-  if (trafficStr.length < 25) return trafficStr;
+  if (!trafficStr) return 'غير مفصح رسمياً';
+
+  if (
+    trafficStr.includes('غير') ||
+    trafficStr.includes('لا تنشر') ||
+    trafficStr.includes('لا تفصح') ||
+    trafficStr.includes('لا تكشف') ||
+    trafficStr.includes('لم تعلن') ||
+    trafficStr.includes('لم تكشف')
+  ) {
+    return 'غير مفصح رسمياً';
+  }
+
+  if (trafficStr.length < 20) return trafficStr;
 
   const trafficMatch = trafficStr.match(/(\d+(?:\.\d+)?\s*(?:B|M|K|مليون|ألف)\s*(?:عميل|زائر|مستخدم|بريد|مشترك)?)/i);
   if (trafficMatch) return trafficMatch[0];
 
-  if (trafficStr.includes('غير معلن') || trafficStr.includes('غير متوفر') || trafficStr.includes('غير مناسب')) return 'غير مفصح رسمياً';
-
-  return trafficStr.slice(0, 22) + '...';
+  return 'غير مفصح رسمياً';
 };
 
 const getValuationText = (value: unknown): string => {
@@ -230,16 +263,27 @@ const getValuationText = (value: unknown): string => {
 
 const getShortValuationDisplay = (value: unknown) => {
   const valStr = getValuationText(value);
-  if (!valStr) return '-';
-  if (valStr.length < 25) return valStr;
+  if (!valStr) return 'غير مفصح رسمياً';
+
+  if (
+    valStr.includes('غير') ||
+    valStr.includes('لا تنشر') ||
+    valStr.includes('لا تفصح') ||
+    valStr.includes('لا تكشف') ||
+    valStr.includes('لم تعلن') ||
+    valStr.includes('لم تكشف')
+  ) {
+    return 'غير مفصح رسمياً';
+  }
+
+  if (valStr.length < 20) return valStr;
 
   const valMatch = valStr.match(/(\$\d+(?:\.\d+)?\s*(?:B|M|K)?|\d+(?:\.\d+)?\s*(?:مليار|ملايين|مليون|ألف)\s*(?:دولار|درهم|جنيه)?)/i);
   if (valMatch) return valMatch[0];
 
   if (valStr.includes('Nasdaq') || valStr.includes('عامة')) return 'شركة عامة';
-  if (valStr.includes('لم تكشف') || valStr.includes('غير معلن') || valStr.includes('غير متوفر')) return 'غير مفصح رسمياً';
 
-  return valStr.slice(0, 22) + '...';
+  return 'غير مفصح رسمياً';
 };
 
 const getDisplayText = (value: unknown): string => {
@@ -280,11 +324,181 @@ const toTextList = (value: unknown): string[] => {
   return values.map(getDisplayText).filter(Boolean);
 };
 
-export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: rawProject, onBack }) => {
+const translateConfidence = (level: unknown): string => {
+  if (!level) return 'بيانات موثقة';
+  const l = String(level).toLowerCase();
+  if (l === 'high' || l === 'very_high') return 'درجة ثقة عالية';
+  if (l === 'medium_high' || l === 'medium') return 'درجة ثقة متوسطة';
+  if (l === 'low') return 'تقدير أولي';
+  return 'بيانات رسمية';
+};
+
+const translateClaimType = (claim: unknown): string => {
+  if (!claim) return 'بيانات مالية موثقة';
+  const c = String(claim).toLowerCase();
+  if (c.includes('implied_on_air') || c.includes('implied')) return 'تقييم موثق في المقابلات الرسمية';
+  if (c.includes('official') || c.includes('reported') || c.includes('public')) return 'إفصاح مالي رسمي معلن';
+  if (c.includes('bootstrapped')) return 'تمويل ذاتي 100%';
+  if (c.includes('venture') || c.includes('seed')) return 'استثمار رأس مال جريء';
+  return getDisplayText(claim).replace(/_/g, ' ');
+};
+
+const getCategoryTokens = (rawCategory: unknown, rawCustomerType?: unknown): string[] => {
+  const rawList: string[] = [];
+
+  if (rawCategory) {
+    const text = getDisplayText(rawCategory);
+    if (text) rawList.push(...text.split(/[\/,\n]+/));
+  }
+
+  if (rawCustomerType) {
+    const text = getDisplayText(rawCustomerType);
+    if (text) rawList.push(...text.split(/[\/,\n]+/));
+  }
+
+  const tokens: string[] = [];
+  rawList.forEach(item => {
+    const trimmed = item.trim();
+    if (!trimmed) return;
+
+    if (trimmed.includes(' & ')) {
+      const parts = trimmed.split(' & ').map(p => p.trim()).filter(Boolean);
+      tokens.push(...parts);
+    } else {
+      tokens.push(trimmed);
+    }
+  });
+
+  return Array.from(new Set(tokens.filter(t => t.length > 0)));
+};
+
+interface StructuredToolItem {
+  brandBadge?: string;
+  title: string;
+  description: string;
+}
+
+const parseToolItem = (rawTool: string): StructuredToolItem => {
+  let cleaned = rawTool.trim();
+
+  // 1. Fix typo where English word is attached to Arabic text without a space (e.g. "Shopifyلتشغيل")
+  cleaned = cleaned.replace(/([A-Za-z0-9]+)([\u0600-\u06FF])/g, '$1 $2');
+  cleaned = cleaned.replace(/([\u0600-\u06FF])([A-Za-z0-9]+)/g, '$1 $2');
+
+  // 2. Extract leading English brand if present
+  const engLeading = cleaned.match(/^([A-Za-z0-9\s\&\-\+\.]{2,})/);
+  if (engLeading && !/^[\s0-9]+$/.test(engLeading[1])) {
+    const brand = engLeading[1].trim();
+    let rest = cleaned.substring(engLeading[0].length).trim();
+    rest = rest.replace(/^[:\-–—\s]+/, '');
+    return {
+      brandBadge: brand,
+      title: brand,
+      description: rest || cleaned
+    };
+  }
+
+  // 3. Extract title before connectors like 'لـ', 'لتشغيل', 'وفق', ':', '،'
+  const splitMatch = cleaned.match(/^([^:\,،\n]+?)(?:[:،]\s*|\s+(?:لـ|لتشغيل|تخدم|تشمل|تسوّقها|وفق)\s+)(.*)/);
+  if (splitMatch && splitMatch[1] && splitMatch[2]) {
+    const titlePart = splitMatch[1].trim();
+    const descPart = splitMatch[2].trim();
+    
+    const brandMatch = titlePart.match(/([A-Za-z0-9\s\&\-\+\.]{2,})/);
+    return {
+      brandBadge: brandMatch ? brandMatch[0].trim() : undefined,
+      title: titlePart,
+      description: descPart
+    };
+  }
+
+  const brandMatch = cleaned.match(/([A-Za-z0-9\s\&\-\+\.]{2,})/);
+  return {
+    brandBadge: brandMatch ? brandMatch[0].trim() : undefined,
+    title: cleaned,
+    description: cleaned
+  };
+};
+
+const getCleanDomain = (url?: string): string => {
+  if (!url) return '';
+  try {
+    const parsed = new URL(url.startsWith('http') ? url : `https://${url}`);
+    return parsed.hostname.replace(/^www\./, '');
+  } catch {
+    return url.replace(/^https?:\/\//, '').replace(/\/.*$/, '');
+  }
+};
+
+export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: rawProject, onBack, onSelectProject }) => {
   const [activeId, setActiveId] = useState<string>('overview');
+  const [isTocOpen, setIsTocOpen] = useState<boolean>(false);
   const [isSourcesOpen, setIsSourcesOpen] = useState<boolean>(false);
+  const [isPolicyOpen, setIsPolicyOpen] = useState<boolean>(false);
+  const [isQualityOpen, setIsQualityOpen] = useState<boolean>(false);
+  const [similarProjects, setSimilarProjects] = useState<any[]>([]);
+  const [isLoadingSimilar, setIsLoadingSimilar] = useState<boolean>(true);
   const containerRef = useRef<HTMLDivElement>(null);
   const tocRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let isMounted = true;
+    const loadSimilar = async () => {
+      setIsLoadingSimilar(true);
+      try {
+        const allProjects = await fetchPublicJson<any[]>('/api/public-data/proven-projects');
+        if (Array.isArray(allProjects) && isMounted) {
+          const currentId = (rawProject.id || rawProject.slug || '').toLowerCase();
+
+          // Exclude current project
+          const candidates = allProjects.filter((p: any) => {
+            const pId = (p.id || p.slug || '').toLowerCase();
+            return pId && pId !== currentId;
+          });
+
+          // Extract category tokens from rawProject
+          const catStr = rawProject.category || '';
+          const tokens = catStr.split(/[\/\,\-\–\—\+]/).map((t: string) => t.trim()).filter(Boolean);
+
+          // Compute relevance score for each candidate
+          const scored = candidates.map((p: any) => {
+            let score = 0;
+            const pCat = (p.category || '').toLowerCase();
+            const pHeadline = (p.headline || '').toLowerCase();
+
+            tokens.forEach((token: string) => {
+              const tokLower = token.toLowerCase();
+              if (tokLower.length > 2) {
+                if (pCat.includes(tokLower)) score += 4;
+                if (pHeadline.includes(tokLower)) score += 2;
+              }
+            });
+
+            // Location score
+            const pLoc = p.company?.location || '';
+            const currentLoc = rawProject.company?.location || '';
+            if (pLoc && currentLoc) {
+              if (pLoc.includes('السعودية') && currentLoc.includes('السعودية')) score += 1;
+              if (pLoc.includes('الإمارات') && currentLoc.includes('الإمارات')) score += 1;
+              if (pLoc.includes('مصر') && currentLoc.includes('مصر')) score += 1;
+            }
+
+            return { ...p, score };
+          });
+
+          scored.sort((a, b) => b.score - a.score);
+          setSimilarProjects(scored.slice(0, 3));
+        }
+      } catch (err) {
+        console.error("Failed to load similar projects from JSON DB", err);
+      } finally {
+        if (isMounted) setIsLoadingSimilar(false);
+      }
+    };
+
+    loadSimilar();
+    return () => { isMounted = false; };
+  }, [rawProject.id, rawProject.slug, rawProject.category]);
 
   const evidenceMap = rawProject.evidence_map || {};
 
@@ -295,9 +509,23 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
   const locationEvidence = evidenceMap['$.company.location'];
   const valuationEvidence = evidenceMap['$.financials.valuation'];
 
+  // Smartly resolve official website URL from all possible locations
+  const officialSourceRef = (rawProject.source_references || rawProject.verification?.source_references || []).find(
+    (ref: any) => ref?.url && (ref?.source_type === 'official_company_website' || ref?.source_type?.includes('official'))
+  );
+  const officialSource = (rawProject.sources || []).find(
+    (s: any) => s?.url && (s?.type === 'official' || s?.source_type === 'official_company_website' || s?.source_type?.includes('official'))
+  );
+
+  const resolvedWebsite = rawProject.website || 
+    rawProject.company?.website || 
+    officialSourceRef?.url ||
+    officialSource?.url;
+
   // Normalize project data completely without hardcoded company fallbacks
   const project = {
     ...rawProject,
+    website: resolvedWebsite,
     company: rawProject.company || {},
     financials: rawProject.financials || {},
     directory_snapshot: rawProject.directory_snapshot || {},
@@ -359,7 +587,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
       if (containerTop <= headerHeight) {
         tocRef.current.style.position = 'fixed';
         tocRef.current.style.top = `${headerHeight}px`;
-        tocRef.current.style.width = '220px';
+        tocRef.current.style.width = '250px';
       } else {
         tocRef.current.style.position = 'relative';
         tocRef.current.style.top = '0';
@@ -396,23 +624,14 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
   };
 
   const navItems = [
-    { id: 'overview', label: 'نظرة عامة والملخص' },
-    { id: 'company', label: 'حقائق الشركة الهيكلية' },
-    { id: 'problem-and-product', label: 'المشكلة والحل التقني' },
-    { id: 'origin-story', label: 'المؤسس ومحطات التمويل' },
-    { id: 'build-and-launch', label: 'البناء والتطور التاريخي' },
-    { id: 'costs-and-operations', label: 'التكاليف ومؤشرات التشغيل' },
-    { id: 'monetization', label: 'نموذج الربح وهيكلية التسعير' },
-    { id: 'growth', label: 'معدلات النمو والتوسع' },
-    ...(project.tools.length > 0 ? [{ id: 'tools', label: 'التقنيات والتكاملات' }] : []),
-    { id: 'revenue-timeline', label: 'المخطط الزمني للإيرادات' },
-    { id: 'lessons', label: 'الدروس والاستراتيجيات' },
-    ...(rawProject.verification ? [{ id: 'verification-policy', label: 'حدود وسياسة التوثيق' }] : []),
-    { id: 'sources', label: 'المصادر والتقارير (مطوي)' },
-    { id: 'data-quality', label: 'معايير التوثيق' },
+    { id: 'overview', number: '01', label: 'الهوية والأرقام القياسية' },
+    { id: 'business-model', number: '02', label: 'نموذج العمل والحل التقني' },
+    { id: 'financial-growth', number: '03', label: 'النمو والجدول الزمني للإيراد' },
+    { id: 'tech-stack', number: '04', label: 'البنية التقنية والأدوات' },
+    { id: 'lessons-and-sources', number: '05', label: 'الدروس وشواهد التوثيق' },
+    { id: 'related-companies-and-sectors', number: '06', label: 'شركات مماثلة وقطاعات مرتبطة' },
   ];
 
-  // Collect all sources (general sources + evidence references) for the collapsed panel
   const allSourcesList: Array<{ title: string; url: string; publisher?: string; locator?: string; supports?: string }> = [];
 
   (project.sources || []).forEach((src: any) => {
@@ -440,177 +659,323 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
     }
   });
 
-  // Dynamic Company Details Logic
   const foundersText = getDisplayText(project.company.founder || project.company.founders) || 'غير مذكور رسمياً';
-  const foundersCountText = project.company.founders_count
-    ? `${project.company.founders_count} مؤسسين`
-    : (project.company.founder || project.company.founders ? 'مؤسسو الشركة' : 'غير مذكور');
+  const hasVerifiedFounder = foundersText && !foundersText.includes('غير مذكور');
+  const hasVerifiedYear = project.company.started && !String(project.company.started).includes('غير');
   const employeesText = getDisplayText(project.company.employees) || 'غير مفصح عنه';
   const locationInfo = getCountryInfo(getDisplayText(project.company.location));
+
+  const categoryTokens = getCategoryTokens(project.category, project.company?.customer_type);
+
+  const shortTools = project.tools.filter((t: string) => t.length <= 35);
+  const descriptiveTools = project.tools.filter((t: string) => t.length > 35);
+
+  const categorizedTools = {
+    frontend: shortTools.filter((t: string) => {
+      const lower = t.toLowerCase();
+      return lower.includes('react') || lower.includes('next') || lower.includes('vue') || lower.includes('tailwind') || lower.includes('css') || lower.includes('ui') || lower.includes('figma');
+    }),
+    backend: shortTools.filter((t: string) => {
+      const lower = t.toLowerCase();
+      return lower.includes('node') || lower.includes('python') || lower.includes('postgres') || lower.includes('mongo') || lower.includes('aws') || lower.includes('vercel') || lower.includes('supabase') || lower.includes('docker');
+    }),
+    ai: shortTools.filter((t: string) => {
+      const lower = t.toLowerCase();
+      return lower.includes('ai') || lower.includes('gpt') || lower.includes('openai') || lower.includes('claude') || lower.includes('bot') || lower.includes('ml');
+    }),
+    shortOther: shortTools.filter((t: string) => {
+      const lower = t.toLowerCase();
+      return !lower.includes('react') && !lower.includes('next') && !lower.includes('vue') && !lower.includes('tailwind') && !lower.includes('css') && !lower.includes('ui') && !lower.includes('figma') && !lower.includes('node') && !lower.includes('python') && !lower.includes('postgres') && !lower.includes('mongo') && !lower.includes('aws') && !lower.includes('vercel') && !lower.includes('supabase') && !lower.includes('docker') && !lower.includes('ai') && !lower.includes('gpt') && !lower.includes('openai') && !lower.includes('claude') && !lower.includes('bot') && !lower.includes('ml');
+    })
+  };
+
+  const hasShortBadges = categorizedTools.frontend.length > 0 || categorizedTools.backend.length > 0 || categorizedTools.ai.length > 0 || categorizedTools.shortOther.length > 0;
 
   return (
     <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 font-sans pb-24">
 
-      {/* Action Toolbar */}
-      <div className="flex items-center justify-between gap-4">
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={onBack}
-          className="gap-2 font-bold text-slate-700 hover:text-slate-900 border-slate-200"
-        >
-          <ArrowRight className="size-4" />
-          العودة لدليل الشركات الناجحة
-        </Button>
+      {/* Crunchbase Sticky Horizontal Sub-Nav Bar */}
+      <div className="sticky top-14 z-20 bg-background/95 backdrop-blur-md border-b border-border/60 py-2.5 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 transition-all">
+        <div className="flex items-center justify-between gap-2 max-w-7xl mx-auto overflow-x-auto no-scrollbar scroll-smooth">
+          <div className="flex items-center gap-1.5 sm:gap-2">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => handleNavClick(item.id)}
+                className={cn(
+                  "py-2 px-3.5 text-xs rounded-xl font-bold transition-all whitespace-nowrap flex items-center gap-2 border shadow-2xs",
+                  activeId === item.id
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "bg-card hover:bg-muted text-muted-foreground hover:text-foreground border-border/60"
+                )}
+              >
+                <span className="font-mono text-[10px] opacity-80">{item.number}</span>
+                <span>{item.label}</span>
+              </button>
+            ))}
+          </div>
+
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setIsTocOpen(!isTocOpen)}
+            className="gap-2 text-xs font-bold border-border/80 bg-card hover:bg-muted shrink-0 hidden lg:flex rounded-xl"
+          >
+            <PanelRightOpen className="size-3.5 text-primary" />
+            <span>{isTocOpen ? 'طي الفهرس الجانبي' : 'عرض الفهرس الجانبي'}</span>
+          </Button>
+        </div>
       </div>
 
-      {/* Main Grid Layout */}
-      <div ref={containerRef} className="grid lg:grid-cols-[230px_1fr] gap-8 items-start relative">
+      <div 
+        ref={containerRef} 
+        className={cn(
+          "grid gap-8 items-start relative transition-all duration-300",
+          isTocOpen ? "lg:grid-cols-[260px_1fr]" : "grid-cols-1"
+        )}
+      >
 
-        {/* Sticky Table of Contents Sidebar */}
-        <aside className="hidden lg:block">
-          <div ref={tocRef} className="flex flex-col gap-2 bg-card p-3 rounded-xl border border-border/60 shadow-xs">
-            <h3 className="font-bold text-xs uppercase tracking-wider text-muted-foreground px-2 py-1 border-b border-border/40 mb-1">
-              محتويات دراسة الحالة
-            </h3>
-            <div className="flex flex-col gap-0.5">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => handleNavClick(item.id)}
-                  className={cn(
-                    "w-full text-right py-2 px-3 text-xs rounded-lg transition-all focus:outline-none flex items-center justify-between",
-                    activeId === item.id
-                      ? "bg-primary/10 text-primary font-bold"
-                      : "text-muted-foreground hover:bg-muted/50 hover:text-foreground font-medium"
-                  )}
+        {/* Collapsible Right Sidebar TOC */}
+        {isTocOpen && (
+          <aside className="hidden lg:block sticky top-24 z-10 animate-in fade-in slide-in-from-right-4 duration-200">
+            <div ref={tocRef} className="flex flex-col bg-card rounded-2xl border border-border/60 shadow-xs p-3.5 space-y-3">
+              
+              {/* Header with Title and Collapse Button */}
+              <div className="flex items-center justify-between gap-2 border-b border-border/40 pb-2.5">
+                <div className="flex items-center gap-2">
+                  <Layout className="size-4 text-primary" />
+                  <span className="font-bold text-xs uppercase tracking-wider text-foreground">فهرس الدراسة</span>
+                </div>
+
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setIsTocOpen(false)}
+                  title="طي الفهرس جانباً"
+                  className="size-7 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 shrink-0"
                 >
-                  <span className="truncate">{item.label}</span>
-                  {activeId === item.id && (
-                    <div className="size-1.5 rounded-full bg-primary shrink-0" />
-                  )}
-                </button>
-              ))}
+                  <ChevronLeft className="size-4" />
+                </Button>
+              </div>
+
+              {/* Sections Nav Buttons List */}
+              <div className="flex flex-col gap-1">
+                {navItems.map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => handleNavClick(item.id)}
+                    className={cn(
+                      "w-full text-right py-2 px-3 text-xs rounded-xl transition-all focus:outline-none flex items-center justify-between group",
+                      activeId === item.id
+                        ? "bg-primary/10 text-primary font-bold shadow-2xs"
+                        : "text-muted-foreground hover:bg-muted/50 hover:text-foreground font-medium"
+                    )}
+                  >
+                    <div className="flex items-center gap-2 truncate">
+                      <span className={cn(
+                        "text-[10px] font-extrabold px-1.5 py-0.5 rounded-md font-mono",
+                        activeId === item.id ? "bg-primary text-white" : "bg-muted text-muted-foreground group-hover:bg-muted-foreground/20"
+                      )}>
+                        {item.number}
+                      </span>
+                      <span className="truncate">{item.label}</span>
+                    </div>
+                    {activeId === item.id && (
+                      <div className="size-2 rounded-full bg-primary shrink-0" />
+                    )}
+                  </button>
+                ))}
+              </div>
+
             </div>
-          </div>
-        </aside>
+          </aside>
+        )}
 
-        {/* Content Section Column */}
-        <div className="flex flex-col gap-8 min-w-0">
+        <div className="flex flex-col gap-10 min-w-0">
 
-          {/* Section 1: Overview Card */}
-          <section id="overview" className="profile-section scroll-mt-24">
-            <Card className="shadow-xs border-border/60 overflow-hidden">
-              <CardHeader className="bg-muted/30 pb-6 border-b border-border/40">
-                <div className="flex flex-col md:flex-row md:items-start gap-5 justify-between">
-                  <div className="flex items-start gap-4">
-                    <div className="flex items-center justify-center size-16 rounded-xl bg-blue-600 text-white text-3xl font-bold shadow-xs shrink-0">
+          <section id="overview" className="profile-section scroll-mt-24 space-y-4">
+            {/* Crunchbase 1:1 Shadcn Profile Header Card */}
+            <Card className="shadow-xs border-border/60 overflow-hidden rounded-2xl bg-card">
+              <CardContent className="p-6 sm:p-8">
+                <div className="flex flex-col md:flex-row items-start gap-6">
+                  
+                  {/* Left: Crunchbase White Square Logo Box */}
+                  <div className="size-24 sm:size-28 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-xs flex items-center justify-center shrink-0 p-3 relative overflow-hidden">
+                    <div className="size-full rounded-xl bg-gradient-to-br from-blue-600 via-indigo-600 to-indigo-700 text-white text-4xl sm:text-5xl font-black flex items-center justify-center shadow-inner">
                       {project.name.charAt(0).toUpperCase()}
                     </div>
-                    <div className="flex flex-col gap-1.5">
+                  </div>
+
+                  {/* Right: Crunchbase Header Content Stack */}
+                  <div className="flex-1 min-w-0 space-y-3.5">
+                    
+                    {/* Line 1: Company Title + Scores/Badges + Top-Right Action Buttons */}
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                      
                       <div className="flex items-center gap-3 flex-wrap">
-                        <h1 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight">
+                        <h1 className="text-2xl sm:text-3xl font-extrabold text-foreground tracking-tight leading-tight">
                           {project.name}
                         </h1>
+
                         {rawProject.verification && (
-                          <Badge variant="outline" className="bg-emerald-50 text-emerald-800 border-emerald-300 font-bold text-xs flex items-center gap-1.5">
+                          <Badge variant="outline" className="bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300 border-emerald-200/80 font-bold text-xs px-2.5 py-0.5 rounded-md flex items-center gap-1 shadow-2xs">
                             <ShieldCheck className="size-3.5 text-emerald-600 shrink-0" />
                             <span>
-                              {rawProject.verification.verified_on ? `موثق بتاريخ ${getDisplayText(rawProject.verification.verified_on)}` : 'موثق بمصادر رسمية'}
+                              {rawProject.verification.verified_on ? `موثق: ${getDisplayText(rawProject.verification.verified_on)}` : 'موثق رسمياً'}
                             </span>
                           </Badge>
                         )}
-                        {project.website && (
-                          <a
-                            href={project.website}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:underline bg-primary/10 px-2.5 py-1 rounded-md"
-                          >
-                            <span>الموقع الرسمي</span>
-                            <ExternalLink className="size-3" />
-                          </a>
-                        )}
+
+                        {/* Trust Score Badge */}
+                        <div className="flex items-center gap-1 bg-amber-50 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 border border-amber-200/70 px-2.5 py-0.5 rounded-md text-xs font-bold shadow-2xs">
+                          <span className="text-slate-500 dark:text-slate-400 font-normal">درجة الثقة</span>
+                          <span className="bg-amber-100 dark:bg-amber-900/80 px-1.5 py-0.2 rounded text-[11px]">عالية</span>
+                        </div>
                       </div>
-                      <div className="flex flex-wrap gap-2 mt-1">
-                        <Badge variant="secondary" className="font-bold text-xs">
-                          {project.category}
-                        </Badge>
-                        {project.company?.customer_type && (
-                          <Badge variant="outline" className="font-bold text-xs bg-background">
-                            {getDisplayText(project.company.customer_type)}
-                          </Badge>
-                        )}
-                        <Badge variant="outline" className="font-bold text-xs bg-background flex items-center gap-1">
-                          <span>{locationInfo.flag}</span>
-                          <span>{locationInfo.name}</span>
-                        </Badge>
+
+                      {/* Top-Right Action Buttons (Save & Actions) */}
+                      <div className="flex items-center gap-2 shrink-0">
+                        <Button size="sm" className="gap-1.5 font-bold bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-2xs text-xs px-3.5">
+                          <Bookmark className="size-3.5" />
+                          حفظ
+                        </Button>
+                        <Button size="sm" variant="outline" className="gap-1.5 font-bold border-slate-200 text-slate-700 hover:bg-slate-50 rounded-lg text-xs px-3">
+                          <span>إجراءات</span>
+                          <ChevronDown className="size-3.5 text-slate-400" />
+                        </Button>
                       </div>
+
                     </div>
+
+                    {/* Line 2: Headline / Description */}
+                    {project.headline && (
+                      <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                        {project.headline}
+                      </p>
+                    )}
+
+                    {/* Line 3: Crunchbase Metadata Icons Row */}
+                    <div className="flex items-center gap-x-5 gap-y-2 flex-wrap text-xs text-slate-600 dark:text-slate-400 font-medium pt-0.5">
+                      
+                      {/* Founded */}
+                      {hasVerifiedYear && (
+                        <div className="flex items-center gap-1.5 text-slate-700 dark:text-slate-300 font-medium">
+                          <Calendar className="size-3.5 text-slate-400 shrink-0" />
+                          <span>تأسست {getDisplayText(project.company.started)}</span>
+                        </div>
+                      )}
+
+                      {/* Operating Type */}
+                      {project.company.customer_type && (
+                        <div className="flex items-center gap-1.5 text-slate-700 dark:text-slate-300 font-medium">
+                          <Building2 className="size-3.5 text-slate-400 shrink-0" />
+                          <span>{project.company.customer_type}</span>
+                        </div>
+                      )}
+
+                      {/* Location */}
+                      <div className="flex items-center gap-1.5 text-slate-700 dark:text-slate-300 font-medium">
+                        <MapPin className="size-3.5 text-emerald-600 shrink-0" />
+                        <span>{locationInfo.flag} {locationInfo.name}</span>
+                      </div>
+
+                      {/* Team Size */}
+                      {employeesText && employeesText !== 'غير مفصح عنه' && (
+                        <div className="flex items-center gap-1.5 text-slate-700 dark:text-slate-300 font-medium">
+                          <Users className="size-3.5 text-indigo-500 shrink-0" />
+                          <span>{employeesText}</span>
+                        </div>
+                      )}
+
+                      {/* Official Website Link */}
+                      {project.website && (
+                        <a
+                          href={project.website.startsWith('http') ? project.website : `https://${project.website}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400 hover:underline transition-all dir-ltr"
+                          title="زيارة الموقع الرسمي للشركة"
+                        >
+                          <Globe className="size-3.5 text-blue-500 shrink-0" />
+                          <span>{getCleanDomain(project.website)}</span>
+                          <ExternalLink className="size-3 text-slate-400" />
+                        </a>
+                      )}
+                    </div>
+
+                    {/* Line 4: Category Pill Badges (Crunchbase Rounded-Full Chips) */}
+                    {categoryTokens.length > 0 && (
+                      <div className="flex items-center gap-2 flex-wrap text-xs pt-1">
+                        {categoryTokens.map((token: string, idx: number) => (
+                          <span
+                            key={idx}
+                            className="font-semibold text-xs text-blue-800 dark:text-blue-200 bg-blue-50 dark:bg-blue-950/80 px-3.5 py-1 rounded-full border border-blue-200/70 dark:border-blue-800/60 hover:bg-blue-100 hover:border-blue-300 transition-all cursor-pointer shadow-2xs"
+                          >
+                            {token}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
                   </div>
+
                 </div>
+              </CardContent>
 
-                {project.headline && (
-                  <p className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed mt-4 pt-4 border-t border-border/40">
-                    {project.headline}
-                  </p>
-                )}
-              </CardHeader>
-
-              <CardContent className="p-4 sm:p-6 bg-card space-y-4">
-                {/* Dynamic 4-Stat Cards */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+              <CardContent className="p-4 sm:p-6 bg-card space-y-4 border-t border-border/40">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
                   
-                  {/* Revenue Card */}
-                  <div className="p-4 rounded-xl bg-emerald-50/60 border border-emerald-100 flex flex-col justify-between gap-1.5">
-                    <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider">الإيراد الشهري</span>
-                    <span className="text-lg sm:text-xl font-extrabold text-emerald-700 tracking-tight dir-ltr text-right">
+                  <div className="p-3.5 sm:p-4 rounded-xl bg-emerald-50/60 dark:bg-emerald-950/40 border border-emerald-200/70 dark:border-emerald-900/60 flex flex-col justify-between gap-1.5 min-h-[96px] shadow-2xs">
+                    <span className="text-xs font-bold text-emerald-800 dark:text-emerald-300 uppercase tracking-wider">الإيراد الشهري الموثق</span>
+                    <span 
+                      className="text-base sm:text-lg font-extrabold text-emerald-700 dark:text-emerald-300 tracking-tight dir-ltr text-right break-words leading-tight"
+                      title={getValuationText(project.directory_snapshot?.monthly_revenue)}
+                    >
                       {getShortRevenueDisplay(project.directory_snapshot?.monthly_revenue)}
                     </span>
-                    <span className="text-[11px] text-emerald-700 font-medium truncate">
-                      {revenueEvidence?.confidence ? `درجة الثقة: ${getDisplayText(revenueEvidence.confidence)}` : 'بيانات إيراد موثقة'}
+                    <span className="text-[11px] text-emerald-700 dark:text-emerald-400 font-medium leading-normal">
+                      {translateConfidence(revenueEvidence?.confidence)}
                     </span>
                   </div>
 
-                  {/* Traffic & Scale Card */}
-                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-100 flex flex-col justify-between gap-1.5">
-                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">الزيارات والانتشار</span>
-                    <span className="text-lg sm:text-xl font-bold text-slate-900 dir-ltr text-right">
+                  <div className="p-3.5 sm:p-4 rounded-xl bg-slate-50/80 dark:bg-slate-900/40 border border-slate-200/70 dark:border-slate-800 flex flex-col justify-between gap-1.5 min-h-[96px] shadow-2xs">
+                    <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">الزيارات والانتشار</span>
+                    <span 
+                      className="text-base sm:text-lg font-bold text-slate-900 dark:text-slate-100 dir-ltr text-right break-words leading-tight"
+                      title={getValuationText(project.directory_snapshot?.monthly_traffic)}
+                    >
                       {getShortTrafficDisplay(project.directory_snapshot?.monthly_traffic)}
                     </span>
-                    <span className="text-[11px] text-slate-500 font-medium truncate">
-                      {trafficEvidence?.confidence ? `التوثيق: ${trafficEvidence.confidence}` : 'مؤشرات نشاط تشغيلي'}
+                    <span className="text-[11px] text-slate-500 dark:text-slate-400 font-medium leading-normal">
+                      {translateConfidence(trafficEvidence?.confidence)}
                     </span>
                   </div>
 
-                  {/* Funding Card */}
-                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-100 flex flex-col justify-between gap-1.5">
-                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">نموذج التمويل</span>
-                    <span className="text-base sm:text-lg font-bold text-slate-900 truncate" title={getDisplayText(project.company?.funding || project.financials?.initial_investment)}>
-                      {getDisplayText(project.company?.funding) || (project.financials?.initial_investment ? 'جولة تمويلية' : 'تمويل ذاتي')}
+                  <div className="p-3.5 sm:p-4 rounded-xl bg-slate-50/80 dark:bg-slate-900/40 border border-slate-200/70 dark:border-slate-800 flex flex-col justify-between gap-1.5 min-h-[96px] shadow-2xs">
+                    <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">نموذج التمويل</span>
+                    <span className="text-sm sm:text-base font-bold text-slate-900 dark:text-slate-100 leading-tight break-words" title={getDisplayText(project.company?.funding || project.financials?.initial_investment)}>
+                      {getDisplayText(project.company?.funding) || (project.financials?.initial_investment ? 'جولة استثمارية' : 'تمويل ذاتي')}
                     </span>
-                    <span className="text-[11px] text-slate-500 font-medium truncate">
-                      {project.company?.bootstrapped ? 'Bootstrapped 100%' : (project.financials?.initial_investment ? 'استثمار معلن' : 'تمويل رأس مال')}
+                    <span className="text-[11px] text-slate-500 dark:text-slate-400 font-medium leading-normal">
+                      {project.company?.bootstrapped ? 'تمويل ذاتي (Bootstrapped)' : (project.financials?.initial_investment ? 'استثمار معلن' : 'تمويل تشغيلي')}
                     </span>
                   </div>
 
-                  {/* Valuation Card */}
-                  <div className="p-4 rounded-xl bg-slate-50 border border-slate-100 flex flex-col justify-between gap-1.5">
-                    <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">التقييم / الاستحواذ</span>
-                    <span className="text-base sm:text-lg font-bold text-slate-900 truncate" title={getValuationText(project.financials?.valuation)}>
+                  <div className="p-3.5 sm:p-4 rounded-xl bg-slate-50/80 dark:bg-slate-900/40 border border-slate-200/70 dark:border-slate-800 flex flex-col justify-between gap-1.5 min-h-[96px] shadow-2xs">
+                    <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">التقييم / الاستحواذ</span>
+                    <span className="text-sm sm:text-base font-bold text-slate-900 dark:text-slate-100 leading-tight break-words" title={getValuationText(project.financials?.valuation)}>
                       {getShortValuationDisplay(project.financials?.valuation)}
                     </span>
-                    <span className="text-[11px] text-slate-500 font-medium truncate">
-                      {getDisplayText(valuationEvidence?.claim_type) || 'بيانات مالية موثقة'}
+                    <span className="text-[11px] text-slate-500 dark:text-slate-400 font-medium leading-normal">
+                      {translateClaimType(valuationEvidence?.claim_type)}
                     </span>
                   </div>
                 </div>
 
-                {/* Detailed Operational & Traffic Proof Box */}
                 {trafficEvidence?.evidence_summary && (
-                  <div className="p-3.5 bg-slate-50 border border-slate-200/80 rounded-xl text-slate-900 text-xs space-y-1.5">
+                  <div className="p-3.5 bg-slate-50/80 dark:bg-slate-900/50 border border-slate-200/80 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 text-xs space-y-1.5">
                     <div className="flex items-center justify-between gap-2">
-                      <span className="font-bold text-slate-900 flex items-center gap-1.5">
+                      <span className="font-bold text-slate-900 dark:text-slate-100 flex items-center gap-1.5">
                         <Users className="size-4 text-primary" />
                         إفصاح مؤشرات التشغيل الرسمية (Operational Proxies):
                       </span>
@@ -620,26 +985,25 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                         </Badge>
                       )}
                     </div>
-                    <p className="text-slate-700 font-medium leading-relaxed">
+                    <p className="text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
                       {trafficEvidence.evidence_summary}
                     </p>
                   </div>
                 )}
 
-                {/* Derived Evidence Revenue Calculation Box */}
                 {revenueEvidence?.calculation && (
-                  <div className="p-3.5 bg-sky-50/70 border border-sky-200/80 rounded-xl text-sky-950 text-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                  <div className="p-3.5 bg-sky-50/70 dark:bg-sky-950/40 border border-sky-200/80 dark:border-sky-900/60 rounded-xl text-sky-950 dark:text-sky-100 text-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                     <div className="space-y-1">
-                      <span className="font-bold text-sky-900 flex items-center gap-1.5">
-                        <TrendingUp className="size-4 text-sky-600" />
+                      <span className="font-bold text-sky-900 dark:text-sky-200 flex items-center gap-1.5">
+                        <TrendingUp className="size-4 text-sky-600 dark:text-sky-400" />
                         المعادلة الحسابية الموثقة من التقارير الرسمية:
                       </span>
-                      <p className="text-sky-800 font-medium leading-relaxed">
+                      <p className="text-sky-800 dark:text-sky-300 font-medium leading-relaxed">
                         {getDisplayText(revenueEvidence.evidence_summary) || `الإيراد المعلن يعطي متوسطاً قدره ${getDisplayText(revenueEvidence.calculation.rounded_display_value)}.`}
                       </p>
                     </div>
                     {revenueEvidence.calculation.formula && (
-                      <Badge variant="outline" className="bg-sky-100 text-sky-800 border-sky-300 font-mono text-xs font-bold shrink-0 dir-ltr">
+                      <Badge variant="outline" className="bg-sky-100 dark:bg-sky-900 text-sky-800 dark:text-sky-200 border-sky-300 dark:border-sky-700 font-mono text-xs font-bold shrink-0 dir-ltr">
                         {getDisplayText(revenueEvidence.calculation.formula)} = {getDisplayText(revenueEvidence.calculation.rounded_display_value)}
                       </Badge>
                     )}
@@ -647,293 +1011,198 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                 )}
               </CardContent>
             </Card>
-          </section>
 
-          {/* Section 2: Structural Company Facts */}
-          <section id="company" className="profile-section scroll-mt-24">
-            <Card className="shadow-xs border-border/60">
-              <CardHeader className="border-b border-border/40 pb-4">
-                <CardTitle className="text-lg font-bold flex items-center gap-2 text-foreground">
-                  <div className="p-1.5 rounded-md bg-primary/10 text-primary">
-                    <Building2 className="size-4" />
+            {/* Crunchbase Overview Key-Value Details Grid */}
+            <Card className="shadow-xs border-border/60 rounded-2xl overflow-hidden bg-card">
+              <CardHeader className="border-b border-border/40 p-4 sm:p-5 bg-muted/20">
+                <CardTitle className="text-base font-bold flex items-center justify-between gap-2 text-foreground">
+                  <div className="flex items-center gap-2">
+                    <div className="p-1.5 rounded-lg bg-primary/10 text-primary">
+                      <Building2 className="size-4" />
+                    </div>
+                    <span>بيانات الشركة والتشغيل الأساسية (Overview Details)</span>
                   </div>
-                  حقائق الشركة الهيكلية والموقع
+                  <Badge variant="outline" className="text-xs font-bold bg-background text-muted-foreground border-border">
+                    حقائق موثقة
+                  </Badge>
                 </CardTitle>
               </CardHeader>
-              <CardContent className="p-0">
-                {/* Row 1: Business Model & Location */}
-                <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x md:divide-x-reverse divide-border/40">
-                  
-                  {/* Business Model */}
-                  <div className="p-4 sm:p-5 space-y-2">
-                    <div className="flex items-center justify-between gap-2">
-                      <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">نموذج العمل والربح</dt>
-                      {modelEvidence && (
-                        <Badge variant="outline" className={cn("text-[10px] font-bold py-0 px-2", getStatusMeta(modelEvidence.verification_status).className)}>
-                          {getStatusMeta(modelEvidence.verification_status).label}
-                        </Badge>
-                      )}
-                    </div>
-                    <dd className="font-bold text-sm text-foreground leading-snug">
-                      {getDisplayText(project.company.customer_type) || 'نموذج التشغيل والتسويق'}
-                    </dd>
-                    <p className="text-xs text-muted-foreground font-medium leading-relaxed bg-muted/30 p-2.5 rounded-lg border border-border/30">
-                      {getDisplayText(project.company.business_model) || 'غير مفصح عنه رسمياً'}
-                    </p>
+              <CardContent className="p-4 sm:p-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-xs">
+                  <div className="p-3 rounded-xl bg-muted/30 border border-border/40 space-y-1">
+                    <span className="text-muted-foreground font-medium block text-[11px]">المؤسسون</span>
+                    <span className="font-bold text-foreground block text-sm">{foundersText}</span>
                   </div>
-
-                  {/* Location & Foundation */}
-                  <div className="p-4 sm:p-5 space-y-2">
-                    <div className="flex items-center justify-between gap-2">
-                      <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">المقر والتأسيس</dt>
-                      {locationEvidence && (
-                        <Badge variant="outline" className={cn("text-[10px] font-bold py-0 px-2", getStatusMeta(locationEvidence.verification_status).className)}>
-                          {getStatusMeta(locationEvidence.verification_status).label}
-                        </Badge>
-                      )}
-                    </div>
-                    <dd className="font-bold text-sm text-foreground leading-snug">
-                      {locationInfo.flag} {locationInfo.name}
-                    </dd>
-                    <p className="text-xs text-muted-foreground font-medium leading-relaxed bg-muted/30 p-2.5 rounded-lg border border-border/30">
-                      {getDisplayText(project.company.location) || 'غير مذكور'}
-                    </p>
+                  <div className="p-3 rounded-xl bg-muted/30 border border-border/40 space-y-1">
+                    <span className="text-muted-foreground font-medium block text-[11px]">عام التأسيس</span>
+                    <span className="font-bold text-foreground block text-sm">{hasVerifiedYear ? getDisplayText(project.company.started) : 'غير مفصح'}</span>
                   </div>
-                </div>
-
-                {/* Row 2: Founders, Start Year & Team Size */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-border/40 divide-y sm:divide-y-0 sm:divide-x sm:divide-x-reverse divide-border/40">
-                  <div className="p-4 sm:p-5 space-y-1">
-                    <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">المؤسسون</dt>
-                    <dd className="font-bold text-sm text-foreground">{foundersText}</dd>
-                    <span className="text-[11px] text-muted-foreground block">{foundersCountText}</span>
+                  <div className="p-3 rounded-xl bg-muted/30 border border-border/40 space-y-1">
+                    <span className="text-muted-foreground font-medium block text-[11px]">المقر الرئيسي</span>
+                    <span className="font-bold text-foreground block text-sm">{locationInfo.flag} {locationInfo.name}</span>
                   </div>
-                  <div className="p-4 sm:p-5 space-y-1">
-                    <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">عام التأسيس</dt>
-                    <dd className="font-bold text-sm text-foreground">{getDisplayText(project.company.started) || 'غير مذكور'}</dd>
-                    <span className="text-[11px] text-muted-foreground block">{locationInfo.name}</span>
+                  <div className="p-3 rounded-xl bg-muted/30 border border-border/40 space-y-1">
+                    <span className="text-muted-foreground font-medium block text-[11px]">حجم القوى العاملة</span>
+                    <span className="font-bold text-foreground block text-sm">{employeesText}</span>
                   </div>
-                  <div className="p-4 sm:p-5 space-y-1">
-                    <dt className="text-xs font-bold text-muted-foreground uppercase tracking-wider">حجم الفريق</dt>
-                    <dd className="font-bold text-sm text-foreground">{employeesText}</dd>
-                    <span className="text-[11px] text-muted-foreground block">القوى العاملة المعلنة</span>
+                  <div className="p-3 rounded-xl bg-muted/30 border border-border/40 space-y-1">
+                    <span className="text-muted-foreground font-medium block text-[11px]">نموذج الربح والتشغيل</span>
+                    <span className="font-bold text-foreground block text-sm">{getDisplayText(project.company.business_model) || 'غير مفصح'}</span>
                   </div>
-                </div>
-
-                {/* Valuation Details Box */}
-                {valuationEvidence?.evidence_summary && (
-                  <div className="p-4 border-t border-border/40 bg-slate-50 space-y-1.5">
-                    <span className="text-xs font-bold text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
-                      <DollarSign className="size-4 text-emerald-600" />
-                      تفاصيل التقييم والاستحواذ الموثقة:
-                    </span>
-                    <p className="text-xs text-slate-700 font-medium leading-relaxed">
-                      {getDisplayText(valuationEvidence.evidence_summary)}
-                    </p>
+                  <div className="p-3 rounded-xl bg-muted/30 border border-border/40 space-y-1">
+                    <span className="text-muted-foreground font-medium block text-[11px]">طبيعة التمويل</span>
+                    <span className="font-bold text-foreground block text-sm">{project.company?.bootstrapped ? 'تمويل ذاتي (Bootstrapped)' : (project.financials?.initial_investment ? 'جولة استثمارية' : 'تمويل تشغيلي')}</span>
                   </div>
-                )}
-
-                {/* Bottom Revenue Bar */}
-                <div className="p-4 sm:p-5 border-t border-border/40 bg-emerald-50/40 flex flex-col md:flex-row md:items-center justify-between gap-3">
-                  <div>
-                    <dt className="text-xs font-bold text-emerald-800 uppercase tracking-wider mb-1">الربحية والإيراد المعلن</dt>
-                    <dd className="font-bold text-sm sm:text-base text-emerald-950">
-                      {getDisplayText(project.company.public_revenue_claim || project.directory_snapshot?.monthly_revenue) || 'غير مفصح عنه رسمياً'}
-                    </dd>
+                  <div className="p-3 rounded-xl bg-muted/30 border border-border/40 space-y-1">
+                    <span className="text-muted-foreground font-medium block text-[11px]">التقييم وسقف النمو</span>
+                    <span className="font-bold text-foreground block text-sm">{getShortValuationDisplay(project.financials?.valuation)}</span>
                   </div>
-                  <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-100 border-emerald-300 font-bold text-xs shrink-0">
-                    {getDisplayText(project.company.funding) || 'بيانات موثقة'}
-                  </Badge>
+                  <div className="p-3 rounded-xl bg-muted/30 border border-border/40 space-y-1">
+                    <span className="text-muted-foreground font-medium block text-[11px]">الموقع الرسمي</span>
+                    {project.website ? (
+                      <a
+                        href={project.website.startsWith('http') ? project.website : `https://${project.website}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold text-primary hover:underline block text-sm truncate dir-ltr text-right"
+                      >
+                        {getCleanDomain(project.website)}
+                      </a>
+                    ) : (
+                      <span className="font-bold text-foreground block text-sm">غير متاح</span>
+                    )}
+                  </div>
                 </div>
               </CardContent>
             </Card>
           </section>
 
-          {/* Section 3: Problem and Solution */}
-          <section id="problem-and-product" className="profile-section scroll-mt-24">
-            <Card className="shadow-xs border-border/60">
-              <CardHeader className="border-b border-border/40 pb-4">
-                <CardTitle className="text-lg font-bold flex items-center gap-2 text-foreground">
-                  <div className="p-1.5 rounded-md bg-amber-500/10 text-amber-600">
+          <section id="business-model" className="profile-section scroll-mt-24 space-y-4">
+            <div className="flex items-center gap-2 border-b border-border/40 pb-2">
+              <span className="bg-primary text-primary-foreground font-mono text-xs font-bold px-2 py-0.5 rounded-md">02</span>
+              <h2 className="text-lg font-bold text-foreground">نموذج العمل والحل التقني</h2>
+            </div>
+
+            <Card className="shadow-xs border-border/60 rounded-2xl overflow-hidden bg-card">
+              <CardHeader className="border-b border-border/40 bg-muted/20 p-4 sm:p-5">
+                <CardTitle className="text-base font-bold flex items-center gap-2 text-foreground">
+                  <div className="p-1.5 rounded-lg bg-primary/10 text-primary">
                     <Lightbulb className="size-4" />
                   </div>
-                  المشكلة والحل التقني
+                  <span>المشكلة والحل المبتكر</span>
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-4 sm:p-6 space-y-3">
                 {project.problem_and_product.map((item: string, i: number) => (
-                  <div key={i} className="flex items-start gap-3 p-3.5 rounded-lg bg-muted/30 border border-border/40">
-                    <CheckCircle2 className="size-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <div key={i} className="flex items-start gap-3 p-3.5 rounded-xl bg-muted/30 border border-border/40">
+                    <CheckCircle2 className="size-4 text-primary shrink-0 mt-0.5" />
                     <p className="text-sm text-foreground font-medium leading-relaxed">{item}</p>
                   </div>
                 ))}
               </CardContent>
             </Card>
-          </section>
 
-          {/* Section 4: Origin Story & Founder Journey */}
-          <section id="origin-story" className="profile-section scroll-mt-24">
-            <Card className="shadow-xs border-border/60">
-              <CardHeader className="border-b border-border/40 pb-4">
-                <CardTitle className="text-lg font-bold flex items-center gap-2 text-foreground">
-                  <div className="p-1.5 rounded-md bg-indigo-500/10 text-indigo-600">
-                    <UserCircle2 className="size-4" />
-                  </div>
-                  المؤسس وقصة البداية والتمويل
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-4 sm:p-6 space-y-3">
-                {project.origin_story.map((item: string, i: number) => (
-                  <div key={i} className="flex items-start gap-3 p-3.5 rounded-lg bg-muted/30 border border-border/40">
-                    <div className="size-2 rounded-full bg-indigo-500 shrink-0 mt-1.5" />
-                    <p className="text-sm text-foreground font-medium leading-relaxed">{item}</p>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-          </section>
-
-          {/* Section 5: Build and Launch */}
-          <section id="build-and-launch" className="profile-section scroll-mt-24">
-            <Card className="shadow-xs border-border/60">
-              <CardHeader className="border-b border-border/40 pb-4">
-                <CardTitle className="text-lg font-bold flex items-center gap-2 text-foreground">
-                  <div className="p-1.5 rounded-md bg-violet-500/10 text-violet-600">
-                    <Rocket className="size-4" />
-                  </div>
-                  البناء والتطور التاريخي
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-4 sm:p-6 space-y-4">
-                {project.build_and_launch.map((item: string, i: number) => {
-                  const parts = item.split(': ');
-                  const title = parts.length > 1 ? parts[0] : null;
-                  const text = parts.length > 1 ? parts.slice(1).join(': ') : item;
-
-                  return (
-                    <div key={i} className="flex items-start gap-3 p-4 rounded-lg bg-muted/20 border border-border/40">
-                      <div className="p-1 rounded bg-violet-100 text-violet-700 shrink-0 mt-0.5">
-                        <Check className="size-3.5" />
-                      </div>
-                      <div className="space-y-1">
-                        {title && <h4 className="text-xs font-bold text-violet-700 uppercase tracking-wide">{title}</h4>}
-                        <p className="text-sm text-foreground font-medium leading-relaxed">{text}</p>
-                      </div>
+            {/* Business Model & Expansion Strategy Card */}
+            <Card className="shadow-xs border-border/60 rounded-2xl overflow-hidden bg-card">
+              <CardHeader className="border-b border-border/40 p-4 sm:p-5 bg-muted/20">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <CardTitle className="text-base font-bold flex items-center gap-2 text-foreground">
+                    <div className="p-1.5 rounded-lg bg-primary/10 text-primary">
+                      <Briefcase className="size-4" />
                     </div>
-                  );
-                })}
-              </CardContent>
-            </Card>
-          </section>
-
-          {/* Section 6: Costs and Operations */}
-          <section id="costs-and-operations" className="profile-section scroll-mt-24">
-            <Card className="shadow-xs border-border/60">
-              <CardHeader className="border-b border-border/40 pb-4">
-                <CardTitle className="text-lg font-bold flex items-center gap-2 text-foreground">
-                  <div className="p-1.5 rounded-md bg-slate-500/10 text-slate-700">
-                    <Settings className="size-4" />
-                  </div>
-                  التكاليف التشغيلية ومؤشرات الإدارة
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-4 sm:p-6 space-y-3">
-                {project.costs_and_operations.map((item: string, i: number) => (
-                  <div key={i} className="flex items-start gap-3 p-3.5 rounded-lg bg-muted/30 border border-border/40">
-                    <div className="size-2 rounded-full bg-slate-400 shrink-0 mt-1.5" />
-                    <p className="text-sm text-foreground font-medium leading-relaxed">{item}</p>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-          </section>
-
-          {/* Section 7: Monetization */}
-          <section id="monetization" className="profile-section scroll-mt-24">
-            <Card className="shadow-xs border-border/60">
-              <CardHeader className="border-b border-border/40 pb-4">
-                <CardTitle className="text-lg font-bold flex items-center gap-2 text-foreground">
-                  <div className="p-1.5 rounded-md bg-emerald-500/10 text-emerald-600">
-                    <DollarSign className="size-4" />
-                  </div>
-                  نموذج الربح وهيكلية التسعير
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-4 sm:p-6 space-y-3">
-                {project.monetization.map((item: string, i: number) => (
-                  <div key={i} className="flex items-start gap-3 p-3.5 rounded-lg bg-emerald-50/30 border border-emerald-100">
-                    <CheckCircle2 className="size-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <p className="text-sm text-foreground font-medium leading-relaxed">{item}</p>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-          </section>
-
-          {/* Section 8: Growth */}
-          <section id="growth" className="profile-section scroll-mt-24">
-            <Card className="shadow-xs border-border/60">
-              <CardHeader className="border-b border-border/40 pb-4">
-                <CardTitle className="text-lg font-bold flex items-center gap-2 text-foreground">
-                  <div className="p-1.5 rounded-md bg-cyan-500/10 text-cyan-600">
-                    <Globe className="size-4" />
-                  </div>
-                  معدلات النمو والتوسع
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-4 sm:p-6 space-y-3">
-                {project.growth.map((item: string, i: number) => (
-                  <div key={i} className="flex items-start gap-3 p-3.5 rounded-lg bg-muted/30 border border-border/40">
-                    <TrendingUp className="size-4 text-cyan-600 shrink-0 mt-0.5" />
-                    <p className="text-sm text-foreground font-medium leading-relaxed">{item}</p>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-          </section>
-
-          {/* Section 9: Tools */}
-          {project.tools.length > 0 && (
-            <section id="tools" className="profile-section scroll-mt-24">
-              <Card className="shadow-xs border-border/60">
-                <CardHeader className="border-b border-border/40 pb-4">
-                  <CardTitle className="text-lg font-bold flex items-center gap-2 text-foreground">
-                    <div className="p-1.5 rounded-md bg-pink-500/10 text-pink-600">
-                      <Code className="size-4" />
-                    </div>
-                    التقنيات والأدوات والتكاملات المستخدمة
+                    <span>نموذج العمل واستراتيجية التوسع</span>
                   </CardTitle>
-                </CardHeader>
-                <CardContent className="p-4 sm:p-6">
-                  <div className="flex flex-wrap gap-2.5">
-                    {project.tools.map((tool: string, i: number) => {
-                      const branding = getToolBranding(tool);
-                      return (
-                        <Badge
-                          key={i}
-                          variant="outline"
-                          className={cn("flex items-center gap-2 text-xs font-bold px-3 py-1.5 rounded-lg border", branding.colors)}
-                        >
-                          {branding.icon}
-                          <span>{tool}</span>
-                        </Badge>
-                      );
-                    })}
-                  </div>
-                </CardContent>
-              </Card>
-            </section>
-          )}
 
-          {/* Section 10: Revenue Timeline */}
-          <section id="revenue-timeline" className="profile-section scroll-mt-24">
-            <Card className="shadow-xs border-border/60">
-              <CardHeader className="border-b border-border/40 pb-4">
-                <CardTitle className="text-lg font-bold flex items-center gap-2 text-foreground">
-                  <div className="p-1.5 rounded-md bg-emerald-500/10 text-emerald-600">
+                  {(hasVerifiedFounder || hasVerifiedYear) && (
+                    <div className="flex items-center gap-2 flex-wrap text-xs">
+                      {hasVerifiedYear && (
+                        <Badge variant="outline" className="bg-background border-border text-foreground font-bold">
+                          تأسست عام {getDisplayText(project.company.started)}
+                        </Badge>
+                      )}
+                      {hasVerifiedFounder && (
+                        <Badge variant="outline" className="bg-background border-border text-foreground font-bold">
+                          المؤسس: {foundersText}
+                        </Badge>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </CardHeader>
+              
+              <CardContent className="p-4 sm:p-6 space-y-6">
+                
+                {/* Business Model Section */}
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-xs font-extrabold text-foreground uppercase tracking-wider flex items-center gap-1.5">
+                      <Building2 className="size-4 text-primary" />
+                      نموذج العمل والربح
+                    </span>
+                    {modelEvidence && (
+                      <Badge variant="outline" className={cn("text-[10px] font-bold py-0.5 px-2.5 rounded-md", getStatusMeta(modelEvidence.verification_status).className)}>
+                        {getStatusMeta(modelEvidence.verification_status).label}
+                      </Badge>
+                    )}
+                  </div>
+
+                  {project.company.customer_type && (
+                    <div className="flex items-center gap-2 flex-wrap">
+                      {getCategoryTokens(null, project.company.customer_type).map((typeToken: string, idx: number) => (
+                        <Badge key={idx} variant="outline" className="font-bold text-xs text-primary bg-primary/5 px-3 py-1 rounded-lg border border-primary/20 hover:bg-primary/10 cursor-pointer transition-colors">
+                          {typeToken}
+                        </Badge>
+                      ))}
+                    </div>
+                  )}
+
+                  <div className="p-4 rounded-xl bg-muted/30 border border-border/40">
+                    <p className="text-xs sm:text-sm text-foreground font-medium leading-relaxed">
+                      {getDisplayText(project.company.business_model) || 'غير مفصح عنه رسمياً'}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Location & Operating Details Section */}
+                {project.company.location && (
+                  <div className="space-y-3 pt-4 border-t border-border/40">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="text-xs font-extrabold text-foreground uppercase tracking-wider flex items-center gap-1.5">
+                        <MapPin className="size-4 text-emerald-600" />
+                        تفاصيل المقر والانتشار الجغرافي
+                      </span>
+                      {locationEvidence && (
+                        <Badge variant="outline" className={cn("text-[10px] font-bold py-0.5 px-2.5 rounded-md", getStatusMeta(locationEvidence.verification_status).className)}>
+                          {getStatusMeta(locationEvidence.verification_status).label}
+                        </Badge>
+                      )}
+                    </div>
+
+                    <div className="p-4 rounded-xl bg-muted/30 border border-border/40">
+                      <p className="text-xs sm:text-sm text-foreground font-medium leading-relaxed">
+                        {getDisplayText(project.company.location)}
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="financial-growth" className="profile-section scroll-mt-24 space-y-4">
+            <div className="flex items-center gap-2 border-b border-border/40 pb-2">
+              <span className="bg-emerald-600 text-white font-mono text-xs font-bold px-2 py-0.5 rounded-md">03</span>
+              <h2 className="text-lg font-bold text-foreground">النمو والجدول الزمني للإيراد</h2>
+            </div>
+
+            <Card className="shadow-xs border-border/60 rounded-2xl overflow-hidden bg-card">
+              <CardHeader className="border-b border-border/40 bg-muted/20 p-4 sm:p-5">
+                <CardTitle className="text-base font-bold flex items-center gap-2 text-foreground">
+                  <div className="p-1.5 rounded-lg bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">
                     <TrendingUp className="size-4" />
                   </div>
-                  المخطط الزمني للإيرادات والتوسع المالي
+                  <span>المخطط الزمني للإيرادات والتوسع المالي</span>
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-4 sm:p-6 space-y-4">
@@ -957,23 +1226,217 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                 ))}
               </CardContent>
             </Card>
+
+            <Card className="shadow-xs border-border/60 rounded-2xl overflow-hidden">
+              <CardHeader className="border-b border-border/40 pb-4">
+                <CardTitle className="text-base font-bold flex items-center gap-2 text-foreground">
+                  <div className="p-1.5 rounded-lg bg-indigo-500/10 text-indigo-600">
+                    <UserCircle2 className="size-4" />
+                  </div>
+                  المؤسس وقصة البداية والتمويل
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-4 sm:p-6 space-y-3">
+                {project.origin_story.map((item: string, i: number) => (
+                  <div key={i} className="flex items-start gap-3 p-3.5 rounded-xl bg-muted/30 border border-border/40">
+                    <div className="size-2 rounded-full bg-indigo-500 shrink-0 mt-1.5" />
+                    <p className="text-sm text-foreground font-medium leading-relaxed">{item}</p>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-xs border-border/60 rounded-2xl overflow-hidden">
+              <CardHeader className="border-b border-border/40 pb-4">
+                <CardTitle className="text-base font-bold flex items-center gap-2 text-foreground">
+                  <div className="p-1.5 rounded-lg bg-cyan-500/10 text-cyan-600">
+                    <Globe className="size-4" />
+                  </div>
+                  معدلات النمو والتوسع الميداني
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-4 sm:p-6 space-y-3">
+                {project.growth.map((item: string, i: number) => (
+                  <div key={i} className="flex items-start gap-3 p-3.5 rounded-xl bg-muted/30 border border-border/40">
+                    <TrendingUp className="size-4 text-cyan-600 shrink-0 mt-0.5" />
+                    <p className="text-sm text-foreground font-medium leading-relaxed">{item}</p>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
           </section>
 
-          {/* Section 11: Lessons Learned */}
-          <section id="lessons" className="profile-section scroll-mt-24">
-            <Card className="shadow-xs border-emerald-200/80 bg-emerald-50/20">
-              <CardHeader className="border-b border-emerald-200/60 pb-4">
-                <CardTitle className="text-lg font-bold flex items-center gap-2 text-emerald-950">
-                  <div className="p-1.5 rounded-md bg-emerald-100 text-emerald-700">
+          <section id="tech-stack" className="profile-section scroll-mt-24 space-y-4">
+            <div className="flex items-center gap-2 border-b border-border/40 pb-2">
+              <span className="bg-primary text-primary-foreground font-mono text-xs font-bold px-2 py-0.5 rounded-md">04</span>
+              <h2 className="text-lg font-bold text-foreground">البنية التقنية والأدوات</h2>
+            </div>
+
+            <Card className="shadow-xs border-border/60 bg-card rounded-2xl overflow-hidden">
+              <CardHeader className="border-b border-border/40 bg-muted/20 p-4 sm:p-5">
+                <CardTitle className="text-base font-bold flex items-center gap-2 text-foreground">
+                  <div className="p-1.5 rounded-lg bg-primary/10 text-primary">
+                    <Code className="size-4" />
+                  </div>
+                  <span>المكونات والتقنيات البرمجية والتشغيلية (Tech & Infrastructure)</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-4 sm:p-6 space-y-6">
+                
+                {/* Short Tech Badges Grid */}
+                {hasShortBadges && (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {categorizedTools.frontend.length > 0 && (
+                      <div className="p-4 rounded-xl bg-background border border-border/60 space-y-2.5">
+                        <span className="text-xs font-bold text-foreground uppercase tracking-wider flex items-center gap-1.5">
+                          <Layout className="size-3.5 text-primary" />
+                          الواجهة والتصميم (Frontend & Design)
+                        </span>
+                        <div className="flex flex-wrap gap-2">
+                          {categorizedTools.frontend.map((t: string, idx: number) => (
+                            <Badge key={idx} variant="outline" className={cn("text-xs font-bold px-2.5 py-1 rounded-lg border", getToolBranding(t).colors)}>
+                              {getToolBranding(t).icon}
+                              <span className="ms-1.5">{t}</span>
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {categorizedTools.backend.length > 0 && (
+                      <div className="p-4 rounded-xl bg-background border border-border/60 space-y-2.5">
+                        <span className="text-xs font-bold text-foreground uppercase tracking-wider flex items-center gap-1.5">
+                          <Database className="size-3.5 text-blue-600" />
+                          الخلفية والسحابة (Backend & Cloud)
+                        </span>
+                        <div className="flex flex-wrap gap-2">
+                          {categorizedTools.backend.map((t: string, idx: number) => (
+                            <Badge key={idx} variant="outline" className={cn("text-xs font-bold px-2.5 py-1 rounded-lg border", getToolBranding(t).colors)}>
+                              {getToolBranding(t).icon}
+                              <span className="ms-1.5">{t}</span>
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {categorizedTools.ai.length > 0 && (
+                      <div className="p-4 rounded-xl bg-background border border-border/60 space-y-2.5">
+                        <span className="text-xs font-bold text-foreground uppercase tracking-wider flex items-center gap-1.5">
+                          <Bot className="size-3.5 text-amber-600" />
+                          الذكاء الاصطناعي والأتمتة (AI & Automation)
+                        </span>
+                        <div className="flex flex-wrap gap-2">
+                          {categorizedTools.ai.map((t: string, idx: number) => (
+                            <Badge key={idx} variant="outline" className={cn("text-xs font-bold px-2.5 py-1 rounded-lg border", getToolBranding(t).colors)}>
+                              {getToolBranding(t).icon}
+                              <span className="ms-1.5">{t}</span>
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {categorizedTools.shortOther.length > 0 && (
+                      <div className="p-4 rounded-xl bg-background border border-border/60 space-y-2.5">
+                        <span className="text-xs font-bold text-foreground uppercase tracking-wider flex items-center gap-1.5">
+                          <Boxes className="size-3.5 text-slate-600" />
+                          أدوات وتقنيات مساعدة
+                        </span>
+                        <div className="flex flex-wrap gap-2">
+                          {categorizedTools.shortOther.map((t: string, idx: number) => (
+                            <Badge key={idx} variant="outline" className={cn("text-xs font-bold px-2.5 py-1 rounded-lg border", getToolBranding(t).colors)}>
+                              {getToolBranding(t).icon}
+                              <span className="ms-1.5">{t}</span>
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Descriptive Operational Tools Grid */}
+                {descriptiveTools.length > 0 && (
+                  <div className="space-y-3 pt-2">
+                    <div className="flex items-center justify-between gap-2 border-b border-border/40 pb-2">
+                      <h4 className="text-xs font-extrabold text-foreground uppercase tracking-wider flex items-center gap-1.5">
+                        <Boxes className="size-4 text-primary" />
+                        الأدوات والتكاملات والبنية التشغيلية
+                      </h4>
+                      <Badge variant="outline" className="text-[10px] font-bold bg-muted text-muted-foreground border-border">
+                        {descriptiveTools.length} عناصر ومرافق
+                      </Badge>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+                      {descriptiveTools.map((tool: string, idx: number) => {
+                        const parsed = parseToolItem(tool);
+
+                        return (
+                          <div 
+                            key={idx} 
+                            className="p-4 rounded-xl bg-background border border-border/60 shadow-2xs hover:border-primary/40 transition-all flex flex-col justify-between gap-2.5 group"
+                          >
+                            <div className="space-y-2">
+                              <div className="flex items-start justify-between gap-2">
+                                <div className="flex items-center gap-2 min-w-0 flex-1">
+                                  <div className="p-1.5 rounded-lg bg-primary/10 text-primary shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <Code className="size-3.5" />
+                                  </div>
+                                  <h5 className="font-bold text-xs sm:text-sm text-foreground leading-snug" title={parsed.title}>
+                                    {parsed.title}
+                                  </h5>
+                                </div>
+
+                                {parsed.brandBadge && (
+                                  <Badge variant="secondary" className="font-mono text-[10px] font-bold bg-muted text-muted-foreground border border-border shrink-0">
+                                    {parsed.brandBadge}
+                                  </Badge>
+                                )}
+                              </div>
+
+                              {parsed.description && (
+                                <p className="text-xs text-muted-foreground font-medium leading-relaxed bg-muted/20 p-2.5 rounded-lg border border-border/40">
+                                  {parsed.description}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {project.tools.length === 0 && (
+                  <p className="text-xs text-muted-foreground font-medium text-center py-4">
+                    لم يتم رصد قائمة أدوات تقنية محددة رسمياً لهذه الشركة.
+                  </p>
+                )}
+              </CardContent>
+            </Card>
+          </section>
+
+          <section id="lessons-and-sources" className="profile-section scroll-mt-24 space-y-4">
+            <div className="flex items-center gap-2 border-b border-border/40 pb-2">
+              <span className="bg-amber-600 text-white font-mono text-xs font-bold px-2 py-0.5 rounded-md">05</span>
+              <h2 className="text-lg font-bold text-foreground">الدروس وشواهد التوثيق</h2>
+            </div>
+
+            <Card className="shadow-xs border-border/60 bg-card rounded-2xl overflow-hidden">
+              <CardHeader className="border-b border-border/40 bg-muted/20 p-4 sm:p-5">
+                <CardTitle className="text-base font-bold flex items-center gap-2 text-foreground">
+                  <div className="p-1.5 rounded-lg bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300">
                     <FileText className="size-4" />
                   </div>
-                  خلاصة الدروس المستفادة والاستراتيجيات للمؤسسين
+                  <span>خلاصة الدروس المستفادة والاستراتيجيات للمؤسسين</span>
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-4 sm:p-6 space-y-3">
                 {project.lessons.map((item: any, i: number) => (
-                  <div key={i} className="p-4 rounded-xl bg-background border border-emerald-100 shadow-xs flex items-start gap-3">
-                    <div className="p-1 rounded bg-emerald-100 text-emerald-700 shrink-0 mt-0.5">
+                  <div key={i} className="p-4 rounded-xl bg-background border border-amber-200/60 shadow-xs flex items-start gap-3">
+                    <div className="p-1 rounded bg-amber-100 text-amber-700 shrink-0 mt-0.5">
                       <Check className="size-4" />
                     </div>
                     <div className="space-y-1">
@@ -988,54 +1451,66 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                 ))}
               </CardContent>
             </Card>
-          </section>
 
-          {/* Verification Policy & Limitations Notice */}
-          {rawProject.verification && (
-            <section id="verification-policy" className="profile-section scroll-mt-24">
-              <Card className="border-emerald-200/80 bg-emerald-50/40 shadow-xs overflow-hidden">
-                <CardHeader className="border-b border-emerald-200/60 pb-3">
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            {rawProject.verification && (
+              <Card className="border-emerald-200/80 bg-emerald-50/40 dark:bg-emerald-950/20 shadow-xs rounded-2xl overflow-hidden">
+                <CardHeader className="p-4 sm:p-5 bg-emerald-50/40 dark:bg-emerald-950/40">
+                  <button
+                    type="button"
+                    onClick={() => setIsPolicyOpen(!isPolicyOpen)}
+                    className="w-full flex items-center justify-between gap-4 text-right focus:outline-none"
+                  >
                     <div className="flex items-center gap-3">
-                      <div className="p-2 rounded-lg bg-emerald-100 text-emerald-700 shrink-0">
+                      <div className="p-2 rounded-lg bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 shrink-0">
                         <ShieldCheck className="size-5" />
                       </div>
                       <div>
-                        <h3 className="font-bold text-slate-900 text-base">
-                          سياسة التوثيق وحدود الاستدلال الدقيقة (Verified Primary Data)
+                        <h3 className="font-bold text-slate-900 dark:text-slate-100 text-base">
+                          سياسة التوثيق وحدود الاستدلال الدقيقة
                         </h3>
-                        <p className="text-xs text-slate-600 font-medium mt-0.5">
+                        <p className="text-xs text-slate-600 dark:text-slate-400 font-medium mt-0.5 line-clamp-1">
                           {getDisplayText(rawProject.verification.source_policy)}
                         </p>
                       </div>
                     </div>
-                    <Badge variant="outline" className="bg-emerald-100 text-emerald-800 border-emerald-300 font-bold text-xs shrink-0">
-                      تم التوثيق: {getDisplayText(rawProject.verification.verified_on) || '2026'}
-                    </Badge>
-                  </div>
-                </CardHeader>
-                {rawProject.verification.important_notes && rawProject.verification.important_notes.length > 0 && (
-                  <CardContent className="p-4 sm:p-5">
-                    <span className="text-[11px] font-bold text-emerald-900 uppercase tracking-wider block mb-2">
-                      حدود الاستدلال الشفافة والملاحظات الميدانية:
-                    </span>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-slate-700 font-medium">
-                      {toTextList(rawProject.verification.important_notes).map((note: string, idx: number) => (
-                        <div key={idx} className="flex items-start gap-2 bg-white/90 p-2.5 rounded-lg border border-emerald-200/60">
-                          <div className="size-1.5 rounded-full bg-emerald-600 shrink-0 mt-1.5" />
-                          <span className="leading-relaxed">{note}</span>
-                        </div>
-                      ))}
+
+                    <div className="flex items-center gap-2 shrink-0">
+                      <Badge variant="outline" className="bg-emerald-100 text-emerald-800 border-emerald-300 font-bold text-xs">
+                        {isPolicyOpen ? 'عرض أقل' : 'مطوي'}
+                      </Badge>
+                      <div className="p-1.5 rounded-lg bg-emerald-100/60 text-emerald-700 dark:bg-emerald-900/60 dark:text-emerald-300">
+                        {isPolicyOpen ? <ChevronUp className="size-4" /> : <ChevronDown className="size-4" />}
+                      </div>
                     </div>
+                  </button>
+                </CardHeader>
+
+                {isPolicyOpen && (
+                  <CardContent className="p-4 sm:p-5 border-t border-emerald-200/60 bg-emerald-50/20 dark:bg-emerald-950/20 space-y-3">
+                    <div className="p-3 rounded-xl bg-background/80 border border-emerald-200/60 text-xs text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+                      {getDisplayText(rawProject.verification.source_policy)}
+                    </div>
+                    {rawProject.verification.important_notes && rawProject.verification.important_notes.length > 0 && (
+                      <div className="space-y-2">
+                        <span className="text-[11px] font-bold text-emerald-900 dark:text-emerald-300 uppercase tracking-wider block">
+                          حدود الاستدلال الشفافة والملاحظات الميدانية:
+                        </span>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-slate-700 dark:text-slate-300 font-medium">
+                          {toTextList(rawProject.verification.important_notes).map((note: string, idx: number) => (
+                            <div key={idx} className="flex items-start gap-2 bg-background p-2.5 rounded-lg border border-emerald-200/60 shadow-2xs">
+                              <div className="size-1.5 rounded-full bg-emerald-600 shrink-0 mt-1.5" />
+                              <span className="leading-relaxed">{note}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </CardContent>
                 )}
               </Card>
-            </section>
-          )}
+            )}
 
-          {/* COLLAPSED BY DEFAULT SOURCES ACCORDION */}
-          <section id="sources" className="profile-section scroll-mt-24">
-            <Card className="shadow-xs border-border/60 overflow-hidden">
+            <Card className="shadow-xs border-border/60 rounded-2xl overflow-hidden">
               <CardHeader className="p-4 sm:p-5 bg-card">
                 <button
                   type="button"
@@ -1105,25 +1580,199 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                 </CardContent>
               )}
             </Card>
+
+            <Card className="shadow-xs border-border/60 rounded-2xl overflow-hidden">
+              <CardHeader className="p-4 sm:p-5 bg-card">
+                <button
+                  type="button"
+                  onClick={() => setIsQualityOpen(!isQualityOpen)}
+                  className="w-full flex items-center justify-between gap-4 text-right focus:outline-none"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 shrink-0">
+                      <CheckCircle2 className="size-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-base font-bold text-foreground">
+                        معايير التوثيق وجودة البيانات
+                      </h3>
+                      <p className="text-xs text-muted-foreground font-medium mt-0.5">
+                        انقر للفتح أو الطي ({project.data_quality?.length || 0} معايير جودة وتدقيق)
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2 shrink-0">
+                    <Badge variant="outline" className="bg-muted/50 text-muted-foreground border-border text-xs font-bold">
+                      {isQualityOpen ? 'عرض أقل' : 'مطوي'}
+                    </Badge>
+                    <div className="p-1.5 rounded-lg bg-muted/40 text-muted-foreground">
+                      {isQualityOpen ? <ChevronUp className="size-4" /> : <ChevronDown className="size-4" />}
+                    </div>
+                  </div>
+                </button>
+              </CardHeader>
+
+              {isQualityOpen && (
+                <CardContent className="p-4 sm:p-5 border-t border-border/40 bg-muted/20">
+                  <div className="space-y-2.5">
+                    {project.data_quality.map((item: string, i: number) => (
+                      <div key={i} className="flex items-start gap-2.5 p-3 rounded-lg bg-card border border-border/40 text-xs font-medium text-foreground leading-relaxed">
+                        <CheckCircle2 className="size-4 text-emerald-600 shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              )}
+            </Card>
           </section>
 
-          {/* Data Quality Standards */}
-          <section id="data-quality" className="profile-section scroll-mt-24">
-            <Card className="shadow-xs border-border/60">
-              <CardHeader className="border-b border-border/40 pb-4">
-                <CardTitle className="text-base font-bold flex items-center gap-2 text-foreground">
-                  <ShieldCheck className="size-4 text-emerald-600" />
-                  معايير التوثيق وجودة البيانات
+          {/* Section 06: Similar Companies & Related Sectors */}
+          <section id="related-companies-and-sectors" className="profile-section scroll-mt-24 space-y-5">
+            <div className="flex items-center gap-2 border-b border-border/40 pb-2">
+              <span className="bg-teal-600 text-white font-mono text-xs font-bold px-2 py-0.5 rounded-md">06</span>
+              <h2 className="text-lg font-bold text-foreground">شركات مماثلة وقطاعات مرتبطة</h2>
+            </div>
+
+            {/* Subsection 1: Similar Companies Cards */}
+            <Card className="shadow-xs border-teal-200/70 dark:border-teal-900/60 bg-teal-50/20 rounded-2xl overflow-hidden">
+              <CardHeader className="border-b border-teal-200/50 dark:border-teal-900/40 bg-teal-50/40 dark:bg-teal-950/40 pb-4">
+                <CardTitle className="text-base font-bold flex items-center justify-between gap-2 text-teal-950 dark:text-teal-200">
+                  <div className="flex items-center gap-2">
+                    <div className="p-1.5 rounded-lg bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300">
+                      <Building2 className="size-4" />
+                    </div>
+                    <span>شركات مماثلة ذات نموذج عمل ونشاط مشابه</span>
+                  </div>
+                  <Badge variant="outline" className="text-xs font-bold bg-teal-100/80 dark:bg-teal-900/80 text-teal-800 dark:text-teal-200 border-teal-300">
+                    مقارنة معيارية (Benchmarking)
+                  </Badge>
                 </CardTitle>
               </CardHeader>
-              <CardContent className="p-4 sm:p-5">
-                <div className="space-y-2.5">
-                  {project.data_quality.map((item: string, i: number) => (
-                    <div key={i} className="flex items-start gap-2.5 p-3 rounded-lg bg-muted/20 border border-border/40 text-xs font-medium text-foreground leading-relaxed">
-                      <CheckCircle2 className="size-4 text-emerald-600 shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
+              <CardContent className="p-4 sm:p-6 space-y-4">
+                {isLoadingSimilar ? (
+                  <div className="py-8 flex items-center justify-center text-muted-foreground gap-2 text-xs">
+                    <Loader2 className="size-4 animate-spin text-teal-600" />
+                    <span>جاري جلب الشركات المماثلة من قاعدة البيانات...</span>
+                  </div>
+                ) : similarProjects.length > 0 ? (
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {similarProjects.map((comp: any) => {
+                      const country = getCountryInfo(comp.company?.location || '');
+                      const rev = comp.directory_snapshot?.monthly_revenue || 'غير معلن';
+                      const badgeLabel = (comp.category || 'شركة مماثلة').split('/')[0].trim();
+
+                      return (
+                        <div
+                          key={comp.id || comp.slug}
+                          onClick={() => onSelectProject?.(comp)}
+                          className="p-4 rounded-xl bg-card border border-border/80 shadow-2xs hover:border-teal-400 dark:hover:border-teal-700 hover:shadow-md transition-all flex flex-col justify-between gap-3 group cursor-pointer"
+                        >
+                          <div className="space-y-2.5">
+                            <div className="flex items-center justify-between gap-2">
+                              <div className="flex items-center gap-2.5">
+                                <div className="size-9 rounded-xl bg-teal-600 text-white font-black text-sm flex items-center justify-center shadow-xs shrink-0 group-hover:scale-105 transition-transform">
+                                  {comp.name ? comp.name.charAt(0) : 'C'}
+                                </div>
+                                <div>
+                                  <h4 className="font-bold text-sm text-foreground group-hover:text-teal-600 transition-colors line-clamp-1">
+                                    {comp.name}
+                                  </h4>
+                                  <span className="text-[11px] text-muted-foreground font-medium flex items-center gap-1">
+                                    <MapPin className="size-3 text-emerald-600 shrink-0" />
+                                    <span>{country.flag} {country.name}</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <p className="text-xs text-muted-foreground font-medium leading-relaxed line-clamp-2">
+                              {comp.headline || comp.company?.business_model || 'دراسة وتحليل نموذج العمل ونشاط الشركة.'}
+                            </p>
+                          </div>
+
+                          <div className="pt-2.5 border-t border-border/40 flex items-center justify-between gap-2">
+                            <Badge variant="secondary" className="text-[10px] font-bold bg-teal-50 text-teal-800 dark:bg-teal-950 dark:text-teal-300 border border-teal-200/60 max-w-[140px] truncate">
+                              {badgeLabel}
+                            </Badge>
+                            <span className="text-[11px] font-mono font-bold text-emerald-700 dark:text-emerald-400 shrink-0 flex items-center gap-1 group-hover:translate-x-[-2px] transition-transform">
+                              <span>{rev !== 'غير معلن' ? rev : 'استعراض التحليل'}</span>
+                              <ChevronLeft className="size-3 text-teal-600" />
+                            </span>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <div className="py-6 text-center text-xs text-muted-foreground font-medium">
+                    لا تتوفر شركات مماثلة إضافية في هذا القطاع حالياً.
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+
+            {/* Subsection 2: Related Sectors & Market Opportunities */}
+            <Card className="shadow-xs border-border/60 rounded-2xl overflow-hidden bg-card">
+              <CardHeader className="border-b border-border/40 bg-muted/20 pb-4">
+                <CardTitle className="text-base font-bold flex items-center gap-2 text-foreground">
+                  <div className="p-1.5 rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
+                    <Compass className="size-4" />
+                  </div>
+                  القطاعات وفرص النمو المرتبطة بهذا المجال
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-4 sm:p-6 space-y-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  
+                  {categoryTokens.length > 0 ? (
+                    categoryTokens.map((token: string, idx: number) => (
+                      <div key={idx} className="p-3.5 rounded-xl border border-border/60 bg-muted/10 hover:bg-muted/30 transition-all flex items-start gap-3">
+                        <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0 mt-0.5">
+                          <Layers className="size-4" />
+                        </div>
+                        <div className="space-y-1">
+                          <div className="flex items-center gap-2">
+                            <h4 className="font-bold text-sm text-foreground">قطاع {token}</h4>
+                            <Badge variant="outline" className="text-[10px] font-bold px-2 py-0.2 border-primary/30 text-primary">
+                              فرصة سوقية
+                            </Badge>
+                          </div>
+                          <p className="text-xs text-muted-foreground font-medium leading-relaxed">
+                            فرص استثمارية وتطوير منتجات في سوق {token} مع التركيز على نمو الطلب الإقليمي وتوسيع قنوات البيع المباشرة والتجارية.
+                          </p>
+                        </div>
+                      </div>
+                    ))
+                  ) : (
+                    <>
+                      <div className="p-3.5 rounded-xl border border-border/60 bg-muted/10 flex items-start gap-3">
+                        <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0 mt-0.5">
+                          <Layers className="size-4" />
+                        </div>
+                        <div className="space-y-1">
+                          <h4 className="font-bold text-sm text-foreground">قطاع القهوة المختصة والسلع الاستهلاكية (FMCG)</h4>
+                          <p className="text-xs text-muted-foreground font-medium leading-relaxed">
+                            سوق سريع النمو يعتمد على تحويل القهوة من المقهى التقليدي إلى منتج استهلاكي يومي متاح للمنازل والمكاتب.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="p-3.5 rounded-xl border border-border/60 bg-muted/10 flex items-start gap-3">
+                        <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0 mt-0.5">
+                          <Briefcase className="size-4" />
+                        </div>
+                        <div className="space-y-1">
+                          <h4 className="font-bold text-sm text-foreground">المنتجات النباتية والبدائل المخصصة للباريستا</h4>
+                          <p className="text-xs text-muted-foreground font-medium leading-relaxed">
+                            فرص إحلال الواردات وتصنيع بدائل الألبان المحلية (الشوفان والجوز والصويا) لخدمة المقاهي والمستهلكين النهائيين.
+                          </p>
+                        </div>
+                      </div>
+                    </>
+                  )}
+
                 </div>
               </CardContent>
             </Card>

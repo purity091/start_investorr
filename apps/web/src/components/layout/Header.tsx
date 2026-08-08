@@ -1,6 +1,8 @@
 import React from 'react';
 import {
   AlertCircle,
+  ArrowLeft,
+  CheckCheck,
   Bell,
   Briefcase,
   CheckCircle2,
@@ -8,13 +10,13 @@ import {
   CreditCard,
   Crown,
   LayoutDashboard,
-  Lightbulb,
   Loader2,
   LogOut,
   MessageSquarePlus,
   Clock,
   User as UserIcon,
 } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 import type { User } from '../../types';
 import { useAuth } from '../../features/auth/AuthContext';
@@ -41,6 +43,7 @@ import {
   BreadcrumbSeparator,
 } from '../ui/breadcrumb';
 import { PlatformFeedbackModal } from './PlatformFeedbackModal';
+import { getNotificationMeta, useSystemNotifications } from '@/services/notificationService';
 
 interface HeaderProps {
   activeTab: string;
@@ -115,12 +118,6 @@ const SECTION_NAMES: Record<string, string> = {
   pricing: 'إدارة المستخدم',
 };
 
-const notifications = [
-  { title: 'تم تحديث المشروع الرئيسي', meta: 'منذ 15 دقيقة' },
-  { title: 'فاتورة التجديد القادمة جاهزة', meta: '21 يوليو 2026' },
-  { title: 'توصية جديدة متاحة داخل المنصة', meta: 'منذ ساعة' },
-];
-
 function getContextBadge(activeTab: string) {
   if (activeTab.startsWith('admin-') || activeTab === 'users-management') {
     return { label: 'وضع الإدارة', variant: 'secondary' as const };
@@ -172,6 +169,19 @@ export const Header: React.FC<HeaderProps> = ({
   const [isFeedbackOpen, setIsFeedbackOpen] = React.useState(false);
   const [showSaved, setShowSaved] = React.useState(false);
   const prevSaving = React.useRef(false);
+
+  const {
+    notifications: headerNotifications,
+    unreadCount: unreadHeaderCount,
+    isLoading: isLoadingNotifications,
+    markAsRead,
+    markAllAsRead,
+  } = useSystemNotifications({ limit: 5 });
+
+  const markAllHeaderRead = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    void markAllAsRead();
+  };
 
   // Show the saved indicator briefly after a remote sync completes.
   React.useEffect(() => {
@@ -292,18 +302,80 @@ export const Header: React.FC<HeaderProps> = ({
                   aria-label="التنبيهات"
                 >
                   <Bell className="size-4" />
-                  <span className="absolute right-1.5 top-1.5 h-2 w-2 rounded-full bg-red-500" />
+                  {unreadHeaderCount > 0 ? (
+                    <span className="absolute right-1.5 top-1.5 h-2 w-2 rounded-full bg-red-500" />
+                  ) : null}
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="min-w-80">
-                <DropdownMenuLabel className="text-right">التنبيهات</DropdownMenuLabel>
+              <DropdownMenuContent align="end" className="w-80 sm:w-96">
+                <DropdownMenuLabel className="text-right flex items-center justify-between">
+                  <span>التنبيهات</span>
+                  {unreadHeaderCount > 0 && (
+                    <button
+                      type="button"
+                      onClick={markAllHeaderRead}
+                      className="text-[11px] font-normal text-muted-foreground hover:text-primary transition-colors flex items-center gap-1 cursor-pointer"
+                    >
+                      <CheckCheck className="size-3" />
+                      تحديد كمقروء
+                    </button>
+                  )}
+                </DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                {notifications.map((item) => (
-                  <DropdownMenuItem key={item.title} className="flex flex-col items-end gap-1 py-3 text-right">
-                    <span className="text-sm font-medium text-foreground">{item.title}</span>
-                    <span className="text-xs text-muted-foreground">{item.meta}</span>
-                  </DropdownMenuItem>
-                ))}
+                <div className="max-h-80 overflow-y-auto divide-y divide-border/50">
+                  {isLoadingNotifications ? (
+                    <div className="flex items-center justify-center gap-2 p-6 text-xs text-muted-foreground">
+                      <Loader2 className="size-4 animate-spin" />
+                      <span>جاري تحميل التنبيهات...</span>
+                    </div>
+                  ) : headerNotifications.length === 0 ? (
+                    <div className="p-6 text-center text-xs text-muted-foreground">
+                      لا توجد تنبيهات جديدة.
+                    </div>
+                  ) : headerNotifications.map((item) => {
+                    const meta = getNotificationMeta(item.type);
+                    const Icon = meta.icon;
+                    return (
+                      <DropdownMenuItem 
+                        key={item.id || item.title} 
+                        onClick={() => {
+                          void markAsRead(item.id);
+                          const tab = item.link?.replace('/', '');
+                          if (tab) setActiveTab(tab);
+                          else setActiveTab('notifications');
+                        }}
+                        className={cn(
+                          "flex items-start gap-3 p-3.5 text-right cursor-pointer hover:bg-muted/60 transition-colors focus:bg-muted/60",
+                          !item.isRead && "bg-primary/5 font-medium"
+                        )}
+                      >
+                        <div className={cn("size-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5 border", meta.className)}>
+                          <Icon className="size-4" />
+                        </div>
+                        <div className="min-w-0 flex-1 space-y-1">
+                          <div className="flex items-center justify-between gap-1">
+                            <p className="text-xs font-bold text-foreground truncate">{item.title}</p>
+                            {!item.isRead && <span className="size-2 rounded-full bg-primary shrink-0" />}
+                          </div>
+                          <p className="text-[11px] text-muted-foreground line-clamp-2 leading-relaxed">{item.message}</p>
+                          <span className="text-[10px] text-muted-foreground/80 font-mono block">{item.timestamp}</span>
+                        </div>
+                      </DropdownMenuItem>
+                    );
+                  })}
+                </div>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem
+                  onClick={() => setActiveTab('notifications')}
+                  className="cursor-pointer justify-center text-center text-xs text-primary hover:bg-primary/10 py-2.5 flex items-center gap-1.5 font-bold"
+                >
+                  <span>عرض جميع التنبيهات</span>
+                  <ArrowLeft className="size-3.5" />
+                </DropdownMenuItem>
+
+
+
+
               </DropdownMenuContent>
             </DropdownMenu>
 

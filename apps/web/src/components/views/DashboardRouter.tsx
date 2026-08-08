@@ -498,7 +498,7 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
       case 'changelog':
         return <Changelog />;
       case 'notifications':
-        return <Notifications />;
+        return <Notifications setActiveTab={setActiveTab} />;
       case 'site-map':
         return <MobileSiteMap setActiveTab={setActiveTab} />;
       case 'editor':

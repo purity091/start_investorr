@@ -130,6 +130,19 @@ CREATE TABLE IF NOT EXISTS public.security_events (
     created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
+CREATE TABLE IF NOT EXISTS public.notifications (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID NOT NULL,
+    type TEXT NOT NULL DEFAULT 'info' CHECK (type IN ('success', 'info', 'warning', 'ai', 'system')),
+    category TEXT NOT NULL DEFAULT 'system' CHECK (category IN ('projects', 'security', 'billing', 'system')),
+    title TEXT NOT NULL,
+    message TEXT NOT NULL,
+    link TEXT,
+    read_at TIMESTAMPTZ,
+    metadata JSONB NOT NULL DEFAULT '{}'::jsonb,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
 CREATE INDEX IF NOT EXISTS business_canvas_user_updated_idx ON public.business_canvas (user_id, updated_at DESC);
 CREATE INDEX IF NOT EXISTS business_canvas_user_active_updated_idx ON public.business_canvas (user_id, updated_at DESC) WHERE deleted_at IS NULL;
 CREATE INDEX IF NOT EXISTS business_canvas_created_idx ON public.business_canvas (created_at DESC);
@@ -143,6 +156,8 @@ CREATE INDEX IF NOT EXISTS business_canvas_share_token_idx ON public.business_ca
 CREATE INDEX IF NOT EXISTS project_activity_canvas_idx ON public.project_activity (canvas_id, created_at DESC);
 CREATE INDEX IF NOT EXISTS project_activity_user_idx ON public.project_activity (user_id, created_at DESC);
 CREATE INDEX IF NOT EXISTS security_events_user_idx ON public.security_events (user_id, created_at DESC);
+CREATE INDEX IF NOT EXISTS notifications_user_created_idx ON public.notifications (user_id, created_at DESC);
+CREATE INDEX IF NOT EXISTS notifications_user_unread_idx ON public.notifications (user_id, created_at DESC) WHERE read_at IS NULL;
 CREATE INDEX IF NOT EXISTS security_events_type_idx ON public.security_events (event_type, created_at DESC);
 
 -- Turn on Row Level Security (RLS). Public reference data is read-only.

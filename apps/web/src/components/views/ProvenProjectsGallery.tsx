@@ -92,7 +92,13 @@ export const ProvenProjectsGallery: React.FC<ProvenProjectsGalleryProps> = ({ se
   };
 
   if (selectedProject) {
-    return <ProvenProjectProfile project={selectedProject} onBack={() => handleProjectSelect(null)} />;
+    return (
+      <ProvenProjectProfile 
+        project={selectedProject} 
+        onBack={() => handleProjectSelect(null)} 
+        onSelectProject={(proj) => handleProjectSelect(proj)}
+      />
+    );
   }
 
   return (
