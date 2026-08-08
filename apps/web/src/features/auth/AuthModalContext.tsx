@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import { AuthModal } from './AuthModal';
 
 type AuthMode = 'login' | 'register' | 'forgot_password';
@@ -22,6 +22,22 @@ const AuthModalContext = createContext<AuthModalContextType>({
 export const AuthModalProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [mode, setMode] = useState<AuthMode>('login');
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const hash = window.location.hash || '';
+    const search = window.location.search || '';
+    const fullLocation = hash + search;
+
+    // Automatically detect recovery links sent by Supabase Auth and redirect to /reset-password
+    if (fullLocation.includes('type=recovery') || (fullLocation.includes('access_token=') && fullLocation.includes('type=recovery'))) {
+      if (!window.location.pathname.startsWith('/reset-password')) {
+        const targetUrl = `/reset-password${hash}${search ? (hash ? '&' + search.slice(1) : search) : ''}`;
+        window.location.href = targetUrl;
+      }
+    }
+  }, []);
 
   const openAuthModal = (initialMode: AuthMode = 'login') => {
     setMode(initialMode);
