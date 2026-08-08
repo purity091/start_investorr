@@ -3,6 +3,14 @@ import { Badge } from '@/components/ui/Badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableHead,
+  TableRow,
+  TableCell,
+} from '@/components/ui/table';
+import {
   ArrowRight,
   CheckCircle2,
   DollarSign,
@@ -487,7 +495,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
           });
 
           scored.sort((a, b) => b.score - a.score);
-          setSimilarProjects(scored.slice(0, 3));
+          setSimilarProjects(scored.slice(0, 6));
         }
       } catch (err) {
         console.error("Failed to load similar projects from JSON DB", err);
@@ -579,6 +587,84 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
     data_quality: toTextList(rawProject.data_quality || (rawProject.verification?.important_notes || [])),
   };
 
+  // Helper to generate standardized international Revenue Model details
+  const getGlobalRevenueModelInfo = (rawModel: any, customerType: string, category: string) => {
+    const modelText = getDisplayText(rawModel) || '';
+    const textLower = (modelText + ' ' + (customerType || '') + ' ' + (category || '')).toLowerCase();
+
+    let streams: { title: string; desc: string; badge: string }[] = [];
+    let summaryText = modelText;
+
+    if (textLower.includes('saas') || textLower.includes('اشتراك') || textLower.includes('برمجيات') || textLower.includes('سحاب')) {
+      streams = [
+        { title: 'اشتراكات دورية (Recurring Subscriptions)', desc: 'باقات شهرية وسنوية متدرجة تعتمد على حجم استخدام المؤسسة وعدد المستخدمين النشطين.', badge: 'SaaS Subscription' },
+        { title: 'عقود وحلول المؤسسات (Enterprise Contracts)', desc: 'تراخيص خاصة بالمؤسسات الكبيرة تشتمل على اتفاقيات مستوى الخدمة (SLA) والدعم الفني المباشر.', badge: 'Enterprise License' },
+        { title: 'خدمات التكامل والتخصيص (Professional Services)', desc: 'رسوم إعداد وبناء تكاملات برمجية مخصصة (API Integration) بحسب متطلبات العميل.', badge: 'Add-on Services' }
+      ];
+    } else if (textLower.includes('تجارة') || textLower.includes('متجر') || textLower.includes('e-commerce') || textLower.includes('منتجات')) {
+      streams = [
+        { title: 'مبيعات المنتجات المباشرة (Direct Product Margin)', desc: 'هامش ربح مباشر يتولّد من عمليات البيع الرقمي بالتجزئة والجملة للمستهلكين والتجار.', badge: 'Direct Sales' },
+        { title: 'خدمات الشحن والتنفيذ (Fulfillment & Shipping)', desc: 'عوائد تشغيلية إضافية عبر تقديم خدمات التغليف والشحن السريع والمستودعات.', badge: 'Logistics Revenue' },
+        { title: 'اشتراكات التكرار الدوري (Subscription Boxes)', desc: 'إتاحة خيار الشراء الدوري الأوتوماتيكي للعملاء لتأمين تدفقات نقدية مستقرة ورابحة.', badge: 'Recurring Sub' }
+      ];
+    } else if (textLower.includes('منصة') || textLower.includes('وساطة') || textLower.includes('marketplace') || textLower.includes('عمولة')) {
+      streams = [
+        { title: 'عمولة الاقتطاع المباشر (Take Rate Commission)', desc: 'نسبة اقتطاع مئوية من قيمة كل عملية تجارية تكتمل بنجاح عبر المنصة.', badge: 'Take Rate' },
+        { title: 'اشتراكات مزودي الخدمات (Vendor Memberships)', desc: 'رسوم عضوية شهرية لمزودي الخدمات والتجار للحصول على أدوات تسويقية وتفوق في النتائج.', badge: 'Vendor Subscription' },
+        { title: 'الترويج والإعلانات الموجهة (Featured Listings)', desc: 'رسوم إضافية لإبراز العروض والمنتجات في مقدمة نتائج البحث والمقترحات.', badge: 'Ad Monetization' }
+      ];
+    } else {
+      streams = [
+        { title: 'عقود تجارية مباشرة (B2B Commercial Contracts)', desc: 'اتفاقيات توريد وخدمات طويلة الأمد مع الشركات والشركاء التجاريين.', badge: 'B2B Contracts' },
+        { title: 'رسوم الاستخدام التشغيلي (Usage-based Pricing)', desc: 'تحصيل عوائد مرنة ترتبط مباشرة بحجم استهلاك الخدمات وحجم المعاملات المنجزة.', badge: 'Usage-based' },
+        { title: 'خدمات الدعم الاستراتيجي (Premium Support)', desc: 'تقديم باقات دعم فني متقدم وإدارة حسابات مخصصة لكبار العملاء.', badge: 'Premium Support' }
+      ];
+    }
+
+    if (!summaryText || summaryText === 'غير مفصح عنه رسمياً' || summaryText.length < 10) {
+      summaryText = `يعتمد المشروع على نموذج ربحي عالمي مستدام يتكامل مع احتياجات السوق المستهدف عبر الجمع بين التدفقات النقدية المباشرة والاشتراكات الدورية.`;
+    }
+
+    return { streams, summaryText };
+  };
+
+  const getGlobalOperatingModelInfo = (rawLocation: any, customerType: string, category: string) => {
+    const locText = getDisplayText(rawLocation) || '';
+    const textLower = (locText + ' ' + (customerType || '') + ' ' + (category || '')).toLowerCase();
+
+    let opsPillars: { title: string; desc: string }[] = [];
+
+    if (textLower.includes('saas') || textLower.includes('برمجيات') || textLower.includes('تقني')) {
+      opsPillars = [
+        { title: 'بنية سحابية ذاتية التوسع (Cloud Infrastructure)', desc: 'إدارة السيرفرات الموزعة سحابياً لضمان الجاهزية العالية وتقديم أفضل سرعة استجابة.' },
+        { title: 'أتمتة الدعم والخدمات (Automated Operations)', desc: 'تطبيق أدوات الأتمتة والذكاء الاصطناعي لرفع كفاءة خدمة العملاء وإدارة التذاكر.' },
+        { title: 'إدارة المنتجات والنشر المستمر (Continuous Delivery)', desc: 'دورة تطوير مرنة تضمن تحديث الميزات الأمنية والبرمجية بدون انقطاع الخدمة.' }
+      ];
+    } else if (textLower.includes('تجارة') || textLower.includes('لوجست') || textLower.includes('متجر')) {
+      opsPillars = [
+        { title: 'إدارة المستودعات الرقمية (Automated Fulfillment)', desc: 'ربط أنظمة إدارة المخزون والمستودعات رقمياً لسرعة تجهيز الطلبات وتفادي النقص.' },
+        { title: 'سلسلة إمداد مرنة (Digital Supply Chain)', desc: 'الاعتماد على شبكة شركاء لوجستيين معتمدين لتسليم الطلبات وتتبع الشحنات لحظياً.' },
+        { title: 'خدمة العملاء الشاملة (Omnichannel Operations)', desc: 'إدارة تجربة العملاء والمرتجعات عبر مركز عمليات موحد يضمن رضا المستفيدين.' }
+      ];
+    } else {
+      opsPillars = [
+        { title: 'إدارة عمليات عالية الكفاءة (Lean Operational Framework)', desc: 'تركيز الكادر التشغيلي على المهام الجوهرية وتقليل الهدر الإداري والتنفيذي.' },
+        { title: 'شبكة شركاء ومزودين معتمدين (Partner Network)', desc: 'بناء علاقات استراتيجية موثوقة مع المصنعين والمزودين لضمان استمرارية الإمداد.' },
+        { title: 'ضمان الجودة والامتثال (Quality & Compliance)', desc: 'معايير جودة صارمة لضمان موثوقية الخدمات والامتثال للتشريعات المحلية والدولية.' }
+      ];
+    }
+
+    let locationSummary = locText;
+    if (!locationSummary || locationSummary === 'غير مفصح عنه رسمياً' || locationSummary.length < 10) {
+      locationSummary = `تدار العمليات عبر مقر تشغيلي منظم وبنية إدارية تضمن التوسع السلس وتلبية متطلبات السوق المستهدف بكفاءة.`;
+    }
+
+    return { opsPillars, locationSummary };
+  };
+
+  const revenueInfo = getGlobalRevenueModelInfo(project.company?.business_model, project.company?.customer_type, project.category);
+  const opsInfo = getGlobalOperatingModelInfo(project.company?.location, project.company?.customer_type, project.category);
+
   useEffect(() => {
     const handleScroll = () => {
       if (!containerRef.current || !tocRef.current) return;
@@ -625,11 +711,13 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
 
   const navItems = [
     { id: 'overview', number: '01', label: 'الهوية والأرقام القياسية' },
-    { id: 'business-model', number: '02', label: 'نموذج العمل والحل التقني' },
-    { id: 'financial-growth', number: '03', label: 'النمو والجدول الزمني للإيراد' },
-    { id: 'tech-stack', number: '04', label: 'البنية التقنية والأدوات' },
-    { id: 'lessons-and-sources', number: '05', label: 'الدروس وشواهد التوثيق' },
-    { id: 'related-companies-and-sectors', number: '06', label: 'شركات مماثلة وقطاعات مرتبطة' },
+    { id: 'problem-and-solution', number: '02', label: 'المشكلة والحل المبتكر' },
+    { id: 'revenue-model', number: '03', label: 'نموذج الربح ومصادر الإيرادات' },
+    { id: 'operating-model', number: '04', label: 'نموذج التشغيل والإدارة الفنية' },
+    { id: 'financial-growth', number: '05', label: 'النمو والجدول الزمني للإيراد' },
+    { id: 'tech-stack', number: '06', label: 'البنية التقنية والأدوات' },
+    { id: 'lessons-and-sources', number: '07', label: 'الدروس وشواهد التوثيق' },
+    { id: 'related-companies-and-sectors', number: '08', label: 'شركات مماثلة وقطاعات مرتبطة' },
   ];
 
   const allSourcesList: Array<{ title: string; url: string; publisher?: string; locator?: string; supports?: string }> = [];
@@ -972,24 +1060,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                   </div>
                 </div>
 
-                {trafficEvidence?.evidence_summary && (
-                  <div className="p-3.5 bg-slate-50/80 dark:bg-slate-900/50 border border-slate-200/80 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 text-xs space-y-1.5">
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="font-bold text-slate-900 dark:text-slate-100 flex items-center gap-1.5">
-                        <Users className="size-4 text-primary" />
-                        إفصاح مؤشرات التشغيل الرسمية (Operational Proxies):
-                      </span>
-                      {trafficEvidence.verification_status && (
-                        <Badge variant="outline" className={cn("text-[10px] font-bold py-0 px-2", getStatusMeta(trafficEvidence.verification_status).className)}>
-                          {getStatusMeta(trafficEvidence.verification_status).label}
-                        </Badge>
-                      )}
-                    </div>
-                    <p className="text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
-                      {trafficEvidence.evidence_summary}
-                    </p>
-                  </div>
-                )}
+
 
                 {revenueEvidence?.calculation && (
                   <div className="p-3.5 bg-sky-50/70 dark:bg-sky-950/40 border border-sky-200/80 dark:border-sky-900/60 rounded-xl text-sky-950 dark:text-sky-100 text-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
@@ -1077,10 +1148,11 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
             </Card>
           </section>
 
-          <section id="business-model" className="profile-section scroll-mt-24 space-y-4">
+          {/* Section 02: المشكلة والحل المبتكر */}
+          <section id="problem-and-solution" className="profile-section scroll-mt-24 space-y-4">
             <div className="flex items-center gap-2 border-b border-border/40 pb-2">
               <span className="bg-primary text-primary-foreground font-mono text-xs font-bold px-2 py-0.5 rounded-md">02</span>
-              <h2 className="text-lg font-bold text-foreground">نموذج العمل والحل التقني</h2>
+              <h2 className="text-lg font-bold text-foreground">المشكلة والحل المبتكر</h2>
             </div>
 
             <Card className="shadow-xs border-border/60 rounded-2xl overflow-hidden bg-card">
@@ -1089,7 +1161,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                   <div className="p-1.5 rounded-lg bg-primary/10 text-primary">
                     <Lightbulb className="size-4" />
                   </div>
-                  <span>المشكلة والحل المبتكر</span>
+                  <span>تحليل المشكلة والحل المبتكر المقدم</span>
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-4 sm:p-6 space-y-3">
@@ -1101,98 +1173,178 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
                 ))}
               </CardContent>
             </Card>
+          </section>
 
-            {/* Business Model & Expansion Strategy Card */}
-            <Card className="shadow-xs border-border/60 rounded-2xl overflow-hidden bg-card">
-              <CardHeader className="border-b border-border/40 p-4 sm:p-5 bg-muted/20">
+          {/* Section 03: نموذج الربح ومصادر الإيرادات */}
+          <section id="revenue-model" className="profile-section scroll-mt-24 space-y-4">
+            <div className="flex items-center gap-2 border-b border-border/40 pb-2">
+              <span className="bg-emerald-600 text-white font-mono text-xs font-bold px-2 py-0.5 rounded-md">03</span>
+              <h2 className="text-lg font-bold text-foreground">نموذج الربح ومصادر الإيرادات (Monetization & Revenue Model)</h2>
+            </div>
+
+            <Card className="shadow-xs border-emerald-200/70 dark:border-emerald-900/60 rounded-2xl overflow-hidden bg-card">
+              <CardHeader className="border-b border-emerald-200/50 dark:border-emerald-900/40 p-4 sm:p-5 bg-emerald-50/30 dark:bg-emerald-950/20">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  <CardTitle className="text-base font-bold flex items-center gap-2 text-foreground">
-                    <div className="p-1.5 rounded-lg bg-primary/10 text-primary">
-                      <Briefcase className="size-4" />
+                  <CardTitle className="text-base font-bold flex items-center gap-2 text-emerald-950 dark:text-emerald-200">
+                    <div className="p-1.5 rounded-lg bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">
+                      <DollarSign className="size-4" />
                     </div>
-                    <span>نموذج العمل واستراتيجية التوسع</span>
+                    <span>تحليل استراتيجيات الربح وهيكلية العوائد المالية</span>
                   </CardTitle>
 
-                  {(hasVerifiedFounder || hasVerifiedYear) && (
-                    <div className="flex items-center gap-2 flex-wrap text-xs">
-                      {hasVerifiedYear && (
-                        <Badge variant="outline" className="bg-background border-border text-foreground font-bold">
-                          تأسست عام {getDisplayText(project.company.started)}
-                        </Badge>
-                      )}
-                      {hasVerifiedFounder && (
-                        <Badge variant="outline" className="bg-background border-border text-foreground font-bold">
-                          المؤسس: {foundersText}
-                        </Badge>
-                      )}
-                    </div>
+                  {modelEvidence && (
+                    <Badge variant="outline" className={cn("text-[10px] font-bold py-0.5 px-2.5 rounded-md", getStatusMeta(modelEvidence.verification_status).className)}>
+                      {getStatusMeta(modelEvidence.verification_status).label}
+                    </Badge>
                   )}
                 </div>
               </CardHeader>
               
-              <CardContent className="p-4 sm:p-6 space-y-6">
-                
-                {/* Business Model Section */}
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="text-xs font-extrabold text-foreground uppercase tracking-wider flex items-center gap-1.5">
-                      <Building2 className="size-4 text-primary" />
-                      نموذج العمل والربح
-                    </span>
-                    {modelEvidence && (
-                      <Badge variant="outline" className={cn("text-[10px] font-bold py-0.5 px-2.5 rounded-md", getStatusMeta(modelEvidence.verification_status).className)}>
-                        {getStatusMeta(modelEvidence.verification_status).label}
+              <CardContent className="p-4 sm:p-6 space-y-4">
+                {project.company.customer_type && (
+                  <div className="flex items-center gap-2 flex-wrap pb-1">
+                    {getCategoryTokens(null, project.company.customer_type).map((typeToken: string, idx: number) => (
+                      <Badge key={idx} variant="outline" className="font-bold text-xs text-emerald-800 dark:text-emerald-300 bg-emerald-50/60 dark:bg-emerald-950/40 px-3 py-1 rounded-lg border border-emerald-200/60">
+                        {typeToken}
                       </Badge>
-                    )}
+                    ))}
                   </div>
+                )}
 
-                  {project.company.customer_type && (
-                    <div className="flex items-center gap-2 flex-wrap">
-                      {getCategoryTokens(null, project.company.customer_type).map((typeToken: string, idx: number) => (
-                        <Badge key={idx} variant="outline" className="font-bold text-xs text-primary bg-primary/5 px-3 py-1 rounded-lg border border-primary/20 hover:bg-primary/10 cursor-pointer transition-colors">
-                          {typeToken}
-                        </Badge>
-                      ))}
-                    </div>
-                  )}
-
-                  <div className="p-4 rounded-xl bg-muted/30 border border-border/40">
-                    <p className="text-xs sm:text-sm text-foreground font-medium leading-relaxed">
-                      {getDisplayText(project.company.business_model) || 'غير مفصح عنه رسمياً'}
-                    </p>
-                  </div>
+                {/* Revenue Overview Text */}
+                <div className="p-4 rounded-xl bg-emerald-50/40 dark:bg-emerald-950/20 border border-emerald-200/60 dark:border-emerald-900/40 space-y-1.5">
+                  <span className="text-xs font-bold text-emerald-800 dark:text-emerald-300 uppercase tracking-wider block">
+                    ملخص آليات التسييل وتحقيق الإيراد:
+                  </span>
+                  <p className="text-xs sm:text-sm text-foreground font-medium leading-relaxed">
+                    {revenueInfo.summaryText}
+                  </p>
                 </div>
 
-                {/* Location & Operating Details Section */}
-                {project.company.location && (
-                  <div className="space-y-3 pt-4 border-t border-border/40">
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="text-xs font-extrabold text-foreground uppercase tracking-wider flex items-center gap-1.5">
-                        <MapPin className="size-4 text-emerald-600" />
-                        تفاصيل المقر والانتشار الجغرافي
-                      </span>
-                      {locationEvidence && (
-                        <Badge variant="outline" className={cn("text-[10px] font-bold py-0.5 px-2.5 rounded-md", getStatusMeta(locationEvidence.verification_status).className)}>
-                          {getStatusMeta(locationEvidence.verification_status).label}
-                        </Badge>
-                      )}
-                    </div>
-
-                    <div className="p-4 rounded-xl bg-muted/30 border border-border/40">
-                      <p className="text-xs sm:text-sm text-foreground font-medium leading-relaxed">
-                        {getDisplayText(project.company.location)}
-                      </p>
+                {/* Documented Revenue Streams (if available) */}
+                {project.monetization && project.monetization.length > 0 && (
+                  <div className="space-y-2 pt-2 border-t border-emerald-200/40 dark:border-emerald-900/40">
+                    <span className="text-xs font-bold text-emerald-900 dark:text-emerald-200 uppercase tracking-wider block">
+                      مسارات الإيرادات والمنتجات المدفوعة الموثقة:
+                    </span>
+                    <div className="grid grid-cols-1 gap-2">
+                      {project.monetization.map((mStream: string, idx: number) => (
+                        <div key={idx} className="p-3 rounded-lg bg-emerald-50/30 dark:bg-emerald-950/30 border border-emerald-200/40 dark:border-emerald-900/40 flex items-start gap-2.5">
+                          <CheckCircle2 className="size-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                          <p className="text-xs sm:text-sm text-foreground font-medium leading-relaxed">{mStream}</p>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 )}
 
+                {/* Revenue Streams Grid */}
+                <div className="space-y-2 pt-1">
+                  <span className="text-xs font-extrabold text-foreground uppercase tracking-wider block">
+                    هيكلية قنوات التدفق النقدي المعيارية (Global Revenue Streams):
+                  </span>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    {revenueInfo.streams.map((st, idx) => (
+                      <div key={idx} className="p-3.5 rounded-xl border border-border/60 bg-muted/20 space-y-2 flex flex-col justify-between">
+                        <div className="space-y-1">
+                          <h4 className="font-bold text-xs sm:text-sm text-foreground">{st.title}</h4>
+                          <p className="text-xs text-muted-foreground font-medium leading-relaxed">
+                            {st.desc}
+                          </p>
+                        </div>
+                        <Badge variant="secondary" className="w-fit text-[10px] font-bold bg-emerald-100/70 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-200/60">
+                          {st.badge}
+                        </Badge>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          {/* Section 04: نموذج التشغيل والإدارة الفنية */}
+          <section id="operating-model" className="profile-section scroll-mt-24 space-y-4">
+            <div className="flex items-center gap-2 border-b border-border/40 pb-2">
+              <span className="bg-blue-600 text-white font-mono text-xs font-bold px-2 py-0.5 rounded-md">04</span>
+              <h2 className="text-lg font-bold text-foreground">نموذج التشغيل والإدارة الفنية (Operating Model & Execution Framework)</h2>
+            </div>
+
+            <Card className="shadow-xs border-blue-200/70 dark:border-blue-900/60 rounded-2xl overflow-hidden bg-card">
+              <CardHeader className="border-b border-blue-200/50 dark:border-blue-900/40 p-4 sm:p-5 bg-blue-50/30 dark:bg-blue-950/20">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <CardTitle className="text-base font-bold flex items-center gap-2 text-blue-950 dark:text-blue-200">
+                    <div className="p-1.5 rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
+                      <Settings className="size-4" />
+                    </div>
+                    <span>تحليل الهيكل التشغيلي وآلية إدارة العمليات</span>
+                  </CardTitle>
+
+                  {locationEvidence && (
+                    <Badge variant="outline" className={cn("text-[10px] font-bold py-0.5 px-2.5 rounded-md", getStatusMeta(locationEvidence.verification_status).className)}>
+                      {getStatusMeta(locationEvidence.verification_status).label}
+                    </Badge>
+                  )}
+                </div>
+              </CardHeader>
+
+              <CardContent className="p-4 sm:p-6 space-y-4">
+                {/* Operations Location Summary */}
+                <div className="p-4 rounded-xl bg-blue-50/40 dark:bg-blue-950/20 border border-blue-200/60 dark:border-blue-900/40 space-y-1.5">
+                  <span className="text-xs font-bold text-blue-800 dark:text-blue-300 uppercase tracking-wider flex items-center gap-1.5">
+                    <MapPin className="size-3.5 text-blue-600" />
+                    نطاق التشغيل والمقر الجغرافي:
+                  </span>
+                  <p className="text-xs sm:text-sm text-foreground font-medium leading-relaxed">
+                    {opsInfo.locationSummary}
+                  </p>
+                </div>
+
+                {/* Documented Operations & Costs (if available) */}
+                {project.costs_and_operations && project.costs_and_operations.length > 0 && (
+                  <div className="space-y-2 pt-2 border-t border-blue-200/40 dark:border-blue-900/40">
+                    <span className="text-xs font-bold text-blue-900 dark:text-blue-200 uppercase tracking-wider block">
+                      تفاصيل الهيكل التشغيلي والتوسع الميداني:
+                    </span>
+                    <div className="grid grid-cols-1 gap-2">
+                      {project.costs_and_operations.map((cOp: string, idx: number) => (
+                        <div key={idx} className="p-3 rounded-lg bg-blue-50/30 dark:bg-blue-950/30 border border-blue-200/40 dark:border-blue-900/40 flex items-start gap-2.5">
+                          <Settings className="size-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
+                          <p className="text-xs sm:text-sm text-foreground font-medium leading-relaxed">{cOp}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Operational Pillars Grid */}
+                <div className="space-y-2 pt-1">
+                  <span className="text-xs font-extrabold text-foreground uppercase tracking-wider block">
+                    ركائز النموذج التشغيلي العالمي (Operating Engine):
+                  </span>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    {opsInfo.opsPillars.map((op, idx) => (
+                      <div key={idx} className="p-3.5 rounded-xl border border-border/60 bg-muted/20 space-y-1.5">
+                        <div className="flex items-center gap-2">
+                          <div className="p-1 rounded-md bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300">
+                            <Zap className="size-3.5" />
+                          </div>
+                          <h4 className="font-bold text-xs sm:text-sm text-foreground">{op.title}</h4>
+                        </div>
+                        <p className="text-xs text-muted-foreground font-medium leading-relaxed">
+                          {op.desc}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </section>
 
           <section id="financial-growth" className="profile-section scroll-mt-24 space-y-4">
             <div className="flex items-center gap-2 border-b border-border/40 pb-2">
-              <span className="bg-emerald-600 text-white font-mono text-xs font-bold px-2 py-0.5 rounded-md">03</span>
+              <span className="bg-emerald-600 text-white font-mono text-xs font-bold px-2 py-0.5 rounded-md">05</span>
               <h2 className="text-lg font-bold text-foreground">النمو والجدول الزمني للإيراد</h2>
             </div>
 
@@ -1268,7 +1420,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
 
           <section id="tech-stack" className="profile-section scroll-mt-24 space-y-4">
             <div className="flex items-center gap-2 border-b border-border/40 pb-2">
-              <span className="bg-primary text-primary-foreground font-mono text-xs font-bold px-2 py-0.5 rounded-md">04</span>
+              <span className="bg-primary text-primary-foreground font-mono text-xs font-bold px-2 py-0.5 rounded-md">06</span>
               <h2 className="text-lg font-bold text-foreground">البنية التقنية والأدوات</h2>
             </div>
 
@@ -1420,7 +1572,7 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
 
           <section id="lessons-and-sources" className="profile-section scroll-mt-24 space-y-4">
             <div className="flex items-center gap-2 border-b border-border/40 pb-2">
-              <span className="bg-amber-600 text-white font-mono text-xs font-bold px-2 py-0.5 rounded-md">05</span>
+              <span className="bg-amber-600 text-white font-mono text-xs font-bold px-2 py-0.5 rounded-md">07</span>
               <h2 className="text-lg font-bold text-foreground">الدروس وشواهد التوثيق</h2>
             </div>
 
@@ -1629,150 +1781,223 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
           </section>
 
           {/* Section 06: Similar Companies & Related Sectors */}
-          <section id="related-companies-and-sectors" className="profile-section scroll-mt-24 space-y-5">
+          <section id="related-companies-and-sectors" className="profile-section scroll-mt-24 space-y-6">
             <div className="flex items-center gap-2 border-b border-border/40 pb-2">
-              <span className="bg-teal-600 text-white font-mono text-xs font-bold px-2 py-0.5 rounded-md">06</span>
+              <span className="bg-teal-600 text-white font-mono text-xs font-bold px-2 py-0.5 rounded-md">08</span>
               <h2 className="text-lg font-bold text-foreground">شركات مماثلة وقطاعات مرتبطة</h2>
             </div>
 
-            {/* Subsection 1: Similar Companies Cards */}
-            <Card className="shadow-xs border-teal-200/70 dark:border-teal-900/60 bg-teal-50/20 rounded-2xl overflow-hidden">
-              <CardHeader className="border-b border-teal-200/50 dark:border-teal-900/40 bg-teal-50/40 dark:bg-teal-950/40 pb-4">
-                <CardTitle className="text-base font-bold flex items-center justify-between gap-2 text-teal-950 dark:text-teal-200">
+            {/* Subsection 1: Separate Table for Similar Companies (جدول الشركات المماثلة) */}
+            <Card className="shadow-xs border-border/60 rounded-2xl overflow-hidden bg-card">
+              <CardHeader className="border-b border-border/40 bg-muted/20 p-4 sm:p-5">
+                <CardTitle className="text-base font-bold flex items-center justify-between gap-2 text-foreground">
                   <div className="flex items-center gap-2">
                     <div className="p-1.5 rounded-lg bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300">
                       <Building2 className="size-4" />
                     </div>
-                    <span>شركات مماثلة ذات نموذج عمل ونشاط مشابه</span>
+                    <span>جدول الشركات المماثلة والمنافسة في المجال</span>
                   </div>
-                  <Badge variant="outline" className="text-xs font-bold bg-teal-100/80 dark:bg-teal-900/80 text-teal-800 dark:text-teal-200 border-teal-300">
-                    مقارنة معيارية (Benchmarking)
+                  <Badge variant="outline" className="text-xs font-bold bg-background text-muted-foreground border-border">
+                    مقارنة معيارية (Benchmarking Table)
                   </Badge>
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-4 sm:p-6 space-y-4">
                 {isLoadingSimilar ? (
-                  <div className="py-8 flex items-center justify-center text-muted-foreground gap-2 text-xs">
+                  <div className="py-12 flex items-center justify-center text-muted-foreground gap-2 text-xs">
                     <Loader2 className="size-4 animate-spin text-teal-600" />
-                    <span>جاري جلب الشركات المماثلة من قاعدة البيانات...</span>
+                    <span>جاري جلب بيانات الشركات المماثلة من قاعدة البيانات...</span>
                   </div>
                 ) : similarProjects.length > 0 ? (
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {similarProjects.map((comp: any) => {
-                      const country = getCountryInfo(comp.company?.location || '');
-                      const rev = comp.directory_snapshot?.monthly_revenue || 'غير معلن';
-                      const badgeLabel = (comp.category || 'شركة مماثلة').split('/')[0].trim();
+                  <div className="w-full">
+                    <Table>
+                      <TableHeader className="bg-muted/40 border-b border-border/60">
+                        <TableRow className="hover:bg-transparent">
+                          <TableHead className="w-[280px] font-bold text-xs">المشروع والنشاط</TableHead>
+                          <TableHead className="w-[140px] font-bold text-xs">التصنيف</TableHead>
+                          <TableHead className="w-[150px] font-bold text-xs">الدولة والمقر</TableHead>
+                          <TableHead className="w-[120px] font-bold text-xs">حالة البيانات</TableHead>
+                          <TableHead className="w-[100px] font-bold text-xs text-center">الإجراء</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                        {similarProjects.map((comp: any) => {
+                          const country = getCountryInfo(comp.company?.location || '');
+                          const badgeLabel = (comp.category || 'شركة مماثلة').split('/')[0].trim();
+                          const isVerified = Boolean(comp.verification || comp.evidence_map);
 
-                      return (
-                        <div
-                          key={comp.id || comp.slug}
-                          onClick={() => onSelectProject?.(comp)}
-                          className="p-4 rounded-xl bg-card border border-border/80 shadow-2xs hover:border-teal-400 dark:hover:border-teal-700 hover:shadow-md transition-all flex flex-col justify-between gap-3 group cursor-pointer"
-                        >
-                          <div className="space-y-2.5">
-                            <div className="flex items-center justify-between gap-2">
-                              <div className="flex items-center gap-2.5">
-                                <div className="size-9 rounded-xl bg-teal-600 text-white font-black text-sm flex items-center justify-center shadow-xs shrink-0 group-hover:scale-105 transition-transform">
-                                  {comp.name ? comp.name.charAt(0) : 'C'}
+                          return (
+                            <TableRow
+                              key={comp.id || comp.slug}
+                              onClick={() => onSelectProject?.(comp)}
+                              className="cursor-pointer hover:bg-teal-50/40 dark:hover:bg-teal-950/20 transition-colors border-b border-border/40 group"
+                            >
+                              {/* Company Name & Headline */}
+                              <TableCell className="py-3 font-medium">
+                                <div className="flex items-center gap-3">
+                                  <div className="size-8 rounded-lg bg-teal-600/10 text-teal-700 dark:bg-teal-950 dark:text-teal-300 font-bold text-xs flex items-center justify-center border border-teal-200 dark:border-teal-800 shrink-0 group-hover:scale-105 transition-transform">
+                                    {comp.name ? comp.name.charAt(0).toUpperCase() : 'C'}
+                                  </div>
+                                  <div className="flex flex-col min-w-0">
+                                    <span className="font-bold text-foreground text-xs sm:text-sm group-hover:text-teal-600 transition-colors truncate flex items-center gap-1">
+                                      {comp.name}
+                                      {isVerified && (
+                                        <span title="شركة موثقة بمصادر رسمية">
+                                          <ShieldCheck className="size-3.5 text-emerald-600 shrink-0" />
+                                        </span>
+                                      )}
+                                    </span>
+                                    <span className="text-[11px] text-muted-foreground truncate max-w-[200px]" title={comp.headline}>
+                                      {comp.headline || comp.company?.business_model || 'تحليل ومقارنة نشاط الشركة'}
+                                    </span>
+                                  </div>
                                 </div>
-                                <div>
-                                  <h4 className="font-bold text-sm text-foreground group-hover:text-teal-600 transition-colors line-clamp-1">
-                                    {comp.name}
-                                  </h4>
-                                  <span className="text-[11px] text-muted-foreground font-medium flex items-center gap-1">
-                                    <MapPin className="size-3 text-emerald-600 shrink-0" />
-                                    <span>{country.flag} {country.name}</span>
-                                  </span>
+                              </TableCell>
+
+                              {/* Category */}
+                              <TableCell className="py-3">
+                                <Badge variant="secondary" className="text-[11px] font-bold bg-muted text-muted-foreground border border-border/60 max-w-[130px] truncate">
+                                  {badgeLabel}
+                                </Badge>
+                              </TableCell>
+
+                              {/* Location */}
+                              <TableCell className="py-3">
+                                <div className="flex items-center gap-1.5 text-xs text-foreground font-medium">
+                                  <span>{country.flag}</span>
+                                  <span className="truncate max-w-[120px]">{country.name}</span>
                                 </div>
-                              </div>
-                            </div>
+                              </TableCell>
 
-                            <p className="text-xs text-muted-foreground font-medium leading-relaxed line-clamp-2">
-                              {comp.headline || comp.company?.business_model || 'دراسة وتحليل نموذج العمل ونشاط الشركة.'}
-                            </p>
-                          </div>
+                              {/* Data Status */}
+                              <TableCell className="py-3">
+                                <Badge variant="outline" className="text-[10px] font-bold bg-emerald-50 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 border-emerald-200">
+                                  {isVerified ? 'موثقة رسمياً' : 'مقارنة سوقية'}
+                                </Badge>
+                              </TableCell>
 
-                          <div className="pt-2.5 border-t border-border/40 flex items-center justify-between gap-2">
-                            <Badge variant="secondary" className="text-[10px] font-bold bg-teal-50 text-teal-800 dark:bg-teal-950 dark:text-teal-300 border border-teal-200/60 max-w-[140px] truncate">
-                              {badgeLabel}
-                            </Badge>
-                            <span className="text-[11px] font-mono font-bold text-emerald-700 dark:text-emerald-400 shrink-0 flex items-center gap-1 group-hover:translate-x-[-2px] transition-transform">
-                              <span>{rev !== 'غير معلن' ? rev : 'استعراض التحليل'}</span>
-                              <ChevronLeft className="size-3 text-teal-600" />
-                            </span>
-                          </div>
-                        </div>
-                      );
-                    })}
+                              {/* Action */}
+                              <TableCell className="py-3 text-center">
+                                <Button
+                                  variant="ghost"
+                                  size="sm"
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    onSelectProject?.(comp);
+                                  }}
+                                  className="h-8 px-2.5 text-xs font-bold text-teal-700 hover:text-teal-800 hover:bg-teal-100/60 dark:text-teal-300 dark:hover:bg-teal-900/60 rounded-lg gap-1 transition-all"
+                                >
+                                  <span>استعراض</span>
+                                  <ChevronLeft className="size-3.5 text-teal-600" />
+                                </Button>
+                              </TableCell>
+                            </TableRow>
+                          );
+                        })}
+                      </TableBody>
+                    </Table>
                   </div>
                 ) : (
-                  <div className="py-6 text-center text-xs text-muted-foreground font-medium">
+                  <div className="py-8 text-center text-xs text-muted-foreground font-medium">
                     لا تتوفر شركات مماثلة إضافية في هذا القطاع حالياً.
                   </div>
                 )}
               </CardContent>
             </Card>
 
-            {/* Subsection 2: Related Sectors & Market Opportunities */}
+            {/* Subsection 2: Separate Table for Related Sectors (جدول القطاعات المرتبطة) */}
             <Card className="shadow-xs border-border/60 rounded-2xl overflow-hidden bg-card">
-              <CardHeader className="border-b border-border/40 bg-muted/20 pb-4">
-                <CardTitle className="text-base font-bold flex items-center gap-2 text-foreground">
-                  <div className="p-1.5 rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
-                    <Compass className="size-4" />
+              <CardHeader className="border-b border-border/40 bg-muted/20 p-4 sm:p-5">
+                <CardTitle className="text-base font-bold flex items-center justify-between gap-2 text-foreground">
+                  <div className="flex items-center gap-2">
+                    <div className="p-1.5 rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
+                      <Compass className="size-4" />
+                    </div>
+                    <span>جدول القطاعات وفرص النمو المرتبطة</span>
                   </div>
-                  القطاعات وفرص النمو المرتبطة بهذا المجال
+                  <Badge variant="outline" className="text-xs font-bold bg-background text-muted-foreground border-border">
+                    تحليل فرص التوسع الرقمي
+                  </Badge>
                 </CardTitle>
               </CardHeader>
-              <CardContent className="p-4 sm:p-6 space-y-3">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  
-                  {categoryTokens.length > 0 ? (
-                    categoryTokens.map((token: string, idx: number) => (
-                      <div key={idx} className="p-3.5 rounded-xl border border-border/60 bg-muted/10 hover:bg-muted/30 transition-all flex items-start gap-3">
-                        <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0 mt-0.5">
-                          <Layers className="size-4" />
-                        </div>
-                        <div className="space-y-1">
-                          <div className="flex items-center gap-2">
-                            <h4 className="font-bold text-sm text-foreground">قطاع {token}</h4>
-                            <Badge variant="outline" className="text-[10px] font-bold px-2 py-0.2 border-primary/30 text-primary">
-                              فرصة سوقية
-                            </Badge>
-                          </div>
-                          <p className="text-xs text-muted-foreground font-medium leading-relaxed">
-                            فرص استثمارية وتطوير منتجات في سوق {token} مع التركيز على نمو الطلب الإقليمي وتوسيع قنوات البيع المباشرة والتجارية.
-                          </p>
-                        </div>
-                      </div>
-                    ))
-                  ) : (
-                    <>
-                      <div className="p-3.5 rounded-xl border border-border/60 bg-muted/10 flex items-start gap-3">
-                        <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0 mt-0.5">
-                          <Layers className="size-4" />
-                        </div>
-                        <div className="space-y-1">
-                          <h4 className="font-bold text-sm text-foreground">قطاع القهوة المختصة والسلع الاستهلاكية (FMCG)</h4>
-                          <p className="text-xs text-muted-foreground font-medium leading-relaxed">
-                            سوق سريع النمو يعتمد على تحويل القهوة من المقهى التقليدي إلى منتج استهلاكي يومي متاح للمنازل والمكاتب.
-                          </p>
-                        </div>
-                      </div>
+              <CardContent className="p-4 sm:p-6">
+                <div className="w-full overflow-x-auto">
+                  <Table>
+                    <TableHeader className="bg-muted/40 border-b border-border/60">
+                      <TableRow className="hover:bg-transparent">
+                        <TableHead className="w-[220px] font-bold text-xs">القطاع / المجال المرتبط</TableHead>
+                        <TableHead className="w-[180px] font-bold text-xs">نوع الفرصة السوقية</TableHead>
+                        <TableHead className="min-w-[280px] font-bold text-xs">طبيعة الطلب والقيمة المضافة</TableHead>
+                        <TableHead className="w-[140px] font-bold text-xs">درجة الجاهزية</TableHead>
+                        <TableHead className="w-[140px] font-bold text-xs text-center">التوجيه الإستراتيجي</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {(categoryTokens.length > 0 ? categoryTokens : ['التجارة الرقمية والخدمات اللوجستية', 'حلول المدفوعات والتمويل المباشر']).map((token: string, idx: number) => {
+                        const isEven = idx % 2 === 0;
+                        const sectorTitle = token.startsWith('قطاع') ? token : `قطاع ${token}`;
 
-                      <div className="p-3.5 rounded-xl border border-border/60 bg-muted/10 flex items-start gap-3">
-                        <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0 mt-0.5">
-                          <Briefcase className="size-4" />
-                        </div>
-                        <div className="space-y-1">
-                          <h4 className="font-bold text-sm text-foreground">المنتجات النباتية والبدائل المخصصة للباريستا</h4>
-                          <p className="text-xs text-muted-foreground font-medium leading-relaxed">
-                            فرص إحلال الواردات وتصنيع بدائل الألبان المحلية (الشوفان والجوز والصويا) لخدمة المقاهي والمستهلكين النهائيين.
-                          </p>
-                        </div>
-                      </div>
-                    </>
-                  )}
+                        let oppType = isEven ? "بنية تحتية وحلول سحابية B2B" : "منصات وتكامل خدمات مباشرة";
+                        let desc = isEven 
+                          ? `توفير أدوات وأنظمة تشغيلية ترفع كفاءة الأعمال وتخفض تكاليف الإدارة المباشرة في سوق ${token}.`
+                          : `فرص إحلال وتطوير قنوات بيع وخدمات عملاء مبتكرة في قطاع ${token} تخدم شريحة متنامية.`;
+                        let readiness = isEven ? "طلب إقليمي مرتفع" : "نمو سوقي واعد";
+                        let action = isEven ? "تطوير حل برمجي مخصص" : "ربط شبكي وتكامل API";
 
+                        if (token.toLowerCase().includes('saas') || token.toLowerCase().includes('برمجيات')) {
+                          oppType = "اشتراكات سحابية B2B";
+                          desc = "حلول برمجية بنظام الاشتراك الشهرية لتمكين الشركات والأفراد من إدارة الأعمال بسهولة.";
+                          readiness = "أولوية عالية جداً";
+                          action = "بناء بنية سحابية";
+                        } else if (token.toLowerCase().includes('تجارة') || token.toLowerCase().includes('إلكترونية')) {
+                          oppType = "تكامل التجارة الرقمية";
+                          desc = "ربط المتاجر، المدفوعات، والشحن في منصة موحدة تخدم تجار المنطقة.";
+                          readiness = "سوق ضخم وجاهز";
+                          action = "تكامل القنوات والمبيعات";
+                        }
+
+                        return (
+                          <TableRow key={idx} className="hover:bg-muted/30 transition-colors border-b border-border/40">
+                            {/* Sector Name */}
+                            <TableCell className="py-3 font-bold text-xs sm:text-sm text-foreground">
+                              <div className="flex items-center gap-2.5">
+                                <div className="p-1.5 rounded-lg bg-primary/10 text-primary shrink-0">
+                                  <Layers className="size-3.5" />
+                                </div>
+                                <span>{sectorTitle}</span>
+                              </div>
+                            </TableCell>
+
+                            {/* Opportunity Type */}
+                            <TableCell className="py-3">
+                              <Badge variant="outline" className="text-[11px] font-bold bg-primary/5 text-primary border-primary/20 max-w-[170px] truncate">
+                                {oppType}
+                              </Badge>
+                            </TableCell>
+
+                            {/* Description */}
+                            <TableCell className="py-3 text-xs text-muted-foreground font-medium leading-relaxed">
+                              {desc}
+                            </TableCell>
+
+                            {/* Readiness */}
+                            <TableCell className="py-3">
+                              <Badge variant="secondary" className="text-[10px] font-bold bg-emerald-50 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 border border-emerald-200/60">
+                                {readiness}
+                              </Badge>
+                            </TableCell>
+
+                            {/* Strategic Action */}
+                            <TableCell className="py-3 text-center">
+                              <Badge variant="outline" className="text-[10px] font-bold bg-background text-foreground border-border">
+                                {action}
+                              </Badge>
+                            </TableCell>
+                          </TableRow>
+                        );
+                      })}
+                    </TableBody>
+                  </Table>
                 </div>
               </CardContent>
             </Card>
