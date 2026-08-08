@@ -16,18 +16,76 @@ export default function ResetPasswordPage() {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isInitializing, setIsInitializing] = useState(true);
+  const [hasSession, setHasSession] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isComplete, setIsComplete] = useState(false);
 
   React.useEffect(() => {
+    let isMounted = true;
+
+    const initSession = async () => {
+      const supabase = createClient();
+      
+      const hash = typeof window !== 'undefined' ? window.location.hash : '';
+      const search = typeof window !== 'undefined' ? window.location.search : '';
+
+      const hashParams = new URLSearchParams(hash.startsWith('#') ? hash.slice(1) : hash);
+      const searchParams = new URLSearchParams(search.startsWith('?') ? search.slice(1) : search);
+
+      const accessToken = hashParams.get('access_token') || searchParams.get('access_token');
+      const refreshToken = hashParams.get('refresh_token') || searchParams.get('refresh_token');
+      const errorCode = hashParams.get('error_code') || searchParams.get('error_code') || hashParams.get('error') || searchParams.get('error');
+
+      if (errorCode) {
+        if (isMounted) {
+          setError('رابط استعادة كلمة المرور انتهت صلاحيته أو تم استخدامه مسبقاً. يرجى طلب رابط جديد.');
+          setIsInitializing(false);
+        }
+        return;
+      }
+
+      // If tokens exist in hash or query, establish session immediately
+      if (accessToken && refreshToken) {
+        const { error: sessionError } = await supabase.auth.setSession({
+          access_token: accessToken,
+          refresh_token: refreshToken,
+        });
+        if (sessionError) {
+          console.warn('SetSession note:', sessionError.message);
+        }
+      }
+
+      // Check current session state
+      const { data: { session } } = await supabase.auth.getSession();
+      if (isMounted) {
+        if (session) {
+          setHasSession(true);
+          setError(null);
+        } else {
+          setHasSession(false);
+          if (!accessToken) {
+            setError('جلسة الاستعادة مفقودة أو انتهت صلاحية الرابط. يُرجى طلب رابط جديد لاستعادة كلمة المرور.');
+          }
+        }
+        setIsInitializing(false);
+      }
+    };
+
+    initSession();
+
     const supabase = createClient();
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
-      if (event === 'PASSWORD_RECOVERY') {
-        setError(null);
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      if (event === 'PASSWORD_RECOVERY' || session) {
+        if (isMounted) {
+          setHasSession(true);
+          setError(null);
+        }
       }
     });
 
     return () => {
+      isMounted = false;
       subscription.unsubscribe();
     };
   }, []);
@@ -49,6 +107,27 @@ export default function ResetPasswordPage() {
     setIsLoading(true);
     try {
       const supabase = createClient();
+
+      // Double check session before update
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) {
+        // Try setting session one more time from URL if present
+        const hash = typeof window !== 'undefined' ? window.location.hash : '';
+        const hashParams = new URLSearchParams(hash.startsWith('#') ? hash.slice(1) : hash);
+        const accessToken = hashParams.get('access_token');
+        const refreshToken = hashParams.get('refresh_token');
+
+        if (accessToken && refreshToken) {
+          const { error: setErr } = await supabase.auth.setSession({
+            access_token: accessToken,
+            refresh_token: refreshToken,
+          });
+          if (setErr) throw new Error('جلسة الاستعادة مفقودة أو انتهت صلاحيتها. يُرجى طلب رابط جديد.');
+        } else {
+          throw new Error('جلسة الاستعادة مفقودة أو انتهت صلاحيتها. يُرجى طلب رابط جديد.');
+        }
+      }
+
       const { error: updateError } = await supabase.auth.updateUser({ password });
 
       if (updateError) {
@@ -56,7 +135,13 @@ export default function ResetPasswordPage() {
       }
       setIsComplete(true);
     } catch (err: any) {
-      setError(err?.message || 'تعذر تحديث كلمة المرور. قد تكون انتهت صلاحية الرابط، اطلب رابطاً جديداً.');
+      const msg = err?.message || '';
+      if (msg.includes('Auth session missing') || msg.includes('session')) {
+        setError('انتهت صلاحية جلسة التغيير أو أن الرابط قديم. أعد طلب رابط جديد لاستعادة كلمة المرور.');
+        setHasSession(false);
+      } else {
+        setError(msg || 'تعذر تحديث كلمة المرور. قد تكون انتهت صلاحية الرابط، اطلب رابطاً جديداً.');
+      }
     } finally {
       setIsLoading(false);
     }
@@ -121,9 +206,23 @@ export default function ResetPasswordPage() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 {error && (
-                  <div className="flex items-start gap-2.5 rounded-2xl border border-destructive/30 bg-destructive/10 p-3.5 text-destructive text-xs font-bold leading-relaxed">
-                    <AlertCircle className="size-4 shrink-0 mt-0.5" />
-                    <p>{error}</p>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-2.5 rounded-2xl border border-destructive/30 bg-destructive/10 p-3.5 text-destructive text-xs font-bold leading-relaxed">
+                      <AlertCircle className="size-4 shrink-0 mt-0.5" />
+                      <p>{error}</p>
+                    </div>
+                    {!hasSession && (
+                      <Button
+                        type="button"
+                        onClick={() => openAuthModal('forgot_password')}
+                        variant="outline"
+                        size="sm"
+                        className="w-full text-xs font-bold gap-1.5 cursor-pointer"
+                      >
+                        طلب رابط جديد لاستعادة كلمة المرور
+                        <ArrowLeft className="size-3.5" />
+                      </Button>
+                    )}
                   </div>
                 )}
 
