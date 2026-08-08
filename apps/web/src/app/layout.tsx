@@ -1,5 +1,6 @@
 import "../index.css";
 import { Metadata, Viewport } from "next";
+import { AuthModalProvider } from "@/features/auth/AuthModalContext";
 
 export const viewport: Viewport = {
   themeColor: "#4f46e5",
@@ -69,7 +70,9 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <body suppressHydrationWarning className="antialiased min-h-screen bg-background text-foreground overflow-x-hidden font-sans">
-        {children}
+        <AuthModalProvider>
+          {children}
+        </AuthModalProvider>
       </body>
     </html>
   );

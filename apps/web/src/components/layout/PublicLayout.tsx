@@ -3,18 +3,15 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { ArrowLeft, Sparkles } from 'lucide-react';
 import { LandingNavbar } from '@/components/layout/LandingNavbar';
-import { AuthModalProvider } from '@/features/auth/AuthModalContext';
-
 export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <AuthModalProvider>
-      <div dir="rtl" className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/20 flex flex-col">
-        {/* Header Navigation */}
-        <LandingNavbar />
+    <div dir="rtl" className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/20 flex flex-col">
+      {/* Header Navigation */}
+      <LandingNavbar />
 
-        <main className="flex-1">
-          {children}
-        </main>
+      <main className="flex-1">
+        {children}
+      </main>
 
         {/* Footer */}
         <footer className="border-t border-border/40 bg-slate-950 text-slate-300 py-16 md:py-24 relative overflow-hidden mt-auto">
@@ -86,6 +83,5 @@ export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children
           </div>
         </footer>
       </div>
-    </AuthModalProvider>
   );
 };

@@ -389,12 +389,10 @@ export default function LandingPage() {
                 </div>
               </CardContent>
               <CardFooter className="p-5 pt-0 flex justify-center">
-                <Link href="/login" className="w-full">
-                  <Button variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center">
-                    تصفح تحليل الـ SaaS الكامل
-                    <ArrowLeft className="size-3" />
-                  </Button>
-                </Link>
+                <Button onClick={() => openAuthModal('login')} variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center cursor-pointer">
+                  تصفح تحليل الـ SaaS الكامل
+                  <ArrowLeft className="size-3" />
+                </Button>
               </CardFooter>
             </Card>
 
@@ -432,12 +430,10 @@ export default function LandingPage() {
                 </div>
               </CardContent>
               <CardFooter className="p-5 pt-0 flex justify-center">
-                <Link href="/login" className="w-full">
-                  <Button variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center">
-                    تصفح تحليل الـ SaaS الكامل
-                    <ArrowLeft className="size-3" />
-                  </Button>
-                </Link>
+                <Button onClick={() => openAuthModal('login')} variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center cursor-pointer">
+                  تصفح تحليل الـ SaaS الكامل
+                  <ArrowLeft className="size-3" />
+                </Button>
               </CardFooter>
             </Card>
 
@@ -475,12 +471,10 @@ export default function LandingPage() {
                 </div>
               </CardContent>
               <CardFooter className="p-5 pt-0 flex justify-center">
-                <Link href="/login" className="w-full">
-                  <Button variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center">
-                    تصفح تحليل الـ SaaS الكامل
-                    <ArrowLeft className="size-3" />
-                  </Button>
-                </Link>
+                <Button onClick={() => openAuthModal('login')} variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center cursor-pointer">
+                  تصفح تحليل الـ SaaS الكامل
+                  <ArrowLeft className="size-3" />
+                </Button>
               </CardFooter>
             </Card>
 
@@ -518,12 +512,10 @@ export default function LandingPage() {
                 </div>
               </CardContent>
               <CardFooter className="p-5 pt-0 flex justify-center">
-                <Link href="/login" className="w-full">
-                  <Button variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center">
-                    تصفح تحليل الـ SaaS الكامل
-                    <ArrowLeft className="size-3" />
-                  </Button>
-                </Link>
+                <Button onClick={() => openAuthModal('login')} variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center cursor-pointer">
+                  تصفح تحليل الـ SaaS الكامل
+                  <ArrowLeft className="size-3" />
+                </Button>
               </CardFooter>
             </Card>
 
@@ -636,12 +628,10 @@ export default function LandingPage() {
                   مشروعك بهذا العدد من المشتركين يولد إيراداً سنوياً قدره <strong>${calculatedMetrics.arr.toLocaleString()}</strong> وهو مؤشر ممتاز للانتقال لبناء نموذج العمل في المنصة.
                 </div>
 
-                <Link href="/login" className="w-full">
-                  <Button className="w-full font-bold text-xs h-10 gap-2">
-                    احفظ الحسابات وابدأ بناء نموذج عملك الآن
-                    <ArrowLeft className="size-4" />
-                  </Button>
-                </Link>
+                <Button onClick={() => openAuthModal('register')} className="w-full font-bold text-xs h-10 gap-2 cursor-pointer">
+                  احفظ الحسابات وابدأ بناء نموذج عملك الآن
+                  <ArrowLeft className="size-4" />
+                </Button>
               </div>
 
             </div>
