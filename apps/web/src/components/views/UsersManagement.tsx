@@ -132,7 +132,14 @@ export const UsersManagement: React.FC = () => {
   const toggleStatus = async (id: string, currentStatus: UserStatus) => {
     const newStatus = currentStatus === 'active' ? 'suspended' : 'active';
     try {
-      await supabase.from('profiles').update({ status: newStatus }).eq('id', id);
+      const { data, error } = await supabase
+        .from('profiles')
+        .update({ status: newStatus })
+        .eq('id', id)
+        .select('id')
+        .maybeSingle();
+      if (error) throw error;
+      if (!data) throw new Error('USER_STATUS_UPDATE_NOT_APPLIED');
       setUsers((prev) => prev.map((user) => (user.id === id ? { ...user, status: newStatus } : user)));
     } catch (err) {
       console.error('Error updating user status:', err);
@@ -145,7 +152,14 @@ export const UsersManagement: React.FC = () => {
 
   const updateRole = async (id: string, newRole: UserRole) => {
     try {
-      await supabase.from('profiles').update({ role: newRole }).eq('id', id);
+      const { data, error } = await supabase
+        .from('profiles')
+        .update({ role: newRole })
+        .eq('id', id)
+        .select('id')
+        .maybeSingle();
+      if (error) throw error;
+      if (!data) throw new Error('USER_ROLE_UPDATE_NOT_APPLIED');
       setUsers((prev) => prev.map((user) => (user.id === id ? { ...user, role: newRole } : user)));
     } catch (err) {
       console.error('Error updating user role:', err);
@@ -162,7 +176,14 @@ export const UsersManagement: React.FC = () => {
     try {
       // Only possible if RLS or edge functions allow auth.users deletion.
       // For MVP, we can just suspend or delete the profile.
-      await supabase.from('profiles').delete().eq('id', pendingDeleteUser.id);
+      const { data, error } = await supabase
+        .from('profiles')
+        .delete()
+        .eq('id', pendingDeleteUser.id)
+        .select('id')
+        .maybeSingle();
+      if (error) throw error;
+      if (!data) throw new Error('USER_DELETE_NOT_APPLIED');
       setUsers((prev) => prev.filter((user) => user.id !== pendingDeleteUser.id));
       setPendingDeleteUser(null);
     } catch (err) {

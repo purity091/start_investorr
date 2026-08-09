@@ -172,7 +172,7 @@ export const UnifiedWorkspace: React.FC<{ setActiveTab: (tab: string) => void }>
           </div>
 
           <Button
-            onClick={() => setActiveTab('my-projects')}
+            onClick={() => setActiveTab('my-plans')}
             variant="outline"
             size="sm"
             className="gap-2 font-bold text-xs shadow-2xs border-primary/30 shrink-0"

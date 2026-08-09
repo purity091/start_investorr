@@ -28,6 +28,32 @@ AS $$
   LIMIT 1
 $$;
 
+-- A user may update personal fields, but role/status are admin-controlled.
+CREATE OR REPLACE FUNCTION public.protect_profile_admin_fields()
+RETURNS TRIGGER
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+BEGIN
+  IF (
+    NEW.role IS DISTINCT FROM OLD.role
+    OR NEW.status IS DISTINCT FROM OLD.status
+  ) AND public.get_current_profile_role() IS DISTINCT FROM 'admin' THEN
+    RAISE EXCEPTION 'Only administrators can update profile role or status'
+      USING ERRCODE = '42501';
+  END IF;
+
+  RETURN NEW;
+END;
+$$;
+
+DROP TRIGGER IF EXISTS protect_profile_admin_fields_trigger ON public.profiles;
+CREATE TRIGGER protect_profile_admin_fields_trigger
+BEFORE UPDATE ON public.profiles
+FOR EACH ROW
+EXECUTE FUNCTION public.protect_profile_admin_fields();
+
 -- 3. Policies for users
 DROP POLICY IF EXISTS "Users can read own profile" ON public.profiles;
 CREATE POLICY "Users can read own profile" 
@@ -53,6 +79,29 @@ CREATE POLICY "Admins can update all profiles"
 ON public.profiles FOR UPDATE 
 USING (public.get_current_profile_role() = 'admin')
 WITH CHECK (public.get_current_profile_role() = 'admin');
+
+DROP POLICY IF EXISTS "Admins can delete profiles" ON public.profiles;
+CREATE POLICY "Admins can delete profiles"
+ON public.profiles FOR DELETE
+USING (public.get_current_profile_role() = 'admin');
+
+-- Admin project management uses the authenticated client and therefore needs
+-- explicit RLS access in addition to the user ownership policies.
+DROP POLICY IF EXISTS "Admins can read all canvas" ON public.business_canvas;
+CREATE POLICY "Admins can read all canvas"
+ON public.business_canvas FOR SELECT
+USING (public.get_current_profile_role() = 'admin');
+
+DROP POLICY IF EXISTS "Admins can update all canvas" ON public.business_canvas;
+CREATE POLICY "Admins can update all canvas"
+ON public.business_canvas FOR UPDATE
+USING (public.get_current_profile_role() = 'admin')
+WITH CHECK (public.get_current_profile_role() = 'admin');
+
+DROP POLICY IF EXISTS "Admins can delete all canvas" ON public.business_canvas;
+CREATE POLICY "Admins can delete all canvas"
+ON public.business_canvas FOR DELETE
+USING (public.get_current_profile_role() = 'admin');
 
 -- 5. Trigger to create a profile automatically when a user signs up
 CREATE OR REPLACE FUNCTION public.handle_new_user()

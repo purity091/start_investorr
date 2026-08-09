@@ -39,7 +39,7 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { useAuth } from '@/features/auth/AuthContext';
-import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
+import { getProjectEditPath } from '@/features/workspace/workspaceNavigation';
 import { supabase } from '@/lib/supabase';
 import { cn } from '@/lib/utils';
 
@@ -118,7 +118,6 @@ interface SavedMarketItemsProps {
 
 export const SavedMarketItems: React.FC<SavedMarketItemsProps> = ({ setActiveTab }) => {
   const { user } = useAuth();
-  const { loadProject } = useProjectWorkspace();
 
   const [items, setItems] = useState<SavedItemRow[]>([]);
   const [globalFilter, setGlobalFilter] = useState('');
@@ -192,10 +191,11 @@ export const SavedMarketItems: React.FC<SavedMarketItemsProps> = ({ setActiveTab
   }, [user]);
 
   // Open item in its source page
-  const handleOpenItem = async (item: SavedItemRow) => {
+  const handleOpenItem = (item: SavedItemRow) => {
     if (item.sourcePageId === 'workspace') {
       if (item.rawPayload?.id) {
-        await loadProject(item.rawPayload.id);
+        window.location.assign(getProjectEditPath(item.rawPayload.id));
+        return;
       }
       setActiveTab('editor');
     } else if (item.sourcePageId === 'problem_engine') {

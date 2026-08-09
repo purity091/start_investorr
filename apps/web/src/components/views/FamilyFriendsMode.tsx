@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
   Activity, 
   CheckCircle2, 
@@ -80,10 +80,12 @@ const STEPS: StepConfig[] = [
 
 export const FamilyFriendsMode: React.FC<{
   data: FamilyFriendsData;
+  currentStep: number;
   onChange: (data: Partial<FamilyFriendsData>) => void;
+  onStepChange: (step: number) => void;
+  onSave: () => void;
   onComplete: () => void;
-}> = ({ data, onChange, onComplete }) => {
-  const [currentStep, setCurrentStep] = useState(0);
+}> = ({ data, currentStep, onChange, onStepChange, onSave, onComplete }) => {
 
   const current = STEPS[currentStep];
   const CurrentIcon = current.icon;
@@ -158,7 +160,7 @@ export const FamilyFriendsMode: React.FC<{
                 <button
                   key={step.id}
                   type="button"
-                  onClick={() => setCurrentStep(index)}
+                  onClick={() => onStepChange(index)}
                   className={cn(
                     "w-full text-right p-3 rounded-lg transition-colors border flex items-center gap-3 cursor-pointer outline-none",
                     isActive
@@ -230,6 +232,7 @@ export const FamilyFriendsMode: React.FC<{
                 <Textarea
                   value={currentValue}
                   onChange={(event) => onChange({ [current.id]: event.target.value })}
+                  onBlur={onSave}
                   placeholder={current.placeholder}
                   className="min-h-[180px] resize-y bg-background text-right leading-relaxed text-sm text-foreground border-input rounded-lg p-4 font-medium"
                 />
@@ -258,7 +261,7 @@ export const FamilyFriendsMode: React.FC<{
                 type="button"
                 variant="outline"
                 size="sm"
-                onClick={() => setCurrentStep((value) => Math.max(0, value - 1))}
+                onClick={() => onStepChange(Math.max(0, currentStep - 1))}
                 disabled={currentStep === 0}
                 className="h-9 px-4 rounded-md font-medium"
               >
@@ -276,7 +279,7 @@ export const FamilyFriendsMode: React.FC<{
                     onComplete();
                     return;
                   }
-                  setCurrentStep((value) => Math.min(STEPS.length - 1, value + 1));
+                  onStepChange(Math.min(STEPS.length - 1, currentStep + 1));
                 }}
                 disabled={!hasValue}
                 className="h-9 px-5 rounded-md font-medium gap-1.5 shadow-xs"

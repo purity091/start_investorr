@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import {
   ArrowRight,
   ArrowLeft,
@@ -25,6 +25,7 @@ import { Input } from '@/components/ui/Input';
 import { Badge } from '@/components/ui/Badge';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
 
 const Label = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
   <label className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 ${className}`}>
@@ -41,20 +42,33 @@ interface Hypothesis {
   importance: number;
   isCritical: boolean;
   testType?: TestType;
-  setup: any;
-  results: any;
+  setup: Record<string, string | number>;
+  results: Record<string, string | number>;
   analysis?: { successRate: number; explanation: string };
   decision?: 'continue' | 'tweak' | 'pivot';
 }
 
 export default function LeanStartupWizard() {
-  const [step, setStep] = useState(1);
+  const { workspace, updateWorkspace } = useProjectWorkspace();
+  const savedLean = workspace.feasibilityModels?.lean as unknown as {
+    step?: number;
+    idea?: { name: string; pitch: string; problem: string; solution: string };
+    hypInputs?: {
+      customerType: string;
+      specificCustomer: string;
+      problem: string;
+      currentAlternative: string;
+      whySwitch: string;
+    };
+    hypotheses?: Hypothesis[];
+  } | undefined;
+  const [step, setStep] = useState(savedLean?.step ?? 1);
 
   // Stage 1 State
-  const [idea, setIdea] = useState({ name: '', pitch: '', problem: '', solution: '' });
+  const [idea, setIdea] = useState(savedLean?.idea ?? { name: '', pitch: '', problem: '', solution: '' });
 
   // Stage 2 State
-  const [hypInputs, setHypInputs] = useState({
+  const [hypInputs, setHypInputs] = useState(savedLean?.hypInputs ?? {
     customerType: '',
     specificCustomer: '',
     problem: '',
@@ -63,7 +77,21 @@ export default function LeanStartupWizard() {
   });
 
   // Stage 3-8 State (Hypotheses)
-  const [hypotheses, setHypotheses] = useState<Hypothesis[]>([]);
+  const [hypotheses, setHypotheses] = useState<Hypothesis[]>(savedLean?.hypotheses ?? []);
+
+  useEffect(() => {
+    updateWorkspace((current) => ({
+      feasibilityModels: {
+        ...current.feasibilityModels,
+        lean: { step, idea, hypInputs, hypotheses },
+      },
+      profile: {
+        ...current.profile,
+        name: idea.name || current.profile.name,
+        opportunitySummary: idea.pitch || current.profile.opportunitySummary,
+      },
+    }));
+  }, [hypInputs, hypotheses, idea, step, updateWorkspace]);
 
   // Helpers
   const nextStep = () => setStep((s) => Math.min(s + 1, 8));

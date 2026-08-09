@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   Bell,
   CheckCircle2,
   Globe2,
-  KeyRound,
   LockKeyhole,
-  PencilLine,
   Save,
   ShieldCheck,
   Sparkles,
@@ -39,8 +37,13 @@ interface SettingsProps {
 
 type SettingsTab = 'identity' | 'security' | 'preferences';
 
+const getErrorMessage = (error: unknown, fallback: string) =>
+  error instanceof Error && error.message ? error.message : fallback;
+
 const NOTIFICATION_OPTIONS = [
   { id: 'notif_projects', label: 'تحديثات المشاريع ودراسات الجدوى' },
+  { id: 'notif_security', label: 'تنبيهات الأمان وتغييرات الحساب' },
+  { id: 'notif_billing', label: 'الفواتير والاشتراك' },
   { id: 'notif_reports', label: 'اكتمال التقارير والملفات الجاهزة للتصدير' },
   { id: 'notif_weekly', label: 'ملخص أسبوعي عن نشاط الحساب' },
   { id: 'notif_updates', label: 'إصدارات جديدة وتحسينات المنصة' },
@@ -82,6 +85,8 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
     const saved = authUser?.user_metadata?.notifications as Record<string, boolean> | undefined;
     return {
       notif_projects: saved?.notif_projects ?? true,
+      notif_security: saved?.notif_security ?? true,
+      notif_billing: saved?.notif_billing ?? true,
       notif_reports: saved?.notif_reports ?? true,
       notif_weekly: saved?.notif_weekly ?? true,
       notif_updates: saved?.notif_updates ?? false,
@@ -93,21 +98,6 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isUpdatingPassword, setIsUpdatingPassword] = useState(false);
   const [passwordMsg, setPasswordMsg] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
-
-  useEffect(() => {
-    if (profile?.full_name) setFullName(profile.full_name);
-    if (profile?.email || authUser?.email) setEmail(profile?.email || authUser?.email || '');
-    if (authUser?.user_metadata?.job_title) setJobTitle(authUser.user_metadata.job_title);
-    if (authUser?.user_metadata?.market) setMarket(authUser.user_metadata.market);
-    if (authUser?.user_metadata?.bio) setBio(authUser.user_metadata.bio);
-    if (authUser?.user_metadata?.language) setLanguage(authUser.user_metadata.language);
-    if (authUser?.user_metadata?.density) setDensity(authUser.user_metadata.density);
-    if (authUser?.user_metadata?.default_report) setDefaultReport(authUser.user_metadata.default_report);
-    if (authUser?.user_metadata?.default_page) setDefaultPage(authUser.user_metadata.default_page);
-    // Sync notification prefs from auth metadata
-    const saved = authUser?.user_metadata?.notifications as Record<string, boolean> | undefined;
-    if (saved) setNotifications(prev => ({ ...prev, ...saved }));
-  }, [profile, authUser]);
 
   const handleSave = async () => {
     setSaved(false);
@@ -127,12 +117,10 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
           })
           .eq('id', currentUserId);
 
-        if (profileError) {
-          console.warn('Profile DB update warning:', profileError);
-        }
+        if (profileError) throw profileError;
 
         // 2. Update Supabase Auth user metadata & email if changed
-        const updatePayload: any = {
+        const updatePayload: Parameters<typeof supabase.auth.updateUser>[0] = {
           data: {
             full_name: fullName,
             job_title: jobTitle,
@@ -162,10 +150,10 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
       setIsSaving(false);
       setSaved(true);
       window.setTimeout(() => setSaved(false), 3000);
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error('Error saving settings to DB:', err);
       setIsSaving(false);
-      setErrorMessage(err.message || 'حدث خطأ أثناء حفظ التعديلات في قاعدة البيانات');
+      setErrorMessage(getErrorMessage(err, 'حدث خطأ أثناء حفظ التعديلات في قاعدة البيانات'));
     }
   };
 
@@ -196,9 +184,9 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
       setPasswordMsg({ type: 'success', text: 'تم تحديث كلمة المرور بنجاح' });
       setNewPassword('');
       setConfirmPassword('');
-    } catch (err: any) {
+    } catch (err: unknown) {
       setIsUpdatingPassword(false);
-      setPasswordMsg({ type: 'error', text: err.message || 'فشل تحديث كلمة المرور' });
+      setPasswordMsg({ type: 'error', text: getErrorMessage(err, 'فشل تحديث كلمة المرور') });
     }
   };
 

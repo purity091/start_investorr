@@ -12,6 +12,14 @@ import {
 } from '../../types';
 
 export const WORKSPACE_STORAGE_KEY = 'khotta_project_workspace_v1';
+export const WORKSPACE_OWNER_STORAGE_KEY = 'khotta_project_workspace_owner_v1';
+export const ACTIVE_PROJECT_STORAGE_KEY = 'khotta_active_project_id';
+
+export const clearWorkspaceSessionCache = () => {
+  localStorage.removeItem(WORKSPACE_STORAGE_KEY);
+  localStorage.removeItem(WORKSPACE_OWNER_STORAGE_KEY);
+  localStorage.removeItem(ACTIVE_PROJECT_STORAGE_KEY);
+};
 
 const CATEGORY_LABELS: Record<WorkspaceExecutionTask['category'], string> = {
   legal: 'قانوني',

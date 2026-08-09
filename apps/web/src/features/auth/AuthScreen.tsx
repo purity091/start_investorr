@@ -135,8 +135,12 @@ export const AuthScreen: React.FC = () => {
         setError('البريد الإلكتروني مسجل مسبقاً، يمكنك تسجيل الدخول مباشرة.');
       } else if (errorCode === 'WEAK_PASSWORD' || errorMessage.includes('Password should be at least')) {
         setError('كلمة المرور يجب أن تكون 6 أرقام أو أحرف على الأقل.');
+      } else if (errorCode === 'VALIDATION_ERROR') {
+        setError('تحقق من تعبئة البيانات المطلوبة بصورة صحيحة ثم حاول مرة أخرى.');
+      } else if (errorCode === 'PASSWORD_RESET_FAILED') {
+        setError('تعذر إرسال رابط استعادة كلمة المرور الآن. حاول مرة أخرى بعد قليل.');
       } else {
-        setError('تعذر إكمال المصادقة. افتح تفاصيل طلب /api/auth/login في Network لمعرفة السبب.');
+        setError('تعذر إكمال المصادقة الآن. تحقق من اتصالك ثم حاول مرة أخرى.');
       }
     } finally {
       setIsLoading(false);

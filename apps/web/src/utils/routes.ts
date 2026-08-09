@@ -37,6 +37,7 @@ const STATIC_TABS = new Set([
   'site-map',
   'problem-engine',
   'problem-detail',
+  'project-edit',
   'saved-market-items',
   'discovery-center',
   'company-deep-dive',
@@ -92,6 +93,8 @@ const hasTabShape = (segment: string) =>
   segment.startsWith('admin-');
 
 export const isKnownTabPath = (pathname: string) => {
+  if (getProjectIdFromEditPath(pathname)) return true;
+
   const segments = getSegments(pathname);
   if (!segments.length) return true;
 
@@ -105,7 +108,18 @@ const isIndexFile = (segment: string) =>
 const getSegments = (pathname: string) =>
   pathname.split('/').filter(Boolean).map((segment) => decodeURIComponent(segment));
 
+export const getProjectIdFromEditPath = (pathname: string) => {
+  const segments = getSegments(pathname);
+  if (segments.length !== 3 || segments[0] !== 'projects' || segments[2] !== 'edit') {
+    return null;
+  }
+
+  return segments[1] || null;
+};
+
 export const getTabFromPathname = (pathname: string) => {
+  if (getProjectIdFromEditPath(pathname)) return 'project-edit';
+
   const segments = getSegments(pathname);
   if (!segments.length) return 'home';
 
@@ -115,6 +129,8 @@ export const getTabFromPathname = (pathname: string) => {
 };
 
 const getBasePath = (pathname: string) => {
+  if (getProjectIdFromEditPath(pathname)) return '';
+
   const segments = getSegments(pathname);
   if (!segments.length) return '';
 
@@ -130,6 +146,10 @@ const getBasePath = (pathname: string) => {
 };
 
 export const getTabPath = (tab: string, pathname = window.location.pathname) => {
+  if (tab === 'project-edit' && getProjectIdFromEditPath(pathname)) {
+    return pathname;
+  }
+
   const basePath = getBasePath(pathname);
 
   if (!tab || tab === 'home') {

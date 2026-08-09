@@ -12,7 +12,7 @@ import SiteTour from './components/views/SiteTour';
 import { TooltipProvider } from './components/ui/tooltip';
 import { SidebarInset, SidebarProvider } from './components/ui/sidebar';
 
-import { MOCK_USER, INITIAL_SECTIONS, ADMIN_TABS } from './data/constants';
+import { INITIAL_SECTIONS, ADMIN_TABS } from './data/constants';
 import { PlanSection, User } from './types';
 import { getTabFromPathname, getTabPath } from './utils/routes';
 import { ProjectWorkspaceProvider, useProjectWorkspace } from './features/workspace/ProjectWorkspaceContext';
@@ -41,7 +41,16 @@ const PUBLIC_TABS = new Set([
   'privacy',
 ]);
 
-const isPublicTab = (tab: string) => PUBLIC_TABS.has(tab) || tab.endsWith('-dashboard');
+const PRIVATE_DASHBOARD_TABS = new Set([
+  ...ADMIN_TABS,
+  'strategic-dashboard',
+]);
+
+const isAdminTab = (tab: string) => ADMIN_TABS.includes(tab);
+const isPublicTab = (tab: string) =>
+  PUBLIC_TABS.has(tab) || (tab.endsWith('-dashboard') && !PRIVATE_DASHBOARD_TABS.has(tab));
+const getCurrentPath = () => `${window.location.pathname}${window.location.search}`;
+const getLoginPath = (targetPath: string) => `/login?next=${encodeURIComponent(targetPath)}`;
 
 const AppShell: React.FC = () => {
   const { session, user: authUser, profile, loading: authLoading } = useAuth();
@@ -67,9 +76,7 @@ const AppShell: React.FC = () => {
     totalCredits: 0,
   };
 
-  const [sections, setSections] = useState<PlanSection[]>(INITIAL_SECTIONS);
   const [expandedSectionId, setExpandedSectionId] = useState<string | null>('1');
-  const [saveStatus, setSaveStatus] = useState<'saved' | 'saving' | null>('saved');
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState<boolean>(() => {
     const savedState = localStorage.getItem('khotta_sidebar_collapsed');
     return savedState !== null ? savedState === 'true' : false; // Default expanded for logged-in internal views
@@ -77,21 +84,29 @@ const AppShell: React.FC = () => {
   const [isTourRunning, setIsTourRunning] = useState(false);
   const [subTabLabel, setSubTabLabel] = useState<string | null>(null);
   const [selectedCompanyId, setSelectedCompanyId] = useState<string | undefined>(undefined);
-  const { setPlanSections, setStage } = useProjectWorkspace();
+  const { workspace, setPlanSections, setStage, flushWorkspace } = useProjectWorkspace();
+  const sections = workspace.planSections;
 
   const requiresAuth = !isPublicTab(activeTab);
 
   const setActiveTab = (tab: string, options?: { replace?: boolean }) => {
-    const nextTab = normalizeTab(tab || DEFAULT_TAB);
+    let nextTab = normalizeTab(tab || DEFAULT_TAB);
+    let nextPath = getTabPath(nextTab, window.location.pathname);
 
     // Route Protection
     if (!session && !isPublicTab(nextTab)) {
-      window.location.href = `/login?redirect=${encodeURIComponent(nextTab)}`;
+      window.location.href = getLoginPath(nextPath);
       return;
     }
 
-    const nextPath = getTabPath(nextTab, window.location.pathname);
-    const currentPath = `${window.location.pathname}${window.location.search}`;
+    if (session && isAdminTab(nextTab) && profile?.role !== 'admin') {
+      nextTab = DEFAULT_TAB;
+      nextPath = getTabPath(nextTab, window.location.pathname);
+    }
+
+    void flushWorkspace();
+
+    const currentPath = getCurrentPath();
 
     if (currentPath !== nextPath) {
       if (options?.replace) {
@@ -108,9 +123,16 @@ const AppShell: React.FC = () => {
 
   useEffect(() => {
     const handlePopState = () => {
-      const nextTab = normalizeTab(getTabFromPathname(window.location.pathname) || DEFAULT_TAB);
+      let nextTab = normalizeTab(getTabFromPathname(window.location.pathname) || DEFAULT_TAB);
       if (!session && !isPublicTab(nextTab)) {
-        window.location.replace(`/login?redirect=${encodeURIComponent(nextTab)}`);
+        window.location.replace(getLoginPath(getCurrentPath()));
+        return;
+      }
+      if (session && isAdminTab(nextTab) && profile?.role !== 'admin') {
+        nextTab = DEFAULT_TAB;
+        window.history.replaceState({ tab: nextTab }, '', getTabPath(nextTab, window.location.pathname));
+        setSubTabLabel(null);
+        setActiveTabState(nextTab);
         return;
       }
       setSubTabLabel(null);
@@ -119,7 +141,7 @@ const AppShell: React.FC = () => {
 
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
-  }, [session]);
+  }, [profile?.role, session]);
 
   useEffect(() => {
     localStorage.setItem('khotta_active_tab', activeTab);
@@ -133,16 +155,21 @@ const AppShell: React.FC = () => {
     const handleAppNavigation = (event: Event) => {
       const detail = (event as CustomEvent<{ tab?: string; path?: string }>).detail;
       if (!detail?.tab) return;
-      const nextTab = normalizeTab(detail.tab);
+      let nextTab = normalizeTab(detail.tab);
+      let nextPath = detail.tab === nextTab && detail.path
+        ? detail.path
+        : getTabPath(nextTab, window.location.pathname);
 
       if (!session && !isPublicTab(nextTab)) {
-        window.location.replace(`/login?redirect=${encodeURIComponent(nextTab)}`);
+        window.location.replace(getLoginPath(nextPath));
         return;
       }
 
-      const nextPath = detail.tab === nextTab && detail.path
-        ? detail.path
-        : getTabPath(nextTab, window.location.pathname);
+      if (session && isAdminTab(nextTab) && profile?.role !== 'admin') {
+        nextTab = DEFAULT_TAB;
+        nextPath = getTabPath(nextTab, window.location.pathname);
+      }
+
       if (window.location.pathname !== nextPath) {
         window.history.pushState({ tab: nextTab }, '', nextPath);
       }
@@ -152,7 +179,7 @@ const AppShell: React.FC = () => {
 
     window.addEventListener('khotta:navigate', handleAppNavigation);
     return () => window.removeEventListener('khotta:navigate', handleAppNavigation);
-  }, [session]);
+  }, [profile?.role, session]);
 
   useEffect(() => {
     if (authLoading) return;
@@ -163,20 +190,14 @@ const AppShell: React.FC = () => {
     }
 
     if (requiresAuth && !session) {
-      window.location.replace(`/login?redirect=${encodeURIComponent(activeTab)}`);
+      window.location.replace(getLoginPath(getCurrentPath()));
+      return;
     }
-  }, [activeTab, authLoading, requiresAuth, session]);
 
-  useEffect(() => {
-    if (saveStatus === 'saving') {
-      const timer = setTimeout(() => setSaveStatus('saved'), 1000);
-      return () => clearTimeout(timer);
+    if (session && isAdminTab(activeTab) && profile?.role !== 'admin') {
+      window.location.replace('/home');
     }
-  }, [saveStatus]);
-
-  useEffect(() => {
-    setPlanSections(sections);
-  }, [sections, setPlanSections]);
+  }, [activeTab, authLoading, profile?.role, requiresAuth, session]);
 
   useEffect(() => {
     const tabToStageMap: Record<string, 'discovery' | 'analysis' | 'decision' | 'planning' | 'execution'> = {
@@ -193,9 +214,8 @@ const AppShell: React.FC = () => {
   }, [activeTab, setStage]);
 
   const handleSectionUpdate = (id: string, updates: Partial<PlanSection>) => {
-    setSaveStatus('saving');
-    setSections(prev => prev.map(s => 
-      s.id === id ? { ...s, ...updates, lastEdited: 'الآن' } : s
+    setPlanSections(sections.map((section) =>
+      section.id === id ? { ...section, ...updates, lastEdited: 'الآن' } : section
     ));
   };
 

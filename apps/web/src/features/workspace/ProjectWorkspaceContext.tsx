@@ -1,15 +1,25 @@
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import { PlanSection, ProjectWorkspace, WorkspaceJourneyStage } from '../../types';
-import { WORKSPACE_STORAGE_KEY, createInitialWorkspace, deriveWorkspace } from './workspaceUtils';
+import {
+  ACTIVE_PROJECT_STORAGE_KEY,
+  WORKSPACE_OWNER_STORAGE_KEY,
+  WORKSPACE_STORAGE_KEY,
+  clearWorkspaceSessionCache,
+  createInitialWorkspace,
+  deriveWorkspace,
+} from './workspaceUtils';
 import { getWorkspaceMetadata } from './workspacePersistence';
 import { supabase } from '@/lib/supabase';
 import { withSupabaseRetry } from '@/lib/supabaseRetry';
 import { useAuth } from '@/features/auth/AuthContext';
+import { getProjectIdFromEditPath } from '@/utils/routes';
 
 interface ProjectWorkspaceContextValue {
   workspace: ProjectWorkspace;
   setWorkspace: React.Dispatch<React.SetStateAction<ProjectWorkspace>>;
-  updateWorkspace: (updates: Partial<ProjectWorkspace>) => void;
+  updateWorkspace: (
+    updates: Partial<ProjectWorkspace> | ((current: ProjectWorkspace) => Partial<ProjectWorkspace>)
+  ) => void;
   updateProfile: (updates: Partial<ProjectWorkspace['profile']>) => void;
   updateBrand: (updates: Partial<ProjectWorkspace['brand']>) => void;
   setPlanSections: (sections: PlanSection[]) => void;
@@ -18,8 +28,9 @@ interface ProjectWorkspaceContextValue {
   cycleAutoTaskStatus: (id: string) => void;
   cycleFirstCustomerTaskStatus: (id: string) => void;
   toggleChecklistItem: (groupId: string, itemId: string) => void;
-  loadProject: (id: string) => Promise<void>;
+  loadProject: (id: string) => Promise<ProjectWorkspace | null>;
   createProject: (title: string, mode: string) => Promise<string | null>;
+  clearActiveProject: (id?: string) => void;
   flushWorkspace: () => Promise<void>;
   isSaving: boolean;
   syncStatus: WorkspaceSyncStatus;
@@ -31,9 +42,66 @@ const ProjectWorkspaceContext = createContext<ProjectWorkspaceContextValue | nul
 
 type WorkspaceSyncStatus = 'idle' | 'pending' | 'saving' | 'saved' | 'failed' | 'conflict';
 
-const WORKSPACE_SYNC_DEBOUNCE_MS = 45 * 1000;
-const WORKSPACE_PENDING_SYNC_KEY = 'khotta_workspace_pending_sync_v1';
+interface PendingWorkspaceSync {
+  projectId: string;
+  userId: string;
+  workspace: ProjectWorkspace;
+  updatedAt: number;
+  status: 'pending_sync';
+}
+
+const WORKSPACE_SYNC_DEBOUNCE_MS = 1500;
+const LEGACY_WORKSPACE_PENDING_SYNC_KEY = 'khotta_workspace_pending_sync_v1';
+const WORKSPACE_PENDING_SYNC_PREFIX = 'khotta_workspace_pending_sync_v2_';
 const WORKSPACE_VERSION_SNAPSHOT_MS = 15 * 60 * 1000;
+const getProjectsCacheKey = (userId: string) => `khotta_projects_cache_${userId}`;
+const getPendingSyncKey = (projectId: string) => `${WORKSPACE_PENDING_SYNC_PREFIX}${projectId}`;
+
+const parsePendingSync = (raw: string | null): PendingWorkspaceSync | null => {
+  if (!raw) return null;
+
+  try {
+    const parsed = JSON.parse(raw) as Partial<PendingWorkspaceSync>;
+    if (
+      typeof parsed.projectId !== 'string'
+      || typeof parsed.userId !== 'string'
+      || typeof parsed.updatedAt !== 'number'
+      || parsed.status !== 'pending_sync'
+      || !parsed.workspace
+      || typeof parsed.workspace !== 'object'
+    ) {
+      return null;
+    }
+
+    return parsed as PendingWorkspaceSync;
+  } catch {
+    return null;
+  }
+};
+
+const getPendingSync = (projectId: string, userId: string) => {
+  const currentKey = getPendingSyncKey(projectId);
+  const current = parsePendingSync(localStorage.getItem(currentKey));
+  if (current?.projectId === projectId && current.userId === userId) {
+    return { key: currentKey, value: current };
+  }
+
+  const legacy = parsePendingSync(localStorage.getItem(LEGACY_WORKSPACE_PENDING_SYNC_KEY));
+  if (legacy?.projectId === projectId && legacy.userId === userId) {
+    return { key: LEGACY_WORKSPACE_PENDING_SYNC_KEY, value: legacy };
+  }
+
+  return null;
+};
+
+const clearPendingSync = (projectId: string, userId: string) => {
+  localStorage.removeItem(getPendingSyncKey(projectId));
+
+  const legacy = parsePendingSync(localStorage.getItem(LEGACY_WORKSPACE_PENDING_SYNC_KEY));
+  if (legacy?.projectId === projectId && legacy.userId === userId) {
+    localStorage.removeItem(LEGACY_WORKSPACE_PENDING_SYNC_KEY);
+  }
+};
 
 const loadWorkspace = (planSections: PlanSection[]) => {
   try {
@@ -74,26 +142,46 @@ export const ProjectWorkspaceProvider: React.FC<{
   const { user } = useAuth();
   const userRef = useRef(user);
   const activeProjectIdRef = useRef<string | null>(null);
-  const workspaceRef = useRef<ProjectWorkspace | null>(null);
-  const syncInFlightRef = useRef(false);
+  const syncInFlightPromiseRef = useRef<Promise<void> | null>(null);
+  const workspaceRevisionRef = useRef(0);
+  const persistedRevisionRef = useRef(0);
   const skipNextAutoSaveRef = useRef(true);
   const activeProjectVersionRef = useRef<number | null>(null);
   const lastVersionSnapshotAtRef = useRef<number>(0);
-  const [activeProjectId, setActiveProjectIdState] = useState<string | null>(() => {
-    // Restore active project from localStorage across page refreshes
-    return localStorage.getItem('khotta_active_project_id') ?? null;
-  });
+  const hydratedUserIdRef = useRef<string | null>(null);
+  const restoredProjectIdRef = useRef<string | null>(null);
+  const [activeProjectId, setActiveProjectIdState] = useState<string | null>(null);
   const [isSaving, setIsSaving] = useState(false);
   const [syncStatus, setSyncStatus] = useState<WorkspaceSyncStatus>('idle');
   const [lastSyncedAt, setLastSyncedAt] = useState<number | null>(null);
-  const [workspace, setWorkspace] = useState<ProjectWorkspace>(() => loadWorkspace(planSections));
+  const [workspace, setWorkspaceState] = useState<ProjectWorkspace>(() =>
+    deriveWorkspace(createInitialWorkspace(planSections))
+  );
+  const workspaceRef = useRef<ProjectWorkspace>(workspace);
+
+  const setWorkspace = useCallback<React.Dispatch<React.SetStateAction<ProjectWorkspace>>>((action) => {
+    const current = workspaceRef.current;
+    if (!current) return;
+
+    const candidate = typeof action === 'function'
+      ? (action as (current: ProjectWorkspace) => ProjectWorkspace)(current)
+      : action;
+
+    if (candidate === current) return;
+
+    const nextWorkspace = deriveWorkspace(candidate);
+    workspaceRef.current = nextWorkspace;
+    workspaceRevisionRef.current += 1;
+    setWorkspaceState(nextWorkspace);
+  }, []);
 
   const setActiveProjectId = (id: string | null) => {
+    activeProjectIdRef.current = id;
     setActiveProjectIdState(id);
     if (id) {
-      localStorage.setItem('khotta_active_project_id', id);
+      localStorage.setItem(ACTIVE_PROJECT_STORAGE_KEY, id);
     } else {
-      localStorage.removeItem('khotta_active_project_id');
+      localStorage.removeItem(ACTIVE_PROJECT_STORAGE_KEY);
     }
   };
 
@@ -102,7 +190,7 @@ export const ProjectWorkspaceProvider: React.FC<{
       if (current.planSections === planSections) return current;
       return deriveWorkspace({ ...current, planSections });
     });
-  }, [planSections]);
+  }, [planSections, setWorkspace]);
 
   useEffect(() => {
     userRef.current = user;
@@ -116,13 +204,80 @@ export const ProjectWorkspaceProvider: React.FC<{
     workspaceRef.current = workspace;
   }, [workspace]);
 
+  useEffect(() => {
+    const nextUserId = user?.id ?? null;
+    if (hydratedUserIdRef.current === nextUserId) return;
+    let cancelled = false;
+
+    hydratedUserIdRef.current = nextUserId;
+    const initialWorkspace = deriveWorkspace(createInitialWorkspace(planSections));
+
+    if (!nextUserId) {
+      workspaceRef.current = initialWorkspace;
+      activeProjectIdRef.current = null;
+      workspaceRevisionRef.current = 0;
+      persistedRevisionRef.current = 0;
+      activeProjectVersionRef.current = null;
+      restoredProjectIdRef.current = null;
+      skipNextAutoSaveRef.current = true;
+      queueMicrotask(() => {
+        if (cancelled) return;
+        setWorkspaceState(initialWorkspace);
+        setActiveProjectIdState(null);
+        setSyncStatus('idle');
+      });
+      return () => {
+        cancelled = true;
+      };
+    }
+
+    const ownsStoredWorkspace = localStorage.getItem(WORKSPACE_OWNER_STORAGE_KEY) === nextUserId;
+    const routeProjectId = getProjectIdFromEditPath(window.location.pathname);
+    const restoredWorkspace = routeProjectId
+      ? initialWorkspace
+      : ownsStoredWorkspace
+        ? loadWorkspace(planSections)
+        : initialWorkspace;
+    const restoredProjectId = routeProjectId
+      ?? (ownsStoredWorkspace ? localStorage.getItem(ACTIVE_PROJECT_STORAGE_KEY) : null);
+
+    if (!ownsStoredWorkspace) {
+      clearWorkspaceSessionCache();
+    }
+
+    workspaceRef.current = restoredWorkspace;
+    activeProjectIdRef.current = restoredProjectId;
+    workspaceRevisionRef.current = 0;
+    persistedRevisionRef.current = 0;
+    activeProjectVersionRef.current = null;
+    restoredProjectIdRef.current = routeProjectId ? null : restoredProjectId;
+    skipNextAutoSaveRef.current = true;
+    queueMicrotask(() => {
+      if (cancelled) return;
+      setWorkspaceState(restoredWorkspace);
+      setActiveProjectIdState(restoredProjectId);
+      setSyncStatus(restoredProjectId ? 'saved' : 'idle');
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [planSections, user?.id]);
+
   // Sync to local storage
   useEffect(() => {
+    if (!user || hydratedUserIdRef.current !== user.id || workspace !== workspaceRef.current) return;
+
     localStorage.setItem(WORKSPACE_STORAGE_KEY, JSON.stringify(workspace));
-    if (!user || !activeProjectId) return;
+    localStorage.setItem(WORKSPACE_OWNER_STORAGE_KEY, user.id);
+    if (!activeProjectId) return;
+
+    if (skipNextAutoSaveRef.current) {
+      skipNextAutoSaveRef.current = false;
+      return;
+    }
 
     localStorage.setItem(
-      WORKSPACE_PENDING_SYNC_KEY,
+      getPendingSyncKey(activeProjectId),
       JSON.stringify({
         projectId: activeProjectId,
         userId: user.id,
@@ -132,30 +287,32 @@ export const ProjectWorkspaceProvider: React.FC<{
       }),
     );
 
-    if (skipNextAutoSaveRef.current) {
-      skipNextAutoSaveRef.current = false;
-      return;
-    }
-
     setSyncStatus((current) => (current === 'saving' ? current : 'pending'));
   }, [workspace, user, activeProjectId]);
 
-  const flushWorkspace = useCallback(async () => {
+  const flushWorkspace = useCallback<() => Promise<void>>(async () => {
+    if (syncInFlightPromiseRef.current) {
+      await syncInFlightPromiseRef.current;
+      return;
+    }
+
     const currentUser = userRef.current;
     const currentProjectId = activeProjectIdRef.current;
     const currentWorkspace = workspaceRef.current;
 
-    if (!currentUser || !currentProjectId || !currentWorkspace || syncInFlightRef.current) return;
+    if (!currentUser || !currentProjectId || !currentWorkspace) return;
 
-    syncInFlightRef.current = true;
-    setIsSaving(true);
-    setSyncStatus('saving');
+    const revisionToSave = workspaceRevisionRef.current;
+    const saveOperation = (async () => {
+      setIsSaving(true);
+      setSyncStatus('saving');
 
-    try {
+      try {
       const currentVersion = activeProjectVersionRef.current ?? 1;
       const nextVersion = currentVersion + 1;
       const now = new Date().toISOString();
 
+      let savedVersion: number | null = null;
       const { data, error } = await withSupabaseRetry(() =>
         supabase
           .from('business_canvas')
@@ -163,6 +320,7 @@ export const ProjectWorkspaceProvider: React.FC<{
             canvas_data: currentWorkspace,
             ...getWorkspaceMetadata(currentWorkspace),
             last_snapshot_at: now,
+            updated_at: now,
             row_version: nextVersion,
           })
           .eq('id', currentProjectId)
@@ -175,11 +333,50 @@ export const ProjectWorkspaceProvider: React.FC<{
 
       if (error) throw error;
 
-      if (!data) {
-        throw new Error('WORKSPACE_CONFLICT');
+      savedVersion = data?.row_version ?? null;
+
+      if (!savedVersion) {
+        const { data: latestRow, error: latestError } = await supabase
+          .from('business_canvas')
+          .select('row_version')
+          .eq('id', currentProjectId)
+          .eq('user_id', currentUser.id)
+          .is('deleted_at', null)
+          .maybeSingle();
+
+        if (latestError) throw latestError;
+
+        const latestVersion = latestRow?.row_version ?? currentVersion;
+        const retryVersion = latestVersion + 1;
+
+        const { data: retryData, error: retryError } = await withSupabaseRetry(() =>
+          supabase
+            .from('business_canvas')
+            .update({
+              canvas_data: currentWorkspace,
+              ...getWorkspaceMetadata(currentWorkspace),
+              last_snapshot_at: now,
+              updated_at: now,
+              row_version: retryVersion,
+            })
+            .eq('id', currentProjectId)
+            .eq('user_id', currentUser.id)
+            .eq('row_version', latestVersion)
+            .is('deleted_at', null)
+            .select('row_version')
+            .maybeSingle()
+        );
+
+        if (retryError) throw retryError;
+        savedVersion = retryData?.row_version ?? null;
+
+        if (!savedVersion) {
+          setSyncStatus('conflict');
+          return;
+        }
       }
 
-      activeProjectVersionRef.current = data.row_version ?? nextVersion;
+      activeProjectVersionRef.current = savedVersion;
 
       const shouldSnapshot =
         Date.now() - lastVersionSnapshotAtRef.current >= WORKSPACE_VERSION_SNAPSHOT_MS;
@@ -198,24 +395,39 @@ export const ProjectWorkspaceProvider: React.FC<{
       }
 
       setLastSyncedAt(Date.now());
-      setSyncStatus('saved');
-      localStorage.removeItem(WORKSPACE_PENDING_SYNC_KEY);
-    } catch (err) {
-      console.error('Workspace sync failed:', err);
-      setSyncStatus(err instanceof Error && err.message === 'WORKSPACE_CONFLICT' ? 'conflict' : 'failed');
-    } finally {
-      syncInFlightRef.current = false;
-      setIsSaving(false);
+      persistedRevisionRef.current = revisionToSave;
+
+      if (workspaceRevisionRef.current === revisionToSave) {
+        setSyncStatus('saved');
+        clearPendingSync(currentProjectId, currentUser.id);
+      } else {
+        setSyncStatus('pending');
+      }
+      sessionStorage.removeItem(getProjectsCacheKey(currentUser.id));
+      } catch (err) {
+        console.error('Workspace sync failed:', err);
+        setSyncStatus('failed');
+      } finally {
+        setIsSaving(false);
+      }
+    })();
+
+    syncInFlightPromiseRef.current = saveOperation;
+    await saveOperation;
+
+    if (syncInFlightPromiseRef.current === saveOperation) {
+      syncInFlightPromiseRef.current = null;
     }
+
   }, []);
 
   // Auto-sync to Supabase with a longer debounce. Local storage remains instant.
   useEffect(() => {
-    if (!user || !activeProjectId || syncStatus !== 'pending') return;
+    if (!user || !activeProjectId || (syncStatus !== 'pending' && syncStatus !== 'failed')) return;
 
     const timeout = setTimeout(() => {
       void flushWorkspace();
-    }, WORKSPACE_SYNC_DEBOUNCE_MS);
+    }, syncStatus === 'failed' ? 5000 : WORKSPACE_SYNC_DEBOUNCE_MS);
 
     return () => clearTimeout(timeout);
   }, [workspace, user, activeProjectId, syncStatus, flushWorkspace]);
@@ -242,13 +454,20 @@ export const ProjectWorkspaceProvider: React.FC<{
     };
   }, [syncStatus, flushWorkspace]);
 
-  const loadProject = async (id: string) => {
-    if (!user) return;
+  const loadProject = useCallback(async (id: string) => {
+    if (!user) return null;
     try {
+      if (activeProjectIdRef.current && activeProjectIdRef.current !== id) {
+        await flushWorkspace();
+        if (workspaceRevisionRef.current !== persistedRevisionRef.current) {
+          await flushWorkspace();
+        }
+      }
+
       const { data, error } = await withSupabaseRetry(() =>
         supabase
           .from('business_canvas')
-          .select('canvas_data, row_version')
+          .select('canvas_data, row_version, updated_at')
           .eq('id', id)
           .eq('user_id', user.id) // Verify ownership
           .is('deleted_at', null)
@@ -257,36 +476,80 @@ export const ProjectWorkspaceProvider: React.FC<{
         
       if (error) throw error;
       if (data && data.canvas_data) {
-        skipNextAutoSaveRef.current = true;
-        setWorkspace(deriveWorkspace({
+        const databaseWorkspace = deriveWorkspace({
           ...createInitialWorkspace(planSections),
           ...data.canvas_data as ProjectWorkspace
-        }));
+        });
+        const pendingSync = getPendingSync(id, user.id);
+        const databaseUpdatedAt = data.updated_at ? Date.parse(data.updated_at) : 0;
+        const shouldRecoverPending = Boolean(
+          pendingSync
+          && pendingSync.value.updatedAt > databaseUpdatedAt
+        );
+        const loadedWorkspace = shouldRecoverPending
+          ? deriveWorkspace({
+              ...createInitialWorkspace(planSections),
+              ...pendingSync!.value.workspace,
+            })
+          : databaseWorkspace;
+
+        skipNextAutoSaveRef.current = !shouldRecoverPending;
+        workspaceRef.current = loadedWorkspace;
+        workspaceRevisionRef.current = shouldRecoverPending ? 1 : 0;
+        persistedRevisionRef.current = 0;
+        setWorkspaceState(loadedWorkspace);
         setActiveProjectId(id);
         activeProjectVersionRef.current = data.row_version ?? 1;
         lastVersionSnapshotAtRef.current = Date.now();
-        setSyncStatus('saved');
-        setLastSyncedAt(Date.now());
-        localStorage.removeItem(WORKSPACE_PENDING_SYNC_KEY);
+        setSyncStatus(shouldRecoverPending ? 'pending' : 'saved');
+        setLastSyncedAt(databaseUpdatedAt || Date.now());
+
+        if (!shouldRecoverPending) {
+          clearPendingSync(id, user.id);
+        } else if (pendingSync?.key === LEGACY_WORKSPACE_PENDING_SYNC_KEY) {
+          localStorage.setItem(getPendingSyncKey(id), JSON.stringify(pendingSync.value));
+          localStorage.removeItem(LEGACY_WORKSPACE_PENDING_SYNC_KEY);
+        }
+
+        return loadedWorkspace;
       }
     } catch (err) {
       console.error('Error loading project', err);
     }
-  };
+    return null;
+  }, [flushWorkspace, planSections, user]);
 
-  const createProject = async (title: string, mode: string) => {
+  useEffect(() => {
+    const projectId = restoredProjectIdRef.current;
+    if (!user || !projectId) return;
+
+    restoredProjectIdRef.current = null;
+    void loadProject(projectId);
+  }, [loadProject, user]);
+
+  const createProject = useCallback(async (title: string, mode: string) => {
     if (!user) return null;
     try {
+      if (activeProjectIdRef.current) {
+        await flushWorkspace();
+        if (workspaceRevisionRef.current !== persistedRevisionRef.current) {
+          await flushWorkspace();
+        }
+      }
+
       const initial = createInitialWorkspace(planSections);
       initial.profile.name = title;
-      // You can store mode inside profile or elsewhere if needed
+      const initialWithMetadata = {
+        ...initial,
+        feasibilityModelType: mode,
+      };
       
       const { data, error } = await supabase
         .from('business_canvas')
         .insert([{
           user_id: user.id,
-          canvas_data: initial,
-          ...getWorkspaceMetadata(initial),
+          canvas_data: initialWithMetadata,
+          ...getWorkspaceMetadata(initialWithMetadata),
         }])
         .select('id, row_version')
         .single();
@@ -294,25 +557,57 @@ export const ProjectWorkspaceProvider: React.FC<{
       if (error) throw error;
       
       if (data) {
+        const createdWorkspace = deriveWorkspace(initialWithMetadata);
         skipNextAutoSaveRef.current = true;
-        setWorkspace(deriveWorkspace(initial));
+        workspaceRef.current = createdWorkspace;
+        workspaceRevisionRef.current = 0;
+        persistedRevisionRef.current = 0;
+        setWorkspaceState(createdWorkspace);
         setActiveProjectId(data.id);
         activeProjectVersionRef.current = data.row_version ?? 1;
         lastVersionSnapshotAtRef.current = Date.now();
         setSyncStatus('saved');
         setLastSyncedAt(Date.now());
-        localStorage.removeItem(WORKSPACE_PENDING_SYNC_KEY);
+        clearPendingSync(data.id, user.id);
+        sessionStorage.removeItem(getProjectsCacheKey(user.id));
         return data.id;
       }
     } catch (err) {
       console.error('Error creating project', err);
     }
     return null;
-  };
+  }, [flushWorkspace, planSections, user]);
 
-  const updateWorkspace = useCallback((updates: Partial<ProjectWorkspace>) => {
-    setWorkspace((current) => deriveWorkspace({ ...current, ...updates }));
-  }, []);
+  const clearActiveProject = useCallback((id?: string) => {
+    const currentProjectId = activeProjectIdRef.current;
+    if (id && currentProjectId !== id) return;
+
+    const currentUser = userRef.current;
+    if (currentProjectId && currentUser) {
+      clearPendingSync(currentProjectId, currentUser.id);
+    }
+
+    const initialWorkspace = deriveWorkspace(createInitialWorkspace(planSections));
+    workspaceRef.current = initialWorkspace;
+    activeProjectIdRef.current = null;
+    restoredProjectIdRef.current = null;
+    activeProjectVersionRef.current = null;
+    workspaceRevisionRef.current = 0;
+    persistedRevisionRef.current = 0;
+    skipNextAutoSaveRef.current = true;
+    localStorage.removeItem(ACTIVE_PROJECT_STORAGE_KEY);
+    setWorkspaceState(initialWorkspace);
+    setActiveProjectIdState(null);
+    setSyncStatus('idle');
+    setLastSyncedAt(null);
+  }, [planSections]);
+
+  const updateWorkspace = useCallback((updates: Partial<ProjectWorkspace> | ((current: ProjectWorkspace) => Partial<ProjectWorkspace>)) => {
+    setWorkspace((current) => ({
+      ...current,
+      ...(typeof updates === 'function' ? updates(current) : updates),
+    }));
+  }, [setWorkspace]);
 
   const updateProfile = useCallback((updates: Partial<ProjectWorkspace['profile']>) => {
     setWorkspace((current) =>
@@ -321,7 +616,7 @@ export const ProjectWorkspaceProvider: React.FC<{
         profile: { ...current.profile, ...updates },
       })
     );
-  }, []);
+  }, [setWorkspace]);
 
   const updateBrand = useCallback((updates: Partial<ProjectWorkspace['brand']>) => {
     setWorkspace((current) =>
@@ -330,21 +625,21 @@ export const ProjectWorkspaceProvider: React.FC<{
         brand: { ...current.brand, ...updates },
       })
     );
-  }, []);
+  }, [setWorkspace]);
 
   const setPlanSections = useCallback((sections: PlanSection[]) => {
     setWorkspace((current) => {
       if (current.planSections === sections) return current;
       return deriveWorkspace({ ...current, planSections: sections });
     });
-  }, []);
+  }, [setWorkspace]);
 
   const setStage = useCallback((stage: WorkspaceJourneyStage) => {
     setWorkspace((current) => {
       if (current.currentStage === stage) return current;
       return deriveWorkspace({ ...current, currentStage: stage });
     });
-  }, []);
+  }, [setWorkspace]);
 
   const toggleWeeklyPriority = useCallback((id: string) => {
     setWorkspace((current) =>
@@ -358,7 +653,7 @@ export const ProjectWorkspaceProvider: React.FC<{
         },
       })
     );
-  }, []);
+  }, [setWorkspace]);
 
   const cycleAutoTaskStatus = useCallback((id: string) => {
     setWorkspace((current) =>
@@ -379,7 +674,7 @@ export const ProjectWorkspaceProvider: React.FC<{
         },
       })
     );
-  }, []);
+  }, [setWorkspace]);
 
   const cycleFirstCustomerTaskStatus = useCallback((id: string) => {
     setWorkspace((current) =>
@@ -400,7 +695,7 @@ export const ProjectWorkspaceProvider: React.FC<{
         },
       })
     );
-  }, []);
+  }, [setWorkspace]);
 
   const toggleChecklistItem = useCallback((groupId: string, itemId: string) => {
     setWorkspace((current) =>
@@ -421,7 +716,7 @@ export const ProjectWorkspaceProvider: React.FC<{
         },
       })
     );
-  }, []);
+  }, [setWorkspace]);
 
   const value = useMemo<ProjectWorkspaceContextValue>(() => ({
     workspace,
@@ -437,6 +732,7 @@ export const ProjectWorkspaceProvider: React.FC<{
     toggleChecklistItem,
     loadProject,
     createProject,
+    clearActiveProject,
     flushWorkspace,
     isSaving,
     syncStatus,
@@ -444,6 +740,7 @@ export const ProjectWorkspaceProvider: React.FC<{
     activeProjectId,
   }), [
     workspace,
+    setWorkspace,
     updateWorkspace,
     updateProfile,
     updateBrand,
@@ -453,6 +750,9 @@ export const ProjectWorkspaceProvider: React.FC<{
     cycleAutoTaskStatus,
     cycleFirstCustomerTaskStatus,
     toggleChecklistItem,
+    loadProject,
+    createProject,
+    clearActiveProject,
     flushWorkspace,
     isSaving,
     syncStatus,

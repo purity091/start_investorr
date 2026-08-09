@@ -270,3 +270,87 @@ USING (auth.uid() = user_id);
 CREATE POLICY "Users can insert own security events"
 ON public.security_events FOR INSERT
 WITH CHECK (auth.uid() = user_id);
+
+ALTER TABLE public.notifications ENABLE ROW LEVEL SECURITY;
+DROP POLICY IF EXISTS "Users can read own notifications" ON public.notifications;
+DROP POLICY IF EXISTS "Users can update own notifications" ON public.notifications;
+DROP POLICY IF EXISTS "Users can delete own notifications" ON public.notifications;
+
+CREATE POLICY "Users can read own notifications"
+ON public.notifications FOR SELECT
+USING (auth.uid() = user_id);
+
+CREATE POLICY "Users can update own notifications"
+ON public.notifications FOR UPDATE
+USING (auth.uid() = user_id)
+WITH CHECK (auth.uid() = user_id);
+
+CREATE POLICY "Users can delete own notifications"
+ON public.notifications FOR DELETE
+USING (auth.uid() = user_id);
+
+CREATE OR REPLACE FUNCTION public.create_system_notification(
+    target_user_id UUID,
+    notification_type TEXT,
+    notification_category TEXT,
+    notification_title TEXT,
+    notification_message TEXT,
+    notification_link TEXT DEFAULT NULL,
+    notification_metadata JSONB DEFAULT '{}'::jsonb
+)
+RETURNS UUID
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+DECLARE
+    created_notification_id UUID;
+BEGIN
+    INSERT INTO public.notifications (user_id, type, category, title, message, link, metadata)
+    VALUES (
+        target_user_id,
+        notification_type,
+        notification_category,
+        notification_title,
+        notification_message,
+        notification_link,
+        COALESCE(notification_metadata, '{}'::jsonb)
+    )
+    RETURNING id INTO created_notification_id;
+
+    RETURN created_notification_id;
+END;
+$$;
+
+REVOKE ALL ON FUNCTION public.create_system_notification(UUID, TEXT, TEXT, TEXT, TEXT, TEXT, JSONB)
+FROM PUBLIC, anon, authenticated;
+GRANT EXECUTE ON FUNCTION public.create_system_notification(UUID, TEXT, TEXT, TEXT, TEXT, TEXT, JSONB)
+TO service_role;
+
+CREATE OR REPLACE FUNCTION public.notify_business_canvas_created()
+RETURNS TRIGGER
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+BEGIN
+    INSERT INTO public.notifications (user_id, type, category, title, message, link, metadata)
+    VALUES (
+        NEW.user_id,
+        'success',
+        'projects',
+        'تم إنشاء المشروع',
+        FORMAT('تم إنشاء مشروع "%s" وأصبح جاهزاً لإضافة بيانات الدراسة.', NEW.project_title),
+        FORMAT('/projects/%s/edit', NEW.id),
+        jsonb_build_object('project_id', NEW.id)
+    );
+
+    RETURN NEW;
+END;
+$$;
+
+DROP TRIGGER IF EXISTS business_canvas_created_notification ON public.business_canvas;
+CREATE TRIGGER business_canvas_created_notification
+AFTER INSERT ON public.business_canvas
+FOR EACH ROW
+EXECUTE FUNCTION public.notify_business_canvas_created();

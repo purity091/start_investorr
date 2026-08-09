@@ -4,6 +4,7 @@ import React, { createContext, useCallback, useContext, useEffect, useRef, useSt
 import { supabase } from '@/lib/supabase';
 import { withSupabaseRetry } from '@/lib/supabaseRetry';
 import { Session, User } from '@supabase/supabase-js';
+import { clearWorkspaceSessionCache } from '@/features/workspace/workspaceUtils';
 
 export interface UserProfile {
   id: string;
@@ -222,9 +223,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       // 2. Clear client-side Supabase state
       await supabase.auth.signOut();
 
-      // 3. Remove only auth-related keys — preserve workspace/project data
+      // 3. Remove account-scoped UI state so another user cannot see stale project data.
       const authKeys = ['khotta_active_tab', 'platform_feedback_prompted'];
       authKeys.forEach((key) => localStorage.removeItem(key));
+      clearWorkspaceSessionCache();
       
       // 4. Reset React state
       setSession(null);

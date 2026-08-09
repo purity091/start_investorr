@@ -80,10 +80,11 @@ const categoryLabels: Record<NotificationCategory, string> = {
 const getNotificationMeta = (type: Notification['type']) => notificationMeta[type];
 const getCategoryLabel = (category: NotificationCategory) => categoryLabels[category];
 
-export const useSystemNotifications = (options?: { limit?: number }) => {
+export const useSystemNotifications = (options?: { limit?: number; pollIntervalMs?: number }) => {
   const { user } = useAuth();
   const userId = user?.id;
   const limit = options?.limit;
+  const pollIntervalMs = options?.pollIntervalMs ?? 30000;
   const [notifications, setNotifications] = useState<SystemNotification[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -127,24 +128,14 @@ export const useSystemNotifications = (options?: { limit?: number }) => {
   useEffect(() => {
     if (!userId) return;
 
-    const channel = supabase
-      .channel(`notifications:${userId}`)
-      .on(
-        'postgres_changes',
-        {
-          event: '*',
-          schema: 'public',
-          table: 'notifications',
-          filter: `user_id=eq.${userId}`,
-        },
-        () => void loadNotifications()
-      )
-      .subscribe();
+    const timer = window.setInterval(() => {
+      void loadNotifications();
+    }, pollIntervalMs);
 
     return () => {
-      void supabase.removeChannel(channel);
+      window.clearInterval(timer);
     };
-  }, [loadNotifications, userId]);
+  }, [loadNotifications, pollIntervalMs, userId]);
 
   const markAsRead = useCallback(async (id: string) => {
     const { error } = await supabase

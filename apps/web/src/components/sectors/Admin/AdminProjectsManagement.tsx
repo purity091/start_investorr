@@ -182,7 +182,14 @@ export const AdminProjectsManagement: React.FC = () => {
     if (!pendingDeleteProject) return;
 
     try {
-      await supabase.from('business_canvas').update({ deleted_at: new Date().toISOString() }).eq('id', pendingDeleteProject.id);
+      const { data, error } = await supabase
+        .from('business_canvas')
+        .update({ deleted_at: new Date().toISOString() })
+        .eq('id', pendingDeleteProject.id)
+        .select('id')
+        .maybeSingle();
+      if (error) throw error;
+      if (!data) throw new Error('PROJECT_DELETE_NOT_APPLIED');
       setProjects(projects.filter(p => p.id !== pendingDeleteProject.id));
       setPendingDeleteProject(null);
     } catch (err) {

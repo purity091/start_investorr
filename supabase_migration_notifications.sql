@@ -77,3 +77,45 @@ BEGIN
   RETURN created_notification_id;
 END;
 $$;
+
+-- Only trusted backend code may create arbitrary user notifications.
+REVOKE ALL ON FUNCTION public.create_system_notification(UUID, TEXT, TEXT, TEXT, TEXT, TEXT, JSONB)
+FROM PUBLIC, anon, authenticated;
+GRANT EXECUTE ON FUNCTION public.create_system_notification(UUID, TEXT, TEXT, TEXT, TEXT, TEXT, JSONB)
+TO service_role;
+
+CREATE OR REPLACE FUNCTION public.notify_business_canvas_created()
+RETURNS TRIGGER
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+BEGIN
+  INSERT INTO public.notifications (
+    user_id,
+    type,
+    category,
+    title,
+    message,
+    link,
+    metadata
+  )
+  VALUES (
+    NEW.user_id,
+    'success',
+    'projects',
+    'تم إنشاء المشروع',
+    FORMAT('تم إنشاء مشروع "%s" وأصبح جاهزاً لإضافة بيانات الدراسة.', NEW.project_title),
+    FORMAT('/projects/%s/edit', NEW.id),
+    jsonb_build_object('project_id', NEW.id)
+  );
+
+  RETURN NEW;
+END;
+$$;
+
+DROP TRIGGER IF EXISTS business_canvas_created_notification ON public.business_canvas;
+CREATE TRIGGER business_canvas_created_notification
+AFTER INSERT ON public.business_canvas
+FOR EACH ROW
+EXECUTE FUNCTION public.notify_business_canvas_created();

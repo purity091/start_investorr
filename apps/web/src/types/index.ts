@@ -187,6 +187,8 @@ export interface WorkspaceFinancialEstimate {
 export interface ProjectWorkspace {
   id: string;
   updatedAt: string;
+  feasibilityModelType?: string;
+  feasibilityModels?: Record<string, Record<string, unknown>>;
   currentStage: WorkspaceJourneyStage;
   profile: WorkspaceProjectProfile;
   assumptions: string[];

@@ -33,6 +33,8 @@ import {
 } from '@/components/ui/dialog';
 import { Checkbox } from '@/components/ui/checkbox';
 import { cn } from '@/lib/utils';
+import { useAuth } from '@/features/auth/AuthContext';
+import { supabase } from '@/lib/supabase';
 import {
   getCategoryLabel,
   getNotificationMeta,
@@ -57,6 +59,7 @@ const filterLabels: Array<{ value: NotificationFilter; label: string }> = [
 ];
 
 export const Notifications: React.FC<NotificationsProps> = ({ setActiveTab }) => {
+  const { user } = useAuth();
   const {
     notifications,
     unreadCount,
@@ -73,11 +76,16 @@ export const Notifications: React.FC<NotificationsProps> = ({ setActiveTab }) =>
   const [searchQuery, setSearchQuery] = useState('');
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [actionError, setActionError] = useState<string | null>(null);
-  const [settings, setSettings] = useState({
-    emailProjects: true,
-    emailSecurity: true,
-    emailBilling: true,
-    weeklyDigest: false,
+  const [isSavingSettings, setIsSavingSettings] = useState(false);
+  const [settingsMessage, setSettingsMessage] = useState<string | null>(null);
+  const [settings, setSettings] = useState(() => {
+    const saved = user?.user_metadata?.notifications as Record<string, boolean> | undefined;
+    return {
+      emailProjects: saved?.notif_projects ?? true,
+      emailSecurity: saved?.notif_security ?? true,
+      emailBilling: saved?.notif_billing ?? true,
+      weeklyDigest: saved?.notif_weekly ?? true,
+    };
   });
 
   const filteredNotifications = useMemo(() => {
@@ -106,8 +114,41 @@ export const Notifications: React.FC<NotificationsProps> = ({ setActiveTab }) =>
   };
 
   const openNotificationLink = (notification: SystemNotification) => {
-    const tab = notification.link?.replace('/', '');
-    if (tab && setActiveTab) setActiveTab(tab);
+    const link = notification.link;
+    if (!link) return;
+
+    if (link.startsWith('/') && !link.startsWith('//')) {
+      window.location.assign(link);
+      return;
+    }
+
+    if (setActiveTab) setActiveTab(link);
+  };
+
+  const saveNotificationSettings = async () => {
+    if (!user || isSavingSettings) return;
+
+    setIsSavingSettings(true);
+    setSettingsMessage(null);
+    const currentSettings = user.user_metadata?.notifications as Record<string, boolean> | undefined;
+    const { error } = await supabase.auth.updateUser({
+      data: {
+        notifications: {
+          ...currentSettings,
+          notif_projects: settings.emailProjects,
+          notif_security: settings.emailSecurity,
+          notif_billing: settings.emailBilling,
+          notif_weekly: settings.weeklyDigest,
+        },
+      },
+    });
+
+    if (error) {
+      setSettingsMessage('تعذر حفظ تفضيلات التنبيهات. حاول مرة أخرى.');
+    } else {
+      setSettingsMessage('تم حفظ تفضيلات التنبيهات.');
+    }
+    setIsSavingSettings(false);
   };
 
   return (
@@ -163,7 +204,7 @@ export const Notifications: React.FC<NotificationsProps> = ({ setActiveTab }) =>
                     إعدادات التنبيهات
                   </DialogTitle>
                   <DialogDescription>
-                    هذه الإعدادات واجهية مؤقتة. تفضيلات الحساب الأساسية محفوظة من صفحة الإعدادات.
+                    اختر التنبيهات التي ترغب باستلامها على حسابك.
                   </DialogDescription>
                 </DialogHeader>
                 <div className="space-y-4 py-3">
@@ -184,8 +225,17 @@ export const Notifications: React.FC<NotificationsProps> = ({ setActiveTab }) =>
                     </label>
                   ))}
                 </div>
-                <div className="flex justify-end pt-2">
-                  <Button onClick={() => setIsSettingsOpen(false)} size="sm">
+                {settingsMessage ? (
+                  <p className={cn('text-sm font-medium', settingsMessage.startsWith('تم ') ? 'text-emerald-700' : 'text-destructive')}>
+                    {settingsMessage}
+                  </p>
+                ) : null}
+                <div className="flex justify-end gap-2 pt-2">
+                  <Button variant="outline" onClick={() => setIsSettingsOpen(false)} size="sm" disabled={isSavingSettings}>
+                    إغلاق
+                  </Button>
+                  <Button onClick={() => void saveNotificationSettings()} size="sm" disabled={isSavingSettings}>
+                    {isSavingSettings ? <Loader2 className="size-4 animate-spin" /> : null}
                     حفظ التفضيلات
                   </Button>
                 </div>
@@ -221,7 +271,7 @@ export const Notifications: React.FC<NotificationsProps> = ({ setActiveTab }) =>
         <Card className="border-destructive/40 bg-destructive/5 p-4 text-destructive">
           <p className="text-sm font-medium">
             {errorMessage
-              ? 'تعذر تحميل التنبيهات من قاعدة البيانات. تأكد من تطبيق supabase_migration_notifications.sql.'
+              ? 'خدمة التنبيهات غير متاحة مؤقتاً. حاول التحديث بعد قليل.'
               : actionError}
           </p>
         </Card>

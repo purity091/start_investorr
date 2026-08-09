@@ -5,6 +5,7 @@ import * as Renderers from "../components/QuestionRenderer";
 import { TOKENS, BaseCard } from "../result_components/CardDesignSystem";
 import { ProgressDots } from "../components/CommonUI";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { getHintForQuestion } from "./TabTemplate";
 
 interface StrategicPulseFormProps {
   onGenerate: (answers: any) => void;
@@ -164,7 +165,7 @@ export const StrategicPulseForm = ({ onGenerate }: StrategicPulseFormProps) => {
                       </TooltipTrigger>
                       <TooltipContent side="top" className="max-w-xs text-xs p-3 leading-relaxed font-medium bg-popover text-popover-foreground border border-border shadow-md">
                         <p className="font-bold text-primary mb-1 flex items-center gap-1.5"><Lucide.Lightbulb size={14} className="text-primary shrink-0" /><span>توضيح الخبراء:</span></p>
-                        <p>تساعد إجابة هذا السؤال على بناء المسار الاستراتيجي والتحليلي لمشروعك، وتغذية المحرك بالحسابات الدقيقة لدراسة الجدوى.</p>
+                        <p>{getHintForQuestion(currentQ)}</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>

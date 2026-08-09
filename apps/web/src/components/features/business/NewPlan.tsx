@@ -22,6 +22,7 @@ import SmartBeginnerPro from '../../../features/easy-mode/SmartBeginnerPro';
 import { Badge } from '../../ui/Badge';
 import { Button } from '../../ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../ui/Card';
+import { Input } from '../../ui/Input';
 import {
   Dialog,
   DialogContent,
@@ -37,11 +38,15 @@ import LeanStartupWizard from '@/features/business/LeanStartupWizard';
 import { useAuth } from '@/features/auth/AuthContext';
 import { supabase } from '@/lib/supabase';
 import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
+import { getProjectEditPath } from '@/features/workspace/workspaceNavigation';
 import { cn } from '@/lib/utils';
 
 type ToolMode = 'selection' | 'easy' | 'ai' | 'family' | 'bmc' | 'mit24' | 'lean';
 type IntroMode = Exclude<ToolMode, 'selection' | 'ai'>;
 type ProjectStatus = 'ready' | 'review' | 'draft';
+
+const isEditableMode = (value: unknown): value is IntroMode =>
+  value === 'family' || value === 'easy' || value === 'bmc' || value === 'mit24' || value === 'lean';
 
 type ToolIntro = {
   title: string;
@@ -312,12 +317,18 @@ const TOOL_CARDS: Array<{ mode: IntroMode; title: string; description: string; i
   { mode: 'lean', title: 'منهجية Lean Startup', description: 'دورة تفاعلية (تبني، تقيس، تتعلم) لاختبار الفرضيات قبل التنفيذ.', icon: RefreshCcw },
 ];
 
-const ToolIntroPanel: React.FC<{ mode: IntroMode; onStart: () => void; onBack?: () => void; onViewExample: () => void }> = ({ mode, onStart, onBack, onViewExample }) => {
+const ToolIntroPanel: React.FC<{
+  mode: IntroMode;
+  onStart: () => void;
+  onBack?: () => void;
+  onViewExample: () => void;
+  isStarting?: boolean;
+}> = ({ mode, onStart, onBack, onViewExample, isStarting = false }) => {
   const intro = TOOL_INTROS[mode];
   const IntroIcon = intro.icon;
 
   return (
-    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-3 py-2 sm:px-4 lg:px-5 text-right">
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-4 sm:py-6 sm:px-6 lg:px-8 text-right">
       {/* Header Info - Borderless and clean matching SmartBeginnerPro */}
       <div className="flex flex-col gap-2 bg-background px-0 py-1">
         <div className="flex items-start gap-3">
@@ -342,7 +353,12 @@ const ToolIntroPanel: React.FC<{ mode: IntroMode; onStart: () => void; onBack?: 
 
       {/* HERO INTERACTIVE CONTAINER: TABLE WITH INLINE "CREATE STUDY" ACTION */}
       <div className="space-y-2">
-        <ModeProjectsSection mode={mode} onStart={onStart} onViewExample={onViewExample} />
+        <ModeProjectsSection
+          mode={mode}
+          onStart={onStart}
+          onViewExample={onViewExample}
+          isStarting={isStarting}
+        />
       </div>
 
       {/* EXPLANATORY CARDS (الشروحات والتوضيحات) */}
@@ -370,12 +386,190 @@ export const NewPlan: React.FC<{
   setSubTabLabel: (label: string | null) => void;
   subTabLabel?: string | null;
   initialMode?: 'selection' | 'easy' | 'family' | 'bmc' | 'mit24' | 'lean';
-}> = ({ onStart, onBuildPlan, setSubTabLabel, initialMode = 'selection' }) => {
+  editProjectId?: string | null;
+  fallbackEditor?: React.ReactNode;
+}> = ({
+  onBuildPlan,
+  setSubTabLabel,
+  initialMode = 'selection',
+  editProjectId = null,
+  fallbackEditor,
+}) => {
+  const { createProject, loadProject, activeProjectId } = useProjectWorkspace();
   const [mode, setMode] = useState<ToolMode>(initialMode);
-  const [hasStarted, setHasStarted] = useState(initialMode === 'selection');
+  const [hasStarted, setHasStarted] = useState(initialMode === 'selection' && !editProjectId);
   const [isViewingExample, setIsViewingExample] = useState(false);
+  const [isStartingProject, setIsStartingProject] = useState(false);
+  const [isLoadingEditProject, setIsLoadingEditProject] = useState(Boolean(editProjectId));
+  const [useFallbackEditor, setUseFallbackEditor] = useState(false);
+  const [editProjectError, setEditProjectError] = useState<string | null>(null);
+  const [projectName, setProjectName] = useState('');
+  const [projectCreationError, setProjectCreationError] = useState<string | null>(null);
+  const [pendingStart, setPendingStart] = useState<
+    { type: 'mode'; mode: IntroMode } | { type: 'template'; template: Template } | null
+  >(null);
+  const canUseFallbackEditor = Boolean(fallbackEditor);
 
   const isIntroMode = mode === 'family' || mode === 'easy' || mode === 'mit24' || mode === 'bmc' || mode === 'lean';
+
+  useEffect(() => {
+    if (!editProjectId) return;
+
+    let cancelled = false;
+
+    void loadProject(editProjectId).then((loadedWorkspace) => {
+      if (cancelled) return;
+
+      const savedModes = Object.keys(loadedWorkspace?.feasibilityModels || {});
+      const projectMode = loadedWorkspace?.feasibilityModelType || savedModes[0];
+
+      if (!loadedWorkspace) {
+        setEditProjectError('تعذر العثور على المشروع أو لا تملك صلاحية الوصول إليه.');
+        setIsLoadingEditProject(false);
+        return;
+      }
+
+      if (!isEditableMode(projectMode)) {
+        if (canUseFallbackEditor) {
+          setUseFallbackEditor(true);
+          setHasStarted(true);
+          setIsLoadingEditProject(false);
+          return;
+        }
+
+        setEditProjectError('نوع نموذج هذا المشروع غير معروف أو غير قابل للتعديل من هذا المسار.');
+        setIsLoadingEditProject(false);
+        return;
+      }
+
+      setMode(projectMode);
+      setHasStarted(true);
+      setIsLoadingEditProject(false);
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [canUseFallbackEditor, editProjectId, loadProject]);
+
+  const startProject = () => {
+    if (!isIntroMode || isStartingProject) return;
+    const intro = TOOL_INTROS[mode as IntroMode];
+    setProjectName('');
+    setProjectCreationError(null);
+    setPendingStart({ type: 'mode', mode: mode as IntroMode });
+    setSubTabLabel(intro.title);
+  };
+
+  const startTemplateProject = (template: Template) => {
+    if (isStartingProject) return;
+    setProjectName('');
+    setProjectCreationError(null);
+    setPendingStart({ type: 'template', template });
+  };
+
+  const closeProjectNameDialog = (force = false) => {
+    if (isStartingProject && !force) return;
+    setPendingStart(null);
+    setProjectName('');
+    setProjectCreationError(null);
+  };
+
+  const confirmProjectCreation = async () => {
+    if (!pendingStart || isStartingProject) return;
+    const trimmedName = projectName.trim();
+    if (!trimmedName) return;
+
+    setIsStartingProject(true);
+    setProjectCreationError(null);
+    try {
+      const projectMode = pendingStart.type === 'mode' ? pendingStart.mode : pendingStart.template.id;
+      const projectId = await createProject(trimmedName, projectMode);
+
+      if (projectId) {
+        window.location.assign(getProjectEditPath(projectId));
+        return;
+      }
+
+      setProjectCreationError('تعذر إنشاء المشروع في قاعدة البيانات. تحقق من الاتصال ثم حاول مرة أخرى.');
+    } finally {
+      setIsStartingProject(false);
+    }
+  };
+
+  const projectNameDialog = (
+    <Dialog open={Boolean(pendingStart)} onOpenChange={(open) => !open && closeProjectNameDialog()}>
+      <DialogContent className="sm:max-w-[440px]" dir="rtl">
+        <DialogHeader className="text-right">
+          <DialogTitle>تسمية دراسة الجدوى</DialogTitle>
+          <DialogDescription>
+            اكتب اسم المشروع أولًا حتى يتم حفظ الدراسة في قاعدة البيانات وظهورها في صفحة مشاريعي.
+          </DialogDescription>
+        </DialogHeader>
+        <div className="space-y-2 py-2">
+          <Input
+            autoFocus
+            value={projectName}
+            onChange={(event) => setProjectName(event.target.value)}
+            onKeyDown={(event) => {
+              if (event.key === 'Enter') {
+                event.preventDefault();
+                void confirmProjectCreation();
+              }
+            }}
+            placeholder="مثال: منصة حجوزات العيادات"
+            className="h-11 text-right"
+          />
+          {projectCreationError ? (
+            <p role="alert" className="text-sm leading-6 text-destructive">
+              {projectCreationError}
+            </p>
+          ) : null}
+        </div>
+        <DialogFooter>
+          <Button onClick={() => void confirmProjectCreation()} disabled={!projectName.trim() || isStartingProject}>
+            {isStartingProject ? 'جاري الإنشاء...' : 'إنشاء الدراسة'}
+          </Button>
+          <Button variant="outline" onClick={() => closeProjectNameDialog()} disabled={isStartingProject}>
+            إلغاء
+          </Button>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+  );
+
+  if (isLoadingEditProject) {
+    return (
+      <div className="mx-auto flex min-h-[360px] w-full max-w-7xl items-center justify-center px-4" dir="rtl">
+        <div className="flex items-center gap-3 text-sm font-medium text-muted-foreground">
+          <RefreshCcw className="size-5 animate-spin" />
+          جاري تحميل المشروع من قاعدة البيانات...
+        </div>
+      </div>
+    );
+  }
+
+  if (editProjectError) {
+    return (
+      <div className="mx-auto w-full max-w-2xl px-4 py-10" dir="rtl">
+        <Card className="border-destructive/30 shadow-sm">
+          <CardHeader>
+            <CardTitle>تعذر فتح المشروع</CardTitle>
+            <CardDescription>{editProjectError}</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Button variant="outline" onClick={() => window.location.assign('/my-plans')}>
+              العودة إلى مشاريعي
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  if (useFallbackEditor && fallbackEditor) {
+    return <>{fallbackEditor}</>;
+  }
 
   if (isViewingExample && isIntroMode) {
     return <ExampleViewer mode={mode as IntroMode} onBack={() => setIsViewingExample(false)} />;
@@ -392,6 +586,7 @@ export const NewPlan: React.FC<{
   if ((mode === 'family' || mode === 'bmc' || mode === 'mit24') && hasStarted) {
     return (
       <IdeaCreation
+        key={activeProjectId || mode}
         initialMode={mode as CreationMode}
         onBuildPlan={onBuildPlan}
         onBack={() => {
@@ -405,16 +600,21 @@ export const NewPlan: React.FC<{
 
   if (isIntroMode && !hasStarted) {
     return (
-      <ToolIntroPanel
-        mode={mode as IntroMode}
-        onStart={() => setHasStarted(true)}
-        onBack={initialMode === 'selection' ? () => setMode('selection') : undefined}
-        onViewExample={() => setIsViewingExample(true)}
-      />
+      <>
+        <ToolIntroPanel
+          mode={mode as IntroMode}
+          onStart={startProject}
+          onBack={initialMode === 'selection' ? () => setMode('selection') : undefined}
+          onViewExample={() => setIsViewingExample(true)}
+          isStarting={isStartingProject}
+        />
+        {projectNameDialog}
+      </>
     );
   }
 
   return (
+    <>
     <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
       {/* Header */}
       <div className="flex flex-col gap-2 mb-1">
@@ -525,8 +725,9 @@ export const NewPlan: React.FC<{
                 <button
                   key={template.id}
                   type="button"
-                  onClick={() => onStart(template.id)}
-                  className="rounded-lg bg-muted/30 p-3 text-right transition-colors hover:bg-muted/60 border border-transparent hover:border-border/50"
+                  onClick={() => startTemplateProject(template)}
+                  disabled={isStartingProject}
+                  className="rounded-lg bg-muted/30 p-3 text-right transition-colors hover:bg-muted/60 border border-transparent hover:border-border/50 disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   <h4 className="mb-1 text-xs font-bold text-foreground">{template.title}</h4>
                   <p className="text-[11px] leading-5 text-muted-foreground">{template.description}</p>
@@ -537,6 +738,8 @@ export const NewPlan: React.FC<{
         </div>
       </div>
     </div>
+    {projectNameDialog}
+    </>
   );
 };
 
@@ -567,23 +770,33 @@ function ModeProjectsSection({
   mode,
   onStart,
   onViewExample,
+  isStarting = false,
 }: {
   mode: IntroMode;
   onStart: () => void;
   onViewExample: () => void;
+  isStarting?: boolean;
 }) {
   const intro = TOOL_INTROS[mode];
   const { user } = useAuth();
+  const { clearActiveProject } = useProjectWorkspace();
   const [projectsList, setProjectsList] = useState<SectionProject[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [reloadKey, setReloadKey] = useState(0);
   const [pendingDeleteProject, setPendingDeleteProject] = useState<SectionProject | null>(null);
   const [pendingShareProject, setPendingShareProject] = useState<SectionProject | null>(null);
   const [notice, setNotice] = useState<{ title: string; description: string } | null>(null);
 
   useEffect(() => {
     const fetchProjects = async () => {
-      if (!user) return;
+      if (!user) {
+        setProjectsList(SECTION_PROJECTS[mode]);
+        setIsLoading(false);
+        return;
+      }
       setIsLoading(true);
+      setLoadError(null);
       try {
         const { data, error } = await supabase
           .from('business_canvas')
@@ -596,29 +809,44 @@ function ModeProjectsSection({
 
         let realProjects: SectionProject[] = [];
         if (data) {
-          realProjects = data.map((row) => ({
+          realProjects = data
+            .filter((row) => {
+              const modelType = row.canvas_data?.feasibilityModelType
+                || Object.keys(row.canvas_data?.feasibilityModels || {})[0];
+              return modelType === mode;
+            })
+            .map((row) => ({
             id: row.id,
             name: row.project_title || 'مشروع بدون اسم',
             sector: row.sector_label || row.canvas_data?.profile?.sectorLabel || 'غير محدد',
             status: (row.current_stage || row.canvas_data?.currentStage) === 'execution' ? 'ready' : 'review',
             progress: row.readiness_score ?? row.canvas_data?.metrics?.readinessScore ?? 0,
             updated: new Date(row.updated_at).toLocaleDateString('ar-SA'),
-          }));
+            }));
         }
         
         // Show real projects plus the example projects for this mode
         setProjectsList([...realProjects, ...SECTION_PROJECTS[mode]]);
       } catch (err) {
         console.error('Error fetching projects:', err);
+        setProjectsList(SECTION_PROJECTS[mode]);
+        setLoadError('تعذر تحميل مشاريعك من قاعدة البيانات. يمكنك إعادة المحاولة دون فقد أي مدخلات.');
       } finally {
         setIsLoading(false);
       }
     };
 
     fetchProjects();
-  }, [mode, user]);
+  }, [mode, reloadKey, user]);
 
   const handleDelete = (project: SectionProject) => {
+    if (project.id.startsWith('example')) {
+      setNotice({
+        title: 'لا يمكن حذف المثال التجريبي',
+        description: 'الأمثلة جزء من دليل النموذج، ويمكن حذف المشاريع الحقيقية فقط.',
+      });
+      return;
+    }
     setPendingDeleteProject(project);
   };
 
@@ -633,17 +861,20 @@ function ModeProjectsSection({
           data: { user },
         } = await supabase.auth.getUser();
 
-        const { error } = await supabase
+        const { data, error } = await supabase
           .from('business_canvas')
           .update({ deleted_at: new Date().toISOString() })
           .eq('id', id)
-          .eq('user_id', user?.id ?? '');
+          .eq('user_id', user?.id ?? '')
+          .select('id')
+          .maybeSingle();
 
         if (error) throw error;
+        if (!data) throw new Error('PROJECT_DELETE_NOT_APPLIED');
       }
 
+      clearActiveProject(id);
       setProjectsList((prev) => prev.filter((p) => p.id !== id));
-      SECTION_PROJECTS[mode] = SECTION_PROJECTS[mode].filter((p) => p.id !== id);
       setPendingDeleteProject(null);
     } catch (err) {
       console.error('Error deleting project:', err);
@@ -708,20 +939,6 @@ function ModeProjectsSection({
     }
   };
 
-  const { loadProject } = useProjectWorkspace();
-
-  const handleOpenProject = async (project: SectionProject) => {
-    if (!project.id.startsWith('example')) {
-      await loadProject(project.id);
-    }
-    // Note: We need a way to navigate to the editor here if required,
-    // but NewPlan doesn't receive setActiveTab by default for this component.
-    // Instead we can dispatch the event AppShell uses to navigate:
-    window.dispatchEvent(new CustomEvent('khotta:navigate', { detail: { tab: 'editor', path: '/editor' } }));
-  };
-
-  const Icon = intro.icon;
-
   return (
     <>
     <Card className="shadow-none border border-border">
@@ -734,13 +951,29 @@ function ModeProjectsSection({
         </div>
 
         <div className="flex items-center gap-3 shrink-0">
-          <Button type="button" size="lg" className="px-6 font-bold text-sm shadow-sm gap-2" onClick={onStart}>
-            <Plus className="size-5" />
+          <Button type="button" size="lg" className="px-6 font-bold text-sm shadow-sm gap-2" onClick={onStart} disabled={isStarting}>
+            {isStarting ? <RefreshCcw className="size-5 animate-spin" /> : <Plus className="size-5" />}
             إنشاء دراسة عبر {intro.title}
           </Button>
         </div>
       </CardHeader>
       <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
+        {isLoading ? (
+          <div className="flex min-h-40 items-center justify-center gap-3 text-sm text-muted-foreground">
+            <RefreshCcw className="size-5 animate-spin" />
+            جاري تحميل المشاريع...
+          </div>
+        ) : (
+          <>
+        {loadError ? (
+          <div role="alert" className="mb-4 flex flex-col gap-3 rounded-md border border-destructive/30 bg-destructive/5 p-4 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-sm leading-6 text-destructive">{loadError}</p>
+            <Button type="button" variant="outline" size="sm" onClick={() => setReloadKey((value) => value + 1)}>
+              <RefreshCcw className="size-4" />
+              إعادة المحاولة
+            </Button>
+          </div>
+        ) : null}
         <div className="hidden overflow-hidden rounded-md lg:block">
           <Table dir="rtl">
             <TableHeader>
@@ -759,7 +992,6 @@ function ModeProjectsSection({
                   project={project} 
                   onDelete={handleDelete}
                   onShare={handleShare}
-                  onOpen={() => handleOpenProject(project)}
                   onViewExample={onViewExample}
                 />
               ))}
@@ -773,15 +1005,17 @@ function ModeProjectsSection({
               <div className="flex items-start justify-between gap-3">
                 <ProjectStatusBadge status={project.status} />
                 <div className="flex items-center gap-1">
-                  <Button
-                    variant="ghost"
-                    size="icon-sm"
-                    onClick={() => handleOpenProject(project)}
-                    title="تعديل"
-                    className="text-muted-foreground hover:text-primary"
-                  >
-                    <Pencil className="size-4" />
-                  </Button>
+                  {project.id.startsWith('example') ? (
+                    <Button variant="ghost" size="icon-sm" onClick={onViewExample} title="عرض المثال" className="text-muted-foreground hover:text-primary">
+                      <Sparkles className="size-4" />
+                    </Button>
+                  ) : (
+                    <Button asChild variant="ghost" size="icon-sm" className="text-muted-foreground hover:text-primary">
+                      <a href={getProjectEditPath(project.id)} title="تعديل">
+                        <Pencil className="size-4" />
+                      </a>
+                    </Button>
+                  )}
                   <Button
                     variant="ghost"
                     size="icon-sm"
@@ -812,6 +1046,8 @@ function ModeProjectsSection({
             </Card>
           ))}
         </div>
+          </>
+        )}
       </CardContent>
     </Card>
     <ProjectActionDialog
@@ -899,13 +1135,11 @@ function ProjectRow({
   project,
   onDelete,
   onShare,
-  onOpen,
   onViewExample,
 }: {
   project: SectionProject;
   onDelete: (project: SectionProject) => void;
   onShare: (project: SectionProject) => void;
-  onOpen: () => void;
   onViewExample: () => void;
 }) {
   const isExample = project.id.startsWith('example');
@@ -939,14 +1173,10 @@ function ProjectRow({
             </Button>
           ) : (
             <>
-              <Button
-                variant="ghost"
-                size="icon-sm"
-                onClick={onOpen}
-                title="تعديل"
-                className="text-muted-foreground hover:text-primary"
-              >
-                <Pencil className="size-4" />
+              <Button asChild variant="ghost" size="icon-sm" className="text-muted-foreground hover:text-primary">
+                <a href={getProjectEditPath(project.id)} title="تعديل">
+                  <Pencil className="size-4" />
+                </a>
               </Button>
               <Button
                 variant="ghost"

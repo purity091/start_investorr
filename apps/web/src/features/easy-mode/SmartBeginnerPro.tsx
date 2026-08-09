@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   AlertTriangle,
   ArrowRight,
@@ -11,6 +11,7 @@ import {
   Gauge,
   Layers,
   LineChart,
+  Loader2,
   ShieldAlert,
   Target,
   Users,
@@ -33,6 +34,7 @@ import {
 } from '@/components/ui/table';
 import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
+import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
 
 type FieldType = 'text' | 'textarea' | 'number';
 type Answers = Record<string, string | string[]>;
@@ -329,8 +331,8 @@ function ProjectDashboard({
   const dangerGaps = gaps.filter(g => g.type === 'danger').length;
 
   return (
-    <div className="min-h-screen bg-background" dir="rtl">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-3 py-3 sm:px-4 lg:px-5">
+    <div className="w-full bg-background" dir="rtl">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
         <Card className="border-0 bg-background shadow-none">
           <CardHeader className="px-0 pt-0">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
@@ -702,14 +704,19 @@ function PrototypeCard({ title, value }: { title: string; value: string | string
   );
 }
 
-function MetricCard({ label, value }: { label: string; value: string }) {
+function MetricCard({ label, value, icon: Icon, tone }: { label: string; value: string; icon?: React.ElementType; tone?: string }) {
   return (
-    <Card className="border-0 bg-muted/40 shadow-none">
-      <CardContent className="p-3">
-        <div className="text-xs font-medium text-muted-foreground">{label}</div>
-        <div className="mt-2 text-2xl font-semibold text-foreground">{value}</div>
-      </CardContent>
-    </Card>
+    <div className="flex items-center gap-3 rounded-xl border border-border/80 bg-card p-3.5 shadow-2xs">
+      {Icon && (
+        <div className="flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary shrink-0">
+          <Icon className="size-4" />
+        </div>
+      )}
+      <div className="min-w-0 flex-1">
+        <div className="text-[11px] font-medium text-muted-foreground">{label}</div>
+        <div className={cn("text-lg font-bold tracking-tight text-foreground", tone)}>{value}</div>
+      </div>
+    </div>
   );
 }
 
@@ -722,20 +729,41 @@ function FieldControl({
   value: string;
   onChange: (value: string) => void;
 }) {
-  const commonClassName = 'bg-background text-right leading-7';
+  const isFilled = Boolean(value && value.trim());
 
   return (
-    <div className="space-y-2">
-      <label className="flex items-center gap-2 text-sm font-semibold text-foreground">
-        {field.label}
-        {field.required ? <span className="text-destructive">*</span> : null}
-      </label>
+    <div className={cn(
+      "space-y-2.5 rounded-xl border bg-card p-4 sm:p-5 shadow-2xs transition-all",
+      isFilled ? "border-primary/40 bg-card" : "border-border/80 hover:border-border"
+    )}>
+      <div className="flex items-center justify-between gap-2">
+        <label className="flex items-center gap-2 text-sm font-bold text-foreground">
+          <span>{field.label}</span>
+          {field.required ? (
+            <Badge variant="outline" className="bg-destructive/10 text-destructive border-destructive/20 text-[10px] px-1.5 py-0 font-semibold">
+              مطلوب
+            </Badge>
+          ) : (
+            <Badge variant="outline" className="bg-muted text-muted-foreground border-border text-[10px] px-1.5 py-0 font-medium">
+              اختياري
+            </Badge>
+          )}
+        </label>
+        {isFilled && (
+          <span className="flex items-center gap-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-bold">
+            <CheckCircle2 className="size-3.5" />
+            تم الإدخال
+          </span>
+        )}
+      </div>
+
       {field.type === 'textarea' ? (
         <Textarea
           value={value}
           onChange={(event) => onChange(event.target.value)}
           placeholder={field.placeholder}
-          className={cn('min-h-24 resize-none', commonClassName)}
+          rows={3}
+          className="min-h-24 w-full resize-none rounded-lg border border-input bg-background p-3 text-xs sm:text-sm font-medium text-foreground transition-all focus:outline-none focus:ring-2 focus:ring-primary/20 placeholder:text-muted-foreground/60 leading-relaxed"
         />
       ) : (
         <Input
@@ -743,17 +771,77 @@ function FieldControl({
           value={value}
           onChange={(event) => onChange(event.target.value)}
           placeholder={field.placeholder}
-          className={commonClassName}
+          className="w-full rounded-lg border border-input bg-background p-3 text-xs sm:text-sm font-medium text-foreground transition-all focus:outline-none focus:ring-2 focus:ring-primary/20 placeholder:text-muted-foreground/60"
         />
       )}
     </div>
   );
 }
 
+function SaveStatusBadge({ status, lastSaved }: { status: 'saving' | 'saved' | 'failed' | 'conflict'; lastSaved: string | null }) {
+  if (status === 'saving') {
+    return (
+      <Badge variant="outline" className="bg-amber-500/10 text-amber-700 dark:text-amber-400 border-amber-500/30 font-bold px-3 py-1.5 text-xs gap-2 animate-pulse">
+        <Loader2 className="size-3.5 animate-spin text-amber-600" />
+        <span>جاري حفظ التغييرات...</span>
+      </Badge>
+    );
+  }
+
+  if (status === 'failed') {
+    return (
+      <Badge variant="outline" className="gap-1.5 border-destructive/30 bg-destructive/10 px-3 py-1.5 text-xs font-bold text-destructive">
+        <AlertTriangle className="size-3.5" />
+        <span>تعذر الحفظ، جارٍ إعادة المحاولة</span>
+      </Badge>
+    );
+  }
+
+  if (status === 'conflict') {
+    return (
+      <Badge variant="outline" className="gap-1.5 border-destructive/30 bg-destructive/10 px-3 py-1.5 text-xs font-bold text-destructive">
+        <AlertTriangle className="size-3.5" />
+        <span>تعارض في الحفظ، التعديلات محفوظة محليًا</span>
+      </Badge>
+    );
+  }
+
+  return (
+    <Badge variant="outline" className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/30 font-bold px-3 py-1.5 text-xs gap-1.5 shadow-2xs">
+      <CheckCircle2 className="size-3.5 text-emerald-600 dark:text-emerald-400" />
+      <span>تم الحفظ تلقائياً {lastSaved ? `(${lastSaved})` : ''}</span>
+    </Badge>
+  );
+}
+
 export default function SmartBeginnerPro() {
-  const [phase, setPhase] = useState<'form' | 'dashboard'>('form');
-  const [stepIndex, setStepIndex] = useState(0);
-  const [answers, setAnswers] = useState<Answers>({});
+  const { workspace, updateWorkspace, syncStatus, lastSyncedAt } = useProjectWorkspace();
+  type ExtendedWorkspace = typeof workspace & {
+    feasibilityModels?: {
+      easy?: {
+        phase?: 'form' | 'dashboard';
+        stepIndex?: number;
+        answers?: Answers;
+      };
+      [key: string]: unknown;
+    };
+  };
+  const extWorkspace = workspace as ExtendedWorkspace;
+  const savedModel = extWorkspace.feasibilityModels?.easy;
+
+  const [phase, setPhase] = useState<'form' | 'dashboard'>(savedModel?.phase ?? 'form');
+  const [stepIndex, setStepIndex] = useState(savedModel?.stepIndex ?? 0);
+  const [answers, setAnswers] = useState<Answers>(savedModel?.answers ?? {});
+  const saveStatus = syncStatus === 'conflict'
+    ? 'conflict'
+    : syncStatus === 'failed'
+      ? 'failed'
+    : syncStatus === 'saving' || syncStatus === 'pending'
+      ? 'saving'
+      : 'saved';
+  const lastSaved = lastSyncedAt
+    ? new Date(lastSyncedAt).toLocaleTimeString('ar-SA', { hour: '2-digit', minute: '2-digit', second: '2-digit' })
+    : null;
 
   const currentStep = PRO_STEPS[stepIndex];
   const completedCount = getCompletedCount(answers);
@@ -761,6 +849,20 @@ export default function SmartBeginnerPro() {
   const isLastStep = stepIndex === PRO_STEPS.length - 1;
   const currentOptions = answers[`${currentStep.id}.options`];
   const StepIcon = currentStep.icon;
+
+  // Keep the in-memory workspace current; the provider debounces database writes.
+  useEffect(() => {
+    updateWorkspace((current) => ({
+        feasibilityModels: {
+          ...current.feasibilityModels,
+          easy: { phase, stepIndex, answers },
+        },
+        profile: {
+          ...current.profile,
+          name: getFieldValue(answers, 'executive_summary', 'name') || current.profile.name,
+        },
+      }));
+  }, [answers, phase, stepIndex, updateWorkspace]);
 
   const updateField = (fieldId: string, value: string) => {
     setAnswers((prev) => ({ ...prev, [answerKey(currentStep.id, fieldId)]: value }));
@@ -801,104 +903,167 @@ export default function SmartBeginnerPro() {
   }
 
   return (
-    <div className="min-h-screen bg-background" dir="rtl">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-3 py-3 sm:px-4 lg:px-5">
-        <Card className="border-0 bg-background shadow-none">
-          <CardHeader className="px-0 pt-0">
-            <div className="flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
-              <div className="space-y-3 text-right">
-                <Badge variant="secondary" className="w-fit rounded-md px-3 py-1">
+    <div className="w-full bg-background" dir="rtl">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
+        {/* Corporate Wizard Header */}
+        <div className="rounded-2xl border border-border/80 bg-card p-5 sm:p-6 shadow-2xs space-y-4">
+          <div className="flex flex-col gap-4 lg:flex-row-reverse lg:items-center lg:justify-between">
+            <div className="space-y-2 text-right">
+              <div className="flex items-center gap-2 flex-wrap">
+                <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20 font-bold px-3 py-1 text-xs">
                   النموذج الاحترافي
                 </Badge>
-                <div className="space-y-2">
-                  <CardTitle className="text-2xl leading-tight sm:text-3xl">
-                    ورشة احترافية لبناء النموذج الأولي لدراسة الجدوى
-                  </CardTitle>
-                  <CardDescription className="line-clamp-3 max-w-3xl text-sm leading-6">
-                    إدخال منظم على طريقة دراسات الجدوى الاحترافية: حقول محددة، فرضيات واضحة، أرقام أولية، مخاطر، وخطة تحقق. المخرج النهائي لوحة مشروع كاملة يمكن البناء عليها مباشرة.
-                  </CardDescription>
-                </div>
+                <Badge variant="outline" className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20 font-bold px-2.5 py-0.5 text-xs gap-1">
+                  <CheckCircle2 className="size-3.5" />
+                  <span>ورشة تفاعلية متكاملة</span>
+                </Badge>
+                <SaveStatusBadge status={saveStatus} lastSaved={lastSaved} />
               </div>
-
-              <div className="grid w-full gap-3 sm:grid-cols-3 xl:w-[560px]">
-                <MetricCard label="المرحلة الحالية" value={`${stepIndex + 1}`} />
-                <MetricCard label="أقسام مكتملة" value={`${completedCount}/${PRO_STEPS.length}`} />
-                <MetricCard label="جاهزية الدراسة" value={`${readiness.score}%`} />
-              </div>
+              <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-foreground tracking-tight">
+                ورشة بناء النموذج الأولي ودراسة الجدوى الاحترافية
+              </h1>
+              <p className="max-w-3xl text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                أدخل بيانات مشروعك عبر الخطوات التفاعلية أدناه لبناء ملف استثماري متكامل ولوحة قيادة استراتيجية للمشروع.
+              </p>
             </div>
-          </CardHeader>
-        </Card>
 
-        <div className="grid gap-4 xl:grid-cols-[280px_1fr]">
-          <Card className="border-0 bg-muted/20 shadow-none">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-base">
-                <ClipboardList className="size-5" />
-                سلسلة الدراسة
-              </CardTitle>
-              <CardDescription className={cn('leading-6', readiness.tone)}>
-                {readiness.label}
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-2">
-              {PRO_STEPS.map((step, index) => {
-                const Icon = step.icon;
-                const active = index === stepIndex;
-                const complete = getStepCompletion(step, answers) >= 0.5;
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 shrink-0 lg:w-[480px]">
+              <MetricCard label="جاهزية الدراسة" value={`${readiness.score}%`} icon={Gauge} tone={readiness.tone} />
+              <MetricCard label="الأقسام المكتملة" value={`${completedCount} من ${PRO_STEPS.length}`} icon={ClipboardList} />
+              <MetricCard label="المرحلة الحالية" value={`خطوة ${stepIndex + 1}`} icon={Target} />
+            </div>
+          </div>
+        </div>
 
-                return (
-                  <button
-                    key={step.id}
-                    type="button"
-                    onClick={() => setStepIndex(index)}
-                    className={cn(
-                      'flex w-full items-center gap-3 rounded-xl px-3 py-3 text-right text-sm transition-colors',
-                      active ? 'bg-background text-foreground shadow-sm' : 'text-muted-foreground hover:bg-background/70',
-                    )}
-                  >
-                    <span className={cn('flex size-8 items-center justify-center rounded-lg', active ? 'bg-primary text-primary-foreground' : 'bg-background')}>
-                      <Icon className="size-4" />
-                    </span>
-                    <span className="min-w-0 flex-1 truncate font-medium">{step.shortTitle}</span>
-                    {complete ? <CheckCircle2 className="size-4 text-primary" /> : null}
-                  </button>
-                );
-              })}
-            </CardContent>
-          </Card>
+        {/* Wizard Main Grid: Stepper Navigation (Sidebar) + Active Step Form */}
+        <div className="grid gap-6 lg:grid-cols-[1fr_300px]">
+          {/* Stepper Navigation Sidebar */}
+          <div className="space-y-4">
+            <Card className="border border-border/80 bg-card shadow-2xs overflow-hidden">
+              <CardHeader className="bg-muted/40 p-4 border-b border-border/60">
+                <div className="flex items-center justify-between">
+                  <CardTitle className="flex items-center gap-2 text-sm font-bold text-foreground">
+                    <ClipboardList className="size-4 text-primary" />
+                    خطوات التكويين
+                  </CardTitle>
+                  <span className="text-xs font-bold text-muted-foreground">
+                    {completedCount}/{PRO_STEPS.length}
+                  </span>
+                </div>
+                <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-muted">
+                  <div
+                    className="h-full rounded-full bg-primary transition-all duration-300"
+                    style={{ width: `${(completedCount / PRO_STEPS.length) * 100}%` }}
+                  />
+                </div>
+              </CardHeader>
 
-          <Card className="border-0 bg-muted/20 shadow-none">
-            <CardHeader className="gap-3 p-4">
-              <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-                <div className="flex items-start gap-3">
-                  <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-background text-primary shadow-sm">
-                    <StepIcon className="size-5" />
+              <CardContent className="p-2 space-y-1">
+                {PRO_STEPS.map((step, index) => {
+                  const active = index === stepIndex;
+                  const complete = getStepCompletion(step, answers) >= 0.5;
+
+                  return (
+                    <button
+                      key={step.id}
+                      type="button"
+                      onClick={() => setStepIndex(index)}
+                      className={cn(
+                        'flex w-full items-center gap-3 rounded-xl p-3 text-right text-xs sm:text-sm transition-all border cursor-pointer',
+                        active
+                          ? 'bg-primary/10 text-primary border-primary/40 font-bold shadow-2xs'
+                          : 'bg-card border-transparent text-muted-foreground hover:bg-accent/60 hover:text-foreground'
+                      )}
+                    >
+                      <span className={cn(
+                        'flex size-8 shrink-0 items-center justify-center rounded-lg font-bold text-xs transition-colors',
+                        active
+                          ? 'bg-primary text-primary-foreground'
+                          : complete
+                            ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
+                            : 'bg-muted text-muted-foreground'
+                      )}>
+                        {complete ? <CheckCircle2 className="size-4" /> : index + 1}
+                      </span>
+
+                      <div className="min-w-0 flex-1 text-right">
+                        <div className="font-bold truncate text-foreground">{step.shortTitle}</div>
+                        <div className="text-[10px] text-muted-foreground truncate">{step.fields.length} حقول تفاعلية</div>
+                      </div>
+
+                      {complete && (
+                        <Badge variant="outline" className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20 text-[10px] px-1.5 py-0 font-bold shrink-0">
+                          مكتمل
+                        </Badge>
+                      )}
+                    </button>
+                  );
+                })}
+              </CardContent>
+            </Card>
+
+            <div className="rounded-xl border border-border/70 bg-card p-4 text-xs space-y-2">
+              <div className="flex items-center gap-2 font-bold text-foreground">
+                <ShieldAlert className="size-4 text-amber-500 shrink-0" />
+                <span>حالة الجاهزية الحالية:</span>
+              </div>
+              <p className={cn("leading-relaxed font-semibold", readiness.tone)}>{readiness.label}</p>
+              <p className="text-muted-foreground text-[11px] leading-relaxed">{readiness.summary}</p>
+            </div>
+          </div>
+
+          {/* Active Step Form Area */}
+          <Card className="border border-border/80 bg-card shadow-2xs space-y-6">
+            <CardHeader className="border-b border-border/60 p-5 sm:p-6 space-y-4">
+              <div className="flex flex-col gap-4 sm:flex-row-reverse sm:items-center sm:justify-between">
+                <div className="flex items-start gap-3.5">
+                  <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary border border-primary/20 shadow-2xs">
+                    <StepIcon className="size-6" />
                   </div>
                   <div className="space-y-1">
-                    <CardTitle className="text-lg sm:text-xl">{currentStep.title}</CardTitle>
-                    <CardDescription className="leading-6">{currentStep.description}</CardDescription>
+                    <div className="flex items-center gap-2">
+                      <Badge variant="outline" className="text-[10px] font-bold">
+                        الخطوة {stepIndex + 1} من {PRO_STEPS.length}
+                      </Badge>
+                      {getStepCompletion(currentStep, answers) >= 0.5 && (
+                        <Badge variant="outline" className="bg-emerald-500/10 text-emerald-600 border-emerald-500/20 text-[10px] font-bold">
+                          قسم مكتمل
+                        </Badge>
+                      )}
+                    </div>
+                    <CardTitle className="text-lg sm:text-xl lg:text-2xl font-bold tracking-tight">{currentStep.title}</CardTitle>
+                    <CardDescription className="text-xs sm:text-sm leading-relaxed">{currentStep.description}</CardDescription>
                   </div>
                 </div>
-                <Badge variant="outline" className="w-fit rounded-md">
-                  {stepIndex + 1} من {PRO_STEPS.length}
-                </Badge>
               </div>
 
-              <div className="h-2 overflow-hidden rounded-full bg-background">
-                <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${((stepIndex + 1) / PRO_STEPS.length) * 100}%` }} />
+              {/* Progress bar across current step */}
+              <div className="space-y-1.5">
+                <div className="flex items-center justify-between text-xs text-muted-foreground font-medium">
+                  <span>مستوى إنجاز القسم:</span>
+                  <span className="font-bold text-foreground">{Math.round(getStepCompletion(currentStep, answers) * 100)}%</span>
+                </div>
+                <div className="h-2 overflow-hidden rounded-full bg-muted">
+                  <div
+                    className="h-full rounded-full bg-primary transition-all duration-300"
+                    style={{ width: `${getStepCompletion(currentStep, answers) * 100}%` }}
+                  />
+                </div>
               </div>
             </CardHeader>
 
-            <CardContent className="space-y-4 p-4 pt-0">
-              <div className="rounded-xl bg-background p-4">
-                <div className="mb-2 flex items-center gap-2 text-sm font-semibold">
-                  <Target className="size-4" />
-                  ملاحظة احترافية
+            <CardContent className="p-5 sm:p-6 pt-0 space-y-6">
+              {/* Expert Advice Note */}
+              <div className="rounded-xl border border-primary/20 bg-primary/5 p-4 flex items-start gap-3">
+                <Target className="size-5 text-primary shrink-0 mt-0.5" />
+                <div className="space-y-1 min-w-0 flex-1">
+                  <h4 className="text-xs font-bold text-primary">توصية الخبراء لهذا القسم:</h4>
+                  <p className="text-xs leading-relaxed text-foreground/90 font-medium">{currentStep.professionalNote}</p>
                 </div>
-                <p className="text-xs leading-6 text-muted-foreground">{currentStep.professionalNote}</p>
               </div>
 
-              <div className="grid gap-3 lg:grid-cols-2">
+              {/* Input Fields */}
+              <div className="grid gap-4 lg:grid-cols-2">
                 {currentStep.fields.map((field) => (
                   <FieldControl
                     key={field.id}
@@ -909,9 +1074,13 @@ export default function SmartBeginnerPro() {
                 ))}
               </div>
 
+              {/* Options Pills Selector if present */}
               {currentStep.options?.length ? (
-                <div className="space-y-3">
-                  <div className="text-sm font-semibold text-foreground">{currentStep.optionsLabel}</div>
+                <div className="space-y-3 rounded-xl border border-border/70 bg-card p-4 sm:p-5 shadow-2xs">
+                  <div className="flex items-center gap-2 text-sm font-bold text-foreground">
+                    <Layers className="size-4 text-primary" />
+                    <span>{currentStep.optionsLabel || "خيارات توضيحية إضافية"}</span>
+                  </div>
                   <div className="flex flex-wrap gap-2">
                     {currentStep.options.map((option) => {
                       const active = Array.isArray(currentOptions) && currentOptions.includes(option);
@@ -922,13 +1091,14 @@ export default function SmartBeginnerPro() {
                           type="button"
                           onClick={() => updateOption(option)}
                           className={cn(
-                            'rounded-md px-3 py-2 text-sm font-medium transition-colors',
+                            'rounded-xl px-3.5 py-2 text-xs font-bold transition-all border cursor-pointer flex items-center gap-1.5',
                             active
-                              ? 'bg-primary text-primary-foreground'
-                              : 'bg-background text-muted-foreground hover:text-foreground',
+                              ? 'bg-primary text-primary-foreground border-primary shadow-2xs'
+                              : 'bg-background text-foreground border-border hover:bg-accent/60'
                           )}
                         >
-                          {option}
+                          {active && <CheckCircle2 className="size-3.5" />}
+                          <span>{option}</span>
                         </button>
                       );
                     })}
@@ -938,22 +1108,31 @@ export default function SmartBeginnerPro() {
 
               <Separator />
 
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <div className="text-xs leading-6 text-muted-foreground">
-                  الحقول المعلّمة بنجمة هي الحد الأدنى لجعل هذا القسم قابلاً للاستخدام في دراسة جدوى احترافية.
+              {/* Footer Control Buttons */}
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between pt-2">
+                <div className="flex items-center gap-2">
+                  <SaveStatusBadge status={saveStatus} lastSaved={lastSaved} />
+                  <span className="text-[11px] text-muted-foreground hidden md:inline font-medium">
+                    (تتم أتمتة الحفظ فور كل إدخال)
+                  </span>
                 </div>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex items-center gap-2 flex-wrap">
                   <Button
                     type="button"
                     variant="outline"
                     onClick={() => setStepIndex((current) => Math.max(0, current - 1))}
                     disabled={stepIndex === 0}
+                    className="gap-2 font-bold cursor-pointer"
                   >
                     <ArrowRight className="size-4" />
-                    السابق
+                    <span>الخطوة السابقة</span>
                   </Button>
-                  <Button type="button" onClick={goNext}>
-                    {isLastStep ? 'عرض لوحة المشروع' : 'المرحلة التالية'}
+                  <Button
+                    type="button"
+                    onClick={goNext}
+                    className="gap-2 font-bold cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90"
+                  >
+                    <span>{isLastStep ? 'عرض لوحة المشروع النهائية' : 'الخطوة التالية'}</span>
                     <ChevronLeft className="size-4" />
                   </Button>
                 </div>
@@ -961,6 +1140,14 @@ export default function SmartBeginnerPro() {
             </CardContent>
           </Card>
         </div>
+      </div>
+
+      {/* Floating Sticky Auto-Save Visual Notification */}
+      <div className="fixed bottom-5 left-5 z-50 hidden sm:flex items-center gap-2 rounded-2xl border border-border/80 bg-card/95 p-2.5 px-4 shadow-xl backdrop-blur-md transition-all">
+        <SaveStatusBadge status={saveStatus} lastSaved={lastSaved} />
+        <span className="text-xs font-semibold text-foreground border-r border-border/60 pr-2.5 mr-1">
+          مشروعك آمن ويتم تحديثه لحظياً
+        </span>
       </div>
     </div>
   );

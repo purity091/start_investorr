@@ -20,6 +20,7 @@ import {
   Copy,
   Check,
   Globe,
+  Layers,
   Lock,
   ExternalLink,
 } from 'lucide-react';
@@ -32,6 +33,7 @@ import { Input } from '@/components/ui/Input';
 import { EmptyState, ErrorState, NoResultsState } from '@/components/ui/PageStates';
 import { useAuth } from '@/features/auth/AuthContext';
 import { supabase } from '@/lib/supabase';
+import { getProjectEditPath } from '@/features/workspace/workspaceNavigation';
 import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
@@ -55,7 +57,7 @@ import {
 import { cn } from '@/lib/utils';
 
 type ProjectStatus = 'ready' | 'review' | 'draft';
-type ProjectType = 'easy' | 'pro' | 'mit24' | 'bmc';
+type ProjectType = 'easy' | 'pro' | 'mit24' | 'bmc' | 'lean' | 'other';
 type TypeFilter = 'all' | ProjectType;
 type StatusFilter = 'all' | ProjectStatus;
 
@@ -75,6 +77,7 @@ interface Project {
   marketCap: string;
   isFavorite: boolean;
   isMockExample?: boolean;
+  modelType?: string | null;
   is_public?: boolean;
   share_token?: string | null;
 }
@@ -87,6 +90,8 @@ type BusinessCanvasProjectRow = {
   readiness_score: number | null;
   validation_score: number | null;
   execution_score: number | null;
+  feasibilityModelType?: string | null;
+  feasibilityModels?: Record<string, unknown> | null;
   profile?: { sectorLabel?: string | null } | null;
   currentStage?: string | null;
   metrics?: {
@@ -95,6 +100,8 @@ type BusinessCanvasProjectRow = {
     executionScore?: number | null;
   } | null;
   canvas_data?: {
+    feasibilityModelType?: string | null;
+    feasibilityModels?: Record<string, unknown> | null;
     profile?: { sectorLabel?: string | null } | null;
     currentStage?: string | null;
     metrics?: {
@@ -136,6 +143,16 @@ const PROJECT_TYPE_META: Record<
     shortLabel: 'BMC',
     icon: Workflow,
   },
+  lean: {
+    label: 'منهجية Lean Startup',
+    shortLabel: 'Lean',
+    icon: RefreshCcw,
+  },
+  other: {
+    label: 'خطة أعمال عامة',
+    shortLabel: 'عام',
+    icon: Layers,
+  },
 };
 
 const STATUS_META: Record<
@@ -165,6 +182,8 @@ const TYPE_OPTIONS: Array<{ id: TypeFilter; label: string }> = [
   { id: 'pro', label: PROJECT_TYPE_META.pro.label },
   { id: 'mit24', label: PROJECT_TYPE_META.mit24.label },
   { id: 'bmc', label: PROJECT_TYPE_META.bmc.label },
+  { id: 'lean', label: PROJECT_TYPE_META.lean.label },
+  { id: 'other', label: PROJECT_TYPE_META.other.label },
 ];
 
 const STATUS_OPTIONS: Array<{ id: StatusFilter; label: string }> = [
@@ -177,6 +196,40 @@ const STATUS_OPTIONS: Array<{ id: StatusFilter; label: string }> = [
 const MOCK_PROJECTS: Project[] = [];
 
 const PROJECTS_CACHE_TTL_MS = 60 * 1000;
+
+const getProjectType = (modelType: string | null): ProjectType => {
+  switch (modelType) {
+    case 'family':
+      return 'easy';
+    case 'easy':
+      return 'pro';
+    case 'mit24':
+      return 'mit24';
+    case 'bmc':
+      return 'bmc';
+    case 'lean':
+      return 'lean';
+    default:
+      return 'other';
+  }
+};
+
+const getProjectEditTab = (project: Project) => {
+  switch (project.modelType) {
+    case 'family':
+      return 'new-plan-family';
+    case 'easy':
+      return 'new-plan-pro';
+    case 'bmc':
+      return 'new-plan-bmc';
+    case 'mit24':
+      return 'new-plan-mit24';
+    case 'lean':
+      return 'new-plan-lean';
+    default:
+      return 'editor';
+  }
+};
 
 const getProjectsCacheKey = (userId: string) => `khotta_projects_cache_${userId}`;
 
@@ -214,6 +267,7 @@ interface MyProjectsProps {
 
 export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
   const { user } = useAuth();
+  const { clearActiveProject } = useProjectWorkspace();
   const [projectsList, setProjectsList] = useState<Project[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [loadError, setLoadError] = useState<string | null>(null);
@@ -246,7 +300,7 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
     try {
       const { data, error } = await supabase
         .from('business_canvas')
-        .select('id, project_title, sector_label, current_stage, readiness_score, validation_score, execution_score, canvas_data->profile, canvas_data->currentStage, canvas_data->metrics, updated_at, is_public, share_token')
+        .select('id, project_title, sector_label, current_stage, readiness_score, validation_score, execution_score, canvas_data->>feasibilityModelType, canvas_data->feasibilityModels, canvas_data->profile, canvas_data->currentStage, canvas_data->metrics, updated_at, is_public, share_token')
         .eq('user_id', user.id)
         .is('deleted_at', null)
         .order('updated_at', { ascending: false })
@@ -259,12 +313,26 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
           const profile = row.profile || row.canvas_data?.profile;
           const currentStage = row.currentStage || row.canvas_data?.currentStage;
           const metrics = row.metrics || row.canvas_data?.metrics;
+          const modelType = row.feasibilityModelType
+            ?? Object.keys(row.feasibilityModels || {})[0]
+            ?? row.canvas_data?.feasibilityModelType
+            ?? Object.keys(row.canvas_data?.feasibilityModels || {})[0]
+            ?? null;
+          const hasProgress = Boolean(
+            (row.readiness_score ?? metrics?.readinessScore ?? 0)
+            || (row.validation_score ?? metrics?.validationScore ?? 0)
+            || (row.execution_score ?? metrics?.executionScore ?? 0)
+          );
           return {
             id: row.id,
             name: row.project_title || 'مشروع بدون اسم',
             sector: row.sector_label || profile?.sectorLabel || 'غير محدد',
-            type: 'pro' as ProjectType,
-            status: (row.current_stage || currentStage) === 'execution' ? 'ready' : 'review',
+            type: getProjectType(modelType),
+            status: (row.current_stage || currentStage) === 'execution'
+              ? 'ready'
+              : hasProgress
+                ? 'review'
+                : 'draft',
             progress: {
               market: row.validation_score ?? metrics?.validationScore ?? 0,
               product: row.readiness_score ?? metrics?.readinessScore ?? 0,
@@ -275,6 +343,7 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
             marketCap: '-',
             isFavorite: false,
             isMockExample: false,
+            modelType,
             is_public: row.is_public,
             share_token: row.share_token,
           };
@@ -340,12 +409,16 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
     if (!pendingDeleteProject) return;
 
     try {
-      const { error } = await supabase
+      const { data, error } = await supabase
         .from('business_canvas')
         .update({ deleted_at: new Date().toISOString() })
         .eq('id', pendingDeleteProject.id)
-        .eq('user_id', user?.id ?? '');
+        .eq('user_id', user?.id ?? '')
+        .select('id')
+        .maybeSingle();
       if (error) throw error;
+      if (!data) throw new Error('PROJECT_DELETE_NOT_APPLIED');
+      clearActiveProject(pendingDeleteProject.id);
       setProjectsList((prev) => {
         const nextProjects = prev.filter((p) => p.id !== pendingDeleteProject.id);
         if (user?.id) writeProjectsCache(user.id, nextProjects);
@@ -439,7 +512,7 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
               </CardDescription>
             </div>
 
-            <Button size="lg" onClick={() => setActiveTab?.('new-plan-pro')}>
+            <Button size="lg" onClick={() => setActiveTab?.('new-plan')}>
               <Plus className="size-4" />
               مشروع جديد
             </Button>
@@ -624,13 +697,13 @@ function ProjectsTable({
   onDelete: (id: string, name: string) => void;
   onShare: (project: Project) => void;
 }) {
-  const { loadProject } = useProjectWorkspace();
-
-  const handleOpenProject = async (project: Project) => {
-    if (!project.isMockExample) {
-      await loadProject(project.id);
+  const handleOpenProject = (project: Project) => {
+    if (project.isMockExample) {
+      setActiveTab?.(getProjectEditTab(project));
+      return;
     }
-    setActiveTab?.('editor');
+
+    window.location.assign(getProjectEditPath(project.id));
   };
 
   return (
@@ -699,6 +772,7 @@ function ProjectTableRow({
 }) {
   const [isCopied, setIsCopied] = useState(false);
   const ProjectIcon = PROJECT_TYPE_META[project.type].icon;
+  const editHref = project.isMockExample ? null : getProjectEditPath(project.id);
 
   const handleCopyLink = async (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -725,13 +799,22 @@ function ProjectTableRow({
             <ProjectIcon className="size-5 text-muted-foreground" />
           </div>
           <div className="min-w-0 flex-1 text-right">
-            <button
-              type="button"
-              onClick={onOpen}
-              className="block max-w-[260px] truncate text-sm font-bold leading-5 text-foreground hover:text-primary hover:underline"
-            >
-              {project.name}
-            </button>
+            {editHref ? (
+              <a
+                href={editHref}
+                className="block max-w-[260px] truncate text-sm font-bold leading-5 text-foreground hover:text-primary hover:underline"
+              >
+                {project.name}
+              </a>
+            ) : (
+              <button
+                type="button"
+                onClick={onOpen}
+                className="block max-w-[260px] truncate text-sm font-bold leading-5 text-foreground hover:text-primary hover:underline"
+              >
+                {project.name}
+              </button>
+            )}
             <p className="mt-0.5 truncate text-[13px] font-medium leading-5 text-muted-foreground">
               {project.sector} <span className="mx-1 text-muted-foreground/40">•</span> {project.marketCap}
             </p>
@@ -742,15 +825,23 @@ function ProjectTableRow({
 
       <TableCell className="py-4">
         <div className="flex items-center gap-1 opacity-100">
-          <Button
-            variant="ghost"
-            size="icon-sm"
-            onClick={onOpen}
-            title="تعديل المشروع"
-            className="size-8 text-muted-foreground hover:bg-muted hover:text-primary"
-          >
-            <Pencil className="size-4" />
-          </Button>
+          {editHref ? (
+            <Button asChild variant="ghost" size="icon-sm" className="size-8 text-muted-foreground hover:bg-muted hover:text-primary">
+              <a href={editHref} title="تعديل المشروع">
+                <Pencil className="size-4" />
+              </a>
+            </Button>
+          ) : (
+            <Button
+              variant="ghost"
+              size="icon-sm"
+              onClick={onOpen}
+              title="تعديل المشروع"
+              className="size-8 text-muted-foreground hover:bg-muted hover:text-primary"
+            >
+              <Pencil className="size-4" />
+            </Button>
+          )}
           <Button
             variant="ghost"
             size="icon-sm"
@@ -825,13 +916,13 @@ function ProjectsMobileList({
   onDelete: (id: string, name: string) => void;
   onShare: (project: Project) => void;
 }) {
-  const { loadProject } = useProjectWorkspace();
-
-  const handleOpenProject = async (project: Project) => {
-    if (!project.id.startsWith('p') && !project.id.startsWith('example')) {
-      await loadProject(project.id);
+  const handleOpenProject = (project: Project) => {
+    if (project.id.startsWith('p') || project.id.startsWith('example')) {
+      setActiveTab?.(getProjectEditTab(project));
+      return;
     }
-    setActiveTab?.('editor');
+
+    window.location.assign(getProjectEditPath(project.id));
   };
 
   return (
@@ -841,15 +932,23 @@ function ProjectsMobileList({
           <div className="flex items-start justify-between gap-3">
             <ProjectStatusBadge status={project.status} />
             <div className="flex items-center gap-1">
-              <Button
-                variant="ghost"
-                size="icon-sm"
-                onClick={() => handleOpenProject(project)}
-                title="تعديل"
-                className="text-muted-foreground hover:text-primary"
-              >
-                <Pencil className="size-4" />
-              </Button>
+              {!project.id.startsWith('p') && !project.id.startsWith('example') ? (
+                <Button asChild variant="ghost" size="icon-sm" className="text-muted-foreground hover:text-primary">
+                  <a href={getProjectEditPath(project.id)} title="تعديل">
+                    <Pencil className="size-4" />
+                  </a>
+                </Button>
+              ) : (
+                <Button
+                  variant="ghost"
+                  size="icon-sm"
+                  onClick={() => handleOpenProject(project)}
+                  title="تعديل"
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  <Pencil className="size-4" />
+                </Button>
+              )}
               <Button
                 variant="ghost"
                 size="icon-sm"
@@ -892,9 +991,15 @@ function ProjectsMobileList({
             <ProgressSummary project={project} />
           </div>
 
-          <Button className="mt-4 w-full" onClick={() => handleOpenProject(project)}>
-            فتح المشروع
-          </Button>
+          {!project.id.startsWith('p') && !project.id.startsWith('example') ? (
+            <Button asChild className="mt-4 w-full">
+              <a href={getProjectEditPath(project.id)}>فتح المشروع</a>
+            </Button>
+          ) : (
+            <Button className="mt-4 w-full" onClick={() => handleOpenProject(project)}>
+              فتح المشروع
+            </Button>
+          )}
         </Card>
       ))}
     </div>
@@ -959,12 +1064,14 @@ function ProjectShareModal({
   const [isPublic, setIsPublic] = useState(false);
   const [copied, setCopied] = useState(false);
   const [isUpdating, setIsUpdating] = useState(false);
+  const [shareError, setShareError] = useState<string | null>(null);
 
   useEffect(() => {
     if (project) {
       const timer = window.setTimeout(() => {
         setIsPublic(Boolean(project.is_public));
         setCopied(false);
+        setShareError(null);
       }, 0);
       return () => window.clearTimeout(timer);
     }
@@ -976,8 +1083,9 @@ function ProjectShareModal({
   const shareUrl = typeof window !== 'undefined' ? `${window.location.origin}/share/${shareId}` : '';
 
   const handleTogglePublic = async (checked: boolean) => {
-    setIsPublic(checked);
+    const previousValue = isPublic;
     setIsUpdating(true);
+    setShareError(null);
     try {
       if (!project.isMockExample) {
         const response = await fetch('/api/projects/publish', {
@@ -995,8 +1103,11 @@ function ProjectShareModal({
       } else {
         onUpdatePublicStatus?.(project.id, checked);
       }
+      setIsPublic(checked);
     } catch (err) {
       console.error('Failed to update public status:', err);
+      setIsPublic(previousValue);
+      setShareError('تعذر تحديث خصوصية المشروع. لم يتم تغيير حالته في قاعدة البيانات.');
     } finally {
       setIsUpdating(false);
     }
@@ -1004,11 +1115,13 @@ function ProjectShareModal({
 
   const handleCopy = async () => {
     try {
+      setShareError(null);
       await navigator.clipboard.writeText(shareUrl);
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     } catch (err) {
       console.error('Copy failed:', err);
+      setShareError('تعذر نسخ الرابط تلقائيًا. حدده من الحقل وانسخه يدويًا.');
     }
   };
 
@@ -1123,6 +1236,11 @@ function ProjectShareModal({
               قم بتفعيل الوضع <strong>العام</strong> لإظهار وتوليد رابط المشاركة القابل للنسخ.
             </div>
           )}
+          {shareError ? (
+            <p role="alert" className="text-sm leading-6 text-destructive">
+              {shareError}
+            </p>
+          ) : null}
         </div>
 
         <DialogFooter className="sm:justify-start">

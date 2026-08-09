@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Textarea } from '@/components/ui/textarea';
+import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
 
 export type CreationMode = 'ai' | 'family' | 'scratch' | 'bmc' | 'mit24';
 
@@ -31,19 +32,95 @@ export const IdeaCreation: React.FC<{
   onBuildPlan?: () => void;
   initialMode?: CreationMode;
 }> = ({ onBack, onBuildPlan, initialMode }) => {
+  const { workspace, updateWorkspace, flushWorkspace } = useProjectWorkspace();
   const [activeMode] = useState<CreationMode>(initialMode || 'ai');
-  const [step, setStep] = useState<'input' | 'processing' | 'result'>('input');
-  const [prompt, setPrompt] = useState('');
-  const [ideaData, setIdeaData] = useState({
+  const savedModel = (workspace as typeof workspace & {
+    feasibilityModels?: Record<string, {
+      step?: 'input' | 'processing' | 'result';
+      currentStep?: number;
+      prompt?: string;
+      ideaData?: {
+        nickname: string;
+        simpleProblem: string;
+        grandmaExplanation: string;
+        firstUser: string;
+        moneyModel: string;
+      };
+    }>;
+  }).feasibilityModels?.[initialMode || 'ai'];
+  const [step, setStep] = useState<'input' | 'processing' | 'result'>(savedModel?.step ?? 'input');
+  const [prompt, setPrompt] = useState(savedModel?.prompt ?? '');
+  const [ideaData, setIdeaData] = useState(savedModel?.ideaData ?? {
     nickname: '',
     simpleProblem: '',
     grandmaExplanation: '',
     firstUser: '',
     moneyModel: '',
   });
+  const [familyStep, setFamilyStep] = useState(savedModel?.currentStep ?? 0);
+  const stepRef = useRef(step);
+  const promptRef = useRef(prompt);
+  const ideaDataRef = useRef(ideaData);
+  const familyStepRef = useRef(familyStep);
   const [stages, setStages] = useState<CreationStage[]>(INITIAL_STAGES);
   const [activeStageIndex, setActiveStageIndex] = useState(0);
   const resultTimeoutRef = useRef<number | null>(null);
+
+  const persistModel = (next: {
+    step?: 'input' | 'processing' | 'result';
+    currentStep?: number;
+    prompt?: string;
+    ideaData?: typeof ideaData;
+  }) => {
+    const nextStep = next.step ?? stepRef.current;
+    const nextFamilyStep = next.currentStep ?? familyStepRef.current;
+    const nextPrompt = next.prompt ?? promptRef.current;
+    const nextIdeaData = next.ideaData ?? ideaDataRef.current;
+
+    updateWorkspace((current) => ({
+      feasibilityModels: {
+        ...current.feasibilityModels,
+        [activeMode]: {
+          ...current.feasibilityModels?.[activeMode],
+          step: nextStep,
+          currentStep: nextFamilyStep,
+          prompt: nextPrompt,
+          ideaData: nextIdeaData,
+        },
+      },
+      profile: {
+        ...current.profile,
+        name: nextIdeaData.nickname || current.profile.name,
+        opportunitySummary: nextIdeaData.grandmaExplanation || nextPrompt || current.profile.opportunitySummary,
+      },
+    }));
+  };
+
+  const updateStep = (nextStep: 'input' | 'processing' | 'result') => {
+    stepRef.current = nextStep;
+    setStep(nextStep);
+    persistModel({ step: nextStep });
+  };
+
+  const updatePrompt = (nextPrompt: string) => {
+    promptRef.current = nextPrompt;
+    setPrompt(nextPrompt);
+    persistModel({ prompt: nextPrompt });
+  };
+
+  const updateIdeaData = (updates: Partial<typeof ideaData>) => {
+    const nextIdeaData = { ...ideaDataRef.current, ...updates };
+    ideaDataRef.current = nextIdeaData;
+    setIdeaData(nextIdeaData);
+    persistModel({ ideaData: nextIdeaData });
+  };
+
+  const updateFamilyStep = (nextFamilyStep: number) => {
+    familyStepRef.current = nextFamilyStep;
+    setFamilyStep(nextFamilyStep);
+    persistModel({ currentStep: nextFamilyStep });
+    void flushWorkspace();
+  };
 
   useEffect(() => {
     if (step !== 'processing') return;
@@ -58,7 +135,7 @@ export const IdeaCreation: React.FC<{
         } else {
           window.clearInterval(interval);
           resultTimeoutRef.current = window.setTimeout(() => {
-            setStep('result');
+            updateStep('result');
             resultTimeoutRef.current = null;
           }, 500);
         }
@@ -76,7 +153,7 @@ export const IdeaCreation: React.FC<{
   }, [activeStageIndex, step]);
 
   const resetFlow = () => {
-    setStep('input');
+    updateStep('input');
     setStages(INITIAL_STAGES);
     setActiveStageIndex(0);
   };
@@ -85,18 +162,24 @@ export const IdeaCreation: React.FC<{
     return (
       <FamilyFriendsMode
         data={ideaData}
-        onChange={(data) => setIdeaData((prev) => ({ ...prev, ...data }))}
-        onComplete={() => setStep('processing')}
+        currentStep={familyStep}
+        onChange={updateIdeaData}
+        onStepChange={updateFamilyStep}
+        onSave={() => void flushWorkspace()}
+        onComplete={() => {
+          updateStep('processing');
+          void flushWorkspace();
+        }}
       />
     );
   }
 
   if (step === 'input' && activeMode === 'bmc') {
-    return <BusinessModelCanvas onComplete={() => setStep('processing')} />;
+    return <BusinessModelCanvas onComplete={() => updateStep('processing')} />;
   }
 
   if (step === 'input' && activeMode === 'mit24') {
-    return <MIT24Mode onComplete={() => setStep('processing')} />;
+    return <MIT24Mode onComplete={() => updateStep('processing')} />;
   }
 
   return (
@@ -136,7 +219,7 @@ export const IdeaCreation: React.FC<{
                 <>
                   <Textarea
                     value={prompt}
-                    onChange={(event) => setPrompt(event.target.value)}
+                    onChange={(event) => updatePrompt(event.target.value)}
                     rows={5}
                     className="min-h-[150px] resize-y leading-7"
                     placeholder="مثال: منصة تساعد أصحاب المتاجر الصغيرة على إدارة الطلبات والمخزون والتوصيل من لوحة واحدة..."
@@ -149,13 +232,13 @@ export const IdeaCreation: React.FC<{
                           type="button"
                           variant="outline"
                           size="sm"
-                          onClick={() => setPrompt((value) => (value ? `${value} ${tag}` : tag))}
+                          onClick={() => updatePrompt(prompt ? `${prompt} ${tag}` : tag)}
                         >
                           {tag}
                         </Button>
                       ))}
                     </div>
-                    <Button disabled={prompt.trim().length < 10} onClick={() => setStep('processing')} className="sm:w-fit">
+                    <Button disabled={prompt.trim().length < 10} onClick={() => updateStep('processing')} className="sm:w-fit">
                       <Wand2 className="size-4" />
                       تحليل الفكرة
                     </Button>

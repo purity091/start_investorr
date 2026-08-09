@@ -22,6 +22,9 @@ export const getSectionIcon = (title: string) => {
   return entry ? entry[1].icon : SECTION_CONFIG.default.icon;
 };
 
+const renderSectionIcon = (title: string, className: string) =>
+  React.createElement(getSectionIcon(title), { className });
+
 interface BusinessPlanEditorProps {
   sections: PlanSection[];
   onSectionUpdate: (id: string, updates: Partial<PlanSection>) => void;
@@ -85,8 +88,6 @@ export const BusinessPlanEditor: React.FC<BusinessPlanEditorProps> = ({
     );
   }
 
-  const ActiveIcon = getSectionIcon(activeSection.title);
-
   return (
     <main className="app-page-shell-wide space-y-6 text-right" dir="rtl">
       <section className="rounded-xl bg-card p-4 sm:p-5 shadow-sm ring-1 ring-border/60">
@@ -141,7 +142,6 @@ export const BusinessPlanEditor: React.FC<BusinessPlanEditorProps> = ({
           </CardHeader>
           <CardContent className="space-y-1 p-4 sm:p-6 pt-0 sm:pt-0">
             {sections.map((section) => {
-              const Icon = getSectionIcon(section.title);
               const isActive = section.id === activeSection.id;
               return (
                 <Button
@@ -153,7 +153,7 @@ export const BusinessPlanEditor: React.FC<BusinessPlanEditorProps> = ({
                     setEditingId(null);
                   }}
                 >
-                  <Icon className="size-4 shrink-0" />
+                  {renderSectionIcon(section.title, 'size-4 shrink-0')}
                   <span className="min-w-0 flex-1 truncate">{section.title}</span>
                   {section.isCompleted && <CheckCircle2 className="size-4 shrink-0 text-emerald-600" />}
                 </Button>
@@ -167,7 +167,7 @@ export const BusinessPlanEditor: React.FC<BusinessPlanEditorProps> = ({
             <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
               <div className="flex items-start gap-3">
                 <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-muted text-foreground">
-                  <ActiveIcon className="size-5" />
+                  {renderSectionIcon(activeSection.title, 'size-5')}
                 </div>
                 <div>
                   <CardTitle>{activeSection.title}</CardTitle>

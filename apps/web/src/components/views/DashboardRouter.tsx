@@ -21,6 +21,7 @@ import { Profile } from './Profile';
 import { MobileSiteMap } from './MobileSiteMap';
 import { useProjectWorkspace } from '../../features/workspace/ProjectWorkspaceContext';
 import { FeatureErrorBoundary } from '@/components/common/FeatureErrorBoundary';
+import { getProjectIdFromEditPath } from '@/utils/routes';
 
 import { User, PlanSection } from '../../types';
 
@@ -387,6 +388,28 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
         return <AdminSecurityDashboard />;
       case 'my-plans':
         return <MyProjects setActiveTab={setActiveTab} />;
+      case 'project-edit': {
+        const projectId = getProjectIdFromEditPath(window.location.pathname);
+        return (
+          <NewPlan
+            key={`project-edit-${projectId || 'missing'}`}
+            editProjectId={projectId}
+            onStart={(id) => id === 'easy' ? setActiveTab('strategic-dashboard') : setActiveTab('editor')}
+            onBuildPlan={() => setActiveTab('workspace')}
+            setSubTabLabel={typeof setSubTabLabel === 'function' ? setSubTabLabel : (() => {})}
+            fallbackEditor={(
+              <BusinessPlanEditor
+                sections={sections}
+                onSectionUpdate={handleSectionUpdate}
+                expandedSectionId={expandedSectionId}
+                onSectionExpand={onSectionExpand}
+                setActiveTab={setActiveTab}
+                onWorkspaceSync={setPlanSections}
+              />
+            )}
+          />
+        );
+      }
       case 'proven-projects':
         return <ProvenProjectsGallery setSubTabLabel={setSubTabLabel} />;
       case 'failed-projects':
@@ -422,6 +445,16 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
             />
           );
         case 'new-plan-pro':
+          return (
+            <NewPlan
+              key="new-plan-pro"
+              initialMode="easy"
+              onStart={() => setActiveTab('strategic-dashboard')}
+              onBuildPlan={() => setActiveTab('workspace')}
+              setSubTabLabel={typeof setSubTabLabel === 'function' ? setSubTabLabel : (() => {})}
+              subTabLabel="النموذج الاحترافي"
+            />
+          );
         case 'strategic-dashboard':
           return <ResultPage />;
         case 'new-plan-mit24':

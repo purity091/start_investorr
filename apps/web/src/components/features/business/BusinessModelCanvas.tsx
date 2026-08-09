@@ -32,6 +32,8 @@ import { Input } from '../../ui/Input';
 import { Textarea } from '../../ui/textarea';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../../ui/tooltip';
 import { cn } from '../../../lib/utils';
+import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
+import { getProjectEditPath } from '@/features/workspace/workspaceNavigation';
 
 type CanvasKey =
   | 'customerSegments'
@@ -512,9 +514,34 @@ function BmcBlockCard({
 export const BusinessModelCanvas: React.FC<{
   onComplete: (data: BmcData) => void;
 }> = ({ onComplete }) => {
+  const {
+    workspace,
+    updateWorkspace,
+    flushWorkspace,
+    activeProjectId: workspaceProjectId,
+    createProject: createWorkspaceProject,
+  } = useProjectWorkspace();
+  const savedBmc = workspace.feasibilityModels?.bmc as {
+    projects?: BmcProject[];
+    activeProjectId?: string;
+  } | undefined;
   const [projects, setProjects] = useState<BmcProject[]>(() => {
+    if (savedBmc?.projects?.length) return savedBmc.projects;
+
+    if (workspaceProjectId) {
+      const initialProject = createProject(1);
+      initialProject.brief.name = workspace.profile.name;
+      return [initialProject];
+    }
+
+    if (typeof window === 'undefined') return [createProject(1)];
+
     const saved = localStorage.getItem(STORAGE_KEY);
-    if (!saved) return [createProject(1)];
+    if (!saved) {
+      const initialProject = createProject(1);
+      initialProject.brief.name = workspace.profile.name;
+      return [initialProject];
+    }
     try {
       const parsed = JSON.parse(saved) as BmcProject[];
       return parsed.length > 0 ? parsed : [createProject(1)];
@@ -523,8 +550,13 @@ export const BusinessModelCanvas: React.FC<{
     }
   });
   const [activeProjectId, setActiveProjectId] = useState<string>(() => {
+    if (savedBmc?.activeProjectId) return savedBmc.activeProjectId;
+    if (savedBmc?.projects?.[0]) return savedBmc.projects[0].id;
+    if (workspaceProjectId) return projects[0]?.id ?? '';
+    if (typeof window === 'undefined') return projects[0]?.id ?? '';
+
     const saved = localStorage.getItem(STORAGE_KEY);
-    if (!saved) return '';
+    if (!saved) return projects[0]?.id ?? '';
     try {
       const parsed = JSON.parse(saved) as BmcProject[];
       return parsed[0]?.id ?? '';
@@ -536,17 +568,29 @@ export const BusinessModelCanvas: React.FC<{
   const [briefOpen, setBriefOpen] = useState(false);
   const [projectDialogOpen, setProjectDialogOpen] = useState(false);
   const [newProjectName, setNewProjectName] = useState('');
+  const [projectCreationError, setProjectCreationError] = useState<string | null>(null);
+  const [isCreatingProject, setIsCreatingProject] = useState(false);
   const [currentBlock, setCurrentBlock] = useState<CanvasKey | null>(null);
 
   useEffect(() => {
+    if (workspaceProjectId) return;
     localStorage.setItem(STORAGE_KEY, JSON.stringify(projects));
-  }, [projects]);
+  }, [projects, workspaceProjectId]);
 
   useEffect(() => {
-    if (!activeProjectId && projects[0]) {
-      setActiveProjectId(projects[0].id);
-    }
-  }, [activeProjectId, projects]);
+    const active = projects.find((project) => project.id === activeProjectId) ?? projects[0];
+    updateWorkspace((current) => ({
+      feasibilityModels: {
+        ...current.feasibilityModels,
+        bmc: { projects, activeProjectId: active?.id || activeProjectId },
+      },
+      profile: {
+        ...current.profile,
+        name: active?.brief.name || current.profile.name,
+        opportunitySummary: active?.brief.ideaSummary || current.profile.opportunitySummary,
+      },
+    }));
+  }, [activeProjectId, projects, updateWorkspace]);
 
   const activeProject = useMemo(
     () => projects.find((project) => project.id === activeProjectId) ?? projects[0],
@@ -576,15 +620,32 @@ export const BusinessModelCanvas: React.FC<{
     );
   };
 
-  const handleCreateProject = () => {
+  const handleCreateProject = async () => {
+    if (!newProjectName.trim() || isCreatingProject) return;
+
+    setIsCreatingProject(true);
+    setProjectCreationError(null);
     const next = createProject(projects.length + 1);
-    if (newProjectName.trim()) {
-      next.brief.name = newProjectName.trim();
+    next.brief.name = newProjectName.trim();
+    const projectId = await createWorkspaceProject(next.brief.name || 'BMC', 'bmc');
+    if (!projectId) {
+      setProjectCreationError('تعذر إنشاء المشروع في قاعدة البيانات. تحقق من الاتصال ثم حاول مرة أخرى.');
+      setIsCreatingProject(false);
+      return;
     }
-    setProjects((prev) => [next, ...prev]);
+
+    setProjects([next]);
     setActiveProjectId(next.id);
     setNewProjectName('');
     setProjectDialogOpen(false);
+    updateWorkspace((current) => ({
+      feasibilityModels: {
+        ...current.feasibilityModels,
+        bmc: { projects: [next], activeProjectId: next.id },
+      },
+    }));
+    await flushWorkspace();
+    window.location.assign(getProjectEditPath(projectId));
   };
 
   const handleBriefFieldChange = (key: keyof ProjectBrief, value: string) => {
@@ -808,7 +869,14 @@ export const BusinessModelCanvas: React.FC<{
         </DialogContent>
       </Dialog>
 
-      <Dialog open={projectDialogOpen} onOpenChange={setProjectDialogOpen}>
+      <Dialog
+        open={projectDialogOpen}
+        onOpenChange={(open) => {
+          if (isCreatingProject) return;
+          setProjectDialogOpen(open);
+          if (!open) setProjectCreationError(null);
+        }}
+      >
         <DialogContent className="max-w-md">
           <DialogHeader className="px-4 py-4 sm:px-6 sm:py-5 pb-0 sm:pb-0">
             <DialogTitle>إنشاء مشروع جديد داخل صفحة BMC</DialogTitle>
@@ -821,16 +889,27 @@ export const BusinessModelCanvas: React.FC<{
             <Input
               value={newProjectName}
               onChange={(event) => setNewProjectName(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' && newProjectName.trim()) {
+                  event.preventDefault();
+                  void handleCreateProject();
+                }
+              }}
               placeholder="مثال: منصة خدمات لوجستية للشركات الصغيرة"
             />
+            {projectCreationError ? (
+              <p role="alert" className="text-sm leading-6 text-destructive">
+                {projectCreationError}
+              </p>
+            ) : null}
           </div>
           <DialogFooter className="px-4 pb-4 sm:px-6 sm:pb-5">
-            <Button variant="outline" onClick={() => setProjectDialogOpen(false)}>
+            <Button variant="outline" onClick={() => setProjectDialogOpen(false)} disabled={isCreatingProject}>
               إلغاء
             </Button>
-            <Button onClick={handleCreateProject}>
+            <Button onClick={() => void handleCreateProject()} disabled={!newProjectName.trim() || isCreatingProject}>
               <Plus size={14} />
-              إنشاء المشروع
+              {isCreatingProject ? 'جارٍ الإنشاء...' : 'إنشاء المشروع'}
             </Button>
           </DialogFooter>
         </DialogContent>
