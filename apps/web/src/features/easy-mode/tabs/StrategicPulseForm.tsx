@@ -4,6 +4,7 @@ import { QUESTIONS } from "../constants";
 import * as Renderers from "../components/QuestionRenderer";
 import { TOKENS, BaseCard } from "../result_components/CardDesignSystem";
 import { ProgressDots } from "../components/CommonUI";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 interface StrategicPulseFormProps {
   onGenerate: (answers: any) => void;
@@ -13,13 +14,12 @@ export const StrategicPulseForm = ({ onGenerate }: StrategicPulseFormProps) => {
   const [qIndex, setQIndex] = useState(0);
   const [answers, setAnswers] = useState<any>({});
   const [tempAnswer, setTempAnswer] = useState<any>(null);
-  const [error, setError] = useState("");
+  const [error] = useState("");
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [loadingStep, setLoadingStep] = useState(0);
   const analysisIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const currentQ = QUESTIONS[qIndex];
-  const formProgress = Math.round((qIndex / QUESTIONS.length) * 100);
 
   const loadingMessages = [
     "تحليل 'تقاطع القطاعات' واكتشاف المحيط الأزرق (Blue Ocean)...",
@@ -101,7 +101,7 @@ export const StrategicPulseForm = ({ onGenerate }: StrategicPulseFormProps) => {
 
   return (
     <div className="fade-in" style={{ maxWidth: "1000px", margin: "0 auto", width: "100%" }}>
-      {/* 🧭 Orientation Banner */}
+      {/* Orientation Banner */}
       <div style={{ 
         marginBottom: "24px", 
         padding: "20px 32px", 
@@ -115,14 +115,13 @@ export const StrategicPulseForm = ({ onGenerate }: StrategicPulseFormProps) => {
         position: "relative",
         overflow: "hidden"
       }}>
-        {/* Subtle inner glow */}
         <div style={{ position: "absolute", top: 0, right: 0, width: 100, height: "100%", background: "linear-gradient(to left, rgba(99, 102, 241, 0.05), transparent)", pointerEvents: "none" }} />
         <div style={{ background: TOKENS.colors.primary, color: "#fff", width: 36, height: 36, borderRadius: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}>
           <Lucide.Lightbulb size={20} />
         </div>
         <div>
-          <h4 style={{ fontSize: "15px", fontWeight: 900, color: TOKENS.colors.text.title, margin: 0 }}>مختبر التحليل الاستراتيجي</h4>
-          <p style={{ fontSize: "13px", color: TOKENS.colors.text.muted, margin: "2px 0 0", fontWeight: 600 }}>أجب بوضوح لنفكك التحديات ونبني لك مساراً استثمارياً فائق الدقة.</p>
+          <h4 style={{ fontSize: "15px", fontWeight: 900, color: TOKENS.colors.text.title, margin: 0 }}>مختبر التحليل الاستراتيجي (النموذج السهل)</h4>
+          <p style={{ fontSize: "13.5px", color: TOKENS.colors.text.muted, margin: "2px 0 0", fontWeight: 600 }}>أجب بوضوح واستعن بآيقونات الشروحات والعلائم التوضيحية لبناء دراسة جدوى استثمارية دقيقة.</p>
         </div>
       </div>
 
@@ -150,7 +149,26 @@ export const StrategicPulseForm = ({ onGenerate }: StrategicPulseFormProps) => {
                 {React.createElement((Lucide as any)[currentQ.icon] || Lucide.Target, { size: 22 })}
               </div>
               <div>
-                <h2 style={{ fontSize: "20px", fontWeight: 900, color: TOKENS.colors.text.title, marginBottom: "4px", lineHeight: 1.3 }}>{currentQ.label}</h2>
+                <div className="flex items-center gap-2 flex-wrap">
+                  <h2 style={{ fontSize: "20px", fontWeight: 900, color: TOKENS.colors.text.title, marginBottom: "4px", lineHeight: 1.3 }}>{currentQ.label}</h2>
+                  
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <button
+                          type="button"
+                          className="inline-flex items-center justify-center size-6 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors cursor-pointer"
+                        >
+                          <Lucide.HelpCircle size={14} />
+                        </button>
+                      </TooltipTrigger>
+                      <TooltipContent side="top" className="max-w-xs text-xs p-3 leading-relaxed font-medium bg-popover text-popover-foreground border border-border shadow-md">
+                        <p className="font-bold text-primary mb-1 flex items-center gap-1.5"><Lucide.Lightbulb size={14} className="text-primary shrink-0" /><span>توضيح الخبراء:</span></p>
+                        <p>تساعد إجابة هذا السؤال على بناء المسار الاستراتيجي والتحليلي لمشروعك، وتغذية المحرك بالحسابات الدقيقة لدراسة الجدوى.</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
                 <p style={{ fontSize: "13.5px", color: TOKENS.colors.text.muted, fontWeight: 600 }}>{currentQ.sublabel}</p>
               </div>
             </div>
@@ -171,8 +189,8 @@ export const StrategicPulseForm = ({ onGenerate }: StrategicPulseFormProps) => {
             </div>
           </div>
 
-          {/* Footer Actions - Stabilized position */}
-          <div style={{ marginTop: "40px", paddingTop: "32px", borderTop: `1px solid ${TOKENS.colors.border}`, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          {/* Footer Actions */}
+          <div style={{ marginTop: "40px", paddingTop: "32px", borderTop: `1px solid ${TOKENS.colors.border}`, display: "flex", justifyContent: "space-between", alignItems: "center" }} className="flex justify-between items-center">
             <button 
               onClick={() => qIndex > 0 && setQIndex(qIndex - 1)}
               disabled={qIndex === 0}
@@ -207,14 +225,6 @@ export const StrategicPulseForm = ({ onGenerate }: StrategicPulseFormProps) => {
                 gap: "12px",
                 boxShadow: "0 15px 30px rgba(99, 102, 241, 0.3)",
                 transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)"
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-4px)";
-                e.currentTarget.style.boxShadow = "0 25px 50px rgba(99, 102, 241, 0.4)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = "0 15px 30px rgba(99, 102, 241, 0.3)";
               }}
             >
                 <span style={{ fontFamily: 'IBM Plex Sans Arabic, sans-serif' }}>

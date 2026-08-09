@@ -6,6 +6,7 @@ import { StrategicSupportFloat } from './components/layout/StrategicSupportFloat
 import { BottomNavBar } from './components/layout/BottomNavBar';
 import { Header } from './components/layout/Header';
 import { AppBreadcrumb } from './components/layout/AppBreadcrumb';
+import { DashboardFooter } from './components/layout/DashboardFooter';
 import { DashboardRouter } from './components/views/DashboardRouter';
 import SiteTour from './components/views/SiteTour';
 import { TooltipProvider } from './components/ui/tooltip';
@@ -235,7 +236,7 @@ const AppShell: React.FC = () => {
           />
 
           <SidebarInset
-            className="min-h-screen w-full max-w-full min-w-0 overflow-x-hidden bg-background transition-[margin] duration-300"
+            className="min-h-screen flex flex-col w-full max-w-full min-w-0 overflow-x-hidden bg-background transition-[margin] duration-300"
           >
             <Header
               activeTab={activeTab}
@@ -264,6 +265,8 @@ const AppShell: React.FC = () => {
               selectedCompanyId={selectedCompanyId}
               setSelectedCompanyId={setSelectedCompanyId}
             />
+
+            <DashboardFooter setActiveTab={setActiveTab} />
 
             {!isAdminView ? <StrategicSupportFloat /> : null}
           </SidebarInset>

@@ -1,5 +1,6 @@
 import React from 'react';
 import * as Lucide from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 interface RendererProps {
   question: any;
@@ -126,7 +127,14 @@ export const EmpathyMapRenderer: React.FC<RendererProps> = ({
   themeColor,
 }) => {
   const current = tempAnswer || {};
-  const icons = ['Eye', 'Ear', 'Brain', 'AlertTriangle'];
+  const icons = ['Eye', 'AlertTriangle', 'Volume2', 'TrendingDown'];
+
+  const placeholders: Record<string, string> = {
+    status: "مثال: يرى المنافسين ينشئون منصات ذكية ويكسبون حصة سوقية أكبر في المنطقة...",
+    fear: "مثال: يخشى من تعثر السيولة النقدية وعدم قدرته على تغطية الرواتب والإيجارات خلال الأشهر الستة الأولى...",
+    efficiency: "مثال: يسمع توصيات المستشارين بضرورة أتمتة المبيعات والاعتماد على الحلول التقنية الحديثة...",
+    pains: "مثال: يعاني من ارتفع تكلفة الاستحواذ على العملاء الجدد وتأخر تحصيل الديون المستحقة...",
+  };
 
   return (
     <div className="space-y-4">
@@ -135,24 +143,26 @@ export const EmpathyMapRenderer: React.FC<RendererProps> = ({
           <div
             key={opt.val}
             className={`rounded-[1.2rem] p-4 transition-all duration-300 ${
-              current[opt.val] ? 'bg-white shadow-sm' : 'bg-slate-50/70 shadow-inner'
+              current[opt.val] ? 'bg-card border border-primary/30 shadow-xs' : 'bg-muted/40 border border-border'
             }`}
           >
-            <div className="mb-3 flex items-center gap-2.5">
-              <div
-                className="flex h-8 w-8 items-center justify-center rounded-xl"
-                style={{ background: `${themeColor || '#6366f1'}15`, color: themeColor }}
-              >
-                <LucideIcon name={icons[i]} size={16} />
+            <div className="mb-2 flex items-center justify-between">
+              <div className="flex items-center gap-2.5">
+                <div
+                  className="flex h-7 w-7 items-center justify-center rounded-lg"
+                  style={{ background: `${themeColor || '#6366f1'}15`, color: themeColor }}
+                >
+                  <LucideIcon name={icons[i]} size={15} />
+                </div>
+                <span className="text-xs font-extrabold text-foreground tracking-tight">{opt.label}</span>
               </div>
-              <span className="text-[10px] font-black text-slate-900 tracking-tight">{opt.label}</span>
             </div>
 
             <textarea
-              placeholder="صف ملاحظتك والتحليل هنا..."
+              placeholder={placeholders[opt.val] || "اكتب التحليل والملاحظة هنا مع مثال واقعي..."}
               value={current[opt.val] || ''}
               onChange={(e) => setTempAnswer({ ...current, [opt.val]: e.target.value })}
-              className="h-20 w-full resize-none rounded-xl bg-white p-3 text-[10px] font-bold text-slate-900 transition-all placeholder:text-slate-400 placeholder:opacity-50 focus:outline-none focus:ring-2 focus:ring-slate-200"
+              className="h-22 w-full resize-none rounded-xl bg-background border border-border p-3 text-xs font-semibold text-foreground transition-all placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/20"
             />
           </div>
         ))}
@@ -168,24 +178,29 @@ export const QuestionTextAreaChoice: React.FC<RendererProps> = ({
   themeColor,
 }) => {
   const [focused, setFocused] = React.useState(false);
+  const defaultPlaceholder = "مثال تطبيقي: تعاني المتاجر المحلية من صعوبة تتبع التكاليف غير المباشرة يدوياً، مما يؤدي إلى انخفاض هامش الربح بمقدار 20% دون معرفة السبب الدقيق...";
 
   return (
     <div className="space-y-4">
-      <div className={`relative transition-all duration-300 ${focused ? 'scale-[1.005]' : 'scale-100'}`}>
+      <div className={`relative transition-all duration-300 ${focused ? 'scale-[1.002]' : 'scale-100'}`}>
         <textarea
-          placeholder={question.placeholder}
+          placeholder={question.placeholder || defaultPlaceholder}
           value={tempAnswer?.text || ''}
           onChange={(e) => setTempAnswer({ ...tempAnswer, text: e.target.value })}
           rows={4}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
-          className="relative w-full resize-none rounded-[1.5rem] bg-white p-4 text-[13px] font-bold leading-relaxed text-slate-900 shadow-sm transition-all focus:outline-none md:text-base"
+          className="relative w-full resize-none rounded-2xl bg-card border border-border p-4 text-xs sm:text-sm font-semibold leading-relaxed text-foreground shadow-xs transition-all focus:outline-none placeholder:text-muted-foreground/60"
           style={{
             boxShadow: focused
-              ? `0 0 0 2px ${themeColor}20, 0 12px 30px rgba(15, 23, 42, 0.06)`
-              : '0 1px 3px rgba(15, 23, 42, 0.08)',
+              ? `0 0 0 2px ${themeColor}30, 0 8px 20px rgba(15, 23, 42, 0.05)`
+              : '0 1px 3px rgba(15, 23, 42, 0.04)',
           }}
         />
+        <div className="mt-1.5 flex items-center gap-1.5 text-[11px] text-muted-foreground px-1 font-medium">
+          <Lucide.Lightbulb className="size-3.5 text-amber-500 shrink-0" />
+          <span>تلميح: كلما كانت إجابتك محددة بمثال رقمي أو واقعي، كانت دراسة الجدوى المولدة أكثر دقة واحترافية.</span>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 gap-2.5 md:grid-cols-2">
@@ -197,17 +212,19 @@ export const QuestionTextAreaChoice: React.FC<RendererProps> = ({
               key={opt.val}
               onClick={() => setTempAnswer({ ...(tempAnswer || {}), type: active ? null : opt.val })}
               style={{
-                background: active ? themeColor : '#fff',
-                color: active ? '#fff' : '#0f172a',
-                boxShadow: active
-                  ? `0 10px 25px ${themeColor}22`
-                  : '0 1px 3px rgba(15, 23, 42, 0.08)',
+                background: active ? themeColor : undefined,
+                color: active ? '#fff' : undefined,
               }}
-              className="flex items-center justify-between rounded-xl p-3.5 transition-all"
+              className={cn(
+                "flex items-center justify-between rounded-xl p-3.5 transition-all text-right border cursor-pointer",
+                active 
+                  ? "border-transparent shadow-xs" 
+                  : "bg-card border-border text-foreground hover:bg-muted/50"
+              )}
             >
               <div className="flex items-center gap-3">
                 <div
-                  className="flex h-8 w-8 items-center justify-center rounded-xl transition-all group-hover:scale-105"
+                  className="flex h-8 w-8 items-center justify-center rounded-xl transition-all"
                   style={{
                     background: active ? 'rgba(255,255,255,0.2)' : 'rgba(15,23,42,0.04)',
                     color: active ? '#fff' : themeColor,
@@ -215,7 +232,7 @@ export const QuestionTextAreaChoice: React.FC<RendererProps> = ({
                 >
                   <LucideIcon name={opt.icon || 'Target'} size={16} />
                 </div>
-                <span className="text-[10px] font-black tracking-tight">{opt.label}</span>
+                <span className="text-xs font-bold tracking-tight">{opt.label}</span>
               </div>
             </button>
           );

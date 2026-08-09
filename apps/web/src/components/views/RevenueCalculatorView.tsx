@@ -11,23 +11,17 @@ import {
   Calculator, 
   TrendingUp, 
   DollarSign, 
-  Users, 
-  Percent, 
   ArrowLeft, 
   Save, 
   Sparkles, 
-  HelpCircle, 
   CheckCircle2, 
-  AlertTriangle, 
-  Info, 
   BarChart3, 
   PieChart, 
   RefreshCw, 
-  Zap,
   Target,
   FileSpreadsheet,
-  ArrowUpRight,
-  ShieldCheck
+  ShieldCheck,
+  Info
 } from 'lucide-react';
 
 import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
@@ -131,11 +125,9 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
         savedAt: new Date().toISOString(),
       };
 
-      // Replace estimate of same modelType or append
       const filtered = existingEstimates.filter((est) => est.modelType !== modelType);
       const updatedEstimates = [newEstimate, ...filtered];
 
-      // Update workspace KPIs
       const updatedKpis = [...(workspace.execution.kpis || [])];
       const mrrKpiIndex = updatedKpis.findIndex((k) => k.id === 'fin-kpi-mrr' || k.label.includes('الإيراد الشهري'));
       if (mrrKpiIndex >= 0) {
@@ -167,7 +159,7 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
   };
 
   return (
-    <div dir="rtl" className="w-full space-y-8 pb-16">
+    <div dir="rtl" className="w-full space-y-6 pb-12">
       
       {/* Page Header */}
       <PageHeader
@@ -184,87 +176,89 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
         ]}
       />
 
-      {/* Model Selection Tabs */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-2xl bg-card border border-border shadow-2xs">
-        <div className="flex items-center gap-3">
-          <div className="size-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold shrink-0">
-            <BarChart3 className="size-5" />
+      {/* Model Selection Toolbar */}
+      <Card className="p-4 border-border shadow-xs">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="size-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold shrink-0">
+              <BarChart3 className="size-5" />
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-foreground">نوع نموذج العمل المالي</h3>
+              <p className="text-xs text-muted-foreground">اختر نوع نموذج الإيراد الخاص بمشروعك لضبط المدخلات</p>
+            </div>
           </div>
-          <div>
-            <h3 className="text-sm font-extrabold text-foreground">نوع نموذج العمل المالي</h3>
-            <p className="text-xs text-muted-foreground">اختر نوع نموذج الإيراد الخاص بمشروعك لضبط المدخلات</p>
-          </div>
-        </div>
 
-        <div className="inline-flex p-1 rounded-xl bg-muted border border-border/60 text-xs font-bold gap-1 w-full sm:w-auto">
-          <button
-            onClick={() => setModelType('saas')}
-            className={cn(
-              "px-4 py-2 rounded-lg transition-all flex items-center justify-center gap-2 flex-1 sm:flex-none",
-              modelType === 'saas' 
-                ? "bg-primary text-primary-foreground font-extrabold shadow-2xs" 
-                : "text-muted-foreground hover:text-foreground"
-            )}
-          >
-            <RefreshCw className="size-3.5" />
-            اشتراكات متكررة (SaaS Model)
-          </button>
-          <button
-            onClick={() => setModelType('sales')}
-            className={cn(
-              "px-4 py-2 rounded-lg transition-all flex items-center justify-center gap-2 flex-1 sm:flex-none",
-              modelType === 'sales' 
-                ? "bg-primary text-primary-foreground font-extrabold shadow-2xs" 
-                : "text-muted-foreground hover:text-foreground"
-            )}
-          >
-            <PieChart className="size-3.5" />
-            مبيعات منتجات / خدمات مباشرة
-          </button>
+          <div className="inline-flex p-1 rounded-lg bg-muted border border-border text-xs font-semibold gap-1 w-full sm:w-auto">
+            <button
+              onClick={() => setModelType('saas')}
+              className={cn(
+                "px-3.5 py-1.5 rounded-md transition-all flex items-center justify-center gap-2 flex-1 sm:flex-none cursor-pointer",
+                modelType === 'saas' 
+                  ? "bg-background text-foreground font-bold shadow-xs border border-border" 
+                  : "text-muted-foreground hover:text-foreground"
+              )}
+            >
+              <RefreshCw className="size-3.5" />
+              اشتراكات متكررة (SaaS)
+            </button>
+            <button
+              onClick={() => setModelType('sales')}
+              className={cn(
+                "px-3.5 py-1.5 rounded-md transition-all flex items-center justify-center gap-2 flex-1 sm:flex-none cursor-pointer",
+                modelType === 'sales' 
+                  ? "bg-background text-foreground font-bold shadow-xs border border-border" 
+                  : "text-muted-foreground hover:text-foreground"
+              )}
+            >
+              <PieChart className="size-3.5" />
+              مبيعات / خدمات مباشرة
+            </button>
+          </div>
         </div>
-      </div>
+      </Card>
 
       {/* Key Financial Cards Summary */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         
         {/* MRR Card */}
-        <Card className="border-border shadow-2xs bg-card">
+        <Card className="border-border shadow-xs">
           <CardContent className="p-5">
             <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-bold text-muted-foreground">الإيراد الشهري (MRR)</span>
-              <div className="size-8 rounded-lg bg-blue-500/10 text-blue-600 flex items-center justify-center">
+              <span className="text-xs font-semibold text-muted-foreground">الإيراد الشهري (MRR)</span>
+              <div className="size-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
                 <DollarSign className="size-4" />
               </div>
             </div>
-            <div className="text-2xl font-black text-foreground">${metrics.mrr.toLocaleString()}</div>
-            <p className="text-[11px] text-muted-foreground mt-1">الدخل المتوقع شهرياً من المشتركين</p>
+            <div className="text-2xl font-extrabold text-foreground">${metrics.mrr.toLocaleString()}</div>
+            <p className="text-[11px] text-muted-foreground mt-1">الدخل المتوقع شهرياً من العمليات</p>
           </CardContent>
         </Card>
 
         {/* ARR Card */}
-        <Card className="border-border shadow-2xs bg-card">
+        <Card className="border-border shadow-xs">
           <CardContent className="p-5">
             <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-bold text-muted-foreground">الإيراد السنوي (ARR)</span>
+              <span className="text-xs font-semibold text-muted-foreground">الإيراد السنوي (ARR)</span>
               <div className="size-8 rounded-lg bg-emerald-500/10 text-emerald-600 flex items-center justify-center">
                 <TrendingUp className="size-4" />
               </div>
             </div>
-            <div className="text-2xl font-black text-emerald-600">${metrics.arr.toLocaleString()}</div>
+            <div className="text-2xl font-extrabold text-emerald-600">${metrics.arr.toLocaleString()}</div>
             <p className="text-[11px] text-muted-foreground mt-1">معدل الإيراد المتكرر سنوياً</p>
           </CardContent>
         </Card>
 
         {/* Annual Net Profit */}
-        <Card className="border-border shadow-2xs bg-card">
+        <Card className="border-border shadow-xs">
           <CardContent className="p-5">
             <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-bold text-muted-foreground">صافي الربح السنوي المتوقع</span>
+              <span className="text-xs font-semibold text-muted-foreground">صافي الربح السنوي المتوقع</span>
               <div className="size-8 rounded-lg bg-purple-500/10 text-purple-600 flex items-center justify-center">
                 <Sparkles className="size-4" />
               </div>
             </div>
-            <div className="text-2xl font-black text-purple-600">${metrics.netProfitAnnual.toLocaleString()}</div>
+            <div className="text-2xl font-extrabold text-purple-600">${metrics.netProfitAnnual.toLocaleString()}</div>
             <div className="flex items-center justify-between text-[11px] text-muted-foreground mt-1">
               <span>هامش الربح الصافي:</span>
               <span className="font-bold text-foreground">{metrics.netMargin}%</span>
@@ -273,17 +267,17 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
         </Card>
 
         {/* LTV & Health Indicator */}
-        <Card className="border-border shadow-2xs bg-card">
+        <Card className="border-border shadow-xs">
           <CardContent className="p-5">
             <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-bold text-muted-foreground">قيمة العميل (LTV)</span>
+              <span className="text-xs font-semibold text-muted-foreground">قيمة العميل (LTV)</span>
               <div className="size-8 rounded-lg bg-amber-500/10 text-amber-600 flex items-center justify-center">
                 <Target className="size-4" />
               </div>
             </div>
-            <div className="text-2xl font-black text-foreground">${metrics.ltv.toLocaleString()}</div>
+            <div className="text-2xl font-extrabold text-foreground">${metrics.ltv.toLocaleString()}</div>
             <div className="flex items-center gap-1.5 mt-1">
-              <Badge variant="outline" className="text-[10px] font-bold bg-emerald-50 text-emerald-700 border-emerald-200">
+              <Badge variant="outline" className="text-[10px] font-semibold">
                 نسبة LTV/CAC: {metrics.ltvCacRatio}x
               </Badge>
             </div>
@@ -293,161 +287,242 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
       </div>
 
       {/* Main Interactive Grid */}
-      <div className="grid lg:grid-cols-12 gap-8">
+      <div className="grid lg:grid-cols-12 gap-6">
         
         {/* Left Inputs Column */}
         <div className="lg:col-span-6 space-y-6">
-          <Card className="border-border shadow-2xs">
-            <CardHeader className="p-5 border-b border-border/60">
+          <Card className="border-border shadow-xs">
+            <CardHeader className="p-5 border-b border-border">
               <CardTitle className="text-base font-bold flex items-center gap-2">
                 <Calculator className="size-4 text-primary" />
                 مدخلات التقدير المالي
               </CardTitle>
-              <CardDescription className="text-xs">عدّل المؤشرات أدناه لمشاهدة تأثيرها الفوري على الأرباح والنمو</CardDescription>
+              <CardDescription className="text-xs">عدّل الأرقام أدناه لمشاهدة تأثيرها المباشر على المؤشرات المالية</CardDescription>
             </CardHeader>
 
-            <CardContent className="p-5 space-y-6">
+            <CardContent className="p-5 space-y-5">
               
               {modelType === 'saas' ? (
                 <>
                   {/* Subscriber Count Input */}
                   <div className="space-y-2">
-                    <div className="flex justify-between items-center text-xs font-bold">
-                      <label className="text-foreground">عدد المشتركين الفاعلين:</label>
-                      <span className="text-primary font-black bg-primary/10 px-2.5 py-0.5 rounded-md text-xs">{subscribers} مشترك</span>
+                    <div className="flex justify-between items-center text-xs font-semibold">
+                      <label className="text-foreground">عدد المشتركين الفاعلين</label>
+                      <span className="text-xs text-muted-foreground">مشترك</span>
                     </div>
-                    <input 
-                      type="range" 
-                      min="10" 
-                      max="5000" 
-                      step="10"
-                      value={subscribers} 
-                      onChange={(e) => setSubscribers(Number(e.target.value))}
-                      className="w-full accent-primary h-2 bg-muted rounded-lg cursor-pointer"
-                    />
+                    <div className="flex items-center gap-3">
+                      <Input
+                        type="number"
+                        min={1}
+                        max={50000}
+                        value={subscribers}
+                        onChange={(e) => setSubscribers(Math.max(1, Number(e.target.value)))}
+                        className="w-28 text-left text-xs font-bold"
+                      />
+                      <input 
+                        type="range" 
+                        min="10" 
+                        max="5000" 
+                        step="10"
+                        value={subscribers} 
+                        onChange={(e) => setSubscribers(Number(e.target.value))}
+                        className="flex-1 accent-primary h-2 bg-muted rounded-lg cursor-pointer"
+                      />
+                    </div>
                   </div>
 
                   {/* Monthly Subscription Price */}
                   <div className="space-y-2">
-                    <div className="flex justify-between items-center text-xs font-bold">
-                      <label className="text-foreground">سعر الاشتراك الشهري (بالدولار):</label>
-                      <span className="text-primary font-black bg-primary/10 px-2.5 py-0.5 rounded-md text-xs">${pricePerMonth} / شهر</span>
+                    <div className="flex justify-between items-center text-xs font-semibold">
+                      <label className="text-foreground">سعر الاشتراك الشهري ($)</label>
+                      <span className="text-xs text-muted-foreground">دولار / شهر</span>
                     </div>
-                    <input 
-                      type="range" 
-                      min="5" 
-                      max="1000" 
-                      step="5"
-                      value={pricePerMonth} 
-                      onChange={(e) => setPricePerMonth(Number(e.target.value))}
-                      className="w-full accent-primary h-2 bg-muted rounded-lg cursor-pointer"
-                    />
+                    <div className="flex items-center gap-3">
+                      <Input
+                        type="number"
+                        min={1}
+                        max={5000}
+                        value={pricePerMonth}
+                        onChange={(e) => setPricePerMonth(Math.max(1, Number(e.target.value)))}
+                        className="w-28 text-left text-xs font-bold"
+                      />
+                      <input 
+                        type="range" 
+                        min="5" 
+                        max="1000" 
+                        step="5"
+                        value={pricePerMonth} 
+                        onChange={(e) => setPricePerMonth(Number(e.target.value))}
+                        className="flex-1 accent-primary h-2 bg-muted rounded-lg cursor-pointer"
+                      />
+                    </div>
                   </div>
 
                   {/* Churn Rate Input */}
                   <div className="space-y-2">
-                    <div className="flex justify-between items-center text-xs font-bold">
-                      <label className="text-foreground">معدل التخلي الشهري (Churn Rate %):</label>
-                      <span className="text-amber-700 font-black bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-md text-xs">{churnRate}%</span>
+                    <div className="flex justify-between items-center text-xs font-semibold">
+                      <label className="text-foreground">معدل التخلي الشهري (Churn Rate %)</label>
+                      <span className="text-xs text-muted-foreground">% شهرياً</span>
                     </div>
-                    <input 
-                      type="range" 
-                      min="0.5" 
-                      max="15" 
-                      step="0.5"
-                      value={churnRate} 
-                      onChange={(e) => setChurnRate(Number(e.target.value))}
-                      className="w-full accent-amber-500 h-2 bg-muted rounded-lg cursor-pointer"
-                    />
+                    <div className="flex items-center gap-3">
+                      <Input
+                        type="number"
+                        step="0.1"
+                        min={0}
+                        max={50}
+                        value={churnRate}
+                        onChange={(e) => setChurnRate(Math.max(0, Number(e.target.value)))}
+                        className="w-28 text-left text-xs font-bold"
+                      />
+                      <input 
+                        type="range" 
+                        min="0.5" 
+                        max="15" 
+                        step="0.5"
+                        value={churnRate} 
+                        onChange={(e) => setChurnRate(Number(e.target.value))}
+                        className="flex-1 accent-primary h-2 bg-muted rounded-lg cursor-pointer"
+                      />
+                    </div>
                   </div>
 
-                  {/* Customer Acquisition Cost (CAC) */}
+                  {/* CAC Input */}
                   <div className="space-y-2">
-                    <div className="flex justify-between items-center text-xs font-bold">
-                      <label className="text-foreground">تكلفة الاستحواذ على العميل (CAC):</label>
-                      <span className="text-blue-700 font-black bg-blue-50 border border-blue-200 px-2.5 py-0.5 rounded-md text-xs">${cac}</span>
+                    <div className="flex justify-between items-center text-xs font-semibold">
+                      <label className="text-foreground">تكلفة الاستحواذ على العميل (CAC $)</label>
+                      <span className="text-xs text-muted-foreground">دولار / عميل</span>
                     </div>
-                    <input 
-                      type="range" 
-                      min="10" 
-                      max="1000" 
-                      step="10"
-                      value={cac} 
-                      onChange={(e) => setCac(Number(e.target.value))}
-                      className="w-full accent-blue-600 h-2 bg-muted rounded-lg cursor-pointer"
-                    />
+                    <div className="flex items-center gap-3">
+                      <Input
+                        type="number"
+                        min={0}
+                        max={5000}
+                        value={cac}
+                        onChange={(e) => setCac(Math.max(0, Number(e.target.value)))}
+                        className="w-28 text-left text-xs font-bold"
+                      />
+                      <input 
+                        type="range" 
+                        min="10" 
+                        max="1000" 
+                        step="10"
+                        value={cac} 
+                        onChange={(e) => setCac(Number(e.target.value))}
+                        className="flex-1 accent-primary h-2 bg-muted rounded-lg cursor-pointer"
+                      />
+                    </div>
                   </div>
                 </>
               ) : (
                 <>
                   {/* Monthly Orders Input */}
                   <div className="space-y-2">
-                    <div className="flex justify-between items-center text-xs font-bold">
-                      <label className="text-foreground">المبيعات / الطلبات الشهرية المتوقعة:</label>
-                      <span className="text-primary font-black bg-primary/10 px-2.5 py-0.5 rounded-md text-xs">{monthlyOrders} طلب</span>
+                    <div className="flex justify-between items-center text-xs font-semibold">
+                      <label className="text-foreground">المبيعات / الطلبات الشهرية</label>
+                      <span className="text-xs text-muted-foreground">طلب / شهرياً</span>
                     </div>
-                    <input 
-                      type="range" 
-                      min="20" 
-                      max="10000" 
-                      step="50"
-                      value={monthlyOrders} 
-                      onChange={(e) => setMonthlyOrders(Number(e.target.value))}
-                      className="w-full accent-primary h-2 bg-muted rounded-lg cursor-pointer"
-                    />
+                    <div className="flex items-center gap-3">
+                      <Input
+                        type="number"
+                        min={1}
+                        max={100000}
+                        value={monthlyOrders}
+                        onChange={(e) => setMonthlyOrders(Math.max(1, Number(e.target.value)))}
+                        className="w-28 text-left text-xs font-bold"
+                      />
+                      <input 
+                        type="range" 
+                        min="20" 
+                        max="10000" 
+                        step="50"
+                        value={monthlyOrders} 
+                        onChange={(e) => setMonthlyOrders(Number(e.target.value))}
+                        className="flex-1 accent-primary h-2 bg-muted rounded-lg cursor-pointer"
+                      />
+                    </div>
                   </div>
 
                   {/* Average Order Value Input */}
                   <div className="space-y-2">
-                    <div className="flex justify-between items-center text-xs font-bold">
-                      <label className="text-foreground">متوسط قيمة الطلب (AOV):</label>
-                      <span className="text-primary font-black bg-primary/10 px-2.5 py-0.5 rounded-md text-xs">${avgOrderValue}</span>
+                    <div className="flex justify-between items-center text-xs font-semibold">
+                      <label className="text-foreground">متوسط قيمة الطلب (AOV $)</label>
+                      <span className="text-xs text-muted-foreground">دولار / طلب</span>
                     </div>
-                    <input 
-                      type="range" 
-                      min="10" 
-                      max="2000" 
-                      step="10"
-                      value={avgOrderValue} 
-                      onChange={(e) => setAvgOrderValue(Number(e.target.value))}
-                      className="w-full accent-primary h-2 bg-muted rounded-lg cursor-pointer"
-                    />
+                    <div className="flex items-center gap-3">
+                      <Input
+                        type="number"
+                        min={1}
+                        max={10000}
+                        value={avgOrderValue}
+                        onChange={(e) => setAvgOrderValue(Math.max(1, Number(e.target.value)))}
+                        className="w-28 text-left text-xs font-bold"
+                      />
+                      <input 
+                        type="range" 
+                        min="10" 
+                        max="2000" 
+                        step="10"
+                        value={avgOrderValue} 
+                        onChange={(e) => setAvgOrderValue(Number(e.target.value))}
+                        className="flex-1 accent-primary h-2 bg-muted rounded-lg cursor-pointer"
+                      />
+                    </div>
                   </div>
 
                   {/* COGS Input */}
                   <div className="space-y-2">
-                    <div className="flex justify-between items-center text-xs font-bold">
-                      <label className="text-foreground">نسبة تكلفة المنتجات/الخدمات (COGS %):</label>
-                      <span className="text-amber-700 font-black bg-amber-50 px-2.5 py-0.5 rounded-md text-xs">{cogsPercentage}%</span>
+                    <div className="flex justify-between items-center text-xs font-semibold">
+                      <label className="text-foreground">نسبة تكلفة المنتجات (COGS %)</label>
+                      <span className="text-xs text-muted-foreground">% من الإيراد</span>
                     </div>
-                    <input 
-                      type="range" 
-                      min="10" 
-                      max="80" 
-                      step="5"
-                      value={cogsPercentage} 
-                      onChange={(e) => setCogsPercentage(Number(e.target.value))}
-                      className="w-full accent-amber-500 h-2 bg-muted rounded-lg cursor-pointer"
-                    />
+                    <div className="flex items-center gap-3">
+                      <Input
+                        type="number"
+                        min={0}
+                        max={95}
+                        value={cogsPercentage}
+                        onChange={(e) => setCogsPercentage(Math.max(0, Number(e.target.value)))}
+                        className="w-28 text-left text-xs font-bold"
+                      />
+                      <input 
+                        type="range" 
+                        min="10" 
+                        max="80" 
+                        step="5"
+                        value={cogsPercentage} 
+                        onChange={(e) => setCogsPercentage(Number(e.target.value))}
+                        className="flex-1 accent-primary h-2 bg-muted rounded-lg cursor-pointer"
+                      />
+                    </div>
                   </div>
                 </>
               )}
 
               {/* Monthly Fixed OpEx */}
-              <div className="space-y-2 pt-2 border-t border-border/60">
-                <div className="flex justify-between items-center text-xs font-bold">
-                  <label className="text-foreground">المصاريف التشغيلية الثابتة شهرياً (OpEx):</label>
-                  <span className="text-slate-900 font-black bg-slate-100 px-2.5 py-0.5 rounded-md text-xs">${monthlyExpense} / شهر</span>
+              <div className="space-y-2 pt-3 border-t border-border">
+                <div className="flex justify-between items-center text-xs font-semibold">
+                  <label className="text-foreground">المصاريف التشغيلية الثابتة شهرياً (OpEx $)</label>
+                  <span className="text-xs text-muted-foreground">دولار / شهرياً</span>
                 </div>
-                <input 
-                  type="range" 
-                  min="500" 
-                  max="20000" 
-                  step="500"
-                  value={monthlyExpense} 
-                  onChange={(e) => setMonthlyExpense(Number(e.target.value))}
-                  className="w-full accent-slate-700 h-2 bg-muted rounded-lg cursor-pointer"
-                />
+                <div className="flex items-center gap-3">
+                  <Input
+                    type="number"
+                    min={0}
+                    max={100000}
+                    value={monthlyExpense}
+                    onChange={(e) => setMonthlyExpense(Math.max(0, Number(e.target.value)))}
+                    className="w-28 text-left text-xs font-bold"
+                  />
+                  <input 
+                    type="range" 
+                    min="500" 
+                    max="20000" 
+                    step="500"
+                    value={monthlyExpense} 
+                    onChange={(e) => setMonthlyExpense(Number(e.target.value))}
+                    className="flex-1 accent-primary h-2 bg-muted rounded-lg cursor-pointer"
+                  />
+                </div>
                 <p className="text-[11px] text-muted-foreground">تشمل إيجار الخوادم، رواتب الفريق، والتسويق الثابت.</p>
               </div>
 
@@ -459,48 +534,48 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
         <div className="lg:col-span-6 space-y-6">
           
           {/* Detailed Financial Breakdown Card */}
-          <Card className="border-border shadow-2xs">
-            <CardHeader className="p-5 border-b border-border/60">
+          <Card className="border-border shadow-xs">
+            <CardHeader className="p-5 border-b border-border">
               <CardTitle className="text-base font-bold flex items-center justify-between">
                 <span className="flex items-center gap-2">
                   <FileSpreadsheet className="size-4 text-emerald-600" />
                   جدول التدفق المالي التقديري (12 شهر)
                 </span>
-                <Badge variant="secondary" className="text-[11px] font-bold">تقدير سنوي</Badge>
+                <Badge variant="secondary" className="text-[11px] font-semibold">تقدير سنوي</Badge>
               </CardTitle>
             </CardHeader>
             <CardContent className="p-5 space-y-4">
               
               <div className="space-y-2 text-xs font-medium">
-                <div className="flex justify-between p-2.5 rounded-lg bg-muted/40 border border-border/50">
+                <div className="flex justify-between p-3 rounded-lg bg-muted/40 border border-border">
                   <span className="text-muted-foreground">إجمالي الإيرادات السنوية (Gross Revenue):</span>
                   <span className="font-extrabold text-foreground">${metrics.arr.toLocaleString()}</span>
                 </div>
 
-                <div className="flex justify-between p-2.5 rounded-lg bg-muted/40 border border-border/50">
+                <div className="flex justify-between p-3 rounded-lg bg-muted/40 border border-border">
                   <span className="text-muted-foreground">التكاليف التشغيلية السنوية (Annual OpEx):</span>
-                  <span className="font-extrabold text-red-600">-${metrics.annualOpEx.toLocaleString()}</span>
+                  <span className="font-extrabold text-destructive">-${metrics.annualOpEx.toLocaleString()}</span>
                 </div>
 
-                <div className="flex justify-between p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-900 font-bold">
+                <div className="flex justify-between p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-foreground font-bold">
                   <span>صافي الربح السنوي النهائي (Net Profit):</span>
-                  <span className="text-sm font-black text-emerald-700">${metrics.netProfitAnnual.toLocaleString()}</span>
+                  <span className="text-sm font-black text-emerald-600">${metrics.netProfitAnnual.toLocaleString()}</span>
                 </div>
               </div>
 
               {/* Feasibility Assessment Alert */}
-              <div className="p-4 rounded-xl bg-card border border-primary/20 shadow-2xs space-y-2">
+              <div className="p-4 rounded-xl bg-card border border-border shadow-xs space-y-2">
                 <div className="flex items-center gap-2">
                   <ShieldCheck className="size-4 text-primary" />
-                  <h4 className="text-xs font-extrabold text-foreground">تقييم الجاهزية والاستثمارية:</h4>
+                  <h4 className="text-xs font-bold text-foreground">تقييم الجاهزية والاستثمارية:</h4>
                 </div>
                 <p className="text-xs text-muted-foreground leading-relaxed font-medium">
                   {metrics.ltvCacRatio >= 3.0 ? (
-                    <span className="text-emerald-700 font-bold">
+                    <span className="text-emerald-600 font-semibold">
                       ✨ مؤشرات ممتازة جداً! نسبة LTV/CAC تبلغ ({metrics.ltvCacRatio}x) وهو معدل يتجاوز المعيار العالمي المطلوب للمستثمرين (3.0x).
                     </span>
                   ) : (
-                    <span className="text-amber-700 font-bold">
+                    <span className="text-amber-600 font-semibold">
                       ⚠️ يحتاج تحسين: نسبة LTV/CAC تبلغ ({metrics.ltvCacRatio}x). يُفضل زيادة سعر الاشتراك أو خفض تكلفة الاستحواذ لزيادة الهامش.
                     </span>
                   )}
@@ -511,7 +586,7 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
               <div className="pt-2">
                 <Button 
                   onClick={() => setActiveTab?.('workspace')}
-                  className="w-full font-bold text-xs h-11 gap-2 shadow-2xs"
+                  className="w-full font-bold text-xs h-10 gap-2 shadow-xs cursor-pointer"
                 >
                   ربط التقديرات بالمساحة التنفيذية للمشروع
                   <ArrowLeft className="size-4" />
@@ -522,9 +597,9 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
           </Card>
 
           {/* Quick Guidance Box */}
-          <div className="p-5 rounded-2xl bg-muted/40 border border-border space-y-3">
-            <h4 className="text-xs font-extrabold text-foreground flex items-center gap-2">
-              <Info className="size-4 text-blue-600" />
+          <div className="p-5 rounded-xl bg-muted/30 border border-border space-y-3">
+            <h4 className="text-xs font-bold text-foreground flex items-center gap-2">
+              <Info className="size-4 text-primary" />
               كيف تحسب مؤشرات مشروعك بدقة؟
             </h4>
             <ul className="space-y-2 text-xs text-muted-foreground leading-relaxed">

@@ -75,7 +75,7 @@ export const LandingNavbar: React.FC = () => {
     { title: 'أكاديمية خطة والمفاهيم', category: 'المصادر', href: '/platform-academy', icon: BookOpen },
     { title: 'سجل التحديثات والإصدارات', category: 'المصادر', href: '/changelog', icon: Sparkles },
     { title: 'الشركات المتعثرة (Post-Mortem)', category: 'الدروس', href: '/failed-projects', icon: TrendingDown },
-    { title: 'خطط الأسعار والتراخيص', category: 'الحساب', href: '/pricing-plans', icon: DollarSign },
+    { title: 'الأسعار', category: 'الحساب', href: '/pricing-plans', icon: DollarSign },
   ].filter((item) => item.title.includes(searchQuery) || item.category.includes(searchQuery));
 
   return (
@@ -280,12 +280,12 @@ export const LandingNavbar: React.FC = () => {
             المصادر
           </Link>
 
-          {/* Direct Standard Link 3: Pricing & Plans */}
+          {/* Direct Standard Link 3: Pricing */}
           <Link
             href="/pricing-plans"
             className="px-3 py-2 rounded-xl hover:text-foreground hover:bg-muted/60 transition-all cursor-pointer"
           >
-            الأسعار والخطط
+            الأسعار
           </Link>
 
         </nav>
@@ -367,7 +367,7 @@ export const LandingNavbar: React.FC = () => {
 
                   <Link href="/pricing-plans" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 py-2 text-foreground hover:text-primary border-b border-border/40">
                     <DollarSign className="size-4 text-emerald-600" />
-                    <span>الأسعار والخطط</span>
+                    <span>الأسعار</span>
                   </Link>
 
                   <Link href="/proven-projects" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 py-2 text-foreground hover:text-primary border-b border-border/40">

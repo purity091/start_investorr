@@ -6,6 +6,7 @@ import * as Renderers from "../components/QuestionRenderer";
 import { WizardGuidance } from "../components/WizardGuidance";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export interface TabQuestion {
   id: string;
@@ -245,6 +246,24 @@ const TabForm = ({ config, onFinish }: { config: TabConfig, onFinish: (vals: any
                         <div className="flex-1">
                           <div className="flex items-center gap-2 flex-wrap">
                             <h3 className="text-sm sm:text-base font-bold text-foreground m-0">{q.label}</h3>
+                            
+                            <TooltipProvider>
+                              <Tooltip>
+                                <TooltipTrigger asChild>
+                                  <button
+                                    type="button"
+                                    className="inline-flex items-center justify-center size-5 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors cursor-pointer"
+                                  >
+                                    <Lucide.HelpCircle size={13} />
+                                  </button>
+                                </TooltipTrigger>
+                                <TooltipContent side="top" className="max-w-xs text-xs p-3 leading-relaxed font-medium bg-popover text-popover-foreground border border-border shadow-md">
+                                  <p className="font-bold text-primary mb-1">💡 توضيح الخبراء:</p>
+                                  <p>{getHintForQuestion(q.id, config.id)}</p>
+                                </TooltipContent>
+                              </Tooltip>
+                            </TooltipProvider>
+
                             {hasAnswer && (
                               <Badge variant="outline" className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20 text-[10px] font-bold px-2 py-0.5 gap-1">
                                 <Lucide.UserCheck size={11} />

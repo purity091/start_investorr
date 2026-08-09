@@ -28,18 +28,18 @@ interface PageHeaderProps {
 
 export function PageHeader({ badge, title, description, actions, metrics, className }: PageHeaderProps) {
   return (
-    <Card className={cn('overflow-hidden rounded-[28px] border-slate-200 bg-white', className)}>
-      <div className="flex flex-col gap-8 p-6 sm:p-8 lg:flex-row lg:items-end lg:justify-between">
+    <Card className={cn('overflow-hidden rounded-xl border-border bg-card shadow-xs', className)}>
+      <div className="flex flex-col gap-6 p-6 sm:p-8 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-3xl space-y-4">
           {badge ? <Badge variant="outline">{badge}</Badge> : null}
-          <div className="space-y-3">
-            <h1 className="text-3xl font-black leading-tight text-slate-950 sm:text-4xl lg:text-5xl">{title}</h1>
-            {description ? <p className="max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">{description}</p> : null}
+          <div className="space-y-2">
+            <h1 className="text-2xl font-black leading-tight text-foreground sm:text-3xl lg:text-4xl">{title}</h1>
+            {description ? <p className="max-w-2xl text-xs sm:text-sm leading-relaxed text-muted-foreground font-medium">{description}</p> : null}
           </div>
           {actions?.length ? (
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-3 pt-1">
               {actions.map((action) => (
-                <Button key={action.label} variant={action.variant ?? 'default'} size="lg" onClick={action.onClick}>
+                <Button key={action.label} variant={action.variant ?? 'default'} size="sm" onClick={action.onClick} className="font-bold text-xs h-10 gap-2 cursor-pointer">
                   {action.icon}
                   {action.label}
                 </Button>
@@ -51,10 +51,10 @@ export function PageHeader({ badge, title, description, actions, metrics, classN
         {metrics?.length ? (
           <div className="grid gap-3 sm:grid-cols-3 lg:min-w-[420px]">
             {metrics.map((metric) => (
-              <div key={metric.label} className="rounded-[20px] border border-slate-200 bg-white/90 p-4">
-                <p className="text-[11px] font-black text-slate-500">{metric.label}</p>
-                <p className="mt-2 text-2xl font-black text-slate-950">{metric.value}</p>
-                {metric.helper ? <p className="mt-1 text-[11px] font-semibold text-slate-500">{metric.helper}</p> : null}
+              <div key={metric.label} className="rounded-lg border border-border bg-muted/40 p-4">
+                <p className="text-[11px] font-extrabold text-muted-foreground">{metric.label}</p>
+                <p className="mt-2 text-xl font-black text-foreground">{metric.value}</p>
+                {metric.helper ? <p className="mt-1 text-[11px] font-medium text-muted-foreground">{metric.helper}</p> : null}
               </div>
             ))}
           </div>

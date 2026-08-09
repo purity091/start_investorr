@@ -878,7 +878,7 @@ export default function LandingPage() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border/60 bg-slate-950 text-slate-300 py-16">
+      <footer className="border-t border-border/60 bg-muted/30 text-muted-foreground py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             
@@ -887,45 +887,45 @@ export default function LandingPage() {
                 <div className="flex items-center justify-center size-8 rounded-lg bg-primary text-primary-foreground font-black text-base">
                   خ
                 </div>
-                <span className="text-xl font-black text-white">خطة<span className="text-primary">.</span></span>
+                <span className="text-xl font-black text-foreground">خطة<span className="text-primary">.</span></span>
               </div>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-muted-foreground leading-relaxed">
                 المنصة العربية الأولى لبناء وتوثيق نماذج العمل التجاري ودراسة قطاعات السوق وفق المنهجيات الريادية العالمية.
               </p>
             </div>
 
             <div>
-              <h4 className="text-white font-bold text-xs mb-4">المنتج والخيارات</h4>
-              <ul className="space-y-2 text-xs text-slate-400">
-                <li><Link href="/market-discovery" className="hover:text-white transition-colors">استكشاف قطاعات السوق</Link></li>
-                <li><Link href="/saas-ideas" className="hover:text-white transition-colors">أفكار مشاريع SaaS</Link></li>
-                <li><Link href="/micro-saas-ideas" className="hover:text-white transition-colors">أفكار Micro-SaaS</Link></li>
-                <li><Link href="/proven-projects" className="hover:text-white transition-colors">أفكار شركات ناجحة</Link></li>
+              <h4 className="text-foreground font-bold text-xs mb-4">المنتج والخيارات</h4>
+              <ul className="space-y-2 text-xs text-muted-foreground font-medium">
+                <li><Link href="/market-discovery" className="hover:text-primary transition-colors">استكشاف قطاعات السوق</Link></li>
+                <li><Link href="/saas-ideas" className="hover:text-primary transition-colors">أفكار مشاريع SaaS</Link></li>
+                <li><Link href="/micro-saas-ideas" className="hover:text-primary transition-colors">أفكار Micro-SaaS</Link></li>
+                <li><Link href="/proven-projects" className="hover:text-primary transition-colors">أفكار شركات ناجحة</Link></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-white font-bold text-xs mb-4">المصادر والأكاديمية</h4>
-              <ul className="space-y-2 text-xs text-slate-400">
-                <li><Link href="/platform-academy" className="hover:text-white transition-colors">أكاديمية خطة والمفاهيم</Link></li>
-                <li><Link href="/failed-projects" className="hover:text-white transition-colors">تحليل الشركات التي فشلت</Link></li>
-                <li><Link href="/faq" className="hover:text-white transition-colors">الأسئلة الشائعة</Link></li>
+              <h4 className="text-foreground font-bold text-xs mb-4">المصادر والأكاديمية</h4>
+              <ul className="space-y-2 text-xs text-muted-foreground font-medium">
+                <li><Link href="/platform-academy" className="hover:text-primary transition-colors">أكاديمية خطة والمفاهيم</Link></li>
+                <li><Link href="/failed-projects" className="hover:text-primary transition-colors">تحليل الشركات التي فشلت</Link></li>
+                <li><Link href="/faq" className="hover:text-primary transition-colors">الأسئلة الشائعة</Link></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-white font-bold text-xs mb-4">الشركة والخصوصية</h4>
-              <ul className="space-y-2 text-xs text-slate-400">
-                <li><Link href="/about" className="hover:text-white transition-colors">من نحن</Link></li>
-                <li><Link href="/contact-us" className="hover:text-white transition-colors">اتصل بنا</Link></li>
-                <li><Link href="/privacy" className="hover:text-white transition-colors">سياسة الخصوصية</Link></li>
-                <li><Link href="/terms" className="hover:text-white transition-colors">شروط الاستخدام</Link></li>
+              <h4 className="text-foreground font-bold text-xs mb-4">الشركة والخصوصية</h4>
+              <ul className="space-y-2 text-xs text-muted-foreground font-medium">
+                <li><Link href="/about" className="hover:text-primary transition-colors">من نحن</Link></li>
+                <li><Link href="/contact-us" className="hover:text-primary transition-colors">اتصل بنا</Link></li>
+                <li><Link href="/privacy" className="hover:text-primary transition-colors">سياسة الخصوصية</Link></li>
+                <li><Link href="/terms" className="hover:text-primary transition-colors">شروط الاستخدام</Link></li>
               </ul>
             </div>
 
           </div>
 
-          <div className="pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <div className="pt-6 border-t border-border/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground font-medium">
             <p>© {new Date().getFullYear()} منصة خطة. جميع الحقوق محفوظة.</p>
             <p>مبنية وفق معايير Shadcn UI ودعم كامل للغة العربية.</p>
           </div>

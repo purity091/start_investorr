@@ -9,6 +9,7 @@ import {
   Wallet,
   Zap,
   Clock,
+  Sparkles
 } from 'lucide-react';
 
 import { Badge } from '@/components/ui/Badge';
@@ -21,32 +22,58 @@ interface PricingPlansProps {
 
 const plans = [
   {
-    name: 'المجاني',
+    name: 'باقة رائد',
     icon: User,
     monthly: 0,
     yearly: 0,
-    description: 'لتجربة أولية واختبار الأدوات الأساسية.',
-    features: ['مشروع واحد', '3 صادرات شهرية', 'وصول أساسي'],
+    projectLimit: '5 مشاريع',
+    description: 'لتجربة أولية واختبار أول 5 مشاريع ونماذج أعمال تجارية.',
+    parentPlanNote: '',
+    features: [
+      'سعة إنشاء حتى 5 مشاريع ودراسات جدوى',
+      'تصفح عينات مشاريع SaaS والشركات الناجحة',
+      'بناء ونمذجة الأعمال عبر باني المنصة',
+      'حاسبة الإيرادات المتكررة الأساسية (MRR / ARR)',
+      'الوصول لأكاديمية خطة والمقالات التعليمية',
+    ],
     action: 'customer-dashboard',
     cta: 'العودة إلى الحساب',
   },
   {
-    name: 'المبتدئ',
+    name: 'باقة مؤسس',
     icon: Rocket,
-    monthly: 49,
-    yearly: 39,
-    description: 'للمؤسس الفردي الذي بدأ أول مشروع بجدية.',
-    features: ['5 مشاريع', '20 تصديراً شهرياً', 'دعم سريع'],
+    monthly: 35,
+    yearly: 29,
+    projectLimit: '10 مشاريع',
+    description: 'الخيار التأسيسي الأنسب لرواد الأعمال لبناء 10 مشاريع متكاملة.',
+    parentPlanNote: 'يشمل كل مميزات باقة رائد، بالإضافة إلى:',
+    features: [
+      'ترقية السعة لبناء حتى 10 مشاريع متكاملة',
+      'مشاركة الخطط ونماذج العمل عبر روابط تفاعلية آمنة',
+      'فتح كافة تفاصيل ودراسات +500 شركة ناجحة',
+      'حاسبة الإيرادات المتقدمة (MRR, ARR, LTV, Churn)',
+      'تصدير تقارير PDF وفروض المستثمرين المعتمدة',
+      'تحليل الجاهزية الاستثمارية وتقييم المخاطر (MIT)',
+    ],
     action: 'contact-us',
-    cta: 'طلب ترقية',
+    cta: 'ترقية إلى باقة مؤسس',
   },
   {
-    name: 'الاحترافي',
+    name: 'باقة قائد',
     icon: Zap,
-    monthly: 149,
-    yearly: 119,
-    description: 'الخطة الحالية المناسبة لإدارة مشاريع متعددة ومخرجات احترافية.',
-    features: ['مشاريع غير محدودة', 'تصدير غير محدود', 'هوية بصرية', 'أولوية في الدعم'],
+    monthly: 75,
+    yearly: 59,
+    projectLimit: 'مشاريع غير محدودة',
+    description: 'الخطة القيادية الشاملة لإدارة مشاريع غير محدودة بمخرجات وتخصيص كامل.',
+    parentPlanNote: 'يشمل كل مميزات باقة مؤسس، بالإضافة إلى:',
+    features: [
+      'إنشاء مشاريع ودراسات جدوى غير محدودة',
+      'مشاركة الخطط ونماذج العمل مع الفريق والمستثمرين',
+      'دعم الاستشارات والمراجعة المالية والتسويقية',
+      'تخصيص الهوية التجارية والشعار على التقارير',
+      'دعم العمل الجماعي وتعدد المستخدمين (Team Access)',
+      'أولوية الوصول للمميزات والأدوات البرمجية VIP 24/7',
+    ],
     action: 'customer-dashboard',
     cta: 'الخطة الحالية',
     featured: true,
@@ -59,7 +86,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
 
   return (
     <div className="app-page-shell-wide space-y-4 sm:space-y-6 py-4 sm:py-6" dir="rtl">
-      <section className="rounded-2xl border border-border bg-card px-4 py-4 sm:py-5 shadow-sm sm:px-6">
+      <section className="rounded-2xl border border-border bg-card px-4 py-4 sm:py-5 shadow-xs sm:px-6">
         <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_320px] xl:items-start">
           <div className="space-y-4 text-right">
             <div className="flex flex-wrap items-center justify-start gap-2">
@@ -69,10 +96,10 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
 
             <div className="space-y-2">
               <h1 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-                إدارة الاشتراك والفوترة من صفحة واحدة
+                إدارة الاشتراك والفوترة (رائد - مؤسس - قائد)
               </h1>
               <p className="max-w-3xl text-sm leading-7 text-muted-foreground">
-                اختر الباقة المناسبة لاحتياجاتك. نظام الدفع قيد التطوير وسيكون متاحاً قريباً.
+                اختر الباقة المناسبة لاحتياجاتك. تبدأ من 5 مشاريع في باقة رائد، 10 مشاريع في باقة مؤسس، ومشاريع غير محدودة في باقة قائد.
               </p>
             </div>
           </div>
@@ -83,7 +110,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
               <CardDescription>ملخص سريع قبل الدخول في التفاصيل.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">
-              <Fact label="الخطة الحالية" value="الاحترافي" />
+              <Fact label="الخطة الحالية" value="باقة قائد" />
               <div className="flex items-center justify-between gap-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3">
                 <span className="text-xs text-amber-700 font-medium">نظام الدفع قيد التفعيل</span>
                 <Clock className="size-4 text-amber-600 shrink-0" />
@@ -98,14 +125,14 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
       </section>
 
       <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-        <Metric label="الباقة" value="الاحترافي" hint="نشطة حالياً" icon={Zap} />
+        <Metric label="الباقة" value="باقة قائد" hint="نشطة حالياً (غير محدود)" icon={Zap} />
         <Metric label="الرصيد المتاح" value="85 / 100" hint="ضمن الدورة الحالية" icon={Wallet} />
         <Metric label="الاستخدام" value={`${usagePercentage}%`} hint="استهلاك الأدوات" icon={ShieldCheck} />
         <Metric label="الفوترة" value="قيد التفعيل" hint="نظام الدفع قادم" icon={CreditCard} />
       </section>
 
       <section className="grid gap-4 xl:grid-cols-[0.92fr_1.08fr]">
-        <Card className="border-border/70 shadow-sm">
+        <Card className="border-border/70 shadow-xs">
           <CardHeader className="text-right">
             <CardTitle>الخطة الحالية والاستخدام</CardTitle>
             <CardDescription>
@@ -115,10 +142,9 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
           <CardContent className="space-y-5 p-4 sm:p-6 pt-0 sm:pt-0">
             <div className="rounded-xl border border-border/70 bg-muted/35 p-3 sm:p-4 text-right">
               <Badge variant="secondary">اشتراك نشط</Badge>
-              <h2 className="mt-3 text-2xl font-semibold text-foreground">باقة الاحترافي</h2>
+              <h2 className="mt-3 text-2xl font-semibold text-foreground">باقة قائد (مشاريع غير محدودة)</h2>
               <p className="mt-2 text-sm leading-7 text-muted-foreground">
-                مناسبة للمستخدم الذي يدير أكثر من مشروع ويحتاج إلى مخرجات قابلة للتصدير،
-                أدوات تحليل، ومتابعة حساب واضحة.
+                مناسبة للمستخدم القيادي الذي يدير مشاريع غير محدودة ويحتاج إلى مخرجات مخصصة بهويته التجارية مع أولوية دعم VIP.
               </p>
             </div>
 
@@ -139,7 +165,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
           </CardContent>
         </Card>
 
-        <Card className="border-border/70 shadow-sm">
+        <Card className="border-border/70 shadow-xs">
           <CardHeader className="text-right">
             <CardTitle>سجل الفواتير</CardTitle>
             <CardDescription>سيظهر سجل فواتيرك هنا بعد تفعيل نظام الدفع.</CardDescription>
@@ -159,12 +185,12 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
         </Card>
       </section>
 
-      <section className="rounded-2xl border border-border bg-card p-4 shadow-sm sm:p-5">
+      <section className="rounded-2xl border border-border bg-card p-4 shadow-xs sm:p-5">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div className="text-right">
-            <h2 className="text-sm font-semibold text-foreground">مقارنة الباقات</h2>
+            <h2 className="text-sm font-semibold text-foreground">مقارنة الباقات (رائد - مؤسس - قائد)</h2>
             <p className="mt-1 text-xs text-muted-foreground">
-              اعرض التسعير شهرياً أو سنوياً ثم اختر الإجراء المناسب.
+              تتدرج المميزات بإضافة سعة المشاريع والخواص بدون تكرار.
             </p>
           </div>
           <div className="flex rounded-lg bg-muted p-1">
@@ -193,7 +219,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
             return (
               <Card
                 key={plan.name}
-                className={plan.featured ? 'border-primary shadow-sm' : 'border-border/70 shadow-sm'}
+                className={plan.featured ? 'border-primary shadow-xs' : 'border-border/70 shadow-xs'}
               >
                 <CardHeader className="p-4 sm:p-5 text-right">
                   <div className="mb-4 flex items-center justify-between">
@@ -206,22 +232,39 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
                   <CardDescription>{plan.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="flex h-full flex-col p-4 sm:p-5 pt-0 sm:pt-0 text-right">
-                  <div className="mb-5">
+                  <div className="mb-3">
                     <span className="text-3xl font-semibold text-foreground">{price}</span>
                     <span className="mr-1 text-xs text-muted-foreground">
                       ر.س / {billingCycle === 'monthly' ? 'شهرياً' : 'سنوياً'}
                     </span>
                   </div>
+
+                  <div className="mb-4 flex items-center justify-between p-2.5 rounded-lg bg-primary/5 border border-primary/20">
+                    <span className="text-xs font-bold text-foreground">سعة المشاريع:</span>
+                    <Badge variant="secondary" className="text-xs font-extrabold">
+                      {plan.projectLimit}
+                    </Badge>
+                  </div>
+
                   <div className="flex-1 space-y-3">
+                    {plan.parentPlanNote ? (
+                      <p className="text-xs font-bold text-primary flex items-center gap-1 bg-primary/10 px-2.5 py-1 rounded-md">
+                        <Sparkles className="size-3 shrink-0" />
+                        <span>{plan.parentPlanNote}</span>
+                      </p>
+                    ) : (
+                      <p className="text-xs font-semibold text-muted-foreground">المميزات الرئيسية:</p>
+                    )}
+
                     {plan.features.map((feature) => (
-                      <div key={feature} className="flex items-center gap-2 text-sm text-foreground">
-                        <Check className="size-4 text-emerald-600" />
-                        {feature}
+                      <div key={feature} className="flex items-center gap-2 text-xs text-foreground">
+                        <Check className="size-4 text-emerald-600 shrink-0" />
+                        <span>{feature}</span>
                       </div>
                     ))}
                   </div>
                   <Button
-                    className="mt-6 w-full"
+                    className="mt-6 w-full text-xs font-bold"
                     variant={plan.featured ? 'default' : 'outline'}
                     onClick={() => setActiveTab?.(plan.action)}
                   >
@@ -249,7 +292,7 @@ function Metric({
   icon: React.ComponentType<{ className?: string }>;
 }) {
   return (
-    <Card className="border-border/70 shadow-sm">
+    <Card className="border-border/70 shadow-xs">
       <CardContent className="p-3 sm:p-4 text-right">
         <div className="mb-3 flex items-center justify-between gap-3">
           <span className="flex size-9 items-center justify-center rounded-lg bg-muted">
