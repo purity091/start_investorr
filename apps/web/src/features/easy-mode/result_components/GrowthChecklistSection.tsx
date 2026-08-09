@@ -169,7 +169,7 @@ export const GrowthChecklistSection = ({
               )}
             </button>
             <p style={{ marginTop: 20, fontSize: "12.5px", color: TOKENS.colors.text.muted, fontWeight: 600 }}>
-              سيتم إرسال هذه الخطة إلى بريدك الإلكتروني بصيغة PDF فور الضغط
+              سيتم إرسال هذه الخطة إلى بريدك الإلكتروني فور الضغط
             </p>
           </div>
        </CardBody>

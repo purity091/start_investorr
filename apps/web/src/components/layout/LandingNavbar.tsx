@@ -40,13 +40,16 @@ import {
   Laptop,
   Cpu,
   Layers,
-  ChevronLeft
+  ChevronLeft,
+  User,
 } from 'lucide-react';
 import { useAuthModal } from '@/features/auth/AuthModalContext';
+import { useAuth } from '@/features/auth/AuthContext';
 import { cn } from '@/lib/utils';
 
 export const LandingNavbar: React.FC = () => {
   const { openAuthModal } = useAuthModal();
+  const { user, loading: authLoading } = useAuth();
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [showBanner, setShowBanner] = useState(true);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -305,16 +308,44 @@ export const LandingNavbar: React.FC = () => {
             <Search className="size-4" />
           </Button>
 
-          <div className="hidden sm:flex items-center gap-1.5">
-            <Button
-              size="sm"
-              onClick={() => openAuthModal('register')}
-              className="gap-1.5 font-bold text-xs h-9 shadow-2xs bg-primary hover:bg-primary/90 cursor-pointer"
-            >
-              ابدأ مجاناً
-              <ArrowLeft className="size-3.5" />
-            </Button>
-          </div>
+          {authLoading ? (
+            <div className="hidden sm:block h-9 w-32 rounded-md bg-muted animate-pulse" aria-hidden="true" />
+          ) : user ? (
+            <div className="hidden sm:flex items-center gap-2">
+              <Link href="/customer-dashboard">
+                <Button
+                  size="sm"
+                  className="gap-1.5 font-bold text-xs h-9 shadow-2xs bg-primary hover:bg-primary/90 cursor-pointer"
+                >
+                  <LayoutGrid className="size-3.5" />
+                  <span>لوحة التحكم</span>
+                  <ArrowLeft className="size-3.5" />
+                </Button>
+              </Link>
+
+              <Link href="/settings">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="gap-1.5 font-bold text-xs h-9 border-border/80 bg-background hover:bg-muted/60 text-foreground cursor-pointer"
+                >
+                  <User className="size-3.5 text-primary" />
+                  <span>حسابي</span>
+                </Button>
+              </Link>
+            </div>
+          ) : (
+            <div className="hidden sm:flex items-center gap-1.5">
+              <Button
+                size="sm"
+                onClick={() => openAuthModal('register')}
+                className="gap-1.5 font-bold text-xs h-9 shadow-2xs bg-primary hover:bg-primary/90 cursor-pointer"
+              >
+                ابدأ مجاناً
+                <ArrowLeft className="size-3.5" />
+              </Button>
+            </div>
+          )}
 
           {/* Mobile Drawer Trigger (Sheet) */}
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
@@ -380,16 +411,37 @@ export const LandingNavbar: React.FC = () => {
 
               {/* Mobile Sheet Footer CTA Button */}
               <div className="p-5 border-t border-border bg-muted/30 space-y-2">
-                <Button
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    openAuthModal('register');
-                  }}
-                  className="w-full font-bold text-xs h-10 gap-1.5 shadow-2xs cursor-pointer"
-                >
-                  إنشاء حساب مجاني
-                  <ArrowLeft className="size-4" />
-                </Button>
+                {authLoading ? (
+                  <div className="h-10 w-full rounded-md bg-muted animate-pulse" aria-hidden="true" />
+                ) : user ? (
+                  <>
+                    <Link href="/customer-dashboard" onClick={() => setMobileMenuOpen(false)} className="w-full block">
+                      <Button className="w-full font-bold text-xs h-10 gap-1.5 shadow-2xs cursor-pointer bg-primary">
+                        <LayoutGrid className="size-4" />
+                        <span>لوحة التحكم</span>
+                        <ArrowLeft className="size-4" />
+                      </Button>
+                    </Link>
+
+                    <Link href="/settings" onClick={() => setMobileMenuOpen(false)} className="w-full block">
+                      <Button variant="outline" className="w-full font-bold text-xs h-10 gap-1.5 cursor-pointer bg-background">
+                        <User className="size-4 text-primary" />
+                        <span>حسابي</span>
+                      </Button>
+                    </Link>
+                  </>
+                ) : (
+                  <Button
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      openAuthModal('register');
+                    }}
+                    className="w-full font-bold text-xs h-10 gap-1.5 shadow-2xs cursor-pointer"
+                  >
+                    إنشاء حساب مجاني
+                    <ArrowLeft className="size-4" />
+                  </Button>
+                )}
               </div>
 
             </SheetContent>

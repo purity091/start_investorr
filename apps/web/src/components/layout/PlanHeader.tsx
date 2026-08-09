@@ -149,7 +149,7 @@ export const PlanHeader: React.FC = () => {
               />
               {activeMenu === 'export' && (
                 <Dropdown>
-                  <DropdownItem icon={FileText} text="تصدير PDF" />
+                  <DropdownItem icon={FileText} text="تصدير ملخص الخطط" />
                   <DropdownItem icon={FileText} text="تصدير Word" />
                   <DropdownItem icon={FileSpreadsheet} text="تصدير Excel" />
                   <DropdownItem icon={Presentation} text="تصدير PowerPoint" />

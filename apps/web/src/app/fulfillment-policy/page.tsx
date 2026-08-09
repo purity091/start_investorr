@@ -24,7 +24,7 @@ export default function FulfillmentPolicyPage() {
               سياسة التسليم وتوفير الخدمة (Fulfillment Policy)
             </h1>
             <p className="text-xs sm:text-sm text-muted-foreground max-w-xl mx-auto">
-              تاريخ آخر تحديث: 9 أغسطس 2026 | وثيقة الامتثال لتسليم الخدمات البرمجية السحابية (SaaS) المعتمدة لدى Stripe.
+              تاريخ آخر تحديث: 9 أغسطس 2026 | آليات وضوابط تفعيل وتسليم الخدمات البرمجية السحابية (SaaS).
             </p>
           </div>
 
@@ -46,7 +46,7 @@ export default function FulfillmentPolicyPage() {
                   <span>1. التفعيل الفوري الإلكتروني (Instant Digital Access)</span>
                 </h2>
                 <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                  بما أن منصة خطة توفر خدماتها كمنصة سحابية عبر البرمجيات (SaaS)، يتم تفعيل حسابك، ترقية سعة المشاريع، وفتح جميع الأدوات المشمولة في باقتك <strong>فورياً في نفس اللحظة</strong> بمجرد تأكيد عملية الخصم بنجاح عبر بوابة الدفع <strong>Stripe</strong>.
+                  بما أن منصة خطة توفر خدماتها كمنصة سحابية عبر البرمجيات (SaaS)، يتم تفعيل حسابك، ترقية سعة المشاريع، وفتح جميع الأدوات المشمولة في باقتك <strong>فورياً في نفس اللحظة</strong> بمجرد تأكيد عملية الخصم بنجاح عبر بوابات الدفع الإلكترونية المعتمدة.
                 </p>
               </section>
 

@@ -50,7 +50,7 @@ export const PricingPlansGallery: React.FC = () => {
       id: 'pioneer',
       name: 'باقة رائد',
       icon: Compass,
-      tagline: 'ل للمبتدئين واكتشاف المشاريع',
+      tagline: 'للمبتدئين واكتشاف المشاريع',
       description: 'بداية سلسة تتيح لك بناء واختبار أول 5 مشاريع ونماذج أعمال تجارية.',
       priceDisplay: currency === 'SAR' ? '0 ر.س' : '$0',
       priceNote: 'مجاناً للأبد بدون إدخال بطاقة',
@@ -304,7 +304,7 @@ export const PricingPlansGallery: React.FC = () => {
         <div className="max-w-2xl mx-auto p-3 rounded-xl bg-muted/40 border border-border/60 text-xs text-muted-foreground flex flex-wrap items-center justify-center gap-4">
           <span className="flex items-center gap-1 text-foreground font-semibold">
             <ShieldCheck className="size-4 text-emerald-600" />
-            <span>معالجة آمنة عبر بوابة Stripe العالمية</span>
+            <span>معالجة آمنة ومشفّرة للمعاملات المالية</span>
           </span>
           <span className="text-border">•</span>
           <span>إلغاء فوري بضغطة زر</span>

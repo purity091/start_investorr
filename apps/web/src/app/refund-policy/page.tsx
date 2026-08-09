@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/Badge';
 
 export const metadata = {
   title: 'سياسة الاسترجاع والإلغاء | خطة',
-  description: 'سياسة الاسترجاع والإلغاء الشفافة المعتمدة لمنصة خطة بالتعاون مع Stripe. ضمان استرداد 100% خلال 14 يوماً وإلغاء فوري للاشتراك.',
+  description: 'سياسة الاسترجاع والإلغاء الشفافة المعتمدة لمنصة خطة. ضمان استرداد 100% خلال 14 يوماً وإلغاء فوري للاشتراك.',
 };
 
 export default function RefundPolicyPage() {
@@ -24,7 +24,7 @@ export default function RefundPolicyPage() {
               سياسة الاسترجاع والإلغاء (Refund & Cancellation Policy)
             </h1>
             <p className="text-xs sm:text-sm text-muted-foreground max-w-xl mx-auto">
-              تاريخ آخر تحديث: 9 أغسطس 2026 | وثيقة ملزمة وممتثلة لاشتراطات معالجة المعاملات عبر Stripe.
+              تاريخ آخر تحديث: 9 أغسطس 2026 | سياسة وإجراءات إلغاء الاشتراكات واسترداد المبالغ.
             </p>
           </div>
 
@@ -66,7 +66,7 @@ export default function RefundPolicyPage() {
                   <span>3. مدة وطريقة إعادة المبلغ المسترد</span>
                 </h2>
                 <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                  يتم إرجاع المبلغ المسترد إلى <strong>بطاقة الدفع الأصلية</strong> حصراً من خلال معالج الدفع العالمي <strong>Stripe</strong>. يستغرق ظهور المبلغ في حسابك البنكي عادةً ما بين <strong>5 إلى 10 أيام عمل</strong> حسب إجراءات البنك المصدر لبطاقتك.
+                  يتم إرجاع المبلغ المسترد إلى <strong>بطاقة الدفع الأصلية</strong> حصراً من خلال بوابات الدفع الإلكترونية المشفرة والمعتمدة. يستغرق ظهور المبلغ في حسابك البنكي عادةً ما بين <strong>5 إلى 10 أيام عمل</strong> حسب إجراءات البنك المصدر لبطاقتك.
                 </p>
               </section>
 

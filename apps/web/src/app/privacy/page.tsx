@@ -14,18 +14,14 @@ export default function PrivacyPage() {
     <PublicLayout>
       <div dir="rtl" className="w-full bg-background text-foreground py-12 sm:py-16">
         <div className="container mx-auto px-4 max-w-4xl space-y-8">
-          
+
           {/* Header Badge & Title */}
           <div className="text-center space-y-3">
-            <Badge variant="outline" className="text-xs font-semibold px-3 py-1 gap-1.5 mx-auto">
-              <ShieldCheck className="size-3.5 text-primary" />
-              <span>الأمان وحماية البيانات</span>
-            </Badge>
             <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
-              سياسة الخصوصية وحماية البيانات (Privacy Policy)
+              سياسة الخصوصية وحماية البيانات
             </h1>
             <p className="text-xs sm:text-sm text-muted-foreground max-w-xl mx-auto">
-              تاريخ آخر تحديث: 9 أغسطس 2026 | وثيقة معتمدة وممتثلة لاشتراطات بوابة الدفع Stripe وحماية الخصوصية السحابية.
+              تاريخ آخر تحديث: 9 أغسطس 2026 | إرشادات وضوابط حماية البيانات والتشفير السحابي.
             </p>
           </div>
 
@@ -40,7 +36,7 @@ export default function PrivacyPage() {
               </CardDescription>
             </CardHeader>
             <CardContent className="p-6 space-y-6 text-sm text-foreground leading-relaxed">
-              
+
               <section className="space-y-2">
                 <h2 className="text-base font-bold text-primary flex items-center gap-2">
                   <CheckCircle2 className="size-4 text-emerald-600" />
@@ -52,7 +48,7 @@ export default function PrivacyPage() {
                 <ul className="list-disc pr-6 space-y-1.5 text-xs text-muted-foreground">
                   <li><strong>معلومات الحساب:</strong> الاسم، البريد الإلكتروني، ورقم الهاتف عند التسجيل.</li>
                   <li><strong>بيانات المشاريع والدراسات:</strong> البيانات التي يدخلها المستخدم لبناء نموذج العمل التجاري (BMC) وحسابات الإيرادات.</li>
-                  <li><strong>معلومات الفوترة والتسديد:</strong> تتم معالجة المعاملات المالية مشفرة بالكامل عبر معالج الدفع العالمي <strong>Stripe</strong>. <u>نحن لا نخزن أرقام البطاقات البنكية أو رموز CVC على خوادمنا نهائياً.</u></li>
+                  <li><strong>معلومات الفوترة والتسديد:</strong> تتم معالجة المعاملات المالية مشفرة بالكامل عبر بوابات الدفع المشفرة والمعتمدة عالمياً. <u>نحن لا نخزن أرقام البطاقات البنكية أو رموز CVC على خوادمنا نهائياً.</u></li>
                 </ul>
               </section>
 
@@ -72,7 +68,7 @@ export default function PrivacyPage() {
                   <span>3. عدم مشاركة أو بيع البيانات</span>
                 </h2>
                 <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                  نلتزم بشكل قاطع بعدم بيع أو تأجير أو مشاركة بياناتك الشخصية أو التجارية مع أي طرف ثالث لأغراض تسويقية. يتم مشاركة الحد الأدنى التشفيري من البيانات مع مزودي الخدمات المعتمدين فقط (مثل بوابة Stripe لتسديد الاشتراكات).
+                  نلتزم بشكل قاطع بعدم بيع أو تأجير أو مشاركة بياناتك الشخصية أو التجارية مع أي طرف ثالث لأغراض تسويقية. يتم مشاركة الحد الأدنى التشفيري من البيانات مع مزودي بوابات الدفع المشفرة المعتمدين فقط.
                 </p>
               </section>
 

@@ -215,7 +215,7 @@ export const TAB_CONFIGS = {
         ]
       },
       {
-        id: "want_final_report", step: 8, label: "التقرير النهائي", sublabel: "هل ترغب في تلخيص كل الاستنتاجات في تقرير PDF؟",
+        id: "want_final_report", step: 8, label: "التقرير النهائي", sublabel: "هل ترغب في تلخيص كل الاستنتاجات في التقرير التنفيذي؟",
         icon: "FileText", type: "cards", options: [
           { val: "yes", title: "نعم", desc: "توثيق كامل" },
           { val: "no", title: "لا", desc: "ملخص رقمي" },
@@ -1296,7 +1296,7 @@ export const TAB_CONFIGS = {
         ]
       },
       {
-        id: "need_pdf_report", step: 8, label: "تقرير PDF", sublabel: "هل تريد تلخيص كل القرارات والخطط في تقرير نهائي PDF؟",
+        id: "need_pdf_report", step: 8, label: "التقرير النهائي", sublabel: "هل تريد تلخيص كل القرارات والخطط في تقرير نهائي متكامل؟",
         icon: "FileText", type: "cards", options: [
           { val: "yes", title: "نعم", desc: "توثيق كامل" },
           { val: "no", title: "لا", desc: "ملخص رقمي" },

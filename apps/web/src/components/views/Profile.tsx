@@ -104,7 +104,7 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
 
   const accountFacts = [
     { label: 'اسم الحساب', value: displayName },
-    { label: 'الباقة الحالية', value: 'الاحترافي' },
+    { label: 'الباقة الحالية', value: 'باقة مؤسس' },
     { label: 'الدور في المنصة', value: userRole === 'admin' ? 'مدير النظام (Admin)' : 'مستخدم (User)' },
     { label: 'الرصيد المتاح', value: `${user.credits} من ${user.totalCredits}` },
     { label: 'أولوية الدعم', value: 'قياسي' },
@@ -162,7 +162,7 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
                     )}
                     <p className="text-sm text-muted-foreground">{displayEmail}</p>
                     <div className="mt-2 flex gap-2 justify-start">
-                      <Badge variant="secondary">الباقة الاحترافية</Badge>
+                      <Badge variant="secondary">باقة مؤسس</Badge>
                       <Badge variant="outline" className="capitalize">{userRole}</Badge>
                     </div>
                   </div>
@@ -200,7 +200,7 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
                 <p className="text-xs font-medium text-muted-foreground">حالة الاشتراك</p>
                 <div className="mt-2 flex items-end justify-between gap-3">
                   <p className="text-xl font-semibold text-foreground">نشط</p>
-                  <Badge variant="secondary" className="text-xs">احترافي</Badge>
+                  <Badge variant="secondary" className="text-xs">باقة مؤسس</Badge>
                 </div>
               </CardContent>
             </Card>

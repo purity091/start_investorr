@@ -428,7 +428,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
                   <Select value={defaultReport} onValueChange={setDefaultReport}>
                     <SelectTrigger className="text-right"><SelectValue /></SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="pdf">PDF احترافي</SelectItem>
+                      <SelectItem value="interactive">تقرير تفاعلي</SelectItem>
                       <SelectItem value="brief">Brief مختصر</SelectItem>
                     </SelectContent>
                   </Select>
