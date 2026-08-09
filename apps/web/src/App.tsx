@@ -21,6 +21,14 @@ import { AuthScreen } from './features/auth/AuthScreen';
 
 const DEFAULT_TAB = 'home';
 
+const TAB_ALIASES: Record<string, string> = {
+  'customer-dashboard': DEFAULT_TAB,
+};
+
+const normalizeTab = (tab: string) => {
+  return TAB_ALIASES[tab] || tab;
+};
+
 /** Public routes accessible without logging in */
 const PUBLIC_TABS = new Set([
   'landing',
@@ -40,9 +48,9 @@ const AppShell: React.FC = () => {
   
   const [activeTab, setActiveTabState] = useState<string>(() => {
     const pathTab = getTabFromPathname(window.location.pathname);
-    if (pathTab) return pathTab;
+    if (pathTab) return normalizeTab(pathTab);
     const savedTab = localStorage.getItem('khotta_active_tab');
-    return savedTab || DEFAULT_TAB;
+    return savedTab ? normalizeTab(savedTab) : DEFAULT_TAB;
   });
 
   const appUser: User = authUser ? {
@@ -74,7 +82,7 @@ const AppShell: React.FC = () => {
   const requiresAuth = !isPublicTab(activeTab);
 
   const setActiveTab = (tab: string, options?: { replace?: boolean }) => {
-    const nextTab = tab || DEFAULT_TAB;
+    const nextTab = normalizeTab(tab || DEFAULT_TAB);
 
     // Route Protection
     if (!session && !isPublicTab(nextTab)) {
@@ -100,7 +108,7 @@ const AppShell: React.FC = () => {
 
   useEffect(() => {
     const handlePopState = () => {
-      const nextTab = getTabFromPathname(window.location.pathname) || DEFAULT_TAB;
+      const nextTab = normalizeTab(getTabFromPathname(window.location.pathname) || DEFAULT_TAB);
       if (!session && !isPublicTab(nextTab)) {
         window.location.replace(`/login?redirect=${encodeURIComponent(nextTab)}`);
         return;
@@ -124,15 +132,17 @@ const AppShell: React.FC = () => {
   useEffect(() => {
     const handleAppNavigation = (event: Event) => {
       const detail = (event as CustomEvent<{ tab?: string; path?: string }>).detail;
-      const nextTab = detail?.tab;
-      if (!nextTab) return;
+      if (!detail?.tab) return;
+      const nextTab = normalizeTab(detail.tab);
 
       if (!session && !isPublicTab(nextTab)) {
         window.location.replace(`/login?redirect=${encodeURIComponent(nextTab)}`);
         return;
       }
 
-      const nextPath = detail.path || getTabPath(nextTab, window.location.pathname);
+      const nextPath = detail.tab === nextTab && detail.path
+        ? detail.path
+        : getTabPath(nextTab, window.location.pathname);
       if (window.location.pathname !== nextPath) {
         window.history.pushState({ tab: nextTab }, '', nextPath);
       }

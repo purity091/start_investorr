@@ -14,14 +14,10 @@ export default function RefundPolicyPage() {
     <PublicLayout>
       <div dir="rtl" className="w-full bg-background text-foreground py-12 sm:py-16">
         <div className="container mx-auto px-4 max-w-4xl space-y-8">
-          
+
           <div className="text-center space-y-3">
-            <Badge variant="outline" className="text-xs font-semibold px-3 py-1 gap-1.5 mx-auto">
-              <RefreshCw className="size-3.5 text-primary" />
-              <span>المرونة والشفافية المالية</span>
-            </Badge>
             <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
-              سياسة الاسترجاع والإلغاء (Refund & Cancellation Policy)
+              سياسة الاسترجاع والإلغاء
             </h1>
             <p className="text-xs sm:text-sm text-muted-foreground max-w-xl mx-auto">
               تاريخ آخر تحديث: 9 أغسطس 2026 | سياسة وإجراءات إلغاء الاشتراكات واسترداد المبالغ.
@@ -39,7 +35,7 @@ export default function RefundPolicyPage() {
               </CardDescription>
             </CardHeader>
             <CardContent className="p-6 space-y-6 text-sm text-foreground leading-relaxed">
-              
+
               <section className="space-y-2">
                 <h2 className="text-base font-bold text-primary flex items-center gap-2">
                   <CheckCircle2 className="size-4 text-emerald-600" />

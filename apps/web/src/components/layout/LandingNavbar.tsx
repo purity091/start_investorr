@@ -83,7 +83,7 @@ export const LandingNavbar: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/80 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 transition-all">
-      
+
       {/* 1. Top Announcement Bar */}
       {showBanner && (
         <div className="bg-primary text-primary-foreground text-xs py-2 px-4 flex items-center justify-between shadow-2xs font-medium">
@@ -96,8 +96,8 @@ export const LandingNavbar: React.FC = () => {
               استكشف سجل التغييرات والميزات الجديدة ←
             </Link>
           </div>
-          <button 
-            onClick={() => setShowBanner(false)} 
+          <button
+            onClick={() => setShowBanner(false)}
             className="text-primary-foreground/70 hover:text-primary-foreground p-1 transition-colors rounded-sm cursor-pointer"
             aria-label="إغلاق التنبيه"
           >
@@ -108,7 +108,7 @@ export const LandingNavbar: React.FC = () => {
 
       {/* 2. Main Navigation Bar Header */}
       <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
-        
+
         {/* Brand Logo & Tag */}
         <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center gap-2.5 group">
@@ -124,18 +124,18 @@ export const LandingNavbar: React.FC = () => {
         </div>
 
         {/* Desktop Direct Links & Simple Navigation */}
-        <nav className="hidden lg:flex items-center gap-1 text-xs font-bold text-muted-foreground">
-          
+        <nav className="hidden lg:flex items-center gap-1.5 text-xs font-extrabold text-muted-foreground">
+
           {/* Dropdown 1: Features & Tools */}
-          <div 
+          <div
             className="relative"
             onMouseEnter={() => setActiveDropdown('features')}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button 
+            <button
               className={cn(
                 "flex items-center gap-1.5 px-3 py-2 rounded-xl transition-all cursor-pointer",
-                activeDropdown === 'features' ? "bg-primary/10 text-primary font-black" : "hover:text-foreground hover:bg-muted/60"
+                activeDropdown === 'features' ? "bg-primary/10 text-primary font-black shadow-2xs" : "hover:text-foreground hover:bg-muted/60"
               )}
             >
               <span>الأدوات والمميزات</span>
@@ -144,63 +144,93 @@ export const LandingNavbar: React.FC = () => {
 
             {activeDropdown === 'features' && (
               <div dir="rtl" className="absolute top-full right-0 pt-2 w-[920px] animate-in fade-in slide-in-from-top-2 duration-150 z-50">
-                <div className="p-7 rounded-3xl bg-card/98 border border-border/80 shadow-2xl backdrop-blur-xl space-y-5 text-right">
-                  
-                  <div className="grid grid-cols-12 gap-6">
+                <div className="p-6 rounded-3xl bg-card/98 border border-border/80 shadow-2xl backdrop-blur-xl space-y-5 text-right">
+
+                  <div className="grid grid-cols-12 gap-5">
                     {/* Highlight AI Spotlight Card */}
-                    <div className="col-span-4 p-6 rounded-2xl bg-gradient-to-br from-primary/15 via-primary/5 to-muted/80 border border-primary/25 flex flex-col justify-between shadow-2xs relative overflow-hidden group">
-                      <div className="space-y-3.5 relative z-10">
-                        <Badge className="bg-primary text-primary-foreground text-[10px] font-extrabold gap-1 px-3 py-0.5 rounded-full shadow-2xs">
+                    <div className="col-span-4 p-5 rounded-2xl bg-gradient-to-br from-primary/15 via-primary/5 to-muted/80 border border-primary/25 flex flex-col justify-between shadow-2xs relative overflow-hidden group">
+                      <div className="space-y-3 relative z-10">
+                        <Badge className="bg-primary text-primary-foreground text-[10px] font-extrabold gap-1 px-2.5 py-0.5 rounded-full shadow-2xs">
                           <Sparkles className="size-3" />
-                          محرك الذكاء الاصطناعي
+                          استوديو الذكاء الاصطناعي
                         </Badge>
-                        <h4 className="text-base font-black text-foreground group-hover:text-primary transition-colors leading-snug">
-                          مولد ودراسة نموذج العمل (BMC Studio)
+                        <h4 className="text-sm font-black text-foreground group-hover:text-primary transition-colors leading-snug">
+                          مولد نماذج العمل الذكي (BMC Studio)
                         </h4>
-                        <p className="text-xs text-muted-foreground leading-relaxed font-medium">
-                          صمم نموذج عملك التجاري تفاعلياً واحصل على تقييم فوري لمستوى الجاهزية الاستثمارية وتوليد خطط المخاطر وفق منهجية MIT.
+                        <p className="text-[11px] text-muted-foreground leading-relaxed font-medium">
+                          صمّم وهيكل نموذج عملك تفاعلياً واحصل على تقييم فوري للجاهزية الاستثمارية وتوليد خطط المخاطر وفق أعلى المناهج العالمية.
                         </p>
                       </div>
-                      <div className="pt-5 relative z-10">
+                      <div className="pt-4 relative z-10">
                         <Button
                           onClick={() => openAuthModal('register')}
                           size="sm"
                           className="w-full text-xs font-extrabold gap-1.5 h-9 shadow-2xs cursor-pointer"
                         >
-                          ابدأ بناء نموذج مشروعك مجاناً
+                          ابنِ نموذج مشروعك الآن
                           <ArrowLeft className="size-3.5" />
                         </Button>
                       </div>
                     </div>
 
-                    {/* Tools Grid */}
-                    <div className="col-span-8 grid grid-cols-2 gap-4">
-                      <Link href="/#features" className="p-4 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3.5 group">
-                        <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
-                          <Layers className="size-5" />
+                    {/* Tools Grid - 4 High Impact Cards */}
+                    <div className="col-span-8 grid grid-cols-2 gap-3.5">
+                      <Link href="/#features" className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                        <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
+                          <Layers className="size-4.5" />
                         </div>
                         <div className="space-y-1">
                           <h5 className="text-xs font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
                             نموذج العمل التجاري (BMC)
-                            <ChevronLeft className="size-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                            <ChevronLeft className="size-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
                           </h5>
                           <p className="text-[11px] text-muted-foreground font-medium leading-relaxed">
-                            بناء وتفصيل عناصر مشروعك الـ 9 بدءاً من قنوات التوزيع، أنشطة التكلفة، وحتى مصادر الإيرادات.
+                            هيكلة الأركان الـ 9 لمشروعك من القيمة المضافة والشراكات حتى التكاليف ومصادر الإيرادات.
                           </p>
                         </div>
                       </Link>
 
-                      <Link href="/#calculator" className="p-4 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3.5 group">
-                        <div className="p-3 rounded-xl bg-blue-500/10 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
-                          <Calculator className="size-5" />
+                      <Link href="/#calculator" className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                        <div className="p-2.5 rounded-xl bg-blue-500/10 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
+                          <Calculator className="size-4.5" />
                         </div>
                         <div className="space-y-1">
                           <h5 className="text-xs font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
                             حاسبة الإيرادات (MRR / ARR)
-                            <ChevronLeft className="size-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                            <ChevronLeft className="size-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
                           </h5>
                           <p className="text-[11px] text-muted-foreground font-medium leading-relaxed">
-                            أداة تفاعلية لتقدير الإيرادات الشهرية والسنوية المتكررة لشركات الـ SaaS وحساب متوسط قيمة العميل.
+                            نمذجة تفاعلية لدفقات الإيرادات الدورية وتوقع النمو المالي وتكلفة استحواذ العملاء.
+                          </p>
+                        </div>
+                      </Link>
+
+                      <Link href="/market-discovery" className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                        <div className="p-2.5 rounded-xl bg-purple-500/10 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
+                          <Compass className="size-4.5" />
+                        </div>
+                        <div className="space-y-1">
+                          <h5 className="text-xs font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                            رادار استكشاف القطاعات
+                            <ChevronLeft className="size-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                          </h5>
+                          <p className="text-[11px] text-muted-foreground font-medium leading-relaxed">
+                            تحليل اتجاهات السوق ومؤشرات النمو للقطاعات الواعدة لتحديد ثغرات المنافسين الفريدة.
+                          </p>
+                        </div>
+                      </Link>
+
+                      <Link href="/proven-projects" className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                        <div className="p-2.5 rounded-xl bg-amber-500/10 text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
+                          <Target className="size-4.5" />
+                        </div>
+                        <div className="space-y-1">
+                          <h5 className="text-xs font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                            تفكيك نماذج الشركات
+                            <ChevronLeft className="size-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                          </h5>
+                          <p className="text-[11px] text-muted-foreground font-medium leading-relaxed">
+                            استنباط الرؤى التكتيكية وأسرار التوسع في نماذج الأعمال الناجحة عالمياً ومحلياً.
                           </p>
                         </div>
                       </Link>
@@ -213,15 +243,15 @@ export const LandingNavbar: React.FC = () => {
           </div>
 
           {/* Dropdown 2: Databases & Sectors */}
-          <div 
+          <div
             className="relative"
             onMouseEnter={() => setActiveDropdown('databases')}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button 
+            <button
               className={cn(
                 "flex items-center gap-1.5 px-3 py-2 rounded-xl transition-all cursor-pointer",
-                activeDropdown === 'databases' ? "bg-primary/10 text-primary font-black" : "hover:text-foreground hover:bg-muted/60"
+                activeDropdown === 'databases' ? "bg-primary/10 text-primary font-black shadow-2xs" : "hover:text-foreground hover:bg-muted/60"
               )}
             >
               <span>الشركات والقطاعات</span>
@@ -229,17 +259,18 @@ export const LandingNavbar: React.FC = () => {
             </button>
 
             {activeDropdown === 'databases' && (
-              <div dir="rtl" className="absolute top-full right-0 pt-2 w-[840px] animate-in fade-in slide-in-from-top-2 duration-150 z-50">
-                <div className="p-7 rounded-3xl bg-card/98 border border-border/80 shadow-2xl backdrop-blur-xl text-right space-y-5">
-                  <div className="grid grid-cols-2 gap-4">
-                    <Link href="/saas-ideas" className="p-4 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3.5 group">
-                      <div className="p-3 rounded-xl bg-blue-500/10 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
-                        <Laptop className="size-5" />
+              <div dir="rtl" className="absolute top-full right-0 pt-2 w-[860px] animate-in fade-in slide-in-from-top-2 duration-150 z-50">
+                <div className="p-6 rounded-3xl bg-card/98 border border-border/80 shadow-2xl backdrop-blur-xl text-right space-y-4">
+                  <div className="grid grid-cols-2 gap-3.5">
+                    
+                    <Link href="/saas-ideas" className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                      <div className="p-2.5 rounded-xl bg-blue-500/10 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
+                        <Laptop className="size-4.5" />
                       </div>
                       <div className="space-y-1">
                         <h5 className="text-xs font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
                           أفكار مشاريع SaaS البرمجية
-                          <ChevronLeft className="size-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                          <ChevronLeft className="size-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
                         </h5>
                         <p className="text-[11px] text-muted-foreground font-medium leading-relaxed">
                           قاعدة بيانات تضم مئات أفكار البرمجيات بالاشتراكات الدورية الموجهة للشركات والشرائح المختلفة.
@@ -247,27 +278,66 @@ export const LandingNavbar: React.FC = () => {
                       </div>
                     </Link>
 
-                    <Link href="/proven-projects" className="p-4 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3.5 group">
-                      <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
-                        <Building2 className="size-5" />
+                    <Link href="/micro-saas-ideas" className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                      <div className="p-2.5 rounded-xl bg-indigo-500/10 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
+                        <Cpu className="size-4.5" />
+                      </div>
+                      <div className="space-y-1">
+                        <h5 className="text-xs font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                          أفكار Micro-SaaS عالية الربحية
+                          <ChevronLeft className="size-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                        </h5>
+                        <p className="text-[11px] text-muted-foreground font-medium leading-relaxed">
+                          نماذج برمجية مصغرة منخفضة التكلفة وعالية الهامش مخصصة للفرق الصغيرة والرواد المستقلين.
+                        </p>
+                      </div>
+                    </Link>
+
+                    <Link href="/proven-projects" className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                      <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
+                        <Building2 className="size-4.5" />
                       </div>
                       <div className="space-y-1">
                         <h5 className="text-xs font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
                           دراسات حالة الشركات الناجحة
-                          <ChevronLeft className="size-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                          <ChevronLeft className="size-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
                         </h5>
                         <p className="text-[11px] text-muted-foreground font-medium leading-relaxed">
-                          استكشف تفاصيل ومؤشرات الشركات العالمية والمحلية الناجحة.
+                          تحليل عميق لأسرار نمو الشركات المحلية والعالمية ومراحل التوسع من الفكرة حتى الربحية.
                         </p>
                       </div>
                     </Link>
+
+                    <Link href="/failed-projects" className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                      <div className="p-2.5 rounded-xl bg-rose-500/10 text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
+                        <TrendingDown className="size-4.5" />
+                      </div>
+                      <div className="space-y-1">
+                        <h5 className="text-xs font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                          تحليل الشركات المتعثرة (Post-Mortem)
+                          <ChevronLeft className="size-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                        </h5>
+                        <p className="text-[11px] text-muted-foreground font-medium leading-relaxed">
+                          دروس استباقية من أسباب تعثر المشاريع لتفادي الأخطاء التكتيكية والتشغيلية المكررة.
+                        </p>
+                      </div>
+                    </Link>
+
                   </div>
                 </div>
               </div>
             )}
           </div>
 
-          {/* Direct Standard Link 1: Academy */}
+          {/* Direct Standard Link 1: Market Discovery */}
+          <Link
+            href="/market-discovery"
+            className="px-3 py-2 rounded-xl hover:text-foreground hover:bg-muted/60 transition-all cursor-pointer"
+          >
+            استكشاف القطاعات
+          </Link>
+
+          {/* Direct Standard Link 2: Academy */}
           <Link
             href="/platform-academy"
             className="px-3 py-2 rounded-xl hover:text-foreground hover:bg-muted/60 transition-all cursor-pointer"
@@ -275,15 +345,15 @@ export const LandingNavbar: React.FC = () => {
             الأكاديمية
           </Link>
 
-          {/* Direct Standard Link 2: Resources / Changelog */}
+          {/* Direct Standard Link 3: Changelog */}
           <Link
             href="/changelog"
             className="px-3 py-2 rounded-xl hover:text-foreground hover:bg-muted/60 transition-all cursor-pointer"
           >
-            المصادر
+            سجل التغييرات
           </Link>
 
-          {/* Direct Standard Link 3: Pricing */}
+          {/* Direct Standard Link 4: Pricing */}
           <Link
             href="/pricing-plans"
             className="px-3 py-2 rounded-xl hover:text-foreground hover:bg-muted/60 transition-all cursor-pointer"
@@ -295,7 +365,7 @@ export const LandingNavbar: React.FC = () => {
 
         {/* Right Section: Search Command & Single CTA Button */}
         <div className="flex items-center gap-2.5">
-          
+
           {/* Quick Search Icon Button Trigger */}
           <Button
             variant="outline"
@@ -357,7 +427,7 @@ export const LandingNavbar: React.FC = () => {
             </SheetTrigger>
 
             <SheetContent side="right" dir="rtl" className="w-[300px] sm:w-[360px] p-0 flex flex-col justify-between">
-              
+
               <div className="p-5 space-y-6 overflow-y-auto">
                 <SheetHeader className="p-0 border-b border-border pb-4">
                   <SheetTitle className="flex items-center justify-between text-right">
@@ -385,7 +455,7 @@ export const LandingNavbar: React.FC = () => {
 
                 {/* Navigation Sections & Direct Links */}
                 <div className="space-y-3 text-xs font-bold text-foreground">
-                  
+
                   <Link href="/platform-academy" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 py-2 text-foreground hover:text-primary border-b border-border/40">
                     <BookOpen className="size-4 text-primary" />
                     <span>الأكاديمية</span>

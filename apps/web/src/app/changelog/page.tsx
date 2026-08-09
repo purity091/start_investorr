@@ -198,20 +198,10 @@ export default function ChangelogPage() {
   return (
     <PublicLayout>
       <div dir="rtl" className="w-full bg-background text-foreground font-sans min-h-screen pb-16">
-        
+
         {/* Compact Header */}
         <header className="border-b border-border/70 bg-gradient-to-b from-muted/30 via-muted/10 to-background py-8">
           <div className="container mx-auto px-4 max-w-6xl space-y-3">
-            <div className="flex items-center gap-2">
-              <Badge variant="default" className="text-xs font-bold gap-1.5 px-3 py-1 rounded-full shadow-2xs">
-                <Radio className="size-3.5 text-emerald-400 animate-pulse" />
-                <span>سجل التغييرات المباشر</span>
-              </Badge>
-              <Badge variant="outline" className="text-xs font-mono font-bold px-2.5 py-0.5">
-                v2.5.0
-              </Badge>
-            </div>
-            
             <h1 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight leading-tight">
               سجل التحديثات <span className="text-primary">والميزات الجديدة</span>
             </h1>
@@ -224,7 +214,7 @@ export default function ChangelogPage() {
         {/* Main Layout 70-30 Split */}
         <main className="container mx-auto px-4 max-w-6xl py-8">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-8 items-start">
-            
+
             {/* Main Content Area (70% - 7 Columns) */}
             <div className="lg:col-span-7 space-y-8">
               {filteredReleases.length === 0 ? (
@@ -275,7 +265,7 @@ export default function ChangelogPage() {
 
                       {/* Release Card Body */}
                       <div className="p-5 sm:p-6 space-y-5 text-right">
-                        
+
                         {/* Title & Summary */}
                         <div className="space-y-1.5">
                           <h2 className="text-lg sm:text-xl font-bold text-foreground leading-snug">
@@ -349,7 +339,7 @@ export default function ChangelogPage() {
 
             {/* Sidebar Controls Area (30% - 3 Columns Sticky) */}
             <aside className="lg:col-span-3 space-y-5 lg:sticky lg:top-20">
-              
+
               {/* Search Box Card */}
               <Card className="p-4 border-border/80 shadow-2xs space-y-3">
                 <h3 className="text-xs font-bold text-foreground flex items-center gap-2">
