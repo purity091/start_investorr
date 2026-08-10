@@ -5,6 +5,7 @@ import { supabase } from '@/lib/supabase';
 import { withSupabaseRetry } from '@/lib/supabaseRetry';
 import { Session, User } from '@supabase/supabase-js';
 import { clearWorkspaceSessionCache } from '@/features/workspace/workspaceUtils';
+import { DEFAULT_SUBSCRIPTION_PLAN_ID, SubscriptionPlanId, normalizeSubscriptionPlanId } from '@/lib/subscriptionPlans';
 
 export interface UserProfile {
   id: string;
@@ -12,6 +13,7 @@ export interface UserProfile {
   email: string | null;
   role: 'admin' | 'manager' | 'user';
   status: 'active' | 'suspended' | 'pending';
+  subscription_plan: SubscriptionPlanId;
 }
 
 interface AuthContextType {
@@ -73,6 +75,7 @@ const createFallbackProfile = (user: User): UserProfile => ({
   email: user.email ?? null,
   role: 'user',
   status: 'active',
+  subscription_plan: normalizeSubscriptionPlanId(user.user_metadata?.subscription_plan),
 });
 
 const describeProfileError = (error: unknown) => {
@@ -130,7 +133,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         const { data, error } = await withSupabaseRetry(() =>
           supabase
             .from('profiles')
-            .select('id, full_name, email, role, status')
+            .select('id, full_name, email, role, status, subscription_plan')
             .eq('id', userId)
             .maybeSingle()
         );
@@ -138,7 +141,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         if (error) throw error;
 
         if (data) {
-          const nextProfile = data as UserProfile;
+          const nextProfile = {
+            ...data,
+            subscription_plan: normalizeSubscriptionPlanId(data.subscription_plan ?? DEFAULT_SUBSCRIPTION_PLAN_ID),
+          } as UserProfile;
           loadedProfileUserRef.current = userId;
           setProfile(nextProfile);
           writeCachedProfile(nextProfile);

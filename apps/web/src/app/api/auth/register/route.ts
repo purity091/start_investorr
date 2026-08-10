@@ -1,11 +1,13 @@
 import { NextResponse } from 'next/server';
 
+import { DEFAULT_SUBSCRIPTION_PLAN_ID, normalizeSubscriptionPlanId } from '@/lib/subscriptionPlans';
 import { createClient } from '@/utils/supabase/server';
 
 type RegisterBody = {
   name?: unknown;
   email?: unknown;
   password?: unknown;
+  subscriptionPlan?: unknown;
 };
 
 const getAuthErrorCode = (message: string) => {
@@ -21,6 +23,7 @@ export async function POST(request: Request) {
   const fullName = typeof body?.name === 'string' ? body.name.trim() : '';
   const email = typeof body?.email === 'string' ? body.email.trim().toLowerCase() : '';
   const password = typeof body?.password === 'string' ? body.password : '';
+  const subscriptionPlan = normalizeSubscriptionPlanId(body?.subscriptionPlan ?? DEFAULT_SUBSCRIPTION_PLAN_ID);
 
   if (!email || !password || password.length < 6) {
     return NextResponse.json(
@@ -36,6 +39,7 @@ export async function POST(request: Request) {
     options: {
       data: {
         full_name: fullName,
+        subscription_plan: subscriptionPlan,
       },
     },
   });
@@ -57,6 +61,7 @@ export async function POST(request: Request) {
           email,
           role: 'user',
           status: 'active',
+          subscription_plan: subscriptionPlan,
         },
         { onConflict: 'id' }
       );

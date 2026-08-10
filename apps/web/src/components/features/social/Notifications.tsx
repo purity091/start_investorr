@@ -157,10 +157,6 @@ export const Notifications: React.FC<NotificationsProps> = ({ setActiveTab }) =>
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-3xl space-y-3">
             <div className="flex flex-wrap items-center gap-2.5">
-              <Badge variant="outline" className="gap-1.5 bg-background px-3 py-1 font-semibold">
-                <Bell className="size-3.5 text-primary" />
-                مركز التنبيهات النظامية
-              </Badge>
               {unreadCount > 0 ? (
                 <Badge variant="default" className="bg-primary px-2.5 py-1 font-bold text-primary-foreground">
                   {unreadCount} غير مقروءة

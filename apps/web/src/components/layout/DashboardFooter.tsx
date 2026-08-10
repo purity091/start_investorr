@@ -5,7 +5,7 @@ interface DashboardFooterProps {
   setActiveTab?: (tab: string) => void;
 }
 
-const internalLinks = new Set(['my-plans', 'market-discovery', 'proven-projects', 'platform-academy']);
+const internalLinks = new Set(['platform-academy']);
 
 export const DashboardFooter: React.FC<DashboardFooterProps> = ({ setActiveTab }) => {
   const handleInternalNav = (e: React.MouseEvent, tab: string) => {
@@ -27,30 +27,6 @@ export const DashboardFooter: React.FC<DashboardFooterProps> = ({ setActiveTab }
         </div>
 
         <nav className="flex items-center flex-wrap justify-center gap-x-4 gap-y-1.5 text-muted-foreground">
-          <Link
-            href="/my-plans"
-            onClick={(e) => handleInternalNav(e, 'my-plans')}
-            className="hover:text-primary transition-colors text-xs font-semibold"
-          >
-            مشاريعي
-          </Link>
-          <span className="text-border/60 text-[10px]">•</span>
-          <Link
-            href="/market-discovery"
-            onClick={(e) => handleInternalNav(e, 'market-discovery')}
-            className="hover:text-primary transition-colors text-xs"
-          >
-            استكشاف القطاعات
-          </Link>
-          <span className="text-border/60 text-[10px]">•</span>
-          <Link
-            href="/proven-projects"
-            onClick={(e) => handleInternalNav(e, 'proven-projects')}
-            className="hover:text-primary transition-colors text-xs"
-          >
-            شركات ناجحة
-          </Link>
-          <span className="text-border/60 text-[10px]">•</span>
           <Link
             href="/platform-academy"
             onClick={(e) => handleInternalNav(e, 'platform-academy')}

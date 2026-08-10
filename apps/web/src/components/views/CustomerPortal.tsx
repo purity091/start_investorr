@@ -17,6 +17,9 @@ import {
 
 import { User } from '../../types';
 import { useProjectWorkspace } from '../../features/workspace/ProjectWorkspaceContext';
+import { useAuth } from '../../features/auth/AuthContext';
+import { supabase } from '../../lib/supabase';
+import { getSubscriptionPlan, SubscriptionPlan } from '../../lib/subscriptionPlans';
 import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/Card';
@@ -119,14 +122,43 @@ const STATE_OPTIONS: Array<{ id: PortalState; label: string }> = [
 ];
 
 export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveTab, section }) => {
+  const { user: authUser, profile } = useAuth();
   const { workspace } = useProjectWorkspace();
   const [portalState, setPortalState] = React.useState<PortalState>('live');
+  const [activeProjectsCount, setActiveProjectsCount] = React.useState(0);
+  const subscriptionPlan = getSubscriptionPlan(profile?.subscription_plan);
 
   const meta = SECTION_META[section];
   const completedSections = workspace.planSections.filter((item) => item.isCompleted).length;
   const totalSections = Math.max(workspace.planSections.length, 1);
-  const usedCredits = user.totalCredits - user.credits;
   const readinessScore = workspace.metrics.readinessScore;
+
+  React.useEffect(() => {
+    let cancelled = false;
+
+    const fetchActiveProjectsCount = async () => {
+      if (!authUser) {
+        setActiveProjectsCount(0);
+        return;
+      }
+
+      const { count, error } = await supabase
+        .from('business_canvas')
+        .select('id', { count: 'exact', head: true })
+        .eq('user_id', authUser.id)
+        .is('deleted_at', null);
+
+      if (!cancelled && !error) {
+        setActiveProjectsCount(count ?? 0);
+      }
+    };
+
+    void fetchActiveProjectsCount();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [authUser]);
 
   return (
     <div className="mx-auto max-w-5xl space-y-4 sm:space-y-6 px-4 py-6 sm:py-8 sm:px-6 pb-24" dir="rtl">
@@ -183,8 +215,12 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
       </section>
 
       <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-        <Metric label="الخطة" value="الاحترافي" hint="نشطة حتى 21 أغسطس 2026" />
-        <Metric label="الرصيد" value={`${user.credits}/${user.totalCredits}`} hint="اعتمادات متاحة" />
+        <Metric label="الخطة" value={subscriptionPlan.name} hint={subscriptionPlan.projectLimitLabel} />
+        <Metric
+          label="المشاريع"
+          value={subscriptionPlan.projectLimit ? `${activeProjectsCount}/${subscriptionPlan.projectLimit}` : `${activeProjectsCount}`}
+          hint={subscriptionPlan.projectLimit ? 'ضمن حد الباقة' : 'غير محدود'}
+        />
         <Metric label="جاهزية المشروع" value={`${readinessScore}%`} hint="مرتبطة بالمساحة الحالية" />
         <Metric label="أقسام الخطة" value={`${completedSections}/${totalSections}`} hint="مكتملة حتى الآن" />
       </section>
@@ -219,9 +255,10 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
           section={section}
           user={user}
           setActiveTab={setActiveTab}
-          usedCredits={usedCredits}
           totalSections={totalSections}
           completedSections={completedSections}
+          subscriptionPlan={subscriptionPlan}
+          activeProjectsCount={activeProjectsCount}
         />
       )}
     </div>
@@ -232,16 +269,18 @@ function SectionContent({
   section,
   user,
   setActiveTab,
-  usedCredits,
   totalSections,
   completedSections,
+  subscriptionPlan,
+  activeProjectsCount,
 }: {
   section: CustomerPortalSection;
   user: User;
   setActiveTab: (tab: string) => void;
-  usedCredits: number;
   totalSections: number;
   completedSections: number;
+  subscriptionPlan: SubscriptionPlan;
+  activeProjectsCount: number;
 }) {
   if (section === 'dashboard') {
     return (
@@ -300,7 +339,7 @@ function SectionContent({
         <Panel title="حالة الاشتراك" subtitle="ملخص واضح للخطة الحالية">
           <div className="space-y-3">
             <Badge variant="secondary">اشتراك نشط</Badge>
-            <h2 className="text-xl sm:text-2xl font-semibold text-foreground">باقة المحترفين</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-foreground">{subscriptionPlan.name}</h2>
             <p className="text-sm leading-7 text-muted-foreground">
               التجديد القادم في 21 أغسطس 2026، ووسيلة الدفع الأساسية تنتهي بـ 4242.
             </p>
@@ -320,10 +359,10 @@ function SectionContent({
   if (section === 'usage') {
     return (
       <div className="grid gap-3 sm:gap-4 md:grid-cols-3">
-        <Panel title="اعتمادات الأدوات" subtitle="المتاح والمستهلك من خطتك">
-          <ProgressBar value={Math.round((usedCredits / Math.max(user.totalCredits, 1)) * 100)} />
+        <Panel title="حدود المشاريع" subtitle={subscriptionPlan.projectLimitLabel}>
+          <ProgressBar value={subscriptionPlan.projectLimit ? Math.min(Math.round((activeProjectsCount / subscriptionPlan.projectLimit) * 100), 100) : 100} />
           <p className="mt-4 text-sm leading-7 text-muted-foreground">
-            استهلكت {usedCredits} اعتماداً وبقي لديك {user.credits} اعتماداً في الدورة الحالية.
+            لديك {activeProjectsCount} مشروع نشط حالياً ضمن {subscriptionPlan.name}.
           </p>
         </Panel>
         <Panel title="المزايا المتاحة" subtitle="ما يتيحه الاشتراك الحالي">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Check,
   CreditCard,
@@ -15,6 +15,9 @@ import {
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
+import { useAuth } from '@/features/auth/AuthContext';
+import { supabase } from '@/lib/supabase';
+import { getSubscriptionPlan } from '@/lib/subscriptionPlans';
 
 interface PricingPlansProps {
   setActiveTab?: (tab: string) => void;
@@ -22,6 +25,7 @@ interface PricingPlansProps {
 
 const plans = [
   {
+    id: 'starter',
     name: 'باقة رائد',
     icon: User,
     monthly: 0,
@@ -40,6 +44,7 @@ const plans = [
     cta: 'العودة إلى الحساب',
   },
   {
+    id: 'founder',
     name: 'باقة مؤسس',
     icon: Rocket,
     monthly: 35,
@@ -59,6 +64,7 @@ const plans = [
     cta: 'ترقية إلى باقة مؤسس',
   },
   {
+    id: 'leader',
     name: 'باقة قائد',
     icon: Zap,
     monthly: 75,
@@ -76,13 +82,45 @@ const plans = [
     ],
     action: 'customer-dashboard',
     cta: 'الخطة الحالية',
-    featured: true,
   },
 ];
 
 export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
+  const { user, profile } = useAuth();
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const usagePercentage = 62;
+  const [activeProjectsCount, setActiveProjectsCount] = useState(0);
+  const currentPlan = getSubscriptionPlan(profile?.subscription_plan);
+  const currentPlanIcon = currentPlan.id === 'starter' ? User : currentPlan.id === 'founder' ? Rocket : Zap;
+  const usagePercentage = currentPlan.projectLimit
+    ? Math.min(Math.round((activeProjectsCount / currentPlan.projectLimit) * 100), 100)
+    : 0;
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const fetchActiveProjectsCount = async () => {
+      if (!user) {
+        setActiveProjectsCount(0);
+        return;
+      }
+
+      const { count, error } = await supabase
+        .from('business_canvas')
+        .select('id', { count: 'exact', head: true })
+        .eq('user_id', user.id)
+        .is('deleted_at', null);
+
+      if (!cancelled && !error) {
+        setActiveProjectsCount(count ?? 0);
+      }
+    };
+
+    void fetchActiveProjectsCount();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [user]);
 
   return (
     <div className="app-page-shell-wide space-y-4 sm:space-y-6 py-4 sm:py-6" dir="rtl">
@@ -105,7 +143,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
               <CardDescription>ملخص سريع قبل الدخول في التفاصيل.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">
-              <Fact label="الخطة الحالية" value="باقة قائد" />
+              <Fact label="الخطة الحالية" value={currentPlan.name} />
               <div className="flex items-center justify-between gap-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3">
                 <span className="text-xs text-amber-700 font-medium">نظام الدفع قيد التفعيل</span>
                 <Clock className="size-4 text-amber-600 shrink-0" />
@@ -120,9 +158,14 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
       </section>
 
       <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-        <Metric label="الباقة" value="باقة قائد" hint="نشطة حالياً (غير محدود)" icon={Zap} />
-        <Metric label="الرصيد المتاح" value="85 / 100" hint="ضمن الدورة الحالية" icon={Wallet} />
-        <Metric label="الاستخدام" value={`${usagePercentage}%`} hint="استهلاك الأدوات" icon={ShieldCheck} />
+        <Metric label="الباقة" value={currentPlan.name} hint={currentPlan.projectLimitLabel} icon={currentPlanIcon} />
+        <Metric
+          label="المشاريع"
+          value={currentPlan.projectLimit ? `${activeProjectsCount} / ${currentPlan.projectLimit}` : `${activeProjectsCount}`}
+          hint={currentPlan.projectLimit ? 'ضمن حد الباقة' : 'غير محدود'}
+          icon={Wallet}
+        />
+        <Metric label="الاستخدام" value={currentPlan.projectLimit ? `${usagePercentage}%` : 'مفتوح'} hint="استهلاك حد المشاريع" icon={ShieldCheck} />
         <Metric label="الفوترة" value="قيد التفعيل" hint="نظام الدفع قادم" icon={CreditCard} />
       </section>
 
@@ -137,7 +180,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
           <CardContent className="space-y-5 p-4 sm:p-6 pt-0 sm:pt-0">
             <div className="rounded-xl border border-border/70 bg-muted/35 p-3 sm:p-4 text-right">
               <Badge variant="secondary">اشتراك نشط</Badge>
-              <h2 className="mt-3 text-2xl font-semibold text-foreground">باقة قائد (مشاريع غير محدودة)</h2>
+              <h2 className="mt-3 text-2xl font-semibold text-foreground">{currentPlan.name} ({currentPlan.projectLimitLabel})</h2>
               <p className="mt-2 text-sm leading-7 text-muted-foreground">
                 مناسبة للمستخدم القيادي الذي يدير مشاريع غير محدودة ويحتاج إلى مخرجات مخصصة بهويته التجارية مع أولوية دعم VIP.
               </p>
@@ -210,18 +253,19 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
           {plans.map((plan) => {
             const Icon = plan.icon;
             const price = billingCycle === 'monthly' ? plan.monthly : plan.yearly;
+            const isCurrentPlan = plan.id === currentPlan.id;
 
             return (
               <Card
                 key={plan.name}
-                className={plan.featured ? 'border-primary shadow-xs' : 'border-border/70 shadow-xs'}
+                className={isCurrentPlan ? 'border-primary shadow-xs' : 'border-border/70 shadow-xs'}
               >
                 <CardHeader className="p-4 sm:p-5 text-right">
                   <div className="mb-4 flex items-center justify-between">
                     <span className="flex size-10 items-center justify-center rounded-lg bg-muted">
                       <Icon className="size-5 text-foreground" />
                     </span>
-                    {plan.featured ? <Badge>خطتك الحالية</Badge> : null}
+                    {isCurrentPlan ? <Badge>خطتك الحالية</Badge> : null}
                   </div>
                   <CardTitle>{plan.name}</CardTitle>
                   <CardDescription>{plan.description}</CardDescription>
@@ -260,7 +304,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
                   </div>
                   <Button
                     className="mt-6 w-full text-xs font-bold"
-                    variant={plan.featured ? 'default' : 'outline'}
+                    variant={isCurrentPlan ? 'default' : 'outline'}
                     onClick={() => setActiveTab?.(plan.action)}
                   >
                     {plan.cta}

@@ -927,7 +927,15 @@ export default function LandingPage() {
 
           <div className="pt-6 border-t border-border/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground font-medium">
             <p>© {new Date().getFullYear()} منصة خطة. جميع الحقوق محفوظة.</p>
-            <p>مبنية وفق معايير Shadcn UI ودعم كامل للغة العربية.</p>
+            <nav className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5">
+              <Link href="/privacy" className="hover:text-primary transition-colors whitespace-nowrap">سياسة الخصوصية وحماية البيانات</Link>
+              <span className="text-border/60">•</span>
+              <Link href="/terms" className="hover:text-primary transition-colors whitespace-nowrap">شروط وأحكام الخدمة</Link>
+              <span className="text-border/60">•</span>
+              <Link href="/refund-policy" className="hover:text-primary transition-colors whitespace-nowrap">سياسة الاسترجاع والإلغاء</Link>
+              <span className="text-border/60">•</span>
+              <Link href="/fulfillment-policy" className="hover:text-primary transition-colors whitespace-nowrap">سياسة التسليم وتوفير الخدمة</Link>
+            </nav>
           </div>
         </div>
       </footer>

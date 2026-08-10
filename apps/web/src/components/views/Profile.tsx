@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import {
-  Activity,
   Briefcase,
   CreditCard,
   LifeBuoy,
   Loader2,
-  ShieldCheck,
-  Sparkles,
   User,
 } from 'lucide-react';
 
@@ -25,6 +22,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useAuth } from '@/features/auth/AuthContext';
 import { supabase } from '@/lib/supabase';
+import { getSubscriptionPlan } from '@/lib/subscriptionPlans';
 
 interface ProfileProps {
   user: {
@@ -45,17 +43,38 @@ interface RealProject {
   updated: string;
 }
 
+type RecentProjectRow = {
+  id: string;
+  project_title: string | null;
+  opportunity_title: string | null;
+  current_stage: string | null;
+  profile?: {
+    opportunityTitle?: string | null;
+  } | null;
+  currentStage?: string | null;
+  canvas_data?: {
+    profile?: {
+      opportunityTitle?: string | null;
+    };
+    currentStage?: string | null;
+  };
+  updated_at: string;
+};
+
 export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
   const { user: authUser, profile } = useAuth();
 
   const displayName = profile?.full_name || authUser?.user_metadata?.full_name || user.name || 'المستخدم';
   const displayEmail = profile?.email || authUser?.email || user.email;
   const userRole = profile?.role || 'user';
-  const usagePercentage = Math.min((user.credits / Math.max(user.totalCredits, 1)) * 100, 100);
+  const subscriptionPlan = getSubscriptionPlan(profile?.subscription_plan);
 
   const [recentProjects, setRecentProjects] = useState<RealProject[]>([]);
   const [projectCount, setProjectCount] = useState<number>(0);
   const [loadingProjects, setLoadingProjects] = useState(true);
+  const projectUsagePercentage = subscriptionPlan.projectLimit
+    ? Math.min(Math.round((projectCount / subscriptionPlan.projectLimit) * 100), 100)
+    : 0;
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -73,9 +92,8 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
         if (error) throw error;
 
         if (data) {
-          setProjectCount(data.length);
           setRecentProjects(
-            data.map((row: any) => {
+            (data as RecentProjectRow[]).map((row) => {
               const profile = row.profile || row.canvas_data?.profile;
               const currentStage = row.current_stage || row.currentStage || row.canvas_data?.currentStage;
               return {
@@ -93,6 +111,15 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
             })
           );
         }
+
+        const { count, error: countError } = await supabase
+          .from('business_canvas')
+          .select('id', { count: 'exact', head: true })
+          .eq('user_id', authUser.id)
+          .is('deleted_at', null);
+
+        if (countError) throw countError;
+        setProjectCount(count ?? data?.length ?? 0);
       } catch (err) {
         console.error('Error fetching recent projects:', err);
       } finally {
@@ -104,9 +131,9 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
 
   const accountFacts = [
     { label: 'اسم الحساب', value: displayName },
-    { label: 'الباقة الحالية', value: 'باقة مؤسس' },
+    { label: 'الباقة الحالية', value: subscriptionPlan.name },
     { label: 'الدور في المنصة', value: userRole === 'admin' ? 'مدير النظام (Admin)' : 'مستخدم (User)' },
-    { label: 'الرصيد المتاح', value: `${user.credits} من ${user.totalCredits}` },
+    { label: 'حد المشاريع', value: subscriptionPlan.projectLimit ? `${projectCount} من ${subscriptionPlan.projectLimit}` : `${projectCount} / مفتوح` },
     { label: 'أولوية الدعم', value: 'قياسي' },
   ];
 
@@ -162,7 +189,7 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
                     )}
                     <p className="text-sm text-muted-foreground">{displayEmail}</p>
                     <div className="mt-2 flex gap-2 justify-start">
-                      <Badge variant="secondary">باقة مؤسس</Badge>
+                      <Badge variant="secondary">{subscriptionPlan.name}</Badge>
                       <Badge variant="outline" className="capitalize">{userRole}</Badge>
                     </div>
                   </div>
@@ -170,10 +197,12 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
                 <div className="space-y-2 text-right">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-muted-foreground">رصيد الأدوات</span>
-                    <span className="font-semibold">{user.credits} / {user.totalCredits}</span>
+                    <span className="font-semibold">
+                      {subscriptionPlan.projectLimit ? `${projectCount} / ${subscriptionPlan.projectLimit}` : `${projectCount} / مفتوح`}
+                    </span>
                   </div>
                   <div className="h-2.5 overflow-hidden rounded-full bg-muted">
-                    <div className="h-full bg-primary transition-all rounded-full" style={{ width: `${usagePercentage}%` }} />
+                    <div className="h-full bg-primary transition-all rounded-full" style={{ width: `${subscriptionPlan.projectLimit ? projectUsagePercentage : 100}%` }} />
                   </div>
                 </div>
               </div>
@@ -200,16 +229,18 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
                 <p className="text-xs font-medium text-muted-foreground">حالة الاشتراك</p>
                 <div className="mt-2 flex items-end justify-between gap-3">
                   <p className="text-xl font-semibold text-foreground">نشط</p>
-                  <Badge variant="secondary" className="text-xs">باقة مؤسس</Badge>
+                  <Badge variant="secondary" className="text-xs">{subscriptionPlan.name}</Badge>
                 </div>
               </CardContent>
             </Card>
             <Card className="border-border/70 shadow-sm">
               <CardContent className="p-4 text-right">
-                <p className="text-xs font-medium text-muted-foreground">الرصيد المتبقي</p>
+                <p className="text-xs font-medium text-muted-foreground">المشاريع المتبقية</p>
                 <div className="mt-2 flex items-end justify-between gap-3">
-                  <p className="text-xl font-semibold text-foreground">{user.credits}</p>
-                  <span className="text-xs text-muted-foreground">من {user.totalCredits}</span>
+                  <p className="text-xl font-semibold text-foreground">
+                    {subscriptionPlan.projectLimit ? Math.max(subscriptionPlan.projectLimit - projectCount, 0) : 'مفتوح'}
+                  </p>
+                  <span className="text-xs text-muted-foreground">{subscriptionPlan.projectLimitLabel}</span>
                 </div>
               </CardContent>
             </Card>

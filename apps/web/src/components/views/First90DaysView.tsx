@@ -6,7 +6,6 @@ import {
   Sparkles,
   ListTodo,
   Rocket,
-  ArrowRight,
   Check,
   Flame,
   Trophy,
@@ -321,7 +320,7 @@ export const First90DaysView: React.FC<{ setActiveTab: (tab: string) => void }> 
   const month3Tasks = tasks.filter((t) => t.month === 3);
 
   return (
-    <main dir="rtl" className="mx-auto w-full max-w-5xl space-y-8 px-4 py-6 text-right lg:px-6" style={{ direction: 'rtl' }}>
+    <main dir="rtl" className="mx-auto w-full max-w-5xl space-y-8 px-4 py-6 text-right lg:px-6">
       {/* Header Banner - Clean Surface Composition (No borders) */}
       <section className="rounded-2xl bg-card p-6 shadow-xs">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
@@ -371,17 +370,13 @@ export const First90DaysView: React.FC<{ setActiveTab: (tab: string) => void }> 
                 <Plus className="size-3.5" />
                 مهمة جديدة
               </Button>
-              <Button onClick={() => setActiveTab('workspace')} variant="outline" size="sm" className="gap-2 text-xs font-medium rounded-lg">
-                <ArrowRight className="size-3.5" />
-                مساحة العمل
-              </Button>
             </div>
           </div>
         </div>
       </section>
 
       {/* Main Tabs Navigation - shadcn tabs composition */}
-      <Tabs defaultValue="tasks" className="w-full space-y-6">
+      <Tabs defaultValue="tasks" className="w-full space-y-6" dir="rtl">
         <TabsList className="grid w-full grid-cols-2 bg-muted/50 p-1 rounded-xl h-10">
           <TabsTrigger value="tasks" className="gap-2 text-xs font-semibold rounded-lg data-[state=active]:bg-background data-[state=active]:shadow-xs">
             <ListTodo className="size-3.5 text-primary" />
@@ -449,7 +444,7 @@ export const First90DaysView: React.FC<{ setActiveTab: (tab: string) => void }> 
                 <RotateCcw className="size-3" />
                 إعادة ضبط
               </Button>
-              <span className="text-xs font-medium text-muted-foreground tabular-nums border-r border-border pr-3">
+              <span className="text-xs font-medium text-muted-foreground tabular-nums border-s border-border ps-3">
                 عرض {filteredTasks.length} مهمة
               </span>
             </div>
@@ -562,7 +557,7 @@ export const First90DaysView: React.FC<{ setActiveTab: (tab: string) => void }> 
 
       {/* ================= ADD NEW TASK DIALOG (SHADCN UI) ================= */}
       <Dialog open={isAddDialogOpen} onOpenChange={setIsAddDialogOpen}>
-        <DialogContent className="sm:max-w-md text-right font-sans">
+        <DialogContent className="sm:max-w-md text-right font-sans" dir="rtl">
           <DialogHeader>
             <DialogTitle className="text-lg font-bold">إضافة مهمة جديدة لخارطة 90 يوماً</DialogTitle>
           </DialogHeader>
@@ -584,6 +579,7 @@ export const First90DaysView: React.FC<{ setActiveTab: (tab: string) => void }> 
                 <select
                   value={newTaskMonth}
                   onChange={(e) => setNewTaskMonth(Number(e.target.value) as 1 | 2 | 3)}
+                  dir="rtl"
                   className="w-full h-9 rounded-md border border-input bg-background px-2 text-xs font-medium text-foreground focus:outline-none focus:ring-1 focus:ring-primary"
                 >
                   <option value={1}>الشهر 1</option>
@@ -609,6 +605,7 @@ export const First90DaysView: React.FC<{ setActiveTab: (tab: string) => void }> 
                 <select
                   value={newTaskCategory}
                   onChange={(e) => setNewTaskCategory(e.target.value as TaskItem['category'])}
+                  dir="rtl"
                   className="w-full h-9 rounded-md border border-input bg-background px-2 text-xs font-medium text-foreground focus:outline-none focus:ring-1 focus:ring-primary"
                 >
                   <option value="validation">تحقق وسوق</option>
@@ -640,13 +637,13 @@ export const First90DaysView: React.FC<{ setActiveTab: (tab: string) => void }> 
               />
             </div>
 
-            <DialogFooter className="gap-2 sm:gap-0 pt-2">
-              <Button type="button" variant="outline" size="sm" onClick={() => setIsAddDialogOpen(false)}>
-                إلغاء
-              </Button>
+            <DialogFooter className="gap-2 pt-2 flex-row-reverse sm:flex-row-reverse justify-start">
               <Button type="submit" size="sm" className="gap-1">
                 <Plus className="size-3.5" />
                 إضافة المهمة
+              </Button>
+              <Button type="button" variant="outline" size="sm" onClick={() => setIsAddDialogOpen(false)}>
+                إلغاء
               </Button>
             </DialogFooter>
           </form>
@@ -660,7 +657,7 @@ export const First90DaysView: React.FC<{ setActiveTab: (tab: string) => void }> 
           <p className="text-sm leading-7 text-muted-foreground">
             سيتم حذف التعديلات الحالية وإرجاع قائمة المهام إلى الحالة الافتراضية.
           </p>
-          <DialogFooter>
+          <DialogFooter className="flex-row-reverse sm:flex-row-reverse justify-start gap-2">
             <Button variant="destructive" onClick={confirmResetToInitialTasks}>
               إعادة الضبط
             </Button>
@@ -848,7 +845,7 @@ const TaskRowItem: React.FC<TaskRowItemProps> = ({
             </Button>
 
             {/* Dropdown Menu for Extra Actions */}
-            <DropdownMenu>
+            <DropdownMenu dir="rtl">
               <DropdownMenuTrigger asChild>
                 <Button size="icon-xs" variant="ghost" className="text-muted-foreground hover:text-foreground">
                   <MoreVertical className="size-3.5" />
@@ -1031,7 +1028,7 @@ const TaskEditDialog: React.FC<{
 
   return (
     <Dialog open onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-lg text-right font-sans">
+      <DialogContent className="sm:max-w-lg text-right font-sans" dir="rtl">
         <DialogHeader>
           <DialogTitle className="text-lg font-bold">تعديل معلومات المهمة التنفيذية</DialogTitle>
         </DialogHeader>
@@ -1051,6 +1048,7 @@ const TaskEditDialog: React.FC<{
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value as TaskItem['category'])}
+              dir="rtl"
               className="w-full h-9 rounded-md border border-input bg-background px-3 text-xs font-medium text-foreground focus:outline-none focus:ring-1 focus:ring-primary"
             >
               <option value="validation">تحقق وسوق</option>
@@ -1089,13 +1087,13 @@ const TaskEditDialog: React.FC<{
             />
           </div>
 
-          <DialogFooter className="gap-2 sm:gap-0 pt-2">
-            <Button type="button" variant="outline" size="sm" onClick={onClose}>
-              إلغاء
-            </Button>
+          <DialogFooter className="gap-2 pt-2 flex-row-reverse sm:flex-row-reverse justify-start">
             <Button type="submit" size="sm" className="gap-1.5">
               <Check className="size-3.5" />
               حفظ التعديلات
+            </Button>
+            <Button type="button" variant="outline" size="sm" onClick={onClose}>
+              إلغاء
             </Button>
           </DialogFooter>
         </form>

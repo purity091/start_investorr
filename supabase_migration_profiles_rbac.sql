@@ -5,12 +5,16 @@ CREATE TABLE IF NOT EXISTS public.profiles (
   email TEXT,
   role TEXT DEFAULT 'user' CHECK (role IN ('user', 'admin', 'manager')),
   status TEXT DEFAULT 'active' CHECK (status IN ('active', 'suspended', 'pending')),
+  subscription_plan TEXT NOT NULL DEFAULT 'starter'
+    CHECK (subscription_plan IN ('starter', 'founder', 'leader')),
   bookmarked_ids TEXT[] DEFAULT ARRAY[]::TEXT[],
   created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now())
 );
 
 ALTER TABLE public.profiles
-  ADD COLUMN IF NOT EXISTS bookmarked_ids TEXT[] DEFAULT ARRAY[]::TEXT[];
+  ADD COLUMN IF NOT EXISTS bookmarked_ids TEXT[] DEFAULT ARRAY[]::TEXT[],
+  ADD COLUMN IF NOT EXISTS subscription_plan TEXT NOT NULL DEFAULT 'starter'
+    CHECK (subscription_plan IN ('starter', 'founder', 'leader'));
 
 -- 2. Enable Row Level Security (RLS)
 ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
@@ -39,8 +43,9 @@ BEGIN
   IF (
     NEW.role IS DISTINCT FROM OLD.role
     OR NEW.status IS DISTINCT FROM OLD.status
+    OR NEW.subscription_plan IS DISTINCT FROM OLD.subscription_plan
   ) AND public.get_current_profile_role() IS DISTINCT FROM 'admin' THEN
-    RAISE EXCEPTION 'Only administrators can update profile role or status'
+    RAISE EXCEPTION 'Only administrators can update profile role, status, or subscription plan'
       USING ERRCODE = '42501';
   END IF;
 

@@ -13,6 +13,7 @@ import { supabase } from '@/lib/supabase';
 import { withSupabaseRetry } from '@/lib/supabaseRetry';
 import { useAuth } from '@/features/auth/AuthContext';
 import { getProjectIdFromEditPath } from '@/utils/routes';
+import { getSubscriptionPlan } from '@/lib/subscriptionPlans';
 
 interface ProjectWorkspaceContextValue {
   workspace: ProjectWorkspace;
@@ -139,7 +140,7 @@ export const ProjectWorkspaceProvider: React.FC<{
   children: React.ReactNode;
   planSections: PlanSection[];
 }> = ({ children, planSections }) => {
-  const { user } = useAuth();
+  const { user, profile } = useAuth();
   const userRef = useRef(user);
   const activeProjectIdRef = useRef<string | null>(null);
   const syncInFlightPromiseRef = useRef<Promise<void> | null>(null);
@@ -543,6 +544,24 @@ export const ProjectWorkspaceProvider: React.FC<{
         ...initial,
         feasibilityModelType: mode,
       };
+
+      const plan = getSubscriptionPlan(profile?.subscription_plan);
+      if (plan.projectLimit !== null) {
+        const { count, error: countError } = await supabase
+          .from('business_canvas')
+          .select('id', { count: 'exact', head: true })
+          .eq('user_id', user.id)
+          .is('deleted_at', null);
+
+        if (countError) throw countError;
+
+        if ((count ?? 0) >= plan.projectLimit) {
+          window.alert(
+            `وصلت إلى حد ${plan.name}: ${plan.projectLimitLabel}. يمكنك حذف مشروع قديم أو ترقية الباقة لإنشاء مشروع جديد.`
+          );
+          return null;
+        }
+      }
       
       const { data, error } = await supabase
         .from('business_canvas')
@@ -576,7 +595,7 @@ export const ProjectWorkspaceProvider: React.FC<{
       console.error('Error creating project', err);
     }
     return null;
-  }, [flushWorkspace, planSections, user]);
+  }, [flushWorkspace, planSections, profile?.subscription_plan, user]);
 
   const clearActiveProject = useCallback((id?: string) => {
     const currentProjectId = activeProjectIdRef.current;

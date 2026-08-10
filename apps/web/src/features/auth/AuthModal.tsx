@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/Input';
 import { Badge } from '@/components/ui/Badge';
 import { Loader2, Mail, Lock, AlertCircle, ArrowLeft, User as UserIcon, Sparkles, Eye, EyeOff, CheckSquare, Square, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { DEFAULT_SUBSCRIPTION_PLAN_ID, SUBSCRIPTION_PLAN_IDS, SUBSCRIPTION_PLANS, SubscriptionPlanId } from '@/lib/subscriptionPlans';
 
 type AuthMode = 'login' | 'register' | 'forgot_password';
 
@@ -64,6 +65,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [subscriptionPlan, setSubscriptionPlan] = useState<SubscriptionPlanId>(DEFAULT_SUBSCRIPTION_PLAN_ID);
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
@@ -71,11 +73,19 @@ export const AuthModal: React.FC<AuthModalProps> = ({
   const [message, setMessage] = useState<string | null>(null);
 
   useEffect(() => {
-    if (isOpen) {
+    if (!isOpen) return;
+    let cancelled = false;
+
+    queueMicrotask(() => {
+      if (cancelled) return;
       setMode(initialMode);
       setError(null);
       setMessage(null);
-    }
+    });
+
+    return () => {
+      cancelled = true;
+    };
   }, [isOpen, initialMode]);
 
   const resetState = () => {
@@ -121,7 +131,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         }
         window.location.href = getSafeRedirectPath();
       } else if (mode === 'register') {
-        await postAuthAction('/api/auth/register', { name, email, password });
+        await postAuthAction('/api/auth/register', { name, email, password, subscriptionPlan });
         setMessage('تم إنشاء الحساب بنجاح! إذا كانت المصادقة تتطلب تفعيلاً، راجع بريدك الإلكتروني.');
       } else if (mode === 'forgot_password') {
         await postAuthAction('/api/auth/forgot-password', { email });
@@ -286,6 +296,35 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                       required
                       className="pl-4 pr-10 py-5 bg-background border-border/80 rounded-xl text-xs font-medium focus-visible:ring-primary"
                     />
+                  </div>
+                </div>
+              )}
+
+              {mode === 'register' && (
+                <div className="space-y-1.5">
+                  <label className="text-xs font-extrabold text-foreground">اختر باقة حدود المشاريع</label>
+                  <div className="grid gap-2 sm:grid-cols-3">
+                    {SUBSCRIPTION_PLAN_IDS.map((planId) => {
+                      const plan = SUBSCRIPTION_PLANS[planId];
+                      const selected = subscriptionPlan === planId;
+
+                      return (
+                        <button
+                          key={plan.id}
+                          type="button"
+                          onClick={() => setSubscriptionPlan(plan.id)}
+                          className={cn(
+                            'rounded-xl border px-2.5 py-2 text-right transition-colors',
+                            selected
+                              ? 'border-primary bg-primary/10 text-foreground'
+                              : 'border-border bg-background text-muted-foreground hover:border-primary/40'
+                          )}
+                        >
+                          <span className="block text-xs font-black">{plan.name}</span>
+                          <span className="mt-0.5 block text-[11px] font-semibold">{plan.projectLimitLabel}</span>
+                        </button>
+                      );
+                    })}
                   </div>
                 </div>
               )}

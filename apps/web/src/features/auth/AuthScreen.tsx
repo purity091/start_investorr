@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Badge } from '@/components/ui/Badge';
 import { Loader2, Mail, Lock, AlertCircle, ArrowLeft, User as UserIcon, Sparkles, Eye, EyeOff, CheckSquare, Square } from 'lucide-react';
+import { DEFAULT_SUBSCRIPTION_PLAN_ID, SUBSCRIPTION_PLAN_IDS, SUBSCRIPTION_PLANS, SubscriptionPlanId } from '@/lib/subscriptionPlans';
 
 type AuthMode = 'login' | 'register' | 'forgot_password';
 
@@ -53,6 +54,7 @@ export const AuthScreen: React.FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [subscriptionPlan, setSubscriptionPlan] = useState<SubscriptionPlanId>(DEFAULT_SUBSCRIPTION_PLAN_ID);
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
@@ -111,6 +113,7 @@ export const AuthScreen: React.FC = () => {
           name,
           email,
           password,
+          subscriptionPlan,
         });
         setMessage('تم إنشاء الحساب بنجاح! إذا كانت المصادقة تتطلب تفعيلاً، مراجعة البريد الإلكتروني.');
       } else if (mode === 'forgot_password') {
@@ -237,6 +240,34 @@ export const AuthScreen: React.FC = () => {
                     required
                     className="pl-4 pr-11 py-6 bg-white border-slate-200 hover:border-slate-300 focus-visible:ring-blue-500 text-right shadow-sm rounded-xl transition-all"
                   />
+                </div>
+              </div>
+            )}
+
+            {mode === 'register' && (
+              <div className="space-y-2 text-right">
+                <label className="text-sm font-bold text-slate-700">اختر باقة حدود المشاريع</label>
+                <div className="grid gap-2 sm:grid-cols-3">
+                  {SUBSCRIPTION_PLAN_IDS.map((planId) => {
+                    const plan = SUBSCRIPTION_PLANS[planId];
+                    const selected = subscriptionPlan === planId;
+
+                    return (
+                      <button
+                        key={plan.id}
+                        type="button"
+                        onClick={() => setSubscriptionPlan(plan.id)}
+                        className={`rounded-xl border px-3 py-3 text-right transition-colors ${
+                          selected
+                            ? 'border-blue-600 bg-blue-50 text-blue-900'
+                            : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300'
+                        }`}
+                      >
+                        <span className="block text-sm font-bold">{plan.name}</span>
+                        <span className="mt-1 block text-xs font-medium text-slate-500">{plan.projectLimitLabel}</span>
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             )}
