@@ -8,7 +8,6 @@ import { createMetadata } from '@/lib/seo';
 import {
   Brain,
   BarChart3,
-  Sparkles,
   PieChart,
   FileText,
   Palette,
@@ -88,10 +87,6 @@ export default function FeaturesPage() {
       {/* Hero Section */}
       <section className="relative py-20 lg:py-28 overflow-hidden bg-muted/30 border-b border-border/50">
         <div className="container mx-auto px-4 text-center max-w-4xl relative z-10">
-          <Badge variant="outline" className="mb-4 px-4 py-1 border-primary/30 text-primary">
-            <Sparkles className="size-3.5 ml-1.5 inline" />
-            أدوات متكاملة لبناء مشاريع ناجحة
-          </Badge>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-foreground tracking-tight leading-tight">
             كل ما تحتاجه لتحويل الفكرة إلى <span className="text-primary">مشروع استثماري ناجح</span>
           </h1>

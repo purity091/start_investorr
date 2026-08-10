@@ -89,7 +89,6 @@ export const Tasks: React.FC = () => {
       <section className="rounded-xl bg-card p-4 shadow-sm sm:p-5">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="min-w-0 space-y-2">
-            <Badge variant="secondary">مركز المهام</Badge>
             <div>
               <h1 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                 مهامي

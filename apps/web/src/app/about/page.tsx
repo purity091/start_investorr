@@ -1,6 +1,5 @@
 import React from 'react';
 import { PublicLayout } from '@/components/layout/PublicLayout';
-import { Badge } from '@/components/ui/Badge';
 import { createMetadata } from '@/lib/seo';
 import { Heart, Target, Lightbulb, Users } from 'lucide-react';
 
@@ -16,7 +15,6 @@ export default function AboutPage() {
   return (
     <PublicLayout>
       <div className="container mx-auto px-4 py-24 max-w-4xl">
-        <Badge variant="outline" className="mb-6 text-primary border-primary/30 bg-primary/5">من نحن</Badge>
         <h1 className="text-4xl md:text-5xl font-black mb-8 leading-tight">نعيد صياغة مفهوم <span className="text-primary">دراسات الجدوى</span> في العالم العربي</h1>
         
         <div className="prose prose-slate dark:prose-invert max-w-none prose-lg">

@@ -2,9 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { PublicLayout } from '@/components/layout/PublicLayout';
 import { Button } from '@/components/ui/Button';
-import { Badge } from '@/components/ui/Badge';
 import { createMetadata } from '@/lib/seo';
-import { HelpCircle, ArrowLeft, Search, MessageSquare } from 'lucide-react';
+import { ArrowLeft, Search, MessageSquare } from 'lucide-react';
 
 export const metadata = createMetadata({
   title: 'الأسئلة الشائعة حول منصة خطة ودراسات الجدوى',
@@ -87,10 +86,6 @@ export default function FAQPage() {
       {/* Hero Section */}
       <section className="py-20 lg:py-24 text-center bg-muted/30 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-3xl">
-          <Badge variant="outline" className="mb-4 px-4 py-1 border-primary/30 text-primary">
-            <HelpCircle className="size-3.5 ml-1.5 inline" />
-            مركز المساعدة والإجابات
-          </Badge>
           <h1 className="text-4xl sm:text-5xl font-black text-foreground tracking-tight">
             كيف يمكننا مساعدتك اليوم؟
           </h1>

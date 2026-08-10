@@ -2,11 +2,10 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { AlertCircle, CheckCircle2, Loader2, Lock, Eye, EyeOff, ArrowLeft, KeyRound, Sparkles } from 'lucide-react';
+import { AlertCircle, CheckCircle2, Loader2, Lock, Eye, EyeOff, ArrowLeft, KeyRound } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/Card';
 import { Input } from '@/components/ui/Input';
-import { Badge } from '@/components/ui/Badge';
 import { createClient } from '@/utils/supabase/client';
 import { useAuthModal } from '@/features/auth/AuthModalContext';
 
@@ -165,10 +164,6 @@ export default function ResetPasswordPage() {
             </div>
             <span className="text-3xl font-black tracking-tight text-white">خطة<span className="text-primary">.</span></span>
           </Link>
-          <Badge variant="outline" className="text-primary-foreground border-primary/30 bg-primary/10 text-xs px-3 py-0.5 gap-1">
-            <Sparkles className="size-3 text-primary" />
-            استعادة الوصول للحساب
-          </Badge>
         </div>
 
         <Card className="border-border/80 bg-card/95 backdrop-blur-xl shadow-2xl rounded-3xl overflow-hidden">

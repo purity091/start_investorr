@@ -1,6 +1,5 @@
 import React from 'react';
 import { Download, Eye, FileText, Lock, Printer, Scale, Shield, UserCheck } from 'lucide-react';
-import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Separator } from '@/components/ui/separator';
@@ -50,7 +49,6 @@ export const PrivacyTerms: React.FC = () => {
       <section className="rounded-xl bg-card p-5 shadow-sm ring-1 ring-border/60">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl space-y-3">
-            <Badge variant="secondary" className="w-fit">وثائق المنصة</Badge>
             <div className="space-y-2">
               <h1 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">الخصوصية وشروط الاستخدام</h1>
               <p className="text-sm leading-7 text-muted-foreground">

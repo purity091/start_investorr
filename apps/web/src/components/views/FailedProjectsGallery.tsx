@@ -91,11 +91,11 @@ export const FailedProjectsGallery: React.FC<FailedProjectsGalleryProps> = ({ se
   };
 
   if (selectedProject) {
-    return <ProvenProjectProfile project={selectedProject} onBack={() => handleProjectSelect(null)} />;
+    return <ProvenProjectProfile project={selectedProject} onBack={() => handleProjectSelect(null)} bookmarkSource="failed-projects" />;
   }
 
   return (
-    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-8 sm:px-6 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-8 px-3 py-3 sm:px-6 sm:py-8 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div className="flex flex-col gap-3 mb-2">
         <Badge variant="secondary" className="w-fit bg-red-500/10 text-red-600 hover:bg-red-500/20 border-0 font-bold px-3 py-1">
           تجارب ودروس مستفادة

@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { Badge } from '@/components/ui/Badge';
 import { ProvenProjectProfile } from '@/components/features/business/ProvenProjectProfile';
 import { ProvenProjectsTable } from '@/components/features/business/ProvenProjectsTable';
 import { fetchPublicJson } from '@/lib/publicData';
-import { CloudCog, Sparkles, TrendingDown, Loader2, Layers } from 'lucide-react';
+import { Sparkles, TrendingDown, Loader2, Layers } from 'lucide-react';
 
 interface SaaSIdeasGalleryProps {
   setSubTabLabel?: (label: string | null) => void;
@@ -16,6 +15,7 @@ export const SaaSIdeasGallery: React.FC<SaaSIdeasGalleryProps> = ({ setSubTabLab
   const [projectsList, setProjectsList] = useState<any[]>(initialProjects || []);
   const [isLoading, setIsLoading] = useState(!initialProjects);
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
+  const [selectedProjectSource, setSelectedProjectSource] = useState<'proven-projects' | 'failed-projects'>('proven-projects');
 
   useEffect(() => {
     if (selectedProject) {
@@ -93,6 +93,7 @@ export const SaaSIdeasGallery: React.FC<SaaSIdeasGalleryProps> = ({ setSubTabLab
           const folder = matchedItem?.sourceStatus === 'failed' ? 'failed-projects' : 'proven-projects';
           const projectDetails = await fetchPublicJson<any>(`/data/${folder}/${projectId}.json`);
           setSelectedProject(projectDetails);
+          setSelectedProjectSource(folder);
         }
       } catch (err) {
         console.error("Failed to load SaaS projects", err);
@@ -121,6 +122,7 @@ export const SaaSIdeasGallery: React.FC<SaaSIdeasGalleryProps> = ({ setSubTabLab
       const folder = project.sourceStatus === 'failed' ? 'failed-projects' : 'proven-projects';
       const fullProject = await fetchPublicJson<any>(`/data/${folder}/${projectId}.json`);
       setSelectedProject(fullProject);
+      setSelectedProjectSource(folder);
 
       const url = new URL(window.location.href);
       url.searchParams.set('project', projectId);
@@ -131,21 +133,15 @@ export const SaaSIdeasGallery: React.FC<SaaSIdeasGalleryProps> = ({ setSubTabLab
   };
 
   if (selectedProject) {
-    return <ProvenProjectProfile project={selectedProject} onBack={() => handleProjectSelect(null)} />;
+    return <ProvenProjectProfile project={selectedProject} onBack={() => handleProjectSelect(null)} bookmarkSource={selectedProjectSource} />;
   }
 
   return (
-    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-8 sm:px-6 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-6 px-3 py-3 sm:px-6 sm:py-8 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
       
       {/* Sleek Integrated Header with Compact Summary Pills */}
       <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 bg-slate-50/70 p-5 rounded-2xl border border-slate-200/80 shadow-2xs">
         <div className="flex flex-col gap-2">
-          <div className="flex items-center gap-2">
-            <Badge variant="secondary" className="w-fit bg-blue-500/10 text-blue-600 hover:bg-blue-500/20 border-0 font-bold px-3 py-1">
-              <CloudCog className="size-3.5 me-1.5 inline-block" />
-              قاعدة بيانات برمجيات SaaS
-            </Badge>
-          </div>
           <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">أفكار مشاريع SaaS (البرمجيات كخدمة)</h1>
           <p className="max-w-2xl text-xs sm:text-sm leading-relaxed text-slate-600 font-medium">
             تصفح نماذج البرمجيات كخدمة الناجحة وتلك التي فشلت مباشرة في الجدول أدناه، مع إمكانية الفلترة حسب الإيرادات، الدولة، ونموذج العمل.

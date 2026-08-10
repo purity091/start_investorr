@@ -48,6 +48,7 @@ import {
   MapPin,
   Calendar,
   Bookmark,
+  BookmarkCheck,
   Sparkles,
   Compass,
   Store,
@@ -55,11 +56,21 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { fetchPublicJson } from '@/lib/publicData';
+import { useAuth } from '@/features/auth/AuthContext';
+import {
+  getPublicProjectBookmarkId,
+  loadBookmarkedProjectIds,
+  saveBookmarkedProjectIds,
+  saveCloudBookmarks,
+  syncCloudBookmarks,
+  type PublicProjectBookmarkSource,
+} from '@/components/features/discovery/problemDetailStorage';
 
 interface ProvenProjectProps {
   project: any;
   onBack: () => void;
   onSelectProject?: (project: any) => void;
+  bookmarkSource?: PublicProjectBookmarkSource;
 }
 
 const getCountryInfo = (location: string) => {
@@ -438,7 +449,8 @@ const getCleanDomain = (url?: string): string => {
   }
 };
 
-export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: rawProject, onBack, onSelectProject }) => {
+export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: rawProject, onBack, onSelectProject, bookmarkSource = 'proven-projects' }) => {
+  const { user } = useAuth();
   const [activeId, setActiveId] = useState<string>('overview');
   const [isTocOpen, setIsTocOpen] = useState<boolean>(false);
   const [isSourcesOpen, setIsSourcesOpen] = useState<boolean>(false);
@@ -446,8 +458,11 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
   const [isQualityOpen, setIsQualityOpen] = useState<boolean>(false);
   const [similarProjects, setSimilarProjects] = useState<any[]>([]);
   const [isLoadingSimilar, setIsLoadingSimilar] = useState<boolean>(true);
+  const [isBookmarked, setIsBookmarked] = useState<boolean>(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const tocRef = useRef<HTMLDivElement>(null);
+  const rawProjectId = String(rawProject.slug || rawProject.id || '').trim();
+  const publicBookmarkId = rawProjectId ? getPublicProjectBookmarkId(bookmarkSource, rawProjectId) : '';
 
   useEffect(() => {
     let isMounted = true;
@@ -507,6 +522,44 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
     loadSimilar();
     return () => { isMounted = false; };
   }, [rawProject.id, rawProject.slug, rawProject.category]);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadBookmarkState = async () => {
+      if (!publicBookmarkId) {
+        setIsBookmarked(false);
+        return;
+      }
+
+      const ids = user ? await syncCloudBookmarks(user.id) : loadBookmarkedProjectIds();
+      if (isMounted) {
+        setIsBookmarked(ids.includes(publicBookmarkId));
+      }
+    };
+
+    loadBookmarkState();
+    return () => {
+      isMounted = false;
+    };
+  }, [publicBookmarkId, user]);
+
+  const handleToggleBookmark = async () => {
+    if (!publicBookmarkId) return;
+
+    const current = loadBookmarkedProjectIds();
+    const exists = current.includes(publicBookmarkId);
+    const next = exists
+      ? current.filter((id) => id !== publicBookmarkId)
+      : [publicBookmarkId, ...current];
+
+    saveBookmarkedProjectIds(next);
+    setIsBookmarked(!exists);
+
+    if (user) {
+      await saveCloudBookmarks(user.id, next);
+    }
+  };
 
   const evidenceMap = rawProject.evidence_map || {};
 
@@ -923,9 +976,21 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
 
                       {/* Top-Right Action Buttons (Save & Actions) */}
                       <div className="flex items-center gap-2 shrink-0">
-                        <Button size="sm" className="gap-1.5 font-bold bg-blue-600 hover:bg-blue-700 text-white rounded-lg shadow-2xs text-xs px-3.5">
-                          <Bookmark className="size-3.5" />
-                          حفظ
+                        <Button
+                          size="sm"
+                          onClick={handleToggleBookmark}
+                          disabled={!publicBookmarkId}
+                          aria-pressed={isBookmarked}
+                          title={isBookmarked ? 'إزالة من المحفوظات' : 'حفظ في المحفوظات'}
+                          className={cn(
+                            "gap-1.5 font-bold rounded-lg shadow-2xs text-xs px-3.5",
+                            isBookmarked
+                              ? "bg-emerald-600 hover:bg-emerald-700 text-white"
+                              : "bg-blue-600 hover:bg-blue-700 text-white"
+                          )}
+                        >
+                          {isBookmarked ? <BookmarkCheck className="size-3.5" /> : <Bookmark className="size-3.5" />}
+                          {isBookmarked ? 'محفوظ' : 'حفظ'}
                         </Button>
                         <Button size="sm" variant="outline" className="gap-1.5 font-bold border-slate-200 text-slate-700 hover:bg-slate-50 rounded-lg text-xs px-3">
                           <span>إجراءات</span>

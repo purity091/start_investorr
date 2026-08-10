@@ -29,6 +29,25 @@ export const MARKET_PROBLEM_STORAGE_KEY = 'khotta_selected_market_problem';
 export const MARKET_SAVED_ITEMS_STORAGE_KEY = 'khotta_saved_market_items';
 export const BOOKMARKED_PROJECTS_STORAGE_KEY = 'khotta_bookmarked_project_ids';
 
+export type PublicProjectBookmarkSource = 'proven-projects' | 'failed-projects';
+
+export const getPublicProjectBookmarkId = (
+  source: PublicProjectBookmarkSource,
+  projectId: string,
+) => `${source}:${projectId}`;
+
+export const parsePublicProjectBookmarkId = (bookmarkId: string) => {
+  const [source, ...idParts] = bookmarkId.split(':');
+  if ((source === 'proven-projects' || source === 'failed-projects') && idParts.length > 0) {
+    return {
+      source,
+      projectId: idParts.join(':'),
+    } as { source: PublicProjectBookmarkSource; projectId: string };
+  }
+
+  return null;
+};
+
 export const loadSavedMarketItems = () => {
   try {
     const raw = localStorage.getItem(MARKET_SAVED_ITEMS_STORAGE_KEY);

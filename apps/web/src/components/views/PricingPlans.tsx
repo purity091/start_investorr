@@ -89,11 +89,6 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
       <section className="rounded-2xl border border-border bg-card px-4 py-4 sm:py-5 shadow-xs sm:px-6">
         <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_320px] xl:items-start">
           <div className="space-y-4 text-right">
-            <div className="flex flex-wrap items-center justify-start gap-2">
-              <Badge variant="secondary">اشتراكي</Badge>
-              <Badge variant="outline">الخطة والفواتير والاستخدام</Badge>
-            </div>
-
             <div className="space-y-2">
               <h1 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
                 إدارة الاشتراك والفوترة (رائد - مؤسس - قائد)

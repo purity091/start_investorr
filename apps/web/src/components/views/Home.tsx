@@ -65,8 +65,8 @@ const MINDSET_STEPS = [
 
 export const Home = ({ setActiveTab }: HomeProps) => {
   return (
-    <main dir="rtl" className="min-h-screen bg-background pb-24 text-right">
-      <div className="app-page-shell-wide space-y-6 sm:space-y-8 py-6 sm:py-8">
+    <main dir="rtl" className="min-h-screen bg-background pb-16 sm:pb-24 text-right">
+      <div className="app-page-shell-wide space-y-3.5 sm:space-y-8 py-3 sm:py-8">
         <section className="rounded-lg bg-background px-1 py-2">
           <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_360px] xl:items-end">
             <div className="max-w-5xl">

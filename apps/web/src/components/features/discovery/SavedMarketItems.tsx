@@ -40,6 +40,7 @@ import {
 } from '@/components/ui/table';
 import { useAuth } from '@/features/auth/AuthContext';
 import { getProjectEditPath } from '@/features/workspace/workspaceNavigation';
+import { fetchPublicJson } from '@/lib/publicData';
 import { supabase } from '@/lib/supabase';
 import { cn } from '@/lib/utils';
 
@@ -47,10 +48,12 @@ import {
   MARKET_PROBLEM_STORAGE_KEY,
   loadSavedMarketItems,
   loadBookmarkedProjectIds,
+  parsePublicProjectBookmarkId,
   removeBookmarkedProjectId,
   removeSavedMarketRecord,
   syncCloudBookmarks,
   saveCloudBookmarks,
+  type PublicProjectBookmarkSource,
 } from './problemDetailStorage';
 
 export type SourcePageId = 'all' | 'workspace' | 'problem_engine' | 'project_ideas' | 'proven_projects';
@@ -66,7 +69,7 @@ export interface SavedItemRow {
   scoreLabel: string;
   scoreValue: number;
   savedDate: string;
-  rawPayload?: { id?: string; isProject?: boolean };
+  rawPayload?: { id?: string; isProject?: boolean; source?: PublicProjectBookmarkSource; projectId?: string };
 }
 
 type SavedCanvasRow = {
@@ -151,14 +154,61 @@ export const SavedMarketItems: React.FC<SavedMarketItemsProps> = ({ setActiveTab
 
       // 2. Saved User Projects explicitly bookmarked by the user (with Supabase Cloud Sync)
       const bookmarkedProjectIds = user ? await syncCloudBookmarks(user.id) : loadBookmarkedProjectIds();
+      const publicProjectBookmarks = bookmarkedProjectIds
+        .map(parsePublicProjectBookmarkId)
+        .filter(Boolean) as Array<{ source: PublicProjectBookmarkSource; projectId: string }>;
+
+      if (publicProjectBookmarks.length > 0) {
+        try {
+          const [provenListResult, failedListResult] = await Promise.allSettled([
+            fetchPublicJson<any[]>('/api/public-data/proven-projects'),
+            fetchPublicJson<any[]>('/api/public-data/failed-projects'),
+          ]);
+
+          const projectIndexes: Record<PublicProjectBookmarkSource, any[]> = {
+            'proven-projects': provenListResult.status === 'fulfilled' ? provenListResult.value : [],
+            'failed-projects': failedListResult.status === 'fulfilled' ? failedListResult.value : [],
+          };
+
+          publicProjectBookmarks.forEach(({ source, projectId }) => {
+            const project = projectIndexes[source].find((item) => (item.slug || item.id) === projectId);
+            if (!project) return;
+
+            unifiedList.push({
+              id: `${source}:${projectId}`,
+              sourcePageId: 'proven_projects',
+              sourcePageLabel: source === 'failed-projects'
+                ? 'الشركات والتجارب الفاشلة'
+                : 'الشركات والتجارب الناجحة',
+              targetTab: source === 'failed-projects' ? 'failed-projects' : 'proven-projects',
+              title: project.name || project.title || project.company?.name || 'شركة محفوظة',
+              summary: project.headline || project.description || project.summary || 'دراسة حالة محفوظة من صفحة الشركات.',
+              sector: project.category || project.company?.business_model || 'دراسة حالة',
+              scoreLabel: source === 'failed-projects' ? 'درس مستفاد' : 'دراسة نجاح',
+              scoreValue: source === 'failed-projects' ? 70 : 90,
+              savedDate: 'مؤخراً',
+              rawPayload: { id: `${source}:${projectId}`, source, projectId },
+            });
+          });
+        } catch (err) {
+          console.error('Error loading bookmarked public projects:', err);
+        }
+      }
+
       if (user && bookmarkedProjectIds.length > 0) {
         try {
+          const workspaceProjectIds = bookmarkedProjectIds.filter((id) => !parsePublicProjectBookmarkId(id));
+          if (workspaceProjectIds.length === 0) {
+            setItems(unifiedList);
+            return;
+          }
+
           const { data, error } = await supabase
             .from('business_canvas')
             .select('id, project_title, sector_label, project_summary, readiness_score, canvas_data->profile, canvas_data->metrics, updated_at')
             .eq('user_id', user.id)
             .is('deleted_at', null)
-            .in('id', bookmarkedProjectIds);
+            .in('id', workspaceProjectIds);
 
           if (!error && data) {
             (data as SavedCanvasRow[]).forEach((row) => {
@@ -205,6 +255,20 @@ export const SavedMarketItems: React.FC<SavedMarketItemsProps> = ({ setActiveTab
       } else {
         setActiveTab('problem-engine');
       }
+    } else if (item.sourcePageId === 'proven_projects') {
+      const targetTab = item.rawPayload?.source === 'failed-projects' ? 'failed-projects' : 'proven-projects';
+      const projectId = item.rawPayload?.projectId;
+
+      if (projectId) {
+        const nextUrl = new URL(window.location.href);
+        nextUrl.pathname = `/${targetTab}`;
+        nextUrl.search = '';
+        nextUrl.searchParams.set('project', projectId);
+        window.history.pushState({}, '', nextUrl.toString());
+      }
+
+      setActiveTab(targetTab);
+      window.dispatchEvent(new CustomEvent('khotta:navigate', { detail: { tab: targetTab } }));
     } else {
       setActiveTab(item.targetTab);
     }
@@ -214,7 +278,7 @@ export const SavedMarketItems: React.FC<SavedMarketItemsProps> = ({ setActiveTab
   const handleRemoveItem = (item: SavedItemRow) => {
     if (item.sourcePageId === 'problem_engine') {
       removeSavedMarketRecord(item.id);
-    } else if (item.sourcePageId === 'workspace') {
+    } else if (item.sourcePageId === 'workspace' || item.sourcePageId === 'proven_projects') {
       removeBookmarkedProjectId(item.id);
       if (user) {
         const remaining = loadBookmarkedProjectIds();

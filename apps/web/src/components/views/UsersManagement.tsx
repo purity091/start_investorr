@@ -219,7 +219,6 @@ export const UsersManagement: React.FC = () => {
       <section className="rounded-xl bg-card p-4 sm:p-5 shadow-sm ring-1 ring-border/60">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl space-y-3">
-            <Badge variant="secondary" className="w-fit">لوحة الإدارة</Badge>
             <div className="space-y-2">
               <h1 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">إدارة المستخدمين</h1>
               <p className="text-sm leading-7 text-muted-foreground">

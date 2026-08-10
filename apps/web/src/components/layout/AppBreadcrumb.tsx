@@ -220,7 +220,7 @@ export function AppBreadcrumb({ activeTab, subTabLabel, setActiveTab }: AppBread
   const nodes = getBreadcrumbNodes(activeTab, subTabLabel);
 
   return (
-    <div dir="rtl" className="border-b border-border bg-background px-4 py-2 sm:px-6 lg:px-8">
+    <div dir="rtl" className="border-b border-border bg-background px-3 py-1.5 sm:px-6 sm:py-2 lg:px-8">
       <Breadcrumb>
         <BreadcrumbList>
           {nodes.map((node, index) => {

@@ -31,6 +31,7 @@ export const MicroSaaSIdeasGallery: React.FC<MicroSaaSIdeasGalleryProps> = ({ se
   const [projectsList, setProjectsList] = useState<any[]>(initialProjects || []);
   const [isLoading, setIsLoading] = useState(!initialProjects);
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
+  const [selectedProjectSource, setSelectedProjectSource] = useState<'proven-projects' | 'failed-projects'>('proven-projects');
 
   useEffect(() => {
     if (selectedProject) {
@@ -103,6 +104,7 @@ export const MicroSaaSIdeasGallery: React.FC<MicroSaaSIdeasGalleryProps> = ({ se
           const folder = matchedItem?.sourceStatus === 'failed' ? 'failed-projects' : 'proven-projects';
           const projectDetails = await fetchPublicJson<any>(`/data/${folder}/${projectId}.json`);
           setSelectedProject(projectDetails);
+          setSelectedProjectSource(folder);
         }
       } catch (err) {
         console.error("Failed to load Micro-SaaS projects", err);
@@ -131,6 +133,7 @@ export const MicroSaaSIdeasGallery: React.FC<MicroSaaSIdeasGalleryProps> = ({ se
       const folder = project.sourceStatus === 'failed' ? 'failed-projects' : 'proven-projects';
       const fullProject = await fetchPublicJson<any>(`/data/${folder}/${projectId}.json`);
       setSelectedProject(fullProject);
+      setSelectedProjectSource(folder);
 
       const url = new URL(window.location.href);
       url.searchParams.set('project', projectId);
@@ -141,11 +144,11 @@ export const MicroSaaSIdeasGallery: React.FC<MicroSaaSIdeasGalleryProps> = ({ se
   };
 
   if (selectedProject) {
-    return <ProvenProjectProfile project={selectedProject} onBack={() => handleProjectSelect(null)} />;
+    return <ProvenProjectProfile project={selectedProject} onBack={() => handleProjectSelect(null)} bookmarkSource={selectedProjectSource} />;
   }
 
   return (
-    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-8 sm:px-6 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-6 px-3 py-3 sm:px-6 sm:py-8 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
 
       {/* Sleek Integrated Header with Compact Summary Pills */}
       <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 bg-purple-50/50 p-5 rounded-2xl border border-purple-100 shadow-2xs">

@@ -1,6 +1,5 @@
 import React from 'react';
 import { PublicLayout } from '@/components/layout/PublicLayout';
-import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { createMetadata } from '@/lib/seo';
@@ -19,7 +18,6 @@ export default function ContactPage() {
     <PublicLayout>
       <div className="container mx-auto px-4 py-24 max-w-6xl">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <Badge variant="outline" className="mb-6 text-primary border-primary/30 bg-primary/5">تواصل معنا</Badge>
           <h1 className="text-4xl md:text-5xl font-black mb-6">نحن هنا <span className="text-primary">لمساعدتك</span></h1>
           <p className="text-lg text-muted-foreground">لديك استفسار، اقتراح، أو تحتاج إلى مساعدة في مشروعك؟ فريقنا جاهز للرد على جميع تساؤلاتك.</p>
         </div>

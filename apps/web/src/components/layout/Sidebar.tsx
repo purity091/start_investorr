@@ -38,6 +38,8 @@ import {
 } from '../ui/tooltip';
 
 import type { User } from '../../types';
+import { useAuth } from '@/features/auth/AuthContext';
+import { supabase } from '@/lib/supabase';
 import { getTabPath } from '../../utils/routes';
 import {
   Collapsible,
@@ -245,6 +247,108 @@ const ADMIN_MANAGEMENT: NavItemConfig[] = [
   { tab: 'admin-security', label: 'الأمان', icon: Shield, tooltipText: 'سجلات الأمان وحماية بيانات النظام' },
 ];
 
+type ProjectBuildCounts = {
+  easy: number;
+  pro: number;
+  mit24: number;
+  bmc: number;
+  lean: number;
+};
+
+type ProjectCountRow = {
+  feasibilityModelType?: string | null;
+  feasibilityModels?: Record<string, unknown> | null;
+  canvas_data?: {
+    feasibilityModelType?: string | null;
+    feasibilityModels?: Record<string, unknown> | null;
+  } | null;
+};
+
+const EMPTY_PROJECT_BUILD_COUNTS: ProjectBuildCounts = {
+  easy: 0,
+  pro: 0,
+  mit24: 0,
+  bmc: 0,
+  lean: 0,
+};
+
+const PROJECT_BUILD_COUNT_CACHE_TTL_MS = 60 * 1000;
+
+const getProjectBuildCountsCacheKey = (userId: string) => `khotta_project_build_counts_${userId}`;
+
+const getProjectBuildCountKey = (modelType: string | null): keyof ProjectBuildCounts | null => {
+  switch (modelType) {
+    case 'family':
+      return 'easy';
+    case 'easy':
+      return 'pro';
+    case 'mit24':
+      return 'mit24';
+    case 'bmc':
+      return 'bmc';
+    case 'lean':
+      return 'lean';
+    default:
+      return null;
+  }
+};
+
+const getProjectBuildModelType = (row: ProjectCountRow): string | null =>
+  row.feasibilityModelType
+  ?? Object.keys(row.feasibilityModels || {})[0]
+  ?? row.canvas_data?.feasibilityModelType
+  ?? Object.keys(row.canvas_data?.feasibilityModels || {})[0]
+  ?? null;
+
+const readProjectBuildCountsCache = (userId: string): ProjectBuildCounts | null => {
+  try {
+    const raw = sessionStorage.getItem(getProjectBuildCountsCacheKey(userId));
+    if (!raw) return null;
+
+    const parsed = JSON.parse(raw) as { expiresAt: number; counts: ProjectBuildCounts };
+    if (!parsed.expiresAt || parsed.expiresAt <= Date.now()) return null;
+
+    return parsed.counts;
+  } catch {
+    return null;
+  }
+};
+
+const writeProjectBuildCountsCache = (userId: string, counts: ProjectBuildCounts) => {
+  try {
+    sessionStorage.setItem(
+      getProjectBuildCountsCacheKey(userId),
+      JSON.stringify({
+        expiresAt: Date.now() + PROJECT_BUILD_COUNT_CACHE_TTL_MS,
+        counts,
+      }),
+    );
+  } catch {
+    // Cache is only an optimization; fresh Supabase counts remain the fallback.
+  }
+};
+
+const withProjectBuildCounts = (
+  items: NavItemConfig[],
+  counts: ProjectBuildCounts,
+): NavItemConfig[] =>
+  items.map((item) => {
+    switch (item.tab) {
+      case 'new-plan-family':
+        return { ...item, badge: counts.easy };
+      case 'strategic-dashboard':
+        return { ...item, badge: counts.pro };
+      case 'new-plan-mit24':
+        return { ...item, badge: counts.mit24 };
+      case 'new-plan-bmc':
+        return { ...item, badge: counts.bmc };
+      case 'new-plan-lean':
+        return { ...item, badge: counts.lean };
+      default:
+        return item;
+    }
+  });
+
 function isItemActive(item: NavItemConfig, activeTab: string) {
   return item.active ? item.active(activeTab) : activeTab === item.tab;
 }
@@ -292,7 +396,7 @@ function SidebarLink({
           <span className={cn("min-w-0 flex-1", isActive ? "!text-white dark:!text-black font-bold" : "font-semibold")}>
             {item.label}
           </span>
-          {item.badge ? (
+          {item.badge !== undefined && item.badge !== null && item.badge !== '' ? (
             <span
               className={cn(
                 "ms-auto flex h-5 min-w-5 shrink-0 items-center justify-center rounded-md px-1.5 text-[11px] font-bold tabular-nums group-data-[collapsible=icon]:hidden",
@@ -366,7 +470,7 @@ function SidebarSection({
                       {item.label}
                     </span>
 
-                    {item.badge ? (
+                    {item.badge !== undefined && item.badge !== null && item.badge !== '' ? (
                       <span
                         className={cn(
                           "ms-auto flex h-5 min-w-5 shrink-0 items-center justify-center rounded-md px-1.5 text-[11px] font-bold tabular-nums group-data-[collapsible=icon]:hidden",
@@ -476,8 +580,65 @@ function AccountSection({
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setActiveTab }) => {
+  const { user: authUser } = useAuth();
   const isAdminMode = ADMIN_TABS.includes(activeTab);
   const { state, toggleSidebar } = useSidebar();
+  const [projectBuildCounts, setProjectBuildCounts] = React.useState<ProjectBuildCounts>(EMPTY_PROJECT_BUILD_COUNTS);
+
+  React.useEffect(() => {
+    let isMounted = true;
+
+    const loadProjectBuildCounts = async () => {
+      if (!authUser?.id) {
+        setProjectBuildCounts(EMPTY_PROJECT_BUILD_COUNTS);
+        return;
+      }
+
+      const cachedCounts = readProjectBuildCountsCache(authUser.id);
+      if (cachedCounts) {
+        setProjectBuildCounts(cachedCounts);
+      }
+
+      try {
+        const { data, error } = await supabase
+          .from('business_canvas')
+          .select('canvas_data->>feasibilityModelType, canvas_data->feasibilityModels')
+          .eq('user_id', authUser.id)
+          .is('deleted_at', null);
+
+        if (error) throw error;
+
+        const nextCounts = { ...EMPTY_PROJECT_BUILD_COUNTS };
+        (data as ProjectCountRow[] | null)?.forEach((row) => {
+          const countKey = getProjectBuildCountKey(getProjectBuildModelType(row));
+          if (countKey) {
+            nextCounts[countKey] += 1;
+          }
+        });
+
+        writeProjectBuildCountsCache(authUser.id, nextCounts);
+        if (isMounted) {
+          setProjectBuildCounts(nextCounts);
+        }
+      } catch (error) {
+        console.error('Failed to load project build counts:', error);
+        if (isMounted) {
+          setProjectBuildCounts(EMPTY_PROJECT_BUILD_COUNTS);
+        }
+      }
+    };
+
+    void loadProjectBuildCounts();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [authUser?.id, activeTab]);
+
+  const projectBuildItems = React.useMemo(
+    () => withProjectBuildCounts(PROJECT_BUILD, projectBuildCounts),
+    [projectBuildCounts],
+  );
 
   return (
     <UiSidebar side="right" dir="rtl" variant="sidebar" collapsible="icon">
@@ -516,7 +677,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
         ) : (
           <>
             <SidebarSection title="الوصول السريع" items={QUICK_ACCESS} activeTab={activeTab} setActiveTab={setActiveTab} />
-            <SidebarSection title="بناء دراسة جدوى مشروع" items={PROJECT_BUILD} activeTab={activeTab} setActiveTab={setActiveTab} />
+            <SidebarSection title="بناء دراسة جدوى مشروع" items={projectBuildItems} activeTab={activeTab} setActiveTab={setActiveTab} />
             <SidebarSection title="أفكار مشاريع" items={PROJECT_IDEAS} activeTab={activeTab} setActiveTab={setActiveTab} />
             <SidebarSection title="ملحقات المشروع" items={PROJECT_ATTACHMENTS} activeTab={activeTab} setActiveTab={setActiveTab} />
             <SidebarSection title="المركز المعرفي" items={KNOWLEDGE_CENTER} activeTab={activeTab} setActiveTab={setActiveTab} />
