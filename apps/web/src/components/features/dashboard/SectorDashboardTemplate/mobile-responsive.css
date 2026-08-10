@@ -654,3 +654,47 @@
     gap: 12px !important;
   }
 }
+
+/* ─── SHADCN UI COLOR SANITIZATION & OVERRIDES ──────────────── */
+.dashboard-section .text-slate-300,
+.dashboard-section .text-slate-400,
+.dashboard-section .text-slate-500,
+.dashboard-section .text-gray-600,
+.dashboard-section .text-gray-500 {
+  color: var(--muted-foreground);
+}
+
+.dashboard-section .text-white,
+.dashboard-section .text-slate-900,
+.dashboard-section .text-slate-950,
+.dashboard-section .text-slate-800 {
+  color: var(--foreground);
+}
+
+.dashboard-section .bg-white\/5,
+.dashboard-section .bg-slate-900\/40,
+.dashboard-section .bg-white {
+  background-color: var(--card);
+  border-color: var(--border);
+}
+
+.dashboard-section .border-white\/10,
+.dashboard-section .border-slate-100,
+.dashboard-section .border-slate-200 {
+  border-color: var(--border);
+}
+
+.dashboard-section .text-blue-400,
+.dashboard-section .text-blue-600 {
+  color: var(--primary);
+}
+
+.dashboard-section .bg-blue-50 {
+  background-color: hsl(var(--primary) / 0.05);
+  border-color: hsl(var(--primary) / 0.2);
+}
+
+.dashboard-section .text-blue-900,
+.dashboard-section .text-blue-700\/80 {
+  color: var(--foreground);
+}

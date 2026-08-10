@@ -51,6 +51,22 @@ export const normalizeSubscriptionPlanId = (value: unknown): SubscriptionPlanId 
 export const getSubscriptionPlan = (value: unknown) =>
   SUBSCRIPTION_PLANS[normalizeSubscriptionPlanId(value)];
 
+export const SUBSCRIPTION_PLAN_ORDER: Record<SubscriptionPlanId, number> = {
+  starter: 0,
+  founder: 1,
+  leader: 2,
+};
+
+export const isHigherSubscriptionPlan = ({
+  currentPlanId,
+  targetPlanId,
+}: {
+  currentPlanId: unknown;
+  targetPlanId: unknown;
+}) =>
+  SUBSCRIPTION_PLAN_ORDER[normalizeSubscriptionPlanId(targetPlanId)]
+  > SUBSCRIPTION_PLAN_ORDER[normalizeSubscriptionPlanId(currentPlanId)];
+
 export const hasReachedProjectLimit = ({
   planId,
   activeProjectsCount,

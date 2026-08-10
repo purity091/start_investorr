@@ -32,7 +32,7 @@ export const BottomRow: FC<{
           <div className="flex flex-col gap-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border pb-4">
               <div className="flex items-center gap-3">
-                <div className="flex size-9 items-center justify-center rounded-lg bg-muted text-primary">
+                <div className="flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
                   <BookOpen size={18} strokeWidth={2} />
                 </div>
                 <div>
@@ -50,7 +50,7 @@ export const BottomRow: FC<{
               </Badge>
             </div>
 
-            <div className="p-4 bg-muted/30 rounded-lg border border-border">
+            <div className="p-4 bg-primary/5 rounded-xl border border-primary/15">
               <p className="m-0 text-sm md:text-base font-medium leading-relaxed text-foreground">
                 {definition}
               </p>
@@ -85,7 +85,7 @@ export const BottomRow: FC<{
         <Card className="border-border bg-card p-6 rounded-xl shadow-xs">
           <div className="mb-5 flex items-center justify-between border-b border-border pb-4">
             <div className="flex items-center gap-3">
-              <div className="flex size-9 items-center justify-center rounded-lg bg-muted text-primary">
+              <div className="flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
                 <Sparkles size={18} strokeWidth={2} />
               </div>
               <div>
@@ -108,11 +108,11 @@ export const BottomRow: FC<{
               return (
                 <div 
                   key={idx}
-                  className="flex flex-col justify-between p-4 rounded-lg bg-muted/20 border border-border space-y-3"
+                  className="flex flex-col justify-between p-4 rounded-xl bg-card border border-border shadow-2xs hover:border-primary/30 transition-all duration-200 space-y-3"
                 >
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
-                      <div className="flex size-8 items-center justify-center rounded-md bg-background text-primary border border-border">
+                      <div className="flex size-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
                         <Icon size={16} strokeWidth={2} />
                       </div>
                       <span className="text-xs font-bold text-muted-foreground/60">

@@ -9,15 +9,19 @@ import {
   Wallet,
   Zap,
   Clock,
-  Sparkles
+  Sparkles,
+  Upload,
+  AlertCircle
 } from 'lucide-react';
 
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Input } from '@/components/ui/Input';
 import { useAuth } from '@/features/auth/AuthContext';
 import { supabase } from '@/lib/supabase';
-import { getSubscriptionPlan } from '@/lib/subscriptionPlans';
+import { SubscriptionPlanId, getSubscriptionPlan, isHigherSubscriptionPlan } from '@/lib/subscriptionPlans';
 
 interface PricingPlansProps {
   setActiveTab?: (tab: string) => void;
@@ -89,6 +93,10 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
   const { user, profile } = useAuth();
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [activeProjectsCount, setActiveProjectsCount] = useState(0);
+  const [upgradeTargetPlan, setUpgradeTargetPlan] = useState<SubscriptionPlanId | null>(null);
+  const [receiptFile, setReceiptFile] = useState<File | null>(null);
+  const [isSubmittingUpgrade, setIsSubmittingUpgrade] = useState(false);
+  const [upgradeMessage, setUpgradeMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const currentPlan = getSubscriptionPlan(profile?.subscription_plan);
   const currentPlanIcon = currentPlan.id === 'starter' ? User : currentPlan.id === 'founder' ? Rocket : Zap;
   const usagePercentage = currentPlan.projectLimit
@@ -121,6 +129,58 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
       cancelled = true;
     };
   }, [user]);
+
+  const closeUpgradeDialog = () => {
+    if (isSubmittingUpgrade) return;
+    setUpgradeTargetPlan(null);
+    setReceiptFile(null);
+    setUpgradeMessage(null);
+  };
+
+  const submitUpgradeRequest = async () => {
+    if (!upgradeTargetPlan || !receiptFile) {
+      setUpgradeMessage({ type: 'error', text: 'أرفق وصل الحوالة البنكية أولاً.' });
+      return;
+    }
+
+    setIsSubmittingUpgrade(true);
+    setUpgradeMessage(null);
+
+    try {
+      const formData = new FormData();
+      formData.append('targetPlan', upgradeTargetPlan);
+      formData.append('receipt', receiptFile);
+
+      const response = await fetch('/api/subscription/upgrade-request', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const payload = (await response.json().catch(() => null)) as { error?: string } | null;
+
+      if (!response.ok) {
+        const message =
+          payload?.error === 'PENDING_REQUEST_EXISTS'
+            ? 'لديك طلب ترقية قيد المراجعة حالياً.'
+            : payload?.error === 'INVALID_RECEIPT_TYPE'
+              ? 'صيغة الوصل غير مدعومة. استخدم PDF أو صورة PNG/JPG/WebP.'
+              : payload?.error === 'INVALID_RECEIPT_SIZE'
+                ? 'حجم الوصل يجب ألا يتجاوز 5MB.'
+                : 'تعذر إرسال طلب الترقية الآن. حاول مرة أخرى.';
+        throw new Error(message);
+      }
+
+      setUpgradeMessage({ type: 'success', text: 'تم إرسال طلب الترقية بنجاح. سنراجع وصل الحوالة قبل تفعيل الباقة.' });
+      setReceiptFile(null);
+    } catch (error) {
+      setUpgradeMessage({
+        type: 'error',
+        text: error instanceof Error ? error.message : 'تعذر إرسال طلب الترقية الآن.',
+      });
+    } finally {
+      setIsSubmittingUpgrade(false);
+    }
+  };
 
   return (
     <div className="app-page-shell-wide space-y-4 sm:space-y-6 py-4 sm:py-6" dir="rtl">
@@ -254,6 +314,10 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
             const Icon = plan.icon;
             const price = billingCycle === 'monthly' ? plan.monthly : plan.yearly;
             const isCurrentPlan = plan.id === currentPlan.id;
+            const canUpgradeToPlan = isHigherSubscriptionPlan({
+              currentPlanId: currentPlan.id,
+              targetPlanId: plan.id,
+            });
 
             return (
               <Card
@@ -304,10 +368,19 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
                   </div>
                   <Button
                     className="mt-6 w-full text-xs font-bold"
-                    variant={isCurrentPlan ? 'default' : 'outline'}
-                    onClick={() => setActiveTab?.(plan.action)}
+                    variant={isCurrentPlan ? 'default' : canUpgradeToPlan ? 'default' : 'outline'}
+                    disabled={isCurrentPlan}
+                    onClick={() => {
+                      if (canUpgradeToPlan) {
+                        setUpgradeTargetPlan(plan.id as SubscriptionPlanId);
+                        setReceiptFile(null);
+                        setUpgradeMessage(null);
+                        return;
+                      }
+                      setActiveTab?.(plan.action);
+                    }}
                   >
-                    {plan.cta}
+                    {isCurrentPlan ? 'الخطة الحالية' : canUpgradeToPlan ? 'طلب ترقية بإرفاق وصل' : plan.cta}
                   </Button>
                 </CardContent>
               </Card>
@@ -315,6 +388,67 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
           })}
         </div>
       </section>
+
+      <Dialog open={Boolean(upgradeTargetPlan)} onOpenChange={(open) => !open && closeUpgradeDialog()}>
+        <DialogContent dir="rtl" className="sm:max-w-[520px]">
+          <DialogHeader className="text-right">
+            <DialogTitle>طلب ترقية الباقة</DialogTitle>
+            <DialogDescription>
+              أرفق وصل الحوالة البنكية، وسيبقى طلبك قيد المراجعة حتى يتم اعتماد الترقية من الإدارة.
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="space-y-4 text-right">
+            <div className="rounded-xl border border-border bg-muted/35 p-4">
+              <p className="text-xs text-muted-foreground">الترقية المطلوبة</p>
+              <p className="mt-1 text-sm font-semibold text-foreground">
+                من {currentPlan.name} إلى {upgradeTargetPlan ? getSubscriptionPlan(upgradeTargetPlan).name : ''}
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              <label className="text-sm font-semibold text-foreground">وصل الحوالة البنكية</label>
+              <Input
+                type="file"
+                accept="image/png,image/jpeg,image/webp,application/pdf"
+                onChange={(event) => setReceiptFile(event.target.files?.[0] ?? null)}
+              />
+              <p className="text-xs leading-6 text-muted-foreground">
+                الصيغ المدعومة: PDF أو صورة PNG/JPG/WebP، بحد أقصى 5MB.
+              </p>
+            </div>
+
+            {receiptFile ? (
+              <div className="flex items-center gap-2 rounded-lg border border-border bg-background px-3 py-2 text-xs text-muted-foreground">
+                <Upload className="size-4" />
+                <span className="truncate">{receiptFile.name}</span>
+              </div>
+            ) : null}
+
+            {upgradeMessage ? (
+              <div
+                className={`flex items-start gap-2 rounded-xl border px-3 py-2 text-sm ${
+                  upgradeMessage.type === 'success'
+                    ? 'border-emerald-200 bg-emerald-50 text-emerald-700'
+                    : 'border-destructive/30 bg-destructive/10 text-destructive'
+                }`}
+              >
+                <AlertCircle className="mt-0.5 size-4 shrink-0" />
+                <span>{upgradeMessage.text}</span>
+              </div>
+            ) : null}
+          </div>
+
+          <DialogFooter className="gap-2 sm:justify-start">
+            <Button type="button" onClick={submitUpgradeRequest} disabled={isSubmittingUpgrade || !receiptFile}>
+              {isSubmittingUpgrade ? 'جارٍ إرسال الطلب...' : 'إرسال طلب الترقية'}
+            </Button>
+            <Button type="button" variant="outline" onClick={closeUpgradeDialog} disabled={isSubmittingUpgrade}>
+              إغلاق
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

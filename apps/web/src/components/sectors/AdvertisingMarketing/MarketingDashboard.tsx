@@ -46,14 +46,14 @@ const config: SectorDashboardProps = {
       subtitle: 'Marketing in the New Normal',
       content: (
         <div className="space-y-6 text-right">
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
             في واقع يهيمن عليه الذكاء الاصطناعي وتغير عادات المستهلك، أصبح التسويق مجالاً يعتمد كلياً على البيانات. وبإنفاق يقترب من 900 مليار دولار عالمياً، تركز الاستراتيجيات الناجحة (Omnichannel) على دمج كافة القنوات لتوصيل المستهلك بقنوات التوزيع الرقمية التي أصبحت الخيار الأول.
           </p>
-          <div className="p-6 bg-blue-50 rounded-2xl border border-blue-100 flex items-start gap-4">
-             <Zap className="text-blue-600 shrink-0 mt-1" size={24} />
+          <div className="p-5 bg-primary/5 rounded-xl border border-primary/20 flex items-start gap-3.5">
+             <Zap className="text-primary shrink-0 mt-0.5" size={22} />
              <div>
-                <p className="font-bold text-blue-900 leading-tight">نمو التسويق الرقمي</p>
-                <p className="text-sm text-blue-700/80 mt-2">
+                <p className="font-bold text-foreground leading-tight text-base">نمو التسويق الرقمي</p>
+                <p className="text-xs sm:text-sm text-muted-foreground mt-1 leading-relaxed">
                   في الولايات المتحدة وحدها، نما الإنفاق التسويقي بنسبة 9% متجاوزاً 480 مليار دولار، مع توجه مكثف نحو TikTok و YouTube و Google.
                 </p>
              </div>
@@ -67,19 +67,19 @@ const config: SectorDashboardProps = {
       subtitle: 'AI & Automation Transformation',
       content: (
         <div className="space-y-6 text-right">
-          <p>
+          <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
             بدأ الذكاء الاصطناعي (AI) يصبح معياراً أساسياً في التسويق؛ حيث يستخدمه حالياً ربع المسوقين حول العالم لتحليل البيانات وتخصيص التجارب. وتتوقع التقارير أن تتجاوز إيرادات برمجيات أتمتة التسويق 10 مليارات دولار بحلول عام 2030.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-            <div className="p-5 border border-slate-100 rounded-2xl bg-white shadow-sm">
-                <BrainCircuit className="text-blue-600 mb-2" size={20} />
-                <p className="font-black text-slate-900">أتمتة التسويق (Martech)</p>
-                <p className="text-xs text-slate-500 mt-1 leading-relaxed">أصبح استخدام الـ Martech ركيزة أساسية للعلامات التي ترغب في تقليل التكاليف وتحسين دقة الوصول.</p>
+            <div className="p-5 border border-border rounded-xl bg-card shadow-2xs">
+                <BrainCircuit className="text-primary mb-2" size={22} />
+                <p className="font-bold text-foreground text-base">أتمتة التسويق (Martech)</p>
+                <p className="text-xs text-muted-foreground mt-1 leading-relaxed">أصبح استخدام الـ Martech ركيزة أساسية للعلامات التي ترغب في تقليل التكاليف وتحسين دقة الوصول.</p>
             </div>
-            <div className="p-5 border border-slate-100 rounded-2xl bg-white shadow-sm">
-                <TrendingUp className="text-blue-600 mb-2" size={20} />
-                <p className="font-black text-slate-900">تحليل البيانات الضخمة</p>
-                <p className="text-xs text-slate-500 mt-1 leading-relaxed">القرارات التسويقية الفعالة تُبنى اليوم على تحليل استباقي لبيانات السوق وسلوكيات المستهلكين الحقيقية.</p>
+            <div className="p-5 border border-border rounded-xl bg-card shadow-2xs">
+                <TrendingUp className="text-primary mb-2" size={22} />
+                <p className="font-bold text-foreground text-base">تحليل البيانات الضخمة</p>
+                <p className="text-xs text-muted-foreground mt-1 leading-relaxed">القرارات التسويقية الفعالة تُبنى اليوم على تحليل استباقي لبيانات السوق وسلوكيات المستهلكين الحقيقية.</p>
             </div>
           </div>
         </div>
@@ -89,22 +89,22 @@ const config: SectorDashboardProps = {
       id: 'pr-influencers',
       title: 'العلاقات العامة والتأثير الاجتماعي',
       subtitle: 'PR & Social Influence',
-      dark: true,
+      variant: 'dark',
       content: (
         <div className="space-y-6 text-right">
-          <p className="text-slate-300">
+          <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
             يمثل سوق العلاقات العامة (PR) قوة مستقرة بـ 107 مليارات دولار، بينما ينمو التسويق عبر المؤثرين بوتيرة سريعة ليصل إلى 16.4 مليار دولار. هذه القنوات تضمن بناء الثقة والمصداقية للعلامات التجارية في بيئة رقمية مزدحمة.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-             <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                <Users className="text-blue-400 mb-3" size={24} />
-                <p className="font-bold text-white mb-2">اقتصاد المبدعين</p>
-                <p className="text-sm text-slate-400">تحول المؤثرون من مجرد ناقلي رسائل إلى مبدعين محتوى يمتلكون مجتمعات ذات ولاء استثنائي.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+             <div className="bg-card border border-border rounded-xl p-5 shadow-2xs">
+                <Users className="text-primary mb-2.5" size={22} />
+                <p className="font-bold text-foreground mb-1.5 text-base">اقتصاد المبدعين</p>
+                <p className="text-xs text-muted-foreground leading-relaxed">تحول المؤثرون من مجرد ناقلي رسائل إلى مبدعين محتوى يمتلكون مجتمعات ذات ولاء استثنائي.</p>
              </div>
-             <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                <Briefcase className="text-blue-400 mb-3" size={24} />
-                <p className="font-bold text-white mb-2">تخصيص العروض (Personalization)</p>
-                <p className="text-sm text-slate-400">أثبتت الدراسات أن تخصيص الرسائل التسويقية يرفع معدلات التحويل بنسبة تتجاوز 30%.</p>
+             <div className="bg-card border border-border rounded-xl p-5 shadow-2xs">
+                <Briefcase className="text-primary mb-2.5" size={22} />
+                <p className="font-bold text-foreground mb-1.5 text-base">تخصيص العروض (Personalization)</p>
+                <p className="text-xs text-muted-foreground leading-relaxed">أثبتت الدراسات أن تخصيص الرسائل التسويقية يرفع معدلات التحويل بنسبة تتجاوز 30%.</p>
              </div>
           </div>
         </div>

@@ -33,12 +33,12 @@ export const OpportunityCard: FC<{ opp: BusinessOpportunity; index: number }> = 
 }) => {
   return (
     <Card 
-      className="flex flex-col justify-between border-border bg-card shadow-xs rounded-xl p-5"
+      className="flex flex-col justify-between border-border bg-card shadow-2xs hover:border-primary/30 rounded-xl p-5 transition-all duration-200"
     >
       <div className="dir-rtl space-y-3">
         {/* Card Header: Icon & Idea Index */}
         <div className="flex items-center justify-between border-b border-border pb-3">
-          <div className="flex size-9 items-center justify-center rounded-lg bg-muted text-primary">
+          <div className="flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
             {renderOpportunityIcon(opp.icon)}
           </div>
           <Badge variant="secondary" className="font-semibold text-xs">
@@ -52,7 +52,7 @@ export const OpportunityCard: FC<{ opp: BusinessOpportunity; index: number }> = 
             {opp.title}
           </h4>
           {(opp.description || opp.note) && (
-            <p className="m-0 text-xs text-muted-foreground font-normal leading-relaxed">
+            <p className="m-0 text-xs text-muted-foreground font-medium leading-relaxed">
               {opp.description || opp.note}
             </p>
           )}
@@ -70,7 +70,7 @@ export const OpportunityCard: FC<{ opp: BusinessOpportunity; index: number }> = 
               {opp.examples.map((ex, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-2 rounded-lg border border-border bg-muted/30 p-2.5 text-xs font-medium text-foreground leading-relaxed"
+                  className="flex items-start gap-2 rounded-lg border border-primary/15 bg-primary/5 p-2.5 text-xs font-medium text-foreground leading-relaxed"
                 >
                   <div className="size-1.5 shrink-0 rounded-full bg-primary mt-1.5" />
                   <span>{ex}</span>
@@ -91,10 +91,10 @@ export const OpportunitiesSection: FC<{ opportunities: BusinessOpportunity[] }> 
     <Card
       id="opportunities-section"
       data-section="opportunities-section"
-      className="border-border bg-card p-6 rounded-xl dir-rtl shadow-xs"
+      className="border-border bg-card p-6 rounded-xl dir-rtl shadow-xs space-y-6"
     >
-      <div className="mb-6 flex items-start gap-3 border-b border-border pb-4">
-        <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-muted text-primary">
+      <div className="flex items-start gap-3 border-b border-border pb-4">
+        <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
           <Rocket size={20} strokeWidth={2} />
         </div>
         <div className="flex-1 text-right">

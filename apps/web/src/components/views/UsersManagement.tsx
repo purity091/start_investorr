@@ -22,8 +22,9 @@ import { Input } from '@/components/ui/Input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { cn } from '@/lib/utils';
-import { useAuth, UserProfile } from '@/features/auth/AuthContext';
+import { useAuth } from '@/features/auth/AuthContext';
 import { supabase } from '@/lib/supabase';
+import { SubscriptionUpgradeRequests } from './SubscriptionUpgradeRequests';
 
 type UserRole = 'admin' | 'manager' | 'user';
 type UserStatus = 'active' | 'pending' | 'suspended';
@@ -368,7 +369,11 @@ export const UsersManagement: React.FC = () => {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {paginatedUsers.length === 0 ? (
+              {isLoading ? (
+                <TableRow>
+                  <TableCell colSpan={5} className="py-12 text-center text-muted-foreground">جاري تحميل المستخدمين...</TableCell>
+                </TableRow>
+              ) : paginatedUsers.length === 0 ? (
                 <TableRow>
                   <TableCell colSpan={5} className="py-12 text-center text-muted-foreground">
                     لا يوجد مستخدمون يطابقون البحث الحالي.
@@ -469,6 +474,8 @@ export const UsersManagement: React.FC = () => {
           </div>
         </CardContent>
       </Card>
+
+      <SubscriptionUpgradeRequests />
 
       <Dialog open={Boolean(pendingDeleteUser)} onOpenChange={(open) => !open && setPendingDeleteUser(null)}>
         <DialogContent className="sm:max-w-[440px]" dir="rtl">

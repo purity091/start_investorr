@@ -14,10 +14,10 @@ export const LeadersSection: FC<{
     <Card
       id="leaders-section"
       data-section="leaders"
-      className="border-border bg-card p-6 rounded-xl dir-rtl shadow-xs"
+      className="border-border bg-card p-6 rounded-xl dir-rtl shadow-xs space-y-6"
     >
-      <div className="mb-6 flex items-start gap-3 border-b border-border pb-4">
-        <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-muted text-primary">
+      <div className="flex items-start gap-3 border-b border-border pb-4">
+        <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
           <Trophy size={20} strokeWidth={2} />
         </div>
         <div className="flex-1 text-right">
@@ -39,21 +39,21 @@ export const LeadersSection: FC<{
         {leaders.map((leader, idx) => (
           <Card
             key={idx}
-            className="flex flex-col justify-between border-border bg-muted/30 p-4 rounded-lg shadow-none"
+            className="flex flex-col justify-between border-border bg-card p-4 rounded-xl shadow-2xs transition-all duration-200 hover:border-primary/30 hover:shadow-xs"
           >
             <div>
               <div className="flex items-center justify-between mb-3">
-                <div className="flex size-7 items-center justify-center rounded-md bg-background text-xs font-bold text-primary border border-border">
+                <div className="flex size-7 items-center justify-center rounded-lg bg-primary/10 text-xs font-extrabold text-primary border border-primary/20">
                   #{(idx + 1).toString().padStart(2, '0')}
                 </div>
                 <Badge variant="secondary" className="gap-1 text-[11px] font-medium">
-                  <Globe size={11} />
+                  <Globe size={11} className="text-primary" />
                   {leader.country}
                 </Badge>
               </div>
 
               <div className="flex items-center gap-2 mb-1.5">
-                <Building2 size={15} className="text-primary shrink-0" />
+                <Building2 size={16} className="text-primary shrink-0" />
                 <h3 className="m-0 text-sm font-bold text-foreground">
                   {leader.name}
                 </h3>
@@ -61,8 +61,8 @@ export const LeadersSection: FC<{
             </div>
 
             {leader.note && (
-              <div className="mt-3 pt-2 border-t border-border">
-                <p className="m-0 text-xs font-normal leading-relaxed text-muted-foreground">
+              <div className="mt-3 pt-2.5 border-t border-border/60">
+                <p className="m-0 text-xs font-medium leading-relaxed text-muted-foreground">
                   {leader.note}
                 </p>
               </div>
