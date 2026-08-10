@@ -54,6 +54,16 @@ function Button({
   ...props
 }: ButtonProps) {
   const Comp = asChild ? Slot.Root : "button";
+  const content = loading ? (
+    <>
+      <span className="ui-spinner" aria-hidden="true" />
+      <span className="inline-flex items-center gap-2 opacity-90">
+        {loadingText ?? children}
+      </span>
+    </>
+  ) : (
+    children
+  );
 
   return (
     <Comp
@@ -65,10 +75,7 @@ function Button({
       disabled={disabled || loading}
       {...props}
     >
-      {loading ? <span className="ui-spinner" aria-hidden="true" /> : null}
-      <span className={cn("inline-flex items-center gap-2", loading ? "opacity-90" : "")}>
-        {loading && loadingText ? loadingText : children}
-      </span>
+      {asChild ? children : content}
     </Comp>
   );
 }
