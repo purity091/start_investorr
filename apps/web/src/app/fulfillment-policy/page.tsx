@@ -2,11 +2,15 @@ import React from 'react';
 import { PublicLayout } from '@/components/layout/PublicLayout';
 import { Zap, ShieldCheck, CheckCircle2, Laptop, FileCheck, Mail, Send } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
+import { createMetadata } from '@/lib/seo';
 
-export const metadata = {
-  title: 'سياسة التسليم وتوفير الخدمة الرقمية | خطة',
-  description: 'سياسة التسليم وتوفير الخدمات الرقمية السحابية (SaaS Fulfillment Policy) لمنصة خطة. توضيح التفعيل الفوري الإلكتروني.',
-};
+export const metadata = createMetadata({
+  title: 'سياسة التسليم وتفعيل الخدمة الرقمية في منصة خطة',
+  description:
+    'تعرف على آلية تسليم وتفعيل خدمات منصة خطة الرقمية، تفعيل الحسابات والاشتراكات، وإتاحة أدوات دراسات الجدوى بعد الدفع.',
+  path: '/fulfillment-policy',
+  keywords: ['سياسة التسليم الرقمي', 'تفعيل اشتراك SaaS', 'توفير الخدمة الرقمية', 'منصة خطة'],
+});
 
 export default function FulfillmentPolicyPage() {
   return (

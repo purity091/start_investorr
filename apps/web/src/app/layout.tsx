@@ -1,6 +1,7 @@
 import "../index.css";
 import { Metadata, Viewport } from "next";
 import { Providers } from "./providers";
+import { createMetadata, organizationJsonLd, siteConfig, websiteJsonLd } from "@/lib/seo";
 
 export const viewport: Viewport = {
   themeColor: "#4f46e5",
@@ -10,56 +11,21 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  ...createMetadata({
+    title: "خطة. | دراسات جدوى ونماذج عمل وتحليل مشاريع بالذكاء الاصطناعي",
+    description: siteConfig.description,
+    path: "/",
+  }),
   title: {
-    default: "خطة. | الجيل الجديد من دراسات الجدوى والتحليلات الاستثمارية",
+    default: "خطة. | دراسات جدوى ونماذج عمل وتحليل مشاريع بالذكاء الاصطناعي",
     template: "%s | خطة.",
   },
-  description:
-    "منصة خطة هي المنصة العربية الأولى المعتمدة بالذكاء الاصطناعي لإعداد دراسات الجدوى الاقتصادية، التوقعات المالية لـ 5 سنوات، ونماذج العمل الاستثمارية بدقة وسرعة.",
-  keywords: [
-    "خطة",
-    "دراسة جدوى",
-    "دراسات جدوى",
-    "توقعات مالية",
-    "نموذج العمل التجاري",
-    "BMC",
-    "مستثمر",
-    "ذكاء اصطناعي",
-    "تخطيط مشاريع",
-    "ريادة الأعمال",
-  ],
+  applicationName: siteConfig.name,
+  category: "business",
   authors: [{ name: "فريق منصة خطة" }],
   creator: "خطة",
   publisher: "خطة.",
-  metadataBase: new URL("https://khotta.app"),
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title: "خطة. | الجيل الجديد من دراسات الجدوى",
-    description:
-      "منصة خطة تزودك بأحدث الأدوات الذكية والنماذج المالية المعتمدة لإعداد دراسات جدوى احترافية بأعلى دقة وسرعة.",
-    url: "https://khotta.app",
-    siteName: "خطة.",
-    locale: "ar_SA",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "خطة. | الجيل الجديد من دراسات الجدوى",
-    description: "حوّل فكرتك إلى مشروع استثماري ناجح مع منصة خطة.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+  metadataBase: new URL(siteConfig.url),
 };
 
 export default function RootLayout({
@@ -70,6 +36,13 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl" suppressHydrationWarning>
       <body suppressHydrationWarning className="antialiased min-h-screen bg-background text-foreground overflow-x-hidden font-sans">
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([organizationJsonLd, websiteJsonLd]).replace(/</g, "\\u003c"),
+          }}
+        />
         <Providers>{children}</Providers>
       </body>
     </html>

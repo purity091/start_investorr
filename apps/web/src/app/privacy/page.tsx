@@ -2,11 +2,15 @@ import React from 'react';
 import { PublicLayout } from '@/components/layout/PublicLayout';
 import { ShieldCheck, Lock, Eye, FileText, CheckCircle2, Mail, Sparkles, Database, UserCheck } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
+import { createMetadata } from '@/lib/seo';
 
-export const metadata = {
-  title: 'سياسة الخصوصية وحماية البيانات | خطة',
-  description: 'تعرف على سياسة الخصوصية وحماية البيانات المعمول بها في منصة خطة والتزامنا التام بحفظ وسرية مشاريعك ومعاملاتك.',
-};
+export const metadata = createMetadata({
+  title: 'سياسة الخصوصية وحماية البيانات في منصة خطة',
+  description:
+    'تعرف على سياسة الخصوصية وحماية البيانات في منصة خطة، وكيف نحمي بيانات مشاريعك ودراسات الجدوى والحسابات والمعاملات.',
+  path: '/privacy',
+  keywords: ['سياسة الخصوصية', 'حماية بيانات المشاريع', 'خصوصية دراسة الجدوى', 'أمان منصة خطة'],
+});
 
 export default function PrivacyPage() {
   return (

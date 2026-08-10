@@ -3,7 +3,16 @@ import { PublicLayout } from '@/components/layout/PublicLayout';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
+import { createMetadata } from '@/lib/seo';
 import { Mail, MessageSquare, MapPin } from 'lucide-react';
+
+export const metadata = createMetadata({
+  title: 'تواصل مع فريق منصة خطة',
+  description:
+    'تواصل مع فريق منصة خطة للاستفسارات والدعم الفني والشراكات المتعلقة بدراسات الجدوى، نماذج العمل، وتحليل المشاريع.',
+  path: '/contact-us',
+  keywords: ['تواصل مع خطة', 'دعم منصة خطة', 'استفسار دراسة جدوى', 'شراكات ريادة الأعمال'],
+});
 
 export default function ContactPage() {
   return (

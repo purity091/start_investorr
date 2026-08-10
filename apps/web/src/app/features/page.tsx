@@ -4,6 +4,7 @@ import { PublicLayout } from '@/components/layout/PublicLayout';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
+import { createMetadata } from '@/lib/seo';
 import {
   Brain,
   BarChart3,
@@ -20,10 +21,13 @@ import {
   Globe,
 } from 'lucide-react';
 
-export const metadata = {
-  title: 'المميزات والحلول | خطة - الجيل الجديد من دراسات الجدوى',
-  description: 'تعرف على أدوات ومميزات منصة خطة لبناء دراسات الجدوى، التحليلات المالية، واستكشاف الفرص الاستثمارية باستخدام الذكاء الاصطناعي.',
-};
+export const metadata = createMetadata({
+  title: 'مميزات منصة خطة لدراسات الجدوى وتحليل المشاريع',
+  description:
+    'تعرف على أدوات منصة خطة لبناء دراسات الجدوى، نماذج العمل، التوقعات المالية، تحليل السوق، واستكشاف الفرص الاستثمارية باستخدام الذكاء الاصطناعي.',
+  path: '/features',
+  keywords: ['مميزات دراسة جدوى', 'أدوات تحليل مالي', 'منصة دراسات جدوى', 'نموذج العمل التجاري', 'ذكاء اصطناعي للأعمال'],
+});
 
 const mainFeatures = [
   {

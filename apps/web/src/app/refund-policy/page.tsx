@@ -2,11 +2,15 @@ import React from 'react';
 import { PublicLayout } from '@/components/layout/PublicLayout';
 import { RefreshCw, ShieldCheck, CheckCircle2, CreditCard, Clock, Mail, RotateCcw } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
+import { createMetadata } from '@/lib/seo';
 
-export const metadata = {
-  title: 'سياسة الاسترجاع والإلغاء | خطة',
-  description: 'سياسة الاسترجاع والإلغاء الشفافة المعتمدة لمنصة خطة. ضمان استرداد 100% خلال 14 يوماً وإلغاء فوري للاشتراك.',
-};
+export const metadata = createMetadata({
+  title: 'سياسة الاسترجاع والإلغاء في منصة خطة',
+  description:
+    'تعرف على سياسة الاسترجاع والإلغاء في منصة خطة، شروط استرداد المدفوعات، إلغاء الاشتراك، وآلية التعامل مع خدمات SaaS الرقمية.',
+  path: '/refund-policy',
+  keywords: ['سياسة الاسترجاع', 'إلغاء الاشتراك', 'استرداد المدفوعات', 'باقات خطة', 'SaaS refund policy'],
+});
 
 export default function RefundPolicyPage() {
   return (

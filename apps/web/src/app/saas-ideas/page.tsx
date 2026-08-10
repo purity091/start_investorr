@@ -1,13 +1,17 @@
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { SaaSIdeasGallery } from "@/components/views/SaaSIdeasGallery";
 import { readPublicJson } from "@/lib/public-data-cache";
+import { createMetadata } from "@/lib/seo";
 
 export const revalidate = 3600;
 
-export const metadata = {
-  title: "أفكار مشاريع SaaS | خطة",
-  description: "نماذج وأفكار لمشاريع البرمجيات كخدمة من شركات ناجحة وتجارب فاشلة.",
-};
+export const metadata = createMetadata({
+  title: "أفكار مشاريع SaaS ناجحة مع نماذج إيرادات وتحليل سوق",
+  description:
+    "استكشف أفكار مشاريع SaaS قابلة للتنفيذ مع نماذج اشتراك، مؤشرات نمو، دروس من شركات ناجحة وتجارب فاشلة، وتحليلات تساعدك على اختيار فكرة برمجية قابلة للاستثمار.",
+  path: "/saas-ideas",
+  keywords: ["أفكار مشاريع SaaS", "مشاريع برمجية", "SaaS عربي", "نموذج اشتراك", "MRR", "ARR"],
+});
 
 const isSaasIdea = (item: any) => {
   const cat = (item.category || '').toLowerCase();

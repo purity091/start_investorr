@@ -2,11 +2,15 @@ import React from 'react';
 import { PublicLayout } from '@/components/layout/PublicLayout';
 import { FileText, ShieldCheck, Scale, CheckCircle2, Mail, Award, CreditCard, AlertCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
+import { createMetadata } from '@/lib/seo';
 
-export const metadata = {
-  title: 'شروط وأحكام الخدمة | خطة',
-  description: 'شروط وأحكام الاستخدام المعتمدة لمنصة خطة SaaS. اطلع على الحقوق والالتزامات والملكية الفكرية وضوابط الخدمة.',
-};
+export const metadata = createMetadata({
+  title: 'شروط وأحكام استخدام منصة خطة',
+  description:
+    'اطلع على شروط وأحكام استخدام منصة خطة، حقوق المستخدمين، الملكية الفكرية، ضوابط الاشتراك، وحدود استخدام خدمات دراسات الجدوى الرقمية.',
+  path: '/terms',
+  keywords: ['شروط الاستخدام', 'أحكام منصة خطة', 'اتفاقية SaaS', 'حقوق المستخدم', 'ضوابط الخدمة'],
+});
 
 export default function TermsPage() {
   return (

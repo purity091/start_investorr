@@ -1,13 +1,17 @@
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { MicroSaaSIdeasGallery } from "@/components/views/MicroSaaSIdeasGallery";
 import { readPublicJson } from "@/lib/public-data-cache";
+import { createMetadata } from "@/lib/seo";
 
 export const revalidate = 3600;
 
-export const metadata = {
-  title: "أفكار Micro-SaaS | خطة",
-  description: "أفكار Micro-SaaS مناسبة لفريق صغير أو مؤسس فردي.",
-};
+export const metadata = createMetadata({
+  title: "أفكار Micro-SaaS للمؤسسين الأفراد والفرق الصغيرة",
+  description:
+    "دليل عملي لأفكار Micro-SaaS منخفضة التعقيد ومناسبة لمؤسس فردي أو فريق صغير، مع نماذج ربح متكررة وفرص نيش قابلة للاختبار السريع.",
+  path: "/micro-saas-ideas",
+  keywords: ["أفكار Micro-SaaS", "مشاريع صغيرة رقمية", "مؤسس فردي", "SaaS مصغر", "دخل متكرر"],
+});
 
 const MICRO_SAAS_SLUGS = new Set([
   'dashp',

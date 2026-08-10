@@ -29,7 +29,6 @@ const PROTECTED_ROUTES = [
   '/customer-subscription',
   '/customer-usage',
   '/brand-identity',
-  '/market-discovery',
   '/problem-engine',
   '/saved-market-items',
   '/discovery-center',
@@ -37,10 +36,6 @@ const PROTECTED_ROUTES = [
   '/strategic-dashboard',
   '/unicorn-benchmark',
   '/project-ideas',
-  '/saas-ideas',
-  '/micro-saas-ideas',
-  '/proven-projects',
-  '/failed-projects',
 ];
 
 const hasSupabaseAuthCookie = (request: NextRequest) =>
@@ -248,8 +243,6 @@ export const config = {
     '/customer-usage/:path*',
     '/brand-identity',
     '/brand-identity/:path*',
-    '/market-discovery',
-    '/market-discovery/:path*',
     '/problem-engine',
     '/problem-engine/:path*',
     '/saved-market-items',
@@ -264,13 +257,5 @@ export const config = {
     '/unicorn-benchmark/:path*',
     '/project-ideas',
     '/project-ideas/:path*',
-    '/saas-ideas',
-    '/saas-ideas/:path*',
-    '/micro-saas-ideas',
-    '/micro-saas-ideas/:path*',
-    '/proven-projects',
-    '/proven-projects/:path*',
-    '/failed-projects',
-    '/failed-projects/:path*',
   ],
 };

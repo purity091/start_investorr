@@ -3,12 +3,16 @@ import Link from 'next/link';
 import { PublicLayout } from '@/components/layout/PublicLayout';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
+import { createMetadata } from '@/lib/seo';
 import { HelpCircle, ArrowLeft, Search, MessageSquare } from 'lucide-react';
 
-export const metadata = {
-  title: 'الأسئلة الشائعة | خطة - الإجابات على تساؤلاتك الحيوية',
-  description: 'اعثر على إجابات سريعة وشاملة لكل ما يتعلق بإعداد دراسات الجدوى، الأمان، الاشتراكات، واستخدام الذكاء الاصطناعي في منصة خطة.',
-};
+export const metadata = createMetadata({
+  title: 'الأسئلة الشائعة حول منصة خطة ودراسات الجدوى',
+  description:
+    'إجابات واضحة حول إعداد دراسات الجدوى، التحليلات المالية، الاشتراكات، الأمان، ومشاركة المشاريع داخل منصة خطة.',
+  path: '/faq',
+  keywords: ['الأسئلة الشائعة خطة', 'دراسة جدوى بالذكاء الاصطناعي', 'أمان البيانات', 'اشتراكات خطة'],
+});
 
 const faqsList = [
   {
@@ -57,8 +61,29 @@ const faqsList = [
 ];
 
 export default function FAQPage() {
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqsList.flatMap((group) =>
+      group.items.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.a,
+        },
+      })),
+    ),
+  };
+
   return (
     <PublicLayout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqJsonLd).replace(/</g, '\\u003c'),
+        }}
+      />
       {/* Hero Section */}
       <section className="py-20 lg:py-24 text-center bg-muted/30 border-b border-border/50">
         <div className="container mx-auto px-4 max-w-3xl">

@@ -1,7 +1,16 @@
 import React from 'react';
 import { PublicLayout } from '@/components/layout/PublicLayout';
 import { Badge } from '@/components/ui/Badge';
+import { createMetadata } from '@/lib/seo';
 import { Heart, Target, Lightbulb, Users } from 'lucide-react';
+
+export const metadata = createMetadata({
+  title: 'عن منصة خطة ورسالتها في تطوير دراسات الجدوى العربية',
+  description:
+    'تعرف على منصة خطة، رسالتها في تمكين رواد الأعمال، وكيف تساعد على تحويل الأفكار إلى دراسات جدوى ونماذج عمل وتحليلات مالية قابلة للتنفيذ.',
+  path: '/about',
+  keywords: ['عن منصة خطة', 'دراسات جدوى عربية', 'منصة ريادة أعمال', 'تحليل مشاريع'],
+});
 
 export default function AboutPage() {
   return (
