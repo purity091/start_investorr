@@ -263,7 +263,7 @@ type Gap = {
 
 function analyzeGaps(answers: Answers): Gap[] {
   const gaps: Gap[] = [];
-  
+
   // 1. Competitive UVP Gap
   const competitors = getFieldValue(answers, 'market_analysis', 'competitors');
   const uvp = getFieldValue(answers, 'product_operations', 'uvp');
@@ -336,7 +336,7 @@ function ProjectDashboard({
     const value = answers[`${step.id}.options`];
     return Array.isArray(value) ? value : [];
   });
-  
+
   const gaps = useMemo(() => analyzeGaps(answers), [answers]);
   const dangerGaps = gaps.filter(g => g.type === 'danger').length;
 
@@ -623,24 +623,24 @@ function ProjectDashboard({
                 ) : (
                   <div className="grid gap-3">
                     {gaps.map(gap => (
-                      <div key={gap.id} className={cn("p-4 rounded-xl border flex gap-3 items-start", 
-                        gap.type === 'danger' ? "bg-red-500/10 border-red-500/20" : 
-                        gap.type === 'warning' ? "bg-amber-500/10 border-amber-500/20" : 
-                        "bg-emerald-500/10 border-emerald-500/20"
+                      <div key={gap.id} className={cn("p-4 rounded-xl border flex gap-3 items-start",
+                        gap.type === 'danger' ? "bg-red-500/10 border-red-500/20" :
+                          gap.type === 'warning' ? "bg-amber-500/10 border-amber-500/20" :
+                            "bg-emerald-500/10 border-emerald-500/20"
                       )}>
                         {gap.type === 'danger' && <XCircle className="size-5 text-red-600 shrink-0 mt-0.5" />}
                         {gap.type === 'warning' && <AlertTriangle className="size-5 text-amber-600 shrink-0 mt-0.5" />}
                         {gap.type === 'success' && <CheckCircle2 className="size-5 text-emerald-600 shrink-0 mt-0.5" />}
                         <div>
-                          <h4 className={cn("font-bold text-sm mb-1", 
-                            gap.type === 'danger' ? "text-red-800" : 
-                            gap.type === 'warning' ? "text-amber-800" : 
-                            "text-emerald-800"
+                          <h4 className={cn("font-bold text-sm mb-1",
+                            gap.type === 'danger' ? "text-red-800" :
+                              gap.type === 'warning' ? "text-amber-800" :
+                                "text-emerald-800"
                           )}>{gap.title}</h4>
-                          <p className={cn("text-xs leading-6", 
-                            gap.type === 'danger' ? "text-red-900/80" : 
-                            gap.type === 'warning' ? "text-amber-900/80" : 
-                            "text-emerald-900/80"
+                          <p className={cn("text-xs leading-6",
+                            gap.type === 'danger' ? "text-red-900/80" :
+                              gap.type === 'warning' ? "text-amber-900/80" :
+                                "text-emerald-900/80"
                           )}>{gap.description}</p>
                         </div>
                       </div>
@@ -849,9 +849,9 @@ export default function SmartBeginnerPro() {
     ? 'conflict'
     : syncStatus === 'failed'
       ? 'failed'
-    : syncStatus === 'saving' || syncStatus === 'pending'
-      ? 'saving'
-      : 'saved';
+      : syncStatus === 'saving' || syncStatus === 'pending'
+        ? 'saving'
+        : 'saved';
   const lastSaved = lastSyncedAt
     ? new Date(lastSyncedAt).toLocaleTimeString('ar-SA', { hour: '2-digit', minute: '2-digit', second: '2-digit' })
     : null;
@@ -866,15 +866,15 @@ export default function SmartBeginnerPro() {
   // Keep the in-memory workspace current; the provider debounces database writes.
   useEffect(() => {
     updateWorkspace((current) => ({
-        feasibilityModels: {
-          ...current.feasibilityModels,
-          easy: { phase, stepIndex, answers },
-        },
-        profile: {
-          ...current.profile,
-          name: getFieldValue(answers, 'executive_summary', 'name') || current.profile.name,
-        },
-      }));
+      feasibilityModels: {
+        ...current.feasibilityModels,
+        easy: { phase, stepIndex, answers },
+      },
+      profile: {
+        ...current.profile,
+        name: getFieldValue(answers, 'executive_summary', 'name') || current.profile.name,
+      },
+    }));
   }, [answers, phase, stepIndex, updateWorkspace]);
 
   const updateField = (fieldId: string, value: string) => {
@@ -922,26 +922,7 @@ export default function SmartBeginnerPro() {
         <div className="rounded-2xl border border-border/80 bg-card p-3.5 sm:p-6 shadow-2xs space-y-3 sm:space-y-4">
           <div className="flex flex-col gap-3 sm:gap-4 lg:flex-row lg:items-center lg:justify-between">
             <div className="space-y-1.5 text-right">
-              <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
-                <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20 font-bold px-2.5 py-0.5 text-[11px] sm:text-xs">
-                  النموذج الاحترافي
-                </Badge>
-                <Badge variant="outline" className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20 font-bold px-2 py-0.5 text-[11px] sm:text-xs gap-1">
-                  <CheckCircle2 className="size-3" />
-                  <span>ورشة تفاعلية متكاملة</span>
-                </Badge>
-                <Button
-                  type="button"
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setIsMethodologyModalOpen(true)}
-                  className="gap-1.5 font-bold text-xs border-primary/30 bg-primary/5 text-primary hover:bg-primary/10 cursor-pointer h-7 px-2.5"
-                >
-                  <BookOpen className="size-3.5 text-primary" />
-                  <span>دليل الشرح والمنهجية</span>
-                </Button>
-                <SaveStatusBadge status={saveStatus} lastSaved={lastSaved} />
-              </div>
+
               <h1 className="text-lg sm:text-2xl lg:text-3xl font-extrabold text-foreground tracking-tight leading-snug">
                 ورشة بناء النموذج الأولي ودراسة الجدوى الاحترافية
               </h1>
