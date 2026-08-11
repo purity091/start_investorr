@@ -3,6 +3,7 @@ import {
   AlertTriangle,
   ArrowRight,
   BarChart3,
+  BookOpen,
   BriefcaseBusiness,
   CheckCircle2,
   ChevronLeft,
@@ -10,9 +11,11 @@ import {
   FileText,
   Gauge,
   Layers,
+  Lightbulb,
   LineChart,
   Loader2,
   ShieldAlert,
+  Sparkles,
   Target,
   Users,
   XCircle,
@@ -21,6 +24,13 @@ import {
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
 import { Input } from '@/components/ui/Input';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -345,7 +355,7 @@ function ProjectDashboard({
                 </div>
               </div>
 
-              <div className="grid gap-3 sm:grid-cols-3 lg:w-[560px]">
+              <div className="grid grid-cols-3 gap-1.5 sm:gap-3 lg:w-[560px]">
                 <MetricCard label="جاهزية الدراسة" value={`${readiness.score}%`} />
                 <MetricCard label="أقسام مكتملة" value={`${completedCount}/${PRO_STEPS.length}`} />
                 <MetricCard label="عدد الحقول" value={`${PRO_STEPS.reduce((sum, step) => sum + step.fields.length, 0)}`} />
@@ -355,7 +365,7 @@ function ProjectDashboard({
         </Card>
 
         <Tabs defaultValue="overview" dir="rtl" className="gap-4">
-          <TabsList className="grid h-auto w-full grid-cols-4 rounded-xl md:w-fit">
+          <TabsList className="flex overflow-x-auto whitespace-nowrap scrollbar-none h-auto w-full p-1 rounded-xl bg-muted/80 gap-1 sm:grid sm:grid-cols-4 sm:w-fit">
             <TabsTrigger value="overview">الملخص</TabsTrigger>
             <TabsTrigger value="inputs">كل الإدخالات</TabsTrigger>
             <TabsTrigger value="gaps" className="relative">
@@ -553,40 +563,42 @@ function ProjectDashboard({
                 <CardTitle className="text-lg">كل إدخالات المستخدم حسب أقسام دراسة الجدوى</CardTitle>
                 <CardDescription>كل صف يمثل قسماً احترافياً، وكل حقل داخله قابل للمراجعة والتعديل.</CardDescription>
               </CardHeader>
-              <CardContent>
-                <Table>
-                  <TableHeader>
-                    <TableRow>
-                      <TableHead className="w-48">القسم</TableHead>
-                      <TableHead>الحقول والمدخلات</TableHead>
-                      <TableHead className="w-32">الإجراء</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {PRO_STEPS.map((step, index) => (
-                      <TableRow key={step.id}>
-                        <TableCell className="font-medium">{step.title}</TableCell>
-                        <TableCell>
-                          <div className="grid gap-3 md:grid-cols-2">
-                            {step.fields.map((field) => (
-                              <div key={field.id} className="rounded-lg bg-background p-3">
-                                <div className="text-xs font-semibold text-foreground">{field.label}</div>
-                                <p className="mt-1 whitespace-pre-wrap text-sm leading-7 text-muted-foreground">
-                                  {getAnswerText(answers[answerKey(step.id, field.id)])}
-                                </p>
-                              </div>
-                            ))}
-                          </div>
-                        </TableCell>
-                        <TableCell>
-                          <Button variant="ghost" size="sm" onClick={() => onEdit(index)}>
-                            تعديل
-                          </Button>
-                        </TableCell>
+              <CardContent className="p-2 sm:p-6">
+                <div className="w-full overflow-x-auto rounded-xl border border-border/60">
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead className="w-36 sm:w-48 whitespace-nowrap">القسم</TableHead>
+                        <TableHead className="min-w-[200px]">الحقول والمدخلات</TableHead>
+                        <TableHead className="w-20 sm:w-32 text-center">الإجراء</TableHead>
                       </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
+                    </TableHeader>
+                    <TableBody>
+                      {PRO_STEPS.map((step, index) => (
+                        <TableRow key={step.id}>
+                          <TableCell className="font-medium text-xs sm:text-sm whitespace-nowrap">{step.title}</TableCell>
+                          <TableCell>
+                            <div className="grid gap-2 md:grid-cols-2">
+                              {step.fields.map((field) => (
+                                <div key={field.id} className="rounded-lg bg-background p-2.5 sm:p-3 border border-border/40">
+                                  <div className="text-[11px] sm:text-xs font-semibold text-foreground">{field.label}</div>
+                                  <p className="mt-1 whitespace-pre-wrap text-xs sm:text-sm leading-relaxed text-muted-foreground">
+                                    {getAnswerText(answers[answerKey(step.id, field.id)])}
+                                  </p>
+                                </div>
+                              ))}
+                            </div>
+                          </TableCell>
+                          <TableCell className="text-center">
+                            <Button variant="ghost" size="sm" onClick={() => onEdit(index)} className="h-8 px-2 text-xs">
+                              تعديل
+                            </Button>
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </div>
               </CardContent>
             </Card>
           </TabsContent>
@@ -706,15 +718,15 @@ function PrototypeCard({ title, value }: { title: string; value: string | string
 
 function MetricCard({ label, value, icon: Icon, tone }: { label: string; value: string; icon?: React.ElementType; tone?: string }) {
   return (
-    <div className="flex items-center gap-3 rounded-xl border border-border/80 bg-card p-3.5 shadow-2xs">
+    <div className="flex items-center gap-1.5 sm:gap-3 rounded-xl border border-border/80 bg-card p-2 sm:p-3.5 shadow-2xs min-w-0">
       {Icon && (
-        <div className="flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary shrink-0">
-          <Icon className="size-4" />
+        <div className="flex size-7 sm:size-9 items-center justify-center rounded-lg bg-primary/10 text-primary shrink-0">
+          <Icon className="size-3.5 sm:size-4" />
         </div>
       )}
       <div className="min-w-0 flex-1">
-        <div className="text-[11px] font-medium text-muted-foreground">{label}</div>
-        <div className={cn("text-lg font-bold tracking-tight text-foreground", tone)}>{value}</div>
+        <div className="text-[10px] sm:text-[11px] font-medium text-muted-foreground truncate">{label}</div>
+        <div className={cn("text-xs sm:text-lg font-bold tracking-tight text-foreground truncate", tone)}>{value}</div>
       </div>
     </div>
   );
@@ -832,6 +844,7 @@ export default function SmartBeginnerPro() {
   const [phase, setPhase] = useState<'form' | 'dashboard'>(savedModel?.phase ?? 'form');
   const [stepIndex, setStepIndex] = useState(savedModel?.stepIndex ?? 0);
   const [answers, setAnswers] = useState<Answers>(savedModel?.answers ?? {});
+  const [isMethodologyModalOpen, setIsMethodologyModalOpen] = useState(false);
   const saveStatus = syncStatus === 'conflict'
     ? 'conflict'
     : syncStatus === 'failed'
@@ -906,20 +919,30 @@ export default function SmartBeginnerPro() {
     <div className="w-full bg-background" dir="rtl">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
         {/* Corporate Wizard Header */}
-        <div className="rounded-2xl border border-border/80 bg-card p-5 sm:p-6 shadow-2xs space-y-4">
-          <div className="flex flex-col gap-4 lg:flex-row-reverse lg:items-center lg:justify-between">
-            <div className="space-y-2 text-right">
-              <div className="flex items-center gap-2 flex-wrap">
-                <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20 font-bold px-3 py-1 text-xs">
+        <div className="rounded-2xl border border-border/80 bg-card p-3.5 sm:p-6 shadow-2xs space-y-3 sm:space-y-4">
+          <div className="flex flex-col gap-3 sm:gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div className="space-y-1.5 text-right">
+              <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20 font-bold px-2.5 py-0.5 text-[11px] sm:text-xs">
                   النموذج الاحترافي
                 </Badge>
-                <Badge variant="outline" className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20 font-bold px-2.5 py-0.5 text-xs gap-1">
-                  <CheckCircle2 className="size-3.5" />
+                <Badge variant="outline" className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20 font-bold px-2 py-0.5 text-[11px] sm:text-xs gap-1">
+                  <CheckCircle2 className="size-3" />
                   <span>ورشة تفاعلية متكاملة</span>
                 </Badge>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setIsMethodologyModalOpen(true)}
+                  className="gap-1.5 font-bold text-xs border-primary/30 bg-primary/5 text-primary hover:bg-primary/10 cursor-pointer h-7 px-2.5"
+                >
+                  <BookOpen className="size-3.5 text-primary" />
+                  <span>دليل الشرح والمنهجية</span>
+                </Button>
                 <SaveStatusBadge status={saveStatus} lastSaved={lastSaved} />
               </div>
-              <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-foreground tracking-tight">
+              <h1 className="text-lg sm:text-2xl lg:text-3xl font-extrabold text-foreground tracking-tight leading-snug">
                 ورشة بناء النموذج الأولي ودراسة الجدوى الاحترافية
               </h1>
               <p className="max-w-3xl text-xs sm:text-sm text-muted-foreground leading-relaxed">
@@ -927,16 +950,45 @@ export default function SmartBeginnerPro() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 shrink-0 lg:w-[480px]">
+            <div className="grid grid-cols-3 gap-1.5 sm:gap-3 shrink-0 lg:w-[480px]">
               <MetricCard label="جاهزية الدراسة" value={`${readiness.score}%`} icon={Gauge} tone={readiness.tone} />
-              <MetricCard label="الأقسام المكتملة" value={`${completedCount} من ${PRO_STEPS.length}`} icon={ClipboardList} />
+              <MetricCard label="الأقسام المكتملة" value={`${completedCount}/${PRO_STEPS.length}`} icon={ClipboardList} />
               <MetricCard label="المرحلة الحالية" value={`خطوة ${stepIndex + 1}`} icon={Target} />
             </div>
           </div>
         </div>
 
+        {/* Mobile Horizontal Step Selector */}
+        <div className="lg:hidden w-full flex overflow-x-auto whitespace-nowrap scrollbar-none gap-1.5 pb-1">
+          {PRO_STEPS.map((step, index) => {
+            const active = index === stepIndex;
+            const complete = getStepCompletion(step, answers) >= 0.5;
+
+            return (
+              <button
+                key={step.id}
+                type="button"
+                onClick={() => setStepIndex(index)}
+                className={cn(
+                  "flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold shrink-0 transition-all border cursor-pointer",
+                  active
+                    ? "bg-primary text-primary-foreground border-primary shadow-xs"
+                    : complete
+                      ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20"
+                      : "bg-card text-muted-foreground border-border"
+                )}
+              >
+                <span className="flex size-5 items-center justify-center rounded-full text-[10px] font-bold bg-background/20">
+                  {complete ? <CheckCircle2 className="size-3" /> : index + 1}
+                </span>
+                <span>{step.shortTitle}</span>
+              </button>
+            );
+          })}
+        </div>
+
         {/* Wizard Main Grid: Stepper Navigation (Sidebar) + Active Step Form */}
-        <div className="grid gap-6 lg:grid-cols-[1fr_300px]">
+        <div className="grid gap-6 lg:grid-cols-[300px_1fr]">
           {/* Stepper Navigation Sidebar */}
           <div className="space-y-4">
             <Card className="border border-border/80 bg-card shadow-2xs overflow-hidden">
@@ -1013,15 +1065,15 @@ export default function SmartBeginnerPro() {
           </div>
 
           {/* Active Step Form Area */}
-          <Card className="border border-border/80 bg-card shadow-2xs space-y-6">
-            <CardHeader className="border-b border-border/60 p-5 sm:p-6 space-y-4">
-              <div className="flex flex-col gap-4 sm:flex-row-reverse sm:items-center sm:justify-between">
-                <div className="flex items-start gap-3.5">
-                  <div className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary border border-primary/20 shadow-2xs">
-                    <StepIcon className="size-6" />
+          <Card className="border border-border/80 bg-card shadow-2xs space-y-4 sm:space-y-6">
+            <CardHeader className="border-b border-border/60 p-3.5 sm:p-6 space-y-3 sm:space-y-4">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-start gap-2.5 sm:gap-3.5">
+                  <div className="flex size-9 sm:size-12 shrink-0 items-center justify-center rounded-xl sm:rounded-2xl bg-primary/10 text-primary border border-primary/20 shadow-2xs">
+                    <StepIcon className="size-4 sm:size-6" />
                   </div>
                   <div className="space-y-1">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-1.5 sm:gap-2">
                       <Badge variant="outline" className="text-[10px] font-bold">
                         الخطوة {stepIndex + 1} من {PRO_STEPS.length}
                       </Badge>
@@ -1031,7 +1083,7 @@ export default function SmartBeginnerPro() {
                         </Badge>
                       )}
                     </div>
-                    <CardTitle className="text-lg sm:text-xl lg:text-2xl font-bold tracking-tight">{currentStep.title}</CardTitle>
+                    <CardTitle className="text-base sm:text-xl lg:text-2xl font-bold tracking-tight">{currentStep.title}</CardTitle>
                     <CardDescription className="text-xs sm:text-sm leading-relaxed">{currentStep.description}</CardDescription>
                   </div>
                 </div>
@@ -1043,7 +1095,7 @@ export default function SmartBeginnerPro() {
                   <span>مستوى إنجاز القسم:</span>
                   <span className="font-bold text-foreground">{Math.round(getStepCompletion(currentStep, answers) * 100)}%</span>
                 </div>
-                <div className="h-2 overflow-hidden rounded-full bg-muted">
+                <div className="h-1.5 sm:h-2 overflow-hidden rounded-full bg-muted">
                   <div
                     className="h-full rounded-full bg-primary transition-all duration-300"
                     style={{ width: `${getStepCompletion(currentStep, answers) * 100}%` }}
@@ -1052,7 +1104,7 @@ export default function SmartBeginnerPro() {
               </div>
             </CardHeader>
 
-            <CardContent className="p-5 sm:p-6 pt-0 space-y-6">
+            <CardContent className="p-3.5 sm:p-6 pt-0 space-y-4 sm:space-y-6">
               {/* Expert Advice Note */}
               <div className="rounded-xl border border-primary/20 bg-primary/5 p-4 flex items-start gap-3">
                 <Target className="size-5 text-primary shrink-0 mt-0.5" />
@@ -1143,12 +1195,85 @@ export default function SmartBeginnerPro() {
       </div>
 
       {/* Floating Sticky Auto-Save Visual Notification */}
-      <div className="fixed bottom-5 left-5 z-50 hidden sm:flex items-center gap-2 rounded-2xl border border-border/80 bg-card/95 p-2.5 px-4 shadow-xl backdrop-blur-md transition-all">
+      <div className="fixed bottom-5 right-5 z-50 hidden sm:flex items-center gap-2 rounded-2xl border border-border/80 bg-card/95 p-2.5 px-4 shadow-xl backdrop-blur-md transition-all">
         <SaveStatusBadge status={saveStatus} lastSaved={lastSaved} />
         <span className="text-xs font-semibold text-foreground border-r border-border/60 pr-2.5 mr-1">
           مشروعك آمن ويتم تحديثه لحظياً
         </span>
       </div>
+
+      {/* Methodology Guide Modal Dialog */}
+      <Dialog open={isMethodologyModalOpen} onOpenChange={setIsMethodologyModalOpen}>
+        <DialogContent className="sm:max-w-[620px] max-h-[85vh] overflow-y-auto text-right" dir="rtl">
+          <DialogHeader className="text-right">
+            <div className="flex items-center gap-2 flex-wrap">
+              <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20 font-bold text-xs">
+                دليل المنهجية
+              </Badge>
+              <Badge variant="outline" className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20 text-xs font-bold gap-1">
+                <CheckCircle2 className="size-3" />
+                <span>8 أقسام احترافية</span>
+              </Badge>
+            </div>
+            <DialogTitle className="text-xl font-bold text-foreground mt-2">
+              شرح ودليل عمل النموذج الاحترافي
+            </DialogTitle>
+            <DialogDescription className="text-xs sm:text-sm leading-relaxed text-muted-foreground">
+              منهجية موجهة تعتمد على 8 مراحل استراتيجية لتحويل فكرتك إلى دراسة جدوى وملف استثماري متكامل.
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="space-y-4 py-3 text-right">
+            <div className="rounded-xl border border-primary/20 bg-primary/5 p-4 space-y-2">
+              <h4 className="text-xs font-bold text-primary flex items-center gap-1.5">
+                <Lightbulb className="size-4" />
+                <span>كيف تبني دراستك في النموذج الاحترافي؟</span>
+              </h4>
+              <p className="text-xs leading-relaxed text-foreground/90 font-medium">
+                تغطي هذه الورشة 8 أقسام متسلسلة: الهوية والوصف، العميل والسوق، نموذج الإيرادات والتسعير، التشغيل، التكاليف والميزانية، المخاطر، والخطة التنفيذية. يتم حفظ كل إدخال لحظياً وتوليد مؤشرات جاهزية أوتوماتيكية.
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              <h4 className="text-xs font-bold text-foreground flex items-center gap-1.5">
+                <Sparkles className="size-4 text-primary" />
+                <span>أقسام الورشة الاحترافية:</span>
+              </h4>
+              <div className="grid gap-2 sm:grid-cols-2">
+                {PRO_STEPS.map((step, idx) => (
+                  <div key={step.id} className="rounded-xl border border-border/80 bg-card p-3 space-y-1">
+                    <div className="flex items-center gap-2">
+                      <span className="flex size-5 items-center justify-center rounded-full bg-primary/10 text-[10px] font-bold text-primary shrink-0">
+                        {idx + 1}
+                      </span>
+                      <span className="text-xs font-bold text-foreground">{step.shortTitle}</span>
+                    </div>
+                    <p className="text-[11px] text-muted-foreground leading-relaxed font-medium">
+                      {step.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-3.5 space-y-1">
+              <h4 className="text-xs font-bold text-emerald-700 dark:text-emerald-400 flex items-center gap-1.5">
+                <CheckCircle2 className="size-4" />
+                <span>المخرجات الناتجة عند الاكتمال:</span>
+              </h4>
+              <ul className="text-xs text-muted-foreground leading-relaxed list-disc list-inside space-y-1 font-medium">
+                <li>لوحة قيادة استراتيجية كاملة (Dashboard) مع مؤشر جاهزية بنسبة مئوية.</li>
+                <li>تقرير تحليل الفجوات واكتشاف نقاط الضعف قبل الإنفاق المالي.</li>
+                <li>ملف إدخالات كامل قابل للتعديل والطباعة والعرض على الشركاء والمستثمرين.</li>
+              </ul>
+            </div>
+          </div>
+
+          <Button type="button" onClick={() => setIsMethodologyModalOpen(false)} className="w-full font-bold text-xs cursor-pointer">
+            فهمت المنهجية، ابدأ بتعبئة النموذج الآن
+          </Button>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

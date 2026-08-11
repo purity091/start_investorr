@@ -104,7 +104,7 @@ export const BaseCard = ({
   return (
     <Card 
       className={cn(
-        "group relative overflow-hidden transition-all duration-200 border shadow-xs h-fit flex flex-col p-5 sm:p-6",
+        "group relative overflow-hidden transition-all duration-200 border shadow-xs h-fit flex flex-col p-3.5 sm:p-6",
         variantClass,
         onClick ? "cursor-pointer" : "cursor-default",
         className
@@ -119,7 +119,7 @@ export const BaseCard = ({
           >
              <div className="flex-1">{header}</div>
              <div className={cn(
-               "p-1.5 text-muted-foreground transition-transform duration-200 mr-3 mt-0.5 rounded-md hover:bg-muted/80",
+               "p-1.5 text-muted-foreground transition-transform duration-200 ml-3 mt-0.5 rounded-md hover:bg-muted/80",
                isOpen && "rotate-180"
              )}>
                 <ChevronDown size={18} />

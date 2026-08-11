@@ -328,8 +328,8 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
   }, [activeTab]);
 
   const containerClass = ['home', 'editor', 'strategic-dashboard', 'contact-us', 'market-discovery', 'problem-engine', 'problem-detail', 'saved-market-items', 'hackathon', 'workspace', 'first-90-days', 'platform-academy', 'financial-calculator', 'company-deep-dive', 'site-map', 'discovery-center', 'subscriber-hub', 'customer-dashboard', 'customer-projects', 'customer-subscription', 'customer-usage', 'customer-activity', 'customer-account', 'customer-support', 'proven-projects', 'failed-projects', 'saas-ideas', 'micro-saas-ideas', 'project-ideas'].includes(activeTab) || activeTab.endsWith('-dashboard') 
-    ? 'w-full' 
-    : 'app-page-shell-wide py-3 sm:py-8 lg:py-10 pb-12 sm:pb-20 lg:pb-10';
+    ? 'w-full flex-1 flex flex-col' 
+    : 'app-page-shell-wide flex-1 flex flex-col py-3 sm:py-8 lg:py-10 pb-12 sm:pb-20 lg:pb-10';
 
   const handleBuildPlan = (projectName?: string) => {
     if (projectName) {
@@ -926,7 +926,7 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
     <div className={containerClass}>
       <FeatureErrorBoundary boundaryKey={activeTab}>
         <Suspense fallback={<RouteLoadingState />}>
-          <div>
+          <div className="flex-1 flex flex-col w-full">
             {renderContent()}
           </div>
         </Suspense>

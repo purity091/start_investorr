@@ -183,99 +183,93 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
   };
 
   return (
-    <div className="app-page-shell-wide space-y-4 sm:space-y-6 py-4 sm:py-6" dir="rtl">
-      <section className="rounded-2xl border border-border bg-card px-4 py-4 sm:py-5 shadow-xs sm:px-6">
-        <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_320px] xl:items-start">
-          <div className="space-y-4 text-right">
-            <div className="space-y-2">
-              <h1 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-                إدارة الاشتراك والفوترة (رائد - مؤسس - قائد)
-              </h1>
-              <p className="max-w-3xl text-sm leading-7 text-muted-foreground">
-                اختر الباقة المناسبة لاحتياجاتك. تبدأ من 5 مشاريع في باقة رائد، 10 مشاريع في باقة مؤسس، ومشاريع غير محدودة في باقة قائد.
-              </p>
-            </div>
+    <div className="app-page-shell-wide space-y-5 py-4 sm:py-6" dir="rtl">
+      {/* Page Header */}
+      <section className="rounded-2xl border border-border bg-card p-5 shadow-xs">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="space-y-1 text-right">
+            <h1 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+              إدارة الاشتراك والفوترة
+            </h1>
+            <p className="text-sm text-muted-foreground">
+              اختر الباقة المناسبة لاحتياجاتك وتابع حالة حسابك بسهولة.
+            </p>
           </div>
-
-          <Card className="border-border/70 shadow-none">
-            <CardHeader className="pb-3 text-right">
-              <CardTitle className="text-base">الوضع الحالي</CardTitle>
-              <CardDescription>ملخص سريع قبل الدخول في التفاصيل.</CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-3">
-              <Fact label="الخطة الحالية" value={currentPlan.name} />
-              <div className="flex items-center justify-between gap-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3">
-                <span className="text-xs text-amber-700 font-medium">نظام الدفع قيد التفعيل</span>
-                <Clock className="size-4 text-amber-600 shrink-0" />
-              </div>
-              <Button onClick={() => setActiveTab?.('customer-dashboard')} variant="outline" className="w-full">
-                <LayoutDashboard className="size-4" />
-                العودة إلى حسابي الشخصي
-              </Button>
-            </CardContent>
-          </Card>
+          {setActiveTab && (
+            <Button onClick={() => setActiveTab('customer-dashboard')} variant="outline" size="sm" className="gap-2 shrink-0">
+              <LayoutDashboard className="size-4" />
+              العودة إلى حسابي
+            </Button>
+          )}
         </div>
       </section>
 
+      {/* Subscription Quick Metrics */}
       <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-        <Metric label="الباقة" value={currentPlan.name} hint={currentPlan.projectLimitLabel} icon={currentPlanIcon} />
+        <Metric label="الباقة الحالية" value={currentPlan.name} hint={currentPlan.projectLimitLabel} icon={currentPlanIcon} />
         <Metric
           label="المشاريع"
           value={currentPlan.projectLimit ? `${activeProjectsCount} / ${currentPlan.projectLimit}` : `${activeProjectsCount}`}
-          hint={currentPlan.projectLimit ? 'ضمن حد الباقة' : 'غير محدود'}
+          hint={currentPlan.projectLimit ? `${activeProjectsCount} من أصل ${currentPlan.projectLimit}` : 'مشاريع غير محدودة'}
           icon={Wallet}
         />
-        <Metric label="الاستخدام" value={currentPlan.projectLimit ? `${usagePercentage}%` : 'مفتوح'} hint="استهلاك حد المشاريع" icon={ShieldCheck} />
-        <Metric label="الفوترة" value="قيد التفعيل" hint="نظام الدفع قادم" icon={CreditCard} />
+        <Metric label="الاستخدام" value={currentPlan.projectLimit ? `${usagePercentage}%` : 'مفتوح'} hint="نسبة استهلاك السعة" icon={ShieldCheck} />
+        <Metric label="حالة الفوترة" value="اشتراك نشط" hint="نظام الدفع قيد التفعيل" icon={CreditCard} />
       </section>
 
+      {/* Active Plan Details & Invoices */}
       <section className="grid gap-4 xl:grid-cols-[0.92fr_1.08fr]">
         <Card className="border-border/70 shadow-xs">
-          <CardHeader className="text-right">
-            <CardTitle>الخطة الحالية والاستخدام</CardTitle>
+          <CardHeader className="text-right pb-3">
+            <CardTitle>تفاصيل الباقة الحالية</CardTitle>
             <CardDescription>
-              ملخص واضح لحالة الباقة والرصيد.
+              معلومات السعة ونسبة الاستخدام بالحساب.
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-5 p-4 sm:p-6 pt-0 sm:pt-0">
-            <div className="rounded-xl border border-border/70 bg-muted/35 p-3 sm:p-4 text-right">
-              <Badge variant="secondary">اشتراك نشط</Badge>
-              <h2 className="mt-3 text-2xl font-semibold text-foreground">{currentPlan.name} ({currentPlan.projectLimitLabel})</h2>
-              <p className="mt-2 text-sm leading-7 text-muted-foreground">
-                مناسبة للمستخدم القيادي الذي يدير مشاريع غير محدودة ويحتاج إلى مخرجات مخصصة بهويته التجارية مع أولوية دعم VIP.
+          <CardContent className="space-y-4 p-4 sm:p-6 pt-0 sm:pt-0">
+            <div className="rounded-xl border border-border/70 bg-muted/35 p-4 text-right">
+              <div className="flex items-center justify-between">
+                <Badge variant="secondary">اشتراك نشط</Badge>
+                <span className="text-xs text-muted-foreground">{currentPlan.projectLimitLabel}</span>
+              </div>
+              <h2 className="mt-2 text-xl font-bold text-foreground">{currentPlan.name}</h2>
+              <p className="mt-1 text-xs text-muted-foreground leading-relaxed">
+                {plans.find((p) => p.id === currentPlan.id)?.description || 'الباقة الحالية المفعّلة بحسابك.'}
               </p>
             </div>
 
-            <div className="space-y-2 text-right">
-              <div className="flex items-center justify-between gap-3 text-sm">
-                <span className="font-semibold text-foreground">{usagePercentage}%</span>
-                <span className="text-muted-foreground">نسبة الاستهلاك خلال الدورة الحالية</span>
+            {currentPlan.projectLimit ? (
+              <div className="space-y-2 text-right">
+                <div className="flex items-center justify-between gap-3 text-xs">
+                  <span className="font-bold text-foreground">{usagePercentage}%</span>
+                  <span className="text-muted-foreground">معدل استهلاك سعة المشاريع</span>
+                </div>
+                <div className="h-2 overflow-hidden rounded-full bg-muted">
+                  <div className="h-full rounded-full bg-primary" style={{ width: `${usagePercentage}%` }} />
+                </div>
               </div>
-              <div className="h-2 overflow-hidden rounded-full bg-muted">
-                <div className="h-full rounded-full bg-primary" style={{ width: `${usagePercentage}%` }} />
-              </div>
-            </div>
+            ) : null}
 
-            <div className="flex items-center justify-between gap-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3">
-              <span className="text-xs text-amber-700 font-medium">نظام الفوترة والدفع قيد التفعيل — سيتاح قريباً</span>
+            <div className="flex items-center justify-between gap-3 rounded-xl border border-amber-200 bg-amber-50/70 px-3.5 py-2.5">
+              <span className="text-xs text-amber-700 font-medium">نظام الدفع الإلكتروني قيد التفعيل حالياً</span>
               <Clock className="size-4 text-amber-600 shrink-0" />
             </div>
           </CardContent>
         </Card>
 
         <Card className="border-border/70 shadow-xs">
-          <CardHeader className="text-right">
+          <CardHeader className="text-right pb-3">
             <CardTitle>سجل الفواتير</CardTitle>
-            <CardDescription>سيظهر سجل فواتيرك هنا بعد تفعيل نظام الدفع.</CardDescription>
+            <CardDescription>سيظهر سجل عمليات الفوترة هنا تلقائياً عند تفعيل نظام الدفع.</CardDescription>
           </CardHeader>
           <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
-            <div className="flex flex-col items-center justify-center py-10 gap-3 text-center rounded-xl border border-dashed border-border bg-muted/30">
-              <Clock className="size-8 text-muted-foreground" />
-              <p className="text-sm font-semibold text-foreground">نظام الدفع قيد التفعيل</p>
-              <p className="text-xs text-muted-foreground max-w-xs">
-                سيتم تفعيل نظام الفوترة والدفع قريباً. للتواصل بخصوص التسعير أو طلب التفعيل المبكر اضغط على الزر أدناه.
+            <div className="flex flex-col items-center justify-center py-8 gap-2.5 text-center rounded-xl border border-dashed border-border bg-muted/20">
+              <Clock className="size-7 text-muted-foreground" />
+              <p className="text-xs font-bold text-foreground">نظام الدفع قيد التفعيل</p>
+              <p className="text-[11px] text-muted-foreground max-w-xs">
+                لأي استفسارات حول الفواتير والترقية، يمكن التواصل مع فريق الدعم.
               </p>
-              <Button size="sm" variant="outline" onClick={() => setActiveTab?.('contact-us')}>
+              <Button size="sm" variant="outline" className="mt-1 text-xs" onClick={() => setActiveTab?.('contact-us')}>
                 تواصل معنا
               </Button>
             </div>
@@ -286,9 +280,9 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
       <section className="rounded-2xl border border-border bg-card p-4 shadow-xs sm:p-5">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div className="text-right">
-            <h2 className="text-sm font-semibold text-foreground">مقارنة الباقات (رائد - مؤسس - قائد)</h2>
+            <h2 className="text-sm font-semibold text-foreground">الباقات المتاحة</h2>
             <p className="mt-1 text-xs text-muted-foreground">
-              تتدرج المميزات بإضافة سعة المشاريع والخواص بدون تكرار.
+              اختر الباقة المناسبة للترقية حسب سعة المشاريع والمميزات المطلوبة.
             </p>
           </div>
           <div className="flex rounded-lg bg-muted p-1">
@@ -477,14 +471,5 @@ function Metric({
         <p className="mt-1 text-xs text-muted-foreground">{hint}</p>
       </CardContent>
     </Card>
-  );
-}
-
-function Fact({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="flex items-center justify-between gap-4 rounded-xl border border-border/70 bg-muted/35 px-4 py-3">
-      <span className="text-sm font-medium text-foreground">{value}</span>
-      <span className="text-xs text-muted-foreground">{label}</span>
-    </div>
   );
 }

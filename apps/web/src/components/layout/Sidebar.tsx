@@ -148,7 +148,7 @@ const QUICK_ACCESS: NavItemConfig[] = [
 const PROJECT_BUILD: NavItemConfig[] = [
   { tab: 'new-plan-family', label: 'النموذج السهل', icon: Heart, id: 'tour-new-plan', badge: 2, iconColor: 'text-rose-500', tooltipText: 'بناء خطة عمل سريعة ومبسطة للمشاريع الناشئة والعائلية' },
   {
-    tab: 'strategic-dashboard',
+    tab: 'new-plan-pro',
     label: 'النموذج الاحترافي',
     icon: Zap,
     badge: 2,

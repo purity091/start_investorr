@@ -19,9 +19,9 @@ const TABS = [
 
 export const ResultHeader: React.FC<ResultHeaderProps> = ({ activeTab, setActiveTab }) => {
   return (
-    <div className="w-full bg-card border-b border-border sticky top-0 z-30 px-4 sm:px-6 lg:px-10 py-3" dir="rtl">
+    <div className="w-full bg-card border-b border-border sticky top-0 z-30 px-3 sm:px-6 lg:px-10 py-2.5" dir="rtl">
       <Tabs value={activeTab.toString()} onValueChange={(v) => setActiveTab(parseInt(v, 10))} className="w-full">
-        <TabsList className="w-full flex flex-wrap h-auto p-1 bg-muted/80 rounded-xl gap-1 justify-start">
+        <TabsList className="w-full flex overflow-x-auto whitespace-nowrap scrollbar-none h-auto p-1 bg-muted/80 rounded-xl gap-1 justify-start">
           {TABS.map((tab, i) => {
             const Icon = tab.icon;
             return (
@@ -29,11 +29,11 @@ export const ResultHeader: React.FC<ResultHeaderProps> = ({ activeTab, setActive
                 key={tab.id}
                 value={i.toString()}
                 className={cn(
-                  "flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-xs font-bold transition-all flex-1 sm:flex-none justify-center",
+                  "flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-lg text-xs font-bold transition-all shrink-0 cursor-pointer",
                   "data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-xs text-muted-foreground hover:text-foreground"
                 )}
               >
-                <Icon size={15} className="shrink-0" />
+                <Icon size={14} className="shrink-0" />
                 <span>
                   <span className="hidden sm:inline">{tab.label}</span>
                   <span className="sm:hidden">{tab.shortLabel}</span>
