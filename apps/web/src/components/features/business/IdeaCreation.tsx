@@ -183,16 +183,16 @@ export const IdeaCreation: React.FC<{
   }
 
   return (
-    <main className="app-page-shell-wide space-y-4 py-3 text-right" dir="rtl">
+    <main className="app-page-shell-wide space-y-3 sm:space-y-4 py-2 sm:py-3 text-right px-2.5 sm:px-4" dir="rtl">
       {step === 'input' && (
         <>
-          <section className="rounded-xl bg-card p-4 sm:p-5 shadow-sm ring-1 ring-border/60">
-            <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
-              <div className="max-w-3xl space-y-2">
+          <section className="rounded-xl bg-card p-3 sm:p-5 shadow-sm ring-1 ring-border/60">
+            <div className="flex flex-col gap-2.5 sm:gap-3 lg:flex-row lg:items-end lg:justify-between">
+              <div className="max-w-3xl space-y-1.5 sm:space-y-2">
                 <Badge variant="secondary" className="w-fit">بناء دراسة جدوى مشروع</Badge>
-                <div className="space-y-2">
-                  <h1 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">صف فكرة مشروعك كبداية</h1>
-                  <p className="text-sm leading-7 text-muted-foreground">
+                <div className="space-y-1 sm:space-y-2">
+                  <h1 className="text-xl font-semibold tracking-tight text-foreground md:text-3xl">صف فكرة مشروعك كبداية</h1>
+                  <p className="text-xs sm:text-sm leading-relaxed text-muted-foreground">
                     هذه واجهة تمهيدية تساعد المستخدم على تحويل الوصف الأولي إلى مدخل منظم قبل الانتقال إلى بناء الخطة.
                   </p>
                 </div>
@@ -202,11 +202,11 @@ export const IdeaCreation: React.FC<{
           </section>
 
           <Card className="shadow-sm">
-            <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3">
-              <CardTitle>وصف الفكرة</CardTitle>
-              <CardDescription>اكتب المشكلة، العميل، والمنتج المقترح بجمل بسيطة.</CardDescription>
+            <CardHeader className="p-3 sm:p-6 pb-2 sm:pb-3">
+              <CardTitle className="text-base sm:text-lg">وصف الفكرة</CardTitle>
+              <CardDescription className="text-xs sm:text-sm">اكتب المشكلة، العميل، والمنتج المقترح بجمل بسيطة.</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-3 p-4 sm:p-6 pt-0 sm:pt-0">
+            <CardContent className="space-y-3 p-3 sm:p-6 pt-0 sm:pt-0">
               {activeMode === 'scratch' ? (
                 <div className="flex flex-col items-center justify-center rounded-lg bg-muted/35 p-10 text-center">
                   <DraftingCompass className="mb-3 size-10 text-muted-foreground" />

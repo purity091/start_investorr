@@ -173,12 +173,12 @@ export default function LeanStartupWizard() {
     <div className="min-h-screen bg-background" dir="rtl">
       {/* Progress Header */}
       <div className="bg-card border-b sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Badge variant="secondary" className="bg-primary/10 text-primary">Lean Startup</Badge>
-            <h1 className="font-bold text-foreground hidden sm:block">دورة البناء والتعلم (Build-Measure-Learn)</h1>
+        <div className="max-w-4xl mx-auto px-3 py-2.5 sm:px-4 sm:py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Badge variant="secondary" className="bg-primary/10 text-primary text-xs">Lean Startup</Badge>
+            <h1 className="font-bold text-foreground text-xs sm:text-base">دورة البناء والتعلم (Build-Measure-Learn)</h1>
           </div>
-          <div className="text-sm font-semibold text-muted-foreground flex items-center gap-2">
+          <div className="text-xs sm:text-sm font-semibold text-muted-foreground flex items-center gap-2">
             مرحلة {step} من 8
           </div>
         </div>
@@ -187,14 +187,14 @@ export default function LeanStartupWizard() {
         </div>
       </div>
 
-      <div className="max-w-3xl mx-auto px-4 py-12">
+      <div className="max-w-3xl mx-auto px-2.5 py-3.5 sm:px-4 sm:py-8">
         {/* Stage 1: Idea */}
         {step === 1 && (
-          <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4">
-            <div className="space-y-2 mb-8 text-center">
-              <Lightbulb className="size-10 text-primary mx-auto mb-2" />
-              <h2 className="text-3xl font-black">المرحلة الأولى: فكرة المشروع</h2>
-              <p className="text-muted-foreground">الهدف من هذه المرحلة فهم ما الذي تريد اختباره بالتحديد.</p>
+          <div className="space-y-4 sm:space-y-6 animate-in fade-in slide-in-from-bottom-4">
+            <div className="space-y-1 mb-4 sm:mb-8 text-center">
+              <Lightbulb className="size-8 sm:size-10 text-primary mx-auto mb-1 sm:mb-2" />
+              <h2 className="text-xl sm:text-3xl font-black">المرحلة الأولى: فكرة المشروع</h2>
+              <p className="text-xs sm:text-sm text-muted-foreground">الهدف من هذه المرحلة فهم ما الذي تريد اختباره بالتحديد.</p>
             </div>
             <Card className="shadow-none border-border/50">
               <CardContent className="pt-6 space-y-6">

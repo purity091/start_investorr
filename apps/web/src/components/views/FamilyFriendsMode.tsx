@@ -96,34 +96,34 @@ export const FamilyFriendsMode: React.FC<{
   const progress = Math.round((completedCount / STEPS.length) * 100);
 
   return (
-    <main dir="rtl" className="mx-auto w-full max-w-7xl space-y-6 px-4 py-6 text-right sm:px-6 lg:px-8 font-sans">
+    <main dir="rtl" className="mx-auto w-full max-w-7xl space-y-3.5 sm:space-y-6 px-2.5 py-2.5 sm:py-6 sm:px-6 lg:px-8 text-right font-sans">
       
       {/* Header Banner - Clean Solid shadcn Card */}
-      <Card className="p-6 bg-card border border-border shadow-xs rounded-xl">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
-          <div className="space-y-3 max-w-3xl">
-            <div className="flex flex-wrap items-center gap-2.5">
-              <Badge variant="outline" className="gap-1.5 font-semibold py-1 px-3 bg-background">
-                <Heart className="size-3.5 text-primary fill-primary/10" />
+      <Card className="p-3.5 sm:p-6 bg-card border border-border shadow-2xs rounded-2xl">
+        <div className="flex flex-col gap-3.5 lg:flex-row lg:items-center lg:justify-between">
+          <div className="space-y-2 max-w-3xl">
+            <div className="flex flex-wrap items-center gap-2">
+              <Badge variant="outline" className="gap-1 font-semibold text-xs py-0.5 px-2.5 bg-background">
+                <Heart className="size-3 text-primary fill-primary/10" />
                 النموذج السهل
               </Badge>
-              <Badge variant="secondary" className="font-medium py-1 px-3">
+              <Badge variant="secondary" className="font-semibold text-xs py-0.5 px-2.5">
                 الخطوة {currentStep + 1} من {STEPS.length}
               </Badge>
             </div>
 
             <div className="space-y-1">
-              <h1 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+              <h1 className="text-lg font-extrabold tracking-tight text-foreground sm:text-3xl">
                 ابدأ دراسة الجدوى بلغة بسيطة
               </h1>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                 مسار مبسط مخصص للبدء الفوري بدون تعقيدات استثمارية مبكرة، ليساعدك في بلورة الرؤية واختبار القبول الأول للفكرة.
               </p>
             </div>
           </div>
 
           {/* Clean Progress Widget */}
-          <div className="min-w-[240px] bg-muted/30 rounded-lg p-4 border border-border space-y-2 shrink-0">
+          <div className="min-w-[200px] sm:min-w-[240px] bg-muted/30 rounded-xl p-3 sm:p-4 border border-border space-y-2 shrink-0">
             <div className="flex items-center justify-between text-xs font-semibold text-foreground">
               <span>نسبة الإنجاز</span>
               <span className="font-mono text-primary font-bold">{progress}% ({completedCount} من {STEPS.length})</span>
@@ -139,8 +139,36 @@ export const FamilyFriendsMode: React.FC<{
         </div>
       </Card>
 
+      {/* Mobile Horizontal Step Bar */}
+      <div className="lg:hidden w-full flex overflow-x-auto whitespace-nowrap scrollbar-none gap-1.5 py-0.5">
+        {STEPS.map((step, index) => {
+          const isActive = index === currentStep;
+          const isCompleted = (data[step.id] || '').trim().length > 0;
+          return (
+            <button
+              key={step.id}
+              type="button"
+              onClick={() => onStepChange(index)}
+              className={cn(
+                "flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11px] font-bold shrink-0 transition-all border cursor-pointer",
+                isActive
+                  ? "bg-primary text-primary-foreground border-primary shadow-2xs"
+                  : isCompleted
+                    ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20"
+                    : "bg-card text-muted-foreground border-border"
+              )}
+            >
+              <span className="flex size-4 items-center justify-center rounded-full text-[9px] font-bold bg-background/20">
+                {isCompleted ? <CheckCircle2 className="size-3" /> : index + 1}
+              </span>
+              <span>{step.title}</span>
+            </button>
+          );
+        })}
+      </div>
+
       {/* Main Grid Layout */}
-      <div className="grid gap-6 lg:grid-cols-[300px_1fr]">
+      <div className="grid gap-3.5 sm:gap-6 lg:grid-cols-[300px_1fr]">
         
         {/* Step Navigation Sidebar (Right) */}
         <Card className="rounded-xl border border-border shadow-xs bg-card overflow-hidden">

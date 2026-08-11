@@ -917,13 +917,13 @@ export default function SmartBeginnerPro() {
 
   return (
     <div className="w-full bg-background" dir="rtl">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-3.5 sm:gap-6 px-2.5 py-2.5 sm:py-6 sm:px-6 lg:px-8">
         {/* Corporate Wizard Header */}
-        <div className="rounded-2xl border border-border/80 bg-card p-3.5 sm:p-6 shadow-2xs space-y-3 sm:space-y-4">
+        <div className="rounded-2xl border border-border/80 bg-card p-3 sm:p-6 shadow-2xs space-y-2 sm:space-y-4">
           <div className="flex flex-col gap-3 sm:gap-4 lg:flex-row lg:items-center lg:justify-between">
-            <div className="space-y-1.5 text-right">
+            <div className="space-y-1 sm:space-y-1.5 text-right">
 
-              <h1 className="text-lg sm:text-2xl lg:text-3xl font-extrabold text-foreground tracking-tight leading-snug">
+              <h1 className="text-base sm:text-2xl lg:text-3xl font-extrabold text-foreground tracking-tight leading-snug">
                 ورشة بناء النموذج الأولي ودراسة الجدوى الاحترافية
               </h1>
               <p className="max-w-3xl text-xs sm:text-sm text-muted-foreground leading-relaxed">
@@ -940,7 +940,7 @@ export default function SmartBeginnerPro() {
         </div>
 
         {/* Mobile Horizontal Step Selector */}
-        <div className="lg:hidden w-full flex overflow-x-auto whitespace-nowrap scrollbar-none gap-1.5 pb-1">
+        <div className="lg:hidden w-full flex overflow-x-auto whitespace-nowrap scrollbar-none gap-1.5 py-0.5">
           {PRO_STEPS.map((step, index) => {
             const active = index === stepIndex;
             const complete = getStepCompletion(step, answers) >= 0.5;
@@ -951,7 +951,7 @@ export default function SmartBeginnerPro() {
                 type="button"
                 onClick={() => setStepIndex(index)}
                 className={cn(
-                  "flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold shrink-0 transition-all border cursor-pointer",
+                  "flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11px] sm:text-xs font-bold shrink-0 transition-all border cursor-pointer",
                   active
                     ? "bg-primary text-primary-foreground border-primary shadow-xs"
                     : complete
@@ -959,7 +959,7 @@ export default function SmartBeginnerPro() {
                       : "bg-card text-muted-foreground border-border"
                 )}
               >
-                <span className="flex size-5 items-center justify-center rounded-full text-[10px] font-bold bg-background/20">
+                <span className="flex size-4 sm:size-5 items-center justify-center rounded-full text-[9px] sm:text-[10px] font-bold bg-background/20">
                   {complete ? <CheckCircle2 className="size-3" /> : index + 1}
                 </span>
                 <span>{step.shortTitle}</span>
@@ -969,11 +969,11 @@ export default function SmartBeginnerPro() {
         </div>
 
         {/* Wizard Main Grid: Stepper Navigation (Sidebar) + Active Step Form */}
-        <div className="grid gap-6 lg:grid-cols-[300px_1fr]">
+        <div className="grid gap-3.5 sm:gap-6 lg:grid-cols-[300px_1fr]">
           {/* Stepper Navigation Sidebar */}
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             <Card className="border border-border/80 bg-card shadow-2xs overflow-hidden">
-              <CardHeader className="bg-muted/40 p-4 border-b border-border/60">
+              <CardHeader className="bg-muted/40 p-3 sm:p-4 border-b border-border/60">
                 <div className="flex items-center justify-between">
                   <CardTitle className="flex items-center gap-2 text-sm font-bold text-foreground">
                     <ClipboardList className="size-4 text-primary" />

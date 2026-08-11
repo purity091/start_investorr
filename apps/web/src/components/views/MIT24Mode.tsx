@@ -362,22 +362,22 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
   const currentPhase = PHASES.find((p) => p.id === currentPhaseId) || PHASES[0];
 
   return (
-    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-3.5 sm:gap-6 px-2.5 py-2.5 sm:py-6 sm:px-6 lg:px-8">
       {/* Hero Header Card */}
-      <div className="rounded-2xl border border-border/80 bg-card p-5 sm:p-6 shadow-2xs space-y-4">
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-          <div className="space-y-2 text-right">
-            <div className="flex items-center gap-2 flex-wrap">
-              <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20 font-bold px-3 py-1 text-xs">
+      <div className="rounded-2xl border border-border/80 bg-card p-3.5 sm:p-6 shadow-2xs space-y-3 sm:space-y-4">
+        <div className="flex flex-col gap-3 sm:gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div className="space-y-1.5 text-right">
+            <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+              <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20 font-bold px-2.5 py-0.5 text-[11px] sm:text-xs">
                 منهجية MIT المنضبطة
               </Badge>
-              <Badge variant="outline" className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20 font-bold px-2.5 py-0.5 text-xs gap-1">
+              <Badge variant="outline" className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20 font-bold px-2 py-0.5 text-[11px] sm:text-xs gap-1">
                 <CheckCircle2 className="size-3.5" />
                 <span>24 خطوة ريادية مبرهنة</span>
               </Badge>
               <SaveStatusBadge status={saveStatus} lastSaved={lastSaved} />
             </div>
-            <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-foreground tracking-tight">
+            <h1 className="text-lg sm:text-2xl lg:text-3xl font-extrabold text-foreground tracking-tight">
               منهجية MIT الـ 24 خطوة لبناء المشاريع الريادية
             </h1>
             <p className="max-w-3xl text-xs sm:text-sm text-muted-foreground leading-relaxed">
@@ -385,24 +385,24 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 shrink-0 lg:w-[480px]">
-            <div className="rounded-xl border border-border/80 bg-card p-3.5 shadow-2xs">
-              <div className="text-[11px] font-medium text-muted-foreground">إجمالي الخطوات</div>
-              <div className="text-lg font-bold tracking-tight text-foreground mt-0.5">{totalSteps} خطوة</div>
+          <div className="grid grid-cols-3 gap-1.5 sm:gap-3 shrink-0 lg:w-[480px]">
+            <div className="rounded-xl border border-border/80 bg-card p-2.5 sm:p-3.5 shadow-2xs">
+              <div className="text-[10px] sm:text-[11px] font-medium text-muted-foreground">إجمالي الخطوات</div>
+              <div className="text-sm sm:text-lg font-bold tracking-tight text-foreground mt-0.5">{totalSteps} خطوة</div>
             </div>
-            <div className="rounded-xl border border-border/80 bg-card p-3.5 shadow-2xs">
-              <div className="text-[11px] font-medium text-muted-foreground font-medium">الخطوات المكتملة</div>
-              <div className="text-lg font-bold tracking-tight text-emerald-600 dark:text-emerald-400 mt-0.5">{filledCount} / {totalSteps}</div>
+            <div className="rounded-xl border border-border/80 bg-card p-2.5 sm:p-3.5 shadow-2xs">
+              <div className="text-[10px] sm:text-[11px] font-medium text-muted-foreground">الخطوات المكتملة</div>
+              <div className="text-sm sm:text-lg font-bold tracking-tight text-emerald-600 dark:text-emerald-400 mt-0.5">{filledCount} / {totalSteps}</div>
             </div>
-            <div className="rounded-xl border border-border/80 bg-card p-3.5 shadow-2xs">
-              <div className="text-[11px] font-medium text-muted-foreground font-medium">نسبة الإنجاز</div>
-              <div className="text-lg font-bold tracking-tight text-primary mt-0.5">{completion}%</div>
+            <div className="rounded-xl border border-border/80 bg-card p-2.5 sm:p-3.5 shadow-2xs">
+              <div className="text-[10px] sm:text-[11px] font-medium text-muted-foreground">نسبة الإنجاز</div>
+              <div className="text-sm sm:text-lg font-bold tracking-tight text-primary mt-0.5">{completion}%</div>
             </div>
           </div>
         </div>
 
         {/* Global Progress Bar */}
-        <div className="rounded-xl border border-border/70 bg-muted/30 p-3 sm:p-4 space-y-2">
+        <div className="rounded-xl border border-border/70 bg-muted/30 p-2.5 sm:p-4 space-y-2">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-3">
               <span className="text-xs font-bold text-foreground">نسبة التقدم الإجمالية:</span>
@@ -428,7 +428,7 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
       </div>
 
       {/* Main Tabs Container */}
-      <Tabs value={activePhaseTab} onValueChange={setActivePhaseTab} dir="rtl" className="w-full space-y-6">
+      <Tabs value={activePhaseTab} onValueChange={setActivePhaseTab} dir="rtl" className="w-full space-y-3.5 sm:space-y-6">
         {/* Phase Tabs Switcher */}
         <TabsList className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 h-auto w-full gap-2 bg-transparent p-0">
           {PHASES.map((phase) => {

@@ -34,3 +34,7 @@ _archive_unused_not_for_git/
 data-raw/
 apps/web/public/data/new-proven/
 
+# Ignore all SQL files
+*.sql
+**/*.sql
+

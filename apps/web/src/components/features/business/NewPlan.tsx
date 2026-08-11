@@ -974,15 +974,16 @@ function ModeProjectsSection({
             </Button>
           </div>
         ) : null}
-        <div className="hidden overflow-hidden rounded-md lg:block">
-          <Table dir="rtl">
-            <TableHeader>
+        {/* Unified Responsive Table for All Screen Sizes (Mobile, Tablet, Desktop) */}
+        <div className="w-full overflow-x-auto rounded-xl border border-border/60 shadow-2xs">
+          <Table dir="rtl" className="min-w-[640px]">
+            <TableHeader className="bg-muted/40">
               <TableRow>
-                <TableHead className="min-w-[260px] text-right font-bold text-foreground">المشروع</TableHead>
+                <TableHead className="min-w-[220px] text-right font-bold text-foreground">المشروع</TableHead>
                 <TableHead className="w-[140px] text-right font-bold text-foreground">إجراءات</TableHead>
-                <TableHead className="w-[100px] text-right font-bold text-foreground">التقدم</TableHead>
-                <TableHead className="min-w-[130px] text-right font-bold text-foreground">الحالة</TableHead>
-                <TableHead className="min-w-[130px] text-right font-bold text-foreground">آخر تعديل</TableHead>
+                <TableHead className="w-[120px] text-right font-bold text-foreground">التقدم</TableHead>
+                <TableHead className="min-w-[120px] text-right font-bold text-foreground">الحالة</TableHead>
+                <TableHead className="min-w-[110px] text-right font-bold text-foreground">آخر تعديل</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -997,54 +998,6 @@ function ModeProjectsSection({
               ))}
             </TableBody>
           </Table>
-        </div>
-
-        <div className="grid gap-3 lg:hidden">
-          {projectsList.map((project) => (
-            <Card key={project.id} className="p-4 shadow-none">
-              <div className="flex items-start justify-between gap-3">
-                <ProjectStatusBadge status={project.status} />
-                <div className="flex items-center gap-1">
-                  {project.id.startsWith('example') ? (
-                    <Button variant="ghost" size="icon-sm" onClick={onViewExample} title="عرض المثال" className="text-muted-foreground hover:text-primary">
-                      <Sparkles className="size-4" />
-                    </Button>
-                  ) : (
-                    <Button asChild variant="ghost" size="icon-sm" className="text-muted-foreground hover:text-primary">
-                      <a href={getProjectEditPath(project.id)} title="تعديل">
-                        <Pencil className="size-4" />
-                      </a>
-                    </Button>
-                  )}
-                  <Button
-                    variant="ghost"
-                    size="icon-sm"
-                    onClick={() => handleShare(project)}
-                    title="مشاركة"
-                    className="text-muted-foreground hover:text-primary"
-                  >
-                    <Share2 className="size-4" />
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    size="icon-sm"
-                    onClick={() => handleDelete(project)}
-                    title="حذف"
-                    className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
-                  >
-                    <Trash2 className="size-4" />
-                  </Button>
-                </div>
-              </div>
-              <div className="mt-4 text-right">
-                <h3 className="truncate text-sm font-medium text-foreground">{project.name}</h3>
-                <p className="mt-1 text-xs text-muted-foreground">{project.sector}</p>
-              </div>
-              <div className="mt-3">
-                <ProgressSummary progress={project.progress} />
-              </div>
-            </Card>
-          ))}
         </div>
           </>
         )}
