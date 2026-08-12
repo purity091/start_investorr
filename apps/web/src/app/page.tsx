@@ -23,15 +23,15 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
-import { 
-  ArrowLeft, 
-  BarChart3, 
-  BrainCircuit, 
-  CheckCircle2, 
-  Compass, 
-  Layers, 
-  Rocket, 
-  Target, 
+import {
+  ArrowLeft,
+  BarChart3,
+  BrainCircuit,
+  CheckCircle2,
+  Compass,
+  Layers,
+  Rocket,
+  Target,
   TrendingUp,
   ShieldCheck,
   Zap,
@@ -53,7 +53,9 @@ import {
   Globe,
   Users,
   Menu,
-  FileText
+  FileText,
+  Search,
+  ChevronLeft
 } from 'lucide-react';
 import { useAuthModal } from '@/features/auth/AuthModalContext';
 import { useAuth } from '@/features/auth/AuthContext';
@@ -139,7 +141,7 @@ export default function LandingPage() {
   const { user } = useAuth();
   const [projectsList, setProjectsList] = useState<any[]>(INITIAL_PREVIEW_PROJECTS);
   const [activeTableTab, setActiveTableTab] = useState<'all' | 'saas' | 'micro-saas'>('all');
-  
+
   // Calculator State
   const [subscribers, setSubscribers] = useState<number>(150);
   const [pricePerMonth, setPricePerMonth] = useState<number>(39);
@@ -200,16 +202,16 @@ export default function LandingPage() {
 
   return (
     <div dir="rtl" className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/20">
-      
+
       {/* Landing Navbar Component */}
       <LandingNavbar />
 
       <main className="flex flex-col gap-20 pb-20">
-        
+
         {/* Hero Section */}
         <section className="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-24 border-b border-border/40">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-          
+
           <div className="container relative mx-auto px-4 text-center max-w-5xl">
             <h1 className="mx-auto text-3xl font-black tracking-tight text-foreground sm:text-5xl md:text-6xl leading-[1.2]">
               حوّل فكرتك الطموحة إلى <span className="text-primary">مشروع حقيقي</span> قابل للنمو والاستثمار
@@ -231,41 +233,575 @@ export default function LandingPage() {
                 </Button>
               </a>
             </div>
-            
-            {/* Quick Metrics Trust Bar */}
-            <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-2xl bg-card border border-border/80 shadow-2xs max-w-4xl mx-auto">
-              <div className="flex flex-col items-center justify-center p-3 border-l border-border/60 last:border-l-0">
-                <span className="text-2xl font-black text-primary">+500</span>
-                <span className="text-xs font-medium text-muted-foreground mt-0.5">فكرة وحالة دراسية</span>
+
+            {/* Quick Metrics Trust Bar - Compact Horizontal Strip */}
+            <div className="mt-8 py-3 px-6 rounded-2xl bg-muted/50 text-xs shadow-2xs border-0 max-w-4xl mx-auto flex flex-wrap items-center justify-around gap-4 sm:gap-6">
+              <div className="flex items-center gap-2">
+                <span className="font-black text-primary text-sm sm:text-base font-mono">+500</span>
+                <span className="text-muted-foreground font-semibold text-xs">فكرة وحالة دراسية</span>
               </div>
-              <div className="flex flex-col items-center justify-center p-3 border-l border-border/60 last:border-l-0">
-                <span className="text-2xl font-black text-foreground">+100</span>
-                <span className="text-xs font-medium text-muted-foreground mt-0.5">قطاع وسوق عربي وعالمي</span>
+              <div className="hidden sm:block h-3.5 w-px bg-border/60" />
+              <div className="flex items-center gap-2">
+                <span className="font-black text-foreground text-sm sm:text-base font-mono">+100</span>
+                <span className="text-muted-foreground font-semibold text-xs">قطاع وسوق استثماري</span>
               </div>
-              <div className="flex flex-col items-center justify-center p-3 border-l border-border/60 last:border-l-0">
-                <span className="text-2xl font-black text-foreground">24</span>
-                <span className="text-xs font-medium text-muted-foreground mt-0.5">خطوة منهجية وفق MIT</span>
+              <div className="hidden sm:block h-3.5 w-px bg-border/60" />
+              <div className="flex items-center gap-2">
+                <span className="font-black text-foreground text-sm sm:text-base font-mono">24</span>
+                <span className="text-muted-foreground font-semibold text-xs">خطوة منهجية وفق MIT</span>
               </div>
-              <div className="flex flex-col items-center justify-center p-3">
-                <span className="text-2xl font-black text-emerald-600">100%</span>
-                <span className="text-xs font-medium text-muted-foreground mt-0.5">أمان وحفظ سحابي</span>
+              <div className="hidden sm:block h-3.5 w-px bg-border/60" />
+              <div className="flex items-center gap-2">
+                <span className="font-black text-emerald-600 text-sm sm:text-base font-mono">100%</span>
+                <span className="text-muted-foreground font-semibold text-xs">أمان وحفظ سحابي</span>
               </div>
             </div>
           </div>
         </section>
 
-        {/* SECTION 1: Table Preview with Segmented Category Filter & Locked Overlay */}
+        {/* SECTION 2: The Unified Strategic Roadmap (اكتشف ← حلل ← ابنِ ← نفّذ) */}
+        <section id="strategic-roadmap" className="container mx-auto px-4 max-w-7xl">
+
+          {/* Section Header */}
+          <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12 space-y-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary/80 text-secondary-foreground text-xs font-semibold shadow-2xs border-0">
+              <Sparkles className="size-3.5 text-primary" />
+              <span className="text-foreground font-bold">خريطة المنظومة المتكاملة</span>
+            </div>
+            <h2 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight text-center mx-auto leading-snug">
+              رحلتك الريادية في 4 خطوات متسلسلة من <span className="text-primary">الفكرة</span> إلى <span className="text-primary">التنفيذ</span>
+            </h2>
+            <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed text-center mx-auto max-w-2xl">
+              بدلاً من التشتت بين أدوات متفرقة؛ تجمع "خطة" كافة أدوات الاستكشاف، التحليل، الهيكلة، والتنفيذ في خريطة عمل واحدة مترابطة.
+            </p>
+          </div>
+
+          {/* 4-Step Process Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+
+            {/* Step 1: Discover */}
+            <div className="p-6 rounded-3xl bg-card border border-border/80 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 rounded-bl-full pointer-events-none"></div>
+
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-black px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 border border-blue-500/20">
+                    الخطوة 01
+                  </span>
+                  <div className="p-3 rounded-2xl bg-blue-500/10 text-blue-600 shadow-2xs">
+                    <Compass className="size-6" />
+                  </div>
+                </div>
+
+                <div className="space-y-1 text-right">
+                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1.5">
+                    اكتشف المشروع
+                  </h3>
+                  <p className="text-xs text-muted-foreground font-medium leading-relaxed">
+                    تصفح أكثر من +500 فكرة SaaS واطلع على تحليل الفرص الميدانية ورادار القطاعات الأكثر نمواً لتحديد وجهتك بثقة.
+                  </p>
+                </div>
+
+                <div className="pt-2 border-t border-border/60 space-y-1.5 text-right">
+                  <span className="text-[11px] font-bold text-foreground block mb-1">الأدوات المتاحة في هذه الخطوة:</span>
+                  <ul className="space-y-1 text-[11px] text-muted-foreground font-medium">
+                    <li className="flex items-center gap-1.5">
+                      <CheckCircle2 className="size-3 text-blue-600 shrink-0" />
+                      <span>قاعدة أفكار SaaS & Micro-SaaS</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <CheckCircle2 className="size-3 text-blue-600 shrink-0" />
+                      <span>رادار استكشاف القطاعات والأسواق</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <CheckCircle2 className="size-3 text-blue-600 shrink-0" />
+                      <span>تفكيك دراسات الشركات الناجحة</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 2: Analyze */}
+            <div className="p-6 rounded-3xl bg-card border border-border/80 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-bl-full pointer-events-none"></div>
+
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-black px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 border border-emerald-500/20">
+                    الخطوة 02
+                  </span>
+                  <div className="p-3 rounded-2xl bg-emerald-500/10 text-emerald-600 shadow-2xs">
+                    <BarChart3 className="size-6" />
+                  </div>
+                </div>
+
+                <div className="space-y-1 text-right">
+                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1.5">
+                    حلل المشروع
+                  </h3>
+                  <p className="text-xs text-muted-foreground font-medium leading-relaxed">
+                    قيم الجدوى الاقتصادية واحسب الإيرادات الدورية المتوقعة (MRR / ARR) وتفادَ أسباب الفشل الشائعة للمشاريع المتعثرة.
+                  </p>
+                </div>
+
+                <div className="pt-2 border-t border-border/60 space-y-1.5 text-right">
+                  <span className="text-[11px] font-bold text-foreground block mb-1">الأدوات المتاحة في هذه الخطوة:</span>
+                  <ul className="space-y-1 text-[11px] text-muted-foreground font-medium">
+                    <li className="flex items-center gap-1.5">
+                      <CheckCircle2 className="size-3 text-emerald-600 shrink-0" />
+                      <span>حاسبة الإيرادات الدورية و LTV</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <CheckCircle2 className="size-3 text-emerald-600 shrink-0" />
+                      <span>تقييم الجدوى والمخاطر المالية</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <CheckCircle2 className="size-3 text-emerald-600 shrink-0" />
+                      <span>تحليل دروس الشركات المتعثرة</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 3: Build */}
+            <div className="p-6 rounded-3xl bg-card border border-border/80 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-purple-500/5 rounded-bl-full pointer-events-none"></div>
+
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-black px-3 py-1 rounded-full bg-purple-500/10 text-purple-600 border border-purple-500/20">
+                    الخطوة 03
+                  </span>
+                  <div className="p-3 rounded-2xl bg-purple-500/10 text-purple-600 shadow-2xs">
+                    <Layers className="size-6" />
+                  </div>
+                </div>
+
+                <div className="space-y-1 text-right">
+                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1.5">
+                    ابنِ نموذج العمل
+                  </h3>
+                  <p className="text-xs text-muted-foreground font-medium leading-relaxed">
+                    صمّم الأركان الـ 9 لنموذج عملك التجاري (BMC) واستخرج عرض القيمة الفريدة وحلل شريحة العملاء بمساعدة الذكاء الاصطناعي.
+                  </p>
+                </div>
+
+                <div className="pt-2 border-t border-border/60 space-y-1.5 text-right">
+                  <span className="text-[11px] font-bold text-foreground block mb-1">الأدوات المتاحة في هذه الخطوة:</span>
+                  <ul className="space-y-1 text-[11px] text-muted-foreground font-medium">
+                    <li className="flex items-center gap-1.5">
+                      <CheckCircle2 className="size-3 text-purple-600 shrink-0" />
+                      <span>استوديو نماذج العمل التجاري (BMC)</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <CheckCircle2 className="size-3 text-purple-600 shrink-0" />
+                      <span>تقييم وتوجيه الذكاء الاصطناعي</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <CheckCircle2 className="size-3 text-purple-600 shrink-0" />
+                      <span>استوديو صياغة الهوية البصرية</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 4: Execute */}
+            <div className="p-6 rounded-3xl bg-card border border-border/80 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-amber-500/5 rounded-bl-full pointer-events-none"></div>
+
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-black px-3 py-1 rounded-full bg-amber-500/10 text-amber-600 border border-amber-500/20">
+                    الخطوة 04
+                  </span>
+                  <div className="p-3 rounded-2xl bg-amber-500/10 text-amber-600 shadow-2xs">
+                    <Rocket className="size-6" />
+                  </div>
+                </div>
+
+                <div className="space-y-1 text-right">
+                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1.5">
+                    نفّذ وانطلق
+                  </h3>
+                  <p className="text-xs text-muted-foreground font-medium leading-relaxed">
+                    حوّل نموذج عملك إلى خطة عمل تنفيذية لأول 90 يوماً، وشارك المستندات والروابط التفاعلية مع مستثمرين وشركاء بأمان.
+                  </p>
+                </div>
+
+                <div className="pt-2 border-t border-border/60 space-y-1.5 text-right">
+                  <span className="text-[11px] font-bold text-foreground block mb-1">الأدوات المتاحة في هذه الخطوة:</span>
+                  <ul className="space-y-1 text-[11px] text-muted-foreground font-medium">
+                    <li className="flex items-center gap-1.5">
+                      <CheckCircle2 className="size-3 text-amber-600 shrink-0" />
+                      <span>خريطة التنفيذ الميداني لأول 90 يوماً</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <CheckCircle2 className="size-3 text-amber-600 shrink-0" />
+                      <span>مشاركة الخطط بروابط محمية</span>
+                    </li>
+                    <li className="flex items-center gap-1.5">
+                      <CheckCircle2 className="size-3 text-amber-600 shrink-0" />
+                      <span>دليل الإرشادات في أكاديمية خطة</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Bottom Interactive Callout Banner */}
+          <div className="mt-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-primary/10 via-primary/5 to-card border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xs">
+            <div className="space-y-1.5 text-center sm:text-right">
+              <div className="flex items-center justify-center sm:justify-start gap-2">
+                <Badge className="bg-primary text-primary-foreground text-[10px] font-bold px-2.5 py-0.5 rounded-full">
+                  الرحلة تبدأ الآن
+                </Badge>
+                <span className="text-xs font-bold text-muted-foreground">أين يقع مشروعك اليوم؟</span>
+              </div>
+              <h4 className="text-lg sm:text-xl font-black text-foreground">
+                جاهز لبدء رحلة مشروعك من الاستكشاف وحتى التنفيذ؟
+              </h4>
+              <p className="text-xs text-muted-foreground font-medium max-w-2xl leading-relaxed">
+                لا تضيع وقتك في البحث بين عشرات المنصات، خريطة "خطة" تجمع لك كل ما تحتاجه لبناء مشروع ناجح في مكان واحد.
+              </p>
+            </div>
+
+            <Button
+              onClick={() => openAuthModal('register')}
+              size="lg"
+              className="w-full sm:w-auto text-xs sm:text-sm font-extrabold h-12 px-8 gap-2 shadow-2xs cursor-pointer shrink-0 bg-primary hover:bg-primary/90"
+            >
+              ابدأ رحلة مشروعك مجاناً
+              <ArrowLeft className="size-4" />
+            </Button>
+          </div>
+
+        </section>
+
+        {/* SECTION 2.5: The 5 Feasibility Study Frameworks (5 نماذج لبناء دراسة الجدوى) */}
+        <section id="feasibility-models" className="container mx-auto px-4 max-w-7xl">
+
+          {/* Section Header */}
+          <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12 space-y-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary/80 text-secondary-foreground text-xs font-semibold shadow-2xs border-0">
+              <span className="inline-flex items-center justify-center size-5 rounded-full bg-purple-600 text-white text-[10px] font-black font-mono shrink-0">
+                03
+              </span>
+              <span className="text-foreground font-bold">الخطوة الثالثة • بناء الجدوى عبر 5 نماذج</span>
+            </div>
+            <h2 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight text-center mx-auto leading-snug">
+              ابنِ <span className="text-primary">دراسة جدوى شاملة</span> عبر 5 نماذج منهجية مختلفة
+            </h2>
+            <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed text-center mx-auto max-w-2xl">
+              تمنحك "خطة" حرية اختيار المنهجية الأنسب لطبيعة مشروعك ورغبة المستثمرين، مع إمكانية التبديل والدمج التلقائي بين كافة النماذج في ملفك.
+            </p>
+          </div>
+
+          {/* 5 Models Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            {/* Model 1: Business Model Canvas (BMC) */}
+            <Card className="border border-border/80 shadow-2xs hover:shadow-md transition-all bg-card relative overflow-hidden text-right group flex flex-col justify-between">
+              <div className="h-1.5 bg-blue-600 w-full"></div>
+
+              <CardHeader className="p-6 pb-4 space-y-3">
+                <div className="flex items-center justify-between">
+                  <Badge variant="secondary" className="bg-blue-50 text-blue-700 border-blue-200/60 text-[10px] font-bold">
+                    النموذج الأول • الأكثر انتشاراً
+                  </Badge>
+                  <div className="p-2.5 rounded-xl bg-blue-500/10 text-blue-600 shadow-2xs">
+                    <Layers className="size-5" />
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <CardTitle className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
+                    1. مخطط نموذج العمل (BMC)
+                  </CardTitle>
+                  <CardDescription className="text-xs text-muted-foreground font-medium leading-relaxed">
+                    صياغة الأركان الـ 9 الهيكلية لمشروعك واستخراج عرض القيمة الفريدة للعملاء ومصادر الإيرادات.
+                  </CardDescription>
+                </div>
+              </CardHeader>
+
+              <CardContent className="px-6 pb-4 space-y-3 text-xs">
+                <div className="p-3 rounded-xl bg-muted/40 border border-border/60 space-y-2">
+                  <span className="text-[11px] font-bold text-foreground block">مكونات هذا النموذج:</span>
+                  <div className="grid grid-cols-2 gap-1.5 text-[11px] text-muted-foreground font-medium">
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-blue-600 shrink-0" />
+                      <span>شرائح العملاء</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-blue-600 shrink-0" />
+                      <span>عرض القيمة</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-blue-600 shrink-0" />
+                      <span>قنوات الوصول</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-blue-600 shrink-0" />
+                      <span>هيكل التكاليف</span>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+
+              <CardFooter className="p-6 pt-0">
+                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center cursor-pointer">
+                  ابدأ نموذج BMC
+                  <ArrowLeft className="size-3.5" />
+                </Button>
+              </CardFooter>
+            </Card>
+
+            {/* Model 2: MIT 24-Step Framework */}
+            <Card className="border border-border/80 shadow-2xs hover:shadow-md transition-all bg-card relative overflow-hidden text-right group flex flex-col justify-between">
+              <div className="h-1.5 bg-purple-600 w-full"></div>
+
+              <CardHeader className="p-6 pb-4 space-y-3">
+                <div className="flex items-center justify-between">
+                  <Badge variant="secondary" className="bg-purple-50 text-purple-700 border-purple-200/60 text-[10px] font-bold">
+                    النموذج الثاني • للمشاريع الابتكارية
+                  </Badge>
+                  <div className="p-2.5 rounded-xl bg-purple-500/10 text-purple-600 shadow-2xs">
+                    <GraduationCap className="size-5" />
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <CardTitle className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
+                    2. منهجية MIT للريادة (24 Steps)
+                  </CardTitle>
+                  <CardDescription className="text-xs text-muted-foreground font-medium leading-relaxed">
+                    مسار متكامل مبني على منهجية معهد MIT لااختراق الأسواق وتحديد العميل الشغوف وحساب حجم السوق.
+                  </CardDescription>
+                </div>
+              </CardHeader>
+
+              <CardContent className="px-6 pb-4 space-y-3 text-xs">
+                <div className="p-3 rounded-xl bg-muted/40 border border-border/60 space-y-2">
+                  <span className="text-[11px] font-bold text-foreground block">مكونات هذا النموذج:</span>
+                  <div className="grid grid-cols-2 gap-1.5 text-[11px] text-muted-foreground font-medium">
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-purple-600 shrink-0" />
+                      <span>السوق الشاطئي (Beachhead)</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-purple-600 shrink-0" />
+                      <span>حجم السوق الكلي TAM</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-purple-600 shrink-0" />
+                      <span>شخصية العميل الشغوف</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-purple-600 shrink-0" />
+                      <span>دورة حياة المنتج</span>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+
+              <CardFooter className="p-6 pt-0">
+                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center cursor-pointer">
+                  ابدأ منهجية MIT
+                  <ArrowLeft className="size-3.5" />
+                </Button>
+              </CardFooter>
+            </Card>
+
+            {/* Model 3: Financial & Revenue Model */}
+            <Card className="border border-border/80 shadow-2xs hover:shadow-md transition-all bg-card relative overflow-hidden text-right group flex flex-col justify-between">
+              <div className="h-1.5 bg-emerald-600 w-full"></div>
+
+              <CardHeader className="p-6 pb-4 space-y-3">
+                <div className="flex items-center justify-between">
+                  <Badge variant="secondary" className="bg-emerald-50 text-emerald-700 border-emerald-200/60 text-[10px] font-bold">
+                    النموذج الثالث • الجدوى المالية
+                  </Badge>
+                  <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-600 shadow-2xs">
+                    <BarChart3 className="size-5" />
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <CardTitle className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
+                    3. الجدوى المالية وتوقعات النمو
+                  </CardTitle>
+                  <CardDescription className="text-xs text-muted-foreground font-medium leading-relaxed">
+                    حساب الأرباح والاشتراكات المتكررة (MRR/ARR)، نقطة التعادل، ومعدل استرداد التكاليف الاستثمارية.
+                  </CardDescription>
+                </div>
+              </CardHeader>
+
+              <CardContent className="px-6 pb-4 space-y-3 text-xs">
+                <div className="p-3 rounded-xl bg-muted/40 border border-border/60 space-y-2">
+                  <span className="text-[11px] font-bold text-foreground block">مكونات هذا النموذج:</span>
+                  <div className="grid grid-cols-2 gap-1.5 text-[11px] text-muted-foreground font-medium">
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-emerald-600 shrink-0" />
+                      <span>حساب الإيرادات MRR/ARR</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-emerald-600 shrink-0" />
+                      <span>قيمة العميل LTV & CAC</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-emerald-600 shrink-0" />
+                      <span>نقطة التعادل التقديرية</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-emerald-600 shrink-0" />
+                      <span>الميزانية التشغيلية</span>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+
+              <CardFooter className="p-6 pt-0">
+                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center cursor-pointer">
+                  ابدأ النموذج المالي
+                  <ArrowLeft className="size-3.5" />
+                </Button>
+              </CardFooter>
+            </Card>
+
+            {/* Model 4: 8-Layer Customer Persona Matrix */}
+            <Card className="border border-border/80 shadow-2xs hover:shadow-md transition-all bg-card relative overflow-hidden text-right group flex flex-col justify-between">
+              <div className="h-1.5 bg-pink-600 w-full"></div>
+
+              <CardHeader className="p-6 pb-4 space-y-3">
+                <div className="flex items-center justify-between">
+                  <Badge variant="secondary" className="bg-pink-50 text-pink-700 border-pink-200/60 text-[10px] font-bold">
+                    النموذج الرابع • سلوك الجمهور
+                  </Badge>
+                  <div className="p-2.5 rounded-xl bg-pink-500/10 text-pink-600 shadow-2xs">
+                    <Users className="size-5" />
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <CardTitle className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
+                    4. مصفوفة العميل المستهدف (8-Layers)
+                  </CardTitle>
+                  <CardDescription className="text-xs text-muted-foreground font-medium leading-relaxed">
+                    تفكيك طبقات شخصية العميل الـ 8 لمعرفة الآلام، الدوافع النفسية، وديناميكيات اتخاذ قرار الشراء.
+                  </CardDescription>
+                </div>
+              </CardHeader>
+
+              <CardContent className="px-6 pb-4 space-y-3 text-xs">
+                <div className="p-3 rounded-xl bg-muted/40 border border-border/60 space-y-2">
+                  <span className="text-[11px] font-bold text-foreground block">مكونات هذا النموذج:</span>
+                  <div className="grid grid-cols-2 gap-1.5 text-[11px] text-muted-foreground font-medium">
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-pink-600 shrink-0" />
+                      <span>تحليل آلام ومخاوف العميل</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-pink-600 shrink-0" />
+                      <span>حوافز ومحركات الشراء</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-pink-600 shrink-0" />
+                      <span>سلوك التفاعل الرقمي</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-pink-600 shrink-0" />
+                      <span>تحليل البدائل المتاحة</span>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+
+              <CardFooter className="p-6 pt-0">
+                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center cursor-pointer">
+                  ابدأ مصفوفة العميل
+                  <ArrowLeft className="size-3.5" />
+                </Button>
+              </CardFooter>
+            </Card>
+
+            {/* Model 5: 90-Day Execution Roadmap */}
+            <Card className="border border-border/80 shadow-2xs hover:shadow-md transition-all bg-card relative overflow-hidden text-right group flex flex-col justify-between md:col-span-2 lg:col-span-2">
+              <div className="h-1.5 bg-amber-600 w-full"></div>
+
+              <CardHeader className="p-6 pb-4 space-y-3">
+                <div className="flex items-center justify-between">
+                  <Badge variant="secondary" className="bg-amber-50 text-amber-700 border-amber-200/60 text-[10px] font-bold">
+                    النموذج الخامس • التشغيل والتنفيذ الميداني
+                  </Badge>
+                  <div className="p-2.5 rounded-xl bg-amber-500/10 text-amber-600 shadow-2xs">
+                    <Rocket className="size-5" />
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <CardTitle className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
+                    5. خريطة الإطلاق والتنفيذ (90-Day Execution Roadmap)
+                  </CardTitle>
+                  <CardDescription className="text-xs text-muted-foreground font-medium leading-relaxed">
+                    تحويل نتائج دراسة الجدوى إلى خريطة مهام مرحلية موجهة لأول 90 يوماً من عمر المشروع لتسريع التحقق الميداني.
+                  </CardDescription>
+                </div>
+              </CardHeader>
+
+              <CardContent className="px-6 pb-4 space-y-3 text-xs">
+                <div className="p-3 rounded-xl bg-muted/40 border border-border/60 space-y-2">
+                  <span className="text-[11px] font-bold text-foreground block">مكونات هذا النموذج:</span>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px] text-muted-foreground font-medium">
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-amber-600 shrink-0" />
+                      <span>مرحلة التحقق (أول 30 يوماً)</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-amber-600 shrink-0" />
+                      <span>مرحلة بناء MVP (أول 60 يوماً)</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-amber-600 shrink-0" />
+                      <span>مرحلة الإطلاق والنمو (90 يوماً)</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <CheckCircle2 className="size-3 text-amber-600 shrink-0" />
+                      <span>مؤشرات الأداء KPIs</span>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+
+              <CardFooter className="p-6 pt-0">
+                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center cursor-pointer">
+                  ابدأ خريطة التنفيذ 90 يوماً
+                  <ArrowLeft className="size-3.5" />
+                </Button>
+              </CardFooter>
+            </Card>
+
+          </div>
+
+        </section>
+
+        {/* SECTION 3: Table Preview (Step 01: Discover) */}
         <section id="table-preview" className="container mx-auto px-4 max-w-7xl">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-6 space-y-2">
-            <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 text-xs font-bold px-3 py-1 rounded-full gap-1.5 mx-auto">
-              <Building2 className="size-3.5" />
-              قواعد البيانات الميدانية
-            </Badge>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary/80 text-secondary-foreground text-xs font-semibold shadow-2xs border-0">
+              <span className="inline-flex items-center justify-center size-5 rounded-full bg-blue-600 text-white text-[10px] font-black font-mono shrink-0">
+                01
+              </span>
+              <span className="text-foreground font-bold">الخطوة الأولى • استكشاف الفرص والمشاريع</span>
+            </div>
             <h2 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight text-center mx-auto">
               جدول المشاريع والشركات الناجحة
             </h2>
             <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed text-center mx-auto">
-              جدول تفاعلي مباشر من داخل المنصة. اختر التصنيف لمعاينة المشاريع، بينما تظل بقية الصفوف مغلقة لتسجيل المستخدمين الجدد.
+              <span className="font-bold text-blue-600">[مرحلة الاستكشاف]</span> جدول تفاعلي مباشر يضم أكثر من +500 شركة وفكرة مشروع SaaS محللة بالكامل لتحديد وجهتك بثقة.
             </p>
           </div>
 
@@ -274,32 +810,29 @@ export default function LandingPage() {
             <div className="inline-flex p-1 rounded-xl bg-muted border border-border/60 text-xs font-bold gap-1">
               <button
                 onClick={() => setActiveTableTab('all')}
-                className={`px-4 py-2 rounded-lg transition-all ${
-                  activeTableTab === 'all' 
-                    ? 'bg-card text-foreground shadow-2xs font-extrabold' 
+                className={`px-4 py-2 rounded-lg transition-all ${activeTableTab === 'all'
+                    ? 'bg-card text-foreground shadow-2xs font-extrabold'
                     : 'text-muted-foreground hover:text-foreground'
-                }`}
+                  }`}
               >
                 جميع المشاريع ({projectsList.length})
               </button>
               <button
                 onClick={() => setActiveTableTab('saas')}
-                className={`px-4 py-2 rounded-lg transition-all flex items-center gap-1.5 ${
-                  activeTableTab === 'saas' 
-                    ? 'bg-primary text-primary-foreground shadow-2xs font-extrabold' 
+                className={`px-4 py-2 rounded-lg transition-all flex items-center gap-1.5 ${activeTableTab === 'saas'
+                    ? 'bg-primary text-primary-foreground shadow-2xs font-extrabold'
                     : 'text-muted-foreground hover:text-foreground'
-                }`}
+                  }`}
               >
                 <Laptop className="size-3.5" />
                 أفكار مشاريع SaaS
               </button>
               <button
                 onClick={() => setActiveTableTab('micro-saas')}
-                className={`px-4 py-2 rounded-lg transition-all flex items-center gap-1.5 ${
-                  activeTableTab === 'micro-saas' 
-                    ? 'bg-primary text-primary-foreground shadow-2xs font-extrabold' 
+                className={`px-4 py-2 rounded-lg transition-all flex items-center gap-1.5 ${activeTableTab === 'micro-saas'
+                    ? 'bg-primary text-primary-foreground shadow-2xs font-extrabold'
                     : 'text-muted-foreground hover:text-foreground'
-                }`}
+                  }`}
               >
                 <Cpu className="size-3.5" />
                 أفكار Micro-SaaS
@@ -309,7 +842,7 @@ export default function LandingPage() {
 
           {/* Table Container with Blur & Lock Overlay */}
           <div className="relative rounded-2xl border border-border bg-card p-3 sm:p-5 shadow-sm overflow-hidden">
-            
+
             {/* The Actual Application Table Component */}
             <div className="max-h-[460px] overflow-hidden select-none pointer-events-auto">
               <ProvenProjectsTable data={displayProjects} onRowClick={handleRowClick} />
@@ -341,209 +874,30 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* SECTION 2: Featured SaaS Business Models & Revenue Strategy Cards */}
-        <section id="saas-models" className="container mx-auto px-4 max-w-7xl">
-          <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-10 space-y-2">
-            <Badge variant="outline" className="bg-blue-500/10 text-blue-700 border-blue-500/20 text-xs font-bold px-3 py-1 rounded-full gap-1.5 mx-auto">
-              <Laptop className="size-3.5" />
-              نماذج مشاريع SaaS البرمجية
-            </Badge>
-            <h2 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight text-center mx-auto">
-              نماذج عمل وتحليلات نمو لشركات SaaS ناجحة
-            </h2>
-            <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed text-center mx-auto">
-              استكشف كيف تبني وتصيغ نماذج التسعير، الاشتراكات المتكررة (MRR)، وشريحة العملاء المستهدفة في مشاريع البرمجيات.
-            </p>
-          </div>
+        {/* SECTION 4: Featured SaaS Business Models & Revenue Strategy Cards (Step 01: Discover) */}
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            {/* SaaS Model Card 1: Enterprise B2B SaaS */}
-            <Card className="border-border shadow-2xs hover:shadow-md transition-all flex flex-col justify-between bg-card relative overflow-hidden text-center">
-              <div className="h-1.5 bg-blue-600 w-full"></div>
-              <CardHeader className="p-5 pb-3 flex flex-col items-center">
-                <div className="flex items-center justify-between gap-2 mb-2 w-full">
-                  <Badge variant="secondary" className="bg-blue-50 text-blue-700 border-0 text-[10px] font-bold">
-                    B2B Enterprise SaaS
-                  </Badge>
-                  <span className="text-xs font-black text-blue-700">$14.2M ARR</span>
-                </div>
-                <CardTitle className="text-base font-bold text-foreground text-center">
-                  فودكس (Foodics SaaS)
-                </CardTitle>
-                <CardDescription className="text-xs text-muted-foreground mt-1 leading-relaxed text-center">
-                  منصة إدارة المطاعم والمقاهي ونقاط البيع السحابية.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="p-5 pt-0 space-y-3 text-xs flex flex-col items-center">
-                <div className="space-y-1.5 p-3 rounded-xl bg-muted/40 border border-border/50 font-medium w-full text-center">
-                  <div className="flex justify-between text-[11px]">
-                    <span className="text-muted-foreground">نموذج التسعير:</span>
-                    <span className="font-bold text-foreground">اشتراك سنوي + رسوم جهاز</span>
-                  </div>
-                  <div className="flex justify-between text-[11px]">
-                    <span className="text-muted-foreground">الجمهور المستهدف:</span>
-                    <span className="font-bold text-foreground">مطاعم ومقاهي</span>
-                  </div>
-                  <div className="flex justify-between text-[11px]">
-                    <span className="text-muted-foreground">نسبة الاحتفاظ:</span>
-                    <span className="font-bold text-emerald-600">92% Net Retention</span>
-                  </div>
-                </div>
-              </CardContent>
-              <CardFooter className="p-5 pt-0 flex justify-center">
-                <Button onClick={() => openAuthModal('login')} variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center cursor-pointer">
-                  تصفح تحليل الـ SaaS الكامل
-                  <ArrowLeft className="size-3" />
-                </Button>
-              </CardFooter>
-            </Card>
 
-            {/* SaaS Model Card 2: Creator Economy SaaS */}
-            <Card className="border-border shadow-2xs hover:shadow-md transition-all flex flex-col justify-between bg-card relative overflow-hidden text-center">
-              <div className="h-1.5 bg-purple-600 w-full"></div>
-              <CardHeader className="p-5 pb-3 flex flex-col items-center">
-                <div className="flex items-center justify-between gap-2 mb-2 w-full">
-                  <Badge variant="secondary" className="bg-purple-50 text-purple-700 border-0 text-[10px] font-bold">
-                    Creator SaaS
-                  </Badge>
-                  <span className="text-xs font-black text-purple-700">$2.4M MRR</span>
-                </div>
-                <CardTitle className="text-base font-bold text-foreground text-center">
-                  ConvertKit / Beehiiv
-                </CardTitle>
-                <CardDescription className="text-xs text-muted-foreground mt-1 leading-relaxed text-center">
-                  منصات النشرات البريدية وتسويق صناع المحتوى.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="p-5 pt-0 space-y-3 text-xs flex flex-col items-center">
-                <div className="space-y-1.5 p-3 rounded-xl bg-muted/40 border border-border/50 font-medium w-full text-center">
-                  <div className="flex justify-between text-[11px]">
-                    <span className="text-muted-foreground">نموذج التسعير:</span>
-                    <span className="font-bold text-foreground">تدرج حسب عدد المشتركين</span>
-                  </div>
-                  <div className="flex justify-between text-[11px]">
-                    <span className="text-muted-foreground">الجمهور المستهدف:</span>
-                    <span className="font-bold text-foreground">صناع المحتوى والمدربون</span>
-                  </div>
-                  <div className="flex justify-between text-[11px]">
-                    <span className="text-muted-foreground">نمو الإيراد:</span>
-                    <span className="font-bold text-purple-600">Freemium to Paid</span>
-                  </div>
-                </div>
-              </CardContent>
-              <CardFooter className="p-5 pt-0 flex justify-center">
-                <Button onClick={() => openAuthModal('login')} variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center cursor-pointer">
-                  تصفح تحليل الـ SaaS الكامل
-                  <ArrowLeft className="size-3" />
-                </Button>
-              </CardFooter>
-            </Card>
-
-            {/* SaaS Model Card 3: Micro-SaaS Boilerplate */}
-            <Card className="border-border shadow-2xs hover:shadow-md transition-all flex flex-col justify-between bg-card relative overflow-hidden text-center">
-              <div className="h-1.5 bg-emerald-600 w-full"></div>
-              <CardHeader className="p-5 pb-3 flex flex-col items-center">
-                <div className="flex items-center justify-between gap-2 mb-2 w-full">
-                  <Badge variant="secondary" className="bg-emerald-50 text-emerald-700 border-0 text-[10px] font-bold">
-                    Micro-SaaS Tool
-                  </Badge>
-                  <span className="text-xs font-black text-emerald-700">$45K / mo</span>
-                </div>
-                <CardTitle className="text-base font-bold text-foreground text-center">
-                  ShipFast / Plausible
-                </CardTitle>
-                <CardDescription className="text-xs text-muted-foreground mt-1 leading-relaxed text-center">
-                  أدوات برمجية مخصصة ومصغرة لإطلاق التطبيقات بسرعة.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="p-5 pt-0 space-y-3 text-xs flex flex-col items-center">
-                <div className="space-y-1.5 p-3 rounded-xl bg-muted/40 border border-border/50 font-medium w-full text-center">
-                  <div className="flex justify-between text-[11px]">
-                    <span className="text-muted-foreground">نموذج التسعير:</span>
-                    <span className="font-bold text-foreground">شراء لمرة واحدة أو اشتراك</span>
-                  </div>
-                  <div className="flex justify-between text-[11px]">
-                    <span className="text-muted-foreground">فترة الإطلاق:</span>
-                    <span className="font-bold text-foreground">أسبوعين فقط</span>
-                  </div>
-                  <div className="flex justify-between text-[11px]">
-                    <span className="text-muted-foreground">هيكل التكاليف:</span>
-                    <span className="font-bold text-emerald-600">منخفض جداً (Solopreneur)</span>
-                  </div>
-                </div>
-              </CardContent>
-              <CardFooter className="p-5 pt-0 flex justify-center">
-                <Button onClick={() => openAuthModal('login')} variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center cursor-pointer">
-                  تصفح تحليل الـ SaaS الكامل
-                  <ArrowLeft className="size-3" />
-                </Button>
-              </CardFooter>
-            </Card>
-
-            {/* SaaS Model Card 4: Developer Infrastructure SaaS */}
-            <Card className="border-border shadow-2xs hover:shadow-md transition-all flex flex-col justify-between bg-card relative overflow-hidden text-center">
-              <div className="h-1.5 bg-amber-600 w-full"></div>
-              <CardHeader className="p-5 pb-3 flex flex-col items-center">
-                <div className="flex items-center justify-between gap-2 mb-2 w-full">
-                  <Badge variant="secondary" className="bg-amber-50 text-amber-700 border-0 text-[10px] font-bold">
-                    Dev SaaS Infrastructure
-                  </Badge>
-                  <span className="text-xs font-black text-amber-700">$850K MRR</span>
-                </div>
-                <CardTitle className="text-base font-bold text-foreground text-center">
-                  Vercel / Resend
-                </CardTitle>
-                <CardDescription className="text-xs text-muted-foreground mt-1 leading-relaxed text-center">
-                  بنية تحتية سحابية للمطورين والشركات التقنية.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="p-5 pt-0 space-y-3 text-xs flex flex-col items-center">
-                <div className="space-y-1.5 p-3 rounded-xl bg-muted/40 border border-border/50 font-medium w-full text-center">
-                  <div className="flex justify-between text-[11px]">
-                    <span className="text-muted-foreground">نموذج التسعير:</span>
-                    <span className="font-bold text-foreground">حسب الاستهلاك (Pay as you go)</span>
-                  </div>
-                  <div className="flex justify-between text-[11px]">
-                    <span className="text-muted-foreground">الجمهور المستهدف:</span>
-                    <span className="font-bold text-foreground">فرق البرمجة والمطورون</span>
-                  </div>
-                  <div className="flex justify-between text-[11px]">
-                    <span className="text-muted-foreground">استراتيجية النمو:</span>
-                    <span className="font-bold text-amber-600">Product-Led Growth (PLG)</span>
-                  </div>
-                </div>
-              </CardContent>
-              <CardFooter className="p-5 pt-0 flex justify-center">
-                <Button onClick={() => openAuthModal('login')} variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center cursor-pointer">
-                  تصفح تحليل الـ SaaS الكامل
-                  <ArrowLeft className="size-3" />
-                </Button>
-              </CardFooter>
-            </Card>
-
-          </div>
-        </section>
-
-        {/* SECTION 3: Interactive Financial & SaaS Growth Calculator */}
+        {/* SECTION 5: Interactive Financial & SaaS Growth Calculator (Step 02: Analyze) */}
         <section id="calculator" className="bg-muted/40 py-16 border-y border-border/50">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-10 space-y-2">
-              <Badge variant="outline" className="bg-emerald-500/10 text-emerald-700 border-emerald-500/20 text-xs font-bold px-3 py-1 rounded-full gap-1.5 mx-auto">
-                <Calculator className="size-3.5" />
-                حاسبة الأرباح والمؤشرات
-              </Badge>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary/80 text-secondary-foreground text-xs font-semibold shadow-2xs border-0">
+                <span className="inline-flex items-center justify-center size-5 rounded-full bg-emerald-600 text-white text-[10px] font-black font-mono shrink-0">
+                  02
+                </span>
+                <span className="text-foreground font-bold">الخطوة الثانية • تحليل الجدوى والمؤشرات المالية</span>
+              </div>
               <h2 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight text-center mx-auto">
                 قدر إيرادات ومؤشرات نمو مشروعك القادم
               </h2>
               <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed text-center mx-auto">
-                جرب الحاسبة التفاعلية لتقدير الإيرادات المتكررة (MRR / ARR) ومتوسط قيمة العميل (LTV).
+                <span className="font-bold text-emerald-600">[مرحلة التحليل]</span> جرب الحاسبة التفاعلية لتقدير الإيرادات المتكررة (MRR / ARR) ومتوسط قيمة العميل (LTV) وتوقع الأرباح قبل البدء.
               </p>
             </div>
 
             {/* Interactive Calculator Widget */}
             <div className="grid lg:grid-cols-12 gap-8 bg-card rounded-2xl border border-border p-6 sm:p-8 shadow-sm">
-              
+
               {/* Inputs Column */}
               <div className="lg:col-span-6 space-y-6">
                 <h3 className="text-base font-extrabold text-foreground border-b border-border pb-3 flex items-center gap-2">
@@ -557,12 +911,12 @@ export default function LandingPage() {
                     <label className="text-foreground">عدد المشتركين / العملاء المتوقعين:</label>
                     <span className="text-primary font-black bg-primary/10 px-2 py-0.5 rounded-md">{subscribers} عميل</span>
                   </div>
-                  <input 
-                    type="range" 
-                    min="10" 
-                    max="2000" 
+                  <input
+                    type="range"
+                    min="10"
+                    max="2000"
                     step="10"
-                    value={subscribers} 
+                    value={subscribers}
                     onChange={(e) => setSubscribers(Number(e.target.value))}
                     className="w-full accent-primary h-2 bg-muted rounded-lg cursor-pointer"
                   />
@@ -574,12 +928,12 @@ export default function LandingPage() {
                     <label className="text-foreground">متوسط الاشتراك الشهري (بالدولار):</label>
                     <span className="text-primary font-black bg-primary/10 px-2 py-0.5 rounded-md">${pricePerMonth} / شهر</span>
                   </div>
-                  <input 
-                    type="range" 
-                    min="5" 
-                    max="500" 
+                  <input
+                    type="range"
+                    min="5"
+                    max="500"
                     step="5"
-                    value={pricePerMonth} 
+                    value={pricePerMonth}
                     onChange={(e) => setPricePerMonth(Number(e.target.value))}
                     className="w-full accent-primary h-2 bg-muted rounded-lg cursor-pointer"
                   />
@@ -591,12 +945,12 @@ export default function LandingPage() {
                     <label className="text-foreground">معدل التخلي الشهري المتوقع (Churn Rate):</label>
                     <span className="text-amber-700 font-black bg-amber-50 px-2 py-0.5 rounded-md">{churnRate}%</span>
                   </div>
-                  <input 
-                    type="range" 
-                    min="1" 
-                    max="15" 
+                  <input
+                    type="range"
+                    min="1"
+                    max="15"
                     step="0.5"
-                    value={churnRate} 
+                    value={churnRate}
                     onChange={(e) => setChurnRate(Number(e.target.value))}
                     className="w-full accent-amber-500 h-2 bg-muted rounded-lg cursor-pointer"
                   />
@@ -641,18 +995,20 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* SECTION 4: Core Platform Features */}
+        {/* SECTION 6: Core Platform Features (Step 03: Build) */}
         <section id="features" className="container mx-auto px-4 max-w-7xl">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12 space-y-2">
-            <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 text-xs font-bold px-3 py-1 rounded-full gap-1.5 mx-auto">
-              <Zap className="size-3.5" />
-              أدوات المنصة المتكاملة
-            </Badge>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary/80 text-secondary-foreground text-xs font-semibold shadow-2xs border-0">
+              <span className="inline-flex items-center justify-center size-5 rounded-full bg-purple-600 text-white text-[10px] font-black font-mono shrink-0">
+                03
+              </span>
+              <span className="text-foreground font-bold">الخطوة الثالثة • أدوات وهيكلة نموذج العمل</span>
+            </div>
             <h2 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight text-center mx-auto">
               كل ما تحتاجه لإطلاق مشروعك وتوثيقه
             </h2>
             <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed text-center mx-auto">
-              أدوات تفاعلية ترافقك في كل مرحلة من مراحل التفكير والتحليل وحتى كتابة خطة التنفيذ.
+              <span className="font-bold text-purple-600">[مرحلة البناء والهيكلة]</span> أدوات تفاعلية تتيح لك صياغة الأركان الـ 9 لنموذج عملك التجاري (BMC) والتقييم الفوري بالذكاء الاصطناعي.
             </p>
           </div>
 
@@ -717,20 +1073,22 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* SECTION 5: Platform Academy Showcase */}
+        {/* SECTION 7: Platform Academy Showcase (Step 04: Execute) */}
         <section id="academy" className="container mx-auto px-4 max-w-7xl">
           <div className="bg-card border border-border rounded-3xl p-6 sm:p-10 shadow-2xs">
             <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-10 pb-6 border-b border-border/80 space-y-4">
               <div className="space-y-2 flex flex-col items-center text-center mx-auto">
-                <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 text-xs font-bold px-3 py-1 rounded-full gap-1.5 mx-auto">
-                  <GraduationCap className="size-3.5" />
-                  أكاديمية المنصة والمفاهيم
-                </Badge>
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary/80 text-secondary-foreground text-xs font-semibold shadow-2xs border-0">
+                  <span className="inline-flex items-center justify-center size-5 rounded-full bg-amber-600 text-white text-[10px] font-black font-mono shrink-0">
+                    04
+                  </span>
+                  <span className="text-foreground font-bold">الخطوة الرابعة • خريطة الإطلاق والتنفيذ الميداني</span>
+                </div>
                 <h2 className="text-2xl sm:text-3xl font-black text-foreground tracking-tight text-center mx-auto">
                   دليل المفاهيم والمصطلحات الميدانية للخطة
                 </h2>
                 <p className="text-xs sm:text-sm text-muted-foreground font-medium max-w-2xl leading-relaxed text-center mx-auto">
-                  مقالات وتحليلات تعليمية مركزة تشرح لك كيفية تقييم الأفكار، وحساب مقاييس النمو، وإعداد دراسة الجدوى.
+                  <span className="font-bold text-amber-600">[مرحلة التنفيذ والإطلاق]</span> مقالات وتحليلات تعليمية مركزة تشرح لك كيفية تنفيذ خطة الـ 90 يوماً، وحساب مقاييس النمو، والانطلاق بنجاح.
                 </p>
               </div>
 
@@ -792,10 +1150,6 @@ export default function LandingPage() {
         {/* SECTION 6: FAQ Accordion */}
         <section id="faq" className="container mx-auto px-4 max-w-4xl">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-10 space-y-2">
-            <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 text-xs font-bold px-3 py-1 rounded-full gap-1.5 mx-auto">
-              <HelpCircle className="size-3.5" />
-              الأسئلة الشائعة
-            </Badge>
             <h2 className="text-2xl sm:text-4xl font-black text-foreground tracking-tight text-center mx-auto">
               إجابات عن منصة خطة وقواعد البيانات
             </h2>
@@ -834,8 +1188,8 @@ export default function LandingPage() {
             ].map((faq, idx) => {
               const isOpen = openFaq === idx;
               return (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="rounded-2xl border border-border bg-card overflow-hidden transition-all shadow-2xs"
                 >
                   <button
@@ -884,7 +1238,7 @@ export default function LandingPage() {
       <footer className="border-t border-border/60 bg-muted/30 text-muted-foreground py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            
+
             <div className="space-y-3 md:col-span-1">
               <div className="flex items-center gap-2">
                 <div className="flex items-center justify-center size-8 rounded-lg bg-primary text-primary-foreground font-black text-base">

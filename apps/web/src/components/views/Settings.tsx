@@ -4,6 +4,7 @@ import {
   CheckCircle2,
   Globe2,
   LockKeyhole,
+  KeyRound,
   Save,
   ShieldCheck,
   Sparkles,
@@ -98,6 +99,22 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isUpdatingPassword, setIsUpdatingPassword] = useState(false);
   const [passwordMsg, setPasswordMsg] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  const [isRegisteringPasskey, setIsRegisteringPasskey] = useState(false);
+  const [passkeyMsg, setPasskeyMsg] = useState<string | null>(null);
+
+  const handleRegisterPasskey = async () => {
+    setIsRegisteringPasskey(true);
+    setPasskeyMsg(null);
+    try {
+      const { error } = await supabase.auth.registerPasskey();
+      if (error) throw error;
+      setPasskeyMsg('تمت إضافة مفتاح المرور لهذا الجهاز بنجاح.');
+    } catch {
+      setPasskeyMsg('تعذر إضافة مفتاح المرور. تأكد من دعم المتصفح أو أعد المحاولة.');
+    } finally {
+      setIsRegisteringPasskey(false);
+    }
+  };
 
   const handleSave = async () => {
     setSaved(false);
@@ -316,6 +333,21 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
                 <CardDescription className="text-xs">تغيير كلمة المرور وتفعيل خيارات الحماية الإضافية.</CardDescription>
               </CardHeader>
               <CardContent className="p-4 sm:p-6 space-y-4">
+                <div className="space-y-3 rounded-lg border border-primary/20 bg-primary/5 p-4">
+                  <div className="flex items-start gap-3 text-right">
+                    <KeyRound className="mt-0.5 size-5 shrink-0 text-primary" />
+                    <div>
+                      <h3 className="text-sm font-bold text-foreground">تسجيل الدخول بمفتاح المرور</h3>
+                      <p className="mt-1 text-xs leading-relaxed text-muted-foreground">استخدم بصمة الجهاز أو Face ID أو رمز قفل الجهاز دون حفظ كلمة مرور.</p>
+                    </div>
+                  </div>
+                  {passkeyMsg && <p className="text-xs font-bold text-primary">{passkeyMsg}</p>}
+                  <Button type="button" size="sm" variant="outline" onClick={handleRegisterPasskey} disabled={isRegisteringPasskey} className="gap-2 text-xs font-bold">
+                    {isRegisteringPasskey ? <Loader2 className="size-3.5 animate-spin" /> : <KeyRound className="size-3.5" />}
+                    إضافة مفتاح لهذا الجهاز
+                  </Button>
+                </div>
+
                 <div className="space-y-3 rounded-lg border border-border/50 bg-muted/20 p-4">
                   <div className="flex items-center gap-2 text-right">
                     <LockKeyhole className="size-4 text-primary" />

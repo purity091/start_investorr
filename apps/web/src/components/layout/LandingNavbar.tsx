@@ -4,6 +4,16 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 import {
   Sheet,
   SheetContent,
@@ -41,7 +51,10 @@ import {
   Cpu,
   Layers,
   ChevronLeft,
-  User,
+  User as UserIcon,
+  CreditCard,
+  LifeBuoy,
+  LogOut,
 } from 'lucide-react';
 import { useAuthModal } from '@/features/auth/AuthModalContext';
 import { useAuth } from '@/features/auth/AuthContext';
@@ -49,13 +62,22 @@ import { cn } from '@/lib/utils';
 
 export const LandingNavbar: React.FC = () => {
   const { openAuthModal } = useAuthModal();
-  const { user, loading: authLoading } = useAuth();
+  const { user, profile, loading: authLoading, signOut } = useAuth();
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [showBanner, setShowBanner] = useState(true);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [mobileExpandedSection, setMobileExpandedSection] = useState<string | null>(null);
+
+  const userName = profile?.full_name 
+    || user?.user_metadata?.full_name 
+    || user?.user_metadata?.name 
+    || user?.email?.split('@')[0] 
+    || 'المستخدم';
+
+  const userEmail = profile?.email || user?.email || '';
+  const userAvatar = user?.user_metadata?.avatar_url || user?.user_metadata?.picture || '';
+  const userInitials = userName ? userName.trim().charAt(0).toUpperCase() : 'ح';
 
   // Handle Ctrl+K shortcut for quick search
   useEffect(() => {
@@ -87,18 +109,18 @@ export const LandingNavbar: React.FC = () => {
       {/* 1. Top Announcement Bar */}
       {showBanner && (
         <div className="bg-primary text-primary-foreground text-xs py-2 px-4 flex items-center justify-between shadow-2xs font-medium">
-          <div className="container mx-auto flex items-center justify-center gap-2 text-center text-[11px] sm:text-xs">
-            <Badge variant="secondary" className="bg-white/20 text-white hover:bg-white/30 text-[10px] font-bold px-2 py-0.5 border-none">
+          <div className="container mx-auto flex items-center justify-center gap-2 text-center text-[11px] sm:text-xs whitespace-nowrap overflow-hidden">
+            <Badge variant="secondary" className="bg-white/20 text-white hover:bg-white/30 text-[10px] font-bold px-2 py-0.5 border-none shrink-0">
               جديد v2.5 🎉
             </Badge>
-            <span>تم إطلاق ميزة مشاركة الخطط ونماذج العمل آمنياً + بناء 10 دراسات جدوى بـ 0$!</span>
-            <Link href="/changelog" className="font-extrabold underline underline-offset-4 hover:opacity-90 transition-opacity">
+            <span className="truncate">تم إطلاق ميزة مشاركة الخطط ونماذج العمل آمنياً + بناء 10 دراسات جدوى بـ 0$!</span>
+            <Link href="/changelog" className="font-extrabold underline underline-offset-4 hover:opacity-90 transition-opacity shrink-0 hidden md:inline">
               استكشف سجل التغييرات والميزات الجديدة ←
             </Link>
           </div>
           <button
             onClick={() => setShowBanner(false)}
-            className="text-primary-foreground/70 hover:text-primary-foreground p-1 transition-colors rounded-sm cursor-pointer"
+            className="text-primary-foreground/70 hover:text-primary-foreground p-1 transition-colors rounded-sm cursor-pointer shrink-0"
             aria-label="إغلاق التنبيه"
           >
             <X className="size-3.5" />
@@ -106,12 +128,12 @@ export const LandingNavbar: React.FC = () => {
         </div>
       )}
 
-      {/* 2. Main Navigation Bar Header */}
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
+      {/* 2. Main Navigation Bar Header Container */}
+      <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4 relative">
 
         {/* Brand Logo & Tag */}
-        <div className="flex items-center gap-3">
-          <Link href="/" className="flex items-center gap-2.5 group">
+        <div className="flex items-center gap-3 shrink-0">
+          <Link href="/" className="flex items-center gap-2.5 group whitespace-nowrap">
             <div className="flex items-center justify-center size-9 rounded-xl bg-primary text-primary-foreground font-black text-lg shadow-sm transition-transform group-hover:scale-105">
               خ
             </div>
@@ -123,28 +145,28 @@ export const LandingNavbar: React.FC = () => {
           </Link>
         </div>
 
-        {/* Desktop Direct Links & Simple Navigation */}
-        <nav className="hidden lg:flex items-center gap-1.5 text-xs font-extrabold text-muted-foreground">
+        {/* Desktop Direct Links & Simple Navigation (Protected against text overlap) */}
+        <nav className="hidden lg:flex items-center gap-1 xl:gap-2 text-xs font-extrabold text-muted-foreground whitespace-nowrap shrink-0">
 
           {/* Dropdown 1: Features & Tools */}
           <div
-            className="relative"
+            className="shrink-0"
             onMouseEnter={() => setActiveDropdown('features')}
             onMouseLeave={() => setActiveDropdown(null)}
           >
             <button
               className={cn(
-                "flex items-center gap-1.5 px-3 py-2 rounded-xl transition-all cursor-pointer",
+                "flex items-center gap-1 px-2.5 py-2 rounded-xl transition-all cursor-pointer whitespace-nowrap shrink-0",
                 activeDropdown === 'features' ? "bg-primary/10 text-primary font-black shadow-2xs" : "hover:text-foreground hover:bg-muted/60"
               )}
             >
               <span>الأدوات والمميزات</span>
-              <ChevronDown className={cn("size-3.5 transition-transform duration-200", activeDropdown === 'features' && "rotate-180 text-primary")} />
+              <ChevronDown className={cn("size-3.5 transition-transform duration-200 shrink-0", activeDropdown === 'features' && "rotate-180 text-primary")} />
             </button>
 
             {activeDropdown === 'features' && (
-              <div dir="rtl" className="absolute top-full right-0 pt-2 w-[920px] animate-in fade-in slide-in-from-top-2 duration-150 z-50">
-                <div className="p-6 rounded-3xl bg-card/98 border border-border/80 shadow-2xl backdrop-blur-xl space-y-5 text-right">
+              <div dir="rtl" className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[min(900px,calc(100vw-2rem))] max-w-[calc(100vw-2rem)] animate-in fade-in slide-in-from-top-2 duration-150 z-50">
+                <div className="p-6 rounded-3xl bg-card/98 border border-border/80 shadow-2xl backdrop-blur-xl space-y-5 text-right whitespace-normal">
 
                   <div className="grid grid-cols-12 gap-5">
                     {/* Highlight AI Spotlight Card */}
@@ -244,23 +266,23 @@ export const LandingNavbar: React.FC = () => {
 
           {/* Dropdown 2: Databases & Sectors */}
           <div
-            className="relative"
+            className="shrink-0"
             onMouseEnter={() => setActiveDropdown('databases')}
             onMouseLeave={() => setActiveDropdown(null)}
           >
             <button
               className={cn(
-                "flex items-center gap-1.5 px-3 py-2 rounded-xl transition-all cursor-pointer",
+                "flex items-center gap-1 px-2.5 py-2 rounded-xl transition-all cursor-pointer whitespace-nowrap shrink-0",
                 activeDropdown === 'databases' ? "bg-primary/10 text-primary font-black shadow-2xs" : "hover:text-foreground hover:bg-muted/60"
               )}
             >
               <span>الشركات والقطاعات</span>
-              <ChevronDown className={cn("size-3.5 transition-transform duration-200", activeDropdown === 'databases' && "rotate-180 text-primary")} />
+              <ChevronDown className={cn("size-3.5 transition-transform duration-200 shrink-0", activeDropdown === 'databases' && "rotate-180 text-primary")} />
             </button>
 
             {activeDropdown === 'databases' && (
-              <div dir="rtl" className="absolute top-full right-0 pt-2 w-[860px] animate-in fade-in slide-in-from-top-2 duration-150 z-50">
-                <div className="p-6 rounded-3xl bg-card/98 border border-border/80 shadow-2xl backdrop-blur-xl text-right space-y-4">
+              <div dir="rtl" className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[min(840px,calc(100vw-2rem))] max-w-[calc(100vw-2rem)] animate-in fade-in slide-in-from-top-2 duration-150 z-50">
+                <div className="p-6 rounded-3xl bg-card/98 border border-border/80 shadow-2xl backdrop-blur-xl text-right space-y-4 whitespace-normal">
                   <div className="grid grid-cols-2 gap-3.5">
                     
                     <Link href="/saas-ideas" className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
@@ -332,7 +354,7 @@ export const LandingNavbar: React.FC = () => {
           {/* Direct Standard Link 1: Market Discovery */}
           <Link
             href="/market-discovery"
-            className="px-3 py-2 rounded-xl hover:text-foreground hover:bg-muted/60 transition-all cursor-pointer"
+            className="px-2.5 py-2 rounded-xl hover:text-foreground hover:bg-muted/60 transition-all cursor-pointer whitespace-nowrap shrink-0"
           >
             استكشاف القطاعات
           </Link>
@@ -340,7 +362,7 @@ export const LandingNavbar: React.FC = () => {
           {/* Direct Standard Link 2: Academy */}
           <Link
             href="/platform-academy"
-            className="px-3 py-2 rounded-xl hover:text-foreground hover:bg-muted/60 transition-all cursor-pointer"
+            className="px-2.5 py-2 rounded-xl hover:text-foreground hover:bg-muted/60 transition-all cursor-pointer whitespace-nowrap shrink-0"
           >
             الأكاديمية
           </Link>
@@ -348,7 +370,7 @@ export const LandingNavbar: React.FC = () => {
           {/* Direct Standard Link 3: Changelog */}
           <Link
             href="/changelog"
-            className="px-3 py-2 rounded-xl hover:text-foreground hover:bg-muted/60 transition-all cursor-pointer"
+            className="px-2.5 py-2 rounded-xl hover:text-foreground hover:bg-muted/60 transition-all cursor-pointer whitespace-nowrap shrink-0"
           >
             سجل التغييرات
           </Link>
@@ -356,22 +378,22 @@ export const LandingNavbar: React.FC = () => {
           {/* Direct Standard Link 4: Pricing */}
           <Link
             href="/pricing-plans"
-            className="px-3 py-2 rounded-xl hover:text-foreground hover:bg-muted/60 transition-all cursor-pointer"
+            className="px-2.5 py-2 rounded-xl hover:text-foreground hover:bg-muted/60 transition-all cursor-pointer whitespace-nowrap shrink-0"
           >
             الأسعار
           </Link>
 
         </nav>
 
-        {/* Right Section: Search Command & Single CTA Button */}
-        <div className="flex items-center gap-2.5">
+        {/* Left Section: Search Command, Profile Avatar Dropdown (Identical to Dashboard Header) & Dashboard Icon Button on the Far Left */}
+        <div className="flex items-center gap-2 shrink-0">
 
           {/* Quick Search Icon Button Trigger */}
           <Button
             variant="outline"
             size="icon"
             onClick={() => setIsSearchOpen(true)}
-            className="size-9 border-border/80 bg-muted/30 text-muted-foreground hover:text-foreground hover:bg-muted/60"
+            className="size-9 border-border/80 bg-muted/30 text-muted-foreground hover:text-foreground hover:bg-muted/60 shrink-0 cursor-pointer"
             title="بحث سريع (Ctrl+K)"
             aria-label="ابحث في المنصة"
           >
@@ -379,37 +401,83 @@ export const LandingNavbar: React.FC = () => {
           </Button>
 
           {authLoading ? (
-            <div className="hidden sm:block h-9 w-32 rounded-md bg-muted animate-pulse" aria-hidden="true" />
+            <div className="hidden sm:block size-9 rounded-full bg-muted animate-pulse shrink-0" aria-hidden="true" />
           ) : user ? (
-            <div className="hidden sm:flex items-center gap-2">
-              <Link href="/customer-dashboard">
-                <Button
-                  size="sm"
-                  className="gap-1.5 font-bold text-xs h-9 shadow-2xs bg-primary hover:bg-primary/90 cursor-pointer"
-                >
-                  <LayoutGrid className="size-3.5" />
-                  <span>لوحة التحكم</span>
-                  <ArrowLeft className="size-3.5" />
-                </Button>
-              </Link>
+            <div className="hidden sm:flex items-center gap-2.5 shrink-0">
+              {/* 1. Circular User Profile Avatar Button (Matching the image provided by user) */}
+              <DropdownMenu dir="rtl">
+                <DropdownMenuTrigger asChild>
+                  <button
+                    id="landing-profile-avatar-trigger"
+                    className="relative flex items-center justify-center rounded-full p-0.5 border border-border/80 hover:border-primary/60 bg-card shadow-2xs hover:shadow-sm transition-all cursor-pointer outline-none shrink-0 group"
+                    title={userName}
+                    aria-label="حسابي - إعدادات الحساب"
+                  >
+                    <Avatar className="size-8.5 rounded-full">
+                      <AvatarImage src={userAvatar} alt={userName} className="rounded-full object-cover" />
+                      <AvatarFallback className="bg-primary/10 text-primary font-black text-xs rounded-full">
+                        {userName.slice(0, 1).toUpperCase()}
+                      </AvatarFallback>
+                    </Avatar>
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="min-w-64">
+                  <DropdownMenuLabel className="text-right">
+                    <div className="text-sm font-semibold">{userName}</div>
+                    <div className="mt-1 text-xs font-medium text-muted-foreground">{userEmail}</div>
+                  </DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuGroup>
+                    <DropdownMenuItem asChild className="cursor-pointer">
+                      <Link href="/settings" className="flex items-center gap-2">
+                        <UserIcon className="size-4" />
+                        <span>ملف التعريف</span>
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild className="cursor-pointer">
+                      <Link href="/pricing-plans" className="flex items-center gap-2">
+                        <CreditCard className="size-4" />
+                        <span>اشتراكي</span>
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem asChild className="cursor-pointer">
+                      <Link href="/contact-us" className="flex items-center gap-2">
+                        <LifeBuoy className="size-4" />
+                        <span>المساعدة والدعم</span>
+                      </Link>
+                    </DropdownMenuItem>
+                  </DropdownMenuGroup>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem
+                    variant="destructive"
+                    onClick={async () => {
+                      await signOut();
+                    }}
+                    className="cursor-pointer"
+                  >
+                    <LogOut className="size-4" />
+                    <span>تسجيل الخروج</span>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
 
-              <Link href="/settings">
+              {/* 2. Dashboard Icon Button on the Far Left */}
+              <Link href="/customer-dashboard" title="لوحة التحكم">
                 <Button
-                  variant="outline"
-                  size="sm"
-                  className="gap-1.5 font-bold text-xs h-9 border-border/80 bg-background hover:bg-muted/60 text-foreground cursor-pointer"
+                  size="icon"
+                  className="size-9 bg-primary hover:bg-primary/90 text-primary-foreground shadow-2xs rounded-xl shrink-0 cursor-pointer"
+                  aria-label="لوحة التحكم"
                 >
-                  <User className="size-3.5 text-primary" />
-                  <span>حسابي</span>
+                  <LayoutGrid className="size-4" />
                 </Button>
               </Link>
             </div>
           ) : (
-            <div className="hidden sm:flex items-center gap-1.5">
+            <div className="hidden sm:flex items-center gap-1.5 shrink-0">
               <Button
                 size="sm"
                 onClick={() => openAuthModal('register')}
-                className="gap-1.5 font-bold text-xs h-9 shadow-2xs bg-primary hover:bg-primary/90 cursor-pointer"
+                className="gap-1.5 font-bold text-xs h-9 shadow-2xs bg-primary hover:bg-primary/90 cursor-pointer whitespace-nowrap shrink-0"
               >
                 ابدأ مجاناً
                 <ArrowLeft className="size-3.5" />
@@ -503,7 +571,7 @@ export const LandingNavbar: React.FC = () => {
 
                     <Link href="/settings" onClick={() => setMobileMenuOpen(false)} className="w-full block">
                       <Button variant="outline" className="w-full font-bold text-xs h-10 gap-1.5 cursor-pointer bg-background">
-                        <User className="size-4 text-primary" />
+                        <UserIcon className="size-4 text-primary" />
                         <span>حسابي</span>
                       </Button>
                     </Link>

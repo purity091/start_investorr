@@ -318,6 +318,13 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
   setSelectedCompanyId
 }) => {
   const { updateProfile, updateBrand, setPlanSections } = useProjectWorkspace();
+  const handleBrandDraftChange = React.useCallback((draft: { prompt: string; personality: string; palette: string }) => {
+    updateBrand({
+      prompt: draft.prompt,
+      personality: draft.personality,
+      palette: draft.palette,
+    });
+  }, [updateBrand]);
   
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -496,13 +503,7 @@ export const DashboardRouter: React.FC<DashboardRouterProps> = ({
         return (
           <BrandIdentityStudio
             setActiveTab={setActiveTab}
-            onBrandDraftChange={(draft) =>
-              updateBrand({
-                prompt: draft.prompt,
-                personality: draft.personality,
-                palette: draft.palette,
-              })
-            }
+            onBrandDraftChange={handleBrandDraftChange}
           />
         );
       case 'unicorn-benchmark':

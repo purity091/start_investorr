@@ -564,34 +564,40 @@ export const ProjectWorkspaceProvider: React.FC<{
         }
       }
       
-      const { data, error } = await supabase
-        .from('business_canvas')
-        .insert([{
-          user_id: user.id,
-          canvas_data: initialWithMetadata,
-          ...getWorkspaceMetadata(initialWithMetadata),
-        }])
-        .select('id, row_version')
-        .single();
+      const metadata = getWorkspaceMetadata(initialWithMetadata);
+      const { data, error } = await supabase.rpc('create_business_canvas_atomic', {
+        p_canvas_data: initialWithMetadata,
+        p_project_title: metadata.project_title,
+        p_sector_label: metadata.sector_label,
+        p_sector_group: metadata.sector_group,
+        p_opportunity_title: metadata.opportunity_title,
+        p_project_summary: metadata.project_summary,
+        p_current_stage: metadata.current_stage,
+        p_readiness_score: metadata.readiness_score,
+        p_validation_score: metadata.validation_score,
+        p_execution_score: metadata.execution_score,
+        p_journey_progress: metadata.journey_progress,
+      });
         
       if (error) throw error;
       
-      if (data) {
+      const createdProject = Array.isArray(data) ? data[0] : data;
+      if (createdProject) {
         const createdWorkspace = deriveWorkspace(initialWithMetadata);
         skipNextAutoSaveRef.current = true;
         workspaceRef.current = createdWorkspace;
         workspaceRevisionRef.current = 0;
         persistedRevisionRef.current = 0;
         setWorkspaceState(createdWorkspace);
-        setActiveProjectId(data.id);
-        activeProjectVersionRef.current = data.row_version ?? 1;
+        setActiveProjectId(createdProject.id);
+        activeProjectVersionRef.current = createdProject.row_version ?? 1;
         lastVersionSnapshotAtRef.current = Date.now();
         setSyncStatus('saved');
         setLastSyncedAt(Date.now());
-        clearPendingSync(data.id, user.id);
+        clearPendingSync(createdProject.id, user.id);
         sessionStorage.removeItem(getProjectsCacheKey(user.id));
         invalidateProjectCountCache(user.id);
-        return data.id;
+        return createdProject.id;
       }
     } catch (err) {
       console.error('Error creating project', err);

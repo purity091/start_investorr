@@ -1307,10 +1307,18 @@ const OptionGrid = ({
     {options.map((option) => {
       const active = option.id === value;
       return (
-        <button
+        <div
           key={option.id}
           onClick={() => onChange(option.id)}
           aria-pressed={active}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              onChange(option.id);
+            }
+          }}
           className={`ui-card-interactive rounded-lg p-4 text-right transition sm:min-h-[180px] xl:min-h-[190px] ${
             active
               ? 'bg-primary text-primary-foreground shadow-sm ring-2 ring-ring/20'
@@ -1365,7 +1373,7 @@ const OptionGrid = ({
               </button>
             </div>
           ) : null}
-        </button>
+        </div>
       );
     })}
   </div>

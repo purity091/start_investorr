@@ -5,8 +5,9 @@ import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Badge } from '@/components/ui/Badge';
-import { Loader2, Mail, Lock, AlertCircle, ArrowLeft, User as UserIcon, Sparkles, Eye, EyeOff, CheckSquare, Square, X } from 'lucide-react';
+import { Loader2, Mail, Lock, KeyRound, AlertCircle, ArrowLeft, User as UserIcon, Sparkles, Eye, EyeOff, CheckSquare, Square, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { supabase } from '@/lib/supabase';
 import { DEFAULT_SUBSCRIPTION_PLAN_ID, SUBSCRIPTION_PLAN_IDS, SUBSCRIPTION_PLANS, SubscriptionPlanId } from '@/lib/subscriptionPlans';
 
 type AuthMode = 'login' | 'register' | 'forgot_password';
@@ -71,6 +72,22 @@ export const AuthModal: React.FC<AuthModalProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
+  const [isPasskeyLoading, setIsPasskeyLoading] = useState(false);
+
+  const handlePasskeySignIn = async () => {
+    setError(null);
+    setMessage(null);
+    setIsPasskeyLoading(true);
+    try {
+      const { error: passkeyError } = await supabase.auth.signInWithPasskey();
+      if (passkeyError) throw passkeyError;
+      window.location.href = getSafeRedirectPath();
+    } catch {
+      setError('تعذر تسجيل الدخول بمفتاح المرور. جرّب جهازاً مسجلاً أو استخدم البريد الإلكتروني.');
+    } finally {
+      setIsPasskeyLoading(false);
+    }
+  };
 
   useEffect(() => {
     if (!isOpen) return;
@@ -417,6 +434,26 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                   </>
                 )}
               </Button>
+
+              {mode === 'login' && (
+                <>
+                  <div className="flex items-center gap-3 text-[11px] font-bold text-muted-foreground">
+                    <span className="h-px flex-1 bg-border" />
+                    <span>أو</span>
+                    <span className="h-px flex-1 bg-border" />
+                  </div>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={handlePasskeySignIn}
+                    disabled={isLoading || isPasskeyLoading}
+                    className="w-full py-5 rounded-xl font-black text-xs gap-2"
+                  >
+                    {isPasskeyLoading ? <Loader2 className="size-4 animate-spin" /> : <KeyRound className="size-4" />}
+                    تسجيل الدخول باستخدام مفتاح المرور
+                  </Button>
+                </>
+              )}
             </form>
 
           </div>
