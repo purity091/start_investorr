@@ -5,6 +5,7 @@ import {
   Globe2,
   LockKeyhole,
   KeyRound,
+  Trash2,
   Save,
   ShieldCheck,
   Sparkles,
@@ -101,6 +102,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
   const [passwordMsg, setPasswordMsg] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const [isRegisteringPasskey, setIsRegisteringPasskey] = useState(false);
   const [passkeyMsg, setPasskeyMsg] = useState<string | null>(null);
+  const [passkeys, setPasskeys] = useState<Array<{ id: string; friendly_name?: string; created_at: string; last_used_at?: string }>>([]);
 
   const handleRegisterPasskey = async () => {
     setIsRegisteringPasskey(true);
@@ -108,6 +110,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
     try {
       const { error } = await supabase.auth.registerPasskey();
       if (error) throw error;
+      await loadPasskeys();
       setPasskeyMsg('تمت إضافة مفتاح المرور لهذا الجهاز بنجاح.');
     } catch (error: unknown) {
       const passkeyError = error as {
@@ -128,6 +131,26 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
       setIsRegisteringPasskey(false);
     }
   };
+
+  const loadPasskeys = async () => {
+    const { data, error } = await supabase.auth.passkey.list();
+    if (!error && data) setPasskeys(data);
+  };
+
+  const handleDeletePasskey = async (passkeyId: string) => {
+    if (!window.confirm('هل تريد حذف مفتاح المرور من هذا الحساب؟')) return;
+    const { error } = await supabase.auth.passkey.delete({ passkeyId });
+    if (error) {
+      setPasskeyMsg('تعذر حذف مفتاح المرور. حاول مرة أخرى.');
+      return;
+    }
+    setPasskeys((current) => current.filter((passkey) => passkey.id !== passkeyId));
+    setPasskeyMsg('تم حذف مفتاح المرور بنجاح.');
+  };
+
+  React.useEffect(() => {
+    if (activeTab === 'security' && authUser) void loadPasskeys();
+  }, [activeTab, authUser]);
 
   const handleSave = async () => {
     setSaved(false);
@@ -359,6 +382,25 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
                     {isRegisteringPasskey ? <Loader2 className="size-3.5 animate-spin" /> : <KeyRound className="size-3.5" />}
                     إضافة مفتاح لهذا الجهاز
                   </Button>
+                  {passkeys.length > 0 && (
+                    <div className="space-y-2 border-t border-primary/15 pt-3">
+                      <p className="text-[11px] font-bold text-muted-foreground">المفاتيح المسجلة</p>
+                      {passkeys.map((passkey) => (
+                        <div key={passkey.id} className="flex items-center justify-between gap-3 rounded-md border border-border/60 bg-background p-2.5">
+                          <div className="flex items-center gap-2 text-right">
+                            <KeyRound className="size-4 shrink-0 text-primary" />
+                            <div>
+                              <p className="text-xs font-bold text-foreground">{passkey.friendly_name || 'مفتاح مرور'}</p>
+                              <p className="text-[10px] text-muted-foreground">تمت الإضافة في {new Date(passkey.created_at).toLocaleDateString('en-GB')}</p>
+                            </div>
+                          </div>
+                          <Button type="button" variant="ghost" size="icon" onClick={() => handleDeletePasskey(passkey.id)} aria-label="حذف مفتاح المرور" title="حذف مفتاح المرور">
+                            <Trash2 className="size-3.5 text-destructive" />
+                          </Button>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
                 <div className="space-y-3 rounded-lg border border-border/50 bg-muted/20 p-4">
