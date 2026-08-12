@@ -109,7 +109,20 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
       const { error } = await supabase.auth.registerPasskey();
       if (error) throw error;
       setPasskeyMsg('تمت إضافة مفتاح المرور لهذا الجهاز بنجاح.');
-    } catch {
+    } catch (error: unknown) {
+      const passkeyError = error as {
+        message?: unknown;
+        name?: unknown;
+        status?: unknown;
+        code?: unknown;
+      };
+
+      console.error('Passkey registration failed:', {
+        message: typeof passkeyError.message === 'string' ? passkeyError.message : 'Unknown error',
+        name: typeof passkeyError.name === 'string' ? passkeyError.name : undefined,
+        status: typeof passkeyError.status === 'number' ? passkeyError.status : undefined,
+        code: typeof passkeyError.code === 'string' ? passkeyError.code : undefined,
+      });
       setPasskeyMsg('تعذر إضافة مفتاح المرور. تأكد من دعم المتصفح أو أعد المحاولة.');
     } finally {
       setIsRegisteringPasskey(false);
