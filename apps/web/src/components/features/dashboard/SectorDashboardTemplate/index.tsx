@@ -143,7 +143,10 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
     setIsDownloading(true);
 
     try {
-      window.print();
+      if (navigator.clipboard) {
+        await navigator.clipboard.writeText(window.location.href);
+        alert('تم نسخ رابط مشاركة لوحة القطاع بنجاح!');
+      }
     } finally {
       setIsDownloading(false);
     }

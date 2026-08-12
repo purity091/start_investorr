@@ -452,7 +452,7 @@ const getCleanDomain = (url?: string): string => {
 export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: rawProject, onBack, onSelectProject, bookmarkSource = 'proven-projects' }) => {
   const { user } = useAuth();
   const [activeId, setActiveId] = useState<string>('overview');
-  const [isTocOpen, setIsTocOpen] = useState<boolean>(false);
+  const [isTocOpen, setIsTocOpen] = useState<boolean>(true);
   const [isSourcesOpen, setIsSourcesOpen] = useState<boolean>(false);
   const [isPolicyOpen, setIsPolicyOpen] = useState<boolean>(false);
   const [isQualityOpen, setIsQualityOpen] = useState<boolean>(false);
@@ -871,8 +871,8 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
       <div 
         ref={containerRef} 
         className={cn(
-          "grid gap-8 items-start relative transition-all duration-300",
-          isTocOpen ? "lg:grid-cols-[260px_1fr]" : "grid-cols-1"
+          "grid gap-6 sm:gap-8 items-start relative transition-all duration-300",
+          isTocOpen ? "lg:grid-cols-[20%_1fr]" : "grid-cols-1"
         )}
       >
 

@@ -22,6 +22,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
 import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
+import { AIPromptHelper } from '@/components/features/business/AIPromptHelper';
 
 type Step = {
   id: number;
@@ -528,6 +529,16 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
 
                     {/* Step Input Textarea with Practical Example Placeholder */}
                     <div className="space-y-2">
+                      <div className="flex items-center justify-between gap-2 flex-wrap border-b border-border/40 pb-1">
+                        <span className="text-xs font-bold text-foreground">الإجابة والتحليل المستهدف:</span>
+                        <AIPromptHelper
+                          sectionTitle={phase.label}
+                          questionText={step.title}
+                          projectName={workspace.profile.name || 'مشروع استثماري'}
+                          onApplyAnswer={(ans) => setValue(step.id, ans)}
+                          compact
+                        />
+                      </div>
                       <Textarea
                         value={value}
                         onChange={(e) => setValue(step.id, e.target.value)}

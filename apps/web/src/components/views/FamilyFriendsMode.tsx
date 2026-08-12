@@ -17,6 +17,7 @@ import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
+import { AIPromptHelper } from '@/components/features/business/AIPromptHelper';
 
 interface FamilyFriendsData {
   nickname: string;
@@ -257,6 +258,16 @@ export const FamilyFriendsMode: React.FC<{
               
               {/* Textarea Input */}
               <div className="space-y-2">
+                <div className="flex items-center justify-between gap-2 flex-wrap border-b border-border/40 pb-1.5">
+                  <span className="text-xs font-bold text-foreground">مدخلات الفكرة والبيانات:</span>
+                  <AIPromptHelper
+                    sectionTitle={`الخطوة ${currentStep + 1}: ${current.title}`}
+                    questionText={current.subtitle}
+                    projectName="مشروع جديد"
+                    onApplyAnswer={(ans) => onChange({ [current.id]: ans })}
+                    compact
+                  />
+                </div>
                 <Textarea
                   value={currentValue}
                   onChange={(event) => onChange({ [current.id]: event.target.value })}

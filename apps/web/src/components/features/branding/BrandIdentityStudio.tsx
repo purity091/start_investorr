@@ -9,6 +9,7 @@ import {
   FileText,
   Layers3,
   Sparkles,
+  Share2,
   Target,
 } from 'lucide-react';
 import { useProjectWorkspace } from '../../../features/workspace/ProjectWorkspaceContext';
@@ -718,7 +719,9 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
   const handleExportReport = async () => {
     setExportState('loading');
     try {
-      window.print();
+      if (navigator.clipboard) {
+        await navigator.clipboard.writeText(window.location.href);
+      }
       setExportState('success');
       window.setTimeout(() => setExportState('idle'), 3200);
     } catch {
@@ -1031,12 +1034,12 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
                           : ''
                     }`}
                   >
-                    <Download size={18} />
+                    <Share2 size={18} />
                     {exportState === 'success'
-                      ? 'تم إنشاء التقرير بنجاح'
+                      ? 'تم نسخ رابط مشاركة الهوية بنجاح!'
                       : exportState === 'error'
-                        ? 'تعذر إنشاء التقرير حالياً'
-                        : 'طباعة التقرير / حفظ PDF'}
+                        ? 'تعذر نسخ الرابط حالياً'
+                        : 'مشاركة تقرير الهوية البصرية'}
                   </Button>
                   <Button
                     onClick={() => setActiveTab?.('workspace')}
@@ -1051,12 +1054,12 @@ export const BrandIdentityStudio: React.FC<BrandIdentityStudioProps> = ({
                 <div className="mt-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
                   <p className="text-[12px] font-bold leading-7 text-slate-600">
                     {exportState === 'loading'
-                      ? 'يتم الآن فتح نافذة الطباعة لحفظ التقرير أو طباعته.'
+                      ? 'جاري تجهيز رابط المشاركة والتصدير المباشر...'
                       : exportState === 'success'
-                        ? 'التأكيد ظهر هنا لإيضاح حالة النجاح بعد التصدير وتسليم Feedback واضح للمستخدم.'
+                        ? 'تم نسخ رابط مشاركة الهوية، يمكنك مشاركته مع فريقك والمصممين.'
                         : exportState === 'error'
                           ? 'هذه حالة خطأ مرئية للمطور حتى يبني رسالة فشل واضحة إذا تعذر التصدير لاحقاً.'
-                          : 'هذه المنطقة تمثل حالة التأكيد النصي أسفل الإجراء الرئيسي بعد كل تفاعل مهم.'}
+                          : 'يمكنك مشاركة تقرير الهوية البصرية بسهولة مع فريقك والشركاء.'}
                   </p>
                 </div>
               </div>

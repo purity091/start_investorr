@@ -34,6 +34,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../../
 import { cn } from '../../../lib/utils';
 import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
 import { getProjectEditPath } from '@/features/workspace/workspaceNavigation';
+import { AIPromptHelper } from './AIPromptHelper';
 
 type CanvasKey =
   | 'customerSegments'
@@ -958,9 +959,21 @@ export const BusinessModelCanvas: React.FC<{
                         {index + 1}
                       </Badge>
                       <div className="min-w-0 space-y-2">
-                        <label className="block text-sm font-medium leading-7 text-foreground">
-                          {question.question}
-                        </label>
+                        <div className="flex items-center justify-between gap-2 flex-wrap border-b border-border/40 pb-1.5">
+                          <label className="block text-sm font-medium leading-7 text-foreground">
+                            {question.question}
+                          </label>
+                          <AIPromptHelper
+                            sectionTitle={currentBlock ? BLOCK_META[currentBlock].title : ''}
+                            questionText={question.question}
+                            projectName={activeProject?.brief.name || 'مشروع استثماري'}
+                            onApplyAnswer={(ans) =>
+                              currentBlock &&
+                              handleBlockQuestionAnswerChange(currentBlock, question.id, ans)
+                            }
+                            compact
+                          />
+                        </div>
                         <Textarea
                           value={question.answer}
                           onChange={(event) =>

@@ -56,7 +56,7 @@ const tabItems: Array<{
 }> = [
   { value: 'identity', label: 'البيانات الشخصية', icon: User },
   { value: 'security', label: 'الأمان والخصوصية', icon: ShieldCheck },
-  { value: 'preferences', label: 'التفضيلات', icon: Globe2 },
+  { value: 'preferences', label: 'التفضيلات والإشعارات', icon: Globe2 },
 ];
 
 export const Settings: React.FC<SettingsProps> = ({ user }) => {
@@ -80,16 +80,16 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
   const [defaultReport, setDefaultReport] = useState(authUser?.user_metadata?.default_report || 'pdf');
   const [defaultPage, setDefaultPage] = useState(authUser?.user_metadata?.default_page || 'customer-dashboard');
 
-  // Notification checkboxes state — persisted in user_metadata
+  // Notification checkboxes state
   const [notifications, setNotifications] = useState<Record<string, boolean>>(() => {
-    const saved = authUser?.user_metadata?.notifications as Record<string, boolean> | undefined;
+    const savedNotifs = authUser?.user_metadata?.notifications as Record<string, boolean> | undefined;
     return {
-      notif_projects: saved?.notif_projects ?? true,
-      notif_security: saved?.notif_security ?? true,
-      notif_billing: saved?.notif_billing ?? true,
-      notif_reports: saved?.notif_reports ?? true,
-      notif_weekly: saved?.notif_weekly ?? true,
-      notif_updates: saved?.notif_updates ?? false,
+      notif_projects: savedNotifs?.notif_projects ?? true,
+      notif_security: savedNotifs?.notif_security ?? true,
+      notif_billing: savedNotifs?.notif_billing ?? true,
+      notif_reports: savedNotifs?.notif_reports ?? true,
+      notif_weekly: savedNotifs?.notif_weekly ?? true,
+      notif_updates: savedNotifs?.notif_updates ?? false,
     };
   });
 
@@ -108,7 +108,6 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
       const currentUserId = authUser?.id;
 
       if (currentUserId) {
-        // 1. Update public.profiles table in Supabase Database
         const { error: profileError } = await supabase
           .from('profiles')
           .update({
@@ -119,7 +118,6 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
 
         if (profileError) throw profileError;
 
-        // 2. Update Supabase Auth user metadata & email if changed
         const updatePayload: Parameters<typeof supabase.auth.updateUser>[0] = {
           data: {
             full_name: fullName,
@@ -141,7 +139,6 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
         const { error: authError } = await supabase.auth.updateUser(updatePayload);
         if (authError) throw authError;
 
-        // 3. Refresh context profile state
         if (refetchProfile) {
           await refetchProfile();
         }
@@ -194,132 +191,150 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
   const displayEmail = email || user.email;
 
   return (
-    <div className="mx-auto max-w-5xl space-y-6 sm:space-y-8 px-4 py-6 sm:py-8 sm:px-6 pb-24" dir="rtl">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <div className="w-full space-y-5 px-1 py-2 sm:px-2 pb-24 text-right font-['IBM_Plex_Sans_Arabic']" dir="rtl">
+      {/* Top Header Shell (Full Width) */}
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-b border-border/50 pb-4">
         <div>
-          <h2 className="text-3xl font-bold tracking-tight text-foreground">إعدادات الحساب</h2>
-          <p className="mt-1 text-sm text-muted-foreground">
-            إدارة بياناتك الشخصية، الأمان، وتفضيلات النظام المنحفظة في قاعدة البيانات.
+          <div className="flex items-center gap-2 text-xs text-muted-foreground font-medium mb-1">
+            <span>لوحة التحكم</span>
+            <span>/</span>
+            <span className="text-foreground font-bold">إعدادات الحساب</span>
+          </div>
+          <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground">
+            إعدادات الحساب والتفضيلات
+          </h1>
+          <p className="mt-0.5 text-xs sm:text-sm text-muted-foreground">
+            إدارة البيانات الشخصية، الأمان، والتفضيلات التشغيلية للحساب.
           </p>
         </div>
-        <div className="flex items-center gap-3 bg-muted/50 px-4 py-2.5 rounded-xl border border-border/60">
-          <div className="size-9 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">
+
+        <div className="flex items-center gap-3 bg-muted/60 px-3.5 py-2 rounded-lg border border-border/50 shrink-0 self-start sm:self-auto">
+          <div className="size-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-xs">
             {displayName.slice(0, 1).toUpperCase()}
           </div>
-          <div className="text-right">
-            <p className="text-sm font-semibold">{displayName}</p>
-            <p className="text-xs text-muted-foreground">{displayEmail}</p>
+          <div className="text-right leading-none space-y-1">
+            <p className="text-xs font-bold text-foreground">{displayName}</p>
+            <p className="text-[11px] text-muted-foreground">{displayEmail}</p>
           </div>
         </div>
       </div>
 
       {errorMessage && (
-        <div className="flex items-center gap-3 rounded-lg border border-destructive/50 bg-destructive/10 p-4 text-destructive">
-          <AlertCircle className="size-5 shrink-0" />
-          <p className="text-sm font-medium">{errorMessage}</p>
+        <div className="flex items-center gap-2 rounded-md border border-destructive/50 bg-destructive/10 p-3 text-destructive text-xs font-medium">
+          <AlertCircle className="size-4 shrink-0" />
+          <span>{errorMessage}</span>
         </div>
       )}
 
-      <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as SettingsTab)} dir="rtl" className="space-y-6">
-        <div className="flex justify-start">
-          <TabsList dir="rtl" className="grid w-full max-w-md grid-cols-3 mr-0">
-            {tabItems.map((item) => {
-              const Icon = item.icon;
-              return (
-                <TabsTrigger key={item.value} value={item.value} className="gap-2 justify-center">
-                  <Icon className="size-4" />
-                  <span className="hidden sm:inline">{item.label}</span>
-                </TabsTrigger>
-              );
-            })}
-          </TabsList>
-        </div>
+      {/* Main Settings Tabs (Full Width Grid Layout) */}
+      <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as SettingsTab)} dir="rtl" className="w-full space-y-4">
+        <TabsList dir="rtl" className="w-full justify-start bg-muted/50 p-1 border border-border/40 rounded-lg">
+          {tabItems.map((item) => {
+            const Icon = item.icon;
+            return (
+              <TabsTrigger key={item.value} value={item.value} className="gap-2 font-bold text-xs px-4 py-1.5 cursor-pointer">
+                <Icon className="size-3.5" />
+                <span>{item.label}</span>
+              </TabsTrigger>
+            );
+          })}
+        </TabsList>
 
-        <TabsContent value="identity" className="space-y-6 mt-0">
-          <Card className="border-border/70 shadow-sm">
-            <CardHeader className="text-right">
-              <CardTitle>البيانات الشخصية</CardTitle>
-              <CardDescription>المعلومات الأساسية لملفك التعريفي في قاعدة البيانات.</CardDescription>
+        {/* Tab 1: Personal Details */}
+        <TabsContent value="identity" className="w-full space-y-4 mt-0">
+          <Card className="w-full border-border/60 shadow-2xs">
+            <CardHeader className="text-right pb-3 border-b border-border/40">
+              <CardTitle className="text-base font-bold">البيانات الشخصية والملف التعريفي</CardTitle>
+              <CardDescription className="text-xs">المعلومات الأساسية لحسابك المسجلة في المنصة.</CardDescription>
             </CardHeader>
-            <CardContent className="grid gap-4 sm:gap-6 sm:grid-cols-2 p-4 sm:p-6 pt-0">
-              <Field label="الاسم الكامل">
-                <Input
-                  value={fullName}
-                  onChange={(e) => setFullName(e.target.value)}
-                  className="text-right"
-                  placeholder="أدخل الاسم الكامل"
-                />
-              </Field>
-              <Field label="البريد الإلكتروني" hint="مخفي في المشاركات">
-                <Input
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  type="email"
-                  dir="ltr"
-                  className="text-right"
-                  placeholder="name@example.com"
-                />
-              </Field>
-              <Field label="المسمى أو الدور">
-                <Input
-                  value={jobTitle}
-                  onChange={(e) => setJobTitle(e.target.value)}
-                  className="text-right"
-                  placeholder="مؤسس مشروع / مدير منتج"
-                />
-              </Field>
-              <Field label="السوق الأساسي">
-                <Select value={market} onValueChange={setMarket}>
-                  <SelectTrigger className="text-right">
-                    <SelectValue placeholder="اختر السوق" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="sy">سوريا</SelectItem>
-                    <SelectItem value="sa">السعودية</SelectItem>
-                    <SelectItem value="ae">الإمارات</SelectItem>
-                    <SelectItem value="eg">مصر</SelectItem>
-                  </SelectContent>
-                </Select>
-              </Field>
-              <Field label="نبذة مختصرة" className="sm:col-span-2">
-                <Textarea
-                  value={bio}
-                  onChange={(e) => setBio(e.target.value)}
-                  className="min-h-24 text-right leading-relaxed"
-                  placeholder="اكتب نبذة مختصرة عنك..."
-                />
-              </Field>
+            <CardContent className="p-4 sm:p-6 space-y-4">
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <Field label="الاسم الكامل">
+                  <Input
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                    className="text-right text-xs"
+                    placeholder="أدخل الاسم الكامل"
+                  />
+                </Field>
+
+                <Field label="البريد الإلكتروني" hint="مخفي في المشاركات العامة">
+                  <Input
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    type="email"
+                    dir="ltr"
+                    className="text-right text-xs"
+                    placeholder="name@example.com"
+                  />
+                </Field>
+
+                <Field label="المسمى الوظيفي / الدور">
+                  <Input
+                    value={jobTitle}
+                    onChange={(e) => setJobTitle(e.target.value)}
+                    className="text-right text-xs"
+                    placeholder="مؤسس مشروع / مدير منتج"
+                  />
+                </Field>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                <Field label="السوق المستهدف الأساسي">
+                  <Select value={market} onValueChange={setMarket}>
+                    <SelectTrigger className="text-right text-xs">
+                      <SelectValue placeholder="اختر السوق" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="sy">سوريا</SelectItem>
+                      <SelectItem value="sa">السعودية</SelectItem>
+                      <SelectItem value="ae">الإمارات</SelectItem>
+                      <SelectItem value="eg">مصر</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </Field>
+
+                <Field label="نبذة مختصرة عن نشاطك">
+                  <Textarea
+                    value={bio}
+                    onChange={(e) => setBio(e.target.value)}
+                    className="min-h-20 text-right text-xs leading-relaxed"
+                    placeholder="اكتب نبذة مختصرة عنك وعن مشاريعك..."
+                  />
+                </Field>
+              </div>
             </CardContent>
           </Card>
         </TabsContent>
 
-        <TabsContent value="security" className="space-y-6 mt-0">
-          <div className="grid gap-6 md:grid-cols-[1fr_320px]">
-            <Card className="border-border/70 shadow-sm">
-              <CardHeader className="text-right">
-                <CardTitle>إعدادات الأمان</CardTitle>
-                <CardDescription>خيارات تسجيل الدخول والحماية.</CardDescription>
+        {/* Tab 2: Security */}
+        <TabsContent value="security" className="w-full space-y-4 mt-0">
+          <div className="grid gap-4 lg:grid-cols-12">
+            <Card className="lg:col-span-8 border-border/60 shadow-2xs">
+              <CardHeader className="text-right pb-3 border-b border-border/40">
+                <CardTitle className="text-base font-bold">إعدادات الأمان وحماية الحساب</CardTitle>
+                <CardDescription className="text-xs">تغيير كلمة المرور وتفعيل خيارات الحماية الإضافية.</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="space-y-4 rounded-xl border border-border/70 bg-muted/35 p-4 sm:p-5">
+              <CardContent className="p-4 sm:p-6 space-y-4">
+                <div className="space-y-3 rounded-lg border border-border/50 bg-muted/20 p-4">
                   <div className="flex items-center gap-2 text-right">
-                    <LockKeyhole className="size-4 text-muted-foreground" />
-                    <h3 className="text-sm font-semibold text-foreground">تغيير كلمة المرور</h3>
+                    <LockKeyhole className="size-4 text-primary" />
+                    <h3 className="text-xs font-bold text-foreground">تحديث كلمة المرور</h3>
                   </div>
 
                   {passwordMsg && (
                     <div
                       className={cn(
-                        'flex items-center gap-2 rounded-md p-3 text-xs font-medium',
+                        'flex items-center gap-2 rounded-md p-2.5 text-xs font-medium',
                         passwordMsg.type === 'success'
                           ? 'bg-emerald-500/10 text-emerald-600 border border-emerald-500/20'
                           : 'bg-destructive/10 text-destructive border border-destructive/20'
                       )}
                     >
                       {passwordMsg.type === 'success' ? (
-                        <CheckCircle2 className="size-4 shrink-0" />
+                        <CheckCircle2 className="size-3.5 shrink-0" />
                       ) : (
-                        <AlertCircle className="size-4 shrink-0" />
+                        <AlertCircle className="size-3.5 shrink-0" />
                       )}
                       <span>{passwordMsg.text}</span>
                     </div>
@@ -331,14 +346,14 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
                       placeholder="كلمة المرور الجديدة"
                       value={newPassword}
                       onChange={(e) => setNewPassword(e.target.value)}
-                      className="text-right"
+                      className="text-right text-xs"
                     />
                     <Input
                       type="password"
                       placeholder="تأكيد كلمة المرور الجديدة"
                       value={confirmPassword}
                       onChange={(e) => setConfirmPassword(e.target.value)}
-                      className="text-right"
+                      className="text-right text-xs"
                     />
                   </div>
                   <Button
@@ -346,86 +361,91 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
                     variant="secondary"
                     onClick={handleUpdatePassword}
                     disabled={isUpdatingPassword}
+                    className="text-xs font-bold"
                   >
                     {isUpdatingPassword ? (
                       <>
-                        <Loader2 className="size-4 ml-2 animate-spin" />
-                        جاري التحديث...
+                        <Loader2 className="size-3.5 ml-2 animate-spin" />
+                        جارٍ التحديث...
                       </>
                     ) : (
                       'تحديث كلمة المرور'
                     )}
                   </Button>
                 </div>
-                <div className="space-y-3">
-                  <ToggleRow title="التحقق الثنائي" description="طبقة أمان إضافية قبل الدخول." checked />
-                  <ToggleRow title="تنبيهات الدخول" description="إشعار عند تسجيل دخول من جهاز جديد." checked />
+
+                <div className="space-y-2">
+                  <ToggleRow title="التحقق الثنائي (2FA)" description="حماية إضافية عبر رمز التحقق." checked />
+                  <ToggleRow title="تنبيهات تسجيل الدخول" description="إشعارات فورية عند دخول الحساب من جهاز جديد." checked />
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-border/70 shadow-sm">
-              <CardHeader className="text-right">
-                <CardTitle>جلسة الدخول الحالية</CardTitle>
-                <CardDescription>أنت مسجّل الدخول حالياً بهذا الحساب.</CardDescription>
+            <Card className="lg:col-span-4 border-border/60 shadow-2xs">
+              <CardHeader className="text-right pb-3 border-b border-border/40">
+                <CardTitle className="text-base font-bold">الجلسة الحالية</CardTitle>
+                <CardDescription className="text-xs">تفاصيل الجهاز المسجّل حالياً.</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-start justify-between gap-3 rounded-xl border border-border/70 bg-muted/35 p-3 text-right">
+              <CardContent className="p-4 space-y-3">
+                <div className="flex items-start justify-between gap-3 rounded-lg border border-border/60 bg-muted/20 p-3 text-right">
                   <div>
-                    <p className="text-sm font-semibold text-foreground">الجلسة الحالية</p>
-                    <p className="text-xs text-muted-foreground mt-1">{displayEmail}</p>
-                    <p className="text-xs text-muted-foreground">آخر نشاط: الآن</p>
+                    <p className="text-xs font-bold text-foreground">الجلسة النشطة</p>
+                    <p className="text-[11px] text-muted-foreground mt-0.5">{displayEmail}</p>
+                    <p className="text-[10px] text-muted-foreground mt-1">آخر نشاط: الآن</p>
                   </div>
-                  <Badge className="shrink-0 bg-emerald-500/10 text-emerald-700 border-emerald-500/20">نشط الآن</Badge>
+                  <Badge className="shrink-0 bg-emerald-500/10 text-emerald-600 border-emerald-500/20 text-[10px] font-bold">
+                    متصل الآن
+                  </Badge>
                 </div>
-                <p className="text-xs text-muted-foreground text-right">
-                  لإدارة الجلسات الأخرى أو إلغاء الوصول من أجهزة أخرى، استخدم خيار تسجيل الخروج من جميع الأجهزة.
-                </p>
               </CardContent>
             </Card>
           </div>
         </TabsContent>
 
-        <TabsContent value="preferences" className="space-y-6 mt-0">
-          <div className="grid gap-6 md:grid-cols-[1fr_320px]">
-            <Card className="border-border/70 shadow-sm">
-              <CardHeader className="text-right">
-                <CardTitle>تفضيلات النظام</CardTitle>
-                <CardDescription>الواجهة والإعدادات الافتراضية.</CardDescription>
+        {/* Tab 3: System Preferences & Notifications */}
+        <TabsContent value="preferences" className="w-full space-y-4 mt-0">
+          <div className="grid gap-4 lg:grid-cols-12">
+            <Card className="lg:col-span-7 border-border/60 shadow-2xs">
+              <CardHeader className="text-right pb-3 border-b border-border/40">
+                <CardTitle className="text-base font-bold">تفضيلات واجهة النظام</CardTitle>
+                <CardDescription className="text-xs">تخصيص اللغة والصفحة الافتراضية وكثافة العرض.</CardDescription>
               </CardHeader>
-              <CardContent className="grid gap-6 sm:grid-cols-2">
+              <CardContent className="p-4 sm:p-6 grid gap-4 sm:grid-cols-2">
                 <Field label="لغة المنصة">
                   <Select value={language} onValueChange={setLanguage}>
-                    <SelectTrigger className="text-right"><SelectValue /></SelectTrigger>
+                    <SelectTrigger className="text-right text-xs"><SelectValue /></SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="ar">العربية</SelectItem>
+                      <SelectItem value="ar">العربية (الأصلية)</SelectItem>
                       <SelectItem value="en">English</SelectItem>
                     </SelectContent>
                   </Select>
                 </Field>
-                <Field label="كثافة العرض">
+
+                <Field label="كثافة الواجهة">
                   <Select value={density} onValueChange={setDensity}>
-                    <SelectTrigger className="text-right"><SelectValue /></SelectTrigger>
+                    <SelectTrigger className="text-right text-xs"><SelectValue /></SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="compact">مضغوط</SelectItem>
+                      <SelectItem value="compact">مضغوط وعالي الكثافة</SelectItem>
                       <SelectItem value="comfortable">مريح</SelectItem>
                     </SelectContent>
                   </Select>
                 </Field>
-                <Field label="التقرير الافتراضي">
+
+                <Field label="نوع التقرير الافتراضي">
                   <Select value={defaultReport} onValueChange={setDefaultReport}>
-                    <SelectTrigger className="text-right"><SelectValue /></SelectTrigger>
+                    <SelectTrigger className="text-right text-xs"><SelectValue /></SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="interactive">تقرير تفاعلي</SelectItem>
-                      <SelectItem value="brief">Brief مختصر</SelectItem>
+                      <SelectItem value="interactive">تقرير تفاعلي حي</SelectItem>
+                      <SelectItem value="brief">ملخص مختصر</SelectItem>
                     </SelectContent>
                   </Select>
                 </Field>
-                <Field label="الصفحة الافتراضية">
+
+                <Field label="الصفحة الرئيسية عند الدخول">
                   <Select value={defaultPage} onValueChange={setDefaultPage}>
-                    <SelectTrigger className="text-right"><SelectValue /></SelectTrigger>
+                    <SelectTrigger className="text-right text-xs"><SelectValue /></SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="customer-dashboard">الرئيسية</SelectItem>
+                      <SelectItem value="customer-dashboard">لوحة التحكم</SelectItem>
                       <SelectItem value="my-plans">مشاريعي</SelectItem>
                     </SelectContent>
                   </Select>
@@ -433,16 +453,18 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
               </CardContent>
             </Card>
 
-            <Card className="border-border/70 shadow-sm">
-              <CardHeader className="text-right">
-                <CardTitle>الإشعارات</CardTitle>
-                <CardDescription>التنبيهات التي ترغب باستلامها — تُحفظ تلقائياً عند الضغط على حفظ.</CardDescription>
+            <Card className="lg:col-span-5 border-border/60 shadow-2xs">
+              <CardHeader className="text-right pb-3 border-b border-border/40">
+                <CardTitle className="text-base font-bold">تفضيلات الإشعارات</CardTitle>
+                <CardDescription className="text-xs">تحديد التنبيهات المستلمة بالحساب.</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="p-4 space-y-3">
                 {NOTIFICATION_OPTIONS.map((option) => (
-                  <label key={option.id} className="flex cursor-pointer items-start gap-3 text-right">
-                    <Bell className="mt-0.5 size-4 shrink-0 text-muted-foreground" />
-                    <span className="flex-1 text-sm text-foreground">{option.label}</span>
+                  <label key={option.id} className="flex cursor-pointer items-center justify-between text-right p-2 rounded-md hover:bg-muted/30 transition-colors">
+                    <div className="flex items-center gap-2">
+                      <Bell className="size-3.5 text-muted-foreground shrink-0" />
+                      <span className="text-xs font-medium text-foreground">{option.label}</span>
+                    </div>
                     <Checkbox
                       checked={notifications[option.id] ?? false}
                       onCheckedChange={(checked) =>
@@ -458,24 +480,22 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
         </TabsContent>
       </Tabs>
 
-      <div className="sticky bottom-4 z-10 flex items-center justify-between rounded-xl border border-border bg-card/95 px-4 py-3 sm:px-6 sm:py-4 shadow-sm backdrop-blur">
-        <div className="flex items-center gap-3">
+      {/* Floating Save Actions Bar */}
+      <div className="sticky bottom-4 z-20 flex items-center justify-between rounded-xl border border-border bg-card/95 px-4 py-3 shadow-md backdrop-blur">
+        <div className="flex items-center gap-2">
           {saved ? (
-            <CheckCircle2 className="size-5 text-emerald-600" />
+            <CheckCircle2 className="size-4 text-emerald-600 shrink-0" />
           ) : (
-            <Sparkles className="size-5 text-muted-foreground" />
+            <Sparkles className="size-4 text-primary shrink-0" />
           )}
           <div>
-            <p className="text-sm font-semibold text-foreground">
-              {saved ? 'تم حفظ التغييرات في قاعدة البيانات بنجاح' : 'تعديلات إعدادات الحساب'}
-            </p>
-            <p className="hidden text-xs text-muted-foreground sm:block">
-              تأكد من الضغط على زر الحفظ أدناه لحفظ أي تعديلات قمت بها في التبويبات.
+            <p className="text-xs font-bold text-foreground">
+              {saved ? 'تم حفظ التعديلات في قاعدة البيانات' : 'حفظ تغييرات الإعدادات'}
             </p>
           </div>
         </div>
-        <Button onClick={handleSave} loading={isSaving}>
-          <Save className="size-4 ml-2" />
+        <Button onClick={handleSave} loading={isSaving} size="sm" className="font-bold text-xs gap-1.5 cursor-pointer">
+          <Save className="size-3.5 ml-1" />
           حفظ التعديلات
         </Button>
       </div>
@@ -485,10 +505,10 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
 
 function Field({ label, hint, children, className }: { label: string; hint?: string; children: React.ReactNode; className?: string }) {
   return (
-    <div className={cn('space-y-2 text-right', className)}>
+    <div className={cn('space-y-1.5 text-right', className)}>
       <div className="flex items-center justify-between">
-        <label className="text-sm font-medium text-foreground">{label}</label>
-        {hint && <span className="text-xs text-muted-foreground">{hint}</span>}
+        <label className="text-xs font-bold text-foreground">{label}</label>
+        {hint && <span className="text-[10px] text-muted-foreground">{hint}</span>}
       </div>
       {children}
     </div>
@@ -497,13 +517,15 @@ function Field({ label, hint, children, className }: { label: string; hint?: str
 
 function ToggleRow({ title, description, checked = false }: { title: string; description: string; checked?: boolean }) {
   return (
-    <div className="flex items-start gap-4 rounded-xl border border-border/70 bg-muted/35 p-3 sm:p-4 text-right">
-      <ShieldCheck className="size-4 shrink-0 text-muted-foreground mt-0.5" />
-      <div className="flex-1 min-w-0">
-        <p className="text-sm font-medium text-foreground">{title}</p>
-        <p className="text-xs text-muted-foreground mt-1">{description}</p>
+    <div className="flex items-center justify-between rounded-lg border border-border/50 bg-muted/20 p-3 text-right">
+      <div className="flex items-start gap-2.5">
+        <ShieldCheck className="size-4 text-muted-foreground mt-0.5 shrink-0" />
+        <div>
+          <p className="text-xs font-bold text-foreground">{title}</p>
+          <p className="text-[11px] text-muted-foreground mt-0.5">{description}</p>
+        </div>
       </div>
-      <Checkbox defaultChecked={checked} className="shrink-0 mt-1" />
+      <Checkbox defaultChecked={checked} className="shrink-0" />
     </div>
   );
 }

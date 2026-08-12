@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { createClient } from '@/utils/supabase/server';
+import { getSubscriptionPlan } from '@/lib/subscriptionPlans';
 import {
   assertSameOrigin,
   getClientIp,
@@ -50,6 +51,21 @@ export async function POST(request: NextRequest) {
 
   if (authError || !user) {
     return jsonError('يجب تسجيل الدخول أولاً.', 401);
+  }
+
+  if (isPublic) {
+    const { data: profile, error: profileError } = await supabase
+      .from('profiles')
+      .select('subscription_plan')
+      .eq('id', user.id)
+      .maybeSingle();
+    if (profileError) {
+      logInternalError('Failed to read subscription plan before publishing', profileError);
+      return jsonError('تعذر التحقق من صلاحية المشاركة حالياً.', 500);
+    }
+    if (getSubscriptionPlan(profile?.subscription_plan).id === 'starter') {
+      return jsonError('مشاركة خطة العمل متاحة في باقتي مؤسس وقائد فقط.', 403);
+    }
   }
 
   const now = new Date().toISOString();

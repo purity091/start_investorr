@@ -4,12 +4,10 @@ import {
   ArrowLeft,
   CheckCheck,
   Bell,
-  Briefcase,
   CheckCircle2,
   Compass,
   CreditCard,
-  Crown,
-  LayoutDashboard,
+  LifeBuoy,
   Loader2,
   LogOut,
   MessageSquarePlus,
@@ -22,7 +20,6 @@ import type { User } from '../../types';
 import { useAuth } from '../../features/auth/AuthContext';
 import { useProjectWorkspace } from '../../features/workspace/ProjectWorkspaceContext';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
-import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
 import {
   DropdownMenu,
@@ -33,15 +30,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '../ui/dropdown-menu';
-import { Separator } from '../ui/separator';
 import { SidebarTrigger } from '../ui/sidebar';
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from '../ui/breadcrumb';
 import { PlatformFeedbackModal } from './PlatformFeedbackModal';
 import { getNotificationMeta, useSystemNotifications } from '@/services/notificationService';
 
@@ -183,7 +172,6 @@ export const Header: React.FC<HeaderProps> = ({
     void markAllAsRead();
   };
 
-  // Show the saved indicator briefly after a remote sync completes.
   React.useEffect(() => {
     if (prevSaving.current && !isSaving && activeProjectId && syncStatus === 'saved') {
       setShowSaved(true);
@@ -200,7 +188,7 @@ export const Header: React.FC<HeaderProps> = ({
     const timer = setTimeout(() => {
       setIsFeedbackOpen(true);
       sessionStorage.setItem('platform_feedback_prompted', 'true');
-    }, 180000); // 3 minutes = 180,000ms
+    }, 180000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -218,7 +206,6 @@ export const Header: React.FC<HeaderProps> = ({
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-5"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
           </SidebarTrigger>
           <h1 className="truncate text-sm font-semibold text-foreground sm:text-base">{title}</h1>
-          {/* Auto-save indicator */}
           {syncStatus === 'saving' && (
             <span className="hidden sm:flex items-center gap-1.5 text-xs text-muted-foreground">
               <Loader2 className="size-3 animate-spin" />
@@ -267,186 +254,171 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         <div className="flex items-center justify-end gap-2 shrink-0">
-            <Button
-              type="button"
-              variant="outline"
-              size="sm"
-              onClick={() => setIsFeedbackOpen(!isFeedbackOpen)}
-              className="h-9 gap-1.5 rounded-lg border-border text-foreground hover:bg-muted font-medium text-xs"
-              title="أرسل اقتراحك لتطوير المنصة"
-            >
-              <MessageSquarePlus className="size-4 text-muted-foreground" />
-              <span className="hidden sm:inline">اقتراح للمنصة</span>
-            </Button>
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            onClick={() => setIsFeedbackOpen(!isFeedbackOpen)}
+            className="h-9 gap-1.5 rounded-lg border-border text-foreground hover:bg-muted font-medium text-xs"
+            title="أرسل اقتراحك لتطوير المنصة"
+          >
+            <MessageSquarePlus className="size-4 text-muted-foreground" />
+            <span className="hidden sm:inline">اقتراح للمنصة</span>
+          </Button>
 
-            <Button
-              id="tour-site-tour-trigger-header"
-              type="button"
-              variant="outline"
-              size="icon-sm"
-              className="h-9 w-9 rounded-lg"
-              onClick={startTour}
-              aria-label="بدء الجولة التعريفية"
-              title="بدء الجولة التعريفية"
-            >
-              <Compass className="size-4" />
-            </Button>
+          <Button
+            id="tour-site-tour-trigger-header"
+            type="button"
+            variant="outline"
+            size="icon-sm"
+            className="h-9 w-9 rounded-lg"
+            onClick={startTour}
+            aria-label="بدء الجولة التعريفية"
+            title="بدء الجولة التعريفية"
+          >
+            <Compass className="size-4" />
+          </Button>
 
+          <DropdownMenu dir="rtl">
+            <DropdownMenuTrigger asChild>
+              <Button
+                id="tour-notifications"
+                variant="ghost"
+                size="icon-sm"
+                className="relative rounded-lg border border-transparent hover:border-border hover:bg-muted"
+                aria-label="التنبيهات"
+              >
+                <Bell className="size-4" />
+                {unreadHeaderCount > 0 ? (
+                  <span className="absolute right-1.5 top-1.5 h-2 w-2 rounded-full bg-red-500" />
+                ) : null}
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-80 sm:w-96">
+              <DropdownMenuLabel className="text-right flex items-center justify-between">
+                <span>التنبيهات</span>
+                {unreadHeaderCount > 0 && (
+                  <button
+                    type="button"
+                    onClick={markAllHeaderRead}
+                    className="text-[11px] font-normal text-muted-foreground hover:text-primary transition-colors flex items-center gap-1 cursor-pointer"
+                  >
+                    <CheckCheck className="size-3" />
+                    تحديد كمقروء
+                  </button>
+                )}
+              </DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <div className="max-h-80 overflow-y-auto divide-y divide-border/50">
+                {isLoadingNotifications ? (
+                  <div className="flex items-center justify-center gap-2 p-6 text-xs text-muted-foreground">
+                    <Loader2 className="size-4 animate-spin" />
+                    <span>جاري تحميل التنبيهات...</span>
+                  </div>
+                ) : headerNotifications.length === 0 ? (
+                  <div className="p-6 text-center text-xs text-muted-foreground">
+                    لا توجد تنبيهات جديدة.
+                  </div>
+                ) : headerNotifications.map((item) => {
+                  const meta = getNotificationMeta(item.type);
+                  const Icon = meta.icon;
+                  return (
+                    <DropdownMenuItem 
+                      key={item.id || item.title} 
+                      onClick={() => {
+                        void markAsRead(item.id);
+                        const tab = item.link?.replace('/', '');
+                        if (tab) setActiveTab(tab);
+                        else setActiveTab('notifications');
+                      }}
+                      className={cn(
+                        "flex items-start gap-3 p-3.5 text-right cursor-pointer hover:bg-muted/60 transition-colors focus:bg-muted/60",
+                        !item.isRead && "bg-primary/5 font-medium"
+                      )}
+                    >
+                      <div className={cn("size-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5 border", meta.className)}>
+                        <Icon className="size-4" />
+                      </div>
+                      <div className="min-w-0 flex-1 space-y-1">
+                        <div className="flex items-center justify-between gap-1">
+                          <p className="text-xs font-bold text-foreground truncate">{item.title}</p>
+                          {!item.isRead && <span className="size-2 rounded-full bg-primary shrink-0" />}
+                        </div>
+                        <p className="text-[11px] text-muted-foreground line-clamp-2 leading-relaxed">{item.message}</p>
+                        <span className="text-[10px] text-muted-foreground/80 font-mono block">{item.timestamp}</span>
+                      </div>
+                    </DropdownMenuItem>
+                  );
+                })}
+              </div>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem
+                onClick={() => setActiveTab('notifications')}
+                className="cursor-pointer justify-center text-center text-xs text-primary hover:bg-primary/10 py-2.5 flex items-center gap-1.5 font-bold"
+              >
+                <span>عرض جميع التنبيهات</span>
+                <ArrowLeft className="size-3.5" />
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          {user.email ? (
             <DropdownMenu dir="rtl">
               <DropdownMenuTrigger asChild>
                 <Button
-                  id="tour-notifications"
+                  id="tour-profile-menu"
                   variant="ghost"
-                  size="icon-sm"
-                  className="relative rounded-lg border border-transparent hover:border-border hover:bg-muted"
-                  aria-label="التنبيهات"
+                  className="h-10 gap-2 rounded-xl border border-transparent px-2 hover:border-border hover:bg-muted"
                 >
-                  <Bell className="size-4" />
-                  {unreadHeaderCount > 0 ? (
-                    <span className="absolute right-1.5 top-1.5 h-2 w-2 rounded-full bg-red-500" />
-                  ) : null}
+                  <div className="hidden min-w-0 text-right sm:block">
+                    <p className="truncate text-xs font-semibold text-foreground">{user.name}</p>
+                    <p className="truncate text-[11px] text-muted-foreground">{user.email}</p>
+                  </div>
+                  <Avatar className="h-8 w-8">
+                    <AvatarImage src={user.avatar} alt={user.name} />
+                    <AvatarFallback>{user.name.slice(0, 1)}</AvatarFallback>
+                  </Avatar>
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-80 sm:w-96">
-                <DropdownMenuLabel className="text-right flex items-center justify-between">
-                  <span>التنبيهات</span>
-                  {unreadHeaderCount > 0 && (
-                    <button
-                      type="button"
-                      onClick={markAllHeaderRead}
-                      className="text-[11px] font-normal text-muted-foreground hover:text-primary transition-colors flex items-center gap-1 cursor-pointer"
-                    >
-                      <CheckCheck className="size-3" />
-                      تحديد كمقروء
-                    </button>
-                  )}
+              <DropdownMenuContent align="end" className="min-w-64">
+                <DropdownMenuLabel className="text-right">
+                  <div className="text-sm font-semibold">{user.name}</div>
+                  <div className="mt-1 text-xs font-medium text-muted-foreground">{user.email}</div>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                <div className="max-h-80 overflow-y-auto divide-y divide-border/50">
-                  {isLoadingNotifications ? (
-                    <div className="flex items-center justify-center gap-2 p-6 text-xs text-muted-foreground">
-                      <Loader2 className="size-4 animate-spin" />
-                      <span>جاري تحميل التنبيهات...</span>
-                    </div>
-                  ) : headerNotifications.length === 0 ? (
-                    <div className="p-6 text-center text-xs text-muted-foreground">
-                      لا توجد تنبيهات جديدة.
-                    </div>
-                  ) : headerNotifications.map((item) => {
-                    const meta = getNotificationMeta(item.type);
-                    const Icon = meta.icon;
-                    return (
-                      <DropdownMenuItem 
-                        key={item.id || item.title} 
-                        onClick={() => {
-                          void markAsRead(item.id);
-                          const tab = item.link?.replace('/', '');
-                          if (tab) setActiveTab(tab);
-                          else setActiveTab('notifications');
-                        }}
-                        className={cn(
-                          "flex items-start gap-3 p-3.5 text-right cursor-pointer hover:bg-muted/60 transition-colors focus:bg-muted/60",
-                          !item.isRead && "bg-primary/5 font-medium"
-                        )}
-                      >
-                        <div className={cn("size-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5 border", meta.className)}>
-                          <Icon className="size-4" />
-                        </div>
-                        <div className="min-w-0 flex-1 space-y-1">
-                          <div className="flex items-center justify-between gap-1">
-                            <p className="text-xs font-bold text-foreground truncate">{item.title}</p>
-                            {!item.isRead && <span className="size-2 rounded-full bg-primary shrink-0" />}
-                          </div>
-                          <p className="text-[11px] text-muted-foreground line-clamp-2 leading-relaxed">{item.message}</p>
-                          <span className="text-[10px] text-muted-foreground/80 font-mono block">{item.timestamp}</span>
-                        </div>
-                      </DropdownMenuItem>
-                    );
-                  })}
-                </div>
+                <DropdownMenuGroup>
+                  <DropdownMenuItem onClick={() => setActiveTab('profile')}>
+                    <UserIcon className="size-4" />
+                    <span>ملف التعريف</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setActiveTab('pricing')}>
+                    <CreditCard className="size-4" />
+                    <span>اشتراكي</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={() => setActiveTab('contact-us')}>
+                    <LifeBuoy className="size-4" />
+                    <span>المساعدة والدعم</span>
+                  </DropdownMenuItem>
+                </DropdownMenuGroup>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem
-                  onClick={() => setActiveTab('notifications')}
-                  className="cursor-pointer justify-center text-center text-xs text-primary hover:bg-primary/10 py-2.5 flex items-center gap-1.5 font-bold"
-                >
-                  <span>عرض جميع التنبيهات</span>
-                  <ArrowLeft className="size-3.5" />
+                <DropdownMenuItem variant="destructive" onClick={async () => {
+                  await signOut();
+                }}>
+                  <LogOut className="size-4" />
+                  <span>تسجيل الخروج</span>
                 </DropdownMenuItem>
-
-
-
-
               </DropdownMenuContent>
             </DropdownMenu>
-
-            {user.email ? (
-              <DropdownMenu dir="rtl">
-                <DropdownMenuTrigger asChild>
-                  <Button
-                    id="tour-profile-menu"
-                    variant="ghost"
-                    className="h-10 gap-2 rounded-xl border border-transparent px-2 hover:border-border hover:bg-muted"
-                  >
-                    <div className="hidden min-w-0 text-right sm:block">
-                      <p className="truncate text-xs font-semibold text-foreground">{user.name}</p>
-                      <p className="truncate text-[11px] text-muted-foreground">{user.email}</p>
-                    </div>
-                    <Avatar className="h-8 w-8">
-                      <AvatarImage src={user.avatar} alt={user.name} />
-                      <AvatarFallback>{user.name.slice(0, 1)}</AvatarFallback>
-                    </Avatar>
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="min-w-64">
-                  <DropdownMenuLabel className="text-right">
-                    <div className="text-sm font-semibold">{user.name}</div>
-                    <div className="mt-1 text-xs font-medium text-muted-foreground">{user.email}</div>
-                  </DropdownMenuLabel>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuGroup>
-                    <DropdownMenuItem onClick={() => setActiveTab('customer-dashboard')}>
-                      <Crown className="size-4" />
-                      <span>حسابي الشخصي</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem onClick={() => setActiveTab('profile')}>
-                      <UserIcon className="size-4" />
-                      <span>ملف التعريف</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem onClick={() => setActiveTab('pricing')}>
-                      <CreditCard className="size-4" />
-                      <span>اشتراكي</span>
-                    </DropdownMenuItem>
-                  </DropdownMenuGroup>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuGroup>
-                    <DropdownMenuItem onClick={() => setActiveTab('my-plans')}>
-                      <Briefcase className="size-4" />
-                      <span>مشاريعي</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem onClick={() => setActiveTab('home')}>
-                      <LayoutDashboard className="size-4" />
-                      <span>الرئيسية</span>
-                    </DropdownMenuItem>
-                  </DropdownMenuGroup>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem variant="destructive" onClick={async () => {
-                    await signOut();
-                  }}>
-                    <LogOut className="size-4" />
-                    <span>تسجيل الخروج</span>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            ) : (
-              <Button
-                variant="default"
-                className="h-9 px-4 text-sm font-medium"
-                onClick={() => setActiveTab('workspace')} // Trigger auth since workspace is protected
-              >
-                تسجيل الدخول
-              </Button>
-            )}
-          </div>
+          ) : (
+            <Button
+              variant="default"
+              className="h-9 px-4 text-sm font-medium"
+              onClick={() => setActiveTab('workspace')}
+            >
+              تسجيل الدخول
+            </Button>
+          )}
+        </div>
       </div>
 
       <PlatformFeedbackModal

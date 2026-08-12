@@ -16,6 +16,7 @@ import {
   Loader2,
   ShieldAlert,
   Sparkles,
+  Share2,
   Target,
   Users,
   XCircle,
@@ -28,6 +29,7 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
+  DialogFooter,
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
@@ -45,6 +47,9 @@ import {
 import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
 import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
+import { useAuth } from '@/features/auth/AuthContext';
+import { getSubscriptionPlan } from '@/lib/subscriptionPlans';
+import { AIPromptHelper } from '@/components/features/business/AIPromptHelper';
 
 type FieldType = 'text' | 'textarea' | 'number';
 type Answers = Record<string, string | string[]>;
@@ -330,6 +335,9 @@ function ProjectDashboard({
   onEdit: (index: number) => void;
   onRestart: () => void;
 }) {
+  const { profile } = useAuth();
+  const canSharePlan = getSubscriptionPlan(profile?.subscription_plan).id !== 'starter';
+  const [isShareUpgradeOpen, setIsShareUpgradeOpen] = useState(false);
   const readiness = inferReadiness(answers);
   const completedCount = getCompletedCount(answers);
   const selectedTags = PRO_STEPS.flatMap((step) => {
@@ -682,8 +690,63 @@ function ProjectDashboard({
 
         <div className="flex flex-col gap-2 sm:flex-row sm:justify-end">
           <Button variant="outline" onClick={onRestart}>إعادة بناء الرحلة</Button>
-          <Button onClick={() => window.print()}>طباعة اللوحة</Button>
+          <Button
+            onClick={() => {
+              if (!canSharePlan) {
+                setIsShareUpgradeOpen(true);
+                return;
+                alert('ميزة مشاركة خطة العمل متاحة في باقتي مؤسس وقائد. قم بترقية باقتك لتفعيلها.');
+                return;
+              }
+              if (navigator.clipboard) {
+                navigator.clipboard.writeText(window.location.href);
+                alert('تم نسخ رابط مشاركة المشروع التفاعلي بنجاح! يمكنك إرساله للشركاء والمستثمرين.');
+              }
+            }}
+            variant={canSharePlan ? 'default' : 'outline'}
+            className={cn('gap-2 font-bold cursor-pointer', !canSharePlan && 'border-amber-300 text-amber-700 hover:bg-amber-50')}
+            title={!canSharePlan ? 'متاحة في باقتي مؤسس وقائد فقط' : 'مشاركة اللوحة والمشروع'}
+          >
+            <Share2 className="size-4" />
+            <span>مشاركة اللوحة والمشروع</span>
+          </Button>
         </div>
+        <Dialog open={isShareUpgradeOpen} onOpenChange={setIsShareUpgradeOpen}>
+          <DialogContent className="overflow-hidden p-0 sm:max-w-[560px]" dir="rtl">
+            <div className="bg-primary px-6 py-7 text-primary-foreground sm:px-8">
+              <div className="mb-5 flex size-12 items-center justify-center rounded-xl bg-primary-foreground/15">
+                <Share2 className="size-6" />
+              </div>
+              <DialogHeader className="text-right">
+                <DialogTitle className="text-2xl font-bold text-primary-foreground">شارك خطة العمل بثقة</DialogTitle>
+                <DialogDescription className="mt-2 leading-7 text-primary-foreground/80">
+                  حوّل دراستك إلى رابط احترافي يمكنك عرضه على الشركاء والمستثمرين في ثوانٍ.
+                </DialogDescription>
+              </DialogHeader>
+            </div>
+            <div className="space-y-5 px-6 py-6 sm:px-8">
+              <div className="grid gap-3 sm:grid-cols-3">
+                {['رابط آمن للخطة', 'عرض تفاعلي منظم', 'مشاركة مع المستثمرين'].map((feature) => (
+                  <div key={feature} className="rounded-lg border border-border/70 bg-muted/30 p-3 text-sm font-medium text-foreground">
+                    <CheckCircle2 className="mb-2 size-4 text-primary" />
+                    {feature}
+                  </div>
+                ))}
+              </div>
+              <div className="rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-900">
+                ميزة مشاركة اللوحة والمشروع متاحة ضمن باقتي <strong>مؤسس</strong> و<strong>قائد</strong>، لتتمكن من تقديم مشروعك بصورة احترافية.
+              </div>
+              <DialogFooter className="flex-col gap-2 sm:flex-row sm:justify-start">
+                <Button onClick={() => { window.location.href = '/pricing-plans'; }} className="w-full sm:w-auto">
+                  استعرض الباقات وابدأ الترقية <ArrowRight className="size-4" />
+                </Button>
+                <Button variant="outline" onClick={() => setIsShareUpgradeOpen(false)} className="w-full sm:w-auto">
+                  لاحقاً
+                </Button>
+              </DialogFooter>
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     </div>
   );
@@ -748,7 +811,7 @@ function FieldControl({
       "space-y-2.5 rounded-xl border bg-card p-4 sm:p-5 shadow-2xs transition-all",
       isFilled ? "border-primary/40 bg-card" : "border-border/80 hover:border-border"
     )}>
-      <div className="flex items-center justify-between gap-2">
+      <div className="flex items-center justify-between gap-2 flex-wrap border-b border-border/40 pb-1.5">
         <label className="flex items-center gap-2 text-sm font-bold text-foreground">
           <span>{field.label}</span>
           {field.required ? (
@@ -761,12 +824,14 @@ function FieldControl({
             </Badge>
           )}
         </label>
-        {isFilled && (
-          <span className="flex items-center gap-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-bold">
-            <CheckCircle2 className="size-3.5" />
-            تم الإدخال
-          </span>
-        )}
+        
+        <AIPromptHelper
+          sectionTitle={field.label}
+          questionText={field.placeholder}
+          projectName="مشروع استثماري"
+          onApplyAnswer={(ans) => onChange(ans)}
+          compact
+        />
       </div>
 
       {field.type === 'textarea' ? (
@@ -1245,7 +1310,7 @@ export default function SmartBeginnerPro() {
               <ul className="text-xs text-muted-foreground leading-relaxed list-disc list-inside space-y-1 font-medium">
                 <li>لوحة قيادة استراتيجية كاملة (Dashboard) مع مؤشر جاهزية بنسبة مئوية.</li>
                 <li>تقرير تحليل الفجوات واكتشاف نقاط الضعف قبل الإنفاق المالي.</li>
-                <li>ملف إدخالات كامل قابل للتعديل والطباعة والعرض على الشركاء والمستثمرين.</li>
+                <li>ملف إدخالات كامل قابل للتعديل والمشاركة التفاعلية والعرض على الشركاء والمستثمرين.</li>
               </ul>
             </div>
           </div>

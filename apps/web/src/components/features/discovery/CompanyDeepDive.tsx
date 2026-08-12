@@ -108,12 +108,18 @@ export const CompanyDeepDive: React.FC<CompanyDeepDiveProps> = ({ companyId, onB
           </div>
           
           <div className="flex items-center gap-2">
-             <button onClick={() => window.print()} className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 bg-slate-900 text-white rounded-lg text-[10px] font-black hover:bg-slate-800 transition-all">
-               <Download size={12} /> طباعة الدراسة
-             </button>
-             <button className="p-2 text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all">
-               <Share2 size={16} />
-             </button>
+            <button
+              onClick={() => {
+                if (navigator.clipboard) {
+                  navigator.clipboard.writeText(window.location.href);
+                  alert('تم نسخ رابط مشاركة الدراسة التفاعلية بنجاح!');
+                }
+              }}
+              className="flex items-center gap-1.5 px-3.5 py-1.5 bg-indigo-600 text-white rounded-lg text-xs font-bold hover:bg-indigo-700 transition-all cursor-pointer shadow-2xs"
+            >
+              <Share2 size={14} />
+              <span>مشاركة الدراسة</span>
+            </button>
           </div>
         </div>
       </header>
