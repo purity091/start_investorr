@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { supabase } from '@/lib/supabase';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Badge } from '@/components/ui/Badge';
-import { Loader2, Mail, Lock, AlertCircle, ArrowLeft, User as UserIcon, Sparkles, Eye, EyeOff, CheckSquare, Square } from 'lucide-react';
+import { Loader2, Mail, Lock, KeyRound, AlertCircle, ArrowLeft, User as UserIcon, Sparkles, Eye, EyeOff, CheckSquare, Square } from 'lucide-react';
 import { DEFAULT_SUBSCRIPTION_PLAN_ID, SUBSCRIPTION_PLAN_IDS, SUBSCRIPTION_PLANS, SubscriptionPlanId } from '@/lib/subscriptionPlans';
 
 type AuthMode = 'login' | 'register' | 'forgot_password';
@@ -60,6 +61,7 @@ export const AuthScreen: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
+  const [isPasskeyLoading, setIsPasskeyLoading] = useState(false);
 
   const resetState = () => {
     setError(null);
@@ -71,6 +73,28 @@ export const AuthScreen: React.FC = () => {
   const switchMode = (newMode: AuthMode) => {
     setMode(newMode);
     resetState();
+  };
+
+  const handlePasskeySignIn = async () => {
+    setError(null);
+    setMessage(null);
+    setIsPasskeyLoading(true);
+    try {
+      const { error: passkeyError } = await supabase.auth.signInWithPasskey();
+      if (passkeyError) throw passkeyError;
+      window.location.href = getSafeRedirectPath();
+    } catch (error: unknown) {
+      const passkeyError = error as { message?: unknown; name?: unknown; status?: unknown; code?: unknown };
+      console.error('Passkey sign-in failed:', {
+        message: typeof passkeyError.message === 'string' ? passkeyError.message : 'Unknown error',
+        name: typeof passkeyError.name === 'string' ? passkeyError.name : undefined,
+        status: typeof passkeyError.status === 'number' ? passkeyError.status : undefined,
+        code: typeof passkeyError.code === 'string' ? passkeyError.code : undefined,
+      });
+      setError('تعذر تسجيل الدخول بمفتاح المرور. جرّب جهازاً مسجلاً أو استخدم البريد الإلكتروني.');
+    } finally {
+      setIsPasskeyLoading(false);
+    }
   };
 
   const handleAuth = async (e: React.FormEvent) => {
@@ -363,6 +387,26 @@ export const AuthScreen: React.FC = () => {
                 </span>
               )}
             </Button>
+
+            {mode === 'login' && (
+              <>
+                <div className="my-4 flex items-center gap-3 text-xs font-bold text-slate-400">
+                  <span className="h-px flex-1 bg-slate-200" />
+                  <span>أو</span>
+                  <span className="h-px flex-1 bg-slate-200" />
+                </div>
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={handlePasskeySignIn}
+                  disabled={isLoading || isPasskeyLoading}
+                  className="w-full py-6 rounded-xl border-slate-200 text-slate-800 font-bold text-sm gap-2"
+                >
+                  {isPasskeyLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : <KeyRound className="h-5 w-5" />}
+                  تسجيل الدخول باستخدام مفتاح المرور
+                </Button>
+              </>
+            )}
           </form>
 
           <div className="mt-8 text-center border-t border-slate-100 pt-8">
