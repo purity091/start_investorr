@@ -28,7 +28,7 @@ const FEEDBACK_TYPES = [
   { id: 'general', label: 'ملاحظات عامة' },
 ];
 
-const WHATSAPP_PHONE_NUMBER = '966500000000';
+const WHATSAPP_PHONE_NUMBER = '963936638280';
 
 export const PlatformFeedbackModal: React.FC<PlatformFeedbackModalProps> = ({
   open,

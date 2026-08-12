@@ -674,7 +674,7 @@ export const BusinessModelCanvas: React.FC<{
 
   return (
     <div dir="rtl" className="min-h-screen bg-background px-2.5 pb-6 pt-2.5 sm:px-4 sm:pt-4 sm:pb-10 lg:px-5 2xl:px-6">
-      <div className="mx-auto flex w-full max-w-[1880px] flex-col gap-3 sm:gap-4">
+      <div className="flex w-full flex-col gap-3 sm:gap-4">
         <TooltipProvider>
           <section className="bg-background px-0 py-1">
             <div className="flex flex-col gap-2.5 xl:flex-row xl:items-center xl:justify-between">

@@ -157,21 +157,24 @@ const PROJECT_TYPE_META: Record<
 
 const STATUS_META: Record<
   ProjectStatus,
-  { label: string; className: string; icon: React.ComponentType<{ className?: string }> }
+  { label: string; className: string; dotClass: string; icon: React.ComponentType<{ className?: string }> }
 > = {
   ready: {
-    label: 'جاهز',
-    className: 'bg-emerald-100 text-emerald-800',
+    label: 'جاهز ومكتمل',
+    className: 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-0',
+    dotClass: 'bg-emerald-500',
     icon: CheckCircle2,
   },
   review: {
-    label: 'قيد المراجعة',
-    className: 'bg-amber-100 text-amber-800',
+    label: 'قيد التطوير',
+    className: 'bg-amber-500/10 text-amber-700 dark:text-amber-400 border-0',
+    dotClass: 'bg-amber-500 animate-pulse',
     icon: Clock,
   },
   draft: {
-    label: 'مسودة',
-    className: 'bg-muted text-muted-foreground',
+    label: 'مسودة أولية',
+    className: 'bg-muted text-muted-foreground border-0',
+    dotClass: 'bg-slate-400',
     icon: Activity,
   },
 };
@@ -501,121 +504,126 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
   }
 
   return (
-    <main dir="rtl" className="min-h-screen w-full max-w-full min-w-0 overflow-x-hidden bg-background px-3 pb-16 pt-4 sm:px-4 lg:px-6">
-      <div className="mx-auto flex w-full max-w-[1500px] min-w-0 flex-col gap-4">
-        <Card className="shadow-none">
-          <CardHeader className="gap-3 p-4 sm:p-5 lg:flex-row lg:items-center lg:justify-between">
-            <div className="space-y-1 text-right">
-              <CardTitle className="text-xl">مشاريعي</CardTitle>
-              <CardDescription>
-                {projectsList.length} مشروع خاص
-              </CardDescription>
+    <main dir="rtl" className="w-full bg-background px-2 py-2 sm:px-4 sm:py-3 lg:px-6">
+      <div className="flex w-full flex-col gap-3.5">
+        {/* Header Bar */}
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between bg-card rounded-xl p-3.5 sm:p-4 shadow-2xs">
+          <div className="space-y-1 text-right">
+            <div className="flex items-center gap-2">
+              <h1 className="text-xl sm:text-2xl font-black text-foreground">مشاريعي</h1>
+              <Badge variant="secondary" className="bg-primary/10 text-primary border-0 font-bold text-xs">
+                {projectsList.length} مشروع
+              </Badge>
+            </div>
+            <p className="text-xs sm:text-sm text-muted-foreground">
+              جميع دراسات الجدوى ونماذج الأعمال المحفوظة في حسابك.
+            </p>
+          </div>
+
+          <Button type="button" size="sm" className="px-4 font-bold text-xs shadow-2xs gap-1.5 shrink-0" onClick={() => setActiveTab?.('new-plan')}>
+            <Plus className="size-4" />
+            <span>مشروع جديد</span>
+          </Button>
+        </div>
+
+        {/* Filters & Content Box */}
+        <div className="bg-card rounded-xl p-3 sm:p-4 shadow-2xs space-y-3">
+          <div className="grid gap-2 lg:grid-cols-[minmax(280px,1fr)_180px_160px_auto] lg:items-center">
+            <div className="relative">
+              <Search className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+              <Input
+                value={searchTerm}
+                onChange={(event) => setSearchTerm(event.target.value)}
+                placeholder="ابحث باسم المشروع أو القطاع..."
+                className="h-9 pr-9 text-xs bg-muted/30 border-0 focus-visible:ring-1"
+              />
             </div>
 
-            <Button size="lg" onClick={() => setActiveTab?.('new-plan')}>
-              <Plus className="size-4" />
-              مشروع جديد
+            <Select value={typeFilter} onValueChange={(value) => setTypeFilter(value as TypeFilter)}>
+              <SelectTrigger className="h-9 text-xs text-right bg-muted/30 border-0">
+                <SelectValue placeholder="النموذج" />
+              </SelectTrigger>
+              <SelectContent>
+                {TYPE_OPTIONS.map((option) => (
+                  <SelectItem key={option.id} value={option.id}>
+                    {option.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+
+            <Select value={statusFilter} onValueChange={(value) => setStatusFilter(value as StatusFilter)}>
+              <SelectTrigger className="h-9 text-xs text-right bg-muted/30 border-0">
+                <SelectValue placeholder="الحالة" />
+              </SelectTrigger>
+              <SelectContent>
+                {STATUS_OPTIONS.map((option) => (
+                  <SelectItem key={option.id} value={option.id}>
+                    {option.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+
+            <Button variant="ghost" size="sm" onClick={resetFilters} disabled={!hasActiveFilters} className="h-9 text-xs font-medium text-muted-foreground hover:text-foreground">
+              <RefreshCcw className="size-3.5" />
+              تصفير
             </Button>
-          </CardHeader>
+          </div>
 
-          <CardContent className="space-y-3 sm:space-y-4 p-3 sm:p-5 pt-0 sm:pt-0">
-            <div className="grid gap-2 lg:grid-cols-[minmax(280px,1fr)_190px_170px_auto] lg:items-center">
-              <div className="relative">
-                <Search className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
-                <Input
-                  value={searchTerm}
-                  onChange={(event) => setSearchTerm(event.target.value)}
-                  placeholder="ابحث باسم المشروع أو القطاع"
-                  className="h-10 pr-9"
-                />
-              </div>
-
-              <Select value={typeFilter} onValueChange={(value) => setTypeFilter(value as TypeFilter)}>
-                <SelectTrigger className="h-10 text-right">
-                  <SelectValue placeholder="النموذج" />
-                </SelectTrigger>
-                <SelectContent>
-                  {TYPE_OPTIONS.map((option) => (
-                    <SelectItem key={option.id} value={option.id}>
-                      {option.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-
-              <Select value={statusFilter} onValueChange={(value) => setStatusFilter(value as StatusFilter)}>
-                <SelectTrigger className="h-10 text-right">
-                  <SelectValue placeholder="الحالة" />
-                </SelectTrigger>
-                <SelectContent>
-                  {STATUS_OPTIONS.map((option) => (
-                    <SelectItem key={option.id} value={option.id}>
-                      {option.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-
-              <Button variant="ghost" size="lg" onClick={resetFilters} disabled={!hasActiveFilters}>
-                <RefreshCcw className="size-4" />
-                تصفير
-              </Button>
-            </div>
-
-            {filteredProjects.length === 0 ? (
-              <NoResultsState description="لا يوجد مشروع يطابق البحث أو الفلاتر الحالية." onReset={resetFilters} />
-            ) : (
-              <>
-                <ProjectsTable 
-                  projects={paginatedProjects} 
-                  setActiveTab={setActiveTab} 
-                  onDelete={handleDelete}
-                  onShare={handleShare}
-                />
-                <ProjectsMobileList 
-                  projects={paginatedProjects} 
-                  setActiveTab={setActiveTab} 
-                  onDelete={handleDelete}
-                  onShare={handleShare}
-                />
-                
-                {totalPages > 1 && (
-                  <div className="mt-4 border-t border-border pt-4">
-                    <Pagination>
-                      <PaginationContent>
-                        <PaginationItem>
-                          <PaginationPrevious 
-                            onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-                            aria-disabled={currentPage === 1}
-                            className={currentPage === 1 ? 'pointer-events-none opacity-50' : 'cursor-pointer'}
-                          />
+          {filteredProjects.length === 0 ? (
+            <NoResultsState description="لا يوجد مشروع يطابق البحث أو الفلاتر الحالية." onReset={resetFilters} />
+          ) : (
+            <>
+              <ProjectsTable 
+                projects={paginatedProjects} 
+                setActiveTab={setActiveTab} 
+                onDelete={handleDelete}
+                onShare={handleShare}
+              />
+              <ProjectsMobileList 
+                projects={paginatedProjects} 
+                setActiveTab={setActiveTab} 
+                onDelete={handleDelete}
+                onShare={handleShare}
+              />
+              
+              {totalPages > 1 && (
+                <div className="mt-3 border-t border-border/40 pt-3">
+                  <Pagination>
+                    <PaginationContent>
+                      <PaginationItem>
+                        <PaginationPrevious 
+                          onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                          aria-disabled={currentPage === 1}
+                          className={currentPage === 1 ? 'pointer-events-none opacity-50' : 'cursor-pointer'}
+                        />
+                      </PaginationItem>
+                      {Array.from({ length: totalPages }).map((_, i) => (
+                        <PaginationItem key={i}>
+                          <PaginationLink 
+                            isActive={currentPage === i + 1}
+                            onClick={() => setCurrentPage(i + 1)}
+                            className="cursor-pointer"
+                          >
+                            {i + 1}
+                          </PaginationLink>
                         </PaginationItem>
-                        {Array.from({ length: totalPages }).map((_, i) => (
-                          <PaginationItem key={i}>
-                            <PaginationLink 
-                              isActive={currentPage === i + 1}
-                              onClick={() => setCurrentPage(i + 1)}
-                              className="cursor-pointer"
-                            >
-                              {i + 1}
-                            </PaginationLink>
-                          </PaginationItem>
-                        ))}
-                        <PaginationItem>
-                          <PaginationNext 
-                            onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-                            aria-disabled={currentPage === totalPages}
-                            className={currentPage === totalPages ? 'pointer-events-none opacity-50' : 'cursor-pointer'}
-                          />
-                        </PaginationItem>
-                      </PaginationContent>
-                    </Pagination>
-                  </div>
-                )}
-              </>
-            )}
-          </CardContent>
-        </Card>
+                      ))}
+                      <PaginationItem>
+                        <PaginationNext 
+                          onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                          aria-disabled={currentPage === totalPages}
+                          className={currentPage === totalPages ? 'pointer-events-none opacity-50' : 'cursor-pointer'}
+                        />
+                      </PaginationItem>
+                    </PaginationContent>
+                  </Pagination>
+                </div>
+              )}
+            </>
+          )}
+        </div>
       </div>
 
       <ProjectShareModal
@@ -707,37 +715,37 @@ function ProjectsTable({
   };
 
   return (
-    <div className="hidden overflow-x-auto rounded-xl border border-border bg-card shadow-sm lg:block">
+    <div className="hidden overflow-x-auto rounded-xl bg-card shadow-2xs lg:block border-0">
       <Table dir="rtl">
-        <TableHeader className="bg-muted/30">
-          <TableRow className="hover:bg-transparent">
+        <TableHeader className="bg-muted/40">
+          <TableRow className="hover:bg-transparent border-b border-border/50">
             <TableHead className="min-w-[260px]">
               <div className="flex cursor-pointer items-center gap-2 font-bold text-foreground transition-colors hover:text-primary">
                 المشروع
                 <ArrowUpDown className="size-3.5 text-muted-foreground" />
               </div>
             </TableHead>
-            <TableHead className="w-[140px] font-bold text-foreground">إجراءات</TableHead>
-            <TableHead className="min-w-[140px]">
+            <TableHead className="min-w-[130px]">
               <div className="flex cursor-pointer items-center gap-2 font-bold text-foreground transition-colors hover:text-primary">
                 النموذج
                 <ArrowUpDown className="size-3.5 text-muted-foreground" />
               </div>
             </TableHead>
-            <TableHead className="min-w-[160px] font-bold text-foreground">التقدم</TableHead>
-            <TableHead className="min-w-[100px]">
+            <TableHead className="min-w-[140px] font-bold text-foreground">التقدم</TableHead>
+            <TableHead className="min-w-[90px]">
               <div className="flex cursor-pointer items-center gap-2 font-bold text-foreground transition-colors hover:text-primary">
                 التقييم
                 <ArrowUpDown className="size-3.5 text-muted-foreground" />
               </div>
             </TableHead>
             <TableHead className="min-w-[120px] font-bold text-foreground">الحالة</TableHead>
-            <TableHead className="min-w-[120px]">
+            <TableHead className="min-w-[110px]">
               <div className="flex cursor-pointer items-center gap-2 font-bold text-foreground transition-colors hover:text-primary">
                 آخر تعديل
                 <ArrowUpDown className="size-3.5 text-muted-foreground" />
               </div>
             </TableHead>
+            <TableHead className="w-[140px] font-bold text-foreground text-left">إجراءات</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -792,17 +800,17 @@ function ProjectTableRow({
     : project.lastEdited;
 
   return (
-    <TableRow className="group transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted">
-      <TableCell className="py-4">
+    <TableRow className="group transition-colors hover:bg-muted/40 border-b border-border/40">
+      <TableCell className="py-3 px-4">
         <div className="flex min-w-0 items-center gap-3">
-          <div className="flex size-10 shrink-0 items-center justify-center rounded-lg border border-border bg-background shadow-sm">
-            <ProjectIcon className="size-5 text-muted-foreground" />
+          <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+            <ProjectIcon className="size-4" />
           </div>
           <div className="min-w-0 flex-1 text-right">
             {editHref ? (
               <a
                 href={editHref}
-                className="block max-w-[260px] truncate text-sm font-bold leading-5 text-foreground hover:text-primary hover:underline"
+                className="block max-w-[260px] truncate text-sm font-extrabold leading-snug text-foreground hover:text-primary transition-colors"
               >
                 {project.name}
               </a>
@@ -810,23 +818,48 @@ function ProjectTableRow({
               <button
                 type="button"
                 onClick={onOpen}
-                className="block max-w-[260px] truncate text-sm font-bold leading-5 text-foreground hover:text-primary hover:underline"
+                className="block max-w-[260px] truncate text-sm font-extrabold leading-snug text-foreground hover:text-primary transition-colors text-right"
               >
                 {project.name}
               </button>
             )}
-            <p className="mt-0.5 truncate text-[13px] font-medium leading-5 text-muted-foreground">
-              {project.sector} <span className="mx-1 text-muted-foreground/40">•</span> {project.marketCap}
+            <p className="mt-0.5 truncate text-xs font-medium leading-5 text-muted-foreground">
+              {project.sector}
             </p>
           </div>
           {project.isFavorite ? <Star className="size-4 shrink-0 text-amber-500" fill="currentColor" /> : null}
         </div>
       </TableCell>
 
-      <TableCell className="py-4">
-        <div className="flex items-center gap-1 opacity-100">
+      <TableCell className="py-3 px-4">
+        <ProjectTypeBadge type={project.type} />
+      </TableCell>
+
+      <TableCell className="py-3 px-4">
+        <ProgressSummary project={project} />
+      </TableCell>
+
+      <TableCell className="py-3 px-4">
+        <Badge variant={project.aiScore >= 80 ? 'success' : 'secondary'} className="tabular-nums font-bold text-xs">
+          {project.aiScore}%
+        </Badge>
+      </TableCell>
+
+      <TableCell className="py-3 px-4">
+        <ProjectStatusBadge status={project.status} />
+      </TableCell>
+
+      <TableCell className="py-3 px-4 whitespace-nowrap">
+        <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground font-semibold">
+          <Clock className="size-3.5 text-muted-foreground/70" />
+          {formattedDate}
+        </span>
+      </TableCell>
+
+      <TableCell className="py-3 px-4 text-left whitespace-nowrap">
+        <div className="flex items-center justify-start gap-1">
           {editHref ? (
-            <Button asChild variant="ghost" size="icon-sm" className="size-8 text-muted-foreground hover:bg-muted hover:text-primary">
+            <Button asChild variant="ghost" size="icon-sm" className="size-8 text-muted-foreground hover:bg-muted hover:text-primary rounded-lg">
               <a href={editHref} title="تعديل المشروع">
                 <Pencil className="size-4" />
               </a>
@@ -837,7 +870,7 @@ function ProjectTableRow({
               size="icon-sm"
               onClick={onOpen}
               title="تعديل المشروع"
-              className="size-8 text-muted-foreground hover:bg-muted hover:text-primary"
+              className="size-8 text-muted-foreground hover:bg-muted hover:text-primary rounded-lg"
             >
               <Pencil className="size-4" />
             </Button>
@@ -846,8 +879,8 @@ function ProjectTableRow({
             variant="ghost"
             size="icon-sm"
             onClick={() => onShare(project)}
-            title="إعدادات إتاحة ومشاركة المشروع"
-            className="size-8 text-muted-foreground hover:bg-muted hover:text-primary"
+            title="مشاركة المشروع"
+            className="size-8 text-muted-foreground hover:bg-muted hover:text-primary rounded-lg"
           >
             <Share2 className="size-4" />
           </Button>
@@ -855,9 +888,9 @@ function ProjectTableRow({
             variant="ghost"
             size="icon-sm"
             onClick={handleCopyLink}
-            title={isCopied ? "تم نسخ الرابط!" : "نسخ رابط المشروع مباشر"}
+            title={isCopied ? "تم نسخ الرابط!" : "نسخ الرابط"}
             className={cn(
-              "size-8 transition-colors",
+              "size-8 rounded-lg transition-colors",
               isCopied
                 ? "bg-emerald-50 text-emerald-600 hover:bg-emerald-100"
                 : "text-muted-foreground hover:bg-muted hover:text-primary"
@@ -870,36 +903,11 @@ function ProjectTableRow({
             size="icon-sm"
             onClick={() => onDelete(project.id, project.name)}
             title="حذف"
-            className="size-8 text-muted-foreground hover:bg-destructive/10 hover:text-destructive"
+            className="size-8 text-muted-foreground hover:bg-destructive/10 hover:text-destructive rounded-lg"
           >
             <Trash2 className="size-4" />
           </Button>
         </div>
-      </TableCell>
-
-      <TableCell>
-        <ProjectTypeBadge type={project.type} />
-      </TableCell>
-
-      <TableCell>
-        <ProgressSummary project={project} />
-      </TableCell>
-
-      <TableCell>
-        <Badge variant={project.aiScore >= 80 ? 'success' : 'secondary'} className="tabular-nums">
-          {project.aiScore}%
-        </Badge>
-      </TableCell>
-
-      <TableCell>
-        <ProjectStatusBadge status={project.status} />
-      </TableCell>
-
-      <TableCell>
-        <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground whitespace-nowrap">
-          <Clock className="size-4 text-muted-foreground/70" />
-          {formattedDate}
-        </span>
       </TableCell>
     </TableRow>
   );
@@ -926,14 +934,14 @@ function ProjectsMobileList({
   };
 
   return (
-    <div className="grid gap-3 lg:hidden">
+    <div className="grid gap-2.5 lg:hidden">
       {projects.map((project) => (
-        <Card key={project.id} className="p-3 sm:p-4 shadow-sm sm:shadow-none border border-border">
-          <div className="flex items-start justify-between gap-3">
+        <div key={project.id} className="p-3.5 sm:p-4 rounded-xl bg-card shadow-2xs space-y-3">
+          <div className="flex items-center justify-between gap-3">
             <ProjectStatusBadge status={project.status} />
             <div className="flex items-center gap-1">
               {!project.id.startsWith('p') && !project.id.startsWith('example') ? (
-                <Button asChild variant="ghost" size="icon-sm" className="text-muted-foreground hover:text-primary">
+                <Button asChild variant="ghost" size="icon-sm" className="text-muted-foreground hover:text-primary rounded-lg">
                   <a href={getProjectEditPath(project.id)} title="تعديل">
                     <Pencil className="size-4" />
                   </a>
@@ -944,7 +952,7 @@ function ProjectsMobileList({
                   size="icon-sm"
                   onClick={() => handleOpenProject(project)}
                   title="تعديل"
-                  className="text-muted-foreground hover:text-primary"
+                  className="text-muted-foreground hover:text-primary rounded-lg"
                 >
                   <Pencil className="size-4" />
                 </Button>
@@ -954,7 +962,7 @@ function ProjectsMobileList({
                 size="icon-sm"
                 onClick={() => onShare(project)}
                 title="مشاركة"
-                className="text-muted-foreground hover:text-primary"
+                className="text-muted-foreground hover:text-primary rounded-lg"
               >
                 <Share2 className="size-4" />
               </Button>
@@ -963,44 +971,42 @@ function ProjectsMobileList({
                 size="icon-sm"
                 onClick={() => onDelete(project.id, project.name)}
                 title="حذف"
-                className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+                className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-lg"
               >
                 <Trash2 className="size-4" />
               </Button>
             </div>
           </div>
 
-          <div className="mt-4 flex items-start gap-3">
+          <div className="flex items-start gap-3">
             <div className="min-w-0 flex-1 text-right">
-              <h3 className="truncate text-sm font-medium text-foreground">{project.name}</h3>
-              <p className="mt-1 text-xs text-muted-foreground">
-                {project.sector} · {project.marketCap}
+              <h3 className="truncate text-sm font-extrabold text-foreground">{project.name}</h3>
+              <p className="mt-0.5 text-xs text-muted-foreground">
+                {project.sector}
               </p>
             </div>
-            {project.isFavorite ? <Star className="size-4 shrink-0 text-amber-600" fill="currentColor" /> : null}
+            {project.isFavorite ? <Star className="size-4 shrink-0 text-amber-500" fill="currentColor" /> : null}
           </div>
 
-          <div className="mt-3 flex flex-wrap items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             <ProjectTypeBadge type={project.type} />
-            <Badge variant={project.aiScore >= 80 ? 'success' : 'secondary'} className="tabular-nums">
+            <Badge variant={project.aiScore >= 80 ? 'success' : 'secondary'} className="tabular-nums font-bold text-xs">
               {project.aiScore}%
             </Badge>
           </div>
 
-          <div className="mt-3">
-            <ProgressSummary project={project} />
-          </div>
+          <ProgressSummary project={project} />
 
           {!project.id.startsWith('p') && !project.id.startsWith('example') ? (
-            <Button asChild className="mt-4 w-full">
+            <Button asChild className="w-full font-bold text-xs shadow-2xs rounded-lg h-9">
               <a href={getProjectEditPath(project.id)}>فتح المشروع</a>
             </Button>
           ) : (
-            <Button className="mt-4 w-full" onClick={() => handleOpenProject(project)}>
+            <Button className="w-full font-bold text-xs shadow-2xs rounded-lg h-9" onClick={() => handleOpenProject(project)}>
               فتح المشروع
             </Button>
           )}
-        </Card>
+        </div>
       ))}
     </div>
   );
@@ -1011,7 +1017,7 @@ function ProjectTypeBadge({ type }: { type: ProjectType }) {
   const Icon = meta.icon;
 
   return (
-    <Badge variant="outline" className="gap-1.5 bg-background">
+    <Badge variant="secondary" className="gap-1.5 bg-muted/60 text-muted-foreground border-0 font-medium text-[11px]">
       <Icon className="size-3.5" />
       {meta.shortLabel}
     </Badge>
@@ -1019,13 +1025,14 @@ function ProjectTypeBadge({ type }: { type: ProjectType }) {
 }
 
 function ProjectStatusBadge({ status }: { status: ProjectStatus }) {
-  const meta = STATUS_META[status];
+  const meta = STATUS_META[status] || STATUS_META.draft;
   const Icon = meta.icon;
 
   return (
-    <span className={cn('inline-flex items-center gap-1.5 rounded-md px-2 py-0.5 text-xs font-medium', meta.className)}>
-      <Icon className="size-3.5" />
-      {meta.label}
+    <span className={cn('inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-bold shrink-0', meta.className)}>
+      <span className={cn('size-1.5 rounded-full shrink-0', meta.dotClass)} />
+      <Icon className="size-3.5 shrink-0" />
+      <span>{meta.label}</span>
     </span>
   );
 }
@@ -1034,13 +1041,23 @@ function ProgressSummary({ project }: { project: Project }) {
   const averageProgress = getAverageProgress(project);
 
   return (
-    <div className="min-w-[160px] space-y-2">
-      <div className="flex items-center justify-between gap-3 text-xs">
-        <span className="font-medium tabular-nums text-foreground">{averageProgress}%</span>
-        <span className="text-muted-foreground">الإنجاز</span>
+    <div className="min-w-[130px] space-y-1.5">
+      <div className="flex items-center justify-between text-xs font-bold tabular-nums">
+        <span className="text-[11px] text-muted-foreground font-medium">نسبة التقدم</span>
+        <span className={cn(
+          averageProgress >= 100 ? "text-emerald-600 dark:text-emerald-400" : averageProgress >= 50 ? "text-primary" : "text-amber-600 dark:text-amber-400"
+        )}>
+          {averageProgress}%
+        </span>
       </div>
       <div className="h-1.5 overflow-hidden rounded-full bg-muted">
-        <div className="h-full rounded-full bg-primary" style={{ width: `${averageProgress}%` }} />
+        <div
+          className={cn(
+            "h-full rounded-full transition-all duration-500",
+            averageProgress >= 100 ? "bg-emerald-500" : averageProgress >= 50 ? "bg-primary" : "bg-amber-500"
+          )}
+          style={{ width: `${averageProgress}%` }}
+        />
       </div>
     </div>
   );

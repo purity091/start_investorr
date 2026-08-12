@@ -16,6 +16,10 @@ import {
   Target,
   BookOpen,
   Plus,
+  Calendar,
+  Eye,
+  FolderKanban,
+  ExternalLink,
 } from 'lucide-react';
 
 import SmartBeginnerPro from '../../../features/easy-mode/SmartBeginnerPro';
@@ -297,10 +301,10 @@ const SECTION_PROJECTS: Record<IntroMode, SectionProject[]> = {
   ],
 };
 
-const STATUS_META: Record<ProjectStatus, { label: string; className: string; icon: React.ElementType }> = {
-  ready: { label: 'جاهز', className: 'bg-emerald-100 text-emerald-800', icon: CheckCircle2 },
-  review: { label: 'قيد المراجعة', className: 'bg-amber-100 text-amber-800', icon: Clock },
-  draft: { label: 'مسودة', className: 'bg-muted text-muted-foreground', icon: Sparkles },
+const STATUS_META: Record<ProjectStatus, { label: string; className: string; dotClass: string; icon: React.ElementType }> = {
+  ready: { label: 'جاهز ومكتمل', className: 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20', dotClass: 'bg-emerald-500', icon: CheckCircle2 },
+  review: { label: 'قيد التطوير', className: 'bg-amber-500/10 text-amber-700 dark:text-amber-400 border-amber-500/20', dotClass: 'bg-amber-500 animate-pulse', icon: Clock },
+  draft: { label: 'مسودة أولية', className: 'bg-muted text-muted-foreground border-border/60', dotClass: 'bg-slate-400', icon: Sparkles },
 };
 
 const TEMPLATES: Template[] = [
@@ -328,7 +332,7 @@ const ToolIntroPanel: React.FC<{
   const IntroIcon = intro.icon;
 
   return (
-    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-4 sm:py-6 sm:px-6 lg:px-8 text-right">
+    <div dir="rtl" className="flex w-full flex-col gap-4 px-2 py-2 sm:px-4 lg:px-6 text-right">
       {/* Header Info - Borderless and clean matching SmartBeginnerPro */}
       <div className="flex flex-col gap-2 bg-background px-0 py-1">
         <div className="flex items-start gap-3">
@@ -615,7 +619,7 @@ export const NewPlan: React.FC<{
 
   return (
     <>
-    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
+    <div dir="rtl" className="flex w-full flex-col gap-4 px-2 py-2 sm:px-4 lg:px-6">
       {/* Header */}
       <div className="flex flex-col gap-2 mb-1">
         <h1 className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">اختر أداة بناء الدراسة المناسبة</h1>
@@ -975,15 +979,15 @@ function ModeProjectsSection({
           </div>
         ) : null}
         {/* Unified Responsive Table for All Screen Sizes (Mobile, Tablet, Desktop) */}
-        <div className="w-full overflow-x-auto rounded-xl border border-border/60 shadow-2xs">
-          <Table dir="rtl" className="min-w-[640px]">
-            <TableHeader className="bg-muted/40">
+        <div className="w-full overflow-x-auto rounded-xl border border-border/60 shadow-2xs bg-card">
+          <Table dir="rtl" className="min-w-[720px]">
+            <TableHeader className="bg-muted/40 border-b border-border/60">
               <TableRow>
-                <TableHead className="min-w-[220px] text-right font-bold text-foreground">المشروع</TableHead>
-                <TableHead className="w-[140px] text-right font-bold text-foreground">إجراءات</TableHead>
-                <TableHead className="w-[120px] text-right font-bold text-foreground">التقدم</TableHead>
-                <TableHead className="min-w-[120px] text-right font-bold text-foreground">الحالة</TableHead>
-                <TableHead className="min-w-[110px] text-right font-bold text-foreground">آخر تعديل</TableHead>
+                <TableHead className="min-w-[260px] text-right font-bold text-foreground">المشروع</TableHead>
+                <TableHead className="w-[140px] text-right font-bold text-foreground">الحالة</TableHead>
+                <TableHead className="w-[150px] text-right font-bold text-foreground">التقدم</TableHead>
+                <TableHead className="w-[120px] text-right font-bold text-foreground">آخر تعديل</TableHead>
+                <TableHead className="w-[160px] text-left font-bold text-foreground">إجراءات</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -1098,45 +1102,94 @@ function ProjectRow({
   const isExample = project.id.startsWith('example');
 
   return (
-    <TableRow className={cn("transition-colors hover:bg-muted/50", isExample && "bg-primary/5 hover:bg-primary/10")}>
-      <TableCell className="py-4">
-        <div className="min-w-0 text-right space-y-1">
-          <div className="flex items-center gap-2">
-            <p className="text-base font-bold text-foreground">{project.name}</p>
+    <TableRow
+      className={cn(
+        "transition-colors duration-200",
+        isExample
+          ? "bg-emerald-500/[0.03] hover:bg-emerald-500/[0.07] border-r-2 border-r-emerald-500"
+          : "hover:bg-muted/50"
+      )}
+    >
+      {/* Project Column */}
+      <TableCell className="py-3.5 px-4">
+        <div className="min-w-0 text-right space-y-1.5">
+          <div className="flex items-center gap-2 flex-wrap">
+            <div className={cn(
+              "flex size-7 items-center justify-center rounded-md shrink-0",
+              isExample ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-400" : "bg-primary/10 text-primary"
+            )}>
+              {isExample ? <Sparkles className="size-3.5" /> : <FolderKanban className="size-3.5" />}
+            </div>
+            <p className="text-sm font-extrabold text-foreground leading-snug">{project.name}</p>
             {isExample && (
-              <Badge variant="outline" className="bg-primary/10 text-primary border-primary/20 font-bold text-xs">
+              <Badge variant="outline" className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/25 font-bold text-[11px] px-2 py-0.5 gap-1 shrink-0">
+                <Sparkles className="size-3" />
                 مثال توضيحي للنتيجة
               </Badge>
             )}
+            <Badge variant="secondary" className="text-[11px] font-semibold bg-muted/70 text-muted-foreground border border-border/40 shrink-0">
+              {project.sector}
+            </Badge>
           </div>
-          <p className="text-sm text-muted-foreground font-medium">{project.sector}</p>
           {project.description && (
-            <p className="text-xs leading-relaxed text-muted-foreground/90 max-w-2xl mt-1">
+            <p className="text-xs leading-relaxed text-muted-foreground/90 max-w-2xl font-normal pr-9">
               {project.description}
             </p>
           )}
         </div>
       </TableCell>
-      <TableCell>
-        <div className="flex items-center gap-1">
+
+      {/* Status Column */}
+      <TableCell className="py-3.5 px-4">
+        <ProjectStatusBadge status={project.status} />
+      </TableCell>
+
+      {/* Progress Column */}
+      <TableCell className="py-3.5 px-4">
+        <ProgressSummary progress={project.progress} />
+      </TableCell>
+
+      {/* Last Edited Column */}
+      <TableCell className="py-3.5 px-4 whitespace-nowrap">
+        <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground font-semibold">
+          <Calendar className="size-3.5 text-muted-foreground/70" />
+          {project.updated}
+        </span>
+      </TableCell>
+
+      {/* Actions Column */}
+      <TableCell className="py-3.5 px-4 text-left whitespace-nowrap">
+        <div className="flex items-center justify-start gap-1.5">
           {isExample ? (
-            <Button variant="outline" size="sm" onClick={onViewExample} className="gap-1.5 font-bold text-xs bg-background hover:bg-primary hover:text-primary-foreground border-primary/30">
-              <Sparkles className="size-3.5" />
-              عرض المثال
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              onClick={onViewExample}
+              className="gap-1.5 font-bold text-xs bg-emerald-500/10 text-emerald-700 hover:bg-emerald-500/20 dark:text-emerald-400 border-emerald-500/30 rounded-lg h-8"
+            >
+              <Eye className="size-3.5" />
+              <span>معاينة المثال</span>
             </Button>
           ) : (
             <>
-              <Button asChild variant="ghost" size="icon-sm" className="text-muted-foreground hover:text-primary">
-                <a href={getProjectEditPath(project.id)} title="تعديل">
-                  <Pencil className="size-4" />
+              <Button
+                asChild
+                variant="outline"
+                size="sm"
+                className="gap-1.5 font-bold text-xs rounded-lg h-8 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all shadow-2xs"
+              >
+                <a href={getProjectEditPath(project.id)}>
+                  <Pencil className="size-3.5" />
+                  <span>تعديل الدراسة</span>
                 </a>
               </Button>
               <Button
                 variant="ghost"
                 size="icon-sm"
                 onClick={() => onShare(project)}
-                title="مشاركة"
-                className="text-muted-foreground hover:text-primary"
+                title="مشاركة المشروع"
+                className="text-muted-foreground hover:text-primary rounded-lg h-8 w-8"
               >
                 <Share2 className="size-4" />
               </Button>
@@ -1144,26 +1197,14 @@ function ProjectRow({
                 variant="ghost"
                 size="icon-sm"
                 onClick={() => onDelete(project)}
-                title="حذف"
-                className="text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+                title="حذف المشروع"
+                className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-lg h-8 w-8"
               >
                 <Trash2 className="size-4" />
               </Button>
             </>
           )}
         </div>
-      </TableCell>
-      <TableCell>
-        <ProgressSummary progress={project.progress} />
-      </TableCell>
-      <TableCell>
-        <ProjectStatusBadge status={project.status} />
-      </TableCell>
-      <TableCell>
-        <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground font-medium">
-          <Clock className="size-4" />
-          {project.updated}
-        </span>
       </TableCell>
     </TableRow>
   );
@@ -1179,20 +1220,44 @@ function ModelBadge({ label, icon: Icon }: { label: string; icon: React.ElementT
 }
 
 function ProjectStatusBadge({ status }: { status: ProjectStatus }) {
-  const meta = STATUS_META[status];
+  const meta = STATUS_META[status] || STATUS_META.draft;
   const Icon = meta.icon;
 
   return (
-    <span className={`inline-flex items-center gap-1.5 rounded-md px-2 py-0.5 text-xs font-medium ${meta.className}`}>
-      <Icon className="size-3.5" />
-      {meta.label}
+    <span
+      className={cn(
+        "inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-bold border shrink-0",
+        meta.className
+      )}
+    >
+      <span className={cn("size-1.5 rounded-full shrink-0", meta.dotClass)} />
+      <Icon className="size-3.5 shrink-0" />
+      <span>{meta.label}</span>
     </span>
   );
 }
 
 function ProgressSummary({ progress }: { progress: number }) {
   return (
-    <span className="text-sm font-medium tabular-nums text-foreground">{progress}%</span>
+    <div className="flex flex-col gap-1.5 w-full max-w-[130px]">
+      <div className="flex items-center justify-between text-xs font-bold tabular-nums">
+        <span className="text-[11px] text-muted-foreground font-medium">نسبة التقدم</span>
+        <span className={cn(
+          progress >= 100 ? "text-emerald-600 dark:text-emerald-400" : progress >= 50 ? "text-primary" : "text-amber-600 dark:text-amber-400"
+        )}>
+          {progress}%
+        </span>
+      </div>
+      <div className="h-1.5 w-full bg-muted rounded-full overflow-hidden">
+        <div
+          className={cn(
+            "h-full rounded-full transition-all duration-500",
+            progress >= 100 ? "bg-emerald-500" : progress >= 50 ? "bg-primary" : "bg-amber-500"
+          )}
+          style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
+        />
+      </div>
+    </div>
   );
 }
 

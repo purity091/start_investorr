@@ -350,7 +350,7 @@ function ProjectDashboard({
 
   return (
     <div className="w-full bg-background" dir="rtl">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-5 px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
+      <div className="flex w-full flex-col gap-3.5 px-2 py-2 sm:px-4 lg:px-6">
         <Card className="border-0 bg-background shadow-none">
           <CardHeader className="px-0 pt-0">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
@@ -982,7 +982,7 @@ export default function SmartBeginnerPro() {
 
   return (
     <div className="w-full bg-background" dir="rtl">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-3.5 sm:gap-6 px-2.5 py-2.5 sm:py-6 sm:px-6 lg:px-8">
+      <div className="flex w-full flex-col gap-3.5 px-2 py-2 sm:px-4 lg:px-6">
         {/* Corporate Wizard Header */}
         <div className="rounded-2xl border border-border/80 bg-card p-3 sm:p-6 shadow-2xs space-y-2 sm:space-y-4">
           <div className="flex flex-col gap-3 sm:gap-4 lg:flex-row lg:items-center lg:justify-between">

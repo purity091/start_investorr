@@ -89,7 +89,7 @@ export const BusinessPlanEditor: React.FC<BusinessPlanEditorProps> = ({
   }
 
   return (
-    <main className="app-page-shell-wide space-y-6 text-right" dir="rtl">
+    <main className="w-full space-y-3 sm:space-y-4 px-2 py-2 sm:px-4 lg:px-6 text-right" dir="rtl">
       <section className="rounded-xl bg-card p-4 sm:p-5 shadow-sm ring-1 ring-border/60">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl space-y-3">

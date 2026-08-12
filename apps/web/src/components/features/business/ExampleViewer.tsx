@@ -14,7 +14,7 @@ interface ExampleViewerProps {
 
 export const ExampleViewer: React.FC<ExampleViewerProps> = ({ mode, onBack }) => {
   return (
-    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-3 py-3 sm:px-4 lg:px-5 pb-20">
+    <div dir="rtl" className="flex w-full flex-col gap-3 px-2 py-2 sm:px-4 lg:px-6 pb-20">
       <div className="flex items-center gap-3">
         <Button variant="outline" size="sm" onClick={onBack} className="gap-2">
           <ArrowRight className="size-4" />

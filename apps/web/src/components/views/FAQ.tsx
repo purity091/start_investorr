@@ -53,21 +53,21 @@ export const FAQ: React.FC<FAQProps> = ({ embedded = false }) => {
   const [openId, setOpenId] = useState(0);
 
   return (
-    <section className={cn('w-full text-right', embedded ? 'space-y-5' : 'app-page-shell-wide space-y-6')} dir="rtl">
+    <section className={cn('w-full text-right', embedded ? 'space-y-3' : 'app-page-shell-wide space-y-4')} dir="rtl">
       {!embedded && (
-        <div className="rounded-xl bg-card p-4 sm:p-5 shadow-sm ring-1 ring-border/60">
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-            <div className="max-w-3xl space-y-3">
-              <Badge variant="secondary" className="w-fit">مركز المساعدة</Badge>
-              <div className="space-y-2">
-                <h1 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">الأسئلة الشائعة</h1>
-                <p className="text-sm leading-7 text-muted-foreground">
+        <div className="rounded-lg bg-card p-3 sm:p-4 shadow-2xs border-0">
+          <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-3xl space-y-1.5">
+              <Badge variant="secondary" className="w-fit text-[11px] font-bold">مركز المساعدة</Badge>
+              <div className="space-y-1">
+                <h1 className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">الأسئلة الشائعة</h1>
+                <p className="text-xs text-muted-foreground leading-relaxed">
                   إجابات مختصرة تساعد المستخدم على فهم المنصة، المسارات، ومخرجات كل أداة قبل البدء.
                 </p>
               </div>
             </div>
-            <Button variant="outline" className="w-full justify-center lg:w-auto">
-              <MessageCircle className="size-4" />
+            <Button variant="outline" size="sm" className="w-full justify-center lg:w-auto font-bold text-xs gap-1.5 border-0 bg-muted/60">
+              <MessageCircle className="size-3.5" />
               تواصل مع الدعم
             </Button>
           </div>
@@ -75,18 +75,18 @@ export const FAQ: React.FC<FAQProps> = ({ embedded = false }) => {
       )}
 
       {!embedded && (
-        <div className="grid gap-3 md:grid-cols-3">
+        <div className="grid gap-2.5 sm:grid-cols-3">
           {supportCards.map((item) => {
             const Icon = item.icon;
             return (
-              <Card key={item.title} className="shadow-sm">
-                <CardContent className="flex items-center gap-3 p-3 sm:p-4">
-                  <div className="flex size-9 items-center justify-center rounded-lg bg-muted text-foreground">
+              <Card key={item.title} className="shadow-2xs border-0">
+                <CardContent className="flex items-center gap-2.5 p-3 text-right">
+                  <div className="flex size-8 shrink-0 items-center justify-center rounded-md bg-muted text-foreground">
                     <Icon className="size-4" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-foreground">{item.title}</p>
-                    <p className="text-xs text-muted-foreground">{item.value}</p>
+                    <p className="text-xs font-bold text-foreground">{item.title}</p>
+                    <p className="text-[11px] text-muted-foreground">{item.value}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -95,30 +95,30 @@ export const FAQ: React.FC<FAQProps> = ({ embedded = false }) => {
         </div>
       )}
 
-      <Card className="shadow-sm">
-        <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3">
+      <Card className={cn('shadow-2xs', embedded ? 'border-0 ring-0 bg-card' : 'border-border/60')}>
+        <CardHeader className="p-3.5 sm:p-4 pb-2 border-0">
           <div className="flex items-center gap-2">
-            <HelpCircle className="size-5 text-muted-foreground" />
+            <HelpCircle className="size-4 text-primary shrink-0" />
             <div>
-              <CardTitle className="text-lg">إجابات مهمة قبل استخدام المنصة</CardTitle>
-              <CardDescription>كل سؤال قابل للفتح بدون تشويش بصري أو بطاقات ضخمة.</CardDescription>
+              <CardTitle className="text-base font-bold">إجابات مهمة قبل استخدام المنصة</CardTitle>
+              <CardDescription className="text-xs">أسئلة وأجوبة تفاعلية سهلة التصفح.</CardDescription>
             </div>
           </div>
         </CardHeader>
-        <CardContent className="space-y-2 p-3 sm:p-6 pt-0 sm:pt-0">
+        <CardContent className="space-y-1.5 p-3 sm:p-4 pt-0">
           {faqs.map((faq, index) => (
             <Collapsible key={faq.question} open={openId === index} onOpenChange={() => setOpenId(openId === index ? -1 : index)}>
               <CollapsibleTrigger asChild>
                 <Button
                   type="button"
                   variant="ghost"
-                  className="flex w-full items-center justify-between gap-4 rounded-lg px-3 py-3 text-right text-sm font-medium text-foreground transition-colors hover:bg-muted"
+                  className="flex w-full items-center justify-between gap-3 rounded-md px-3 py-2 text-right text-xs font-bold text-foreground transition-colors hover:bg-muted/50"
                 >
                   <span>{faq.question}</span>
-                  <ChevronDown className={cn('size-4 shrink-0 text-muted-foreground transition-transform', openId === index && 'rotate-180')} />
+                  <ChevronDown className={cn('size-3.5 shrink-0 text-muted-foreground transition-transform', openId === index && 'rotate-180')} />
                 </Button>
               </CollapsibleTrigger>
-              <CollapsibleContent className="px-3 pb-4 text-sm leading-7 text-muted-foreground">
+              <CollapsibleContent className="px-3 py-2 text-xs leading-relaxed text-muted-foreground bg-muted/20 rounded-md mt-1">
                 {faq.answer}
               </CollapsibleContent>
             </Collapsible>

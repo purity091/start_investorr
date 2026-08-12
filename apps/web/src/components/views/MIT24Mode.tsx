@@ -363,7 +363,7 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
   const currentPhase = PHASES.find((p) => p.id === currentPhaseId) || PHASES[0];
 
   return (
-    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-3.5 sm:gap-6 px-2.5 py-2.5 sm:py-6 sm:px-6 lg:px-8">
+    <div dir="rtl" className="flex w-full flex-col gap-3.5 px-2 py-2 sm:px-4 lg:px-6">
       {/* Hero Header Card */}
       <div className="rounded-2xl border border-border/80 bg-card p-3.5 sm:p-6 shadow-2xs space-y-3 sm:space-y-4">
         <div className="flex flex-col gap-3 sm:gap-4 lg:flex-row lg:items-center lg:justify-between">

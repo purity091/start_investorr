@@ -200,7 +200,7 @@ const PROJECT_ATTACHMENTS: NavItemConfig[] = [
     icon: Globe,
     id: 'tour-unicorn',
     badge: 'قريباً',
-    badgeClassName: 'bg-amber-500/15 text-amber-600 dark:text-amber-400 font-bold border border-amber-500/30',
+    badgeClassName: 'bg-amber-500/15 text-amber-700 font-bold border border-amber-500/30',
     iconColor: 'text-purple-500 opacity-75',
     disabled: true,
     tooltipText: 'مقيم ومستشار جاهزية اليونيكورن للمشاريع الواعدة — قريباً في المنصة لتوفير المقارنات المتقدمة والتنبؤات الاستثمارية.',
@@ -383,8 +383,8 @@ function SidebarLink({
         className={cn(
           "h-auto py-2 min-h-9.5 justify-start gap-2.5 px-3 text-right text-sm leading-relaxed transition-all rounded-xl",
           isActive
-            ? "!bg-black !text-white font-bold shadow-md hover:!bg-black hover:!text-white dark:!bg-white dark:!text-black dark:hover:!bg-white"
-            : "text-slate-700 dark:text-slate-300 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800/60"
+            ? "!bg-slate-900 !text-white font-bold shadow-sm hover:!bg-slate-900 hover:!text-white"
+            : "text-slate-700 font-semibold hover:bg-slate-100 hover:text-slate-900"
         )}
       >
         <a
@@ -392,8 +392,8 @@ function SidebarLink({
           href={getTabPath(item.tab)}
           onClick={(event) => goToTab(event, item.tab, setActiveTab)}
         >
-          <Icon className={cn("size-4.5 shrink-0 transition-transform group-hover:scale-105", isActive ? "!text-white dark:!text-black" : item.iconColor || "text-slate-600 dark:text-slate-400")} />
-          <span className={cn("min-w-0 flex-1", isActive ? "!text-white dark:!text-black font-bold" : "font-semibold")}>
+          <Icon className={cn("size-4.5 shrink-0 transition-transform group-hover:scale-105", isActive ? "!text-white" : item.iconColor || "text-slate-600")} />
+          <span className={cn("min-w-0 flex-1", isActive ? "!text-white font-bold" : "font-semibold")}>
             {item.label}
           </span>
           {item.badge !== undefined && item.badge !== null && item.badge !== '' ? (
@@ -401,7 +401,7 @@ function SidebarLink({
               className={cn(
                 "ms-auto flex h-5 min-w-5 shrink-0 items-center justify-center rounded-md px-1.5 text-[11px] font-bold tabular-nums group-data-[collapsible=icon]:hidden",
                 isActive
-                  ? "!bg-white/20 !text-white dark:!bg-black/20 dark:!text-black font-bold"
+                  ? "!bg-white/20 !text-white font-bold"
                   : item.badgeClassName || "bg-sidebar-accent text-sidebar-foreground"
               )}
             >
@@ -432,9 +432,9 @@ function SidebarSection({
   return (
     <Collapsible defaultOpen={true} className="group/collapsible">
       <SidebarGroup>
-        <SidebarGroupLabel asChild className="bg-transparent font-bold text-[11px] uppercase tracking-wider text-slate-400 dark:text-slate-500 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground cursor-pointer transition-colors w-full flex items-center justify-between py-1">
+        <SidebarGroupLabel asChild className="bg-transparent font-bold text-[11px] uppercase tracking-wider text-slate-400 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground cursor-pointer transition-colors w-full flex items-center justify-between py-1">
           <CollapsibleTrigger>
-            <span className={cn("flex items-center gap-1.5 transition-colors", isAnyActive && "text-black dark:text-white font-bold")}>
+            <span className={cn("flex items-center gap-1.5 transition-colors", isAnyActive && "text-slate-900 font-bold")}>
               {title}
             </span>
             <ChevronDown className="ms-auto size-3.5 transition-transform group-data-[state=open]/collapsible:rotate-180" />
@@ -464,9 +464,9 @@ function SidebarSection({
                       isDisabled && "opacity-75 cursor-not-allowed"
                     )}
                   >
-                    <SubIcon className={cn("size-4.5 shrink-0 transition-transform group-hover:scale-105", isActive ? "!text-white dark:!text-black" : item.iconColor || "text-slate-600 dark:text-slate-400")} />
+                    <SubIcon className={cn("size-4.5 shrink-0 transition-transform group-hover:scale-105", isActive ? "!text-white" : item.iconColor || "text-slate-600")} />
 
-                    <span className={cn("min-w-0 flex-1", isActive ? "font-bold !text-white dark:!text-black text-sm" : "font-semibold text-sm text-slate-700 dark:text-slate-300")}>
+                    <span className={cn("min-w-0 flex-1", isActive ? "font-bold !text-white text-sm" : "font-semibold text-sm text-slate-700")}>
                       {item.label}
                     </span>
 
@@ -475,7 +475,7 @@ function SidebarSection({
                         className={cn(
                           "ms-auto flex h-5 min-w-5 shrink-0 items-center justify-center rounded-md px-1.5 text-[11px] font-bold tabular-nums group-data-[collapsible=icon]:hidden",
                           isActive
-                            ? "!bg-white/20 !text-white dark:!bg-black/20 dark:!text-black font-bold"
+                            ? "!bg-white/20 !text-white font-bold"
                             : item.badgeClassName || "bg-sidebar-accent text-sidebar-foreground"
                         )}
                       >
@@ -498,8 +498,8 @@ function SidebarSection({
                               className={cn(
                                 "h-auto py-2 min-h-9.5 justify-start gap-2.5 px-3 text-right text-sm leading-relaxed transition-all rounded-xl",
                                 isActive
-                                  ? "!bg-black !text-white font-bold shadow-md hover:!bg-black hover:!text-white dark:!bg-white dark:!text-black dark:hover:!bg-white"
-                                  : "text-slate-700 dark:text-slate-300 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800/60",
+                                  ? "!bg-slate-900 !text-white font-bold shadow-sm hover:!bg-slate-900 hover:!text-white"
+                                  : "text-slate-700 font-semibold hover:bg-slate-100 hover:text-slate-900",
                                 isDisabled && "hover:bg-amber-500/10 cursor-not-allowed"
                               )}
                             >
@@ -519,8 +519,8 @@ function SidebarSection({
                         className={cn(
                           "h-auto py-2 min-h-9.5 justify-start gap-2.5 px-3 text-right text-sm leading-relaxed transition-all rounded-xl",
                           isActive
-                            ? "!bg-black !text-white font-bold shadow-md hover:!bg-black hover:!text-white dark:!bg-white dark:!text-black dark:hover:!bg-white"
-                            : "text-slate-700 dark:text-slate-300 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800/60"
+                            ? "!bg-slate-900 !text-white font-bold shadow-sm hover:!bg-slate-900 hover:!text-white"
+                            : "text-slate-700 font-semibold hover:bg-slate-100 hover:text-slate-900"
                         )}
                       >
                         {linkElement}
