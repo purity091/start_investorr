@@ -14,6 +14,7 @@ import { withSupabaseRetry } from '@/lib/supabaseRetry';
 import { useAuth } from '@/features/auth/AuthContext';
 import { getProjectIdFromEditPath } from '@/utils/routes';
 import { getSubscriptionPlan } from '@/lib/subscriptionPlans';
+import { invalidateProjectCountCache } from '@/lib/projectCache';
 
 interface ProjectWorkspaceContextValue {
   workspace: ProjectWorkspace;
@@ -589,6 +590,7 @@ export const ProjectWorkspaceProvider: React.FC<{
         setLastSyncedAt(Date.now());
         clearPendingSync(data.id, user.id);
         sessionStorage.removeItem(getProjectsCacheKey(user.id));
+        invalidateProjectCountCache(user.id);
         return data.id;
       }
     } catch (err) {

@@ -22,7 +22,7 @@ import { fetchPublicJson } from '../../../../lib/publicData';
 import './mobile-responsive.css';
 
 const formatDate = (date: Date) =>
-  new Intl.DateTimeFormat('ar', {
+  new Intl.DateTimeFormat('ar-SA-u-nu-latn', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',

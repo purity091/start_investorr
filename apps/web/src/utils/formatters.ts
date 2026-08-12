@@ -7,6 +7,18 @@ export const formatNumber = (num: number, decimals: number = 1): string => {
   });
 };
 
+export const formatDateLatin = (value: string | number | Date, options?: Intl.DateTimeFormatOptions): string => (
+  new Intl.DateTimeFormat('ar-SA-u-nu-latn', options).format(new Date(value))
+);
+
+export const formatTimeLatin = (value: string | number | Date, options?: Intl.DateTimeFormatOptions): string => (
+  new Intl.DateTimeFormat('ar-SA-u-nu-latn', {
+    hour: '2-digit',
+    minute: '2-digit',
+    ...options,
+  }).format(new Date(value))
+);
+
 export const formatCurrency = (num: number, currency: string = 'USD', decimals: number = 1): string => {
   const symbols: Record<string, string> = {
     USD: '$',

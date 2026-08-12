@@ -185,7 +185,7 @@ export const AdminSecurityDashboard: React.FC<any> = (props) => {
                   </div>
                   <div className="text-center bg-slate-50 px-3 py-2 rounded-xl border border-slate-100">
                      <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">المستخدمين</span>
-                     <span className="block text-lg font-black text-slate-700">{role.usersCount.toLocaleString()}</span>
+                     <span className="block text-lg font-black text-slate-700">{role.usersCount.toLocaleString('en-US')}</span>
                   </div>
                 </div>
 

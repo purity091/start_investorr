@@ -611,21 +611,21 @@ export default function LandingPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   <div className="p-4 rounded-xl bg-card border border-border/80 text-center space-y-1 shadow-2xs">
                     <span className="text-[10px] font-bold text-muted-foreground uppercase block">الإيراد الشهري (MRR)</span>
-                    <span className="text-xl font-black text-primary block">${calculatedMetrics.mrr.toLocaleString()}</span>
+                    <span className="text-xl font-black text-primary block">${calculatedMetrics.mrr.toLocaleString('en-US')}</span>
                   </div>
                   <div className="p-4 rounded-xl bg-card border border-border/80 text-center space-y-1 shadow-2xs">
                     <span className="text-[10px] font-bold text-muted-foreground uppercase block">الإيراد السنوي (ARR)</span>
-                    <span className="text-xl font-black text-emerald-700 block">${calculatedMetrics.arr.toLocaleString()}</span>
+                    <span className="text-xl font-black text-emerald-700 block">${calculatedMetrics.arr.toLocaleString('en-US')}</span>
                   </div>
                   <div className="p-4 rounded-xl bg-card border border-border/80 text-center space-y-1 shadow-2xs">
                     <span className="text-[10px] font-bold text-muted-foreground uppercase block">قيمة العميل (LTV)</span>
-                    <span className="text-xl font-black text-foreground block">${calculatedMetrics.ltv.toLocaleString()}</span>
+                    <span className="text-xl font-black text-foreground block">${calculatedMetrics.ltv.toLocaleString('en-US')}</span>
                   </div>
                 </div>
 
                 <div className="p-3 rounded-lg bg-emerald-50/80 border border-emerald-200/80 text-emerald-900 text-xs leading-relaxed font-medium">
                   <span className="font-bold block mb-0.5">تحليل الجاهزية:</span>
-                  مشروعك بهذا العدد من المشتركين يولد إيراداً سنوياً قدره <strong>${calculatedMetrics.arr.toLocaleString()}</strong> وهو مؤشر ممتاز للانتقال لبناء نموذج العمل في المنصة.
+                  مشروعك بهذا العدد من المشتركين يولد إيراداً سنوياً قدره <strong>${calculatedMetrics.arr.toLocaleString('en-US')}</strong> وهو مؤشر ممتاز للانتقال لبناء نموذج العمل في المنصة.
                 </div>
 
                 <Button onClick={() => openAuthModal('register')} className="w-full font-bold text-xs h-10 gap-2 cursor-pointer">

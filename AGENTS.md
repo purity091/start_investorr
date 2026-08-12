@@ -20,10 +20,11 @@ Core rules:
 - Use semantic colors and the existing CSS variables in `src/index.css`.
 - Preserve RTL behavior and Arabic-friendly alignment, spacing, and icon placement.
 - Keep layouts simple, readable, and close to `shadcn` composition patterns.
-- Use solid surfaces, restrained shadows, and avoid decorative gradients by default.
+- Use borderless, clean surfaces (`border-0`), restrained subtle shadows (`shadow-2xs`), and solid background contrast instead of visible structural borders.
 
 Do not:
 
+- Do not use visible borders (`border`, `border-b`, `border-t`, `ring-1`, `border-border`) on containers, cards, tables, table headers, rows, or sections. Enforce clean, borderless (`border-0`) surfaces.
 - Do not create custom replacements for core UI primitives such as Button, Input, Card, Dialog, Table, Sheet, Dropdown, Sidebar if a `shadcn/ui` version exists or should exist.
 - Do not introduce dark-mode-only sections or night-style surfaces.
 - Do not add flashy hover effects, glassmorphism, or unnecessary motion.

@@ -133,15 +133,15 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
       if (mrrKpiIndex >= 0) {
         updatedKpis[mrrKpiIndex] = {
           ...updatedKpis[mrrKpiIndex],
-          value: `$${metrics.mrr.toLocaleString()}`,
+          value: `$${metrics.mrr.toLocaleString('en-US')}`,
           insight: `محدث بحسب تقديرات ${newEstimate.modelTitle}`,
         };
       } else {
         updatedKpis.push({
           id: 'fin-kpi-mrr',
           label: 'الإيراد الشهري (MRR)',
-          value: `$${metrics.mrr.toLocaleString()}`,
-          target: `$${(metrics.mrr * 1.5).toLocaleString()}`,
+          value: `$${metrics.mrr.toLocaleString('en-US')}`,
+          target: `$${(metrics.mrr * 1.5).toLocaleString('en-US')}`,
           insight: `تقدير حي مأخوذ من حاسبة الأرباح والمؤشرات.`,
         });
       }
@@ -230,7 +230,7 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
                 <DollarSign className="size-4" />
               </div>
             </div>
-            <div className="text-2xl font-extrabold text-foreground">${metrics.mrr.toLocaleString()}</div>
+            <div className="text-2xl font-extrabold text-foreground">${metrics.mrr.toLocaleString('en-US')}</div>
             <p className="text-[11px] text-muted-foreground mt-1">الدخل المتوقع شهرياً من العمليات</p>
           </CardContent>
         </Card>
@@ -244,7 +244,7 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
                 <TrendingUp className="size-4" />
               </div>
             </div>
-            <div className="text-2xl font-extrabold text-emerald-600">${metrics.arr.toLocaleString()}</div>
+            <div className="text-2xl font-extrabold text-emerald-600">${metrics.arr.toLocaleString('en-US')}</div>
             <p className="text-[11px] text-muted-foreground mt-1">معدل الإيراد المتكرر سنوياً</p>
           </CardContent>
         </Card>
@@ -258,7 +258,7 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
                 <Sparkles className="size-4" />
               </div>
             </div>
-            <div className="text-2xl font-extrabold text-purple-600">${metrics.netProfitAnnual.toLocaleString()}</div>
+            <div className="text-2xl font-extrabold text-purple-600">${metrics.netProfitAnnual.toLocaleString('en-US')}</div>
             <div className="flex items-center justify-between text-[11px] text-muted-foreground mt-1">
               <span>هامش الربح الصافي:</span>
               <span className="font-bold text-foreground">{metrics.netMargin}%</span>
@@ -275,7 +275,7 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
                 <Target className="size-4" />
               </div>
             </div>
-            <div className="text-2xl font-extrabold text-foreground">${metrics.ltv.toLocaleString()}</div>
+            <div className="text-2xl font-extrabold text-foreground">${metrics.ltv.toLocaleString('en-US')}</div>
             <div className="flex items-center gap-1.5 mt-1">
               <Badge variant="outline" className="text-[10px] font-semibold">
                 نسبة LTV/CAC: {metrics.ltvCacRatio}x
@@ -549,17 +549,17 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
               <div className="space-y-2 text-xs font-medium">
                 <div className="flex justify-between p-3 rounded-lg bg-muted/40 border border-border">
                   <span className="text-muted-foreground">إجمالي الإيرادات السنوية (Gross Revenue):</span>
-                  <span className="font-extrabold text-foreground">${metrics.arr.toLocaleString()}</span>
+                  <span className="font-extrabold text-foreground">${metrics.arr.toLocaleString('en-US')}</span>
                 </div>
 
                 <div className="flex justify-between p-3 rounded-lg bg-muted/40 border border-border">
                   <span className="text-muted-foreground">التكاليف التشغيلية السنوية (Annual OpEx):</span>
-                  <span className="font-extrabold text-destructive">-${metrics.annualOpEx.toLocaleString()}</span>
+                  <span className="font-extrabold text-destructive">-${metrics.annualOpEx.toLocaleString('en-US')}</span>
                 </div>
 
                 <div className="flex justify-between p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-foreground font-bold">
                   <span>صافي الربح السنوي النهائي (Net Profit):</span>
-                  <span className="text-sm font-black text-emerald-600">${metrics.netProfitAnnual.toLocaleString()}</span>
+                  <span className="text-sm font-black text-emerald-600">${metrics.netProfitAnnual.toLocaleString('en-US')}</span>
                 </div>
               </div>
 

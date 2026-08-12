@@ -17,6 +17,7 @@ import { PlanSection, User } from './types';
 import { getTabFromPathname, getTabPath } from './utils/routes';
 import { ProjectWorkspaceProvider, useProjectWorkspace } from './features/workspace/ProjectWorkspaceContext';
 import { AuthProvider, useAuth } from './features/auth/AuthContext';
+import { NotificationProvider } from './services/notificationService';
 import { AuthScreen } from './features/auth/AuthScreen';
 
 const DEFAULT_TAB = 'home';
@@ -324,9 +325,11 @@ const App: React.FC = () => {
 
   return (
     <AuthProvider>
-      <ProjectWorkspaceProvider planSections={initialSections}>
-        <AppShell />
-      </ProjectWorkspaceProvider>
+      <NotificationProvider>
+        <ProjectWorkspaceProvider planSections={initialSections}>
+          <AppShell />
+        </ProjectWorkspaceProvider>
+      </NotificationProvider>
     </AuthProvider>
   );
 };

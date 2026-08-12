@@ -68,7 +68,7 @@ export const UnifiedWorkspace: React.FC<{ setActiveTab: (tab: string) => void }>
       iconColor: 'text-emerald-600',
       description: `حساب التقديرات المالية والإيرادات المتكررة ونقطة التعادل الخاصة بـ (${projectName}).`,
       statLabel: activeEstimate
-        ? `MRR المحسوب للمشروع: $${activeEstimate.mrr.toLocaleString()} (LTV/CAC: ${activeEstimate.ltvCacRatio}x)`
+        ? `MRR المحسوب للمشروع: $${activeEstimate.mrr.toLocaleString('en-US')} (LTV/CAC: ${activeEstimate.ltvCacRatio}x)`
         : `حساب التقديرات والتدفقات المالية لـ ${projectName}`,
       buttonText: `حساب أرباح ${projectName}`,
       hoverBorder: 'hover:border-emerald-500/60',

@@ -224,7 +224,7 @@ export const SavedMarketItems: React.FC<SavedMarketItemsProps> = ({ setActiveTab
                 sector: row.sector_label || profile?.sectorLabel || 'قطاع الأعمال',
                 scoreLabel: `${row.readiness_score ?? metrics?.readinessScore ?? 85}%`,
                 scoreValue: row.readiness_score ?? metrics?.readinessScore ?? 85,
-                savedDate: new Date(row.updated_at).toLocaleDateString('ar-SA'),
+                savedDate: new Date(row.updated_at).toLocaleDateString('ar-SA-u-nu-latn'),
                 rawPayload: { isProject: true, id: row.id },
               });
             });

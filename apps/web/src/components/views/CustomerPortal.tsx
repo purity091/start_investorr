@@ -20,6 +20,7 @@ import { useProjectWorkspace } from '../../features/workspace/ProjectWorkspaceCo
 import { useAuth } from '../../features/auth/AuthContext';
 import { supabase } from '../../lib/supabase';
 import { getSubscriptionPlan, SubscriptionPlan } from '../../lib/subscriptionPlans';
+import { readProjectCountCache, writeProjectCountCache } from '@/lib/projectCache';
 import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/Card';
@@ -142,6 +143,12 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
         return;
       }
 
+      const cachedCount = readProjectCountCache(authUser.id);
+      if (cachedCount !== null) {
+        setActiveProjectsCount(cachedCount);
+        return;
+      }
+
       const { count, error } = await supabase
         .from('business_canvas')
         .select('id', { count: 'exact', head: true })
@@ -149,7 +156,9 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
         .is('deleted_at', null);
 
       if (!cancelled && !error) {
-        setActiveProjectsCount(count ?? 0);
+        const nextCount = count ?? 0;
+        setActiveProjectsCount(nextCount);
+        writeProjectCountCache(authUser.id, nextCount);
       }
     };
 

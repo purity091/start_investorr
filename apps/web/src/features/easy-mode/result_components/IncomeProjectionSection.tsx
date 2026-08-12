@@ -24,7 +24,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
             <div style={{ width: 8, height: 8, borderRadius: "50%", background: p.color }} />
             <p style={{ fontSize: 13, fontWeight: 900, margin: 0 }}>
               {p.name === "realistic" ? "المسار الواقعي" : "المستهدف"}: 
-              <span style={{ marginRight: 8 }}>${p.value.toLocaleString()}</span>
+              <span style={{ marginRight: 8 }}>${p.value.toLocaleString('en-US')}</span>
             </p>
           </div>
         ))}

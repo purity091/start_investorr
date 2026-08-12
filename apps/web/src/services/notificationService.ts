@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import * as React from 'react';
+import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import {
   AlertTriangle,
   CheckCircle2,
@@ -32,7 +33,7 @@ type NotificationRow = {
   created_at: string;
 };
 
-const relativeTimeFormatter = new Intl.RelativeTimeFormat('ar', { numeric: 'auto' });
+const relativeTimeFormatter = new Intl.RelativeTimeFormat('ar-u-nu-latn', { numeric: 'auto' });
 
 const formatRelativeTime = (isoDate: string) => {
   const deltaSeconds = Math.round((new Date(isoDate).getTime() - Date.now()) / 1000);
@@ -42,7 +43,7 @@ const formatRelativeTime = (isoDate: string) => {
   if (absSeconds < 3600) return relativeTimeFormatter.format(Math.round(deltaSeconds / 60), 'minute');
   if (absSeconds < 86400) return relativeTimeFormatter.format(Math.round(deltaSeconds / 3600), 'hour');
   if (absSeconds < 2592000) return relativeTimeFormatter.format(Math.round(deltaSeconds / 86400), 'day');
-  return new Intl.DateTimeFormat('ar', { dateStyle: 'medium' }).format(new Date(isoDate));
+  return new Intl.DateTimeFormat('ar-SA-u-nu-latn', { dateStyle: 'medium' }).format(new Date(isoDate));
 };
 
 const toNotification = (row: NotificationRow): SystemNotification => ({
@@ -80,11 +81,9 @@ const categoryLabels: Record<NotificationCategory, string> = {
 const getNotificationMeta = (type: Notification['type']) => notificationMeta[type];
 const getCategoryLabel = (category: NotificationCategory) => categoryLabels[category];
 
-export const useSystemNotifications = (options?: { limit?: number; pollIntervalMs?: number }) => {
+const useNotificationStore = (pollIntervalMs = 30000) => {
   const { user } = useAuth();
   const userId = user?.id;
-  const limit = options?.limit;
-  const pollIntervalMs = options?.pollIntervalMs ?? 30000;
   const [notifications, setNotifications] = useState<SystemNotification[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -106,7 +105,7 @@ export const useSystemNotifications = (options?: { limit?: number; pollIntervalM
       .eq('user_id', userId)
       .order('created_at', { ascending: false });
 
-    if (limit) query.limit(limit);
+    query.limit(50);
 
     const { data, error } = await query;
 
@@ -118,7 +117,7 @@ export const useSystemNotifications = (options?: { limit?: number; pollIntervalM
     }
 
     setIsLoading(false);
-  }, [limit, userId]);
+  }, [userId]);
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -203,6 +202,25 @@ export const useSystemNotifications = (options?: { limit?: number; pollIntervalM
     markAllAsRead,
     deleteNotification,
     clearAll,
+  };
+};
+
+type NotificationStore = ReturnType<typeof useNotificationStore>;
+const NotificationContext = createContext<NotificationStore | null>(null);
+
+export const NotificationProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
+  const store = useNotificationStore();
+  return React.createElement(NotificationContext.Provider, { value: store }, children);
+};
+
+export const useSystemNotifications = (options?: { limit?: number; pollIntervalMs?: number }) => {
+  const store = useContext(NotificationContext);
+  if (!store) {
+    throw new Error('useSystemNotifications must be used inside NotificationProvider');
+  }
+  return {
+    ...store,
+    notifications: options?.limit ? store.notifications.slice(0, options.limit) : store.notifications,
   };
 };
 

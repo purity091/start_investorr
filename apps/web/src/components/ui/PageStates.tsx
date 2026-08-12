@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, CheckCircle2, FolderOpen, SearchX, Sparkles } from 'lucide-react';
+import { AlertTriangle, CheckCircle2, FolderOpen, SearchX, Sparkles, WifiOff } from 'lucide-react';
 import { Button } from './Button';
 import { Card } from './Card';
 
@@ -115,6 +115,17 @@ export const ErrorState: React.FC<{
     title={title}
     description={description}
     actionLabel={retryLabel}
+    onAction={onRetry}
+    tone="error"
+  />
+);
+
+export const OfflineState: React.FC<{ onRetry?: () => void }> = ({ onRetry }) => (
+  <PageStateCard
+    icon={<WifiOff size={28} />}
+    title="لا يوجد اتصال بالإنترنت"
+    description="تحقق من اتصالك بالإنترنت ثم أعد المحاولة. ستبقى التغييرات المحلية محفوظة مؤقتاً حتى يعود الاتصال."
+    actionLabel="إعادة المحاولة"
     onAction={onRetry}
     tone="error"
   />

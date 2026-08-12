@@ -23,6 +23,7 @@ import {
   Layers,
   Lock,
   ExternalLink,
+  MoreHorizontal,
 } from 'lucide-react';
 import { Checkbox } from '@/components/ui/checkbox';
 
@@ -33,10 +34,19 @@ import { Input } from '@/components/ui/Input';
 import { EmptyState, ErrorState, NoResultsState } from '@/components/ui/PageStates';
 import { useAuth } from '@/features/auth/AuthContext';
 import { supabase } from '@/lib/supabase';
+import { invalidateProjectCountCache } from '@/lib/projectCache';
+import { copyShareUrl, publishProject } from '@/lib/projectSharing';
 import { getProjectEditPath } from '@/features/workspace/workspaceNavigation';
 import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 import {
   Dialog,
   DialogContent,
@@ -342,7 +352,7 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
               financial: row.execution_score ?? metrics?.executionScore ?? 0,
             },
             aiScore: row.readiness_score ?? metrics?.readinessScore ?? 0,
-            lastEdited: new Date(row.updated_at).toLocaleDateString('ar-SA'),
+            lastEdited: new Date(row.updated_at).toLocaleDateString('ar-SA-u-nu-latn'),
             marketCap: '-',
             isFavorite: false,
             isMockExample: false,
@@ -427,6 +437,7 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
         if (user?.id) writeProjectsCache(user.id, nextProjects);
         return nextProjects;
       });
+      if (user?.id) invalidateProjectCountCache(user.id);
       if (paginatedProjects.length === 1 && currentPage > 1) {
         setCurrentPage((prev) => prev - 1);
       }
@@ -504,48 +515,50 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
   }
 
   return (
-    <main dir="rtl" className="w-full bg-background px-2 py-2 sm:px-4 sm:py-3 lg:px-6">
-      <div className="flex w-full flex-col gap-3.5">
-        {/* Header Bar */}
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between bg-card rounded-xl p-3.5 sm:p-4 shadow-2xs">
+    <main dir="rtl" className="app-page-shell-wide space-y-6 text-right">
+      {/* Header Section */}
+      <section className="rounded-xl bg-card p-4 sm:p-5 shadow-2xs border-0">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="space-y-1 text-right">
             <div className="flex items-center gap-2">
-              <h1 className="text-xl sm:text-2xl font-black text-foreground">مشاريعي</h1>
-              <Badge variant="secondary" className="bg-primary/10 text-primary border-0 font-bold text-xs">
-                {projectsList.length} مشروع
+              <h1 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">مشاريعي</h1>
+              <Badge variant="secondary" className="bg-muted text-foreground font-semibold text-xs border-0">
+                {projectsList.filter((p) => !p.isMockExample && !p.id.startsWith('example')).length} مشروع
               </Badge>
             </div>
-            <p className="text-xs sm:text-sm text-muted-foreground">
+            <p className="text-sm leading-6 text-muted-foreground">
               جميع دراسات الجدوى ونماذج الأعمال المحفوظة في حسابك.
             </p>
           </div>
 
-          <Button type="button" size="sm" className="px-4 font-bold text-xs shadow-2xs gap-1.5 shrink-0" onClick={() => setActiveTab?.('new-plan')}>
+          <Button type="button" onClick={() => setActiveTab?.('new-plan')} className="w-full sm:w-auto shadow-2xs border-0">
             <Plus className="size-4" />
             <span>مشروع جديد</span>
           </Button>
         </div>
+      </section>
 
-        {/* Filters & Content Box */}
-        <div className="bg-card rounded-xl p-3 sm:p-4 shadow-2xs space-y-3">
-          <div className="grid gap-2 lg:grid-cols-[minmax(280px,1fr)_180px_160px_auto] lg:items-center">
+      {/* Main Table & Filters Card */}
+      <Card className="shadow-2xs border-0">
+        <CardHeader className="p-3 sm:p-4 pb-2 sm:pb-2 border-0">
+          <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-[minmax(240px,1fr)_150px_140px_auto] lg:items-center">
             <div className="relative">
-              <Search className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+              <Search className="pointer-events-none absolute right-2.5 top-1/2 size-3.5 -translate-y-1/2 text-muted-foreground" />
               <Input
                 value={searchTerm}
                 onChange={(event) => setSearchTerm(event.target.value)}
-                placeholder="ابحث باسم المشروع أو القطاع..."
-                className="h-9 pr-9 text-xs bg-muted/30 border-0 focus-visible:ring-1"
+                placeholder="ابحث بالاسم أو القطاع..."
+                className="h-8 pr-8 text-[11px] border-0 bg-muted/50 rounded-lg"
               />
             </div>
 
             <Select value={typeFilter} onValueChange={(value) => setTypeFilter(value as TypeFilter)}>
-              <SelectTrigger className="h-9 text-xs text-right bg-muted/30 border-0">
-                <SelectValue placeholder="النموذج" />
+              <SelectTrigger className="h-8 text-[11px] text-right border-0 bg-muted/50 rounded-lg">
+                <SelectValue placeholder="نوع النموذج" />
               </SelectTrigger>
               <SelectContent>
                 {TYPE_OPTIONS.map((option) => (
-                  <SelectItem key={option.id} value={option.id}>
+                  <SelectItem key={option.id} value={option.id} className="text-xs">
                     {option.label}
                   </SelectItem>
                 ))}
@@ -553,26 +566,30 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
             </Select>
 
             <Select value={statusFilter} onValueChange={(value) => setStatusFilter(value as StatusFilter)}>
-              <SelectTrigger className="h-9 text-xs text-right bg-muted/30 border-0">
-                <SelectValue placeholder="الحالة" />
+              <SelectTrigger className="h-8 text-[11px] text-right border-0 bg-muted/50 rounded-lg">
+                <SelectValue placeholder="حالة المشروع" />
               </SelectTrigger>
               <SelectContent>
                 {STATUS_OPTIONS.map((option) => (
-                  <SelectItem key={option.id} value={option.id}>
+                  <SelectItem key={option.id} value={option.id} className="text-xs">
                     {option.label}
                   </SelectItem>
                 ))}
               </SelectContent>
             </Select>
 
-            <Button variant="ghost" size="sm" onClick={resetFilters} disabled={!hasActiveFilters} className="h-9 text-xs font-medium text-muted-foreground hover:text-foreground">
-              <RefreshCcw className="size-3.5" />
+            <Button variant="ghost" size="sm" onClick={resetFilters} disabled={!hasActiveFilters} className="h-8 px-2.5 text-[11px] font-medium text-muted-foreground hover:text-foreground">
+              <RefreshCcw className="size-3" />
               تصفير
             </Button>
           </div>
+        </CardHeader>
 
+        <CardContent className="p-0 sm:p-0 border-0">
           {filteredProjects.length === 0 ? (
-            <NoResultsState description="لا يوجد مشروع يطابق البحث أو الفلاتر الحالية." onReset={resetFilters} />
+            <div className="p-6">
+              <NoResultsState description="لا يوجد مشروع يطابق البحث أو الفلاتر الحالية." onReset={resetFilters} />
+            </div>
           ) : (
             <>
               <ProjectsTable 
@@ -589,7 +606,7 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
               />
               
               {totalPages > 1 && (
-                <div className="mt-3 border-t border-border/40 pt-3">
+                <div className="p-4 border-0">
                   <Pagination>
                     <PaginationContent>
                       <PaginationItem>
@@ -623,8 +640,8 @@ export const MyProjects: React.FC<MyProjectsProps> = ({ setActiveTab }) => {
               )}
             </>
           )}
-        </div>
-      </div>
+        </CardContent>
+      </Card>
 
       <ProjectShareModal
         project={selectedShareProject}
@@ -715,37 +732,17 @@ function ProjectsTable({
   };
 
   return (
-    <div className="hidden overflow-x-auto rounded-xl bg-card shadow-2xs lg:block border-0">
-      <Table dir="rtl">
+    <div className="hidden lg:block overflow-x-auto">
+      <Table dir="rtl" containerClassName="border-0 shadow-none rounded-none bg-transparent">
         <TableHeader className="bg-muted/40">
-          <TableRow className="hover:bg-transparent border-b border-border/50">
-            <TableHead className="min-w-[260px]">
-              <div className="flex cursor-pointer items-center gap-2 font-bold text-foreground transition-colors hover:text-primary">
-                المشروع
-                <ArrowUpDown className="size-3.5 text-muted-foreground" />
-              </div>
-            </TableHead>
-            <TableHead className="min-w-[130px]">
-              <div className="flex cursor-pointer items-center gap-2 font-bold text-foreground transition-colors hover:text-primary">
-                النموذج
-                <ArrowUpDown className="size-3.5 text-muted-foreground" />
-              </div>
-            </TableHead>
-            <TableHead className="min-w-[140px] font-bold text-foreground">التقدم</TableHead>
-            <TableHead className="min-w-[90px]">
-              <div className="flex cursor-pointer items-center gap-2 font-bold text-foreground transition-colors hover:text-primary">
-                التقييم
-                <ArrowUpDown className="size-3.5 text-muted-foreground" />
-              </div>
-            </TableHead>
-            <TableHead className="min-w-[120px] font-bold text-foreground">الحالة</TableHead>
-            <TableHead className="min-w-[110px]">
-              <div className="flex cursor-pointer items-center gap-2 font-bold text-foreground transition-colors hover:text-primary">
-                آخر تعديل
-                <ArrowUpDown className="size-3.5 text-muted-foreground" />
-              </div>
-            </TableHead>
-            <TableHead className="w-[140px] font-bold text-foreground text-left">إجراءات</TableHead>
+          <TableRow className="border-0">
+            <TableHead className="h-9 w-[100px] text-right text-[11px] font-bold uppercase tracking-wider text-muted-foreground">إجراءات</TableHead>
+            <TableHead className="h-9 min-w-[260px] text-[11px] font-bold uppercase tracking-wider text-muted-foreground">المشروع</TableHead>
+            <TableHead className="h-9 min-w-[130px] text-[11px] font-bold uppercase tracking-wider text-muted-foreground">النموذج</TableHead>
+            <TableHead className="h-9 min-w-[140px] text-[11px] font-bold uppercase tracking-wider text-muted-foreground">التقدم</TableHead>
+            <TableHead className="h-9 min-w-[90px] text-[11px] font-bold uppercase tracking-wider text-muted-foreground">التقييم</TableHead>
+            <TableHead className="h-9 min-w-[120px] text-[11px] font-bold uppercase tracking-wider text-muted-foreground">الحالة</TableHead>
+            <TableHead className="h-9 min-w-[110px] text-[11px] font-bold uppercase tracking-wider text-muted-foreground">آخر تعديل</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -782,12 +779,12 @@ function ProjectTableRow({
   const ProjectIcon = PROJECT_TYPE_META[project.type].icon;
   const editHref = project.isMockExample ? null : getProjectEditPath(project.id);
 
-  const handleCopyLink = async (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const handleCopyLink = async (e?: React.MouseEvent) => {
+    e?.stopPropagation();
     const shareId = project.share_token || project.id;
     const shareUrl = `${window.location.origin}/share/${shareId}`;
     try {
-      await navigator.clipboard.writeText(shareUrl);
+      await copyShareUrl(shareUrl);
       setIsCopied(true);
       setTimeout(() => setIsCopied(false), 2000);
     } catch {
@@ -800,114 +797,79 @@ function ProjectTableRow({
     : project.lastEdited;
 
   return (
-    <TableRow className="group transition-colors hover:bg-muted/40 border-b border-border/40">
-      <TableCell className="py-3 px-4">
-        <div className="flex min-w-0 items-center gap-3">
-          <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+    <TableRow key={project.id} className="border-0 hover:bg-muted/50 transition-colors group cursor-pointer" onClick={onOpen}>
+      <TableCell className="py-2.5 px-2 whitespace-nowrap" onClick={(e) => e.stopPropagation()}>
+        <div className="flex items-center gap-1">
+          {editHref ? (
+            <Button asChild variant="ghost" size="icon-sm" className="h-7 w-7 text-muted-foreground hover:text-primary rounded-lg" title="تعديل">
+              <a href={editHref}>
+                <Pencil className="size-3.5" />
+              </a>
+            </Button>
+          ) : (
+            <Button variant="ghost" size="icon-sm" onClick={onOpen} className="h-7 w-7 text-muted-foreground hover:text-primary rounded-lg" title="تعديل">
+              <Pencil className="size-3.5" />
+            </Button>
+          )}
+          <Button variant="ghost" size="icon-sm" onClick={handleCopyLink} className="h-7 w-7 text-muted-foreground hover:text-primary rounded-lg" title="مشاركة">
+            <Share2 className="size-3.5" />
+          </Button>
+          <Button variant="ghost" size="icon-sm" onClick={(e) => { e.stopPropagation(); onDelete(project.id, project.name); }} className="h-7 w-7 text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-lg" title="حذف">
+            <Trash2 className="size-3.5" />
+          </Button>
+        </div>
+      </TableCell>
+
+      <TableCell className="py-2.5 px-3">
+        <div className="flex min-w-0 items-center gap-2.5">
+          <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary font-bold text-xs">
             <ProjectIcon className="size-4" />
           </div>
           <div className="min-w-0 flex-1 text-right">
             {editHref ? (
               <a
                 href={editHref}
-                className="block max-w-[260px] truncate text-sm font-extrabold leading-snug text-foreground hover:text-primary transition-colors"
+                onClick={(e) => e.stopPropagation()}
+                className="block max-w-[260px] truncate font-bold text-foreground hover:text-primary hover:underline text-xs"
               >
                 {project.name}
               </a>
             ) : (
-              <button
-                type="button"
-                onClick={onOpen}
-                className="block max-w-[260px] truncate text-sm font-extrabold leading-snug text-foreground hover:text-primary transition-colors text-right"
-              >
+              <span className="block max-w-[260px] truncate font-bold text-foreground hover:text-primary text-xs text-right">
                 {project.name}
-              </button>
+              </span>
             )}
-            <p className="mt-0.5 truncate text-xs font-medium leading-5 text-muted-foreground">
+            <p className="mt-0.5 truncate text-[11px] font-medium text-muted-foreground">
               {project.sector}
             </p>
           </div>
-          {project.isFavorite ? <Star className="size-4 shrink-0 text-amber-500" fill="currentColor" /> : null}
+          {project.isFavorite ? <Star className="size-3.5 shrink-0 text-amber-500" fill="currentColor" /> : null}
         </div>
       </TableCell>
 
-      <TableCell className="py-3 px-4">
+      <TableCell>
         <ProjectTypeBadge type={project.type} />
       </TableCell>
 
-      <TableCell className="py-3 px-4">
+      <TableCell>
         <ProgressSummary project={project} />
       </TableCell>
 
-      <TableCell className="py-3 px-4">
+      <TableCell>
         <Badge variant={project.aiScore >= 80 ? 'success' : 'secondary'} className="tabular-nums font-bold text-xs">
           {project.aiScore}%
         </Badge>
       </TableCell>
 
-      <TableCell className="py-3 px-4">
+      <TableCell>
         <ProjectStatusBadge status={project.status} />
       </TableCell>
 
-      <TableCell className="py-3 px-4 whitespace-nowrap">
-        <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground font-semibold">
-          <Clock className="size-3.5 text-muted-foreground/70" />
+      <TableCell className="whitespace-nowrap text-muted-foreground text-xs font-normal">
+        <span className="inline-flex items-center gap-1.5">
+          <Clock className="size-3.5 opacity-70" />
           {formattedDate}
         </span>
-      </TableCell>
-
-      <TableCell className="py-3 px-4 text-left whitespace-nowrap">
-        <div className="flex items-center justify-start gap-1">
-          {editHref ? (
-            <Button asChild variant="ghost" size="icon-sm" className="size-8 text-muted-foreground hover:bg-muted hover:text-primary rounded-lg">
-              <a href={editHref} title="تعديل المشروع">
-                <Pencil className="size-4" />
-              </a>
-            </Button>
-          ) : (
-            <Button
-              variant="ghost"
-              size="icon-sm"
-              onClick={onOpen}
-              title="تعديل المشروع"
-              className="size-8 text-muted-foreground hover:bg-muted hover:text-primary rounded-lg"
-            >
-              <Pencil className="size-4" />
-            </Button>
-          )}
-          <Button
-            variant="ghost"
-            size="icon-sm"
-            onClick={() => onShare(project)}
-            title="مشاركة المشروع"
-            className="size-8 text-muted-foreground hover:bg-muted hover:text-primary rounded-lg"
-          >
-            <Share2 className="size-4" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon-sm"
-            onClick={handleCopyLink}
-            title={isCopied ? "تم نسخ الرابط!" : "نسخ الرابط"}
-            className={cn(
-              "size-8 rounded-lg transition-colors",
-              isCopied
-                ? "bg-emerald-50 text-emerald-600 hover:bg-emerald-100"
-                : "text-muted-foreground hover:bg-muted hover:text-primary"
-            )}
-          >
-            {isCopied ? <Check className="size-4 text-emerald-600" /> : <Copy className="size-4" />}
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon-sm"
-            onClick={() => onDelete(project.id, project.name)}
-            title="حذف"
-            className="size-8 text-muted-foreground hover:bg-destructive/10 hover:text-destructive rounded-lg"
-          >
-            <Trash2 className="size-4" />
-          </Button>
-        </div>
       </TableCell>
     </TableRow>
   );
@@ -1105,11 +1067,13 @@ function ProjectShareModal({
     setShareError(null);
     try {
       if (!project.isMockExample) {
-        const response = await fetch('/api/projects/publish', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ projectId: project.id, isPublic: checked }),
-        });
+        const response = checked
+          ? await publishProject(project.id).then((result) => ({ ok: true, json: async () => ({ shareToken: result.shareToken }) }))
+          : await fetch('/api/projects/publish', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ projectId: project.id, isPublic: false }),
+          });
 
         if (!response.ok) {
           throw new Error('Failed to update public status');
@@ -1133,7 +1097,7 @@ function ProjectShareModal({
   const handleCopy = async () => {
     try {
       setShareError(null);
-      await navigator.clipboard.writeText(shareUrl);
+      await copyShareUrl(shareUrl);
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     } catch (err) {

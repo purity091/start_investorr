@@ -44,6 +44,8 @@ import { supabase } from '@/lib/supabase';
 import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
 import { getProjectEditPath } from '@/features/workspace/workspaceNavigation';
 import { cn } from '@/lib/utils';
+import { shareProject } from '@/lib/projectSharing';
+import { ErrorState, OfflineState, PageSectionSkeleton } from '@/components/ui/PageStates';
 
 type ToolMode = 'selection' | 'easy' | 'ai' | 'family' | 'bmc' | 'mit24' | 'lean';
 type IntroMode = Exclude<ToolMode, 'selection' | 'ai'>;
@@ -642,7 +644,7 @@ export const NewPlan: React.FC<{
                   setHasStarted(false);
                   setSubTabLabel(tool.title);
                 }}
-                className="group flex flex-col items-start gap-4 rounded-xl border border-border/60 bg-card p-6 text-right transition-all hover:border-primary/40 hover:bg-muted/20 hover:shadow-md"
+                className="group flex flex-col items-start gap-4 rounded-xl border-0 bg-card p-6 text-right transition-all hover:bg-muted/30 shadow-2xs cursor-pointer"
               >
                 <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                   <Icon className="size-6" />
@@ -658,8 +660,8 @@ export const NewPlan: React.FC<{
 
         {/* Sidebar Content: Helpers */}
         <div className="flex flex-col gap-4">
-          <Card className="shadow-sm border-border/60">
-            <CardHeader className="pb-3 border-b border-border/40 bg-muted/20">
+          <Card className="shadow-2xs border-0">
+            <CardHeader className="pb-3 border-0 bg-muted/20">
               <CardTitle className="text-sm font-bold flex items-center gap-2">
                 <Target className="size-4 text-primary" />
                 كيف تختار المسار المناسب؟
@@ -690,7 +692,7 @@ export const NewPlan: React.FC<{
             </CardContent>
           </Card>
 
-          <Card className="shadow-sm border-primary/20 bg-primary/5">
+          <Card className="shadow-2xs border-0 bg-primary/5">
             <CardContent className="p-5 flex flex-col gap-4">
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
@@ -705,7 +707,7 @@ export const NewPlan: React.FC<{
                 type="button"
                 variant="default"
                 size="sm"
-                className="w-full text-xs font-semibold"
+                className="w-full text-xs font-semibold border-0 shadow-2xs"
                 onClick={() => {
                   setMode('family');
                   setHasStarted(false);
@@ -717,8 +719,8 @@ export const NewPlan: React.FC<{
             </CardContent>
           </Card>
 
-          <Card className="shadow-sm border-border/60">
-            <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3 border-b border-border/40">
+          <Card className="shadow-2xs border-0">
+            <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3 border-0">
               <CardTitle className="text-sm font-bold flex items-center gap-2">
                 <Layers className="size-4 text-muted-foreground" />
                 قوالب بداية سريعة
@@ -731,7 +733,7 @@ export const NewPlan: React.FC<{
                   type="button"
                   onClick={() => startTemplateProject(template)}
                   disabled={isStartingProject}
-                  className="rounded-lg bg-muted/30 p-3 text-right transition-colors hover:bg-muted/60 border border-transparent hover:border-border/50 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="rounded-lg bg-muted/30 p-3 text-right transition-colors hover:bg-muted/60 border-0 shadow-2xs disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   <h4 className="mb-1 text-xs font-bold text-foreground">{template.title}</h4>
                   <p className="text-[11px] leading-5 text-muted-foreground">{template.description}</p>
@@ -787,6 +789,7 @@ function ModeProjectsSection({
   const [projectsList, setProjectsList] = useState<SectionProject[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [loadError, setLoadError] = useState<string | null>(null);
+  const [isOffline, setIsOffline] = useState(false);
   const [reloadKey, setReloadKey] = useState(0);
   const [pendingDeleteProject, setPendingDeleteProject] = useState<SectionProject | null>(null);
   const [pendingShareProject, setPendingShareProject] = useState<SectionProject | null>(null);
@@ -825,7 +828,7 @@ function ModeProjectsSection({
             sector: row.sector_label || row.canvas_data?.profile?.sectorLabel || 'غير محدد',
             status: (row.current_stage || row.canvas_data?.currentStage) === 'execution' ? 'ready' : 'review',
             progress: row.readiness_score ?? row.canvas_data?.metrics?.readinessScore ?? 0,
-            updated: new Date(row.updated_at).toLocaleDateString('ar-SA'),
+            updated: new Date(row.updated_at).toLocaleDateString('ar-SA-u-nu-latn'),
             }));
         }
         
@@ -905,7 +908,8 @@ function ModeProjectsSection({
     if (!pendingShareProject) return;
 
     try {
-      const response = await fetch('/api/projects/publish', {
+      await shareProject(pendingShareProject.id, pendingShareProject.name);
+      /*
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ projectId: pendingShareProject.id, isPublic: true }),
@@ -914,8 +918,9 @@ function ModeProjectsSection({
       if (!response.ok) {
         throw new Error('Failed to publish project');
       }
+      */
 
-      const result = (await response.json()) as { shareToken?: string | null };
+      /* const result = (await response.json()) as { shareToken?: string | null };
       const shareId = result.shareToken || pendingShareProject.id;
       const shareUrl = `${window.location.origin}/share/${shareId}`;
 
@@ -929,6 +934,7 @@ function ModeProjectsSection({
         await navigator.clipboard.writeText(shareUrl);
       }
 
+      */
       setPendingShareProject(null);
       setNotice({
         title: 'تم تجهيز رابط المشاركة',
@@ -945,8 +951,8 @@ function ModeProjectsSection({
 
   return (
     <>
-    <Card className="shadow-none border border-border">
-      <CardHeader className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between p-5 sm:p-6 border-b border-border/50">
+    <Card className="shadow-2xs border-0 bg-card">
+      <CardHeader className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between p-5 sm:p-6 border-0">
         <div className="space-y-1 text-right">
           <CardTitle className="text-xl font-bold text-foreground">{intro.projectLabel}</CardTitle>
           <CardDescription className="text-sm text-muted-foreground">
@@ -979,15 +985,15 @@ function ModeProjectsSection({
           </div>
         ) : null}
         {/* Unified Responsive Table for All Screen Sizes (Mobile, Tablet, Desktop) */}
-        <div className="w-full overflow-x-auto rounded-xl border border-border/60 shadow-2xs bg-card">
-          <Table dir="rtl" className="min-w-[720px]">
-            <TableHeader className="bg-muted/40 border-b border-border/60">
-              <TableRow>
+        <div className="w-full overflow-x-auto rounded-xl border-0 shadow-2xs bg-card">
+          <Table dir="rtl" containerClassName="border-0 shadow-none rounded-none bg-transparent" className="min-w-[720px]">
+            <TableHeader className="bg-muted/40">
+              <TableRow className="border-0">
+                <TableHead className="w-[120px] text-right font-bold text-foreground">إجراءات</TableHead>
                 <TableHead className="min-w-[260px] text-right font-bold text-foreground">المشروع</TableHead>
                 <TableHead className="w-[140px] text-right font-bold text-foreground">الحالة</TableHead>
                 <TableHead className="w-[150px] text-right font-bold text-foreground">التقدم</TableHead>
                 <TableHead className="w-[120px] text-right font-bold text-foreground">آخر تعديل</TableHead>
-                <TableHead className="w-[160px] text-left font-bold text-foreground">إجراءات</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -1103,15 +1109,60 @@ function ProjectRow({
 
   return (
     <TableRow
-      className={cn(
-        "transition-colors duration-200",
-        isExample
-          ? "bg-emerald-500/[0.03] hover:bg-emerald-500/[0.07] border-r-2 border-r-emerald-500"
-          : "hover:bg-muted/50"
-      )}
+      className="transition-colors duration-200 border-0 hover:bg-muted/50"
     >
+      {/* Actions Column */}
+      <TableCell className="py-3.5 px-3 whitespace-nowrap">
+        <div className="flex items-center gap-1">
+          {isExample ? (
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              onClick={onViewExample}
+              className="gap-1 font-bold text-xs bg-emerald-500/10 text-emerald-700 hover:bg-emerald-500/20 dark:text-emerald-400 border-0 rounded-lg h-7 px-2"
+            >
+              <Eye className="size-3.5" />
+              <span>معاينة</span>
+            </Button>
+          ) : (
+            <>
+              <Button
+                asChild
+                variant="ghost"
+                size="icon-sm"
+                className="h-7 w-7 text-muted-foreground hover:text-primary rounded-lg"
+                title="تعديل الدراسة"
+              >
+                <a href={getProjectEditPath(project.id)}>
+                  <Pencil className="size-3.5" />
+                </a>
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon-sm"
+                onClick={() => onShare(project)}
+                title="مشاركة المشروع"
+                className="h-7 w-7 text-muted-foreground hover:text-primary rounded-lg"
+              >
+                <Share2 className="size-3.5" />
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon-sm"
+                onClick={() => onDelete(project)}
+                title="حذف المشروع"
+                className="h-7 w-7 text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-lg"
+              >
+                <Trash2 className="size-3.5" />
+              </Button>
+            </>
+          )}
+        </div>
+      </TableCell>
+
       {/* Project Column */}
-      <TableCell className="py-3.5 px-4">
+      <TableCell className="py-3.5 px-4 border-0">
         <div className="min-w-0 text-right space-y-1.5">
           <div className="flex items-center gap-2 flex-wrap">
             <div className={cn(
@@ -1122,12 +1173,12 @@ function ProjectRow({
             </div>
             <p className="text-sm font-extrabold text-foreground leading-snug">{project.name}</p>
             {isExample && (
-              <Badge variant="outline" className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/25 font-bold text-[11px] px-2 py-0.5 gap-1 shrink-0">
+              <Badge variant="outline" className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-0 font-bold text-[11px] px-2 py-0.5 gap-1 shrink-0">
                 <Sparkles className="size-3" />
                 مثال توضيحي للنتيجة
               </Badge>
             )}
-            <Badge variant="secondary" className="text-[11px] font-semibold bg-muted/70 text-muted-foreground border border-border/40 shrink-0">
+            <Badge variant="secondary" className="text-[11px] font-semibold bg-muted/70 text-muted-foreground border-0 shrink-0">
               {project.sector}
             </Badge>
           </div>
@@ -1155,56 +1206,6 @@ function ProjectRow({
           <Calendar className="size-3.5 text-muted-foreground/70" />
           {project.updated}
         </span>
-      </TableCell>
-
-      {/* Actions Column */}
-      <TableCell className="py-3.5 px-4 text-left whitespace-nowrap">
-        <div className="flex items-center justify-start gap-1.5">
-          {isExample ? (
-            <Button
-              type="button"
-              variant="outline"
-              size="sm"
-              onClick={onViewExample}
-              className="gap-1.5 font-bold text-xs bg-emerald-500/10 text-emerald-700 hover:bg-emerald-500/20 dark:text-emerald-400 border-emerald-500/30 rounded-lg h-8"
-            >
-              <Eye className="size-3.5" />
-              <span>معاينة المثال</span>
-            </Button>
-          ) : (
-            <>
-              <Button
-                asChild
-                variant="outline"
-                size="sm"
-                className="gap-1.5 font-bold text-xs rounded-lg h-8 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all shadow-2xs"
-              >
-                <a href={getProjectEditPath(project.id)}>
-                  <Pencil className="size-3.5" />
-                  <span>تعديل الدراسة</span>
-                </a>
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon-sm"
-                onClick={() => onShare(project)}
-                title="مشاركة المشروع"
-                className="text-muted-foreground hover:text-primary rounded-lg h-8 w-8"
-              >
-                <Share2 className="size-4" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon-sm"
-                onClick={() => onDelete(project)}
-                title="حذف المشروع"
-                className="text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-lg h-8 w-8"
-              >
-                <Trash2 className="size-4" />
-              </Button>
-            </>
-          )}
-        </div>
       </TableCell>
     </TableRow>
   );

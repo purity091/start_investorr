@@ -28,6 +28,7 @@ import { Input } from '@/components/ui/Input';
 import { useAuth } from '@/features/auth/AuthContext';
 import { supabase } from '@/lib/supabase';
 import { SubscriptionPlanId, getSubscriptionPlan, isHigherSubscriptionPlan } from '@/lib/subscriptionPlans';
+import { readProjectCountCache, writeProjectCountCache } from '@/lib/projectCache';
 
 interface PricingPlansProps {
   setActiveTab?: (tab: string) => void;
@@ -181,6 +182,12 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
         return;
       }
 
+      const cachedCount = readProjectCountCache(user.id);
+      if (cachedCount !== null) {
+        setActiveProjectsCount(cachedCount);
+        return;
+      }
+
       const { count, error } = await supabase
         .from('business_canvas')
         .select('id', { count: 'exact', head: true })
@@ -188,7 +195,9 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
         .is('deleted_at', null);
 
       if (!cancelled && !error) {
-        setActiveProjectsCount(count ?? 0);
+        const nextCount = count ?? 0;
+        setActiveProjectsCount(nextCount);
+        writeProjectCountCache(user.id, nextCount);
       }
     };
 

@@ -24,6 +24,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useAuth } from '@/features/auth/AuthContext';
 import { supabase } from '@/lib/supabase';
 import { getSubscriptionPlan } from '@/lib/subscriptionPlans';
+import { readProjectCountCache, writeProjectCountCache } from '@/lib/projectCache';
 
 interface ProfileProps {
   user: {
@@ -82,6 +83,8 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
       if (!authUser?.id) { setLoadingProjects(false); return; }
       setLoadingProjects(true);
       try {
+        const cachedCount = readProjectCountCache(authUser.id);
+        if (cachedCount !== null) setProjectCount(cachedCount);
         const { data, error } = await supabase
           .from('business_canvas')
           .select('id, project_title, sector_label, opportunity_title, current_stage, canvas_data->profile, canvas_data->currentStage, updated_at')
@@ -107,20 +110,23 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
                     : currentStage === 'planning'
                       ? 'قيد التخطيط'
                       : 'قيد البناء',
-                updated: new Date(row.updated_at).toLocaleDateString('ar-SA'),
+                updated: new Date(row.updated_at).toLocaleDateString('ar-SA-u-nu-latn'),
               };
             })
           );
         }
 
-        const { count, error: countError } = await supabase
-          .from('business_canvas')
-          .select('id', { count: 'exact', head: true })
-          .eq('user_id', authUser.id)
-          .is('deleted_at', null);
-
-        if (countError) throw countError;
-        setProjectCount(count ?? data?.length ?? 0);
+        if (cachedCount === null) {
+          const { count, error: countError } = await supabase
+            .from('business_canvas')
+            .select('id', { count: 'exact', head: true })
+            .eq('user_id', authUser.id)
+            .is('deleted_at', null);
+          if (countError) throw countError;
+          const nextCount = count ?? data?.length ?? 0;
+          setProjectCount(nextCount);
+          writeProjectCountCache(authUser.id, nextCount);
+        }
       } catch (err) {
         console.error('Error fetching recent projects:', err);
       } finally {

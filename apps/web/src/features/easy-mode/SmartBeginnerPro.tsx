@@ -49,6 +49,7 @@ import { cn } from '@/lib/utils';
 import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
 import { useAuth } from '@/features/auth/AuthContext';
 import { getSubscriptionPlan } from '@/lib/subscriptionPlans';
+import { shareProject } from '@/lib/projectSharing';
 import { AIPromptHelper } from '@/components/features/business/AIPromptHelper';
 
 type FieldType = 'text' | 'textarea' | 'number';
@@ -336,6 +337,7 @@ function ProjectDashboard({
   onRestart: () => void;
 }) {
   const { profile } = useAuth();
+  const { activeProjectId } = useProjectWorkspace();
   const canSharePlan = getSubscriptionPlan(profile?.subscription_plan).id !== 'starter';
   const [isShareUpgradeOpen, setIsShareUpgradeOpen] = useState(false);
   const readiness = inferReadiness(answers);
@@ -572,10 +574,10 @@ function ProjectDashboard({
                 <CardDescription>كل صف يمثل قسماً احترافياً، وكل حقل داخله قابل للمراجعة والتعديل.</CardDescription>
               </CardHeader>
               <CardContent className="p-2 sm:p-6">
-                <div className="w-full overflow-x-auto rounded-xl border border-border/60">
-                  <Table>
-                    <TableHeader>
-                      <TableRow>
+                <div className="w-full overflow-x-auto rounded-xl border-0 shadow-2xs bg-card">
+                  <Table containerClassName="border-0 shadow-none rounded-none bg-transparent">
+                    <TableHeader className="bg-muted/40">
+                      <TableRow className="border-0">
                         <TableHead className="w-36 sm:w-48 whitespace-nowrap">القسم</TableHead>
                         <TableHead className="min-w-[200px]">الحقول والمدخلات</TableHead>
                         <TableHead className="w-20 sm:w-32 text-center">الإجراء</TableHead>
@@ -583,12 +585,12 @@ function ProjectDashboard({
                     </TableHeader>
                     <TableBody>
                       {PRO_STEPS.map((step, index) => (
-                        <TableRow key={step.id}>
+                        <TableRow key={step.id} className="border-0">
                           <TableCell className="font-medium text-xs sm:text-sm whitespace-nowrap">{step.title}</TableCell>
                           <TableCell>
                             <div className="grid gap-2 md:grid-cols-2">
                               {step.fields.map((field) => (
-                                <div key={field.id} className="rounded-lg bg-background p-2.5 sm:p-3 border border-border/40">
+                                <div key={field.id} className="rounded-lg bg-background p-2.5 sm:p-3 border-0 shadow-2xs">
                                   <div className="text-[11px] sm:text-xs font-semibold text-foreground">{field.label}</div>
                                   <p className="mt-1 whitespace-pre-wrap text-xs sm:text-sm leading-relaxed text-muted-foreground">
                                     {getAnswerText(answers[answerKey(step.id, field.id)])}
@@ -696,6 +698,10 @@ function ProjectDashboard({
                 setIsShareUpgradeOpen(true);
                 return;
                 alert('ميزة مشاركة خطة العمل متاحة في باقتي مؤسس وقائد. قم بترقية باقتك لتفعيلها.');
+                return;
+              }
+              if (activeProjectId) {
+                void shareProject(activeProjectId, 'خطة العمل الاحترافية');
                 return;
               }
               if (navigator.clipboard) {
@@ -918,7 +924,7 @@ export default function SmartBeginnerPro() {
         ? 'saving'
         : 'saved';
   const lastSaved = lastSyncedAt
-    ? new Date(lastSyncedAt).toLocaleTimeString('ar-SA', { hour: '2-digit', minute: '2-digit', second: '2-digit' })
+    ? new Date(lastSyncedAt).toLocaleTimeString('ar-SA-u-nu-latn', { hour: '2-digit', minute: '2-digit', second: '2-digit' })
     : null;
 
   const currentStep = PRO_STEPS[stepIndex];

@@ -316,7 +316,7 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
       ? 'saving'
       : 'saved';
   const lastSaved = lastSyncedAt
-    ? new Date(lastSyncedAt).toLocaleTimeString('ar-SA', { hour: '2-digit', minute: '2-digit', second: '2-digit' })
+    ? new Date(lastSyncedAt).toLocaleTimeString('ar-SA-u-nu-latn', { hour: '2-digit', minute: '2-digit', second: '2-digit' })
     : null;
 
   useEffect(() => {

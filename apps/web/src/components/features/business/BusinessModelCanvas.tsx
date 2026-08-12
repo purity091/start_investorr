@@ -374,7 +374,7 @@ function countAnswered(data: BmcData) {
 }
 
 function formatDate(value: string) {
-  return new Date(value).toLocaleDateString('ar-SA', {
+  return new Date(value).toLocaleDateString('ar-SA-u-nu-latn', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',

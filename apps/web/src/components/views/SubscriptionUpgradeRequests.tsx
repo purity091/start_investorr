@@ -102,7 +102,7 @@ export const SubscriptionUpgradeRequests: React.FC = () => {
               <div className="mt-2 flex flex-wrap items-center gap-2 text-xs">
                 <Badge variant="outline">{getSubscriptionPlan(request.current_plan).name}</Badge>
                 <span>←</span><Badge>{target.name}</Badge>
-                <span className="text-muted-foreground">{new Date(request.created_at).toLocaleDateString('ar')}</span>
+                <span className="text-muted-foreground">{new Date(request.created_at).toLocaleDateString('ar-SA-u-nu-latn')}</span>
               </div>
             </div>
             <div className="flex flex-wrap gap-2">
