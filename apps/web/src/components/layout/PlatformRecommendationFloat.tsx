@@ -8,7 +8,7 @@ export const PlatformRecommendationFloat: React.FC<{
   setActiveTab: (tab: string) => void;
 }> = ({ setActiveTab }) => {
   const { workspace } = useProjectWorkspace();
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const recommendations = workspace.recommendations || [];
@@ -30,8 +30,8 @@ export const PlatformRecommendationFloat: React.FC<{
         <button
           type="button"
           onClick={() => setIsOpen(true)}
-          className="group flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-50/90 px-3.5 py-1.5 text-xs font-bold text-amber-900 shadow-md backdrop-blur-md transition-all hover:scale-105 hover:bg-amber-100 dark:bg-amber-950/85 dark:text-amber-300 dark:border-amber-700/60"
-          title="عرض توصيات المنصة الذكية"
+          className="group relative flex items-center gap-2 rounded-full border border-amber-500/60 bg-gradient-to-r from-amber-500/15 to-amber-500/5 px-3.5 py-1.5 text-xs font-bold text-amber-900 shadow-sm backdrop-blur-md transition-all hover:scale-105 hover:bg-amber-500/20 dark:bg-amber-950/85 dark:text-amber-300 dark:border-amber-700/60 ring-2 ring-amber-400/30 animate-pulse"
+          title="عرض توصيات واقتراحات المنصة"
         >
           <div className="relative flex size-4 items-center justify-center">
             <Lightbulb className="size-4 text-amber-600 dark:text-amber-400 group-hover:rotate-12 transition-transform" />

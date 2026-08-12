@@ -72,7 +72,7 @@ function Button({
       data-size={size}
       data-loading={loading ? "true" : "false"}
       className={cn(buttonVariants({ variant, size, className }))}
-      disabled={disabled || loading}
+      disabled={Boolean(disabled || loading)}
       {...props}
     >
       {asChild ? children : content}

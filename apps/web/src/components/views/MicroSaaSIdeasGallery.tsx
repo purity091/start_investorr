@@ -148,41 +148,41 @@ export const MicroSaaSIdeasGallery: React.FC<MicroSaaSIdeasGalleryProps> = ({ se
   }
 
   return (
-    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-6 px-3 py-3 sm:px-6 sm:py-8 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div dir="rtl" className="mx-auto flex w-full max-w-7xl flex-col gap-3 sm:gap-6 px-2 sm:px-6 py-2 sm:py-8 lg:px-8 font-sans animate-in fade-in slide-in-from-bottom-4 duration-500">
 
       {/* Sleek Integrated Header with Compact Summary Pills */}
-      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 bg-purple-50/50 p-5 rounded-2xl border border-purple-100 shadow-2xs">
-        <div className="flex flex-col gap-2">
+      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-3 bg-purple-50/50 p-3.5 sm:p-5 rounded-xl sm:rounded-2xl border border-purple-100 shadow-2xs">
+        <div className="flex flex-col gap-1.5 sm:gap-2">
           <div className="flex items-center gap-2">
-            <Badge variant="secondary" className="w-fit bg-purple-500/10 text-purple-600 hover:bg-purple-500/20 border-0 font-bold px-3 py-1">
-              <Settings2 className="size-3.5 me-1.5 inline-block" />
+            <Badge variant="secondary" className="w-fit bg-purple-500/10 text-purple-600 hover:bg-purple-500/20 border-0 font-bold text-[10px] sm:text-xs px-2.5 py-0.5 sm:px-3 sm:py-1">
+              <Settings2 className="size-3 sm:size-3.5 me-1 inline-block" />
               فلترة دقيقة لشركات Micro-SaaS
             </Badge>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">أفكار مشاريع Micro-SaaS الحقيقية</h1>
-          <p className="max-w-2xl text-xs sm:text-sm leading-relaxed text-slate-600 font-medium">
-            تطبيقات مخصصة تعتمد على مؤسس فردي (Solo Founder) أو فريق صغير جداً لتلبية احتياج موجه لشريحة نiche. تصفح النتائج مباشرةً أدناه.
+          <h1 className="text-xl sm:text-3xl font-black text-slate-900 tracking-tight">أفكار مشاريع Micro-SaaS الحقيقية</h1>
+          <p className="max-w-2xl text-[11px] sm:text-sm leading-relaxed text-slate-600 font-medium">
+            تطبيقات مخصصة تعتمد على مؤسس فردي (Solo Founder) أو فريق صغير جداً لتلبية احتياج موجه لشريحة niche. تصفح النتائج مباشرةً أدناه.
           </p>
         </div>
 
         {/* Compact Quick Stats Pills */}
-        <div className="flex flex-wrap items-center gap-2.5 shrink-0 pt-2 lg:pt-0">
-          <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-purple-100 shadow-2xs">
-            <Target className="size-4 text-purple-600" />
-            <span className="text-xs font-bold text-slate-600">إجمالي Micro-SaaS:</span>
-            <span className="text-sm font-black text-slate-900">{isLoading ? '...' : projectsList.length}</span>
+        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2.5 shrink-0 pt-1 lg:pt-0">
+          <div className="flex items-center gap-1.5 px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl bg-white border border-purple-100 shadow-2xs">
+            <Target className="size-3.5 sm:size-4 text-purple-600" />
+            <span className="text-[11px] sm:text-xs font-bold text-slate-600">إجمالي Micro-SaaS:</span>
+            <span className="text-xs sm:text-sm font-black text-slate-900">{isLoading ? '...' : projectsList.length}</span>
           </div>
 
-          <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-amber-50/90 border border-amber-200/70">
-            <Sparkles className="size-4 text-amber-600" />
-            <span className="text-xs font-bold text-amber-800">مشاريع ناجحة:</span>
-            <span className="text-sm font-black text-amber-700">{isLoading ? '...' : provenCount}</span>
+          <div className="flex items-center gap-1.5 px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl bg-amber-50/90 border border-amber-200/70">
+            <Sparkles className="size-3.5 sm:size-4 text-amber-600" />
+            <span className="text-[11px] sm:text-xs font-bold text-amber-800">مشاريع ناجحة:</span>
+            <span className="text-xs sm:text-sm font-black text-amber-700">{isLoading ? '...' : provenCount}</span>
           </div>
 
-          <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-red-50/90 border border-red-200/70">
-            <TrendingDown className="size-4 text-red-600" />
-            <span className="text-xs font-bold text-red-800">تجارب فشلت:</span>
-            <span className="text-sm font-black text-red-700">{isLoading ? '...' : failedCount}</span>
+          <div className="flex items-center gap-1.5 px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl bg-red-50/90 border border-red-200/70">
+            <TrendingDown className="size-3.5 sm:size-4 text-red-600" />
+            <span className="text-[11px] sm:text-xs font-bold text-red-800">تجارب فشلت:</span>
+            <span className="text-xs sm:text-sm font-black text-red-700">{isLoading ? '...' : failedCount}</span>
           </div>
         </div>
       </div>

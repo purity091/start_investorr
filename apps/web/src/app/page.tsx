@@ -56,6 +56,8 @@ import {
   FileText
 } from 'lucide-react';
 import { useAuthModal } from '@/features/auth/AuthModalContext';
+import { useAuth } from '@/features/auth/AuthContext';
+import { BottomNavBar } from '@/components/layout/BottomNavBar';
 
 const INITIAL_PREVIEW_PROJECTS = [
   {
@@ -134,6 +136,7 @@ const INITIAL_PREVIEW_PROJECTS = [
 
 export default function LandingPage() {
   const { openAuthModal } = useAuthModal();
+  const { user } = useAuth();
   const [projectsList, setProjectsList] = useState<any[]>(INITIAL_PREVIEW_PROJECTS);
   const [activeTableTab, setActiveTableTab] = useState<'all' | 'saas' | 'micro-saas'>('all');
   
@@ -939,6 +942,9 @@ export default function LandingPage() {
           </div>
         </div>
       </footer>
+
+      {/* Render BottomNavBar when user is logged in */}
+      {user && <BottomNavBar activeTab="home" />}
     </div>
   );
 }

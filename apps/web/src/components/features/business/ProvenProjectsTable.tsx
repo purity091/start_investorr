@@ -497,49 +497,52 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
   return (
     <div className="w-full flex flex-col gap-3 sm:gap-4">
       {/* Table Toolbar */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-3">
-        <div className="flex flex-wrap items-center gap-2 sm:gap-3 w-full sm:w-auto">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2 sm:gap-3">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 w-full sm:w-auto">
           <div className="relative w-full sm:w-64">
-            <Search className="absolute right-3 top-1/2 -translate-y-1/2 size-4 text-slate-400" />
+            <Search className="absolute right-3 top-1/2 -translate-y-1/2 size-3.5 sm:size-4 text-slate-400" />
             <Input
               placeholder="ابحث عن شركة، مجال..."
               value={globalFilter ?? ''}
               onChange={(event) => setGlobalFilter(event.target.value)}
-              className="pl-3 pr-9 h-10 w-full bg-white border-slate-200 focus-visible:ring-blue-500 rounded-xl font-medium text-sm shadow-sm"
+              className="pl-3 pr-8 sm:pr-9 h-8.5 sm:h-10 w-full bg-white border-slate-200 focus-visible:ring-blue-500 rounded-lg sm:rounded-xl font-medium text-xs sm:text-sm shadow-2xs"
             />
           </div>
 
-          {/* Category Filter Dropdown */}
-          <Select
-            value={categoryFilterVal || 'all'}
-            onValueChange={(val) => table.getColumn('category')?.setFilterValue(val === 'all' ? '' : val)}
-          >
-            <SelectTrigger className="h-10 w-full sm:w-[170px] bg-white border-slate-200 rounded-xl font-bold text-sm text-slate-700">
-              <SelectValue placeholder="التصنيف" />
-            </SelectTrigger>
-            <SelectContent className="rounded-xl border-slate-200" dir="rtl">
-              <SelectItem value="all" className="font-bold cursor-pointer">كل التصنيفات</SelectItem>
-              {uniqueCategories.map((cat) => (
-                <SelectItem key={cat} value={cat} className="font-bold cursor-pointer">{cat}</SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
+          {/* Filters Grid for Mobile */}
+          <div className="grid grid-cols-2 sm:flex items-center gap-2 w-full sm:w-auto">
+            {/* Category Filter Dropdown */}
+            <Select
+              value={categoryFilterVal || 'all'}
+              onValueChange={(val) => table.getColumn('category')?.setFilterValue(val === 'all' ? '' : val)}
+            >
+              <SelectTrigger className="h-8.5 sm:h-10 w-full sm:w-[170px] bg-white border-slate-200 rounded-lg sm:rounded-xl font-bold text-xs sm:text-sm text-slate-700">
+                <SelectValue placeholder="التصنيف" />
+              </SelectTrigger>
+              <SelectContent className="rounded-xl border-slate-200" dir="rtl">
+                <SelectItem value="all" className="font-bold cursor-pointer text-xs sm:text-sm">كل التصنيفات</SelectItem>
+                {uniqueCategories.map((cat) => (
+                  <SelectItem key={cat} value={cat} className="font-bold cursor-pointer text-xs sm:text-sm">{cat}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
 
-          {/* Country Filter Dropdown */}
-          <Select
-            value={countryFilterVal || 'all'}
-            onValueChange={(val) => table.getColumn('country')?.setFilterValue(val === 'all' ? '' : val)}
-          >
-            <SelectTrigger className="h-10 w-full sm:w-[160px] bg-white border-slate-200 rounded-xl font-bold text-sm text-slate-700">
-              <SelectValue placeholder="الدولة" />
-            </SelectTrigger>
-            <SelectContent className="rounded-xl border-slate-200" dir="rtl">
-              <SelectItem value="all" className="font-bold cursor-pointer">كل الدول</SelectItem>
-              {Array.from(new Set(provenData.map(item => getCountryInfo(item.company?.location).name))).map(country => (
-                <SelectItem key={country} value={country} className="font-bold cursor-pointer">{country}</SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
+            {/* Country Filter Dropdown */}
+            <Select
+              value={countryFilterVal || 'all'}
+              onValueChange={(val) => table.getColumn('country')?.setFilterValue(val === 'all' ? '' : val)}
+            >
+              <SelectTrigger className="h-8.5 sm:h-10 w-full sm:w-[160px] bg-white border-slate-200 rounded-lg sm:rounded-xl font-bold text-xs sm:text-sm text-slate-700">
+                <SelectValue placeholder="الدولة" />
+              </SelectTrigger>
+              <SelectContent className="rounded-xl border-slate-200" dir="rtl">
+                <SelectItem value="all" className="font-bold cursor-pointer text-xs sm:text-sm">كل الدول</SelectItem>
+                {Array.from(new Set(provenData.map(item => getCountryInfo(item.company?.location).name))).map(country => (
+                  <SelectItem key={country} value={country} className="font-bold cursor-pointer text-xs sm:text-sm">{country}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
 
           {/* Clear Filters Button */}
           {isAnyFilterActive && (
@@ -547,9 +550,9 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
               variant="ghost"
               size="sm"
               onClick={resetAllFilters}
-              className="h-10 px-3 text-xs font-bold text-red-600 hover:bg-red-50 hover:text-red-700 rounded-xl gap-1.5"
+              className="h-8 sm:h-10 px-2.5 text-[11px] sm:text-xs font-bold text-red-600 hover:bg-red-50 hover:text-red-700 rounded-lg sm:rounded-xl gap-1"
             >
-              <X className="size-3.5" />
+              <X className="size-3 sm:size-3.5" />
               إلغاء التصفية
             </Button>
           )}
@@ -557,12 +560,12 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
 
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger asChild>
-            <Button variant="outline" className="w-full sm:w-auto h-10 font-bold border-slate-200 rounded-xl text-slate-700 hover:bg-slate-50 mt-1 sm:mt-0">
+            <Button variant="outline" className="w-full sm:w-auto h-8.5 sm:h-10 text-xs sm:text-sm font-bold border-slate-200 rounded-lg sm:rounded-xl text-slate-700 hover:bg-slate-50 mt-0.5 sm:mt-0">
               الأعمدة
-              <ChevronDown className="mr-auto sm:ml-2 sm:mr-0 size-4 text-slate-400" />
+              <ChevronDown className="mr-auto sm:ml-2 sm:mr-0 size-3.5 sm:size-4 text-slate-400" />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="w-[200px] rounded-xl border-slate-200">
+          <DropdownMenuContent align="end" className="w-[180px] sm:w-[200px] rounded-xl border-slate-200">
             {table
               .getAllColumns()
               .filter((column) => column.getCanHide())
@@ -576,7 +579,7 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
                 return (
                   <DropdownMenuCheckboxItem
                     key={column.id}
-                    className="capitalize font-medium text-sm cursor-pointer"
+                    className="capitalize font-medium text-xs sm:text-sm cursor-pointer"
                     checked={column.getIsVisible()}
                     onCheckedChange={(value) => column.toggleVisibility(!!value)}
                   >
@@ -590,25 +593,25 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
 
       {/* Active Filter Pills indicator if filtered */}
       {(categoryFilterVal || countryFilterVal) && (
-        <div className="flex flex-wrap items-center gap-2 px-1">
-          <span className="text-xs font-medium text-slate-500">الفلاتر المحددة:</span>
+        <div className="flex flex-wrap items-center gap-1.5 px-0.5">
+          <span className="text-[11px] font-medium text-slate-500">الفلاتر المحددة:</span>
           {categoryFilterVal && (
-            <Badge className="bg-blue-600 text-white font-bold gap-1 text-xs py-0.5 px-2.5 rounded-lg">
+            <Badge className="bg-blue-600 text-white font-bold gap-1 text-[10px] sm:text-xs py-0.5 px-2 rounded-md sm:rounded-lg">
               التصنيف: {categoryFilterVal}
               <button
                 onClick={() => table.getColumn('category')?.setFilterValue('')}
-                className="mr-1 hover:text-blue-200"
+                className="mr-0.5 hover:text-blue-200"
               >
                 <X className="size-3" />
               </button>
             </Badge>
           )}
           {countryFilterVal && (
-            <Badge className="bg-emerald-700 text-white font-bold gap-1 text-xs py-0.5 px-2.5 rounded-lg">
+            <Badge className="bg-emerald-700 text-white font-bold gap-1 text-[10px] sm:text-xs py-0.5 px-2 rounded-md sm:rounded-lg">
               الدولة: {countryFilterVal}
               <button
                 onClick={() => table.getColumn('country')?.setFilterValue('')}
-                className="mr-1 hover:text-emerald-200"
+                className="mr-0.5 hover:text-emerald-200"
               >
                 <X className="size-3" />
               </button>
@@ -618,22 +621,22 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
       )}
 
       {/* Table Container */}
-      <div className="rounded-2xl border border-slate-200/80 bg-white shadow-xs overflow-hidden">
+      <div className="rounded-xl sm:rounded-2xl border border-slate-200/80 bg-white shadow-2xs overflow-hidden overflow-x-auto -mx-1 sm:mx-0">
         <Table>
           <TableHeader className="bg-slate-50/80 border-b border-slate-200/80">
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id} className="hover:bg-transparent border-none">
                 {headerGroup.headers.map((header) => {
                   let widthClass = '';
-                  if (header.id === 'save') widthClass = 'w-[44px] min-w-[44px] max-w-[44px] text-center px-1';
-                  if (header.id === 'name') widthClass = 'w-[320px] max-w-[380px] min-w-[240px]';
-                  if (header.id === 'category') widthClass = 'w-[160px]';
-                  if (header.id === 'country') widthClass = 'w-[160px]';
-                  if (header.id === 'last_updated') widthClass = 'w-[140px]';
-                  if (header.id === 'actions') widthClass = 'w-[60px] text-left';
+                  if (header.id === 'save') widthClass = 'w-[36px] min-w-[36px] max-w-[36px] text-center px-0.5 sm:px-1';
+                  if (header.id === 'name') widthClass = 'w-[260px] sm:w-[320px] max-w-[380px] min-w-[200px]';
+                  if (header.id === 'category') widthClass = 'w-[130px] sm:w-[160px]';
+                  if (header.id === 'country') widthClass = 'w-[130px] sm:w-[160px]';
+                  if (header.id === 'last_updated') widthClass = 'w-[120px] sm:w-[140px]';
+                  if (header.id === 'actions') widthClass = 'w-[50px] sm:w-[60px] text-left';
 
                   return (
-                    <TableHead key={header.id} className={cn("h-9 text-slate-500 font-bold text-[11px] uppercase tracking-wider px-2 sm:px-3 whitespace-nowrap", widthClass)}>
+                    <TableHead key={header.id} className={cn("h-8 sm:h-9 text-slate-500 font-bold text-[10px] sm:text-[11px] uppercase tracking-wider px-1.5 sm:px-3 whitespace-nowrap", widthClass)}>
                       {header.isPlaceholder
                         ? null
                         : flexRender(
@@ -657,16 +660,16 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
                 >
                   {row.getVisibleCells().map((cell) => {
                     let widthClass = '';
-                    if (cell.column.id === 'save') widthClass = 'w-[44px] min-w-[44px] max-w-[44px] text-center px-1';
-                    if (cell.column.id === 'name') widthClass = 'w-[280px] max-w-[320px] min-w-[220px]';
-                    if (cell.column.id === 'category') widthClass = 'w-[140px]';
-                    if (cell.column.id === 'country') widthClass = 'w-[140px]';
-                    if (cell.column.id === 'revenue') widthClass = 'w-[130px]';
-                    if (cell.column.id === 'traffic') widthClass = 'w-[130px]';
-                    if (cell.column.id === 'actions') widthClass = 'w-[60px]';
+                    if (cell.column.id === 'save') widthClass = 'w-[36px] min-w-[36px] max-w-[36px] text-center px-0.5 sm:px-1';
+                    if (cell.column.id === 'name') widthClass = 'w-[240px] sm:w-[280px] max-w-[320px] min-w-[190px]';
+                    if (cell.column.id === 'category') widthClass = 'w-[120px] sm:w-[140px]';
+                    if (cell.column.id === 'country') widthClass = 'w-[120px] sm:w-[140px]';
+                    if (cell.column.id === 'revenue') widthClass = 'w-[110px] sm:w-[130px]';
+                    if (cell.column.id === 'traffic') widthClass = 'w-[110px] sm:w-[130px]';
+                    if (cell.column.id === 'actions') widthClass = 'w-[50px] sm:w-[60px]';
 
                     return (
-                      <TableCell key={cell.id} className={cn("py-2 px-2 sm:px-3 align-middle text-xs", widthClass)}>
+                      <TableCell key={cell.id} className={cn("py-1.5 sm:py-2 px-1.5 sm:px-3 align-middle text-[11px] sm:text-xs", widthClass)}>
                         {flexRender(
                           cell.column.columnDef.cell,
                           cell.getContext()
@@ -691,55 +694,57 @@ export const ProvenProjectsTable: React.FC<ProvenProjectsTableProps> = ({ data, 
       </div>
 
       {/* Pagination */}
-      <div className="flex flex-col sm:flex-row items-center justify-between px-2 pt-4 gap-4">
-        {/* Page Size Selector on the right side in RTL */}
-        <div className="flex items-center gap-2 w-full sm:w-auto justify-start">
-          <span className="text-xs font-bold text-slate-500 whitespace-nowrap">عرض:</span>
-          <Select
-            value={table.getState().pagination.pageSize.toString()}
-            onValueChange={(val) => {
-              table.setPageSize(Number(val));
-            }}
-          >
-            <SelectTrigger className="h-9 w-[115px] bg-white border-slate-200 rounded-xl font-bold text-xs text-slate-700 shadow-xs">
-              <SelectValue placeholder="10 نتائج" />
-            </SelectTrigger>
-            <SelectContent className="rounded-xl border-slate-200 min-w-[115px]" dir="rtl">
-              <SelectItem value="10" className="font-bold cursor-pointer text-xs">10 نتائج</SelectItem>
-              <SelectItem value="20" className="font-bold cursor-pointer text-xs">20 نتيجة</SelectItem>
-              <SelectItem value="50" className="font-bold cursor-pointer text-xs">50 نتيجة</SelectItem>
-              <SelectItem value="100" className="font-bold cursor-pointer text-xs">100 نتيجة</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-
-        {/* Centered Pagination Controls */}
-        <div className="flex items-center justify-center space-x-2 space-x-reverse sm:flex-none">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => table.previousPage()}
-            disabled={!table.getCanPreviousPage()}
-            className="h-9 w-9 p-0 border-slate-200 rounded-lg shadow-sm"
-          >
-            <ChevronRight className="h-4 w-4" />
-          </Button>
-          <div className="flex items-center justify-center text-sm font-bold text-slate-700 min-w-[4rem]">
-            {table.getState().pagination.pageIndex + 1} / {table.getPageCount() || 1}
+      <div className="flex flex-col sm:flex-row items-center justify-between px-1 pt-2 sm:pt-4 gap-2.5 sm:gap-4">
+        {/* Page Size & Pagination Controls on mobile */}
+        <div className="flex items-center justify-between sm:justify-start gap-2 w-full sm:w-auto">
+          <div className="flex items-center gap-1.5">
+            <span className="text-[11px] sm:text-xs font-bold text-slate-500 whitespace-nowrap">عرض:</span>
+            <Select
+              value={table.getState().pagination.pageSize.toString()}
+              onValueChange={(val) => {
+                table.setPageSize(Number(val));
+              }}
+            >
+              <SelectTrigger className="h-8 sm:h-9 w-[95px] sm:w-[115px] bg-white border-slate-200 rounded-lg sm:rounded-xl font-bold text-xs text-slate-700 shadow-2xs">
+                <SelectValue placeholder="10 نتائج" />
+              </SelectTrigger>
+              <SelectContent className="rounded-xl border-slate-200 min-w-[95px]" dir="rtl">
+                <SelectItem value="10" className="font-bold cursor-pointer text-xs">10 نتائج</SelectItem>
+                <SelectItem value="20" className="font-bold cursor-pointer text-xs">20 نتيجة</SelectItem>
+                <SelectItem value="50" className="font-bold cursor-pointer text-xs">50 نتيجة</SelectItem>
+                <SelectItem value="100" className="font-bold cursor-pointer text-xs">100 نتيجة</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => table.nextPage()}
-            disabled={!table.getCanNextPage()}
-            className="h-9 w-9 p-0 border-slate-200 rounded-lg shadow-sm"
-          >
-            <ChevronLeft className="h-4 w-4" />
-          </Button>
+
+          {/* Centered Pagination Controls */}
+          <div className="flex items-center justify-center space-x-1 space-x-reverse sm:flex-none">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => table.previousPage()}
+              disabled={!table.getCanPreviousPage()}
+              className="h-8 w-8 sm:h-9 sm:w-9 p-0 border-slate-200 rounded-lg shadow-2xs"
+            >
+              <ChevronRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+            </Button>
+            <div className="flex items-center justify-center text-xs sm:text-sm font-bold text-slate-700 min-w-[3.5rem] sm:min-w-[4rem]">
+              {table.getState().pagination.pageIndex + 1} / {table.getPageCount() || 1}
+            </div>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => table.nextPage()}
+              disabled={!table.getCanNextPage()}
+              className="h-8 w-8 sm:h-9 sm:w-9 p-0 border-slate-200 rounded-lg shadow-2xs"
+            >
+              <ChevronLeft className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+            </Button>
+          </div>
         </div>
 
         {/* Info Text */}
-        <div className="flex-1 text-xs sm:text-sm font-medium text-slate-500 text-center sm:text-left w-full sm:w-auto">
+        <div className="flex-1 text-[11px] sm:text-sm font-medium text-slate-500 text-center sm:text-left w-full sm:w-auto">
           عرض {table.getRowModel().rows.length} من أصل {table.getFilteredRowModel().rows.length} شركة ناجحة
         </div>
       </div>

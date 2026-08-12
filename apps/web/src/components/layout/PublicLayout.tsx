@@ -1,10 +1,16 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import { LandingNavbar } from '@/components/layout/LandingNavbar';
+import { BottomNavBar } from '@/components/layout/BottomNavBar';
+import { useAuth } from '@/features/auth/AuthContext';
 
 export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const { user } = useAuth();
+
   return (
-    <div dir="rtl" className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/20 flex flex-col">
+    <div dir="rtl" className={`min-h-screen bg-background text-foreground font-sans selection:bg-primary/20 flex flex-col ${user ? 'pb-16 lg:pb-0' : ''}`}>
       {/* Header Navigation */}
       <LandingNavbar />
 
@@ -92,6 +98,9 @@ export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children
 
         </div>
       </footer>
+
+      {/* Render BottomNavBar when user is logged in */}
+      {user && <BottomNavBar activeTab="" />}
     </div>
   );
 };
