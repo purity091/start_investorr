@@ -141,6 +141,8 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
       if (mode === 'login') {
         await postAuthAction('/api/auth/login', { email, password });
+        const { error: browserAuthError } = await supabase.auth.signInWithPassword({ email, password });
+        if (browserAuthError) throw browserAuthError;
         if (rememberMe) {
           localStorage.setItem('khotta_remember_me', 'true');
         } else {

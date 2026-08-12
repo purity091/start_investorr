@@ -108,6 +108,10 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
     setIsRegisteringPasskey(true);
     setPasskeyMsg(null);
     try {
+      const { data: sessionData } = await supabase.auth.getSession();
+      if (!sessionData.session?.user) {
+        throw new Error('PASSKEY_AUTH_SESSION_MISSING');
+      }
       const { error } = await supabase.auth.registerPasskey();
       if (error) throw error;
       await loadPasskeys();
@@ -126,7 +130,13 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
         status: typeof passkeyError.status === 'number' ? passkeyError.status : undefined,
         code: typeof passkeyError.code === 'string' ? passkeyError.code : undefined,
       });
-      setPasskeyMsg('تعذر إضافة مفتاح المرور. تأكد من دعم المتصفح أو أعد المحاولة.');
+      if (error instanceof Error && error.message === 'PASSKEY_AUTH_SESSION_MISSING') {
+        setPasskeyMsg('انتهت جلسة الدخول داخل المتصفح. سجّل الخروج ثم ادخل بالبريد وكلمة المرور مرة أخرى.');
+      } else if ((passkeyError.message ?? '') === 'Auth session missing!') {
+        setPasskeyMsg('جلسة Supabase غير متاحة. أعد تسجيل الدخول من هذه الصفحة ثم جرّب إضافة المفتاح.');
+      } else {
+        setPasskeyMsg('تعذر إضافة مفتاح المرور. تأكد من دعم المتصفح أو أعد المحاولة.');
+      }
     } finally {
       setIsRegisteringPasskey(false);
     }

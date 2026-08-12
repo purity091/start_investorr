@@ -77,11 +77,18 @@ export const AuthScreen: React.FC = () => {
 
   const handlePasskeySignIn = async () => {
     setError(null);
-    setMessage(null);
+    setMessage('افتح نافذة التحقق في جهازك وأكمل بالبصمة أو رمز القفل.');
     setIsPasskeyLoading(true);
     try {
-      const { error: passkeyError } = await supabase.auth.signInWithPasskey();
+      const result = await Promise.race([
+        supabase.auth.signInWithPasskey(),
+        new Promise<never>((_, reject) => {
+          window.setTimeout(() => reject(new Error('PASSKEY_TIMEOUT')), 20000);
+        }),
+      ]);
+      const { data, error: passkeyError } = result;
       if (passkeyError) throw passkeyError;
+      if (!data?.session || !data.user) throw new Error('PASSKEY_SESSION_MISSING');
       window.location.href = getSafeRedirectPath();
     } catch (error: unknown) {
       const passkeyError = error as { message?: unknown; name?: unknown; status?: unknown; code?: unknown };
@@ -91,7 +98,17 @@ export const AuthScreen: React.FC = () => {
         status: typeof passkeyError.status === 'number' ? passkeyError.status : undefined,
         code: typeof passkeyError.code === 'string' ? passkeyError.code : undefined,
       });
-      setError('تعذر تسجيل الدخول بمفتاح المرور. جرّب جهازاً مسجلاً أو استخدم البريد الإلكتروني.');
+      const code = typeof passkeyError.code === 'string' ? passkeyError.code : '';
+      if (code === 'PASSKEY_TIMEOUT' || (passkeyError instanceof Error && passkeyError.message === 'PASSKEY_TIMEOUT')) {
+        setError('انتهت مهلة التحقق. تأكد من فتح نافذة Passkey وإكمال العملية على الهاتف.');
+      } else if (code === 'webauthn_credential_not_found') {
+        setError('هذا المفتاح غير مرتبط بهذا الحساب أو تم تسجيله على نطاق مختلف.');
+      } else if (code === 'email_not_confirmed') {
+        setError('يجب تأكيد البريد الإلكتروني للحساب قبل استخدام مفتاح المرور.');
+      } else {
+        setError('تعذر تسجيل الدخول بمفتاح المرور. تحقق من النطاق واتصال الجهاز ثم أعد المحاولة.');
+      }
+      setMessage(null);
     } finally {
       setIsPasskeyLoading(false);
     }
@@ -124,6 +141,11 @@ export const AuthScreen: React.FC = () => {
           email,
           password,
         });
+
+        // The API login sets server cookies; this also establishes the browser
+        // Supabase session required by Passkey registration and sign-in.
+        const { error: browserAuthError } = await supabase.auth.signInWithPassword({ email, password });
+        if (browserAuthError) throw browserAuthError;
 
         if (rememberMe) {
           localStorage.setItem('khotta_remember_me', 'true');
