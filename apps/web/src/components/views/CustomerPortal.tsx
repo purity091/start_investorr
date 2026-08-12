@@ -170,7 +170,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
   }, [authUser]);
 
   return (
-    <div className="mx-auto max-w-5xl space-y-4 sm:space-y-6 px-4 py-6 sm:py-8 sm:px-6 pb-24" dir="rtl">
+    <div className="mx-auto max-w-5xl space-y-4 sm:space-y-6 px-3 py-4 sm:py-8 sm:px-6 pb-24" dir="rtl">
       <section className="rounded-xl bg-card p-4 sm:p-5 shadow-sm">
         <div className="flex flex-col gap-4 sm:gap-5 xl:flex-row xl:items-center xl:justify-between">
           <div className="min-w-0 space-y-1.5 sm:space-y-2">
@@ -201,7 +201,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
         </div>
       </section>
 
-      <section className="overflow-x-auto rounded-xl bg-card p-2 shadow-sm">
+      <section className="overflow-x-auto no-scrollbar rounded-xl bg-card p-1.5 sm:p-2 shadow-sm">
         <div className="flex min-w-max gap-1">
           {Object.values(SECTION_META).map((item) => {
             const Icon = item.icon;
@@ -223,7 +223,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
         </div>
       </section>
 
-      <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <section className="grid grid-cols-2 gap-2.5 sm:gap-3 xl:grid-cols-4">
         <Metric label="الخطة" value={subscriptionPlan.name} hint={subscriptionPlan.projectLimitLabel} />
         <Metric
           label="المشاريع"
@@ -316,28 +316,30 @@ function SectionContent({
   if (section === 'projects') {
     return (
       <Panel title="مشاريع الحساب" subtitle="جدول مختصر قابل للربط لاحقاً ببيانات المستخدم">
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead>المشروع</TableHead>
-              <TableHead>الحالة</TableHead>
-              <TableHead>التقدم</TableHead>
-              <TableHead>الإجراء</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {PROJECT_ROWS.map((project) => (
-              <TableRow key={project.name}>
-                <TableCell className="font-medium text-foreground">{project.name}</TableCell>
-                <TableCell><Badge variant="outline">{project.status}</Badge></TableCell>
-                <TableCell className="text-muted-foreground">{project.progress}</TableCell>
-                <TableCell>
-                  <Button variant="ghost" size="sm" onClick={() => setActiveTab(project.targetTab)}>فتح</Button>
-                </TableCell>
+        <div className="overflow-x-auto no-scrollbar">
+          <Table className="min-w-[460px]">
+            <TableHeader>
+              <TableRow>
+                <TableHead>المشروع</TableHead>
+                <TableHead>الحالة</TableHead>
+                <TableHead>التقدم</TableHead>
+                <TableHead>الإجراء</TableHead>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+            </TableHeader>
+            <TableBody>
+              {PROJECT_ROWS.map((project) => (
+                <TableRow key={project.name}>
+                  <TableCell className="font-medium text-foreground">{project.name}</TableCell>
+                  <TableCell><Badge variant="outline">{project.status}</Badge></TableCell>
+                  <TableCell className="text-muted-foreground">{project.progress}</TableCell>
+                  <TableCell>
+                    <Button variant="ghost" size="sm" onClick={() => setActiveTab(project.targetTab)}>فتح</Button>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
       </Panel>
     );
   }
@@ -495,26 +497,28 @@ function StepRow({ title, desc, button, onClick }: { title: string; desc: string
 
 function InvoiceTable() {
   return (
-    <Table>
-      <TableHeader>
-        <TableRow>
-          <TableHead>رقم الفاتورة</TableHead>
-          <TableHead>التاريخ</TableHead>
-          <TableHead>المبلغ</TableHead>
-          <TableHead>الحالة</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {INVOICES.map((invoice) => (
-          <TableRow key={invoice.id}>
-            <TableCell className="font-medium text-foreground">{invoice.id}</TableCell>
-            <TableCell className="text-muted-foreground">{invoice.date}</TableCell>
-            <TableCell className="font-semibold text-foreground">{invoice.amount}</TableCell>
-            <TableCell><Badge variant="success">{invoice.status}</Badge></TableCell>
+    <div className="overflow-x-auto no-scrollbar">
+      <Table className="min-w-[420px]">
+        <TableHeader>
+          <TableRow>
+            <TableHead>رقم الفاتورة</TableHead>
+            <TableHead>التاريخ</TableHead>
+            <TableHead>المبلغ</TableHead>
+            <TableHead>الحالة</TableHead>
           </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+        </TableHeader>
+        <TableBody>
+          {INVOICES.map((invoice) => (
+            <TableRow key={invoice.id}>
+              <TableCell className="font-medium text-foreground">{invoice.id}</TableCell>
+              <TableCell className="text-muted-foreground">{invoice.date}</TableCell>
+              <TableCell className="font-semibold text-foreground">{invoice.amount}</TableCell>
+              <TableCell><Badge variant="success">{invoice.status}</Badge></TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </div>
   );
 }
 

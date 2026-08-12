@@ -236,9 +236,9 @@ export function AppBreadcrumb({ activeTab, subTabLabel, setActiveTab }: AppBread
   const nodes = getBreadcrumbNodes(activeTab, subTabLabel);
 
   return (
-    <div dir="rtl" className="border-b border-border bg-background px-3 py-1.5 sm:px-6 sm:py-2 lg:px-8">
+    <div dir="rtl" className="hidden sm:block border-b border-border bg-background px-3 py-1.5 sm:px-6 sm:py-2 lg:px-8">
       <Breadcrumb>
-        <BreadcrumbList>
+        <BreadcrumbList className="flex-nowrap overflow-x-auto text-xs sm:text-sm scrollbar-none">
           {nodes.map((node, index) => {
             const isLast = index === nodes.length - 1;
             const key = `${node.tab ?? node.label}-${index}`;

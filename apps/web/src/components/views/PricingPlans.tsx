@@ -265,7 +265,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
       {/* Header & Sub-Nav Bar (Clean Shadcn Style) */}
       <div className="space-y-3">
         {/* Breadcrumb path */}
-        <div className="flex items-center gap-1.5 text-xs text-muted-foreground font-medium">
+        <div className="hidden sm:flex items-center gap-1.5 text-xs text-muted-foreground font-medium">
           <span>لوحة التحكم</span>
           <span>/</span>
           <span>الفوترة والاشتراكات</span>
@@ -298,10 +298,10 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
 
         {/* Sub-Navigation & Yearly Toggle */}
         <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between border-b border-border/50 pb-2">
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 overflow-x-auto scrollbar-none max-w-full pb-1 sm:pb-0">
             <button
               onClick={() => setActiveSubTab('plans')}
-              className={`px-3 py-1.5 text-xs font-bold rounded-md transition-colors cursor-pointer ${
+              className={`px-3 py-1.5 text-xs font-bold rounded-md transition-colors shrink-0 cursor-pointer ${
                 activeSubTab === 'plans'
                   ? 'bg-secondary text-secondary-foreground'
                   : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
@@ -311,7 +311,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
             </button>
             <button
               onClick={() => setActiveSubTab('billing')}
-              className={`px-3 py-1.5 text-xs font-bold rounded-md transition-colors cursor-pointer ${
+              className={`px-3 py-1.5 text-xs font-bold rounded-md transition-colors shrink-0 cursor-pointer ${
                 activeSubTab === 'billing'
                   ? 'bg-secondary text-secondary-foreground'
                   : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
@@ -321,7 +321,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
             </button>
             <button
               onClick={() => setActiveSubTab('account')}
-              className={`px-3 py-1.5 text-xs font-bold rounded-md transition-colors cursor-pointer ${
+              className={`px-3 py-1.5 text-xs font-bold rounded-md transition-colors shrink-0 cursor-pointer ${
                 activeSubTab === 'account'
                   ? 'bg-secondary text-secondary-foreground'
                   : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
@@ -332,11 +332,11 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
           </div>
 
           {/* Monthly / Yearly Switcher */}
-          <div className="flex items-center gap-1.5 self-end sm:self-auto bg-muted/60 p-1 rounded-md border border-border/40">
+          <div className="flex items-center justify-center gap-1.5 w-full sm:w-auto bg-muted/60 p-1 rounded-md border border-border/40">
             <button
               type="button"
               onClick={() => setBillingCycle('monthly')}
-              className={`text-xs font-bold px-2.5 py-1 rounded transition-all cursor-pointer ${
+              className={`text-xs font-bold px-2.5 py-1 rounded transition-all flex-1 sm:flex-initial text-center cursor-pointer ${
                 billingCycle === 'monthly'
                   ? 'bg-background text-foreground shadow-2xs'
                   : 'text-muted-foreground hover:text-foreground'
@@ -347,7 +347,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
             <button
               type="button"
               onClick={() => setBillingCycle('yearly')}
-              className={`text-xs font-bold px-2.5 py-1 rounded transition-all cursor-pointer flex items-center gap-1 ${
+              className={`text-xs font-bold px-2.5 py-1 rounded transition-all flex-1 sm:flex-initial justify-center items-center gap-1 cursor-pointer flex ${
                 billingCycle === 'yearly'
                   ? 'bg-background text-foreground shadow-2xs'
                   : 'text-muted-foreground hover:text-foreground'
@@ -518,8 +518,8 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
               </Button>
             </div>
 
-            <div className="overflow-x-auto">
-              <table className="w-full text-right text-xs">
+            <div className="overflow-x-auto no-scrollbar sm:scrollbar-auto">
+              <table className="w-full min-w-[540px] text-right text-xs">
                 <thead>
                   <tr className="border-b border-border/40">
                     <th className="py-2.5 px-3 font-bold text-foreground text-xs">الميزة والتغطية</th>
@@ -581,7 +581,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
 
       {/* Upload Receipt Dialog */}
       <Dialog open={Boolean(upgradeTargetPlan)} onOpenChange={(open) => !open && closeUpgradeDialog()}>
-        <DialogContent dir="rtl" className="sm:max-w-[420px] p-0 overflow-hidden">
+        <DialogContent dir="rtl" className="w-[92vw] sm:max-w-[420px] p-0 overflow-hidden">
           <DialogHeader className="border-b border-border p-4 text-right bg-muted/20">
             <div className="flex items-center gap-2">
               <div className="p-2 rounded-md bg-primary/10 text-primary">

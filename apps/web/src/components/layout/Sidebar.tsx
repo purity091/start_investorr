@@ -371,6 +371,7 @@ function SidebarLink({
   activeTab: string;
   setActiveTab?: (tab: string) => void;
 }) {
+  const { isMobile, setOpenMobile } = useSidebar();
   const Icon = item.icon;
   const isActive = isItemActive(item, activeTab);
 
@@ -390,7 +391,10 @@ function SidebarLink({
         <a
           id={item.id}
           href={getTabPath(item.tab)}
-          onClick={(event) => goToTab(event, item.tab, setActiveTab)}
+          onClick={(event) => {
+            goToTab(event, item.tab, setActiveTab);
+            if (isMobile) setOpenMobile(false);
+          }}
         >
           <Icon className={cn("size-4.5 shrink-0 transition-transform group-hover:scale-105", isActive ? "!text-white" : item.iconColor || "text-slate-600")} />
           <span className={cn("min-w-0 flex-1", isActive ? "!text-white font-bold" : "font-semibold")}>
@@ -427,6 +431,7 @@ function SidebarSection({
   activeTab: string;
   setActiveTab?: (tab: string) => void;
 }) {
+  const { isMobile, setOpenMobile } = useSidebar();
   const isAnyActive = items.some((item) => isItemActive(item, activeTab));
 
   return (
@@ -458,6 +463,7 @@ function SidebarSection({
                         return;
                       }
                       goToTab(event, item.tab, setActiveTab);
+                      if (isMobile) setOpenMobile(false);
                     }}
                     className={cn(
                       "flex w-full items-center gap-2.5 rounded-xl transition-colors",
@@ -544,6 +550,8 @@ function AccountSection({
   activeTab: string;
   setActiveTab?: (tab: string) => void;
 }) {
+  const { isMobile, setOpenMobile } = useSidebar();
+
   return (
     <SidebarGroup>
       <SidebarGroupLabel className="bg-transparent font-semibold text-sidebar-foreground/70">إدارة المستخدم</SidebarGroupLabel>
@@ -564,7 +572,10 @@ function AccountSection({
                   <a
                     id={item.id}
                     href={getTabPath(item.tab)}
-                    onClick={(event) => goToTab(event, item.tab, setActiveTab)}
+                    onClick={(event) => {
+                      goToTab(event, item.tab, setActiveTab);
+                      if (isMobile) setOpenMobile(false);
+                    }}
                   >
                     <Icon />
                     <span className="min-w-0 flex-1">{item.label}</span>
@@ -582,7 +593,7 @@ function AccountSection({
 export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setActiveTab }) => {
   const { user: authUser } = useAuth();
   const isAdminMode = ADMIN_TABS.includes(activeTab);
-  const { state, toggleSidebar } = useSidebar();
+  const { state, toggleSidebar, isMobile, setOpenMobile } = useSidebar();
   const [projectBuildCounts, setProjectBuildCounts] = React.useState<ProjectBuildCounts>(EMPTY_PROJECT_BUILD_COUNTS);
 
   React.useEffect(() => {
@@ -648,7 +659,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
             <SidebarMenuButton
               size="lg"
               className="h-12 justify-start gap-2 px-2 text-right"
-              onClick={() => setActiveTab?.(isAdminMode ? 'admin-dashboard' : 'home')}
+              onClick={() => {
+                setActiveTab?.(isAdminMode ? 'admin-dashboard' : 'home');
+                if (isMobile) setOpenMobile(false);
+              }}
             >
               <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
                 {isAdminMode ? <Shield className="size-4" /> : <Zap className="size-4" />}

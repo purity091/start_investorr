@@ -455,27 +455,35 @@ export const LandingNavbar: React.FC = () => {
 
                 {/* Navigation Sections & Direct Links */}
                 <div className="space-y-3 text-xs font-bold text-foreground">
+                  <Link href="/saas-ideas" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 py-2 text-foreground hover:text-primary border-b border-border/40">
+                    <Laptop className="size-4 text-blue-600" />
+                    <span>أفكار مشاريع SaaS</span>
+                  </Link>
+
+                  <Link href="/micro-saas-ideas" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 py-2 text-foreground hover:text-primary border-b border-border/40">
+                    <Cpu className="size-4 text-indigo-600" />
+                    <span>أفكار Micro-SaaS</span>
+                  </Link>
+
+                  <Link href="/market-discovery" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 py-2 text-foreground hover:text-primary border-b border-border/40">
+                    <Compass className="size-4 text-purple-600" />
+                    <span>استكشاف القطاعات</span>
+                  </Link>
+
+                  <Link href="/proven-projects" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 py-2 text-foreground hover:text-primary border-b border-border/40">
+                    <Building2 className="size-4 text-emerald-600" />
+                    <span>دراسات حالة الشركات</span>
+                  </Link>
 
                   <Link href="/platform-academy" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 py-2 text-foreground hover:text-primary border-b border-border/40">
                     <BookOpen className="size-4 text-primary" />
                     <span>الأكاديمية</span>
                   </Link>
 
-                  <Link href="/changelog" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 py-2 text-foreground hover:text-primary border-b border-border/40">
-                    <Sparkles className="size-4 text-amber-500" />
-                    <span>المصادر والسجل</span>
-                  </Link>
-
                   <Link href="/pricing-plans" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 py-2 text-foreground hover:text-primary border-b border-border/40">
-                    <DollarSign className="size-4 text-emerald-600" />
-                    <span>الأسعار</span>
+                    <DollarSign className="size-4 text-amber-500" />
+                    <span>الأسعار والاشتراكات</span>
                   </Link>
-
-                  <Link href="/proven-projects" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 py-2 text-foreground hover:text-primary border-b border-border/40">
-                    <Building2 className="size-4 text-blue-600" />
-                    <span>دراسات حالة الشركات</span>
-                  </Link>
-
                 </div>
               </div>
 
