@@ -58,6 +58,14 @@ export const IdeaCreation: React.FC<{
     moneyModel: '',
   });
   const [familyStep, setFamilyStep] = useState(savedModel?.currentStep ?? 0);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    const mainContainer = document.querySelector('main');
+    if (mainContainer) {
+      mainContainer.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }
+  }, [initialMode]);
   const stepRef = useRef(step);
   const promptRef = useRef(prompt);
   const ideaDataRef = useRef(ideaData);
@@ -197,7 +205,6 @@ export const IdeaCreation: React.FC<{
                   </p>
                 </div>
               </div>
-              <Button variant="outline" onClick={onBack} className="w-full sm:w-fit">العودة للمسارات</Button>
             </div>
           </section>
 

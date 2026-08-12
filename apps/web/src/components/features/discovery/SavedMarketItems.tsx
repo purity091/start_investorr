@@ -509,14 +509,10 @@ export const SavedMarketItems: React.FC<SavedMarketItemsProps> = ({ setActiveTab
   return (
     <div dir="rtl" className="min-h-screen bg-background text-right text-foreground py-6 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-6">
-        
+
         {/* Page Header Area */}
         <div className="space-y-1">
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-md">
-              <BookmarkCheck className="size-3.5" />
-              المحفوظات
-            </span>
           </div>
           <h1 className="text-2xl font-bold tracking-tight">سجل المحفوظات الشامل</h1>
           <p className="text-sm text-muted-foreground">
@@ -527,7 +523,7 @@ export const SavedMarketItems: React.FC<SavedMarketItemsProps> = ({ setActiveTab
         {/* Filters & Search Toolbar */}
         <div className="flex flex-col gap-4 rounded-xl bg-card p-4 shadow-xs">
           <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-            
+
             {/* Source Page Filter Pills */}
             <div className="flex flex-wrap items-center gap-1.5">
               {(Object.keys(SOURCE_PAGES_META) as SourcePageId[]).map((pageId) => {

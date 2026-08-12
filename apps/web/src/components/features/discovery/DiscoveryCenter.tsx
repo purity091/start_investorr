@@ -85,7 +85,7 @@ interface SectorRecord {
   };
 }
 
-const DISCOVERY_DATA: DiscoveryGroup[] = [
+export const DISCOVERY_DATA: DiscoveryGroup[] = [
   {
     title: 'الإعلانات والتسويق',
     iconName: 'Megaphone',

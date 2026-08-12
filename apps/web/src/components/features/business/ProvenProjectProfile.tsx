@@ -465,6 +465,14 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
   const publicBookmarkId = rawProjectId ? getPublicProjectBookmarkId(bookmarkSource, rawProjectId) : '';
 
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    const mainContainer = document.querySelector('main');
+    if (mainContainer) {
+      mainContainer.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }
+  }, [rawProject.id, rawProject.slug]);
+
+  useEffect(() => {
     let isMounted = true;
     const loadSimilar = async () => {
       setIsLoadingSimilar(true);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ArrowRight, BarChart3, BriefcaseBusiness, CheckCircle2, Gauge, LayoutGrid, Lightbulb, LineChart, PieChart, Rocket, ShieldAlert, Target, Users, Zap } from 'lucide-react';
 import { Button } from '../../ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../ui/Card';
@@ -13,13 +13,16 @@ interface ExampleViewerProps {
 }
 
 export const ExampleViewer: React.FC<ExampleViewerProps> = ({ mode, onBack }) => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    const mainContainer = document.querySelector('main');
+    if (mainContainer) {
+      mainContainer.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }
+  }, [mode]);
   return (
     <div dir="rtl" className="flex w-full flex-col gap-3 px-2 py-2 sm:px-4 lg:px-6 pb-20">
       <div className="flex items-center gap-3">
-        <Button variant="outline" size="sm" onClick={onBack} className="gap-2">
-          <ArrowRight className="size-4" />
-          العودة للمسارات
-        </Button>
         <div>
           <h2 className="text-xl font-bold">مثال توضيحي لنتيجة البناء</h2>
           <p className="text-sm text-muted-foreground">هكذا ستبدو مخرجات مشروعك بعد إكمال هذا المسار.</p>

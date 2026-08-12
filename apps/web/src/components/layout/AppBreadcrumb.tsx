@@ -7,8 +7,19 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb';
-import { getTabPath } from '@/utils/routes';
+} from '../ui/breadcrumb';
+import { getTabPath } from '../../utils/routes';
+import { DISCOVERY_DATA } from '../features/discovery/DiscoveryCenter';
+
+const SECTOR_BREADCRUMB_MAP: Record<string, { label: string; groupTitle: string }> = {};
+DISCOVERY_DATA.forEach((group) => {
+  group.sectors.forEach((sec) => {
+    SECTOR_BREADCRUMB_MAP[sec.id] = {
+      label: sec.label,
+      groupTitle: group.title,
+    };
+  });
+});
 
 interface BreadcrumbNode {
   label: string;
@@ -126,8 +137,10 @@ function getBreadcrumbNodes(activeTab: string, subTabLabel?: string | null): Bre
   }
 
   // Market Sector Discovery & Sector Dashboards
+  const sectorInfo = SECTOR_BREADCRUMB_MAP[activeTab];
   if (
     activeTab === 'market-discovery' ||
+    sectorInfo ||
     (activeTab.endsWith('-dashboard') && !['admin-dashboard', 'customer-dashboard', 'strategic-dashboard'].includes(activeTab))
   ) {
     if (activeTab === 'market-discovery') {
@@ -136,10 +149,13 @@ function getBreadcrumbNodes(activeTab: string, subTabLabel?: string | null): Bre
         { label: 'استكشاف قطاعات السوق', tab: 'market-discovery' },
       ];
     }
+
+    const sectorTitle = subTabLabel || sectorInfo?.label || currentLabel;
+
     return [
       { label: 'الرئيسية', tab: 'home' },
       { label: 'استكشاف قطاعات السوق', tab: 'market-discovery' },
-      { label: currentLabel, tab: activeTab },
+      { label: sectorTitle, tab: activeTab },
     ];
   }
 

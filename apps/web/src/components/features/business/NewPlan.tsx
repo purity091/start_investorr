@@ -804,6 +804,7 @@ function ModeProjectsSection({
       }
       setIsLoading(true);
       setLoadError(null);
+      setIsOffline(false);
       try {
         const { data, error } = await supabase
           .from('business_canvas')
@@ -836,6 +837,7 @@ function ModeProjectsSection({
         setProjectsList([...realProjects, ...SECTION_PROJECTS[mode]]);
       } catch (err) {
         console.error('Error fetching projects:', err);
+        setIsOffline(typeof navigator !== 'undefined' && !navigator.onLine);
         setProjectsList(SECTION_PROJECTS[mode]);
         setLoadError('تعذر تحميل مشاريعك من قاعدة البيانات. يمكنك إعادة المحاولة دون فقد أي مدخلات.');
       } finally {
@@ -969,21 +971,26 @@ function ModeProjectsSection({
       </CardHeader>
       <CardContent className="p-4 sm:p-6 pt-0 sm:pt-0">
         {isLoading ? (
-          <div className="flex min-h-40 items-center justify-center gap-3 text-sm text-muted-foreground">
+          <>
+            <PageSectionSkeleton blocks={3} compact />
+          {/*
             <RefreshCcw className="size-5 animate-spin" />
             جاري تحميل المشاريع...
-          </div>
+          */}
+          </>
         ) : (
           <>
-        {loadError ? (
+        {loadError ? (isOffline ? <OfflineState onRetry={() => setReloadKey((value) => value + 1)} /> : (
+          <ErrorState description={loadError} onRetry={() => setReloadKey((value) => value + 1)} />
+        )) : null}
+          {/*
           <div role="alert" className="mb-4 flex flex-col gap-3 rounded-md border border-destructive/30 bg-destructive/5 p-4 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm leading-6 text-destructive">{loadError}</p>
             <Button type="button" variant="outline" size="sm" onClick={() => setReloadKey((value) => value + 1)}>
               <RefreshCcw className="size-4" />
               إعادة المحاولة
             </Button>
-          </div>
-        ) : null}
+          </div>*/}
         {/* Unified Responsive Table for All Screen Sizes (Mobile, Tablet, Desktop) */}
         <div className="w-full overflow-x-auto rounded-xl border-0 shadow-2xs bg-card">
           <Table dir="rtl" containerClassName="border-0 shadow-none rounded-none bg-transparent" className="min-w-[720px]">

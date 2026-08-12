@@ -2,11 +2,10 @@ import React, {
   useState,
   useEffect,
   useRef,
-  useCallback,
   useMemo,
   type FC,
 } from 'react';
-import { Download, Rocket, ArrowRight, Layers } from 'lucide-react';
+import { Rocket, ArrowRight, Layers } from 'lucide-react';
 import { SectorDashboardProps } from './types';
 import { Button } from '../../../ui/Button';
 import { Badge } from '../../../ui/Badge';
@@ -33,7 +32,6 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
   subtitle,
   accent,
   accentHex,
-  pdfLabel = 'تصدير الدراسة (PDF)',
   kpis,
   sections,
   leaders = [],
@@ -67,7 +65,7 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
           const oppData = await fetchPublicJson<any[]>(`/data/opportunities/${sectorId}.json`);
           setRegistryOpportunities(oppData);
         }
-        
+
         if (!hasManualSwot) {
           const swotData = await fetchPublicJson<any>(`/data/swot/${sectorId}.json`);
           setRegistrySwot(swotData);
@@ -103,7 +101,6 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
   );
 
   const [activeId, setActiveId] = useState<string>(navMap[nav[0]] || '');
-  const [isDownloading, setIsDownloading] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLDivElement>(null);
 
@@ -139,19 +136,6 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
     }
   };
 
-  const handleDownloadReport = useCallback(async () => {
-    setIsDownloading(true);
-
-    try {
-      if (navigator.clipboard) {
-        await navigator.clipboard.writeText(window.location.href);
-        alert('تم نسخ رابط مشاركة لوحة القطاع بنجاح!');
-      }
-    } finally {
-      setIsDownloading(false);
-    }
-  }, []);
-
   return (
     <>
       <div
@@ -174,7 +158,7 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
                 <h1 className="text-2xl font-black tracking-tight text-foreground sm:text-3xl lg:text-4xl leading-tight">
                   {title}
                 </h1>
-                
+
                 <p className="max-w-3xl text-sm font-medium leading-relaxed text-muted-foreground">
                   {subtitle}
                 </p>
@@ -191,24 +175,6 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
                     </Button>
                   )}
 
-                  <Button
-                    onClick={handleDownloadReport}
-                    variant="outline"
-                    className="h-9 gap-2 rounded-lg px-3.5 font-semibold text-xs sm:text-sm border-border"
-                    disabled={isDownloading}
-                  >
-                    <Download className="size-4" />
-                    {isDownloading ? 'جاري التحضير...' : pdfLabel}
-                  </Button>
-
-                  <Button
-                    onClick={onBack}
-                    variant="ghost"
-                    className="h-9 gap-2 rounded-lg px-3.5 font-semibold text-xs sm:text-sm text-muted-foreground hover:text-foreground"
-                  >
-                    <ArrowRight className="size-4" />
-                    العودة للاستكشاف
-                  </Button>
                 </div>
               </div>
 
@@ -260,7 +226,7 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
                       className={cn(
                         "group flex items-center justify-between w-full text-right px-2.5 py-2 rounded-lg text-xs transition-all duration-150 focus:outline-none",
                         isActive
-                          ? "bg-primary/10 text-primary font-bold border-r-2 border-primary pr-2" 
+                          ? "bg-primary/10 text-primary font-bold border-r-2 border-primary pr-2"
                           : "text-muted-foreground hover:bg-muted hover:text-foreground font-medium"
                       )}
                     >
@@ -287,12 +253,12 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
             )}
 
             {sections.map(section => (
-               <div id={section.id} key={section.id} className="dashboard-section scroll-mt-20">
-                 {section.variant === 'dark' 
-                   ? <DarkCard section={section} /> 
-                   : <LightCard section={section} />
-                 }
-               </div>
+              <div id={section.id} key={section.id} className="dashboard-section scroll-mt-20">
+                {section.variant === 'dark'
+                  ? <DarkCard section={section} />
+                  : <LightCard section={section} />
+                }
+              </div>
             ))}
 
             {hasLeaders && (
@@ -303,7 +269,7 @@ const SectorDashboardTemplate: FC<SectorDashboardProps> = ({
 
             {hasSwot && swot && (
               <div id="swot-analysis" className="dashboard-section scroll-mt-20">
-                 <SwotSection swot={swot} title={title} />
+                <SwotSection swot={swot} title={title} />
               </div>
             )}
 
