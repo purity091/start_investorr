@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import {
   Activity,
   Bookmark,
@@ -659,24 +660,29 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton
+              asChild
               size="lg"
-              className="h-12 justify-start gap-2 px-2 text-right"
-              onClick={() => {
-                setActiveTab?.(isAdminMode ? 'admin-dashboard' : 'home');
-                if (isMobile) setOpenMobile(false);
-              }}
+              className="h-12 justify-start gap-2 px-2 text-right cursor-pointer"
             >
-              <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                {isAdminMode ? <Shield className="size-4" /> : <Zap className="size-4" />}
-              </span>
-              <span className="grid min-w-0 flex-1 text-right leading-tight">
-                <span className="truncate text-sm font-semibold">
-                  {isAdminMode ? 'لوحة الإدارة' : 'خطة'}
+              <Link
+                href="/"
+                onClick={() => {
+                  if (isMobile) setOpenMobile(false);
+                }}
+                title="الرئيسية - صفحة الهبوط"
+              >
+                <span className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground font-black">
+                  {isAdminMode ? <Shield className="size-4" /> : <Zap className="size-4" />}
                 </span>
-                <span className="truncate text-xs text-muted-foreground">
-                  {isAdminMode ? 'إدارة المنصة' : 'الجيل الجديد من دراسات الجدوى'}
+                <span className="grid min-w-0 flex-1 text-right leading-tight">
+                  <span className="truncate text-sm font-extrabold text-sidebar-foreground">
+                    {isAdminMode ? 'لوحة الإدارة' : 'خطة.'}
+                  </span>
+                  <span className="truncate text-xs text-muted-foreground">
+                    {isAdminMode ? 'إدارة المنصة' : 'الجيل الجديد من دراسات الجدوى'}
+                  </span>
                 </span>
-              </span>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

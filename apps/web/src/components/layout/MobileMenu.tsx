@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 import {
   Activity,
   AreaChart,
@@ -123,19 +124,24 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, activeT
         dir="rtl"
       >
         <div className="flex items-center justify-between border-b border-border px-4 py-4">
-          <div className="flex min-w-0 items-center gap-3">
+          <Link
+            href="/"
+            onClick={onClose}
+            className="flex min-w-0 items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer"
+            title="الانتقال إلى صفحة الهبوط"
+          >
             <span className="flex size-10 items-center justify-center rounded-lg bg-primary text-primary-foreground">
               {isAdminMode ? <Shield className="size-5" /> : <Zap className="size-5" />}
             </span>
             <div className="min-w-0">
               <h2 className="truncate text-sm font-semibold text-foreground">
-                {isAdminMode ? 'واجهة الإدارة' : 'خطة'}
+                {isAdminMode ? 'واجهة الإدارة' : 'خطة.'}
               </h2>
               <p className="truncate text-xs text-muted-foreground">
                 {isAdminMode ? 'إدارة النظام' : 'منصة بناء المشاريع'}
               </p>
             </div>
-          </div>
+          </Link>
           <Button variant="ghost" size="icon-sm" onClick={onClose} aria-label="إغلاق">
             <X className="size-4" />
           </Button>

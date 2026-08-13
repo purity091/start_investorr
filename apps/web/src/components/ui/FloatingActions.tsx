@@ -8,7 +8,7 @@ export const FloatingActions: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-8 left-8 z-50 flex flex-col gap-3">
+    <div className="fixed bottom-24 left-4 z-[110] sm:bottom-28 lg:bottom-8 lg:left-8 flex flex-col gap-3 transition-all duration-300">
       <Button
         onClick={scrollToTop}
         variant="outline"

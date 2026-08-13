@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import {
   AlertCircle,
   ArrowLeft,
@@ -205,6 +206,19 @@ export const Header: React.FC<HeaderProps> = ({
           <SidebarTrigger className="lg:hidden h-8 w-8 text-foreground hover:bg-muted [&_svg]:size-4.5 sm:[&_svg]:size-5">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-4.5 sm:size-5"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
           </SidebarTrigger>
+          <Link
+            href="/"
+            className="flex items-center gap-1.5 hover:opacity-80 transition-opacity shrink-0 cursor-pointer"
+            title="الانتقال إلى صفحة الهبوط الرئيسية"
+          >
+            <div className="flex items-center justify-center size-7 rounded-lg bg-primary text-primary-foreground font-black text-xs shadow-2xs">
+              خ
+            </div>
+            <span className="text-sm font-black tracking-tight text-foreground hidden sm:inline">
+              خطة<span className="text-primary">.</span>
+            </span>
+          </Link>
+          <span className="text-border/60 text-xs hidden sm:inline">•</span>
           <h1 className="truncate text-xs sm:text-sm font-semibold text-foreground sm:text-base">{title}</h1>
           {syncStatus === 'saving' && (
             <span className="hidden sm:flex items-center gap-1.5 text-xs text-muted-foreground">
