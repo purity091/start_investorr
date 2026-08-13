@@ -58,7 +58,7 @@ export const RevenueAccelerationCard = () => {
                 </div>
                 
                 <div style={{ padding: "14px 18px", background: "#f5f3ff", borderRadius: TOKENS.radius.inner, border: `1px dashed ${TOKENS.colors.primary}` }}>
-                   <p style={{ fontSize: "13px", color: TOKENS.colors.primary, fontWeight: 700 }}>💡 نصيحة النمو:</p>
+                   <p style={{ fontSize: "13px", color: TOKENS.colors.primary, fontWeight: 700 }}>نصيحة النمو:</p>
                    <p style={{ fontSize: "13px", color: TOKENS.colors.primary, fontWeight: 500, marginTop: 4 }}>"ركز على عملاء الـ Retention (الذين يطلبون مرتين في الأسبوع) لأن تكلفة الاستحواذ عليهم هي الأقل."</p>
                 </div>
              </div>

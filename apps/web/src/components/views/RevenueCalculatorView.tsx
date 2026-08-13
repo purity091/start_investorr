@@ -572,11 +572,11 @@ export const RevenueCalculatorView: React.FC<RevenueCalculatorViewProps> = ({ se
                 <p className="text-xs text-muted-foreground leading-relaxed font-medium">
                   {metrics.ltvCacRatio >= 3.0 ? (
                     <span className="text-emerald-600 font-semibold">
-                      ✨ مؤشرات ممتازة جداً! نسبة LTV/CAC تبلغ ({metrics.ltvCacRatio}x) وهو معدل يتجاوز المعيار العالمي المطلوب للمستثمرين (3.0x).
+                      مؤشرات ممتازة جداً! نسبة LTV/CAC تبلغ ({metrics.ltvCacRatio}x) وهو معدل يتجاوز المعيار العالمي المطلوب للمستثمرين (3.0x).
                     </span>
                   ) : (
                     <span className="text-amber-600 font-semibold">
-                      ⚠️ يحتاج تحسين: نسبة LTV/CAC تبلغ ({metrics.ltvCacRatio}x). يُفضل زيادة سعر الاشتراك أو خفض تكلفة الاستحواذ لزيادة الهامش.
+                      يحتاج تحسين: نسبة LTV/CAC تبلغ ({metrics.ltvCacRatio}x). يُفضل زيادة سعر الاشتراك أو خفض تكلفة الاستحواذ لزيادة الهامش.
                     </span>
                   )}
                 </p>

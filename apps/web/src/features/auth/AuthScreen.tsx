@@ -3,7 +3,7 @@ import { supabase } from '@/lib/supabase';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Badge } from '@/components/ui/Badge';
-import { Loader2, Mail, Lock, KeyRound, AlertCircle, ArrowLeft, User as UserIcon, Sparkles, Eye, EyeOff, CheckSquare, Square } from 'lucide-react';
+import { Loader2, Mail, Lock, AlertCircle, ArrowLeft, User as UserIcon, Sparkles, Eye, EyeOff, CheckSquare, Square } from 'lucide-react';
 import { DEFAULT_SUBSCRIPTION_PLAN_ID, SUBSCRIPTION_PLAN_IDS, SUBSCRIPTION_PLANS, SubscriptionPlanId } from '@/lib/subscriptionPlans';
 
 type AuthMode = 'login' | 'register' | 'forgot_password';
@@ -61,7 +61,6 @@ export const AuthScreen: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
-  const [isPasskeyLoading, setIsPasskeyLoading] = useState(false);
 
   const resetState = () => {
     setError(null);
@@ -75,44 +74,6 @@ export const AuthScreen: React.FC = () => {
     resetState();
   };
 
-  const handlePasskeySignIn = async () => {
-    setError(null);
-    setMessage('افتح نافذة التحقق في جهازك وأكمل بالبصمة أو رمز القفل.');
-    setIsPasskeyLoading(true);
-    try {
-      const result = await Promise.race([
-        supabase.auth.signInWithPasskey(),
-        new Promise<never>((_, reject) => {
-          window.setTimeout(() => reject(new Error('PASSKEY_TIMEOUT')), 20000);
-        }),
-      ]);
-      const { data, error: passkeyError } = result;
-      if (passkeyError) throw passkeyError;
-      if (!data?.session || !data.user) throw new Error('PASSKEY_SESSION_MISSING');
-      window.location.href = getSafeRedirectPath();
-    } catch (error: unknown) {
-      const passkeyError = error as { message?: unknown; name?: unknown; status?: unknown; code?: unknown };
-      console.error('Passkey sign-in failed:', {
-        message: typeof passkeyError.message === 'string' ? passkeyError.message : 'Unknown error',
-        name: typeof passkeyError.name === 'string' ? passkeyError.name : undefined,
-        status: typeof passkeyError.status === 'number' ? passkeyError.status : undefined,
-        code: typeof passkeyError.code === 'string' ? passkeyError.code : undefined,
-      });
-      const code = typeof passkeyError.code === 'string' ? passkeyError.code : '';
-      if (code === 'PASSKEY_TIMEOUT' || (passkeyError instanceof Error && passkeyError.message === 'PASSKEY_TIMEOUT')) {
-        setError('انتهت مهلة التحقق. تأكد من فتح نافذة Passkey وإكمال العملية على الهاتف.');
-      } else if (code === 'webauthn_credential_not_found') {
-        setError('هذا المفتاح غير مرتبط بهذا الحساب أو تم تسجيله على نطاق مختلف.');
-      } else if (code === 'email_not_confirmed') {
-        setError('يجب تأكيد البريد الإلكتروني للحساب قبل استخدام مفتاح المرور.');
-      } else {
-        setError('تعذر تسجيل الدخول بمفتاح المرور. تحقق من النطاق واتصال الجهاز ثم أعد المحاولة.');
-      }
-      setMessage(null);
-    } finally {
-      setIsPasskeyLoading(false);
-    }
-  };
 
   const handleAuth = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -143,7 +104,7 @@ export const AuthScreen: React.FC = () => {
         });
 
         // The API login sets server cookies; this also establishes the browser
-        // Supabase session required by Passkey registration and sign-in.
+        // Keep the browser session synchronized with the server login.
         const { error: browserAuthError } = await supabase.auth.signInWithPassword({ email, password });
         if (browserAuthError) throw browserAuthError;
 
@@ -247,9 +208,9 @@ export const AuthScreen: React.FC = () => {
         <div className="w-full max-w-[420px]">
           <div className="mb-8 text-right">
             <h2 className="text-3xl font-black text-slate-900 mb-2">
-              {mode === 'login' ? 'مرحباً بعودتك 👋' :
-                mode === 'register' ? 'ابدأ رحلتك الآن 🚀' :
-                  'استعادة كلمة المرور 🔐'}
+              {mode === 'login' ? 'مرحباً بعودتك' :
+                mode === 'register' ? 'ابدأ رحلتك الآن' :
+                  'استعادة كلمة المرور'}
             </h2>
             <p className="text-slate-500 text-sm font-medium">
               {mode === 'login' ? 'سجل دخولك لمتابعة العمل على مشاريعك الطموحة.' :
@@ -410,25 +371,6 @@ export const AuthScreen: React.FC = () => {
               )}
             </Button>
 
-            {mode === 'login' && (
-              <>
-                <div className="my-4 flex items-center gap-3 text-xs font-bold text-slate-400">
-                  <span className="h-px flex-1 bg-slate-200" />
-                  <span>أو</span>
-                  <span className="h-px flex-1 bg-slate-200" />
-                </div>
-                <Button
-                  type="button"
-                  variant="outline"
-                  onClick={handlePasskeySignIn}
-                  disabled={isLoading || isPasskeyLoading}
-                  className="w-full py-6 rounded-xl border-slate-200 text-slate-800 font-bold text-sm gap-2"
-                >
-                  {isPasskeyLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : <KeyRound className="h-5 w-5" />}
-                  تسجيل الدخول باستخدام مفتاح المرور
-                </Button>
-              </>
-            )}
           </form>
 
           <div className="mt-8 text-center border-t border-slate-100 pt-8">

@@ -524,8 +524,9 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
                   <tr className="border-b border-border/40">
                     <th className="py-2.5 px-3 font-bold text-foreground text-xs">الميزة والتغطية</th>
                     <th className="py-2.5 px-3 font-bold text-foreground text-center w-1/4">باقة رائد</th>
-                    <th className="py-2.5 px-3 font-bold text-foreground text-center w-1/4 bg-muted/40">
-                      باقة مؤسس ⭐
+                    <th className="py-2.5 px-3 font-bold text-foreground text-center w-1/4 bg-muted/40 flex items-center justify-center gap-1">
+                      <span>باقة مؤسس</span>
+                      <Sparkles className="size-3.5 text-amber-500" />
                     </th>
                     <th className="py-2.5 px-3 font-bold text-foreground text-center w-1/4">باقة قائد</th>
                   </tr>

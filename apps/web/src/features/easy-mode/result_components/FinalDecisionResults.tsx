@@ -42,7 +42,7 @@ export const FinalDecisionResults = () => {
              </div>
           </div>
           <div style={{ padding: "16px", background: "#f8fafc", borderRadius: "14px", border: `1px solid ${TOKENS.colors.border}`, fontSize: "14.5px", fontWeight: 700 }}>
-             📍 الخلاصة الاستراتيجية: البدء ممكن ومربح، ولكن ليس بالطريقة التقليدية التي كنت تخطط لها.
+             الخلاصة الاستراتيجية: البدء ممكن ومربح، ولكن ليس بالطريقة التقليدية التي كنت تخطط لها.
           </div>
         </CardBody>
       </BaseCard>
@@ -91,7 +91,7 @@ export const FinalDecisionResults = () => {
                 </div>
                 <div style={{ textAlign: "left" }}>
                    <div style={{ fontSize: "12px", fontWeight: 800, color: TOKENS.colors.text.muted }}>فجوة التمويل</div>
-                   <div style={{ fontSize: "24px", fontWeight: 900, color: TOKENS.colors.danger }}>-83%</div>
+                   <div style={{ fontSize: "24px", fontWeight: 900, color: TOKENS.colors.text.muted }}>-83%</div>
                 </div>
              </div>
           </div>
@@ -173,7 +173,7 @@ export const FinalDecisionResults = () => {
              </div>
           </div>
           <div style={{ color: TOKENS.colors.danger, fontSize: "13px", fontWeight: 700, fontStyle: "italic" }}>
-             ⚠️ بدون هذه الشروط، تنخفض نسبة النجاح بشكل كبير جداً.
+             بدون هذه الشروط، تنخفض نسبة النجاح بشكل كبير جداً.
           </div>
         </CardBody>
       </BaseCard>
@@ -212,7 +212,7 @@ export const FinalDecisionResults = () => {
           <div style={{ padding: "20px", background: "linear-gradient(135deg, #0f172a, #1e293b)", borderRadius: "20px", color: "#fff" }}>
              <div style={{ fontSize: "14px", fontWeight: 700, opacity: 0.8, marginBottom: "8px" }}>إذا أردت النجاح الحقيقي:</div>
              <div style={{ fontSize: "18px", fontWeight: 900, marginBottom: "16px", color: TOKENS.colors.primaryLight }}>لا تفكر كصاحب مطعم تقليدي..</div>
-             <div style={{ fontSize: "20px", fontWeight: 900, marginBottom: "20px", color: "#fff" }}>👉 فكر كمدير نظام نمو (Growth Operator)</div>
+             <div style={{ fontSize: "20px", fontWeight: 900, marginBottom: "20px", color: "#fff" }}>فكر كمدير نظام نمو (Growth Operator)</div>
              
              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px" }}>
                 <MindsetItem icon={<Activity size={16} />} text="راقب الأرقام" />

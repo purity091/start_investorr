@@ -62,10 +62,10 @@ export const GrowthResults = () => {
         <CardBody>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "20px" }}>
              <div style={{ padding: "16px", background: "#fff1f2", borderRadius: "16px", border: "1px solid rgba(225,29,72,0.1)", display: "flex", alignItems: "center", gap: 10 }}>
-                <span style={{ fontSize: "14px", fontWeight: 800, color: TOKENS.colors.danger }}>❌ استهداف الجميع</span>
+                <span style={{ fontSize: "14px", fontWeight: 800, color: TOKENS.colors.danger }}>استهداف الجميع</span>
              </div>
              <div style={{ padding: "16px", background: "#f0fdf4", borderRadius: "16px", border: "1px solid rgba(16,185,129,0.1)", display: "flex", alignItems: "center", gap: 10 }}>
-                <span style={{ fontSize: "14px", fontWeight: 800, color: TOKENS.colors.secondary }}>✅ شريحة محددة بدقة</span>
+                <span style={{ fontSize: "14px", fontWeight: 800, color: TOKENS.colors.secondary }}>شريحة محددة بدقة</span>
              </div>
           </div>
 
@@ -112,7 +112,7 @@ export const GrowthResults = () => {
           </div>
 
           <div style={{ fontSize: "14px", fontWeight: 700, color: TOKENS.colors.secondary, background: "rgba(16, 185, 129, 0.1)", padding: "10px 16px", borderRadius: "12px" }}>
-             📍 النتيجة الذكية: زيادة الأرباح المباشرة بدون الحاجة لزيادة عدد العملاء.
+             النتيجة الذكية: زيادة الأرباح المباشرة بدون الحاجة لزيادة عدد العملاء.
           </div>
         </CardBody>
       </BaseCard>

@@ -86,7 +86,7 @@ export const RoadMapResults = () => {
           </div>
 
           <div style={{ padding: "12px 16px", background: "rgba(16, 185, 129, 0.1)", color: TOKENS.colors.secondary, borderRadius: "12px", fontSize: "14px", fontWeight: 900 }}>
-             📍 القاعدة الذهبية: منتجات أقل = تنفيذ أسرع + جودة أعلى بكثير.
+             القاعدة الذهبية: منتجات أقل = تنفيذ أسرع + جودة أعلى بكثير.
           </div>
         </CardBody>
       </BaseCard>
@@ -181,7 +181,7 @@ export const RoadMapResults = () => {
           </div>
 
           <div style={{ padding: "16px", borderRight: `4px solid ${TOKENS.colors.danger}`, background: "rgba(225, 29, 72, 0.03)", fontSize: "14px", fontWeight: 800, color: TOKENS.colors.danger }}>
-             ❗ تنبيه هام: لا تتمسك بأي قرار اتخذته سابقاً؛ في هذه المرحلة كل شيء قابل للتعديل والتغيير والتحسين.
+             تنبيه هام: لا تتمسك بأي قرار اتخذته سابقاً؛ في هذه المرحلة كل شيء قابل للتعديل والتغيير والتحسين.
           </div>
         </CardBody>
       </BaseCard>
@@ -225,7 +225,7 @@ export const RoadMapResults = () => {
 const StrategyBox = ({ label, icon, isGood }: any) => (
   <div style={{ flex: 1, padding: "16px", background: isGood ? "#f0fdf4" : "rgba(0,0,0,0.02)", border: `1px solid ${isGood ? "rgba(16,185,129,0.1)" : TOKENS.colors.border}`, borderRadius: "16px", display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
      <div style={{ color: isGood ? TOKENS.colors.secondary : TOKENS.colors.text.muted }}>{icon}</div>
-     <div style={{ fontSize: "14px", fontWeight: 900, color: isGood ? TOKENS.colors.secondary : TOKENS.colors.text.muted }}>{isGood ? "✅" : "❌"} {label}</div>
+     <div style={{ fontSize: "14px", fontWeight: 900, color: isGood ? TOKENS.colors.secondary : TOKENS.colors.text.muted }}>{label}</div>
   </div>
 );
 

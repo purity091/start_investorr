@@ -111,7 +111,7 @@ export const LandingNavbar: React.FC = () => {
         <div className="bg-primary text-primary-foreground text-xs py-2 px-4 flex items-center justify-between shadow-2xs font-medium">
           <div className="container mx-auto flex items-center justify-center gap-2 text-center text-[11px] sm:text-xs whitespace-nowrap overflow-hidden">
             <Badge variant="secondary" className="bg-white/20 text-white hover:bg-white/30 text-[10px] font-bold px-2 py-0.5 border-none shrink-0">
-              جديد v2.5 🎉
+              جديد v2.5
             </Badge>
             <span className="truncate">تم إطلاق ميزة مشاركة الخطط ونماذج العمل آمنياً + بناء 10 دراسات جدوى بـ 0$!</span>
             <Link href="/changelog" className="font-extrabold underline underline-offset-4 hover:opacity-90 transition-opacity shrink-0 hidden md:inline">
@@ -476,7 +476,7 @@ export const LandingNavbar: React.FC = () => {
             <div className="hidden sm:flex items-center gap-1.5 shrink-0">
               <Button
                 size="sm"
-                onClick={() => openAuthModal('register')}
+                onClick={() => openAuthModal('login')}
                 className="gap-1.5 font-bold text-xs h-9 shadow-2xs bg-primary hover:bg-primary/90 cursor-pointer whitespace-nowrap shrink-0"
               >
                 ابدأ مجاناً
@@ -580,7 +580,7 @@ export const LandingNavbar: React.FC = () => {
                   <Button
                     onClick={() => {
                       setMobileMenuOpen(false);
-                      openAuthModal('register');
+                      openAuthModal('login');
                     }}
                     className="w-full font-bold text-xs h-10 gap-1.5 shadow-2xs cursor-pointer"
                   >

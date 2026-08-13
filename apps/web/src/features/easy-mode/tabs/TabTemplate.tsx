@@ -246,7 +246,7 @@ const TabForm = ({ config, onFinish }: { config: TabConfig, onFinish: (vals: any
                                 </button>
                               </TooltipTrigger>
                               <TooltipContent side="top" className="max-w-xs text-xs p-3 leading-relaxed font-medium bg-popover text-popover-foreground border border-border shadow-md">
-                                <p className="font-bold text-primary mb-1">💡 توضيح الخبراء:</p>
+                                <p className="font-bold text-primary mb-1">توضيح الخبراء:</p>
                                 <p>{getHintForQuestion(q, config.id)}</p>
                               </TooltipContent>
                             </Tooltip>

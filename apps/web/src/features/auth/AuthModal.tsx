@@ -5,7 +5,7 @@ import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Badge } from '@/components/ui/Badge';
-import { Loader2, Mail, Lock, KeyRound, AlertCircle, ArrowLeft, User as UserIcon, Sparkles, Eye, EyeOff, CheckSquare, Square, X } from 'lucide-react';
+import { Loader2, Mail, Lock, AlertCircle, ArrowLeft, User as UserIcon, Sparkles, Eye, EyeOff, CheckSquare, Square, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { supabase } from '@/lib/supabase';
 import { DEFAULT_SUBSCRIPTION_PLAN_ID, SUBSCRIPTION_PLAN_IDS, SUBSCRIPTION_PLANS, SubscriptionPlanId } from '@/lib/subscriptionPlans';
@@ -36,6 +36,7 @@ const postAuthAction = async (url: string, body: Record<string, unknown>) => {
   const payload = (await response.json().catch(() => null)) as {
     error?: unknown;
     message?: unknown;
+    sessionCreated?: boolean;
   } | null;
 
   if (!response.ok) {
@@ -72,22 +73,6 @@ export const AuthModal: React.FC<AuthModalProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
-  const [isPasskeyLoading, setIsPasskeyLoading] = useState(false);
-
-  const handlePasskeySignIn = async () => {
-    setError(null);
-    setMessage(null);
-    setIsPasskeyLoading(true);
-    try {
-      const { error: passkeyError } = await supabase.auth.signInWithPasskey();
-      if (passkeyError) throw passkeyError;
-      window.location.href = getSafeRedirectPath();
-    } catch {
-      setError('تعذر تسجيل الدخول بمفتاح المرور. جرّب جهازاً مسجلاً أو استخدم البريد الإلكتروني.');
-    } finally {
-      setIsPasskeyLoading(false);
-    }
-  };
 
   useEffect(() => {
     if (!isOpen) return;
@@ -150,7 +135,20 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         }
         window.location.href = getSafeRedirectPath();
       } else if (mode === 'register') {
-        await postAuthAction('/api/auth/register', { name, email, password, subscriptionPlan });
+        const registration = await postAuthAction('/api/auth/register', { name, email, password, subscriptionPlan });
+        if (!registration?.sessionCreated) {
+          setMessage('تم إنشاء الحساب. افتح رسالة تأكيد البريد الإلكتروني، ثم سجّل الدخول من النافذة نفسها.');
+          setMode('login');
+          setPassword('');
+          return;
+        }
+        const { error: browserAuthError } = await supabase.auth.signInWithPassword({ email, password });
+        if (browserAuthError) throw browserAuthError;
+        if (!(await supabase.auth.getSession()).data.session) {
+          throw new Error('AUTH_SESSION_NOT_CREATED');
+        }
+        if (rememberMe) localStorage.setItem('khotta_remember_me', 'true');
+        window.location.href = getSafeRedirectPath();
         setMessage('تم إنشاء الحساب بنجاح! إذا كانت المصادقة تتطلب تفعيلاً، راجع بريدك الإلكتروني.');
       } else if (mode === 'forgot_password') {
         await postAuthAction('/api/auth/forgot-password', { email });
@@ -275,9 +273,9 @@ export const AuthModal: React.FC<AuthModalProps> = ({
               </div>
 
               <h2 className="text-2xl font-black text-foreground">
-                {mode === 'login' && 'مرحباً بعودتك 👋'}
-                {mode === 'register' && 'ابدأ رحلتك الآن 🚀'}
-                {mode === 'forgot_password' && 'استعادة كلمة المرور 🔐'}
+                {mode === 'login' && 'مرحباً بعودتك'}
+                {mode === 'register' && 'ابدأ رحلتك الآن'}
+                {mode === 'forgot_password' && 'استعادة كلمة المرور'}
               </h2>
               <p className="text-xs text-muted-foreground font-medium mt-1">
                 {mode === 'login' && 'أدخل بريدك وكلمة المرور لمتابعة مشاريعك.'}
@@ -437,25 +435,6 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                 )}
               </Button>
 
-              {mode === 'login' && (
-                <>
-                  <div className="flex items-center gap-3 text-[11px] font-bold text-muted-foreground">
-                    <span className="h-px flex-1 bg-border" />
-                    <span>أو</span>
-                    <span className="h-px flex-1 bg-border" />
-                  </div>
-                  <Button
-                    type="button"
-                    variant="outline"
-                    onClick={handlePasskeySignIn}
-                    disabled={isLoading || isPasskeyLoading}
-                    className="w-full py-5 rounded-xl font-black text-xs gap-2"
-                  >
-                    {isPasskeyLoading ? <Loader2 className="size-4 animate-spin" /> : <KeyRound className="size-4" />}
-                    تسجيل الدخول باستخدام مفتاح المرور
-                  </Button>
-                </>
-              )}
             </form>
 
           </div>

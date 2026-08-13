@@ -201,11 +201,11 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur" dir="rtl">
       <div className="flex items-center justify-between gap-3 px-3 py-2 sm:px-6 sm:py-3 lg:px-8">
-        <div className="flex min-w-0 items-center gap-2 flex-1">
-          <SidebarTrigger className="lg:hidden h-8 w-8 text-foreground hover:bg-muted [&_svg]:size-5">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-5"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <div className="flex min-w-0 items-center gap-1.5 sm:gap-2 flex-1">
+          <SidebarTrigger className="lg:hidden h-8 w-8 text-foreground hover:bg-muted [&_svg]:size-4.5 sm:[&_svg]:size-5">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-4.5 sm:size-5"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
           </SidebarTrigger>
-          <h1 className="truncate text-sm font-semibold text-foreground sm:text-base">{title}</h1>
+          <h1 className="truncate text-xs sm:text-sm font-semibold text-foreground sm:text-base">{title}</h1>
           {syncStatus === 'saving' && (
             <span className="hidden sm:flex items-center gap-1.5 text-xs text-muted-foreground">
               <Loader2 className="size-3 animate-spin" />
@@ -253,16 +253,16 @@ export const Header: React.FC<HeaderProps> = ({
           )}
         </div>
 
-        <div className="flex items-center justify-end gap-2 shrink-0">
+        <div className="flex items-center justify-end gap-1.5 sm:gap-2 shrink-0">
           <Button
             type="button"
             variant="outline"
             size="sm"
             onClick={() => setIsFeedbackOpen(!isFeedbackOpen)}
-            className="h-9 gap-1.5 rounded-lg border-border text-foreground hover:bg-muted font-medium text-xs"
+            className="h-8 sm:h-9 px-2 sm:px-3 gap-1.5 rounded-lg border-border text-foreground hover:bg-muted font-medium text-xs"
             title="أرسل اقتراحك لتطوير المنصة"
           >
-            <MessageSquarePlus className="size-4 text-muted-foreground" />
+            <MessageSquarePlus className="size-3.5 sm:size-4 text-muted-foreground" />
             <span className="hidden sm:inline">اقتراح للمنصة</span>
           </Button>
 
@@ -271,12 +271,12 @@ export const Header: React.FC<HeaderProps> = ({
             type="button"
             variant="outline"
             size="icon-sm"
-            className="h-9 w-9 rounded-lg"
+            className="h-8 w-8 sm:h-9 sm:w-9 rounded-lg"
             onClick={startTour}
             aria-label="بدء الجولة التعريفية"
             title="بدء الجولة التعريفية"
           >
-            <Compass className="size-4" />
+            <Compass className="size-3.5 sm:size-4" />
           </Button>
 
           <DropdownMenu dir="rtl">
@@ -285,12 +285,12 @@ export const Header: React.FC<HeaderProps> = ({
                 id="tour-notifications"
                 variant="ghost"
                 size="icon-sm"
-                className="relative rounded-lg border border-transparent hover:border-border hover:bg-muted"
+                className="relative h-8 w-8 sm:h-9 sm:w-9 rounded-lg border border-transparent hover:border-border hover:bg-muted"
                 aria-label="التنبيهات"
               >
-                <Bell className="size-4" />
+                <Bell className="size-3.5 sm:size-4" />
                 {unreadHeaderCount > 0 ? (
-                  <span className="absolute right-1.5 top-1.5 h-2 w-2 rounded-full bg-red-500" />
+                  <span className="absolute right-1 top-1 sm:right-1.5 sm:top-1.5 h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-red-500" />
                 ) : null}
               </Button>
             </DropdownMenuTrigger>
@@ -368,15 +368,12 @@ export const Header: React.FC<HeaderProps> = ({
                 <Button
                   id="tour-profile-menu"
                   variant="ghost"
-                  className="h-10 gap-2 rounded-xl border border-transparent px-2 hover:border-border hover:bg-muted"
+                  size="icon-sm"
+                  className="relative rounded-full border border-transparent hover:border-border hover:bg-muted p-0 h-8 w-8 sm:h-9 sm:w-9 flex items-center justify-center shrink-0"
                 >
-                  <div className="hidden min-w-0 text-right sm:block">
-                    <p className="truncate text-xs font-semibold text-foreground">{user.name}</p>
-                    <p className="truncate text-[11px] text-muted-foreground">{user.email}</p>
-                  </div>
-                  <Avatar className="h-8 w-8">
+                  <Avatar className="h-7 w-7 sm:h-8 sm:w-8">
                     <AvatarImage src={user.avatar} alt={user.name} />
-                    <AvatarFallback>{user.name.slice(0, 1)}</AvatarFallback>
+                    <AvatarFallback className="text-[11px] sm:text-xs font-bold">{user.name.slice(0, 1)}</AvatarFallback>
                   </Avatar>
                 </Button>
               </DropdownMenuTrigger>

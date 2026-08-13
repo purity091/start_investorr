@@ -14,7 +14,7 @@ const CHECKLIST_DATA = {
   setup: {
     id: "setup",
     label: "التجهيز والترخيص",
-    icon: "🏗️",
+    icon: "Building2",
     color: "#3b82f6",
     items: [
       { id: "s1", label: "التراخيص القانونية والسجل التجاري", category: "قانوني", days: 10 },
@@ -25,7 +25,7 @@ const CHECKLIST_DATA = {
   marketing: {
     id: "marketing",
     label: "التسويق والهوية",
-    icon: "📣",
+    icon: "Megaphone",
     color: "#8b5cf6",
     items: [
       { id: "m1", label: "هوية بصرية متكاملة (Logo & Style)", category: "براند", days: 7 },
@@ -35,7 +35,7 @@ const CHECKLIST_DATA = {
   launch: {
     id: "launch",
     label: "الانطلاق والنمو",
-    icon: "🚀",
+    icon: "Rocket",
     color: "#10b981",
     items: [
       { id: "l1", label: "حفل انطلاق تجريبي (Soft Launch)", category: "تشغيل", days: 3 },

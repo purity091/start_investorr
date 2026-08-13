@@ -4,8 +4,6 @@ import {
   CheckCircle2,
   Globe2,
   LockKeyhole,
-  KeyRound,
-  Trash2,
   Save,
   ShieldCheck,
   Sparkles,
@@ -36,7 +34,6 @@ import { supabase } from '@/lib/supabase';
 interface SettingsProps {
   user: UserType;
 }
-
 type SettingsTab = 'identity' | 'security' | 'preferences';
 
 const getErrorMessage = (error: unknown, fallback: string) =>
@@ -100,68 +97,6 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isUpdatingPassword, setIsUpdatingPassword] = useState(false);
   const [passwordMsg, setPasswordMsg] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
-  const [isRegisteringPasskey, setIsRegisteringPasskey] = useState(false);
-  const [passkeyMsg, setPasskeyMsg] = useState<string | null>(null);
-  const [passkeys, setPasskeys] = useState<Array<{ id: string; friendly_name?: string; created_at: string; last_used_at?: string }>>([]);
-
-  const handleRegisterPasskey = async () => {
-    setIsRegisteringPasskey(true);
-    setPasskeyMsg(null);
-    try {
-      const { data: sessionData } = await supabase.auth.getSession();
-      if (!sessionData.session?.user) {
-        throw new Error('PASSKEY_AUTH_SESSION_MISSING');
-      }
-      const { error } = await supabase.auth.registerPasskey();
-      if (error) throw error;
-      await loadPasskeys();
-      setPasskeyMsg('تمت إضافة مفتاح المرور لهذا الجهاز بنجاح.');
-    } catch (error: unknown) {
-      const passkeyError = error as {
-        message?: unknown;
-        name?: unknown;
-        status?: unknown;
-        code?: unknown;
-      };
-
-      console.error('Passkey registration failed:', {
-        message: typeof passkeyError.message === 'string' ? passkeyError.message : 'Unknown error',
-        name: typeof passkeyError.name === 'string' ? passkeyError.name : undefined,
-        status: typeof passkeyError.status === 'number' ? passkeyError.status : undefined,
-        code: typeof passkeyError.code === 'string' ? passkeyError.code : undefined,
-      });
-      if (error instanceof Error && error.message === 'PASSKEY_AUTH_SESSION_MISSING') {
-        setPasskeyMsg('انتهت جلسة الدخول داخل المتصفح. سجّل الخروج ثم ادخل بالبريد وكلمة المرور مرة أخرى.');
-      } else if ((passkeyError.message ?? '') === 'Auth session missing!') {
-        setPasskeyMsg('جلسة Supabase غير متاحة. أعد تسجيل الدخول من هذه الصفحة ثم جرّب إضافة المفتاح.');
-      } else {
-        setPasskeyMsg('تعذر إضافة مفتاح المرور. تأكد من دعم المتصفح أو أعد المحاولة.');
-      }
-    } finally {
-      setIsRegisteringPasskey(false);
-    }
-  };
-
-  const loadPasskeys = async () => {
-    const { data, error } = await supabase.auth.passkey.list();
-    if (!error && data) setPasskeys(data);
-  };
-
-  const handleDeletePasskey = async (passkeyId: string) => {
-    if (!window.confirm('هل تريد حذف مفتاح المرور من هذا الحساب؟')) return;
-    const { error } = await supabase.auth.passkey.delete({ passkeyId });
-    if (error) {
-      setPasskeyMsg('تعذر حذف مفتاح المرور. حاول مرة أخرى.');
-      return;
-    }
-    setPasskeys((current) => current.filter((passkey) => passkey.id !== passkeyId));
-    setPasskeyMsg('تم حذف مفتاح المرور بنجاح.');
-  };
-
-  React.useEffect(() => {
-    if (activeTab === 'security' && authUser) void loadPasskeys();
-  }, [activeTab, authUser]);
-
   const handleSave = async () => {
     setSaved(false);
     setErrorMessage(null);
@@ -379,41 +314,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
                 <CardDescription className="text-xs">تغيير كلمة المرور وتفعيل خيارات الحماية الإضافية.</CardDescription>
               </CardHeader>
               <CardContent className="p-4 sm:p-6 space-y-4">
-                <div className="space-y-3 rounded-lg border border-primary/20 bg-primary/5 p-4">
-                  <div className="flex items-start gap-3 text-right">
-                    <KeyRound className="mt-0.5 size-5 shrink-0 text-primary" />
-                    <div>
-                      <h3 className="text-sm font-bold text-foreground">تسجيل الدخول بمفتاح المرور</h3>
-                      <p className="mt-1 text-xs leading-relaxed text-muted-foreground">استخدم بصمة الجهاز أو Face ID أو رمز قفل الجهاز دون حفظ كلمة مرور.</p>
-                    </div>
-                  </div>
-                  {passkeyMsg && <p className="text-xs font-bold text-primary">{passkeyMsg}</p>}
-                  <Button type="button" size="sm" variant="outline" onClick={handleRegisterPasskey} disabled={isRegisteringPasskey} className="gap-2 text-xs font-bold">
-                    {isRegisteringPasskey ? <Loader2 className="size-3.5 animate-spin" /> : <KeyRound className="size-3.5" />}
-                    إضافة مفتاح لهذا الجهاز
-                  </Button>
-                  {passkeys.length > 0 && (
-                    <div className="space-y-2 border-t border-primary/15 pt-3">
-                      <p className="text-[11px] font-bold text-muted-foreground">المفاتيح المسجلة</p>
-                      {passkeys.map((passkey) => (
-                        <div key={passkey.id} className="flex items-center justify-between gap-3 rounded-md border border-border/60 bg-background p-2.5">
-                          <div className="flex items-center gap-2 text-right">
-                            <KeyRound className="size-4 shrink-0 text-primary" />
-                            <div>
-                              <p className="text-xs font-bold text-foreground">{passkey.friendly_name || 'مفتاح مرور'}</p>
-                              <p className="text-[10px] text-muted-foreground">تمت الإضافة في {new Date(passkey.created_at).toLocaleDateString('en-GB')}</p>
-                            </div>
-                          </div>
-                          <Button type="button" variant="ghost" size="icon" onClick={() => handleDeletePasskey(passkey.id)} aria-label="حذف مفتاح المرور" title="حذف مفتاح المرور">
-                            <Trash2 className="size-3.5 text-destructive" />
-                          </Button>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                <div className="space-y-3 rounded-lg border border-border/50 bg-muted/20 p-4">
+<div className="space-y-3 rounded-lg border border-border/50 bg-muted/20 p-4">
                   <div className="flex items-center gap-2 text-right">
                     <LockKeyhole className="size-4 text-primary" />
                     <h3 className="text-xs font-bold text-foreground">تحديث كلمة المرور</h3>
@@ -626,3 +527,4 @@ function ToggleRow({ title, description, checked = false }: { title: string; des
     </div>
   );
 }
+

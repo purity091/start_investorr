@@ -146,23 +146,21 @@ const QUICK_ACCESS: NavItemConfig[] = [
 ];
 
 const PROJECT_BUILD: NavItemConfig[] = [
-  { tab: 'new-plan-family', label: 'النموذج السهل', icon: Heart, id: 'tour-new-plan', badge: 2, iconColor: 'text-rose-500', tooltipText: 'بناء خطة عمل سريعة ومبسطة للمشاريع الناشئة والعائلية' },
+  { tab: 'new-plan-family', label: 'النموذج السهل', icon: Heart, id: 'tour-new-plan', iconColor: 'text-rose-500', tooltipText: 'بناء خطة عمل سريعة ومبسطة للمشاريع الناشئة والعائلية' },
   {
     tab: 'new-plan-pro',
     label: 'النموذج الاحترافي',
     icon: Zap,
-    badge: 2,
     iconColor: 'text-amber-500',
     tooltipText: 'دراسة جدوى شمولية ودقيقة مع تحليلات استراتيجية ومالية متقدمة',
     active: (tab) => tab === 'new-plan-pro' || tab === 'strategic-dashboard',
   },
-  { tab: 'new-plan-mit24', label: 'MIT 24 Steps', icon: Rocket, badge: 1, iconColor: 'text-purple-500', tooltipText: 'تطبيق منهجية معهد MIT الـ 24 خطوة لبناء المشاريع سريعة النمو' },
+  { tab: 'new-plan-mit24', label: 'MIT 24 Steps', icon: Rocket, iconColor: 'text-purple-500', tooltipText: 'تطبيق منهجية معهد MIT الـ 24 خطوة لبناء المشاريع سريعة النمو' },
   {
     tab: 'new-plan-bmc',
     label: 'بناء نموذج العمل BMC',
     icon: LayoutGrid,
     id: 'tour-bmc',
-    badge: 1,
     iconColor: 'text-blue-500',
     tooltipText: 'استوديو بناء نموذج العمل التجاري تفاعلياً وتحديد العناصر التسعة',
     active: (tab) => tab === 'new-plan-bmc' || tab === 'bmc',
@@ -256,6 +254,7 @@ type ProjectBuildCounts = {
 };
 
 type ProjectCountRow = {
+  id: string;
   feasibilityModelType?: string | null;
   feasibilityModels?: Record<string, unknown> | null;
   canvas_data?: {
@@ -613,7 +612,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
       try {
         const { data, error } = await supabase
           .from('business_canvas')
-          .select('canvas_data->>feasibilityModelType, canvas_data->feasibilityModels')
+          .select('id, canvas_data->>feasibilityModelType, canvas_data->feasibilityModels')
           .eq('user_id', authUser.id)
           .is('deleted_at', null);
 
@@ -621,6 +620,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
 
         const nextCounts = { ...EMPTY_PROJECT_BUILD_COUNTS };
         (data as ProjectCountRow[] | null)?.forEach((row) => {
+          // The section pages add fixed example cards for demonstration only.
+          // Never include persisted example rows in the user's project counts.
+          if (row.id.startsWith('example')) return;
           const countKey = getProjectBuildCountKey(getProjectBuildModelType(row));
           if (countKey) {
             nextCounts[countKey] += 1;

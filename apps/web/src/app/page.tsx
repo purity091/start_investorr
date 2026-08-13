@@ -505,283 +505,163 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             {/* Model 1: Business Model Canvas (BMC) */}
-            <Card className="border border-border/80 shadow-2xs hover:shadow-md transition-all bg-card relative overflow-hidden text-right group flex flex-col justify-between">
-              <div className="h-1.5 bg-blue-600 w-full"></div>
+            <Card className="border-0 shadow-2xs hover:shadow-md transition-all bg-card rounded-3xl p-6 relative overflow-hidden text-right group flex flex-col justify-between">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 rounded-bl-full pointer-events-none"></div>
 
-              <CardHeader className="p-6 pb-4 space-y-3">
+              <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <Badge variant="secondary" className="bg-blue-50 text-blue-700 border-blue-200/60 text-[10px] font-bold">
-                    النموذج الأول • الأكثر انتشاراً
-                  </Badge>
-                  <div className="p-2.5 rounded-xl bg-blue-500/10 text-blue-600 shadow-2xs">
+                  <span className="px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 text-[10px] font-extrabold border-0">
+                    النموذج 01 • الأكثر انتشاراً
+                  </span>
+                  <div className="p-3 rounded-2xl bg-blue-500/10 text-blue-600 shadow-2xs">
                     <Layers className="size-5" />
                   </div>
                 </div>
 
-                <div className="space-y-1">
-                  <CardTitle className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
+                <div className="space-y-1.5">
+                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
                     1. مخطط نموذج العمل (BMC)
-                  </CardTitle>
-                  <CardDescription className="text-xs text-muted-foreground font-medium leading-relaxed">
+                  </h3>
+                  <p className="text-xs text-muted-foreground font-medium leading-relaxed">
                     صياغة الأركان الـ 9 الهيكلية لمشروعك واستخراج عرض القيمة الفريدة للعملاء ومصادر الإيرادات.
-                  </CardDescription>
+                  </p>
                 </div>
-              </CardHeader>
+              </div>
 
-              <CardContent className="px-6 pb-4 space-y-3 text-xs">
-                <div className="p-3 rounded-xl bg-muted/40 border border-border/60 space-y-2">
-                  <span className="text-[11px] font-bold text-foreground block">مكونات هذا النموذج:</span>
-                  <div className="grid grid-cols-2 gap-1.5 text-[11px] text-muted-foreground font-medium">
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-blue-600 shrink-0" />
-                      <span>شرائح العملاء</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-blue-600 shrink-0" />
-                      <span>عرض القيمة</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-blue-600 shrink-0" />
-                      <span>قنوات الوصول</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-blue-600 shrink-0" />
-                      <span>هيكل التكاليف</span>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-
-              <CardFooter className="p-6 pt-0">
-                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center cursor-pointer">
+              <div className="pt-6">
+                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
                   ابدأ نموذج BMC
-                  <ArrowLeft className="size-3.5" />
+                  <ArrowLeft className="size-3.5 group-hover:translate-x-[-3px] transition-transform" />
                 </Button>
-              </CardFooter>
+              </div>
             </Card>
 
             {/* Model 2: MIT 24-Step Framework */}
-            <Card className="border border-border/80 shadow-2xs hover:shadow-md transition-all bg-card relative overflow-hidden text-right group flex flex-col justify-between">
-              <div className="h-1.5 bg-purple-600 w-full"></div>
+            <Card className="border-0 shadow-2xs hover:shadow-md transition-all bg-card rounded-3xl p-6 relative overflow-hidden text-right group flex flex-col justify-between">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-purple-500/5 rounded-bl-full pointer-events-none"></div>
 
-              <CardHeader className="p-6 pb-4 space-y-3">
+              <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <Badge variant="secondary" className="bg-purple-50 text-purple-700 border-purple-200/60 text-[10px] font-bold">
-                    النموذج الثاني • للمشاريع الابتكارية
-                  </Badge>
-                  <div className="p-2.5 rounded-xl bg-purple-500/10 text-purple-600 shadow-2xs">
+                  <span className="px-3 py-1 rounded-full bg-purple-500/10 text-purple-600 text-[10px] font-extrabold border-0">
+                    النموذج 02 • للمشاريع الابتكارية
+                  </span>
+                  <div className="p-3 rounded-2xl bg-purple-500/10 text-purple-600 shadow-2xs">
                     <GraduationCap className="size-5" />
                   </div>
                 </div>
 
-                <div className="space-y-1">
-                  <CardTitle className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
+                <div className="space-y-1.5">
+                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
                     2. منهجية MIT للريادة (24 Steps)
-                  </CardTitle>
-                  <CardDescription className="text-xs text-muted-foreground font-medium leading-relaxed">
-                    مسار متكامل مبني على منهجية معهد MIT لااختراق الأسواق وتحديد العميل الشغوف وحساب حجم السوق.
-                  </CardDescription>
+                  </h3>
+                  <p className="text-xs text-muted-foreground font-medium leading-relaxed">
+                    مسار متكامل مبني على منهجية معهد MIT لاختراق الأسواق وتحديد العميل الشغوف وحساب حجم السوق.
+                  </p>
                 </div>
-              </CardHeader>
+              </div>
 
-              <CardContent className="px-6 pb-4 space-y-3 text-xs">
-                <div className="p-3 rounded-xl bg-muted/40 border border-border/60 space-y-2">
-                  <span className="text-[11px] font-bold text-foreground block">مكونات هذا النموذج:</span>
-                  <div className="grid grid-cols-2 gap-1.5 text-[11px] text-muted-foreground font-medium">
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-purple-600 shrink-0" />
-                      <span>السوق الشاطئي (Beachhead)</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-purple-600 shrink-0" />
-                      <span>حجم السوق الكلي TAM</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-purple-600 shrink-0" />
-                      <span>شخصية العميل الشغوف</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-purple-600 shrink-0" />
-                      <span>دورة حياة المنتج</span>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-
-              <CardFooter className="p-6 pt-0">
-                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center cursor-pointer">
+              <div className="pt-6">
+                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
                   ابدأ منهجية MIT
-                  <ArrowLeft className="size-3.5" />
+                  <ArrowLeft className="size-3.5 group-hover:translate-x-[-3px] transition-transform" />
                 </Button>
-              </CardFooter>
+              </div>
             </Card>
 
             {/* Model 3: Financial & Revenue Model */}
-            <Card className="border border-border/80 shadow-2xs hover:shadow-md transition-all bg-card relative overflow-hidden text-right group flex flex-col justify-between">
-              <div className="h-1.5 bg-emerald-600 w-full"></div>
+            <Card className="border-0 shadow-2xs hover:shadow-md transition-all bg-card rounded-3xl p-6 relative overflow-hidden text-right group flex flex-col justify-between">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-bl-full pointer-events-none"></div>
 
-              <CardHeader className="p-6 pb-4 space-y-3">
+              <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <Badge variant="secondary" className="bg-emerald-50 text-emerald-700 border-emerald-200/60 text-[10px] font-bold">
-                    النموذج الثالث • الجدوى المالية
-                  </Badge>
-                  <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-600 shadow-2xs">
+                  <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 text-[10px] font-extrabold border-0">
+                    النموذج 03 • الجدوى المالية
+                  </span>
+                  <div className="p-3 rounded-2xl bg-emerald-500/10 text-emerald-600 shadow-2xs">
                     <BarChart3 className="size-5" />
                   </div>
                 </div>
 
-                <div className="space-y-1">
-                  <CardTitle className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
+                <div className="space-y-1.5">
+                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
                     3. الجدوى المالية وتوقعات النمو
-                  </CardTitle>
-                  <CardDescription className="text-xs text-muted-foreground font-medium leading-relaxed">
+                  </h3>
+                  <p className="text-xs text-muted-foreground font-medium leading-relaxed">
                     حساب الأرباح والاشتراكات المتكررة (MRR/ARR)، نقطة التعادل، ومعدل استرداد التكاليف الاستثمارية.
-                  </CardDescription>
+                  </p>
                 </div>
-              </CardHeader>
+              </div>
 
-              <CardContent className="px-6 pb-4 space-y-3 text-xs">
-                <div className="p-3 rounded-xl bg-muted/40 border border-border/60 space-y-2">
-                  <span className="text-[11px] font-bold text-foreground block">مكونات هذا النموذج:</span>
-                  <div className="grid grid-cols-2 gap-1.5 text-[11px] text-muted-foreground font-medium">
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-emerald-600 shrink-0" />
-                      <span>حساب الإيرادات MRR/ARR</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-emerald-600 shrink-0" />
-                      <span>قيمة العميل LTV & CAC</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-emerald-600 shrink-0" />
-                      <span>نقطة التعادل التقديرية</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-emerald-600 shrink-0" />
-                      <span>الميزانية التشغيلية</span>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-
-              <CardFooter className="p-6 pt-0">
-                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center cursor-pointer">
+              <div className="pt-6">
+                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
                   ابدأ النموذج المالي
-                  <ArrowLeft className="size-3.5" />
+                  <ArrowLeft className="size-3.5 group-hover:translate-x-[-3px] transition-transform" />
                 </Button>
-              </CardFooter>
+              </div>
             </Card>
 
             {/* Model 4: 8-Layer Customer Persona Matrix */}
-            <Card className="border border-border/80 shadow-2xs hover:shadow-md transition-all bg-card relative overflow-hidden text-right group flex flex-col justify-between">
-              <div className="h-1.5 bg-pink-600 w-full"></div>
+            <Card className="border-0 shadow-2xs hover:shadow-md transition-all bg-card rounded-3xl p-6 relative overflow-hidden text-right group flex flex-col justify-between">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-pink-500/5 rounded-bl-full pointer-events-none"></div>
 
-              <CardHeader className="p-6 pb-4 space-y-3">
+              <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <Badge variant="secondary" className="bg-pink-50 text-pink-700 border-pink-200/60 text-[10px] font-bold">
-                    النموذج الرابع • سلوك الجمهور
-                  </Badge>
-                  <div className="p-2.5 rounded-xl bg-pink-500/10 text-pink-600 shadow-2xs">
+                  <span className="px-3 py-1 rounded-full bg-pink-500/10 text-pink-600 text-[10px] font-extrabold border-0">
+                    النموذج 04 • سلوك الجمهور
+                  </span>
+                  <div className="p-3 rounded-2xl bg-pink-500/10 text-pink-600 shadow-2xs">
                     <Users className="size-5" />
                   </div>
                 </div>
 
-                <div className="space-y-1">
-                  <CardTitle className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
+                <div className="space-y-1.5">
+                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
                     4. مصفوفة العميل المستهدف (8-Layers)
-                  </CardTitle>
-                  <CardDescription className="text-xs text-muted-foreground font-medium leading-relaxed">
+                  </h3>
+                  <p className="text-xs text-muted-foreground font-medium leading-relaxed">
                     تفكيك طبقات شخصية العميل الـ 8 لمعرفة الآلام، الدوافع النفسية، وديناميكيات اتخاذ قرار الشراء.
-                  </CardDescription>
+                  </p>
                 </div>
-              </CardHeader>
+              </div>
 
-              <CardContent className="px-6 pb-4 space-y-3 text-xs">
-                <div className="p-3 rounded-xl bg-muted/40 border border-border/60 space-y-2">
-                  <span className="text-[11px] font-bold text-foreground block">مكونات هذا النموذج:</span>
-                  <div className="grid grid-cols-2 gap-1.5 text-[11px] text-muted-foreground font-medium">
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-pink-600 shrink-0" />
-                      <span>تحليل آلام ومخاوف العميل</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-pink-600 shrink-0" />
-                      <span>حوافز ومحركات الشراء</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-pink-600 shrink-0" />
-                      <span>سلوك التفاعل الرقمي</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-pink-600 shrink-0" />
-                      <span>تحليل البدائل المتاحة</span>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-
-              <CardFooter className="p-6 pt-0">
-                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center cursor-pointer">
+              <div className="pt-6">
+                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
                   ابدأ مصفوفة العميل
-                  <ArrowLeft className="size-3.5" />
+                  <ArrowLeft className="size-3.5 group-hover:translate-x-[-3px] transition-transform" />
                 </Button>
-              </CardFooter>
+              </div>
             </Card>
 
             {/* Model 5: 90-Day Execution Roadmap */}
-            <Card className="border border-border/80 shadow-2xs hover:shadow-md transition-all bg-card relative overflow-hidden text-right group flex flex-col justify-between md:col-span-2 lg:col-span-2">
-              <div className="h-1.5 bg-amber-600 w-full"></div>
+            <Card className="border-0 shadow-2xs hover:shadow-md transition-all bg-card rounded-3xl p-6 relative overflow-hidden text-right group flex flex-col justify-between md:col-span-2 lg:col-span-2">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-amber-500/5 rounded-bl-full pointer-events-none"></div>
 
-              <CardHeader className="p-6 pb-4 space-y-3">
+              <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <Badge variant="secondary" className="bg-amber-50 text-amber-700 border-amber-200/60 text-[10px] font-bold">
-                    النموذج الخامس • التشغيل والتنفيذ الميداني
-                  </Badge>
-                  <div className="p-2.5 rounded-xl bg-amber-500/10 text-amber-600 shadow-2xs">
+                  <span className="px-3 py-1 rounded-full bg-amber-500/10 text-amber-600 text-[10px] font-extrabold border-0">
+                    النموذج 05 • التشغيل الميداني
+                  </span>
+                  <div className="p-3 rounded-2xl bg-amber-500/10 text-amber-600 shadow-2xs">
                     <Rocket className="size-5" />
                   </div>
                 </div>
 
-                <div className="space-y-1">
-                  <CardTitle className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
+                <div className="space-y-1.5">
+                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
                     5. خريطة الإطلاق والتنفيذ (90-Day Execution Roadmap)
-                  </CardTitle>
-                  <CardDescription className="text-xs text-muted-foreground font-medium leading-relaxed">
+                  </h3>
+                  <p className="text-xs text-muted-foreground font-medium leading-relaxed">
                     تحويل نتائج دراسة الجدوى إلى خريطة مهام مرحلية موجهة لأول 90 يوماً من عمر المشروع لتسريع التحقق الميداني.
-                  </CardDescription>
+                  </p>
                 </div>
-              </CardHeader>
+              </div>
 
-              <CardContent className="px-6 pb-4 space-y-3 text-xs">
-                <div className="p-3 rounded-xl bg-muted/40 border border-border/60 space-y-2">
-                  <span className="text-[11px] font-bold text-foreground block">مكونات هذا النموذج:</span>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px] text-muted-foreground font-medium">
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-amber-600 shrink-0" />
-                      <span>مرحلة التحقق (أول 30 يوماً)</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-amber-600 shrink-0" />
-                      <span>مرحلة بناء MVP (أول 60 يوماً)</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-amber-600 shrink-0" />
-                      <span>مرحلة الإطلاق والنمو (90 يوماً)</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <CheckCircle2 className="size-3 text-amber-600 shrink-0" />
-                      <span>مؤشرات الأداء KPIs</span>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-
-              <CardFooter className="p-6 pt-0">
-                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-1.5 justify-center cursor-pointer">
+              <div className="pt-6">
+                <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
                   ابدأ خريطة التنفيذ 90 يوماً
-                  <ArrowLeft className="size-3.5" />
+                  <ArrowLeft className="size-3.5 group-hover:translate-x-[-3px] transition-transform" />
                 </Button>
-              </CardFooter>
+              </div>
             </Card>
 
           </div>

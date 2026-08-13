@@ -42,9 +42,9 @@ export const ExecutionResults = () => {
           <div style={{ padding: "20px", background: "rgba(99, 102, 241, 0.05)", borderRadius: "16px", border: `1px solid ${TOKENS.colors.primary}` }}>
              <div style={{ fontSize: "16px", fontWeight: 900, color: TOKENS.colors.primary, marginBottom: "8px" }}>الاستنتاج التنفيذي:</div>
              <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
-                <div style={{ fontSize: "14px", fontWeight: 700, color: TOKENS.colors.danger, textDecoration: "line-through" }}>❌ لا تبدأ كمطعم كامل</div>
+                <div style={{ fontSize: "14px", fontWeight: 700, color: TOKENS.colors.danger, textDecoration: "line-through" }}>لا تبدأ كمطعم كامل</div>
                 <ArrowRight size={18} />
-                <div style={{ fontSize: "15px", fontWeight: 900, color: TOKENS.colors.secondary }}>✅ ابدأ كنموذج خفيف (Lean Model)</div>
+                <div style={{ fontSize: "15px", fontWeight: 900, color: TOKENS.colors.secondary }}>ابدأ كنموذج خفيف (Lean Model)</div>
              </div>
           </div>
         </CardBody>
@@ -134,7 +134,7 @@ export const ExecutionResults = () => {
           />
           
           <div style={{ marginTop: "16px", padding: "12px 16px", background: "#f0fdf4", borderRight: `4px solid ${TOKENS.colors.secondary}`, color: TOKENS.colors.secondary, fontWeight: 900 }}>
-             📍 القاعدة: قائمة مركزة وسريعة التنفيذ = نجاح أسرع.
+             القاعدة: قائمة مركزة وسريعة التنفيذ = نجاح أسرع.
           </div>
         </CardBody>
       </BaseCard>
@@ -204,8 +204,8 @@ export const ExecutionResults = () => {
           </div>
 
           <div style={{ padding: "16px", background: "rgba(0,0,0,0.02)", borderRadius: "12px", border: `1px solid ${TOKENS.colors.border}`, display: "flex", alignItems: "flex-start", gap: 12 }}>
-             <div style={{ padding: "8px", borderRadius: "10px", background: "#fff", border: `1px solid ${TOKENS.colors.border}` }}>
-                💡
+             <div style={{ padding: "8px", borderRadius: "10px", background: "#fff", border: `1px solid ${TOKENS.colors.border}`, color: TOKENS.colors.primary }}>
+                <Zap size={16} />
              </div>
              <div>
                 <div style={{ fontSize: "14px", fontWeight: 900, marginBottom: "4px" }}>مثال تنفيذي:</div>
@@ -232,14 +232,14 @@ export const ExecutionResults = () => {
           
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", marginBottom: "24px" }}>
              <DecisionPath 
-               title="متى تتوسع؟" 
-               icon={<Rocket size={20} color={TOKENS.colors.secondary} />}
-               items={["الطلب ثابت ومستقر", "الربحية واضحة", "العمليات مستقرة"]}
+                title="متى تتوسع؟" 
+                icon={<Rocket size={20} color={TOKENS.colors.secondary} />}
+                items={["الطلب ثابت ومستقر", "الربحية واضحة", "العمليات مستقرة"]}
              />
              <DecisionPath 
-               title="متى تتوقف؟" 
-               icon={<AlertCircle size={20} color={TOKENS.colors.danger} />}
-               items={["الطلب ضعيف جداً", "التكاليف أعلى من الدخل", "عدم وجود ولاء"]}
+                title="متى تتوقف؟" 
+                icon={<AlertCircle size={20} color={TOKENS.colors.danger} />}
+                items={["الطلب ضعيف جداً", "التكاليف أعلى من الدخل", "عدم وجود ولاء"]}
              />
           </div>
 
@@ -271,8 +271,8 @@ const CoinsSmall = () => (
 const CompareCard = ({ title, risk, cost, isBad }: any) => (
   <div style={{ padding: "16px", borderRadius: "16px", background: isBad ? "#fff1f2" : "#f0fdf4", border: `1px solid ${isBad ? "rgba(225,29,72,0.1)" : "rgba(16,185,129,0.1)"}` }}>
      <div style={{ fontSize: "14px", fontWeight: 900, marginBottom: "8px", color: isBad ? TOKENS.colors.danger : TOKENS.colors.secondary }}>{title}</div>
-     <div style={{ fontSize: "12px", fontWeight: 700, opacity: 0.8 }}>⚠️ {risk}</div>
-     <div style={{ fontSize: "12px", fontWeight: 700, opacity: 0.8 }}>💰 {cost}</div>
+     <div style={{ fontSize: "12px", fontWeight: 700, opacity: 0.8 }}>{risk}</div>
+     <div style={{ fontSize: "12px", fontWeight: 700, opacity: 0.8 }}>{cost}</div>
   </div>
 );
 

@@ -584,9 +584,9 @@ export default function LeanStartupWizard() {
                       <p className="text-xs text-muted-foreground">{h.text}</p>
                     </div>
                     <div className="flex gap-2">
-                      <Button variant={h.decision === 'continue' ? 'default' : 'outline'} size="sm" className={h.decision === 'continue' ? 'bg-emerald-600 hover:bg-emerald-700 text-white' : 'text-emerald-600 border-emerald-200'} onClick={() => updateHypothesis(h.id, { decision: 'continue' })}>استمر 🟢</Button>
-                      <Button variant={h.decision === 'tweak' ? 'default' : 'outline'} size="sm" className={h.decision === 'tweak' ? 'bg-amber-600 hover:bg-amber-700 text-white' : 'text-amber-600 border-amber-200'} onClick={() => updateHypothesis(h.id, { decision: 'tweak' })}>عدّل 🟡</Button>
-                      <Button variant={h.decision === 'pivot' ? 'default' : 'outline'} size="sm" className={h.decision === 'pivot' ? 'bg-red-600 hover:bg-red-700 text-white' : 'text-red-600 border-red-200'} onClick={() => updateHypothesis(h.id, { decision: 'pivot' })}>غيّر الاتجاه 🔴</Button>
+                      <Button variant={h.decision === 'continue' ? 'default' : 'outline'} size="sm" className={h.decision === 'continue' ? 'bg-emerald-600 hover:bg-emerald-700 text-white' : 'text-emerald-600 border-emerald-200'} onClick={() => updateHypothesis(h.id, { decision: 'continue' })}>استمر</Button>
+                      <Button variant={h.decision === 'tweak' ? 'default' : 'outline'} size="sm" className={h.decision === 'tweak' ? 'bg-amber-600 hover:bg-amber-700 text-white' : 'text-amber-600 border-amber-200'} onClick={() => updateHypothesis(h.id, { decision: 'tweak' })}>عدّل</Button>
+                      <Button variant={h.decision === 'pivot' ? 'default' : 'outline'} size="sm" className={h.decision === 'pivot' ? 'bg-red-600 hover:bg-red-700 text-white' : 'text-red-600 border-red-200'} onClick={() => updateHypothesis(h.id, { decision: 'pivot' })}>غيّر الاتجاه</Button>
                     </div>
                   </CardContent>
                 </Card>
@@ -608,8 +608,8 @@ export default function LeanStartupWizard() {
                     {getOverallReadiness() > 70
                       ? 'النتائج ممتازة والأدلة تدعم الاستمرار. نوصي بالانتقال إلى بناء نموذج العمل التجاري (Business Model Canvas) أو النموذج الاحترافي لحساب التكاليف.'
                       : getOverallReadiness() > 40
-                        ? 'النتائج متفاوتة. يجب إعادة صياغة الفرضيات التي فشلت (🟡 عدّل) وتصميم تجارب جديدة للتحقق منها قبل بناء المنتج.'
-                        : 'الفرضيات الأساسية لم تثبت صحتها. نوصي بتغيير الشريحة المستهدفة أو تعديل فكرة المشروع جذرياً (🔴 Pivot) بدلاً من حرق رأس المال.'}
+                        ? 'النتائج متفاوتة. يجب إعادة صياغة الفرضيات التي فشلت وتصميم تجارب جديدة للتحقق منها قبل بناء المنتج.'
+                        : 'الفرضيات الأساسية لم تثبت صحتها. نوصي بتغيير الشريحة المستهدفة أو تعديل فكرة المشروع جذرياً (Pivot) بدلاً من حرق رأس المال.'}
                   </p>
 
                   <div className="pt-6 flex flex-col sm:flex-row justify-center gap-4">

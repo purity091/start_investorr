@@ -13,7 +13,8 @@ import {
   Search,
   CheckCircle2,
   AlertCircle,
-  ArrowRight
+  ArrowRight,
+  Sparkles
 } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 
@@ -80,8 +81,9 @@ export const StrategicPulseResults = () => {
             title="تحليل الفجوة" 
             text="هذه الفجوة تعني أنك تحتاج إلى زيادة الطلبات اليومية بنسبة ~50% أو رفع متوسط الطلب (AOV) أو الجمع بين الاثنين." 
           />
-          <div className="mt-4 p-3 rounded-xl bg-muted/50 text-xs sm:text-sm font-semibold text-foreground">
-             💡 <span className="text-primary mr-1">بصيرة:</span> المشكلة ليست في الفكرة… بل في المعادلة التشغيلية الحالية.
+          <div className="mt-4 p-3 rounded-xl bg-muted/50 text-xs sm:text-sm font-semibold text-foreground flex items-center gap-2">
+             <Sparkles size={16} className="text-primary shrink-0" />
+             <div><span className="text-primary mr-1">بصيرة:</span> المشكلة ليست في الفكرة… بل في المعادلة التشغيلية الحالية.</div>
           </div>
         </CardBody>
       </BaseCard>
@@ -116,7 +118,7 @@ export const StrategicPulseResults = () => {
             text="هذا المستوى يعني أن المشروع قابل للانطلاق، لكنه ليس جاهزاً للتوسع؛ أي خطأ قد يعني استنزافاً سريعاً للميزانية." 
           />
           <div className="mt-4 font-bold text-xs text-emerald-600 dark:text-emerald-400">
-             📍 التوجيه الاستراتيجي: ابدأ بنسخة خفيفة (Lean Version) وليس بالمشروع الكامل حالياً.
+             التوجيه الاستراتيجي: ابدأ بنسخة خفيفة (Lean Version) وليس بالمشروع الكامل حالياً.
           </div>
         </CardBody>
       </BaseCard>
@@ -154,7 +156,7 @@ export const StrategicPulseResults = () => {
              هذا أخطر شيء حالياً: ليس لأن الفكرة ضعيفة، بل لأن النموذج الحالي أكبر من ميزانيتك. الاستمرار بنفس الطريقة يعني الفشل قبل الإطلاق.
           </div>
           <div className="mt-3 font-bold text-xs text-emerald-700 dark:text-emerald-400 bg-emerald-500/10 px-3 py-1.5 rounded-lg w-fit">
-             👉 الحل الفوري: تقليل CAPEX (تكاليف التأسيس) فوراً.
+             الحل الفوري: تقليل CAPEX (تكاليف التأسيس) فوراً.
           </div>
         </CardBody>
       </BaseCard>

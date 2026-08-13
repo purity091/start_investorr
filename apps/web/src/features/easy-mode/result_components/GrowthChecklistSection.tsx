@@ -1,5 +1,5 @@
 import React from "react";
-import { TrendingUp, CheckCircle2, PartyPopper } from "lucide-react";
+import { TrendingUp, CheckCircle2, PartyPopper, Building2, Megaphone, Rocket } from "lucide-react";
 import { BaseCard, CardHeader, CardBody, TOKENS } from "./CardDesignSystem";
 
 interface GrowthChecklistSectionProps {
@@ -11,6 +11,19 @@ interface GrowthChecklistSectionProps {
   handleActivate: () => void;
   checklistData: any;
 }
+
+const getStepIcon = (id: string) => {
+  switch (id) {
+    case "setup":
+      return <Building2 size={16} />;
+    case "marketing":
+      return <Megaphone size={16} />;
+    case "launch":
+      return <Rocket size={16} />;
+    default:
+      return null;
+  }
+};
 
 export const GrowthChecklistSection = ({ 
   checklistStep, 
@@ -62,7 +75,7 @@ export const GrowthChecklistSection = ({
                     alignItems: "center", 
                     gap: 10
                   }}>
-                  <span style={{ transform: checklistStep === btn.id ? "scale(1.1)" : "scale(1)", transition: "0.3s" }}>{btn.icon}</span>
+                  <span style={{ transform: checklistStep === btn.id ? "scale(1.1)" : "scale(1)", transition: "0.3s" }}>{getStepIcon(btn.id)}</span>
                   {btn.label}
                  </button>
                ))}
