@@ -16,7 +16,7 @@ export const DashboardFooter: React.FC<DashboardFooterProps> = ({ setActiveTab }
   };
 
   return (
-    <footer className="relative block w-full mt-10 border-t border-border/60 bg-card py-4 px-4 sm:px-6 text-xs text-muted-foreground">
+    <footer className="relative block w-full mt-10 border-t border-border/60 bg-card py-4 px-4 sm:px-6 lg:px-8 text-xs text-muted-foreground">
       <div className="flex flex-col sm:flex-row items-center justify-between gap-3 font-medium">
         <div className="flex items-center gap-2 shrink-0">
           <span className="font-extrabold text-foreground tracking-tight">

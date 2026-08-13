@@ -5,7 +5,7 @@ import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Badge } from '@/components/ui/Badge';
-import { Loader2, Mail, Lock, AlertCircle, ArrowLeft, User as UserIcon, Sparkles, Eye, EyeOff, CheckSquare, Square, X } from 'lucide-react';
+import { Loader2, Mail, Lock, AlertCircle, ArrowLeft, User as UserIcon, Zap, Eye, EyeOff, CheckSquare, Square, X, CheckCircle2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { supabase } from '@/lib/supabase';
 import { DEFAULT_SUBSCRIPTION_PLAN_ID, SUBSCRIPTION_PLAN_IDS, SUBSCRIPTION_PLANS, SubscriptionPlanId } from '@/lib/subscriptionPlans';
@@ -178,7 +178,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent showCloseButton={false} className="sm:max-w-[850px] p-0 overflow-hidden border-border/80 bg-card rounded-3xl shadow-2xl backdrop-blur-xl">
+      <DialogContent showCloseButton={false} className="sm:max-w-[850px] max-h-[90vh] overflow-y-auto p-0 border-border/80 bg-card rounded-3xl shadow-2xl backdrop-blur-xl">
         <DialogTitle className="sr-only">نافذة تسجيل الدخول وإنشاء الحساب</DialogTitle>
 
         {/* Custom Close Button */}
@@ -211,7 +211,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
             {/* Content */}
             <div className="relative z-10 my-auto py-6 space-y-4">
               <Badge variant="outline" className="text-primary-foreground border-primary/40 bg-primary/15 px-3 py-1 text-xs gap-1.5 font-bold w-fit">
-                <Sparkles className="size-3.5 text-primary" />
+                <Zap className="size-3.5 text-primary" />
                 استوديو بناء المشاريع
               </Badge>
 
@@ -318,12 +318,19 @@ export const AuthModal: React.FC<AuthModalProps> = ({
               )}
 
               {mode === 'register' && (
-                <div className="space-y-1.5">
-                  <label className="text-xs font-extrabold text-foreground">اختر باقة حدود المشاريع</label>
-                  <div className="grid gap-2 sm:grid-cols-3">
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <label className="text-xs font-extrabold text-foreground">اختر الباقة المناسبة لك</label>
+                    <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+                      مجاناً 0$ الآن
+                    </span>
+                  </div>
+
+                  <div className="grid gap-2 grid-cols-1 sm:grid-cols-3">
                     {SUBSCRIPTION_PLAN_IDS.map((planId) => {
                       const plan = SUBSCRIPTION_PLANS[planId];
                       const selected = subscriptionPlan === planId;
+                      const isPopular = planId === 'founder';
 
                       return (
                         <button
@@ -331,14 +338,35 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                           type="button"
                           onClick={() => setSubscriptionPlan(plan.id)}
                           className={cn(
-                            'rounded-xl border px-2.5 py-2 text-right transition-colors',
+                            'relative rounded-2xl border-2 p-3 text-right transition-all flex flex-col justify-between cursor-pointer group',
                             selected
-                              ? 'border-primary bg-primary/10 text-foreground'
-                              : 'border-border bg-background text-muted-foreground hover:border-primary/40'
+                              ? 'border-primary bg-primary/5 text-foreground shadow-xs'
+                              : 'border-border/60 bg-background text-muted-foreground hover:border-primary/40 hover:bg-muted/30'
                           )}
                         >
-                          <span className="block text-xs font-black">{plan.name}</span>
-                          <span className="mt-0.5 block text-[11px] font-semibold">{plan.projectLimitLabel}</span>
+                          {isPopular && (
+                            <span className="absolute -top-2.5 left-3 bg-primary text-primary-foreground text-[9px] font-bold px-2 py-0.5 rounded-full shadow-2xs">
+                              الأكثر شعبية
+                            </span>
+                          )}
+
+                          <div className="flex items-center justify-between gap-1.5 mb-1">
+                            <span className="text-xs font-black text-foreground">{plan.name}</span>
+                            {selected ? (
+                              <CheckCircle2 className="size-4 text-primary shrink-0" />
+                            ) : (
+                              <div className="size-4 rounded-full border border-muted-foreground/30 shrink-0" />
+                            )}
+                          </div>
+
+                          <div className="space-y-1">
+                            <div className="text-[11px] font-bold text-foreground">
+                              {plan.projectLimitLabel}
+                            </div>
+                            <p className="text-[10px] text-muted-foreground leading-relaxed">
+                              {plan.description}
+                            </p>
+                          </div>
                         </button>
                       );
                     })}

@@ -3,7 +3,7 @@ import { supabase } from '@/lib/supabase';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Badge } from '@/components/ui/Badge';
-import { Loader2, Mail, Lock, AlertCircle, ArrowLeft, User as UserIcon, Sparkles, Eye, EyeOff, CheckSquare, Square } from 'lucide-react';
+import { Loader2, Mail, Lock, AlertCircle, ArrowLeft, User as UserIcon, Zap, Eye, EyeOff, CheckSquare, Square, CheckCircle2 } from 'lucide-react';
 import { DEFAULT_SUBSCRIPTION_PLAN_ID, SUBSCRIPTION_PLAN_IDS, SUBSCRIPTION_PLANS, SubscriptionPlanId } from '@/lib/subscriptionPlans';
 
 type AuthMode = 'login' | 'register' | 'forgot_password';
@@ -178,7 +178,7 @@ export const AuthScreen: React.FC = () => {
 
         <div className="relative z-10 max-w-lg mt-20">
           <Badge variant="outline" className="text-blue-300 border-blue-500/30 bg-blue-500/10 mb-6 px-4 py-1.5 backdrop-blur-md w-fit">
-            <Sparkles className="size-4 ml-2 inline-block text-blue-300" />
+            <Zap className="size-4 ml-2 inline-block text-blue-300" />
             المنصة الأولى لبناء المشاريع
           </Badge>
           <h1 className="text-4xl md:text-5xl font-black text-white leading-[1.3] mb-6">
@@ -253,25 +253,53 @@ export const AuthScreen: React.FC = () => {
 
             {mode === 'register' && (
               <div className="space-y-2 text-right">
-                <label className="text-sm font-bold text-slate-700">اختر باقة حدود المشاريع</label>
-                <div className="grid gap-2 sm:grid-cols-3">
+                <div className="flex items-center justify-between">
+                  <label className="text-xs font-extrabold text-slate-700">اختر الباقة المناسبة لك</label>
+                  <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                    مجاناً 0$ الآن
+                  </span>
+                </div>
+
+                <div className="grid gap-2 grid-cols-1 sm:grid-cols-3">
                   {SUBSCRIPTION_PLAN_IDS.map((planId) => {
                     const plan = SUBSCRIPTION_PLANS[planId];
                     const selected = subscriptionPlan === planId;
+                    const isPopular = planId === 'founder';
 
                     return (
                       <button
                         key={plan.id}
                         type="button"
                         onClick={() => setSubscriptionPlan(plan.id)}
-                        className={`rounded-xl border px-3 py-3 text-right transition-colors ${
+                        className={`relative rounded-2xl border-2 p-3 text-right transition-all flex flex-col justify-between cursor-pointer ${
                           selected
-                            ? 'border-blue-600 bg-blue-50 text-blue-900'
-                            : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300'
+                            ? 'border-blue-600 bg-blue-50/60 text-slate-900 shadow-sm'
+                            : 'border-slate-200 bg-white text-slate-600 hover:border-blue-300 hover:bg-slate-50'
                         }`}
                       >
-                        <span className="block text-sm font-bold">{plan.name}</span>
-                        <span className="mt-1 block text-xs font-medium text-slate-500">{plan.projectLimitLabel}</span>
+                        {isPopular && (
+                          <span className="absolute -top-2.5 left-3 bg-blue-600 text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow-2xs">
+                            الأكثر شعبية
+                          </span>
+                        )}
+
+                        <div className="flex items-center justify-between gap-1.5 mb-1">
+                          <span className="text-xs font-black text-slate-900">{plan.name}</span>
+                          {selected ? (
+                            <CheckCircle2 className="size-4 text-blue-600 shrink-0" />
+                          ) : (
+                            <div className="size-4 rounded-full border border-slate-300 shrink-0" />
+                          )}
+                        </div>
+
+                        <div className="space-y-1">
+                          <div className="text-[11px] font-bold text-slate-800">
+                            {plan.projectLimitLabel}
+                          </div>
+                          <p className="text-[10px] text-slate-500 leading-relaxed">
+                            {plan.description}
+                          </p>
+                        </div>
                       </button>
                     );
                   })}

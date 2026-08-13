@@ -261,7 +261,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
   };
 
   return (
-    <div className="w-full space-y-6 text-right font-['IBM_Plex_Sans_Arabic'] text-foreground" dir="rtl">
+    <div className="w-full space-y-6 pb-24 text-right font-['IBM_Plex_Sans_Arabic'] text-foreground" dir="rtl">
       {/* Header & Sub-Nav Bar (Clean Shadcn Style) */}
       <div className="space-y-3">
         {/* Breadcrumb path */}

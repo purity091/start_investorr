@@ -6,7 +6,7 @@ import {
   LockKeyhole,
   Save,
   ShieldCheck,
-  Sparkles,
+  Zap,
   User,
   AlertCircle,
   Loader2,
@@ -189,7 +189,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
   const displayEmail = email || user.email;
 
   return (
-    <div className="w-full space-y-5 px-1 py-2 sm:px-2 pb-24 text-right font-['IBM_Plex_Sans_Arabic']" dir="rtl">
+    <div className="w-full space-y-5 pb-24 text-right font-['IBM_Plex_Sans_Arabic']" dir="rtl">
       {/* Top Header Shell (Full Width) */}
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-b border-border/50 pb-4">
         <div>
@@ -226,11 +226,11 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
 
       {/* Main Settings Tabs (Full Width Grid Layout) */}
       <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as SettingsTab)} dir="rtl" className="w-full space-y-4">
-        <TabsList dir="rtl" className="w-full justify-start bg-muted/50 p-1 border border-border/40 rounded-lg">
+        <TabsList dir="rtl" className="w-full justify-start overflow-x-auto scrollbar-none flex-nowrap bg-muted/50 p-1 border border-border/40 rounded-lg">
           {tabItems.map((item) => {
             const Icon = item.icon;
             return (
-              <TabsTrigger key={item.value} value={item.value} className="gap-2 font-bold text-xs px-4 py-1.5 cursor-pointer">
+              <TabsTrigger key={item.value} value={item.value} className="gap-2 font-bold text-xs px-4 py-1.5 cursor-pointer whitespace-nowrap shrink-0">
                 <Icon className="size-3.5" />
                 <span>{item.label}</span>
               </TabsTrigger>
@@ -241,7 +241,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
         {/* Tab 1: Personal Details */}
         <TabsContent value="identity" className="w-full space-y-4 mt-0">
           <Card className="w-full border-border/60 shadow-2xs">
-            <CardHeader className="text-right pb-3 border-b border-border/40">
+            <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3 border-b border-border/40 text-right">
               <CardTitle className="text-base font-bold">البيانات الشخصية والملف التعريفي</CardTitle>
               <CardDescription className="text-xs">المعلومات الأساسية لحسابك المسجلة في المنصة.</CardDescription>
             </CardHeader>
@@ -251,7 +251,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
                   <Input
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
-                    className="text-right text-xs"
+                    className="h-8.5 sm:h-9 text-right text-xs px-2.5 py-1"
                     placeholder="أدخل الاسم الكامل"
                   />
                 </Field>
@@ -262,7 +262,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
                     onChange={(e) => setEmail(e.target.value)}
                     type="email"
                     dir="ltr"
-                    className="text-right text-xs"
+                    className="h-8.5 sm:h-9 text-right text-xs px-2.5 py-1"
                     placeholder="name@example.com"
                   />
                 </Field>
@@ -271,7 +271,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
                   <Input
                     value={jobTitle}
                     onChange={(e) => setJobTitle(e.target.value)}
-                    className="text-right text-xs"
+                    className="h-8.5 sm:h-9 text-right text-xs px-2.5 py-1"
                     placeholder="مؤسس مشروع / مدير منتج"
                   />
                 </Field>
@@ -280,7 +280,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
               <div className="grid gap-4 sm:grid-cols-2">
                 <Field label="السوق المستهدف الأساسي">
                   <Select value={market} onValueChange={setMarket}>
-                    <SelectTrigger className="text-right text-xs">
+                    <SelectTrigger className="h-8.5 sm:h-9 text-right text-xs px-2.5 py-1">
                       <SelectValue placeholder="اختر السوق" />
                     </SelectTrigger>
                     <SelectContent>
@@ -296,7 +296,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
                   <Textarea
                     value={bio}
                     onChange={(e) => setBio(e.target.value)}
-                    className="min-h-20 text-right text-xs leading-relaxed"
+                    className="min-h-16 sm:min-h-20 text-right text-xs px-2.5 py-1.5 leading-relaxed"
                     placeholder="اكتب نبذة مختصرة عنك وعن مشاريعك..."
                   />
                 </Field>
@@ -309,12 +309,12 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
         <TabsContent value="security" className="w-full space-y-4 mt-0">
           <div className="grid gap-4 lg:grid-cols-12">
             <Card className="lg:col-span-8 border-border/60 shadow-2xs">
-              <CardHeader className="text-right pb-3 border-b border-border/40">
+              <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3 border-b border-border/40 text-right">
                 <CardTitle className="text-base font-bold">إعدادات الأمان وحماية الحساب</CardTitle>
                 <CardDescription className="text-xs">تغيير كلمة المرور وتفعيل خيارات الحماية الإضافية.</CardDescription>
               </CardHeader>
               <CardContent className="p-4 sm:p-6 space-y-4">
-<div className="space-y-3 rounded-lg border border-border/50 bg-muted/20 p-4">
+                <div className="space-y-3 rounded-lg border border-border/50 bg-muted/20 p-3.5 sm:p-4">
                   <div className="flex items-center gap-2 text-right">
                     <LockKeyhole className="size-4 text-primary" />
                     <h3 className="text-xs font-bold text-foreground">تحديث كلمة المرور</h3>
@@ -344,14 +344,14 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
                       placeholder="كلمة المرور الجديدة"
                       value={newPassword}
                       onChange={(e) => setNewPassword(e.target.value)}
-                      className="text-right text-xs"
+                      className="h-8.5 sm:h-9 text-right text-xs px-2.5 py-1"
                     />
                     <Input
                       type="password"
                       placeholder="تأكيد كلمة المرور الجديدة"
                       value={confirmPassword}
                       onChange={(e) => setConfirmPassword(e.target.value)}
-                      className="text-right text-xs"
+                      className="h-8.5 sm:h-9 text-right text-xs px-2.5 py-1"
                     />
                   </div>
                   <Button
@@ -359,7 +359,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
                     variant="secondary"
                     onClick={handleUpdatePassword}
                     disabled={isUpdatingPassword}
-                    className="text-xs font-bold"
+                    className="h-8 text-xs font-bold px-3"
                   >
                     {isUpdatingPassword ? (
                       <>
@@ -380,11 +380,11 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
             </Card>
 
             <Card className="lg:col-span-4 border-border/60 shadow-2xs">
-              <CardHeader className="text-right pb-3 border-b border-border/40">
+              <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3 border-b border-border/40 text-right">
                 <CardTitle className="text-base font-bold">الجلسة الحالية</CardTitle>
                 <CardDescription className="text-xs">تفاصيل الجهاز المسجّل حالياً.</CardDescription>
               </CardHeader>
-              <CardContent className="p-4 space-y-3">
+              <CardContent className="p-4 sm:p-6 space-y-3">
                 <div className="flex items-start justify-between gap-3 rounded-lg border border-border/60 bg-muted/20 p-3 text-right">
                   <div>
                     <p className="text-xs font-bold text-foreground">الجلسة النشطة</p>
@@ -404,14 +404,14 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
         <TabsContent value="preferences" className="w-full space-y-4 mt-0">
           <div className="grid gap-4 lg:grid-cols-12">
             <Card className="lg:col-span-7 border-border/60 shadow-2xs">
-              <CardHeader className="text-right pb-3 border-b border-border/40">
+              <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3 border-b border-border/40 text-right">
                 <CardTitle className="text-base font-bold">تفضيلات واجهة النظام</CardTitle>
                 <CardDescription className="text-xs">تخصيص اللغة والصفحة الافتراضية وكثافة العرض.</CardDescription>
               </CardHeader>
               <CardContent className="p-4 sm:p-6 grid gap-4 sm:grid-cols-2">
                 <Field label="لغة المنصة">
                   <Select value={language} onValueChange={setLanguage}>
-                    <SelectTrigger className="text-right text-xs"><SelectValue /></SelectTrigger>
+                    <SelectTrigger className="h-8.5 sm:h-9 text-right text-xs px-2.5 py-1"><SelectValue /></SelectTrigger>
                     <SelectContent>
                       <SelectItem value="ar">العربية (الأصلية)</SelectItem>
                       <SelectItem value="en">English</SelectItem>
@@ -421,7 +421,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
 
                 <Field label="كثافة الواجهة">
                   <Select value={density} onValueChange={setDensity}>
-                    <SelectTrigger className="text-right text-xs"><SelectValue /></SelectTrigger>
+                    <SelectTrigger className="h-8.5 sm:h-9 text-right text-xs px-2.5 py-1"><SelectValue /></SelectTrigger>
                     <SelectContent>
                       <SelectItem value="compact">مضغوط وعالي الكثافة</SelectItem>
                       <SelectItem value="comfortable">مريح</SelectItem>
@@ -431,7 +431,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
 
                 <Field label="نوع التقرير الافتراضي">
                   <Select value={defaultReport} onValueChange={setDefaultReport}>
-                    <SelectTrigger className="text-right text-xs"><SelectValue /></SelectTrigger>
+                    <SelectTrigger className="h-8.5 sm:h-9 text-right text-xs px-2.5 py-1"><SelectValue /></SelectTrigger>
                     <SelectContent>
                       <SelectItem value="interactive">تقرير تفاعلي حي</SelectItem>
                       <SelectItem value="brief">ملخص مختصر</SelectItem>
@@ -441,7 +441,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
 
                 <Field label="الصفحة الرئيسية عند الدخول">
                   <Select value={defaultPage} onValueChange={setDefaultPage}>
-                    <SelectTrigger className="text-right text-xs"><SelectValue /></SelectTrigger>
+                    <SelectTrigger className="h-8.5 sm:h-9 text-right text-xs px-2.5 py-1"><SelectValue /></SelectTrigger>
                     <SelectContent>
                       <SelectItem value="customer-dashboard">لوحة التحكم</SelectItem>
                       <SelectItem value="my-plans">مشاريعي</SelectItem>
@@ -452,11 +452,11 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
             </Card>
 
             <Card className="lg:col-span-5 border-border/60 shadow-2xs">
-              <CardHeader className="text-right pb-3 border-b border-border/40">
+              <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3 border-b border-border/40 text-right">
                 <CardTitle className="text-base font-bold">تفضيلات الإشعارات</CardTitle>
                 <CardDescription className="text-xs">تحديد التنبيهات المستلمة بالحساب.</CardDescription>
               </CardHeader>
-              <CardContent className="p-4 space-y-3">
+              <CardContent className="p-4 sm:p-6 space-y-3">
                 {NOTIFICATION_OPTIONS.map((option) => (
                   <label key={option.id} className="flex cursor-pointer items-center justify-between text-right p-2 rounded-md hover:bg-muted/30 transition-colors">
                     <div className="flex items-center gap-2">
@@ -484,7 +484,7 @@ export const Settings: React.FC<SettingsProps> = ({ user }) => {
           {saved ? (
             <CheckCircle2 className="size-4 text-emerald-600 shrink-0" />
           ) : (
-            <Sparkles className="size-4 text-primary shrink-0" />
+            <Zap className="size-4 text-primary shrink-0" />
           )}
           <div>
             <p className="text-xs font-bold text-foreground">

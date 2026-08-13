@@ -217,8 +217,8 @@ body[style*="overflow: hidden"] {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .app-page-shell-wide {
@@ -226,8 +226,8 @@ body[style*="overflow: hidden"] {
   max-width: 1720px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .surface-card {

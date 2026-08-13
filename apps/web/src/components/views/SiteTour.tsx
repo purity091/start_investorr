@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { CheckCircle2, ChevronLeft, ChevronRight, Sparkles, X } from 'lucide-react';
+import { CheckCircle2, ChevronLeft, ChevronRight, Compass, X } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 
@@ -16,7 +16,7 @@ const ALL_STEPS: TourStep[] = [
   {
     targetId: 'tour-site-tour-trigger-header',
     title: 'الجولة الشاملة',
-    content: 'من هنا يستطيع المستخدم إعادة تشغيل الجولة التعريفية في أي وقت ومراجعة مناطق المنصة الأساسية.',
+    content: 'من هنا تستطيع مراجعة وإعادة تشغيل الجولة التعريفية بالمنصة في أي وقت.',
     position: 'bottom',
   },
   {
@@ -89,9 +89,45 @@ const ALL_STEPS: TourStep[] = [
     position: 'left',
     desktopOnly: true,
   },
+  // Mobile Bottom Navbar Specific Steps:
+  {
+    targetId: 'tour-mobile-project-ideas',
+    title: 'أفكار ومسارات المشاريع',
+    content: 'شريط التنقل السريع: استكشف أفكار المشاريع، مشاريع SaaS، والقطاعات الاستثمارية بضغطة واحدة.',
+    position: 'bottom',
+    mobileOnly: true,
+  },
+  {
+    targetId: 'tour-mobile-workspace',
+    title: 'مساحة العمل التشغيلية',
+    content: 'تابع مراحل بناء وتفعيل مشروعك والمهام اليومية مباشرة عبر مساحة العمل.',
+    position: 'bottom',
+    mobileOnly: true,
+  },
+  {
+    targetId: 'tour-mobile-new-plan',
+    title: 'إنشاء مشروع جديد (+)',
+    content: 'اضغط على زر (+) في منتصف الشريط السفلي لبدء بناء دراسة جدوى جديدة عبر النماذج الـ 5 المتاحة.',
+    position: 'bottom',
+    mobileOnly: true,
+  },
+  {
+    targetId: 'tour-mobile-my-plans',
+    title: 'مشاريعي ودراسات الجدوى',
+    content: 'استعرض جميع دراسات الجدوى التي قمت بإنشائها واستكمل العمل عليها في أي وقت.',
+    position: 'bottom',
+    mobileOnly: true,
+  },
+  {
+    targetId: 'tour-mobile-problem-engine',
+    title: 'قاعدة الفرص والمشاكل',
+    content: 'تصفح الفرص والمشاكل الحقيقية بالسوق واكتشف أفكاراً جاهزة للتحويل لمشاريع ناجحة.',
+    position: 'bottom',
+    mobileOnly: true,
+  },
   {
     targetId: 'tour-notifications',
-    title: 'الإشعارات',
+    title: 'الإشعارات والتنبيهات',
     content: 'مركز يعرض آخر التحديثات والتنبيهات التي تحتاج متابعة من المستخدم.',
     position: 'bottom',
   },
@@ -100,20 +136,6 @@ const ALL_STEPS: TourStep[] = [
     title: 'الحساب وبوابة المشترك',
     content: 'من قائمة الحساب يصل المستخدم إلى ملفه الشخصي، الإعدادات، وبوابة إدارة الاشتراك.',
     position: 'bottom',
-  },
-  {
-    targetId: 'tour-mobile-bottom-nav',
-    title: 'التنقل على الجوال',
-    content: 'على الشاشات الصغيرة يظهر شريط تنقل مختصر للوصول السريع إلى أهم أقسام المنصة.',
-    position: 'center',
-    mobileOnly: true,
-  },
-  {
-    targetId: 'tour-mobile-menu',
-    title: 'القائمة المحمولة',
-    content: 'القائمة المحمولة تجمع روابط المنصة الكاملة عندما يحتاج المستخدم إلى كل الخيارات.',
-    position: 'center',
-    mobileOnly: true,
   },
 ];
 
@@ -227,7 +249,7 @@ const SiteTour: React.FC<SiteTourProps> = ({ onComplete, onSkip }) => {
           <div className="relative z-10 mb-4 flex items-center justify-between gap-3">
             <div className="flex items-center gap-3">
               <div className="flex size-9 items-center justify-center rounded-lg bg-muted text-foreground">
-                <Sparkles className="size-4" />
+                <Compass className="size-4" />
               </div>
               <div>
                 <Badge variant="outline" className="mb-1">الجولة</Badge>

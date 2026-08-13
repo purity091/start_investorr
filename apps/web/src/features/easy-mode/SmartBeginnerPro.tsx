@@ -15,7 +15,6 @@ import {
   LineChart,
   Loader2,
   ShieldAlert,
-  Sparkles,
   Share2,
   Target,
   Users,
@@ -1288,7 +1287,7 @@ export default function SmartBeginnerPro() {
 
             <div className="space-y-2">
               <h4 className="text-xs font-bold text-foreground flex items-center gap-1.5">
-                <Sparkles className="size-4 text-primary" />
+                <Layers className="size-4 text-primary" />
                 <span>أقسام الورشة الاحترافية:</span>
               </h4>
               <div className="grid gap-2 sm:grid-cols-2">

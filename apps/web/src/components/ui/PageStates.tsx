@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, CheckCircle2, FolderOpen, SearchX, Sparkles, WifiOff } from 'lucide-react';
+import { AlertTriangle, CheckCircle2, Compass, FolderOpen, SearchX, WifiOff } from 'lucide-react';
 import { Button } from './Button';
 import { Card } from './Card';
 
@@ -65,7 +65,7 @@ export const FirstUseState: React.FC<{
   onAction?: () => void;
 }> = ({ title = 'ابدأ أول مشروع لك', description, actionLabel, onAction }) => (
   <PageStateCard
-    icon={<Sparkles size={28} />}
+    icon={<Compass size={28} />}
     title={title}
     description={description}
     actionLabel={actionLabel}
@@ -139,7 +139,7 @@ export const InlineStatusBanner: React.FC<{
   <div className={`ui-status-banner rounded-[1.5rem] border px-4 py-4 text-right ${toneClasses[tone]}`}>
     <div className="flex items-start gap-3">
       <div className="mt-0.5">
-        {tone === 'success' ? <CheckCircle2 size={18} /> : tone === 'error' ? <AlertTriangle size={18} /> : <Sparkles size={18} />}
+        {tone === 'success' ? <CheckCircle2 size={18} /> : tone === 'error' ? <AlertTriangle size={18} /> : <Compass size={18} />}
       </div>
       <div className="min-w-0">
         <p className="text-sm font-black">{title}</p>

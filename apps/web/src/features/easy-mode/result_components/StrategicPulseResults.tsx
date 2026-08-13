@@ -14,7 +14,7 @@ import {
   CheckCircle2,
   AlertCircle,
   ArrowRight,
-  Sparkles
+  Lightbulb
 } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 
@@ -82,7 +82,7 @@ export const StrategicPulseResults = () => {
             text="هذه الفجوة تعني أنك تحتاج إلى زيادة الطلبات اليومية بنسبة ~50% أو رفع متوسط الطلب (AOV) أو الجمع بين الاثنين." 
           />
           <div className="mt-4 p-3 rounded-xl bg-muted/50 text-xs sm:text-sm font-semibold text-foreground flex items-center gap-2">
-             <Sparkles size={16} className="text-primary shrink-0" />
+             <Lightbulb size={16} className="text-primary shrink-0" />
              <div><span className="text-primary mr-1">بصيرة:</span> المشكلة ليست في الفكرة… بل في المعادلة التشغيلية الحالية.</div>
           </div>
         </CardBody>

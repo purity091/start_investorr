@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, TrendingDown, CloudCog, Settings2, ArrowLeft, Compass, Activity } from 'lucide-react';
+import { Trophy, TrendingDown, CloudCog, Settings2, ArrowLeft, Compass, Activity } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
 
 interface ProjectIdeasHubProps {
@@ -12,7 +12,7 @@ export const ProjectIdeasHub: React.FC<ProjectIdeasHubProps> = ({ setActiveTab }
       id: 'proven-projects',
       title: 'أفكار شركات ناجحة',
       description: 'قاعدة بيانات تفاعلية لشركات ناشئة ومشاريع أثبتت نجاحها. استكشف نماذج العمل والتقنيات التي استخدموها.',
-      icon: <Sparkles className="size-8 text-amber-500" />,
+      icon: <Trophy className="size-8 text-amber-500" />,
       color: 'bg-amber-50 border-amber-100 hover:border-amber-300 hover:shadow-amber-100/50',
     },
     {

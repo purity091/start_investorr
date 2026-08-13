@@ -145,7 +145,7 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
   ];
 
   return (
-    <div className="w-full space-y-5 px-1 py-2 sm:px-2 pb-24 text-right font-['IBM_Plex_Sans_Arabic']" dir="rtl">
+    <div className="w-full space-y-5 pb-24 text-right font-['IBM_Plex_Sans_Arabic']" dir="rtl">
       {/* Top Header (Full Width) */}
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-b border-border/50 pb-4 text-right">
         <div>
@@ -266,7 +266,7 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
         {/* Projects Tab */}
         <TabsContent value="activity" className="w-full space-y-4 mt-0">
           <Card className="w-full border-border/60 shadow-2xs">
-            <CardHeader className="text-right pb-3 border-b border-border/40">
+            <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3 border-b border-border/40 text-right">
               <CardTitle className="text-base font-bold">آخر المشاريع المحفوظة</CardTitle>
               <CardDescription className="text-xs">سجل أحدث المشاريع ودراسات الجدوى المنشأة.</CardDescription>
             </CardHeader>
@@ -327,11 +327,11 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
         <TabsContent value="account" className="w-full space-y-4 mt-0">
           <div className="grid gap-4 lg:grid-cols-12">
             <Card className="lg:col-span-6 border-border/60 shadow-2xs">
-              <CardHeader className="text-right pb-3 border-b border-border/40">
+              <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3 border-b border-border/40 text-right">
                 <CardTitle className="text-base font-bold">بيانات الحساب والملف</CardTitle>
                 <CardDescription className="text-xs">المعلمات والخصائص الرئيسية بالحساب.</CardDescription>
               </CardHeader>
-              <CardContent className="p-4 space-y-2">
+              <CardContent className="p-4 sm:p-6 space-y-2">
                 {accountFacts.map((fact) => (
                   <div key={fact.label} className="flex items-center justify-between rounded-lg border border-border/50 bg-muted/20 px-3.5 py-2.5 text-xs text-right">
                     <span className="font-bold text-foreground">{fact.value}</span>
@@ -342,11 +342,11 @@ export const Profile: React.FC<ProfileProps> = ({ user, setActiveTab }) => {
             </Card>
 
             <Card className="lg:col-span-6 border-border/60 shadow-2xs">
-              <CardHeader className="text-right pb-3 border-b border-border/40">
+              <CardHeader className="p-4 sm:p-6 pb-3 sm:pb-3 border-b border-border/40 text-right">
                 <CardTitle className="text-base font-bold">إجراءات سريعة</CardTitle>
                 <CardDescription className="text-xs">الانتقال السريع للأدوات والإعدادات.</CardDescription>
               </CardHeader>
-              <CardContent className="p-4 grid gap-3 sm:grid-cols-2">
+              <CardContent className="p-4 sm:p-6 grid gap-3 sm:grid-cols-2">
                 <QuickAction icon={User} title="إعدادات الملف" description="البيانات والأمان." actionLabel="تعديل" onClick={() => setActiveTab?.('settings')} />
                 <QuickAction icon={CreditCard} title="الاشتراك" description="الفواتير والسعة." actionLabel="إدارة" onClick={() => setActiveTab?.('pricing')} />
                 <QuickAction icon={Briefcase} title="مشاريعي" description="عرض كل الأعمال." actionLabel="فتح" onClick={() => setActiveTab?.('my-plans')} />

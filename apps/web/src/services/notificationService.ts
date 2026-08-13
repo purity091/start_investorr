@@ -5,7 +5,7 @@ import {
   CheckCircle2,
   Info,
   Settings,
-  Sparkles,
+  Wand2,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -67,7 +67,7 @@ const notificationMeta: Record<
   success: { label: 'تم الإنجاز', icon: CheckCircle2, className: 'text-emerald-700 bg-emerald-50 border-emerald-200' },
   info: { label: 'تحديث', icon: Info, className: 'text-sky-700 bg-sky-50 border-sky-200' },
   warning: { label: 'تنبيه مهم', icon: AlertTriangle, className: 'text-amber-700 bg-amber-50 border-amber-200' },
-  ai: { label: 'ذكاء اصطناعي', icon: Sparkles, className: 'text-violet-700 bg-violet-50 border-violet-200' },
+  ai: { label: 'ذكاء اصطناعي', icon: Wand2, className: 'text-violet-700 bg-violet-50 border-violet-200' },
   system: { label: 'تحديث نظام', icon: Settings, className: 'text-slate-700 bg-slate-100 border-slate-200' },
 };
 

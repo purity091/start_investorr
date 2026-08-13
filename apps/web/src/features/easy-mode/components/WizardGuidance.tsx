@@ -54,7 +54,7 @@ export const WizardGuidance: React.FC<WizardGuidanceProps> = ({
                    </div>
                    <div className="space-y-1">
                       <div className="flex items-center gap-1.5">
-                         <Lucide.Sparkles size={13} className="text-primary" />
+                         <Lucide.Zap size={13} className="text-primary" />
                          <span className="text-xs font-bold text-foreground">تلميح ذكي</span>
                       </div>
                       <p className="text-xs text-muted-foreground leading-relaxed font-medium m-0">

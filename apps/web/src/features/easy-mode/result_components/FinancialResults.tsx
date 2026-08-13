@@ -12,7 +12,7 @@ import {
   ArrowRight,
   Rocket,
   Scale,
-  Sparkles
+  Lightbulb
 } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 
@@ -111,7 +111,7 @@ export const FinancialResults = () => {
           </div>
 
           <div className="mt-4 p-3 rounded-xl bg-muted/50 text-xs sm:text-sm font-semibold text-foreground flex items-center gap-2">
-             <Sparkles size={16} className="text-primary shrink-0" />
+             <Lightbulb size={16} className="text-primary shrink-0" />
              <div><span className="text-primary mr-1">بصيرة مالية:</span> المشكلة ليست "نقصاً بسيطاً"، بل Mismatch كامل بين الفكرة والقدرة المالية الحالية.</div>
           </div>
         </CardBody>

@@ -1289,7 +1289,7 @@ export const TAB_CONFIGS = {
       },
       {
         id: "need_ai_recommend", step: 8, label: "التوصيات الإضافية", sublabel: "هل تحتاج لتوصيات استراتيجية إضافية لتقوية الخطة؟",
-        icon: "Sparkles", type: "cards", options: [
+        icon: "Zap", type: "cards", options: [
           { val: "yes", title: "نعم", desc: "تحسين متقدم" },
           { val: "no", title: "لا", desc: "خطة مستقلة" },
           { val: "partial", title: "جزئي", desc: "نقاط محددة" }

@@ -79,6 +79,33 @@ export const LandingNavbar: React.FC = () => {
   const userAvatar = user?.user_metadata?.avatar_url || user?.user_metadata?.picture || '';
   const userInitials = userName ? userName.trim().charAt(0).toUpperCase() : 'ح';
 
+  const dropdownTimeoutRef = React.useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnterDropdown = (name: string) => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+      dropdownTimeoutRef.current = null;
+    }
+    setActiveDropdown(name);
+  };
+
+  const handleMouseLeaveDropdown = () => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 200);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (dropdownTimeoutRef.current) {
+        clearTimeout(dropdownTimeoutRef.current);
+      }
+    };
+  }, []);
+
   // Handle Ctrl+K shortcut for quick search
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -151,10 +178,14 @@ export const LandingNavbar: React.FC = () => {
           {/* Dropdown 1: Features & Tools */}
           <div
             className="shrink-0"
-            onMouseEnter={() => setActiveDropdown('features')}
-            onMouseLeave={() => setActiveDropdown(null)}
+            onMouseEnter={() => handleMouseEnterDropdown('features')}
+            onMouseLeave={handleMouseLeaveDropdown}
           >
             <button
+              onClick={() => {
+                if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
+                setActiveDropdown((prev) => prev === 'features' ? null : 'features');
+              }}
               className={cn(
                 "flex items-center gap-1 px-2.5 py-2 rounded-xl transition-all cursor-pointer whitespace-nowrap shrink-0",
                 activeDropdown === 'features' ? "bg-primary/10 text-primary font-black shadow-2xs" : "hover:text-foreground hover:bg-muted/60"
@@ -165,7 +196,12 @@ export const LandingNavbar: React.FC = () => {
             </button>
 
             {activeDropdown === 'features' && (
-              <div dir="rtl" className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[min(900px,calc(100vw-2rem))] max-w-[calc(100vw-2rem)] animate-in fade-in slide-in-from-top-2 duration-150 z-50">
+              <div
+                dir="rtl"
+                onMouseEnter={() => handleMouseEnterDropdown('features')}
+                onMouseLeave={handleMouseLeaveDropdown}
+                className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[min(900px,calc(100vw-2rem))] max-w-[calc(100vw-2rem)] animate-in fade-in slide-in-from-top-2 duration-150 z-50 before:absolute before:-top-3 before:inset-x-0 before:h-4 before:content-['']"
+              >
                 <div className="p-6 rounded-3xl bg-card/98 border border-border/80 shadow-2xl backdrop-blur-xl space-y-5 text-right whitespace-normal">
 
                   <div className="grid grid-cols-12 gap-5">
@@ -185,7 +221,10 @@ export const LandingNavbar: React.FC = () => {
                       </div>
                       <div className="pt-4 relative z-10">
                         <Button
-                          onClick={() => openAuthModal('register')}
+                          onClick={() => {
+                            setActiveDropdown(null);
+                            openAuthModal('register');
+                          }}
                           size="sm"
                           className="w-full text-xs font-extrabold gap-1.5 h-9 shadow-2xs cursor-pointer"
                         >
@@ -197,7 +236,7 @@ export const LandingNavbar: React.FC = () => {
 
                     {/* Tools Grid - 4 High Impact Cards */}
                     <div className="col-span-8 grid grid-cols-2 gap-3.5">
-                      <Link href="/#features" className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                      <Link href="/#features" onClick={() => setActiveDropdown(null)} className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
                         <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
                           <Layers className="size-4.5" />
                         </div>
@@ -212,7 +251,7 @@ export const LandingNavbar: React.FC = () => {
                         </div>
                       </Link>
 
-                      <Link href="/#calculator" className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                      <Link href="/#calculator" onClick={() => setActiveDropdown(null)} className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
                         <div className="p-2.5 rounded-xl bg-blue-500/10 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
                           <Calculator className="size-4.5" />
                         </div>
@@ -227,7 +266,7 @@ export const LandingNavbar: React.FC = () => {
                         </div>
                       </Link>
 
-                      <Link href="/market-discovery" className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                      <Link href="/market-discovery" onClick={() => setActiveDropdown(null)} className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
                         <div className="p-2.5 rounded-xl bg-purple-500/10 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
                           <Compass className="size-4.5" />
                         </div>
@@ -242,7 +281,7 @@ export const LandingNavbar: React.FC = () => {
                         </div>
                       </Link>
 
-                      <Link href="/proven-projects" className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                      <Link href="/proven-projects" onClick={() => setActiveDropdown(null)} className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
                         <div className="p-2.5 rounded-xl bg-amber-500/10 text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
                           <Target className="size-4.5" />
                         </div>
@@ -267,10 +306,14 @@ export const LandingNavbar: React.FC = () => {
           {/* Dropdown 2: Databases & Sectors */}
           <div
             className="shrink-0"
-            onMouseEnter={() => setActiveDropdown('databases')}
-            onMouseLeave={() => setActiveDropdown(null)}
+            onMouseEnter={() => handleMouseEnterDropdown('databases')}
+            onMouseLeave={handleMouseLeaveDropdown}
           >
             <button
+              onClick={() => {
+                if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current);
+                setActiveDropdown((prev) => prev === 'databases' ? null : 'databases');
+              }}
               className={cn(
                 "flex items-center gap-1 px-2.5 py-2 rounded-xl transition-all cursor-pointer whitespace-nowrap shrink-0",
                 activeDropdown === 'databases' ? "bg-primary/10 text-primary font-black shadow-2xs" : "hover:text-foreground hover:bg-muted/60"
@@ -281,11 +324,16 @@ export const LandingNavbar: React.FC = () => {
             </button>
 
             {activeDropdown === 'databases' && (
-              <div dir="rtl" className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[min(840px,calc(100vw-2rem))] max-w-[calc(100vw-2rem)] animate-in fade-in slide-in-from-top-2 duration-150 z-50">
+              <div
+                dir="rtl"
+                onMouseEnter={() => handleMouseEnterDropdown('databases')}
+                onMouseLeave={handleMouseLeaveDropdown}
+                className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[min(840px,calc(100vw-2rem))] max-w-[calc(100vw-2rem)] animate-in fade-in slide-in-from-top-2 duration-150 z-50 before:absolute before:-top-3 before:inset-x-0 before:h-4 before:content-['']"
+              >
                 <div className="p-6 rounded-3xl bg-card/98 border border-border/80 shadow-2xl backdrop-blur-xl text-right space-y-4 whitespace-normal">
                   <div className="grid grid-cols-2 gap-3.5">
                     
-                    <Link href="/saas-ideas" className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                    <Link href="/saas-ideas" onClick={() => setActiveDropdown(null)} className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
                       <div className="p-2.5 rounded-xl bg-blue-500/10 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
                         <Laptop className="size-4.5" />
                       </div>
@@ -300,7 +348,7 @@ export const LandingNavbar: React.FC = () => {
                       </div>
                     </Link>
 
-                    <Link href="/micro-saas-ideas" className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                    <Link href="/micro-saas-ideas" onClick={() => setActiveDropdown(null)} className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
                       <div className="p-2.5 rounded-xl bg-indigo-500/10 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
                         <Cpu className="size-4.5" />
                       </div>
@@ -315,7 +363,7 @@ export const LandingNavbar: React.FC = () => {
                       </div>
                     </Link>
 
-                    <Link href="/proven-projects" className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                    <Link href="/proven-projects" onClick={() => setActiveDropdown(null)} className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
                       <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
                         <Building2 className="size-4.5" />
                       </div>
@@ -330,7 +378,7 @@ export const LandingNavbar: React.FC = () => {
                       </div>
                     </Link>
 
-                    <Link href="/failed-projects" className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                    <Link href="/failed-projects" onClick={() => setActiveDropdown(null)} className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
                       <div className="p-2.5 rounded-xl bg-rose-500/10 text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
                         <TrendingDown className="size-4.5" />
                       </div>

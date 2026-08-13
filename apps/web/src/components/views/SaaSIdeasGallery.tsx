@@ -4,7 +4,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { ProvenProjectProfile } from '@/components/features/business/ProvenProjectProfile';
 import { ProvenProjectsTable } from '@/components/features/business/ProvenProjectsTable';
 import { fetchPublicJson } from '@/lib/publicData';
-import { Sparkles, TrendingDown, Loader2, Layers } from 'lucide-react';
+import { CheckCircle2, TrendingDown, Loader2, Layers } from 'lucide-react';
 
 interface SaaSIdeasGalleryProps {
   setSubTabLabel?: (label: string | null) => void;
@@ -157,7 +157,7 @@ export const SaaSIdeasGallery: React.FC<SaaSIdeasGalleryProps> = ({ setSubTabLab
           </div>
 
           <div className="flex items-center gap-1.5 px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl bg-emerald-50/90 border border-emerald-200/70">
-            <Sparkles className="size-3.5 sm:size-4 text-emerald-600" />
+            <CheckCircle2 className="size-3.5 sm:size-4 text-emerald-600" />
             <span className="text-[11px] sm:text-xs font-bold text-emerald-800">شركات ناجحة:</span>
             <span className="text-xs sm:text-sm font-black text-emerald-700">{isLoading ? '...' : provenCount}</span>
           </div>

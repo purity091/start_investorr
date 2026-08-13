@@ -199,8 +199,8 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur" dir="rtl">
-      <div className="flex items-center justify-between gap-3 px-3 py-2 sm:px-6 sm:py-3 lg:px-8">
+    <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/95 backdrop-blur-xl transition-all duration-200" dir="rtl">
+      <div className="flex items-center justify-between gap-3 px-4 py-2 sm:px-6 sm:py-3 lg:px-8">
         <div className="flex min-w-0 items-center gap-1.5 sm:gap-2 flex-1">
           <SidebarTrigger className="lg:hidden h-8 w-8 text-foreground hover:bg-muted [&_svg]:size-4.5 sm:[&_svg]:size-5">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-4.5 sm:size-5"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>

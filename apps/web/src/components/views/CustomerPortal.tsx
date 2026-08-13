@@ -170,7 +170,7 @@ export const CustomerPortal: React.FC<CustomerPortalProps> = ({ user, setActiveT
   }, [authUser]);
 
   return (
-    <div className="mx-auto max-w-5xl space-y-4 sm:space-y-6 px-3 py-4 sm:py-8 sm:px-6 pb-24" dir="rtl">
+    <div className="app-page-shell-wide space-y-4 sm:space-y-6 py-4 sm:py-8 pb-24 text-right" dir="rtl">
       <section className="rounded-xl bg-card p-4 sm:p-5 shadow-sm">
         <div className="flex flex-col gap-4 sm:gap-5 xl:flex-row xl:items-center xl:justify-between">
           <div className="min-w-0 space-y-1.5 sm:space-y-2">
