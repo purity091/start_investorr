@@ -565,6 +565,8 @@ export const ProjectWorkspaceProvider: React.FC<{
       }
       
       const metadata = getWorkspaceMetadata(initialWithMetadata);
+      let createdProject: { id: string; row_version?: number } | null = null;
+
       const { data, error } = await supabase.rpc('create_business_canvas_atomic', {
         p_canvas_data: initialWithMetadata,
         p_project_title: metadata.project_title,
@@ -579,10 +581,32 @@ export const ProjectWorkspaceProvider: React.FC<{
         p_journey_progress: metadata.journey_progress,
       });
         
-      if (error) throw error;
-      
-      const createdProject = Array.isArray(data) ? data[0] : data;
-      if (createdProject) {
+      if (!error && data) {
+        createdProject = Array.isArray(data) ? data[0] : data;
+      } else {
+        // Fallback to direct table insertion if RPC fails or is missing in DB
+        const now = new Date().toISOString();
+        const { data: insertData, error: insertError } = await withSupabaseRetry(() =>
+          supabase
+            .from('business_canvas')
+            .insert({
+              user_id: user.id,
+              canvas_data: initialWithMetadata,
+              ...metadata,
+              row_version: 1,
+              created_at: now,
+              updated_at: now,
+              last_snapshot_at: now,
+            })
+            .select('id, row_version')
+            .single()
+        );
+
+        if (insertError) throw insertError;
+        createdProject = insertData;
+      }
+
+      if (createdProject && createdProject.id) {
         const createdWorkspace = deriveWorkspace(initialWithMetadata);
         skipNextAutoSaveRef.current = true;
         workspaceRef.current = createdWorkspace;
@@ -600,7 +624,8 @@ export const ProjectWorkspaceProvider: React.FC<{
         return createdProject.id;
       }
     } catch (err) {
-      console.error('Error creating project', err);
+      const msg = err && typeof err === 'object' && 'message' in err ? (err as { message: string }).message : String(err);
+      console.error('Error creating project:', msg, err);
     }
     return null;
   }, [flushWorkspace, planSections, profile?.subscription_plan, user]);
