@@ -100,7 +100,7 @@ export default function FeaturesPage() {
                 <ArrowLeft className="size-4" />
               </Button>
             </Link>
-            <Link href="/pricing-plans">
+            <Link href="/pricing">
               <Button size="lg" variant="outline">
                 عرض خطط الأسعار
               </Button>

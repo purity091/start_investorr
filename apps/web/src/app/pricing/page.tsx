@@ -11,7 +11,7 @@ export const metadata = createMetadata({
   keywords: ['أسعار دراسة جدوى', 'باقات خطة', 'اشتراك SaaS', 'تكلفة دراسة جدوى', 'منصة خطة الأسعار'],
 });
 
-export default function PricingPlansPage() {
+export default function PricingPage() {
   return (
     <PublicLayout>
       <PricingPlansGallery />

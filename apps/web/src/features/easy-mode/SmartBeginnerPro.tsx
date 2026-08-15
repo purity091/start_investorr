@@ -742,7 +742,7 @@ function ProjectDashboard({
                 ميزة مشاركة اللوحة والمشروع متاحة ضمن باقتي <strong>مؤسس</strong> و<strong>قائد</strong>، لتتمكن من تقديم مشروعك بصورة احترافية.
               </div>
               <DialogFooter className="flex-col gap-2 sm:flex-row sm:justify-start">
-                <Button onClick={() => { window.location.href = '/pricing-plans'; }} className="w-full sm:w-auto">
+                <Button onClick={() => { window.location.href = '/pricing'; }} className="w-full sm:w-auto">
                   استعرض الباقات وابدأ الترقية <ArrowRight className="size-4" />
                 </Button>
                 <Button variant="outline" onClick={() => setIsShareUpgradeOpen(false)} className="w-full sm:w-auto">

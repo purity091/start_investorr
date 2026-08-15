@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/micro-saas-ideas', priority: 0.86, changeFrequency: 'weekly' as const },
     { path: '/failed-projects', priority: 0.82, changeFrequency: 'weekly' as const },
     { path: '/platform-academy', priority: 0.84, changeFrequency: 'weekly' as const },
-    { path: '/pricing-plans', priority: 0.78, changeFrequency: 'monthly' as const },
+    { path: '/pricing', priority: 0.78, changeFrequency: 'monthly' as const },
     { path: '/faq', priority: 0.72, changeFrequency: 'monthly' as const },
     { path: '/changelog', priority: 0.68, changeFrequency: 'weekly' as const },
     { path: '/about', priority: 0.62, changeFrequency: 'monthly' as const },

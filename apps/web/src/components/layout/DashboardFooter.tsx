@@ -39,7 +39,7 @@ export const DashboardFooter: React.FC<DashboardFooterProps> = ({ setActiveTab }
             الأكاديمية
           </Link>
           <span className="text-border/60 text-[10px]">•</span>
-          <Link href="/pricing-plans" className="hover:text-primary transition-colors text-xs">
+          <Link href="/pricing" className="hover:text-primary transition-colors text-xs">
             الأسعار
           </Link>
           <span className="text-border/60 text-[10px]">•</span>

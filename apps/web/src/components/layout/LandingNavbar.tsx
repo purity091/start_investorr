@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -61,6 +62,8 @@ import { useAuth } from '@/features/auth/AuthContext';
 import { cn } from '@/lib/utils';
 
 export const LandingNavbar: React.FC = () => {
+  const pathname = usePathname();
+  const currentPath = pathname || '/';
   const { openAuthModal } = useAuthModal();
   const { user, profile, loading: authLoading, signOut } = useAuth();
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -68,6 +71,13 @@ export const LandingNavbar: React.FC = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const isFeaturesActive = activeDropdown === 'features' || currentPath === '/features';
+  const isDatabasesActive = activeDropdown === 'databases' || ['/saas-ideas', '/micro-saas-ideas', '/proven-projects', '/failed-projects'].includes(currentPath);
+  const isMarketDiscoveryActive = currentPath === '/market-discovery';
+  const isAcademyActive = currentPath === '/platform-academy';
+  const isChangelogActive = currentPath === '/changelog';
+  const isPricingActive = currentPath === '/pricing-plans' || currentPath === '/pricing';
 
   const userName = profile?.full_name 
     || user?.user_metadata?.full_name 
@@ -127,7 +137,7 @@ export const LandingNavbar: React.FC = () => {
     { title: 'أكاديمية خطة والمفاهيم', category: 'المصادر', href: '/platform-academy', icon: BookOpen },
     { title: 'سجل التحديثات والإصدارات', category: 'المصادر', href: '/changelog', icon: Sparkles },
     { title: 'الشركات المتعثرة (Post-Mortem)', category: 'الدروس', href: '/failed-projects', icon: TrendingDown },
-    { title: 'الأسعار', category: 'الحساب', href: '/pricing-plans', icon: DollarSign },
+    { title: 'الأسعار', category: 'الحساب', href: '/pricing', icon: DollarSign },
   ].filter((item) => item.title.includes(searchQuery) || item.category.includes(searchQuery));
 
   return (
@@ -187,12 +197,14 @@ export const LandingNavbar: React.FC = () => {
                 setActiveDropdown((prev) => prev === 'features' ? null : 'features');
               }}
               className={cn(
-                "flex items-center gap-1 px-2.5 py-2 rounded-xl transition-all cursor-pointer whitespace-nowrap shrink-0",
-                activeDropdown === 'features' ? "bg-primary/10 text-primary font-black shadow-2xs" : "hover:text-foreground hover:bg-muted/60"
+                "flex items-center gap-1 px-3 py-2 rounded-xl transition-all cursor-pointer whitespace-nowrap shrink-0 text-xs font-extrabold",
+                isFeaturesActive
+                  ? "bg-primary text-primary-foreground font-black shadow-2xs"
+                  : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
               )}
             >
               <span>الأدوات والمميزات</span>
-              <ChevronDown className={cn("size-3.5 transition-transform duration-200 shrink-0", activeDropdown === 'features' && "rotate-180 text-primary")} />
+              <ChevronDown className={cn("size-3.5 transition-transform duration-200 shrink-0", activeDropdown === 'features' && "rotate-180", isFeaturesActive ? "text-primary-foreground" : "text-muted-foreground")} />
             </button>
 
             {activeDropdown === 'features' && (
@@ -315,12 +327,14 @@ export const LandingNavbar: React.FC = () => {
                 setActiveDropdown((prev) => prev === 'databases' ? null : 'databases');
               }}
               className={cn(
-                "flex items-center gap-1 px-2.5 py-2 rounded-xl transition-all cursor-pointer whitespace-nowrap shrink-0",
-                activeDropdown === 'databases' ? "bg-primary/10 text-primary font-black shadow-2xs" : "hover:text-foreground hover:bg-muted/60"
+                "flex items-center gap-1 px-3 py-2 rounded-xl transition-all cursor-pointer whitespace-nowrap shrink-0 text-xs font-extrabold",
+                isDatabasesActive
+                  ? "bg-primary text-primary-foreground font-black shadow-2xs"
+                  : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
               )}
             >
               <span>الشركات والقطاعات</span>
-              <ChevronDown className={cn("size-3.5 transition-transform duration-200 shrink-0", activeDropdown === 'databases' && "rotate-180 text-primary")} />
+              <ChevronDown className={cn("size-3.5 transition-transform duration-200 shrink-0", activeDropdown === 'databases' && "rotate-180", isDatabasesActive ? "text-primary-foreground" : "text-muted-foreground")} />
             </button>
 
             {activeDropdown === 'databases' && (
@@ -333,7 +347,14 @@ export const LandingNavbar: React.FC = () => {
                 <div className="p-6 rounded-3xl bg-card/98 border border-border/80 shadow-2xl backdrop-blur-xl text-right space-y-4 whitespace-normal">
                   <div className="grid grid-cols-2 gap-3.5">
                     
-                    <Link href="/saas-ideas" onClick={() => setActiveDropdown(null)} className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                    <Link
+                      href="/saas-ideas"
+                      onClick={() => setActiveDropdown(null)}
+                      className={cn(
+                        "p-3.5 rounded-2xl hover:bg-muted/70 border transition-all flex items-start gap-3 group",
+                        currentPath === '/saas-ideas' ? "bg-primary/10 border-primary/40" : "border-transparent hover:border-border/60"
+                      )}
+                    >
                       <div className="p-2.5 rounded-xl bg-blue-500/10 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
                         <Laptop className="size-4.5" />
                       </div>
@@ -348,7 +369,14 @@ export const LandingNavbar: React.FC = () => {
                       </div>
                     </Link>
 
-                    <Link href="/micro-saas-ideas" onClick={() => setActiveDropdown(null)} className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                    <Link
+                      href="/micro-saas-ideas"
+                      onClick={() => setActiveDropdown(null)}
+                      className={cn(
+                        "p-3.5 rounded-2xl hover:bg-muted/70 border transition-all flex items-start gap-3 group",
+                        currentPath === '/micro-saas-ideas' ? "bg-primary/10 border-primary/40" : "border-transparent hover:border-border/60"
+                      )}
+                    >
                       <div className="p-2.5 rounded-xl bg-indigo-500/10 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
                         <Cpu className="size-4.5" />
                       </div>
@@ -363,7 +391,14 @@ export const LandingNavbar: React.FC = () => {
                       </div>
                     </Link>
 
-                    <Link href="/proven-projects" onClick={() => setActiveDropdown(null)} className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                    <Link
+                      href="/proven-projects"
+                      onClick={() => setActiveDropdown(null)}
+                      className={cn(
+                        "p-3.5 rounded-2xl hover:bg-muted/70 border transition-all flex items-start gap-3 group",
+                        currentPath === '/proven-projects' ? "bg-primary/10 border-primary/40" : "border-transparent hover:border-border/60"
+                      )}
+                    >
                       <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
                         <Building2 className="size-4.5" />
                       </div>
@@ -378,7 +413,14 @@ export const LandingNavbar: React.FC = () => {
                       </div>
                     </Link>
 
-                    <Link href="/failed-projects" onClick={() => setActiveDropdown(null)} className="p-3.5 rounded-2xl hover:bg-muted/70 border border-transparent hover:border-border/60 transition-all flex items-start gap-3 group">
+                    <Link
+                      href="/failed-projects"
+                      onClick={() => setActiveDropdown(null)}
+                      className={cn(
+                        "p-3.5 rounded-2xl hover:bg-muted/70 border transition-all flex items-start gap-3 group",
+                        currentPath === '/failed-projects' ? "bg-primary/10 border-primary/40" : "border-transparent hover:border-border/60"
+                      )}
+                    >
                       <div className="p-2.5 rounded-xl bg-rose-500/10 text-rose-600 group-hover:bg-rose-600 group-hover:text-white transition-all shrink-0 shadow-2xs">
                         <TrendingDown className="size-4.5" />
                       </div>
@@ -402,7 +444,12 @@ export const LandingNavbar: React.FC = () => {
           {/* Direct Standard Link 1: Market Discovery */}
           <Link
             href="/market-discovery"
-            className="px-2.5 py-2 rounded-xl hover:text-foreground hover:bg-muted/60 transition-all cursor-pointer whitespace-nowrap shrink-0"
+            className={cn(
+              "px-3 py-2 rounded-xl transition-all cursor-pointer whitespace-nowrap shrink-0 text-xs font-extrabold",
+              isMarketDiscoveryActive
+                ? "bg-primary text-primary-foreground font-black shadow-2xs"
+                : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
+            )}
           >
             استكشاف القطاعات
           </Link>
@@ -410,7 +457,12 @@ export const LandingNavbar: React.FC = () => {
           {/* Direct Standard Link 2: Academy */}
           <Link
             href="/platform-academy"
-            className="px-2.5 py-2 rounded-xl hover:text-foreground hover:bg-muted/60 transition-all cursor-pointer whitespace-nowrap shrink-0"
+            className={cn(
+              "px-3 py-2 rounded-xl transition-all cursor-pointer whitespace-nowrap shrink-0 text-xs font-extrabold",
+              isAcademyActive
+                ? "bg-primary text-primary-foreground font-black shadow-2xs"
+                : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
+            )}
           >
             الأكاديمية
           </Link>
@@ -418,15 +470,25 @@ export const LandingNavbar: React.FC = () => {
           {/* Direct Standard Link 3: Changelog */}
           <Link
             href="/changelog"
-            className="px-2.5 py-2 rounded-xl hover:text-foreground hover:bg-muted/60 transition-all cursor-pointer whitespace-nowrap shrink-0"
+            className={cn(
+              "px-3 py-2 rounded-xl transition-all cursor-pointer whitespace-nowrap shrink-0 text-xs font-extrabold",
+              isChangelogActive
+                ? "bg-primary text-primary-foreground font-black shadow-2xs"
+                : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
+            )}
           >
             سجل التغييرات
           </Link>
 
           {/* Direct Standard Link 4: Pricing */}
           <Link
-            href="/pricing-plans"
-            className="px-2.5 py-2 rounded-xl hover:text-foreground hover:bg-muted/60 transition-all cursor-pointer whitespace-nowrap shrink-0"
+            href="/pricing"
+            className={cn(
+              "px-3 py-2 rounded-xl transition-all cursor-pointer whitespace-nowrap shrink-0 text-xs font-extrabold",
+              isPricingActive
+                ? "bg-primary text-primary-foreground font-black shadow-2xs"
+                : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
+            )}
           >
             الأسعار
           </Link>
@@ -483,7 +545,7 @@ export const LandingNavbar: React.FC = () => {
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild className="cursor-pointer">
-                      <Link href="/pricing-plans" className="flex items-center gap-2">
+                      <Link href="/pricing" className="flex items-center gap-2">
                         <CreditCard className="size-4" />
                         <span>اشتراكي</span>
                       </Link>
@@ -570,34 +632,102 @@ export const LandingNavbar: React.FC = () => {
                 </Button>
 
                 {/* Navigation Sections & Direct Links */}
-                <div className="space-y-3 text-xs font-bold text-foreground">
-                  <Link href="/saas-ideas" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 py-2 text-foreground hover:text-primary border-b border-border/40">
-                    <Laptop className="size-4 text-blue-600" />
+                <div className="space-y-1.5 text-xs font-bold text-foreground">
+                  <Link
+                    href="/saas-ideas"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={cn(
+                      "flex items-center gap-2.5 py-2.5 px-3 rounded-xl transition-all border-b border-border/30",
+                      currentPath === '/saas-ideas'
+                        ? "bg-primary text-primary-foreground font-black shadow-2xs"
+                        : "text-foreground hover:text-primary hover:bg-muted/50"
+                    )}
+                  >
+                    <Laptop className={cn("size-4", currentPath === '/saas-ideas' ? "text-primary-foreground" : "text-blue-600")} />
                     <span>أفكار مشاريع SaaS</span>
                   </Link>
 
-                  <Link href="/micro-saas-ideas" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 py-2 text-foreground hover:text-primary border-b border-border/40">
-                    <Cpu className="size-4 text-indigo-600" />
+                  <Link
+                    href="/micro-saas-ideas"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={cn(
+                      "flex items-center gap-2.5 py-2.5 px-3 rounded-xl transition-all border-b border-border/30",
+                      currentPath === '/micro-saas-ideas'
+                        ? "bg-primary text-primary-foreground font-black shadow-2xs"
+                        : "text-foreground hover:text-primary hover:bg-muted/50"
+                    )}
+                  >
+                    <Cpu className={cn("size-4", currentPath === '/micro-saas-ideas' ? "text-primary-foreground" : "text-indigo-600")} />
                     <span>أفكار Micro-SaaS</span>
                   </Link>
 
-                  <Link href="/market-discovery" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 py-2 text-foreground hover:text-primary border-b border-border/40">
-                    <Compass className="size-4 text-purple-600" />
+                  <Link
+                    href="/market-discovery"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={cn(
+                      "flex items-center gap-2.5 py-2.5 px-3 rounded-xl transition-all border-b border-border/30",
+                      isMarketDiscoveryActive
+                        ? "bg-primary text-primary-foreground font-black shadow-2xs"
+                        : "text-foreground hover:text-primary hover:bg-muted/50"
+                    )}
+                  >
+                    <Compass className={cn("size-4", isMarketDiscoveryActive ? "text-primary-foreground" : "text-purple-600")} />
                     <span>استكشاف القطاعات</span>
                   </Link>
 
-                  <Link href="/proven-projects" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 py-2 text-foreground hover:text-primary border-b border-border/40">
-                    <Building2 className="size-4 text-emerald-600" />
+                  <Link
+                    href="/proven-projects"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={cn(
+                      "flex items-center gap-2.5 py-2.5 px-3 rounded-xl transition-all border-b border-border/30",
+                      currentPath === '/proven-projects'
+                        ? "bg-primary text-primary-foreground font-black shadow-2xs"
+                        : "text-foreground hover:text-primary hover:bg-muted/50"
+                    )}
+                  >
+                    <Building2 className={cn("size-4", currentPath === '/proven-projects' ? "text-primary-foreground" : "text-emerald-600")} />
                     <span>دراسات حالة الشركات</span>
                   </Link>
 
-                  <Link href="/platform-academy" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 py-2 text-foreground hover:text-primary border-b border-border/40">
-                    <BookOpen className="size-4 text-primary" />
+                  <Link
+                    href="/platform-academy"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={cn(
+                      "flex items-center gap-2.5 py-2.5 px-3 rounded-xl transition-all border-b border-border/30",
+                      isAcademyActive
+                        ? "bg-primary text-primary-foreground font-black shadow-2xs"
+                        : "text-foreground hover:text-primary hover:bg-muted/50"
+                    )}
+                  >
+                    <BookOpen className={cn("size-4", isAcademyActive ? "text-primary-foreground" : "text-primary")} />
                     <span>الأكاديمية</span>
                   </Link>
 
-                  <Link href="/pricing-plans" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 py-2 text-foreground hover:text-primary border-b border-border/40">
-                    <DollarSign className="size-4 text-amber-500" />
+                  <Link
+                    href="/changelog"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={cn(
+                      "flex items-center gap-2.5 py-2.5 px-3 rounded-xl transition-all border-b border-border/30",
+                      isChangelogActive
+                        ? "bg-primary text-primary-foreground font-black shadow-2xs"
+                        : "text-foreground hover:text-primary hover:bg-muted/50"
+                    )}
+                  >
+                    <Target className={cn("size-4", isChangelogActive ? "text-primary-foreground" : "text-rose-500")} />
+                    <span>سجل التغييرات</span>
+                  </Link>
+
+                  <Link
+                    href="/pricing"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={cn(
+                      "flex items-center gap-2.5 py-2.5 px-3 rounded-xl transition-all border-b border-border/30",
+                      isPricingActive
+                        ? "bg-primary text-primary-foreground font-black shadow-2xs"
+                        : "text-foreground hover:text-primary hover:bg-muted/50"
+                    )}
+                  >
+                    <DollarSign className={cn("size-4", isPricingActive ? "text-primary-foreground" : "text-amber-500")} />
                     <span>الأسعار والاشتراكات</span>
                   </Link>
                 </div>

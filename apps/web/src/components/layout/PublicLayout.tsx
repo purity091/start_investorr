@@ -45,7 +45,7 @@ export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children
                 <li><Link href="/features" className="text-muted-foreground hover:text-primary transition-colors">المميزات الرئيسية</Link></li>
                 <li><Link href="/#features" className="text-muted-foreground hover:text-primary transition-colors">مولد نموذج العمل (BMC)</Link></li>
                 <li><Link href="/#calculator" className="text-muted-foreground hover:text-primary transition-colors">حاسبة الإيرادات SaaS</Link></li>
-                <li><Link href="/pricing-plans" className="text-muted-foreground hover:text-primary transition-colors">الأسعار والاشتراكات</Link></li>
+                <li><Link href="/pricing" className="text-muted-foreground hover:text-primary transition-colors">الأسعار والاشتراكات</Link></li>
               </ul>
             </div>
 

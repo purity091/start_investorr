@@ -1,4 +1,164 @@
 
+// ─────────────────────────────────────────────
+// Company Profile Types (new UI)
+// ─────────────────────────────────────────────
+
+export interface FundingRound {
+  id: string;
+  announcedDate: string;
+  transactionName: string;
+  investorsCount: number;
+  moneyRaised: string;
+  leadInvestor: string;
+  fundingType: string;
+}
+
+export interface Investment {
+  id: string;
+  announcedDate: string;
+  orgName: string;
+  isLead: boolean;
+  fundingRound: string;
+  moneyRaised: string;
+}
+
+export interface KeyPerson {
+  id: string;
+  name: string;
+  title: string;
+  linkedIn?: string;
+}
+
+export interface SubOrganization {
+  id: string;
+  name: string;
+  type: string;
+}
+
+export interface SimilarCompany {
+  id: string;
+  name: string;
+  hqLocation: string;
+  similarityScore: string;
+  marketCapOrValuation: string;
+  keyAdvantage: string;
+  status: string;
+}
+
+export interface RelatedSector {
+  id: string;
+  sectorName: string;
+  marketSize: string;
+  growthRateMom: string;
+  relevanceLevel: string;
+  keyTrends: string[];
+}
+
+export interface SwotAnalysis {
+  strengths: string[];
+  weaknesses: string[];
+  opportunities: string[];
+  threats: string[];
+}
+
+export interface TechSolutionDetails {
+  architectureOverview: string;
+  infrastructureType: string;
+  keyFeatures: string[];
+}
+
+export interface ExpansionStrategy {
+  targetMarkets: string[];
+  growthChannels: string[];
+  strategicMilestones: { year: string; title: string; description: string }[];
+}
+
+export interface FounderStory {
+  founderName: string;
+  background: string;
+  vision: string;
+}
+
+export interface LessonAndEvidence {
+  lessonsLearned: string[];
+  verifiedDocuments: { title: string; issuer: string; date: string; verifyCode: string }[];
+}
+
+export interface IdealCustomerPersona {
+  personaTitle?: string;
+  customerSegment?: string;
+  customerProfile?: string;
+  archetypeRole?: string;
+  painPoints?: string[];
+  keyMotivations?: string[];
+  buyingBehavior?: string;
+  buyingTriggers?: string;
+  decisionCriteria?: string[];
+  economicValueLtv?: string;
+  valueAlignment?: string;
+}
+
+export interface TargetAudienceProfile {
+  idealCustomerPersonas: IdealCustomerPersona[];
+}
+
+export interface Company {
+  id: string;
+  name: string;
+  permalink: string;
+  shortDescription: string;
+  aboutDescription: string;
+  logoUrl: string;
+  revenueModel: string;
+  marketPosition: string;
+  topCompetitors: string[];
+  competitiveAdvantage: string;
+  foundedDate: string;
+  ipoStatus: string;
+  fundingStatus: string;
+  hqLocation: string;
+  employeeRange: string;
+  website: string;
+  websiteUrl?: string;
+  facebook: string;
+  linkedin: string;
+  twitter: string;
+  instagram: string;
+  categories: string[];
+  totalFundingAmount: string;
+  fundingRoundsCount: number;
+  legalName: string;
+  alsoKnownAs: string;
+  operatingStatus: string;
+  exitsCount: number;
+  stockSymbol: string;
+  companyType: string;
+  founders: string[];
+  phoneNumber: string;
+  contactEmail: string;
+  monthlyWebVisits: string;
+  visitsMomChange: string;
+  itSpend: string;
+  activeTechProductsCount: number;
+  sampleTechs: string[];
+  patentsCount: number;
+  trademarksCount: number;
+  fundingRounds: FundingRound[];
+  investments: Investment[];
+  keyPeople: KeyPerson[];
+  subOrganizations: SubOrganization[];
+  swotAnalysis?: SwotAnalysis;
+  techSolutionDetails?: TechSolutionDetails;
+  expansionStrategy?: ExpansionStrategy;
+  founderStory?: FounderStory;
+  lessonAndEvidence?: LessonAndEvidence;
+  similarCompaniesList?: SimilarCompany[];
+  relatedSectorsList?: RelatedSector[];
+  targetAudienceProfile?: TargetAudienceProfile;
+}
+
+// ─────────────────────────────────────────────
+
 export interface PlanSection {
   id: string;
   title: string;

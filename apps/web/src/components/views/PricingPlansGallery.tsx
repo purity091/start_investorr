@@ -195,33 +195,33 @@ export const PricingPlansGallery: React.FC = () => {
   return (
     <div dir="rtl" className="w-full bg-background text-foreground font-sans pb-20 space-y-10">
       
-      {/* 1. Launch Offer Banner (High Readability & Contrast) */}
-      <div className="bg-primary/10 border-b border-primary/20 text-foreground py-3 px-4 sticky top-16 z-40 backdrop-blur-md shadow-2xs">
+      {/* 1. Launch Offer Banner */}
+      <div className="bg-primary/10 text-foreground py-3 px-4 sticky top-16 z-40 backdrop-blur-md shadow-2xs border-0">
         <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-3 text-center lg:text-right">
           
           <div className="flex items-center gap-3 flex-wrap justify-center lg:justify-start">
-            <Badge variant="default" className="text-xs font-bold gap-1.5 px-3 py-1 bg-primary text-primary-foreground shadow-2xs">
+            <Badge variant="default" className="text-xs font-bold gap-1.5 px-3 py-1 bg-primary text-primary-foreground shadow-2xs border-0">
               <Gift className="size-3.5" />
               <span>عرض الإطلاق الحصري</span>
             </Badge>
             
             <p className="text-xs sm:text-sm font-bold text-foreground leading-snug">
-              تسجيل مجاني في باقة رائد لأول 100 مستخدم + أسعار خاصة لباقات مؤسس وقائد!
+              انضم مجاناً لأول 100 مشترك في باقة رائد واستفد من أسعار الإطلاق الحصرية!
             </p>
           </div>
 
           <div className="flex items-center gap-3 flex-wrap justify-center">
             {/* Progress Pill Indicator */}
-            <div className="flex items-center gap-2 px-3.5 py-1 rounded-full bg-background border border-border/80 shadow-2xs text-xs font-semibold">
-              <span className="text-muted-foreground">تم حجز <strong className="text-foreground font-bold">{claimedCount} من {totalSpots}</strong></span>
-              <span className="size-1 rounded-full bg-primary" />
-              <span className="text-primary font-bold">({remainingSpots} متبقياً)</span>
+            <div className="flex items-center gap-2 px-3.5 py-1 rounded-full bg-background shadow-2xs text-xs font-semibold border-0">
+              <span className="text-muted-foreground">تم انضمام <strong className="text-foreground font-bold">{claimedCount} مشترِكاً</strong></span>
+              <span className="size-1.5 rounded-full bg-primary" />
+              <span className="text-primary font-bold">متبقي {remainingSpots} مقعداً فقط</span>
             </div>
 
             <Button
               onClick={() => openAuthModal('register')}
               size="sm"
-              className="font-bold text-xs h-8 px-4 gap-1.5 cursor-pointer shadow-2xs"
+              className="font-bold text-xs h-8 px-4 gap-1.5 cursor-pointer shadow-2xs border-0"
             >
               <span>انشئ حسابك الآن</span>
               <ArrowLeft className="size-3.5" />
@@ -233,28 +233,28 @@ export const PricingPlansGallery: React.FC = () => {
 
       {/* 2. Header Section with Currency & Billing Controls */}
       <section className="container mx-auto px-4 max-w-4xl text-center space-y-5 pt-4">
-        <Badge variant="outline" className="text-xs font-medium px-3 py-1 gap-1.5 mx-auto">
+        <Badge variant="outline" className="text-xs font-medium px-3 py-1 gap-1.5 mx-auto border-0 bg-muted/60">
           <Sparkles className="size-3.5 text-primary" />
-          <span>خطط اشتراك متدرجة ومحددة السعة والدورية</span>
+          <span>باقات مرنة ومصممة خصيصاً لنمو أعمالك</span>
         </Badge>
 
         <h1 className="text-2xl sm:text-4xl font-bold tracking-tight text-foreground">
-          اختر الباقة المناسبة: رائد، مؤسس، أو قائد
+          خطط تناسب جميع مراحل مشروعك الاستثماري
         </h1>
 
         <p className="text-sm text-muted-foreground font-normal leading-relaxed max-w-2xl mx-auto">
-          شفافية كاملة في الأسعار ودورية الفوترة بدون أي رسوم خفية. يمكنك الترقية والإلغاء بسهولة.
+          أسعار شفافة وبدون أي رسوم خفية، مع مرونة كاملة لترقية أو إلغاء اشتراكك في أي وقت.
         </p>
 
         {/* Currency & Billing Cycle Controls */}
         <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
           
           {/* Billing Cycle Switcher */}
-          <div className="inline-flex items-center p-1 rounded-xl bg-muted border border-border/60 text-xs font-medium">
+          <div className="inline-flex items-center p-1 rounded-xl bg-muted text-xs font-medium border-0 shadow-2xs">
             <button
               onClick={() => setBillingCycle('monthly')}
               className={cn(
-                "px-3.5 py-1.5 rounded-lg transition-all cursor-pointer",
+                "px-3.5 py-1.5 rounded-lg transition-all cursor-pointer border-0",
                 billingCycle === 'monthly' ? "bg-background text-foreground shadow-2xs font-bold" : "text-muted-foreground hover:text-foreground"
               )}
             >
@@ -263,23 +263,23 @@ export const PricingPlansGallery: React.FC = () => {
             <button
               onClick={() => setBillingCycle('annual')}
               className={cn(
-                "px-3.5 py-1.5 rounded-lg transition-all cursor-pointer flex items-center gap-1.5",
+                "px-3.5 py-1.5 rounded-lg transition-all cursor-pointer flex items-center gap-1.5 border-0",
                 billingCycle === 'annual' ? "bg-background text-foreground shadow-2xs font-bold" : "text-muted-foreground hover:text-foreground"
               )}
             >
               <span>دفع سنوي (Annual)</span>
-              <Badge variant="secondary" className="text-[10px] font-bold py-0 px-1.5">
+              <Badge variant="secondary" className="text-[10px] font-bold py-0 px-1.5 border-0">
                 توفير 20%
               </Badge>
             </button>
           </div>
 
           {/* Currency Switcher (SAR / USD) */}
-          <div className="inline-flex items-center p-1 rounded-xl bg-muted border border-border/60 text-xs font-medium">
+          <div className="inline-flex items-center p-1 rounded-xl bg-muted text-xs font-medium border-0 shadow-2xs">
             <button
               onClick={() => setCurrency('SAR')}
               className={cn(
-                "px-3 py-1.5 rounded-lg transition-all cursor-pointer flex items-center gap-1",
+                "px-3 py-1.5 rounded-lg transition-all cursor-pointer flex items-center gap-1 border-0",
                 currency === 'SAR' ? "bg-background text-foreground shadow-2xs font-bold" : "text-muted-foreground hover:text-foreground"
               )}
             >
@@ -289,7 +289,7 @@ export const PricingPlansGallery: React.FC = () => {
             <button
               onClick={() => setCurrency('USD')}
               className={cn(
-                "px-3 py-1.5 rounded-lg transition-all cursor-pointer flex items-center gap-1",
+                "px-3 py-1.5 rounded-lg transition-all cursor-pointer flex items-center gap-1 border-0",
                 currency === 'USD' ? "bg-background text-foreground shadow-2xs font-bold" : "text-muted-foreground hover:text-foreground"
               )}
             >
@@ -301,15 +301,15 @@ export const PricingPlansGallery: React.FC = () => {
         </div>
 
         {/* Pricing Transparency & Stripe Compliance Banner */}
-        <div className="max-w-2xl mx-auto p-3 rounded-xl bg-muted/40 border border-border/60 text-xs text-muted-foreground flex flex-wrap items-center justify-center gap-4">
-          <span className="flex items-center gap-1 text-foreground font-semibold">
+        <div className="max-w-2xl mx-auto p-3.5 rounded-2xl bg-muted/50 text-xs text-muted-foreground flex flex-wrap items-center justify-center gap-4 shadow-2xs border-0">
+          <span className="flex items-center gap-1.5 text-foreground font-semibold">
             <ShieldCheck className="size-4 text-emerald-600" />
-            <span>معالجة آمنة ومشفّرة للمعاملات المالية</span>
+            <span>معاملات مالية آمنة ومشفّرة 100%</span>
           </span>
-          <span className="text-border">•</span>
-          <span>إلغاء فوري بضغطة زر</span>
-          <span className="text-border">•</span>
-          <span>فواتير إلكترونية فورية</span>
+          <span className="text-muted-foreground/30">•</span>
+          <span className="font-medium text-foreground/80">إلغاء مرن بنقرة واحدة</span>
+          <span className="text-muted-foreground/30">•</span>
+          <span className="font-medium text-foreground/80">فواتير إلكترونية معتمدة</span>
         </div>
       </section>
 

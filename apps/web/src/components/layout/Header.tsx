@@ -182,14 +182,13 @@ export const Header: React.FC<HeaderProps> = ({
     prevSaving.current = isSaving;
   }, [isSaving, activeProjectId, syncStatus]);
 
-  React.useEffect(() => {
-    const hasPrompted = sessionStorage.getItem('platform_feedback_prompted');
-    if (hasPrompted) return;
+  const [shouldPulseFeedback, setShouldPulseFeedback] = React.useState(false);
 
+  React.useEffect(() => {
+    // Instead of auto-opening the modal, make the button pulse/glow after 10 seconds to encourage clicking
     const timer = setTimeout(() => {
-      setIsFeedbackOpen(true);
-      sessionStorage.setItem('platform_feedback_prompted', 'true');
-    }, 180000);
+      setShouldPulseFeedback(true);
+    }, 10000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -272,12 +271,24 @@ export const Header: React.FC<HeaderProps> = ({
             type="button"
             variant="outline"
             size="sm"
-            onClick={() => setIsFeedbackOpen(!isFeedbackOpen)}
-            className="h-8 sm:h-9 px-2 sm:px-3 gap-1.5 rounded-lg border-border text-foreground hover:bg-muted font-medium text-xs"
+            onClick={() => {
+              setIsFeedbackOpen(!isFeedbackOpen);
+              setShouldPulseFeedback(false);
+            }}
+            className={cn(
+              "relative h-8 sm:h-9 px-2 sm:px-3 gap-1.5 rounded-lg border-border text-foreground hover:bg-muted font-medium text-xs transition-all duration-300",
+              shouldPulseFeedback && "border-amber-500/60 bg-amber-500/10 text-amber-900 dark:text-amber-300 ring-2 ring-amber-400/40 shadow-xs animate-pulse"
+            )}
             title="أرسل اقتراحك لتطوير المنصة"
           >
-            <MessageSquarePlus className="size-3.5 sm:size-4 text-muted-foreground" />
+            <MessageSquarePlus className={cn("size-3.5 sm:size-4 text-muted-foreground transition-transform", shouldPulseFeedback && "text-amber-500 animate-bounce")} />
             <span className="hidden sm:inline">اقتراح للمنصة</span>
+            {shouldPulseFeedback && (
+              <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500" />
+              </span>
+            )}
           </Button>
 
           <Button
