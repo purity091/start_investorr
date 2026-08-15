@@ -18,19 +18,18 @@ export function CompanyViewPage({ company }: Props) {
 
   return (
     <div dir="rtl" className="min-h-screen bg-background font-sans">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 py-4 sm:py-8 space-y-4 sm:space-y-6">
 
         {/* Company Header */}
-        <div className="mb-6">
+        <div>
           <CompanyHeader company={company} />
         </div>
 
         {/* Main layout: sidebar TOC + content */}
-        <div className="flex flex-col lg:flex-row items-start gap-6">
+        <div className="flex flex-col lg:flex-row items-start gap-4 sm:gap-6">
           <CompanySidebarTOC />
 
-          <main className="flex-1 min-w-0 space-y-6">
+          <main className="flex-1 min-w-0 space-y-4 sm:space-y-6 w-full">
             <Section01Identity selectedCompany={company} />
             <Section02Ecosystem selectedCompany={company} viewTier={viewTier} setViewTier={setViewTier} />
             <Section03Funding selectedCompany={company} />

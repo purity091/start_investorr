@@ -33,7 +33,7 @@ export function Section01Identity({ selectedCompany }: Props) {
   return (
     <Card id="main-section-1" className="border-0 shadow-sm shadow-slate-200/60 dark:shadow-none rounded-3xl overflow-hidden bg-card space-y-0 pt-0 relative">
       {/* Master Section Header Banner */}
-      <div className="p-6 sm:p-7 bg-muted/30 space-y-5">
+      <div className="p-4 sm:p-7 bg-muted/30 space-y-4 sm:space-y-5">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3.5">
             <div className="p-3 rounded-2xl bg-sky-500/10 text-sky-600 dark:text-sky-400 shrink-0 flex items-center justify-center">
@@ -47,11 +47,11 @@ export function Section01Identity({ selectedCompany }: Props) {
         </div>
 
         {/* Classic Underline Tabs Navigation */}
-        <div className="flex gap-6 overflow-x-auto pt-2">
+        <div className="flex gap-4 sm:gap-6 overflow-x-auto pt-2 pb-1 scrollbar-none max-w-full">
           <button
             type="button"
             onClick={() => setActiveIdentityTab("about")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap relative ${
+            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeIdentityTab === "about"
                 ? "text-sky-600 dark:text-sky-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"
@@ -69,7 +69,7 @@ export function Section01Identity({ selectedCompany }: Props) {
           <button
             type="button"
             onClick={() => setActiveIdentityTab("strategy")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap relative ${
+            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeIdentityTab === "strategy"
                 ? "text-sky-600 dark:text-sky-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"
@@ -87,7 +87,7 @@ export function Section01Identity({ selectedCompany }: Props) {
           <button
             type="button"
             onClick={() => setActiveIdentityTab("legal")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap relative ${
+            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeIdentityTab === "legal"
                 ? "text-sky-600 dark:text-sky-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"
@@ -105,7 +105,7 @@ export function Section01Identity({ selectedCompany }: Props) {
           <button
             type="button"
             onClick={() => setActiveIdentityTab("tech")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap relative ${
+            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeIdentityTab === "tech"
                 ? "text-sky-600 dark:text-sky-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"
@@ -123,7 +123,7 @@ export function Section01Identity({ selectedCompany }: Props) {
       </div>
 
       {/* Master Card Content Area */}
-      <CardContent className="p-6 sm:p-7">
+      <CardContent className="p-4 sm:p-7">
         {/* ABOUT TAB CONTENT */}
         {activeIdentityTab === "about" && (
           <div id="section-about" className="space-y-6">

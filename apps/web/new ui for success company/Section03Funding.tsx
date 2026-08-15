@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Activity } from "lucide-react";
 import { Company } from "../../types";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
 
 interface Props {
   selectedCompany: Company;

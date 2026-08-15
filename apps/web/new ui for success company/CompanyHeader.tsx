@@ -1,7 +1,7 @@
 import { Building, CheckCircle2, ExternalLink, Globe } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent } from "@/components/ui/Card";
 import { Company } from "../../types";
 
 export function CompanyHeader({ company }: { company: Company }) {

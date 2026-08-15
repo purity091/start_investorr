@@ -14,7 +14,7 @@ export function Section03Funding({ selectedCompany }: Props) {
   return (
     <Card id="main-section-3" className="border-0 shadow-sm shadow-slate-200/60 dark:shadow-none rounded-3xl overflow-hidden bg-card space-y-0 pt-0 relative">
       {/* Header Banner with Clean Text Tabs matching Section 5 */}
-      <div className="p-6 sm:p-7 bg-muted/30 space-y-5">
+      <div className="p-4 sm:p-7 bg-muted/30 space-y-4 sm:space-y-5">
         <div className="flex items-center gap-3.5">
           <div className="p-3 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0 flex items-center justify-center">
             <Activity className="h-6 w-6" />
@@ -26,11 +26,11 @@ export function Section03Funding({ selectedCompany }: Props) {
         </div>
 
         {/* Clean Text Tabs matching Section 5 */}
-        <div className="flex gap-6 overflow-x-auto pt-2">
+        <div className="flex gap-4 sm:gap-6 overflow-x-auto pt-2 pb-1 scrollbar-none max-w-full">
           <button
             type="button"
             onClick={() => setActiveFundingTab("funding")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap relative ${
+            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeFundingTab === "funding"
                 ? "text-emerald-600 dark:text-emerald-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"
@@ -45,7 +45,7 @@ export function Section03Funding({ selectedCompany }: Props) {
           <button
             type="button"
             onClick={() => setActiveFundingTab("investments")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap relative ${
+            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeFundingTab === "investments"
                 ? "text-emerald-600 dark:text-emerald-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"

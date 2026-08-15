@@ -17,9 +17,9 @@ import {
   Cpu,
 } from "lucide-react";
 import { Company } from "../../types";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ProLockOverlay } from "./ProLockOverlay";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
+import { ProLockOverlay } from "@/components/company/ProLockOverlay";
 
 interface Props {
   selectedCompany: Company;

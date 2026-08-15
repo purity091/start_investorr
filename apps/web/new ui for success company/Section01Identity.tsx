@@ -19,9 +19,9 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { Company } from "../../types";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
 
 interface Props {
   selectedCompany: Company;
