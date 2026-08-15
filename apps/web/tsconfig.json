@@ -40,7 +40,6 @@
     ".next-dev/dev/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    "new ui for success company"
+    "node_modules"
   ]
 }

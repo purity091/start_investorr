@@ -37,8 +37,8 @@ export function Section04Strategy({ selectedCompany, viewTier, setViewTier }: Pr
             <Target className="h-6 w-6" />
           </div>
           <div>
-            <h3 className="text-lg sm:text-xl font-extrabold tracking-tight text-foreground">التحليل الاستراتيجي وهيكلية النمو</h3>
-            <p className="text-xs sm:text-sm text-muted-foreground font-medium mt-0.5">تحليل SWOT المالي، معمارية الحل البرمجي، استراتيجية التوسع وقنوات الاستحواذ، والدروس الاعتمادية</p>
+            <h3 className="text-base sm:text-xl font-extrabold tracking-tight text-foreground">التحليل الاستراتيجي وهيكلية النمو</h3>
+            <p className="text-[11px] sm:text-sm text-muted-foreground font-medium mt-0.5 leading-relaxed">تحليل SWOT المالي، معمارية الحل البرمجي، استراتيجية التوسع وقنوات الاستحواذ، والدروس الاعتمادية</p>
           </div>
         </div>
 
@@ -47,7 +47,7 @@ export function Section04Strategy({ selectedCompany, viewTier, setViewTier }: Pr
           <button
             type="button"
             onClick={() => setActiveStrategicTab("swot")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
+            className={`pb-3 text-[11px] sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeStrategicTab === "swot"
                 ? "text-amber-600 dark:text-amber-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"
@@ -62,7 +62,7 @@ export function Section04Strategy({ selectedCompany, viewTier, setViewTier }: Pr
           <button
             type="button"
             onClick={() => setActiveStrategicTab("tech")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
+            className={`pb-3 text-[11px] sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeStrategicTab === "tech"
                 ? "text-amber-600 dark:text-amber-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"
@@ -77,7 +77,7 @@ export function Section04Strategy({ selectedCompany, viewTier, setViewTier }: Pr
           <button
             type="button"
             onClick={() => setActiveStrategicTab("expansion")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
+            className={`pb-3 text-[11px] sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeStrategicTab === "expansion"
                 ? "text-amber-600 dark:text-amber-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"
@@ -92,7 +92,7 @@ export function Section04Strategy({ selectedCompany, viewTier, setViewTier }: Pr
           <button
             type="button"
             onClick={() => setActiveStrategicTab("lessons")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
+            className={`pb-3 text-[11px] sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeStrategicTab === "lessons"
                 ? "text-amber-600 dark:text-amber-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"
@@ -107,17 +107,17 @@ export function Section04Strategy({ selectedCompany, viewTier, setViewTier }: Pr
       </div>
 
       {/* Card Content Area */}
-      <CardContent className="p-4 sm:p-7 relative">
+      <CardContent className="p-4 sm:p-7 relative min-h-[220px]">
+        {viewTier === "public" && (
+          <ProLockOverlay
+            title="قسم التحليل الاستراتيجي وهيكلية النمو حصري لباقة مؤسس وقائد"
+            subtitle="ترقية حسابك إلى باقة مؤسس أو قائد للوصول إلى تحليل SWOT، نموذج العمل والحل، استراتيجيات التوسع والدروس الاعتمادية."
+            onUnlock={() => setViewTier("pro")}
+          />
+        )}
         {/* SWOT ANALYSIS TAB CONTENT */}
         {activeStrategicTab === "swot" && (
           <div id="section-swot" className="space-y-4 relative">
-            {viewTier === "public" && (
-              <ProLockOverlay
-                title="تحليل SWOT المالي والتشغيلي (Pro SWOT)"
-                subtitle="التحليل الرباعي النقدي لنقاط القوة والضعف والفرص والتهديدات متاح حصرياً في الباقة الاحترافية."
-                onUnlock={() => setViewTier("pro")}
-              />
-            )}
             {selectedCompany.swotAnalysis ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 {/* 1. STRENGTHS */}

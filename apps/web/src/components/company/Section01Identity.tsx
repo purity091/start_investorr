@@ -40,8 +40,8 @@ export function Section01Identity({ selectedCompany }: Props) {
               <FileJson className="h-6 w-6" />
             </div>
             <div>
-              <h3 className="text-lg sm:text-xl font-extrabold tracking-tight text-foreground">هوية ومعلومات الشركة الرئيسية</h3>
-              <p className="text-xs sm:text-sm text-muted-foreground font-medium mt-0.5">الملف التعريفي الشامل، النماذج الربحية، البيانات القانونية والتنظيمية، ومقاييس حركة الموقع</p>
+              <h3 className="text-base sm:text-xl font-extrabold tracking-tight text-foreground">هوية ومعلومات الشركة الرئيسية</h3>
+              <p className="text-[11px] sm:text-sm text-muted-foreground font-medium mt-0.5 leading-relaxed">الملف التعريفي الشامل، النماذج الربحية، البيانات القانونية والتنظيمية، ومقاييس حركة الموقع</p>
             </div>
           </div>
         </div>
@@ -51,7 +51,7 @@ export function Section01Identity({ selectedCompany }: Props) {
           <button
             type="button"
             onClick={() => setActiveIdentityTab("about")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
+            className={`pb-3 text-[11px] sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeIdentityTab === "about"
                 ? "text-sky-600 dark:text-sky-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"
@@ -69,7 +69,7 @@ export function Section01Identity({ selectedCompany }: Props) {
           <button
             type="button"
             onClick={() => setActiveIdentityTab("strategy")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
+            className={`pb-3 text-[11px] sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeIdentityTab === "strategy"
                 ? "text-sky-600 dark:text-sky-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"
@@ -87,7 +87,7 @@ export function Section01Identity({ selectedCompany }: Props) {
           <button
             type="button"
             onClick={() => setActiveIdentityTab("legal")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
+            className={`pb-3 text-[11px] sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeIdentityTab === "legal"
                 ? "text-sky-600 dark:text-sky-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"
@@ -105,7 +105,7 @@ export function Section01Identity({ selectedCompany }: Props) {
           <button
             type="button"
             onClick={() => setActiveIdentityTab("tech")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
+            className={`pb-3 text-[11px] sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeIdentityTab === "tech"
                 ? "text-sky-600 dark:text-sky-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"

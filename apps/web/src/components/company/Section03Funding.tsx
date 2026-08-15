@@ -4,11 +4,15 @@ import { Company } from "@/types";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 
+import { ProLockOverlay } from "./ProLockOverlay";
+
 interface Props {
   selectedCompany: Company;
+  viewTier?: "public" | "pro";
+  setViewTier?: (tier: "public" | "pro") => void;
 }
 
-export function Section03Funding({ selectedCompany }: Props) {
+export function Section03Funding({ selectedCompany, viewTier, setViewTier }: Props) {
   const [activeFundingTab, setActiveFundingTab] = useState<"funding" | "investments">("funding");
 
   return (
@@ -20,8 +24,8 @@ export function Section03Funding({ selectedCompany }: Props) {
             <Activity className="h-6 w-6" />
           </div>
           <div>
-            <h3 className="text-lg sm:text-xl font-extrabold tracking-tight text-foreground">التمويل والمعاملات الاستثمارية</h3>
-            <p className="text-xs sm:text-sm text-muted-foreground font-medium mt-0.5">سجل جولات التمويل التاريخية، كبار المستثمرين المشاركين، والاستثمارات الخارجية الممنوحة</p>
+            <h3 className="text-base sm:text-xl font-extrabold tracking-tight text-foreground">التمويل والمعاملات الاستثمارية</h3>
+            <p className="text-[11px] sm:text-sm text-muted-foreground font-medium mt-0.5 leading-relaxed">تفاصيل جولات التمويل، المستثمرون المشاركون، والمنح أو الاستثمارات الصادرة من الشركة</p>
           </div>
         </div>
 
@@ -30,7 +34,7 @@ export function Section03Funding({ selectedCompany }: Props) {
           <button
             type="button"
             onClick={() => setActiveFundingTab("funding")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
+            className={`pb-3 text-[11px] sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeFundingTab === "funding"
                 ? "text-emerald-600 dark:text-emerald-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"
@@ -45,7 +49,7 @@ export function Section03Funding({ selectedCompany }: Props) {
           <button
             type="button"
             onClick={() => setActiveFundingTab("investments")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
+            className={`pb-3 text-[11px] sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeFundingTab === "investments"
                 ? "text-emerald-600 dark:text-emerald-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"
@@ -60,7 +64,14 @@ export function Section03Funding({ selectedCompany }: Props) {
       </div>
 
       {/* Card Content Area */}
-      <CardContent className="p-6 sm:p-7 relative">
+      <CardContent className="p-4 sm:p-7 relative min-h-[220px]">
+        {viewTier === "public" && (
+          <ProLockOverlay
+            title="قسم التمويل والمعاملات الاستثمارية حصري لباقة مؤسس وقائد"
+            subtitle="ترقية حسابك إلى باقة مؤسس أو قائد للوصول إلى تفاصيل جولات التمويل، قائمة المستثمرين، والاستثمارات الصادرة."
+            onUnlock={() => setViewTier?.("pro")}
+          />
+        )}
         {/* FUNDING ROUNDS TAB CONTENT */}
         {activeFundingTab === "funding" && (
           <div id="section-funding" className="space-y-4">

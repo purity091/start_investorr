@@ -95,28 +95,15 @@ const SECTIONS: SectionItem[] = [
 
 export const CompanySidebarTOC: React.FC = () => {
   // Collapsed by default on small screens (<1024px) and expanded on desktop (>=1024px)
-  const [isMainOpen, setIsMainOpen] = useState(() => {
-    if (typeof window !== "undefined") {
-      return window.innerWidth >= 1024;
-    }
-    return true;
-  });
+  const [isMainOpen, setIsMainOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 1024) {
-        // Collapsed on mobile by default
-        setIsMainOpen(false);
-      } else {
-        // Expanded on desktop by default
-        setIsMainOpen(true);
+      if (typeof window !== "undefined") {
+        setIsMainOpen(window.innerWidth >= 1024);
       }
     };
-
-    // Run on initial mount if window is available
-    if (typeof window !== "undefined") {
-      setIsMainOpen(window.innerWidth >= 1024);
-    }
+    handleResize();
   }, []);
 
   const [collapsedSections, setCollapsedSections] = useState<Record<string, boolean>>({});
@@ -130,45 +117,48 @@ export const CompanySidebarTOC: React.FC = () => {
   return (
     <div
       className={cn(
-        "sticky top-16 sm:top-24 z-20 transition-all duration-300 shrink-0 w-full",
-        isMainOpen ? "lg:w-64" : "lg:w-16"
+        "sticky top-16 sm:top-24 z-20 transition-all duration-300 shrink-0",
+        isMainOpen ? "w-full lg:w-64" : "w-auto"
       )}
     >
-      <Card className={cn(
-        "shadow-2xs shadow-slate-200/50 dark:shadow-none bg-card rounded-2xl border-0 overflow-hidden transition-all duration-200",
-        isMainOpen ? "p-3 sm:p-4" : "p-1.5"
-      )}>
-        {/* Header Bar */}
-        <div
+      <Card
+        className={cn(
+          "shadow-2xs shadow-slate-200/50 dark:shadow-none bg-card rounded-2xl border-0 overflow-hidden transition-all duration-200",
+          isMainOpen ? "p-3 sm:p-4" : "p-1.5"
+        )}
+      >
+        {/* Toggle Button in First Div */}
+        <button
+          type="button"
           onClick={() => setIsMainOpen(!isMainOpen)}
           className={cn(
-            "text-xs font-bold text-foreground uppercase tracking-wider rounded-xl flex items-center justify-between cursor-pointer select-none transition-colors",
-            isMainOpen ? "px-3 py-2.5 bg-muted/40 hover:bg-muted/70" : "px-3 py-2 bg-muted/30 hover:bg-muted/60"
+            "text-xs font-bold text-foreground rounded-xl flex items-center cursor-pointer select-none transition-colors w-full",
+            isMainOpen
+              ? "px-3 py-2.5 bg-muted/40 hover:bg-muted/70 justify-between"
+              : "px-3 py-2 bg-muted/40 hover:bg-muted/70 justify-center gap-2"
           )}
-          title={isMainOpen ? "طي الفهرس" : "توسعة الفهرس"}
+          title={isMainOpen ? "إخفاء الفهرس" : "عرض الفهرس"}
         >
           <div className="flex items-center gap-2">
             <Layers className="h-4 w-4 text-primary shrink-0" />
-            <span>فهرس المحتويات</span>
-            {!isMainOpen && (
-              <span className="text-[11px] font-normal text-muted-foreground mr-1">
-                (انقر لتوسعة الفهرس)
-              </span>
-            )}
+            <span className={cn(isMainOpen ? "block" : "hidden sm:inline")}>
+              فهرس المحتويات
+            </span>
           </div>
 
-          <button
-            type="button"
-            className="text-muted-foreground hover:text-foreground p-1 rounded-lg transition-colors focus:outline-none"
-            aria-label={isMainOpen ? "طي الفهرس" : "توسعة الفهرس"}
-          >
-            {isMainOpen ? (
-              <PanelRightClose className="h-4 w-4" />
-            ) : (
-              <PanelRightOpen className="h-4 w-4" />
+          <div className="flex items-center gap-1 text-muted-foreground">
+            {!isMainOpen && (
+              <span className="text-[11px] font-normal text-muted-foreground hidden lg:inline">
+                عرض
+              </span>
             )}
-          </button>
-        </div>
+            {isMainOpen ? (
+              <PanelRightClose className="h-4 w-4 shrink-0" />
+            ) : (
+              <PanelRightOpen className="h-4 w-4 shrink-0" />
+            )}
+          </div>
+        </button>
 
         {/* Navigation Content */}
         {isMainOpen && (

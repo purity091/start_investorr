@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Company } from "@/types";
-import { CompanyHeader }      from "@/components/company/CompanyHeader";
-import { CompanySidebarTOC }  from "@/components/company/CompanySidebarTOC";
+import { CompanyHeader } from "@/components/company/CompanyHeader";
 import { Section01Identity }  from "@/components/company/Section01Identity";
 import { Section02Ecosystem } from "@/components/company/Section02Ecosystem";
 import { Section03Funding }   from "@/components/company/Section03Funding";
@@ -14,29 +13,31 @@ interface Props {
 }
 
 export function CompanyViewPage({ company }: Props) {
-  const [viewTier, setViewTier] = useState<"public" | "pro">("public");
+  const [viewTier] = useState<"public" | "pro">("public");
+
+  const handleUnlock = () => {
+    if (typeof window !== "undefined") {
+      window.location.href = "/pricing";
+    }
+  };
 
   return (
     <div dir="rtl" className="min-h-screen bg-background font-sans">
       <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 py-4 sm:py-8 space-y-4 sm:space-y-6">
 
-        {/* Company Header */}
+        {/* First Div: Header Card containing Logo, Details, & Collapsible Index Button */}
         <div>
           <CompanyHeader company={company} />
         </div>
 
-        {/* Main layout: sidebar TOC + content */}
-        <div className="flex flex-col lg:flex-row items-start gap-4 sm:gap-6">
-          <CompanySidebarTOC />
-
-          <main className="flex-1 min-w-0 space-y-4 sm:space-y-6 w-full">
-            <Section01Identity selectedCompany={company} />
-            <Section02Ecosystem selectedCompany={company} viewTier={viewTier} setViewTier={setViewTier} />
-            <Section03Funding selectedCompany={company} />
-            <Section04Strategy selectedCompany={company} viewTier={viewTier} setViewTier={setViewTier} />
-            <Section05Audience selectedCompany={company} viewTier={viewTier} setViewTier={setViewTier} />
-          </main>
-        </div>
+        {/* Main Content Area - Full 100% Width */}
+        <main className="w-full space-y-4 sm:space-y-6">
+          <Section01Identity selectedCompany={company} />
+          <Section02Ecosystem selectedCompany={company} viewTier={viewTier} setViewTier={handleUnlock} />
+          <Section03Funding selectedCompany={company} viewTier={viewTier} setViewTier={handleUnlock} />
+          <Section04Strategy selectedCompany={company} viewTier={viewTier} setViewTier={handleUnlock} />
+          <Section05Audience selectedCompany={company} viewTier={viewTier} setViewTier={handleUnlock} />
+        </main>
       </div>
     </div>
   );

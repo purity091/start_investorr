@@ -24,8 +24,8 @@ export function Section02Ecosystem({ selectedCompany, viewTier, setViewTier }: P
               <Building className="h-6 w-6" />
             </div>
             <div>
-              <h3 className="text-lg sm:text-xl font-extrabold tracking-tight text-foreground">المحيط التنافسي والهيكل التنظيمي</h3>
-              <p className="text-xs sm:text-sm text-muted-foreground font-medium mt-0.5">قوائم المنافسين المباشرين، الهيكل التنظيمي للشركات التابعة، الشركات المماثلة، والقطاعات السوقية المرتبطة</p>
+              <h3 className="text-base sm:text-xl font-extrabold tracking-tight text-foreground">المحيط التنافسي والهيكل التنظيمي</h3>
+              <p className="text-[11px] sm:text-sm text-muted-foreground font-medium mt-0.5 leading-relaxed">قائمة الشركات المنافسة، الشركات التابعة، الشركات المماثلة، والقطاعات الاقتصادية المرتبطة</p>
             </div>
           </div>
         </div>
@@ -35,7 +35,7 @@ export function Section02Ecosystem({ selectedCompany, viewTier, setViewTier }: P
           <button
             type="button"
             onClick={() => setActiveEcosystemTab("competitors")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
+            className={`pb-3 text-[11px] sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeEcosystemTab === "competitors"
                 ? "text-violet-600 dark:text-violet-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"
@@ -59,7 +59,7 @@ export function Section02Ecosystem({ selectedCompany, viewTier, setViewTier }: P
           <button
             type="button"
             onClick={() => setActiveEcosystemTab("suborgs")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
+            className={`pb-3 text-[11px] sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeEcosystemTab === "suborgs"
                 ? "text-violet-600 dark:text-violet-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"
@@ -83,7 +83,7 @@ export function Section02Ecosystem({ selectedCompany, viewTier, setViewTier }: P
           <button
             type="button"
             onClick={() => setActiveEcosystemTab("similar")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
+            className={`pb-3 text-[11px] sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeEcosystemTab === "similar"
                 ? "text-violet-600 dark:text-violet-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"
@@ -107,7 +107,7 @@ export function Section02Ecosystem({ selectedCompany, viewTier, setViewTier }: P
           <button
             type="button"
             onClick={() => setActiveEcosystemTab("sectors")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
+            className={`pb-3 text-[11px] sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${
               activeEcosystemTab === "sectors"
                 ? "text-violet-600 dark:text-violet-400 font-extrabold"
                 : "text-muted-foreground hover:text-foreground"
@@ -131,7 +131,14 @@ export function Section02Ecosystem({ selectedCompany, viewTier, setViewTier }: P
       </div>
 
       {/* Master Card Content Area */}
-      <CardContent className="p-0 relative">
+      <CardContent className="p-4 sm:p-7 relative min-h-[220px]">
+        {viewTier === "public" && (
+          <ProLockOverlay
+            title="قسم المحيط التنافسي حصري لباقة مؤسس وقائد"
+            subtitle="ترقية حسابك إلى باقة مؤسس أو قائد للوصول إلى قائمة المنافسين، الشركات التابعة، والقطاعات الاقتصادية المرتبطة."
+            onUnlock={() => setViewTier("pro")}
+          />
+        )}
         {/* DIRECT COMPETITORS CARD CONTENT */}
         {activeEcosystemTab === "competitors" && (
           <div id="section-competitors" className="overflow-hidden">

@@ -4,6 +4,15 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
+import { Input } from '@/components/ui/Input';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
 import {
   Table,
   TableHeader,
@@ -20,7 +29,6 @@ import {
   ShieldCheck,
   Gift,
   ChevronDown,
-  ChevronUp,
   FileText,
   Layers,
   Rocket,
@@ -30,16 +38,36 @@ import {
   Zap,
   Lock,
   DollarSign,
-  Globe
+  Globe,
+  Upload,
+  AlertCircle,
+  Check,
 } from 'lucide-react';
 import { useAuthModal } from '@/features/auth/AuthModalContext';
+import { useAuth } from '@/features/auth/AuthContext';
+import {
+  SubscriptionPlanId,
+  getSubscriptionPlan,
+  isHigherSubscriptionPlan,
+  normalizeSubscriptionPlanId,
+} from '@/lib/subscriptionPlans';
 import { cn } from '@/lib/utils';
 
 export const PricingPlansGallery: React.FC = () => {
   const { openAuthModal } = useAuthModal();
+  const { user, profile } = useAuth();
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('annual');
   const [currency, setCurrency] = useState<'SAR' | 'USD'>('SAR');
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  // Upgrade Modal State
+  const [upgradeTargetPlan, setUpgradeTargetPlan] = useState<SubscriptionPlanId | null>(null);
+  const [receiptFile, setReceiptFile] = useState<File | null>(null);
+  const [isSubmittingUpgrade, setIsSubmittingUpgrade] = useState(false);
+  const [upgradeMessage, setUpgradeMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+
+  const currentPlanId: SubscriptionPlanId = normalizeSubscriptionPlanId(profile?.subscription_plan);
+  const currentPlan = getSubscriptionPlan(currentPlanId);
 
   const claimedCount = 73;
   const totalSpots = 100;
@@ -47,11 +75,12 @@ export const PricingPlansGallery: React.FC = () => {
 
   const plans = [
     {
-      id: 'pioneer',
+      id: 'starter' as const,
+      legacyId: 'pioneer',
       name: 'باقة رائد',
       icon: Compass,
       tagline: 'للمبتدئين واكتشاف المشاريع',
-      description: 'بداية سلسة تتيح لك بناء واختبار أول 5 مشاريع ونماذج أعمال تجارية.',
+      description: 'بداية سلسة تتيح لك بناء وااختبار أول 5 مشاريع ونماذج أعمال تجارية.',
       priceDisplay: currency === 'SAR' ? '0 ر.س' : '$0',
       priceNote: 'مجاناً للأبد بدون إدخال بطاقة',
       period: 'للأبد',
@@ -76,7 +105,8 @@ export const PricingPlansGallery: React.FC = () => {
       ]
     },
     {
-      id: 'founder',
+      id: 'founder' as const,
+      legacyId: 'founder',
       name: 'باقة مؤسس',
       icon: Rocket,
       tagline: 'الباقة الأكثر اختياراً',
@@ -111,7 +141,8 @@ export const PricingPlansGallery: React.FC = () => {
       ]
     },
     {
-      id: 'leader',
+      id: 'leader' as const,
+      legacyId: 'leader',
       name: 'باقة قائد',
       icon: Crown,
       tagline: 'الباقة القيادية الشاملة',
@@ -192,6 +223,58 @@ export const PricingPlansGallery: React.FC = () => {
     }
   ];
 
+  const closeUpgradeDialog = () => {
+    if (isSubmittingUpgrade) return;
+    setUpgradeTargetPlan(null);
+    setReceiptFile(null);
+    setUpgradeMessage(null);
+  };
+
+  const submitUpgradeRequest = async () => {
+    if (!upgradeTargetPlan || !receiptFile) {
+      setUpgradeMessage({ type: 'error', text: 'يرجى إرفاق صورة أو ملف وصل الحوالة البنكية.' });
+      return;
+    }
+
+    setIsSubmittingUpgrade(true);
+    setUpgradeMessage(null);
+
+    try {
+      const formData = new FormData();
+      formData.append('targetPlan', upgradeTargetPlan);
+      formData.append('receipt', receiptFile);
+
+      const response = await fetch('/api/subscription/upgrade-request', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const payload = (await response.json().catch(() => null)) as { error?: string } | null;
+
+      if (!response.ok) {
+        const message =
+          payload?.error === 'PENDING_REQUEST_EXISTS'
+            ? 'لديك طلب ترقية قيد المراجعة حالياً.'
+            : payload?.error === 'INVALID_RECEIPT_TYPE'
+              ? 'صيغة الوصل غير مدعومة (استخدم PDF أو PNG/JPG).'
+              : payload?.error === 'INVALID_RECEIPT_SIZE'
+                ? 'حجم الملف يتجاوز الحد المسموح (5MB).'
+                : 'تعذر إرسال الطلب، حاول مرة أخرى.';
+        throw new Error(message);
+      }
+
+      setUpgradeMessage({ type: 'success', text: 'تم إرسال الطلب بنجاح! سيتم مراجعة الوصل وتفعيل الباقة مباشرة.' });
+      setReceiptFile(null);
+    } catch (error) {
+      setUpgradeMessage({
+        type: 'error',
+        text: error instanceof Error ? error.message : 'تعذر إرسال طلب الترقية حالياً.',
+      });
+    } finally {
+      setIsSubmittingUpgrade(false);
+    }
+  };
+
   return (
     <div dir="rtl" className="w-full bg-background text-foreground font-sans pb-20 space-y-10">
       
@@ -218,14 +301,16 @@ export const PricingPlansGallery: React.FC = () => {
               <span className="text-primary font-bold">متبقي {remainingSpots} مقعداً فقط</span>
             </div>
 
-            <Button
-              onClick={() => openAuthModal('register')}
-              size="sm"
-              className="font-bold text-xs h-8 px-4 gap-1.5 cursor-pointer shadow-2xs border-0"
-            >
-              <span>انشئ حسابك الآن</span>
-              <ArrowLeft className="size-3.5" />
-            </Button>
+            {!user && (
+              <Button
+                onClick={() => openAuthModal('register')}
+                size="sm"
+                className="font-bold text-xs h-8 px-4 gap-1.5 cursor-pointer shadow-2xs border-0"
+              >
+                <span>انشئ حسابك الآن</span>
+                <ArrowLeft className="size-3.5" />
+              </Button>
+            )}
           </div>
 
         </div>
@@ -245,6 +330,14 @@ export const PricingPlansGallery: React.FC = () => {
         <p className="text-sm text-muted-foreground font-normal leading-relaxed max-w-2xl mx-auto">
           أسعار شفافة وبدون أي رسوم خفية، مع مرونة كاملة لترقية أو إلغاء اشتراكك في أي وقت.
         </p>
+
+        {/* User Active Subscription Banner if Logged In */}
+        {user && (
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 font-bold text-xs border border-emerald-500/20 shadow-2xs">
+            <CheckCircle2 className="size-4 text-emerald-600 shrink-0" />
+            <span>أنت مسجّل دخول حالياً واشتراكك الحالي: <strong>{currentPlan.name}</strong> ({currentPlan.projectLimitLabel})</span>
+          </div>
+        )}
 
         {/* Currency & Billing Cycle Controls */}
         <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -318,12 +411,22 @@ export const PricingPlansGallery: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           {plans.map((plan) => {
             const PlanHeaderIcon = plan.icon;
+            
+            // Check auth state & user's current plan
+            const isCurrentPlan = !!user && currentPlanId === plan.id;
+            const canUpgrade = !!user && isHigherSubscriptionPlan({ currentPlanId, targetPlanId: plan.id });
+            const isLowerPlan = !!user && !isCurrentPlan && !canUpgrade;
+
             return (
               <Card
                 key={plan.id}
                 className={cn(
                   "flex flex-col justify-between relative border-border/60 shadow-xs transition-all",
-                  plan.popular ? "border-primary shadow-sm bg-card ring-1 ring-primary/20" : "bg-card"
+                  isCurrentPlan
+                    ? "border-emerald-500 shadow-sm bg-card ring-2 ring-emerald-500/20"
+                    : plan.popular
+                    ? "border-primary shadow-sm bg-card ring-1 ring-primary/20"
+                    : "bg-card"
                 )}
               >
                 <CardHeader className="p-5 sm:p-6 text-right space-y-3">
@@ -331,9 +434,17 @@ export const PricingPlansGallery: React.FC = () => {
                     <span className="flex size-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
                       <PlanHeaderIcon className="size-5" />
                     </span>
-                    <Badge variant={plan.badgeVariant} className="text-xs font-medium">
-                      {plan.tagline}
-                    </Badge>
+                    
+                    {isCurrentPlan ? (
+                      <Badge variant="default" className="text-xs font-bold gap-1 bg-emerald-600 text-white border-0">
+                        <CheckCircle2 className="size-3" />
+                        <span>باقتك الحالية</span>
+                      </Badge>
+                    ) : (
+                      <Badge variant={plan.badgeVariant} className="text-xs font-medium">
+                        {plan.tagline}
+                      </Badge>
+                    )}
                   </div>
 
                   <div className="space-y-1">
@@ -399,14 +510,49 @@ export const PricingPlansGallery: React.FC = () => {
                 </CardContent>
 
                 <CardFooter className="p-5 sm:p-6 bg-muted/20 border-t border-border/40">
-                  <Button
-                    onClick={() => openAuthModal('register')}
-                    variant={plan.ctaVariant}
-                    className="w-full text-xs font-bold h-9 gap-1.5 cursor-pointer shadow-2xs"
-                  >
-                    <span>{plan.ctaText}</span>
-                    <ArrowLeft className="size-4" />
-                  </Button>
+                  {/* Dynamic CTA button based on user auth state & subscription tier */}
+                  {!user ? (
+                    <Button
+                      onClick={() => openAuthModal('register')}
+                      variant={plan.ctaVariant}
+                      className="w-full text-xs font-bold h-10 gap-1.5 cursor-pointer shadow-2xs"
+                    >
+                      <span>{plan.ctaText}</span>
+                      <ArrowLeft className="size-4" />
+                    </Button>
+                  ) : isCurrentPlan ? (
+                    <Button
+                      disabled
+                      variant="outline"
+                      className="w-full text-xs font-bold h-10 gap-1.5 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/30 cursor-default"
+                    >
+                      <CheckCircle2 className="size-4 text-emerald-600" />
+                      <span>باقتك الحالية النشطة</span>
+                    </Button>
+                  ) : canUpgrade ? (
+                    <Button
+                      onClick={() => {
+                        setUpgradeTargetPlan(plan.id);
+                        setReceiptFile(null);
+                        setUpgradeMessage(null);
+                      }}
+                      variant="default"
+                      className="w-full text-xs font-bold h-10 gap-1.5 cursor-pointer shadow-2xs bg-primary hover:bg-primary/90 text-primary-foreground"
+                    >
+                      <Zap className="size-4 text-amber-300" />
+                      <span>الترقية إلى {plan.name}</span>
+                      <ArrowLeft className="size-4" />
+                    </Button>
+                  ) : isLowerPlan ? (
+                    <Button
+                      disabled
+                      variant="outline"
+                      className="w-full text-xs font-bold h-10 gap-1.5 opacity-60 cursor-default"
+                    >
+                      <Check className="size-4 text-muted-foreground" />
+                      <span>مشمولة في باقتك الحالية</span>
+                    </Button>
+                  ) : null}
                 </CardFooter>
               </Card>
             );
@@ -514,6 +660,82 @@ export const PricingPlansGallery: React.FC = () => {
           })}
         </div>
       </section>
+
+      {/* 6. Upgrade Payment Dialog Modal */}
+      <Dialog open={Boolean(upgradeTargetPlan)} onOpenChange={(open) => !open && closeUpgradeDialog()}>
+        <DialogContent dir="rtl" className="w-[92vw] sm:max-w-[440px] p-0 overflow-hidden rounded-2xl">
+          <DialogHeader className="border-b border-border p-4 text-right bg-muted/20">
+            <div className="flex items-center gap-2.5">
+              <div className="p-2 rounded-xl bg-primary/10 text-primary">
+                <Upload className="size-5" />
+              </div>
+              <div>
+                <DialogTitle className="text-sm font-bold text-foreground">
+                  طلب ترقية الاشتراك
+                </DialogTitle>
+                <DialogDescription className="text-xs text-muted-foreground mt-0.5">
+                  أرفق وصل الحوالة البنكية وسنرافقك فور المراجعة والتفعيل المباشر.
+                </DialogDescription>
+              </div>
+            </div>
+          </DialogHeader>
+
+          <div className="p-4 sm:p-5 space-y-4 text-right">
+            <div className="rounded-xl border border-primary/20 bg-primary/5 p-3 flex items-center justify-between text-xs font-bold">
+              <span className="text-muted-foreground">تفاصيل الترقية:</span>
+              <span className="text-foreground">
+                من <strong>{currentPlan.name}</strong> ➔ <strong>{upgradeTargetPlan ? getSubscriptionPlan(upgradeTargetPlan).name : ''}</strong>
+              </span>
+            </div>
+
+            <div className="space-y-2">
+              <label className="text-xs font-bold text-foreground block">إرفاق وصل الحوالة البنكية (PDF / PNG / JPG)</label>
+              <Input
+                type="file"
+                accept="image/png,image/jpeg,image/webp,application/pdf"
+                onChange={(event) => setReceiptFile(event.target.files?.[0] ?? null)}
+                className="text-xs font-medium cursor-pointer"
+              />
+              <p className="text-[10px] text-muted-foreground">أقصى حجم مسموح للملف: 5MB.</p>
+            </div>
+
+            {receiptFile && (
+              <div className="flex items-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-2.5 text-xs text-emerald-600 font-bold">
+                <CheckCircle2 className="size-4 shrink-0" />
+                <span className="truncate">{receiptFile.name}</span>
+              </div>
+            )}
+
+            {upgradeMessage && (
+              <div
+                className={`flex items-start gap-2 rounded-xl border p-3 text-xs font-bold ${
+                  upgradeMessage.type === 'success'
+                    ? 'border-emerald-500/30 bg-emerald-500/10 text-emerald-600'
+                    : 'border-destructive/30 bg-destructive/10 text-destructive'
+                }`}
+              >
+                <AlertCircle className="size-4 shrink-0 mt-0.5" />
+                <span>{upgradeMessage.text}</span>
+              </div>
+            )}
+          </div>
+
+          <DialogFooter className="border-t border-border p-4 bg-muted/10 flex items-center justify-end gap-2">
+            <Button type="button" variant="outline" size="sm" onClick={closeUpgradeDialog} disabled={isSubmittingUpgrade} className="text-xs font-bold h-9">
+              إلغاء
+            </Button>
+            <Button
+              type="button"
+              size="sm"
+              onClick={submitUpgradeRequest}
+              disabled={isSubmittingUpgrade || !receiptFile}
+              className="font-bold text-xs h-9 gap-1.5 bg-primary text-primary-foreground"
+            >
+              {isSubmittingUpgrade ? 'جارٍ الإرسال...' : 'إرسال طلب الترقية'}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
 
     </div>
   );

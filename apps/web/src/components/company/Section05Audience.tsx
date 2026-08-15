@@ -26,32 +26,36 @@ export function Section05Audience({ selectedCompany, viewTier, setViewTier }: Pr
             <Users className="h-6 w-6" />
           </div>
           <div>
-            <h3 className="text-lg sm:text-xl font-extrabold tracking-tight text-foreground">مصفوفة العملاء والجمهور المستهدف</h3>
-            <p className="text-xs sm:text-sm text-muted-foreground font-medium mt-0.5">مصفوفة 8-Layer ICP للعميل المثالي، قنوات التواصل، ومصفوفة المقارنة والتمركز التنافسي الشامل</p>
+            <h3 className="text-base sm:text-xl font-extrabold tracking-tight text-foreground">مصفوفة العملاء والجمهور المستهدف</h3>
+            <p className="text-[11px] sm:text-sm text-muted-foreground font-medium mt-0.5 leading-relaxed">مصفوفة 8-Layer ICP للعميل المثالي، قنوات التواصل، ومصفوفة المقارنة والتمركز التنافسي الشامل</p>
           </div>
         </div>
 
         <div className="flex gap-4 sm:gap-6 overflow-x-auto pt-2 pb-1 scrollbar-none max-w-full">
           <button type="button" onClick={() => setActiveAudienceTab("audience")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${activeAudienceTab === "audience" ? "text-indigo-600 dark:text-indigo-400 font-extrabold" : "text-muted-foreground hover:text-foreground"}`}>
+            className={`pb-3 text-[11px] sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${activeAudienceTab === "audience" ? "text-indigo-600 dark:text-indigo-400 font-extrabold" : "text-muted-foreground hover:text-foreground"}`}>
             <span>مصفوفة العملاء والشرائح</span>
             {activeAudienceTab === "audience" && <span className="absolute bottom-0 inset-x-0 h-0.5 bg-indigo-500 rounded-full" />}
           </button>
           <button type="button" onClick={() => setActiveAudienceTab("benchmark")}
-            className={`pb-3 text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${activeAudienceTab === "benchmark" ? "text-indigo-600 dark:text-indigo-400 font-extrabold" : "text-muted-foreground hover:text-foreground"}`}>
+            className={`pb-3 text-[11px] sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap shrink-0 relative ${activeAudienceTab === "benchmark" ? "text-indigo-600 dark:text-indigo-400 font-extrabold" : "text-muted-foreground hover:text-foreground"}`}>
             <span>المقارنة والتمركز الاستراتيجي</span>
             {activeAudienceTab === "benchmark" && <span className="absolute bottom-0 inset-x-0 h-0.5 bg-indigo-500 rounded-full" />}
           </button>
         </div>
       </div>
 
-      <CardContent className="p-3.5 sm:p-7 relative">
+      <CardContent className="p-3.5 sm:p-7 relative min-h-[220px]">
+        {viewTier === "public" && (
+          <ProLockOverlay
+            title="قسم مصفوفة العملاء والجمهور المستهدف حصري لباقة مؤسس وقائد"
+            subtitle="ترقية حسابك إلى باقة مؤسس أو قائد للوصول إلى مصفوفة 8-Layer ICP للعميل المثالي ومصفوفة التمركز التنافسي."
+            onUnlock={() => setViewTier("pro")}
+          />
+        )}
         {/* AUDIENCE TAB */}
         {activeAudienceTab === "audience" && (
           <div id="section-target-audience" className="space-y-6 relative">
-            {viewTier === "public" && (
-              <ProLockOverlay title="تحليل العملاء المثاليين (ICP Pro Analytics)" subtitle="التحليل الهيكلي ودوافع الشراء المفصلية للعملاء متاح حصرياً في الوضع الاحترافي." onUnlock={() => setViewTier("pro")} />
-            )}
             {selectedCompany.targetAudienceProfile?.idealCustomerPersonas?.length > 0 ? (
               <div className="rounded-2xl bg-card overflow-hidden">
                 <div className="overflow-x-auto">
