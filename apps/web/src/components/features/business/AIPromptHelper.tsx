@@ -10,6 +10,7 @@ import {
 import { Button } from '@/components/ui/Button';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/Badge';
+import { cn } from '@/lib/utils';
 import {
   Sparkles,
   Copy,
@@ -20,6 +21,9 @@ import {
   AlertCircle,
   Lightbulb,
   ShieldAlert,
+  Maximize2,
+  Minimize2,
+  X,
 } from 'lucide-react';
 
 export function ChatGPTLogo({ className = 'size-4' }: { className?: string }) {
@@ -30,6 +34,30 @@ export function ChatGPTLogo({ className = 'size-4' }: { className?: string }) {
       fill="currentColor"
     >
       <path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7944.7944 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.535-3.0137l.142.0852 4.783 2.7582a.7707.7707 0 0 0 .7855 0l5.8364-3.3693v2.332a.0805.0805 0 0 1-.0332.0615l-4.8399 2.7914a4.4945 4.4945 0 0 1-6.1388-1.6453zm-1.1565-10.428a4.4755 4.4755 0 0 1 2.3414-1.973l-.0047.161-1.002 5.4984v.0047a.7849.7849 0 0 0 .3927.6813l5.8364 3.3693-2.0153 1.1685a.0758.0758 0 0 1-.0711 0l-4.8399-2.7914a4.4945 4.4945 0 0 1-.6375-6.1189zm15.8675 3.0374l-5.8364-3.3693 2.0153-1.1638a.0758.0758 0 0 1 .0711 0l4.8399 2.7914a4.4945 4.4945 0 0 1-.6754 8.0967v-.0047l-4.7783-2.7582a.7802.7802 0 0 0-.7807 0zm2.0105-3.0232l-.142-.0852-4.7735-2.7582a.7707.7707 0 0 0-.7855 0l-5.8364 3.3693v-2.332a.0805.0805 0 0 1 .0332-.0615l4.8399-2.7914a4.4945 4.4945 0 0 1 6.6502 4.659zm-12.642-4.9904a4.4755 4.4755 0 0 1 2.8764 1.0408l-.1419.0804-4.7783 2.7582a.7944.7944 0 0 0-.3927.6813v6.7369l-2.02-1.1686a.071.071 0 0 1-.038-.052v-5.5826a4.504 4.504 0 0 1 4.4945-4.4944zm1.9443 6.9406l3.0425-1.758 3.0426 1.758v3.516l-3.0426 1.758-3.0425-1.758z"/>
+    </svg>
+  );
+}
+
+export function ClaudeLogo({ className = 'size-3.5' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M4.04 15.41a.8.8 0 0 0 .96.65l5.12-1.03a.8.8 0 0 0 .63-.73V7.2a.8.8 0 0 0-1.12-.73L4.51 9.04a.8.8 0 0 0-.47.74v5.63zm15.92-5.63l-5.12-2.57a.8.8 0 0 0-1.12.73v7.1a.8.8 0 0 0 .63.73l5.12 1.03a.8.8 0 0 0 .96-.65V9.78a.8.8 0 0 0-.47-.74zM12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/>
+    </svg>
+  );
+}
+
+export function DeepSeekLogo({ className = 'size-3.5' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-7a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+    </svg>
+  );
+}
+
+export function GeminiLogo({ className = 'size-3.5' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 23c0-6.075-4.925-11-11-11 6.075 0 11-4.925 11-11 0 6.075 4.925 11 11 11-6.075 0-11 4.925-11 11z"/>
     </svg>
   );
 }
@@ -59,6 +87,8 @@ export const AIPromptHelper: React.FC<AIPromptHelperProps> = ({
 }) => {
   const [promptModalOpen, setPromptModalOpen] = useState(false);
   const [pasteModalOpen, setPasteModalOpen] = useState(false);
+  const [isFullScreen, setIsFullScreen] = useState(false);
+  const [isPasteFullScreen, setIsPasteFullScreen] = useState(false);
   const [copied, setCopied] = useState(false);
   const [pastedText, setPastedText] = useState('');
   const [parseError, setParseError] = useState<string | null>(null);
@@ -100,6 +130,18 @@ ${previousAnswersSummary ? `- السياق السابق المكتمل في ال
     } catch {
       setCopied(false);
     }
+  };
+
+  const handleOpenAIModel = async (urlTemplate: string) => {
+    try {
+      await navigator.clipboard.writeText(generatedPrompt);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } catch {
+      // silent fallback
+    }
+    const targetUrl = urlTemplate.replace('{prompt}', encodeURIComponent(generatedPrompt));
+    window.open(targetUrl, '_blank', 'noopener,noreferrer');
   };
 
   const handleParseAndApply = () => {
@@ -183,133 +225,248 @@ ${previousAnswersSummary ? `- السياق السابق المكتمل في ال
 
       {/* Modal 1: Copy Prompt Dialog */}
       <Dialog open={promptModalOpen} onOpenChange={setPromptModalOpen}>
-        <DialogContent className="sm:max-w-[580px] p-0 overflow-hidden" dir="rtl">
-          <DialogHeader className="border-b border-border p-4 sm:p-5 text-right bg-muted/20">
-            <div className="flex items-center gap-2">
-              <div className="p-2 rounded-xl bg-emerald-500/10 text-emerald-600">
-                <ChatGPTLogo className="size-5" />
+        <DialogContent
+          showCloseButton={false}
+          className={cn(
+            "p-0 overflow-hidden transition-all duration-200 flex flex-col border-0 shadow-2xs",
+            isFullScreen
+              ? "w-[96vw] max-w-[96vw] h-[92vh] sm:max-w-[94vw] max-h-[90vh]"
+              : "w-[94vw] sm:max-w-[520px] max-h-[88vh]"
+          )}
+          dir="rtl"
+        >
+          {/* Header with clean non-overlapping action controls */}
+          <DialogHeader className="border-b border-border p-3 sm:p-4 text-right bg-slate-50/50 shrink-0">
+            <div className="flex items-center justify-between gap-2.5">
+              <div className="flex items-center gap-2.5 min-w-0 flex-1">
+                <div className="p-1.5 rounded-lg bg-emerald-500/10 text-emerald-600 shrink-0">
+                  <ChatGPTLogo className="size-4" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <DialogTitle className="text-xs sm:text-sm font-extrabold text-slate-900 truncate">
+                    تعليمة الذكاء الاصطناعي ({sectionTitle})
+                  </DialogTitle>
+                  <DialogDescription className="text-[10px] sm:text-[11px] text-slate-500 truncate mt-0.5">
+                    قم بنسخ التعليمة أو فتحها مباشرة في النموذج المطلوب
+                  </DialogDescription>
+                </div>
               </div>
-              <div>
-                <DialogTitle className="text-base font-extrabold text-foreground">
-                  تعليمة ChatGPT المنضبطة (Structured AI Prompt)
-                </DialogTitle>
-                <DialogDescription className="text-xs text-muted-foreground mt-0.5">
-                  انسخ هذه التعليمة والصقها في ChatGPT للحصول على تحليل بتنسيق JSON يغذي الدراسة مباشرة.
-                </DialogDescription>
+
+              {/* Action Controls Group (Fullscreen & Close) */}
+              <div className="flex items-center gap-1 shrink-0">
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setIsFullScreen(!isFullScreen)}
+                  title={isFullScreen ? "استعادة الحجم" : "عرض ملء الشاشة"}
+                  className="size-7 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-200/60"
+                >
+                  {isFullScreen ? <Minimize2 className="size-3.5" /> : <Maximize2 className="size-3.5" />}
+                </Button>
+
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setPromptModalOpen(false)}
+                  title="إغلاق"
+                  className="size-7 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-200/60"
+                >
+                  <X className="size-3.5" />
+                </Button>
               </div>
             </div>
           </DialogHeader>
 
-          <div className="p-4 sm:p-5 space-y-3.5">
-            {/* Smart Context Guidance Banner */}
-            <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-900 dark:text-amber-200 text-xs flex items-start gap-2.5">
-              <Lightbulb className="size-4 text-amber-600 shrink-0 mt-0.5" />
-              <div className="space-y-0.5">
-                <span className="font-bold block">تطبيق الافتراضات الذكية تلقائياً:</span>
-                <p className="leading-relaxed text-[11px] opacity-90">
-                  إذا لم تكن قد حددت السوق المستهدف بعد، تم تزويد التعليمة بافتراض تلقائي لسوق ({resolvedTargetMarket}) لضمان إجابة دقيقة من الذكاء الاصطناعي.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-center justify-between text-xs">
-              <Badge variant="outline" className="bg-emerald-50 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 font-mono">
-                JSON Format Output
+          {/* Body */}
+          <div className="p-3 sm:p-4 space-y-2.5 flex-1 flex flex-col min-h-0 overflow-y-auto">
+            <div className="flex items-center justify-between text-xs shrink-0">
+              <Badge variant="outline" className="bg-emerald-50 text-emerald-700 border-emerald-200/60 font-mono text-[10px] px-2 py-0.5">
+                JSON Standard Output
               </Badge>
-              <span className="text-muted-foreground font-medium">قسم: {sectionTitle}</span>
+              <span className="text-slate-500 text-[11px] font-medium truncate max-w-[200px]">{projectName}</span>
             </div>
 
-            <div className="relative">
+            <div className={cn("relative flex-1 flex flex-col min-h-0", isFullScreen ? "h-full" : "")}>
               <Textarea
                 readOnly
                 value={generatedPrompt}
-                className="font-mono text-xs leading-relaxed bg-muted/40 min-h-[220px] resize-none text-right dir-rtl p-3 border-border/80 rounded-xl"
+                className={cn(
+                  "font-mono text-[11px] leading-relaxed bg-slate-50/70 resize-none text-right dir-rtl p-3 border-slate-200/80 rounded-xl text-slate-800",
+                  isFullScreen ? "flex-1 min-h-[380px] text-sm leading-loose" : "min-h-[150px] max-h-[220px]"
+                )}
               />
               <Button
                 type="button"
                 size="sm"
                 onClick={handleCopyPrompt}
-                className="absolute top-2.5 left-2.5 gap-1.5 text-xs font-bold bg-primary text-primary-foreground hover:bg-primary/90 h-8 px-3 rounded-lg shadow-2xs"
+                className="absolute top-2.5 left-2.5 gap-1.5 text-xs font-bold bg-slate-900 text-white hover:bg-slate-800 h-7 px-2.5 rounded-lg shadow-2xs z-10"
               >
-                {copied ? <Check className="size-3.5 text-emerald-300" /> : <Copy className="size-3.5" />}
-                <span>{copied ? 'تم نسخ التعليمة!' : 'نسخ التعليمة'}</span>
+                {copied ? <Check className="size-3.5 text-emerald-400" /> : <Copy className="size-3.5" />}
+                <span>{copied ? 'تم النسخ' : 'نسخ النص'}</span>
               </Button>
+            </div>
+
+            {/* Standalone AI Direct Launch Bar */}
+            <div className="p-2.5 rounded-xl bg-slate-50/80 border border-slate-200/60 flex items-center justify-between gap-2 overflow-x-auto whitespace-nowrap flex-nowrap shrink-0">
+              <span className="text-[11px] font-bold text-slate-600 flex items-center gap-1.5 shrink-0 me-1">
+                <ExternalLink className="size-3.5 text-emerald-600" />
+                <span>فتح مباشرة في:</span>
+              </span>
+
+              <div className="flex items-center gap-1.5 flex-nowrap shrink-0">
+                {/* ChatGPT */}
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="xs"
+                  onClick={() => handleOpenAIModel('https://chatgpt.com/?q={prompt}')}
+                  title="فتح في ChatGPT مع التعليمة تلقائياً"
+                  className="gap-1.5 font-bold text-[11px] border-emerald-200 text-emerald-700 bg-emerald-50/80 hover:bg-emerald-100/80 h-7 rounded-lg px-2.5 shrink-0"
+                >
+                  <ChatGPTLogo className="size-3.5 text-emerald-600 shrink-0" />
+                  <span>ChatGPT</span>
+                </Button>
+
+                {/* Claude */}
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="xs"
+                  onClick={() => handleOpenAIModel('https://claude.ai/new?q={prompt}')}
+                  title="فتح في Claude مع التعليمة تلقائياً"
+                  className="gap-1.5 font-bold text-[11px] border-amber-200 text-amber-800 bg-amber-50/80 hover:bg-amber-100/80 h-7 rounded-lg px-2.5 shrink-0"
+                >
+                  <ClaudeLogo className="size-3.5 text-amber-600 shrink-0" />
+                  <span>Claude</span>
+                </Button>
+
+                {/* DeepSeek */}
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="xs"
+                  onClick={() => handleOpenAIModel('https://chat.deepseek.com/?q={prompt}')}
+                  title="فتح في DeepSeek مع التعليمة تلقائياً"
+                  className="gap-1.5 font-bold text-[11px] border-blue-200 text-blue-700 bg-blue-50/80 hover:bg-blue-100/80 h-7 rounded-lg px-2.5 shrink-0"
+                >
+                  <DeepSeekLogo className="size-3.5 text-blue-600 shrink-0" />
+                  <span>DeepSeek</span>
+                </Button>
+
+                {/* Gemini */}
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="xs"
+                  onClick={() => handleOpenAIModel('https://gemini.google.com/app?q={prompt}')}
+                  title="فتح في Gemini مع التعليمة تلقائياً"
+                  className="gap-1.5 font-bold text-[11px] border-purple-200 text-purple-700 bg-purple-50/80 hover:bg-purple-100/80 h-7 rounded-lg px-2.5 shrink-0"
+                >
+                  <GeminiLogo className="size-3.5 text-purple-600 shrink-0" />
+                  <span>Gemini</span>
+                </Button>
+              </div>
             </div>
           </div>
 
-          <DialogFooter className="border-t border-border p-4 bg-muted/10 flex flex-col sm:flex-row items-center justify-between gap-2">
+          {/* Standalone Dialog Footer */}
+          <DialogFooter className="border-t border-border p-3 sm:p-3.5 bg-slate-50/40 flex flex-row items-center justify-between gap-2 shrink-0">
             <Button
               type="button"
-              variant="outline"
-              asChild
-              className="w-full sm:w-auto gap-2 font-bold text-xs border-emerald-600/30 text-emerald-700 dark:text-emerald-300 hover:bg-emerald-500/10 h-9"
+              variant="secondary"
+              size="sm"
+              onClick={() => {
+                setPromptModalOpen(false);
+                setPasteModalOpen(true);
+              }}
+              className="font-bold text-xs gap-1.5 h-8 bg-slate-100 hover:bg-slate-200 text-slate-800"
             >
-              <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer">
-                <ChatGPTLogo className="size-4 shrink-0" />
-                <span>الانتقال إلى ChatGPT</span>
-                <ExternalLink className="size-3.5" />
-              </a>
+              <ClipboardPaste className="size-3.5" />
+              <span>لصق الإجابة هنا</span>
             </Button>
 
-            <div className="flex items-center gap-2 w-full sm:w-auto">
-              <Button
-                type="button"
-                variant="secondary"
-                size="sm"
-                onClick={() => {
-                  setPromptModalOpen(false);
-                  setPasteModalOpen(true);
-                }}
-                className="w-full sm:w-auto font-bold text-xs gap-1.5 h-9"
-              >
-                <ClipboardPaste className="size-3.5" />
-                <span>لصق الإجابة الآن</span>
-              </Button>
-              <Button
-                type="button"
-                variant="ghost"
-                size="sm"
-                onClick={() => setPromptModalOpen(false)}
-                className="h-9 text-xs"
-              >
-                إغلاق
-              </Button>
-            </div>
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              onClick={() => setPromptModalOpen(false)}
+              className="h-8 text-xs font-medium text-slate-500 hover:text-slate-800"
+            >
+              إغلاق
+            </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
 
       {/* Modal 2: Paste & Apply AI Answer Dialog */}
       <Dialog open={pasteModalOpen} onOpenChange={setPasteModalOpen}>
-        <DialogContent className="sm:max-w-[500px] p-0 overflow-hidden" dir="rtl">
-          <DialogHeader className="border-b border-border p-4 sm:p-5 text-right bg-muted/20">
-            <div className="flex items-center gap-2">
-              <div className="p-2 rounded-xl bg-indigo-500/10 text-indigo-600">
-                <ClipboardPaste className="size-5" />
+        <DialogContent
+          showCloseButton={false}
+          className={cn(
+            "p-0 overflow-hidden transition-all duration-200 flex flex-col border-0 shadow-2xs",
+            isPasteFullScreen
+              ? "w-[96vw] max-w-[96vw] h-[92vh] sm:max-w-[94vw] max-h-[90vh]"
+              : "w-[94vw] sm:max-w-[480px] max-h-[88vh]"
+          )}
+          dir="rtl"
+        >
+          <DialogHeader className="border-b border-border p-3 sm:p-4 text-right bg-slate-50/50 shrink-0">
+            <div className="flex items-center justify-between gap-2.5">
+              <div className="flex items-center gap-2.5 min-w-0 flex-1">
+                <div className="p-1.5 rounded-lg bg-indigo-500/10 text-indigo-600 shrink-0">
+                  <ClipboardPaste className="size-4" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <DialogTitle className="text-xs sm:text-sm font-extrabold text-slate-900 truncate">
+                    لصق واستخراج الإجابة
+                  </DialogTitle>
+                  <DialogDescription className="text-[10px] sm:text-[11px] text-slate-500 truncate mt-0.5">
+                    الصق مخرج الذكاء الاصطناعي لاستخراج النص وتغذية الدراسة تلقائياً
+                  </DialogDescription>
+                </div>
               </div>
-              <div>
-                <DialogTitle className="text-base font-extrabold text-foreground">
-                  لصق واستخراج إجابة الذكاء الاصطناعي
-                </DialogTitle>
-                <DialogDescription className="text-xs text-muted-foreground mt-0.5">
-                  الصق مخرج ChatGPT المنسوخ (JSON أو نص) لاستخراج الإجابة وتغذية الخلية تلقائياً.
-                </DialogDescription>
+
+              {/* Action Controls Group (Fullscreen & Close) */}
+              <div className="flex items-center gap-1 shrink-0">
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setIsPasteFullScreen(!isPasteFullScreen)}
+                  title={isPasteFullScreen ? "استعادة الحجم" : "عرض ملء الشاشة"}
+                  className="size-7 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-200/60"
+                >
+                  {isPasteFullScreen ? <Minimize2 className="size-3.5" /> : <Maximize2 className="size-3.5" />}
+                </Button>
+
+                <Button
+                  type="button"
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setPasteModalOpen(false)}
+                  title="إغلاق"
+                  className="size-7 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-200/60"
+                >
+                  <X className="size-3.5" />
+                </Button>
               </div>
             </div>
           </DialogHeader>
 
-          <div className="p-4 sm:p-5 space-y-3">
-            <div className="flex items-center justify-between">
-              <label className="text-xs font-bold text-foreground">نص أو كود الذكاء الاصطناعي (JSON)</label>
+          <div className="p-3.5 sm:p-4 space-y-2.5 flex-1 flex flex-col min-h-0 overflow-y-auto">
+            <div className="flex items-center justify-between shrink-0">
+              <label className="text-[11px] font-bold text-slate-700">مخرج الذكاء الاصطناعي (JSON أو نص)</label>
               <Button
                 type="button"
                 variant="ghost"
                 size="xs"
                 onClick={handleClipboardPasteDirect}
-                className="text-xs text-indigo-600 dark:text-indigo-400 gap-1 font-bold h-6 px-2"
+                className="text-[11px] text-indigo-600 hover:text-indigo-700 gap-1 font-bold h-6 px-2"
               >
                 <ClipboardPaste className="size-3" />
-                <span>لصق من الحافظة</span>
+                <span>لصق سريح</span>
               </Button>
             </div>
 
@@ -319,25 +476,28 @@ ${previousAnswersSummary ? `- السياق السابق المكتمل في ال
                 setPastedText(e.target.value);
                 setParseError(null);
               }}
-              placeholder={`الصق الإجابة هنا، مثال:\n{\n  "answer": "تستهدف المنصة التشاركية قطاع الشركات والمؤسسات الصغيرة..."\n}`}
-              className="font-mono text-xs leading-relaxed min-h-[160px] resize-y text-right dir-rtl p-3 border-border rounded-xl"
+              placeholder={`الصق المخرج هنا...`}
+              className={cn(
+                "font-mono text-xs leading-relaxed border-slate-200/80 rounded-xl text-right dir-rtl p-3 bg-slate-50/40 text-slate-800",
+                isPasteFullScreen ? "flex-1 min-h-[380px] text-sm leading-loose resize-none" : "min-h-[150px] max-h-[240px] resize-y"
+              )}
             />
 
             {parseError && (
-              <div className="flex items-center gap-1.5 text-xs text-destructive bg-destructive/10 p-2.5 rounded-lg border border-destructive/20 font-medium">
+              <div className="flex items-center gap-1.5 text-xs text-destructive bg-destructive/10 p-2.5 rounded-lg border border-destructive/20 font-medium shrink-0">
                 <AlertCircle className="size-4 shrink-0" />
                 <span>{parseError}</span>
               </div>
             )}
           </div>
 
-          <DialogFooter className="border-t border-border p-4 bg-muted/10 flex flex-col sm:flex-row items-center justify-end gap-2">
+          <DialogFooter className="border-t border-border p-3 sm:p-3.5 bg-slate-50/40 flex flex-col sm:flex-row items-center justify-end gap-2 shrink-0">
             <Button
               type="button"
               variant="outline"
               size="sm"
               onClick={() => setPasteModalOpen(false)}
-              className="w-full sm:w-auto text-xs font-bold"
+              className="w-full sm:w-auto text-xs font-bold h-8 text-slate-600"
             >
               إلغاء
             </Button>
@@ -346,10 +506,10 @@ ${previousAnswersSummary ? `- السياق السابق المكتمل في ال
               size="sm"
               onClick={handleParseAndApply}
               disabled={!pastedText.trim()}
-              className="w-full sm:w-auto font-bold text-xs gap-1.5 bg-indigo-600 hover:bg-indigo-700 text-white"
+              className="w-full sm:w-auto font-bold text-xs gap-1.5 bg-indigo-600 hover:bg-indigo-700 text-white h-8"
             >
               <Sparkles className="size-3.5" />
-              <span>استخراج الإجابة وتطبيقها</span>
+              <span>تطبيق الإجابة في الدراسة</span>
             </Button>
           </DialogFooter>
         </DialogContent>

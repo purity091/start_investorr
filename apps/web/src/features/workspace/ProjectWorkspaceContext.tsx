@@ -31,7 +31,16 @@ interface ProjectWorkspaceContextValue {
   cycleFirstCustomerTaskStatus: (id: string) => void;
   toggleChecklistItem: (groupId: string, itemId: string) => void;
   loadProject: (id: string) => Promise<ProjectWorkspace | null>;
-  createProject: (title: string, mode: string) => Promise<string | null>;
+  createProject: (
+    title: string,
+    mode: string,
+    initialMetadata?: {
+      sectorLabel?: string;
+      targetMarket?: string;
+      customerType?: string;
+      opportunitySummary?: string;
+    }
+  ) => Promise<string | null>;
   clearActiveProject: (id?: string) => void;
   flushWorkspace: () => Promise<void>;
   isSaving: boolean;
@@ -529,22 +538,46 @@ export const ProjectWorkspaceProvider: React.FC<{
     void loadProject(projectId);
   }, [loadProject, user]);
 
-  const createProject = useCallback(async (title: string, mode: string) => {
-    if (!user) return null;
-    try {
-      if (activeProjectIdRef.current) {
-        await flushWorkspace();
-        if (workspaceRevisionRef.current !== persistedRevisionRef.current) {
-          await flushWorkspace();
-        }
+  const createProject = useCallback(
+    async (
+      title: string,
+      mode: string,
+      initialMetadata?: {
+        sectorLabel?: string;
+        targetMarket?: string;
+        customerType?: string;
+        opportunitySummary?: string;
       }
+    ) => {
+      if (!user) return null;
+      try {
+        if (activeProjectIdRef.current) {
+          await flushWorkspace();
+          if (workspaceRevisionRef.current !== persistedRevisionRef.current) {
+            await flushWorkspace();
+          }
+        }
 
-      const initial = createInitialWorkspace(planSections);
-      initial.profile.name = title;
-      const initialWithMetadata = {
-        ...initial,
-        feasibilityModelType: mode,
-      };
+        const initial = createInitialWorkspace(planSections);
+        initial.profile.name = title;
+        initial.profile.opportunityTitle = title;
+        if (initialMetadata?.sectorLabel) {
+          initial.profile.sectorLabel = initialMetadata.sectorLabel;
+        }
+        if (initialMetadata?.targetMarket) {
+          initial.profile.countryLabel = initialMetadata.targetMarket;
+        }
+        if (initialMetadata?.customerType) {
+          initial.profile.customerType = initialMetadata.customerType;
+        }
+        if (initialMetadata?.opportunitySummary) {
+          initial.profile.opportunitySummary = initialMetadata.opportunitySummary;
+        }
+
+        const initialWithMetadata = {
+          ...initial,
+          feasibilityModelType: mode,
+        };
 
       const plan = getSubscriptionPlan(profile?.subscription_plan);
       if (plan.projectLimit !== null) {

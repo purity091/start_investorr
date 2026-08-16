@@ -20,6 +20,10 @@ import {
   Eye,
   FolderKanban,
   ExternalLink,
+  Search,
+  Check,
+  Globe,
+  X,
 } from 'lucide-react';
 
 import SmartBeginnerPro from '../../../features/easy-mode/SmartBeginnerPro';
@@ -35,6 +39,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from '../../ui/dialog';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../../ui/table';
 import { IdeaCreation, CreationMode } from './IdeaCreation';
 import { ExampleViewer } from './ExampleViewer';
@@ -410,11 +415,57 @@ export const NewPlan: React.FC<{
   const [useFallbackEditor, setUseFallbackEditor] = useState(false);
   const [editProjectError, setEditProjectError] = useState<string | null>(null);
   const [projectName, setProjectName] = useState('');
+  const [projectSector, setProjectSector] = useState('التجارة الإلكترونية والتجزئة');
+  const [selectedMarkets, setSelectedMarkets] = useState<string[]>(['المملكة العربية السعودية']);
+  const [marketSearchQuery, setMarketSearchQuery] = useState('');
+  const [customerType, setCustomerType] = useState('B2C - أفراد ومستهلكين');
+  const [opportunitySummary, setOpportunitySummary] = useState('');
   const [projectCreationError, setProjectCreationError] = useState<string | null>(null);
   const [pendingStart, setPendingStart] = useState<
     { type: 'mode'; mode: IntroMode } | { type: 'template'; template: Template } | null
   >(null);
   const canUseFallbackEditor = Boolean(fallbackEditor);
+
+  const ALL_INDIVIDUAL_COUNTRIES = [
+    'المملكة العربية السعودية',
+    'الإمارات العربية المتحدة',
+    'الكويت',
+    'قطر',
+    'سلطنة عمان',
+    'البحرين',
+    'جمهورية مصر العربية',
+    'الأردن',
+    'العراق',
+    'المغرب',
+    'تونس',
+    'الجزائر',
+    'لبنان',
+    'فلسطين',
+    'ليبيا',
+    'السودان',
+    'اليمن',
+    'سوريا',
+    'موريتانيا',
+    'الصومال',
+    'جيبوتي',
+    'جزر القمر',
+    'الولايات المتحدة الأمريكية',
+    'المملكة المتحدة',
+    'تركيا',
+    'ألمانيا',
+    'فرنسا',
+    'الصين',
+    'الهند',
+    'كندا',
+    'أستراليا',
+    'ماليزيا',
+    'إندونيسيا',
+    'دول أخرى / سوق عالمي',
+  ];
+
+  const filteredCountries = ALL_INDIVIDUAL_COUNTRIES.filter((country) =>
+    country.toLowerCase().includes(marketSearchQuery.trim().toLowerCase())
+  );
 
   const isIntroMode = mode === 'family' || mode === 'easy' || mode === 'mit24' || mode === 'bmc' || mode === 'lean';
 
@@ -462,6 +513,11 @@ export const NewPlan: React.FC<{
     if (!isIntroMode || isStartingProject) return;
     const intro = TOOL_INTROS[mode as IntroMode];
     setProjectName('');
+    setProjectSector('التجارة الإلكترونية والتجزئة');
+    setSelectedMarkets(['المملكة العربية السعودية']);
+    setMarketSearchQuery('');
+    setCustomerType('B2C - أفراد ومستهلكين');
+    setOpportunitySummary('');
     setProjectCreationError(null);
     setPendingStart({ type: 'mode', mode: mode as IntroMode });
     setSubTabLabel(intro.title);
@@ -470,6 +526,22 @@ export const NewPlan: React.FC<{
   const startTemplateProject = (template: Template) => {
     if (isStartingProject) return;
     setProjectName('');
+    if (template.id === 'saas') {
+      setProjectSector('التقنية والبرمجيات (SaaS)');
+      setCustomerType('B2B - شركات ومؤسسات');
+    } else if (template.id === 'retail') {
+      setProjectSector('التجارة الإلكترونية والتجزئة');
+      setCustomerType('B2C - أفراد ومستهلكين');
+    } else if (template.id === 'services') {
+      setProjectSector('الخدمات والاستشارات');
+      setCustomerType('B2B - شركات ومؤسسات');
+    } else {
+      setProjectSector('التجارة الإلكترونية والتجزئة');
+      setCustomerType('B2C - أفراد ومستهلكين');
+    }
+    setSelectedMarkets(['المملكة العربية السعودية']);
+    setMarketSearchQuery('');
+    setOpportunitySummary('');
     setProjectCreationError(null);
     setPendingStart({ type: 'template', template });
   };
@@ -478,6 +550,8 @@ export const NewPlan: React.FC<{
     if (isStartingProject && !force) return;
     setPendingStart(null);
     setProjectName('');
+    setOpportunitySummary('');
+    setMarketSearchQuery('');
     setProjectCreationError(null);
   };
 
@@ -490,7 +564,14 @@ export const NewPlan: React.FC<{
     setProjectCreationError(null);
     try {
       const projectMode = pendingStart.type === 'mode' ? pendingStart.mode : pendingStart.template.id;
-      const projectId = await createProject(trimmedName, projectMode);
+      const targetMarketString = selectedMarkets.length > 0 ? selectedMarkets.join('، ') : 'المملكة العربية السعودية';
+
+      const projectId = await createProject(trimmedName, projectMode, {
+        sectorLabel: projectSector,
+        targetMarket: targetMarketString,
+        customerType,
+        opportunitySummary: opportunitySummary.trim() || undefined,
+      });
 
       if (projectId) {
         window.location.assign(getProjectEditPath(projectId));
@@ -505,38 +586,225 @@ export const NewPlan: React.FC<{
 
   const projectNameDialog = (
     <Dialog open={Boolean(pendingStart)} onOpenChange={(open) => !open && closeProjectNameDialog()}>
-      <DialogContent className="sm:max-w-[440px]" dir="rtl">
-        <DialogHeader className="text-right">
-          <DialogTitle>تسمية دراسة الجدوى</DialogTitle>
-          <DialogDescription>
-            اكتب اسم المشروع أولًا حتى يتم حفظ الدراسة في قاعدة البيانات وظهورها في صفحة مشاريعي.
+      <DialogContent className="sm:max-w-[580px] max-h-[90vh] overflow-y-auto border-0 shadow-2xs" dir="rtl">
+        <DialogHeader className="text-right space-y-1 border-0">
+          <DialogTitle className="text-lg font-bold flex items-center gap-2 text-foreground">
+            <Sparkles className="size-5 text-primary shrink-0" />
+            تحديد بيانات وسياق المشروع الجديد
+          </DialogTitle>
+          <DialogDescription className="text-xs text-muted-foreground leading-relaxed">
+            هذه المعلومات تُشكل القاعدة الأساسية لمساعد الذكاء الاصطناعي لتوليد تحليلات واقتراحات دقيقة ومخصصة لمشروعك.
           </DialogDescription>
         </DialogHeader>
-        <div className="space-y-2 py-2">
-          <Input
-            autoFocus
-            value={projectName}
-            onChange={(event) => setProjectName(event.target.value)}
-            onKeyDown={(event) => {
-              if (event.key === 'Enter') {
-                event.preventDefault();
-                void confirmProjectCreation();
-              }
-            }}
-            placeholder="مثال: منصة حجوزات العيادات"
-            className="h-11 text-right"
-          />
+
+        <div className="space-y-4 py-2 text-right">
+          {/* Project Name */}
+          <div className="space-y-1.5">
+            <label className="text-xs font-bold text-foreground block">
+              اسم المشروع <span className="text-destructive">*</span>
+            </label>
+            <Input
+              autoFocus
+              value={projectName}
+              onChange={(event) => setProjectName(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' && projectName.trim()) {
+                  event.preventDefault();
+                  void confirmProjectCreation();
+                }
+              }}
+              placeholder="مثال: منصة حجوزات العيادات الطبية"
+              className="h-10 text-xs border-0 bg-muted/40 text-right focus:bg-background transition-colors"
+            />
+          </div>
+
+          {/* Sector / Industry */}
+          <div className="space-y-1.5">
+            <label className="text-xs font-bold text-foreground block">
+              قطاع المشروع / المجال
+            </label>
+            <Select value={projectSector} onValueChange={setProjectSector}>
+              <SelectTrigger className="h-10 text-xs border-0 bg-muted/40 text-right">
+                <SelectValue placeholder="اختر القطاع" />
+              </SelectTrigger>
+              <SelectContent dir="rtl" className="text-right border-0 shadow-md">
+                <SelectItem value="التجارة الإلكترونية والتجزئة" className="text-xs">التجارة الإلكترونية والتجزئة</SelectItem>
+                <SelectItem value="التقنية والبرمجيات (SaaS)" className="text-xs">التقنية والبرمجيات (SaaS)</SelectItem>
+                <SelectItem value="الخدمات والاستشارات" className="text-xs">الخدمات والاستشارات</SelectItem>
+                <SelectItem value="المطاعم والضيافة" className="text-xs">المطاعم والضيافة</SelectItem>
+                <SelectItem value="التقنية الصحية (HealthTech)" className="text-xs">التقنية الصحية (HealthTech)</SelectItem>
+                <SelectItem value="التعليم والتدريب (EdTech)" className="text-xs">التعليم والتدريب (EdTech)</SelectItem>
+                <SelectItem value="الخدمات اللوجستية والنقل" className="text-xs">الخدمات اللوجستية والنقل</SelectItem>
+                <SelectItem value="العقارات والإنشاءات" className="text-xs">العقارات والإنشاءات</SelectItem>
+                <SelectItem value="الصناعة والإنتاج" className="text-xs">الصناعة والإنتاج</SelectItem>
+                <SelectItem value="قطاع آخر" className="text-xs">قطاع آخر</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          {/* Target Market (Multi-Select & Searchable) */}
+          <div className="space-y-2">
+            <div className="flex items-center justify-between">
+              <label className="text-xs font-bold text-foreground flex items-center gap-1.5">
+                <Globe className="size-3.5 text-primary shrink-0" />
+                السوق المستهدف (حدد دولة أو مجموعة دول)
+              </label>
+              <div className="flex items-center gap-2">
+                {selectedMarkets.length > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => setSelectedMarkets([])}
+                    className="text-[10px] text-muted-foreground hover:text-destructive font-medium cursor-pointer"
+                  >
+                    مسح الكل
+                  </button>
+                )}
+                <span className="text-[10px] font-bold bg-primary/10 text-primary px-2 py-0.5 rounded-full">
+                  {selectedMarkets.length} مختارة
+                </span>
+              </div>
+            </div>
+
+            {/* Selected Pills */}
+            {selectedMarkets.length > 0 && (
+              <div className="flex flex-wrap gap-1.5 p-2 bg-muted/20 rounded-lg max-h-24 overflow-y-auto">
+                {selectedMarkets.map((country) => (
+                  <span
+                    key={country}
+                    className="inline-flex items-center gap-1 text-[11px] font-bold bg-primary text-primary-foreground px-2 py-0.5 rounded-md shadow-2xs"
+                  >
+                    {country}
+                    <button
+                      type="button"
+                      onClick={() => setSelectedMarkets((prev) => prev.filter((c) => c !== country))}
+                      className="hover:bg-primary-foreground/20 cursor-pointer p-0.5 rounded-full transition-colors"
+                    >
+                      <X className="size-3" />
+                    </button>
+                  </span>
+                ))}
+              </div>
+            )}
+
+            {/* Search Input & Country Grid */}
+            <div className="space-y-2">
+              <div className="relative">
+                <Search className="size-3.5 text-muted-foreground absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+                <Input
+                  value={marketSearchQuery}
+                  onChange={(e) => setMarketSearchQuery(e.target.value)}
+                  placeholder="ابحث عن دولة (مثال: السعودية، مصر، الإمارات...)"
+                  className="h-9 text-xs border-0 bg-muted/40 pr-9 text-right focus:bg-background transition-colors"
+                />
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5 max-h-40 overflow-y-auto p-1.5 bg-muted/20 rounded-lg">
+                {filteredCountries.map((country) => {
+                  const isSelected = selectedMarkets.includes(country);
+                  return (
+                    <button
+                      key={country}
+                      type="button"
+                      onClick={() => {
+                        setSelectedMarkets((prev) =>
+                          isSelected ? prev.filter((c) => c !== country) : [...prev, country]
+                        );
+                      }}
+                      className={cn(
+                        'flex items-center justify-between p-2 rounded-md text-[11px] transition-all cursor-pointer text-right',
+                        isSelected
+                          ? 'bg-primary/10 text-primary font-bold shadow-2xs ring-1 ring-primary/30'
+                          : 'bg-background/60 text-foreground hover:bg-muted font-medium'
+                      )}
+                    >
+                      <span className="truncate">{country}</span>
+                      {isSelected && <Check className="size-3 shrink-0 ms-1 text-primary" />}
+                    </button>
+                  );
+                })}
+                {filteredCountries.length === 0 && (
+                  <p className="col-span-3 text-center text-xs text-muted-foreground py-3">
+                    لا توجد نتائج تطابق "{marketSearchQuery}"
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Customer Segment */}
+          <div className="space-y-1.5">
+            <label className="text-xs font-bold text-foreground block">
+              شريحة العملاء المستهدفة
+            </label>
+            <div className="grid grid-cols-3 gap-2">
+              {[
+                { id: 'B2C - أفراد ومستهلكين', label: 'B2C (أفراد)', desc: 'مستهلكين مباشرة' },
+                { id: 'B2B - شركات ومؤسسات', label: 'B2B (شركات)', desc: 'أعمال ومؤسسات' },
+                { id: 'B2B2C - شركات وأفراد', label: 'B2B2C (مزدوج)', desc: 'منصات ووساطة' },
+              ].map((item) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => setCustomerType(item.id)}
+                  className={cn(
+                    'flex flex-col items-center justify-center p-2.5 rounded-lg border-0 text-center transition-all cursor-pointer',
+                    customerType === item.id
+                      ? 'bg-primary/10 text-primary font-bold shadow-2xs ring-1 ring-primary/30'
+                      : 'bg-muted/30 text-muted-foreground hover:bg-muted/60 hover:text-foreground'
+                  )}
+                >
+                  <span className="text-xs font-bold">{item.label}</span>
+                  <span className="text-[10px] opacity-75 mt-0.5">{item.desc}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Opportunity Summary / Brief */}
+          <div className="space-y-1.5">
+            <label className="text-xs font-bold text-foreground block">
+              وصف مبسط للفكرة أو الحل <span className="text-muted-foreground font-normal">(اختياري)</span>
+            </label>
+            <textarea
+              value={opportunitySummary}
+              onChange={(event) => setOpportunitySummary(event.target.value)}
+              placeholder="شرح مختصر في سطرين عن المشكلة والحل..."
+              rows={2}
+              className="w-full rounded-lg border-0 bg-muted/40 p-2.5 text-xs text-foreground placeholder:text-muted-foreground focus:bg-background outline-none transition-colors resize-none text-right"
+            />
+          </div>
+
+          {/* Context Note Box */}
+          <div className="rounded-lg bg-primary/5 p-3 flex items-start gap-2.5 text-right border-0">
+            <Badge variant="secondary" className="bg-primary/10 text-primary border-0 shrink-0 mt-0.5 text-[10px] font-bold">
+              تلقيم الذكاء الاصطناعي
+            </Badge>
+            <p className="text-[11px] leading-5 text-muted-foreground">
+              تُحفظ هذه البيانات تلقائياً في قاعدة البيانات وتُمرر فوراً لمحرك AI لضمان توجيه النماذج الذكية بدقة متناهية.
+            </p>
+          </div>
+
           {projectCreationError ? (
-            <p role="alert" className="text-sm leading-6 text-destructive">
+            <p role="alert" className="text-xs leading-5 text-destructive font-medium">
               {projectCreationError}
             </p>
           ) : null}
         </div>
-        <DialogFooter>
-          <Button onClick={() => void confirmProjectCreation()} disabled={!projectName.trim() || isStartingProject}>
-            {isStartingProject ? 'جاري الإنشاء...' : 'إنشاء الدراسة'}
+
+        <DialogFooter className="gap-2 sm:gap-0 border-0">
+          <Button
+            onClick={() => void confirmProjectCreation()}
+            disabled={!projectName.trim() || isStartingProject}
+            className="w-full sm:w-auto shadow-2xs border-0 font-bold"
+          >
+            {isStartingProject ? 'جاري إنشاء وتثبيت السياق...' : 'إنشاء الدراسة والبدء'}
           </Button>
-          <Button variant="outline" onClick={() => closeProjectNameDialog()} disabled={isStartingProject}>
+          <Button
+            variant="outline"
+            onClick={() => closeProjectNameDialog()}
+            disabled={isStartingProject}
+            className="w-full sm:w-auto border-0 bg-muted/40 hover:bg-muted/70"
+          >
             إلغاء
           </Button>
         </DialogFooter>

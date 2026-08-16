@@ -40,7 +40,7 @@
     "stockSymbol": "غير مدرجة (Private)",
     "companyType": "شركة مساهمة مقفلة (Closed Joint Stock)",
     "founders": [
-      "نواف حاسر",
+      "نواف الحريري",
       "سلمان بات"
     ],
     "phoneNumber": "+966920011028",
@@ -102,7 +102,7 @@
     "keyPeople": [
       {
         "id": "kp1",
-        "name": "نواف حاسر",
+        "name": "نواف الحريري",
         "title": "الشريك المؤسس والرئيس التنفيذي (Co-Founder & CEO)",
         "photoUrl": "",
         "pastRole": "مهندس برمجيات ورائد أعمال تقني"

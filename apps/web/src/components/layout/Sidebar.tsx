@@ -66,6 +66,10 @@ import {
   SidebarSeparator,
   useSidebar,
 } from '../ui/sidebar';
+import {
+  loadSavedMarketItems,
+  loadBookmarkedProjectIds,
+} from '../features/discovery/problemDetailStorage';
 
 const MARKET_DISCOVERY_DASHBOARDS = [
   'advertising-dashboard', 'brands-leaders-dashboard', 'marketing-dashboard', 'farming-dashboard',
@@ -336,6 +340,7 @@ const withProjectBuildCounts = (
     switch (item.tab) {
       case 'new-plan-family':
         return { ...item, badge: counts.easy };
+      case 'new-plan-pro':
       case 'strategic-dashboard':
         return { ...item, badge: counts.pro };
       case 'new-plan-mit24':
@@ -344,6 +349,29 @@ const withProjectBuildCounts = (
         return { ...item, badge: counts.bmc };
       case 'new-plan-lean':
         return { ...item, badge: counts.lean };
+      default:
+        return item;
+    }
+  });
+
+const withQuickAccessCounts = (
+  items: NavItemConfig[],
+  counts: ProjectBuildCounts,
+  savedCount: number,
+): NavItemConfig[] =>
+  items.map((item) => {
+    switch (item.tab) {
+      case 'my-plans': {
+        const total =
+          counts.easy +
+          counts.pro +
+          counts.mit24 +
+          counts.bmc +
+          counts.lean;
+        return { ...item, badge: total > 0 ? total : undefined };
+      }
+      case 'saved-market-items':
+        return { ...item, badge: savedCount > 0 ? savedCount : undefined };
       default:
         return item;
     }
@@ -359,7 +387,9 @@ function goToTab(
   setActiveTab?: (tab: string) => void,
 ) {
   event.preventDefault();
+  event.stopPropagation();
   setActiveTab?.(tab);
+  window.dispatchEvent(new CustomEvent('khotta:navigate', { detail: { tab } }));
 }
 
 function SidebarLink({
@@ -380,9 +410,9 @@ function SidebarLink({
       <SidebarMenuButton
         asChild
         isActive={isActive}
-        tooltip={item.label}
+        tooltip={item.tooltipText || item.label}
         className={cn(
-          "h-auto py-2 min-h-9.5 justify-start gap-2.5 px-3 text-right text-sm leading-relaxed transition-all rounded-xl",
+          "h-auto py-2 min-h-9.5 justify-start gap-2.5 px-3 text-right text-sm leading-relaxed transition-all rounded-xl cursor-pointer group-data-[collapsible=icon]:!h-9 group-data-[collapsible=icon]:!w-9 group-data-[collapsible=icon]:!min-h-0 group-data-[collapsible=icon]:!p-0 group-data-[collapsible=icon]:!justify-center",
           isActive
             ? "!bg-slate-900 !text-white font-bold shadow-sm hover:!bg-slate-900 hover:!text-white"
             : "text-slate-700 font-semibold hover:bg-slate-100 hover:text-slate-900"
@@ -395,9 +425,10 @@ function SidebarLink({
             goToTab(event, item.tab, setActiveTab);
             if (isMobile) setOpenMobile(false);
           }}
+          className="flex w-full items-center gap-2.5 rounded-xl transition-colors group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:w-auto"
         >
           <Icon className={cn("size-4.5 shrink-0 transition-transform group-hover:scale-105", isActive ? "!text-white" : item.iconColor || "text-slate-600")} />
-          <span className={cn("min-w-0 flex-1", isActive ? "!text-white font-bold" : "font-semibold")}>
+          <span className={cn("min-w-0 flex-1 group-data-[collapsible=icon]:hidden", isActive ? "!text-white font-bold" : "font-semibold")}>
             {item.label}
           </span>
           {item.badge !== undefined && item.badge !== null && item.badge !== '' ? (
@@ -453,85 +484,57 @@ function SidebarSection({
                 const isActive = isItemActive(item, activeTab);
                 const isDisabled = Boolean(item.disabled);
 
-                const linkElement = (
-                  <a
-                    id={item.id}
-                    href={isDisabled ? '#' : getTabPath(item.tab)}
-                    onClick={(event) => {
-                      if (isDisabled) {
-                        event.preventDefault();
-                        return;
-                      }
-                      goToTab(event, item.tab, setActiveTab);
-                      if (isMobile) setOpenMobile(false);
-                    }}
-                    className={cn(
-                      "flex w-full items-center gap-2.5 rounded-xl transition-colors",
-                      isDisabled && "opacity-75 cursor-not-allowed"
-                    )}
-                  >
-                    <SubIcon className={cn("size-4.5 shrink-0 transition-transform group-hover:scale-105", isActive ? "!text-white" : item.iconColor || "text-slate-600")} />
-
-                    <span className={cn("min-w-0 flex-1", isActive ? "font-bold !text-white text-sm" : "font-semibold text-sm text-slate-700")}>
-                      {item.label}
-                    </span>
-
-                    {item.badge !== undefined && item.badge !== null && item.badge !== '' ? (
-                      <span
-                        className={cn(
-                          "ms-auto flex h-5 min-w-5 shrink-0 items-center justify-center rounded-md px-1.5 text-[11px] font-bold tabular-nums group-data-[collapsible=icon]:hidden",
-                          isActive
-                            ? "!bg-white/20 !text-white font-bold"
-                            : item.badgeClassName || "bg-sidebar-accent text-sidebar-foreground"
-                        )}
-                      >
-                        {item.badge}
-                      </span>
-                    ) : null}
-                  </a>
-                );
-
                 return (
                   <SidebarMenuItem key={`${title}-${item.tab}-${item.label}`}>
-                    {item.tooltipText ? (
-                      <TooltipProvider delayDuration={100}>
-                        <Tooltip>
-                          <TooltipTrigger asChild>
-                            <SidebarMenuButton
-                              asChild
-                              isActive={isActive}
-                              disabled={isDisabled}
-                              className={cn(
-                                "h-auto py-2 min-h-9.5 justify-start gap-2.5 px-3 text-right text-sm leading-relaxed transition-all rounded-xl",
-                                isActive
-                                  ? "!bg-slate-900 !text-white font-bold shadow-sm hover:!bg-slate-900 hover:!text-white"
-                                  : "text-slate-700 font-semibold hover:bg-slate-100 hover:text-slate-900",
-                                isDisabled && "hover:bg-amber-500/10 cursor-not-allowed"
-                              )}
-                            >
-                              {linkElement}
-                            </SidebarMenuButton>
-                          </TooltipTrigger>
-                          <TooltipContent side="left" dir="rtl" className="max-w-xs text-xs p-3 leading-relaxed shadow-md bg-popover text-popover-foreground border border-border">
-                            {item.tooltipText}
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
-                    ) : (
-                      <SidebarMenuButton
-                        asChild
-                        isActive={isActive}
-                        disabled={isDisabled}
+                    <SidebarMenuButton
+                      asChild
+                      isActive={isActive}
+                      disabled={isDisabled}
+                      tooltip={item.tooltipText || item.label}
+                      className={cn(
+                        "h-auto py-2 min-h-9.5 justify-start gap-2.5 px-3 text-right text-sm leading-relaxed transition-all rounded-xl cursor-pointer group-data-[collapsible=icon]:!h-9 group-data-[collapsible=icon]:!w-9 group-data-[collapsible=icon]:!min-h-0 group-data-[collapsible=icon]:!p-0 group-data-[collapsible=icon]:!justify-center",
+                        isActive
+                          ? "!bg-slate-900 !text-white font-bold shadow-sm hover:!bg-slate-900 hover:!text-white"
+                          : "text-slate-700 font-semibold hover:bg-slate-100 hover:text-slate-900",
+                        isDisabled && "hover:bg-amber-500/10 cursor-not-allowed"
+                      )}
+                    >
+                      <a
+                        id={item.id}
+                        href={isDisabled ? '#' : getTabPath(item.tab)}
+                        onClick={(event) => {
+                          if (isDisabled) {
+                            event.preventDefault();
+                            return;
+                          }
+                          goToTab(event, item.tab, setActiveTab);
+                          if (isMobile) setOpenMobile(false);
+                        }}
                         className={cn(
-                          "h-auto py-2 min-h-9.5 justify-start gap-2.5 px-3 text-right text-sm leading-relaxed transition-all rounded-xl",
-                          isActive
-                            ? "!bg-slate-900 !text-white font-bold shadow-sm hover:!bg-slate-900 hover:!text-white"
-                            : "text-slate-700 font-semibold hover:bg-slate-100 hover:text-slate-900"
+                          "flex w-full items-center gap-2.5 rounded-xl transition-colors group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:w-auto",
+                          isDisabled && "opacity-75 cursor-not-allowed"
                         )}
                       >
-                        {linkElement}
-                      </SidebarMenuButton>
-                    )}
+                        <SubIcon className={cn("size-4.5 shrink-0 transition-transform group-hover:scale-105", isActive ? "!text-white" : item.iconColor || "text-slate-600")} />
+
+                        <span className={cn("min-w-0 flex-1 group-data-[collapsible=icon]:hidden", isActive ? "font-bold !text-white text-sm" : "font-semibold text-sm text-slate-700")}>
+                          {item.label}
+                        </span>
+
+                        {item.badge !== undefined && item.badge !== null && item.badge !== '' ? (
+                          <span
+                            className={cn(
+                              "ms-auto flex h-5 min-w-5 shrink-0 items-center justify-center rounded-md px-1.5 text-[11px] font-bold tabular-nums group-data-[collapsible=icon]:hidden",
+                              isActive
+                                ? "!bg-white/20 !text-white font-bold"
+                                : item.badgeClassName || "bg-sidebar-accent text-sidebar-foreground"
+                            )}
+                          >
+                            {item.badge}
+                          </span>
+                        ) : null}
+                      </a>
+                    </SidebarMenuButton>
                   </SidebarMenuItem>
                 );
               })}
@@ -649,6 +652,23 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
     };
   }, [authUser?.id, activeTab]);
 
+  const [savedCount, setSavedCount] = React.useState(0);
+
+  React.useEffect(() => {
+    try {
+      const marketItems = loadSavedMarketItems();
+      const bookmarked = loadBookmarkedProjectIds();
+      setSavedCount(marketItems.length + bookmarked.length);
+    } catch {
+      setSavedCount(0);
+    }
+  }, [activeTab]);
+
+  const quickAccessItems = React.useMemo(
+    () => withQuickAccessCounts(QUICK_ACCESS, projectBuildCounts, savedCount),
+    [projectBuildCounts, savedCount],
+  );
+
   const projectBuildItems = React.useMemo(
     () => withProjectBuildCounts(PROJECT_BUILD, projectBuildCounts),
     [projectBuildCounts],
@@ -698,7 +718,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ user, activeTab = 'home', setA
           </>
         ) : (
           <>
-            <SidebarSection title="الوصول السريع" items={QUICK_ACCESS} activeTab={activeTab} setActiveTab={setActiveTab} />
+            <SidebarSection title="الوصول السريع" items={quickAccessItems} activeTab={activeTab} setActiveTab={setActiveTab} />
             <SidebarSection title="بناء دراسة جدوى مشروع" items={projectBuildItems} activeTab={activeTab} setActiveTab={setActiveTab} />
             <SidebarSection title="أفكار مشاريع" items={PROJECT_IDEAS} activeTab={activeTab} setActiveTab={setActiveTab} />
             <SidebarSection title="ملحقات المشروع" items={PROJECT_ATTACHMENTS} activeTab={activeTab} setActiveTab={setActiveTab} />

@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Badge } from '@/components/ui/Badge';
-import { ProvenProjectProfile } from '@/components/features/business/ProvenProjectProfile';
+import { CompanyViewPage } from '@/components/company/CompanyViewPage';
+import { mapProjectToCompany } from '@/components/views/ProvenProjectsGallery';
 import { ProvenProjectsTable } from '@/components/features/business/ProvenProjectsTable';
 import { fetchPublicJson, prefetchPublicJson } from '@/lib/publicData';
 import { Loader2 } from 'lucide-react';
@@ -91,7 +92,8 @@ export const FailedProjectsGallery: React.FC<FailedProjectsGalleryProps> = ({ se
   };
 
   if (selectedProject) {
-    return <ProvenProjectProfile project={selectedProject} onBack={() => handleProjectSelect(null)} bookmarkSource="failed-projects" />;
+    const company = mapProjectToCompany(selectedProject);
+    return <CompanyViewPage company={company} onBack={() => handleProjectSelect(null)} />;
   }
 
   return (

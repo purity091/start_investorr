@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { ProvenProjectProfile } from '@/components/features/business/ProvenProjectProfile';
+import { CompanyViewPage } from '@/components/company/CompanyViewPage';
+import { mapProjectToCompany } from '@/components/views/ProvenProjectsGallery';
 import { ProvenProjectsTable } from '@/components/features/business/ProvenProjectsTable';
 import { fetchPublicJson } from '@/lib/publicData';
 import { CheckCircle2, TrendingDown, Loader2, Layers } from 'lucide-react';
@@ -133,7 +134,8 @@ export const SaaSIdeasGallery: React.FC<SaaSIdeasGalleryProps> = ({ setSubTabLab
   };
 
   if (selectedProject) {
-    return <ProvenProjectProfile project={selectedProject} onBack={() => handleProjectSelect(null)} bookmarkSource={selectedProjectSource} />;
+    const company = mapProjectToCompany(selectedProject);
+    return <CompanyViewPage company={company} onBack={() => handleProjectSelect(null)} />;
   }
 
   return (

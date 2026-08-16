@@ -7,7 +7,7 @@ export function fetchPublicJson<T>(url: string): Promise<T> {
     return cached as Promise<T>;
   }
 
-  const request = fetch(url, { cache: "force-cache" }).then(async (response) => {
+  const request = fetch(url, { cache: "default" }).then(async (response) => {
     if (!response.ok) {
       throw new Error(`Failed to fetch public JSON: ${response.status} ${url}`);
     }

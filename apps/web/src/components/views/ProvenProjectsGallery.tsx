@@ -16,7 +16,10 @@ interface ProvenProjectsGalleryProps {
  * Maps raw proven-project JSON (legacy shape) → Company interface
  * for the new company profile UI.
  */
-function mapProjectToCompany(raw: any): Company {
+export function mapProjectToCompany(raw: any): Company {
+  if (Array.isArray(raw)) raw = raw[0];
+  if (!raw) return {} as Company;
+
   const c = raw?.company || {};
   const fin = raw?.financials || {};
   const snap = raw?.directory_snapshot || {};
