@@ -125,15 +125,20 @@ export const AuthModal: React.FC<AuthModalProps> = ({
       }
 
       if (mode === 'login') {
-        await postAuthAction('/api/auth/login', { email, password });
-        const { error: browserAuthError } = await supabase.auth.signInWithPassword({ email, password });
+        const normalizedEmail = email.trim().toLowerCase();
+        const { error: browserAuthError } = await supabase.auth.signInWithPassword({
+          email: normalizedEmail,
+          password,
+        });
         if (browserAuthError) throw browserAuthError;
+        const { data: { session } } = await supabase.auth.getSession();
+        if (!session) throw new Error('AUTH_SESSION_NOT_CREATED');
         if (rememberMe) {
           localStorage.setItem('khotta_remember_me', 'true');
         } else {
           localStorage.removeItem('khotta_remember_me');
         }
-        window.location.href = getSafeRedirectPath();
+        window.location.replace(getSafeRedirectPath());
       } else if (mode === 'register') {
         const registration = await postAuthAction('/api/auth/register', { name, email, password, subscriptionPlan });
         if (!registration?.sessionCreated) {

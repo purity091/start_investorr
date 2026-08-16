@@ -1,4 +1,6 @@
-import { useState } from "react";
+"use client";
+
+import { useAuth } from '@/features/auth/AuthContext';
 import { Company } from "@/types";
 import { CompanyHeader } from "@/components/company/CompanyHeader";
 import { Section01Identity }  from "@/components/company/Section01Identity";
@@ -13,7 +15,10 @@ interface Props {
 }
 
 export function CompanyViewPage({ company }: Props) {
-  const [viewTier] = useState<"public" | "pro">("public");
+  const { profile, loading } = useAuth();
+  const hasProAccess = profile?.subscription_plan === 'founder' || profile?.subscription_plan === 'leader';
+  // Avoid showing a false lock while the authenticated profile is still loading.
+  const viewTier: 'public' | 'pro' = loading || hasProAccess ? 'pro' : 'public';
 
   const handleUnlock = () => {
     if (typeof window !== "undefined") {
@@ -42,3 +47,5 @@ export function CompanyViewPage({ company }: Props) {
     </div>
   );
 }
+
+export default CompanyViewPage;

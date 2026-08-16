@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import {
   Target,
@@ -195,13 +197,6 @@ export function Section04Strategy({ selectedCompany, viewTier, setViewTier }: Pr
         {/* BUSINESS MODEL & TECH SOLUTION TAB CONTENT */}
         {activeStrategicTab === "tech" && (
           <div id="section-business-tech" className="space-y-4 relative">
-            {viewTier === "public" && (
-              <ProLockOverlay
-                title="نموذج العمل والحل التقني (Tech Architecture Pro)"
-                subtitle="تفاصيل البنية التحتية والمزايا التشغيلية المعمارية متاحة حصرياً في الباقة الاحترافية."
-                onUnlock={() => setViewTier("pro")}
-              />
-            )}
             {selectedCompany.techSolutionDetails ? (
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
                 {/* Left 5 Cols: Architecture & Infrastructure */}
@@ -252,13 +247,6 @@ export function Section04Strategy({ selectedCompany, viewTier, setViewTier }: Pr
         {/* EXPANSION STRATEGY TAB CONTENT */}
         {activeStrategicTab === "expansion" && (
           <div id="section-expansion" className="space-y-6 relative">
-            {viewTier === "public" && (
-              <ProLockOverlay
-                title="استراتيجية التوسع وقنوات النمو (Growth Strategy Pro)"
-                subtitle="خارطة طريق المحطات التوسعية والأسواق المستهدفة متاحة حصرياً للمشتركين."
-                onUnlock={() => setViewTier("pro")}
-              />
-            )}
             {selectedCompany.expansionStrategy ? (
               <>
                 {/* Top 2 Pillar Cards */}
@@ -328,13 +316,6 @@ export function Section04Strategy({ selectedCompany, viewTier, setViewTier }: Pr
         {/* LESSONS LEARNED & VERIFIED EVIDENCE TAB CONTENT */}
         {activeStrategicTab === "lessons" && (
           <div id="section-lessons-evidence" className="space-y-4 relative">
-            {viewTier === "public" && (
-              <ProLockOverlay
-                title="الدروس وشواهد التوثيق (Evidence & Certifications)"
-                subtitle="الشهادات المعتمدة وأفضل الممارسات المستفادة متاحة حصرياً للمشتركين."
-                onUnlock={() => setViewTier("pro")}
-              />
-            )}
             {selectedCompany.lessonAndEvidence ? (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                 {/* Left Column: Lessons Learned */}

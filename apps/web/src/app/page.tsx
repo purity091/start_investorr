@@ -292,27 +292,27 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                <div className="space-y-1 text-right">
-                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1.5">
+                <div className="space-y-1 text-center flex flex-col items-center">
+                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors flex items-center justify-center gap-1.5">
                     اكتشف المشروع
                   </h3>
-                  <p className="text-xs text-muted-foreground font-medium leading-relaxed">
+                  <p className="text-xs text-muted-foreground font-medium leading-relaxed text-center">
                     تصفح أكثر من +500 فكرة SaaS واطلع على تحليل الفرص الميدانية ورادار القطاعات الأكثر نمواً لتحديد وجهتك بثقة.
                   </p>
                 </div>
 
-                <div className="pt-2 border-t border-border/60 space-y-1.5 text-right">
-                  <span className="text-[11px] font-bold text-foreground block mb-1">الأدوات المتاحة في هذه الخطوة:</span>
-                  <ul className="space-y-1 text-[11px] text-muted-foreground font-medium">
-                    <li className="flex items-center gap-1.5">
+                <div className="pt-2 border-t border-border/60 space-y-1.5 text-center flex flex-col items-center w-full">
+                  <span className="text-[11px] font-bold text-foreground block mb-1 text-center">الأدوات المتاحة في هذه الخطوة:</span>
+                  <ul className="space-y-1 text-[11px] text-muted-foreground font-medium text-center">
+                    <li className="flex items-center justify-center gap-1.5">
                       <CheckCircle2 className="size-3 text-blue-600 shrink-0" />
                       <span>قاعدة أفكار SaaS & Micro-SaaS</span>
                     </li>
-                    <li className="flex items-center gap-1.5">
+                    <li className="flex items-center justify-center gap-1.5">
                       <CheckCircle2 className="size-3 text-blue-600 shrink-0" />
                       <span>رادار استكشاف القطاعات والأسواق</span>
                     </li>
-                    <li className="flex items-center gap-1.5">
+                    <li className="flex items-center justify-center gap-1.5">
                       <CheckCircle2 className="size-3 text-blue-600 shrink-0" />
                       <span>تفكيك دراسات الشركات الناجحة</span>
                     </li>
@@ -335,27 +335,27 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                <div className="space-y-1 text-right">
-                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1.5">
+                <div className="space-y-1 text-center flex flex-col items-center">
+                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors flex items-center justify-center gap-1.5">
                     حلل المشروع
                   </h3>
-                  <p className="text-xs text-muted-foreground font-medium leading-relaxed">
+                  <p className="text-xs text-muted-foreground font-medium leading-relaxed text-center">
                     قيم الجدوى الاقتصادية واحسب الإيرادات الدورية المتوقعة (MRR / ARR) وتفادَ أسباب الفشل الشائعة للمشاريع المتعثرة.
                   </p>
                 </div>
 
-                <div className="pt-2 border-t border-border/60 space-y-1.5 text-right">
-                  <span className="text-[11px] font-bold text-foreground block mb-1">الأدوات المتاحة في هذه الخطوة:</span>
-                  <ul className="space-y-1 text-[11px] text-muted-foreground font-medium">
-                    <li className="flex items-center gap-1.5">
+                <div className="pt-2 border-t border-border/60 space-y-1.5 text-center flex flex-col items-center w-full">
+                  <span className="text-[11px] font-bold text-foreground block mb-1 text-center">الأدوات المتاحة في هذه الخطوة:</span>
+                  <ul className="space-y-1 text-[11px] text-muted-foreground font-medium text-center">
+                    <li className="flex items-center justify-center gap-1.5">
                       <CheckCircle2 className="size-3 text-emerald-600 shrink-0" />
                       <span>حاسبة الإيرادات الدورية و LTV</span>
                     </li>
-                    <li className="flex items-center gap-1.5">
+                    <li className="flex items-center justify-center gap-1.5">
                       <CheckCircle2 className="size-3 text-emerald-600 shrink-0" />
                       <span>تقييم الجدوى والمخاطر المالية</span>
                     </li>
-                    <li className="flex items-center gap-1.5">
+                    <li className="flex items-center justify-center gap-1.5">
                       <CheckCircle2 className="size-3 text-emerald-600 shrink-0" />
                       <span>تحليل دروس الشركات المتعثرة</span>
                     </li>
@@ -378,27 +378,27 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                <div className="space-y-1 text-right">
-                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1.5">
+                <div className="space-y-1 text-center flex flex-col items-center">
+                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors flex items-center justify-center gap-1.5">
                     ابنِ نموذج العمل
                   </h3>
-                  <p className="text-xs text-muted-foreground font-medium leading-relaxed">
+                  <p className="text-xs text-muted-foreground font-medium leading-relaxed text-center">
                     صمّم الأركان الـ 9 لنموذج عملك التجاري (BMC) واستخرج عرض القيمة الفريدة وحلل شريحة العملاء بمساعدة الذكاء الاصطناعي.
                   </p>
                 </div>
 
-                <div className="pt-2 border-t border-border/60 space-y-1.5 text-right">
-                  <span className="text-[11px] font-bold text-foreground block mb-1">الأدوات المتاحة في هذه الخطوة:</span>
-                  <ul className="space-y-1 text-[11px] text-muted-foreground font-medium">
-                    <li className="flex items-center gap-1.5">
+                <div className="pt-2 border-t border-border/60 space-y-1.5 text-center flex flex-col items-center w-full">
+                  <span className="text-[11px] font-bold text-foreground block mb-1 text-center">الأدوات المتاحة في هذه الخطوة:</span>
+                  <ul className="space-y-1 text-[11px] text-muted-foreground font-medium text-center">
+                    <li className="flex items-center justify-center gap-1.5">
                       <CheckCircle2 className="size-3 text-purple-600 shrink-0" />
                       <span>استوديو نماذج العمل التجاري (BMC)</span>
                     </li>
-                    <li className="flex items-center gap-1.5">
+                    <li className="flex items-center justify-center gap-1.5">
                       <CheckCircle2 className="size-3 text-purple-600 shrink-0" />
                       <span>تقييم وتوجيه الذكاء الاصطناعي</span>
                     </li>
-                    <li className="flex items-center gap-1.5">
+                    <li className="flex items-center justify-center gap-1.5">
                       <CheckCircle2 className="size-3 text-purple-600 shrink-0" />
                       <span>استوديو صياغة الهوية البصرية</span>
                     </li>
@@ -421,27 +421,27 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                <div className="space-y-1 text-right">
-                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors flex items-center gap-1.5">
+                <div className="space-y-1 text-center flex flex-col items-center">
+                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors flex items-center justify-center gap-1.5">
                     نفّذ وانطلق
                   </h3>
-                  <p className="text-xs text-muted-foreground font-medium leading-relaxed">
+                  <p className="text-xs text-muted-foreground font-medium leading-relaxed text-center">
                     حوّل نموذج عملك إلى خطة عمل تنفيذية لأول 90 يوماً، وشارك المستندات والروابط التفاعلية مع مستثمرين وشركاء بأمان.
                   </p>
                 </div>
 
-                <div className="pt-2 border-t border-border/60 space-y-1.5 text-right">
-                  <span className="text-[11px] font-bold text-foreground block mb-1">الأدوات المتاحة في هذه الخطوة:</span>
-                  <ul className="space-y-1 text-[11px] text-muted-foreground font-medium">
-                    <li className="flex items-center gap-1.5">
+                <div className="pt-2 border-t border-border/60 space-y-1.5 text-center flex flex-col items-center w-full">
+                  <span className="text-[11px] font-bold text-foreground block mb-1 text-center">الأدوات المتاحة في هذه الخطوة:</span>
+                  <ul className="space-y-1 text-[11px] text-muted-foreground font-medium text-center">
+                    <li className="flex items-center justify-center gap-1.5">
                       <CheckCircle2 className="size-3 text-amber-600 shrink-0" />
                       <span>خريطة التنفيذ الميداني لأول 90 يوماً</span>
                     </li>
-                    <li className="flex items-center gap-1.5">
+                    <li className="flex items-center justify-center gap-1.5">
                       <CheckCircle2 className="size-3 text-amber-600 shrink-0" />
                       <span>مشاركة الخطط بروابط محمية</span>
                     </li>
-                    <li className="flex items-center gap-1.5">
+                    <li className="flex items-center justify-center gap-1.5">
                       <CheckCircle2 className="size-3 text-amber-600 shrink-0" />
                       <span>دليل الإرشادات في أكاديمية خطة</span>
                     </li>
@@ -454,17 +454,17 @@ export default function LandingPage() {
 
           {/* Bottom Interactive Callout Banner */}
           <div className="mt-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-primary/10 via-primary/5 to-card border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xs">
-            <div className="space-y-1.5 text-center sm:text-right">
+            <div className="space-y-1.5 text-center flex flex-col items-center sm:items-start sm:text-right">
               <div className="flex items-center justify-center sm:justify-start gap-2">
                 <Badge className="bg-primary text-primary-foreground text-[10px] font-bold px-2.5 py-0.5 rounded-full">
                   الرحلة تبدأ الآن
                 </Badge>
                 <span className="text-xs font-bold text-muted-foreground">أين يقع مشروعك اليوم؟</span>
               </div>
-              <h4 className="text-lg sm:text-xl font-black text-foreground">
+              <h4 className="text-lg sm:text-xl font-black text-foreground text-center sm:text-right">
                 جاهز لبدء رحلة مشروعك من الاستكشاف وحتى التنفيذ؟
               </h4>
-              <p className="text-xs text-muted-foreground font-medium max-w-2xl leading-relaxed">
+              <p className="text-xs text-muted-foreground font-medium max-w-2xl leading-relaxed text-center sm:text-right">
                 لا تضيع وقتك في البحث بين عشرات المنصات، خريطة "خطة" تجمع لك كل ما تحتاجه لبناء مشروع ناجح في مكان واحد.
               </p>
             </div>
@@ -504,11 +504,11 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             {/* Model 1: Business Model Canvas (BMC) */}
-            <Card className="border-0 shadow-2xs hover:shadow-md transition-all bg-card rounded-3xl p-6 relative overflow-hidden text-right group flex flex-col justify-between">
+            <Card className="border-0 shadow-2xs hover:shadow-md transition-all bg-card rounded-3xl p-6 relative overflow-hidden text-center group flex flex-col justify-between items-center">
               <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 rounded-bl-full pointer-events-none"></div>
 
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
+              <div className="space-y-4 w-full flex flex-col items-center">
+                <div className="flex items-center justify-between w-full">
                   <span className="px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 text-[10px] font-extrabold border-0">
                     النموذج 01 • الأكثر انتشاراً
                   </span>
@@ -517,17 +517,17 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                <div className="space-y-1.5">
-                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
+                <div className="space-y-1.5 text-center">
+                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors text-center">
                     1. مخطط نموذج العمل (BMC)
                   </h3>
-                  <p className="text-xs text-muted-foreground font-medium leading-relaxed">
+                  <p className="text-xs text-muted-foreground font-medium leading-relaxed text-center">
                     صياغة الأركان الـ 9 الهيكلية لمشروعك واستخراج عرض القيمة الفريدة للعملاء ومصادر الإيرادات.
                   </p>
                 </div>
               </div>
 
-              <div className="pt-6">
+              <div className="pt-6 w-full">
                 <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
                   ابدأ نموذج BMC
                   <ArrowLeft className="size-3.5 group-hover:translate-x-[-3px] transition-transform" />
@@ -536,11 +536,11 @@ export default function LandingPage() {
             </Card>
 
             {/* Model 2: MIT 24-Step Framework */}
-            <Card className="border-0 shadow-2xs hover:shadow-md transition-all bg-card rounded-3xl p-6 relative overflow-hidden text-right group flex flex-col justify-between">
+            <Card className="border-0 shadow-2xs hover:shadow-md transition-all bg-card rounded-3xl p-6 relative overflow-hidden text-center group flex flex-col justify-between items-center">
               <div className="absolute top-0 right-0 w-24 h-24 bg-purple-500/5 rounded-bl-full pointer-events-none"></div>
 
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
+              <div className="space-y-4 w-full flex flex-col items-center">
+                <div className="flex items-center justify-between w-full">
                   <span className="px-3 py-1 rounded-full bg-purple-500/10 text-purple-600 text-[10px] font-extrabold border-0">
                     النموذج 02 • للمشاريع الابتكارية
                   </span>
@@ -549,17 +549,17 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                <div className="space-y-1.5">
-                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
+                <div className="space-y-1.5 text-center">
+                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors text-center">
                     2. منهجية MIT للريادة (24 Steps)
                   </h3>
-                  <p className="text-xs text-muted-foreground font-medium leading-relaxed">
-                    مسار متكامل مبني على منهجية معهد MIT لاختراق الأسواق وتحديد العميل الشغوف وحساب حجم السوق.
+                  <p className="text-xs text-muted-foreground font-medium leading-relaxed text-center">
+                    مسار متكامل مبني على منهجية معهد MIT لااختراق الأسواق وتحديد العميل الشغوف وحساب حجم السوق.
                   </p>
                 </div>
               </div>
 
-              <div className="pt-6">
+              <div className="pt-6 w-full">
                 <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
                   ابدأ منهجية MIT
                   <ArrowLeft className="size-3.5 group-hover:translate-x-[-3px] transition-transform" />
@@ -568,11 +568,11 @@ export default function LandingPage() {
             </Card>
 
             {/* Model 3: Financial & Revenue Model */}
-            <Card className="border-0 shadow-2xs hover:shadow-md transition-all bg-card rounded-3xl p-6 relative overflow-hidden text-right group flex flex-col justify-between">
+            <Card className="border-0 shadow-2xs hover:shadow-md transition-all bg-card rounded-3xl p-6 relative overflow-hidden text-center group flex flex-col justify-between items-center">
               <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-bl-full pointer-events-none"></div>
 
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
+              <div className="space-y-4 w-full flex flex-col items-center">
+                <div className="flex items-center justify-between w-full">
                   <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 text-[10px] font-extrabold border-0">
                     النموذج 03 • الجدوى المالية
                   </span>
@@ -581,17 +581,17 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                <div className="space-y-1.5">
-                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
+                <div className="space-y-1.5 text-center">
+                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors text-center">
                     3. الجدوى المالية وتوقعات النمو
                   </h3>
-                  <p className="text-xs text-muted-foreground font-medium leading-relaxed">
+                  <p className="text-xs text-muted-foreground font-medium leading-relaxed text-center">
                     حساب الأرباح والاشتراكات المتكررة (MRR/ARR)، نقطة التعادل، ومعدل استرداد التكاليف الاستثمارية.
                   </p>
                 </div>
               </div>
 
-              <div className="pt-6">
+              <div className="pt-6 w-full">
                 <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
                   ابدأ النموذج المالي
                   <ArrowLeft className="size-3.5 group-hover:translate-x-[-3px] transition-transform" />
@@ -600,11 +600,11 @@ export default function LandingPage() {
             </Card>
 
             {/* Model 4: 8-Layer Customer Persona Matrix */}
-            <Card className="border-0 shadow-2xs hover:shadow-md transition-all bg-card rounded-3xl p-6 relative overflow-hidden text-right group flex flex-col justify-between">
+            <Card className="border-0 shadow-2xs hover:shadow-md transition-all bg-card rounded-3xl p-6 relative overflow-hidden text-center group flex flex-col justify-between items-center">
               <div className="absolute top-0 right-0 w-24 h-24 bg-pink-500/5 rounded-bl-full pointer-events-none"></div>
 
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
+              <div className="space-y-4 w-full flex flex-col items-center">
+                <div className="flex items-center justify-between w-full">
                   <span className="px-3 py-1 rounded-full bg-pink-500/10 text-pink-600 text-[10px] font-extrabold border-0">
                     النموذج 04 • سلوك الجمهور
                   </span>
@@ -613,17 +613,17 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                <div className="space-y-1.5">
-                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
+                <div className="space-y-1.5 text-center">
+                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors text-center">
                     4. مصفوفة العميل المستهدف (8-Layers)
                   </h3>
-                  <p className="text-xs text-muted-foreground font-medium leading-relaxed">
+                  <p className="text-xs text-muted-foreground font-medium leading-relaxed text-center">
                     تفكيك طبقات شخصية العميل الـ 8 لمعرفة الآلام، الدوافع النفسية، وديناميكيات اتخاذ قرار الشراء.
                   </p>
                 </div>
               </div>
 
-              <div className="pt-6">
+              <div className="pt-6 w-full">
                 <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
                   ابدأ مصفوفة العميل
                   <ArrowLeft className="size-3.5 group-hover:translate-x-[-3px] transition-transform" />
@@ -632,11 +632,11 @@ export default function LandingPage() {
             </Card>
 
             {/* Model 5: 90-Day Execution Roadmap */}
-            <Card className="border-0 shadow-2xs hover:shadow-md transition-all bg-card rounded-3xl p-6 relative overflow-hidden text-right group flex flex-col justify-between md:col-span-2 lg:col-span-2">
+            <Card className="border-0 shadow-2xs hover:shadow-md transition-all bg-card rounded-3xl p-6 relative overflow-hidden text-center group flex flex-col justify-between items-center md:col-span-2 lg:col-span-2">
               <div className="absolute top-0 right-0 w-24 h-24 bg-amber-500/5 rounded-bl-full pointer-events-none"></div>
 
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
+              <div className="space-y-4 w-full flex flex-col items-center">
+                <div className="flex items-center justify-between w-full">
                   <span className="px-3 py-1 rounded-full bg-amber-500/10 text-amber-600 text-[10px] font-extrabold border-0">
                     النموذج 05 • التشغيل الميداني
                   </span>
@@ -645,17 +645,17 @@ export default function LandingPage() {
                   </div>
                 </div>
 
-                <div className="space-y-1.5">
-                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors">
+                <div className="space-y-1.5 text-center">
+                  <h3 className="text-lg font-black text-foreground group-hover:text-primary transition-colors text-center">
                     5. خريطة الإطلاق والتنفيذ (90-Day Execution Roadmap)
                   </h3>
-                  <p className="text-xs text-muted-foreground font-medium leading-relaxed">
+                  <p className="text-xs text-muted-foreground font-medium leading-relaxed text-center">
                     تحويل نتائج دراسة الجدوى إلى خريطة مهام مرحلية موجهة لأول 90 يوماً من عمر المشروع لتسريع التحقق الميداني.
                   </p>
                 </div>
               </div>
 
-              <div className="pt-6">
+              <div className="pt-6 w-full">
                 <Button onClick={() => openAuthModal('register')} variant="outline" size="sm" className="w-full text-xs font-bold gap-2 justify-center cursor-pointer h-10 border-0 bg-secondary/70 hover:bg-secondary text-foreground">
                   ابدأ خريطة التنفيذ 90 يوماً
                   <ArrowLeft className="size-3.5 group-hover:translate-x-[-3px] transition-transform" />
@@ -779,7 +779,7 @@ export default function LandingPage() {
 
               {/* Inputs Column */}
               <div className="lg:col-span-6 space-y-6">
-                <h3 className="text-base font-extrabold text-foreground border-b border-border pb-3 flex items-center gap-2">
+                <h3 className="text-base font-extrabold text-foreground border-b border-border pb-3 flex items-center justify-center gap-2 text-center">
                   <DollarSign className="size-4 text-primary" />
                   مدخلات الاشتراك والعملاء
                 </h3>
@@ -839,7 +839,7 @@ export default function LandingPage() {
 
               {/* Live Output Metrics Column */}
               <div className="lg:col-span-6 flex flex-col justify-between gap-4 bg-muted/30 p-6 rounded-xl border border-border/60">
-                <h3 className="text-base font-extrabold text-foreground border-b border-border pb-3 flex items-center gap-2">
+                <h3 className="text-base font-extrabold text-foreground border-b border-border pb-3 flex items-center justify-center gap-2 text-center">
                   <TrendingUp className="size-4 text-emerald-600" />
                   المؤشرات المالية التقديرية المحسوبة
                 </h3>
@@ -1111,110 +1111,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* GOOGLE OAUTH TRANSPARENCY & PRIVACY SECTION (FINAL SECTION) */}
-        <section id="privacy-and-transparency" className="container mx-auto px-4 max-w-6xl pt-4">
-          <div className="rounded-3xl border-0 bg-card p-6 sm:p-10 shadow-2xs space-y-8 text-right">
-            {/* Header */}
-            <div className="flex flex-col items-center text-center space-y-3">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold shadow-2xs border-0">
-                <ShieldCheck className="size-4" />
-                <span>الأمان والخصوصية وحماية البيانات</span>
-              </div>
-              <h2 className="text-xl sm:text-3xl font-black text-foreground tracking-tight">
-                ما هي منصة <span className="text-primary">خطة</span> وكيف نضمن خصوصية بياناتك؟
-              </h2>
-              <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed max-w-3xl mx-auto">
-                منصة خطة هي بيئة عمل سحابية متكاملة تهدف لإرساء معايير ريادية حقيقية لمساعدة رواد الأعمال والمستثمرين في إعداد دراسات الجدوى، استكشاف الفرص الاستثمارية، وبناء نماذج الأعمال التجارية (BMC) وفق منهجيات عالمية.
-              </p>
-            </div>
-
-            {/* 3 Main Highlights Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              {/* Card 1: Platform Scope & Features */}
-              <div className="rounded-2xl bg-muted/40 p-5 space-y-3 text-right shadow-2xs border-0 flex flex-col justify-between">
-                <div className="space-y-3">
-                  <div className="size-10 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center font-bold">
-                    <Layers className="size-5" />
-                  </div>
-                  <h3 className="text-sm font-extrabold text-foreground">1. غرض التطبيق والخدمات المقدمة</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed font-medium">
-                    تتيح لك منصة خطة التمرس في إعداد نماذج العمل، حساب مؤشرات الإيرادات (MRR/ARR)، تقييم الجدوى الميدانية، واستكشاف رادار القطاعات المتاحة — مع حفظ كافة ملفاتك بأمان في مكان واحد.
-                  </p>
-                </div>
-                <div className="pt-2 text-[11px] font-bold text-blue-600 flex items-center gap-1">
-                  <CheckCircle2 className="size-3.5" />
-                  <span>تطبيقات وأدوات ريادية متكاملة</span>
-                </div>
-              </div>
-
-              {/* Card 2: Google OAuth Usage */}
-              <div className="rounded-2xl bg-muted/40 p-5 space-y-3 text-right shadow-2xs border-0 flex flex-col justify-between">
-                <div className="space-y-3">
-                  <div className="size-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center font-bold">
-                    <ShieldCheck className="size-5" />
-                  </div>
-                  <h3 className="text-sm font-extrabold text-foreground">2. آلية استخدام بيانات Google (OAuth)</h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed font-medium">
-                    عند اختيار تسجيل الدخول عبر Google، تطلب المنصة الصلاحيات الأساسية للملف الشخصي فقط: <span className="font-bold text-foreground">الاسم، البريد الإلكتروني، والصورة</span>. نقوم بتوثيق حسابك فوراً ولا نطلب أبداً الوصول إلى ملفاتك الخاصة أو بريدك الإلكتروني.
-                  </p>
-                </div>
-                <div className="pt-2 text-[11px] font-bold text-emerald-600 flex items-center gap-1">
-                  <CheckCircle2 className="size-3.5" />
-                  <span>صلاحيات دنيا وآمنة 100%</span>
-                </div>
-              </div>
-
-              {/* Card 3: User Rights & Data Protection */}
-              <div className="rounded-2xl bg-muted/40 p-5 space-y-3 text-right shadow-2xs border-0 flex flex-col justify-between">
-                <div className="space-y-3">
-                  <div className="size-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold">
-                    <Lock className="size-5" />
-                  </div>
-                  <h3 className="text-sm font-extrabold text-foreground">3. التزامات الخصوصية وحقوقك</h3>
-                  <ul className="space-y-2 text-xs text-muted-foreground font-medium">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="size-3.5 text-emerald-600 shrink-0" />
-                      <span>دراساتك ومشاريعك ملكك الخاص وتُشفر سحابياً.</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="size-3.5 text-emerald-600 shrink-0" />
-                      <span>عدم مشاركة أو بيع بياناتك لأي جهات خارجية.</span>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="size-3.5 text-emerald-600 shrink-0" />
-                      <span>إمكانية حذف حسابك وبياناتك بالكامل في أي وقت.</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="pt-2 text-[11px] font-bold text-amber-600 flex items-center gap-1">
-                  <CheckCircle2 className="size-3.5" />
-                  <span>حماية كاملة وحفظ سحابي مشفر</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Links and Policy Footer Ribbon */}
-            <div className="pt-4 border-t border-border/40 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <span className="text-xs text-muted-foreground font-medium">
-                لمزيد من التفاصيل حول سياسات الأمان وتطبيق معايير الخصوصية:
-              </span>
-              <div className="flex items-center gap-3">
-                <Link href="/privacy">
-                  <Button variant="outline" size="sm" className="gap-2 font-bold text-xs border-0 bg-muted/60 hover:bg-muted text-foreground h-9 shadow-2xs cursor-pointer">
-                    <FileText className="size-3.5" />
-                    سياسة الخصوصية
-                  </Button>
-                </Link>
-                <Link href="/terms">
-                  <Button variant="outline" size="sm" className="gap-2 font-bold text-xs border-0 bg-muted/60 hover:bg-muted text-foreground h-9 shadow-2xs cursor-pointer">
-                    <BookOpen className="size-3.5" />
-                    شروط الاستخدام
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
 
       </main>
 

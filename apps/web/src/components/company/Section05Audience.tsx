@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import {
   Users, Layers, UserCheck, ShieldAlert, Lightbulb, CheckCircle2,
@@ -214,9 +216,6 @@ export function Section05Audience({ selectedCompany, viewTier, setViewTier }: Pr
         {/* BENCHMARK TAB */}
         {activeAudienceTab === "benchmark" && (
           <div id="section-strategic-matrix" className="space-y-6 relative">
-            {viewTier === "public" && (
-              <ProLockOverlay title="المقارنة والتمركز الاستراتيجي (Strategic Benchmark Pro Matrix)" subtitle="جدول المقارنة والتمركز التنافسي المباشر متاح حصرياً في الوضع الاحترافي." onUnlock={() => setViewTier("pro")} />
-            )}
             <div className="rounded-2xl bg-card overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full text-right border-collapse min-w-[750px]">

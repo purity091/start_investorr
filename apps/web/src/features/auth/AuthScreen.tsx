@@ -98,15 +98,14 @@ export const AuthScreen: React.FC = () => {
       }
 
       if (mode === 'login') {
-        await postAuthAction('/api/auth/login', {
-          email,
+        const normalizedEmail = email.trim().toLowerCase();
+        const { error: browserAuthError } = await supabase.auth.signInWithPassword({
+          email: normalizedEmail,
           password,
         });
-
-        // The API login sets server cookies; this also establishes the browser
-        // Keep the browser session synchronized with the server login.
-        const { error: browserAuthError } = await supabase.auth.signInWithPassword({ email, password });
         if (browserAuthError) throw browserAuthError;
+        const { data: { session } } = await supabase.auth.getSession();
+        if (!session) throw new Error('AUTH_SESSION_NOT_CREATED');
 
         if (rememberMe) {
           localStorage.setItem('khotta_remember_me', 'true');
@@ -114,7 +113,7 @@ export const AuthScreen: React.FC = () => {
           localStorage.removeItem('khotta_remember_me');
         }
 
-        window.location.href = getSafeRedirectPath();
+        window.location.replace(getSafeRedirectPath());
       } else if (mode === 'register') {
         await postAuthAction('/api/auth/register', {
           name,

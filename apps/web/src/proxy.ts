@@ -61,7 +61,7 @@ const decodeCookieValue = (value: string) => {
   }
 
   try {
-    return atob(decoded.slice('base64-'.length));
+    return base64UrlToString(decoded.slice('base64-'.length));
   } catch {
     return decoded;
   }

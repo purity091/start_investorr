@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { Activity } from "lucide-react";
 import { Company } from "@/types";

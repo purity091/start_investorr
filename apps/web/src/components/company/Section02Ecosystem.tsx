@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { Building, MapPin } from "lucide-react";
 import { Company } from "@/types";
@@ -251,13 +253,6 @@ export function Section02Ecosystem({ selectedCompany, viewTier, setViewTier }: P
         {/* SIMILAR COMPANIES TABLE CARD CONTENT */}
         {activeEcosystemTab === "similar" && (
           <div id="section-similar-companies-table" className="overflow-hidden relative">
-            {viewTier === "public" && (
-              <ProLockOverlay
-                title="جدول المنافسين والشركات المماثلة (Competitors Table)"
-                subtitle="جدول التحليل المقارن والمنافسين المباشرين متاح حصرياً في الباقة الاحترافية."
-                onUnlock={() => setViewTier("pro")}
-              />
-            )}
             <div className="px-6 py-4 bg-muted/20 flex flex-row items-center justify-between">
               <span className="font-bold text-sm sm:text-base text-foreground">الشركات المماثلة والبدائل</span>
               <Badge variant="secondary" className="font-bold text-xs px-3 py-1 border-0">
@@ -318,13 +313,6 @@ export function Section02Ecosystem({ selectedCompany, viewTier, setViewTier }: P
         {/* RELATED SECTORS TABLE CARD CONTENT */}
         {activeEcosystemTab === "sectors" && (
           <div id="section-related-sectors-table" className="overflow-hidden relative">
-            {viewTier === "public" && (
-              <ProLockOverlay
-                title="القطاعات والأسواق المرتبطة (Sectors Intelligence)"
-                subtitle="جدول التحليل الشجري للقطاعات وسوق الأسهم المعتمد متاح حصرياً للمشتركين."
-                onUnlock={() => setViewTier("pro")}
-              />
-            )}
             <div className="px-6 py-4 bg-muted/20 flex flex-row items-center justify-between">
               <span className="font-bold text-sm sm:text-base text-foreground">القطاعات والأسواق المرتبطة</span>
               <Badge variant="secondary" className="font-bold text-xs px-3 py-1 border-0">
