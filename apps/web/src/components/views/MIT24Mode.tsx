@@ -19,6 +19,7 @@ import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
 import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
@@ -363,74 +364,50 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
   const currentPhase = PHASES.find((p) => p.id === currentPhaseId) || PHASES[0];
 
   return (
-    <div dir="rtl" className="flex w-full flex-col gap-3.5 px-2 py-2 sm:px-4 lg:px-6">
-      {/* Hero Header Card */}
-      <div className="rounded-2xl border border-border/80 bg-card p-3.5 sm:p-6 shadow-2xs space-y-3 sm:space-y-4">
-        <div className="flex flex-col gap-3 sm:gap-4 lg:flex-row lg:items-center lg:justify-between">
-          <div className="space-y-1.5 text-right">
-            <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
-              <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20 font-bold px-2.5 py-0.5 text-[11px] sm:text-xs">
-                منهجية MIT المنضبطة
-              </Badge>
-              <Badge variant="outline" className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20 font-bold px-2 py-0.5 text-[11px] sm:text-xs gap-1">
-                <CheckCircle2 className="size-3.5" />
-                <span>24 خطوة ريادية مبرهنة</span>
-              </Badge>
-              <SaveStatusBadge status={saveStatus} lastSaved={lastSaved} />
-            </div>
-            <h1 className="text-lg sm:text-2xl lg:text-3xl font-extrabold text-foreground tracking-tight">
+    <div dir="rtl" className="flex w-full flex-col gap-4 px-2 py-2 sm:px-4 lg:px-6">
+      {/* Compact Header Card - Borderless */}
+      <div className="rounded-2xl border-0 bg-card p-4 sm:p-5 shadow-2xs space-y-3.5">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="space-y-1 text-right">
+            <h1 className="text-base sm:text-xl font-bold text-foreground tracking-tight">
               منهجية MIT الـ 24 خطوة لبناء المشاريع الريادية
             </h1>
-            <p className="max-w-3xl text-xs sm:text-sm text-muted-foreground leading-relaxed">
-              مسار منظم مبني على إطار MIT العالمي لتحويل الفكرة إلى مشروع تجاري قابل للتنفيذ عبر 6 مراحل واضحة وتفاعلية.
+            <p className="text-xs text-muted-foreground font-medium">
+              مسار منظم مبني على إطار MIT العالمي عبر 6 مراحل تفاعلية.
             </p>
           </div>
 
-          <div className="grid grid-cols-3 gap-1.5 sm:gap-3 shrink-0 lg:w-[480px]">
-            <div className="rounded-xl border border-border/80 bg-card p-2.5 sm:p-3.5 shadow-2xs">
-              <div className="text-[10px] sm:text-[11px] font-medium text-muted-foreground">إجمالي الخطوات</div>
-              <div className="text-sm sm:text-lg font-bold tracking-tight text-foreground mt-0.5">{totalSteps} خطوة</div>
-            </div>
-            <div className="rounded-xl border border-border/80 bg-card p-2.5 sm:p-3.5 shadow-2xs">
-              <div className="text-[10px] sm:text-[11px] font-medium text-muted-foreground">الخطوات المكتملة</div>
-              <div className="text-sm sm:text-lg font-bold tracking-tight text-emerald-600 dark:text-emerald-400 mt-0.5">{filledCount} / {totalSteps}</div>
-            </div>
-            <div className="rounded-xl border border-border/80 bg-card p-2.5 sm:p-3.5 shadow-2xs">
-              <div className="text-[10px] sm:text-[11px] font-medium text-muted-foreground">نسبة الإنجاز</div>
-              <div className="text-sm sm:text-lg font-bold tracking-tight text-primary mt-0.5">{completion}%</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Global Progress Bar */}
-        <div className="rounded-xl border border-border/70 bg-muted/30 p-2.5 sm:p-4 space-y-2">
-          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex items-center gap-3">
-              <span className="text-xs font-bold text-foreground">نسبة التقدم الإجمالية:</span>
-              <span className="text-xs font-extrabold text-primary">{completion}%</span>
+          <div className="flex items-center gap-2.5 shrink-0 flex-wrap">
+            <div className="flex items-center gap-2 rounded-xl bg-muted/60 px-3.5 py-1.5 text-xs font-semibold">
+              <span className="text-muted-foreground">الإنجاز:</span>
+              <span className="text-emerald-600 dark:text-emerald-400 font-bold">{filledCount}/{totalSteps}</span>
+              <span className="text-primary font-bold">({completion}%)</span>
             </div>
             <Button
               type="button"
               onClick={completeModel}
               disabled={filledCount < 4}
-              className="gap-2 font-bold cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 text-xs py-1.5 h-9"
+              size="sm"
+              className="gap-1.5 font-bold text-xs h-9 px-4 bg-primary text-primary-foreground hover:bg-primary/90 shadow-2xs border-0 cursor-pointer"
             >
-              <Sparkles className="size-4" />
+              <Sparkles className="size-3.5" />
               <span>تحليل النتائج واستخراج التقرير</span>
             </Button>
           </div>
-          <div className="h-2 w-full overflow-hidden rounded-full bg-muted">
-            <div
-              className="h-full rounded-full bg-primary transition-all duration-300"
-              style={{ width: `${completion}%` }}
-            />
-          </div>
+        </div>
+
+        {/* Slim Progress Bar */}
+        <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted/50">
+          <div
+            className="h-full rounded-full bg-primary transition-all duration-300"
+            style={{ width: `${completion}%` }}
+          />
         </div>
       </div>
 
       {/* Main Tabs Container */}
-      <Tabs value={activePhaseTab} onValueChange={setActivePhaseTab} dir="rtl" className="w-full space-y-3.5 sm:space-y-6">
-        {/* Phase Tabs Switcher */}
+      <Tabs value={activePhaseTab} onValueChange={setActivePhaseTab} dir="rtl" className="w-full space-y-4 sm:space-y-6">
+        {/* Phase Tabs Switcher - Borderless */}
         <TabsList className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 h-auto w-full gap-2 bg-transparent p-0">
           {PHASES.map((phase) => {
             const progress = phaseProgress(phase);
@@ -443,17 +420,17 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
                 key={phase.id}
                 value={tabKey}
                 className={cn(
-                  "flex flex-col items-end gap-2 p-3 sm:p-3.5 rounded-xl border border-border/80 text-right transition-all cursor-pointer h-auto data-[state=active]:bg-card data-[state=active]:border-primary data-[state=active]:shadow-xs",
-                  isCompleted ? "bg-emerald-500/5 border-emerald-500/30" : "bg-card hover:bg-accent/50"
+                  "flex flex-col items-end gap-2 p-3 sm:p-3.5 rounded-xl border-0 text-right transition-all cursor-pointer h-auto shadow-2xs data-[state=active]:bg-card data-[state=active]:shadow-xs",
+                  isCompleted ? "bg-emerald-500/10" : "bg-card hover:bg-muted/60"
                 )}
               >
                 <div className="flex items-center justify-between w-full flex-row-reverse">
                   <div className={cn("size-7 rounded-lg flex items-center justify-center shrink-0", phase.tone.soft, phase.tone.text)}>
                     <Icon className="size-4" />
                   </div>
-                  <Badge variant="outline" className={cn(
-                    "text-[10px] font-bold px-1.5 py-0",
-                    isCompleted ? "bg-emerald-500/10 text-emerald-600 border-emerald-500/30" : "bg-muted text-muted-foreground"
+                  <Badge variant="secondary" className={cn(
+                    "text-[10px] font-bold px-2 py-0.5 border-0",
+                    isCompleted ? "bg-emerald-500/20 text-emerald-700 dark:text-emerald-300" : "bg-muted text-muted-foreground"
                   )}>
                     {progress.filled}/{phase.steps.length}
                   </Badge>
@@ -470,8 +447,8 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
         {/* Tab Content for Each Phase */}
         {PHASES.map((phase) => (
           <TabsContent key={phase.id} value={`phase-${phase.id}`} className="space-y-5">
-            {/* Phase Description Banner */}
-            <div className={cn("rounded-xl border p-4 sm:p-5 flex items-start gap-3.5", phase.tone.soft, "border-border/60")}>
+            {/* Phase Description Banner - Borderless & Rich Contrast */}
+            <div className={cn("rounded-2xl border-0 p-4 sm:p-5 flex items-start gap-4 shadow-2xs", phase.tone.soft)}>
               <div className={cn("size-10 rounded-xl flex items-center justify-center shrink-0 bg-background shadow-2xs", phase.tone.text)}>
                 <phase.icon className="size-5" />
               </div>
@@ -481,8 +458,8 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
               </div>
             </div>
 
-            {/* Phase Steps Grid */}
-            <div className="space-y-4">
+            {/* Phase Steps Grid - Borderless Compact Cards */}
+            <div className="space-y-3.5">
               {phase.steps.map((step) => {
                 const value = getValue(step.id);
                 const isFilled = value.trim().length > 0;
@@ -490,46 +467,57 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
                 return (
                   <Card
                     key={step.id}
-                    className={cn(
-                      "border bg-card p-4 sm:p-5 rounded-2xl shadow-2xs space-y-4 transition-all",
-                      isFilled ? "border-primary/40" : "border-border/80"
-                    )}
+                    className="border-0 bg-card p-4 sm:p-5 rounded-2xl shadow-2xs space-y-3 transition-all"
                   >
-                    {/* Step Header */}
-                    <div className="flex items-start justify-between gap-3 flex-wrap">
-                      <div className="flex items-center gap-3">
+                    {/* Step Header with Inline Tooltip */}
+                    <div className="flex items-center justify-between gap-3 flex-wrap">
+                      <div className="flex items-center gap-2.5">
                         <div className={cn(
-                          "size-8 rounded-lg flex items-center justify-center font-bold text-xs shrink-0",
-                          isFilled ? "bg-emerald-500 text-white" : "bg-primary/10 text-primary"
+                          "size-7 rounded-xl flex items-center justify-center font-bold text-xs shrink-0 shadow-2xs",
+                          isFilled ? "bg-emerald-600 text-white" : "bg-primary/10 text-primary"
                         )}>
                           {isFilled ? <CheckCircle2 className="size-4" /> : step.id}
                         </div>
-                        <h4 className="text-base font-bold text-foreground tracking-tight">{step.title}</h4>
+                        <h4 className="text-sm sm:text-base font-bold text-foreground tracking-tight">{step.title}</h4>
+
+                        {/* Interactive Tooltip for Step Guidance */}
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <button
+                                type="button"
+                                className="inline-flex items-center justify-center size-6 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors cursor-pointer shrink-0"
+                                aria-label="توضيح الخطوة"
+                              >
+                                <HelpCircle className="size-3.5" />
+                              </button>
+                            </TooltipTrigger>
+                            <TooltipContent side="top" className="max-w-sm p-3 text-xs leading-relaxed bg-popover text-popover-foreground border-0 shadow-lg rounded-xl">
+                              <div className="font-bold text-primary mb-1 flex items-center gap-1.5">
+                                <HelpCircle className="size-3.5" />
+                                <span>توجيه الخطوة والمفهوم الأساسي:</span>
+                              </div>
+                              <p className="text-muted-foreground">{step.explanation}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
                       </div>
 
                       {isFilled ? (
-                        <Badge variant="outline" className="bg-emerald-500/10 text-emerald-600 border-emerald-500/20 text-[11px] font-bold gap-1 px-2.5 py-0.5">
-                          <CheckCircle2 className="size-3.5" />
+                        <Badge variant="secondary" className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-0 text-[11px] font-bold gap-1 px-2.5 py-0.5">
+                          <CheckCircle2 className="size-3.5 text-emerald-600" />
                           <span>تم الإدخال</span>
                         </Badge>
                       ) : (
-                        <Badge variant="outline" className="bg-muted text-muted-foreground border-border text-[10px] font-medium px-2 py-0.5">
+                        <Badge variant="secondary" className="bg-muted text-muted-foreground border-0 text-[10px] font-medium px-2 py-0.5">
                           في انتظار الإدخال
                         </Badge>
                       )}
                     </div>
 
-                    {/* Step Explanation Callout */}
-                    <div className="rounded-xl border border-primary/20 bg-primary/5 p-3.5 flex items-start gap-2.5">
-                      <HelpCircle className="size-4 text-primary shrink-0 mt-0.5" />
-                      <p className="text-xs leading-relaxed text-foreground/90 font-medium">
-                        {step.explanation}
-                      </p>
-                    </div>
-
-                    {/* Step Input Textarea with Practical Example Placeholder */}
+                    {/* Step Input Textarea with ChatGPT Helper */}
                     <div className="space-y-2">
-                      <div className="flex items-center justify-between gap-2 flex-wrap border-b border-border/40 pb-1">
+                      <div className="flex items-center justify-between gap-2 flex-wrap">
                         <span className="text-xs font-bold text-foreground">الإجابة والتحليل المستهدف:</span>
                         <AIPromptHelper
                           sectionTitle={phase.label}
@@ -544,10 +532,9 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
                         onChange={(e) => setValue(step.id, e.target.value)}
                         placeholder={step.placeholder}
                         rows={3}
-                        className="min-h-28 w-full resize-y rounded-xl border border-input bg-background p-3.5 text-xs sm:text-sm font-medium leading-relaxed text-foreground transition-all focus:outline-none focus:ring-2 focus:ring-primary/20 placeholder:text-muted-foreground/60"
+                        className="min-h-24 w-full resize-y rounded-xl border-0 bg-muted/30 focus:bg-background p-3.5 text-xs sm:text-sm font-medium leading-relaxed text-foreground transition-all shadow-2xs focus:outline-none focus:ring-2 focus:ring-primary/20 placeholder:text-muted-foreground/60"
                       />
-                      <div className="flex items-center justify-between text-[11px] text-muted-foreground px-1 font-medium">
-                        <span>مثال توضيحي بالأعلى يسهل إجابتك.</span>
+                      <div className="flex items-center justify-end text-[11px] text-muted-foreground px-1 font-mono">
                         <span>عدد الأحرف: {value.length}</span>
                       </div>
                     </div>
@@ -567,7 +554,7 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
                   }
                 }}
                 disabled={phase.id === 1}
-                className="gap-2 font-bold cursor-pointer"
+                className="gap-2 font-bold cursor-pointer border-0 bg-card shadow-2xs hover:bg-muted"
               >
                 <ChevronRight className="size-4" />
                 <span>المرحلة السابقة</span>
@@ -582,7 +569,7 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
                     completeModel();
                   }
                 }}
-                className="gap-2 font-bold cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90"
+                className="gap-2 font-bold cursor-pointer bg-primary text-primary-foreground hover:bg-primary/90 border-0 shadow-2xs"
               >
                 <span>{phase.id === PHASES.length ? 'تحليل النتائج الكلية' : 'المرحلة التالية'}</span>
                 <ChevronLeft className="size-4" />
@@ -593,9 +580,9 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
       </Tabs>
 
       {/* Floating Sticky Auto-Save Visual Notification */}
-      <div className="fixed bottom-5 left-5 z-50 hidden sm:flex items-center gap-2 rounded-2xl border border-border/80 bg-card/95 p-2.5 px-4 shadow-xl backdrop-blur-md transition-all">
+      <div className="fixed bottom-5 left-5 z-50 hidden sm:flex items-center gap-2.5 rounded-2xl border-0 bg-card/95 p-3 px-4 shadow-lg backdrop-blur-md transition-all">
         <SaveStatusBadge status={saveStatus} lastSaved={lastSaved} />
-        <span className="text-xs font-semibold text-foreground border-r border-border/60 pr-2.5 mr-1">
+        <span className="text-xs font-semibold text-foreground bg-muted/60 px-2.5 py-1 rounded-lg">
           إجاباتك محفوظة تلقائياً
         </span>
       </div>

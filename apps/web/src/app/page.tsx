@@ -258,7 +258,6 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
-
         {/* SECTION 2: The Unified Strategic Roadmap (اكتشف ← حلل ← ابنِ ← نفّذ) */}
         <section id="strategic-roadmap" className="container mx-auto px-4 max-w-7xl">
 
@@ -1108,6 +1107,111 @@ export default function LandingPage() {
                 انشئ حسابك المجاني الآن
                 <ArrowLeft className="size-4" />
               </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* GOOGLE OAUTH TRANSPARENCY & PRIVACY SECTION (FINAL SECTION) */}
+        <section id="privacy-and-transparency" className="container mx-auto px-4 max-w-6xl pt-4">
+          <div className="rounded-3xl border-0 bg-card p-6 sm:p-10 shadow-2xs space-y-8 text-right">
+            {/* Header */}
+            <div className="flex flex-col items-center text-center space-y-3">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold shadow-2xs border-0">
+                <ShieldCheck className="size-4" />
+                <span>الأمان والخصوصية وحماية البيانات</span>
+              </div>
+              <h2 className="text-xl sm:text-3xl font-black text-foreground tracking-tight">
+                ما هي منصة <span className="text-primary">خطة</span> وكيف نضمن خصوصية بياناتك؟
+              </h2>
+              <p className="text-xs sm:text-sm text-muted-foreground font-medium leading-relaxed max-w-3xl mx-auto">
+                منصة خطة هي بيئة عمل سحابية متكاملة تهدف لإرساء معايير ريادية حقيقية لمساعدة رواد الأعمال والمستثمرين في إعداد دراسات الجدوى، استكشاف الفرص الاستثمارية، وبناء نماذج الأعمال التجارية (BMC) وفق منهجيات عالمية.
+              </p>
+            </div>
+
+            {/* 3 Main Highlights Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {/* Card 1: Platform Scope & Features */}
+              <div className="rounded-2xl bg-muted/40 p-5 space-y-3 text-right shadow-2xs border-0 flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="size-10 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center font-bold">
+                    <Layers className="size-5" />
+                  </div>
+                  <h3 className="text-sm font-extrabold text-foreground">1. غرض التطبيق والخدمات المقدمة</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed font-medium">
+                    تتيح لك منصة خطة التمرس في إعداد نماذج العمل، حساب مؤشرات الإيرادات (MRR/ARR)، تقييم الجدوى الميدانية، واستكشاف رادار القطاعات المتاحة — مع حفظ كافة ملفاتك بأمان في مكان واحد.
+                  </p>
+                </div>
+                <div className="pt-2 text-[11px] font-bold text-blue-600 flex items-center gap-1">
+                  <CheckCircle2 className="size-3.5" />
+                  <span>تطبيقات وأدوات ريادية متكاملة</span>
+                </div>
+              </div>
+
+              {/* Card 2: Google OAuth Usage */}
+              <div className="rounded-2xl bg-muted/40 p-5 space-y-3 text-right shadow-2xs border-0 flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="size-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center font-bold">
+                    <ShieldCheck className="size-5" />
+                  </div>
+                  <h3 className="text-sm font-extrabold text-foreground">2. آلية استخدام بيانات Google (OAuth)</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed font-medium">
+                    عند اختيار تسجيل الدخول عبر Google، تطلب المنصة الصلاحيات الأساسية للملف الشخصي فقط: <span className="font-bold text-foreground">الاسم، البريد الإلكتروني، والصورة</span>. نقوم بتوثيق حسابك فوراً ولا نطلب أبداً الوصول إلى ملفاتك الخاصة أو بريدك الإلكتروني.
+                  </p>
+                </div>
+                <div className="pt-2 text-[11px] font-bold text-emerald-600 flex items-center gap-1">
+                  <CheckCircle2 className="size-3.5" />
+                  <span>صلاحيات دنيا وآمنة 100%</span>
+                </div>
+              </div>
+
+              {/* Card 3: User Rights & Data Protection */}
+              <div className="rounded-2xl bg-muted/40 p-5 space-y-3 text-right shadow-2xs border-0 flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="size-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold">
+                    <Lock className="size-5" />
+                  </div>
+                  <h3 className="text-sm font-extrabold text-foreground">3. التزامات الخصوصية وحقوقك</h3>
+                  <ul className="space-y-2 text-xs text-muted-foreground font-medium">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="size-3.5 text-emerald-600 shrink-0" />
+                      <span>دراساتك ومشاريعك ملكك الخاص وتُشفر سحابياً.</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="size-3.5 text-emerald-600 shrink-0" />
+                      <span>عدم مشاركة أو بيع بياناتك لأي جهات خارجية.</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="size-3.5 text-emerald-600 shrink-0" />
+                      <span>إمكانية حذف حسابك وبياناتك بالكامل في أي وقت.</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="pt-2 text-[11px] font-bold text-amber-600 flex items-center gap-1">
+                  <CheckCircle2 className="size-3.5" />
+                  <span>حماية كاملة وحفظ سحابي مشفر</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Links and Policy Footer Ribbon */}
+            <div className="pt-4 border-t border-border/40 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <span className="text-xs text-muted-foreground font-medium">
+                لمزيد من التفاصيل حول سياسات الأمان وتطبيق معايير الخصوصية:
+              </span>
+              <div className="flex items-center gap-3">
+                <Link href="/privacy">
+                  <Button variant="outline" size="sm" className="gap-2 font-bold text-xs border-0 bg-muted/60 hover:bg-muted text-foreground h-9 shadow-2xs cursor-pointer">
+                    <FileText className="size-3.5" />
+                    سياسة الخصوصية
+                  </Button>
+                </Link>
+                <Link href="/terms">
+                  <Button variant="outline" size="sm" className="gap-2 font-bold text-xs border-0 bg-muted/60 hover:bg-muted text-foreground h-9 shadow-2xs cursor-pointer">
+                    <BookOpen className="size-3.5" />
+                    شروط الاستخدام
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
