@@ -804,10 +804,12 @@ function FieldControl({
   field,
   value,
   onChange,
+  formData,
 }: {
   field: ProField;
   value: string;
   onChange: (value: string) => void;
+  formData: Answers;
 }) {
   const isFilled = Boolean(value && value.trim());
 
@@ -833,7 +835,11 @@ function FieldControl({
         <AIPromptHelper
           sectionTitle={field.label}
           questionText={field.placeholder}
-          projectName="مشروع استثماري"
+          formData={{
+            currentSection: field.label,
+            currentValue: value,
+            allEnteredAnswers: formData,
+          }}
           onApplyAnswer={(ans) => onChange(ans)}
           compact
         />
@@ -1172,6 +1178,7 @@ export default function SmartBeginnerPro() {
                     key={field.id}
                     field={field}
                     value={getFieldValue(answers, currentStep.id, field.id)}
+                    formData={answers}
                     onChange={(value) => updateField(field.id, value)}
                   />
                 ))}

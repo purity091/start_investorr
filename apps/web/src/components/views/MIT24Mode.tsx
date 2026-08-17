@@ -523,6 +523,14 @@ export const MIT24Mode: React.FC<{ onComplete: () => void }> = ({ onComplete }) 
                           sectionTitle={phase.label}
                           questionText={step.title}
                           projectName={workspace.profile.name || 'مشروع استثماري'}
+                          projectSector={workspace.profile.sectorLabel || workspace.profile.sectorGroup || undefined}
+                          targetMarket={workspace.profile.countryLabel || undefined}
+                          customerType={workspace.profile.customerType || undefined}
+                          formData={{
+                            currentPhase: currentPhase.label,
+                            currentStep: step.title,
+                            allEnteredAnswers: answers,
+                          }}
                           onApplyAnswer={(ans) => setValue(step.id, ans)}
                           compact
                         />

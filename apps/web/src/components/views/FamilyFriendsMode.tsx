@@ -18,6 +18,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
 import { AIPromptHelper } from '@/components/features/business/AIPromptHelper';
+import { useProjectWorkspace } from '@/features/workspace/ProjectWorkspaceContext';
 
 interface FamilyFriendsData {
   nickname: string;
@@ -87,6 +88,7 @@ export const FamilyFriendsMode: React.FC<{
   onSave: () => void;
   onComplete: () => void;
 }> = ({ data, currentStep, onChange, onStepChange, onSave, onComplete }) => {
+  const { workspace } = useProjectWorkspace();
 
   const current = STEPS[currentStep];
   const CurrentIcon = current.icon;
@@ -263,7 +265,14 @@ export const FamilyFriendsMode: React.FC<{
                   <AIPromptHelper
                     sectionTitle={`الخطوة ${currentStep + 1}: ${current.title}`}
                     questionText={current.subtitle}
-                    projectName="مشروع جديد"
+                    projectName={workspace.profile.name || data.nickname || undefined}
+                    projectSector={workspace.profile.sectorLabel || workspace.profile.sectorGroup || undefined}
+                    targetMarket={workspace.profile.countryLabel || undefined}
+                    customerType={workspace.profile.customerType || undefined}
+                    formData={{
+                      currentStep: current.title,
+                      allEnteredAnswers: data,
+                    }}
                     onApplyAnswer={(ans) => onChange({ [current.id]: ans })}
                     compact
                   />

@@ -967,6 +967,13 @@ export const BusinessModelCanvas: React.FC<{
                             sectionTitle={currentBlock ? BLOCK_META[currentBlock].title : ''}
                             questionText={question.question}
                             projectName={activeProject?.brief.name || 'مشروع استثماري'}
+                            projectSector={workspace.profile.sectorLabel || workspace.profile.sectorGroup || undefined}
+                            targetMarket={workspace.profile.countryLabel || undefined}
+                            customerType={workspace.profile.customerType || undefined}
+                            formData={activeProject ? {
+                              brief: activeProject.brief,
+                              canvasAnswers: activeProject.data,
+                            } : undefined}
                             onApplyAnswer={(ans) =>
                               currentBlock &&
                               handleBlockQuestionAnswerChange(currentBlock, question.id, ans)
