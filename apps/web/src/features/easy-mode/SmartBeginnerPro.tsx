@@ -948,13 +948,30 @@ export default function SmartBeginnerPro() {
       },
       profile: {
         ...current.profile,
-        name: getFieldValue(answers, 'executive_summary', 'name') || current.profile.name,
+        name: current.profile.name || getFieldValue(answers, 'executive_summary', 'name'),
       },
     }));
   }, [answers, phase, stepIndex, updateWorkspace]);
 
   const updateField = (fieldId: string, value: string) => {
     setAnswers((prev) => ({ ...prev, [answerKey(currentStep.id, fieldId)]: value }));
+    if (currentStep.id === 'executive_summary' && fieldId === 'name') {
+      updateWorkspace((current) => ({
+        profile: {
+          ...current.profile,
+          name: value,
+          opportunityTitle: value,
+        },
+      }));
+    }
+    if (currentStep.id === 'executive_summary' && fieldId === 'one_liner') {
+      updateWorkspace((current) => ({
+        profile: {
+          ...current.profile,
+          opportunitySummary: value,
+        },
+      }));
+    }
   };
 
   const updateOption = (option: string) => {

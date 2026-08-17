@@ -40,6 +40,7 @@ import {
   DialogTitle,
 } from '../../ui/dialog';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Textarea } from '@/components/ui/textarea';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../../ui/table';
 import { IdeaCreation, CreationMode } from './IdeaCreation';
 import { ExampleViewer } from './ExampleViewer';
@@ -724,7 +725,7 @@ export const NewPlan: React.FC<{
                 })}
                 {filteredCountries.length === 0 && (
                   <p className="col-span-3 text-center text-xs text-muted-foreground py-3">
-                    لا توجد نتائج تطابق "{marketSearchQuery}"
+                    لا توجد نتائج تطابق &quot;{marketSearchQuery}&quot;
                   </p>
                 )}
               </div>
@@ -842,7 +843,12 @@ export const NewPlan: React.FC<{
   }
 
   if (useFallbackEditor && fallbackEditor) {
-    return <>{fallbackEditor}</>;
+    return (
+      <div className="flex w-full flex-col gap-4" dir="rtl">
+        {editProjectId ? <ProjectBasicsEditor /> : null}
+        {fallbackEditor}
+      </div>
+    );
   }
 
   if (isViewingExample && isIntroMode) {
@@ -850,25 +856,38 @@ export const NewPlan: React.FC<{
   }
 
   if (mode === 'easy' && hasStarted) {
-    return <SmartBeginnerPro />;
+    return (
+      <div className="flex w-full flex-col gap-4" dir="rtl">
+        {editProjectId ? <ProjectBasicsEditor /> : null}
+        <SmartBeginnerPro />
+      </div>
+    );
   }
 
   if (mode === 'lean' && hasStarted) {
-    return <LeanStartupWizard />;
+    return (
+      <div className="flex w-full flex-col gap-4" dir="rtl">
+        {editProjectId ? <ProjectBasicsEditor /> : null}
+        <LeanStartupWizard />
+      </div>
+    );
   }
 
   if ((mode === 'family' || mode === 'bmc' || mode === 'mit24') && hasStarted) {
     return (
-      <IdeaCreation
-        key={activeProjectId || mode}
-        initialMode={mode as CreationMode}
-        onBuildPlan={onBuildPlan}
-        onBack={() => {
-          setMode('selection');
-          setHasStarted(true);
-          setSubTabLabel(null);
-        }}
-      />
+      <div className="flex w-full flex-col gap-4" dir="rtl">
+        {editProjectId ? <ProjectBasicsEditor /> : null}
+        <IdeaCreation
+          key={activeProjectId || mode}
+          initialMode={mode as CreationMode}
+          onBuildPlan={onBuildPlan}
+          onBack={() => {
+            setMode('selection');
+            setHasStarted(true);
+            setSubTabLabel(null);
+          }}
+        />
+      </div>
     );
   }
 
@@ -1016,6 +1035,196 @@ export const NewPlan: React.FC<{
     </>
   );
 };
+
+const EDITABLE_PROJECT_SECTORS = [
+  'التجارة الإلكترونية والتجزئة',
+  'التقنية والبرمجيات (SaaS)',
+  'الخدمات والاستشارات',
+  'المطاعم والضيافة',
+  'التقنية الصحية (HealthTech)',
+  'التعليم والتدريب (EdTech)',
+  'الخدمات اللوجستية والنقل',
+  'العقارات والإنشاءات',
+  'الصناعة والإنتاج',
+  'قطاع آخر',
+];
+
+const EDITABLE_CUSTOMER_TYPES = [
+  { id: 'B2C - أفراد ومستهلكين', label: 'B2C', description: 'أفراد ومستهلكون' },
+  { id: 'B2B - شركات ومؤسسات', label: 'B2B', description: 'شركات ومؤسسات' },
+  { id: 'B2B2C - شركات وأفراد', label: 'B2B2C', description: 'شركات وأفراد' },
+];
+
+function ProjectBasicsEditor() {
+  const { workspace, updateProfile, flushWorkspace, syncStatus } = useProjectWorkspace();
+  const profile = workspace.profile;
+  const [isOpen, setIsOpen] = useState(false);
+  const [draft, setDraft] = useState({
+    name: profile.name,
+    sector: profile.sectorLabel || '',
+    market: profile.countryLabel || '',
+    customerType: profile.customerType || '',
+    summary: profile.opportunitySummary || '',
+  });
+
+  const openEditor = () => {
+    setDraft({
+      name: profile.name,
+      sector: profile.sectorLabel || '',
+      market: profile.countryLabel || '',
+      customerType: profile.customerType || '',
+      summary: profile.opportunitySummary || '',
+    });
+    setIsOpen(true);
+  };
+
+  const saveDraft = () => {
+    const name = draft.name.trim();
+    updateProfile({
+      name,
+      opportunityTitle: name,
+      sectorLabel: draft.sector || null,
+      countryLabel: draft.market.trim() || null,
+      customerType: draft.customerType || null,
+      opportunitySummary: draft.summary.trim() || null,
+    });
+    void flushWorkspace();
+    setIsOpen(false);
+  };
+
+  const saveStatus = syncStatus === 'saving' || syncStatus === 'pending'
+    ? 'جاري حفظ البيانات الأساسية...'
+    : syncStatus === 'failed' || syncStatus === 'conflict'
+      ? 'تحقق من الحفظ، التعديلات محفوظة محلياً'
+      : 'البيانات الأساسية محفوظة وتُستخدم في مولد التعليمة';
+
+  return (
+    <>
+      <Card className="mx-auto w-full max-w-7xl border-0 bg-card shadow-2xs" dir="rtl">
+        <CardContent className="flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
+          <div className="space-y-1 text-right">
+            <div className="flex flex-wrap items-center gap-2">
+              <Badge variant="secondary" className="bg-primary/10 text-primary border-0 text-[10px] font-bold">
+                <Pencil className="me-1 size-3" />
+                سياق المشروع
+              </Badge>
+              <Badge variant="outline" className="border-0 bg-muted/50 text-[10px] font-medium">
+                {saveStatus}
+              </Badge>
+            </div>
+            <p className="text-sm font-bold text-foreground">المعلومات الأساسية للمشروع</p>
+            <p className="text-xs leading-5 text-muted-foreground">
+              {profile.name || 'مشروع بدون اسم'} · {profile.sectorLabel || 'القطاع غير محدد'} · {profile.countryLabel || 'السوق غير محدد'}
+            </p>
+          </div>
+          <Button type="button" variant="outline" onClick={openEditor} className="w-full gap-2 border-0 bg-primary/10 text-primary hover:bg-primary/15 sm:w-auto">
+            <Pencil className="size-4" />
+            تعديل المعلومات الأساسية
+          </Button>
+        </CardContent>
+      </Card>
+
+      <Dialog open={isOpen} onOpenChange={setIsOpen}>
+        <DialogContent className="max-h-[90vh] overflow-y-auto border-0 shadow-2xs sm:max-w-[580px]" dir="rtl">
+          <DialogHeader className="space-y-1 border-0 text-right">
+            <DialogTitle className="flex items-center gap-2 text-lg font-bold text-foreground">
+              <Pencil className="size-5 text-primary" />
+              تعديل بيانات وسياق المشروع
+            </DialogTitle>
+            <DialogDescription className="text-xs leading-6">
+              هذه هي المعلومات الأساسية التي يعتمد عليها مولد التعليمة لتخصيص التحليل والإجابات لمشروعك.
+            </DialogDescription>
+          </DialogHeader>
+
+          <div className="space-y-4 py-2 text-right">
+            <div className="space-y-1.5">
+              <label htmlFor="edit-project-name" className="block text-xs font-bold text-foreground">
+                اسم المشروع <span className="text-destructive">*</span>
+              </label>
+              <Input
+                id="edit-project-name"
+                autoFocus
+                value={draft.name}
+                onChange={(event) => setDraft((current) => ({ ...current, name: event.target.value }))}
+                placeholder="مثال: منصة حجوزات العيادات الطبية"
+                className="h-10 border-0 bg-muted/40 text-right text-xs focus:bg-background"
+              />
+            </div>
+
+            <div className="space-y-1.5">
+              <label className="block text-xs font-bold text-foreground">قطاع المشروع / المجال</label>
+              <Select value={draft.sector || undefined} onValueChange={(value) => setDraft((current) => ({ ...current, sector: value }))}>
+                <SelectTrigger className="h-10 border-0 bg-muted/40 text-right text-xs focus:bg-background">
+                  <SelectValue placeholder="اختر القطاع" />
+                </SelectTrigger>
+                <SelectContent dir="rtl" className="border-0 shadow-md">
+                  {EDITABLE_PROJECT_SECTORS.map((sector) => (
+                    <SelectItem key={sector} value={sector} className="text-xs">{sector}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-1.5">
+              <label htmlFor="edit-project-market" className="block text-xs font-bold text-foreground">السوق المستهدف / المنطقة</label>
+              <Input
+                id="edit-project-market"
+                value={draft.market}
+                onChange={(event) => setDraft((current) => ({ ...current, market: event.target.value }))}
+                placeholder="مثال: السعودية، الإمارات، ودول الخليج"
+                className="h-10 border-0 bg-muted/40 text-right text-xs focus:bg-background"
+              />
+              <p className="text-[10px] leading-5 text-muted-foreground">يمكنك كتابة أكثر من دولة وفصلها بفاصلة.</p>
+            </div>
+
+            <div className="space-y-1.5">
+              <span className="text-xs font-bold text-foreground">شريحة العملاء الأساسية</span>
+              <div className="grid grid-cols-3 gap-2">
+                {EDITABLE_CUSTOMER_TYPES.map((customer) => (
+                  <button
+                    key={customer.id}
+                    type="button"
+                    onClick={() => setDraft((current) => ({ ...current, customerType: customer.id }))}
+                    className={cn(
+                      'flex min-h-11 flex-col items-center justify-center rounded-lg border-0 px-2 py-1.5 text-center transition-colors',
+                      draft.customerType === customer.id
+                        ? 'bg-primary/10 text-primary shadow-2xs'
+                        : 'bg-muted/40 text-muted-foreground hover:bg-muted/70 hover:text-foreground',
+                    )}
+                  >
+                    <span className="text-[11px] font-bold">{customer.label}</span>
+                    <span className="text-[9px] leading-4">{customer.description}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-1.5">
+              <label htmlFor="edit-project-summary" className="block text-xs font-bold text-foreground">وصف الفكرة أو الحل</label>
+              <Textarea
+                id="edit-project-summary"
+                value={draft.summary}
+                onChange={(event) => setDraft((current) => ({ ...current, summary: event.target.value }))}
+                placeholder="اشرح المشكلة والحل والقيمة التي يقدمها المشروع باختصار..."
+                rows={3}
+                className="resize-y border-0 bg-muted/40 text-right text-xs leading-6 focus:bg-background"
+              />
+            </div>
+          </div>
+
+          <DialogFooter className="gap-2 border-0 sm:gap-0">
+            <Button type="button" onClick={saveDraft} disabled={!draft.name.trim()} className="w-full border-0 font-bold shadow-2xs sm:w-auto">
+              حفظ وتحديث سياق المشروع
+            </Button>
+            <Button type="button" variant="outline" onClick={() => setIsOpen(false)} className="w-full border-0 bg-muted/40 hover:bg-muted/70 sm:w-auto">
+              إلغاء
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+    </>
+  );
+}
 
 function ExplanationCard({ title, items }: { title: string; items: string[] }) {
   return (

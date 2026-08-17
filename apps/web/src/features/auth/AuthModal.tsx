@@ -5,7 +5,7 @@ import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Badge } from '@/components/ui/Badge';
-import { Loader2, Mail, Lock, AlertCircle, ArrowLeft, User as UserIcon, Zap, Eye, EyeOff, CheckSquare, Square, X, CheckCircle2 } from 'lucide-react';
+import { Loader2, Mail, Lock, AlertCircle, ArrowLeft, ArrowRight, User as UserIcon, Zap, Eye, EyeOff, CheckSquare, Square, X, CheckCircle2, Check } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { supabase } from '@/lib/supabase';
 import { DEFAULT_SUBSCRIPTION_PLAN_ID, SUBSCRIPTION_PLAN_IDS, SUBSCRIPTION_PLANS, SubscriptionPlanId } from '@/lib/subscriptionPlans';
@@ -58,12 +58,57 @@ const getSafeRedirectPath = () => {
   return target;
 };
 
+const PLAN_DETAILS: Record<SubscriptionPlanId, {
+  tag: string;
+  isFree: boolean;
+  priceText: string;
+  badge?: string;
+  detailedFeatures: string[];
+}> = {
+  starter: {
+    tag: 'مجانية 100%',
+    isFree: true,
+    priceText: '0 ر.س (مجاناً)',
+    badge: 'البدء السريع',
+    detailedFeatures: [
+      'سعة 5 مشاريع ودراسات جدوى',
+      'تصفح عينات +500 شركة ناجحة',
+      'حاسبة الإيرادات والنموذج المالي الأساسي',
+    ],
+  },
+  founder: {
+    tag: 'مدفوعة',
+    isFree: false,
+    priceText: '35 ر.س / شهرياً',
+    badge: 'الأكثر شعبية 🔥',
+    detailedFeatures: [
+      'سعة 10 مشاريع ودراسات متكاملة',
+      'روابط مشاركة تفاعلية آمنة مع المستثمرين',
+      'تحليل الفجوات والجاهزية الاستثمارية',
+      'توليد تعليمات ChatGPT ومخرجات JSON',
+    ],
+  },
+  leader: {
+    tag: 'مدفوعة',
+    isFree: false,
+    priceText: '75 ر.س / شهرياً',
+    badge: 'متقدم للقياديين',
+    detailedFeatures: [
+      'سعة مشاريع غير محدودة',
+      'تعدد المستخدمين ودعم فريق العمل',
+      'تخصيص الهوية التجارية والشعار',
+      'أولوية الاستشارات والمراجعة VIP 24/7',
+    ],
+  },
+};
+
 export const AuthModal: React.FC<AuthModalProps> = ({
   isOpen,
   onClose,
   initialMode = 'login',
 }) => {
   const [mode, setMode] = useState<AuthMode>(initialMode);
+  const [registerStep, setRegisterStep] = useState<1 | 2>(1);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -81,6 +126,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     queueMicrotask(() => {
       if (cancelled) return;
       setMode(initialMode);
+      setRegisterStep(1);
       setError(null);
       setMessage(null);
     });
@@ -99,7 +145,30 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
   const switchMode = (newMode: AuthMode) => {
     setMode(newMode);
+    setRegisterStep(1);
     resetState();
+  };
+
+  const handleNextStep = (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
+    setError(null);
+
+    if (!name.trim()) {
+      setError('يرجى إدخال الاسم الكامل.');
+      return;
+    }
+
+    if (!email.trim() || !email.includes('@')) {
+      setError('يرجى إدخال بريد إلكتروني صحيح.');
+      return;
+    }
+
+    if (password.length < 6) {
+      setError('كلمة المرور بسيطة جداً، يجب أن تتكون من 6 أرقام أو أحرف على الأقل.');
+      return;
+    }
+
+    setRegisterStep(2);
   };
 
   const handleAuth = async (e: React.FormEvent) => {
@@ -144,6 +213,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         if (!registration?.sessionCreated) {
           setMessage('تم إنشاء الحساب. افتح رسالة تأكيد البريد الإلكتروني، ثم سجّل الدخول من النافذة نفسها.');
           setMode('login');
+          setRegisterStep(1);
           setPassword('');
           return;
         }
@@ -181,9 +251,18 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     }
   };
 
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (mode === 'register' && registerStep === 1) {
+      handleNextStep();
+      return;
+    }
+    handleAuth(e);
+  };
+
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent showCloseButton={false} className="sm:max-w-[850px] max-h-[90vh] overflow-y-auto p-0 border-border/80 bg-card rounded-3xl shadow-2xl backdrop-blur-xl">
+      <DialogContent showCloseButton={false} className="sm:max-w-[850px] max-h-[90vh] overflow-y-auto p-0 border-0 bg-card rounded-3xl shadow-2xl backdrop-blur-xl">
         <DialogTitle className="sr-only">نافذة تسجيل الدخول وإنشاء الحساب</DialogTitle>
 
         {/* Custom Close Button */}
@@ -197,7 +276,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
         <div dir="rtl" className="grid grid-cols-1 md:grid-cols-12 min-h-[520px]">
           {/* Visual / Branding Sidebar */}
-          <div className="hidden md:flex md:col-span-5 relative bg-slate-950 overflow-hidden flex-col justify-between p-8 text-right border-l border-border/40">
+          <div className="hidden md:flex md:col-span-5 relative bg-slate-950 overflow-hidden flex-col justify-between p-8 text-right border-0">
             {/* Background Glows */}
             <div className="absolute inset-0 pointer-events-none">
               <div className="absolute top-[-20%] right-[-10%] w-[80%] h-[80%] rounded-full bg-primary/25 blur-[100px] mix-blend-screen animate-pulse duration-1000" />
@@ -215,7 +294,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
             {/* Content */}
             <div className="relative z-10 my-auto py-6 space-y-4">
-              <Badge variant="outline" className="text-primary-foreground border-primary/40 bg-primary/15 px-3 py-1 text-xs gap-1.5 font-bold w-fit">
+              <Badge variant="outline" className="text-primary-foreground border-0 bg-primary/20 px-3 py-1 text-xs gap-1.5 font-bold w-fit">
                 <Zap className="size-3.5 text-primary" />
                 استوديو بناء المشاريع
               </Badge>
@@ -253,8 +332,8 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           <div className="md:col-span-7 p-6 sm:p-10 flex flex-col justify-center text-right">
             
             {/* Header / Mode Selector */}
-            <div className="mb-6">
-              <div className="flex items-center gap-2 bg-muted/60 p-1 rounded-2xl w-fit mb-4 border border-border/40">
+            <div className="mb-4">
+              <div className="flex items-center gap-2 bg-muted/60 p-1 rounded-2xl w-fit mb-3 border-0">
                 <button
                   type="button"
                   onClick={() => switchMode('login')}
@@ -279,63 +358,169 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
               <h2 className="text-2xl font-black text-foreground">
                 {mode === 'login' && 'مرحباً بعودتك'}
-                {mode === 'register' && 'ابدأ رحلتك الآن'}
+                {mode === 'register' && (registerStep === 1 ? 'ابدأ رحلتك الآن' : 'اختر خطة اشتراكك')}
                 {mode === 'forgot_password' && 'استعادة كلمة المرور'}
               </h2>
               <p className="text-xs text-muted-foreground font-medium mt-1">
                 {mode === 'login' && 'أدخل بريدك وكلمة المرور لمتابعة مشاريعك.'}
-                {mode === 'register' && 'أنشئ حسابك المجاني للوصول إلى كافة الأدوات.'}
+                {mode === 'register' && (registerStep === 1 ? 'الخطوة 1 من 2: أنشئ حسابك الشخصي للوصول للأدوات.' : 'الخطوة 2 من 2: حدد الباقة المناسبة (مجانية أو مدفوعة).')}
                 {mode === 'forgot_password' && 'أدخل بريدك وسنرسل لك رابط التعيين.'}
               </p>
             </div>
 
+            {/* Registration Step Progress Indicator */}
+            {mode === 'register' && (
+              <div className="flex items-center gap-2 mb-4 p-1 rounded-2xl bg-muted/50 border-0">
+                <button
+                  type="button"
+                  onClick={() => setRegisterStep(1)}
+                  className={cn(
+                    "flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-xs font-bold transition-all cursor-pointer",
+                    registerStep === 1
+                      ? "bg-background text-foreground shadow-2xs"
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  <span className={cn(
+                    "size-5 rounded-full text-[10px] font-black flex items-center justify-center transition-all",
+                    registerStep === 1 ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"
+                  )}>
+                    1
+                  </span>
+                  <span>البيانات الشخصية</span>
+                </button>
+
+                <span className="text-muted-foreground/30 font-bold text-xs select-none">←</span>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (name && email && password.length >= 6) {
+                      setRegisterStep(2);
+                    } else {
+                      handleNextStep();
+                    }
+                  }}
+                  className={cn(
+                    "flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-xl text-xs font-bold transition-all cursor-pointer",
+                    registerStep === 2
+                      ? "bg-background text-foreground shadow-2xs"
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  <span className={cn(
+                    "size-5 rounded-full text-[10px] font-black flex items-center justify-center transition-all",
+                    registerStep === 2 ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"
+                  )}>
+                    2
+                  </span>
+                  <span>اختيار الباقة</span>
+                </button>
+              </div>
+            )}
+
             {/* Form */}
-            <form onSubmit={handleAuth} className="space-y-4">
+            <form onSubmit={handleFormSubmit} className="space-y-4">
               {error && (
-                <div className="flex items-start gap-2.5 rounded-2xl border border-destructive/30 bg-destructive/10 p-3.5 text-destructive text-xs font-bold leading-relaxed">
+                <div className="flex items-start gap-2.5 rounded-2xl bg-destructive/10 p-3.5 text-destructive text-xs font-bold leading-relaxed border-0">
                   <AlertCircle className="size-4 shrink-0 mt-0.5" />
                   <p>{error}</p>
                 </div>
               )}
 
               {message && (
-                <div className="flex items-start gap-2.5 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-3.5 text-emerald-600 text-xs font-bold leading-relaxed">
-                  <AlertCircle className="size-4 shrink-0 mt-0.5" />
+                <div className="flex items-start gap-2.5 rounded-2xl bg-emerald-500/10 p-3.5 text-emerald-600 text-xs font-bold leading-relaxed border-0">
+                  <CheckCircle2 className="size-4 shrink-0 mt-0.5" />
                   <p>{message}</p>
                 </div>
               )}
 
-              {mode === 'register' && (
-                <div className="space-y-1.5">
-                  <label className="text-xs font-extrabold text-foreground">الاسم الكامل</label>
-                  <div className="relative">
-                    <UserIcon className="absolute right-3.5 top-1/2 -translate-y-1/2 size-4 text-muted-foreground pointer-events-none" />
-                    <Input
-                      type="text"
-                      placeholder="محمد عبدالله"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      required
-                      className="pl-4 pr-10 py-5 bg-background border-border/80 rounded-xl text-xs font-medium focus-visible:ring-primary"
-                    />
+              {/* REGISTER STEP 1 */}
+              {mode === 'register' && registerStep === 1 && (
+                <>
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-extrabold text-foreground">الاسم الكامل</label>
+                    <div className="relative">
+                      <UserIcon className="absolute right-3.5 top-1/2 -translate-y-1/2 size-4 text-muted-foreground pointer-events-none" />
+                      <Input
+                        type="text"
+                        placeholder="محمد عبدالله"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                        className="pl-4 pr-10 py-5 bg-background border-0 shadow-2xs rounded-xl text-xs font-medium focus-visible:ring-primary"
+                      />
+                    </div>
                   </div>
-                </div>
+
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-extrabold text-foreground">البريد الإلكتروني</label>
+                    <div className="relative">
+                      <Mail className="absolute right-3.5 top-1/2 -translate-y-1/2 size-4 text-muted-foreground pointer-events-none" />
+                      <Input
+                        type="email"
+                        placeholder="name@example.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        className="pl-4 pr-10 py-5 bg-background border-0 shadow-2xs rounded-xl text-xs font-medium focus-visible:ring-primary text-left"
+                        dir="ltr"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-extrabold text-foreground">كلمة المرور</label>
+                    <div className="relative">
+                      <Lock className="absolute right-3.5 top-1/2 -translate-y-1/2 size-4 text-muted-foreground pointer-events-none" />
+                      <Input
+                        type={showPassword ? 'text' : 'password'}
+                        placeholder="••••••••"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                        minLength={6}
+                        className="pl-10 pr-10 py-5 bg-background border-0 shadow-2xs rounded-xl text-xs font-medium focus-visible:ring-primary text-left"
+                        dir="ltr"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-1 cursor-pointer"
+                      >
+                        {showPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
+                      </button>
+                    </div>
+                  </div>
+
+                  <Button
+                    type="button"
+                    onClick={handleNextStep}
+                    className="w-full py-5 bg-primary hover:bg-primary/90 text-primary-foreground font-black text-xs rounded-xl shadow-md gap-2 mt-2 cursor-pointer"
+                  >
+                    <span>الانتقال لاختيار الباقة</span>
+                    <ArrowLeft className="size-4" />
+                  </Button>
+                </>
               )}
 
-              {mode === 'register' && (
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <label className="text-xs font-extrabold text-foreground">اختر الباقة المناسبة لك</label>
-                    <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
-                      مجاناً 0$ الآن
-                    </span>
+              {/* REGISTER STEP 2 */}
+              {mode === 'register' && registerStep === 2 && (
+                <div className="space-y-3">
+                  {/* Informative Banner */}
+                  <div className="rounded-2xl bg-primary/5 p-3 flex items-start gap-2.5 text-xs text-muted-foreground border-0 shadow-2xs">
+                    <Zap className="size-4 text-primary shrink-0 mt-0.5" />
+                    <p className="leading-relaxed font-medium">
+                      يمكنك البدء فوراً بـ <strong className="text-emerald-600 dark:text-emerald-400 font-black">الباقة المجانية</strong> دون بطاقة ائتمان، أو اختيار إحدى <strong className="text-primary font-black">الباقات المدفوعة</strong> لسعة أكبر وأدوات متقدمة.
+                    </p>
                   </div>
 
-                  <div className="grid gap-2 grid-cols-1 sm:grid-cols-3">
+                  {/* Plans List */}
+                  <div className="grid gap-2 grid-cols-1">
                     {SUBSCRIPTION_PLAN_IDS.map((planId) => {
                       const plan = SUBSCRIPTION_PLANS[planId];
+                      const meta = PLAN_DETAILS[planId];
                       const selected = subscriptionPlan === planId;
-                      const isPopular = planId === 'founder';
 
                       return (
                         <button
@@ -343,131 +528,242 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                           type="button"
                           onClick={() => setSubscriptionPlan(plan.id)}
                           className={cn(
-                            'relative rounded-2xl border-2 p-3 text-right transition-all flex flex-col justify-between cursor-pointer group',
+                            'relative rounded-2xl p-3 text-right transition-all flex items-center justify-between cursor-pointer border-0 shadow-2xs',
                             selected
-                              ? 'border-primary bg-primary/5 text-foreground shadow-xs'
-                              : 'border-border/60 bg-background text-muted-foreground hover:border-primary/40 hover:bg-muted/30'
+                              ? 'bg-primary/10 text-foreground ring-2 ring-primary'
+                              : 'bg-muted/40 text-muted-foreground hover:bg-muted/70'
                           )}
                         >
-                          {isPopular && (
-                            <span className="absolute -top-2.5 left-3 bg-primary text-primary-foreground text-[9px] font-bold px-2 py-0.5 rounded-full shadow-2xs">
-                              الأكثر شعبية
-                            </span>
-                          )}
+                          <div className="flex items-center gap-3">
+                            <div className={cn(
+                              "size-8 rounded-xl flex items-center justify-center text-xs font-black shrink-0 transition-all shadow-2xs",
+                              selected
+                                ? "bg-primary text-primary-foreground"
+                                : meta.isFree
+                                  ? "bg-emerald-500/15 text-emerald-600"
+                                  : "bg-background text-muted-foreground"
+                            )}>
+                              {selected ? <Check className="size-4" /> : plan.shortName.charAt(0)}
+                            </div>
+                            <div>
+                              <div className="flex items-center gap-2 flex-wrap">
+                                <span className="text-xs font-black text-foreground">{plan.name}</span>
+                                
+                                <span className={cn(
+                                  "text-[9px] font-extrabold px-2 py-0.5 rounded-full shadow-2xs",
+                                  meta.isFree
+                                    ? "bg-emerald-500/15 text-emerald-600"
+                                    : "bg-primary/15 text-primary"
+                                )}>
+                                  {meta.tag}
+                                </span>
 
-                          <div className="flex items-center justify-between gap-1.5 mb-1">
-                            <span className="text-xs font-black text-foreground">{plan.name}</span>
-                            {selected ? (
-                              <CheckCircle2 className="size-4 text-primary shrink-0" />
-                            ) : (
-                              <div className="size-4 rounded-full border border-muted-foreground/30 shrink-0" />
-                            )}
+                                {meta.badge && !meta.isFree && (
+                                  <span className="bg-amber-500/15 text-amber-600 dark:text-amber-400 text-[9px] font-bold px-2 py-0.5 rounded-full">
+                                    {meta.badge}
+                                  </span>
+                                )}
+                              </div>
+
+                              <p className="text-[11px] text-muted-foreground leading-snug mt-0.5 font-medium">
+                                {plan.description}
+                              </p>
+                            </div>
                           </div>
 
-                          <div className="space-y-1">
-                            <div className="text-[11px] font-bold text-foreground">
+                          <div className="text-left shrink-0 mr-2 flex flex-col items-end gap-0.5">
+                            <span className={cn(
+                              "text-xs font-black px-2.5 py-1 rounded-lg shadow-2xs",
+                              meta.isFree ? "text-emerald-600 bg-background" : "text-primary bg-background"
+                            )}>
+                              {meta.priceText}
+                            </span>
+                            <span className="text-[10px] text-muted-foreground font-bold">
                               {plan.projectLimitLabel}
-                            </div>
-                            <p className="text-[10px] text-muted-foreground leading-relaxed">
-                              {plan.description}
-                            </p>
+                            </span>
                           </div>
                         </button>
                       );
                     })}
                   </div>
+
+                  {/* Selected Plan Features Breakdown */}
+                  {subscriptionPlan && PLAN_DETAILS[subscriptionPlan] && (
+                    <div className="bg-muted/30 rounded-2xl p-3 space-y-1.5 border-0">
+                      <div className="flex items-center justify-between text-[11px] font-black text-foreground mb-1">
+                        <span>ميزات {SUBSCRIPTION_PLANS[subscriptionPlan].name}:</span>
+                        <span className={cn(
+                          "text-[10px] font-bold px-2 py-0.5 rounded-full",
+                          PLAN_DETAILS[subscriptionPlan].isFree ? "bg-emerald-500/10 text-emerald-600" : "bg-primary/10 text-primary"
+                        )}>
+                          {PLAN_DETAILS[subscriptionPlan].isFree ? 'خطة مجانية' : 'خطة مدفوعة'}
+                        </span>
+                      </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+                        {PLAN_DETAILS[subscriptionPlan].detailedFeatures.map((feature, idx) => (
+                          <div key={idx} className="flex items-center gap-1.5 text-[11px] text-muted-foreground font-medium">
+                            <CheckCircle2 className="size-3 text-emerald-500 shrink-0" />
+                            <span className="truncate">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Action Buttons */}
+                  <div className="flex items-center gap-2 pt-1">
+                    <Button
+                      type="button"
+                      variant="ghost"
+                      onClick={() => {
+                        setError(null);
+                        setRegisterStep(1);
+                      }}
+                      className="py-5 px-4 text-muted-foreground hover:text-foreground font-bold text-xs rounded-xl gap-2 cursor-pointer"
+                    >
+                      <ArrowRight className="size-4" />
+                      <span>العودة للبيانات</span>
+                    </Button>
+
+                    <Button
+                      type="submit"
+                      disabled={isLoading}
+                      className="flex-1 py-5 bg-primary hover:bg-primary/90 text-primary-foreground font-black text-xs rounded-xl shadow-md gap-2 cursor-pointer"
+                    >
+                      {isLoading ? (
+                        <Loader2 className="size-4 animate-spin" />
+                      ) : (
+                        <>
+                          <span>
+                            {PLAN_DETAILS[subscriptionPlan]?.isFree ? 'البدء بالحساب المجاني' : 'متابعة بـ ' + SUBSCRIPTION_PLANS[subscriptionPlan].name}
+                          </span>
+                          <ArrowLeft className="size-4" />
+                        </>
+                      )}
+                    </Button>
+                  </div>
                 </div>
               )}
 
-              <div className="space-y-1.5">
-                <label className="text-xs font-extrabold text-foreground">البريد الإلكتروني</label>
-                <div className="relative">
-                  <Mail className="absolute right-3.5 top-1/2 -translate-y-1/2 size-4 text-muted-foreground pointer-events-none" />
-                  <Input
-                    type="email"
-                    placeholder="name@example.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="pl-4 pr-10 py-5 bg-background border-border/80 rounded-xl text-xs font-medium focus-visible:ring-primary text-left"
-                    dir="ltr"
-                  />
-                </div>
-              </div>
+              {/* LOGIN MODE */}
+              {mode === 'login' && (
+                <>
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-extrabold text-foreground">البريد الإلكتروني</label>
+                    <div className="relative">
+                      <Mail className="absolute right-3.5 top-1/2 -translate-y-1/2 size-4 text-muted-foreground pointer-events-none" />
+                      <Input
+                        type="email"
+                        placeholder="name@example.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        className="pl-4 pr-10 py-5 bg-background border-0 shadow-2xs rounded-xl text-xs font-medium focus-visible:ring-primary text-left"
+                        dir="ltr"
+                      />
+                    </div>
+                  </div>
 
-              {mode !== 'forgot_password' && (
-                <div className="space-y-1.5">
-                  <div className="flex items-center justify-between">
-                    <label className="text-xs font-extrabold text-foreground">كلمة المرور</label>
-                    {mode === 'login' && (
+                  <div className="space-y-1.5">
+                    <div className="flex items-center justify-between">
+                      <label className="text-xs font-extrabold text-foreground">كلمة المرور</label>
                       <button
                         type="button"
                         onClick={() => switchMode('forgot_password')}
-                        className="text-[11px] font-bold text-primary hover:underline"
+                        className="text-[11px] font-bold text-primary hover:underline cursor-pointer"
                       >
                         نسيت كلمة المرور؟
                       </button>
-                    )}
+                    </div>
+                    <div className="relative">
+                      <Lock className="absolute right-3.5 top-1/2 -translate-y-1/2 size-4 text-muted-foreground pointer-events-none" />
+                      <Input
+                        type={showPassword ? 'text' : 'password'}
+                        placeholder="••••••••"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                        minLength={6}
+                        className="pl-10 pr-10 py-5 bg-background border-0 shadow-2xs rounded-xl text-xs font-medium focus-visible:ring-primary text-left"
+                        dir="ltr"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-1 cursor-pointer"
+                      >
+                        {showPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
+                      </button>
+                    </div>
                   </div>
-                  <div className="relative">
-                    <Lock className="absolute right-3.5 top-1/2 -translate-y-1/2 size-4 text-muted-foreground pointer-events-none" />
-                    <Input
-                      type={showPassword ? 'text' : 'password'}
-                      placeholder="••••••••"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      required
-                      minLength={6}
-                      className="pl-10 pr-10 py-5 bg-background border-border/80 rounded-xl text-xs font-medium focus-visible:ring-primary text-left"
-                      dir="ltr"
-                    />
+
+                  <div className="flex items-center justify-between pt-1">
                     <button
                       type="button"
-                      onClick={() => setShowPassword(!showPassword)}
-                      className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-1"
+                      onClick={() => setRememberMe(!rememberMe)}
+                      className="flex items-center gap-2 text-xs font-semibold text-muted-foreground hover:text-foreground cursor-pointer"
                     >
-                      {showPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
+                      {rememberMe ? (
+                        <CheckSquare className="size-4 text-primary shrink-0" />
+                      ) : (
+                        <Square className="size-4 text-muted-foreground shrink-0" />
+                      )}
+                      <span>تذكر بيانات الدخول</span>
                     </button>
                   </div>
-                </div>
-              )}
 
-              {mode === 'login' && (
-                <div className="flex items-center justify-between pt-1">
-                  <button
-                    type="button"
-                    onClick={() => setRememberMe(!rememberMe)}
-                    className="flex items-center gap-2 text-xs font-semibold text-muted-foreground hover:text-foreground cursor-pointer"
+                  <Button
+                    type="submit"
+                    disabled={isLoading}
+                    className="w-full py-5 bg-primary hover:bg-primary/90 text-primary-foreground font-black text-xs rounded-xl shadow-md gap-2 mt-2 cursor-pointer"
                   >
-                    {rememberMe ? (
-                      <CheckSquare className="size-4 text-primary shrink-0" />
+                    {isLoading ? (
+                      <Loader2 className="size-4 animate-spin" />
                     ) : (
-                      <Square className="size-4 text-muted-foreground shrink-0" />
+                      <>
+                        <span>تسجيل الدخول الفوري</span>
+                        <ArrowLeft className="size-4" />
+                      </>
                     )}
-                    <span>تذكر بيانات الدخول</span>
-                  </button>
-                </div>
+                  </Button>
+                </>
               )}
 
-              <Button
-                type="submit"
-                disabled={isLoading}
-                className="w-full py-5 bg-primary hover:bg-primary/90 text-primary-foreground font-black text-xs rounded-xl shadow-md gap-2 mt-2"
-              >
-                {isLoading ? (
-                  <Loader2 className="size-4 animate-spin" />
-                ) : (
-                  <>
-                    <span>
-                      {mode === 'login' && 'تسجيل الدخول الفوري'}
-                      {mode === 'register' && 'إنشاء حساب جديد مجاناً'}
-                      {mode === 'forgot_password' && 'إرسال رابط الاستعادة'}
-                    </span>
-                    <ArrowLeft className="size-4" />
-                  </>
-                )}
-              </Button>
+              {/* FORGOT PASSWORD MODE */}
+              {mode === 'forgot_password' && (
+                <>
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-extrabold text-foreground">البريد الإلكتروني</label>
+                    <div className="relative">
+                      <Mail className="absolute right-3.5 top-1/2 -translate-y-1/2 size-4 text-muted-foreground pointer-events-none" />
+                      <Input
+                        type="email"
+                        placeholder="name@example.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        className="pl-4 pr-10 py-5 bg-background border-0 shadow-2xs rounded-xl text-xs font-medium focus-visible:ring-primary text-left"
+                        dir="ltr"
+                      />
+                    </div>
+                  </div>
 
+                  <Button
+                    type="submit"
+                    disabled={isLoading}
+                    className="w-full py-5 bg-primary hover:bg-primary/90 text-primary-foreground font-black text-xs rounded-xl shadow-md gap-2 mt-2 cursor-pointer"
+                  >
+                    {isLoading ? (
+                      <Loader2 className="size-4 animate-spin" />
+                    ) : (
+                      <>
+                        <span>إرسال رابط الاستعادة</span>
+                        <ArrowLeft className="size-4" />
+                      </>
+                    )}
+                  </Button>
+                </>
+              )}
             </form>
 
           </div>
@@ -476,3 +772,4 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     </Dialog>
   );
 };
+

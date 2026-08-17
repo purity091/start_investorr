@@ -587,8 +587,8 @@ export const BusinessModelCanvas: React.FC<{
       },
       profile: {
         ...current.profile,
-        name: active?.brief.name || current.profile.name,
-        opportunitySummary: active?.brief.ideaSummary || current.profile.opportunitySummary,
+        name: current.profile.name || active?.brief.name,
+        opportunitySummary: current.profile.opportunitySummary || active?.brief.ideaSummary,
       },
     }));
   }, [activeProjectId, projects, updateWorkspace]);
@@ -657,6 +657,23 @@ export const BusinessModelCanvas: React.FC<{
         [key]: value,
       },
     }));
+    if (key === 'name') {
+      updateWorkspace((current) => ({
+        profile: {
+          ...current.profile,
+          name: value,
+          opportunityTitle: value,
+        },
+      }));
+    }
+    if (key === 'ideaSummary') {
+      updateWorkspace((current) => ({
+        profile: {
+          ...current.profile,
+          opportunitySummary: value,
+        },
+      }));
+    }
   };
 
   const handleBlockQuestionAnswerChange = (block: CanvasKey, questionId: string, value: string) => {
@@ -966,7 +983,7 @@ export const BusinessModelCanvas: React.FC<{
                           <AIPromptHelper
                             sectionTitle={currentBlock ? BLOCK_META[currentBlock].title : ''}
                             questionText={question.question}
-                            projectName={activeProject?.brief.name || 'مشروع استثماري'}
+                            projectName={workspace.profile.name || activeProject?.brief.name || 'مشروع استثماري'}
                             projectSector={workspace.profile.sectorLabel || workspace.profile.sectorGroup || undefined}
                             targetMarket={workspace.profile.countryLabel || undefined}
                             customerType={workspace.profile.customerType || undefined}

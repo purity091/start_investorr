@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "id": "salla",
+  "slug": "salla",
+  "status": "published",
+  "name": "Salla",
+  "headline": "منصة تجارة إلكترونية وخدمات رقمية للتجار",
+  "category": "E-commerce / SaaS",
+  "country": "SA",
+  "company": {
+    "name": "Salla",
+    "shortDescription": "وصف مختصر قابل للعرض في القائمة",
+    "aboutDescription": "الوصف التفصيلي للشركة",
+    "foundedDate": "2016",
+    "hqLocation": "المملكة العربية السعودية",
+    "websiteUrl": "https://example.com"
+  },
+  "business_model": {
+    "type": "SaaS + Transaction Services",
+    "revenueStreams": ["اشتراكات", "خدمات مدفوعة", "عمولات"],
+    "targetCustomers": ["التجار", "المتاجر الصغيرة والمتوسطة"]
+  },
+  "market": {
+    "targetMarkets": ["السعودية", "الخليج"],
+    "problem": "المشكلة التي تعالجها الشركة",
+    "solution": "الحل والقيمة المقدمة",
+    "competitiveAdvantage": "الميزة التنافسية"
+  },
+  "fundingRounds": [],
+  "keyPeople": [],
+  "swotAnalysis": {
+    "strengths": [],
+    "weaknesses": [],
+    "opportunities": [],
+    "threats": []
+  },
+  "lessons": [],
+  "sources": [],
+  "published_at": "2026-08-17T00:00:00.000Z"
+}

@@ -452,32 +452,7 @@ export default function LandingPage() {
 
           </div>
 
-          {/* Bottom Interactive Callout Banner */}
-          <div className="mt-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-primary/10 via-primary/5 to-card border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xs">
-            <div className="space-y-1.5 text-center flex flex-col items-center sm:items-start sm:text-right">
-              <div className="flex items-center justify-center sm:justify-start gap-2">
-                <Badge className="bg-primary text-primary-foreground text-[10px] font-bold px-2.5 py-0.5 rounded-full">
-                  الرحلة تبدأ الآن
-                </Badge>
-                <span className="text-xs font-bold text-muted-foreground">أين يقع مشروعك اليوم؟</span>
-              </div>
-              <h4 className="text-lg sm:text-xl font-black text-foreground text-center sm:text-right">
-                جاهز لبدء رحلة مشروعك من الاستكشاف وحتى التنفيذ؟
-              </h4>
-              <p className="text-xs text-muted-foreground font-medium max-w-2xl leading-relaxed text-center sm:text-right">
-                لا تضيع وقتك في البحث بين عشرات المنصات، خريطة "خطة" تجمع لك كل ما تحتاجه لبناء مشروع ناجح في مكان واحد.
-              </p>
-            </div>
 
-            <Button
-              onClick={() => openAuthModal('register')}
-              size="lg"
-              className="w-full sm:w-auto text-xs sm:text-sm font-extrabold h-12 px-8 gap-2 shadow-2xs cursor-pointer shrink-0 bg-primary hover:bg-primary/90"
-            >
-              ابدأ رحلة مشروعك مجاناً
-              <ArrowLeft className="size-4" />
-            </Button>
-          </div>
 
         </section>
 
