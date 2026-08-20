@@ -150,6 +150,10 @@ const AppShell: React.FC = () => {
     if (window.location.pathname !== expectedPath) {
       window.history.replaceState({ tab: activeTab }, '', expectedPath);
     }
+    // Auto-collapse sidebar on small screens (< 1024px) or when on project edit/builder views
+    if (window.innerWidth < 1024 || activeTab === 'project-edit' || activeTab.startsWith('new-plan-')) {
+      setIsSidebarCollapsed(true);
+    }
   }, [activeTab]);
 
   useEffect(() => {

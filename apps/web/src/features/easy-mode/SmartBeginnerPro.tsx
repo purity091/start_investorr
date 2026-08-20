@@ -1011,177 +1011,91 @@ export default function SmartBeginnerPro() {
   return (
     <div className="w-full bg-background" dir="rtl">
       <div className="flex w-full flex-col gap-3.5 px-2 py-2 sm:px-4 lg:px-6">
-        {/* Corporate Wizard Header */}
-        <div className="rounded-2xl border border-border/80 bg-card p-3 sm:p-6 shadow-2xs space-y-2 sm:space-y-4">
-          <div className="flex flex-col gap-3 sm:gap-4 lg:flex-row lg:items-center lg:justify-between">
-            <div className="space-y-1 sm:space-y-1.5 text-right">
-
-              <h1 className="text-base sm:text-2xl lg:text-3xl font-extrabold text-foreground tracking-tight leading-snug">
+        {/* Single Unified Header Div - Clean, Borderless & Organized */}
+        <div className="rounded-2xl border-0 bg-card p-3.5 sm:p-5 shadow-2xs space-y-3.5">
+          {/* Top Row: Workshop Title + Metrics + Active Step Info */}
+          <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex flex-wrap items-center gap-2">
+              <h1 className="text-base sm:text-lg font-extrabold text-foreground tracking-tight">
                 ورشة بناء النموذج الأولي ودراسة الجدوى الاحترافية
               </h1>
-              <p className="max-w-3xl text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                أدخل بيانات مشروعك عبر الخطوات التفاعلية أدناه لبناء ملف استثماري متكامل ولوحة قيادة استراتيجية للمشروع.
-              </p>
+              <div className="flex items-center gap-1.5 shrink-0">
+                <Badge variant="secondary" className={cn("border-0 text-[11px] px-2.5 py-0.5 font-bold", readiness.tone)}>
+                  الجاهزية: {readiness.score}%
+                </Badge>
+                <Badge variant="outline" className="border-0 bg-muted/60 text-[11px] px-2.5 py-0.5 font-bold text-muted-foreground">
+                  المكتمل: {completedCount}/{PRO_STEPS.length}
+                </Badge>
+              </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-1.5 sm:gap-3 shrink-0 lg:w-[480px]">
-              <MetricCard label="جاهزية الدراسة" value={`${readiness.score}%`} icon={Gauge} tone={readiness.tone} />
-              <MetricCard label="الأقسام المكتملة" value={`${completedCount}/${PRO_STEPS.length}`} icon={ClipboardList} />
-              <MetricCard label="المرحلة الحالية" value={`خطوة ${stepIndex + 1}`} icon={Target} />
+            {/* Active Step Indicator */}
+            <div className="flex items-center gap-2 text-xs shrink-0 bg-muted/30 px-3 py-1.5 rounded-xl">
+              <span className="font-bold text-foreground">
+                الخطوة {stepIndex + 1} من {PRO_STEPS.length}: {currentStep.title}
+              </span>
+              {getStepCompletion(currentStep, answers) >= 0.5 && (
+                <Badge variant="outline" className="bg-emerald-500/10 text-emerald-600 border-0 text-[10px] font-bold px-1.5 py-0">
+                  مكتمل
+                </Badge>
+              )}
             </div>
           </div>
-        </div>
 
-        {/* Mobile Horizontal Step Selector */}
-        <div className="lg:hidden w-full flex overflow-x-auto whitespace-nowrap scrollbar-none gap-1.5 py-0.5">
-          {PRO_STEPS.map((step, index) => {
-            const active = index === stepIndex;
-            const complete = getStepCompletion(step, answers) >= 0.5;
+          {/* Step Selector Tabs (Borderless) */}
+          <div className="w-full flex overflow-x-auto whitespace-nowrap scrollbar-none gap-2 py-0.5">
+            {PRO_STEPS.map((step, index) => {
+              const active = index === stepIndex;
+              const complete = getStepCompletion(step, answers) >= 0.5;
 
-            return (
-              <button
-                key={step.id}
-                type="button"
-                onClick={() => setStepIndex(index)}
-                className={cn(
-                  "flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11px] sm:text-xs font-bold shrink-0 transition-all border cursor-pointer",
-                  active
-                    ? "bg-primary text-primary-foreground border-primary shadow-xs"
-                    : complete
-                      ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20"
-                      : "bg-card text-muted-foreground border-border"
-                )}
-              >
-                <span className="flex size-4 sm:size-5 items-center justify-center rounded-full text-[9px] sm:text-[10px] font-bold bg-background/20">
-                  {complete ? <CheckCircle2 className="size-3" /> : index + 1}
-                </span>
-                <span>{step.shortTitle}</span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Wizard Main Grid: Stepper Navigation (Sidebar) + Active Step Form */}
-        <div className="grid gap-3.5 sm:gap-6 lg:grid-cols-[300px_1fr]">
-          {/* Stepper Navigation Sidebar */}
-          <div className="space-y-3 sm:space-y-4">
-            <Card className="border border-border/80 bg-card shadow-2xs overflow-hidden">
-              <CardHeader className="bg-muted/40 p-3 sm:p-4 border-b border-border/60">
-                <div className="flex items-center justify-between">
-                  <CardTitle className="flex items-center gap-2 text-sm font-bold text-foreground">
-                    <ClipboardList className="size-4 text-primary" />
-                    خطوات التكويين
-                  </CardTitle>
-                  <span className="text-xs font-bold text-muted-foreground">
-                    {completedCount}/{PRO_STEPS.length}
+              return (
+                <button
+                  key={step.id}
+                  type="button"
+                  onClick={() => setStepIndex(index)}
+                  className={cn(
+                    "flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-bold shrink-0 transition-all border-0 cursor-pointer",
+                    active
+                      ? "bg-primary text-primary-foreground shadow-2xs"
+                      : complete
+                        ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-500/20"
+                        : "bg-muted/40 text-muted-foreground hover:bg-accent/60 hover:text-foreground"
+                  )}
+                >
+                  <span className={cn(
+                    "flex size-4.5 items-center justify-center rounded-full text-[10px] font-bold shrink-0",
+                    active ? "bg-primary-foreground/20 text-primary-foreground" : complete ? "bg-emerald-500/20 text-emerald-700" : "bg-background text-muted-foreground"
+                  )}>
+                    {complete ? <CheckCircle2 className="size-3" /> : index + 1}
                   </span>
-                </div>
-                <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-muted">
-                  <div
-                    className="h-full rounded-full bg-primary transition-all duration-300"
-                    style={{ width: `${(completedCount / PRO_STEPS.length) * 100}%` }}
-                  />
-                </div>
-              </CardHeader>
-
-              <CardContent className="p-2 space-y-1">
-                {PRO_STEPS.map((step, index) => {
-                  const active = index === stepIndex;
-                  const complete = getStepCompletion(step, answers) >= 0.5;
-
-                  return (
-                    <button
-                      key={step.id}
-                      type="button"
-                      onClick={() => setStepIndex(index)}
-                      className={cn(
-                        'flex w-full items-center gap-3 rounded-xl p-3 text-right text-xs sm:text-sm transition-all border cursor-pointer',
-                        active
-                          ? 'bg-primary/10 text-primary border-primary/40 font-bold shadow-2xs'
-                          : 'bg-card border-transparent text-muted-foreground hover:bg-accent/60 hover:text-foreground'
-                      )}
-                    >
-                      <span className={cn(
-                        'flex size-8 shrink-0 items-center justify-center rounded-lg font-bold text-xs transition-colors',
-                        active
-                          ? 'bg-primary text-primary-foreground'
-                          : complete
-                            ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
-                            : 'bg-muted text-muted-foreground'
-                      )}>
-                        {complete ? <CheckCircle2 className="size-4" /> : index + 1}
-                      </span>
-
-                      <div className="min-w-0 flex-1 text-right">
-                        <div className="font-bold truncate text-foreground">{step.shortTitle}</div>
-                        <div className="text-[10px] text-muted-foreground truncate">{step.fields.length} حقول تفاعلية</div>
-                      </div>
-
-                      {complete && (
-                        <Badge variant="outline" className="bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20 text-[10px] px-1.5 py-0 font-bold shrink-0">
-                          مكتمل
-                        </Badge>
-                      )}
-                    </button>
-                  );
-                })}
-              </CardContent>
-            </Card>
-
-            <div className="rounded-xl border border-border/70 bg-card p-4 text-xs space-y-2">
-              <div className="flex items-center gap-2 font-bold text-foreground">
-                <ShieldAlert className="size-4 text-amber-500 shrink-0" />
-                <span>حالة الجاهزية الحالية:</span>
-              </div>
-              <p className={cn("leading-relaxed font-semibold", readiness.tone)}>{readiness.label}</p>
-              <p className="text-muted-foreground text-[11px] leading-relaxed">{readiness.summary}</p>
-            </div>
+                  <span>{step.shortTitle}</span>
+                </button>
+              );
+            })}
           </div>
 
-          {/* Active Step Form Area */}
-          <Card className="border border-border/80 bg-card shadow-2xs space-y-4 sm:space-y-6">
-            <CardHeader className="border-b border-border/60 p-3.5 sm:p-6 space-y-3 sm:space-y-4">
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <div className="flex items-start gap-2.5 sm:gap-3.5">
-                  <div className="flex size-9 sm:size-12 shrink-0 items-center justify-center rounded-xl sm:rounded-2xl bg-primary/10 text-primary border border-primary/20 shadow-2xs">
-                    <StepIcon className="size-4 sm:size-6" />
-                  </div>
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-1.5 sm:gap-2">
-                      <Badge variant="outline" className="text-[10px] font-bold">
-                        الخطوة {stepIndex + 1} من {PRO_STEPS.length}
-                      </Badge>
-                      {getStepCompletion(currentStep, answers) >= 0.5 && (
-                        <Badge variant="outline" className="bg-emerald-500/10 text-emerald-600 border-emerald-500/20 text-[10px] font-bold">
-                          قسم مكتمل
-                        </Badge>
-                      )}
-                    </div>
-                    <CardTitle className="text-base sm:text-xl lg:text-2xl font-bold tracking-tight">{currentStep.title}</CardTitle>
-                    <CardDescription className="text-xs sm:text-sm leading-relaxed">{currentStep.description}</CardDescription>
-                  </div>
-                </div>
-              </div>
+          {/* Overall Progress Bar */}
+          <div className="space-y-1">
+            <div className="flex items-center justify-between text-[11px] text-muted-foreground font-medium">
+              <span>إنجاز الخطوة الحالية:</span>
+              <span className="font-bold text-foreground">{Math.round(getStepCompletion(currentStep, answers) * 100)}%</span>
+            </div>
+            <div className="h-1.5 overflow-hidden rounded-full bg-muted/50">
+              <div
+                className="h-full rounded-full bg-primary transition-all duration-300"
+                style={{ width: `${getStepCompletion(currentStep, answers) * 100}%` }}
+              />
+            </div>
+          </div>
+        </div>
 
-              {/* Progress bar across current step */}
-              <div className="space-y-1.5">
-                <div className="flex items-center justify-between text-xs text-muted-foreground font-medium">
-                  <span>مستوى إنجاز القسم:</span>
-                  <span className="font-bold text-foreground">{Math.round(getStepCompletion(currentStep, answers) * 100)}%</span>
-                </div>
-                <div className="h-1.5 sm:h-2 overflow-hidden rounded-full bg-muted">
-                  <div
-                    className="h-full rounded-full bg-primary transition-all duration-300"
-                    style={{ width: `${getStepCompletion(currentStep, answers) * 100}%` }}
-                  />
-                </div>
-              </div>
-            </CardHeader>
-
-            <CardContent className="p-3.5 sm:p-6 pt-0 space-y-4 sm:space-y-6">
+        {/* Active Step Form Area - Clean Borderless Full Width */}
+        <div className="flex flex-col w-full gap-4">
+          <Card className="border-0 bg-card shadow-2xs space-y-4 sm:space-y-6">
+            <CardContent className="p-3.5 sm:p-6 space-y-4 sm:space-y-6">
               {/* Expert Advice Note */}
-              <div className="rounded-xl border border-primary/20 bg-primary/5 p-4 flex items-start gap-3">
-                <Target className="size-5 text-primary shrink-0 mt-0.5" />
+              <div className="rounded-xl border-0 bg-primary/5 p-3.5 flex items-start gap-3">
+                <Target className="size-4.5 text-primary shrink-0 mt-0.5" />
                 <div className="space-y-1 min-w-0 flex-1">
                   <h4 className="text-xs font-bold text-primary">توصية الخبراء لهذا القسم:</h4>
                   <p className="text-xs leading-relaxed text-foreground/90 font-medium">{currentStep.professionalNote}</p>

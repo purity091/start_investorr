@@ -1084,52 +1084,123 @@ export const ProvenProjectProfile: React.FC<ProvenProjectProps> = ({ project: ra
               </CardContent>
 
               <CardContent className="p-4 sm:p-6 bg-card space-y-4 border-t border-border/40">
+                {/* TrustMRR Section Header Bar */}
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/30 border border-emerald-200/70 dark:border-emerald-900/50 shadow-2xs mb-4">
+                  <div className="flex items-center gap-2.5">
+                    <div className="p-2 rounded-lg bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 shrink-0">
+                      <ShieldCheck className="size-4" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <span className="font-extrabold text-xs sm:text-sm text-emerald-950 dark:text-emerald-100">
+                          بيانات TrustMRR المالية المتحققة (TrustMRR Verified Metrics)
+                        </span>
+                        <Badge variant="outline" className="bg-emerald-100 dark:bg-emerald-900 text-emerald-800 dark:text-emerald-200 border-emerald-300 dark:border-emerald-700 text-[10px] font-bold px-2 py-0.2">
+                          Stripe Verified
+                        </Badge>
+                      </div>
+                      <p className="text-[11px] text-emerald-800/80 dark:text-emerald-300/80 font-medium">
+                        مؤشرات الإيراد والنشاط التدقيقي المفصولة وفق معايير التدقيق المباشر
+                      </p>
+                    </div>
+                  </div>
+                  {rawProject.verification?.verified_on && (
+                    <Badge variant="secondary" className="text-[10px] font-bold bg-background text-emerald-900 dark:text-emerald-200 border border-emerald-200/80 shrink-0">
+                      تحديث: {getDisplayText(rawProject.verification.verified_on)}
+                    </Badge>
+                  )}
+                </div>
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
                   
-                  <div className="p-3.5 sm:p-4 rounded-xl bg-emerald-50/60 dark:bg-emerald-950/40 border border-emerald-200/70 dark:border-emerald-900/60 flex flex-col justify-between gap-1.5 min-h-[96px] shadow-2xs">
-                    <span className="text-xs font-bold text-emerald-800 dark:text-emerald-300 uppercase tracking-wider">الإيراد الشهري الموثق</span>
+                  {/* Metric 1: الإيراد الشهري الموثق (Revenue) */}
+                  <div className="p-4 rounded-xl bg-emerald-50/60 dark:bg-emerald-950/40 border border-emerald-200/80 dark:border-emerald-900/60 flex flex-col justify-between gap-2 shadow-2xs hover:border-emerald-300 dark:hover:border-emerald-800 transition-all group">
+                    <div className="flex items-center justify-between gap-1.5">
+                      <span className="text-xs font-extrabold text-emerald-800 dark:text-emerald-300 uppercase tracking-wider">الإيراد الشهري الموثق</span>
+                      <div className="p-1 rounded-md bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300 group-hover:scale-110 transition-transform">
+                        <DollarSign className="size-3.5" />
+                      </div>
+                    </div>
                     <span 
-                      className="text-base sm:text-lg font-extrabold text-emerald-700 dark:text-emerald-300 tracking-tight dir-ltr text-right break-words leading-tight"
+                      className="text-lg sm:text-xl font-black text-emerald-700 dark:text-emerald-300 tracking-tight dir-ltr text-right break-words leading-tight"
                       title={getValuationText(project.directory_snapshot?.monthly_revenue)}
                     >
                       {getShortRevenueDisplay(project.directory_snapshot?.monthly_revenue)}
                     </span>
-                    <span className="text-[11px] text-emerald-700 dark:text-emerald-400 font-medium leading-normal">
-                      {translateConfidence(revenueEvidence?.confidence)}
-                    </span>
+                    <div className="pt-1.5 border-t border-emerald-200/50 dark:border-emerald-900/40 flex items-center justify-between">
+                      <span className="text-[11px] text-emerald-700 dark:text-emerald-400 font-medium">
+                        {translateConfidence(revenueEvidence?.confidence)}
+                      </span>
+                      <Badge variant="outline" className="text-[9px] font-bold bg-emerald-100/70 text-emerald-800 border-emerald-300 dark:bg-emerald-900/80 dark:text-emerald-200">
+                        متحقق Stripe
+                      </Badge>
+                    </div>
                   </div>
 
-                  <div className="p-3.5 sm:p-4 rounded-xl bg-slate-50/80 dark:bg-slate-900/40 border border-slate-200/70 dark:border-slate-800 flex flex-col justify-between gap-1.5 min-h-[96px] shadow-2xs">
-                    <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">الزيارات والانتشار</span>
+                  {/* Metric 2: الزيارات والانتشار (Traffic) */}
+                  <div className="p-4 rounded-xl bg-sky-50/60 dark:bg-sky-950/40 border border-sky-200/80 dark:border-sky-900/60 flex flex-col justify-between gap-2 shadow-2xs hover:border-sky-300 dark:hover:border-sky-800 transition-all group">
+                    <div className="flex items-center justify-between gap-1.5">
+                      <span className="text-xs font-extrabold text-sky-800 dark:text-sky-300 uppercase tracking-wider">الزيارات والانتشار</span>
+                      <div className="p-1 rounded-md bg-sky-100 text-sky-700 dark:bg-sky-900 dark:text-sky-300 group-hover:scale-110 transition-transform">
+                        <Users className="size-3.5" />
+                      </div>
+                    </div>
                     <span 
-                      className="text-base sm:text-lg font-bold text-slate-900 dark:text-slate-100 dir-ltr text-right break-words leading-tight"
+                      className="text-lg sm:text-xl font-bold text-sky-950 dark:text-sky-100 dir-ltr text-right break-words leading-tight"
                       title={getValuationText(project.directory_snapshot?.monthly_traffic)}
                     >
                       {getShortTrafficDisplay(project.directory_snapshot?.monthly_traffic)}
                     </span>
-                    <span className="text-[11px] text-slate-500 dark:text-slate-400 font-medium leading-normal">
-                      {translateConfidence(trafficEvidence?.confidence)}
-                    </span>
+                    <div className="pt-1.5 border-t border-sky-200/50 dark:border-sky-900/40 flex items-center justify-between">
+                      <span className="text-[11px] text-sky-700 dark:text-sky-400 font-medium">
+                        {translateConfidence(trafficEvidence?.confidence)}
+                      </span>
+                      <Badge variant="outline" className="text-[9px] font-bold bg-sky-100/70 text-sky-800 border-sky-300 dark:bg-sky-900/80 dark:text-sky-200">
+                        نشاط ميداني
+                      </Badge>
+                    </div>
                   </div>
 
-                  <div className="p-3.5 sm:p-4 rounded-xl bg-slate-50/80 dark:bg-slate-900/40 border border-slate-200/70 dark:border-slate-800 flex flex-col justify-between gap-1.5 min-h-[96px] shadow-2xs">
-                    <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">نموذج التمويل</span>
-                    <span className="text-sm sm:text-base font-bold text-slate-900 dark:text-slate-100 leading-tight break-words" title={getDisplayText(project.company?.funding || project.financials?.initial_investment)}>
+                  {/* Metric 3: نموذج التمويل ورأس المال (Funding) */}
+                  <div className="p-4 rounded-xl bg-indigo-50/60 dark:bg-indigo-950/40 border border-indigo-200/80 dark:border-indigo-900/60 flex flex-col justify-between gap-2 shadow-2xs hover:border-indigo-300 dark:hover:border-indigo-800 transition-all group">
+                    <div className="flex items-center justify-between gap-1.5">
+                      <span className="text-xs font-extrabold text-indigo-800 dark:text-indigo-300 uppercase tracking-wider">نموذج التمويل</span>
+                      <div className="p-1 rounded-md bg-indigo-100 text-indigo-700 dark:bg-indigo-900 dark:text-indigo-300 group-hover:scale-110 transition-transform">
+                        <Building2 className="size-3.5" />
+                      </div>
+                    </div>
+                    <span className="text-sm sm:text-base font-bold text-indigo-950 dark:text-indigo-100 leading-tight break-words" title={getDisplayText(project.company?.funding || project.financials?.initial_investment)}>
                       {getDisplayText(project.company?.funding) || (project.financials?.initial_investment ? 'جولة استثمارية' : 'تمويل ذاتي')}
                     </span>
-                    <span className="text-[11px] text-slate-500 dark:text-slate-400 font-medium leading-normal">
-                      {project.company?.bootstrapped ? 'تمويل ذاتي (Bootstrapped)' : (project.financials?.initial_investment ? 'استثمار معلن' : 'تمويل تشغيلي')}
-                    </span>
+                    <div className="pt-1.5 border-t border-indigo-200/50 dark:border-indigo-900/40 flex items-center justify-between">
+                      <span className="text-[11px] text-indigo-700 dark:text-indigo-400 font-medium">
+                        {project.company?.bootstrapped ? 'تمويل ذاتي (Bootstrapped)' : (project.financials?.initial_investment ? 'استثمار معلن' : 'تمويل تشغيلي')}
+                      </span>
+                      <Badge variant="outline" className="text-[9px] font-bold bg-indigo-100/70 text-indigo-800 border-indigo-300 dark:bg-indigo-900/80 dark:text-indigo-200">
+                        رأس المال
+                      </Badge>
+                    </div>
                   </div>
 
-                  <div className="p-3.5 sm:p-4 rounded-xl bg-slate-50/80 dark:bg-slate-900/40 border border-slate-200/70 dark:border-slate-800 flex flex-col justify-between gap-1.5 min-h-[96px] shadow-2xs">
-                    <span className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">التقييم / الاستحواذ</span>
-                    <span className="text-sm sm:text-base font-bold text-slate-900 dark:text-slate-100 leading-tight break-words" title={getValuationText(project.financials?.valuation)}>
+                  {/* Metric 4: التقييم وقيمة الأصل (Valuation) */}
+                  <div className="p-4 rounded-xl bg-purple-50/60 dark:bg-purple-950/40 border border-purple-200/80 dark:border-purple-900/60 flex flex-col justify-between gap-2 shadow-2xs hover:border-purple-300 dark:hover:border-purple-800 transition-all group">
+                    <div className="flex items-center justify-between gap-1.5">
+                      <span className="text-xs font-extrabold text-purple-800 dark:text-purple-300 uppercase tracking-wider">التقييم / الاستحواذ</span>
+                      <div className="p-1 rounded-md bg-purple-100 text-purple-700 dark:bg-purple-900 dark:text-purple-300 group-hover:scale-110 transition-transform">
+                        <TrendingUp className="size-3.5" />
+                      </div>
+                    </div>
+                    <span className="text-sm sm:text-base font-bold text-purple-950 dark:text-purple-100 leading-tight break-words" title={getValuationText(project.financials?.valuation)}>
                       {getShortValuationDisplay(project.financials?.valuation)}
                     </span>
-                    <span className="text-[11px] text-slate-500 dark:text-slate-400 font-medium leading-normal">
-                      {translateClaimType(valuationEvidence?.claim_type)}
-                    </span>
+                    <div className="pt-1.5 border-t border-purple-200/50 dark:border-purple-900/40 flex items-center justify-between">
+                      <span className="text-[11px] text-purple-700 dark:text-purple-400 font-medium">
+                        {translateClaimType(valuationEvidence?.claim_type)}
+                      </span>
+                      <Badge variant="outline" className="text-[9px] font-bold bg-purple-100/70 text-purple-800 border-purple-300 dark:bg-purple-900/80 dark:text-purple-200">
+                        قيمة الأصل
+                      </Badge>
+                    </div>
                   </div>
                 </div>
 

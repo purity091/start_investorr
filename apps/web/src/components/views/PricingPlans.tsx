@@ -29,6 +29,7 @@ import { useAuth } from '@/features/auth/AuthContext';
 import { supabase } from '@/lib/supabase';
 import { SubscriptionPlanId, getSubscriptionPlan, isHigherSubscriptionPlan } from '@/lib/subscriptionPlans';
 import { readProjectCountCache, writeProjectCountCache } from '@/lib/projectCache';
+import { cn } from '@/lib/utils';
 
 interface PricingPlansProps {
   setActiveTab?: (tab: string) => void;
@@ -332,30 +333,32 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
           </div>
 
           {/* Monthly / Yearly Switcher */}
-          <div className="flex items-center justify-center gap-1.5 w-full sm:w-auto bg-muted/60 p-1 rounded-md border border-border/40">
+          <div className="inline-flex items-center p-1 rounded-2xl bg-muted/70 text-xs font-semibold border-0 shadow-2xs">
             <button
               type="button"
               onClick={() => setBillingCycle('monthly')}
-              className={`text-xs font-bold px-2.5 py-1 rounded transition-all flex-1 sm:flex-initial text-center cursor-pointer ${
+              className={cn(
+                "px-4 py-2 rounded-xl transition-all duration-200 cursor-pointer border-0 font-bold text-xs select-none",
                 billingCycle === 'monthly'
-                  ? 'bg-background text-foreground shadow-2xs'
-                  : 'text-muted-foreground hover:text-foreground'
-              }`}
+                  ? "bg-background text-foreground shadow-2xs font-black"
+                  : "text-muted-foreground hover:text-foreground"
+              )}
             >
               دفع شهري
             </button>
             <button
               type="button"
               onClick={() => setBillingCycle('yearly')}
-              className={`text-xs font-bold px-2.5 py-1 rounded transition-all flex-1 sm:flex-initial justify-center items-center gap-1 cursor-pointer flex ${
+              className={cn(
+                "px-4 py-2 rounded-xl transition-all duration-200 cursor-pointer flex items-center gap-2 border-0 font-bold text-xs select-none",
                 billingCycle === 'yearly'
-                  ? 'bg-background text-foreground shadow-2xs'
-                  : 'text-muted-foreground hover:text-foreground'
-              }`}
+                  ? "bg-background text-foreground shadow-2xs font-black"
+                  : "text-muted-foreground hover:text-foreground"
+              )}
             >
               <span>دفع سنوي</span>
-              <span className="text-[10px] bg-emerald-500/15 text-emerald-600 px-1 py-0.2 rounded font-extrabold">
-                -20%
+              <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-0">
+                توفير 20%
               </span>
             </button>
           </div>
@@ -408,7 +411,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
       {/* Pricing Cards Grid (Clean Shadcn Style) */}
       {activeSubTab === 'plans' && (
         <div className="space-y-8">
-          <div className="grid gap-3.5 md:grid-cols-3 items-stretch">
+          <div className="grid gap-4 md:grid-cols-3 items-stretch">
             {PLANS.map((plan) => {
               const Icon = plan.icon;
               const price = billingCycle === 'monthly' ? plan.monthly : plan.yearly;
@@ -421,16 +424,19 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
               return (
                 <div
                   key={plan.id}
-                  className={`relative flex flex-col justify-between p-5 rounded-lg border transition-all ${
-                    plan.highlight
-                      ? 'bg-card border-primary/80 shadow-xs ring-1 ring-primary/20'
-                      : 'bg-card border-border/60'
-                  }`}
+                  className={cn(
+                    "relative flex flex-col justify-between p-5 rounded-2xl border-0 shadow-2xs transition-all",
+                    isCurrentPlan
+                      ? "bg-card ring-2 ring-emerald-500/30"
+                      : plan.highlight
+                      ? "bg-card ring-2 ring-primary shadow-md"
+                      : "bg-card/90 hover:bg-card"
+                  )}
                 >
                   {/* Top Badge */}
                   {plan.badge && (
                     <div className="absolute -top-2.5 left-4">
-                      <Badge className="bg-primary text-primary-foreground font-bold text-[10px] px-2 py-0.5">
+                      <Badge className="bg-primary text-primary-foreground font-black text-[10px] px-2.5 py-0.5 border-0 shadow-2xs">
                         <Sparkles className="size-3 ml-1" />
                         {plan.badge}
                       </Badge>
@@ -440,17 +446,17 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
                   <div className="space-y-4">
                     {/* Header */}
                     <div className="space-y-1.5">
-                      <div className="size-9 rounded-md bg-muted text-foreground flex items-center justify-center shrink-0">
+                      <div className="size-9 rounded-xl bg-muted text-foreground flex items-center justify-center shrink-0 shadow-2xs">
                         <Icon className="size-4 text-primary" />
                       </div>
-                      <h3 className="text-base font-bold text-foreground">{plan.name}</h3>
-                      <p className="text-xs text-muted-foreground leading-relaxed">{plan.subtext}</p>
+                      <h3 className="text-base font-black text-foreground">{plan.name}</h3>
+                      <p className="text-xs text-muted-foreground leading-relaxed font-medium">{plan.subtext}</p>
                     </div>
 
                     {/* Price */}
                     <div>
                       <div className="flex items-baseline gap-1">
-                        <span className="text-3xl font-extrabold text-foreground tracking-tight">
+                        <span className="text-3xl font-black text-foreground tracking-tight">
                           {price === 0 ? 'مجاناً' : `${price} ر.س`}
                         </span>
                         {price > 0 && (
@@ -476,17 +482,17 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
                           }
                           setActiveTab?.('customer-dashboard');
                         }}
-                        className="w-full font-bold text-xs h-9 cursor-pointer"
+                        className="w-full font-black text-xs h-9 cursor-pointer border-0 shadow-2xs rounded-xl"
                       >
                         {isCurrentPlan ? 'الخطة الحالية' : canUpgrade ? 'ترقية الباقة' : plan.cta}
                       </Button>
                     </div>
 
                     {/* Features List */}
-                    <div className="space-y-2 pt-2 border-t border-border/40">
+                    <div className="space-y-2 pt-2 border-0">
                       {plan.featuresSummary.map((feature) => (
                         <div key={feature} className="flex items-center gap-2 text-xs font-medium text-foreground">
-                          <Check className="size-3.5 text-emerald-600 shrink-0" />
+                          <Check className="size-3.5 text-emerald-500 shrink-0" />
                           <span>{feature}</span>
                         </div>
                       ))}
@@ -498,11 +504,11 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
           </div>
 
           {/* Feature Comparison Table */}
-          <div className="bg-card rounded-lg border border-border/60 p-4 sm:p-5 space-y-4">
-            <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between border-b border-border/40 pb-3">
+          <div className="bg-card rounded-2xl p-4 sm:p-5 space-y-4 border-0 shadow-2xs">
+            <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between pb-2 border-0">
               <div>
-                <h2 className="text-base font-bold text-foreground">مقارنة الميزات بين الباقات</h2>
-                <p className="text-xs text-muted-foreground mt-0.5">
+                <h2 className="text-base font-black text-foreground">مقارنة الميزات بين الباقات</h2>
+                <p className="text-xs text-muted-foreground mt-0.5 font-medium">
                   تفاصيل الخصائص وتغطية الأدوات عبر كافة الباقات.
                 </p>
               </div>
@@ -511,29 +517,29 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
                 variant="outline"
                 size="xs"
                 onClick={() => setActiveTab?.('contact-us')}
-                className="gap-1.5 font-bold text-xs shrink-0 self-start sm:self-auto cursor-pointer"
+                className="gap-1.5 font-extrabold text-xs shrink-0 self-start sm:self-auto cursor-pointer border-0 rounded-xl bg-muted/60 hover:bg-muted"
               >
-                <PhoneCall className="size-3.5" />
+                <PhoneCall className="size-3.5 text-primary" />
                 <span>حجز استشارة</span>
               </Button>
             </div>
 
-            <div className="overflow-x-auto no-scrollbar sm:scrollbar-auto">
+            <div className="overflow-x-auto">
               <table className="w-full min-w-[540px] text-right text-xs">
                 <thead>
-                  <tr className="border-b border-border/40">
-                    <th className="py-2.5 px-3 font-bold text-foreground text-xs">الميزة والتغطية</th>
-                    <th className="py-2.5 px-3 font-bold text-foreground text-center w-1/4">باقة رائد</th>
-                    <th className="py-2.5 px-3 font-bold text-foreground text-center w-1/4 bg-muted/40 flex items-center justify-center gap-1">
+                  <tr className="bg-muted/40 font-black border-0">
+                    <th className="py-2.5 px-3 font-black text-foreground text-xs rounded-r-xl">الميزة والتغطية</th>
+                    <th className="py-2.5 px-3 font-black text-foreground text-center w-1/4">باقة رائد</th>
+                    <th className="py-2.5 px-3 font-black text-foreground text-center w-1/4 bg-primary/10 text-primary flex items-center justify-center gap-1">
                       <span>باقة مؤسس</span>
                       <Sparkles className="size-3.5 text-amber-500" />
                     </th>
-                    <th className="py-2.5 px-3 font-bold text-foreground text-center w-1/4">باقة قائد</th>
+                    <th className="py-2.5 px-3 font-black text-foreground text-center w-1/4 rounded-l-xl">باقة قائد</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-border/30">
+                <tbody className="divide-y divide-border/20">
                   {COMPARISON_FEATURES.map((row) => (
-                    <tr key={row.name} className="hover:bg-muted/20 transition-colors">
+                    <tr key={row.name} className="hover:bg-muted/20 transition-colors border-0">
                       <td className="py-3 px-3 font-medium text-foreground">{row.name}</td>
 
                       <td className="py-3 px-3 text-center text-muted-foreground">
@@ -541,22 +547,22 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
                           row.starter ? (
                             <Check className="size-4 text-emerald-600 mx-auto" />
                           ) : (
-                            <Minus className="size-4 text-muted-foreground/40 mx-auto" />
+                            <Minus className="size-4 text-muted-foreground/30 mx-auto" />
                           )
                         ) : (
-                          <span className="font-medium text-foreground">{row.starter}</span>
+                          <span className="font-bold text-foreground">{row.starter}</span>
                         )}
                       </td>
 
-                      <td className="py-3 px-3 text-center font-bold text-foreground bg-muted/20">
+                      <td className="py-3 px-3 text-center font-black text-foreground bg-primary/5">
                         {typeof row.founder === 'boolean' ? (
                           row.founder ? (
                             <Check className="size-4 text-emerald-600 mx-auto" />
                           ) : (
-                            <Minus className="size-4 text-muted-foreground/40 mx-auto" />
+                            <Minus className="size-4 text-muted-foreground/30 mx-auto" />
                           )
                         ) : (
-                          <span>{row.founder}</span>
+                          <span className="text-primary font-black">{row.founder}</span>
                         )}
                       </td>
 
@@ -565,7 +571,7 @@ export const PricingPlans: React.FC<PricingPlansProps> = ({ setActiveTab }) => {
                           row.leader ? (
                             <Check className="size-4 text-emerald-600 mx-auto" />
                           ) : (
-                            <Minus className="size-4 text-muted-foreground/40 mx-auto" />
+                            <Minus className="size-4 text-muted-foreground/30 mx-auto" />
                           )
                         ) : (
                           <span className="font-bold">{row.leader}</span>

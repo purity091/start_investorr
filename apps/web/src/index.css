@@ -501,7 +501,7 @@ body[style*="overflow: hidden"] {
   /* Optimize touch targets for mobile */
   button, [role="button"] {
     min-height: 44px;
-    min-width: 44px;
+/* min-width removed for small buttons */
   }
   
   /* Improve readability on small screens */

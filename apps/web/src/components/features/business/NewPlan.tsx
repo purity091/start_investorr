@@ -1100,29 +1100,20 @@ function ProjectBasicsEditor() {
 
   return (
     <>
-      <Card className="mx-auto w-full max-w-7xl border-0 bg-card shadow-2xs" dir="rtl">
-        <CardContent className="flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:justify-between sm:p-5">
-          <div className="space-y-1 text-right">
-            <div className="flex flex-wrap items-center gap-2">
-              <Badge variant="secondary" className="bg-primary/10 text-primary border-0 text-[10px] font-bold">
-                <Pencil className="me-1 size-3" />
-                سياق المشروع
-              </Badge>
-              <Badge variant="outline" className="border-0 bg-muted/50 text-[10px] font-medium">
-                {saveStatus}
-              </Badge>
-            </div>
-            <p className="text-sm font-bold text-foreground">المعلومات الأساسية للمشروع</p>
-            <p className="text-xs leading-5 text-muted-foreground">
-              {profile.name || 'مشروع بدون اسم'} · {profile.sectorLabel || 'القطاع غير محدد'} · {profile.countryLabel || 'السوق غير محدد'}
-            </p>
-          </div>
-          <Button type="button" variant="outline" onClick={openEditor} className="w-full gap-2 border-0 bg-primary/10 text-primary hover:bg-primary/15 sm:w-auto">
-            <Pencil className="size-4" />
-            تعديل المعلومات الأساسية
-          </Button>
-        </CardContent>
-      </Card>
+      <div className="w-full rounded-xl bg-card border-0 shadow-2xs px-3.5 py-2.5 flex items-center justify-between gap-3 text-xs" dir="rtl">
+        <div className="flex items-center gap-2 min-w-0 truncate">
+          <Badge variant="secondary" className="bg-primary/10 text-primary border-0 text-[10px] font-bold shrink-0">
+            {profile.name || 'مشروع جديد'}
+          </Badge>
+          <span className="text-muted-foreground truncate text-xs">
+            {profile.sectorLabel || 'القطاع غير محدد'} · {profile.countryLabel || 'السوق غير محدد'}
+          </span>
+        </div>
+        <Button type="button" variant="ghost" size="sm" onClick={openEditor} className="h-7 text-xs gap-1 text-primary hover:bg-primary/10 shrink-0 font-bold">
+          <Pencil className="size-3" />
+          تعديل البيانات
+        </Button>
+      </div>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-h-[90vh] overflow-y-auto border-0 shadow-2xs sm:max-w-[580px]" dir="rtl">

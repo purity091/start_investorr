@@ -811,7 +811,7 @@ function ProjectTableRow({
               <Pencil className="size-3.5" />
             </Button>
           )}
-          <Button variant="ghost" size="icon-sm" onClick={handleCopyLink} className="h-7 w-7 text-muted-foreground hover:text-primary rounded-lg" title="مشاركة">
+          <Button variant="ghost" size="icon-sm" onClick={(e) => { e.stopPropagation(); onShare(project); }} className="h-7 w-7 text-muted-foreground hover:text-primary rounded-lg" title="مشاركة">
             <Share2 className="size-3.5" />
           </Button>
           <Button variant="ghost" size="icon-sm" onClick={(e) => { e.stopPropagation(); onDelete(project.id, project.name); }} className="h-7 w-7 text-muted-foreground hover:text-destructive hover:bg-destructive/10 rounded-lg" title="حذف">

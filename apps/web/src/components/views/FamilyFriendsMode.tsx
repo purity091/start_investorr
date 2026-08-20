@@ -99,156 +99,91 @@ export const FamilyFriendsMode: React.FC<{
   const progress = Math.round((completedCount / STEPS.length) * 100);
 
   return (
-    <main dir="rtl" className="mx-auto w-full max-w-7xl space-y-3.5 sm:space-y-6 px-2.5 py-2.5 sm:py-6 sm:px-6 lg:px-8 text-right font-sans">
+    <main dir="rtl" className="mx-auto w-full max-w-7xl space-y-3.5 px-2.5 py-2.5 sm:py-4 sm:px-6 lg:px-8 text-right font-sans">
       
-      {/* Header Banner - Clean Solid shadcn Card */}
-      <Card className="p-3.5 sm:p-6 bg-card border border-border shadow-2xs rounded-2xl">
-        <div className="flex flex-col gap-3.5 lg:flex-row lg:items-center lg:justify-between">
-          <div className="space-y-2 max-w-3xl">
-            <div className="flex flex-wrap items-center gap-2">
-              <Badge variant="outline" className="gap-1 font-semibold text-xs py-0.5 px-2.5 bg-background">
-                <Heart className="size-3 text-primary fill-primary/10" />
-                النموذج السهل
-              </Badge>
-              <Badge variant="secondary" className="font-semibold text-xs py-0.5 px-2.5">
-                الخطوة {currentStep + 1} من {STEPS.length}
-              </Badge>
-            </div>
-
-            <div className="space-y-1">
-              <h1 className="text-lg font-extrabold tracking-tight text-foreground sm:text-3xl">
-                ابدأ دراسة الجدوى بلغة بسيطة
-              </h1>
-              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                مسار مبسط مخصص للبدء الفوري بدون تعقيدات استثمارية مبكرة، ليساعدك في بلورة الرؤية واختبار القبول الأول للفكرة.
-              </p>
-            </div>
+      {/* Single Unified Header Div - Clean, Borderless & Concise */}
+      <div className="rounded-2xl border-0 bg-card p-3.5 sm:p-5 shadow-2xs space-y-3.5">
+        {/* Top Row: Title + Progress + Active Step Info */}
+        <div className="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge variant="secondary" className="bg-primary/10 text-primary border-0 font-bold text-xs py-0.5 px-2.5">
+              <Heart className="me-1 size-3 text-primary fill-primary/10 inline" />
+              النموذج السهل
+            </Badge>
+            <h1 className="text-base sm:text-lg font-extrabold tracking-tight text-foreground">
+              دراسة الجدوى المبسطة
+            </h1>
+            <Badge variant="outline" className="border-0 bg-muted/60 text-[11px] px-2.5 py-0.5 font-bold text-muted-foreground">
+              نسبة الإنجاز: {progress}% ({completedCount} من {STEPS.length})
+            </Badge>
           </div>
 
-          {/* Clean Progress Widget */}
-          <div className="min-w-[200px] sm:min-w-[240px] bg-muted/30 rounded-xl p-3 sm:p-4 border border-border space-y-2 shrink-0">
-            <div className="flex items-center justify-between text-xs font-semibold text-foreground">
-              <span>نسبة الإنجاز</span>
-              <span className="font-mono text-primary font-bold">{progress}% ({completedCount} من {STEPS.length})</span>
-            </div>
-
-            <div className="h-2 overflow-hidden rounded-full bg-muted">
-              <div 
-                className="h-full rounded-full bg-primary transition-all duration-300 ease-in-out" 
-                style={{ width: `${progress}%` }} 
-              />
-            </div>
+          {/* Active Step Indicator */}
+          <div className="flex items-center gap-2 text-xs shrink-0 bg-muted/30 px-3 py-1.5 rounded-xl">
+            <span className="font-bold text-foreground">
+              الخطوة {currentStep + 1} من {STEPS.length}: {current.title}
+            </span>
+            {hasValue && (
+              <Badge variant="outline" className="bg-emerald-500/10 text-emerald-600 border-0 text-[10px] font-bold px-1.5 py-0">
+                مكتمل
+              </Badge>
+            )}
           </div>
         </div>
-      </Card>
 
-      {/* Mobile Horizontal Step Bar */}
-      <div className="lg:hidden w-full flex overflow-x-auto whitespace-nowrap scrollbar-none gap-1.5 py-0.5">
-        {STEPS.map((step, index) => {
-          const isActive = index === currentStep;
-          const isCompleted = (data[step.id] || '').trim().length > 0;
-          return (
-            <button
-              key={step.id}
-              type="button"
-              onClick={() => onStepChange(index)}
-              className={cn(
-                "flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11px] font-bold shrink-0 transition-all border cursor-pointer",
-                isActive
-                  ? "bg-primary text-primary-foreground border-primary shadow-2xs"
-                  : isCompleted
-                    ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border-emerald-500/20"
-                    : "bg-card text-muted-foreground border-border"
-              )}
-            >
-              <span className="flex size-4 items-center justify-center rounded-full text-[9px] font-bold bg-background/20">
-                {isCompleted ? <CheckCircle2 className="size-3" /> : index + 1}
-              </span>
-              <span>{step.title}</span>
-            </button>
-          );
-        })}
+        {/* Top Horizontal Step Tabs (Borderless) */}
+        <div className="w-full flex overflow-x-auto whitespace-nowrap scrollbar-none gap-2 py-0.5">
+          {STEPS.map((step, index) => {
+            const isActive = index === currentStep;
+            const isCompleted = (data[step.id] || '').trim().length > 0;
+            return (
+              <button
+                key={step.id}
+                type="button"
+                onClick={() => onStepChange(index)}
+                className={cn(
+                  "flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-bold shrink-0 transition-all border-0 cursor-pointer",
+                  isActive
+                    ? "bg-primary text-primary-foreground shadow-2xs"
+                    : isCompleted
+                      ? "bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-500/20"
+                      : "bg-muted/40 text-muted-foreground hover:bg-accent/60 hover:text-foreground"
+                )}
+              >
+                <span className={cn(
+                  "flex size-4.5 items-center justify-center rounded-full text-[10px] font-bold shrink-0",
+                  isActive ? "bg-primary-foreground/20 text-primary-foreground" : isCompleted ? "bg-emerald-500/20 text-emerald-700" : "bg-background text-muted-foreground"
+                )}>
+                  {isCompleted ? <CheckCircle2 className="size-3" /> : index + 1}
+                </span>
+                <span>{step.title}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Progress Bar */}
+        <div className="space-y-1">
+          <div className="h-1.5 overflow-hidden rounded-full bg-muted/50">
+            <div 
+              className="h-full rounded-full bg-primary transition-all duration-300 ease-in-out" 
+              style={{ width: `${progress}%` }} 
+            />
+          </div>
+        </div>
       </div>
 
-      {/* Main Grid Layout */}
-      <div className="grid gap-3.5 sm:gap-6 lg:grid-cols-[300px_1fr]">
-        
-        {/* Step Navigation Sidebar (Right) */}
-        <Card className="rounded-xl border border-border shadow-xs bg-card overflow-hidden">
-          <CardHeader className="bg-muted/20 border-b border-border pb-3.5">
-            <CardTitle className="text-base font-bold text-foreground">خطوات النموذج</CardTitle>
-            <CardDescription className="text-xs text-muted-foreground">
-              اختر أي خطوة وعدّل الإجابة بكل سهولة.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="p-3 space-y-1.5">
-            {STEPS.map((step, index) => {
-              const Icon = step.icon;
-              const isActive = index === currentStep;
-              const isCompleted = (data[step.id] || '').trim().length > 0;
-
-              return (
-                <button
-                  key={step.id}
-                  type="button"
-                  onClick={() => onStepChange(index)}
-                  className={cn(
-                    "w-full text-right p-3 rounded-lg transition-colors border flex items-center gap-3 cursor-pointer outline-none",
-                    isActive
-                      ? "bg-secondary text-secondary-foreground border-primary/40 font-medium shadow-2xs"
-                      : "bg-card border-transparent hover:bg-muted/50 text-muted-foreground hover:text-foreground"
-                  )}
-                >
-                  {/* Step Icon Container */}
-                  <div className={cn(
-                    "size-8 shrink-0 rounded-md flex items-center justify-center border transition-colors",
-                    isCompleted 
-                      ? "bg-emerald-50 text-emerald-600 border-emerald-200" 
-                      : isActive 
-                        ? "bg-primary text-primary-foreground border-primary" 
-                        : "bg-muted text-muted-foreground border-border"
-                  )}>
-                    {isCompleted ? <CheckCircle2 className="size-4" /> : <Icon className="size-4" />}
-                  </div>
-
-                  {/* Step Title & Subtitle */}
-                  <div className="min-w-0 flex-1">
-                    <div className="flex items-center justify-between gap-1">
-                      <p className={cn(
-                        "text-xs font-semibold truncate",
-                        isActive ? "text-foreground font-bold" : "text-foreground/80"
-                      )}>
-                        {step.title}
-                      </p>
-                      {isCompleted && (
-                        <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200/50">
-                          تمت
-                        </span>
-                      )}
-                    </div>
-                    <p className="truncate text-[11px] text-muted-foreground mt-0.5">{step.subtitle}</p>
-                  </div>
-                </button>
-              );
-            })}
-          </CardContent>
-        </Card>
-
-        {/* Active Step Question Form (Left) */}
-        <Card className="rounded-xl border border-border shadow-xs bg-card flex flex-col justify-between overflow-hidden">
-          <CardHeader className="border-b border-border bg-muted/10 p-6">
-            <div className="flex items-start gap-4">
-              <div className="size-11 shrink-0 rounded-lg bg-primary/10 text-primary border border-primary/20 flex items-center justify-center">
-                <CurrentIcon className="size-5" />
+      {/* Active Step Question Form - Borderless & Full Width */}
+      <div className="w-full flex flex-col gap-4">
+        <Card className="rounded-2xl border-0 shadow-2xs bg-card flex flex-col justify-between overflow-hidden">
+          <CardHeader className="border-0 bg-muted/10 p-4 sm:p-5">
+            <div className="flex items-center gap-3">
+              <div className="size-9 shrink-0 rounded-xl bg-primary/10 text-primary border-0 flex items-center justify-center">
+                <CurrentIcon className="size-4.5" />
               </div>
-              <div className="space-y-1">
-                <div className="flex items-center gap-2">
-                  <Badge variant="outline" className="font-semibold text-xs bg-background">
-                    الخطوة {currentStep + 1}
-                  </Badge>
-                  <CardTitle className="text-xl font-bold text-foreground">{current.title}</CardTitle>
-                </div>
-                <CardDescription className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+              <div className="space-y-0.5">
+                <CardTitle className="text-base font-bold text-foreground">{current.title}</CardTitle>
+                <CardDescription className="text-xs text-muted-foreground leading-relaxed">
                   {current.subtitle}
                 </CardDescription>
               </div>
